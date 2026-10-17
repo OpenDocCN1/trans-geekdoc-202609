@@ -1,0 +1,158 @@
+
+| Jane || .191 || 16 || .120 || .933 || 16 || .275 |
+A table titled tests of normality lists the sessions variable for counselors John and Jane in column 1. Columns 2 and 3 list the corresponding Kolmogorov-Smirnov and Shapiro-Wilk values, including the statistic value, degree of freedom, and significance value, respectively.
+
+^([a](#11_Chapter06.xhtml#ch06tfn3))⋅ Lilliefors Significance Correction \*this is a lower bound of the true significance
+
+> This being the case, it might therefore be more appropriate to use the test for non-parametric data which, as illustrated in [Figure 6.1](#11_Chapter06.xhtml#fig6-1), is the Mann-Whitney test.
+
+> This being the case, it might therefore be more appropriate to use the test for non-parametric data which, as illustrated in [Figure 6.1](#11_Chapter06.xhtml#fig6-1), is the Mann-Whitney test.
+
+98 Page 98 
+
+### Running the Mann-Whitney U test
+
+1.  From the menu at the top of the screen click **Analyze** then **Nonparametric Tests** then **2 Independent Samples**.
+
+2.  Move **sessions** into **Test Variable**.
+
+3.  Move **counsellor** into **Grouping Variable**.
+
+4.  Click **Define Groups** (since your Grouping Variable is counsellor, you need to specify the codes for the two groups, as we did for the t-test).
+
+5.  Enter the value 1 (for John) in Group 1 and value 2 (for Jane) in Group 2.
+
+6.  Click **Continue**.
+
+7.  Ensure the Mann-Whitney U test is selected (it should be).
+
+8.  Click **OK**.
+
+![Screenshot 6.4](Images/ufig6-4.jpg)
+
+Screenshot 6.4
+
+![Screenshot 6.5](Images/ufig6-5.jpg)
+
+Screenshot 6.5
+
+99 Page 99 
+
+This should produce the following output:
+
+**Table 6.5**Mann-Whitney U test ranks
+
+| Ranks  |
+
+| --- |
+
+|  || counsellor || N || Mean Rank || Sum of Ranks |
+
+| --- | --- | --- | --- | --- |
+
+| sessions || John || 14 || 20.61 || 288.50 |
+
+| Jane || 16 || 11.03 || 176.50 |
+
+| Total || 30 ||  ||  |
+
+A table titled Ranks lists the session counselors John and Jane, and total in column 1. Columns 2 to 4 list the N values, mean rank, and sum of ranks.
+
+**Table 6.6**Mann-Whitney U test statistics
+
+| Test Statistics^() |
+
+| --- |
+
+|  || sessions |
+
+| --- | --- |
+
+| Mann-Whitney U || 40.500 |
+
+| Wilcoxon W || 176.500 |
+
+| Z || \-2.998 |
+
+| Asymp. Sig. (2-tailed) || .003 |
+
+| Exact Sig. \[2\*(1-tailed Sig.)\] || .002^() |
+
+| Exact Sig. (2-tailed) || .002 |
+
+| Exact Sig. (1-tailed) || .001 |
+
+| Point Probability || .000 |
+
+A table titled Test Statistics lists the variables in column 1, including the Mann-Whitney U, Wilcoxon W, Z value, 2-tailed asymptotic significance value, and more. Column 2 lists the corresponding sessions values.
+
+^([a](#11_Chapter06.xhtml#ch06tfn4).) Not corrected for ties.
+
+^([b](#11_Chapter06.xhtml#ch06tfn5).) Grouping Variable: counsellor
+
+The first table provides information about how the satisfaction ratings were ranked. The procedure for calculating the Mann-Whitney U statistic involves ranking all the scores from both groups in order of magnitude and then calculating the mean rank for each of the two groups. So, for John we can see that the mean ranking for his session is 20.61, but for Jane it is much lower at 11.03.
+
+In the second table, the two values we are interested in are the Mann-Whitney U (40.5) and the Exact Significance level (Exact sig. (2-tailed)) which is p = 0.002. Since the probability (p value) of this result occurring by chance is lower than our conventional significance level of 0.05, we conclude that there is a significant difference in the number of sessions conducted by the two counsellors.
+
+We would write-up the results of this analysis, first, by referring to the median number of counselling sessions conducted by the two counsellors – because the median, as we learned in [Chapter 1](#06_Chapter01.xhtml), is more appropriate where the data is not normally distributed.^()
+
+> When the number of sessions conducted by the two counsellors was examined it was found that the median number of sessions conducted by John was 8.5 compared to 6.0 for Jane. The Mann-Whitney Test found this difference to be statistically significant: *U* = 40.5, p = .002.
+
+100 Page 100 
+
+This result might then be related to the higher satisfaction ratings for John, in other words, perhaps the higher satisfaction ratings related to the greater number of sessions he conducted with his patients?
+
+## 6.4Summary
+
+In this chapter you have learnt about:
+
+*   Independent and dependent variables.
+
+*   Hypothesis testing (experimental and null hypotheses) and the importance of considering confounding variables.
+
+*   How to select the appropriate statistical test for comparing differences between two sets of scores.101 Page 101
+
+*   The difference between independent samples and related samples, and between parametric and non-parametric data.
+
+*   How to produce histograms to check for normal distributions and statistical ‘tests of normality’.
+
+*   How to produce an Independent samples t-test and interpret the results (including confidence intervals).
+
+*   How to produce the Mann-Whitney U test for non-parametric data.
+
+In the following exercises you will also learn:
+
+*   How to compute a new variable from existing variables.
+
+## 6.5Exercises
+
+### Exercise 6.1Checking for other significant differences
+
+In this chapter we have concentrated on the differences in satisfaction ratings and number of sessions for the two counsellors. You may now wish to see if there were any significant differences in:
+
+1.  (a)the age of patients seen by the two counsellors;
+
+2.  (b)satisfaction ratings from male and female patients;
+
+3.  (c)the number of sessions conducted for male and female patients;
+
+4.  (d)the age of the male and female patients.
+
+Remember to check the distribution of the data in order to run the appropriate analysis (i.e., parametric t-test or non-parametric Mann-Whitney U test).
+
+### Exercise 6.2Create a new variable to analyse same-sex satisfaction ratings
+
+In [Chapter 4](#09_Chapter04.xhtml), cross-tabulation revealed that the majority of male patients (71%) saw John, while the majority of female patients (75%) saw Jane. We noted that this might be important information for the doctor, since this might suggest it is necessary to ensure a male and a female counsellor are available to cater for patient preferences, that is, preference for same-sex patient and counsellor.
+
+Now, the curious among you might go on to wonder if this has any bearing on the counselling relationship, for example: were satisfaction ratings higher for same-sex patient–counsellor sessions compared to different-sex patient–counsellor sessions?
+
+So how would you investigate this? Here is a clue: you will first need to create a new variable (using **Transform/Compute**) which records whether the patient saw a counsellor of the same sex or not. Then you can use this new variable as an independent (grouping) variable to compare the mean satisfaction ratings between the two groups.
+
+102 Page 102 
+
+## 6.6Notes
+
+1.  [1](#11_Chapter06.xhtml#ch06fn1)Less commonly, related samples might be people who have been matched or paired on relevant criteria. And SPSS actually uses the term ‘paired samples’ for t-tests, rather than ‘related samples’. Other terms for related samples include ‘repeated measures’ and ‘dependent samples’.
+
+2.  [2](#11_Chapter06.xhtml#ch06fn2)While it is important to orientate towards these assumptions, studies have shown that parametric tests are actually quite robust to ‘moderate departures’ from these conditions (Howell 1997; Bryman and Cramer 2001).
+

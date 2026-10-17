@@ -1,0 +1,389 @@
+name: Quantitative Data Analysis Using SPSS： An Introduction for Health & Social Science
+slug: quantitative-data-analysis-using-spss-an-introduction-for-he
+name_cn: '
+
+  SPSS 定量数据分析：健康与社会科学入门指南'
+toc:
+- - '##'
+  - Introduction
+- - '##'
+  - The approach
+- - '##'
+  - The scope of the book
+- - '##'
+  - 'The audience: health and social sciences'
+- - '##'
+  - 变量类型（或测量水平）
+- - '##'
+  - 类别数据的描述性统计
+- - '##'
+  - 区间数据的描述性统计：中心趋势度量
+- - '##'
+  - Section summary
+- - '##'
+  - 1.2.2 关系与差异的分析
+- - '###'
+  - 使用区间数据考察变量之间的关系：相关性
+- - '##'
+  - 2.3Setting up an SPSS database
+- - '###'
+  - The SPSS data screen
+- - '###'
+  - 2.3.1Defining the variables
+- - '####'
+  - Name
+- - '####'
+  - 'Type: 它是什么类型的数据？'
+- - '####'
+  - 'Width: 你将输入多少个数字？'
+- - '####'
+  - Decimals
+- - '####'
+  - Label
+- - '####'
+  - Values
+- - '####'
+  - Missing
+- - '####'
+  - Columns
+- - '####'
+  - Align
+- - '####'
+  - Measure
+- - '##'
+  - 2.4Entering the data
+- - '##'
+  - 2.5Exercises
+- - '###'
+  - Exercise 2.1Viewing value labels
+- - '###'
+  - Exercise 2.2Sorting the data
+- - '##'
+  - Notes
+- - '##'
+  - 'Chapter3 Descriptive statistics: frequencies, measures of central tendency and
+    illustrating the data using graphs'
+- - '##'
+  - 3.1Frequencies
+- - '###'
+  - Running frequencies in SPSS
+- - '###'
+  - 3.3.2Histograms
+- - '####'
+  - Using SPSS to produce a histogram for age
+- - '###'
+  - 3.3.3Editing a chart
+- - '###'
+  - 3.3.4Boxplots
+- - '####'
+  - Using SPSS to produce boxplots for age and gender
+- - '###'
+  - 3.3.5Copying charts and tables into a Microsoft Word document
+- - '##'
+  - 4.3 卡方统计检验
+- - '##'
+  - 注意事项
+- - '##'
+  - 4.3 The chi-square statistical test
+- - '##'
+  - 注意事项
+- - '##'
+  - 4.3 The chi-square statistical test
+- - '##'
+  - 注意事项
+- - '##'
+  - 4.3 The chi-square statistical test
+- - '##'
+  - 注意事项
+- - '##'
+  - 4.3 The chi-square statistical test
+- - '##'
+  - 4.4 统计显著性水平
+- - '##'
+  - 4.5Re-coding interval variables into categorical variables
+- - '###'
+  - Re-coding age into categories
+- - '##'
+  - 4.6Summary
+- - '##'
+  - 4.7Exercises
+- - '###'
+  - Exercise 4.1 Re-code counselling sessions into categories
+- - '###'
+  - Exercise 4.2 Re-code satisfaction ratings into categories
+- - '###'
+  - 练习 4.3 你能用这些数据进行卡方检验吗？
+- - '##'
+  - 4.8Notes
+- - '##'
+  - 'Chapter5 Correlation: examining relationships between interval data'
+- - '##'
+  - 5.1Introduction
+- - '##'
+  - 5.2Examining correlations in the questionnaire
+- - '###'
+  - 5.2.1Producing a scatterplot in SPSS
+- - '###'
+  - 5.2.2The strength of a correlation
+- - '####'
+  - Running the Pearson correlation
+- - '###'
+  - 5.2.3The coefficient of determination
+- - '##'
+  - 5.3Summary
+- - '##'
+  - 5.4Exercises
+- - '###'
+  - Exercise 5.1Produce scatterplots and correlations for the other interval variables
+- - '###'
+  - Exercise 5.2The importance of sample sizes in correlation
+- - '###'
+  - Exercise 5.3The importance of ‘outliers’ in correlation
+- - '###'
+  - Exercise 5.4Explain the following correlations^()
+- - '##'
+  - 5.5Notes
+- - '##'
+  - Chapter6 Examining differences between two sets of scores
+- - '##'
+  - 6.1Introduction
+- - '##'
+  - 6.2Comparing satisfaction ratings for the two counsellors
+- - '###'
+  - 置信区间
+- - '##'
+  - 6.3 比较每位辅导员的会话次数
+- - '###'
+  - Running the Mann-Whitney U test
+- - '##'
+  - 6.4Summary
+- - '##'
+  - 6.5Exercises
+- - '###'
+  - Exercise 6.1Checking for other significant differences
+- - '###'
+  - Exercise 6.2Create a new variable to analyse same-sex satisfaction ratings
+- - '##'
+  - 6.6Notes
+- - '##'
+  - Chapter7 Reporting the results and presenting the data
+- - '##'
+  - 7.1Introduction
+- - '##'
+  - 7.2Structuring the report
+- - '###'
+  - The abstract
+- - '###'
+  - The introduction
+- - '###'
+  - Methods
+- - '###'
+  - Results
+- - '###'
+  - Discussion
+- - '###'
+  - Conclusion
+- - '###'
+  - Appendices
+- - '###'
+  - References
+- - '##'
+  - 7.3How *not* to present data
+- - '###'
+  - Exhibit A
+- - '####'
+  - What’s wrong with this?
+- - '###'
+  - Exhibit B
+- - '####'
+  - What’s wrong with this?
+- - '###'
+  - Exhibit C
+- - '####'
+  - What’s wrong with this?
+- - '###'
+  - Exhibit D
+- - '####'
+  - What’s wrong with this?
+- - '###'
+  - Exhibit E
+- - '####'
+  - Full-Part-time status
+- - '####'
+  - What’s wrong with this?
+- - '##'
+  - Concluding remarks
+- - '##'
+  - Answers to the quiz and exercises
+- - '##'
+  - Chapter 1
+- - '###'
+  - Exercise 1.1 Types of data
+- - '####'
+  - Answers
+- - '###'
+  - Exercise 1.2 Measures of central tendency
+- - '####'
+  - Answers
+- - '###'
+  - Exercise 1.3 Correlation
+- - '###'
+  - 进行此练习的注意事项：
+- - '###'
+  - 练习 4.2 将满意度评分重新编码为类别
+- - '####'
+  - 答案
+- - '###'
+  - 练习 5.4 解释以下相关性
+- - '####'
+  - 答案
+- - '##'
+  - 第 6 章
+- - '###'
+  - 练习 6.1 检查其他显著差异
+- - '####'
+  - 答案
+- - '###'
+  - 练习 6.2 创建新变量以分析同性满意度评分
+- - '####'
+  - 答案
+- - '##'
+  - Notes
+- - '##'
+  - Glossary
+- - '##'
+  - References
+- - '##'
+  - Index
+- - '##'
+  - Figure 1.1 文本替代（第 1 章）
+- - '##'
+  - Figure 1.2 文本替代（第 1 章）
+- - '##'
+  - Figure 1.3 文本替代（第 1 章）
+- - '##'
+  - Figure 1.4 文本替代（第 1 章）
+- - '##'
+  - Figure 1.5 文本替代（第 1 章）
+- - '##'
+  - Figure 1.6 文本替代（第 1 章）
+- - '##'
+  - Figure 2.1 Text Alternative (Chapter 1)
+- - '##'
+  - Page 21 Text Alternative (Chapter 2)
+- - '##'
+  - Page 22 Text Alternative (Chapter 2)
+- - '##'
+  - Page 23 Text Alternative (Chapter 2)
+- - '##'
+  - Page 24 Text Alternative (Chapter 2)
+- - '##'
+  - Page 25 Text Alternative (Chapter 2)
+- - '##'
+  - Page 26 Text Alternative (Chapter 2)
+- - '##'
+  - Page 26 Text Alternative (Chapter 2)
+- - '##'
+  - Page 26 Text Alternative (Chapter 2)
+- - '##'
+  - Page 27 Text Alternative (Chapter 2)
+- - '##'
+  - Page 27 Text Alternative (Chapter 2)
+- - '##'
+  - Page 28 Text Alternative (Chapter 2)
+- - '##'
+  - Page 29 Text Alternative (Chapter 2)
+- - '##'
+  - Page 29 Text Alternative (Chapter 2)
+- - '##'
+  - Page 30 Text Alternative (Chapter 2)
+- - '##'
+  - Page 30 Text Alternative (Chapter 2)
+- - '##'
+  - Page 31 Text Alternative (Chapter 2)
+- - '##'
+  - Figure 3.1 Text Alternative (Chapter 3)
+- - '##'
+  - Figure 3.2 Text Alternative (Chapter 3)
+- - '##'
+  - Figure 3.3 Text Alternative (Chapter 3)
+- - '##'
+  - Figure 3.4 Text Alternative (Chapter 3)
+- - '##'
+  - Figure 3.5 Text Alternative (Chapter 3)
+- - '##'
+  - Page 34 Text Alternative (Chapter 3)
+- - '##'
+  - Page 34 Text Alternative (Chapter 3)
+- - '##'
+  - Page 35 Text Alternative (Chapter 3)
+- - '##'
+  - Page 36 Text Alternative (Chapter 3)
+- - '##'
+  - Page 37 Text Alternative (Chapter 3)
+- - '##'
+  - Page 38 Text Alternative (Chapter 3)
+- - '##'
+  - Page 53 Text Alternative (Chapter 3)
+- - '##'
+  - Page 54 Text Alternative (Chapter 3)
+- - '##'
+  - Page 54 Text Alternative (Chapter 3)
+- - '##'
+  - Page 55 Text Alternative (Chapter 3)
+- - '##'
+  - Page 69 Text Alternative (Chapter 4)
+- - '##'
+  - Page 70 Text Alternative (Chapter 4)
+- - '##'
+  - Page 71 Text Alternative (Chapter 2)
+- - '##'
+  - Page 72 Text Alternative (Chapter 2)
+- - '##'
+  - Page 75 Text Alternative (Chapter 4)
+- - '##'
+  - Figure 5.1 Text Alternative (Chapter 5)
+- - '##'
+  - Figure 5.2 Text Alternative (Chapter 5)
+- - '##'
+  - Figure 5.3 Text Alternative (Chapter 5)
+- - '##'
+  - Page 79 Text Alternative (Chapter 5)
+- - '##'
+  - Page 81 Text Alternative (Chapter 5)
+- - '##'
+  - Figure 6.1 Text Alternative (Chapter 6)
+- - '##'
+  - Page 98 Text Alternative (Chapter 6)
+- - '##'
+  - Page 100 Text Alternative (Chapter 6)
+- - '##'
+  - Page 107 Text Alternative (Chapter 7)
+- - '##'
+  - Page 108 Text Alternative (Chapter 7)
+- - '##'
+  - Page 109 Text Alternative (Chapter 7)
+- - '##'
+  - Page 110 Text Alternative (Chapter 7)
+- - '##'
+  - Figure X3.1a Text Alternative (Answers to the quiz and exercises)
+- - '##'
+  - Figure X3.1b Text Alternative (Answers to the quiz and exercises)
+- - '##'
+  - Figure X3.2 Text Alternative (Answers to the quiz and exercises)
+- - '##'
+  - Figure X5.1a Text Alternative (Answers to the quiz and exercises)
+- - '##'
+  - Figure X5.1b Text Alternative (Answers to the quiz and exercises)
+- - '##'
+  - Figure X5.3a Text Alternative (Answers to the quiz and exercises)
+- - '##'
+  - Figure X5.3b Text Alternative (Answers to the quiz and exercises)
+- - '##'
+  - Figure X5.3c Text Alternative (Answers to the quiz and exercises)
+- - '##'
+  - Screenshot X6.2a Text Alternative (Answers to the quiz and exercises)
+- - '##'
+  - Screenshot X6.2b Text Alternative (Answers to the quiz and exercises)
+- - '##'
+  - Screenshot X6.2c Text Alternative (Answers to the quiz and exercises)
