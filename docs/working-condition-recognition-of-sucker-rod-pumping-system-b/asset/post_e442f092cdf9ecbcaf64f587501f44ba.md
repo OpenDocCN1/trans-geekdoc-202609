@@ -1,0 +1,12 @@
+
+- Yu, C., Ning, Y., Qin, Y., et al., 2021. Multi-label fault diagnosis of rolling bearing based on meta-learning. Neural Comput. Appl. 33 (10), 5393–5407. https://doi.org/10.1007/s00521-020-05345-0.
+- Zhang, A., Gao, X., 2019. Supervised dictionary-based transfer subspace learning and applications for fault diagnosis of sucker rod pumping systems. Neurocomputing 338, 293–306. https://doi.org/10.1016/j.neucom.2019.02.013.
+- Zhang, K., Wang, Q., Wang, L., et al., 2022. Fault diagnosis method for sucker rod well with few shots based on meta-transfer learning. J. Petrol. Sci. Eng. 212. https://doi.org/10.1016/j.petrol.2022.110295.
+- Zhang, R., Yin, Y., Xiao, L., et al., 2021. A real-time diagnosis method of reservoir-wellbore-surface conditions in sucker-rod pump wells based on multidata combination analysis. J. Petrol. Sci. Eng. 198, 108254. https://doi.org/10.1016/j.petrol.2020.108254.
+- Zhao, H., Jian, W., Peng, G., 2017. A deep learning approach for condition based monitoring and fault diagnosis of rod pump system. Services Transactions on Internet of Things 1 (1), 32–42. https://doi.org/10.29268/stiot.2017.1.1.3.
+- Zheng, B., Gao, X., 2017. Sucker rod pumping diagnosis using valve working position and parameter optimal continuous hidden Markov model. J. Process Control 59, 1–12. https://doi.org/10.1016/j.jprocont.2017.09.007.
+- Zheng, B., Gao, X., Li, X., 2019a. Diagnosis of sucker rod pump based on generating dynamometer cards. J. Process Control 77, 76–88. https://doi.org/10.1016/j.jprocont.2019.02.008.
+- Zheng, B., Gao, X., Li, X., 2019b. Fault detection for sucker rod pump based on motor power. Control Eng. Pract. 86, 37–47. https://doi.org/10.1016/j.conengprac.2019.02.001.
+- Zheng, B., Gao, X., Pan, R., 2020. Sucker rod pump working state diagnosis using motor data and hidden conditional random fields. IEEE Trans. Ind. Electron. 67 (9), 7919–7928. https://doi.org/10.1109/TIE.2019.2944081.
+- Zhou, B., Wang, Y., Liu, W., et al., 2018. Identification of working condition from sucker-rod pumping wells based on multi-view co-training and hessian regularization of SVM. In: 2018 14th IEEE International Conference on Signal Processing (ICSP), pp. 969–973. https://doi.org/10.1109/ICSP.2018.8652454.
+- Zhou, W., Li, X., Yi, J., et al., 2019. A novel UKF-RBF method based on adaptive noise factor for fault diagnosis in pumping unit. IEEE Trans. Ind. Inf. 15 (3), 1415–1424. https://doi.org/10.1109/TII.2018.2839062.
