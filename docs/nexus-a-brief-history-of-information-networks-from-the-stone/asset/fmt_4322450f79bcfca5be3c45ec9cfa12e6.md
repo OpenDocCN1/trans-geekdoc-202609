@@ -1,0 +1,72 @@
+
+21. Jason Roberts, *Every Living Thing: The Great and Deadly Race to Know All Life* (New York: Random House, 2024); Paul Lawrence Farber, *Orde vinden in de natuur* (Baltimore: Johns Hopkins University Press, 2000); James L. Larson, ‘Het soortconcept van Linnaeus’, *Isis* 59, nr. 3 (1968): 291–99; Peter Raven, Brent Berlin en Dennis Breedlove, “The Origins of Taxonomy”, *Science* 174, nr. 4015 (1971): 1210–1313; Robert C. Stauffer, ‘Over de oorsprong van soorten: een ongepubliceerde versie’, *Science* 130, nr. 3387 (1959): 1449-1452.
+
+TERUG NAAR OPMERKING REFERENTIE 21
+
+22. Britannica, s.v. ‘Homo erectus – Ancestor, Evolution, Migration’, geraadpleegd op 4 januari 2024, `www.britannica.com/topic/Homo-erectus/Relationship-to-Homo-sapiens`.
+
+TERUG NAAR OPMERKING REFERENTIE 22
+
+23. Michael Dannemann en Janet Kelso, ‘De bijdrage van Neanderthalers aan fenotypische variatie in moderne mensen’, *American Journal of Human Genetics* 101, nr. 4 (2017): 578–89.
+
+TERUG NAAR OPMERKING REFERENTIE 23
+
+24. Ernst Mayr, “Wat is een soort, en wat niet?”, *Wetenschapsfilosofie* 63, nr. 2 (1996): 262–77.
+
+TERUG NAAR OPMERKING REFERENTIE 24
+
+25. Darren E. Irwin et al., ‘Speciation by Distance in a Ring Species’, *Science* 307, nr. 5708 (2005): 414–16; James Mallet, Nora Besansky en Matthew W. Hahn, “Hoe netvormig zijn soorten?”, *BioEssays* 38, nee. 2 (2016): 140–49; Simon H. Martin en Chris D. Jiggins, ‘Het genomische landschap van introgressie interpreteren’, *Current Opinion in Genetics and Development* 47 (2017): 69–74; Jenny Tung en Luis B. Barreiro, “De bijdrage van vermenging aan de evolutie van primaten”, *Current Opinion in Genetics and Development* 47 (2017): 61–68.
+
+TERUG NAAR OPMERKING REFERENTIE 25
+
+26. James Mallet, ‘Hybridisatie, ecologische rassen en de aard van soorten: empirisch bewijs voor het gemak van soortvorming’, *Philosophical Transactions of the Royal Society B: Biological Sciences* 363, nr. 1506 (2008): 2971-86.
+
+TERUG NAAR OPMERKING REFERENTIE 26
+
+27. Brian Thomas, ‘Lions, Tigers, and Tigons’, Institute for Creation Research, 12 september 2012, `www.icr.org/article/7051/`.
+
+TERUG NAAR OPMERKING REFERENTIE 27
+
+28. Shannon M. Soucy, Jinling Huang en Johann Peter Gogarten, “Horizontale genoverdracht: bouwen aan het web van het leven”, *Nature Reviews Genetics* 16, nr. 8 (2015): 472–82; Michael Hensel en Herbert Schmidt, eds., *Horizontal Gene Transfer in the Evolution of Pathogenesis* (Cambridge, VK: Cambridge University Press, 2008); James A. Raymond en Hak Jun Kim, “Mogelijke rol van horizontale genoverdracht bij de kolonisatie van zee-ijs door algen”, *PLOS ONE* 7, nr. 5 (2012), artikel e35968; Katrin Bartke et al., “Evolutie van bacteriële interspecies-hybriden met vergrote chromosomen”, *Genome Biology and Evolution* 14, nr. 10 (2022), artikel evac135.
+
+TERUG NAAR OPMERKING REFERENTIE 28
+
+29. Eugene V. Koonin en Petro Starokadomskyy, “Leven virussen? Het replicatorparadigma werpt doorslaggevend licht op een oude maar misplaatste vraag,” *Studies in History and Philosophy of Science Part C: Studies in History and Philosophy of Biological and Biomedical Sciences* 59 (2016): 125–34; Dominic D.P. Johnson, ‘Wat virussen willen: evolutionaire inzichten voor de Covid-19-pandemie en lessen voor de volgende’, in *Een multidisciplinaire benadering van pandemieën*, uitg. Philippe Bourbeau, Jean-Michel Marcoux en Brooke A. Ackerly (Oxford: Oxford University Press, 2022), 38–69; Deepak Sumbria et al., “Virus Infections and Host Metabolism – Can We Manage the Interactions?”, *Frontiers in Immunology* 11 (2020), artikel 594963; Nigel Brown en David Bhella, “Are Viruses Alive?”, Microbiology Society, 10, 2016, `microbiologysociety.org/publication/past-issues/what-is-life/article/are-viruses-alive-what-is-life.html`; Erica L. Sanchez en Michael Lagunoff, ‘Virale activering van cellulair metabolisme’, *Virologie* 479–80 (mei 2015): 609–18; ‘Virus’, National Human Genome Research Institute, geraadpleegd op 12 januari 2024, `www.genome.gov/genetics-glossary/Virus`.
+
+TERUG NAAR OPMERKING REFERENTIE 29
+
+30. Ashworth E. Underwood, ‘De geschiedenis van cholera in Groot-Brittannië’, *Proceedings of the Royal Society of Medicine* 41, nr. 3 (1948): 165–73; Nottidge Charles Macnamara, *Aziatische cholera: geschiedenis tot 15 juli 1892, oorzaken en behandeling* (Londen: Macmillan, 1892).
+
+TERUG NAAR OPMERKING REFERENTIE 30
+
+31. John Sneeuw, “Dr. Snow’s Report’, in *Cholera Inquiry Committee, The Report on the Cholera Outbreak in the Parish of St. James, Westminster, While the Autumn of 1854* (Londen: J. Churchill, 1855), 97–120; S. W. B. Newsom, ‘Pioniers in infectiebeheersing: John Snow, Henry Whitehead, de Broad Street Pump, and the Beginnings of Geographical Epidemiology’, *Journal of Hospital Infection* 64, nr. 3 (2006): 210–16; Peter Vinten-Johansen et al., *Cholera, Chloroform, and the Science of Medicine: A Life of John Snow* (Oxford: Oxford University Press, 2003); Theodore H. Tulchinsky, “John Snow, Cholera, de Broad Street Pump; Door water overgedragen ziekten toen en nu”, *Case Studies in Public Health* (2018): 77–99.
+
+TERUG NAAR OPMERKING REFERENTIE 31
+
+32. Gov.UK, “Check If You Need a License to Abstract Water”, 3 juli 2023, `www.gov.uk/guidance/check-if-you-need-a-licence-to-abstract-water`.
+
+TERUG NAAR OPMERKING REFERENTIE 32
+
+33. Mohnish Kedia, “Sanitair beleid in India – ontworpen om te falen?”, *Beleidsontwerp en -praktijk* 5, nr. 3 (2022): 307–25.
+
+TERUG NAAR OPMERKING REFERENTIE 33
+
+34. Zie bijvoorbeeld Madden, Bryson en Palimi, ‘Information Behavior in Pre-literate Societies’, 33–53.
+
+TERUG NAAR OPMERKING REFERENTIE 34
+
+35. Catherine Salmon en Jessica Hehman, ‘De evolutionaire psychologie van conflicten tussen broers en zussen en siblicide’, in *The Evolution of Violence*, uitg. Todd K. Shackelford en Ronald D. Hansen (New York: Springer, 2014), 137–57.
+
+TERUG NAAR OPMERKING REFERENTIE 35
+
+36. Ibid.; Laurence G. Frank, Stephen E. Glickman en Paul Licht, ‘Fatal Sibling Aggression, Precocial Development, and Androgens in Neonatal Spotted Hyena’s’, *Science* 252, nee. 5006 (1991): 702–4; Frank J. Sulloway, ‘Geboortevolgorde, concurrentie tussen broers en zussen en menselijk gedrag’, in *Conceptual Challenges in Evolutionary Psychology: Innovative Research Strategies*, uitg. Harmon R. Holcomb (Dordrecht: Springer Nederland, 2001), 39–83; Heribert Hofer en Marion L. East, ‘Siblicide in Serengeti Spotted Hyena’s: een langetermijnstudie naar de input van de moeder en de overleving van welpen’, *Gedragsecologie en sociobiologie* 62, nee. 3 (2008): 341–51.
+
+TERUG NAAR OPMERKING REFERENTIE 36
+
+37. R. Grant Gilmore Jr., Oliver Putz en Jon W. Dodrill, “Oophagy, Intrauterine Cannibalism, and Reproductive Strategy in Lamnoid Sharks”, in *Reproductive Biology and Phylogeny of Chondrichthyes*, uitg. WM Hamlett (Boca Raton, Florida: CRC Press, 2005), 435–63; Demian D. Chapman et al., “Het gedrags- en genetische paringssysteem van de zandtijgerhaai, Carcharias taurus, een intra-uteriene kannibaal”, *Biology Letters* 9, nr. 3 (2013), artikel 20130003.
+
+TERUG NAAR OPMERKING REFERENTIE 37
+
+38. Martin Kavaliers, Klaus-Peter Ossenkopp en Elena Choleris, “Pathogens, Odors, and Disgust in Rodents”, *Neuroscience and Biobehavioral Reviews* 119 (2020): 281–93; Valerie A. Curtis, ‘Infectievermijdingsgedrag bij mensen en andere dieren’, *Trends in Immunology* 35, nr. 10 (2014): 457–64.
+
+TERUG NAAR OPMERKING REFERENTIE 38

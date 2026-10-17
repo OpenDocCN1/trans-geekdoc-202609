@@ -1,0 +1,122 @@
+
+
+### 44. Ibid., xii; JK Elliott, ed., The Apocryphal New Testament: A Collection of Apocryphal Christian Literature in an English Translation (Oxford: Oxford University Press, 1993), 231–302.
+
+返回注释参考 44
+
+### 45. Ibid., 543–46; Ehrman, Verloren christenen; Andrew Louth, ed., Early Christian Writings: The Apostolic Fathers (New York: Penguin Classics, 1987).
+
+返回注释参考 45
+
+### 46. De feestelijke brieven van St. Athanasius, bisschop van Alexandrië (Oxford: John Henry Parker, 1854), 137–39.
+
+返回注释参考 46
+
+### 47. Ehrman, Verloren christenen, 231.
+
+返回注释参考 47
+
+### 48. Daria Pezzoli-Olgiati et al., ‘Canon’, in Betz et al., Religie verleden en heden; David Salter Williams, ‘Het evangelie van Marcion heroverwegen’, Journal of Biblical Literature 108, nr. 3 (1989): 477–96.
+
+返回注释参考 48
+
+### 49. Ashish J. Naidu, Transformed in Christ: Christology and the Christian Life in John Chrysostomus (Eugene, Ore.: Pickwick Publications, 2012), 77.
+
+返回注释参考 49
+
+### 50. Bruce M. Metzger, De canon van het Nieuwe Testament: zijn oorsprong, ontwikkeling en betekenis (Oxford: Clarendon Press, 1987), 219–20.
+
+返回注释参考 50
+
+### 51. Metzger, Canon van het Nieuwe Testament, 176, 223–24; Christopher Sheklian, ‘De heiligen vereren, de stad herdenken: Armeense herdenkingspraktijken en gemeenschapsvorming in het hedendaagse Istanbul’, in Armenian Christianity Today: Identity Politics and Popular Practice, uitg. Alexander Agadjanian (Surrey, VK: Ashgate, 2014), 157; Bart Ehrman, Vervalsing en tegenvervalsing: het gebruik van literair bedrog in vroegchristelijke polemieken (Oxford: Oxford University Press, 2013), 32. Zie ook Ehrman, Lost Christianities, 210–11.
+
+返回注释参考 51
+
+### 52. Ehrman, Verloren christenen, 231.
+
+返回注释参考 52
+
+### 53. Ibid., 236–38.
+
+返回注释参考 53
+
+### 54. Ibid., 38; Ehrman, Vervalsing en tegenvervalsing, 203; Raymond F. Collins, ‘Pastorale brieven’, in Betz et al., Religion Past and Present.
+
+返回注释参考 54
+
+### 55. Ariel Sabar, ‘Het inside-verhaal van een controversiële nieuwe tekst over Jezus’, Smithsonian Magazine, 17 september 2012, www.smithsonianmag.com/history/the-inside-story-of-a-controversial-new-text-about -jesus-41078791/.
+
+返回注释参考 55
+
+### 56. Dennis MacDonald, The Legend of the Apostle: The Battle for Paul in Story and Canon (Philadelphia: Westminster Press, 1983), 17; Stephen J. Davis, The Cult of Saint Thecla: A Tradition of Women’s Piety in Late Antiquity (Oxford: Oxford University Press, 2001), 6.
+
+返回注释参考 56
+
+### 57. Davis, cultus van Sint Thecla.
+
+返回注释参考 57
+
+### 58. Knut Willem Ruyter, ‘Pacifisme en militaire dienst in de vroege kerk’, CrossCurrents 32, nr. 1 (1982): 54–70; Harold S. Bender, ‘Het pacifisme van de zestiende-eeuwse anabaptisten’, Kerkgeschiedenis 24, nr. 2 (1955): 119–31.
+
+返回注释参考 58
+
+### 59. Michael J. Lewis, Toevluchtsstad: separatisten en utopische stadsplanning (Princeton, NJ: Princeton University Press, 2016), 97.
+
+返回注释参考 59
+
+### 60. Irene Bueno, ‘Valse profeten en verscheurende wolven: Bijbelse exegese als instrument tegen ketters in Jacques Fournier’s Postilla over Matteüs’, Speculum 89, nr. 1 (2014): 35-65.
+
+返回注释参考 60
+
+### 61. Peter K. Yu, “Van monniken, middeleeuwse schriftgeleerden en tussenpersonen”, Michigan State Law Review 2006, nr. 1 (2006): 7.
+
+返回注释参考 61
+
+### 62. Marc Drogin, gruwel! Middeleeuwse schriftgeleerden en de geschiedenis van boekvloeken (Totowa, NJ: Allanheld, Osmun, 1983), 37.
+
+返回注释参考 62
+
+### 63. Nicholas Watson, “Censuur en culturele verandering in het laatmiddeleeuwse Engeland: vernaculaire theologie, het Oxford Translation Debate, and Arundel’s Constitutions of 1409”, Speculum 70, nr. 4 (1995): 827.
+
+返回注释参考 63
+
+### 64. David B. Barrett, George Thomas Kurian en Todd M. Johnson, World Christian Encyclopedia: A Comparative Survey of Churches and Religions in the Modern World (Oxford: Oxford University Press, 2001), 12.
+
+返回注释参考 64
+
+### 65. Eltjo Buringh en Jan Luiten Van Zanden, “De 'opkomst van het Westen' in kaart brengen: manuscripten en gedrukte boeken in Europa, een langetermijnperspectief van de zesde tot de achttiende eeuw”, Journal of Economic History 69 (2009): 409–45 .
+
+返回注释参考 65
+
+### 66. Bij de volgende bespreking van de Europese heksenjachten heb ik mij voornamelijk gebaseerd op Ronald Hutton, The Witch: A History of Fear, from Ancient Times to the Present (New Haven, Conn.: Yale University Press, 2017).
+
+返回注释参考 66
+
+### 67. Hutton, heks.
+
+返回注释参考 67
+
+### 68. Ibid. De Canon Episcopi, samengesteld in het begin van de tiende eeuw (of misschien aan het einde van de negende eeuw), werden onderdeel van het kerkelijk recht. Het betoogde dat Satan mensen misleidt door te geloven in allerlei fantastische gebeurtenissen – bijvoorbeeld dat ze door de lucht kunnen vliegen – en dat het een zonde is om te geloven dat deze gebeurtenissen echt zijn. Dit is precies het tegenovergestelde van het standpunt van vroegmoderne heksenjagers, die volhielden dat dergelijke dingen werkelijk gebeurden en twijfelen aan de realiteit ervan is een zonde. Zie ook Julian Goodare, ‘Witches’ Flight in Scottish Demonology’, in Demonology and Witch-Hunting in Early Modern Europe, red. Julian Goodare, Rita Voltmer en Liv Helene Willumsen (Londen: Routledge, 2020), 147–67.
+
+返回注释参考 68
+
+### 69. Hutton, heks; Richard Kieckhefer, ‘De eerste golf van processen tegen duivelse hekserij’, in The Oxford Handbook of Witchcraft in Early Modern Europe and Colonial America, uitg. Brian P. Levack (Oxford: Oxford University Press, 2013), 158–78; Fabrizio Conti, “Opmerkingen over de aard van overtuigingen in hekserij: folklore en klassieke cultuur in vijftiende-eeuwse bedeltradities”, Religions 10, nr. 10 (2019): 576; Chantal Ammann-Doubliez, “La première chasse aux sorciers en Valais (1428–1436?),” in L’imaginaire du sabbat: Édition critique des textes les plus anciens (1430 c.–1440 c.), uitg. Martine Ostorero et al. (Lausanne: Université de Lausanne, Section d'Histoire, Faculté des Lettres, 1999), 63–98; Nachman Ben-Yehuda, ‘De Europese heksengekte: nog steeds het perspectief van een socioloog’, American Journal of Sociology 88, nr. 6 (1983): 1275–79; Hans Peter Broedel, ‘Vijftiende-eeuwse heksenovertuigingen’, in Levack, Oxford Handbook of Witchcraft.
+
+返回注释参考 69
+
+### 70. Hans Broedel, The “Malleus Maleficarum” en de constructie van hekserij: theologie en volksgeloof (Manchester: Manchester University Press, 2003); Martine Ostorero, “Een aandachtige lezer van het Speculum historiale van Vincent de Beauvais in de 15e eeuw: de Bourgondische inquisiteur Nicolas Jacquier en de realiteit van demonische verschijningen”, Spicae: Cahiers de l’Atelier Vincent de Beauvais 3 (2013).
+
+返回注释参考 70
+
+### 71. Deze en de volgende discussies over Kramer en zijn geschriften zijn voornamelijk gebaseerd op Broedel, “Malleus Maleficarum” en de constructie van hekserij. Zie ook Tamar Herzig, ‘The Bestsellers Demonologist: Heinrich Institoris’ Malleus Maleficarum’, in The Science of Demons: Early Modern Authors Facing Witchcraft and the Devil, uitg. Jan Machielsen (New York: Routledge, 2020), 53–67.
+
+返回注释参考 71
+
+### 72. Broedel, “Malleus Maleficarum” en de constructie van hekserij, 178.
+
+返回注释参考 72
+
+### 73. Jakob Sprenger, Malleus Maleficarum, vert. Montague Summers (Londen: J. Rodker, 1928), 121.
+
+返回注释参考 73
+
