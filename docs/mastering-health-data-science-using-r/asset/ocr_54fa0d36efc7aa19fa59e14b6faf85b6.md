@@ -1,0 +1,13 @@
+# Preface
+
+This book serves as an interactive introduction to R for public health and health data science students. Topics include data structures in R, exploratory analysis, distributions, hypothesis testing, regression analysis, and larger scale programming with functions and control flows. The presentation assumes knowledge with the underlying methodology and focuses instead on how to use R to implement your analysis.
+
+This book is written using Quarto Book. You can download the Quarto files used to generate this book or a corresponding Jupyter Notebook from the GitHub repository^1^. The GitHub repository also contains a few cheat sheets^2^.
+
+# Acknowledgments
+
+This book was written with the support of a Data Science Institute Seed Grant^3^. Thanks to students Thomas Arnold, Hannah Eglinton, Jialin Liu, Joanna Walsh, and Xinbei Yu for their help and feedback. Please contact Dr. Paul ([alice_paul@brown.edu](mailto:alice_paul@brown.edu)) with questions, suggested edits, or feedback.
+
+^1^ [https://github.com/alicepaul/health-data-science-using-r](https://github.com/alicepaul/health-data-science-using-r)  
+^2^ [https://github.com/alicepaul/health-data-science-using-r/tree/main/book/refs](https://github.com/alicepaul/health-data-science-using-r/tree/main/book/refs)  
+^3^ [https://dsi.brown.edu/](https://dsi.brown.edu/)

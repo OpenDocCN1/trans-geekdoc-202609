@@ -1,0 +1,268 @@
+
+
+## 参考文献
+
+- Karissa Whiting 和 Emily C. Zabor. 2023. gtsummary：可直接呈现的数据汇总与分析结果表. https://CRAN.R-project.org/package=gtsummary.
+- Spinu, Vitalie, Garrett Grolemund 和 Hadley Wickham. 2023. lubridate：让日期处理变得更简单. https://CRAN.R-project.org/package=lubridate.
+- 德克萨斯州卫生与公众服务委员会. 2016-2021. “人工终止妊娠.” 德克萨斯州卫生服务部. https://www.hhs.texas.gov/about/records-statistics/data-statistics/itop-statistics.
+- Venables, W. N. 和 B. D. Ripley. 2002. 基于 S 的现代应用统计. 第四版. 纽约：Springer. https://www.stats.ox.ac.uk/pub/MASS4/.
+- Warren, Michael S 和 Samuel W Skillman. 2020. “应对 COVID-19 的流动性变化.” arXiv 预印本 arXiv:2003.14228.
+- Wickham, Hadley. 2011. “Testthat：测试入门.” The R Journal 3: 5–10. https://journal.r-project.org/archive/2011-1/RJournal_2011-1_Wickham.pdf.
+- ———. 2016. ggplot2：数据分析的优雅图形. Springer-Verlag New York. https://ggplot2.tidyverse.org.
+- ———. 2022. stringr：常见字符串操作的简单一致封装. https://CRAN.R-project.org/package=stringr.
+- ———. 2023. tidyverse：轻松安装并加载 Tidyverse. https://CRAN.R-project.org/package=tidyverse.
+- Wickham, Hadley 和 Jennifer Bryan. 2023. readxl：读取 Excel 文件. https://CRAN.R-project.org/package=readxl.
+- Wickham, Hadley, Romain François, Lionel Henry, Kirill Müller 和 Davis Vaughan. 2023. dplyr：数据操作语法. https://CRAN.R-project.org/package=dplyr.
+- Wickham, Hadley, Jim Hester 和 Jennifer Bryan. 2023. readr：读取矩形文本数据. https://CRAN.R-project.org/package=readr.
+- Wickham, Hadley, Evan Miller 和 Danny Smith. 2023. haven：导入和导出 'SPSS'、'Stata' 和 'SAS' 文件. https://CRAN.R-project.org/package=haven.
+- Wickham, Hadley, Davis Vaughan 和 Maximilian Girlich. 2023. tidyr：整理杂乱数据. https://CRAN.R-project.org/package=tidyr.
+- Yoshida, Kazuki 和 Alexander Bartel. 2022. Tableone：创建“表 1”以描述基线特征，可带或不带倾向性评分权重. https://CRAN.R-project.org/package=tableone.
+- Zhu, Hao. 2021. kableExtra：使用 Kable 和管道语法构建复杂表格. https://CRAN.R-project.org/package=kableExtra.
+
+![](img/58a554e865d49ca347d9a3f76f8f0812_366_0.png)
+
+## Taylor & Francis
+
+Taylor & Francis Group
+
+http://taylorandfrancis.com
+
+## 索引
+
+- $ 访问器，**31, 33**
+- 匿名函数，**48, 281**
+- apply 函数，**277, 315**
+- 赋值运算符，**17**
+- 基准测试代码，**313**
+- 最佳子集，**248**
+- 二元分布，**68**
+- 自助法抽样，**167**
+- 案例研究
+  - 探索性分析，**145**
+  - 假设检验，**189**
+  - 回归分析，**255**
+  - 模拟研究，**301**
+- 案例研究：数据清洗与预处理，**95**
+- 列汇总，**40, 63**
+- 注释，**7**
+- 条件表达式，**265**
+- 控制流，**265**
+- 相关性，**175**
+- 协方差，**175**
+- CRAN，**325**
+- 交叉验证，**245, 251**
+- 数据文件，**35**
+- 数据
+  - .csv，**36**
+  - .dta，**37**
+  - .sas7bcat，**37**
+  - .sas7bdat，**37**
+  - .spss，**37**
+  - .txt，**37**
+  - .xls，**37**
+  - .xlsx，**37**
+- 数据框，**28**
+  - 索引，**30**
+  - 修改，**30**
+- 数据连接，**113**
+  - 类型，**114**
+- 数据透视，**109**
+- 数据结构，**15**
+  - 数据类型，**15**
+    - 布尔型，**16**
+    - 字符型，**16**
+    - 双精度型，**15**
+    - 整型，**15**
+    - 逻辑型，**16**
+- 数据集
+  - covidcases，**93, 105, 142, 145**
+  - itop，**171**
+  - lockdowndates，**105**
+  - mobility，**105, 145**
+  - NHANESsample，**63, 81, 189, 197, 239, 270**
+  - nyts，**221**
+  - pain，**35, 121, 186, 279, 297, 313**
+  - tb_diagnosis，**255**
+  - tb_diagnosis_raw，**95**
+- 日期格式，**53, 106**
+- 日期，**53**
+- 调试，**290, 328**
+- 效率，**313**
+- 弹性网络，**240**
+- 经验分布，**167**
+  - 经验分布，**168**
+- 错误信息，**327**
+- 导出数据，**35, 36**
+- 外部验证，**260**
+- 因子，**23**
+  - 水平，**23**
+- 筛选数据，83
+- 函数，9
+  - 参数，10, 282, 283
+  - 默认值，283
+  - 文档，10, 288
+  - 局部函数，287
+  - 返回值，10, 282, 285
+  - 返回函数，287
+- 广义线性模型，222, 235
+- 生成错误，294
+- ggplot2
+  - 美学，122
+  - 美学，125
+  - 分面，136
+  - 几何对象，122
+  - ggplot2 对象，122
+  - 分组，133
+  - 标签，123
+  - 绘图布局，140
+  - 保存图形，139
+  - 标度函数，125
+  - 主题，138
+  - 主题，124
+- 全局赋值，287
+- 数据分组，89
+- 帮助运算符，10
+- 假设检验，171
+  - 单样本检验，171
+  - 双样本检验（分类数据），182
+  - 双样本检验（连续数据），178
+- if-else 语句，266
+- 导入数据，35
+- 无穷值，48
+- lasso 回归，241, 301
+- 线性回归，197
+  - 诊断图，204
+  - 评估指标，216
+  - 影响，209
+  - 交互作用，210
+  - 杠杆值，209
+- 模型汇总，199
+- 多元线性回归，201
+- 参考水平，203
+- 简单线性回归，197
+- 逐步选择，217
+- 变换，210
+- 列表，31
+  - 索引，32
+  - 命名，32
+- 逻辑运算符，55, 56
+- 逻辑回归，221
+  - 校准，225
+  - 区分度，225
+  - 似然比检验，231
+  - 受试者工作特征曲线，227
+  - 残差，225
+  - 逐步选择，231
+- 长格式，105, 109
+- 循环，270, 315
+  - 跳出，276
+  - for 循环，273
+  - 迭代器，273
+  - while 循环，275
+- 损失函数，240
+- 矩阵，24
+  - 索引，25
+  - 修改，26
+  - 名称，26
+- 合并数据，113
+- 缺失数据，64
+- 缺失值，48
+- 模型选择，257
+- 修改列，86
+- NA 值，31, 48
+- 命名规范，6
+- NaN 值，48
+- 对象，15
+- 对象，5
+  - 副本，316
+  - 全局，286
+  - 局部，286
+  - 作用域，286
+- 并行编程，320
+- 管道运算符，83
+- 数据透视，109
+- 图形
+  - 条形图，67
+  - 箱线图，69
+  - 组合图，73
+  - 额外参数，66
+  - 直方图，42, 66
+  - 散点图，71, 122
+- 图形：数据汇总图，74
+- 概率分布，160
+  - 可用分布，166
+  - 累积分布函数，164
+  - 密度函数，163
+  - 分位数函数，165
+  - 抽样，160
+- 编程原则，330
+- Quarto，337
+  - 代码块，9, 340
+  - 文档，9
+  - 图形，343
+  - 安装，337
+  - LaTeX，347
+  - Markdown 文本，341
+  - 新建文件，337
+  - 参考文献，346
+  - 渲染，338
+  - 表格，343
+- R 控制台，4
+- R 函数
+  - abline(), 72, 200
+  - abs(), 20
+  - add_overall(), 101
+  - add_p(), 184
+  - aes(), 123
+  - AIC(), 216
+  - all(), 56
+  - annotate(), 138
+  - anova(), 203
+  - anti_join(), 114
+  - any(), 56
+  - aov(), 180
+  - apply(), 47, 277, 281, 308, 315
+  - arrange(), 88
+  - as.Date(), 53, 106, 145
+  - as.factor(), 23
+  - as.POSIXct(), 53
+  - as_gt(), 77
+  - as_tibble(), 81
+  - barplot(), 67
+  - between(), 84, 115
+  - BIC(), 216
+  - boxplot(), 70
+  - brewer.pal(), 131
+  - c(), 17
+  - case_when(), 87, 100, 265
+  - cbind(), 26, 31
+  - ceiling(), 9, 20
+  - chisq.test(), 183
+  - class(), 18
+  - coef(), 202, 244, 250
+  - colnames(), 26, 29
+  - colSums(), 44
+  - complete.cases(), 53, 64
+  - coord_cartesian(), 128
+  - coords(), 228
+  - cor(), 72, 176, 291
+  - cor.test(), 177
+  - count(), 89
+  - cov(), 176
+  - cut(), 229
+  - cv.glmnet(), 245
+  - data(), 35
+  - data.frame(), 28
+  - difftime(), 54, 306
+  - dim(), 25, 29
+  - ecdf(), 168
+  - exp(), 9, 20
+  - expand.grid(), 307
+  - expect_equal(), 295
+  - expect_error(), 296
+  - expect_true(), 296
+  - facet_grid(), 136
+  - facet_wrap(), 136
+  - factor(), 23
+  - filter(), 84
+
