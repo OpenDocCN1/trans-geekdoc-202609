@@ -1,0 +1,233 @@
+
+
+# 使用 Doctrine 2 查找实体
+
+要根据条件查找单个实体，使用 `findOneBy()` 方法：
+
+```php
+<?php
+public function findOneBy(array $criteria, array $orderBy = null);
+```
+
+要查找特定类型的所有实体，使用 `findAll()` 方法：
+
+```php
+<?php
+public function findAll();
+```
+
+要根据条件查找多个实体，使用 `findBy()` 方法：
+
+```php
+<?php
+public function findBy(
+	array $criteria, 
+	array $orderBy = null, 
+	$limit = null, 
+	$offset = null
+);
+```
+
+在使用 `findBy()` 时，可以定义 order、limit 和 offset 值。
+
+此外，还有所谓的“魔术查找器”（magic finders），它们允许将搜索条件直接包含在查找器方法的名称中。下面两条语句产生相同的结果：
+
+```php
+<?php
+$tag = $em->getRepository('Entity\Tag')->findOneBy(array('label'=>$label));
+$tag = $em->getRepository('Entity\Tag')->findOneByLabel($label);
+```
+
+添加带有自定义查找器方法的自定义仓库是一个两步过程。首先，需要设置一个新的仓库类：
+
+```php
+<?php
+namespace Repository;
+
+use Doctrine\ORM\EntityRepository;
+
+class Post extends EntityRepository
+{
+	public function findAllPostsWithTag($tag)
+	{
+		// DQL statement goes here
+	}
+}
+```
+
+接下来，Doctrine 2 需要了解新仓库。这是通过相应的实体完成的：
+
+```php
+<?php
+namespace Entity;
+
+/**
+ * @Entity(repositoryClass="Repository\Post")
+ * @Table(name="posts")
+ */
+class Post
+{
+	// [..]
+}
+```
+
+就这样！`findAllPostsWithTag()` 查找器方法现在可以轻松调用：
+
+```php
+<?php
+$posts = $em->getRepository('Entity\Post')->findAllPostsWithTag($tag);
+```
+
+我们将在本书后面部分了解更多关于 DQL（Doctrine Query Language，Doctrine 查询语言）的内容，它用于构建查询。
+
+## 7.2.2 使用关联
+
+假设我们已经有一个已加载的 `User` 实体。我们可以不通过其仓库加载 `User` 的联系人数据，而是直接从给定的 `User` 实体访问该实体：
+
+```php
+<?php
+namespace Entity;
+
+/**
+ * @Entity
+ * @Table(name="users")
+ */
+class User
+{
+	// [..]
+
+	/**
+	 * @OneToOne(targetEntity="Entity\ContactData")
+	 */
+	private $contactData;
+
+	// [..]
+	
+	public function getContactData()
+	{
+		return $this->contactData;
+	}
+}
+```
+
+在这种情况下，调用 `getContactData()` 时，引用的 `ContactData` 实体会由 Doctrine 的代理机制按需加载。
+
+我们甚至可以确保在加载 `User` 本身时，引用的 `ContactData` 实体已经加载，从而节省一次额外的数据库查询：
+
+```php
+<?php
+// [..]
+/**
+ * @OneToOne(targetEntity="Entity\ContactData", fetch="EAGER")
+ */
+private $contactData;
+```
+
+通过使用 `fetch="EAGER"`，我们告诉 Doctrine 2 在加载 `User` 本身时始终加载引用的 `ContactData` 实体。
+
+加载策略有时很有优势，特别是在流程后期可能会访问引用实体的情况下。如果省略 `fetch` 属性，Doctrine 2 默认使用 `LAZY`，这意味着它会在首次访问时加载实体。第三个选项是 `EXTRA_LAZY`，它对大型数据集很有帮助。即使决定对引用实体进行懒加载，引用的实体仍然会全部加载到 RAM 中。根据引用实体的数量和大小，这可能会成为严重的性能问题。当使用 `EXTRA_LAZY` 时，可以在引用实体的集合上执行多个方法，而无需立即将它们全部加载到 RAM 中。这适用于：
+
+*   `contains()`
+*   `count()`
+*   `offsetSet()`
+*   `add()`
+*   `count()`
+*   `slice()`
+
+这样，例如，可以构建一个分页功能而不会出现性能问题。
+
+## 7.3 修改现有实体
+
+修改已加载的现有实体很容易。在刷新实体管理器时，Doctrine 2 会自动检测对该实体所做的所有更改：
+
+```php
+<?php
+// [..]
+$post = $em->getRepository('Entity\Post')->find(1);
+$post->setTitle("New title");
+$em->flush();
+```
+
+无需再次明确告知 Doctrine 2 该实体已更改。不需要在实体管理器上再次调用 `persist($entity)` 方法。
+
+## 7.4 删除实体
+
+如果可以获取已加载实体的句柄，可以通过实体管理器轻松删除现有实体：
+
+```php
+<?php
+$em->remove($post);
+$em->flush();
+```
+
+除非调用了 `flush()`，否则不会发出物理删除数据库中记录所需的 SQL 语句。
+
+## 7.5 排序关联
+
+通过关联访问实体时，检索到的实体顺序是未定义的。作为实体映射定义的一部分，可以使用 `@OrderBy` 注解定义实体的顺序。如果回到我们的演示应用程序，可以通过修改 `User` 实体中的映射配置，定义 `User` 的 `Post`s 的顺序，使最新的 `Post` 在其 `Post` 列表中首先显示：
+
+```php
+<?php
+namespace Entity;
+
+/**
+ * @Entity
+ * @Table(name="users")
+ */
+class User
+{
+	// [..]
+	
+	/**
+	 * @OneToMany(targetEntity="Entity\Post", mappedBy="user")
+	 * @OrderBy({"id" = "DESC"})
+	 */
+	private $posts;
+	
+	// [..]
+}
+```
+
+或者，也可以在从数据库检索实体后使用 PHP 对集合进行排序。
+
+## 7.6 删除关联
+
+删除关联与删除实体一样简单：
+
+```php
+<?php
+$newPost = new \Entity\Post();
+$newPost->setTitle('A new post!');
+$newPost->setContent('This is the body of the new post.');
+$user = $em->getRepository('Entity\User')->findOneById(1);
+$newPost->setUser($user);
+$em->flush();
+
+$newPost->setUser(null);
+$em->flush();
+```
+
+在上面的示例中，首先创建一个新的 `Post` 实体。然后，加载一个现有的 `User` 实体并将其与新帖子关联。刷新后，引用已持久化到数据库。接下来，通过将 `User` 设置为 `null` 来再次删除关联。下一次刷新后，数据库中的引用已消失。
+
+需要记住的是，我们在 `User` 和其 `Post`s 之间建立了双向关系，而 `Post` 实体是关联的拥有方。例如，如果取 `User` 实体并从其集合 `$posts` 中删除 `Post`，刷新时不会发生任何事情：
+
+```php
+<?php
+// [..]
+$user->getPosts()->removeElement($newPost);
+$em->flush();
+```
+
+`removeElement()` 方法用于从给定的 Doctrine 2 集合中删除基于已加载实体的元素，但没有达到预期效果。然而，确实有一个效果。虽然更改不会被持久化，但元素已从内存中的集合中删除。在集合中查找时，将找不到该元素。
+
+## 7.7 生命周期事件
+
+使用实体时，Doctrine 2 会触发多个事件：
+
+*   **preRemove**: 在为给定实体执行相应的 EntityManager 删除操作之前发生。
+*   **postRemove**: 在实体被删除后发生。它将在数据库删除操作之后调用。
+*   **prePersist**: 在为给定实体执行相应的 EntityManager 持久化操作之前发生。
+*   **postPersist**: 在实体已被持久化后发生。它将在数据库插入操作之后调用。
+*   **preUpdate**: 在对实体数据执行数据库更新操作之前发生。
+*   **postUpdate**: 在对实体数据执行数据库更新操作之后发生。
+
