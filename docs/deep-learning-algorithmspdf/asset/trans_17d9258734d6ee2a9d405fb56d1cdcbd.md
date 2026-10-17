@@ -1,0 +1,266 @@
+
+# 为了构建稳定性，队列被数学模型化为利雅普诺夫漂移 \[2\]。该算法灵感来自利雅普诺夫控制理论，因此被命名为利雅普诺夫优化理论 \[2\]。
+
+## 本章介绍了利雅普诺夫优化理论的基本理论、示例和讨论。随后，讨论了利雅普诺夫优化理论在实时计算机视觉和深度学习平台中的应用。
+
+## 此外，还展示了基于真实深度学习框架的计算性能评估结果，包括各种模型的实际图像超分辨率计算结果。
+
+## 最后，将介绍新兴的应用。
+
+本书版权归Arcler所有
+
+![Image 320](index-83_1.jpg)
+
+![Image 321](index-83_2.png)
+
+![Image 322](index-83_3.png)
+
+![Image 323](index-83_4.png)
+
+![Image 324](index-83_5.png)
+
+![Image 325](index-83_6.jpg)
+
+![Image 326](index-83_7.png)
+
+![Image 327](index-83_8.png)
+
+![Image 328](index-83_9.png)
+
+![Image 329](index-83_10.png)
+
+![Image 330](index-83_11.png)
+
+## Dynamic Decision-Making For Stabilized Deep Learning Software ...
+
+## 57
+
+## **STABILIZED CONTROL FOR RELIABLE DEEP**
+
+## **LEARNING PLATFORMS**
+
+## 在本节中，首先介绍一种用于时间平均优化且受限于稳定性的利雅普诺夫优化理论（参见第 2.1 节），随后提供基于示例的解释（参见第 2.2 节）。
+
+## 最后，相关讨论将在（参见第 2.3 节）中组织。
+
+## **Theory**
+
+## 在本节中，我们介绍一种旨在时间平均惩罚函数最小化且受限于队列稳定的利雅普诺夫优化理论。请注意，时间平均惩罚函数最小化可以等价地转换为时间平均效用函数最大化。当存在效用与稳定性之间的权衡时，利雅普诺夫优化理论可以被使用。例如，当当前决策在惩罚函数的最小化方面是最优的，但决策的执行需要大量时间，从而引入延迟（即系统中的队列积压增加）时，这种权衡就很明显。此时，最优决策可以动态变化，因为当系统当前的延迟不严重（即队列延迟较小或可忽略）时，专注于效用最大化（即惩罚函数最小化）更为有利；相反，当系统当前的延迟较大时，最优决策将侧重于延迟的减少，此时决策应在牺牲一定效用最大化（或惩罚函数最小化）的情况下进行延迟减少。
+
++ # \`\[t\]) and it should be minimized and our control action decision-making is
+
+#< \* ²#
+
+formulated as follows:
+
+(1)
+
+(2)
+
+where
+
+is an arrival process at
+
+at t when our control action
+
+decision-making is
+
+. In (1),
+
+t is a departure/service process at
+
+when our control action decision-making is
+
+at t.
+
+In this section, control action decision-making should be made in each unit time for time-average penalty function minimization subject to queue stability. Then, the mathematical program for minimizing time-average 本书版权归Arcler所有
+
+![Image 331](index-84_1.jpg)
+
+![Image 332](index-84_2.jpg)
+
+![Image 333](index-84_3.jpg)
+
+![Image 334](index-84_4.jpg)
+
+![Image 335](index-84_5.jpg)
+
+![Image 336](index-84_6.jpg)
+
+![Image 337](index-84_7.jpg)
+
+![Image 338](index-84_8.jpg)
+
+![Image 339](index-84_9.png)
+
+![Image 340](index-84_10.png)
+
+![Image 341](index-84_11.png)
+
+## Deep Learning Algorithms
+
+## 58
+
+penalty function, P(\[t\]) where the control action decision-making
+
+can be presented as follows:
+
+(3)
+
+Subject to queue stability:
+
+(4)
+
+\`|\`| +
+
+making
+
+As mentioned, the Lyapunov optimization theory can be used when tradeoff between utility maximization (or penalty function minimization) and delays exists. Based on this nature, drift-plus-penalty (DPP) algorithm
+
+\[2, 3, 4\] is designed for maximizing the time-average utility subject to queue
+
+\# ¯
+
+, and
+
+³\`|# \*
+
+^\`²µ{_\`²|ª²
+
+\[2\], this dynamic policy is designed to achieve queue stability by minimizing an upper bound of our considering penalty function on DPP which is given by
+
+(5)
+
+¶ < #
+
+Lyapunov function at t is derived as follows:
+
+(6)
+
+(7)
+
+Therefore, the upper bound of the conditional Lyapunov drift can be derived as follows:
+
+(8)
+
+where C is a constant given by
+
+(9)
+
+本书版权归Arcler所有
+
+![Image 342](index-85_1.jpg)
+
+![Image 343](index-85_2.jpg)
+
+![Image 344](index-85_3.jpg)
+
+![Image 345](index-85_4.jpg)
+
+![Image 346](index-85_5.jpg)
+
+![Image 347](index-85_6.jpg)
+
+![Image 348](index-85_7.png)
+
+![Image 349](index-85_8.png)
+
+![Image 350](index-85_9.png)
+
+## Dynamic Decision-Making For Stabilized Deep Learning Software ...
+
+## 59
+
+which supposes that the arrival and departure process rates are upper bounded. Due to the fact that C is a constant, minimizing the upper bound on DPP is as follows:
+
+(10)
+
+**Algorithm 1**. Stabilized Time-Average Penalty Function Minimization Finally, the dynamic control action decision-making
+
+\+ \`| ! #"
+
+to queue stability can be formulated as follows based on the Lyapunov optimization theory:
+
+(11)
+
+\# ѽ\[t+1\] is the
+
+optimal control action decision-making for the next time slot.
+
+In order to verify whether (11) works correctly or not, following two example cases can be considerable:
+
+*Case 1:* ²¸¹<
+
+(12)
+
+(13)
+
+Then, (13) shows that control action decision-making should works as follows, i.e., (i) the arrival process should be minimized, and (ii) the 本书版权归Arcler所有
+
+![Image 351](index-86_1.jpg)
+
+![Image 352](index-86_2.jpg)
+
+![Image 353](index-86_3.jpg)
+
+![Image 354](index-86_4.png)
+
+![Image 355](index-86_5.png)
+
+![Image 356](index-86_6.png)
+
+## Deep Learning Algorithms
+
+## 60
+
+departure process should be maximized. Both cases are for stabilizing the
+
+\* # # ²¸¹
+
+*Case 2:* Suppose Q\[t\]=0. Then
+
+(14)
+
+(15)
+
+Then, (15) shows that control action decision-making should work for minimizing the given penalty function. This is semantically reasonable because focusing on our main objective is possible because stability does not need to be considered because Q\[t\]=0.
+
+The pseudo-code of the proposed time-average penalty function minimization algorithm is presented in Algorithm 1. From line 1 to line 3, all variables and parameters are initialized. The algorithm works in each unit time as shown in line 4. In line 5, current queue-backlog Q\[t\] is observed to be used in (11). From line 7 to line 13, the main computation procedure for (11) is described.
+
+Up to now, the time-average penalty function minimization is considered.
+
+Based on the theory, the dynamic control action decision-making
+
+\+ \`|'!#"
+
+queue stability can be formulated as follows:
+
+(16)
+
+\# \[t+1\] is the
+
+optimal control action decision-making for the next time slot.
+
+**2.2 Example: multicore scheduling in mobile devices**
+
+In this section, the Lyapunov optimization-based stabilized time-average optimization algorithm is introduced with one simple toy model. In this example, dynamic core allocation decision-making algorithm is designed which is for time average energy consumption minimization subject to queue stability.
+
+As illustrated in Figure 1, mobile smartphone is with the processor which is equipped with multiple cores. For example, ARM big.LITTLE processors are with multiple little and big heterogeneous cores.
+
+本书版权归Arcler所有
+
+![Image 357](index-87_1.jpg)
+
+![Image 358](index-87_2.jpg)
+
+![Image 359](index-87_3.jpg)
+
+![Image 360](index-87_4.png)
+
+![Image 361](index-87_5.png)
+
+![Image 362](index-87_6.png)
+
+Dynamic Decision-Making For Stabilized Deep Learning Software ...
+
+61

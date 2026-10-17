@@ -1,0 +1,347 @@
+name: Deep Learning Algorithms.pdf
+slug: deep-learning-algorithmspdf
+name_cn: '
+
+  深度学习算法'
+toc:
+- - '#'
+  - 这一版本涵盖了深度学习算法的不同主题，包括：深度学习方法和技术、深度学习在生物学中的应用、深度学习在医学中的应用以及深度学习在模式识别系统中的应用。
+- - '##'
+  - 更高级别的特征，如鼻子、眼睛、耳朵等，下一层可以进一步挖掘特征，以此类推。因此，每一层在训练算法（如梯度下降）的发展之前就已得到发展；这也是为什么
+- - '##'
+  - 变异。这在 Yann 等人 [32] 的讨论中被提及；他们进一步得出结论，设计更自动、手动更少的系统在模式识别方面能够取得更好的结果。
+- - '###'
+  - 梯度下降
+- - '###'
+  - 随机梯度下降
+- - '###'
+  - 动量
+- - '###'
+  - 深度学习理论与应用的进展：...
+- - '###'
+  - 黑森-马夸尔特算法
+- - '###'
+  - 通过时间反向传播
+- - '###'
+  - 深度学习的常规挑战
+- - '####'
+  - 非贡献列或输入
+- - '####'
+  - 隐藏层数量
+- - '###'
+  - 深度学习算法
+- - '###'
+  - 优化算法
+- - '###'
+  - 损失函数
+- - '###'
+  - 激活函数
+- - '###'
+  - 时代（Epoch）
+- - '###'
+  - 可用的开源数据集
+- - '##'
+  - 确定性策略梯度算法
+- - '##'
+  - DDPG 算法
+- - '##'
+  - 网络
+- - '##'
+  - 本节介绍了利雅普诺夫优化理论的基本理论、示例和讨论。随后，讨论了利雅普诺夫优化理论在实时计算机视觉和深度学习平台中的应用。
+- - '##'
+  - 此外，还展示了基于真实深度学习框架的计算性能评估结果，包括各种模型的实际图像超分辨率计算结果。
+- - '##'
+  - 最后，将介绍新兴的应用。
+- - '##'
+  - Dynamic Decision-Making For Stabilized Deep Learning Software ...
+- - '##'
+  - '57'
+- - '##'
+  - '**STABILIZED CONTROL FOR RELIABLE DEEP**'
+- - '##'
+  - '**LEARNING PLATFORMS**'
+- - '##'
+  - 在本节中，首先介绍一种用于时间平均优化且受限于稳定性的利雅普诺夫优化理论（参见第 2.1 节），随后提供基于示例的解释（参见第 2.2 节）。
+- - '##'
+  - 最后，相关讨论将在（参见第 2.3 节）中组织。
+- - '##'
+  - '**Theory**'
+- - '##'
+  - 在本节中，我们介绍一种旨在时间平均惩罚函数最小化且受限于队列稳定的利雅普诺夫优化理论。请注意，时间平均惩罚函数最小化可以等价地转换为时间平均效用函数最大化。当存在效用与稳定性之间的权衡时，利雅普诺夫优化理论可以被使用。例如，当当前决策在惩罚函数的最小化方面是最优的，但决策的执行需要大量时间，从而引入延迟（即系统中的队列积压增加）时，这种权衡就很明显。此时，最优决策可以动态变化，因为当系统当前的延迟不严重（即队列延迟较小或可忽略）时，专注于效用最大化（即惩罚函数最小化）更为有利；相反，当系统当前的延迟较大时，最优决策将侧重于延迟的减少，此时决策应在牺牲一定效用最大化（或惩罚函数最小化）的情况下进行延迟减少。
+- - '##'
+  - Deep Learning Algorithms
+- - '##'
+  - '58'
+- - '##'
+  - Dynamic Decision-Making For Stabilized Deep Learning Software ...
+- - '##'
+  - '59'
+- - '##'
+  - Deep Learning Algorithms
+- - '##'
+  - '60'
+- - '##'
+  - Deep Learning Algorithms
+- - '##'
+  - Dynamic Decision-Making For Stabilized Deep Learning Software ...
+- - '##'
+  - Deep Learning Algorithms
+- - '##'
+  - Dynamic Decision-Making For Stabilized Deep Learning Software ...
+- - '##'
+  - ACKNOWLEDGEMENTS
+- - '#'
+  - FEATURE LEARNING
+- - '#'
+  - STRUCTURE DESIGN OF HYPERSPECTRAL DATA
+- - '#'
+  - CLASSIFICATION FRAMEWORK
+- - '##'
+  - 强化学习算法
+- - '###'
+  - 目标深度 Q 学习
+- - '###'
+  - 深度强化学习的集成网络架构 97
+- - '###'
+  - 双重深度 Q 学习
+- - '###'
+  - 深度强化学习的集成方法
+- - '###'
+  - 深度学习算法 98
+- - '###'
+  - 目标值的集成
+- - '###'
+  - 集成网络架构 for 深度强化学习 99
+- - '###'
+  - 集成网络架构
+- - '##'
+  - 文献综述
+- - '##'
+  - 深度学习算法
+- - '##'
+  - 计算机视觉
+- - '##'
+  - 深度学习
+- - '##'
+  - 视觉与目标检测
+- - '##'
+  - 基于深度学习的鱼类检测
+- - '##'
+  - 神经网络
+- - '##'
+  - 材料与方法
+- - '##'
+  - 深度学习算法
+- - '##'
+  - CNN 架构
+- - '##'
+  - 图 1. 自动潜水艇（AUV）及竞争环境。
+- - '##'
+  - 目标深度 Q 学习
+- - '##'
+  - 深度强化学习的集成网络架构 97
+- - '##'
+  - 双重深度 Q 学习
+- - '##'
+  - 深度强化学习的集成方法
+- - '##'
+  - 深度学习算法 98
+- - '##'
+  - 目标值的集成
+- - '##'
+  - 集成网络架构 for 深度强化学习 99
+- - '##'
+  - 集成网络架构
+- - '##'
+  - 图 2. 在 RGB 色彩图像上进行卷积运算 [30]。
+- - '##'
+  - 基于深度学习的鱼类检测
+- - '##'
+  - 图 3. 卷积运算在图像特征提取中的应用 [31]。
+- - '##'
+  - Deep Learning Algorithms
+- - '##'
+  - 介绍
+- - '##'
+  - 域。幸运的是，迁移学习可以通过避免复杂的数据挖掘和标注工作来提升深度神经网络的性能 [28]。在实践中，迁移学习包含两种方式
+- - '##'
+  - 你能用深度学习识别番茄叶病害吗？
+- - '##'
+  - 你能用深度学习识别番茄叶病害吗？
+- - '##'
+  - Figure 6. The two-stream fusion method.
+- - '##'
+  - Deep Learning Algorithms
+- - '##'
+  - Figure 7. Accuracies of the prediction of each behavior with different two-stream
+    fusion ratios.
+- - '##'
+  - Applying Deep Learning Models To Mouse Behavior Recognition 183
+- - '##'
+  - Figure 8. Confusion matrices of predictions of I3D models with different two-stream
+    fusion ratios.
+- - '##'
+  - Deep Learning Algorithms
+- - '##'
+  - Figure 9. Confusion matrices of predictions of R(2 + 1)D models with different
+    two-stream fusion ratios.
+- - '##'
+  - Applying Deep Learning Models To Mouse Behavior Recognition 185
+- - '##'
+  - Table 2. Comparison of performance of models
+- - '##'
+  - Figure 10. Accuracies of I3D models and R(2 + 1)D models with different two-stream
+    fusion ratios.
+- - '##'
+  - Deep Learning Algorithms
+- - '##'
+  - CONCLUSIONS
+- - '##'
+  - ACKNOWLEDGEMENTS
+- - '#'
+  - REFERENCES
+- - '##'
+  - MATERIALS AND METHODS
+- - '###'
+  - Deep Learning Algorithms
+- - '###'
+  - Data
+- - '###'
+  - Data Augmentation
+- - '###'
+  - 'Application Of Deep Learning In Neuroradiology: Brain Hemorrhage ...'
+- - '##'
+  - Training the Network Models
+- - '###'
+  - Deep Learning Algorithms
+- - '###'
+  - 'Application Of Deep Learning In Neuroradiology: Brain Hemorrhage ...'
+- - '#'
+  - Method
+- - '##'
+  - 方法
+- - '##'
+  - Deep Learning Algorithms
+- - '##'
+  - 深度学习算法
+- - '##'
+  - Results
+- - '##'
+  - 结果
+- - '##'
+  - Conclusion
+- - '##'
+  - 结论
+- - '##'
+  - INTRODUCTION
+- - '##'
+  - 引言
+- - '##'
+  - A Review of The Application of Deep Learning in Brachytherapy 219
+- - '##'
+  - 近曲疗法中的深度学习应用综述 219
+- - '##'
+  - ORGAN DISSECTION AND SEGMENTATION
+- - '##'
+  - 器官解剖与分割
+- - '##'
+  - Deep Learning Algorithms
+- - '##'
+  - 深度学习算法
+- - '##'
+  - SEGMENTATION AND RECONSTRUCTION OF THE APPLICATOR (INTERSTITIAL NEEDLES)
+- - '##'
+  - 分割与重建应用器（间质针）
+- - '##'
+  - OTHERS
+- - '##'
+  - Deep Learning Algorithms
+- - '##'
+  - CONCLUSIONS
+- - '##'
+  - A Review of The Application of Deep Learning in Brachytherapy 225
+- - '##'
+  - REFERENCES
+- - '##'
+  - 探索深度学习和迁移学习在结肠息肉检测中的应用
+- - '##'
+  - '239'
+- - '###'
+  - 采用的 CNN 技术
+- - '##'
+  - '240'
+- - '##'
+  - 探索深度学习和迁移学习在结肠息肉检测中的应用
+- - '##'
+  - '241'
+- - '##'
+  - '`REFERENCES`'
+- - '##'
+  - INTRODUCTION
+- - '##'
+  - Background
+- - '##'
+  - Preliminaries
+- - '##'
+  - Deep Learning Algorithm for Brain-Computer Interface
+- - '##'
+  - METHODOLOGY
+- - '##'
+  - 'Algorithms for EEG-based brain–computer interfaces: a 10 year update,” *Journal
+    of Neural Engineering*, vol. 15, no. 3, Article ID 031005, 2018.'
+- - '##'
+  - Histogram equalization
+- - '##'
+  - Deep Learning Algorithms
+- - '##'
+  - 3) 图像压缩（或维度降低）
+- - '##'
+  - FEATURE EXTRACTION
+- - '###'
+  - 1)
+- - '####'
+  - 使用 PCA 提取特征
+- - '###'
+  - 2)
+- - '####'
+  - 使用 2D-PCA 提取特征
+- - '##'
+  - 设计监督学习分类器
+- - '###'
+  - 1)
+- - '####'
+  - BP 神经网络
+- - '###'
+  - 2)
+- - '####'
+  - 混合 BP 神经网络（HBPNNs）
+- - '##'
+  - 深度学习的核心思想是将非常简单的函数组合成一个非常复杂的函数
+- - '##'
+  - 使用深度学习对手写数字进行分类
+- - '##'
+  - 深度学习算法
+- - '##'
+  - 使用深度学习对手写数字进行分类
+- - '##'
+  - 深度学习算法
+- - '##'
+  - Document Outline
+- - '##'
+  - 参考文献
+- - '##'
+  - 第 9 章 将深度学习模型应用于老鼠行为识别
+- - '###'
+  - 摘要
+- - '###'
+  - 引言
+- - '###'
+  - 老鼠行为数据集
+- - '###'
+  - 实验和结果
+- - '###'
+  - 结论
+- - '###'
+  - 致谢
+- - '###'
+  - 参考文献

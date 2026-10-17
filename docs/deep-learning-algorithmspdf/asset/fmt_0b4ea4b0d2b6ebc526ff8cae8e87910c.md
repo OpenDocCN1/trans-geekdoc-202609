@@ -1,0 +1,182 @@
+
+32\. W. Tan, C. Zhao, H. Wu, and R. Gao, “A deep learning network for
+
+! # $ '# ¥
+
+Nongye Jixie Xuebao/Transactions of the Chinese Society for Agricultural Machinery, vol. 46, no. 1, pp. 20– 25, 2015.
+
+33\. N. Yu, P. Jiao, and Y. Zheng, “Handwritten digits recognition base on improved LeNet5,” in Proceedings of the 27th Chinese Control and Decision Conference (CCDC ’15), pp. 4871–4875, May 2015.
+
+34\. D. Shukla, D. M. Dawson, and F. W. Paul, “Multiple neuralnetwork,”
+
+IEEE Transactions on Neural Networks, vol. 10, no. 6, pp. 1494–1501, 1999.
+
+本书版权归Arcler所有
+
+![Image 501](index-118_1.png)
+
+![Image 502](index-118_2.png)
+
+![Image 503](index-118_3.png)
+
+本书版权归Arcler所有
+
+![Image 504](index-119_1.png)
+
+![Image 505](index-119_2.png)
+
+![Image 506](index-119_3.png)
+
+**CHAPTER 5**
+
+**ENSEMBLE NETWORK**
+
+**ARCHITECTURE FOR DEEP**
+
+**REINFORCEMENT**
+
+**LEARNING**
+
+Xi-liang Chen , Lei Cao , Chen-xi Li, Zhi-xiong Xu, and Jun Lai Institute of Command Information System, PLA University of Science and Technology, No. 1, Hai Fu Road, Guang Hua Road, Qin Huai District, Nanjing City, Jiangsu Province 210007, China
+
+**ABSTRACT**
+
+The popular deep Q learning algorithm is known to be instability because of the Q-value’s shake and overestimation action values under certain conditions. These issues tend to adversely affect their performance.
+
+In this paper, we develop the ensemble network architecture for deep reinforcement learning which is based on value function approximation.
+
+The temporal ensemble stabilizes the training process by reducing the variance of target approximation error and the ensemble of target values **Citation**: Xi-liang Chen, Lei Cao, Chen-xi Li, Zhi-xiong Xu, Jun Lai, “Ensemble Network Architecture for Deep Reinforcement Learning”, Mathematical Problems in Engineering, vol. 2018, Article ID 2129393, 6 pages, 2018. https://doi.
+
+org/10.1155/2018/2129393.
+
+**Copyright**: © 2018 by Authors. This is an open access article distributed under the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+
+本书版权归Arcler所有
+
+![Image 507](index-120_1.png)
+
+![Image 508](index-120_2.png)
+
+![Image 509](index-120_3.png)
+
+Deep Learning Algorithms 94 reduces the overestimate and makes better performance by estimating more accurate Q-value. Our results show that this architecture leads to statistically significant better value evaluation and more stable and better performance on several classical control tasks at OpenAI Gym environment.
+
+**INTRODUCTION**
+
+Reinforcement learning (RL) algorithms \[1, 2\] are very suitable for learning to control an agent by letting it interact with an environment.
+
+In recent years, deep neural networks (DNN) have been introduced into reinforcement learning, and they have achieved a great success on the value function approximation. The first deep Q-network (DQN) algorithm which successfully combines a powerful nonlinear function approximation technique known as DNN together with the Q-learning algorithm was proposed by Mnih et al. \[3\]. In this paper, experience replay mechanism was proposed. Following the DQN work, a variety of solutions have been proposed to stabilize the algorithms \[3–9\].The deep Q-networks classes have achieved unprecedented success in challenging domains such as Atari 2600 and some other games.
+
+Although DQN algorithms have been successful in solving many problems because of their powerful function approximation ability and strong generalization between similar state inputs, they are still poor in solving some issues. Two reasons for this are as follows: (a) the randomness of the sampling is likely to lead to serious shock and (b) these systematic errors might cause instability, poor performance, and sometimes divergence of learning. In order to address these issues, the averaged target DQN
+
+(ADQN) \[10\] algorithm is implemented to construct target values by combining target Q-networks continuously with a single learning network,
+
+²{{
+
+exploration and better performance with the use of several Q-networks learning in parallel. Although these algorithms do reduce the overestimate, they do not evaluate the importance of the past learned networks. Besides, high variance in target values combined with the max operator still exists.
+
+There are some ensemble algorithms \[4, 12\] solving this issue in reinforcement learning, but these existing algorithms are not compatible with nonlinearly parameterized value functions.
+
+In this paper, we propose the ensemble algorithm as a solution to this problem. In order to enhance learning speed and final performance, we combine multiple reinforcement learning algorithms in a single agent with 本书版权归Arcler所有
+
+![Image 510](index-121_1.png)
+
+![Image 511](index-121_2.jpg)
+
+![Image 512](index-121_3.png)
+
+![Image 513](index-121_4.png)
+
+![Image 514](index-121_5.jpg)
+
+![Image 515](index-121_6.png)
+
+![Image 516](index-121_7.png)
+
+![Image 517](index-121_8.jpg)
+
+![Image 518](index-121_9.jpg)
+
+![Image 519](index-121_10.png)
+
+![Image 520](index-121_11.png)
+
+![Image 521](index-121_12.png)
+
+Ensemble Network Architecture for Deep Reinforcement Learning 95 several ensemble algorithms to determine the actions or action probabilities.
+
+In supervised learning, ensemble algorithms such as bagging, boosting, and mixtures of experts \[13\] are often used for learning and combining multiple classifiers. But in RL, ensemble algorithms are used for representing and learning the value function.
+
+Based on an agent integrated with multiple reinforcement learning algorithms, multiple value functions are learned at the same time. The
+
+\# #
+
+policy for the agent. The majority voting (MV), the rank voting (RV), the Boltzmann multiplication (BM), and the Boltzmann addition (BA) are used to combine RL algorithms. While these methods are costly in deep reinforcement learning (DRL) algorithms, we combine different DRL
+
+algorithms that learn separate value functions and policies. Therefore in our ensemble approaches we combine the different policies derived from the update targets learned by deep Q-networks, deep Sarsa networks, double deep Q-networks, and other DRL algorithms. As a consequence, this leads to reduced overestimations, more stable learning process, and improved performance.
+
+**RELATED WORK**
+
+**Reinforcement Learning**
+
+Reinforcement learning is a machine learning method that allows the system to interact with and learn from the environment to maximize cumulative return rewards. Assume that the standard reinforcement learning setting where an agent interacts with the environment . We can describe this process with Markov Decision Processes (MDP) \[2, 9\]. It can be specifed as a tuple
+
+. At
+
+each step t, the agent receives a state s , and select an action a from the set of legal t
+
+t
+
+actions A according to the policy , where is a policy mapping sequences to actions. The action is passed to the environment E. In addition, the agent receives the next state S and a reward signal r . Tis process continues until the agent t+1
+
+t
+
+reaches a terminal state.The agent seeks to maximize the expected discounted with discount factor
+
+. The goal of the RL agent is to learn a policy which
+
+makes the future discounted return maximize. For an agent behaving according to a stochastic policy #
+
+follows:
+
+. Te optimal action-value function
+
+本书版权归Arcler所有
+
+![Image 522](index-122_1.jpg)
+
+![Image 523](index-122_2.png)
+
+![Image 524](index-122_3.jpg)
+
+![Image 525](index-122_4.jpg)
+
+![Image 526](index-122_5.jpg)
+
+![Image 527](index-122_6.png)
+
+![Image 528](index-122_7.jpg)
+
+![Image 529](index-122_8.png)
+
+![Image 530](index-122_9.png)
+
+![Image 531](index-122_10.jpg)
+
+![Image 532](index-122_11.jpg)
+
+![Image 533](index-122_12.jpg)
+
+![Image 534](index-122_13.jpg)
+
+![Image 535](index-122_14.png)
+
+![Image 536](index-122_15.png)
+
+![Image 537](index-122_16.png)
+
+Deep Learning Algorithms 96
+
+Q satisfes the Bellman equation
+
+cThe

@@ -1,0 +1,122 @@
+
+School of Information Science and Technology, Beijing Forestry University, Beijing 100083, China
+
+# Haiyan Zhang
+
+School of Information Science and Technology, Beijing Forestry University, Beijing 100083, China
+
+# Ngoc Giang Nguyen
+
+Graduate School of Natural Science and Technology, Kanazawa University, Kanazawa, Japan;
+
+# Dau Phan
+
+Graduate School of Natural Science and Technology, Kanazawa University, Kanazawa, Japan;
+
+# Favorisen Rosyking Lumbanraja
+
+Graduate School of Natural Science and Technology, Kanazawa University, Kanazawa, Japan;
+
+# Mohammad Reza Faisal
+
+Graduate School of Natural Science and Technology, Kanazawa University, Kanazawa, Japan;
+
+# Bahriddin Abapihi
+
+Graduate School of Natural Science and Technology, Kanazawa University, Kanazawa, Japan;
+
+# Bedy Purnama
+
+Graduate School of Natural Science and Technology, Kanazawa University, Kanazawa, Japan;
+
+xvii
+
+本书版权归Arcler所有
+
+![Image 60](index-20_1.png)
+
+![Image 61](index-20_2.png)
+
+![Image 62](index-20_3.png)
+
+# Mera Kartika Delimayanti
+
+Graduate School of Natural Science and Technology, Kanazawa University, Kanazawa, Japan;
+
+# Kunti Robiatul Mahmudah
+
+Graduate School of Natural Science and Technology, Kanazawa University, Kanazawa, Japan;
+
+# Mamoru Kubo
+
+Institute of Science and Engineering, Kanazawa University, Kanazawa, Japan
+
+# Kenji Satou
+
+Institute of Science and Engineering, Kanazawa University, Kanazawa, Japan
+
+# Awwal Muhammad Dawud
+
+Department of Computer Engineering, Cyprus International University, Nicosia, Cyprus
+
+# Kamil Yurtkan
+
+Department of Computer Engineering, Cyprus International University, Nicosia, Cyprus
+
+# Huseyin Oztoprak
+
+Department of Computer Engineering, Cyprus International University, Nicosia, Cyprus
+
+# Hai Hu
+
+Applied Nuclear Technology in Geosciences Key Laboratory of Sichuan Province, Chengdu University of Technology, Chengdu, China
+
+# Yang Shao
+
+Applied Nuclear Technology in Geosciences Key Laboratory of Sichuan Province, Chengdu University of Technology, Chengdu, China
+
+# Shijie Hu
+
+Applied Nuclear Technology in Geosciences Key Laboratory of Sichuan Province, Chengdu University of Technology, Chengdu, China
+
+# Eduardo Ribeiro
+
+Department of Computer Sciences, University of Salzburg, Salzburg, Austria
+
+Department of Computer Sciences, Federal University of Tocantins, Palmas, TO, Brazil
+
+# Andreas Uhl
+
+Department of Computer Sciences, University of Salzburg, Salzburg, Austria
+
+# Georg Wimmer
+
+Department of Computer Sciences, University of Salzburg, Salzburg, Austria
+
+xviii
+
+本书版权归Arcler所有
+
+![Image 63](index-21_1.png)
+
+![Image 64](index-21_2.png)
+
+![Image 65](index-21_3.png)
+
+# PREFACE
+
+The Deep learning is a branch of machine learning based on data presentation via complex representations with high degree of abstraction - that are obtained by applying learned nonlinear transformations. Deep learning methods find their application in important areas of artificial intelligence, such as: computer vision, natural language processing, speech and sound comprehension, as well as in bioinformatics. Deep learning is a class of machine learning algorithms that: uses multilayer nonlinear processor units to extract and transform features.
+
+Each subsequent layer takes as input the output elements of the previous layer.
+
+learns in a supervised and / or unsupervised manner.
+
+learns a number of levels of representation - corresponding to different degrees of abstraction.
+
+uses some form of descending gradient algorithm to train through error backpropagation.
+
+The layers used in deep programming include the hidden layers of the artificial neural network and a multitude of statement formulas.
+
+This book covers the most important discriminant and generative deep models with special emphasis on practical implementations. We cover the key elements of classical neural networks and provides an overview of the building blocks, regularization techniques, and learning methods that are specific to deep models. Also we consider the deep convolutional models and illustrates their application in image classification and natural language processing.
+
+The generative deep models are often used in computer vision applications and natural language processing. Sequence modeling by deep feedback neural networks can be applied in the field of natural language processing. Practical implementations of deep learning are made in modern dynamic languages (Python, Lua or Julia), and also with application frameworks for deep learning (e.g. Theano, TensorFlow, Torch).
