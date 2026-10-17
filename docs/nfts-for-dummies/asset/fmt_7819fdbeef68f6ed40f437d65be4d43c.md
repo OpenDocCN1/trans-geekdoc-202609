@@ -1,0 +1,20 @@
+
+# Discovering Contract Accounts … … … … … … … … …123
+[Knowing the Difference Between Public Networks](#index_split_001.html#filepos342793)
+[and Private Environments … … … … … … … … … … .126](#index_split_001.html#filepos342793)
+[Local development environments … … … … … … …126](#index_split_001.html#filepos342793)
+[Test networks … … … … … … … … … … … … . .127](#index_split_001.html#filepos345454)
+[Main network … … … … … … … … … … … … …127](#index_split_001.html#filepos345454)
+[Preparing Your Accounts (on MetaMask) … … … … … …128](#index_split_001.html#filepos348440)
+[Renaming accounts on MetaMask … … … … … … …129](#index_split_001.html#filepos350801)
+[Adding different ETH to different accounts … … … … . .131](#index_split_001.html#filepos354117)
+[Funding your testnet account … … … … … … … … .132](#index_split_001.html#filepos357167)
+[Exploring the Ropsten testnet blockchain … … … … …135](#index_split_002.html#filepos362054)
+[“Disappearing” balances … … … … … … … … … …136](#index_split_002.html#filepos364644)
+# CHAPTER 8: Setting Up a Development Environment  … . . 139
+[Exploring Your Ethereum Solution Stack … … … … … …140](#index_split_002.html#filepos370218)
+[Elements of the Ethereum stack … … … … … … … . .140](#index_split_002.html#filepos370218)
+[Here a stack, there a stack: Pre-made stacks … … … …142](#index_split_002.html#filepos375849)
+[Put On Your Hard Hat: Constructing Your Environment … . .143](#index_split_002.html#filepos377731)
+[Setting up your local blockchain test environment … … .143](#index_split_002.html#filepos377731)
+[Connecting a custom (Ganache) network to your](#index_split_002.html#filepos385192)

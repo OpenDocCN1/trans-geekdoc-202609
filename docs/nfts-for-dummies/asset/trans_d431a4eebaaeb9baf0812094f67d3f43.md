@@ -1,0 +1,295 @@
+
+-   [testnets, 171–173](#index_split_002.html#filepos430034)
+
+# token standards
+
+EverQuest[, 38](#index_split_000.html#filepos123524)
+
+[composability, 186](#index_split_002.html#filepos456778)
+
+EVERYDAYS digital artwork
+
+[EIP, 186–189](#index_split_002.html#filepos456778)
+
+[discussion, 22, 33–36, 79](#index_split_000.html#filepos80081)
+
+[value, 240–241](#index_split_003.html#filepos576713)
+
+[254 ](#index_split_003.html#filepos630146) NFTs For Dummies
+
+EVM. See Ethereum Virtual Machine
+
+[sending transactions, 154–157](#index_split_002.html#filepos395756)
+
+[exchange platforms, 26–29.](#index_split_000.html#filepos92565) See also 
+
+[synching Remix IDE, 158–161](#index_split_002.html#filepos402271)
+
+specific exchange platforms
+
+[genesis block, 99](#index_split_001.html#filepos272210)
+
+[Exodus wallet, 50](#index_split_000.html#filepos149536)
+
+Genesis CryptoKitty non-fungible token
+
+externally owned accounts (EOAs). See also
+
+[(NFT), 22](#index_split_000.html#filepos80081)
+
+MetaMask wallet
+
+[Genesis Estate, 78](#index_split_001.html#filepos225796)
+
+[digital signatures, 121–123](#index_split_001.html#filepos328931)
+
+[Getty Images, 38](#index_split_000.html#filepos123524)
+
+[discussion, 87, 115–118](#index_split_001.html#filepos242906)
+
+Gods Unchained[, 62](#index_split_000.html#filepos181832)
+
+[private networks, 126–128](#index_split_001.html#filepos342793)
+
+[Google Authenticator, 29](#index_split_000.html#filepos100380)
+
+[private/public key pair, 118–121](#index_split_001.html#filepos323955)
+
+[Google Trends, 7–8](#index_split_000.html#filepos41349)
+
+[public networks, 126–128](#index_split_001.html#filepos342793)
+
+[governance tokens, 65](#index_split_000.html#filepos190275)
+
+[smart contracts, 123–126](#index_split_001.html#filepos334079)
+
+[graphical user interfaces (GUIs), 143.](#index_split_002.html#filepos377731)
+
+See also Ganache graphical user
+
+F
+
+interfaces
+
+[Grimes, 47, 63](#index_split_000.html#filepos140208)
+
+[Falin, Alexei, 64](#index_split_000.html#filepos187315)
+
+Gӧrli/Goerli testnet
+
+[Federal Trade Commission (FTC), 71](#index_split_001.html#filepos204348)
+
+[compiling, 175–176](#index_split_002.html#filepos437985)
+
+[Feng Bo, 250](#index_split_003.html#filepos609038)
+
+[deploying, 181–184](#index_split_002.html#filepos447811)
+
+[Field, Dylan, 243–244](#index_split_003.html#filepos586828)
+
+[discussion, 127, 171–173](#index_split_001.html#filepos345454)
+
+[51% attack, 102–104, 106, 113](#index_split_001.html#filepos279949)
+
+[funding, 132–135](#index_split_001.html#filepos357167)
+
+[financial instruments, 71–72](#index_split_001.html#filepos204348)
+
+[practice deployment, 176–180](#index_split_002.html#filepos440798)
+
+[Finzer, Devin, 57](#index_split_000.html#filepos168656)
+
+[simple template, 173–175](#index_split_002.html#filepos433840)
+
+[Firefox browser, 24–26](#index_split_000.html#filepos86711)
+
+[viewing transactions on, 135–137](#index_split_002.html#filepos362054)
+
+[first-sale doctrine, 37](#index_split_000.html#filepos120586)
+
+[forks, 105–106, 113](#index_split_001.html#filepos288040)
+
+H
+
+[Foundation NFT marketplace, 236](#index_split_003.html#filepos570398)
+
+[fraud, 72](#index_split_001.html#filepos207673)
+
+[hacking, 14, 49](#index_split_000.html#filepos58259)
+
+Freedom of the Press [Foundation, 248–249](#index_split_003.html#filepos602816)
+
+[Hall, Matt, 241–242](#index_split_003.html#filepos580270)
+
+[FTC (Federal Trade Commission), 71](#index_split_001.html#filepos204348)
+
+[hard forks, 105–106, 113](#index_split_001.html#filepos288040)
+
+[fungibility, 70](#index_split_001.html#filepos201720)
+
+[hardware wallets, 49](#index_split_000.html#filepos146530)
+
+fungible tokens
+
+[hash codes, 34, 230](#index_split_000.html#filepos112432)
+
+[discussion, 9](#index_split_000.html#filepos44821)
+
+[hierarchical deterministic (HD) wallet, 49](#index_split_000.html#filepos146530)
+
+[ERC-1155 multi-token standard, 195](#index_split_002.html#filepos483042)
+
+[high-level programming language, 164](#index_split_002.html#filepos409697)
+
+[standards, 190–191](#index_split_002.html#filepos468429)
+
+hot wallets
+
+[adding funds to, 29](#index_split_000.html#filepos100380)
+
+G
+
+[advantages/disadvantages, 50–51](#index_split_000.html#filepos149536)
+
+[comparing, 50](#index_split_000.html#filepos149536)
+
+[games, 10, 39, 79–80, 110.](#index_split_000.html#filepos48022) See also specific 
+
+[discussion, 14, 24–26, 45](#index_split_000.html#filepos58259)
+
+games
+
+[risks, 49–50](#index_split_000.html#filepos146530)
+
+Ganache graphical user interfaces (GUIs)
+
+[Howey Test, 72](#index_split_001.html#filepos207673)
+
+[deploying developed NFTs on, 205–207](#index_split_002.html#filepos506191)
+
+[discussion, 139–140](#index_split_002.html#filepos368028)
+
+[installation, 143–147](#index_split_002.html#filepos377731)
+
+I
+
+MetaMask wallet
+
+[icons, 2–3](#index_split_000.html#filepos35699)
+
+[adding accounts, 150–154](#index_split_002.html#filepos389481)
+
+[image search engines, 38](#index_split_000.html#filepos123524)
+
+[connecting, 147–150](#index_split_002.html#filepos385192)
+
+Index  [255](#index_split_003.html#filepos637359)
+
+Informational Ethereum Improvement
+
+[funding, 132–135](#index_split_001.html#filepos357167)
+
+[Proposal (EIP), 189](#index_split_002.html#filepos465511)
+
+smart contracts
+
+[initial coin offerings (ICOs), 19](#index_split_000.html#filepos70292)
+
+[deploying, 181–184](#index_split_002.html#filepos447811)
+
+Interface Ethereum Improvement Proposal
+
+[overview, 171–173](#index_split_002.html#filepos430034)
+
+[(EIP), 188](#index_split_002.html#filepos462385)
+
+[practice deployment, 176–180](#index_split_002.html#filepos440798)
+
+[Internal Revenue Code Section 408(m)(2), 81](#index_split_001.html#filepos234433)
+
+[simple template, 173–175](#index_split_002.html#filepos433840)
+
+[internet memes, 47, 78, 80](#index_split_000.html#filepos140208)
+
+[viewing transactions on, 135–136](#index_split_002.html#filepos362054)
+
+[interoperability standard, 186](#index_split_002.html#filepos456778)
+
+[Kraken cryptoexchange, 103–104, 106](#index_split_001.html#filepos283040)
+
+[InterPlanetary File System (IPFS), 34–35, 236](#index_split_000.html#filepos112432)
+
+[Kurniawan, Rudy, 41](#index_split_000.html#filepos130777)
+
+investments
+
+[best NFTs for, 77–80](#index_split_001.html#filepos222859)
+
+considerations
+
+L
+
+[artist popularity, 48](#index_split_000.html#filepos143260)
+
+[Larva Labs, 230, 241.](#index_split_003.html#filepos551631) See also CryptoPunks
+
+[blockchain security, 48–49](#index_split_000.html#filepos143260)
+
+marketplace
+
+[decreasing value, 64](#index_split_000.html#filepos187315)
+
+[Laurence, Tiana, 29](#index_split_000.html#filepos100380)
+
+[reasons for investing, 72–73](#index_split_001.html#filepos207673)
+
+League of Legends[, 38](#index_split_000.html#filepos123524)
+
+[taxes, 81](#index_split_001.html#filepos234433)
+
+LeBron James “Cosmic” Dunk non-fungible
+
+[discussion, 47–49, 69–70](#index_split_000.html#filepos140208)
+
+[token (NFT), 47, 75, 77–78](#index_split_000.html#filepos140208)
+
+strategies
+
+[legal considerations, 37–41](#index_split_000.html#filepos120586)
+
+[brand, 75](#index_split_001.html#filepos216819)
+
+[libraries, 14, 171](#index_split_000.html#filepos58259)
+
+[choosing, 76–77](#index_split_001.html#filepos219738)
+
+[LINK (Chainlink) cryptocurrency, 190](#index_split_002.html#filepos468429)
+
+[market, 75](#index_split_001.html#filepos216819)
+
+[Litecoin, 10](#index_split_000.html#filepos48022)
+
+[overview, 73–74](#index_split_001.html#filepos210835)
+
+local development environments
+
+[scarcity, 22, 75](#index_split_000.html#filepos80081)
+
+[discussion, 126–127](#index_split_001.html#filepos342793)
+
+[valuing NFT, 74–75](#index_split_001.html#filepos213547)
+
+Ethereum
+
+[traditional, 71–72](#index_split_001.html#filepos204348)
+
+adding local accounts to wallet,
+
+[150–154](#index_split_002.html#filepos389481)
+
+[IPFS (InterPlanetary File System), 34–35,](#index_split_000.html#filepos112432)
+
+[236](#index_split_003.html#filepos570398)
+
+[connecting network to wallet, 147–150](#index_split_002.html#filepos385192)
+

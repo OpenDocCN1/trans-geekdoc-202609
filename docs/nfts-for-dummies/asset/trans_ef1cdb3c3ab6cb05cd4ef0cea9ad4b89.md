@@ -1,0 +1,212 @@
+
+The information stored in `state variables` can also be accessed by other smart contracts if they’re declared as public `state variables`.
+
+Otherwise, the information is considered private and is accessible only within the smart contract in which it is stored (though it can still be viewed by anyone because private `state variables` are stored on the public blockchain).
+
+Whether the stored data is public or private, only the contract in which the data is stored can alter the value of its `state variables`.
+
+Functions
+
+Smart-contract functions are where the action is. For instance, functions can be used to perform calculations, set new values for state variables, retrieve data from elsewhere on the blockchain, send ETH to other addresses, or call other functions. Functions fall into these three broad categories:
+
+» Built-in functions: Solidity has a menu of built-in functions that perform common tasks, such as `receive()` to receive ETH and `address.send()` to send ETH to a specified address. Another popular built-in function is `selfdestruct(address)`, which sends any remaining ETH in the contract account to the specified address then deletes the contract.
+
+» Constructor functions: Each contract can specify a `constructor()` function, which is executed only once when the smart contract is first deployed on the EVM.
+
+» Custom functions: And, of course, you can write your own functions!
+
+CHAPTER 9 Deploying Your First Smart Contract  169
+
+When writing your own functions, you need to declare each function’s accessibility by other functions, contracts, or transactions using the following keywords:
+
+» Public/External:
+
+Public functions, which are the default, provide the most flexibility. They can be called by other functions within the contract, by other contracts, and by transactions submitted from externally owned accounts.
+
+External functions provide the same degree of accessibility as public functions except that function calls within the contract are treated as though they are external calls and must be accompanied by the keyword `this` as a prefix.
+
+» Private/Internal:
+
+Private functions can be called only from within the contract in which they’re housed.
+
+Solidity also has a feature that allows programmers to combine contracts into a new derived contract, one that inherits code from another contract. The contract being fed into the derived contract is the base contract. Internal functions are like private functions, except that they can also be called by their derived contracts.
+
+Event logs
+
+Event logs provide a convenient way for you to store historical instances of information on the blockchain without declaring additional storage space in your contract account. Other smart contracts (or people) can view these logs for an account of changes that have occurred. Events can be declared in a contract using the keyword `event`. When called (using the keyword `emit`), the arguments are stored on the blockchain in a log associated with the contract address.
+
+The sample smart contract that you deploy later in this chapter, in the section “Ready for Takeoff: Launching Your Smart Contract,” provides an example of how an event is declared and emitted.
+
+170  PART 3  Developing Your Knowledge: A Step-by-Step Guide to Programming Your Own NFT
+
+No Need to Reinvent the Wheel: 
+
+Using Smart Contract Libraries
+
+A plethora of smart-contract libraries are available to provide you prebuilt functions and implementations of Ethereum development standards. (For more on this topic, see Chapter 10.) In addition to saving you the foundational work, pre-developed and prevetted open source libraries provide added security for less-expert developers who aren’t intimately familiar with the finer considerations when it comes to smart-contract development and operations.
+
+The smart contract we show you how to deploy in the following section is simple enough that you needn’t worry about using smart-contract libraries quite yet. In Chapter 11, where we show you how to build your own ERC-721 Token, you can learn how to load prebuilt libraries and import your desired base contracts.
+
+Ready for Takeoff: Launching 
+
+Your Smart Contract
+
+The following steps walk you through deploying your first smart contract onto the EVM (or the Ropsten Testnet, if you’re not ready to spend any real ETH yet):
+
+1\. Go to [`http://remix.ethereum.org`](http://remix.ethereum.org/). 
+
+You must type `http://` (without the `s`) and not `https://` (with the `s`) or else Remix cannot access MetaMask.
+
+2\. Click the New File link under the File heading on the main 
+
+page, as shown in Figure 9-1. 
+
+A new file opens in the File Explorers pane, located on the left side of the page.
+
+At any time, the Double Page icon, located on the navigation pane on the far left, brings you back to the File Explorers pane, as shown in Figure 9-2.
+
+CHAPTER 9 Deploying Your First Smart Contract  171
+
+![](images/00042.jpg)
+
+![](images/00056.jpg)
+
+FIGURE 9-1:
+
+The Remix
+
+Ethereum
+
+main page.
+
+FIGURE 9-2:
+
+The Remix
+
+File
+
+Explorers
+
+pane.
+
+3\. Using the cursor, click into the blank text box, type `LittleBear.sol`, and then press Enter. 
+
+A new tab pops up with the name of the file, as shown in Figure 9-3.
+
+Excellent. You’re now ready to enter your Solidity code!
+
+172  PART 3  Developing Your Knowledge: A Step-by-Step Guide to Programming Your Own NFT
+
+![](images/00070.jpg)
+
+FIGURE 9-3:
+
+The
+
+LittleBear.
+
+sol open
+
+tab on
+
+Remix.
+
+Beginning with a simple template
+
+Enter the following code into the LittleBear.sol file:
+
+pragma solidity 0.8.6;
+
+contract LittleBear {
+
+event LogMsg(string message);
+
+string public storedMsg;
+
+constructor() {
+
+storedMsg = “Hello Little Bear (a.k.a.
+
+Maddie)!”;
+
+emit LogMsg(storedMsg);
+
+}
+
+function updateMsg(string memory newMsg)
+
+public {
+
+storedMsg = newMsg;
+
+emit LogMsg(storedMsg);
+
+}
+
+}
+
+To avoid typos, you can copy-and-paste this snippet directly
+
+[from www.seoyoungkim.com/nftfdcode.html](http://www.seoyoungkim.com/nftfdcode.html).
+
+CHAPTER 9 Deploying Your First Smart Contract  173
+
+Solidity is case sensitive, so `LogMsg` and `logmsg` aren’t treated identically at compilation.
+
+The remainder of this section explains the code, chunk by chunk.
+
+This first line of code is the Solidity version pragma, which speci-
+
+fies the allowable version(s) of the Solidity compiler to be used at
+
+compilation. In this case, the version pragma allows the source
+
+code to be compiled only under version 0.8.6:
+
+pragma solidity 0.8.6; 
+
+Next, you define the contract, LittleBear — Solidity is a curly-
+
+bracket language, which means it uses curly brackets to open and
+
+close blocks of code:
+
+contract LittleBear {
+
+The following line declares an event, LogMsg, that accepts a single
+
+argument of type string:
+
+event LogMsg(string message); 
+
+The next line declares a public state variable, storedMsg, of type
+
+string. The latest content of storedMsg is retained in contract
+
+storage, even as the contract and its functions lie dormant
+
+between calls:
+
+string public storedMsg; 
+
+The following block of code declares the special constructor()
+
+function, which is executed just once, at contract initiation. The
+
+first line of this function initializes the text being stored in the
+
+storedMsg state variable; the second line triggers the LogMsg
+
+event, passing the contents of storedMsg to be written to the
+
+contract’s event log:
+
+constructor() {
+
+storedMsg = “Hello Little Bear (a.k.a. 
+
+Maddie)!”; 
+
+emit LogMsg(storedMsg); 
+
+}
