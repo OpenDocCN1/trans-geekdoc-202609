@@ -1,0 +1,10 @@
+name: Stochastic Optimization for Large-scale Machine Learning
+slug: stochastic-optimization-for-large-scale-machine-learning
+name_cn: 大规模机器学习随机优化指南
+toc:
+- - '##'
+  - 标题层级变更
+- - '###'
+  - 变更为二级 (`##`)
+- - '###'
+  - 变更为三级 (`###`)
