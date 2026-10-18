@@ -1,0 +1,2 @@
++   [Brilliant Lifeskills：CBT、NLP、自信、记忆训练、面试回答、谈判、销售、演示与社交技能指南](README.md)
++   [Brilliant Lifeskills：CBT、NLP、自信、记忆训练、面试回答、谈判、销售、演示与社交技能指南](this-is-brilliant-cbt-nlp-confidence-memory-training-intervi_0.md)
