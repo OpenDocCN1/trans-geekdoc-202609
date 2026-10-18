@@ -1,0 +1,40 @@
+
+
+57. [Zhang, M.](#ch02.xhtml#Cref2_57), Bi, J., Bai, J., Dong, Z., Li, Y., & Li, Z. (2017). FTGuard: A priority-aware strategy against the flow table overflow attack in SDN ∗. In Proceedings of the SIGCOMM Posters and Demos (pp. 141–143).
+
+58. [Xu, T.](#ch02.xhtml#Cref2_58), Gao, D., Dong, P., Foh, C. H., & Zhang, H. (2017). Mitigating the table-overflow attack in software-defined networking. In Proceedings of the IEEE Transactions on Network and Service Management (pp. 1–12).
+
+59. [Zhou, Y.](#ch02.xhtml#Cref2_59), Chen, K., Zhang, J., Leng, J., & Tang, Y. (2018). Exploiting the vulnerability of flow table overflow in software-defined network: attack model, evaluation, and defense. Security and Communication Networks (pp. 1–15).
+
+60. [Zhang, Q.](#ch02.xhtml#Cref2_60) Y., Wang, X. W., Huang, M., Li, K. Q., & Das, S. K. (2018). Software defined networking meets information centric networking: A survey. IEEE Access, 6, 39547–39563.
+
+61. [Li, F.](#ch02.xhtml#Cref2_61), Cao, J., Wang, X., & Sun, Y. (2017). A QoS guaranteed technique for cloud applications based on software defined networking. IEEE Access, 5, 21229–21241.
+
+62. [Son, J.](#ch02.xhtml#Cref2_62), & Buyya, R. (2018). A taxonomy of software-defined networking (SDN)-enabled cloud computing. ACM Computing Surveys (CSUR), 51(3), 1–36.
+
+63. [Au, N. N. H.](#ch02.xhtml#Cref2_63), & Pham, V. H. (2019). Toward a trust-based authentication framework of Northbound interface in software defined networking. In Proceedings of the Industrial Networks and Intelligent Systems (p. 269). Springer Nature.
+
+64. [Hussain, K.](#ch02.xhtml#Cref2_64), Hussain, S. J., Jhanjhi, N. Z., & Humayun, M. (2019). SYN flood attack detection based on Bayes Estimator (SFADBE) for MANET. In Proceedings of the 2019 International Conference on Computer and Information Sciences (ICCIS) (pp. 1–4). IEEE.
+
+# 3 Clustering in Wireless Sensor Networks Using Adaptive Neuro-Fuzzy Inference Logic
+
+Seema Gaba, Radhika Gupta, Sahil Verma, Kavita, and Imran Taj
+
+## CONTENTS
+
+1. [3.1 Introduction](#ch03.xhtml#sec3_1)
+
+2. [3.2 Related Work](#ch03.xhtml#sec3_2)
+
+3. [3.3 Proposed Work](#ch03.xhtml#sec3_3)
+
+4. [3.4 Simulation Results](#ch03.xhtml#sec3_4)
+
+5. [3.5 Conclusion and Future Scope](#ch03.xhtml#sec3_5)
+
+6. [References](#ch03.xhtml#chapter3_RL_1)
+
+DOI: [10.1201/9780367808228-3](https://doi.org/10.1201/9780367808228-3)
+
+## 3.1 Introduction
+
