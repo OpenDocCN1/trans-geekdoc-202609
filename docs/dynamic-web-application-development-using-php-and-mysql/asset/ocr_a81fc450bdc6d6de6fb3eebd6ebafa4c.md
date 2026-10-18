@@ -1,0 +1,15 @@
+# 1.5 Special types of web application
+
+The web is full of public web sites that provide information using web pages to anyone who can connect to the World Wide Web using a browser. There is also a very large number of Business to Customer (B2C) web sites that make products and services available to anyone who has an Internet connection and a web browser. However there are some special-purpose web applications that have particular characteristics. Three important examples of these are intranets, extranets and portals.
+
+# Intranets
+
+As well as having a public presence on the Internet, many organisations maintain a private *intranet* behind a security firewall. An intranet consists of web pages and other resources that are only available inside the organisation. Intranets have a low cost of ownership because they use the standard technologies of the Internet. They increase internal communication while using less paper for things like internal phone books, software and procedure manuals, forms etc. They get information out of central databases in a form everyone can use from the desktop. Intranets have proved valuable for all kinds of organisations, for example, credit-card companies work with many banks and an intranet can be used as a central repository for information about all those banks, while pharmaceuticals companies have used intranets to draw information from many sources worldwide on drug trials and new drug submission regulations for all countries.
+
+# Extranets
+
+An *extranet* falls somewhere between the Internet and an organisation's intranet. Only selected outsiders, such as customers, suppliers or other trading partners, are allowed access an extranet. Extranets can range from highly secure Business to Business (B2B) systems to self-registration systems such as those frequently used for downloading evaluation software. Extranets can be used, for example, to allow web shopper customers to log in to check the status of their orders over a secure connection, or users of courier companies to check where their delivery is at any point in time.
+
+# Portals
+
+A *portal* is a special kind of web application. Its role is to act as a gateway (the meaning of 'portal') into a number of other applications. The structure of a portal is typically to present a number of *portlets*, which are window-based links into other applications. They also commonly provide facilities for personalisation, so that users can customize which portlets they are presented with and also change the layout and look and feel of the portal. Portals are often used by public sites that encourage user registration, such as Yahoo. They are also often used by organisations as a route into the various applications provided on the company intranet. In the mobile context, portals are a popular way for mobile service providers to enable easy access to the mobile Internet. Mobile portals such as Vodafone Live! provide links to various applications within the 'walled garden' of

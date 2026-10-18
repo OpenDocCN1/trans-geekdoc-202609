@@ -1,0 +1,17 @@
+# # 1.7 The Web 2.0 and Ajax
+
+Since the mid 2000s, it has been hard to discuss the World Wide Web without mentioning the Web 2.0 and Ajax. Web 2.0 is a term that has become widely used since the first Web 2.0 Conference in 2004. Although it might be categorized as an umbrella marketing term rather than a specific technology or architecture, some authors, notably (O’Reilly 2005), have given it some concrete specifications through a set of published principles, practices and patterns. Many publications that discuss the Web 2.0 focus on rich user interfaces, in particular the use of asynchronous JavaScript and XML (Ajax), but the ideas of the Web 2.0 go beyond Ajax to include a wide range of ideas about how modern web applications should be developed. The key ideas underlying the Web 2.0 may perhaps be summarized as:
+
++   - The web as a software platform
++   - Service-oriented architectures
++   - User and contributor communities
+
+In this section, we briefly explore some of these ideas, which will re-emerge at various points throughout this book. Above all, the role of the *eXtensible Markup Language* (XML), which underlies service-oriented architectures, can be seen as an important component of many of aspects of the Web 2.0.
+
+# ## The web as a software platform
+
+In the past, the software platform that applications were built on was a particular computer operating system, for example Microsoft Windows or Linux. In contrast Web applications are able to span multiple operating systems because web browsers can render the same content regardless of the system from which the page was downloaded. The server may run on one operating system and its clients on many others. One key Web 2.0 pattern is *software above the level of a single device*, which is about the way that applications can span different types of device, from web servers to desktop PCs to mobile phones to portable media players. For example, to download music we might use a PC to connect to a web server and also connect a mobile device to the PC, all using a single application. In this type of situation, the platform that the overall application is running on is the web, not just a single device.
+
+# ## Service-oriented architectures
+
+In the early days of the web, the focus was on the applications that were being used. For example, the ‘browser wars’, primarily between Netscape and Microsoft in the mid 1990s, were about which application would be used to access the web. More recently, the focus has been more on the underlying content available via the web, rather than the specific applications that are used. This content is made available using various forms of *web service*. Web services are data sources made available over the web using the eXtensible Markup Language (XML). Systems that are built by combining together multiple web services are known as *Service-Oriented Architectures* (SOA). Examples of content that can be accessed through web services include news, weather, map data, and book information. Some authors use the term *programmable web* to describe the ability to build applications that utilise content from multiple web-based resources, using freely available application programming interfaces (APIs) to create *mashups*. A mashup, in web terms, is an application that mixes together content from different sources. Some mashups combine

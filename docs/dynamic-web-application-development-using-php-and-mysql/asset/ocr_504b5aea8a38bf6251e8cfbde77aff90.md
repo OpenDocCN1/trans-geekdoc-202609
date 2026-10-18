@@ -1,0 +1,36 @@
+# Dynamic Web Application Development using PHP and MySQL
+
+Simon Stobart & David Parsons
+
+# Learn how to build multi-device database driven websites
+
+Providing an end-to-end view of how modern web applications are built, Dynamic Web Application Development takes a cohesive approach to building a software architecture from core components. It tells a development story by taking you right through from analysis and design, learning the core technologies, and tying them together using standard tools, patterns and frameworks without straying into too much detail or trying to cover too many alternatives.
+
+Using PHP scripting and the MySQL database management system, this is a contemporary and well targeted coverage of important areas of web application development including Ajax, adaptive markup, web application frameworks, standards and conformance, accessibility and security issues. It shows you how to build functionality into a website using a variety of technologies. These will work as a basic framework from which you will be able to explore more challenging developments such as porting applications to mobile devices and including more Web 2.0 features.
+
+An ideal text for web programming courses, this book will help you whether you are a student or need to reskill and want a dependable and accessible self-study package.
+
+Simon Stobart teaches and researches in the area of dynamic web application development at the University of Sunderland, UK. He has written a number of text books and holds the position of Fellow with both the British Computer Society and the Institute of Analysts and Programmers.
+
+David Parsons holds a senior academic post in the Institute of Information and Mathematical Sciences at Massey University, Auckland, New Zealand. His research interests include software development methods, web-based applications and mobile computing systems.
+
+# Covers core building blocks:
+
+PHP // MySQL // Web 2.0 // Ajax // Javascript // XHTML
+
+# CD-ROM Contents:
+
+The Toolbox:
+WAMP, PHP Designer, MySQL Workbench.
+
+The Code:
+All example code with the addition of three worked larger scale examples, illustrating a hangman game, a shopping cart with paged display of items for sale and a members' message system
+
+![](bbox=[0.85, 0.48, 0.95, 0.55])
+
+# Key Features:
+
+![](bbox=[0.68, 0.6, 0.8, 0.73])
+
+working example scripts throughout
+> Covers topics such as security, accessibility and conformance to guidelines
