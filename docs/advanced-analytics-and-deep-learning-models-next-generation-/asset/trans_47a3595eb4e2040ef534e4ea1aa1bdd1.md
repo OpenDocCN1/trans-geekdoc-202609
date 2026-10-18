@@ -1,0 +1,84 @@
+
+
+一项新兴创新在 2017–2018 年也达到了顶峰。如云计算工程所示，云架构的中心或第二层由雾计算表示。对于某些应用，现场计算设备与云中数据（通常相隔数千英里）之间的通信延迟不利于时间要求，因为它可能导致对时间敏感的应用出现重大延迟。例如，灾害（地震、海啸等）早期预警的处理和存储必须是实时的。对于这类应用，计算和存储资源应部署在需要计算的位置附近（如数字化道路等应用区域）。在这些场景中，雾计算被认为是合适的。
+
+## 16.10 结论
+
+云计算提供多种服务，如基础设施即服务、软件即服务、网络即服务、互联网即服务和数据即服务，形式包括公有云、私有云和混合云。在这个智能时代，我们见证了云计算的快速增长，如今，云计算的扩展或变体——边缘计算——已被广泛应用，即应用于重要领域。与此同时，我们也面临着针对这一进步的多种关键攻击、问题和挑战。本文涵盖了这些话题并进行了详细讨论，为读者开辟了边缘计算的新视野，即边缘计算与大数据分析、计算、人工智能以及区块链在边缘计算中的应用等可能用途。此外，边缘计算还可能成为量子计算和露点计算普及的重要资源。建议读者和发明者探索边缘计算与新兴技术的可能进步，并为此努力，以造福社会（以高效的方式）。
+
+## 参考文献
+
+1\. Patil, S.S. and Thorat, S.A., Early detection of grapes diseases using machine learning and IoT. *2016 Second International Conference on Cognitive Computing and Information Processing (CCIP)*, Mysore, pp. 1–5, 2016.
+
+2\. Jia, G., Han, G., Rao, H., Shu, L., Edge Computing-Based Intelligent Manhole Cover Management System for Smart Cities. *IEEE Internet Things J.*, 5, 3, 1648–1656, June 2018.
+
+3\. Ni, J., Zhang, K., Lin, X., Shen, X., Securing Fog Computing for Internet of Things Applications: Challenges and Solutions. *IEEE Commun. Surv. Tutor.*, 20, 1, 601–628, Firstquarter 2018.
+
+4\. Peralta, G., Iglesias-Urkia, M., Barcelo, M., Gomez, R., Moran, A., Bilbao, J., Fog computing based efficient IoT scheme for the Industry 4.0. *2017 IEEE International Workshop of Electronics, Control, Measurement, Signals* *and their Application to Mechatronics (ECMSM)*, Donostia-San Sebastian, pp. 1–6, 2017.
+
+5\. Fan, Q. and Ansari, N., Application Aware Workload Allocation for Edge Computing-Based IoT. *IEEE Internet Things J.*, 5, 3, 2146–2153, 2018.
+
+6\. Tedeschi, P. and Sciancalepore, S., *Edge and Fog Computing in Critical Infrastructures: Analysis, Security Threats, and Research Challenges*.
+
+7\. Shi, W. and Dustdar, S., The Promise of Edge Computing. *Computer*, 49, 5, 78–81, May 2016.
+
+8\. Xiao, Y., Jia, Y., Liu, C., Cheng, X., Yu, J., Lv, W., Edge Computing Security: State of the Art and Challenges, in: *Proceedings of the IEEE*, vol. 107, pp. 1608–1631, Aug. 2019.
+
+9\. Svorobej, S., Takako Endo, P., Bendechache, M., Filelis-Papadopoulos, C., Giannoutakis, K.M., Gravvanis, G.A., Tzovaras, D., Byrne, J., Lynn, T., Simulating Fog and Edge Computing Scenarios: An Overview and Research Challenges. *Future Internet*, 11, 55, 2019.
+
+10\. Fernandes, E., Jung, J., Prakash, A., “Security analysis of emerging smart home applications”,. *Proc. IEEE Symp. Secur. Privacy (SP)*, pp. 636–654, May 2016.
+
+11\. Na, W., Jang, S., Lee, Y., Park, L., Dao, N., Cho, S., Frequency Resource Allocation and Interference Management in Mobile Edge Computing for an Internet of Things System. *IEEE Internet Things J.*, 6, 3, 4910–4920, 2019.
+
+12\. Stojmenovic, I. and Wen, S., The Fog computing paradigm: Scenarios and security issues. *2014 Federated Conference on Computer Science and Information Systems*, Warsaw, pp. 1–8, 2014.
+
+13\. Nair, M.M., Tyagi, A.K., Sreenath, N., The Future with Industry 4.0 at the Core of Society 5.0: Open Issues, Future Opportunities and Challenges. *2021 International Conference on Computer Communication and Informatics (ICCCI)*, pp. 1–7, 2021.
+
+14\. Rekha, G., Tyagi, A.K., Anuradha, N., Integration of Fog Computing and Internet of Things: An Useful Overview. *Proceedings of ICRIC 2019. Lecture Notes in Electrical Engineering*, vol. 597 Springer, Cham, 2020, [`https://doi.org/10.1007/978-3-030-29407-6\_8`](https://doi.org/10.1007/978-3-030-29407-6_8).
+
+15\. Tyagi, A.K. and Sreenath, N., Providing trust enabled services in vehicular cloud computing. *2016 International Conference on Research Advances in Integrated Navigation Systems (RAINS)*, Bangalore, pp. 1–7, 2016.
+
+16\. Tyagi, A.K. and Niladhuri, S., Providing Trust Enabled Services in Vehicular Cloud Computing, in: *Proceedings of the International Conference on Informatics and Analytics (ICIA-16)*, vol. Article 3, Association for Computing Machinery, New York, NY, USA, pp. 1–10, 2016.
+
+17\. Tyagi, A.K., Kumari, S., Fernandez, T.F., Aravindan, C., P3 Block: Privacy Preserved, Trusted Smart Parking Allotment for Future Vehicles of Tomorrow, in: *Computational Science and Its Applications – ICCSA 2020. ICCSA 2020. Lecture Notes in Computer Science*, vol. 12254 Springer, Cham, 2020.
+
+18\. Sravanthi, K., Burugari, V.K., Tyagi, A., Preserving Privacy Techniques for Autonomous Vehicles. 8, 5180–5190, 2020.
+
+19\. Varsha, R. *et al.*, Deep Learning Based Blockchain Solution for Preserving Privacy in Future Vehicles. 1, 223 – 236, Jan. 2020.
+
+20\. Tyagi, A.K., Nair, M.M., Niladhuri, S., Abraham, A., Security, Privacy Research issues in Various Computing Platforms: A Survey and the Road Ahead. *J. Inf. Assur. Secur.*, 15, 1, 1–16, 16, 2020.
+
+21\. Tyagi, Amit Kumar; Nair, Meghna Manoj "Internet of Everything (IoE) and Internet of Things (IoTs): Threat Analyses, Possible Opportunities for Future, *JJ. Inf. Assur. Secur.,* 15, 4, 2020.
+
+22\. Tyagi, A.K., Fernandez, T.F., Mishra, S., Kumari, S., Intelligent Automation Systems at the Core of Industry 4.0, in: *Intelligent Systems Design and Applications. ISDA. Advances in Intelligent Systems and Computing*, vol. 1351, A. Abraham, V. Piuri, N. Gandhi, P. Siarry, A. Kaklauskas, A. Madureira (Eds.), Springer, Cham, 2020.
+
+23\. Varsha, R., Nair, S.M., Tyagi, A.K., Aswathy, S.U., RadhaKrishnan, R., The Future with Advanced Analytics: A Sequential Analysis of the Disruptive Technology’s Scope, in: *Hybrid Intelligent Systems. HIS 2020. Advances in Intelligent Systems and Computing*, vol. 1375 Springer, Cham, 2021.
+
+24\. Kumari, S., Tyagi, A.K., Aswathy, S.U., The Future of Edge Computing with Blockchain Technology: Possibility of Threats, Opportunities and Challenges, in: *Recent Trends in Blockchain for Information Systems Security and Privacy*, CRC Press, 2021.
+
+1.  [\*](#c16.xhtml#aut1)*Corresponding author*: [amitkrtyagi025@gmail.com](mailto:amitkrtyagi025@gmail.com)
+
+2.  Amit Kumar Tyagi: ORCID: 0000-0003-2657-8700
+
+# 索引
+
+*   A-beta, [208](#c09.xhtml#Page_208)
+
+*   AdaBoost, [224](#c09.xhtml#Page_224)
+
+*   AdaDelta, [276](#c11.xhtml#Page_276)
+
+*   ADNI dataset, [210](#c09.xhtml#Page_210), [217](#c09.xhtml#Page_217), [220](#c09.xhtml#Page_220), [224](#c09.xhtml#Page_224)
+
+*   Advanced persistent threats (APT), [304](#c12.xhtml#Page_304)
+
+*   Advantages of multi-criteria recommender system, [54](#c03.xhtml#Page_54) 
+
+    *   customer satisfaction, [57](#c03.xhtml#Page_57)
+
+    *   discovery, [58](#c03.xhtml#Page_58)
+
+    *   personalization, [57](#c03.xhtml#Page_57)
+
+    *   provide reports, [58](#c03.xhtml#Page_58)
+
