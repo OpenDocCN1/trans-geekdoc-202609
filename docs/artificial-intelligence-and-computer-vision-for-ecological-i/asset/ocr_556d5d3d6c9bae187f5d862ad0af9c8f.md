@@ -1,0 +1,9 @@
+![](bbox=[0.17, 0.1, 0.83, 0.62])
+
+Fig. 3. Illustration for various applications of AI in environment sustainability.
+
+temperature, light availability, and nutrient levels, AI models can predict dangerous algal blooms. This makes it possible to protect aquatic ecosystems and public health on time.
+
+Resource management optimization is a key area in which artificial intelligence is being used in environmental sciences. By evaluating crop requirements, soil moisture content, and weather predictions, AI systems can optimize the use of water resources in agriculture by suggesting effective irrigation schedules. This increases agricultural yields while simultaneously conserving water. AI is used in wildlife conservation to examine data from acoustic sensors, drones, and video traps to track the movements of endangered species and keep an eye on animal populations (Zhong et al., 2021) (Sanchez et al., 2022). AI facilitates the creation of efficient conservation methods and mitigates the loss of biodiversity by processing massive datasets efficiently and accurately.
+
+To sum up, artificial intelligence and machine learning have emerged as essential instruments in the field of environmental sciences, providing robust approaches to the observation, evaluation, and administration of natural resources. AI has the potential to handle enormous volumes of data, identify patterns, and make predictions. These capabilities will help us better understand complex environmental systems and respond to environmental concerns. The application of AI technology in environmental sciences is anticipated to grow as it develops, making a greater contribution to the sustainability and preservation of our natural world (Jain et al., 2020).

@@ -1,0 +1,9 @@
+![](bbox=[0.22, 0.1, 0.78, 0.68])
+
+Fig. 5. Application of RS imageries in forestry and agriculture.
+
+can suggest chlorophyll material and total plant growth robustness. Thermal imaging can identify water tension before it becomes aesthetically noticeable, allowing for timely watering. Furthermore, remote noticing helps in the early discovery of bug invasions and conditions by determining abnormalities in plant growth patterns and thermal anomalies (Nadeem et al., 2022). These abilities allow proactive management methods to minimize crop losses and optimize input usage. By incorporating RS information with ground-based observations, farmers can confirm the remote information, resulting in even more precise medical diagnoses and treatments (Tey et al., 2024).
+
+# Precision Agriculture
+
+This kind of farming leverages remote noticing to manage field irregularity successfully, maximizing the use of resources such as water, fertilizers, and chemicals. Integrated with global positioning system innovation, high-resolution RS information enables the production of comprehensive area maps that highlight variants in soil buildings, plant health and wellness, and wetness degrees (Shafik, 2024). Variable Price Technology (VRT) can then apply inputs precisely where needed, decreasing waste and enhancing effectiveness. For instance, NDVI maps can guide differential plant food applications, ensuring that the required quantity is used in specific areas, thus boosting nutrient uptake and minimizing overflow. Similarly, dampness maps originated from thermal imaging, or SAR, can notify watering timetables, promoting water conservation (Shafik et al., 2023). Remote noticing additionally sustains real-time surveillance and adaptive monitoring, allowing farmers to respond swiftly to

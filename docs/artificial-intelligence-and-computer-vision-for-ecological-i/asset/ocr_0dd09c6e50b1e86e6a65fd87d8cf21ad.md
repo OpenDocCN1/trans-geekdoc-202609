@@ -1,0 +1,13 @@
+![](bbox=[0.22, 0.12, 0.72, 0.42])
+
+Fig. 5. Working of SVM algorithm.
+
+of making well-informed judgments on soil management and agricultural practices. Support Vector Machines (SVM) employ a kernel mechanism to convert the input characteristics into high dimensional space with a higher number of dimensions, particularly when the data points cannot be linearly segregated (Gaye et al., 2021). This enables the utilization of a hyperplane concerning effectively separating given data. This phenomenon is commonly referred to as the “kernel trick”. The goal is to reduce misclassification errors while simultaneously maximizing the margin.
+
+# Computer Vision Technologies in Soil Fertility Evaluation
+
+# Drones in Soil Fertility Evaluation
+
+The adoption of unmanned aerial vehicles (UAVs) for assessing the quality and productivity of the soil is a cutting-edge method that exploits sophisticated technology to improve agricultural techniques. Drones are employed for to monitor soil fertility by gathering precise and up-to-date information from the atmosphere (Chouhan et al., 2024a). Drones utilize modern imaging technology and spatial analysis to offer comprehensive information on soil health, facilitating accurate and effective soil management techniques (Raza et al., 2023). The introduction of drone technology, coupled with sophisticated sensors, has completely transformed the process of soil sampling and analysis in the field of agriculture. Their objective is to provide farmers with precise and timely information that may be used to improve soil management techniques, increase crop yield, and promote sustainable agriculture practices worldwide (Kumar et al., 2024). Drones outfitted with multispectral cameras are transforming soil analysis by delivering prompt, thorough, and practical data on a previously unachievable scale using conventional techniques (Mushtaq et al., 2024). This method signifies a notable advancement in sustainable agriculture since it maximizes resource use and enhances crop productivity while reducing negative effects on the environment.
+
+Drones offer accurate and up-to-date information that aids the agricultural community in efficiently managing soil health. Drones may combine their obtained data with other sources, such as satellite imaging, meteorological data, and historical crop production data, to create thorough models for assessing soil fertility (Weiss et al., 2020). The utilization of sophisticated data, processing and machine learning approaches significantly enhances understanding of this data (Chouhan et al., 2021).

@@ -1,0 +1,15 @@
+establish marketing tactics. Furthermore, timely shortages or surpluses might avoid market disruptions through effective estimations and predictions (Javed, 2022). Establishing reliable techniques for estimating crop yields is essential for India’s farming industry. It eventually contributes to food security and a more sustainable agricultural system by enabling decision-makers, producers, and market participants to make better decisions through timely and accurate data.
+
+Both satellite photography and labour-intensive field scouting can be costly, time-consuming, and lacking in the information necessary for precise decision-making. Unmanned aerial vehicles (UAVs), sometimes known as drones, are revolutionizing the agricultural landscape of India at present. When compared to conventional techniques, UAV data collection is substantially faster. Farmers can rapidly and effectively cover large fields, enabling them to collect vital data on time. This quick data collection is especially helpful for tasks like tracking the efficiency of irrigation or highlighting locations that need to be cared for immediately.
+
+Hence, farmers should be provided with access to an effective tool for precision farming (Arroyo, 2017). Their flexibility, speed, and high-resolution imaging provide an abundance of advantages over conventional techniques, enabling farmers to make decisions based on information, allocate resources optimally, and eventually enhance crop yields and general farm management techniques.
+
+This chapter reveals the crop yield estimation using UAV integrated with the Normalized Difference Vegetation Index to elevate agriculture ahead to the next level which reduces the risk factor of decreased crop cultivation for the increasing human population in India.
+
+# Estimating Crop Yield: A Fundamental View
+
+Precise assessment of crop production is essential for many farming techniques. It determines the optimal amount of seeds to plant, how much fertilizer to apply, and how much watering is required. Yield projections have an impact on market pricing tactics as well, which helps to minimize shortage risks. It also makes proactive risk management strategies against illnesses, pest infestations, and unfavourable weather possible (Zheng, 2018). Traditional ground-based surveys require a lot of time and effort, and can involve human error especially when dealing with big fields but satellite imagery has drawbacks such as spectral resolution limitations, reliance on weather, and is expensive for frequent monitoring.
+
+# Increasing Use of UAVs in Farming
+
+Drones, or unmanned aerial vehicles, or UAVs, have changed the precision agriculture industry as depicted in Fig. 3. An airframe, a motor system, a flight control system, and a payload that can hold sensors or cameras make up these flying machines (Li, 2022). Main benefits include scalability, cost-effectiveness, Flexibility and Data Richness.

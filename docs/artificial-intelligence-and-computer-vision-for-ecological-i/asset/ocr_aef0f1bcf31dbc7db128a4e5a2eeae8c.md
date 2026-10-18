@@ -1,0 +1,9 @@
+![](bbox=[0.21, 0.15, 0.78, 0.55])
+
+Fig. 3. Farmer ChatBot system – Multi Language Support.
+
+Firstly, it is seamlessly connected with Google Translate for multilingual support, enabling users to interact in their preferred language. Additionally, the chatbot accepts text queries from users, ensuring enhanced accessibility for all users. Furthermore, it incorporates language translation capabilities, allowing it to translate user queries into the local language and provide responses in text formats. Initially launched in five languages during Phase I (English, Hindi, Tamil, Bangla, and Odiya), the chatbot’s expansion plan includes the addition of five more languages (Malayalam, Gujarati, Punjabi, Telugu, and Marathi) (Fig. 3) with further accessibility planned for all 22 regional languages in subsequent stages. Through these features and expansion plans, the chatbot aims to cater to the diverse linguistic needs of farmers and stakeholders accessing agricultural support through the FCB platform.
+
+# Challenges in Implementing Chatbots for Agricultural Advisory Services within the FCB Ecosystem
+
+Implementing chatbots within the Farmer ChatBot (FCB) ecosystem for agricultural advisory services presents several challenges that need to be addressed for effective deployment. One significant challenge is the linguistic diversity across India, requiring chatbots to understand and respond to queries in various languages and dialects. Additionally, ensuring accessibility and functionality in areas with limited internet connectivity is crucial. Technical expertise in natural language processing (NLP),
