@@ -1,0 +1,66 @@
+
+
+# 参考文献列表
+
+Gräser, M., Harris, C., Alt, R., & Reinhold, O. (2023). How Integrated Social CRM Affects Business Success: Learnings from a Literature Analysis. 2023 IEEE/WIC International Conference on Web Intelligence and Intelligent Agent Technology (WI-IAT), (pp. 547–554). IEEE. [10.1109/WI-IAT59888.2023.00091](http://dx.doi.org/10.1109/WI-IAT59888.2023.00091)
+
+Greene, K. (2006). The $1 Million Netflix Challenge. MIT Technology Review. [https://www.technologyreview.com/2006/10/06/273459/the-1-million-netflix-challenge/](https://www.technologyreview.com/2006/10/06/273459/the-1-million-netflix-challenge/)
+
+Gupta, S., & Joshi, S. (2022). Predictive Analytic Techniques for enhancing marketing performance and Personalized Customer Experience. 2022 International Interdisciplinary Humanitarian Conference for Sustainability (IIHC), (pp. 16–22). IEEE. [10.1109/IIHC55949.2022.10060286](http://dx.doi.org/10.1109/IIHC55949.2022.10060286)
+
+Handzic, M., Ozlen, K., & Durmic, N. (2014). Improving Customer Relationship Management Through Business Intelligence. Journal of Information & Knowledge Management, 13(02), 1450015. [10.1142/S0219649214500154](http://dx.doi.org/10.1142/S0219649214500154)
+
+Hardesty, L. (2019, November 22). The history of Amazon’s recommendation algorithm. Amazon Science. https://www.amazon.science/the-history-of-amazons-recommendation-algorithm
+
+Jhamb, S., & Turcanu, R. (2022). A Scholarly Review of Global Business Indications and Economic Trends: Understanding International Competitiveness, Economic Globalization, and Digitization Through the Lens of the COVID-19 Pandemic and the New Normal. Journal of Marketing Development and Competitiveness, 16(3). [10.33423/jmdc.v16i3.5584](http://dx.doi.org/10.33423/jmdc.v16i3.5584)
+
+Keegan, B. J., Canhoto, A. I., & Yen, D. A. (2022). Power negotiation on the tango dancefloor: The adoption of AI in B2B marketing. Industrial Marketing Management, 100, 36–48. [10.1016/j.indmarman.2021.11.001](http://dx.doi.org/10.1016/j.indmarman.2021.11.001)
+
+Khan, A., Ehsan, N., Mirza, E., & Sarwar, S. Z. (2012). Integration between Customer Relationship Management (CRM) and Data Warehousing. Procedia Technology, 1, 239–249. [10.1016/j.protcy.2012.02.050](http://dx.doi.org/10.1016/j.protcy.2012.02.050)
+
+Kučera, P., & Cmuntová, D. (2023). Design and implementation of a CRM system to optimize business processes of a trading company. Entrepreneurship and Sustainability Issues, 11(2), 363–380. [10.9770/jesi.2023.11.2(25)](http://dx.doi.org/10.9770/jesi.2023.11.2\(25\))
+
+Kumar, V., & Reinartz, W. (2018). Customer Relationship Management. Springer Berlin Heidelberg., [10.1007/978-3-662-55381-7](http://dx.doi.org/10.1007/978-3-662-55381-7)
+
+Kunathikornkit, S., Piriyakul, I., & Piriyakul, R. (2023). One-to-one marketing management via customer complaint. Social Network Analysis and Mining, 13(1), 83. [10.1007/s13278-023-01082-z](http://dx.doi.org/10.1007/s13278-023-01082-z)
+
+L, F., J., E., E., A., U., O., J., and O., O., B. (2023). Customer Relationship Management and Customers Repeat Purchase Behavior in Nigeria. Scholars Journal of Economics, Business and Management, 10(1), 19–28. [10.36347/sjebm.2023.v10i01.002](http://dx.doi.org/10.36347/sjebm.2023.v10i01.002)
+
+Ledro, C., Nosella, A., & Dalla Pozza, I. (2023). Integration of AI in CRM: Challenges and guidelines. Journal of Open Innovation, 9(4), 100151. [10.1016/j.joitmc.2023.100151](http://dx.doi.org/10.1016/j.joitmc.2023.100151)
+
+Ledro, C., Nosella, A., & Vinelli, A. (2022). Artificial intelligence in customer relationship management: Literature review and future research directions. Journal of Business and Industrial Marketing, 37(13), 48–63. [10.1108/JBIM-07-2021-0332](http://dx.doi.org/10.1108/JBIM-07-2021-0332)
+
+Lehman, R. A., Watson, H. J., Wixom, B. H., & Hoffer, J. A. (2008). Continental Airlines Flies High with Real-time Business Intelligence. MIS Quarterly Executive, 3(4), 30.
+
+Li, L., Lin, J., & Luo, W. (2023). INVESTIGATING THE EFFECT OF ARTIFICIAL INTELLIGENCE ON CUSTOMER RELATIONSHIP MANAGEMENT PERFORMANCE IN E-COMMERCE ENTERPRISES. Journal of Electronic Commerce Research, 24(1).
+
+Lishchynska, L., & Dobrovolska, N. (2022). PROSPECTIVE SOFTWARE TOOLS FOR DATA ANALYSIS IN BUSINESS. Herald of Khmelnytskyi National University, 305(1), 78–83. [10.31891/2307-5732-2022-305-1-78-79](http://dx.doi.org/10.31891/2307-5732-2022-305-1-78-79)
+
+Luhn, H. P. (1958). A Business Intelligence System. IBM Journal of Research and Development, 2(4), 314–319. [10.1147/rd.24.0314](http://dx.doi.org/10.1147/rd.24.0314)
+
+Maaitah, T. (2023). The Role of Business Intelligence Tools in the Decision Making Process and Performance. Journal of Intelligence Studies in Business, 13(1), 43–52. [10.37380/jisib.v13i1.990](http://dx.doi.org/10.37380/jisib.v13i1.990)
+
+Malik, A., & Ghai, S. (2023). Role of CRM in Customer Loyalty and Repeat Purchase Intention: An Analytical Study. Journal of Informatics Education and Research, 3(1), 1. [10.52783/jier.v3i1.60](http://dx.doi.org/10.52783/jier.v3i1.60)
+
+Mohamed Mohamed, S., Yehia, E., & Marie, M. (2022). Relationship between E-CRM, Service Quality, Customer Satisfaction, Trust, and Loyalty in banking Industry. Future Computing and Informatics Journal, 7(2), 51–74. [10.54623/fue.fcij.7.2.5](http://dx.doi.org/10.54623/fue.fcij.7.2.5)
+
+Murat, A., Saida, S., & Timurlan, S. (2023). Global Digital Transformation Trends in Real Sectors of the Economy. SHS Web of Conferences, 172, 02014. [10.1051/shsconf/202317202014](http://dx.doi.org/10.1051/shsconf/202317202014)
+
+Olszak, C. M. (2016). Toward Better Understanding and Use of Business Intelligence in Organizations. Information Systems Management, 33(2), 105–123. [10.1080/10580530.2016.1155946](http://dx.doi.org/10.1080/10580530.2016.1155946)
+
+Peppard, J. (2000). Customer Relationship Management (CRM) in financial services. European Management Journal, 18(3), 312–327. [10.1016/S0263-2373(00)00013-X](http://dx.doi.org/10.1016/S0263-2373\(00\)00013-X)
+
+Piert Espinoza, J., Cardenas Yactayo, D., & Chavez Ugaz, R. (2023, October 10). CRM Implementation in SMEs Management Processes: The Role of e-CRM and s-CRM. Proceedings of the International Conference on Industrial Engineering and Operations Management. IEEE. [10.46254/EV01.20230213](http://dx.doi.org/10.46254/EV01.20230213)
+
+Ponyiam, P., & Arch-int, S. (2018). Customer Behavior Analysis Using Data Mining Techniques. 2018 International Seminar on Application for Technology of Information and Communication, (pp. 549–554). IEEE. [10.1109/ISEMANTIC.2018.8549803](http://dx.doi.org/10.1109/ISEMANTIC.2018.8549803)
+
+Rathod, H. D., Rajawat, D., Ahmed, M., Dagur, Y., & Rajpurohit, K. (2024). A Study to Know Impact of AI on CRM. Interantional Journal Of Scientific Research In Engineering And Management, 08(02), 1–13. [10.55041/IJSREM31253](http://dx.doi.org/10.55041/IJSREM31253)
+
+Rygielski, C., Wang, J.-C., & Yen, D. C. (2002). Data mining techniques for customer relationship management. Technology in Society, 24(4), 483–502. [10.1016/S0160-791X(02)00038-6](http://dx.doi.org/10.1016/S0160-791X\(02\)00038-6)
+
+Sharma, A. (2023). Analyzing the Role of Artificial Intelligence in Predicting Customer Behavior and Personalizing the Shopping Experience in Ecommerce. Interantional Journal Of Scientific Research In Engineering And Management, 07(02). [10.55041/IJSREM17839](http://dx.doi.org/10.55041/IJSREM17839)
+
+Stefanov, T., Varbanova, S., Stefanova, M., & Ivanov, I. (2023). CRM System as a Necessary Tool for Managing Commercial and Production Processes. TEM Journal, 785–797. https://doi.org/[10.18421/TEM122-23](http://dx.doi.org/10.18421/TEM122-23)
+
+Taleb, N., Salahat, M., & Ali, L. (2020). Impacts of Big-Data Technologies in Enhancing CRM Performance. 2020 6th International Conference on Information Management (ICIM), (pp. 257–263). IEEE. [10.1109/ICIM49319.2020.244708](http://dx.doi.org/10.1109/ICIM49319.2020.244708)
+

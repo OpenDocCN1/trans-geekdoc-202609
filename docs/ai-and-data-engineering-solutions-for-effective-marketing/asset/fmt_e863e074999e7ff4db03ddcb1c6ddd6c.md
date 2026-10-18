@@ -1,0 +1,26 @@
+
+# Business Intelligence
+
+[161](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1600), [162](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1626), [163](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1649), [164](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1662), [166](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1713), [167](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1716), [171](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1757), [172](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1780), [173](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1796), [174](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1825), [175](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1854), [179](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1934), [180](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1945), [181](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1958), [182](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1976), [183](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1987), [283](#979-8-3693-3172-9.ch013.bits-pdf.xhtml#_idIndexMarker3248)
+
+# Business Performance (BP)
+
+[170](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1732), [173](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1793), [175](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1836), [177](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1903), [178](#979-8-3693-3172-9.ch008.bits-pdf.xhtml#_idIndexMarker1920), [241](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2671), [242](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2692), [243](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2703), [244](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2727), [245](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2745), [246](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2760), [247](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2812), [248](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2815), [250](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2855), [251](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2882), [252](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2894), [254](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2905), [256](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2922), [257](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2928), [258](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2938), [259](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2941), [260](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2949), [263](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker2984), [264](#979-8-3693-3172-9.ch012.bits-pdf.xhtml#_idIndexMarker3000), [268](#979-8-3693-3172-9.ch013.bits-pdf.xhtml#_idIndexMarker3063), [320](#979-8-3693-3172-9.ch015.bits-pdf.xhtml#_idIndexMarker3538), [377](#979-8-3693-3172-9.ch018.bits-pdf.xhtml#_idIndexMarker4138)
+
+## C
+
+### campaign effectiveness
+
+[71](#979-8-3693-3172-9.ch004.bits-pdf.xhtml#_idIndexMarker855), [78](#979-8-3693-3172-9.ch004.bits-pdf.xhtml#_idIndexMarker876), [413](#979-8-3693-3172-9.ch020.bits-pdf.xhtml#_idIndexMarker4416)
+
+### citizen participation
+
+[115](#979-8-3693-3172-9.ch006.bits-pdf.xhtml#_idIndexMarker1183), [116](#979-8-3693-3172-9.ch006.bits-pdf.xhtml#_idIndexMarker1187), [118](#979-8-3693-3172-9.ch006.bits-pdf.xhtml#_idIndexMarker1205), [119](#979-8-3693-3172-9.ch006.bits-pdf.xhtml#_idIndexMarker1214), [120](#979-8-3693-3172-9.ch006.bits-pdf.xhtml#_idIndexMarker1222), [125](#979-8-3693-3172-9.ch006.bits-pdf.xhtml#_idIndexMarker1285), [130](#979-8-3693-3172-9.ch006.bits-pdf.xhtml#_idIndexMarker1300), [134](#979-8-3693-3172-9.ch006.bits-pdf.xhtml#_idIndexMarker1321), [136](#979-8-3693-3172-9.ch006.bits-pdf.xhtml#_idIndexMarker1333), [137](#979-8-3693-3172-9.ch006.bits-pdf.xhtml#_idIndexMarker1348)
+
+### Client Satisfaction
+
+[321](#979-8-3693-3172-9.ch016.bits-pdf.xhtml#_idIndexMarker3550), [335](#979-8-3693-3172-9.ch016.bits-pdf.xhtml#_idIndexMarker3710), [336](#979-8-3693-3172-9.ch016.bits-pdf.xhtml#_idIndexMarker3736), [337](#979-8-3693-3172-9.ch016.bits-pdf.xhtml#_idIndexMarker3741)
+
+### cloud computing
+
+[55](#979-8-3693-3172-9.ch003.bits-pdf.xhtml#_idIndexMarker601), [59](#979-8-3693-3172-9.ch003.bits-pdf.xhtml#_idIndexMarker704), [60](#979-8-3693-3172-9.ch003.bits-pdf.xhtml#_idIndexMarker721), [115](#979-8-3693-3172-9.ch006.bits-pdf.xhtml#_idIndexMarker1177), [131](#979-8-3693-3172-9.ch006.bits-pdf.xhtml#_idIndexMarker1303), [313](#979-8-3693-3172-9.ch015.bits-pdf.xhtml#_idIndexMarker3483), [422](#979-8-3693-3172-9.ch020.bits-pdf.xhtml#_idIndexMarker4515)
