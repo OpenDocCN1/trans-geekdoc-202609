@@ -1,0 +1,11 @@
+label will be checked. Then, a food sanitary inspection can be conducted before clearance.
+
+The complexity of the process and the regular modification of the regulations in China that has also been stressed in Section 2 create a challenging environment for food foreign producers, especially for small size organisations. In that respect, we study the case of a trade platform that applies blockchain technology to manage product and transportation information and support food exports from France to China. The objective is to answer the following question: How can a blockchain-based RegTech system facilitate both China’s food import regulation enforcement and French producers’ export process? We address this research question by understanding the structure of the system and by following a real case import process. The conceptual framework presented in Figure 2 shows information flows (numbers 1, 2 and 3) and the central role of the platform’s blockchain-based information system as an intermediary between the French producers and the China food import authorities. The thin arrows represent the physical transportation of products from France to China.
+
+There are two information sources. One from the French producers (flow 1) and another one during the transportation (flow 2). Data of flow 1 are related to product information provided by the French producers and are required by Chinese authorities for any food import. Data of flow 2 might have different origins as they are captured during the product transportation process and are related to logistics information (movements of the shipment) and conditions of the products during the transportation (temperature and others). The platform collects these pieces of information and stores them in its blockchain-based information system.
+
+Then, the blockchain-based information system makes information available to China’s food import authorities during the import process. We analyse the nature of information collected in flows 1 and 2 and how
+
+![](bbox=[0.12, 0.78, 0.88, 0.92])
+
+Figure 2. Conceptual framework of the case.

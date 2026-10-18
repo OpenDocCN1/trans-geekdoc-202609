@@ -1,0 +1,13 @@
+Prior to conducting the fieldwork, general information about Foodgates platform was captured from the website (https://foodgates.cn). Then data are collected from different sources such as companies’ archives, observation of a transaction and semi-structured interviews. The persons who form the main group and represent the immediate topic of our case study are the company’s employees both in France and in China. Outside of this group, companies that have developed the software solution and the blockchain system are part of the context of our case study and can support the understanding of the technological process. The French producers, the Chinese authorities related to food safety regulation and enforcement, and the Chinese consumers are not part of this case study’s scope.
+
+The case study leads to an explanation related to how to design an information system based on blockchain technology that facilitates compliance with food safety regulations in China. This descriptive analysis of a real world case provides a conceptual framework that enables the drawing of generalisable conclusions. The analysis of a real case import flow can validate or stress the limitations of such a blockchain application. By comparing the findings against the theoretical statement, the statement can possibly be revised. This revision can be motivated by issues intrinsic to the blockchain system itself or by external factors.
+
+# ## 5. Case Study: Foodgates
+
+# ### 5.1 Interviewees
+
+The following persons have been interviewed as part of the study.
+
++   - Mr. Igal Chreky is Vice President of ASI Group and is based in Shanghai. Igal Chreky was one of Foodgates project’s leaders. At the early stage, Igal Chreky defined blockchain system’s needs and requirements, fixed medium and long-term traceability objectives of the platform, initiated the discussions with Younicorns and developed the relationship with VeChain and DNV.
++   - Ms. Hebe Liu is Foodgates Operation Manager in China and is based in Shanghai. Hebe Liu was previously working in the Food and Beverage (F&B) department of ASI Group in China. She was involved in Foodgates project and supported the process definition on the platform.
++   - Mr. Mathieu Borgé is Foodgates Sales and Marketing Director and is based in France. Mathieu Borgé was previously in charge of the French-related activities of ASI Group. He is co-founder of Foodgates and was part of the initial ASI Group project’s team in charge of the French part of the activity.

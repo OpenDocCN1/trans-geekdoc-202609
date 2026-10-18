@@ -1,0 +1,12 @@
+organisation members first hear of an innovation’s development, (ii) can lead to the acquisition of the innovation, and (iii) sometimes comes to fruition in the innovation’s full acceptance, utilization, and institutionalization” [35]. The assimilation of a technological innovation can often be challenging and is rarely binary [36]. Assimilation theory posits that assimilation may intensify or deteriorate over the course of a technological innovation’s adoption journey [37]. Each assimilation stage describes the degree to which the technological innovation permeates the adopting company. Often the causes of innovation success or failures can be minute. While many frameworks have been proposed to understand how innovation assimilation impact entities [38], one of the most widely cited and used is proposed [36]. Table 5 provides an overview of this six-stage model. This framework comprises two pre-adoption ‘early stages’ (e.g., initiation and adoption) and 4 post adoption ‘later stages’ (e.g., adaptation, acceptance, routinisation, and infusion). The infusion stage comprises several different facets of technology innovation infusion. When investigating assimilation stages, a salient consideration is the degree to which we may expect an adopting organisation’s progression
+
+**Table 5.** Innovation assimilation stages [36].
+
+| Stage | Description |
+|---|---|
+| **Initiation** | A match is found for a technological innovation and its application in an organisation. |
+| **Adoption** | A decision is reached to invest resources to adopt the technological innovation. |
+| **Adaptation** | The technological innovation is developed, installed, and maintained. Organisational members are trained to use the new technological innovation. |
+| **Acceptance** | Organisational members are induced to use the technological innovation which is now being used within the company. |
+| **Routinisation** | The use of the technological innovation is encouraged as a normal activity and organisational structures are altered to accommodate the technological innovation. It is no longer seen as something out of the ordinary. |
+| **Infusion** | The technological innovation is used in an elaborate and sophisticated manner. Infusion is categorised in several ways:<br>• **Extended use:** using more features of the technological innovation;<br>• **Integrative use:** using the technological innovation to create new workflow linkages among tasks;<br>• **Emergent use:** using the technological innovation to perform tasks not previously considered possible. |

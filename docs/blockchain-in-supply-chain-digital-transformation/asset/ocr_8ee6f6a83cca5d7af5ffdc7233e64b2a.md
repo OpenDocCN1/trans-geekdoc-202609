@@ -1,0 +1,14 @@
+in networking systems by inducing significant traffic to the networking device. The attacks on this property of the information system are known as Denial of Service attack, where the attacker aims to obstruct the service for a period of time [6].
+
+As reported by [23], Bitcoin has implemented several safeguards to ensure that traditional DOS attacks do not result in loss of availability. This includes the blacklisting of bad actors in the system that sends out garbage block data [56]. We propose a new technique that aims to circumvent this limitation and exploit the node discovery protocol to induce noisy data in the network with the aim of slowing down the network. The node discovery protocol allows new nodes in the network to connect with existing nodes [27].
+
+We aim to circumvent two security provisions against DOS implemented in Bitcoin Core Client [45]. The first provision aims to ensure that the connection to the DOS node is disconnected based on DoS score calculated by the client application for every connected node. The second provision bans the misbehaving nodes for 24 hours to ensure that the DoS attack is not successful. In our attack, we propose deploying lightweight bitcoin clients with just networking capabilities in a virtual environment. These virtual nodes actively connect with as many nodes in the network as possible and send garbage data to clog the networking link to the node. Once the virtual node is blocked by one of the peers, a new virtual node is deployed to connect to the peer with a different IP address and node address.
+
+By virtualizing the process of node deployment, we can increase the number of full nodes on the network and attempt to connect to as many peers as possible on the network. These nodes can be deployed similarly to that of the one proposed in [45]. **Attack Strategy 1:**
+
++   - **Step 1:** If the total discoverable nodes present in the bitcoin network is *N*, the attacker will deploy greater than *N* virtual full nodes. Each virtual node will contain a list of all other virtual nodes to avoid a high degree of intercommunication.
++   - **Step 2:** After the deployment, the attacker’s node will act as an honest node which only relays the messages between honest nodes while still connecting to as many nodes as possible.
++   - **Step 3:** After a predefined period, the attacker will start sending garbage data periodically to the connected peers.
++   - **Step 4:** As honest peers start blocking or disconnecting from the virtual nodes, the attacker will generate more virtual nodes that will attempt to repeat the process.
+
+We speculate that such an attack may cause significant harm for its first iteration but will most likely be patched and does not constitute

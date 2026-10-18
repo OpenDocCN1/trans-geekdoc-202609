@@ -1,0 +1,14 @@
+# 5.8 Adoption of Blockchain for Customs Clearance
+
+Powerbridge Technologies, a China-based technology company specialised in cross-border trade, made public in June 2019 that, as part of the National Customs Cross Border Technology Innovation Initiatives, its Powerbridge Blockchain Cross Border Compliance Platform was adopted by Nanning Customs.20 Nanning is the capital city of Guangxi province that is located in the south-west of China and shares a nearly 500-mile border with neighbouring Vietnam. Nanning Customs directly manages 26 cross border ports.21 The objectives were to facilitate customs clearance for cross-border transactions and to improve communication and interoperability between ports and province government authorities.
+
+In October 2019, Chinese authorities officially announced that a blockchain-enabled solution was to be used for cross-border customs clearance in Hangzhou, Zhejiang province.22 Hangzhou has developed strong logistics and e-commerce industries and deals with more than $37.4 billion of imports and exports annually. Customs authorities claim that the average time for import clearance has been reduced by 85%, from 191 hours to 27 hours, while the export process takes only 12 minutes.23
+
+Interestingly, the State Administration of Foreign Exchange (SAFE), a regulator in Chinese Central Government, announced in November 2019 the expansion of its programme launched in March 2019 aiming at using blockchain to support trans-border transactions.24 This government decision was echoed in 2020 by the launch of BSN blockchain platform. In July 2020, two sub-ecosystems, BSN China for Chinese based projects and BSN International open to any foreign project, were created.25 The government’s apparent objective is to not only to make BSN the standard for blockchain operations in China, but also worldwide through hubs in Hong Kong and Macau [40]. The great emphasis placed by the government on blockchain development lays the foundation for a large adoption in all state and provincial administrations. This strategic move and the creation of BSN are changing the blockchain landscape in China. This new legal and technical framework will greatly promote public and private initiatives. A generalisation of BSN-based e-government applications will
+
+20 https://www.powerbridge.com/ir/news-content.html?artIdx=32.
+21 https://www.ledgerinsights.com/blockchain-china-customs-powerbridge/.
+22 https://www.ledgerinsights.com/china-blockchain-cross-border-customs-clearance/.
+23 https://www.asiablockchainreview.com/china-adopts-blockchain-to-facilitate-cross-border-trade/.
+24 https://www.cointrust.com/market-news/china-widens-trial-of-its-blockchain-powered-trans-border-funding-platform.
+25 https://forkast.news/chinas-blockchain-infrastructure-project-goes-live-in-hong-kong-macau/.
