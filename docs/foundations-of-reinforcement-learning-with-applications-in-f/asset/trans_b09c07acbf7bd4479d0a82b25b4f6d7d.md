@@ -1,0 +1,66 @@
+
+
+现在我们有了 $\mathcal{R}[T]$ 的规范，但在编程接口方面，我们需要指定 $\mathcal{P}[R]$，因为这是创建 `FiniteMarkovDecisionProcess` 的接口。别担心——一旦有了 $\mathcal{R}[T]$ 的规范，指定 $\mathcal{P}[R]$ 就很容易。我们只需为所有 $s \in \mathcal{N}$、$s' \in \mathcal{S}$、$a \in \mathcal{A}$ 创建 5 元组 $(s, a, r, s', p)$，其中 $r = \mathcal{R}[T](s, a, s')$ 且 $p = \mathcal{P}(s, a, s')$（我们知道 $\mathcal{P}$ 以及 $\mathcal{R}[T]$），所有这些 5 元组（对于所有 $s \in \mathcal{N}$、$s' \in \mathcal{S}$、$a \in \mathcal{A}$）的集合构成了 $\mathcal{P}[R]$ 的规范，即 $\mathcal{P}[R](s, a, r, s') = p$。这将我们奖励定义改变的有限马尔可夫决策过程数学模型转化为 `FiniteMarkovDecisionProcess` 类的编程模型。这种奖励定义改变的模型使我们能够利用我们将为有限马尔可夫决策过程编写的算法（具体来说，第 5 章中涵盖的经典动态规划算法）。这种奖励定义改变模型的缺点是，它阻止我们生成从一个状态转移到另一个状态时遇到的特定奖励的采样轨迹（因为我们不再捕获单个奖励结果的概率）。请注意，我们确实可以进行模拟，但采样轨迹中的每个转移步骤只会显示“平均奖励”（具体来说，是条件于当前状态、动作和下一个状态的期望奖励）。
+
+事实上，你在实践中遇到的大多数马尔可夫过程都可以建模为 $\mathcal{R}[T]$ 和 $\mathcal{P}$ 的组合，你只需遵循上述从 $\mathcal{R}[T]$ 到 $\mathcal{P}[R]$ 的表示转换步骤，以 $\mathcal{P}[R]$ 的形式呈现这些信息来实例化 `FiniteMarkovDecisionProcess`。我们设计接口以接受 $\mathcal{P}[R]$ 作为输入，因为这是指定马尔可夫决策过程的最通用接口。
+
+现在让我们为上面描述的简单库存示例编写一些代码，将其作为有限马尔可夫决策过程。我们所要做的就是创建一个继承自 `FiniteMarkovDecisionProcess` 的派生类，并编写一个方法来构建映射（即 $\mathcal{P}[R]$），`FiniteMarkovRewardProcess` 的 `__init__` 构造函数将其作为输入。请注意，这里将泛型状态类型 `S` 替换为 `@dataclass InventoryState` 来表示库存状态，包括现货和在途库存数量，泛型动作类型 `A` 替换为 `int` 来表示订购数量。
+
+![](images/comp04_15.jpg)
+
+现在让我们用一些示例输入（如下所示）来测试。我们用这些输入构建一个 `SimpleInventoryMDPCap` 类的实例（下面命名为 `si_mdp`），然后构建一个 `FinitePolicy[InventoryState, int]` 类的实例（一个确定性策略，下面命名为 `fdp`），并将它们组合起来产生隐含的 MRP（一个 `FiniteMarkovRewardProcess[InventoryState]` 类的实例）。
+
+![](images/comp04_16.jpg)
+
+上述代码位于文件 `rl/chapter3/simple_inventory_mdp_cap.py` 中。我们鼓励你在 `__main__` 中尝试输入，生成隐含的 MRP，并探索其特征（例如其奖励函数和值函数）。
+
+## 4.9 MDP 值函数：固定策略
+
+现在我们准备好讨论在固定策略 $\pi$ 下评估的 MDP 值函数（也称为 MDP 预测问题）了。*预测*一词指的是，这个问题涉及预测当代理遵循特定策略时的预期未来回报。就像在 MRP 的情况下一样，我们定义 MDP 在时间步 $t$ 的回报 $G[t]$ 为：
+
+$$
+G_t = \sum_{i = t + 1}^{\infty} \gamma^{i - t - 1} \cdot R_i = R_{t + 1} + \gamma \cdot R_{t + 2} + \gamma^2 \cdot R_{t + 3} + \ldots
+$$
+
+其中 $\gamma \in [0, 1]$ 是一个指定的折扣因子。
+
+我们对终止序列（例如在 $t = T$ 时终止，即 $S[T] \in \mathcal{T}$）也使用上述 *Return* 定义，通过将所有 $i > T$ 的 $R[i] = 0$ 来处理。
+
+在固定策略 $\pi$ 下评估的 MDP 值函数
+
+$$
+V^\pi: \mathcal{N} \rightarrow \mathbb{R}
+$$
+
+定义为：
+
+$$
+V^\pi(s) = \mathbb{E}_{\pi, \mathcal{P}_R}[G_t | S_t = s] \quad \text{for all } s \in \mathcal{N}, \text{ for all } t = 0, 1, 2, \ldots
+$$
+
+在本书的其余部分，我们假设每当我们谈论值函数时，折扣因子 $\gamma$ 都适当，以确保每个状态的预期回报是有限的——特别是，对于继续（非终止）MDP，$\gamma < 1$，否则回报可能会发散。
+
+我们将 $V^\pi(s) = \mathbb{E}[\pi, \mathcal{P}[R]][G[t] | S[t] = s]$ 展开如下：
+
+$$
+\begin{aligned}
+& \mathbb{E}_{\pi, \mathcal{P}_R}[R_{t + 1} | S_t = s] + \gamma \cdot \mathbb{E}_{\pi, \mathcal{P}_R}[R_{t + 2} | S_t = s] + \gamma^2 \cdot \mathbb{E}_{\pi, \mathcal{P}_R}[R_{t + 3} | S_t = s] + \ldots \\
+& = \sum_{a \in \mathcal{A}} \pi(s,a) \cdot \mathcal{R}(s,a) + \gamma \cdot \sum_{a \in \mathcal{A}} \pi(s,a) \sum_{s' \in \mathcal{N}} \mathcal{P}(s,a,s') \sum_{a' \in \mathcal{A}} \pi(s',a') \cdot \mathcal{R}(s',a') \\
+& \quad + \gamma^2 \cdot \sum_{a \in \mathcal{A}} \pi(s,a) \sum_{s' \in \mathcal{N}} \mathcal{P}(s,a',s') \sum_{a' \in \mathcal{A}} \pi(s',a') \sum_{s'' \in \mathcal{N}} \mathcal{P}(s',a'',s'') \sum_{a'' \in \mathcal{A}} \pi(s'',a'') \cdot \mathcal{R}(s'',a'') \\
+& \quad + \ldots \\
+& = \mathcal{R}^\pi(s) + \gamma \cdot \sum_{s' \in \mathcal{N}} \mathcal{P}^\pi(s,s') \cdot \mathcal{R}^\pi(s') + \gamma^2 \cdot \sum_{s' \in \mathcal{N}} \mathcal{P}^\pi(s,s') \sum_{s'' \in \mathcal{N}} \mathcal{P}^\pi(s',s'') \cdot \mathcal{R}^\pi(s'') + \ldots
+\end{aligned}
+$$
+
+但是，从第 3 章中的公式 (3.1) 可知，上述最后一个表达式等于 $\pi$ 隐含 MRP 的状态 $s$ 的值函数。因此，在固定策略 $\pi$ 下评估的 MDP 值函数 $V^\pi$ 正好与 $\pi$ 隐含 MRP 的值函数相同。因此，我们可以在 $V^\pi$ 上应用 MRP 贝尔曼方程，即，
+
+$$
+\begin{aligned}
+V^\pi(s) &= \mathcal{R}^\pi(s) + \gamma \cdot \sum_{s' \in \mathcal{N}} \mathcal{P}^\pi(s,s') \cdot V^\pi(s') \\
+&= \sum_{a \in \mathcal{A}} \pi(s,a) \cdot \mathcal{R}(s,a) + \gamma \cdot \sum_{a \in \mathcal{A}} \pi(s,a) \sum_{s' \in \mathcal{N}} \mathcal{P}(s,a,s') \cdot V^\pi(s') \\
+&= \sum_{a \in \mathcal{A}} \pi(s,a) \cdot (\mathcal{R}(s,a) + \gamma \cdot \sum_{s' \in \mathcal{N}} \mathcal{P}(s,a,s') \cdot V^\pi(s')) \quad \text{for all } s \in \mathcal{N}
+\end{aligned}
+$$
+
+(4.1)
+
