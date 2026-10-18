@@ -1,5 +1,4 @@
-# 
-Web3 Apps 构建指南
+# Web3 Apps 构建指南
 
 > 原文：[Build Web3 Apps on Ethereum Blockchain]()
 > 

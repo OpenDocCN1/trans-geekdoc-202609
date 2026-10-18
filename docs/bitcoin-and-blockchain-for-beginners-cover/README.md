@@ -1,5 +1,4 @@
-# 
-比特币和区块链初学者指南
+# 比特币和区块链初学者指南
 
 > 原文：[Bitcoin and Blockchain for Beginners cover]()
 > 

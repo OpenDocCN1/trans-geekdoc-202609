@@ -1,5 +1,4 @@
-# 
-区块链 入门指南
+# 区块链 入门指南
 
 > 原文：[Blockchain Fundamentals]()
 > 

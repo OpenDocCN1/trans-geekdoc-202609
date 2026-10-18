@@ -1,5 +1,4 @@
-# 
-区块链飓风
+# 区块链飓风
 
 > 原文：[Blockchain Hurricane]()
 > 

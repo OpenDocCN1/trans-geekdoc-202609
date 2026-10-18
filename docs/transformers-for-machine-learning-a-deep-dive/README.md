@@ -1,5 +1,4 @@
-# 
-机器学习中的 Transformers：深入探索
+# 机器学习中的 Transformers：深入探索
 
 > 原文：[Transformers for Machine Learning： A Deep Dive]()
 > 

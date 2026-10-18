@@ -1,5 +1,4 @@
-# 
-The Browser Hacker's Handbook 翻译为 “The 浏览器黑客手册”
+# The Browser Hacker's Handbook 翻译为 “The 浏览器黑客手册”
 
 > 原文：[The Browser Hacker's Handbook]()
 > 

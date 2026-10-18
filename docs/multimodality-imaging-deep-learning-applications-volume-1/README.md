@@ -1,5 +1,4 @@
-# 
-深度学习应用：多模态成像卷1
+# 深度学习应用：多模态成像卷1
 
 > 原文：[Multimodality Imaging： Deep learning applications. Volume 1]()
 > 

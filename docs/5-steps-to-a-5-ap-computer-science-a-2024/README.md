@@ -1,5 +1,4 @@
-# 
-2024 AP 计算机科学 A 入门指南
+# 2024 AP 计算机科学 A 入门指南
 
 > 原文：[5 Steps to a 5： AP Computer Science A 2024]()
 > 

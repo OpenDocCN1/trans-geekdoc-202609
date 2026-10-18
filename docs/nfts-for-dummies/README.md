@@ -1,5 +1,4 @@
-# 
-Dummies 的 NFT
+# Dummies 的 NFT
 
 > 原文：[NFTs for Dummies]()
 > 

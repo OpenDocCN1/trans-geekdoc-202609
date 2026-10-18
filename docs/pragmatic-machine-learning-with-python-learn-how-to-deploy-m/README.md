@@ -1,5 +1,4 @@
-# 
-Python 机器学习 实践指南
+# Python 机器学习 实践指南
 
 > 原文：[Pragmatic machine learning with Python ： learn how to deploy machine learning models in production]()
 > 

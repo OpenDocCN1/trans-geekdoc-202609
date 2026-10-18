@@ -1,5 +1,4 @@
-# 
-机器学习基础：简化方法
+# 机器学习基础：简化方法
 
 > 原文：[FUNDAMENTALS OF MACHINE LEARNING： A SIMPLIFIED APPROACH]()
 > 

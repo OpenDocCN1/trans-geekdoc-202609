@@ -1,5 +1,4 @@
-# 
-AWS 云实践入门指南 CLF-C01 考试
+# AWS 云实践入门指南 CLF-C01 考试
 
 > 原文：[AWS® Certified Cloud Practitioner： Study Guide CLF-C01 Exam]()
 > 

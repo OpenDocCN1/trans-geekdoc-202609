@@ -1,5 +1,4 @@
-# 
-深度学习：可视化方法
+# 深度学习：可视化方法
 
 > 原文：[Deep Learning ： A Visual Approach]()
 > 

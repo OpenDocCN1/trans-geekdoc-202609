@@ -1,5 +1,4 @@
-# 
-机器学习算法与应用：理论与应用
+# 机器学习算法与应用：理论与应用
 
 > 原文：[Machine Learning Algorithms and Applications： Theory and Applications]()
 > 

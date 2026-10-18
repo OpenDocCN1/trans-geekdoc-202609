@@ -1,5 +1,4 @@
-# 
-开发者机器学习与自然语言处理
+# 开发者机器学习与自然语言处理
 
 > 原文：[Natural Language Processing and Machine Learning for Developers]()
 > 

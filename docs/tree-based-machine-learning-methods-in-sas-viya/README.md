@@ -1,5 +1,4 @@
-# 
-SAS® Viya® 树基机器学习方法
+# SAS® Viya® 树基机器学习方法
 
 > 原文：[Tree-Based Machine Learning Methods in SAS® Viya®]()
 > 

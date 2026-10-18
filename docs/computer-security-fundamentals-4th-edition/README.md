@@ -1,5 +1,4 @@
-# 
-计算机安全基础，第四版
+# 计算机安全基础，第四版
 
 > 原文：[Computer Security Fundamentals, 4th Edition]()
 > 

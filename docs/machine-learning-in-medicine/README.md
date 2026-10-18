@@ -1,5 +1,4 @@
-# 
-医学机器学习入门指南
+# 医学机器学习入门指南
 
 > 原文：[Machine Learning in Medicine]()
 > 

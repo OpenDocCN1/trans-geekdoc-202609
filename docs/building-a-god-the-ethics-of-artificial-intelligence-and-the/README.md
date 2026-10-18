@@ -1,5 +1,4 @@
-# 
-人工智能伦理与控制竞赛的构建指南
+# 人工智能伦理与控制竞赛的构建指南
 
 > 原文：[Building a God (The Ethics of Artificial Intelligence and the Race to Control It)]()
 > 

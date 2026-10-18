@@ -1,5 +1,4 @@
-# 
-SPSS 定量数据分析：健康与社会科学入门指南
+# SPSS 定量数据分析：健康与社会科学入门指南
 
 > 原文：[Quantitative Data Analysis Using SPSS： An Introduction for Health & Social Science]()
 > 

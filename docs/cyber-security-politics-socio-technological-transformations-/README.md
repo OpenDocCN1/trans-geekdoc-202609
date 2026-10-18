@@ -1,5 +1,4 @@
-# 
-网络安全政治：社会技术转型与政治碎片化
+# 网络安全政治：社会技术转型与政治碎片化
 
 > 原文：[Cyber Security Politics ： Socio-Technological Transformations and Political Fragmentation]()
 > 

@@ -1,5 +1,4 @@
-# 
-物联网 2.0 智能计算、大数据分析与区块链技术
+# 物联网 2.0 智能计算、大数据分析与区块链技术
 
 > 原文：[Intelligent Computing on IoT 2.0, Big Data Analytics, and Block Chain Technology]()
 > 

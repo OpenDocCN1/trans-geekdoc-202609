@@ -1,5 +1,4 @@
-# 
-AI 生存指南：在超级智能的未来中求生
+# AI 生存指南：在超级智能的未来中求生
 
 > 原文：[Mastering AI ： A Survival Guide to Our Superpowered Future]()
 > 

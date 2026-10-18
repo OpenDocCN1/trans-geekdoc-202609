@@ -1,5 +1,4 @@
-# 
-机器学习算法与技术综合指南
+# 机器学习算法与技术综合指南
 
 > 原文：[The Comprehensive Guide to Machine Learning Algorithms and Techniques]()
 > 

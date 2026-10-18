@@ -1,5 +1,4 @@
-# 
-企业级系统的有效网络安全运营
+# 企业级系统的有效网络安全运营
 
 > 原文：[Effective Cybersecurity Operations for Enterprise-Wide Systems]()
 > 

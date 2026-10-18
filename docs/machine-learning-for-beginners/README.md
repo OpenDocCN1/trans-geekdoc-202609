@@ -1,5 +1,4 @@
-# 
-初学者机器学习
+# 初学者机器学习
 
 > 原文：[Machine Learning For Beginners]()
 > 

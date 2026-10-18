@@ -1,5 +1,4 @@
-# 
-信息安全管理
+# 信息安全管理
 
 > 原文：[Information Security Management]()
 > 

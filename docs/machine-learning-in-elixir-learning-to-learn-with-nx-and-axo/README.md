@@ -1,5 +1,4 @@
-# 
-Nx 和 Axon 实践指南：机器学习入门
+# Nx 和 Axon 实践指南：机器学习入门
 
 > 原文：[Machine Learning in Elixir： Learning to Learn with Nx and Axon]()
 > 

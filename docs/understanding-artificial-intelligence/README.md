@@ -1,5 +1,4 @@
-# 
-人工智能入门指南
+# 人工智能入门指南
 
 > 原文：[Understanding Artificial Intelligence]()
 > 

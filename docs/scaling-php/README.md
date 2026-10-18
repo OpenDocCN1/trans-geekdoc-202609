@@ -1,5 +1,4 @@
-# 
-PHP 扩展指南
+# PHP 扩展指南
 
 > 原文：[Scaling PHP]()
 > 

@@ -1,5 +1,4 @@
-# 
-应用数学在密码学和信息安全中的实践
+# 应用数学在密码学和信息安全中的实践
 
 > 原文：[Modern cryptography ： applied mathematics for encryption and information security]()
 > 

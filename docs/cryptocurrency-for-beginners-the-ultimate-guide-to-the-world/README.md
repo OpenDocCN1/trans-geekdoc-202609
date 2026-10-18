@@ -1,5 +1,4 @@
-# 
-初学者指南：加密货币和区块链世界的终极指南
+# 初学者指南：加密货币和区块链世界的终极指南
 
 > 原文：[Cryptocurrency for Beginners： The Ultimate Guide to the World of Cryptocurrencies and Blockchain]()
 > 

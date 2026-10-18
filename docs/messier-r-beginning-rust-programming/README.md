@@ -1,5 +1,4 @@
-# 
-Rust 入门指南
+# Rust 入门指南
 
 > 原文：[Messier, R： Beginning Rust Programming]()
 > 

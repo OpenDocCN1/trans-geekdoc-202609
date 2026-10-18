@@ -1,5 +1,4 @@
-# 
-计算机科学：计算机如何与人类相关联。机器学习、机器人和遗传编程的世界
+# 计算机科学：计算机如何与人类相关联。机器学习、机器人和遗传编程的世界
 
 > 原文：[Computer Science： How Computers Relate With Humans. The World Of Machine Learning, Robotics And Genetic Programming.]()
 > 

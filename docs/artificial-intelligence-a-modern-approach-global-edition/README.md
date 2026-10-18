@@ -1,5 +1,4 @@
-# 
-人工智能：现代方法（全球版）
+# 人工智能：现代方法（全球版）
 
 > 原文：[Artificial Intelligence： A Modern Approach, Global Edition]()
 > 

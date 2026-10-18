@@ -1,5 +1,4 @@
-# 
-Python 入门指南：轻松掌握 Python 语言，从初学者到专家！
+# Python 入门指南：轻松掌握 Python 语言，从初学者到专家！
 
 > 原文：[Python Programming for Beginners： Easy Steps to Learn the Python Language and Go from Beginner to Expert Today!]()
 > 

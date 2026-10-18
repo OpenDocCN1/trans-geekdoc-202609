@@ -1,5 +1,4 @@
-# 
-Tinker Toddlers 的 监督机器学习
+# Tinker Toddlers 的 监督机器学习
 
 > 原文：[Supervised Machine Learning for Kids (Tinker Toddlers)]()
 > 

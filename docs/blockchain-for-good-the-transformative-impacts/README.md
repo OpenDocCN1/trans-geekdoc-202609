@@ -1,5 +1,4 @@
-# 
-“Good 的区块链：变革性影响”
+# “Good 的区块链：变革性影响”
 
 > 原文：[Blockchain for Good： The Transformative Impacts]()
 > 

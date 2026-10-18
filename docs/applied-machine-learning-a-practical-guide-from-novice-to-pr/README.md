@@ -1,5 +1,4 @@
-# 
-从新手到高手的机器学习实践指南
+# 从新手到高手的机器学习实践指南
 
 > 原文：[Applied Machine Learning： A practical guide from Novice to Pro.]()
 > 

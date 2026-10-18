@@ -1,3 +1,2 @@
-+   [
-初学者机器学习](README.md)
++   [初学者机器学习](README.md)
 +   [YOUR STARTER GUIDE FOR DATA MANAGEMENT, MODEL TRAINING, NEURAL NETWORKS, MACHINE LEARNING ALGORITHMS](machine-learning-for-beginners_0.md)

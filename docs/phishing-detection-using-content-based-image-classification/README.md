@@ -1,5 +1,4 @@
-# 
-内容基于图像分类的网络钓鱼检测
+# 内容基于图像分类的网络钓鱼检测
 
 > 原文：[Phishing Detection Using Content-Based Image Classification]()
 > 

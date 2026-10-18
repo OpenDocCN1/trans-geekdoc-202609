@@ -1,5 +1,4 @@
-# 
-Go 入门指南
+# Go 入门指南
 
 > 原文：[Go, from the beginning]()
 > 

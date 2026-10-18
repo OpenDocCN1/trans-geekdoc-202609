@@ -1,5 +1,4 @@
-# 
-网络安全实践指南
+# 网络安全实践指南
 
 > 原文：[Cyber Security Practitioner's Guide]()
 > 

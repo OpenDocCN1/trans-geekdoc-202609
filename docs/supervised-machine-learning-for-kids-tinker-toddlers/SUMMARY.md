@@ -1,2 +1,1 @@
-+   [
-Tinker Toddlers 的 监督机器学习](README.md)
++   [Tinker Toddlers 的 监督机器学习](README.md)

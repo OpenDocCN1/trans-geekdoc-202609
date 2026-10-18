@@ -1,5 +1,4 @@
-# 
-Go 服务：可靠、可扩展、易维护系统指南
+# Go 服务：可靠、可扩展、易维护系统指南
 
 > 原文：[Distributed Services with Go： Your Guide to Reliable, Scalable, and Maintainable Systems]()
 > 

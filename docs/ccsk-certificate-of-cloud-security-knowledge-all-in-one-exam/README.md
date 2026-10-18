@@ -1,5 +1,4 @@
-# 
-CCSK 云安全知识证书全套考试指南
+# CCSK 云安全知识证书全套考试指南
 
 > 原文：[CCSK Certificate of Cloud Security Knowledge All-in-One Exam Guide]()
 > 

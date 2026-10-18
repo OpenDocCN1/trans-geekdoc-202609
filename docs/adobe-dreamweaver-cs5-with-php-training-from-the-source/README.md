@@ -1,5 +1,4 @@
-# 
-php 梦想着 CS5 训练
+# php 梦想着 CS5 训练
 
 > 原文：[Adobe Dreamweaver CS5 with PHP ： training from the source]()
 > 

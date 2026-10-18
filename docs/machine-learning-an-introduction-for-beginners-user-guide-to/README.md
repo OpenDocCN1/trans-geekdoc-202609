@@ -1,5 +1,4 @@
-# 
-机器学习：面向初学者的入门指南，构建智能系统的用户指南
+# 机器学习：面向初学者的入门指南，构建智能系统的用户指南
 
 > 原文：[Machine Learning： An Introduction for Beginners, User Guide to Build Intelligent Systems]()
 > 

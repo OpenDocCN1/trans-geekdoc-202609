@@ -1,2 +1,1 @@
-+   [
-Web3 Apps 构建指南](README.md)
++   [Web3 Apps 构建指南](README.md)

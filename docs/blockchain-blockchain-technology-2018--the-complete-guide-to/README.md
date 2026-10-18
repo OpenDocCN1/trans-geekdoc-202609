@@ -1,5 +1,4 @@
-# 
-区块链技术 2018--新区块链革命完整指南
+# 区块链技术 2018--新区块链革命完整指南
 
 > 原文：[Blockchain ： Blockchain Technology 2018--The Complete Guide To New Blockchain Revolution]()
 > 

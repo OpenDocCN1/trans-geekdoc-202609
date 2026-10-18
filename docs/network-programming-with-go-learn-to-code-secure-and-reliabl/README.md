@@ -1,5 +1,4 @@
-# 
-Go 网络编程：从零开始学习编写安全可靠的网络服务
+# Go 网络编程：从零开始学习编写安全可靠的网络服务
 
 > 原文：[Network Programming with Go： Learn to Code Secure and Reliable Network Services from Scratch]()
 > 

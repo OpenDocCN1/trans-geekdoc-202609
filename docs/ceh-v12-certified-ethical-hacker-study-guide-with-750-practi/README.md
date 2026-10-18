@@ -1,5 +1,4 @@
-# 
-CEH v12 认证伦理黑客学习指南 750 个练习题（Sybex 学习指南）
+# CEH v12 认证伦理黑客学习指南 750 个练习题（Sybex 学习指南）
 
 > 原文：[CEH v12 Certified Ethical Hacker Study Guide with 750 Practice Test Questions (Sybex Study Guide)]()
 > 

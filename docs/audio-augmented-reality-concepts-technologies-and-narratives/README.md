@@ -1,5 +1,4 @@
-# 
-音频增强现实：概念、技术与叙事
+# 音频增强现实：概念、技术与叙事
 
 > 原文：[Audio Augmented Reality： Concepts, Technologies and Narratives]()
 > 
