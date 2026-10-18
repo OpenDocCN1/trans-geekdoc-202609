@@ -1,0 +1,14 @@
+# 16. **Blockchain and the internet of vehicles:**
+   **a conceptual model for demand response management**
+
+   *Evgenia Kapassa and Marinos Themistocleous*
+
+# 16.1  INTRODUCTION
+
+As the popularity of decentralized renewable energy sources and energy storage devices continues to increase, it is estimated that future energy systems will incorporate decentralized components extensively. This trend is driven by three key factors: (a) the rapid adoption of Electric Vehicles (EVs); (b) strict government rules to reduce greenhouse gas emissions; and (c) popular hostility to centralized large-scale energy solutions, such as nuclear power and tall wind turbines (EU Blockchain Observatory and Forum, 2022). Within this shift towards decentralization, a challenge arises relating to effective Demand Response Management (DRM) in such a distributed system, while simultaneously ensuring secure information transmission.
+
+In recent years, the Internet of Vehicles (IoV) has significantly reshaped the landscape of energy systems. IoVs leverage the capabilities of EVs and are combined with the Internet of Things (IoT) and Artificial Intelligence (AI) to form a highly decentralized network (Lone et al., 2021). Even though this network improves the potential and capacity of energy systems, it also considers the complexity that comes with the trend toward decentralization. As such, it seems like a way to solve the aforementioned problem, connecting the global trend toward decentralization and the revolutionary idea behind IoVs.
+
+Blockchain technology has the potential to address this challenge and, over the years, there has been a growing interest in its utilization in smart energy systems and IoV for DRM. This is because blockchain’s features such as security, transparency, and decentralization align with IoVs requirements. In such environments, data sharing among various actors is crucial. Numerous studies have investigated the convergence of blockchain technology with IoV (Dwivedi et al., 2019; Khalid et al., 2020; Lin et al., 2021; Lin et al., 2022; Samuel et al., 2022; Wang et al., 2020) with their outcomes reporting various solutions in areas such as (a) Vehicle-to-Grid (V2G) integration, (b) charging infrastructure management, and (c) Peer-to-Peer (P2P) energy trading. Blockchain characteristics enable it to enhance the efficacy of DRM schemes within the IoV. For instance, it can ensure participant anonymity and incentivization while facilitating energy distribution, consumption, and trading over the IoV, including Vehicle-to-Vehicle (V2V) and V2G energy trading (Samuel and Javaid, 2021). Therefore, the convergence of blockchain and IoV may have great potential for establishing a more efficient and secure DRM framework.
+
+Although the theoretical potential of blockchain application in IoV is clear, empirical studies are required to test these claims and understand the practical implications. Scientific

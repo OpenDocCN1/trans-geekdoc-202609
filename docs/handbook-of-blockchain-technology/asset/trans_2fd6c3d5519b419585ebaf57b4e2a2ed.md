@@ -1,0 +1,40 @@
+
+- Ball, M. (2022). *元宇宙：它将如何彻底改变一切*。Liveright Publishing Corporation，纽约州纽约市。ISBN：978–1324092032。
+- Bard, T. (2023). “驾驭元宇宙：重新定义身份与信任”。可从以下网址获取：https://www.linkedin.com/learning/implementing-the-metaverse/identity-management-in-the-metaverse（最后访问日期：2023年6月27日）。
+- Berners-Lee, T., & Fischetti, M. (1999). *编织万维网：万维网创始人的原始设计与最终命运*。Harper Collins Publishers，美国旧金山。ISBN 9780062515872。
+- Bourlakis, M., Papagiannidis, S., & Li, F. (2009). 零售空间演变：为从传统零售到元宇宙零售铺平道路。*电子商务研究，9*(1), 135–148.
+- Christodoulou, K., Katelaris, L., Themistocleous, M., Christodoulou, P., & Iosif, E. (2022). “NFT与元宇宙革命：研究视角与开放挑战”。载于 M. Lacity 与 H. Treiblmaier 主编，*区块链与代币经济：理论与实践*（第139–178页）。Palgrave Macmillan，Cham。
+- Cunha, P. R., Soja, P., & Themistocleous, M. (2021). 区块链促进发展：指导框架。*发展信息技术，27*(3), 417–438. 可从以下网址获取：https://www.tandfonline.com/doi/full/10.1080/02681102.2021.1935453
+- Das, S. D., Bal, P. K., & Behera, R. K. (2023). “元宇宙生态系统中的数据隐私”。载于 *元宇宙时代基于人工智能的技术与应用研究手册*（第40–54页）。
+- Disney, W. (1982). 《电子世界争霸战》。可从以下网址获取 https://www.imdb.com/video/vi4228627993/?playlistId=tt0084827&ref_=tt_ov_vi（最后访问日期：2023年5月）。
+- Doukidis, G., Themistocleous, M., Drakos, V., & Papazafeiropoulou, A. (1998). *电子商务*。New Technology Publications，希腊雅典。ISBN 960–7981–05–7。
+- Duan, H., Li, J., Fan, S., Lin, Z., Wu, X., & Cai, W. (2021). 元宇宙促进社会公益：大学校园原型。*MM ’21：第29届ACM国际多媒体会议论文集*，153–161。可从以下网址获取：https://dl.acm.org/doi/10.1145/3474085.3479238
+- Elodie (2022). “Kevin Ashton，1999年——物联网”。可从以下网址获取 https://medium.com/@elodieriu/kevin-ashton-1999-iot-2ae600771beb（最后访问日期：2023年6月3日）。
+- Falk, T. H., Le, L. B., & Morandotti, R. (2022). “感官互联网：面向元宇宙的多感官沉浸式体验的挑战与机遇立场文件”。载于 *2022年IEEE扩展现实、人工智能与神经工程计量学国际会议论文集*（MetroXRAINE）（第1–6页）。IEEE。
+- Gill, S. S., & Kaur, R. (2023). ChatGPT：愿景与挑战。*物联网与信息物理系统，3*，262–271。ISSN 2667–3452。https://doi.org/10.1016/j.iotcps.2023.05.004
+- Huynh-The, T., Pham, Q-V., Pham, X-O., Nguyen, P-V., Han, Z., & Kim, D-S. (2023a). 面向元宇宙的人工智能：综述。*人工智能的工程应用，117*（A部分），105581。
+- Huynh-The, T., Gadekallu, T. R., Wang, W., Yenduri, G., Ranaweera, P., Pham, Q-V., da Costa, D. B., & Liyanage, M. (2023b). 元宇宙区块链：综述。*未来一代计算机系统，143*，401–419。
+- Karamitsos, I., Papadaki, M., & Themistocleous, M. (2022). 区块链即服务（BCaaS）：教育商业模式中的价值建模方法。*软件工程与应用杂志，15*（5），165–182。
+- Kashyap, R. (2023). “与ChatGPT的首次对话：人工智能路线图的第一步……”。可从SSRN获取：https://ssrn.com/abstract=4351637 或 http://dx.doi.org/10.2139/ssrn.4351637
+- Kotler, P., & Keller, K. L. (2014). *营销管理*（第15版）。Pearson，英国伦敦。ISBN-13：978–0133856460。
+- Kramp, T., van Kranenburg, R., & Lange, S. (2013). 《物联网导论》。载于 A. Bassi、M. Bauer、M. Fiedler、T. Kramp、R. van Kranenburg、S. Lange 与 S. Meissner 主编，*让物体能够说话：使用物联网架构参考模型设计物联网解决方案*（第1–112页）。Springer，海德堡、纽约、多德雷赫特、伦敦。ISBN 978–3–642–40402–3。
+- Lacity, M. (2020). *区块链基础：面向价值互联网*（第1版）。Epic Books，田纳西州纳什维尔。
+- Lacity, M., & Treiblmaier, H. (2022). *区块链与代币经济：理论与实践*。Palgrave Macmillan，加利福尼亚州雷德伍德城。ISBN：978–3030951078。
+- Lastowka, G. (2008). 用户生成内容与虚拟世界。*范德比尔特娱乐与技术法律杂志*，10(4)，893–917。可从以下网址获取：https://scholarship.law.vanderbilt.edu/jetlaw/vol10/iss4/4
+- Lee, H-W., Chang, K., Uhm, J-P., & Park, E. (2023). 元宇宙中化身认同如何影响享受：化身定制与社交参与的作用。*网络心理学、行为与社交网络*。在线发表于2023年4月14日。https://doi.org/10.1089/cyber.2022.0257。
+- Lillenmose, J., & Kryger, M. (2015). “网络空间的（重新）发明”。可从以下网址获取 https://kunstkritikk.com/the-reinvention-of-cyberspace/（最后访问日期：2023年8月）。
+- Makridakis, S., Petropoulos, F., & Kang, Y. (2023). 大语言模型：其成功与影响。*预测，5*，536–549。https://doi.org/10.3390/forecast5030030。
+- O’Hern, M. S., Rindfleisch, A., Schweidel, D. A., & Antia, K. (2011). 用户生成内容对产品创新的影响。可从SSRN获取：https://ssrn.com/abstract=1843250 或 http://dx.doi.org/10.2139/ssrn.1843250。
+- Papangelou, S., Christodoulou, K., & Themistocleous, M. (2023). “理解DAO中的去中心化：一项理论调查”。载于 M. Papadaki、M. Themistocleous、M. Al Marri 与 M. Al Zarouni 主编，*信息系统*。EMCIS 2023。商业信息处理讲义。第501卷，Springer，Cham。
+- Parkin, S. (2023). 谁需要元宇宙？认识那些仍生活在《第二人生》中的人们。*卫报*。可从以下网址获取：https://www.theguardian.com/technology/2023/jun/10/who-needs-the-metaverse-meet-the-people-still-living-on-second-life（最后访问日期：2023年8月7日）。
+- Radoff, J. (2021). “元宇宙价值链”。*Medium*，2021年4月7日。可从以下网址获取：https://medium.com/building-the-metaverse/the-metaverse-value-chain-afcf9e09e3a7（最后访问日期：2023年3月12日）。
+- Schmid, B., Stanoevska, K., & Tschammer, V. (2013). 迈向电子社会：电子商务、电子业务与电子政务。*IFIP信息与通信技术进展*。Springer。ISBN-13：978–1475775310。
+- Statista. (2023). 《2019年至2023年全球物联网（IoT）连接设备数量，以及2022年至2030年预测》。可从以下网址获取 https://www.statista.com/statistics/1183457/iot-connected-devices-worldwide/（最后访问日期：2023年8月）。
+- Stephenson, N. (1992). *雪崩*。Bantam Books，纽约。ISBN：0553351923。
+- Tearle, O. (2023). “威廉·吉布森《燃烧的铬》的摘要与分析”。Interesting Literature。可从以下网址获取 https://interestingliterature.com/2023/06/william-gibson-burning-chrome-summary-analysis/（最后访问日期：2023年9月）。
+- Themistocleous, M., Christodoulou, K., & Katelaris, L. (2022). “教育元宇宙实验：首个链上及元宇宙内学术课程”。载于 M. Papadaki、P. R. Cunha、M. Themistocleous 与 K. Christodoulou 主编，*信息系统*。EMCIS 2022。商业信息处理讲义，2022年12月，Springer，Cham。
+- Themistocleous, M., & Mantzana, V. (2010). *Web服务与SOA*。希腊雅典：ISBN 97896093283819。
+- Tidd, J., & Bessant, J. (2013). *创新管理：整合技术、市场与组织变革*（第5版）。Wiley，新泽西州霍博肯。ISBN：978–1–118–53859–3。
+- Vinge, V. (1981). *真名实姓*。Dell Publishing，美国。ISBN：978–0241975589。
+- 世界经济论坛与埃森哲. (2023a). 元宇宙中的互操作性——简报文件。可从以下网址获取：https://www3.weforum.org/docs/WEF_Interoperability_in_the_Metaverse.pdf（最后访问日期：2023年3月28日）。
+- 世界经济论坛. (2023b). 人工智能正在塑造元宇宙——但如何塑造？行业专家解释。可从以下网址获取 https://www.weforum.org/agenda/2023/05/generative-ai-and-how-can-it-shape-the-metaverse-industry-experts-explain/（最后访问日期：2023年8月2日）

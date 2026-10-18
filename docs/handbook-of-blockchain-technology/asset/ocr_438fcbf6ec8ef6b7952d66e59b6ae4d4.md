@@ -1,0 +1,17 @@
+a portion of their token holdings while new blocks are validated by these staked validators. Incentives are given out based on how many blocks are verified and uploaded to the blockchain and the decision of which validator to choose while creating a new block is impacted by their financial interest in the network. PoS uses a motivated mechanism to encourage a sense of consensus among validators. It encourages participation, efficiency, and network-wide economic equilibrium. By staking their tokens, validators show that they have a stake in preserving the functioning and integrity of the network, hence reducing any malicious activity inside the blockchain network (Vasin and Co, 2017). The main stages of PoS are:
+
++   - **Participation:** Stakeholders express their interest to participate in PoS by staking native tokens. In doing so, they are becoming validators, and their goal is to produce new blocks.
++   - **Block creation:** Validators are selected by the network to create and propose a new block. The selection of validators is based on an algorithm that is weighted by the number of native tokens staked by each validator.
++   - **Transactions validation:** The validator responsible for the creation of a new block, validates the transactions based on the rules (e.g., they are properly formatted, they have valid digital signatures etc.) and then includes them in a new block.
++   - **Consensus, incentives and security:** Validators who participate in PoS agree to act honestly and follow the consensus rules. In doing so, they comply with the blockchain rules to produce the new block. In cases of validators acting maliciously penalties apply (e.g., risk of losing their stakes).
++   - **Finality:** After the development of the new block, other validators confirm that it is in accordance with the rules and ensure that it can be added to the blockchain. Once the block is appended to the chain the validator gets the agreed reward.
+
+**Tendermint** uses the BFT algorithm to address issues like transaction speed, scalability, and environmental effects. The Tendermint CA stands out for its ability to withstand up to one-third of byzantine participants in the network, which makes it strong against potentially harmful activities. Like the case of PoS, Tendermint participants stake their tokens to become validators. Another important element of Tendermint is the concept of delegation, which allows delegators to stake their tokens with a chosen validator (Baliga, 2017).
+
+Tendermint works using three main stages:
+
++   - **Propose stage:** A validator node is chosen from a group of validators. The role of the selected validator is to propose a new block. Like other blockchains this is done by collecting transactions and creating the block and then sharing it with all the nodes of the network.
++   - **Pre-vote stage:** Validators vote for or against the proposed block.
++   - **Pre-commit stage:** When most of the validators votes are positive about the new block, then the block is added to the blockchain.
+
+**Proof of Luck (PoL):** The Proof of Luck CA is primarily used in the Trusted Execution Environment (TEE) of Intel SGX platforms, but it might be modified for other systems with similar TEE characteristics. This protocol was created to overcome a number of issues with traditional CAs, including poor transaction rates, high energy usage, and time-intensive nature. However, one area of contention with PoL is its reliance on specialist technology, which may
