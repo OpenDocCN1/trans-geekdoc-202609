@@ -1,0 +1,2799 @@
+- raw: "\n\n![](Image00000.jpg)\n\n![](Image00000.jpg)\n\nHow to Get Started With\
+    \ Ethereum \n\nAbout this Book Get Started With Ethereum This book is a step by\
+    \ step guide for everyone who wants to start as an Ethereum developer. It was\
+    \ designed for those who have never programmed anything in blockchain and want\
+    \ to get started. I will cover everything from installing basic requirements to\
+    \ writing, testing and deploying smart contracts. I will also cover topics like\
+    \ IPFS, ENS, Chainlink, Truffle, Ganache, OpenZeppelin, Pinata, Fleek, Infura,\
+    \ Metamask, Opensea, among others. You will receive free updates as new content\
+    \ becomes available. Enjoy! \n\nAbout the Author Davi Pedro Bauer I have 20+ years\
+    \ of experience in the IT market with experience in analysis and systems development.\
+    \ I've been working with agile methods since 2009, where I participated in agile\
+    \ adoption programs in multidisciplinary teams, supporting the implementation\
+    \ of processes and practices such as Scrum and Kanban, as well as the launch of\
+    \ new digital products for web and mobile platforms. Since 2016, I have been studying\
+    \ on topics related to Blockchain, such as cryptocurrencies, asset tokenization,\
+    \ smart contracts and distributed applications (DApps) and since 2019 I’ve been\
+    \ working with DevSecOps from code to infrastructure. Follow me on [Linkedin](https://www.google.com/url?q=https://linkedin.com/in/davibauer&sa=D&source=editors&ust=1624824293293000&usg=AOvVaw1kyQQ-tE9h-0igpZrajywT)\
+    \ Follow me on [Github](https://www.google.com/url?q=https://github.com/davibauer&sa=D&source=editors&ust=1624824293293000&usg=AOvVaw2BImFRPjY1W5nY0Z1pHovP)\
+    \ [https://leanpub.com/u/davibauer](https://www.google.com/url?q=https://leanpub.com/u/davibauer&sa=D&source=editors&ust=1624824293293000&usg=AOvVaw3T7Ob8Mtlbqf-YNKMNMlKm)\
+    \ \n\nPre requirements Install Blockchain Dev Kit Extension on VS Code The Blockchain\
+    \ Developer Kit was built for both new users to Ethereum, but not get in the way\
+    \ for those familiar with the process. One of the primary goals is to help users\
+    \ create a project structure for these smart contracts, help in the compilation\
+    \ and building of these assets, deployment of these assets to blockchain endpoints\
+    \ as well as debugging of these contracts. [View on YouTube](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DWIUppKQhtKk&sa=D&source=editors&ust=1624824293295000&usg=AOvVaw1YBFUmb_Tpv7XsKpH7VvtV)\
+    \ \n\n| ESTIMATED TIME  || 1 minute  |\n\n| --- | --- |\n\nInstalling the extension\
+    \ Go to Extensions. Search for “blockchain development kit for ethereum”. Click\
+    \ on the extension created by Microsoft, usually will be the first one. ![](Image00002.jpg)Click\
+    \ on “Install”. ![](Image00003.jpg)Wait for the installation complete That’s done!\
+    \ \n\nInstall Truffle Truffle is a development environment, testing framework\
+    \ and asset pipeline for Ethereum, aiming to make life as an Ethereum developer\
+    \ easier. [View on YouTube](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DmE3_3wL5-jI&sa=D&source=editors&ust=1624824293298000&usg=AOvVaw2cFLaiP5gJqszRcJiOlcWT)\
+    \ \n\n| ESTIMATED TIME  || 2 minutes  |\n\n| --- | --- |\n\nInstalling Truffle\
+    \ Go to the terminal windows VS CODE - BASH TERMINAL \n\n| TERMINAL  |\n\n| ---\
+    \ |\n\n| $ npm install -g truffle  |\n\nChecking Truffle installation Check if\
+    \ the installation was done successfully VS CODE - BASH TERMINAL \n\n| TERMINAL\
+    \  |\n\n| --- |\n\n| $ truffle  |\n\n![](Image00004.jpg)\n\nInstall Ganache CLI\
+    \ Ganache is a personal blockchain for rapid Ethereum and Corda distributed application\
+    \ development. You can use Ganache across the entire development cycle; enabling\
+    \ you to develop, deploy, and test your dApps in a safe and deterministic environment.\
+    \ [View on YouTube](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DfbQH6pzfXig&sa=D&source=editors&ust=1624824293302000&usg=AOvVaw0QoYm6VV7ZG3XndRnEaLWT)\
+    \ \n\n| ESTIMATED TIME  || 2 minutes  |\n\n| --- | --- |\n\n| COMMAND OVERVIEW\
+    \  |\n\n| --- |\n\n| npm install  |\n\n| This command installs a package and any\
+    \ packages that it depends on.  |\n\n| ganache-cli  |\n\n| Start the ganache development\
+    \ blockchain on 127.0.0.1:8545.  |\n\nInstalling Ganache Go to the terminal windows\
+    \ VS CODE - BASH TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| npm install -g ganache-cli\
+    \  |\n\nStarting Ganache locally Start Ganache CLI on 127.0.0.1:8545 VS CODE -\
+    \ BASH TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| ganache-cli  |\n\nIt will also\
+    \ generate 10 accounts with their respectives public and private keys so that\
+    \ you can use it for test purposes. ![](Image00005.jpg)\n\nMetaMask Install and\
+    \ Setup MetaMask Wallet MetaMask is an extension for accessing Ethereum enabled\
+    \ distributed applications, or \"Dapps\" in your browser. The extension injects\
+    \ the Ethereum web3 API into every website's javascript context, so that dApps\
+    \ can read from the blockchain. MetaMask also lets the user create and manage\
+    \ their own identities (via private keys, local client wallet and hardware wallets\
+    \ like Trezor), so when a Dapp wants to perform a transaction and write to the\
+    \ blockchain, the user gets a secure interface to review the transaction, before\
+    \ approving or rejecting it. [View on YouTube](https://www.google.com/url?q=https://youtu.be/Bj6IozLyVxw&sa=D&source=editors&ust=1624824293310000&usg=AOvVaw35Z4w76gWuYK2yAD_VK7yB)\
+    \ \n\n| ESTIMATED TIME  || 2 minutes  |\n\n| --- | --- |\n\nInstalling the wallet\
+    \ Go to metamask.io Click on \"Install MetaMask\" Click on \"Add to Brave\" or\
+    \ your browser name Click on \"Add extension\" Click on \"Get Started\" Configuring\
+    \ the wallet Click on \"Create a Wallet\" Click on \"No Thanks\" (but if you prefer,\
+    \ click on \"I Agree\" instead) Define the password that you will use to open\
+    \ your wallet Confirm the password Agree to the terms of use Click on \"Create\"\
+    \ Now you can backup your secret backup phrase (you can also do it later) For\
+    \ now, click on \"Remind me later\" Your wallet is done! Accessing your wallet\
+    \ Click on extensions and pin MetaMask to your bar Click on MetaMask icon, your\
+    \ wallet will be shown Discovering your wallet address Click on the three dots\
+    \ on the upper right side and then on \"Account details\" You can see your wallet\
+    \ address in hash format and in a QR code format You can also copy your wallet\
+    \ address by clicking on account name That's all! \n\nInfura Create an Account\
+    \ on Infura Infura provides the tools and infrastructure that allow developers\
+    \ to easily take their blockchain application from testing to scaled deployment\
+    \ - with simple, reliable access to Ethereum and IPFS. [View on YouTube](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DNcKMBgNsBuw&sa=D&source=editors&ust=1624824293313000&usg=AOvVaw2CHIrHiVW_pwOTZNT4B1iC)\
+    \ \n\n| ESTIMATED TIME  || 2 minutes  |\n\n| --- | --- |\n\nCreating a new account\
+    \ Go to [infura.io](https://www.google.com/url?q=https://infura.io/&sa=D&source=editors&ust=1624824293315000&usg=AOvVaw2qnN-ZVazIFCaJz8pZcX3o)\
+    \ Click on “Get Started for Free”. Enter your email and password Click on “Sign\
+    \ Up” A verification email will be send to your address Check your email and confirm\
+    \ your account by clicking the verification link After that, you will be redirected\
+    \ to your dashboard Click on “Ethereum” tab on the left side menu ![](Image00006.jpg)Now\
+    \ your account was created and you can start setting up a new project. ![](Image00007.jpg)Setting\
+    \ up your infura project Go to infura.io Access your dashboard Click on \"ethereum\"\
+    \ Click on \"create a project\" Define the project name You can connect with different\
+    \ testnets and also to the mainnet Save changes ![](Image00008.jpg)"
+  fmt: '
+
+
+    # How to Get Started With Ethereum
+
+
+    ## About this Book
+
+
+    Get Started With Ethereum This book is a step by step guide for everyone who wants
+    to start as an Ethereum developer. It was designed for those who have never programmed
+    anything in blockchain and want to get started. I will cover everything from installing
+    basic requirements to writing, testing and deploying smart contracts. I will also
+    cover topics like IPFS, ENS, Chainlink, Truffle, Ganache, OpenZeppelin, Pinata,
+    Fleek, Infura, Metamask, Opensea, among others. You will receive free updates
+    as new content becomes available. Enjoy!
+
+
+    ## About the Author
+
+
+    Davi Pedro Bauer I have 20+ years of experience in the IT market with experience
+    in analysis and systems development. I''ve been working with agile methods since
+    2009, where I participated in agile adoption programs in multidisciplinary teams,
+    supporting the implementation of processes and practices such as Scrum and Kanban,
+    as well as the launch of new digital products for web and mobile platforms. Since
+    2016, I have been studying on topics related to Blockchain, such as cryptocurrencies,
+    asset tokenization, smart contracts and distributed applications (DApps) and since
+    2019 I’ve been working with DevSecOps from code to infrastructure. Follow me on
+    [Linkedin](https://www.google.com/url?q=https://linkedin.com/in/davibauer&sa=D&source=editors&ust=1624824293293000&usg=AOvVaw1kyQQ-tE9h-0igpZrajywT)
+    Follow me on [Github](https://www.google.com/url?q=https://github.com/davibauer&sa=D&source=editors&ust=1624824293293000&usg=AOvVaw2BImFRPjY1W5nY0Z1pHovP)
+    [https://leanpub.com/u/davibauer](https://www.google.com/url?q=https://leanpub.com/u/davibauer&sa=D&source=editors&ust=1624824293293000&usg=AOvVaw3T7Ob8Mtlbqf-YNKMNMlKm)
+
+
+    ## Pre requirements
+
+
+    ### Install Blockchain Dev Kit Extension on VS Code
+
+
+    The Blockchain Developer Kit was built for both new users to Ethereum, but not
+    get in the way for those familiar with the process. One of the primary goals is
+    to help users create a project structure for these smart contracts, help in the
+    compilation and building of these assets, deployment of these assets to blockchain
+    endpoints as well as debugging of these contracts. [View on YouTube](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DWIUppKQhtKk&sa=D&source=editors&ust=1624824293295000&usg=AOvVaw1YBFUmb_Tpv7XsKpH7VvtV)
+
+
+    | ESTIMATED TIME  || 1 minute  |
+
+
+    | --- | --- |
+
+
+    ### Installing the extension
+
+
+    Go to Extensions. Search for “blockchain development kit for ethereum”. Click
+    on the extension created by Microsoft, usually will be the first one. ![](Image00002.jpg)Click
+    on “Install”. ![](Image00003.jpg)Wait for the installation complete That’s done!
+
+
+    ### Install Truffle
+
+
+    Truffle is a development environment, testing framework and asset pipeline for
+    Ethereum, aiming to make life as an Ethereum developer easier. [View on YouTube](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DmE3_3wL5-jI&sa=D&source=editors&ust=1624824293298000&usg=AOvVaw2cFLaiP5gJqszRcJiOlcWT)
+
+
+    | ESTIMATED TIME  || 2 minutes  |
+
+
+    | --- | --- |
+
+
+    ### Installing Truffle
+
+
+    Go to the terminal windows VS CODE - BASH TERMINAL
+
+
+    | TERMINAL  |
+
+
+    | --- |
+
+
+    | `$ npm install -g truffle` |
+
+
+    ### Checking Truffle installation
+
+
+    Check if the installation was done successfully VS CODE - BASH TERMINAL
+
+
+    | TERMINAL  |
+
+
+    | --- |
+
+
+    | `$ truffle` |
+
+
+    ![](Image00004.jpg)
+
+
+    ### Install Ganache CLI
+
+
+    Ganache is a personal blockchain for rapid Ethereum and Corda distributed application
+    development. You can use Ganache across the entire development cycle; enabling
+    you to develop, deploy, and test your dApps in a safe and deterministic environment.
+    [View on YouTube](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DfbQH6pzfXig&sa=D&source=editors&ust=1624824293302000&usg=AOvVaw0QoYm6VV7ZG3XndRnEaLWT)
+
+
+    | ESTIMATED TIME  || 2 minutes  |
+
+
+    | --- | --- |
+
+
+    | COMMAND OVERVIEW  |
+
+
+    | --- |
+
+
+    | `npm install` |
+
+
+    | This command installs a package and any packages that it depends on.  |
+
+
+    | `ganache-cli` |
+
+
+    | Start the ganache development blockchain on 127.0.0.1:8545.  |
+
+
+    ### Installing Ganache
+
+
+    Go to the terminal windows VS CODE - BASH TERMINAL
+
+
+    | TERMINAL  |
+
+
+    | --- |
+
+
+    | `npm install -g ganache-cli` |
+
+
+    ### Starting Ganache locally
+
+
+    Start Ganache CLI on 127.0.0.1:8545 VS CODE - BASH TERMINAL
+
+
+    | TERMINAL  |
+
+
+    | --- |
+
+
+    | `ganache-cli` |
+
+
+    It will also generate 10 accounts with their respectives public and private keys
+    so that you can use it for test purposes. ![](Image00005.jpg)
+
+
+    ## MetaMask Install and Setup MetaMask Wallet
+
+
+    MetaMask is an extension for accessing Ethereum enabled distributed applications,
+    or "Dapps" in your browser. The extension injects the Ethereum web3 API into every
+    website''s javascript context, so that dApps can read from the blockchain. MetaMask
+    also lets the user create and manage their own identities (via private keys, local
+    client wallet and hardware wallets like Trezor), so when a Dapp wants to perform
+    a transaction and write to the blockchain, the user gets a secure interface to
+    review the transaction, before approving or rejecting it. [View on YouTube](https://www.google.com/url?q=https://youtu.be/Bj6IozLyVxw&sa=D&source=editors&ust=1624824293310000&usg=AOvVaw35Z4w76gWuYK2yAD_VK7yB)
+
+
+    | ESTIMATED TIME  || 2 minutes  |
+
+
+    | --- | --- |
+
+
+    ### Installing the wallet
+
+
+    Go to metamask.io Click on "Install MetaMask" Click on "Add to Brave" or your
+    browser name Click on "Add extension" Click on "Get Started"
+
+
+    ### Configuring the wallet
+
+
+    Click on "Create a Wallet" Click on "No Thanks" (but if you prefer, click on "I
+    Agree" instead) Define the password that you will use to open your wallet Confirm
+    the password Agree to the terms of use Click on "Create" Now you can backup your
+    secret backup phrase (you can also do it later) For now, click on "Remind me later"
+    Your wallet is done!
+
+
+    ### Accessing your wallet
+
+
+    Click on extensions and pin MetaMask to your bar Click on MetaMask icon, your
+    wallet will be shown
+
+
+    ### Discovering your wallet address
+
+
+    Click on the three dots on the upper right side and then on "Account details"
+    You can see your wallet address in hash format and in a QR code format You can
+    also copy your wallet address by clicking on account name That''s all!
+
+
+    ## Infura Create an Account on Infura
+
+
+    Infura provides the tools and infrastructure that allow developers to easily take
+    their blockchain application from testing to scaled deployment - with simple,
+    reliable access to Ethereum and IPFS. [View on YouTube](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DNcKMBgNsBuw&sa=D&source=editors&ust=1624824293313000&usg=AOvVaw2CHIrHiVW_pwOTZNT4B1iC)
+
+
+    | ESTIMATED TIME  || 2 minutes  |
+
+
+    | --- | --- |
+
+
+    ### Creating a new account
+
+
+    Go to [infura.io](https://www.google.com/url?q=https://infura.io/&sa=D&source=editors&ust=1624824293315000&usg=AOvVaw2qnN-ZVazIFCaJz8pZcX3o)
+    Click on “Get Started for Free”. Enter your email and password Click on “Sign
+    Up” A verification email will be send to your address Check your email and confirm
+    your account by clicking the verification link After that, you will be redirected
+    to your dashboard Click on “Ethereum” tab on the left side menu ![](Image00006.jpg)Now
+    your account was created and you can start setting up a new project. ![](Image00007.jpg)
+
+
+    ### Setting up your infura project
+
+
+    Go to infura.io Access your dashboard Click on "ethereum" Click on "create a project"
+    Define the project name You can connect with different testnets and also to the
+    mainnet Save changes ![](Image00008.jpg)
+
+
+    '
+  trans: '
+
+
+    # 如何开始使用 Ethereum
+
+
+    ## 关于本书
+
+
+    Get Started With Ethereum 本书是一份面向所有想要开始成为以太坊开发人员的分步指南。它专为那些从未在区块链上编程过并希望入门的人设计。我将涵盖从安装基本要求到编写、测试和部署智能合约的所有内容。我还将涵盖
+    IPFS、ENS、Chainlink、Truffle、Ganache、OpenZeppelin、Pinata、Fleek、Infura、Metamask、Opensea
+    等主题。随着新内容的推出，您将免费获得更新。祝您阅读愉快！
+
+
+    ## 关于作者
+
+
+    Davi Pedro Bauer 我在 IT 市场拥有 20 多年的经验，擅长分析和系统开发。自 2009 年以来，我一直在使用敏捷方法，期间参与了跨学科团队中的敏捷采用计划，支持实施
+    Scrum 和 Kanban 等流程和实践，以及为 Web 和移动平台推出新的数字产品。自 2016 年以来，我一直在研究与区块链相关的主题，例如加密货币、资产代币化、智能合约和分布式应用程序（DApps），自
+    2019 年以来，我一直在从代码到基础设施进行 DevSecOps 工作。在 [Linkedin](https://www.google.com/url?q=https://linkedin.com/in/davibauer&sa=D&source=editors&ust=1624824293293000&usg=AOvVaw1kyQQ-tE9h-0igpZrajywT)
+    上关注我 在 [Github](https://www.google.com/url?q=https://github.com/davibauer&sa=D&source=editors&ust=1624824293293000&usg=AOvVaw2BImFRPjY1W5nY0Z1pHovP)
+    上关注我 [`leanpub.com/u/davibauer`](https://www.google.com/url?q=https://leanpub.com/u/davibauer&sa=D&source=editors&ust=1624824293293000&usg=AOvVaw3T7Ob8Mtlbqf-YNKMNMlKm)
+
+
+    ## 前置要求
+
+
+    ### 在 VS Code 上安装 Blockchain Dev Kit 扩展
+
+
+    Blockchain Developer Kit 是为以太坊的新用户构建的，但不会妨碍熟悉该过程的人。其主要目标之一是帮助用户为这些智能合约创建项目结构，帮助编译和构建这些资产，将这些资产部署到区块链端点以及调试这些合约。[在
+    YouTube 上观看](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DWIUppKQhtKk&sa=D&source=editors&ust=1624824293295000&usg=AOvVaw1YBFUmb_Tpv7XsKpH7VvtV)
+
+
+    | 预计时间  || 1 分钟  |
+
+
+    | --- | --- |
+
+
+    ### 安装扩展
+
+
+    转到扩展。搜索“blockchain development kit for ethereum”。单击由 Microsoft 创建的扩展，通常是第一个。![](img/Image00002.jpg)单击“安装”。![](img/Image00003.jpg)等待安装完成
+    完成！
+
+
+    ### 安装 Truffle
+
+
+    Truffle 是一个以太坊开发环境、测试框架和资产管道，旨在让以太坊开发人员的生活更轻松。[在 YouTube 上观看](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DmE3_3wL5-jI&sa=D&source=editors&ust=1624824293298000&usg=AOvVaw2cFLaiP5gJqszRcJiOlcWT)
+
+
+    | 预计时间  || 2 分钟  |
+
+
+    | --- | --- |
+
+
+    ### 安装 Truffle
+
+
+    转到终端窗口 VS CODE - BASH TERMINAL
+
+
+    | 终端  |
+
+
+    | --- |
+
+
+    | `$ npm install -g truffle` |
+
+
+    ### 检查 Truffle 安装
+
+
+    检查安装是否成功 VS CODE - BASH TERMINAL
+
+
+    | 终端  |
+
+
+    | --- |
+
+
+    | `$ truffle` |
+
+
+    ![](img/Image00004.jpg)
+
+
+    ### 安装 Ganache CLI
+
+
+    Ganache 是一个个人区块链，用于快速的以太坊和 Corda 分布式应用程序开发。您可以在整个开发周期中使用 Ganache；使您能够在安全且确定性的环境中开发、部署和测试您的
+    dApps。[在 YouTube 上观看](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DfbQH6pzfXig&sa=D&source=editors&ust=1624824293302000&usg=AOvVaw0QoYm6VV7ZG3XndRnEaLWT)
+
+
+    | 预计时间  || 2 分钟  |
+
+
+    | --- | --- |
+
+
+    | 命令概述  |
+
+
+    | --- |
+
+
+    | `npm install` |
+
+
+    | 此命令安装一个包及其依赖的任何包。  |
+
+
+    | `ganache-cli` |
+
+
+    | 在 127.0.0.1:8545 上启动 ganache 开发区块链。  |
+
+
+    ### 安装 Ganache
+
+
+    转到终端窗口 VS CODE - BASH TERMINAL
+
+
+    | 终端  |
+
+
+    | --- |
+
+
+    | `npm install -g ganache-cli` |
+
+
+    ### 在本地启动 Ganache
+
+
+    在 127.0.0.1:8545 上启动 Ganache CLI VS CODE - BASH TERMINAL
+
+
+    | 终端  |
+
+
+    | --- |
+
+
+    | `ganache-cli` |
+
+
+    它还将生成 10 个账户及其各自的公钥和私钥，以便您可以将其用于测试目的。![](img/Image00005.jpg)
+
+
+    ## MetaMask 安装和设置 MetaMask 钱包
+
+
+    MetaMask 是一个用于在浏览器中访问以太坊支持的分布式应用程序（或“Dapps”）的扩展。该扩展将以太坊 web3 API 注入到每个网站的 javascript
+    上下文中，以便 dApps 可以从区块链读取数据。MetaMask 还允许用户创建和管理自己的身份（通过私钥、本地客户端钱包和 Trezor 等硬件钱包），因此当
+    Dapp 想要执行交易并写入区块链时，用户会获得一个安全的界面来审查交易，然后再批准或拒绝它。[在 YouTube 上观看](https://www.google.com/url?q=https://youtu.be/Bj6IozLyVxw&sa=D&source=editors&ust=1624824293310000&usg=AOvVaw35Z4w76gWuYK2yAD_VK7yB)
+
+
+    | 预计时间  || 2 分钟  |
+
+
+    | --- | --- |
+
+
+    ### 安装钱包
+
+
+    转到 metamask.io 单击“安装 MetaMask” 单击“添加到 Brave”或您的浏览器名称 单击“添加扩展” 单击“开始”
+
+
+    ### 配置钱包
+
+
+    单击“创建钱包” 单击“否，谢谢”（但如果您愿意，请改为单击“我同意”） 定义您将用于打开钱包的密码 确认密码 同意使用条款 单击“创建” 现在您可以备份您的秘密备份短语（您也可以稍后执行此操作）
+    目前，单击“稍后提醒我” 您的钱包已完成！
+
+
+    ### 访问您的钱包
+
+
+    单击扩展并将 MetaMask 固定到您的栏 单击 MetaMask 图标，您的钱包将显示
+
+
+    ### 发现您的钱包地址
+
+
+    单击右上角的三个点，然后单击“账户详情” 您可以在哈希格式和二维码格式中查看您的钱包地址 您也可以通过单击账户名称来复制您的钱包地址 这就全部了！
+
+
+    ## Infura 在 Infura 上创建帐户
+
+
+    Infura 提供工具和基础设施，允许开发人员轻松地将其区块链应用程序从测试转移到规模化部署 - 以简单、可靠的方式访问以太坊和 IPFS。[在 YouTube
+    上观看](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DNcKMBgNsBuw&sa=D&source=editors&ust=1624824293313000&usg=AOvVaw2CHIrHiVW_pwOTZNT4B1iC)
+
+
+    | 预计时间  || 2 分钟  |
+
+
+    | --- | --- |
+
+
+    ### 创建新帐户
+
+
+    转到 [infura.io](https://www.google.com/url?q=https://infura.io/&sa=D&source=editors&ust=1624824293315000&usg=AOvVaw2qnN-ZVazIFCaJz8pZcX3o)
+    单击“免费开始”。输入您的电子邮件和密码 单击“注册” 一封验证电子邮件将发送到您的地址 检查您的电子邮件并通过单击验证链接确认您的帐户 之后，您将被重定向到您的仪表板
+    单击左侧菜单上的“以太坊”选项卡 ![](img/Image00006.jpg)现在您的帐户已创建，您可以开始设置新项目。![](img/Image00007.jpg)
+
+
+    ### 设置您的 Infura 项目
+
+
+    转到 infura.io 访问您的仪表板 单击“以太坊” 单击“创建项目” 定义项目名称 您可以连接到不同的测试网以及主网 保存更改 ![](img/Image00008.jpg)
+
+
+    '
+  toc: []
+- raw: "Solidity Get Started With Solidity Project on VS Code Smart contracts are\
+    \ most commonly used with Ethereum. Ethereum is the world's first programmable\
+    \ blockchain. It allows smart contracts to be defined to help facilitate the transfer\
+    \ of digital assets, like ether. The language you'll use to write contracts is\
+    \ Solidity. Solidity is Turing-complete, which means that you can write complicated\
+    \ contracts in a clearly defined and coded way. [View on YouTube](https://www.google.com/url?q=https://www.youtube.com/watch?v%3D-MyTO031-Ww&sa=D&source=editors&ust=1624824293318000&usg=AOvVaw1mHt423DF82kvv0SsltVSi)\
+    \ \n\n| ESTIMATED TIME  || 4 minutes  |\n\n| --- | --- |\n\nCreating a new project\
+    \ Click on “View > Command Palette...”. Click on “Blockchain: New Solidity Project”.\
+    \ Click on “Create basic project” Select a folder where the project will be scaffolding.\
+    \ Wait for the project to be created. Compiling the project Right click on HelloBlockchain.sol\
+    \ file ![](Image00009.jpg)Select “Build Contracts”. Wait for contracts to be built.\
+    \ Deploying to development blockchain Right click on HelloBlockchain.sol file.\
+    \ Select “Deploy Contracts”. Select “development 127.0.0.1:8545”. Wait for the\
+    \ contracts to be deployed to the blockchain development network. That’s done!\
+    \ \n\nERC20 - Fungible Tokens Write a Simple ERC20 Token Using OpenZeppelin Let’s\
+    \ create a simple ERC-20 ethereum smart contract, with the help of Truffle, and\
+    \ then import the OpenZeppelin contracts library. Tokens can represent virtually\
+    \ anything in Ethereum: Reputation points in an online platform Skills of a character\
+    \ in a game Lottery tickets Financial assets like a share in a company A fiat\
+    \ currency like USD An ounce of gold [https://ethereum.org/en/developers/docs/standards/tokens/erc-20/](https://www.google.com/url?q=https://ethereum.org/en/developers/docs/standards/tokens/erc-20/&sa=D&source=editors&ust=1624824293322000&usg=AOvVaw0WQC0GAMdAvUsXaMjUY9n4)\
+    \ [View on YouTube](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DycTvT1R4_nc&sa=D&source=editors&ust=1624824293323000&usg=AOvVaw0gF-p4EsSm3Lw6ISLoO3iQ)\
+    \ \n\n| ESTIMATED TIME  || 5 minutes  |\n\n| --- | --- |\n\n| COMMAND OVERVIEW\
+    \  |\n\n| --- |\n\n| truffle init  |\n\n| Initialize new and empty Ethereum project\
+    \  |\n\n| npm init  |\n\n| Creates a package.json file for your project. This\
+    \ file contains information about the project’s packages and dependencies.  |\n\
+    \n| npm install  |\n\n| This command installs a package and any packages that\
+    \ it depends on.  |\n\nPreparing the environment VS CODE - BASH TERMINAL \n\n\
+    | TERMINAL  |\n\n| --- |\n\n| $ truffle init  \n\n$ npm init  \n\n$ npm install\
+    \ @openzeppelin/contracts  |\n\nWriting the contract Create a new file under contracts\
+    \ with the name ERC20MinerReward.sol Add the license directive Define the solidity\
+    \ minimum version Import OpenZeppelin ERC-20 contract library Define the contract\
+    \ class Define the contract constructor Define the contract name Define the contract\
+    \ symbol \n\n| ERC20MinerReward.sol  |\n\n| --- |\n\n| 1 2 3 4 5 6 7 8  || //\
+    \ SPDX-License-Identifier: MIT   \n\npragma solidity ^ 0.8.0 ;  \n\n import   \
+    \  \"@openzeppelin/contracts/token/ERC20/ERC20.sol\"   \n\n contract ERC20MinerReward\
+    \ is ERC20 {  \n\n     constructor () ERC20(\"MinerReward\", \"MRW\")  \n\n} \
+    \ |\n\nSetting the Solidity compiler version Copy the solidity version used in\
+    \ this contract Open truffle-config.js Uncomment the \"solc\" block Set the solidity\
+    \ version pasting the copied value Compiling the contract Now is time to compile\
+    \ the contract VS CODE - BASH TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| $ truffle\
+    \ compile  |\n\nThe contract was compiled successfully! Verifying the result Noticed\
+    \ that a new folder build/contract was created The brand new contract is there!\
+    \ \n\nDeploy ERC20 Token to Ganache Development Blockchain Ethereum Ganache is\
+    \ a local in-memory blockchain designed for development and testing. It simulates\
+    \ the features of a real Ethereum network, including the availability of a number\
+    \ of accounts funded with test Ether. [View on YouTube](https://www.google.com/url?q=https://youtu.be/8XAwtrrQ-g8&sa=D&source=editors&ust=1624824293336000&usg=AOvVaw1BtugFh5-lr14icvF5NkTv)\
+    \ \n\n| ESTIMATED TIME  || 4 minutes  |\n\n| --- | --- |\n\n| PRE REQUIREMENTS\
+    \  |\n\n| --- |\n\n| [Install Truffle](#text00005.html#a2X3)  |\n\n| COMMAND OVERVIEW\
+    \  |\n\n| --- |\n\n| ganache-cli  |\n\n| Start the ganache development blockchain\
+    \ on 127.0.0.1:8545.  |\n\n| truffle compile  |\n\n| Compile contract source file.\
+    \  |\n\n| truffle migrate  |\n\n| Run migrations to deploy contracts.  |\n\nPreparing\
+    \ migration Create a new migration file Add reference to smart contract Add a\
+    \ export function to deploy the smart contract Starting the blockchain Open a\
+    \ new terminal VS CODE - BASH TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| $ ganache-cli\
+    \  |\n\nA new ganache blockchain is listening on 127.0.0.1:8545 Configuring the\
+    \ blockchain network Open truffle-config.js Uncomment development block from networks\
+    \ Make sure host and port are corrects Deploying the contract VS CODE - BASH TERMINAL\
+    \ \n\n| TERMINAL  |\n\n| --- |\n\n| $ truffle compile  \n\n$ truffle migrate \
+    \ |\n\nThe contract was deployed to ganache blockchain A contract address was\
+    \ created Adding the token to a wallet Go the Brave browser (or any browser compatible\
+    \ with MetaMask) Select the \"Localhost 8585\" network Click on \"Add Token\"\
+    \ Click on \"Custom Token\" Copy the contract address Paste on \"Token Contract\
+    \ Address\" field The \"Token Symbol\" and \"Decimals of Precision\" is filled\
+    \ automatically Click on \"Next\" Click on \"Add Token\" The token was added to\
+    \ MetaMask wallet The token is there! \n\nCreate an ERC20 Token With Fixed Supply\
+    \ ERC20 fixed supply tokens define the total tokens allowed in the smart contract.\
+    \ In this type of implementation, you cannot change it after being deployed on\
+    \ the blockchain. [https://openzeppelin.com](https://www.google.com/url?q=https://openzeppelin.com&sa=D&source=editors&ust=1624824293349000&usg=AOvVaw32HS2RkQbGxWYqjIR5hmda)\
+    \ [https://www.trufflesuite.com/truffle](https://www.google.com/url?q=https://www.trufflesuite.com/truffle&sa=D&source=editors&ust=1624824293349000&usg=AOvVaw3mUxgJCana2JUfkCZhwIyh)\
+    \ [https://www.trufflesuite.com/ganache](https://www.google.com/url?q=https://www.trufflesuite.com/ganache&sa=D&source=editors&ust=1624824293350000&usg=AOvVaw2QpGKTc6Ta-52ah-2VGD_s)\
+    \ [https://metamask.io](https://www.google.com/url?q=https://metamask.io&sa=D&source=editors&ust=1624824293350000&usg=AOvVaw18b5BD_Xz2ZKDHqV8MnNrC)\
+    \ \n\n| ESTIMATED TIME  || 12 minutes  |\n\n| --- | --- |\n\n| VIDEO  || [YOUTUBE](https://www.google.com/url?q=https://youtu.be/r7_g_uHgA6g&sa=D&source=editors&ust=1624824293352000&usg=AOvVaw0Zu7p0shqqAVPJGMiaFvpT)\
+    \  |\n\n| --- | --- |\n\n| SOURCE CODE  || [GITHUB](https://www.google.com/url?q=https://github.com/davibauer/blockchain/tree/master/token-erc20-fixed&sa=D&source=editors&ust=1624824293354000&usg=AOvVaw3xsHY2LahKxjrzVfUD2RWc)\
+    \  |\n\n| --- | --- |\n\n| PRE REQUIREMENTS  |\n\n| --- |\n\n| [Install Truffle](#text00005.html#a2X3)\
+    \  |\n\n| COMMAND OVERVIEW  |\n\n| --- |\n\n| truffle init  |\n\n| Initialize\
+    \ new and empty Ethereum project  |\n\n| npm init  |\n\n| Creates a package.json\
+    \ file for your project.  |\n\n| npm install  |\n\n| Installs a package and any\
+    \ packages that it depends on.  |\n\n| ganache-cli  |\n\n| Start the ganache development\
+    \ blockchain on 127.0.0.1:8545.  |\n\n| truffle compile  |\n\n| Compile contract\
+    \ source file.  |\n\n| truffle migrate  |\n\n| Run migrations to deploy contracts.\
+    \  |\n\nCreating the project VS CODE - BASH TERMINAL \n\n| TERMINAL  |\n\n| ---\
+    \ |\n\n| $ truffle init  \n\n$ npm init  \n\n$ npm install @openzeppelin/contracts\
+    \  |\n\nWriting the contract Create a new solidity file Include the license declaration\
+    \ (it is mandatory) Define the solidity minimum version Import OpenZeppelin ERC-20\
+    \ contract library Define the fixed supply contract class inheriting from ERC20\
+    \ Call the constructor passing the name and symbol Assign the total supply to\
+    \ the sender address (who created the contract) Override the decimals function\
+    \ Set the number of decimals that this token will have   \n\n| ERC20FixedSupply.sol\
+    \  |"
+  fmt: '
+
+    # Solidity Get Started With Solidity Project on VS Code
+
+
+    Smart contracts are most commonly used with Ethereum. Ethereum is the world''s
+    first programmable blockchain. It allows smart contracts to be defined to help
+    facilitate the transfer of digital assets, like ether. The language you''ll use
+    to write contracts is Solidity. Solidity is Turing-complete, which means that
+    you can write complicated contracts in a clearly defined and coded way. [View
+    on YouTube](https://www.google.com/url?q=https://www.youtube.com/watch?v%3D-MyTO031-Ww&sa=D&source=editors&ust=1624824293318000&usg=AOvVaw1mHt423DF82kvv0SsltVSi)
+
+
+    | ESTIMATED TIME || 4 minutes |
+
+
+    | --- | --- |
+
+
+    ## Creating a new project
+
+
+    Click on “View > Command Palette...”. Click on “Blockchain: New Solidity Project”.
+    Click on “Create basic project”. Select a folder where the project will be scaffolding.
+    Wait for the project to be created.
+
+
+    ## Compiling the project
+
+
+    Right click on `HelloBlockchain.sol` file ![](Image00009.jpg) Select “Build Contracts”.
+    Wait for contracts to be built.
+
+
+    ## Deploying to development blockchain
+
+
+    Right click on `HelloBlockchain.sol` file. Select “Deploy Contracts”. Select “development
+    127.0.0.1:8545”. Wait for the contracts to be deployed to the blockchain development
+    network. That’s done!
+
+
+    # ERC20 - Fungible Tokens
+
+
+    ## Write a Simple ERC20 Token Using OpenZeppelin
+
+
+    Let’s create a simple ERC-20 ethereum smart contract, with the help of Truffle,
+    and then import the OpenZeppelin contracts library. Tokens can represent virtually
+    anything in Ethereum: Reputation points in an online platform Skills of a character
+    in a game Lottery tickets Financial assets like a share in a company A fiat currency
+    like USD An ounce of gold [https://ethereum.org/en/developers/docs/standards/tokens/erc-20/](https://www.google.com/url?q=https://ethereum.org/en/developers/docs/standards/tokens/erc-20/&sa=D&source=editors&ust=1624824293322000&usg=AOvVaw0WQC0GAMdAvUsXaMjUY9n4)
+    [View on YouTube](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DycTvT1R4_nc&sa=D&source=editors&ust=1624824293323000&usg=AOvVaw0gF-p4EsSm3Lw6ISLoO3iQ)
+
+
+    | ESTIMATED TIME || 5 minutes |
+
+
+    | --- | --- |
+
+
+    | COMMAND OVERVIEW |
+
+
+    | --- |
+
+
+    | `truffle init` |
+
+
+    | Initialize new and empty Ethereum project |
+
+
+    | `npm init` |
+
+
+    | Creates a `package.json` file for your project. This file contains information
+    about the project’s packages and dependencies. |
+
+
+    | `npm install` |
+
+
+    | This command installs a package and any packages that it depends on. |
+
+
+    ## Preparing the environment
+
+
+    VS CODE - BASH TERMINAL
+
+
+    | TERMINAL |
+
+
+    | --- |
+
+
+    | `$ truffle init` |
+
+
+    `$ npm init` |
+
+
+    `$ npm install @openzeppelin/contracts` |
+
+
+    ## Writing the contract
+
+
+    Create a new file under `contracts` with the name `ERC20MinerReward.sol`. Add
+    the license directive. Define the solidity minimum version. Import OpenZeppelin
+    ERC-20 contract library. Define the contract class. Define the contract constructor.
+    Define the contract name. Define the contract symbol.
+
+
+    | `ERC20MinerReward.sol` |
+
+
+    | --- |
+
+
+    | 1 2 3 4 5 6 7 8 || `// SPDX-License-Identifier: MIT` |
+
+
+    `pragma solidity ^ 0.8.0 ;` |
+
+
+    `import "@openzeppelin/contracts/token/ERC20/ERC20.sol"` |
+
+
+    `contract ERC20MinerReward is ERC20 {` |
+
+
+    `    constructor () ERC20("MinerReward", "MRW")` |
+
+
+    `}` |
+
+
+    ## Setting the Solidity compiler version
+
+
+    Copy the solidity version used in this contract. Open `truffle-config.js`. Uncomment
+    the "solc" block. Set the solidity version pasting the copied value.
+
+
+    ## Compiling the contract
+
+
+    Now is time to compile the contract.
+
+
+    VS CODE - BASH TERMINAL
+
+
+    | TERMINAL |
+
+
+    | --- |
+
+
+    | `$ truffle compile` |
+
+
+    The contract was compiled successfully!
+
+
+    ## Verifying the result
+
+
+    Noticed that a new folder `build/contract` was created. The brand new contract
+    is there!
+
+
+    # Deploy ERC20 Token to Ganache Development Blockchain
+
+
+    Ethereum Ganache is a local in-memory blockchain designed for development and
+    testing. It simulates the features of a real Ethereum network, including the availability
+    of a number of accounts funded with test Ether. [View on YouTube](https://www.google.com/url?q=https://youtu.be/8XAwtrrQ-g8&sa=D&source=editors&ust=1624824293336000&usg=AOvVaw1BtugFh5-lr14icvF5NkTv)
+
+
+    | ESTIMATED TIME || 4 minutes |
+
+
+    | --- | --- |
+
+
+    | PRE REQUIREMENTS |
+
+
+    | --- |
+
+
+    | [Install Truffle](#text00005.html#a2X3) |
+
+
+    | COMMAND OVERVIEW |
+
+
+    | --- |
+
+
+    | `ganache-cli` |
+
+
+    | Start the ganache development blockchain on 127.0.0.1:8545. |
+
+
+    | `truffle compile` |
+
+
+    | Compile contract source file. |
+
+
+    | `truffle migrate` |
+
+
+    | Run migrations to deploy contracts. |
+
+
+    ## Preparing migration
+
+
+    Create a new migration file. Add reference to smart contract. Add a export function
+    to deploy the smart contract.
+
+
+    ## Starting the blockchain
+
+
+    Open a new terminal.
+
+
+    VS CODE - BASH TERMINAL
+
+
+    | TERMINAL |
+
+
+    | --- |
+
+
+    | `$ ganache-cli` |
+
+
+    A new ganache blockchain is listening on 127.0.0.1:8545.
+
+
+    ## Configuring the blockchain network
+
+
+    Open `truffle-config.js`. Uncomment development block from networks. Make sure
+    host and port are corrects.
+
+
+    ## Deploying the contract
+
+
+    VS CODE - BASH TERMINAL
+
+
+    | TERMINAL |
+
+
+    | --- |
+
+
+    | `$ truffle compile` |
+
+
+    `$ truffle migrate` |
+
+
+    The contract was deployed to ganache blockchain. A contract address was created.
+
+
+    ## Adding the token to a wallet
+
+
+    Go the Brave browser (or any browser compatible with MetaMask). Select the "Localhost
+    8585" network. Click on "Add Token". Click on "Custom Token". Copy the contract
+    address. Paste on "Token Contract Address" field. The "Token Symbol" and "Decimals
+    of Precision" is filled automatically. Click on "Next". Click on "Add Token".
+    The token was added to MetaMask wallet. The token is there!
+
+
+    # Create an ERC20 Token With Fixed Supply
+
+
+    ERC20 fixed supply tokens define the total tokens allowed in the smart contract.
+    In this type of implementation, you cannot change it after being deployed on the
+    blockchain. [https://openzeppelin.com](https://www.google.com/url?q=https://openzeppelin.com&sa=D&source=editors&ust=1624824293349000&usg=AOvVaw32HS2RkQbGxWYqjIR5hmda)
+    [https://www.trufflesuite.com/truffle](https://www.google.com/url?q=https://www.trufflesuite.com/truffle&sa=D&source=editors&ust=1624824293349000&usg=AOvVaw3mUxgJCana2JUfkCZhwIyh)
+    [https://www.trufflesuite.com/ganache](https://www.google.com/url?q=https://www.trufflesuite.com/ganache&sa=D&source=editors&ust=1624824293350000&usg=AOvVaw2QpGKTc6Ta-52ah-2VGD_s)
+    [https://metamask.io](https://www.google.com/url?q=https://metamask.io&sa=D&source=editors&ust=1624824293350000&usg=AOvVaw18b5BD_Xz2ZKDHqV8MnNrC)
+
+
+    | ESTIMATED TIME || 12 minutes |
+
+
+    | --- | --- |
+
+
+    | VIDEO || [YOUTUBE](https://www.google.com/url?q=https://youtu.be/r7_g_uHgA6g&sa=D&source=editors&ust=1624824293352000&usg=AOvVaw0Zu7p0shqqAVPJGMiaFvpT)
+    |
+
+
+    | --- | --- |
+
+
+    | SOURCE CODE || [GITHUB](https://www.google.com/url?q=https://github.com/davibauer/blockchain/tree/master/token-erc20-fixed&sa=D&source=editors&ust=1624824293354000&usg=AOvVaw3xsHY2LahKxjrzVfUD2RWc)
+    |
+
+
+    | --- | --- |
+
+
+    | PRE REQUIREMENTS |
+
+
+    | --- |
+
+
+    | [Install Truffle](#text00005.html#a2X3) |
+
+
+    | COMMAND OVERVIEW |
+
+
+    | --- |
+
+
+    | `truffle init` |
+
+
+    | Initialize new and empty Ethereum project |
+
+
+    | `npm init` |
+
+
+    | Creates a `package.json` file for your project. |
+
+
+    | `npm install` |
+
+
+    | Installs a package and any packages that it depends on. |
+
+
+    | `ganache-cli` |
+
+
+    | Start the ganache development blockchain on 127.0.0.1:8545. |
+
+
+    | `truffle compile` |
+
+
+    | Compile contract source file. |
+
+
+    | `truffle migrate` |
+
+
+    | Run migrations to deploy contracts. |
+
+
+    ## Creating the project
+
+
+    VS CODE - BASH TERMINAL
+
+
+    | TERMINAL |
+
+
+    | --- |
+
+
+    | `$ truffle init` |
+
+
+    `$ npm init` |
+
+
+    `$ npm install @openzeppelin/contracts` |
+
+
+    ## Writing the contract
+
+
+    Create a new solidity file. Include the license declaration (it is mandatory).
+    Define the solidity minimum version. Import OpenZeppelin ERC-20 contract library.
+    Define the fixed supply contract class inheriting from `ERC20`. Call the constructor
+    passing the name and symbol. Assign the total supply to the sender address (who
+    created the contract). Override the `decimals` function. Set the number of decimals
+    that this token will have.
+
+
+    | `ERC20FixedSupply.sol` |
+
+    '
+  trans: '
+
+
+    # Solidity Get Started With Solidity Project on VS Code
+
+
+    智能合约最常用于以太坊。以太坊是世界上第一个可编程区块链。它允许定义智能合约，以帮助促进数字资产（如以太币）的转移。你将用来编写合约的语言是 Solidity。Solidity
+    是图灵完备的，这意味着你可以以清晰定义和编码的方式编写复杂的合约。 [View on YouTube](https://www.google.com/url?q=https://www.youtube.com/watch?v%3D-MyTO031-Ww&sa=D&source=editors&ust=1624824293318000&usg=AOvVaw1mHt423DF82kvv0SsltVSi)
+
+
+    | 预计时间 || 4 分钟 |
+
+
+    | --- | --- |
+
+
+    ## 创建新项目
+
+
+    单击“视图 > 命令面板...”。单击“区块链: 新建 Solidity 项目”。单击“创建基本项目”。选择项目将被脚手架化的文件夹。等待项目创建完成。
+
+
+    ## 编译项目
+
+
+    右键单击 `HelloBlockchain.sol` 文件 ![](img/Image00009.jpg) 选择“构建合约”。等待合约构建完成。
+
+
+    ## 部署到开发区块链
+
+
+    右键单击 `HelloBlockchain.sol` 文件。选择“部署合约”。选择“development 127.0.0.1:8545”。等待合约部署到区块链开发网络。完成！
+
+
+    # ERC20 - 可替代代币
+
+
+    ## 使用 OpenZeppelin 编写简单的 ERC20 代币
+
+
+    让我们在 Truffle 的帮助下创建一个简单的 ERC-20 以太坊智能合约，然后导入 OpenZeppelin 合约库。代币可以代表以太坊中的几乎任何东西：在线平台上的声誉点数、游戏中角色的技能、彩票、公司股份等金融资产、像美元这样的法定货币、一盎司黄金
+    [`ethereum.org/en/developers/docs/standards/tokens/erc-20/`](https://www.google.com/url?q=https://ethereum.org/en/developers/docs/standards/tokens/erc-20/&sa=D&source=editors&ust=1624824293322000&usg=AOvVaw0WQC0GAMdAvUsXaMjUY9n4)
+    [View on YouTube](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DycTvT1R4_nc&sa=D&source=editors&ust=1624824293323000&usg=AOvVaw0gF-p4EsSm3Lw6ISLoO3iQ)
+
+
+    | 预计时间 || 5 分钟 |
+
+
+    | --- | --- |
+
+
+    | 命令概览 |
+
+
+    | --- |
+
+
+    | `truffle init` |
+
+
+    | 初始化新的空 Ethereum 项目 |
+
+
+    | `npm init` |
+
+
+    | 为你的项目创建一个 `package.json` 文件。该文件包含有关项目包和依赖项的信息。 |
+
+
+    | `npm install` |
+
+
+    | 此命令安装一个包及其依赖的任何包。 |
+
+
+    ## 准备环境
+
+
+    VS CODE - BASH 终端
+
+
+    | 终端 |
+
+
+    | --- |
+
+
+    | `$ truffle init` |
+
+
+    `$ npm init` |
+
+
+    `$ npm install @openzeppelin/contracts` |
+
+
+    ## 编写合约
+
+
+    在 `contracts` 下创建一个名为 `ERC20MinerReward.sol` 的新文件。添加许可证指令。定义 Solidity 最低版本。导入
+    OpenZeppelin ERC-20 合约库。定义合约类。定义合约构造函数。定义合约名称。定义合约符号。
+
+
+    | `ERC20MinerReward.sol` |
+
+
+    | --- |
+
+
+    | 1 2 3 4 5 6 7 8 || `// SPDX-License-Identifier: MIT` |
+
+
+    `pragma solidity ^ 0.8.0 ;` |
+
+
+    `import "@openzeppelin/contracts/token/ERC20/ERC20.sol"` |
+
+
+    `contract ERC20MinerReward is ERC20 {` |
+
+
+    `    constructor () ERC20("MinerReward", "MRW")` |
+
+
+    `}` |
+
+
+    ## 设置 Solidity 编译器版本
+
+
+    复制本合约中使用的 Solidity 版本。打开 `truffle-config.js`。取消注释 "solc" 块。粘贴复制的值来设置 Solidity
+    版本。
+
+
+    ## 编译合约
+
+
+    现在是编译合约的时候了。
+
+
+    VS CODE - BASH 终端
+
+
+    | 终端 |
+
+
+    | --- |
+
+
+    | `$ truffle compile` |
+
+
+    合约编译成功！
+
+
+    ## 验证结果
+
+
+    注意到新文件夹 `build/contract` 已创建。全新的合约就在那里！
+
+
+    # 将 ERC20 代币部署到 Ganache 开发区块链
+
+
+    Ethereum Ganache 是一个专为开发和测试设计的本地内存区块链。它模拟真实以太坊网络的功能，包括多个充有测试以太币的账户可用。 [View on
+    YouTube](https://www.google.com/url?q=https://youtu.be/8XAwtrrQ-g8&sa=D&source=editors&ust=1624824293336000&usg=AOvVaw1BtugFh5-lr14icvF5NkTv)
+
+
+    | 预计时间 || 4 分钟 |
+
+
+    | --- | --- |
+
+
+    | 前置要求 |
+
+
+    | --- |
+
+
+    | Install Truffle |
+
+
+    | 命令概览 |
+
+
+    | --- |
+
+
+    | `ganache-cli` |
+
+
+    | 在 127.0.0.1:8545 上启动 Ganache 开发区块链。 |
+
+
+    | `truffle compile` |
+
+
+    | 编译合约源文件。 |
+
+
+    | `truffle migrate` |
+
+
+    | 运行迁移以部署合约。 |
+
+
+    ## 准备迁移
+
+
+    创建一个新的迁移文件。添加对智能合约的引用。添加一个导出函数来部署智能合约。
+
+
+    ## 启动区块链
+
+
+    打开一个新终端。
+
+
+    VS CODE - BASH 终端
+
+
+    | 终端 |
+
+
+    | --- |
+
+
+    | `$ ganache-cli` |
+
+
+    一个新的 Ganache 区块链正在 127.0.0.1:8545 上监听。
+
+
+    ## 配置区块链网络
+
+
+    打开 `truffle-config.js`。取消注释 networks 中的 development 块。确保主机和端口正确。
+
+
+    ## 部署合约
+
+
+    VS CODE - BASH 终端
+
+
+    | 终端 |
+
+
+    | --- |
+
+
+    | `$ truffle compile` |
+
+
+    `$ truffle migrate` |
+
+
+    合约已部署到 Ganache 区块链。已创建合约地址。
+
+
+    ## 将代币添加到钱包
+
+
+    转到 Brave 浏览器（或任何与 MetaMask 兼容的浏览器）。选择“Localhost 8585”网络。单击“添加代币”。单击“自定义代币”。复制合约地址。粘贴到“代币合约地址”字段。“代币符号”和“精度小数位数”会自动填充。单击“下一步”。单击“添加代币”。代币已添加到
+    MetaMask 钱包。代币就在那里！
+
+
+    # 创建具有固定供应量的 ERC20 代币
+
+
+    ERC20 固定供应量代币定义了智能合约中允许的总代币数量。在这种实现类型中，部署到区块链后无法更改它。 [`openzeppelin.com`](https://www.google.com/url?q=https://openzeppelin.com&sa=D&source=editors&ust=1624824293349000&usg=AOvVaw32HS2RkQbGxWYqjIR5hmda)
+    [`www.trufflesuite.com/truffle`](https://www.google.com/url?q=https://www.trufflesuite.com/truffle&sa=D&source=editors&ust=1624824293349000&usg=AOvVaw3mUxgJCana2JUfkCZhwIyh)
+    [`www.trufflesuite.com/ganache`](https://www.google.com/url?q=https://www.trufflesuite.com/ganache&sa=D&source=editors&ust=1624824293350000&usg=AOvVaw2QpGKTc6Ta-52ah-2VGD_s)
+    [`metamask.io`](https://www.google.com/url?q=https://metamask.io&sa=D&source=editors&ust=1624824293350000&usg=AOvVaw18b5BD_Xz2ZKDHqV8MnNrC)
+
+
+    | 预计时间 || 12 分钟 |
+
+
+    | --- | --- |
+
+
+    | 视频 || [YOUTUBE](https://www.google.com/url?q=https://youtu.be/r7_g_uHgA6g&sa=D&source=editors&ust=1624824293352000&usg=AOvVaw0Zu7p0shqqAVPJGMiaFvpT)
+    |
+
+
+    | --- | --- |
+
+
+    | 源代码 || [GITHUB](https://www.google.com/url?q=https://github.com/davibauer/blockchain/tree/master/token-erc20-fixed&sa=D&source=editors&ust=1624824293354000&usg=AOvVaw3xsHY2LahKxjrzVfUD2RWc)
+    |
+
+
+    | --- | --- |
+
+
+    | 前置要求 |
+
+
+    | --- |
+
+
+    | Install Truffle |
+
+
+    | 命令概览 |
+
+
+    | --- |
+
+
+    | `truffle init` |
+
+
+    | 初始化新的空 Ethereum 项目 |
+
+
+    | `npm init` |
+
+
+    | 为你的项目创建一个 `package.json` 文件。 |
+
+
+    | `npm install` |
+
+
+    | 安装一个包及其依赖的任何包。 |
+
+
+    | `ganache-cli` |
+
+
+    | 在 127.0.0.1:8545 上启动 Ganache 开发区块链。 |
+
+
+    | `truffle compile` |
+
+
+    | 编译合约源文件。 |
+
+
+    | `truffle migrate` |
+
+
+    | 运行迁移以部署合约。 |
+
+
+    ## 创建项目
+
+
+    VS CODE - BASH 终端
+
+
+    | 终端 |
+
+
+    | --- |
+
+
+    | `$ truffle init` |
+
+
+    `$ npm init` |
+
+
+    `$ npm install @openzeppelin/contracts` |
+
+
+    ## 编写合约
+
+
+    创建一个新的 Solidity 文件。包含许可证声明（强制性）。定义 Solidity 最低版本。导入 OpenZeppelin ERC-20 合约库。定义从
+    `ERC20` 继承的固定供应量合约类。调用构造函数传递名称和符号。将总供应量分配给发送者地址（创建合约的人）。覆盖 `decimals` 函数。设置该代币将拥有的小数位数。
+
+
+    | `ERC20FixedSupply.sol` |
+
+
+    '
+  toc: []
+- raw: "| --- |\n\n| 1  \n\n2  \n\n3  \n\n4  \n\n5  \n\n6  \n\n7  \n\n8  \n\n9  \n\
+    \n10  \n\n11  \n\n12  \n\n13  \n\n14  || // SPDX-License-Identifier: MIT   \n\n\
+    pragma solidity ^ 0.8.0 ;  \n\n import     \"@openzeppelin/contracts/token/ERC20/ERC20.sol\"\
+    \   \n\n contract  ERC20FixedSupply is ERC20 {  \n\n     constructor () ERC20(\"\
+    Fixed\", \"FIX\"){  \n\n       \\_mint(msg.sender, 1000 );  \n\n   }  \n\n     \
+    \ function     decimals () public     view     virtual     override     returns\
+    \  (uint8){  \n\n         return     0 ;  \n\n   }  \n\n}  |\n\nGo to truffle-config.js\
+    \ Uncomment the \"solc\" block Update the solidity version number \n\n| truffle-config.js\
+    \  |\n\n| --- |\n\n| 83 84 85 86 87 88 89 90 91 92 93 94 95  || compilers: { \
+    \ \n\n   solc: {  \n\n       version: \"0.8.0\" ,  \n\n       docker: true , \
+    \ \n\n       settings: {  \n\n           optimizer: {  \n\n               enabled:\
+    \ false ,  \n\n               runs: 200   \n\n           },  \n\n           evmVersion:\
+    \ \"byzantium\"   \n\n       }  \n\n   }  \n\n},  |\n\nUnder migrations folder,\
+    \ create a new file Set the name to 2\\_deploy\\_contract.sol Set the require\
+    \ method to your contract file Export a function to deploy the contract \n\n|\
+    \ 2\\_deploy\\_contract.sol  |\n\n| --- |\n\n| 1 2 3 4 5  || var  ERC20FixedSupply\
+    \ = artifacts.require( \"./ERC20FixedSupply.sol\" );  \n\n module .exports = function\
+    \ (deployer){  \n\n   deployer.deploy(ERC20FixedSupply);  \n\n}  |\n\nOpen a new\
+    \ terminal VS CODE - BASH TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| $ ganache-cli\
+    \  |\n\nStarting Ganache development blockchain Split the terminal view VS CODE\
+    \ - BASH TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| $ ganache-cli  |\n\nGo to\
+    \ truffle-config.js Under networks, uncomment the development block \n\n| truffle-config.js\
+    \  |\n\n| --- |\n\n| 38 39 40 41 42 43  || networks: {  \n\n   development: {\
+    \  \n\n       host: \"127.0.0.1\" ,  \n\n       port: 8545 ,  \n\n       network\\\
+    _id: \"\\*\"   \n\n   },  |\n\nMigrating the contract VS CODE - BASH TERMINAL\
+    \ \n\n| TERMINAL  |\n\n| --- |\n\n| $ truffle migrate  |\n\n![](Image00010.jpg)Copy\
+    \ the private key of the account that deployed the token Configuring MetaMask\
+    \ Open MetaMask Click on your account and then \"import account\" Paste the account\
+    \ private key Click on \"import\" ![](Image00011.jpg)Click on networks list Click\
+    \ on \"Localhost:8545\" ![](Image00012.jpg)Adding the token Click on \"add token\"\
+    \ Select \"custom token\" Paste the token contract address Click on \"next\" ![](Image00013.jpg)Click\
+    \ on \"add tokens\" ![](Image00014.jpg)Go back to vs code Copy another account\
+    \ private key Go back to MetaMask Repeat the steps you did for the first account\
+    \ including adding the token Transferring tokens between accounts Now change to\
+    \ the first imported account (the one that has all the tokens) Click on \"send\"\
+    \ Click on \"transfer between my accounts\" Select the second created account\
+    \ Input 115 FIX as the amount to transfer Click on \"next\" Click on \"confirm\"\
+    \ The transaction was sent but it's in pending state The transaction was confirmed\
+    \ The total tokens was updated Select the second imported account Now this account\
+    \ has 115 FIX! \n\nDeploy ERC20 Token to Testnet using Infura You can use infura\
+    \ to deploy your smart contracts to test networks such as Ropsten, Kovan, Rinkeby,\
+    \ Gorli and also to the Mainnet. For testnet you will need to setup a new project\
+    \ on infura as well as access to the private key of the wallet that you will use\
+    \ to deploy the contracts. This wallet needs to have ether balance to complete\
+    \ the contract creation transaction. [https://infura.io](https://www.google.com/url?q=https://infura.io&sa=D&source=editors&ust=1624824293384000&usg=AOvVaw1XyBqCoQKOAZea4YEOuOxL)\
+    \ [View on YouTube](https://www.google.com/url?q=https://youtu.be/VS4iWGCHXmE&sa=D&source=editors&ust=1624824293384000&usg=AOvVaw1AI7QRzOkzX4mcFOGXBvPJ)\
+    \ \n\n| ESTIMATED TIME  || 8 minutes  |\n\n| --- | --- |\n\n| PRE REQUIREMENTS\
+    \  |\n\n| --- |\n\n| [Install Truffle](#text00005.html#a2X3)  |\n\n| Create an\
+    \ Account on Infura.io  |\n\n| [Get Test Ether From Faucet on Ropsten Network](#text00019.html#a2ZC)\
+    \  |\n\n| [Install and Setup MetaMask Wallet](#text00008.html#toc20_MetaMask)\
+    \  |\n\n| COMMAND OVERVIEW  |\n\n| --- |\n\n| npm install fs  |\n\n| Install the\
+    \ fs package that provides a lot of very useful functionality to access and interact\
+    \ with the file system.  |\n\n| npm install @truffle/hdwallet-provider  |\n\n\
+    | Install the HD Wallet-enabled Web3 provider. This is used to sign transactions\
+    \ for addresses derived from a 12 or 24 word mnemonic.  |\n\n| truffle migrate\
+    \ --network ropsten  |\n\n| Run migrations to deploy contracts.  |\n\nInstalling\
+    \ the pre-requirements Open a new terminal VS CODE - BASH TERMINAL \n\n| TERMINAL\
+    \  |\n\n| --- |\n\n| $ npm install fs  \n\n$ npm install @truffle/hdwallet-provider\
+    \  |\n\nSetting up your infura project Go to infura.io Access your dashboard Click\
+    \ on \"ethereum\" Click on \"create a project\" Define the project name You can\
+    \ connect with different testnets and also to the mainnet Copy the project id\
+    \ Save changes Setting up your smart contract Go to visual studio code Open truffle-config.js\
+    \ Uncomment the four constants: hdwalletprovider, infurakey, fs and mnemonic Paste\
+    \ the project id as a value for infurakey constant Uncomment the \"ropsten\" block\
+    \ Make sure you are using the correct project id in the ropsten endpoint Configuring\
+    \ the private key Go to the browser and open your MetaMask wallet connected to\
+    \ infura network Click on your account Click on \"settings\" Click on \"security\
+    \ & privacy\" Click on \"reveal seed phrase\" Enter your wallet password to continue\
+    \ Copy the private key Go back to visual studio code Create a new file named \"\
+    .secret\" Paste the private key Deploying the smart contract VS CODE - BASH TERMINAL\
+    \ \n\n| TERMINAL  |\n\n| --- |\n\n| $ truffle migrate --network ropsten  |\n\n\
+    Checking your wallet balance Go to your Metamask wallet again Notice that your\
+    \ balance has been reduced Verifying the smart contract on etherscan Open a new\
+    \ window Go to [https://ropsten.etherscan.io](https://www.google.com/url?q=https://ropsten.etherscan.io&sa=D&source=editors&ust=1624824293399000&usg=AOvVaw3gTIZVz9oZOq7tO3GFYx-_)\
+    \ Copy the contract address that was created for your deploy Paste the contract\
+    \ address in the search field Click on the \"find\" button The smart contract\
+    \ is there! The tokens were created and transferred to the wallet that created\
+    \ the contract Click on \"Fixed (FIX)\" token link Here you can see the overview\
+    \ of your newly created token! \n\nUnit Tests Write Unit Tests for ERC20 Smart\
+    \ Contracts Truffle comes standard with an automated testing framework to make\
+    \ testing your contracts much easier. This framework lets you write simple and\
+    \ manageable tests in different ways. [https://www.trufflesuite.com/truffle](https://www.google.com/url?q=https://www.trufflesuite.com/truffle&sa=D&source=editors&ust=1624824293400000&usg=AOvVaw2PwkWnEMnmPrE9liwatp3U)\
+    \ [https://www.trufflesuite.com/ganache](https://www.google.com/url?q=https://www.trufflesuite.com/ganache&sa=D&source=editors&ust=1624824293401000&usg=AOvVaw1LLHXpPZRIvMCvKIkyiRw_)\
+    \ [View on YouTube](https://www.google.com/url?q=https://youtu.be/7XmH4gOFm-4&sa=D&source=editors&ust=1624824293401000&usg=AOvVaw1KJr6a3j4CX_C-SGr1S-K0)\
+    \ \n\n| ESTIMATED TIME  || 5 minutes  |\n\n| --- | --- |\n\n| PRE REQUIREMENTS\
+    \  |\n\n| --- |\n\n| [Install Truffle](#text00005.html#a2X3)  |\n\n| [Install\
+    \ Ganache CLI](#text00006.html#page_6)  |\n\n| COMMAND OVERVIEW  |\n\n| --- |\n\
+    \n| truffle create test  |\n\n| Helper to create new contracts, migrations and\
+    \ tests.  |\n\n| truffle test --network development  |\n\n| Run JavaScript and\
+    \ Solidity tests.  |\n\nCreating a new unit test file Open a new terminal and\
+    \ execute the command. \n\n| TERMINAL  |\n\n| --- |\n\n| $ truffle create test\
+    \ erc20FixedSupply  |\n\nWriting test for the contract total supply Write a new\
+    \ test to assert that the contract was created with a fixed supply of 1000 coins.\
+    \ \n\n| ERC20FixedSupply.js  |\n\n| --- |\n\n| 1 2 3 4 5 6 7 8 9 10 11 12 13 14\
+    \ 15  || const  erc20FixedSupply = artifacts.require( \"erc20FixedSupply\" );\
+    \  \n\n contract( \"erc20FixedSupply\" , function  () {  \n\n   it( \"should assert\
+    \ true\" , async     function () {  "
+  fmt: "\n# ERC20 固定供应量代币部署与测试指南\n\n## 1. 智能合约代码\n\n进入合约目录，创建 `ERC20FixedSupply.sol`\
+    \ 文件。\n\n```solidity\n// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\
+    \nimport \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\n\ncontract ERC20FixedSupply\
+    \ is ERC20 {\n    constructor() ERC20(\"Fixed\", \"FIX\") {\n        _mint(msg.sender,\
+    \ 1000);\n    }\n\n    function decimals() public view virtual override returns\
+    \ (uint8) {\n        return 0;\n    }\n}\n```\n\n## 2. 配置 Truffle 编译器\n\n打开 `truffle-config.js`\
+    \ 文件，取消 \"solc\" 块的注释，并更新 Solidity 版本号。\n\n```javascript\ncompilers: {\n    solc:\
+    \ {\n        version: \"0.8.0\",\n        docker: true,\n        settings: {\n\
+    \            optimizer: {\n                enabled: false,\n                runs:\
+    \ 200\n            },\n            evmVersion: \"byzantium\"\n        }\n    }\n\
+    },\n```\n\n## 3. 创建部署脚本\n\n在 `migrations` 文件夹下，创建新文件，文件名设置为 `2_deploy_contract.sol`，将\
+    \ `require` 方法设置为你的合约文件，并导出部署合约的函数。\n\n```javascript\nvar ERC20FixedSupply = artifacts.require(\"\
+    ./ERC20FixedSupply.sol\");\n\nmodule.exports = function(deployer) {\n    deployer.deploy(ERC20FixedSupply);\n\
+    };\n```\n\n## 4. 启动 Ganache 并迁移合约\n\n打开新终端（VS CODE - BASH TERMINAL），启动 Ganache\
+    \ 开发区块链。\n\n```bash\n$ ganache-cli\n```\n\n分割终端视图（VS CODE - BASH TERMINAL），再次启动\
+    \ Ganache。\n\n```bash\n$ ganache-cli\n```\n\n打开 `truffle-config.js` 文件，在 `networks`\
+    \ 下取消 `development` 块的注释。\n\n```javascript\nnetworks: {\n    development: {\n\
+    \        host: \"127.0.0.1\",\n        port: 8545,\n        network_id: \"*\"\n\
+    \    },\n},\n```\n\n在终端中迁移合约（VS CODE - BASH TERMINAL）。\n\n```bash\n$ truffle migrate\n\
+    ```\n\n## 5. 配置 MetaMask 并转账代币\n\n复制部署代币的账户私钥。配置 MetaMask，打开 MetaMask，点击你的账户，然后选择\
+    \ \"import account\"，粘贴账户私钥，点击 \"import\"。\n\n点击网络列表，选择 \"Localhost:8545\"。\n\n\
+    添加代币：点击 \"add token\"，选择 \"custom token\"，粘贴代币合约地址，点击 \"next\"，点击 \"add tokens\"\
+    。\n\n返回 VS Code，复制另一个账户私钥。返回 MetaMask，重复你为第一个账户所做的步骤，包括添加代币。\n\n在账户之间转账代币。切换到第一个导入的账户（即拥有所有代币的账户），点击\
+    \ \"send\"，点击 \"transfer between my accounts\"，选择第二个创建的账户，输入 115 FIX 作为转账金额，点击\
+    \ \"next\"，点击 \"confirm\"。交易已发送但处于待定状态，交易确认后，总代币数将更新。选择第二个导入的账户，该账户现在拥有 115 FIX！\n\
+    \n## 6. 使用 Infura 将 ERC20 代币部署到测试网\n\n你可以使用 Infura 将智能合约部署到 Ropsten、Kovan、Rinkeby、Gorli\
+    \ 等测试网络，也可以部署到 Mainnet。对于测试网，你需要在 Infura 上设置一个新项目，并拥有用于部署合约的钱包私钥。该钱包需要有以太币余额以完成合约创建交易。\n\
+    \n- [Infura](https://infura.io)\n- [View on YouTube](https://youtu.be/VS4iWGCHXmE)\n\
+    \n| 预计时间 | 8 分钟 |\n| --- | --- |\n\n### 前置要求\n\n- [Install Truffle](#text00005.html#a2X3)\n\
+    - 在 Infura.io 上创建账户\n- [Get Test Ether From Faucet on Ropsten Network](#text00019.html#a2ZC)\n\
+    - [Install and Setup MetaMask Wallet](#text00008.html#toc20_MetaMask)\n\n### 命令概览\n\
+    \n| 命令 | 说明 |\n| --- | --- |\n| `npm install fs` | 安装 fs 包，该包提供大量非常有用的功能来访问和与文件系统交互。\
+    \ |\n| `npm install @truffle/hdwallet-provider` | 安装 HD 钱包支持的 Web3 提供程序。这用于为从\
+    \ 12 或 24 个助记词派生的地址签署交易。 |\n| `truffle migrate --network ropsten` | 运行迁移以部署合约。\
+    \ |\n\n### 安装前置要求\n\n打开新终端（VS CODE - BASH TERMINAL）。\n\n```bash\n$ npm install\
+    \ fs\n$ npm install @truffle/hdwallet-provider\n```\n\n### 设置 Infura 项目\n\n访问\
+    \ infura.io，进入控制面板，点击 \"ethereum\"，点击 \"create a project\"，定义项目名称。你可以连接到不同的测试网以及主网，复制项目\
+    \ ID 并保存更改。\n\n### 设置智能合约\n\n打开 Visual Studio Code，打开 `truffle-config.js`，取消注释四个常量：`hdwalletprovider`、`infurakey`、`fs`\
+    \ 和 `mnemonic`。将项目 ID 作为 `infurakey` 常量的值粘贴进去，取消注释 \"ropsten\" 块，确保在 ropsten 端点中使用正确的项目\
+    \ ID。\n\n### 配置私钥\n\n在浏览器中打开连接到 Infura 网络的 MetaMask 钱包，点击你的账户，点击 \"settings\"\
+    ，点击 \"security & privacy\"，点击 \"reveal seed phrase\"，输入钱包密码继续，复制私钥。返回 Visual Studio\
+    \ Code，创建名为 `.secret` 的新文件，粘贴私钥。\n\n### 部署智能合约\n\n打开终端（VS CODE - BASH TERMINAL）。\n\
+    \n```bash\n$ truffle migrate --network ropsten\n```\n\n### 检查钱包余额\n\n再次访问你的 MetaMask\
+    \ 钱包，注意你的余额已减少。\n\n### 在 Etherscan 上验证智能合约\n\n打开新窗口，访问 [https://ropsten.etherscan.io](https://ropsten.etherscan.io)，复制为你的部署创建的合约地址，将合约地址粘贴到搜索字段，点击\
+    \ \"find\" 按钮。智能合约已显示！代币已创建并转移到创建合约的钱包。点击 \"Fixed (FIX)\" 代币链接，在这里你可以看到新创建代币的概览！\n\
+    \n## 7. 单元测试\n\n为 ERC20 智能合约编写单元测试。Truffle 标配自动化测试框架，使测试合约更加容易。这个框架让你以不同的方式编写简单且易于管理的测试。\n\
+    \n- [Truffle Suite](https://www.trufflesuite.com/truffle)\n- [Ganache](https://www.trufflesuite.com/ganache)\n\
+    - [View on YouTube](https://youtu.be/7XmH4gOFm-4)\n\n| 预计时间 | 5 分钟 |\n| --- |\
+    \ --- |\n\n### 前置要求\n\n- [Install Truffle](#text00005.html#a2X3)\n- [Install Ganache\
+    \ CLI](#text00006.html#page_6)\n\n### 命令概览\n\n| 命令 | 说明 |\n| --- | --- |\n| `truffle\
+    \ create test` | 帮助创建新合约、迁移和测试。 |\n| `truffle test --network development` | 运行\
+    \ JavaScript 和 Solidity 测试。 |\n\n### 创建新单元测试文件\n\n打开新终端并执行命令。\n\n```bash\n$ truffle\
+    \ create test erc20FixedSupply\n```\n\n### 编写合约总供应量的测试\n\n编写新测试以断言合约是以固定供应量 1000\
+    \ 枚代币创建的。\n\n```javascript\nconst erc20FixedSupply = artifacts.require(\"erc20FixedSupply\"\
+    );\n\ncontract(\"erc20FixedSupply\", function() {\n    it(\"should assert true\"\
+    , async function() {\n"
+  trans: "\n\n# ERC20 固定供应量代币部署与测试指南\n\n## 1. 智能合约代码\n\n进入合约目录，创建 `ERC20FixedSupply.sol`\
+    \ 文件。\n\n```solidity\n// SPDX-License-Identifier: MIT\n\npragma solidity ⁰.8.0;\n\
+    \nimport \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\n\ncontract ERC20FixedSupply\
+    \ is ERC20 {\n    constructor() ERC20(\"Fixed\", \"FIX\") {\n        _mint(msg.sender,\
+    \ 1000);\n    }\n\n    function decimals() public view virtual override returns\
+    \ (uint8) {\n        return 0;\n    }\n}\n```\n\n## 2. 配置 Truffle 编译器\n\n打开 `truffle-config.js`\
+    \ 文件，取消 \"solc\" 块的注释，并更新 Solidity 版本号。\n\n```javascript\ncompilers: {\n    solc:\
+    \ {\n        version: \"0.8.0\",\n        docker: true,\n        settings: {\n\
+    \            optimizer: {\n                enabled: false,\n                runs:\
+    \ 200\n            },\n            evmVersion: \"byzantium\"\n        }\n    }\n\
+    },\n```\n\n## 3. 创建部署脚本\n\n在 `migrations` 文件夹下，创建新文件，文件名设置为 `2_deploy_contract.sol`，将\
+    \ `require` 方法设置为你的合约文件，并导出部署合约的函数。\n\n```javascript\nvar ERC20FixedSupply = artifacts.require(\"\
+    ./ERC20FixedSupply.sol\");\n\nmodule.exports = function(deployer) {\n    deployer.deploy(ERC20FixedSupply);\n\
+    };\n```\n\n## 4. 启动 Ganache 并迁移合约\n\n打开新终端（VS CODE - BASH TERMINAL），启动 Ganache\
+    \ 开发区块链。\n\n```bash\n$ ganache-cli\n```\n\n分割终端视图（VS CODE - BASH TERMINAL），再次启动\
+    \ Ganache。\n\n```bash\n$ ganache-cli\n```\n\n打开 `truffle-config.js` 文件，在 `networks`\
+    \ 下取消 `development` 块的注释。\n\n```javascript\nnetworks: {\n    development: {\n\
+    \        host: \"127.0.0.1\",\n        port: 8545,\n        network_id: \"*\"\n\
+    \    },\n},\n```\n\n在终端中迁移合约（VS CODE - BASH TERMINAL）。\n\n```bash\n$ truffle migrate\n\
+    ```\n\n## 5. 配置 MetaMask 并转账代币\n\n复制部署代币的账户私钥。配置 MetaMask，打开 MetaMask，点击你的账户，然后选择\
+    \ \"import account\"，粘贴账户私钥，点击 \"import\"。\n\n点击网络列表，选择 \"Localhost:8545\"。\n\n\
+    添加代币：点击 \"add token\"，选择 \"custom token\"，粘贴代币合约地址，点击 \"next\"，点击 \"add tokens\"\
+    。\n\n返回 VS Code，复制另一个账户私钥。返回 MetaMask，重复你为第一个账户所做的步骤，包括添加代币。\n\n在账户之间转账代币。切换到第一个导入的账户（即拥有所有代币的账户），点击\
+    \ \"send\"，点击 \"transfer between my accounts\"，选择第二个创建的账户，输入 115 FIX 作为转账金额，点击\
+    \ \"next\"，点击 \"confirm\"。交易已发送但处于待定状态，交易确认后，总代币数将更新。选择第二个导入的账户，该账户现在拥有 115 FIX！\n\
+    \n## 6. 使用 Infura 将 ERC20 代币部署到测试网\n\n你可以使用 Infura 将智能合约部署到 Ropsten、Kovan、Rinkeby、Gorli\
+    \ 等测试网络，也可以部署到 Mainnet。对于测试网，你需要在 Infura 上设置一个新项目，并拥有用于部署合约的钱包私钥。该钱包需要有以太币余额以完成合约创建交易。\n\
+    \n- [Infura](https://infura.io)\n- [在 YouTube 上观看](https://youtu.be/VS4iWGCHXmE)\n\
+    \n| 预计时间 | 8 分钟 |\n| --- | --- |\n\n### 前置要求\n\n- Install Truffle\n- 在 Infura.io\
+    \ 上创建账户\n- Get Test Ether From Faucet on Ropsten Network\n- Install and Setup\
+    \ MetaMask Wallet\n\n### 命令概览\n\n| 命令 | 说明 |\n| --- | --- |\n| `npm install fs`\
+    \ | 安装 fs 包，该包提供大量非常有用的功能来访问和与文件系统交互。 |\n| `npm install @truffle/hdwallet-provider`\
+    \ | 安装 HD 钱包支持的 Web3 提供程序。这用于为从 12 或 24 个助记词派生的地址签署交易。 |\n| `truffle migrate --network\
+    \ ropsten` | 运行迁移以部署合约。 |\n\n### 安装前置要求\n\n打开新终端（VS CODE - BASH TERMINAL）。\n\n\
+    ```bash\n$ npm install fs\n$ npm install @truffle/hdwallet-provider\n```\n\n###\
+    \ 设置 Infura 项目\n\n访问 infura.io，进入控制面板，点击 \"ethereum\"，点击 \"create a project\"\
+    ，定义项目名称。你可以连接到不同的测试网以及主网，复制项目 ID 并保存更改。\n\n### 设置智能合约\n\n打开 Visual Studio Code，打开\
+    \ `truffle-config.js`，取消注释四个常量：`hdwalletprovider`、`infurakey`、`fs` 和 `mnemonic`。将项目\
+    \ ID 作为 `infurakey` 常量的值粘贴进去，取消注释 \"ropsten\" 块，确保在 ropsten 端点中使用正确的项目 ID。\n\n\
+    ### 配置私钥\n\n在浏览器中打开连接到 Infura 网络的 MetaMask 钱包，点击你的账户，点击 \"settings\"，点击 \"security\
+    \ & privacy\"，点击 \"reveal seed phrase\"，输入钱包密码继续，复制私钥。返回 Visual Studio Code，创建名为\
+    \ `.secret` 的新文件，粘贴私钥。\n\n### 部署智能合约\n\n打开终端（VS CODE - BASH TERMINAL）。\n\n```bash\n\
+    $ truffle migrate --network ropsten\n```\n\n### 检查钱包余额\n\n再次访问你的 MetaMask 钱包，注意你的余额已减少。\n\
+    \n### 在 Etherscan 上验证智能合约\n\n打开新窗口，访问 [`ropsten.etherscan.io`](https://ropsten.etherscan.io)，复制为你的部署创建的合约地址，将合约地址粘贴到搜索字段，点击\
+    \ \"find\" 按钮。智能合约已显示！代币已创建并转移到创建合约的钱包。点击 \"Fixed (FIX)\" 代币链接，在这里你可以看到新创建代币的概览！\n\
+    \n## 7. 单元测试\n\n为 ERC20 智能合约编写单元测试。Truffle 标配自动化测试框架，使测试合约更加容易。这个框架让你以不同的方式编写简单且易于管理的测试。\n\
+    \n- [Truffle Suite](https://www.trufflesuite.com/truffle)\n- [Ganache](https://www.trufflesuite.com/ganache)\n\
+    - [在 YouTube 上观看](https://youtu.be/7XmH4gOFm-4)\n\n| 预计时间 | 5 分钟 |\n| --- | ---\
+    \ |\n\n### 前置要求\n\n- Install Truffle\n- Install Ganache CLI\n\n### 命令概览\n\n| 命令\
+    \ | 说明 |\n| --- | --- |\n| `truffle create test` | 帮助创建新合约、迁移和测试。 |\n| `truffle\
+    \ test --network development` | 运行 JavaScript 和 Solidity 测试。 |\n\n### 创建新单元测试文件\n\
+    \n打开新终端并执行命令。\n\n```bash\n$ truffle create test erc20FixedSupply\n```\n\n### 编写合约总供应量的测试\n\
+    \n编写新测试以断言合约是以固定供应量 1000 枚代币创建的。\n\n```javascript\nconst erc20FixedSupply = artifacts.require(\"\
+    erc20FixedSupply\");\n\ncontract(\"erc20FixedSupply\", function() {\n    it(\"\
+    should assert true\", async function() {\n\n"
+  toc: []
+- raw: "         await  erc20FixedSupply.deployed();  \n\n         return  assert.isTrue(\
+    \ true );  \n\n   });  \n\n    it( \"should return total supply of 1000\" , async\
+    \     function () {  \n\n         const  instance = await  erc20FixedSupply.deployed();\
+    \  \n\n         const  totalSupply = await  instance.totalSupply();  \n\n        assert.equal(totalSupply,\
+    \ 1000 );  \n\n   });  \n\n});  |\n\nTest using the following command. \n\n| TERMINAL\
+    \  |\n\n| --- |\n\n| $ truffle test --network development  |\n\nThe test will\
+    \ pass. Writing test asserting for the contract balance Add one more test to assert\
+    \ that the balance is correct after a new transfer is made between two accounts.\
+    \ \n\n| ERC20FixedSupply.js  |\n\n| --- |\n\n| 16 17 18 19 20 21 22 23 24 25 \
+    \ ||     it( \"should transfer 150 FIX\" , async     function (){  \n\n        \
+    \ const  instance = await  erc20FixedSupply.deployed();  \n\n         await  instance.transfer(\
+    \ \"account\\[1\\]\" , 150 );  \n\n          const  balanceAccount0 = await  instance.balanceOf(accounts\\\
+    [ 0 \\]);  \n\n         const  balanceAccount1 = await  instance.balanceOf(accounts\\\
+    [ 1 \\]);  \n\n        assert.equal(balanceAccount0.toNumber(), 850 );  \n\n       assert.equal(balanceAccount1.toNumber(),\
+    \ 150 );  \n\n   });  |\n\nExecute the test again. \n\n| TERMINAL  |\n\n| ---\
+    \ |\n\n| $ truffle test --network development  |\n\nAll tests will pass. ![](Image00015.jpg)Try\
+    \ to change some values like the account balance at line 23 and 24 and see how\
+    \ the results change from pass to fail. \n\nERC721- Non-Fungible Tokens Create\
+    \ your art NFT using Ganache and OpenZeppelin An NFT is a digital asset that represents\
+    \ real-world objects like art, music, in-game items and videos. In this video\
+    \ I'll show you how to create a NFT ERC 721 and deploy it to ethereum testnet\
+    \ network as well as how to add it to your metamask mobile wallet. [https://eips.ethereum.org/EIPS/eip-721](https://www.google.com/url?q=https://eips.ethereum.org/EIPS/eip-721&sa=D&source=editors&ust=1624824293420000&usg=AOvVaw3S-_o_s0S4uIkJ8J3rnyIw)\
+    \ [View on YouTube](https://www.google.com/url?q=https://youtu.be/IFpU4TNwXec&sa=D&source=editors&ust=1624824293420000&usg=AOvVaw0LAiWMu-EocDqEhypxlgiG)\
+    \ \n\n| ESTIMATED TIME  || 15 minutes  |\n\n| --- | --- |\n\n| PRE REQUIREMENTS\
+    \  |\n\n| --- |\n\n| [Install Truffle](#text00005.html#a2X3)  |\n\n| [Create an\
+    \ Account on Infura.io](#text00009.html#a2XG)  |\n\n| [Get Test Ether From Faucet\
+    \ on Rinkeby Network](#text00021.html#toc87_Get_Test_Ether_From_Faucet_on_Rinkeby_Testnet)\
+    \  |\n\n| [Install and Setup MetaMask Wallet](#text00008.html#toc20_MetaMask)\
+    \  |\n\n| COMMAND OVERVIEW  |\n\n| --- |\n\n| truffle init  |\n\n| Initialize\
+    \ new and empty Ethereum project  |\n\n| npm install  |\n\n| This command installs\
+    \ a package and any packages that it depends on  |\n\n| ipfs daemon  |\n\n| Start\
+    \ IPFS local server on 127.0.0.1:5001  |\n\n| ipfs add <file>  |\n\n| Add file\
+    \ to your IPFS local node  |\n\n| ipfs pin remote add --service=pinata -name=<file>\
+    \ <hash>  |\n\n| Pin your file to the remote IPFS pinning service  |\n\n| truffle\
+    \ compile  |\n\n| Compile contract source file  |\n\n| truffle migrate  |\n\n\
+    | Run migrations to deploy contracts  |\n\n| truffle console  |\n\n| A basic interactive\
+    \ console connecting to an Ethereum client  |\n\nCreating the project Create a\
+    \ new project using truffle \n\n| TERMINAL  |\n\n| --- |\n\n| $ truffle init \
+    \ |\n\nInstall open zeppelin contracts \n\n| TERMINAL  |\n\n| --- |\n\n| $ npm\
+    \ install @openzeppelin/contracts  |\n\nCreate a new solidity smart contract \n\
+    \n| TERMINAL  |\n\n| --- |\n\n| $ touch contracts/UniqueAsset.sol  |\n\nOpen the\
+    \ file Import ERC721 URI Storage extension Import Counters util Create a new class\
+    \ extending ERC721URIStorage Declare counters Declare the constructor passing\
+    \ the coin name and the code Create a new method for award item Inside the new\
+    \ method, increment the token Get the new token number Mint a new item Set the\
+    \ token URI \n\n| UniqueAsset.sol  || [View on GitHub](https://www.google.com/url?q=https://github.com/davibauer/blockchain/blob/master/nft/contracts/UniqueAsset.sol&sa=D&source=editors&ust=1624824293441000&usg=AOvVaw0kQm6OCdMH2KrrQpUMgQxn)\
+    \  |\n\n| --- | --- |\n\n| 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20\
+    \ 21 22 23  || // SPDX-License-Identifier: MIT   \n\npragma solidity ^ 0.8.0 ;\
+    \  \n\n import     \"@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol\"\
+    \ ;  \n\n import     \"@openzeppelin/contracts/utils/Counters.sol\" ;  \n\n contract\
+    \   UniqueAsset is   ERC721URIStorage {  \n\n     using   Counters for   Counters.Counter;\
+    \  \n\n   Counters.Counter private \\_tokenIds;  \n\n      constructor () ERC721(\"\
+    UniqueAsset\", \"UNA\") {}  \n\n      function     awardItem (address recipient,\
+    \ string memory metadata)  \n\n     public   \n\n     returns  (uint256)  \n\n\
+       {  \n\n       \\_tokenIds.increment();  \n\n       uint256 newItemId = \\_tokenIds.current();\
+    \  \n\n       \\_mint(recipient, newItemId);  \n\n       \\_setTokenURI(newItemId,\
+    \ metadata);  \n\n         return  newItemId;  \n\n   }  \n\n}  |\n\nCreate a\
+    \ new migration file \n\n| TERMINAL  |\n\n| --- |\n\n| $ touch migrations/2\\\
+    _deploy\\_contracts.js  |\n\nExport the smart contract in the migration file \n\
+    \n| 2\\_deploy\\_contracts.js  || [View on GitHub](https://www.google.com/url?q=https://github.com/davibauer/blockchain/blob/master/nft/migrations/2_deploy_contracts.js&sa=D&source=editors&ust=1624824293449000&usg=AOvVaw10o1zZ2Ri74tBsK1M4YoGF)\
+    \  |\n\n| --- | --- |\n\n| 1 2 3 4 5  || const  UniqueAsset = artifacts.require(\
+    \ \"UniqueAsset\" );  \n\n module .exports = function  (deployer) {  \n\n   deployer.deploy(UniqueAsset);\
+    \  \n\n}  |\n\nConfiguring the wallet Install the file system “fs” package \n\n\
+    | TERMINAL  |\n\n| --- |\n\n| $ npm install fs  |\n\nInstall the wallet provider\
+    \ “hdwallet” package \n\n| TERMINAL  |\n\n| --- |\n\n| $ npm install @truffle/hdwallet-provider@1.2.3\
+    \  |\n\nOpen truffle-config.js file Uncomment the HDWalletProvider code section\
+    \ \n\n| truffle-config.js  |\n\n| --- |\n\n| 21 22 23 24 25  || const  HDWalletProvider\
+    \ = require ( '@truffle/hdwallet-provider' );  \n\n const  infuraKey = 'fj4jll3k.....'\
+    \ ;  \n\n const  fs = require ( 'fs' );  \n\n const  mnemonic = fs.readFileSync(\
+    \ \".secret\" ).toString().trim();  |\n\nPaste your Infura project id as a value\
+    \ for the variable infuraKey Configuring the network Uncomment the “ropsten” network\
+    \ section Change “ropsten” to “rinkeby” Change “ropsten” infura url to “rinkeby”\
+    \ Change “YOU-PROJECT-ID” to “${infuraKey}” Change the network\\_id to 42 \n\n\
+    | truffle-config.js  |\n\n| --- |\n\n| 60 61 62 63 64 65 66 67  || rinkeby: {\
+    \  \n\n   provider: () => new   HDWalletProvider(mnemonic, \\`https://rinkeby.infura.io/v3/${infuraKey}\\\
+    ` ),  \n\n   network\\_id: 4 ,  \n\n   gas: 5500000 ,  \n\n   confirmations: 2\
+    \ ,  \n\n   timeoutBlocks: 200 ,  \n\n   skipDryRun: true   \n\n},  |\n\nConfiguring\
+    \ the solidity compiler Uncomment the “compilers” section Change version to “0.8.0”\
+    \ \n\n| truffle-config.js  |\n\n| --- |\n\n| 93 94 95 96 97 98 99 100 101 102\
+    \ 103 104 105  || compilers: {  \n\n   solc: {  \n\n       version: \"0.8.0\"\
+    \ ,  \n\n       docker: true ,  \n\n       settings: {  \n\n           optimizer:\
+    \ {  \n\n               enabled: false ,  \n\n               runs: 200   \n\n\
+               },  \n\n           evmVersion: \"byzantinum\"   \n\n       }  \n\n\
+       }  \n\n},  |\n\nConfiguring the private key Create the secret file \n\n| TERMINAL\
+    \  |\n\n| --- |\n\n| $ touch .secret  |\n\nGo to the browser and open your MetaMask\
+    \ wallet connected to infura network Click on your account Click on \"settings\"\
+    \ Click on \"security & privacy\" ![](Image00016.jpg)Click on \"reveal seed phrase\"\
+    \ Enter your wallet password to continue Copy the private key Paste the wallet\
+    \ mnemonic secret Creating the badge image Create the badge folder \n\n| TERMINAL\
+    \  |\n\n| --- |\n\n| $ mkdir badge  |\n\nGo to the badge root folder \n\n| TERMINAL\
+    \  |\n\n| --- |\n\n| $ cd badge  |\n\nDownload the image that you will use as\
+    \ a badge from the internet. You can also copy and paste an existing image in\
+    \ this folder. \n\n| TERMINAL  |\n\n| --- |\n\n| curl https://planouhost.z15.web.core.windows.net/badge.png\
+    \ > badge-image.png  |\n\nAdding the badge to your local IPFS Initialize your\
+    \ local IPFS node \n\n| TERMINAL  |\n\n| --- |\n\n| $ ipfs daemon  |"
+  fmt: "\nawait `erc20FixedSupply.deployed()`;\n\nreturn `assert.isTrue(true)`;\n\n\
+    });\n\nit(\"should return total supply of 1000\", async function () {\n\nconst\
+    \ `instance = await erc20FixedSupply.deployed()`;\n\nconst `totalSupply = await\
+    \ instance.totalSupply()`;\n\n`assert.equal(totalSupply, 1000)`;\n\n});\n\n});\n\
+    \nTest using the following command.\n\n| TERMINAL |\n\n| --- |\n\n| `$ truffle\
+    \ test --network development` |\n\nThe test will pass. Writing test asserting\
+    \ for the contract balance Add one more test to assert that the balance is correct\
+    \ after a new transfer is made between two accounts.\n\n| ERC20FixedSupply.js\
+    \ |\n\n| --- |\n\n| 16 17 18 19 20 21 22 23 24 25 |\n\n```javascript\nit(\"should\
+    \ transfer 150 FIX\", async function(){\n    const instance = await erc20FixedSupply.deployed();\n\
+    \    await instance.transfer(\"account[1]\", 150);\n    const balanceAccount0\
+    \ = await instance.balanceOf(accounts[0]);\n    const balanceAccount1 = await\
+    \ instance.balanceOf(accounts[1]);\n    assert.equal(balanceAccount0.toNumber(),\
+    \ 850);\n    assert.equal(balanceAccount1.toNumber(), 150);\n});\n```\n\nExecute\
+    \ the test again.\n\n| TERMINAL |\n\n| --- |\n\n| `$ truffle test --network development`\
+    \ |\n\nAll tests will pass. ![](Image00015.jpg)Try to change some values like\
+    \ the account balance at line 23 and 24 and see how the results change from pass\
+    \ to fail.\n\n## ERC721- Non-Fungible Tokens\n\n### Create your art NFT using\
+    \ Ganache and OpenZeppelin\n\nAn NFT is a digital asset that represents real-world\
+    \ objects like art, music, in-game items and videos. In this video I'll show you\
+    \ how to create a NFT ERC 721 and deploy it to ethereum testnet network as well\
+    \ as how to add it to your metamask mobile wallet. [https://eips.ethereum.org/EIPS/eip-721](https://eips.ethereum.org/EIPS/eip-721)\
+    \ [View on YouTube](https://www.google.com/url?q=https://youtu.be/IFpU4TNwXec&sa=D&source=editors&ust=1624824293420000&usg=AOvVaw0LAiWMu-EocDqEhypxlgiG)\n\
+    \n| ESTIMATED TIME | 15 minutes |\n\n| --- | --- |\n\n| PRE REQUIREMENTS |\n\n\
+    | --- |\n\n| [Install Truffle](#text00005.html#a2X3) |\n\n| [Create an Account\
+    \ on Infura.io](#text00009.html#a2XG) |\n\n| [Get Test Ether From Faucet on Rinkeby\
+    \ Network](#text00021.html#toc87_Get_Test_Ether_From_Faucet_on_Rinkeby_Testnet)\
+    \ |\n\n| [Install and Setup MetaMask Wallet](#text00008.html#toc20_MetaMask) |\n\
+    \n| COMMAND OVERVIEW |\n\n| --- |\n\n| `truffle init` |\n\n| Initialize new and\
+    \ empty Ethereum project |\n\n| `npm install` |\n\n| This command installs a package\
+    \ and any packages that it depends on |\n\n| `ipfs daemon` |\n\n| Start IPFS local\
+    \ server on 127.0.0.1:5001 |\n\n| `ipfs add <file>` |\n\n| Add file to your IPFS\
+    \ local node |\n\n| `ipfs pin remote add --service=pinata -name=<file> <hash>`\
+    \ |\n\n| Pin your file to the remote IPFS pinning service |\n\n| `truffle compile`\
+    \ |\n\n| Compile contract source file |\n\n| `truffle migrate` |\n\n| Run migrations\
+    \ to deploy contracts |\n\n| `truffle console` |\n\n| A basic interactive console\
+    \ connecting to an Ethereum client |\n\n### Creating the project\n\nCreate a new\
+    \ project using truffle\n\n| TERMINAL |\n\n| --- |\n\n| `$ truffle init` |\n\n\
+    ### Install open zeppelin contracts\n\n| TERMINAL |\n\n| --- |\n\n| `$ npm install\
+    \ @openzeppelin/contracts` |\n\n### Create a new solidity smart contract\n\n|\
+    \ TERMINAL |\n\n| --- |\n\n| `$ touch contracts/UniqueAsset.sol` |\n\nOpen the\
+    \ file Import ERC721 URI Storage extension Import Counters util Create a new class\
+    \ extending ERC721URIStorage Declare counters Declare the constructor passing\
+    \ the coin name and the code Create a new method for award item Inside the new\
+    \ method, increment the token Get the new token number Mint a new item Set the\
+    \ token URI\n\n| UniqueAsset.sol | [View on GitHub](https://www.google.com/url?q=https://github.com/davibauer/blockchain/blob/master/nft/contracts/UniqueAsset.sol&sa=D&source=editors&ust=1624824293441000&usg=AOvVaw0kQm6OCdMH2KrrQpUMgQxn)\
+    \ |\n\n| --- | --- |\n\n| 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21\
+    \ 22 23 |\n\n```solidity\n// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\
+    \nimport \"@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol\"\
+    ;\nimport \"@openzeppelin/contracts/utils/Counters.sol\";\n\ncontract UniqueAsset\
+    \ is ERC721URIStorage {\n    using Counters for Counters.Counter;\n    Counters.Counter\
+    \ private _tokenIds;\n\n    constructor() ERC721(\"UniqueAsset\", \"UNA\") {}\n\
+    \n    function awardItem(address recipient, string memory metadata) public returns\
+    \ (uint256) {\n        _tokenIds.increment();\n        uint256 newItemId = _tokenIds.current();\n\
+    \        _mint(recipient, newItemId);\n        _setTokenURI(newItemId, metadata);\n\
+    \        return newItemId;\n    }\n}\n```\n\n### Create a new migration file\n\
+    \n| TERMINAL |\n\n| --- |\n\n| `$ touch migrations/2_deploy_contracts.js` |\n\n\
+    ### Export the smart contract in the migration file\n\n| 2_deploy_contracts.js\
+    \ | [View on GitHub](https://www.google.com/url?q=https://github.com/davibauer/blockchain/blob/master/nft/migrations/2_deploy_contracts.js&sa=D&source=editors&ust=1624824293449000&usg=AOvVaw10o1zZ2Ri74tBsK1M4YoGF)\
+    \ |\n\n| --- | --- |\n\n| 1 2 3 4 5 |\n\n```javascript\nconst UniqueAsset = artifacts.require(\"\
+    UniqueAsset\");\n\nmodule.exports = function(deployer) {\n    deployer.deploy(UniqueAsset);\n\
+    }\n```\n\n### Configuring the wallet\n\nInstall the file system “fs” package\n\
+    \n| TERMINAL |\n\n| --- |\n\n| `$ npm install fs` |\n\nInstall the wallet provider\
+    \ “hdwallet” package\n\n| TERMINAL |\n\n| --- |\n\n| `$ npm install @truffle/hdwallet-provider@1.2.3`\
+    \ |\n\nOpen `truffle-config.js` file Uncomment the HDWalletProvider code section\n\
+    \n| truffle-config.js |\n\n| --- |\n\n| 21 22 23 24 25 |\n\n```javascript\nconst\
+    \ HDWalletProvider = require('@truffle/hdwallet-provider');\nconst infuraKey =\
+    \ 'fj4jll3k.....';\nconst fs = require('fs');\nconst mnemonic = fs.readFileSync(\"\
+    .secret\").toString().trim();\n```\n\nPaste your Infura project id as a value\
+    \ for the variable `infuraKey` Configuring the network Uncomment the “ropsten”\
+    \ network section Change “ropsten” to “rinkeby” Change “ropsten” infura url to\
+    \ “rinkeby” Change “YOU-PROJECT-ID” to “${infuraKey}” Change the network_id to\
+    \ 42\n\n| truffle-config.js |\n\n| --- |\n\n| 60 61 62 63 64 65 66 67 |\n\n```javascript\n\
+    rinkeby: {\n    provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),\n\
+    \    network_id: 4,\n    gas: 5500000,\n    confirmations: 2,\n    timeoutBlocks:\
+    \ 200,\n    skipDryRun: true\n},\n```\n\nConfiguring the solidity compiler Uncomment\
+    \ the “compilers” section Change version to “0.8.0”\n\n| truffle-config.js |\n\
+    \n| --- |\n\n| 93 94 95 96 97 98 99 100 101 102 103 104 105 |\n\n```javascript\n\
+    compilers: {\n    solc: {\n        version: \"0.8.0\",\n        docker: true,\n\
+    \        settings: {\n            optimizer: {\n                enabled: false,\n\
+    \                runs: 200\n            },\n            evmVersion: \"byzantinum\"\
+    \n        }\n    }\n},\n```\n\n### Configuring the private key\n\nCreate the secret\
+    \ file\n\n| TERMINAL |\n\n| --- |\n\n| `$ touch .secret` |\n\nGo to the browser\
+    \ and open your MetaMask wallet connected to infura network Click on your account\
+    \ Click on \"settings\" Click on \"security & privacy\" ![](Image00016.jpg)Click\
+    \ on \"reveal seed phrase\" Enter your wallet password to continue Copy the private\
+    \ key Paste the wallet mnemonic secret Creating the badge image Create the badge\
+    \ folder\n\n| TERMINAL |\n\n| --- |\n\n| `$ mkdir badge` |\n\nGo to the badge\
+    \ root folder\n\n| TERMINAL |\n\n| --- |\n\n| `$ cd badge` |\n\nDownload the image\
+    \ that you will use as a badge from the internet. You can also copy and paste\
+    \ an existing image in this folder.\n\n| TERMINAL |\n\n| --- |\n\n| `curl https://planouhost.z15.web.core.windows.net/badge.png\
+    \ > badge-image.png` |\n\nAdding the badge to your local IPFS Initialize your\
+    \ local IPFS node\n\n| TERMINAL |\n\n| --- |\n\n| `$ ipfs daemon` |\n"
+  trans: "\n\nawait `erc20FixedSupply.deployed()`;\n\nreturn `assert.isTrue(true)`;\n\
+    \n});\n\nit(\"should return total supply of 1000\", async function () {\n\nconst\
+    \ `instance = await erc20FixedSupply.deployed()`;\n\nconst `totalSupply = await\
+    \ instance.totalSupply()`;\n\n`assert.equal(totalSupply, 1000)`;\n\n});\n\n});\n\
+    \n使用以下命令进行测试。\n\n| TERMINAL |\n\n| --- |\n\n| `$ truffle test --network development`\
+    \ |\n\n测试将会通过。编写断言以验证合约余额。添加一个测试，以断言在两个账户之间进行新转账后余额正确。\n\n| ERC20FixedSupply.js\
+    \ |\n\n| --- |\n\n| 16 17 18 19 20 21 22 23 24 25 |\n\n```javascript\nit(\"should\
+    \ transfer 150 FIX\", async function(){\n    const instance = await erc20FixedSupply.deployed();\n\
+    \    await instance.transfer(\"account[1]\", 150);\n    const balanceAccount0\
+    \ = await instance.balanceOf(accounts[0]);\n    const balanceAccount1 = await\
+    \ instance.balanceOf(accounts[1]);\n    assert.equal(balanceAccount0.toNumber(),\
+    \ 850);\n    assert.equal(balanceAccount1.toNumber(), 150);\n});\n```\n\n再次执行测试。\n\
+    \n| TERMINAL |\n\n| --- |\n\n| `$ truffle test --network development` |\n\n所有测试将会通过。\
+    \ ![](img/Image00015.jpg)尝试更改一些值，例如第 23 行和第 24 行的账户余额，观察结果如何从通过变为失败。\n\n## ERC721-\
+    \ 非同质化代币\n\n### 使用 Ganache 和 OpenZeppelin 创建您的艺术 NFT\n\nNFT 是一种代表现实世界对象（如艺术品、音乐、游戏内物品和视频）的数字资产。在这个视频中，我将向您展示如何创建一个\
+    \ ERC 721 NFT 并将其部署到以太坊测试网络，以及如何将其添加到您的 MetaMask 移动钱包中。 [`eips.ethereum.org/EIPS/eip-721`](https://eips.ethereum.org/EIPS/eip-721)\
+    \ [在 YouTube 上观看](https://www.google.com/url?q=https://youtu.be/IFpU4TNwXec&sa=D&source=editors&ust=1624824293420000&usg=AOvVaw0LAiWMu-EocDqEhypxlgiG)\n\
+    \n| 预计时间 | 15 分钟 |\n\n| --- | --- |\n\n| 前置要求 |\n\n| --- |\n\n| 安装 Truffle |\n\
+    \n| 在 Infura.io 上创建账户 |\n\n| 从 Rinkeby 网络水龙头获取测试以太币 |\n\n| 安装并设置 MetaMask 钱包 |\n\
+    \n| 命令概览 |\n\n| --- |\n\n| `truffle init` |\n\n| 初始化新的空白以太坊项目 |\n\n| `npm install`\
+    \ |\n\n| 此命令安装一个包及其依赖的任何包 |\n\n| `ipfs daemon` |\n\n| 在 127.0.0.1:5001 上启动 IPFS\
+    \ 本地服务器 |\n\n| `ipfs add <file>` |\n\n| 将文件添加到您的 IPFS 本地节点 |\n\n| `ipfs pin remote\
+    \ add --service=pinata -name=<file> <hash>` |\n\n| 将您的文件固定到远程 IPFS 固定服务 |\n\n\
+    | `truffle compile` |\n\n| 编译合约源文件 |\n\n| `truffle migrate` |\n\n| 运行迁移以部署合约 |\n\
+    \n| `truffle console` |\n\n| 连接到以太坊客户端的基本交互式控制台 |\n\n### 创建项目\n\n使用 truffle 创建新项目\n\
+    \n| TERMINAL |\n\n| --- |\n\n| `$ truffle init` |\n\n### 安装 OpenZeppelin 合约\n\n\
+    | TERMINAL |\n\n| --- |\n\n| `$ npm install @openzeppelin/contracts` |\n\n###\
+    \ 创建新的 Solidity 智能合约\n\n| TERMINAL |\n\n| --- |\n\n| `$ touch contracts/UniqueAsset.sol`\
+    \ |\n\n打开文件 导入 ERC721 URI 存储扩展 导入 Counters 工具 创建扩展 ERC721URIStorage 的新类 声明计数器\
+    \ 声明传递代币名称和代码的构造函数 创建新的奖励物品方法 在新方法中，递增代币 获取新代币编号 铸造新物品 设置代币 URI\n\n| UniqueAsset.sol\
+    \ | [在 GitHub 上查看](https://www.google.com/url?q=https://github.com/davibauer/blockchain/blob/master/nft/contracts/UniqueAsset.sol&sa=D&source=editors&ust=1624824293441000&usg=AOvVaw0kQm6OCdMH2KrrQpUMgQxn)\
+    \ |\n\n| --- | --- |\n\n| 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21\
+    \ 22 23 |\n\n```solidity\n// SPDX-License-Identifier: MIT\n\npragma solidity ⁰.8.0;\n\
+    \nimport \"@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol\"\
+    ;\nimport \"@openzeppelin/contracts/utils/Counters.sol\";\n\ncontract UniqueAsset\
+    \ is ERC721URIStorage {\n    using Counters for Counters.Counter;\n    Counters.Counter\
+    \ private _tokenIds;\n\n    constructor() ERC721(\"UniqueAsset\", \"UNA\") {}\n\
+    \n    function awardItem(address recipient, string memory metadata) public returns\
+    \ (uint256) {\n        _tokenIds.increment();\n        uint256 newItemId = _tokenIds.current();\n\
+    \        _mint(recipient, newItemId);\n        _setTokenURI(newItemId, metadata);\n\
+    \        return newItemId;\n    }\n}\n```\n\n### 创建新的迁移文件\n\n| TERMINAL |\n\n\
+    | --- |\n\n| `$ touch migrations/2_deploy_contracts.js` |\n\n### 在迁移文件中导出智能合约\n\
+    \n| 2_deploy_contracts.js | [在 GitHub 上查看](https://www.google.com/url?q=https://github.com/davibauer/blockchain/blob/master/nft/migrations/2_deploy_contracts.js&sa=D&source=editors&ust=1624824293449000&usg=AOvVaw10o1zZ2Ri74tBsK1M4YoGF)\
+    \ |\n\n| --- | --- |\n\n| 1 2 3 4 5 |\n\n```javascript\nconst UniqueAsset = artifacts.require(\"\
+    UniqueAsset\");\n\nmodule.exports = function(deployer) {\n    deployer.deploy(UniqueAsset);\n\
+    }\n```\n\n### 配置钱包\n\n安装文件系统 \"fs\" 包\n\n| TERMINAL |\n\n| --- |\n\n| `$ npm install\
+    \ fs` |\n\n安装钱包提供程序 \"hdwallet\" 包\n\n| TERMINAL |\n\n| --- |\n\n| `$ npm install\
+    \ @truffle/hdwallet-provider@1.2.3` |\n\n打开 `truffle-config.js` 文件 取消注释 HDWalletProvider\
+    \ 代码部分\n\n| truffle-config.js |\n\n| --- |\n\n| 21 22 23 24 25 |\n\n```javascript\n\
+    const HDWalletProvider = require('@truffle/hdwallet-provider');\nconst infuraKey\
+    \ = 'fj4jll3k.....';\nconst fs = require('fs');\nconst mnemonic = fs.readFileSync(\"\
+    .secret\").toString().trim();\n```\n\n将您的 Infura 项目 ID 作为变量 `infuraKey` 的值粘贴 配置网络\
+    \ 取消注释 \"ropsten\" 网络部分 将 \"ropsten\" 更改为 \"rinkeby\" 将 \"ropsten\" Infura URL\
+    \ 更改为 \"rinkeby\" 将 \"YOU-PROJECT-ID\" 更改为 \"${infuraKey}\" 将 network_id 更改为 42\n\
+    \n| truffle-config.js |\n\n| --- |\n\n| 60 61 62 63 64 65 66 67 |\n\n```javascript\n\
+    rinkeby: {\n    provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),\n\
+    \    network_id: 4,\n    gas: 5500000,\n    confirmations: 2,\n    timeoutBlocks:\
+    \ 200,\n    skipDryRun: true\n},\n```\n\n配置 Solidity 编译器 取消注释 \"compilers\" 部分\
+    \ 将版本更改为 \"0.8.0\"\n\n| truffle-config.js |\n\n| --- |\n\n| 93 94 95 96 97 98\
+    \ 99 100 101 102 103 104 105 |\n\n```javascript\ncompilers: {\n    solc: {\n \
+    \       version: \"0.8.0\",\n        docker: true,\n        settings: {\n    \
+    \        optimizer: {\n                enabled: false,\n                runs:\
+    \ 200\n            },\n            evmVersion: \"byzantinum\"\n        }\n   \
+    \ }\n},\n```\n\n### 配置私钥\n\n创建密钥文件\n\n| TERMINAL |\n\n| --- |\n\n| `$ touch .secret`\
+    \ |\n\n转到浏览器并打开连接到 Infura 网络的 MetaMask 钱包 点击您的账户 点击 \"设置\" 点击 \"安全与隐私\" ![](img/Image00016.jpg)点击\
+    \ \"显示助记词\" 输入钱包密码以继续 复制私钥 粘贴钱包助记词密钥 创建徽章图片 创建徽章文件夹\n\n| TERMINAL |\n\n| --- |\n\
+    \n| `$ mkdir badge` |\n\n转到徽章根文件夹\n\n| TERMINAL |\n\n| --- |\n\n| `$ cd badge`\
+    \ |\n\n从互联网下载将用作徽章的图片。您也可以将现有图片复制粘贴到此文件夹中。\n\n| TERMINAL |\n\n| --- |\n\n| `curl\
+    \ https://planouhost.z15.web.core.windows.net/badge.png > badge-image.png` |\n\
+    \n将徽章添加到您的本地 IPFS 初始化您的本地 IPFS 节点\n\n| TERMINAL |\n\n| --- |\n\n| `$ ipfs daemon`\
+    \ |\n\n"
+  toc: []
+- raw: "Add your badge image to IPFS \n\n| TERMINAL  |\n\n| --- |\n\n| $ ipfs add\
+    \ badge-image.png  |\n\nRunning this command, you will receive a hash. This hash\
+    \ is your image address in IPFS. ![](Image00017.jpg)Pinning the badge to a remote\
+    \ IPFS node Pin your badge using a remote IPFS service. \n\n| TERMINAL  |\n\n\
+    | --- |\n\n| ipfs pin remote add --service=pinata --name=badge-image.png QmZPxKJWqJTdudyaZUyf6uBzwwAT41QQyxhTHmMZWB9yx4\
+    \  |\n\nYou will get a response indicating the file was pinned successfully ![](Image00018.jpg)Creating\
+    \ the badge metadata Create the badge metadata json file \n\n| TERMINAL  |\n\n\
+    | --- |\n\n| touch badge-metadata.json  |\n\nOpen the file Set the badge name\
+    \ Set the badge description Set the badge image address using a IPFS gateway \n\
+    \n| badge-metadata.json  |\n\n| --- |\n\n| 1 2 3 4 5  || {  \n\n     \"name\"\
+    \ : \"My badge\" ,  \n\n     \"description\" : \"My badge description\" ,  \n\n\
+         \"image\" : \"https://ipfs.io/ipfs/QmZPxKJWqJTdudyaZUyf6uBzwwAT41QQyxhTHmMZWB9yx4\"\
+    \   \n\n}  |\n\nAdd your badge metadata to IPFS \n\n| TERMINAL  |\n\n| --- |\n\
+    \n| $ ipfs add badge-metadata.json  |\n\nPin your badge metadata using a remote\
+    \ IPFS service \n\n| TERMINAL  |\n\n| --- |\n\n| $ ipfs pin remote add --service=pinata\
+    \ --name=badge-metadata.json QmRzcwAtLWbeYqyaZUyf6uBzwwAT41QQyxhTHmMZWBfUTa  |\n\
+    \nCompiling the smart contract Compile the contract using truffle \n\n| TERMINAL\
+    \  |\n\n| --- |\n\n| $ truffle compile  |\n\nMigrating the smart contract Migrate\
+    \ the contract to rinkeby network using truffle \n\n| TERMINAL  |\n\n| --- |\n\
+    \n| $ truffle migrate --network rinkeby  |\n\nInstantiate the smart contract Instantiate\
+    \ the contract using using truffle console \n\n| TERMINAL  |\n\n| --- |\n\n| $\
+    \ truffle console --network rinkeby truffle(rinkeby) let instance = await UniqueAsset.deployed()\
+    \  |\n\nAwarding badge to a wallet Call the method “getThePrice” Enter your public\
+    \ ethereum address as a first parameter Enter the IPFS address corresponding your\
+    \ badge metadata \n\n| TERMINAL  |\n\n| --- |\n\n| truffle(rinkeby) let result\
+    \ = await instance.awardItem(\"0x62761466bB3A3Da83B408B5F5fE00ac7b2a5A996\",\"\
+    https://ipfs.io/ipfs/QmRzcwAtLWBeYqUx3ba1BkYKubSDLNTHCuiUB7WAmdfUTa\")  |\n\n\
+    Checking badge on Etherscan Copy the deployed contract address ![](Image00019.jpg)Go\
+    \ to [rinkeby.etherscan.io](https://www.google.com/url?q=https://rinkeby.etherscan.io/&sa=D&source=editors&ust=1624824293484000&usg=AOvVaw2X6oFOKB_p-6n7749VXd0B)\
+    \ Paste the contract address in the search bar ![](Image00020.jpg)Click on search\
+    \ icon Now you can see that the contract was deployed successfully ![](Image00021.jpg)You\
+    \ can also realize that the last transaction made was for award a new item Adding\
+    \ the NFT token to your wallet Open your MetaMask wallet on your mobile phone\
+    \ (collectibles are only available on mobile version) Click on “collectibles”\
+    \ ![](Image00022.jpg)Click on \"add collectible\" Paste the token contract address\
+    \ here (the same that you copied in the last section) Enter the token ID, as it\
+    \ is the first token you will enter 1 here Click on \"add\" Wait for a few seconds\
+    \ Now the NFT token was added! ![](Image00023.jpg)Click on “UniqueAsset” Now you\
+    \ can see all the badges that you earn ![](Image00024.jpg)Click on “My Badge”\
+    \ You can see the badge details now! Also, you have a send button so that you\
+    \ can send it to another wallet ![](Image00025.jpg)That’s it, you just created\
+    \ your first NFT token! \n\nEther Faucets Get Test Ether From Faucet on Ropsten\
+    \ Network This ethereum test faucet drips 1 ether every 5 seconds. You can use\
+    \ it to test smart contracts on the Ropsten network with no need to use real ether\
+    \ for this purpose (even because eth from the mainnet is not valid in ropsten\
+    \ and vice versa). You have a request limit of 1 eth for every 24 hours in order\
+    \ to avoid network spam. Ether in a test network has no real value except for\
+    \ testing purposes in smart contracts development. [https://faucet.ropsten.be](https://www.google.com/url?q=https://faucet.ropsten.be&sa=D&source=editors&ust=1624824293488000&usg=AOvVaw39Zbse6NzzonrzBxkJmjX_)\
+    \ [View on YouTube](https://www.google.com/url?q=https://youtu.be/rSL3kP13gOI&sa=D&source=editors&ust=1624824293489000&usg=AOvVaw1VYd0meZ7Ibg4mR-22rteP)\
+    \ \n\n| ESTIMATED TIME  || 2 minutes  |\n\n| --- | --- |\n\n| PRE REQUIREMENTS\
+    \  |\n\n| --- |\n\n| [Install and Setup MetaMask Wallet](#text00008.html#toc20_MetaMask)\
+    \  |\n\nAccessing the faucet Go to [https://faucet.ropsten.be](https://www.google.com/url?q=https://faucet.ropsten.be&sa=D&source=editors&ust=1624824293492000&usg=AOvVaw0g-iC5yFF7nOgZhKww_POb)\
+    \ Copy your wallet address (make sure the network selected is Ropsten) Paste your\
+    \ contract address in the form field Click on \"send me test ether\" Waiting for\
+    \ the transaction Click on the \"transaction hash\" (open in a new window) Wait\
+    \ for the transaction be completed The transaction was successfully completed\
+    \ Go to your MetaMask wallet, you have now 1 ether! \n\nGet Test Ether From Faucet\
+    \ on Rinkeby  Testnet This Ether faucet is running on the Rinkeby network. To\
+    \ prevent malicious actors from exhausting all available funds or accumulating\
+    \ enough Ether to mount long running spam attacks, requests are tied to common\
+    \ 3rd party social network accounts. Anyone having a Twitter or Facebook account\
+    \ may request funds within the permitted limits. [https://faucet.rinkeby.io](https://www.google.com/url?q=https://faucet.rinkeby.io&sa=D&source=editors&ust=1624824293493000&usg=AOvVaw35VO63U2Ccimtq0olysaU4)\
+    \ [View on YouTube](https://www.google.com/url?q=https://youtu.be/iJBpiBqEMtA&sa=D&source=editors&ust=1624824293494000&usg=AOvVaw18LCPDv2bcqiYJTsoSKFO_)\
+    \ \n\n| ESTIMATED TIME  || 2 minutes  |\n\n| --- | --- |\n\nPreparing for funding\
+    \ Open your Metamask wallet Copy you wallet address to clipboard Go to your twitter\
+    \ account Paste your wallet address Click on your tweet Copy your tweet address\
+    \ (the url in the address bar) Funding your wallet Go to [https://faucet.rinkeby.io](https://www.google.com/url?q=https://faucet.rinkeby.io&sa=D&source=editors&ust=1624824293496000&usg=AOvVaw1OGB41VLbzKTklNDl_FAnP)\
+    \ Paste your tweet address in the text field Click on “Give me Ether” Select on\
+    \ of the options available (for example: 3 Ethers / 8 hours) The request will\
+    \ be funding in a few seconds ![](Image00026.jpg)Checking your wallet Wait a few\
+    \ moments and check your Metamask wallet You will get 3 ether in your wallet account!\
+    \ \n\nIPFS - InterPlanetary File System Create Your IPFS Node The InterPlanetary\
+    \ File System (IPFS) is a protocol and peer-to-peer network for storing and sharing\
+    \ data in a distributed file system. IPFS uses content-addressing to uniquely\
+    \ identify each file in a global namespace connecting all computing devices. [https://ipfs.io](https://www.google.com/url?q=https://ipfs.io&sa=D&source=editors&ust=1624824293497000&usg=AOvVaw3fUJS9jf6wVMTjDheE9ywi)\
+    \ [View on YouTube](https://www.google.com/url?q=https://youtu.be/dFWpGn73BBM&sa=D&source=editors&ust=1624824293497000&usg=AOvVaw04WtS08v6b6m1gv56Z6Lqt)\
+    \ \n\n| ESTIMATED TIME  || 3 minutes  |\n\n| --- | --- |\n\n| COMMAND OVERVIEW\
+    \  |\n\n| --- |\n\n| choco install go-ipfs  |\n\n| Install the IPFS implementation\
+    \ in go.  |\n\n| ipfs init  |\n\n| Initialize the local IPFS repository.  |\n\n\
+    | ipfs daemon  |\n\n| Start IPFS local server on 127.0.0.1:5001.  |\n\n| ipfs\
+    \ cat <hash>  |\n\n| View IPFS file content.  |\n\n| ipfs swarm peers  |\n\n|\
+    \ Show the peers who are directly connected to your node.  |\n\nInstalling the\
+    \ node VS CODE - BASH TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| $ choco install\
+    \ go-ipfs  |\n\nConfiguring the node VS CODE - BASH TERMINAL \n\n| TERMINAL  |\n\
+    \n| --- |\n\n| $ ipfs init  \n\n$ ipfs daemon  |\n\nTesting the node VS CODE -\
+    \ BASH TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| $ ipfs cat \"hash\"   \n\n$\
+    \ ipfs swarm peers  |\n\n![](Image00027.jpg)Exploring your IPFS node Copy the\
+    \ WebUI link Go to browser and paste the link Your node is connected to IPFS!\
+    \ Click on \"files\", no files here yet! Click on \"explore\" Click on \"peers\"\
+    \ This are the peers that you are connected Click on \"settings\" You can see\
+    \ your node settings here "
+  fmt: "\n# Add Your Badge Image to IPFS\n\nAdd your badge image to IPFS.\n\n```bash\n\
+    $ ipfs add badge-image.png\n```\n\nRunning this command, you will receive a hash.\
+    \ This hash is your image address in IPFS. ![](Image00017.jpg)\n\n## Pinning the\
+    \ Badge to a Remote IPFS Node\n\nPin your badge using a remote IPFS service.\n\
+    \n```bash\nipfs pin remote add --service=pinata --name=badge-image.png QmZPxKJWqJTdudyaZUyf6uBzwwAT41QQyxhTHmMZWB9yx4\n\
+    ```\n\nYou will get a response indicating the file was pinned successfully ![](Image00018.jpg)\n\
+    \n## Creating the Badge Metadata\n\nCreate the badge metadata json file.\n\n```bash\n\
+    touch badge-metadata.json\n```\n\nOpen the file. Set the badge name. Set the badge\
+    \ description. Set the badge image address using an IPFS gateway.\n\n```json\n\
+    {\n  \"name\": \"My badge\",\n  \"description\": \"My badge description\",\n \
+    \ \"image\": \"https://ipfs.io/ipfs/QmZPxKJWqJTdudyaZUyf6uBzwwAT41QQyxhTHmMZWB9yx4\"\
+    \n}\n```\n\n## Add Your Badge Metadata to IPFS\n\n```bash\n$ ipfs add badge-metadata.json\n\
+    ```\n\nPin your badge metadata using a remote IPFS service.\n\n```bash\n$ ipfs\
+    \ pin remote add --service=pinata --name=badge-metadata.json QmRzcwAtLWbeYqyaZUyf6uBzwwAT41QQyxhTHmMZWBfUTa\n\
+    ```\n\n# Compiling the Smart Contract\n\nCompile the contract using `truffle`.\n\
+    \n```bash\n$ truffle compile\n```\n\n# Migrating the Smart Contract\n\nMigrate\
+    \ the contract to rinkeby network using `truffle`.\n\n```bash\n$ truffle migrate\
+    \ --network rinkeby\n```\n\n# Instantiating the Smart Contract\n\nInstantiate\
+    \ the contract using `truffle console`.\n\n```bash\n$ truffle console --network\
+    \ rinkeby\ntruffle(rinkeby) let instance = await UniqueAsset.deployed()\n```\n\
+    \n# Awarding Badge to a Wallet\n\nCall the method `getThePrice`. Enter your public\
+    \ ethereum address as a first parameter. Enter the IPFS address corresponding\
+    \ your badge metadata.\n\n```bash\ntruffle(rinkeby) let result = await instance.awardItem(\"\
+    0x62761466bB3A3Da83B408B5F5fE00ac7b2a5A996\",\"https://ipfs.io/ipfs/QmRzcwAtLWBeYqUx3ba1BkYKubSDLNTHCuiUB7WAmdfUTa\"\
+    )\n```\n\n# Checking Badge on Etherscan\n\nCopy the deployed contract address\
+    \ ![](Image00019.jpg)\n\nGo to [rinkeby.etherscan.io](https://www.google.com/url?q=https://rinkeby.etherscan.io/&sa=D&source=editors&ust=1624824293484000&usg=AOvVaw2X6oFOKB_p-6n7749VXd0B).\
+    \ Paste the contract address in the search bar ![](Image00020.jpg). Click on search\
+    \ icon. Now you can see that the contract was deployed successfully ![](Image00021.jpg).\
+    \ You can also realize that the last transaction made was for award a new item.\n\
+    \n# Adding the NFT Token to Your Wallet\n\nOpen your MetaMask wallet on your mobile\
+    \ phone (collectibles are only available on mobile version). Click on “collectibles”\
+    \ ![](Image00022.jpg). Click on \"add collectible\". Paste the token contract\
+    \ address here (the same that you copied in the last section). Enter the token\
+    \ ID, as it is the first token you will enter 1 here. Click on \"add\". Wait for\
+    \ a few seconds. Now the NFT token was added! ![](Image00023.jpg). Click on “UniqueAsset”.\
+    \ Now you can see all the badges that you earn ![](Image00024.jpg). Click on “My\
+    \ Badge”. You can see the badge details now! Also, you have a send button so that\
+    \ you can send it to another wallet ![](Image00025.jpg). That’s it, you just created\
+    \ your first NFT token!\n\n# Ether Faucets\n\n## Get Test Ether From Faucet on\
+    \ Ropsten Network\n\nThis ethereum test faucet drips 1 ether every 5 seconds.\
+    \ You can use it to test smart contracts on the Ropsten network with no need to\
+    \ use real ether for this purpose (even because eth from the mainnet is not valid\
+    \ in ropsten and vice versa). You have a request limit of 1 eth for every 24 hours\
+    \ in order to avoid network spam. Ether in a test network has no real value except\
+    \ for testing purposes in smart contracts development.\n\n[https://faucet.ropsten.be](https://www.google.com/url?q=https://faucet.ropsten.be&sa=D&source=editors&ust=1624824293488000&usg=AOvVaw39Zbse6NzzonrzBxkJmjX_)\n\
+    \n[View on YouTube](https://www.google.com/url?q=https://youtu.be/rSL3kP13gOI&sa=D&source=editors&ust=1624824293489000&usg=AOvVaw1VYd0meZ7Ibg4mR-22rteP)\n\
+    \n| ESTIMATED TIME | 2 minutes |\n| --- | --- |\n\n| PRE REQUIREMENTS | |\n| ---\
+    \ | --- |\n\n| [Install and Setup MetaMask Wallet](#text00008.html#toc20_MetaMask)\
+    \ | |\n\n## Accessing the Faucet\n\nGo to [https://faucet.ropsten.be](https://www.google.com/url?q=https://faucet.ropsten.be&sa=D&source=editors&ust=1624824293492000&usg=AOvVaw0g-iC5yFF7nOgZhKww_POb).\
+    \ Copy your wallet address (make sure the network selected is Ropsten). Paste\
+    \ your contract address in the form field. Click on \"send me test ether\". Waiting\
+    \ for the transaction. Click on the \"transaction hash\" (open in a new window).\
+    \ Wait for the transaction be completed. The transaction was successfully completed.\
+    \ Go to your MetaMask wallet, you have now 1 ether!\n\n## Get Test Ether From\
+    \ Faucet on Rinkeby Testnet\n\nThis Ether faucet is running on the Rinkeby network.\
+    \ To prevent malicious actors from exhausting all available funds or accumulating\
+    \ enough Ether to mount long running spam attacks, requests are tied to common\
+    \ 3rd party social network accounts. Anyone having a Twitter or Facebook account\
+    \ may request funds within the permitted limits.\n\n[https://faucet.rinkeby.io](https://www.google.com/url?q=https://faucet.rinkeby.io&sa=D&source=editors&ust=1624824293493000&usg=AOvVaw35VO63U2Ccimtq0olysaU4)\n\
+    \n[View on YouTube](https://www.google.com/url?q=https://youtu.be/iJBpiBqEMtA&sa=D&source=editors&ust=1624824293494000&usg=AOvVaw18LCPDv2bcqiYJTsoSKFO_)\n\
+    \n| ESTIMATED TIME | 2 minutes |\n| --- | --- |\n\n## Preparing for Funding\n\n\
+    Open your Metamask wallet. Copy you wallet address to clipboard. Go to your twitter\
+    \ account. Paste your wallet address. Click on your tweet. Copy your tweet address\
+    \ (the url in the address bar).\n\n## Funding Your Wallet\n\nGo to [https://faucet.rinkeby.io](https://www.google.com/url?q=https://faucet.rinkeby.io&sa=D&source=editors&ust=1624824293496000&usg=AOvVaw1OGB41VLbzKTklNDl_FAnP).\
+    \ Paste your tweet address in the text field. Click on “Give me Ether”. Select\
+    \ on of the options available (for example: 3 Ethers / 8 hours). The request will\
+    \ be funding in a few seconds ![](Image00026.jpg).\n\n## Checking Your Wallet\n\
+    \nWait a few moments and check your Metamask wallet. You will get 3 ether in your\
+    \ wallet account!\n\n# IPFS - InterPlanetary File System\n\n## Create Your IPFS\
+    \ Node\n\nThe InterPlanetary File System (IPFS) is a protocol and peer-to-peer\
+    \ network for storing and sharing data in a distributed file system. IPFS uses\
+    \ content-addressing to uniquely identify each file in a global namespace connecting\
+    \ all computing devices.\n\n[https://ipfs.io](https://www.google.com/url?q=https://ipfs.io&sa=D&source=editors&ust=1624824293497000&usg=AOvVaw3fUJS9jf6wVMTjDheE9ywi)\n\
+    \n[View on YouTube](https://www.google.com/url?q=https://youtu.be/dFWpGn73BBM&sa=D&source=editors&ust=1624824293497000&usg=AOvVaw04WtS08v6b6m1gv56Z6Lqt)\n\
+    \n| ESTIMATED TIME | 3 minutes |\n| --- | --- |\n\n## Command Overview\n\n| Command\
+    \ | Description |\n| --- | --- |\n| `choco install go-ipfs` | Install the IPFS\
+    \ implementation in go. |\n| `ipfs init` | Initialize the local IPFS repository.\
+    \ |\n| `ipfs daemon` | Start IPFS local server on 127.0.0.1:5001. |\n| `ipfs cat\
+    \ <hash>` | View IPFS file content. |\n| `ipfs swarm peers` | Show the peers who\
+    \ are directly connected to your node. |\n\n## Installing the Node\n\nVS CODE\
+    \ - BASH TERMINAL\n\n```bash\n$ choco install go-ipfs\n```\n\n## Configuring the\
+    \ Node\n\nVS CODE - BASH TERMINAL\n\n```bash\n$ ipfs init\n$ ipfs daemon\n```\n\
+    \n## Testing the Node\n\nVS CODE - BASH TERMINAL\n\n```bash\n$ ipfs cat \"hash\"\
+    \n$ ipfs swarm peers\n```\n\n![](Image00027.jpg)\n\n## Exploring Your IPFS Node\n\
+    \nCopy the WebUI link. Go to browser and paste the link. Your node is connected\
+    \ to IPFS! Click on \"files\", no files here yet! Click on \"explore\". Click\
+    \ on \"peers\". This are the peers that you are connected. Click on \"settings\"\
+    . You can see your node settings here.\n"
+  trans: "\n\n# 将徽章图片添加到 IPFS\n\n将徽章图片添加到 IPFS。\n\n```bash\n$ ipfs add badge-image.png\n\
+    ```\n\n运行此命令，您将收到一个哈希值。该哈希值是您在 IPFS 中的图片地址。![](img/Image00017.jpg)\n\n## 将徽章固定到远程\
+    \ IPFS 节点\n\n使用远程 IPFS 服务固定您的徽章。\n\n```bash\nipfs pin remote add --service=pinata\
+    \ --name=badge-image.png QmZPxKJWqJTdudyaZUyf6uBzwwAT41QQyxhTHmMZWB9yx4\n```\n\
+    \n您将收到一条响应，指示文件已成功固定 ![](img/Image00018.jpg)\n\n## 创建徽章元数据\n\n创建徽章元数据 json 文件。\n\
+    \n```bash\ntouch badge-metadata.json\n```\n\n打开文件。设置徽章名称。设置徽章描述。使用 IPFS 网关设置徽章图片地址。\n\
+    \n```json\n{\n  \"name\": \"My badge\",\n  \"description\": \"My badge description\"\
+    ,\n  \"image\": \"https://ipfs.io/ipfs/QmZPxKJWqJTdudyaZUyf6uBzwwAT41QQyxhTHmMZWB9yx4\"\
+    \n}\n```\n\n## 将徽章元数据添加到 IPFS\n\n```bash\n$ ipfs add badge-metadata.json\n```\n\
+    \n使用远程 IPFS 服务固定您的徽章元数据。\n\n```bash\n$ ipfs pin remote add --service=pinata --name=badge-metadata.json\
+    \ QmRzcwAtLWbeYqyaZUyf6uBzwwAT41QQyxhTHmMZWBfUTa\n```\n\n# 编译智能合约\n\n使用 `truffle`\
+    \ 编译合约。\n\n```bash\n$ truffle compile\n```\n\n# 迁移智能合约\n\n使用 `truffle` 将合约迁移到\
+    \ rinkeby 网络。\n\n```bash\n$ truffle migrate --network rinkeby\n```\n\n# 实例化智能合约\n\
+    \n使用 `truffle console` 实例化合约。\n\n```bash\n$ truffle console --network rinkeby\n\
+    truffle(rinkeby) let instance = await UniqueAsset.deployed()\n```\n\n# 向钱包授予徽章\n\
+    \n调用方法 `getThePrice`。将您的公共以太坊地址作为第一个参数输入。输入与您的徽章元数据对应的 IPFS 地址。\n\n```bash\ntruffle(rinkeby)\
+    \ let result = await instance.awardItem(\"0x62761466bB3A3Da83B408B5F5fE00ac7b2a5A996\"\
+    ,\"https://ipfs.io/ipfs/QmRzcwAtLWBeYqUx3ba1BkYKubSDLNTHCuiUB7WAmdfUTa\")\n```\n\
+    \n# 在 Etherscan 上检查徽章\n\n复制已部署的合约地址 ![](img/Image00019.jpg)\n\n访问 [rinkeby.etherscan.io](https://www.google.com/url?q=https://rinkeby.etherscan.io/&sa=D&source=editors&ust=1624824293484000&usg=AOvVaw2X6oFOKB_p-6n7749VXd0B)。在搜索栏中粘贴合约地址\
+    \ ![](img/Image00020.jpg)。点击搜索图标。现在您可以看到合约已成功部署 ![](img/Image00021.jpg)。您还可以发现最后一笔交易是用于授予新项目。\n\
+    \n# 将 NFT 代币添加到您的钱包\n\n在手机上打开 MetaMask 钱包（收藏品仅在移动版上可用）。点击“收藏品” ![](img/Image00022.jpg)。点击“添加收藏品”。在此处粘贴代币合约地址（与您在上一节中复制的相同）。输入代币\
+    \ ID，因为这是您将输入的第一个代币，此处输入 1。点击“添加”。等待几秒钟。现在 NFT 代币已添加！![](img/Image00023.jpg)。点击“UniqueAsset”。现在您可以看到您获得的所有徽章\
+    \ ![](img/Image00024.jpg)。点击“我的徽章”。现在您可以看到徽章详细信息了！此外，您有一个发送按钮，可以将其发送到另一个钱包 ![](img/Image00025.jpg)。就这样，您刚刚创建了第一个\
+    \ NFT 代币！\n\n# Ether 水龙头\n\n## 从 Ropsten 网络上的水龙头获取测试以太币\n\n这个以太坊测试水龙头每 5 秒滴 1\
+    \ 个以太币。您可以使用它在 Ropsten 网络上测试智能合约，无需为此使用真实以太币（即使主网上的以太币在 ropsten 上无效，反之亦然）。您每 24\
+    \ 小时有 1 个以太币的请求限制，以避免网络垃圾邮件。测试网络上的以太币除了在智能合约开发中用于测试目的外，没有真实价值。\n\n[`faucet.ropsten.be`](https://www.google.com/url?q=https://faucet.ropsten.be&sa=D&source=editors&ust=1624824293488000&usg=AOvVaw39Zbse6NzzonrzBxkJmjX_)\n\
+    \n[在 YouTube 上观看](https://www.google.com/url?q=https://youtu.be/rSL3kP13gOI&sa=D&source=editors&ust=1624824293489000&usg=AOvVaw1VYd0meZ7Ibg4mR-22rteP)\n\
+    \n| 预计时间 | 2 分钟 |\n| --- | --- |\n\n| 前置要求 | |\n| --- | --- |\n\n| 安装和设置 MetaMask\
+    \ 钱包 | |\n\n## 访问水龙头\n\n访问 [`faucet.ropsten.be`](https://www.google.com/url?q=https://faucet.ropsten.be&sa=D&source=editors&ust=1624824293492000&usg=AOvVaw0g-iC5yFF7nOgZhKww_POb)。复制您的钱包地址（确保选择的网络是\
+    \ Ropsten）。将您的合约地址粘贴到表单字段中。点击“发送测试以太币给我”。等待交易。点击“交易哈希”（在新窗口中打开）。等待交易完成。交易已成功完成。访问您的\
+    \ MetaMask 钱包，您现在有 1 个以太币！\n\n## 从 Rinkeby 测试网上的水龙头获取测试以太币\n\n这个以太币水龙运行在 Rinkeby\
+    \ 网络上。为了防止恶意行为者耗尽所有可用资金或积累足够的以太币来发动长期运行的垃圾邮件攻击，请求与常见的第三方社交网络账户绑定。任何拥有 Twitter\
+    \ 或 Facebook 账户的人都可以在允许的限制内请求资金。\n\n[`faucet.rinkeby.io`](https://www.google.com/url?q=https://faucet.rinkeby.io&sa=D&source=editors&ust=1624824293493000&usg=AOvVaw35VO63U2Ccimtq0olysaU4)\n\
+    \n[在 YouTube 上观看](https://www.google.com/url?q=https://youtu.be/iJBpiBqEMtA&sa=D&source=editors&ust=1624824293494000&usg=AOvVaw18LCPDv2bcqiYJTsoSKFO_)\n\
+    \n| 预计时间 | 2 分钟 |\n| --- | --- |\n\n## 为资金做准备\n\n打开您的 Metamask 钱包。将您的钱包地址复制到剪贴板。访问您的\
+    \ Twitter 账户。粘贴您的钱包地址。点击您的推文。复制您的推文地址（地址栏中的 URL）。\n\n## 为您的钱包注资\n\n访问 [`faucet.rinkeby.io`](https://www.google.com/url?q=https://faucet.rinkeby.io&sa=D&source=editors&ust=1624824293496000&usg=AOvVaw1OGB41VLbzKTklNDl_FAnP)。将您的推文地址粘贴到文本字段中。点击“给我以太币”。选择一个可用的选项（例如：每\
+    \ 8 小时 3 个以太币）。请求将在几秒钟内注资 ![](img/Image00026.jpg)。\n\n## 检查您的钱包\n\n等待片刻并检查您的 Metamask\
+    \ 钱包。您的钱包账户中将收到 3 个以太币！\n\n# IPFS - 星际文件系统\n\n## 创建您的 IPFS 节点\n\n星际文件系统（IPFS）是一种协议和点对点网络，用于在分布式文件系统中存储和共享数据。IPFS\
+    \ 使用内容寻址来在连接所有计算设备的全局命名空间中唯一标识每个文件。\n\n[`ipfs.io`](https://www.google.com/url?q=https://ipfs.io&sa=D&source=editors&ust=1624824293497000&usg=AOvVaw3fUJS9jf6wVMTjDheE9ywi)\n\
+    \n[在 YouTube 上观看](https://www.google.com/url?q=https://youtu.be/dFWpGn73BBM&sa=D&source=editors&ust=1624824293497000&usg=AOvVaw04WtS08v6b6m1gv56Z6Lqt)\n\
+    \n| 预计时间 | 3 分钟 |\n| --- | --- |\n\n## 命令概览\n\n| 命令 | 描述 |\n| --- | --- |\n| `choco\
+    \ install go-ipfs` | 安装 Go 语言的 IPFS 实现。 |\n| `ipfs init` | 初始化本地 IPFS 仓库。 |\n\
+    | `ipfs daemon` | 在 127.0.0.1:5001 上启动 IPFS 本地服务器。 |\n| `ipfs cat <hash>` | 查看\
+    \ IPFS 文件内容。 |\n| `ipfs swarm peers` | 显示直接连接到您节点的对等节点。 |\n\n## 安装节点\n\nVS CODE\
+    \ - BASH 终端\n\n```bash\n$ choco install go-ipfs\n```\n\n## 配置节点\n\nVS CODE - BASH\
+    \ 终端\n\n```bash\n$ ipfs init\n$ ipfs daemon\n```\n\n## 测试节点\n\nVS CODE - BASH\
+    \ 终端\n\n```bash\n$ ipfs cat \"hash\"\n$ ipfs swarm peers\n```\n\n![](img/Image00027.jpg)\n\
+    \n## 探索您的 IPFS 节点\n\n复制 WebUI 链接。访问浏览器并粘贴链接。您的节点已连接到 IPFS！点击“文件”，这里暂时没有文件！点击“探索”。点击“对等节点”。这些是您已连接的对等节点。点击“设置”。您可以在此处查看节点设置。\n\
+    \n"
+  toc: []
+- raw: "Add Files to IPFS A computer running IPFS can ask all the peers it's connected\
+    \ to whether they have a file with a particular hash and, if one of them does,\
+    \ they send back the whole file. Without a short, unique identifier like a cryptographic\
+    \ hash, that wouldn't be possible. [https://ipfs.io](https://www.google.com/url?q=https://ipfs.io&sa=D&source=editors&ust=1624824293510000&usg=AOvVaw1baEc1cpfOituSzR6oAvPn)\
+    \ [View on YouTube](https://www.google.com/url?q=https://youtu.be/UAy1llcOcJw&sa=D&source=editors&ust=1624824293510000&usg=AOvVaw0PsTfdmK2DLBhjBbxJjwcC)\
+    \ \n\n| ESTIMATED TIME  || 2 minutes  |\n\n| --- | --- |\n\n| PRE REQUIREMENTS\
+    \  |\n\n| --- |\n\n| [Create Your IPFS Node](#text00022.html#a2ZM)  |\n\n| COMMAND\
+    \ OVERVIEW  |\n\n| --- |\n\n| ipfs daemon  |\n\n| Start IPFS local server on 127.0.0.1:5001.\
+    \  |\n\n| echo \"<text>\" > <file>  |\n\n| Output a given text to a new file.\
+    \  |\n\n| ipfs add <file>  |\n\n| Add file to your IPFS local node.  |\n\n| ipfs\
+    \ cat <hash>  |\n\n| View IPFS file content.  |\n\nAdding the file VS CODE - BASH\
+    \ TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| $ ipfs daemon  \n\n$ echo \"test\"\
+    \  hello.txt  \n\n$ ipfs add hello.txt  |\n\nThe file was added to ipfs resulting\
+    \ in a hash identifier Viewing the file content on the console VS CODE - BASH\
+    \ TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| $ ipfs cat \"hash\"  |\n\nYou will\
+    \ see the file content be displayed Checking the file in the web ui Got to http://127.0.0.1:5001/webui\
+    \ Click on \"files\" Click on \"pins\" Copy the hash Find by this hash, you can\
+    \ see that this hash exists Viewing the file content in the browser Open a new\
+    \ tab ipfs://\"hash\" Now you can see your file content in the browser \n\nSetup\
+    \ IPFS Browser Extension IPFS Companion allows you locally running IPFS node directly\
+    \ inside your favorite browser, enabling support for ipfs:// addresses, automatic\
+    \ IPFS gateway loading of websites and file paths, easy IPFS file import and sharing,\
+    \ and more. [https://ipfs.io](https://www.google.com/url?q=https://ipfs.io&sa=D&source=editors&ust=1624824293523000&usg=AOvVaw11Kk0Z_w_C-9YBtpEKrntX)\
+    \    [View on YouTube](https://www.google.com/url?q=https://youtu.be/eVOd6vd2fGc&sa=D&source=editors&ust=1624824293524000&usg=AOvVaw04tLx6JDH22cd5nP7ThY3t)\
+    \ \n\n| ESTIMATED TIME  || 3 minutes  |\n\n| --- | --- |\n\n| PRE REQUIREMENTS\
+    \  |\n\n| --- |\n\n| [Create Your IPFS Node](#text00022.html#a2ZM)  |\n\n| COMMAND\
+    \ OVERVIEW  |\n\n| --- |\n\n| ipfs daemon  |\n\n| Start IPFS local server on 127.0.0.1:5001.\
+    \  |\n\nInstalling the browser extension Go to [IPFS Companion Extension](https://www.google.com/url?q=https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch?hl%3Den&sa=D&source=editors&ust=1624824293529000&usg=AOvVaw2tEwx14yEyllZu9wRErQKf)\
+    \ Click on “Add to Brave” or the name of your browser Click on “Add extension”\
+    \ Click on extensions icon and pin “IPFS Companion” to extensions bar Configuring\
+    \ the node type Click on “IPFS Companion” icon Click on “gear” icon On “IPFS Node\
+    \ Type” select “External” Starting an external node Go to Visual Studio Code Open\
+    \ a new terminal VS CODE - BASH TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| $ ipfs\
+    \ daemon  |\n\nImporting a file Click on “IPFS Companion” icon Click on “Import”\
+    \ Click on “Pick a file” Select a file from your local disc The file will be stored\
+    \ in your ipfs node \n\nPin and Unpin IPFS Files on Local Node To ensure that\
+    \ data persists on IPFS, and is not deleted during garbage collection, data can\
+    \ be pinned to one or more IPFS nodes. Pinning gives you control over disk space\
+    \ and data retention. As such, you should use that control to pin any content\
+    \ you wish to keep on IPFS indefinitely. The default behavior for IPFS is to pin\
+    \ files to your local IPFS node. [https://ipfs.io](https://www.google.com/url?q=https://ipfs.io&sa=D&source=editors&ust=1624824293532000&usg=AOvVaw14MFFSLQLRpUz6efw6ws_v)\
+    \    [View on YouTube](https://www.google.com/url?q=https://youtu.be/POdQACj-jRI&sa=D&source=editors&ust=1624824293533000&usg=AOvVaw1Wy1-R77UmY-SuEHo3pkxq)\
+    \ \n\n| ESTIMATED TIME  || 3 minutes  |\n\n| --- | --- |\n\n| PRE REQUIREMENTS\
+    \  |\n\n| --- |\n\n| [Create Your IPFS Node](#text00022.html#a2ZM)  |\n\n| COMMAND\
+    \ OVERVIEW  |\n\n| --- |\n\n| ipfs daemon  |\n\n| Start IPFS local server on 127.0.0.1:5001.\
+    \  |\n\n| echo \"<text>\" > <file>  |\n\n| Output a given text to a new file.\
+    \  |\n\n| ipfs add <file>  |\n\n| Add file to your IPFS local node.  |\n\n| ipfs\
+    \ cat <hash>  |\n\n| View IPFS file content.  |\n\nStarting your local node VS\
+    \ CODE - BASH TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| $ ipfs daemon  |\n\n\
+    Adding file to your node VS CODE - BASH TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\
+    \n| $ echo \"world\"  > hello.txt  \n\n$ ipfs add hello.txt  |\n\nWhen you add\
+    \ a file, this is automatically pinned to your local node. Checking the file was\
+    \ added VS CODE - BASH TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| $ ipfs cat your\\\
+    _file\\_hash  |\n\nVerifying your file was pinned Go to [http://127.0.0.1:5001/webui](https://www.google.com/url?q=http://127.0.0.1:5001/webui&sa=D&source=editors&ust=1624824293544000&usg=AOvVaw3YWLkn7BQ_YxuWJvWtoHJt)\
+    \ Click on “Files” Click on “Pins” Your file is there! Unpinning your file VS\
+    \ CODE - BASH TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| $ ipfs pin rm your\\\
+    _file\\_hash  |\n\n![](Image00028.jpg)Pinning your file manually VS CODE - BASH\
+    \ TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| $ ipfs pin add your\\_file\\_hash\
+    \  |\n\nYour file was pinned again \n\nPin and Unpin Files on Remote Node using\
+    \ Pinata It's also possible to pin your files to a remote pinning service. These\
+    \ third-party services give you the opportunity to pin files not to your own local\
+    \ node, but to nodes that they operate. You don't need to worry about your own\
+    \ node's available disk space or uptime. While you can use a remote pinning service's\
+    \ own GUI, CLI, or other dev tools to manage IPFS files pinned to their service,\
+    \ you can also work directly with pinning services using your local IPFS installation\
+    \ — meaning that you don't need to learn a pinning service's unique API or other\
+    \ tooling. [https://ipfs.io](https://www.google.com/url?q=https://ipfs.io&sa=D&source=editors&ust=1624824293548000&usg=AOvVaw0VSY8BUfCvuDgwERgg3yG5)\
+    \    [https://pinata.cloud](https://www.google.com/url?q=https://pinata.cloud&sa=D&source=editors&ust=1624824293549000&usg=AOvVaw1qcUHfmnL8hVloIQhkcdOT)\
+    \    [View on YouTube](https://www.google.com/url?q=https://youtu.be/0bC_YGrJAkA&sa=D&source=editors&ust=1624824293549000&usg=AOvVaw1-XdElxsKyE8Zvj1agIza6)\
+    \ \n\n| ESTIMATED TIME  || 4 minutes  |\n\n| --- | --- |\n\n| PRE REQUIREMENTS\
+    \  |\n\n| --- |\n\n| [Create Your IPFS Node](#text00022.html#a2ZM)  |\n\n| COMMAND\
+    \ OVERVIEW  |\n\n| --- |\n\n| ipfs pin remote service add pinata <endpoint> <jwt\\\
+    _key>  |\n\n| Add a new remote pinning service.  |\n\n| ipfs pin remote service\
+    \ ls  |\n\n| List existing pinning services added.  |\n\n| ipfs add <file>  |\n\
+    \n| Add file to your IPFS local node.  |\n\n| ipfs cat <hash>  |\n\n| View IPFS\
+    \ file content.  |\n\n| ipfs pin remote add --service=pinata -name=<file> <hash>\
+    \  |\n\n| Pin your file to the remote IPFS pinning service.  |\n\n| ipfs pin remote\
+    \ rm --service=pinata -name=<file> <hash>  |\n\n| Unpin your file from the remote\
+    \ IPFS pinning service.  |\n\nSetting up API Keys on Pinata Log in on your Pinata\
+    \ account Go to “API Keys” Click on “New Key” Check “Admin” Use “admin-cli” as\
+    \ your “Key Name” Click on “Create Key” A new key will be generated to you Copy\
+    \ the “JWT” value from this window Setting up Pinata as a remove service on your\
+    \ terminal Add Pinata as a pinning remote service VS CODE - BASH TERMINAL \n\n\
+    | TERMINAL  |\n\n| --- |\n\n| $ ipfs pin remote service add pinata https: //api.pinata.cloud/psa\
+    \ your\\_jwt\\_key  |\n\nList all existing remote services and check that Pinata\
+    \ is there \n\n| TERMINAL  |\n\n| --- |\n\n| $ ipfs pin remote service ls  |\n\
+    \nAdding a new file to your local IPFS node Add Pinata as a pinning remote service\
+    \ VS CODE - BASH TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| $ echo \"world\"  >\
+    \ hello.txt  \n\n$ ipfs add hello.txt  \n\n$ ipfs cat your\\_file\\_hash  |\n\n\
+    Pinning your file to the remote IPFS node \n\n| TERMINAL  |\n\n| --- |"
+  fmt: "\n# Add Files to IPFS\n\nA computer running IPFS can ask all the peers it's\
+    \ connected to whether they have a file with a particular hash and, if one of\
+    \ them does, they send back the whole file. Without a short, unique identifier\
+    \ like a cryptographic hash, that wouldn't be possible. [https://ipfs.io](https://www.google.com/url?q=https://ipfs.io&sa=D&source=editors&ust=1624824293510000&usg=AOvVaw1baEc1cpfOituSzR6oAvPn)\
+    \ [View on YouTube](https://www.google.com/url?q=https://youtu.be/UAy1llcOcJw&sa=D&source=editors&ust=1624824293510000&usg=AOvVaw0PsTfdmK2DLBhjBbxJjwcC)\n\
+    \n| ESTIMATED TIME || 2 minutes |\n\n| --- | --- |\n\n| PRE REQUIREMENTS |\n\n\
+    | --- |\n\n| [Create Your IPFS Node](#text00022.html#a2ZM) |\n\n| COMMAND OVERVIEW\
+    \ |\n\n| --- |\n\n| `ipfs daemon` |\n\n| Start IPFS local server on 127.0.0.1:5001.\
+    \ |\n\n| `echo \"<text>\" > <file>` |\n\n| Output a given text to a new file.\
+    \ |\n\n| `ipfs add <file>` |\n\n| Add file to your IPFS local node. |\n\n| `ipfs\
+    \ cat <hash>` |\n\n| View IPFS file content. |\n\n## Adding the file VS CODE -\
+    \ BASH TERMINAL\n\n| TERMINAL |\n\n| --- |\n\n```\n$ ipfs daemon  \n\n$ echo \"\
+    test\"  hello.txt  \n\n$ ipfs add hello.txt  |\n```\n\nThe file was added to ipfs\
+    \ resulting in a hash identifier Viewing the file content on the console VS CODE\
+    \ - BASH TERMINAL\n\n| TERMINAL |\n\n| --- |\n\n```\n$ ipfs cat \"hash\"  |\n\
+    ```\n\nYou will see the file content be displayed Checking the file in the web\
+    \ ui Got to http://127.0.0.1:5001/webui Click on \"files\" Click on \"pins\" Copy\
+    \ the hash Find by this hash, you can see that this hash exists Viewing the file\
+    \ content in the browser Open a new tab ipfs://\"hash\" Now you can see your file\
+    \ content in the browser\n\n## Setup IPFS Browser Extension\n\nIPFS Companion\
+    \ allows you locally running IPFS node directly inside your favorite browser,\
+    \ enabling support for ipfs:// addresses, automatic IPFS gateway loading of websites\
+    \ and file paths, easy IPFS file import and sharing, and more. [https://ipfs.io](https://www.google.com/url?q=https://ipfs.io&sa=D&source=editors&ust=1624824293523000&usg=AOvVaw11Kk0Z_w_C-9YBtpEKrntX)\
+    \ [View on YouTube](https://www.google.com/url?q=https://youtu.be/eVOd6vd2fGc&sa=D&source=editors&ust=1624824293524000&usg=AOvVaw04tLx6JDH22cd5nP7ThY3t)\n\
+    \n| ESTIMATED TIME || 3 minutes |\n\n| --- | --- |\n\n| PRE REQUIREMENTS |\n\n\
+    | --- |\n\n| [Create Your IPFS Node](#text00022.html#a2ZM) |\n\n| COMMAND OVERVIEW\
+    \ |\n\n| --- |\n\n| `ipfs daemon` |\n\n| Start IPFS local server on 127.0.0.1:5001.\
+    \ |\n\n### Installing the browser extension\n\nGo to [IPFS Companion Extension](https://www.google.com/url?q=https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch?hl%3Den&sa=D&source=editors&ust=1624824293529000&usg=AOvVaw2tEwx14yEyllZu9wRErQKf)\
+    \ Click on “Add to Brave” or the name of your browser Click on “Add extension”\
+    \ Click on extensions icon and pin “IPFS Companion” to extensions bar Configuring\
+    \ the node type Click on “IPFS Companion” icon Click on “gear” icon On “IPFS Node\
+    \ Type” select “External” Starting an external node Go to Visual Studio Code Open\
+    \ a new terminal VS CODE - BASH TERMINAL\n\n| TERMINAL |\n\n| --- |\n\n```\n$\
+    \ ipfs daemon  |\n```\n\n### Importing a file\n\nClick on “IPFS Companion” icon\
+    \ Click on “Import” Click on “Pick a file” Select a file from your local disc\
+    \ The file will be stored in your ipfs node\n\n# Pin and Unpin IPFS Files on Local\
+    \ Node\n\nTo ensure that data persists on IPFS, and is not deleted during garbage\
+    \ collection, data can be pinned to one or more IPFS nodes. Pinning gives you\
+    \ control over disk space and data retention. As such, you should use that control\
+    \ to pin any content you wish to keep on IPFS indefinitely. The default behavior\
+    \ for IPFS is to pin files to your local IPFS node. [https://ipfs.io](https://www.google.com/url?q=https://ipfs.io&sa=D&source=editors&ust=1624824293532000&usg=AOvVaw14MFFSLQLRpUz6efw6ws_v)\
+    \ [View on YouTube](https://www.google.com/url?q=https://youtu.be/POdQACj-jRI&sa=D&source=editors&ust=1624824293533000&usg=AOvVaw1Wy1-R77UmY-SuEHo3pkxq)\n\
+    \n| ESTIMATED TIME || 3 minutes |\n\n| --- | --- |\n\n| PRE REQUIREMENTS |\n\n\
+    | --- |\n\n| [Create Your IPFS Node](#text00022.html#a2ZM) |\n\n| COMMAND OVERVIEW\
+    \ |\n\n| --- |\n\n| `ipfs daemon` |\n\n| Start IPFS local server on 127.0.0.1:5001.\
+    \ |\n\n| `echo \"<text>\" > <file>` |\n\n| Output a given text to a new file.\
+    \ |\n\n| `ipfs add <file>` |\n\n| Add file to your IPFS local node. |\n\n| `ipfs\
+    \ cat <hash>` |\n\n| View IPFS file content. |\n\n## Starting your local node\
+    \ VS CODE - BASH TERMINAL\n\n| TERMINAL |\n\n| --- |\n\n```\n$ ipfs daemon  |\n\
+    ```\n\n## Adding file to your node VS CODE - BASH TERMINAL\n\n| TERMINAL |\n\n\
+    | --- |\n\n```\n$ echo \"world\"  > hello.txt  \n\n$ ipfs add hello.txt  |\n```\n\
+    \nWhen you add a file, this is automatically pinned to your local node. Checking\
+    \ the file was added VS CODE - BASH TERMINAL\n\n| TERMINAL |\n\n| --- |\n\n```\n\
+    $ ipfs cat your\\_file\\_hash  |\n```\n\nVerifying your file was pinned Go to\
+    \ [http://127.0.0.1:5001/webui](https://www.google.com/url?q=http://127.0.0.1:5001/webui&sa=D&source=editors&ust=1624824293544000&usg=AOvVaw3YWLkn7BQ_YxuWJvWtoHJt)\
+    \ Click on “Files” Click on “Pins” Your file is there! Unpinning your file VS\
+    \ CODE - BASH TERMINAL\n\n| TERMINAL |\n\n| --- |\n\n```\n$ ipfs pin rm your\\\
+    _file\\_hash  |\n```\n\n![](Image00028.jpg)Pinning your file manually VS CODE\
+    \ - BASH TERMINAL\n\n| TERMINAL |\n\n| --- |\n\n```\n$ ipfs pin add your\\_file\\\
+    _hash  |\n```\n\nYour file was pinned again\n\n# Pin and Unpin Files on Remote\
+    \ Node using Pinata\n\nIt's also possible to pin your files to a remote pinning\
+    \ service. These third-party services give you the opportunity to pin files not\
+    \ to your own local node, but to nodes that they operate. You don't need to worry\
+    \ about your own node's available disk space or uptime. While you can use a remote\
+    \ pinning service's own GUI, CLI, or other dev tools to manage IPFS files pinned\
+    \ to their service, you can also work directly with pinning services using your\
+    \ local IPFS installation — meaning that you don't need to learn a pinning service's\
+    \ unique API or other tooling. [https://ipfs.io](https://www.google.com/url?q=https://ipfs.io&sa=D&source=editors&ust=1624824293548000&usg=AOvVaw0VSY8BUfCvuDgwERgg3yG5)\
+    \ [https://pinata.cloud](https://www.google.com/url?q=https://pinata.cloud&sa=D&source=editors&ust=1624824293549000&usg=AOvVaw1qcUHfmnL8hVloIQhkcdOT)\
+    \ [View on YouTube](https://www.google.com/url?q=https://youtu.be/0bC_YGrJAkA&sa=D&source=editors&ust=1624824293549000&usg=AOvVaw1-XdElxsKyE8Zvj1agIza6)\n\
+    \n| ESTIMATED TIME || 4 minutes |\n\n| --- | --- |\n\n| PRE REQUIREMENTS |\n\n\
+    | --- |\n\n| [Create Your IPFS Node](#text00022.html#a2ZM) |\n\n| COMMAND OVERVIEW\
+    \ |\n\n| --- |\n\n| `ipfs pin remote service add pinata <endpoint> <jwt_key>`\
+    \ |\n\n| Add a new remote pinning service. |\n\n| `ipfs pin remote service ls`\
+    \ |\n\n| List existing pinning services added. |\n\n| `ipfs add <file>` |\n\n\
+    | Add file to your IPFS local node. |\n\n| `ipfs cat <hash>` |\n\n| View IPFS\
+    \ file content. |\n\n| `ipfs pin remote add --service=pinata -name=<file> <hash>`\
+    \ |\n\n| Pin your file to the remote IPFS pinning service. |\n\n| `ipfs pin remote\
+    \ rm --service=pinata -name=<file> <hash>` |\n\n| Unpin your file from the remote\
+    \ IPFS pinning service. |\n\n## Setting up API Keys on Pinata\n\nLog in on your\
+    \ Pinata account Go to “API Keys” Click on “New Key” Check “Admin” Use “admin-cli”\
+    \ as your “Key Name” Click on “Create Key” A new key will be generated to you\
+    \ Copy the “JWT” value from this window Setting up Pinata as a remove service\
+    \ on your terminal Add Pinata as a pinning remote service VS CODE - BASH TERMINAL\n\
+    \n| TERMINAL |\n\n| --- |\n\n```\n$ ipfs pin remote service add pinata https:\
+    \ //api.pinata.cloud/psa your\\_jwt\\_key  |\n```\n\nList all existing remote\
+    \ services and check that Pinata is there\n\n| TERMINAL |\n\n| --- |\n\n```\n\
+    $ ipfs pin remote service ls  |\n```\n\n## Adding a new file to your local IPFS\
+    \ node\n\nAdd Pinata as a pinning remote service VS CODE - BASH TERMINAL\n\n|\
+    \ TERMINAL |\n\n| --- |\n\n```\n$ echo \"world\"  > hello.txt  \n\n$ ipfs add\
+    \ hello.txt  \n\n$ ipfs cat your\\_file\\_hash  |\n```\n\n## Pinning your file\
+    \ to the remote IPFS node\n\n| TERMINAL |\n\n| --- |\n"
+  trans: "\n\n# 将文件添加到 IPFS\n\n运行 IPFS 的计算机可以询问其连接的所有对等节点是否拥有特定哈希的文件，如果其中某个节点拥有，则会发送回整个文件。如果没有像加密哈希这样的短而唯一的标识符，这将是不可能的。\
+    \ [`ipfs.io`](https://www.google.com/url?q=https://ipfs.io&sa=D&source=editors&ust=1624824293510000&usg=AOvVaw1baEc1cpfOituSzR6oAvPn)\
+    \ [在 YouTube 上观看](https://www.google.com/url?q=https://youtu.be/UAy1llcOcJw&sa=D&source=editors&ust=1624824293510000&usg=AOvVaw0PsTfdmK2DLBhjBbxJjwcC)\n\
+    \n| 预计时间 || 2 分钟 |\n\n| --- | --- |\n\n| 前置要求 |\n\n| --- |\n\n| 创建你的 IPFS 节点 |\n\
+    \n| 命令概览 |\n\n| --- |\n\n| `ipfs daemon` |\n\n| 在 127.0.0.1:5001 上启动 IPFS 本地服务器。\
+    \ |\n\n| `echo \"<text>\" > <file>` |\n\n| 将给定文本输出到新文件。 |\n\n| `ipfs add <file>`\
+    \ |\n\n| 将文件添加到你的 IPFS 本地节点。 |\n\n| `ipfs cat <hash>` |\n\n| 查看 IPFS 文件内容。 |\n\
+    \n## 添加文件 VS CODE - BASH 终端\n\n| 终端 |\n\n| --- |\n\n```\n$ ipfs daemon  \n\n$\
+    \ echo \"test\"  hello.txt  \n\n$ ipfs add hello.txt  |\n```\n\n文件已添加到 ipfs，生成哈希标识符\
+    \ 在控制台查看文件内容 VS CODE - BASH 终端\n\n| 终端 |\n\n| --- |\n\n```\n$ ipfs cat \"hash\"\
+    \  |\n```\n\n你将看到文件内容被显示 在 Web UI 中检查文件 访问 http://127.0.0.1:5001/webui 点击“files”\
+    \ 点击“pins” 复制哈希 通过此哈希查找，你可以看到该哈希存在 在浏览器中查看文件内容 打开新标签页 ipfs://\"hash\" 现在你可以在浏览器中看到文件内容\n\
+    \n## 设置 IPFS 浏览器扩展\n\nIPFS Companion 允许你直接在喜欢的浏览器中本地运行 IPFS 节点，支持 ipfs:// 地址、网站和文件路径的自动\
+    \ IPFS 网关加载、轻松的 IPFS 文件导入和共享等。 [`ipfs.io`](https://www.google.com/url?q=https://ipfs.io&sa=D&source=editors&ust=1624824293523000&usg=AOvVaw11Kk0Z_w_C-9YBtpEKrntX)\
+    \ [在 YouTube 上观看](https://www.google.com/url?q=https://youtu.be/eVOd6vd2fGc&sa=D&source=editors&ust=1624824293524000&usg=AOvVaw04tLx6JDH22cd5nP7ThY3t)\n\
+    \n| 预计时间 || 3 分钟 |\n\n| --- | --- |\n\n| 前置要求 |\n\n| --- |\n\n| 创建你的 IPFS 节点 |\n\
+    \n| 命令概览 |\n\n| --- |\n\n| `ipfs daemon` |\n\n| 在 127.0.0.1:5001 上启动 IPFS 本地服务器。\
+    \ |\n\n### 安装浏览器扩展\n\n访问 [IPFS Companion 扩展](https://www.google.com/url?q=https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch?hl%3Den&sa=D&source=editors&ust=1624824293529000&usg=AOvVaw2tEwx14yEyllZu9wRErQKf)\
+    \ 点击“添加到 Brave”或你的浏览器名称 点击“添加扩展” 点击扩展图标并将“IPFS Companion”固定到扩展栏 配置节点类型 点击“IPFS\
+    \ Companion”图标 点击“齿轮”图标 在“IPFS 节点类型”中选择“External” 启动外部节点 访问 Visual Studio Code\
+    \ 打开新终端 VS CODE - BASH 终端\n\n| 终端 |\n\n| --- |\n\n```\n$ ipfs daemon  |\n```\n\
+    \n### 导入文件\n\n点击“IPFS Companion”图标 点击“Import” 点击“Pick a file” 从本地磁盘选择文件 文件将存储在你的\
+    \ ipfs 节点中\n\n# 在本地节点上固定和取消固定 IPFS 文件\n\n为确保数据在 IPFS 上持久化，且在垃圾回收期间不会被删除，可以将数据固定到一个或多个\
+    \ IPFS 节点。固定使你能够控制磁盘空间和数据保留。因此，你应使用该控制权来固定任何你希望在 IPFS 上无限期保留的内容。IPFS 的默认行为是将文件固定到本地\
+    \ IPFS 节点。 [`ipfs.io`](https://www.google.com/url?q=https://ipfs.io&sa=D&source=editors&ust=1624824293532000&usg=AOvVaw14MFFSLQLRpUz6efw6ws_v)\
+    \ [在 YouTube 上观看](https://www.google.com/url?q=https://youtu.be/POdQACj-jRI&sa=D&source=editors&ust=1624824293533000&usg=AOvVaw1Wy1-R77UmY-SuEHo3pkxq)\n\
+    \n| 预计时间 || 3 分钟 |\n\n| --- | --- |\n\n| 前置要求 |\n\n| --- |\n\n| 创建你的 IPFS 节点 |\n\
+    \n| 命令概览 |\n\n| --- |\n\n| `ipfs daemon` |\n\n| 在 127.0.0.1:5001 上启动 IPFS 本地服务器。\
+    \ |\n\n| `echo \"<text>\" > <file>` |\n\n| 将给定文本输出到新文件。 |\n\n| `ipfs add <file>`\
+    \ |\n\n| 将文件添加到你的 IPFS 本地节点。 |\n\n| `ipfs cat <hash>` |\n\n| 查看 IPFS 文件内容。 |\n\
+    \n## 启动本地节点 VS CODE - BASH 终端\n\n| 终端 |\n\n| --- |\n\n```\n$ ipfs daemon  |\n\
+    ```\n\n## 将文件添加到你的节点 VS CODE - BASH 终端\n\n| 终端 |\n\n| --- |\n\n```\n$ echo \"\
+    world\"  > hello.txt  \n\n$ ipfs add hello.txt  |\n```\n\n添加文件时，它会自动固定到你的本地节点。检查文件是否已添加\
+    \ VS CODE - BASH 终端\n\n| 终端 |\n\n| --- |\n\n```\n$ ipfs cat your\\_file\\_hash\
+    \  |\n```\n\n验证文件是否已固定 访问 [`127.0.0.1:5001/webui`](https://www.google.com/url?q=http://127.0.0.1:5001/webui&sa=D&source=editors&ust=1624824293544000&usg=AOvVaw3YWLkn7BQ_YxuWJvWtoHJt)\
+    \ 点击“Files” 点击“Pins” 你的文件在那里！ 取消固定你的文件 VS CODE - BASH 终端\n\n| 终端 |\n\n| --- |\n\
+    \n```\n$ ipfs pin rm your\\_file\\_hash  |\n```\n\n![](img/Image00028.jpg)手动固定你的文件\
+    \ VS CODE - BASH 终端\n\n| 终端 |\n\n| --- |\n\n```\n$ ipfs pin add your\\_file\\\
+    _hash  |\n```\n\n你的文件已再次固定\n\n# 使用 Pinata 在远程节点上固定和取消固定文件\n\n也可以将文件固定到远程固定服务。这些第三方服务让你有机会将文件固定到它们运营的节点，而不是你自己的本地节点。你不需要担心自己节点的可用磁盘空间或运行时间。虽然你可以使用远程固定服务自己的\
+    \ GUI、CLI 或其他开发工具来管理固定到其服务的 IPFS 文件，但你也可以直接使用本地 IPFS 安装与固定服务协作——这意味着你不需要学习固定服务的独特\
+    \ API 或其他工具。 [`ipfs.io`](https://www.google.com/url?q=https://ipfs.io&sa=D&source=editors&ust=1624824293548000&usg=AOvVaw0VSY8BUfCvuDgwERgg3yG5)\
+    \ [`pinata.cloud`](https://www.google.com/url?q=https://pinata.cloud&sa=D&source=editors&ust=1624824293549000&usg=AOvVaw1qcUHfmnL8hVloIQhkcdOT)\
+    \ [在 YouTube 上观看](https://www.google.com/url?q=https://youtu.be/0bC_YGrJAkA&sa=D&source=editors&ust=1624824293549000&usg=AOvVaw1-XdElxsKyE8Zvj1agIza6)\n\
+    \n| 预计时间 || 4 分钟 |\n\n| --- | --- |\n\n| 前置要求 |\n\n| --- |\n\n| 创建你的 IPFS 节点 |\n\
+    \n| 命令概览 |\n\n| --- |\n\n| `ipfs pin remote service add pinata <endpoint> <jwt_key>`\
+    \ |\n\n| 添加新的远程固定服务。 |\n\n| `ipfs pin remote service ls` |\n\n| 列出已添加的现有固定服务。\
+    \ |\n\n| `ipfs add <file>` |\n\n| 将文件添加到你的 IPFS 本地节点。 |\n\n| `ipfs cat <hash>`\
+    \ |\n\n| 查看 IPFS 文件内容。 |\n\n| `ipfs pin remote add --service=pinata -name=<file>\
+    \ <hash>` |\n\n| 将文件固定到远程 IPFS 固定服务。 |\n\n| `ipfs pin remote rm --service=pinata\
+    \ -name=<file> <hash>` |\n\n| 从远程 IPFS 固定服务取消固定文件。 |\n\n## 在 Pinata 上设置 API 密钥\n\
+    \n登录你的 Pinata 账户 访问“API Keys” 点击“New Key” 勾选“Admin” 使用“admin-cli”作为你的“Key Name”\
+    \ 点击“Create Key” 将为你生成一个新密钥 从此窗口复制“JWT”值 在终端上设置 Pinata 作为远程服务 将 Pinata 添加为固定远程服务\
+    \ VS CODE - BASH 终端\n\n| 终端 |\n\n| --- |\n\n```\n$ ipfs pin remote service add\
+    \ pinata https: //api.pinata.cloud/psa your\\_jwt\\_key  |\n```\n\n列出所有现有远程服务并检查\
+    \ Pinata 是否存在\n\n| 终端 |\n\n| --- |\n\n```\n$ ipfs pin remote service ls  |\n```\n\
+    \n## 将新文件添加到你的本地 IPFS 节点\n\n将 Pinata 添加为固定远程服务 VS CODE - BASH 终端\n\n| 终端 |\n\n\
+    | --- |\n\n```\n$ echo \"world\"  > hello.txt  \n\n$ ipfs add hello.txt  \n\n\
+    $ ipfs cat your\\_file\\_hash  |\n```\n\n## 将文件固定到远程 IPFS 节点\n\n| 终端 |\n\n| ---\
+    \ |\n\n"
+  toc: []
+- raw: "| $ ipfs pin remote add --service=pinata -name=hello.txt your\\_file\\_hash\
+    \  |\n\nGo back to Pinata website Click on “Pin Manager” Your file will appear\
+    \ on this page! Unpinning your file from the remote IPFS node \n\n| TERMINAL \
+    \ |\n\n| --- |\n\n| $ ipfs pin remote rm --service=pinata -name=hello.txt your\\\
+    _file\\_hash  |\n\nGo back to Pinata website Click on “Pin Manager” Your file\
+    \ will no longer appear on this page, that means your file was unpinned. \n\n\
+    Host Your Site on IPFS Using Fleek Fleek allows you to build on Open Web protocols\
+    \ and a base layer infrastructure powered by them. Build and host your sites,\
+    \ apps, Dapps, and other services on trustless, permissionless, and open technologies\
+    \ focused on creating user-controlled, encrypted, private, p2p experiences. [https://fleek.co](https://www.google.com/url?q=https://fleek.co&sa=D&source=editors&ust=1624824293567000&usg=AOvVaw2mLU1q8cGT_JsU2xfc6VKt)\
+    \    [View on YouTube](https://www.google.com/url?q=https://youtu.be/_lNZd8L7gCE&sa=D&source=editors&ust=1624824293567000&usg=AOvVaw3dxFqnTF2YzANha3aYY4xm)\
+    \ \n\n| ESTIMATED TIME  || 5 minutes  |\n\n| --- | --- |\n\n| COMMAND OVERVIEW\
+    \  |\n\n| --- |\n\n| git clone  |\n\n| Clones a repository into a newly created\
+    \ directory.  |\n\n| npm install  |\n\n| Install the dependencies in the local\
+    \ node\\_modules folder.  |\n\n| fleek login  |\n\n| Login in into your Fleek\
+    \ account.  |\n\n| fleek site:init  |\n\n| Initialize a Fleek site in your local\
+    \ directory.  |\n\n| fleek site:deploy  |\n\n| Deploy changes in your publish\
+    \ directory.  |\n\nLogin on Fleek Go to [https://fleek.co](https://www.google.com/url?q=https://fleek.co&sa=D&source=editors&ust=1624824293575000&usg=AOvVaw0GCnClb_uJp-cu27GTebhs)\
+    \ Log in with your account Go to your VS Code Cloning your existing repository\
+    \ Clone a existing repository with sample code VS CODE - BASH TERMINAL \n\n| TERMINAL\
+    \  |\n\n| --- |\n\n| $ git clone https: //github.com/johnnymatthews/random-planet-facts\
+    \  |\n\nInstalling Fleek Install Fleek command line VS CODE - BASH TERMINAL \n\
+    \n| TERMINAL  |\n\n| --- |\n\n| $ npm install -g @fleekhq/fleek-cli  |\n\nLogin\
+    \ into Fleek (you will be prompted to complete the flow in your browser) VS CODE\
+    \ - BASH TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n| $ fleek login  |\n\nInitializing\
+    \ Fleek Init the Fleek site in your current directory VS CODE - BASH TERMINAL\
+    \ \n\n| TERMINAL  |\n\n| --- |\n\n| $ fleek site:init  |\n\nSelect which team\
+    \ you wanna use (use the arrows key for select). Select which site you wanna use\
+    \ (use the arrows key for select). Select the public directory for deployment.\
+    \ Deploying your site VS CODE - BASH TERMINAL \n\n| TERMINAL  |\n\n| --- |\n\n\
+    | $ fleek site:deploy  |\n\nGo back to Fleek site Click on “Hosting” Click on\
+    \ “Verify on IPFS” This is your site hosted on IPFS You can see now your deployed\
+    \ site online Go back to “Hosting” Click on “your-site.on.fleek.co” This is your\
+    \ site host friendly address. ![](Image00029.jpg)\n\nENS - Ethereum Name Service\
+    \ Register your ENS to Receive any Crypto, Token or NFT on Your Wallet Ethereum\
+    \ Name Service (ENS) is a service that makes it easy to send and receive cryptocurrency\
+    \ and access special websites by simple names rather than by long, complex strings\
+    \ of letters and numbers. [https://ens.domains](https://www.google.com/url?q=https://ens.domains&sa=D&source=editors&ust=1624824293587000&usg=AOvVaw130nkJTco4CgjhoDPTRQEl)\
+    \ [View on YouTube](https://www.google.com/url?q=https://youtu.be/ETQiKiu2KKc&sa=D&source=editors&ust=1624824293588000&usg=AOvVaw3VaicgcZiPmHhJUk75y_Nl)\
+    \ \n\n| ESTIMATED TIME  || 3 minutes  |\n\n| --- | --- |\n\n| PRE REQUIREMENTS\
+    \  |\n\n| --- |\n\n| [Install and Setup MetaMask Wallet](#text00008.html#toc20_MetaMask)\
+    \  |\n\nSearching your domain name Go to ens.domains Click on “Launch App” Search\
+    \ for the domain name that you want to register (for example: planou.eth) Check\
+    \ the registration period (minimum 1 year) Check the registration price Request\
+    \ to register Click on “Request To Register” The MetaMask notification will be\
+    \ open in order to confirm the transaction Click on “Confirm” Wait for the transaction\
+    \ to be confirmed on Blockchain. Click on “Register” A new MetaMask notification\
+    \ will be shown again Click on “Confirm” Wait for the transaction to be confirmed\
+    \ on Blockchain Managing your registration name Click on “Manage name” Scroll\
+    \ down to \"Addresses\" Realize that the ETH address is set to the wallet that\
+    \ created the domain (your wallet) ![](Image00030.jpg)Checking the name resolution\
+    \ Click on your MetaMask wallet Click on “Send” Type your ENS name (for example:\
+    \ planou.eth) Note that the name has resolved to a wallet address ![](Image00031.jpg)Now\
+    \ you can use the ENS name as a recipient instead of using the wallet hash address\
+    \ for your transactions \n\nChainlink Get Crypto Prices Inside Smart Contracts\
+    \ using Chainlink Oracles Chainlink is a decentralized network of nodes that provide\
+    \ data and information from off-blockchain sources to on-blockchain smart contracts\
+    \ via oracles. In this video you will learn how to get the latest price of cryptocurrencies\
+    \ inside smart contracts, using the ETH/USD Price Feed on the Kovan testnet. [https://chain.link](https://www.google.com/url?q=https://chain.link&sa=D&source=editors&ust=1624824293593000&usg=AOvVaw3YupCcvDZCGY83f1ZBcRPy)\
+    \    [View on YouTube](https://www.google.com/url?q=https://youtu.be/ETQiKiu2KKc&sa=D&source=editors&ust=1624824293594000&usg=AOvVaw2LdrAT4QYS-SkEU2NXuFfw)\
+    \ \n\n| ESTIMATED TIME  || 10 minutes  |\n\n| --- | --- |\n\n| PRE REQUIREMENTS\
+    \  |\n\n| --- |\n\n| [Install Truffle](#text00005.html#a2X3)  |\n\n| [Create an\
+    \ Account on Infura.io](#text00009.html#a2XG)  |\n\n| Get Test Ether From Faucet\
+    \ on Kovan Network  |\n\n| [Install and Setup MetaMask Wallet](#text00008.html#toc20_MetaMask)\
+    \  |\n\n| COMMAND OVERVIEW  |\n\n| --- |\n\n| npm install fs  |\n\n| Install the\
+    \ fs package that provides a lot of very useful functionality to access and interact\
+    \ with the file system.  |\n\n| npm install @truffle/hdwallet-provider  |\n\n\
+    | Install the HD Wallet-enabled Web3 provider. This is used to sign transactions\
+    \ for addresses derived from a 12 or 24 word mnemonic.  |\n\n| truffle migrate\
+    \ --network kovan  |\n\n| Run migrations to deploy contracts.  |\n\nCreating the\
+    \ project Go a Terminal and click on “New Terminal” Initialize a new truffle project\
+    \ \n\n| TERMINAL  |\n\n| --- |\n\n| $ truffle init  |\n\nInstall Chainlink contracts\
+    \ package \n\n| TERMINAL  |\n\n| --- |\n\n| $ npm install @chainlink/contracts\
+    \  |\n\nCreating the smart contract Create a new smart contract for price consumption\
+    \ \n\n| TERMINAL  |\n\n| --- |\n\n| $ touch contracts/PriceConsumer.sol  |\n\n\
+    Open the file “PriceConsumer.sol” ![](Image00032.jpg)Define the Solidity version\
+    \ Import chainlink contract interface Define the contract name Define the contract\
+    \ constructor \n\n| PriceConsumer.sol  |\n\n| --- |\n\n| 1 2 3 4 5 6 7 8 9 10\
+    \ 11 12 13  || // SPDX-License-Identifier: MIT   \n\npragma solidity ^ 0.8.0 ;\
+    \  \n\n import     \"@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol\"\
+    \   \n\n contract  PriceConsumer {    aggregatorV3Interface internal   priceFeed;\
+    \  \n\n      constructor (){  \n\n       priceFeed = AggregatorV3Interface() \
+    \ \n\n   }  \n\n}  |\n\nGo to [docs.chain.link/docs/ethereum-addresses](https://www.google.com/url?q=https://docs.chain.link/docs/ethereum-addresses&sa=D&source=editors&ust=1624824293610000&usg=AOvVaw2WTihyrSZYIwAXUqwHz9Lq)\
+    \ Scroll down to “Kovan” section Copy the “Proxy” address on the line “ETH/USD”\
+    \ ![](Image00033.jpg)Paste the address on AggregatorV3Interface constructor Create\
+    \ the function to get the price \n\n| PriceConsumer.sol  |\n\n| --- |\n\n| 1 2\
+    \ 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  || // SPDX-License-Identifier:\
+    \ MIT   \n\npragma solidity ^ 0.8.0 ;  \n\n import     \"@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol\"\
+    \   \n\n contract  PriceConsumer {    aggregatorV3Interface internal   priceFeed;\
+    \  \n\n      constructor (){  \n\n       priceFeed = AggregatorV3Interface(         \
+    \ 0x9326BFA02ADD2366b30bacB125260Af641031331 )  \n\n   }  \n\n      function   \
+    \  getThePrice () public     view     returns  (int){  \n\n       (  "
+  fmt: "\n# IPFS 与 Fleek 部署指南\n\n## IPFS 文件固定与取消\n\n### 添加远程固定\n\n```\n$ ipfs pin\
+    \ remote add --service=pinata -name=hello.txt your_file_hash\n```\n\n返回 Pinata\
+    \ 网站，点击“Pin Manager”，你的文件将出现在此页面！\n\n### 取消远程固定\n\n```\n$ ipfs pin remote rm --service=pinata\
+    \ -name=hello.txt your_file_hash\n```\n\n返回 Pinata 网站，点击“Pin Manager”，你的文件将不再出现在此页面，这意味着你的文件已被取消固定。\n\
+    \n---\n\n# 使用 Fleek 在 IPFS 上托管你的网站\n\nFleek 允许你基于开放 Web 协议构建，并由基础设施提供支持。在专注于创建用户控制、加密、私有、P2P\
+    \ 体验的无需许可、开放技术上构建和托管你的网站、应用、DApp 和其他服务。\n\n- [https://fleek.co](https://fleek.co)\n\
+    - [View on YouTube](https://youtu.be/_lNZd8L7gCE)\n\n| 预计时间 | 5 分钟 |\n\n## 命令概览\n\
+    \n| 命令 | 说明 |\n| --- | --- |\n| `git clone` | 将仓库克隆到新创建的目录中。 |\n| `npm install`\
+    \ | 在本地 `node_modules` 文件夹中安装依赖项。 |\n| `fleek login` | 登录到你的 Fleek 账户。 |\n| `fleek\
+    \ site:init` | 在本地目录中初始化 Fleek 网站。 |\n| `fleek site:deploy` | 部署发布目录中的更改。 |\n\n\
+    ## 操作步骤\n\n### 登录 Fleek\n\n前往 [https://fleek.co](https://fleek.co)，使用你的账户登录。\n\
+    \n### 克隆现有仓库\n\n在 VS Code 中，打开 Bash 终端：\n\n```\n$ git clone https://github.com/johnnymatthews/random-planet-facts\n\
+    ```\n\n### 安装 Fleek 命令行工具\n\n在 VS Code - Bash 终端中：\n\n```\n$ npm install -g @fleekhq/fleek-cli\n\
+    ```\n\n### 登录 Fleek\n\n（你将被提示在浏览器中完成流程）\n\n```\n$ fleek login\n```\n\n### 初始化\
+    \ Fleek 网站\n\n在当前目录中初始化 Fleek 网站：\n\n```\n$ fleek site:init\n```\n\n选择你想要使用的团队（使用箭头键选择）。选择你想要使用的网站（使用箭头键选择）。选择部署的公共目录。\n\
+    \n### 部署你的网站\n\n```\n$ fleek site:deploy\n```\n\n返回 Fleek 网站，点击“Hosting”，点击“Verify\
+    \ on IPFS”。这是你在 IPFS 上托管的网站。你现在可以在线查看你的已部署网站。返回“Hosting”，点击“your-site.on.fleek.co”。这是你的网站友好地址。\n\
+    \n![](Image00029.jpg)\n\n---\n\n# ENS - Ethereum Name Service\n\n## 在你的钱包中接收任何加密货币、代币或\
+    \ NFT 上注册你的 ENS\n\n以太坊域名服务（ENS）是一项服务，它使通过简单的名称而不是长而复杂的字母和数字字符串来发送和接收加密货币以及访问特殊网站变得容易。\n\
+    \n- [https://ens.domains](https://ens.domains)\n- [View on YouTube](https://youtu.be/ETQiKiu2KKc)\n\
+    \n| 预计时间 | 3 分钟 |\n\n## 前置要求\n\n- [Install and Setup MetaMask Wallet](#text00008.html#toc20_MetaMask)\n\
+    \n## 搜索你的域名\n\n前往 ens.domains，点击“Launch App”。搜索你想要注册的域名（例如：planou.eth）。检查注册期限（最低\
+    \ 1 年）。检查注册价格。请求注册。点击“Request To Register”。MetaMask 通知将打开以确认交易。点击“Confirm”。等待交易在区块链上确认。点击“Register”。将再次显示新的\
+    \ MetaMask 通知。点击“Confirm”。等待交易在区块链上确认。\n\n## 管理你的注册名称\n\n点击“Manage name”。向下滚动到“Addresses”。意识到\
+    \ ETH 地址已设置为创建域名的钱包（你的钱包）。\n\n![](Image00030.jpg)\n\n## 检查名称解析\n\n点击你的 MetaMask\
+    \ 钱包。点击“Send”。输入你的 ENS 名称（例如：planou.eth）。注意该名称已解析为钱包地址。\n\n![](Image00031.jpg)\n\
+    \n现在你可以使用 ENS 名称作为收件人，而不是使用钱包哈希地址进行交易。\n\n---\n\n# Chainlink：在智能合约中获取加密货币价格\n\n\
+    Chainlink 是一个去中心化的节点网络，通过预言机将离链来源的数据和信息提供给链上智能合约。在这个视频中，你将学习如何在智能合约中获取加密货币的最新价格，使用\
+    \ Kovan 测试网上的 ETH/USD 价格源。\n\n- [https://chain.link](https://chain.link)\n- [View\
+    \ on YouTube](https://youtu.be/ETQiKiu2KKc)\n\n| 预计时间 | 10 分钟 |\n\n## 前置要求\n\n\
+    - [Install Truffle](#text00005.html#a2X3)\n- [Create an Account on Infura.io](#text00009.html#a2XG)\n\
+    - 在 Kovan 网络上从水龙头获取测试以太币\n- [Install and Setup MetaMask Wallet](#text00008.html#toc20_MetaMask)\n\
+    \n## 命令概览\n\n| 命令 | 说明 |\n| --- | --- |\n| `npm install fs` | 安装 fs 包，该包提供许多非常有用的功能来访问和与文件系统交互。\
+    \ |\n| `npm install @truffle/hdwallet-provider` | 安装启用 HD 钱包的 Web3 提供程序。这用于为从\
+    \ 12 或 24 个单词助记词派生的地址签署交易。 |\n| `truffle migrate --network kovan` | 运行迁移以部署合约。\
+    \ |\n\n## 创建项目\n\n打开一个终端，点击“New Terminal”。初始化一个新的 Truffle 项目：\n\n```\n$ truffle\
+    \ init\n```\n\n## 安装 Chainlink 合约包\n\n```\n$ npm install @chainlink/contracts\n\
+    ```\n\n## 创建智能合约\n\n创建一个用于价格消费的新智能合约：\n\n```\n$ touch contracts/PriceConsumer.sol\n\
+    ```\n\n打开文件“PriceConsumer.sol”。\n\n![](Image00032.jpg)\n\n定义 Solidity 版本，导入 Chainlink\
+    \ 合约接口，定义合约名称，定义合约构造函数。\n\n### PriceConsumer.sol\n\n```solidity\n// SPDX-License-Identifier:\
+    \ MIT\n\npragma solidity ^0.8.0;\n\nimport \"@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol\"\
+    ;\n\ncontract PriceConsumer {\n    AggregatorV3Interface internal priceFeed;\n\
+    \n    constructor() {\n        priceFeed = AggregatorV3Interface();\n    }\n}\n\
+    ```\n\n前往 [docs.chain.link/docs/ethereum-addresses](https://docs.chain.link/docs/ethereum-addresses)。向下滚动到“Kovan”部分。复制“ETH/USD”行上的“Proxy”地址。\n\
+    \n![](Image00033.jpg)\n\n将地址粘贴到 AggregatorV3Interface 构造函数中。创建获取价格的函数。\n\n###\
+    \ PriceConsumer.sol\n\n```solidity\n// SPDX-License-Identifier: MIT\n\npragma\
+    \ solidity ^0.8.0;\n\nimport \"@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol\"\
+    ;\n\ncontract PriceConsumer {\n    AggregatorV3Interface internal priceFeed;\n\
+    \n    constructor() {\n        priceFeed = AggregatorV3Interface(0x9326BFA02ADD2366b30bacB125260Af641031331);\n\
+    \    }\n\n    function getThePrice() public view returns (int) {\n```\n"
+  trans: "\n\n# IPFS 与 Fleek 部署指南\n\n## IPFS 文件固定与取消\n\n### 添加远程固定\n\n```\n$ ipfs\
+    \ pin remote add --service=pinata -name=hello.txt your_file_hash\n```\n\n返回 Pinata\
+    \ 网站，点击“Pin Manager”，你的文件将出现在此页面！\n\n### 取消远程固定\n\n```\n$ ipfs pin remote rm --service=pinata\
+    \ -name=hello.txt your_file_hash\n```\n\n返回 Pinata 网站，点击“Pin Manager”，你的文件将不再出现在此页面，这意味着你的文件已被取消固定。\n\
+    \n---\n\n# 使用 Fleek 在 IPFS 上托管你的网站\n\nFleek 允许你基于开放 Web 协议构建，并由基础设施提供支持。在专注于创建用户控制、加密、私有、P2P\
+    \ 体验的无需许可、开放技术上构建和托管你的网站、应用、DApp 和其他服务。\n\n- [`fleek.co`](https://fleek.co)\n\
+    - [View on YouTube](https://youtu.be/_lNZd8L7gCE)\n\n| 预计时间 | 5 分钟 |\n\n## 命令概览\n\
+    \n| 命令 | 说明 |\n| --- | --- |\n| `git clone` | 将仓库克隆到新创建的目录中。 |\n| `npm install`\
+    \ | 在本地 `node_modules` 文件夹中安装依赖项。 |\n| `fleek login` | 登录到你的 Fleek 账户。 |\n| `fleek\
+    \ site:init` | 在本地目录中初始化 Fleek 网站。 |\n| `fleek site:deploy` | 部署发布目录中的更改。 |\n\n\
+    ## 操作步骤\n\n### 登录 Fleek\n\n前往 [`fleek.co`](https://fleek.co)，使用你的账户登录。\n\n###\
+    \ 克隆现有仓库\n\n在 VS Code 中，打开 Bash 终端：\n\n```\n$ git clone https://github.com/johnnymatthews/random-planet-facts\n\
+    ```\n\n### 安装 Fleek 命令行工具\n\n在 VS Code - Bash 终端中：\n\n```\n$ npm install -g @fleekhq/fleek-cli\n\
+    ```\n\n### 登录 Fleek\n\n（你将被提示在浏览器中完成流程）\n\n```\n$ fleek login\n```\n\n### 初始化\
+    \ Fleek 网站\n\n在当前目录中初始化 Fleek 网站：\n\n```\n$ fleek site:init\n```\n\n选择你想要使用的团队（使用箭头键选择）。选择你想要使用的网站（使用箭头键选择）。选择部署的公共目录。\n\
+    \n### 部署你的网站\n\n```\n$ fleek site:deploy\n```\n\n返回 Fleek 网站，点击“Hosting”，点击“Verify\
+    \ on IPFS”。这是你在 IPFS 上托管的网站。你现在可以在线查看你的已部署网站。返回“Hosting”，点击“your-site.on.fleek.co”。这是你的网站友好地址。\n\
+    \n![](img/Image00029.jpg)\n\n---\n\n# ENS - Ethereum Name Service\n\n## 在你的钱包中接收任何加密货币、代币或\
+    \ NFT 上注册你的 ENS\n\n以太坊域名服务（ENS）是一项服务，它使通过简单的名称而不是长而复杂的字母和数字字符串来发送和接收加密货币以及访问特殊网站变得容易。\n\
+    \n- [`ens.domains`](https://ens.domains)\n- [View on YouTube](https://youtu.be/ETQiKiu2KKc)\n\
+    \n| 预计时间 | 3 分钟 |\n\n## 前置要求\n\n- Install and Setup MetaMask Wallet\n\n## 搜索你的域名\n\
+    \n前往 ens.domains，点击“Launch App”。搜索你想要注册的域名（例如：planou.eth）。检查注册期限（最低 1 年）。检查注册价格。请求注册。点击“Request\
+    \ To Register”。MetaMask 通知将打开以确认交易。点击“Confirm”。等待交易在区块链上确认。点击“Register”。将再次显示新的\
+    \ MetaMask 通知。点击“Confirm”。等待交易在区块链上确认。\n\n## 管理你的注册名称\n\n点击“Manage name”。向下滚动到“Addresses”。意识到\
+    \ ETH 地址已设置为创建域名的钱包（你的钱包）。\n\n![](img/Image00030.jpg)\n\n## 检查名称解析\n\n点击你的 MetaMask\
+    \ 钱包。点击“Send”。输入你的 ENS 名称（例如：planou.eth）。注意该名称已解析为钱包地址。\n\n![](img/Image00031.jpg)\n\
+    \n现在你可以使用 ENS 名称作为收件人，而不是使用钱包哈希地址进行交易。\n\n---\n\n# Chainlink：在智能合约中获取加密货币价格\n\n\
+    Chainlink 是一个去中心化的节点网络，通过预言机将离链来源的数据和信息提供给链上智能合约。在这个视频中，你将学习如何在智能合约中获取加密货币的最新价格，使用\
+    \ Kovan 测试网上的 ETH/USD 价格源。\n\n- [`chain.link`](https://chain.link)\n- [View on\
+    \ YouTube](https://youtu.be/ETQiKiu2KKc)\n\n| 预计时间 | 10 分钟 |\n\n## 前置要求\n\n- Install\
+    \ Truffle\n- Create an Account on Infura.io\n- 在 Kovan 网络上从水龙头获取测试以太币\n- Install\
+    \ and Setup MetaMask Wallet\n\n## 命令概览\n\n| 命令 | 说明 |\n| --- | --- |\n| `npm install\
+    \ fs` | 安装 fs 包，该包提供许多非常有用的功能来访问和与文件系统交互。 |\n| `npm install @truffle/hdwallet-provider`\
+    \ | 安装启用 HD 钱包的 Web3 提供程序。这用于为从 12 或 24 个单词助记词派生的地址签署交易。 |\n| `truffle migrate\
+    \ --network kovan` | 运行迁移以部署合约。 |\n\n## 创建项目\n\n打开一个终端，点击“New Terminal”。初始化一个新的\
+    \ Truffle 项目：\n\n```\n$ truffle init\n```\n\n## 安装 Chainlink 合约包\n\n```\n$ npm\
+    \ install @chainlink/contracts\n```\n\n## 创建智能合约\n\n创建一个用于价格消费的新智能合约：\n\n```\n\
+    $ touch contracts/PriceConsumer.sol\n```\n\n打开文件“PriceConsumer.sol”。\n\n![](img/Image00032.jpg)\n\
+    \n定义 Solidity 版本，导入 Chainlink 合约接口，定义合约名称，定义合约构造函数。\n\n### PriceConsumer.sol\n\
+    \n```solidity\n// SPDX-License-Identifier: MIT\n\npragma solidity ⁰.8.0;\n\nimport\
+    \ \"@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol\";\n\n\
+    contract PriceConsumer {\n    AggregatorV3Interface internal priceFeed;\n\n  \
+    \  constructor() {\n        priceFeed = AggregatorV3Interface();\n    }\n}\n```\n\
+    \n前往 [docs.chain.link/docs/ethereum-addresses](https://docs.chain.link/docs/ethereum-addresses)。向下滚动到“Kovan”部分。复制“ETH/USD”行上的“Proxy”地址。\n\
+    \n![](img/Image00033.jpg)\n\n将地址粘贴到 AggregatorV3Interface 构造函数中。创建获取价格的函数。\n\n\
+    ### PriceConsumer.sol\n\n```solidity\n// SPDX-License-Identifier: MIT\n\npragma\
+    \ solidity ⁰.8.0;\n\nimport \"@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol\"\
+    ;\n\ncontract PriceConsumer {\n    AggregatorV3Interface internal priceFeed;\n\
+    \n    constructor() {\n        priceFeed = AggregatorV3Interface(0x9326BFA02ADD2366b30bacB125260Af641031331);\n\
+    \    }\n\n    function getThePrice() public view returns (int) {\n```\n\n"
+  toc: []
+- raw: "           uint80 roundID,  \n\n           int price,  \n\n           uint\
+    \ startedAt,  \n\n           uint timeStamp,  \n\n           uint80 answeredInRound,\
+    \  \n\n       ) = priceFeed.latestRoundDate();  \n\n         return  price;  \n\
+    \n   }  \n\n}  |\n\nCreating the migration Create the migration file \n\n| TERMINAL\
+    \  |\n\n| --- |\n\n| $ touch migrations/2\\_deploy\\_contracts.sol  |\n\n![](Image00034.jpg)Write\
+    \ code to deploy the “PriceConsumer” smart contract \n\n| 2\\_deploy\\_contracts.js\
+    \  |\n\n| --- |\n\n| 1 2 3 4 5  || const  PriceConsumer = artifacts.require( \"\
+    PriceConsumer\" );  \n\n module .exports = function (deployer){  \n\n   deployer.deploy(PriceConsumer);\
+    \  \n\n}  |\n\nSetting up your infura project Go to infura.io Access your dashboard\
+    \ Click on \"ethereum\" Click on \"create a project\" Define the project name\
+    \ You can connect with different testnets and also to the mainnet Copy the project\
+    \ id ![](Image00035.jpg)Save changes Configuring the wallet Install the file system\
+    \ “fs” package \n\n| TERMINAL  |\n\n| --- |\n\n| $ npm install fs  |\n\nInstall\
+    \ the wallet provider “hdwallet” package \n\n| TERMINAL  |\n\n| --- |\n\n| $ npm\
+    \ install @truffle/hdwallet-provider@1.2.3  |\n\nOpen truffle-config.js file Uncomment\
+    \ the HDWalletProvider code section \n\n| truffle-config.js  |\n\n| --- |\n\n\
+    | 21 22 23 24 25  || const  HDWalletProvider = require ( '@truffle/hdwallet-provider'\
+    \ );  \n\n const  infuraKey = 'fj4jll3k.....' ;  \n\n const  fs = require ( 'fs'\
+    \ );  \n\n const  mnemonic = fs.readFileSync( \".secret\" ).toString().trim();\
+    \  |\n\nPaste your Infura project id as a value for the variable infuraKey Configuring\
+    \ the network Uncomment the “ropsten” network section Change “ropsten” to “kovan”\
+    \ Change “ropsten” infura url to “kovan” Change “YOU-PROJECT-ID” to “${infuraKey}”\
+    \ Change the network\\_id to 42 \n\n| truffle-config.js  |\n\n| --- |\n\n| 60\
+    \ 61 62 63 64 65 66 67  || kovan: {  \n\n   provider: () => new   HDWalletProvider(mnemonic,\
+    \ \\`https://kovan.infura.io/v3/${infuraKey}\\` ),  \n\n   network\\_id: 42 ,\
+    \  \n\n   gas: 5500000 ,  \n\n   confirmations: 2 ,  \n\n   timeoutBlocks: 200\
+    \ ,  \n\n   skipDryRun: true   \n\n},  |\n\nConfiguring the solidity compiler\
+    \ Uncomment the “compilers” section Change version to “0.8.0” \n\n| truffle-config.js\
+    \  |\n\n| --- |\n\n| 93 94 95 96 97 98 99 100 101 102 103 104 105  || compilers:\
+    \ {  \n\n   solc: {  \n\n       version: \"0.8.0\" ,  \n\n       docker: true\
+    \ ,  \n\n       settings: {  \n\n           optimizer: {  \n\n               enabled:\
+    \ false ,  \n\n               runs: 200   \n\n           },  \n\n           evmVersion:\
+    \ \"byzantinum\"   \n\n       }  \n\n   }  \n\n},  |\n\nConfiguring the private\
+    \ key Create the secret file \n\n| TERMINAL  |\n\n| --- |\n\n| $ touch .secret\
+    \  |\n\nGo to the browser and open your MetaMask wallet connected to infura network\
+    \ Click on your account Click on \"settings\" Click on \"security & privacy\"\
+    \ ![](Image00016.jpg)Click on \"reveal seed phrase\" Enter your wallet password\
+    \ to continue Copy the private key Paste the wallet mnemonic secret Compiling\
+    \ the smart contract Compile the contract using truffle \n\n| TERMINAL  |\n\n\
+    | --- |\n\n| $ truffle compile  |\n\nDeploying the smart contract Deploy the contract\
+    \ to kovan network using truffle \n\n| TERMINAL  |\n\n| --- |\n\n| $ truffle migrate\
+    \ --network kovan  |\n\nWait for the contract be deployed and the transactions\
+    \ be confirmed on blockchain Confirm your contract address ![](Image00036.jpg)Getting\
+    \ the price information from the smart contract Instantiate the contract using\
+    \ using truffle console \n\n| TERMINAL  |\n\n| --- |\n\n| $ truffle console --network\
+    \ kovan truffle(kovan) let instance = await PriceConsumer.deployed()  |\n\nCall\
+    \ the method “getThePrice” \n\n| TERMINAL  |\n\n| --- |\n\n| truffle(kovan) let\
+    \ price = await instance.getThePrice()  |\n\nOutput the result to number \n\n\
+    | TERMINAL  |\n\n| --- |\n\n| truffle(kovan) price.toNumber()  \n\n 265499339990\
+    \  |\n\nThat’s it, you just created a smart contract and consumed the chainlink\
+    \ price feed oracle! \n\nNethereum Get Ether Balance using Nethereum Nethereum\
+    \ is an open source .NET integration library for Ethereum, simplifying smart contract\
+    \ management and interaction with Ethereum nodes whether they are public or private.\
+    \ [https://nethereum.com](https://www.google.com/url?q=https://nethereum.com&sa=D&source=editors&ust=1624824293641000&usg=AOvVaw0qMtaPY7zw2FJoF5-1Rxnv)\
+    \    [View on YouTube](https://www.google.com/url?q=https://youtu.be/xIYCv15MpbA&sa=D&source=editors&ust=1624824293642000&usg=AOvVaw2qydc0iQhOz5k4yHDhbKTs)\
+    \ \n\n| ESTIMATED TIME  || 5 minutes  |\n\n| --- | --- |\n\nCreating the project\
+    \ Go a Terminal and click on “New Terminal” Create a new dotnet console project\
+    \ \n\n| TERMINAL  |\n\n| --- |\n\n| $ dotnet new console -o sample  |\n\nGo to\
+    \ the project root directory \n\n| TERMINAL  |\n\n| --- |\n\n| $ cd sample  |\n\
+    \nInstalling web3 Install nethereum web3 package \n\n| TERMINAL  |\n\n| --- |\n\
+    \n| $ dotnet add package Nethereum.Web3  |\n\nRestore all the project packages\
+    \ \n\n| TERMINAL  |\n\n| --- |\n\n| $ dotnet restore  |\n\nCreating the method\
+    \ Open “Program.cs” file Add reference for threading and web3 Add a new method\
+    \ for getting the account balance Instantiate a new web3 object Go to your infura\
+    \ project settings Select “Ropsten” network Copy Ropsten https endpoint ![](Image00037.jpg)Use\
+    \ this endpoint as a parameter for web3 object constructor Get the balance from\
+    \ web3 Use your wallet public address as a parameter Write code to output the\
+    \ balance in Wei Convert the Wei balance in Ether Write code to output the balance\
+    \ in Ether Now change your main method in order to call GetAccountBalance() \n\
+    \n| Program.cs  |\n\n| --- |\n\n| 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18\
+    \ 19 20 21 22 23 24 25  || using System;  \n\nusing System.Threading.Tasks;  \n\
+    \nusing Nethereum.Web3;  \n\nnamespace NethereumSample  \n\n{  \n\n     class\
+    \     Program   \n\n   {  \n\n         static     void  Main(string\\[\\] args)\
+    \  \n\n       {  \n\n           GetAccountBalance().Wait();  \n\n           Console.ReadLine();\
+    \  \n\n       }  \n\n          static     async  Task GetAccountBalance()  \n\n\
+           {  \n\n             var  web3 = new  Web3( \"https://ropsten.infura.io/v3/39180531508b4b659780ef7a36426a86\"\
+    \ );  \n\n             var  balance = await  web3.Eth.GetBalance.SendRequestAsync(\
+    \ \"0x03d1b3162DBFaB4A175038eAa4EA4b39423d5A6F\" );  \n\n           Console.WriteLine($\
+    \ \"Balance in Wei: {balance.Value}\" );  \n\n              var  etherAmount =\
+    \ Web3.Convert.FromWei(balance.Value);  \n\n           Console.WriteLine($ \"\
+    Balance in Ether: {etherAmount}\" );  \n\n       }  \n\n   }  \n\n}  |\n\nGetting\
+    \ the balance Build the project \n\n| TERMINAL  |\n\n| --- |\n\n| $ dotnet build\
+    \  |\n\nRun the project \n\n| TERMINAL  |\n\n| --- |\n\n| $ dotnet run  |\n\n\
+    ![](Image00038.jpg)![](Image00039.jpg)"
+  fmt: "\nuint80 roundID,\n\nint price,\n\nuint startedAt,\n\nuint timeStamp,\n\n\
+    uint80 answeredInRound,\n\n) = priceFeed.latestRoundDate();\n\nreturn price;\n\
+    \n}\n\n}\n\nCreating the migration\n\nCreate the migration file\n\n| TERMINAL\
+    \ |\n\n| --- |\n\n| $ touch migrations/2\\_deploy\\_contracts.sol |\n\nWrite code\
+    \ to deploy the “PriceConsumer” smart contract\n\n| 2\\_deploy\\_contracts.js\
+    \ |\n\n| --- |\n\n| 1 2 3 4 5 |\n\n```javascript\nconst PriceConsumer = artifacts.require(\"\
+    PriceConsumer\");\n\nmodule.exports = function (deployer) {\n  deployer.deploy(PriceConsumer);\n\
+    };\n```\n\nSetting up your infura project\n\nGo to infura.io\n\nAccess your dashboard\n\
+    \nClick on \"ethereum\"\n\nClick on \"create a project\"\n\nDefine the project\
+    \ name\n\nYou can connect with different testnets and also to the mainnet\n\n\
+    Copy the project id\n\nSave changes\n\nConfiguring the wallet\n\nInstall the file\
+    \ system “fs” package\n\n| TERMINAL |\n\n| --- |\n\n| $ npm install fs |\n\nInstall\
+    \ the wallet provider “hdwallet” package\n\n| TERMINAL |\n\n| --- |\n\n| $ npm\
+    \ install @truffle/hdwallet-provider@1.2.3 |\n\nOpen `truffle-config.js` file\n\
+    \nUncomment the HDWalletProvider code section\n\n| truffle-config.js |\n\n| ---\
+    \ |\n\n| 21 22 23 24 25 |\n\n```javascript\nconst HDWalletProvider = require('@truffle/hdwallet-provider');\n\
+    \nconst infuraKey = 'fj4jll3k.....';\n\nconst fs = require('fs');\n\nconst mnemonic\
+    \ = fs.readFileSync(\".secret\").toString().trim();\n```\n\nPaste your Infura\
+    \ project id as a value for the variable `infuraKey`\n\nConfiguring the network\n\
+    \nUncomment the “ropsten” network section\n\nChange “ropsten” to “kovan”\n\nChange\
+    \ “ropsten” infura url to “kovan”\n\nChange “YOU-PROJECT-ID” to “`${infuraKey}`”\n\
+    \nChange the `network_id` to 42\n\n| truffle-config.js |\n\n| --- |\n\n| 60 61\
+    \ 62 63 64 65 66 67 |\n\n```javascript\nkovan: {\n  provider: () => new HDWalletProvider(mnemonic,\
+    \ `https://kovan.infura.io/v3/${infuraKey}`),\n  network_id: 42,\n  gas: 5500000,\n\
+    \  confirmations: 2,\n  timeoutBlocks: 200,\n  skipDryRun: true\n},\n```\n\nConfiguring\
+    \ the solidity compiler\n\nUncomment the “compilers” section\n\nChange version\
+    \ to “0.8.0”\n\n| truffle-config.js |\n\n| --- |\n\n| 93 94 95 96 97 98 99 100\
+    \ 101 102 103 104 105 |\n\n```javascript\ncompilers: {\n  solc: {\n    version:\
+    \ \"0.8.0\",\n    docker: true,\n    settings: {\n      optimizer: {\n       \
+    \ enabled: false,\n        runs: 200\n      },\n      evmVersion: \"byzantinum\"\
+    \n    }\n  }\n},\n```\n\nConfiguring the private key\n\nCreate the secret file\n\
+    \n| TERMINAL |\n\n| --- |\n\n| $ touch .secret |\n\nGo to the browser and open\
+    \ your MetaMask wallet connected to infura network\n\nClick on your account\n\n\
+    Click on \"settings\"\n\nClick on \"security & privacy\"\n\nClick on \"reveal\
+    \ seed phrase\"\n\nEnter your wallet password to continue\n\nCopy the private\
+    \ key\n\nPaste the wallet mnemonic secret\n\nCompiling the smart contract\n\n\
+    Compile the contract using truffle\n\n| TERMINAL |\n\n| --- |\n\n| $ truffle compile\
+    \ |\n\nDeploying the smart contract\n\nDeploy the contract to kovan network using\
+    \ truffle\n\n| TERMINAL |\n\n| --- |\n\n| $ truffle migrate --network kovan |\n\
+    \nWait for the contract be deployed and the transactions be confirmed on blockchain\n\
+    \nConfirm your contract address\n\nGetting the price information from the smart\
+    \ contract\n\nInstantiate the contract using using truffle console\n\n| TERMINAL\
+    \ |\n\n| --- |\n\n| $ truffle console --network kovan |\n\n`truffle(kovan) let\
+    \ instance = await PriceConsumer.deployed()`\n\nCall the method “getThePrice”\n\
+    \n| TERMINAL |\n\n| --- |\n\n| `truffle(kovan) let price = await instance.getThePrice()`\
+    \ |\n\nOutput the result to number\n\n| TERMINAL |\n\n| --- |\n\n| `truffle(kovan)\
+    \ price.toNumber()` |\n\n265499339990\n\nThat’s it, you just created a smart contract\
+    \ and consumed the chainlink price feed oracle!\n\nNethereum Get Ether Balance\
+    \ using Nethereum\n\nNethereum is an open source .NET integration library for\
+    \ Ethereum, simplifying smart contract management and interaction with Ethereum\
+    \ nodes whether they are public or private. [https://nethereum.com](https://nethereum.com)\
+    \ [View on YouTube](https://www.google.com/url?q=https://youtu.be/xIYCv15MpbA&sa=D&source=editors&ust=1624824293642000&usg=AOvVaw2qydc0iQhOz5k4yHDhbKTs)\n\
+    \n| ESTIMATED TIME |\n\n| --- |\n\n| 5 minutes |\n\nCreating the project\n\nGo\
+    \ a Terminal and click on “New Terminal”\n\nCreate a new dotnet console project\n\
+    \n| TERMINAL |\n\n| --- |\n\n| $ dotnet new console -o sample |\n\nGo to the project\
+    \ root directory\n\n| TERMINAL |\n\n| --- |\n\n| $ cd sample |\n\nInstalling web3\n\
+    \nInstall nethereum web3 package\n\n| TERMINAL |\n\n| --- |\n\n| $ dotnet add\
+    \ package Nethereum.Web3 |\n\nRestore all the project packages\n\n| TERMINAL |\n\
+    \n| --- |\n\n| $ dotnet restore |\n\nCreating the method\n\nOpen “Program.cs”\
+    \ file\n\nAdd reference for threading and web3\n\nAdd a new method for getting\
+    \ the account balance\n\nInstantiate a new web3 object\n\nGo to your infura project\
+    \ settings\n\nSelect “Ropsten” network\n\nCopy Ropsten https endpoint\n\nUse this\
+    \ endpoint as a parameter for web3 object constructor\n\nGet the balance from\
+    \ web3\n\nUse your wallet public address as a parameter\n\nWrite code to output\
+    \ the balance in Wei\n\nConvert the Wei balance in Ether\n\nWrite code to output\
+    \ the balance in Ether\n\nNow change your main method in order to call `GetAccountBalance()`\n\
+    \n| Program.cs |\n\n| --- |\n\n| 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18\
+    \ 19 20 21 22 23 24 25 |\n\n```csharp\nusing System;\n\nusing System.Threading.Tasks;\n\
+    \nusing Nethereum.Web3;\n\nnamespace NethereumSample\n\n{\n\n    class Program\n\
+    \n    {\n\n        static void Main(string[] args)\n\n        {\n\n          \
+    \  GetAccountBalance().Wait();\n\n            Console.ReadLine();\n\n        }\n\
+    \n        static async Task GetAccountBalance()\n\n        {\n\n            var\
+    \ web3 = new Web3(\"https://ropsten.infura.io/v3/39180531508b4b659780ef7a36426a86\"\
+    );\n\n            var balance = await web3.Eth.GetBalance.SendRequestAsync(\"\
+    0x03d1b3162DBFaB4A175038eAa4EA4b39423d5A6F\");\n\n            Console.WriteLine($\"\
+    Balance in Wei: {balance.Value}\");\n\n            var etherAmount = Web3.Convert.FromWei(balance.Value);\n\
+    \n            Console.WriteLine($\"Balance in Ether: {etherAmount}\");\n\n   \
+    \     }\n\n    }\n\n}\n```\n\nGetting the balance\n\nBuild the project\n\n| TERMINAL\
+    \ |\n\n| --- |\n\n| $ dotnet build |\n\nRun the project\n\n| TERMINAL |\n\n| ---\
+    \ |\n\n| $ dotnet run |\n"
+  trans: "\n\nuint80 roundID,\n\nint price,\n\nuint startedAt,\n\nuint timeStamp,\n\
+    \nuint80 answeredInRound,\n\n) = priceFeed.latestRoundDate();\n\nreturn price;\n\
+    \n}\n\n}\n\n创建迁移\n\n创建迁移文件\n\n| TERMINAL |\n\n| --- |\n\n| $ touch migrations/2\\\
+    _deploy\\_contracts.sol |\n\n编写代码以部署“PriceConsumer”智能合约\n\n| 2\\_deploy\\_contracts.js\
+    \ |\n\n| --- |\n\n| 1 2 3 4 5 |\n\n```javascript\nconst PriceConsumer = artifacts.require(\"\
+    PriceConsumer\");\n\nmodule.exports = function (deployer) {\n  deployer.deploy(PriceConsumer);\n\
+    };\n```\n\n设置 Infura 项目\n\n访问 infura.io\n\n进入控制面板\n\n点击“ethereum”\n\n点击“create\
+    \ a project”\n\n定义项目名称\n\n您可以连接到不同的测试网以及主网\n\n复制项目 ID\n\n保存更改\n\n配置钱包\n\n安装文件系统“fs”包\n\
+    \n| TERMINAL |\n\n| --- |\n\n| $ npm install fs |\n\n安装钱包提供程序“hdwallet”包\n\n|\
+    \ TERMINAL |\n\n| --- |\n\n| $ npm install @truffle/hdwallet-provider@1.2.3 |\n\
+    \n打开 `truffle-config.js` 文件\n\n取消注释 HDWalletProvider 代码部分\n\n| truffle-config.js\
+    \ |\n\n| --- |\n\n| 21 22 23 24 25 |\n\n```javascript\nconst HDWalletProvider\
+    \ = require('@truffle/hdwallet-provider');\n\nconst infuraKey = 'fj4jll3k.....';\n\
+    \nconst fs = require('fs');\n\nconst mnemonic = fs.readFileSync(\".secret\").toString().trim();\n\
+    ```\n\n将 Infura 项目 ID 作为变量 `infuraKey` 的值粘贴进去\n\n配置网络\n\n取消注释“ropsten”网络部分\n\n\
+    将“ropsten”更改为“kovan”\n\n将“ropsten” Infura URL 更改为“kovan”\n\n将“YOU-PROJECT-ID”更改为“`${infuraKey}`”\n\
+    \n将 `network_id` 更改为 42\n\n| truffle-config.js |\n\n| --- |\n\n| 60 61 62 63 64\
+    \ 65 66 67 |\n\n```javascript\nkovan: {\n  provider: () => new HDWalletProvider(mnemonic,\
+    \ `https://kovan.infura.io/v3/${infuraKey}`),\n  network_id: 42,\n  gas: 5500000,\n\
+    \  confirmations: 2,\n  timeoutBlocks: 200,\n  skipDryRun: true\n},\n```\n\n配置\
+    \ Solidity 编译器\n\n取消注释“compilers”部分\n\n将版本更改为“0.8.0”\n\n| truffle-config.js |\n\
+    \n| --- |\n\n| 93 94 95 96 97 98 99 100 101 102 103 104 105 |\n\n```javascript\n\
+    compilers: {\n  solc: {\n    version: \"0.8.0\",\n    docker: true,\n    settings:\
+    \ {\n      optimizer: {\n        enabled: false,\n        runs: 200\n      },\n\
+    \      evmVersion: \"byzantinum\"\n    }\n  }\n},\n```\n\n配置私钥\n\n创建密钥文件\n\n|\
+    \ TERMINAL |\n\n| --- |\n\n| $ touch .secret |\n\n在浏览器中打开连接到 Infura 网络的 MetaMask\
+    \ 钱包\n\n点击您的账户\n\n点击“settings”\n\n点击“security & privacy”\n\n点击“reveal seed phrase”\n\
+    \n输入钱包密码以继续\n\n复制私钥\n\n粘贴钱包助记词密钥\n\n编译智能合约\n\n使用 Truffle 编译合约\n\n| TERMINAL |\n\
+    \n| --- |\n\n| $ truffle compile |\n\n部署智能合约\n\n使用 Truffle 将合约部署到 Kovan 网络\n\n\
+    | TERMINAL |\n\n| --- |\n\n| $ truffle migrate --network kovan |\n\n等待合约部署完成，并在区块链上确认交易\n\
+    \n确认您的合约地址\n\n从智能合约获取价格信息\n\n使用 Truffle 控制台实例化合约\n\n| TERMINAL |\n\n| --- |\n\n\
+    | $ truffle console --network kovan |\n\n`truffle(kovan) let instance = await\
+    \ PriceConsumer.deployed()`\n\n调用方法“getThePrice”\n\n| TERMINAL |\n\n| --- |\n\n\
+    | `truffle(kovan) let price = await instance.getThePrice()` |\n\n将结果输出为数字\n\n\
+    | TERMINAL |\n\n| --- |\n\n| `truffle(kovan) price.toNumber()` |\n\n265499339990\n\
+    \n就是这样，您刚刚创建了一个智能合约并使用了 Chainlink 价格预言机！\n\nNethereum 使用 Nethereum 获取以太币余额\n\n\
+    Nethereum 是一个开源的 .NET 集成库，用于以太坊，简化了智能合约管理以及与以太坊节点（无论是公共还是私有）的交互。[Nethereum](https://nethereum.com)\
+    \ [在 YouTube 上观看](https://www.google.com/url?q=https://youtu.be/xIYCv15MpbA&sa=D&source=editors&ust=1624824293642000&usg=AOvVaw2qydc0iQhOz5k4yHDhbKTs)\n\
+    \n| 预计时间 |\n\n| --- |\n\n| 5 分钟 |\n\n创建项目\n\n打开终端并点击“新建终端”\n\n创建一个新的 .NET 控制台项目\n\
+    \n| TERMINAL |\n\n| --- |\n\n| $ dotnet new console -o sample |\n\n进入项目根目录\n\n\
+    | TERMINAL |\n\n| --- |\n\n| $ cd sample |\n\n安装 Web3\n\n安装 Nethereum Web3 包\n\
+    \n| TERMINAL |\n\n| --- |\n\n| $ dotnet add package Nethereum.Web3 |\n\n还原所有项目包\n\
+    \n| TERMINAL |\n\n| --- |\n\n| $ dotnet restore |\n\n创建方法\n\n打开“Program.cs”文件\n\
+    \n添加线程和 Web3 的引用\n\n添加一个新方法来获取账户余额\n\n实例化一个新的 Web3 对象\n\n进入您的 Infura 项目设置\n\n\
+    选择“Ropsten”网络\n\n复制 Ropsten HTTPS 端点\n\n使用此端点作为 Web3 对象构造函数的参数\n\n从 Web3 获取余额\n\
+    \n使用您的钱包公共地址作为参数\n\n编写代码以 Wei 为单位输出余额\n\n将 Wei 余额转换为以太币\n\n编写代码以以太币为单位输出余额\n\n\
+    现在更改主方法以调用 `GetAccountBalance()`\n\n| Program.cs |\n\n| --- |\n\n| 1 2 3 4 5 6\
+    \ 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 |\n\n```csharp\nusing\
+    \ System;\n\nusing System.Threading.Tasks;\n\nusing Nethereum.Web3;\n\nnamespace\
+    \ NethereumSample\n\n{\n\n    class Program\n\n    {\n\n        static void Main(string[]\
+    \ args)\n\n        {\n\n            GetAccountBalance().Wait();\n\n          \
+    \  Console.ReadLine();\n\n        }\n\n        static async Task GetAccountBalance()\n\
+    \n        {\n\n            var web3 = new Web3(\"https://ropsten.infura.io/v3/39180531508b4b659780ef7a36426a86\"\
+    );\n\n            var balance = await web3.Eth.GetBalance.SendRequestAsync(\"\
+    0x03d1b3162DBFaB4A175038eAa4EA4b39423d5A6F\");\n\n            Console.WriteLine($\"\
+    Balance in Wei: {balance.Value}\");\n\n            var etherAmount = Web3.Convert.FromWei(balance.Value);\n\
+    \n            Console.WriteLine($\"Balance in Ether: {etherAmount}\");\n\n   \
+    \     }\n\n    }\n\n}\n```\n\n获取余额\n\n构建项目\n\n| TERMINAL |\n\n| --- |\n\n| $ dotnet\
+    \ build |\n\n运行项目\n\n| TERMINAL |\n\n| --- |\n\n| $ dotnet run |\n\n"
+  toc: []
