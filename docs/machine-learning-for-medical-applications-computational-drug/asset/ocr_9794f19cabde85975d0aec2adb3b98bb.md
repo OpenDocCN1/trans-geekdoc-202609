@@ -1,0 +1,13 @@
+meeting with a specialist. These technologies increase the chances of care delivery to patients who have rare disease, especially in areas that are remote. Digital health tools also help individualized treatment management because they give real-time data and also allow for more frequent modifications to treatment plans.
+
+# 6.2.4 Gene therapy and personalized interventions for the future
+
+The sustained progress in product development of gene therapy and specific treatments offers directions to personal treatment of rare and hereditary disease. Further advancements are being made in the use of this tool, methods of gene delivering, and to address safety and biological questions, concerning gene therapy. The objectives are the expansion of treatable genetic diseases and improvement in individualized therapy safety and efficacy. Using these technologies, genetic disorders that are though to be incurable at the present can be cured.
+
+# 6.3 Integration of personalized medicine with digital health platforms
+
+Custom medicine, in cooperation with digital health platforms, has introduced significant changes in the provision and administration of healthcare services. Two key areas exemplify how digital technologies are transforming personalized medicine: enhanced analytics and customized therapies, and real-time data collection. Enhanced analytics enable the interpretation of vast amounts of individualized data, leading to more precise therapeutic strategies tailored to each patient’s needs. Meanwhile, real-time data collection through wearable devices and remote monitoring tools allows for continuous health tracking and timely clinical decisions. These developments collectively foster proactive and patient-centered care models. The transformative impacts of these innovations are illustrated in Figure 12, which outlines the integration of digital health tools in personalized medicine workflows.
+
+# 6.3.1 Real-time data collection for monitoring
+
+It means that patient’s health status such as heart rate, blood sugar level, and their activity level are continuously collected in digital health platforms with the use of wearable technology and mobile health apps. The real-time data obtained from these devices, when combined with the concept of customized medicine techniques, can provide continuous and contiguous information of the client’s health status. By this association, healthcare practitioners obtain relevant information to form new treatment plans and timely manage chronic diseases.

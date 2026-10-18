@@ -1,0 +1,13 @@
+and data authenticity of individuals’ genomes, while the smart contracts bring efficiency in decision-making for sharing of data and reward for contributors. With Nebula Genomics’ interoperable platform, all individuals, researchers, and organizations involved in genomics and personalized medicine can work together to unearth more discoveries and develop new related technologies that push the boundaries of healthcare.
+
+# 5 Smart contracts for access control and governance
+
+# 5.1 Introduction to smart contracts in blockchain technology
+
+Smart contracts contain the terms of the contract straight up in the code. This shall mean that in the implementation of the contractual provisions, enforcement shall be done via a blockchain network without the intermediaries. An important part of the blockchain infrastructure is smart contract capable of performing agreements, business logic, and transaction programmatically and in a decentralized manner.
+
+In its simplest form, smart contracts are self-executing programs that reside on blockchain, which execute automatically once predetermined conditions are met. These conditions are often called triggers and are coded into a smart contract and occur on their own when activated by outside events. Although smart contracts are initiated by the user, the set actions are executed without the user’s direct interjection and with no human interference.
+
+One feature of smart contracts is its potential to facilitate customizable and credible cross-party transactions. Smart contract results of those executions are transparent and can be audited as well since they occur on a blockchain, which is inherently open and immutable. Therefore, today there is no need to have middlemen and other reliable parties for supervision and verification of the transactions, which reduces the costs, time, and risks associated with the traditional methods of contract execution.
+
+The use of smart contracts can automate a large spectrum of agreements and transactions ranging from banking, real estate, supply chain, as well as healthcare. Since blockchain is an emerging technology to support health information sharing, smart contracts play a decisive role in the consent process, governance, and access rights in blockchain-based EHR systems. Smart contracts ensure that only authorized parties have access to patient health information and that data sharing happens in accordance with set rules and permissions as also describe data sharing agreements, automate consent management procedures, and enforce access control measures.

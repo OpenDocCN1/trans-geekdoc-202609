@@ -1,0 +1,13 @@
+capability is particularly well-suited for the design of biological materials, which require adaptive strategies capable of shifting from one mode to another in alignment with specific requirements.
+
+# 5.1.1 The use of RL in adaptive material design
+
+RL should be able to aid in the design of adaptive materials in several settings where desirable characteristics include, but are not limited to, strength, flexibility, biocompatibility, and degradation kinetics. For instance, in the synthesis of biodegradable polymers that can be employed in implant production, RL can be applied to determine how to modify the strength and degradation time while considering the medical characteristics. RL can also be used to predict processing conditions on a similar real-time basis, including temperature and pressure, during the synthesis of materials to produce material properties of interest. Because RL-based models can learn from the results of each experiment, such a process enables the efficient and effective discovery of new materials.
+
+# 5.1.2 Strategies for enacting reinforcement learning in material design
+
+There are numerous important directions that must be implemented to incorporate RL into material design. Model-free RL is a particular method in which the unit directly learns from its environment without relying on a model of the material framework. The agent’s search over the material design space can be conducted with the help of methods such as Q-learning. Model-based RL, in contrast, employs a model of the material system to estimate the performance of a set of design choices, making the training phase exponentially faster. This method is useful when collecting experimental data is either expensive or impractical. Another approach is inverse reinforcement learning (IRL), which seeks to mimic and optimize good strategies in effective material design by inferring the reward function from expert behavior that has been analyzed.
+
+# 5.1.3 Difficulties and problems in RL-based material design
+
+Implementation of RL in material design was not without its challenges, especially with respect to the exploration-exploitation dilemma. Managing the curiosity of the RL agent so that it could search through the design space sufficiently without getting stuck in local optima was a delicate task, particularly for-complex materials design space problems, which contain very large and high-dimensional search spaces. Further, scalability was an issue in RL because the models require massive amounts of

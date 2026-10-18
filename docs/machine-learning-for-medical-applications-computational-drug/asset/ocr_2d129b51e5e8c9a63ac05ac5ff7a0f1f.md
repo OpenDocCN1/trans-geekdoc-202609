@@ -1,0 +1,15 @@
+Despite that, anomaly detection has its own set of flaws and shortcomings. Unclean datasets are magnified in Figure 8, where points outside the expected pattern are identified as anomalies. Issues related to the high-dimensionality of the data were one of the major factors that made it difficult to discover noticeable irregularities. In addition, the data distribution and parameters of the data set used in applying the anomaly detection techniques have a significant impact. The objective of future work is to develop new anomaly detection algorithms that possess increased scalability, robustness, and versatility, and work better on large, complex data. Another research topic is the enhancement of the accuracy and reliability of anomaly detection systems through integration with other machine learning techniques, including ensemble methods and deep learning.
+
+# 3.4 Association rule learning
+
+An effectively used type of unsupervised machine learning technique for discovering both more and less obvious relationships in rather large data sets is association rule learning. Exploratory data analysis is when this technique is very useful, as the goal of such analysis is to uncover relationships that are not likely known between variables.
+
+Association Rule Learning was initially applied mainly to the task of finding characteristic relationships between the occurrence of one item and that of another. These are usually stated in the logical form of an “If . . . Then . . .” statement. For example, if a drug has a high binding affinity, then it MUST have caused an adverse reaction. The process of association rule mining was explained with the help of Figure 9, where frequent item sets are employed to develop rules that determine relationships between variables in a set. The core concepts in association rule learning include support, confidence, and lift:
+
+Support: It measured how often an itemset appeared in the dataset as one of the validity measures. The relative frequency of the itemset was used in its calculation.
+
+Confidence quantifies the probability that the consequent (or “then”) part of a rule is true given that the antecedent (or “if”) part of the rule is true. Relevance measures the rule’s reliability and is obtained by using the relative support of the itemset and that of the antecedent.
+
+Lift: Lift first subtracts the predicted support of a rule from the existing support and then-divides it by the predicted support, which is contingent on the presumption that all the components of a rule are independent of each other. It demonstrates the proportion of the outcome with regard to its likelihood of happening, provided the antecedent is given.
+
+Among all the mining association rules approaches, the Apriori algorithm is recognized as one of the most widely used algorithms. It operates in two phases:

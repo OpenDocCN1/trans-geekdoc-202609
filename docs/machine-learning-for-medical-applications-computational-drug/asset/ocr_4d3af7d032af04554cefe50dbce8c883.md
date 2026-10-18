@@ -1,0 +1,13 @@
+# 5 Machine learning in the fabrication and characterization of biomaterials
+
+# 5.1 Predictive modeling for additive manufacturing of biomaterials
+
+The use of predictive modeling was critical in the additive manufacturing (AM) of biomaterials because it predicts the effects of different fabrication processes. Conventional manufacturing processes are replaced with different methods of layered manufacturing, of which the most recognized is 3D printing. In predictive models, the details of biomaterials involved in the AM process are incorporated, as well as their properties, structure, and performance potential, broadly speaking, based on ML. These models play an important role in enhancing the process parameters, limiting the time spent experimenting with various possibilities, and aiding in the search for new types of advanced biomaterials for the medical and industrial sectors. Another use of the predictive modeling technique is to understand the impact of various factors on the final product, which enables researchers to achieve improved and optimized methods of fabrication.
+
+# 5.1.1 Methods and strategies of predictive analytics
+
+Finding the ideal configuration requires assessing ML models’ performance during hyperparameter adjustment. Recall, accuracy, precision, and F1 score are examples of common assessment measures that shed light on the predictive power of the model. Regression models are evaluated for biomaterial applications using additional metrics like MSE to assess how well they predict material qualities. Cross-validation methods, such as k-fold cross-validation, are used to guard against overfitting and guarantee that the model performs consistently across various data subsets. Through a methodical assessment of these indicators, scientists pinpoint the hyperparameter configurations that result in optimal performance, guaranteeing the ML models’ resilience and dependability for biomaterials research.
+
+# 5.1.2 Accommodation of experimental data into machine learning currents
+
+The combination of experimental information with data-scheduled AI methods allows for improving the accuracy and scope of prediction models in additive manufacturing. Process data, such as material aspects, working parameters, and the results of operations, are used to train and calibrate ML algorithms and models as well. This involves collecting experimental data, primarily for integration tasks, preparing this data in

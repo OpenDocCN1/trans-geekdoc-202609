@@ -1,0 +1,15 @@
+their homes. As AI algorithms can recognize early important changes in health status, they can produce alerts and ensure timely medical interventions with overall positive impact on the patients’ well-being and the number of admissions to hospitals.
+
+Technological advancements in wearable health technology enhanced by AI make it easier to monitor one’s health consistently and in real-time, receive tailored feedback and get preventative advice. These devices could be considered as defining the modern healthcare systems, to the extent that disease control, enhanced fitness, and better, more iso-personalized care is underwritten by them.
+
+# 6.2 Implantable sensors for chronic disease management
+
+It should also be noted that implantable sensors have become one of the key technologies for the effective monitoring and control of chronic illnesses as they supply invaluable constant information to the healthcare system and the patient. These implantable sensors offer critical information on internal body circumstances and assist in prevention and control of chronic illnesses including diabetes, cardiovascular diseases, and neurodegenerative diseases.
+
+A well-known use of implantable sensors is in healthcare as regards diabetic patients. Frese style CGM systems use implantable sensors in order to note periodic measurements of blood glucose concentration. These sensors wirelessly send glucose information to other devices and help patients track their glucose levels constantly and fine-tune their insulin treatment. It is useful in keeping blood glucose levels near the desired optimal values and significantly decrease chances of the development of hypoglycemia and so optimize diabetes care.
+
+In the case of cardiovascular disease, implantable sensors have the most important task of tracking the heart rate and diagnosing arrhythmias. Some ICDs and pacemakers have sensors that record electrical activity in the heart and check for abnormality. These sensors can administer therapeutic shock rates independently, thus applying early reparative measures to ambiguous rhythms and minimizing sudden cardiac deaths. The complementation of AI with these sensors goes further by applying prediction on the existing problems and prevents them from escalating.
+
+Parkinson’s disease is one of the neurological disorders that is managed through implantable sensors for the tracking of motor signs and responsiveness to medication. Figure 15 shows different implantable sensors for chronic disease management. Real-time tracking can also be used and DBS systems contain implantable sensors that can monitor the severity of the symptoms and adjust the stimulation parameters for improving therapeutic results. Such an approach of treatment enhances the patients’ symptoms control and enhances overall quality of life of patients with Parkinson’s disease.
+
+Similar implantable sensors are also considered for application in other chronic diseases like chronic pain and inflammatory diseases. Such sensors can be used for

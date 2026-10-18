@@ -1,0 +1,11 @@
+# 5.3 Applications of ML in personalized medicine and patient outcomes
+
+Indeed, machine learning has revolutionized personalized medicine because it has brought an opportunity of making patient treatment plans to improve the outcomes. A large number of data collected from patients help the ML algorithms derive patterns that are useful in developing treatment plans. ML in IVP of personalized medicine is vast, which covers diagnostics, therapeutics, pharmacogenomics, and post-therapy care.
+
+![](bbox=[0.13, 0.35, 0.88, 0.5])
+
+Figure 9: Applications of ML in personalized medicine and patient outcomes.
+
+Diagnosis and prognosis of disease represent key applications of machine learning within the broader context of personalized medicine. To identify relevant biomarkers for various diseases, ML algorithms are used to analyze large and complex datasets, including genomic, proteomic, metabolomic, and clinical data. These models offer powerful capabilities for predicting how diseases initiate, progress, and evolve over time. In the field of oncology, ML techniques are particularly impactful, as they process genomic and histopathological data to classify tumor types, estimate patient survival probabilities, and identify potential therapeutic targets. Figure 9 illustrates this application of ML in cancer prognosis and treatment planning, showing how subcellular tumor characteristics guide the development of individualized interventions for improved patient care.
+
+In making a decision on the forms of treatment, the use of ML is instrumental in identifying which kinds of treatment are most effective for each patient. Patient's data, including genetic differences or geographical background, clinical history, personal response to medications or drug combinations, can be used by machine learning algorithms to predict which treatments would most likely be effective. This method proves more useful, especially with difficult diseases such as cancer, which presents with a wide long list of tumors that require distinct treatment. For instance, in the ML process, each patient's genetic or molecular characteristics is used to estimate the extent to which the patient would best respond to specific targeted drugs or chemotherapy, and avoid side effects as well as invalid treatments.

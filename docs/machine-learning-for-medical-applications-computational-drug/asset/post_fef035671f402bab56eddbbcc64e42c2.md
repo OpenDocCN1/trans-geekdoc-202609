@@ -1,0 +1,46 @@
+
+and to make the analytical tool more versatile. Machine learning brings remarkable versatility to the different methods mentioned above due to the fact that these technologies are widely used to enhance the efficiency of drug safety evaluations.
+
+The chapter has underlined how the basic assessment and validation procedures are as important as methodological innovations. Various strategies of model selection were required to guarantee the validation of the stability and accuracy of the models, and therefore, the need for evaluation on external datasets was critical in confirming that the models perform well when tested on new data that have not been seen before. To turn the theoretical models into effective practical intervention approaches that inspire confidence in practical settings, proper validation was necessary. The use of machine learning technology was appropriate only when there were no questions regarding its ethical concerns. The validity and accuracy of a predictive model are directly associated with data protection, minimized bias, and compliance with regulatory laws.
+
+In the future, newer advancements are expected in the field of drug toxicity prediction. Ongoing improvements in the use of Machine Learning algorithms, changes in regulations, and ethical standards by which AI models are designed and created contribute to the development of even more efficient and reliable models. The continuous integration of these technologies has several benefits for drug safety, minimizes the effects of adverse reactions, and overall helps patients. Such enhancements can be achieved when both researchers and practitioners engaging within this domain embrace them while adhering to advisable ethical practices and valid methods that lead to a safer pharmaceutical system from which the public can benefit.
+
+## References
+
+- [1] Horii, I. (2016). The principle of safety evaluation in medicinal drug-how can toxicology contribute to drug discovery and development as a multidisciplinary science? The Journal of Toxicological Sciences, 41(Special), SP49–SP67.
+- [2] Wu, F., Zhou, Y., Li, L., Shen, X., Chen, G., Wang, X., . . . & Huang, Z. (2020). Computational approaches in preclinical studies on drug discovery and development. Frontiers in Chemistry, 8, 726.
+- [3] Vamathevan, J., Clark, D., Czodrowski, P., Dunham, I., Ferran, E., Lee, G., . . . & Zhao, S. (2019). Applications of machine learning in drug discovery and development. Nature Reviews Drug Discovery, 18(6), 463–477.
+- [4] L'heureux, A., Grolinger, K., Elyamany, H. F., & Capretz, M. A. (2017). Machine learning with big data: Challenges and approaches. IEEE Access, 5, 7776–7797.
+- [5] Gombar, V. K., Mattioni, B. E., Zwickl, C., & Deahl, J. T. (2007). Computational approaches for assessment of toxicity: A historical perspective and current status. Computational Toxicology: Risk Assessment for Pharmaceutical and Environmental Chemicals, 183–215.
+- [6] Berhanu, W. M., Pillai, G. G., Oliferenko, A. A., & Katritzky, A. R. (2012). Quantitative structure–activity/property relationships: The ubiquitous links between cause and effect. ChemPlusChem, 77(7), 507–517.
+- [7] Thomford, N. E., Senthebane, D. A., Rowe, A., Munro, D., Seele, P., Maroyi, A., & Dzobo, K. (2018). Natural products for drug discovery in the 21st century: Innovations for novel drug discovery. International Journal of Molecular Sciences, 19(6), 1578.
+- [8] Valic, M. S., & Zheng, G. (2019). Research tools for extrapolating the disposition and pharmacokinetics of nanomaterials from preclinical animals to humans. Theranostics, 9(11), 3365.
+- [9] Oberkampf, W. L., Trucano, T. G., & Hirsch, C. (2004). Verification, validation, and predictive capability in computational engineering and physics. Applied Mechanics Reviews, 57(5), 345–384.
+- [10] Ceriotti, M. (2019). Unsupervised machine learning in atomistic simulations, between predictions and understanding. The Journal of Chemical Physics, 150(15).
+- [11] Kotsiantis, S. B., Zaharakis, I., & Pintelas, P. (2007). Supervised machine learning: A review of classification techniques. Emerging Artificial Intelligence Applications in Computer Engineering, 160(1), 3–24.
+- [12] Usama, M., Qadir, J., Raza, A., Arif, H., Yau, K. L. A., Elkhatib, Y., . . . & Al-Fuqaha, A. (2019). Unsupervised machine learning for networking: Techniques, applications and research challenges. IEEE Access, 7, 65579–65615.
+- [13] Dara, S., Dhamercherla, S., Jadav, S. S., Babu, C. M., & Ahsan, M. J. (2022). Machine learning in drug discovery: A review. Artificial Intelligence Review, 55(3), 1947–1999.
+- [14] Gupta, R., Srivastava, D., Sahu, M., Tiwari, S., Ambasta, R. K., & Kumar, P. (2021). Artificial intelligence to deep learning: Machine intelligence approach for drug discovery. Molecular Diversity, 25, 1315–1360.
+- [15] Zhang, L., Zhang, H., Ai, H., Hu, H., Li, S., Zhao, J., & Liu, H. (2018). Applications of machine learning methods in drug toxicity prediction. Current Topics in Medicinal Chemistry, 18(12), 987–997.
+- [16] Green, L. W., & Glasgow, R. E. (2006). Evaluating the relevance, generalization, and applicability of research: Issues in external validation and translation methodology. Evaluation & the Health Professions, 29(1), 126–153.
+- [17] Cawley, G. C., & Talbot, N. L. (2010). On over-fitting in model selection and subsequent selection bias in performance evaluation. The Journal of Machine Learning Research, 11, 2079–2107.
+- [18] Tantithamthavorn, C., McIntosh, S., Hassan, A. E., & Matsumoto, K. (2016). An empirical comparison of model validation techniques for defect prediction models. IEEE Transactions on Software Engineering, 43(1), 1–18.
+- [19] Kevers, T. L. (2019). Cross-validation was insufficient for model validation. Joint and Operations Analysis Division. Victoria, Australia: Defence Science and Technology Group.
+- [20] Cocoros, N. M., Arlett, P., Dreyer, N. A., Ishiguro, C., Iyasu, S., Sturkenboom, M., . . . & Toh, S. (2021). The certainty framework for assessing real-world data in studies of medical product safety and effectiveness. Clinical Pharmacology & Therapeutics, 109(5), 1189–1196.
+- [21] Jia, Y., McDermid, J., Lawton, T., & Habli, I. (2022). The role of explainability in assuring safety of machine learning in healthcare. IEEE Transactions on Emerging Topics in Computing, 10(4), 1746–1760.
+- [22] Vo, A. H., Van Vleet, T. R., Gupta, R. R., Liguori, M. J., & Rao, M. S. (2019). An overview of machine learning and big data for drug toxicity evaluation. Chemical Research in Toxicology, 33(1), 20–37.
+- [23] Idakwo, G., Luttrell, J., Chen, M., Hong, H., Zhou, Z., Gong, P., & Zhang, C. (2018). A review on machine learning methods for in silico toxicity prediction. Journal of Environmental Science and Health, Part C, 36(4), 169–191.
+- [24] Mensah, G. B. (2023). Artificial intelligence and ethics: A comprehensive review of bias mitigation, transparency, and accountability in AI Systems. Preprint, November, 10.
+- [25] Tatineni, S. (2019). Ethical considerations in AI and Data Science: Bias, fairness, and accountability. International Journal of Information Technology and Management Information Systems (IJITMIS), 10(1), 11–21.
+
+P. Nagarajan, D. David Neels Ponkumar
+
+## Machine learning innovations in biomedical materials from drug discovery to personalized medicine
+
+Abstract: Machine learning (ML) has also introduced new paradigms to biomedical materials science for new material discovery, material optimization, and customized treatment. Pertinent to this, this chapter presents a comprehensive review of the progress and applications of ML in fabricating biomedical materials, including drug discovery and patient-specific treatment. Some of the unambiguously critical areas of ML, which are transfer learning, predictive modeling, and high-throughput screening, are discussed from the point of view of how they can be useful in improving material performance and efficiency. Despite this, the focus is on presenting use cases, especially the application of ML toward improving the systems used for drug delivery, the scaffolds employed for tissue engineering, and the “tailoring” of medical treatments. Besides offering solutions to such crucial questions as data integration, model interpretability, and computational requirements, the chapter provides readers with an idea of the future directions for research and advancement. This chapter shows how ML is a revolutionary method in biological material science and in improving patients’ lives by bridging the gap between computational and clinical utilization.
+
+Keywords: machine learning, biomedical materials, drug discovery, personalized medicine, material optimization, data integration
+
+### 1 Introduction
+
+Having emerged as a disruptive technology in the biomedical materials research domain, machine learning (ML) was already revolutionizing how materials are selected, designed, and fine-tuned for specific healthcare applications [1]. The manufacturing of biomedical materials has for a long time mainly relied on basic methods, experimental methods, and random processes, which often required a lot of time and resources [2]. As a result, the incorporation of ML into the analysis of complex data to identify relationships that are not easily distinguished using traditional approaches

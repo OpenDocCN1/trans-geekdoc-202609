@@ -1,0 +1,15 @@
+instruments can “read” images of the patient’s scans to look for signs of disease like cancers and then report back to radiologists who attest its accuracy of up to 95%. This capability helps maintain a fast and accurate diagnosis, which is of great help to clinicians in making the right decisions.
+
+The other major area where AI has made a big impact is the area of telehealth is in the creation of virtual health assistants and chatbots. Such devices can interact with patients in order to obtain symptoms data, propose preliminary diagnosis, and reveal the actions to be taken. These virtual assistants filter patient complaints and provide the information on illnesses to avoid overload of healthcare officials. This is especially beneficial in the event that the user is in a remote area where access to medical practitioners can be very rare.
+
+In telemedicine, AI is also used to identify patients’ needs and provide appropriate follow-up service. Analytical models for predictive assessment work through patterns in records to identify potential sickness risks and to formulate individual treatment plans. Using wearable sensors, AI for instance, tracks patients with chronic diseases such as diabetes and alerts the patient in real time. Preventive measures in healthcare are promoted and the management of such diseases is enhanced by the targeted approach.
+
+The impact of AI in telehealth is in data integration and data interoperability to improve the efficacy of the platform. AI systems can combine patient data not only from mHealth applications, wearable devices, and home monitoring applications, but also data from the patient’s EHR. Such an approach enhances continuity of care since care providers are compelled to work as a team in delivering optimum care and the resultant care plans are based on a coordinated perception of the patient’s ailment.
+
+AI also has an impact on the technical side when applied to telehealth with regard to access and equity questions. Since teleconsultations offer the possibility to overcome language barriers, telehealth platforms can reach populations and communities that hardly have access to relevant healthcare services. This helps spread the knowledge of medical professionals and also helps achieve fairness with medical services.
+
+# 6.5 Success stories and clinical trials
+
+Several success stories in connection with AI integration with biomedical sensors exist, and multiple significant clinical trials have been made proving the effectiveness of such technologies.
+
+A new success story is the creation of AI-based wearable technology for constant blood glucose monitoring. Abbott Diabetes Care and Dexcom are leading glucose sensors that utilize AI algorithms to give out glucose level readings in real time. Some of these devices are being tested with a level of efficacy that has reduced incidences of hypoglycemia and enhanced glycemic control in diabetics. For instance, the Dexcom G6 continuous glucose monitoring system has been tested scientifically and clinically,

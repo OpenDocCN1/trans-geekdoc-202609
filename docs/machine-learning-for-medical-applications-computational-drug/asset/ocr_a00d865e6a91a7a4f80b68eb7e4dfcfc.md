@@ -1,0 +1,15 @@
+# 5.4.6 Pruning techniques
+
+Recurrently, some form of model simplification was performed using pruning to reduce model complexity by eliminating the least useful features. In neural networks, the pruning process means removing the neurons that have limited impact on the particular model. This avoided model complexity, reduced the need for computation, and was likely to perform well on unseen data. Pruning assists in eliminating high variance and highlights the existence of features that are most important in the model, enhancing interpretability.
+
+# 5.5 Benchmarking and comparing ML models in biomedical materials
+
+Comparing and benchmarking ML models is very essential in biomedical material science since it allows the evaluation of the effectiveness of models by testing them against a benchmark model to determine their suitability for specific applications. This process involves a comprehensive evaluation of different models against a set of predetermined parameters in an effort to assess their ability to accurately predict the properties of materials, their behavior, and their interactions.
+
+One of the important aspects of benchmarking ML models was the development of performance metrics. Many measures used in the field of biological materials research include accuracy, precision, recall, F1 score, and AUC-ROC. These measurements provide insight into how efficient models are when it comes to addressing activities such as material-type classification and property estimation of appropriate materials. Choosing the right metrics is what enables the depiction of the model's ability to meet the specific needs of the biomedical application in question, as demonstrated in Figure 10.
+
+Another aspect that was considered during benchmarking was the extent to which the employed data sets were standardized. To benchmark, what was required were datasets that are recognized in the research literature and pertain to the issue area. The application of datasets standardizes the methods utilized in the assessment of models and facilitates extensive cross-study comparison. For the same purpose, to provide a realistic assessment of the generalization capabilities of models, the datasets should also be separated into training, validation, and test sets.
+
+In most cases, techniques for cross-validation are applied to make benchmarking more reliable. For example, in k-fold cross-validation, the patterns are split into k sets, and the model is run and verified k times by using the sets of patterns. This actually helps to reduce the risk of overfitting as well as ensuring that the performance of the model is steady for any chosen data division.
+
+The other dimension in model comparison was the scalability and computational cost of the developed ML models. This was especially true for biological materials,

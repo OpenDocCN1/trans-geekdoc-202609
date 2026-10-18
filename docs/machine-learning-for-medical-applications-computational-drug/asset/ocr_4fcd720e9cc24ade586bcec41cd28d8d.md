@@ -1,0 +1,13 @@
+cult optimization tasks and the ability to respond to changes in context – key features that suggest the applicability of RL to biomaterial design and manufacturing process improvement. All the case studies demonstrate the potential gains and challenges associated with the RL approach when applying it to actual biomaterial use cases.
+
+# 4.2.3 Challenges in implementing reinforcement learning (RL) for biomaterials
+
+Implementing RL for biomaterials presents several challenges including the need for accurate simulation models and the high computational cost associated with training agents. Developing reliable simulations that accurately reflect the behavior of biomaterials in various conditions is crucial for effective RL training. The well-known RL predicament of the exploration vs. exploitation dilemma often results in suboptimal solutions if the agent spends too long exploring the space before deciding on the most efficient action. Meeting these needs requires enhancing the simulation realism, making simulations shorter, and ensuring that RL algorithms are ready to adapt between exploitation and exploration if the goal is to reach good design solutions.
+
+# 4.3 Bayesian optimization for efficient material search
+
+Bayesian optimization is a powerful and efficient strategy for optimizing complex, costly functions, making it especially valuable in materials science for the discovery and refinement of optimal biomaterial properties. This method uses probabilistic surrogate models, often based on Gaussian processes, to estimate how a biomaterial will perform given specific input features. The central concept involves constructing a surrogate model of the objective function and using it to strategically explore the input space. With each iteration, Bayesian optimization updates the model using new data and concentrates the search on the most promising regions. This approach significantly reduces the number of required experiments while still identifying high-performing materials, thereby accelerating innovation and conserving resources. Figure 7 illustrates the Bayesian optimization workflow in biomaterial discovery, showcasing how it guides efficient exploration through iterative learning.
+
+# 4.3.1 Application of Bayesian methods in biomaterial discovery
+
+In biomaterial discovery, Bayesian optimization was utilized to systematically explore and identify materials with desirable properties. This approach was particularly useful when the objective function was expensive to evaluate, such as in the case of experimental material testing. The objective functions are applied to enhance more than one material property, such as mechanical strength, biocompatibility, and dura-

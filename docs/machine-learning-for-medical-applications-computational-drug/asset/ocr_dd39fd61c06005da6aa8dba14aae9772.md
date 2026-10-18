@@ -1,0 +1,15 @@
+ity, and sleep pattern. Information from this data is used in digital health platforms to provide personalized health assessments as well as recognizing possible health issues early. Some of the recent wearable technologies include highly sensitive biosensors that can analyze biomarkers originating from perspiration, saliva, and other body fluids that offer new opportunities for noninvasive health monitoring and personalized therapy.
+
+These advancements in diagnostic modalities are key to moving personalized medicine forward, as they offer the ability to better, faster, and more individually assess the status of people’s health. New prospects for the integration of such technologies are expected to be continuously elaborated to provide better substantiation for personalized therapies and optimize the overall outcomes of patients with various diseases.
+
+# 4.4 The role of artificial intelligence and machine learning
+
+AI and ML are now considered pioneers in the process of roulette of the modern approach to the treatment of diseases – individualized therapy. These technologies have helped in easier assessment of several and complex databases, and predictions and prognosis about the patients, and individual patient management. These technologies involve the use of high-end computers and efficient algorithms to identify features that a normal running procedure overlooks.
+
+In this paper, the two concepts are predictive modeling and risk assessment.
+
+Risk prediction is another critical domain within personalized medicine that leverages artificial intelligence (AI) and machine learning (ML), extending beyond the capabilities of traditional medical decision-making. As depicted in Figure 7, this approach utilizes diverse subtypes of patient data including electronic health records, genomic data, disease-specific characteristics, and lifestyle factors. Supervised learning algorithms are commonly employed to analyze this information and predict health risks. Based on individual characteristics, these tools estimate the likelihood of developing certain conditions, thereby enabling early intervention. For example, ML models can predict the onset of diabetes by analyzing large-scale patient datasets, allowing healthcare providers to initiate timely treatments and implement preventive strategies.
+
+# 4.4.1 Enhancing diagnostic accuracy
+
+Diagnosis is becoming less of a problem, given that AI is introducing tools that increase both accuracy and efficiency of diagnostics. Among the emerging technologies, ML, with its subfield, deep learning algorithms, produces accurate results in analyzing medical images, including MRI, CT scans, and X-rays. Most of these algorithms can diagnose anomalies with great accuracy, and at times, surpass the skills of the best radiologists in the world. For instance, AI solutions have been designed to detect the first

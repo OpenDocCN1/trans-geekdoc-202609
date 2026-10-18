@@ -1,0 +1,13 @@
+about biomedical materials without previously defining their characteristics. This particular type of ML deals with transforming data into machine-processable structures where the internal structure of groups and relations between them is implicitly defined. There are several key methods that fall under the umbrella of unsupervised learning in biomedical material science applications, all of which support material characterization and prospective uses.
+
+# 3.2.1 Clustering techniques
+
+As one of the categories in unsupervised learning, clustering algorithms take similar materials and group them based on existing features. Despite a few differences, one technique that was used most to classify data into k subsets, whereby the variance within the cluster was minimized, was known as k-means clustering. This was a versatile approach within which the materials can be categorized, depending on characteristics including medication release patterns, mechanical features, biocompatibility, among others. Another method, called hierarchical clustering, constructs a tree-like structure with the clusters stacked one on top of another, and this allows the analysis of material correlation at different levels of detail. The significance of some biological applications requires the identification of groups of materials with similar characteristics, which has become possible owing to these clustering methods.
+
+# 3.2.2 Data visualization
+
+Many applications are provided features by dimensionality reduction for decoding and representation of relational datasets. Another well-known method widely used to tackle the high-dimensionality problem of the data, while retaining most of the variation, is called principal component analysis (PCA). In material datasets, PCA can reveal such essential aspects as trends between different attributes. Along the same line, the nonlinear dimensionality reduction tool called t-distributed stochastic neighbor embedding is used and provides a two-dimensional representation of high-dimensional data. These techniques assist in how to categorize and choose the material since it is not easy to identify clustered data.
+
+# 3.2.3 Applying the concept of material discovery and optimization
+
+Some of the applications of techniques for unsupervised learning are illustrated concerning the optimization and discovery of new materials. For instance, they show new materials with desired characteristics for specific biological uses by categorizing materials not seen before. From high-throughput studies, complex information was

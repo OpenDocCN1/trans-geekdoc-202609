@@ -1,0 +1,11 @@
+# 5.4.3 Early stopping
+
+One of the training techniques discussed here was about stopping early – with the aim of avoiding overfitting, one monitors the model's performance on a validation set. When the model gives bad results on the validation set, it is likely that the model has started overfitting, and hence the training is stopped. In this way, the effects of using this method are that the model is prevented from learning paradigms specific to the training data, which results in poor generalization on new data. This helps in achieving a balance between the criterion for accurate models and evaluation on generalization by training the model for the optimal duration.
+
+# 5.4.4 Data augmentation
+
+The general idea of data augmentation is to create new instances out of the current data by somehow transforming it so that, at its essence, the size and variety of the training data set are artificially boosted. Thus, there are steps for the augmentation of the data in terms of biological materials, where noise is added to the records, and they are scaled and rotated. In other words, augmentation of the data contributes to improving model robustness due to the reduction of the probability of overfitting to some of the training data samples.
+
+# 5.4.5 Ensemble methods
+
+Ensemble methods do not fit the models to an extreme, which leads to the development of an overfitted model and also improves the general performance by coming up with a general conclusion of each model developed. Bagging, boosting, and the stacking methodology involve creating another layer of models and making the predictions be in one. To have higher stability and reduce the variability, many times a model is generated with different subsamples of data through bagging (bootstrap aggregating), and then their prediction average is taken. Whereas, in stacking, the results of different models for classification are combined using another model known as a meta-learner. In boosting, different models are learned progressively, and each tries to rectify the errors made by the previous model. Ensemble allows for leveraging the preferred and stronger aspects of several models and, at the same time, addresses the problem of over-empowerment for improved generalization.
