@@ -1,0 +1,93 @@
+
+
+# SAP HANA 密码策略安全设置
+
+这些密码策略安全设置特定于 SAP HANA 内部身份验证，允许更改密码策略。两个主要配置文件会影响密码策略。如果 SAP HANA 系统设置为单容器系统，则 `indexserver.ini` 文件将用于密码策略设置。此配置文件包含特定于 SAP HANA 索引服务器进程的设置。可以针对特定服务器节点上的索引服务器进程或集群中的所有索引服务器输入设置。为了容纳集群中的所有服务器，应使用系统层。为了容纳特定主机，应使用主机层。如果 SAP HANA 系统设置为多容器系统，则 `nameserver.ini` 文件将用于管理系统数据库的策略。
+
+在本节中，我们将回顾 SAP HANA 中的密码策略设置，并演示如何使用 SQL 语句、SAP HANA cockpit 和 SAP HANA Web-Based Development Workbench 安全管理器逐步配置密码策略设置。
+
+SAP HANA 为安全管理员提供了多种选项来操纵其内部基本身份验证机制的行为。特定设置允许您根据需要加强密码策略标准或放宽它们。让我们按技术名称详细查看这些设置。
+
+## minimal_password_length
+
+`minimal_password_length` 设置控制密码允许的最小长度。系统支持 6 到 64 个字符的长度。在创建用户帐户或更改密码时，指定的密码必须符合配置的最小密码长度。大多数 GUI 将此设置称为 Minimum Password Length。
+
+## password_layout
+
+`password_layout` 设置控制密码支持的最小复杂性。设置值基于输入的表达式模式。要定义模式，可以从以下字符表达式中选择一个或多个：
+
+* 小写字母 a 到 z
+* 大写字母 A 到 Z
+* 数字 0 到 9
+* 键盘上大多数特殊字符
+
+要定义最小复杂性表达式，请从每个受支持的字符中选择值。字符可以按任何顺序输入，但请记住，重复字符会改变模式的评估方式。例如，如果最小密码复杂性要求至少使用一个大写字母、两个小写字母和三个数字，则可以指定表达式 `Abc123`、`156Cxf` 或 `Fa103c`。对于特殊字符，您将在模式中使用下划线 (`_`)。如果复杂性要求至少一个大写字母、一个数字和一个特殊字符，则可以指定表达式 `G3_`。同样，使用的特定字母、数字或字符顺序并不重要，但使用多个相同类型的字符很重要。系统查看指定的模式以确定最小复杂性。要禁用最小复杂性要求，请将表达式指定为空字符串值。但是，建议至少指定默认表达式模式 `Aa1`。大多数 GUI 将此设置称为 Required Character Types。
+
+### 在密码中使用特殊字符
+
+虽然在密码中使用特殊字符是增加密码复杂性的绝佳方式，但用户可能会在从某些客户端向 SAP HANA 进行身份验证时遇到困难。当密码包含特殊字符时，SAP HANA 要求将特殊字符用双引号发送到系统（例如，`"\_"`）。如果客户端未能遵守此要求，用户可能无法进行身份验证。因此，我们强烈建议在所有密码中强制使用特殊字符之前，检查所有必需的客户端接口是否能够使用密码中包含特殊字符的用户进行身份验证。
+
+## force_first_password_change
+
+`force_first_password_change` 设置规定用户在首次尝试与系统进行身份验证之前是否必须更改其初始密码。大多数 GUI 将此设置称为 Password Change Required on First Logon。
+
+当设置为 `true` 时，用户必须更改管理员建立的密码，然后才能完全登录系统。当设置为 `false` 时，用户可以使用管理员创建的密码登录。请注意，在将来的某个时间点，用户可能会根据其他密码策略设置被迫更改密码。
+
+在每个用户的基础上，您可以发出以下 SQL 语句以要求在下一次身份验证尝试之前更改密码：
+
+```sql
+ALTER USER <USER_NAME> FORCE PASSWORD CHANGE
+```
+
+您还可以在每个用户的基础上创建或更改用户帐户并禁用此策略。以下 SQL 语句在每个用户帐户的基础上禁用该策略：
+
+```sql
+CREATE USER <USER_NAME> PASSWORD "!niti@LPass" NO FORCE_FIRST_PASSWORD_CHANGE
+ALTER USER <USER_NAME> PASSWORD "!niti@LPass" NO FORCE_FIRST_PASSWORD_CHANGE
+```
+
+发出 `ALTER` 语句时，必须指定密码，否则语句不会执行。根据密码重用策略的配置，发出 `ALTER` 语句时可能需要新密码。
+
+## last_used_passwords
+
+`last_used_passwords` 设置控制在同一密码可以再次使用之前必须更改密码的最小次数。此设置强制用户在每次更改密码或每次被要求更改密码时，选择未在最近 x 个密码中使用过的密码。默认值为五个先前的密码。如果指定值为 0，则可以随时重用密码。大多数 GUI 将此设置称为 Number of Last Used Passwords That Cannot Be Reused。
+
+## maximum_invalid_connect_attempts
+
+`maximum_invalid_connect_attempts` 设置指定在系统锁定帐户以防止进一步访问之前，给定帐户的失败登录尝试的最小次数。大多数 GUI 将此设置称为 Number of Allowed Failed Logon Attempts。
+
+此设置的最小值为 1，文档中未指定最大值。系统默认在帐户被锁定之前允许六次无效登录尝试。一旦帐户被锁定，用户帐户就无法与系统进行身份验证。用户必须等待系统在配置的持续时间后解锁帐户，或等待管理员手动解锁帐户。如果配置设置中将锁定无限期策略设置为 `true`，系统不会解锁帐户。仅当启用锁定无限期策略时，管理员才能解锁帐户。
+
+管理员可以发出以下 SQL 语句来解锁用户帐户：
+
+```sql
+ALTER USER <USER_NAME> RESET CONNECT ATTEMPTS;
+```
+
+要列出无效连接尝试次数超过配置的无效连接尝试策略的帐户，请执行 [Listing 12.1](#12_001.html#l12.1) 中显示的 SQL 代码：
+
+```sql
+SELECT 
+X.USER_NAME, 
+X.INVALID_CONNECT_ATTEMPTS,
+(CASE WHEN X.INVALID_CONNECT_ATTEMPTS >= X.PASSPOL 
+THEN 'Locked' ELSE 'OK' END) AS ACCOUNT_STATUS
+FROM
+    (
+SELECT USER_NAME, INVALID_CONNECT_ATTEMPTS,
+(SELECT TOP 1 "VALUE" FROM "SYS"."M_PASSWORD_POLICY" 
+WHERE PROPERTY = 'maximum_invalid_connect_attempts') 
+AS PASSPOL
+FROM "SYS"."USERS"
+    ) X
+WHERE X.INVALID_CONNECT_ATTEMPTS >= X.PASSPOL
+```
+
+**Listing 12.1** SQL Code to List Account Status for Users in an SAP HANA System
+
+每次用户成功登录时，活动连续失败连接尝试的次数都会重置。但是，系统会记录每次成功登录之前发出的历史失败尝试次数。以下 SQL 语句将查询包含每次成功连接尝试的时间戳之前的失败连接尝试历史记录的系统视图：
+
+```sql
+SELECT * FROM SYS.INVALID_CONNECT_ATTEMPTS
+```
+
