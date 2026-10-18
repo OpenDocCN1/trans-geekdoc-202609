@@ -1,0 +1,2140 @@
+- raw: "\n\n![](image_rsrc8T.jpg)\n\nArtificial Intelligence A Modern Approach and\
+    \ Machine Learning  \n\nJones O. Godwin  \n\nContents [INTRODUCTION.......................................................................5](#part0001.xhtml#a87)\
+    \  \n\n[Chapter 1: What is Artificial Intelligence? ..............................6](#part0001.xhtml#a88)\
+    \  \n\n[How Does AI Work? ................................................................8](#part0001.xhtml#a89)\
+    \  \n\n[Chapter 2: Evolution Of AI: 4 Types Of AI .............................11](#part0001.xhtml#a8A)\
+    \  \n\n[What Is Machine Learning? ..................................................16](#part0001.xhtml#a8B)\
+    \  \n\n[Machine learning vs. deep learning......................................16](#part0001.xhtml#a8C)\
+    \  \n\n[What Is Deep Learning?........................................................18](#part0001.xhtml#a8D)\
+    \ [Chapter 3: Wrapping Up: AI Vs. Machine Learning Vs. Deep Learning ................................................................................20](#part0001.xhtml#a8J)\
+    \ [Understanding Strong vs. Weak AI in a New Light ...............21](#part0001.xhtml#a8M)\
+    \  \n\n[What Do you think these Terms Mean, Strong & Weak AI? 23](#part0001.xhtml#a8N)\
+    \  \n\n[Chapter 4: Why Is AI Important In The Enterprise?..............32](#part0001.xhtml#a8P)\
+    \  \n\n[Chapter 5: Current And Potential Use Cases ........................43](#part0001.xhtml#a8R)\
+    \ [Chapter 6: Artificial Intelligence Trends: Giant Chips, New Cpus, Neuro-Symbolic\
+    \ AI ......................................................52](#part0001.xhtml#a8F)\
+    \ [CONCLUSION.........................................................................66](#part0001.xhtml#a8H)\
+    \ Copyright 2020 © Jones O Godwin All rights reserved. This book is copyright\
+    \ and no part of it may be reproduced, stored or transmitted, in any form or means,\
+    \ without the prior written permission of the copyright owner. Printed in the\
+    \ United States of America Copyright 2020 © Jones O Godwin INTRODUCTION The application\
+    \ of artificial intelligence in the enterprise will profoundly change the way\
+    \ businesses work around the globe. Companies are beginning to incorporate AI\
+    \ into their business operations on daily bases with the target of saving money,\
+    \ boosting efficiency, generating insights and creating new markets for business\
+    \ expansion. There are AI-powered applications to  \n\ncustomer service, maximize\
+    \ sales,  \n\noptimize supply chains,  "
+  fmt: "\n\n![](image_rsrc8T.jpg)\n\n# Artificial Intelligence A Modern Approach and\
+    \ Machine Learning\n\nJones O. Godwin\n\n## Contents\n\n- [INTRODUCTION](#part0001.xhtml#a87)\n\
+    - [Chapter 1: What is Artificial Intelligence?](#part0001.xhtml#a88)\n  - [How\
+    \ Does AI Work?](#part0001.xhtml#a89)\n- [Chapter 2: Evolution Of AI: 4 Types\
+    \ Of AI](#part0001.xhtml#a8A)\n- [What Is Machine Learning?](#part0001.xhtml#a8B)\n\
+    - [Machine learning vs. deep learning](#part0001.xhtml#a8C)\n- [What Is Deep Learning?](#part0001.xhtml#a8D)\n\
+    - [Chapter 3: Wrapping Up: AI Vs. Machine Learning Vs. Deep Learning](#part0001.xhtml#a8J)\n\
+    - [Understanding Strong vs. Weak AI in a New Light](#part0001.xhtml#a8M)\n- [What\
+    \ Do you think these Terms Mean, Strong & Weak AI?](#part0001.xhtml#a8N)\n- [Chapter\
+    \ 4: Why Is AI Important In The Enterprise?](#part0001.xhtml#a8P)\n- [Chapter\
+    \ 5: Current And Potential Use Cases](#part0001.xhtml#a8R)\n- [Chapter 6: Artificial\
+    \ Intelligence Trends: Giant Chips, New Cpus, Neuro-Symbolic AI](#part0001.xhtml#a8F)\n\
+    - [CONCLUSION](#part0001.xhtml#a8H)\n\nCopyright 2020 © Jones O Godwin All rights\
+    \ reserved. This book is copyright and no part of it may be reproduced, stored\
+    \ or transmitted, in any form or means, without the prior written permission of\
+    \ the copyright owner. Printed in the United States of America Copyright 2020\
+    \ © Jones O Godwin\n\n## INTRODUCTION\n\nThe application of artificial intelligence\
+    \ in the enterprise will profoundly change the way businesses work around the\
+    \ globe. Companies are beginning to incorporate AI into their business operations\
+    \ on daily bases with the target of saving money, boosting efficiency, generating\
+    \ insights and creating new markets for business expansion. There are AI-powered\
+    \ applications to customer service, maximize sales, optimize supply chains.\n\n"
+  trans: "\n\n![](img/image_rsrc8T.jpg)\n\n# 人工智能：一种现代方法与机器学习\n\nJones O. Godwin\n\
+    \n## 目录\n\n- 简介\n- 第 1 章：什么是人工智能？\n  - 人工智能如何工作？\n- 第 2 章：人工智能的演进：4 种人工智能类型\n\
+    - 什么是机器学习？\n- 机器学习 vs. 深度学习\n- 什么是深度学习？\n- 第 3 章：总结：人工智能 vs. 机器学习 vs. 深度学习\n-\
+    \ 以新视角理解强人工智能 vs. 弱人工智能\n- 你认为这些术语是什么意思，强人工智能 & 弱人工智能？\n- 第 4 章：为什么人工智能对企业很重要？\n\
+    - 第 5 章：当前和潜在的用例\n- 第 6 章：人工智能趋势：巨型芯片、新 CPU、神经符号人工智能\n- 结论\n\nCopyright 2020 ©\
+    \ Jones O Godwin All rights reserved. This book is copyright and no part of it\
+    \ may be reproduced, stored or transmitted, in any form or means, without the\
+    \ prior written permission of the copyright owner. Printed in the United States\
+    \ of America Copyright 2020 © Jones O Godwin\n\n## 简介\n\n人工智能在企业中的应用将深刻改变全球企业的运作方式。公司开始将人工智能融入日常业务运营，目标是节省成本、提高效率、产生洞察力并为业务扩张创造新市场。有用于客户服务的人工智能驱动应用程序，用于最大化销售，优化供应链。\n\
+    \n"
+  toc: []
+- raw: 'improve sharpen free up cybersecurity, workers from everyday tasks, improve
+    existing products and point the way to new products. It is hard to think of an
+    area in the enterprise where AI -- the simulation of human processes by machines,
+    especially computer systems -- will not have a deep impact. Chapter 1: What is
+    Artificial Intelligence? Artificial intelligence (AI) can be described as a broad-ranging
+    branch of computer science that is deeply concerned with machines competent development
+    of smart of performing duties that usually needs human intelligence. AI is an
+    interdisciplinary science with various approaches, but the technological advancements
+    in machine learning as well as deep learning are developing a paradigm shift in
+    virtually every sector of the tech industry all the globe. Enterprise leaders
+    have determined to use AI to enhance their businesses and ensure a great return
+    on their investments, nonetheless, face big challenges on multiplex fronts: •
+    The domain of artificial intelligence is changing rapidly because of the tremendous
+    amount of AI research being done. The world''s biggest companies, research institutions
+    and governments around the globe are supporting major research initiatives on
+    AI. • There are a multitude of AI use cases: AI can be applied to any problem
+    facing a company or to humankind writ large. In the novel virus outbreak, AI is
+    playing an important role in the global effort to contain the spread, detect hotspots,
+    improve patient care, identify therapies and develop vaccines. As we eventually
+    emerge from the pandemic, analyst firm Forrester Research expects investment in
+    AIenabled hardware and software robotics to surge as companies strive to build
+    resilience against other catastrophes. • To reap the value of AI, enterprise leaders
+    must understand how AI works, where AI technologies can be easily used in their
+    businesses and where they cannot -- a daunting proposition for the reasons cited
+    above. This wide-ranging directs to enterprise AI delivers the building blocks
+    for becoming a supersmart business consumer of artificial intelligence. this starts
+    with a brief explanation of how AI works and the main types significance of of
+    AI. You will learn about the AI to companies, including a discussion of AI''s
+    principal advantages and the technical and ethical risks it poses; present and
+    potential AI use cases; the challenges of incorporating AI applications into existing
+    business processes; and some of the technological advancements driving the field
+    forward. Throughout the guide, we include hyperlinks to TechTarget articles that
+    provide more detail and insights on the topics discussed. How Does AI Work? Many
+    of the tasks done in the enterprise are not automatic but require a certain amount
+    of intelligence. What characterizes intelligence, especially in the context of
+    work, is not simple to pin down. Broadly defined, intelligence is the capacity
+    to acquire knowledge and apply it to achieve an outcome: The action taken is related
+    to the particulars of the situation rather than done by rote. Getting a machine
+    to perform in this manner is what is generally meant by artificial intelligence.
+    But as AI experts take pains to state, there is no single or simple definition
+    of AI. In a 2016 report by the National Science and Technology Council on preparing
+    for the future of AI, the authors noted that definitions of AI vary from practitioner
+    to practitioner. Some persons described AI as loosely as a computerized system
+    that displays behavior that is normally thought of as requiring intelligence.
+    Others define AI as a system competent of rationally solving complicated problems
+    or taking necessary actions to achieve its goals and vision in whatever real-world
+    incidents it encounters" the report stated. Moreover, what qualifies as an intelligent
+    machine, the authors explained, is a moving target: A problem that is considered
+    to require AI quickly becomes regarded as "routine data processing" once it is
+    solved. At a basic level, AI programming focuses on three cognitive skills: Learning,
+    reasoning and selfcorrection. • The learning aspect of AI programing points on
+    obtaining data and creating rules for how to turn data into functional information.
+    The rules, called algorithms, provide computing systems with step-bystep instructions
+    on how to complete a specific task. • The reasoning aspect involves AI''s ability
+    to choose the most appropriate algorithm, among a set of algorithms, to use in
+    a particular context. • The self-correction aspect focuses on AI''s ability to
+    progressively tune and improve a result until it achieves the desired goal. Chapter
+    2: Evolution Of AI: 4 Types Of AI The concept of a machine with human-like intelligence
+    dates to ancient times, represented in the metal automatons referred to in Greek
+    myths, for example, and by the animatronic statues built by Egyptian engineers.
+    Modern AI based on computer systems is generally cited as beginning in the mid-1950s
+    when the term artificial intelligence was coined at a summer conference on the
+    campus of Dartmouth College. Since then, AI''s role in the enterprise has waxed
+    and waned, experiencing two periods known as AI winters when funding and industry
+    interest lagged. Despite these fallow periods, AI continued to evolve. Over the
+    decades, computer scientists, mathematicians and experts in other fields have
+    strived to advance the field either by improving the algorithms or the hardware.
+    ![](image_rsrc8U.jpg)In his article "4 main types of AI explained," author David
+    Peterson described intelligence evolved from how modern artificial AI systems
+    capable of simple classification and pattern recognition tasks to systems capable
+    of using historical data to make predictions. Propelled by a revolution in deep
+    learning -- i.e., AI that learns from data -- machine intelligence has advanced
+    rapidly in the 21st century, bringing us such breakthrough products as selfdriving
+    cars and virtual assistants Alexa and Siri. Although sentient robots are a fixture
+    of popular culture, the type of AI that demonstrates humanlevel general intelligence
+    and consciousness is a work-in-progress. Here are the four categories of AI outlined
+    in Peterson''s article and a summary of their characteristics: Reactive AI. Algorithms
+    used in this early type of AI lack memory and are reactive: That is, given a specific
+    input, the output is always the same. Machine learning models using this type
+    of AI are effective for simple classification and pattern recognition tasks. They
+    can consider huge chunks of data and produce a seemingly intelligent output, but
+    they are incapable of analyzing scenarios that include imperfect information or
+    require historical understanding. Limited memory machines. The underlying algorithms
+    in limited memory machines are based on our understanding of how the human brain
+    works and designed to imitate the way our neurons connect. This type of machine
+    "deep learning" can handle complex classification tasks and use historical data
+    to make predictions; it also is capable of complex tasks, such as autonomous driving.
+    for a clear explanation of three terms that are often used interchangeably but
+    have important distinctions. While AI sometimes yields superhuman performance
+    in these fields, we still have a long way to go before AI can actually compete
+    with human intelligence. For now, there is no AI that can learn the way humans
+    do, that is, with just a few examples. AI needs to be trained on mountains of
+    data to understand any topic. We still don''t have algorithms that are capable
+    of transferring their understanding of one domain to another. For instance, if
+    we learn a game such as StarCraft, we can play StarCraft II just as quickly. But
+    for AI, it''s a whole new world and it must learn each game from scratch. Human
+    intelligence also possesses the ability to link meanings. For instance, consider
+    the word "human." We can identify humans in pictures and videos, and AI has also
+    gained that capability. But we also know what we should anticipate from humans:
+    We never expect a human to have four wheels and emit carbon like a car. Yet, there
+    is no AI that can even tell what was wrong with the sentence I just wrote. So,
+    AI''s definition is a moving target. We were amazed when AI algorithms got so
+    sophisticated that they outperformed expert human radiologists but later learned
+    about their limitations. That''s why we now distinguish between the current "narrow"
+    AI and the human-level version of AI that we are pursuing: artificial general
+    intelligence. What Is Machine Learning? Machine learning is a subset of AI --
+    it''s one of the AI algorithms we''ve developed to mimic human intelligence. The
+    other type of AI would be symbolic AI or good old-fashioned AI (GOFAI), i.e. rule-based
+    systems using if-then conditions. Machine learning marks a turning point in AI
+    development. Before machine learning, we tried to teach computers all the ins
+    and outs of every decision they had to make. This made the process fully visible,
+    and the algorithm could take care of a number of complex scenarios too. Machine
+    learning vs. deep learning In its most complex form, the AI would traverse a number
+    of decision branches and find the one with the best results. That is how IBM''s
+    Deep Blue was designed to beat Garry Kasparov at chess. But there are many things
+    we simply cannot define via rule-based algorithms: for instance, face recognition.
+    A rule-based system would need to detect different shapes such as circles, then
+    determine how they are positioned and within what other objects, so that it would
+    constitute an eye. And don''t ask programmers how to code for detecting a nose!
+    Machine learning takes an entirely different approach and lets the machines learn
+    by themselves, by ingesting vast amounts of data and detecting patterns. Many
+    machine learning algorithms use statistics formulas and big data to function,
+    and it is arguable that our advancements in big data and the vast data we collected
+    enabled machine learning in the first place. Some of the machine learning algorithms
+    used for classification and regression include linear regression, logistic regression,
+    decision trees, support vector machines, naive Bayes, k-nearest neighbors, kmeans,
+    random forest and dimensionality reduction algorithms. What Is Deep Learning?
+    Deep learning is a subset of machine learning. It still involves letting the machine
+    learn from data, but it marks an important milestone in AI''s evolution. Deep
+    learning was developed based on our understanding of neural networks. The idea
+    of building AI based on neural nets has been around since the 1980s, but it wasn''t
+    until 2012 that deep learning got real traction. Just like machine learning owes
+    its bloom to the vast amount of data we produced; deep learning owes its adoption
+    to the much cheaper computing powers that became available (as well as advancements
+    in its algorithm). Deep learning enabled much smarter results than were originally
+    possible with machine learning. Consider the face recognition example from earlier:
+    In order to detect a face, what kind of data should we give to the AI and how
+    should it learn what to look for, given that the only information we can provide
+    is pixel colors? Deep learning makes use of layers of information processing,
+    each gradually learning more and more complex representations of data. The early
+    layers may learn about colors, the next ones learn about shapes, the following
+    about combinations of those shapes and finally actual objects. Deep learning demonstrated
+    a breakthrough in object recognition, and its invention made AI quickly advance
+    on several fronts, including natural language understanding. Deep learning is
+    currently the most sophisticated AI architecture we have developed. There are
+    several deep learning algorithms, including convolutional neural networks, recurrent
+    neural networks, long short-term memory networks, generative adversarial networks
+    and deep belief networks. Chapter 3: Wrapping Up: AI Vs. Machine Learning Vs.
+    Deep Learning Contrary to AI, machine learning and deep learning have very clear
+    definitions. What we considered AI changes over time. For instance, object character
+    recognition, or OCR, used to be considered AI, but no longer is. However, a deep
+    learning algorithm trained on thousands of handwritings and able to learn to convert
+    those to text, by today''s definition, would be considered AI. Machine learning
+    and deep learning both represent great milestones in AI''s evolution, and there
+    will probably be many others as we head for what we today call artificial general
+    intelligence. Despite the ability to far outdo typical human performance in certain
+    tasks limited memory machines lag behind human intelligence in other respects.
+    They require huge amounts of training data to learn tasks humans learn with just
+    a few examples, and they are vulnerable to outliers or adversarial examples. This
+    type of "weak or narrow AI" reflects the current state of AI development. As Peterson
+    noted, some believe the field may be hitting a wall. Understanding Strong vs.
+    Weak AI in a New Light In the Information Age, the impact of Artificial Intelligence
+    can be realized in the most futile of tasks. From the song we instruct Amazon’s
+    Alexa to play when we wake up in the morning to the chatbots, we converse with
+    frequentlyour modern lives are wholly immersed in machines that learn for us,
+    think for us, and help us make better decisions. With that said, however, the
+    ever-evolving cybersecurity threat landscape sees cybercriminals turning to AI,
+    and then using it as a tool to wreak havoc on individuals and organizations. Fortunately,
+    AI can also be utilized in the fight against cybersecurity, which is a belief
+    shared by a majority of executives and cybersecurity specialists as well. Regardless
+    of the deep-rooted impact that AI and Machine Learning have had on the life, the
+    primary goal that Artificial Intelligence seeks out to fulfill is this: to create
+    a machine very powerful and smart and capable enough to handle any level of cognitive
+    difficulty, in a variety of different settings- which is quite similar to how
+    human brains function. Trending AI Articles: 1\. The AI Job Wars: Episode I  '
+  fmt: '
+
+    # Chapter 1: What is Artificial Intelligence?
+
+
+    improve sharpen free up cybersecurity, workers from everyday tasks, improve existing
+    products and point the way to new products. It is hard to think of an area in
+    the enterprise where AI -- the simulation of human processes by machines, especially
+    computer systems -- will not have a deep impact.
+
+
+    Artificial intelligence (AI) can be described as a broad-ranging branch of computer
+    science that is deeply concerned with machines competent development of smart
+    of performing duties that usually needs human intelligence. AI is an interdisciplinary
+    science with various approaches, but the technological advancements in machine
+    learning as well as deep learning are developing a paradigm shift in virtually
+    every sector of the tech industry all the globe.
+
+
+    Enterprise leaders have determined to use AI to enhance their businesses and ensure
+    a great return on their investments, nonetheless, face big challenges on multiplex
+    fronts:
+
+
+    • The domain of artificial intelligence is changing rapidly because of the tremendous
+    amount of AI research being done. The world''s biggest companies, research institutions
+    and governments around the globe are supporting major research initiatives on
+    AI.
+
+
+    • There are a multitude of AI use cases: AI can be applied to any problem facing
+    a company or to humankind writ large. In the novel virus outbreak, AI is playing
+    an important role in the global effort to contain the spread, detect hotspots,
+    improve patient care, identify therapies and develop vaccines. As we eventually
+    emerge from the pandemic, analyst firm Forrester Research expects investment in
+    AIenabled hardware and software robotics to surge as companies strive to build
+    resilience against other catastrophes.
+
+
+    • To reap the value of AI, enterprise leaders must understand how AI works, where
+    AI technologies can be easily used in their businesses and where they cannot --
+    a daunting proposition for the reasons cited above.
+
+
+    This wide-ranging directs to enterprise AI delivers the building blocks for becoming
+    a supersmart business consumer of artificial intelligence. this starts with a
+    brief explanation of how AI works and the main types significance of of AI. You
+    will learn about the AI to companies, including a discussion of AI''s principal
+    advantages and the technical and ethical risks it poses; present and potential
+    AI use cases; the challenges of incorporating AI applications into existing business
+    processes; and some of the technological advancements driving the field forward.
+    Throughout the guide, we include hyperlinks to TechTarget articles that provide
+    more detail and insights on the topics discussed.
+
+
+    ## How Does AI Work?
+
+
+    Many of the tasks done in the enterprise are not automatic but require a certain
+    amount of intelligence. What characterizes intelligence, especially in the context
+    of work, is not simple to pin down. Broadly defined, intelligence is the capacity
+    to acquire knowledge and apply it to achieve an outcome: The action taken is related
+    to the particulars of the situation rather than done by rote. Getting a machine
+    to perform in this manner is what is generally meant by artificial intelligence.
+
+
+    But as AI experts take pains to state, there is no single or simple definition
+    of AI. In a 2016 report by the National Science and Technology Council on preparing
+    for the future of AI, the authors noted that definitions of AI vary from practitioner
+    to practitioner. Some persons described AI as loosely as a computerized system
+    that displays behavior that is normally thought of as requiring intelligence.
+    Others define AI as a system competent of rationally solving complicated problems
+    or taking necessary actions to achieve its goals and vision in whatever real-world
+    incidents it encounters" the report stated.
+
+
+    Moreover, what qualifies as an intelligent machine, the authors explained, is
+    a moving target: A problem that is considered to require AI quickly becomes regarded
+    as "routine data processing" once it is solved.
+
+
+    At a basic level, AI programming focuses on three cognitive skills: Learning,
+    reasoning and selfcorrection.
+
+
+    • The learning aspect of AI programing points on obtaining data and creating rules
+    for how to turn data into functional information. The rules, called algorithms,
+    provide computing systems with step-bystep instructions on how to complete a specific
+    task.
+
+
+    • The reasoning aspect involves AI''s ability to choose the most appropriate algorithm,
+    among a set of algorithms, to use in a particular context.
+
+
+    • The self-correction aspect focuses on AI''s ability to progressively tune and
+    improve a result until it achieves the desired goal.
+
+
+    # Chapter 2: Evolution Of AI: 4 Types Of AI
+
+
+    The concept of a machine with human-like intelligence dates to ancient times,
+    represented in the metal automatons referred to in Greek myths, for example, and
+    by the animatronic statues built by Egyptian engineers. Modern AI based on computer
+    systems is generally cited as beginning in the mid-1950s when the term artificial
+    intelligence was coined at a summer conference on the campus of Dartmouth College.
+
+
+    Since then, AI''s role in the enterprise has waxed and waned, experiencing two
+    periods known as AI winters when funding and industry interest lagged. Despite
+    these fallow periods, AI continued to evolve. Over the decades, computer scientists,
+    mathematicians and experts in other fields have strived to advance the field either
+    by improving the algorithms or the hardware.
+
+
+    ![](image_rsrc8U.jpg)
+
+
+    In his article "4 main types of AI explained," author David Peterson described
+    intelligence evolved from how modern artificial AI systems capable of simple classification
+    and pattern recognition tasks to systems capable of using historical data to make
+    predictions. Propelled by a revolution in deep learning -- i.e., AI that learns
+    from data -- machine intelligence has advanced rapidly in the 21st century, bringing
+    us such breakthrough products as selfdriving cars and virtual assistants Alexa
+    and Siri.
+
+
+    Although sentient robots are a fixture of popular culture, the type of AI that
+    demonstrates humanlevel general intelligence and consciousness is a work-in-progress.
+
+
+    Here are the four categories of AI outlined in Peterson''s article and a summary
+    of their characteristics:
+
+
+    ## Reactive AI
+
+
+    Algorithms used in this early type of AI lack memory and are reactive: That is,
+    given a specific input, the output is always the same. Machine learning models
+    using this type of AI are effective for simple classification and pattern recognition
+    tasks. They can consider huge chunks of data and produce a seemingly intelligent
+    output, but they are incapable of analyzing scenarios that include imperfect information
+    or require historical understanding.
+
+
+    ## Limited memory machines
+
+
+    The underlying algorithms in limited memory machines are based on our understanding
+    of how the human brain works and designed to imitate the way our neurons connect.
+    This type of machine "deep learning" can handle complex classification tasks and
+    use historical data to make predictions; it also is capable of complex tasks,
+    such as autonomous driving.
+
+
+    for a clear explanation of three terms that are often used interchangeably but
+    have important distinctions. While AI sometimes yields superhuman performance
+    in these fields, we still have a long way to go before AI can actually compete
+    with human intelligence. For now, there is no AI that can learn the way humans
+    do, that is, with just a few examples. AI needs to be trained on mountains of
+    data to understand any topic. We still don''t have algorithms that are capable
+    of transferring their understanding of one domain to another. For instance, if
+    we learn a game such as StarCraft, we can play StarCraft II just as quickly. But
+    for AI, it''s a whole new world and it must learn each game from scratch.
+
+
+    Human intelligence also possesses the ability to link meanings. For instance,
+    consider the word "human." We can identify humans in pictures and videos, and
+    AI has also gained that capability. But we also know what we should anticipate
+    from humans: We never expect a human to have four wheels and emit carbon like
+    a car. Yet, there is no AI that can even tell what was wrong with the sentence
+    I just wrote. So, AI''s definition is a moving target. We were amazed when AI
+    algorithms got so sophisticated that they outperformed expert human radiologists
+    but later learned about their limitations. That''s why we now distinguish between
+    the current "narrow" AI and the human-level version of AI that we are pursuing:
+    artificial general intelligence.
+
+
+    ## What Is Machine Learning?
+
+
+    Machine learning is a subset of AI -- it''s one of the AI algorithms we''ve developed
+    to mimic human intelligence. The other type of AI would be symbolic AI or good
+    old-fashioned AI (GOFAI), i.e. rule-based systems using if-then conditions. Machine
+    learning marks a turning point in AI development. Before machine learning, we
+    tried to teach computers all the ins and outs of every decision they had to make.
+    This made the process fully visible, and the algorithm could take care of a number
+    of complex scenarios too.
+
+
+    ### Machine learning vs. deep learning
+
+
+    In its most complex form, the AI would traverse a number of decision branches
+    and find the one with the best results. That is how IBM''s Deep Blue was designed
+    to beat Garry Kasparov at chess. But there are many things we simply cannot define
+    via rule-based algorithms: for instance, face recognition. A rule-based system
+    would need to detect different shapes such as circles, then determine how they
+    are positioned and within what other objects, so that it would constitute an eye.
+    And don''t ask programmers how to code for detecting a nose!
+
+
+    Machine learning takes an entirely different approach and lets the machines learn
+    by themselves, by ingesting vast amounts of data and detecting patterns. Many
+    machine learning algorithms use statistics formulas and big data to function,
+    and it is arguable that our advancements in big data and the vast data we collected
+    enabled machine learning in the first place.
+
+
+    Some of the machine learning algorithms used for classification and regression
+    include linear regression, logistic regression, decision trees, support vector
+    machines, naive Bayes, k-nearest neighbors, kmeans, random forest and dimensionality
+    reduction algorithms.
+
+
+    ## What Is Deep Learning?
+
+
+    Deep learning is a subset of machine learning. It still involves letting the machine
+    learn from data, but it marks an important milestone in AI''s evolution. Deep
+    learning was developed based on our understanding of neural networks. The idea
+    of building AI based on neural nets has been around since the 1980s, but it wasn''t
+    until 2012 that deep learning got real traction.
+
+
+    Just like machine learning owes its bloom to the vast amount of data we produced;
+    deep learning owes its adoption to the much cheaper computing powers that became
+    available (as well as advancements in its algorithm). Deep learning enabled much
+    smarter results than were originally possible with machine learning.
+
+
+    Consider the face recognition example from earlier: In order to detect a face,
+    what kind of data should we give to the AI and how should it learn what to look
+    for, given that the only information we can provide is pixel colors? Deep learning
+    makes use of layers of information processing, each gradually learning more and
+    more complex representations of data. The early layers may learn about colors,
+    the next ones learn about shapes, the following about combinations of those shapes
+    and finally actual objects.
+
+
+    Deep learning demonstrated a breakthrough in object recognition, and its invention
+    made AI quickly advance on several fronts, including natural language understanding.
+    Deep learning is currently the most sophisticated AI architecture we have developed.
+    There are several deep learning algorithms, including convolutional neural networks,
+    recurrent neural networks, long short-term memory networks, generative adversarial
+    networks and deep belief networks.
+
+
+    # Chapter 3: Wrapping Up: AI Vs. Machine Learning Vs. Deep Learning
+
+
+    Contrary to AI, machine learning and deep learning have very clear definitions.
+    What we considered AI changes over time. For instance, object character recognition,
+    or OCR, used to be considered AI, but no longer is. However, a deep learning algorithm
+    trained on thousands of handwritings and able to learn to convert those to text,
+    by today''s definition, would be considered AI.
+
+
+    Machine learning and deep learning both represent great milestones in AI''s evolution,
+    and there will probably be many others as we head for what we today call artificial
+    general intelligence.
+
+
+    Despite the ability to far outdo typical human performance in certain tasks limited
+    memory machines lag behind human intelligence in other respects. They require
+    huge amounts of training data to learn tasks humans learn with just a few examples,
+    and they are vulnerable to outliers or adversarial examples. This type of "weak
+    or narrow AI" reflects the current state of AI development. As Peterson noted,
+    some believe the field may be hitting a wall.
+
+
+    ## Understanding Strong vs. Weak AI in a New Light
+
+
+    In the Information Age, the impact of Artificial Intelligence can be realized
+    in the most futile of tasks. From the song we instruct Amazon’s Alexa to play
+    when we wake up in the morning to the chatbots, we converse with frequentlyour
+    modern lives are wholly immersed in machines that learn for us, think for us,
+    and help us make better decisions.
+
+
+    With that said, however, the ever-evolving cybersecurity threat landscape sees
+    cybercriminals turning to AI, and then using it as a tool to wreak havoc on individuals
+    and organizations. Fortunately, AI can also be utilized in the fight against cybersecurity,
+    which is a belief shared by a majority of executives and cybersecurity specialists
+    as well.
+
+
+    Regardless of the deep-rooted impact that AI and Machine Learning have had on
+    the life, the primary goal that Artificial Intelligence seeks out to fulfill is
+    this: to create a machine very powerful and smart and capable enough to handle
+    any level of cognitive difficulty, in a variety of different settings- which is
+    quite similar to how human brains function.
+
+
+    ## Trending AI Articles
+
+
+    1\. The AI Job Wars: Episode I
+
+    '
+  trans: '
+
+
+    # Chapter 1: 什么是人工智能？
+
+
+    improve sharpen free up cybersecurity, workers from everyday tasks, improve existing
+    products and point the way to new products. It is hard to think of an area in
+    the enterprise where AI -- the simulation of human processes by machines, especially
+    computer systems -- will not have a deep impact.
+
+
+    人工智能（AI）可以描述为计算机科学的一个广泛分支，该分支深度关注机器能够胜任执行通常需要人类智能的任务的智能开发。AI 是一门跨学科科学，拥有各种方法，但机器学习和深度学习的技术进步正在引发几乎全球科技行业每个领域的范式转变。
+
+
+    企业领导者已决心使用 AI 来增强其业务并确保投资获得丰厚回报，但 nonetheless，在多个方面面临巨大挑战：
+
+
+    • 人工智能领域正在迅速变化，因为正在进行大量的 AI 研究。全球最大的公司、研究机构和政府正在支持 AI 方面的重大研究计划。
+
+
+    • AI 的应用场景多种多样：AI 可以应用于公司或人类面临的任何问题。在新型病毒爆发期间，AI 在全球遏制传播、检测热点、改善患者护理、识别疗法和开发疫苗的努力中发挥着重要作用。随着我们最终走出疫情，分析机构
+    Forrester Research 预计，随着公司努力增强抵御其他灾难的韧性，对 AI 赋能的硬件和软件机器人的投资将激增。
+
+
+    • 要获得 AI 的价值，企业领导者必须了解 AI 的工作原理、AI 技术可以轻松应用于其业务的领域以及不能应用的领域——鉴于上述原因，这是一项艰巨的任务。
+
+
+    这篇面面俱到的指南为成为超级智能的人工智能商业消费者提供了基础。这始于对 AI 工作原理及 AI 主要类型和意义的简要解释。你将了解 AI 对公司的意义，包括对
+    AI 主要优势及其带来的技术和伦理风险的讨论；当前和潜在的 AI 应用场景；将 AI 应用程序纳入现有业务流程的挑战；以及推动该领域发展的一些技术进步。在整个指南中，我们包含指向
+    TechTarget 文章的超链接，这些文章提供了所讨论主题的更多细节和见解。
+
+
+    ## AI 如何工作？
+
+
+    企业中完成的许多任务并非自动化，而是需要一定程度的智能。什么是智能，尤其是在工作环境下，并不容易界定。广义上讲，智能是获取知识并将其应用以实现结果的能力：采取的行动与具体情况相关，而非机械重复。让机器以这种方式运行，通常就是人工智能所指的含义。
+
+
+    但正如 AI 专家所强调的，AI 没有单一或简单的定义。在 2016 年国家科学与技术委员会关于为 AI 未来做准备的报告中，作者指出，AI 的定义因从业者而异。有些人将
+    AI 描述为一种计算机化系统，其表现出通常被认为需要智能的行为。另一些人将 AI 定义为能够理性地解决复杂问题，或在遇到的任何现实事件中采取必要行动以实现其目标和愿景的系统，报告中这样写道。
+
+
+    此外，作者解释，什么是智能机器是一个移动的目标：一旦被认为需要 AI 的问题得到解决，它很快就会被视为“常规数据处理”。
+
+
+    在基本层面上，AI 编程专注于三种认知技能：学习、推理和自我纠正。
+
+
+    • AI 编程的学习方面侧重于获取数据并创建将数据转化为功能性信息的规则。这些规则称为算法，为计算系统提供完成特定任务的逐步指令。
+
+
+    • 推理方面涉及 AI 在一组算法中选择最合适的算法以在特定情境下使用的能力。
+
+
+    • 自我纠正方面侧重于 AI 逐步调整和改进结果，直到实现预期目标的能力。
+
+
+    # Chapter 2: AI 演进：4 种 AI 类型
+
+
+    具有人类类似智能的机器概念可以追溯到古代，例如希腊神话中提到的金属自动机，以及埃及工程师建造的自动机雕像。基于计算机系统的现代 AI 通常被认为始于 20
+    世纪 50 年代中期，当时在达特茅斯学院校园的一次夏季会议上提出了“人工智能”这一术语。
+
+
+    自那时起，AI 在企业中的作用时兴时衰，经历了两段被称为 AI 冬天的时期，当时资金和行业兴趣有所下降。尽管有这些停滞期，AI 仍在不断发展。几十年来，计算机科学家、数学家和其他领域的专家一直致力于通过改进算法或硬件来推动该领域的发展。
+
+
+    ![](img/image_rsrc8U.jpg)
+
+
+    在文章“4 种主要 AI 类型详解”中，作者 David Peterson 描述了智能如何从能够执行简单分类和模式识别任务的现代 AI 系统，演变为能够利用历史数据进行预测的系统。得益于深度学习（即从数据中学习的
+    AI）的革命，机器智能在 21 世纪迅速发展，带来了自动驾驶汽车以及虚拟助手 Alexa 和 Siri 等突破性产品。
+
+
+    尽管有感知机器人是流行文化中的常见元素，但展现人类水平通用智能和意识的 AI 类型仍在开发中。
+
+
+    以下是 Peterson 文章中概述的四类 AI 及其特征摘要：
+
+
+    ## 反应式 AI
+
+
+    这种早期 AI 类型中使用的算法缺乏记忆且具有反应性：也就是说，给定特定输入，输出始终相同。使用这种类型 AI 的机器学习模型对简单的分类和模式识别任务有效。它们可以考虑大量数据并产生看似智能的输出，但无法分析包含不完整信息或需要历史理解的场景。
+
+
+    ## 有限记忆机器
+
+
+    有限记忆机器中的底层算法基于我们对人脑工作原理的理解，并旨在模仿我们神经元的连接方式。这种机器的“深度学习”可以处理复杂的分类任务，并利用历史数据进行预测；它还能够处理复杂任务，例如自动驾驶。
+
+
+    for a clear explanation of three terms that are often used interchangeably but
+    have important distinctions. While AI sometimes yields superhuman performance
+    in these fields, we still have a long way to go before AI can actually compete
+    with human intelligence. For now, there is no AI that can learn the way humans
+    do, that is, with just a few examples. AI needs to be trained on mountains of
+    data to understand any topic. We still don''t have algorithms that are capable
+    of transferring their understanding of one domain to another. For instance, if
+    we learn a game such as StarCraft, we can play StarCraft II just as quickly. But
+    for AI, it''s a whole new world and it must learn each game from scratch.
+
+
+    Human intelligence also possesses the ability to link meanings. For instance,
+    consider the word "human." We can identify humans in pictures and videos, and
+    AI has also gained that capability. But we also know what we should anticipate
+    from humans: We never expect a human to have four wheels and emit carbon like
+    a car. Yet, there is no AI that can even tell what was wrong with the sentence
+    I just wrote. So, AI''s definition is a moving target. We were amazed when AI
+    algorithms got so sophisticated that they outperformed expert human radiologists
+    but later learned about their limitations. That''s why we now distinguish between
+    the current "narrow" AI and the human-level version of AI that we are pursuing:
+    artificial general intelligence.
+
+
+    ## 什么是机器学习？
+
+
+    机器学习是 AI 的一个子集——它是我们开发的模仿人类智能的 AI 算法之一。另一种 AI 类型是符号 AI 或老派 AI（GOFAI），即使用 if-then
+    条件的基于规则的系统。机器学习标志着 AI 发展的一个转折点。在机器学习之前，我们试图教会计算机每个决策的方方面面。这使得过程完全可见，算法也能处理许多复杂场景。
+
+
+    ### 机器学习与深度学习
+
+
+    在最复杂的形式中，AI 会遍历许多决策分支并找到结果最好的一个。这就是 IBM 的深蓝被设计用来击败加里·卡斯帕罗夫下棋的方式。但有许多事情我们根本无法通过基于规则的算法来定义：例如，人脸识别。基于规则的系统需要检测不同的形状，如圆形，然后确定它们的位置以及在什么其他对象内，以便构成一只眼睛。更别问程序员如何编写检测鼻子的代码了！
+
+
+    机器学习采用完全不同的方法，让机器通过摄入大量数据并检测模式来自行学习。许多机器学习算法使用统计公式和大数据来运行，可以说，我们在大数据方面的进步以及收集的海量数据，最初使机器学习成为可能。
+
+
+    用于分类和回归的一些机器学习算法包括线性回归、逻辑回归、决策树、支持向量机、朴素贝叶斯、k-近邻、k-means、随机森林和降维算法。
+
+
+    ## 什么是深度学习？
+
+
+    深度学习是机器学习的一个子集。它仍然涉及让机器从数据中学习，但它标志着 AI 演进的一个重要里程碑。深度学习是基于我们对神经网络的理解而开发的。基于神经网络构建
+    AI 的想法自 20 世纪 80 年代就已存在，但直到 2012 年深度学习才真正获得关注。
+
+
+    就像机器学习得益于我们产生的海量数据一样；深度学习的普及得益于变得更便宜的计算能力（以及其算法的进步）。深度学习实现了原本仅靠机器学习无法实现的更智能的结果。
+
+
+    考虑前面的人脸识别示例：为了检测人脸，我们应该给 AI 什么样的数据，它又该如何学习该寻找什么，考虑到我们能提供的唯一信息是像素颜色？深度学习利用多层信息处理，每一层逐渐学习数据越来越复杂的表示。早期层可能学习颜色，接下来的层学习形状，再下一层学习这些形状的组合，最后学习实际对象。
+
+
+    深度学习在对象识别方面取得了突破，其发明使 AI 在多个领域迅速发展，包括自然语言理解。深度学习目前是我们开发的最先进的 AI 架构。有几种深度学习算法，包括卷积神经网络、循环神经网络、长短期记忆网络、生成对抗网络和深度置信网络。
+
+
+    # Chapter 3: 总结：AI 与机器学习与深度学习
+
+
+    与 AI 不同，机器学习和深度学习有非常明确的定义。我们曾认为是 AI 的东西会随时间而变化。例如，光学字符识别（OCR）曾被认为是 AI，但现在不再是。然而，在今天的定义下，一个在数千份手写体上训练并能够学习将其转换为文本的深度学习算法，将被认为是
+    AI。
+
+
+    机器学习和深度学习都代表了 AI 演进的重大里程碑，随着我们朝着今天所称的人工通用智能迈进，未来可能会有更多里程碑。
+
+
+    尽管有限记忆机器在某些任务上远超典型的人类表现，但在其他方面仍落后于人类智能。它们需要大量训练数据来学习人类只需几个示例即可掌握的任务，并且容易受到异常值或对抗性示例的影响。这种“弱或窄
+    AI”反映了当前 AI 发展的状态。正如 Peterson 所指出的，有些人认为该领域可能正在遇到瓶颈。
+
+
+    ## 用新视角理解强 AI 与弱 AI
+
+
+    在信息时代，人工智能的影响可以体现在最微不足道的任务中。从我们早上醒来时指示 Amazon 的 Alexa 播放的歌曲，到我们经常交谈的聊天机器人，我们的现代生活完全沉浸在为我们学习、为我们思考并帮助我们做出更好决策的机器中。
+
+
+    话虽如此，然而，不断演变的网络安全威胁格局中，网络犯罪分子正在转向 AI，并将其作为工具对个人和组织造成破坏。幸运的是，AI 也可以用于对抗网络安全，这是大多数高管和网络安全专家共享的信念。
+
+
+    无论 AI 和机器学习对生活产生了多么深远的影响，人工智能所追求的首要目标是：创造一台足够强大、足够智能、能够处理各种环境下任何水平认知难度的机器——这与人脑的运作方式非常相似。
+
+
+    ## 趋势 AI 文章
+
+
+    1\. The AI Job Wars: Episode I
+
+
+    '
+  toc: []
+- raw: "2\\. From Perceptron to Deep Neural Nets  \n\n3\\. Neural networks for solving\
+    \ differential equations  \n\n4\\. Turn your Raspberry Pi into homemade Google\
+    \ Home Generally speaking, the AI ecosystem produces two categories for AI programs\
+    \ to be molded into, namely, weak and strong AI. Notwithstanding, as time and\
+    \ technology advance, we need to readdress our approach to AI and its classifications,\
+    \ along with the importance (if any) that they bear.  \n\nBefore we can get into\
+    \ that, however, let’s dive into what the terms mean. What Do you think these\
+    \ Terms Mean, Strong & Weak AI? Usually, when a conversation revolves around Artificial\
+    \ Intelligence, people frequently throw around examples of Apple’s Siri and Amazon’s\
+    \ Alexa in the mix, without realizing that they represent a profoundly limited\
+    \ view of the AI ecosystem. As we’ve mentioned earlier, there are two based categories\
+    \ when it comes to AI, simply known as ‘Strong’ and ‘Weak’ AI. With that said,\
+    \ this puts weak, or narrow AI to any AI program that centers on a single task\
+    \ and works based on pre-programmed algorithms. The mechanism seen in weak AI\
+    \ is restricted to organization power, rather than the capability of the AI to\
+    \ understand the direction being given. An example of this is when you ask Siri\
+    \ for the nearest restaurant. The algorithm understands keywords such as “nearest”\
+    \ and “restaurant” and responds accordingly, based on the information it’s already\
+    \ been fed. Rather than being smart, the pre-fed algorithms make the weak AI show\
+    \ up intelligent. On the other hand, a strong, or general AI replicates the cognitive\
+    \ capacities of the human brain. Rather than just using sheer organization power,\
+    \ a strong AI program, machine, or software relies on assembling and association\
+    \ to process data. Just the way a human brain works, it’s difficult to tell how\
+    \ a strong AI would respond to particular keywords only that it’d make an independent\
+    \ decision based on how it evaluates and reacts to the data provided to it. With\
+    \ the ‘basic’ definitions out of the way, we must analyze how these definitions\
+    \ hold up in the current age of technology, especially when we take into the burgeoning\
+    \ influence that AI has had on modern-day cybersecurity solutions. What can we\
+    \ say Are the Differences Between Strong and Weak AI? When it comes to the comprehension\
+    \ of the differences between strong and weak AI, repeatedly, cybersecurity experts\
+    \ tend to ignore the underlying meaning behind the definitions mentioned above.\
+    \ To look again more in-depth and clearer understanding of Strong vs. Weak AI,\
+    \ it’s therefore important that we dig around a bit deeper than what the underlying\
+    \ definitions represent. To get some few points across as quickly as possible,\
+    \ we’ll have a look at them and carefully analyze both definitions of AI differently,\
+    \ beginning with Strong, or general AI. Strong AI: As we’ve mentioned above, the\
+    \ conventional definition of strong AI states that the term refers to a form of\
+    \ artificial intelligence that is meant to replicate human intelligence, or cognitive\
+    \ functionswhich refers to the ability to think and decide. Broad or Strong AI\
+    \ simply refers to artificial general intelligence (AGI), that concentrates on\
+    \ the creation of sophisticated machines that can imitate and successfully accomplish\
+    \ any intellectual task, most especially the ones human beings can do. The ability\
+    \ to analyze and come up with solutions for intelligent components can be broken\
+    \ down into the following parts: • The ability to interchange knowledge from different\
+    \ domains and apply it into different settings.  \n\n• The capability to plan\
+    \ for the future, based on prior knowledge and experience.  \n\n• The capacity\
+    \ to adapt to any changes being made in the surrounding environment. In addition\
+    \ to the components mentioned, some back-hand aspects of a strong, or general\
+    \ AI include the abilities to solve complex puzzles, reason, along with the capacity\
+    \ to display intelligence and common sense.  \n\nWith that said, several specialists,\
+    \ and researchers tend to differ with the somewhat limiting definition of Strong\
+    \ AI, stating their uncertainty in classifying Strong AI as intelligent, simply\
+    \ because it can emulate the cognitive abilities of the human brain, like the\
+    \ ability to communicate. Bearing witness to the rather newfound notion of the\
+    \ legitimacy of how we define Strong AI, is the Turing test, which represents\
+    \ a system in which human beings are rendered unable to distinguish between the\
+    \ cognitive abilities between a human and a machine. The Turing test puts a machine,\
+    \ an interrogator, and a human in a conversational setting. If the interrogator\
+    \ fails to distinguish between the machine and human, the Turing test is passed.\
+    \ Keeping the Turing test in mind, the inexplicit surrounding the definition of\
+    \ Strong AI has become obviously evident. For starters, as demonstrated by the\
+    \ Turing test, if an AI can successfully replicate the ability to communicate-\
+    \ can we classify it as smart? The dilemma surrounding the age-old question of\
+    \ what classifies as intelligence only gets more challenging to answer when you\
+    \ take into account the Chinese Room test, which aims to check whether a machine\
+    \ understands Chinese, or simulates the ability to understand Chinese. John Searle,\
+    \ the creator of the Chinese Room test, states that without the process of understanding,\
+    \ it’s impossible to determine whether a strong AI is just a glorified version\
+    \ of a less smart simulation. Additionally, philosophers different experts, researchers\
+    \ and ascribe the capacity to experience consciousness as a Strong AI system,\
+    \ that sets the mark very high for artificial intelligence to achieve in general.\
+    \ Weak AI: As we mentioned above in the run-off-the-mill conventional definition\
+    \ of Weak AI, the term refers to any AI that responds to situations based on a\
+    \ prefed set of information. However, by the varying definitions of Strong AI,\
+    \ it’s quite easy to conclude that all the artificial technology we’ve created\
+    \ up until this point is technically Weak AI. With that said, the implications\
+    \ of the Weak AI generate an image in which AI systems are inefficient in accomplishing\
+    \ against intellectual tasks, which isn’t the case. Instead, weak, or the much\
+    \ better alternative, narrow AI applies to technologies that advance progressively\
+    \ in complexity as times change. Today, Weak AI is represented by speech identification,\
+    \ chatbots, or even self-driving or driverless cars like Tesla. A couple of years\
+    \ ago, however, the situation was completely different as modern technologies\
+    \ of the time, such as OCR (Optical Character Recognition), were considered as\
+    \ artificial intelligence. Theory of mind. This type of as-yet-unrealized AI is\
+    \ defined as capable of understanding human motives and reasoning and therefore\
+    \ able to deliver personalized results based on an individual's motives and needs.\
+    \ Also referred to as artificial general intelligence (AGI), theory of mind AI\
+    \ can learn with fewer examples than limited memory machines; it can contextualize\
+    \ and generalize information, and extrapolate knowledge to a broad set of problems.\
+    \ Artificial emotional intelligence, or the ability to detect human emotions and\
+    \ empathize with people, is being developed, but the current systems do not exhibit\
+    \ theory of mind and are very far from selfawareness, the next milestone in the\
+    \ evolution of AI. Self-aware AI aka artificial superintelligence . This type\
+    \ of AI is not only aware of the mental state of other entities but is also aware\
+    \ of itself. Self-aware AI, or artificial superintelligence (ASI), is defined\
+    \ as a machine with intelligence on par with human general intelligence and in\
+    \ principle capable of far surpassing human cognition by creating ever more intelligent\
+    \ versions of itself.  "
+  fmt: '
+
+    ## 2\. From Perceptron to Deep Neural Nets
+
+
+    ## 3\. Neural networks for solving differential equations
+
+
+    ## 4\. Turn your Raspberry Pi into homemade Google Home
+
+
+    Generally speaking, the AI ecosystem produces two categories for AI programs to
+    be molded into, namely, weak and strong AI. Notwithstanding, as time and technology
+    advance, we need to readdress our approach to AI and its classifications, along
+    with the importance (if any) that they bear.
+
+
+    Before we can get into that, however, let’s dive into what the terms mean. What
+    Do you think these Terms Mean, Strong & Weak AI? Usually, when a conversation
+    revolves around Artificial Intelligence, people frequently throw around examples
+    of Apple’s Siri and Amazon’s Alexa in the mix, without realizing that they represent
+    a profoundly limited view of the AI ecosystem. As we’ve mentioned earlier, there
+    are two based categories when it comes to AI, simply known as ‘Strong’ and ‘Weak’
+    AI. With that said, this puts weak, or narrow AI to any AI program that centers
+    on a single task and works based on pre-programmed algorithms. The mechanism seen
+    in weak AI is restricted to organization power, rather than the capability of
+    the AI to understand the direction being given. An example of this is when you
+    ask Siri for the nearest restaurant. The algorithm understands keywords such as
+    “nearest” and “restaurant” and responds accordingly, based on the information
+    it’s already been fed. Rather than being smart, the pre-fed algorithms make the
+    weak AI show up intelligent. On the other hand, a strong, or general AI replicates
+    the cognitive capacities of the human brain. Rather than just using sheer organization
+    power, a strong AI program, machine, or software relies on assembling and association
+    to process data. Just the way a human brain works, it’s difficult to tell how
+    a strong AI would respond to particular keywords only that it’d make an independent
+    decision based on how it evaluates and reacts to the data provided to it. With
+    the ‘basic’ definitions out of the way, we must analyze how these definitions
+    hold up in the current age of technology, especially when we take into the burgeoning
+    influence that AI has had on modern-day cybersecurity solutions. What can we say
+    Are the Differences Between Strong and Weak AI? When it comes to the comprehension
+    of the differences between strong and weak AI, repeatedly, cybersecurity experts
+    tend to ignore the underlying meaning behind the definitions mentioned above.
+    To look again more in-depth and clearer understanding of Strong vs. Weak AI, it’s
+    therefore important that we dig around a bit deeper than what the underlying definitions
+    represent. To get some few points across as quickly as possible, we’ll have a
+    look at them and carefully analyze both definitions of AI differently, beginning
+    with Strong, or general AI.
+
+
+    ### Strong AI
+
+
+    As we’ve mentioned above, the conventional definition of strong AI states that
+    the term refers to a form of artificial intelligence that is meant to replicate
+    human intelligence, or cognitive functions which refers to the ability to think
+    and decide. Broad or Strong AI simply refers to artificial general intelligence
+    (`AGI`), that concentrates on the creation of sophisticated machines that can
+    imitate and successfully accomplish any intellectual task, most especially the
+    ones human beings can do. The ability to analyze and come up with solutions for
+    intelligent components can be broken down into the following parts:
+
+
+    • The ability to interchange knowledge from different domains and apply it into
+    different settings.
+
+
+    • The capability to plan for the future, based on prior knowledge and experience.
+
+
+    • The capacity to adapt to any changes being made in the surrounding environment.
+
+
+    In addition to the components mentioned, some back-hand aspects of a strong, or
+    general AI include the abilities to solve complex puzzles, reason, along with
+    the capacity to display intelligence and common sense.
+
+
+    With that said, several specialists, and researchers tend to differ with the somewhat
+    limiting definition of Strong AI, stating their uncertainty in classifying Strong
+    AI as intelligent, simply because it can emulate the cognitive abilities of the
+    human brain, like the ability to communicate. Bearing witness to the rather newfound
+    notion of the legitimacy of how we define Strong AI, is the Turing test, which
+    represents a system in which human beings are rendered unable to distinguish between
+    the cognitive abilities between a human and a machine. The Turing test puts a
+    machine, an interrogator, and a human in a conversational setting. If the interrogator
+    fails to distinguish between the machine and human, the Turing test is passed.
+    Keeping the Turing test in mind, the inexplicit surrounding the definition of
+    Strong AI has become obviously evident. For starters, as demonstrated by the Turing
+    test, if an AI can successfully replicate the ability to communicate- can we classify
+    it as smart? The dilemma surrounding the age-old question of what classifies as
+    intelligence only gets more challenging to answer when you take into account the
+    Chinese Room test, which aims to check whether a machine understands Chinese,
+    or simulates the ability to understand Chinese. John Searle, the creator of the
+    Chinese Room test, states that without the process of understanding, it’s impossible
+    to determine whether a strong AI is just a glorified version of a less smart simulation.
+    Additionally, philosophers different experts, researchers and ascribe the capacity
+    to experience consciousness as a Strong AI system, that sets the mark very high
+    for artificial intelligence to achieve in general.
+
+
+    ### Weak AI
+
+
+    As we mentioned above in the run-off-the-mill conventional definition of Weak
+    AI, the term refers to any AI that responds to situations based on a prefed set
+    of information. However, by the varying definitions of Strong AI, it’s quite easy
+    to conclude that all the artificial technology we’ve created up until this point
+    is technically Weak AI. With that said, the implications of the Weak AI generate
+    an image in which AI systems are inefficient in accomplishing against intellectual
+    tasks, which isn’t the case. Instead, weak, or the much better alternative, narrow
+    AI applies to technologies that advance progressively in complexity as times change.
+    Today, Weak AI is represented by speech identification, chatbots, or even self-driving
+    or driverless cars like Tesla. A couple of years ago, however, the situation was
+    completely different as modern technologies of the time, such as OCR (`Optical
+    Character Recognition`), were considered as artificial intelligence.
+
+
+    ### Theory of mind
+
+
+    This type of as-yet-unrealized AI is defined as capable of understanding human
+    motives and reasoning and therefore able to deliver personalized results based
+    on an individual''s motives and needs. Also referred to as artificial general
+    intelligence (`AGI`), theory of mind AI can learn with fewer examples than limited
+    memory machines; it can contextualize and generalize information, and extrapolate
+    knowledge to a broad set of problems. Artificial emotional intelligence, or the
+    ability to detect human emotions and empathize with people, is being developed,
+    but the current systems do not exhibit theory of mind and are very far from selfawareness,
+    the next milestone in the evolution of AI.
+
+
+    ### Self-aware AI aka artificial superintelligence
+
+
+    This type of AI is not only aware of the mental state of other entities but is
+    also aware of itself. Self-aware AI, or artificial superintelligence (`ASI`),
+    is defined as a machine with intelligence on par with human general intelligence
+    and in principle capable of far surpassing human cognition by creating ever more
+    intelligent versions of itself.
+
+    '
+  trans: '
+
+
+    ## 2\. 从感知器到深度神经网络
+
+
+    ## 3\. 用于求解微分方程的神经网络
+
+
+    ## 4\. 将你的树莓派打造为自制 Google Home
+
+
+    一般而言，AI 生态系统将 AI 程序划分为两类，即弱人工智能和强人工智能。不过，随着时间和技术的进步，我们需要重新审视对 AI 及其分类的看法，以及它们所承担的重要性（如果有的话）。
+
+
+    不过，在深入探讨之前，让我们先了解这些术语的含义。你认为“强人工智能”和“弱人工智能”这两个术语是什么意思？通常，当谈话围绕人工智能展开时，人们经常提到 Apple
+    的 Siri 和 Amazon 的 Alexa 等示例，却没有意识到这代表了对 AI 生态系统的一种非常有限的看法。如前所述，在 AI 方面有两大基础类别，即所谓的“强”和“弱”人工智能。也就是说，弱人工智能（或称窄人工智能）是指专注于单一任务并基于预设算法工作的任何
+    AI 程序。弱人工智能的机制仅限于组织能力，而非 AI 理解所给方向的能力。例如，当你询问 Siri 最近的餐厅时，算法会理解“最近”和“餐厅”等关键词，并根据其已获取的信息做出相应回应。与其说是聪明，不如说预设的算法让弱人工智能表现得智能。另一方面，强人工智能（或称通用人工智能）复制了人脑的认知能力。强人工智能程序、机器或软件不依赖单纯的组织能力，而是依赖组装和关联来处理数据。就像人脑的工作方式一样，很难说强人工智能会如何回应特定关键词，只能说它会根据对所提供数据的评估和反应做出独立决策。在厘清“基础”定义后，我们必须分析这些定义在当今技术时代如何成立，尤其是当我们考虑到
+    AI 对现代网络安全解决方案日益增长的影响时。我们可以说强人工智能和弱人工智能之间有什么区别吗？在理解强人工智能和弱人工智能之间的区别时，网络安全专家往往忽略上述定义背后的深层含义。为了更深入、更清晰地了解强人工智能与弱人工智能，因此我们需要比上述定义所代表的内容挖掘得更深一些。为了尽快阐明几点，我们将分别仔细分析两种
+    AI 的定义，从强人工智能（或通用人工智能）开始。
+
+
+    ### 强人工智能
+
+
+    如前所述，强人工智能的传统定义指出，该术语指的是一种旨在复制人类智能或认知功能（即思考和决策的能力）的人工智能形式。广义或强人工智能简单指人工通用智能（`AGI`），专注于创建能够模仿并成功完成任何智力任务（尤其是人类能够完成的任务）的复杂机器。分析并为智能组件提出解决方案的能力可以分解为以下几个部分：
+
+
+    • 从不同领域交换知识并将其应用于不同环境的能力。
+
+
+    • 基于先前知识和经验为未来制定计划的能力。
+
+
+    • 适应周围环境中任何变化的能力。
+
+
+    除了上述组件外，强人工智能（或通用人工智能）的一些背后方面还包括解决复杂谜题、推理以及展示智能和常识的能力。
+
+
+    话虽如此，一些专家和研究人员倾向于对强人工智能略显局限的定义持不同意见，他们表示不确定是否仅仅因为强人工智能能够模仿人脑的认知能力（例如沟通能力）就将其归类为智能。见证我们定义强人工智能的合法性这一相当新颖概念的是图灵测试，它代表了一种系统，在这种系统中，人类无法区分人类和机器的认知能力。图灵测试将一台机器、一个提问者和一个人置于对话环境中。如果提问者无法区分机器和人类，则图灵测试通过。牢记图灵测试，围绕强人工智能定义的含糊性已变得显而易见。首先，如图灵测试所示，如果
+    AI 能够成功复制沟通能力，我们能否将其归类为智能？当你考虑到中文房间测试时，围绕什么是智能这一古老问题的困境就更难回答了，中文房间测试旨在检查机器是否理解中文，或者模拟理解中文的能力。中文房间测试的创建者
+    John Searle 表示，如果没有理解过程，就不可能确定强人工智能只是一个更聪明的模拟的华丽版本。此外，不同的哲学家、专家、研究人员将体验意识的能力归因于强人工智能系统，这为人工智能的整体实现设定了非常高的标准。
+
+
+    ### 弱人工智能
+
+
+    如前所述，在弱人工智能的常规定义中，该术语指的是任何基于预设信息集响应情况的 AI。然而，根据强人工智能的不同定义，很容易得出结论：到目前为止我们创建的所有人工智能技术在技术上都是弱人工智能。话虽如此，弱人工智能的含义描绘了一幅图景，即
+    AI 系统在完成智力任务方面效率低下，但事实并非如此。相反，弱人工智能（或更好的替代方案，窄人工智能）适用于随着时间推移而逐渐复杂化的技术。今天，弱人工智能体现在语音识别、聊天机器人，甚至像特斯拉这样的自动驾驶或无人驾驶汽车上。然而，几年前，情况完全不同，当时的现代技术，例如
+    OCR（`Optical Character Recognition`），被视为人工智能。
+
+
+    ### 心智理论
+
+
+    这种尚未实现的 AI 类型被定义为能够理解人类动机和推理，因此能够根据个人的动机和需求提供个性化结果。也称为人工通用智能（`AGI`），心智理论 AI 可以用比有限记忆机器更少的示例进行学习；它可以对信息进行情境化和概括，并将知识外推到广泛的问题集合中。人工情感智能，即检测人类情感并与人共情的能力，正在开发中，但当前系统不表现出心智理论，并且距离自我意识（AI
+    演进的下一个里程碑）还很远。
+
+
+    ### 自我意识 AI 即人工超级智能
+
+
+    这种 AI 不仅意识到其他实体的心理状态，还意识到自身。自我意识 AI，或人工超级智能（`ASI`），被定义为一种与人类通用智能相当的机器智能，原则上能够通过创建越来越智能的自身版本来远远超越人类认知。
+
+
+    '
+  toc: []
+- raw: "Currently, however, we don't know enough about how the human brain is organized\
+    \ to build an artificial one that is as, or more, intelligent in a general sense.\
+    \ ![](image_rsrc8V.jpg)Chapter 4: Why Is AI Important In The Enterprise? According\
+    \ to research firm IDC, by 2025, the volume of data generated worldwide will reach\
+    \ 175 zettabytes (that is, 175 billion terabytes), an astounding 430% increase\
+    \ over the 33 zettabytes of data produced by 2018. For companies committed to\
+    \ data-driven decision-making, the surge in data will be a boon. Large data sets\
+    \ are the raw material for the vital indepth analysis that drives improvements\
+    \ in existing business operations and leads to new lines of business. Companies\
+    \ cannot capitalize on these data stores, however, without AI. As writer Mary\
+    \ K. Pratt reported in her article \"Importance of AI in the business quest for\
+    \ data-driven operations,\" AI and big data play a symbiotic role in 21st century\
+    \ business success: Deep learning, a subset of AI, processes large data stores\
+    \ to identify the subtle patterns and correlations in big data that can give companies\
+    \ a competitive edge; simultaneously, AI's ability to make meaningful predictions\
+    \ -- to get at the truth of a matter rather than mimic human biases -- requires\
+    \ high-quality data and usually vast amounts of it. AI's importance to 21st century\
+    \ business has been compared to the strategic value of electricity in the early\
+    \ 20th century, when electrification transformed industries like manufacturing\
+    \ and created new ones like mass communications. \"AI is strategic because the\
+    \ scale, scope, complexity and the dynamism in business today is so extreme that\
+    \ humans can no longer manage it without artificial intelligence,\" Chris Baum,\
+    \ partner and director at Bain & Company, told TechTarget. AI's biggest impact\
+    \ on business in the near future stems from its ability to automate and augment\
+    \ jobs that today are done by humans. Labor gains realized from using AI are expected\
+    \ to expand upon and surpass those made by current workplace automation tools.\
+    \ And by analyzing vast volumes of data, AI won't simply automate work tasks,\
+    \ but will generate the most efficient way to complete a task and adjust workflows\
+    \ on the fly as circumstances change. AI is already augmenting human work in many\
+    \ fields, from assisting doctors in medical diagnoses to helping call center workers\
+    \ deal more effectively with customer queries and complaints. In security, AI\
+    \ is being used to automatically respond to cybersecurity threats and prioritize\
+    \ those that need human attention. Banks are using AI to speed up and support\
+    \ loan processing and to ensure compliance. (See section \"Current and potential\
+    \ use cases.\") But AI will also eliminate many jobs done today by humans -- a\
+    \ major concern to workers, as described in the following sections on benefits\
+    \ and risks of AI. Benefits of AI in the enterprise Most companies at this juncture\
+    \ are looking to use AI to optimize existing operations rather than radically\
+    \ transform their business models. The aforementioned gains in productivity and\
+    \ efficiency are the most cited benefits of implementing AI in the enterprise.\
+    \ Here are five additional key benefits of AI for business: • Improved customer\
+    \ service. The ability of AI to speed up and personalize customer service is among\
+    \ the top benefits businesses expect to reap from AI, ranked No. 2 among AI payoffs\
+    \ in a 2019 research study by MIT Sloan Boston Consulting Group. Management and\
+    \ • Improved monitoring. AI's capacity to process data in real time means organizations\
+    \ can implement near-instantaneous monitoring; for example, factory floors are\
+    \ using image recognition software and machine learning models in quality control\
+    \ processes to monitor production and flag problems. • Faster product development.\
+    \ AI enables shorter development cycles and reduces the time between design and\
+    \ commercialization for a quicker ROI of development dollars. • Better quality\
+    \ . Organizations expect a reduction in errors and increased adherence to compliance\
+    \ standards by using AI on tasks previously done manually or done with traditional\
+    \ automation tools, such as extract, transform and load. Financial reconciliation\
+    \ is an area where machine learning, for example, has substantially reduced costs,\
+    \ time and errors. • Business model innovation and expansion. Digital natives\
+    \ like Amazon, Airbnb, Uber and others certainly have used AI to help implement\
+    \ new business models. Traditional companies may find AI-enabled business model\
+    \ transformation a hard sell, according to Andrew Ng, a pioneer of AI development\
+    \ at Google and Baidu and currently CEO and co-founder of Landing AI. He offered\
+    \ a six-step playbook for getting AI off the ground at traditional companies.\
+    \ AI risks One of the biggest risks to the effective use of AI in the enterprise\
+    \ is worker mistrust. Many employees fear and distrust AI or remain unconvinced\
+    \ of its value in the workplace. Anxieties about job elimination are not unfounded,\
+    \ according to many Brookings Institute, studies. A report from the \"Automation\
+    \ and Artificial Intelligence: How Machines Are Affecting People and Places,\"\
+    \ estimated that some 36 million jobs \"face high exposure to automation\" in\
+    \ the next decade. The jobs most vulnerable to elimination are in office administration,\
+    \ production, transportation and food preparation, but the study found that by\
+    \ 2030, virtually every occupation will be affected to some degree by AI-enabled\
+    \ automation. (Gartner has stated that in 2020, AI will be a net-positive job\
+    \ motivator, eliminating 1.8 million jobs while creating 2.3 million jobs.)  \n\
+    \nOf more immediate concern is the prevailing skepticism about AI's value in the\
+    \ workplace: 42% of IT and business executives surveyed do not completely comprehend\
+    \ the Artificial Intelligence advantages and that is used in the workplace, according\
+    \ to Gartner's 2019 CIO Agenda survey. Fear of the unknown accounts for some of\
+    \ this skepticism, the report stated, adding that business and IT leaders must\
+    \ take on the challenge of quantifying the benefits of AI to employees. Companies\
+    \ must strive to tie AI to tangible KPIs, such as increased revenue and time saved,\
+    \ as well as train employees in the new skills they will need in an AI-enabled\
+    \ workplace. Without worker trust, the benefits of AI will come to naught, Beena\
+    \ Ammanath, AI managing director at Deloitte Consulting LLP, told TechTarget in\
+    \ an article on the top AI risks businesses must confront when implementing the\
+    \ technology. There are cases whereby the algorithm works extremely well, but\
+    \ the worker isn't trained or energized to use it,\" Ammanath said. Consider the\
+    \ example of an AI system on a factory floor that determines when a manufacturing\
+    \ machine must be shut down for maintenance. The best AI solution can be framed\
+    \ up, and this could be 99.998% correct and it could also be prompting the factory\
+    \ worker to shut off the machine. But if the end user doesn't have confidence\
+    \ on the machine, which isn't abnormal, then AI will be seen as a failure,\" Ammanath\
+    \ said. As AI models become more complex, explainability  \n\n\\- understanding\
+    \ how an AI reached its conclusion -will become ever-harder to convey to frontline\
+    \ workers who need to trust the AI to make decisions. Companies must put users\
+    \ first, according to the experts interviewed in this report on explainable AI\
+    \ techniques: Data scientists should focus on providing the information relevant\
+    \ to the particular domain expert, rather than getting into the weeds of how a\
+    \ model works.  "
+  fmt: '
+
+    # Chapter 4: Why Is AI Important In The Enterprise?
+
+
+    Currently, however, we don''t know enough about how the human brain is organized
+    to build an artificial one that is as, or more, intelligent in a general sense.
+    ![](image_rsrc8V.jpg)
+
+
+    According to research firm IDC, by 2025, the volume of data generated worldwide
+    will reach 175 zettabytes (that is, 175 billion terabytes), an astounding 430%
+    increase over the 33 zettabytes of data produced by 2018. For companies committed
+    to data-driven decision-making, the surge in data will be a boon. Large data sets
+    are the raw material for the vital indepth analysis that drives improvements in
+    existing business operations and leads to new lines of business. Companies cannot
+    capitalize on these data stores, however, without AI. As writer Mary K. Pratt
+    reported in her article "Importance of AI in the business quest for data-driven
+    operations," AI and big data play a symbiotic role in 21st century business success:
+    Deep learning, a subset of AI, processes large data stores to identify the subtle
+    patterns and correlations in big data that can give companies a competitive edge;
+    simultaneously, AI''s ability to make meaningful predictions -- to get at the
+    truth of a matter rather than mimic human biases -- requires high-quality data
+    and usually vast amounts of it. AI''s importance to 21st century business has
+    been compared to the strategic value of electricity in the early 20th century,
+    when electrification transformed industries like manufacturing and created new
+    ones like mass communications. "AI is strategic because the scale, scope, complexity
+    and the dynamism in business today is so extreme that humans can no longer manage
+    it without artificial intelligence," Chris Baum, partner and director at Bain
+    & Company, told TechTarget. AI''s biggest impact on business in the near future
+    stems from its ability to automate and augment jobs that today are done by humans.
+    Labor gains realized from using AI are expected to expand upon and surpass those
+    made by current workplace automation tools. And by analyzing vast volumes of data,
+    AI won''t simply automate work tasks, but will generate the most efficient way
+    to complete a task and adjust workflows on the fly as circumstances change. AI
+    is already augmenting human work in many fields, from assisting doctors in medical
+    diagnoses to helping call center workers deal more effectively with customer queries
+    and complaints. In security, AI is being used to automatically respond to cybersecurity
+    threats and prioritize those that need human attention. Banks are using AI to
+    speed up and support loan processing and to ensure compliance. (See section "Current
+    and potential use cases.") But AI will also eliminate many jobs done today by
+    humans -- a major concern to workers, as described in the following sections on
+    benefits and risks of AI.
+
+
+    ## Benefits of AI in the enterprise
+
+
+    Most companies at this juncture are looking to use AI to optimize existing operations
+    rather than radically transform their business models. The aforementioned gains
+    in productivity and efficiency are the most cited benefits of implementing AI
+    in the enterprise. Here are five additional key benefits of AI for business:
+
+
+    • Improved customer service. The ability of AI to speed up and personalize customer
+    service is among the top benefits businesses expect to reap from AI, ranked No.
+    2 among AI payoffs in a 2019 research study by MIT Sloan Boston Consulting Group.
+    Management and
+
+
+    • Improved monitoring. AI''s capacity to process data in real time means organizations
+    can implement near-instantaneous monitoring; for example, factory floors are using
+    image recognition software and machine learning models in quality control processes
+    to monitor production and flag problems.
+
+
+    • Faster product development. AI enables shorter development cycles and reduces
+    the time between design and commercialization for a quicker ROI of development
+    dollars.
+
+
+    • Better quality. Organizations expect a reduction in errors and increased adherence
+    to compliance standards by using AI on tasks previously done manually or done
+    with traditional automation tools, such as extract, transform and load. Financial
+    reconciliation is an area where machine learning, for example, has substantially
+    reduced costs, time and errors.
+
+
+    • Business model innovation and expansion. Digital natives like Amazon, Airbnb,
+    Uber and others certainly have used AI to help implement new business models.
+    Traditional companies may find AI-enabled business model transformation a hard
+    sell, according to Andrew Ng, a pioneer of AI development at Google and Baidu
+    and currently CEO and co-founder of Landing AI. He offered a six-step playbook
+    for getting AI off the ground at traditional companies.
+
+
+    ## AI risks
+
+
+    One of the biggest risks to the effective use of AI in the enterprise is worker
+    mistrust. Many employees fear and distrust AI or remain unconvinced of its value
+    in the workplace. Anxieties about job elimination are not unfounded, according
+    to many Brookings Institute, studies. A report from the "Automation and Artificial
+    Intelligence: How Machines Are Affecting People and Places," estimated that some
+    36 million jobs "face high exposure to automation" in the next decade. The jobs
+    most vulnerable to elimination are in office administration, production, transportation
+    and food preparation, but the study found that by 2030, virtually every occupation
+    will be affected to some degree by AI-enabled automation. (Gartner has stated
+    that in 2020, AI will be a net-positive job motivator, eliminating 1.8 million
+    jobs while creating 2.3 million jobs.)
+
+
+    Of more immediate concern is the prevailing skepticism about AI''s value in the
+    workplace: 42% of IT and business executives surveyed do not completely comprehend
+    the Artificial Intelligence advantages and that is used in the workplace, according
+    to Gartner''s 2019 CIO Agenda survey. Fear of the unknown accounts for some of
+    this skepticism, the report stated, adding that business and IT leaders must take
+    on the challenge of quantifying the benefits of AI to employees. Companies must
+    strive to tie AI to tangible KPIs, such as increased revenue and time saved, as
+    well as train employees in the new skills they will need in an AI-enabled workplace.
+    Without worker trust, the benefits of AI will come to naught, Beena Ammanath,
+    AI managing director at Deloitte Consulting LLP, told TechTarget in an article
+    on the top AI risks businesses must confront when implementing the technology.
+    There are cases whereby the algorithm works extremely well, but the worker isn''t
+    trained or energized to use it," Ammanath said. Consider the example of an AI
+    system on a factory floor that determines when a manufacturing machine must be
+    shut down for maintenance. The best AI solution can be framed up, and this could
+    be 99.998% correct and it could also be prompting the factory worker to shut off
+    the machine. But if the end user doesn''t have confidence on the machine, which
+    isn''t abnormal, then AI will be seen as a failure," Ammanath said. As AI models
+    become more complex, explainability - understanding how an AI reached its conclusion
+    -will become ever-harder to convey to frontline workers who need to trust the
+    AI to make decisions. Companies must put users first, according to the experts
+    interviewed in this report on explainable AI techniques: Data scientists should
+    focus on providing the information relevant to the particular domain expert, rather
+    than getting into the weeds of how a model works.
+
+    '
+  trans: '
+
+
+    # 第 4 章：为什么 AI 对企业很重要？
+
+
+    目前，然而，我们对人脑的组织方式还不够了解，无法构建一个在一般意义上与人类一样或更聪明的人工大脑。 ![](img/image_rsrc8V.jpg)
+
+
+    根据研究机构 IDC 的数据，到 2025 年，全球产生的数据量将达到 175 兆字节（即 175 亿太字节），相比 2018 年产生的 33 兆字节数据，增长了惊人的
+    430%。对于致力于数据驱动决策的公司来说，数据的激增将是一大利好。大型数据集是推动现有业务运营改进并催生新业务线的至关重要的深入分析的原材料。然而，如果没有
+    AI，公司无法利用这些数据存储。正如作家 Mary K. Pratt 在其文章“数据驱动运营业务追求中 AI 的重要性”中报道的那样，AI 和大数据在 21
+    世纪商业成功中发挥着共生作用：深度学习（AI 的一个子集）处理大型数据存储，以识别大数据中的微妙模式和相关性，这些模式和相关性可以为公司带来竞争优势；同时，AI
+    做出有意义预测的能力——即探究事情的真相，而非模仿人类偏见——需要高质量的数据，并且通常需要大量的数据。AI 对 21 世纪商业的重要性已被比作 20 世纪初电力的战略价值，当时电气化改造了制造业等行业，并创造了大众传播等新行业。“AI
+    是战略性的，因为当今商业的规模、范围、复杂性和动态性都极其极端，人类已无法在没有人工智能的情况下进行管理，”Bain & Company 合伙人兼董事 Chris
+    Baum 对 TechTarget 表示。AI 在近未来对商业最大的影响源于其自动化和增强当今由人类完成的工作的能力。预计使用 AI 实现的劳动收益将扩大并超过当前工作场所自动化工具所取得的收益。并且通过分析海量数据，AI
+    不会简单地自动化工作任务，而是会生成完成任务的最高效方式，并随着情况变化即时调整工作流程。AI 已经在许多领域增强了人类工作，从协助医生进行医疗诊断，到帮助呼叫中心员工更有效地处理客户查询和投诉。在安全领域，AI
+    正在被用于自动响应网络安全威胁并优先处理需要人工关注的威胁。银行正在使用 AI 来加快和支持贷款处理并确保合规。（参见“当前和潜在用例”部分。）但 AI 也将消除当今由人类完成的许多工作——这是工人的一大担忧，如下文关于
+    AI 的益处和风险的章节所述。
+
+
+    ## 企业中 AI 的益处
+
+
+    目前，大多数公司希望利用 AI 来优化现有运营，而不是从根本上转变其商业模式。上述提到的生产率和效率提升是企业实施 AI 最常被引用的益处。以下是 AI 为企业带来的五个额外关键益处：
+
+
+    • 改善客户服务。AI 加快和个性化客户服务的能力是企业期望从 AI 中获得的顶级益处之一，在 2019 年 MIT Sloan 波士顿咨询集团的一项研究中，它在
+    AI 回报中排名第 2。管理层和
+
+
+    • 改善监控。AI 实时处理数据的能力意味着组织可以实现近乎即时的监控；例如，工厂车间正在使用图像识别软件和机器学习模型在质量控制过程中监控生产并标记问题。
+
+
+    • 加快产品开发。AI 能够缩短开发周期，并减少设计与商业化之间的时间，从而更快地实现开发资金的投资回报率。
+
+
+    • 提高质量。组织希望通过在以前手动完成或使用传统自动化工具（如提取、转换和加载）完成的任务上使用 AI，来减少错误并提高对合规标准的遵守程度。财务对账是机器学习例如已大幅降低成本、时间和错误的一个领域。
+
+
+    • 商业模式创新与扩张。像亚马逊、爱彼迎、优步等数字原生企业当然已经利用 AI 来帮助实施新的商业模式。传统公司可能会发现 AI 赋能的商业模式转型难以推行，据
+    Google 和 Baidu 的 AI 发展先驱、现任 Landing AI 首席执行官兼联合创始人 Andrew Ng 表示。他提供了一套六步指南，帮助传统公司落地
+    AI。
+
+
+    ## AI 风险
+
+
+    企业有效使用 AI 面临的最大风险之一是员工不信任。许多员工害怕和不信任 AI，或者仍然不相信其在工作场所的价值。许多布鲁金斯学会的研究表明，对工作被取消的担忧并非没有根据。一份来自“自动化与人工智能：机器如何影响人与地方”的报告估计，未来十年约有
+    3600 万个工作“面临高度自动化风险”。最容易被取消的工作集中在办公室行政、生产、运输和食品准备领域，但该研究发现，到 2030 年，几乎每个职业都将在某种程度上受到
+    AI 赋能自动化的影响。（Gartner 曾表示，2020 年 AI 将是净积极的工作推动因素，消除 180 万个工作岗位，同时创造 230 万个工作岗位。）
+
+
+    更令人立即担忧的是，人们普遍对 AI 在工作场所的价值持怀疑态度：根据 Gartner 2019 年 CIO 议程调查，42% 的 IT 和业务高管受访者并不完全理解在工作场所使用的人工智能优势。报告指出，对未知的恐惧导致了部分这种怀疑态度，并补充说，业务和
+    IT 领导者必须接受量化 AI 对员工利益的挑战。公司必须努力将 AI 与具体的 KPI（如收入增加和节省的时间）联系起来，并培训员工掌握在 AI 赋能的工作场所中所需的新技能。如果没有员工的信任，AI
+    的益处将付诸东流，德勤咨询 LLP 的 AI 管理董事 Beena Ammanath 在一篇关于企业在实施该技术时必须面对的顶级 AI 风险的文章中对 TechTarget
+    表示。“有些情况下，算法运行得非常好，但员工没有接受培训或没有动力去使用它，”Ammanath 说。考虑工厂车间上一个 AI 系统的例子，它确定制造机器何时需要停机维护。最好的
+    AI 解决方案可以被制定出来，这可能有 99.998% 的正确性，并且它还可能提示工厂工人关闭机器。但如果最终用户对机器没有信心，这并不罕见，那么 AI 将被视为失败，”Ammanath
+    说。随着 AI 模型变得更加复杂，可解释性——理解 AI 如何得出结论——将变得越来越难以向需要信任 AI 来做决策的一线员工传达。根据本报告中关于可解释
+    AI 技术的专家访谈，公司必须把用户放在首位：数据科学家应专注于向特定领域专家提供相关信息，而不是深入模型工作原理的细节。
+
+
+    '
+  toc: []
+- raw: "For a machine learning model that predicts the risk of a patient being readmitted,\
+    \ for example, the physician may want an explanation of the underlying medical\
+    \ reasons, while a discharge planner may want to know the likelihood of readmission.\
+    \ Here is a summary of three more big AI risks discussed in the article cited\
+    \ above: • AI errors. While AI can eliminate human error, problematic data, poor\
+    \ training data or mistakes in the algorithms can lead to AI errors. And those\
+    \ errors can be dangerously compounded because of the large volume of transactions\
+    \ AI systems typically process. \"Humans might make 30 mistakes in a day, but\
+    \ a bot handling millions of transactions a day magnifies any error,\" Bain &\
+    \ Company's Brahm said. • Unethical Companies need and unintended practices. to\
+    \ guard against unethical AI. Enterprise leaders are likely familiar with the\
+    \ reports on the racial bias baked into the AI-based risk prediction tools used\
+    \ by some judges to sentence criminals and decide bail. Companies must also be\
+    \ on the alert for unintended consequences of using AI to make business decisions.\
+    \ An example is a grocery chain that uses AI to determine pricing based on competition\
+    \ from other grocers. In poor neighborhoods where there is little or no competition,\
+    \ the logical recommendation might be to charge more for food, but is this the\
+    \ strategy the grocery chain intends? • Erosion of key skills . This is a rarely\
+    \ considered but not unimportant risk of AI. In the wake of the two plane crashes\
+    \ involving Boeing 737 Max jets, some experts expressed concern that pilots were\
+    \ losing basic flying skills -- or at least the ability to employ them -- as the\
+    \ jet relied on increasing amounts of AI in the cockpit. Albeit extreme cases,\
+    \ these events should raise questions about key skills enterprises might want\
+    \ to preserve in their human workforce as AI's use expands, Brahm said. Chapter\
+    \ 5: Current And Potential Use Cases A Google search for AI use cases turns up\
+    \ millions of results, an indication of the many ways in which AI is applied in\
+    \ the enterprise, or at least can be applied. AI use cases span industries from\
+    \ financial services  \n\n\\- an early adopter -to healthcare, education, marketing\
+    \ and retail. AI has made its way into every business department, from marketing,\
+    \ finance and HR to IT and business operations furthermore, the use cases integrate\
+    \ a wide range of AI applications. Among them: natural language generation tools\
+    \ used in customer service, deep learning platforms used in automated driving,\
+    \ and biometric identifiers used by law enforcement. Here is a sampling of current\
+    \ AI use cases in multiple industries and business departments with links to the\
+    \ TechTarget articles that explain each one in depth. ![](image_rsrc8W.jpg)Financial\
+    \ services. Artificial intelligence is transforming how banks operate and how\
+    \ customers bank. Read about how Chase Bank, JPMorgan Chase, Bank of America,\
+    \ Wells Fargo and other banking behemoths are currently using AI to automate customer\
+    \ service and also to help streamline back office processes in this in-depth feature\
+    \ \"AI use cases in banking create opportunities, improve systems.\" Manufacturing.\
+    \ Collaborative robots, aka cobots, are working on assembly lines and in warehouses\
+    \ alongside humans, functioning as an extra set of hands; factories are using\
+    \ AI to predict maintenance needs; machine learning algorithms detect buying habits\
+    \ to predict product demand for production planning. Read about these AI implementations\
+    \ and potential new AI applications in \"10 AI use cases in manufacturing.\" Agriculture.\
+    \ The $5 trillion agriculture industry is using AI to yield healthier crops, reduce\
+    \ workloads and organize data. Read Cognilytica analyst Kathleen Walch's deep\
+    \ dive into agriculture's use of AI technology and about John Deere's AI journey.\
+    \ Law. The document-intensive legal industry is using AI to save time and improve\
+    \ client service. Law firms are deploying machine learning to mine data and predict\
+    \ outcomes; vision to classify they are also using computer and extract information\
+    \ from documents and natural language processing to interpret requests for information.\
+    \ Watch Vince DiMascio talk about how his team is applying AI and robotic process\
+    \ automation at the large immigration law firm where he serves as CIO and CTO.\
+    \ Education. In addition to automating the tedious process of grading exams, AI\
+    \ is being used to assess students and adapt curricula to their needs. Listen\
+    \ to this podcast with Ken Koedinger, professor of human-computer interaction\
+    \ and psychology at Carnegie Mellon University's School of Computer Science, on\
+    \ how machine learning is providing insight into how humans learn and paving the\
+    \ way for personalized learning. IT service management . IT organizations are\
+    \ using natural language processing to automate user requests for IT services.\
+    \ They are applying machine learning to ITSM data to gain a richer understanding\
+    \ of their infrastructure and processes. Dig deeper into how organizations are\
+    \ using AI to optimize IT services in \"10 AI and machine learning use cases in\
+    \ ITSM.\" Evolution of AI use cases The range of AI use cases in the enterprise\
+    \ is not only expanding but also evolving in the face of current market uncertainty.\
+    \ As companies grapple with the implications of the coronavirus pandemic and fallout,\
+    \ AI will help companies understand how they need to pivot to stay relevant and\
+    \ profitable, said Arijit Sengupta, CEO of Aible, an AI platform provider. \"\
+    In the current Novel virus emergency, the most significant use cases are going\
+    \ to center on scenario planning, hypothesis testing and assumption testing,\"\
+    \ Sengupta told TechTarget. But model building will have to become nimbler and\
+    \ more iterative. Predictive models, for example, could be pushed out to salespeople,\
+    \ who in turn become critical players in feeding the models real-time empirical\
+    \ data for ongoing analysis. With that said, for any use case, getting end-user\
+    \ feedback is judgmental in uncertain times, this is because end users will get\
+    \ to know things that haven't surfaced in the data yet, Sengupta said. For a look\
+    \ at how AI use cases are evolving in eight areas, read reporter George Lawton's\
+    \ informative article, \"AI uses cases in the enterprise undergoing rapid change.\"\
+    \ Adoption in the enterprise Recent studies on AI adoption in the enterprise assert\
+    \ that AI deployments are rising. By 2022, for example, Gartner projected that\
+    \ the average number of AI projects per company will grow to 35, a 250% increase\
+    \ over the average of 10 projects projected for 2020. But whether the growth in\
+    \ AI adoption is as strong as anticipated or will pan out as predicted is open\
+    \ to debate. As Gartner noted, a 10-percentage point gain in enterprise AI adoption\
+    \ to 14% in 2019 from 4% the enterprise AI adoption to 14% in 2019 from 4% the\
+    \ point increase. What is clear is that companies still face many challenges in\
+    \ deploying AI.  \n\nCompanies that have deployed AI are realizing that figuring\
+    \ out how to do AI is not the same as using AI to make money. As Lawton chronicled\
+    \ in an in-depth report on \"last-mile\" delivery problems in AI, businesses are\
+    \ finding it much harder to weave AI technologies into existing business processes\
+    \ than to build or buy the complex AI models that promise to optimize those processes.\
+    \ Ian Ziao, manager at Deloitte Omnia AI, estimated that most companies deploy\
+    \ between 10% and 40% of their machine learning projects.  \n\nback companies\
+    \ Among the challenges holding from integrating AI into their business processes\
+    \ are the following: • lack of the last-mile infrastructure -- such as robotic\
+    \ process automation, integration platform as a service and low-code platforms\
+    \ needed to connect AI into the business; • lack of domain experts who can assess\
+    \ what AI is good for, specifically figuring out which decisionmaking elements\
+    \ of a process can be automated by AI and how to then reengineer the process;\
+    \ and  "
+  fmt: "\n# For a machine learning model that predicts the risk of a patient being\
+    \ readmitted\n\nFor a machine learning model that predicts the risk of a patient\
+    \ being readmitted, for example, the physician may want an explanation of the\
+    \ underlying medical reasons, while a discharge planner may want to know the likelihood\
+    \ of readmission.\n\n# Summary of three more big AI risks\n\nHere is a summary\
+    \ of three more big AI risks discussed in the article cited above:\n\n• **AI errors.**\
+    \ While AI can eliminate human error, problematic data, poor training data or\
+    \ mistakes in the algorithms can lead to AI errors. And those errors can be dangerously\
+    \ compounded because of the large volume of transactions AI systems typically\
+    \ process. \"Humans might make 30 mistakes in a day, but a bot handling millions\
+    \ of transactions a day magnifies any error,\" Bain & Company's Brahm said.\n\n\
+    • **Unethical Companies need and unintended practices.** to guard against unethical\
+    \ AI. Enterprise leaders are likely familiar with the reports on the racial bias\
+    \ baked into the AI-based risk prediction tools used by some judges to sentence\
+    \ criminals and decide bail. Companies must also be on the alert for unintended\
+    \ consequences of using AI to make business decisions. An example is a grocery\
+    \ chain that uses AI to determine pricing based on competition from other grocers.\
+    \ In poor neighborhoods where there is little or no competition, the logical recommendation\
+    \ might be to charge more for food, but is this the strategy the grocery chain\
+    \ intends?\n\n• **Erosion of key skills.** This is a rarely considered but not\
+    \ unimportant risk of AI. In the wake of the two plane crashes involving Boeing\
+    \ 737 Max jets, some experts expressed concern that pilots were losing basic flying\
+    \ skills -- or at least the ability to employ them -- as the jet relied on increasing\
+    \ amounts of AI in the cockpit. Albeit extreme cases, these events should raise\
+    \ questions about key skills enterprises might want to preserve in their human\
+    \ workforce as AI's use expands, Brahm said.\n\n# Chapter 5: Current And Potential\
+    \ Use Cases\n\nA Google search for AI use cases turns up millions of results,\
+    \ an indication of the many ways in which AI is applied in the enterprise, or\
+    \ at least can be applied. AI use cases span industries from financial services\
+    \  \n\n\\- an early adopter -to healthcare, education, marketing and retail. AI\
+    \ has made its way into every business department, from marketing, finance and\
+    \ HR to IT and business operations furthermore, the use cases integrate a wide\
+    \ range of AI applications. Among them: natural language generation tools used\
+    \ in customer service, deep learning platforms used in automated driving, and\
+    \ biometric identifiers used by law enforcement.\n\nHere is a sampling of current\
+    \ AI use cases in multiple industries and business departments with links to the\
+    \ TechTarget articles that explain each one in depth.\n\n![](image_rsrc8W.jpg)\n\
+    \n## Financial services\n\nArtificial intelligence is transforming how banks operate\
+    \ and how customers bank. Read about how Chase Bank, JPMorgan Chase, Bank of America,\
+    \ Wells Fargo and other banking behemoths are currently using AI to automate customer\
+    \ service and also to help streamline back office processes in this in-depth feature\
+    \ \"AI use cases in banking create opportunities, improve systems.\"\n\n## Manufacturing\n\
+    \nCollaborative robots, aka cobots, are working on assembly lines and in warehouses\
+    \ alongside humans, functioning as an extra set of hands; factories are using\
+    \ AI to predict maintenance needs; machine learning algorithms detect buying habits\
+    \ to predict product demand for production planning. Read about these AI implementations\
+    \ and potential new AI applications in \"10 AI use cases in manufacturing.\"\n\
+    \n## Agriculture\n\nThe $5 trillion agriculture industry is using AI to yield\
+    \ healthier crops, reduce workloads and organize data. Read Cognilytica analyst\
+    \ Kathleen Walch's deep dive into agriculture's use of AI technology and about\
+    \ John Deere's AI journey.\n\n## Law\n\nThe document-intensive legal industry\
+    \ is using AI to save time and improve client service. Law firms are deploying\
+    \ machine learning to mine data and predict outcomes; vision to classify they\
+    \ are also using computer and extract information from documents and natural language\
+    \ processing to interpret requests for information. Watch Vince DiMascio talk\
+    \ about how his team is applying AI and robotic process automation at the large\
+    \ immigration law firm where he serves as CIO and CTO.\n\n## Education\n\nIn addition\
+    \ to automating the tedious process of grading exams, AI is being used to assess\
+    \ students and adapt curricula to their needs. Listen to this podcast with Ken\
+    \ Koedinger, professor of human-computer interaction and psychology at Carnegie\
+    \ Mellon University's School of Computer Science, on how machine learning is providing\
+    \ insight into how humans learn and paving the way for personalized learning.\n\
+    \n## IT service management\n\nIT organizations are using natural language processing\
+    \ to automate user requests for IT services. They are applying machine learning\
+    \ to ITSM data to gain a richer understanding of their infrastructure and processes.\
+    \ Dig deeper into how organizations are using AI to optimize IT services in \"\
+    10 AI and machine learning use cases in ITSM.\"\n\n# Evolution of AI use cases\n\
+    \nThe range of AI use cases in the enterprise is not only expanding but also evolving\
+    \ in the face of current market uncertainty. As companies grapple with the implications\
+    \ of the coronavirus pandemic and fallout, AI will help companies understand how\
+    \ they need to pivot to stay relevant and profitable, said Arijit Sengupta, CEO\
+    \ of Aible, an AI platform provider. \"In the current Novel virus emergency, the\
+    \ most significant use cases are going to center on scenario planning, hypothesis\
+    \ testing and assumption testing,\" Sengupta told TechTarget. But model building\
+    \ will have to become nimbler and more iterative. Predictive models, for example,\
+    \ could be pushed out to salespeople, who in turn become critical players in feeding\
+    \ the models real-time empirical data for ongoing analysis. With that said, for\
+    \ any use case, getting end-user feedback is judgmental in uncertain times, this\
+    \ is because end users will get to know things that haven't surfaced in the data\
+    \ yet, Sengupta said. For a look at how AI use cases are evolving in eight areas,\
+    \ read reporter George Lawton's informative article, \"AI uses cases in the enterprise\
+    \ undergoing rapid change.\"\n\n# Adoption in the enterprise\n\nRecent studies\
+    \ on AI adoption in the enterprise assert that AI deployments are rising. By 2022,\
+    \ for example, Gartner projected that the average number of AI projects per company\
+    \ will grow to 35, a 250% increase over the average of 10 projects projected for\
+    \ 2020. But whether the growth in AI adoption is as strong as anticipated or will\
+    \ pan out as predicted is open to debate. As Gartner noted, a 10-percentage point\
+    \ gain in enterprise AI adoption to 14% in 2019 from 4% the enterprise AI adoption\
+    \ to 14% in 2019 from 4% the point increase. What is clear is that companies still\
+    \ face many challenges in deploying AI.\n\nCompanies that have deployed AI are\
+    \ realizing that figuring out how to do AI is not the same as using AI to make\
+    \ money. As Lawton chronicled in an in-depth report on \"last-mile\" delivery\
+    \ problems in AI, businesses are finding it much harder to weave AI technologies\
+    \ into existing business processes than to build or buy the complex AI models\
+    \ that promise to optimize those processes. Ian Ziao, manager at Deloitte Omnia\
+    \ AI, estimated that most companies deploy between 10% and 40% of their machine\
+    \ learning projects.\n\nback companies Among the challenges holding from integrating\
+    \ AI into their business processes are the following:\n\n• lack of the last-mile\
+    \ infrastructure -- such as robotic process automation, integration platform as\
+    \ a service and low-code platforms needed to connect AI into the business;\n\n\
+    • lack of domain experts who can assess what AI is good for, specifically figuring\
+    \ out which decisionmaking elements of a process can be automated by AI and how\
+    \ to then reengineer the process; and\n"
+  trans: "\n\n# 为预测患者再入院风险的机器学习模型\n\n为预测患者再入院风险的机器学习模型，例如，医生可能希望了解其背后的医学原因，而出院规划师可能希望了解再入院的可能性。\n\
+    \n# 三大 AI 风险摘要\n\n以下是上文引用文章中讨论的三大 AI 风险摘要：\n\n• **AI 错误。** 虽然 AI 可以消除人为错误，但有问题的数据、训练数据不佳或算法中的错误可能导致\
+    \ AI 错误。而且，由于 AI 系统通常处理大量交易，这些错误可能会被危险地放大。“人类一天可能会犯 30 个错误，但每天处理数百万笔交易的机器人会放大任何错误，”Bain\
+    \ & Company 的 Brahm 表示。\n\n• **不道德的公司需要和意外做法。** 为防范不道德的 AI。企业领导者可能熟悉有关一些法官用于判刑和决定保释的基于\
+    \ AI 的风险预测工具中存在种族偏见的报告。公司还必须警惕使用 AI 进行商业决策的意外后果。一个例子是连锁杂货店利用 AI 根据其他杂货店的竞争情况来确定价格。在竞争很少或没有竞争的贫困社区，合理的建议可能是提高食品价格，但这是连锁杂货店打算采取的策略吗？\n\
+    \n• **关键技能的侵蚀。** 这是一种很少被考虑但并非不重要的 AI 风险。在涉及波音 737 Max 飞机的两起空难之后，一些专家表示担忧，飞行员正在失去基本飞行技能——或者至少是运用这些技能的能力——因为飞机驾驶舱中越来越依赖\
+    \ AI。尽管这些是极端案例，但这些事件应该引发关于企业可能希望在其人力员工中保留哪些关键技能的问题，随着 AI 的使用扩大，Brahm 表示。\n\n#\
+    \ 第 5 章：当前和潜在用例\n\nGoogle 搜索 AI 用例会返回数百万个结果，这表明 AI 在企业中的应用方式很多，或者至少可以应用。AI 用例涵盖从金融服务\
+    \  \n\n\\- 早期采用者 - 到医疗保健、教育、营销和零售的各个行业。AI 已进入每个业务部门，从营销、财务和人力资源到 IT 和业务运营，此外，用例整合了广泛的\
+    \ AI 应用。其中包括：客户服务中使用的自然语言生成工具、自动驾驶中使用的深度学习平台，以及执法部门使用的生物特征标识符。\n\n以下是多个行业和业务部门中当前\
+    \ AI 用例的示例，附有链接到解释每个用例的 TechTarget 文章。\n\n![](img/image_rsrc8W.jpg)\n\n## 金融服务\n\
+    \n人工智能正在改变银行的运营方式和客户的银行业务方式。阅读有关 Chase Bank、JPMorgan Chase、Bank of America、Wells\
+    \ Fargo 及其他银行巨头如何目前使用 AI 来自动化客户服务，并帮助简化后台流程的深度文章“AI 用例在银行业创造机会，改进系统”。\n\n## 制造业\n\
+    \n协作机器人，又称协作机器人（cobots），正在与人类一起在装配线和仓库中工作，充当一双额外的手；工厂正在使用 AI 来预测维护需求；机器学习算法检测购买习惯以预测生产计划的产品需求。阅读有关这些\
+    \ AI 实施和潜在新 AI 应用的“制造业中 10 个 AI 用例”。\n\n## 农业\n\n5 万亿美元的农业行业正在使用 AI 来种植更健康的作物，减少工作量并组织数据。阅读\
+    \ Cognilytica 分析师 Kathleen Walch 关于农业使用 AI 技术的深入探讨，以及 John Deere 的 AI 之旅。\n\n\
+    ## 法律\n\n文档密集型法律行业正在使用 AI 来节省时间并改善客户服务。律师事务所正在部署机器学习来挖掘数据并预测结果；使用计算机视觉来分类文档并从中提取信息，以及使用自然语言处理来解释信息请求。观看\
+    \ Vince DiMascio 谈论他的团队如何在他担任 CIO 和 CTO 的大型移民律师事务所中应用 AI 和机器人流程自动化。\n\n## 教育\n\
+    \n除了自动化评分考试的繁琐过程外，AI 还被用于评估学生并根据他们的需求调整课程。收听这段与卡内基梅隆大学计算机科学学院人机交互和心理学教授 Ken Koedinger\
+    \ 的播客，了解机器学习如何提供关于人类如何学习的见解，并为个性化学习铺平道路。\n\n## IT 服务管理\n\nIT 组织正在使用自然语言处理来自动化\
+    \ IT 服务的用户请求。他们正在将机器学习应用于 ITSM 数据，以便更丰富地了解其基础设施和流程。深入了解组织如何使用 AI 来优化 IT 服务，阅读“ITSM\
+    \ 中 10 个 AI 和机器学习用例”。\n\n# AI 用例的演变\n\n企业中 AI 用例的范围不仅在扩大，而且在当前市场不确定性的影响下也在演变。随着公司努力应对冠状病毒大流行及其后果，AI\
+    \ 将帮助公司了解如何转型以保持相关性和盈利能力，Aible（一家 AI 平台提供商）的 CEO Arijit Sengupta 表示。“在当前的新冠病毒紧急情况中，最重要的用例将集中于情景规划、假设测试和假设验证，”Sengupta\
+    \ 对 TechTarget 表示。但是，模型构建将必须变得更加敏捷和迭代。例如，预测模型可以推送给销售人员，而销售人员反过来成为向模型提供实时经验数据以进行持续分析的关键参与者。话虽如此，对于任何用例，在不确定时期，获取最终用户反馈至关重要，这是因为最终用户将了解尚未在数据中显现的事情，Sengupta\
+    \ 表示。要了解 AI 用例在八个领域如何演变，请阅读记者 George Lawton 的信息丰富的文章“企业 AI 用例正在快速变化”。\n\n# 企业中的采用\n\
+    \n关于企业中 AI 采用的最新研究断言，AI 部署正在增加。例如，到 2022 年，Gartner 预计每家公司的 AI 项目平均数量将增长到 35 个，比\
+    \ 2020 年预计的平均 10 个项目增加了 250%。但是，AI 采用的增长是否像预期的那样强劲，或者是否会如预测的那样实现，还有待商榷。正如 Gartner\
+    \ 所指出的，企业 AI 采用率从 2019 年的 4% 增加了 10 个百分点至 14%。企业 AI 采用率从 2019 年的 4% 增加了 10 个百分点至\
+    \ 14%。很明显，公司在部署 AI 时仍然面临许多挑战。\n\n已经部署 AI 的公司正在意识，弄清楚如何进行 AI 并不等同于使用 AI 来赚钱。正如\
+    \ Lawton 在关于 AI 中“最后一英里”交付问题的深度报告中所记录的，企业发现将 AI 技术编织到现有业务流程中比构建或购买承诺优化这些流程的复杂\
+    \ AI 模型要困难得多。Deloitte Omnia AI 的经理 Ian Ziao 估计，大多数公司部署了 10% 到 40% 的机器学习项目。\n\n\
+    阻碍公司将 AI 集成到其业务流程中的挑战包括以下几点：\n\n• 缺乏最后一英里基础设施——例如，机器人流程自动化、集成平台即服务和低代码平台，这些是将\
+    \ AI 连接到业务所需的；\n\n• 缺乏能够评估 AI 适用于什么的领域专家，具体来说，是弄清楚流程中哪些决策元素可以由 AI 自动化，以及如何随后重新设计流程；以及\n\
+    \n"
+  toc: []
+- raw: "• lack of feedback on machine learning models, which need to be updated to\
+    \ reflect new data. Industry best practices for deploying AI, however, are emerging,\
+    \ as described in a TechTarget article on criteria for success in AI, highlighting\
+    \ advice from practitioners from Shell and Uber, among others, in charge of big\
+    \ AI initiatives. The most critical factor cited by all the data scientists profiled\
+    \ was the need to work closely with the company's subject matter experts. People\
+    \ with indepth knowledge of the subject matter, they stressed, provide the context\
+    \ and nuance that are hard for deep learning tools to tease apart on their own.\
+    \ ![](image_rsrc8X.jpg)Chapter 6: Artificial Intelligence Trends: Giant Chips,\
+    \ New Cpus, Neuro-Symbolic AI It is hard to overestimate how much development\
+    \ is being done on artificial intelligence by vendors, governments and research\
+    \ institutions -- and how quickly the field is changing. On the hardware side,\
+    \ startups are developing new and different ways of organizing memory, compute\
+    \ and networking that could reshape the way leading enterprises design and deploy\
+    \ AI algorithms. At least one vendor has begun testing a single chip about the\
+    \ size of an iPad that, as detailed in this report on AI giant chips, can move\
+    \ data around thousands of times faster than existing AI chips. Even accepted\
+    \ wisdom -- such as the superiority of GPUs vs. CPUs for running AI workloads\
+    \ -- is being challenged by leading AI researchers. A team at Rice University,\
+    \ for example, is working on a new category of algorithms, called SLIDE (Sub-LInear\
+    \ Deep Learning Engine), that promises to make CPUs practical for more types of\
+    \ algorithms. CPUs, of course, are commodity hardware -present everywhere and\
+    \ cheap compared to GPUs. \"If we can design algorithms like SLIDE that can run\
+    \ AI directly on CPUs efficiently, that could be a game changer,\" Anshumali Shrivastava,\
+    \ assistant professor in the department of computer science at Rice, told TechTarget.\
+    \ On the software side, scientists in academia and industry are pushing the limits\
+    \ of current applications of artificial intelligence. In the feverish quest to\
+    \ develop sentient machines that rival human general intelligence, traditional\
+    \ antagonists in AI are burying the hatchet. Proponents of symbolic AI -- methods\
+    \ that are based on high-level symbolic representations of problems, logic and\
+    \ search -- are joining forces with proponents of data-intensive neural networks\
+    \ to develop AI that is good at both capturing compositional and causal structure\
+    \ (symbolic AI) and capable of the image recognition and natural language processing\
+    \ feats performed by deep neural networks. This neurosymbolic approach would allow\
+    \ machines to reason about what they see, representing a milestone in the evolution\
+    \ of AI. \"Neuro-symbolic modeling is one of the most exciting areas in AI right\
+    \ now,\" Brenden Lake, assistant professor of psychology and data science at New\
+    \ York University, told TechTarget. Read our feature story on this groundbreaking\
+    \ research and its implications for the future of AI. Listen to me as I speak\
+    \ and say things, do what I say and give me exactly what I demand of you”, – these\
+    \ commands are currently the best way to describe the ancient times of kings,\
+    \ whereby everyone was circumscribed to obey their wish. Now, the time has come\
+    \ for everyone to say the command and let the followers do the rest. The recent\
+    \ developments in Artificial Intelligence have been of tremendous benefit to humans,\
+    \ helping to provide easier and more accurate ways to get tasks done. Today we’re\
+    \ going to see some Artificial Intelligence powered Mobile Apps that help to attain\
+    \ this task much easier 1) Google Assistant  \n\n![](image_rsrc8Y.jpg)Google Assistant\
+    \ is a sophisticated artificial intelligence-powered, virtual support that was\
+    \ developed by Google, which is originally accessible on mobile and other smart\
+    \ home devices. Unlike the manufacturer’s previous virtual assistance Now, Google\
+    \ Assistant can engage in two-way communications. Assistant originally emerged\
+    \ far back in May 2016 as part of Google’s messaging app Allo strategy, and its\
+    \ voice-activated speaker Google Home. Now you can use Google Assistant in all\
+    \ Android-powered mobile phones. 2) Microsoft Cortana  \n\n![](image_rsrc8Z.jpg)Cortana\
+    \ is a virtual assistant which was created and designed by Microsoft for the following\
+    \ purposes: Windows 10, Windows 10 Mobile, as well as Windows Phone 8.1, Invokesmart\
+    \ speaker, Microsoft Band, Surface Headphones is not also left out, Xbox One,\
+    \ iOS, Android, Windows Mixed Reality, and Amazon Alexa. Cortana can help you\
+    \ to set up reminders, also it recognizes natural voice without the requirement\
+    \ for any form of keyboard input, and it answers questions using data from the\
+    \ Bing search engine. Additionally, this can be used to send emails, search for\
+    \ your desired products or anything you are in search for on the internet. 3)\
+    \ Hound Hound is another AI based app that uses your own voice to search things.\
+    \ It is extremely fast and accepts your natural voice. You don’t need to learn\
+    \ extra keyword phrases for using this app. It tells you about the Weather, temperature,\
+    \ Navigation, Directions, Uber fare estimates, journey time, make calls, news\
+    \ search, video search, stock price and lot more. 4) Recent News Recent News is\
+    \ an artificial intelligence news aggregation app which is used mainly on Android\
+    \ devices. Its algorithm works reading habits. Using your by studying users reading\
+    \ habit, past behavior and interest, the app will help to keep users updated on\
+    \ any latest articles, news, and other important  \n\ninformed  "
+  fmt: '
+
+    ## Chapter 6: Artificial Intelligence Trends: Giant Chips, New CPUs, Neuro-Symbolic
+    AI
+
+
+    It is hard to overestimate how much development is being done on artificial intelligence
+    by vendors, governments and research institutions -- and how quickly the field
+    is changing. On the hardware side, startups are developing new and different ways
+    of organizing memory, compute and networking that could reshape the way leading
+    enterprises design and deploy AI algorithms. At least one vendor has begun testing
+    a single chip about the size of an iPad that, as detailed in this report on AI
+    giant chips, can move data around thousands of times faster than existing AI chips.
+    Even accepted wisdom -- such as the superiority of GPUs vs. CPUs for running AI
+    workloads -- is being challenged by leading AI researchers. A team at Rice University,
+    for example, is working on a new category of algorithms, called SLIDE (Sub-LInear
+    Deep Learning Engine), that promises to make CPUs practical for more types of
+    algorithms. CPUs, of course, are commodity hardware -present everywhere and cheap
+    compared to GPUs. "If we can design algorithms like SLIDE that can run AI directly
+    on CPUs efficiently, that could be a game changer," Anshumali Shrivastava, assistant
+    professor in the department of computer science at Rice, told TechTarget. On the
+    software side, scientists in academia and industry are pushing the limits of current
+    applications of artificial intelligence. In the feverish quest to develop sentient
+    machines that rival human general intelligence, traditional antagonists in AI
+    are burying the hatchet. Proponents of symbolic AI -- methods that are based on
+    high-level symbolic representations of problems, logic and search -- are joining
+    forces with proponents of data-intensive neural networks to develop AI that is
+    good at both capturing compositional and causal structure (symbolic AI) and capable
+    of the image recognition and natural language processing feats performed by deep
+    neural networks. This neurosymbolic approach would allow machines to reason about
+    what they see, representing a milestone in the evolution of AI. "Neuro-symbolic
+    modeling is one of the most exciting areas in AI right now," Brenden Lake, assistant
+    professor of psychology and data science at New York University, told TechTarget.
+    Read our feature story on this groundbreaking research and its implications for
+    the future of AI.
+
+
+    ## AI-Powered Mobile Apps
+
+
+    Listen to me as I speak and say things, do what I say and give me exactly what
+    I demand of you”, – these commands are currently the best way to describe the
+    ancient times of kings, whereby everyone was circumscribed to obey their wish.
+    Now, the time has come for everyone to say the command and let the followers do
+    the rest. The recent developments in Artificial Intelligence have been of tremendous
+    benefit to humans, helping to provide easier and more accurate ways to get tasks
+    done. Today we’re going to see some Artificial Intelligence powered Mobile Apps
+    that help to attain this task much easier.
+
+
+    ### 1) Google Assistant
+
+
+    ![](image_rsrc8Y.jpg)
+
+
+    Google Assistant is a sophisticated artificial intelligence-powered, virtual support
+    that was developed by Google, which is originally accessible on mobile and other
+    smart home devices. Unlike the manufacturer’s previous virtual assistance Now,
+    Google Assistant can engage in two-way communications. Assistant originally emerged
+    far back in May 2016 as part of Google’s messaging app Allo strategy, and its
+    voice-activated speaker Google Home. Now you can use Google Assistant in all Android-powered
+    mobile phones.
+
+
+    ### 2) Microsoft Cortana
+
+
+    ![](image_rsrc8Z.jpg)
+
+
+    Cortana is a virtual assistant which was created and designed by Microsoft for
+    the following purposes: Windows 10, Windows 10 Mobile, as well as Windows Phone
+    8.1, Invokesmart speaker, Microsoft Band, Surface Headphones is not also left
+    out, Xbox One, iOS, Android, Windows Mixed Reality, and Amazon Alexa. Cortana
+    can help you to set up reminders, also it recognizes natural voice without the
+    requirement for any form of keyboard input, and it answers questions using data
+    from the Bing search engine. Additionally, this can be used to send emails, search
+    for your desired products or anything you are in search for on the internet.
+
+
+    ### 3) Hound
+
+
+    Hound is another AI based app that uses your own voice to search things. It is
+    extremely fast and accepts your natural voice. You don’t need to learn extra keyword
+    phrases for using this app. It tells you about the Weather, temperature, Navigation,
+    Directions, Uber fare estimates, journey time, make calls, news search, video
+    search, stock price and lot more.
+
+
+    ### 4) Recent News
+
+
+    Recent News is an artificial intelligence news aggregation app which is used mainly
+    on Android devices. Its algorithm works reading habits. Using your by studying
+    users reading habit, past behavior and interest, the app will help to keep users
+    updated on any latest articles, news, and other important informed.
+
+    '
+  trans: '
+
+
+    ## 第 6 章：人工智能趋势：巨型芯片、新型 CPU 与神经符号 AI
+
+
+    很难高估供应商、政府和研究机构在人工智能方面投入的开发力度，以及该领域变化之快。在硬件方面，初创公司正在开发组织内存、计算和网络的新颖且不同的方式，这可能重塑领先企业设计和部署
+    AI 算法的方式。至少有一家供应商已开始测试一款约 iPad 大小的单芯片，如本报告中关于 AI 巨型芯片的详细内容所示，其数据移动速度比现有 AI 芯片快数千倍。即使是公认的智慧——例如
+    GPU 相对于 CPU 运行 AI 工作负载的优越性——也正受到领先 AI 研究人员的挑战。例如，莱斯大学的一个团队正在开发一种名为 SLIDE（Sub-LInear
+    Deep Learning Engine）的新算法类别，该算法有望使 CPU 更适合更多类型的算法。当然，CPU 是商品硬件，无处不在，且相比 GPU 价格低廉。“如果我们能设计出像
+    SLIDE 这样可以高效在 CPU 上直接运行 AI 的算法，那可能会成为游戏规则的改变者，”莱斯大学计算机科学系助理教授 Anshumali Shrivastava
+    对 TechTarget 表示。在软件方面，学术界和工业界的科学家们正在推动当前人工智能应用的极限。在开发可与人类通用智能相媲美的有感知机器的热切探索中，AI
+    领域的传统对手正在握手言和。符号 AI 的支持者——基于问题、逻辑和搜索的高级符号表示的方法——正与数据密集型神经网络的支持者联手，开发既能擅长捕捉组合性和因果结构（符号
+    AI），又能执行深度神经网络完成的图像识别和自然语言处理壮举的 AI。这种神经符号方法将使机器能够推理其所见之物，代表着 AI 演进的一个里程碑。“神经符号建模目前是
+    AI 中最令人兴奋的领域之一，”纽约大学心理学和数据科学助理教授 Brenden Lake 对 TechTarget 表示。阅读我们关于这项开创性研究及其对
+    AI 未来影响的专题报道。
+
+
+    ## AI 驱动的移动应用
+
+
+    听我说，当我说话并说出事情时，照我说的做，并给我要求你做的一切”，——这些命令目前是描述古代国王时代的最佳方式，当时每个人都被限制必须服从他们的意愿。现在，每个人都该发出命令，让追随者去完成其余事情。人工智能的最新发展对人类大有裨益，帮助提供更轻松、更准确的方式来完成任务。今天我们将看到一些人工智能驱动的移动应用，它们能帮助更轻松地完成这项任务。
+
+
+    ### 1) Google Assistant
+
+
+    ![](img/image_rsrc8Y.jpg)
+
+
+    Google Assistant 是由 Google 开发的一款复杂的人工智能驱动虚拟助手，最初可在移动设备和其他智能家居设备上使用。与制造商之前的虚拟助手
+    Now 不同，Google Assistant 可以进行双向通信。Assistant 最初于 2016 年 5 月作为 Google 的消息应用 Allo
+    策略及其语音激活扬声器 Google Home 的一部分出现。现在，你可以在所有 Android 驱动的移动手机上使用 Google Assistant。
+
+
+    ### 2) Microsoft Cortana
+
+
+    ![](img/image_rsrc8Z.jpg)
+
+
+    Cortana 是由微软为以下用途创建和设计的虚拟助手：Windows 10、Windows 10 Mobile，以及 Windows Phone 8.1、Invoke
+    智能扬声器、Microsoft Band、Surface 耳机、Xbox One、iOS、Android、Windows Mixed Reality 和 Amazon
+    Alexa。Cortana 可以帮助你设置提醒，还能在无需任何键盘输入的情况下识别自然语音，并使用 Bing 搜索引擎的数据回答问题。此外，它还可用于发送电子邮件、搜索你想要的产品或在互联网上搜索任何内容。
+
+
+    ### 3) Hound
+
+
+    Hound 是另一款基于 AI 的应用，它使用你自己的声音来搜索事物。它速度极快，并接受你的自然语音。你不需要学习额外的关键词短语来使用此应用。它可以告诉你天气、温度、导航、路线、Uber
+    车费估算、行程时间、拨打电话、新闻搜索、视频搜索、股票价格等更多信息。
+
+
+    ### 4) Recent News
+
+
+    Recent News 是一款人工智能新闻聚合应用，主要用于 Android 设备。其算法通过阅读习惯工作。通过研究用户的阅读习惯、过去行为和兴趣，该应用将帮助用户了解任何最新文章、新闻和其他重要信息。
+
+
+    '
+  toc: []
+- raw: "information. It helps users to stay and updated on subjects they find interesting.\
+    \ It enables users to bookmark articles and later on, it exports them to other\
+    \ devices to enable you read later. Recent News is an app everyone should have.\
+    \ It’s designed for those who are regularly on the search for new articles, news,\
+    \ and blogs pertinent to their field of interest. 5) ELSA This is mainly for those\
+    \ who desire to improve their English-speaking skills, then you can hire Android\
+    \ app developer to assist you design an app like ELSA. ELSA (English Language\
+    \ Speech Assistant) is a popular artificial intelligence Android apps for learning\
+    \ quickly the use of English language. With this, it enables users to learn the\
+    \ English language, and also to improve their pronunciation in less than 4 weeks\
+    \ of using the app. The app also has test designed various experts that can support\
+    \ users in following their progress of learning and having a full daily progress\
+    \ report. 6) Google Allo Google Allo is a messaging app that enables users to\
+    \ carry out action on their Android phones through their voice. It can also be\
+    \ used as a voice to text app on Android devices. Users can also easily express\
+    \ their emotions and feelings using emojis and stickers. Users can use this app\
+    \ to hide their search history via the incognito mode. It is apt for people who\
+    \ are super tired, or lazy but still want to continue working. The app’s Smart\
+    \ Reply features, what they do is to learn the behavior of the user and thereafter\
+    \ give the users suggestions to text and photos based on user’s typical replies.\
+    \ Google Allo is far more than just a personal assistant where you can get busy\
+    \ and creative with photos by doodling them. 7) Robin Robin can be seen as another\
+    \ popular Artificial Intelligence app that works as a personal assistant while\
+    \ you are on the move. It’s very easy to use, Robin enables you to write text\
+    \ via your voice, and get local data, jokes and GPS navigation without necessarily\
+    \ moving your eyes off the road. Robin can be used to get traffic status, Twitter\
+    \ news, weather forecast, or to even find a parking place. It is a great app for\
+    \ people who may be driving and do not want to take their eyes off the road. 8)\
+    \ Stifr Magic Cleaner Stifr Magic Cleaner is another powerful popular artificial\
+    \ intelligence apps, this is used to discover junk photos on your phone device\
+    \ to free up some space. The images are scrutinized through a series of machine\
+    \ learning algorithms. Apart from that, the app is very fast to deliver results\
+    \ immediately. Furthermore, you can choose the photos manually to erase, or enables\
+    \ the Siftr do the work. 9) Replika It is called the best friend app. Also, Replika\
+    \ can also be considered as one of the most popular and advanced artificial intelligent\
+    \ apps. The app has the ability to have a conversation with its users just like\
+    \ a real human. Its conversation appears not to be automated. The app has the\
+    \ capacity and potential to lean the user’s preferences, wherefore it’s conversation\
+    \ that may begin as generic will start to be more particular and personalized.\
+    \ 10) Socratic Math & Homework Help This is awesome because you’re about to download\
+    \ the fastest and best homework helper and also math solver around (aka, your\
+    \ new best friend). In this part, what you need do is take a PHOTO of your homework\
+    \ question or math equation and then get INSTANT detail explanations, videos,\
+    \ and step-bystep help. 11) Other Apps which worth a try a) Microsoft Pix: Microsoft\
+    \ Pix is an impactful camera application designed by Microsoft itself that takes\
+    \ photography to the next level. It is based on Artificial intelligence and uses\
+    \ machine learning to enhance the depth of the images. The app sures that all\
+    \ the various images look clear and bright, real and awesome. b ) Seeing AI: Talking\
+    \ Camera for the Blind – Powered by Microsoft Corporation: Seeing AI is a free\
+    \ app that narrates the world around you. This was created specially made for\
+    \ the blind and low vision impaired community, this ongoing research project employs\
+    \ the power of Artificial Intelligence to help open up the visual world and describe\
+    \ nearby people, text, and objects. c ) Parla — AI-powered English teacher : Parla,\
+    \ is just like a human tutor, that tells user what they should learn next, it\
+    \ does the work of correction of mistakes and defines, when the user has learned\
+    \ the new word or grammar rule. As it stands today, we believe that AI will greatly\
+    \ replace human teachers and modify the way and manner people learn, which will\
+    \ make education more effective and affordable to all. d) Duolingo Bots: AI-powered\
+    \ characters to teach language conversation.  \n\ne) Lisa: this is a Learning\
+    \ machine powered engagement predictor for Instagram. f) Tetra : Tetra uses AI\
+    \ to take notes on your phone calls, so you can focus on the conversation now\
+    \ and remember everything later.  \n\ng) Astro : Current email apps for Mac, iOS,\
+    \ Android, and Alexa, fully-incorporated with Slack, and also powered by artificial\
+    \ intelligence. h) Trove — AI for email : Trove is a data-driven expert network\
+    \ and communications outlet, powered by advanced artificial intelligence. This\
+    \ Trove shows your true network, a rich list of real connections based on your\
+    \ email history. Leave the bloat of meaningless connections of other professional\
+    \ networks behind. No other platform can do what Trove does. i) Capsule.ai : Remember\
+    \ everywhere you’ve been. j) Ada — Your Health Companion : Ada is a personal health\
+    \ companion that uses AI and machine learning to help people to understand and\
+    \ manage their health. This was pretty developed by a wonderful team of 100 doctors,\
+    \ data scientists and engineers, which led to the launch of Ada with the mission\
+    \ to give everyone the opportunity to high quality, personalized health data and\
+    \ care.  \n\nk) Aura: Mindfulness & Meditation: Aura for me is the best, AI-driven\
+    \ mindfulness meditation app for anyone who may be interested in eliminating stress\
+    \ & anxiety; Aura gives short and sweet, sciencebacked, and also personalized\
+    \ mindfulness meditation exercises every day to enable you look good and happier.\
+    \ CONCLUSION Artificial Intelligence is a smart and effective way to save time\
+    \ and be productive all the way. The apps listed above can help you explore the\
+    \ greatness and the power of artificial intelligence. With all these, Let’s see\
+    \ what’s going to come in the nearest future because everyone loves to work smart\
+    \ these days, if you’ve not hard it and the power of artificial intelligence,\
+    \ it’s just all about working smart with everything you do without breaking the\
+    \ sweat."
+  fmt: '
+
+    # 10 款值得尝试的人工智能应用程序
+
+
+    information. It helps users to stay and updated on subjects they find interesting.
+    It enables users to bookmark articles and later on, it exports them to other devices
+    to enable you read later. Recent News is an app everyone should have. It’s designed
+    for those who are regularly on the search for new articles, news, and blogs pertinent
+    to their field of interest.
+
+
+    ## 5) ELSA
+
+
+    This is mainly for those who desire to improve their English-speaking skills,
+    then you can hire Android app developer to assist you design an app like ELSA.
+    ELSA (English Language Speech Assistant) is a popular artificial intelligence
+    Android apps for learning quickly the use of English language. With this, it enables
+    users to learn the English language, and also to improve their pronunciation in
+    less than 4 weeks of using the app. The app also has test designed various experts
+    that can support users in following their progress of learning and having a full
+    daily progress report.
+
+
+    ## 6) Google Allo
+
+
+    Google Allo is a messaging app that enables users to carry out action on their
+    Android phones through their voice. It can also be used as a voice to text app
+    on Android devices. Users can also easily express their emotions and feelings
+    using emojis and stickers. Users can use this app to hide their search history
+    via the incognito mode. It is apt for people who are super tired, or lazy but
+    still want to continue working. The app’s Smart Reply features, what they do is
+    to learn the behavior of the user and thereafter give the users suggestions to
+    text and photos based on user’s typical replies. Google Allo is far more than
+    just a personal assistant where you can get busy and creative with photos by doodling
+    them.
+
+
+    ## 7) Robin
+
+
+    Robin can be seen as another popular Artificial Intelligence app that works as
+    a personal assistant while you are on the move. It’s very easy to use, Robin enables
+    you to write text via your voice, and get local data, jokes and GPS navigation
+    without necessarily moving your eyes off the road. Robin can be used to get traffic
+    status, Twitter news, weather forecast, or to even find a parking place. It is
+    a great app for people who may be driving and do not want to take their eyes off
+    the road.
+
+
+    ## 8) Stifr Magic Cleaner
+
+
+    Stifr Magic Cleaner is another powerful popular artificial intelligence apps,
+    this is used to discover junk photos on your phone device to free up some space.
+    The images are scrutinized through a series of machine learning algorithms. Apart
+    from that, the app is very fast to deliver results immediately. Furthermore, you
+    can choose the photos manually to erase, or enables the Siftr do the work.
+
+
+    ## 9) Replika
+
+
+    It is called the best friend app. Also, Replika can also be considered as one
+    of the most popular and advanced artificial intelligent apps. The app has the
+    ability to have a conversation with its users just like a real human. Its conversation
+    appears not to be automated. The app has the capacity and potential to lean the
+    user’s preferences, wherefore it’s conversation that may begin as generic will
+    start to be more particular and personalized.
+
+
+    ## 10) Socratic Math & Homework Help
+
+
+    This is awesome because you’re about to download the fastest and best homework
+    helper and also math solver around (aka, your new best friend). In this part,
+    what you need do is take a PHOTO of your homework question or math equation and
+    then get INSTANT detail explanations, videos, and step-bystep help.
+
+
+    ## 11) Other Apps which worth a try
+
+
+    a) Microsoft Pix: Microsoft Pix is an impactful camera application designed by
+    Microsoft itself that takes photography to the next level. It is based on Artificial
+    intelligence and uses machine learning to enhance the depth of the images. The
+    app sures that all the various images look clear and bright, real and awesome.
+
+
+    b) Seeing AI: Talking Camera for the Blind – Powered by Microsoft Corporation:
+    Seeing AI is a free app that narrates the world around you. This was created specially
+    made for the blind and low vision impaired community, this ongoing research project
+    employs the power of Artificial Intelligence to help open up the visual world
+    and describe nearby people, text, and objects.
+
+
+    c) Parla—AI-powered English teacher: Parla, is just like a human tutor, that tells
+    user what they should learn next, it does the work of correction of mistakes and
+    defines, when the user has learned the new word or grammar rule. As it stands
+    today, we believe that AI will greatly replace human teachers and modify the way
+    and manner people learn, which will make education more effective and affordable
+    to all.
+
+
+    d) Duolingo Bots: AI-powered characters to teach language conversation.
+
+
+    e) Lisa: this is a Learning machine powered engagement predictor for Instagram.
+
+
+    f) Tetra: Tetra uses AI to take notes on your phone calls, so you can focus on
+    the conversation now and remember everything later.
+
+
+    g) Astro: Current email apps for Mac, iOS, Android, and Alexa, fully-incorporated
+    with Slack, and also powered by artificial intelligence.
+
+
+    h) Trove—AI for email: Trove is a data-driven expert network and communications
+    outlet, powered by advanced artificial intelligence. This Trove shows your true
+    network, a rich list of real connections based on your email history. Leave the
+    bloat of meaningless connections of other professional networks behind. No other
+    platform can do what Trove does.
+
+
+    i) Capsule.ai: Remember everywhere you’ve been.
+
+
+    j) Ada—Your Health Companion: Ada is a personal health companion that uses AI
+    and machine learning to help people to understand and manage their health. This
+    was pretty developed by a wonderful team of 100 doctors, data scientists and engineers,
+    which led to the launch of Ada with the mission to give everyone the opportunity
+    to high quality, personalized health data and care.
+
+
+    k) Aura: Mindfulness & Meditation: Aura for me is the best, AI-driven mindfulness
+    meditation app for anyone who may be interested in eliminating stress & anxiety;
+    Aura gives short and sweet, sciencebacked, and also personalized mindfulness meditation
+    exercises every day to enable you look good and happier.
+
+
+    # CONCLUSION
+
+
+    Artificial Intelligence is a smart and effective way to save time and be productive
+    all the way. The apps listed above can help you explore the greatness and the
+    power of artificial intelligence. With all these, Let’s see what’s going to come
+    in the nearest future because everyone loves to work smart these days, if you’ve
+    not hard it and the power of artificial intelligence, it’s just all about working
+    smart with everything you do without breaking the sweat.
+
+    '
+  trans: '
+
+
+    # 10 款值得尝试的人工智能应用程序
+
+
+    information. It helps users to stay and updated on subjects they find interesting.
+    It enables users to bookmark articles and later on, it exports them to other devices
+    to enable you read later. Recent News 是每个人都应该拥有的应用程序。它专为那些经常寻找与其感兴趣领域相关的新文章、新闻和博客的人设计。
+
+
+    ## 5) ELSA
+
+
+    这主要适用于那些希望提高英语口语技能的人，然后你可以雇佣 Android 应用开发者来协助你设计类似 ELSA 的应用程序。ELSA（英语语音助手）是一款流行的人工智能
+    Android 应用程序，用于快速学习英语语言的使用。通过它，使用户能够学习英语，并且在使用该应用程序不到 4 周的时间内改善他们的发音。该应用程序还有由各种专家设计的测试，可以支持用户跟踪他们的学习进度并获得完整的每日进度报告。
+
+
+    ## 6) Google Allo
+
+
+    Google Allo 是一款消息传递应用程序，使用户能够通过语音在他们的 Android 手机上执行操作。它也可以在 Android 设备上用作语音转文本应用程序。用户还可以轻松使用表情符号和贴纸来表达他们的情感和情绪。用户可以使用此应用程序通过隐身模式隐藏他们的搜索历史记录。它适合那些非常疲劳或懒惰但仍想继续工作的人。该应用程序的智能回复功能，其作用是学习用户的行为，然后根据用户的典型回复向用户提供文本和照片建议。Google
+    Allo 远不止是一个个人助手，你可以在其中通过涂鸦照片来忙碌并发挥创造力。
+
+
+    ## 7) Robin
+
+
+    Robin 可以被视为另一款流行的人工智能应用程序，在你外出时充当个人助手。它非常易于使用，Robin 使你能够通过语音编写文本，并获取本地数据、笑话和 GPS
+    导航，而无需将眼睛从道路上移开。Robin 可以用于获取交通状态、Twitter 新闻、天气预报，甚至寻找停车位。它是那些可能正在驾驶且不想将眼睛从道路上移开的人的绝佳应用程序。
+
+
+    ## 8) Stifr Magic Cleaner
+
+
+    Stifr Magic Cleaner 是另一款强大且流行的人工智能应用程序，用于发现手机设备上的垃圾照片以释放一些空间。图像通过一系列机器学习算法进行审查。除此之外，该应用程序非常快速，能够立即提供结果。此外，你可以手动选择要擦除的照片，或者让
+    Siftr 来完成工作。
+
+
+    ## 9) Replika
+
+
+    它被称为最好的朋友应用程序。此外，Replika 也可以被认为是最流行和最先进的人工智能应用程序之一。该应用程序能够像真实人类一样与用户进行对话。它的对话看起来并不像是自动化的。该应用程序有能力和潜力去了解用户的偏好，因此，对话可能开始时比较普通，但会变得更加具体和个性化。
+
+
+    ## 10) Socratic Math & Homework Help
+
+
+    这太棒了，因为你即将下载最快、最好的作业助手和数学求解器（也就是你的新好朋友）。在这一部分，你需要做的是拍摄作业问题或数学方程的照片，然后立即获得详细解释、视频和逐步帮助。
+
+
+    ## 11) Other Apps which worth a try
+
+
+    a) Microsoft Pix: Microsoft Pix 是由微软自身设计的一款影响力深远的相机应用程序，将摄影提升到新水平。它基于人工智能，并利用机器学习来增强图像的深度。该应用程序确保所有各种图像都清晰明亮、真实且出色。
+
+
+    b) Seeing AI: Talking Camera for the Blind – Powered by Microsoft Corporation:
+    Seeing AI 是一款免费应用程序，可以讲述你周围的世界。这是专门为盲人和低视力障碍社区制作的，这个持续的研究项目利用人工智能的力量来帮助打开视觉世界，并描述附近的人、文本和物体。
+
+
+    c) Parla—AI-powered English teacher: Parla 就像一个人类导师，告诉用户接下来应该学习什么，它负责纠正错误，并定义用户何时学会了新单词或语法规则。就目前而言，我们相信人工智能将在很大程度上取代人类教师，并改变人们学习的方式和方法，这将使教育对所有人来说更加有效和负担得起。
+
+
+    d) Duolingo Bots: AI-powered characters to teach language conversation.
+
+
+    e) Lisa: this is a Learning machine powered engagement predictor for Instagram.
+
+
+    f) Tetra: Tetra uses AI to take notes on your phone calls, so you can focus on
+    the conversation now and remember everything later.
+
+
+    g) Astro: Current email apps for Mac, iOS, Android, and Alexa, fully-incorporated
+    with Slack, and also powered by artificial intelligence.
+
+
+    h) Trove—AI for email: Trove is a data-driven expert network and communications
+    outlet, powered by advanced artificial intelligence. This Trove shows your true
+    network, a rich list of real connections based on your email history. Leave the
+    bloat of meaningless connections of other professional networks behind. No other
+    platform can do what Trove does.
+
+
+    i) Capsule.ai: Remember everywhere you’ve been.
+
+
+    j) Ada—Your Health Companion: Ada is a personal health companion that uses AI
+    and machine learning to help people to understand and manage their health. This
+    was pretty developed by a wonderful team of 100 doctors, data scientists and engineers,
+    which led to the launch of Ada with the mission to give everyone the opportunity
+    to high quality, personalized health data and care.
+
+
+    k) Aura: Mindfulness & Meditation: Aura for me is the best, AI-driven mindfulness
+    meditation app for anyone who may be interested in eliminating stress & anxiety;
+    Aura gives short and sweet, sciencebacked, and also personalized mindfulness meditation
+    exercises every day to enable you look good and happier.
+
+
+    # CONCLUSION
+
+
+    Artificial Intelligence is a smart and effective way to save time and be productive
+    all the way. The apps listed above can help you explore the greatness and the
+    power of artificial intelligence. With all these, Let’s see what’s going to come
+    in the nearest future because everyone loves to work smart these days, if you’ve
+    not hard it and the power of artificial intelligence, it’s just all about working
+    smart with everything you do without breaking the sweat.
+
+
+    '
+  toc: []
