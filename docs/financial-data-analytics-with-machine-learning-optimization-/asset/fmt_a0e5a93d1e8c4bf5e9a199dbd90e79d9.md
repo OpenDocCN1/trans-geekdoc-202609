@@ -1,0 +1,8 @@
+
+where $\boldsymbol{f}_t := (\boldsymbol{f}_t^1, \ldots, \boldsymbol{f}_t^m)^\top$ is an $m$‐dimensional random process, with $m < p$ ($m$ is normally much less than $p$), having a positive definite variance‐covariance matrix; $\boldsymbol{\epsilon}_t = (\boldsymbol{\epsilon}_t^1, \ldots, \boldsymbol{\epsilon}_t^p)^\top$ is a zero‐mean $p$‐dimensional random error; $\boldsymbol{a}$ and $\boldsymbol{B}$ are a $p$‐dimensional constant vector and a $p \times m$ constant coefficient matrix respectively. It is further assumed that these factors are the major ones such that the residual information is uncorrelated, i.e. $\text{Cov}(\boldsymbol{f}_t^i, \boldsymbol{\epsilon}_t^j) = 0$ for all $i = 1, 2, \ldots, m$, $j = 1, 2, \ldots, p$ and $t \geqslant 0$. To determine the factors, one can incorporate PCA by analyzing the data matrix of $\boldsymbol{x}_0, \ldots, \boldsymbol{x}_n$, so as to represent a random vector $\boldsymbol{x}_t$ in terms of its first $m$ principal components with a small error term. We remark that our discussions in this section lay the foundations for *Principal Component Regression* (PCR); we postpone delicate discussions on its mathematics and implementation to Section \*10.7.
+
+Suppose that $\boldsymbol{x}_t$ is a $p$‐dimensional random vector with mean vector $\boldsymbol{\mu} = (\mu_1, \ldots, \mu_p)^\top$ and (homogeneous) covariance matrix $\boldsymbol{\Sigma}$ for all $t \geqslant 0$, and all $\boldsymbol{x}_t$'s were collected independently, so that they are supposed to follow a common distribution. We first standardize it to $\boldsymbol{z}_t = (\boldsymbol{z}_t^1, \ldots, \boldsymbol{z}_t^p)^\top$ given by
+
+$$
+z_t^i = \frac{x_t^i - \mu_i}{\sigma_i}, \quad i = 1, \ldots, p, \quad t = 0, 1, 2, \ldots, n,
+$$

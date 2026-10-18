@@ -1,0 +1,29 @@
+
+![StartLayout 1st Row 1st Column í”¼ left-parenthesis ModifyingAbove normal upper Delta With Ì‚ right-parenthesis 2nd Column equals StartFraction alpha left-parenthesis theta plus h right-parenthesis minus alpha left-parenthesis theta minus h right-parenthesis Over 2 h EndFraction 2nd Row 1st Column Blank 2nd Column equals StartFraction alpha left-parenthesis theta right-parenthesis plus h alpha prime left-parenthesis theta right-parenthesis plus one half h squared alpha double-prime left-parenthesis theta right-parenthesis plus o left-parenthesis h squared right-parenthesis minus left-parenthesis alpha left-parenthesis theta right-parenthesis minus h alpha prime left-parenthesis theta right-parenthesis plus one half h squared alpha double-prime left-parenthesis theta right-parenthesis plus o left-parenthesis h squared right-parenthesis right-parenthesis Over 2 h EndFraction 3rd Row 1st Column Blank 2nd Column equals alpha prime left-parenthesis theta right-parenthesis plus o left-parenthesis h right-parenthesis comma EndLayout](images/c05-math-0092.png)
+
+<math display="block" overflow="scroll">
+<mtable>
+<mtr>
+<mtd columnalign="right"><mo>&#54588;</mo><mo stretchy="false">(</mo><mover accent="true"><mi mathvariant="normal">&#916;</mi><mo>&#770;</mo></mover><mo stretchy="false">)</mo></mtd>
+<mtd columnalign="left"><mo>=</mo><mfrac><mrow><mi>&#945;</mi><mo stretchy="false">(</mo><mi>&#952;</mi><mo>+</mo><mi>h</mi><mo stretchy="false">)</mo><mo>&#8722;</mo><mi>&#945;</mi><mo stretchy="false">(</mo><mi>&#952;</mi><mo>&#8722;</mo><mi>h</mi><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mi>h</mi></mrow></mfrac></mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right"/><mtd columnalign="right"><mo>=</mo><mfrac><mrow><mi>&#945;</mi><mo stretchy="false">(</mo><mi>&#952;</mi><mo stretchy="false">)</mo><mo>+</mo><mi>h</mi><msup><mi>&#945;</mi><mo>&#8242;</mo></msup><mo stretchy="false">(</mo><mi>&#952;</mi><mo stretchy="false">)</mo><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>h</mi><mn>2</mn></msup><msup><mi>&#945;</mi><mi>&#8243;</mi></msup><mo stretchy="false">(</mo><mi>&#952;</mi><mo stretchy="false">)</mo><mo>+</mo><mi>o</mi><mo stretchy="false">(</mo><msup><mi>h</mi><mn>2</mn></msup><mo stretchy="false">)</mo><mo>&#8722;</mo><mo stretchy="false">(</mo><mi>&#945;</mi><mo stretchy="false">(</mo><mi>&#952;</mi><mo stretchy="false">)</mo><mo>&#8722;</mo><mi>h</mi><msup><mi>&#945;</mi><mo>&#8242;</mo></msup><mo stretchy="false">(</mo><mi>&#952;</mi><mo stretchy="false">)</mo><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>h</mi><mn>2</mn></msup><msup><mi>&#945;</mi><mi>&#8243;</mi></msup><mo stretchy="false">(</mo><mi>&#952;</mi><mo stretchy="false">)</mo><mo>+</mo><mi>o</mi><mo stretchy="false">(</mo><msup><mi>h</mi><mn>2</mn></msup><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mi>h</mi></mrow></mfrac></mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right"/><mtd columnalign="left"><mo>=</mo><msup><mi>&#945;</mi><mo>&#8242;</mo></msup><mo stretchy="false">(</mo><mi>&#952;</mi><mo stretchy="false">)</mo><mo>+</mo><mi>o</mi><mo stretchy="false">(</mo><mi>h</mi><mo stretchy="false">)</mo><mo>,</mo></mtd>
+</mtr>
+</mtable>
+</math>
+
+and we note its bias is of order ![o left-parenthesis h right-parenthesis](images/c05-i0547.png)<math display="inline" overflow="scroll"><mi>o</mi><mo stretchy="false">(</mo><mi>h</mi><mo stretchy="false">)</mo></math> only, which is smaller than that from using the forward difference estimator.
+
+## [Example 5.9](#c05.xhtml#R_c05-fea-0032) *(Under a CEV model, delta and vega with finite differences)*
+
+Under the CEV framework with ![theta equals 2 comma 1.8](images/c05-i0548.png)<math display="inline" overflow="scroll"><mi>&#952;</mi><mo>=</mo><mn>2</mn><mo>,</mo><mn>1.8</mn></math>, and 1, consider a European call option with ![upper S 0 equals 10 comma upper K equals 8 comma sigma equals 0.3 comma r equals 0.05](images/c05-i0549.png)<math display="inline" overflow="scroll"><msub><mi>S</mi><mn>0</mn></msub><mo>=</mo><mn>10</mn><mo>,</mo><mi>K</mi><mo>=</mo><mn>8</mn><mo>,</mo><mi>&#963;</mi><mo>=</mo><mn>0.3</mn><mo>,</mo><mi>r</mi><mo>=</mo><mn>0.05</mn></math>, and ![upper T equals 1](images/c05-i0550.png)<math display="inline" overflow="scroll"><mi>T</mi><mo>=</mo><mn>1</mn></math>. Its delta and vega are computed using forward and central differencing in [Programme 5.27](#c05.xhtml#c05-gra-00027) via Python (resp. [Programme 5.28](#c05.xhtml#c05-gra-00028) via `R`) by using ([5.14](#c05.xhtml#c05-disp-0083)) and ([5.18](#c05.xhtml#c05-disp-0087)), respectively, and the numerical scheme used is the Milstein one.
+
+![](images/c05-gra-0034.png)![](images/c05-gra-0035.png)
+
+Next we estimate the delta and vega of the European call, under CEV model with ![theta equals 2 comma 1.8](images/c05-i0551.png)<math display="inline" overflow="scroll"><mi>&#952;</mi><mo>=</mo><mn>2</mn><mo>,</mo><mn>1.8</mn></math>, and 1, by using the methods of forward and central differences by choosing ![h equals 0.5 comma 0.45 comma ellipsis comma 0.1 comma 0.05](images/c05-i0552.png)<math display="inline" overflow="scroll"><mi>h</mi><mo>=</mo><mn>0.5</mn><mo>,</mo><mn>0.45</mn><mo>,</mo><mo>&#8230;</mo><mo>,</mo><mn>0.1</mn><mo>,</mo><mn>0.05</mn></math> for delta, and ![0.05 comma 0.045 comma ellipsis comma 0.01 comma 0.005](images/c05-i0553.png)<math display="inline" overflow="scroll"><mn>0.05</mn><mo>,</mo><mn>0.045</mn><mo>,</mo><mo>&#8230;</mo><mo>,</mo><mn>0.01</mn><mo>,</mo><mn>0.005</mn></math> for vega. We implement the respective executions of [Programmes 5.27](#c05.xhtml#c05-gra-00027) and [5.28](#c05.xhtml#c05-gra-00028) in [Programme 5.29](#c05.xhtml#c05-gra-00029) via Python and [Programme 5.30](#c05.xhtml#c05-gra-00030) via `R`.
+
+![](images/c05-gra-0036.png)![](images/c05-gra-0037.png) ![](images/c05-gra-0038.png)

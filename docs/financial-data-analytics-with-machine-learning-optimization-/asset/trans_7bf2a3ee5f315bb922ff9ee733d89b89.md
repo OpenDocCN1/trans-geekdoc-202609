@@ -1,0 +1,70 @@
+
+
+Furthermore, using ([4.23](#c04.xhtml#c04-disp-0069)), we then have
+
+![Cov left-parenthesis bold e Subscript left-parenthesis upper K minus 1 right-parenthesis Baseline right-parenthesis equals Cov left-parenthesis ModifyingAbove bold p With Ì‚ Subscript left-parenthesis upper K minus 1 right-parenthesis Baseline right-parenthesis equals StartFraction 1 Over n EndFraction left-parenthesis diag left-parenthesis bold-italic p Subscript left-parenthesis upper K minus 1 right-parenthesis Baseline right-parenthesis minus bold-italic p Subscript left-parenthesis upper K minus 1 right-parenthesis Baseline bold-italic p Subscript left-parenthesis upper K minus 1 right-parenthesis Superscript down-tack Baseline right-parenthesis equals StartFraction 1 Over n EndFraction bold upper Sigma Subscript left-parenthesis upper K minus 1 right-parenthesis Baseline period](images/c04-math-0078.png)<math display="block" overflow="scroll"><mtext>Cov</mtext><mo stretchy="false">(</mo><msub><mi mathvariant="bold">e</mi><mrow><mo stretchy="false">(</mo><mi>K</mi><mo>&#8722;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msub><mo stretchy="false">)</mo><mo>=</mo><mtext>Cov</mtext><mo stretchy="false">(</mo><msub><mrow><mover accent="true"><mi mathvariant="bold">p</mi><mo>&#770;</mo></mover></mrow><mrow><mo stretchy="false">(</mo><mi>K</mi><mo>&#8722;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msub><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><mfenced open="(" close=")" separators=""><mrow><mtext>diag</mtext><mo stretchy="false">(</mo><msub><mi mathvariant="bold-italic">p</mi><mrow><mo stretchy="false">(</mo><mi>K</mi><mo>&#8722;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msub><mo stretchy="false">)</mo><mo>&#8722;</mo><msub><mi mathvariant="bold-italic">p</mi><mrow><mo stretchy="false">(</mo><mi>K</mi><mo>&#8722;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msub><msubsup><mi mathvariant="bold-italic">p</mi><mrow><mo stretchy="false">(</mo><mi>K</mi><mo>&#8722;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>&#8868;</mo></msubsup></mrow></mfenced><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><msub><mrow><mi mathvariant="bold">&#931;</mi></mrow><mrow><mo stretchy="false">(</mo><mi>K</mi><mo>&#8722;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msub><mo>.</mo></math> 
+
+By the multivariate Central Limit Theorem, ![StartRoot n EndRoot bold e Subscript left-parenthesis upper K minus 1 right-parenthesis Baseline long right-arrow Overscript d Endscripts script upper N Subscript upper K minus 1 Baseline left-parenthesis bold 0 Subscript upper K minus 1 Baseline comma bold upper Sigma Subscript left-parenthesis upper K minus 1 right-parenthesis Baseline right-parenthesis](images/c04-i0498.png)<math display="inline" overflow="scroll"><msqrt><mi>n</mi></msqrt><msub><mi mathvariant="bold">e</mi><mrow><mo stretchy="false">(</mo><mi>K</mi><mo>&#8722;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msub><mover accent="true"><mo>&#x027F6;</mo><mi>d</mi></mover><msub><mrow><mi mathvariant="script">N</mi></mrow><mrow><mi>K</mi><mo>&#8722;</mo><mn>1</mn></mrow></msub><mo stretchy="false">(</mo><msub><mn mathvariant="bold">0</mn><mrow><mi>K</mi><mo>&#8722;</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="bold">&#931;</mi></mrow><mrow><mo stretchy="false">(</mo><mi>K</mi><mo>&#8722;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msub><mo stretchy="false">)</mo></math> and, from [Subsection 1.4.2](#c01.xhtml#c01-sec-0011), the Pearson's goodness-of-fit test statistic approximately follows ![chi Subscript upper K minus 1 Superscript 2](images/c04-i0499.png)<math display="inline" overflow="scroll"><msubsup><mrow><mi>&#967;</mi></mrow><mrow><mi>K</mi><mo>&#8722;</mo><mn>1</mn></mrow><mrow><mn>2</mn></mrow></msubsup></math> as ![n right-arrow infinity](images/c04-i0500.png)<math display="inline" overflow="scroll"><mi>n</mi><mo>&#8594;</mo><mi>&#8734;</mi></math>.
+
+## REFERENCES
+
+1.  1.  Brauer, F., Van den Driessche, P., and Wu, J. (Eds.). (2008). Mathematical Epidemiology (Vol. 1945, pp. 3–17). Springer.
+
+2.  2.  Brown, M., Cohen, J., Tang, C.F., and Yam, S.C.P. (2021). Taylor's law of fluctuation scaling for semivariances and higher moments of heavy-tailed data. Proceedings of the National Academy of Sciences of the United States of America, 118(46), e2108031118.
+
+3.  3.  Boyle, J. (1994). An application of Fourier series to the most significant digit problem. The American Mathematical Monthly, 101(9), 879–886.
+
+4.  4.  Carslaw, C.A. (1988). Anomalies in income numbers: evidence of goal oriented behavior. Accounting Review, 63(2), 321–327.
+
+5.  5.  Clauset, A., Shalizi, C.R., and Newman, M.E. (2009). Power-law distributions in empirical data. SIAM Review, 51(4), 661–703.
+
+6.  6.  Cristelli, M., Batty, M., and Pietronero, L. (2012). There is more than a power law in Zipf. Scientific Reports, 2(1), 1–7.
+
+7.  7.  Daniel, W.W. (1978). Applied Nonparametric Statistics. Houghton Mifflin.
+
+8.  8.  Deckert, J., Myagkov, M., and Ordeshook, P.C. (2011). Benford's law and the detection of election fraud. Political Analysis, 19(3), 245–268.
+
+9.  9.  Diwanji, S. (2020). Coronavirus cases in India by state. *Statistica* (accessed 12 May 2020).
+
+10.  10. Durtschi, C., Hillison, W., and Pacini, C. (2004). The effective use of Benford's law to assist in detecting fraud in accounting data. Journal of Forensic Accounting, 5(1), 17–34.
+
+11.  11. Elflein, J. (2020). Canada: COVID-19 cases by province. *Statistica*(accessed 12 May 2020).
+
+12.  12. Elflein, J. (2020). U.S. COVID-19 cases by state. *Statistica*(accessed 12 May 2020).
+
+13.  13. Forte, F. (2020). Spain: Coronavirus cases by region. *Statistica* (accessed 12 May 2020).
+
+14.  14. Gabaix, X. (1999). Zipf's law for cities: an explanation. The Quarterly Journal of Economics, 114(3), 739–767.
+
+15.  15. Gabaix, X. (2009). Power laws in economics and finance. Annual Review of Economics, 1(1), 255–294.
+
+16.  16. Gabaix, X., and Ioannides, Y.M. (2004). The evolution of city size distributions. In Handbook of Regional and Urban Economics (Vol. 4, pp. 2341–2378). Elsevier.
+
+17.  17. Hill, B.M. (1975). A simple general approach to inference about the tail of a distribution. The Annals of Statistics, 3(5), 1163–1174.
+
+18.  18. Horn, R.A., and Johnson, C.R. (2012). Matrix Analysis. Cambridge University Press.
+
+19.  19. Jiang, B., Yin, J., and Liu, Q. (2015). Zipf's law for all the natural cities around the world. International Journal of Geographical Information Science, 29(3), 498–522.
+
+20.  20. Kennedy, A.P., and Yam, S.C.P. (2020). On the authenticity of COVID-19 case figures. PLoS ONE, 15(12), e0243123.
+
+21.  21. Klimek, P., Jiménez, R., Hidalgo, M., Hinteregger, A., and Thurner, S. (2018). Forensic analysis of Turkish elections in 2017–2018. PLoS ONE, 13(10), e0204975.
+
+22.  22. Koptyug, E. (2020). Coronavirus (COVID-19) case numbers in Germany by state 2020. *Statistica*(accessed 12 May 2020).
+
+23.  23. Krugman, P. (1996). Confronting the mystery of urban hierarchy. Journal of the Japanese and International Economies, 10(4), 399–418.
+
+24.  24. Krugman, P. (1996). The Self Organizing Economy. Wiley Blackwell.
+
+25.  25. Miller, S.J. (Ed.). (2015). Benford's Law. Princeton University Press.
+
+26.  26. Montanez, A. (2020). Brazil: COVID-19 cases by state. *Statistica*(accessed 12 May 2020).
+
+27.  27. Montanez, A. (2020). Mexico: COVID-19 cases by state. *Statistica*(accessed 12 May 2020).
+
+28.  28. Moreno-Sánchez, I., Font-Clos, F., and Corral, Á. (2016). Large-scale analysis of Zipf's law in English texts. PLoS ONE, 11(1), e0147073.
+
+29.  29. Moura Jr, N.J., and Ribeiro, M.B. (2006). Zipf law for Brazilian cities. Physica A: Statistical Mechanics and its Applications, 367, 441–448.
+
+30.  30. Müller, J. (2020). Malaysia: COVID-19 cases by state 2020. *Statistica*(accessed 12 May 2020).
+

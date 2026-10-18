@@ -1,0 +1,143 @@
+
+![StartLayout 1st Row 1st Column Blank 2nd Column StartAbsoluteValue double-integral Underscript parallel-to bold-italic s Superscript double-prime Baseline minus bold-italic s Superscript prime Baseline parallel-to less-than-or-equal-to epsilon Endscripts left-parenthesis script í’« Superscript n minus m Baseline double-struck 1 Subscript upper A Baseline left-parenthesis bold-italic s double-prime right-parenthesis minus script í’« Superscript n minus m Baseline double-struck 1 Subscript upper A Baseline left-parenthesis bold-italic s prime right-parenthesis right-parenthesis bold-italic mu Superscript left-parenthesis m right-parenthesis Baseline left-parenthesis d bold-italic s double-prime right-parenthesis bold-italic pi left-parenthesis d bold-italic s prime right-parenthesis EndAbsoluteValue 2nd Row 1st Column equals 2nd Column StartAbsoluteValue double-integral Underscript parallel-to bold-italic s Superscript double-prime Baseline minus bold-italic s Superscript prime Baseline parallel-to less-than-or-equal-to epsilon Endscripts left-parenthesis integral Underscript upper A Endscripts left-parenthesis bold-italic mu Superscript left-parenthesis n minus m right-parenthesis Baseline left-parenthesis bold-italic y vertical-bar bold-italic s Superscript double-prime Baseline right-parenthesis minus bold-italic mu Superscript left-parenthesis n minus m right-parenthesis Baseline left-parenthesis bold-italic y vertical-bar bold-italic s Superscript prime Baseline right-parenthesis right-parenthesis d bold-italic y right-parenthesis bold-italic mu Superscript left-parenthesis m right-parenthesis Baseline left-parenthesis d bold-italic s double-prime right-parenthesis bold-italic pi left-parenthesis d bold-italic s prime right-parenthesis EndAbsoluteValue 3rd Row 1st Column equals 2nd Column StartAbsoluteValue double-integral Underscript parallel-to bold-italic s Superscript double-prime Baseline minus bold-italic s Superscript prime Baseline parallel-to less-than-or-equal-to epsilon Endscripts left-parenthesis integral Underscript upper A Endscripts integral Underscript script upper S Endscripts bold-italic mu Superscript left-parenthesis n minus m minus 1 right-parenthesis Baseline left-parenthesis bold-italic y vertical-bar bold-italic z right-parenthesis left-parenthesis bold-italic mu left-parenthesis bold-italic z vertical-bar bold-italic s Superscript double-prime Baseline right-parenthesis minus bold-italic mu left-parenthesis bold-italic z vertical-bar bold-italic s Superscript prime Baseline right-parenthesis right-parenthesis d bold-italic z d bold-italic y right-parenthesis bold-italic mu Superscript left-parenthesis m right-parenthesis Baseline left-parenthesis d bold-italic s double-prime right-parenthesis bold-italic pi left-parenthesis d bold-italic s prime right-parenthesis EndAbsoluteValue 4th Row 1st Column less-than-or-equal-to 2nd Column script upper M left-parenthesis script upper S right-parenthesis normal upper Delta Subscript epsilon Baseline comma EndLayout](images/c06-math-0159.png)
+
+<math display="block" overflow="scroll">
+<mtable>
+<mtr>
+<mtd columnalign="right"/>
+<mtd columnalign="left">
+<mspace width="0.15em"/>
+<mfenced open="|" close="|" separators="">
+<mrow>
+<munder>
+<mo stretchy="false" movablelimits="false">&#8748;</mo>
+<mrow>
+<mo stretchy="false">&#8741;</mo>
+<msup><mi mathvariant="bold-italic">s</mi><mo>&#8243;</mo></msup>
+<mo>&#8722;</mo>
+<msup><mi mathvariant="bold-italic">s</mi><mo>&#8242;</mo></msup>
+<msub><mo stretchy="false">&#8741;</mo><mn>2</mn></msub>
+<mo>&#8804;</mo>
+<mi>&#949;</mi>
+</mrow>
+</munder>
+<mfenced open="(" close=")" separators="">
+<mrow>
+<msup><mrow><mi mathvariant="script">&#54443;</mi></mrow><mrow><mi>n</mi><mo>&#8722;</mo><mi>m</mi></mrow></msup>
+<msub><mi mathvariant="double-struck">1</mi><mi>A</mi></msub>
+<mo stretchy="false">(</mo><msup><mi mathvariant="bold-italic">s</mi><mo>&#8243;</mo></msup><mo stretchy="false">)</mo>
+<mo>&#8722;</mo>
+<msup><mrow><mi mathvariant="script">&#54443;</mi></mrow><mrow><mi>n</mi><mo>&#8722;</mo><mi>m</mi></mrow></msup>
+<msub><mi mathvariant="double-struck">1</mi><mi>A</mi></msub>
+<mo stretchy="false">(</mo><msup><mi mathvariant="bold-italic">s</mi><mo>&#8242;</mo></msup><mo stretchy="false">)</mo>
+</mrow>
+</mfenced>
+<msup><mi mathvariant="bold-italic">&#956;</mi><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></msup>
+<mo stretchy="false">(</mo><mi>d</mi><msup><mi mathvariant="bold-italic">s</mi><mo>&#8243;</mo></msup><mo stretchy="false">)</mo>
+<mi mathvariant="bold-italic">&#960;</mi>
+<mo stretchy="false">(</mo><mi>d</mi><msup><mi mathvariant="bold-italic">s</mi><mo>&#8242;</mo></msup><mo stretchy="false">)</mo>
+</mrow>
+</mfenced>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right"><mo>=</mo></mtd>
+<mtd columnalign="right">
+<mspace width="0.15em"/>
+<mfenced open="|" close="|" separators="">
+<mrow>
+<munder>
+<mo stretchy="false" movablelimits="false">&#8748;</mo>
+<mrow>
+<mo stretchy="false">&#8741;</mo>
+<msup><mi mathvariant="bold-italic">s</mi><mo>&#8243;</mo></msup>
+<mo>&#8722;</mo>
+<msup><mi mathvariant="bold-italic">s</mi><mo>&#8242;</mo></msup>
+<msub><mo stretchy="false">&#8741;</mo><mn>2</mn></msub>
+<mo>&#8804;</mo>
+<mi>&#949;</mi>
+</mrow>
+</munder>
+<mfenced open="(" close=")" separators="">
+<mrow>
+<msub><mo>&#8747;</mo><mi>A</mi></msub>
+<mfenced open="(" close=")" separators="">
+<mrow>
+<msup><mi mathvariant="bold-italic">&#956;</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>&#8722;</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></msup>
+<mo stretchy="false">(</mo><mi mathvariant="bold-italic">y</mi><mo stretchy="false">&#124;</mo><msup><mi mathvariant="bold-italic">s</mi><mo>&#8243;</mo></msup><mo stretchy="false">)</mo>
+<mo>&#8722;</mo>
+<msup><mi mathvariant="bold-italic">&#956;</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>&#8722;</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></msup>
+<mo stretchy="false">(</mo><mi mathvariant="bold-italic">y</mi><mo stretchy="false">&#124;</mo><msup><mi mathvariant="bold-italic">s</mi><mo>&#8242;</mo></msup><mo stretchy="false">)</mo>
+</mrow>
+</mfenced>
+<mi>d</mi>
+<mi mathvariant="bold-italic">y</mi>
+</mrow>
+</mfenced>
+<msup><mi mathvariant="bold-italic">&#956;</mi><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></msup>
+<mo stretchy="false">(</mo><mi>d</mi><msup><mi mathvariant="bold-italic">s</mi><mo>&#8243;</mo></msup><mo stretchy="false">)</mo>
+<mi mathvariant="bold-italic">&#960;</mi>
+<mo stretchy="false">(</mo><mi>d</mi><msup><mi mathvariant="bold-italic">s</mi><mo>&#8242;</mo></msup><mo stretchy="false">)</mo>
+</mrow>
+</mfenced>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right"><mo>=</mo></mtd>
+<mtd columnalign="left">
+<mspace width="0.15em"/>
+<mfenced open="|" close="|" separators="">
+<mrow>
+<munder>
+<mo stretchy="false" movablelimits="false">&#8748;</mo>
+<mrow>
+<mo stretchy="false">&#8741;</mo>
+<msup><mi mathvariant="bold-italic">s</mi><mo>&#8243;</mo></msup>
+<mo>&#8722;</mo>
+<msup><mi mathvariant="bold-italic">s</mi><mo>&#8242;</mo></msup>
+<msub><mo stretchy="false">&#8741;</mo><mn>2</mn></msub>
+<mo>&#8804;</mo>
+<mi>&#949;</mi>
+</mrow>
+</munder>
+<mfenced open="(" close=")" separators="">
+<mrow>
+<msub><mo>&#8747;</mo><mi>A</mi></msub>
+<msub><mo>&#8747;</mo><mrow><mi mathvariant="script">&#119982;</mi></mrow></msub>
+<msup><mi mathvariant="bold-italic">&#956;</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>&#8722;</mo><mi>m</mi><mo>&#8722;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msup>
+<mo stretchy="false">(</mo><mi mathvariant="bold-italic">y</mi><mo stretchy="false">&#124;</mo><mi mathvariant="bold-italic">z</mi><mo stretchy="false">)</mo>
+<mfenced open="(" close=")" separators="">
+<mrow>
+<mi mathvariant="bold-italic">&#956;</mi>
+<mo stretchy="false">(</mo><mi mathvariant="bold-italic">z</mi><mo stretchy="false">&#124;</mo><msup><mi mathvariant="bold-italic">s</mi><mo>&#8243;</mo></msup><mo stretchy="false">)</mo>
+<mo>&#8722;</mo>
+<mi mathvariant="bold-italic">&#956;</mi>
+<mo stretchy="false">(</mo><mi mathvariant="bold-italic">z</mi><mo stretchy="false">&#124;</mo><msup><mi mathvariant="bold-italic">s</mi><mo>&#8242;</mo></msup><mo stretchy="false">)</mo>
+</mrow>
+</mfenced>
+<mi>d</mi>
+<mi mathvariant="bold-italic">z</mi>
+<mi>d</mi>
+<mi mathvariant="bold-italic">y</mi>
+</mrow>
+</mfenced>
+<msup><mi mathvariant="bold-italic">&#956;</mi><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></msup>
+<mo stretchy="false">(</mo><mi>d</mi><msup><mi mathvariant="bold-italic">s</mi><mo>&#8243;</mo></msup><mo stretchy="false">)</mo>
+<mi mathvariant="bold-italic">&#960;</mi>
+<mo stretchy="false">(</mo><mi>d</mi><msup><mi mathvariant="bold-italic">s</mi><mo>&#8242;</mo></msup><mo stretchy="false">)</mo>
+</mrow>
+</mfenced>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right"><mo>&#8804;</mo></mtd>
+<mtd columnalign="left">
+<mspace width="0.15em"/>
+<mi mathvariant="script">&#8499;</mi>
+<mo stretchy="false">(</mo><mi mathvariant="script">&#119982;</mi><mo stretchy="false">)</mo>
+<msub><mi mathvariant="normal">&#916;</mi><mi>&#949;</mi></msub>
+<mo>,</mo>
+</mtd>
+</mtr>
+</mtable>
+</math>

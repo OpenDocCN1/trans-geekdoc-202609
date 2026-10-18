@@ -1,0 +1,144 @@
+
+
+![StartLayout 1st Row 1st Column script upper D left-parenthesis bold-italic lamda 1 comma bold-italic lamda 2 right-parenthesis 2nd Column equals minus one half left-parenthesis bold-italic q plus bold-italic upper G Superscript down-tack Baseline bold-italic lamda 1 plus bold-italic upper A Superscript down-tack Baseline bold-italic lamda 2 right-parenthesis Superscript down-tack Baseline bold-italic upper P Superscript negative 1 Baseline left-parenthesis bold-italic q plus bold-italic upper G Superscript down-tack Baseline bold-italic lamda 1 plus bold-italic upper A Superscript down-tack Baseline bold-italic lamda 2 right-parenthesis 2nd Row 1st Column Blank 2nd Column minus bold-italic lamda 1 Superscript down-tack Baseline bold-italic h minus bold-italic lamda 2 Superscript down-tack Baseline bold-italic b plus r period EndLayout](images/c11-math-0104.png)
+
+<math display="block" overflow="scroll">
+<mtable>
+  <mtr>
+    <mtd columnalign="right">
+      <mi mathvariant="script">D</mi>
+      <mo stretchy="false">(</mo>
+      <msub><mi mathvariant="bold-italic">&#955;</mi><mn>1</mn></msub>
+      <mo>,</mo>
+      <msub><mi mathvariant="bold-italic">&#955;</mi><mn>2</mn></msub>
+      <mo stretchy="false">)</mo>
+    </mtd>
+    <mtd columnalign="left">
+      <mo>=</mo>
+      <mo>&#8722;</mo>
+      <mfrac><mn>1</mn><mn>2</mn></mfrac>
+      <msup>
+        <mrow>
+          <mo stretchy="false">(</mo>
+          <mi mathvariant="bold-italic">q</mi>
+          <mo>+</mo>
+          <msup><mi mathvariant="bold-italic">G</mi><mo>&#8868;</mo></msup>
+          <msub><mi mathvariant="bold-italic">&#955;</mi><mn>1</mn></msub>
+          <mo>+</mo>
+          <msup><mi mathvariant="bold-italic">A</mi><mo>&#8868;</mo></msup>
+          <msub><mi mathvariant="bold-italic">&#955;</mi><mn>2</mn></msub>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mo>&#8868;</mo>
+      </msup>
+      <msup><mi mathvariant="bold-italic">P</mi><mrow><mo>&#8722;</mo><mn>1</mn></mrow></msup>
+      <mo stretchy="false">(</mo>
+      <mi mathvariant="bold-italic">q</mi>
+      <mo>+</mo>
+      <msup><mi mathvariant="bold-italic">G</mi><mo>&#8868;</mo></msup>
+      <msub><mi mathvariant="bold-italic">&#955;</mi><mn>1</mn></msub>
+      <mo>+</mo>
+      <msup><mi mathvariant="bold-italic">A</mi><mo>&#8868;</mo></msup>
+      <msub><mi mathvariant="bold-italic">&#955;</mi><mn>2</mn></msub>
+      <mo stretchy="false">)</mo>
+    </mtd>
+  </mtr>
+  <mtr>
+    <mtd columnalign="right"/>
+    <mtd columnalign="left">
+      <mspace width="2em"/>
+      <mo>&#8722;</mo>
+      <msubsup><mi mathvariant="bold-italic">&#955;</mi><mn>1</mn><mo>&#8868;</mo></msubsup>
+      <mi mathvariant="bold-italic">h</mi>
+      <mo>&#8722;</mo>
+      <msubsup><mi mathvariant="bold-italic">&#955;</mi><mn>2</mn><mo>&#8868;</mo></msubsup>
+      <mi mathvariant="bold-italic">b</mi>
+      <mo>+</mo>
+      <mi>r</mi>
+      <mo>.</mo>
+    </mtd>
+  </mtr>
+</mtable>
+</math>
+
+因此，对偶问题由以下给出
+
+![StartLayout 1st Row 1st Column max Underscript bold-italic lamda 1 greater-than-or-equal-to bold 0 comma bold-italic lamda 2 element-of double-struck upper R Superscript upper M Baseline Endscripts 2nd Column left-brace minus one half left-parenthesis bold-italic q plus bold-italic upper G Superscript down-tack Baseline bold-italic lamda 1 plus bold-italic upper A Superscript down-tack Baseline bold-italic lamda 2 right-parenthesis Superscript down-tack Baseline bold-italic upper P Superscript negative 1 Baseline left-parenthesis bold-italic q plus bold-italic upper G Superscript down-tack Baseline bold-italic lamda 1 plus bold-italic upper A Superscript down-tack Baseline bold-italic lamda 2 right-parenthesis 2nd Row 1st Column Blank 2nd Column minus bold-italic lamda 1 Superscript down-tack Baseline bold-italic h minus bold-italic lamda 2 Superscript down-tack Baseline bold-italic b plus r right-brace period EndLayout](images/c11-math-0105.png)
+
+<math display="block" overflow="scroll">
+<mtable>
+  <mtr>
+    <mtd columnalign="right">
+      <munder>
+        <mi mathvariant="normal">max</mi>
+        <mrow>
+          <msub><mi mathvariant="bold-italic">&#955;</mi><mn>1</mn></msub>
+          <mo>&#8805;</mo>
+          <mtext mathvariant="bold">0</mtext>
+          <mo>,</mo>
+          <msub><mi mathvariant="bold-italic">&#955;</mi><mn>2</mn></msub>
+          <mo>&#8712;</mo>
+          <msup><mi mathvariant="double-struck">R</mi><mi>M</mi></msup>
+        </mrow>
+      </munder>
+    </mtd>
+    <mtd columnalign="left">
+      <mfenced open="{" close="" separators="">
+        <mrow>
+          <mo>&#8722;</mo>
+          <mfrac><mn>1</mn><mn>2</mn></mfrac>
+          <msup>
+            <mrow>
+              <mo stretchy="false">(</mo>
+              <mi mathvariant="bold-italic">q</mi>
+              <mo>+</mo>
+              <msup><mi mathvariant="bold-italic">G</mi><mo>&#8868;</mo></msup>
+              <msub><mi mathvariant="bold-italic">&#955;</mi><mn>1</mn></msub>
+              <mo>+</mo>
+              <msup><mi mathvariant="bold-italic">A</mi><mo>&#8868;</mo></msup>
+              <msub><mi mathvariant="bold-italic">&#955;</mi><mn>2</mn></msub>
+              <mo stretchy="false">)</mo>
+            </mrow>
+            <mo>&#8868;</mo>
+          </msup>
+          <msup><mi mathvariant="bold-italic">P</mi><mrow><mo>&#8722;</mo><mn>1</mn></mrow></msup>
+          <mo stretchy="false">(</mo>
+          <mi mathvariant="bold-italic">q</mi>
+          <mo>+</mo>
+          <msup><mi mathvariant="bold-italic">G</mi><mo>&#8868;</mo></msup>
+          <msub><mi mathvariant="bold-italic">&#955;</mi><mn>1</mn></msub>
+          <mo>+</mo>
+          <msup><mi mathvariant="bold-italic">A</mi><mo>&#8868;</mo></msup>
+          <msub><mi mathvariant="bold-italic">&#955;</mi><mn>2</mn></msub>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </mfenced>
+    </mtd>
+  </mtr>
+  <mtr>
+    <mtd></mtd>
+    <mtd columnalign="left">
+      <mspace width="2em"/>
+      <mrow>
+        <mo>&#8722;</mo>
+        <msubsup><mi mathvariant="bold-italic">&#955;</mi><mn>1</mn><mo>&#8868;</mo></msubsup>
+        <mi mathvariant="bold-italic">h</mi>
+        <mo>&#8722;</mo>
+        <msubsup><mi mathvariant="bold-italic">&#955;</mi><mn>2</mn><mo>&#8868;</mo></msubsup>
+        <mi mathvariant="bold-italic">b</mi>
+        <mo>+</mo>
+        <mi>r</mi>
+      </mrow>
+      <mo stretchy="false">}</mo>
+      <mo>.</mo>
+    </mtd>
+  </mtr>
+</mtable>
+</math>
+
+## 11.A.2.4 马科维茨投资组合选择中的二次规划
+
+考虑一个包含 `p` 种金融资产的金融市场，并设第 `t` 天的日对数收益率为 `r_t`。这些收益率通常被假设为服从均值向量 `μ ∈ ℝ^p` 和协方差矩阵 `Σ ∈ ℝ^(p×p)` 的 `p` 维高斯分布的 iid 随机向量：
+
+`r_t ~ iid N_p(μ, Σ), for t = 1, 2, ...`
+

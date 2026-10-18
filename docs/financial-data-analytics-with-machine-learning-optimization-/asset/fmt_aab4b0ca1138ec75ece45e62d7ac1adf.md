@@ -1,0 +1,53 @@
+
+![StartLayout 1st Row 1st Column g left-parenthesis h Subscript t Baseline bar bold-italic y comma bold-italic h Subscript negative t Baseline comma bold-italic theta right-parenthesis 2nd Column proportional-to g left-parenthesis y Subscript t Baseline bar h Subscript t Baseline comma bold-italic theta right-parenthesis dot p left-parenthesis h Subscript t Baseline bar bold-italic h Subscript negative t Baseline comma bold-italic theta right-parenthesis 2nd Row 1st Column Blank 2nd Column proportional-to exp left-brace one half left-parenthesis y Subscript t Superscript 2 Baseline exp left-parenthesis minus ModifyingAbove alpha With Ì‚ Subscript t Baseline right-parenthesis minus 1 right-parenthesis h Subscript t Baseline minus StartFraction left-parenthesis h Subscript t Baseline minus ModifyingAbove alpha With Ì‚ Subscript t Baseline right-parenthesis squared Over 2 ModifyingAbove beta With Ì‚ Subscript t Superscript 2 Baseline EndFraction right-brace 3rd Row 1st Column Blank 2nd Column proportional-to exp left-parenthesis minus StartFraction left-parenthesis h Subscript t Baseline minus alpha overTilde Subscript t Baseline right-parenthesis squared Over 2 ModifyingAbove beta With Ì‚ Subscript t Superscript 2 Baseline EndFraction right-parenthesis comma EndLayout](images/c06-math-0126.png)
+
+<math display="block" overflow="scroll">
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mi>g</mi><mo stretchy="false">(</mo><msub><mi>h</mi><mi>t</mi></msub><mo>&#8739;</mo><mi mathvariant="bold-italic">y</mi><mo>,</mo><msub><mi mathvariant="bold-italic">h</mi><mrow><mo>&#8722;</mo><mi>t</mi></mrow></msub><mo>,</mo><mi mathvariant="bold-italic">&#952;</mi><mo stretchy="false">)</mo>
+</mtd>
+<mtd columnalign="left">
+<msub><mo>&#8733;</mo><mrow><msub><mi>h</mi><mi>t</mi></msub></mrow></msub><mi>g</mi><mo stretchy="false">(</mo><msub><mi>y</mi><mi>t</mi></msub><mo>&#8739;</mo><msub><mi>h</mi><mi>t</mi></msub><mo>,</mo><mi mathvariant="bold-italic">&#952;</mi><mo stretchy="false">)</mo><mo>&#183;</mo><mi>p</mi><mo stretchy="false">(</mo><msub><mi>h</mi><mi>t</mi></msub><mo>&#8739;</mo><msub><mi mathvariant="bold-italic">h</mi><mrow><mo>&#8722;</mo><mi>t</mi></mrow></msub><mo>,</mo><mi mathvariant="bold-italic">&#952;</mi><mo stretchy="false">)</mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right"/>
+<mtd columnalign="right">
+<msub><mo>&#8733;</mo><mrow><msub><mi>h</mi><mi>t</mi></msub></mrow></msub><mi mathvariant="normal">exp</mi><mfenced open="{" close="}" separators=""><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mfenced open="(" close=")" separators=""><mrow><msubsup><mi>y</mi><mi>t</mi><mn>2</mn></msubsup><mi mathvariant="normal">exp</mi><mo stretchy="false">(</mo><mo>&#8722;</mo><msub><mrow><mover accent="true"><mi>&#945;</mi><mo>&#770;</mo></mover></mrow><mi>t</mi></msub><mo stretchy="false">)</mo><mo>&#8722;</mo><mn>1</mn></mrow></mfenced><msub><mi>h</mi><mi>t</mi></msub><mo>&#8722;</mo><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><msub><mi>h</mi><mi>t</mi></msub><mo>&#8722;</mo><msub><mrow><mover accent="true"><mi>&#945;</mi><mo>&#770;</mo></mover></mrow><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mrow><mn>2</mn><msubsup><mrow><mover accent="true"><mi>&#946;</mi><mo>&#770;</mo></mover></mrow><mi>t</mi><mn>2</mn></msubsup></mrow></mfrac></mrow></mfenced>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right"/>
+<mtd columnalign="left">
+<msub><mo>&#8733;</mo><mrow><msub><mi>h</mi><mi>t</mi></msub></mrow></msub><mi mathvariant="normal">exp</mi><mfenced open="(" close=")" separators=""><mrow><mo>&#8722;</mo><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><msub><mi>h</mi><mi>t</mi></msub><mo>&#8722;</mo><msub><mrow><mover accent="true"><mi>&#945;</mi><mo>&#732;</mo></mover></mrow><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mrow><mn>2</mn><msubsup><mrow><mover accent="true"><mi>&#946;</mi><mo>&#770;</mo></mover></mrow><mi>t</mi><mn>2</mn></msubsup></mrow></mfrac></mrow></mfenced><mo>,</mo>
+</mtd>
+</mtr>
+</mtable>
+</math>
+
+which is the kernel of a normal density with mean ![alpha overTilde Subscript t Baseline colon equals ModifyingAbove alpha With Ì‚ Subscript t Baseline plus StartFraction ModifyingAbove beta With Ì‚ Subscript t Superscript 2 Baseline Over 2 EndFraction left-parenthesis y Subscript t Superscript 2 Baseline exp left-parenthesis minus ModifyingAbove alpha With Ì‚ Subscript t Baseline right-parenthesis minus 1 right-parenthesis](images/c06-i0968.png)
+
+<math display="inline" overflow="scroll">
+<msub><mrow><mover accent="true"><mi>&#945;</mi><mo>&#732;</mo></mover></mrow><mi>t</mi></msub><mo>:</mo><mo>=</mo><msub><mrow><mover accent="true"><mi>&#945;</mi><mo>&#770;</mo></mover></mrow><mi>t</mi></msub><mo>+</mo><mfrac><mrow><msubsup><mrow><mover accent="true"><mi>&#946;</mi><mo>&#770;</mo></mover></mrow><mi>t</mi><mn>2</mn></msubsup></mrow><mn>2</mn></mfrac><mfenced open="(" close=")" separators=""><mrow><msubsup><mi>y</mi><mi>t</mi><mn>2</mn></msubsup><mi mathvariant="normal">exp</mi><mo stretchy="false">(</mo><mo>&#8722;</mo><msub><mrow><mover accent="true"><mi>&#945;</mi><mo>&#770;</mo></mover></mrow><mi>t</mi></msub><mo stretchy="false">)</mo><mo>&#8722;</mo><mn>1</mn></mrow></mfenced>
+</math>
+
+and variance ![ModifyingAbove beta With Ì‚ Subscript t Superscript 2](images/c06-i0969.png)
+
+<math display="inline" overflow="scroll">
+<msubsup><mrow><mover accent="true"><mi>&#946;</mi><mo>&#770;</mo></mover></mrow><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msubsup>
+</math>.
+
+To verify that ![g left-parenthesis h Subscript t Baseline bar bold-italic y comma bold-italic h Subscript negative t Baseline comma bold-italic theta right-parenthesis](images/c06-i0970.png)
+
+<math display="inline" overflow="scroll">
+<mi>g</mi><mo stretchy="false">(</mo><msub><mi>h</mi><mi>t</mi></msub><mo>&#8739;</mo><mi mathvariant="bold-italic">y</mi><mo>,</mo><msub><mi mathvariant="bold-italic">h</mi><mrow><mo>&#8722;</mo><mi>t</mi></mrow></msub><mo>,</mo><mi mathvariant="bold-italic">&#952;</mi><mo stretchy="false">)</mo>
+</math>
+
+“envelopes” the target density ![p left-parenthesis h Subscript t Baseline bar bold-italic y comma bold-italic h Subscript negative t Baseline comma bold-italic theta right-parenthesis](images/c06-i0971.png)
+
+<math display="inline" overflow="scroll">
+<mi>p</mi><mo stretchy="false">(</mo><msub><mi>h</mi><mi>t</mi></msub><mo>&#8739;</mo><mi mathvariant="bold-italic">y</mi><mo>,</mo><msub><mi mathvariant="bold-italic">h</mi><mrow><mo>&#8722;</mo><mi>t</mi></mrow></msub><mo>,</mo><mi mathvariant="bold-italic">&#952;</mi><mo stretchy="false">)</mo>
+</math>
+
+, we note that

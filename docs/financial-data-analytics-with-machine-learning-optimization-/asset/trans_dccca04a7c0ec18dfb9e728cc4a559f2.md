@@ -1,0 +1,9 @@
+
+
+Let `$\epsilon > 0$`, define a set `$C_\epsilon(n) = \{ |y(n)/n - \sigma^2| \le \epsilon \}$`; also denote `$C_\epsilon^c(n)$` as the complement of the set `$C_\epsilon(n)$`. Then,
+
+```
+E[r_{k,n}] = E[( (1/n)x(k,n) / (1/n)y(n) )] = E[( (1/n)x(k,n) / (1/n)y(n) )( 1_{C_\epsilon(n)} + 1_{C_\epsilon^c(n)} )]
+           = E[( (1/n)x(k,n) / (1/n)y(n) )1_{C_\epsilon(n)}] + E[( (1/n)x(k,n) / (1/n)y(n) )1_{C_\epsilon^c(n)}],
+```
+

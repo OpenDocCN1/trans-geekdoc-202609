@@ -1,0 +1,14 @@
+
+
+![mu Superscript left-parenthesis t plus 1 right-parenthesis Baseline equals StartFraction sigma-summation Underscript i equals 1 Overscript n Endscripts w Subscript i Superscript left-parenthesis t right-parenthesis Baseline x Subscript i Baseline plus left-parenthesis 2 q minus 1 right-parenthesis n Over sigma-summation Underscript i equals 1 Overscript n Endscripts w Subscript i Superscript left-parenthesis t right-parenthesis Baseline EndFraction comma where w Subscript i Superscript left-parenthesis t right-parenthesis Baseline equals StartFraction 1 Over StartAbsoluteValue x Subscript i Baseline minus mu Superscript left-parenthesis t right-parenthesis Baseline EndAbsoluteValue EndFraction period](images/c06-math-0042.png)<math display="block" overflow="scroll"><msup><mi>&#956;</mi><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msup><mo>=</mo><mfrac><mrow><msubsup><mo>&#8721;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msubsup><mi>w</mi><mi>i</mi><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></msubsup><msub><mi>x</mi><mi>i</mi></msub><mo>+</mo><mo stretchy="false">(</mo><mn>2</mn><mi>q</mi><mo>&#8722;</mo><mn>1</mn><mo stretchy="false">)</mo><mi>n</mi></mrow><mrow><msubsup><mo>&#8721;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msubsup><mi>w</mi><mi>i</mi><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow></mfrac><mo>,</mo><mspace width="1em"/><mtext>where</mtext><mspace width="0.3em"/><msubsup><mrow><mi>w</mi></mrow><mrow><mi>i</mi></mrow><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>=</mo><mfrac><mn>1</mn><mrow><mo stretchy="false">&#124;</mo><msub><mi>x</mi><mi>i</mi></msub><mo>&#8722;</mo><msup><mi>&#956;</mi><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></msup><mo stretchy="false">&#124;</mo></mrow></mfrac><mo>.</mo></math>
+
+这个算法的一个有趣特性是，它不要求数字 ![x 1 comma ellipsis comma x Subscript n Baseline](images/c06-i0228.png)<math display="inline" overflow="scroll"><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mo>&#8230;</mo><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub></math> 排序。我们参考 [\[12\]](#c06.xhtml#c06-bib-0012) 以获取关于此主题的更多讨论，例如其收敛性和进一步的应用。
+
+在 [第 8.3 节](#c08.xhtml#c08-sec-0010) 中，我们将通过对历史损失进行自助法来估计风险价值。在此之前，让我们在 [程序 6.10](#c06.xhtml#c06-pre-00010) 中通过 Python（或 [程序 6.11](#c06.xhtml#c06-pre-00011) 通过 `R`）实现 MM 算法，以将其作为分位数来求解。读者在阅读完 [第 8 章](#c08.xhtml) 的前几个部分后，可以回到此示例。
+
+![](images/c06-gra-0012.png)![](images/c06-gra-0013.png)
+
+接下来，在 [程序 6.12](#c06.xhtml#c06-pre-00012) 中使用 Python（或 [程序 6.13](#c06.xhtml#c06-pre-00013) 使用 `R`），我们使用 `MM_quantile()` 函数来计算 1 天 99% 的风险价值，损失数据来自 [程序 8.1](#c08.xhtml#c08-gra-0001) 中的 Python（或 [程序 8.2](#c08.xhtml#c08-gra-0002) 中的 `R`）。
+
+![](images/c06-gra-0014.png)![](images/c06-gra-0015.png)![](images/c06-gra-0016.png)
+

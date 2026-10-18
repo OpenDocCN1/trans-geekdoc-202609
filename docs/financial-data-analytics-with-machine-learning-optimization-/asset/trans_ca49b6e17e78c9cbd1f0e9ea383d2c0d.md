@@ -1,0 +1,19 @@
+
+
+# 矩阵迹与梯度
+
+给定一个 $p \times p$ 矩阵 $A = (a_{ij})$，矩阵 $A$ 的迹，记作 $\text{tr}(A)$，是 $A$ 的对角线元素之和：
+
+$$\text{tr}(A) = \sum_{i=1}^{p} a_{ii}.$$
+
+矩阵的迹满足以下性质：
+
+1. $\text{tr}(A) = \text{tr}(A^T)$。
+
+2. $\text{tr}(\alpha A + \beta B) = \alpha \text{tr}(A) + \beta \text{tr}(B)$，其中 $\alpha, \beta \in \mathbb{R}$。
+
+3. 循环不变性：$\text{tr}(ABC) = \text{tr}(CAB) = \text{tr}(BCA)$。一般来说，对于任意 $k$ 个 $p \times p$ 矩阵 $A_1, \dots, A_k$，有：
+   $$\text{tr}(A_1 A_2 \dots A_k) = \text{tr}(A_i A_{i+1} \dots A_k A_1 \dots A_{i-1}), \quad \text{对任意 } i = 2, \dots, k \text{ 成立}.$$
+
+矩阵迹对其自身的导数满足以下性质 [\[5\]](#c01.xhtml#c01-bib-0005)。使用记号 $\nabla_A f := \left( \frac{\partial}{\partial a_{ij}} f \right)$ 表示函数 $f$ 关于矩阵 $A$ 的梯度（有时也使用 $\frac{\partial f}{\partial A}$ 代替），则有：
+

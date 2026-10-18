@@ -1,0 +1,12 @@
+
+
+Given plenty of data of losses greater than `V@R_x(p)`, the parameters `ξ` and `β` can then be accurately estimated. If we apply the approximation above to the standardized loss `x = (L - μ) / σ`, we can obtain the following approximation of the expected shortfall of `L`:
+
+(8.7) `ES_L(p) ≈ μ + σ (V@R_x(p) + β / (1 - ξ))`
+
+2. In the more general case of a shifted Pareto distribution `x ~ GPD(u, ξ, β)` where `u > 0`, with survival function `(1 + ξ / β (x - u))^(-1 / ξ)`, we note that `x - θ̄_x > θ̃ ~ GPD(0, ξ, β + ξ(θ - u))`, and the corresponding expected shortfall is given by:
+
+(8.8) `ES_L(ε) = μ + σ (V@R_x(p) + (β + ξ(V@R_x(p) - u)) / (1 - ξ))`
+
+where `x := (L - μ) / σ`. To see this, consider the conditional tail probability:
+

@@ -1,0 +1,18 @@
+
+
+where `x = (x₁, …, xₚ)^⊤`, so that `Var(y₁) = h₁^⊤ Var(x) h₁ ≈ h₁^⊤ S h₁`, and the latter is maximized subject to the constraint `h₁^⊤ h₁ = 1`. The solution of this optimization problem is related to a well‐known and very useful result in matrix algebra called the *spectral decomposition* of symmetric matrices. For a better understanding of this technique, readers may revisit [Section 1.2](#c01.xhtml#c01-sec-0007) of [Chapter 1](#c01.xhtml) for the relevant concepts of eigenvalues (a.k.a. latent roots), eigenvectors and normalized eigenvectors, as well as some of their important properties.
+
+The following [Lemma 9.1](#c09.xhtml#c09-fea-0006) shows that the maximum value of the variance of `y₁ = h₁^⊤ x` is the largest eigenvalue of `S` and is achieved when `h₁` is equal to the corresponding normalized eigenvector of `S`. Next, the second PC is the linear combination
+
+```
+y₂ = h₁₂ x₁ + … + hₚ₂ xₚ = h₂^⊤ x,
+```
+
+so that `Var(y₂) = h₂^⊤ S h₂` is maximized subject to `h₂^⊤ h₂ = 1` and `h₁^⊤ h₂ = 0`. It turns out that this maximum value of the variance of `y₂` is the second largest eigenvalue of `S` and `h₂` is the corresponding normalized eigenvector of `S`. The same argument applies to the `j`‐th PC and each of the corresponding variance being equal to the `j`‐th largest eigenvalue, and the corresponding vector of loadings being equal to the respective eigenvector.
+
+### \*9.A.2 Immunization against Interest Rate Risks
+
+Here we provide a quick review of immunization; more details on this topic can be found in [[7](#c09.xhtml#c09-bib-0007), [9](#c09.xhtml#c09-bib-0009), [14](#c09.xhtml#c09-bib-0014), [15](#c09.xhtml#c09-bib-0015)]. For the sake of simplicity, we only consider deterministic cash flows here.
+
+*Redington Immunization* [[15](#c09.xhtml#c09-bib-0015)] is a well‐known technique for reducing or even eliminating the influence of interest rate fluctuations on values of portfolios of cash flows. A typical portfolio consists of assets and liabilities. We first define some notations to be used below. The force of interest is denoted by `δ = ln(1 + ι)`, where `ι` is the annualized interest rate. The present value at time 0 of the assets evaluated at rate `δ` is
+

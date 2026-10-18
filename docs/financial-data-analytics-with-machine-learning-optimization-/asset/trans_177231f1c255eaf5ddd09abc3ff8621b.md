@@ -1,0 +1,24 @@
+
+
+The 1-day 99% V@R using the normal model is `VaR_N = $3,143.753` which is less than the historically simulated `VaR_sim = $3,543.961`. The normality assumption may not be valid since most returns have heavier tails than those specified by the normal distribution. Hence, the V@R under the normality assumption mostly falls small. Recall, from [Section 3.2](#c03.xhtml#head-2-21), that we can model the return by a Student's t-distribution t Subscript nu with nu degrees of freedom. Notice that for normal t tilde t Subscript nu where nu greater-than 2, Var(normal t) equals StartFraction nu Over nu minus 2 EndFraction. Therefore, we may assume normal t colon equals StartFraction normal upper L minus 0 Over StartRoot bold-italic omega Superscript down-tack Baseline bold-italic upper S bold-italic omega EndRoot EndFraction times StartRoot StartFraction nu Over nu minus 2 EndFraction EndRoot tilde t Subscript nu Baseline, and the 1-day 99%-V@R, denoted as V@R Subscript normal t, satisfies the equation:
+
+```
+double-struck upper P left-parenthesis normal upper L less-than-or-equal-to upper V commercial-at upper R Subscript normal t Baseline right-parenthesis equals double-struck upper P left-parenthesis normal t less-than-or-equal-to StartFraction upper V commercial-at upper R Subscript normal t Baseline minus 0 Over StartRoot bold-italic omega Superscript down-tack Baseline bold-italic upper S bold-italic omega EndRoot EndFraction times StartRoot StartFraction nu Over nu minus 2 EndFraction EndRoot right-parenthesis equals 0.99 comma
+```
+
+which gives
+
+```
+upper V commercial-at upper R Subscript normal t Baseline equals upper T Subscript nu Superscript negative 1 Baseline left-parenthesis 0.99 right-parenthesis dot StartRoot bold-italic omega Superscript down-tack Baseline bold-italic upper S bold-italic omega EndRoot dot StartRoot StartFraction nu minus 2 Over nu EndFraction EndRoot comma
+```
+
+where T Subscript nu Superscript negative 1 Baseline left-parenthesis dot right-parenthesis is the inverse cdf of the standard Student's t-distribution with nu degrees of freedom.
+
+Let us compute the sample excess kurtosis ModifyingAbove zeta With Ì‚ Subscript 2 of normal upper Delta normal p, as then we estimate the degrees of freedom by StartFraction 6 Over ModifyingAbove zeta With Ì‚ Subscript 2 Baseline plus 4 EndFraction, rounded to the nearest integer; see [Programmes 8.7](#c08.xhtml#c08-gra-0007) in Python and [8.8](#c08.xhtml#c08-gra-0008) in `R`.
+
+![](images/c08-gra-0008.png)![](images/c08-gra-0009.png)
+
+The 1-day 99% V@R using Student's t-model is `VaR_t = $3,424.005`, which is larger than the one obtained by using the normal model (`VaR_N = $3,143.753`), but smaller than the historically simulated value `VaR_sim = $3,543.961`.
+
+## 8.5 USE OF EXTREME VALUE THEORY
+
