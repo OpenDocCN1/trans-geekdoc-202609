@@ -1,0 +1,56 @@
+
+
+# 硬件数字水印方案研究
+
+数字水印研究在过去几十年中取得了进步，在此期间获得的成熟度推动了基于软件的数字水印方案的发展。但在硬件水印方案方面，其发展速度远不及软件水印方案。目前已有用于水印的硬件模块实现。但在基于硬件设计水印模块时，存在诸多限制，例如功耗、芯片面积、延迟等（[Kougianos et al., 2009](#Chapter11.html#c11_bib46); [Krishnamurthy, 2018](#Chapter11.html#c11_bib47); [Mohanty, 2015](#Chapter11.html#c11_bib67), 2017; [Mohanty et al., 2018](#Chapter11.html#c11_bib71); [Pexaras et al., 2017](#Chapter11.html#c11_bib86); [Roy et al., 2013](#Chapter11.html#c11_bib91); [Sengupta et al., 2017](#Chapter11.html#c11_bib95)）。硬件水印模块也具有许多优势，例如低功耗、优化、高可靠性、实时性能以及易于集成。水印方案的硬件实现可以设计为定制 VLSI 芯片，也可以在 FPGA 上设计，或围绕 DSP 板构建。它将成为静态或动态相机、数字电视、DVD 播放器或录像机以及 MP3 播放器或录像机的一部分。例如，一种名为“Signcryption”的加密机制已集成到 IoT 环境中的智能相机中，用于数据保护（[Figure 11.9](#Chapter11.html#c11_fig9)）([Ullah et al., 2017](#Chapter11.html#c11_bib130)）。本节介绍了不同的硬件水印方案及其设计。本节中介绍的各种水印芯片设计的比较分析见 [Table 11.1](#Chapter11.html#c11_tbl1) ([Kougianos et al., 2009](#Chapter11.html#c11_bib46))。
+
+## Table 11.1 Watermarking chips proposed in the current literature
+
+![image](OEBPS/images/tab11.1.jpg)
+
+![image](OEBPS/images/tab11.1a.jpg)
+
+## 11.7.1 Image watermarking hardware systems
+
+本节讨论用于图像水印的基于硬件的水印方案。此类硬件模块可集成到静态相机中，并有助于实时对图像进行水印处理。嵌入相机或其他生产系统的硬件模块将大大减少创建带水印最终产品的额外生产时间。
+
+### 11.7.1.1 Invisible-robust wavelet domain VLSI architecture
+
+Hsiao et al. ([2000a](#Chapter11.html#c11_bib34), [2000b](#Chapter11.html#c11_bib35)) 提出了一种渐进式水印模块，它是图像编码器的框架。编码器和解码器的设计用于使用“嵌入式零小波”（EZW）树算法进行高速图像和视频压缩。EZW 编码器–解码器嵌入了一种渐进式数字水印算法，可提高整个设计的鲁棒性。嵌入器是压缩机编码器架构的一部分，检测器是解压缩器的一部分。
+
+![image](OEBPS/images/PBCS0600-11-f09.jpg)
+
+Figure 11.9 Signcryption
+
+提出了一种渐进式不可见鲁棒算法，即使接收到的数据是部分而非完整的，也能检测水印。该算法将伪随机数嵌入小波系数中。然后，检测器将计算内存中已存在的原始水印序列与接收到的图像之间的相关性。水印生成的数字嵌入在每个显著小波系数的非零位相邻位置。实现该算法只需极少的硬件。
+
+[Figure 11.10(a)](#Chapter11.html#c11_fig10) 介绍了该设计中使用的插入算法。该模块由 LFSR（线性反馈移位寄存器）组成，用于为水印方案生成伪随机数。比较器随后确保水印位嵌入原始图像的显著系数中。[Figure 11.10(b)](#Chapter11.html#c11_fig10) 介绍了水印方案的检测模块。检测模块由 LFSR、比较器、顶部索引寄存器和阈值表组成。检测器接收到的显著系数总数存储在顶部索引寄存器中。然后，阈值相关值存储在阈值表中，并在检测过程中进行比较。
+
+![image](OEBPS/images/PBCS0600-11-f10.jpg)
+
+Figure 11.10 Watermarking embedder–detector modules: (a) embedder and (b) detector (Hsiao et al., [2000a](#Chapter11.html#c11_bib34), [2000b](#Chapter11.html#c11_bib35))
+
+### 11.7.1.2 Invisible-robust DCT domain chip
+
+图像水印芯片应能够在 DCT 域中插入不可见鲁棒水印，该方案由 [Tsai and Lu (2001)](#Chapter11.html#c11_bib110) 提出。该系统将伪随机序列嵌入先前选定的一组 DCT 域系数中。提取水印时，不需要原始图像。这可以成为硬件水印方案的一大优势。[Tsai and Lu (2001)](#Chapter11.html#c11_bib110) 提出的芯片采用了 TSMC ![image](OEBPS/images/c11-Eqn-in-35.gif) 技术，占用芯片面积为 ![image](OEBPS/images/c11-Eqn-in-36.gif)，包含 46,374 个门。芯片的功耗为 ![image](OEBPS/images/c11-Eqn-in-37.gif)，工作频率为 ![image](OEBPS/images/c11-Eqn-in-38.gif)，供电电压为 3.3 V。由于原始图像不存储在芯片内存中以供提取或检测，因此非常节省内存。
+
+高斯随机数生成器用于水印序列，表示为 *N*(0,1)。原始 DCT 系数的长度将是水印序列的长度。三个 DCT 系数与每个非重叠的 ![image](OEBPS/images/c11-Eqn-in-39.gif) 块一起嵌入水印。水印的强度来自纹理复杂度和平均亮度。图像块分类如下：
+
+*   Bright and strong texture
+*   Dark and weak texture (strongest watermark)
+*   Rest (weakest watermark)
+
+如果水印序列表示为 ![image](OEBPS/images/c11-Eqn-in-40.gif)，DCT 系数的 ![image](OEBPS/images/c11-Eqn-in-41.gif) 图像块表示为 ![image](OEBPS/images/c11-Eqn-in-42.gif)，缩放因子为 ![image](OEBPS/images/c11-Eqn-in-43.gif)，则带水印的 DCT 系数可以表示为：
+
+![image](OEBPS/images/c11_eqn6.gif)
+
+缩放因子 ![image](OEBPS/images/c11-Eqn-in-44.gif) 对于类 1、类 2 和类 3 图像块分别为 2、6 和 9。水印提取可以依赖于原始水印与提取水印的相关性。
+
+该芯片设计为与 JPEG 编码器集成，后者具有 DCT/IDCT、哈希、量化、锯齿（ZZ）扫描和 VLC 编码器模块。[Figure 11.11](#Chapter11.html#c11_fig11) 显示了水印功能的架构。DCT 系数存储在寄存器中，水印序列存储在 ROM 中，比较器执行比较。FSM 用于实现控制器，该控制器通过数据路径完成水印处理。
+
+![image](OEBPS/images/PBCS0600-11-f11.jpg)
+
+Figure 11.11 Architecture for watermarking embedding module ([Tsai and Lu, 2001](#Chapter11.html#c11_bib110))
+
+### 11.7.1.3 Invisible-fragile spatial domain chip
+

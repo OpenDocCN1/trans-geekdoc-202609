@@ -1,0 +1,40 @@
+
+A generic CFE-based methodology comprises four steps as discussed earlier. However, customized CFE approach ([Sengupta and Kachave, 2018](#Chapter6.html#c06_bib26)) adopts only three steps (as shown in [Figure 6.3](#Chapter6.html#c06_fig3)) and customizes them for resolving IP core ownership conflict. The entity-clustering step is not adopted, because in a typical IP core ownership conflict scenario, the number of entities claiming ownership of an IP is not huge. Therefore, entity-clustering step is not mandatory in customized CFE approach. [Figure 6.4](#Chapter6.html#c06_fig4) ([Sengupta and Kachave, 2018](#Chapter6.html#c06_bib26)) shows the flow of customized CFE approach. The customized CFE approach takes input in the form of DSP IP cores generated through HLS tool of vendors competing for ownership of an IP core (termed as IP`[Vn]`, where “n” is the number of vendors claiming ownership of IP core) as well as IP core whose ownership is to be awarded/IP core under test (termed as IP`[ID]`). Note that only executable version of competing vendor’s tool is required. Thus, competing vendors are not concerned about their source code or trade secrets being revealed through the executable version of the HLS tool. Further, if a competing vendor refuses to provide executable version of his/her HLS tool, he/she is discarded from the ownership-awarding process. This is because the rightful owner of an IP core will never hesitate to provide executable version of his/her HLS tool (since ownership of his/her IP is at stake). The initial step of customized CFE approach ([Sengupta and Kachave, 2018](#Chapter6.html#c06_bib26)) comprises four substeps as shown in [Figure 6.4](#Chapter6.html#c06_fig4). In the initial substep, studies of HLS tools as well as the sample DSP IP cores generated through corresponding HLS tools of each competing vendor are made. Based on this study, various features are decided that can distinguish one IP core solution from the other. The decided features are clubbed as “feature set.” These features can further be classified as generic features and unique features. Generic features are those steps that are either integral part of HLS process (such as scheduling, allocation, and binding) or features ubiquitously present in every DSP IP core generated through HLS tool. The identified generic IP core features for CFE are `scheduling algorithm`, `resource type`, and `bus width support`. A naïve question may be how generic features can distinguish one IP core from another, if the feature is present in all other competing IP cores. The reason is, for example, in case of scheduling algorithm feature there are several algorithms to implement scheduling which will not be same for every HLS tool. Thus, though property (scheduling) is integral to a HLS methodology, feature (scheduling algorithm) can be different for each HLS tool. Similar reasoning exists for other generic features such as `resource type` and `bus width support`. The property is integral for all HLS tools; however, the feature may be different.
+
+![image](OEBPS/images/PBCS0600-06-f03.jpg)
+
+Figure 6.3 Customized CFE
+
+![image](OEBPS/images/PBCS0600-06-f04.jpg)
+
+Figure 6.4 Customized CFE approach
+
+Unique features are the ones that are not present in each DSP IP core generated through HLS. However, these features are present in IP core of at least one of the competing HLS tools. Thus, unique features will be able to distinguish at least one IP core from all remaining IPs. Once the feature-set is identified, feature extraction rules are devised for extracting these features from each IP core available in the form of HDL. *Note: these feature extraction rules are automated in the form of a computer program*. Further, in the next step of customized CFE approach, automated feature extraction of IP core corresponding to each competing HLS tool as well as IP`[ID]` core is executed. Finally, ownership of IP`[ID]` is awarded to vendor whose “feature-set” matches exactly with the “feature-set” of IP`[ID]`. This final step is termed as IP core validation. The customized CFE approach can be understood more effectively through following case study.
+
+## 6.3 IP core feature extraction algorithms
+
+In a scenario where there is a DSP IP core ownership conflict among tools vendors of Harish Ram *et al.* ([2011](#Chapter6.html#c06_bib6)), Inoue *et al.* ([2011](#Chapter6.html#c06_bib7)), Sengupta and Sedaghat ([2015](#Chapter6.html#c06_bib31)), Koushanfar *et al.* ([2005](#Chapter6.html#c06_bib12)), Rajendran *et al.* ([2013](#Chapter6.html#c06_bib21)), Mishra and Sengupta ([2014](#Chapter6.html#c06_bib18)), and Sengupta and Bhadauria ([2015](#Chapter6.html#c06_bib24)), the IP core extraction rules can be explained through the aid of a demonstration. Further, it is assumed that executable versions of HLS tools corresponding to each competing vendor are also available.
+
+IP cores are generated and properties are decided that can distinguish at least one IP from another. Based on these properties, features are devised and a “feature-set” is created. The created “feature-set” ([Sengupta and Kachave, 2018](#Chapter6.html#c06_bib26)) may comprise generic features and unique features as shown below:
+
+![image](OEBPS/images/disp54.gif)
+
+Once feature-set is determined, feature extraction rules are devised for each feature of the feature-set. Section 6.3.1 discusses feature extraction rules in detail.
+
+### 6.3.1 Feature extraction rules
+
+`Scheduling algorithm`: Scheduling is an integral step in DSP IP core design ([Paulin and Knight, 1989](#Chapter6.html#c06_bib20); [McFarland, 1988](#Chapter6.html#c06_bib16)). The three most commonly used scheduling algorithms are As Soon As Possible (ASAP), As Late As Possible (ALAP), and List algorithm. There are few other useful scheduling algorithms, but this case study is limited to these three most commonly used scheduling algorithms. The flow graph to identify which scheduling algorithm is utilized to create a DSP IP core is shown in [Figure 6.5](#Chapter6.html#c06_fig5). The feature extraction methodology initially checks for the presence of ASAP scheduling in controller HDL of IP core. If both the rules to identify ASAP scheduling are satisfied, then the scheduling algorithm utilized to create an IP is detected as ASAP. However, if any one of the rules is not satisfied, then the possibility of employing ALAP scheduling in creating an IP core is checked. If both the conditions of ALAP scheduling are satisfied, the scheduling algorithm in IP core is detected as ALAP. Otherwise, the scheduling algorithm detected is LIST.
+
+![image](OEBPS/images/PBCS0600-06-f05.jpg)
+
+Figure 6.5 Feature extraction methodology for scheduling algorithm
+
+`Resource type`: To identify the presence of resource type feature, the top-level entity datapath HDL of IP core is checked and name of the components are identified. Further, a set of names resembling that of a functional unit (FU) are created as indicators as “type of resources” used to generate a DSP IP core. As shown in [Figure 6.6](#Chapter6.html#c06_fig6), the name of the component is “Mul\_4×4” which indicates a 4×4 multiplier. Similarly, all other component’s names are checked.
+
+![image](OEBPS/images/PBCS0600-06-f06.jpg)
+
+Figure 6.6 Partial HDL code of an IP core
+
+`Bus width support`: The feature extraction process, devised to identify bus width in an IP core, reads the top-level entity datapath HDL of the respective IP core as input. Subsequently, a list of component names is prepared. Next, the input/output size for each component is extracted as the bus width in that IP core. [Figure 6.7](#Chapter6.html#c06_fig7) shows partial HDL code of a representative IP core. The variable size of the register component named as “Reg\_r1” is size of r1 = size of reg\_r1 = 16 bits. Similarly, sizes of other components are determined and variable size is determined as bus width supported by that IP core design.
+
+![image](OEBPS/images/PBCS0600-06-f07.jpg)
