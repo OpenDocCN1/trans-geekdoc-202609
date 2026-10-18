@@ -1,0 +1,2 @@
++   [Python 编程：Python 崩溃课程——学习机器学习、数据科学分析和人工智能的秘密。初学者深度学习入门指南](README.md)
++   [Python 编程：Python 崩溃课程——学习机器学习、数据科学分析和人工智能的秘密。初学者深度学习入门指南](python-programming-the-crash-course-for-python-learn-the-sec_0.md)
