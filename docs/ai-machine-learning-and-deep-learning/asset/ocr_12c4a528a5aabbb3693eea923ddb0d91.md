@@ -1,0 +1,10 @@
+labeling process is usually conducted by an oracle, their experiment study has kept the original label during the attack process. Therefore, the experimental setting is more reasonable from a practical point of view. Furthermore, they calculated the gradient using parameters of the SVM model trained on Dtr ∪ (X0, Y0). Afterward, we update the initial attacking point according to the gradient ascent method. Then they retrain the SVM model and optimize the attacking point iteratively until it reaches the termination condition.
+
+In this study, they use the gradient ascending technique. The solution is in the negative direction of the gradient. L1 is a convex objective function, so it will never reach a convergence point. In this respect, they use L2 to constrain the iterative steps. The algorithm terminates either when there are no further changes regarding the hinge loss, L2(Xo), or the margin cannot be maximized anymore. When the value returned by L2(Xo) does not change, we have L2^{t-1} = L2^{t}, meaning that the attacking point will not cause further hinge loss because of the fault-tolerant nature of the SVM. Therefore, there is no need to further update the attacking point.
+
+# 11.4 ADVERSARIAL LABEL CONTAMINATION ON SVM
+
+Attacks against learning methods can be carried out either during the training or testing stage.
+
++   1. Attacks at the *testing* stage exploit the characteristics of the underlying classes that can be modified without affecting the true classification. But it deleteriously impacts on the discriminative model learned from the training data [23–25]. Given knowledge of invariances in the task, the effect of potential testing attacks can be somewhat mitigated by the learning algorithm. However, this comes at a cost of increased complexity of the training problem.
++   2. Attacks at the *training* stage attempt to exert a long-lasting impact on learning by modifying the training data. For example, important points in the training data may be changed, which makes the learning problem more complex. Such attacks introduce feature noise to the

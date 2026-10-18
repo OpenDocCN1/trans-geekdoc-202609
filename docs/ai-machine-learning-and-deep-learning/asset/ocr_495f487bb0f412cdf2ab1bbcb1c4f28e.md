@@ -1,0 +1,11 @@
+section 19.5 presents the design of the artifact. The overarching goal of the artifact is to prevent users from falling for phishing attempts. Essential technical as well as theoretical fundamentals for the development of an artifact are provided. Section 19.6 presents the conclusions of this study.
+
+# 19.2 BACKGROUND AND RELATED WORK
+
+A comprehensive view of user-focused behavior cannot be understood without understanding the behavioral models that influence phishing susceptibility. This section presents a discussion of the behavioral models that form the backdrop of understanding phishing susceptibility. The latter part of this section presents previous research on user-focused measures and technical antiphishing measures, and the section concludes by discussing the gap in the research.
+
+# 19.2.1 Behavioral Models Related to Phishing Susceptibility
+
+The question of how and why phishing is so successful has been a major topic of research [12, 54]. To address this issue, what might affect a user’s phishing susceptibility has to be analyzed. Research in phishing susceptibility ranges from empirical studies to behavioral models. Empirical studies showed that people read their emails in an automated way and make use of heuristics, so suspicious elements might go unnoticed [12, 38, 55, 58]. These heuristics include instincts developed over time [39]. Hence the question arises as to how we can increase users’ attention. A 600 participant study found that frequent internet users were more likely to fall for phishing [36]. These users felt less scared to click on links in emails. This study discussed the need for knowledge on how to control the use of heuristics and the level of attention.
+
+Behavioral models have also been introduced to investigate a user’s phishing susceptibility. The rational actor theory assumes that humans think about and plan their behavior before making a thoughtful decision [5]. A coexistence of different human behaviors is covered in the dual-process theory. The dual-process theory focuses on influence techniques [58], with the state of mind being of utmost importance [12]. The dual-process theory

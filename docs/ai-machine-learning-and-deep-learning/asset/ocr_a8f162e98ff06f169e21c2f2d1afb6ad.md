@@ -1,0 +1,11 @@
+successfully completed, and the server updates the global model. Otherwise, this round is abandoned.
+
+We should also notice that in the selection and reporting phases, a flexible time window is set. The selection phase lasts until enough devices have participated or a timeout event occurs. When the window is closed, this round is started or abandoned, depending on whether the goal count has been reached.
+
+# 4.2.3 Deep Learning Security and Collaborative Deep Learning Security
+
+Deep learning (DL) has shown enormous potential in artificial intelligence (AI). It helps the development of autonomous driving, smart devices, and natural language processing. Due to the great advances in computing power and massive data volume, DL has played a more critical role than other analytic tools. CNN can classify different objects and labels them in the different images. Recurrent neural networks (RNN) or long short-term memory networks (LSTMs) can analyze text files, find the main idea, and detect malicious sentences.
+
+DL networks suffer from a number of security problems. The adversaries can target on the model’s parameters and privacy information of participants. They even try to remotely control the prediction model’s learning process and intentionally fool the models to mislabel particular objects. In the past few years, security researchers have explored and studied the potential attacks of DL systems. They categorized the attacks into four types: model extraction attack, model inversion attack, poisoning attack, and adversarial attack. Table 4.1 illustrates the four attacks, corresponding attack targets, and the workflow.
+
+CDL network is facing similar security threats as general DL models. Although CDL is a distributed learning model, this framework is not resistive to these four types of attacks. Moreover, CDL is also vulnerable to a new attack: generative adversarial network (GAN) attack (which is introduced and evaluated in section 4.4). It shows that the in traditional DL training, the central server is the only player that would compromise

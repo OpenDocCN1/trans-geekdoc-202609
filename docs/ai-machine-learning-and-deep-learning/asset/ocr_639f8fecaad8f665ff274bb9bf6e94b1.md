@@ -1,0 +1,11 @@
+# 1.4 BLACK-BOX ADVERSARIAL ATTACKS
+
+Recent research on the adversarial attack has shown particular interest in black-box settings. Although many attacks require the attacker to have full access to the network architecture and weight, this information is often protected in commercialized products such as the vision system in modern self-driving vehicles. As a result, the black-box attack, in which an attacker has no knowledge of the network and the training set except the ability to query the probability/confidence score for each class (score-based black-box attack) or the label (decision-based black-box attack), is increasingly important to investigate. Furthermore, since black-box attack models do not require the knowledge of gradients as in most white-box attacks introduced in section 1.3, the defense strategies based on the masking gradient or nondifferentiability do not work with the attacks introduced in this section.
+
+In section 1.4.1, we introduce a transfer attack, a popular black-box attack that utilizes the transferability of adversarial examples. This attack can even be applied to no-box settings, in which an attacker does not even have access to the output of a model. In section 1.4.2, we present two score-based black-box attacks, zeroth-order-optimization- (ZOO-) based attack and square attack. Then we discuss three popular decision-based black-box attacks in section 1.4.3.
+
+# 1.4.1 Transfer Attack
+
+Szegedy et al. [6] highlight the transferability of adversarial examples through the generalization power of DNNs. That is, the same adversarial image can be misclassified by a variety of classifiers with different architectures or trained on different training data. This property is useful in black-box settings. When an attacker does not have knowledge of model architecture, they can generate a substitute model to imitate the target model and then apply white-box attack methods such as a L-BGFS attack to the obtained substitute model in order to generate an adversarial example. This type of attack is called a transfer attack.
+
+To do a transfer attack, an attacker needs to have a labeled training set first. With free query access, an attacker can feed the substitute training set

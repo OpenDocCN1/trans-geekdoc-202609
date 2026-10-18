@@ -1,0 +1,11 @@
+the game of Go, beating professional poker players in Texas hold’em, and mastering Atari games from pixel inputs [1].
+
+However, while DRL systems have performed well in the previously listed examples, some challenges impede the application of DRL systems on real-world problems. The primary difficult is the infeasibility of allowing the agent to freely and frequently interact with the environment set, due to matters of safety, cost, or time constraints. This manifests as the agent having to (1) interact with an inaccurate simulation of the expected environment or (2) interact with a static environment that is a snapshot of a more volatile one – weather conditions or trading markets. Proposed solutions to these limitations seek to develop rigorously accurate simulation environments and to generalize the learning algorithms for better adaptation once deployed [1].
+
+# 5.2  CHARACTERIZING ATTACKS ON DRL SYSTEMS
+
+Most studies on attacks against DRL systems have evaluated the vulnerability of these systems to observation-based attacks that add malicious perturbations to otherwise valid inputs. While these attacks can be effective given sufficient system knowledge and time, other forms of attack could be more practical for an attacker to pursue first, namely environmental manipulation and action selection. In their paper on characterizing attacks against DRL systems, Xiao et al. provided a taxonomy of potential attack vectors and evaluated the general effectiveness of these vectors depending on attacker knowledge [2].
+
+The *observation space* consists of the input stream used by the agent to make a decision and update internal states based on current and past data. Attacks on this space seek to perturb the observations of the agent, reducing its decision-making confidence over time. While this vector has the potential for targeted failures, it is more likely that an attacker will cause general underperformance of the system.
+
+The *action space* represents the potential actions and corresponding rewards of the DRL system, in which an attacker seeks to minimize the expected returns of otherwise correct actions. In doing so, the model fails to

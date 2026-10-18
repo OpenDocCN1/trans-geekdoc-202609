@@ -1,0 +1,11 @@
+include generating data with high accuracy, solving realistic problems without labels, and so on.
+
+DL provides a breakthrough in solving problems that have endured many attempts in the machine learning and artificial intelligence communities in the past, such as image classification, natural language recognition, gameplay, security-sensitive applications such as face recognition, spam filtering, malware detection, and self-driving cars. As a result, DL systems have become critical in many AI applications, and they attract adversaries to carry out attacks.
+
+A typical attack is to apply a slight disturbance to the original input of the target machine learning model to generate adversarial samples to deceive the target model (also known as the victim model). Early research mainly focused on adversarial samples in traditional machine learning applications, such as spam filters, intrusion detection, biometric authentication, and fraud detection [6]. Biggio et al. [7] first proposed a gradient-based method to generate adversarial examples for linear classifiers, SVM, and neural networks. Barreno et al. [6,8] conducted a preliminary investigation on the security issues of machine learning.
+
+Although DL performs well in many tasks, adversarial attacks can expose the vulnerability of machine learning models, and the analysis of attacks can thereby effectively improve the robustness and interpretability of the DL model. Szegedy et al. [9] discovered for the first time that deep neural networks have weaknesses in the field of image classification. They proved that despite the high accuracy rate, modern deep networks are very vulnerable to adversarial examples. These adversarial samples have only a slight disturbance to the original pixels so that the human visual system cannot detect this disturbance (i.e., the picture looks almost the same). Such an attack caused the neural network to completely change its prediction or classification result of images. In addition, the far-reaching significance of this phenomenon has attracted many researchers in the field of DL security.
+
+In the next section, we discuss more models of adversarial attacks with their particularities in targeting different DL algorithms and their application scenarios.
+
+# 3.2 CATEGORIES OF ATTACKS

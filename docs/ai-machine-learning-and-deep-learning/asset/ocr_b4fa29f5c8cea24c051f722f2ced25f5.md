@@ -1,0 +1,9 @@
+subject to the constraints where is a coefficient vector consisting of elements
+
+Without the knowledge of a victim model, an attacker can utilize the attack transferability to attack the victim model by substituting feature extractors (similar to transfer attacks in section 1.4.1). This is the main idea behind both the convex polytope attack and the bullseye polytope attack. The main difference between the two attacks is that there is no incentive to refine the target deeper inside the convex hull of poisons (“attack zone”) for the convex polytope attack, whereas the bullseye polytope attack instead pushes the target into the center of the convex hull by solving the optimization problem (1.5.5). Consequently, the target is often near the convex hull boundary in the convex polytope attack. The optimization problem (1.5.4) requires finding a set of coefficient vectors in addition to finding a set of poisons that minimize its objective function. Hence the convex polytope attack has a much higher computation cost than that of the bullseye polytope attack. As shown next, the bullseye polytope attack simply sets to assure that the target remains near the center of the poison samples.
+
+**Definition 18 (Single-target Mode Bullseye Polytope Attack by Aghakhan et al. 2020):** Given a set of feature extractors a target instance from class *t*, and a set of base instances that belong to class *b* such that the attack is called a single-target mode bullseye polytope attack if an attacker finds a set of poison instances by solving the following optimization problem:
+
+subject to the constraints where determines the maximum(1.5.5) allowed perturbation.
+
+The bullseye polytope attack can be further extended to a more sophisticated target mode (called the multitarget mode) by constructing a set of poison images that targets multiple instances enclosing the same object from different angles or lighting conditions. Specifically, if target

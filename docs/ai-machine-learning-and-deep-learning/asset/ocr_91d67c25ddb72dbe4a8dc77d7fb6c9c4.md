@@ -1,0 +1,11 @@
+data poisoning attack success rate drops significantly on end-to-end training and in black-box settings, and Shafahi et al. [47] proposed to use a watermark and multiple poison instances to increase the attack success rate on end-to-end training. However, one obvious drawback is that the pattern of the target instance sometimes shows up in the poison instances.
+
+# Convex Polytope Attack and Bullseye Polytope Attack
+
+Although in many ML-based attacks, an attacker is required to obtain full access to the network architecture and weight of a model (e.g., a feature collision attack), such a privilege is likely protected in commercialized products such as perception systems in smart cars. In this subsection, we introduce a transferable and scalable clean label targeted data poisoning attack against transfer learning and end-to-end training in a black-box setting, where attackers do not have access to the target model. Aghakhani et al. [49] proposed such a clean label data poisoning attack model, named the bullseye polytope attack, to create poison instances that are similar to a given target instance in a feature space. The bullseye polytope attack achieves a higher attack success rate compared to a feature collision attack in a black-box setting and increases the speed and success rate of the targeted data poisoning attack on end-to-end training compared to the convex polytope attack.
+
+The convex polytope attack [50] is very similar to the bullseye polytope attack; both of them are extensions of a feature collision attack into a black-box setting. Let us define the convex polytope attack formally as follows before we discuss the bullseye polytope attack, a scalable alternative to the convex polytope attack.
+
+Definition 17 (Convex Polytope Attack by Zhu et al. 2019): Given a set of feature extractors a target instance from class t and a set of base instances that belong to class b such that the attack is called a convex polytope attack if an attacker finds a set of poison instances by solving the following optimization problem:
+
+(1.5.4)

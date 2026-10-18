@@ -1,0 +1,2 @@
++   34. Ian J Goodfellow, Jonathon Shlens, and Christian Szegedy. 2015. Explaining and harnessing adversarial examples. In *Proc. of the 3rd international conference on learning representations* (ICLR 2015).
++   35. Papernot, N., McDaniel, P., Jha, S., Fredrikson, M., Celik, Z. B., & Swami, A. (2016, March). The limitations of DL in adversarial settings. In 2016 *IEEE European symposium on security and privacy* (EuroS&P) (pp. 372–387). IEEE.

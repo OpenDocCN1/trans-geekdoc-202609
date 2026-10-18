@@ -1,0 +1,5 @@
++   32. [Liu, K. S.](#), Pinto, E. V., Munir, S., Francis, J., Shelton, C., Berges, M., & Lin, S. (2017, November). Cod: A dataset of commercial building occupancy traces. 1–2).
++   33. [Hypertension](#). (2018, April). Opgehaal van [https://catalog.data.gov/dataset/hypertension/](https://catalog.data.gov/dataset/hypertension/)
++   34. [Martin, R. J.](#), Ratan, R. R., Reding, M. J., & Olsen, T. S. (2012). Higher blood glucose within the normal range is associated with more severe strokes. *Stroke research and treatment*, 2012.
++   35. [Bhogal, A. S.](#), & Mani, A. R. (2017). Pattern analysis of oxygen saturation variability in healthy individuals: Entropy of pulse oximetry signals carries information about mean oxygen saturation. *Frontiers in physiology*, 8, 555.
++   36. [Pimentel, M.](#), Johnson, A., Charlton, P., & Clifton, D. (2017). BIDMC PPG and Respiration Dataset. Physionet, [https://physionet.org/content/bidmc/1.0.0/](https://physionet.org/content/bidmc/1.0.0/).
