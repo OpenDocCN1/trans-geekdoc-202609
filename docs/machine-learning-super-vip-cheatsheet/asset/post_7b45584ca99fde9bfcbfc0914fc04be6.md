@@ -1,0 +1,80 @@
+
+*Remark:* for all matrices $A\in\mathbb{R}^{n\times n}$, we have $A I = I A = A$.
+
+### Diagonal matrix
+A diagonal matrix $D\in\mathbb{R}^{n\times n}$ is a square matrix with nonzero values in its diagonal and zero everywhere else:
+
+$$D=\begin{pmatrix} d_1&0&\cdots&0\\0&\ddots&\ddots&\vdots\\\vdots&\ddots&\ddots&0\\0&\cdots&0&d_n\end{pmatrix}$$
+
+*Remark:* we also note $D$ as $\operatorname{diag}(d_1,\ldots,d_n)$.
+
+## 5.2.2 Matrix operations
+
+### Vector-vector multiplication
+There are two types of vector-vector products:
+
+- inner product: for $x,y\in\mathbb{R}^n$, we have:
+
+$$x^Ty=\sum_{i=1}^{n}x_iy_i\in\mathbb{R}$$
+
+- outer product: for $x\in\mathbb{R}^m,y\in\mathbb{R}^n$, we have:
+
+$$xy^T=\begin{pmatrix}x_1y_1&\cdots&x_1y_n\\\vdots&&\vdots\\x_my_1&\cdots&x_my_n\end{pmatrix}\in\mathbb{R}^{m\times n}$$
+
+### Matrix-vector multiplication
+The product of matrix $A\in\mathbb{R}^{m\times n}$ and vector $x\in\mathbb{R}^n$ is a vector of size $\mathbb{R}^m$, such that:
+
+$$Ax=\begin{pmatrix}a_{r,1}^Tx\\\vdots\\a_{r,m}^Tx\end{pmatrix}=\sum_{i=1}^{n}a_{c,i}x_i\in\mathbb{R}^m$$
+
+where $a_{r,i}^T$ are the vector rows and $a_{c,j}$ are the vector columns of $A$, and $x_i$ are the entries of $x$.
+
+### Matrix-matrix multiplication
+The product of matrices $A\in\mathbb{R}^{m\times n}$ and $B\in\mathbb{R}^{n\times p}$ is a matrix of size $\mathbb{R}^{m\times p}$, such that:
+
+$$AB=\begin{pmatrix}a_{r,1}^Tb_{c,1}&\cdots&a_{r,1}^Tb_{c,p}\\\vdots&&\vdots\\a_{r,m}^Tb_{c,1}&\cdots&a_{r,m}^Tb_{c,p}\end{pmatrix}=\sum_{i=1}^{n}a_{c,i}b_{r,i}^T\in\mathbb{R}^{m\times p}$$
+
+where $a_{r,i}^T,b_{r,i}^T$ are the vector rows and $a_{c,j},b_{c,j}$ are the vector columns of $A$ and $B$ respectively.
+
+### Transpose
+The transpose of a matrix $A\in\mathbb{R}^{m\times n}$, noted $A^T$, is such that its entries are flipped:
+
+$$\forall i,j,\qquad A^T_{i,j}=A_{j,i}$$
+
+*Remark:* for matrices $A,B$, we have $(AB)^T=B^TA^T$.
+
+### Inverse
+The inverse of an invertible square matrix $A$ is noted $A^{-1}$ and is the only matrix such that:
+
+$$AA^{-1}=A^{-1}A=I$$
+
+*Remark:* not all square matrices are invertible. Also, for matrices $A,B$, we have $(AB)^{-1}=B^{-1}A^{-1}$.
+
+### Trace
+The trace of a square matrix $A$, noted $\operatorname{tr}(A)$, is the sum of its diagonal entries:
+
+$$\operatorname{tr}(A)=\sum_{i=1}^{n}A_{i,i}$$
+
+*Remark:* for matrices $A,B$, we have $\operatorname{tr}(A^T)=\operatorname{tr}(A)$ and $\operatorname{tr}(AB)=\operatorname{tr}(BA)$.
+
+### Determinant
+The determinant of a square matrix $A\in\mathbb{R}^{n\times n}$, noted $|A|$ or $\det(A)$ is expressed recursively in terms of $A_{\backslash i,j}$, which is the matrix $A$ without its $i^{th}$ row and $j^{th}$ column, as follows:
+
+$$\det(A)=|A|=\sum_{j=1}^{n}(-1)^{i+j}A_{i,j}|A_{\backslash i,j}|$$
+
+*Remark:* $A$ is invertible if and only if $|A|\ne0$. Also, $|AB|=|A||B|$ and $|A^T|=|A|$.
+
+## 5.2.3 Matrix properties
+
+### Symmetric decomposition
+A given matrix $A$ can be expressed in terms of its symmetric and antisymmetric parts as follows:
+
+$$A=\underbrace{\frac{A+A^T}{2}}_{\text{Symmetric}}+\underbrace{\frac{A-A^T}{2}}_{\text{Antisymmetric}}$$
+
+### Norm
+A norm is a function $N:V\to[0,+\infty[$ where $V$ is a vector space, and such that for all $x,y\in V$, we have:
+
+- $N(x+y)\le N(x)+N(y)$
+- $N(\alpha x)=|\alpha|N(x)$ for a scalar
+- if $N(x)=0$, then $x=0$
+
+For $x\in V$, the most commonly used norms are summed up in the table below:

@@ -1,0 +1,1476 @@
+- pgno: 0
+  md: "# Super VIP Cheatsheet: Machine Learning\n\nAfshine AMIDI and Shervine AMIDI\n\
+    \nSeptember 15, 2018\n\n# Contents\n\n+   1 Supervised Learning 2\n+   1.1 Introduction\
+    \ to Supervised Learning ............ 2\n+   1.2 Notations and general concepts\
+    \ .................... 2\n+   1.3 Linear models ......................................\
+    \ 2\n+   1.3.1 Linear regression ............................... 2\n+   1.3.2\
+    \ Classification and logistic regression ........... 3\n+   1.3.3 Generalized\
+    \ Linear Models ....................... 3\n+   1.4 Support Vector Machines ...........................\
+    \ 3\n+   1.5 Generative Learning ............................... 4\n+   1.5.1\
+    \ Gaussian Discriminant Analysis .................. 4\n+   1.5.2 Naive Bayes .....................................\
+    \ 4\n+   1.6 Tree-based and ensemble methods ................... 4\n+   1.7 Other\
+    \ non-parametric approaches ................... 4\n+   1.8 Learning Theory ...................................\
+    \ 5\n+   \n+   2 Unsupervised Learning 6\n+   2.1 Introduction to Unsupervised\
+    \ Learning ............. 6\n+   2.2 Clustering .......................................\
+    \ 6\n+   2.2.1 Expectation-Maximization ....................... 6\n+   2.2.2 k-means\
+    \ clustering ............................. 6\n+   2.2.3 Hierarchical clustering\
+    \ ....................... 6\n+   2.2.4 Clustering assessment metrics ..................\
+    \ 6\n+   2.3 Dimension reduction .............................. 7\n+   2.3.1 Principal\
+    \ component analysis ................... 7\n+   2.3.2 Independent component analysis\
+    \ ................. 7\n+   \n+   3 Deep Learning 8\n+   3.1 Neural Networks ..................................\
+    \ 8\n+   3.2 Convolutional Neural Networks .................... 8\n+   3.3 Recurrent\
+    \ Neural Networks ....................... 8\n+   3.4 Reinforcement Learning and\
+    \ Control ............... 9\n+   \n+   4 Machine Learning Tips and Tricks 10\n\
+    +   4.1 Metrics .......................................... 10\n+   4.1.1 Classification\
+    \ ............................... 10\n+   4.1.2 Regression ....................................\
+    \ 10\n+   4.2 Model selection .................................. 11\n+   4.3 Diagnostics\
+    \ ...................................... 11\n+   \n+   5 Refreshers 12\n+   5.1\
+    \ Probabilities and Statistics ..................... 12\n+   5.1.1 Introduction\
+    \ to Probability and Combinatorics ... 12\n+   5.1.2 Conditional Probability .......................\
+    \ 12\n+   5.1.3 Random Variables .............................. 13\n+   5.1.4\
+    \ Jointly Distributed Random Variables ........... 13\n+   5.1.5 Parameter estimation\
+    \ .......................... 14\n+   5.2 Linear Algebra and Calculus ......................\
+    \ 14\n+   5.2.1 General notations ............................. 14\n+   5.2.2\
+    \ Matrix operations ............................. 15\n+   5.2.3 Matrix properties\
+    \ ............................. 15\n+   5.2.4 Matrix calculus ...............................\
+    \ 16"
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# # 1 Supervised Learning
+
+
+    # ## 1.1 Introduction to Supervised Learning
+
+
+    Given a set of data points $\{x^{(1)}, \ldots, x^{(m)}\}$ associated to a set
+    of outcomes $\{y^{(1)}, \ldots, y^{(m)}\}$, we want to build a classifier that
+    learns how to predict $y$ from $x$.
+
+
+    +   - **Type of prediction** — The different types of predictive models are summed
+    up in the table below:
+
+
+    |  | Regression | Classifier |
+
+    |---|---|---|
+
+    | **Outcome** | Continuous | Class |
+
+    | **Examples** | Linear regression | Logistic regression, SVM, Naive Bayes |
+
+
+    +   - **Type of model** — The different models are summed up in the table below:
+
+
+    |  | Discriminative model | Generative model |
+
+    |---|---|---|
+
+    | **Goal** | Directly estimate $P(y\mid x)$ | Estimate $P(x\mid y)$ to deduce
+    $P(y\mid x)$ |
+
+    | **What''s learned** | Decision boundary | Probability distributions of the data
+    |
+
+    | **Illustration** | Classification boundary illustration | Generative distributions
+    illustration |
+
+    | **Examples** | Regressions, SVMs | GDA, Naive Bayes |
+
+
+    ![](img/f376a3bbef2a1cafaabccff5f23575a4_1_0.png)
+
+
+    ![](img/f376a3bbef2a1cafaabccff5f23575a4_1_1.png)
+
+
+    # ## 1.2 Notations and general concepts
+
+
+    +   - **Hypothesis** — The hypothesis is noted $h_\theta$ and is the model that
+    we choose. For a given input data $x^{(i)}$, the model prediction output is $h_\theta(x^{(i)})$.
+
+
+    +   - **Loss function** — A loss function is a function $L : (z,y) \in \mathbb{R}
+    \times \mathcal{Y} \longmapsto L(z,y) \in \mathbb{R}$ that takes as input the
+    predicted value $z$ corresponding to the true value $y$ and outputs how different
+    they are. The common loss functions are summed up in the table below:
+
+
+    | Least squared | Logistic | Hinge | Cross-entropy |
+
+    |---|---|---|---|
+
+    | $\frac{1}{2}(y-z)^2$ | $\log(1+\exp(-yz))$ | $\max(0,1-yz)$ | $-[y\log(z)+(1-y)\log(1-z)]$
+    |
+
+    | Linear regression | Logistic regression | SVM | Neural Network |
+
+
+    ![](img/f376a3bbef2a1cafaabccff5f23575a4_1_2.png)
+
+
+    +   - **Cost function** — The cost function $J$ is commonly used to assess the
+    performance of a model, and is defined with the loss function $L$ as follows:
+
+
+    ```
+
+    $$J(\theta)=\sum_{i=1}^{m}L(h_\theta(x^{(i)}),y^{(i)})$$
+
+    ```
+
+
+    +   - **Gradient descent** — By noting $\alpha \in \mathbb{R}$ the learning rate,
+    the update rule for gradient descent is expressed with the learning rate and the
+    cost function $J$ as follows:
+
+
+    ```
+
+    $$\theta \leftarrow \theta-\alpha\nabla J(\theta)$$
+
+    ```
+
+
+    ![](img/f376a3bbef2a1cafaabccff5f23575a4_1_3.png)
+
+
+    > *Remark: Stochastic gradient descent (SGD) is updating the parameter based on
+    each training example, and batch gradient descent is on a batch of training examples.*
+
+
+    +   - **Likelihood** — The likelihood of a model $L(\theta)$ given parameters
+    $\theta$ is used to find the optimal parameters $\theta$ through maximizing the
+    likelihood. In practice, we use the log-likelihood $\ell(\theta)=\log(L(\theta))$
+    which is easier to optimize. We have:
+
+
+    ```
+
+    $$\theta^{\mathrm{opt}}=\underset{\theta}{\arg\max}\ L(\theta)$$
+
+    ```
+
+
+    +   - **Newton''s algorithm** — Newton''s algorithm is a numerical method that
+    finds $\theta$ such that $\ell''(\theta)=0$. Its update rule is as follows:
+
+
+    ```
+
+    $$\theta\leftarrow\theta-\frac{\ell''(\theta)}{\ell''''(\theta)}$$
+
+    ```
+
+
+    > *Remark: the multidimensional generalization, also known as the Newton-Raphson
+    method, has the following update rule:*
+
+
+    ```
+
+    $$\theta\leftarrow\theta-\left(\nabla_\theta^2\ell(\theta)\right)^{-1}\nabla_\theta\ell(\theta)$$
+
+    ```
+
+
+    # ## 1.3 Linear models
+
+
+    # ### 1.3.1 Linear regression
+
+
+    We assume here that $y\mid x;\theta\sim\mathcal{N}(\mu,\sigma^2)$
+
+
+    +   - **Normal equations** — By noting $X$ the matrix design, the value of $\theta$
+    that minimizes the cost function is a closed-form solution such that:
+
+
+    ```
+
+    $$\theta=(X^TX)^{-1}X^Ty$$
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 1.5.2 Naive Bayes
+
+
+    Assumption – The Naive Bayes model supposes that the features of each data point
+    are all independent:
+
+
+    $P(x|y)=P(x_1,x_2,...|y)=P(x_1|y)P(x_2|y)...=\prod_{i=1}^{n}P(x_i|y)$
+
+
+    Solutions – Maximizing the log-likelihood gives the following solutions, with
+    $k\in\{0,1\}$, $l\in[[1,L]]$
+
+
+    $P(y=k)=\frac{1}{m}\times\#\{j|y^{(j)}=k\}$
+
+
+    $P(x_i=l|y=k)=\frac{\#\{j|y^{(j)}=k\text{ and }x_i^{(j)}=l\}}{\#\{j|y^{(j)}=k\}}$
+
+
+    > *Remark: Naive Bayes is widely used for text classification and spam detection.*
+
+
+    # 1.6 Tree-based and ensemble methods
+
+
+    These methods can be used for both regression and classification problems.
+
+
+    CART – Classification and Regression Trees (CART), commonly known as decision
+    trees, can be represented as binary trees. They have the advantage to be very
+    interpretable.
+
+
+    Random forest – It is a tree-based technique that uses a high number of decision
+    trees built out of randomly selected sets of features. Contrary to the simple
+    decision tree, it is highly uninterpretable but its generally good performance
+    makes it a popular algorithm.
+
+
+    > *Remark: random forests are a type of ensemble methods.*
+
+
+    Boosting – The idea of boosting methods is to combine several weak learners to
+    form a stronger one. The main ones are summed up in the table below:
+
+
+    | Adaptive boosting | Gradient boosting |
+
+    |---|---|
+
+    | - High weights are put on errors to improve at the next boosting step
+
+    - Known as Adaboost | - Weak learners trained on remaining errors |
+
+
+    # 1.7 Other non-parametric approaches
+
+
+    k-nearest neighbors – The k-nearest neighbors algorithm, commonly known as k-NN,
+    is a non-parametric approach where the response of a data point is determined
+    by the nature of its k neighbors from the training set. It can be used in both
+    classification and regression settings.
+
+
+    > *Remark: The higher the parameter k, the higher the bias, and the lower the
+    parameter k, the higher the variance.*
+
+
+    Kernel – Given a feature mapping $\phi$, we define the kernel $K$ to be defined
+    as:
+
+
+    $K(x,z)=\phi(x)^T\phi(z)$
+
+
+    In practice, the kernel $K$ defined by $K(x,z)=\exp\left(-\frac{||x-z||^2}{2\sigma^2}\right)$
+    is called the Gaussian kernel and is commonly used.
+
+
+    ![](img/f376a3bbef2a1cafaabccff5f23575a4_3_0.png)
+
+
+    > *Remark: we say that we use the "kernel trick" to compute the cost function
+    using the kernel because we actually don''t need to know the explicit mapping
+    $\phi$, which is often very complicated. Instead, only the values $K(x,z)$ are
+    needed.*
+
+
+    Lagrangian – We define the Lagrangian $\mathcal{L}(w,b)$ as follows:
+
+
+    $\mathcal{L}(w,b)=f(w)+\sum_{i=1}^{l}\beta_i h_i(w)$
+
+
+    > *Remark: the coefficients $\beta_i$ are called the Lagrange multipliers.*
+
+
+    # 1.5 Generative Learning
+
+
+    A generative model first tries to learn how the data is generated by estimating
+    $P(x|y)$, which we can then use to estimate $P(y|x)$ by using Bayes'' rule.
+
+
+    # 1.5.1 Gaussian Discriminant Analysis
+
+
+    Setting – The Gaussian Discriminant Analysis assumes that $y$ and $x|y=0$ and
+    $x|y=1$ are such that:
+
+
+    $y\sim\text{Bernoulli}(\phi)$
+
+
+    $x|y=0\sim\mathcal{N}(\mu_0,\Sigma)$ and $x|y=1\sim\mathcal{N}(\mu_1,\Sigma)$
+
+
+    Estimation – The following table sums up the estimates that we find when maximizing
+    the likelihood:
+
+
+    | $\widehat{\phi}$ | $\widehat{\mu_j}\;(j=0,1)$ | $\widehat{\Sigma}$ |
+
+    |---|---|---|
+
+    | $\frac{1}{m}\sum_{i=1}^{m}1_{\{y^{(i)}=1\}}$ | $\frac{\sum_{i=1}^{m}1_{\{y^{(i)}=j\}}x^{(i)}}{\sum_{i=1}^{m}1_{\{y^{(i)}=j\}}}$
+    | $\frac{1}{m}\sum_{i=1}^{m}(x^{(i)}-\mu_{y^{(i)}})(x^{(i)}-\mu_{y^{(i)}})^T$
+    |'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/f376a3bbef2a1cafaabccff5f23575a4_4_0.png)
+
+
+    \(k=1\qquad\qquad\qquad k=3\qquad\qquad\qquad k=11\)
+
+
+    \[\exists h\in\mathcal{H},\quad \forall i\in[1,d],\quad h(x^{(i)})=y^{(i)}\]
+
+
+    **Upper bound theorem** — Let \(\mathcal{H}\) be a finite hypothesis class such
+    that \(|\mathcal{H}|=k\) and let \(\delta\) and the sample size \(m\) be fixed.
+    Then, with probability of at least \(1-\delta\), we have:
+
+
+    \[\epsilon(\hat h)\leq \left(\min_{h\in\mathcal{H}}\epsilon(h)\right)+2\sqrt{\frac{1}{2m}\log\left(\frac{2k}{\delta}\right)}\]
+
+
+    # 1.8 Learning Theory
+
+
+    **Union bound** — Let \(A_1,\ldots,A_k\) be \(k\) events. We have:
+
+
+    \[P(A_1\cup\cdots\cup A_k)\leq P(A_1)+\cdots+P(A_k)\]
+
+
+    ![](img/f376a3bbef2a1cafaabccff5f23575a4_4_1.png)
+
+
+    \(A_1\cup A_2\cup A_3\qquad\qquad A_1\qquad\qquad A_2\qquad\qquad A_3\)
+
+
+    **Hoeffding inequality** — Let \(Z_1,\ldots,Z_m\) be \(m\) iid variables drawn
+    from a Bernoulli distribution of parameter \(\phi\). Let \(\hat\phi\) be their
+    sample mean and \(\gamma>0\) fixed. We have:
+
+
+    \[P(|\phi-\hat\phi|>\gamma)\leq 2\exp(-2\gamma^2m)\]
+
+
+    *Remark:* this inequality is also known as the Chernoff bound.
+
+
+    **Training error** — For a given classifier \(h\), we define the training error
+    \(\hat\epsilon(h)\), also known as the empirical risk or empirical error, to be
+    as follows:
+
+
+    \[\hat\epsilon(h)=\frac{1}{m}\sum_{i=1}^{m}\mathbf{1}_{\{h(x^{(i)})\neq y^{(i)}\}}\]
+
+
+    **Probably Approximately Correct (PAC)** — PAC is a framework under which numerous
+    results on learning theory were proved, and has the following set of assumptions:
+
+
+    +   - the training and testing sets follow the same distribution
+
+    +   - the training examples are drawn independently
+
+
+    **Shattering** — Given a set \(S=\{x^{(1)},\ldots,x^{(d)}\}\), and a set of classifiers
+    \(\mathcal{H}\), we say that \(\mathcal{H}\) shatters \(S\) if for any set of
+    labels \(\{y^{(1)},\ldots,y^{(d)}\}\), we have:
+
+
+    **VC dimension** — The Vapnik-Chervonenkis (VC) dimension of a given infinite
+    hypothesis class \(\mathcal{H}\), noted \(VC(\mathcal{H})\), is the size of the
+    largest set that is shattered by \(\mathcal{H}\).
+
+
+    *Remark:* the VC dimension of \(\mathcal{H}=\{\text{set of linear classifiers
+    in 2 dimensions}\}\) is 3.
+
+
+    ![](img/f376a3bbef2a1cafaabccff5f23575a4_4_2.png)
+
+
+    **Theorem (Vapnik)** — Let \(\mathcal{H}\) be given, with \(VC(\mathcal{H})=d\)
+    and \(m\) the number of training examples. With probability at least \(1-\delta\),
+    we have:
+
+
+    \[\epsilon(\hat h)\leq\left(\min_{h\in\mathcal{H}}\epsilon(h)\right)+O\left(\sqrt{\frac{d}{m}\log\left(\frac{m}{d}\right)+\frac{1}{m}\log\left(\frac{1}{\delta}\right)}\right)\]'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# 2 Unsupervised Learning
+
+
+    # 2.1 Introduction to Unsupervised Learning
+
+
+    Motivation – The goal of unsupervised learning is to find hidden patterns in unlabeled
+    data {$x^{(1)},...,x^{(m)}$}.
+
+
+    Jensen''s inequality – Let $f$ be a convex function and $X$ a random variable.
+    We have the following inequality:
+
+
+    $E[f(X)] \ge f(E[X])$
+
+
+    # 2.2 Clustering
+
+
+    # 2.2.1 Expectation-Maximization
+
+
+    Latent variables – Latent variables are hidden/unobserved variables that make
+    estimation problems difficult, and are often denoted $z$. Here are the most common
+    settings where there are latent variables:
+
+
+    | Setting | Latent variable $z$ | $x|z$ | Comments |
+
+    |---|---|---|---|
+
+    | Mixture of $k$ Gaussians | Multinomial($\phi$) | $\mathcal{N}(\mu_j,\Sigma_j)$
+    | $\mu_j \in \mathbb{R}^n, \phi \in \mathbb{R}^k$ |
+
+    | Factor analysis | $\mathcal{N}(0,I)$ | $\mathcal{N}(\mu + \Lambda z,\psi)$ |
+    $\mu_j \in \mathbb{R}^n$ |
+
+
+    Algorithm – The Expectation-Maximization (EM) algorithm gives an efficient method
+    at estimating the parameter $\theta$ through maximum likelihood estimation by
+    repeatedly constructing a lower-bound on the likelihood (E-step) and optimizing
+    that lower bound (M-step) as follows:
+
+
+    +   - E-step: Evaluate the posterior probability $Q_i(z^{(i)})$ that each data
+    point $x^{(i)}$ came from a particular cluster $z^{(i)}$ as follows:
+
+    +     $Q_i(z^{(i)}) = P(z^{(i)}|x^{(i)};\theta)$
+
+    +   - M-step: Use the posterior probabilities $Q_i(z^{(i)})$ as cluster specific
+    weights on data points $x^{(i)}$ to separately re-estimate each cluster model
+    as follows:
+
+    +     $\theta_t = \arg\max_\theta \sum_i \int_{z^{(i)}} Q_t(z^{(i)}) \log\left(\frac{P(x^{(i)},z^{(i)};\theta)}{Q_t(z^{(i)})}\right)
+    dz^{(i)}$
+
+
+    ![](img/f376a3bbef2a1cafaabccff5f23575a4_5_0.png)
+
+
+    # 2.2.2 k-means clustering
+
+
+    We note $c^{(i)}$ the cluster of data point $i$ and $\mu_j$ the center of cluster
+    $j$.
+
+
+    Algorithm – After randomly initializing the cluster centroids $\mu_1,\mu_2,...,\mu_k
+    \in \mathbb{R}^n$, the $k$-means algorithm repeats the following step until convergence:
+
+
+    $c^{(i)} = \arg\min_j \|x^{(i)} - \mu_j\|^2$ and $\mu_j = \frac{\sum_{i=1}^m \mathbf{1}_{\{c^{(i)}=j\}}
+    x^{(i)}}{\sum_{i=1}^m \mathbf{1}_{\{c^{(i)}=j\}}}$
+
+
+    ![](img/f376a3bbef2a1cafaabccff5f23575a4_5_1.png)
+
+
+    Distortion function – In order to see if the algorithm converges, we look at the
+    distortion function defined as follows:
+
+
+    $J(c,\mu) = \sum_{i=1}^m \|x^{(i)} - \mu_{c(i)}\|^2$
+
+
+    # 2.2.3 Hierarchical clustering
+
+
+    Algorithm – It is a clustering algorithm with an agglomerative hierarchical approach
+    that build nested clusters in a successive manner.
+
+
+    Types – There are different sorts of hierarchical clustering algorithms that aims
+    at optimizing different objective functions, which is summed up in the table below:
+
+
+    | Ward linkage | Average linkage | Complete linkage |
+
+    |---|---|---|
+
+    | Minimize within cluster distance | Minimize average distance between cluster
+    pairs | Minimize maximum distance of between cluster pairs |
+
+
+    # 2.2.4 Clustering assessment metrics
+
+
+    In an unsupervised learning setting, it is often hard to assess the performance
+    of a model since we don''t have the ground truth labels as was the case in the
+    supervised learning setting.
+
+
+    Silhouette coefficient – By noting $a$ and $b$ the mean distance between a sample
+    and all other points in the same class, and between a sample and all other points
+    in the next nearest cluster, the silhouette coefficient $s$ for a single sample
+    is defined as follows:
+
+
+    $s = \frac{b - a}{\max(a,b)}$'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# 3 Deep Learning
+
+
+    # 3.1 Neural Networks
+
+
+    Neural networks are a class of models that are built with layers. Commonly used
+    types of neural networks include convolutional and recurrent neural networks.
+
+
+    □ Architecture – The vocabulary around neural networks architectures is described
+    in the figure below:
+
+
+    ![](img/f376a3bbef2a1cafaabccff5f23575a4_7_0.png)
+
+
+    By noting i the i^th layer of the network and j the j^th hidden unit of the layer,
+    we have:
+
+
+    z_j^{[i]} = w_j^{[i]T} x + b_j^{[i]}
+
+
+    where we note w, b, z the weight, bias and output respectively.
+
+
+    □ Activation function – Activation functions are used at the end of a hidden unit
+    to introduce non-linear complexities to the model. Here are the most common ones:
+
+
+    | Sigmoid | Tanh | ReLU | Leaky ReLU |
+
+    |---|---|---|---|
+
+    | g(z) = 1 / (1 + e^{-z}) | g(z) = (e^{z} - e^{-z})/(e^{z} + e^{-z}) | g(z) =
+    max(0,z) | g(z) = max(εz,z) with ε << 1 |
+
+    | Sigmoid curve plot | Tanh curve plot | ReLU plot | Leaky ReLU plot |
+
+
+    □ Cross-entropy loss – In the context of neural networks, the cross-entropy loss
+    L(z,y) is commonly used and is defined as follows:
+
+
+    L(z,y) = -[ y log(z) + (1 - y) log(1 - z) ]
+
+
+    □ Learning rate – The learning rate, often noted η, indicates at which pace the
+    weights get updated. This can be fixed or adaptively changed. The current most
+    popular method is called Adam, which is a method that adapts the learning rate.
+
+
+    □ Backpropagation – Backpropagation is a method to update the weights in the neural
+    network by taking into account the actual output and the desired output. The derivative
+    with respect to weight w is computed using chain rule and is of the following
+    form:
+
+
+    ∂L(z,y)/∂w = ∂L(z,y)/∂a × ∂a/∂z × ∂z/∂w
+
+
+    As a result, the weight is updated as follows:
+
+
+    w ← w - η ∂L(z,y)/∂w
+
+
+    □ Updating weights – In a neural network, weights are updated as follows:
+
+
+    +   - Step 1: Take a batch of training data.
+
+    +   - Step 2: Perform forward propagation to obtain the corresponding loss.
+
+    +   - Step 3: Backpropagate the loss to get the gradients.
+
+    +   - Step 4: Use the gradients to update the weights of the network.
+
+
+    □ Dropout – Dropout is a technique meant at preventing overfitting the training
+    data by dropping out units in a neural network. In practice, neurons are either
+    dropped with probability p or kept with probability 1 - p.
+
+
+    # 3.2 Convolutional Neural Networks
+
+
+    □ Convolutional layer requirement – By noting W the input volume size, F the size
+    of the convolutional layer neurons, P the amount of zero padding, then the number
+    of neurons N that fit in a given volume is such that:
+
+
+    N = (W - F + 2P)/S + 1
+
+
+    □ Batch normalization – It is a step of hyperparameter γ,β that normalizes the
+    batch {x_i}. By noting μ_B, σ_B^2 the mean and variance of that we want to correct
+    to the batch, it is done as follows:
+
+
+    x_i ← γ (x_i - μ_B)/√(σ_B^2 + ε) + β
+
+
+    It is usually done after a fully connected/convolutional layer and before a non-linearity
+    layer and aims at allowing higher learning rates and reducing the strong dependence
+    on initialization.
+
+
+    # 3.3 Recurrent Neural Networks
+
+
+    □ Types of gates – Here are the different types of gates that we encounter in
+    a typical recurrent neural network:
+
+
+    | Input gate | Forget gate | Output gate | Gate |
+
+    |---|---|---|---|
+
+    | Write to cell or not? | Erase a cell or not? | Reveal a cell or not? | How much
+    writing? |
+
+
+    □ LSTM – A long short-term memory (LSTM) network is a type of RNN model that avoids
+    the vanishing gradient problem by adding ‘forget’ gates.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# 3.4 Reinforcement Learning and Control
+
+
+    The goal of reinforcement learning is for an agent to learn how to evolve in an
+    environment.
+
+
+    **Markov decision processes** – A Markov decision process (MDP) is a 5-tuple $(S,A,\{P_{sa}\},\gamma,R)$
+    where:
+
+
+    +   - $\mathcal{S}$ is the set of states
+
+    +   - $\mathcal{A}$ is the set of actions
+
+    +   - $\{P_{sa}\}$ are the state transition probabilities for $s \in \mathcal{S}$
+    and $a \in \mathcal{A}$
+
+    +   - $\gamma \in [0,1]$ is the discount factor
+
+    +   - $R : \mathcal{S} \times \mathcal{A} \longrightarrow \mathbb{R}$ or $R :
+    \mathcal{S} \longrightarrow \mathbb{R}$ is the reward function that the algorithm
+    wants to maximize
+
+
+    **Policy** – A policy $\pi$ is a function $\pi : \mathcal{S} \longrightarrow \mathcal{A}$
+    that maps states to actions.
+
+
+    *Remark: we say that we execute a given policy $\pi$ if given a state $s$ we take
+    the action $a = \pi(s)$.*
+
+
+    **Value function** – For a given policy $\pi$ and a given state $s$, we define
+    the value function $V^{\pi}$ as follows:
+
+
+    $V^{\pi}(s) = E\left[ R(s_0) + \gamma R(s_1) + \gamma^2 R(s_2) + ... | s_0 = s,
+    \pi \right]$
+
+
+    **Bellman equation** – The optimal Bellman equations characterizes the value function
+    $V^{\pi^*}$ of the optimal policy $\pi^*$:
+
+
+    $V^{\pi^*}(s) = R(s) + \max_{a \in \mathcal{A}} \gamma \sum_{s'' \in \mathcal{S}}
+    P_{sa}(s'') V^{\pi^*}(s'')$
+
+
+    *Remark: we note that the optimal policy $\pi^*$ for a given state $s$ is such
+    that:*
+
+
+    $\pi^*(s) = \arg\max_{a \in \mathcal{A}} \sum_{s'' \in \mathcal{S}} P_{sa}(s'')
+    V^*(s'')$
+
+
+    **Value iteration algorithm** – The value iteration algorithm is in two steps:
+
+
+    +   - We initialize the value:
+
+
+    $V_0(s) = 0$
+
+
+    +   - We iterate the value based on the values before:
+
+
+    $V_{i+1}(s) = R(s) + \max_{a \in \mathcal{A}} \left[ \sum_{s'' \in \mathcal{S}}
+    \gamma P_{sa}(s'') V_i(s'') \right]$
+
+
+    **Maximum likelihood estimate** – The maximum likelihood estimates for the state
+    transition probabilities are as follows:
+
+
+    $P_{sa}(s'') = \frac{\#\text{times took action } a \text{ in state } s \text{
+    and got to } s''}{\#\text{times took action } a \text{ in state } s}$
+
+
+    **Q-learning** – $Q$-learning is a model-free estimation of $Q$, which is done
+    as follows:
+
+
+    $Q(s,a) \leftarrow Q(s,a) + \alpha \left[ R(s,a,s'') + \gamma \max_{a''} Q(s'',a'')
+    - Q(s,a) \right]$'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 4 Machine Learning Tips and Tricks
+
+
+    # 4.1 Metrics
+
+
+    Given a set of data points {x^(1),...,x^(m)}, where each x^(i) has n features,
+    associated to a set of outcomes {y^(1),...,y^(m)}, we want to assess a given classifier
+    that learns how to predict y from x.
+
+
+    # 4.1.1 Classification
+
+
+    In a context of a binary classification, here are the main metrics that are important
+    to track to assess the performance of the model.
+
+
+    ☐ Confusion matrix – The confusion matrix is used to have a more complete picture
+    when assessing the performance of a model. It is defined as follows:
+
+
+    ![](img/f376a3bbef2a1cafaabccff5f23575a4_9_0.png)
+
+
+    ☐ Main metrics – The following metrics are commonly used to assess the performance
+    of classification models:
+
+
+    | Metric | Formula | Interpretation |
+
+    |---|---|---|
+
+    | Accuracy | (TP + TN)/(TP + TN + FP + FN) | Overall performance of model |
+
+    | Precision | TP/(TP + FP) | How accurate the positive predictions are |
+
+    | Recall Sensitivity | TP/(TP + FN) | Coverage of actual positive sample |
+
+    | Specificity | TN/(TN + FP) | Coverage of actual negative sample |
+
+    | F1 score | 2TP/(2TP + FP + FN) | Hybrid metric useful for unbalanced classes
+    |
+
+
+    ☐ ROC – The receiver operating curve, also noted ROC, is the plot of TPR versus
+    FPR by varying the threshold. These metrics are are summed up in the table below:
+
+
+    | Metric | Formula | Equivalent |
+
+    |---|---|---|
+
+    | True Positive Rate TPR | TP/(TP + FN) | Recall, sensitivity |
+
+    | False Positive Rate FPR | FP/(TN + FP) | 1-specificity |
+
+
+    ☐ AUC – The area under the receiving operating curve, also noted AUC or AUROC,
+    is the area below the ROC as shown in the following figure:
+
+
+    ![](img/f376a3bbef2a1cafaabccff5f23575a4_9_1.png)
+
+
+    # 4.1.2 Regression
+
+
+    ☐ Basic metrics – Given a regression model f, the following metrics are commonly
+    used to assess the performance of the model:
+
+
+    | Total sum of squares | Explained sum of squares | Residual sum of squares |
+
+    |---|---|---|
+
+    | SS_tot = Σ_{i=1}^m (y_i - ȳ)^2 | SS_reg = Σ_{i=1}^m (f(x_i) - ȳ)^2 | SS_res
+    = Σ_{i=1}^m (y_i - f(x_i))^2 |
+
+
+    ☐ Coefficient of determination – The coefficient of determination, often noted
+    R² or r², provides a measure of how well the observed outcomes are replicated
+    by the model and is defined as follows:
+
+
+    R² = 1 - SS_res / SS_tot
+
+
+    ☐ Main metrics – The following metrics are commonly used to assess the performance
+    of regression models, by taking into account the number of variables n that they
+    take into consideration:
+
+
+    | Mallow''s Cp | AIC | BIC | Adjusted R² |
+
+    |---|---|---|---|
+
+    | (SS_res + 2(n+1)σ̂²)/m | 2[(n+2) - log(L)] | log(m)(n+2) - 2 log(L) | 1 - (1
+    - R²)(m - 1)/(m - n - 1) |
+
+
+    where L is the likelihood and σ̂² is an estimate of the variance associated with
+    each response.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# ### 4.2 Model selection
+
+
+    +   - **Vocabulary** – When selecting a model, we distinguish 3 different parts
+    of the data that we have as follows:
+
+
+    | Training set | Validation set | Testing set |
+
+    |---|---|---|
+
+    | - Model is trained<br>- Usually 80% of the dataset | - Model is assessed<br>-
+    Usually 20% of the dataset<br>- Also called hold-out or development set | - Model
+    gives predictions<br>- Unseen data |
+
+
+    | LASSO | Ridge | Elastic Net |
+
+    |---|---|---|
+
+    | - Shrinks coefficients to 0<br>- Good for variable selection | Makes coefficients
+    smaller | Tradeoff between variable selection and small coefficients |
+
+    | $+\ \lambda\|\theta\|_1$<br>$\lambda \in \mathbb{R}$ | $+\ \lambda\|\theta\|_2^2$<br>$\lambda
+    \in \mathbb{R}$ | $+\ \lambda[(1-\alpha)\|\theta\|_1+\alpha\|\theta\|_2^2]$<br>$\lambda
+    \in \mathbb{R},\ \alpha \in [0,1]$ |
+
+
+    ![](img/f376a3bbef2a1cafaabccff5f23575a4_10_0.png)
+
+
+    Once the model has been chosen, it is trained on the entire dataset and tested
+    on the unseen test set. These are represented in the figure below:
+
+
+    ![](img/f376a3bbef2a1cafaabccff5f23575a4_10_1.png)
+
+
+    +   - **Cross-validation** – Cross-validation, also noted CV, is a method that
+    is used to select a model that does not rely too much on the initial training
+    set. The different types are summed up in the table below:
+
+
+    | $k$-fold | Leave-$p$-out |
+
+    |---|---|
+
+    | - Training on $k-1$ folds and assessment on the remaining one<br>- Generally
+    $k=5$ or $10$ | - Training on $n-p$ observations and assessment on the $p$ remaining
+    ones<br>- Case $p=1$ is called leave-one-out |
+
+
+    The most commonly used method is called $k$-fold cross-validation and splits the
+    training data into $k$ folds to validate the model on one fold while training
+    the model on the $k-1$ other folds, all of this $k$ times. The error is then averaged
+    over the $k$ folds and is named cross-validation error.
+
+
+    ![](img/f376a3bbef2a1cafaabccff5f23575a4_10_2.png)
+
+
+    +   - **Regularization** – The regularization procedure aims at avoiding the model
+    to overfit the data and thus deals with high variance issues. The following table
+    sums up the different types of commonly used regularization techniques:
+
+
+    +   - **Model selection** – Train model on the training set, then evaluate on
+    the development set, then pick best performance model on the development set,
+    and retrain all of that model on the whole training set.
+
+
+    # ### 4.3 Diagnostics
+
+
+    +   - **Bias** – The bias of a model is the difference between the expected prediction
+    and the correct model that we try to predict for given data points.
+
+    +   - **Variance** – The variance of a model is the variability of the model prediction
+    for given data points.
+
+    +   - **Bias/variance tradeoff** – The simpler the model, the higher the bias,
+    and the more complex the model, the higher the variance.
+
+
+    |  | Underfitting | Just right | Overfitting |
+
+    |---|---|---|---|
+
+    | **Symptoms** | - High training error<br>- Training error close to test error<br>-
+    High bias | - Training error slightly lower than test error | - Low training error<br>-
+    Training error much lower than test error<br>- High variance |
+
+    | **Regression** | Regression plot showing a simple line that underfits the data.
+    | Regression plot showing an appropriate curved fit. | Regression plot showing
+    a highly oscillatory curve that overfits the data. |
+
+
+    ![](img/f376a3bbef2a1cafaabccff5f23575a4_10_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '|  | Classification |  |  |
+
+    |---|---|---|---|
+
+    | **Classification** | Scatter plot showing two classes separated by a diagonal
+    linear decision boundary. | Scatter plot showing two classes separated by a curved
+    decision boundary. | Scatter plot showing a complex, irregular decision boundary
+    around the classes. |
+
+    | **Deep learning** | Training and validation error curves decrease and converge
+    after several epochs. | Training error decreases faster and lower than validation
+    error, with a larger gap. | Training error decreases toward zero while validation
+    error levels off at a higher value. |
+
+    | **Remedies** | - Complexify model<br>- Add more features<br>- Train longer |
+    *(blank)* | - Regularize<br>- Get more data |
+
+
+    +   - **Error analysis** – Error analysis is analyzing the root cause of the difference
+    in performance between the current and the perfect models.
+
+    +   - **Ablative analysis** – Ablative analysis is analyzing the root cause of
+    the difference in performance between the current and the baseline models.
+
+
+    # 5  Refreshers
+
+
+    # 5.1  Probabilities and Statistics
+
+
+    # 5.1.1  Introduction to Probability and Combinatorics
+
+
+    +   - **Sample space** – The set of all possible outcomes of an experiment is
+    known as the sample space of the experiment and is denoted by $S$.
+
+    +   - **Event** – Any subset $E$ of the sample space is known as an event. That
+    is, an event is a set consisting of possible outcomes of the experiment. If the
+    outcome of the experiment is contained in $E$, then we say that $E$ has occurred.
+
+    +   - **Axioms of probability** – For each event $E$, we denote $P(E)$ as the
+    probability of event $E$ occurring. By noting $E_1,\ldots,E_n$ mutually exclusive
+    events, we have the 3 following axioms:
+
+
+    $(1)\quad 0 \le P(E) \le 1 \qquad (2)\quad P(S)=1 \qquad (3)\quad P\left(\bigcup_{i=1}^{n}E_i\right)=\sum_{i=1}^{n}P(E_i)$
+
+
+    +   - **Permutation** – A permutation is an arrangement of $r$ objects from a
+    pool of $n$ objects, in a given order. The number of such arrangements is given
+    by $P(n,r)$, defined as:
+
+
+    $P(n,r)=\frac{n!}{(n-r)!}$
+
+
+    +   - **Combination** – A combination is an arrangement of $r$ objects from a
+    pool of $n$ objects, where the order does not matter. The number of such arrangements
+    is given by $C(n,r)$, defined as:
+
+
+    $C(n,r)=\frac{P(n,r)}{r!}=\frac{n!}{r!(n-r)!}$
+
+
+    > Remark: we note that for $0 \le r \le n$, we have $P(n,r) \ge C(n,r)$.
+
+
+    # 5.1.2  Conditional Probability
+
+
+    +   - **Bayes’ rule** – For events $A$ and $B$ such that $P(B)>0$, we have:
+
+
+    $P(A\mid B)=\frac{P(B\mid A)P(A)}{P(B)}$
+
+
+    > Remark: we have $P(A\cap B)=P(A)P(B\mid A)=P(A\mid B)P(B)$.
+
+
+    +   - **Partition** – Let $\{A_i, i\in[1,n]\}$ be such that for all $i$, $A_i\ne\varnothing$.
+    We say that $\{A_i\}$ is a partition if we have:
+
+
+    $\forall i\ne j,\ A_i\cap A_j=\varnothing\quad\text{and}\quad\bigcup_{i=1}^{n}A_i=S$
+
+
+    > Remark: for any event $B$ in the sample space, we have $P(B)=\sum_{i=1}^{n}P(B\mid
+    A_i)P(A_i)$.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '▢ **Extended form of Bayes’ rule** – Let \(\{A_i, i \in [1,n]\}\) be a partition
+    of the sample space. We have:
+
+
+    \[P(A_k\mid B)=\frac{P(B\mid A_k)P(A_k)}{\displaystyle\sum_{i=1}^{n}P(B\mid A_i)P(A_i)}\]
+
+
+    ▢ **Independence** – Two events \(A\) and \(B\) are independent if and only if
+    we have:
+
+
+    \[P(A\cap B)=P(A)P(B)\]
+
+
+    # ### 5.1.3  Random Variables
+
+
+    ▢ **Random variable** – A random variable, often noted \(X\), is a function that
+    maps every element in a sample space to a real line.
+
+
+    ▢ **Cumulative distribution function (CDF)** – The cumulative distribution function
+    \(F\), which is monotonically non-decreasing and is such that \(\lim_{x\to-\infty}F(x)=0\)
+    and \(\lim_{x\to+\infty}F(x)=1\), is defined as:
+
+
+    \[F(x)=P(X\le x)\]
+
+
+    > _Remark:_ we have \(P(a<X\le B)=F(b)-F(a)\).
+
+
+    ▢ **Probability density function (PDF)** – The probability density function \(f\)
+    is the probability that \(X\) takes on values between two adjacent realizations
+    of the random variable.
+
+
+    ▢ **Relationships involving the PDF and CDF** – Here are the important properties
+    to know in the discrete (D) and the continuous (C) cases.
+
+
+    | Case | CDF \(F\) | PDF \(f\) | Properties of PDF |
+
+    |---|---|---|---|
+
+    | (D) | \(F(x)=\displaystyle\sum_{x_i\le x}P(X=x_i)\) | \(f(x_j)=P(X=x_j)\) |
+    \(0\le f(x_j)\le1\) and \(\displaystyle\sum_j f(x_j)=1\) |
+
+    | (C) | \(F(x)=\displaystyle\int_{-\infty}^{x}f(y)\,dy\) | \(f(x)=\displaystyle\frac{dF}{dx}\)
+    | \(f(x)\ge0\) and \(\displaystyle\int_{-\infty}^{+\infty}f(x)\,dx=1\) |
+
+
+    ▢ **Variance** – The variance of a random variable, often noted \(\operatorname{Var}(X)\)
+    or \(\sigma^2\), is a measure of the spread of its distribution function. It is
+    determined as follows:
+
+
+    \[\operatorname{Var}(X)=E[(X-E[X])^2]=E[X^2]-E[X]^2\]
+
+
+    ▢ **Standard deviation** – The standard deviation of a random variable, often
+    noted \(\sigma\), is a measure of the spread of its distribution function which
+    is compatible with the units of the actual random variable. It is determined as
+    follows:
+
+
+    \[\sigma=\sqrt{\operatorname{Var}(X)}\]
+
+
+    ▢ **Expectation and Moments of the Distribution** – Here are the expressions of
+    the expected value \(E[X]\), generalized expected value \(E[g(X)]\), \(k^{th}\)
+    moment \(E[X^k]\) and characteristic function \(\psi(\omega)\) for the discrete
+    and continuous cases:
+
+
+    | Case | \(E[X]\) | \(E[g(X)]\) | \(E[X^k]\) | \(\psi(\omega)\) |
+
+    |---|---|---|---|---|
+
+    | (D) | \(\displaystyle\sum_{i=1}^{n}x_i f(x_i)\) | \(\displaystyle\sum_{i=1}^{n}g(x_i)f(x_i)\)
+    | \(\displaystyle\sum_{i=1}^{n}x_i^k f(x_i)\) | \(\displaystyle\sum_{i=1}^{n}f(x_i)e^{i\omega
+    x_i}\) |
+
+    | (C) | \(\displaystyle\int_{-\infty}^{+\infty}x f(x)\,dx\) | \(\displaystyle\int_{-\infty}^{+\infty}g(x)f(x)\,dx\)
+    | \(\displaystyle\int_{-\infty}^{+\infty}x^k f(x)\,dx\) | \(\displaystyle\int_{-\infty}^{+\infty}f(x)e^{i\omega
+    x}\,dx\) |
+
+
+    > _Remark:_ we have \(e^{i\omega x}=\cos(\omega x)+i\sin(\omega x)\).
+
+
+    ▢ **Revisiting the \(k^{th}\) moment** – The \(k^{th}\) moment can also be computed
+    with the characteristic function as follows:
+
+
+    \[E[X^k]=\frac{1}{i^k}\left[\frac{\partial^k\psi}{\partial\omega^k}\right]_{\omega=0}\]
+
+
+    ▢ **Transformation of random variables** – Let the variables \(X\) and \(Y\) be
+    linked by some function. By noting \(f_X\) and \(f_Y\) the distribution function
+    of \(X\) and \(Y\) respectively, we have:
+
+
+    \[f_Y(y)=f_X(x)\left|\frac{dx}{dy}\right|\]
+
+
+    ▢ **Leibniz integral rule** – Let \(g\) be a function of \(x\) and potentially
+    \(c\), and \(a,b\) boundaries that may depend on \(c\). We have:
+
+
+    \[\frac{\partial}{\partial c}\left(\int_a^b g(x)\,dx\right)=\frac{\partial b}{\partial
+    c}g(b)-\frac{\partial a}{\partial c}g(a)+\int_a^b\frac{\partial g}{\partial c}(x)\,dx\]
+
+
+    ▢ **Chebyshev’s inequality** – Let \(X\) be a random variable with expected value
+    \(\mu\) and standard deviation \(\sigma\). For \(k,\sigma>0\), we have the following
+    inequality:
+
+
+    \[P(|X-\mu|\ge k\sigma)\le\frac{1}{k^2}\]
+
+
+    # ### 5.1.4  Jointly Distributed Random Variables
+
+
+    ▢ **Conditional density** – The conditional density of \(X\) with respect to \(Y\),
+    often noted \(f_{X\mid Y}\), is defined as follows:
+
+
+    \[f_{X\mid Y}(x)=\frac{f_{XY}(x,y)}{f_Y(y)}\]
+
+
+    ▢ **Independence** – Two random variables \(X\) and \(Y\) are said to be independent
+    if we have:
+
+
+    \[f_{XY}(x,y)=f_X(x)f_Y(y)\]'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '□ **Marginal density and cumulative distribution** – From the joint density
+    probability function $f_{XY}$, we have:
+
+
+    | Case | Marginal density | Cumulative function |
+
+    |---|---|---|
+
+    | (D) | $f_X(x_i)=\sum_j f_{XY}(x_i,y_j)$ | $F_{XY}(x,y)=\sum_{x_i\le x}\sum_{y_j\le
+    y}f_{XY}(x_i,y_j)$ |
+
+    | (C) | $f_X(x)=\int_{-\infty}^{+\infty}f_{XY}(x,y)\,dy$ | $F_{XY}(x,y)=\int_{-\infty}^{x}\int_{-\infty}^{y}f_{XY}(x'',y'')\,dx''\,dy''$
+    |
+
+
+    □ **Distribution of a sum of independent random variables** – Let $Y=X_1+\cdots+X_n$
+    with $X_1,\ldots,X_n$ independent. We have:
+
+
+    $$\psi_Y(\omega)=\prod_{k=1}^{n}\psi_{X_k}(\omega)$$
+
+
+    □ **Covariance** – We define the covariance of two random variables $X$ and $Y$,
+    that we note $\sigma^2_{XY}$ or more commonly $\operatorname{Cov}(X,Y)$, as follows:
+
+
+    $$\operatorname{Cov}(X,Y)\triangleq\sigma^2_{XY}=E[(X-\mu_X)(Y-\mu_Y)]=E[XY]-\mu_X\mu_Y$$
+
+
+    □ **Correlation** – By noting $\sigma_X,\sigma_Y$ the standard deviations of $X$
+    and $Y$, we define the correlation between the random variables $X$ and $Y$, noted
+    $\rho_{XY}$, as follows:
+
+
+    $$\rho_{XY}=\frac{\sigma^2_{XY}}{\sigma_X\sigma_Y}$$
+
+
+    _Remarks:_ For any $X,Y$, we have $\rho_{XY}\in[-1,1]$. If $X$ and $Y$ are independent,
+    then $\rho_{XY}=0$.
+
+
+    □ **Main distributions** – Here are the main distributions to have in mind:
+
+
+    | Type | Distribution | PDF | $\psi(\omega)$ | $E[X]$ | $\operatorname{Var}(X)$
+    |
+
+    |---|---|---|---|---|---|
+
+    | (D) | $X\sim\mathcal{B}(n,p)$<br>Binomial | $P(X=x)=\binom{n}{x}p^xq^{n-x}$<br>$x\in[0,n]$
+    | $(pe^{i\omega}+q)^n$ | $np$ | $npq$ |
+
+    | (D) | $X\sim\operatorname{Po}(\mu)$<br>Poisson | $P(X=x)=\frac{\mu^x}{x!}e^{-\mu}$<br>$x\in\mathbb
+    N$ | $e^{\mu(e^{i\omega}-1)}$ | $\mu$ | $\mu$ |
+
+    | (C) | $X\sim\mathcal U(a,b)$<br>Uniform | $f(x)=\frac{1}{b-a}$<br>$x\in[a,b]$
+    | $\frac{e^{i\omega b}-e^{i\omega a}}{(b-a)i\omega}$ | $\frac{a+b}{2}$ | $\frac{(b-a)^2}{12}$
+    |
+
+    | (C) | $X\sim\mathcal N(\mu,\sigma)$<br>Gaussian | $f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac12((x-\mu)/\sigma)^2}$<br>$x\in\mathbb
+    R$ | $e^{i\omega\mu-\frac12\omega^2\sigma^2}$ | $\mu$ | $\sigma^2$ |
+
+    | (C) | $X\sim\operatorname{Exp}(\lambda)$<br>Exponential | $f(x)=\lambda e^{-\lambda
+    x}$<br>$x\in\mathbb R_+$ | $\frac{1}{1-i\omega/\lambda}$ | $\frac1\lambda$ | $\frac1{\lambda^2}$
+    |
+
+
+    # ### 5.1.5   Parameter estimation
+
+
+    +   - **Random sample** – A random sample is a collection of $n$ random variables
+    $X_1,\ldots,X_n$ that are independent and identically distributed with $X$.
+
+    +   - **Estimator** – An estimator $\hat\theta$ is a function of the data that
+    is used to infer the value of an unknown parameter $\theta$ in a statistical model.
+
+    +   - **Bias** – The bias of an estimator $\hat\theta$ is defined as being the
+    difference between the expected value of the distribution of $\hat\theta$ and
+    the true value, i.e.:
+
+
+    $$\operatorname{Bias}(\hat\theta)=E[\hat\theta]-\theta$$
+
+
+    _Remark: an estimator is said to be unbiased when we have $E[\hat\theta]=\theta$._
+
+
+    □ **Sample mean and variance** – The sample mean and the sample variance of a
+    random sample are used to estimate the true mean $\mu$ and the true variance $\sigma^2$
+    of a distribution, are noted $\bar X$ and $s^2$ respectively, and are such that:
+
+
+    $$\bar X=\frac1n\sum_{i=1}^{n}X_i \qquad\text{and}\qquad s^2=\hat\sigma^2=\frac1{n-1}\sum_{i=1}^{n}(X_i-\bar
+    X)^2$$
+
+
+    □ **Central Limit Theorem** – Let us have a random sample $X_1,\ldots,X_n$ following
+    a given distribution with mean $\mu$ and variance $\sigma^2$, then we have:
+
+
+    $$\frac{\bar X}{\;n\to+\infty\;}\sim\mathcal N\left(\mu,\frac{\sigma}{\sqrt n}\right)$$
+
+
+    # ### 5.2   Linear Algebra and Calculus
+
+
+    # #### 5.2.1   General notations
+
+
+    □ **Vector** – We note $x\in\mathbb R^n$ a vector with $n$ entries, where $x_i\in\mathbb
+    R$ is the $i^{th}$ entry:
+
+
+    $$x=\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix}\in\mathbb R^n$$
+
+
+    □ **Matrix** – We note $A\in\mathbb R^{m\times n}$ a matrix with $m$ rows and
+    $n$ columns, where $A_{i,j}\in\mathbb R$ is the entry located in the $i^{th}$
+    row and $j^{th}$ column:
+
+
+    $$A=\begin{pmatrix}A_{1,1}&\cdots&A_{1,n}\\\vdots&&\vdots\\A_{m,1}&\cdots&A_{m,n}\end{pmatrix}\in\mathbb
+    R^{m\times n}$$
+
+
+    _Remark:_ the vector $x$ defined above can be viewed as a $n\times1$ matrix and
+    is more particularly called a column-vector.
+
+
+    □ **Identity matrix** – The identity matrix $I\in\mathbb R^{n\times n}$ is a square
+    matrix with ones in its diagonal and zero everywhere else:
+
+
+    $$I=\begin{pmatrix}1&0&\cdots&0\\0&\ddots&&\vdots\\\vdots&&\ddots&0\\0&\cdots&0&1\end{pmatrix}$$'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '*Remark:* for all matrices $A\in\mathbb{R}^{n\times n}$, we have $A\times I=I\times
+    A=A$.
+
+
+    ▣ **Diagonal matrix** – A diagonal matrix $D\in\mathbb{R}^{n\times n}$ is a square
+    matrix with nonzero values in its diagonal and zero everywhere else:
+
+
+    $$D=\begin{pmatrix} d_1&0&\cdots&0\\0&\ddots&\ddots&\vdots\\\vdots&\ddots&\ddots&0\\0&\cdots&0&d_n\end{pmatrix}$$
+
+
+    *Remark:* we also note $D$ as $\operatorname{diag}(d_1,\ldots,d_n)$.
+
+
+    # 5.2.2  Matrix operations
+
+
+    ▣ **Vector-vector multiplication** – There are two types of vector-vector products:
+
+
+    +   - inner product: for $x,y\in\mathbb{R}^n$, we have:
+
+
+    $$x^Ty=\sum_{i=1}^{n}x_iy_i\in\mathbb{R}$$
+
+
+    +   - outer product: for $x\in\mathbb{R}^m,y\in\mathbb{R}^n$, we have:
+
+
+    $$xy^T=\begin{pmatrix}x_1y_1&\cdots&x_1y_n\\\vdots&&\vdots\\x_my_1&\cdots&x_my_n\end{pmatrix}\in\mathbb{R}^{m\times
+    n}$$
+
+
+    ▣ **Matrix-vector multiplication** – The product of matrix $A\in\mathbb{R}^{m\times
+    n}$ and vector $x\in\mathbb{R}^n$ is a vector of size $\mathbb{R}^m$, such that:
+
+
+    $$Ax=\begin{pmatrix}a_{r,1}^Tx\\\vdots\\a_{r,m}^Tx\end{pmatrix}=\sum_{i=1}^{n}a_{c,i}x_i\in\mathbb{R}^n$$
+
+
+    where $a_{r,i}^T$ are the vector rows and $a_{c,j}$ are the vector columns of
+    $A$, and $x_i$ are the entries of $x$.
+
+
+    ▣ **Matrix-matrix multiplication** – The product of matrices $A\in\mathbb{R}^{m\times
+    n}$ and $B\in\mathbb{R}^{n\times p}$ is a matrix of size $\mathbb{R}^{n\times
+    p}$, such that:
+
+
+    $$AB=\begin{pmatrix}a_{r,1}^Tb_{c,1}&\cdots&a_{r,1}^Tb_{c,p}\\\vdots&&\vdots\\a_{r,m}^Tb_{c,1}&\cdots&a_{r,m}^Tb_{c,p}\end{pmatrix}=\sum_{i=1}^{n}a_{c,i}b_{r,i}^T\in\mathbb{R}^{n\times
+    p}$$
+
+
+    where $a_{r,i}^T,b_{r,i}^T$ are the vector rows and $a_{c,j},b_{c,j}$ are the
+    vector columns of $A$ and $B$ respectively.
+
+
+    ▣ **Transpose** – The transpose of a matrix $A\in\mathbb{R}^{m\times n}$, noted
+    $A^T$, is such that its entries are flipped:
+
+
+    $$\forall i,j,\qquad A^T_{i,j}=A_{j,i}$$
+
+
+    *Remark:* for matrices $A,B$, we have $(AB)^T=B^TA^T$.
+
+
+    ▣ **Inverse** – The inverse of an invertible square matrix $A$ is noted $A^{-1}$
+    and is the only matrix such that:
+
+
+    $$AA^{-1}=A^{-1}A=I$$
+
+
+    *Remark:* not all square matrices are invertible. Also, for matrices $A,B$, we
+    have $(AB)^{-1}=B^{-1}A^{-1}$.
+
+
+    ▣ **Trace** – The trace of a square matrix $A$, noted $\operatorname{tr}(A)$,
+    is the sum of its diagonal entries:
+
+
+    $$\operatorname{tr}(A)=\sum_{i=1}^{n}A_{i,i}$$
+
+
+    *Remark:* for matrices $A,B$, we have $\operatorname{tr}(A^T)=\operatorname{tr}(A)$
+    and $\operatorname{tr}(AB)=\operatorname{tr}(BA)$.
+
+
+    ▣ **Determinant** – The determinant of a square matrix $A\in\mathbb{R}^{n\times
+    n}$, noted $|A|$ or $\det(A)$ is expressed recursively in terms of $A_{\backslash
+    i,j}$, which is the matrix $A$ without its $i^{th}$ row and $j^{th}$ column, as
+    follows:
+
+
+    $$\det(A)=|A|=\sum_{j=1}^{n}(-1)^{i+j}A_{i,j}|A_{\backslash i,j}|$$
+
+
+    *Remark:* $A$ is invertible if and only if $|A|\ne0$. Also, $|AB|=|A||B|$ and
+    $|A^T|=|A|$.
+
+
+    # 5.2.3  Matrix properties
+
+
+    ▣ **Symmetric decomposition** – A given matrix $A$ can be expressed in terms of
+    its symmetric and antisymmetric parts as follows:
+
+
+    $$A=\underbrace{\frac{A+A^T}{2}}_{\text{Symmetric}}+\underbrace{\frac{A-A^T}{2}}_{\text{Antisymmetric}}$$
+
+
+    ▣ **Norm** – A norm is a function $N:V\to[0,+\infty[$ where $V$ is a vector space,
+    and such that for all $x,y\in V$, we have:
+
+
+    +   - $N(x+y)\le N(x)+N(y)$
+
+
+    +   - $N(\alpha x)=|\alpha|N(x)$ for a scalar
+
+
+    +   - if $N(x)=0$, then $x=0$
+
+
+    For $x\in V$, the most commonly used norms are summed up in the table below:'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
