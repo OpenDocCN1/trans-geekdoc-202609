@@ -1,0 +1,1818 @@
+   
+
+Table of Contents [BENTHAM SCIENCE PUBLISHERS LTD.](../Text/9789815051452-license.html) [End User License Agreement (for non-institutional, personal use)](../Text/9789815051452-license.html#sigil_toc_id_1) [Usage Rules:](../Text/9789815051452-license.html#sigil_toc_id_2) [Disclaimer:](../Text/9789815051452-license.html#sigil_toc_id_3) [Limitation of Liability:](../Text/9789815051452-license.html#sigil_toc_id_4) [General:](../Text/9789815051452-license.html#sigil_toc_id_5) [PREFACE](../Text/9789815051452-preface.html) [List of Contributors](../Text/9789815051452-loc.html) [Blockchain for IoT Security and Privacy: Challenges, Application Areas and Implementation Issues](../Text/9789815051452-C1.html) [Abstract](../Text/9789815051452-C1.html#sigil_toc_id_6) [INTRODUCTION](../Text/9789815051452-C1.html#sigil_toc_id_7) [Blockchain and its Key Concepts](../Text/9789815051452-C1.html#sigil_toc_id_8) [Working of Blockchain](../Text/9789815051452-C1.html#sigil_toc_id_9) [Blockchain Structure and its Operations](../Text/9789815051452-C1.html#sigil_toc_id_10) [Algorithms and Techniques](../Text/9789815051452-C1.html#sigil_toc_id_11) [Trust Essentials and Consensus Protocols](../Text/9789815051452-C1.html#sigil_toc_id_12) [IOT Security](../Text/9789815051452-C1.html#sigil_toc_id_13) [Ongoing Researches](../Text/9789815051452-C1.html#sigil_toc_id_14) [IoT Security using Blockchain](../Text/9789815051452-C1.html#sigil_toc_id_15) [IoT Security using Fog Computing](../Text/9789815051452-C1.html#sigil_toc_id_16) [IoT Security using Machine Learning](../Text/9789815051452-C1.html#sigil_toc_id_17) [IoT Security using Cryptography/Steganography](../Text/9789815051452-C1.html#sigil_toc_id_18) [Blockchain as Key to IoT Security](../Text/9789815051452-C1.html#sigil_toc_id_19) [Blockchain IoT Security: Implementation Challenges](../Text/9789815051452-C1.html#sigil_toc_id_20) [CONCLUSION](../Text/9789815051452-C1.html#sigil_toc_id_21) [CONSENT FOR PUBLICATION](../Text/9789815051452-C1.html#sigil_toc_id_22) [CONFLICT OF INTEREST](../Text/9789815051452-C1.html#sigil_toc_id_23) [ACKNOWLEDGEMENT](../Text/9789815051452-C1.html#sigil_toc_id_24) [REFERENCES](../Text/9789815051452-C1.html#sigil_toc_id_25) [Distributed Ledger Technology and its Potential Applications – Financial Sector](../Text/9789815051452-C2.html) [Abstract](../Text/9789815051452-C2.html#sigil_toc_id_26) [INTRODUCTION](../Text/9789815051452-C2.html#sigil_toc_id_27) [RECENT WORK IN DLT](../Text/9789815051452-C2.html#sigil_toc_id_28) [Early Adopters](../Text/9789815051452-C2.html#sigil_toc_id_29) [Followers](../Text/9789815051452-C2.html#sigil_toc_id_30) [New Entrants (2019)](../Text/9789815051452-C2.html#sigil_toc_id_31) [DLT FEATURES AND PROPERTIES](../Text/9789815051452-C2.html#sigil_toc_id_32) [DLT Based Blockchain in Digital Currencies](../Text/9789815051452-C2.html#sigil_toc_id_33) [DLT Features](../Text/9789815051452-C2.html#sigil_toc_id_34) [Distributed Property of the Ledger](../Text/9789815051452-C2.html#sigil_toc_id_35) [Validation using “Consensus Mechanism”](../Text/9789815051452-C2.html#sigil_toc_id_36) [Digital Signatures and Hash Functions](../Text/9789815051452-C2.html#sigil_toc_id_37) [DLT ADVANTAGES](../Text/9789815051452-C2.html#sigil_toc_id_38) [No Middleman and Decentralized in Nature](../Text/9789815051452-C2.html#sigil_toc_id_39) [Improved Auditability and Enhanced Transparency](../Text/9789815051452-C2.html#sigil_toc_id_40) [Perpetual and Testable](../Text/9789815051452-C2.html#sigil_toc_id_41) [Speed and Efficiency Gain](../Text/9789815051452-C2.html#sigil_toc_id_42) [Reducing Cost](../Text/9789815051452-C2.html#sigil_toc_id_43) [Improved cybersecurity Elasticity](../Text/9789815051452-C2.html#sigil_toc_id_44) [DLT RISKS AND CHALLENGES](../Text/9789815051452-C2.html#sigil_toc_id_45) [Technical Issues](../Text/9789815051452-C2.html#sigil_toc_id_46) [Immature Technology](../Text/9789815051452-C2.html#sigil_toc_id_47) [Transaction Response Time and Scalability](../Text/9789815051452-C2.html#sigil_toc_id_48) [Integration and Compatibility](../Text/9789815051452-C2.html#sigil_toc_id_49) [Cybersecurity](../Text/9789815051452-C2.html#sigil_toc_id_50) [Effective Governance](../Text/9789815051452-C2.html#sigil_toc_id_51) [Legal and Regulatory Issues](../Text/9789815051452-C2.html#sigil_toc_id_52) [Industry Standards and Regulatory Evaluation](../Text/9789815051452-C2.html#sigil_toc_id_53) [Jurisdiction and Ownership - Legal Clarity](../Text/9789815051452-C2.html#sigil_toc_id_54) [Customer Due Diligence and Know-Your-Customer](../Text/9789815051452-C2.html#sigil_toc_id_55) [Dispute Resolution Mechanism](../Text/9789815051452-C2.html#sigil_toc_id_56) [Privacy](../Text/9789815051452-C2.html#sigil_toc_id_57) [Infrastructure Cost](../Text/9789815051452-C2.html#sigil_toc_id_58) [DLT APPLICATIONS](../Text/9789815051452-C2.html#sigil_toc_id_59) [DLT AND FINANCIAL INCLUSION](../Text/9789815051452-C2.html#sigil_toc_id_60) [Cross border Remittance and Payment](../Text/9789815051452-C2.html#sigil_toc_id_61) [Ripple](../Text/9789815051452-C2.html#sigil_toc_id_62) [Abra](../Text/9789815051452-C2.html#sigil_toc_id_63) [Bitpesa](../Text/9789815051452-C2.html#sigil_toc_id_64) [Bitt](../Text/9789815051452-C2.html#sigil_toc_id_65) [Smart Contracts](../Text/9789815051452-C2.html#sigil_toc_id_66) [EXPERIMENT PRACTICES](../Text/9789815051452-C2.html#sigil_toc_id_67) [Project Jasper](../Text/9789815051452-C2.html#sigil_toc_id_68) [Phase I](../Text/9789815051452-C2.html#sigil_toc_id_69) [Phase II](../Text/9789815051452-C2.html#sigil_toc_id_70) [Phase III](../Text/9789815051452-C2.html#sigil_toc_id_71) [Project BLOCKBASTER](../Text/9789815051452-C2.html#sigil_toc_id_72) [Project SALT](../Text/9789815051452-C2.html#sigil_toc_id_73) [Project UBIN](../Text/9789815051452-C2.html#sigil_toc_id_74) [Project Stella](../Text/9789815051452-C2.html#sigil_toc_id_75) [Project Khokha](../Text/9789815051452-C2.html#sigil_toc_id_76) [Project INTHANON](../Text/9789815051452-C2.html#sigil_toc_id_77) [SUMMARY](../Text/9789815051452-C2.html#sigil_toc_id_78) [CONSENT FOR PUBLICATION](../Text/9789815051452-C2.html#sigil_toc_id_79) [CONFLICT OF INTEREST](../Text/9789815051452-C2.html#sigil_toc_id_80) [ACKNOWLEDGEMENT](../Text/9789815051452-C2.html#sigil_toc_id_81) [REFERENCES](../Text/9789815051452-C2.html#sigil_toc_id_82) [Implementation of Blockchain Technology for Big Data](../Text/9789815051452-C3.html) [Abstract](../Text/9789815051452-C3.html#sigil_toc_id_83) [INTRODUCTION](../Text/9789815051452-C3.html#sigil_toc_id_84) [CATEGORIES OF BLOCKCHAIN](../Text/9789815051452-C3.html#sigil_toc_id_85) [Generation of Blockchain](../Text/9789815051452-C3.html#sigil_toc_id_86) [Blockchain 1.0](../Text/9789815051452-C3.html#sigil_toc_id_87) [Blockchain 2.0](../Text/9789815051452-C3.html#sigil_toc_id_88) [Blockchain 3.0](../Text/9789815051452-C3.html#sigil_toc_id_89) [Significance of Blockchain Technology and Decentralization and its Effect](../Text/9789815051452-C3.html#sigil_toc_id_90) [Security](../Text/9789815051452-C3.html#sigil_toc_id_91) [Transparency](../Text/9789815051452-C3.html#sigil_toc_id_92) [Inexpensive](../Text/9789815051452-C3.html#sigil_toc_id_93) [Transaction Time](../Text/9789815051452-C3.html#sigil_toc_id_94) [Financial Efficiency](../Text/9789815051452-C3.html#sigil_toc_id_95) [Protect Business from Frauds](../Text/9789815051452-C3.html#sigil_toc_id_96) [Applications of Blockchain Technology](../Text/9789815051452-C3.html#sigil_toc_id_97) [Health Care](../Text/9789815051452-C3.html#sigil_toc_id_98) [Education](../Text/9789815051452-C3.html#sigil_toc_id_99) [Public Services](../Text/9789815051452-C3.html#sigil_toc_id_100) [Cyber Security](../Text/9789815051452-C3.html#sigil_toc_id_101) [Big Data](../Text/9789815051452-C3.html#sigil_toc_id_102) [Significance of Big Data](../Text/9789815051452-C3.html#sigil_toc_id_103) [Cost saving](../Text/9789815051452-C3.html#sigil_toc_id_104) [Time Reduction](../Text/9789815051452-C3.html#sigil_toc_id_105) [Understand the market Condition](../Text/9789815051452-C3.html#sigil_toc_id_106) [Control Online Reputation](../Text/9789815051452-C3.html#sigil_toc_id_107) [Using Big Data Analytics to Boost Customer Acquisition and Retention](../Text/9789815051452-C3.html#sigil_toc_id_108) [Usage of Big Data Analytics to Solve Problems and Promotional Insights into Advertisers](../Text/9789815051452-C3.html#sigil_toc_id_109) [Big Data Analytics as a Catalyst of Product Creation and Innovation](../Text/9789815051452-C3.html#sigil_toc_id_110) [Challenges in Big Data](../Text/9789815051452-C3.html#sigil_toc_id_111) [Data Mining Techniques for Big Data](../Text/9789815051452-C3.html#sigil_toc_id_112) [Clustering](../Text/9789815051452-C3.html#sigil_toc_id_113) [Classification](../Text/9789815051452-C3.html#sigil_toc_id_114) [Association Mining Rules](../Text/9789815051452-C3.html#sigil_toc_id_115) [Regression](../Text/9789815051452-C3.html#sigil_toc_id_116) [Social Network Analysis](../Text/9789815051452-C3.html#sigil_toc_id_117) [Applications of Big Data](../Text/9789815051452-C3.html#sigil_toc_id_118) [Healthcare Sector](../Text/9789815051452-C3.html#sigil_toc_id_119) [Education Sector](../Text/9789815051452-C3.html#sigil_toc_id_120) [Challenges Concerning the Application of Big Data in Education](../Text/9789815051452-C3.html#sigil_toc_id_121) [Remote Sensing](../Text/9789815051452-C3.html#sigil_toc_id_122) [Big Data Analysis Tools and Techniques](../Text/9789815051452-C3.html#sigil_toc_id_123) [Hadoop](../Text/9789815051452-C3.html#sigil_toc_id_124) [Spark](../Text/9789815051452-C3.html#sigil_toc_id_125) [Storm](../Text/9789815051452-C3.html#sigil_toc_id_126) [Cassandra](../Text/9789815051452-C3.html#sigil_toc_id_127) [Mongo DB](../Text/9789815051452-C3.html#sigil_toc_id_128) [Big Data Techniques](../Text/9789815051452-C3.html#sigil_toc_id_129) [INTEGRATION OF BLOCKCHAIN AND Big Data](../Text/9789815051452-C3.html#sigil_toc_id_130) [Data Integrity](../Text/9789815051452-C3.html#sigil_toc_id_131) [Manage Data Sharing](../Text/9789815051452-C3.html#sigil_toc_id_132) [Preventing Malicious Activity](../Text/9789815051452-C3.html#sigil_toc_id_133) [Predictive Analysis](../Text/9789815051452-C3.html#sigil_toc_id_134) [CONCLUSION](../Text/9789815051452-C3.html#sigil_toc_id_135) [CONSENT FOR PUBLICATION](../Text/9789815051452-C3.html#sigil_toc_id_136) [CONFLICT OF INTEREST](../Text/9789815051452-C3.html#sigil_toc_id_137) [ACKNOWLEDGEMENT](../Text/9789815051452-C3.html#sigil_toc_id_138) [REFERENCES](../Text/9789815051452-C3.html#sigil_toc_id_139) [Hydroponics Monitoring System Based on IoT and Blockchain](../Text/9789815051452-C4.html) [Abstract](../Text/9789815051452-C4.html#sigil_toc_id_140) [INTRODUCTION](../Text/9789815051452-C4.html#sigil_toc_id_141) [DISCUSSION](../Text/9789815051452-C4.html#sigil_toc_id_142) [Hydroponics](../Text/9789815051452-C4.html#sigil_toc_id_143) [BLOCKCHAIN SOLUTIONS FOR IoT](../Text/9789815051452-C4.html#sigil_toc_id_144) [Features](../Text/9789815051452-C4.html#sigil_toc_id_145) [Blockchain Types](../Text/9789815051452-C4.html#sigil_toc_id_146) [Public Blockchain](../Text/9789815051452-C4.html#sigil_toc_id_147) [Private Blockchain](../Text/9789815051452-C4.html#sigil_toc_id_148) [Consortium Blockchain](../Text/9789815051452-C4.html#sigil_toc_id_149) [Greenhouse](../Text/9789815051452-C4.html#sigil_toc_id_150) [Hardware](../Text/9789815051452-C4.html#sigil_toc_id_151) [Server and Cloud](../Text/9789815051452-C4.html#sigil_toc_id_152) [WORKING](../Text/9789815051452-C4.html#sigil_toc_id_153) [CONCLUSION](../Text/9789815051452-C4.html#sigil_toc_id_154) [CONSENT FOR PUBLICATION](../Text/9789815051452-C4.html#sigil_toc_id_155) [CONFLICT OF INTEREST](../Text/9789815051452-C4.html#sigil_toc_id_156) [ACKNOWLEDGEMENTS](../Text/9789815051452-C4.html#sigil_toc_id_157) [REFERENCES](../Text/9789815051452-C4.html#sigil_toc_id_158) [Recent Trends in IoT Healthcare-based Blockchain Solutions](../Text/9789815051452-C5.html) [Abstract](../Text/9789815051452-C5.html#sigil_toc_id_159) [INTRODUCTION](../Text/9789815051452-C5.html#sigil_toc_id_160) [Healthcare](../Text/9789815051452-C5.html#sigil_toc_id_161) [Blockchain](../Text/9789815051452-C5.html#sigil_toc_id_162) [IoT](../Text/9789815051452-C5.html#sigil_toc_id_163) [Integrated Solutions using BCT and IoT](../Text/9789815051452-C5.html#sigil_toc_id_164) [BCT and IoT Integrated for Healthcare](../Text/9789815051452-C5.html#sigil_toc_id_165) [CONCLUSION](../Text/9789815051452-C5.html#sigil_toc_id_166) [CONSENT FOR PUBLICATION](../Text/9789815051452-C5.html#sigil_toc_id_167) [CONFLICT OF INTEREST](../Text/9789815051452-C5.html#sigil_toc_id_168) [ACKNOWLEDGEMENT](../Text/9789815051452-C5.html#sigil_toc_id_169) [REFERENCES](../Text/9789815051452-C5.html#sigil_toc_id_170) [Blockchain Technology-based System in Vehicular Ad-hoc Network](../Text/9789815051452-C6.html) [Abstract](../Text/9789815051452-C6.html#sigil_toc_id_171) [Introduction](../Text/9789815051452-C6.html#sigil_toc_id_172) [Architecture of VANETs](../Text/9789815051452-C6.html#sigil_toc_id_173) [Communication Architecture of VANET](../Text/9789815051452-C6.html#sigil_toc_id_174) [Blockchain meets VANET](../Text/9789815051452-C6.html#sigil_toc_id_175) [Trust based Models in VANET for Blockchain Technology](../Text/9789815051452-C6.html#sigil_toc_id_176) [CONCLUSION](../Text/9789815051452-C6.html#sigil_toc_id_177) [CONSENT FOR PUBLICATION](../Text/9789815051452-C6.html#sigil_toc_id_178) [CONFLICT OF INTEREST](../Text/9789815051452-C6.html#sigil_toc_id_179) [ACKNOWLEDGEMENT](../Text/9789815051452-C6.html#sigil_toc_id_180) [REFERENCES](../Text/9789815051452-C6.html#sigil_toc_id_181) 
+
+**Cross-Industry Blockchain Technology: Opportunities and Challenges in Industry 4.0**  Edited by   
+**Rajesh Singh** *Uttaranchal University,* *Dehradun, Uttarakhand* *India*   
+**Anita Gehlot** *Uttaranchal University,* *Dehradun, Uttarakhand* *India*   
+**Bhavesh Dharmani** *Lovely Professional University,* *Jalandhar, Punjab* *India*   
+&   
+**Kamal Kumar** *National Institute of Technology, Srinagar (Garhwal)* *Uttrakhand* *India*   
+
+  
+  
+  
+  
+  
+  
+
+## BENTHAM SCIENCE PUBLISHERS LTD.
+
+### End User License Agreement (for non-institutional, personal use)
+
+This is an agreement between you and Bentham Science Publishers Ltd. Please read this License Agreement carefully before using the ebook/echapter/ejournal (**“Work”**). Your use of the Work constitutes your agreement to the terms and conditions set forth in this License Agreement. If you do not agree to these terms and conditions then you should not use the Work.
+
+Bentham Science Publishers agrees to grant you a non-exclusive, non-transferable limited license to use the Work subject to and in accordance with the following terms and conditions. This License Agreement is for non-library, personal use only. For a library / institutional / multi user license in respect of the Work, please contact: [permission@benthamscience.net](mailto:permission@benthamscience.net).
+
+### Usage Rules:
+
+1.  All rights reserved: The Work is the subject of copyright and Bentham Science Publishers either owns the Work (and the copyright in it) or is licensed to distribute the Work. You shall not copy, reproduce, modify, remove, delete, augment, add to, publish, transmit, sell, resell, create derivative works from, or in any way exploit the Work or make the Work available for others to do any of the same, in any form or by any means, in whole or in part, in each case without the prior written permission of Bentham Science Publishers, unless stated otherwise in this License Agreement.
+2.  You may download a copy of the Work on one occasion to one personal computer (including tablet, laptop, desktop, or other such devices). You may make one back-up copy of the Work to avoid losing it.
+3.  The unauthorised use or distribution of copyrighted or other proprietary content is illegal and could subject you to liability for substantial money damages. You will be liable for any damage resulting from your misuse of the Work or any violation of this License Agreement, including any infringement by you of copyrights or proprietary rights.
+
+#### Disclaimer:
+
+Bentham Science Publishers does not guarantee that the information in the Work is error-free, or warrant that it will meet your requirements or that access to the Work will be uninterrupted or error-free. The Work is provided "as is" without warranty of any kind, either express or implied or statutory, including, without limitation, implied warranties of merchantability and fitness for a particular purpose. The entire risk as to the results and performance of the Work is assumed by you. No responsibility is assumed by Bentham Science Publishers, its staff, editors and/or authors for any injury and/or damage to persons or property as a matter of products liability, negligence or otherwise, or from any use or operation of any methods, products instruction, advertisements or ideas contained in the Work.
+
+#### Limitation of Liability:
+
+In no event will Bentham Science Publishers, its staff, editors and/or authors, be liable for any damages, including, without limitation, special, incidental and/or consequential damages and/or damages for lost data and/or profits arising out of (whether directly or indirectly) the use or inability to use the Work. The entire liability of Bentham Science Publishers shall be limited to the amount actually paid by you for the Work.
+
+### General:
+
+1.  Any dispute or claim arising out of or in connection with this License Agreement or the Work (including non-contractual disputes or claims) will be governed by and construed in accordance with the laws of Singapore. Each party agrees that the courts of the state of Singapore shall have exclusive jurisdiction to settle any dispute or claim arising out of or in connection with this License Agreement or the Work (including non-contractual disputes or claims).
+2.  Your rights under this License Agreement will automatically terminate without notice and without the need for a court order if at any point you breach any terms of this License Agreement. In no event will any delay or failure by Bentham Science Publishers in enforcing your compliance with this License Agreement constitute a waiver of any of its rights.
+3.  You acknowledge that you have read this License Agreement, and agree to be bound by its terms and conditions. To the extent that any other terms and conditions presented on any website of Bentham Science Publishers conflict with, or are inconsistent with, the terms and conditions set out in this License Agreement, you acknowledge that the terms and conditions set out in this License Agreement shall prevail.
+
+ 
+| **Bentham Science Publishers Pte. Ltd.**  
+80 Robinson Road #02-00  
+Singapore 068898  
+Singapore  
+Email: [subscriptions@benthamscience.net](mailto:subscriptions@benthamscience.net) || ![](Images/bentham_logo.jpg) |
+| --- | --- |
+
+# PREFACE
+
+  
+  
+  
+  
+  
+  
+
+The book aims to shed light on Blockchain technologies which are the talk of the town in current times and have attracted a lot of potential end users. The excitements engendered by blockchain technologies completely relish the great feature of their exploitation in the facilitation and usage of cryptocurrencies. Bitcoin and Ethereum are the two most illustrious examples which foster a good future for Cryptocurrencies.
+
+A blockchain is an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way. As a promising technique to achieve decentralized consensus, Blockchain helps achieve benefits critical to enterprises and create extraordinary opportunities for businesses to come together in new ways.
+
+The book covers different applications of blockchain in fields including the financial sector, big data, health industry, hydroponics, and vehicle ad hoc networks. Editors are thankful to the authors for their contribution to the completion of the book.
+
+  
+  
+**Rajesh Singh**  
+Uttaranchal University  
+Dehradun, Uttarakhand  
+India  
+  
+**Anita Gehlot**  
+Uttaranchal University  
+Dehradun, Uttarakhand  
+India  
+  
+**Bhavesh Dharmani**  
+Lovely Professional University  
+Punjab  
+India  
+  
+&  
+  
+**Kamal Kumar**  
+National Institute of Technology, Srinagar (Garhwal)  
+Uttrakhand  
+India  
+
+# List of Contributors
+
+| **Aayush Vats** || Mechatronics Engineering, University of Petroleum and Energy Studies, India  
+ |
+| --- | --- |
+| **Arpit Jain** || Electrical and Electronics Engineering Department, University of Petroleum and Energy Studies, Dehradun, India  
+ |
+| **Chaitali Choudhary** || School of Computer Science, University of Petroleum and Energy Studies, Bidholi, Dehradun 248007, India  
+ |
+| **Charanjeet Singh** || Lovely Professional University, Phagwara, India  
+ |
+| **Hardik Chaurasia** || Electrical and Electronics Engineering Department, University of Petroleum and Energy Studies, Dehradun, India  
+ |
+| **Harpreet Singh Bedi** || School of Electronics and Electrical Engineering, Lovely Professional University, Punjab, India  
+ |
+| **Himanshu Sharma** || Electrical and Electronics Engineering Department, University of Petroleum and Energy Studies, Dehradun, India  
+ |
+| **Inder Singh** || School of Computer Science, University of Petroleum and Energy Studies, Bidholi, Dehradun 248007, Uttarakhand, India  
+ |
+| **Kamal Kumar** || Computer Science and Engineering, National Institute of Technology Uttarakhand, Srinagar (Garhwal), India  
+ |
+| **Kamal Kumar Sharma** || School of Electronics and Electrical Engineering, Lovely Professional University, Punjab, India  
+ |
+| **Manoj Sindhwani** || School of Electronics and Electrical Engineering, Lovely Professional University, Punjab, India  
+ |
+| **Mohammad Shafiq** || Department of Cyberspace Institute of Advanced Technology, GuangZhou University, Guangzhou, China  
+ |
+| **Nazir Ahmed** || Electrical and Electronics Engineering Department, University of Petroleum and Energy Studies, Dehradun, India  
+ |
+| **Raghav Gupta** || School of Electronics and Electrical Engineering, Lovely Professional University, Punjab, India  
+ |
+| **Rajesh Singh** || Lovely Professional University, Punjab, India  
+ |
+| **Rajeshwar Singh** || Doaba Group of Colleges, Nawanshar, India  
+ |
+| **Sachin Sharma** || Computer Science and Engineering, Maharishi Markandeshwar (Deemed to be) University, Mullana, Ambala, India  
+ |
+| **Shaik Vaseem Akram** || Lovely Professional University, Punjab, India  
+ |
+| **Yasir Afaq** || Lovely Professional University, Punjab, India  
+ |
+
+# Blockchain for IoT Security and Privacy: Challenges, Application Areas and Implementation Issues
+
+  
+  
+**Chaitali Choudhary^([1](#9789815051452-C1.html#aff1), [\*](#9789815051452-C1.html#cor1))****,** **Inder Singh^([1](#9789815051452-C1.html#aff1), [\*](#9789815051452-C1.html#cor1))****,** **Mohammad Shafiq^([2](#9789815051452-C1.html#aff2))**  
+¹ School of Computer Science, University of Petroleum and Energy Studies, Bidholi, Dehradun 248007, Uttarakhand, India  
+² Department of Cyberspace Institute of Advanced Technology, GuangZhou University, Guangzhou, China  
+  
+
+## Abstract
+
+Blockchain and IoT are the most exciting technologies in the current world, combining these two together may resolve a lot of issues. In the current scenario, we are using IoT devices in nearly everything. By the end of this era, we can presume that all of our day-to-day use devices will be smart. But with this various issue may rise like safety, security, and performance concerns of smart devices. To resolve these issues, blockchain technology has emerged as a very powerful tool. In this chapter, the basics of blockchain along with its architecture and algorithms involved are discussed. IoT challenges and related literature are also discussed along with blockchain as an efficient technology to resolve these issues. The chapter also includes the challenges in using blockchain in IoT devices.
+
+**Keywords:** Blockchain, Cryptocurrency, Distributed ledgers, IoT, Proof-of- stake, Proof-of-work.  
+  
+
+* * *
+
+^(\*) **Corresponding authors Chaitali Choudhary & Inder Singh:** School of Computer Science, University of Petroleum and Energy Studies, Bidholi, Dehradun 248007, Uttarakhand, India; Tel: +919827180073;  
+E-mails: [chaitali.choudhary@gmail.com](mailto:chaitali.choudhary@gmail.com) & [inderddn@gmail.com](mailto:inderddn@gmail.com)  
+  
+
+## INTRODUCTION
+
+The chapter includes the two emerging technologies, blockchain and Internet of Things (IoT). Blockchain is a distributed ledger technology that maintains immutable records leading to highly secure data, whereas IoT is the technology that became an essential part of our day-to-day life. IoT applications are used in smart homes, smart cities, industrial productions, smart grids, *etc.* Here, we discuss various IoT related issues and blockchain technology separately and then the ways in which blockchain can be used to resolve these key challenges of IoT are discussed. Out of the various challenges of IoT, the most crucial one is secu-
+
+rity and confidentiality, which can be resolved using blockchain. Blockchain gives power to the changing digital infrastructure which can help to evolve IoT, ranging from analytics to security. IBM took an initiative of blockchain usage incognitive IoT \[[1](#9789815051452-C1.html#r1)\]. They used it in complex trade lanes and logistics where smart contracts can be incorporated using blockchain technology register. According to IBM, three key benefits are firstly building trust using distributed ledger-based authentication system and reducing the risk of collision and tampering, secondly by cost reduction by removing intermediate or third parties, and thirdly accelerated transaction speed by reducing settlement time from days to instantaneous decisions.
+
+### Blockchain and its Key Concepts
+
+Blockchain is important as it brings trust to a network, and that is the main reason behind its wide usage in various areas based on trust factors. Blockchain operates with the basic concept of peer-to-peer trust factor with zero intervention from third parties. Blockchain is a decentralized ledger of all transactions across a peer-to-peer network, which means it enables the transfer of digital assets without third party intervention. Blockchain is being used in a wide range of industrial applications as listed below:
+
+ 
+
+1.  One of the most famous is cryptocurrency, for each blockchain. Right now, there are various cryptocurrencies in existence. Out of which the most famous one is Bitcoin. Some other are Ether, USD Digital, Bitcoin Cash, Tether, Stellar, *etc.*
+2.  It is used in financial transaction security in the finance industry as transactions should be open and in the form of immutable ledgers.
+3.  Patient’s data is collected by various devices in healthcare. Such data is highly confidential and need not to be manipulated under any conditions.
+4.  One of the major issues with government supplies is that they do not reach the designated person or department. To maintain that, government nowadays uses blockchain in supply chain management to ensure the proper delivery of essential items.
+5.  Blockchain in supply chain management is also used in manufacturing and distribution to ensure an immutable ledger of items produced and distributed.
+6.  It is also useful in moving point of data computation from one place to another. While doing so, our data should be secured which can be easily done using blockchain.
+7.  Some other examples are E-voting, Key distribution, funding generation, securing public records *etc.*
+
+The most known term in the blockchain is Bitcoin. Blockchain is confused with bitcoin, but actually bitcoin is just a cryptocurrency based on blockchain. Whether Bitcoin survives or not, concepts and algorithms of blockchain form an essential backdrop of various key security-based fields. There was a scenario in 2008-09 where major financial systems were facing issues, which led to share market crumbling. Then a person named Satoshi Nakamoto introduced digital currency. Digital currency is an asset which can be transferred securely over internet. This new currency introduced by Satoshi Nakamoto is called Bitcoin \[[2](#9789815051452-C1.html#r2)\]. Cryptocurrency is in controversy due to the reason that it does not need any central authority like bank to transfer assets \[[3](#9789815051452-C1.html#r3)\]. Thus, many people and countries still do not authenticate it. Bitcoin uses various algorithms for verification, validation and consensus protocol for each transaction.
+
+### Working of Blockchain
+
+Centralized *vs*. decentralized system: Consider a scenario where any person wants to buy something using credit card. This process has many stages including verification of the transaction by credit card authority, payment gateways, banks involved *etc.* This is an example of centralized system where everyone is connected with other with some legal process Now consider a scenario where a person directly wants to deal with another person irrespective of their location. Here these two people are going to be peers among which we need to establish a transaction in a decentralized way, which means transaction between two persons who are not at the same location and not a part of a centralized system and do not know each other. This is basic concept of decentralized system. The major issue with such systems is trust. We can build trust by framing a process to validate, verify and confirm transaction which should be a tamper proof. The overall process of doing so will include recording the transaction in distributed ledger system, making it tamper proof, creating a chain and finally implementing a consensus protocol for agreement on the verified transaction to be added in the ledger . This individual transaction is called blocks and to make it secure, a chain of blocks is created, that’s why this concept is named as blockchain. Whenever one person transfers a certain amount to others, they keep a ledger of that transaction, but to provide trust, the other person called peers comes into the picture. All these people involved also keep a copy of the ledger. This is the basic concept of an immutable distributed ledger defined in a blockchain process. Similarly, verification methods are also involved and implemented using peers. Summarizing, blockchain uses a decentralized peer-to-peer system using collective trust model for validating and verifying a distributed transaction.
+
+### Blockchain Structure and its Operations
+
+The basic structure of blockchain has transaction as the core element, which is called unspent transaction outputs abbreviated as UTXOs. it is an abstraction of electronic money and have different values in different currencies. Whenever any user wants to initiate a transaction, they start by creating UTXOs or by creating a ledger using coins in the form of UTXOs. These are locked up cryptocurrencies until the transaction is complete. These are nothing but like a coin in cryptocurrencies. Each transaction needs to be validated and then broadcasted. Such validated and broadcasted transactions form a chain *via* digital data link. The work of validation is done by special peer nodes called miners. Miners are computationally fast computers executing a specific blockchain protocol known as proof of work protocol. Fig. [(**1**)](#9789815051452-C1.html#f1) shows a basic operation of blockchain.
+
+![](Images/9789815051452-C1-F1.jpg)**Fig. (1))**  
+Basic operation of blockchain. 
+
+It is the responsibility of peers and their computational nodes to perform each operation. There are two types of participants in blockchain: one who initiates the transaction and other who validates these transactions, known as miners. If someone wants to transfer, then they initiate a transaction, whose ledger is maintained by both the parties. Then to validate, verify and broadcast, miners come into the picture. These transactions are added to the transaction pool, which are viewed by each and every miner. If all the miners validate the block and transmit it, then there will be multiple chains whereas the blockchain is a single consistent linked chain of flux which is challenging. All miners compete to solve the puzzle for validating these transaction blocks, to win the challenge their nodes computational capacity should be high. Once a miner wins, then that node sends the block for consensus validation. This is done by broadcasting the information to all other miners. Major set of miners, minimum 51% should agree to this new block addition. Once verified, then this transaction can be added in form of block in the original blockchain. After successful addition of this block transaction, it is completed and recorded. This algorithm for solving a puzzle and finally able to add a block is called proof-of-work protocol. This protocol needs a lot of computation power. This is one of the biggest disadvantages of blockchain proof-of-work protocol. Thus, various other protocols like proof-of-stake are used nowadays, but none of them are still as successful as this protocol. Now the question is what’s for miners here? Miners earn bitcoins for managing the blockchain. The protocol proof-of-stake uses this bitcoin earned again for solving the puzzle to add a block. So, in this case rather than using their node’s computational power, they use their earnings. This looks good but here came the problem of double spending. If a person has large number of bitcoins, these can be used to manipulate the original blockchain.
+
+### Algorithms and Techniques
+
+There are two techniques for efficient validation and verification. Hashing and asymmetric key encryption.
+
+1\. The main issue with blockchain is that, it is a decentralized ledger system. So, we won’t be able to verify it by conventional methods. There must be a mechanism to establish trust in between peers. For that, public key cryptography can be used. Public key cryptography uses the concept of symmetric key, which means the key for encryption and decryption is the same. A symmetric key has some major issues like deriving the keys from the data sent and distributing keys secretly. This key distribution is a very crucial task, in symmetric encryption, it should be passed to each participant. Blockchain is a distributed framework which makes this key distribution more difficult. Public key cryptography addresses this concern by using two different keys in spite of using only one key. There must be two keys: one must be public and another one should be private. Here extracting data from a message is possible as the data encrypted using public- private key pair can be extracted or decrypted using only public key. For example, if a person wants to send a message, then the person should be sending data encrypted using its private key and then by the receiver’s public key. Receiver decrypts the data using its private key and then using sender’s public key. This ensures that only the sender can send the data and the receiver can receive the data. A popular algorithm for public-private key pair strategy is Rivest Shamir Adleman (RSA) algorithm. Another algorithm is Elliptic curve cryptography which is stronger that RSA as it uses greater number of bits, thus increasing the security as well as complexity. ECC is used in various blockchain technologies like bitcoin and Ethereum for block generation, as an addition in blockchain.
+
+2\. Hashing: It plays a critical role in blockchain’s integrity and confidentiality of data. A hash function converts input data into a unique fixed length value. The algorithm chosen for the hash function should be a one-way function and it should be collision free, or exhibit extremely low probability of collision. The first requirement is to make certain that no one can derive the original items hashed from the hash value. The second requirement is to make sure that the hash value uniquely represents the original items hashed. There should be extremely low probability that two different datasets map onto the same hash value. These requirements can be achieved by choosing a strong algorithm such as secure hash, and by using appropriately large number of bits in the hash value. The most common hash size is 256 bits and the common functions are SHA-3, SHA-256 and Keccak.
+
+3\. Transaction Integrity: It works by securing the account address uniquely; the sender should be authenticated using a digital signature before transaction and ensuring the contents of the message sent. In the blockchain, both hashing and public key cryptography are used. The first step is to generate the address using a public private key. Initially a 256-bit random number is taken and kept as a private key which is secured using a code. Secondly, the ECC algorithm is used to generate a private key from public key, after which, the user will be having our public-private key pair. Finally, a hashing function is used to extract account address from the public key. Any transaction needs to be verified for the integrity. For this, a digital signature needs to be applied to the transaction and data needs to be hashed and encrypted. The receiver gets these two things separately: original data and digitally secured hash key. The receiver then needs to recompute the hash from the original message and compare it to the received secure hash key. If it is matched, then the receiver can ensure the data is intact and no changes have been made to it, so user can accept it. Otherwise the receiver can reject the transaction. The original key and the retrieved key match only in case the messages are integral, if a message is changed, then the keys won’t match and lead to rejection from the receiver’s side. Various other things are also verified at receiver’s end like timestamp, balance, and gas balance, *etc.* Using this complete procedure, the integrity of the complete transaction can be checked
+
+### Trust Essentials and Consensus Protocols
+
+Trust can be established in a decentralized system by using specific protocols. It can be done by validating the transaction and blocks for tamper proofing, verifying the availability of resources for transactions, and executing and confirming the transactions. The Trust Trail is defined by operations including validation of transaction, verification of gas and resources, accumulation of transactions, execution of transaction to get a new state, formation of the block, working towards consensus, finalization of the block by the bidder, and addition of the block by everyone to their chain and confirmation of the transactions. A secure chain is a single main chain with a consistent state. Every valid block added to this chain, adds to the trust level of the chain.
+
+**Consensus Mechanisms:** It is a way of reaching consensus among miners to validate the transaction, as it is a distributed ledger environment where user won’t be able to verify or validate it centrally \[[4](#9789815051452-C1.html#r4)\]. There are two known mechanisms for consensus:
+
+**Proof of work:** In blockchain, every miner has to compete and being the first one to add a block in the chain. Every miner will compete to get a unique hash key in the shortest span of time. For this, they have to use their core computation resources in PoW. Such winning solution transactions used for hash calculation are then approved and a new block is added to the blockchain. These miners use a lot of computational resources to evaluate the hash function in record time. PoW protocols are used to calculate hash functions with minimal computational resources.
+
+**Proof-of-Stake:** As mining involves lots of computation power, Proof-of-Stake gives mining power depending on the stake of bitcoins they hold. This will ensure that only the authorized person can mine and attack on the chain. The only cryptocurrencies which use this technique is altcoins. One of the major issues with this algorithm is that users can misuse their power of high stakes.
+
+### IOT Security
+
+Internet of Things (IOT) is the interconnection between smart devices, which communicate with each other. When we are talking about smart devices, this means they are able to monitor, control, optimize and automate the process in one or another way. These devices can be anything like network devices, home appliances, wearable devices, sensors, industrial instruments/machines, vehicular sensors or any embedded device.
+
+**Challenges in IOT** With an increase in the number of smart devices around us, IoT is an emerging technology for connecting all the devices together. Since IoT is the most talked technology right now, built with connecting devices. Due to such heterogeneity in devices, there are various challenges which the current IoT system faces. At one side, IoT is a much sought technology by various businesses and industries, but it also leads to various challenges. The challenges in IoT \[[5](#9789815051452-C1.html#r5)\] are basically of two types- Technological challenges and Security challenges \[[6](#9789815051452-C1.html#r6)\]. Technological challenges mainly focus on peer’s or node’s computational capacity, their interconnection, bandwidth consumption and various performance parameters adjustments. These concerns can be hardware related as well as software related. Whereas security issues can range from secure data storage, data transmission, key distribution, *etc.* Some of the major challenges are listed here in Fig. [(**2**)](#9789815051452-C1.html#f2).
+
+![](Images/9789815051452-C1-F2.jpg)**Fig. (2))**  
+Key challenges io IoT.  
+
+1.  **Security:** Ask any expert the biggest challenge in this era and they will be spontaneously saying security of IoT devices. As with the increase in the number of devices, IoT increases attack surface area. Attackers do not attack main devices, rather they compromise the devices with security vulnerabilities. For example, in 2017, a casino was attacked using a thermostat in fish tank. Most of the common and damaging attacks are through home monitors, like IoT based baby or elderly monitors. There are various reported cases in which attackers attacked through toys, health monitors, wearable devices, *etc.*
+2.  **Regulatory Policies:** There must be standard policies which should be established to properly manage, protect and transmit data in a very effective way. Lack of such strong policies is a major reason behind IoT security issues. This situation becomes more complicated with the expansion of attack surface due to usage of so many devices, and as these devices can be anything like toys, medical instruments, cars, modems *etc.* All the current policies established doesn’t work in variant IoT scenarios. Policies should be established to promote and standardized IoT. Quality control in IoT can be highly complicated and due to a wide range of sensors and devices imported from other countries, such policies should be worldwide acceptable.
+3.  **Integrity:** Integrity is to deliver the message securely in end-to-end devices. Data may be corrupted during transmission. It should be ensured that the message is delivered securely. IoT nodes are very low computational devices, so end point security cannot be guaranteed. The only thing which can be done, is securing messages while transmitting it . For this end to end encryption, algorithms can be used. There are a wide range of such algorithms available, but the only issue is that these algorithms should be light weight.
+4.  **Availability:** There is a huge amount of IoT data which is meant to be readily available for usage whenever required. One of the important features of IoT is temporal data, and it is meant to be available on time to achieve the desired results and analysis.
+5.  **Bandwidth:** IoT devices work on distributed model whereas traditional content delivery system works on the central server-based model. This condition becomes worst with the addition of more and more devices on regular basis. Also, each device has varied bandwidth requirements, where there can be a condition for one device with high bandwidth leading to drought condition for other devices. This can be managed by intelligent switching of bandwidth between various mobile devices.
+6.  **Compatibility:** With so many devices of various manufacturers in the market, compatibility is a big issue. We all have faced these issues while installing a smart device at our home. To resolve this issue a bit of help can be taken from software patches by the companies. But this is again an issue as we can’t ensure that each device has a system of self-updates. These issues elevate when devices work on different versions, which leads to performance degradation and security issues. Thus, most of the devices need to keep themselves maintained.
+7.  **Heterogeneity:** IoT devices can be networking devices, home appliances, wearable devices, sensors, industrial instruments/machines, vehicular sensors or any embedded devices, which have a wide range of capabilities, connectivity and vendors. Networking between such a wide range of devices is a highly complicated issue. So, one of the major issues of IoT is establishing a connection between such heterogenous devices with various levels of working protocols and connection issues.
+8.  **Confidentiality:** A smart device can be a human or any device which can be involved in collecting data, managing data or analysing data. Such data can be very crucial as it may include very sensitive data like personal information, health information, *etc.* This data needs to be protected not just from the outside world but also from other nodes. Confidentiality also means that data should only be received and processed by the authentic device.
+9.  **Authentication:** There may be numerous devices in an IoT network, all of which should be authenticated, as there are so many devices which many attackers may fake being a genuine part of the network. All the devices in the network should be initially authenticated, and then each node trying to join should be validated by either a central authority or by mutual consent.
+10.  **Lightweight Solutions:** This can be either considered as an aspect or constraint, as all the devices should be energy conserving and be compatible with the IoT algorithms and protocols. On the other hand, we can say that, all the algorithms devised for IoT devices should be lightweight networking protocols. As high energy consuming protocols are not compatible with IoT structures.
+11.  **Customer Expectations:** IoT market is a customer-oriented segment, unless it is not a complete infrastructure-based setup, in most of the scenarios we deal with small hand-held devices or day to day usage appliances. In our daily usage, a number of devices are increasing rapidly, and with such a competitive environment, customer satisfaction is a very important factor. User’s expectations should be met otherwise there is so much competition that the same kind of devices are launched by various manufacturers. The product should be the best in the market and as per users’ expectations.
+12.  **Key Management Systems:** The information transmission by IoT devices should be secure using encryption strategy. Here one of the constraints is that it must be light weight key management system which enables trusted data exchange. The key distribution should consume minimum energy for the long life of devices. There are various encryption algorithms that can perform very efficiently but we need nodes with computational capacity. Thus, the secure data management with light weight key management is a crucial issue.
+
+### Ongoing Researches
+
+ 
+
+#### IoT Security using Blockchain
+
+Block-chain secures the data communication between IoT devices with safe data transmission. Rathee G. *et al.* \[[7](#9789815051452-C1.html#r7)\] suggested securing wireless communication in IoT using the blockchain technique. To ensure the device is an authenticated device, to track any device activity and to maintain secrecy and transparency between peer nodes, all the objects are added in the blockchain. The suggested scheme is also used to extract the information from various nodes and preserve the extracted data into a blockchain. This ensures safety of extracted data as well as transparency among distributed nodes. It works in the same manner as we discussed in the previous sections on the working of blockchain. Any device trying to join the network should be authenticated by existing nodes in the network. If more than a particular threshold number of users accept that node, then one of the nodes can add a new user to the existing block chain. The same concept also applies to messages generated. This process of adding a node or passing a message results in transactions where each transaction can be maintained in the form of an immutable chain of successful transactions in a sequentially encoded hashing methodology. A transaction appears in a chain only if it is successful. All the messages are published as an immutable ledger that cannot be modified, and every IoT node/peer maintains the common ledger as all the other peers in the network \[[8](#9789815051452-C1.html#r8)\]. Agrawal, R. *et al.* \[[9](#9789815051452-C1.html#r9)\] proposed a blockchain based IoT structure where, trust is maintained through an immutable decentralized blockchain. As blockchain is distributed in nature making system more resilient to failure, this proposes a way to secure the system using device authentication using any external intervention. Every node interaction is saved as a blockchain block making its usage authenticated, and it is saved as IoT blockchain. Various prediction models are used to generate crypto-tokens for user authentication. These crypto-tokens are then improvised using ensemble methods, which uses the most efficient model. Huh, S. *et al.* \[[10](#9789815051452-C1.html#r10)\] used a public-private key pair for encrypting the data and kept the public key on Ethereum blockchain and private keys were stored in individual devices. So that they could easily build key management and distribution system in an efficient manner. Managing a key using blockchain is a very common thing, but they explicitly used Ethereum as they wanted to manage it in a fine-grained manner. This can be compared with partial IoT implementation with fully scaled IoT system. It was concluded that the results showed better performance as the complete system did not have compatibility issues compared to partial devices integration with a partial structure. Their case study was on smart meters. They used data coming from smart meters and smart phones. Using Ethereum smart contract, they constantly analysed the data from smart meters, where smart phones were used to send the specified policies for air conditioners and bulbs. These devices constantly check policy updates in Ethereum smart contract to remain updated, and whenever necessary, they switch to the power saving mode and back to the normal mode as and when required. They only created a small-scale experimental setup, which needs to be checked for scaling up with multiple devices. The major issue which can be faced with multiple devices is that there can be synchronization issues with an increase in devices and consequently requests \[[11](#9789815051452-C1.html#r11)\]. Also, our light weight IoT devices would not be able to serve so many requests parallelly which leads to denial of service.
+
+#### IoT Security using Fog Computing
+
+Fog computing is one of the most compatible technologies used with IoT technologies and application frameworks. Tange K. *et al* proposed fog enable authentication \[[12](#9789815051452-C1.html#r12)\] for securing IoT networks. This can be done by using fog nodes as authenticating systems rather than any third-party authentication server requirements. A fog node fulfils all the requirements of the IoT network as it is lightweight, local to the network, thus leading to very minimum communication overhead and fast response time. Also fog nodes can act as part of the network on one end whereas it can be used for third party communication and data transfer without any issue of security breach. This also enhances our network by transferring some of the authentication control rights to fog node, which results in reduced computation of light weight IoT nodes. One of the open challenges in IoT security using fog node is the isolation of fog nodes for security purpose. As with legacy systems where security measures are very poor, in such systems, fog node isolation is a difficult task which is as an open challenge for researchers.
+
+#### IoT Security using Machine Learning
+
+IoT networks are heterogenous with a wide range of devices and different kinds of protocols and algorithms, with deployment on a massive scale with various connectivity issues using low power and low-cost communication in the close proximity without involving a central authority. It should also have self-organization and self-healing characteristics which should be dynamically managed with high security and intelligence. For such a constraint-based network, machine learning is one of the best suited techniques. The machine learning algorithms can train themselves with any external interference \[[13](#9789815051452-C1.html#r13)\]. Such networks can adapt accordingly and can make future predictions based on the dynamic data collected at run-time. It can respond to specific problems which change with time. It can be used to detect threats and malwares. For example, Google uses ML to identify potential threats in mobile devices and endpoints. But ML is not good enough solution due to false positives and true negatives, still we can trust ML based reinforcement or unsupervised learning techniques \[[14](#9789815051452-C1.html#r14)\]. ML based solutions need to be monitored for modifications in models and error predictions. Hasan, M. *et al* used various machine learning algorithms for anomaly and attack detection and compared various techniques on parameters such as accuracy, recall, precision, F1 Score, *etc.* They used various techniques like Decision Trees, Deep Neural Network, Artificial Neural Network, Random Forest, support Vector machine and concluded that random forest technique is the best for early prediction of various kinds of attacks. But they only have studied classical approaches rather than ensemble approach. Also, they haven’t devised a complete framework.
+
+IoT Security using Edge Computing: IoT with Edge computing is a highly researched field as it incorporates cloud in it, and IoT with cloud being a current technology in research perspective. Wang, T. *et al.* \[[15](#9789815051452-C1.html#r15), [16](#9789815051452-C1.html#r16)\] proposed that the edge networks can be very reliable in implementing trust-based message passing framework to meet special service requirements. They concluded that edge-based security framework can help in enhancing security, efficiency and performance of a cloud based IoT structure. Bhardwaj K. *et al.* \[[17](#9789815051452-C1.html#r17)\] suggested that DDoS attack in the network can be reduced using edge nodes usage. As we know, in our IoT networks, devices are very light weight with less computational power and thus easily prone to DDoS attacks. These attacks are successful as our networks’ computational power is very low. In Edge based networks, high computational power is provided to edge nodes and their computational power can be utilized against such attacks. These result in early detection of such attacks leading to damage reduction. Their experimental study proved that 10x faster detection can reduce the 82% internet traffic due to DDoS attack. Edge computing can help in overcoming security breach issue, data compliance issues, safety issues and bandwidth issues. The data breach issues are resolved by maintaining data inside the network itself. With an edge network, we do not need to send the data outside the world leading to minimal chances of data breach. Also, in many countries, data compliance law states that data should not move outside the network, which we are very efficiently maintaining using edge nodes. Safety issues are one of the major concerns in IoT devices, if there is even a bit of a delay in transmitting data to the decision-making node which can lead to various security issues. For example, if we are creating an app for women’s safety with a SOS button in a wearable device, if there is even a bit of a delay in transmitting that data, that can lead to various hazards. In IoT, we can’t afford to transmit every data to the central cloud node due to various energy saving policies. Edge nodes help us in reducing the communication overhead by analysing data locally and only sending the crucial data in a secure manner by peer-to-peer authentication between centrally computational cloud nodes with edge node lying in and out of the IoT network.
+
+#### IoT Security using Cryptography/Steganography
+
+The cryptography is not much used technique in IoT, as cryptographic algorithms are too complex to be executed on light weight IoT nodes but still some scholars tried this approach too. Henriques S. *et al.* proposed an authentication method using both asymmetric and symmetric cryptography to secure communication between IoT devices. This leads to reduced time consumption in spite of working on an asymmetric approach. Each time, a random session key is taken which improves the security in the symmetric encryption approach. This makes the system more attack tolerant and resolves the issue of session key distribution. Further improvements can be made by using more complicated encryption techniques or by using hashing, but the only obstacle in this is less computational power of IoT nodes which would not be able to perform high end encryption algorithms. Sridhar S. *et al.* \[[18](#9789815051452-C1.html#r18)\] proposed lightweight dual authentication cryptographic approach. A Light Weight Asymmetric Key cryptography is used to provide authentication between a sensor node and the device gateway. The sensor node unique Id and device gateway’s unique Id are used to create a secret key/digital certificate using AES Algorithm. The device gateway and the cloud service are mutually authenticated using public Key Encryption Digital Signature. They proposed a double authentication scheme which resulted in reducing the traffic by eliminating faulty and fake data chunks and thus provided security and enhanced the performance by reducing bandwidth usage. Khari M. *et al.* \[[19](#9789815051452-C1.html#r19)\] worked on elliptic Galois cryptography algorithm which encrypted confidential data from various medical sources. Then using matrix XOR encoding steganography technique, it is embedded in a low complexity image. It also optimizes block selection using adaptive firefly algorithm to reduce computational cost. With this technique, any data can be securely transmitted using layers of images in an efficient manner.
+
+ 
+
+### Blockchain as Key to IoT Security
+
+We can conclude that Blockchain can be very empowering technology for IoT security. It is also very helpful in various other challenges of blockchain like integrity, confidentiality, authentication and key management solutions. One of the main features of blockchain which makes it an ideal solution for IoT security is its decentralized nature which makes attackers’ work difficult. IoT frameworks are more prone to attack due to their distributed nature that means due to large number of devices, compromising any one less cared device will be quite easy. We can also summarize it earlier by saying that the surface area for attack is more in IoT framework and it keeps on increasing with each added device, which is definitely going to be increased. On the contrary, blockchain uses this distributed nature to make things secure. As blockchain is a distributed ledger system, it maintains immutable ledger records. This is the way of securing data in blockchain. The distributed framework increases the trust factor of the system . IoT and blockchain complements each other, the factor which makes IoT prone to attack is its distributed nature and blockchain uses the same factor for making it more secure. Decentralization of IoT network using blockchain also helps in resolving the issues like single point of failure and issues like cost reduction in maintaining network infrastructure. Two big companies IBM & Samsung collaborated for ADEPT \[[20](#9789815051452-C1.html#r20), [21](#9789815051452-C1.html#r21)\] (Autonomous Decentralized Peer-to-Peer Telemetry) which is a blockchain empowered IoT system. Blockchain system to create a distributed IoT system generates smart contract and peer to peer messaging system. One of the usages of ADEPT can be in various smart home appliances. For example, a fully automated washing machine can communicate with other devices like it can postpone the washing if many devices are plugged on simultaneously, leading to electric load balancing. If the machine has any issue, then it can create a request for maintenance or repair as needed. Right now, it looks like very futuristic project but it can be achieved very nearly. The problem appears when such a smart device which handles its own work is compromised by a hacker. One such solution is authenticity of one device is verified by all other devices at home. Let’s take an example: all the devices are based on networking, so suppose our first smart device or we can say the first block in our blockchain is modem. Whenever a new device is added then its key is a combination of both the modem key and a new device key. A chain is maintained in which there will be as many numbers of blocks as there are smart devices at home. If any one of the devices is hacked, then all the devices whose keys are generated using its key will also be dysfunctional. This is one of the basic usages of blockchain in securing IoT network in smart home \[[22](#9789815051452-C1.html#r22)\]. Blockchain applications do not limit to this, they can have a number of usages in different domains on IoT.
+
+### Blockchain IoT Security: Implementation Challenges
+
+There are still various issues with blockchain and IoT integration. One of the major issues is the verification of every action by all other devices, which can be sometimes quite time consuming. Also, in a network with thousands of devices, it will be really difficult to get consent of majority of nodes. For each successful transaction, the miners need to compete with each other for validating the transaction. Here our peer nodes and miner nodes all are our lightweight devices, which do not have such high-end computational capabilities. One feasible solution for this is to have a custom-made framework for maintaining blockchain. But again, the issue is to have a different third-party platform vendor for this. Even after so many security features, we can not be sure that our network is free from any security breach. In case a device is malicious or hacked immediately but for that also we need consent of majority of devices. So, we can say that if entry into this network is tough, pushing someone out of the network is also tough. Organizations should thoroughly investigate their privacy requirements and choose a proper blockchain type or request the development of a custom one until ready-made solutions appear on the mass market.
+
+## CONCLUSION
+
+This chapter examined two of the most talked technologies: blockchain and the Internet of Things (IoT). Blockchain is a distributed ledger system which creates immutable records, resulting in highly secure data, while IoT is a technology that has been ingrained in our daily lives. Blockchain is a decentralized ledger which records all transactions that occur over a peer-to-peer network, which facilitates the movement of digital assets without the involvement of a third party. Blockchain technology has been used in a wide variety of industrial and research applications and fields, including cryptocurrency, financial transactions, supply chain management, health record management, and research, e-voting, key distribution, financing creation, and safeguarding public data. With the proliferation of intelligent gadgets around us, IoT is a burgeoning technology for linking these items. Security, Regulatory Policies, Integrity, Availability, Bandwidth, Heterogeneity, Compatibility, Authentication, Confidentiality, Lightweight, Consumer Expectations, and Key Management Systems are the primary problems in IoT. It is also very beneficial for other blockchain-related difficulties, such as integrity, confidentiality, authentication, and critical management solutions. One of the primary aspects of blockchain which makes it a suitable option for IoT security is its decentralized nature which makes attackers' jobs challenging. Owing to the dispersed nature of IoT frameworks, they are more vulnerable to attack. This implies that compromising even one less-cared-for device would be pretty straightforward due to the high number of devices.
+
+## CONSENT FOR PUBLICATION
+
+Not applicable.
+
+## CONFLICT OF INTEREST
+
+The authors declare no conflict of interest, financial or otherwise.
+
+## ACKNOWLEDGEMENT
+
+Declared none.
+
+## REFERENCES
+
+|  ||  |
+| --- | --- |
+| \[1\] || Alladi T., Chamola V., Parizi R.M., Choo K.K.R.. Blockchain Applications for Industry 4.0 and Industrial IoT: A Review.IEEE Access2019717693517695110.1109/ACCESS.2019.2956748 |
+| \[2\] || Nakamoto S.. Bitcoin: A Peer-to-Peer Electronic Cash System.Cryptography Mailing2009 [https://metzdowd.com](https://metzdowd.com) |
+| \[3\] || Narayanan A., Clark J.. Narayanan\_Clark\_2017\_Bitcoin’s Academic PedigreeAcmqueueNarayanan\_Clark\_2017\_Bitcoin’s Academic Pedigree201715130 |
+| \[4\] || Zhu L., Gai K., Li M.. Blockchain technology in internet of things.Springer International Publishing201910.1007/978-3-030-21766-2 |
+| \[5\] || Atlam H.F., Wills G.B.. IoT Security, Privacy, Safety and Ethics.Springer International Publishing202010.1007/978-3-030-18732-3\_8 |
+| \[6\] || Mahalle P.N., Anggorojati B., Prasad N.R., Prasad R.. Identity authentication and capability based access control (IACAC) for the internet of things.J. Cyber Secur. Mobil.201214309348 |
+| \[7\] || Rathee G., Balasaraswathi M., Chandran K.P., Gupta S.D., Boopathi C.S.. A secure IoT sensors communication in industry 4.0 using blockchain technology.J. Ambient Intell. Humaniz. Comput.202112153354510.1007/s12652-020-02017-8 |
+| \[8\] || Minoli D., Occhiogrosso B.. Blockchain mechanisms for IoT security.Internet of Things20181-211310.1016/j.iot.2018.05.002 |
+| \[9\] || Agrawal S.. R., Verma, P., Sonanis, R., Goel, U., De, A., Kondaveeti, S. A., & Shekhar, “Continuous Security in IoT Using BlockchainIEEE Int. Conf. Acoust. Speech Signal Process.64236427.201810.1109/ICASSP.2018.8462513 |
+| \[10\] || Huh S., Cho S., Kim S.. Managing IoT devices using blockchain platformInt. Conf. Adv. Commun. Technol. ICACT464467.201710.23919/ICACT.2017.7890132 |
+| \[11\] || Lone A.H., Naaz R.. Applicability of Blockchain smart contracts in securing Internet and IoT: A systematic literature review.Comput. Sci. Rev.20213910036010.1016/j.cosrev.2020.100360 |
+| \[12\] || Tange K., De Donno M., Fafoutis X., Dragoni N.. A Systematic Survey of Industrial Internet of Things Security: Requirements and Fog Computing Opportunities.IEEE Commun. Surv. Tutor.20202242489252010.1109/COMST.2020.3011208 |
+| \[13\] || Xiao L., Wan X., Lu X., Zhang Y., Wu D.. IoT Security Techniques Based on Machine Learning: How Do IoT Devices Use AI to Enhance Security?IEEE Signal Process. Mag.2018355414910.1109/MSP.2018.2825478 |
+| \[14\] || Hussain F., Hussain R., Hassan S.A., Hossain E.. Machine Learning in IoT Security: Current Solutions and Future Challenges.IEEE Commun. Surv. Tutor.20202231686172110.1109/COMST.2020.2986444 |
+| \[15\] || Wang T., Zhang G., Liu A., Bhuiyan M.Z.A., Jin Q.. A secure IoT service architecture with an efficient balance dynamics based on cloud and edge computing.IEEE Internet Things J.2019634831484310.1109/JIOT.2018.2870288 |
+| \[16\] || Sha K., Yang T.A., Wei W., Davari S.. A survey of edge computing-based designs for IoT security.Digital Communications and Networks20206219520210.1016/j.dcan.2019.08.006 |
+| \[17\] || Bhardwaj K., Miranda J. C., Gavrilovska A.. Towards IoT-DDoS prevention using edge computingUSENIX Work. Hot Top. Edge Comput. Hot Edge, co-located with USENIX ATC2018 |
+| \[18\] || Sridhar S., Smys S.. Intelligent Security Framework for IoT Devices.Int. Conf. Inven. Syst. Control Intell.201715 IEEE.. |
+| \[19\] || Khari M., Garg A.K., Gandomi A.H., Gupta R., Patan R., Balusamy B.. Securing Data in Internet of Things (IoT) Using Cryptography and Steganography Techniques.IEEE Trans. Syst. Man Cybern. Syst.2020501738010.1109/TSMC.2019.2903785 |
+| \[20\] || Summary E.. Empowering the edge.201418 |
+| \[21\] || Corporation I.B.M.. Empowering the edge - Practical insights on a decentralized Internet of Things IBM Institute for Business Value2015 [https://www-01.ibm.com/common/ssi/cgi-bin/ssialias? subtype=XB&infotype=PM&htmlfid=GBE03662USEN&attachment=GBE03662USEN.PDF](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=XB&infotype=PM&htmlfid=GBE03662USEN&attachment=GBE03662USEN.PDF) |
+| \[22\] || Dorri A., Kanhere S.S., Jurdak R., Gauravaram P.. Blockchain for IoT security and privacy: The case study of a smart home.IEEE Int. Conf. Pervasive Comput. Commun. Work. PerCom Work.201761862310.1109/PERCOMW.2017.7917634 |
+
+# Distributed Ledger Technology and its Potential Applications – Financial Sector
+
+  
+  
+**Sachin Sharma^([1](#9789815051452-C2.html#aff1), [\*](#9789815051452-C2.html#cor1))****,** **Kamal Kumar^([2](#9789815051452-C2.html#aff2))**  
+¹ Computer Science and Engineering, Maharishi Markandeshwar (Deemed to be) University, Mullana, Ambala, India  
+² Computer Science and Engineering, National Institute of Technology Uttarakhand, Srinagar, Garhwal, India  
+  
+
+## Abstract
+
+The concept of blockchain has shown tremendous potential and growth in the last decade. The terms such as blockchain and digital ledger technology are used interchangeably. Many research efforts have been madto explain and harness the benefits of digital ledger technology for the financial sector. Digital currency or cryptocurrency is a technological currency based on the block chain concept.
+
+**Keywords:** Bitcoin, Blockchain, Digital Currencies, Digital Ledger Technology, Financial Inclusion, Financial Sector, Smart Contracts.  
+  
+
+* * *
+
+^(\*) **Corresponding author Sachin Sharma:** Computer Science and Engineering, Maharishi Markandeshwar (Deemed to be) University, Mullana, Ambala, India; E-mail: [er.sachinsharma@gmail.com](mailto:er.sachinsharma@gmail.com)  
+  
+
+## INTRODUCTION
+
+DLT utilizes existing peer-to-peer technologies such as the internet telephony, emails, file sharing and the internet. A benchmark paper written by an anonymous person “Satoshi Nakamoto” in 2008, “Bitcoin: A Peer-to-Peer Electronic Cash System”, presented a unique methodology of funds transfer using the P2P technique named “Bitcoin”. The technology described in Nakamoto’s paper was referred to as Blockchain, which explains a novel way of storing and organizing information and transactions. Other forms of information transfer and transaction technologies were devised and the term “Distributed Ledger Technology” was invented. DLT records and shares data across ledgers (multiple data stores), each controlled and managed by distributing computing devices and having the same replica of data records. These computing devices are referred to as nodes. DTL can be understood as a distributed database that possesses unique properties. Blockchain is a special type of DLT that utilises algorithms and cryptography techniques to generate and validate append-only growing data structures. The data
+
+structure acts as a ledger in the form of transaction blocks (chain), is referred to as a blockchain. One of the nodes create a new data block, which contains the multiple transaction records.
+
+One of the nodes initiates database addition, which in turn generates a new data “block” having multiple records of the transactions. This new block information (in encrypted format) is distributed across the network to maintain data privacy. This block validity is determined by every network participant using a consensus mechanism (algorithmic validation method). Post validation, a new block is added to the respective ledgers of all participants. Using this method, each change to the ledger leads to a ledger replication across the entire network and the entire identical ledger is available to each network member at any point of the time. This technique can be utilized for any digital transaction record. See Fig. [(**1**)](#9789815051452-C2.html#f1) (“Dubai Aims to Be A City Built on Blockchain”. By Nikhil Lokhade, 24 Apr 2017, Wall Street Journal [https://www.wsj.com/articles/dubai-aims-to-be-a-city-built-on- blockchain-1493086080](https://www.wsj.com/articles/dubai-aims-to-be-a-city-built-on-blockchain-1493086080)).
+
+![](Images/9789815051452-C2-F1.jpg)**Fig. (1))**  
+Working of Blockchain based DTL. 
+
+1\. DLT systems based on blockchain constitute an append-only data blocks chain. One of the nodes initiates new additions to the database and creates a new data block with multiple records of transactions.
+
+2\. Information is shared across the network about the new data blocks. The transaction details contain encrypted data.
+
+3\. All network participants use a “consensus mechanism” to determine the block’s validity. Post validation, each participant adds a new data block to their respective ledger so that a full identical copy of the entire ledger is being replicated across the entire network.
+
+Two characteristics of a DLT-based solution are:
+
+ 
+
+1.  It eliminates the need for centralized record keeping, storing, recording and distributing digital information across the self-managed counterparties.
+2.  It also eliminates double-spend which means the same token cannot be distributed to multiple counterparties.
+
+ 
+
+## RECENT WORK IN DLT
+
+The monetary policies of an economy are controlled by the central bank. A central bank controls the relevant economic management tools of an economy. The central bank's duty is to control money supply in an economy and deployment of monetary policies including interest rates management, keeping price stable for essential commodities \[[1](#9789815051452-C2.html#r1)\]. Central banks have monopoly on the currency issuance for a given economy \[[2](#9789815051452-C2.html#r2)\]. The emergence of Bitcoin in 2009 \[[3](#9789815051452-C2.html#r3)\] motivated the concept of an alternative currency mode as a digital currency or crypto currency. This new form of alternative currency can be managed by private sector players or individual. Post bitcoin invention, private sector organizations or individuals have issued more than five thousand crypto currencies \[[4](#9789815051452-C2.html#r4)\] in the last decade. The common attribute of these currencies is that they are based on digital ledger technology and are not controlled by any tangible resource. The currencies included Bitcoin \[[3](#9789815051452-C2.html#r3)\], Stellar \[[5](#9789815051452-C2.html#r5)\], Ripple \[[6](#9789815051452-C2.html#r6)\], Ethereum \[[7](#9789815051452-C2.html#r7)\], Tether \[[8](#9789815051452-C2.html#r8)\] and others.
+
+The strict regulations and law of land requirements for the financial market are creating challenges for decentralized digital currencies. Keeping this in view of the growth and opportunities in digital currencies, central banks are investing in the research and development of digital currencies backed by central banks and governments to preserve monetary policy and financial market stability \[[9](#9789815051452-C2.html#r9), [10](#9789815051452-C2.html#r10)\]. The Bank for International Settlements (BIS) conducted a recent survey \[[11](#9789815051452-C2.html#r11)\] to analyse efforts by central banks on central bank digital currency research projects. The majority of central banks (>70%) replied that they were investing in the possibility of issuing a central bank digital currency (CBDC). This survey covers diverse geographies in the different jurisdictions with reachability of more than 70% of the world's population \[[11](#9789815051452-C2.html#r11)\]. 35% of the participants were from developed economies and 65% of the survey participants were from developing economies. The level of central bank digital currency organizations are classified as a) Early Adopters, b) followers and c) new entrants.
+
+### Early Adopters
+
+The early adopters are the organizations, which started investing in the technology during 2015-2016. The Bank of England published its “One Bank Research Agenda” \[[12](#9789815051452-C2.html#r12)\] in 2015. The Bank of England collaborated with University College London in 2016 for its RS Coin CBDC \[[13](#9789815051452-C2.html#r13)\] framework development. China's central bank, “The People's Bank of China (PBoC)” started its CBDC journey in 2016 to get control of monetary supply in China and to optimize efficiency of the payment system \[[14](#9789815051452-C2.html#r14), [15](#9789815051452-C2.html#r15)\]. The Bank of Canada started investment in CBDC in 2016 with R3 Project Jasper and Payments Canada \[[16](#9789815051452-C2.html#r16)\] and then started analyzing DLT for payment transformation in the country. Germany's central bank “Deutsche Bundesbank” started project “BLOCKBUSTER” in early 2016 to utilize digital ledger for interbank settlements in Germany \[[17](#9789815051452-C2.html#r17)\]. The Bank of France initiated the project “MADRE” in mid-June 2016 for digital currencies. Project “SALT” was started by Banco Central for Brazil in September 2016 \[[18](#9789815051452-C2.html#r18)\]. The United States Federal Reserve published its first Central Bank Digital Currency report in September 2016 \[[19](#9789815051452-C2.html#r19)\]. In November 2016, the Ubin project was started by Singapore's central bank and financial regulatory. The Bank of Japan and European Central Bank started the project Stalla in December 2016 \[[14](#9789815051452-C2.html#r14)\].
+
+### Followers
+
+The organizations which started investing on digital ledger technology during 2017-2018 are classified as followers. Digital currency project LionRock was initiated by The Hong Kong Monetary Authority (HKMA) in March 2019 \[[20](#9789815051452-C2.html#r20), [21](#9789815051452-C2.html#r21)\]. Its aim is to utilize digital ledger technology for interbank settlement in the domestic market of Hong Kong. The Bank of Finland analyzes differences and similarities between general-purpose central bank digital currency and cash, and published a research paper in May 2017 \[[22](#9789815051452-C2.html#r22)\]. To address the issue of declining cash use in Sweden, the central bank of Sweden started project e-Krona in September 2017 \[[23](#9789815051452-C2.html#r23), [24](#9789815051452-C2.html#r24)\]. To address financial inclusion issues in Uruguay, the Central Bank of Uruguay initiated its Central Bank Digital Currency project “e-Peso” in November 2017 \[[25](#9789815051452-C2.html#r25)\]. To analyze the benefits of a digital currency e-Shekel, Bank of Israel formulated a research team. Denmark National bank performed a high level exploration of central bank digital currency and its impact on Denmark's financial market infrastructure, publishing its central bank digital currency report in December 2017 \[[26](#9789815051452-C2.html#r26)\]. The South African Reserve Bank (SARB) started project Khokha in January 2018 to take benefit from DLT in the area of interbank payment settlement. The SUPCAVEN started project Petro in Venezuela to overcome US Dollar dependency and to counter US and European Union sanctions \[[27](#9789815051452-C2.html#r27)\]. To promote Lithuania's financial service industry, a DLT based sandbox called LBChain was introduced in March 2018 \[[28](#9789815051452-C2.html#r28)^(\-)[30](#9789815051452-C2.html#r30)\]. The Swiss National Bank analyzed the adaptability of DLT in Switzerland financial sector in the month of April 2018 \[[31](#9789815051452-C2.html#r31)\]. The first phase of central bank digital currency was revealed by Norges Bank of Norway in May 2018 \[[32](#9789815051452-C2.html#r32)\]. The Reserve Bank of New Zealand published a report in May 2018, exploring DLT's role in optimizing payment system efficiency \[[33](#9789815051452-C2.html#r33)\]. The project Inthanon was initiated by The Bank of Thailand \[[34](#9789815051452-C2.html#r34)\] in August 2018, to explore DLT potential in the area of Thailand's FMIs.
+
+ 
+
+### New Entrants (2019)
+
+In February 2019, the Bank of Korea published a research paper on the assessment of the impact of general purpose account-based CBDC (GA-CBDC) on the financial market stability using two distinct monetary general equilibrium models \[[35](#9789815051452-C2.html#r35)\]. The Bank of Japan published its first official paper \[[36](#9789815051452-C2.html#r36)\] on CBDCs to assess the potential impact of CBDCs on payment efficiency on FMIs.
+
+In May 2019, the Bank of Canada and MAS published the project Jasper-Ubin \[[37](#9789815051452-C2.html#r37)\] report, the world's first CBDC experiment that enabled the settlement of cross-border interbank payments on two distinct DLT platforms denominated in two different currencies. The project Jasper-Ubin was based on an alternative cross-border interbank payments settlement model \[[38](#9789815051452-C2.html#r38)\]. Under the auspices of the ECB, the ECB Crypto-Asset Task Force published an analysis of crypto-assets in May 2019 \[[39](#9789815051452-C2.html#r39)\]. The paper provided a standardized definition for crypto-assets and examined their implications for the broader economy from the monetary policy perspective.
+
+ 
+
+## DLT FEATURES AND PROPERTIES
+
+This section highlights the preliminary of this research work along with the simulation environment.
+
+### DLT Based Blockchain in Digital Currencies
+
+DLT has been closely associated with digital currencies since its invention because it was projected as the underlying technology of Bitcoin. Satoshi Nakamoto published a white paper and described the technology as “electronic payment system based on cryptographic proof instead of trust, allowing any two willing parties to transact directly with each other without the need for a trusted third party” \[[40](#9789815051452-C2.html#r40)\].
+
+Blockchain technology for Bitcoin emerged as a solution for “double-spending” which was a challenge for the digital transformation of money. Prior to the invention of Bitcoin, a trusted central party to avoid double spending handled transaction validation. The beauty of DLT is that it protects system integrity and provides security using cryptographic solutions in a decentralized ledger that is managed by anonymous parties without having trust among themselves. The motive behind designing the Bitcoin blockchain was to create a virtual currency based on a digital platform that is beyond government control and hide network participant’s identity. Unlike HTML or HTTP, Bitcoin was an ideological project in the the start, deeply embedded in the anti-censorship ideology of the online community from which it emerged, known as “cypherpunks”, which promotes a radical strand of techno-libertarianism \[[41](#9789815051452-C2.html#r41)\]. DLT technology has many potential applications other than digital currencies. Due to “anonymity” feature, Bitcoin has become popular among the criminals and is used for financial frauds and other illicit activities. The anonymity of transacting partners is maintained, but all Bitcoin transactions are visible to the public, which are recorded in a distributed ledger. A Bitcon transaction can be associated with a particular anonymous entity. This anonymity process is analogous to that of email address anonymity. All Bitcoin transactions contain pseudonyms which have sender's and the receiver's wallet address. Like email, transaction addresses are known but owners can remain anonymous.
+
+Many features of the Bitcoin blockchain raised an alarm for regulatory authorities and governments and had affected the cryptocurrency's reputation. There is a significant rise in ransom demand using computer malware and ransom amount demanded in the form of bitcoin for transaction anonymity. Bitcoin exchange includes lack of regulation and bitcoin's data loss problem is a major challenge. The loss of your wallet's private key can lead to loss of your entire amount in the wallet.
+
+### DLT Features
+
+The centralized ledgers with role-based permissions, which can be edited by authorized participants in a network, have been in practice for a long time. The concept of immutable and distributed ledger, was proposed through DLT. There are three key features of DLT: distributed ledger, cryptographic methodology and the consensus mechanism. DLT is not well-defined technology; instead, it is under development and its design depends on the stakeholder's requirements.
+
+ 
+
+### Distributed Property of the Ledger
+
+The beauty and innovation in DLT is that one entity does not have control over the ledger but it is among network nodes or number of nodes, as decided. It implies that in a digital ledger, past data entries cannot be amended or new additions to the ledger cannot be approved by a single entity. To form new entries in the ledger, a consensus mechanism (decentralized in nature) is used to newly added entries to the blockchain. Post successful validation, the new transaction is amended to respective ledgers to maintain network level data consistency.
+
+This feature of the distributed ledger technology permits peer-to-peer network participants to verify and record data in their corresponding ledgers without depending on a trusted central party. The elimination of the central party requirement optimizes cost and speed by controlling efforts associated with ledger reconciliations and its maintenance. In the absence of a single attack point, it also greatly strengthens security aspects. The majority of servers in the network have to be compromised by an attacker to corrupt the ledger. Corrupting a single or part of network participants does not have any impact on the system's integrity. However, a software layer on top of the distributed ledger can be vulnerable to attack if not designed properly. Design issues in the software layer caused a significant financial damage to Mt. Gox in Japan and Bitfinex \[[42](#9789815051452-C2.html#r42)\].
+
+### Validation using “Consensus Mechanism”
+
+Nodes in the network need unanimity for new data entries validity. Therefore, a mechanism called “consensus mechanism” is introduced in Distributed Ledger's algorithmic design. In a distributed ledger, any node can propose a new transaction addition to the ledger. It can also be a case in a distributed ledger, where only few nodes are allowed to propose an addition of a new transaction to the ledger. Utilizing cryptographic validation for a digital ledger consensus mechanism, legitimacy of a particular transaction is verified. The consensus mechanism is also useful for conflicts resolution in case of simultaneous competing entries. In case of permissionless digital ledger, consensus mechanism ensures accurate transaction sequencing and prevents bad actors take-over. Sequencing and the consensus mechanism are useful to handle double-spend problem. A concept “proof of work” is used in a global decentralized network to establish consensus. A “proof of work” protocol is must at every new block addition to the chain. This is a complex challenge to solve but easy to verify. It involves heavy computing power and processing time. The proof-of-work is exercised by executing one-way cryptographic hashing algorithms (repeatedly) until a number string is produced that satisfies a predefined condition. In the case of the Bitcoin blockchain, the number contains leading zeros and the proof-of-work generation process is referred to as “mining”. It is computationally very difficult to solve this “proof-of-work” puzzle. Without costly computing resources, there is less chance for a single node in the network to generate the required proof-of-work. The Bitcoin system is designed in such a way that in every ten minutes, a valid proof-of-work is produced. The priority is given to the protocol with the higher difficulty score, that means in case two proof-of-work are generated at same time, the protocol with higher difficulty score is considered as valid. The entity “miner” receives a reward in the form of Bitcoins that produce a valid proof-of-work. This reward helps to maintain system integrity. The network security depends on the large number of nodes that are incentivized to accurately validate ledger changes and consensus establishment to maintain data consistency across the network. The “proof of work” imposes a heavy computational cost on participants for maintaining the digital ledger. It is required in the distrusted participants system.
+
+The electricity consumption by Bitcon miners is quite high. If the Bitcon network were to scale to levels like MasterCard and Visa, the electricity requirement would be more than the existing electricity consumption worldwide. This problem majorly exists in Bitcoin blockchain. Another DLT system used by Ethereum digital currency has a faster consensus mechanism and requires significantly less computational resources. In permissioned blockchain, network participants are trusted and pre-selected, therefore they do not require difficult “proof of work” as a consensus mechanism. There are other consensus mechanisms which offer seniority over computing power and require certain asset's proof of ownership for example proof-of-stake. Fig. [(**2**)](#9789815051452-C2.html#f2) explains a centralized ledger and a distributed ledger (with and without permission).
+
+ 
+
+### Digital Signatures and Hash Functions
+
+Every new data entry is encrypted using the hash function on the original message. It means only one hash is possible for one original input and it is impossible for another input to have the same hash \[[43](#9789815051452-C2.html#r43)\]. A ‘transaction block’ contains this hashed transaction with a size limit \[[44](#9789815051452-C2.html#r44)\]. Hash helps in detecting transaction data tempering as hash is computed at receiver’s end, that generates a different hash than the original hash in case of tempering. Fig. [(**3**)](#9789815051452-C2.html#f3) explains the public key cryptography in digital signatures.
+
+![](Images/9789815051452-C2-F2.jpg)**Fig. (2))**  
+Distributed ledger. 
+
+The transaction blocks are digitally signed using a digital signature. ‘Public key cryptography’ is used for digital signature in DLT. Append-only chain of ‘transaction blocks’ is formed that contains a digital message (hash digest) to be added to the ledger, a consensus mechanism output (proof-of-work), digital signature of the hash using sender’s private key, sender’s public keys and intended recipients of the transaction. Fig. [(**4**)](#9789815051452-C2.html#f4) explains a blockchain structure example: In a blockchain of 4 blocks, the last block (block 5) is added. Block 1 is the ‘genesis block’. Each block contains previous block reference to maintain chronological blocks ordering, a hashed digest transaction series and a digital signature.
+
+![](Images/9789815051452-C2-F3.jpg)**Fig. (3))**  
+Digital signatures public key cryptography. 
+
+In Fig. [(**3**)](#9789815051452-C2.html#f3), block 5 represents the newest addition to this blockchain which updates the ledger.
+
+Once a new block is added to the chain *via* a specified consensus mechanism, the chain cannot retroactively be changed and blocks cannot be deleted or amended without redoing the proof-of-work protocol for each block. This means that as the chain grows in length, this becomes progressively more difficult because all the nodes are constantly competing for solving proof-of-work puzzles and adding new blocks to the chain. In doing so, they only consider the transaction blockchain that reflects the greatest amount of the computational work. Each successful addition to the chain broadcasts to the entire network and all nodes have an up-to-date copy of the entire blockchain.
+
+1\. Mr. A has two keys: a public key, which he shares with the entire network, and a private key that is only known to Mr. A.
+
+2\. Mr. A uses his private key to encrypt a “hash” of the digital message, which is then propagated to the entire network. The encrypted hash is called the “digital signature”.
+
+3\. Network participants receive the digital message with a digital signature.
+
+4\. Mr. B can then use Mr. A’s public key (which he has shared with him) to validate that the digital message was encrypted with A’s private key and Mr. A is the sender of the message.
+
+![](Images/9789815051452-C2-F4.jpg)**Fig. (4))**  
+Structure of blockchain. 
+
+## DLT ADVANTAGES
+
+Distributed ledgers have many advantages over centralized ledgers. Advantages are listed below.
+
+### No Middleman and Decentralized in Nature
+
+DLT eliminates the need for central authority and enables digital value transfer between two parties with decentralized record keeping. This saves the cost, improves scalability and speed.
+
+DLT enables automation using programming by automatically executing pre-agreed conditions on some events *e.g.* automatic payment of invoices on arrival of shipment. In a digital ledger, the counterparties agree on the defined conditions at the completion of the transaction, and all parties have the same set of transaction records. In addition, the execution result of “smart contract” will lead to a reconciled legacy ledger system.
+
+ 
+
+### Improved Auditability and Enhanced Transparency
+
+Each network node has a full identical copy of the encrypted distributed ledger. The changes are possible only with consensus mechanisms upon real time network propagation. This feature helps to manage reconciliation costs and reduce fraud.
+
+ 
+
+### Perpetual and Testable
+
+DLT has an immutable/perpetual and testable transaction audit trail of any asset. Perpetuity nature of a transaction does not mean that a countervailing disputed transaction cannot be created. The original transaction record will be still available in this case.
+
+ 
+
+### Speed and Efficiency Gain
+
+DLT optimizes efficiency and improves speed by eliminating intermediaries and by automating processes.
+
+ 
+
+### Reducing Cost
+
+DLT eliminates the need for reconciliation and thus reduces the cost as every DLT contains the “shared truth” and there is no need to verify one “truth” with another counterparty. DLT lowers the infrastructure costs for ledger maintenance and reduces chance of fraud. Distributed ledger technology can save $15-20 billion for the financial industry \[[45](#9789815051452-C2.html#r45)\].
+
+ 
+
+### Improved cybersecurity Elasticity
+
+DLT provides a more flexible system than centralized system and provides a better shield against cyber-attacks due to its distributed property and absence of a single attack point. When compared with the centralized design paradigm, DLT is an alternative design paradigm for decentralized operational model and business. This will lead to a higher degree of automation, scalability and faster processing potential. We will understand it by comparing a centralized collateral registry with DLT based collateral registry system. In case of a centralized approach of establishing a collateral registry, a dedicated platform is set up by a central entity followed by membership criteria establishment and establishment of rules and procedures. All transactions and actions are initiated by the centralized platform. This platform is developed using standardized software development tools to address specific business requirements.
+
+In contrast, a DLT-based approach involves a collateral registry of peer-to-peer transactions with peer-defined conditions such as the release date and protocols defining rules in case of transaction failure. Based on the counter parties’ agreement, a DLT-based collateral registry system can be tailored without setting up a centralized system for a particular collateral. The role of the administrator in a DTL-based system is minimal. Business actions can be triggered without external intervention and are event-driven. As resource requirements at the administrator level are limited, setting up a DLT-based collateral registry system is faster and scalable. All participants share the processing load and collateral transactions business logic can be customized on counter parties’ requirements.
+
+ 
+
+## DLT RISKS AND CHALLENGES
+
+The technology is emerging and many issues are to be addressed including regulatory and legal issues. There are many issues related to migrating payments, financial infrastructure and digital ledger technology. A cohesive collaboration and coordination are required for security settlement systems and central counterparties. The common challenges of DLT including regulatory, technological and legal are listed as below:
+
+ 
+
+### Technical Issues
+
+ 
+
+#### Immature Technology
+
+DLT is still in the infant development stage and there are complex challenges about flexibility and robustness of DLT. In addition, there are concerns about volumetric transactions, supply of skilled professionals, availability of software applications and standardized hardware. However, top IT organizations and financial majors have started investing in the development of DLT products and services to provide the same confidence as existing IT systems offer.
+
+#### Transaction Response Time and Scalability
+
+Current permissionless distributed ledgers encounter issues regarding blockchain scalability in terms of verification speed and transaction volume. Only 4-5 transactions per second are processed by Bitcoins due to the block size limit of one megabyte. The limited block size is a matter of controversy in the bitcoin community. An increased block size could be time consuming to propagate in the network and lead to forking. The Ethereum DLT system supports higher transaction throughputs. Permissioned blockchains are less transparent; more centralized but have a higher capacity to process volumetric transactions. Permissioned blockchains do not extend much benefit from open nature distributed public DLT systems.
+
+#### Integration and Compatibility
+
+DLT systems should integrate with existing technologies and be compatible with other ledgers. The cost of integration of DLT into the existing financial system involves huge expenses. There are frameworks under development like CORDA framework and Fabric framework to address specific industry issues in the area:
+
+ 
+
+*   Allowing peer-to-peer transactions between counterparties; it is needed for counterparties’ identity validation;
+*   Need to know basis transaction visibility; it is needed for transactions access to regulators;
+*   Maintaining equivalence between original legal process and smart contracts;
+*   Interoperability between various distributed ledgers;
+*   Utilizing existing software tools;
+*   Supporting multiple consensus mechanisms.
+
+These frameworks explore the digital ledger approaches in line with existing regulatory and industry practices. The hyperledger framework initially focuses on the financial sector and further on the supply chain, whereas the CORDA framework is used exclusively for the financial sector.
+
+##### Cybersecurity
+
+Research shows there are approximately 15-50 bugs in every 1000 lines of code \[[46](#9789815051452-C2.html#r46)\]. DAO attack on Ethereum blockchain proves that any weakness in software application can be exploited for harmful effects. Distributed nature of the ledger makes network security an important aspect so that core rules of the DLT system can be safeguarded from attackers. In a type of attack called “51% attack”, hackers take control of 51% network resources, manipulate consensus and bluff with the network. Robustness of a network depends upon its ability that no entity can take control of half of the resources for a particular blockchain. The software applications to interact with these digital ledgers need to be carefully monitored and reviewed. This can be a case when an attacker takes control of a permissionless system, has identity details and continues to take control of the majority of network participants. The recent attacks on multiple Ethereum nodes using standard Distributed Denial of Service (DDos) attacks show that the existing cyber attack techniques can be used for DLT systems.
+
+This is the point to note that even after successful attacks at the DLT access interface, the core technology of Bitcoin and other blockchain systems has never been compromised.
+
+##### Effective Governance
+
+Non-availability of central entity or centralized infrastructure put a question on overall effective governance of the infrastructure. It is very difficult to make critical decisions in DLT infrastructure. The financial organizations rely on a centralized regulatory for effective governance. In case of permissionless DLT, the applicability of governance arrangements is not clear. In permissioned DLT, the administrator may or may not have adequate authority and tools to ensure governance arrangements among network nodes.
+
+### Legal and Regulatory Issues
+
+#### Industry Standards and Regulatory Evaluation
+
+Industry standards and regulatory evaluation are in the infant stage of development. Global financial regulatory is actively involved in analysis of technology but the actual regulatory DLT framework is missing.
+
+#### Jurisdiction and Ownership - Legal Clarity
+
+There are pointed concerns in payment and settlement systems regarding transaction's “point of finality”. It is a big question that how “point of finality” can be described in a digital ledger environment. Data and transaction jurisdiction are not defined in the cross-border digital ledger system. As there is no central administration entity for digital ledger, regulatory protocol setup is tricky and difficult for open permissionless distributed ledger systems. As there is a central administrator in the permissioned ledger, regulatory framework setup and maintenance is comparatively straightforward and viable.
+
+#### Customer Due Diligence and Know-Your-Customer
+
+DLT systems should mandatorily follow and incorporate Customer Due Diligence (CDD) and Know-Your-Customer (KYC) practices to Combat Financial Terrorism (CFT) and to prevent Anti-Money Laundering (AML). The identity disguises property of permissionless DLT systems making it very hard to comply with existing regulatory guidelines regarding AML/CFT and permit un-vetted parties to do transactions. Some DLT exchanges promote KYC requirements by offering priority transaction time and verification if the user provides KYC information. In permissioned DLT systems, it is easy to comply with AML/CFT guidelines due to centralized control.
+
+#### Dispute Resolution Mechanism
+
+In case of distributed ledgers, the mechanism for dispute resolution needs to be set up; especially in case of erroneous transactions. One solution is to integrate a reverse transaction framework. In the reverse transaction framework, a separate transaction is initiated to provide permission to the original sender. For this, there is a requirement of a set of rules that can be executed in the specific circumstances to initiate reversals. Without a set of rules in place, faulty transactions could face an issues to access fund. These set of rules are administered by a central entity called scheme owner in the case of traditional systems like Visa, MasterCard *etc.* In case of the permissioned digital ledger, this role is handled by digital ledger administrator. In permissionless digital ledger systems, smart contracts automate the role. There are concerns related to the liabilities that may arise for losses due to digital ledger weak points. These issues can be handled effectively in the case of permissioned systems rather than permissionless systems.
+
+#### Privacy
+
+The identity of the user is not exposed in case of permissionless ledgers like Ethereum and Bitcoin. In some cases, the user's identity can be inferred on the basis of some markers like transaction patterns. The issue is same as in the case of a permissioned digital ledger. This is the major challenge in applying digital ledger technology to financial infrastructures and many organizations are working on its design.
+
+#### Infrastructure Cost
+
+Utilizing consensus mechanism and proof-of-work need enormous computational resources/infrastructure, which leads to huge power consumption for mining.
+
+ 
+
+## DLT APPLICATIONS
+
+There are many applications of the digital ledger technology in wide variety of industries including financial sector. Two potential areas of DLT applications are: 1) Fintech companies are exploring to utilize blockchain infrastructure to develop digital applications for multipurpose use; and 2) industry leaders are investing on research, to develop proprietary permissioned blockchain and address the need of enterprise solutions specific to industry. There is a huge interest of financial sector in DLT and its proof of concept. “Hyperledger” - an open source consortium has more than 170 organization as its member; and “R3CEV”- blockchain R&D organization for financial sector, has more than 100 members including commercial banks, regulators and other trade associations \[[47](#9789815051452-C2.html#r47)\]. Stock exchanges including NASDAQ, NYSE and LSE are exploring DLT to improve security in transactions \[[48](#9789815051452-C2.html#r48)\]. DLT has the ability to transform the every stocked are traded and issued the potential to replace existing stock exchanges systems.
+
+ 
+
+*   IBM and The Tokyo Stock Exchange are exploring blockchain for trade monitoring and recording in low-transaction markets.
+*   The US Security Exchange approved a plan to issue overstock company stocks using the Bitcoin blockchain in 2015 \[[49](#9789815051452-C2.html#r49)\].
+*   ”Deutsche Borse” - Germany's stock exchange and central bank develops a blockchain framework for digital asset trading \[[50](#9789815051452-C2.html#r50)\].
+*   A blockchain-backed market is launched by Korea Exchange KRX for startups equity shares. This is named as Korea Startup Market (KSM) in association with a Korean startup “Blocko” \[[51](#9789815051452-C2.html#r51)\].
+*   A startup organization “Digital Asset Holdings” and The Australian Stock Exchange are testing DLT to optimize clearing and settlement processes.
+*   A blockchain-based system is developed for credit fraud in the post-trade processing mode. This has been developed by three technologies organizations - IBM and two blockchain startups - R3 and Axoni \[[52](#9789815051452-C2.html#r52)\].
+
+ 
+
+## DLT AND FINANCIAL INCLUSION
+
+DLT has capabilities to improve resilience, reliability and efficiencies for the financial sector and its infrastructures. Despite strong expansion of financial inclusion, there are challenges to bring excluded communities into the financial system. The benefit of DLT systems are likely to be harnessed by financial institutions and fintech organizations. DLT has potential to enhance financial inclusion by addressing following financial issues:
+
+ 
+
+*   Half-baked security framework for transactions and collateral securities.
+*   Reasonable financial services.
+*   Lack of due diligence requirements including KYC verifiable identity systems.
+*   Poor credit and payment infrastructure.
+*   International remittances de-risking impact.
+
+Application of DLT for improved financial inclusion:
+
+ 
+
+*   Asset Registries
+*   Cross-border remittances
+*   Digital currencies
+*   Digital ID systems
+
+ 
+
+## Cross border Remittance and Payment
+
+Cross border payments are generally conducted by a network of correspondent banks and involve long delays, high costs and uncertainty. These transactions involve multi point transaction fees and are restricted to the bank's business hours. The fee involved fees charged for cross-border transfer (correspondent banks and other intermediately organizations involved in payment infrastructure), fees charged by receiving institutions and by sending institutions.
+
+Non-banking institutions have their proprietary frameworks in place, that involveprefunding at receiving institutions to settle periodic aggregated amounts and to enable faster disbursement. There is a huge improvement in cross border remittance due to the collaboration and tie-up between financial institutions, matured systems and high-level optimizations for the processes. However, there is not much innovation involved in it and the service fees continue to be a big portion *i.e.* 20% of the total cost \[[53](#9789815051452-C2.html#r53)\]. DLT can replace correspondent banking systems and can eliminate inefficiency in the existing system by offering cost reduction in interbank cross-border transactions. DLT can help to bring down remittance prices further by increasing inter-bank and cross-border transfers efficiency and by lowering settlement costs. DLT can open doors for new approach to the correspondent banking system, which can further address de-risking issues. Some of the examples are listed below:
+
+### Ripple
+
+Ripple focuses on cross-currency fund settlement combined with cross border commercial payments. Ripple uses a unique approach that involved “path” identification for sender's fund flow in a particular currency to receiver’s particular currency utilizing services (for that currency), offered by a series of participant institutions. This can expand access to foreign exchange services for micro remittances companies and discover better price for foreign exchange. XRP is Ripple's own cryptocurrency, which is registered to trade on many cryptocurrency exchanges. Ripple has its own exchange that involves the exchange of top currencies like EUR, USD, CNY and JPY. The exchange is actively done other than cryptocurrencies like ether and Bitcoin. The Shanghai Huarui bank announced to use Ripple for its remittance product on the USA-China network \[[54](#9789815051452-C2.html#r54)\].
+
+### Abra
+
+Abra combines physical bank tellers with cryptocurrency and offers instant money transfer without transaction fee in peer-to-peer mode. In Abra, no bank account is required for cross border payment; recipient's phone number is the only requirement. In addition to Bitcon, Abra supports over 50 currencies globally.
+
+### Bitpesa
+
+It offers cross-border payment for individual and businesses between China and some African countries like Kenya, Nigeria, Tanzania, Uganda \[[55](#9789815051452-C2.html#r55)\].
+
+### Bitt
+
+It is Caribbean's based bitcoin exchange organization, that focuses on creating a unified payment settlement network for CARICOM region.
+
+ 
+
+## Smart Contracts
+
+In the context of DLT, 'Smart contracts' are programs that automatically executed by network nodes and developed on the underlying distributed ledger. A smart contract can execute any instruction that a computer could execute. Smart contracts are triggered by transactions on the distributed ledger and the resultant is stored in the ledger. Smart contracts “allow for logic to be programmed on top of the blockchain transaction” \[[56](#9789815051452-C2.html#r56)\]. Digital ledgers that are not blockchain can execute smart contracts. Same data must be available to all network nodes, thus each node should verify smart contracts.
+
+Smart contract was first coined in 1997 by Nick Szabo where he takes vending machines to explain the idea of a smart contract \[[57](#9789815051452-C2.html#r57)\]. The vending machine manages asset ownership and transfers the ownership of asset on coin insert. The vending machine ensures the 'contract' term to be followed that defines conditions, the underlying assets, its inputs and subsequent actions. Security sales or purchase at a predefined price would be automatically executed by a computer program. Applications of smart contracts could be mergers and acquisitions, derivatives markets and in security transactions.
+
+DLT system enables a platform for smart contracts to control real-world assets like share, land title *etc.* without third party requirement such as a land title administrator or a broker. This can be possible because the distributed network nodes are capable of executing code and contract enforcement. Fig. [(**5**)](#9789815051452-C2.html#f5) explains the utilization of smart contracts in trade finance. A similar DLT-based methodology can be applied to other domains such as collateral registry or mortgage process.
+
+![](Images/9789815051452-C2-F5.jpg)**Fig. (5))**  
+Trade finance smart contract. (ING/Wall Street Journal – “Banks Turn to Virtual World to Modernize Physical Commodities Trading”, By Stephanie Young, 04 Apr 2017, Wall Street Journal [https://www.wsj.com/articles/banks-](https://www.wsj.com/articles/banks-) turn-to-virtual-world-to-modernize-physical-commodities-trading-1491 303623) 
+
+Smart contracts have attracted businessmen because they facilitate the idea of automated organizations that do not depend on any human inputs except financial backing personnel. Among the world's biggest public blockchain, Ethereum is a well optimized for smart contract applications. Venture capital funds for automated businesses have been launched on the Ethereum platform by Decentralized Autonomous Organizations (DAOs). The working of DAO's is as:
+
+ 
+
+*   Smart contracts are formulated by a group of people to run the organization.
+*   People provide funds (in an initial funding period) to DAO to represent ownership by purchasing tokens. This is referred as initial coin offering (ICO) or crowd sale. It enables organizations to set up required resources.
+*   Post funding period, DAO starts to operate.
+*   People can suggest DAO to invest the money and members have the right to vote for approval/rejection \[[58](#9789815051452-C2.html#r58)\].
+
+The DAO entity “Ethereum” system was attacked in June 2016. In the attack, the intruder transferred 3.5 million “ether” cryptocurrency (valued around US$50). The intruder identified an exploit bug in the DAO software but the base Ethereum blockchain was not compromised. This attack is an instance of security vulnerability, that exists on the application layer on top of the blockchain. To recover the stolen funds, the Ethereum community decided to complete “hard fork” for Ethereum blockchain. Ethereum blockchain was divided into two active cryptocurrencies called Ether/Ethereum One/Ethereum Core and Ethereum Classic. The first one contains the restored stolen funds hard fork and the later contains stolen funds original transaction under hacker's control. The use of DLT combined with automated smart contracts raise a number of regulatory and legal issues in addition to technical vulnerabilities. These issues are related to jurisdiction, liability, voidability and amendments of contracts.
+
+ 
+
+## EXPERIMENT PRACTICES
+
+Best practices are discussed in this section including approaches adopted by banks for their central bank digital currency initiatives.
+
+ 
+
+### Project Jasper
+
+The project was launched by the Bank of Canada, Payments Canada, a few other Canadian organizations and a blockchain organization R3 in March 2016 \[[59](#9789815051452-C2.html#r59)\].
+
+ 
+
+#### Phase I
+
+Phase I of JASPER was launched in March 2016 and aimed to build proof of concept based on DLT technology for interbank settlements \[[16](#9789815051452-C2.html#r16)\]. For each participating Ethereum entity, distributed nodes were created. Bank of Canada approves or rejects transaction using smart contracts based on autonomous transaction agents. Every Jasper Phase I transactions were synchronized and updated on every node \[[60](#9789815051452-C2.html#r60)\].
+
+ 
+
+#### Phase II
+
+To fix the issues of Jasper Phase I, Phase II was introduced in September 2016 to explore and recreate Jasper Phase I prototype on a different DLT platform. Phase II of Jasper was developed on Corda. Phase II of Jasper introduced two more participants in addition to the Phase I participants. In contrast to Jasper phase I implementation, Phase II implemented a liquidity-savings mechanism (LSM) and an atomic settlement capability based on Corda. Phase II of Jasper has backward compatibility to support Phase I support including deferred and atomic net settlement options.
+
+ 
+
+#### Phase III
+
+In October 2017, Phase III of Jasper was initiated by the Bank of Canada to harness DLT features for multiple asset type exchanges . Organizations participating in Jasper Phase III were the Bank of Canada, TMX Group, Payments Canada, R3 and Accenture. TMX is a financial organization in Canada which works for many security exchanges and is the owner of Canadian Depository for Securities \[[61](#9789815051452-C2.html#r61)\]. The CDS is the settlement hub and national clearing center for securities depositories in Canada \[[62](#9789815051452-C2.html#r62), [63](#9789815051452-C2.html#r63)\]. The aim of Jasper Phase III was to develop a proof of concept based on DLT, that permits multiple asset types to be exchanged on shared ledger. Jasper Phase III enables tokenized financial assets and atomic settlement capabilities on an integrated platform. The prototype was hosted on Microsoft cloud and implemented on Corda v2.0.
+
+ 
+
+### Project BLOCKBASTER
+
+Project BLOCKBASTER was started in March 2016 by Deutsche Borse Group and Deutsche undesbank after motivated by technology capability in the financial services industry \[[64](#9789815051452-C2.html#r64)\].
+
+The project goal was to harness blockchain to improve Germany's security settlement FMI back office services. Central bank of Germany is Deutsche Bundesbank \[[65](#9789815051452-C2.html#r65)\] and is one of the world's biggest securities exchange centers \[[66](#9789815051452-C2.html#r66)\]. It manages and operates a clearing house “Clearstream”, based in Luxembourg. The BLOCKBASTER was initiated to develop a prototype based on DLT for cash securities settlement. The project BLOCKBASTER used two digital ledger platforms named Hyperledger Fabric and Digital Assets to implement lifecycle management prototype and a full interbank bond issuance. Cash assets and tokenized bond were securities settled on project BLOCKBASTER. The project BLOCKBASTER was restricted to settlement based on DLT that matched cash or securities trades only to enable applicability assessment of DLT and rapid prototyping. Banks interest rate payment capabilities were built in BLOCKBASTER project. Market making, bond pricing and LSM settlement capabilities were not in scope for BLOCKBASTER project.
+
+ 
+
+### Project SALT
+
+Project SALT was started in September 2016 by The Banco Central do Brazil with the motive to explore DLT use cases for central banks. Four use cases were identified to select one of them to implement. The system identified was the Alternative System for Transaction Settlement (SALT) as standby system for Brazil's RTGS system based on multiple DLT platforms. First phase of project SALT was to implement proof of concept on an Ethereum fork system in sixty days startedin September 2016 \[[67](#9789815051452-C2.html#r67)\]. In Phase II of SALT, it was implemented on Quorum and Fabric in a period of forty five days started in January 2017 \[[67](#9789815051452-C2.html#r67)\]. In addition to this, tokenized Brazilian Real (BRL) central bank digital currency asset was implemented by Project SALT.
+
+ 
+
+### Project UBIN
+
+Project Ubin was started in November 2016 and implemented by Singaporean PSPs, MAS and industry collaboration. It was an initiative for Singapore's Central Bank Digital Currency to explore DLT and its applicability in Singapore financial market infrastructure \[[68](#9789815051452-C2.html#r68)\]. MAS is the financial regulatory and central bank of Singapore. MAS manages and controls MAS Electronic Payment System (MEPSC) and Singapore's RTGS system. MEPSC is a type of financial market infrastructure used for Scriptless Singapore Government Securities (SGS) and Singapore domestic wholesale interbank payment settlement for MEPSC members \[[69](#9789815051452-C2.html#r69)\]. Phase I of Ubin implemented a central bank digital currency based on Ethereum DLT platform for domestic wholesale interbank payment settlement \[[69](#9789815051452-C2.html#r69)\]. Phase II enhances Phase I with additional features on Quorum, Fabric and Corda to address settlement functionality and data privacy challenges that occurred in Phase I \[[70](#9789815051452-C2.html#r70)\]. Phase III of Ubin developed DvP capabilities for interbank payment settlement and security on different DLT platforms. The end goal of project Ubin was to provide capabilities for SGD depository receipt or tokenized Singapore Dollar on digital ledger technology and to analyze the impact on Singapore financial market infrastructures.
+
+### Project Stella
+
+The ECB and the Bank of Japan started project Stella to analyze the feasibility of DLT to financial market infrastructure in both jurisdictions \[[71](#9789815051452-C2.html#r71)\]. Eurozone monetary policies are administered by the ECB. In the Eurozone, the TARGET2 system (settlement system for high value interbank transactions) is in use for monetary policy operations \[[72](#9789815051452-C2.html#r72)\]. TARGET2 system is owned and operated by the Eurosystem, that comprises National central banks of European Union Member States and the ECB \[[73](#9789815051452-C2.html#r73)\]. Monetary policy in Japan is administered by The Bank of Japan, Japan's central bank. It manages Japan's wholesale LVTS, and BOJ-NET. Project Stella uses multiple DLT platforms and has been implemented in three phases. In Phase I, core RTGS functionality and Central Bank Digital Currency was implemented on Fabric DLT platform. DvP functionality for tokenized security settlement on Corda, Fabric and Elements were implemented in Project Stella Phase II \[[74](#9789815051452-C2.html#r74)\]. Phase III of Project Stella aimed at improving cross border transactions efficiency using DLT \[[75](#9789815051452-C2.html#r75)\]. Fabric DLT platform was used to implement Project Stella.
+
+### Project Khokha
+
+Project Khokha was started in January 2018 by PricewaterhouseCoopers, the SARB, ConsenSys and seven South African CMBs to utilize DLT for South Africa wholesale interbank payments settlement domestically \[[76](#9789815051452-C2.html#r76)\]. The aim of Project Khokha was to establish a DLT driven RTGS system using tokenized Rand assets for interbank payment settlement in South Africa. The Quorum DLT platform was used for its prototype. In South Africa, the RTGS system is referred to as South African Multiple Option Settlement System (SAMOS). SARB owns and manages SAMOS are used for interbank retail payment obligations, high-value interbank payments and South African security settlement. SAMOS has capability to process approx. 70,000 transactions (wholesale interbank) daily on RTGS framework with capacity to process daily transactions in two hours in case of system failure and emergency operations \[[76](#9789815051452-C2.html#r76)\].
+
+### Project INTHANON
+
+The Bank of Thailand in collaboration with R3 and other organizations started Project Inthanon in August 2018 to evaluate the DLT capabilities for Thailand's financial market infrastructures \[[34](#9789815051452-C2.html#r34)\]. Project Inthanon was divided into two phases. Phase I of Inthanon developed a RTGS prototype based on DLT-based distribution targeting Thailand's domestic wholesale interbank payment settlement \[[34](#9789815051452-C2.html#r34)\]. In Phase II of project Inthanon, development of a securities settlement platform for the management, for the issuance and settlement of Bank of Thailand issued tokenized cash assets and tokenized bonds.
+
+## SUMMARY
+
+This chapter explained Distributed Ledger Technology (DLT) and its application in the financial sector. The chapter detailed blockchain based Digital Ledger Technology and its working. The existing works have been studied and analyzed for harnessing digital ledger technology in the banking and finance sector. Digital currencies recommended by central banks are studied for better understanding and its applicability. The working of distributed ledger technology in the context of financial services has been discussed. DLT advantages, risks and challenges have been explored. Detailed analysis of DLT potential applications including financial inclusion, cross border remittance and payments, smart contracts has been elaborated. Current DLT practices in banking and financial domains have been highlighted. In the nutshell, the chapter explains every aspect of DLT with respect to the financial domain for better understanding and its applicability in banking and financial domain.
+
+## CONSENT FOR PUBLICATION
+
+Not applicable.
+
+## CONFLICT OF INTEREST
+
+The authors declare no conflict of interest, financial or otherwise.
+
+## ACKNOWLEDGEMENT
+
+Declared none.
+
+## REFERENCES
+
+|  ||  |
+| --- | --- |
+| \[1\] || Lien K.. The Major Central Banks [https://www.investopedia.com/articles/forex/06/centralbanks.asp](https://www.investopedia.com/articles/forex/06/centralbanks.asp) |
+| \[2\] || Segal T., Potters C., Kvilhaug S.. What Is a Central Bank, and Does the U.S. Have One? [https://www.investopedia.com/terms/c/centralbank.asp](https://www.investopedia.com/terms/c/centralbank.asp) |
+| \[3\] || Nakamoto S.. Bitcoin v0.1 released.[https://www.metzdowd.com/pipermail/cryptography/2009-January/014994.html](https://www.metzdowd.com/pipermail/cryptography/2009-January/014994.html) |
+| \[4\] || Coin Market Cap. Cryptocurrency Market Capitalization. Accessed: Nov. 15, 2019. [https://coinmarketcap.com/](https://coinmarketcap.com/). |
+| \[5\] || Mazieres D.. The Stellar Consensus Protocol: A Federated Model for Internet-Level Consensus [https://www.stellar.org/papers/stellar-consensus-protocol.pdf](https://www.stellar.org/papers/stellar-consensus-protocol.pdf) |
+| \[6\] || Schwartz D., Youngs N., Britto A.. 2014The Ripple Protocol Consensus Algorithm. [http://www.cs.yale.edu/homes/jf/Schwartz.pdf](http://www.cs.yale.edu/homes/jf/Schwartz.pdf) |
+| \[7\] || Buterin V.. Ethereum White Paper: A Next-Generation Smart Contract and Decentralized Application Platform.2015[https://github.com/ethereum/wiki/wiki/White-Paper](https://github.com/ethereum/wiki/wiki/White-Paper) |
+| \[8\] || Tether Ltd. Tether: Fiat Currencies on the Bitcoin Blockchain[https://tether.to/wpcontent/uploads/2016/06/TetherWhitePaper.pdf](https://tether.to/wpcontent/uploads/2016/06/TetherWhitePaper.pdf) |
+| \[9\] || Fung B.S.C., Halaburda H.. Central Bank Digital Currencies: A Framework for Assessing Why and How.Ottawa, ON, CanadaBank of Canada2016 [https://www.bankofcanada.ca/wpcontent/ uploads/2016/11/sdp2016-22.pdf](https://www.bankofcanada.ca/wpcontent/uploads/2016/11/sdp2016-22.pdf) |
+| \[10\] || World Economic Forum[https://docs.google.com/document/d/1c8iGtoG7BkPr-iufnIPELEWvtZi NtouOyJp2IYjhAEY/edit](https://docs.google.com/document/d/1c8iGtoG7BkPr-iufnIPELEWvtZiNtouOyJp2IYjhAEY/edit) |
+| \[11\] || Barontini C., Holden H.. Proceeding With Cautiona Survey on Central Bank Digital Currency.Bank for International Settlement2019[https://www.bis.org/publ/bppdf/bispap101.pdf](https://www.bis.org/publ/bppdf/bispap101.pdf) |
+| \[12\] || Bank of EnglandOne Bank Research Agenda.2015 [https://www.bitcoinnews.ch/wp-content/uploads/2013/12/discussion.pdf](https://www.bitcoinnews.ch/wp-content/uploads/2013/12/discussion.pdf) |
+| \[13\] || Danezis G., Meiklejohn S.. Centrally banked cryptocurrenciesProc. Netw. Distrib. Syst. Secur. Symp.San Diego, CA, USA2016114 |
+| \[14\] || People’s Bank of ChinaDigital Currency Symposium Held in Beijing.2016[http://www.pbc. gov.cn/goutongjiaoliu/113456/113469/3008070/index.html](http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/3008070/index.html) |
+| \[15\] || Varshney N.. People’s bank of china plans to launch its own digital currency.[https://cointelegraph.com/news/peoples-bank-of-china-plansto-launch-its-own-digital-currency](https://cointelegraph.com/news/peoples-bank-of-china-plansto-launch-its-own-digital-currency) |
+| \[16\] || Payments CanadaBank of Canada and R3.2017 [https://www.payments.ca/sites/default/les/29-Sep-17/jasper\_report\_eng.pdf](https://www.payments.ca/sites/default/les/29-Sep-17/jasper_report_eng.pdf) |
+| \[17\] || SUPCACVEN2018[https://whitepaperdatabase.com/venezuela-petro-cryptocurrency-ptrenglish-whitepap er/](https://whitepaperdatabase.com/venezuela-petro-cryptocurrency-ptrenglish-whitepaper/) |
+| \[18\] || Mills D., Wang K., Malone B., Ravi A., Marquardt J., Chen C., Badev A., Badev A., Brezinski T., Fahy L., Liao K., Kargenian V., Ellithorpe M., Ng W., Baird M.. Distributed Ledger Technology in Payments, Clearing, and Settlement.Finance and Economics Discussion Series 2016-095.Board of Governors of the Federal Reserve SystemWashington, DC, USA201610.17016/FEDS.2016.095 |
+| \[19\] || European Central Bank and Bank of Japan2016 [https://www.boj.or.jp/ en/announcements/release\_2019/ data/rel190604a2.pdf](https://www.boj.or.jp/en/announcements/release_2019/data/rel190604a2.pdf) |
+| \[20\] || Hong Kong Monetary AuthorityWelcome Speech at the Best Fintech Awards2017 [https://www.hkma.gov.hk/chi/news-and-media/speeches/2017/03/20170327-1/](https://www.hkma.gov.hk/chi/news-and-media/speeches/2017/03/20170327-1/) |
+| \[21\] || Hong Kong Legislative Council CommissionDevelopment of Financial Technologies.2017 [https://www.legco.gov.hk/yr1617/english/panels/fa/papers/fa20170418cb1-777-3-e.pdf](https://www.legco.gov.hk/yr1617/english/panels/fa/papers/fa20170418cb1-777-3-e.pdf) |
+| \[22\] || Grym A., Heikkinen P., Kauko K., Takala K.. 2017Central Bank Digital Currency. [https://pdfs.semanticscholar.org/9fa6/e095fa409d199e7aec8b50b657a7075fbe9e.pdf](https://pdfs.semanticscholar.org/9fa6/e095fa409d199e7aec8b50b657a7075fbe9e.pdf) |
+| \[23\] || Riksbank S.. The Riksbank's e-Krona Project (Report 1). Stockholm, 2017 [https://www.riksbank. se/globalassets/media/rapporter/ekrona/2017/rapport\_ekrona\_ uppdaterad\_170920\_eng.pdf](https://www.riksbank.se/globalassets/media/rapporter/ekrona/2017/rapport_ekrona_uppdaterad_170920_eng.pdf) |
+| \[24\] || Riksbank S., Stockholm S.. The Riksbank's e-Krona Project (Report 2), 2018 [https://www.riksbank.se/globalassets/media/rapporter/e-krona/2018/the-riksbanks-e-krona project-report-2.pdf](https://www.riksbank.se/globalassets/media/rapporter/e-krona/2018/the-riksbanks-e-kronaproject-report-2.pdf) |
+| \[25\] || Licandro G.. Uruguayan e-Peso on the Context of Financial Inclusion, Central Bank Uruguay, Montevideo, Uruguay, Nov. 2018.de-france-blockchain-project.. 2018 |
+| \[26\] || Nationalbank D.. Central bank digital currency in Denmark? [http://www.nationalbanken.dk/ en/publications/Documents/2017/12/Analysis%20-%20Central%20bank%20digital%20currency%20in%20Denmark.pdf](http://www.nationalbanken.dk/en/publications/Documents/2017/12/Analysis%20-%20Central%20bank%20digital%20currency%20in%20Denmark.pdf) |
+| \[27\] || Jazeera A.. What is Venezuela’s New Petro Cryptocurrency? [https://www.aljazeera.com/news/ 2018/02/venezuela-petro-cryptocurrency-180219065112440.html](https://www.aljazeera.com/news/2018/02/venezuela-petro-cryptocurrency-180219065112440.html) |
+| \[28\] || Bank of LithuaniaPre-Commercial Procurement [https://www.lb.lt/en/pre-commercialprocurement](https://www.lb.lt/en/pre-commercialprocurement) |
+| \[29\] || Bank of Lithuania [https://www.lb.lt/en/news/lbchain-project-six-nancial-products-already-beingtested](https://www.lb.lt/en/news/lbchain-project-six-nancial-products-already-beingtested) |
+| \[30\] || Bank of LithuaniaBank of Lithuania Calls for Proposals to Develop a Blockchain Platform.2018 [https://www.lb.lt/en/news/bank-of-lithuania-calls-for-proposals-todevelop-a-blockchain-platform](https://www.lb.lt/en/news/bank-of-lithuania-calls-for-proposals-todevelop-a-blockchain-platform) |
+| \[31\] || Maechler A.M.. [https://www.snb.ch/en/mmr/speeches/id/ref\_20180405\_amr/source/ref\_20180405 \_amr.en.pdf](https://www.snb.ch/en/mmr/speeches/id/ref_20180405_amr/source/ref_20180405_amr.en.pdf) |
+| \[32\] || Norges BankCentral bank digital currencies. Norges Bank Papers 1/2018.2018 Available: [https://static.norgesbank.no/contentassets/166efadb3d73419c8c50f9471be26402/nbpapers12018centralbankdigitalcurrencies.pdf?v=05/18/2018121950&ft=.pdf](https://static.norgesbank.no/contentassets/166efadb3d73419c8c50f9471be26402/nbpapers12018centralbankdigitalcurrencies.pdf?v=05/18/2018121950&ft=.pdf). |
+| \[33\] || Bascand G.. In search of gold: Exploring central bank issued digital currencyThe Point Conf2018110 |
+| \[34\] || Bank of ThailandProject Inthanon Phase 1.2019 Available: [https://www.bot.or.th/Thai/Payment Systems/Documents/Inthanon\_Phase1 \_Report.pdf](https://www.bot.or.th/Thai/PaymentSystems/Documents/Inthanon_Phase1_Report.pdf). |
+| \[35\] || Kim Y. S., Kwon O.. Central bank digital currency and financial stability.Bank Korea, Seoul, South Korea, BOKWorking Paper201910.2139/ssrn.3330914 |
+| \[36\] || Yanagawa N., Yamaoka H.. Digital innovation, data revolution, and central bank digital currency.Bank Japan, Tokyo, Japan, Working Paper Series 19-E-2.2019 |
+| \[37\] || Bank of Canada and Monetary Authority of Singapore Jasper-Ubin Design Paper: Enabling Cross-Border High Value Transfer Using Distributed Ledger Technologies. Accessed: [https://www.mas.gov.sg/-/media/Jasper-Ubin-Design-Paper.pdf](https://www.mas.gov.sg/-/media/Jasper-Ubin-Design-Paper.pdf). |
+| \[38\] || Monetary Authority of Singapore [https://www.mas.gov.sg/schemes-and-initiatives/Project-Ubin](https://www.mas.gov.sg/schemes-and-initiatives/Project-Ubin) |
+| \[39\] || European Central Bank [https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op223~3ce14e986c.en.pdf](https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op223~3ce14e986c.en.pdf) |
+| \[40\] || Nakamoto S.. "Bitcoin: A Peer-to-Peer Electronic Cash System" [https://bitcoin.org/bitcoin.pdf](https://bitcoin.org/bitcoin.pdf) |
+| \[41\] || Chen A.. We need to know who Satoshi Nakamoto is The New Yorker, 09 May 2016 [http://www.newyorker.com/ business/currency/we-need-toknow-who-satoshi-nakamoto-is](http://www.newyorker.com/business/currency/we-need-toknow-who-satoshi-nakamoto-is) |
+| \[42\] || European Central BankVirtual Currency Schemes.2012 Available: [https://www.ecb.europa.eu/pub/pdf/other/ virtualcurrency schemes201210en.pdf](https://www.ecb.europa.eu/pub/pdf/other/virtualcurrencyschemes201210en.pdf). |
+| \[43\] || Nakamoto S.. Bitcoin v0.1 Released. Accessed: Oct. 7, 2018. [https://www.metzdowd.com/ pipermail/cryptography/2009- January/014994.html](https://www.metzdowd.com/pipermail/cryptography/2009-January/014994.html). |
+| \[44\] || Coin Market Cap. Cryptocurrency Market Capitalization. Accessed: Nov. 15, 2019. CoinMarket Cap. Available: [https://coinmarketcap.com/](https://coinmarketcap.com/). |
+| \[45\] || Buterin V.. Ethereum White Paper: A Next-Generation Smart Contract and Decentralized Application Platform. Accessed: [https://github.com/ethereum/wiki/wiki/White-Paper](https://github.com/ethereum/wiki/wiki/White-Paper). |
+| \[46\] || Schwartz D., Youngs N., Britto A.. The Ripple Protocol Consensus Algorithm. Ripple Labs. Available: [http://www.cs.yale.edu/homes/jf/Schwartz.pdf](http://www.cs.yale.edu/homes/jf/Schwartz.pdf). |
+| \[47\] || CoinDesk, State of Block Chain, Q3 2016.. |
+| \[48\] || [http://www.coindesk.com/10-stock-exchangesblockchain/](http://www.coindesk.com/10-stock-exchangesblockchain/) |
+| \[49\] || [http://www.wired.com/2015/12/sec-approvesplan-to-issue-company-stock-via-the-bitcoinblockchain/](http://www.wired.com/2015/12/sec-approvesplan-to-issue-company-stock-via-the-bitcoinblockchain/) |
+| \[50\] || [http://www.coindesk.com/german-central-bankblockchain-trading/](http://www.coindesk.com/german-central-bankblockchain-trading/) |
+| \[51\] || [http://www.coindesk.com/korea-exchangelaunches-blockchain-powered-private-marketservice/](http://www.coindesk.com/korea-exchangelaunches-blockchain-powered-private-marketservice/) |
+| \[52\] || [http://www.forbes.com/sites/laurashin/2017/01/09/dtcc-selects-partnersfor-blockchain-solution-for-credit-defaultswaps/#1ebe0994ad88](http://www.forbes.com/sites/laurashin/2017/01/09/dtcc-selects-partnersfor-blockchain-solution-for-credit-defaultswaps/#1ebe0994ad88)2017 |
+| \[53\] || Based on analysis of the remittance prices recorded at World Bank remittances price database [remittanceprices.worldbank.org](http://remittanceprices.worldbank.org) across a range of corridors.. |
+| \[54\] || [https://ripple.com/insights/several-global-banksjoin-ripples-growing-network/](https://ripple.com/insights/several-global-banksjoin-ripples-growing-network/) |
+| \[55\] || [https://www.bitpesa.co/blog/connectingpayments-with-africa-and-china/](https://www.bitpesa.co/blog/connectingpayments-with-africa-and-china/) |
+| \[56\] || Autonomous Research LLP Block chain: backoffice block buster. [https://www. autonomous.com/fintech/d9335db1-bf1a-4ab2-8d1d-a36cb747a6ae](https://www.autonomous.com/fintech/d9335db1-bf1a-4ab2-8d1d-a36cb747a6ae). |
+| \[57\] || Szabo N.. The idea of smart contracts.1997[http://szabo.best.vwh.net/smart\_contracts\_idea.html](http://szabo.best.vwh.net/smart_contracts_idea.html) |
+| \[58\] || CoinDeskUnderstanding The DAO Attack2016[https://www.coindesk.com/understanding-dao-hackjournalists/](https://www.coindesk.com/understanding-dao-hackjournalists/) |
+| \[59\] || R3 The R3 Story. Accessed: Mar. 15, 2019. Available: [https://www.r3.com/about/](https://www.r3.com/about/). |
+| \[60\] || Payments Canada, the Bank of Canada, TMX Group, Accenture and R3. Jasper Phase III: Securities Settlement Using Distributed Ledger Technology |
+| \[61\] || TMX Group TMX Group Companies. [https://www.tmx.com/tmx-group/tmx-group-companies](https://www.tmx.com/tmx-group/tmx-group-companies). |
+| \[62\] || Chen J.. Canadian Depository For Securities Limited (CDS). Investopedia. [https://www.investopedia.com/terms/c/canadian-depository-for-securities-limited.asp](https://www.investopedia.com/terms/c/canadian-depository-for-securities-limited.asp). |
+| \[63\] || TMX GroupThe canadian depository for securities. Available: [https://www.cds.ca/](https://www.cds.ca/). |
+| \[64\] || BLOCKBASTER. Deutsche Bundesbank and Deutsche Börse Group2018[https://www.bundesbank.de/en/press/press-releases/](https://www.bundesbank.de/en/press/press-releases/) |
+| \[65\] || Deutsche Börse GroupDeutsche Börse group company prole. [https://www.deutscheboerse. com/dbg-en/our-company/deutsche-boerse-group](https://www.deutscheboerse.com/dbg-en/our-company/deutsche-boerse-group) |
+| \[66\] || Deutsche Bundesbank Organization. Accessed: [https://www.bundesbank.de/en/bundesbank/ organisation](https://www.bundesbank.de/en/bundesbank/organisation). |
+| \[67\] || Central Bank of BrazilDistributed ledger technical research in Central Bank of Brazil.[https://www.bcb.gov.br/htms/public/microcredito/Distributed\_ledge\_technical \_research\_in\_Central\_Bank\_of\_Brazil.pdf](https://www.bcb.gov.br/htms/public/microcredito/Distributed_ledge_technical_research_in_Central_Bank_of_Brazil.pdf) |
+| \[68\] || Monetary Authority of Singapore Project Ubin: Central Bank Digital Money Using Distributed Ledger Technology. Available: [https://www.mas.gov.sg/schemes-and-initiatives/Project-Ubin](https://www.mas.gov.sg/schemes-and-initiatives/Project-Ubin). |
+| \[69\] || Monetary Authority of Singapore Project Ubin: SGD on Distributed Ledger. Accessed: [https://www.mas.gov.sg/-/media/MAS/ProjectUbin/Project-UbinSGD-on-Distributed- Ledger.pdf](https://www.mas.gov.sg/-/media/MAS/ProjectUbin/Project-UbinSGD-on-Distributed-Ledger.pdf). |
+| \[70\] || Monetary Authority of Singapore Project Ubin Phase 2 Report: Re-Imagining RTGS. Accessed: Jul. 8, 2018. Available: [https://www.mas.gov.sg/-/media/MAS/ProjectUbin/Project-UbinSGDon-Distributed-Ledger.pdf](https://www.mas.gov.sg/-/media/MAS/ProjectUbin/Project-UbinSGDon-Distributed-Ledger.pdf). |
+| \[71\] || European Central Bank and Bank of Japan2017 [https://www.ecb.europa.eu/pub/pdf/other/ ecb.stella\_project\_report\_september\_2017.pdf](https://www.ecb.europa.eu/pub/pdf/other/ecb.stella_project_report_september_2017.pdf) |
+| \[72\] || European Central Bank TARGET2. Accessed: [https://www.ecb.europa.eu/paym/target/target2/ html/index.en.html](https://www.ecb.europa.eu/paym/target/target2/html/index.en.html). |
+| \[73\] || Monetary Authority of Singapore Delivery *versus* Payment on DLT. Accessed: [https://www.mas.gov.sg/-/media/MAS/ProjectUbin/Project-Ubin-DvP-on-Distributed LedgerTechnologies.pdf?la=en&hash=2ADD9093B64A819FCC78D94E68FA008A6CD724FF](https://www.mas.gov.sg/-/media/MAS/ProjectUbin/Project-Ubin-DvP-on-DistributedLedgerTechnologies.pdf?la=en&hash=2ADD9093B64A819FCC78D94E68FA008A6CD724FF). |
+| \[74\] || European Central Bank and Bank of Japan2018 Securities Settlement Systems: Delivery-*versus*\-Payment in a Distributed Ledger Environment. [https://www.boj.or.jp/en/announcements/release\_2018/ data/rel180327a1.pdf](https://www.boj.or.jp/en/announcements/release_2018/data/rel180327a1.pdf). |
+| \[75\] || European Central Bank and Bank of Japan2019 Synchronised Cross-BorderPayments. ECB and Bank of Japan. Available: [https://www.ecb.europa.eu/paym/intro/publications/pdf/ecb.miptopical 190604.en.pdf](https://www.ecb.europa.eu/paym/intro/publications/pdf/ecb.miptopical190604.en.pdf). |
+| \[76\] || Bank of Thailand Project Inthanon Phase II. [https://www.bot.or.th/English/Financial Markets/ ProjectInthanon/Documents/Inthanon\_Phase2\_Report.pdf](https://www.bot.or.th/English/FinancialMarkets/ProjectInthanon/Documents/Inthanon_Phase2_Report.pdf). |
+
+# Implementation of Blockchain Technology for Big Data
+
+  
+  
+**Yasir Afaq^([1](#9789815051452-C3.html#aff1))****,** **Shaik Vaseem Akram^([2](#9789815051452-C3.html#aff2), [\*](#9789815051452-C3.html#cor1))****,** **Rajesh Singh^([2](#9789815051452-C3.html#aff2))****,** **Mohammad Shafiq^([3](#9789815051452-C3.html#aff3))**  
+¹ Lovely Professional University, Phagwara, Punjab, India  
+² Uttaranchal University, Dehradun, India  
+³ Department of Cyberspace, Institute of Advanced Technology, GuangZhou University, Guangzhou, China  
+  
+
+## Abstract
+
+The focus of this chapter is to provide brief knowledge about the concept and advantages of integrating Big Data and blockchain technology. As we are focusing on the blockchain and Big Data, it is suitable to introduce Big Data before exploring its interactions with blockchain. The blockchain technology is introduced and then the interaction between blockchain technology and Big Data is focused, in order to gain a clear understanding of how blockchain technology is used for Big Data. Thereafter, the different applications of blockchain and Big Data are explored.
+
+**Keywords:** Big Data, Big Data analytics, Blockchain.  
+  
+
+* * *
+
+^(\*) **Corresponding author Shaik Vaseem Akram:** Uttaranchal University, Dehradun, India;  
+E-mail: [vaseemakram5491@gmail.com](mailto:vaseemakram5491@gmail.com)  
+  
+
+## INTRODUCTION
+
+The invention of technology led to a period of important revolutionary reforms. The present era is continuously shifting towards the technology and the environment both. The information systems (IT) environment should therefore adopt research and application strategies to deal with future changes regardless of the circumstances and pace of the transformation. The latest IT developments can be summed up as large flows, such as blockchain, machine learning, and Big Data. Blockchain is a processing system for data exchange that distributes and preserves all data handled by network active participants. Blockchain, Cryptocurrency and Big Data are three major areas of the digital world-disrupting, intense passion, and challenging business strategies and activities around the planet. Since its introduction, the advent of Big Data has created various challenges and opportunities, by turning data into a quality source.
+
+Moreover, blockchain technology itself is being examined as a possible basis for making business processes more profitable and efficient. The blockchain is tech-
+
+nically a public distributed ledger that contains all the transactions performed in the program. This is available on a P2P network, where a copy of the blockchain ledger is stored on every complete node. No central authority is responsible for managing the blockchain database. This concept of getting a database only between the system's actual and equal users sets the strategy for creating the so-called: “decentralized loyalty” \[[1](#9789815051452-C3.html#r1)\]. Blockchain has the features of decentralization, non-tamper ability and fully programmable that can definitely deal with the security problems of Big Data storage, in particular for the safety of personal information that has a huge amount of secret information, and must be controlled and supported by government and large corporations \[[2](#9789815051452-C3.html#r2)^(\-)[4](#9789815051452-C3.html#r4)\]. The blockchain consists of many data blocks connected together in the sequence of incubation period, and the block size can be created by the consensus protocol of each node, and protection is guaranteed by the encryption technology. If a node tries to mess with a block, it is difficult to imagine the block to the entire network through the consensus process \[[5](#9789815051452-C3.html#r5)\]. The operating history of each block can be traced by Markel tree and time stamp \[[6](#9789815051452-C3.html#r6)\].
+
+## CATEGORIES OF BLOCKCHAIN
+
+Blockchains are categorized into three types by methods of entry, namely, Public Blockchain, Private Blockchain and Blockchain Consortium \[[7](#9789815051452-C3.html#r7), [9](#9789815051452-C3.html#r9)\]. The Public Blockchain is the blockchain that is the first and perhaps most extensively used. Bitcoin is a community blockchain agent. The characteristics are decentralization and not being governed or regulated by any organization. Anyone can access the Public Blockchain \[[8](#9789815051452-C3.html#r8)\].
+
+The Private Blockchain is a framework not available to the outside community and is only used by the organization \[[10](#9789815051452-C3.html#r10)\]. The Blockchain Consortium is between the Private Blockchain and the Public Blockchain and is normally used in areas where multiple users work, such as businesses, states, and banks at the same time \[[11](#9789815051452-C3.html#r11)\]. Fig. ([**1**](#9789815051452-C3.html#f1)) includes the different categories of blockchain. Table **1** gives a description of public, private and federated blockchains in terms of access permission, transaction speed, performance, protection, immutability, consensus mechanism, network and asset.
+
+### Generation of Blockchain
+
+While, blockchain has already seen three generations, but that does not mean any subsequent generation was more popular than the previous generation. Interestingly, in the highly overlapped space, all three generations continue to develop and build their own place in the industry and are attempting to emerge as winners. Different factors can decide, which generation has the best possible opportunity. The three generations of block chain are discussed in Fig. ([**2**](#9789815051452-C3.html#f2)).
+
+![](Images/9789815051452-C3-F1.jpg)**Fig. (1))**  
+Different Categories of blockchain \[[9](#9789815051452-C3.html#r9)\]. ![](Images/9789815051452-C3-F2.jpg)**Fig. (2))**  
+Generation of blockchain 
+
+#### Blockchain 1.0
+
+Each transaction is stored in the distributed ledger form in this process, so that it is open to any member in the distributed network. Bitcoin is the first digital decentralized currency, and a blockchain 1.0 technology. The fundamental technologies of Bitcoin are mining, cryptography, and the crowd ledger. A miner is an individual in this century who inquires block by figuring out the mathematical problem and gets a 12.5-Bitcoin as a reward for block verification. Security of own identity, money control, quick and automatic transaction are the characteristics of blockchain 1.0.
+
+#### Blockchain 2.0
+
+The Blockchain technology of the second generation (Blockchain 2.0) is the digital economy. While the concept of a digital economy was implemented 20 years ago, the focus is on gaining from the digital economy for its complete implementation. A smart contract is a series of guidelines between two entities for building the digital contract. Ethereum is the one smart contracting network running on \[[12](#9789815051452-C3.html#r12)\].
+
+#### Blockchain 3.0
+
+To the interest of two generations of blockchain, they contribute primarily to the sectors of manufacturing, commerce, and finance. Systems including healthcare, medical records \[[12](#9789815051452-C3.html#r12)\] resource management, supply chain, authentication, smart city, electricity industry and system management are now a blockchain 3.0 organization.
+
+### Significance of Blockchain Technology and Decentralization and its Effect
+
+#### Security
+
+The digital world is filled with hackers, searching for outlets to breach details or steal data. The files contained in blockchain technology have robust protection that makes it impossible for one to hack.
+
+#### Transparency
+
+Since, everything is shown on the network, there are very less chances that any difference may be produced.
+
+#### Inexpensive
+
+Most of the conventional financial structures available in the market are costly, but blockchain is cheaper.
+
+#### Transaction Time
+
+A person can send and receive activities and valuable documents within a few minutes that minimizes the pressure of waiting for hours.
+
+#### Financial Efficiency
+
+Decentralized blockchain allows one to make individual transaction without a third party intervention, unlike conventional banks that consumed lot of time for making transactions.
+
+#### Protect Business from Frauds
+
+The blockchain is open-source ledgers that is why it is very easy to determine how fraud has occurred, because all transactions are registered on them.
+
+### Applications of Blockchain Technology
+
+From the past few years, blockchain is used in different areas and it shows a better result. Some of the applications in which blockchain technology is used are as follows-.
+
+#### Health Care
+
+The feature of blockchain technology, such as the infallibility of the data held in a database, attracted the healthcare sector's attention, and for many possible situations, rosy possibilities are being addressed. Blockchain technology is bound to enhance the management of medical records and the insurance claim process, speed up biological and preclinical science and update data on biomedicine and health care \[[13](#9789815051452-C3.html#r13)\]. These standards are focused on key aspects of blockchain technology such as decentralization, unchanging audit trail, data provenance, robustness, and enhanced protection and privacy. After addressing many possibilities, the most important breakthrough that can be accomplished through blockchain technology is the preservation of the right of data subjects. Fig. ([**3**](#9789815051452-C3.html#f3)). illustrates the transaction of healthcare in blockchain. The collection, and use of medical data by data subjects other than hospitals should be permitted. This is a central principle of patient-centered interoperability that differs from traditional interoperability guided by organization. In addition to technology-related problems, there are many concerns from patient-centered interoperability, such as data quality, security and privacy.
+
+This is a central principle of patient-centered interoperability that differs from traditional interoperability guided by organization. In addition to technology-related problems, there are many concerns related to patient-centered interoperability, such as data quality, security and privacy. Blockchain technology makes the transition simpler from hierarchical standardization to patient-centered interoperability \[[14](#9789815051452-C3.html#r14)\]. Blockchain allows patients to grant access rules for their medical data, allowing different investigators, for example to access sections of their data for a limited time span. Blockchain technology is continually evolving rather than finishing, and it has many possible obstacles that need to be resolved for biomedical and healthcare applications to be implemented. The first challenge concerns confidentiality and accountability. On a blockchain network, almost everyone can see everything. Some assume that health records are kept off-chain and that in a blockchain, just the hash of the tag information is retained. The second problem has to do with pace and scalability. In a proof-of-concept test, transaction processing speed, such as credit or debit card, is anticipated to be just a few thousandths of the traditional way. Given that the number of transactions in the healthcare industry is immense, a breakthrough in blockchain technology is expected. The last challenge is the 51 per cent possibility of an assault. It is a theoretical, yet plausible risk and a simple solution should be proposed.
+
+![](Images/9789815051452-C3-F3.jpg)**Fig. (3))**  
+Healthcare transaction in blockchain. 
+
+#### Education
+
+Fig. ([**4**](#9789815051452-C3.html#f4)) shows the transformation in education. We are witnessing the advancement of machine learning, smart classrooms, and distant learning with the help of the new technology. Chances are, in the years to come, blockchain will become an integral part of the schools. Let's address this technology's potential effect and possible changes to the learning process it might bring. Some organizations see blockchain as a great platform for storing, monitoring and using credentials from the students.
+
+![](Images/9789815051452-C3-F4.jpg)**Fig. (4))**  
+Transforming blockchain in education. 
+
+Blockchain would allow learners to access their records easily and conveniently and share any information with prospective employers. As such, employers do not need to contact universities and colleges to collect information on the achievements of the graduates. The most interesting use case for blockchain in higher education is to turn the “record holding” of qualifications, certificates and diplomas, making credentials digital and under the control of the learner, without the need for an intermediary to check them. The ability of blockchain to enhance electronic records also makes it a good fit for solving IP management problems. Blockchain can be used to decide whether an idea or innovation is unique and can be registered to IP properties, copyrights and patents. It could be leveraged as a solution to some general cases: safe and prioritized distributed data exchanges with multi-sensor satellites, and the monitoring and recording of power and control events. Over the course of the project, several experiments were conducted, revealing the distinct advantages and disadvantages of this technology, as it relates to satellite multi-sensor architecture \[[15](#9789815051452-C3.html#r15)\]. However, blockchain technology has many uses where a block of data can be modified using a cryptographic security framework at the same time of sharing. Just recently researchers have begun considering what could be useful in implementing blockchain technology for Earth observation and space technologies. Recently the European Space Agency called for new concepts and implementations for earth exploration blockchains. The European Union has recently funded initiatives that use blockchain technology for science, such as the sharing and simultaneous use of scientific data, through which the European Space Agency aims to establish ways of using knowledge through and across different institutions \[[16](#9789815051452-C3.html#r16)\].
+
+#### Public Services
+
+Data created by government agencies are internally fragmented and opaque to people and businesses. When using blockchain technology, data records can be generated and checked easily, ensuring data protection and accountability. Blockchain technologies, such as digital signatures and time stamping, are expected to offer various benefits in public services to allow people to manage transactions and create individual accounts without the need of lawyers, government officials and other third parties. Several governments have adopted blockchain technologies to facilitate different public services for their people. For example, the Estonian Government has used blockchain technology to perform a variety of tasks using their ID cards, such as voting, registering for their companies, ordering medical prescriptions and paying taxes. In fact, the UK Department of Work and Pensions has begun to introduce a blockchain for welfare payments \[[17](#9789815051452-C3.html#r17)\]. In addition, Sweden has carried out experiments to place real estate transactions on the blockchain.
+
+#### Cyber Security
+
+For all new and existing technologies, protection is one of the most important issues. Widely known businesses have faced a variety of security challenges. For example, Cambridge Analytica violated more than 50 million Facebook accounts in order to target them with targeted political ads that influenced United States voters by their ultimate decision on the presidential election. Likewise, in the year 2016, Yahoo the popular search engine experienced a big attack and compromised about one billion Yahoo accounts. As security firms analysed common security weaknesses, they noticed that 65 percent of data breaches occurred due to default, weak, or stolen passwords. They also noticed phishing emails stealing confidential data, such as password, username, and financial information \[[18](#9789815051452-C3.html#r18)\]. Blockchain has a range of advantages that can be used to fix cyber security concerns. Second, blockchain is an untrusted framework where there is no trust. It implies that any insider or outsider can assault the framework, so that it is totally independent of human ethics. Second, blockchain is immutable, meaning that anybody can store and protect data with various cryptographic features, such as hashing and digital signature. As soon as the data is created as a block in the blockchain, it cannot be changed or removed. Third, blockchain requires many users on the network, so modifying or adding a block needs to be checked by the majority of users who make the attack very difficult to achieve \[[19](#9789815051452-C3.html#r19)\].
+
+## Big Data
+
+Big Data is a gathering of massive amount of data. These data could be supervised or unsupervised to describe specific patterns, interests, and trends such as human activities and attitudes to provide them with customized amenities. Big Data is one of the world’s fastest-developing areas. Every business needs to have an overview into their consumers’ usage patterns. Hence, large datasets are examined using sophisticated statistical models and data extraction. Over the near future, these Big Data sets will be even more prevalent. Big Data growth has raised a host of problems for large corporations and frequent consumers . Good analytics becomes more problematic with the growth in data. Some of the Big Data processing and analytical problems include so-called dirty data, unreliable data, and privacy concerns. As Big Data grows and the network of connected devices expands, more company data is exposed to possible security vulnerabilities \[[20](#9789815051452-C3.html#r20), [21](#9789815051452-C3.html#r21)\]. A consensual definition of Big Data after a review and analysis of the existing concepts is introduced. It is concluded, “Big Data is the detailed asset defined by such high volume, velocity and variety that require a specialized technology and analytical methods to turn them into value”. Systematically summing up the concept of Big Data, including its 5V properties, is of vital importance \[[22](#9789815051452-C3.html#r22)\] (Fig. [**5**](#9789815051452-C3.html#f5)). According to a study \[[23](#9789815051452-C3.html#r23)\] volume refers to data severity; variety refers to systemic stratification; velocity refers to the pace at which information is analysed and the velocity at which it will be processed and acted upon; value refers to accurate and valuable insights that Big Data should have; veracity refers to the uncertainty and inaccuracy inherent in the certain data sources. In addition, several features are discussed to further improve the Big Data concept \[[24](#9789815051452-C3.html#r24), [25](#9789815051452-C3.html#r25)\]. Vision (a purposeful and informative outcome-oriented analysis), Verification (requirements that match the data processed), Validation (aiming to accomplish purpose), Complexity (complicated relation between data) and Immutability (permanently processed and treated well). Since these features are frequently listed to define the meaning of Big Data, despite the complexity of fact, they assuredly play an important role in the frequently increasing understanding of Big Data, particularly when there is no broadly defined definition of this trans-era.
+
+### Significance of Big Data
+
+Big Data is not about how much data an organization has, but how an organization collects the data and uses data in its own way; if a business is using its data more effectively then definitely the greater will be its ability to expand. The company will collect and analyse data from any source to find answers.
+
+![](Images/9789815051452-C3-F5.jpg)**Fig. (5))**  
+Five V’s of Big Data. 
+
+#### Cost saving
+
+Some Big Data tools such as Hadoop and Cloud-based Analytics can offer cost savings to businesses when vast volume of data need to be processed and these tools can also help find more effective ways to do business.
+
+#### Time Reduction
+
+The high speed of tools such as Hadoop and in-memory analytics can easily recognize new data sources that help businesses analyze data quickly and make fast learning-based decisions.
+
+#### Understand the market Condition
+
+A better understanding of the existing business dynamics can be done by analysing Big Data. By observing the buying habits of consumers, a company may figure out the goods that are being sold the most and manufacture products according to this pattern.
+
+#### Control Online Reputation
+
+Big Data tools can evaluate emotions. So, you can get input on who says what about your business. If you want to track and enhance your company's online presence, then Big Data tools will aid with all of this.
+
+#### Using Big Data Analytics to Boost Customer Acquisition and Retention
+
+The customer is the most important asset that depends on any company. There is no single company that can assert success without having a strong consumer base first. But a company cannot afford to ignore the high competition it encounters, even with a customer base. If a company is slow to understand what consumers want, it starts selling goods of poor quality. Ultimately, consumer dissatisfaction will occur, and this will have an overall detrimental impact on business performance. Big Data helps organizations to identify different patterns and trend specific to consumer. To cause loyalty, it is important to observe customer behaviour.
+
+#### Usage of Big Data Analytics to Solve Problems and Promotional Insights into Advertisers
+
+Big Data analytics can help change any enterprise. This involves the ability to meet consumer expectations, changing the product line of the company and of course making sure the marketing strategies are strong.
+
+#### Big Data Analytics as a Catalyst of Product Creation and Innovation
+
+Another great benefit of Big Data is the ability to help businesses innovate and redevelop their products.
+
+### Challenges in Big Data
+
+Current literature often attempts to sum up Big Data's problems by focusing on procedure for processing Big Data. Big Data issues in five areas relating to the process of information discovery are: data capture and storage, data processing, data curation, data interpretation and data visualization \[[26](#9789815051452-C3.html#r26)\]. Others have adopted a common framework and tackled problems in four areas: data management and support, model creation and scoring, visualization and user engagement, and market models \[[27](#9789815051452-C3.html#r27), [28](#9789815051452-C3.html#r28)\]. However, the problems of Big Data are addressed in a more detailed way that is Big Data management, cleaning, aggregation, imbalanced system capacities, and imbalanced Big Data analytics. They also tackled Big Data machine learning problems, including data stream learning, deep learning, incremental and ensemble learning, and granular computing.
+
+The challenges for Big Data are described as data representation, redundancy reduction and data compression, data life cycle management, advances in the analytical process, data confidentiality, energy management and sustainability, extensibility and scalability, and collaboration \[[29](#9789815051452-C3.html#r29)\]. It translates problem into data complexity, computational complexity, and system complexity. Three factors that contribute to Big Data: Large Data complexity (*i.e.*, data forms, size, architectures, *etc.*). Patterns, relationships, insufficiency, instability, and distribution result in increasing computational complexity and new computing concepts. The growing complexity of the system thus makes it difficult to meet the needs of advanced energy-efficient computing and Big Data processing.
+
+### Data Mining Techniques for Big Data
+
+Data mining methods have been around in collaboration with data warehouses for many years and have now gained greater popularity with the emergence of Big Data. Data analytics and the growth of both structured and unstructured data have led to the improvement in data mining techniques, as businesses now deal with broader datasets with more diverse content. The data mining method is further automated by artificial intelligence and machine learning \[[30](#9789815051452-C3.html#r30)\]. Fig. ([**6**](#9789815051452-C3.html#f6)) illustrates the data mining techniques of Big Data.
+
+#### Clustering
+
+The main purpose of clustering is to aggregate data objects through data discovery, so that the grouped objects are identical or closely linked but distinguished from the other classes \[[31](#9789815051452-C3.html#r31)\]. The fundamental principle of clustering is to calculate distance between data objects. Many techniques have been developed to satisfy the requirement of handling more complex data types or structures. The key clustering approach includes hierarchical clustering, k-mean (partitioning clustering), high-dimensional approaches, density-based clustering, clustering based on co-occurrence, and other evolutionary methods. By grouping those with the nearest mean, the commonly used k-mean clustering technique divides observation into different clusters ‘k’. It is noteworthy that due to the ongoing growth of data mining techniques, an alternative approach and development exists.
+
+#### Classification
+
+Classification is the most basic technique of data mining aimed at classifying data objects into predefined classes. To accurately optimize the classifier to perform the given classification task effectively, it requires a few rules that are defined through data exploration. The formal definition of the classification underlying the algorithm \[[32](#9789815051452-C3.html#r32)\]. There are several different methods for classification, and each has its own merits \[[33](#9789815051452-C3.html#r33)\]. Decision Trees \[[34](#9789815051452-C3.html#r34)\], Support Vector Machines (SVM) \[[35](#9789815051452-C3.html#r35)\] Naive Bayes Codes \[[36](#9789815051452-C3.html#r36)\], Neural Networks and k-Nearest Neighbours \[[37](#9789815051452-C3.html#r37)\] are some of the best-known and commonly used classification techniques.
+
+#### Association Mining Rules
+
+The Association Rule Mining is introduced on a dataset for the supermarket \[[38](#9789815051452-C3.html#r38)\], with the goal of investigating co-occurrences between data items. It is a technique for detecting the simultaneous occurrence that occurs more often than the average level of co-occurrence that exists in the data collection. It distinguishes the relationship that exits among the data objects.
+
+#### Regression
+
+Due to its ability to reduce dimensions, extract information, provide estimates and forecast, regression is also considered a significant data mining technique. The basic regression principle is to analyse the relationship between two or more variables in order to assist in prediction and decision making. The regression analysis is widely applied to a wide range of topics, and several developments have also been made to date, so it is not feasible to summarize all of this in this chapter. Some of the Data Mining 's proven regression techniques include linear and nonlinear regression, lasso regression, logistic regression, and tree regression.
+
+#### Social Network Analysis
+
+A comparatively recent Data Mining technique outlined here is the Social Network Analysis (SNA), based on the graph theory principle. To build a social network, it investigates the relation and content between objects in a large stack of knowledge. The most widely used measuring technique for evaluating social network behaviours is ‘degree’ \[[39](#9789815051452-C3.html#r39)^(\-)[41](#9789815051452-C3.html#r41)\].
+
+### Applications of Big Data
+
+#### Healthcare Sector
+
+There is a significant improvement in healthcare with Big Data. It increased the amount of information collected over the last few years. Technology development has also made it easier to gather and analyse data from various sources such as insurance companies, hospitals, labs, and the offices of physicians. Doctors have historically used their discretion, and in recent years, this has been changed to a more evidentiary treatment. The modern method includes analysing clinical records and making recommendations about treatment on the best evidence available. When it comes to the use of Big Data, the healthcare sector has tended to lag from other industries such as financial services and sales.
+
+![](Images/9789815051452-C3-F6.jpg)**Fig. (6))**  
+Data mining techniques. 
+
+Big Data is used in healthcare to forecast pandemics, cure illness, enhance quality of care and stop premature death and the different application of Big Data in health sector is illustrated in Fig. ([**7**](#9789815051452-C3.html#f7)). A lot of fitness devices recently have hit the market like Fitbit, Samsung Gear Fit and Jawbone, helping us to monitor our progress. Eventually we will be able to share the data with our doctor, who will be able to use it when we see him with an ailment as part of their clinical diagnosis. When more and more data is collected, physicians will be able to offer treatment choices for certain patients with specific disorders, genetic factors and lifestyle. The Big Data is kept in siloes inside the computer systems, hospitals, and clinics of numerous physicians \[[42](#9789815051452-C3.html#r42), [43](#9789815051452-C3.html#r43)\]. To make efficient use of them all in the future, it is needed to release the information with everyone.
+
+![](Images/9789815051452-C3-F7.jpg)**Fig. (7))**  
+Implementation of Big Data in health sector. 
+
+Owing to the great influence of Big Data in the healthcare sector, its use is growing day by day. But the path to bring this technology into action still has challenges. Let us look at some problems that have been frequently faced. One of the most difficult problems is the collection of data. The knowledge of patients is typically distributed through different departments, hospitals, computers and file cabinets. Proper preparation is required to fuse all these together and organize them for potential collaboration. In addition, all the collaborating entities will have a common understanding and consent to the formats and forms of Big Data that they would like to examine. In addition to ensure the accuracy and consistency of data, data cleaning and management are also required. The procedures and policies protecting health data are often concerned with different problems. These issues should be resolved after aggregating and validating the data. Since there is no clear monitoring of the data from where it is being processed, the IT company may face difficulties related to money, security and results. The amount of healthcare data grows over time, and the executive team often faces challenges in managing the costs and consequences of data storage at the premise. Maintaining an on-site data storage system can be a complicated and expensive affair. This means the method of distributing the data through various departments can also be complicated.
+
+For health organizations, data security is essential. When health systems start incorporating Big Data, they should be granted access to the data by health care providers. When certain experts are given access by the organisation, there is no problem, but if a large team is involved with the personal details of patients, the issue may arise in terms of violation of privacy. Healthcare organizations will rely on reliable data providers with a stable and well-structured delivery to provide safe Big Data solutions to prevent these problems. Finally understanding the potential of Big Data in health-care companies need to change way to do business. Along with the skilled IT workers, data scientists are required to conduct the analytics. Without proper IT infrastructure, organizations may find it hard to make the most of Big Data.
+
+ 
+
+### Education Sector
+
+The student data processing has only been a major educational trend in the \[[44](#9789815051452-C3.html#r44)\] last decade. Moreover, the use of Big Data to help students in learning can be traced all the way back to ITS and artificial intelligence studies as shown in Fig. ([**8**](#9789815051452-C3.html#f8)). In the field of education, the primary aim of using data in education today is to define approaches for creating optimal educational environment \[[45](#9789815051452-C3.html#r45)\]. Big Data is a recent concept in education \[[46](#9789815051452-C3.html#r46)\], with most academic discourses concentrating on the use of data to enhance the quality of teaching and science. Particularly the availability of broad educational data provides education to researchers with the ability to investigate the emerging educational trend on a large scale using digital methods and techniques. Three educational use cases are proposed for Big Data; promoting learning, teaching and administration.
+
+![](Images/9789815051452-C3-F8.jpg)**Fig. (8))**  
+Implementation of Big Data in education. 
+
+Big Data in the education field gives educators a unique opportunity to reach out to students in new ways and to teach them. It will give them a better educational experience, and thus help them decide the condition of the education system.
+
+### Challenges Concerning the Application of Big Data in Education
+
+The schools and colleges depend on a lot of data relative to other large organizations. Extracting information from all the data begins by asking the correct questions. It also begins with identifying where Big Data can play a role and where there is no need for any possible effects. Large volume of data is generated in education in different formats.
+
+One of the difficulties inherent in any Big Data project is that most projects begin with the need to clean up the data. If companies work with existing sources or numerous third-party databases, there is always a misalignment. Data scientists spend a great deal of their time cleaning up data and doing boring, time-consuming janitorial work.
+
+In order to derive useful value from large datasets, it requires surety of communicate with one another, whether by APIs or algorithms, or a partial manual implementation, the hard work is to be done to clean up data sufficiently to allow sharing and interaction.
+
+### Remote Sensing
+
+Remote sensing has been one of the most effective tools used to get information an efficient manner. The remote sensing data has played a significant role in many scientific fields in recent years, including atmospheric science, biodiversity, soil degradation, water pollution, and environmental geology \[[47](#9789815051452-C3.html#r47)\]. Remote sensing techniques clearly display the properties of Big Data. Big Data remote sensing is gathering interest from government programs, and commercial applications to academic fields \[[48](#9789815051452-C3.html#r48)\]. Fig. ([**9**](#9789815051452-C3.html#f9)). illustrates the cycle of remote sensing data.
+
+The US government initiated the “Big Data” program in March 2012. It may be the first Big Data policy initiative focused on enhancing our ability to derive information from large and complex digital data sets. The Earth Observation System Data and Information System (EOSDIS) is one of the most ambitious tasks of the US government for satellite imagery of Big Data. It offers end-to-end functionality from different sources for handling NASA’s environmental science data. In Europe, the European Space Agency hosted a “Big Data from Space” conference in 2017. It was about stimulating interactions and bringing together researchers, developers, consumers, networks and service providers who are involved in leveraging Big Data from space. Big Data analytics refers to such a broad and dynamic array of data sets that conventional data processing algorithms and models are hard to employ. The challenges involved are data collection, storage, search, exchange, delivery, processing and analysis. The remote sensing Big Data has many unique and special features *i.e.*, the data has multi-source, multi-resolution, high-dimensional, vibrant-state, enantiomer, and nonlinear characteristics. The remote sensing Big Data often represents a dynamic state since the earth surface varies, and the satellites are always moving. The remote-sensing Big Data transition point involves both stationary components and non-stationary components.
+
+Big Data difficulty in remote sensing includes addressing a huge quantity of data \[[49](#9789815051452-C3.html#r49)\]. The challenges related to data collection, storage, analysis and reporting often contribute to problems with remote sensing. Fig. ([**10**](#9789815051452-C3.html#f10)) illustrates some common challenges we are facing for the collection of remote sensing data.
+
+![](Images/9789815051452-C3-F9.jpg)**Fig. (9))**  
+Big Data in remote sensing data. ![](Images/9789815051452-C3-F10.jpg)**Fig. (10))**  
+Challenges in remote sensing data. 
+
+### Big Data Analysis Tools and Techniques
+
+Big Data is a concept that describes the vast volume of data sets – both structured and unstructured with variety and complex structure with problems, such as data collection, storage, analysis, visualization and processing difficulties. It needs new Big Data tools and techniques, technical approaches for extracting and analysing data for insights leading to better decisions and strategic business steps. Some of the most usable and important tools are mentioned in Fig. ([**11**](#9789815051452-C3.html#f11)).
+
+![](Images/9789815051452-C3-F11.jpg)**Fig. (11))**  
+Different tools for Big Data analytics. 
+
+#### Hadoop
+
+Hadoop is open-source Big Data processing software and has several attributes: scalability, reliability, error tolerance, high availability, local processing and storage, distributed and parallel computing, and cost performance. It uses a basic model of programming to process massive datasets through computer clusters \[[49](#9789815051452-C3.html#r49)\].
+
+### Spark
+
+Spark AB is an open-source tool designed to process large data sets. Spark was developed to tackle Hadoop’s disc I / O and performance problems. It has many features (such as in-memory computing) that make it special, and it offers a data-caching facility in memory. Spark supports many programming languages for processing large volumes of data (Python, Java, and Scala) \[[50](#9789815051452-C3.html#r50)\]. It is ten (10) times faster than Hadoop and Mongo DB.
+
+#### Storm
+
+Apache Storm is an open-source, real-time, distributed computing framework for Big Data processing. It is simple and clear; it can be used by any scripting language, and it supports YARN for machine learning, ETL, ongoing operations tracking, decentralized remote procedure call (RPC), and real-time analytics \[[51](#9789815051452-C3.html#r51)\].
+
+#### Cassandra
+
+Apache Cassandra is a distributed database that offers high flexibility and reliability without sacrificing the efficiency of quality. It is one of the best Big Data tools that can satisfy structured, semi-structured, and unstructured datasets of all categories.
+
+#### Mongo DB
+
+MongoDB is an open-source data analytics product that gives cross-platform capabilities to the NoSQL database. For the business that needs fast-moving and real-time data to take decisions, it is exemplary. MongoDB is the perfect choice for those looking for data-driven solutions. It is user friendly, as it makes installation and maintenance easier. MongoDB is both reliable, and cost-effective.
+
+ 
+
+### Big Data Techniques
+
+Big Data requires exceptional strategies to handle a large amount of data effectively within a short run-time \[[52](#9789815051452-C3.html#r52)\]. These fields have different methods, and they interact with each other too. Some tools and techniques are discussed in Figs. ([**12a**](#9789815051452-C3.html#f12) and [**b**](#9789815051452-C3.html#f12)).
+
+## INTEGRATION OF BLOCKCHAIN AND Big Data
+
+The integration of blockchain technology and Big Data might provide some fascinating possibilities. There are many ways that blockchain can aid in handling Big Data, plus data analytics. This technology has the greatest potential in data quality. This means that the data that big business collects and validates on the blockchain can become much more useful for companies. Blockchains will give you more faith in the legitimacy of viewing results. Immutable entries, timestamping based on consensus, audit trails, and clarity about the source of data (*e.g.*, kiosk or a sensor) are all fields where you can see progress as blockchain technology becomes more common.
+
+![](Images/9789815051452-C3-F12.jpg)**Fig. (12))**  
+(**a** and **b**) Different tools and techniques for Big Data analytics. 
+
+### Data Integrity
+
+Regulation of so-called dirty data (or misinformation) is an environment where blockchain can have a positive influence on the field of data analytics. Blockchain gives a transparent method for data integrity and audit trails to be performed as it identifies the origin of data across its connected chains. Blockchain guarantees data integrity by keeping a shared ledger maintained. The data stored on the blockchain is believable because they must have reviewed the process of verification that guarantees its accuracy. Data integrity is maintained when origin information and data block interactions are saved on the blockchain and automatically checked (or approved) before they can be used. It also allows for accountability, as it can track event and transaction occurring on the blockchain network.
+
+### Manage Data Sharing
+
+A blockchain-based Big Data framework would grant providers to exchange records with any other part that has an interest without the exponential increase in risk factors that come from a network of different data silos. Data collected from data studies can be processed in a blockchain network in that respect. In this way, project teams should not duplicate data analysis already performed by other teams or reuse data that has already been used incorrectly. A blockchain platform can also help data scientists monetize their work, likely through the exchange of analytical results stored on the database.
+
+### Preventing Malicious Activity
+
+In this way, project teams should not duplicate the data analysis that is already performed by other teams or reuse data which has already been used incorrectly. A blockchain platform can also help data scientists to monetize their work, likely through the exchange of analytical results stored on the database. To change the rules of blockchain, a plurality of nodes need to be pooled together to establish consensus. So, accessing and manipulating data on a wide scale make it an almost impossible job for cybercriminals.
+
+### Predictive Analysis
+
+It is possible to analyse blockchain data (just like other data types) to uncover useful insights into habits, patterns, *etc.* As such, they can be used to forecast potential outcomes of events such as consumer desires, customer lifetime value, volatile prices and company churn rates with reasonable accuracy. With blockchain, banks and other organizations need large-scale real-time data analysis that can track changes in data in real-time, allowing fast decisions to be made.
+
+## CONCLUSION
+
+Blockchain and Big Data are two different technologies that showed a significant impact on data management with security. With this motivation, this chapter provides brief information related to blockchain and Big Data in terms of significance and applications. The integration of blockchain with Big Data is clearly illustrated in this chapter and the benefits of integration are discussed in terms of data integrity, predictive analysis, preventing malicious activity, and managing data sharing.
+
+ 
+
+## CONSENT FOR PUBLICATION
+
+Not applicable.
+
+## CONFLICT OF INTEREST
+
+The authors declare no conflict of interest, financial or otherwise.
+
+## ACKNOWLEDGEMENT
+
+Declared none.
+
+## REFERENCES
+
+|  ||  |
+| --- | --- |
+| \[1\] || Review"IEEE EUROCON 2017-17^(th) International Conference on Smart Technologies".IEEE2017763768 |
+| \[2\] || Dunphy P., Petitcolas F.A.P.. A first look at identity management schemes on the blockchain.IEEE Secur. Priv.2018164202910.1109/MSP.2018.3111247 |
+| \[3\] || Beck R., Avital M., Rossi M., Thatcher J. B.. Blockchain technology in business and information systems research.Business & Information Systems Engineering.20175938138410.1007/s12599-017-0505-1 |
+| \[4\] || Wang X., Feng L., Zhang H., Lyu C., Wang L., You Y.. Human resource information management model based on blockchain technology.IEEE symposium on service-oriented system engineering (SOSE).IEEE201716817310.1109/SOSE.2017.34 |
+| \[5\] || Puthal D., Malik N., Mohanty S.P., Kougianos E., Yang C.. The blockchain as a decentralized security framework.IEEE Consum. Electron. Mag.201872182110.1109/MCE.2017.2776459 |
+| \[6\] || Karame G., Capkun S.. Blockchain security and privacy.IEEE Secur. Priv.2018164111210.1109/MSP.2018.3111241 |
+| \[7\] || Zahid J. I., Ferworn A., Hussain F.. Blockchain: A technical overview.IEEE Internet Policy News2018113 |
+| \[8\] || Nakamoto S.. "Bitcoin: A peer-to-peer electronic cash system", 2018 |
+| \[9\] || Akram S.V., Malik P.K., Singh R., Anita G., Tanwar S.. Adoption of blockchain technology in various realms: Opportunities and challenges.Secur. Priv.20203510910.1002/spy2.109 |
+| \[10\] || Dinh T.T.A., Wang J., Chen G., Liu R., Ooi B.C., Tan K.L.. Blockbench: A framework for analyzing private blockchains.Proceedings of the 2017 ACM International Conference on Management of Data20171085110010.1145/3035918.3064033 |
+| \[11\] || Lei K., Zhang Q., Xu L., Qi Z.. Reputation-based byzantine fault-tolerance for consortium blockchain.IEEE 24^(th) International Conference on Parallel and Distributed Systems (ICPADS)IEEE201860461110.1109/PADSW.2018.8644933 |
+| \[12\] || Chan K., Liebowitz J.. The synergy of social network analysis and knowledge mapping: a case study.Int. J. Manag. Decis. Mak.200671193510.1504/IJMDM.2006.008169 |
+| \[13\] || Kuo T.T., Kim H.E., Ohno-Machado L.. Blockchain distributed ledger technologies for biomedical and health care applications.J. Am. Med. Inform. Assoc.20172461211122010.1093/jamia/ocx06829016974 |
+| \[14\] || Gordon W.J., Catalini C.. Blockchain technology for healthcare: facilitating the transition to patient-driven interoperability.Comput. Struct. Biotechnol. J.20181622423010.1016/j.csbj.2018.06.00330069284 |
+| \[15\] || de La Beaujardiere J., Mital R., Mital R.. Blockchain Application Within A Multi-Sensor Satellite Architecture.In IGARSS 2019-2019 IEEE International Geoscience and Remote Sensing Symposium.IEEE20195293529610.1109/IGARSS.2019.8898117 |
+| \[16\] || For more on blockchain and how Europe is seeking further application of blockchain for Earth observation, see [https://eo4society.esa.int/2019/04/09/blockchain-and-earth-observation-a- white-paper/](https://eo4society.esa.int/2019/04/09/blockchain-and-earth-observation-a-white-paper/). |
+| \[17\] || Hathaliya J., Sharma P., Tanwar S., Gupta R.. Blockchain-based remote patient monitoring in healthcare 4.0.In 2019 IEEE 9th International Conference on Advanced Computing (IACC)IEEE20198791 |
+| \[18\] || Boucher P.. How blockchain technology could change our lives: In-depth analysis.European Parliament2017 |
+| \[19\] || Atlam H. F., Walters R. J., Wills G. B.. Fog computing and the internet of things: a review.Big Data and cognitive computing20182210 |
+| \[20\] || De Mauro A., Greco M., Grimaldi M.. What is Big Data? A consensual definition and a review of key research topics.AIP Conference ProceedingsMelvilleNY: AIP20151644197104 |
+| \[21\] || De Mauro A., Greco M., Grimaldi M.. A formal definition of Big Data based on its essential features.Libr. Rev.201665312213510.1108/LR-06-2015-0061 |
+| \[22\] || Demchenko Y., De Laat C., Membrey P.. 2014Defining architecture components of the Big Data Ecosystem.2014 International Conference on Collaboration Technologies and Systems (CTS)104112Piscataway, NJIEEE10.1109/CTS.2014.6867550 |
+| \[23\] || Gandomi A., Haider M.. Beyond the hype: Big Data concepts, methods, and analytics.Int. J. Inf. Manage.201535213714410.1016/j.ijinfomgt.2014.10.007 |
+| \[24\] || Kacfah Emani C., Cullot N., Nicolle C.. Understandable Big Data: A survey.Comput. Sci. Rev.201517708110.1016/j.cosrev.2015.05.002 |
+| \[25\] || Oussous A., Benjelloun F.Z., Ait Lahcen A., Belfkih S.. Big Data technologies: A survey.Journal of King Saud University - Computer and Information Sciences201830443144810.1016/j.jksuci.2017.06.001 |
+| \[26\] || Chen M., Mao S., Liu Y.. Big Data: A Survey.Mob. Netw. Appl.201419217120910.1007/s11036-013-0489-0 |
+| \[27\] || Assunção M.D., Calheiros R.N., Bianchi S., Netto M.A.S., Buyya R.. Big Data computing and clouds: Trends and future directions.J. Parallel Distrib. Comput.201579-8031510.1016/j.jpdc.2014.08.003 |
+| \[28\] || Hajjaji Y., Boulila W., Farah I.R., Romdhani I., Hussain A.. Big Data and IoT-based applications in smart environments: A systematic review.Comput. Sci. Rev.20213910031810.1016/j.cosrev.2020.100318 |
+| \[29\] || Jin X., Wah B.W., Cheng X., Wang Y.. Significance and challenges of Big Data research.Big Data Research201522596410.1016/j.bdr.2015.01.006 |
+| \[30\] || Bhadani A.K., Jothimani D.. Big Data: challenges, opportunities, and realities.Effective Big Data management and opportunities for implementation.IGI Global201612410.4018/978-1-5225-0182-4.ch001 |
+| \[31\] || Tan P.N., Steinbach M., Kumar V.. Introduction to data mining.Pearson Education India2016 |
+| \[32\] || Hassani H., Huang X., Silva E.S., Ghodsi M.. A review of data mining applications in crime.Stat. Anal. Data Min.20169313915410.1002/sam.11312 |
+| \[33\] || Kotsiantis S.B., Zaharakis I., Pintelas P.. Machine learning: a review of classification and combining techniques.Artif Intell Rev261591902007 |
+| \[34\] || Quinlan J.R.. Induction of decision trees.Mach. Learn.1986118110610.1007/BF00116251 |
+| \[35\] || Cortes C., Vapnik V.. Support-vector networks.Mach. Learn.199520327329710.1007/BF00994018 |
+| \[36\] || Langley P., Iba W., Thomas K.. An analysis of Bayesian classi er.proceedings of the Tenth National Conference of Artificial Intelligence1992 |
+| \[37\] || Richard M.D., Lippmann R.P.. Neural network classifiers estimate Bayesian a posteriori probability.Neural Comput.19913446148310.1162/neco.1991.3.4.46131167331 |
+| \[38\] || Agrawal R., Imieliński T., Swami A.. Mining association rules between sets of items in large databases.Proceedings of the 1993 ACM SIGMOD international conference on Management of data199320721610.1145/170035.170072 |
+| \[39\] || Sparrow M.K.. The application of network analysis to criminal intelligence: An assessment of the prospects.Soc. Networks199113325127410.1016/0378-8733(91)90008-H |
+| \[40\] || Wasserman S., Faust K.. Social network analysis: Methods and applications.Cambridge university press1994Vol. 810.1017/CBO9780511815478 |
+| \[41\] || Bhuiyan M.Z.A., Wang G., Tian W., Rahman M.A., Wu J.. Content-centric event-insensitive Big Data reduction in internet of things.In GLOBECOM 2017-2017 IEEE Global Communications ConferenceIEEE20171610.1109/GLOCOM.2017.8254997 |
+| \[42\] || Son J., Park J., Oh H., Bhuiyan M., Hur J., Kang K.. Privacy-preserving electrocardiogram monitoring for intelligent arrhythmia detection.Sensors (Basel)2017176136010.3390/s1706136028604628 |
+| \[43\] || Lodge J. M., Corrin L.. What data and analytics can and do say about effective learning?npj Science of Learning20172112 |
+| \[44\] || Mor Y., Ferguson R., Wasson B.. Editorial: Learning design, teacher inquiry into student learning and learning analytics: A call for action.Br. J. Educ. Technol.201546222122910.1111/bjet.12273 |
+| \[45\] || Picciano A.G.. The evolution of Big Data and learning analytics in American higher education.Online Learning201216392010.24059/olj.v16i3.267 |
+| \[46\] || Liu P., Di L., Du Q., Wang L.. Remote sensing Big Data: theory, methods and application.201810.3390/rs10050711 |
+| \[47\] || Eynon R.. The rise of Big Data: what does it mean for education, technology, and media research?Learning, Media and Technology.201328323724010.1080/17439884.2013.771783 |
+| \[48\] || Gartner I., Beyer M.. Gartner says solving ‘Big Data’challenge involves more than just managing volumes of data. Gartner Special Report Examines How to Leverage Pattern-Based Strategy to Gain Value in Big Data.Stamford, CT, USGartner2011 |
+| \[49\] || Spark A.. Apache spark: unified analytics engine for Big Data.2018 |
+| \[50\] || Apache StormApache Software Foundation. Accessed: [http://storm.apache.org/](http://storm.apache.org/). |
+| \[51\] || Daniel B.. Big Data and analytics in higher education: Opportunities and challenges.Br. J. Educ. Technol.201546590492010.1111/bjet.12230 |
+| \[52\] || Khan M.A., Salah K.. IoT security: Review, blockchain solutions, and open challenges.Future Gener. Comput. Syst.20188239541110.1016/j.future.2017.11.022 |
+
+# Hydroponics Monitoring System Based on IoT and Blockchain
+
+  
+  
+**Harpreet Singh Bedi^([1](#9789815051452-C4.html#aff1), [\*](#9789815051452-C4.html#cor1))****,** **Raghav Gupta^([1](#9789815051452-C4.html#aff1))****,** **Manoj Sindhwani^([1](#9789815051452-C4.html#aff1))****,** **Kamal Kumar Sharma^([1](#9789815051452-C4.html#aff1))**  
+¹ School of Electronics and Electrical Engineering, Lovely Professional University, Phagwara, Punjab, India  
+  
+
+## Abstract
+
+Since blockchain is the central technology of bitcoin, block chain has gained a lot of attention in recent years. Its applications are expanding in a variety of fields, including Internet of Things (IoT) defense, banking, industries, and medical centre. Furthermore, IoT has grown in popularity because of its widespread usage in smart homes and urban developments around the world. This paper presents the design of an automated system for a greenhouse focusing mainly on Hydroponics. Along with the design, the purpose of this study is monitoring, control, and visualization of the data. This project addresses some of the issues in traditional farming. Issues like incapability of agriculture due to small and fragmented land holdings, risk in using manures and pesticides, and lack of mechanization. The segments of this project include the main module (referred to as AGMS), the cloud, and the end user. The data visualization is done through a website that will acquire it from a Wi-Fi module through APIs. The study also includes social media alerts to platforms like Twitter and mail.
+
+**Keywords:** API, Blockchain, MCU, Server.  
+  
+
+* * *
+
+^(\*) **Corresponding author Harpreet Singh Bedi:** School of Electronics and Electrical Engineering, Lovely Professional University, Phagwara, Punjab, India; E-mail: [harpreet.17377@lpu.co.in](mailto:harpreet.17377@lpu.co.in)  
+  
+
+## INTRODUCTION
+
+As we know, agriculture is the main requirement above anything else and the traditional practices are just degrading over time. The Indian Agriculture sector accounts for 18% of total GDP (Gross Domestic Product) still, there is no major development in the agricultural practices followed in the country. There are, however, some modern techniques like Hydroponics, Aeroponics and Vertical Farming..
+
+Agriculture is the world's major source of food. Throughout the history, it has been a critical parameter to the advancement of civilizations. According to the United Nations (UN), the world's population will rise by 2 billion people to 7.8
+
+billion by 2050, implying that the planet will need to feed around 11 billion people by the end of the century.
+
+As shown in Fig. [(**1**)](#9789815051452-C4.html#f1), there have been four distinct revolutions in agricultural development: 1) age of traditional agriculture with human and animal power, 2) age of mechanized agriculture with rumbling sounds, 3) age of automated agriculture with high-speed development, and 4) age of smart agriculture with emerging technologies. As a result, smart farming provides a technologically-assisted road to sustainability. It entails the use of ICTs in the cyber-physical cycle of farm management, utilizing technologies such as the Internet of Things (IoT), cloud computing, robotics, and artificial intelligence (AI).
+
+![](Images/9789815051452-C4-F1.jpg)**Fig. (1))**  
+The four agricultural revolutions. 
+
+Smart farming is a sustainable farming technique that enhances operational precision by giving each plant or animal exactly what it needs to thrive in the best possible way, maximizing overall performance while reducing waste, inputs, and pollutants. While smart agriculture is an advanced tech, it simply takes field circumstances into account. Smart farming, on the other hand, goes a step further by management responsibilities of data, which is reinforced by context and situational awareness and driven by real-time events.
+
+Smart farming profited in the early years by advances in new technologies such as the Internet of Things, low-cost and enhanced sensors, actuators, and microprocessors, high-bandwidth wireless technologies, cloud-based ICT systems, Big Data analysis, AI, and robots. Farm equipment is no longer the only source of data; new services exist that transform data into action. The use of IoT in agriculture attempts to equip farmers with the tools they need to help them make better decisions and automate their processes by providing goods, knowledge, and services that improve productivity, quality, and profit.
+
+Hydroponics is a method of growing plants on a water surface without the need for soil. The nutrients plants get, otherwise when grown in soil, are given manually as per the requirement. The major advantage of this method is the time required for the growth and the absence of any fertilizers in the process. When done in a very small area, hydroponics does not require an automated system, but when done for mass production, an automated system is vital. Automated Greenhouse Monitoring System provides the automation, control and visualization for hydroponics. The automation is done by a programmable Microcontroller Unit connected to various sensors required for plant growth. The control is by the MCU along with the end user interface. The complete process is run through a cloud server, which will always be active and send alert and warning to the end user interface which comprises a website and data visualization through numbers and graphs.
+
+The main effort on the cloud is data transmission at a very low data rate so that this project has a vast reach. The end user part is simple, taking into consideration that farmers can use this with zero effort. The system addresses the problems like the monitoring and control of any automated system without the need of human intervention.
+
+ 
+
+## DISCUSSION
+
+ 
+
+### Hydroponics
+
+There are various methods to perform hydroponics, the best and the most efficient one being NFT (Nutrient Film Technique) method. This technique is very much popular for its simple yet efficient design. The NFT is often used to grow fast-growing plants like lettuce and spinach. Apart from these, commercially, green herbs and strawberries can be grown with this method.
+
+In this technique, a very shallow nutrient solution is poured down the tubing. This tubing is adjusted at a slant and consists of a hole on the upper side of the house, for which the small containers consisting of the seed/saplings are needed. These containers are net pots to contain plants and the growing media like coconut fibre and dried grass. The various parts of the NFT system consist of a reservoir for the nutrient solution, a nutrient pump for the nutrients up to the tubing, tubes to distribute water from the pump to the growing pots, pots to contain plants/seeds and a return system to collect the solution and send it back to the tubing to loop the process.
+
+The grow tray and the storage are two most important parts of the NFT process out of all other components. The grow tray is made up of net pots that contain the plants and the nutritional solution, as well as growing media such as coconut, perlite, and Rockwool. However, certain plant species do not require these solutions because they receive adequate moisture, nutrients, and oxygen from the system. The plant roots form a dense mat in the channel, while the foliage lies on top, supported by a trellis system in some cases (resembling a system where grapevines are grown).To make the best NFT system, the right slope, flow rate and channel length are required. Also, the plat roots have to be exposed properly to collect enough oxygen, moisture, and most importantly nutrients \[[1](#9789815051452-C4.html#r1)\].
+
+The nutrients required in this system are divided into 12 parts and two different solutions. Solution ‘A’ consists of 19% calcium, 15% nitrate or 45% potassium, and 13% nitrate. It will also have EDTA acting as a chelating agent. Solution ‘B’ has magnesium sulphate, mono potassium phosphate, and potassium sulphate as the main nutrients and solubor from boron, zinc sulphate, magnesium sulphate, copper sulphate and molybdenum as micronutrients. Overall, the nutrients required are nitrogen, potassium, phosphorous, calcium, magnesium, sulphate, iron, manganese, copper, zinc, molybdenum, boron and chlorine. These nutrients are readily available as the above-mentioned solutions. The material used as the growing medium will be coco coir, rock wool or peat moss based on the requirements. As for the water, distilled water, RO water or diluted tap water with reduced ppm is used. The water has to be changed every week or so (sometimes 4 days) in quantities of 19 litres.
+
+## BLOCKCHAIN SOLUTIONS FOR IoT
+
+The blockchain is a peer-to-peer network in which every node has the same copy of all data. When a transaction is launched, the initiator node signs it with its private key and sends it to the rest of the network for confirmation. All other miner nodes are involved. Try to find a nonce by going through the invalidation process \[[2](#9789815051452-C4.html#r2)\]. All completed transactions are registered in a list of blocks in blockchain technology, which is referred to as a public ledger. This blockchain continues to evolve as new blocks are added to it on a regular basis. For user protection, public key cryptography and distributed consensus algorithms were implemented.
+
+In a blockchain network, the consortium blockchain is used to provide data protection. Each side chain oversees its own IoT data. Each IoT device is given a unique id to monitor data in the blockchain network. Data obtained from a computer relates to its id, and the data is sent to the entire network after a hash is calculated on it. This serves as the foundation for data that can be trusted. The fundamental storage cost would grow in parallel with the scale of the IoT network information sharing. As a result, information sets are in remote locations, and a centralized server is maintained to store only the references to these locations.
+
+### Features
+
+The blockchain technology offers the highest level of transparency, and various industries are putting it to the test to see if it can be used for data transfer, record keeping, and other backend procedures \[[2](#9789815051452-C4.html#r2)\]. It gradually allows people to follow documents and certify ownership of assets digitally as an unalterable record. The following are the fundamental elements that make blockchain a technological revolution, as shown in Fig. [(**2**)](#9789815051452-C4.html#f2).
+
+![](Images/9789815051452-C4-F2.jpg)**Fig. (2))**  
+Basic blockchain structure.  
+
+*   **Transparency:** In general, for public blockchain systems like Ethereum and Bitcoin, users have equal access and communication with the blockchain network. Furthermore, each transaction is verified and recorded in the distributed ledger, which is accessible to all users at the same time. Thus, data on the blockchain is transparent to each node so as to validate the committed transaction in the blockchain.
+*   **Decentralization:** In existing payment management systems, such as a bank, a central agency performs transaction validation, resulting in a performance bottleneck, costly design, and a single point of failure. On the other side, blockchain allows for the validation of transactions between two nodes without the need for any intervention, jurisdiction, or central authority. As a result, the overall service cost, performance bottleneck, and danger of single-point failure are reduced.
+
+ 
+
+*   **Immutability:** Since the blockchain is based on a series of linked blocks, each containing a hash of the previous block's header, any tampering with the data invalidates all subsequent blocks. Any mutation is quickly detected since even minor changes to any transaction result in the generation of a new Merkle tree data structure.
+*   **Pseudonymity:** Regardless of the transparency of blockchain transactions, the system can maintain a measure of anonymity by providing users with anonymous addresses. However, because these addresses may be traced, blockchain systems can only retain confidentiality to a certain extent. As a result, blockchain can only provide pseudonymity, not complete confidentiality.
+*   **Non-Repudiation:** Each node in the blockchain transaction process is given a private key. Other nodes can then access and validate this information using the associated public key of that node. As a result, transactions signed digitally with cryptography cannot be refused by the transaction's source node.
+*   **Traceability:** Every transaction in the distributed ledger has a timestamp linked to it that is recorded at the time of the transaction. As a result, after analysing blockchain data with linked timestamps, users may easily verify and trace the origins of transactions as well as alterations.
+
+### Blockchain Types
+
+Participants can use blockchain as either a writer or a reader. A reader takes a passive role in the transaction process, focusing instead on analysing the contents of records or validating the blockchain. Writers, on the other hand, take an active role in the transaction process and can use consensus techniques to expand the chain. On the basis of the permissions granted to users for interaction with the ledger, blockchain is divided into three types. The subsections below go through each of these categories.
+
+### Public Blockchain
+
+Permissionless blockchain is known as public blockchain. These make it easier to participate in consensus processes and give any entity, as a reader or writer, full access to the main chain. Incentives are commonly used in mining to induce miners to mine blocks. As a result, transaction costs in public ledgers are higher than in private ledgers.
+
+### Private Blockchain
+
+Distributed ledger is another name for private blockchain. The number of miner nodes in this category is limited, and their identities are known. As a result, only a limited number of miner nodes are allowed to participate in the transaction. Furthermore, a user's permission to access data linked to him or her may be limited. In comparison to public blockchain, the secrecy of user data is higher in private blockchain.
+
+### Consortium Blockchain
+
+The basic goal of a consortium blockchain is to scale the effect of cooperation in order to address the challenges encountered by a certain industry. As a result, an advantageous framework is established that encompasses both allies and commercial competitors. This blockchain is semi-decentralized, which means it is supervised by a small group of people.
+
+The blockchain is entirely controlled by a single group, but it is free of monopolies. This control allows each node to establish its own instructions, edit or erase erroneous transactions, change account balances, and so on once each node agrees. The centralized nature of consortium blockchain, on the other hand, renders it defenseless against hostile entities. Finance, banking, healthcare, insurance, and logistics are some of the industries where consortium blockchain can be used.
+
+### Greenhouse
+
+A greenhouse is a controlled environment to grow plants. It is made up of transparent medium for walls and semi-transparent for the roof for controlled sunlight. Plants, requiring regulated climatic conditions are grown in a greenhouse.
+
+A greenhouse makes it conceivable to reproduce a different atmosphere and thus develop nourishment that would not typically develop in the zone. Also, making the nursery mechanized enables people to develop their own nourishment or plants at home without continually look after them. The purpose of greenhouse is to maintain the nursery temperature in an ideal range for ideal plant development utilizing a temperature control framework. Another goal is to explore if the watering system is solid, to get an ideal soil dampness level for the picked plant \[[3](#9789815051452-C4.html#r3)\].
+
+The room temperature is thought to be at 15 - 21°C. Another presumption is that the temperature outside of the greenhouse, will consistently be colder or equivalent to the temperature within the greenhouse. The plant that will be placed in the greenhouse will be favoured to temperature at room temperature or above. The consequence of the exploration questions depend on time limited experiments. This result could be different over the long haul and it is accordingly not substantial in that case. The value when the dirt is viewed as excessively wet or too dry is dependent on the type of the soil utilized. These qualities cannot be utilized on different types of soils that have to be exclusively set with the assistance of the tests.
+
+As for the field of hydroponics, there is a requirement for a greenhouse and many advantages are linked to it. Some of the advantages are as follows.
+
+ 
+
+1.  It will help to maintain optimum conditions, as per the plant grown.
+2.  It will ensure maximum photosynthesis performance by providing required conditions.
+3.  It provides improved water use.
+4.  It shortens crop cycles *i.e.* plants grow faster as compared to traditional farming methods.
+5.  It will help to resolve the problems caused by soil depletion.
+
+For this study, more economical and compact greenhouse under 2x2 m is implemented that enclosed a hydroponics system of under 1.5x1.5 m.
+
+This monitoring system comprises interfacing of sensor with the main MCU and will control them, based on the requirement for the plant, e.g water level sensor is interfaced with the motor to keep the level of water under a threshold by controlling the rate of water being pumped. Along with that, all the data is sent to the cloud using a server and displayed on a website in the form of graphs, charts, and numbers \[[4](#9789815051452-C4.html#r4)\].
+
+### Hardware
+
+The hardware part of this system is divided into three parts -AGMS module, hydroponic system, and greenhouse. The hydroponic system and greenhouse have already been discussed shown in Fig. [(**3**)](#9789815051452-C4.html#f3).
+
+Al the above-displayed sensors work in synchronization with each other. Every threshold in-capacitance of one sensor directly impacts the other one.
+
+The AGMS module consists of a Micro Controller Unit embedded in a waterproof casing that is connected to various sensors listed as:
+
+DHT22: A digital temperature and humidity sensor with good accuracy with ±1^oC.
+
+![](Images/9789815051452-C4-F3.jpg)**Fig. (3))**  
+Block Diagram of Project. 
+
+Water level sensor: Water level sensing module gives an analog reading the height of water and has to be further converted into cm \[[5](#9789815051452-C4.html#r5)\].
+
+pH sensor: Detects the pH value of the solution.
+
+Buzzer: Makes a sound whenever there is a high value at the input.
+
+L293d: Motor driver IC to control the pump.
+
+Touch Screen: To display the values of various sensors in multiple forms. It is programmable.
+
+ESP8266: For sending the data to the server. It is a Wi-Fi module working at 2.4 GHz.
+
+LDR: It is a Light Dependent Resistor that gives an analog output value based on the intensity of light falling on it.
+
+The Micro Controller Unit used is Arduino Mega. Arduino Uno is not used here despite the familiarities because of the number of ports and memory of the Mega.
+
+### Server and Cloud
+
+For any efficient monitoring system, all the data has to be visualized and displayed on any device. For this purpose, we use a server which is programmable like a Digital Ocean Droplet or a pre-made one like Thingspeak, as shown in Fig. ([**4**](#9789815051452-C4.html#f4)).
+
+The data from the sensors is processed by the Arduino to Thingspeak using an API key and ESP8266, a Wi-Fi module \[[6](#9789815051452-C4.html#r6)\]. This process is simple as one has to give an API key to get the data as shown in Fig. ([**4**](#9789815051452-C4.html#f4)). The only limitation of Thingspeak is that it is not programmable and there are very limited functions whereas, in the case of Digital Ocean, it is totally customised right from the memory, number of cores in the processor, and the type of operating system for the server. The data from the server is then captured by a webpage using API keys in JS and displayed in it. The website can be made from the scratch or from custom templates readily available on the internet. The main thing to keep in mind is the APIs for transferring the data \[[7](#9789815051452-C4.html#r7)\].
+
+Each sensor data is individually sent to the cloud without any cross-dependency. Each sensor will be modular *i.e.* they can be easily disconnected and replaced when needed, Fig. [(**5**)](#9789815051452-C4.html#f5). The sensors will be connected to the ports of the module casing and can even be made wireless with the help of any Bluetooth or any Wi-Fi modules, as shown in Fig. [(**6**)](#9789815051452-C4.html#f6).
+
+## WORKING
+
+The total system works in synchronization with the hydroponics. To make it simpler, we will break the procedure and working into steps. The first step is to select the plant type to be grown. Then selection of the nutrients and all other parameters like the humidity, optimum temperature, water level, water flow, growing medium *etc.* is taken care of. Secondly, all these are assembled to the hydroponics system through the NFT technique. The whole hydroponics system is enclosed by a greenhouse that also has the main module in it. Now this module with all the sensors will sense the data at customized intervals and send it to the cloud.
+
+The threshold of each sensor is already fed to the module in the programming. When any sensor goes out of the threshold, the alarms get activated. In this case, the alarms are the buzzer and the alerts *i.e.* website alerts, GSM alerts, twitter alerts and mail alerts. Also, some of the modules will automatically adjust the threshold, *e.g.* when the water level goes above the optimum level, the flow rate of the motor decreases. For the humidity, exhaust fans and sprayers are used whereas for the temperature, high wattage incandescent bulbs are used.
+
+![](Images/9789815051452-C4-F4.jpg)**Fig. (4))**  
+Thinkspeak website ![](Images/9789815051452-C4-F5.jpg)**Fig. (5))**  
+Ubuntu server ![](Images/9789815051452-C4-F6.jpg)**Fig. (6))**  
+Setting up configuration 
+
+## CONCLUSION
+
+Agriculture was the first occupation of humans; it is the foundation for all the Industries. The world’s population is increasing day by day and there is an increasing requirement of food. In India, 3000 children die every day due to malnutrition.
+
+The greenhouse monitoring system gives the flexibility of growing crops in any seasons. This enhances the moderate cost and availability of seasonal vegetables throughout the year. The crops that are grown with the techniques like hydroponics and aquaponics and are free from pesticides are nowadays called organic food.
+
+The techniques of Aquaponics and hydroponics give flexibility to the soil because these processes do not require any soil so any crop can be grown in any part of the world and the greenhouse can be constructed anywhere in the world so import and export will be quite less. It can be implemented for any fresh vegetables.
+
+## CONSENT FOR PUBLICATION
+
+Not applicable.
+
+## CONFLICT OF INTEREST
+
+The authors declare no conflict of interest, financial or otherwise.
+
+## ACKNOWLEDGEMENTS
+
+Declared none.
+
+## REFERENCES
+
+|  ||  |
+| --- | --- |
+| \[1\] || Nemali K.S., van Iersel M.W.. An automated system for controlling drought stress and irrigation in potted plants.Sci. Hortic. (Amsterdam)2006110329229710.1016/j.scienta.2006.07.009 |
+| \[2\] || Kim Y., Evans R.G., Iversen W.M.. Remote sensing and control of an irrigation system using a distributed wireless sensor network.IEEE Trans. Instrum. Meas.2008577 |
+| \[3\] || Mei F.. —Smart planet and sensing china—analysis on development of IOT‖.Agricultural Network Information20091257 |
+| \[4\] || Sun Qi-Bo, Jie Liu, Shan Li, Fan Chun-Xiao, Sun Juan-Juan. Internet of things: Summarize on concepts, architecture and key technology problem, Beijing Youdian Daxue Xuebao.Journal of Beijing University of Posts and Telecommunications201033319 |
+| \[5\] || Xing Z., Guiping L., Shi X., Cheng C., Wen L.. —Construction of agricultural service mode in IOT and cloud computing environment‖.Nong-ji-hua Yanjiu20124142147 |
+| \[6\] || Saha Tanu, Verma Ashok. Automated Smart Irrigation system using Raspberry Pi.International Journal of computer applications20171726 |
+| \[7\] || Veera Vanitha D., Nivitha S., Pritha R., Saranya J., Shobika T.. Automatic Drip Irrigation System using Raspberry PI and Wireless Sensor Networks.IJIRSET2011 |
+
+# Recent Trends in IoT Healthcare-based Blockchain Solutions
+
+  
+  
+**Himanshu Sharma^([1](#9789815051452-C5.html#aff1))****,** **Hardik Chaurasia^([1](#9789815051452-C5.html#aff1))****,** **Arpit Jain^([2](#9789815051452-C5.html#aff2), [\*](#9789815051452-C5.html#cor1))****,** **Nazir Ahmed^([1](#9789815051452-C5.html#aff1))**  
+¹ Electrical and Electronics Engineering Department, University of Petroleum and Energy Studies, Dehradun, India  
+² AI Practitioner, QpiAI India Pvt. Ltd., Bengaluru, India  
+  
+
+## Abstract
+
+This review revolves around the idea of inculcating and amalgamating all the possible forte of healthcare that can be governed and handled by Blockchain Technology (BCT). Relating back to all the archaic systems involved in the healthcare sector, the entire process was quite slow and many a time leads to a significant amount of delay in any process, be it report of the patient, tracking data from the smart watch, ruling out appointment from a doctor, medicine prescription and many more. BCT in fusion with the Internet of Things (IoT), leads to generating a completely revolutionary and robust system that expands its range from very minute detail to a completely new horizon. As predicted by 2022, more than 18 billion devices will be available across the world; thus, managing this data that is related to healthcare, devising BCT for same can yield some exponential results in advancement in health care sector. This entire healthcare data is quite vulnerable to all the cyber-attacks and all the collected valuable information may be at a huge risk; hence by deploying BCT, security can be greatly increased. BCT is nothing but an immutable time stamp series of records, just like an array working; when even one of the blocks is initialized with any value of information, that piece of information will remain there forever. This review attempts to group together all such various fields that can be brought under a single umbrella covering the range of fields that can be governed by BCT in accordance with IoT for the development of health care sector.
+
+**Keywords:** Blockchain Technology, Internet of Things, Hash Code, Healthcare, Protocols.  
+  
+
+* * *
+
+^(\*) **Corresponding author Arpit Jain:** AI Practitioner, QpiAI India Pvt. Ltd., Bengaluru, India; E-mail: [ajain@ddn.upes.ac.in](mailto:ajain@ddn.upes.ac.in)  
+  
+
+## INTRODUCTION
+
+The recent advances for the promotion of the crypto currency-based ledger system known as Block Chain Technology (BCT) have taken a huge leap in IoT and health care. As everything is web controlled so making use of BCT and IoT to
+
+govern the health sector would be a good opportunity to make this entire system of health care more robust and highly efficient. Internet of Things (IoT) is nothing but a sphere of interconnectivity of devices *via* the internet so that each and every device can be controlled through web. It encompasses a broad range of applications such as health management, smart homes, traffic, agriculture, and weather monitoring to name just a few because its growth is quite humungous at a particular speed. IoT devices are quite light \[[1](#9789815051452-C5.html#r1)\] and thus lead to shallow energy footprints. Having just this less amount of energy, the most of it is completely utilized in the main function that the device performs. Hence, leaving very few amount of energy for applications such as security and privacy. This opens the path for BCT as it overcomes the problem mentioned before as it is secure, distributed, immutable, transparent, *etc.* The protocols governing BCT make the information secure in the form of block transactions that simply correlate with the respective application. Once this chain of blocks is completely filled, it appends to other chains *via* a process called as mining process and this process is performed by specific nodes called as miners. Although BCT deployment is not easy as it seems as there are various problems associated with it. Deploying BCT and IoT for the application such as healthcare is quite promising and these are well equipped. A system proposed \[[1](#9789815051452-C5.html#r1)\] for Remote Patient Monitoring (RPM) is mainly focused on providing health care facilities other than hospitals. The whole concept is about an IoT wearable device that the patient wears and the device provides all the vital information *via* cloud protected by BCT, to the respective health care center. Although there are various problems associated with IoT like network overhead delay, mismanagement of the data and many more but BCT very effectively overcomes all these problems. BCT encompasses various positive points including privacy, trustworthiness, smart contracts, DDoS notification and mitigation but other problems may persist as bandwidth limit, network issues and many more. Before critically analyzing every aspect discussed so far, let us dive into its very basics.
+
+### Healthcare
+
+A professional field, particularly of science that is a sheer management and improvement of health through appropriate history taking, prevention, diagnosis, standard procedures, treatment, and ensuring recovery of various ailments in people is known as Healthcare \[[2](#9789815051452-C5.html#r2)\]. We have witnessed the advancement trend in the medical sector and it is enumerated to have the most impact on the business and society for the next 35 years. Healthcare has a very wide spectrum – from having large glass like structures providing every medical facility in the urban areas to struggling for a decent treatment in rural areas. Looking on the development being made in the Healthcare sector, this gap is expected to widen in the future years \[[3](#9789815051452-C5.html#r3)\]. There is a buzz that a day will come when AI (Artificial Intelligence) driven robots will operate on patients. For now, it may seem as a long shot but nevertheless steps have already been taken so as to proliferate this domain of AI for decisions in treatment \[[4](#9789815051452-C5.html#r4)\]. New and automated technologies are being introduced in the hospitals that work using IoT and are able to analyze the patient’s health status every time. Now we are taking into account various new factors emphasizing on health, like steps per day, water intake per day, number of floors climbed, and average walking speed \[[5](#9789815051452-C5.html#r5)\]. Finding new and innovative reforms in this paradigm is quite tedious and requires huge deal of iterations. So, discovering new reforms has now extended beyond the boundaries for healthcare practices as they are being developed since 1950s. Although these prior reforms just focused on improving the safety and quality of healthcare, now the reforms are made to improve the quality of service ranging from local organization level to decision level organizations. More importantly, these are not only the tools that are driving healthcare sector to reach greater heights, but the organizational factors are also important to implement and sustain the new paradigm \[[6](#9789815051452-C5.html#r6)\]. The most important factor affecting healthcare is diversity of the people. This brings in the theme of World Health Organization (WHO) for 2018 “Universal Health Coverage – Everyone, Everywhere”. Many factors like social, political, financial, geographical and cultural, affect the availability of all facilities for the people \[[7](#9789815051452-C5.html#r7)\]. Even if somehow or someway, all these facilities are made available, what guarantees that it is given to them regularly and a constant check is kept on the patients? The first idea that strikes our mind is ‘Manpower’ and more or less many may run out of ‘Manpower’. So, the follow up solution is ‘Accountability’ – *the patients expect a certain standard of treatment due to a particular conduct*. They should be able to trust the personnel in front of them with their sensitive information.
+
+In recent years, with digitization creating an umbrella in this tech world, many health care centers are now shifting towards Big Data and IoT for the welfare of their patients and monitoring them continuously – ‘*remote patient monitoring’* \[[8](#9789815051452-C5.html#r8)\]. This remote monitoring is increasing at a very faster rate from 7.1 Million in 2016 to an estimated 50.2 Million in 2021 \[[9](#9789815051452-C5.html#r9)\]. The information and data so gathered may be vitals or records, is being stored and monitored on a regular basis thus in return giving birth to HIE – *Healthcare Information Interchange*. Determining which trials and methods are used on one patient at a place makes it useful for a doctor to implement it at another place on a person having the same problem, by checking the records \[[10](#9789815051452-C5.html#r10)\]. By implementing this method, new treatments can be found and doctors can learn more about the disease, thus developing a *precision medicine*. This new paradigm of healthcare is preventing and predicting diseases beforehand using the data being collected from regular monitoring of the patients. By training multiple Machine Learning models, we can predict for which disease the patient is more vulnerable and doctors can treat that beforehand. We are no longer going to wait for the patient to get sick, instead we will be able to predict and prevent the disease before it will even get its grip on the human body \[[4](#9789815051452-C5.html#r4)\]. This provides us with a gist of what has been so far implemented and what are the types of approaches being followed in the healthcare sector.
+
+### Blockchain
+
+With the increase of cloud storage, Internet of Things and cyber-attacks, it is important to adapt methods capable of ensuring the security of the sensitive data being collected \[[11](#9789815051452-C5.html#r11)\]. IoT can become more complicated in the future when it will be connected with *Network of Plentiful Things* (NPT). If we are stuck with the centralized structure of IoT, we will not only increase the traffic in the network but will also have no scalability in our network \[[12](#9789815051452-C5.html#r12)\]. A blockchain like protocol, being first introduced by David Chaum in 1982 and further worked upon by multiple individuals in the upcoming years, has emerged as an alternate to overcome various challenges put forward by IoT. If we turn back the pages of history, the first blockchain was conceptualized in 2008 by Satoshi Nakamoto and was a core component in Bitcoin, a *crypto-currency* – where it worked as a ledger for all the transactions taking place \[[13](#9789815051452-C5.html#r13)\]. In past few years, the concept of crypto currency has gained a huge deal of fame and importance because of the quirk it possesses. Blockchain is a decentralized, distributed and an immutable ledger containing all the transactions and data in blocks. It has three main parts – Block, Miner and Node. Not only being smart and secure, it ensures that no additive noise is added up and thus bringing no disruption to data, which was a problem in other security methods \[[14](#9789815051452-C5.html#r14)\]. Furthermore, it enables integrating several core technologies like cryptographic hash, digital signature and distributed consensus mechanism \[[13](#9789815051452-C5.html#r13)\]. Moreover, it can be private or public depending on the user. Blockchain creates an immutable ledger of the blocks in which each block contains timestamps of all the transactions taking place (Fig. [**1**](#9789815051452-C5.html#f1)) \[[8](#9789815051452-C5.html#r8)\]. Each block in Blockchain has two main headers – the block header and policy header. The block header contains information regarding the previous block, thus making the ledger immutable and the policy header is used to authorize the devices involved.
+
+Every data is authorized with a *Public Key* that is provided to the users; only then a smart device will be able to access or use the Blockchain and the storage \[[15](#9789815051452-C5.html#r15)\]. As forecasted in a study \[[16](#9789815051452-C5.html#r16)\], BCT may tend to contribute to entirely phase shifting the way people pay for goods or any commodities they purchase, through this increase in cryptocurrency. There are various risks associated with BCT such as private key security, criminal activity, double spending, transaction privacy leakage, criminal smart contract, vulnerabilities in smart contract, under-optimized smart contract, and underpriced operations that are very effectively explained \[[17](#9789815051452-C5.html#r17)\] but simultaneous solutions, various proposed framework and refined algorithms too have been provided for the same in the past few years that tackle these issues very effectively. Although BCT can be applied anywhere for good but more importantly it finds its value in security and financial industry, as it has already triggered multiple projects in industries. BCT promises to overcome very subtle aspects representing, “a shift from trusting people to trusting math” \[[16](#9789815051452-C5.html#r16)\]. The Smart Home Miner manages most of the things like generating transactions, distributing and updating keys, managing a local storage (used to store data locally – uses First in First out (*FIFO*) and the cluster. In addition, it also collects the transactions into a block and then appends it to a Blockchain. Whenever an external device requires data from the network, the miner allocates a special key. The miner first checks the policy header and then allocates a key so that the devices can access the data. It can also declare the key invalid once the work is completed so that it may not able to access the network anymore. This method has two advantages – the miner can keep track of all the devices involved within the network and the communication between devices is secured using a shared key. Even access to local storage requires permission \[[15](#9789815051452-C5.html#r15)\] and we can implement distributed cloud storage, making it difficult to cause disruptions \[[11](#9789815051452-C5.html#r11)\]. IoT devices can carry out autonomous transactions through smart contracts. Combined with artificial intelligence (AI) and Big Data solutions, more significant impacts can be produced \[[18](#9789815051452-C5.html#r18)\].
+
+![](Images/9789815051452-C5-F1.jpg)**Fig. (1))**  
+Block diagram of BCT. 
+
+As depicted in Table [**1**](#9789815051452-C5.html#t1), various types of BCT along with their attributes have been discussed. Blockchain checks each packet of data or transaction to identify any kind of abnormal behavior. If we take into consideration multiple miners to validate a new packet being added to the chain, it definitely increases the delay because now every miner has to verify the packet being added but it enhances the robustness of the entire network. It solves the problem of centralization as multiple miners control/validate the data being added. Blockchain requires each miner to do an encryption checking and solve a complex mathematical problem so as to complete a transaction, this can increase the energy consumption, but using Artificial Intelligence, this problem can also be dealt with \[[19](#9789815051452-C5.html#r19)\]. Blockchain can be the future of security since many new companies have started to use it to gain trust among their users, for example, *Provenance*. Major companies like Bosch and Cisco have started implementing the features of Blockchain for securing IoT applications. Blockchain is heavily involved with cryptocurrency. GridCoin and Ripple Labs find the exquisite implementation of Blockchain in financial services \[[20](#9789815051452-C5.html#r20)\].
+
+Table 1 **Types of BCT.**  
+
+| ***Attribute*** || ***Public BCT*** || ***Consortium BCT*** || ***Private BCT*** |
+| --- | --- | --- | --- |
+| **Determining Consensus** || Every Miner || Only selected ones || Particular Institution |
+| --- | --- | --- | --- |
+| **Read Request** || Public || Public/Restricted || Public/Restricted |
+| **Immutability** || Almost impossible to interfere || Can be interfered || Can be interfered |
+| **Efficiency** || Truncated || Quite high || Quite High |
+| **Centralization** || Nil || Embryonic || Yes |
+| **Process of Consensus (PoC)** || No confirmation required || Requires Permission || Requires Permission |
+
+  
+ 
+
+## IoT
+
+The way IoT has created a buzzword is quite commendable and has appeased many researchers. IoT is nothing but the interconnectivity of the objects with each other *via* internet. Not only it aims to unify everything under one umbrella but also tries to address the issue of not being able to control the things that surround us with just one click. There is no unique definition of IoT as depending on the need and reference it can be molded \[[21](#9789815051452-C5.html#r21)\]. Furthermore, IoT has been successful in grasping the attention of the users, businessmen, authorities over the world to not only make this concept used in their respective domain but also to develop its fangs even deeper into the realm of knowledge. The first known application of IoT was a Coke Machine at Carnegie Melon University in early 1980s and since then its development just sky rocketed. For successful implementation of Internet of Things (IoT), the prerequisites are (a) Dynamic resource demand (b) Real time needs (c) Exponential growth of demand (d) Availability of applications (e) Data protection and user privacy (f) Efficient power consumptions of applications (g) Execution of the applications near to end users and (h) Access to an open and inter operable cloud system \[[22](#9789815051452-C5.html#r22)\].
+
+So far when we take major essential technologies widely used for deployment of IoT-based products and services, the most obvious solution we get are RFID, WSN, Middleware, Cloud Computing and IoT Application Software. The trend of IoT prior from 2010 to 2020 is clearly illustrated in Table [**2**](#9789815051452-C5.html#t2).
+
+Table 2 **IoT trend**  
+
+|  || **Prior 2010** || **2010-2015** || **2015-2020** || **After 2020** |
+| --- | --- | --- | --- | --- |
+| **Network (N/W)** || ▪ WSN based || ▪ Autonomous  
+▪ N/W location transparency.  
+▪ Lag Accepted  
+▪ Storage and Power N/Ws  
+▪ Hybrid Technologies || ▪ Awareness based on Context N/W. || ▪ N/W Apprehension  
+▪ Autodidactic and Repairing N/Ws. |
+| --- | --- | --- | --- | --- |
+| **Software and Algorithms** || ▪ Amalgamation of relational database.  
+▪ IoT oriented.  
+▪ Event oriented platforms.  
+▪ Localization Algorithms. || ▪ Wide Scale, open source  
+▪ Compose able Algorithms  
+▪ Next gen social oriented  
+▪ Next gen based apps || ▪ Desired results oriented.  
+▪ Distributed AI  
+▪ Object-to- object collaboration || ▪ User-based  
+▪ Transparent IoT  
+▪ Cinch to deploy  
+▪ Objects-to- human collaboration.  
+▪ For everyone. |
+| **Hardware** || ▪ RFIDs, sensors  
+▪ Integrated into smart phones.  
+▪ NFC in smart phones.  
+▪ Truncated and affordable  
+MEMs technology || ▪ Various protocols and standards oriented.  
+▪ Increased sensors and actuators.  
+▪ Secure affordable tags and || ▪ Intelligent sensors  
+▪ Increased sensors truncated in a very small space. || ▪ Nanotechnology and new  
+innovative materials |
+| **Data Processing** || ▪ Series and Parallel  
+▪ Quality of Service (QoS) || ▪ Spectrum aware data processing  
+▪ Context based data processing that is  
+▪ adaptable || ▪ Context based data processing and outputs. || ▪ Adaptive, AI based cognitive optimization. |
+
+  
+Table 3 **BCT addressing IoT challenges.**  
+
+| **Challenge** || **Explanation** || **Blockchain Solution** |
+| --- | --- | --- |
+| **Costs/Capacity constraints** || With the sudden increase in the use of IoT, there will be a surge in the use of IoT Devices. More applications of IoT in daily life involve the use of more devices . || Smart contracts can enable smooth communication over the network. Decentralized approach will help in scalability and in security. |
+| --- | --- | --- |
+| **Traditional Methods** || Previous security methods work in centralized approach and can risk the entire system’s security. Very less scalability offered and no such protection against malicious attacks like DDoS. Malware can be introduced and whole network can get compromised || Decentralized approach removes the reliability over one place. Data is approved from the users cryptographically before adding to the chain so malware cannot be added. Blockchain has been proven useful against many malicious attacks. |
+| **Dependency on Cloud** || Because of centralized approach any problem with the Cloud Servers will affect the entire network and the service will stop functioning. || No singular point of dependency. The data is distributed on the Cloud Servers. If any one server is down data can be sent on another server. |
+| **Mutability** || Data can be manipulated easily and even malware can be added to disrupt the entire service. || Immutable chain having timestamp on each block. No data can be added in between and without the encryption verification of all the users. Data is distributed over the cloud and cannot be tampered with because of encryption. |
+
+  
+
+We, as humans have realized that nothing in this world can be considered perfect or achieving that Utopian world is just our dream, so we discuss about the challenges faced by IoT that are data management challenge, data mining challenge, privacy, chaos and lastly security (Table [**3**](#9789815051452-C5.html#t3)). BCT comes as a savior and this has been discussed in the latter half of the paper.
+
+Moreover, security goals are very much needed by every system and certain principles are to be followed that are confidentiality, integrity, availability, authentication, lightweight solutions, heterogeneity, policies, key management systems \[[23](#9789815051452-C5.html#r23)\].
+
+### Integrated Solutions using BCT and IoT
+
+Digital innovation is the need of the hour and various new reforms are required in this field. Digital innovation is nothing but the use of digital technology for a wide range of innovations. The early history of institutional theory provided a particular version of change that organizations come to look more like each other because of the strength of legitimacy and socio-cultural pressures. A central process is that of isomorphism, that is, those organizations come to look more alike through normative, mimetic and coercive pressures. Studying digital innovation and transformation from an institutional perspective is about how digitally-enabled institutional arrangements emerge and diffuse both through fields and organizations. Similarly, ideas and key core concepts can be visualized in BCT amalgamated with IoT. Before diving into this cohesive concept, first let us have a brief idea about what it has for us in its bag of surprises \[[24](#9789815051452-C5.html#r24)\].
+
+The Internet of Things (IoT) is cracking its shell and evolving into full maturity thus establishing itself as part of the future. As predicted by 2022, more than 18 billion devices will be available across the world and as IoT has been encompassing this world of technology is destined to create all the more new challenges in the IoT domain \[[25](#9789815051452-C5.html#r25)\]. IoT is an underlying background for various devices that are responsible for generating and exchanging information as well as private sensitive information thus making it vulnerable to various cyber-attacks. Moreover, the new devices that are associated with IoT are light weight and have to devote most of their energy to multitasking and hence including BCT for IoT security is a unique yet effective way out. Blockchain can help in the enrollment of IoT devices and keep a regular integrity check on the devices \[[26](#9789815051452-C5.html#r26)\]. IoT has a broad range of applications and with ever increasing demand in the devices and the availability of internet to every person has opened the doors to research and new development. Since the amplification of IoT features, it has led to some lacks and difficulties in its security and privacy that encompass various threats such as lack of central control, heterogeneity in device resources, multiple attack surfaces, context specific risks, and scale \[[27](#9789815051452-C5.html#r27)\]. The ever increasing and now becoming the more ubiquitous, BCT has a good and a strong hold in the evolution and miniaturization of IoT that trace its path coming all the way from a very lame and conventional usage. This has not only resulted in a colossal advancement but also has led to various new emerging technologies like Wireless Sensors Network (WSNs), Radio Frequency Identification (RFID), *etc.* \[[28](#9789815051452-C5.html#r28)\].
+
+IoT has taken over the world suddenly and there is a huge amount of real time data being collected on a regular basis. The traditional methods cannot be efficient for such huge data and it is not a very good practice to store data directly on the cloud \[[11](#9789815051452-C5.html#r11)\]. The data should be readily available, offer low latency and the devices should be scalable. The centralized data can be tampered easily and we can never be able to trust these IoT companies with our sensitive data. We need a distributed, decentralized system where every data being added or altered is first verified by all the systems in that network.
+
+In addition to this, the manifold and presence of IoT have led to an ever-increasing demand of the Internet, security and many more important aspects, and the amalgamation of IoT with BCT now becomes a primary concern. IoT not only makes the users utilize the resources of it but even the creators of innovative application for end users also make BCT a perfect tool for aggravating the results. The most basic and foremost challenge of IoT is nothing but Security, or one can even call it as *‘privacy concern’*. Since the integration of BCT and IoT has led to overcoming of this challenge hence centralized companies manage data and privacy using the integration of both. BCT has the potential to overcome the challenges associated with IoT as a result of its distributed, secure, and private nature.
+
+As already discussed, Blockchain is a decentralized, immutable, transparent and secure ledger of all the information. Keeping in mind the benefits of BCT, more than 1.4 billion dollars were invested in BCT in the first 9 months of 2016 \[[29](#9789815051452-C5.html#r29)\] and this number is still increasing exponentially. Blockchain is a sector still in development so there is still a room for a lot of improvements. Addition like ‘GHOST’ which will increase the block creation rates and we will be able to create large blocks of data \[[30](#9789815051452-C5.html#r30)\]. The implementation of Content Distributed Network (CDN) will be able to increase the speed of data propagation in the BCT and thus will be able to remove any inconsistencies arising due to the distributed approach and also, it will protect the network from double-spent attacks \[[31](#9789815051452-C5.html#r31)\].
+
+Although adopting BCT directly for IoT is not so easy and straightforward as it encompasses various challenges like high resource demand, long latency and low scalability. Furthermore, taking into consideration the study conducted by Gartner, IoT security spending reached $1.5 billion in 2018, and by 2022, half of all security budgets for IoT reached to fault remediation, recalls and safety failures rather than protection. Hence if a *‘secure by design’* system is achieved, IoT will experience an exponential increase in its advancement. The need for BC arrives from the essential challenge faced by IoT is in its distributed architecture that may lead to various problems like security, exploitation *via* cyber-attacks, collapsing quickly, mismanagement of central cloud service provider, confidentiality and authentication, keeping the data integrity, and many more. In addition to this, one more example bolsters the idea of amalgamation of BCT with IoT, Big chain DB being the one that combines the benefits of Blockchain with Big Data \[32\]. Using Blockchain with Artificial Intelligence (AI) will reduce the computation overload by its operations on the data \[[19](#9789815051452-C5.html#r19)\]. IoT is the connectivity of everyday devices with one another using various techniques. IoT can range from being as simple as switching on the coffee machine as soon as our car enters the garage to be able to monitor a person’s vitals in healthcare and provide this information for further analysis. Companies are investing billions on the Industrial Internet of Things for industrial applications and tackling their problems \[[33](#9789815051452-C5.html#r33)\]. Due to the increased application of IoT and its ability of being able to monitor real time data, it is vulnerable to attacks and security issues on the devices connected to the cloud we are storing the data in. Our device signals operate in public place that exposes them to hackers and they can damage the devices or gain control of the data being sent easily. Moreover, it is already vulnerable to network layer attacks like DoS, illegal access networks, Man in the middle attack and this list continues. On the storing side we can have threats related to illegal access of data, malware or tampered data being stored and sometimes even data loss \[[34](#9789815051452-C5.html#r34)\]. Furthermore, BCT has proved that it is immutable, distributed and immune against most of the attacks involving fraud and mainly *double spending* and *record hacking.* To explain the term coined as *Double spending,* it is when a party buys multiple assets using one pool of one because there is some delay involved in processing the payment. Blockchain requires the miners to solve a PoW before confirming any transaction that takes some time. This gives time for the payment processing to take place and thus tackles the problem easily. BCT’s decentralized approach protects from hacking the data stored \[[35](#9789815051452-C5.html#r35)\]. DDoS attacks are being handled using the decentralized approach and the Gladius project’s approach is focused on stopping DDoS attacks \[[36](#9789815051452-C5.html#r36)\]. IoT network involves a lot of sensors spread over a large area to monitor it in its entirety. We do not use point to point connection because it does not help in modularity, decentralization and reduces the scalability of the network. IoT network consists of a controller as well as actuator nodes which help a lot in making the system automated. IoT network generates a large amount of data and it results in some delays and makes it difficult to manage the network. Using blockchain along with an adaptive control algorithm, a lot of these problems can be solved. Adaptive control algorithm analyzes the queue and does not allow the queue to be saturated by making suitable changes. Blockchain enhances the security and stores the HashMap that helps in quick searching in the database, thus increasing the efficiency of the IoT network. The ability to create/store/transfer digital assets in a distributed, decentralized and tamper-proof way is of great practical value for IoT systems. Performance analysis clearly shows that latency is a dominant factor in this region \[[37](#9789815051452-C5.html#r37)\].
+
+Simultaneously an ever-increasing boost in IoT and BCT amalgamation, these two concepts under one umbrella have taken a huge step forward as main standards for low-power lossy-networks (LLNs) have constrained resources. The future significance of this amalgamation is quite evident as not only being useful for commercial aspects, it also finds its significance in community services \[[38](#9789815051452-C5.html#r38)\]. Comprehending conventional issues faced by IoT, they can be listed as ‘*Resource Consumption, Centralization, Lack of Privacy, Not Scalable, Mutable, etc.’* and these issues then make BCT shine as a savior for IoT drawbacks \[[39](#9789815051452-C5.html#r39)\].
+
+Hence, the primary objective of integrating BCT with IoT is just to make all these challenges vanish or reduce to a very negligible content. One should never confuse BC with Bit coin or more broadly speaking with crypto currency, as it is just an application or leverage of BCT. BC to be put into a simple statement, it is just a distributed database system based on a consensus rule that allows the
+
+transfer of value between entities. BC being the only one entity that simultaneously enjoys three properties:
+
+ 
+
+1.  *Trust-less* meaning no need to own a certified digital identity and both the involved parties have no need to know about each other but still can exchange data.
+2.  *Permission-less* meaning nobody has the authority to operate the BC network, hence no permissions no controllers.
+3.  *Censorship resistant* meaning anyone can use and negotiate on BC \[[40](#9789815051452-C5.html#r40)\].
+
+It can be concluded that an IoT ecosystem has numerous vulnerabilities. BCT comes as a rescuer and thus paves the path for many futuristic development and researches. Huge amount of research can be done even in very specific domains like Smart Energy, Smart Manufacturing, Data privacy and what not. With the ubiquity of IoT devices and increasing production of data, attempts have started to monetize the data giving birth to the machine economy. BC can streamline the negotiation processes, eliminating the need for a trusted intermediary.
+
+Advocating the same notion, the advancement and gaining of attention of IoT and BCT, the amalgamation is unavoidable. It is always expected that BCT will revolutionize IoT and the adoption of regulations is the key for inclusion of BCT and the IoT as part of government infrastructure.
+
+### BCT and IoT Integrated for Healthcare
+
+Healthcare is the one industry that is destined to proliferate with such an exponential rate, that in the coming future, it will be the one with most name and fame. The way the entire sector is going to revolutionize, is surely destined to bring laurel to researchers and enthusiasts devoting their entire time to bring God’s plan to existence.
+
+Healthcare has come a long way from where it started. If we look at the trend of healthcare, right from using herbs for everything and then for using chemical medicines for treating various diseases, healthcare surely has taken a turn. The wars in some way made countries realize that they need to focus more on the health of fellow soldiers. New methods were being implemented - using penicillin to reduce the infection severity and spread, which eventually led to its mass production in the coming years. Further, more advances were made in the field of healthcare – the polio vaccine (1952), the first successful kidney transplant (1954), antiviral drugs (1960), and Immunotherapy (1970s) \[[41](#9789815051452-C5.html#r41)\]. It was in the early 1960s when the concept of Problem-Oriented Medical Records (POMR) originated by Dr. Lawrence L Weed. It was a breakthrough in the research sector for medical sciences because now all the data about a particular topic was available in one place and this method changed the entire perception of the research team. A separate database for each patient was created consisting of problems, the treatment undergone and the test reports which would help in carrying the treatment further \[[42](#9789815051452-C5.html#r42)\]. So far, we have discussed about the key features of BCT and IoT and how their independency can open the doors to new technological advancements. The main focus of this section is to take consideration of bringing BCT, IoT and Healthcare Sector under one page. In the coming years, the healthcare model is going to become more patient-centered. We will seek progress on effectiveness and safety of the patients and their sensitive data \[[43](#9789815051452-C5.html#r43)\]. In the recent year, the spread of COVID-19 has made us focus on healthcare for everyone. We have to reduce contact so the traditional methods do not fit well here. We need to be able to collect data of the people and be able to access it remotely to understand which area is more affected with the pandemic and the POMR was also being collected to understand the disease better. More emphasis is being laid on being able to collect this data through IoT rather than physically. Infected person’s record is being analyzed and the places they visited were being quarantined to prevent any kind of spread \[[44](#9789815051452-C5.html#r44)\]. Applications are developed to help in locating people to alert them about their environment and at the same time, their privacy needs to be safeguarded too. Using BCT, we can increase the efficiency of the transfer of this data and ensure the safety of this data from attackers. IoT will help in the wireless transmission of the data being collected and BCT will ensure that this data is not tampered with. BCT creates a ledger of all the transactions taking place and we will be able to identify every chunk of data being added and the users connected to this data \[[45](#9789815051452-C5.html#r45)\].
+
+With an exponential increase in the sector of healthcare, healthcare insurance and other important aspects related to the same have now become an indispensable part of human lives hence leading to an enormous collection of medical data. This data may comprise diagnosis and treatment processes, wearable technology data, records, and history of patient’s data thus leading to an inevitable use of BCT and IoT for analyzing and securing this very important data. Since our generation has witnessed billions of sensors amalgamated with various other devices, hence keeping a record and analyzing this data has now become an indispensable job that surely requires huge attention and all the more security and privacy and this can only be achieved by deploying BCT and IoT in it. If this medical data so collected is not available at the right moment or there is even a significant amount of delay in the reception of this data, it may lead to a delay in the treatment process and much worse even lead to endangering the patient’s life \[[8](#9789815051452-C5.html#r8)\].
+
+Along with huge applications and a wide horizon of IoT, a huge trend is also visible in the healthcare sector and even a good deal of emphasis is also given to Wireless Body Area Networks (WBANs). Mainly in WBAN, a patient is equipped with various health wearable gadgets specifically dedicated for the tracking and measurement of various real-time specifications of health like heart rate, pulse rate, glucose level, *etc.* All these gadgets are controlled or supported by a master device (like a smartphone) that works autonomously and sends this data to a trustworthy health care service provider. Not only does this help in reducing doctor’s appointment but also help the patient to live a healthy life with utmost caution. The popularity of these devices has taken an exponential growth path as predicted to reach almost 50 million by 2021. As this realm of remote patient monitoring expands, obviously the need for a more safe and secure transmission of this data also increases. The best manager for this type of work is none other than BCT, as this medical data is quite lucrative for hackers \[[46](#9789815051452-C5.html#r46)\]. Internet of Medical Things (IoMT) will revolutionize healthcare in the coming years. IoMT is a combination of IoT with medical sector enabling medical devices, software and health systems. Again for analyzing the same, it involves WBAN whereby using wearable devices we will be able to monitor the vitals of a patient remotely and even can provide this information to a healthcare center for further evaluation. We will be able to treat patients even in their homes using these devices. This will improve the patient flow in the hospital and will enable the medical team to treat more patients. Traditional healthcare methods are moving toward digitization using IoT-enabled devices \[[47](#9789815051452-C5.html#r47)\]. This method of remote monitoring will not only assist the patients and save them from visit, saving time for both the medical team and the patient but can save up to 300 billion dollars for a country like America, according to Goldman Sachs \[[48](#9789815051452-C5.html#r48)\]. Imagine the impact it can have on other countries! IoMT faces an issue in security and vulnerability because of its diversity and wireless approach which can be handled using BCT. BCT network can play a role as a middleware, being able to allocate resources in an efficient way \[[49](#9789815051452-C5.html#r49)\].
+
+So, to make the life of hackers miserable, or to bring all their plans to a dead end, a sophisticated framework powered *via* BCT can be designed. BCT is also capable of implementing smart contracts, which are pieces of code that can automatically execute based on predefined conditional triggers and these triggers can be designed as per the need and condition of the patient. In addition to this, while confronting Protected Health Information (PHI), privacy and authenticity are quite essential and the tool useful for this is BCT as no confidential medical information will be stored in BCT or in those smart contracts; all the measurements themselves will be forwarded to designated storage database. These types of authentications are not only helpful in preventing and detecting alterations but also in rectifying these alterations if happens due to any accident or purpose. BCT having the potential to improve security in remote patient monitoring systems thus automates the delivery of health-related notification for compliant issues. It can fix current problems with poorly managed patient data by adding formatted and clean data to EHRs and healthcare data lake, allowing healthcare to utilize Big Data with more reliable information, leading to more significant results.
+
+BCT can help in security because of its natural properties of decentralization, immutability and as mentioned earlier it has been proved successful against different malicious attacks. BCT can offer privacy because all the transactions are saved with an encryption key so the attackers will not be able to locate the source of the data. Timestamps in the blocks would not allow anyone to add any data in between, thus highlighting immutability of BCT \[[50](#9789815051452-C5.html#r50)\]. BCT can be beneficial in transferring the data as well. There will be no data loss, more integration and security of the data. Data being added requires verification from other nodes in the network so any malware will not be able to creep its way \[[51](#9789815051452-C5.html#r51)\].
+
+One can even think of applying the key ideas of BCT to a health application network where the collected data can be used to generate important alerts to authenticated healthcare service providers in a very secure, robust and private manner. It is clear so far that a variety of smart IoT devices are used in a sandwiched form of layers of Internet. From these layers, data is collected, analyzed and henceforth subjected to use for health care service providers. Since IoT devices are lightweight and have shallow footprints so often tend to leave very shallow energy footprints. This small amount of energy is not feasible for the tasks involving security or privacy, hence BCT comes into picture. IoT has a lot of demerits but its extensive use often sometimes leads to some scalable approach and many a times, it may become quite challenging and thus deploying BCT can turn out to be a very profitable deal \[[52](#9789815051452-C5.html#r52)\].
+
+The year of 2020 undoubtedly has been full of surprises and unseen circumstances, but the world has been definitely pushed back in terms of progress by the virus, COVID-19. The unprecedented flow of this virus has given rise to various challenges especially in the healthcare sector and thus technological advances have to shine as a savior for humankind and these advances are nothing but novel technologies, such as AI, BCT, ML and IoT. On a keynote, BCT has been discovered by the European Parliamentary Research Service (EPRS) as one of the key novel technologies to fight COVID-19. Out of all the key traits possessed by BCT, when amalgamated with IoT, it can progress greatly to overcome all the ordeal put forward by this virus. This umbrella can be expanded to various applications such as contact tracing, patient information sharing, supply change management, e-governance, disaster relief and insurance, online education, various autonomous services, manufacturing industry, agriculture and food distribution \[[53](#9789815051452-C5.html#r53)\].
+
+So far, we have looked at the possible outcomes or the domains where the three majors of our topic come under a single umbrella but what still remains archaic is the authenticity and security of the data that will still prevail if the system or the framework supporting the entire network is not BCT equipped. Moreover, what still is detrimental is the cyber-attack and frequent attacks on the health care systems leading to devastating data loss. So, when the entire data is handled with a quite robust, immutable, non-hackable system, it will not only be helpful for the healthcare department or the organization but even the system now will be responsible for the patient’s personal data loss. If the system now handling this entire framework is storing the data in an encrypted format, even if the system somehow gets shut down or faces any technical glitch still the data will be protected and stored in a secure place \[[54](#9789815051452-C5.html#r54)\].
+
+In the year of 2020, the number of setbacks that were faced was numerous but if one asks any digital enthusiast that what led to the digital transformation of their company, a sheer answer would be COVID-19. The development of various smart apps like Aarogya Setu, Kwarantannadomowa, Trace Together, LetsBeatCOVID, COVID Watch, *etc.* was inspired by the amalgamation of IoT and BCT and definitely the other novel technologies so far discussed such as the reliable sharing of data, patient monitoring, and checking the dues so provided to the patient can be simply powered by BCT running in the backhand. Moreover, it can be useful in providing transparency to the users as well \[[55](#9789815051452-C5.html#r55)\]. Although this pandemic did bring several limitations, but it also opened doors for many digital innovations. Moreover, in the past years, it has been visualized that even checking for occupancy may lead to errors thus a framework can be proposed to protect the data that shall be collected from this occupancy. The data so collected can then further be provided to the requisite stakeholders for more cognitive research works \[[56](#9789815051452-C5.html#r56)\].
+
+Taking into consideration today’s scenario, the medical field is considered to be quite complex, significant and rapidly growing and a huge amount of funds are utilized in this field. A prominent example of which can be seen for COVID-19. Undoubtedly multimedia has taken an intricate form where there exists a tremendous amount of symbiotic relationship between the two, from improving the quality of the interaction of patients with the healthcare service providers and transferring the patient’s data in various forms such as images, texts and audio *via* online using various smart objects. But if we look at this whole picture very closely, we’ll notice that managing the entire data is not easy as it not only has storage issues but human efforts and security risks are quite formidable. Threats occurring in these IoT devices are also initiated by various intruders that may lead to leakage and misuse of the data of patient. In order to overcome all the above stated issues, BCT can be effectively deployed as it not only provides a secure framework, but also protects the entire control system in real-time scenario. When the entire result was simulated, a sheer peak of 86% success rate was seen within the first deployment of BCT that covered various aspects like product drop ratio, falsification attack, worm-hole attack, and probabilistic authentication scenarios \[[57](#9789815051452-C5.html#r57)\].
+
+IoT applications and healthcare system use a very refined interconnected device eco system for the betterment of the healthcare facilities. We are quite familiar that persons suffering from chronic illness often use up the healthcare services more often than any non-chronic diseased person and that leads to a creation of an immutable stamp of the records associated with the former patients. Despite all the technological advancements more or less, still setting up of a universal coding language or common communication protocol for this eco system still remains elusive. Hence a system is laid out that ensures that IoT systems with improved interoperability can also secure and guarantee confidentiality between nodes in that particular infrastructure and thus trusting the entire workload to BCT make the entire system, more efficient \[[58](#9789815051452-C5.html#r58)\]. Table [**4**](#9789815051452-C5.html#t4) provides the comparison of previous studies which integrated blockchain and IoT for solving problems in healthcare.
+
+Table 4 **Table of comparison for healthcare.**  
+
+| **S.**  
+**No.** || **Problem Statement** || **Solution Proposed** || **References** |
+| --- | --- | --- | --- |
+| 1. || There was no record of the problems being encountered and the solutions proposed for them by the medical staff. || Developing a Problem Oriented Medical Record capable of storing medical data and easily accessible by the medical team and researchers from any place. || \[[42](#9789815051452-C5.html#r42)\] |
+| --- | --- | --- | --- |
+| 2. || Earlier, healthcare was totally different from what we see today. Prices were rising, less medical staff to attend the patients and so on. || Medical insurance and high production of necessary drugs. Introduction of automated systems in healthcare helped a lot in keeping track of the patients. Artificial intelligence and machine learning will shape the future || \[[43](#9789815051452-C5.html#r43)\] |
+| 3. || Sudden introduction of Coronavirus and its features. Its direct attack on our respiratory system and no way to tackle it. || Coming up with a method to be able to tackle the problem efficiently without risking the lives of others. A quarantine and continuous monitoring of the patient. Using face masks to protect from the virus’ spread. || \[[44](#9789815051452-C5.html#r44)\] |
+| 4. || Lack of trust in sharing secure information through IoT and network not being efficient enough to be able to handle the flow and storage of data. || Using Fog Computing to be able to store and manage all the devices connected in the network. Using cloud computing to store the data securely. Implementation of Blockchain along with fog and cloud to create a Hyperledger of data and enhance the security. || \[[45](#9789815051452-C5.html#r45)\] |
+| 5. || The security and privacy problems related to medical data, their reception, the delay encountered. || A novel framework of modified BCT model using requisite IoT devices, relying on distributed nature and other additional privacy and security properties for the same. || \[[8](#9789815051452-C5.html#r8)\] |
+| 6. || Exponential increase in IoT devices resulting in increased security concerns for transfer and logging of data. || BCT based smart contracts, based on Ethereum protocol, for facilitating the protected health information (PHI) hence providing real-time patient monitoring and medical interventions. || \[[9](#9789815051452-C5.html#r9)\] |
+| 7. || Increase in the burden on medical staff because of keeping regular track of every patient. Frequent visits of a person for treatments and keeping vitals in check. || Using the Internet of Things with medical devices to be able to keep track of patient easily. Creating wearable devices to be able to monitor patient wherever they are. Medical personnel can easily manage multiple patients and patient’s visits to hospitals will be reduced. || \[[47](#9789815051452-C5.html#r47)\] |
+| 8. || Expensive medical facilities and reducing pressure on the medical staff. || Goldman Sachs believes that digital healthcare can save a lot of money. It can reduce the efforts from both sides and make lives easier. Medical staff can easily keep track of “high risk patients”. || \[[48](#9789815051452-C5.html#r48)\] |
+| 9. || Tackling the sudden burst of coronavirus and be able to track it down. Ensure safety for healthcare professionals. || Using sensors to be able to track everyone’s vitals and detect any positive cases as well as using sensors to monitor the patients without being too close to them. Address the security of this sensitive information using Blockchain and be able to store the data securely. || \[[49](#9789815051452-C5.html#r49)\] |
+| 10. || Current methods being used in collecting and storing medical data not being. || Using Blockchain, digest chain and secured P2P networks to address most of the issues being faced. || \[[50](#9789815051452-C5.html#r50)\] |
+| 11. || The previous methods were very slow and not that secure in case of transfer of medical data and making this data available for anyone who required it. || Using Blockchain and Deep Learning to create a model able to transfer the data more efficiently and securely. It will lead to reliable data analysis and make the data immutable and accurate. Thus, leading to correct diagnosis of the patient. || \[[51](#9789815051452-C5.html#r51)\] |
+| 12. || To overcome the issues faced with IoT like very low scalability, high resource demand, traffic overload. || A novel BCT based model optimized for IoT devices taking into consideration the healthcare facilities by implementing lightweight BCT thus increasing privacy and security. || \[[52](#9789815051452-C5.html#r52)\] |
+| 13. || The impact of COVID-19 on world and thus the challenges so encountered. || Inculcating BCT as a key enabling technology and thus presenting a high-level view of BCT depicting how it can be leveraged. || \[[53](#9789815051452-C5.html#r53)\] |
+| 14. || The increased interest of hackers in cyber-attacks especially in healthcare Big Data. || Patient centric data management system powered by BCT to attain privacy. Cryptographic functions are used to protect patient’s data. || \[[54](#9789815051452-C5.html#r54)\] |
+| 15. || Constructing a framework for COVID-19 monitoring and seeking information for the same *via* internet. || A framework or rather four-layer architecture was developed for assisting people regarding this pandemic using IoT and BCT through smart devices. || \[[55](#9789815051452-C5.html#r55)\] |
+| 16. || Monitoring and Tracking real time occupancy for COVID-19 in order to ensure Public Safety || A novel occupancy system that allows estimation using a precise technique that is based on autonomous wireless devices. || \[[56](#9789815051452-C5.html#r56)\] |
+| 17. || Management of huge amount of health data leads to increase in human efforts and potential risks. || A security framework of preserving healthcare multimedia through BCT has been developed with a success rate of 86%. || \[[57](#9789815051452-C5.html#r57)\] |
+| 18. || Lack of proper semantics in IoT healthcare mainly dealing with confidentiality, accessibility, and reliability. || A BCT decentralized Interoperable Trust framework for IoT healthcare that overcomes the drawbacks of IoT healthcare. || \[[58](#9789815051452-C5.html#r58)\] |
+
+  
+ 
+
+## CONCLUSION
+
+Technological advancements are the key milestones in mapping any sector’s progress. When we map the way all these technological advancements have taken a turn, we realize that IoT integrated with BCT was not a new thing to be surprised of, rather being the need of the hour it surely has taken away the scientific sector with a blow. Realizing the advancement in health sectors, with BCT even sharpening its fangs did also open the way for enthusiasts and research scholars to invent and explore this amalgamated form. This review tries to inculcate all these reforms as well and lays a fundamental futuristic approach for developing all the more new frameworks and applications that extract out the best from BCT IoT into the healthcare sector. Undoubtedly, consolidating these entire concepts into one is not everyone’s cup of tea but once done, opens up the way to discover and become the necessity of invention. This world is surely about to transform into a virtual world, although it has already taken this path, certain resistances are nevertheless offered but with this unanimous working of BCT and IoT and that too in healthcare can surely reform the entire vision of this journey.
+
+## CONSENT FOR PUBLICATION
+
+Not applicable.
+
+## CONFLICT OF INTEREST
+
+The authors declare no conflict of interest, financial or otherwise.
+
+## ACKNOWLEDGEMENT
+
+Declared none.
+
+## REFERENCES
+
+|  ||  |
+| --- | --- |
+| \[1\] || Dwivedi A. D., Malina L., Dzurenda P., Srivastava G.. Optimized Blockchain Model for Internet of Things based Healthcare Applications.42^(nd) International Conference on Telecommunications and Signal Processing (TSP).HungaryBudapest201913513910.1109/TSP.2019.8769060 |
+| \[2\] || Greenfield Sheldon, Nelson Eugene C.. Recent developments and future issues in the use of health status assessment measures in clinical settings.Medical Care1992305MS23MS41 JSTOR. [www.jstor.org/stable/3766227](http://www.jstor.org/stable/3766227). |
+| \[3\] || Betz U.A.K., Betz F., Kim R., Monks B., Phillips F.. Surveying the future of science, technology and business – A 35 year perspective.Technol. Forecast. Soc. Change201914413714710.1016/j.techfore.2019.04.005 |
+| \[4\] || Jiang F., Jiang Y., Zhi H., Dong Y., Li H., Ma S., Wang Y., Dong Q., Shen H., Wang Y.. Artificial intelligence in healthcare: past, present and future.Stroke Vasc. Neurol.20172423024310.1136/svn-2017-00010129507784 |
+| \[5\] || Sloan T., Fitzgerald A., Hayes K.J., Radnor Z., Sohal S.R.A., Sohal A.. Lean in healthcare – history and recent developments.J. Health Organ. Manag.201428213013410.1108/JHOM-04-2014-006425065106 |
+| \[6\] || Goldner E.M., Jenkins E.K., Fischer B.. A narrative review of recent developments in knowledge translation and implications for mental health care providers.Can. J. Psychiatry201459316016910.1177/07067437140590030824881165 |
+| \[7\] || Kasthuri Arvind. Challenges to healthcare in India.Indian Journal of Community Medicine.201843314114310.4103/ijcm.IJCM194186166510 |
+| \[8\] || Dwivedi A., Srivastava G., Dhar S., Singh R.. A Decentralized Privacy-Preserving Healthcare Blockchain for IoT.Sensors (Basel)201919232610.3390/s19020326 |
+| \[9\] || Griggs K.N., Ossipova O., Kohlios C.P., Baccarini A.N., Howson E.A., Hayajneh T.. Healthcare Blockchain System Using Smart Contracts for Secure Automated Remote Patient Monitoring.J. Med. Syst.201842713010.1007/s10916-018-0982-x29876661 |
+| \[10\] || Jiang S., Cao J., Wu H., Yang Y., Ma M., He J.. BlocHIE: A BLOCkchain-Based Platform for Healthcare Information Exchange.IEEE International Conference on Smart Computing (SMARTCOMP)2018495610.1109/SMARTCOMP.2018.00073 |
+| \[11\] || Sharma Pradip, Chen Mu-Yen, Park Jong. A software defined fog node based distributed blockchain cloud architecture for IoT.IEEE201710.1109/ACCESS.2017.2757955 |
+| \[12\] || Kumar N.M., Mallick P.K.. Blockchain technology for security issues and challenges in IoT.Procedia Comput. Sci.20181321815182310.1016/j.procs.2018.05.140 |
+| \[13\] || Zheng Z., Xie S., Dai H.N., Chen X., Wang H.. Blockchain challenges and opportunities: a survey.Int. J. Web Grid Serv.201814435237510.1504/IJWGS.2018.095647 |
+| \[14\] || Dorri A., Kanhere S., Jurdak R.. Blockchain in internet of things: Challenges and Solutions.ArXiv, abs/1608.051872016 |
+| \[15\] || Dorri A., Kanhere S., Jurdak R., Gauravaram P.. Blockchain for IoT security and privacy: The case study of a smart home.IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops)201761862310.1109/PERCOMW.2017.7917634 |
+| \[16\] || Nofer M., Gomber P., Hinz O., Schiereck D.. Blockchain.Bus. Inf. Syst. Eng.201759318318710.1007/s12599-017-0467-3 |
+| \[17\] || Li X., Jiang P., Chen T., Luo X., Wen Q.. A survey on the security of blockchain systems.Future Gener. Comput. Syst.202010784185310.1016/j.future.2017.08.020 |
+| \[18\] || Kshetri N.. Can Blockchain Strengthen the Internet of Things?IT Prof.2017194687210.1109/MITP.2017.3051335 |
+| \[19\] || Singh S.K., Rathore S., Park J.H.. BlockIoTIntelligence: A Blockchain-enabled Intelligent IoT Architecture with Artificial Intelligence.Future Gener. Comput. Syst.202011072174310.1016/j.future.2019.09.002 |
+| \[20\] || Pilkington Marc. "Blockchain Technology: Principles and Applications (September 18, 2015)", *Research Handbook on Digital Transformations*, F. Xavier Olleros and Majlinda Zhegu (eds.). Edward Elgar, 2016, Available at SSRN: https://ssrn.com/abstract=2662660.. |
+| \[21\] || Casado-Vara R., Chamoso P., De la Prieta F., Prieto J., Corchado J.M.. Non-linear adaptive closed-loop control system for improved efficiency in IoT-blockchain management.Inf. Fusion20194922723910.1016/j.inffus.2018.12.007 |
+| \[22\] || Lee I., Lee K.. The Internet of Things (IoT): Applications, investments, and challenges for enterprises.Bus. Horiz.201558443144010.1016/j.bushor.2015.03.008 |
+| \[23\] || Yousuf T., Mahmoud R., Aloul F., Zualkernan I.. Internet of Things (IoT) Security: Current Status, Challenges and Countermeasures.International Journal for Information Security Research20155460861610.20533/ijisr.2042.4639.2015.0070 |
+| \[24\] || Hinings B., Gegenhuber T., Greenwood R.. Digital innovation and transformation: An institutional perspective.Inf. Organ.2018281526110.1016/j.infoandorg.2018.02.004 |
+| \[25\] || Novo O.. Blockchain Meets IoT: An Architecture for Scalable Access Management in IoT.IEEE Internet Things J.2018521184119510.1109/JIOT.2018.2812239 |
+| \[26\] || Li D., Peng W., Deng W., Gai F.. A blockchain-based authentication and security mechanism for IoT.27^(th) International Conference on Computer Communication and Networks (ICCCN)20181610.1109/ICCCN.2018.8487449 |
+| \[27\] || Dorri A., Kanhere S., Jurdak R.. Towards an Optimized BlockChain for IoT.IEEE/ACM Second International Conference on Internet-of-Things Design and Implementation (IoTDI)201717317810.1145/3054977.3055003 |
+| \[28\] || Reyna Ana, Martin Cristian, Chen Jaime, Soler Enrique, Diaz Manuel. On blockchain and its integration with IoT - challenges and opportunities.Future Generation Computer Systems201888173190 |
+| \[29\] || Kennedy J.. 1.4bn investment in blockchain start-ups in last 9 months, says PwC expert.Silicon Republic2016 |
+| \[30\] || Sompolinsky Y., Zohar A.. Accelerating Bitcoin's transaction processing.Fast Money Grows on Trees, Not Chains. IACR Cryptol. ePrint Arch.2013881 |
+| \[31\] || Stathakopoulou Chrysoula. Faster bitcoin network.ETH Zurich. 32 – Features and Use Cases of Big Chain DB2015 |
+| \[33\] || Vashi S., Ram J., Modi J., Verma S., Prakash C.. Internet of Things (IoT): A vision, architectural elements, and security issues.International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud) (I-SMAC)201749249610.1109/I-SMAC.2017.8058399 |
+| \[34\] || Tailor J., Patel A.D.. Comprehensive Survey on Security Problems and Key Technologies of the Internet of Things (IoT).International Journal of Research and Scientific Innovation 4 (VIS)2017107110 |
+| \[35\] || Xu J.J.. Are blockchains immune to all malicious attacks?Financial Innovation2016212510.1186/s40854-016-0046-5 |
+| \[36\] || Maderia Antonio. Gladius: How Blockchain Technology Is Making the Web Safer and Faster.Bitcoinist2017 |
+| \[37\] || Samaniego M., Jamsrandorj U., Deters R.. Blockchain as a Service for IoT.2016433-43643343610.1109/iThings-GreenCom-CPSCom-SmartData.2016.102 |
+| \[38\] || Khan M.A., Salah K.. IoT security: Review, blockchain solutions, and open challenges.Future Gener. Comput. Syst.20188239541110.1016/j.future.2017.11.022 |
+| \[39\] || Dorri A., Kanhere S.S., Jurdak R., Gauravaram P.. LSB: A lightweight scalable blockchain for IoT security and anonymity.J. Parallel Distrib. Comput.201913418019710.1016/j.jpdc.2019.08.005 |
+| \[40\] || Panarello A., Tapas N., Merlino G., Longo F., Puliafito A.. Blockchain and IoT Integration: A Systematic Survey.Sensors (Basel)2018188257510.3390/s1808257530082633 |
+| \[41\] || Ellis Monique. Medical advances in history. Procinical.Top (Madr.)201710 |
+| \[42\] || Wright A., Sittig D.F., McGowan J., Ash J.S., Weed L.L.. Bringing science to medicine: an interview with Larry Weed, inventor of the problem-oriented medical record.J. Am. Med. Inform. Assoc.201421696496810.1136/amiajnl-2014-00277624872343 |
+| \[43\] || Karuppan Corinne M., Dunlap Nancy E., Waldrum Michael R., Sutcliffe Kathleen M.. Healthcare- Past, Present and Future. Operations Management in Healthcare.Springer Publishing Company201610.1891/9780826126535.0001 |
+| \[44\] || Singhal T.. A Review of Coronavirus Disease-2019 (COVID-19).Indian J. Pediatr.202087428128610.1007/s12098-020-03263-632166607 |
+| \[45\] || Alam T.. IoT-Fog: A communication framework using blockchain in the internet of things.International Journal of Recent Technology and Engineering (IJRTE)20197833838 |
+| \[46\] || Chen Y., Ding S., Xu Z., Zheng H., Yang S.. Blockchain-based medical records secure storage and medical service framework.J. Med. Syst.2019431510.1007/s10916-018-1121-430467604 |
+| \[47\] || Alliance of Advanced BioMedical Engineering, Frost & Sullivan. *Internet of Medical Things Revolutionizing Healthcare.* Accessed: Jul. 19, 2020. \[Online\]. Available: https://aabme.asme.org/posts/internetof-medical-things-revolutionizing-healthcare. |
+| \[48\] || Stern Corey. Goldman Sachs says a digital healthcare revolution is coming - and it could save America $300 billion.Business Insider India2015 |
+| \[49\] || Dai H-N., Imran M., Haider N.. Blockchain-Enabled Internet of Medical Things to Combat COVID-19.IEEE Internet of Things Magazine202033525710.1109/IOTM.0001.2000087 |
+| \[50\] || Shen B., Guo J., Yang Y.. MedChain: Efficient Healthcare Data Sharing *via* Blockchain.Appl. Sci. (Basel)201996120710.3390/app9061207 |
+| \[51\] || Rakic D.. Blockchain technology in healthcare.ICT4AWE2018 |
+| \[52\] || Dwivedi A., Malina L., Dzurenda P., Srivastava G.. Optimized Blockchain Model for Internet of Things based Healthcare Applications.42^(nd) International Conference on Telecommunications and Signal Processing (TSP)201913513910.1109/TSP.2019.8769060 |
+| \[53\] || Kalla Anshuman, Hewa Tharaka, Mishra Raaj, Ylianttila Mika, Liyanage Madhusanka. The Role of Blockchain to Fight against COVID-19.IEEE Engineering Management Review. PP202010.1109/EMR.2020.3014052 |
+| \[54\] || Omar A., Rahman S., Basu A., Kiyomoto S.. MediBchain: A blockchain based privacy preserving platform for healthcare data.Security, Privacy, and Anonymity in Computation, Communication, and Storage, Springer International Publishing20173353454310.1007/978-3-319-72395-2\_49 |
+| \[55\] || Alam T.. Benaida, Mohamed, Internet of Things and Blockchain-Based Framework for Coronavirus (COVID-19) Disease (April 25, 2022). International Journal of Online and Biomedical Engineering (iJOE), Forthcoming , Available at SSRN: https://ssrn.com/abstract=3660503 or http://dx.doi.org/10.2139/ssrn.3660503. |
+| \[56\] || Fernández-Caramés T.M., Froiz-Míguez I., Fraga-Lamas P.. An IoT and blockchain based system for monitoring and tracking real-time occupancy for COVID-19 public safety.Engineering Proceedings.202026710.3390/ecsa-7-08207 |
+| \[57\] || Rathee G., Sharma A., Saini H., Kumar R., Iqbal R.. A hybrid framework for multimedia data processing in IoT-healthcare using blockchain technology.Multimedia Tools Appl.20207915-169711973310.1007/s11042-019-07835-3 |
+| \[58\] || Abou-Nassar Eman, Iliyasu Abdullah, Elkafrawy Passent, Song Oh-Young, Bashir Ali, El-Latif Abd. DITrust Chain: towards blockchain-based trust models for sustainable healthcare IoT systems.IEEE access.202010.1109/ACCESS.2020.2999468 |
+
+# Blockchain Technology-based System in Vehicular Ad-hoc Network
+
+  
+  
+**Manoj Sindhwani^([1](#9789815051452-C6.html#aff1))****,** **Charanjeet Singh^([1](#9789815051452-C6.html#aff1), [\*](#9789815051452-C6.html#cor1))****,** **Rajeshwar Singh^([2](#9789815051452-C6.html#aff2))**  
+¹ Lovely Professional University, Phagwara, Punjab,, India  
+² Doaba Group of Colleges, Nawanshar, India  
+  
+
+## Abstract
+
+Among the various technologies that are constructing the pillars deep in the field of engineering, ad-hoc networks are one of the major fields of research. On the grounds of history, Mobile ad-hoc Networks (MANETs) played a prominent role in battlefield communication and other important applications, but another emerging network named as Vehicular ad-hoc Networks (VANETs) offered wireless communication led to its popular usage that resulted in the major deployment of ad- hoc networks. However, in VANET, secure message transmission is still a challenge, so we propose a local blockchain to disseminate the message in vehicular networks to improve the security issues. The public blockchain technique in VANET ensures trust-based secure message transmission in the Vehicular ad-hoc Network.
+
+**Keywords:** Blockchain, Message dissemination, Secure Network, Vehicular Networks.  
+  
+
+* * *
+
+^(\*) **Corresponding author Charanjeet Singh:** Lovely Professional University, Phagwara, Punjab,, India; Tel: +919463569976;  
+E-mail: [charanjeet.21882@lpu.co.in](mailto:charanjeet.21882@lpu.co.in)  
+  
+ 
+
+## Introduction
+
+Ad-hoc is derived from a Latin word that signifies ‘formed for’. A network \[[1](#9789815051452-C6.html#r1)\] consisting of various independent individual devices sharing and exchanging information for communicating with each other resulting in the formation of a multi-hop radio network is termed as ad-hoc network. During communication, if one party, who is interested in communicating with the other party that is far away, needs an intermediary to exchange the information, for this purpose, ad-hoc network came into existence. It implies that if the desired target node is distantly located and is unapproachable then the message is transmitted *via* other nodes. Generally, the ad-hoc networks follow a multi-hop fashion of communication where each host can also be a router. Besides the consequences such as dynamic
+
+topology and above-listed issues, wireless ad-hoc networks have given tremendous applications to the world in the name of MANET and VANET \[[2](#9789815051452-C6.html#r2), [3](#9789815051452-C6.html#r3)\]. These networks are advantageous as they can use the unlicensed frequency spectrum and have a good network; due to which sending and distributing information also become very easy. The clustering algorithms discussed will eliminate the number of issues from the network. A highway is divided into two lanes where vehicular nodes (cars/ other vehicles) move with different velocities. Fig. [(**1**)](#9789815051452-C6.html#f1) represents the ad-hoc network structure.
+
+![](Images/9789815051452-C6-F1.jpg)**Fig. (1))**  
+Ad-hoc Network Structure. 
+
+The vehicles start forming a cluster using clustering techniques and the nodes in the cluster are called Cluster Members (CM), among which one node is chosen as the Cluster Head (CH) with the help of clustering algorithms. The clustering algorithms can reduce various efficiency-related issues in the network. There are a number of clustering techniques proposed by various researchers to facilitate the formation of clusters by applying different clustering algorithms.
+
+ 
+
+## Architecture of VANETs
+
+As VANET creates a self-organizing wireless network using its mobile nodes, there also exists a full fledge architecture including other units RSU, OBU, and AU. VANET is a prime component of the Intelligent Transport Network that aims at improving traffic efficiency so as to provide better safety on road. VANET possesses a dynamic topology \[[4](#9789815051452-C6.html#r4), [5](#9789815051452-C6.html#r5)\], with frequent connections and disconnections of the vehicular nodes.
+
+VANETs ensure:
+
+ 
+
+*   Traffic management
+*   Safety management, and
+*   Internet services
+
+![](Images/9789815051452-C6-F2.jpg)**Fig. (2))**  
+VANET-general architecture. 
+
+Fig. [(**2**)](#9789815051452-C6.html#f2) represents the general architecture of VANET. The VANET architecture follows Wireless Access in Vehicular Environment (WAVE) which is based on 802.11 standard protocol \[[6](#9789815051452-C6.html#r6)\] and is used in ITS. WAVE is a specifically designed standard protocol that supports the vehicular environment and also promotes the V2V and V2I communications in 5.9 GHz band licensed for ITS. It uses the multiplexing technique of OFDM orthogonally so as to split the signals. WAVE consists of RSU and OBU, hence WAVE was adopted later. The units used in the vehicular ad hoc network \[[7](#9789815051452-C6.html#r7)\] are represented in Table [**1**](#9789815051452-C6.html#t1).
+
+It came into existence because fast communication was required due to the dynamic environment of vehicular scenario that demanded the high speed transfer rate \[[8](#9789815051452-C6.html#r8)\]. Earlier the issue faced with 802.11a was its low data rate of 54 Mbps that ultimately resulted in multiple overheads. These protocols permit the vehicles to have a direct communication with no authentication before joining the network. Researchers are further emphasizing on providing the authentication and confidentiality assurance for security reasons.
+
+Table 1 **Units description of VANET architecture.**  
+
+| **Unit** || **Abbrev.** || **Description** |
+| --- | --- | --- |
+| Out Board unit || OBU || • Realizes V2V communication  
+• Communication with other OBUs  
+• Data reliability  
+• Network congestion control  
+• Radio access |
+| --- | --- | --- |
+| Authentication Unit || AU || • Communicates with network *via* OBU  
+• Responsibilities:  
+\- Mobility  
+\- Network functioning |
+| Road Side Unit || RSU || • Based on IEEE 802.11p radio technology  
+• Provides internet connectivity to OBUs. |
+
+  
+![](Images/9789815051452-C6-F3.jpg)**Fig. (3))**  
+Communication architecture.  
+
+## Communication Architecture of VANET
+
+VANETs are a victim of frequent disconnections in the dynamic vehicular scenario where the unpredictable movement of the vehicles causes hindrance in the stability mechanism of the network. Once the network is established, the information can be disseminated and shared through data packets. Since the vehicles are mobile in nature so connection maintenance is a tough task for moving vehicles where the neighbour nodes can also transcend the transmission range. As a solution to which access points in terms of relay nodes can be pre-deployed to maintain the connectivity of the network \[[9](#9789815051452-C6.html#r9)\]. The vehicles are equipped with the Global Positioning system (GPS) by virtue of which a vehicle can monitor the network and the nodes that will greatly be useful for collision avoidance and to attain information of location. The communication architecture is shown in Fig. [(**3**)](#9789815051452-C6.html#f3).
+
+Every vehicular node is required to fully process the raw information for the purpose of which, it directly needs a handsome storage capacity. So, it uses rechargeable batteries to generate the power continuously hence making the network more efficient in terms of power and energy. Table [**2**](#9789815051452-C6.html#t2) represents communication architecture.
+
+Table 2 **Communication architecture representation.**  
+
+| **Communication** || **Functions** |
+| --- | --- |
+| In- Vehicle communication || • Vehicle performance detection  
+• Drivers physical condition  
+• Vehicle’s inside environment for safety purpose |
+| --- | --- |
+| V2V communication || • Communication between two or more vehicles  
+• Sharing information:  
+\- routing information  
+\- Alerts  
+\- Driver to driver information  
+• Naive broadcasting (periodic)  
+• Intelligent broadcasting (overcome overheads caused due to the generation of broadcast messages in large number) |
+| V2I communication || • Communication between the vehicles and the infrastructure on the roads  
+• Vehicle density |
+| Vehicle to Broadband cloud  
+Computing || • For the active driver assistance  
+• For vehicle tracking |
+| Routing based communication || • Combination of V2I and V2V  
+• Presents a unicast method  
+• Message transmitted in multi hop fashion till the time it catches up with its destined vehicle. |
+
+  
+ 
+
+## Blockchain meets VANET
+
+Several studies are conducted for resolving the security issues of VANET, for which blockchain technology is widely used. VANET is used in combination with blockchain \[[10](#9789815051452-C6.html#r10)\]. Blockchain technology is used to ensure that data are tamper-resistant and secure. In some of the algorithms, the registration of the vehicles is mandatory with Registration Authority. The road infrastructure with vehicles and RSU make a blockchain network that reduces security issues. The data generated from the vehicular networks are saved in the cloud for providing data support related applications \[[11](#9789815051452-C6.html#r11)\]. Blockchain also introduces the concept of privacy protection for intelligent transportation systems. Fig. [(**4**)](#9789815051452-C6.html#f4) represents the Blockchain system.
+
+![](Images/9789815051452-C6-F4.jpg)**Fig. (4))**  
+Blockchain System 
+
+A Blockchain system uses a kind of distributed network that consists of various independent nodes and they generally do not have a trust-based network \[[12](#9789815051452-C6.html#r12)\]. Every node takes part in data management. In the implementation, a new block is formed by the participation of various nodes and that new block is included in the blockchain system. All nodes in the system manage the information that ensures the security of data in the blockchain system. The blockchain can manage the information in vehicles as any node can access the previous history while using the public blockchain. In the majority of blockchain based algorithms, a new block is generally shared with all the vehicular nodes. But in some of the cases, the blocks are not shared outside the boundaries of countries as some countries may not be connected directly with roads so the information of a vehicle in one country may not be suitable for the vehicle in another country. The algorithm can be designed on the basis of various parameters. The blockchain network is made on the agreement of vehicular nodes present in the network \[[13](#9789815051452-C6.html#r13)\]. The clusters formed in VANET \[[14](#9789815051452-C6.html#r14)\] are sometimes useful in blockchain systems as the cluster heads are accountable for managing the blockchain system. So, clustering in VANET \[[15](#9789815051452-C6.html#r15)\] enhances the security of the network by using the blockchain system.
+
+ 
+
+## Trust based Models in VANET for Blockchain Technology
+
+There exist three types of models that are trust based.
+
+ 
+
+*   Entity-based Trust Model
+*   Data Centric Trust Model
+*   Hybrid based Model
+
+Fig. [(**5**)](#9789815051452-C6.html#f5) represents the trust based models in VANET \[[16](#9789815051452-C6.html#r16)\]. The opinion of the other nodes matters in the entity based model as here trustworthiness of the nodes is required by using any specified algorithm. But the limitation is the high mobility of the vehicular nodes, as passing of the information is difficult in dynamic topology \[[17](#9789815051452-C6.html#r17), [18](#9789815051452-C6.html#r18)\] and high mobility. However, the data centric model focuses on the event information shared by the nodes instead of the node details in the entity based as it is important to share accurate information between the vehicular nodes \[[19](#9789815051452-C6.html#r19), [20](#9789815051452-C6.html#r20)\]. Whereas, the hybrid approach uses the combination of the entity based and data centric model. So here the importance is given to both the trustworthiness of the vehicle and event information.
+
+![](Images/9789815051452-C6-F5.jpg)**Fig. (5))**  
+Trust Based Models  
+
+## CONCLUSION
+
+VANET presents intelligent features including intelligent vehicles that are capable of making adaptive decisions for communication between the two parties *i.e.* the sender and the receiver. The major challenge faced can be the delivery of the message to the destination in such harsh traffic conditions with constrained mobility parameters. VANET presents a real-time application but lacks security, scalability, efficient routing and clustering protocols. The significant part of this chapter is to stress upon the blockchain system based security. The blockchain technique is used for accurate information dissemination between the vehicular nodes. Here we concluded that combining the approach of blockchain system with Vehicular ad-hoc network ensures the security of data in the transmission process.
+
+ 
+
+## CONSENT FOR PUBLICATION
+
+Not applicable.
+
+## CONFLICT OF INTEREST
+
+The authors declare no conflict of interest, financial or otherwise.
+
+## ACKNOWLEDGEMENT
+
+Declared none.
+
+## REFERENCES
+
+|  ||  |
+| --- | --- |
+| \[1\] || Martuscelli G., Boukerche A., Bellavista P.. Discovering traffic congestion along routes of interest using vanets.IEEE Global Telecommunications ConferenceIEEE GLOBECOM201310.1109/GLOCOM.2013.6831125 |
+| \[2\] || Nakamoto S.. Bitcoin: A Peer-to-Peer Electronic Cash SyNakamoto, S.Bitcoin: a peer-to-peer Electronic Cash System. J. Gen. Philos. Sci.200839536710.1007/s10838-008-9062-0stem |
+| \[3\] || Zheng Z., Xie S., Dai H.N., Wang H.. Blockchain Challenges and Opportunities: A Survey.Work Pap201619 |
+| \[4\] || Antonopoulos A.M.. Mastering BitcoinFirst Edit.OReilly Media, Inc.,United States of America2015 |
+| \[5\] || Aitzhan N.Z., Svetinovic D.. Security and privacy in decentralized energy trading through multi-signatures, blockchain and anonymous messaging streams.IEEE Trans. Depend. Secure Comput.201815584085210.1109/TDSC.2016.2616861 |
+| \[6\] || Ostermaier B., Dotzer F., Strassberger M.. Enhancing the security of local danger warnings in vanets-A simulative analysis of voting schemes.The 2^(nd) International Conference on Availability, Reliability and Security2007422431 |
+| \[7\] || Shrestha R., Nam S.Y.. Access point selection mechanism to circumvent rogue access points using voting-based query procedure.IET Commun2014811629432951 |
+| \[8\] || Lei A., Ogah C., Al E.. A Secure Key Management Scheme for Heterogeneous Secure Vehicular Communication Systems.ZTE Communication Magazine2016Vol. 111 |
+| \[9\] || Leiding B., Memarmoshrefi P., Hogrefe D.. "Self-managed and blockchain-based vehicular adhoc networks," in Proceedings of the 2016 ACM International Joint Conference on Pervasive and Ubiquitous Computing: Adjunct, ser. UbiComp '16. New York, NY, USA: Association for Computing Machinery, 2016, p. 137-140.. 10.1145/2968219.2971409 |
+| \[10\] || Dorri A., Steger M., Kanhere S.S., Jurdak R.. BlockChain: a distributed solution to automotive security and privacy.IEEE Commun. Mag.2017551211912510.1109/MCOM.2017.1700879 |
+| \[11\] || Rowan S., Clear M., Gerla M., Huggard M., Mc Goldrick C. Securing Vehicle to Vehicle Communications Using Blockchain through Visible Light and Acoustic Side- Channels eprint arXiv:1704.02553.. |
+| \[12\] || Morgan Y.L.. Notes on DSRC and WAVE standards suite: its architecture, design, and characteristics.IEEE Commun. Surv. Tutor.201012450451810.1109/SURV.2010.033010.00024 |
+| \[13\] || Raya M., Papadimitratos P., Gligor V.D., Hubaux J-P.. On data-centric trust establishment in ephemeral ad hoc networksIEEE INFOCOM 2008 - The 27th Conference on Computer Communications20081238124610.1109/INFOCOM.2008.180 |
+| \[14\] || Fan W.. Yan Shir, Shanzhi, Chen, Longhao Zou, “Amobility metrics based dynamic clusterinh algorithm for VANETsProc. IET InterInternational Conference on Communication Technology and Applications (ICCTA- 2011)752756 |
+| \[15\] || Rasmeet S.B., Neeraj K., Joel J.P., Rodrigues C.. An Intelligent Clustering Algorithm for VANETs.Proc. Connected Vehicles and Expo International Conference2015 |
+| \[16\] || Li W., Zhang X., Shen Z., Zhang M., Yang D.. Density based threshold algorithm in vehcular ad- hoc networksProc. IEEE International conference on Communication Workshops (ICC)675680. |
+| \[17\] || Li W., Zhang X., Shen Z., Zhang M., Yang D.. VANET: Architectures, Research Issues, Routing Protocols, and its ApplicationsProc. International Conference on Computing, Communication and Automation555561. |
+| \[18\] || Ahizoune A., Hafid A.. A New Stability Based Clustering Algorithm (SBCA) for VANETsProc. IEEE conference on Local Computer Networks843847.10.1109/LCNW.2012.6424072 |
+| \[19\] || Saleha Mubarak AlMheiriHend Saeed AlQamzi, “MANETs and VANETs Clustering Algorithms: A SurveyProc. 8th IEEE GCC Conference and Exhibition16. |
+| \[20\] || Azizian M., Cherkaoui S., Hafi A.S.. A Distributed D-hop Cluster Formation for VANETProc. IEEE Wireless Communications and Networking Conference16.10.1109/WCNC.2016.7564925 |
