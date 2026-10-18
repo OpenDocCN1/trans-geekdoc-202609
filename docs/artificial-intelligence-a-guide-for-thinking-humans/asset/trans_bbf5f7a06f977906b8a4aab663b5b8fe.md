@@ -1,0 +1,194 @@
+
+
+## 15. Searle’s article
+
+Searle’s article is reprinted in D. R. Hofstadter and D. C. Dennett, *The Mind’s I: Fantasies and Reflections on Self and Soul* (New York: Basic Books, 1981), along with a cogent counterargument from Hofstadter.
+
+## 16. Aaronson’s book
+
+S. Aaronson, *Quantum Computing Since Democritus* (Cambridge, U.K.: Cambridge University Press, 2013), 33.
+
+## 17. Turing Test Transcripts Reveal How Chatbot ‘Eugene’ Duped the Judges
+
+“Turing Test Transcripts Reveal How Chatbot ‘Eugene’ Duped the Judges,” Coventry University, June 30, 2015, [`www.coventry.ac.uk/primary-news/turing-test-transcripts-reveal-how-chatbot-eugene-duped-the-judges/`](http://www.coventry.ac.uk/primary-news/turing-test-transcripts-reveal-how-chatbot-eugene-duped-the-judges/).
+
+## 18. Turing Test Success Marks Milestone in Computing History
+
+“Turing Test Success Marks Milestone in Computing History,” University of Reading, June 8, 2014, [`www.reading.ac.uk/news-and-events/releases/PR583836.aspx`](http://www.reading.ac.uk/news-and-events/releases/PR583836.aspx).
+
+## 19. Kurzweil’s The Singularity Is Near
+
+R. Kurzweil, *The Singularity Is Near: When Humans Transcend Biology* (New York: Viking Press, 2005), 7.
+
+## 20. Ibid.
+
+Ibid., 22–23.
+
+## 21. Good’s Speculations Concerning the First Ultraintelligent Machine
+
+I. J. Good, “Speculations Concerning the First Ultraintelligent Machine,” *Advances in Computers* 6 (1966): 31–88.
+
+## 22. Vinge’s First Word
+
+V. Vinge, “First Word,” *Omni*, Jan. 1983.
+
+## 23. Kurzweil’s Singularity Is Near
+
+Kurzweil, *Singularity Is Near*, 241, 317, 198–99.
+
+## 24. Wang’s Ray Kurzweil Responds to the Issue of Accuracy of His Predictions
+
+B. Wang, “Ray Kurzweil Responds to the Issue of Accuracy of His Predictions,” *Next Big Future*, Jan. 19, 2010, [`www.nextbigfuture.com/2010/01/ray-kurzweil-responds-to-issue-of.html`](http://www.nextbigfuture.com/2010/01/ray-kurzweil-responds-to-issue-of.html).
+
+## 25. Hochman’s Reinvent Yourself: The Playboy Interview with Ray Kurzweil
+
+D. Hochman, “Reinvent Yourself: The Playboy Interview with Ray Kurzweil,” *Playboy*, April 19, 2016, [`www.playboy.com/articles/playboy-interview-ray-kurzweil`](http://www.playboy.com/articles/playboy-interview-ray-kurzweil).
+
+## 26. Kurzweil’s Singularity Is Near
+
+Kurzweil, *Singularity Is Near*, 136.
+
+## 27. Kreye’s A John Henry Moment
+
+A. Kreye, “A John Henry Moment,” in Brockman, *What to Think About Machines That Think*, 394–96.
+
+## 28. Kurzweil’s Singularity Is Near
+
+Kurzweil, *Singularity Is Near*, 494.
+
+## 29. Kurzweil’s A Wager on the Turing Test: Why I Think I Will Win
+
+R. Kurzweil, “A Wager on the Turing Test: Why I Think I Will Win,” Kurzweil AI, April 9, 2002, [`www.kurzweilai.net/a-wager-on-the-turing-test-why-i-think-i-will-win`](http://www.kurzweilai.net/a-wager-on-the-turing-test-why-i-think-i-will-win).
+
+## 30. Ibid.
+
+Ibid.
+
+## 31. Ibid.
+
+Ibid.
+
+## 32. Ibid.
+
+Ibid.
+
+## 33. Dowd’s Elon Musk’s Billion-Dollar Crusade to Stop the A.I. Apocalypse
+
+M. Dowd, “Elon Musk’s Billion-Dollar Crusade to Stop the A.I. Apocalypse,” *Vanity Fair*, March 26, 2017.
+
+## 34. Grossman’s 2045: The Year Man Becomes Immortal
+
+L. Grossman, “2045: The Year Man Becomes Immortal,” *Time*, Feb. 10, 2011.
+
+## 35. Singularity University website
+
+From Singularity University website, accessed Dec. 4, 2018, [`su.org/about/`](http://su.org/about/).
+
+## 36. Kurzweil’s Singularity Is Near
+
+Kurzweil, *Singularity Is Near*, 316.
+
+## 37. Kurzweil’s The Age of Spiritual Machines
+
+R. Kurzweil, *The Age of Spiritual Machines: When Computers Exceed Human Intelligence* (New York: Viking Press, 1999), 170.
+
+## 38. Hofstadter’s Moore’s Law, Artificial Evolution, and the Fate of Humanity
+
+D. R. Hofstadter, “Moore’s Law, Artificial Evolution, and the Fate of Humanity,” in *Perspectives on Adaptation in Natural and Artificial Systems*, ed. L. Booker et al. (New York: Oxford University Press, 2005), 181.
+
+## 39. Quotations from Kurzweil’s Age of Spiritual Machines
+
+All of these quotations are from Kurzweil, *Age of Spiritual Machines*, 169–70.
+
+## 40. Hofstadter’s Moore’s Law, Artificial Evolution, and the Fate of Humanity
+
+Hofstadter, “Moore’s Law, Artificial Evolution, and the Fate of Humanity,” 182.
+
+## 41. Long Bets website
+
+From Long Bets website: [`longbets.org/about`](http://longbets.org/about).
+
+## 42. Long Bets website, Bet 1
+
+From Long Bets website, Bet 1: [`longbets.org/1/#adjudication_terms`](http://longbets.org/1/#adjudication_terms).
+
+## 43. Ibid.
+
+Ibid.
+
+## 44. Ibid.
+
+Ibid.
+
+## 45. Kurzweil’s Wager on the Turing Test
+
+Kurzweil, “Wager on the Turing Test.”
+
+## 46. Kapor’s Why I Think I Will Win
+
+M. Kapor, “Why I Think I Will Win,” Kurzweil AI, April 9, 2002, [`http://www.kurzweilai.net/why-i-think-i-will-win`](http://www.kurzweilai.net/why-i-think-i-will-win).
+
+## 47. Ibid.
+
+Ibid.
+
+## 48. Kurzweil’s foreword to Virtual Humans
+
+R. Kurzweil, foreword to *Virtual Humans*, by P. M. Plantec (New York: AMACOM, 2004).
+
+## 49. Quoted in Grossman’s 2045
+
+Quoted in Grossman, “2045.”
+
+# 4: Who, What, When, Where, Why
+
+## 1. Papert’s The Summer Vision Project
+
+S. A. Papert, “The Summer Vision Project,” MIT Artificial Intelligence Group Vision Memo 100 (July 7, 1966), [`dspace.mit.edu/handle/1721.1/6125`](http://dspace.mit.edu/handle/1721.1/6125).
+
+## 2. Crevier’s AI: The Tumultuous History of the Search for Artificial Intelligence
+
+D. Crevier, *AI: The Tumultuous History of the Search for Artificial Intelligence* (New York: Basic Books, 1993), 88.
+
+## 3. Fukushima’s Cognitron and Neocognitron
+
+K. Fukushima, “Cognitron: A Self-Organizing Multilayered Neural Network Model,” *Biological Cybernetics* 20, no. 3–4 (1975): 121–36; K. Fukushima, “Neocognitron: A Hierarchical Neural Network Capable of Visual Pattern Recognition,” *Neural Networks* 1, no. 2 (1988): 119–30.
+
+## 4. Image scaling before network input
+
+Before being fed to the network, the image needs to be scaled to a fixed size—the same size as the network’s first layer.
+
+## 5. Caveats about brain task claims
+
+Most claims about how the brain performs some task have to come with many caveats; the story I’ve just outlined is no different. While what I’ve said is approximately accurate, the brain is outrageously complex, and the findings I’ve outlined are only a small part of the story of early vision, much of which scientists still don’t fully understand.
+
+## 6. Convolutional filter or kernel
+
+The array of weights associated with each activation map is called a convolutional filter or convolutional kernel.
+
+## 7. Classification module
+
+Here I’m using the term *classification module* as shorthand for what are usually called the fully connected layers of a deep convolutional network.
+
+## 8. ConvNets description and details
+
+My description of ConvNets leaves out many details. For example, to compute its activation, a unit in a convolutional layer performs a convolution and then applies a nonlinear activation function to the result. ConvNets also typically feature other types of layers, such as “pooling layers.” For details, see I. Goodfellow, Y. Bengio, and A. Courville, *Deep Learning* (Cambridge, Mass.: MIT Press, 2016).
+
+## 9. Google’s search by image engine
+
+At the time of this writing, Google’s “search by image” engine is accessed at [`images.google.com`](http://images.google.com) by clicking the small camera icon in the search box.
+
+# 5: ConvNets and ImageNet
+
+## 1. Back-propagation discovery
+
+Indeed, back-propagation is an algorithm that was discovered independently by several different groups, and—ironically, given back-propagation’s function as a credit-assignment algorithm—assigning the credit for its discovery has been a long-standing battle among neural network researchers.
+
+## 2. Hernandez’s Facebook’s Quest to Build an Artificial Brain Depends on This Guy
+
+Quoted in D. Hernandez, “Facebook’s Quest to Build an Artificial Brain Depends on This Guy,” *Wired*, Aug. 14, 2014, [`www.wired.com/2014/08/deep-learning-yann-lecun/`](http://www.wired.com/2014/08/deep-learning-yann-lecun/).
+
+## 3. Detection competition
+
+There was also a “detection” competition, in which programs had to also locate objects of the various categories in images, as well as other specialized challenges; here I’m focusing on the classification challenge.
+
