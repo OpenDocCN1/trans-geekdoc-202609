@@ -1,0 +1,39 @@
++   (232) Lecun, Y.; Bottou, L.; Bengio, Y.; Haffner, P. Gradient-based learning applied to document recognition. Proc. IEEE 1998, 86, 2278–2324.
++   (233) Aguiar, J. A.; Gong, M. L.; Unocic, R. R.; Tasdizen, T.; Miller, B. D. Decoding crystallography from high-resolution electron imaging and diffraction datasets with deep learning. Sci. Adv. 2019, 5, No. eaaw1949.
++   (234) Lee, J.-W.; Park, W. B.; Lee, J. H.; Singh, S. P.; Sohn, K.-S. A deep-learning technique for phase identification in multiphase inorganic compounds using synthetic XRD powder patterns. Nat. Commun. 2020, 11, 86.
++   (235) Back, S.; Yoon, J.; Tian, N.; Zhong, W.; Tran, K.; Ulissi, Z. W. Convolutional Neural Network for Atomic Surface Structures To Predict Binding Energies for High-Throughput Screening of Catalysts. J. Phys. Chem. Lett. 2019, 10, 4401–4408.
++   (236) Wang, Z.; Wang, Q.; Han, Y.; Ma, Y.; Zhao, H.; Nowak, A.; Li, J. Deep learning for ultra-fast and high precision screening of energy materials. Energy Storage Mater. 2021, 39, 45–53.
++   (237) Zhou, B., Khosla, A.; Lapedriza, A.; Oliva, A.; Torralba, A. Learning Deep Features for Discriminative Localization. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2016, 2921–2929.
++   (238) Samek, W.; Montavon, G.; Lapuschkin, S.; Anders, C. J.; Müller, K. R. Explaining Deep Neural Networks and Beyond: A Review of Methods and Applications. Proc. IEEE 2021, 109, 247–278.
++   (239) Ribeiro, M. T.; Singh, S.; Guestrin, C. “Why Should I Trust You?”: Explaining the Predictions of Any Classifier. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining; Association for Computing Machinery: San Francisco, CA, 2016; pp 1135–1144.
++   (240) Zeiler, M. D.; Fergus, R. In Visualizing and Understanding Convolutional Networks; Springer International Publishing: Cham, 2014; pp 818–833.
++   (241) Smilkov, D.; Thorat, N.; Kim, B.; Viégas, F.; Wattenberg, M. SmoothGrad: removing noise by adding noise. arxiv 2017, 1706.03825.
++   (242) Sundararajan, M.; Taly, A.; Yan, Q. Q. Axiomatic Attribution for Deep Networks. In 34th International Conference on Machine Learning; Precup, D., Teh, Y. W., Eds.; Sydney, Australia, August 06–11, 2017; JMLR, 2017.
++   (243) Bach, S.; Binder, A.; Montavon, G.; Klauschen, F.; Müller, K.- R.; Samek, W. On Pixel-Wise Explanations for Non-Linear Classifier Decisions by Layer-Wise Relevance Propagation. PLoS One 2015, 10, No. e0130140.
++   (244) Dietterich, T. G. An experimental comparison of three methods for constructing ensembles of decision trees: Bagging, boosting, and randomization. Mach. Learn. 2000, 40, 139–157.
++   (245) Riley, P. Three pitfalls to avoid in machine learning. Nature 2019, 572, 27–29.
++   (246) Deng, C.; Su, Y.; Li, F.; Shen, W.; Chen, Z.; Tang, Q. Understanding activity origin for the oxygen reduction reaction on bi- atom catalysts by DFT studies and machine-learning. J. Mater. Chem. A 2020, 8, 24563–24571.
++   (247) Kronberg, R.; Lappalainen, H.; Laasonen, K. Hydrogen Adsorption on Defective Nitrogen-Doped Carbon Nanotubes Explained via Machine Learning Augmented DFT Calculations and Game-Theoretic Feature Attributions. J. Phys. Chem. C 2021, 125, 15918–15933.
++   (248) Ying, Y.; Fan, K.; Luo, X.; Qiao, J.; Huang, H. Unravelling the origin of bifunctional OER/ORR activity for single-atom catalysts supported on C2N by DFT and machine learning. J. Mater. Chem. A 2021, 9, 16860–16867.
++   (249) Freund, Y.; Schapire, R.; Abe, N. A short introduction to boosting. J. Jap. Soc. Artificial Intel. 1999, 14, 1612.
++   (250) Rätsch, G.; Onoda, T.; Müller, K. R. Soft Margins for AdaBoost. Mach. Learn. 2001, 42, 287–320.
++   (251) Friedman, J. H. Greedy function approximation: A gradient boosting machine. Ann. Stat. 2001, 29, 1189–1232.
++   (252) Ahmad, Z.; Xie, T.; Maheshwari, C.; Grossman, J. C.; Viswanathan, V. Machine Learning Enabled Computational Screening of Inorganic Solid Electrolytes for Suppression of Dendrite Formation in Lithium Metal Anodes. ACS Cent. Sci. 2018, 4, 996–1006.
++   (253) Davies, D. W.; Butler, K. T.; Walsh, A. Data-Driven Discovery of Photoactive Quaternary Oxides Using First-Principles Machine Learning. Chem. Mater. 2019, 31, 7221–7230.
++   (254) Zhang, X.; Chen, A.; Chen, L.; Zhou, Z. 2D Materials Bridging Experiments and Computations for Electro/Photocatalysis. Adv. Energy Mater. 2021, 2003841.
++   (255) Pankajakashan, P.; Sanyal, S.; de Noord, O. E.; Bhattacharya, I.; Bhattacharyya, A.; Waghmare, U. Machine Learning and Statistical Analysis for Materials Science: Stability and Transferability of Fingerprint Descriptors and Chemical Insights. Chem. Mater. 2017, 29, 4190–4201.
++   (256) Timoshenko, J.; Frenkel, A. I. Inverting” X-ray Absorption Spectra of Catalysts by Machine Learning in Search for Activity Descriptors. ACS Catal. 2019, 9, 10192–10211.
++   (257) Schlexer Lamoureux, P.; Winther, K. T.; Garrido Torres, J. A.; Streibel, V.; Zhao, M.; Bajdich, M.; Abild-Pedersen, F.; Bligaard, T. Machine Learning for Computational Heterogeneous Catalysis. ChemCatChem. 2019, 11, 3581–3601.
++   (258) Hansen, K.; Montavon, G.; Biegler, F.; Fazli, S.; Rupp, M.; Scheffler, M.; von Lilienfeld, O. A.; Tkatchenko, A.; Müller, K.-R. Assessment and Validation of Machine Learning Methods for Predicting Molecular Atomization Energies. J. Chem. Theory Comput. 2013, 9, 3404–3419.
++   (259) Xu, J. H.; Zhang, X. G.; Li, Y. D. Kernel MSE algorithm: A unified framework for KFD, LS-SVM and KRR. International Joint Conference on Neural Networks (IJCNN 01). Washington, DC, July 15–19; IEEE: New York, 2001; pp 1486–1491.
++   (260) scikit-learn.org Comparison of kernel ridge regression and SVR. https://scikit-learn.org/stable/auto_examples/miscellaneous/plot_kernel_ridge_regression.html.
++   (261) Pilania, G.; Whittle, K. R.; Jiang, C.; Grimes, R. W.; Stanek, C. R.; Sicafani, K. E.; Uberuaga, B. P. Using Machine Learning To Identify Factors That Govern Amorphization of Irradiated Pyrochlores. Chem. Mater. 2017, 29, 2574–2583.
++   (262) von Lilienfeld, O. A.; Ramakrishnan, R.; Rupp, M.; Knoll, A. Fourier series of atomic radial distribution functions: A molecular fingerprint for machine learning models of quantum chemical properties. Int. J. Quantum Chem. 2015, 115, 1084–1093.
++   (263) Noh, J.; Back, S.; Kim, J.; Jung, Y. Active learning with non-ab initio input features toward efficient CO2 reduction catalysts. Chem. Sci. 2018, 9, 5152–5159.
++   (264) Le, T. C.; Winkler, D. A. Discovery and Optimization of Materials Using Evolutionary Approaches. Chem. Rev. 2016, 116, 6107–6132.
++   (265) Hinton, G.; Nowlan, S. How Learning Can Guide Evolution. Complex Systems 1987, 1, 495–502.
++   (266) Smith, J. M. When learning guides evolution. Nature 1987, 329, 761–762.
++   (267) Umansankar, Y.; Ting, T.-W.; Chen, S.-M. Characterization of Poly(brilliant cresyl blue)-Multiwall Carbon Nanotube Composite Film and Its Application in Electrocasting of Vitamin B9 Reduction. J. Electrochem. Soc. 2011, 158, K117.
++   (268) Vilhelmsen, L. B.; Walton, K. S.; Sholl, D. S. Structure and Mobility of Metal Clusters in MOFs: Au, Pd, and AuPd Clusters in MOF-74. J. Am. Chem. Soc. 2012, 134, 12807–12816.
++   (269) Chung, Y. G.; Gómez-Gualdrón, D. A.; Li, P.; Leperi, K. T.; Deria, P.; Zhang, H.; Vermeulen, N. A.; Stoddart, J. F.; You, F.; Hupp, J. T.; et al. In silico discovery of metal-organic frameworks for precombustion CO2 capture using a genetic algorithm. Sci. Adv. 2016, 2, No. e1600909.
++   (270) Sun, G.; Sautet, P. Metastable Structures in Cluster Catalysis from First-Principles: Structural Ensemble in Reaction Conditions and Metastability Triggered Reactivity. J. Am. Chem. Soc. 2018, 140, 2812–2820.

@@ -1,0 +1,3021 @@
+- pgno: 0
+  md: '# Machine Learning for Electrocatalyst and Photocatalyst Design and Discovery
+
+
+    Haoxin Mai, Tu C. Le, Dehong Chen, David A. Winkler, and Rachel A. Caruso
+
+
+    **Cite This:** *Chem. Rev.* 2022, 122, 13478–13515
+
+
+    **ABSTRACT:** Electrocatalysts and photocatalysts are key to a sustainable future,
+    generating clean fuels, reducing the impact of global warming, and providing solutions
+    to environmental pollution. Improved processes for catalyst design and a better
+    understanding of electro/photocatalytic processes are essential for improving
+    catalyst effectiveness. Recent advances in data science and artificial intelligence
+    have great potential to accelerate electrocatalysis and photocatalysis research,
+    particularly the rapid exploration of large materials chemistry spaces through
+    machine learning. Here a comprehensive introduction to, and critical review of,
+    machine learning techniques used in electrocatalysis and photocatalysis research
+    are provided. Sources of electro/photocatalyst data and current approaches to
+    representing these materials by mathematical features are described, the most
+    commonly used machine learning methods summarized, and the quality and utility
+    of electro/photocatalyst models evaluated. Illustrations of how machine learning
+    models are applied to novel electro/photocatalyst discovery and used to elucidate
+    electrocatalytic or photocatalytic reaction mechanisms are provided. The review
+    offers a guide for materials scientists on the selection of machine learning methods
+    for electrocatalysis and photocatalysis research. The application of machine learning
+    to catalysis science represents a paradigm shift in the way advanced, next-generation
+    catalysts will be designed and synthesized.
+
+
+    ![](img/385acff8214d70e1094d2d47342cdb40_0_0.png)
+
+
+    # CONTENTS
+
+
+    +   1. Introduction ........................................................ 13479
+
+    +   2. Machine Learning Modeling ........................................... 13480
+
+    +      2.1. Data Collection ................................................ 13480
+
+    +      2.2. Featurization .................................................. 13482
+
+    +         2.2.1. Descriptor Generation ..................................... 13482
+
+    +         2.2.2. Descriptor Selection ...................................... 13483
+
+    +      2.3. Algorithm Selection and Model Training ..........................
+    13484
+
+    +         2.3.1. Multiple Linear Regression .................................
+    13484
+
+    +         2.3.2. Support Vector Machines ................................... 13486
+
+    +         2.3.3. Decision Trees .............................................
+    13487
+
+    +         2.3.4. Neural Networks ............................................
+    13487
+
+    +         2.3.5. Ensemble Learning ..........................................
+    13488
+
+    +         2.3.6. Clustering .................................................
+    13489
+
+    +         2.3.7. Other Algorithms ............................................
+    13490
+
+    +      2.4. Model Validation ................................................
+    13491
+
+    +   3. Application of Machine Learning to Electrocatalysts and Photocatalysts
+    13492
+
+    +      3.1. Electrocatalysis ................................................
+    13492
+
+    +         3.1.1. Intermetallics .............................................
+    13492
+
+    +         3.1.2. Electrocatalytic Oxides ....................................
+    13495
+
+    +         3.1.3. Single-Atom Catalysts ......................................
+    13496
+
+    +         3.1.4. Other Electrocatalysts .....................................
+    13498
+
+    +      3.2. Photocatalysis ..................................................
+    13498
+
+    +         3.2.1. Photocatalytic Organics for Water Splitting .................
+    13499
+
+    +         3.2.2. Photocatalytic Oxides for Water Splitting ...................
+    13499
+
+    +         3.2.3. Photocatalytic Oxides for Pollutant Degradation .............
+    13501
+
+    +   4. Conclusions and Perspective ..........................................
+    13502
+
+    +      4.1. Summary of the use of ML in Electro/Photocatalysis Studies ........
+    13502
+
+    +      4.2. Pitfalls of Data-Driven Electro/Photocatalyst Design and Discovery
+    13502
+
+    +      4.3. Challenges and Opportunities of Machine Learning in Electro/Photocatalytic
+    Applications 13503
+
+    +   Author Information ......................................................
+    13504
+
+    +      Corresponding Authors .................................................
+    13504
+
+    +      Authors ...............................................................
+    13504
+
+    +      Notes ..................................................................
+    13504
+
+    +      Biographies ...........................................................
+    13504
+
+    +   Acknowledgments ..........................................................
+    13505
+
+    +   References ...............................................................
+    13505
+
+
+    **Received:** January 21, 2022
+
+
+    **Published:** July 21, 2022'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/385acff8214d70e1094d2d47342cdb40_1_0.png)
+
+
+    Figure 1. Workflow for applying ML techniques in the development of catalytic
+    materials. It starts with data collection, featurization, model training, model
+    evaluation, and eventually exploring the unknown materials space by using the
+    ML models. The results of exploration will feed into the original data set for
+    model improvement, and the materials with good properties will proceed to practical
+    application.
+
+
+
+
+    The development of globally sustainable energy systems and environmental protection
+    are two critical challenges for this century, as population and industrialization
+    expand. In particular, the generation of high-purity fuels from clean sources
+    is a major research and development focus. Producing chemical fuels from earth-abundant
+    resources such as water, carbon dioxide, and nitrogen requires next-generation
+    electrocatalysts and photocatalysts.5–10 Removal of pollutants, bacteria, and
+    heavy metals from water using cheap, efficient processes is also essential for
+    maintaining an inhabitable planet, where photocatalytic and electrocatalytic reactions
+    play important roles.10–15 Clearly, the discovery of higher efficiency, nontoxic
+    electrocatalysts and photocatalysts synthesized from abundant elements is critical
+    to realizing this future. However, the number of catalysts that can be synthesized
+    in principle is vast, much too large to be explored through laboratory experimentation
+    alone.16–18 To accelerate catalyst discovery, first-principles computational chemistry,
+    especially density functional theory (DFT), is being increasingly employed.19,20
+    In particular, the recent development of high throughput DFT calculations enables
+    in silico catalyst screening and exploration of unknown material spaces.21–25
+    However, because of the complexity of catalytic materials and the breadth of their
+    applications, computationally expensive and time-consuming DFT calculations are
+    still unable to explore the whole catalyst composition space. Catalyst researchers
+    are putting intensive effort into understanding structure–property relationships,
+    interpreting data patterns, and extracting knowledge from high volume, multidimensional
+    material databases.26 More effective strategies are therefore needed to tackle
+    these complex issues.
+
+
+    be used to make predictions.27–29 ML algorithms have recently been shown to accelerate
+    discovery and the optimization of functional materials for real world applications
+    such as catalysts, photovoltaics, optoelectronic materials, and thermoelectrics.26,30–36
+    ML algorithms complement expensive, time- and resource-intensive first-principles
+    electronic structure calculations to provide insight into complex, multidimensional
+    structure–property relations.31,37–46 ML techniques can interpret and model a
+    wide range of data and are useful for de novo discovery of important physical
+    and chemical principles.47–51 The application of ML to materials science will
+    result in a step-change in theory and methods for the discovery of next-generation
+    functional materials. Here we review recent progress (2016 onward) in the application
+    of ML to the discovery, development, and design of electrocatalysts and photocatalysts.
+    Excellent reviews exist that summarize the impact of ML in general catalysis informatics
+    for a wide range of catalytic processes or for one or two specific reactions (e.g.,
+    the electrolytic hydrogen evolution reaction (HER)).35,52–55 Recent, comprehensive,
+    critical reviews of cutting-edge ML algorithms and their applications to electrocatalysts
+    and photocatalysts are lacking. To address this deficiency, we summarize ML methods
+    commonly used for electrocatalyst and photocatalyst discovery, critically review
+    the literature in this field, and provide a perspective into the future evolution
+    of AI and ML technology and its impact on electro/photocatalyst research and development.
+    This review consists of four sections. Section 1 introduces ML and its application
+    to materials science. In Section 2, the process of implementing ML methods for
+    electro/photocatalytic systems is described and a concise summary of ML algorithms
+    and their advantages and limitations is provided. Section 3 reviews the literature
+    on ML-based electro/photocatalyst design, discovery, and development, and exemplifies
+    this method for materials, such as metals and oxides. Section 4 provides conclusions
+    and a perspective on current challenges and future aims in ML and ML-based catalyst
+    design. This review aims to guide materials scientists in the selection of ML
+    methods for electro/'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '| Name | Information provided | Data source | URL |
+
+    |---|---|---|---|
+
+    | AFLOWLIB | Structure and properties | High throughput calculation | http://aflowlib.org/
+    |
+
+    | ChemSpider | Chemical structure | Calculation and experiments | http://www.chemspider.com
+    |
+
+    | CMR | Infrastructure supporting the collection, storage, retrieval, analysis,
+    and sharing of data produced by many electronic-structure simulators | Calculation
+    | https://cmr.fysik.dtu.dk/ |
+
+    | COD | Structures of organic, inorganic, metal–organics compounds and minerals,
+    excluding biopolymers | Published and unpublished structures | http://crystallography.net/cod/
+    |
+
+    | CSD | Small molecule crystal structures | Experiments | https://www.ccdc.cam.ac.uk/
+    |
+
+    | Harvard Clean Energy Project | Properties of organic solar compounds | High
+    throughput calculation | http://web.archive.org/web/20130627085223/cepdb.molecularspace.org/
+    |
+
+    | HTEM | Properties of thin films | Experiments | https://htem.nrel.gov/ |
+
+    | ICSD | Inorganic Crystal Structure Database | Published structures | https://icsd.fiz-karlsruhe.de
+    |
+
+    | Khazana | Structure and property, tools to design materials by learning from
+    the data | Calculation | https://khazana.gatech.edu/ |
+
+    | Materials Project | Properties of known and predicted materials | Calculation
+    using standard calculation scheme | https://materialsproject.org/ |
+
+    | MatNavi | Crystal structures, electronic structures, properties, and phase diagrams
+    for polymers and inorganic materials | Calculation and experiments scheme | https://mits.nims.go.jp/
+    |
+
+    | MatWeb | Data sheets of thermoplastic and thermoset polymers, metals, ceramics,
+    and other engineering materials | Experiments | http://matweb.com/ |
+
+    | NOMAD | User-driven platform for sharing and exploiting computational materials
+    science data | Calculation | https://nomad.coe.eu/ |
+
+    | NREL Materials Database | Properties of materials for renewable energy applications
+    (photovoltaics, materials for photoelectrochemical water splitting, thermoelectrics)
+    | Calculation | https://materials.nrel.gov/ |
+
+    | Organic Materials Database | Electronic structure database for 3D organic crystals
+    | Calculation | https://omdb.mathub.io/ |
+
+    | Open Quantum Materials Database | Thermodynamic and structural properties |
+    DFT calculation | http://oqmd.org/ |
+
+    | ZINC | 2D and 3D structures of commercially available molecules | Calculation
+    | https://zinc15.docking.org/ |
+
+
+    photocatalyst design, allowing them to accelerate catalyst discovery for a sustainable
+    future.
+
+
+
+
+    In principle, machine learning algorithms are universal approximators, able to
+    model any complex relationship in physical systems, given sufficient data. This
+    approach is quite different to traditional computational methods such as DFT,
+    which require the laws of quantum mechanics and chemistry to be explicitly coded
+    into the software. In contrast, ML algorithms learn the underlying rules and patterns
+    in a data set to generate a model capable of making predictions about new molecules
+    or materials (objects).46,56,57 The basic steps in constructing a ML model are
+    the following (Figure 1): collect data to form a training data set; generate and
+    select relevant mathematical descriptors that encode the properties of the relevant
+    materials; choose a suitable algorithm and build the model; and evaluate the quality
+    and predictive power of the model. These steps are described in detail in the
+    following sections.
+
+
+
+
+    The key challenge for material informatics is obtaining sufficient, reliable materials
+    data. This data set must contain well-defined input variables for the model (microscopic
+    structures, properties, or synthesis conditions of the material) and macroscopic
+    properties of interest that the model is trained to predict.16,57 There are three
+    main sources of materials data: structure and property databases; materials properties
+    acquired from experimental measurements or computation; and the literature base.
+    Table 1 summarizes
+
+
+    These steps are described in detail in the following sections.
+
+
+    Despite strict quality checks, errors and bias from human perception and measurement
+    can exist in these databases.58 Moreover, variability may be introduced when experiments
+    are carried out under different conditions (in different laboratories) or the
+    properties are characterized by different methods (e.g., nanoparticle sizes determined
+    by electron microscopy or dynamic light scattering).
+
+
+    Another important data source is the literature.59 The near exponential rise in
+    numbers of papers published provides a huge resource materials scientists can
+    access to build data sets. The structures and properties of the materials contained
+    in these papers, synthesis and processing conditions, and other provenance data
+    are extremely valuable for elucidating materials structure–property relationships.
+    The literature often contains analyses of the connections and relationships between
+    the relevant properties. This deeper knowledge, in contrast to the purely quantitative
+    property and structure data in databases, can give materials scientists deeper
+    insights into structure–property relationships and identify the most useful descriptors
+    used to represent the materials.60 Traditionally, publication databases are searched
+    by keywords and the relevant information extracted manually; this is inefficient
+    because of the number of publications. Chemical information is being mined from
+    the literature using ML-based text extraction methods (natural language processing).60–64
+    These methods are robust for batch extraction of chemical information from publications.
+    However, the reliability of the published data from literature must be carefully
+    assessed. Data from different sources, especially for catalysts, may not be compatible
+    because the different ways catalytic reactions are'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Table 2. Typical Descriptors Used in a Variety of Materials Systems for Various
+    Purposes
+
+
+    | Materials | Target | Descriptors | Ref |
+
+    |---|---|---|---|
+
+    | Intermetallics | Precision possible compositions | Atomic fingerprints | 126
+    |
+
+    | Intermetallics | Electrochemical CO₂ reduction | D-Band features, electronic
+    descriptors (electronegativity, work function, ionization potential, electron
+    affinity, etc.) | 88 |
+
+    | Intermetallics | Ethanol desorption | Physical descriptors | 127 |
+
+    | Intermetallics | CO adsorption energy | Geometric fingerprint to represent the
+    local region | 128, 129 |
+
+    | Intermetallics | Aquatic structure information | EXAFS | 130 |
+
+    | Oxide electrocatalysts | OER activity | Covalency, electron occupancy, d electron
+    number, charge-transfer energy, occupancy of e<sub>g</sub> orbitals, metal-oxide-metal
+    bond angles and tolerance factor | 131 |
+
+    | Oxide electrocatalysts | OER activity | Tolerance factor and the octahedral
+    factor | 132 |
+
+    | Oxide electrocatalysts | OER activity | Elemental and structural descriptors
+    | 133 |
+
+    | SACs in N-doped graphene | H₂ adsorption free energy | Covalent radius, d-states
+    center, electronegativity, the number of occupied d states and Bader charge |
+    134 |
+
+    | Graphdiyne-based SACs | H₂ adsorption free energy | Atomic descriptors, active
+    sites and redox energy barrier | 135 |
+
+    | Co SACs in N-doped graphene | H₂ adsorption free energy | EXAFS | 136 |
+
+    | SACs in N-doped graphene | HER/OER/HER limiting potential | The electron numbers
+    of the d orbital, the oxide formation enthalpy of the single atom, Pauling electronegativity
+    of the surrounding atoms, and the average of the pK<sub>a</sub> values of the
+    surrounding atoms (hydride formation enthalpy of the single atom from HER model)
+    | 137 |
+
+    | Transition metal SACs in g-C₃N₄ | ORR/OER activity | First ionization energy
+    and charge transfer of transition metal atoms | 138 |
+
+    | Fe SACs in zeolites | ORR activity | Experimental descriptors | 139 |
+
+    | Transition metal SACs in B-doped graphene | N₂ adsorption energy | Coulomb matrix,
+    electronic descriptors, elemental descriptors | 140 |
+
+    | Double layer transition metal dichalcogenides | HER/OER | Rotational angle,
+    bond length, distance between layers | 141 |
+
+    | MXenes (general formula M<sub>n+1</sub>X<sub>n</sub>, M, transition metal; X,
+    C or N; n = 1–3) | HER activity | The bond length of oxygen and surface metal
+    atoms, the distance between the nearest neighbor O atoms, the ionization energy
+    difference, the average affinity energy of the alloy elements, and the valence
+    electrons of X | 142 |
+
+    | MBenes (element X in MXenes is replaced by boron) | H₂ adsorption free energy
+    | Elemental descriptors, structural energies and lattice parameters | 143 |
+
+    | Photocatalytic polymer | H₂ evolution | Electron affinity, ionization potential,
+    bandgap, transmittance | 144 |
+
+    | Photocatalytic polymer | Bandgap and band structure | The frontier orbitals
+    of the donor and acceptor components in the backbone | 145 |
+
+    | Photocatalytic oxide (perovskites) | Bandgap and HER activity | Elemental and
+    electronic descriptors, tolerance factor | 146 |
+
+    | Photocatalytic oxide (TiO₂) | Parameter optimization for degradation | Experimental
+    parameters | 147, 148 |'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'measured and because some potentially relevant factors may be neglected (e.g.,
+    shape of reactor, stirring speed, different solvent). Close cooperation among
+    materials scientists, catalyst scientists, and computer scientists on the use
+    of a standard format for data recording and evaluation of the reliability of published
+    data is very important for generating high-quality ML models.
+
+
+    Materials data sets can also be built from experimental and simulation data, where
+    all the data are acquired under similar conditions. Typically, high throughput
+    experiments generate large quantities of data for a specific system.21,22,24,25,65–68
+    Conspicuously, all experiments contribute to data set construction, as failed
+    experiments contain valuable information identifying the molecular determinants
+    of success and failure.69 A web-accessible public database (http://darkreactions.haverford.edu)
+    has been developed to extract data from laboratory notebooks and ongoing experimental
+    data.70 These data from failed experiments have been beneficial for the design
+    of chemical syntheses.
+
+
+    High throughput computation is also a viable way to accumulate materials data.22,71–75
+    Using thermodynamic and electronic structure methods, data sets of virtual materials
+    or local properties of materials can be generated that are useful for materials
+    analysis and discovery using ML tools.30,74 ML can predict the results of electronic
+    structure calculations when trained on previous calculation results, effectively
+    leveraging these expensive and resource-intensive first principle calculations
+    much more broadly across materials space.76,77 High throughput calculations accelerate
+    the growth of computed materials databases such as AFLOWLIB and Materials Project.
+    These databases also provide open-source platforms for researchers to implement
+    high throughput calculations.78,79
+
+
+    # 2.2. Featurization
+
+
+    After data collection, materials must be transformed into an appropriate mathematical
+    form used to train ML models.80 This involves describing key attributes of molecules,
+    compounds, clusters on surfaces of compounds, materials etc., by a series of numbers
+    of numbers (vectors or tensors).80,81 These numbers are materials attributes called
+    descriptors, features, or fingerprints in the literature. The process of generating
+    these mathematical representations of material objects is called featurization
+    or feature engineering and it is of critical importance to the quality and interpretability
+    of the models trained using them. This step required the most human intuition
+    and intervention but recent development in automatic featurization of molecular
+    objects using specific types of deep neural networks promises paradigm shifts
+    in this process.82–84 Featurization consists of two steps: descriptor generation
+    and descriptor selection.
+
+
+    # 2.2.1. Descriptor Generation.
+
+
+    Effective descriptors must discriminate between objects in the data space and
+    encode attributes that are relevant to the property being modeled and predicted.31,34
+    Despite the large number of descriptors that can be generated for molecules and
+    materials, the choice of these descriptors is strongly dependent on the scientific
+    problem to be solved.31 Although descriptor generation is context dependent, there
+    are still some common rules. First, the descriptor set must provide unique information,
+    such as structure, composition, and physicochemical properties of the materials
+    to ensure they are distinct for each material. Second, the number of descriptors
+    used should not be very large to avoid overfitting models and compromising their
+    ability to predict properties of new data. Redundant or correlated descriptors
+    should be removed to minimize the size of the descriptor set to avoid overfitting,
+    especially in electro/photocatalyst research where the data sets tend to be small.
+    It has been shown that as additional irrelevant descriptors are added to descriptor
+    sets, the quality of a partial least-squares model, for example, is degraded.85
+    Redundant descriptors include those having high correlation with other descriptors
+    in the set, those whose values do not change much across the data set (low variance),
+    and those that have very low correlation with the property being modeled. To avoid
+    overfitting, the number of fitted variables in a model should be much less than
+    half of the number of the training examples.16,86
+
+
+    In general, descriptors can be divided into different classes depending on the
+    information they encode. As well as encoding structural, compositional, and physicochemical
+    properties of materials, they can also include provenance information of how the
+    material was synthesized or subsequently processed. Experimentally derived descriptors
+    may include temperature, pH value, pressure, reaction time, and the amount of
+    the reactants. Compositional descriptors relate to the composition of each component
+    in complex materials. Topographical descriptors pertain to the texture of a material
+    (pore size, volume, surface area, topological shape), while topological descriptors
+    encode the connectivity of atoms in materials. Some descriptors can be readily
+    extracted from physicochemical handbooks or material databases. For example, atomic
+    descriptors refer to the atomic attributes like atomic radii, masses, the number
+    of protons and valence electrons, etc., physical descriptors are mainly related
+    to the macroscopic attributes of materials such as melting point, boiling point,
+    density and solubility, and some electronic descriptors encode microscopic attributes
+    (electronegativity, ionization energy, etc.).87 Many types of descriptors can
+    be obtained by calculation, such as structural descriptors and some electronic
+    descriptors (bandgap, dipole moment, highest occupied molecular orbital (HOMO),
+    lowest occupied molecular orbital (LUMO), d-band characteristics, etc.).88,89
+    Spectra-based descriptors are derived from experimental measurements (e.g., X-ray
+    diffraction, extended X-ray absorption fine structure (EXAFS), etc.).90 The acquisition
+    of these descriptors may be relatively costly and time-consuming. Clearly, computational
+    descriptors are preferred because they do not require experiments to derive them.
+    Apart from cost and time considerations, more importantly, they are the only way
+    to predict properties of materials not yet synthesized.
+
+
+    Table 2 summarizes typical descriptors used in a variety of electrocatalysis and
+    photocatalysis models. Although the relevance of descriptors is assessed by the
+    performance of the model, experience and intuition are useful in descriptor selection.
+    For example, experimental descriptors would be used in the case of synthesis optimization,91
+    while compositional descriptors would be better suited to describe the materials
+    undergoing composition optimization.92 When texture–property relationships or
+    structure–property relationships are interpreted, topographical and topological
+    descriptors, atomic descriptors, and electronic descriptors would be used collectively.87,93–96
+    For instance, electronegativity and ion radii are commonly used as descriptors
+    for different perovskite catalysts,97–99 these features play pivotal roles in
+    Pauling''s Rule and tolerance factor that are useful in understanding and predicting
+    the stability of perovskites.100,101'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'Descriptors must be chosen with care to ensure they are relevant to the property
+    or process being modeled. For example, electronic and atomic descriptors are not
+    able to differentiate between allotropes, isomers, conformers, and polymorphs
+    that have very similar descriptors for each form. Techniques such as radial distribution
+    functions (density distributions as a function of distance) and Voronoi tessellations
+    (partition the crystal lattice into subregions close to each of a given set of
+    objects) are useful in encoding the crystal lattice. The Coulomb matrix is a global
+    descriptor mimicking the electrostatic interaction between the nuclei and is widely
+    used in structure featurization, especially in adsorption research. Structures
+    of molecules can be described by the simplified molecular-input line-entry system
+    (SMILES), a string of characters composed of letters and symbols that can be converted
+    into numbers using the ASCII values of the characters. More refined implementations
+    have been developed based on SMILES. For example, PaDEL and RDKit codes describe
+    the molecular structure by an array of real numbers. Molecular fingerprints encode
+    the presence or absence of particular substructures/patterns in molecules (these
+    differ in various implementations, e.g., MACCS, FP2, daylight, and hybridization)
+    using 1s and 0s. More generally, so-called one-hot descriptors denote the presence
+    or absence of any feature or attribute in a molecule, or process.
+
+
+    Generation of structural descriptors can also start from the local environment
+    of each atom and extend to the crystal level. Atom-Centred Symmetry Functions
+    (ACSFs) descriptors account for the local environment of atoms by using multiple
+    two-body and three-body symmetry functions. The Smooth Overlap of Atomic Positions
+    (SOAP) likewise uses a local expansion of a Gaussian smoothed atomic density with
+    orthonormal functions, based on spherical harmonics and radial basis functions,
+    to encode regions of atomic geometries. Note that both ACSFs and SOAP are local
+    descriptors that do not represent the entire structure, but information from multiple
+    local sites can be simply averaged or combined by kernel functions. Frequently,
+    d-band center descriptors and p-band center descriptors are used to describe the
+    local activities of metal and anion sites of catalysts, respectively. Moreover,
+    structural descriptors can be built from the molecular graph, in which the nodes
+    correspond to atoms and edges to bonds in crystal and molecular frameworks. These
+    graph-based structural descriptors are widely used in materials systems because
+    they are consistent with conventional representations of a unit cell or a molecule.
+    Models trained on graph-based descriptors generally have good predictive performance
+    for materials properties such as formation energy and bandgap. They are simple
+    to calculate, store, and interpret as only atomic symbols required, but their
+    ability to model complex interactions within materials is limited. Recently, chemical
+    and physical properties were introduced into graph-based descriptors by the property-labeled
+    materials fragments (PMF) technique. Models built using PMF fragments exhibited
+    excellent predictive ability for many important properties.
+
+
+    We stress that descriptors for catalysis research should not be restricted to
+    one type. Multiple families of descriptors are required to capture all attributes
+    of catalysts and reactions, leading to robust ML models (Table 2). Wang et al.
+    combined elemental descriptors and structural descriptors of oxide perovskite
+    surfaces to build a surface center environment
+
+
+    model to predict the adsorption energies of the intermediates (HO*, O*, HOO*)
+    and their overpotentials. They found that the adsorption energies and overpotentials
+    would be low when the B-site was occupied by a series of specific elements and
+    accordingly, new oxide perovskites with good catalytic performance for the oxygen
+    evolution reaction (OER) could be designed. Xu et al. noted that catalytic activity
+    of single-atom catalysts was highly correlated with the coordination number and
+    the electronegativity of the nearest atoms. They therefore created a universal
+    descriptor based on these descriptors, with which highly active single-atom catalysts
+    lacking precious metals were designed. More recently, the use of state-of-the-art
+    ML techniques, such as symbolic learning, have been shown to generate sets of
+    descriptors that allow materials scientists to create more accurate ML models
+    and uncover deep feature–property relations.
+
+
+    # 2.2.2. Descriptor Selection.
+
+
+    Because there are a myriad of ways to construct descriptors for a material based
+    on chemical and physical knowledge, it is crucial to choose the subset of the
+    most appropriate descriptors for modeling. This is because using too many descriptors
+    increases model complexity, resulting in overfitting and compromising the predictivity
+    of models, while optimally sparse subsets of descriptors generate models with
+    the best predictivity and make interpretation of models easier. There are two
+    main strategies to select descriptors, down-selection and dimensional reduction.
+    In down selection (also called sparse feature selection), a large number of possible
+    material descriptors are reduced to a smaller number using a range of statistical
+    methods. In regression models, an L₁ regularization term is introduced to penalize
+    terms with a lower relevance to the model by shrinking them to zero, this is called
+    the least absolute shrinkage and selection operator, LASSO (this will be discussed
+    further in Section 2.3.1). More recently, the sure independence screening and
+    sparsifying operator (SISSO) has proven to tackle immense and correlated feature
+    spaces to converge on an optimal combination of features relevant to the materials
+    property of interest. Tree algorithms, such as random forest (RF), are also commonly
+    used to determine importance of each descriptor after training. Wexler et al.
+    used a regularized (model complexity penalizing) RF model to study hydrogen evolution
+    activity of Ni₂P. Twenty nine descriptors were input to the model, and the relative
+    importance of each was estimated by calculating its normalized ability to separate
+    the data based on the free energy for hydrogen adsorption. The ten most important
+    descriptors were selected from the descriptor set. This identified the Ni–Ni bond
+    length, the geometry of the Ni₃ sites, and the dopant charge as having the most
+    significant effects on the hydrogen adsorption ability. Although down-selection
+    methods are effective in reducing the number of descriptors, they can sometimes
+    discard useful materials information. Some down-selection algorithms may display
+    instability, especially if some descriptors are categorical rather than continuous,
+    depending on how well the hyperparameters have been chosen.
+
+
+    Another strategy for optimizing descriptors is dimensional reduction. The principle
+    of this strategy is to project the descriptors from a high dimensional space into
+    a lower dimensional space. The new descriptors are generated by linear combinations
+    of the original descriptors, with principal component analysis (PCA) being the
+    most common. In brief, PCA determines the principal components, or a series of'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/385acff8214d70e1094d2d47342cdb40_7_0.png)
+
+
+    **Figure 3.** Overview of the popular ML algorithms in materials science and their
+    selection (only exemplary techniques are noted in the figure). The selection of
+    ML algorithms depends on the structure of the data set and type of target. Dimension
+    reduction is applied if the number of features for each data entry is too large.
+    Unsupervised learning is employed if the data are unlabeled, and supervised learning
+    if it is labeled. Regression algorithms model continuous data, while classification
+    algorithms model class data. Most algorithms can build either regression or classification
+    models. Abbreviations in this figure: NN (neural networks), GBT (gradient boosting
+    tree), GBT (gradient boosting regression), SVC (support vector classification),
+    SVR (support vector regression), DBSCAN (density-based spatial clustering of applications
+    with noise). The *k* in *k*-mean denotes the number of clusters preset by human
+    operator.
+
+
+    learning rate may overshoot the minimum of the loss function as the gradient is
+    different in each spot, while the calculation may become very time-consuming if
+    the learning rate is too low. Generally, the learning rate can be relatively high
+    at the start of the iteration when the weights are far from optimal, then decrease
+    gradually during the iteration to obtain more'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '![](img/385acff8214d70e1094d2d47342cdb40_9_0.png)
+
+
+    **Figure 5.** Representations of various neural networks. (a) Scheme of the feed
+    forward of a neural network. (b) Scheme of the error back-propagation of a neural
+    network. (c) Schematic representation of the convolutional neural network used
+    for crystal classification. Reprinted with permission from ref 220. Copyright
+    2019, Springer Nature.
+
+
+    consisting of *n* data points described by two descriptors is divided into two
+    classes by an optimal hyperplane positioned to maximize its distance from the
+    closest data points. In many cases when the data points are not linearly separable,
+    SVC can provide nonlinear solutions by transforming the data points to a high
+    dimensional space where linear relations can be established (Figure 4b). Kernel
+    functions are used to simplify the calculations in high dimensional space. To
+    avoid the overfitting that can occur with SVM, a Bayesian implementation of the
+    algorithm, the Relevance Vector Machine (RVM), automatically generates the optimum
+    number of support vectors for a given data set and kernel function and provides
+    better performance.
+
+
+    The principles of SVR are distinct from SVC, albeit related. Instead of searching
+    a hyperplane, where the distance to the closest data points is maximized, the
+    distance between the SVR hyperplane and most data points is no more than the tolerance
+    margin, ξ, with ξ being determined by the required accuracy of the model. Both
+    SVC and SVR can be used for catalytic activity prediction and simplification of
+    DFT calculations. For example, Baghban et al. shortened the DFT calculation time
+    for determining the bandgap of zeolitic imidazolate frameworks (ZIFs) using an
+    SVM model, providing a simple approach for the design of ZIF-based electrocatalysts.
+
+
+    The SVM, a nonlinear algorithm, provides a global solution to the feature–property
+    relation, shows good generalization ability, and is insensitive to outliers. Nevertheless,
+    training of the SVM model is very slow on a large data set, and there is no general
+    rule for the selection of kernel functions. Distinct from the linear algorithms,
+    the transparency of the SVM model is low, and the SVM classifiers are only available
+    for the binary classification, which restricts their applications.
+
+
+    # ### 2.3.3. Decision Trees.
+
+
+    Decision tree (DT) models generate a tree-like model that classifies the output
+    values by imposing sets of rules on the input features. It is composed of internal
+    nodes, representing tests on a descriptor, branches which are the outcomes of
+    the tests, and leaf nodes that hold
+
+
+    class labels or continuous values. Tree models with discrete outputs are called
+    classification trees, and those with continuous outputs regression trees. DT models
+    can discover new knowledge de novo and handle multidimensional data. They are
+    fast and simple to train, can generate high accuracy, and are easier to interpret
+    than some ML methods. However, DT models are prone to overfitting and can be biased
+    and unstable. Small changes in the training data may cause a dramatic change in
+    the structure of the optimal tree. This issue is common to most regression methods
+    as regression is inherently an ill-posed problem. Regularization converts ill-posed
+    problems into well-posed problems. For DTs, this is achieved by pruning the size
+    of the tree. In some cases, it can be difficult for DT models to learn very complex
+    relationships. Despite these disadvantages, DT is still considered one of the
+    most versatile algorithms because of their excellent interpretability. Consequently,
+    DTs have been used in many areas of materials science, such as optimization of
+    catalysts, compound classification, spectra analysis, and toxic prediction.
+
+
+    # ### 2.3.4. Neural Networks.
+
+
+    The neural network (NN) is a bioinspired algorithm where numerous connected units
+    send signals to other units, similar to the function of neurons in the brain.
+    The NN consists of a series of connected input/output units in which each connection
+    can transmit a weighted signal to other units (Figure 5a). During the learning
+    phase, the NN adjusts the weights and bias on each connection to reduce the errors
+    between the predicted values and the target values until the errors are acceptable
+    or no improvement is obtained. NNs can have long training times and work best
+    with large training data sets. Although NNs are considered difficult to interpret,
+    they have high noise tolerance, can model any complex relationships given enough
+    data, and can make predictions for both continuous and discrete data. As a result,
+    NNs are useful in providing solutions to many problems, not only in electro/photocatalytic
+    science but also in molecular dynamics simulations, synthesis route design, pattern
+    recognition,'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'The most popular NN algorithm is the backpropagation NN in which, during training,
+    the error between the output value and the target value is propagated back through
+    the network to adjust the weights and bias in the different layers (Figure 5b).
+    It comprises one input layer, one output layer, and one or a few hidden layers,
+    each of which contains one or more nodes or neurons. Figure 5a depicts a typical
+    three-layer backpropagation NN, in which the inputs corresponding to the descriptors
+    of a training data set are fed through to the hidden layer where they are processed
+    by a transfer function and the outputs passed to the output layer to generate
+    predictions for the outputs data point. The number of input nodes is equal to
+    the descriptors, while one output unit is commonly used for binary classification
+    or continuous value prediction. Multiple output units can also be used to represent
+    different classes for a multiclass problem or multiple continuous properties for
+    multiobjective models. There is no rule about the optimal number of hidden layers
+    to be used, and therefore the design of a backpropagation NN requires trial and
+    variation. However, Bayesian regularization of neural networks can automatically
+    optimize the architecture and number of adjustable weights to yield robust and
+    predictive models of a wide range of properties.
+
+
+    Deep learning is a class of ML that extracts the knowledge via a multiple layer
+    NN. The deep learning neural networks (DNNs) have several hidden layers and many
+    nodes per layer, with which features or patterns are progressively abstracted
+    from inputs layer by layer. As DNNs do not rely on human decision (e.g., selections
+    of polynomial degree or kernel function), they can learn relationships of arbitrary
+    complexity given sufficient training data. Their main advantage over “shallow”
+    (3-layer) neural networks is in the representation of data. Instead of manual
+    feature engineering according to domain knowledge, deep learning enables models
+    to learn the underlying structure of the input data and extract useful features,
+    by which the input format becomes more flexible (e.g., images, videos, sounds),
+    and model performance can be improved. Deep learning has become a very useful
+    tool in materials exploration, catalytic reactivity prediction, and experimental
+    condition optimization. Kim et al. applied DNNs to model 31 713 known zeolites
+    using atomic information and local methane adsorption energy as inputs. The model
+    could identify novel zeolites with improved adsorption properties. Moreover, this
+    model could be extended to more complex porous materials, such as metal organic
+    frameworks and covalent organic frameworks, provided these materials lay near
+    the domain of applicability of the model. Ding et al. studied the electrocatalytic
+    oxygen reduction activity of ZIF-based materials with DNN as well as another 8
+    ML models. The summarized results showed pyrolysis time was a decisive factor
+    in the electrocatalytic reactions, in which a moderate pyrolysis time could lead
+    to the best electrocatalytic performance because of the balance of Zn–N evaporation,
+    Fe–N formation, and graphitic N conversion. Yang et al. employed DNN to optimize
+    the experimental parameters for photocatalytic treatment of oily wastewater. Because
+    of the high accuracy of the model prediction, optimal operating parameters could
+    be acquired promptly from past data, thereby saving time and cost on trial-and-error
+    experiments.
+
+
+    Convolutional neural networks (CNNs) are a type of DNN mostly used in image analysis.
+    A CNN consists of several convolutional and pooling layers, with a fully connected
+    layer. Figure 5c illustrates the principle of the CNN. When an image is the input,
+    the convolutional layer extracts features from the image by scanning with one
+    or more filters and generates a feature map by convolution. An activation function
+    is applied to the feature map to introduce nonlinearity and to simulate higher
+    level features. After a few convolution and activation cycles, the pooling layer
+    is used to reduce the dimensions of the data before further convolution. Finally,
+    data is transmitted into the fully connected layer, a multilayer NN, and values
+    or class labels are predicted. For materials science, CNN models are often trained
+    on images of materials features. Back et al. successfully predicted the CO and
+    H binding energies on the pure metals, alloys and intermetallic structures using
+    a CNN, thus expediting high throughput catalyst discovery. Wang et al. used a
+    CNN to map the crystal structures to the Heyd–Scuseria–Ernzerhof (HSE06) bandgaps,
+    and identified 33 materials from 1503 candidates with bandgaps less than 0.9 eV,
+    which were considered as promising electrodes and electrocatalytic materials.
+    In addition, a CNN is capable of determining physical insights of electro/photocatalysis.
+    Wang et al. developed a theory-infused neural network model consisting of a CNN
+    module and a d-band theory module to predict the adsorption energy of OH* on {111}-terminated
+    intermetallics. Using graphic features of OH* on {111}-terminated intermetallics,
+    229 Using graphic features to represent the information on atom, bonding, and
+    neighbor environment as input, a CNN model was constructed to determine parameters
+    for the module built on d-band theory of chemisorption, and the adsorption energy
+    was then calculated by the d-band theory module. The combination of ML and chemisorption
+    theory illustrated the nature of chemical interactions between adsorbates and
+    metal surfaces, which is a critical step in electro/photocatalysis. This strategy
+    could also be extended to other adsorbates (e.g., O*, N*) on metal compounds with
+    strongly correlated d electrons. More examples of the application of deep learning
+    in electro/photocatalysis are given in Section 3.
+
+
+    For materials science, CNN models are often trained on images of materials features.
+    Back et al. successfully predicted the CO and H binding energies on the pure metals,
+    alloys and intermetallic structures using a CNN, thus expediting high throughput
+    catalyst discovery. Wang et al. used a CNN to map the crystal structures to the
+    Heyd–Scuseria–Ernzerhof (HSE06) bandgaps, and identified 33 materials from 1503
+    candidates with bandgaps less than 0.9 eV, which were considered as promising
+    electrodes and electrocatalytic materials. In addition, a CNN is capable of determining
+    physical insights of electro/photocatalysis. Wang et al. developed a theory-infused
+    neural network model consisting of a CNN module and a d-band theory module to
+    predict the adsorption energy of OH* on {111}-terminated intermetallics. Using
+    graphic features of OH* on {111}-terminated intermetallics, 229 Using graphic
+    features to represent the information on atom, bonding, and neighbor environment
+    as input, a CNN model was constructed to determine parameters for the module built
+    on d-band theory of chemisorption, and the adsorption energy was then calculated
+    by the d-band theory module. The combination of ML and chemisorption theory illustrated
+    the nature of chemical interactions between adsorbates and metal surfaces, which
+    is a critical step in electro/photocatalysis. This strategy could also be extended
+    to other adsorbates (e.g., O*, N*) on metal compounds with strongly correlated
+    d electrons. More examples of the application of deep learning in electro/photocatalysis
+    are given in Section 3.
+
+
+    Despite the broad applicability of NNs, the significant data can limit their applicability
+    in specific materials design, discovery, and development areas. Often, training
+    set sizes are small so model bias and overfitting occur. Therefore, NNs may be
+    combined with other methods such as ensemble learning, active learning, or evolutionary
+    methods. The high complexity of the NN models, which limits their interpretability,
+    is another potential shortcoming of NN models for material exploration and optimization.
+    Informative descriptors should be selected to simplify the models and improve
+    the interpretability, while new techniques, such as class activation maps, can
+    be used to elucidate the black box of NN models. 238–243.
+
+
+
+
+    Ensemble learning combines multiple learning algorithms to create a strong overall
+    learner with better performance than the component algorithms (Figure 6). There
+    are two main types of ensemble learning, bagging and boosting. Given a training
+    set D of size n, bagging generates m new subsets D_i (i = 1, 2, ..., m) of n''
+    size (n'' < n) by sampling from D with replacement. Model M_i is learned from
+    the subset from D_i and thus m models will be learned. In classification, the
+    prediction of each M_i counts as one vote and the overall model assigns the class
+    by majority vote. In regression, the average value of each prediction will be
+    provided by the ensemble model. Bagged models often have'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '![](img/385acff8214d70e1094d2d47342cdb40_11_0.png)
+
+
+    **Figure 6.** Schematic representation of ensemble learning. Multiple ML models
+    (models 1 to *n*, weak learners) are combined as an ensemble model to obtain better
+    predictions (strong learner).
+
+
+    significantly higher accuracy than a single model trained on the data set, and
+    bagged models can minimize overfitting and noise effects. One of the most frequently
+    used bagging ensemble models is RF, which combines results from a series of decision
+    trees. RF has significant advantages, such as robustness to outliers and errors,
+    high efficiency, good performance, and provides estimates of the variable importance.
+    As a result, the RF model is robust for predictions of catalysts properties such
+    as electrocatalytic activities, gas adsorption free energy, and photocatalytic
+    properties, and uncovering the impactful factors for these properties. For example,
+    Ying et al. built an RF model to study the bifunctional oxygen evolution/reduction
+    reaction activity for single-atom catalysts on C₂N, and identified that the outer
+    electron number and the oxide formation enthalpy of single-atom catalysts were
+    two of the most important factors determining their activity. This work indicated
+    that RF could not only save calculation time and cost but also provide deeper
+    insight into the electrocatalytic activity of single-atom catalysts. Despite the
+    good transparency, the complexity of RF can be high especially when the number
+    of decision trees is large, and thus the training time will be significantly extended.
+
+
+    While bagging treats all training data points equally and simply combines the
+    outputs of each individual model (weak learner), boosting assigns weights to each
+    data point and each weak learner. After a model Mᵢ is trained, the weights of
+    the data points exhibiting larger errors will be increased and those having smaller
+    errors decreased. This emphasizes poorly predicted data points with weights of
+    each weak learner
+
+
+    being estimated by the errors as well. AdaBoost is one of the popular boosting
+    algorithms. Compared to bagging methods, AdaBoost may overfit the data because
+    it focuses more on poorly predicted data points, but it may achieve a higher degree
+    of precision than bagging methods. Instead of focusing on the data points having
+    large prediction errors, gradient boosting uses the residual error between the
+    predicted value from the current model and the true value. Like the gradient descent
+    algorithm discussed in Section 2.3.1, gradient boosting minimizes the loss function
+    by gradually imposing a new model into the current model that reduces the loss
+    function to the largest extent. This process is iterated until an optimal loss
+    value is found. Because of the high accuracy and versatility, gradient boosting
+    algorithms, such as gradient boosting tree (GBT) and gradient boosting regression
+    (GBR), are widely used in materials screening, discovery, and property prediction.
+
+
+    # **2.3.6. Clustering.**
+
+
+    Clustering is an unsupervised learning method that partitions a set of data into
+    subsets in which all members are similar to each other. Unlike classification,
+    the clustered data are unlabeled, and their similarity is determined by mathematical
+    descriptors. Clustering is useful for discovering previously unknown patterns
+    in data.
+
+
+    Several clustering algorithms are commonly used in materials science. The best
+    known is *k*-means clustering that partitions data into *k* clusters (*k* is preset
+    by a human operator) based on the Euclidean distance between the data points in
+    the feature space (Figure 7a). It is computationally efficient and can be applied
+    to data in continuous *n*-dimensional space, but it is sensitive to noise and
+    outliers. Hierarchical clustering presents the data points as a hierarchy (Figure
+    7b). Although there is no limit to cluster numbers in this algorithm, which hierarchy
+    is adopted as the ultimate clustering metric still relies on human input. The
+    results are also sensitive to noise. To overcome noise sensitivity and discover
+    data clusters of arbitrary shape, Density-Based Spatial Clustering of Applications
+    with Noise (DBSCAN) was developed. Here, rather than using distances between data
+    points, DBSCAN uses the similarity of the density around the data points, and
+    thus it can easily distinguish noise from information. It is suitable for clustering
+    of both convex and nonconvex data sets (Figure 7c). However, DBSCAN is more complex
+    than *k*-means and hierarchical clustering, requiring longer computation time
+    to cluster large data sets. Clustering algorithms have been applied to spectral
+    analysis and catalyst discovery in catalysis research.
+
+
+    ![](img/385acff8214d70e1094d2d47342cdb40_11_1.png)
+
+
+    **Figure 7.** Schematic representation of some cluster algorithms. (a) *k*-means
+    clustering; the data points are partitioned into three clusters (presented as
+    green, blue, and pink dots). The black dots denote the means of these clusters.
+    (b) Hierarchical clustering, in which five data points are partitioned hierarchically.
+    (c) DBSCAN, the data points that are successfully clustered are represented by
+    triangles with various color, the noise data are represented by black circle,
+    and the uncertain data are represented by circles with the color of the cluster
+    that they may be grouped in.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '| Name | Description | URL |
+
+    |---|---|---|
+
+    | Caret | A set of functions that attempt to streamline the process for creating
+    ML models in R | https://topepo.github.io/caret/ |
+
+    | COMBO | Highly scalable common Bayesian optimization library, written in Python
+    | https://github.com/tsudalab/combo |
+
+    | DeepChem | Open-source library for the use of deep learning in chemistry, written
+    in Python | https://deepchem.io/ |
+
+    | Deeplearning4j | Generates deep neural nets from various shallow nets, written
+    in Java | https://deeplearning4j.konduit.ai/ |
+
+    | H2O.ai | ML platform written in Java, and compatible with Python and R | https://www.h2o.ai/
+    |
+
+    | Keras | A high-level neural network API (Application programming interface),
+    written in Python and capable of running on top of TensorFlow, CNTK, or Theano
+    | https://keras.io/ |
+
+    | Mlpack | A fast, flexible machine learning library, written in C++ | https://mlpack.org/
+    |
+
+    | NSGA-II | A fast sorting and elite multiobjective genetic algorithm | http://www.mathworks.com/matlabcentral/fileexchange/10429-nsga-ii-amulti-objective-optimization-algorithm
+    |
+
+    | Pytorch | An open-source machine learning framework, having Python and C++ interfaces,
+    developed by Facebook | https://pytorch.org/ |
+
+    | Scikit-learn | A free software machine learning library for Python, featuring
+    various classification, regression, and clustering algorithms | https://scikit-learn.org/stable/
+    |
+
+    | TensorFlow | A free and open-source software library for ML, developed by Google
+    | https://www.tensorflow.org/ |
+
+    | TensorMol | A package of neural network models for chemistry | https://github.com/jparkhill/TensorMol
+    |
+
+    | Weka | Free software containing a collection of visualization tools and algorithms
+    for data analysis and predictive modeling, written in Java | https://www.cs.waikato.ac.nz/ml/weka/
+    |
+
+
+    # 2.3.7. Other Algorithms.
+
+
+    # 2.3.7.1 k-Nearest Neighbor (KNN).
+
+
+    KNN is widely used in pattern recognition because of its simplicity. Given a training
+    set with n descriptors and an unknown sample, KNN identifies k nearest neighbors
+    of the unknown sample in the n-dimensional space. The parameter k is defined by
+    the users, and the distance between each pair of unknown and training set data
+    points is calculated by the Euclidean distance in n-dimensional space. This algorithm
+    is fast because it only stores the training set rather than modeling it, so new
+    data can be seamlessly added to the model. Nevertheless, KNN has low efficiency
+    when the training set is very large, or the data points are in very high-dimensional
+    spaces. It is also sensitive to noise, missing values, and outliers, so deep preprocessing
+    of the data is essential. In addition, all the descriptors must be normalized
+    or standardized to balance the contributions of each. Because of its simplicity
+    and interpretability, KNN is used in many areas of materials science, such as
+    the prediction of molecular atomization energies and catalyst screening.
+
+
+    # 2.3.7.2. Kernel Ridge Regression (KRR).
+
+
+    KRR is an extension of ridge regression. KRR is an extension of ridge regression
+    to tackle the nonlinearity. KRR is similar to SVR, except that KRR uses the squared
+    error penalty, whereas the loss function of SVR is the ε-insensitive loss. Fitting
+    a KRR model is faster than fitting an SVR model on a medium-sized data set (<1000
+    samples), but it is slower than SVR in fitting data and predicting when the data
+    set is large. Currently, KRR models are used in materials ML modeling, e.g., analyzing
+    crystal structures, optimizing catalysts, and learning the quantum chemical properties
+    of molecules. 261-263
+
+
+    # 2.3.7.3. Genetic Algorithms.
+
+
+    Genetic algorithms are inspired by natural evolution. Materials are represented
+    as genomes (encoded as a bits string) that contain information on composition,
+    structure, synthesis conditions, etc. Given an initial pool of materials chosen
+    randomly or by prior experience that have their fitness assessed, the fittest
+    members of the pool are mutated using genetic operators such as crossover and
+    mutation to form the next generation (progeny) of materials. Fitness functions
+    are application dependent, e.g., catalytic activity, bioactivity, or quantum efficiency.
+    Experiments are conducted to identify the fitness of materials pools in each iteration
+    of the genetic optimization process.
+
+
+    # 2.3.7.4 Active Learning.
+
+
+    Active learning (sometimes called adaptive experimental design) is an iterative
+    type of supervised learning well suited to large data sets whose output values
+    (target property values) are scarce or expensive to obtain. A model (M₀) is first
+    trained on the subset with labeled data. A small quantity of unlabeled data with
+    high predicted uncertainty or high diversity is provided by M₀, and then experiments
+    or calculations are used subsequently to find the output values (discrete values
+    in classification, or continuous values in regression) for these data. Subsequently,
+    a new model (M₁) is trained by using all the labeled data. This process can be
+    iterated until all the data are labeled or the prediction errors are acceptably
+    low. The aim of active learning is to achieve high accuracy by using as few labeled
+    data as possible. For example, a Bayesian NN model built on a small training set
+    labeled by accurate DFT calculations accurately predicted the bandgap of ~2.2
+    million 2D heterostructures. 276 Active learning is robust in electro/photocatalyst
+    discovery and optimization, and electro/photocatalytic mechanism research with
+    limited data. 129,148,277,278'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# 2.4. Model Validation
+
+
+    Models must be validated by determining how accurately they predict the properties
+    of the training set and, more importantly, unknown data. The coefficient of determination
+    (r²), root-mean-square error (RMSE), and mean average error (MAE), are common
+    metrics used to assess model quality. For a data set of size n, with measured
+    properties ⟨y₁, y₂, ..., yₙ⟩, property average ȳ, and predicted values ⟨ŷ₁, ŷ₂,
+    ..., ŷₙ⟩, these and other metrics are calculated by
+
+
+    r² = 1 − [Σᵢ₌₁ⁿ(yᵢ − ŷᵢ)² / Σᵢ₌₁ⁿ(yᵢ − ȳ)²] = [Σᵢ₌₁ⁿ(ŷᵢ − ȳ)² / Σᵢ₌₁ⁿ(yᵢ − ȳ)²]  (5)
+
+
+    RMSE = √[Σᵢ₌₁ⁿ(ŷᵢ − yᵢ)² / n]  (6)
+
+
+    MAE = Σᵢ₌₁ⁿ|yᵢ − ŷᵢ| / n  (7)
+
+
+    Good models have a r² value close to 1 and RMSE and MAE values close to 0. The
+    r² value depends on the size of the training set and number of parameters in the
+    model, while the RMSE or MAE values do not. MAE is less affected by large outliers
+    than RMSE. Therefore, the use of RMSE or MAE to assess model predictivity is preferred.
+
+
+    For classification models, precision, recall, and accuracy metrics are widely
+    used:
+
+
+    precision = TP / (TP + FP)  (8)
+
+
+    recall = TP / (TP + FN) = TP / P  (9)
+
+
+    accuracy = (TP + TN) / (TP + TN + FP + FN)  (10)
+
+
+    where TP refers to true positive, which means the positive cases are correctly
+    labeled by the classifier; TN refers to true negative, the negative cases which
+    are correctly labeled; FP to the false positive, the positive cases which are
+    incorrectly labeled; FN to the false negative, the negative cases which are incorrectly
+    labeled; and P is the number of positive cases. Precision and recall can be combined
+    as a single metric, the F1 score:
+
+
+    F1 = 2 × precision × recall / (precision + recall)  (11)
+
+
+    The F1-score and related G-mean (geometric mean of recall and precision) are common
+    in the literature. They are more useful in cases where the classes are unbalanced
+    in the data set (many more data points of one class than the other) because accuracy
+    is misleading. For a good classifier, the precision, recall, accuracy, F1 score,
+    and G-mean should all be close to 1.
+
+
+    The causes of poor model metrics include use of low relevance descriptors; underfitting
+    because of too simple a model (e.g., linear vs nonlinear model); overfitting because
+    of too many descriptors; or data sets in which some features are not well represented
+    because of their small size or high diversity and the model cannot learn the features
+    of the data properly. Underfitting can be avoided by comparing both linear and
+    nonlinear ML methods, descriptors should be studied for their relevance (e.g.,
+    using correlation), and those
+
+
+    not well represented in the data set excluded. If possible, the size of the data
+    set should be expanded, in some cases by imputation where data are missing.
+
+
+    When models are too complex or have too many descriptors, they may suffer from
+    overfitting. Overfitted models make very good predictions of the training data
+    but poor predictions for new data. Overfitting can be detected by use of training
+    and test sets. The original data set is partitioned into two sets, a training
+    set used to construct the model, and a test set for model validation. Typically,
+    60–90% of data are allocated to the training set and the remainder to the test
+    set. Because the training set and the test set are completely independent, this
+    method provides a least optimistic estimate of model predictive power than cross-validation
+    of bootstrapping methods. Models are considered robust if the training and test
+    set metrics are good and similar. This method is simple and practical, but it
+    requires a sufficiently large data set for training and test set portioning, otherwise
+    the results may be problematic.
+
+
+    Cross-validation is a good alternative to evaluate the model accuracy for small
+    data sets. Here, the original data set is portioned into k subsets, with training
+    and testing performed k times. In each iteration, one set forms a test set while
+    the remaining sets are used for training. This is called k-fold cross-validation.
+    Unlike the train-and-test method, each data point will be used k − 1 times for
+    training and once for testing in the cross validation. The “leave-one-out” (LOO)
+    method is a special case of cross-validation where one data point is left out
+    in turn for testing, while the other data are used for training. LOO is one of
+    the commonly used cross-validation methods. The estimate given by LOO is repeatable,
+    but LOO is time-consuming and computationally expensive. To reduce this computation
+    overhead, a 10-fold cross-validation can be used. Note that cross-validation gives
+    a more optimistic estimate of the prediction ability of the model than the train-and-test
+    method because the training and test set are not independent.
+
+
+    Overfitting can be minimized by increasing the size of the data set, reducing
+    the number of descriptors a priori, reducing the model complexity with the same
+    number of descriptors, or by adding regularization terms to remove the descriptors
+    of low relevance to the property being modeled.
+
+
+    The primary steps in constructing ML models to solve the electro/photocatalysis
+    problems have been summarized. We stress that data quality plays a key role in
+    ML model construction. Therefore, data reliability must be carefully evaluated,
+    especially when the data are from different sources. This requires close collaboration
+    among data scientists, catalyst scientists, and materials scientists to build
+    a standard format for electro/photocatalysis data recording. Featurization ensures
+    the number of descriptors is just sufficient for describing the input data, as
+    excessive features may result in model overfitting. Despite a variety of descriptors
+    being developed, the measurement of some descriptors (such as d-band center and
+    intermediate adsorption free energy), is very difficult in catalytic reactions,
+    thus simple and accessible descriptors with interpretable feature–property relationships
+    are preferred. ML model selection depends on the problems to be solved and data
+    structure. In other words, the quality, quantity and diversity of training data,
+    as well as the relevance of descriptors determine which ML model to be used. Model
+    predictivity and transparency should be balanced, and model predictivity must
+    be evaluated before used. Models with good interpretability are'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# 3. APPLICATION OF MACHINE LEARNING TO ELECTROCATALYSTS AND PHOTOCATALYSTS
+
+
+    # 3.1. Electrolysis
+
+
+    # 3.1.1. Intermetallics.
+
+
+    recommended in the investigation of electro/photocatalysis science, as they can
+    accelerate catalyst discovery, simulate catalytic mechanisms over larger time
+    scale, enhance characterization, and illustrate underlying structure–property
+    relationships.
+
+
+    Electrochemical reactions involve two half reactions occurring at the anode (e.g.,
+    OER) and cathode (e.g., HER, the oxygen reduction reaction (ORR), carbon dioxide
+    reduction, nitrogen reduction), respectively, powered by electrons.5,6 Active
+    catalysts are required to improve the efficiency and minimize the overpotential
+    in these reactions. Among these reactions, the HER and ORR are widely applied
+    in the production of clean energy. The HER is a typical example of a two-electron
+    transfer reaction, and the hydrogen adsorption free energy ΔG_H is key for determining
+    activity. The ORR involves a four-electron transfer to reduce oxygen to water,
+    or a two-electron and two-proton pathway to form hydrogen peroxide. Active electrocatalysts
+    for these reactions possess a ΔG_H close to zero, while having moderate binding
+    energies for the reaction intermediates (H*, OH*, O*, etc.). Platinum is the best
+    performing electrocatalyst for the HER and ORR because of its thermoneutral ΔG_H.
+    However, Ooka et al. reported that thermoneutrality did not yield maximum electrocatalytic
+    activity.289 They fitted a microkinetic rate equation to the experimental results
+    via a genetic algorithm and found that the binding energy of H on a polycrystalline
+    Pt surface of 0.094 eV, gave maximum catalytic activity. They proposed that a
+    positive ΔG_H was preferred in the HER because of the electrical driving force
+    in this reaction. Despite the high activity, the scarcity and high cost of Pt
+    limit its commercial use. More catalysts,
+
+
+    including Pt-free intermetallics, oxides, single-atom catalysts, chalcogenides,
+    and MXenes, have been developed to replace Pt.
+
+
+    ![](img/385acff8214d70e1094d2d47342cdb40_14_0.png)
+
+
+    Figure 8. Schematic of the DNN architecture to predict elements from crystallographic
+    sites. The numbers correspond to the dimensionality of each layer. Reprinted with
+    permission from ref 126. Copyright 2018, American Chemical Society.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '![](img/385acff8214d70e1094d2d47342cdb40_15_0.png)
+
+
+    **Figure 9.** (a) Schematic of workflow for automating catalyst discovery. The
+    experimental workflow for searching catalysts (I) is accelerated by a DFT workflow
+    for screening the catalysts *ab initio* (II). (III) Scientific intuition is required
+    to select candidates for DFT screenings in conventional workflows. (IV) Workflow
+    uses ML to select candidates systematically and automatically. (b) Normalized
+    distribution of the low-coverage, DFT-calculated CO adsorption energies of all
+    the DFT-analyzed surfaces. The orange bars show the subdistribution for copper.
+    Dashed lines indicate the 0.1 eV range around the optimal ΔE<sub>CO</sub> value
+    of −0.67 eV. (c) Normalized distribution of low coverage ΔE<sub>H</sub> values
+    calculated by DFT workflow. Dashed lines indicate the 0.1 eV range around the
+    optimal ΔE<sub>H</sub> value of −0.27 eV. Reprinted with permission from ref 129.
+    Copyright 2018, Springer Nature.
+
+
+    prediction of the activities of intermetallics, Ma et al. used a DNN to predict
+    the CO adsorption energy, the primary metric for catalyst activity in the electrochemical
+    reduction of CO<sub>2</sub>. They used the {100}-terminated Cu intermetallic system.
+    To describe the features of members of this system, they used the d-band parameters
+    of the metal sites as primary descriptors, and physical constants for the host
+    metal (spatial extent of metal d-orbitals, square of the adsorbate–metal interatomic
+    d coupling matrix element, work function, atomic radius, ionization potential,
+    electron affinity, and Pauling electronegativity) as secondary descriptors. The
+    DNN model was trained to predict the CO adsorption energy. The RMSE of the model
+    predictions compared to DFT calculations was 0.13 eV, indicating that the ML model
+    was accurate enough to identify active {100}-terminated Cu intermetallics in CO<sub>2</sub>
+    electroreduction. This model was then extended to {111}-terminated bimetallics
+    to predict the adsorption energy of CO and OH,
+
+
+    closely related to methanol electro-oxidation, the major oxidation reaction in
+    a methanol fuel cell. This model was trained on the alloy data set with eight
+    types of surface, and was subsequently used to predict the CO and OH adsorption
+    energy on six new prototypes of bimetallic nanoalloys. Again, this model successfully
+    identified most of the known bimetallic catalysts for methanol electro-oxidation
+    and provided some insight into electronic structure–activity relationships. The
+    d-band filling had a larger influence on the adsorption of CO than OH, probably
+    because of the unoccupied 2π* molecular orbitals in the CO adsorbates that were
+    immediately above the Fermi level for hybridization. The sp-band properties affected
+    the OH adsorbates more than the CO adsorbates because of Pauli repulsion between
+    the interacting nonorthogonal orbitals. Accordingly, it was suggested that some
+    3d metals could be doped into the bimetallics to reduce the overpotentials. Toyao
+    et al. employed an extreme randomized trees model to study'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '![](img/385acff8214d70e1094d2d47342cdb40_16_0.png)
+
+
+    **Figure 10.** (a) Schematic of the NN model for the adsorption energy of OH*
+    on IrPdPtRhRu. (b) Structure corresponding to Figure 10a, where the active site
+    and its nearest neighbors are labeled. (c) DFT calculated adsorption energies
+    versus NN model predicted adsorption energies. Reprinted with permission from
+    ref 310. Copyright 2020, Cell Press.
+
+
+    the catalytic activity of {111}-terminated Cu bimetallics in the CH₄ formation
+    from CO₂ and H₂.³⁰¹ Twelve simple physical descriptors from the periodic table
+    and handbooks of chemistry and physics were used to train a model that predicted
+    the adsorption energies of CH₃, CH₂, CH, C, and H on Cu-based alloys. Interestingly,
+    the adsorption energies of the CH₄-related species were mainly influenced by the
+    periodic table group, surface energies, and melting points of the doped metals.
+    The level of prediction accuracy achieved suggested that this model would be useful
+    for fast screening of large libraries of bimetallic materials for CH₄ conversion.
+
+
+    Haider et al. examined the effects of A₃B bimetallics and copper-based single-atom
+    alloys on ethanol decomposition and the nonoxidative dehydrogenation reaction
+    using a GBR model.¹²⁷ The model was trained on 151 A₃B bimetallic alloys using
+    27 descriptors that included physical properties of both the metals in the alloy,
+    and predicted the oxygen and carbon binding energies. It was observed that in
+    the AA terminated A₃B alloys, the surface energy of dopant B was the most important
+    descriptor, followed by ionization energy, electronegativity, density, and heat
+    of fusion of the dopant. In AB terminated intermetallics, the surface energies
+    of both the dopant B and the matrix A had very similar importance. Although further
+    studies were necessary to illustrate the dynamics of adsorption on AA terminated
+    and AB terminated A₃B alloys, it was rationalized that surface energy, ionization
+    energy, and electronegativity were most important for binding to transition metal
+    surfaces. Surface energy is related to the
+
+
+    activity at the surface, and ionization energy and electronegativity are indicative
+    of electron transfer between the surface metal atoms and the adsorbates. For copper-based
+    single-atom alloys, 12 descriptors were used to capture relevant properties. The
+    periodic table single-atom group was also important in predicting the oxygen binding
+    energy.
+
+
+    A challenge with using ML models for intermetallics is that their structures present
+    many facets and termination sites, giving many adsorption models. Model simplifications
+    in which only a few facets (e.g., {111} and {100}) and terminations are considered
+    bias conclusions on the activity of the intermetallic catalysts. To address this
+    issue, ML was used to extend local information from DFT to fully span the intermetallic
+    surface. Ulissi et al. reported a ML approach that accounted for all active sites
+    on the Ni–Ga bimetallics used for CO₂ reduction.¹²⁸ Instead of restricting the
+    reaction to a few exposed facets, they used a geometric fingerprint to represent
+    the local region around each atom. A NN model was trained on thousands of surface
+    atoms labeled by DFT-calculated CO adsorption energies, allowing the CO adsorption
+    energy for each atom to be predicted according to its local environment. The model
+    discovered a new type of active site: active Ni atoms surrounded by surface Ga
+    atoms. This work was extended by Tran et al. using an active learning algorithm
+    to screen a space of 1499 intermetallic combinations of 31 different elements
+    for CO₂ reduction and H₂ evolution.¹²⁹ All surfaces with adsorption sites were
+    encompassed by this space (Figure 9). Intermetallic adsorption sites were described
+    by a'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '![](img/385acff8214d70e1094d2d47342cdb40_19_0.png)
+
+
+    Figure 12. Schematic ML strategy to interpret the EXAFS. (a) Building data set
+    from MD-EXAFS calculation. (b) Structure of the NN model. (c) Prediction of local
+    structural proportion from the experimental EXAFS measurement. Reprinted with
+    permission from ref 136. Copyright 2021, Wiley-VCH Verlag GmbH & Co. KGaA, Weinheim.
+
+
+    metal atoms can be anchored to metal oxides, metals, graphene, and porous materials
+    such as metal–organic frameworks and zeolites. Many SACs have high reactivity
+    and selectivity in the HER and OER. ML has been applied to accelerate the development
+    of SACs and to elucidate feature–activity relationships in conjunction with DFT
+    calculations.323
+
+
+    To develop novel and efficient SACs for the HER, Fung et al. used SISSO methods
+    to study the transition metal SACs in N-doped graphene and to select the most
+    relevant descriptors for ΔG_H.134 Covalent radius, d-state centers, electronegativity,
+    the number of occupied d states, and Bader charge were identified as relevant.
+    This knowledge was used to design improved HER catalysts by modifying the graphene
+    supports. Sun et al. investigated the HER processes in graphdyine-based SACs by
+    combining DFT and ML.135 Simple atomic descriptors, active sites, and redox energy
+    barriers were employed as features to predict ΔG_H via a tree-based bagging algorithm.
+    As the ML predictions were highly consistent with DFT calculations, fast screening
+    of HER catalyst candidates for experimental synthesis via ML techniques was feasible.
+    To fully understand the relationship between SAC structure and catalytic activity,
+    and to realize the potential of SACs, synchrotron spectroscopy was used to examine
+    the SACs structure and its relationship to activity. Liu et al. developed a NN-based
+    model to extract structural information for Co SACs in N-doped graphene from the
+    experimental EXAFS (Figure 12).136 The most active material consisted of 13.64%
+    Co atoms located at the armchair sites and 20.86% Co atoms at the zigzag sites
+    of graphene, consistent with DFT calculations. This revealed that edge sites (armchair
+    and zigzag) were responsible for the HER activity of Co SACs. As this Co SAC had
+    the highest HER performance of all reported transition metal SACs, with better
+    HER performance at high current density than commercial Pt/C, more Co-based high-efficiency
+    SACs may be accessible by manipulating the location of Co atoms in graphene.
+
+
+    SACs also play crucial roles in the ORR and OER. Lin et al. investigated the connection
+    between electronic and atomic descriptors of SACs in N-doped graphene and their
+    limiting potentials toward the HER/ORR/OER.137 Limiting potential is the potential
+    at which electrochemical reactions commence, which is the most straightforward
+    standard to assess the activity of electrocatalysts. Random forest models for
+    the ORR, OER, and HER were trained on 104 graphene-supported SACs whose limiting
+    potentials were calculated by DFT. The agreement with DFT calculations, and were
+    used to discover additional SACs, Ir@pyridine-N3C1, Ir@pyridine-N2C2, and one
+    HER SAC, Ni@pyridine-N3C1. These novel SACs were predicted to have better activity
+    than commonly used catalysts. Niu et al. built a GBR model to capture the relationship
+    between ORR/OER activity and structural and atomic features of transition metal
+    SACs in g-C3N4.138 Two important features, the first ionization energy and charge
+    transfer of transition metal atoms, were identified that elucidated the properties
+    of SACs. In addition to SAC screening, ML methods are robust for synthesis optimization.
+    Karim et al. synthesized 36 Fe SACs in zeolites by manipulating the experimental
+    parameters.139 GBR was employed to construct a ML model to link synthesis conditions
+    with ORR activity and, accordingly, the best synthesis conditions were found.
+    A Fe SAC with a significant increase in ORR activity compared to the original
+    data was obtained.
+
+
+    potentials toward the HER/ORR/OER.137 Limiting potential is the potential at which
+    electrochemical reactions commence, which is the most straightforward standard
+    to assess the activity of electrocatalysts. Random forest models for the ORR,
+    OER, and HER were trained on 104 graphene-supported SACs whose limiting potentials
+    were calculated by DFT. The agreement with DFT calculations, and were used to
+    discover additional SACs, Ir@pyridine-N3C1, Ir@pyridine-N2C2, and one HER SAC,
+    Ni@pyridine-N3C1. These novel SACs were predicted to have better activity than
+    commonly used catalysts. Niu et al. built a GBR model to capture the relationship
+    between ORR/OER activity and structural and atomic features of transition metal
+    SACs in g-C3N4.138 Two important features, the first ionization energy and charge
+    transfer of transition metal atoms, were identified that elucidated the properties
+    of SACs. In addition to SAC screening, ML methods are robust for synthesis optimization.
+    Karim et al. synthesized 36 Fe SACs in zeolites by manipulating the experimental
+    parameters.139 GBR was employed to construct a ML model to link synthesis conditions
+    with ORR activity and, accordingly, the best synthesis conditions were found.
+    A Fe SAC with a significant increase in ORR activity compared to the original
+    data was obtained.
+
+
+    The formation of ammonia from nitrogen reduction is thermodynamically unfavorable,
+    because the high thermodynamic barrier for cleaving the N–N triple bond energy
+    (940.95 kJ mol−1) must be overcome.5 Although electrocatalytic nitrogen reduction
+    is a promising approach to break the N–N triple bond, it is a complex system involving
+    six-electron transfers, and it is difficult for DFT to identify all intermediates
+    and suggest catalysts with high selectivity for this reaction. Therefore, ML techniques
+    can elucidate the reaction mechanism, reveal a feature–activity relationship,
+    and screen catalysts based on electrocatalyst data sets. Zarafi et al. used a
+    DNN model to predict the N2 adsorption energy and the hydrogenation energies of
+    transition metal SACs in B-doped graphene.140 It was found that N2 to N2H, and
+    accordingly, three'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '![](img/385acff8214d70e1094d2d47342cdb40_20_0.png)
+
+
+    **Figure 13.** Schematic 2D MXene ordered binary alloy HER catalytic material
+    discovery. Reprinted with permission from ref 142. Copyright 2020, Royal Society
+    of Chemistry.
+
+
+    catalysts with low predicted hydrogenation energies were selected. These catalysts
+    were further demonstrated to be more selective for nitrogen reduction than the
+    HER. This study indicated that ML had great potential for screening catalysts
+    for nitrogen reduction.
+
+
+    # 3.1.4. Other Electrocatalysts.
+
+
+    2D materials possess large surface area–volume ratios and superior catalytic properties
+    that make them useful for energy storage and conversion. Transition metal dichalcogenides
+    (TMDCS) are typical 2D materials used as HER catalysts because of their excellent
+    electron transfer efficiency.⁹⁰ Ge et al. studied the electrocatalytic performance
+    of the heterojunction of two single-layer MX₂ (M = Mo and W; X = S, Se, Te).¹⁴¹
+    LASSO was employed to train ML models with rotational angle, bond length, distance
+    between layers, and the ratio of the bandgaps of two MX₂ as descriptors and HER/OER
+    overpotentials as targets. According to the model, a MoTe₂/WTe₂ heterojunction
+    with a rotation of 300° was identified as the best electrocatalyst for the HER
+    in this system.
+
+
+    MXenes are another type of 2D material.³²⁴ They conform to the general formula
+    Mₙ₊₁Xₙ, where M is an element from group IIIB to VIB, X is C or N, and n is typically
+    1–3. Because of their abundant surface charges, surface functionalization is facile
+    for MXenes. An almost infinite number of MXenes can be generated by combining
+    transition metals, carbon/nitrogen atoms, and a large variety of surface functional
+    groups. This provides a rich palette of potential new materials for optical, electronic,
+    catalytic, and energy applications. ML methods are essential to explore this vast
+    materials landscape. Wang et al. used a series of ML algorithms to map the intrinsic
+    features of 2D MXene ordered binary alloys to their hydrogen adsorption energy
+    (Figure 13).¹⁴² An Adaboost model showed that the HER performance could be predicted
+    by five descriptors: the bond length of oxygen and surface metal atoms, the distance
+    between the nearest neighbor O atoms, the ionization energy difference and the
+    average affinity energy of the alloy elements, and the valence electrons of X.
+    Zheng et al. used a RF model to screen 299 MXenes and identified a set of Os₂B-
+    and S-terminated materials as potential HER catalysts in which the S-
+
+
+    functional groups are critical for HER performance.³²⁵ These results showed the
+    promise of ensemble learning for discovering highly efficient MXene catalysts.
+
+
+    When element X in MXenes is replaced by boron, a different type of 2D material,
+    MBenes, is generated. Experiments and theoretical computations found that M₂B₁-
+    and M₂B₂-type MBenes are promising catalysts in the HER because of their metallic
+    electrical conductivity. To efficiently identify useful MBenes as HER catalysts,
+    Sun et al. first built a data set of 110 pristine MBenes and 70 single-atom-doped
+    MBenes and used the DFT-calculated ΔG_H as the model target.¹⁴³ Easily accessible
+    descriptors (elemental descriptors, structural energies, and lattice parameters)
+    were used to describe the compounds, and four ML algorithms (LASSO, KRR, SVR,
+    and RF) were used to train models. The LASSO regression showed that Bader charge
+    transfer of the surface metal was the most important descriptor affecting ΔG_H,
+    while the d-band center of the surface metal was also important. The SVR had the
+    best performance, and Co₂B₂ and Mn-doped Co₂B₂ MBenes were discovered with predicted
+    superior HER catalyst performance.
+
+
+    # 3.2. Photocatalysis
+
+
+    Photocatalysis converts solar energy into chemical energy.³²⁶ Useful applications
+    include photocatalytic water splitting, water pollutant degradation, and CO₂ reduction.⁸,⁹,³²⁶–³²⁸
+    In contrast to electrochemical reactions, photochemical reactions are driven by
+    photons. The photocatalyst absorbs photons with an energy greater than the bandgap
+    of the photocatalyst; electron–hole pairs are generated as electrons move to the
+    conduction band (CB), leaving holes in the valence band (VB). These photogenerated
+    electrons and holes will then either recombine or move through the photocatalyst
+    to the surface. Once at the surface they can initiate redox reactions, provided
+    the band energies of the photocatalyst are well matched to the reactants. For
+    example, the electrons and holes can trigger the H⁺ reduction (hydrogen evolution)
+    and H₂O oxidation (oxygen evolution), respectively, or generate radicals (e.g.,
+    •OH, O₂•−) to oxidize organic pollutants.⁹,³²⁶,³²⁷ Photocatalysts are promising
+    materials for generating sustain-'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '![](img/385acff8214d70e1094d2d47342cdb40_21_0.png)
+
+
+    Figure 14. (a) Properties used to train the GBR model. (b) Experimentally observed
+    HER vs HER predicted using a GBR model. (c) Structures of previously reported
+    polymer photocatalysts (P7 and P10) and the best-performing polymer photocatalysts
+    predicted by the ML model (P64 and P62). (d) UV–vis spectra of P7, P10, P62, and
+    P64. (e) H2 evolution rates of P7, P10, P62, and P64. Reprinted with permission
+    from ref 144. Copyright 2019, American Chemical Society.
+
+
+    able fuels from solar energy, mitigating increases in greenhouse gases, and purifying
+    polluted water. Those with high efficiency, low cost, and chemical stability are
+    in high demand. ML methods have been used to explore large potential photocatalyst
+    spaces, particularly with regard to the specificity of photocatalytic reactions
+    and the complexity of reaction kinetics and thermodynamics. They aim to accelerate
+    photocatalyst screening and optimization of photocatalytic reaction parameters
+    and promise considerable cost reduction for catalyst design and discovery.52,329,330
+
+
+
+
+    Water splitting is one of the most important applications of photocatalysis. Although
+    most photocatalysts are inorganic, certain organics have shown photocatalytic
+    activity. Among the 100 million unique chemical compounds documented in the PubChem
+    database, a special subset, the conjugated polymers, have attracted considerable
+    attention.331 Conjugated polymers contain π-conjugated backbones, ionic-functionalized
+    alkyl side chains, and counterions. The π-electrons in the backbone enhance charge
+    transfer and endow these polymers with excellent optical properties, while the
+    ionic functionality enables them to disperse into polar solvents, such as water.
+    Therefore, a range of conjugated polymers have emerged as photocatalysts,332–334
+    but how the structural components (backbone, side chain, ionic group, and counterions)
+    of these polymers affect the photocatalytic properties is still unclear. To study
+    the structure–property relationship and help design better photocatalysts, Zwijnenburg
+    et al. used a GBR model to search 6354 conjugated copolymers to identify new photocatalysts
+    with high sacrificial hydrogen evolution rates (Figure 14).144 The copolymers
+    were generated by linking 706 dibromo monomers with 9 diboronic acids or esters.
+    The training set of copolymers was generated from 127 dibromes coupled with dibenzo[b,d]thiophene
+    sulfone characterized for their water-splitting capacities. Each copolymer was
+    encoded by four descriptors: LUMO; electron affinity (EA, approximated by the
+    energy of the LUMO); ionization potential (IP, approximated by the energy of the
+    HOMO); optical bandgap; and transmittance (a measure of how well the polymer disperses
+    in the reaction medium). The study found that active catalysts required a combination
+    of negative electron affinities, more positive ionization energies, larger bandgaps,
+    and solvent dispersibility. Wan et al. used a RF algorithm to study the bandgap,
+    HOMO, and LUMO of 1296 anionic conjugated polymers, as these properties are important
+    for photocatalytic activity.145 They deduced that the frontier orbitals of the
+    donor and acceptor components in the backbone play critical roles in determining
+    the bandgap and the position of the frontier orbitals of these polymers. Rational
+    criteria therefore could be proposed for the photocatalyst design. Li et al. probed
+    the relationship between polymer structure and HER activity using ML techniques.166
+    Using k-means clustering they found that most polymers with high polymers shared
+    a common structural feature, the presence of at least one aryl carbonyl moiety.
+    However, the photocatalytic activity of polymers possessing this moiety may differ.
+    Additional structure–property relationships were discovered using a series of
+    supervised learning methods, and exciton electron affinity, electron affinity,
+    exciton binding energy, optical gap, and singlet–triplet energy gap were identified
+    as the most relevant features. These ML models are potentially useful for fast
+    screening of photocatalysts.
+
+
+
+
+    TiO2 is one of the most widely used photocatalysts because of its abundance, chemical
+    stability, and high photocatalytic activity.8 Understanding the mechanism by which
+    water molecules dissociate on a TiO2 surface is of critical importance for TiO2-based
+    photocatalysts design. Selloni et al. studied this process using a ML-assisted
+    molecular dynamics simulation.335 Instead of conventional DFT calculations, a
+    DNN model was built to predict the atomic energy for the bulk anatase TiO2, bulk
+    water, and the anatase {101}–water interface. DFT-calculated properties of small
+    clusters of atoms in these three systems were used to train a DNN model. This
+    model predicted the atomic energy of several other atoms in these clusters. The'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '![](img/385acff8214d70e1094d2d47342cdb40_22_0.png)
+
+
+    **Figure 15.** Predicted versus (a) actual hydrogen production and (b) actual
+    bandgap for RF model for visible light data (left) training (right) testing. Reprinted
+    with permission from ref 338. Copyright 2019, Elsevier.
+
+
+    predicted atomic energies were included in the molecular dynamics model, from
+    which atoms with the largest maximum deviation of atomic forces were recalculated
+    by DFT, and the DNN model was updated with these new data. This active learning
+    process was repeated until the mean absolute deviation of atomic forces in a 100
+    ps simulation was below a given threshold, hence reducing the computational cost
+    and allowing the simulation to extend from 40 ps (DFT calculation) to 2.5 ns.
+    The dominant molecular adsorption mechanism on a defect-free anatase {101}–water
+    interface was elucidated under ambient conditions. Detailed mechanisms of proton
+    transfer at the interface, free energy barriers, and hydroxyl lifetimes were also
+    estimated. A deeper understanding of the dynamics of water dissociation on a TiO₂
+    surface generated by this approach will assist the synthesis of improved TiO₂-based
+    photocatalysts. In addition to water dissociation efficiency, light absorption
+    efficiency is another key metric for photocatalysts. Zhang et al. clarified the
+    correlation between the bandgap of doped TiO₂ and lattice parameters and surface
+    area using a ML approach. As these structural and morphological parameters were
+    highly correlated with bandgap, the reported ML model could be used to guide the
+
+
+    synthesis of doped and undoped TiO₂ with tunable bandgaps. When used for photocatalytic
+    water splitting, experimental parameters can also have pivotal effects on the
+    hydrogen evolution rate. Thus, Iliuta et al. optimized the parameters of hydrogen
+    evolution of TiO₂ photocatalysts in glycerol solution by a NN model and a genetic
+    algorithm.³³⁶ Here, 321 μmol of H₂ was obtained from the photocatalytic reaction
+    in 4 h under the optimal conditions suggested by the NN model.
+
+
+    Oxide perovskites are also effective photocatalysts.¹⁰,³²⁸ Their structure-dependent
+    optical and electronic properties suggest that the photocatalytic activity of
+    perovskites can be readily tailored. For example, it is well-documented that anion
+    doping, forming oxynitrides or oxysulfides, can significantly reduce their bandgap
+    and improve the light absorption efficiency.⁸ However, anion doping also increases
+    the structural complexity of oxide perovskites, making the prediction of physical
+    properties via conventional quantum chemical calculations intractable. Therefore,
+    ML was used to accelerate DFT calculations. Kaneko et al. studied the anion ordering
+    in BaNbO₂N by modeling DFT calculation results with ridge regression.³³⁷ The ML
+    model reproduced the local anion ordering generated by DFT calculations with high
+    fidelity and'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: 'identified that, in the most stable supercells, each Nb atom bound to two N
+    atoms and all Nb–N chains were in a cis-conformation. This model described anion
+    ordering in a larger supercell, and enabled prediction of many important electronic
+    properties, such as bandgap.
+
+
+    Surprisingly, few ML modeling studies of perovskite photocatalyst design have
+    been reported in the literature. One limitation is the paucity of experimental
+    or computational data available for model training. Thus, most models are generated
+    from limited training data and may be prone to overfitting and have small domains
+    of applicability. Another limitation is the lack of unified standards for characterizing
+    photocatalysts in different laboratories. Yildirim et al. data-mined 540 case
+    studies from 151 published papers on photocatalytic water splitting by oxide perovskites.
+    They found that SrTiO₃ was the most frequently studied titanate; about half of
+    the perovskites are doped at the A-site. Sol–gel was the most popular synthesis
+    method, and 80% of the studies contained cocatalysts. The data mining further
+    indicated that hydrogen production was affected by multiple factors, in accordance
+    with the previous results from ML models. RF models were trained on these data
+    to predict the H₂ evolution rate and bandgap, giving modest but acceptable accuracy
+    (Figure 15). Tao et al. used ML models to screen perovskites with visible light
+    activity. A GBR model for bandgap prediction was trained on 124 reported perovskites,
+    and a NN model for hydrogen evolution rate prediction was trained on 76 reported
+    perovskites. These models were used to screen a material space of >30 000 perovskites
+    with unknown properties. Fourteen oxide perovskites with a bandgap in the range
+    2.2–2.4 eV and high hydrogen evolution rate were identified. However, the domain
+    of applicability of these models was limited by the small size of the training
+    set. To develop more accurate ML models, there is an urgent need to standardize
+    semiconductor photocatalysis measurements, and the research community should validate
+    experimental results through collaboration, thus making more data available in
+    the literature that can be used to train improved perovskite ML models.
+
+
+    # 3.2.3. Photocatalytic Oxides for Pollutant Degradation.
+
+
+    ML approaches have also been used to study the kinetics of photocatalytic pollutant
+    degradation and to optimize the parameters for product synthesis and photocatalytic
+    reactions. Jiang et al. trained a NN model to decode the factors affecting the
+    degradation of 78 organic pollutants by a TiO₂ photocatalyst. The ultraviolet
+    intensity, TiO₂ dosage, the concentration of organic pollutants in water, pH value
+    and temperature, and the structure of organics (described by molecular fingerprint)
+    were used to train the model, using 446 data points from the literature. They
+    concluded that the structure of organic pollutants had the primary influence on
+    degradation rate. Fathinia et al. studied the photocatalytic degradation of phenazopyridine
+    hydrochloride by TiO₂ using a NN model. Experimental parameters were used as descriptors,
+    and the model was trained, validated, and tested on data sets of 128, 28, and
+    28 samples, respectively. A NN model with one hidden layer (5-14-1) was trained
+    to predict the removal efficiency of phenazopyridine hydrochloride. The prediction
+    accuracy of the model was high, similar to that of a kinetic model, suggesting
+    that the reaction mechanism used in the kinetic model was correct. However, this
+    model may be overtrained as the number of weights (84) is close to the number
+    of data points. With the help of ML, Pellegrino et al. studied the effects of
+    experimental parameters on TiO₂
+
+
+    nanoparticle sizes and aspect ratio in hydrothermal synthesis. According to the
+    NN models, the length and the aspect ratio of the TiO₂ particles could be precisely
+    controlled in the range from 20 to 140 nm and 1.4 to 6, respectively. Yang et
+    al. also attempted to use NN to build models for the photocatalytic performance
+    of TiO₂ nanoparticles, but their results may also be overfitted as the training
+    set was very small. Such ML approaches may be extended to the design and analysis
+    of more complex systems, such as ZnO, CuO, Fe₂O₃, CoBi₂O₄, and some high entropy
+    oxides. ML techniques are also used to study the photodegradation of doped oxides.
+    In a study of the photocatalytic degradation of methylene blue by the N,S-codoped
+    Fe₂O₃, a genetic algorithm was used to find optimal initial weights and biases
+    for a NN model. The study identified the importance of the amount of nanoparticles,
+    concentration of dye, pH value, and the incident light wavelength on dye removal
+    efficiency. Gao et al. used a NN-based active learning approach to screen the
+    most active C/N-doped (001) TiO₂ for pollutant degradation. In this synthesis,
+    titanium carbide and titanium nitride served as the Ti, C, and N sources and hydrogen
+    fluoride (HF) was the capping agent. The first NN model was built to link the
+    synthesis parameters to photocatalytic performance based on the results of the
+    experiments in the first round. Experiments were then carried out according to
+    the best synthesis parameters given by the model, and the experimental photocatalytic
+    activities of the pristine TiO₂ were added into the training set for the second
+    NN model. This process was repeated until all the experimental results were accommodated
+    by the model. Consequently, optimized C/N-doped TiO₂ was synthesized that showed
+    good degradation performance toward three organic pollutants.
+
+
+    As well as catalysts composed of one metal oxide, ML methods are also useful for
+    modeling and predicting the performance of catalysts containing two or more oxides.
+    The formation of a heterojunction can potentially extend the electron–hole pair
+    lifetime and modify the charge transfer during the reactions. Badiei et al. reported
+    a NN modeling approach to study the reaction rate constant of the photocatalytic
+    degradation of acid fuchsin by a TiO₂/NiO heterojunction with various ions mixed
+    in the reaction solution. The NN model successfully ranked the effect of the ions
+    on the reaction rate constant, recapitulating experimental results. Thus, this
+    model can guide the optimization of experimental conditions in photocatalytic
+    pollutant degradation. Kassahun et al. employed NN models to optimize the synthesis
+    conditions of the N-doped TiO₂/SiO₂ heterojunction to get an optimum ciprofloxacin
+    degradation efficiency under visible light. Similar NN approaches were extended
+    to other systems such as S-doped g-C₃N₄/ZnO, g-C₃N₄/Ce-doped ZnO/Ti, and a CdS/g-C₃N₄/Fe₂O₄
+    Z-scheme system. These studies showed that NNs had considerable promise for optimization
+    of the synthesis of photocatalysts containing two materials, but that some of
+    these models might be overfitted as the training sets were small.
+
+
+    We have summarized the applications of ML techniques to electro/photocatalysis.
+    ML techniques have been useful in leveraging expensive DFT calculations and for
+    material screening, revealing feature–property relationships, and optimizing experimental
+    parameters. SVM, NN, RF, and gradient boosting models appear to be the most frequently
+    used models in electro/photocatalysis research; however, there'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'number of descriptors (via down-selecting or dimension reduction), expanding
+    the training set, regularization, or including physical prior knowledge is effective.
+    As a useful rule, overfitting is likely to be avoided when the model variables
+    number is less than half of the number of the training data. In section 2.4, common
+    methods of overfitting control were summarized. Cross-validation is effective
+    for small data sets, while validating model predictivity by an independent test
+    set is the most reliable method. In addition, it is essential to be aware of the
+    domain of applicability of models when using them to screen for new materials
+    in unknown material space. The further outside the model domain, the higher the
+    prediction uncertainty and lower prediction confidence. Some dimension reduction
+    techniques, such as t-SNE and UMAP can be used to illustrate the domain of applicability
+    of models. Applying Bayesian regularization to NNs, in which the weights are replaced
+    by the distribution of weights, can also estimate the uncertainties of model predictions.
+
+
+    Models may sometimes have good performance for most data but perform poorly on
+    a small number of materials (outliers). It is unwise to exclude outliers without
+    careful analysis. In some cases, outliers may be the result of experimental error,
+    identifiable when relevant measurements are repeated. Outliers may also be the
+    result of features that have low occurrences in the training data. Therefore,
+    the structure of the outliers, the descriptors, and the model parameters must
+    be carefully analyzed, as useful information may be extracted therefrom.
+
+
+    # 4.3. Challenges and Opportunities of Machine Learning in Electro/Photocatalytic
+    Applications
+
+
+    Although significant progress has been made in the application of ML to automated
+    discovery and development of electrocatalysts and photocatalysts, numerous challenges
+    remain. First, the construction of accurate and broadly applicable ML models relies
+    on large, high-quality data sets, but acquiring these data sets can be difficult
+    or expensive. Published data from the literature could be an important data source
+    for ML model construction. However, catalytic reactions are not only strongly
+    dependent on experimental parameters such as temperature, concentration, pressure,
+    and flow rate but are also sensitive to other conditions that might be overlooked
+    (e.g., shape of reactor, stirring speed). This can render different published
+    results incomparable. More rigorous recording of all relevant metadata in experiments
+    will overcome this issue as will the use of positive control materials in experiments.
+    The reliability of the published data is another issue. For example, while sacrificial
+    reagents are widely used in photocatalytic water splitting to capture holes and
+    thus improve the hydrogen generation rate, it was found that hydrogen could be
+    generated from sacrificial reagent oxidation. Das et al. revealed that some solvents
+    are extremely sensitive to UV light, degrading into CO, CH4, and C2H4, causing
+    biased results in photocatalytic CO2 reduction. Even under identical conditions,
+    some experimental results are difficult to repeat by other laboratories. Such,
+    critical analysis of the published data by catalyst experts prior to adding them
+    to training sets is important. In addition, ML models can be biased because only
+    successful results tend to be reported, while low performing or inactive materials
+    also provide useful information to ML models. Instead of using published data,
+    widespread adoption of high throughput synthesis and characterization methods
+    should alleviate these issues in the future. Also, collaborations
+
+
+    Second, despite some successful structure–electro/photo- catalytic reactions by
+    ML modeling are rarely performed. We exemplified this using a ML-molecular dynamic
+    study of PCET on an ultrafast time frame. However the application of ML to the
+    investigation of other important kinetic processes, such as single or multielectron
+    oxidation/reduction, charge transfer between solid–solid or solid–liquid interfaces,
+    separation, and recombination of carriers, is still rare. This is probably because
+    of the difficulty of probing the excited state of the molecules via computation
+    and experiments, resulting in insufficient data for ML model training. Recently,
+    some cutting edge experimental technologies, such as Kelvin probe force microscopy,
+    femtosecond resolved transient absorption spectroscopy, and time-resolved transient
+    photoluminescence, have been developed to study carrier mobility. Time-dependent
+    DFT has been used to study the dynamics of electrons at excited states in photocatalysts,
+    and ML techniques have found a role in accelerating and increasing the accuracy
+    of the time-dependent DFT calculation. It is expected that ML will contribute
+    further to the electro/photocatalytic mechanisms when it is combined with the
+    in situ investigation data and molecular dynamic simulations.
+
+
+    Third, experimental or first-principles computational data will continue to be
+    scarce, it is important to develop techniques for generating reliable ML models
+    from smaller data sets. Cutting-edge solutions, such as reinforcement, active,
+    and transfer learning, have been developed to address the learning problem with
+    limited data. More recently, meta learning is proposed to be another promising
+    solution to the issues of small data sets. Meta learning generates models that
+    can adapt and generalize to new tasks and new environments through the learning
+    experiences from other models. In other words, a meta learning model will first
+    learn relationships from the other relevant models trained on large data sets,
+    and use this prior knowledge to solve the problems on smaller data sets. As an
+    example, stacking-based meta learning have been used to learn the predictions
+    from various base models, on which accurate models are constructed to predict
+    the bandgap and hydrogen evolution activity of oxide photocatalysts with a wide
+    range of structures. Transformational ML is another meta learning algorithm promising
+    to be the solution of small data set. Unlike stacking that learns knowledge from
+    multiple base models, transformational ML extracts knowledge across a set of related
+    tasks. Currently, transformational ML is robust in drug discovery, and we expect
+    that it will find its application in electro/photocatalytic development (e.g.,
+    a mapping of structure to catalytic activities for different molecules). It is
+    anticipated that meta learning can accelerate the research of electro/photocatalytic
+    materials with insufficient data. Ultimately, there is a limit to how much information
+    a ML model can extract from limited amounts of data.
+
+
+    Fourthly, it is challenging to describe the complex catalytic mechanisms via simple
+    and interpretable descriptors. As descriptors not only bridge the gaps between
+    features of catalysts and the dynamic events in catalysis but also have a major
+    impact on ML model quality, feature selection from a pool of potential descriptors
+    is essential. The most popular strategies are selecting descriptors based on the
+    chemical and'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'interests include perovskite photocatalysis and photoluminescence, ferroelectric
+    thin films, controllable synthesis of inorganic colloid nanocrystals, and machine
+    learning.
+
+
+    Tu Le is a lecturer at the School of Engineering, STEM College, RMIT University.
+    Prior to joining RMIT University in 2017, she worked at the Commonwealth Scientific
+    and Industrial Research Organisation. She completed her Ph.D. at Swinburne University
+    of Technology in 2010. She is interested in material design and development using
+    machine learning algorithms for a broad range of applications such as sustainable
+    energy generation and storage, sensors, and therapeutics.
+
+
+    Dehong Chen is a research fellow at Applied Chemistry & Environmental Science,
+    RMIT University, Australia. He received his Ph.D. degree in Chemistry from Fudan
+    University in 2006. Before joining RMIT University, he conducted research work
+    at the University of Melbourne and the Australian National University. He currently
+    has interests in the design and synthesis of diverse functional materials for
+    a range of applications including clean energy utilization, energy storage, environmental
+    remediation, and sensing.
+
+
+    David Winkler is a professor at La Trobe Institute for Molecular Science at La
+    Trobe University, a visiting professor at the University of Nottingham, and a
+    Professor of Medicinal Chemistry, Monash Institute of Pharmaceutical Sciences,
+    Monash University. His research on applying computational chemistry, AI, and machine
+    learning methods to the design of drugs, agrochemicals, nanomaterials, and biomaterials
+    has led to over 200 journal articles and book chapters as well as 25 patents.
+    He has won prestigious awards including the CSIRO Medal for Business Excellence,
+    RACI’s Adrien Albert award, and the ACS Herman Skolnik award. He is ranked 227th
+    of 81 000 medicinal chemists, and 999th of 520 000 chemists worldwide (Mendeley
+    2019).
+
+
+    Rachel Caruso is a professor in the Applied Chemistry and Environmental Science
+    discipline at RMIT University. She studied at The University of Melbourne before
+    leading research teams at the Max Planck Institute of Colloids and Interfaces,
+    The University of Melbourne, the Commonwealth Scientific and Industrial Research
+    Organisation, and RMIT University. Her expertise in materials chemistry has been
+    applied to investigating structural control of materials on the nanoscale, with
+    a focus on porous metal oxides, perovskites, and carbon-based materials with potential
+    for photocatalysis, adsorbents, and energy conversion and storage applications.
+
+
+    # ACKNOWLEDGMENTS
+
+
+    The Australian Research Council is acknowledged for support through Discovery
+    Projects DP180103815 and DP220100945.
+
+
+    # REFERENCES
+
+
+    +   1. Tachibana, Y.; Vayssieres, L.; Durrant, J. R. Artificial photosynthesis
+    for solar water-splitting. *Nat. Photonics* **2012**, *6*, 511–518.
+
+    +   2. Chu, S.; Majumdar, A. Opportunities and challenges for a sustainable energy
+    future. *Nature* **2012**, *488*, 294–303.
+
+    +   3. Kittner, N.; Lilli, E.; Kammen, D. M. Energy storage deployment and innovation
+    for the clean energy transition. *Nat. Energy* **2017**, *2*, 17125.
+
+    +   4. Clarke, C. J.; Tu, W.-C.; Levers, O.; Bröhl, A.; Hallett, J. P. Green and
+    Sustainable Solvents in Chemical Processes. *Chem. Rev.* **2018**, *118*, 747–800.
+
+    +   5. Sch, Z. W.; Kibsgaard, J.; Dickens, C. F.; Chorkendorff, I.; Nørskov, J.
+    K.; Jaramillo, T. F. Combining theory and experiment in electrocatalysis: Insights
+    into materials design. *Science* **2017**, *355*, No. eaad4998.
+
+
+    +   6. Suen, N.-T.; Hung, S.-F.; Quan, Q.; Zhang, N.; Xu, Y.-J.; Chen, H. M. Electrocatalysis
+    for the oxygen evolution reaction: recent development and future perspectives.
+    *Chem. Soc. Rev.* **2017**, *46*, 337–365.
+
+    +   7. Roger, I.; Shipman, M. A.; Symes, M. D. Earth-abundant catalysts for electrochemical
+    and photoelectrochemical water splitting. *Nat. Rev. Chem.* **2017**, *1*, 0003.
+
+    +   8. Wang, Q.; Domen, K. Particulate Photocatalysts for Light-Driven Water Splitting:
+    Mechanisms, Challenges, and Design Strategies. *Chem. Rev.* **2020**, *120*, 919–985.
+
+    +   9. Chen, S.; Takata, T.; Domen, K. Particulate photocatalysts for overall
+    water splitting. *Nat. Rev. Mater.* **2017**, *2*, 17050.
+
+    +   10. Mai, H.; Chen, D.; Tachibana, Y.; Suzuki, H.; Abe, R.; Caruso, R. A. Developing
+    sustainable, high-performance perovskites in photocatalysis: design strategies
+    and applications. *Chem. Soc. Rev.* **2021**, *50*, 13692–13729.
+
+    +   11. Low, J.; Yu, J.; Jaroniec, M.; Wageh, S.; Al-Ghamdi, A. A. Heterojunction
+    Photocatalysts. *Adv. Mater.* **2017**, *29*, 1601694.
+
+    +   12. Liu, X.; Iocozzia, J.; Wang, Y.; Cui, X.; Chen, Y.; Zhao, S.; Li, Z.;
+    Lin, Z. Noble metal-metal oxide nanohybrids with tailored nanostructures for efficient
+    solar energy conversion, photocatalysis and environmental remediation. *Energy
+    Environ. Sci.* **2017**, *10*, 402–434.
+
+    +   13. Wei, H.; McMaster, W. A.; Tan, J. Z. Y.; Chen, D.; Caruso, R. A. Tripcomponent
+    brookite/anatase TiO₂/g-C₃N₄ heterojunction in mesoporous hollow microspheres
+    for enhanced visible-light photocatalysis. *J. Mater. Chem. A* **2018**, *6*,
+    7236–7245.
+
+    +   14. Singh, N.; Goldsmith, B. R. Role of Electrocatalysis in the Remediation
+    of Water Pollutants. *ACS Catal.* **2020**, *10*, 3365–3371.
+
+    +   15. Rong, F.; Lu, Q.; Mai, H.; Chen, D.; Caruso, R. A. Hierarchically Porous
+    WO₃/CdWO₄ Fiber-in-Tube Nanostructures Featuring Readily Accessible Active Sites
+    and Enhanced Photocatalytic Effectiveness for Antibiotic Degradation in Water.
+    *ACS Appl. Mater. Interfaces* **2021**, *13*, 21138–21148.
+
+    +   16. Le, T.;j; Epa, V. C.; Burden, F. R.; Winkler, D. A. Quantitative Structure-Property
+    Relationship Modeling of Diverse Materials Properties. *Chem. Rev.* **2012**,
+    *112*, 2889–2919.
+
+    +   17. Reymond, J. L. The Chemical Space Project. *Acc. Chem. Res.* **2015**,
+    *48*, 722–730.
+
+    +   18. Walsh, A. The quest for new functionality. *Nat. Chem.* **2015**, *7*,
+    274–275.
+
+    +   19. Hohenberg, P.; Kohn, W. Inhomogeneous Electron Gas. *Phys. Rev. B* **1964**,
+    *136*, B864.
+
+    +   20. Kohn, W.; Sham, L. J. Self-Consistent Equations Including Exchange and
+    Correlation Effects. *Phys. Rev.* **1965**, *140*, A1133.
+
+    +   21. Potyrailo, R.; Rajan, K.; Stoewе, K.; Takeuchi, I.; Chisholm, B.; Lam,
+    H. Combinatorial and High-Throughput Screening of Materials Libraries: Review
+    of State of the Art. *ACS Comb. Sci.* **2011**, *13*, 579–633.
+
+    +   22. Curtarolo, S.; Hart, G. L. W.; Nardelli, M. B.; Mingo, N.; Sanvito, S.;
+    Levy, O. The high-throughput highway to computational materials design. *Nat.
+    Mater.* **2013**, *12*, 191–201.
+
+    +   23. Lejaeghere, K.; Bihlmayer, G.; Björkman, T.; Blaha, P.; Blügel, S.; Blum,
+    V.; Caliste, D.; Castelli, I. E.; Clark, S. J.; Dal Corso, A.; et al. Reproducibility
+    in density functional theory calculations of solids. *Science* **2016**, *351*,
+    aad3000.
+
+    +   24. Yan, Q.; Yu, J.; Suram, S. K.; Zhou, L.; Shinde, A.; Newhouse, P. F.;
+    Chen, W.; Li, G.; Persson, K. A.; Gregoire, J. M.; et al. Solar fuels photoanode
+    materials discovery by integrating high-throughput theory and experiment. *Proc.
+    Natl. Acad. Sci. U. S. A.* **2017**, *114*, 3040–3043.
+
+    +   25. Qiu, B.; Xing, M.; Zhang, J. Recent advances in three-dimensional graphene
+    based materials for catalysis applications. *Chem. Soc. Rev.* **2018**, *47*,
+    2165–2216.
+
+    +   26. Tak, D. P.; Roch, L. M.; Saikin, S. K.; Kreisbeck, C.; Sheberla, D.; Montoya,
+    J. H.; Dwarknath, S.; Aykol, M.; Ortiz, C.; Tribukait, H.; et al. Accelerating
+    the discovery of materials for clean energy in the era of smart automation. *Nat.
+    Rev. Mater.* **2018**, *3*, 5–20.'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: 'Machine-learning-assisted materials discovery using failed experiments. Nature
+    2016, 533, 73–76.
+
+
+    +   71) van Roekeghem, A.; Carrete, J.; Oses, C.; Curtarolo, S.; Mingo, N. High-Throughput
+    Computation of Thermal Conductivity of High-Temperature Solid Phases: The Case
+    of Oxide and Fluoride Perovskites. Phys. Rev. X 2016, 6, 041061. (72) Greeley,
+    J.; Jaramillo, T. F.; Bonde, J.; Chorkendorff, I. B.; Norskov, J. K. Computational
+    high-throughput screening of electrocatalytic materials for hydrogen evolution.
+    Nat. Mater. 2006, 5, 909–913. (73) Sendek, A. D.; Yang, Q.; Cubuk, E. D.; Duerloo,
+    K. A. N.; Cui, Y.; Reed, E. J. Holistic computational structure screening of more
+    than 12 000 candidates for solid lithium-ion conductor materials. Energy Environ.
+    Sci. 2017, 10, 306–320. (74) Zhan, C.; Sun, W. W.; Xie, Y.; Jiang, D. E.; Kent,
+    P. R. C. Computational Discovery and Design of MXenes for Energy Applications:
+    Status, Successes, and Opportunities. ACS Appl. Mater. Interfaces 2019, 11, 24885–24905.
+    (75) Li, P.; Zhu, J.; Handoko, A. D.; Zhang, R.; Wang, H.; Legut, D.; Wen, X.;
+    Fu, Z.; Seh, Z. W.; Zhang, Q. High-throughput theoretical optimization of the
+    hydrogen evolution reaction on MXenes by transition metal modification. J. Mater.
+    Chem. A 2018, 6, 4271–4278. (76) Gubaev, K.; Podryabinkin, E. V.; Hart, G. L.
+    W.; Shapeev, A. V. Accelerating high-throughput searches for new alloys with active
+    learning of interatomic potentials. Comput. Mater. Sci. 2019, 156, 148–156. (77)
+    Kim, K.; Ward, L.; He, J. G.; Krishna, A.; Agrawal, A.; Wolverton, C. Machine-learning-accelerated
+    high-throughput materials screening: Discovery of novel quaternary Hensler compounds.
+    Phys. Rev. Mater. 2018, 2, 123801. (78) Curtarolo, S.; Setyawan, W.; Hart, G.
+    L. W.; Jahnatek, M.; Chepulkaii, R. V.; Taylor, R. H.; Wang, S. D.; Xue, J. K.;
+    Yang, K. S.; Levy, O.; et al. AFLOW: An automatic framework for high-throughput
+    materials discovery. Comput. Mater. Sci. 2012, 58, 218–226. (79) Jain, A.; Ong,
+    S. P.; Hautier, G.; Chen, W.; Richards, W. D.; Dacek, S.; Cholia, S.; Gunter,
+    D.; Skinner, D.; Ceder, G.; et al. Commentary: The Materials Project: A materials
+    genome approach to accelerating materials innovation. APL Mater. 2013, 1, 011002.
+    (80) Musil, F.; Grisafi, A.; Bartók, A. P.; Ortner, C.; Csányi, G.; Ceriotti,
+    M. Physics-Inspired Structural Representations for Molecules and Materials. Chem.
+    Rev. 2021, 121, 9759–9815. (81) Langer, M. F.; Goëßmann, A.; Rupp, M. Representations
+    of molecules and materials for interpolation of quantum-mechanical simulations
+    via machine learning. Npj Comput. Mater. 2022, 8, 41. (82) Jianchang, M.; Jain,
+    A.K. Artificial neural networks for feature extraction and multivariate data projection.
+    IEEE trans. neural netw. 1995, 6, 296–317. (83) Wang, Z.; Wang, X.; Yang, W.;
+    Xiao, Y.; Liu, Y.; Chen, L. yNet: a multi-input convolutional network for ultra-fast
+    simulation of field evolution. arxiv 2020, 2012, 10575. (84) Schleider, L.; Pasiliao,
+    E. L.; Qiang, Z.; Zheng, Q. P., A study of feature representation via neural network
+    feature extraction and weighted distance for clustering. J. Comb. Optim. 2022.
+    DOI: 10.1007/s10878-022-00849-y (85) Blum, A. L.; Langley, P. Selection of relevant
+    features and examples in machine learning. Artif. Intell. 1997, 97, 245–271. (86)
+    Hua, J.; Xiong, Z.; Lowe, J.; Suh, E.; Dougherty, E. R. Optimal number of features
+    as a function of sample size for various classification rules. Bioinformatics
+    2005, 21, 1509–1515. (87) Wang, X.; Xiao, B.; Li, Y.; Tang, Y.; Liu, F.; Chen,
+    J.; Liu, Y. First-principles based machine learning study of oxygen evolution
+    reactions of perovskite oxides using a surface center-environment feature model.
+    Appl. Surf. Sci. 2020, 531, 147323. (88) Ma, X.; Li, Z.; Achenie, L. E. K.; Xin,
+    H. Machine-Learning-Augmented Chemisorption Model for CO2 Electroreduction Catalyst
+    Screening. J. Phys. Chem. Lett. 2015, 6, 3528–3533. (89) Liu, F.; Yang, S.; Medford,
+    A. J. Scalable approach to high coverages on oxides via iterative training of
+    a machine-learning algorithm. ChemCatChem. 2020, 12, 4317–4330. (90) Vicente,
+    R. A.; Neckel, I. T.; Sankaranarayanan, S. K. R. S.; Solla-Gullon, J.; Fernández,
+    P. S. Bragg Coherent Diffraction Imaging in In Situ Studies in Electrocatalysis.
+    ACS Nano 2021, 15, 6129–6146. (91) Govind Rajan, A.; Martirez, J. M. P.; Carter,
+    E. A. Why Do We Use the Materials and Operating Conditions We Use for Heterogeneous
+    (Photo)Electrochemical Water Splitting? ACS Catal. 2020, 10, 11177–11234. (92)
+    Yang, W.; Fidelis, T. T.; Sun, W.-H. Machine Learning in Catalysis, From Proposal
+    to Practicing. Acs Omega 2020, 5, 83–88. (93) Faber, F. A.; Lindmaa, A.; von Lilienfeld,
+    O. A.; Armiento, R. Machine Learning Energies of 2 Million Elpasolite (ABC(2)D(6))
+    Crystals. Phys. Rev. Lett. 2016, 117, 135502. (94) Bostanabad, R.; Zhang, Y. C.;
+    Li, X. L.; Kearney, T.; Brinson, L. C.; Apley, D. W.; Liu, W. K.; Chen, W. Computational
+    microstructure characterization and reconstruction: Review of the state-of-the-art
+    techniques. Prog. Mater. Sci. 2018, 95, 1–41. (95) Jha, D.; Ward, L.; Paul, W.
+    K.; Choudhary, A.; Wolverton, C.; Agrawal, A. ElemNet: Deep Learning the Chemistry
+    of Materials From Only Elemental Composition. Sci. Rep. 2018, 8, 17593. (96) Dean,
+    J.; Taylor, M. G.; Mpourpamakis, G. Unfolding adsorption on metal nanoparticles:
+    Connecting stability with catalysis. Sci. Adv. 2019, 5, No. eaax5101. (97) Oliynyk,
+    A. O.; Adutwm, L. A.; Rudyk, B. W.; Pisavadia, H.; Lotfi, S.; Hlukhyy, V.; Harynuk,
+    J. J.; Mar, A.; Brgoch, J. Disentangling Structural Confusion through Machine
+    Learning: Structure Prediction and Polymorphism of Equiatomic Ternary Phases ABC.
+    J. Am. Chem. Soc. 2017, 139, 17870–17881. (98) Filip, M. R.; Giustino, F. The
+    geometric blueprint of perovskites. Proc. Natl. Acad. Sci. U. S. A. 2018, 115,
+    5397–5402. (99) Li, Z.; Achenie, L. E. K.; Xin, H. An Adaptive Machine Learning
+    Strategy for Accelerating Discovery of Perovskite Electrocatalysts. ACS Catal.
+    2020, 10, 4377–4384. (100) Pauling, L. The principles determining the structure
+    of complex ionic crystals. J. Am. Chem. Soc. 1929, 51, 1010–1026. (101) Goldschmidt,
+    V. M. Die Gesetze der Krystallochemie. Naturwissenschaften 1926, 14, 477–485.
+    (102) Schutt, K. T.; Glawe, H.; Brockherde, F.; Sanna, A.; Muller, K. R.; Gross,
+    E. K. U. How to represent crystal structures for machine learning: Towards fast
+    prediction of electronic properties. Phys. Rev. B 2014, 89, 205118. (103) Ward,
+    L.; Liu, R. Q.; Krishna, A.; Hegde, V. I.; Agrawal, A.; Choudhary, A.; Wolverton,
+    C. Including crystal structure attributes in machine learning models of formation
+    energies via Voronoi tessellations. Phys. Rev. B 2017, 96, 024104. (104) Rupp,
+    M.; Tkatchenko, A.; Müller, K.-R.; von Lilienfeld, O. A. Fast and Accurate Modeling
+    of Molecular Atomization Energies with Machine Learning. Phys. Rev. Lett. 2012,
+    108, 058301. (105) Weininger, D. SMILES, a Chemical Language and Information-System.
+    I. Introduction to Methodology and Encoding Rules. J. Chem. Inf. Comput. Sci.
+    1988, 28, 31–36. (106) Häse, F.; Roch, L. M.; Friedrich, P.; Aspuru-Guzik, A.
+    Designing and understanding light-harvesting devices with machine learning. Nat.
+    Commun. 2020, 11, 4587. (107) Yap, C. W. PaDEL-Descriptor: An Open Source Software
+    to Calculate Molecular Descriptors and Fingerprints. J. Comput. Chem. 2011, 32,
+    1466–1474. (108) Elton, D. C.; Boukouvalas, Z.; Butrico, M. S.; Fuge, M. D.; Chung,
+    P. W. Applying machine learning techniques to predict the properties of energetic
+    materials. Sci. Rep. 2018, 8, 9059. (109) Durant, J. L.; Leland, B. A.; Henry,
+    D. R.; Nourse, J. G. Reoptimization of MDL keys for use in drug discovery. J.
+    Chem. Inf. Comput. Sci. 2002, 42, 1273–1280.'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "+   (190) Mageed, A. K. Modeling photocatalytic hydrogen production from ethanol\
+    \ over copper oxide nanoparticles: a comparative analysis of various machine learning\
+    \ techniques. *Biomass Convers. Biorefinery* **2021**, s13399-021-01388-y.\n+\
+    \   \n+   (191) Baghban, A.; Habibzadeh, S.; Zokaee Ashtiani, F. Bandgaps of noble\
+    \ and transition metal/ZIF-8 electro/catalysts: a computational study. *RSC Adv.*\
+    \ **2020**, *10*, 22929–22938.\n+   \n+   (192) Medasani, B.; Gamst, A.; Ding,\
+    \ H.; Chen, W.; Persson, K. A.; Asta, M.; Channing, A.; Haranczyk, M. Predicting\
+    \ defect behavior in B2 intermetallics by merging ab initio modeling and machine\
+    \ learning. *NPJ Comput. Mater.* **2016**, *2*, 1.\n+   \n+   (193) Balfer, J.;\
+    \ Bajorath, J.; Vogt, M. Compound Classification Using the scikit-learn Library.\
+    \ In *Tutorials in Chemoinformatics*; Varnek, A., Ed.; John Wiley & Sons Ltd.,\
+    \ 2017; pp 223–239.\n+   \n+   (194) Osthousizen, G. D. Machine learning: a mathematical\
+    \ framework for neural network, symbolic and genetics-based learning. In *Proceedings\
+    \ of the Third International Conference on Genetic Algorithms*; Schaffer, J. D.,\
+    \ Ed.; Morgan Kaufmann Publishers Inc.: San Francisco, CA, 1989; pp 385–390.\n\
+    +   \n+   (195) Behler, J. Four Generations of High-Dimensional Neural Network\
+    \ Potentials. *Chem. Rev.* **2021**, *121*, 10037–10072.\n+   \n+   (196) Schmidhuber,\
+    \ J. Deep learning in neural networks: An overview. *Neural Netw.* **2015**, *61*,\
+    \ 85–117.\n+   \n+   (197) Hornik, K. Approximation capabilities of multilayer\
+    \ feedforward networks. *Neural Netw.* **1991**, *4*, 251–257.\n+   \n+   (198)\
+    \ Hoar, B. B.; Lu, S.; Liu, C. Machine-Learning-Enabled Exploration of Morphology\
+    \ Influence on Wire-Array Electrodes for Electrochemical Nitrogen Fixation. *J.\
+    \ Phys. Chem. Lett.* **2020**, *11*, 4625–4630.\n+   \n+   (199) Guo, Z.; Liu,\
+    \ P.; Liu, J.; Du, F.; Jiang, L. Neural Network Inspired Design of Highly Active\
+    \ and Durable N-Doped Carbon Interconnected Molybdenum Phosphide for Hydrogen\
+    \ Evolution Reaction. *ACS Appl. Energy Mater.* **2018**, *1*, 5437–5445.\n+ \
+    \  \n+   (200) Lee, J.; Jinnouchi, R. Machine Learning-Based Screening of Highly\
+    \ Stable and Active Ternary Pt Alloys for Oxygen Reduction Reaction. *J. Phys.\
+    \ Chem. C* **2021**, *125*, 16963–16974.\n+   \n+   (201) Bartok, A. P.; Kermode,\
+    \ J.; Bernstein, N.; Csanyi, G. Machine Learning a General-Purpose Interatomic\
+    \ Potential for Silicon. *Phys. Rev. X* **2018**, *8*, 041048.\n+   \n+   (202)\
+    \ Smith, J. S.; Isayev, O.; Roitberg, A. E. ANI-1: an extensible neural network\
+    \ potential with DFT accuracy at force field computational cost. *Chem. Sci.*\
+    \ **2017**, *8*, 3192–3203.\n+   \n+   (203) Cheng, D.; Zhao, Z.-J.; Zhang, G.;\
+    \ Yang, P.; Li, L.; Gao, H.; Liu, S.; Chang, X.; Chen, S.; Wang, T.; et al. The\
+    \ nature of active sites for carbon dioxide electroreduction over oxide-derived\
+    \ copper catalysts. *Nat. Commun.* **2021**, *12*, 395.\n+   \n+   (204) Medford,\
+    \ A. J.; Kunz, M. R.; Ewing, S. M.; Borders, T.; Fushimi, R. Extracting Knowledge\
+    \ from Data through Catalysis Informatics. *ACS Catal.* **2018**, *8*, 7403–7429.\n\
+    +   \n+   (205) Segler, M. H. S.; Preuss, M.; Waller, M. P. Planning chemical\
+    \ syntheses with deep neural networks and symbolic AI. *Nature* **2018**, *555*,\
+    \ 604–610.\n+   \n+   (206) Walters, W. P.; Barzilay, R. Applications of Deep\
+    \ Learning in Molecule Generation and Molecular Property Prediction. *Acc. Chem.\
+    \ Res.* **2021**, *54*, 263–270.\n+   \n+   (207) Mennel, L.; Symonowicz, J.;\
+    \ Wachter, S.; Polyushkin, D. K.; Molina-Mendoza, A. J.; Mueller, T. Ultrafast\
+    \ machine vision with 2D material neural network image sensors. *Nature* **2020**,\
+    \ *579*, 62–66.\n+   \n+   (208) Bengio, Y.; Courville, A.; Vincent, P. Representation\
+    \ Learning: A Review and New Perspectives. *IEEE Trans. Pattern Anal. Mach. Intell.*\
+    \ **2013**, *35*, 1798–1828.\n+   \n+   (209) Shrestha, A.; Mahmood, A. Review\
+    \ of Deep Learning Algorithms and Architectures. *IEEE Access* **2019**, *7*,\
+    \ 53040–53065.\n+   \n+   (210) Liu, Q.; Fang, L.; Yu, G.; Wang, D.; Xiao, C.-L.;\
+    \ Wang, K. Detection of DNA base modifications by deep recurrent neural network\
+    \ on Oxford Nanopore sequencing data. *Nat. Commun.* **2019**, *10*, 2449.\n\n\
+    +   (211) Längkvist, M.; Karlsson, L.; Loutfi, A. A review of unsupervised feature\
+    \ learning and deep learning for time-series modeling. *Pattern Recognit. Lett.*\
+    \ **2014**, *42*, 11–24.\n+   \n+   (212) Jurtz, V. I.; Johansen, A. R.; Nielsen,\
+    \ M.; Almagro Armenteros, J. J.; Nielsen, H.; Sønderby, C. K.; Winther, O.; Sønderby,\
+    \ S. K. An introduction to deep learning on biological sequence data: examples\
+    \ and solutions. *Bioinformatics* **2017**, *33*, 3685–3690.\n+   \n+   (213)\
+    \ Kermany, D.; Goldbaum, M.; Cai, W. J.; Valentim, C. C. S.; Liang, H. Y.; Baxter,\
+    \ S. L.; McKeown, A.; Yang, G.; Wu, X. K.; Yan, F. B.; et al. Identifying Medical\
+    \ Diagnoses and Treatable Diseases by Image-Based Deep Learning. *Cell* **2018**,\
+    \ *172*, 1122–1131.\n+   \n+   (214) Hosny, A.; Parmar, C.; Quackenbush, J.; Schwartz,\
+    \ L. H.; Aerts, H. J. W. L. Artificial intelligence in radiology. *Nat. Rev. Cancer*\
+    \ **2018**, *18*, 500–510.\n+   \n+   (215) Esteva, A.; Kuprel, B.; Novoa, R.\
+    \ A.; Ko, J.; Swetter, S. M.; Blau, H. M.; Thrun, S. Dermatologist-level classification\
+    \ of skin cancer with deep neural networks. *Nature* **2017**, *542*, 115–118.\n\
+    +   \n+   (216) Shen, D.; Wu, G.; Suk, H.-I. Deep Learning in Medical Image Analysis.\
+    \ *Annu. Rev. Biomed. Eng.* **2017**, *19*, 221–248.\n+   \n+   (217) Alom, M.\
+    \ Z.; Taha, T. M.; Yakopcic, C.; Westberg, S.; Sidike, P.; Nasrin, M. S.; Hasan,\
+    \ M.; Van Essen, B. C.; Awwal, A. S.; Asari, V. K. A State-of-the-Art Survey on\
+    \ Deep Learning Theory and Architectures. *Electronics* **2019**, *8*, 292.\n\
+    +   \n+   (218) Vinyals, O.; Toshev, A.; Bengio, S.; Erhan, D. Show and tell:\
+    \ A neural image caption generator. *2015 IEEE Conference on Computer Vision and\
+    \ Pattern Recognition (CVPR)*, Boston, MA, June 7–12, 2015; IEEE: New York, 2015;\
+    \ pp 3156–3164.\n+   \n+   (219) Makin, J. G.; Moses, D. A.; Chang, E. F. Machine\
+    \ translation of cortical activity to text with an encoder-decoder framework.\
+    \ *Nat. Neurosci.* **2020**, *23*, 575–582.\n+   \n+   (220) Ziletti, A.; Kumar,\
+    \ D.; Scheffler, M.; Ghiringhelli, L. M. Insightful classification of crystal\
+    \ structures using deep learning. *Nat. Commun.* **2018**, *9*, 2775.\n+   \n\
+    +   (221) Rumelhart, D. E.; Hinton, G. E.; Williams, R. J. Learning Representations\
+    \ by Back-Propagating Errors. *Nature* **1986**, *323*, 533–536.\n+   \n+   (222)\
+    \ Burden, F.; Winkler, D. Bayesian Regularization of Neural Networks. In *Artificial\
+    \ Neural Networks: Methods and Applications*; Livingstone, D. J., Ed.; Humana\
+    \ Press: Totowa, NJ, 2009; pp 23–42.\n+   \n+   (223) Burden, F. R.; Winkler,\
+    \ D. A. Robust QSAR Models Using Bayesian Regularized Neural Networks. *J. Med.\
+    \ Chem.* **1999**, *42*, 3183–3187.\n+   \n+   (224) LeCun, Y.; Bengio, Y.; Hinton,\
+    \ G. Deep learning. *Nature* **2015**, *521*, 436–444.\n+   \n+   (225) Winkler,\
+    \ D. A.; Le, T. C. Performance of Deep and Shallow Neural Networks, the Universal\
+    \ Approximation Theorem, Activity Cliffs, and QSAR. *Mol. Inform.* **2017**, *36*,\
+    \ 1600118.\n+   \n+   (226) Schütt, K. T.; Arbabzadah, F.; Chmiela, S.; Müller,\
+    \ K. R.; Tkatchenko, A. Quantum-chemical insights from deep tensor neural networks.\
+    \ *Nat. Commun.* **2017**, *8*, 13890.\n+   \n+   (227) Jha, D.; Choudhary, K.;\
+    \ Tavazza, F.; Liao, W.-k.; Choudhary, A.; Campbell, C.; Agrawal, A. Enhancing\
+    \ materials property prediction by leveraging computational and experimental data\
+    \ using deep transfer learning. *Nat. Commun.* **2019**, *10*, 5316.\n+   \n+\
+    \   (228) Kim, B.; Lee, S.; Kim, J. Inverse design of porous materials using artificial\
+    \ neural networks. *Sci. Adv.* **2020**, *6*, No. eaax9324.\n+   \n+   (229) Wang,\
+    \ S.-H.; Pillai, H. S.; Wang, S.; Achenie, L. E. K.; Xin, H. Infusing theory into\
+    \ deep learning for interpretable reactivity prediction. *Nat. Commun.* **2021**,\
+    \ *12*, 5288.\n+   \n+   (230) Ding, R.; Chen, Y.; Chen, P.; Wang, R.; Wang, J.;\
+    \ Ding, Y.; Yin, W.; Liu, Y.; Li, J.; Liu, J. Machine Learning-Guided Discovery\
+    \ of Underlying Decisive Factors and New Mechanisms for the Design of Nonprecious\
+    \ Metal Electrocatalysts. *ACS Catal.* **2021**, *11*, 9798–9808.\n+   \n+   (231)\
+    \ Yang, Q.; Xu, R.; Wu, P.; He, J.; Liu, C.; Jiang, W. Three-step treatment of\
+    \ real complex, variable high-COD rolling wastewater by rational adjustment of\
+    \ acidification, adsorption, and photocatalysis using big data analysis. *Sep.\
+    \ Purif. Technol.* **2021**, *270*, 118865."
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '+   (232) Lecun, Y.; Bottou, L.; Bengio, Y.; Haffner, P. Gradient-based learning
+    applied to document recognition. Proc. IEEE 1998, 86, 2278–2324.
+
+    +   (233) Aguiar, J. A.; Gong, M. L.; Unocic, R. R.; Tasdizen, T.; Miller, B.
+    D. Decoding crystallography from high-resolution electron imaging and diffraction
+    datasets with deep learning. Sci. Adv. 2019, 5, No. eaaw1949.
+
+    +   (234) Lee, J.-W.; Park, W. B.; Lee, J. H.; Singh, S. P.; Sohn, K.-S. A deep-learning
+    technique for phase identification in multiphase inorganic compounds using synthetic
+    XRD powder patterns. Nat. Commun. 2020, 11, 86.
+
+    +   (235) Back, S.; Yoon, J.; Tian, N.; Zhong, W.; Tran, K.; Ulissi, Z. W. Convolutional
+    Neural Network for Atomic Surface Structures To Predict Binding Energies for High-Throughput
+    Screening of Catalysts. J. Phys. Chem. Lett. 2019, 10, 4401–4408.
+
+    +   (236) Wang, Z.; Wang, Q.; Han, Y.; Ma, Y.; Zhao, H.; Nowak, A.; Li, J. Deep
+    learning for ultra-fast and high precision screening of energy materials. Energy
+    Storage Mater. 2021, 39, 45–53.
+
+    +   (237) Zhou, B., Khosla, A.; Lapedriza, A.; Oliva, A.; Torralba, A. Learning
+    Deep Features for Discriminative Localization. 2016 IEEE Conference on Computer
+    Vision and Pattern Recognition (CVPR) 2016, 2921–2929.
+
+    +   (238) Samek, W.; Montavon, G.; Lapuschkin, S.; Anders, C. J.; Müller, K. R.
+    Explaining Deep Neural Networks and Beyond: A Review of Methods and Applications.
+    Proc. IEEE 2021, 109, 247–278.
+
+    +   (239) Ribeiro, M. T.; Singh, S.; Guestrin, C. “Why Should I Trust You?”: Explaining
+    the Predictions of Any Classifier. In Proceedings of the 22nd ACM SIGKDD International
+    Conference on Knowledge Discovery and Data Mining; Association for Computing Machinery:
+    San Francisco, CA, 2016; pp 1135–1144.
+
+    +   (240) Zeiler, M. D.; Fergus, R. In Visualizing and Understanding Convolutional
+    Networks; Springer International Publishing: Cham, 2014; pp 818–833.
+
+    +   (241) Smilkov, D.; Thorat, N.; Kim, B.; Viégas, F.; Wattenberg, M. SmoothGrad:
+    removing noise by adding noise. arxiv 2017, 1706.03825.
+
+    +   (242) Sundararajan, M.; Taly, A.; Yan, Q. Q. Axiomatic Attribution for Deep
+    Networks. In 34th International Conference on Machine Learning; Precup, D., Teh,
+    Y. W., Eds.; Sydney, Australia, August 06–11, 2017; JMLR, 2017.
+
+    +   (243) Bach, S.; Binder, A.; Montavon, G.; Klauschen, F.; Müller, K.- R.; Samek,
+    W. On Pixel-Wise Explanations for Non-Linear Classifier Decisions by Layer-Wise
+    Relevance Propagation. PLoS One 2015, 10, No. e0130140.
+
+    +   (244) Dietterich, T. G. An experimental comparison of three methods for constructing
+    ensembles of decision trees: Bagging, boosting, and randomization. Mach. Learn.
+    2000, 40, 139–157.
+
+    +   (245) Riley, P. Three pitfalls to avoid in machine learning. Nature 2019,
+    572, 27–29.
+
+    +   (246) Deng, C.; Su, Y.; Li, F.; Shen, W.; Chen, Z.; Tang, Q. Understanding
+    activity origin for the oxygen reduction reaction on bi- atom catalysts by DFT
+    studies and machine-learning. J. Mater. Chem. A 2020, 8, 24563–24571.
+
+    +   (247) Kronberg, R.; Lappalainen, H.; Laasonen, K. Hydrogen Adsorption on Defective
+    Nitrogen-Doped Carbon Nanotubes Explained via Machine Learning Augmented DFT Calculations
+    and Game-Theoretic Feature Attributions. J. Phys. Chem. C 2021, 125, 15918–15933.
+
+    +   (248) Ying, Y.; Fan, K.; Luo, X.; Qiao, J.; Huang, H. Unravelling the origin
+    of bifunctional OER/ORR activity for single-atom catalysts supported on C2N by
+    DFT and machine learning. J. Mater. Chem. A 2021, 9, 16860–16867.
+
+    +   (249) Freund, Y.; Schapire, R.; Abe, N. A short introduction to boosting.
+    J. Jap. Soc. Artificial Intel. 1999, 14, 1612.
+
+    +   (250) Rätsch, G.; Onoda, T.; Müller, K. R. Soft Margins for AdaBoost. Mach.
+    Learn. 2001, 42, 287–320.
+
+    +   (251) Friedman, J. H. Greedy function approximation: A gradient boosting machine.
+    Ann. Stat. 2001, 29, 1189–1232.
+
+    +   (252) Ahmad, Z.; Xie, T.; Maheshwari, C.; Grossman, J. C.; Viswanathan, V.
+    Machine Learning Enabled Computational Screening of Inorganic Solid Electrolytes
+    for Suppression of Dendrite Formation in Lithium Metal Anodes. ACS Cent. Sci.
+    2018, 4, 996–1006.
+
+    +   (253) Davies, D. W.; Butler, K. T.; Walsh, A. Data-Driven Discovery of Photoactive
+    Quaternary Oxides Using First-Principles Machine Learning. Chem. Mater. 2019,
+    31, 7221–7230.
+
+    +   (254) Zhang, X.; Chen, A.; Chen, L.; Zhou, Z. 2D Materials Bridging Experiments
+    and Computations for Electro/Photocatalysis. Adv. Energy Mater. 2021, 2003841.
+
+    +   (255) Pankajakashan, P.; Sanyal, S.; de Noord, O. E.; Bhattacharya, I.; Bhattacharyya,
+    A.; Waghmare, U. Machine Learning and Statistical Analysis for Materials Science:
+    Stability and Transferability of Fingerprint Descriptors and Chemical Insights.
+    Chem. Mater. 2017, 29, 4190–4201.
+
+    +   (256) Timoshenko, J.; Frenkel, A. I. Inverting” X-ray Absorption Spectra of
+    Catalysts by Machine Learning in Search for Activity Descriptors. ACS Catal. 2019,
+    9, 10192–10211.
+
+    +   (257) Schlexer Lamoureux, P.; Winther, K. T.; Garrido Torres, J. A.; Streibel,
+    V.; Zhao, M.; Bajdich, M.; Abild-Pedersen, F.; Bligaard, T. Machine Learning for
+    Computational Heterogeneous Catalysis. ChemCatChem. 2019, 11, 3581–3601.
+
+    +   (258) Hansen, K.; Montavon, G.; Biegler, F.; Fazli, S.; Rupp, M.; Scheffler,
+    M.; von Lilienfeld, O. A.; Tkatchenko, A.; Müller, K.-R. Assessment and Validation
+    of Machine Learning Methods for Predicting Molecular Atomization Energies. J.
+    Chem. Theory Comput. 2013, 9, 3404–3419.
+
+    +   (259) Xu, J. H.; Zhang, X. G.; Li, Y. D. Kernel MSE algorithm: A unified framework
+    for KFD, LS-SVM and KRR. International Joint Conference on Neural Networks (IJCNN
+    01). Washington, DC, July 15–19; IEEE: New York, 2001; pp 1486–1491.
+
+    +   (260) scikit-learn.org Comparison of kernel ridge regression and SVR. https://scikit-learn.org/stable/auto_examples/miscellaneous/plot_kernel_ridge_regression.html.
+
+    +   (261) Pilania, G.; Whittle, K. R.; Jiang, C.; Grimes, R. W.; Stanek, C. R.;
+    Sicafani, K. E.; Uberuaga, B. P. Using Machine Learning To Identify Factors That
+    Govern Amorphization of Irradiated Pyrochlores. Chem. Mater. 2017, 29, 2574–2583.
+
+    +   (262) von Lilienfeld, O. A.; Ramakrishnan, R.; Rupp, M.; Knoll, A. Fourier
+    series of atomic radial distribution functions: A molecular fingerprint for machine
+    learning models of quantum chemical properties. Int. J. Quantum Chem. 2015, 115,
+    1084–1093.
+
+    +   (263) Noh, J.; Back, S.; Kim, J.; Jung, Y. Active learning with non-ab initio
+    input features toward efficient CO2 reduction catalysts. Chem. Sci. 2018, 9, 5152–5159.
+
+    +   (264) Le, T. C.; Winkler, D. A. Discovery and Optimization of Materials Using
+    Evolutionary Approaches. Chem. Rev. 2016, 116, 6107–6132.
+
+    +   (265) Hinton, G.; Nowlan, S. How Learning Can Guide Evolution. Complex Systems
+    1987, 1, 495–502.
+
+    +   (266) Smith, J. M. When learning guides evolution. Nature 1987, 329, 761–762.
+
+    +   (267) Umansankar, Y.; Ting, T.-W.; Chen, S.-M. Characterization of Poly(brilliant
+    cresyl blue)-Multiwall Carbon Nanotube Composite Film and Its Application in Electrocasting
+    of Vitamin B9 Reduction. J. Electrochem. Soc. 2011, 158, K117.
+
+    +   (268) Vilhelmsen, L. B.; Walton, K. S.; Sholl, D. S. Structure and Mobility
+    of Metal Clusters in MOFs: Au, Pd, and AuPd Clusters in MOF-74. J. Am. Chem. Soc.
+    2012, 134, 12807–12816.
+
+    +   (269) Chung, Y. G.; Gómez-Gualdrón, D. A.; Li, P.; Leperi, K. T.; Deria, P.;
+    Zhang, H.; Vermeulen, N. A.; Stoddart, J. F.; You, F.; Hupp, J. T.; et al. In
+    silico discovery of metal-organic frameworks for precombustion CO2 capture using
+    a genetic algorithm. Sci. Adv. 2016, 2, No. e1600909.
+
+    +   (270) Sun, G.; Sautet, P. Metastable Structures in Cluster Catalysis from
+    First-Principles: Structural Ensemble in Reaction Conditions and Metastability
+    Triggered Reactivity. J. Am. Chem. Soc. 2018, 140, 2812–2820.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '(271) Chang, T.; Lu, J.; Shen, Z.; Huang, Y.; Lu, D.; Wang, X.; Cao, J.; Morent,
+    R. Simulation and optimization of the post plasma-catalytic system for toluene
+    degradation by a hybrid ANN and NSGA-II method. *Appl. Catal. B Environ.* **2019**,
+    *244*, 107–119.
+
+
+    (272) Talwar, S.; Verma, A. K.; Sangal, V. K. Modeling and optimization of fixed
+    mode dual effect (photocatalysis and photo-Fenton) assisted Metronidazole degradation
+    using ANN coupled with genetic algorithm. *J. Environ. Manag.* **2019**, *250*,
+    109428.
+
+
+    (273) Karimi Estahbanati, M. R.; Feilizadeh, M.; Babin, A.; Mei, B.; Mul, G.;
+    Iliuta, M. C. Selective photocatalytic oxidation of cyclohexanol to cyclohexanone:
+    A spectroscopic and kinetic study. *Chem. Eng. J.* **2020**, *382*, 122732.
+
+
+    (274) Zhang, Z.; Wang, Y.-G. Molecular Design of Dispersed Nickel Phthalocyanine@Nanocarbon
+    Hybrid Catalyst for Active and Stable Electroreduction of CO2. *J. Phys. Chem.
+    C* **2021**, *125*, 13836–13849.
+
+
+    (275) He, H.; Garcia, E. A. Learning from Imbalanced Data. *IEEE Trans. Knowl.
+    Data Eng.* **2009**, *21*, 1263–1284.
+
+
+    (276) Fronzi, M.; Isayev, O.; Winkler, D. A.; Shapter, J. G.; Ellis, A. V.; Sherrell,
+    P. C.; Shepelin, N. A.; Corletto, A.; Ford, M. J. Active Learning in Bayesian
+    Neural Networks for Bandgap Predictions of Novel Van der Waals Heterostructures.
+    *Adv. Intell. Syst.* **2021**, *3*, 2100080.
+
+
+    (277) Kurilovich, A. A.; Alexander, C. T.; Pazhetnov, E. M.; Stevenson, K. J.
+    Active learning-based framework for optimal reaction mechanism selection from
+    microkinetic modeling: a case study of electrocatalytic oxygen reduction reaction
+    on carbon nanotubes. *Phys. Chem. Chem. Phys.* **2020**, *22*, 4581–4591.
+
+
+    (278) Li, X.; Chiong, R.; Hu, Z.; Page, A. J. Low-Cost Pt Alloys for Heterogeneous
+    Catalysis Predicted by Density Functional Theory and Active Learning. *J. Phys.
+    Chem. Lett.* **2021**, *12*, 7305–7311.
+
+
+    (279) Golbraikh, A.; Tropsha, A. Beware of q2! *J. Mol. Graph. Model.* **2002**,
+    *20*, 269–276.
+
+
+    (280) Alexander, D. L. J.; Tropsha, A.; Winkler, D. A. Beware of R2: Simple, Unambiguous
+    Assessment of the Prediction Accuracy of QSAR and QSPR Models. *J. Chem. Inf.
+    Model.* **2015**, *55*, 1316–1322.
+
+
+    (281) Lipovetsky, S. Pareto 80/20 law: deviation via random partitioning. *International
+    Journal of Mathematical Education in Science and Technology* **2009**, *40*, 271–277.
+
+
+    (282) Konovalov, D. A.; Llewellyn, L. E.; Vander Heyden, Y.; Coomans, D. Robust
+    Cross-Validation of Linear Regression QSAR Models. *J. Chem. Inf. Model.* **2008**,
+    *48*, 2081–2094.
+
+
+    (283) Wang, S.; Zhang, Z.; Dai, S.; Jiang, D.-e. Insights into CO2/N2 Selectivity
+    in Porous Carbons from Deep Learning. *ACS Mater. Lett.* **2019**, *1*, 558–563.
+
+
+    (284) Dondapati, J. S.; Chen, A. Quantitative structure-property relationship
+    of the photoelectrochemical oxidation of phenolic pollutants at modified nanoporous
+    titanium oxide using supervised machine learning. *Phys. Chem. Chem. Phys.* **2020**,
+    *22*, 8878–8888.
+
+
+    (285) Bruix, A.; Margraf, J. T.; Andersen, M.; Reuter, K. First-principles-based
+    Multiscale Modelling of Heterogeneous Catalysis. *Nat. Catal.* **2019**, *2*,
+    659–670.
+
+
+    (286) Foscato, M.; Jensen, V. R. Automated in Silico Design of Homogeneous Catalysts.
+    *ACS Catal.* **2020**, *10*, 2354–2377.
+
+
+    (287) Gu, G. H.; Choi, C.; Lee, Y.; Situmorang, A. B.; Noh, J.; Kim, Y.-H.; Jung,
+    Y. Progress in Computational and Machine-Learning Methods for Heterogeneous Small-Molecule
+    Activation. *Adv. Mater.* **2020**, *32*, 1907865.
+
+
+    (288) Erben Günay, M.; Yıldırım, R. Recent advances in knowledge discovery for
+    heterogeneous catalysis using machine learning. *Catal. Rev.* **2021**, *63*,
+    120–164.
+
+
+    (289) Thoke, N. H.; Wintzer, M. E.; Nakamura, R. Non-Zero Binding Enhances Kinetics
+    of Catalysis: Machine Learning Analysis on the Experimental Hydrogen Binding Energy
+    of Platinum. *ACS Catal.* **2021**, *11*, 6298–6303.
+
+
+    (290) Gamler, J. T. L.; Ashberry, H. M.; Skrabalak, S. E.; Koczkur, K. M. Random
+    Alloy versus Intermetallic Nanoparticles: A Comparison of Electrocatalytic Performance.
+    *Adv. Mater.* **2018**, *30*, 1801563.
+
+
+    (291) Rößner, L.; Armbgrüster, M. Electrochemical Energy Conversion on Intermetallic
+    Compounds: A Review. *ACS Catal.* **2019**, *9*, 2018–2062.
+
+
+    (292) Liang, J.; Ma, F.; Hwang, S.; Wang, X.; Sokolowski, J.; Li, Q.; Wu, G.;
+    Su, D. Atomic Arrangement Engineering of Metallic Nanocrystals for Energy-Conversion
+    Electrocatalysis. *Joule* **2019**, *3*, 956–991.
+
+
+    (293) Li, J.; Sun, S. Intermetallic Nanoparticles: Synthetic Control and Their
+    Enhanced Electrocatalysis. *Acc. Chem. Res.* **2019**, *52*, 2015–2025.
+
+
+    (294) Zhou, M.; Li, C.; Fang, J. Noble-Metal Based Random Alloy and Intermetallic
+    Nanocrystals: Syntheses and Applications. *Chem. Rev.* **2021**, *121*, 736–795.
+
+
+    (295) Liu, B.; Zhou, M. X.; Chan, M. K. Y.; Greeley, J. P. Understanding Polyol
+    Decomposition on Bimetallic Pt-Mo Catalysts-A DFT Study of Glycerol. *ACS Catal.*
+    **2015**, *5*, 4942–4950.
+
+
+    (296) Fournier, R.; Mohareb, A. Optimizing molecular properties using a relative
+    index of thermodynamic stability and global optimization techniques. *J. Chem.
+    Phys.* **2016**, *144*, 024114.
+
+
+    (297) Oliynyk, A. O.; Jaroszewski, A. A. Discovery of Intermetallic Compounds
+    from Traditional to Machine-Learning Approaches. *Acc. Chem. Res.* **2018**, *51*,
+    59–68.
+
+
+    (298) Vojvodic, A.; Nørskov, J. K. New design paradigm for heterogeneous catalysts.
+    *Natl. Sci. Rev.* **2015**, *2*, 140–143.
+
+
+    (299) Green, I. X.; Yang, W.; Neurock, M.; Yates, J. T. Insights into Catalytic
+    Oxidation at the Au/TiO2 Dual Perimeter Sites. *Acc. Chem. Res.* **2014**, *47*,
+    805–815.
+
+
+    (300) Li, Z.; Wang, S.; Chin, W. S.; Achenie, L. E.; Xin, H. High-throughput screening
+    of bimetallic catalysts enabled by machine learning. *J. Mater. Chem. A* **2017**,
+    *5*, 24131–24138.
+
+
+    (301) Tsuya, T.; Suzuki, K.; Kikuchi, S.; Takakusagi, S.; Shimizu, K.-i.; Takigawa,
+    I. Toward Effective Utilization of Methane: Machine Learning Prediction of Adsorption
+    Energies on Metal Alloys. *J. Phys. Chem. C* **2018**, *122*, 8315–8326.
+
+
+    (302) Zhong, M.; Tran, K.; Min, Y.; Wang, C.; Wang, Z.; Dinh, C.-T.; De Luna,
+    P.; Yu, Z.; Rasouli, A. S.; Brodersen, P.; et al. Accelerated discovery of CO2
+    electrocatalysts using active machine learning. *Nature* **2020**, *581*, 178–183.
+
+
+    (303) Kim, M.; Yeo, B. C.; Park, Y.; Lee, H. M.; Han, S. S.; Kim, D. Artificial
+    Intelligence to Accelerate the Discovery of N2 Electro-reduction Catalysts. *Chem.
+    Mater.* **2020**, *32*, 709–720.
+
+
+    (304) Zhang, Y.; Zuo, T. T.; Tang, Z.; Gao, M. C.; Dahmen, K. A.; Liaw, P. K.;
+    Ju, Z. P. Microstructures and properties of high-entropy alloys. *Prog. Mater.
+    Sci.* **2014**, *61*, 1–93.
+
+
+    (305) George, E. P.; Raabe, D.; Ritchie, R. O. High-entropy alloys. *Nat. Rev.
+    Mater.* **2019**, *4*, 515–534.
+
+
+    (306) Huang, L.; Zaman, S.; Tian, X.; Wang, Z.; Fang, W.; Xia, B. Y. Advanced
+    Platinum-Based Oxygen Reduction Electrocatalysts for Fuel Cells. *Acc. Chem. Res.*
+    **2021**, *54*, 311–322.
+
+
+    (307) Tomboc, G. M.; Kwon, T.; Joo, J.; Lee, K. High entropy alloy electrocatalysts:
+    a critical assessment of fabrication and performance. *J. Mater. Chem. A* **2020**,
+    *8*, 14844–14862.
+
+
+    (308) Pedersen, J. K.; Batchelor, T. A. A.; Bagger, A.; Rossmeisl, J. High-Entropy
+    Alloys as Catalysts for the CO2 and CO Reduction Reactions. *ACS Catal.* **2020**,
+    *10*, 2169–2176.
+
+
+    (309) Batchelor, T. A. A.; Pedersen, J. K.; Winther, S. H.; Castelli, I. E.; Jacobsen,
+    K. W.; Rossmeisl, J. High-Entropy Alloys as a Discovery Platform for Electrocatalysis.
+    *Joule* **2019**, *3*, 834–845.
+
+
+    (310) Lu, Z.; Chen, Z. W.; Singh, C. V. Neural Network-Assisted Development of
+    High-Entropy Alloy Catalysts: Decoupling Ligand and Coordination Effects. *Matter*
+    **2020**, *3*, 1318–1333.
+
+
+    (311) Rück, M.; Garlyyev, B.; Mayr, F.; Bandarenka, A. S.; Gagliardi, A. Oxygen
+    Reduction Activities of Strained Platinum Core-Shell Electrocatalysts Predicted
+    by Machine Learning. *J. Phys. Chem. Lett.* **2020**, *11*, 1773–1780.
+
+
+    (312) Xiang, C.; Suram, S. K.; Haber, J. A.; Guevarra, D. W.; Soedarmadji, E.;
+    Jin, J.; Gregoire, J. M. High-Throughput Bubble Screening Method for Combinatorial
+    Discovery of Electrocatalysts for Water Splitting. *ACS Comb. Sci.* **2014**,
+    *16*, 47–52.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '(313) Hong, W. T.; Risch, M.; Stoerzinger, K. A.; Grimaud, A.; Suntivich, J.;
+    Shao-Horn, Y. Toward the Rational Design of Non-precious Transition Metal Oxides
+    for Oxygen Electrocatalysis. *Energy Environ. Sci.* **2015, 8**, 1404–1427.
+
+
+    (314) Zhang, C.; Fagan, R. D.; Smith, R. D. L.; Moore, S. A.; Berlinguette, C.
+    P.; Trudel, S. Mapping the Performance of Amorphous Ternary Metal Oxide Water
+    Oxidation Catalysts Containing Aluminium. *J. Mater. Chem. A* **2015, 3**, 756–761.
+
+
+    (315) Gawande, M. B.; Goswami, A.; Felpin, F.-X.; Asefa, T.; Huang, X.; Silva,
+    R.; Zou, X.; Zboril, R.; Varma, R. S. Cu and Cu-Based Nanoparticles: Synthesis
+    and Applications in Catalysis. *Chem. Rev.* **2016, 116**, 3722–3811.
+
+
+    (316) Hwang, J.; Rao, R. R.; Giordano, L.; Katayama, Y.; Yu, Y.; Shao-Horn, Y.
+    Perovskites in catalysis and electrocatalysis. *Science* **2017, 358**, 751–756.
+
+
+    (317) Li, M.; Garg, S.; Chang, X.; Ge, L.; Li, L.; Konarova, M.; Rufford, T. E.;
+    Rudolph, V.; Wang, G. Toward Excellence of Transition Metal-Based Catalysts for
+    CO₂ Electrochemical Reduction: An Overview of Strategies and Rationales. *Small
+    Methods* **2020, 4**, 2000033.
+
+
+    (318) Xu, W.; Andersen, M.; Reuter, K. Data-Driven Descriptor Engineering and
+    Refined Scaling Relations for Predicting Transition Metal Oxide Reactivity. *ACS
+    Catal.* **2021, 11**, 734–742.
+
+
+    (319) Yu, N.; Lu, X.; Song, F.; Yao, Y.; Han, E. Electrocatalytic Degradation
+    of Sulfamethazine on IrO₂-RuO₂ Composite Electrodes: Influencing Factors, Kinetics
+    and Modeling. *J. Environ. Chem. Eng.* **2021, 9**, 105301.
+
+
+    (320) Yang, X.-F.; Wang, A.; Qiao, B.; Li, J.; Liu, J.; Zhang, T. Single-Atom
+    Catalysts: A New Frontier in Heterogeneous Catalysis. *Acc. Chem. Res.* **2013,
+    46**, 1740–1748.
+
+
+    (321) Zhu, C.; Fu, S.; Shi, Q.; Du, D.; Lin, Y. Single-Atom Electrocatalysts.
+    *Angew. Chem., Int. Ed.* **2017, 56**, 13944–13960.
+
+
+    (322) Peng, Y.; Lu, B.; Chen, S. Carbon-Supported Single Atom Catalysts for Electrochemical
+    Energy Conversion and Storage. *Adv. Mater.* **2018, 30**, 1801995.
+
+
+    (323) Wu, L.; Guo, T.; Li, T. Machine learning-accelerated prediction of overpotential
+    of oxygen evolution reaction of single-atom catalysts. *iScience* **2021, 24**,
+    102398.
+
+
+    (324) Anasori, B.; Lukatskaya, M. R.; Gogotsi, Y. 2D metal carbides and nitrides
+    (MXenes) for energy storage. *Nat. Rev. Mater.* **2017, 2**, 16098.
+
+
+    (325) Zheng, J.; Sun, X.; Qin, C.; Yan, Y.; Yao, Z.; Deng, S.; Zhong, X.; Zhuang,
+    G.; Wei, Z.; Wang, J. High-Throughput Screening of Hydrogen Evolution Reaction
+    Catalysts in MXene Materials. *J. Phys. Chem. C* **2020, 124**, 13695–13705.
+
+
+    (326) Schultz, D. M.; Yoon, T. P. Solar Synthesis: Prospects in Visible Light
+    Photocatalysis. *Science* **2014, 343**, 1239176.
+
+
+    (327) Wang, W.; Tade, M. O.; Shao, Z. P. Research progress of perovskite materials
+    in photocatalysis- and photovoltaics-related energy conversion and environmental
+    treatment. *Chem. Soc. Rev.* **2015, 44**, 5371–5408.
+
+
+    (328) Zhang, G.; Liu, G.; Wang, L. Z.; Irvine, J. T. S. Inorganic Perovskite Photocatalysts
+    for Solar Energy Utilization. *Chem. Soc. Rev.* **2016, 45**, 5951–5984.
+
+
+    (329) Hu, X.; Mu, L.; Chen, F.; Hu, X. Emerging Investigator Series: Design of
+    Hydrogel Nanocomposites for the Detection and Removal of Pollutants: from Nanosheets,
+    Network Structures, and Biocompatibility to Machine-Learning-Assisted Design.
+    *Environ. Sci. Nano* **2018, 5**, 2216–2240.
+
+
+    (330) Agarwal, A.; Govarret Srinivasan, S.; Raj, B. Data-Driven Discovery of 2D
+    Materials for Solar Water Splitting. *Front. Mater.* **2021, 8**. DOI: 10.3389/fmats.2021.679269.
+
+
+    (331) Wang, X.; Maeda, K.; Thomas, A.; Takanabe, K.; Xin, G.; Carlsson, J. M.;
+    Domen, K.; Antonietti, M. A metal-free polymeric photocatalyst for hydrogen production
+    from water under visible light. *Nat. Mater.* **2009, 8**, 76–80.
+
+
+    (332) Wang, Y.; Vogel, A.; Sachs, M.; Sprick, R. S.; Wilbraham, L.; Moniz, S.
+    J. A.; Godin, R.; Zwijnenburg, M. A.; Durrant, J. R.; Cooper, A. I.; et al. Current
+    understanding and challenges of solar-driven
+
+
+    hydrogen generation using polymeric photocatalysts. *Nat. Energy* **2019, 4**,
+    746–760.
+
+
+    (333) Rahman, M. Z.; Kibria, M. G.; Mullins, C. B. Metal-free photocatalysts for
+    hydrogen evolution. *Chem. Soc. Rev.* **2020, 49**, 1887–1931.
+
+
+    (334) Kosco, J.; Bidwell, M.; Cha, H.; Martin, T.; Howells, C. T.; Sachs, M.;
+    Anjum, D. H.; Gonzalez Lopez, S.; Zou, L.; Wadsworth, A.; et al. Enhanced photocatalytic
+    hydrogen evolution from organic semiconductor heterojunction nanoparticles. *Nat.
+    Mater.* **2020, 19**, 559–565.
+
+
+    (335) Calegari Andrade, M. F.; Ko, H.-Y.; Zhang, L.; Car, R.; Selloni, A. Free
+    energy of proton transfer at the water-TiO₂ interface from ab initio deep potential
+    molecular dynamics. *Chem. Sci.* **2020, 11**, 2335–2341.
+
+
+    (336) Estahbanati, M. R. K.; Feilizadeh, M.; Iliuta, M. C. Photocatalytic valorization
+    of glycerol to hydrogen: Optimization of operating parameters by artificial neural
+    network. *Appl. Catal. B Environ.* **2017, 209**, 483–492.
+
+
+    (337) Kankeko, M.; Fujii, M.; Hisatomi, T.; Yamashita, K.; Domen, K. Regression
+    model for stabilization energies associated with anion ordering in perovskite-type
+    oxynitrides. *J. Energy Chem.* **2019, 36**, 7–14.
+
+
+    (338) Can, E.; Yildirim, R. Data mining in photocatalytic water splitting over
+    perovskites literature for higher hydrogen production. *Appl. Catal. B Environ.*
+    **2019, 242**, 267–283.
+
+
+    (339) Mahmoud, M. S.; Mahmoud, A. Wastewater Treatment Using Nano Bimetallic Iron/Copper,
+    Adsorption Isotherm, Kinetic Studies, and Artificial Intelligence Neural Networks.
+    *Emerg. Mater.* **2021, 4**, 1455–1463.
+
+
+    (340) Dehghani, M. H.; Hassani, A. H.; Karri, R. R.; Younesi, B.; Shayeghi, M.;
+    Salari, M.; Zarei, A. Yousefi, M.; Heidarinejad, Z. Process optimization and enhancement
+    of pesticide adsorption by porous adsorbents by regression analysis and parametric
+    modelling. *Sci. Rep-Uk* **2021, 11**, 11719.
+
+
+    (341) Mohammed, N.; Palaniandy, P.; Shaik, F. Pollutants removal from saline water
+    by solar photocatalysis: a review of experimental and theoretical approaches.
+    *Int. J. Environ. Anal. Chem.* **2021**, 1–21.
+
+
+    (342) Tabatabaei-Yazdi, F.-S.; Ebrahimian Pirbazari, A.; Esmaeili Khalil Saraei,
+    F.; Gilani, N. Construction of Graphene Based Photocatalysts for Photocatalytic
+    Degradation of Organic Pollutant and Modeling Using Artificial Intelligence Techniques.
+    *Phys. B: Condens Matter* **2021, 608**, 412869.
+
+
+    (343) Vasseghian, Y.; Berkani, M.; Almomani, F.; Dragoi, E.-N. Data mining for
+    pesticide decontamination using heterogeneous photocatalytic processes. *Chemosphere*
+    **2021, 270**, 129449.
+
+
+    (344) Norouzi, M.; Karimian, A.; Dehghani, H.; Rezvan Leylan, S. A. Photocatalytic
+    degradation of 2,4,6-trinitrotoluene (‘TNT’) in the presence of ZnS, NiS and ZnS/NiS
+    supported Clinoptilolite under UV irradiation: experimental and neural network
+    modelling. *Int. J. Environ. Anal. Chem.* **2021**, 1–25.
+
+
+    (345) Caglar Gencosman, B.; Eker Sanli, G. Prediction of Polycyclic Aromatic Hydrocarbons
+    (PAHs) Removal from Wastewater Treatment Sludge Using Machine Learning Methods.
+    *Water, Air, Soil Pollut.* **2021, 232**, 87.
+
+
+    (346) Ayodele, B. V.; Alsaffar, M. A.; Mustapa, S. I.; Cheng, C. K.; Witoon, T.
+    Modeling the effect of process parameters on the photocatalytic degradation of
+    organic pollutants using artificial neural networks. *Process Saf. Environ. Prot.*
+    **2021, 145**, 120–132.
+
+
+    (347) Pelalak, R.; Alizadeh, R.; Ghareshabani, E.; Heidari, Z. Degradation of
+    sulfonamide antibiotics using ozone-based advanced oxidation process: Experimental,
+    modeling, transformation mechanism and DFT study. *Sci. Total Environ.* **2020,
+    734**, 139446.
+
+
+    (348) Jiang, Z.; Hu, J.; Zhang, X.; Zhao, Y.; Fan, X.; Zhong, S.; Zhang, H.; Yu,
+    X. A generalized predictive model for TiO₂-Catalyzed photo-degradation rate constants
+    of water contaminants through artificial neural network. *Environ. Res.* **2020,
+    187**, 109697.
+
+
+    (349) Pellegrino, F.; Isopescu, R.; Pellutiè, L.; Sordello, F.; Rossi, A. M.;
+    Ortel, E.; Martra, G.; Hodoroaba, V.-D.; Mairouino, V. Machine learning approach
+    for elucidating and predicting the role of synthesis'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: 'parameters on the shape and size of TiO2 nanoparticles. Sci. Rep-Uk 2020, 10,
+    18910. (350) Yang, Y.; Guan, C.; Chen, S. Structural Characterization and Catalytic
+    Sterilization Performance of a TiO2 Nano-Photocatalyst. Food Sci. Nutr. 2020,
+    8, 3638–3646. (351) Amani-Ghadim, A. R.; Dorraji, M. S. S. Modeling of photocatalytic
+    process on synthesized ZnO nanoparticles: Kinetic model development and artificial
+    neural networks. Appl. Catal. B Environ. 2015, 163, 539–546. (352) Mohammadzadeh
+    Kahkhi, R.; Mohammadpour, M.; Faridi, R.; Bahadori, M. The development of an artificial
+    neural network - genetic algorithm model (ANN-GA) for the adsorption and photocatalysis
+    of methylene blue on a novel sulfur-nitrogen co-doped Fe2O3 nanostructure blue
+    on a novel sulfur-nitrogen co-doped Fe2O3 nanostructure. RSC Adv. 2020, 10, 5951–5960.
+    (353) Smaali, A.; Berkani, M.; Merouane, F.; Le, V. T.; Vasseghian, Y.; Rahim,
+    N.; Kouachi, M. Photocatalytic-persulphate- oxidation for diclofenac removal from
+    aqueous solutions: Modeling, optimization and biotoxicity test assessment. Chemosphere
+    2021, 266, 129158. (354) Baaloudi, O.; Kouachi, A.; Nasrallah, N.; Kebir, M.;
+    Guedioura, B.; Amrane, A.; Nguyen-Tri, P.; Nasrallah, N.; Sassi, A. A. Artificial
+    neural Network Modeling of Cefixime Photodegradation by Synthesized CoBi2O4 Nanoparticles.
+    Environ. Sci. Pollut. Res. 2021, 28, 15436–15452. (354) Lin, C.-C.; Chang, C.-W.;
+    Kaun, C.-C.; Su, Y.-H. Stepwise Evolution of Photocatalytic Spinel-Structured
+    (Co,Cr,Fe,Mn)3O4 High Entropy Oxides from First-Principles Calculations to Machine
+    Learning. Crystals 2021, 11, 1035. (356) Low, J. X.; Yu, J. G.; Jaroniec, M.;
+    Wageh, S.; Al-Ghamdi, A. A. Heterojunction Photocatalysts. Adv. Mater. 2017, 29,
+    1601694. (356) Eskandarloo, H.; Badie, A.; Behnajady, M. A. Study of the Effect
+    of Additives on the Photocatalytic Degradation of a Triphenylmethane Dye in the
+    Presence of Immobilized TiO2/NiO Nanoparticles: Artificial Neural Network Modeling.
+    Ind. Eng. Chem. Res. 2014, 53, 6881–6895. (358) Kassahun, S. K.; Kiflie, Z.; Kim,
+    H.; Baye, A. F. Process Optimization and Kinetics Analysis for Photocatalytic
+    Degradation of Emerging Contaminant Using N-doped TiO2-SiO2 Nanoparticle: Artificial
+    Neural Network and Surface Response Methodology Approach. Environ. Technol. Innov.
+    2021, 23, 101761. (359) Gupta, B.; Gupta, A. K.; Tiwary, C. S.; Ghosal, P. S.
+    A multivariate modeling and experimental realization of photocatalytic system
+    of engineered S-C3N4/ZnO hybrid for ciprofloxacin removal: Influencing factors
+    and degradation pathways. Environ. Res. 2021, 196, 110390. (360) Sheydaei, M.;
+    Ayoubi-Feiz, B.; Abbaszade-Fakhri, G. A visible-light active g-C3N4/Ce-ZnO/Ti
+    nanocomposite for efficient photocatalytic pharmaceutical degradation: Modelling
+    with artificial neural network. Process Saf. Environ. Prot. 2021, 149, 776–785.
+    (354) Baaloudi, O.; Kouachi, A.; Nasrallah, N.; Kebir, M.; Guedioura, B.; Amrane,
+    A.; Nguyen-Tri, P.; Nasrallah, N.; Sassi, A. A. Artificial neural Network Modeling
+    of Cefixime Photodegradation by Synthesized CoBi2O4 Nanoparticles. Environ. Sci.
+    Pollut. Res. 2021, 28, 15436–15452. (354) Lin, C.-C.; Chang, C.-W.; Kaun, C.-C.;
+    Su, Y.-H. Stepwise Evolution of Photocatalytic Spinel-Structured (Co,Cr,Fe,Mn)3O4
+    High Entropy Oxides from First-Principles Calculations to Machine Learning. Crystals
+    2021, 11, 1035. (356) Low, J. X.; Yu, J. G.; Jaroniec, M.; Wageh, S.; Al-Ghamdi,
+    A. A. Heterojunction Photocatalysts. Adv. Mater. 2017, 29, 1601694. (356) Eskandarloo,
+    H.; Badie, A.; Behnajady, M. A. Study of the Effect of Additives on the Photocatalytic
+    Degradation of a Triphenylmethane Dye in the Presence of Immobilized TiO2/NiO
+    Nanoparticles: Artificial Neural Network Modeling. Ind. Eng. Chem. Res. 2014,
+    53, 6881–6895. (358) Kassahun, S. K.; Kiflie, Z.; Kim, H.; Baye, A. F. Process
+    Optimization and Kinetics Analysis for Photocatalytic Degradation of Emerging
+    Contaminant Using N-doped TiO2-SiO2 Nanoparticle: Artificial Neural Network and
+    Surface Response Methodology Approach. Environ. Technol. Innov. 2021, 23, 101761.
+    (359) Gupta, B.; Gupta, A. K.; Tiwary, C. S.; Ghosal, P. S. A multivariate modeling
+    and experimental realization of photocatalytic system of engineered S-C3N4/ZnO
+    hybrid for ciprofloxacin removal: Influencing factors and degradation pathways.
+    Environ. Res. 2021, 196, 110390. (360) Sheydaei, M.; Ayoubi-Feiz, B.; Abbaszade-Fakhri,
+    G. A visible-light active g-C3N4/Ce-ZnO/Ti nanocomposite for efficient photocatalytic
+    pharmaceutical degradation: Modelling with artificial neural network. Process
+    Saf. Environ. Prot. 2021, 149, 776–785. (354) Baaloudi, O.; Kouachi, A.; Nasrallah,
+    N.; Kebir, M.; Guedioura, B.; Amrane, A.; Nguyen-Tri, P.; Nasrallah, N.; Sassi,
+    A. A. Artificial neural Network Modeling of Cefixime Photodegradation by Synthesized
+    CoBi2O4 Nanoparticles. Environ. Sci. Pollut. Res. 2021, 28, 15436–15452. (354)
+    Lin, C.-C.; Chang, C.-W.; Kaun, C.-C.; Su, Y.-H. Stepwise Evolution of Photocatalytic
+    Spinel-Structured (Co,Cr,Fe,Mn)3O4 High Entropy Oxides from First-Principles Calculations
+    to Machine Learning. Crystals 2021, 11, 1035. (356) Low, J. X.; Yu, J. G.; Jaroniec,
+    M.; Wageh, S.; Al-Ghamdi, A. A. Heterojunction Photocatalysts. Adv. Mater. 2017,
+    29, 1601694. (356) Eskandarloo, H.; Badie, A.; Behnajady, M. A. Study of the Effect
+    of Additives on the Photocatalytic Degradation of a Triphenylmethane Dye in the
+    Presence of Immobilized TiO2/NiO Nanoparticles: Artificial Neural Network Modeling.
+    Ind. Eng. Chem. Res. 2014, 53, 6881–6895. (358) Kassahun, S. K.; Kiflie, Z.; Kim,
+    H.; Baye, A. F. Process Optimization and Kinetics Analysis for Photocatalytic
+    Degradation of Emerging Contaminant Using N-doped TiO2-SiO2 Nanoparticle: Artificial
+    Neural Network and Surface Response Methodology Approach. Environ. Technol. Innov.
+    2021, 23, 101761. (359) Gupta, B.; Gupta, A. K.; Tiwary, C. S.; Ghosal, P. S.
+    A multivariate modeling and experimental realization of photocatalytic system
+    of engineered S-C3N4/ZnO hybrid for ciprofloxacin removal: Influencing factors
+    and degradation pathways. Environ. Res. 2021, 196, 110390. (360) Sheydaei, M.;
+    Ayoubi-Feiz, B.; Abbaszade-Fakhri, G. A visible-light active g-C3N4/Ce-ZnO/Ti
+    nanocomposite for efficient photocatalytic pharmaceutical degradation: Modelling
+    with artificial neural network. Process Saf. Environ. Prot. 2021, 149, 776–785.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: 'Reticular Materials with Deep Generative Models. *Nat. Mach. Intell.* **2021**,
+    3, 76–86.
+
+
+    (388) Kim, S.; Noh, J.; Gu, G. H.; Aspuru-Guzik, A.; Jung, Y. Generative Adversarial
+    Networks for Crystal Structure Prediction. *ACS Cent. Sci.* **2020**, 6, 1412–1420.
+
+
+    (389) Noh, J.; Kim, J.; Stein, H. S.; Sanchez-Lengeling, B.; Gregoire, J. M.;
+    Aspuru-Guzik, A.; Jung, Y. Inverse Design of Solid-State Materials via a Continuous
+    Representation. *Matter* **2019**, 1, 1370–1384.
+
+
+    (390) Li, J.; Tu, Y.; Liu, R.; Lu, Y.; Zhu, X. Toward “On-Demand” Materials Synthesis
+    and Scientific Discovery through Intelligent Robots. *Adv. Sci.* **2020**, 7,
+    1901957.
+
+
+    (391) Stach, E.; DeCost, B.; Kusne, A. G.; Hattrick-Simpers, J.; Brown, K. A.;
+    Reyes, K. G.; Schrier, J.; Billinge, S.; Buonassisi, T.; Foster, I.; et al. Autonomous
+    experimentation systems for materials development: A community perspective. *Matter*
+    **2021**, 4, 2702–2726.
+
+
+    (392) Tao, H.; Wu, T.; Aldeghi, M.; Wu, T. C.; Aspuru-Guzik, A.; Kumacheva, E.
+    Nanoparticle synthesis assisted by machine learning. *Nat. Rev. Mater.* **2021**,
+    6, 701–716.
+
+
+    (393) Li, J.; Li, J.; Liu, R.; Tu, Y.; Li, Y.; Cheng, J.; He, T.; Zhu, X. Autonomous
+    discovery of optically active chiral inorganic perovskite nanocrystals through
+    an intelligent cloud lab. *Nat. Commun.* **2020**, 11, 2046.
+
+
+    (394) Burger, B.; Maffettone, P. M.; Gusev, V. V.; Aitchison, C. M.; Bai, Y.;
+    Wang, X.; Li, X.; Alston, B. M.; Li, B.; Clowes, R.; et al. A mobile robotic chemist.
+    *Nature* **2020**, 583, 237–241.
+
+
+    (395) Pan, Z.; Zhou, Y.; Zhang, L. Photoelectrochemical Properties, Machine Learning,
+    and Symbolic Regression for Molecularly Engineered Halide Perovskite Materials
+    in Water. *ACS Appl. Mater. Interfaces* **2022**, 14, 9933–9943.
+
+
+    (396) Jia, J.; Sun, X.; Hu, J.; Wang, S.; Yao, Z.; Deng, S.; Pan, X.; Pan, Z.;
+    Wang, J. Symbolic Transformer Accelerating Machine Learning Screening of Hydrogen
+    and Deuterium Evolution Reaction Catalysts in MAZ2A Materials. *ACS Appl. Mater.
+    Interfaces* **2021**, 13, 50878–50891.
+
+
+    (397) Xie, J.; Zhang, L. Machine learning and symbolic regression for adsorption
+    of atmospheric molecules on low-dimensional TiO2. *Appl. Surf. Sci.* **2022**,
+    597, 153728.
+
+
+    # 📖 Recommended by ACS
+
+
+    # Machine Learning: A New Paradigm in Computational Electrocatalysis
+
+
+    Xu Zhang, Zhen Zhou, *et al.*
+
+
+    AUGUST 18, 2022
+
+    THE JOURNAL OF PHYSICAL CHEMISTRY LETTERS
+
+
+    READ ↗
+
+
+    # Evaluation of Machine Learning Models on Electrochemical CO₂ Reduction Using
+    Human Curated Datasets
+
+
+    Brianna R. Farris, Kevin C. Leonard, *et al.*
+
+
+    AUGUST 10, 2022
+
+    ACS SUSTAINABLE CHEMISTRY & ENGINEERING
+
+
+    READ ↗
+
+
+    # Comparing the Activity of Complex Solid Solution Electrocatalysts Using Inflection
+    Points of Voltammetric Activity Curves as Activity Descriptors
+
+
+    Tobias Löffler, Wolfgang Schumann, *et al.*
+
+
+    JANUARY 07, 2021
+
+    ACS CATALYSIS
+
+
+    READ ↗
+
+
+    # Deciphering the *In Situ* Surface Reconstruction of Supercapacitive Bimetallic
+    Ni-Co Oxyphosphide during Electrochemical Activation Using Multivariate Statis...
+
+
+    Amina A. Saleh, Nageh K. Allam, *et al.*
+
+
+    JUNE 06, 2022
+
+    ACS APPLIED ENERGY MATERIALS
+
+
+    READ ↗
+
+
+    Get More Suggestions >'
+  merge: -1
+  img_proc: true
