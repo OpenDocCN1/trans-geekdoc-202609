@@ -1,0 +1,753 @@
+
+
+# key transport
+
+## AuthenticatedData
+356
+
+## EnvelopedData
+356
+
+## recipientInfos and KEK
+356
+
+## Key set identifier (KSI)
+357
+
+## Kiribati Digital Modernization Program (KDMP)
+69
+
+# L
+
+## LAN
+*See* Local area network (LAN)
+
+## Lattice-based cryptosystems
+338–339
+
+## Layered defense model
+
+### building access
+
+### biometric verification
+492
+
+### entry points
+492
+
+### restrictions
+492
+
+### example
+490–491
+
+### exterior facility elements and construction
+
+#### barriers and lighting
+491
+
+#### CISSP compliance
+492
+
+#### location
+491–492
+
+### information loss, prevention
+494
+
+### internal asset protection
+
+#### data
+493
+
+#### network and data center security
+493
+
+#### tracking
+493
+
+### laptop/storage media theft scenario
+493–494
+
+### roots
+490
+
+### threat detection and notification
+
+#### biological sensors
+493
+
+#### biometric sensors
+493
+
+#### forced entry alarms
+492
+
+#### seismic sensors
+493
+
+#### video surveillance
+492
+
+## Linear tape open (LTO)
+423
+
+## Local area network (LAN)
+16
+
+## “Luddite Group” (LG)
+69–70
+
+# M
+
+## MAC
+*See* Mandatory access control (MAC)
+
+## Malware life cycle
+3–4
+
+### under whitelisting
+7
+
+## Mandatory access control (MAC)
+219
+
+## Manual analysis process
+272–273
+
+## Manual predictive analysis
+
+### generalities, deal in
+272–273
+
+### process
+272–273
+
+## Massachusetts 201 CMT 17.00 law
+2010, 463
+
+### plan
+464
+
+## Multi-State Information Sharing and Analysis Center (MS-ISAC)
+72
+
+# N
+
+## Named encrypted data type
+
+### namedKey
+349
+
+### version
+349
+
+## National Checklist Program (NCP)
+
+### checklists
+88
+
+### goals of
+87–88
+
+## National Cyber Security Division (NCSD)
+394
+
+## National Institute of Standards and Technology (NIST)
+76, 338, 395, 405
+
+## National Vulnerability Database (NVD)
+84
+
+## Network vulnerability assessment
+*See also* Software as a service (SaaS)
+
+### availability, DoS testing
+310
+
+### SaaS deployment model
+310
+
+## Nevada Law SB227
+2010
+
+### payment card industry data security standard
+464
+
+### personal information
+465
+
+### Senate Bill 227
+465–466
+
+## NIST
+*See* National Institute of Standards and Technology (NIST)
+
+## North Carolina Identity Theft Act
+240
+
+## Novell Privileged User Manager
+*See also* Identity and access management suites
+
+### business-defined rules utilization
+50
+
+### compliance auditor
+51
+
+### graphical interface
+50
+
+### process workflow
+51
+
+### supported platforms
+51
+
+### UNIX SUPM system
+50
+
+### user
+
+#### management and tracking.
+52
+
+#### and operating system
+50
+
+# O
+
+## “Observe,” “Orient,” “Decide,” “Act,” (OODA) loop
+249–250
+
+## Official Vendor Statements on CVE vulnerabilities
+85
+
+## Online social networks
+
+### case about privacy
+57–59
+
+### identity-related threats
+
+#### information leakage
+63
+
+#### phishing
+63
+
+#### profile squatting
+63
+
+### implications, privacy
+60–61
+
+### network and information security threats
+
+#### aggregators
+63
+
+#### cross site scripting/viruses and worms
+63
+
+#### spamming
+62
+
+### privacy-related threats
+
+#### complete account deletion, difficulty
+62
+
+#### content-based image retrieval
+62
+
+#### face recognition
+62
+
+#### image tagging and cross-profiling
+62
+
+#### personal information, digital dossier
+61–62
+
+#### revelation
+59–60
+
+### security exposure
+
+#### benefits
+195
+
+#### blocking
+198
+
+#### communications types
+193
+
+#### definition and structure
+193
+
+#### employee use, control
+195
+
+#### enterprise guidance information
+197–198
+
+#### implications
+193–194
+
+#### malicious people and social engineering attack
+194
+
+#### policy/standard/guideline questions
+196–197
+
+#### policy statement for enterprise employees
+196
+
+#### privacy/security issues and threats
+194–195
+
+#### professional networks
+195
+
+#### recommendations
+195–196
+
+#### user ID and password
+194
+
+### social threats
+
+#### corporate espionage
+64
+
+#### stalking
+63–64
+
+### technology and privacy
+65
+
+### users and privacy
+64–65
+
+### structure and evolution
+56
+
+### Websites in United States
+59
+
+## Open and closed RFID systems
+28
+
+## “Open API”
+72
+
+## Open Checklist Interactive Language (OCIL) 2.0
+81–82
+
+## Open Checklist Reporting Language (OCRL)
+88–89
+
+## open source community
+78
+
+## Open Vulnerability and Assessment Language (OVAL)
+78
+
+### capabilities
+92
+
+### definition classes
+93
+
+### definition file
+81
+
+### format
+92–93
+
+### schemas
+90–91
+
+### system inventory
+
+#### malware and threat indicator sharing
+96
+
+#### relevant OVAL capabilities
+96
+
+### use cases
+
+#### auditing and centralized audit validation
+95
+
+#### patch management
+94
+
+#### relevant OVAL capabilities
+94–96
+
+#### security advisory distribution
+93–94
+
+#### SIMS
+95
+
+## Organizational culture
+167
+
+## Organizational governance
+
+### federated organizational structure
+165–166
+
+### five-member board
+165
+
+### information security, strategic framework
+165
+
+### information security executive
+
+#### business-related risk consideration
+170
+
+#### CERT
+170–171
+
+#### effective CISOs features
+169
+
+#### group/team evolution stages
+170–171
+
+#### matrix reporting structure
+169
+
+#### relationships, establishing
+169
+
+#### security function advantages and disadvantages
+169–170
+
+#### SET
+170
+
+#### staff managing
+170
+
+### public sector/private sector/corporate organizations
+165–166
+
+### security triangle
+165–166
+
+## Organizational responsibilities
+*See also* Collaborative risk management
+
+### executives
+
+#### collaborative model decisions
+242–243
+
+#### decision makers
+242
+
+### general business units
+
+#### high-level processes
+243
+
+#### internal threats and vulnerabilities
+243–244
+
+#### workforce training and users
+244
+
+### IS/IT/physical security
+
+#### collaboration basis
+245–246
+
+#### IS and IT units
+244–245
+
+#### PS/S unit
+245
+
+#### units role
+244
+
+### risk management unit
+
+#### functions
+243
+
+#### single purpose entity
+243
+
+## Organization culture awareness and information security program
+*See also* Organizational governance
+
+### components of
+171
+
+### culture and behavior
+
+#### difference in
+168
+
+#### prescriptive aphorisms outcomes
+168
+
+### public sector
+167
+
+### rational-utilitarian institutions
+167
+
+### reshaping
+168
+
+### security and people
+167
+
+### as social energy
+167
+
+### stakeholders desired behavior
+168
+
+### data breach/press and media release
+164–165
+
+### establishment
+163
+
+### five-level model, hierarchy
+163
+
+### government social services programs
+163–164
+
+### guidelines
+172
+
+### “Lucky 7”
+164
+
+### policy
+
+#### resources and writing style
+173
+
+#### procedures and standard
+172
+
+## Organization for Advancement of Structured Information Standards (OASIS)
+256
+
+# P
+
+## Passenger name record (PNR)
+458
+
+## Passive tag
+24
+
+## Payment card industry act (PCI)
+216
+
+## PCI
+*See* Payment card industry act (PCI)
+
+## Perimeter intrusion detection
+
+### physical access control
+
+#### IP-based system, use
+497
+
+#### networked
+496–497
+
+### sensing and actuation
+494
+
+#### actuators
+496
+
+#### effective
+495
+
+#### human and object identification
+495
+
+#### legacy integration
+496
+
+#### physical security realm
+495
+
+#### qualitative and quantitative sensors
+495
+
+#### sensor fusion, correlation, and base lining
+496
+
+### video surveillance and analysis
+*See* Video surveillance and analysis
+
+## Personal identification number (PIN)
+357
+
+## PIM
+*See* Privileged identity management (PIM)
+
+## PKCS
+*See* Public key cryptography standards (PKCS)
+
+## Point of sale (POS)
+357
+
+## Predictive analysis engine
+278
+
+## Predictive vulnerability analysis
+
+### analysis tools types
+269
+
+### attack types, CSI/FBI data
+268–269
+
+### automated
+
+#### data collection
+273
+
+#### functional implementation
+274
+
+#### objectives
+273–274
+
+#### physical architecture
+274–275
+
+#### process
+274
+
+### computer security
+268
+
+### concept
+270–272
+
+### environment, cursory assessment
+272
+
+### information sources
+270
+
+### manual
+
+#### generalities, deal in
+272–273
+
+#### process
+272–273
+
+### network vulnerability analysis
+269
+
+### solution designing
+
+#### enterprise network elements
+272
+
+#### network security controls
+272
+
+#### security management strategies
+272
+
+### systems
+
+#### knowledge
+270–271
+
+#### scanning, factors affecting
+270
+
+## Preservation process flow
+480
+
+## Priority or Low Latency Queuing (LLQ) algorithms
+503
+
+## Privacy Act
+1974
+
+### automated targeting system
+458
+
+### fair information practice code
+455–456
+
+### personal records, use
+457
+
+### PNR agreement
+458
+
+### statement
+456
+
+## Privacy of RFID system
+
+### Bill 682 and 768
+316–317
+
+### consumers right
+317
+
+### data-processing systems
+315
+
+### tags and technology
+316
+
+## Privileged identity management (PIM)
+43
+
+## Privileged session manager (PSM)
+43
+
+## Privileged user management
+37–39
+
+### audit solutions
+
+#### DirectAudit
+40
+
+#### IBM Tivoli Compliance Insight Manager
+40–41
+
+### control solutions
+
+#### Cyber-Ark PIM suite
+43
+
+#### e-DMZ TPAM suite
+41–43
+
+#### IRDETO cloakware password authority
+43–44
+
+#### NETWRIX privileged account manager
+44–45
+

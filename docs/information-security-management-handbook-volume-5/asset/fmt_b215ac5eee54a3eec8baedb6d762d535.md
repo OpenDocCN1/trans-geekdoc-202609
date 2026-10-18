@@ -1,0 +1,36 @@
+
+Merriam, S. B., & Brockett, R. G. (1997). *The Profession and Practice of Adult Education*. San Francisco: Jossey-Bass.
+
+Merriam, S. B., Caffarella, R. S., & Baumgartner, L. M. (2007). *Learning in Adulthood,* Third edition. San Francisco: Jossey-Bass.
+
+Nieto, S. (1999). *The Light in Their Eyes: Creating Multicultural Learning Communities*. Multicultural Education Series. New York: Teachers College Press. Retrieved December 29, 2008, from [http://eric.ed.gov/ERICWebPortal/custom/portlets/recordDetails/detailmini.jsp?_nfpb=true&_&ERICExtSearch_SearchValue_0=ED440164&ERICExtSearch_SearchType_0=no&accno=ED440164](http://eric.ed.gov/ERICWebPortal/custom/portlets/recordDetails/detailmini.jsp?_nfpb=true&_&ERICExtSearch_SearchValue_0=ED440164&ERICExtSearch_SearchType_0=no&accno=ED440164).
+
+Tennant, M., & Pogson, P. (1995). *Learning and Change in the Adult Years*. San Francisco: Jossey-Bass.
+
+# Security Management Planning
+
+![](OEBPS/images/chline.jpg)
+
+# Chapter 15
+
+![](OEBPS/images/chline.jpg)
+
+# Controlling the Emerging Data Dilemma: Building Policy for Unstructured Data Access
+
+![](OEBPS/images/chline.jpg)
+
+# Anne Shultz
+
+It’s everywhere. It’s saved blatantly on the desktop of a coworker’s unattended computer, just waiting to hop onto the next flash drive and head out of the company. It lingers just a click away, ready to be uploaded and e-mailed to a competing company. It lies nakedly on a manager’s desk, eager to be picked up by criminal hands. It lurks in an unsecured network drive, hoping to be discovered by someone with malicious intentions. It’s unstructured data and it’s demanding attention.
+
+# What Is Unstructured Data?
+
+In general, unstructured data can be defined as any electronic information without a specific structure. Depending on the context, this definition can indicate data that is stored outside of a database as well as documents where the contents can take any shape, much like the text in a Word document. This includes documents, blueprints, presentations, image files, video files, etc. However, it is important to remember that whether or not the data is considered structured depends on the context. For example, although spreadsheet data can be structured in cells and arranged in rows and columns, like those created with Excel, this is not controlled by the application (Dorian, 2007). For this reason, spreadsheets should be considered unstructured data.
+
+Unstructured data makes up over 85% of all business information, as estimated by Merrill Lynch (Atre & Blumberg, 2003). To make matters worse, the amount of unstructured data within companies is still growing. With e-mail and file services being the biggest contributors, more and more information is becoming available electronically and easy to share (Dorian, 2007). According to a study by the Aberdeen Group, a yearly increase in the amount of unstructured data generated throughout the organization was reported by 86% respondents (Aberdeen Group, 2009). As it comprises such a large percentage of business information, one would assume that management of unstructured data and unstructured data access would be a priority for most organizations. However, a survey developed by the Ponemon Institute and Varonis System Inc. indicates differently. According to this study, which surveyed 870 IT operations professionals, 91% of organizations do not have a process for establishing ownership of unstructured data. Further, 76% of respondents were not able to determine who can access unstructured data, while almost 70% felt that employees in their organization had unnecessary access to unstructured data. Lastly, 89% of respondents surveyed by the Ponemon Institute and Varonis acknowledged that controlling access to unstructured data is very difficult for their organization ([StorageNewsletter.com](http://StorageNewsletter.com), 2008).
+
+# Why Is Unstructured Data Access a Problem?
+
+The looming beast of unstructured data is a serious issue for companies from a legal standpoint. More specifically, businesses lacking control over unstructured data access may be ill prepared when it comes to legal discovery. In the event of a lawsuit, all related documents must be held as potential evidence. If there is no control over unstructured data in general, required documents may be difficult to find in the time allotted by the court (Dorian, 2007). Searching for documents may be challenging if it has not been determined who is responsible for the information. Further, “chain-of-custody” must be verified for any documents held during the litigation process (Murchison, 2009, 9). To verify chain-of-custody, a company must prove that the documents are authentic and are what they claim to be (p. 31). This means that there needs to be documented proof of when the documents were created, who created them, what was done with the documents, and who accessed or viewed the documents. Verifying chain-of-custody may prove to be nearly impossible with no control over unstructured data access. In addition to maintaining chain-of-custody, any retention policy mandated by the company will be difficult to enforce if it has not been determined who is accountable for maintaining the data. If the retention policy is not applied evenly, documents may be deleted prematurely or kept longer than the retention policy requires. Either of these situations will point to an inconsistent retention policy and could cause serious trouble for a company faced with providing documents in a court of law.
+
+Lack of control over unstructured data is also a problem for businesses when it comes to compliance. In light of today’s corporate compliance requirements, such as Sarbanes-Oxley, Payment Card Industry Act (PCI), and Health Insurance Portability and Accountability Act (HIPAA), many businesses must tighten controls on their processes and systems. This also involves tightening controls for systems that handle unstructured data. For example, the Sarbanes-Oxley Act requires strong access controls to ensure that financial information is not corrupted (Lambert, 2009). This includes strong access controls for financial systems, as well as for unstructured financial data. The (PCI) Data Security Standards also require strong access controls in order to ensure sufficient protection for customer credit card information (Burton et al., 2007). Most specifically, the PCI requirement 7.2 maintains that access to cardholder information must be denied for all employees unless access is absolutely needed for their job (Burton et al.). Like Sarbanes-Oxley, this rule applies not only to credit card systems, but to unstructured credit card data as well. Yet another act which requires tighter access controls around unstructured data is the Health Insurance Portability and Accountability Act (HIPAA). HIPAA sets security standards in order to maintain “confidentiality and integrity of individual health information” (Infotechadvisor, n.d.). These security standards require strong access control over any information systems that handle individual health information, including those that handle unstructured information, such as file systems (Infotechadvisor, n.d.). Without the ability to control unstructured data, a business will find any of these regulations difficult to comply with.
