@@ -1,0 +1,174 @@
+
+
+# BF 的代数运算与应用
+
+BF 也支持并集和交集代数运算。假设 `BF(X)` 和 `BF(Y)` 是使用相同大小的过滤器和哈希函数的两个 BF。那么 `BF(X)` 和 `BF(Y)` 之间的交集和并集运算如下：
+
+$$
+\begin{array}{l} {BF(A \cap B) = BF(A) \cap BF(B)} \\\\ \end{array}
+$$
+
+(10.3)
+
+$$
+\begin{array}{l} {BF(A \cup B) = BF(A) \cup BF(B)} \\\\ \end{array}
+$$
+
+(10.4)
+
+![FIGURE 10.3. Insertion in BF.](images/fig10_3.jpg)
+
+**FIGURE 10.3.**  
+
+Insertion in BF.
+
+![FIGURE 10.4. Lookup in BF.](images/fig10_4.jpg)
+
+**FIGURE 10.4.**  
+
+Lookup in BF.
+
+![FIGURE 10.5. Deletion in BF.](images/fig10_5.jpg)
+
+**FIGURE 10.5.**  
+
+Deletion in BF.
+
+## Applications of BF
+
+* Yahoo mail 使用 `BF` 来紧凑地表示用户联系人列表，以便它可以轻松地装入浏览器缓存内存中。使用 `BF` 避免了为了检查发件人的电子邮件地址是否已存在联系人列表中而往返后端服务器。
+
+* `BF` 被 youtube 利用，以确保为用户推荐的视频不与用户的观看历史记录匹配。
+
+* URL 缩短器使用 `BF` 以确保生成唯一的 URL。
+
+* Tinder 部署 `BF` 以过滤掉右滑的重复项。
+
+* Apache HBase、Postgress 数据库正在使用 `BF` 来检查特定记录是否存在，如果结果为正，则记录将从内存中获取。
+
+* Facebook 使用 `BF` 进行 one-hit-wonder。One-hit-wonder 用于获得大量流量的网站。它基本上检查只发生一次且不再发生的事件。因此，`BF` 可以用于探测特定网页是否之前被访问过。如果有人只访问一次网站，将不会提供太多内容和复杂的计算。在另一种情况下，如果有人更频繁地访问网站，将提供更多个性化内容。为了实现此过程，使用 `BF` 并将访问者与 `BF` 进行检查。如果结果为正，站点将提供昂贵的内容，如果结果为负，则提供缓存版本。
+
+* Quora 这个著名的问答平台使用 `BF` 来过滤掉用户之前看过的故事。
+
+* `BF` 支持拼写检查器。
+
+* `BF` 广泛用于不同节点之间的数据包转发和路由。
+
+* Bioinformatics \[[108](#bib.xhtml#ch00-bib-108)\]。
+
+* 通过将恶意 IP 地址的条目插入 `BF` 来防止 DDoS 攻击。\[[161](#bib.xhtml#ch00-bib-161)\]
+
+## False Positive Probability in BF:
+
+显然，误正率取决于过滤器中 1 的数量以及哈希函数的数量。
+
+元素传递给哈希函数并设置位的概率由 $\frac{1}{m}$ 给出，而不设置位（即发生误正的概率）由 Eq. 10.5 给出：
+
+$$
+\begin{array}{l} {P = 1 - \frac{1}{m}} \\\\ \end{array}
+$$
+
+(10.5)
+
+当元素通过 `k` 个哈希函数时，将元素映射到 `k` 个对应位置后，任意位未被设置的概率由 Eq. 10.6 给出：
+
+$$
+\begin{array}{l} {P = \left( {1 - \frac{1}{m}} \right)^{k}} \\\\ \end{array}
+$$
+
+(10.6)
+
+现在，对于 `n` 次插入，将元素通过 `k` 个哈希函数处理后，任意位未被设置的概率由 Eq. 10.7 给出：
+
+$$
+\begin{array}{l} {P = \left( {1 - \frac{1}{m}} \right)^{kn}} \\\\ \end{array}
+$$
+
+(10.7)
+
+尽管如此，当位被错误地设置为高电平时，就会发生误正率（FPR）。因此，任意位被设置的概率由 Eq. 10.8 给出：
+
+$$
+\begin{array}{l} {P = 1 - \left( {1 - \frac{1}{m}} \right)^{kn}} \\\\ \end{array}
+$$
+
+(10.8)
+
+新元素通过 `k` 个哈希函数。因此，对于 `k` 个哈希函数，Eq. 10.8 可以变形为 Eq. 10.9：
+
+$$
+\begin{array}{l} {P = \left( {1 - e^{\frac{- kn}{m}}} \right)^{k}} \\\\ \end{array}
+$$
+
+(10.9)
+
+从 Eq. 10.9 可以清楚地看出，FPR 是 `k`、`m` 和 `n` 的函数。增加元素总数并减小过滤器大小会导致 FPR 增加。然而，通过增加 `k`，FPR 会降低。不幸的是，增加 `k` 的值会增加系统的计算复杂度。另外，如果 `m` 的值设置为 ∞，误差率趋于 0，而如果 `m` 的值为 1，在这种情况下误差率趋于 0，这意味着 100% 的错误概率。为了获得最小 FPR，对于恒定的 `m` 和 `n`，最优的 `k` 值按 Eq. 10.10 计算。因此，对于给定的 `k`，`m` 需要随 `n` 线性增加以保持固定的 FPR。
+
+$$
+\begin{array}{l} {k_{opt} = ln(2)\frac{m}{n} = 0.7\frac{m}{n}} \\\\ \end{array}
+$$
+
+(10.10)
+
+此外，通过固定可接受的目标 FPR `(p)` 并利用最优的 `k` 值，可以计算过滤器大小 `m`：
+
+$$
+\begin{array}{l} {P = \left( {1 - e^{\frac{( - ln(2)\frac{m}{n})n}{m}}} \right)^{ln(2)\frac{m}{n}}} \\\\ \end{array}
+$$
+
+(10.11)
+
+这进一步导致：
+
+$$
+\begin{array}{l} {m = - \frac{nln(p)}{{(ln(2))}^{2}}} \\\\ \end{array}
+$$
+
+(10.12)
+
+因此，从 Eq. 10.12，可以计算每个元素所需的最优位数：
+
+$$
+\begin{array}{l} {\frac{m}{n} = - \frac{nln(p)}{ln2} \approx - 1.44{\log}_{2}p} \\\\ \end{array}
+$$
+
+(10.13)
+
+图 [Fig. 10.6](#13chap_10.xhtml#fig10_6) 展示了 10M 元素的 FPR 随过滤器大小的变化 \[[41](#bib.xhtml#ch00-bib-41)\]。可以观察到，随着过滤器大小的增加，误正率下降。对于单个哈希函数，要使 `p` 小于 0.01，过滤器大小需要是总元素大小的 100 倍，而选择 `k = 5` 可以在 100M 中提供相同的效果。
+
+![FIGURE 10.6. False positive rate vs. size of array \[41\].](images/fig10_6.jpg)
+
+**FIGURE 10.6.**  
+
+False positive rate vs. size of array \[[41](#bib.xhtml#ch00-bib-41)\].
+
+### [10.2.2 Implementation of BF in Python](#contents.xhtml#rsec10_2_2)
+
+![](images/list10_1.jpg)![](images/list10_2.jpg)![](images/list10_3.jpg)![](images/list10_4a.jpg)![](images/list10_4b.jpg)
+
+### [10.2.3 Variants of BF](#contents.xhtml#rsec10_2_3)
+
+一些流行的 BF 变体如下所述，它们的比较在 [Table 10.3](#13chap_10.xhtml#tab10_3) 中给出。
+
+**TABLE 10.2**  
+
+Case when 8 bits per elements are used for compression.
+
+| Array bits per element || $\frac{m}{n}$ || 8 || 14 || 92 |
+
+| --- | --- | --- | --- | --- |
+
+| Transmission bits per element || $\frac{z}{n}$ || 8 || 7.293 || 7.293 |
+
+| Hash function || k || 6 || 2 || 1 |
+
+| False positive rate || P || 0.0216 || 0.0177 || 0.0108 |
+
+`n`: data size, `m`: BFsize `k`: number of hash function, `z`: desired compressed size
+
+![](images/tab10_3.jpg)
+
+#### [10.2.3.1 Counting BF](#contents.xhtml#rsec10_2_3_1)
+
+如前所述，标准 BF 中的删除需要将位从 1 重置为 0，这可能导致发生误负，因为单个任意位可能表示多个元素。作为解决此问题的方案，作者在 \[[79](#bib.xhtml#ch00-bib-79)\] 中设计了计数 BF，用于在 Internet 上的各种代理之间交换与 Web 缓存相关的信息。
+
