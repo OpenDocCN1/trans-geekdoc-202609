@@ -1,0 +1,306 @@
+
+
+# I
+
+*   `International Organization for Standardization/ International Electrotechnical Commission (ISO/IEC)`, [18](#c01.xhtml#Page_18)
+
+*   `InterQuartile Range (IQR)`, [216](#c11.xhtml#Page_216)
+
+*   `inverse deduction (induction)`, [32](#c02.xhtml#Page_32)
+
+*   `IQR (InterQuartile Range)`, [216](#c11.xhtml#Page_216)
+
+*   `iRobot Roomba`, [39](#c03.xhtml#Page_39)
+
+*   `Ishiguro, Hiroshi`, [14](#c01.xhtml#Page_14)
+
+*   `ISO/IEC (International Organization for Standardization/ International Electrotechnical Commission)`, [18](#c01.xhtml#Page_18)
+
+*   `iterative feature selection`, [172](#c09.xhtml#Page_172)
+
+*   `iterators`, Python 
+
+    *   `generators`, [84](#c05.xhtml#Page_84)–85
+
+    *   `ranges`, [83](#c05.xhtml#Page_83)–84
+
+    *   `zip()` function, [84](#c05.xhtml#Page_84)
+
+*   `ITK package`, [343](#c17.xhtml#Page_343)
+
+## J
+
+*   `Java`, [19](#c01.xhtml#Page_19)
+
+*   `Jia, Y.`, [351](#c17.xhtml#Page_351)
+
+*   `Julia language`, [19](#c01.xhtml#Page_19)
+
+*   `Jupyter Notebook` 
+
+    *   `creating new`, [60](#c04.xhtml#Page_60)–62
+
+    *   `creating Python folder within`, [59](#c04.xhtml#Page_59)–60
+
+    *   `exporting`, [62](#c04.xhtml#Page_62)
+
+    *   `vs. Google Colab`, [90](#c06.xhtml#Page_90)–91
+
+    *   `importing`, [63](#c04.xhtml#Page_63)–64
+
+    *   `literate programming`, [51](#c04.xhtml#Page_51)–52
+
+    *   `removing`, [63](#c04.xhtml#Page_63)
+
+    *   `starting`, [57](#c04.xhtml#Page_57)–58
+
+    *   `stopping`, [59](#c04.xhtml#Page_59)
+
+## K
+
+*   `Kaggle`, [17](#c01.xhtml#Page_17)
+
+*   `Keras package`, [285](#c14.xhtml#Page_285)–289
+
+*   `kernel functions`, `SVMs`, [313](#c15.xhtml#Page_313)–316
+
+*   `kernel machines`, [34](#c02.xhtml#Page_34)
+
+*   `k-fold cross-validation`, [166](#c09.xhtml#Page_166)–167
+
+*   `K-means algorithm` 
+
+    *   `checking assumptions and expectations`, [226](#c12.xhtml#Page_226)–227
+
+    *   `clustering and`, [225](#c12.xhtml#Page_225)–226
+
+    *   `converging centroids`, [233](#c12.xhtml#Page_233)–237
+
+    *   `procedure`, [227](#c12.xhtml#Page_227)–229
+
+    *   `reliability`, [230](#c12.xhtml#Page_230)–233
+
+    *   `tuning`, [229](#c12.xhtml#Page_229)
+
+*   `KNN (K-Nearest Neighbors) algorithm`, [161](#c09.xhtml#Page_161), [175](#c10.xhtml#Page_175) 
+
+    *   `k parameter`, [238](#c12.xhtml#Page_238)–240
+
+    *   `recommender systems`, [240](#c12.xhtml#Page_240)
+
+*   `knowledge based recommendations`, [392](#c19.xhtml#Page_392)
+
+*   `knowledge representation`, [18](#c01.xhtml#Page_18)
+
+*   `Koizumi, Jun'Ichiro`, [357](#c17.xhtml#Page_357)
+
+## L
+
+*   `L1 (Lasso) regularization`, [262](#c13.xhtml#Page_262)–264
+
+*   `L2 (Ridge) regularization`, [262](#c13.xhtml#Page_262)–264
+
+*   `Labeled Faces in the Wild dataset`, [356](#c17.xhtml#Page_356)–360
+
+*   `Landon, Alfred`, [156](#c09.xhtml#Page_156)
+
+*   `Laplace correction`, [191](#c10.xhtml#Page_191)
+
+*   `Lasso (L1) regularization`, [262](#c13.xhtml#Page_262)–264
+
+*   `latent semantic indexing (LSI)`, [401](#c19.xhtml#Page_401)
+
+*   `law of large numbers`, [320](#c16.xhtml#Page_320)
+
+*   `leakage traps`, `sample data`, [173](#c09.xhtml#Page_173)–174
+
+*   `learning` 
+
+    *   `cost functions`, [145](#c08.xhtml#Page_145)–146
+
+    *   `error function`, [146](#c08.xhtml#Page_146)
+
+    *   `vs. intelligence`, [11](#c01.xhtml#Page_11)
+
+    *   `loss function`, [146](#c08.xhtml#Page_146)
+
+    *   `mapping`, [142](#c08.xhtml#Page_142)–145
+
+    *   `optimizing with big data`, [148](#c08.xhtml#Page_148)–151
+
+    *   `qualitative features`, [142](#c08.xhtml#Page_142)
+
+    *   `quantitative features`, [142](#c08.xhtml#Page_142)
+
+    *   `reinforcement learning`, [141](#c08.xhtml#Page_141)
+
+    *   `supervised learning`, [140](#c08.xhtml#Page_140)
+
+    *   `target function`, [143](#c08.xhtml#Page_143)
+
+    *   `unsupervised learning`, [141](#c08.xhtml#Page_141)
+
+*   `learning algorithms` 
+
+    *   `decision trees`, [180](#c10.xhtml#Page_180)–188
+
+    *   `evaluation`, [35](#c02.xhtml#Page_35)
+
+    *   `generalization`, [34](#c02.xhtml#Page_34)–35
+
+    *   `gradient descent algorithm`, [147](#c08.xhtml#Page_147)–148
+
+    *   `Naïve Bayes`, [188](#c10.xhtml#Page_188)–196
+
+    *   `optimization`, [35](#c02.xhtml#Page_35)
+
+    *   `optimizing with big data`, [149](#c08.xhtml#Page_149), [151](#c08.xhtml#Page_151)
+
+    *   `representation`, [35](#c02.xhtml#Page_35)
+
+*   `learning curves` 
+
+    *   `sample data`, [163](#c09.xhtml#Page_163)–164
+
+    *   `studying`, [408](#c20.xhtml#Page_408)
+
+*   `learning processors`, [41](#c03.xhtml#Page_41)–42
+
+*   `learning rate`, [179](#c10.xhtml#Page_179)
+
+*   `leave-one-out cross-validation (LOOCV)`, [167](#c09.xhtml#Page_167)
+
+*   `LeCun, Yan`, [296](#c14.xhtml#Page_296), [348](#c17.xhtml#Page_348)
+
+*   `Leibniz, Gottfried`, [10](#c01.xhtml#Page_10)
+
+*   `LIBSVM package`, [316](#c15.xhtml#Page_316)
+
+*   `LightGBM`, [336](#c16.xhtml#Page_336)
+
+*   `linear algorithms` 
+
+    *   `features`, [259](#c13.xhtml#Page_259)–264
+
+    *   `gradient descent optimization`, [264](#c13.xhtml#Page_264)–265
+
+    *   `overview`, [175](#c10.xhtml#Page_175)–176, [243](#c13.xhtml#Page_243)–244
+
+    *   `perceptron`, [176](#c10.xhtml#Page_176)–180
+
+    *   `probabilities`, [255](#c13.xhtml#Page_255)–259
+
+    *   `regression`, [244](#c13.xhtml#Page_244)–254
+
+    *   `stochastic gradient descent`, [265](#c13.xhtml#Page_265)–269
+
+*   `linear regression`, [159](#c09.xhtml#Page_159), [256](#c13.xhtml#Page_256)
+
+*   `link function`, [256](#c13.xhtml#Page_256)
+
+*   `lists`, `Python`, [79](#c05.xhtml#Page_79)–82 
+
+    *   `comprehensions`, [81](#c05.xhtml#Page_81)
+
+    *   `concatenation`, [81](#c05.xhtml#Page_81)
+
+    *   `defined`, [80](#c05.xhtml#Page_80)
+
+    *   `interacting with lists`, [81](#c05.xhtml#Page_81)–82
+
+    *   `overview`, [79](#c05.xhtml#Page_79)–80
+
+*   `Literary Digest` poll, [156](#c09.xhtml#Page_156)–157
+
+*   `literate programming`, [51](#c04.xhtml#Page_51)–52
+
+*   `local runtime support`, `Google Colab`, [91](#c06.xhtml#Page_91)
+
+*   `logical operators`, `Python`, [70](#c05.xhtml#Page_70)–71
+
+*   `logistic regression`, [256](#c13.xhtml#Page_256)–257
+
+*   `Long Short-Term Memories (LSTMs)`, [302](#c14.xhtml#Page_302), [363](#c18.xhtml#Page_363)
+
+*   `LOOCV (leave-one-out cross-validation)`, [167](#c09.xhtml#Page_167)
+
+*   `LSI (latent semantic indexing)`, [401](#c19.xhtml#Page_401)
+
+## M
+
+*   `Maas, Andrew`, [379](#c18.xhtml#Page_379)
+
+*   `machine efficiency`, [16](#c01.xhtml#Page_16)
+
+*   `machine learning` 
+
+    *   `access control`, [16](#c01.xhtml#Page_16)
+
+    *   `adaptation`, [41](#c03.xhtml#Page_41)
+
+    *   `vs. AI`, [8](#c01.xhtml#Page_8)
+
+    *   `analyzation`, [41](#c03.xhtml#Page_41)
+
+    *   `animal protection`, [16](#c01.xhtml#Page_16)
+
+    *   `artistic element to`, [19](#c01.xhtml#Page_19)–20
+
+    *   `automation`, [15](#c01.xhtml#Page_15)
+
+    *   `complex analysis`, [15](#c01.xhtml#Page_15)
+
+    *   `control`, [41](#c03.xhtml#Page_41)
+
+    *   `customer service`, [15](#c01.xhtml#Page_15)–16
+
+    *   `enrichment`, [41](#c03.xhtml#Page_41)
+
+    *   `fraud detection`, [15](#c01.xhtml#Page_15)
+
+    *   `future of`, [37](#c03.xhtml#Page_37)–45
+
+    *   `goals of`, [12](#c01.xhtml#Page_12)
+
+    *   `Graphical Processing Units`, [13](#c01.xhtml#Page_13)
+
+    *   `hardware limitations`, [12](#c01.xhtml#Page_12)–13
+
+    *   `history of`, [10](#c01.xhtml#Page_10)–11
+
+    *   `machine efficiency`, [16](#c01.xhtml#Page_16)
+
+    *   `optimization`, [41](#c03.xhtml#Page_41)
+
+    *   `predicting wait times`, [16](#c01.xhtml#Page_16)
+
+    *   `relationship between AI and`, [17](#c01.xhtml#Page_17)–18
+
+    *   `resource scheduling`, [15](#c01.xhtml#Page_15)
+
+    *   `safety systems`, [16](#c01.xhtml#Page_16)
+
+    *   `specifications`, [18](#c01.xhtml#Page_18)–19
+
+    *   `vs. statistics`, [12](#c01.xhtml#Page_12)
+
+*   `Macready, William`, [162](#c09.xhtml#Page_162)
+
+*   `Mahotas package`, [342](#c17.xhtml#Page_342)
+
+*   `Manhattan distance`, [224](#c12.xhtml#Page_224)
+
+*   `mapping` 
+
+    *   `complex mapping`, [160](#c09.xhtml#Page_160)–161
+
+    *   `learning`, [142](#c08.xhtml#Page_142)–145
+
+*   `margins`, `SVMs`, [310](#c15.xhtml#Page_310)
+
+*   `MarketsAndMarkets`, [39](#c03.xhtml#Page_39)
+
+*   `mathematical basis for machine learning` 
+
+    *   `data manipulation`, [118](#c07.xhtml#Page_118)–130
+

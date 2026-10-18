@@ -1,0 +1,38 @@
+
+![Remember](images/remember.png)Both the data that you use for the training phase and the data that you use for making new predictions using your trained model (the phase called testing), should share the exact same features you used during training or the predictions won’t work correctly.
+
+### Mapping an unknown function
+
+To give an idea of what happens in the training process, imagine a child learning to distinguish trees from other objects. Before the child can do so in an independent fashion, a teacher presents the child with a certain number of tree images, complete with all the facts that make a tree distinguishable from other objects of the world. Such facts could be features such as its material (wood), its parts (trunk, branches, leaves or needles, roots), and location (planted into the soil). The child produces an idea of what a tree looks like by contrasting the display of tree features with the images of other different objects, such as pieces of furniture that are made of wood but do not share other characteristics with a tree.
+
+A machine learning classifier works the same. It builds its cognitive capabilities by creating a mathematical formulation that includes all the given features in a way that creates a function that can distinguish one class from another. Pretend that a mathematical formulation, also called a `target function` (or an `objective function`), exists to express the characteristics of a tree. In such a case, a machine learning classifier can look for the representation of the target function as a replica or as an approximation (a different function that works alike). Being able to express such mathematical formulation is the representation capability of the classifier.
+
+![Remember](images/remember.png)From a mathematical perspective, you can express the representation process in machine learning using the equivalent term `mapping`. Mapping happens when you discover the construction of a function by observing its outputs. A successful mapping in machine learning is similar to a child internalizing the idea of an object. In this case, the child understands the abstract rules derived from the facts of the world in an effective way so that it’s possible to recognize a tree when seeing one.
+
+Such a representation (abstract rules derived from real-world facts) is possible because the learning algorithm has many internal parameters (constituted of vectors and matrices of values), which equate to the algorithm’s memory for ideas that are suitable for its mapping activity that connects features to response classes. The dimensions and type of internal parameters delimit the kind of target functions that an algorithm can learn. An optimization engine in the algorithm changes parameters from their initial values during learning to represent the target’s hidden function.
+
+During optimization, the algorithm searches among possible variants of its parameter combinations to find the best combination that allows correct mapping between features and classes during training. This process evaluates many potential candidate target functions from among those that the learning algorithm can guess. The set of all the potential functions the learning algorithm can evaluate is the `hypothesis space`. You can call the resulting classifier with all its set parameters a `hypothesis`, a way in machine learning to say that the algorithm has set parameters to replicate the target function and is now ready to work out correct classifications (a fact demonstrated later).
+
+![Remember](images/remember.png)The hypothesis space must contain all the parameter variants of all the machine learning algorithms that you want to try to map to an unknown function when solving a classification problem. Different algorithms can have different hypothesis spaces. What really matters is that the hypothesis space contains the target function (or its approximation, which is a different but similar function).
+
+You can imagine this phase as the time when a child, in an effort to figure out the idea of a tree, experiments with many different creative ideas by assembling knowledge and experiences (an analogy for the given features). Naturally, the parents are involved in this phase, and they provide relevant environmental inputs. In machine learning, someone has to provide the right learning algorithms, supply some nonlearnable parameters (called `hyper-parameters`), choose a set of examples to learn from, and select the features that accompany the examples. Just as a child can’t always learn to distinguish between right and wrong if left alone in the world, so machine learning algorithms need human beings to learn successfully.
+
+Even after completing the learning process, a machine learning classifier often can’t univocally map the examples to the target classification function because many false and erroneous mappings are also possible, as shown in [Figure 8-1](#c08.xhtml#c08-fig-0001). In many cases, the false and erroneous mappings occur because the algorithm lacks enough data points to discover the right function. `Noise`, erroneous or distorted examples, mixed with correct data can also cause problems, as shown in [Figure 8-2](#c08.xhtml#c08-fig-0002).
+
+![FIGURE 8-1: A lack of evidence makes it hard to map back to the target function.](images/9781119724018-fg0801.png)
+
+[FIGURE 8-1:](#c08.xhtml#rc08-fig-0001) A lack of evidence makes it hard to map back to the target function.
+
+![FIGURE 8-2: Noise can cause mismatches in the data points.](images/9781119724018-fg0802.png)
+
+[FIGURE 8-2:](#c08.xhtml#rc08-fig-0002) Noise can cause mismatches in the data points.
+
+![Remember](images/remember.png)Noise in real-world data is the norm. Many extraneous factors and errors that occur when recording data distort the values of the features. A good machine learning algorithm should distinguish the signals that can map back to the target function and ignore extraneous noise.
+
+### Exploring cost functions
+
+The driving force behind optimization in machine learning is the response from a function internal to the algorithm, called the `cost function`. You may see other terms used in some contexts, such as `loss function`, `objective function`, `scoring function`, or `error function`, but the cost function is an evaluation function that measures how well the machine learning algorithm maps the target function that it’s striving to guess. In addition, a cost function determines how well a machine learning algorithm performs in a supervised prediction or an unsupervised optimization problem (in this latter case, the cost function is not related to the target outcome but to the features themselves).
+
+The cost function works by comparing the algorithm predictions against the actual outcome recorded from the real world. Comparing a prediction against its real value using a cost function determines the algorithm’s error level. Because it’s a mathematical formulation, the cost function expresses the error level in a numerical form, a cost value that has to be minimized. The cost function transmits what is actually important and meaningful for your purposes to the learning algorithm. As a result, you must choose, or accurately define, the cost function based on an understanding of the problem you want to solve or the level of achievement you want to reach.
+
+As an example, when considering stock market forecasting, the cost function expresses the importance of avoiding incorrect predictions. In this case, you want to make money by avoiding big losses. In forecasting sales, the concern is different because you need to reduce the error in common and frequent situations, not in the rare and exceptional ones, so you use a different cost function.
