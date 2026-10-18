@@ -1,0 +1,13 @@
++   - H. Karimipour et al. stated that security threats and vulnerabilities in digital communication technology are addressed by using machine learning techniques for efficient and reliable power distribution. Symbolic dynamic filtering technique is used to reduce computational encumber in smart grids while discovering laid-back interactions among the nodes [10].
++   - Wei Wu et al. stated that unsupervised machine learning model is used for Bot detection during traffic analysis based on similarity measures. An efficient clustering algorithm is used to identify majority clusters with most flows, elimination of duplicate flows, and computation of similarity analysis [11].
++   - Ünal Çavuşoğlu et al. stated that hybrid and layered intrusion detection system uses a combination of various machine learning and feature selection techniques to provide high performance intrusion detection in different attack types [12].
++   - Sirisha Potluri et al. stated that fog computing network is designed for distributed and decentralized computing platform by using IoT infrastructure to send and receive the data. Various applications of fog computing includes e-commerce, mobile, agriculture, auto mobiles, smart grids, healthcare and data analytics [13].
++   - Mahmud et al. stated that fog-based IoT healthcare solution structure integrates cloud and fog based services in interoperable healthcare solutions. Using iFogSim simulator the results are analysed in view of distributed computing to show latency reduction, communication cost optimization and efficient energy consumption [14].
++   - Subramanian, E. et al. stated that with the aim of security and privacy to safeguard the cloud transactions, it is extremely necessary to provide a secure, safe and robust machine learning based solution across cloud vicinity. Various machine learning approaches such as linear regression, convolution neural network, and support vector machine provide enhanced cloud based solutions for ensuring security and privacy [15].
++   - Mbarek Marwan et al. stated that using support vector machines and fuzzy C-means clustering classification of image pixels can be done more efficiently. Using conventional two layered architecture, simultaneous image segmentation and data protection is achieved in medical image data [16].
+
+# 2 Machine Learning Based Cloud Solutions to Address Research Issues and Challenges
+
+# 2.1 Privacy and security aware safety measures
+
+Cloud computing environment make use of large amounts of datasets for storage and processing. On premise data storage, handling, processing is completely risk free. But if the data is getting saved in other places there is a greater risk involved in

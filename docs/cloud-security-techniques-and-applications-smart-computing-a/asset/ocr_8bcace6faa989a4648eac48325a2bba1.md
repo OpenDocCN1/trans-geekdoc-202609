@@ -1,0 +1,11 @@
+Srikanth Pothuri
+
+# Marketing analytics as a Service: Secure Cloud Based Automation Strategy
+
+**Abstract:** Efficient marketing strategies for business to business marketing (content, inbound, social media, SEO, SEM, account based, earned media, referral programs, industry events, conversational and step ahead as resolutions) and business to customer marketing (social network, paid media, internet, email, direct, point of purchase, cause, conversational, earned media and storytelling) are greatly heightened by using cloud based marketing automation solutions. Cloud governance ensure to meet business desires and needs through professional practices. Significant factors to ensure security in cloud marketing are embedded in each phase of marketing life cycle. Various cloud based secure marketing solutions are detailed and their performance is compared and illustrated in this work. To meet next generation marketing needs cloud based solutions are foremost preference for implementing efficient marketing strategies.
+
+**Keywords:** Customer Relationship Management, Cloud Marketing, Marketing analytics as a Service, Cloud Security, Cloud Privacy
+
+# 1 Introduction
+
+Cloud based efficient solutions in marketing, sales, promotion and CRM saves money by converting capital expenses or capital expense (CapEx) into operating expenses or operating expenditure (OpEx). Flexibility, availability and ease of use features of cloud based marketing automation suite provides public cloud services based on pay as you use model to avoid investing on servers, storage devices and other computing infrastructure. For storing sensitive data, maintaining greater flexibility, security, privacy and control, the private cloud offers necessary business solutions. Hybrid cloud aimed at combining public and private clouds to meet the business objectives. To bring business groups or organizations together which are having common business interest, concern or goal in order to share CapEx and OpEx and observe reduced costs, community cloud is an abundant choice [1-3]. Various categories of clouds which are available to meet business objectives of diverse forms of organizations is given in fig. 1.

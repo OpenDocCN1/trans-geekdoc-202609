@@ -1,0 +1,3 @@
+# Acknowledgement
+
+The editors would like to acknowledge and pass on good wishes and show appreciation to all the authors for contributing their chapters. We would also like to thank the subject matter experts who could find their time to review the chapters and deliver those in time. Our special thanks to the people who gave their time to advice and suggest in refining our thoughts and approaches accordingly to produce richer contributions. We are particularly grateful to the Walter de Gruyter GmbH publishers for their amazing crew to support us in all ways of encouragement, engagement, support, cooperation and contribution to publish this book.

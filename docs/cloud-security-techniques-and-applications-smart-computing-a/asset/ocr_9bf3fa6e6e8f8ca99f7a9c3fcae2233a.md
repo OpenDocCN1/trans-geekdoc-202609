@@ -1,0 +1,11 @@
+# # 8 Secure Cloud Manufacturing Models
+
+Table 1 is showing the analysis of secure cloud manufacturing models.
+
+**Tab. 1: Secure cloud manufacturing models**
+
+| S.No | Authors | Secure cloud manufacturing model and its key practices |
+|---|---|---|
+| 1 | Carsten Ellwein, Oliver Riedel, Olga Meyer, Daniel Schel [19] | The manufacturing process observe frequent changes due latest current trends and technologies of digitalization such as IoT, cloud computing and data analytics. Cloud manufacturing model does influence product production and manufacturing life cycle. **Key practices:**<br>1. Digitalization<br>2. Industrial Internet of Things<br>3. Cloud manufacturing<br>4. Secure technology stack<br>5. Service-oriented architecture for modular computing<br>6. Secured rent and produce (RnP) as a service<br>7. Integrated computer aided manufacturing<br>8. Computerized numerical control |
+| 2 | Zhi Li, Ali Vatankhah Barenji, George Q. Huang [20] | New evolving manufacturing prototypes such as cloud based manufacturing, IoT facilitated manufacturing and service-oriented architecture, have observed many benefits to the manufacturing industry. **Key practices:**<br>1. Distributed network for cloud manufacturing<br>2. Blockchain technology to ensure security<br>3. Secure data sharing<br>4. IoT enabled manufacturing and service-oriented manufacturing<br>5. Distributed peer to peer network architecture to preserve security and privacy in cloud manufacturing (CMfg)<br>6. Blockchain based cloud manufacturing (BCmfg) allows secure data sharing<br>7. Five layer integrated model is proposed to achieve more security and scalability |
+| 3 | Christian Esposito, Aniello Castiglione, Ben Martini, Kim-Kwang Raymond Choo [21] | Smart manufacturing upturns effectiveness and competence through interconnection and collaboration among organizations or among physical/logical/human resources within a single company. Latest improvements due to industry 4.0 supports collaboration, integration and cooperation among the organization for better |

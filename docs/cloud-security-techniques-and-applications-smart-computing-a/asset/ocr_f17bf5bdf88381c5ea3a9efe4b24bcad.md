@@ -1,0 +1,17 @@
+# 14 References
+
++   [1] Rajkumar B, Chee Y, Srikumar V, James B, Ivona B, Cloud computing and emerging IT platforms: vision, hype, and reality for delivering computing as the 5th utility, Future Generation Computer Systems, 2009, Volume 25, Issue 6, Pages 599-616, ISSN 0167-739X, https://doi.org/10.1016/j.future.2008.12.001
++   [2] Peter M, Timothy G, The NIST definition of cloud computing, National Institute of Standards and Technology: Special Publication (NIST SP), 800-145, 2011
++   [3] Al-Issa Y, Ashraf O, Tamrawi A, eHealth cloud security challenges: a survey, Journal of Healthcare Engineering, 2019, vol. 2019, Article ID 7516035, 15 pages, https://doi.org/10.1155/2019/7516035
++   [4] Harika K, Manisha G, Potluri S, An IoT based solution for health monitoring using a body-worn sensor enabled device, Journal of Advanced Research in Dynamical and Control Systems (JARDCS), 2018, Volume 10, Issue 9, PP: 646-651, ISSN 1943-023X
++   [5] Potluri S, Avinash M, Health record data analysis using wireless wearable technology device, Journal of Advanced Research in Dynamical and Control Systems (JARDCS), 2018, Volume 10, Issue 9, PP: 696-701, ISSN 1943-023X
++   [6] Avinash M, Potluri S, A study on technologies in cloud-based design and manufacturing, International Journal of Mechanical and Production Engineering Research and Development (IJMPERD), 2018, Volume 8, Issue 6, PP: 187-192, ISSN(P): 2249-6890, ISSN(E): 2249-8001
++   [7] Potluri S, Achyuth S, Elham T, Mohanty S N, IOT enabled cloud based healthcare system using fog computing: a case study, Journal of Critical Reviews, 2020, ISSN- 2394-5125, Vol 7, Issue 6, PP: 1068-1072, doi: 10.31838/jcr.07.06.186
++   [8] Goyal S, Public vs private vs hybrid vs community - cloud computing: a critical review, International Journal of Computer Network and Information Security, 2014, 6, 20-29
++   [9] Jansen W, Grance T, Guidelines on security and privacy in public cloud computing, NIST Special Publication, 2011, 800-144, pp. 5.
++   [10] Koufi V, Malamateniou F, Vassilakopoulos G, Ubiquitous access to cloud emergency medical services, Proceedings of the 10th IEEE International Conference on Information Technology and Applications in Biomedicine, Corfu, Greece, 2010, pp. 1-4, doi: 10.1109/ITAB.2010.5687702
++   [11] Haider W, Iqbal W, Bokhari S, Bukhari F, On providing response time guarantees to a cloud-hosted telemedicine web service, Zhang Y, Peng L, Youn CH, Cloud Computing, CloudComp 2015, Lecture Notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering, 2015, vol 167, Springer, Cham, https://doi.org/10.1007/978-3-319-38904-2_24
++   [12] Risso A, Neyem A, Benedetto J, Carrillo M, Farías A, Gajardo M, Loyola O, A cloud-based mobile system to improve respiratory therapy services at home, J Biomed Inform, 2016, 63, 45-53, doi: 10.1016/j.jbi.2016.07.006
++   [13] Navimipour J, Navin H, Rahmani M, Hosseinzadeh M, Behavioral modeling and automated verification of a cloud-based framework to share the knowledge and skills of human resources, Computers in Industry, 2015, 68, 65–77
++   [14] Neghabi A, Navimipour J, Hosseinzadeh M, Rezaee A, Load balancing mechanisms in the software defined networks: a systematic and comprehensive review of the literature, IEEE Access, 2018, 6, 14159–14178
++   [15] Akinsanya, Opeoluwa O, Papadaki M, Sun L, Current cybersecurity maturity models: how effective in healthcare cloud?, CERC (2019)
