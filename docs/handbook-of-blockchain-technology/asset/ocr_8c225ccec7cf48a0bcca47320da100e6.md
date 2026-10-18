@@ -1,0 +1,19 @@
+data such as usual driving routes, typical charging times, and preferred charging locations. These profiles aid in crafting personalized strategies for energy trading and consumption.
+
++   Variable 4 – Personalized Charging Schedules: Derived from the data in user profiles, these schedules provide individualized plans for charging each user’s EV. They consider each user’s typical usage patterns and energy requirements, helping to optimize the timing of charging and discharging events and thereby enhancing overall grid efficiency.
+
++   Variable 5 – Bi-directional P2P Energy Trading: This variable refers to the process where users trade energy in a P2P network facilitated by blockchain. Depending on users’ needs and the state of their EV’s battery, users can consume energy from or supply energy to the grid. The blockchain platform ensures the transparency and security of these transactions.
+
++   Variable 6 – Primary Energy Generation: This represents the energy derived from traditional and renewable sources, such as wind turbines, solar panels, or hydroelectric power. This energy complements the supply from EVs, especially during times of peak demand or when EV-generated energy is insufficient. It can be integrated into the grid and distributed as needed.
+
++   Variable 7 – EV Energy Generation: Refers to the surplus energy produced by EVs that can be supplied back to the grid. As part of the bi-directional energy trading model, EVs function as decentralized energy sources. In doing so, they enhance grid flexibility and stability by providing additional power supply.
+
++   Variable 8 – Energy Consumption: This represents the total amount of energy each EV user consumes. Factors like driving distance, driving style, and auxiliary energy usage (e.g., air conditioning, lights) can influence an EV’s energy consumption. Monitoring and managing this variable is crucial for effective DRM.
+
++   Variable 9 – Privacy: This variable encapsulates the degree to which the system safeguards users’ private information. Blockchain technology ensures privacy through cryptography and allows transaction transparency while keeping users identities anonymous, thus securing sensitive data.
+
++   Variable 10 – DRM: This is the dependent variable and refers to the overall effectiveness of the DRM framework. It represents how efficiently and smoothly the system can balance energy supply and demand, optimize energy consumption, incentivize user participation, and maintain user privacy. The impact of the independent variables (1-9) on this dependent variable will be the primary focus of the evaluation.
+
+Variables 1 through to 9 are identified as independent variables, and it’s proposed that their collective interaction significantly influences the dependent variable, namely, Variable 10 – DRM. These variables interplay to form a complex system, their connections underscoring their importance in formulating an efficient DRM model (Figure 16.2).
+
+The components of the conceptual model and their relationships contribute to a more thorough understanding of DRM within the context of IoV. It is anticipated that the proposed implementation of tokenized incentives will improve user participation in DR activities. When users receive rewards, they may be more motivated to participate in projects such as bi-directional P2P energy trading, hence increasing the efficacy of digital rights management. The model also emphasizes the relationship between DRM effectiveness and token distribution transparency. The openness of the token distribution procedure can affect a user’s willingness to participate and, consequently, their degree of trust. The inclusion of blockchain

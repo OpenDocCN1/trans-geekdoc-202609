@@ -1,0 +1,13 @@
+Recall that the second way a virus scanner works is to watch for certain types of behaviors that are typical of viruses. This might include any program that attempts to write to your hard drive’s boot sector, change system files, automate your email software, or self-multiply. Programs that attempt to modify the system Registry (for Windows systems) or alter any system settings may also indicate virus infection.
+
+Another feature that virus scanners search for is a file that will stay in memory after it executes. This is called a *terminate and stay resident (TSR)* program. Some legitimate programs do this, but such activity is often a sign of a virus. Additionally, some virus scanners use more sophisticated methods, such as scanning your system files and monitoring any programs that attempt to modify those files.
+
+Whatever the behavior, antivirus software uses specific algorithms to evaluate the likelihood that a given file is actually a virus. It should be noted that modern virus scanners scan for all forms of malware, including Trojan horses, spyware, and viruses.
+
+There is a third method, called *heuristic scanning*, which basically involves examining a file and is similar to signature scanning. However, with *heuristic scanning*, the file need not exactly match the signature. *Heuristics* refers to functions that rank various alternatives using a branching step in the algorithm. So, a heuristic scan checks for the likelihood of a given file being a virus, based on file characteristics rather than behavior.
+
+It is important to differentiate between on-demand virus scanning and ongoing scanners. An *ongoing virus scanner* runs in the background and is constantly checking the PC for any sign of a virus. *On-demand virus scanners* run only when you launch them. Many modern antivirus scanners offer both options.
+
+Keep in mind that any antivirus program will yield some false positives and some false negatives. A false positive occurs when the virus scanner detects a given file as a virus when in fact it is not. For example, a legitimate program may edit a Registry key or interact with your email address book. A false negative occurs when a virus is falsely believed to be a legitimate program.
+
+Due to false positives, it is recommended that you not set your antivirus to automatically delete suspected viruses. Rather, they should be quarantined and the computer user notified.

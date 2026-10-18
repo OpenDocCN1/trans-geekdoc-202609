@@ -1,0 +1,74 @@
+
+# 参考文献列表
+
+Raisch, S., & Krakowski, S. (2021). Artificial intelligence and management: The automation augmentation paradox. Academy of Management Review, 46(1), 192–210. [10.5465/amr.2018.0072](http://dx.doi.org/10.5465/amr.2018.0072)
+
+Ramanathan, V. & Thirunavukkarasu, Meyyappan. (2019). Twitter Text Mining for Sentiment Analysis on People’s Feedback about Oman Tourism. In 4th MEC International Conference on Big Data and Smart City (pp. 1-5). IEEE. [10.1109/ICBDSC.2019.8645596](http://dx.doi.org/10.1109/ICBDSC.2019.8645596)
+
+Ramdi, I. (2021). La technologie digitale et la profession d’audit: Quel impact?. International Journal of Accounting, Finance, Auditing, Management and Economics, 2(6-1), 126-144.
+
+Rammer, C., & Es-Sadki, N. (2023). Using big data for generating firm-level innovation indicators—A literature review. Technological Forecasting and Social Change, 197, 122874. [10.1016/j.techfore.2023.122874](http://dx.doi.org/10.1016/j.techfore.2023.122874)
+
+Ramos, C., & Pavhlichenko, I. (2022). Creating Agile Organizations: A Systemic Approach. Addison-Wesley Professional.
+
+Ranaweera, H. M. B. P. (2016). Perspective of trust towards e-government initiatives in Sri Lanka. SpringerPlus, 5(1), 22. [10.1186/s40064\-015\-1650-y](http://dx.doi.org/10.1186/s40064-015-1650-y)
+
+Rancati, G., & Maggioni, I. (2023). Neurophysiological responses to robot–human interactions in retail stores. Journal of Services Marketing, 37(3), 261–275. [10.1108/JSM\-04\-2021-0126](http://dx.doi.org/10.1108/JSM-04-2021-0126)
+
+Rane, N., Choudhary, S., & Rane, J. (2023). Education 4.0 and 5.0: Integrating Artificial Intelligence (AI) for personalized and adaptive learning. Available at SSRN 4638365. [10.2139/ssrn.4638365](http://dx.doi.org/10.2139/ssrn.4638365)
+
+Rangaswamy, A., Moch, N., Felten, C., van Bruggen, G., Wieringa, J. E., & Wirtz, J. (2020). The role of marketing in digital business platforms. Journal of Interactive Marketing, 51(August), 72–90. [10.1016/j.intmar.2020.04.006](http://dx.doi.org/10.1016/j.intmar.2020.04.006)
+
+Rasool, A., Shah, F. A., & Tanveer, M. (2021). Relational dynamics between customer engagement, brand experience, and customer loyalty: An empirical investigation. Journal of Internet Commerce, 20(3), 273–292. [10.1080/15332861.2021.1889818](http://dx.doi.org/10.1080/15332861.2021.1889818)
+
+Rathod, H. D., Rajawat, D., Ahmed, M., Dagur, Y., & Rajpurohit, K. (2024). A Study to Know Impact of AI on CRM. Interantional Journal Of Scientific Research In Engineering And Management, 08(02), 1–13. [10.55041/IJSREM31253](http://dx.doi.org/10.55041/IJSREM31253)
+
+Rauschnabel, P. A., Babin, B. J., tom Dieck, M. C., Krey, N., & Jung, T. (2022). What is augmented reality marketing? Its definition, complexity, and future. Journal of Business Research, 142, 1140-1150. Scopus. [10.1016/j.jbusres.2021.12.084](http://dx.doi.org/10.1016/j.jbusres.2021.12.084)
+
+Rauschnabel, P. A., Felix, R., & Hinsch, C. (2019). Augmented reality marketing : How mobile AR-apps can improve brands through inspiration. Journal of Retailing and Consumer Services, 49, 43–53. [10.1016/j.jretconser.2019.03.004](http://dx.doi.org/10.1016/j.jretconser.2019.03.004)
+
+Ravi, S., & Rajasekaran, S. R. C. (2023). A PERSPECTIVE OF DIGITAL MARKETING IN RURAL AREAS: A LITERATURE REVIEW. International Journal of Professional Business Review, 8(4), e01388. [10.26668/businessreview/2023.v8i4.1388](http://dx.doi.org/10.26668/businessreview/2023.v8i4.1388)
+
+Rawnaque, F. S., Rahman, K. M., Anwar, S. F., Vaidyanathan, R., Chau, T., Sarker, F., & Mamun, K. A. A. (2020). Technological advancements and opportunities in Neuromarketing: A systematic review. Brain Informatics, 7(1), 10. [10.1186/s40708\-020\-00109-x](http://dx.doi.org/10.1186/s40708-020-00109-x)
+
+Rehman, M., & Esichaikul, V. (2011). Factors influencing the adoption of e-government in Pakistan. 2011 International Conference on E\-Business and E\-Government (ICEE), (pp. 1-4). IEEE. [https://ieeexplore.ieee.org/abstract/document/5887093/](https://ieeexplore.ieee.org/abstract/document/5887093/)
+
+Reichheld, F. F., & Schefter, P. (2000). E-loyalty: Your secret weapon on the web. Harvard Business Review, 78(4), 105–113.
+
+Reinartz, W., Thomas, J. S., & Kumar, V. (2005). Balancing acquisition and retention resources to maximize customer profitability. Journal of Marketing, 69(1), 63–79. [10.1509/jmkg.69.1.63.55511](http://dx.doi.org/10.1509/jmkg.69.1.63.55511)
+
+Reza Kiani, G. (1998). Marketing opportunities in the digital world. Internet Research, 8(2), 185–194. [10.1108/10662249810211656](http://dx.doi.org/10.1108/10662249810211656)
+
+Rick, S. I., Cryder, C. E., & Loewenstein, G. (2008). Tightwads and spendthrifts. The Journal of Consumer Research, 34(6), 767–782. [10.1086/523285](http://dx.doi.org/10.1086/523285)
+
+Rieunier, S. (2017). Marketing Sensoriel Et Expérientiel Du Point De Vente (5^(ème) Édition). DUNOD.
+
+Ritzer, G. (1999). 15 Assessing the Resistance. Resisting McDonaldization, 234.
+
+Roederer, C., & Et Filser, M. (2015). Marketing Expérientiel: Vers Un Marketing De La Cocréation. 176. Consulté À L’adresse. Https://Books.Google.Fr/Books?Id=Yljjcwaaqbaj
+
+Roederer, C. (2012). Contribution A La Conceptualisation De L’expérience De Consommation: Emergence Des Dimensions De L’expérience Au Travers De Récits De Vie. \[French Edition\]. Recherche et Applications en Marketing, 27(3), 81–96. [10.1177/076737011202700304](http://dx.doi.org/10.1177/076737011202700304)
+
+Rogers Everett, M. (1995). Diffusion of innovations.
+
+Roggeveen, A. L., & Sethuraman, R. (2020). Customer-Interfacing Retail Technologies In 2020 Et Beyond: An Integrative Framework And Research Directions. Journal of Retailing, 96(3), 299–309. [10.1016/j.jretai.2020.08.001](http://dx.doi.org/10.1016/j.jretai.2020.08.001)
+
+Rohm, A., Sultan, F., Pagani, M., & Gao, T. (2012). Brand in the hand: A cross-market investigation of consumer acceptance of mobile marketing. Business Horizons, 55(5), 485–493. [10.1016/j.bushor.2012.05.004](http://dx.doi.org/10.1016/j.bushor.2012.05.004)
+
+Roman, B., & Tchibozo, A. (2017). Transformer la banque: stratégies bancaires à l’ère digitale. Dunod.
+
+Rosário, A. T., & Dias, J. C. (2023). How has data-driven marketing evolved : Challenges and opportunities with emerging technologies. International Journal of Information Management Data Insights, 3(2), 100203. [10.1016/j.jjimei.2023.100203](http://dx.doi.org/10.1016/j.jjimei.2023.100203)
+
+Rose, S., Hair, N., & Clark, M. (2011). Online Customer Experience: A Review Of The Business-To-Consumer Online Purchase Context. International Journal of Management Reviews, 13(1), 24–39. [10.1111/j.1468\-2370.2010.00280.x](http://dx.doi.org/10.1111/j.1468-2370.2010.00280.x)
+
+Rowley, J., & Slack, F. (2004). Conducting a literature review. Management Research News, 27(6), 31–39. [10.1108/01409170410784185](http://dx.doi.org/10.1108/01409170410784185)
+
+Roy, S. K., Balaji, M. S., Quazi, A., & Quaddus, M. (2018). Predictors Of Customer Acceptance Of And Resistance To Smart Technologies In The Retail Sector. Journal Of Retailing And Consumer Services, 42, 147-160. \[REMOVED HYPERLINK FIELD\]
+
+Roy, S. K., Gruner, R. L., & Guo, J. (2020). Exploring Customer Experience, Commitment, And Engagement Behaviours. J. Strat. Market. 1–24. [Https://Doi.Org/10.1080/0965254X](Https://Doi.Org/10.1080/0965254X).2019.1642937.
+
+Royo-Vela, M., & Varga, Á. (2022). Unveiling Neuromarketing and Its Research Methodology. Encyclopedia, 2(2), 729–751. [10.3390/encyclopedia2020051](http://dx.doi.org/10.3390/encyclopedia2020051)
+
+Roy, S. K., Balaji, M. S., Soutar, G., & Jiang, Y. (2020). The Antecedents and Consequences of Value Co-Creation Behaviors in a Hotel Setting: A Two-Country Study. Cornell Hospitality Quarterly, 61(3), 353–368. [10.1177/1938965519890572](http://dx.doi.org/10.1177/1938965519890572)
+
+Rubin, K. S. (2012). Essential Scrum: A Practical Guide To The Most Popular Agile Process. Addison-Wesley.

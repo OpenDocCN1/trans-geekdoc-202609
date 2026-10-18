@@ -1,0 +1,212 @@
+
+
+* `revenue`, [57](#c03.xhtml#Page_57)
+
+* `AI-as-a-service`, [104](#c04.xhtml#Page_104)
+
+* `Alzheimer’s disease (AD)`, [208](#c09.xhtml#Page_208)–210
+
+    * prediction of, [215](#c09.xhtml#Page_215), [217](#c09.xhtml#Page_217)–220
+
+    * various algorithms on detection of, [225](#c09.xhtml#Page_225)
+
+* `Alzheimer’s disease neuroimaging initiative (ADNI)`, [121](#c05.xhtml#Page_121)
+
+* `Analytical techniques`, [356](#c15.xhtml#Page_356)
+
+* `Artificial intelligence (AI)`, [7](#c01.xhtml#Page_7), [113](#c05.xhtml#Page_113)–124, [129](#c06.xhtml#Page_129), [235](#c10.xhtml#Page_235), [324](#c13.xhtml#Page_324), [338](#c14.xhtml#Page_338), [344](#c14.xhtml#Page_344)
+
+* `Artificial neural network (ANN)`, [114](#c05.xhtml#Page_114), [119](#c05.xhtml#Page_119)–120, [122](#c05.xhtml#Page_122), [124](#c05.xhtml#Page_124)
+
+* `Artificial neural network algorithms`, [83](#c04.xhtml#Page_83)
+
+* `Association rule learning algorithm`, [82](#c04.xhtml#Page_82)
+
+* `Auto-encoders`, [191](#c08.xhtml#Page_191)
+
+* `Bayesian algorithms`, [81](#c04.xhtml#Page_81)
+
+* `Big data`, [235](#c10.xhtml#Page_235), [245](#c10.xhtml#Page_245), [309](#c12.xhtml#Page_309)–311, [313](#c13.xhtml#Page_313)–318, [320](#c13.xhtml#Page_320)–322
+
+    * `value`, [353](#c15.xhtml#Page_353)
+
+    * `variety`, [353](#c15.xhtml#Page_353)
+
+    * `velocity`, [353](#c15.xhtml#Page_353)
+
+    * `veracity`, [353](#c15.xhtml#Page_353)
+
+    * `volume`, [353](#c15.xhtml#Page_353)
+
+* `Big data in healthcare`, [354](#c15.xhtml#Page_354)
+
+* `BIOCARD datasets`, [220](#c09.xhtml#Page_220), [224](#c09.xhtml#Page_224)
+
+* `Blessed orientation-memory-concentration test`, [135](#c06.xhtml#Page_135)
+
+* `Body sensor network (BSN)`, [113](#c05.xhtml#Page_113)
+
+* `Brain-computer interfaces (BCIs)`, [184](#c08.xhtml#Page_184)–185, [223](#c09.xhtml#Page_223)
+
+* `Business intelligence`, [103](#c04.xhtml#Page_103)
+
+* `Campbell`, [184](#c08.xhtml#Page_184)
+
+* `Capital asset pricing model`, [243](#c10.xhtml#Page_243)
+
+* `Cardiovascular illnesses`, [141](#c06.xhtml#Page_141)
+
+* `Central nervous system (CNS)`, [189](#c08.xhtml#Page_189)
+
+* `Challenges of multi-criteria recommender system`, [58](#c03.xhtml#Page_58)
+
+    * `cold start problem`, [59](#c03.xhtml#Page_59)
+
+    * `diversity`, [59](#c03.xhtml#Page_59)
+
+    * `gray sheep`, [60](#c03.xhtml#Page_60)
+
+    * `over specialization problem`, [59](#c03.xhtml#Page_59)
+
+    * `privacy`, [60](#c03.xhtml#Page_60)
+
+    * `scalability`, [59](#c03.xhtml#Page_59)
+
+    * `serendipity`, [59](#c03.xhtml#Page_59)
+
+    * `shilling attack`, [60](#c03.xhtml#Page_60)
+
+    * `sparsity problem`, [59](#c03.xhtml#Page_59)
+
+* `Chatbot`, [9](#c01.xhtml#Page_9)
+
+* `Chatbots and smart personal assistants`, [103](#c04.xhtml#Page_103)
+
+* `City administration`, [310](#c12.xhtml#Page_310), [311](#c13.xhtml#Page_311)
+
+* `City governance`, [309](#c12.xhtml#Page_309)–311, [313](#c13.xhtml#Page_313), [315](#c13.xhtml#Page_315)–321
+
+* `Cleaning`, [358](#c15.xhtml#Page_358)
+
+* `Clinical operations`, [356](#c15.xhtml#Page_356)
+
+* `Cloud computing`, [365](#c16.xhtml#Page_365)
+
+* `Cloudlet`, [324](#c13.xhtml#Page_324), [327](#c14.xhtml#Page_327), [335](#c14.xhtml#Page_335)
+
+* `Cloudsim`, [334](#c14.xhtml#Page_334)–335, [337](#c14.xhtml#Page_337)
+
+* `Cluster computing`, [347](#c14.xhtml#Page_347), [330](#c14.xhtml#Page_330)
+
+* `Clustering algorithms`, [20](#c02.xhtml#Page_20), [82](#c04.xhtml#Page_82)
+
+* `CNN-based method`, [215](#c09.xhtml#Page_215), [217](#c09.xhtml#Page_217)
+
+* `Coca-cola`, [183](#c08.xhtml#Page_183), [184](#c08.xhtml#Page_184)
+
+* `Cognitive cloud`, [102](#c04.xhtml#Page_102)
+
+* `Common spatial patterns (CSPs)`, [190](#c08.xhtml#Page_190)
+
+* `Comparison among different methods`, [42](#c03.xhtml#Page_42)
+
+    * `Musto, Gemmis, Semeraro, and Lops proposed a MCRS exploiting aspect-based sentiment analysis`, [42](#c03.xhtml#Page_42)–46
+
+    * `Tallapally, Sreepada, Patra, and Babu proposed an approach on user preference learning in multi-criteria recommendation using stacked autoencoders`, [46](#c03.xhtml#Page_46)–49
+
+    * `Wasid and Ali proposed an approach based on multi-criteria clustering approach`, [53](#c03.xhtml#Page_53)–54
+
+    * `Zheng proposed an approach on situation-aware multi-criteria recommender system: using criteria preferences as contexts`, [49](#c03.xhtml#Page_49)–51
+
+    * `Zheng proposed another approach on utility-based multi-criteria recommender systems`, [51](#c03.xhtml#Page_51)–52
+
+* `Computed tomography`, [133](#c06.xhtml#Page_133)
+
+* `Computer-assisted language learning (CALL)`, [5](#c01.xhtml#Page_5)
+
+* `Computer vision (CV)`, [117](#c05.xhtml#Page_117), [121](#c05.xhtml#Page_121), [191](#c08.xhtml#Page_191)
+
+* `Contractive slab and spike convolutional deep Boltzmann machine`, [218](#c09.xhtml#Page_218)–219
+
+* `Convolutional neural network (CNN)`, [85](#c04.xhtml#Page_85), [120](#c05.xhtml#Page_120)–121, [134](#c06.xhtml#Page_134), [152](#c07.xhtml#Page_152)–159, [191](#c08.xhtml#Page_191)–195, [212](#c09.xhtml#Page_212)–213, [232](#c10.xhtml#Page_232), [237](#c10.xhtml#Page_237), [241](#c10.xhtml#Page_241), [242](#c10.xhtml#Page_242), [250](#c10.xhtml#Page_250), [251](#c10.xhtml#Page_251)
+
+    * `backpropagation`, [154](#c07.xhtml#Page_154)
+
+    * `fully connected neural network (FNN)`, [153](#c07.xhtml#Page_153)
+
+    * `mini-batch gradient descent (MBGD)`, [154](#c07.xhtml#Page_154)
+
+    * `stochastic gradient descent`, [154](#c07.xhtml#Page_154)
+
+* `Cyber physical systems`, [366](#c16.xhtml#Page_366)
+
+* `Data analytics`, [310](#c12.xhtml#Page_310), [317](#c13.xhtml#Page_317)
+
+* `Data breach achieved`, [305](#c12.xhtml#Page_305)
+
+* `Data breaches`, [304](#c12.xhtml#Page_304)
+
+* `Data quality`, [358](#c15.xhtml#Page_358)
+
+* `Data security`, [358](#c15.xhtml#Page_358)
+
+* `DEAP database`, [195](#c08.xhtml#Page_195), [196](#c08.xhtml#Page_196)–198
+
+* `Decision tree`, [20](#c02.xhtml#Page_20), [22](#c02.xhtml#Page_22), [28](#c02.xhtml#Page_28), [30](#c02.xhtml#Page_30), [31](#c02.xhtml#Page_31), [114](#c05.xhtml#Page_114)
+
+* `Decision tree algorithms`, [81](#c04.xhtml#Page_81)
+
+* `Deep belief network (DBN)`, [174](#c07.xhtml#Page_174), [175](#c07.xhtml#Page_175)–177
+
+    * `restricted Boltzmann machine (RBM)`, [175](#c07.xhtml#Page_175)
+
+* `Deep brain stimulation (DBS)`, [208](#c09.xhtml#Page_208)
+
+    * `detection of attacks on`, [223](#c09.xhtml#Page_223)
+
+* `Deep brief network (DBN)`, [190](#c08.xhtml#Page_190)
+
+* `Deep learning (DL)`, [115](#c05.xhtml#Page_115), [117](#c05.xhtml#Page_117), [122](#c05.xhtml#Page_122), [152](#c07.xhtml#Page_152), [191](#c08.xhtml#Page_191)–195
+
+* `Deep learning algorithms`, [84](#c04.xhtml#Page_84)
+
+* `Deep learning models`, [216t](#c09.xhtml#Page_216)
+
+    * `applications in detection of neurodegenerative diseases`, [208](#c09.xhtml#Page_208)–226
+
+* `Deep neural network (DNN)`, [234](#c10.xhtml#Page_234)
+
+* `Deep reinforcement learning`, [173](#c07.xhtml#Page_173)–175
+
+    * `ε - greeding algorithm`, [173](#c07.xhtml#Page_173)
+
+    * `naïve algorithm`, [173](#c07.xhtml#Page_173)
+
+    * `reinforcement learning (RL)`, [173](#c07.xhtml#Page_173)
+
+* `Deeper networks`, [245](#c10.xhtml#Page_245)
+
+* `Delay differential equation`, [141](#c06.xhtml#Page_141)
+
+* `Dementias`, [208](#c09.xhtml#Page_208)
+
+* `Denoising autoencoder`, [168](#c07.xhtml#Page_168)–170
+
+* `Descriptive analytics`, [354](#c15.xhtml#Page_354)
+
+* `Differential entropy (DE)`, [186](#c08.xhtml#Page_186)–187
+
+* `Dimensionality reduction algorithms`, [84](#c04.xhtml#Page_84)
+
+* `Discovery analytics`, [354](#c15.xhtml#Page_354)
+
+* `Discriminative contractive slab and spike convolutional deep Boltzmann machine`, [218](#c09.xhtml#Page_218)–219
+
+* `DWT (discrete wavelet transform)`, [195](#c08.xhtml#Page_195)
+
+* `Edge computing`, [365](#c16.xhtml#Page_365)
+
+* `EEG`, [184](#c08.xhtml#Page_184)–185, [186](#c08.xhtml#Page_186)
+
+* `Efficient privacy preservation aggregation`, [382](#c16.xhtml#Page_382)
+

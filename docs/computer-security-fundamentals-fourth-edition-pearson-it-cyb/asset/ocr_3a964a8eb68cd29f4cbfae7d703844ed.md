@@ -1,0 +1,6 @@
+```
+```cmd
+net user /domain /add localaccountname password
+net group /domain "Domain Admins" /add localaccount
+```
+```

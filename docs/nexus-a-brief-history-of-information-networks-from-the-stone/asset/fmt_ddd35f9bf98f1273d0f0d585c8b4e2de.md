@@ -1,0 +1,100 @@
+
+TERUG NAAR OPMERKING REFERENTIE 22
+
+## 23. Stoker, Clausewitz, 35.
+
+TERUG NAAR OPMERKING REFERENTIE 23
+
+## 24. John G. Gagliardo, Reich and Nation: The Holy Roman Empire as Idea and Reality, 1763–1806 (Bloomington: Indiana University Press, 1980), 4–5.
+
+TERUG NAAR OPMERKING REFERENTIE 24
+
+## 25. Todd Smith, “Uit de langverwachte studie van de oorlog in Irak blijkt dat Iran de enige winnaar was in een conflict dat veel lessen biedt voor toekomstige oorlogen”, Army Times, 18 januari 2019, www.armytimes.com/news/your-army/2019/01/18/leger-langverwachte-oorlogsstudie-in-irak-vindt-dat-iran-de-enige-winnaar-was-in-een-conflict-dat-veel-lessen-voor-toekomstige-oorlogen bevat/. Een van de auteurs van het onderzoek, evenals een collega, hebben onlangs een samenvatting aan Time verstrekt. Zie Frank Sobchak en Matthew Zais, ‘How Iran Won the Iraq War’, Time, 22 maart 2023, time.com/6265077/how-iran-won-the-iraq-war/.
+
+TERUG NAAR OPMERKING REFERENTIE 25
+
+## 26. Nick Bostrom, Superintelligence: paden, gevaren, strategieën (Oxford: Oxford University Press, 2014), 122–25.
+
+TERUG NAAR OPMERKING REFERENTIE 26
+
+## 27. Brian Christian, The Alignment Problem: Machine Learning and Human Values (New York: WW Norton, 2022), 9–10.
+
+TERUG NAAR OPMERKING REFERENTIE 27
+
+## 28. Amnesty International, Sociale gruweldaden, 34–37.
+
+TERUG NAAR OPMERKING REFERENTIE 28
+
+## 29. Andrew Roberts, Napoleon de Grote (Londen: Allen Lane, 2014), 5.
+
+TERUG NAAR OPMERKING REFERENTIE 29
+
+## 30. Ibid., 14–15.
+
+TERUG NAAR OPMERKING REFERENTIE 30
+
+## 31. Ibid., 9, 14.
+
+TERUG NAAR OPMERKING REFERENTIE 31
+
+## 32. Ibid., 29–40.
+
+TERUG NAAR OPMERKING REFERENTIE 32
+
+## 33. Philip Dwyer, Napoleon: The Path to Power, 1769–1799 (Londen: Bloomsbury, 2014), 668; David G. Chandler, De campagnes van Napoleon (New York: Macmillan, 1966), 1:3.
+
+TERUG NAAR OPMERKING REFERENTIE 33
+
+## 34. Maria E. Kronfeldner, The Routledge Handbook of Dehumanization (Londen: Routledge, 2021); David Livingstone Smith, over onmenselijkheid: ontmenselijking en hoe je er weerstand aan kunt bieden (New York: Oxford University Press, 2020); David Livingstone Smith, Minder dan menselijk: waarom we anderen vernederen, tot slaaf maken en uitroeien (New York: St. Martin's Press, 2011).
+
+TERUG NAAR OPMERKING REFERENTIE 34
+
+## 35. Smith, over onmenselijkheid, 139–42.
+
+TERUG NAAR OPMERKING REFERENTIE 35
+
+## 36. International Crisis Group, “Myanmar's Rohingya-crisis gaat een gevaarlijke nieuwe fase in”, 7 december 2017, www.crisisgroup.org/asia/southeast-asia/myanmar/292-myanmars-rohingya-crisis-enters-dangerous-new-phase.
+
+TERUG NAAR OPMERKING REFERENTIE 36
+
+## 37. Bettina Stangneth, Eichmann voor Jeruzalem: het niet-onderzochte leven van een massamoordenaar (New York: Alfred A. Knopf, 2014), 217–18.
+
+TERUG NAAR OPMERKING REFERENTIE 37
+
+## 38. Emily Washburn, ‘Wat u moet weten over effectief altruïsme – gesteund door Musk, Bankman-Fried en Silicon Valley Giants’, Forbes, 8 maart 2023, www.forbes.com/sites/emilywashburn/2023/03/08/what-weten-over-effectief-altruïsme-verdedigd-door-musk-bankman-fried-and-silicium-valley-reuzen/; Alana Semuels, ‘How Silicon Valley Has Disrupted Philanthropy’, Atlantic, 25 juli 2018, www.theatlantic.com/technology/archive/2018/07/how-silicon-valley-has-disrupted-philanthropy/565997/; Timnit Gebru, “Effectief altruïsme stimuleert een gevaarlijk merk van ‘AI-veiligheid’”, Wired, 30 november 2022, www.wired.com/story/effectief-altruïsme-artificial-intelligence-sam-bankman-fried/; Gideon Lewis-Kraus, ‘The Reluctant Prophet of Effective Altruism’, New Yorker, 8 augustus 2022, www.newyorker.com/magazine/2022/08/15/the-reluctant-prophet-of-effectief-altruïsme.
+
+TERUG NAAR OPMERKING REFERENTIE 38
+
+## 39. Alan Soble, “Kant en seksuele perversie”, Monist 86, nr. 1 (2003): 55–89, www.jstor.org/stable/27903806. Zie ook Matthew C. Altman, “Kant on Sex and Marriage: The Implications for the Same-Sex Marriage Debate”, Kant-Studien 101, nr. 3 (2010): 332; Lara Denis, ‘Kant on the Wrongness of ‘Unnatural’ Sex’, History of Philosophy Quarterly 16, nr. 2 (april 1999): 225–48, www.jstor.org/stable/40602706.
+
+TERUG NAAR OPMERKING REFERENTIE 39
+
+## 40. Geoffrey J. Giles, ‘De vervolging van homoseksuele mannen en lesbiennes tijdens het Derde Rijk’, in The Routledge History of the Holocaust, ed. Jonathan C. Friedman (Londen: Routledge, 2010), 385–96; Melanie Murphy, ‘Homoseksualiteit en de wet in het Derde Rijk’, in Nazi Law: From Nuremberg to Nuremberg, ed. John J. Michalczyk (Londen: Bloomsbury Academic, 2018), 110–24; Michael Schwartz, ed., Homoseksuelen in het nationaal-socialisme: nieuwe onderzoeksperspectieven op de levenssituaties van lesbische, homoseksuele, biseksuele, transseksuele en interseksuele mensen 1933 tot 1945 (München: De Gruyter Oldenbourg, 2014).
+
+TERUG NAAR OPMERKING REFERENTIE 40
+
+## 41. Jeremy Bentham, ‘Misdaden tegen jezelf’, uitg. Louis Crompton, Journal of Homoseksualiteit 3, nr. 4 (1978): 389–406; Jeremy Bentham, ‘Jeremy Bentham’s essay over paederastie’, uitg. Louis Crompton, Journal of Homoseksualiteit 4, nr. 1 (1978): 91–107.
+
+TERUG NAAR OPMERKING REFERENTIE 41
+
+## 42. Olga Yakusheva et al., “Levens gered en verloren in de eerste zes maanden van de Amerikaanse COVID-19-pandemie: een retrospectieve kosten-batenanalyse”, PLOS ONE 17, nr. 1 (2022), artikel e0261759.
+
+TERUG NAAR OPMERKING REFERENTIE 42
+
+## 43. Bitna Kim en Meghan Royle, ‘Huiselijk geweld in de context van de COVID-19-pandemie: een synthese van systematische reviews’, Trauma, geweld en misbruik 25, nr. 1 (2024): 476–93; Lis Bates et al., “Domestic Homicids and Suspected Victim Suicides While the Covid-19 Pandemic 2020–2021”, UK Home Office, 25 augustus 2021, assets.publishing.service.gov.uk/media/6124ef66d3bf7f63a90687ac/Domestic\_homicides\_and\_suspected\_victim\_suicides\_tijdens\_de\_Covid-19\_Pandemie\_2020-2021.pdf; Benedetta Barchielli et al., ‘Als ‘thuis blijven’ gevaarlijk kan zijn: gegevens over huiselijk geweld in Italië tijdens COVID-19 Lockdown’, International Journal of Environmental Research and Public Health 18, nr. 17 (2021), artikel 8948.
+
+TERUG NAAR OPMERKING REFERENTIE 43
+
+## 44. Jingxuan Zhao et al., ‘Veranderingen in kankergerelateerde sterfte tijdens de COVID-19-pandemie in de Verenigde Staten’, Journal of Clinical Oncology 40, nr. 16 (2022): 6581; Abdul Rahman Jazieh et al., “Impact van de COVID-19-pandemie op kankerzorg: een wereldwijde samenwerkingsstudie”, JCO Global Oncology 6 (2020): 1428–38; Camille Maringe et al., “The Impact of the COVID-19 Pandemic on Cancer Deaths due to Delays in Diagnosis in England, UK: A National, Population-Based, Modeling Study”, Lancet Oncology 21, nr. 8 (2020): 1023–34; Allini Mafra da Costa et al., “Impact of COVID-19 Pandemic on Cancer-Related Hospitalizations in Brazil”, Cancer Control 28 (2021): artikel 10732748211038736; Talía Malagón et al., ‘Predicted Long-Term Impact of COVID-19 Pandemic-Related Care Delays on Cancer Mortality in Canada’, International Journal of Cancer 150, nr. 8 (2022): 1244–54.
+
+TERUG NAAR OPMERKING REFERENTIE 44
+
+## 45. Chalmers, Realiteit+.
+
+TERUG NAAR OPMERKING REFERENTIE 45
+
+## 46. Pokémon GO, “Heads Up!”, persbericht, 7 september 2016, pokemongolive.com/en/post/headsup/.
+
+TERUG NAAR OPMERKING REFERENTIE 46
+
+## 47. Brian Fung, “Dit is wat we weten over de mysterieuze zoekmachine van Google”, Washington Post, 28 augustus 2018, www.washingtonpost.com/technology/2018/08/28/heres-what-we-really-know-about-googles-mysterieuze-zoekmachine/; Geoffrey A. Fowler, “AI verandert Google Zoeken: wat de I/O-aankondiging voor u betekent”, Washington Post, 10 mei 2023, www.washingtonpost.com/technology/2023/05/10/google-search-ai-io-2023/; Jillian D’Onfro, “Google voert deze week een gigantische verandering door die miljoenen kleine bedrijven zou kunnen verpletteren”, Business Insider, 20 april 2015, www.businessinsider.com/google-mobilegeddon-2015-4.

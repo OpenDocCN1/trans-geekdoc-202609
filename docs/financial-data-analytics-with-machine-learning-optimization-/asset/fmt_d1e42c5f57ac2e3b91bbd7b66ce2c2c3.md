@@ -1,0 +1,8 @@
+
+We can continue to find the second principal component `y₂ = h₁₂x₁ + ... + hₚ₂xₚ = h₂ᵀx`, where `h₂ = (h₁₂, ..., hₚ₂)ᵀ`, such that its variance `Var(y₂) = h₂ᵀSₕ₂` is maximized subject to (i) `h₂ᵀh₂ = 1`; and (ii) `h₂ᵀh₁ = 0`. The latter condition means that `h₁` and `h₂` are *orthogonal* to each other (or equivalently, `y₁` and `y₂` are statistically uncorrelated).
+
+The third PC can be found similarly, and the process can continue up to the last `p`‐th PC. This gives the basic idea of PCA and the optimization procedure has a nice solution via linear algebra. In particular, it turns out that these loadings are the *normalized eigenvectors*, denoted by `hⱼ = (h₁ⱼ, ..., hₚⱼ)ᵀ`, for `j = 1, 2, ..., p`, for the `j`‐th PC, of the correlation matrix or the variance‐covariance matrix of `x` and the variance of `yⱼ`, the `j`‐th PC, is the corresponding *eigenvalue* `λⱼ = Var(yⱼ) = hⱼᵀSₕⱼ`. This claim is discussed in detail in [Appendix 9.A.1](#c09.xhtml#c09-sec-0017), while readers may refer back to [Section 1.2](#c01.xhtml#c01-sec-0007) of [Chapter 1](#c01.xhtml) for the basic theory of spectral decomposition.
+
+The reason for maximizing the variance of the transformed variable `yⱼ` is that we want to preserve as much information in these `x₁, ..., xₚ` as possible. Conceptually, variation represents information, and so we want the variances of the linearly transformed variables to be as large as possible, also “as soon as possible”, so that the original information in `x` is preserved. The `j`‐th eigenvalue `λⱼ = Var(yⱼ)` indicates the amount of information retained in the `j`‐th PC.
+
+## 9.2 PCA ALGORITHM

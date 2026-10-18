@@ -1,0 +1,28 @@
+
+
+# 第三个要点：HMD 研发所需的巨额投资
+
+第三个要点是，要同时解决头戴式显示器（HMD）的众多竞争性需求，可能需要非凡的投资。自 2014 年以来，Facebook 在 HMD 研发上花费了数十亿美元，尽管并非所有这些投资都体现在当前设备中（有些研发永远不会成功，有些在技术上成功但成本过高），但该公司的 Quest VR 和透视 MR 产品线距离目标规格仍然很远，其 AR 眼镜也尚未发货。事实上，生产大众市场 HMD 可能需要全新的创新，而不仅仅是对现有技术（如电池寿命或像素密度）的改进——这是第四个要点。
+
+根据 Facebook 的 CTO Andrew Bosworth 和负责 Facebook AR 眼镜硬件的 CK Kalinowski 的说法，在“我们甚至可以考虑发货”之前，需要解决四到六项“新技术引入”，包括神经接口。Apple 在 HMD 上的总投资尚不清楚，但从 Vision Pro 团队组建到该设备 2023 年揭晓的七年半时间里，该公司在研发上投资了近 1350 亿美元。Tim Cook 还表示，Vision Pro 是“有史以来最先进的个人电子产品”，Apple AR/VR 负责人 Mike Rockwell 吹嘘说，在其开发期间获得了超过 5000 项专利（相当于该公司 2016 年至 2022 年间获得的所有专利的 30%）。
+
+在接受 *GQ* 采访时，Cook 解释了该设备为何花了这么长时间才推出，并隐含地承认了其巨大的成本，他说：“我不感兴趣拼凑别人的东西。因为我们想控制核心技术。因为我们知道这是创新的方式。”这种方法与最初的几代 iPhone 形成对比，后者几乎完全由独立供应商设计并被其他智能手机制造商使用的组件组成。第一代 iPhone 的 CPU 来自 Samsung，GPU 来自 Imagination Technologies，各种图像传感器来自 Micron Technologies，触摸屏玻璃来自 Corning，等等。Apple 的创新主要在于如何将这些组件组合在一起，并配合了用于与之交互的界面的非凡独创性。
+
+# 第五个要点：HMD 使用案例的采用情况
+
+第五个也是最后一个要点体现在迄今为止采用率最高和最低的 HMD 使用案例中。通用 VR、AR 和 MR HMD，例如 Google Glass 以及 Lenovo 或 HTC 等公司，在很大程度上被消费者和企业忽视了。尽管 Facebook 经常宣传 Quest 头显如何在办公室和工作现场使用，但该设备主要用于玩视频游戏——在这里，“乐趣”比技术复杂性更重要，透视 MR 很少被使用。与此同时，外科医生可以使用功能更强大、更重、发热量更大的设备，因为大多数组件可以放在手术台下方或附近机架中，面部只需佩戴轻量级显示器和摄像头。军事用户也可以将扩展电池、更大的风扇和处理器放入背包中。这些企业/工业设备也可能更昂贵，因为它们更可能是共享而非个人拥有的设备，并且支持比空闲一小时更关键的活动。
+
+尽管如此，进步是有目共睹的。2016 年发布的原始 Oculus Rift 配备了 90 fps 1K 显示屏，水平 87 度、垂直 88 度的视野，重量约 500 克，没有摄像头（因此仅限 VR，无法进行手部和眼部追踪），需要用户插入 PC 才能使用其计算能力并接收电源，售价 600 美元。2023 年的 Quest 3（继 2019 年 Quest、2020 年 Quest 2、2022 年 Quest Pro 之后）配备了 120 fps 4K 显示屏，水平 97 度、垂直 93 度的视野，重量与 Oculus Rift 相同，配备四个外向摄像头（支持彩色透视和手部追踪），不需要使用 PC（电池续航两到三小时），售价 500 美元（与 Rift 相比下降了 17%，尽管自 2016 年以来通货膨胀率复合增长了 28%）。Quest 3 的面部轮廓比 Rift 小了三分之一以上。尽管 Quest 3 的透视模式支持边界保护——识别用户是否偏离指定位置太远——但它无法支持混合现实体验，例如在现实世界的墙上放置虚拟电视或理解周围环境。Quest 3 还面临严重的并发用户限制，正如大逃杀类型游戏所显示的那样。高端主机和游戏 PC 可以在近乎照片级真实的 5–8 km² 地图中支持 150 个或更多 CCU（例如，*Call of Duty: Warzone*），中端主机和游戏 PC 以及高端手机和平板电脑在相对高保真的 2–3 km² 地图上最多可运行 100 个 CCU（*Fortnite*），而低端智能手机在 2–3 km² 地图上限制为 50 个 CCU，低端图形，Quest 2 和 Quest 3 似乎被限制在约 24 个 CCU（Facebook 拥有的 *Population: One*），即使视觉效果看起来类似于运行在 2006 年 PlayStation 3 上的游戏，地图也只有 1 km²。
+
+# Vision Pro 与目标规格的差距
+
+由于 Vision Pro 是 Apple 的第一款 HMD，无法将其与早期型号进行比较。尽管如此，它展示了当前可能的设备与主流采用和频繁使用所需的综合规格之间差距的部分缩小。
+
+## Facebook’s 2022 Quest Pro
+
+![The first edition of Facebook’s Quest Pro mixed-reality headset was released in 2022. Pictured here is an internal test unit that was built with a transparent shell that reveals its components and construction. ¶ Meta Platforms](OEBPS/images/pg236.jpg)
+
+The first edition of Facebook’s Quest Pro mixed-reality headset was released in 2022. Pictured here is an internal test unit that was built with a transparent shell that reveals its components and construction. ¶ Meta Platforms
+
+Vision Pro 的分辨率满足目标规格的下限，运行 8K 合并分辨率（即，每只眼睛的显示屏超过 4K），尽管帧率总体限制为 100 fps，大多数交互体验上限为 90 fps。该设备在 12 ms 内实现透视再现，这与 Quest Pro 和 Quest 3 典型的 38–50 性能范围相比，但仍会导致用户出现 1–2 帧的滞后——根据 Apple 专家 John Gruber 的说法，每当用户移动身体或头部时，“真实透视的幻觉就会被打破”。Vision Pro 的水平约 97 度、垂直 74 度的视野，不及当代设备，例如 Facebook 的 Quest 2、Quest 3 和 Quest Pro 设备（水平 97–110 度，垂直 93–96 度）。一些评论家将 Vision Pro 相对有限的视野比作透过“带有相当大的黑色边框”的双筒望远镜观看。由于边缘处的轻微失真、“晕影”和“色散”，The Verge 还报道说，“可用视野感觉更小”。
+

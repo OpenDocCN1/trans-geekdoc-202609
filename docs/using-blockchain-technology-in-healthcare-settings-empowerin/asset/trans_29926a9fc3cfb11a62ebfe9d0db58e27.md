@@ -1,0 +1,104 @@
+
+
+# Table of Contents
+
+[Cover Page](#index_split_000.html#filepos109)
+
+[Half-Title Page](#index_split_001.html#filepos243)
+
+[Series Page](#index_split_002.html#filepos2369)
+
+[Title Page](#index_split_003.html#filepos4937)
+
+[Copyright Page](#index_split_004.html#filepos5516)
+
+[Contents](#index_split_005.html#filepos11056)
+
+[Editors](#index_split_006.html#filepos19313)
+
+[Contributors](#index_split_007.html#filepos21484)
+
+## 1 Applications of Blockchain Technology in the Global Healthcare System
+
+[1 Applications of Blockchain Technology in the Global Healthcare System](#index_split_008.html#filepos27808)
+
+## 2 Blockchain Technology in Health Care
+
+[2 Blockchain Technology in Health Care](#index_split_009.html#filepos115071)
+
+## 3 Healthcare Monitoring System with Blockchain Technology Tracking Open Donations and Minimizing the Scope of Organ Trafficking
+
+[3 Healthcare Monitoring System with Blockchain Technology Tracking Open Donations and Minimizing the Scope of Organ Trafficking](#index_split_010.html#filepos207562)
+
+## 4 Transforming Healthcare Services in South Asia: Leveraging Blockchain Technology
+
+[4 Transforming Healthcare Services in South Asia: Leveraging Blockchain Technology](#index_split_011.html#filepos254798)
+
+## 5 Challenges and Future Directions of Blockchain Technology in Healthcare Settings
+
+[5 Challenges and Future Directions of Blockchain Technology in Healthcare Settings](#index_split_012.html#filepos310243)
+
+## 6 Blockchain-Enabled Radiology: Transformative Potentials and Implementation Hurdles
+
+[6 Blockchain-Enabled Radiology: Transformative Potentials and Implementation Hurdles](#index_split_013.html#filepos363413)
+
+## 7 Introduction to Blockchain and Artificial Intelligence in Health Care
+
+[7 Introduction to Blockchain and Artificial Intelligence in Health Care](#index_split_014.html#filepos552617)
+
+## 8 Patient Empowerment through Secure Data Management
+
+[8 Patient Empowerment through Secure Data Management](#index_split_015.html#filepos635604)
+
+## 9 Ensuring Data Privacy and Security with Blockchain in Health Care
+
+[9 Ensuring Data Privacy and Security with Blockchain in Health Care](#index_split_016.html#filepos715468)
+
+## 10 An Advanced Secure Medical File-Sharing System Based on IPFS and Blockchain Technology
+
+[10 An Advanced Secure Medical File-Sharing System Based on IPFS and Blockchain Technology](#index_split_017.html#filepos773404)
+
+## 11 A Survey on Security Enhancements of Electronic Health Records through Blockchain Technology
+
+[11 A Survey on Security Enhancements of Electronic Health Records through Blockchain Technology](#index_split_018.html#filepos823505)
+
+## 12 Blockchain for Halal Integrity in Health Care: Enhancing Compliance, Ensuring Benefits
+
+[12 Blockchain for Halal Integrity in Health Care: Enhancing Compliance, Ensuring Benefits](#index_split_019.html#filepos922179)
+
+## 13 Nonprobabilistic Approach to Solve Multiobjective Optimization Model with Applications in Blockchain Technology
+
+[13 Nonprobabilistic Approach to Solve Multiobjective Optimization Model with Applications in Blockchain Technology](#index_split_020.html#filepos1047160)
+
+## 14 Decentralizing Health: The Future of Blockchain in Health Care
+
+[14 Decentralizing Health: The Future of Blockchain in Health Care](#index_split_021.html#filepos1134100)
+
+## 15 The Adoption of Blockchain Technology for Recruitment Practices in Healthcare Industries: A Systematic Review
+
+[15 The Adoption of Blockchain Technology for Recruitment Practices in Healthcare Industries: A Systematic Review](#index_split_022.html#filepos1284793)
+
+[Index](#index_split_023.html#filepos1349971)
+
+## I
+
+*   Internet of Things, [31](#index_split_009.html#filepos132413), [52](#index_split_010.html#filepos210379), [84](#index_split_012.html#filepos342407), [136](#index_split_014.html#filepos569834), [170](#index_split_015.html#filepos689964), [211](#index_split_018.html#filepos840064), [264](#index_split_020.html#filepos1049673), [305](#index_split_021.html#filepos1214939)
+
+## P
+
+*   Patient Privacy, [9](#index_split_008.html#filepos51361), [28](#index_split_009.html#filepos120996), [42](#index_split_009.html#filepos169295), [64](#index_split_011.html#filepos257790), [72](#index_split_011.html#filepos285646), [104](#index_split_013.html#filepos433315), [123](#index_split_013.html#filepos508161), [147](#index_split_014.html#filepos606359), [164](#index_split_015.html#filepos670295), [171](#index_split_015.html#filepos693671), [304](#index_split_021.html#filepos1211605), [313](#index_split_021.html#filepos1244602)
+
+## S
+
+*   Security, [2](#index_split_008.html#filepos30512), [9](#index_split_008.html#filepos51361), [13](#index_split_008.html#filepos65040), [33](#index_split_009.html#filepos139378), [42](#index_split_009.html#filepos169295), [53](#index_split_010.html#filepos214503), [75](#index_split_011.html#filepos304683), [91](#index_split_013.html#filepos376077), [115](#index_split_013.html#filepos477936), [135](#index_split_014.html#filepos566629), [156](#index_split_015.html#filepos645480), [161](#index_split_015.html#filepos660947), [177](#index_split_016.html#filepos724110), [195](#index_split_017.html#filepos790923), [207](#index_split_018.html#filepos826297), [218](#index_split_018.html#filepos864280), [249](#index_split_019.html#filepos978009)
+
+*   Smart contracts, [6](#index_split_008.html#filepos41473), [13](#index_split_008.html#filepos65040), [30](#index_split_009.html#filepos128515), [36](#index_split_009.html#filepos149771), [42](#index_split_009.html#filepos169295), [51](#index_split_010.html#filepos207562), [81](#index_split_012.html#filepos329850), [96](#index_split_013.html#filepos392861), [98](#index_split_013.html#filepos407067), [137](#index_split_014.html#filepos573493), [181](#index_split_016.html#filepos735596), [195](#index_split_017.html#filepos790923), [207](#index_split_018.html#filepos826297), [239](#index_split_019.html#filepos944954), [256](#index_split_019.html#filepos1004436)
+
+## T
+
+*   Transaction, [1](#index_split_008.html#filepos27808), [5](#index_split_008.html#filepos39627), [38](#index_split_009.html#filepos155115), [57](#index_split_010.html#filepos231156), [76](#index_split_012.html#filepos310243), [88](#index_split_013.html#filepos363413), [102](#index_split_013.html#filepos424631), [123](#index_split_013.html#filepos508161), [177](#index_split_016.html#filepos724110), [182](#index_split_016.html#filepos738771), [190](#index_split_017.html#filepos773404), [228](#index_split_018.html#filepos874901), [248](#index_split_019.html#filepos974544), [284](#index_split_020.html#filepos1128936), [314](#index_split_021.html#filepos1248128)
+
+## Healthcare
+
+*   Healthcare, [2](#index_split_008.html#filepos30512), [11](#index_split_008.html#filepos58627), [51](#index_split_010.html#filepos207562), [76](#index_split_012.html#filepos310243), [83](#index_split_012.html#filepos338504), [101](#index_split_013.html#filepos417802), [125](#index_split_013.html#filepos517608), [145](#index_split_014.html#filepos599916), [170](#index_split_015.html#filepos689964), [195](#index_split_017.html#filepos790923), [204](#index_split_017.html#filepos812942), [225](#index_split_018.html#filepos874901), [235](#index_split_019.html#filepos931627)
+

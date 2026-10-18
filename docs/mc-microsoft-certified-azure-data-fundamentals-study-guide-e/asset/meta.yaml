@@ -1,0 +1,1382 @@
+name: MC Microsoft Certified Azure Data Fundamentals Study Guide ： Exam DP-900
+slug: mc-microsoft-certified-azure-data-fundamentals-study-guide-e
+name_cn: Microsoft Certified Azure 数据基础认证学习指南：Exam DP-900
+toc:
+- - '##'
+  - Chapter 2
+- - '##'
+  - Chapter 3
+- - '##'
+  - Chapter 4
+- - '##'
+  - Chapter 5
+- - '##'
+  - 第 6 章
+- - '##'
+  - 致谢
+- - '##'
+  - 关于作者
+- - '##'
+  - 关于技术编辑
+- - '##'
+  - 简介
+- - '##'
+  - Who Should Read This Book?
+- - '##'
+  - Interactive Online Learning Environment and Test Bank
+- - '##'
+  - DP-900 Exam Objectives
+- - '##'
+  - 'Domain 1: Describe Core Data Components'
+- - '##'
+  - 'Domain 2: Describe How to Work with Relational Data on Azure'
+- - '##'
+  - 'Domain 3: Describe How to Work with Nonrelational Data on Azure'
+- - '##'
+  - 'Domain 4: Describe an Analytics Workload on Azure'
+- - '##'
+  - Assessment Test
+- - '##'
+  - 4. 文档可以轻松分布到多个存储设备上。
+- - '##'
+  - 33. 你正在设计一个数据存储解决方案，用于存储电子商务网站上进行的交易。这些交易的架构非常流动，通常每个交易都不同。还有一个要求是数据库能够全球扩展，其中一些复制区域可以进行写入。以下哪项是最合适的？
+- - '##'
+  - 34. 以下哪项是 Azure 表存储与 Azure Cosmos DB 表 API 之间的区别？
+- - '##'
+  - 35. 用于表示读取和写入存储在 Azure Cosmos DB 中的数据所需吞吐量的计量单位是什么？
+- - '##'
+  - 36. Azure Cosmos DB 帐户生成哪种类型的密钥以提供对其资源的访问？创建了多少个？
+- - '##'
+  - 37. 哪种一致性级别保证所有读取都将返回文档的最新版本，但可能会导致写入性能变慢，因为在提交事务时应用程序连接会暂停？
+- - '##'
+  - 38. 用于将 Azure Cosmos DB 数据分布到存储中的字段名称是什么？
+- - '##'
+  - 39. 你被要求通过将 Azure Cosmos DB 帐户与虚拟网络中的子网关联来对其进行隔离。以下哪项服务可用于将子网中的专用 IP 地址附加到帐户？
+- - '##'
+  - 40. 作为公司的数据架构师，你被指派设计一个存储解决方案，该方案针对存储视频、图像、音频文件以及每个文件的关联元数据进行了优化。应该使用哪种类型的数据存储？
+- - '##'
+  - 41. 以下哪种存储服务用于替换现有的本地文件共享，并可通过 SMB 或 NFS 协议访问？
+- - '##'
+  - 42. 以下哪种访问层可用于托管在标准 Azure 存储帐户上的文件共享？
+- - '##'
+  - 43. 什么对象用于在 Azure Blob 存储中组织数据？
+- - '##'
+  - 44. 哪种存储服务由于其数据结构方式及其与 Hadoop 分布式文件系统的集成，而经过优化可用于向大数据分析环境（如 Azure HDInsight、Azure
+    Databricks 和 Azure Synapse Analytics）提供数据？
+- - '##'
+  - 45. 以下陈述中斜体部分是正确的，还是需要替换为下面出现的其他片段之一？`Azure Data Lake Storage Gen2` 为用户提供使用类似
+    POSIX 的访问控制列表来授予对存储对象和数据的细粒度访问的功能。
+- - '##'
+  - 46. 你正在设计一个用于存储日志文件的 Azure 存储解决方案。解决方案的要求之一是，数据必须复制到不同 Azure 区域中的辅助存储帐户，以防发生区域中断。应该在存储帐户上启用以下哪个选项？
+- - '##'
+  - 47. 要托管两个 Blob 容器、一个文件共享和一个表，最少需要创建多少个存储帐户？
+- - '##'
+  - 48. 以下哪个 Azure RBAC 角色将授予用户对 Azure Blob 存储容器的读取、写入和删除访问权限，但不会授予他们对容器的完全管理权限？
+- - '##'
+  - 49. 以下陈述中斜体部分是正确的，还是需要替换为下面出现的其他片段之一？`AzCopy` 是一个独立的桌面应用程序，可用于创建和删除 Azure 存储资源，例如
+    Blob 容器和文件共享。用户还可以使用 `AzCopy` 上传、下载和删除 Azure 存储数据。
+- - '##'
+  - 50. 以下哪个开源框架可以与 Azure HDInsight 一起部署？
+- - '##'
+  - 51. 以下陈述中斜体部分是正确的，还是需要替换为下面出现的其他片段之一？`Spark 驱动程序` 安装在 Spark 群集的每个工作节点上，用于执行作业任务。
+- - '##'
+  - 52. 关于 Azure Databricks 的以下哪项陈述是正确的？
+- - '##'
+  - 53. Azure Databricks 群集的成本由哪两个组件组成？
+- - '##'
+  - 54. 你正在配置一个新的 Azure Databricks 群集，该群集将用于每晚的批处理作业。该群集将负责处理非常大的数据集，并且需要能够水平扩展以便在几小时内完成数据处理。以下哪种群集模式最适合此工作负载？
+- - '##'
+  - 55. 以下哪项不是 Azure Synapse Analytics 提供的分析池类型？
+- - '##'
+  - 4. Apache Spark pool
+- - '##'
+  - 评估测试答案
+- - '#'
+  - Chapter 1
+- - '##'
+  - Core Data Concepts
+- - '##'
+  - Describe Types of Core Data Workloads
+- - '##'
+  - Data Value
+- - '#'
+  - 设计数据驱动的解决方案
+- - '##'
+  - 关系型数据库
+- - '##'
+  - 非关系型数据存储
+- - '##'
+  - Data Volume
+- - '##'
+  - Data Variety
+- - '##'
+  - Structured Data
+- - '###'
+  - 半结构化数据
+- - '###'
+  - 非结构化数据
+- - '##'
+  - 数据速度
+- - '##'
+  - 批处理
+- - '##'
+  - 流处理
+- - '##'
+  - 结合使用批处理和流处理
+- - '##'
+  - 描述数据分析核心概念
+- - '##'
+  - 数据处理技术
+- - '##'
+  - 提取、转换、加载 (`ETL`)
+- - '##'
+  - Extract
+- - '##'
+  - Transform
+- - '#'
+  - Mapping Data Flows
+- - '#'
+  - Power Query
+- - '#'
+  - SSIS
+- - '#'
+  - Load
+- - '#'
+  - Control Flows and Data Flows
+- - '#'
+  - 映射数据流
+- - '##'
+  - 提取、加载和转换 (ELT)
+- - '##'
+  - 提取
+- - '##'
+  - 加载和转换
+- - '#'
+  - Azure Databricks
+- - '#'
+  - Azure Synapse Analytics
+- - '##'
+  - 专用 SQL 池
+- - '##'
+  - 无服务器 SQL 池
+- - '##'
+  - Apache Spark 池
+- - '##'
+  - 描述分析技术
+- - '##'
+  - 描述性分析
+- - '##'
+  - 诊断性分析
+- - '##'
+  - 预测性分析
+- - '#'
+  - 何时更换或修理设备
+- - '#'
+  - 欺诈检测
+- - '#'
+  - 预测分析
+- - '##'
+  - 指导性
+- - '##'
+  - 认知性
+- - '##'
+  - 描述数据可视化技术
+- - '##'
+  - 分析工具
+- - '##'
+  - 报表工具
+- - '##'
+  - 仪表板工具
+- - '##'
+  - 表格
+- - '##'
+  - 矩阵
+- - '##'
+  - 柱形图和条形图
+- - '##'
+  - 折线图
+- - '##'
+  - 饼图
+- - '##'
+  - 散点图
+- - '##'
+  - 地图
+- - '##'
+  - 摘要
+- - '##'
+  - 考试要点
+- - '#'
+  - 描述批处理数据
+- - '#'
+  - 描述流式数据
+- - '#'
+  - 描述数据处理的概念
+- - '#'
+  - 描述提取、转换、加载（ETL）和提取、加载、转换（ELT）处理
+- - '#'
+  - 描述分析如何讲述企业的过去、现在和未来
+- - '#'
+  - 描述数据可视化技术
+- - '##'
+  - 复习问题
+- - '#'
+  - 'Chapter 2  '
+- - '##'
+  - Azure 中的关系型数据库
+- - '##'
+  - 关系型数据库功能
+- - '##'
+  - 关系型数据库设计注意事项
+- - '##'
+  - OLTP 工作负载设计注意事项
+- - '##'
+  - 分析工作负载设计注意事项
+- - '##'
+  - 关系型数据结构
+- - '##'
+  - 表
+- - '##'
+  - 视图
+- - '##'
+  - 索引
+- - '##'
+  - 存储过程
+- - '##'
+  - 函数
+- - '##'
+  - 触发器
+- - '##'
+  - Azure 中的关系型数据库产品
+- - '##'
+  - Azure SQL
+- - '##'
+  - Azure 虚拟机上的 SQL Server
+- - '##'
+  - 业务连续性
+- - '##'
+  - 网络隔离
+- - '##'
+  - 通过 Azure 门户部署
+- - '##'
+  - Azure SQL 托管实例
+- - '#'
+  - Azure SQL Managed Instance
+- - '##'
+  - Service Tiers
+- - '##'
+  - Network Isolation
+- - '##'
+  - Deploying through the Azure Portal
+- - '##'
+  - Azure SQL 数据库
+- - '##'
+  - 服务层级
+- - '##'
+  - Network Isolation
+- - '##'
+  - Deploying Through the Azure Portal
+- - '##'
+  - Scaling PaaS Azure SQL in the Azure Portal
+- - '#'
+  - 缩放 Azure SQL MI 或 Azure SQL 数据库资源
+- - '##'
+  - PaaS Azure SQL 的业务连续性
+- - '##'
+  - 基础、标准和常规用途
+- - '##'
+  - 高级、业务关键和超大规模
+- - '##'
+  - Azure Synapse Analytics 专用 SQL 池
+- - '##'
+  - Azure 中的开源数据库
+- - '##'
+  - Azure Database for MySQL
+- - '##'
+  - 通过 Azure 门户部署
+- - '##'
+  - Azure Database for MariaDB
+- - '##'
+  - Azure Database for PostgreSQL
+- - '#'
+  - PostgreSQL 简介
+- - '#'
+  - Azure Database for PostgreSQL 概述
+- - '##'
+  - 关系型数据库在 Azure 中的管理任务
+- - '##'
+  - 部署脚本和自动化
+- - '##'
+  - Azure PowerShell
+- - '##'
+  - Azure 命令行界面
+- - '#'
+  - Set the subscription. Not required if being run in the Azure Cloud Shell
+- - '#'
+  - Set the resource group name and location for your database
+- - '#'
+  - Set an admin login and password for the logical server adminlogin=dp900admin
+- - '#'
+  - Set a logical server and database name
+- - '#'
+  - Create a resource group
+- - '#'
+  - Create a logical server in the resource group
+- - '#'
+  - Configure a firewall rule for the server
+- - '#'
+  - Create a database in the server
+- - '##'
+  - Azure 资源管理器模板
+- - '##'
+  - 定义 ARM 模板
+- - '#'
+  - Set an admin login and password for your server
+- - '##'
+  - 迁移到 Azure SQL
+- - '##'
+  - 数据库安全
+- - '##'
+  - 访问管理
+- - '##'
+  - 基于角色的访问控制 (RBAC)
+- - '##'
+  - 身份验证
+- - '##'
+  - 授权
+- - '##'
+  - 数据加密和混淆
+- - '##'
+  - 透明数据加密 (TDE)
+- - '##'
+  - 始终加密
+- - '##'
+  - 动态数据掩码
+- - '##'
+  - 安全管理
+- - '##'
+  - 审核
+- - '##'
+  - Azure Defender for SQL
+- - '#'
+  - 高级威胁防护
+- - '##'
+  - 常见连接问题
+- - '##'
+  - 与网络相关或特定于实例的问题
+- - '##'
+  - 与防火墙相关的问题
+- - '##'
+  - 包含数据库用户的登录失败
+- - '##'
+  - 瞬态故障错误
+- - '##'
+  - 管理工具
+- - '##'
+  - SQL Server Management Studio
+- - '##'
+  - Azure Data Studio
+- - '##'
+  - Sqlcmd
+- - '##'
+  - SQL 查询技巧
+- - '##'
+  - DDL 与 DML 命令
+- - '##'
+  - 数据定义语言 (DDL)
+- - '##'
+  - 数据操作语言 (DML)
+- - '##'
+  - 在 Azure SQL、MySQL、MariaDB 和 PostgreSQL 中查询关系数据
+- - '##'
+  - 使用 T-SQL 查询 Azure SQL
+- - '##'
+  - 查询 MySQL、MariaDB 和 PostgreSQL
+- - '##'
+  - 摘要
+- - '#'
+  - 描述关系型 Azure 数据服务
+- - '#'
+  - 描述 Azure 中关系型数据库的常见管理任务
+- - '#'
+  - 描述常见查询技术
+- - '#'
+  - 考试要点
+- - '##'
+  - 为关系型工作负载识别合适的数据产品
+- - '##'
+  - 描述关系型数据结构
+- - '##'
+  - 描述 IaaS 和 PaaS Azure SQL 服务
+- - '##'
+  - 描述 Azure Synapse Analytics 专用 SQL 池
+- - '##'
+  - 描述 Azure 中的开源选项，例如 Azure Database for PostgreSQL、Azure Database for MariaDB 和
+    Azure Database for MySQL
+- - '##'
+  - 描述 Azure 中关系型数据库的自动化部署选项
+- - '##'
+  - 描述数据库安全组件
+- - '##'
+  - 描述常见关系型数据库管理工具
+- - '##'
+  - 描述 DDL 和 DML 命令
+- - '##'
+  - 描述用于在 Azure SQL、Azure Database for PostgreSQL 和 Azure Database for MySQL 中查询关系型数据的技术
+- - '#'
+  - 复习问题
+- - '#'
+  - 数据库与 Azure 服务选择题
+- - '##'
+  - 1. 隔离级别与不可重复读
+- - '##'
+  - 2. 分析系统数据存储最佳实践
+- - '##'
+  - 3. 非主键列过滤性能优化
+- - '##'
+  - 4. Azure SQL Managed Instance 服务模型
+- - '##'
+  - 5. 应用迁移至 Azure 的数据库选择
+- - '##'
+  - 6. SQL Server 工作负载推荐 VM 类别
+- - '##'
+  - 7. SQL Server on Azure VM HADR 策略设计
+- - '##'
+  - 8. Azure 虚拟网络定义
+- - '##'
+  - 9. Azure SQL MI 部署组件
+- - '##'
+  - 10. OLTP 工作负载与分析读取隔离方案
+- - '##'
+  - 11. Azure SQL MI 用户数据库最大数量
+- - '##'
+  - 12. Azure SQL Database 私有 IP 附加服务
+- - '##'
+  - 13. Azure Synapse 专用 SQL 池报表对象选择
+- - '##'
+  - 14. Azure Synapse 专用 SQL 池数据分片数量
+- - '##'
+  - 15. Azure SQL MI 数据库点还原与跨实例复制
+- - '#'
+  - 第 3 章
+- - '##'
+  - Azure 中的非关系型数据库
+- - '##'
+  - 非关系型数据库功能
+- - '#'
+  - 实现更快速、更敏捷软件开发的架构灵活性
+- - '##'
+  - 键值存储
+- - '##'
+  - 文档数据库
+- - '##'
+  - 列式数据库
+- - '##'
+  - 图数据库
+- - '##'
+  - Azure Cosmos DB
+- - '##'
+  - 高可用性
+- - '##'
+  - 一致性级别
+- - '##'
+  - 请求单位
+- - '##'
+  - 预配
+- - '##'
+  - 自动缩放
+- - '##'
+  - 无服务器
+- - '##'
+  - Azure Cosmos DB API
+- - '##'
+  - Table API
+- - '#'
+  - Azure 表存储的典型用例
+- - '#'
+  - 迁移到 Azure Cosmos DB 表 API
+- - '#'
+  - Core (SQL) API
+- - '#'
+  - API for MongoDB
+- - '#'
+  - Cassandra API
+- - '#'
+  - Gremlin API
+- - '##'
+  - Azure Cosmos DB 的管理任务
+- - '##'
+  - 部署选项
+- - '##'
+  - Azure 门户
+- - '##'
+  - 2. 单击“创建”以开始选择 Azure Cosmos DB 帐户的配置选项。
+- - '##'
+  - 3. 选择 API
+- - '##'
+  - 4. 配置“基本信息”选项卡
+- - '##'
+  - 5. 配置“全局分发”选项卡
+- - '##'
+  - 6. 配置“网络”选项卡
+- - '##'
+  - 7. 配置“备份策略”选项卡
+- - '##'
+  - 8. 配置“加密”选项卡
+- - '##'
+  - 9. 配置“标记”选项卡
+- - '##'
+  - 10. 审阅 + 创建
+- - '##'
+  - 配置数据库和容器
+- - '##'
+  - 配置全局分发
+- - '##'
+  - 配置一致性
+- - '##'
+  - Azure PowerShell
+- - '##'
+  - Azure CLI
+- - '##'
+  - ARM 模板
+- - '##'
+  - Azure Cosmos DB 安全性
+- - '##'
+  - 网络隔离
+- - '##'
+  - 访问管理
+- - '##'
+  - 基于密钥的访问控制
+- - '##'
+  - 基于角色的访问控制 (RBAC)
+- - '##'
+  - 资源令牌
+- - '##'
+  - 数据加密
+- - '##'
+  - Azure Cosmos DB 常见连接问题
+- - '##'
+  - 错误请求异常
+- - '##'
+  - 未授权请求
+- - '##'
+  - 禁止异常
+- - '##'
+  - 管理工具
+- - '##'
+  - Data Explorer
+- - '##'
+  - Azure Cosmos DB Explorer
+- - '##'
+  - 摘要
+- - '##'
+  - 考试要点
+- - '#'
+  - 描述键值存储
+- - '#'
+  - 描述文档数据库
+- - '##'
+  - 描述列式数据库
+- - '##'
+  - 描述图数据库
+- - '#'
+  - 描述 Azure Cosmos DB
+- - '#'
+  - 描述 Azure Cosmos DB 一致性级别
+- - '#'
+  - 描述 Azure Cosmos DB 吞吐量
+- - '#'
+  - 描述 Azure Cosmos DB API
+- - '#'
+  - 描述 Azure 表存储
+- - '#'
+  - 描述 Azure Cosmos DB 的部署选项
+- - '#'
+  - 描述如何保护 Azure Cosmos DB
+- - '#'
+  - 描述 Azure Cosmos DB 的管理工具
+- - '#'
+  - 复习问题
+- - '#'
+  - 第 4 章
+- - '##'
+  - 文件、对象和数据湖存储
+- - '##'
+  - 文件和对象存储功能
+- - '##'
+  - Azure 存储
+- - '##'
+  - 性能层
+- - '##'
+  - 数据冗余
+- - '##'
+  - 通过 Azure 门户部署
+- - '##'
+  - Azure 存储服务
+- - '##'
+  - Azure Files
+- - '##'
+  - 访问层
+- - '##'
+  - 创建文件共享
+- - '##'
+  - 挂载文件共享
+- - '##'
+  - Azure 文件同步
+- - '##'
+  - Azure Blob 存储
+- - '##'
+  - 访问层
+- - '##'
+  - 创建 Blob 容器
+- - '##'
+  - 上传 Blob
+- - '##'
+  - Blob 服务 REST API
+- - '##'
+  - Azure Blob 存储客户端库
+- - '##'
+  - Azure Data Lake Storage Gen2
+- - '##'
+  - Azure Blob 文件系统驱动程序
+- - '##'
+  - Azure 存储的管理任务
+- - '##'
+  - 部署脚本和自动化
+- - '##'
+  - Azure PowerShell
+- - '#'
+  - Retrieve an existing Storage Account reference
+- - '#'
+  - Create the container
+- - '#'
+  - Retrieve an existing Storage Account reference
+- - '#'
+  - Get the Storage Account context
+- - '#'
+  - Upload a file to the Hot access tier
+- - '##'
+  - Azure CLI
+- - '##'
+  - ARM 模板
+- - '##'
+  - Azure 存储安全性
+- - '##'
+  - 网络隔离
+- - '##'
+  - 访问管理
+- - '##'
+  - 存储帐户访问密钥
+- - '##'
+  - 共享访问签名 (SAS)
+- - '##'
+  - Azure AD 集成
+- - '#'
+  - Azure 存储角色和访问控制
+- - '##'
+  - 存储 Blob 数据角色
+- - '##'
+  - 存储文件数据角色
+- - '##'
+  - Azure 文件的 AD 域服务 (AD DS)
+- - '##'
+  - ADLS 访问控制列表 (ACL)
+- - '##'
+  - 数据加密
+- - '##'
+  - 数据保护
+- - '##'
+  - Azure 存储常见连接问题
+- - '##'
+  - 禁止异常
+- - '##'
+  - 资源未找到
+- - '##'
+  - 管理工具
+- - '##'
+  - AzCopy
+- - '##'
+  - Azure 存储资源管理器
+- - '##'
+  - 4. Explorer 页面将列出所选订阅中的所有存储帐户和存储资源
+- - '##'
+  - Azure 数据工厂
+- - '##'
+  - Azure 数据盒
+- - '##'
+  - 摘要
+- - '##'
+  - 考试要点
+- - '#'
+  - 描述对象存储的特性
+- - '#'
+  - 描述 Azure 存储
+- - '#'
+  - 描述 Azure 文件
+- - '#'
+  - 描述 Azure Blob 存储
+- - '#'
+  - 描述 Azure Data Lake Storage Gen2
+- - '#'
+  - 描述自动化 Azure 存储部署
+- - '#'
+  - 描述 Azure 存储的网络隔离
+- - '#'
+  - 描述 Azure 存储的访问管理
+- - '#'
+  - 描述 Azure 存储的数据加密和数据保护
+- - '#'
+  - 描述 Azure 存储的管理工具
+- - '#'
+  - 复习问题
+- - '#'
+  - 'Chapter 5  '
+- - '##'
+  - 分析工作负载特性
+- - '##'
+  - 事务性 vs. 分析性工作负载
+- - '##'
+  - 事务性工作负载特性
+- - '##'
+  - 分析工作负载特性
+- - '##'
+  - 数据处理技术
+- - '##'
+  - 批处理
+- - '#'
+  - 批处理工作流
+- - '##'
+  - 流处理
+- - '##'
+  - 使用批处理和流处理的现代数据解决方案
+- - '#'
+  - 现代数据仓库组件
+- - '##'
+  - 数据仓库的数据建模最佳实践
+- - '#'
+  - 数据仓库
+- - '##'
+  - 现代数据仓库的 Azure 服务
+- - '##'
+  - Azure HDInsight
+- - '##'
+  - Azure Databricks
+- - '#'
+  - Spark RDD API 与 Spark DataFrame API
+- - '#'
+  - Databricks 简介
+- - '##'
+  - Optimized Spark runtime
+- - '##'
+  - Create and manage clusters
+- - '##'
+  - Notebooks
+- - '##'
+  - Databricks File System (DBFS)
+- - '##'
+  - Enterprise security
+- - '##'
+  - Delta Lake
+- - '##'
+  - MLflow
+- - '#'
+  - Azure Databricks
+- - '##'
+  - Platform Architecture
+- - '##'
+  - Control plane
+- - '##'
+  - Data plane
+- - '##'
+  - Azure Databricks Cost Structure
+- - '##'
+  - 部署 Azure Databricks 工作区
+- - '##'
+  - 浏览 Azure Databricks 工作区 UI
+- - '#'
+  - 工作区导航与功能概述
+- - '#'
+  - 使用 Azure Databricks 创建 Spark 集群
+- - '#'
+  - 创建笔记本并访问 Azure 存储
+- - '##'
+  - Azure Data Factory
+- - '##'
+  - 部署 ADF 实例
+- - '##'
+  - 浏览 Azure 数据工厂 Studio
+- - '#'
+  - 构建带有复制数据活动的 ADF 管道
+- - '##'
+  - 构建带有复制数据活动的 ADF 管道
+- - '##'
+  - 实时 Azure 数据处理服务
+- - '##'
+  - Azure 流分析
+- - '##'
+  - Azure 数据资源管理器
+- - '##'
+  - 使用 Azure Synapse Analytics 进行端到端分析
+- - '#'
+  - Azure Synapse Analytics 核心组件
+- - '##'
+  - 部署 Azure Synapse Analytics 工作区
+- - '##'
+  - 导航 Synapse Studio UI
+- - '##'
+  - Data
+- - '##'
+  - Develop
+- - '##'
+  - Integrate
+- - '##'
+  - Monitor
+- - '##'
+  - Manage
+- - '##'
+  - Dedicated SQL Pools
+- - '##'
+  - 部署和缩放专用 SQL 池
+- - '##'
+  - 专用 SQL 池的数据加载方法
+- - '##'
+  - PolyBase
+- - '##'
+  - COPY 语句
+- - '##'
+  - 无服务器 SQL 池
+- - '##'
+  - 使用无服务器 SQL 池进行探索性分析
+- - '##'
+  - 摘要
+- - '##'
+  - 考试要点
+- - '##'
+  - 描述事务性工作负载和分析性工作负载之间的区别。
+- - '##'
+  - 描述批处理和流处理。
+- - '##'
+  - 描述数据仓库功能。
+- - '##'
+  - 描述 Azure HDInsight。
+- - '##'
+  - 描述 Azure Databricks。
+- - '##'
+  - 描述 Azure 数据工厂。
+- - '##'
+  - 描述 Azure Synapse Analytics。
+- - '##'
+  - 复习问题
+- - '##'
+  - 1. 以下陈述中斜体部分是正确的，还是需要用下面出现的其他片段之一替换它？
+- - '##'
+  - 2. 以下哪些数据存储选项适合数据科学家和分析师在分析业务数据时使用？
+- - '##'
+  - 3. 哪种开源技术为存储在 ADLS 中的数据提供 ACID 属性？
+- - '##'
+  - 4. 以下哪些服务不用于批处理工作流？
+- - '##'
+  - 5. 你正在为一家场馆管理公司设计一个将作为单一事实来源的数据仓库。该数据仓库的数据模型将使用星型架构，以便针对报表工具和分析查询进行优化。使用这种设计模式，哪种类型的表将存储特卖和零售销售指标？
+- - '##'
+  - 6. 你正在为 IoT 工作流设计一个流处理管道。该解决方案将使用 Apache Spark Structured Streaming 来处理数据，但它需要一个高度可扩展的服务来充当实时消息引入引擎。以下哪种
+    Azure HDInsight 群集类型是引入大量流数据的可行选项？
+- - '##'
+  - 7. 关于 Azure Databricks 的以下哪项陈述是错误的？
+- - '##'
+  - 8. 在计算 Azure Databricks 群集成本时，以下哪个组件不被使用？
+- - '##'
+  - 9. 你正在部署一个新的 Azure Databricks 工作区，该工作区将由贵公司的数据工程师和数据科学家使用。部署到工作区的群集需要能够连接到分配了专用终结点的
+    Azure 服务。你还需要配置 Azure Databricks，以便群集节点没有公共 IP 地址。以下哪个选项是满足所列要求的推荐解决方案？
+- - '##'
+  - 10. 以下哪些 Git 提供商受 Azure Databricks 支持？
+- - '##'
+  - 11. 你正在配置一个将由多位分析师和数据科学家使用的 Azure Databricks 群集。由于用户将间歇性地运行交互式工作负载，因此群集必须能够支持并发请求。应该为该群集定义哪种群集模式？
+- - '##'
+  - 12. 以下哪项不是在部署 Azure Synapse Analytics 工作区后可以手动创建的组件？
+- - '##'
+  - 13. 你正在设计一个解决方案，用于分析存储在 Azure Cosmos DB Core (SQL) API 数据库中的操作数据。该解决方案必须是近实时的，但也必须最大限度地降低对操作数据存储性能的影响。以下哪个选项最适合此场景？
+- - '##'
+  - 14. 可以向单个工作区添加多少个额外的 Azure Synapse Analytics 无服务器 SQL 池？
+- - '##'
+  - 15. 你是 Azure Synapse Analytics 专用 SQL 池的管理员。表分布和索引设计已针对针对数据库频繁执行的查询的工作负载需求进行优化。你最近被要求改进定期运行的查询的性能。启用后，以下哪个功能将通过缓存结果以供后续使用来立即改进查询的性能？
+- - '##'
+  - 16. 以下哪项是 Azure Synapse Analytics 无服务器 SQL 池的常见用例？
+- - '##'
+  - 17. 哪个 T-SQL 函数允许你使用无服务器 SQL 池读取存储在 Azure 存储中的文件内容？
+- - '##'
+  - 18. 以下陈述中斜体部分是正确的，还是需要用下面出现的其他片段之一替换它？*无服务器 SQL 池* 是一种分析数据存储，它使用横向扩展架构将数据处理分布到多个节点。它针对向数据分析师和
+    BI 应用程序快速提供大量历史数据进行了优化，通常用作业务洞察的单一事实来源。
+- - '##'
+  - 19. 哪种类型的 Azure Data Factory 活动用于管理管道的流程？
+- - '##'
+  - 4. 计算活动
+- - '#'
+  - 第 6 章
+- - '##'
+  - Power BI 概览
+- - '##'
+  - 使用 Power BI
+- - '##'
+  - 交互式报表
+- - '##'
+  - 使用 Power BI Desktop 创建交互式报表
+- - '#'
+  - Power BI 混合数据模型与数据处理
+- - '##'
+  - 连接 Azure SQL 数据库
+- - '##'
+  - Power Query 编辑器
+- - '##'
+  - 数据视图与 Tabular 模型
+- - '##'
+  - 1. 为产品名称创建切片器
+- - '##'
+  - 2. 创建聚集柱形图以显示每个已售产品类别的总订单数量
+- - '##'
+  - 3. 创建三个卡片可视化效果，分别显示总销售额、总订单数量和最受欢迎的商品
+- - '##'
+  - 使用 Power BI 服务发布和共享交互式报表
+- - '#'
+  - 工作区与仪表板概述
+- - '##'
+  - 仪表板
+- - '##'
+  - 摘要
+- - '##'
+  - 考试要点
+- - '##'
+  - 描述 Power BI 工作流
+- - '##'
+  - 描述交互式报告
+- - '##'
+  - 描述 Power BI 仪表板
+- - '##'
+  - 描述分页式报告
+- - '##'
+  - 复习问题
+- - '#'
+  - 附录
+- - '##'
+  - 复习问题答案
+- - '##'
+  - 第 1 章：核心数据概念
+- - '##'
+  - 4. D. Azure Databricks Structured Streaming 和 Azure 流分析可用于创建实时和按需流处理解决方案。这两种技术都可以使用存储在
+    Azure Blob Storage 中的数据作为参考数据。
+- - '##'
+  - 5. D. 所有这些选项都是非关系型数据存储。虽然 Azure Blob Storage 不是数据库，但它仍然是非关系型数据存储，因为它能够存储二进制、JSON
+    和 Parquet 文件等非关系型数据。
+- - '##'
+  - 6. A. Azure Cosmos DB 的 Gremlin API 是存储不同部门实体之间关系的最佳选择。虽然可以使用关系模型来实现这一点，但 Azure
+    Cosmos DB 的 Gremlin API 等图数据库是更好的选择，因为它们不需要应用程序执行包含多个联接操作的复杂查询。
+- - '##'
+  - 7. B. Azure Blob Storage 针对存储大量二进制数据（例如图像）进行了优化，并可被多个机器学习开发平台访问。
+- - '##'
+  - 8. C. `COPY` 语句为从外部存储帐户向 Azure Synapse Analytics 进行高吞吐量数据加载提供了最大的灵活性。
+- - '##'
+  - 9. B. Azure Synapse Analytics 专用 SQL 池通过将数据和数据处理分布到多个节点来利用横向扩展架构。
+- - '##'
+  - 10. D. 批处理是在计划的时间段内转换数据组的做法。
+- - '##'
+  - 11. A. Azure Data Factory 映射数据流是一种工具，允许数据工程师使用图形用户界面构建数据处理管道。由于不涉及任何代码，因此此解决方案最易于维护，并且运营开销最小。
+- - '##'
+  - 12. C. 诊断分析回答事情发生的原因，而描述性分析回答已经发生了什么。
+- - '##'
+  - 13. D. 矩阵是有用的信息图，可用于清晰地显示不同类别组的数值总计和小计。
+- - '##'
+  - 14. A. 分析师需要能够创建和交互报告，并能够将报告中最相关的可视化效果固定到面板中，供高管使用。
+- - '##'
+  - 15. B. 折线图适用于显示数据随时间的变化情况。
+- - '##'
+  - 16. A. 认知分析技术可用于构建驱动对话机器人的机器学习或深度学习模型。每次查询时，这些模型都会变得更加准确，因为这些模型旨在从与数据的每次交互中学习。
+- - '#'
+  - 第 2 章：Azure 中的关系型数据库
+- - '##'
+  - 1. B. 虽然具有读取提交隔离级别的事务可防止其他事务读取脏数据，但它们无法阻止其他事务修改或插入数据。这可能导致不可重复读或幻读。
+- - '##'
+  - 2. C. 在分析系统中存储数据的最佳方法是将数据扁平化为星型架构。这样，业务用户可以轻松编写查询来读取数据，而无需复杂的联接。
+- - '##'
+  - 3. A. 在常用查询的筛选条件中包含的列或列上创建非聚集索引将提高其性能。
+- - '##'
+  - 4. D. 无需更改，因为 Azure SQL 托管实例属于 PaaS 数据库选项。
+- - '##'
+  - 5. A. Azure SQL MI 非常适合需要快速迁移到 Azure 的提升和迁移场景。SQL MI 与 SQL Server 具有近乎 100% 的功能兼容性，同时为用户提供
+    PaaS 数据库的优势。
+- - '##'
+  - 6. B. 内存优化虚拟机提供更强的内存与 CPU 比率，非常适合 SQL Server 工作负载。
+- - '##'
+  - 7. B. SQL Server Always On 可用性组将特定用户数据库复制到其他 SQL Server 实例，用于 HADR 目的。
+- - '##'
+  - 8. D. 虚拟网络（简称 VNet）是构建 Azure 中隔离网络的基本构建块。Azure VM 上的 SQL Server 和 Azure SQL MI
+    等服务可以添加到 VNet，以限制应用程序连接到可以连接到 VNet 的应用程序。
+- - '##'
+  - 9. A. 网络安全组（简称 NSG）通过筛选端口 1433 和端口 11000–11999 上的流量来控制对 SQL 托管实例数据终结点的访问，前提是 SQL
+    托管实例配置为重定向连接。创建 NSG 后，将其与托管 Azure SQL MI 的子网关联。
+- - '##'
+  - 10. B. Azure SQL MI 的业务关键层会自动创建 SQL Server Always On 可用性组和多个辅助节点，用于 HADR 目的。虽然这些节点对用户是抽象的，但其中一个节点已启用以提供只读工作负载。这允许用户从数据库读取数据，而不会影响写入操作的性能。
+- - '##'
+  - 11. C. 可部署到单个 Azure SQL MI 的用户数据库最大数量为 100。
+- - '##'
+  - 12. C. 私有链接是 Azure 中的一项服务，允许用户将专用终结点附加到 Azure SQL Database 等 PaaS 产品。专用终结点是 VNet
+    中特定子网的专用 IP 地址。
+- - '##'
+  - 13. B. 物化视图由对多个表执行的聚合组成，允许分析师使用简单查询构建报告。物化视图还会在基础表中更新数据时编译和存储聚合，因此比传统视图快得多。
+- - '##'
+  - 14. D. 为了充分利用 Azure Synapse Analytics 专用 SQL 池的横向扩展设计，数据被分片为 60 个分布，分布在一个或多个计算节点上。
+- - '##'
+  - 15. B. Azure SQL MI 通过在计划的时间段内执行完整备份、差异备份和事务日志备份来管理数据库备份。可以使用时间点还原将数据库备份还原到另一个
+    Azure SQL MI，以指定应还原哪个版本的数据库。
+- - '##'
+  - 16. A. Azure SQL Database 的基于 vCore 的购买模型包括以下服务层：常规用途、业务关键、超大规模。此购买模型让用户能够选择 vCore
+    数量、内存大小和存储速度。
+- - '##'
+  - 17. B. Azure Database for PostgreSQL 是唯一提供超大规模部署模型的开源 PaaS 数据库选项，适用于大型 OLTP 工作负载。
+- - '##'
+  - 18. B. 在管理资源之前，需要 `Connect-AzAccount` 才能与 Azure 环境建立连接。
+- - '##'
+  - 19. C. 哈希分布是大型事实表的最佳选择，并为联接和聚合提供最佳性能。这种分布类型通过对表中的列运行哈希函数来分布数据，该函数将确定性地将表的每一行分配到一个分布。
+- - '##'
+  - 20. D. `Microsoft.Sql/servers` 管理逻辑服务器的部署配置，而 `Microsoft.Sql/servers/databases`
+    管理与逻辑服务器关联的每个数据库的部署配置。
+- - '##'
+  - 21. A. `New-AzSqlDatabase` 是用于创建新 Azure SQL Database 的 Azure PowerShell 命令。
+- - '##'
+  - 22. B. SQL DB 参与者角色赋予用户在 Azure 中创建和管理数据库的能力。虽然参与者角色也允许用户执行相同的任务，但它授予的权限超出了所需范围。
+- - '##'
+  - 23. C. Always Encrypted 是 SQL Server 和 Azure SQL 中的一项功能，用于加密敏感表列。它允许客户端应用程序管理加密和解密密钥，确保只有客户端应用程序可以解密敏感数据。
+- - '##'
+  - 24. D. SQL Server Management Studio (SSMS) 提供用于配置、监控和管理 SQL Server 和 Azure SQL
+    实例的工具。
+- - '##'
+  - 25. A. 数据库包含用户只能访问其所在的数据库。在 SSMS 连接到服务器屏幕中将数据库上下文从 `default` 更改为用户所在的数据库，以成功建立连接。
+- - '##'
+  - 26. B. `CREATE TABLE` 语句属于 SQL 语句的数据定义语言（DDL）类别。
+- - '#'
+  - 第 3 章：Azure 中的非关系型数据库
+- - '#'
+  - 第 4 章：文件、对象和数据湖存储
+- - '#'
+  - 第 5 章：Azure 中的现代数据仓库
+- - '#'
+  - 第 6 章：使用 Power BI 进行报告
+- - '#'
+  - 索引
+- - '#'
+  - 索引
+- - '#'
+  - 索引
+- - '##'
+  - A
+- - '##'
+  - B
+- - '##'
+  - C
+- - '##'
+  - D
+- - '#'
+  - E 部分
+- - '#'
+  - F 部分
+- - '#'
+  - first normal form (1NF)
+- - '#'
+  - Flexible Server 部署
+- - '#'
+  - FLOAT 数据类型
+- - '#'
+  - forbidden exceptions
+- - '##'
+  - 作为 Azure Cosmos DB 的常见连接问题
+- - '##'
+  - 作为 Azure Storage 的常见连接问题
+- - '#'
+  - 外键
+- - '#'
+  - FOREIGN KEY 命令
+- - '#'
+  - 公式栏 (Power BI)
+- - '#'
+  - 函数
+- - '##'
+  - 在 ARM 模板中
+- - '##'
+  - 作为关系型数据结构
+- - '#'
+  - G
+- - '#'
+  - 常规用途服务层级
+- - '##'
+  - 简介
+- - '##'
+  - 在 Azure SQL Database 中
+- - '##'
+  - 在 Azure SQL 托管实例 (Azure SQL MI) 中
+- - '#'
+  - 常规用途 VM
+- - '#'
+  - 地理冗余存储 (GRS)
+- - '#'
+  - 地理区域冗余存储 (GZRS)
+- - '#'
+  - 全球分布
+- - '##'
+  - 简介
+- - '##'
+  - 配置
+- - '#'
+  - 金层
+- - '#'
+  - 图数据库
+- - '#'
+  - H
+- - '#'
+  - Hadoop 分布式文件系统 (HDFS)
+- - '#'
+  - 哈希分布
+- - '#'
+  - Azure HDInsight 中的 HBase
+- - '#'
+  - 分层命名空间
+- - '#'
+  - 高可用性
+- - '#'
+  - 高并发模式 (Azure Databricks)
+- - '#'
+  - 热路径
+- - '#'
+  - 热层
+- - '##'
+  - 对于 Azure Blob 存储
+- - '##'
+  - 对于 Azure 文件
+- - '#'
+  - 超大规模服务层级
+- - '#'
+  - I
+- - '#'
+  - 图像
+- - '#'
+  - 不可变性策略
+- - '#'
+  - 导入连接 (Power BI)
+- - '#'
+  - 索引
+- - '#'
+  - INDEXES 命令
+- - '#'
+  - 基础设施即服务 (IaaS)
+- - '#'
+  - 基础设施即代码
+- - '#'
+  - 引入按钮 (Azure 数据工厂工作室)
+- - '#'
+  - INSERT 命令
+- - '#'
+  - INSERT INTO SELECT 语句
+- - '#'
+  - 实例相关问题
+- - '#'
+  - 实例 (ADF)
+- - '#'
+  - 实例范围功能
+- - '#'
+  - INT 数据类型
+- - '#'
+  - 集成按钮 (Synapse Studio)
+- - '#'
+  - 集成运行时
+- - '#'
+  - 交互式报表 (Power BI)
+- - '#'
+  - 隔离
+- - '#'
+  - J
+- - '#'
+  - 作业群集
+- - '#'
+  - 作业按钮 (Azure Databricks)
+- - '#'
+  - K
+- - '#'
+  - 关键绩效指标 (KPI)
+- - '#'
+  - 基于密钥的访问控制
+- - '#'
+  - 键值存储
+- - '##'
+  - 简介
+- - '##'
+  - 作为非关系型数据库的功能
+- - '#'
+  - L
+- - '#'
+  - Lambda 架构
+- - '#'
+  - 折线图
+- - '#'
+  - 链接服务
+- - '#'
+  - 实时连接 (Power BI)
+- - '#'
+  - 加载阶段
+- - '##'
+  - 加载和转换 (ELT)
+- - '##'
+  - 转换和加载 (ETL)
+- - '#'
+  - 本地冗余存储 (LRS)
+- - '#'
+  - 登录失败
+- - '#'
+  - 逻辑处理顺序
+- - '#'
+  - M
+- - '#'
+  - 管理按钮
+- - '##'
+  - Azure 数据工厂工作室
+- - '##'
+  - Synapse Studio
+- - '#'
+  - 管理
+- - '##'
+  - 访问
+- - '###'
+  - 简介
+- - '###'
+  - Azure Cosmos DB 和
+- - '###'
+  - Azure 存储安全和
+- - '##'
+  - Azure Cosmos DB 的任务
+- - '##'
+  - Azure 存储的任务
+- - '##'
+  - 简介
+- - '##'
+  - 常见连接问题
+- - '##'
+  - 部署脚本和自动化
+- - '##'
+  - 管理工具
+- - '##'
+  - 安全
+- - '##'
+  - 关系型数据库的任务
+- - '##'
+  - 简介
+- - '##'
+  - 常见连接问题
+- - '##'
+  - 数据库安全
+- - '##'
+  - 部署脚本和自动化
+- - '##'
+  - 管理工具
+- - '##'
+  - 迁移到 Azure SQL
+- - '##'
+  - 工具
+- - '##'
+  - 简介
+- - '##'
+  - 对于 Azure Cosmos DB
+- - '##'
+  - 对于 Azure 存储
+- - '##'
+  - AzCopy
+- - '##'
+  - Azure Data Box
+- - '##'
+  - Azure 数据工厂
+- - '##'
+  - Azure 存储资源管理器
+- - '#'
+  - 映射向导 (Power BI)
+- - '#'
+  - 映射数据流
+- - '#'
+  - 地图
+- - '#'
+  - MariaDB
+- - '##'
+  - Azure 数据库用于
+- - '##'
+  - 查询
+- - '#'
+  - 大规模并行处理 (MPP) 系统
+- - '#'
+  - 物化视图
+- - '#'
+  - 矩阵
+- - '#'
+  - 成员角色 (Power BI 服务)
+- - '#'
+  - 内存优化服务层级
+- - '#'
+  - 内存优化 VM
+- - '#'
+  - MERGE 语句
+- - '#'
+  - 消息生产者
+- - '#'
+  - Microsoft Certified Azure Fundamental Exam Guide (Boyce)
+- - '#'
+  - Microsoft Power BI
+- - '#'
+  - 迁移
+- - '##'
+  - 到 Azure SQL
+- - '##'
+  - Azure SQL 的时间表选项
+- - '#'
+  - MLflow
+- - '#'
+  - 模型视图 (Power BI Desktop)
+- - '#'
+  - MongoDB
+- - '#'
+  - 监视按钮
+- - '##'
+  - Azure 数据工厂工作室
+- - '##'
+  - Synapse Studio
+- - '#'
+  - 装载文件共享
+- - '#'
+  - '`mount_point` 参数'
+- - '#'
+  - MPP (大规模并行处理) 系统
+- - '#'
+  - MySQL
+- - '##'
+  - Azure 数据库用于
+- - '##'
+  - 查询
+- - '#'
+  - N
+- - '#'
+  - 导航
+- - '##'
+  - Azure 数据工厂工作室
+- - '##'
+  - Azure Databricks 工作区 UI
+- - '##'
+  - Synapse Studio UI
+- - '#'
+  - NCHAR 数据类型
+- - '#'
+  - O
+- - '#'
+  - P
+- - '#'
+  - Q
+- - '#'
+  - R
+- - '#'
+  - 索引
+- - '#'
+  - Online Test Bank
+- - '##'
+  - Register and Access the Online Test Bank
+- - '#'
+  - WILEY END USER LICENSE AGREEMENT

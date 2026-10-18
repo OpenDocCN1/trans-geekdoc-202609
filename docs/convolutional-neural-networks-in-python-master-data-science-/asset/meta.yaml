@@ -1,0 +1,18 @@
+name: Convolutional Neural Networks in Python： Master Data Science and Machine Learning
+  with Modern Deep Learning in Python, Theano, and TensorFlow (Machine Learning in
+  Python)
+slug: convolutional-neural-networks-in-python-master-data-science-
+name_cn: python 卷积神经网络 实战：python、theano 和 tensorflow 现代深度学习 数据科学与机器学习高级指南（python 机器学习）
+toc:
+- - '##'
+  - 简介
+- - '##'
+  - 第 1 章：前馈神经网络回顾
+- - '##'
+  - 第 2 章：卷积
+- - '##'
+  - 第 3 章：卷积神经网络
+- - '##'
+  - 第 4 章：Theano 示例代码
+- - '##'
+  - 第 5 章：TensorFlow 中的示例代码

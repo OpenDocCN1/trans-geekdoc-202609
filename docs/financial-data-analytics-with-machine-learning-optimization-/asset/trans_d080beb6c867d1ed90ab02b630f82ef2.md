@@ -1,0 +1,54 @@
+
+
+![StartLayout 1st Row 1st Column parallel-to bold-italic upper X minus bold-italic upper W bold-italic upper W Superscript down-tack Baseline bold-italic upper X parallel-to 2nd Column equals trace left-parenthesis left-parenthesis bold-italic upper X minus bold-italic upper W bold-italic upper W Superscript down-tack Baseline bold-italic upper X right-parenthesis Superscript down-tack Baseline left-parenthesis bold-italic upper X minus bold-italic upper W bold-italic upper W Superscript down-tack Baseline bold-italic upper X right-parenthesis right-parenthesis 2nd Row 1st Column Blank 2nd Column equals trace left-parenthesis bold-italic upper X Superscript down-tack Baseline bold-italic upper X minus 2 bold-italic upper X Superscript down-tack Baseline bold-italic upper W bold-italic upper W Superscript down-tack Baseline bold-italic upper X plus bold-italic upper X Superscript down-tack Baseline bold-italic upper W bold-italic upper W Superscript down-tack Baseline bold-italic upper W bold-italic upper W Superscript down-tack Baseline bold-italic upper X right-parenthesis 3rd Row 1st Column Blank 2nd Column equals trace left-parenthesis bold-italic upper X Superscript down-tack Baseline bold-italic upper X minus bold-italic upper X Superscript down-tack Baseline bold-italic upper W bold-italic upper W Superscript down-tack Baseline bold-italic upper X right-parenthesis comma EndLayout](images/c09-math-0013.png)
+
+<math display="block" overflow="scroll">
+<mtable>
+  <mtr>
+    <mtd columnalign="right">
+      <mo stretchy="false">&#8741;</mo><mspace width="-.2em"/><mi mathvariant="bold-italic">X</mi><mo>&#8722;</mo><mi mathvariant="bold-italic">W</mi><msup><mi mathvariant="bold-italic">W</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">X</mi><mspace width="-.2em"/><msubsup><mo stretchy="false">&#8741;</mo><mi>F</mi><mn>2</mn></msubsup>
+    </mtd>
+    <mtd columnalign="left">
+      <mo>=</mo><mtext>tr</mtext><mfenced open="(" close=")" separators=""><mrow><msup><mrow><mo stretchy="false">(</mo><mi mathvariant="bold-italic">X</mi><mo>&#8722;</mo><mi mathvariant="bold-italic">W</mi><msup><mi mathvariant="bold-italic">W</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">X</mi><mo stretchy="false">)</mo></mrow><mo>&#8868;</mo></msup><mo stretchy="false">(</mo><mi mathvariant="bold-italic">X</mi><mo>&#8722;</mo><mi mathvariant="bold-italic">W</mi><msup><mi mathvariant="bold-italic">W</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">X</mi><mo stretchy="false">)</mo></mrow></mfenced>
+    </mtd>
+  </mtr>
+  <mtr>
+    <mtd columnalign="right"/>
+    <mtd columnalign="right">
+      <mo>=</mo><mtext>tr</mtext><mfenced open="(" close=")" separators=""><mrow><msup><mi mathvariant="bold-italic">X</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">X</mi><mo>&#8722;</mo><mn>2</mn><msup><mi mathvariant="bold-italic">X</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">W</mi><msup><mi mathvariant="bold-italic">W</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">X</mi><mo>+</mo><msup><mi mathvariant="bold-italic">X</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">W</mi><msup><mi mathvariant="bold-italic">W</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">W</mi><msup><mi mathvariant="bold-italic">W</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">X</mi></mrow></mfenced>
+    </mtd>
+  </mtr>
+  <mtr>
+    <mtd columnalign="right"/>
+    <mtd columnalign="left">
+      <mo>=</mo><mtext>tr</mtext><mfenced open="(" close=")" separators=""><mrow><msup><mi mathvariant="bold-italic">X</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">X</mi><mo>&#8722;</mo><msup><mi mathvariant="bold-italic">X</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">W</mi><msup><mi mathvariant="bold-italic">W</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">X</mi></mrow></mfenced><mo>,</mo>
+    </mtd>
+  </mtr>
+</mtable>
+</math>
+
+where the last equality follows by using ![bold-italic upper W Superscript down-tack Baseline bold-italic upper W equals bold-italic upper I Subscript k](images/c09-i0111.png)<math display="inline" overflow="scroll"><msup><mi mathvariant="bold-italic">W</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">W</mi><mo>=</mo><msub><mi mathvariant="bold-italic">I</mi><mi>k</mi></msub></math>. Since ![bold-italic upper X Superscript down-tack Baseline bold-italic upper X](images/c09-i0112.png)<math display="inline" overflow="scroll"><msup><mi mathvariant="bold-italic">X</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">X</mi></math> does not depend on ![bold-italic upper W](images/c09-i0113.png)<math display="inline" overflow="scroll"><mrow><mi mathvariant="bold-italic">W</mi></mrow></math>, we have
+
+![StartLayout 1st Row 1st Column arg min Underscript bold-italic upper W Endscripts parallel-to bold-italic upper X minus bold-italic upper W bold-italic upper W Superscript down-tack Baseline bold-italic upper X parallel-to 2nd Column equals arg min Underscript bold-italic upper W Endscripts trace left-parenthesis minus bold-italic upper X Superscript down-tack Baseline bold-italic upper W bold-italic upper W Superscript down-tack Baseline bold-italic upper X right-parenthesis 2nd Row 1st Column Blank 2nd Column equals arg max Underscript bold-italic upper W Endscripts trace left-parenthesis bold-italic upper X Superscript down-tack Baseline bold-italic upper W bold-italic upper W Superscript down-tack Baseline bold-italic upper X right-parenthesis period EndLayout](images/c09-math-0014.png)
+
+<math display="block" overflow="scroll">
+<mtable>
+  <mtr>
+    <mtd columnalign="right">
+      <munder><mtext>arg&#8201;min</mtext><mi mathvariant="bold-italic">W</mi></munder><mo stretchy="false">&#8741;</mo><mspace width="-.2em"/><mi mathvariant="bold-italic">X</mi><mo>&#8722;</mo><mi mathvariant="bold-italic">W</mi><msup><mi mathvariant="bold-italic">W</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">X</mi><mspace width="-.2em"/><msubsup><mo stretchy="false">&#8741;</mo><mi>F</mi><mn>2</mn></msubsup>
+    </mtd>
+    <mtd columnalign="left">
+      <mo>=</mo><munder><mtext>arg&#8201;min&#8201;</mtext><mi mathvariant="bold-italic">W</mi></munder><mtext>tr</mtext><mfenced open="(" close=")" separators=""><mrow><mo>&#8722;</mo><msup><mi mathvariant="bold-italic">X</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">W</mi><msup><mi mathvariant="bold-italic">W</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">X</mi></mrow></mfenced>
+    </mtd>
+  </mtr>
+  <mtr>
+    <mtd columnalign="right"/>
+    <mtd columnalign="left">
+      <mo>=</mo><munder><mtext>arg&#8201;max&#8201;</mtext><mi mathvariant="bold-italic">W</mi></munder><mtext>tr</mtext><mo stretchy="false">&#8201;(</mo><msup><mi mathvariant="bold-italic">X</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">W</mi><msup><mi mathvariant="bold-italic">W</mi><mo>&#8868;</mo></msup><mi mathvariant="bold-italic">X</mi><mo stretchy="false">)</mo><mo>.</mo>
+    </mtd>
+  </mtr>
+</mtable>
+</math>
+
+By the cyclic invariance of trace, the optimization problem can then be rewritten as
+

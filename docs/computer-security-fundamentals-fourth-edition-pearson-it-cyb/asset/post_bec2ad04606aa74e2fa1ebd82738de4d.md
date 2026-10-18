@@ -1,0 +1,268 @@
+
+- malware
+  - BlackEnergy, 347
+  - FinFisher, 347
+  - Flame, 346
+  - NSA ANT catalog, 347
+  - StopGeorgia.ru, 346
+  - Stuxnet, 345–346
+- military operations attacks, 350
+- propaganda, 352–353
+- real-world examples, 343–344, 355–359
+  - Chinese Eagle Union, 344
+  - India/Pakistan, 345
+  - Russian hackers, 345
+- SCADA (Supervisory Control and Data Acquisition), 351–352
+- scope of problem, 342–343
+- terrorist recruiting and communication, 362–363
+- TOR and dark web, 363–364
+
+- **cybercrime. See Internet fraud; threats**
+- **cybersecurity engineering. See systems engineering**
+- **Cybersecurity Research and Education Act (2002), 359**
+- **Cyberterrorism Preparedness Act (2002), 359**
+- **cyclic groups, 221**
+- **CYOD (Choose Your Own Device), 285**
+
+## D
+
+- **Daemen, John, 220**
+- **DAM (database activity monitoring), 261**
+- **DAMP (database activity monitoring and prevention), 261**
+- **Dark Web, 173–175, 363–364**
+- DARPA (Defense Advanced Research Projects Agency), 363
+- Das, Mittesh, 139
+- data classification, 294–295
+- Data Encryption Standard (DES), 216–219
+- data integrity, 394
+- data interface diagrams, 438–439
+- data sources, IDS, 256
+- data transmission
+  - overview of, 38–39
+  - ports, 40
+  - TCP/IP protocols, 39–40
+- database activity monitoring and prevention (DAMP), 261
+- database activity monitoring (DAM), 261
+- Daubert standard, 414
+- DCC (Defence Cyber Command), 360
+- DDoS (distributed denial of service) attacks, 10, 99, 109
+- decryption, 207
+- cryptanalysis
+  - brute force, 235
+  - chosen plain text, 236
+  - cipher text only, 236
+  - differential cryptanalysis, 236
+  - frequency analysis, 235
+  - goals of, 235
+  - known plain text, 236
+  - linear cryptanalysis, 236
+  - related-key attacks, 236
+  - steganography, 234
+- dedicated parity, striped disks with, 297
+- Defence Cyber Command (DCC), 360
+- Defense Advanced Research Projects Agency (DARPA), 363
+- deleted files, recovering, 399–402
+- demilitarized zone (DMZ), 320
+- denial of service. See DoS (denial of service) attacks
+- departing employees, security policies for, 287–288
+- Department of Defense clearance levels, 294–295
+- DES (Data Encryption Standard), 216–219
+- desktop configuration, security policies for, 285
+- detective investigation. See investigation techniques
+- developmental policies, 293
+- DHCP (Dynamic Host Configuration Protocol) starvation, 108
+- diagrams
+  - data interface, 438–439
+  - misuse case, 432–436
+  - security block, 439
+  - security sequence, 436–438
+  - use-case, 428
+- DIDs (data interface diagrams), 438–439
+- differential backups, 296–297
+- differential cryptanalysis, 236
+- Diffie, Whitfield, 227
+- Diffie-Hellman, 227
+- DigiCert, 266
+- digital certificates, 265–266
+- Digital Signature Algorithm (DSA), 228
+- digital signatures, 230
+- directory traversal, 165
+- disabled services, 309–310
+- disaster, defined, 295
+- disaster recovery
+  - BCPs (business continuity plans), 295–296
+  - business continuity standards, 296
+  - DRPs (disaster recovery plans), 295, 312
+  - impact analysis, 296
+- disinformation, 355
+- DiskDigger, 399–402
+- distributed denial of service (DDoS) attacks, 10, 99, 109
+- distributed parity, striped disks with, 298
+- DMZ (demilitarized zone), 320
+- DNS (Domain Name System), 39
+- DNS (Domain Name System) poisoning, 8, 14–15
+- Dobbertin, Hans, 231
+- documentation, forensics, 391–393
+- Domain Name System (DNS), 39
+
+### DoS (denial of service) attacks
+
+- DDoS (distributed denial of service), 10, 99, 109
+- defending against, 111–112
+- defined, 7, 10
+- DHCP starvation, 108
+- Fraggle attacks, 106
+- HTTP POST DoS attacks, 108
+- ICMP (Internet Control Message Protocol) flood attacks, 107
+- illustration of, 97–99
+- land attacks, 109
+- login DoS attacks, 108
+- PDoS (permanent denial of service), 108
+- PoD (ping of death), 107–108
+- real-world examples, 109–111
+- registration DoS attacks, 108
+- scope of problem, 97
+- security policies for, 291
+- Smurf IP attacks, 105–106
+- TCP (Transmission Control Protocol) SYN flood attacks
+  - micro blocks, 103
+  - overview of, 102–103
+  - RST cookies, 104
+  - SPI firewalls, 105
+  - stack tweaking, 104
+  - SYN cookies, 103–104
+- teardrop attacks, 108
+- tools for
+  - HOIC (High Orbit Ion Cannon), 100
+  - LOIC (Low Orbit Ion Cannon), 99–100
+  - Stacheldraht, 101
+  - TFN (Tribal Flood Network), 101
+  - TFN2K, 101
+  - Trinoo DDoS tool, 101
+  - XOIC, 100
+- UDP (User Datagram Protocol) flood attacks, 107
+
+- DoSHTTP, 346
+- download scanning, 246
+- doxxing, 15
+- drive imaging, 387–391
+- DRPs (disaster recovery plans), 295, 312
+- DS0 connection lines, 36
+- DSA (Digital Signature Algorithm), 228
+- dual parity, striped disks with, 298
+- dual-homed hosts, 251
+- dumpster diving, 370
+- Duronio, Roger, 139
+
+## E
+
+- **EAP (Extensible Authentication Protocol),** 262, 269
+- **EAP-TLS (Extensible Authentication Protocol-Transport Layer Security),** 262
+- **eBay,** 12
+- **ECB (electronic codebook) mode,** 223
+- **ECC (Elliptic Curve Cryptography),** 228
+- **EC-Council Certified Ethical Hacker,** 152, 331
+- **economic attacks,** 347–349
+- **economic espionage,** 188–189
+- **Economic Espionage Act (1996),** 183
+- **EDGE (Enhanced Data Rates for GSM Evolution),** 409
+- **Edge browser,** 84
+- **Edwards, John,** 359
+- **EffeTech HTTP Sniffer,** 415
+- **EFS (Encrypted File System),** 195–196
+- **electronic codebook (ECB) mode,** 223
+- **Electronic Evidence Guide,** 394–395
+- **Elgamal, Taher,** 227
+- **eLiTeWrap,** 131–132
+- **Elliptic Curve,** 228
+- **Ellison, Larry,** 189
+- **email**
+  - attachments, security policies for, 283–284
+  - phishing, 73–74, 139, 198
+  - scanning, 246
+  - spam, 139
+- **employees, security policies for**
+- Elliptic Curve, 228
+- MQV (Menezes-Qu-Vanstone), 227
+- PGP (Pretty Good Privacy), 228–229
+- RSA method, 224–227
+- quantum cryptography, 237
+- single-key (symmetric), 207
+- 3DES (Triple DES), 219
+- AES (Advanced Encryption Standard), 220–222
+- Blowfish, 222
+- defined, 216
+- DES (Data Encryption Standard), 216–219
+- modification of, 223
+- Serpent, 222
+- Skipjack, 222
+- Twofish, 220
+- Energy Technology International, 188
+- engineering. See systems engineering
+- Enhanced Data Rates for GSM Evolution (EDGE), 409
+- Enigma, 213–214
+- enumeration, 159–160
+- errors, client/server, 46
+- ESP (Encapsulating Security Payload), 270
+- espionage. See industrial espionage
+- ethical hacking, 18
+- ETSI (European Telecommunications Standards Institute), 409
+- Euler’s totient, 225
+- events, IDS, 256
+- evidence
+  - Android, 410–411
+  - browser, 397–398
+  - cell phone, 408
+  - cellular networks, 409
+  - ICCID (Integrated Circuit Card Identification), 408
+  - IMSI (International Mobile Subscriber Identity), 408
+  - SIM (Subscriber Identity Module), 408
+  - chain of custody, 392
+  - deleted files, recovering, 399–402
+  - iOS, 410
+  - operating system utilities, 402–404
+    - fc, 403
+    - net sessions, 402
+    - netstat, 404
+    - openfiles, 403
+  - system log
+    - Linux logs, 399
+    - Windows logs, 398
+  - Windows, 398, 404–407, 411
+- evil twin attack, 166
+- expert witnesses, 414
+- expulsion, 286
+- Extensible Authentication Protocol (EAP), 262, 269
+- Extensible Authentication Protocol-Transport Layer Security (EAP-TLS), 262
+
+## F
+
+- **Fannie Mae**, 139
+- **FastMail**, 111
+- **fault tolerance**, 296–298
+- **FBAR (thin-film bulk acoustic resonator) technology**, 188
+- **FBI (Federal Bureau of Investigation) forensics guidelines**, 392–393
+- **fc command**, 403
+- **FDISK utility**, 170
+- **federal prison records**, 378
+- **Feistel cipher**, 216–217
+- **fields, AES (Advanced Encryption Standard)**, 222
+- **file recovery**, 399–402
+- **file scanning**, 246
+- **File Transfer Protocol (FTP)**, 39
+- **filtering, packet**, 249
+- **FinFisher**, 347
+- **Firefox security settings**, 85–87
+- **firewalls**
+  - benefits and limitations of, 248–249
+  - configurations, 250–251
+  - defined, 19, 55–56, 248
+  - firewall logs, 253
+  - selection of, 311–312
+  - SPI, 105
+  - types of, 249–250
+  - Windows 10 Windows Defender, 252–253
+  - ZoneAlarm, 252
+- **Flame**, 128, 345–346
+- **flooding**
+  - TCP (Transmission Control Protocol) SYN flood attacks

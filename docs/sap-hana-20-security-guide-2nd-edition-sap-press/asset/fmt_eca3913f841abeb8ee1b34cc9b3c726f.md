@@ -1,0 +1,306 @@
+
+# application roles
+[→ Section 18.2](#18_002.html#i18_37)
+
+# command line
+[→ Section 1.1](#01_001.html#i01_09)
+
+# create user
+[→ Section 18.2](#18_002.html#i18_30)
+
+# credentials
+[→ Section 18.2](#18_002.html#i18_24)
+
+# framework
+[→ Section 18.1](#18_001.html#i18_04)
+
+# login
+[→ Section 18.2](#18_002.html#i18_25)
+
+# manage users
+[→ Section 18.2](#18_002.html#i18_27)
+
+# platform services
+[→ Section 18.1](#18_001.html#i18_06)
+
+# privileges
+[→ Section 18.3](#18_003.html#i18_55)
+
+# role collections
+[→ Section 18.2](#18_002.html#i18_31)
+
+# security
+[→ Section 18.2](#18_002.html#i18_28)
+
+# SAP HANA XSA cockpit
+[→ Section 18.2](#18_002.html#i18_19) [→ Section 18.2](#18_002.html#i18_26) [→ Section 18.2](#18_002.html#i18_40)
+
+# SAP HANA, express edition
+[→ Section 1.1](#01_001.html#i01_06)
+
+# SAP Landscape Transformation Replication Server
+[→ Section 8.2](#08_002.html#i08_41)
+
+# SAP NetWeaver
+[→ Section 2.1](#02_001.html#i02_00) [→ Section 17.1](#17_001.html#i17_12)
+
+# SAP NetWeaver Application Server
+[→ Section 12.3](#12_003.html#i12_80)
+
+# SAP Web Dispatcher
+[→ Section 12.3](#12_003.html#i12_76) [→ Section 13.1](#13_001.html#i13_38) [→ Section 13.1](#13_001.html#i13_41)
+
+# PSE management
+[→ Section 13.1](#13_001.html#i13_39)
+
+# SAP Web IDE for SAP HANA
+[→ Section 7.2](#07_002.html#i07_30) [→ Section 10.1](#10_001.html#i10_15) [→ Section 11.1](#11_001.html#i11_07) [→ Section 18.2](#18_002.html#i18_16) [→ Section 18.2](#18_002.html#i18_33) [→ Section 18.2](#18_002.html#i18_49) [→ Section 18.3](#18_003.html#i18_51) [→ Section 18.4](#18_004.html#i18_71) [→ Section 18.4](#18_004.html#i18_114) [→ Section 18.4](#18_004.html#i18_122)
+
+# access
+[→ Section 18.3](#18_003.html#i18_56)
+
+# grant user access
+[→ Section 18.4](#18_004.html#i18_79)
+
+# homepage
+[→ Section 18.3](#18_003.html#i18_57)
+
+# overview
+[→ Section 18.3](#18_003.html#i18_53)
+
+# synonyms
+[→ Section 18.4](#18_004.html#i18_125)
+
+# Savepoints
+[→ Section 13.3](#13_003.html#i13_66)
+
+# Schema access
+[→ Section 4.1](#04_001.html#i04_19)
+
+# Schema object privileges
+[→ Section 2.1](#02_001.html#i02_14)
+
+# Schema objects
+[→ Section 3.1](#03_001.html#i03_06)
+
+# Schema prefix
+[→ Section 5.2](#05_002.html#i05_18)
+
+# Schema privileges
+[→ Section 6.3](#06_003.html#i06_49) [→ Section 8.1](#08_001.html#i08_09) [→ Section 8.2](#08_002.html#i08_50)
+
+# granting multiple
+[→ Section 8.2](#08_002.html#i08_45)
+
+# revoking multiple
+[→ Section 8.2](#08_002.html#i08_47)
+
+# Schema reference
+[→ Section 18.4](#18_004.html#i18_89)
+
+# Schema-level access
+[→ Section 5.3](#05_003.html#i05_32)
+
+# Schemas
+[→ Section 2.1](#02_001.html#i02_15) [→ Section 8.1](#08_001.html#i08_01) [→ Section 8.2](#08_002.html#i08_52) [→ Section 18.4](#18_004.html#i18_74)
+
+# CDS tables
+[→ Section 3.3](#03_003.html#i03_46)
+
+# create
+[→ Section 7.2](#07_002.html#i07_31)
+
+# creation
+[→ Section 3.2](#03_002.html#i03_17)
+
+# grant/revoke privileges
+[→ Section 8.2](#08_002.html#i08_42)
+
+# owner-granted privileges
+[→ Section 8.2](#08_002.html#i08_44)
+
+# remove privileges by role
+[→ Section 8.2](#08_002.html#i08_46)
+
+# SQL
+[→ Section 8.2](#08_002.html#i08_40)
+
+# Script server
+[→ Appendix Introduction](#00_002.html#i00_38)
+
+# Script-based repository roles
+[→ Section 7.3](#07_003.html#i07_58) [→ Section 8.5](#08_005.html#i08_65) [→ Section 8.6](#08_006.html#i08_86) [→ Section 10.8](#10_008.html#i10_96)
+
+# Secure Shell (SSH)
+[→ Section 13.3](#13_003.html#i13_74)
+
+# Secure Sockets Layer (SSL)
+[→ Section 13.1](#13_001.html#i13_07)
+
+# access
+[→ Section 14.2](#14_002.html#i14_34)
+
+# admin
+[→ Section 7.2](#07_002.html#i07_21)
+
+# certificate
+[→ Section 12.2](#12_002.html#i12_52)
+
+# certificates
+[→ Section 13.1](#13_001.html#i13_02) [→ Section 13.1](#13_001.html#i13_03) [→ Section 13.2](#13_002.html#i13_58)
+
+# communications
+[→ Section 13.2](#13_002.html#i13_57)
+
+# encryption
+[→ Section 13.2](#13_002.html#i13_46) [→ Section 13.2](#13_002.html#i13_52)
+
+# protocols
+[→ Section 13.1](#13_001.html#i13_08)
+
+# secured connection
+[→ Section 13.2](#13_002.html#i13_61)
+
+# Secure store in the file system (SSFS)
+[→ Section 13.3](#13_003.html#i13_68)
+
+# Secured models
+[→ Section 10.2](#10_002.html#i10_20)
+
+# Security changes
+[→ Section 14.1](#14_001.html#i14_18)
+
+# scheduling
+[→ Section 14.1](#14_001.html#i14_23)
+
+# Security checklist
+[→ Section 1.2](#01_002.html#i01_47)
+
+# Security console
+[→ Section 15.2](#15_002.html#i15_29)
+
+# Security lifecycle management
+[→ Section 14.1](#14_001.html#i14_00)
+
+# best practices
+[→ Section 14.1](#14_001.html#i14_03)
+
+# content packages
+[→ Section 14.1](#14_001.html#i14_10)
+
+# multiple environments
+[→ Section 14.1](#14_001.html#i14_06)
+
+# role dependencies
+[→ Section 14.1](#14_001.html#i14_14)
+
+# rollback plan
+[→ Section 14.1](#14_001.html#i14_13)
+
+# test and validate
+[→ Section 14.1](#14_001.html#i14_12)
+
+# Security management task auditing
+[→ Section 15.5](#15_005.html#i15_94)
+
+# Security manager
+[→ Section 4.2](#04_002.html#i04_50)
+
+# Security model
+[→ Appendix Introduction](#00_002.html#i00_44) [→ Appendix Introduction](#00_002.html#i00_46) [→ Section 5.1](#05_001.html#i05_01) [→ Section 9.4](#09_004.html#i09_42) [→ Section 14.1](#14_001.html#i14_02)
+
+# dependencies
+[→ Section 3.4](#03_004.html#i03_55)
+
+# repository roles
+[→ Section 6.1](#06_001.html#i06_26)
+
+# test plans
+[→ Section 14.1](#14_001.html#i14_19)
+
+# testing changes
+[→ Section 14.1](#14_001.html#i14_15)
+
+# tracking changes
+[→ Section 14.1](#14_001.html#i14_16)
+
+# troubleshooting
+[→ Section 16.1](#16_001.html#i16_20)
+
+# validating
+[→ Section 14.1](#14_001.html#i14_17)
+
+# Security packages
+[→ Section 14.3](#14_003.html#i14_43)
+
+# Security tracing
+[→ Section 16.1](#16_001.html#i16_01)
+
+# SELECT privileges
+[→ Section 16.3](#16_003.html#i16_35)
+
+# Sensitive data
+[→ Appendix Introduction](#00_002.html#i00_47)
+
+# Separation of duties
+[→ Section 7.4](#07_004.html#i07_67)
+
+# Sequences
+[→ Section 3.1](#03_001.html#i03_11) [→ Section 8.1](#08_001.html#i08_24)
+
+# Server-side data encryption
+[→ Section 13.3](#13_003.html#i13_67)
+
+# Service account user
+[→ Section 18.4](#18_004.html#i18_119)
+
+# Service accounts
+[→ Section 17.1](#17_001.html#i17_11)
+
+# guidelines
+[→ Section 17.1](#17_001.html#i17_13)
+
+# Service provider (SP)
+[→ Section 12.3](#12_003.html#i12_69)
+
+# Simple and Protected GSSAPI Negotiation Mechanism (SPNEGO)
+[→ Section 12.3](#12_003.html#i12_59)
+
+# Single sign-on (SSO)
+[→ Section 1.2](#01_002.html#i01_41) [→ Section 4.1](#04_001.html#i04_26) [→ Section 12.1](#12_001.html#i12_05) [→ Section 12.3](#12_003.html#i12_77) [→ Section 17.1](#17_001.html#i17_09)
+
+# Software provisioning manager
+[→ Section 3.2](#03_002.html#i03_23)
+
+# Space auditors
+[→ Section 18.2](#18_002.html#i18_50)
+
+# Space developers
+[→ Section 18.2](#18_002.html#i18_48)
+
+# Space manager
+[→ Section 18.2](#18_002.html#i18_47)
+
+# Spaces
+[→ Section 18.2](#18_002.html#i18_13) [→ Section 18.2](#18_002.html#i18_46)
+
+# access
+[→ Section 18.2](#18_002.html#i18_42)
+
+# overview
+[→ Section 18.2](#18_002.html#i18_15)
+
+# SQL
+[→ Section 5.4](#05_004.html#i05_83)
+
+# SQL console
+[→ Section 1.3](#01_003.html#i01_51) [→ Section 3.2](#03_002.html#i03_26) [→ Section 4.3](#04_003.html#i04_65) [→ Section 5.3](#05_003.html#i05_37) [→ Section 6.5](#06_005.html#i06_92) [→ Section 8.2](#08_002.html#i08_43) [→ Section 18.3](#18_003.html#i18_61) [→ Section 18.4](#18_004.html#i18_83) [→ Section 18.4](#18_004.html#i18_103)
+
+# access
+[→ Section 1.3](#01_003.html#i01_55) [→ Section  4.1](#04_001.html#i04_21)
+
+# SQL privileges
+[→ Section 2.1](#02_001.html#i02_12)
+
+# SQL statements
+[→ Section 4.3](#04_003.html#i04_66) [→ Section 11.3](#11_003.html#i11_17)

@@ -1,0 +1,36 @@
+
+Why not Azure? The news came in May 2021. It was well hidden on the Microsoft documentation site (Altimore, 2021) but that couldn’t change the fact that it was dynamite to the blockchain cloud wars: out of nowhere Microsoft had announced the end of its Azure blockchain service. It said it would not accept any more deployments on the blockchain and companies that were using it – JP Morgan Chase, Starbucks, Xbox, among others – were asked to migrate to Quorum. Quorum, you might remember, is the Ethereum-based, open-source protocol once conceived by JP Morgan Chase and later bought by ConsenSys. Many thought that was it for Microsoft, that its blockchain ambitions were buried. But little did they know that Microsoft would roar back on another blockchain front, as we will see in [Chapter 12](#17_chapter12.xhtml#ch12_sec_001). The rise of the metaverse, a new frontier built on blockchain technology, will hand Microsoft a huge advantage as the company is a leader in hardware and gaming interfaces.
+
+### Could banking blockchains also end up in tech titans’ clouds?
+
+So how well does this dominance in the cloud translate into influence in the blockchain space? Extremely well. In fact, the stampeding unicorns have secretly already been tamed by the Big Tech cowboys. AWS alone runs about a quarter of all Ethereum nodes (Stevens, 2019).
+
+Moreover, running nodes with hosted providers gets easier and easier. In 2021 Amazon also launched its Managed Services for Ethereum, which saves developers time and effort and so strengthens Amazon’s say in the crypto realm. The concentration trend will be irreversible, as the next chapter shows.
+
+Having a large number of nodes run by a centralized company undermines the very idea of decentralized networks. In the most extreme scenario, distributed apps could be shut down by a central authority in that they just turn off the cloud servers on which the apps are hosted. Even worse, the controlling authority could validate transactions in its own favour or, contingent on the governance setup, could steer the further development of the chain.
+
+Unlike blockchain unicorns, traditional banks are fortunate (or unfortunate – it depends on whom you are asking) to have their own data centres. This has made them largely independent from the cloud powerhouses. Whether it stays like this will be determined by how well cloud providers and banks appropriate the blockchain. Glancing to China we see that even large banks are starting to agree to migrate their operations to Big Tech’s data centres if just the benefits are large enough.
+
+In 2010 the Chinese government banned foreign cloud providers. Out of necessity Alibaba launched OceanBase, an in-house cloud that was capable of powering the incredible transaction volumes of Alipay and its digital bank MyBank. The cloud became so appealing that it soon processed the operations of hundreds of clients including banks such as the state-owned ICBC or China Construction Bank. The functionalities grew bigger, blockchain capabilities were included, and eventually OceanBase became the largest BaaS provider in China. It will even handle the blockchain-based digital yuan issued by the central bank, but more of this later (DigFin, 2021).
+
+Banks can draw a number of lessons from this cloud dominance:
+
+1. Banks’ own data centres can be a huge asset if only they are well funded and properly managed.
+2. The reason own clouds often have a competitive advantage is because of the lower cost structure and the sharp focus on adherence to laws and banking rules.
+3. For smaller banks joint datacentres could form a banking cloud out of Big Tech’s reach.
+
+## Merging old and new territory
+
+If there is any such thing as a digitally native technology, it is the blockchain. Its very essence is to generate digital scarcity. With every new feature that refined the technology it opened up new possibilities and the industry became overbearingly self-confident. So confident that it now grabs for the off-chain and even offline world.
+
+Rather primitive examples of the bridging to the physical world include bitcoin ATMs and crypto cards. Those already have a long tradition. The term bitcoin ATM is misleading as they are more than cash disbursement machines. Instead, a bitcoin ATM is an internet-connected kiosk where people can purchase or sell bitcoins without going through a classic exchange. They generate a QR code on their phone’s wallet and scan it so the system knows which address to send the tokens to. Then users can feed the machine with paper bills or tap a credit card. Bitcoin ATMs can also work the other way around; users can sell their cryptocurrency and receive cash from the machine.
+
+This is not very disruptive. Neither are crypto-credit cards. Basically, they are conventional payment cards going through the big card schemes, but users get some rewards in crypto-tokens for using them. Some of them are pre-paid cards where you first have to buy the native crypto token, but that does not hide the fact that crypto- reward cards are simply adding a layer onto payments instead of slashing them. Credit card companies are part of the picture, just as well as issuing banks.
+
+### DeFi and DAOs reaching for the physical world
+
+Over time the means to connect the physical world to the chain have become more sophisticated, with DAOs a prime vehicle for this ambitious endeavour. Traditionally, DAOs were DeFi protocols that helped people pool their money and invest it in a crypto-native field, say stake it to earn rewards or lend it to people paying interest. Then art lovers used it to purchase expensive NFTs. They left the traditional financial ecosystem but still remained focused on what was happening on the blockchain.
+
+That began to change when memes on the web surfaced poking fun at DAOs’ seeming omnipotence. Sotheby’s, the prestigious auction house, had put up for sale the last privately owned copy of the US Constitution. And the joke on social media was, what if some crypto guys chipped in to actually buy the document. Memes featuring the actor Nicolas Cage spread like wildfire. In a Zoom call some of these crypto guys met, had a quick laugh and then decided to actually give it a try. Jonah Ehrlich, who was on the call and later became one of the initiators, recalls the breakneck speed of events that followed. They set up a website and a Discord, got in touch with museums and within seven days their bidder at Sotheby’s had almost $50 million at their disposal (quoted in Patel, 2021).
+
+To be precise, the DAO had crowdfunded about $47 million worth of Ether from more than 17,000 individual contributors. In the end, that turned out to be just slightly too little. US billionaire and Citadel founder Ken Griffin snatched the copy from under the DAO’s nose. He dished out a record $43.2 million. ConstitutionDAO had set its bidding limit at $43 million, because it still needed to put aside funds to manage the asset in the real world. This was the big difference from former DAOs that solely handled on-chain assets. Their major task was to hold crypto-collateral and move it around according to what the smart contracts dictated. But with the US Constitution you had to provision for its physical security, set up off-chain insurance contracts and talk to museums interested in displaying it.

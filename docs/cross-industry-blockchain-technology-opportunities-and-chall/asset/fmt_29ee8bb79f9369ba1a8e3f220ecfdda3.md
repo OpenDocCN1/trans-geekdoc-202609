@@ -1,0 +1,84 @@
+
+| \[3\] | Betz U.A.K., Betz F., Kim R., Monks B., Phillips F.. Surveying the future of science, technology and business – A 35 year perspective.Technol. Forecast. Soc. Change201914413714710.1016/j.techfore.2019.04.005 |
+
+| \[4\] | Jiang F., Jiang Y., Zhi H., Dong Y., Li H., Ma S., Wang Y., Dong Q., Shen H., Wang Y.. Artificial intelligence in healthcare: past, present and future.Stroke Vasc. Neurol.20172423024310.1136/svn-2017-00010129507784 |
+
+| \[5\] | Sloan T., Fitzgerald A., Hayes K.J., Radnor Z., Sohal S.R.A., Sohal A.. Lean in healthcare – history and recent developments.J. Health Organ. Manag.201428213013410.1108/JHOM-04-2014-006425065106 |
+
+| \[6\] | Goldner E.M., Jenkins E.K., Fischer B.. A narrative review of recent developments in knowledge translation and implications for mental health care providers.Can. J. Psychiatry201459316016910.1177/07067437140590030824881165 |
+
+| \[7\] | Kasthuri Arvind. Challenges to healthcare in India.Indian Journal of Community Medicine.201843314114310.4103/ijcm.IJCM194186166510 |
+
+| \[8\] | Dwivedi A., Srivastava G., Dhar S., Singh R.. A Decentralized Privacy-Preserving Healthcare Blockchain for IoT.Sensors (Basel)201919232610.3390/s19020326 |
+
+| \[9\] | Griggs K.N., Ossipova O., Kohlios C.P., Baccarini A.N., Howson E.A., Hayajneh T.. Healthcare Blockchain System Using Smart Contracts for Secure Automated Remote Patient Monitoring.J. Med. Syst.201842713010.1007/s10916-018-0982-x29876661 |
+
+| \[10\] | Jiang S., Cao J., Wu H., Yang Y., Ma M., He J.. BlocHIE: A BLOCkchain-Based Platform for Healthcare Information Exchange.IEEE International Conference on Smart Computing (SMARTCOMP)2018495610.1109/SMARTCOMP.2018.00073 |
+
+| \[11\] | Sharma Pradip, Chen Mu-Yen, Park Jong. A software defined fog node based distributed blockchain cloud architecture for IoT.IEEE201710.1109/ACCESS.2017.2757955 |
+
+| \[12\] | Kumar N.M., Mallick P.K.. Blockchain technology for security issues and challenges in IoT.Procedia Comput. Sci.20181321815182310.1016/j.procs.2018.05.140 |
+
+| \[13\] | Zheng Z., Xie S., Dai H.N., Chen X., Wang H.. Blockchain challenges and opportunities: a survey.Int. J. Web Grid Serv.201814435237510.1504/IJWGS.2018.095647 |
+
+| \[14\] | Dorri A., Kanhere S., Jurdak R.. Blockchain in internet of things: Challenges and Solutions.ArXiv, abs/1608.051872016 |
+
+| \[15\] | Dorri A., Kanhere S., Jurdak R., Gauravaram P.. Blockchain for IoT security and privacy: The case study of a smart home.IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops)201761862310.1109/PERCOMW.2017.7917634 |
+
+| \[16\] | Nofer M., Gomber P., Hinz O., Schiereck D.. Blockchain.Bus. Inf. Syst. Eng.201759318318710.1007/s12599-017-0467-3 |
+
+| \[17\] | Li X., Jiang P., Chen T., Luo X., Wen Q.. A survey on the security of blockchain systems.Future Gener. Comput. Syst.202010784185310.1016/j.future.2017.08.020 |
+
+| \[18\] | Kshetri N.. Can Blockchain Strengthen the Internet of Things?IT Prof.2017194687210.1109/MITP.2017.3051335 |
+
+| \[19\] | Singh S.K., Rathore S., Park J.H.. BlockIoTIntelligence: A Blockchain-enabled Intelligent IoT Architecture with Artificial Intelligence.Future Gener. Comput. Syst.202011072174310.1016/j.future.2019.09.002 |
+
+| \[20\] | Pilkington Marc. "Blockchain Technology: Principles and Applications (September 18, 2015)", *Research Handbook on Digital Transformations*, F. Xavier Olleros and Majlinda Zhegu (eds.). Edward Elgar, 2016, Available at SSRN: `https://ssrn.com/abstract=2662660`. |
+
+| \[21\] | Casado-Vara R., Chamoso P., De la Prieta F., Prieto J., Corchado J.M.. Non-linear adaptive closed-loop control system for improved efficiency in IoT-blockchain management.Inf. Fusion20194922723910.1016/j.inffus.2018.12.007 |
+
+| \[22\] | Lee I., Lee K.. The Internet of Things (IoT): Applications, investments, and challenges for enterprises.Bus. Horiz.201558443144010.1016/j.bushor.2015.03.008 |
+
+| \[23\] | Yousuf T., Mahmoud R., Aloul F., Zualkernan I.. Internet of Things (IoT) Security: Current Status, Challenges and Countermeasures.International Journal for Information Security Research20155460861610.20533/ijisr.2042.4639.2015.0070 |
+
+| \[24\] | Hinings B., Gegenhuber T., Greenwood R.. Digital innovation and transformation: An institutional perspective.Inf. Organ.2018281526110.1016/j.infoandorg.2018.02.004 |
+
+| \[25\] | Novo O.. Blockchain Meets IoT: An Architecture for Scalable Access Management in IoT.IEEE Internet Things J.2018521184119510.1109/JIOT.2018.2812239 |
+
+| \[26\] | Li D., Peng W., Deng W., Gai F.. A blockchain-based authentication and security mechanism for IoT.27^(th) International Conference on Computer Communication and Networks (ICCCN)20181610.1109/ICCCN.2018.8487449 |
+
+| \[27\] | Dorri A., Kanhere S., Jurdak R.. Towards an Optimized BlockChain for IoT.IEEE/ACM Second International Conference on Internet-of-Things Design and Implementation (IoTDI)201717317810.1145/3054977.3055003 |
+
+| \[28\] | Reyna Ana, Martin Cristian, Chen Jaime, Soler Enrique, Diaz Manuel. On blockchain and its integration with IoT - challenges and opportunities.Future Generation Computer Systems201888173190 |
+
+| \[29\] | Kennedy J.. 1.4bn investment in blockchain start-ups in last 9 months, says PwC expert.Silicon Republic2016 |
+
+| \[30\] | Sompolinsky Y., Zohar A.. Accelerating Bitcoin's transaction processing.Fast Money Grows on Trees, Not Chains. IACR Cryptol. ePrint Arch.2013881 |
+
+| \[31\] | Stathakopoulou Chrysoula. Faster bitcoin network.ETH Zurich. 32 – Features and Use Cases of Big Chain DB2015 |
+
+| \[33\] | Vashi S., Ram J., Modi J., Verma S., Prakash C.. Internet of Things (IoT): A vision, architectural elements, and security issues.International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud) (I-SMAC)201749249610.1109/I-SMAC.2017.8058399 |
+
+| \[34\] | Tailor J., Patel A.D.. Comprehensive Survey on Security Problems and Key Technologies of the Internet of Things (IoT).International Journal of Research and Scientific Innovation 4 (VIS)2017107110 |
+
+| \[35\] | Xu J.J.. Are blockchains immune to all malicious attacks?Financial Innovation2016212510.1186/s40854-016-0046-5 |
+
+| \[36\] | Maderia Antonio. Gladius: How Blockchain Technology Is Making the Web Safer and Faster.Bitcoinist2017 |
+
+| \[37\] | Samaniego M., Jamsrandorj U., Deters R.. Blockchain as a Service for IoT.2016433-43643343610.1109/iThings-GreenCom-CPSCom-SmartData.2016.102 |
+
+| \[38\] | Khan M.A., Salah K.. IoT security: Review, blockchain solutions, and open challenges.Future Gener. Comput. Syst.20188239541110.1016/j.future.2017.11.022 |
+
+| \[39\] | Dorri A., Kanhere S.S., Jurdak R., Gauravaram P.. LSB: A lightweight scalable blockchain for IoT security and anonymity.J. Parallel Distrib. Comput.201913418019710.1016/j.jpdc.2019.08.005 |
+
+| \[40\] | Panarello A., Tapas N., Merlino G., Longo F., Puliafito A.. Blockchain and IoT Integration: A Systematic Survey.Sensors (Basel)2018188257510.3390/s1808257530082633 |
+
+| \[41\] | Ellis Monique. Medical advances in history. Procinical.Top (Madr.)201710 |
+
+| \[42\] | Wright A., Sittig D.F., McGowan J., Ash J.S., Weed L.L.. Bringing science to medicine: an interview with Larry Weed, inventor of the problem-oriented medical record.J. Am. Med. Inform. Assoc.201421696496810.1136/amiajnl-2014-00277624872343 |
+
+| \[43\] | Karuppan Corinne M., Dunlap Nancy E., Waldrum Michael R., Sutcliffe Kathleen M.. Healthcare- Past, Present and Future. Operations Management in Healthcare.Springer Publishing Company201610.1891/9780826126535.0001 |
+
+| \[44\] | Singhal T.. A Review of Coronavirus Disease-2019 (COVID-19).Indian J. Pediatr.202087428128610.1007/s12098-020-03263-632166607 |
+
+| \[45\] | Alam T.. IoT-Fog: A communication framework using blockchain in the internet of things.International Journal of Recent Technology and Engineering (IJRTE)20197833838 |

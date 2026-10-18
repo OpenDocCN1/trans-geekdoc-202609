@@ -1,0 +1,139 @@
+
+# 1. 准备本地文件夹
+
+1. 在本地机器上创建一个名为 `MLSALab` 的文件夹，用于存储所有文件。你可以在本地机器上的任意位置创建该文件夹，只要能够访问即可。由于我使用 Mac，因此直接在默认用户的 `Documents` 文件夹中创建了该文件夹。
+
+2. 在 `MLSALab` 文件夹下创建一个名为 `Lab1-bankchurn` 的子文件夹。
+
+3. 访问 [https://www.kaggle.com/mathchi/churn-for-bank-customers](https://www.kaggle.com/mathchi/churn-for-bank-customers) 网站，下载数据文件（归档文件）并保存到 `MLSALab/Lab1-bankchurn` 文件夹中。如果你还没有 Kaggle 账号，请先创建一个。在文件夹内解压归档文件，你将看到一个名为 `churn.csv` 的文件。现在可以删除归档文件。
+
+# 2. 启动 Jupyter Notebook
+
+1. 在终端窗口（Windows 系统为命令提示符窗口）中，导航到 `MLSALab` 文件夹，并运行以下命令在本机上启动 Jupyter Notebook 服务器：
+
+   ```
+   jupyter notebook
+   ```
+
+   浏览器窗口将打开并显示 Jupyter Notebook 环境（见下图）。关于 Jupyter Notebook 的工作原理的详细说明超出了本实验的范围。如果你不熟悉 Jupyter Notebook 的工作方式，可以轻松在互联网上找到相关信息：
+
+   ![Figure 3.17 – Jupyter Notebook ](OEBPS/Images/B20836_03_18.png)
+
+   Figure 3.18: Jupyter Notebook
+
+2. 点击 `Lab1-bankchurn` 文件夹，你将看到 `churn.csv` 文件。
+
+# 3. 创建新的数据科学笔记本
+
+1. 在 Jupyter Notebook 环境中创建一个新的数据科学笔记本。为此，点击 **New** 下拉菜单并选择 **Python 3**（见下图）：
+
+   ![](OEBPS/Images/B20836_03_19.png)
+
+   Figure 3.19: Creating a new Jupyter notebook
+
+2. 你将看到类似下图的屏幕。这是一个空白笔记本，我们将使用它来探索数据并构建模型。**In [ ]:** 旁边的部分称为 **cell**，我们将在其中输入代码。要运行单元格中的代码，请点击工具栏上的 **Run** 按钮。要添加新单元格，请点击工具栏上的 **+** 按钮：
+
+   ![](OEBPS/Images/B20836_03_20.png)
+
+   Figure 3.20: Empty Jupyter notebook
+
+# 4. 安装 Python 包
+
+1. 点击工具栏上的 **+** 按钮添加一个新单元格，在第一个空单元格中输入以下代码块，并点击工具栏上的 **Run** 按钮运行该单元格。此代码块下载了一些用于数据操作（`pandas`）、可视化（`matplotlib`）以及模型训练和评估（`scikit-learn`）的 Python 包。我们将在 *Chapter 5, Exploring Open-Source ML Libraries* 中更详细地介绍 scikit-learn。我们将在后续部分使用这些包：
+
+   ```
+   ! pip3 install pandas
+   ! pip3 install matplotlib
+   ! pip3 install scikit-learn
+   ```
+
+# 5. 加载和探索数据
+
+1. 在新单元格中添加以下代码块，以加载 Python 库包并从 `churn.csv` 文件加载数据。你将看到一个包含 14 列的表格，其中 `Exited` 列是目标列：
+
+   ```
+   import pandas as pd
+   churn_data = pd.read_csv("churn.csv")
+   churn_data.head()
+   ```
+
+2. 你可以使用多种工具探索数据集，以了解以下命令提供的信息，例如 *dataset statistics*、*pairwise correlation between different features* 和 *data distributions*。`describe()` 函数返回每个数值列的基本统计信息，例如均值、标准差、最小值和最大值。
+
+   `hist()` 函数为选定的列绘制直方图，`corr()` 计算数据中不同特征之间的相关性矩阵。尝试在新单元格中逐一运行它们以了解数据：
+
+   ```
+   # The following command calculates the various statistics for the features.
+   churn_data.describe()
+   # The following command displays the histograms for the different features.  
+   # You can replace the column names to plot the histograms for other features
+   churn_data.hist(['CreditScore', 'Age', 'Balance'])
+   # The following command calculate the correlations among features
+   churn_data.corr()
+   ```
+
+# 6. 数据转换
+
+1. 数据集需要进行转换才能用于模型训练。以下代码块将 `Geography` 和 `Gender` 的值从分类字符串转换为序数，以便以后 ML 算法可以使用。请注意，模型准确性不是本练习的主要目的，我们执行序数转换仅用于演示。我们将使用一个名为 sklearn 的流行 Python ML 库来完成此练习。Sklearn 也是最容易使用和理解的库之一，尤其是对初学者而言。我们将在 *Chapter 5, Exploring Open-Source ML Libraries* 中更详细地讨论这个库。在新单元格中复制并运行以下代码块：
+
+   ```
+   from sklearn.preprocessing import OrdinalEncoder
+   encoder_1 = OrdinalEncoder()
+   encoder_2 = OrdinalEncoder()
+   churn_data['Geography_code'] = encoder_1.fit_transform(
+     churn_data[['Geography']]
+   )
+   churn_data['Gender_code'] = encoder_2.fit_transform(
+     churn_data[['Gender']]
+   )
+   ```
+
+2. 通常，有些列不需要用于模型训练，因为它们对模型预测能力没有贡献，或者可能从包含的角度引入偏差。我们可以使用以下代码块删除它们：
+
+   ```
+   churn_data.drop(columns = ['Geography','Gender','RowNumber','Surname'], inplace=True)
+   ```
+
+# 7. 划分训练集和验证集
+
+1. 现在，数据集仅包含我们关心的特征。接下来，我们需要将数据划分为训练集和验证集。我们还需要通过将目标变量 `Exited` 与其余输入特征分开来准备每个数据集。在新单元格中输入并运行以下代码块：
+
+   ```
+   # we import the train_test_split class for data split
+   from sk.model_selection import train_test_split
+   # Split the dataset into training (80%) and testing (20%).
+   churn_train, churn_test = train_test_split(
+     churn_data, test_size=0.2
+   )
+   # Split the features from the target variable "Exited" as it is required for model training
+   # and validation later.
+   churn_train_X = churn_train.loc[:, churn_train.columns != 'Exited']
+   churn_train_y = churn_train['Exited']
+   churn_test_X = churn_test.loc[:, churn_test.columns != 'Exited']
+   churn_test_y = churn_test['Exited']
+   ```
+
+# 8. 训练模型
+
+1. 我们已准备好训练模型。在新单元格中输入并运行以下代码块。在这里，我们将使用随机森林算法训练模型，`fit()` 函数启动模型训练：
+
+   ```
+   # We will use the Random Forest algorithm to train the model
+   from sklearn.ensemble import RandomForestClassifier
+   bank_churn_clf = RandomForestClassifier(
+     max_depth=2, random_state=0
+   )
+   bank_churn_clf.fit(churn_train_X, churn_train_y)
+   ```
+
+# 9. 测试模型准确性
+
+1. 最后，我们将使用 `test` 数据集测试模型的准确性。在这里，我们使用 `predict()` 函数获取模型返回的预测值，然后使用 `accuracy_score()` 函数根据测试数据集的预测值（`churn_prediction_y`）和真实值（`churn_test_y`）计算模型准确性：
+
+   ```
+   # We use the accuracy_score class of the sklearn library to calculate the accuracy.
+   from sklearn.metrics import accuracy_score
+   # We use the trained model to generate predictions using the test dataset
+   churn_prediction_y = bank_churn_clf.predict(churn_test_X)
+   # We measure the accuracy using the accuracy_score class.
+   accuracy_score(churn_test_y, churn_prediction_y)
+   ```

@@ -1,0 +1,70 @@
+
+# 信息安全管理体系（SMS）概述
+
+在当前的感知环境和能力背景下，企业必须时刻关注其资产、信息安全及其他相关措施，否则将在技术和专业能力的竞赛中落后。随着信息技术系统中的障碍变得越来越关键和具有挑战性，安全管理体系（SMS）的可行性和可行性可能会持续增长。为了实施完整的规则和策略集，组织应配合 SMS 的所有形式，例如质量保证、风险管理、风险评估以及管理层级安全策略的部署。信息安全可以通过 IT 框架来确保，IT 框架是 SMS 的核心实体。在信息系统背景下的安全管理需要普遍化，以便从 IT 部门检测和避免战术问题，并与商业治理模式相结合。本章阐述了 SMS 的概念和运作，并结合 ISO/IEC 27001 标准的实施，承认 SMS 的扩展以提供安全并增强企业治理。
+
+## 参考文献
+
+1. Alexander D., Taylor A., & Finch A. (2008). Information Security Management Principles: An ISEB Certificate. New York: BCS, the Chartered Institute.
+
+2. Jawad A., Hassan K. M., & Hussain F. (2015). Information security management for small and medium size enterprises. Science International, 27(3), 2393–2398. Retrieved from https://www.academia.edu/26971985/INFORMATION\_SECURITY\_MANAGEMENT\_FOR\_SMALL\_AND\_MEDIUM\_SIZE\_ENTERPRISES on 10th November 2019.
+
+3. Buragga K. A., & Zaman N. eds. (2013). Software Development Techniques for Constructive Information Systems Design. IGI Global.
+
+4. Vacca J. R. (2010). Managing Information Security. New York: Syngress.
+
+5. Bourgeois D. (2019). Information Systems for Business and Beyond. Pressbooks.
+
+6. Retrieved from https://geek-university.com/ccna-security/confidentiality-integrity-and-availability-cia-triad/ on 11th November 2019.
+
+7. Ninja S. (2018). CIA triad. Retrieved from https://resources.infosecinstitute.com/cia-triad/#gref on 11th November 2019.
+
+8. Buckbee M. (2019). What is the CIA triad. Retrieved from https://www.varonis.com/blog/cia-triad/ on 11th October 2019.
+
+9. Qadir S., & Quadri S. M. K. (2016). Information availability: An insight into the most important attribute of information security. Journal of Information Security, 7, 185–194.
+
+10. National Academies Press. (1991). Concepts of information security. In Computers at Risk Safe Computing in the Information Age. N.W. Washington: National Academies Press. Retrieved from https://www.nap.edu/read/1581/chapter/4 on 4th November 2019.
+
+11. Abdaziz A. (2017). Information security management system. International Journal of Computer Applications, 158(7), 29–33. doi:10.5120/ijca2017912851.
+
+12. Singh A., Vaish A., & Keserwani P. K. (2014). Information security: components and techniques. International Journal of Advanced Research in Computer Science and Software Engineering, 4(1).
+
+13. Kazemi U. (2018). A survey: Information security management system. Journal of Analog and Digital Devices, 2(3).
+
+14. Almrezeq N. (2021). An enhanced approach to improve the security and performance for deduplication. Turkish Journal of Computer and Mathematics Education (TURCOMAT), 12(6), 2866–2882.
+
+15. Calder A., & Watkins S. (2019). The ISO 27001 risk assessment. In Information Security Risk Management for ISO 27001/ISO 27002, third edition (pp. 87–93). Ely, Cambridgeshire, United Kingdom: IT Governance Publishing. doi: 10.2307/j.ctvndv9kx.11.
+
+16. Carlson T. (2008). Understanding Information Security Management Systems. New York: Auerbach Publications.
+
+17. National Institute of Standards and Technology (NIST) Computer Security Division. (2010). A conceptual foundation for organizational information security awareness. Information Management & Computer Security, 8(1), 31–41.
+
+18. European Network and Information Security Agency (ENISA). (2010). ISMS framework. Retrieved from http://www.enisa.europa.eu/activities/risk-management/current-risk/risk-management-inventory/rm-isms/framework.
+
+19. European Network and Information Security Agency (ENISA). (2010). Risk management process. Retrieved from https://www.enisa.europa.eu/topics/threat-risk-management/risk-management/current-risk/risk-management-inventory/rm-process on 15th November 2019.
+
+20. Ali S., Hafeez Y., Humayun M., Mohd Jamail N. S., Aqib M., & Nawaz A. (2021). Enabling recommendation system architecture in virtualized environment for e-learning. Egyptian Informatics Journal, 2021.
+
+21. Carlson T., Tipton H. F., & Krause M. (2008). Understanding Information Security Management Systems. Boca Raton, FL: Auerbach Publications.
+
+22. Tashi, I., & Ghernouti-Hélie, S. (2009). Information security management is not only risk management. In 2009 Fourth International Conference on Internet Monitoring and Protection (pp. 116–123).
+
+23. Humayun M., & Jhanjhi N. Z. (2019). Exploring the relationship between GSD, knowledge management, trust and collaboration. Journal of Engineering Science and Technology (JESTEC), 14(2), 820–843.
+
+24. Retrieved from https://www.comparethecloud.net/articles/what-is-iso-27001-and-why-do-i-need-it/ on 15th November 2019.
+
+25. Hamid M. A., Hafeez Y., Hamid B., Humayun M., & Jhanjhi N. Z. (2020). Towards an effective approach for architectural knowledge management considering global software development. International Journal of Grid and Utility Computing, 11(6), 780–791.
+
+26. Pavlov G., & Karakaneva J. (2011). Information security management system in organization. Trakia Journal of Sciences, 9(4), 20–25.
+
+27. TUV-NORD. (2015). Information security management system ISO 27001:2005. Retrieved from http://www.tuv-nord.com/cps/rde/xbcr/tng\_in/Product\_Information\_27001.pdf on 2nd December 2016.
+
+28. BSI Group. (2017). BS EN ISO/IEC 27001:2017 – what has changed? Retrieved from http://www.bsigroup.com on 29th September 2019.
+
+29. TUV-NORD. (2015). Information security management system ISO 27001:2005. Retrieved from http://www.tuv-nord.com/cps/rde/xbcr/tng\_in/Product\_Information\_27001.pdf on 23rd September 2019.
+
+30. Retrieved from https://en.wikipedia.org/wiki/ISO/IEC\_27001#cite\_note-4 on 4th October 2019.
+
+31. ISO/IEC 27001:2013. (2013). Information technology — Security techniques — Information security management systems — Requirements (second edition). Retrieved from https://www.iso27001security.com/html/27001.html on 18th November 2019.
+
+32. ISO/IEC 17799. (2005). Information technology - Security techniques - Code of practice for information security management.

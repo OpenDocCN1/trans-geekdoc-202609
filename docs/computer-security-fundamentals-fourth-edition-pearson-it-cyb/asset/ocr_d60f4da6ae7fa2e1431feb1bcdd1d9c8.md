@@ -1,0 +1,11 @@
+This section of the chapter is adapted from a paper written by the book's author. That paper first defined Security Modeling Language (SecML) as a new modeling language.
+
+Systems engineering utilizes a number of approaches to modeling systems and subsystems. Modeling is an integral part of design and testing. In fact, there is an entire field of model-based systems engineering. One of the primary modeling methods utilized in systems engineering is system modeling language SysML. SysML is an extension of the earlier Unified Modeling Language (UML). UML was created by the Object Management Group (OMG) in order to design software. SysML extends that to modeling a wide range of systems. SysML includes 9 diagrams, some of which are taken directly from UML and others of which were created for SysML.
+
+Software engineering also includes a number of other modeling languages. For example, there are domain-specific modeling languages, such as framework-specific modeling languages (FSMLs). FSMLs are used in object-oriented programming. There are multiple, specific modeling languages for a wide range of software engineering applications.
+
+Systems Modeling Language (SysML) was developed for modeling systems and systems of systems. SysML is the primary modeling tool used in systems engineering. It was originally developed as an open source specification that extended Unified Modeling Language (UML). In 2001 INCOSE started the SysML initiative. Eventually INCOSE worked with the Object Management Group (OMG) to create SysML. SysML v1.0 was released in 2007. The current version of SysML is 1.5 and was introduced in 2017. It is specified in ISO Standard 19514:2017, “Information technology: Object management group systems modeling language (OMG SysML).”
+
+As has been discussed, there are specific modeling techniques and even modeling languages for particular engineering disciplines. If cybersecurity engineering is to be truly defined as a separate engineering discipline, it would also benefit from its own modeling language. This would facilitate modeling that is tailored to cybersecurity needs.
+
+An important part of systems engineering is modeling. In fact, there is an entire subdiscipline of systems engineering concerned with modeling. The concept is to facilitate better understanding of a

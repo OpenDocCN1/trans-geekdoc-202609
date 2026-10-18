@@ -1,0 +1,1885 @@
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 889 1186" preserveaspectratio="none">
+<image width="889" height="1186" href="images/00001.jpeg"></image>
+</svg>
+</div>
+<p><span id="part0000_split_000.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_000.html#calibre_pb_1" class="calibre3"><span id="part0000_split_000.html#3-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">Table of Contents</span></h1>
+<p><span class="calibre6">Chapter 1:PHP INTRODUCTION</span></p>
+<p><span class="calibre6">Chapter 2:VARIABLES</span></p>
+<p><span class="calibre6">Chapter 3: DATA TYPES</span></p>
+<p><span class="calibre6">Chapter 4:OPERATORS</span></p>
+<p><span class="calibre6">Chapter 5:CONTROL STRUCTUERS</span></p>
+<p><span class="calibre6">Chapter 6:ARRAYS</span></p>
+<p><span class="calibre6">Chapter 7:FUNCTIONS</span></p>
+<p><span class="calibre6">Chapter 8:FORMS IN PHP</span></p>
+<p><span class="calibre6">Chapter 9:GLOBAL VARIABLES</span></p>
+<p><span class="calibre6">Chapter 10:SESSIONS</span></p>
+<p><span class="calibre6">Chapter 11:COOKIES</span></p>
+<p><span class="calibre6">Chapter 12:WORKING WITSH FILE</span></p>
+<p><span class="calibre6">Chapter 13:OBJECT ORIENTED PHP</span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7"> </span></p>
+<div id="part0000_split_000.html#calibre_pb_2" class="calibre2">
+
+</div>
+</div>
+<p><span id="part0000_split_001.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_001.html#calibre_pb_3" class="calibre3"><span id="part0000_split_001.html#1J-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">                                 INTRODUCTION</span></h1>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7">I want to thank you and congratulate you for choosing this book. This book contains elaborate steps, strategies and guidelines on how to create codes using the correct syntax, keywords, and punctuation marks. It also provides tips on how to correctly use arrays, forms, conditional statements, sessions etc. You will also learn how to open, read, write, and close files in PHP. There are sample programs(examples) that can serve as your guidelines when writing your code. This book also contains useful information about PHP, including their features. I hope it will be of help to you!</span></p>
+<div id="part0000_split_001.html#calibre_pb_4" class="calibre2">
+
+</div>
+</div>
+<p><span id="part0000_split_002.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_002.html#calibre_pb_5" class="calibre3"><span id="part0000_split_002.html#1P-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">                                       COPYRIGHT </span></h1>
+<p><span class="calibre7">                                                                                By</span></p>
+<p><span class="calibre7">                                                            www.computingtutorial.com          </span></p>
+<p><span class="calibre7"> This document is oriented towards providing exact and reliable information in regards to the topic and chapters covered. It is not legal in any way to reproduce, duplicate, or transmit any part of this document in either electronic means or in printed format. </span></p>
+<p><span class="calibre7">Recording of this publication is strictly prohibited and any storage of this document is not allowed unless with permission from the author. The information provided herein is stated to be truthful and consistent, in that any liability, in terms of inattention or otherwise, by any usage or abuse of any policies, processes, or directions contained within is the solitary responsibility of the recipient reader.</span></p>
+<p><span class="calibre7"> Under no circumstances will any blame be held against the author for any damages, or monetary loss due to the information herein, either directly or indirectly. Respective authors own all copyrights not held by the publisher. The information herein is offered for informational purposes only, and is universal as so. The presentation of the information is without contract or any type of guarantee assurance.</span></p>
+<p><span class="calibre7">.</span></p>
+<p><span class="calibre7">                                                                 All rights reserved  </span></p>
+<p><span class="calibre7">                                                                          (2015)             </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<div id="part0000_split_002.html#calibre_pb_6" class="calibre2">
+
+</div>
+</div>
+<p><span id="part0000_split_003.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_003.html#calibre_pb_8" class="calibre3"><span id="part0000_split_003.html#Chapter_1_PHP_Intro" class="calibre9"><span id="part0000_split_003.html#44-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">Chapter 1:PHP </span></span><span class="calibre4">INTRODUCTION</span></h1>
+<h2 class="calibre10"><span class="calibre11">Requirement</span></h2>
+<p><span class="calibre7">Before you proceed  to study php, it is recommended that you have a basic understanding of the following: </span></p>
+<p><span class="calibre7">.CSS</span></p>
+<p><span class="calibre7">· HTML  </span></p>
+</div>
+<p><span id="part0000_split_004.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_004.html#calibre_pb_9" class="calibre12"><span class="calibre11"> What is PHP</span></h2>
+<p><span class="calibre7">· PHP is an acronym for Hypertext Preprocessor </span></p>
+<p><span class="calibre7">.PHP is a HTML embedded scripting language</span></p>
+<p><span class="calibre7">· PHP scripts are executed on the server</span></p>
+<p><span class="calibre7">· PHP files have extension ".php" </span></p>
+</div>
+<p><span id="part0000_split_005.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_005.html#calibre_pb_10" class="calibre12"><span class="calibre11"> What PHP can do</span></h2>
+<p><span class="calibre7">It is also helpful to think of PHP in terms of what it can do for you.  </span></p>
+<p><span class="calibre7">. Reduce the time to create large websites. </span></p>
+<p><span class="calibre7">. Create a customized user experience for visitors based on information that you have gathered from them. </span></p>
+<p><span class="calibre7">· can generate dynamic page content </span></p>
+<p><span class="calibre7">· can collect form data </span></p>
+<p><span class="calibre7">· can send and receive cookies </span></p>
+<p><span class="calibre7">· can add, delete, modify data in your databases</span></p>
+<p><span class="calibre7">· can create, open, read, write, and close files on the server </span></p>
+<p><span class="calibre7">· can encrypt data</span></p>
+</div>
+<p><span id="part0000_split_006.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_006.html#calibre_pb_11" class="calibre12"><span class="calibre11"> Why choose PHP</span></h2>
+<p><span class="calibre7">· PHP runs on various operating system platforms (Windows, Unix, etc.) </span></p>
+<p><span class="calibre7">· PHP is easy to learn and runs efficiently on the server side </span></p>
+<p><span class="calibre7">· PHP is compatible with almost all servers used today (Apache,etc.) </span></p>
+<p><span class="calibre7">· PHP supports a wide range of databases </span></p>
+<p><span class="calibre7">· PHP is freely available</span></p>
+</div>
+<p><span id="part0000_split_007.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_007.html#calibre_pb_12" class="calibre12"><span class="calibre11">PHP Syntax  </span></h2>
+<p><span class="calibre7">A PHP script starts with </span><span class="calibre13">&lt;?php</span><span class="calibre7"> and ends with </span><span class="calibre13">?&gt; </span><span class="calibre7">: </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">// PHP code  here </span></p>
+<p><span class="calibre7">?&gt;  </span></p>
+<p><span class="calibre7">A PHP file usually contains HTML tags, and some PHP scripting code. </span></p>
+<p><span class="calibre7">As you notice in the below example, there was a semicolon after the line of PHP code. The semicolon signifies the end of a PHP statement and should never be forgotten. The semi colon terminates that statement. </span></p>
+<p><span class="calibre7">Here is  an example of a simple PHP file, with a PHP script that uses a PHP function (built-in)"echo" to output the text "Hello World!" </span></p>
+<p><span class="calibre7">&lt;html&gt; </span></p>
+<p><span class="calibre7">&lt;head&gt; </span></p>
+<p><span class="calibre7">&lt;title&gt;My First PHP Page&lt;/title&gt; </span></p>
+<p><span class="calibre7">&lt;/head&gt; </span></p>
+<p><span class="calibre7">&lt;body&gt; </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">echo "Hello World!"; </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre7">&lt;/body&gt; </span></p>
+<p><span class="calibre7">&lt;/html&gt; </span></p>
+<p><span class="calibre13">Display: </span></p>
+<p><span class="calibre7">Hello World! </span></p>
+</div>
+<p><span id="part0000_split_008.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_008.html#calibre_pb_13" class="calibre12"><span class="calibre11">Comments in PHP</span></h2>
+<p><span class="calibre7">A comment in PHP code is a line that is not executed as part of the program. Its  purpose is to be read by someone who is editing the code.</span></p>
+<p><span class="calibre7">PHP supports three forms or ways of expressing a comment</span></p>
+<p><span class="calibre7">Comments are useful for:</span></p>
+<p><span class="calibre7">· To remind yourself what you did - Most programmers have experienced coming back to their  Comments,this remind you of what you were thinking when you wrote the code </span></p>
+<p><span class="calibre7"> · To let others understand what you are doing - Comments let other programmers understand each of your steps</span></p>
+<p><span class="calibre7">// This is a single line comment </span></p>
+<p><span class="calibre7"># This is also a single line comment </span></p>
+<p><span class="calibre7">/* </span></p>
+<p><span class="calibre7">This is a multiple lines comment block that spans over more than one line </span></p>
+<p><span class="calibre7">*/ </span></p>
+</div>
+<p><span id="part0000_split_009.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_009.html#calibre_pb_14" class="calibre12"><span class="calibre11">Case sensitivity in PHP</span></h2>
+<p><span class="calibre7"> In PHP, all variables are case-sensitive.</span></p>
+<p><span class="calibre7">In the next chapter is a detailed discussion of the variables </span></p>
+<p><span class="calibre7">In the example below, only the first statement will display the value of the $pet variable (because $pet, $PeT, and $PET are treated as three totally different variables): </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;html&gt; </span></p>
+<p><span class="calibre7">&lt;body&gt; </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$pet="cat"; </span></p>
+<p><span class="calibre7">echo "My animal is a " . $pet . "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">echo "My animal is a " . $PeT . "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">echo "My animal is a " . $PET. "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre7">&lt;/body&gt; </span></p>
+<p><span class="calibre7">&lt;/html&gt; </span></p>
+<p><span class="calibre7">In PHP, all user-defined functions, keywords, and classes are case-insensitive. </span></p>
+<p><span class="calibre7">In the example below, all two echo statements below are legal: </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;html&gt; </span></p>
+<p><span class="calibre7">&lt;body&gt; </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">echo "Hello World!&lt;br&gt;"; </span></p>
+<p><span class="calibre7">ECHO "Hello World!&lt;br&gt;";</span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre14">-</span><span class="calibre7">&lt;/body&gt; </span></p>
+<p><span class="calibre7">&lt;/html&gt; </span></p>
+</div>
+<p><span id="part0000_split_010.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_010.html#calibre_pb_15" class="calibre12"><span class="calibre11">White spaces</span></h2>
+<p><span class="calibre7">With HTML, whitespace is ignored between PHP statements. This is to mean that there can be  one line of PHP code, then 2 or more lines of blank space before the next line of PHP code. Because of this you can indent your code and the PHP interpreter will ignore those spaces as well.</span></p>
+<p><span class="calibre7">Here is an elaborate example</span></p>
+<p><span class="calibre7">&lt;html&gt; </span></p>
+<p><span class="calibre7">&lt;head&gt; </span></p>
+<p><span class="calibre7">&lt;title&gt;My First PHP Page&lt;/title&gt; </span></p>
+<p><span class="calibre7">&lt;/head&gt; </span></p>
+<p><span class="calibre7">&lt;body&gt; </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">echo "Hello World!"; </span></p>
+<p><span class="calibre7">echo "Hello World!"; </span></p>
+<p><span class="calibre7">?&gt;               </span></p>
+<p><span class="calibre7">&lt;/body&gt; </span></p>
+<p><span class="calibre7">&lt;/html&gt;</span></p>
+<p><span class="calibre13">Display: </span></p>
+<p><span class="calibre7">Hello World!Hello World! </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7"> </span></p>
+<div id="part0000_split_010.html#calibre_pb_16" class="calibre2">
+
+</div>
+</div>
+<p><span id="part0000_split_011.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_011.html#calibre_pb_18" class="calibre3"><span id="part0000_split_011.html#AK-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">Chapter 2:PHP VARIABLES</span></h1>
+<h2 class="calibre10"><span class="calibre11">  Variable defination</span></h2>
+<p><span class="calibre7">A variable is a means of storing a value, such as text string "Hello World!" or the integer value 30. A variable can then be reused throughout your code, instead of having to type out the actual value over and over again,in other words variables can be termed as "containers" for storing information</span></p>
+<p><span class="calibre7">In PHP you define a variable with the following form: </span></p>
+<p><span class="calibre7">• $variable_name = Value;</span></p>
+<p><span class="calibre7">just Like in mathematics</span></p>
+<p><span class="calibre7">r=1 </span></p>
+<p><span class="calibre7">s=2 </span></p>
+<p><span class="calibre7">t=r+s</span></p>
+<p><span class="calibre7">the letters r,s hold the numbers 1,2 respectively. </span></p>
+<p><span class="calibre7">From the expression t=r+s above, we can calculate the value of r to be 3. </span></p>
+<p><span class="calibre7">In PHP these letters are called </span><span class="calibre13">variables. </span><span class="calibre7"> </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$r=1; </span></p>
+<p><span class="calibre7">$s=2; </span></p>
+<p><span class="calibre7">$t=$r+$s; </span></p>
+<p><span class="calibre7">echo $t; </span></p>
+<p><span class="calibre7">?&gt;</span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$txt="Hello world”;</span></p>
+<p><span class="calibre7">?&gt; </span></p>
+</div>
+<p><span id="part0000_split_012.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_012.html#calibre_pb_19" class="calibre12"><span class="calibre11">Conventions for assigning variables</span></h2>
+<p><span class="calibre7">. Variables with more than one word should be separated with underscores. $my_variable</span></p>
+<p><span class="calibre7">· A variable starts with the $ sign, followed by the name of the variable </span></p>
+<p><span class="calibre7">· Variable names are case sensitive ($r and $R are two different variables) </span></p>
+<p><span class="calibre7">· A variable name cannot start with a number </span></p>
+<p><span class="calibre7">· A variable name must start with a letter or the underscore character </span></p>
+<p><span class="calibre7">· A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ ) </span></p>
+<div id="part0000_split_012.html#calibre_pb_20" class="calibre2">
+
+</div>
+</div>
+<p><span id="part0000_split_013.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_013.html#calibre_pb_22" class="calibre3"><span id="part0000_split_013.html#Chapter_5_PHP_Data_Types" class="calibre9"><span id="part0000_split_013.html#CJ-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">Chapter 3: PHP DATA TYPES </span></span></h1>
+<h2 class="calibre10"><span class="calibre11">PHP Data Types </span></h2>
+<p><span class="calibre7">String, Integer, Floating point numbers, Boolean, Array. </span></p>
+</div>
+<p><span id="part0000_split_014.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_014.html#calibre_pb_23" class="calibre12"><span class="calibre11">String</span></h2>
+<p><span class="calibre7">A string is a sequence of characters, like "Hello world!". </span></p>
+<p><span class="calibre7">A string can be any text inside quotes. You can use single or double quotes,either will work efficiently</span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$x = "Hello world!"; </span></p>
+<p><span class="calibre7">echo $x;  </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+</div>
+<p><span id="part0000_split_015.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_015.html#calibre_pb_24" class="calibre12"><span class="calibre11">Integers</span></h2>
+<p><span class="calibre7"> An integer is a number without decimals. </span></p>
+<p><span class="calibre7">Rules for integers: </span></p>
+<p><span class="calibre7">· An integer must have at least one digit (0-9) </span></p>
+<p><span class="calibre7">· An integer cannot contain comma or blanks </span></p>
+<p><span class="calibre7">· An integer must not have a decimal point </span></p>
+<p><span class="calibre7">· An integer can be either positive or negative </span></p>
+<p><span class="calibre7">· Integers can be specified in three formats: decimal (10-based), hexadecimal (16-based - </span></p>
+<p><span class="calibre7">prefixed with 0x) or octal (8-based - prefixed with 0) </span></p>
+<p><span class="calibre7">In the following example we will test different numbers. The PHP var_dump() function returns the data type and value of variables: </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$x = 5985; </span></p>
+<p><span class="calibre7">var_dump($x); </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">$x = -345; // negative number </span></p>
+<p><span class="calibre7">var_dump($x); </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">$x = 0x8C; // hexadecimal number </span></p>
+<p><span class="calibre7">var_dump($x); </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">$x = 047; // octal number </span></p>
+<p><span class="calibre7">var_dump($x); </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+</div>
+<p><span id="part0000_split_016.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_016.html#calibre_pb_25" class="calibre12"><span class="calibre11">Floating point numbers</span></h2>
+<p><span class="calibre7"> A floating point number is a number with a decimal point or a number in exponential form. </span></p>
+<p><span class="calibre7">In the following example we will test different numbers. The PHP var_dump() function returns the data type and value of variables: </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$x = 10.365; </span></p>
+<p><span class="calibre7">var_dump($x); </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">$x = 2.4e3; </span></p>
+<p><span class="calibre7">var_dump($x); </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">$x = 8E-5; </span></p>
+<p><span class="calibre7">var_dump($x); </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+</div>
+<p><span id="part0000_split_017.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_017.html#calibre_pb_26" class="calibre12"><span class="calibre11">Booleans </span></h2>
+<p><span class="calibre7"> Booleans can be either TRUE or FALSE. </span></p>
+<p><span class="calibre7">var x=true; </span></p>
+<p><span class="calibre7">var y=false; </span></p>
+<p><span class="calibre7">Booleans are often used in conditional testing. You will learn more about conditional testing in a later chapter of this tutorial. </span></p>
+</div>
+<p><span id="part0000_split_018.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_018.html#calibre_pb_27" class="calibre12"><span class="calibre11">Arrays </span></h2>
+<p><span class="calibre7">An array stores multiple values in one single variable. </span></p>
+<p><span class="calibre7">In the following example we create an array, and then use the PHP var_dump() function to return the data type and value of the array: </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$fruits=array("mango","apple","ovacado",’’banana’’); </span></p>
+<p><span class="calibre7">var_dump($fruits); </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre7">You will learn a lot more about arrays in later chapters of this tutorial. </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<div id="part0000_split_018.html#calibre_pb_28" class="calibre2">
+
+</div>
+</div>
+<p><span id="part0000_split_019.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_019.html#calibre_pb_30" class="calibre3"><span id="part0000_split_019.html#Chapter_8_PHP_Operators" class="calibre9"><span id="part0000_split_019.html#GS-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">Chapter 4:PHP O</span></span><span class="calibre4">PERATORS</span></h1>
+<h2 class="calibre10"><span class="calibre11">PHP Operators </span></h2>
+<p><span class="calibre7">This chapter shows the different operators that can be used in PHP scripts. </span></p>
+</div>
+<p><span id="part0000_split_020.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_020.html#calibre_pb_31" class="calibre12"><span class="calibre11">PHP arithmetic operators</span></h2>
+<p><span class="calibre7">1. Addition or summation (+)</span></p>
+<p><span class="calibre7">$x + $y </span></p>
+<p><span class="calibre7">Sum of $x and $y </span></p>
+<p><span class="calibre7">2. Subtraction (-)</span></p>
+<p><span class="calibre7">$x - $y </span></p>
+<p><span class="calibre7">Difference of $x and $y </span></p>
+<p><span class="calibre7">3. Multiplication (*) </span></p>
+<p><span class="calibre7">$x * $y </span></p>
+<p><span class="calibre7">Product of $x and $y </span></p>
+<p><span class="calibre7">4. Division (/)</span></p>
+<p><span class="calibre7">$x / $y </span></p>
+<p><span class="calibre7">Quotient of $x and $y </span></p>
+<p><span class="calibre7">5. Modulus (%)</span></p>
+<p><span class="calibre7">$x % $y </span></p>
+<p><span class="calibre7">Remainder of $x divided by $y </span></p>
+<p><span class="calibre7">The example below shows the different results of using the different arithmetic operators: </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$x=5; </span></p>
+<p><span class="calibre7">$y=3; </span></p>
+<p><span class="calibre7">echo ($x + $y); // outputs 8</span></p>
+<p><span class="calibre7">echo ($x - $y); // outputs 2 </span></p>
+<p><span class="calibre7">echo ($x * $y); // outputs 15 </span></p>
+<p><span class="calibre7">echo ($x / $y); // outputs 1.6666666666667 </span></p>
+<p><span class="calibre7">echo ($x % $y); // outputs 2 </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+</div>
+<p><span id="part0000_split_021.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_021.html#calibre_pb_32" class="calibre12"><span class="calibre11">PHP assignment operators</span></h2>
+<p><span class="calibre7">The PHP assignment operator is used to write a value to a variable. </span></p>
+<p><span class="calibre7">The basic assignment operator in PHP is "=". It means that the left operand gets set to the value of the assignment expression on the right. </span></p>
+<p><span class="calibre7">x = y and is the same as x = y </span></p>
+<p><span class="calibre7">The left operand gets set to the value of the expression on the right </span></p>
+<p><span class="calibre7">1. Addition </span></p>
+<p><span class="calibre7">x += y </span></p>
+<p><span class="calibre7">x = x + y </span></p>
+<p><span class="calibre7">2. Subtraction </span></p>
+<p><span class="calibre7">x -= y </span></p>
+<p><span class="calibre7">x = x - y </span></p>
+<p><span class="calibre7">3. Multiplication </span></p>
+<p><span class="calibre7">x *= y </span></p>
+<p><span class="calibre7">x = x * y </span></p>
+<p><span class="calibre7">4. Division </span></p>
+<p><span class="calibre7">x /= y </span></p>
+<p><span class="calibre7">x = x / y </span></p>
+<p><span class="calibre7">5. modulus</span></p>
+<p><span class="calibre7">x %= y </span></p>
+<p><span class="calibre7">x = x % y </span></p>
+<p><span class="calibre7">The example below shows the different results of using the different assignment operators: </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$x=10; </span></p>
+<p><span class="calibre7">echo $x; // outputs 10 </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7">$y=10; </span></p>
+<p><span class="calibre7">$y += 10; </span></p>
+<p><span class="calibre7">echo $y; // outputs 20 </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7">$z=40; </span></p>
+<p><span class="calibre7">$z -= 25; </span></p>
+<p><span class="calibre7">echo $z; // outputs 15 </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre7">$i=5; </span></p>
+<p><span class="calibre7">$i *= 9; </span></p>
+<p><span class="calibre7">echo $i; // outputs 45</span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre7">$j=12; </span></p>
+<p><span class="calibre7">$j /= 6; </span></p>
+<p><span class="calibre7">echo $j; // outputs 2 </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre7">$k=15; </span></p>
+<p><span class="calibre7">$k %= 4; </span></p>
+<p><span class="calibre7">echo $k; // outputs 3 </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+</div>
+<p><span id="part0000_split_022.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_022.html#calibre_pb_33" class="calibre12"><span class="calibre11">PHP string Operators </span></h2>
+<p><span class="calibre7">1. Concatenation (.)</span></p>
+<p><span class="calibre7">$txt1 = "Hello" </span></p>
+<p><span class="calibre7">$txt2 = $txt1 . " world!" </span></p>
+<p><span class="calibre7">Output is hello world</span></p>
+<p><span class="calibre7">2. Concatenation assignment( .=)</span></p>
+<p><span class="calibre7">$txt1 = "Hello" </span></p>
+<p><span class="calibre7">Now $txt1 contains "Hello world!" </span></p>
+<p><span class="calibre7">$txt1 .= " world!" </span></p>
+<p><span class="calibre7">The example below shows the results of using the string operators: </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$x = "Hello"; </span></p>
+<p><span class="calibre7">$y = $a . " world!"; </span></p>
+<p><span class="calibre7">echo $y; // outputs Hello world! </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre7">$x="Hello"; </span></p>
+<p><span class="calibre7">$x .= " world!"; </span></p>
+<p><span class="calibre7">echo $x; // outputs Hello world! </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+</div>
+<p><span id="part0000_split_023.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_023.html#calibre_pb_34" class="calibre12"><span class="calibre11">PHP  Increment/Decrement  Operators </span></h2>
+<p><span class="calibre7">1. Pre-increment (++$x )</span></p>
+<p><span class="calibre7">Increments $x by one, then returns $x </span></p>
+<p><span class="calibre7">2. Post-increment ($x++ )</span></p>
+<p><span class="calibre7">Returns $x, then increments $x by one </span></p>
+<p><span class="calibre7">3. Pre-decrement (--$x )</span></p>
+<p><span class="calibre7">Decrements $x by one, then returns $x </span></p>
+<p><span class="calibre7">4. Post-decrement ($x--) </span></p>
+<p><span class="calibre7">Post-decrement </span></p>
+<p><span class="calibre7">Returns $x, then decrements $x by one </span></p>
+<p><span class="calibre7">The example below shows the different results of using the different increment/decrement operators: Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$x=9; </span></p>
+<p><span class="calibre7">echo ++$x; // outputs 10 </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre7">$y=10; </span></p>
+<p><span class="calibre7">echo $y++; // outputs 10 </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre7">$z=6; </span></p>
+<p><span class="calibre7">echo --$z; // outputs 5 </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre7">$i=5; </span></p>
+<p><span class="calibre7">echo $i--; // outputs 5 </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+</div>
+<p><span id="part0000_split_024.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_024.html#calibre_pb_35" class="calibre12"><span class="calibre11">PHP comparison Operators </span></h2>
+<p><span class="calibre7">The PHP comparison operators are used to compare two values (number or string): </span></p>
+<p><span class="calibre7">1. Equal (== )</span></p>
+<p><span class="calibre7">$x == $y </span></p>
+<p><span class="calibre7">True if $x is equal to $y </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7">2. Identical (===) </span></p>
+<p><span class="calibre7">$x === $y </span></p>
+<p><span class="calibre7">True if $x is equal to $y, and they are </span></p>
+<p><span class="calibre7">of the same type </span></p>
+<p><span class="calibre7">3. Not equal (!=) </span></p>
+<p><span class="calibre7">$x != $y </span></p>
+<p><span class="calibre7">True if $x is not equal to $y </span></p>
+<p><span class="calibre7">4. Not equal (&lt;&gt; )</span></p>
+<p><span class="calibre7">$x &lt;&gt; $y </span></p>
+<p><span class="calibre7">True if $x is not equal to $y </span></p>
+<p><span class="calibre7">5. Not identical (!==) </span></p>
+<p><span class="calibre7">$x !== $y </span></p>
+<p><span class="calibre7">True if $x is not equal to $y, or they </span></p>
+<p><span class="calibre7">are not of the same type </span></p>
+<p><span class="calibre7">6. Greater than (&gt; )</span></p>
+<p><span class="calibre7">$x &gt; $y </span></p>
+<p><span class="calibre7">True if $x is greater than $y </span></p>
+<p><span class="calibre7">7. Less than (&lt;) </span></p>
+<p><span class="calibre7">$x &lt; $y </span></p>
+<p><span class="calibre7">True if $x is less than $y </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre7">8. Greater than or equal to (&gt;=) </span></p>
+<p><span class="calibre7">$x &gt;= $y </span></p>
+<p><span class="calibre7">True if $x is greater than or equal to $y </span></p>
+<p><span class="calibre7">9. Less than or equal to (&lt;= )</span></p>
+<p><span class="calibre7">$x &lt;= $y </span></p>
+<p><span class="calibre7">True if $x is less than or equal to $y </span></p>
+<p><span class="calibre7">The example below shows the different results of using some of the comparison operators: </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$x=100; </span></p>
+<p><span class="calibre7">$y="100"; </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre7">var_dump($x == $y); </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">var_dump($x === $y); </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">var_dump($x != $y); </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">var_dump($x !== $y); </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre7">$a=50; </span></p>
+<p><span class="calibre7">$b=90; </span></p>
+<p><span class="calibre7">var_dump($a &gt; $b); </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">var_dump($a &lt; $b); </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+</div>
+<p><span id="part0000_split_025.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_025.html#calibre_pb_36" class="calibre12"><span class="calibre11">PHP logical Operators </span></h2>
+<p><span class="calibre7">1.and  </span></p>
+<p><span class="calibre7">$x and $y </span></p>
+<p><span class="calibre7">True if both $x and $y are true </span></p>
+<p><span class="calibre7">2.or </span></p>
+<p><span class="calibre7">$x or $y </span></p>
+<p><span class="calibre7">True if either $x or $y is true </span></p>
+<p><span class="calibre7">3.xor </span></p>
+<p><span class="calibre7">$x xor $y </span></p>
+<p><span class="calibre7">True if either $x or $y is true, but not </span></p>
+<p><span class="calibre7">4.both (&amp;&amp; ) </span></p>
+<p><span class="calibre7">$x &amp;&amp; $y </span></p>
+<p><span class="calibre7">True if both $x and $y are true </span></p>
+<p><span class="calibre7">5.|| (Or) </span></p>
+<p><span class="calibre7">$x || $y </span></p>
+<p><span class="calibre7">True if either $x or $y is true </span></p>
+<p><span class="calibre7">6.! (Not) </span></p>
+<p><span class="calibre7">!$x </span></p>
+<p><span class="calibre7">True if $x is not true </span></p>
+</div>
+<p><span id="part0000_split_026.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_026.html#calibre_pb_37" class="calibre12"><span class="calibre11">PHP array Operators </span></h2>
+<p><span class="calibre7">The PHP array operators are used to compare arrays: </span></p>
+<p><span class="calibre7">1. Union (+) </span></p>
+<p><span class="calibre7">$x + $y </span></p>
+<p><span class="calibre7">Union of $x and $y (but duplicate keys are not overwritten) </span></p>
+<p><span class="calibre7">2. Equality (== )</span></p>
+<p><span class="calibre7">$x == $y </span></p>
+<p><span class="calibre7">True if $x and $y have the same key/value pairs </span></p>
+<p><span class="calibre7">3.Identity (===)</span></p>
+<p><span class="calibre7">$x === $y </span></p>
+<p><span class="calibre7">True if $x and $y have the same key/value pairs in the same order and of the same types </span></p>
+<p><span class="calibre7">4. Inequality (!= )</span></p>
+<p><span class="calibre7">$x != $y </span></p>
+<p><span class="calibre7">True if $x is not equal to $y </span></p>
+<p><span class="calibre7">5. Inequality (&lt;&gt; )</span></p>
+<p><span class="calibre7">$x &lt;&gt; $y </span></p>
+<p><span class="calibre7">True if $x is not equal to $y </span></p>
+<p><span class="calibre7">6. Non-identity (!== )</span></p>
+<p><span class="calibre7">$x !== $y </span></p>
+<p><span class="calibre7">True if $x is not identical to $y </span></p>
+<p><span class="calibre7">The example below shows the different results of using the different array operators: </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$x = array("a" =&gt; "red", "b" =&gt; "green"); </span></p>
+<p><span class="calibre7">$y = array("c" =&gt; "blue", "d" =&gt; "yellow"); </span></p>
+<p><span class="calibre7">$z = $x + $y; // union of $x and $y </span></p>
+<p><span class="calibre7">var_dump($z); </span></p>
+<p><span class="calibre7">var_dump($x == $y); </span></p>
+<p><span class="calibre7">var_dump($x === $y); </span></p>
+<p><span class="calibre7">var_dump($x != $y); </span></p>
+<p><span class="calibre7">var_dump($x &lt;&gt; $y); </span></p>
+<p><span class="calibre7">var_dump($x !== $y); </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre13"> </span></p>
+<p><span class="calibre13"> </span></p>
+<p><span class="calibre13"> </span></p>
+<p><span class="calibre13"> </span></p>
+<p><span class="calibre13"> </span></p>
+<div id="part0000_split_026.html#calibre_pb_38" class="calibre2">
+
+</div>
+</div>
+<p><span id="part0000_split_027.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_027.html#calibre_pb_40" class="calibre3"><span id="part0000_split_027.html#VD-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">Chapter 5:CONTROL STRUCTURES </span></h1>
+<h2 class="calibre10"><span class="calibre11">If statement</span></h2>
+<p><span class="calibre7">The PHP </span><span class="calibre16">if statement</span><span class="calibre7"> is very similar to other programming languages use of the </span><span class="calibre16">if statement</span><span class="calibre7">,  check the following: </span></p>
+<p><span class="calibre7">This simple kind of if/then statement is very common in every day life and also appears in programming quite often. Whenever you want to make a decision given that something is true and be sure that you take the appropriate action, you are using an if/then relationship. </span></p>
+<p><span class="calibre13">example </span></p>
+<p><span class="calibre7">$my_name = "william"; </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre7">if ( $my_name == "william" ) { </span></p>
+<p><span class="calibre7">echo "Your name is william!&lt;br /&gt;"; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre13">Display: </span></p>
+<p><span class="calibre7">Your name is william! </span></p>
+<p><span class="calibre13">explanation </span></p>
+<p><span class="calibre7">Did you get that we were comparing the variable $my_name with "william" to see if they were equal? In PHP you use the double equal sign (==) to compare values. Additionally, notice that because the if statement turned out to be true, the code segment was executed, printing out "Your name is william!". Let's go a bit more into details</span></p>
+<p><span class="calibre7">• We first set the variable $my_name equal to "william". </span></p>
+<p><span class="calibre7">• We next used a PHP if statement to check if the value contained in the variable $my_name was equal to "william" </span></p>
+<p><span class="calibre7">• The comparison between $my_name and "william" was done with a double equal sign "==", not a single equals"="! A single equals is for assigning a value to a variable, while a double equals is for checking if things are equal. </span></p>
+<p><span class="calibre7">• $my_name is indeed equal to "william" so the echo statement is executed</span></p>
+<p><span class="calibre7">Suppose  $my_name  is not equal to"william" what would have happened</span></p>
+<p><span class="calibre13">PHP Code: </span></p>
+<p><span class="calibre7">$my_name = "james"; </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre7">if ( $my_name == "william" ) { </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre7">echo "Your name is william!&lt;br /&gt;"; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre7">echo "Welcome to mysite!"; </span></p>
+<p><span class="calibre13">Display: </span></p>
+<p><span class="calibre7">Welcome to mysite!</span></p>
+</div>
+<p><span id="part0000_split_028.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_028.html#calibre_pb_41" class="calibre12"><span class="calibre11">If /else statement</span></h2>
+<p><span class="calibre7">Has someone ever told you, "if you study smart, then you will pass"? And what happens if you do not study smart? Well, you fail! This is an example of an if/else conditional statement. </span></p>
+<p><span class="calibre13">PHP Code: </span></p>
+<p><span class="calibre7">$number_four </span><span class="calibre17">==</span><span class="calibre7"> 4; </span></p>
+<p><span class="calibre7">if ( $number_four == 4 ) { </span></p>
+<p><span class="calibre7">echo " true"; </span></p>
+<p><span class="calibre7">} else { </span></p>
+<p><span class="calibre7">echo " false"; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre13">Display: </span></p>
+<p><span class="calibre7"> true </span></p>
+<p><span class="calibre13">explanation </span></p>
+<p><span class="calibre7">• We first made a PHP variable called $number_four and set it equal to 4. </span></p>
+<p><span class="calibre7">• In this example we compared a variable to an integer value. To do such a comparison we use " </span><span class="calibre13">==</span><span class="calibre7">". </span></p>
+<p><span class="calibre7">• $number_four is indeed equal to 4 and so this statement will evaluate to true. </span></p>
+<p><span class="calibre7">• All code that is contained between the opening curly brace "{" that follows the if statement and the closing curly brace "}" will be executed when the if statement is true. </span></p>
+<p><span class="calibre7">• The code contained within the else segment will not be used. </span></p>
+</div>
+<p><span id="part0000_split_029.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_029.html#calibre_pb_42" class="calibre12"><span class="calibre11">Using else if with if..else</span></h2>
+<p><span class="calibre7">example</span></p>
+<p><span class="calibre13">PHP Code: </span></p>
+<p><span class="calibre7">$teacher = "george"; </span></p>
+<p><span class="calibre7">if($teacher == "anne"){ </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre7">echo "Hello madam"; </span></p>
+<p><span class="calibre7">} elseif ($teacher == "george"){ </span></p>
+<p><span class="calibre7">echo "hello Sir!"; </span></p>
+<p><span class="calibre7">}else { </span></p>
+<p><span class="calibre7">echo </span></p>
+<p><span class="calibre7">"Morning"; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre13">Display: </span></p>
+<p><span class="calibre7">hello Sir! </span></p>
+<p><span class="calibre7">PHP first checked to see if </span><span class="calibre16">$teacher</span><span class="calibre7"> was equal to "anne", which evaluated to false. Next, PHP checked the first elseif statement </span><span class="calibre16">$teacher </span><span class="calibre7">did in fact equal "george" so the phrase george Sir!" was printed out. If we wanted to check for more teachers names we could insert more elseif statements! ,note that an elseif statement cannot be used unless it is preceded by an if statement.</span></p>
+</div>
+<p><span id="part0000_split_030.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_030.html#calibre_pb_43" class="calibre12"><span class="calibre11">Switch statement</span></h2>
+<p><span class="calibre7">There are times when an if statement is not the most efficient way to check for certain conditions. With the use of the </span><span class="calibre16">switch</span><span class="calibre7"> statement you can check for all these conditions at once, </span></p>
+<p><span class="calibre7">This is how it works,first we have a single expression (most often a variable), that is evaluated once. The value of the expression is then compared with the values for each case in the code structure. If there is a match, the block of code associated with that case is executed. The use of break is to prevent the code from running into the next case automatically. The default statement is used if no match is found. </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$color="pink"; </span></p>
+<p><span class="calibre7">switch ($color) </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre7">case "yellow": </span></p>
+<p><span class="calibre7">echo "Your favorite color is yellow!"; </span></p>
+<p><span class="calibre7">break; </span></p>
+<p><span class="calibre7">case "red": </span></p>
+<p><span class="calibre7">echo "Your favorite color is red!"; </span></p>
+<p><span class="calibre7">break; </span></p>
+<p><span class="calibre7">case "pink": </span></p>
+<p><span class="calibre7">echo "Your favorite color is pink!"; </span></p>
+<p><span class="calibre7">break; </span></p>
+<p><span class="calibre7">default: </span></p>
+<p><span class="calibre7">echo "Your favorite color is not known!"; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre7">?&gt;</span></p>
+<p><span class="calibre7">The </span><span class="calibre16">if</span><span class="calibre7"> statement has the </span><span class="calibre16">else</span><span class="calibre7"> clause and the </span><span class="calibre16">switch</span><span class="calibre7"> statement has the </span><span class="calibre16">default</span><span class="calibre7"> case. It's usually a good idea to always include the </span><span class="calibre16">default</span><span class="calibre7"> case in all your switch statements.</span></p>
+</div>
+<p><span id="part0000_split_031.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_031.html#calibre_pb_44" class="calibre12"><span class="calibre11">while Loops </span></h2>
+<p><span class="calibre7">PHP while loops execute a block of code while the specified condition is true. Often when you write code, you want the same block of code to run over and over again in a row.Instead of adding several (which is tedious)almost equal code-lines in a script, we can use loops to perform a task like this. </span></p>
+<p><span class="calibre7">In PHP, the following looping statements are used: </span></p>
+<p><span class="calibre7">· </span><span class="calibre13">while </span><span class="calibre7">- loops through a block of code and executes as long as the specified condition is true </span></p>
+<p><span class="calibre7">Syntax </span></p>
+<p><span class="calibre7">while ( </span><span class="calibre16">condition is true</span><span class="calibre7">) </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre16"> code to be executed</span><span class="calibre7">; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre7">The example below first sets a variable $x to 1 ($x=1;). Then, the while loop will continue to run as long as $x is less than, or equal to 10. $x will increase by 1 each time the loop runs ($x++;): Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$x=1; </span></p>
+<p><span class="calibre7">while($x&lt;=10) </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre7">echo "The number is: $x &lt;br&gt;"; </span></p>
+<p><span class="calibre7">$x++; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7">· </span><span class="calibre13">do...while</span><span class="calibre7"> - loops through a block of code once, and then repeats the loop as long as the specified condition is true,the do...while loop will always execute the block of code once, it will then check the condition, and repeat the loop while the specified condition is true. </span></p>
+<p><span class="calibre7">Syntax </span></p>
+<p><span class="calibre7">do </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre16"> code to be executed; </span></p>
+<p><span class="calibre16"> </span><span class="calibre7">} </span></p>
+<p><span class="calibre7">while ( </span><span class="calibre16">condition is true</span><span class="calibre7">); </span></p>
+<p><span class="calibre7">The example below first sets a variable $x to 1 ($x=1;). Then, the do while loop will write some output, and then increment the variable $x with 1. Then the condition is checked and the loop will continue to run as long as $x is less than, or equal to 10: </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$x=1; </span></p>
+<p><span class="calibre7">do </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre7">echo "The number is: $x &lt;br&gt;"; </span></p>
+<p><span class="calibre7">$x++; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre7">while ($x&lt;=10) </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre7">Note that in a do while loop the condition is tested after executing the statements within the loop. This means that the do while loop would execute its statements at least once, even if the condition fails the first time. </span></p>
+</div>
+<p><span id="part0000_split_032.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_032.html#calibre_pb_45" class="calibre12"><span class="calibre11"> For Loop</span></h2>
+<p><span class="calibre7">PHP for loops execute a block of code a specified number of times. The for loop is used when you know in advance how many times the script should run. </span></p>
+<p><span class="calibre7">Syntax </span></p>
+<p><span class="calibre7">for ( </span><span class="calibre16">init counter; test counter; increment counter</span><span class="calibre7">) </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre16">code to be executed; </span><span class="calibre7"> </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre7">explanation</span></p>
+<p><span class="calibre7">· </span><span class="calibre16">init counter</span><span class="calibre7">: Initialize the loop counter value </span></p>
+<p><span class="calibre7">· </span><span class="calibre16">test counter</span><span class="calibre7">: Evaluated for each loop iteration. If it evaluates to true, the loop continues. If it evaluates to false, the loop ends. </span></p>
+<p><span class="calibre7">· </span><span class="calibre16">increment counter</span><span class="calibre7">: Increases the loop counter value </span></p>
+<p><span class="calibre7">The example below displays the numbers from 0 to 100: </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">for ($x=0; $x&lt;=100; $x++) </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre7">echo "The number is: $x &lt;br&gt;"; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+</div>
+<p><span id="part0000_split_033.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_033.html#calibre_pb_46" class="calibre12"><span class="calibre11">Foreach Loop </span></h2>
+<p><span class="calibre7">The foreach loop works only on arrays, and is used to loop through each key pair in an array. For every loop iteration, the value of the current array element is assigned to $value and the array pointer is moved by one, until it reaches the last array element. The following example demonstrates a loop that will output the values of the given array ($fruits):</span></p>
+<p><span class="calibre7">Syntax </span></p>
+<p><span class="calibre7">foreach ($ </span><span class="calibre16">array </span><span class="calibre7"> as </span><span class="calibre16"> </span><span class="calibre7">$ </span><span class="calibre16">value</span><span class="calibre7">) </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre16">code to be executed; </span><span class="calibre7"> </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$fruits = array("mango","orange","pawpaw","ovacado"); </span></p>
+<p><span class="calibre7">foreach ($fruits as $value) </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre7">echo "$value &lt;br&gt;"; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<div id="part0000_split_033.html#calibre_pb_47" class="calibre2">
+
+</div>
+</div>
+<p><span id="part0000_split_034.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_034.html#calibre_pb_49" class="calibre3"><span id="part0000_split_034.html#Chapter_14_PHP_Arrays" class="calibre9"><span id="part0000_split_034.html#1AQ-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">Chapter 6:PHP A</span></span><span class="calibre4">RRAYS</span></h1>
+<h2 class="calibre10"><span class="calibre11"> Array definition </span></h2>
+<p><span class="calibre7">An array stores multiple values in one single variable,hence an array is a special variable, which can hold more than one value at a time. </span></p>
+<p><span class="calibre7">If you have a list of items (example a list of book names), storing the books in single variables could look like this: </span></p>
+<p><span class="calibre7">$books1="computing"; </span></p>
+<p><span class="calibre7">$books2="religion"; </span></p>
+<p><span class="calibre7">$books3="history"; </span></p>
+<p><span class="calibre7">$books4="philosophy"; </span></p>
+<p><span class="calibre7">what if you want to loop through the books and find a specific one? And what if you had not 4 books, but 4000? The best solution is to create an array,an array can hold many values under a single name, and you can access the values by referring to an index number. </span></p>
+</div>
+<p><span id="part0000_split_035.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_035.html#calibre_pb_50" class="calibre12"><span class="calibre11">Creating an array </span></h2>
+<p><span class="calibre7">The array() function is used to create an array: </span></p>
+<p><span class="calibre7">There are three types of arrays: </span></p>
+<p><span class="calibre7">· </span><span class="calibre13">Indexed arrays</span><span class="calibre7"> - Arrays with numeric index </span></p>
+<p><span class="calibre7">· </span><span class="calibre13">Associative arrays</span><span class="calibre7"> - Arrays with named keys </span></p>
+<p><span class="calibre7">· </span><span class="calibre13">Multidimensional arrays</span><span class="calibre7"> - Arrays containing one or more arrays </span></p>
+</div>
+<p><span id="part0000_split_036.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_036.html#calibre_pb_51" class="calibre12"><span class="calibre11">Indexed arrays</span></h2>
+<p><span class="calibre7">There are two ways to create indexed arrays: </span></p>
+<p><span class="calibre7">Note:index always starts at 0 </span></p>
+<p><span class="calibre7">1.The index can be assigned automatically $books=array("computing","religion","history"); </span></p>
+<p><span class="calibre7">2. The index can be assigned manually: </span></p>
+<p><span class="calibre7">$books [0]="computing"; </span></p>
+<p><span class="calibre7">$books [1]="religion"; </span></p>
+<p><span class="calibre7">$books [2]="history"; </span></p>
+<p><span class="calibre7">The following example creates an indexed array named $cars, assigns three elements to it, and then prints a text containing the array values: </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$books=array("computing","religion","history");</span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7">echo "I love " . $books[0] . ", " . $books[1] . " and " .$books[2] ."; </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+</div>
+<p><span id="part0000_split_037.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_037.html#calibre_pb_52" class="calibre12"><span class="calibre11">Looping in indexed array</span></h2>
+<p><span class="calibre7">To loop through and echo all the values of an indexed array, you could use a for loop Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$books=array("computing","religion","history");</span></p>
+<p><span class="calibre7">$arraylength=count($books); </span></p>
+<p><span class="calibre7">for($x=0;$x&lt;$arraylength;$x++) </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre7">echo $books[$x]; </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+</div>
+<p><span id="part0000_split_038.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_038.html#calibre_pb_53" class="calibre12"><span class="calibre11">Associative array</span></h2>
+<p><span class="calibre7">Associative arrays are arrays that use named keys that you assign to them.</span></p>
+<p><span class="calibre7">The named keys can then be used in a script: </span></p>
+<p><span class="calibre7">There are two ways to create an associative array: 1.$year=array("benson"=&gt;"1975","anne"=&gt;"1937","Joel"=&gt;"2000"); or 2.$year['benson']="1975"; </span></p>
+<p><span class="calibre7">  $year['anne']="1937"; </span></p>
+<p><span class="calibre7">  $year['Joel']="2000"; </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$year=array("benson"=&gt;"1975","anne"=&gt;"1937","Joel"=&gt;"2000");</span></p>
+<p><span class="calibre7"> echo "benson was born in " . $year['benson'] . ; </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+</div>
+<p><span id="part0000_split_039.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_039.html#calibre_pb_54" class="calibre12"><span class="calibre11">Looping in associative array</span></h2>
+<p><span class="calibre7">To loop through and echo all the values of an associative array, you could use a foreach loop</span></p>
+<p><span class="calibre7"> Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$year=array("benson"=&gt;"1975","anne"=&gt;"1937","Joel"=&gt;"2000"); </span></p>
+<p><span class="calibre7">foreach($year as $x=&gt;$x_value) </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre7">echo "Key=" . $x . ", Value=" . $x_value; </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+</div>
+<p><span id="part0000_split_040.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_040.html#calibre_pb_55" class="calibre12"><span class="calibre11">Get the length of an array</span></h2>
+<p><span class="calibre7">The count() function is used to return the length (the number of elements) of an array: </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php</span></p>
+<p><span class="calibre7">$books=array("computing","religion","history");</span></p>
+<p><span class="calibre7">echo count($books); </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre13"> </span></p>
+<p><span class="calibre7"> </span></p>
+<div id="part0000_split_040.html#calibre_pb_56" class="calibre2">
+
+</div>
+</div>
+<p><span id="part0000_split_041.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_041.html#calibre_pb_58" class="calibre3"><span id="part0000_split_041.html#Chapter_13_PHP_Function" class="calibre9"><span id="part0000_split_041.html#1FM-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">Chapter </span></span><span class="calibre4">7:PHP FUNCTIONS</span></h1>
+<p><span class="calibre7">The real power of PHP comes from its functions; it has more than 1000 built-in functions. </span></p>
+<p><span class="calibre7">Note:</span></p>
+<p><span class="calibre7">.Besides the built-in PHP functions, we can create our own functions. </span></p>
+<p><span class="calibre7">.A function is a block of statements that can be used repeatedly in a program. </span></p>
+<p><span class="calibre7">.A function will not execute immediately when a page loads. </span></p>
+<p><span class="calibre7">.A function will be executed by a call to the function. </span></p>
+</div>
+<p><span id="part0000_split_042.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_042.html#calibre_pb_59" class="calibre12"><span class="calibre11">Creating  user defined Functions</span></h2>
+<p><span class="calibre7">.A user defined function declaration always starts with the word "function"</span></p>
+<p><span class="calibre7">.Function names are case-insensitive.</span></p>
+<p><span class="calibre7">.A function name can start with a letter or underscore (but not a number). </span></p>
+<p><span class="calibre7"> .Give the function a name that reflects what the function does </span></p>
+<p><span class="calibre7">Remember that the opening curly brace ( { ) indicates the beginning of the function code and the closing curly brace ( } ) indicates the end of the function.</span></p>
+<p><span class="calibre13"> Syntax </span></p>
+<p><span class="calibre7">function </span><span class="calibre16">functionName</span><span class="calibre7">() </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre16">code to be executed</span><span class="calibre7">; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre7">example</span></p>
+<p><span class="calibre7">In the example below, we create a function named "displayname”. The function outputs "Hello world!". To call the function, just write its name: Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">function displayname() </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre7">echo "Hello world!"; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre7">displayname(); // call the function </span></p>
+<p><span class="calibre7">?&gt;</span></p>
+</div>
+<p><span id="part0000_split_043.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_043.html#calibre_pb_60" class="calibre12"><span class="calibre11">Functions arguments</span></h2>
+<p><span class="calibre7">An argument is just like a variable,through which information is passed to functions,arguments are specified after the function name, inside the parentheses.</span></p>
+<p><span class="calibre7"> You can add as many arguments as you want however you seperate them with a comma. </span></p>
+<p><span class="calibre7">The following example has a function with two argument . When the detail() function is called, we also pass along detail (e.g. james,1937), and the detail is used inside the function, which outputs several different details</span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">function detail($name,$year) </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre7">echo "$name Refsnes. born in $year &lt;br&gt;"; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre7">detail("james","1937"); </span></p>
+<p><span class="calibre7">detail("kate","1971"); </span></p>
+<p><span class="calibre7">detail("anne","1963"); </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+</div>
+<p><span id="part0000_split_044.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_044.html#calibre_pb_61" class="calibre12"><span class="calibre11">Default argument value</span></h2>
+<p><span class="calibre7">The following illustrates how to use a default parameter. If we call the function width() without arguments it takes the default value as argument</span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">function width($w=60) </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre7">echo "The width is : $w &lt;br&gt;"; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre7">width(65); </span></p>
+<p><span class="calibre7">width(); // will use the default value of 60 </span></p>
+<p><span class="calibre7">width(15); </span></p>
+<p><span class="calibre7">width(90); </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+</div>
+<p><span id="part0000_split_045.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_045.html#calibre_pb_62" class="calibre12"><span class="calibre11">Returning value</span></h2>
+<p><span class="calibre7">To let a function return a value, use the return statement</span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">function div($x,$y) </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre7">$z=$x/$y; </span></p>
+<p><span class="calibre7">return $z; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre7">echo "15 / 2 = " . div(15,5) . "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">echo "14/2= " . div(14,2) . "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">echo "12 / 4 = " . div(12,4); </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre13"> </span></p>
+<p><span class="calibre13"> </span></p>
+<p><span class="calibre13"> </span></p>
+<p><span class="calibre13"> </span></p>
+<p><span class="calibre13"> </span></p>
+<p><span class="calibre13"> </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7"> </span></p>
+<div id="part0000_split_045.html#calibre_pb_63" class="calibre2">
+
+</div>
+</div>
+<p><span id="part0000_split_046.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_046.html#calibre_pb_65" class="calibre3"><span id="part0000_split_046.html#Chapter_15_PHP_Form_Hadling" class="calibre9"><span id="part0000_split_046.html#1KN-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">Chapter 8:PHP Form Handling </span></span></h1>
+<h2 class="calibre10"><span class="calibre11"> A Simple HTML Form description</span></h2>
+<p><span class="calibre7">HTML Forms are required when you want to collect some data from the site visitor. For example during user registration you would like to collect information such as name, email address, credit card, etc.</span></p>
+<p><span class="calibre7">A form will take input from the site visitor and then will post it to a back-end application such as CGI, ASP Script or PHP script etc. The back-end application will perform required processing on the passed data based on defined business logic inside the application.</span></p>
+<p><span class="calibre7">There are various form elements available like text fields, textarea fields, drop-down menus, radio buttons, checkboxes, etc.</span></p>
+<p><span class="calibre7">The HTML </span><span class="calibre13">&lt;form&gt;</span><span class="calibre7"> tag is used to create an HTML form and it has following syntax:</span></p>
+<p><span class="calibre14">&lt;form action="Script URL" method="GET|POST"&gt;</span></p>
+<p><span class="calibre14">    form elements like input, textarea etc.</span></p>
+<p><span class="calibre14">&lt;/form&gt;</span></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p><span class="calibre7">Action</span></p></td>
+<td><p><span class="calibre7">Backend script ready to process your passed data.</span></p></td>
+</tr>
+<tr class="even">
+<td><p><span class="calibre7">Method</span></p></td>
+<td><p><span class="calibre7">  Method to be used to upload data. The most frequently used are GET and POST            methods.</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span id="part0000_split_047.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_047.html#calibre_pb_66" class="calibre12"><span class="calibre11">HTML Form Controls</span></h2>
+<p><span class="calibre7">There are different types of form controls that you can use to collect data using HTML form:</span></p>
+<ul>
+<li><span class="calibre7">Checkboxes Controls</span></li>
+<li><span class="calibre7">Radio Box Controls</span></li>
+<li><span class="calibre7">Select Box Controls</span></li>
+<li><span class="calibre7">File Select boxes</span></li>
+<li><span class="calibre7">Hidden Controls</span></li>
+<li><span class="calibre7">Clickable Buttons</span></li>
+<li><span class="calibre7">Submit and Reset Button</span></li>
+</ul>
+</div>
+<p><span id="part0000_split_048.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_048.html#calibre_pb_67" class="calibre12"><span class="calibre11">Checkbox Control</span></h2>
+<p><span class="calibre7">Checkboxes are used when more than one option is required to be selected. They are also created using HTML &lt;input&gt; tag but type attribute is set to checkbox</span></p>
+<p><span class="calibre7">Here is an example HTML code for a form with two checkboxes:</span></p>
+<p><span class="calibre14">&lt;html&gt;</span></p>
+<p><span class="calibre14">&lt;head&gt;</span></p>
+<p><span class="calibre14">&lt;title&gt;Checkbox Control&lt;/title&gt;</span></p>
+<p><span class="calibre14">&lt;/head&gt;</span></p>
+<p><span class="calibre14">&lt;body&gt;</span></p>
+<p><span class="calibre14">&lt;form&gt;</span></p>
+<p><span class="calibre14">&lt;input type="checkbox" name="maths" value="on"&gt; Maths</span></p>
+<p><span class="calibre14">&lt;input type="checkbox" name="physics" value="on"&gt; Physics</span></p>
+<p><span class="calibre14">&lt;/form&gt;</span></p>
+<p><span class="calibre14">&lt;/body&gt;</span></p>
+<p><span class="calibre14">&lt;/html&gt;</span></p>
+<p><span class="calibre26" data-amznremoved-m8="true" data-amznremoved="mobi7">Bottom of Form</span></p>
+</div>
+<p><span id="part0000_split_049.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_049.html#calibre_pb_68" class="calibre12"><span class="calibre11">Radio Button Control</span></h2>
+<p><span class="calibre7">Radio buttons are used when out of many options, just one option is required to be selected. They are also created using HTML &lt;input&gt; tag but type attribute is set to radio.</span></p>
+<p><span class="calibre7">Here is example HTML code for a form with two radio buttons:</span></p>
+<p><span class="calibre14">&lt;html&gt;</span></p>
+<p><span class="calibre14">&lt;head&gt;</span></p>
+<p><span class="calibre14">&lt;title&gt;Radio Box Control&lt;/title&gt;</span></p>
+<p><span class="calibre14">&lt;/head&gt;</span></p>
+<p><span class="calibre14">&lt;body&gt;</span></p>
+<p><span class="calibre14">&lt;form&gt;</span></p>
+<p><span class="calibre14">&lt;input type="radio" name="subject" value="maths"&gt; Maths</span></p>
+<p><span class="calibre14">&lt;input type="radio" name="subject" value="physics"&gt; Physics</span></p>
+<p><span class="calibre14">&lt;/form&gt;</span></p>
+<p><span class="calibre14">&lt;/body&gt;</span></p>
+<p><span class="calibre14">&lt;/html&gt;</span></p>
+<p><span class="calibre26" data-amznremoved-m8="true" data-amznremoved="mobi7">Top of Form</span></p>
+<p><span class="calibre26" data-amznremoved-m8="true" data-amznremoved="mobi7">Bottom of Form</span></p>
+</div>
+<p><span id="part0000_split_050.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_050.html#calibre_pb_69" class="calibre12"><span class="calibre11">Select Box Control</span></h2>
+<p><span class="calibre7">A select box, also called drop down box which provides option to list down various options in the form of drop down list, from where a user can select one or more options.</span></p>
+<p><span class="calibre7">Here is example HTML code for a form with one drop down box</span></p>
+<p><span class="calibre14">&lt;html&gt;</span></p>
+<p><span class="calibre14">&lt;head&gt;</span></p>
+<p><span class="calibre14">&lt;title&gt;Select Box Control&lt;/title&gt;</span></p>
+<p><span class="calibre14">&lt;/head&gt;</span></p>
+<p><span class="calibre14">&lt;body&gt;</span></p>
+<p><span class="calibre14">&lt;form&gt;</span></p>
+<p><span class="calibre14">&lt;select name="dropdown"&gt;</span></p>
+<p><span class="calibre14">&lt;option value="Maths" selected&gt;Maths&lt;/option&gt;</span></p>
+<p><span class="calibre14">&lt;option value="Physics"&gt;Physics&lt;/option&gt;</span></p>
+<p><span class="calibre14">&lt;/select&gt;</span></p>
+<p><span class="calibre14">&lt;/form&gt;</span></p>
+<p><span class="calibre14">&lt;/body&gt;</span></p>
+<p><span class="calibre14">&lt;/html&gt;</span></p>
+<p><span class="calibre26" data-amznremoved-m8="true" data-amznremoved="mobi7">Top of Form</span></p>
+<p><span class="calibre26" data-amznremoved-m8="true" data-amznremoved="mobi7">Bottom of Form</span></p>
+</div>
+<p><span id="part0000_split_051.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_051.html#calibre_pb_70" class="calibre12"><span class="calibre11">File Upload Box</span></h2>
+<p><span class="calibre7">If you want to allow a user to upload a file to your web site, you will need to use a file upload box, also known as a file select box. This is also created using the &lt;input&gt; element but type attribute is set to file.</span></p>
+<p><span class="calibre7">Here is example HTML code for a form with one file upload box:</span></p>
+<p><span class="calibre14">&lt;html&gt;</span></p>
+<p><span class="calibre14">&lt;head&gt;</span></p>
+<p><span class="calibre14">&lt;title&gt;File Upload Box&lt;/title&gt;</span></p>
+<p><span class="calibre14">&lt;/head&gt;</span></p>
+<p><span class="calibre14">&lt;body&gt;</span></p>
+<p><span class="calibre14">&lt;form&gt;</span></p>
+<p><span class="calibre14">&lt;input type="file" name="fileupload" accept="image/*" /&gt;</span></p>
+<p><span class="calibre14">&lt;/form&gt;</span></p>
+<p><span class="calibre14">&lt;/body&gt;</span></p>
+<p><span class="calibre14">&lt;/html&gt;</span></p>
+<p><span class="calibre26" data-amznremoved-m8="true" data-amznremoved="mobi7">Top of Form</span></p>
+<p><span class="calibre26" data-amznremoved-m8="true" data-amznremoved="mobi7">Bottom of Form</span></p>
+</div>
+<p><span id="part0000_split_052.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_052.html#calibre_pb_71" class="calibre12"><span class="calibre11">Button Controls              </span></h2>
+<p><span class="calibre7">There are various ways in HTML to create clickable buttons. You can also create a clickable button using &lt;input&gt; tag by setting its type attribute to button. The type attribute can take the following values:</span></p>
+<p><span class="calibre7">Here is example HTML code for a form with three types of buttons:</span></p>
+<p><span class="calibre14">&lt;html&gt;</span></p>
+<p><span class="calibre14">&lt;head&gt;</span></p>
+<p><span class="calibre14">&lt;title&gt;button control&lt;/title&gt;</span></p>
+<p><span class="calibre14">&lt;/head&gt;</span></p>
+<p><span class="calibre14">&lt;body&gt;</span></p>
+<p><span class="calibre14">&lt;form&gt;</span></p>
+<p><span class="calibre14">&lt;input type="submit" name="submit" value="Submit" /&gt;</span></p>
+<p><span class="calibre14">&lt;input type="reset" name="reset"  value="Reset" /&gt;</span></p>
+<p><span class="calibre14">&lt;input type="button" name="ok" value="OK"  /&gt;</span></p>
+<p><span class="calibre14">&lt;input type="image" name="imagebutton" src="/html/images/logo.png" /&gt;</span></p>
+<p><span class="calibre14">&lt;/form&gt;</span></p>
+<p><span class="calibre14">&lt;/body&gt;</span></p>
+<p><span class="calibre14">&lt;/html&gt;</span></p>
+<p><span class="calibre26" data-amznremoved-m8="true" data-amznremoved="mobi7">Bottom of Form</span></p>
+</div>
+<p><span id="part0000_split_053.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_053.html#calibre_pb_72" class="calibre12"><span class="calibre11">Hidden Form Controls</span></h2>
+<p><span class="calibre7">Hidden form controls are used to hide data inside the page which later on can be pushed to the server. This control hides inside the code and does not appear on the actual page. For example, following hidden form is being used to keep current page number. When a user will click next page then the value of hidden control will be sent to the web server and there it will decide which page has be displayed next based on the passed current page.</span></p>
+<p><span class="calibre7">Here is example HTML code to show the usage of hidden control:</span></p>
+<p><span class="calibre14">&lt;html&gt;</span></p>
+<p><span class="calibre14">&lt;head&gt;</span></p>
+<p><span class="calibre14">&lt;title&gt;hidden form control&lt;/title&gt;</span></p>
+<p><span class="calibre14">&lt;/head&gt;</span></p>
+<p><span class="calibre14">&lt;body&gt;</span></p>
+<p><span class="calibre14">&lt;form&gt;</span></p>
+<p><span class="calibre14">&lt;p&gt;This is number 1&lt;/p&gt;</span></p>
+<p><span class="calibre14">&lt;input type="hidden" name="pagenumber" value="1" /&gt;</span></p>
+<p><span class="calibre14">&lt;input type="submit" name="submit" value="Submit" /&gt;</span></p>
+<p><span class="calibre14">&lt;input type="reset" name="reset"  value="Reset" /&gt;</span></p>
+<p><span class="calibre14">&lt;/form&gt;</span></p>
+<p><span class="calibre14">&lt;/body&gt;</span></p>
+<p><span class="calibre14">&lt;/html&gt;</span></p>
+</div>
+<p><span id="part0000_split_054.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_054.html#calibre_pb_73" class="calibre12"><span class="calibre11">Post and get methods</span></h2>
+<p><span class="calibre7">The example below contains a simple HTML form with two input fields and a submit button, using the post method:</span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;html&gt; </span></p>
+<p><span class="calibre7">&lt;body&gt; </span></p>
+<p><span class="calibre7">&lt;form action="process.php" method="post"&gt; </span></p>
+<p><span class="calibre7">Name: &lt;input type="text" name="surname"&gt;&lt;br&gt; </span></p>
+<p><span class="calibre7">Age: &lt;input type="text" name="age"&gt;&lt;br&gt; </span></p>
+<p><span class="calibre7">&lt;input type="submit" name=”submit”&gt; </span></p>
+<p><span class="calibre7">&lt;/form&gt; </span></p>
+<p><span class="calibre7">&lt;/body&gt; </span></p>
+<p><span class="calibre7">&lt;/html&gt; </span></p>
+<p><span class="calibre7">When a user fills out the form above and clicks the submit button, the form data is sent for processing to a PHP file named "process.php". The form data is sent with method="post". </span></p>
+<p><span class="calibre7">"process.php" looks like this: </span></p>
+<p><span class="calibre7">&lt;html&gt; </span></p>
+<p><span class="calibre7">&lt;body&gt; </span></p>
+<p><span class="calibre7">Welcome &lt;?php echo $_POST["surname"]; ?&gt;!!!&lt;br&gt; </span></p>
+<p><span class="calibre7">You are &lt;?php echo $_POST["age"]; ?&gt; years old. </span></p>
+<p><span class="calibre7">&lt;/body&gt; </span></p>
+<p><span class="calibre7">&lt;/html&gt; </span></p>
+<p><span class="calibre7">The output: </span></p>
+<p><span class="calibre7">Welcome oliver!!!</span></p>
+<p><span class="calibre7">You are 36 years old. </span></p>
+<p><span class="calibre7">The same result could also be achieved using method="get": </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;html&gt; </span></p>
+<p><span class="calibre7">&lt;body&gt; </span></p>
+<p><span class="calibre7">&lt;form action="process.php" method="get"&gt; </span></p>
+<p><span class="calibre7">Name: &lt;input type="text" name="surname"&gt;&lt;br&gt; </span></p>
+<p><span class="calibre7">Age: &lt;input type="text" name="age"&gt;&lt;br&gt; </span></p>
+<p><span class="calibre7">&lt;input type="submit" name=”submit”&gt; </span></p>
+<p><span class="calibre7">&lt;/form&gt; </span></p>
+<p><span class="calibre7">&lt;/body&gt; </span></p>
+<p><span class="calibre7">&lt;/html&gt; </span></p>
+<p><span class="calibre7">and "process.php" looks like this: </span></p>
+<p><span class="calibre7">&lt;html&gt; </span></p>
+<p><span class="calibre7">&lt;body&gt; </span></p>
+<p><span class="calibre7">Welcome &lt;?php echo $_GET["surname"]; ?&gt;!!!&lt;br&gt; </span></p>
+<p><span class="calibre7">You are &lt;?php echo $_GET["age"]; ?&gt; years old. </span></p>
+<p><span class="calibre7">&lt;/body&gt; </span></p>
+<p><span class="calibre7">&lt;/html&gt; </span></p>
+</div>
+<p><span id="part0000_split_055.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_055.html#calibre_pb_74" class="calibre12"><span class="calibre11">Review of the post method</span></h2>
+<p><span class="calibre13"> Code Excerpt: </span></p>
+<p><span class="calibre7">&lt;form action="process.php" method="post"&gt; </span></p>
+<p><span class="calibre7">Name: &lt;input type="text" name="surname"&gt;&lt;br&gt; </span></p>
+<p><span class="calibre7">Age: &lt;input type="text" name="age"&gt;&lt;br&gt; </span></p>
+<p><span class="calibre7">This HTML code specifies that the form data will be submitted to the "process.php" web page using the POST method. The way that PHP does this is to store all the "posted" values into an </span><span class="calibre16">associative array</span><span class="calibre7"> called "$_POST". Be sure to take notice the names of the form data names, as they represent the </span><span class="calibre16">keys</span><span class="calibre7"> in the "$_POST" associative array. </span></p>
+<p><span class="calibre7">Now that you know about associative arrays, the PHP code from "process.php" should make a litte more sense. </span></p>
+<p><span class="calibre13"> Code Excerpt: </span></p>
+<p><span class="calibre7">$y = $_POST['surname']; </span></p>
+<p><span class="calibre7">$x = $_POST['age']; </span></p>
+<p><span class="calibre7">The form names are used as the </span><span class="calibre16">keys</span><span class="calibre7"> in the associative array, so be sure that you never have two input items in your HTML form that have the same name. If you do, then you might see some problems arise. </span></p>
+</div>
+<p><span id="part0000_split_056.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_056.html#calibre_pb_75" class="calibre12"><span class="calibre11">Review of the get method</span></h2>
+<p><span class="calibre7">As we mentioned above, the alternative to the </span><span class="calibre16">post</span><span class="calibre7"> method is </span><span class="calibre16">get</span><span class="calibre7">. If we were to change our HTML form to the </span><span class="calibre16">get</span><span class="calibre7"> method, it would look like this: </span></p>
+<p><span class="calibre13"> Code Excerpt: </span></p>
+<p><span class="calibre7">&lt;form action="process.php" method="get"&gt; </span></p>
+<p><span class="calibre7">Name: &lt;input type="text" name="surname"&gt;&lt;br&gt; </span></p>
+<p><span class="calibre7">Age: &lt;input type="text" name="age"&gt;&lt;br&gt; </span></p>
+<p><span class="calibre7">The </span><span class="calibre16">get</span><span class="calibre7"> method is different in that it passes the variables along to the "process.php" web page by appending them onto the end of the URL. The URL, after clicking submit, would have this added on to the end of it: </span></p>
+<p><span class="calibre7">"?item=##&amp;quantity=##" </span></p>
+<p><span class="calibre7">The question mark "?" tells the browser that the following items are variables. Now that we changed the method of sending information on "order.html", we must change the "process.php" code to use the "$_GET" associative array. </span></p>
+<p><span class="calibre13"> Code Excerpt: </span></p>
+<p><span class="calibre7">$y = $_GET['surname']; </span></p>
+<p><span class="calibre7">$x = $_GET['age']; </span></p>
+<p><span class="calibre7">After changing the array name the script will function properly. Using the </span><span class="calibre16">get</span><span class="calibre7"> method displays the variable information to your visitor, so be sure you are not sending password information or other sensitive items with the </span><span class="calibre16">get</span><span class="calibre7"> method. You would not want your visitors seeing something they are not supposed to. </span></p>
+</div>
+<p><span id="part0000_split_057.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_057.html#calibre_pb_76" class="calibre12"><span class="calibre11">Security precaution</span></h2>
+<p><span class="calibre7">Whenever you are taking user input and using you need to be sure that the input is safe. If you are going to insert the data into a MySQL database, then you should be sure you have thought about preventing </span><a href="http://www.tizag.com/mysqlTutorial/mysql-php-sql-injection.php"><span class="calibre16">MySQL </span></a><span class="calibre7">injection,if you are going to make a user input available to the public,the you should think about PHP htmlentities.</span></p>
+<p><span class="calibre14"> </span></p>
+<div id="part0000_split_057.html#calibre_pb_77" class="calibre2">
+
+</div>
+</div>
+<p><span id="part0000_split_058.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_058.html#calibre_pb_79" class="calibre3"><span id="part0000_split_058.html#20T-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">Chapter 9:GLOBAL VARIABLES</span></h1>
+<h2 class="calibre10"><span class="calibre11">Global Variables - Superglobals </span></h2>
+<p><span class="calibre7">Several predefined variables in PHP are "superglobals", which means that they are always accessible, regardless of scope - and you can access them from any function, class or file without having to do anything special. </span></p>
+<p><span class="calibre7">The PHP superglobal variables are: </span></p>
+<p><span class="calibre7">· $GLOBALS </span></p>
+<p><span class="calibre7">· $_SERVER </span></p>
+<p><span class="calibre7">· $_REQUEST </span></p>
+<p><span class="calibre7">· $_POST </span></p>
+<p><span class="calibre7">· $_GET </span></p>
+<p><span class="calibre7">· $_FILES </span></p>
+<p><span class="calibre7">· $_ENV </span></p>
+<p><span class="calibre7">· $_COOKIE </span></p>
+<p><span class="calibre7">· $_SESSION </span></p>
+<p><span class="calibre7">In this chapter will explain some of the superglobals, </span></p>
+</div>
+<p><span id="part0000_split_059.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_059.html#calibre_pb_80" class="calibre12"><span class="calibre11"> $GLOBAL </span></h2>
+<p><span class="calibre7">$GLOBAL is a PHP super global variable which is used to access global variables from anywhere in the PHP script (also from within functions or methods). </span></p>
+<p><span class="calibre7">PHP stores all global variables in an array called $GLOBALS[ </span><span class="calibre16">index</span><span class="calibre7">]. The </span><span class="calibre16">index</span><span class="calibre7"> holds the name of the variable. </span></p>
+<p><span class="calibre7">The example below shows how to use the super global variable $GLOBAL: </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$x = 15; </span></p>
+<p><span class="calibre7">$y = 5; </span></p>
+<p><span class="calibre7">functionmultipyl() </span></p>
+<p><span class="calibre7">{ </span></p>
+<p><span class="calibre7">$GLOBALS['z'] = $GLOBALS['x'] * $GLOBALS['y']; </span></p>
+<p><span class="calibre7">} </span></p>
+<p><span class="calibre7">multiply(); </span></p>
+<p><span class="calibre7">echo $z; </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre7">In the example above, since z is a variable present within the $GLOBALS array, it is also accessible form outside the function! </span></p>
+</div>
+<p><span id="part0000_split_060.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_060.html#calibre_pb_81" class="calibre12"><span class="calibre11"> $_SERVER </span></h2>
+<p><span class="calibre7">$_SERVER is a PHP super global variable which holds information about headers, paths, and script locations. </span></p>
+<p><span class="calibre7">The example below shows how to use some of the elements in $_SERVER: </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">echo $_SERVER['PHP_SELF']; </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">echo $_SERVER['SERVER_NAME']; </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">echo $_SERVER['HTTP_HOST']; </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">echo $_SERVER['HTTP_REFERER']; </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">echo $_SERVER['HTTP_USER_AGENT']; </span></p>
+<p><span class="calibre7">echo "&lt;br&gt;"; </span></p>
+<p><span class="calibre7">echo $_SERVER['SCRIPT_NAME']; </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre7">The following table lists the most important elements that can go inside $_SERVER: </span></p>
+<p><span class="calibre13">Element/Code </span></p>
+<p><span class="calibre7">$_SERVER['PHP_SELF'] </span></p>
+<p><span class="calibre7">Returns the filename of the currently executing script </span></p>
+<p><span class="calibre7">$_SERVER['GATEWAY_INTERFACE'] </span></p>
+<p><span class="calibre7">Returns the version of the Common Gateway Interface (CGI) the server is using </span></p>
+<p><span class="calibre7">$_SERVER['SERVER_ADDR'] </span></p>
+<p><span class="calibre7">Returns the IP address of the host server </span></p>
+<p><span class="calibre7">$_SERVER['SERVER_NAME'] </span></p>
+<p><span class="calibre7">Returns the name of the host server (such as www.w3schools.com) </span></p>
+<p><span class="calibre7">$_SERVER['SERVER_SOFTWARE'] </span></p>
+<p><span class="calibre7">Returns the server identification string (such as Apache/2.2.24) </span></p>
+<p><span class="calibre7">$_SERVER['SERVER_PROTOCOL'] </span></p>
+<p><span class="calibre7">Returns the name and revision of the information protocol (such as HTTP/1.1) </span></p>
+<p><span class="calibre7">$_SERVER['REQUEST_METHOD'] </span></p>
+<p><span class="calibre7">Returns the request method used to access the page (such as POST) </span></p>
+<p><span class="calibre7">$_SERVER['REQUEST_TIME'] </span></p>
+<p><span class="calibre7">Returns the timestamp of the start of the request (such as 1377687496)</span></p>
+<p><span class="calibre7">$_SERVER['QUERY_STRING'] </span></p>
+<p><span class="calibre7">Returns the query string if the page is accessed via a query string </span></p>
+<p><span class="calibre7">$_SERVER['HTTP_ACCEPT'] </span></p>
+<p><span class="calibre7">Returns the Accept header from the current request </span></p>
+<p><span class="calibre7">$_SERVER['HTTP_ACCEPT_CHARSET'] </span></p>
+<p><span class="calibre7">Returns the Accept_Charset header from the current request (such as utf-8,ISO-8859-1) </span></p>
+<p><span class="calibre7">$_SERVER['HTTP_HOST'] </span></p>
+<p><span class="calibre7">Returns the Host header from the current request </span></p>
+<p><span class="calibre7">$_SERVER['HTTP_REFERER'] </span></p>
+<p><span class="calibre7">Returns the complete URL of the current page (not reliable because not all user-agents support it) </span></p>
+<p><span class="calibre7">$_SERVER['HTTPS'] </span></p>
+<p><span class="calibre7">Is the script queried through a secure HTTP protocol </span></p>
+<p><span class="calibre7">$_SERVER['REMOTE_ADDR'] </span></p>
+<p><span class="calibre7">Returns the IP address from where the user is viewing the current page </span></p>
+<p><span class="calibre7">$_SERVER['REMOTE_HOST'] </span></p>
+<p><span class="calibre7">Returns the Host name from where the user is viewing the current page </span></p>
+<p><span class="calibre7">$_SERVER['REMOTE_PORT'] </span></p>
+<p><span class="calibre7">Returns the port being used on the user's machine to communicate with the web server </span></p>
+<p><span class="calibre7">$_SERVER['SCRIPT_FILENAME'] </span></p>
+<p><span class="calibre7">Returns the absolute pathname of the currently executing script </span></p>
+<p><span class="calibre7">$_SERVER['SERVER_ADMIN'] </span></p>
+<p><span class="calibre7">Returns the value given to the SERVER_ADMIN directive in the web server </span></p>
+<p><span class="calibre7">configuration file (if your script runs on a virtual host, it will be the value </span></p>
+<p><span class="calibre7">defined for that virtual host) (such as someone@w3scholls.com) </span></p>
+<p><span class="calibre7">$_SERVER['SERVER_PORT'] </span></p>
+<p><span class="calibre7">Returns the port on the server machine being used by the web server for communication (such as 80) </span></p>
+<p><span class="calibre7">$_SERVER['SERVER_SIGNATURE'] </span></p>
+<p><span class="calibre7">Returns the server version and virtual host name which are added to server-generated pages </span></p>
+<p><span class="calibre7">$_SERVER['PATH_TRANSLATED'] </span></p>
+<p><span class="calibre7">Returns the file system based path to the current script </span></p>
+<p><span class="calibre7">$_SERVER['SCRIPT_NAME'] </span></p>
+<p><span class="calibre7">Returns the path of the current script </span></p>
+<p><span class="calibre7">$_SERVER['SCRIPT_URI'] </span></p>
+<p><span class="calibre7">Returns the URI of the current page </span></p>
+</div>
+<p><span id="part0000_split_061.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_061.html#calibre_pb_82" class="calibre12"><span class="calibre11"> $_REQUEST </span></h2>
+<p><span class="calibre7">PHP $_REQUEST is used to collect data after submitting an HTML form. </span></p>
+<p><span class="calibre7">The example below shows a form with an input field and a submit button. When a user submits the data by clicking on "Submit", the form data is sent to the file specified in the action attribute of the </span></p>
+<p><span class="calibre7">&lt;form&gt; tag. In this example, we point to this file itself for processing form data. If you wish to use another PHP file to process form data, replace that with the filename of your choice. Then, we can use the super global variable $_REQUEST to collect the value of the input field: </span></p>
+<p><span class="calibre7">Example </span></p>
+<p><span class="calibre7">&lt;html&gt; </span></p>
+<p><span class="calibre7">&lt;body&gt; </span></p>
+<p><span class="calibre7">&lt;form method="post" action="&lt;?php echo $_SERVER['PHP_SELF'];?&gt;"&gt; Name: &lt;input type="text" name="name"&gt; </span></p>
+<p><span class="calibre7">&lt;input type="submit"&gt; </span></p>
+<p><span class="calibre7">&lt;/form&gt; </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">$name = $_REQUEST['fname']; </span></p>
+<p><span class="calibre7">echo $name; </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre7">&lt;/body&gt; </span></p>
+<p><span class="calibre7">&lt;/html&gt; </span></p>
+<p><span class="calibre7">&lt;/html&gt; </span></p>
+<div id="part0000_split_061.html#calibre_pb_83" class="calibre2">
+
+</div>
+</div>
+<p><span id="part0000_split_062.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_062.html#calibre_pb_85" class="calibre3"><span id="part0000_split_062.html#289-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">Chapter 10:SESSIONS</span></h1>
+<h2 class="calibre10"><span class="calibre11">Sessions overview</span></h2>
+<p><span class="calibre7">As a website becomes more sophisticated, so must the code that backs it. When you get to a stage where your website need to pass along user data from one page to another, it might be time to start thinking about using PHP sessions. </span></p>
+<p><span class="calibre7">A normal HTML website will not pass data from one page to another. In other words, all information is forgotten when a new page is loaded. This makes it quite a problem for tasks like a shopping cart, which requires data(the user's selected product) to be remembered from one page to the next. </span></p>
+<p><span class="calibre7">A PHP session solves this problem by allowing you to store user information on the server for later use (i.e. username, shopping cart items, etc). However, this session information is temporary and is usually deleted very quickly after the user has left the website that uses sessions. </span></p>
+<p><span class="calibre7">It is important to ponder if the sessions' temporary storage is applicable to your website. If you require a more permanent storage you will need to find another solution, like a MySQL database. </span></p>
+<p><span class="calibre7">Sessions work by creating a unique identification (UID) number for each visitor and storing variables based on this ID. This helps to prevent two users' data from getting confused with one another when visiting the same webpage. </span></p>
+<p><span class="calibre13">Note</span><span class="calibre7">:If you are not experienced with session programming it is not recommended that you use sessions on a website that requires high-security, as there are security holes that take some advanced techniques to plug. </span></p>
+</div>
+<p><span id="part0000_split_063.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_063.html#calibre_pb_86" class="calibre12"><span class="calibre11">Starting a session</span></h2>
+<p><span class="calibre7">Before you can begin storing user information in your PHP session, you must first start the session. When you start a session, it must be at the very beginning of your code, before any HTML or text is sent. </span></p>
+<p><span class="calibre7">Below is a simple script that you should place at the beginning of your PHP code to start up a PHP </span></p>
+<p><span class="calibre7">session. </span></p>
+<p><span class="calibre13">PHP Code: </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">session_start(); // start up your PHP session! </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre7">This tiny piece of code will register the user's session with the server, allow you to start saving user information and assign a UID (unique identification number) for that user's session. </span></p>
+</div>
+<p><span id="part0000_split_064.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_064.html#calibre_pb_87" class="calibre12"><span class="calibre11">Storing a session variable</span></h2>
+<p><span class="calibre7">When you want to store user data in a session use the $_SESSION </span><a href="http://www.tizag.com/phpT/arrays.php"><span class="calibre16">associative array. This is w</span></a><span class="calibre7">here you both store and retrieve session data. In previous versions of PHP there were other ways to perform this store operation, but it has been updated and this is the correct way to do it. </span></p>
+<p><span class="calibre13">PHP Code: </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">session_start(); </span></p>
+<p><span class="calibre7">$_SESSION['views'] = 1; // store session data </span></p>
+<p><span class="calibre7">echo "Pageviews = ". $_SESSION['views']; //retrieve data </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre13">Display: </span></p>
+<p><span class="calibre7">Pageviews = 1 </span></p>
+<p><span class="calibre7">In this example we learned how to store a variable to the session associative array $_SESSION and also how to retrieve data from that same array. </span></p>
+</div>
+<p><span id="part0000_split_065.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_065.html#calibre_pb_88" class="calibre12"><span class="calibre11">Using PHP's </span><span class="calibre28">isset</span><span class="calibre11"> Function </span></h2>
+<p><span class="calibre7">Now that you know can easily store and retrieve data from the $_SESSION array, we can now explore some of the real functionality of sessions. When you create a variable and store it in a session, you probably want to use it in the future. However, before you use a session variable it is necessary that you check to see if it exists already! </span></p>
+<p><span class="calibre7">This is where PHP's </span><span class="calibre16">isset</span><span class="calibre7"> function comes in handy, </span><span class="calibre16">isset</span><span class="calibre7"> is a function that takes any variable you want to use and checks to see if it has been set. That is, it has already been assigned a value. </span></p>
+<p><span class="calibre7">With our previous example, we can create a very simple pageview counter by using </span><span class="calibre16">isset</span><span class="calibre7"> to check if the pageview variable has already been created. If it has we can increment our counter. If it doesn't exist we can create a pageview counter and set it to one. Here is the code to get this job done:</span></p>
+<p><span class="calibre7"> </span><span class="calibre13">PHP Code: </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">session_start(); </span></p>
+<p><span class="calibre7">if(isset($_SESSION['views'])) </span></p>
+<p><span class="calibre7">$_SESSION['views'] = $_SESSION['views']+ 1; </span></p>
+<p><span class="calibre7">else </span></p>
+<p><span class="calibre7">$_SESSION['views'] = 1; </span></p>
+<p><span class="calibre7">echo "views = ". $_SESSION['views']; </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre7">The first time you run this script on a newly opened browser the </span><span class="calibre16">if statement</span><span class="calibre7"> will fail because no session variable </span><span class="calibre16">views</span><span class="calibre7"> would have been stored yet. However, if you were to refresh the page the </span><span class="calibre16">if statement</span><span class="calibre7"> would be true and the counter would increment by one. Each time you reran this script you would see an increase in </span><span class="calibre16">view</span><span class="calibre7"> by one.</span></p>
+</div>
+<p><span id="part0000_split_066.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_066.html#calibre_pb_89" class="calibre12"><span class="calibre11">Destroying a Session </span></h2>
+<p><span class="calibre7">Although a session's data is temporary and does not require that you explicitly clean after yourself, you may wish to delete some data for your various tasks. </span></p>
+<p><span class="calibre7">Imagine that you were running an online business and a user used your website to buy your goods. The user has just completed a transaction on your website and you now want to remove everything from their shopping cart. </span></p>
+<p><span class="calibre13">PHP Code: </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">session_start(); </span></p>
+<p><span class="calibre7">if(isset($_SESSION['cart'])) </span></p>
+<p><span class="calibre7">unset($_SESSION['cart']); </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre7">You can also completely destroy the session entirely by calling the </span><span class="calibre16">session_destroy</span><span class="calibre7"> function. </span></p>
+<p><span class="calibre13">PHP Code: </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">session_start(); </span></p>
+<p><span class="calibre7">session_destroy(); </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre7">Destroy will reset your session, so don't call that function unless you are entirely comfortable losing all your stored session data! </span></p>
+</div>
+<p><span id="part0000_split_067.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_067.html#calibre_pb_90" class="calibre12"><span class="calibre11">Session remarks</span></h2>
+<p><span class="calibre7">Cookies have been around for quite some time on the internet. They were invented to allow webmaster's to store information about the user and their visit on the user's computer. </span></p>
+<p><span class="calibre7">At first they were feared by the general public because it was believed they were a serious privacy risk. </span></p>
+<p><span class="calibre7">Nowadays nearly everyone has cookies enabled on their browser, partly because there are worse things to worry about and partly because all of the "trustworthy" websites now use cookies. </span></p>
+<p><span class="calibre7">This lesson will teach you the basics of storing a cookie and retrieving a cookie, as well as explaining the various options you can set with your cookie. </span></p>
+<div id="part0000_split_067.html#calibre_pb_91" class="calibre2">
+
+</div>
+</div>
+<p><span id="part0000_split_068.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_068.html#calibre_pb_93" class="calibre3"><span id="part0000_split_068.html#2CU-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">Chapter 11:COOKIES</span></h1>
+<h2 class="calibre10"><span class="calibre11">Creating a cookie</span></h2>
+<p><span class="calibre7">When you create a cookie, using the function </span><span class="calibre16">setcookie</span><span class="calibre7">, you must specify three arguments. These arguments are </span><span class="calibre29">setcookie</span><span class="calibre16">(name, value, expiration)</span><span class="calibre7">: </span></p>
+<p><span class="calibre7">1. </span><span class="calibre13">name</span><span class="calibre7">: The name of your cookie. You will use this name to later retrieve your cookie, so don't forget it! </span></p>
+<p><span class="calibre7">2. </span><span class="calibre13">value</span><span class="calibre7">: The value that is stored in your cookie. Common values are username(string) and last visit(date). </span></p>
+<p><span class="calibre7">3. </span><span class="calibre13">expiration</span><span class="calibre7">: The date when the cookie will expire and be deleted. If you do not set this expiration date, then it will be treated as a session cookie and be removed when the browser is restarted. </span></p>
+<p><span class="calibre7">In this example we will be creating a cookie that stores the user's last visit to measure how often people return to visit our webpage. We want to ignore people that take longer than two months to return to the site, so we will set the cookie's expiration date to two months in the future! </span></p>
+<p><span class="calibre13">PHP Code: </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">//Calculate 60 days in the future </span></p>
+<p><span class="calibre7">//seconds * minutes * hours * days + current time </span></p>
+<p><span class="calibre7">$inTwoMonths = 60 * 60 * 24 * 60 + time(); </span></p>
+<p><span class="calibre7">setcookie(lastVisit, date("G:i - m/d/y"), $inTwoMonths); </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre7">Don't worry if you can't follow the somewhat involved date calculations in this example. The important part is that you know how to set a cookie, by specifying the three important arguments: name, value and expiration date. </span></p>
+</div>
+<p><span id="part0000_split_069.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_069.html#calibre_pb_94" class="calibre12"><span class="calibre11">Retrieving  a Cookie </span></h2>
+<p><span class="calibre7">If the cookie has not expired yet, let's retrieve it from the user's PC using the </span><span class="calibre16">$_COOKIE</span><span class="calibre7"> associative array. The name of your stored cookie is the key and will let you retrieve your stored cookie value! </span></p>
+<p><span class="calibre7">PHP Code: </span></p>
+<p><span class="calibre7">&lt;?php </span></p>
+<p><span class="calibre7">if(isset($_COOKIE['lastVisit'])) </span></p>
+<p><span class="calibre7">$visit = $_COOKIE['lastVisit']; </span></p>
+<p><span class="calibre7">else </span></p>
+<p><span class="calibre7">echo "You've got some stale cookies!"; </span></p>
+<p><span class="calibre7">echo "Your last visit was - ". $visit; </span></p>
+<p><span class="calibre7">?&gt; </span></p>
+<p><span class="calibre7">This handy script first uses the </span><span class="calibre16">isset</span><span class="calibre7"> function to be sure that our "lastVisit" cookie still exists on the user's PC, if it does, then the user's last visit is displayed. If the user visited our site on may 14, 2015 it might look something like this: </span></p>
+<p><span class="calibre13">Display: </span></p>
+<p><span class="calibre7">Your last visit was - 10:41- 05/14/15</span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre14"> </span></p>
+<p><span class="calibre14"> </span></p>
+<div id="part0000_split_069.html#calibre_pb_95" class="calibre2">
+
+</div>
+</div>
+<p><span id="part0000_split_070.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_070.html#calibre_pb_97" class="calibre3"><span id="part0000_split_070.html#2FT-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">Chapter 12:WORKING WITH FILES</span></h1>
+<h2 class="calibre10"><span class="calibre11">Opening  and closing files</span></h2>
+<p><span class="calibre7">In PHP,the function fpen() is normally used to open files. It requires two arguments that state the file name and the mode in which it has to operate. In the event the opening of a file is not successful the function fopen() returns the value of false, otherwise it returns a file pointer to read or write to that particular file.</span></p>
+<p><span class="calibre7">File modes can be specified as stated below</span></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p><span class="calibre32">File</span></p>
+<p><span class="calibre32">mode</span></p></td>
+<td><p><span class="calibre32"> </span></p>
+<p><span class="calibre32">                       Purpose</span></p></td>
+</tr>
+<tr class="even">
+<td><p><span class="calibre14">r</span></p></td>
+<td><p><span class="calibre14">Opens the file for reading purposes only.</span></p>
+<p><span class="calibre14">Places the file pointer at the beginning of the file.</span></p></td>
+</tr>
+<tr class="odd">
+<td><p><span class="calibre14">r+</span></p></td>
+<td><p><span class="calibre14">Opens the file for reading and writing.</span></p>
+<p><span class="calibre14">Places the file pointer at the beginning of the file.</span></p></td>
+</tr>
+<tr class="even">
+<td><p><span class="calibre14">w</span></p></td>
+<td><p><span class="calibre14">Opens the file for writing purposes only.</span></p>
+<p><span class="calibre14">Places the file pointer at the beginning of the file.</span></p>
+<p><span class="calibre14">and truncates the file to zero length. If files does not</span></p>
+<p><span class="calibre14">exist then it attempts to create a file.</span></p></td>
+</tr>
+<tr class="odd">
+<td><p><span class="calibre14">w+</span></p></td>
+<td><p><span class="calibre14">Opens the file for reading and writing only.</span></p>
+<p><span class="calibre14">Places the file pointer at the beginning of the file.</span></p>
+<p><span class="calibre14">and truncates the file to zero length. If files does not</span></p>
+<p><span class="calibre14">exist then it attempts to create a file.</span></p></td>
+</tr>
+<tr class="even">
+<td><p><span class="calibre14">a</span></p></td>
+<td><p><span class="calibre14">Opens the file for writing purposes only.</span></p>
+<p><span class="calibre14">Places the file pointer at the end of the file.</span></p>
+<p><span class="calibre14">If files does not exist then it attempts to create a file.</span></p></td>
+</tr>
+<tr class="odd">
+<td><p><span class="calibre14">a+</span></p></td>
+<td><p><span class="calibre14">Opens the file for reading and writing only.</span></p>
+<p><span class="calibre14">Places the file pointer at the end of the file.</span></p>
+<p><span class="calibre14">If files does not exist then it attempts to create a file.</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><span class="calibre7"> </span></p>
+</div>
+<p><span id="part0000_split_071.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_071.html#calibre_pb_98" class="calibre12"><span class="calibre11">Reading a file</span></h2>
+<p><span class="calibre14">Once a file is opened using fopen() function it can be read with a function called fread() . This function requires two arguments. These must be the file pointer and the length of the file expressed in bytes.</span></p>
+<p><span class="calibre14">The files length can be found using the function filesize()  which takes the file name as its argument and returns the size of the file expressed in bytes.</span></p>
+<p><span class="calibre14">So here are the steps required to read a file with PHP.</span></p>
+<ul>
+<li><span class="calibre39">   </span><span class="calibre7">Open a file using fopen()  function.</span></li>
+<li><span class="calibre39">   </span><span class="calibre7">Get the file's length using filesize()  function.</span></li>
+<li><span class="calibre39">   </span><span class="calibre7">Read the file's content using fread()  function.</span></li>
+<li><span class="calibre39">   </span><span class="calibre7">Close the file with fclose() function.</span></li>
+</ul>
+<p><span class="calibre14">The following example assigns the content of a text file to a variable then displays those contents on the web page.</span></p>
+<div class="calibre40">
+<p><span class="calibre42">      </span><span class="calibre43">&lt;?</span><span class="calibre42">php</span></p>
+<p><span class="calibre42">         $filename </span><span class="calibre43">=</span><span class="calibre42"> </span><span class="calibre45">"example.txt"</span><span class="calibre43">;</span></p>
+<p><span class="calibre42">         $file </span><span class="calibre43">=</span><span class="calibre42"> fopen</span><span class="calibre43">(</span><span class="calibre42"> $filename</span><span class="calibre43">,</span><span class="calibre42"> </span><span class="calibre45">"r"</span><span class="calibre42"> </span><span class="calibre43">);</span></p>
+<p><span class="calibre42"> </span></p>
+<p><span class="calibre42">         </span><span class="calibre46">if</span><span class="calibre43">(</span><span class="calibre42"> $file </span><span class="calibre43">==</span><span class="calibre42"> </span><span class="calibre46">false</span><span class="calibre42"> </span><span class="calibre43">)</span></p>
+<p><span class="calibre42">         </span><span class="calibre43">{</span></p>
+<p><span class="calibre42">            echo </span><span class="calibre43">(</span><span class="calibre42"> </span><span class="calibre45">"Error occurred in opening file”</span><span class="calibre42"> </span><span class="calibre43">);</span></p>
+<p><span class="calibre42">            </span><span class="calibre46">exit</span><span class="calibre43">();</span></p>
+<p><span class="calibre42">         </span><span class="calibre43">}</span></p>
+<p><span class="calibre42"> </span></p>
+<p><span class="calibre42">         $filesize </span><span class="calibre43">=</span><span class="calibre42"> filesize</span><span class="calibre43">(</span><span class="calibre42"> $filename </span><span class="calibre43">);</span></p>
+<p><span class="calibre42">         $filetext </span><span class="calibre43">=</span><span class="calibre42"> fread</span><span class="calibre43">(</span><span class="calibre42"> $file</span><span class="calibre43">,</span><span class="calibre42"> $filesize </span><span class="calibre43">);</span></p>
+<p><span class="calibre42">         fclose</span><span class="calibre43">(</span><span class="calibre42"> $file </span><span class="calibre43">);</span></p>
+<p><span class="calibre42"> </span></p>
+<p><span class="calibre42">         echo </span><span class="calibre43">(</span><span class="calibre42"> </span><span class="calibre45">"File size is : $filesize bytes"</span><span class="calibre42"> </span><span class="calibre43">);</span></p>
+<p><span class="calibre42">         echo </span><span class="calibre43">(</span><span class="calibre42"> </span><span class="calibre45">"&lt;pre&gt;$filetext&lt;/pre&gt;"</span><span class="calibre42"> </span><span class="calibre43">);</span></p>
+<p><span class="calibre42">      </span><span class="calibre43">?&gt;</span></p>
+<p><span class="calibre42"> </span></p>
+</div>
+</div>
+<p><span id="part0000_split_072.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_072.html#calibre_pb_99" class="calibre12"><span class="calibre11">writing a file</span></h2>
+<p><span class="calibre14">A new file can be written or text can be appended to an existing file using the PHP fwrite() function. This function requires two arguments specifying a file pointer and the string of data that is to be written. Optionally a third integer argument can be included to specify the length of the data to write. If the third argument is included, writing would will stop after the specified length has been reached.</span></p>
+<p><span class="calibre14">The following example creates a new text file then writes a short text heading inside it. After closing this file its existence is confirmed using file_exist() function which takes file name as an argument</span></p>
+<div class="calibre47">
+<p><span class="calibre43">&lt;?</span><span class="calibre42">php</span></p>
+<p><span class="calibre42">   $filename </span><span class="calibre43">=</span><span class="calibre42"> </span><span class="calibre45">"/home/user/guest/newfile.txt"</span><span class="calibre43">;</span></p>
+<p><span class="calibre42">   $file </span><span class="calibre43">=</span><span class="calibre42"> fopen</span><span class="calibre43">(</span><span class="calibre42"> $filename</span><span class="calibre43">,</span><span class="calibre42"> </span><span class="calibre45">"w"</span><span class="calibre42"> </span><span class="calibre43">);</span></p>
+<p><span class="calibre42"> </span></p>
+<p><span class="calibre42">   </span><span class="calibre46">if</span><span class="calibre43">(</span><span class="calibre42"> $file </span><span class="calibre43">==</span><span class="calibre42"> </span><span class="calibre46">false</span><span class="calibre42"> </span><span class="calibre43">)</span></p>
+<p><span class="calibre42">   </span><span class="calibre43">{</span></p>
+<p><span class="calibre42">      echo </span><span class="calibre43">(</span><span class="calibre42"> </span><span class="calibre45">"Error occurred in opening new file"</span><span class="calibre42"> </span><span class="calibre43">);</span></p>
+<p><span class="calibre42">      </span><span class="calibre46">exit</span><span class="calibre43">();</span></p>
+<p><span class="calibre42">   </span><span class="calibre43">}</span></p>
+<p><span class="calibre42">   fwrite</span><span class="calibre43">(</span><span class="calibre42"> $file</span><span class="calibre43">,</span><span class="calibre42"> </span><span class="calibre45">"This is  a simple file\n"</span><span class="calibre42"> </span><span class="calibre43">);</span></p>
+<p><span class="calibre42">   fclose</span><span class="calibre43">(</span><span class="calibre42"> $file </span><span class="calibre43">);</span></p>
+<p><span class="calibre43">?&gt;</span></p>
+<p><span class="calibre42"> </span></p>
+<p><span class="calibre42"> </span></p>
+<p><span class="calibre42">      </span><span class="calibre43">&lt;?</span><span class="calibre42">php</span></p>
+<p><span class="calibre42">         $filename </span><span class="calibre43">=</span><span class="calibre42"> </span><span class="calibre45">"newfile.txt"</span><span class="calibre43">;</span></p>
+<p><span class="calibre42">         $file </span><span class="calibre43">=</span><span class="calibre42"> fopen</span><span class="calibre43">(</span><span class="calibre42"> $filename</span><span class="calibre43">,</span><span class="calibre42"> </span><span class="calibre45">"r"</span><span class="calibre42"> </span><span class="calibre43">);</span></p>
+<p><span class="calibre42"> </span></p>
+<p><span class="calibre42">         </span><span class="calibre46">if</span><span class="calibre43">(</span><span class="calibre42"> $file </span><span class="calibre43">==</span><span class="calibre42"> </span><span class="calibre46">false</span><span class="calibre42"> </span><span class="calibre43">)</span></p>
+<p><span class="calibre42">         </span><span class="calibre43">{</span></p>
+<p><span class="calibre42">            echo </span><span class="calibre43">(</span><span class="calibre42"> </span><span class="calibre45">"Error occured in opening file"</span><span class="calibre42"> </span><span class="calibre43">);</span></p>
+<p><span class="calibre42">            </span><span class="calibre46">exit</span><span class="calibre43">();</span></p>
+<p><span class="calibre42">         </span><span class="calibre43">}</span></p>
+<p><span class="calibre42"> </span></p>
+<p><span class="calibre42">         $filesize </span><span class="calibre43">=</span><span class="calibre42"> filesize</span><span class="calibre43">(</span><span class="calibre42"> $filename </span><span class="calibre43">);</span></p>
+<p><span class="calibre42">         $filetext </span><span class="calibre43">=</span><span class="calibre42"> fread</span><span class="calibre43">(</span><span class="calibre42"> $file</span><span class="calibre43">,</span><span class="calibre42"> $filesize </span><span class="calibre43">);</span></p>
+<p><span class="calibre42"> </span></p>
+<p><span class="calibre42">         fclose</span><span class="calibre43">(</span><span class="calibre42"> $file </span><span class="calibre43">);</span></p>
+<p><span class="calibre42"> </span></p>
+<p><span class="calibre42">         echo </span><span class="calibre43">(</span><span class="calibre42"> </span><span class="calibre45">"File size is: $filesize bytes"</span><span class="calibre42"> </span><span class="calibre43">);</span></p>
+<p><span class="calibre42">         echo </span><span class="calibre43">(</span><span class="calibre42"> </span><span class="calibre45">"$filetext"</span><span class="calibre42"> </span><span class="calibre43">);</span></p>
+<p><span class="calibre42">         echo</span><span class="calibre43">(</span><span class="calibre45">"file name: $filename"</span><span class="calibre43">);</span></p>
+<p><span class="calibre42">      </span><span class="calibre43">?&gt;</span></p>
+<p><span class="calibre42"> </span></p>
+<p><span class="calibre42">   </span><span class="calibre46">&lt;/body&gt;</span></p>
+<p><span class="calibre46">&lt;/html&gt;</span></p>
+</div>
+<p><span class="calibre8"> </span></p>
+<div id="part0000_split_072.html#calibre_pb_100" class="calibre2">
+
+</div>
+</div>
+<p><span id="part0000_split_073.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_073.html#calibre_pb_102" class="calibre3"><span id="part0000_split_073.html#2PL-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">Chapter 13:OBJECT ORIENTED PHP</span></h1>
+<p><span class="calibre7">our universe made of different objects like moon,earth,mars etc. Similarly we can imagine our car made of different objects like wheel, steering, gear etc. Same way there is object oriented programming concepts which assume everything as an object and implement a software using different objects.</span></p>
+</div>
+<p><span id="part0000_split_074.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_074.html#calibre_pb_103" class="calibre12"><span class="calibre11">Object oriented concepts</span></h2>
+<p><span class="calibre13">Class</span><span class="calibre7"> − This is a programmer-defined data type, which includes local functions as well as local data. You can think of a class as a template for making many instances of the same kind (or class) of object.</span></p>
+<p><span class="calibre13">Object</span><span class="calibre7"> − An individual instance of the data structure defined by a class. You define a class once and then make many objects that belong to it. Objects are also known as instance.</span></p>
+<p><span class="calibre13">Inheritance</span><span class="calibre7"> − When a class is defined by inheriting existing function of a parent class then it is called inheritance. Here child class will inherit all or few member functions and variables of a parent class.</span></p>
+<p><span class="calibre13">Parent class</span><span class="calibre7"> − A class that is inherited from by another class. This is also called a base class or super class.</span></p>
+<p><span class="calibre13">Child Class</span><span class="calibre7"> − A class that inherits from another class. This is also called a subclass or derived class.</span></p>
+<p><span class="calibre13">Polymorphism</span><span class="calibre7"> − This is an object oriented concept where same function can be used for different purposes. For example function name will remain same but it make take different number of arguments and can do different task.</span></p>
+<p><span class="calibre13">Overloading</span><span class="calibre7"> − a type of polymorphism in which some or all of operators have different implementations depending on the types of their arguments. Similarly functions can also be overloaded with different implementation.</span></p>
+<p><span class="calibre13">Data Abstraction</span><span class="calibre7"> − Any representation of data in which the implementation details are hidden.</span></p>
+<p><span class="calibre13">Encapsulation</span><span class="calibre7"> − refers to a concept where we encapsulate all the data and member functions together to form an object.</span></p>
+<p><span class="calibre13">Constructor</span><span class="calibre7"> − refers to a special type of function which will be called automatically whenever there is an object formation from a class.</span></p>
+</div>
+<p><span id="part0000_split_075.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_075.html#calibre_pb_104" class="calibre12"><span class="calibre11">Defining PHP classes</span></h2>
+<p><span class="calibre7">The general form for defining a new class in PHP is as follows −</span></p>
+<div class="calibre40">
+<p><span class="calibre51">&lt;?</span><span class="calibre52">php</span></p>
+<p><span class="calibre52">   </span><span class="calibre53">class</span><span class="calibre52"> phpClass</span><span class="calibre51">{</span></p>
+<p><span class="calibre52">      </span><span class="calibre53">var</span><span class="calibre52"> $var1</span><span class="calibre51">;</span></p>
+<p><span class="calibre52">      </span><span class="calibre53">var</span><span class="calibre52"> $var2 </span><span class="calibre51">=</span><span class="calibre52"> </span><span class="calibre54">"constant string"</span><span class="calibre51">;</span></p>
+<p><span class="calibre52"> </span></p>
+<p><span class="calibre52">      </span><span class="calibre53">function</span><span class="calibre52"> myfunc </span><span class="calibre51">(</span><span class="calibre52">$arg1</span><span class="calibre51">,</span><span class="calibre52"> $arg2</span><span class="calibre51">)</span><span class="calibre52"> </span><span class="calibre51">{</span></p>
+<p><span class="calibre52">         </span><span class="calibre51">[..]</span></p>
+<p><span class="calibre52">      </span><span class="calibre51">}</span></p>
+<p><span class="calibre52">      </span><span class="calibre51">[..]</span></p>
+<p><span class="calibre52">   </span><span class="calibre51">}</span></p>
+<p><span class="calibre51">?&gt;</span></p>
+</div>
+<p><span class="calibre7">Here is a simple description of each line −</span></p>
+<ul>
+<li><span class="calibre39">   </span><span class="calibre55">The special form </span><span class="calibre56">class</span><span class="calibre55">, followed by the name of the class that you want to define.</span></li>
+<li><span class="calibre39">   </span><span class="calibre55">A set of braces enclosing any number of variable declarations and function definitions.</span></li>
+<li><span class="calibre39">   </span><span class="calibre55">Variable declarations start with the special form </span><span class="calibre56">var</span><span class="calibre55">, which is followed by $ variable name; they may also have an initial assignment to a constant value.</span></li>
+<li><span class="calibre39">   </span><span class="calibre55">Function definitions look much like standalone PHP functions but are local to the class and will be used to set and access object data.</span></li>
+</ul>
+<p><span class="calibre13">example</span></p>
+<div class="calibre40">
+<p><span class="calibre51">&lt;?</span><span class="calibre52">php</span></p>
+<p><span class="calibre52">   </span><span class="calibre53">class</span><span class="calibre52">  </span><span class="calibre57">Books</span><span class="calibre51">{</span></p>
+<p><span class="calibre52">      </span><span class="calibre58">/* Member variables */</span></p>
+<p><span class="calibre52">      </span><span class="calibre53">var</span><span class="calibre52"> $price</span><span class="calibre51">;</span></p>
+<p><span class="calibre52">      </span><span class="calibre53">var</span><span class="calibre52"> $title</span><span class="calibre51">;</span></p>
+<p><span class="calibre52"> </span></p>
+<p><span class="calibre52">      </span><span class="calibre58">/* Member functions */</span></p>
+<p><span class="calibre52">      </span><span class="calibre53">function</span><span class="calibre52"> setPrice</span><span class="calibre51">(</span><span class="calibre52">$par</span><span class="calibre51">){</span></p>
+<p><span class="calibre52">         $this</span><span class="calibre51">-&gt;</span><span class="calibre52">price </span><span class="calibre51">=</span><span class="calibre52"> $par</span><span class="calibre51">;</span></p>
+<p><span class="calibre52">      </span><span class="calibre51">}</span></p>
+<p><span class="calibre52"> </span></p>
+<p><span class="calibre52">      </span><span class="calibre53">function</span><span class="calibre52"> getPrice</span><span class="calibre51">(){</span></p>
+<p><span class="calibre52">         echo $this</span><span class="calibre51">-&gt;</span><span class="calibre52">price </span><span class="calibre51">.</span><span class="calibre54">"&lt;br/&gt;"</span><span class="calibre51">;</span></p>
+<p><span class="calibre52">      </span><span class="calibre51">}</span></p>
+<p><span class="calibre52"> </span></p>
+<p><span class="calibre52">      </span><span class="calibre53">function</span><span class="calibre52"> setTitle</span><span class="calibre51">(</span><span class="calibre52">$par</span><span class="calibre51">){</span></p>
+<p><span class="calibre52">         $this</span><span class="calibre51">-&gt;</span><span class="calibre52">title </span><span class="calibre51">=</span><span class="calibre52"> $par</span><span class="calibre51">;</span></p>
+<p><span class="calibre52">      </span><span class="calibre51">}</span></p>
+<p><span class="calibre52"> </span></p>
+<p><span class="calibre52">      </span><span class="calibre53">function</span><span class="calibre52"> getTitle</span><span class="calibre51">(){</span></p>
+<p><span class="calibre52">         echo $this</span><span class="calibre51">-&gt;</span><span class="calibre52">title </span><span class="calibre51">.</span><span class="calibre54">" &lt;br/&gt;"</span><span class="calibre51">;</span></p>
+<p><span class="calibre52">      </span><span class="calibre51">}</span></p>
+<p><span class="calibre52">   </span><span class="calibre51">}</span></p>
+<p><span class="calibre51">?&gt;</span></p>
+</div>
+<p><span class="calibre7">The variable </span><span class="calibre13">$this</span><span class="calibre7"> is a special variable and it refers to the same object ie. itself.</span></p>
+</div>
+<p><span id="part0000_split_076.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_076.html#calibre_pb_105" class="calibre12"><span class="calibre11">Creating objects</span></h2>
+<p><span class="calibre7">Once you defined your class, then you can create as many objects as you like of that class type. Following is an example of how to create object using </span><span class="calibre13">new </span><span class="calibre7">operator.</span></p>
+<div class="calibre59">
+<p><span class="calibre52">$biology = new Books;</span></p>
+<p><span class="calibre52">$maths = new Books;</span></p>
+<p><span class="calibre52">$chemistry = new Books;</span></p>
+</div>
+<p><span class="calibre7">Here we have created three objects and these objects are independent of each other and they will have their existence separately. Next we will see how to access member function and process member variables.</span></p>
+</div>
+<p><span id="part0000_split_077.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_077.html#calibre_pb_106" class="calibre12"><span class="calibre11">Constructor functions</span></h2>
+<p><span class="calibre7">Constructor Functions are special type of functions which are called automatically whenever an object is created. So we take full advantage of this behaviour, by initializing many things through constructor functions.</span></p>
+<p><span class="calibre7">PHP provides a special function called </span><span class="calibre13">__construct()</span><span class="calibre7"> to define a constructor. You can pass as many as arguments you like into the constructor function.</span></p>
+<p><span class="calibre7">Following example will create one constructor for Books class and it will initialize price and title for the book at the time of object creation.</span></p>
+<div class="calibre59">
+<p><span class="calibre52">function __construct( $par1, $par2 ){</span></p>
+<p><span class="calibre52">   $this-&gt;price = $par1;</span></p>
+<p><span class="calibre52">   $this-&gt;title = $par2;</span></p>
+<p><span class="calibre52">}</span></p>
+</div>
+<p><span class="calibre7">Now we don't need to call set function separately to set price and title. We can initialize these two member variables at the time of object creation only. Check following example below −</span></p>
+<div class="calibre40">
+<p><span class="calibre52">$physics </span><span class="calibre51">=</span><span class="calibre52"> </span><span class="calibre53">new</span><span class="calibre52"> </span><span class="calibre57">Books</span><span class="calibre51">(</span><span class="calibre52"> </span><span class="calibre54">"biology"</span><span class="calibre51">,</span><span class="calibre52"> </span><span class="calibre63">10</span><span class="calibre52"> </span><span class="calibre51">);</span></p>
+<p><span class="calibre52">$maths </span><span class="calibre51">=</span><span class="calibre52"> </span><span class="calibre53">new</span><span class="calibre52"> </span><span class="calibre57">Books</span><span class="calibre52"> </span><span class="calibre51">(</span><span class="calibre52"> </span><span class="calibre54">"maths"</span><span class="calibre51">,</span><span class="calibre52"> </span><span class="calibre63">14</span><span class="calibre52"> </span><span class="calibre51">);</span></p>
+<p><span class="calibre52">$chemistry </span><span class="calibre51">=</span><span class="calibre52"> </span><span class="calibre53">new</span><span class="calibre52"> </span><span class="calibre57">Books</span><span class="calibre52"> </span><span class="calibre51">(</span><span class="calibre54">"chemistry"</span><span class="calibre51">,</span><span class="calibre52"> 1</span><span class="calibre63">7</span><span class="calibre52"> </span><span class="calibre51">);</span></p>
+<p><span class="calibre52"> </span></p>
+<p><span class="calibre58">/* Get those set values */</span></p>
+<p><span class="calibre52">$physics</span><span class="calibre51">-&gt;</span><span class="calibre52">getTitle</span><span class="calibre51">();</span></p>
+<p><span class="calibre52">$chemistry</span><span class="calibre51">-&gt;</span><span class="calibre52">getTitle</span><span class="calibre51">();</span></p>
+<p><span class="calibre52">$maths</span><span class="calibre51">-&gt;</span><span class="calibre52">getTitle</span><span class="calibre51">();</span></p>
+<p><span class="calibre52"> </span></p>
+<p><span class="calibre52">$physics</span><span class="calibre51">-&gt;</span><span class="calibre52">getPrice</span><span class="calibre51">();</span></p>
+<p><span class="calibre52">$chemistry</span><span class="calibre51">-&gt;</span><span class="calibre52">getPrice</span><span class="calibre51">();</span></p>
+<p><span class="calibre52">$maths</span><span class="calibre51">-&gt;</span><span class="calibre52">getPrice</span><span class="calibre51">();</span></p>
+</div>
+<p><span class="calibre7">This will produce the following result −</span></p>
+<div class="calibre59">
+<p><span class="calibre52">  biology</span></p>
+<p><span class="calibre52">  maths</span></p>
+<p><span class="calibre52">  chemistry</span></p>
+<p><span class="calibre52">  10</span></p>
+<p><span class="calibre52">  14</span></p>
+<p><span class="calibre52">  17</span></p>
+</div>
+</div>
+<p><span id="part0000_split_078.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_078.html#calibre_pb_107" class="calibre12"><span class="calibre11">Inheritance </span></h2>
+<p><span class="calibre7">PHP class definitions can optionally inherit from a parent class definition by using the extends clause. The syntax is as follows −</span></p>
+<div class="calibre59">
+<p><span class="calibre52">class Child extends Parent {</span></p>
+<p><span class="calibre52">   &lt;definition body&gt;</span></p>
+<p><span class="calibre52">}</span></p>
+</div>
+<p><span class="calibre7">The effect of inheritance is that the child class (or subclass or derived class) has the following characteristics −</span></p>
+<p><span class="calibre7">.Automatically has all the member variable declarations of the parent class.</span></p>
+<p><span class="calibre7">.Automatically has all the same member functions as the parent, which (by default) will work the same way as those functions do in the parent.</span></p>
+<p><span class="calibre13">Example:</span></p>
+<div class="calibre40">
+<p><span class="calibre53">class</span><span class="calibre52"> </span><span class="calibre57">Novel</span><span class="calibre52"> </span><span class="calibre53">extends</span><span class="calibre52"> </span><span class="calibre57">Books</span><span class="calibre51">{</span></p>
+<p><span class="calibre52">   </span><span class="calibre53">var</span><span class="calibre52"> publisher</span><span class="calibre51">;</span></p>
+<p><span class="calibre52"> </span></p>
+<p><span class="calibre52">   </span><span class="calibre53">function</span><span class="calibre52"> setPublisher</span><span class="calibre51">(</span><span class="calibre52">$par</span><span class="calibre51">){</span></p>
+<p><span class="calibre52">      $this</span><span class="calibre51">-&gt;</span><span class="calibre52">publisher </span><span class="calibre51">=</span><span class="calibre52"> $par</span><span class="calibre51">;</span></p>
+<p><span class="calibre52">   </span><span class="calibre51">}</span></p>
+<p><span class="calibre52"> </span></p>
+<p><span class="calibre52">   </span><span class="calibre53">function</span><span class="calibre52"> getPublisher</span><span class="calibre51">(){</span></p>
+<p><span class="calibre52">      echo $this</span><span class="calibre51">-&gt;</span><span class="calibre52">publisher</span><span class="calibre51">.</span><span class="calibre52"> </span><span class="calibre54">"&lt;br /&gt;"</span><span class="calibre51">;</span></p>
+<p><span class="calibre52">   </span><span class="calibre51">}</span></p>
+<p><span class="calibre51">}</span></p>
+</div>
+<p><span class="calibre7">Now apart from inherited functions, class Novel keeps two additional member functions.</span></p>
+</div>
+<p><span id="part0000_split_079.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_079.html#calibre_pb_108" class="calibre12"><span class="calibre11">Overriding  </span></h2>
+<p><span class="calibre7">Function definitions in child classes override definitions with the same name in parent classes. In a child class, we can modify the definition of a function inherited from parent class.</span></p>
+<p><span class="calibre13">Example:</span></p>
+<p><span class="calibre7"> getPrice and getTitle functions are overridden to return some values.</span></p>
+<div class="calibre40">
+<p><span class="calibre53">function</span><span class="calibre52"> getPrice</span><span class="calibre51">(){</span></p>
+<p><span class="calibre52">   echo $this</span><span class="calibre51">-&gt;</span><span class="calibre52">price </span><span class="calibre51">.</span><span class="calibre52"> </span><span class="calibre54">"&lt;br/&gt;"</span><span class="calibre51">;</span></p>
+<p><span class="calibre52">   </span><span class="calibre53">return</span><span class="calibre52"> $this</span><span class="calibre51">-&gt;</span><span class="calibre52">price</span><span class="calibre51">;</span></p>
+<p><span class="calibre51">}</span></p>
+<p><span class="calibre52">   </span><span class="calibre53">function</span><span class="calibre52"> getTitle</span><span class="calibre51">(){</span></p>
+<p><span class="calibre52">   echo $this</span><span class="calibre51">-&gt;</span><span class="calibre52">title </span><span class="calibre51">.</span><span class="calibre52"> </span><span class="calibre54">"&lt;br/&gt;"</span><span class="calibre51">;</span></p>
+<p><span class="calibre52">   </span><span class="calibre53">return</span><span class="calibre52"> $this</span><span class="calibre51">-&gt;</span><span class="calibre52">title</span><span class="calibre51">;</span></p>
+<p><span class="calibre51">}</span></p>
+</div>
+</div>
+<p><span id="part0000_split_080.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_080.html#calibre_pb_109" class="calibre12"><span class="calibre11">Public members</span></h2>
+<p><span class="calibre7">Unless you specify otherwise, properties and methods of a class are public. That is to say, they may be accessed in three possible situations −</span></p>
+<p><span class="calibre7">.From outside the class in which it is declared</span></p>
+<p><span class="calibre7">.From within the class in which it is declared</span></p>
+<p><span class="calibre7">.From within another class that implements the class in which it is declared</span></p>
+<p><span class="calibre7">Till now we have seen all members as public members. If you wish to limit the accessibility of the members of a class then you define class members as </span><span class="calibre13">private</span><span class="calibre7"> or </span><span class="calibre13">protected</span><span class="calibre7">.</span></p>
+</div>
+<p><span id="part0000_split_081.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_081.html#calibre_pb_110" class="calibre12"><span class="calibre11">Private members</span></h2>
+<p><span class="calibre7">By designating a member private, you limit its accessibility to the class in which it is declared. The private member cannot be referred to from classes that inherit the class in which it is declared and cannot be accessed from outside the class.</span></p>
+<p><span class="calibre7">A class member can be made private by using </span><span class="calibre13">private</span><span class="calibre7"> keyword infront of the member.</span></p>
+<div class="calibre40">
+<p><span class="calibre53">class</span><span class="calibre52"> </span><span class="calibre57">MyClass</span><span class="calibre52"> </span><span class="calibre51">{</span></p>
+<p><span class="calibre52">   </span><span class="calibre53">private</span><span class="calibre52"> $car </span><span class="calibre51">=</span><span class="calibre52"> </span><span class="calibre54">"audi"</span><span class="calibre51">;</span></p>
+<p><span class="calibre52">   $driver </span><span class="calibre51">=</span><span class="calibre52"> </span><span class="calibre54">"willy"</span><span class="calibre51">;</span></p>
+<p><span class="calibre52"> </span></p>
+<p><span class="calibre52">   </span><span class="calibre53">function</span><span class="calibre52"> __construct</span><span class="calibre51">(</span><span class="calibre52">$par</span><span class="calibre51">)</span><span class="calibre52"> </span><span class="calibre51">{</span></p>
+<p><span class="calibre52">      </span><span class="calibre58">// Statements here run every time</span></p>
+<p><span class="calibre52">      </span><span class="calibre58">// an instance of the class</span></p>
+<p><span class="calibre52">      </span><span class="calibre58">// is created.</span></p>
+<p><span class="calibre52">   </span><span class="calibre51">}</span></p>
+<p><span class="calibre52"> </span></p>
+<p><span class="calibre52">   </span><span class="calibre53">function</span><span class="calibre52"> myPublicFunction</span><span class="calibre51">()</span><span class="calibre52"> </span><span class="calibre51">{</span></p>
+<p><span class="calibre52">      </span><span class="calibre53">return</span><span class="calibre51">(</span><span class="calibre54">"I'm visible!"</span><span class="calibre51">);</span></p>
+<p><span class="calibre52">   </span><span class="calibre51">}</span></p>
+<p><span class="calibre52"> </span></p>
+<p><span class="calibre52">   </span><span class="calibre53">private</span><span class="calibre52"> </span><span class="calibre53">function</span><span class="calibre52"> myPrivateFunction</span><span class="calibre51">()</span><span class="calibre52"> </span><span class="calibre51">{</span></p>
+<p><span class="calibre52">      </span><span class="calibre53">return</span><span class="calibre51">(</span><span class="calibre54">"I'm  not visible outside!"</span><span class="calibre51">);</span></p>
+<p><span class="calibre52">   </span><span class="calibre51">}</span></p>
+<p><span class="calibre51">}</span></p>
+</div>
+<p><span class="calibre7">When </span><span class="calibre16">MyClass</span><span class="calibre7"> class is inherited by another class using extends, myPublicFunction() will be visible, as will $driver. The extending class will not have any awareness of or access to myPrivateFunction and $car, because they are declared private.</span></p>
+</div>
+<p><span id="part0000_split_082.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_082.html#calibre_pb_111" class="calibre12"><span class="calibre11">Protected members</span></h2>
+<p><span class="calibre7">A protected property or method is accessible in the class in which it is declared, as well as in classes that extend that class. Protected members are not available outside of those two kinds of classes. A class member can be made protected by using </span><span class="calibre13">protected</span><span class="calibre7"> keyword in front of the member.</span></p>
+<p><span class="calibre7">Here is different version of MyClass −</span></p>
+<div class="calibre40">
+<p><span class="calibre53">class</span><span class="calibre52"> </span><span class="calibre57">MyClass</span><span class="calibre52"> </span><span class="calibre51">{</span></p>
+<p><span class="calibre52">   </span><span class="calibre53">protected</span><span class="calibre52"> $car </span><span class="calibre51">=</span><span class="calibre52"> </span><span class="calibre54">"audi"</span><span class="calibre51">;</span></p>
+<p><span class="calibre52">   $driver </span><span class="calibre51">=</span><span class="calibre52"> </span><span class="calibre54">"willy"</span><span class="calibre51">;</span></p>
+<p><span class="calibre52"> </span></p>
+<p><span class="calibre52">   </span><span class="calibre53">function</span><span class="calibre52"> __construct</span><span class="calibre51">(</span><span class="calibre52">$par</span><span class="calibre51">)</span><span class="calibre52"> </span><span class="calibre51">{</span></p>
+<p><span class="calibre52">      </span><span class="calibre58">// Statements here run every time</span></p>
+<p><span class="calibre52">      </span><span class="calibre58">// an instance of the class</span></p>
+<p><span class="calibre52">      </span><span class="calibre58">// is created.</span></p>
+<p><span class="calibre52">   </span><span class="calibre51">}</span></p>
+<p><span class="calibre52"> </span></p>
+<p><span class="calibre52">   </span><span class="calibre53">function</span><span class="calibre52"> myPublicFunction</span><span class="calibre51">()</span><span class="calibre52"> </span><span class="calibre51">{</span></p>
+<p><span class="calibre52">      </span><span class="calibre53">return</span><span class="calibre51">(</span><span class="calibre54">"I'm visible!"</span><span class="calibre51">);</span></p>
+<p><span class="calibre52">   </span><span class="calibre51">}</span></p>
+<p><span class="calibre52"> </span></p>
+<p><span class="calibre52">   </span><span class="calibre53">protected</span><span class="calibre52"> </span><span class="calibre53">function</span><span class="calibre52"> myPrivateFunction</span><span class="calibre51">()</span><span class="calibre52"> </span><span class="calibre51">{</span></p>
+<p><span class="calibre52">      </span><span class="calibre53">return</span><span class="calibre51">(</span><span class="calibre54">"I'm  visible in child class!"</span><span class="calibre51">);</span></p>
+<p><span class="calibre52">   </span><span class="calibre51">}</span></p>
+<p><span class="calibre51">}</span></p>
+</div>
+</div>
+<p><span id="part0000_split_083.html"></span></p>
+<div class="calibre1">
+<h2 id="part0000_split_083.html#calibre_pb_112" class="calibre12"><span class="calibre11">interfaces</span></h2>
+<p><span class="calibre7">Interfaces are defined to provide a common function names to the implementers. Different implementors can implement those interfaces according to their requirements. You can say, interfaces are skeletons which are implemented by developers.</span></p>
+<p><span class="calibre7">As of PHP5, it is possible to define an interface, like this −</span></p>
+<div class="calibre40">
+<p><span class="calibre53">interface</span><span class="calibre52"> </span><span class="calibre57">email</span><span class="calibre52"> </span><span class="calibre51">{</span></p>
+<p><span class="calibre52">   </span><span class="calibre53">public</span><span class="calibre52"> </span><span class="calibre53">function</span><span class="calibre52"> sendemail</span><span class="calibre51">();</span></p>
+<p><span class="calibre51">}</span></p>
+</div>
+<p><span class="calibre7">Then, if another class implemented that interface, like this −</span></p>
+<div class="calibre47">
+<p><span class="calibre53">class</span><span class="calibre52"> </span><span class="calibre57">Report</span><span class="calibre52"> </span><span class="calibre53">implements</span><span class="calibre52"> </span><span class="calibre57">email</span><span class="calibre52"> </span><span class="calibre51">{</span></p>
+<p><span class="calibre52">   </span><span class="calibre58">// sendemail() Definition goes here</span></p>
+<p><span class="calibre51">}</span></p>
+</div>
+<div id="part0000_split_083.html#calibre_pb_113" class="calibre2">
+
+</div>
+</div>
+<p><span id="part0000_split_084.html"></span></p>
+<div class="calibre1">
+<h1 id="part0000_split_084.html#calibre_pb_114" class="calibre3"><span id="part0000_split_084.html#3G7-c501fd075c9e44d3a20b3e3c616b4266" class="calibre4">                                   CONCLUSION</span></h1>
+<p><span class="calibre7"> Thank you again for choosing to read this book. I hope this book was able to help you learn and understand more about PHP, and how to write PHP codes. The next step is now upon you to apply what you have learned in this book.</span></p>
+<p><span class="calibre7">Finally, if you enjoyed this book, please with humble request take the time to share your thoughts and post a review on Amazon. It would be greatly appreciated.</span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre8"> </span></p>
+</div>

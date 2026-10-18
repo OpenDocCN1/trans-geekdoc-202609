@@ -1,0 +1,11 @@
+to be from your system administrator. It would tell you that your email account had been infected by a virus and that you should open the attached file to get instructions. Once you opened the attached file, your system was infected. This virus was particularly interesting for several reasons. To begin with, it spread both through email and by copying itself to shared folders. Second, it could scan files on your PC, looking for email addresses. Finally, it would disable processes used by antivirus scanners. In biological terms, this virus took out your computer's “immune system.” The disabling of virus scanners was a new twist that indicated at least moderate programming skills on the part of the virus creator.
+
+
+
+Another new type of virus has been gaining popularity in the past few years, and that is the “nonvirus virus” or, put simply, a hoax. Rather than actually writing a virus, a hacker sends an email to every address he has. The email claims to be from some well-known antivirus center and warns of a new virus that is circulating. The email instructs people to delete some file from their computer to get rid of the virus. The file, however, is not really a virus but part of a computer's system. The jdbgmgr.exe virus hoax used this scheme. It encouraged the reader to delete a file that was actually needed by the system. Surprisingly, a number of people followed this advice and not only deleted the file but promptly emailed their friends and colleagues to warn them to delete the file from their machines.
+
+
+
+The Morris worm was one of the first computer worms ever to be distributed over the Internet—and it was certainly the first to gain any significant media attention.
+
+Robert Tappan Morris, Jr., then a student at Cornell University, wrote this worm and launched it from an MIT system on November 2, 1988. Morris did not actually intend to cause damage with the worm. Instead, he wanted the worm to reveal bugs in the programs it exploited in order to spread. However, bugs in the code allowed an individual computer to be infected multiple times, and the worm became a menace. Each additional “infection” spawned a new process on the infected computer. At a certain point, the large number of processes running on an infected machine slowed down

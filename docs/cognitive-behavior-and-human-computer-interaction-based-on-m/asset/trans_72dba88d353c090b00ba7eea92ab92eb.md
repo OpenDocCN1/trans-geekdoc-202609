@@ -1,0 +1,80 @@
+
+
+3. Norhayati, M.K., Azman, O., Wan Nazaimoon, W.M., Preliminary study of the nutritional content of Malaysian edible bird’s nest. *Malays. J. Nutr*., 16, 3, 389–396, 2010.
+
+4. Introduction to Birds Nest, 2018, [`http://yanwo.saikim.com.my/english/introduction-birds-nest.html`](http://yanwo.saikim.com.my/english/introduction-birds-nest.html), accessed on 28th March 2018.
+
+5. Chua, Y.G., Chan, S.H., Bloodworth, B.C., Li, S.F.Y., Leong, L.P., Identification of edible bird’s nest with amino acid and monosaccharide analysis. *J. Agric. Food Chem*., 63, 1, 279–289, 2014.
+
+6. Goh, K.M., Lai, W.K., Ting, P.H., Koh, D., Wong, J.K.R., Size Characterisation of Edible Bird Nest Impurities: A Preliminary Study. *21^(st) International Conference on Knowledge-Based and Intelligent Information and Engineering Systems* (KES2017), Marseille, France, 6–8 September 2017, pp. 1072–1081, 2017.
+
+7. Tan, K.H., Chia, F.C., Ong, A.H.K., Impact of Swiftlet’s Moult Season on the Value of Edible Birds Nests. *International Conference on Intelligent Agriculture*, IPCBEE, vol. 63, IACSIT Press, Singapore, 2014, vol. 63.4.
+
+8. Nandi, C.S., Tudu, B., Koley, C., An automated machine vision-based system for fruit sorting and Grading, in: *Sixth International Conference on Sensing Technology (ICST)*, pp. 195–200, 2012.
+
+9. Solanki, U. and U. K. J. D. G. T., A Survey on Detection of Disease and Fruit Grading. *Int. J. Innov. Emerg. Res. Eng*., 2, 2, 109–114, 2015.
+
+10. Park, K., Hong, Y.K., Ki, G.H., Lee, J., Classification of apple leaf conditions in hyperspectral images for diagnosis of Marssonina blotch using mRMR and deep neural network. *Comput. Electron. Agric*., 148, 179–187, 2018.
+
+11. Rumpf, T., Romer, C., Weis, M., Sokefeld, M., Gerhards, R., Plumer, L., Sequential support vector machine classification for small-grain weed species discrimination with particular regard to Cirsium arvense and Galium aparine. *Comput. Electron. Agric*., 80, 89–96, 2012.
+
+12. Mohapatra, A., Shanmugasundaram, S., Malmathanraj, R., Grading of ripening stages of red banana using dielectric properties changes and image processing approach. *Comput. Electron. Agric*., 143, 100–110, 2017.
+
+13. Guney, K. and Sarikaya, N., Adaptive Neuro-Fuzzy Inference System for Texture Image Classification. *Int. Conf. Autom. Cogn. Sci. Opt. Micro-ElectroMechanical Syst. Inf. Technol*., vol. 19, no. 3, pp. 3–7, 2015.
+
+14. Atashi, A., Nazeri, N., Abbasi, E., Dorri, S., Breast Cancer Risk Assessment Using Adaptive Neuro-Fuzzy Inference System (ANFIS) and Subtractive Clustering Algorithm. Multidiscip. Cancer Investig., 1, 2, 20–26, 2017.
+
+15. Hill, T. and Lewicki, P, *STATISTICS: Methods and Applications*, StatSoft, Tulsa, 2007.
+
+16. Aldayel, M.S., K-Nearest Neighbour classification for glass identification problem. *Proceedings ofInternational Conference on Computer Systems and Industrial Informatics*, pp. 1–5, 2012.
+
+17. Koay, M.Y., Loh, S.X.C., Lai, W.K., Goh, K.M., Feature Selection for Automated Grading of Edible Birds Nest with ANFIS. *Proceedings of the International Conference on Control, Robotics and Informatics (ICCRI2018)*, Kuala Lumpur, Malaysia, April 2018, 2018.
+
+18. Wang, T. and Li, W., Naive Bayes Software Defect Prediction Model. *Proceedings of the 2010 International Conference on Computational Intelligence and Software Engineering*, pp. 1–4, 2010.
+
+19. Sankar, K., Kannan, S., Jennifer, P., Prediction of Code Fault Using Naive Bayes and SVM Classifiers. *Middle-East J. Sci. Res*., 20, 1, 108–113, 2014.
+
+20. Veni, S. and Srinivasan, A., Defect Classification Using Naive Bayes Classification. *Int. J. Appl. Eng. Res*., 12, 220, 12693–12700, 2017.
+
+21. Thakur, R. and Mehta, P, Bayesian Classifier Based Advanced Fruits Disease Detection. *Int. J. Eng. Dev. Res*., 5, 3, 1237–1241, 2017.
+
+22. Zabidi, A., Lee, Y.K., Mansor, W., Yassin, I.M., Sahak, R., Classification of Infant Cries with Asphyxia Using Multilayer Perceptron Neural Network. *Proceedings of the Second International Conference on Computer Engineering and Applications*, vol. 1, pp. 204–208, 2010.
+
+23. Catalan, J.A., Jin, J.S., Gedeon, T.D., Reducing the Dimensions of Texture Features for Image Retrieval Using Multi-layer Neural Networks. *J. Pattern Anal. Appl*., 2, 2, 196–203, 1999.
+
+24. Brown, W., Gedeon, T.D., Barnes, R., The Use of a Multilayer Feedforward Neural Network for Mineral Prospectivity Mapping. *Proceedings 6^(th) International Conference Neural Information Processing (ICONIP’99)*, Perth, pp. 160–165, 1999.
+
+25. Sharma, N. and Gedeon, T.D., Artificial Neural Network Classification Models for Stress in Reading. *Proceedings of 19^(th) International Conference on Neural Information Processing 2012 (ICONIP 2012)*, pp. 388–395, 2012.
+
+26. Ali, R., Jiang, B., Man, M., Hussain, A., Luo, B., Classification of Fish Ectoparasite Genus Gyrodactylus SEM Images Using ASM and Complex Network Model. *Proceedings of the 21^(st) International Conference on Neural Information Processing2014 (ICONIP2014)*, pp. 103–110, 2014.
+
+27. Sharda, R. and Delen, D., Predicting box-office success of motion pictures with neural net-works. *Expert Syst. Appl*., 30, 2, 243–254, 2006.
+
+28. Eftekharian, E., Khatami, A., Khosravi, A., Nahavandi, S., Data Mining Analysis of an Urban Tunnel Pressure Drop Based on CFD Data. *Proceedings of the 22^(nd) International Conference on Neural Information Processing 2015 (ICONIP2015)*, pp. 128–135, 2015.
+
+29. Azcarraga, A., Talavera, A., Azcarraga, J., Gender-Specific Classifiers in Phoneme Recognition and Academic Emotion Detection. *Proceedings of the 23^(rd) International Conference on Neural Information Processing2016 (ICONIP 2016)*, pp. 497–504, 2016.
+
+30. Rosenblatt, F., The Perceptron: A Probabilistic Model for Information Storage and Organization In The Brain. *Psychol. Rev*., 65, 6, 386–408, 1958.
+
+31. Rosenblatt, F., *Principles of Neurodynamics: Perceptrons and the Theory of Brain Mechanisms*, Spartan Books, Washington DC, 1961.
+
+32. Russell, S.J. and Norvig, P., *Artificial Intelligence: A Modern Approach*, Third Edition, Pearson Education, Inc, 20102010.
+
+33. Vapnik, V., *The nature of statistical learning theory*, Second edition, Springer Verlag, New York, 1999.
+
+34. Liantoni, F. and Hermanto, L.A., Adaptive ant colony optimization on Mango classification using K-nearest neighbor and support vector machine. *J. Inf. Syst. Eng. Bus. Intell*., 3, 2, October 2017, 75–79, 2017.
+
+35. Cristianini, N. and Shawe-Taylor, J., *An introduction to support vector machines*, Cambridge University Press, Cambridge, 2000.
+
+36. Jang, J.S.R., ANFIS Adaptive-Network-Based Fuzzy Inference System. *IEEE Trans. Syst. Man Cybern*., 23, 3, 665–685, 1993.
+
+37. Rajab, S., A New Approach to ANFIS Modeling using Kernel-based FCM Clustering. *Global J. Comput. Sci. Techol. D Neural Artif. Intell*., 15, 1, 581586, 2016.
+
+38. Aziz, D., Ali, M.A.M., Gan, K.B., Saiboon, I., Initialization of adaptive neurofuzzy inference system using fuzzy clustering in predicting primary triage category. *4^(th) Int. Conf. Intell. Adv. Syst. A Conf. World Eng. Sci. Technol. Congr. -Conf. Proc*., vol. 1, pp. 170–174, 2012.
+
+39. Krizhevsky, A., Sutskever, I., Hinton, G.E., ImageNet classification with deep convolutional neural networks, *Proceedings of the 25th International Conference on Neural Information Processing Systems (NIPS*’*12)*, vol. (1), December 2012, pp. 1097–1105.
+
+40. Fu, L., Sun, S., Li, R., and Wang, S., Classification of Kiwifruit Grades Based on Fruit Shape Using a Single Camera. Sensors (Basel), 16, 7, 1012, 2016.
+
+41. Pereira, D.R., Papa, J.P., Saraiva, G.F.R., Souza, G.M., Automatic classification of plant electrophysiological responses to environmental stimuli using machine learning and interval arithmetic. *Comput. Electron. Agric*., 145, 35–42, 2018A.
+

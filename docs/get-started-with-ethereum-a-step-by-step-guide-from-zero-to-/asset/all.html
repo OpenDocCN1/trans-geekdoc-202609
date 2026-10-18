@@ -1,0 +1,6748 @@
+<p><img src="Image00000.jpg" /></p>
+<p><span id="text00000.html"></span></p>
+<div>
+<img src="Image00000.jpg" class="s8" />
+</div>
+<p><span id="text00001.html"></span></p>
+<div id="text00001.html#toc0_Get_Started_with_Ethereum" class="sH">
+<div id="text00001.html#page_1" class="sF">
+How to Get Started With Ethereum
+</div>
+</div>
+<p><span id="text00002.html"></span></p>
+<div class="s11">
+<div id="text00002.html#toc3_About_this_Book" class="sS">
+About this Book
+</div>
+<div id="text00002.html#toc2_Get_Started_With_Ethereum" class="sU">
+Get Started With Ethereum
+</div>
+<div class="sW">
+This book is a step by step guide for everyone who wants to start as an Ethereum developer. It was designed for those who have never programmed anything in blockchain and want to get started. I will cover everything from installing basic requirements to writing, testing and deploying smart contracts. I will also cover topics like IPFS, ENS, Chainlink, Truffle, Ganache, OpenZeppelin, Pinata, Fleek, Infura, Metamask, Opensea, among others.
+</div>
+<div class="sW">
+You will receive free updates as new content becomes available.
+</div>
+<div class="sZ">
+Enjoy!
+</div>
+</div>
+<p><span id="text00003.html"></span></p>
+<div class="s11">
+<div id="text00003.html#toc5_About_the_Author" class="sS">
+About the Author
+</div>
+<div id="text00003.html#toc4_Davi_Pedro_Bauer" class="sU">
+Davi Pedro Bauer
+</div>
+<div class="sW">
+I have 20+ years of experience in the IT market with experience in analysis and systems development. I've been working with agile methods since 2009, where I participated in agile adoption programs in multidisciplinary teams, supporting the implementation of processes and practices such as Scrum and Kanban, as well as the launch of new digital products for web and mobile platforms. Since 2016, I have been studying on topics related to Blockchain, such as cryptocurrencies, asset tokenization, smart contracts and distributed applications (DApps) and since 2019 I’ve been working with DevSecOps from code to infrastructure.
+</div>
+<div class="sZ">
+Follow me on <a href="https://www.google.com/url?q=https://linkedin.com/in/davibauer&amp;sa=D&amp;source=editors&amp;ust=1624824293293000&amp;usg=AOvVaw1kyQQ-tE9h-0igpZrajywT" class="s31J"><span class="s31H">Linkedin</span></a>
+</div>
+<div class="s1C">
+Follow me on <a href="https://www.google.com/url?q=https://github.com/davibauer&amp;sa=D&amp;source=editors&amp;ust=1624824293293000&amp;usg=AOvVaw2BImFRPjY1W5nY0Z1pHovP" class="s31J"><span class="s31H">Github</span></a>
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://leanpub.com/u/davibauer&amp;sa=D&amp;source=editors&amp;ust=1624824293293000&amp;usg=AOvVaw3T7Ob8Mtlbqf-YNKMNMlKm" class="s31J"><span class="s31H">https://leanpub.com/u/davibauer</span></a>
+</div>
+</div>
+<p><span id="text00004.html"></span></p>
+<div class="s11">
+<div id="text00004.html#page_2" class="sS">
+Pre requirements
+</div>
+<div id="text00004.html#toc7_Install_Blockchain_Dev_Kit_Extension_on_VS_Code" class="sU">
+Install Blockchain Dev Kit Extension on VS Code
+</div>
+<div class="sW">
+The Blockchain Developer Kit was built for both new users to Ethereum, but not get in the way for those familiar with the process. One of the primary goals is to help users create a project structure for these smart contracts, help in the compilation and building of these assets, deployment of these assets to blockchain endpoints as well as debugging of these contracts.
+</div>
+<div class="s1S">
+<a href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DWIUppKQhtKk&amp;sa=D&amp;source=editors&amp;ust=1624824293295000&amp;usg=AOvVaw1YBFUmb_Tpv7XsKpH7VvtV" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+1 minute
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00004.html#toc6_Installing_the_extension" class="s27">
+Installing the extension
+</div>
+<div class="s29">
+Go to Extensions.
+</div>
+<div class="s29">
+Search for “blockchain development kit for ethereum”.
+</div>
+<div class="s29">
+Click on the extension created by Microsoft, usually will be the first one.
+</div>
+<div class="s2H">
+<div class="s2F-0">
+<img src="Image00002.jpg" id="page_3" class="s2F-1" />
+</div>
+</div>
+<div class="s2K">
+Click on “Install”.
+</div>
+<div class="s2T">
+<div class="s2R-0">
+<img src="Image00003.jpg" id="page_4" class="s2R-1" />
+</div>
+</div>
+<div class="s2K">
+Wait for the installation complete
+</div>
+<div class="s29">
+That’s done!
+</div>
+</div>
+<p><span id="text00005.html"></span></p>
+<div class="s11">
+<div id="text00005.html#a2X3" class="s33">
+Install Truffle
+</div>
+<div class="s35">
+Truffle is a development environment, testing framework and asset pipeline for Ethereum, aiming to make life as an Ethereum developer easier.
+</div>
+<div class="s1S">
+<a href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DmE3_3wL5-jI&amp;sa=D&amp;source=editors&amp;ust=1624824293298000&amp;usg=AOvVaw2cFLaiP5gJqszRcJiOlcWT" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+2 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00005.html#toc8_Installing_Truffle" class="s27">
+Installing Truffle
+</div>
+<div class="s29">
+Go to the terminal windows
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ npm install -g truffle
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00005.html#toc9_Checking_Truffle_installation" class="s27">
+Checking Truffle installation
+</div>
+<div class="s41">
+Check if the installation was done successfully
+</div>
+<div class="s43">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ truffle
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2T">
+<div class="s4F-0">
+<img src="Image00004.jpg" class="s4F-1" />
+</div>
+</div>
+</div>
+<p><span id="text00006.html"></span></p>
+<div class="s11">
+<div id="text00006.html#page_6" class="s33">
+Install Ganache CLI
+</div>
+<div class="s35">
+Ganache is a personal blockchain for rapid Ethereum and Corda distributed application development. You can use Ganache across the entire development cycle; enabling you to develop, deploy, and test your dApps in a safe and deterministic environment.
+</div>
+<div class="s1S">
+<a href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DfbQH6pzfXig&amp;sa=D&amp;source=editors&amp;ust=1624824293302000&amp;usg=AOvVaw0QoYm6VV7ZG3XndRnEaLWT" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+2 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+COMMAND OVERVIEW
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+npm install
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+This command installs a package and any packages that it depends on.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s1U">
+ganache-cli
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Start the ganache development blockchain on 127.0.0.1:8545.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span id="text00007.html"></span></p>
+<div class="s11">
+<div id="text00007.html#toc11_Installing_Ganache" class="s5X">
+Installing Ganache
+</div>
+<div class="s29">
+Go to the terminal windows
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+npm install -g ganache-cli
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00007.html#toc12_Starting_Ganache_locally" class="s27">
+Starting Ganache locally
+</div>
+<div class="s29">
+Start Ganache CLI on 127.0.0.1:8545
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+ganache-cli
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="sW">
+It will also generate 10 accounts with their respectives public and private keys so that you can use it for test purposes.
+</div>
+<div class="s6T">
+<div class="s6R-0">
+<img src="Image00005.jpg" id="page_7" class="s6R-1" />
+</div>
+</div>
+</div>
+<p><span id="text00008.html"></span></p>
+<div class="s11">
+<div id="text00008.html#toc20_MetaMask" class="sS">
+MetaMask
+</div>
+<div id="text00008.html#toc19_Install_and_Setup_MetaMask_Wallet" class="sU">
+Install and Setup MetaMask Wallet
+</div>
+<div class="s35">
+MetaMask is an extension for accessing Ethereum enabled distributed applications, or "Dapps" in your browser. The extension injects the Ethereum web3 API into every website's javascript context, so that dApps can read from the blockchain. MetaMask also lets the user create and manage their own identities (via private keys, local client wallet and hardware wallets like Trezor), so when a Dapp wants to perform a transaction and write to the blockchain, the user gets a secure interface to review the transaction, before approving or rejecting it.
+</div>
+<div class="s74">
+<a href="https://www.google.com/url?q=https://youtu.be/Bj6IozLyVxw&amp;sa=D&amp;source=editors&amp;ust=1624824293310000&amp;usg=AOvVaw35Z4w76gWuYK2yAD_VK7yB" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+2 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00008.html#toc15_Installing_the_wallet" class="s27">
+Installing the wallet
+</div>
+<div class="s2K">
+Go to metamask.io
+</div>
+<div id="text00008.html#page_8" class="s29">
+Click on "Install MetaMask"
+</div>
+<div class="s29">
+Click on "Add to Brave" or your browser name
+</div>
+<div class="s29">
+Click on "Add extension"
+</div>
+<div class="s29">
+Click on "Get Started"
+</div>
+<div id="text00008.html#toc16_Configuring_the_wallet" class="s27">
+Configuring the wallet
+</div>
+<div class="s2K">
+Click on "Create a Wallet"
+</div>
+<div class="s29">
+Click on "No Thanks" (but if you prefer, click on "I Agree" instead)
+</div>
+<div class="s29">
+Define the password that you will use to open your wallet
+</div>
+<div class="s29">
+Confirm the password
+</div>
+<div class="s29">
+Agree to the terms of use
+</div>
+<div class="s29">
+Click on "Create"
+</div>
+<div class="s29">
+Now you can backup your secret backup phrase (you can also do it later)
+</div>
+<div class="s29">
+For now, click on "Remind me later"
+</div>
+<div class="s29">
+Your wallet is done!
+</div>
+<div id="text00008.html#toc17_Accessing_your_wallet" class="s27">
+Accessing your wallet
+</div>
+<div class="s2K">
+Click on extensions and pin MetaMask to your bar
+</div>
+<div class="s29">
+Click on MetaMask icon, your wallet will be shown
+</div>
+<div id="text00008.html#toc18_Discovering_your_wallet_address" class="s27">
+Discovering your wallet address
+</div>
+<div class="s2K">
+Click on the three dots on the upper right side and then on "Account details"
+</div>
+<div class="s29">
+You can see your wallet address in hash format and in a QR code format
+</div>
+<div class="s29">
+You can also copy your wallet address by clicking on account name
+</div>
+<div class="s29">
+That's all!
+</div>
+</div>
+<p><span id="text00009.html"></span></p>
+<div class="s11">
+<div id="text00009.html#toc24_Infura" class="sS">
+Infura
+</div>
+<div id="text00009.html#a2XG" class="sU">
+Create an Account on Infura
+</div>
+<div class="s35">
+Infura provides the tools and infrastructure that allow developers to easily take their blockchain application from testing to scaled deployment - with simple, reliable access to Ethereum and IPFS.
+</div>
+<div class="s1S">
+<a href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DNcKMBgNsBuw&amp;sa=D&amp;source=editors&amp;ust=1624824293313000&amp;usg=AOvVaw2CHIrHiVW_pwOTZNT4B1iC" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td id="page_9" colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+2 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00009.html#toc21_Creating_a_new_account" class="s27">
+Creating a new account
+</div>
+<div class="s41">
+Go to <a href="https://www.google.com/url?q=https://infura.io/&amp;sa=D&amp;source=editors&amp;ust=1624824293315000&amp;usg=AOvVaw2qnN-ZVazIFCaJz8pZcX3o" class="s31J"><span class="s31H">infura.io</span></a>
+</div>
+<div class="s29">
+Click on “Get Started for Free”.
+</div>
+<div class="s29">
+Enter your email and password
+</div>
+<div class="s29">
+Click on “Sign Up”
+</div>
+<div class="s29">
+A verification email will be send to your address
+</div>
+<div class="s29">
+Check your email and confirm your account by clicking the verification link
+</div>
+<div class="s29">
+After that, you will be redirected to your dashboard
+</div>
+<div class="s29">
+Click on “Ethereum” tab on the left side menu
+</div>
+<div class="s93">
+<img src="Image00006.jpg" class="s91" />
+</div>
+<div class="s2K">
+Now your account was created and you can start setting up a new project.
+</div>
+<div class="s93">
+<img src="Image00007.jpg" id="page_10" class="s98" />
+</div>
+<div id="text00009.html#toc22_Setting_up_your_infura_project" class="s27">
+Setting up your infura project
+</div>
+<div class="s2K">
+Go to infura.io
+</div>
+<div class="s29">
+Access your dashboard
+</div>
+<div class="s29">
+Click on "ethereum"
+</div>
+<div class="s29">
+Click on "create a project"
+</div>
+<div class="s29">
+Define the project name
+</div>
+<div class="s29">
+You can connect with different testnets and also to the mainnet
+</div>
+<div class="s29">
+Save changes
+</div>
+<div class="s93">
+<img src="Image00008.jpg" id="page_11" class="s9N" />
+</div>
+</div>
+<p><span id="text00010.html"></span></p>
+<div class="s11">
+<div id="text00010.html#toc29_Solidity" class="s9Y">
+Solidity
+</div>
+<div id="text00010.html#toc28_Get_Started_With_Solidity_Project_on_VS_Code" class="sU">
+Get Started With Solidity Project on VS Code
+</div>
+<div class="s35">
+Smart contracts are most commonly used with Ethereum. Ethereum is the world's first programmable blockchain. It allows smart contracts to be defined to help facilitate the transfer of digital assets, like ether.
+</div>
+<div class="sW">
+The language you'll use to write contracts is Solidity. Solidity is Turing-complete, which means that you can write complicated contracts in a clearly defined and coded way.
+</div>
+<div class="s1S">
+<a href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3D-MyTO031-Ww&amp;sa=D&amp;source=editors&amp;ust=1624824293318000&amp;usg=AOvVaw1mHt423DF82kvv0SsltVSi" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+4 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00010.html#toc25_Creating_a_new_project" class="s27">
+Creating a new project
+</div>
+<div id="text00010.html#page_12" class="s29">
+Click on “View &gt; Command Palette...”.
+</div>
+<div class="s29">
+Click on “Blockchain: New Solidity Project”.
+</div>
+<div class="s29">
+Click on “Create basic project”
+</div>
+<div class="s29">
+Select a folder where the project will be scaffolding.
+</div>
+<div class="s29">
+Wait for the project to be created.
+</div>
+<div id="text00010.html#toc26_Compiling_the_project" class="s27">
+Compiling the project
+</div>
+<div class="s29">
+Right click on HelloBlockchain.sol file
+</div>
+<div class="sAR">
+<div class="sAN-0">
+<img src="Image00009.jpg" class="sAN-1" />
+</div>
+</div>
+<div id="text00010.html#page_13" class="s2K">
+Select “Build Contracts”.
+</div>
+<div class="s29">
+Wait for contracts to be built.
+</div>
+<div id="text00010.html#toc27_Deploying_to_development_blockchain" class="s27">
+Deploying to development blockchain
+</div>
+<div class="s29">
+Right click on HelloBlockchain.sol file.
+</div>
+<div class="s29">
+Select “Deploy Contracts”.
+</div>
+<div class="s29">
+Select “development 127.0.0.1:8545”.
+</div>
+<div class="s29">
+Wait for the contracts to be deployed to the blockchain development network.
+</div>
+<div class="s41">
+That’s done!
+</div>
+</div>
+<p><span id="text00011.html"></span></p>
+<div class="s11">
+<div id="text00011.html#toc58_ERC20_-_Fungible_Tokens" class="sS">
+ERC20 - Fungible Tokens
+</div>
+<div id="text00011.html#toc35_Write_a_Simple_ERC20_Token_Using_OpenZeppelin" class="sU">
+Write a Simple ERC20 Token Using OpenZeppelin
+</div>
+<div class="s35">
+Let’s create a simple ERC-20 ethereum smart contract, with the help of Truffle, and then import the OpenZeppelin contracts library.
+</div>
+<div class="sW">
+Tokens can represent virtually anything in Ethereum:
+</div>
+<div class="s29">
+Reputation points in an online platform
+</div>
+<div class="s29">
+Skills of a character in a game
+</div>
+<div class="s29">
+Lottery tickets
+</div>
+<div class="s29">
+Financial assets like a share in a company
+</div>
+<div class="s29">
+A fiat currency like USD
+</div>
+<div class="s29">
+An ounce of gold
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://ethereum.org/en/developers/docs/standards/tokens/erc-20/&amp;sa=D&amp;source=editors&amp;ust=1624824293322000&amp;usg=AOvVaw0WQC0GAMdAvUsXaMjUY9n4" class="s31J"><span class="s31H">https://ethereum.org/en/developers/docs/standards/tokens/erc-20/</span></a>
+</div>
+<div class="sBJ">
+<a href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DycTvT1R4_nc&amp;sa=D&amp;source=editors&amp;ust=1624824293323000&amp;usg=AOvVaw0gF-p4EsSm3Lw6ISLoO3iQ" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+5 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+COMMAND OVERVIEW
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sBY">
+<span class="s32Z">truffle</span> <span class="s330">init</span>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Initialize new and empty Ethereum project
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+npm init
+</div>
+</td>
+</tr>
+<tr>
+<td id="page_14" colspan="2" class="s58">
+<div class="s5B">
+Creates a package.json file for your project. This file contains information about the project’s packages and dependencies.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+npm install
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+This command installs a package and any packages that it depends on.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00011.html#toc30_Preparing_the_environment" class="s27">
+Preparing the environment
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ truffle init<br />
+$ npm init<br />
+$ npm install @openzeppelin/contracts
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00011.html#toc31_Writing_the_contract" class="sCY">
+Writing the contract
+</div>
+<div class="s2K">
+Create a new file under contracts with the name ERC20MinerReward.sol
+</div>
+<div class="s29">
+Add the license directive
+</div>
+<div class="s29">
+Define the solidity minimum version
+</div>
+<div class="s29">
+Import OpenZeppelin ERC-20 contract library
+</div>
+<div class="s29">
+Define the contract class
+</div>
+<div class="s29">
+Define the contract constructor
+</div>
+<div class="s29">
+Define the contract name
+</div>
+<div class="s29">
+Define the contract symbol
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-17">
+</col>
+<col class="class-18">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+ERC20MinerReward.sol
+</div>
+</td>
+</tr>
+<tr>
+<td class="sDN">
+<div class="sDB">
+1
+</div>
+<div class="sDB">
+2
+</div>
+<div class="sDB">
+3
+</div>
+<div class="sDB">
+4
+</div>
+<div class="sDB">
+5
+</div>
+<div class="sDB">
+6
+</div>
+<div class="sDB">
+7
+</div>
+<div class="sDK">
+8
+</div>
+</td>
+<td class="sDW">
+<div class="sDR">
+<span class="s31Z">// SPDX-License-Identifier: MIT</span> <span class="s320"><br />
+pragma solidity ^</span> <span class="s321">0.8.0</span> <span class="s320">;<br />
+</span>
+</div>
+<div class="sDT">
+<span class="s329">import</span>  <span class="s320"> </span>  <span class="s32A">"@openzeppelin/contracts/token/ERC20/ERC20.sol"</span> <span class="s320"><br />
+</span>
+</div>
+<div class="sDT">
+<span class="s320">contract ERC20MinerReward is ERC20 {<br />
+    </span> <span class="s329">constructor</span> <span class="s320">() ERC20("MinerReward", "MRW")<br />
+}</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00011.html#page_15" class="s27">
+Setting the Solidity compiler version
+</div>
+<div class="s2K">
+Copy the solidity version used in this contract
+</div>
+<div class="s29">
+Open truffle-config.js
+</div>
+<div class="s29">
+Uncomment the "solc" block
+</div>
+<div class="s29">
+Set the solidity version pasting the copied value
+</div>
+<div id="text00011.html#toc33_Compiling_the_contract" class="s27">
+Compiling the contract
+</div>
+<div class="sE7">
+Now is time to compile the contract
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ truffle compile
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+The contract was compiled successfully!
+</div>
+<div id="text00011.html#toc34_Verifying_the_result" class="s27">
+Verifying the result
+</div>
+<div class="s2K">
+Noticed that a new folder build/contract was created
+</div>
+<div class="s29">
+The brand new contract is there!
+</div>
+</div>
+<p><span id="text00012.html"></span></p>
+<div class="s11">
+<div id="text00012.html#toc41_Deploy_ERC20_Token_to_Ganache_Development_Blockchain" class="s33">
+Deploy ERC20 Token to Ganache Development Blockchain
+</div>
+<div class="s35">
+Ethereum Ganache is a local in-memory blockchain designed for development and testing. It simulates the features of a real Ethereum network, including the availability of a number of accounts funded with test Ether.
+</div>
+<div class="s74">
+<a href="https://www.google.com/url?q=https://youtu.be/8XAwtrrQ-g8&amp;sa=D&amp;source=editors&amp;ust=1624824293336000&amp;usg=AOvVaw1BtugFh5-lr14icvF5NkTv" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+4 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+PRE REQUIREMENTS
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sF9">
+<a href="#text00005.html#a2X3" class="s31V"><span class="s31U">Install Truffle</span></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+COMMAND OVERVIEW
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s1U">
+ganache-cli
+</div>
+</td>
+</tr>
+<tr>
+<td id="page_16" colspan="2" class="s58">
+<div class="s5B">
+Start the ganache development blockchain on 127.0.0.1:8545.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+truffle compile
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Compile contract source file.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+truffle migrate
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Run migrations to deploy contracts.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span id="text00013.html"></span></p>
+<div class="s11">
+<div id="text00013.html#toc36_Preparing_migration" class="s5X">
+Preparing migration
+</div>
+<div class="s2K">
+Create a new migration file
+</div>
+<div class="s29">
+Add reference to smart contract
+</div>
+<div class="s29">
+Add a export function to deploy the smart contract
+</div>
+<div id="text00013.html#toc37_Starting_the_blockchain" class="s27">
+Starting the blockchain
+</div>
+<div class="s2K">
+Open a new terminal
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ ganache-cli
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+A new ganache blockchain is listening on 127.0.0.1:8545
+</div>
+<div id="text00013.html#toc38_Configuring_the_blockchain_network" class="s27">
+Configuring the blockchain network
+</div>
+<div class="s2K">
+Open truffle-config.js
+</div>
+<div class="s29">
+Uncomment development block from networks
+</div>
+<div class="s29">
+Make sure host and port are corrects
+</div>
+<div id="text00013.html#toc39_Deploying_the_contract" class="s27">
+Deploying the contract
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ truffle compile<br />
+$ truffle migrate
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+The contract was deployed to ganache blockchain
+</div>
+<div id="text00013.html#page_17" class="s29">
+A contract address was created
+</div>
+<div id="text00013.html#toc40_Adding_the_token_to_a_wallet" class="s27">
+Adding the token to a wallet
+</div>
+<div class="s2K">
+Go the Brave browser (or any browser compatible with MetaMask)
+</div>
+<div class="s29">
+Select the "Localhost 8585" network
+</div>
+<div class="s29">
+Click on "Add Token"
+</div>
+<div class="s29">
+Click on "Custom Token"
+</div>
+<div class="s29">
+Copy the contract address
+</div>
+<div class="s29">
+Paste on "Token Contract Address" field
+</div>
+<div class="s29">
+The "Token Symbol" and "Decimals of Precision" is filled automatically
+</div>
+<div class="s29">
+Click on "Next"
+</div>
+<div class="s29">
+Click on "Add Token"
+</div>
+<div class="s29">
+The token was added to MetaMask wallet
+</div>
+<div class="s29">
+The token is there!
+</div>
+</div>
+<p><span id="text00014.html"></span></p>
+<div class="s11">
+<div id="text00014.html#toc49_Create_an_ERC20_Token_With_Fixed_Supply" class="s33">
+Create an ERC20 Token With Fixed Supply
+</div>
+<div class="s35">
+ERC20 fixed supply tokens define the total tokens allowed in the smart contract. In this type of implementation, you cannot change it after being deployed on the blockchain.
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://openzeppelin.com&amp;sa=D&amp;source=editors&amp;ust=1624824293349000&amp;usg=AOvVaw32HS2RkQbGxWYqjIR5hmda" class="s31J"><span class="s31H">https://openzeppelin.com</span></a>
+</div>
+<div class="s1C">
+<a href="https://www.google.com/url?q=https://www.trufflesuite.com/truffle&amp;sa=D&amp;source=editors&amp;ust=1624824293349000&amp;usg=AOvVaw3mUxgJCana2JUfkCZhwIyh" class="s31J"><span class="s31H">https://www.trufflesuite.com/truffle</span></a>
+</div>
+<div class="s1C">
+<a href="https://www.google.com/url?q=https://www.trufflesuite.com/ganache&amp;sa=D&amp;source=editors&amp;ust=1624824293350000&amp;usg=AOvVaw2QpGKTc6Ta-52ah-2VGD_s" class="s31J"><span class="s31H">https://www.trufflesuite.com/ganache</span></a>
+</div>
+<div class="s1C">
+<a href="https://www.google.com/url?q=https://metamask.io&amp;sa=D&amp;source=editors&amp;ust=1624824293350000&amp;usg=AOvVaw18b5BD_Xz2ZKDHqV8MnNrC" class="s31J"><span class="s31H">https://metamask.io</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+12 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+VIDEO
+</div>
+</td>
+<td class="s20">
+<div class="sJD">
+<a href="https://www.google.com/url?q=https://youtu.be/r7_g_uHgA6g&amp;sa=D&amp;source=editors&amp;ust=1624824293352000&amp;usg=AOvVaw0Zu7p0shqqAVPJGMiaFvpT" class="s31V"><span class="s31U">YOUTUBE</span></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+SOURCE CODE
+</div>
+</td>
+<td class="s20">
+<div class="sJD">
+<a href="https://www.google.com/url?q=https://github.com/davibauer/blockchain/tree/master/token-erc20-fixed&amp;sa=D&amp;source=editors&amp;ust=1624824293354000&amp;usg=AOvVaw3xsHY2LahKxjrzVfUD2RWc" class="s31V"><span class="s31U">GITHUB</span></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+PRE REQUIREMENTS
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sF9">
+<a href="#text00005.html#a2X3" class="s31V"><span class="s31U">Install Truffle</span></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+COMMAND OVERVIEW
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+truffle init
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Initialize new and empty Ethereum project
+</div>
+</td>
+</tr>
+<tr>
+<td id="page_18" colspan="2" class="s58">
+<div class="s56">
+npm init
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Creates a package.json file for your project.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+npm install
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Installs a package and any packages that it depends on.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s1U">
+ganache-cli
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Start the ganache development blockchain on 127.0.0.1:8545.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+truffle compile
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Compile contract source file.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+truffle migrate
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Run migrations to deploy contracts.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00014.html#toc42_Creating_the_project" class="s27">
+Creating the project
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ truffle init<br />
+$ npm init<br />
+$ npm install @openzeppelin/contracts
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00014.html#toc43_Writing_the_contract" class="s27">
+Writing the contract
+</div>
+<div class="s2K">
+Create a new solidity file
+</div>
+<div class="s29">
+Include the license declaration (it is mandatory)
+</div>
+<div class="s29">
+Define the solidity minimum version
+</div>
+<div class="s29">
+Import OpenZeppelin ERC-20 contract library
+</div>
+<div class="s29">
+Define the fixed supply contract class inheriting from ERC20
+</div>
+<div class="s29">
+Call the constructor passing the name and symbol
+</div>
+<div class="s29">
+Assign the total supply to the sender address (who created the contract)
+</div>
+<div class="s29">
+Override the decimals function
+</div>
+<div class="s41">
+Set the number of decimals that this token will have <span class="s32P"> </span>
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-2">
+</col>
+<col class="class-3">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s56">
+ERC20FixedSupply.sol
+</div>
+</td>
+</tr>
+<tr>
+<td id="page_19" class="sDN">
+<div class="sN2">
+1<br />
+2<br />
+3<br />
+4<br />
+5<br />
+6<br />
+7<br />
+8<br />
+9<br />
+10<br />
+11<br />
+12<br />
+13<br />
+14
+</div>
+</td>
+<td class="sDW">
+<div class="sDR">
+<span class="s32T">// SPDX-License-Identifier: MIT</span> <span class="s31N"><br />
+pragma solidity ^</span> <span class="s324">0.8.0</span> <span class="s31N">;<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31P">import</span>  <span class="s31N"> </span>  <span class="s32E">"@openzeppelin/contracts/token/ERC20/ERC20.sol"</span> <span class="s31N"><br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31P">contract</span> <span class="s31N"> ERC20FixedSupply is ERC20 {<br />
+    </span> <span class="s31P">constructor</span> <span class="s31N">() ERC20("Fixed", "FIX"){<br />
+       _mint(msg.sender,</span> <span class="s324">1000</span> <span class="s31N">);<br />
+   }<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31N">    </span> <span class="s31P">function</span>  <span class="s31N"> </span>  <span class="s32H">decimals</span> <span class="s31N">()</span> <span class="s32H">public</span>  <span class="s31N"> </span>  <span class="s32H">view</span>  <span class="s31N"> </span>  <span class="s32H">virtual</span>  <span class="s31N"> </span>  <span class="s32H">override</span>  <span class="s31N"> </span>  <span class="s32H">returns</span> <span class="s31N"> (uint8){<br />
+        </span> <span class="s31P">return</span>  <span class="s31N"> </span>  <span class="s324">0</span> <span class="s31N">;<br />
+   }<br />
+}</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Go to truffle-config.js
+</div>
+<div class="s29">
+Uncomment the "solc" block
+</div>
+<div class="s29">
+Update the solidity version number
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-4">
+</col>
+<col class="class-5">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s56">
+truffle-config.js
+</div>
+</td>
+</tr>
+<tr>
+<td class="sDN">
+<div class="sDB">
+83
+</div>
+<div class="sDB">
+84
+</div>
+<div class="sDB">
+85
+</div>
+<div class="sDB">
+86
+</div>
+<div class="sDB">
+87
+</div>
+<div class="sDB">
+88
+</div>
+<div class="sDB">
+89
+</div>
+<div class="sDB">
+90
+</div>
+<div class="sDB">
+91
+</div>
+<div class="sDB">
+92
+</div>
+<div class="sDB">
+93
+</div>
+<div class="sDB">
+94
+</div>
+<div class="sDB">
+95
+</div>
+</td>
+<td class="sDW">
+<div class="sDR">
+<span class="s31W">compilers: {<br />
+   solc: {<br />
+       version:</span> <span class="s32B">"0.8.0"</span> <span class="s31W">,<br />
+       docker:</span> <span class="s32C">true</span> <span class="s31W">,<br />
+       settings: {<br />
+           optimizer: {<br />
+               enabled:</span> <span class="s32C">false</span> <span class="s31W">,<br />
+               runs:</span> <span class="s32D">200</span> <span class="s31W"><br />
+           },<br />
+           evmVersion:</span> <span class="s32B">"byzantium"</span> <span class="s31W"><br />
+       }<br />
+   }<br />
+},</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00014.html#page_20" class="s2K">
+Under migrations folder, create a new file
+</div>
+<div class="s29">
+Set the name to 2_deploy_contract.sol
+</div>
+<div class="s29">
+Set the require method to your contract file
+</div>
+<div class="s29">
+Export a function to deploy the contract
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-2">
+</col>
+<col class="class-3">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s56">
+2_deploy_contract.sol
+</div>
+</td>
+</tr>
+<tr>
+<td class="sDN">
+<div class="sPE">
+1
+</div>
+<div class="sPE">
+2
+</div>
+<div class="sPE">
+3
+</div>
+<div class="sPE">
+4
+</div>
+<div class="sPK">
+5
+</div>
+</td>
+<td class="sDW">
+<div class="sDR">
+<span class="s31P">var</span> <span class="s31N"> ERC20FixedSupply = artifacts.require(</span> <span class="s32E">"./ERC20FixedSupply.sol"</span> <span class="s31N">);<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s32H">module</span> <span class="s31N">.exports =</span> <span class="s31P">function</span> <span class="s31N">(deployer){<br />
+   deployer.deploy(ERC20FixedSupply);<br />
+}</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Open a new terminal
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ ganache-cli
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00014.html#toc44_Starting_Ganache_development_blockchain" class="s27">
+Starting Ganache development blockchain
+</div>
+<div class="s2K">
+Split the terminal view
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ ganache-cli
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Go to truffle-config.js
+</div>
+<div class="s29">
+Under networks, uncomment the development block
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-4">
+</col>
+<col class="class-5">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s56">
+truffle-config.js
+</div>
+</td>
+</tr>
+<tr>
+<td id="page_21" class="sDN">
+<div class="sDB">
+38
+</div>
+<div class="sDB">
+39
+</div>
+<div class="sDB">
+40
+</div>
+<div class="sDB">
+41
+</div>
+<div class="sDB">
+42
+</div>
+<div class="sDK">
+43
+</div>
+</td>
+<td class="sDW">
+<div class="sDR">
+<span class="s31W">networks: {<br />
+   development: {<br />
+       host:</span> <span class="s32B">"127.0.0.1"</span> <span class="s31W">,<br />
+       port:</span> <span class="s32D">8545</span> <span class="s31W">,<br />
+       network_id:</span> <span class="s32B">"*"</span> <span class="s31W"><br />
+   },</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00014.html#toc45_Migrating_the_contract" class="s27">
+Migrating the contract
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ truffle migrate
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s93">
+<img src="Image00010.jpg" class="sSE" />
+</div>
+<div class="s2K">
+Copy the private key of the account that deployed the token
+</div>
+<div id="text00014.html#toc46_Configuring_MetaMask" class="s27">
+Configuring MetaMask
+</div>
+<div class="s2K">
+Open MetaMask
+</div>
+<div class="s29">
+Click on your account and then "import account"
+</div>
+<div id="text00014.html#page_22" class="s29">
+Paste the account private key
+</div>
+<div class="s29">
+Click on "import"
+</div>
+<div class="s35E">
+<div class="s35H-0">
+<img src="Image00011.jpg" class="s35H-1" />
+</div>
+</div>
+<div class="s2K">
+Click on networks list
+</div>
+<div class="s29">
+Click on "Localhost:8545"
+</div>
+<div class="s35J">
+<div class="s35N-0">
+<img src="Image00012.jpg" id="page_23" class="s35N-1" />
+</div>
+</div>
+<div id="text00014.html#toc47_Adding_the_token" class="s27">
+Adding the token
+</div>
+<div class="s2K">
+Click on "add token"
+</div>
+<div class="s29">
+Select "custom token"
+</div>
+<div class="s29">
+Paste the token contract address
+</div>
+<div class="s29">
+Click on "next"
+</div>
+<div class="sTE">
+<div class="sTC-0">
+<img src="Image00013.jpg" id="page_24" class="sTC-1" />
+</div>
+</div>
+<div class="s2K">
+Click on "add tokens"
+</div>
+<div class="sTN">
+<div class="sTK-0">
+<img src="Image00014.jpg" id="page_25" class="sTK-1" />
+</div>
+</div>
+<div class="s2K">
+Go back to vs code
+</div>
+<div class="s29">
+Copy another account private key
+</div>
+<div class="s29">
+Go back to MetaMask
+</div>
+<div id="text00014.html#page_26" class="s29">
+Repeat the steps you did for the first account including adding the token
+</div>
+<div id="text00014.html#toc48_Transferring_tokens_between_accounts" class="s27">
+Transferring tokens between accounts
+</div>
+<div class="s2K">
+Now change to the first imported account (the one that has all the tokens)
+</div>
+<div class="s29">
+Click on "send"
+</div>
+<div class="s29">
+Click on "transfer between my accounts"
+</div>
+<div class="s29">
+Select the second created account
+</div>
+<div class="s29">
+Input 115 FIX as the amount to transfer
+</div>
+<div class="s29">
+Click on "next"
+</div>
+<div class="s29">
+Click on "confirm"
+</div>
+<div class="s29">
+The transaction was sent but it's in pending state
+</div>
+<div class="s29">
+The transaction was confirmed
+</div>
+<div class="s29">
+The total tokens was updated
+</div>
+<div class="s29">
+Select the second imported account
+</div>
+<div class="s29">
+Now this account has 115 FIX!
+</div>
+</div>
+<p><span id="text00015.html"></span></p>
+<div class="s11">
+<div id="text00015.html#toc57_Deploy_ERC20_Token_to_Testnet_using_Infura" class="s33">
+Deploy ERC20 Token to Testnet using Infura
+</div>
+<div class="s35">
+You can use infura to deploy your smart contracts to test networks such as Ropsten, Kovan, Rinkeby, Gorli and also to the Mainnet. For testnet you will need to setup a new project on infura as well as access to the private key of the wallet that you will use to deploy the contracts. This wallet needs to have ether balance to complete the contract creation transaction.
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://infura.io&amp;sa=D&amp;source=editors&amp;ust=1624824293384000&amp;usg=AOvVaw1XyBqCoQKOAZea4YEOuOxL" class="s31J"><span class="s31H">https://infura.io</span></a>
+</div>
+<div class="s74">
+<a href="https://www.google.com/url?q=https://youtu.be/VS4iWGCHXmE&amp;sa=D&amp;source=editors&amp;ust=1624824293384000&amp;usg=AOvVaw1AI7QRzOkzX4mcFOGXBvPJ" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+8 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+PRE REQUIREMENTS
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sF9">
+<a href="#text00005.html#a2X3" class="s31V"><span class="s31U">Install Truffle</span></a>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sUZ">
+Create an Account on Infura.io
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sF9">
+<a href="#text00019.html#a2ZC" class="s31V"><span class="s31U">Get Test Ether From Faucet on Ropsten Network</span></a>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sF9">
+<a href="#text00008.html#toc20_MetaMask" class="s31V"><span class="s31U">Install and Setup MetaMask Wallet</span></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+COMMAND OVERVIEW
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s1U">
+npm install fs
+</div>
+</td>
+</tr>
+<tr>
+<td id="page_27" colspan="2" class="s58">
+<div class="s5B">
+Install the fs package that provides a lot of very useful functionality to access and interact with the file system.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s1U">
+npm install @truffle/hdwallet-provider
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Install the HD Wallet-enabled Web3 provider. This is used to sign transactions for addresses derived from a 12 or 24 word mnemonic.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s1U">
+truffle migrate --network ropsten
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Run migrations to deploy contracts.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00015.html#toc50_Installing_the_pre-requirements" class="s27">
+Installing the pre-requirements
+</div>
+<div class="s2K">
+Open a new terminal
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ npm install fs<br />
+$ npm install @truffle/hdwallet-provider
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00015.html#toc51_Setting_up_your_infura_project" class="s27">
+Setting up your infura project
+</div>
+<div class="s2K">
+Go to infura.io
+</div>
+<div class="s29">
+Access your dashboard
+</div>
+<div class="s29">
+Click on "ethereum"
+</div>
+<div class="s29">
+Click on "create a project"
+</div>
+<div class="s29">
+Define the project name
+</div>
+<div class="s29">
+You can connect with different testnets and also to the mainnet
+</div>
+<div class="s29">
+Copy the project id
+</div>
+<div class="s29">
+Save changes
+</div>
+<div id="text00015.html#toc52_Setting_up_your_smart_contract" class="s27">
+Setting up your smart contract
+</div>
+<div class="s2K">
+Go to visual studio code
+</div>
+<div class="s29">
+Open truffle-config.js
+</div>
+<div class="s29">
+Uncomment the four constants: hdwalletprovider, infurakey, fs and mnemonic
+</div>
+<div class="s29">
+Paste the project id as a value for infurakey constant
+</div>
+<div class="s29">
+Uncomment the "ropsten" block
+</div>
+<div class="s29">
+Make sure you are using the correct project id in the ropsten endpoint
+</div>
+<div id="text00015.html#page_28" class="s27">
+Configuring the private key
+</div>
+<div class="s2K">
+Go to the browser and open your MetaMask wallet connected to infura network
+</div>
+<div class="s29">
+Click on your account
+</div>
+<div class="s29">
+Click on "settings"
+</div>
+<div class="s29">
+Click on "security &amp; privacy"
+</div>
+<div class="s29">
+Click on "reveal seed phrase"
+</div>
+<div class="s29">
+Enter your wallet password to continue
+</div>
+<div class="s29">
+Copy the private key
+</div>
+<div class="s29">
+Go back to visual studio code
+</div>
+<div class="s29">
+Create a new file named ".secret"
+</div>
+<div class="s29">
+Paste the private key
+</div>
+<div id="text00015.html#toc54_Deploying_the_smart_contract" class="s27">
+Deploying the smart contract
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ truffle migrate --network ropsten
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00015.html#toc55_Checking_your_wallet_balance" class="s27">
+Checking your wallet balance
+</div>
+<div class="s2K">
+Go to your Metamask wallet again
+</div>
+<div class="s29">
+Notice that your balance has been reduced
+</div>
+<div id="text00015.html#toc56_Verifying_the_smart_contract_on_etherscan" class="s27">
+Verifying the smart contract on etherscan
+</div>
+<div class="s2K">
+Open a new window
+</div>
+<div class="s41">
+Go to <a href="https://www.google.com/url?q=https://ropsten.etherscan.io&amp;sa=D&amp;source=editors&amp;ust=1624824293399000&amp;usg=AOvVaw3gTIZVz9oZOq7tO3GFYx-_" class="s31J"><span class="s31H">https://ropsten.etherscan.io</span></a>
+</div>
+<div class="s29">
+Copy the contract address that was created for your deploy
+</div>
+<div class="s29">
+Paste the contract address in the search field
+</div>
+<div class="s29">
+Click on the "find" button
+</div>
+<div class="s29">
+The smart contract is there!
+</div>
+<div class="s29">
+The tokens were created and transferred to the wallet that created the contract
+</div>
+<div class="s29">
+Click on "Fixed (FIX)" token link
+</div>
+<div class="s41">
+Here you can see the overview of your newly created token!
+</div>
+</div>
+<p><span id="text00016.html"></span></p>
+<div class="s11">
+<div id="text00016.html#page_29" class="s9Y">
+Unit Tests
+</div>
+<div id="text00016.html#toc62_Write_Unit_Tests_for_ERC20_Smart_Contracts" class="sU">
+Write Unit Tests for ERC20 Smart Contracts
+</div>
+<div class="s35">
+Truffle comes standard with an automated testing framework to make testing your contracts much easier. This framework lets you write simple and manageable tests in different ways.
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://www.trufflesuite.com/truffle&amp;sa=D&amp;source=editors&amp;ust=1624824293400000&amp;usg=AOvVaw2PwkWnEMnmPrE9liwatp3U" class="s31J"><span class="s31H">https://www.trufflesuite.com/truffle</span></a>
+</div>
+<div class="s1C">
+<a href="https://www.google.com/url?q=https://www.trufflesuite.com/ganache&amp;sa=D&amp;source=editors&amp;ust=1624824293401000&amp;usg=AOvVaw1LLHXpPZRIvMCvKIkyiRw_" class="s31J"><span class="s31H">https://www.trufflesuite.com/ganache</span></a>
+</div>
+<div class="s74">
+<a href="https://www.google.com/url?q=https://youtu.be/7XmH4gOFm-4&amp;sa=D&amp;source=editors&amp;ust=1624824293401000&amp;usg=AOvVaw1KJr6a3j4CX_C-SGr1S-K0" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+5 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+PRE REQUIREMENTS
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sF9">
+<a href="#text00005.html#a2X3" class="s31V"><span class="s31U">Install Truffle</span></a>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sF9">
+<a href="#text00006.html#page_6" class="s31V"><span class="s31U">Install Ganache CLI</span></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+COMMAND OVERVIEW
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s1U">
+truffle create test
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Helper to create new contracts, migrations and tests.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+truffle test --network development
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Run JavaScript and Solidity tests.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span id="text00017.html"></span></p>
+<div class="s11">
+<div id="text00017.html#toc59_Creating_a_new_unit_test_file" class="s5X">
+Creating a new unit test file
+</div>
+<div class="s29">
+Open a new terminal and execute the command.
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ truffle create test erc20FixedSupply
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00017.html#toc60_Writing_test_for_the_contract_total_supply" class="s27">
+Writing test for the contract total supply
+</div>
+<div class="s2K">
+Write a new test to assert that the contract was created with a fixed supply of 1000 coins.
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-19">
+</col>
+<col class="class-20">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td id="page_30" colspan="2" class="s53">
+<div class="s56">
+ERC20FixedSupply.js
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="sDN">
+<div class="sPE">
+1
+</div>
+<div class="sPE">
+2
+</div>
+<div class="sPE">
+3
+</div>
+<div class="sPE">
+4
+</div>
+<div class="sPE">
+5
+</div>
+<div class="sPE">
+6
+</div>
+<div class="sPE">
+7
+</div>
+<div class="sPE">
+8
+</div>
+<div class="sPE">
+9
+</div>
+<div class="sPE">
+10
+</div>
+<div class="sPE">
+11
+</div>
+<div class="sPE">
+12
+</div>
+<div class="sPE">
+13
+</div>
+<div class="sPE">
+14
+</div>
+<div class="sPE">
+15
+</div>
+</td>
+<td class="sDW">
+<div class="sDR">
+<span class="s31P">const</span> <span class="s31N"> erc20FixedSupply = artifacts.require(</span> <span class="s32E">"erc20FixedSupply"</span> <span class="s31N">);<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31N">contract(</span> <span class="s32E">"erc20FixedSupply"</span> <span class="s31N">,</span> <span class="s31P">function</span> <span class="s31N"> () {<br />
+   it(</span> <span class="s32E">"should assert true"</span> <span class="s31N">,</span> <span class="s31P">async</span>  <span class="s31N"> </span>  <span class="s31P">function</span> <span class="s31N">() {<br />
+        </span> <span class="s31P">await</span> <span class="s31N"> erc20FixedSupply.deployed();<br />
+        </span> <span class="s31P">return</span> <span class="s31N"> assert.isTrue(</span> <span class="s31P">true</span> <span class="s31N">);<br />
+   });<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31N">   it(</span> <span class="s32E">"should return total supply of 1000"</span> <span class="s31N">,</span> <span class="s31P">async</span>  <span class="s31N"> </span>  <span class="s31P">function</span> <span class="s31N">() {<br />
+        </span> <span class="s31P">const</span> <span class="s31N"> instance =</span> <span class="s31P">await</span> <span class="s31N"> erc20FixedSupply.deployed();<br />
+        </span> <span class="s31P">const</span> <span class="s31N"> totalSupply =</span> <span class="s31P">await</span> <span class="s31N"> instance.totalSupply();<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31N">       assert.equal(totalSupply,</span> <span class="s324">1000</span> <span class="s31N">);<br />
+   });<br />
+});</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Test using the following command.
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ truffle test --network development
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+The test will pass.
+</div>
+<div id="text00017.html#toc61_Writing_test_asserting_for_the_contract_balance" class="s27">
+Writing test asserting for the contract balance
+</div>
+<div class="s2K">
+Add one more test to assert that the balance is correct after a new transfer is made between two accounts.
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-6">
+</col>
+<col class="class-7">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s56">
+ERC20FixedSupply.js
+</div>
+</td>
+</tr>
+<tr>
+<td id="page_31" class="sDN">
+<div class="sPE">
+16
+</div>
+<div class="sPE">
+17
+</div>
+<div class="sPE">
+18
+</div>
+<div class="sPE">
+19
+</div>
+<div class="sPE">
+20
+</div>
+<div class="sPE">
+21
+</div>
+<div class="sPE">
+22
+</div>
+<div class="sPE">
+23
+</div>
+<div class="sPE">
+24
+</div>
+<div class="sPK">
+25
+</div>
+</td>
+<td class="sDW">
+<div class="sDR">
+<span class="s31N">    it(</span> <span class="s32E">"should transfer 150 FIX"</span> <span class="s31N">,</span> <span class="s31P">async</span>  <span class="s31N"> </span>  <span class="s31P">function</span> <span class="s31N">(){<br />
+        </span> <span class="s31P">const</span> <span class="s31N"> instance =</span> <span class="s31P">await</span> <span class="s31N"> erc20FixedSupply.deployed();<br />
+        </span> <span class="s31P">await</span> <span class="s31N"> instance.transfer(</span> <span class="s32E">"account[1]"</span> <span class="s31N">,</span> <span class="s324">150</span> <span class="s31N">);<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31N">        </span> <span class="s31P">const</span> <span class="s31N"> balanceAccount0 =</span> <span class="s31P">await</span> <span class="s31N"> instance.balanceOf(accounts[</span> <span class="s324">0</span> <span class="s31N">]);<br />
+        </span> <span class="s31P">const</span> <span class="s31N"> balanceAccount1 =</span> <span class="s31P">await</span> <span class="s31N"> instance.balanceOf(accounts[</span> <span class="s324">1</span> <span class="s31N">]);<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31N">       assert.equal(balanceAccount0.toNumber(),</span> <span class="s324">850</span> <span class="s31N">);<br />
+       assert.equal(balanceAccount1.toNumber(),</span> <span class="s324">150</span> <span class="s31N">);<br />
+   });</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Execute the test again.
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ truffle test --network development
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+All tests will pass.
+</div>
+<div class="s12C">
+<div class="s12A-0">
+<img src="Image00015.jpg" class="s12A-1" />
+</div>
+</div>
+<div class="sE7">
+Try to change some values like the account balance at line 23 and 24 and see how the results change from pass to fail.
+</div>
+</div>
+<p><span id="text00018.html"></span></p>
+<div class="s11">
+<div id="text00018.html#page_32" class="sS">
+ERC721- Non-Fungible Tokens
+</div>
+<div id="text00018.html#toc79_Create_your_art_NFT_using_Ganache_and_OpenZeppelin" class="sU">
+Create your art NFT using Ganache and OpenZeppelin
+</div>
+<div class="sW">
+An NFT is a digital asset that represents real-world objects like art, music, in-game items and videos. In this video I'll show you how to create a NFT ERC 721 and deploy it to ethereum testnet network as well as how to add it to your metamask mobile wallet.
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://eips.ethereum.org/EIPS/eip-721&amp;sa=D&amp;source=editors&amp;ust=1624824293420000&amp;usg=AOvVaw3S-_o_s0S4uIkJ8J3rnyIw" class="s31J"><span class="s31H">https://eips.ethereum.org/EIPS/eip-721</span></a>
+</div>
+<div class="sBJ">
+<a href="https://www.google.com/url?q=https://youtu.be/IFpU4TNwXec&amp;sa=D&amp;source=editors&amp;ust=1624824293420000&amp;usg=AOvVaw0LAiWMu-EocDqEhypxlgiG" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+15 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+PRE REQUIREMENTS
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s134">
+<a href="#text00005.html#a2X3" class="s31V"><span class="s32F">Install Truffle</span></a>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s134">
+<a href="#text00009.html#a2XG" class="s31V"><span class="s32F">Create an Account on Infura.io</span></a>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s134">
+<a href="#text00021.html#toc87_Get_Test_Ether_From_Faucet_on_Rinkeby_Testnet" class="s31V"><span class="s32F">Get Test Ether From Faucet on Rinkeby Network</span></a>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s134">
+<a href="#text00008.html#toc20_MetaMask" class="s31V"><span class="s32F">Install and Setup MetaMask Wallet</span></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+COMMAND OVERVIEW
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s13R">
+truffle init
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s13V">
+Initialize new and empty Ethereum project
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s13R">
+npm install
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s142">
+This command installs a package and any packages that it depends on
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s146">
+ipfs daemon
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s14A">
+Start IPFS local server on 127.0.0.1:5001
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s146">
+ipfs add &lt;file&gt;
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s14A">
+Add file to your IPFS local node
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s146">
+ipfs pin remote add --service=pinata -name=&lt;file&gt; &lt;hash&gt;
+</div>
+</td>
+</tr>
+<tr>
+<td id="page_33" colspan="2" class="s136">
+<div class="s14A">
+Pin your file to the remote IPFS pinning service
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s13R">
+truffle compile
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s14A">
+Compile contract source file
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s146">
+truffle migrate
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s14A">
+Run migrations to deploy contracts
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s146">
+truffle console
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s136">
+<div class="s159">
+A basic interactive console connecting to an Ethereum client
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00018.html#toc64_Creating_the_project" class="s27">
+Creating the project
+</div>
+<div class="s29">
+Create a new project using truffle
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ truffle init
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Install open zeppelin contracts
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ npm install @openzeppelin/contracts
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Create a new solidity smart contract
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ touch contracts/UniqueAsset.sol
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Open the file
+</div>
+<div class="s29">
+Import ERC721 URI Storage extension
+</div>
+<div class="s29">
+Import Counters util
+</div>
+<div class="s29">
+Create a new class extending ERC721URIStorage
+</div>
+<div class="s29">
+Declare counters
+</div>
+<div class="s29">
+Declare the constructor passing the coin name and the code
+</div>
+<div class="s29">
+Create a new method for award item
+</div>
+<div class="s29">
+Inside the new method, increment the token
+</div>
+<div class="s29">
+Get the new token number
+</div>
+<div class="s29">
+Mint a new item
+</div>
+<div class="s29">
+Set the token URI
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-21">
+</col>
+<col>
+</col>
+<col class="class-22">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td id="page_34" colspan="2" class="s16R">
+<div class="s56">
+UniqueAsset.sol
+</div>
+</td>
+<td class="s16V">
+<div class="s16T">
+<a href="https://www.google.com/url?q=https://github.com/davibauer/blockchain/blob/master/nft/contracts/UniqueAsset.sol&amp;sa=D&amp;source=editors&amp;ust=1624824293441000&amp;usg=AOvVaw0kQm6OCdMH2KrrQpUMgQxn" class="s31V"><span class="s31U">View on GitHub</span></a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="s17N">
+<div class="sPE">
+1
+</div>
+<div class="sPE">
+2
+</div>
+<div class="sPE">
+3
+</div>
+<div class="sPE">
+4
+</div>
+<div class="sPE">
+5
+</div>
+<div class="sPE">
+6
+</div>
+<div class="sPE">
+7
+</div>
+<div class="sPE">
+8
+</div>
+<div class="sPE">
+9
+</div>
+<div class="sPE">
+10
+</div>
+<div class="sPE">
+11
+</div>
+<div class="sPE">
+12
+</div>
+<div class="sPE">
+13
+</div>
+<div class="sPE">
+14
+</div>
+<div class="sPE">
+15
+</div>
+<div class="sPE">
+16
+</div>
+<div class="sPE">
+17
+</div>
+<div class="sPE">
+18
+</div>
+<div class="sPE">
+19
+</div>
+<div class="sPE">
+20
+</div>
+<div class="sPE">
+21
+</div>
+<div class="sPE">
+22
+</div>
+<div class="sPE">
+23
+</div>
+</td>
+<td colspan="2" class="s17W">
+<div class="sDR">
+<span class="s32T">// SPDX-License-Identifier: MIT</span> <span class="s31N"><br />
+pragma solidity ^</span> <span class="s324">0.8.0</span> <span class="s31N">;<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31P">import</span>  <span class="s31N"> </span>  <span class="s32E">"@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol"</span> <span class="s31N">;<br />
+</span> <span class="s31P">import</span>  <span class="s31N"> </span>  <span class="s32E">"@openzeppelin/contracts/utils/Counters.sol"</span> <span class="s31N">;<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31P">contract</span>  <span class="s31N"> UniqueAsset</span> <span class="s31P">is</span>  <span class="s31N"> ERC721URIStorage {<br />
+    </span> <span class="s31P">using</span>  <span class="s31N"> Counters</span> <span class="s31P">for</span>  <span class="s31N"> Counters.Counter;<br />
+   Counters.Counter private _tokenIds;<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31N">    </span> <span class="s31P">constructor</span> <span class="s31N">() ERC721("UniqueAsset", "UNA") {}<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31N">    </span> <span class="s31P">function</span>  <span class="s31N"> </span>  <span class="s32H">awardItem</span> <span class="s31N">(address recipient, string memory metadata)<br />
+    </span> <span class="s32H">public</span> <span class="s31N"><br />
+    </span> <span class="s32H">returns</span> <span class="s31N"> (uint256)<br />
+   {<br />
+       _tokenIds.increment();<br />
+       uint256 newItemId = _tokenIds.current();<br />
+       _mint(recipient, newItemId);<br />
+       _setTokenURI(newItemId, metadata);<br />
+        </span> <span class="s31P">return</span> <span class="s31R"> newItemId;<br />
+   }<br />
+}</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Create a new migration file
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ touch migrations/2_deploy_contracts.js
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Export the smart contract in the migration file
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-23">
+</col>
+<col>
+</col>
+<col class="class-24">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s16R">
+<div class="s56">
+2_deploy_contracts.js
+</div>
+</td>
+<td class="s16V">
+<div class="s16T">
+<a href="https://www.google.com/url?q=https://github.com/davibauer/blockchain/blob/master/nft/migrations/2_deploy_contracts.js&amp;sa=D&amp;source=editors&amp;ust=1624824293449000&amp;usg=AOvVaw10o1zZ2Ri74tBsK1M4YoGF" class="s31V"><span class="s31U">View on GitHub</span></a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="s17N">
+<div class="sPE">
+1
+</div>
+<div class="sPE">
+2
+</div>
+<div class="sPE">
+3
+</div>
+<div class="sPE">
+4
+</div>
+<div class="sPE">
+5
+</div>
+</td>
+<td colspan="2" class="s17W">
+<div class="sDR">
+<span class="s31P">const</span> <span class="s31N"> UniqueAsset = artifacts.require(</span> <span class="s32E">"UniqueAsset"</span> <span class="s31N">);<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s32H">module</span> <span class="s31N">.exports =</span> <span class="s31P">function</span> <span class="s31N"> (deployer) {<br />
+   deployer.deploy(UniqueAsset);<br />
+}</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00018.html#toc65_Configuring_the_wallet" class="s27">
+Configuring the wallet
+</div>
+<div class="s29">
+Install the file system “fs” package
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ npm install fs
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Install the wallet provider “hdwallet” package
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ npm install @truffle/hdwallet-provider@1.2.3
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Open truffle-config.js file
+</div>
+<div class="s29">
+Uncomment the HDWalletProvider code section
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-8">
+</col>
+<col class="class-9">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s56">
+truffle-config.js
+</div>
+</td>
+</tr>
+<tr>
+<td class="sDN">
+<div class="sPE">
+21
+</div>
+<div class="sPE">
+22
+</div>
+<div class="sPE">
+23
+</div>
+<div class="sPE">
+24
+</div>
+<div class="sPE">
+25
+</div>
+</td>
+<td class="sDW">
+<div class="sDR">
+<span class="s31P">const</span> <span class="s31N"> HDWalletProvider =</span> <span class="s32H">require</span> <span class="s31N">(</span> <span class="s32E">'@truffle/hdwallet-provider'</span> <span class="s31N">);<br />
+</span> <span class="s31P">const</span> <span class="s31N"> infuraKey =</span> <span class="s32E">'fj4jll3k.....'</span> <span class="s31N">;<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31P">const</span> <span class="s31N"> fs =</span> <span class="s32H">require</span> <span class="s31N">(</span> <span class="s32E">'fs'</span> <span class="s31N">);<br />
+</span> <span class="s31P">const</span> <span class="s31N"> mnemonic = fs.readFileSync(</span> <span class="s32E">".secret"</span> <span class="s31N">).toString().trim();</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sE7">
+Paste your Infura project id as a value for the variable infuraKey
+</div>
+<div id="text00018.html#toc66_Configuring_the_network" class="sCY">
+Configuring the network
+</div>
+<div class="s29">
+Uncomment the “ropsten” network section
+</div>
+<div class="s29">
+Change “ropsten” to “rinkeby”
+</div>
+<div id="text00018.html#page_36" class="s29">
+Change “ropsten” infura url to “rinkeby”
+</div>
+<div class="s29">
+Change “YOU-PROJECT-ID” to “${infuraKey}”
+</div>
+<div class="s29">
+Change the network_id to 42
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-10">
+</col>
+<col class="class-11">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s56">
+truffle-config.js
+</div>
+</td>
+</tr>
+<tr>
+<td class="sDN">
+<div class="sPE">
+60
+</div>
+<div class="sPE">
+61
+</div>
+<div class="sPE">
+62
+</div>
+<div class="sPE">
+63
+</div>
+<div class="sPE">
+64
+</div>
+<div class="sPE">
+65
+</div>
+<div class="sPE">
+66
+</div>
+<div class="sPE">
+67
+</div>
+</td>
+<td class="sDW">
+<div class="sDR">
+<span class="s31N">rinkeby: {<br />
+   provider: () =&gt;</span> <span class="s31P">new</span>  <span class="s31N"> HDWalletProvider(mnemonic,</span> <span class="s32E">`https://rinkeby.infura.io/v3/${infuraKey}`</span> <span class="s31N">),<br />
+   network_id:</span> <span class="s324">4</span> <span class="s31N">,<br />
+   gas:</span> <span class="s324">5500000</span> <span class="s31N">,<br />
+   confirmations:</span> <span class="s324">2</span> <span class="s31N">,<br />
+   timeoutBlocks:</span> <span class="s324">200</span> <span class="s31N">,<br />
+   skipDryRun:</span> <span class="s31P">true</span> <span class="s31N"><br />
+},</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00018.html#toc67_Configuring_the_solidity_compiler" class="s27">
+Configuring the solidity compiler
+</div>
+<div class="s2K">
+Uncomment the “compilers” section
+</div>
+<div class="s29">
+Change version to “0.8.0”
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-12">
+</col>
+<col class="class-13">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s56">
+truffle-config.js
+</div>
+</td>
+</tr>
+<tr>
+<td id="page_37" class="s1BD">
+<div class="s1AZ">
+93
+</div>
+<div class="s1AZ">
+94
+</div>
+<div class="s1AZ">
+95
+</div>
+<div class="s1AZ">
+96
+</div>
+<div class="s1AZ">
+97
+</div>
+<div class="s1AZ">
+98
+</div>
+<div class="s1AZ">
+99
+</div>
+<div class="s1AZ">
+100
+</div>
+<div class="s1AZ">
+101
+</div>
+<div class="s1AZ">
+102
+</div>
+<div class="s1AZ">
+103
+</div>
+<div class="s1AZ">
+104
+</div>
+<div class="s1AZ">
+105
+</div>
+</td>
+<td class="s1BG">
+<div class="sDR">
+<span class="s31N">compilers: {<br />
+   solc: {<br />
+       version:</span> <span class="s32E">"0.8.0"</span> <span class="s31N">,<br />
+       docker:</span> <span class="s31P">true</span> <span class="s31N">,<br />
+       settings: {<br />
+           optimizer: {<br />
+               enabled:</span> <span class="s31P">false</span> <span class="s31N">,<br />
+               runs:</span> <span class="s324">200</span> <span class="s31N"><br />
+           },<br />
+           evmVersion:</span> <span class="s32E">"byzantinum"</span> <span class="s31N"><br />
+       }<br />
+   }<br />
+},</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00018.html#toc68_Configuring_the_private_key" class="s27">
+Configuring the private key
+</div>
+<div class="s29">
+Create the secret file
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ touch .secret
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Go to the browser and open your MetaMask wallet connected to infura network
+</div>
+<div class="s29">
+Click on your account
+</div>
+<div class="s29">
+Click on "settings"
+</div>
+<div class="s29">
+Click on "security &amp; privacy"
+</div>
+<div class="s1C7">
+<div class="s1C5-0">
+<img src="Image00016.jpg" id="page_38" class="s1C5-1" />
+</div>
+</div>
+<div class="s2K">
+Click on "reveal seed phrase"
+</div>
+<div class="s29">
+Enter your wallet password to continue
+</div>
+<div class="s29">
+Copy the private key
+</div>
+<div class="s29">
+Paste the wallet mnemonic secret
+</div>
+<div id="text00018.html#toc69_Creating_the_badge_image" class="s27">
+Creating the badge image
+</div>
+<div class="s29">
+Create the badge folder
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ mkdir badge
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Go to the badge root folder
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ cd badge
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Download the image that you will use as a badge from the internet. You can also copy and paste an existing image in this folder.
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+curl https://planouhost.z15.web.core.windows.net/badge.png &gt; badge-image.png
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00018.html#toc70_Adding_the_badge_to_your_local_IPFS" class="s27">
+Adding the badge to your local IPFS
+</div>
+<div class="s29">
+Initialize your local IPFS node
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ ipfs daemon
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Add your badge image to IPFS
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ ipfs add badge-image.png
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Running this command, you will receive a hash. This hash is your image address in IPFS.
+</div>
+<div class="s93">
+<img src="Image00017.jpg" class="s1E0" />
+</div>
+<div id="text00018.html#toc71_Pinning_the_badge_to_a_remote_IPFS_node" class="s27">
+Pinning the badge to a remote IPFS node
+</div>
+<div class="s29">
+Pin your badge using a remote IPFS service.
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+ipfs pin remote add --service=pinata --name=badge-image.png QmZPxKJWqJTdudyaZUyf6uBzwwAT41QQyxhTHmMZWB9yx4
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+You will get a response indicating the file was pinned successfully
+</div>
+<div class="s1EM">
+<div class="s1EJ">
+<img src="Image00018.jpg" class="s1EG" />
+</div>
+</div>
+<div id="text00018.html#toc72_Creating_the_badge_metadata" class="s27">
+Creating the badge metadata
+</div>
+<div class="s29">
+Create the badge metadata json file
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+touch badge-metadata.json
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Open the file
+</div>
+<div class="s29">
+Set the badge name
+</div>
+<div class="s29">
+Set the badge description
+</div>
+<div class="s29">
+Set the badge image address using a IPFS gateway
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-25">
+</col>
+<col class="class-26">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s56">
+badge-metadata.json
+</div>
+</td>
+</tr>
+<tr>
+<td class="sDN">
+<div class="sPE">
+1
+</div>
+<div class="sPE">
+2
+</div>
+<div class="sPE">
+3
+</div>
+<div class="sPE">
+4
+</div>
+<div class="sPE">
+5
+</div>
+</td>
+<td class="sDW">
+<div class="sDR">
+<span class="s31N">{<br />
+    </span> <span class="s32E">"name"</span> <span class="s31N">:</span> <span class="s32E">"My badge"</span> <span class="s31N">,<br />
+    </span> <span class="s32E">"description"</span> <span class="s31N">:</span> <span class="s32E">"My badge description"</span> <span class="s31N">,<br />
+    </span> <span class="s32E">"image"</span> <span class="s31N">:</span> <span class="s32E">"https://ipfs.io/ipfs/QmZPxKJWqJTdudyaZUyf6uBzwwAT41QQyxhTHmMZWB9yx4"</span> <span class="s31R"><br />
+}</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Add your badge metadata to IPFS
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ ipfs add badge-metadata.json
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Pin your badge metadata using a remote IPFS service
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ ipfs pin remote add --service=pinata --name=badge-metadata.json QmRzcwAtLWbeYqyaZUyf6uBzwwAT41QQyxhTHmMZWBfUTa
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00018.html#toc73_Compiling_the_smart_contract" class="s27">
+Compiling the smart contract
+</div>
+<div class="s29">
+Compile the contract using truffle
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ truffle compile
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00018.html#toc74_Migrating_the_smart_contract" class="s27">
+Migrating the smart contract
+</div>
+<div class="s29">
+Migrate the contract to rinkeby network using truffle
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ truffle migrate --network rinkeby
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00018.html#page_41" class="s27">
+Instantiate the smart contract
+</div>
+<div class="s29">
+Instantiate the contract using using truffle console
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s1GX">
+$ truffle console --network rinkeby
+</div>
+<div class="s1GX">
+truffle(rinkeby) let instance = await UniqueAsset.deployed()
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00018.html#toc76_Awarding_badge_to_a_wallet" class="s27">
+Awarding badge to a wallet
+</div>
+<div class="s29">
+Call the method “getThePrice”
+</div>
+<div class="s29">
+Enter your public ethereum address as a first parameter
+</div>
+<div class="s29">
+Enter the IPFS address corresponding your badge metadata
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s1GX">
+truffle(rinkeby) let result = await instance.awardItem("0x62761466bB3A3Da83B408B5F5fE00ac7b2a5A996","https://ipfs.io/ipfs/QmRzcwAtLWBeYqUx3ba1BkYKubSDLNTHCuiUB7WAmdfUTa")
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00018.html#toc77_Checking_badge_on_Etherscan" class="s27">
+Checking badge on Etherscan
+</div>
+<div class="s29">
+Copy the deployed contract address
+</div>
+<div class="s2T">
+<div class="s1HM-0">
+<img src="Image00019.jpg" class="s1HM-1" />
+</div>
+</div>
+<div class="sE7">
+Go to <a href="https://www.google.com/url?q=https://rinkeby.etherscan.io/&amp;sa=D&amp;source=editors&amp;ust=1624824293484000&amp;usg=AOvVaw2X6oFOKB_p-6n7749VXd0B" class="s31J"><span class="s31H">rinkeby.etherscan.io</span></a>
+</div>
+<div class="s29">
+Paste the contract address in the search bar
+</div>
+<div class="s2T">
+<div class="s1HV-0">
+<img src="Image00020.jpg" id="page_42" class="s1HV-1" />
+</div>
+</div>
+<div class="s2K">
+Click on search icon
+</div>
+<div class="s29">
+Now you can see that the contract was deployed successfully
+</div>
+<div class="s2T">
+<div class="s1J2-0">
+<img src="Image00021.jpg" class="s1J2-1" />
+</div>
+</div>
+<div class="s2K">
+You can also realize that the last transaction made was for award a new item
+</div>
+<div id="text00018.html#toc78_Adding_the_NFT_token_to_your_wallet" class="s27">
+Adding the NFT token to your wallet
+</div>
+<div class="s2K">
+Open your MetaMask wallet on your mobile phone (collectibles are only available on mobile version)
+</div>
+<div class="s29">
+Click on “collectibles”
+</div>
+<div class="s1JD">
+<div class="s1JB-0">
+<img src="Image00022.jpg" id="page_43" class="s1JB-1" />
+</div>
+</div>
+<div class="s2K">
+Click on "add collectible"
+</div>
+<div class="s29">
+Paste the token contract address here (the same that you copied in the last section)
+</div>
+<div id="text00018.html#page_44" class="s29">
+Enter the token ID, as it is the first token you will enter 1 here
+</div>
+<div class="s29">
+Click on "add"
+</div>
+<div class="s29">
+Wait for a few seconds
+</div>
+<div class="s29">
+Now the NFT token was added!
+</div>
+<div class="s1JT">
+<div class="s1JR-0">
+<img src="Image00023.jpg" class="s1JR-1" />
+</div>
+</div>
+<div id="text00018.html#page_45" class="s2K">
+Click on “UniqueAsset”
+</div>
+<div class="s29">
+Now you can see all the badges that you earn
+</div>
+<div class="s1JD">
+<div class="s1JZ-0">
+<img src="Image00024.jpg" class="s1JZ-1" />
+</div>
+</div>
+<div class="s2K">
+Click on “My Badge”
+</div>
+<div class="s29">
+You can see the badge details now!
+</div>
+<div class="s29">
+Also, you have a send button so that you can send it to another wallet
+</div>
+<div class="s1K9">
+<div class="s1K7-0">
+<img src="Image00025.jpg" id="page_46" class="s1K7-1" />
+</div>
+</div>
+<div id="text00018.html#page_47" class="sE7">
+That’s it, you just created your first NFT token!
+</div>
+</div>
+<p><span id="text00019.html"></span></p>
+<div class="s11">
+<div id="text00019.html#toc88_Ether_Faucets" class="s9Y">
+Ether Faucets
+</div>
+<div id="text00019.html#a2ZC" class="sU">
+Get Test Ether From Faucet on Ropsten Network
+</div>
+<div class="s35">
+This ethereum test faucet drips 1 ether every 5 seconds. You can use it to test smart contracts on the Ropsten network with no need to use real ether for this purpose (even because eth from the mainnet is not valid in ropsten and vice versa). You have a request limit of 1 eth for every 24 hours in order to avoid network spam. Ether in a test network has no real value except for testing purposes in smart contracts development.
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://faucet.ropsten.be&amp;sa=D&amp;source=editors&amp;ust=1624824293488000&amp;usg=AOvVaw39Zbse6NzzonrzBxkJmjX_" class="s31J"><span class="s31H">https://faucet.ropsten.be</span></a>
+</div>
+<div class="s74">
+<a href="https://www.google.com/url?q=https://youtu.be/rSL3kP13gOI&amp;sa=D&amp;source=editors&amp;ust=1624824293489000&amp;usg=AOvVaw1VYd0meZ7Ibg4mR-22rteP" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+2 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+PRE REQUIREMENTS
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sF9">
+<a href="#text00008.html#toc20_MetaMask" class="s31V"><span class="s31U">Install and Setup MetaMask Wallet</span></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span id="text00020.html"></span></p>
+<div class="s11">
+<div id="text00020.html#toc81_Accessing_the_faucet" class="s5X">
+Accessing the faucet
+</div>
+<div class="sE7">
+Go to <a href="https://www.google.com/url?q=https://faucet.ropsten.be&amp;sa=D&amp;source=editors&amp;ust=1624824293492000&amp;usg=AOvVaw0g-iC5yFF7nOgZhKww_POb" class="s31J"><span class="s31H">https://faucet.ropsten.be</span></a>
+</div>
+<div class="s29">
+Copy your wallet address (make sure the network selected is Ropsten)
+</div>
+<div class="s29">
+Paste your contract address in the form field
+</div>
+<div class="s29">
+Click on "send me test ether"
+</div>
+<div id="text00020.html#toc82_Waiting_for_the_transaction" class="s27">
+Waiting for the transaction
+</div>
+<div class="s2K">
+Click on the "transaction hash" (open in a new window)
+</div>
+<div class="s29">
+Wait for the transaction be completed
+</div>
+<div class="s29">
+The transaction was successfully completed
+</div>
+<div class="s41">
+Go to your MetaMask wallet, you have now 1 ether!
+</div>
+</div>
+<p><span id="text00021.html"></span></p>
+<div class="s11">
+<div id="text00021.html#toc87_Get_Test_Ether_From_Faucet_on_Rinkeby_Testnet" class="s33">
+Get Test Ether From Faucet on Rinkeby <span id="text00021.html#page_48"></span> Testnet
+</div>
+<div class="sW">
+This Ether faucet is running on the Rinkeby network. To prevent malicious actors from exhausting all available funds or accumulating enough Ether to mount long running spam attacks, requests are tied to common 3rd party social network accounts. Anyone having a Twitter or Facebook account may request funds within the permitted limits.
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://faucet.rinkeby.io&amp;sa=D&amp;source=editors&amp;ust=1624824293493000&amp;usg=AOvVaw35VO63U2Ccimtq0olysaU4" class="s31J"><span class="s31H">https://faucet.rinkeby.io</span></a>
+</div>
+<div class="s74">
+<a href="https://www.google.com/url?q=https://youtu.be/iJBpiBqEMtA&amp;sa=D&amp;source=editors&amp;ust=1624824293494000&amp;usg=AOvVaw18LCPDv2bcqiYJTsoSKFO_" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+2 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00021.html#toc84_Preparing_for_funding" class="s27">
+Preparing for funding
+</div>
+<div class="s29">
+Open your Metamask wallet
+</div>
+<div class="s29">
+Copy you wallet address to clipboard
+</div>
+<div class="s29">
+Go to your twitter account
+</div>
+<div class="s29">
+Paste your wallet address
+</div>
+<div class="s29">
+Click on your tweet
+</div>
+<div class="s29">
+Copy your tweet address (the url in the address bar)
+</div>
+<div id="text00021.html#toc85_Funding_your_wallet" class="s27">
+Funding your wallet
+</div>
+<div class="s41">
+Go to <a href="https://www.google.com/url?q=https://faucet.rinkeby.io&amp;sa=D&amp;source=editors&amp;ust=1624824293496000&amp;usg=AOvVaw1OGB41VLbzKTklNDl_FAnP" class="s31J"><span class="s31H">https://faucet.rinkeby.io</span></a>
+</div>
+<div class="s29">
+Paste your tweet address in the text field
+</div>
+<div class="s29">
+Click on “Give me Ether”
+</div>
+<div class="s29">
+Select on of the options available (for example: 3 Ethers / 8 hours)
+</div>
+<div class="s29">
+The request will be funding in a few seconds
+</div>
+<div class="s2T">
+<div class="s1NP-0">
+<img src="Image00026.jpg" id="page_49" class="s1NP-1" />
+</div>
+</div>
+<div id="text00021.html#toc86_Checking_your_wallet" class="s27">
+Checking your wallet
+</div>
+<div class="s29">
+Wait a few moments and check your Metamask wallet
+</div>
+<div class="s41">
+You will get 3 ether in your wallet account!
+</div>
+</div>
+<p><span id="text00022.html"></span></p>
+<div class="s11">
+<div id="text00022.html#toc123_IPFS_-_InterPlanetary_File_System" class="s9Y">
+IPFS - InterPlanetary File System
+</div>
+<div id="text00022.html#a2ZM" class="sU">
+Create Your IPFS Node
+</div>
+<div class="s35">
+The InterPlanetary File System (IPFS) is a protocol and peer-to-peer network for storing and sharing data in a distributed file system. IPFS uses content-addressing to uniquely identify each file in a global namespace connecting all computing devices.
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://ipfs.io&amp;sa=D&amp;source=editors&amp;ust=1624824293497000&amp;usg=AOvVaw3fUJS9jf6wVMTjDheE9ywi" class="s31J"><span class="s31H">https://ipfs.io</span></a>
+</div>
+<div class="sBJ">
+<a href="https://www.google.com/url?q=https://youtu.be/dFWpGn73BBM&amp;sa=D&amp;source=editors&amp;ust=1624824293497000&amp;usg=AOvVaw04WtS08v6b6m1gv56Z6Lqt" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+3 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+COMMAND OVERVIEW
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s1U">
+choco install go-ipfs
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Install the IPFS implementation in go.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+ipfs init
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Initialize the local IPFS repository.
+</div>
+</td>
+</tr>
+<tr>
+<td id="page_50" colspan="2" class="s58">
+<div class="s56">
+ipfs daemon
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Start IPFS local server on 127.0.0.1:5001.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+ipfs cat &lt;hash&gt;
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+View IPFS file content.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s1U">
+ipfs swarm peers
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Show the peers who are directly connected to your node.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span id="text00023.html"></span></p>
+<div class="s11">
+<div id="text00023.html#toc89_Installing_the_node" class="s5X">
+Installing the node
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ choco install go-ipfs
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00023.html#toc90_Configuring_the_node" class="s27">
+Configuring the node
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ ipfs init<br />
+$ ipfs daemon
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00023.html#toc91_Testing_the_node" class="s27">
+Testing the node
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="sDR">
+<span class="s31W">$ ipfs cat</span> <span class="s32B">"hash"</span> <span class="s31W"><br />
+$ ipfs swarm peers</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s1ST">
+<img src="Image00027.jpg" id="page_51" class="s1SR" />
+</div>
+<div id="text00023.html#toc92_Exploring_your_IPFS_node" class="s27">
+Exploring your IPFS node
+</div>
+<div class="s2K">
+Copy the WebUI link
+</div>
+<div class="s29">
+Go to browser and paste the link
+</div>
+<div class="s29">
+Your node is connected to IPFS!
+</div>
+<div class="s29">
+Click on "files", no files here yet!
+</div>
+<div class="s29">
+Click on "explore"
+</div>
+<div class="s29">
+Click on "peers"
+</div>
+<div class="s29">
+This are the peers that you are connected
+</div>
+<div class="s29">
+Click on "settings"
+</div>
+<div class="s29">
+You can see your node settings here
+</div>
+</div>
+<p><span id="text00024.html"></span></p>
+<div class="s11">
+<div id="text00024.html#toc98_Add_Files_to_IPFS" class="s33">
+Add Files to IPFS
+</div>
+<div class="s35">
+A computer running IPFS can ask all the peers it's connected to whether they have a file with a particular hash and, if one of them does, they send back the whole file. Without a short, unique identifier like a cryptographic hash, that wouldn't be possible.
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://ipfs.io&amp;sa=D&amp;source=editors&amp;ust=1624824293510000&amp;usg=AOvVaw1baEc1cpfOituSzR6oAvPn" class="s31J"><span class="s31H">https://ipfs.io</span></a>
+</div>
+<div id="text00024.html#page_52" class="s74">
+<a href="https://www.google.com/url?q=https://youtu.be/UAy1llcOcJw&amp;sa=D&amp;source=editors&amp;ust=1624824293510000&amp;usg=AOvVaw0PsTfdmK2DLBhjBbxJjwcC" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+2 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+PRE REQUIREMENTS
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sF9">
+<a href="#text00022.html#a2ZM" class="s31V"><span class="s31U">Create Your IPFS Node</span></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+COMMAND OVERVIEW
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s1U">
+ipfs daemon
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Start IPFS local server on 127.0.0.1:5001.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+echo "&lt;text&gt;" &gt; &lt;file&gt;
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Output a given text to a new file.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+ipfs add &lt;file&gt;
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Add file to your IPFS local node.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+ipfs cat &lt;hash&gt;
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+View IPFS file content.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span id="text00025.html"></span></p>
+<div class="s11">
+<div id="text00025.html#toc94_Adding_the_file" class="s5X">
+Adding the file
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="sDR">
+<span class="s31W">$ ipfs daemon<br />
+$ echo</span> <span class="s32B">"test"</span> <span class="s31W"> hello.txt<br />
+$ ipfs add hello.txt</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+The file was added to ipfs resulting in a hash identifier
+</div>
+<div id="text00025.html#toc95_Viewing_the_file_content_on_the_console" class="s27">
+Viewing the file content on the console
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="sDR">
+<span class="s31W">$ ipfs cat</span> <span class="s32B">"hash"</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+You will see the file content be displayed
+</div>
+<div id="text00025.html#page_53" class="s27">
+Checking the file in the web ui
+</div>
+<div class="s2K">
+Got to http://127.0.0.1:5001/webui
+</div>
+<div class="s29">
+Click on "files"
+</div>
+<div class="s29">
+Click on "pins"
+</div>
+<div class="s29">
+Copy the hash
+</div>
+<div class="s29">
+Find by this hash, you can see that this hash exists
+</div>
+<div id="text00025.html#toc97_Viewing_the_file_content_in_the_browser" class="s27">
+Viewing the file content in the browser
+</div>
+<div class="s2K">
+Open a new tab
+</div>
+<div class="s29">
+ipfs://"hash"
+</div>
+<div class="s41">
+Now you can see your file content in the browser
+</div>
+</div>
+<p><span id="text00026.html"></span></p>
+<div class="s11">
+<div id="text00026.html#toc103_Setup_IPFS_Browser_Extension" class="s33">
+Setup IPFS Browser Extension
+</div>
+<div class="s35">
+IPFS Companion allows you locally running IPFS node directly inside your favorite browser, enabling support for ipfs:// addresses, automatic IPFS gateway loading of websites and file paths, easy IPFS file import and sharing, and more.
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://ipfs.io&amp;sa=D&amp;source=editors&amp;ust=1624824293523000&amp;usg=AOvVaw11Kk0Z_w_C-9YBtpEKrntX" class="s31J"><span class="s31H">https://ipfs.io</span></a>  <span class="s31M"> </span>
+</div>
+<div class="s74">
+<a href="https://www.google.com/url?q=https://youtu.be/eVOd6vd2fGc&amp;sa=D&amp;source=editors&amp;ust=1624824293524000&amp;usg=AOvVaw04tLx6JDH22cd5nP7ThY3t" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+3 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+PRE REQUIREMENTS
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sF9">
+<a href="#text00022.html#a2ZM" class="s31V"><span class="s31U">Create Your IPFS Node</span></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+COMMAND OVERVIEW
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s1U">
+ipfs daemon
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Start IPFS local server on 127.0.0.1:5001.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span id="text00027.html"></span></p>
+<div class="s11">
+<div id="text00027.html#toc99_Installing_the_browser_extension" class="s5X">
+Installing the browser extension
+</div>
+<div class="sE7">
+Go to <a href="https://www.google.com/url?q=https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch?hl%3Den&amp;sa=D&amp;source=editors&amp;ust=1624824293529000&amp;usg=AOvVaw2tEwx14yEyllZu9wRErQKf" class="s31J"><span class="s31H">IPFS Companion Extension</span></a>
+</div>
+<div class="s29">
+Click on “Add to Brave” or the name of your browser
+</div>
+<div class="s29">
+Click on “Add extension”
+</div>
+<div class="s29">
+Click on extensions icon and pin “IPFS Companion” to extensions bar
+</div>
+<div id="text00027.html#page_54" class="s27">
+Configuring the node type
+</div>
+<div class="s2K">
+Click on “IPFS Companion” icon
+</div>
+<div class="s29">
+Click on “gear” icon
+</div>
+<div class="s29">
+On “IPFS Node Type” select “External”
+</div>
+<div id="text00027.html#toc101_Starting_an_external_node" class="s27">
+Starting an external node
+</div>
+<div class="s2K">
+Go to Visual Studio Code
+</div>
+<div class="s29">
+Open a new terminal
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ ipfs daemon
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00027.html#toc102_Importing_a_file" class="s27">
+Importing a file
+</div>
+<div class="s2K">
+Click on “IPFS Companion” icon
+</div>
+<div class="s29">
+Click on “Import”
+</div>
+<div class="s29">
+Click on “Pick a file”
+</div>
+<div class="s29">
+Select a file from your local disc
+</div>
+<div class="s41">
+The file will be stored in your ipfs node
+</div>
+</div>
+<p><span id="text00028.html"></span></p>
+<div class="s11">
+<div id="text00028.html#toc110_Pin_and_Unpin_IPFS_Files_on_Local_Node" class="s33">
+Pin and Unpin IPFS Files on Local Node
+</div>
+<div class="s35">
+To ensure that data persists on IPFS, and is not deleted during garbage collection, data can be pinned to one or more IPFS nodes. Pinning gives you control over disk space and data retention. As such, you should use that control to pin any content you wish to keep on IPFS indefinitely. The default behavior for IPFS is to pin files to your local IPFS node.
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://ipfs.io&amp;sa=D&amp;source=editors&amp;ust=1624824293532000&amp;usg=AOvVaw14MFFSLQLRpUz6efw6ws_v" class="s31J"><span class="s31H">https://ipfs.io</span></a>  <span class="s31M"> </span>
+</div>
+<div class="s74">
+<a href="https://www.google.com/url?q=https://youtu.be/POdQACj-jRI&amp;sa=D&amp;source=editors&amp;ust=1624824293533000&amp;usg=AOvVaw1Wy1-R77UmY-SuEHo3pkxq" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+3 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+PRE REQUIREMENTS
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sF9">
+<a href="#text00022.html#a2ZM" class="s31V"><span class="s31U">Create Your IPFS Node</span></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td id="page_55" colspan="2" class="s53">
+<div class="s1U">
+COMMAND OVERVIEW
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s1U">
+ipfs daemon
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Start IPFS local server on 127.0.0.1:5001.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+echo "&lt;text&gt;" &gt; &lt;file&gt;
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Output a given text to a new file.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+ipfs add &lt;file&gt;
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Add file to your IPFS local node.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+ipfs cat &lt;hash&gt;
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+View IPFS file content.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span id="text00029.html"></span></p>
+<div class="s11">
+<div id="text00029.html#toc104_Starting_your_local_node" class="s5X">
+Starting your local node
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ ipfs daemon
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00029.html#toc105_Adding_file_to_your_node" class="s27">
+Adding file to your node
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="sDR">
+<span class="s31W">$ echo</span> <span class="s32B">"world"</span> <span class="s31W"> &gt; hello.txt<br />
+$ ipfs add hello.txt</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+When you add a file, this is automatically pinned to your local node.
+</div>
+<div id="text00029.html#toc106_Checking_the_file_was_added" class="s27">
+Checking the file was added
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="sDR">
+<span class="s31W">$ ipfs cat</span> <span class="s322">your_file_hash</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00029.html#page_56" class="s27">
+Verifying your file was pinned
+</div>
+<div class="sE7">
+Go to <a href="https://www.google.com/url?q=http://127.0.0.1:5001/webui&amp;sa=D&amp;source=editors&amp;ust=1624824293544000&amp;usg=AOvVaw3YWLkn7BQ_YxuWJvWtoHJt" class="s31J"><span class="s31H">http://127.0.0.1:5001/webui</span></a>
+</div>
+<div class="s29">
+Click on “Files”
+</div>
+<div class="s29">
+Click on “Pins”
+</div>
+<div class="s29">
+Your file is there!
+</div>
+<div id="text00029.html#toc108_Unpinning_your_file" class="s27">
+Unpinning your file
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="sDR">
+<span class="s31W">$ ipfs pin rm</span> <span class="s322">your_file_hash</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s1EM">
+<div class="s21M">
+<div class="s21J-0">
+<img src="Image00028.jpg" class="s21J-1" />
+</div>
+</div>
+</div>
+<div id="text00029.html#toc109_Pinning_your_file_manually" class="s27">
+Pinning your file manually
+</div>
+<div id="text00029.html#page_57" class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="sDR">
+<span class="s31W">$ ipfs pin add</span> <span class="s322">your_file_hash</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Your file was pinned again
+</div>
+</div>
+<p><span id="text00030.html"></span></p>
+<div class="s11">
+<div id="text00030.html#toc116_Pin_and_Unpin_Files_on_Remote_Node_using_Pinata" class="s33">
+Pin and Unpin Files on Remote Node using Pinata
+</div>
+<div class="s35">
+It's also possible to pin your files to a remote pinning service. These third-party services give you the opportunity to pin files not to your own local node, but to nodes that they operate. You don't need to worry about your own node's available disk space or uptime.
+</div>
+<div class="sW">
+While you can use a remote pinning service's own GUI, CLI, or other dev tools to manage IPFS files pinned to their service, you can also work directly with pinning services using your local IPFS installation — meaning that you don't need to learn a pinning service's unique API or other tooling.
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://ipfs.io&amp;sa=D&amp;source=editors&amp;ust=1624824293548000&amp;usg=AOvVaw0VSY8BUfCvuDgwERgg3yG5" class="s31J"><span class="s31H">https://ipfs.io</span></a>  <span class="s31M"> </span>
+</div>
+<div class="s1C">
+<a href="https://www.google.com/url?q=https://pinata.cloud&amp;sa=D&amp;source=editors&amp;ust=1624824293549000&amp;usg=AOvVaw1qcUHfmnL8hVloIQhkcdOT" class="s31J"><span class="s31H">https://pinata.cloud</span></a>  <span class="s31M"> </span>
+</div>
+<div class="s74">
+<a href="https://www.google.com/url?q=https://youtu.be/0bC_YGrJAkA&amp;sa=D&amp;source=editors&amp;ust=1624824293549000&amp;usg=AOvVaw1-XdElxsKyE8Zvj1agIza6" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+4 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+PRE REQUIREMENTS
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sF9">
+<a href="#text00022.html#a2ZM" class="s31V"><span class="s31U">Create Your IPFS Node</span></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+COMMAND OVERVIEW
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s1U">
+ipfs pin remote service add pinata &lt;endpoint&gt; &lt;jwt_key&gt;
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Add a new remote pinning service.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+ipfs pin remote service ls
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+List existing pinning services added.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+ipfs add &lt;file&gt;
+</div>
+</td>
+</tr>
+<tr>
+<td id="page_58" colspan="2" class="s58">
+<div class="s5B">
+Add file to your IPFS local node.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+ipfs cat &lt;hash&gt;
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+View IPFS file content.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+ipfs pin remote add --service=pinata -name=&lt;file&gt; &lt;hash&gt;
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Pin your file to the remote IPFS pinning service.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+ipfs pin remote rm --service=pinata -name=&lt;file&gt; &lt;hash&gt;
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Unpin your file from the remote IPFS pinning service.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00030.html#toc111_Setting_up_API_Keys_on_Pinata" class="s27">
+Setting up API Keys on Pinata
+</div>
+<div class="s29">
+Log in on your Pinata account
+</div>
+<div class="s29">
+Go to “API Keys”
+</div>
+<div class="s29">
+Click on “New Key”
+</div>
+<div class="s29">
+Check “Admin”
+</div>
+<div class="s29">
+Use “admin-cli” as your “Key Name”
+</div>
+<div class="s29">
+Click on “Create Key”
+</div>
+<div class="s29">
+A new key will be generated to you
+</div>
+<div class="s29">
+Copy the “JWT” value from this window
+</div>
+<div id="text00030.html#toc112_Setting_up_Pinata_as_a_remove_service_on_your_terminal" class="s27">
+Setting up Pinata as a remove service on your terminal
+</div>
+<div class="s29">
+Add Pinata as a pinning remote service
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="sDR">
+<span class="s31W">$ ipfs pin remote service add pinata https:</span> <span class="s31X">//api.pinata.cloud/psa</span> <span class="s33W">your_jwt_key</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+List all existing remote services and check that Pinata is there
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ ipfs pin remote service ls
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00030.html#toc113_Adding_a_new_file_to_your_local_IPFS_node" class="s253">
+Adding a new file to your local IPFS node
+</div>
+<div id="text00030.html#page_59" class="s29">
+Add Pinata as a pinning remote service
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="sDR">
+<span class="s31W">$ echo</span> <span class="s32B">"world"</span> <span class="s31W"> &gt; hello.txt<br />
+$ ipfs add hello.txt<br />
+$ ipfs cat</span> <span class="s322">your_file_hash</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00030.html#toc114_Pinning_your_file_to_the_remote_IPFS_node" class="s27">
+Pinning your file to the remote IPFS node
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="sDR">
+<span class="s31W">$ ipfs pin remote add --service=pinata -name=hello.txt</span> <span class="s322">your_file_hash</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Go back to Pinata website
+</div>
+<div class="s29">
+Click on “Pin Manager”
+</div>
+<div class="s29">
+Your file will appear on this page!
+</div>
+<div id="text00030.html#toc115_Unpinning_your_file_from_the_remote_IPFS_node" class="s27">
+Unpinning your file from the remote IPFS node
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="sDR">
+<span class="s31W">$ ipfs pin remote rm --service=pinata -name=hello.txt</span> <span class="s322">your_file_hash</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Go back to Pinata website
+</div>
+<div class="s29">
+Click on “Pin Manager”
+</div>
+<div class="s41">
+Your file will no longer appear on this page, that means your file was unpinned.
+</div>
+</div>
+<p><span id="text00031.html"></span></p>
+<div class="s11">
+<div id="text00031.html#toc122_Host_Your_Site_on_IPFS_Using_Fleek" class="s33">
+Host Your Site on IPFS Using Fleek
+</div>
+<div class="s35">
+Fleek allows you to build on Open Web protocols and a base layer infrastructure powered by them. Build and host your sites, apps, Dapps, and other services on trustless, permissionless, and open technologies focused on creating user-controlled, encrypted, private, p2p experiences.
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://fleek.co&amp;sa=D&amp;source=editors&amp;ust=1624824293567000&amp;usg=AOvVaw2mLU1q8cGT_JsU2xfc6VKt" class="s31J"><span class="s31H">https://fleek.co</span></a>  <span class="s31M"> </span>
+</div>
+<div class="s74">
+<a href="https://www.google.com/url?q=https://youtu.be/_lNZd8L7gCE&amp;sa=D&amp;source=editors&amp;ust=1624824293567000&amp;usg=AOvVaw3dxFqnTF2YzANha3aYY4xm" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+5 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+COMMAND OVERVIEW
+</div>
+</td>
+</tr>
+<tr>
+<td id="page_60" colspan="2" class="s58">
+<div class="s1U">
+git clone
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Clones a repository into a newly created directory.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+npm install
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Install the dependencies in the local node_modules folder.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+fleek login
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Login in into your Fleek account.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+fleek site:init
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Initialize a Fleek site in your local directory.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s56">
+fleek site:deploy
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Deploy changes in your publish directory.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span id="text00032.html"></span></p>
+<div class="s11">
+<div id="text00032.html#toc117_Login_on_Fleek" class="s5X">
+Login on Fleek
+</div>
+<div class="s41">
+Go to <a href="https://www.google.com/url?q=https://fleek.co&amp;sa=D&amp;source=editors&amp;ust=1624824293575000&amp;usg=AOvVaw0GCnClb_uJp-cu27GTebhs" class="s31J"><span class="s31H">https://fleek.co</span></a>
+</div>
+<div class="s29">
+Log in with your account
+</div>
+<div class="s29">
+Go to your VS Code
+</div>
+<div id="text00032.html#toc118_Cloning_your_existing_repository" class="s27">
+Cloning your existing repository
+</div>
+<div class="s29">
+Clone a existing repository with sample code
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="sDR">
+<span class="s31W">$ git clone https:</span> <span class="s31X">//github.com/johnnymatthews/random-planet-facts</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00032.html#toc119_Installing_Fleek" class="s27">
+Installing Fleek
+</div>
+<div class="s2K">
+Install Fleek command line
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ npm install -g @fleekhq/fleek-cli
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Login into Fleek (you will be prompted to complete the flow in your browser)
+</div>
+<div id="text00032.html#page_61" class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ fleek login
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00032.html#toc120_Initializing_Fleek" class="s27">
+Initializing Fleek
+</div>
+<div class="s2K">
+Init the Fleek site in your current directory
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s29B">
+$ fleek site:init
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Select which team you wanna use (use the arrows key for select).
+</div>
+<div class="s29">
+Select which site you wanna use (use the arrows key for select).
+</div>
+<div class="s29">
+Select the public directory for deployment.
+</div>
+<div id="text00032.html#toc121_Deploying_your_site" class="s27">
+Deploying your site
+</div>
+<div class="s3H">
+VS CODE - BASH TERMINAL
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s29B">
+$ fleek site:deploy
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Go back to Fleek site
+</div>
+<div class="s29">
+Click on “Hosting”
+</div>
+<div class="s29">
+Click on “Verify on IPFS”
+</div>
+<div class="s29">
+This is your site hosted on IPFS
+</div>
+<div class="s29">
+You can see now your deployed site online
+</div>
+<div class="s29">
+Go back to “Hosting”
+</div>
+<div class="s29">
+Click on “your-site.on.fleek.co”
+</div>
+<div class="s29">
+This is your site host friendly address.
+</div>
+<div class="s2T">
+<div class="s2A9-0">
+<img src="Image00029.jpg" id="page_62" class="s2A9-1" />
+</div>
+</div>
+</div>
+<p><span id="text00033.html"></span></p>
+<div class="s11">
+<div id="text00033.html#toc129_ENS_-_Ethereum_Name_Service" class="sS">
+ENS - Ethereum Name Service
+</div>
+<div id="text00033.html#toc128_Register_your_ENS_to_Receive_any_Crypto__Token_or_NFT_on_Your_Wallet" class="sU">
+Register your ENS to Receive any Crypto, Token or NFT on Your Wallet
+</div>
+<div class="sW">
+Ethereum Name Service (ENS) is a service that makes it easy to send and receive cryptocurrency and access special websites by simple names rather than by long, complex strings of letters and numbers.
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://ens.domains&amp;sa=D&amp;source=editors&amp;ust=1624824293587000&amp;usg=AOvVaw130nkJTco4CgjhoDPTRQEl" class="s31J"><span class="s31H">https://ens.domains</span></a>
+</div>
+<div class="s74">
+<a href="https://www.google.com/url?q=https://youtu.be/ETQiKiu2KKc&amp;sa=D&amp;source=editors&amp;ust=1624824293588000&amp;usg=AOvVaw3VaicgcZiPmHhJUk75y_Nl" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+3 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+PRE REQUIREMENTS
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sF9">
+<a href="#text00008.html#toc20_MetaMask" class="s31V"><span class="s31U">Install and Setup MetaMask Wallet</span></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00033.html#toc124_Searching_your_domain_name" class="s27">
+Searching your domain name
+</div>
+<div class="s29">
+Go to ens.domains
+</div>
+<div class="s29">
+Click on “Launch App”
+</div>
+<div class="s29">
+Search for the domain name that you want to register (for example: planou.eth)
+</div>
+<div id="text00033.html#page_63" class="s29">
+Check the registration period (minimum 1 year)
+</div>
+<div class="s29">
+Check the registration price
+</div>
+<div id="text00033.html#toc125_Request_to_register" class="s27">
+Request to register
+</div>
+<div class="s29">
+Click on “Request To Register”
+</div>
+<div class="s29">
+The MetaMask notification will be open in order to confirm the transaction
+</div>
+<div class="s29">
+Click on “Confirm”
+</div>
+<div class="s29">
+Wait for the transaction to be confirmed on Blockchain.
+</div>
+<div class="s29">
+Click on “Register”
+</div>
+<div class="s29">
+A new MetaMask notification will be shown again
+</div>
+<div class="s29">
+Click on “Confirm”
+</div>
+<div class="s29">
+Wait for the transaction to be confirmed on Blockchain
+</div>
+<div id="text00033.html#toc126_Managing_your_registration_name" class="s27">
+Managing your registration name
+</div>
+<div class="s29">
+Click on “Manage name”
+</div>
+<div class="s29">
+Scroll down to "Addresses"
+</div>
+<div class="s29">
+Realize that the ETH address is set to the wallet that created the domain (your wallet)
+</div>
+<div class="s2T">
+<div class="s2BV-0">
+<img src="Image00030.jpg" class="s2BV-1" />
+</div>
+</div>
+<div id="text00033.html#page_64" class="s27">
+Checking the name resolution
+</div>
+<div class="s29">
+Click on your MetaMask wallet
+</div>
+<div class="s29">
+Click on “Send”
+</div>
+<div class="s29">
+Type your ENS name (for example: planou.eth)
+</div>
+<div class="s29">
+Note that the name has resolved to a wallet address
+</div>
+<div class="s2C7">
+<div class="s2C5-0">
+<img src="Image00031.jpg" class="s2C5-1" />
+</div>
+</div>
+<div class="sE7">
+Now you can use the ENS name as a recipient instead of using the wallet hash address for your transactions
+</div>
+</div>
+<p><span id="text00034.html"></span></p>
+<div class="s11">
+<div id="text00034.html#toc142_Chainlink" class="sS">
+Chainlink
+</div>
+<div id="text00034.html#toc141_Get_Crypto_Prices_Inside_Smart_Contracts_using_Chainlink_Oracles" class="sU">
+Get Crypto Prices Inside Smart Contracts using Chainlink Oracles
+</div>
+<div class="sW">
+Chainlink is a decentralized network of nodes that provide data and information from off-blockchain sources to on-blockchain smart contracts via oracles. In this video you will learn how to get the latest price of cryptocurrencies inside smart contracts, using the ETH/USD Price Feed on the Kovan testnet.
+</div>
+<div id="text00034.html#page_65" class="sZ">
+<a href="https://www.google.com/url?q=https://chain.link&amp;sa=D&amp;source=editors&amp;ust=1624824293593000&amp;usg=AOvVaw3YupCcvDZCGY83f1ZBcRPy" class="s31J"><span class="s31H">https://chain.link</span></a>  <span class="s31M"> </span>
+</div>
+<div class="s74">
+<a href="https://www.google.com/url?q=https://youtu.be/ETQiKiu2KKc&amp;sa=D&amp;source=editors&amp;ust=1624824293594000&amp;usg=AOvVaw2LdrAT4QYS-SkEU2NXuFfw" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+10 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+PRE REQUIREMENTS
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sF9">
+<a href="#text00005.html#a2X3" class="s31V"><span class="s31U">Install Truffle</span></a>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sF9">
+<a href="#text00009.html#a2XG" class="s31V"><span class="s31U">Create an Account on Infura.io</span></a>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s2D5">
+Get Test Ether From Faucet on Kovan Network
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="sF9">
+<a href="#text00008.html#toc20_MetaMask" class="s31V"><span class="s31U">Install and Setup MetaMask Wallet</span></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="s25">
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s1U">
+COMMAND OVERVIEW
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s1U">
+npm install fs
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Install the fs package that provides a lot of very useful functionality to access and interact with the file system.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s1U">
+npm install @truffle/hdwallet-provider
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Install the HD Wallet-enabled Web3 provider. This is used to sign transactions for addresses derived from a 12 or 24 word mnemonic.
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s1U">
+truffle migrate --network kovan
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="s58">
+<div class="s5B">
+Run migrations to deploy contracts.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00034.html#toc130_Creating_the_project" class="sCY">
+Creating the project
+</div>
+<div class="s29">
+Go a Terminal and click on “New Terminal”
+</div>
+<div class="s29">
+Initialize a new truffle project
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ truffle init
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="sE7">
+Install Chainlink contracts package
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ npm install @chainlink/contracts
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00034.html#toc131_Creating_the_smart_contract" class="s27">
+Creating the smart contract
+</div>
+<div class="s29">
+Create a new smart contract for price consumption
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ touch contracts/PriceConsumer.sol
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Open the file “PriceConsumer.sol”
+</div>
+<div class="s93">
+<img src="Image00032.jpg" class="s2F6" />
+</div>
+<div class="s2K">
+Define the Solidity version
+</div>
+<div class="s29">
+Import chainlink contract interface
+</div>
+<div class="s29">
+Define the contract name
+</div>
+<div class="s29">
+Define the contract constructor
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-14">
+</col>
+<col class="class-15">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s56">
+PriceConsumer.sol
+</div>
+</td>
+</tr>
+<tr>
+<td id="page_67" class="sDN">
+<div class="sPE">
+1
+</div>
+<div class="sPE">
+2
+</div>
+<div class="sPE">
+3
+</div>
+<div class="sPE">
+4
+</div>
+<div class="sPE">
+5
+</div>
+<div class="sPE">
+6
+</div>
+<div class="sPE">
+7
+</div>
+<div class="sPE">
+8
+</div>
+<div class="sPE">
+9
+</div>
+<div class="sPE">
+10
+</div>
+<div class="sPE">
+11
+</div>
+<div class="sPE">
+12
+</div>
+<div class="sPE">
+13
+</div>
+</td>
+<td class="sDW">
+<div class="sDR">
+<span class="s32T">// SPDX-License-Identifier: MIT</span> <span class="s31N"><br />
+pragma solidity ^</span> <span class="s324">0.8.0</span> <span class="s31N">;<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31P">import</span>  <span class="s31N"> </span>  <span class="s32E">"@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol"</span> <span class="s31P"><br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31P">contract</span> <span class="s31R"> PriceConsumer {</span>
+</div>
+<div class="sN6">
+<span class="s31N">   aggregatorV3Interface</span> <span class="s31P">internal</span>  <span class="s31N"> priceFeed;<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31N">    </span> <span class="s31P">constructor</span> <span class="s31R">(){<br />
+       priceFeed = AggregatorV3Interface()<br />
+   }<br />
+}</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sE7">
+Go to <a href="https://www.google.com/url?q=https://docs.chain.link/docs/ethereum-addresses&amp;sa=D&amp;source=editors&amp;ust=1624824293610000&amp;usg=AOvVaw2WTihyrSZYIwAXUqwHz9Lq" class="s31J"><span class="s31H">docs.chain.link/docs/ethereum-addresses</span></a>
+</div>
+<div class="s29">
+Scroll down to “Kovan” section
+</div>
+<div class="s29">
+Copy the “Proxy” address on the line “ETH/USD”
+</div>
+<div class="s2GE">
+<div class="s2GC-0">
+<img src="Image00033.jpg" id="page_68" class="s2GC-1" />
+</div>
+</div>
+<div class="s2K">
+Paste the address on AggregatorV3Interface constructor
+</div>
+<div class="s29">
+Create the function to get the price
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-14">
+</col>
+<col class="class-15">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s56">
+PriceConsumer.sol
+</div>
+</td>
+</tr>
+<tr>
+<td id="page_69" class="sDN">
+<div class="sPE">
+1
+</div>
+<div class="sPE">
+2
+</div>
+<div class="sPE">
+3
+</div>
+<div class="sPE">
+4
+</div>
+<div class="sPE">
+5
+</div>
+<div class="sPE">
+6
+</div>
+<div class="sPE">
+7
+</div>
+<div class="sPE">
+8
+</div>
+<div class="sPE">
+9
+</div>
+<div class="sPE">
+10
+</div>
+<div class="sPE">
+11
+</div>
+<div class="sPE">
+12
+</div>
+<div class="sPE">
+13
+</div>
+<div class="sPE">
+14
+</div>
+<div class="sPE">
+15
+</div>
+<div class="sPE">
+16
+</div>
+<div class="sPE">
+17
+</div>
+<div class="sPE">
+18
+</div>
+<div class="sPE">
+19
+</div>
+<div class="sPE">
+20
+</div>
+<div class="sPE">
+21
+</div>
+<div class="sPE">
+22
+</div>
+<div class="sPE">
+23
+</div>
+<div class="sPE">
+24
+</div>
+</td>
+<td class="sDW">
+<div class="sDR">
+<span class="s32T">// SPDX-License-Identifier: MIT</span> <span class="s31N"><br />
+pragma solidity ^</span> <span class="s324">0.8.0</span> <span class="s31N">;<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31P">import</span>  <span class="s31N"> </span>  <span class="s32E">"@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol"</span> <span class="s31P"><br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31P">contract</span> <span class="s31R"> PriceConsumer {</span>
+</div>
+<div class="sN6">
+<span class="s31N">   aggregatorV3Interface</span> <span class="s31P">internal</span>  <span class="s31R"> priceFeed;<br />
+</span>
+</div>
+<div class="sDR">
+<span class="s31N">    </span> <span class="s31P">constructor</span> <span class="s31N">(){<br />
+       priceFeed = AggregatorV3Interface(         </span> <span class="s324">0x9326BFA02ADD2366b30bacB125260Af641031331</span> <span class="s31N">)<br />
+   }<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31N">    </span> <span class="s31P">function</span>  <span class="s31N"> </span>  <span class="s32H">getThePrice</span> <span class="s31N">()</span> <span class="s32H">public</span>  <span class="s31N"> </span>  <span class="s32H">view</span>  <span class="s31N"> </span>  <span class="s32H">returns</span> <span class="s31N"> (int){<br />
+       (<br />
+           uint80 roundID,<br />
+           int price,<br />
+           uint startedAt,<br />
+           uint timeStamp,<br />
+           uint80 answeredInRound,<br />
+       ) = priceFeed.latestRoundDate();<br />
+        </span> <span class="s31P">return</span> <span class="s31R"> price;<br />
+   }<br />
+}</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00034.html#toc132_Creating_the_migration" class="s27">
+Creating the migration
+</div>
+<div class="s29">
+Create the migration file
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ touch migrations/2_deploy_contracts.sol
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s93">
+<img src="Image00034.jpg" class="s2J4" />
+</div>
+<div class="s2K">
+Write code to deploy the “PriceConsumer” smart contract
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-10">
+</col>
+<col class="class-11">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s56">
+2_deploy_contracts.js
+</div>
+</td>
+</tr>
+<tr>
+<td class="sDN">
+<div class="sPE">
+1
+</div>
+<div class="sPE">
+2
+</div>
+<div class="sPE">
+3
+</div>
+<div class="sPE">
+4
+</div>
+<div class="sPE">
+5
+</div>
+</td>
+<td class="sDW">
+<div class="sDR">
+<span class="s31P">const</span> <span class="s31N"> PriceConsumer = artifacts.require(</span> <span class="s32E">"PriceConsumer"</span> <span class="s31N">);<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s32H">module</span> <span class="s31N">.exports =</span> <span class="s31P">function</span> <span class="s31N">(deployer){<br />
+   deployer.deploy(PriceConsumer);<br />
+}</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00034.html#toc133_Setting_up_your_infura_project" class="s27">
+Setting up your infura project
+</div>
+<div class="s2K">
+Go to infura.io
+</div>
+<div id="text00034.html#page_71" class="s29">
+Access your dashboard
+</div>
+<div class="s29">
+Click on "ethereum"
+</div>
+<div class="s29">
+Click on "create a project"
+</div>
+<div class="s29">
+Define the project name
+</div>
+<div class="s29">
+You can connect with different testnets and also to the mainnet
+</div>
+<div class="s29">
+Copy the project id
+</div>
+<div class="s2T">
+<div class="s2K1-0">
+<img src="Image00035.jpg" class="s2K1-1" />
+</div>
+</div>
+<div class="s2K">
+Save changes
+</div>
+<div id="text00034.html#toc134_Configuring_the_wallet" class="s27">
+Configuring the wallet
+</div>
+<div class="s29">
+Install the file system “fs” package
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ npm install fs
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00034.html#page_72" class="s2K">
+Install the wallet provider “hdwallet” package
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ npm install @truffle/hdwallet-provider@1.2.3
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Open truffle-config.js file
+</div>
+<div class="s29">
+Uncomment the HDWalletProvider code section
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-8">
+</col>
+<col class="class-9">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s56">
+truffle-config.js
+</div>
+</td>
+</tr>
+<tr>
+<td class="sDN">
+<div class="sPE">
+21
+</div>
+<div class="sPE">
+22
+</div>
+<div class="sPE">
+23
+</div>
+<div class="sPE">
+24
+</div>
+<div class="sPE">
+25
+</div>
+</td>
+<td class="sDW">
+<div class="sDR">
+<span class="s31P">const</span> <span class="s31N"> HDWalletProvider =</span> <span class="s32H">require</span> <span class="s31N">(</span> <span class="s32E">'@truffle/hdwallet-provider'</span> <span class="s31N">);<br />
+</span> <span class="s31P">const</span> <span class="s31N"> infuraKey =</span> <span class="s32E">'fj4jll3k.....'</span> <span class="s31N">;<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31P">const</span> <span class="s31N"> fs =</span> <span class="s32H">require</span> <span class="s31N">(</span> <span class="s32E">'fs'</span> <span class="s31N">);<br />
+</span> <span class="s31P">const</span> <span class="s31N"> mnemonic = fs.readFileSync(</span> <span class="s32E">".secret"</span> <span class="s31N">).toString().trim();</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sE7">
+Paste your Infura project id as a value for the variable infuraKey
+</div>
+<div id="text00034.html#toc135_Configuring_the_network" class="sCY">
+Configuring the network
+</div>
+<div class="s29">
+Uncomment the “ropsten” network section
+</div>
+<div class="s29">
+Change “ropsten” to “kovan”
+</div>
+<div class="s29">
+Change “ropsten” infura url to “kovan”
+</div>
+<div class="s29">
+Change “YOU-PROJECT-ID” to “${infuraKey}”
+</div>
+<div class="s29">
+Change the network_id to 42
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-6">
+</col>
+<col class="class-7">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s56">
+truffle-config.js
+</div>
+</td>
+</tr>
+<tr>
+<td class="sDN">
+<div class="sPE">
+60
+</div>
+<div class="sPE">
+61
+</div>
+<div class="sPE">
+62
+</div>
+<div class="sPE">
+63
+</div>
+<div class="sPE">
+64
+</div>
+<div class="sPE">
+65
+</div>
+<div class="sPE">
+66
+</div>
+<div class="sPE">
+67
+</div>
+</td>
+<td class="sDW">
+<div class="sDR">
+<span class="s31N">kovan: {<br />
+   provider: () =&gt;</span> <span class="s31P">new</span>  <span class="s31N"> HDWalletProvider(mnemonic,</span> <span class="s32E">`https://kovan.infura.io/v3/${infuraKey}`</span> <span class="s31N">),<br />
+   network_id:</span> <span class="s324">42</span> <span class="s31N">,<br />
+   gas:</span> <span class="s324">5500000</span> <span class="s31N">,<br />
+   confirmations:</span> <span class="s324">2</span> <span class="s31N">,<br />
+   timeoutBlocks:</span> <span class="s324">200</span> <span class="s31N">,<br />
+   skipDryRun:</span> <span class="s31P">true</span> <span class="s31N"><br />
+},</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00034.html#page_73" class="s27">
+Configuring the solidity compiler
+</div>
+<div class="s2K">
+Uncomment the “compilers” section
+</div>
+<div class="s29">
+Change version to “0.8.0”
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-12">
+</col>
+<col class="class-13">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s53">
+<div class="s56">
+truffle-config.js
+</div>
+</td>
+</tr>
+<tr>
+<td class="s1BD">
+<div class="s1AZ">
+93
+</div>
+<div class="s1AZ">
+94
+</div>
+<div class="s1AZ">
+95
+</div>
+<div class="s1AZ">
+96
+</div>
+<div class="s1AZ">
+97
+</div>
+<div class="s1AZ">
+98
+</div>
+<div class="s1AZ">
+99
+</div>
+<div class="s1AZ">
+100
+</div>
+<div class="s1AZ">
+101
+</div>
+<div class="s1AZ">
+102
+</div>
+<div class="s1AZ">
+103
+</div>
+<div class="s1AZ">
+104
+</div>
+<div class="s1AZ">
+105
+</div>
+</td>
+<td class="s1BG">
+<div class="sDR">
+<span class="s31N">compilers: {<br />
+   solc: {<br />
+       version:</span> <span class="s32E">"0.8.0"</span> <span class="s31N">,<br />
+       docker:</span> <span class="s31P">true</span> <span class="s31N">,<br />
+       settings: {<br />
+           optimizer: {<br />
+               enabled:</span> <span class="s31P">false</span> <span class="s31N">,<br />
+               runs:</span> <span class="s324">200</span> <span class="s31N"><br />
+           },<br />
+           evmVersion:</span> <span class="s32E">"byzantinum"</span> <span class="s31N"><br />
+       }<br />
+   }<br />
+},</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00034.html#toc137_Configuring_the_private_key" class="s27">
+Configuring the private key
+</div>
+<div class="s29">
+Create the secret file
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ touch .secret
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Go to the browser and open your MetaMask wallet connected to infura network
+</div>
+<div class="s29">
+Click on your account
+</div>
+<div class="s29">
+Click on "settings"
+</div>
+<div class="s29">
+Click on "security &amp; privacy"
+</div>
+<div class="s1C7">
+<div class="s1C5-0">
+<img src="Image00016.jpg" id="page_74" class="s1C5-1" />
+</div>
+</div>
+<div class="s2K">
+Click on "reveal seed phrase"
+</div>
+<div class="s29">
+Enter your wallet password to continue
+</div>
+<div class="s29">
+Copy the private key
+</div>
+<div class="s29">
+Paste the wallet mnemonic secret
+</div>
+<div id="text00034.html#toc138_Compiling_the_smart_contract" class="s27">
+Compiling the smart contract
+</div>
+<div class="s29">
+Compile the contract using truffle
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ truffle compile
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00034.html#toc139_Deploying_the_smart_contract" class="s27">
+Deploying the smart contract
+</div>
+<div class="s29">
+Deploy the contract to kovan network using truffle
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ truffle migrate --network kovan
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Wait for the contract be deployed and the transactions be confirmed on blockchain
+</div>
+<div id="text00034.html#page_75" class="s29">
+Confirm your contract address
+</div>
+<div class="s93">
+<img src="Image00036.jpg" class="s2R6" />
+</div>
+<div id="text00034.html#toc140_Getting_the_price_information_from_the_smart_contract" class="s27">
+Getting the price information from the smart contract
+</div>
+<div class="s29">
+Instantiate the contract using using truffle console
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s1GX">
+$ truffle console --network kovan
+</div>
+<div class="s1GX">
+truffle(kovan) let instance = await PriceConsumer.deployed()
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Call the method “getThePrice”
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s1GX">
+truffle(kovan) let price = await instance.getThePrice()
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00034.html#page_76" class="s2K">
+Output the result to number
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="sDR">
+<span class="s31W">truffle(kovan) price.toNumber()<br />
+</span> <span class="s32D">265499339990</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="sE7">
+That’s it, you just created a smart contract and consumed the chainlink price feed oracle!
+</div>
+</div>
+<p><span id="text00035.html"></span></p>
+<div class="s11">
+<div id="text00035.html#toc148_Nethereum" class="sS">
+Nethereum
+</div>
+<div id="text00035.html#toc147_Get_Ether_Balance_using_Nethereum" class="sU">
+Get Ether Balance using Nethereum
+</div>
+<div class="sW">
+Nethereum is an open source .NET integration library for Ethereum, simplifying smart contract management and interaction with Ethereum nodes whether they are public or private.
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://nethereum.com&amp;sa=D&amp;source=editors&amp;ust=1624824293641000&amp;usg=AOvVaw0qMtaPY7zw2FJoF5-1Rxnv" class="s31J"><span class="s31H">https://nethereum.com</span></a>  <span class="s31M"> </span>
+</div>
+<div class="s74">
+<a href="https://www.google.com/url?q=https://youtu.be/xIYCv15MpbA&amp;sa=D&amp;source=editors&amp;ust=1624824293642000&amp;usg=AOvVaw2qydc0iQhOz5k4yHDhbKTs" class="s31J"><span class="s31H">View on YouTube</span></a>
+</div>
+<table class="s25">
+<colgroup>
+<col span="2">
+</col>
+<col class="class-1">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td colspan="2" class="s1W">
+<div class="s1U">
+ESTIMATED TIME
+</div>
+</div>
+</td>
+<td class="s20">
+<div class="s1Y">
+5 minutes
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00035.html#toc143_Creating_the_project" class="s253">
+Creating the project
+</div>
+<div class="s29">
+Go a Terminal and click on “New Terminal”
+</div>
+<div class="s29">
+Create a new dotnet console project
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ dotnet new console -o sample
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Go to the project root directory
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ cd sample
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00035.html#toc144_Installing_web3" class="sCY">
+Installing web3
+</div>
+<div class="s29">
+Install nethereum web3 package
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ dotnet add package Nethereum.Web3
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Restore all the project packages
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ dotnet restore
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="text00035.html#toc145_Creating_the_method" class="s27">
+Creating the method
+</div>
+<div class="s29">
+Open “Program.cs” file
+</div>
+<div class="s29">
+Add reference for threading and web3
+</div>
+<div class="s29">
+Add a new method for getting the account balance
+</div>
+<div class="s29">
+Instantiate a new web3 object
+</div>
+<div class="s29">
+Go to your infura project settings
+</div>
+<div class="s29">
+Select “Ropsten” network
+</div>
+<div class="s29">
+Copy Ropsten https endpoint
+</div>
+<div class="s2UC">
+<img src="Image00037.jpg" class="s2UA" />
+</div>
+<div class="s2K">
+Use this endpoint as a parameter for web3 object constructor
+</div>
+<div class="s29">
+Get the balance from web3
+</div>
+<div class="s29">
+Use your wallet public address as a parameter
+</div>
+<div class="s29">
+Write code to output the balance in Wei
+</div>
+<div class="s29">
+Convert the Wei balance in Ether
+</div>
+<div class="s29">
+Write code to output the balance in Ether
+</div>
+<div class="s29">
+Now change your main method in order to call GetAccountBalance()
+</div>
+<table class="s25">
+<colgroup>
+<col class="class-28">
+</col>
+<col class="class-29">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td id="page_78" colspan="2" class="s53">
+<div class="s56">
+Program.cs
+</div>
+</td>
+</tr>
+<tr>
+<td class="sDN">
+<div class="s1AZ">
+1
+</div>
+<div class="s1AZ">
+2
+</div>
+<div class="s1AZ">
+3
+</div>
+<div class="s1AZ">
+4
+</div>
+<div class="s1AZ">
+5
+</div>
+<div class="s1AZ">
+6
+</div>
+<div class="s1AZ">
+7
+</div>
+<div class="s1AZ">
+8
+</div>
+<div class="s1AZ">
+9
+</div>
+<div class="s1AZ">
+10
+</div>
+<div class="s1AZ">
+11
+</div>
+<div class="s1AZ">
+12
+</div>
+<div class="s1AZ">
+13
+</div>
+<div class="s1AZ">
+14
+</div>
+<div class="s1AZ">
+15
+</div>
+<div class="s1AZ">
+16
+</div>
+<div class="s1AZ">
+17
+</div>
+<div class="s1AZ">
+18
+</div>
+<div class="s1AZ">
+19
+</div>
+<div class="s1AZ">
+20
+</div>
+<div class="s1AZ">
+21
+</div>
+<div class="s1AZ">
+22
+</div>
+<div class="s1AZ">
+23
+</div>
+<div class="s1AZ">
+24
+</div>
+<div class="s1AZ">
+25
+</div>
+</td>
+<td class="sDW">
+<div class="s2VJ">
+using System;<br />
+using System.Threading.Tasks;<br />
+using Nethereum.Web3;<br />
+
+</div>
+<div class="sN6">
+<span class="s31N">namespace NethereumSample<br />
+{<br />
+    </span> <span class="s31P">class</span>  <span class="s31N"> </span>  <span class="s32H">Program</span> <span class="s31N"><br />
+   {<br />
+        </span> <span class="s31P">static</span>  <span class="s31N"> </span>  <span class="s31P">void</span> <span class="s31N"> Main(string[] args)<br />
+       {<br />
+           GetAccountBalance().Wait();<br />
+           Console.ReadLine();<br />
+       }<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31N">        </span> <span class="s31P">static</span>  <span class="s31N"> </span>  <span class="s31P">async</span> <span class="s31N"> Task GetAccountBalance()<br />
+       {<br />
+            </span> <span class="s31P">var</span> <span class="s31N"> web3 =</span> <span class="s31P">new</span> <span class="s31N"> Web3(</span> <span class="s32E">"https://ropsten.infura.io/v3/39180531508b4b659780ef7a36426a86"</span> <span class="s31N">);<br />
+            </span> <span class="s31P">var</span> <span class="s31N"> balance =</span> <span class="s31P">await</span> <span class="s31N"> web3.Eth.GetBalance.SendRequestAsync(</span> <span class="s32E">"0x03d1b3162DBFaB4A175038eAa4EA4b39423d5A6F"</span> <span class="s31N">);<br />
+           Console.WriteLine($</span> <span class="s32E">"Balance in Wei: {balance.Value}"</span> <span class="s31N">);<br />
+</span>
+</div>
+<div class="sN6">
+<span class="s31N">            </span> <span class="s31P">var</span> <span class="s31N"> etherAmount = Web3.Convert.FromWei(balance.Value);<br />
+           Console.WriteLine($</span> <span class="s32E">"Balance in Ether: {etherAmount}"</span> <span class="s31N">);<br />
+       }<br />
+   }<br />
+}</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="text00035.html#toc146_Getting_the_balance" class="s253">
+Getting the balance
+</div>
+<div id="text00035.html#page_79" class="s29">
+Build the project
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ dotnet build
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s2K">
+Run the project
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1U">
+TERMINAL
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="s3S">
+$ dotnet run
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s93">
+<img src="Image00038.jpg" class="s2WG" />
+</div>
+<div class="s2WR">
+<img src="Image00039.jpg" class="s2WN" />
+</div>
+</div>

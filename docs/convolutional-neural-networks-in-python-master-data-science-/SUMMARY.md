@@ -1,0 +1,2 @@
++   [python 卷积神经网络 实战：python、theano 和 tensorflow 现代深度学习 数据科学与机器学习高级指南（python 机器学习）](README.md)
++   [python 卷积神经网络 实战：python、theano 和 tensorflow 现代深度学习 数据科学与机器学习高级指南（python 机器学习）](convolutional-neural-networks-in-python-master-data-science-_0.md)

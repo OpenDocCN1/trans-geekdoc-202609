@@ -1,0 +1,88 @@
+
+Ransomware attacks are a twist on traditional cryptographic attacks. Instead of the attacker attempting to steal credentials, discover keys, attack cryptosystems, and decrypt ciphertext, the attacker uses cryptography to hold an organization’s data hostage by encrypting it and demanding a ransom in exchange for the decryption key. The attacker frequently threatens the organization by encrypting sensitive and critical data, which the organization cannot get back, and sometimes even threatens to release encrypted data, along with the key, to the public Internet.
+
+Almost all ransomware attacks occur after a malicious entity has invaded an organization’s infrastructure through attack vectors, very often phishing attacks. Ransomware has recently been used to attack hospitals, school districts, manufacturing companies, and other critical infrastructure. One of the most recent examples was the Colonial Pipeline attack, showing that ransomware is rapidly becoming the most impactful cyberthreat that organizations face.
+
+## REVIEW
+
+Objective 3.7: Understand methods of cryptanalytic attacks In this objective we discussed the various attack methods that can be attempted against cryptographic systems. Cryptanalytic attacks typically target keys, algorithms, and implementation of the cryptosystem itself.
+
+Attacks that target keys include common brute-force and dictionary attacks. Algorithm attacks include more sophisticated attacks that target both pieces of ciphertext and plaintext to gain insight into how the encryption/decryption process works. We also examined frequency analysis and chosen ciphertext attacks. Implementation attacks include side-channel attacks, fault injection attacks, and timing attacks. We also discussed on-path (formally known as man-in-the-middle or MITM) attacks that attempt to interrupt communications or cryptographic processes. Other advanced techniques include pass-the-hash and Kerberos exploitation attacks. We concluded our discussion with how ransomware attacks use cryptography in a different way to deny people the use of their data.
+
+### 3.7 QUESTIONS
+
+[1](#ch03.xhtml#ch3ques7-1). Your company has recently endured a cyberattack, and researchers have discovered that many different users’ encryption keys were compromised. The post-attack analysis indicates that the attacker was able to hack the application that generates keys, discovering that keys are temporarily stored in memory until the application is rebooted, and was therefore able to steal the keys directly from the application. Which of the following best describes this type of attack?
+
+A. Fault injection attack
+
+B. Timing attack
+
+C. Ransomware attack
+
+D. Implementation attack
+
+[2](#ch03.xhtml#ch3ques7-2). You are a security researcher, and you have discovered that a web-based cryptographic application is vulnerable. If it receives carefully crafted input, it can be made to issue valid encryption keys to anyone, including an attacker. Which of the following best describes this type of attack?
+
+A. Timing attack
+
+B. Fault injection
+
+C. Frequency analysis
+
+D. Pass-the-hash
+
+### 3.7 ANSWERS
+
+[1](#ch03.xhtml#r_ch3ques7-1). D Since this type of attack took advantage of a flaw in the application that generates keys, this would be an implementation attack.
+
+[2](#ch03.xhtml#r_ch3ques7-2). B In this type of attack, a web application could receive faulty input, which creates an error condition and causes valid encryption keys to be issued to an attacker. This would be considered a fault injection attack.
+
+## Apply security principles to site and facility design
+
+In this objective and the next one, Objective 3.9, we’ll discuss physical security elements. First, in this objective, we will explore how the secure design principles outlined in Objective 3.1 apply to the physical and environmental security controls, particularly site and facility design.
+
+### Site and Facility Design
+
+Although much of the CISSP exam relates to technical and administrative controls, it also covers physical controls, which are also critically important to protect assets. Site and facility design are advanced concepts that many cybersecurity professionals don’t have knowledge of or experience with. We’re going to discuss how to secure an organization’s site and its facilities and how to design and implement controls to protect people, equipment, and facilities.
+
+#### Site Planning
+
+If an organization is developing a new site, it has the opportunity to design the premises and facilities to address a wide variety of threats. If the organization is taking over an existing facility, particularly an old one, it may have to make some adjustments in the form of remodeling, retrofitting, landscaping, and so on, to ensure that fundamental security controls are in place to meet threats.
+
+Site planning focuses on several key areas:
+
+• Crime prevention and disruption Placement of fences, security guards, and warning signage, as well as implementation of physical security and intrusion detection alarms, motion detectors, and security cameras. Crime disruption (delay) mechanisms are layers of defenses that slow down an adversary, such as an intruder, and include controls of locks, security personnel, and other physical barriers.
+
+• Reduction of damage Minimization of damage resulting from incidents, by implementing stronger interior walls and doors, adding external barriers, and hardening structures.
+
+• Incident prevention, assessment, and response Assessment and response controls include the same physical intrusion detection mechanisms and security guards. Response procedures include fire suppression mechanisms, emergency response and contingency procedures, law enforcement notification, as well as external medical and security entities.
+
+Common site planning steps to help ensure that physical and environmental security controls are in place include the following:
+
+1. Identifying governance (regulatory and legal) requirements that the organization must meet
+
+2. Defining risk for the physical and environmental security program, which includes assessment, analysis, and risk response
+
+3. Developing controls and countermeasures in response to a risk assessment, as well as their performance metrics
+
+4. Focusing on deterrence, delaying, detection, assessment, and response processes and controls
+
+### Cross-Reference
+
+Objective 1.10 covered risk management concepts in depth.
+
+### Secure Design Principles
+
+In Objective 3.1, we discussed several key principles that are critical in security architecture and engineering. Security design is important so that systems, processes, and even the security controls involved don’t have to be redesigned, reengineered, or replaced at a later date. Although we discussed secure design principles in the context of administrative and technical controls, these same principles apply to physical and environmental design.
+
+#### Threat Modeling
+
+You already know that threat modeling goes beyond simply listing generic threats and threat actors. For threat modeling to be effective, you must go into a deeper context and relate probable threats with the inherent vulnerabilities in assets unique to your organization. Threat modeling in the physical and environmental context works the same way and requires that you do the following:
+
+• Determine generic threat actors and threats
+
+• Relate those threat actors and threats to the specifics of the organization, its facilities, site design, and weaknesses that are inherent to those characteristics
+
+• Take into account the organization’s schedules and traffic flows, as well as its natural and artificial barriers
+
+• Examine the assets that someone would want to physically interact with, to include disrupting them, destroying them, or stealing them

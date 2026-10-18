@@ -1,0 +1,10 @@
+
+
+![sigma-summation Underscript i equals 1 Overscript upper K Endscripts StartFraction left-parenthesis n ModifyingAbove normal p With Ì‚ Subscript i Baseline minus n p Subscript i Baseline right-parenthesis squared Over n p Subscript i Baseline EndFraction equals n bold e Subscript left-parenthesis upper K minus 1 right-parenthesis Superscript down-tack Baseline bold upper Sigma Subscript left-parenthesis upper K minus 1 right-parenthesis Superscript negative 1 Baseline bold e Subscript left-parenthesis upper K minus 1 right-parenthesis Baseline long right-arrow Overscript d Endscripts chi Subscript upper K minus 1 Superscript 2 Baseline period](images/c04-math-0075.png)
+
+<math display="block" overflow="scroll"><munderover><mrow><mo stretchy="false" movablelimits="false">&#8721;</mo></mrow><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>K</mi></mrow></munderover><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mi>n</mi><msub><mrow><mover accent="true"><mi mathvariant="normal">p</mi><mo>&#770;</mo></mover></mrow><mi>i</mi></msub><mo>&#8722;</mo><mi>n</mi><msub><mi>p</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mrow><mi>n</mi><msub><mi>p</mi><mi>i</mi></msub></mrow></mfrac><mo>=</mo><mi>n</mi><msubsup><mrow><mi mathvariant="bold">e</mi></mrow><mrow><mo stretchy="false">(</mo><mi>K</mi><mo>&#8722;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mrow><mo>&#8868;</mo></mrow></msubsup><msubsup><mrow><mi mathvariant="bold">&#931;</mi></mrow><mrow><mo stretchy="false">(</mo><mi>K</mi><mo>&#8722;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mrow><mo>&#8722;</mo><mn>1</mn></mrow></msubsup><msub><mi mathvariant="bold">e</mi><mrow><mo stretchy="false">(</mo><mi>K</mi><mo>&#8722;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msub><mover accent="true"><mo>&#x027F6;</mo><mi>d</mi></mover><msubsup><mrow><mi>&#967;</mi></mrow><mrow><mi>K</mi><mo>&#8722;</mo><mn>1</mn></mrow><mrow><mn>2</mn></mrow></msubsup><mo>.</mo></math>
+
+## 证明
+
+根据 [`Proposition 4.1`](#c04.xhtml#c04-fea-0018) 中的 Sherman–Morrison 公式，我们首先观察到
+

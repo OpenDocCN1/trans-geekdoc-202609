@@ -1,0 +1,54 @@
+
+
+# A PUF 是一种新的原语
+
+A `PUF` 是一种新的原语，正在被引入到各种应用中。无需在非易失性内存中存储密钥，它可以为加密和解密提供密钥（如 [Figure 12.1](#Chapter12.html#c12_fig1) 所示）([Yanambaka *et al*., 2017](#Chapter12.html#c12_bib77))。密码学密钥将在必要时由 `PUF` 生成，基于在 IC 制造过程中引入的不完美之处。`PUF` 有多种优势。与存储密钥所需的内存模块相比，`PUF` 组件的制造要容易得多。这也意味着减少了像 `EEPROM` 这样的内存模块所需的成本和芯片面积。对设备本身的侧信道攻击将变得更加困难。使用某些类型的 `PUF`，可以避免昂贵的加密处理器。`PUF` 生成的密钥数量随所使用的架构和设计的复杂性呈指数增长。由 `PUF` 模块生成的相同密钥也可用于 IP 保护，其中 `PUF` 的输入输出对可用于验证设备的所有权。`PUF` 使用 IC 的制造可变性来生成输出密钥。因此，由 `PUF` 模块生成的输出密钥也应该是唯一的。`PUF` 的概念如 [Figure 12.2](#Chapter12.html#c12_fig2) 所示。对于相同的 `PUF` 模块，不同的输入会产生不同的输出，如 [Figure 12.1](#Chapter12.html#c12_fig1) 所示。对于不同芯片上 `PUF` 电路的不同实例化（逻辑相同），相同的输入会产生不同的输出，如 [Figure 12.1](#Chapter12.html#c12_fig1) 所示。
+
+![image](OEBPS/images/PBCS0600-12-f01.jpg)
+
+Figure 12.1 The concept of a PUF over traditional key stored in a nonvolatile memory
+
+![image](OEBPS/images/PBCS0600-12-f02.jpg)
+
+Figure 12.2 Concept of PUF
+
+## 12.2 PUF: Principle
+
+当 IC 被制造时，会遵循从开始到结束的一系列过程。从硅成为锭到最终的 IC，这一系列过程涉及各种制造步骤，例如掩模、离子注入、光刻、化学扩散、抛光、电解等 ([Mohanty, 2015](#Chapter12.html#c12_bib53))。在此制造过程中，晶圆上制造的器件会受到各种因素的影响。[Figure 12.3](#Chapter12.html#c12_fig3) 显示了器件的制造可变性。器件的几何形状，如长度、栅氧厚度、掺杂浓度等也会受到影响。由于这些变化，没有两个制造出的器件看起来是一样的。
+
+![image](OEBPS/images/PBCS0600-12-f03.jpg)
+
+Figure 12.3 Working characteristics of the PUF
+
+即使器件在同一晶圆上制造，它们的几何形状也会有变化，使它们与同一晶圆上的其他器件有所不同。`PUF` 将利用这些变化来生成密钥。引入 IC 的制造变化是不可预测且不可避免的。一种自然发生的现象会在器件的几何形状中引入不需要的变化。当同一晶圆上的两个不同晶体管在几何形状上有变化时，它们的输出也会不同。将两个不同器件的输出相互比较，以生成 `PUF` 的单个比特密钥。
+
+简单 `PUF` 的设计如 [Figure 12.4](#Chapter12.html#c12_fig4) 所示。`PUF` 的输入称为“Challenge”，`PUF` 的输出称为“Response。” `PUF` 的输入输出对称为“Challenge Response Pair”（CRP）。[Figure 12.4](#Chapter12.html#c12_fig4) 显示了 arbiter `PUF` 的设计 ([Lee *et al*., 2004](#Chapter12.html#c12_bib36))。如图所示，`PUF` 使用两组串联的多路复用器。每组的输出连接到 D 触发器的 D 输入和时钟信号。多路复用器的选择线是用户提供给 `PUF` 的挑战输入。基于挑战输入，输入信号经过的多路复用器会发生变化。一旦输入信号提供给模块，基于挑战输入，在到达 D 触发器之前会添加延迟。触发器的输出将取决于输入信号经过的器件添加的延迟量。在此场景中，由于制造变化，多路复用器中的每个晶体管会添加不同量的延迟。这种添加的延迟是不可预测的。因此，生成的 `PUF` 密钥也是模块独有且安全的。然而，预测 arbiter `PUF` 中的 CRP 也不困难。为了避免这种情况，设计了更复杂的 `PUF` 设计，将在后面的章节中介绍。
+
+![image](OEBPS/images/PBCS0600-12-f04.jpg)
+
+Figure 12.4 Arbiter-based simple PUF
+
+## 12.3 Properties or characteristics of PUFs
+
+`PUF` 用于为加密目的生成密钥。`PUF` 的输出应满足各种属性，以便用于各种应用。[Figure 12.5](#Chapter12.html#c12_fig5) 显示了 `PUF` 的不同特性，这些特性应满足才能使其理想 ([Böhm, 2013](#Chapter12.html#c12_bib4); [Chang *et al*., 2017](#Chapter12.html#c12_bib5); [Maiti *et al*., 2013](#Chapter12.html#c12_bib45); [Yanambaka *et al*., 2017](#Chapter12.html#c12_bib77)) ([Table 12.1](#Chapter12.html#c12_tbl1))。
+
+![image](OEBPS/images/PBCS0600-12-f05.jpg)
+
+Figure 12.5 Properties of PUFs
+
+### 12.3.1 Uniqueness
+
+`PUF` 模块生成一个 `N` 比特密钥，该密钥应是唯一的。`PUF` 使用 IC 上的制造变化来生成输出密钥。因此，对于不同的挑战输入，相同的模块不应生成相同的 `PUF` 密钥。唯一性可以被认为是在不同芯片上计算的。让我们考虑一对芯片，`i` 和 `j`，其中 `i` 不等于 `j`。生成的响应为 ![image](OEBPS/images/c12-Eqn-in-1.gif) 和 ![image](OEBPS/images/c12-Eqn-in-2.gif)。那么唯一性可以表示为 ([Chatterjee *et al*., 2017](#Chapter12.html#c12_bib9); [Maiti and Schaumont, 2011](#Chapter12.html#c12_bib42))：
+
+![image](OEBPS/images/c12_eqn12_1.gif)
+
+**Table 12.1** Comparison of various publications
+
+![image](OEBPS/images/tab12.1.jpg)
+
+`HD` 是两个响应位的汉明距离，`n` 是响应的长度。两个相同长度的字符串中不同元素的数量称为 `HD`。最初，对两个字符串执行 `XOR`，并将结果相加以得到 `HD`。例如，考虑两个字符串 “11001100” 和 “11100111”。字符串的 `XOR` 将是 “00101011”，将所有位相加将得到 4，即 `HD` ([Böhm, 2013](#Chapter12.html#c12_bib4))。`HD` 也以百分比表示，结果除以字符串长度并乘以 100。在前面的示例中，它是 ![image](OEBPS/images/c12-Eqn-in-3.gif) 是 50%。`PUF` 安全用于加密目的的理想 `HD` 是 50%。
+
+### 12.3.2 Reliability (correctness)
+
+在必要时，`PUF` 将为各种目的生成密钥。但是一旦实现，对于单个挑战输入，输出响应不应改变。各种因素，如老化、电压波动、噪声和其他因素不应影响 `PUF` 的输出。这是 `PUF` 的可靠性或正确性特征，它将能够为给定的挑战输入生成相同的密钥。`PUF` 的可靠性也可以使用 `HD` 来计算。如果在长时间内将相同的密钥提供给单个 `PUF`，理想的 `HD` 应为 0%。输出位不应出现错误。由于没有理想的设计，采用了各种技术来避免它们，特别是为了避免设计的老化效应。
+

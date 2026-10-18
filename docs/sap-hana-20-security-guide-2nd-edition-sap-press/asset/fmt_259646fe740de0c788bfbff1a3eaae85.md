@@ -1,0 +1,62 @@
+
+# 定义审计策略
+
+在定义审计策略时，可以从三种状态选项中选择一种。当用户被授权执行某个操作时，该操作的状态将为成功。可以定义审计策略仅捕获成功的操作，也可以基于用户被阻止执行操作的情况来定义审计策略。在这些情况下，账户的状态将被标记为不成功。可以使用此状态仅捕获未经授权用户执行的操作。监控未经授权的访问非常重要，因为它通常是有人试图破坏系统或数据的主要指标。作为第三种选择，还可以选择审计成功和不成功的审计状态，即使用 `all` 审计状态。
+
+## Audit Levels
+
+在定义审计策略时，可以将审计策略分配给以下审计级别之一：`Emergency`、`Critical`、`Alert`、`Warning` 或 `Info`。如 [Section 15.2.1](#15_002.html#h15.2.1) 中所述，前三个级别在实现 Audit Level Trail Targets 时很有用。总体而言，它们也可用于分类已审计操作的严重性。例如，可以建立一个配置了 `Emergency` 审计级别的策略。由于此值被写入审计日志，因此审计事件可以轻松识别。
+
+## Target Objects
+
+在定义使用来自数据查询和操作以及过程执行类别的操作的审计策略时，还必须选择目标对象。目标对象是 SAP HANA 系统中的目录对象。如果选择架构对象，则架构中的所有对象都将受审计规则约束。如果选择单个表、视图、索引、序列或过程，则仅对选定对象的更改会触发审计策略。在每个单独的审计策略中，可以指定一个或多个目录对象。
+
+## Target User
+
+在定义审计策略时，可以选择指定一个或多个用户。选择用户后，审计策略仅针对选定的用户触发。某些策略在激活前需要指定目标用户。但是，所有策略都可以基于一个或多个用户进行配置。策略还支持使用规则，即审计除选定用户之外的所有用户，这在希望忽略系统用户账户创建的活动时很有帮助。请注意，某些策略操作支持所有用户。如果用户未包含在策略中或未从策略中排除，则策略假设适用于该用户。
+
+## Audit Trail Target
+
+在每个审计策略的基础上，可以覆盖全局审计目标设置，这在需要将特定事件捕获到特定目标时很有帮助。例如，可以捕获发布到架构的所有 `SELECT` 语句，并将其存储在 CSV 文件中，该文件可以加载到数据库中，用于容量规划或负载分析目的。
+
+# 15.3.2 使用 SAP HANA Web-Based Development Workbench 管理策略
+
+SAP HANA Web-Based Development Workbench 安全管理器（托管在 XS 引擎中）提供了一个用于定义审计策略的界面。
+
+可以通过受支持的 Internet 浏览器访问 SAP HANA Web-Based Development Workbench。要使用此工具，用户至少必须拥有 `sap.hana.xs.ide.roles::SecurityAdmin` 角色。以下两个 URL 可以自定义以匹配您环境的详细信息：
+
+*   `http://sap-hana.myhost.com:8000/sap/hana/ide/security`
+*   `http://<sap_hana_host>:80<instance_number>/sap/hana/ide/security`
+
+在最后一个示例中，将 `<sap_hana_host>` 替换为环境中 SAP HANA 系统的主机名，并将 `<instance_number>` 替换为与 SAP HANA 系统对应的两位实例号。
+
+为了安全访问，以下示例应帮助您构建正确的 URL：
+
+*   `https://<sap_hana_host>:43<instance_number>/sap/hana/ide/security`
+*   `https://sap-hana.myhost.com:4300/sap/hana/ide/security`
+
+一旦获得对 SAP HANA Web-Based Development Workbench 安全管理器的访问权限，您将看到位于左上角功能区中的一系列按钮。垂直密钥和服务器图标在右侧打开 Security Console 选项卡。单击 Auditing 选项卡以打开审计策略管理界面。
+
+在 Auditing 选项卡底部，您将看到一个名为 Audit Policies 的部分，如 [Figure 15.5](#15_003.html#f15.5) 所示。
+
+[![Interface to Define One or More Audit Policies](bilderklein/klein15_005.png)](img-f15.5.html)
+
+**Figure 15.5** Interface to Define One or More Audit Policies
+
+在 Audit Policies 标签下，您将看到四个图标。加号图标（`+`）允许您定义新的审计策略。`X` 图标删除选定的审计策略。粉色橡皮擦图标从审计日志中删除审计事件。最后一个图标是带有绿色齿轮叠加的表格。可以使用此图标打开 SQL 控制台，在其中可以查询审计日志表或执行 SQL 命令。
+
+要定义新的审计策略，请单击加号图标（`+`）。审计策略表中将出现新行。要开始流程，请在 Policy 列中使用 Enter Name 单元格为策略输入唯一名称。在 Policy Status 列中，单击单元格内的下拉箭头，然后从选项中选择 `Enable`。在 Audited Actions 列中，单击包含两个堆叠框的单元格内的图标以打开新窗口 Edit Actions Audited by Policy。在此窗口中，可以按类别从一些可用的审计操作中进行选择。选择需要审计的操作；请记住，所选操作必须来自同一类别。完成后，单击右下角的 OK 按钮。
+
+在 Audited Actions Status 列中，单击单元格右侧的下拉箭头。选择 `Successful`、`Unsuccessful` 或 `All`。在 Audit Level 列中，单击单元格右侧的下拉箭头。选择 `Emergency`、`Critical`、`Alert`、`Warning` 或 `Info`。
+
+在 Users 列中，单击单元格内的两个堆叠框图标。将出现 Select Users 窗口。使用窗口中的选项搜索一个或多个现有用户。找到用户后，单击 Matching Items 列表和 Selected Items 列表之间的 Add 按钮，将选定的用户添加到窗口右侧。在 Selected Items 区域上方，选择 Include Selected Users in policy 或 Exclude Selected Users from policy。选择要包含或排除的用户后，单击 OK。请注意，大多数操作不需要选择用户。当此字段留空时，系统假设策略应应用于所有用户。如果策略在没有用户的情况下无法激活，则可以假设策略操作需要引用用户。
+
+如果审计策略使用来自数据查询和操作以及过程执行类别的操作，则还必须选择目标对象。在 Target Object 单元格中，单击两个堆叠框图标。将出现 Target Object 窗口。在搜索框中，输入将作为审计策略目标的目录对象的名称。完成选择后，单击右下角的 OK 按钮。
+
+如果要为审计策略定义特定的审计目标，请使用 Audit Trail Target 列中的单元格定义其他目标。在 Audit Trail Target 单元格中，单击两个堆叠框图标。将出现 Select Targets 窗口。为每个审计目标位置选择复选框。单击 OK 按钮继续。
+
+定义审计策略后，要保存审计策略设置，请单击主图标栏上的大磁盘图标以保存更改，或按 `(Ctrl)+(S)`。
+
+除了以这种方式定义审计策略外，还可以使用 SQL 命令，我们将在下一节中讨论。
+
+# 15.3.3 使用 SQL 管理审计策略

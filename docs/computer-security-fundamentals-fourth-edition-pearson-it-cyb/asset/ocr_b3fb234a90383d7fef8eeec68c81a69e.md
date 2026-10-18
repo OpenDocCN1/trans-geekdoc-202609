@@ -1,0 +1,21 @@
+What sort of encryption is used on bank websites and for e-commerce? In general, symmetric algorithms are faster and require a shorter key length to be as secure as asymmetric algorithms. However, there is the problem of how to securely exchange keys. So most e-commerce solutions use an asymmetric algorithm to exchange symmetric keys and then use the symmetric keys to encrypt the actual data.
+
+When visiting websites that have an HTTPS at the beginning rather than HTTP, the *S* denotes *Secure*. It means traffic between your browser and the web server is encrypted—usually with either SSL (Secure Sockets Layer) or TLS (Transport Layer Security). SSL, the older of the two technologies, was developed by Netscape. Both SSL and TLS are asymmetric systems.
+
+# Quantum Computing Cryptography
+
+One of the most engaging cryptography-related topics in recent times is quantum computing. Here we explain a bit about quantum computing and then look at its impact on cryptography.
+
+The essential issue with quantum computing is the ability to represent more than two states. Current computing technology, using classical bits, can represent only binary values. Qubits, or quantum bits, store data via the polarization of a single photon. The two basic states are horizontal polarization and vertical polarization; however, quantum mechanics allows for a superposition of the two states at the same time—which is simply not possible in a classical bit. The two states of a qubit are represented with quantum notation as |0⟩ and |1⟩, representing horizontal polarization and vertical polarization. A qubit involves the superposition of these two basis states. This superposition is represented as |ψ⟩ = α|0⟩ + β|1⟩. Essentially a classical bit can represent a 1 or a 0. A qubit can represent a 1, a 0, or any quantum superposition of those two qubit states, which allows for much more powerful computing.
+
+Contrary to what you might have heard, current quantum computing is not at a stage to be useful in practical applications. Cutting-edge quantum systems of today have only 20 to 50 qubits and can only maintain data for a very short time. This makes for great research but not practical computing applications. However, many experts believe that within 10 years we will have a working, practical quantum computer. What does that mean for cryptography? Well, in 1995 Peter Shor published Shor’s algorithm, which proved that a quantum computer would be able to factor large numbers in a much shorter time than classical computers. A quantum computer can factor an integer *N* in polynomial time; actual time is log *N*. This is substantially faster than the most efficient known classical factoring algorithm (the general number field sieve) which works in subexponential time. RSA is based on the difficulty of factoring large numbers. A quantum computer is expected to be similarly efficient at solving discrete logarithm problems. Diffie-Hellman, MQV, Elgamal, and ECC are all based on the difficulty of solving the discrete logarithm problem.
+
+What all this means is that when quantum computers become a practical reality, current asymmetric (public key) algorithms will become obsolete. At that point, current security for e-commerce, VPNs, and many other applications will no longer be secure. The U.S. National Institute of Standards and Technology (NIST) is already working on finding a quantum proof cryptography standard.¹ That study is due to be finished in about 2022.
+
+# Summary
+
+A basic element of computer security is encryption. Sending sensitive data that is not encrypted is simply foolish. This chapter provided the basic information on how cryptography works. The most important thing to remember is that, ultimately, it is not your computer or your network that can be compromised but rather your data. Encrypting data when transmitting it is an integral part of any security plan.
+
+In the exercises at the end of this chapter, you will practice using different cipher methods and learn more about a number of encryption methods.
+
+# Test Your Skills

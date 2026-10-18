@@ -1,0 +1,4 @@
+| Year | Phase | Short Description | Characteristics | Example |
+|---|---|---|---|---|
+| 2019 | Blockchain 5.0 | Web 3.0 revolution | • Decentralization of data ownership<br>• Decentralized Exchanges (DEXs)<br>• Decentralized Finance (DeFi)<br>• Lending protocols<br>• NFTs rise<br>• Game Finance (GameFi)<br>• Play-to-Earn (P2E)<br>• Decentralized Metaverse | • Digital assets<br>• NFT collections<br>• Uniswap, Sushiswap<br>• Decentraland<br>• Virtual real estate |
+| 2020 | Blockchain 6.0 | The rise of CBDCs | • Blockchain technology is adopted by many Central banks<br>• More than 50% of all Central banks have investigated and experimented with CBDCs<br>• CBDC interoperability is considered a challenge<br>• Serving the unbanked is a key target, especially for less developed countries<br>• Integration with the traditional financial system | • Bahamas Sand Dollar (October 2020)<br>• Nigerian eNaira (October 2021)<br>• Many CBDC projects in the pilot phase since 2020 |

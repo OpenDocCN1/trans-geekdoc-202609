@@ -1,0 +1,2629 @@
+- raw: "\n\n# Table of Contents\n\nChapter 1:PHP INTRODUCTION\n\nChapter 2:VARIABLES\n\
+    \nChapter 3: DATA TYPES\n\nChapter 4:OPERATORS\n\nChapter 5:CONTROL STRUCTUERS\n\
+    \nChapter 6:ARRAYS\n\nChapter 7:FUNCTIONS\n\nChapter 8:FORMS IN PHP\n\nChapter\
+    \ 9:GLOBAL VARIABLES\n\nChapter 10:SESSIONS\n\nChapter 11:COOKIES\n\nChapter 12:WORKING\
+    \ WITSH FILE\n\nChapter 13:OBJECT ORIENTED PHP\n\n#                                 \
+    \ INTRODUCTION\n\nI want to thank you and congratulate you for choosing this book.\
+    \ This book contains elaborate steps, strategies and guidelines on how to create\
+    \ codes using the correct syntax, keywords, and punctuation marks. It also provides\
+    \ tips on how to correctly use arrays, forms, conditional statements, sessions\
+    \ etc. You will also learn how to open, read, write, and close files in PHP. There\
+    \ are sample programs(examples) that can serve as your guidelines when writing\
+    \ your code. This book also contains useful information about PHP, including their\
+    \ features. I hope it will be of help to you!\n\n#                                       \
+    \ COPYRIGHT \n\n                                                                \
+    \                By\n\n                                                           \
+    \ www.computingtutorial.com          \n\n This document is oriented towards providing\
+    \ exact and reliable information in regards to the topic and chapters covered.\
+    \ It is not legal in any way to reproduce, duplicate, or transmit any part of\
+    \ this document in either electronic means or in printed format. \n\nRecording\
+    \ of this publication is strictly prohibited and any storage of this document\
+    \ is not allowed unless with permission from the author. The information provided\
+    \ herein is stated to be truthful and consistent, in that any liability, in terms\
+    \ of inattention or otherwise, by any usage or abuse of any policies, processes,\
+    \ or directions contained within is the solitary responsibility of the recipient\
+    \ reader.\n\n Under no circumstances will any blame be held against the author\
+    \ for any damages, or monetary loss due to the information herein, either directly\
+    \ or indirectly. Respective authors own all copyrights not held by the publisher.\
+    \ The information herein is offered for informational purposes only, and is universal\
+    \ as so. The presentation of the information is without contract or any type of\
+    \ guarantee assurance.\n\n.\n\n                                                                \
+    \ All rights reserved  \n\n                                                                         \
+    \ (2015)             \n\n# Chapter 1:PHP INTRODUCTION\n\n## Requirement\n\nBefore\
+    \ you proceed  to study php, it is recommended that you have a basic understanding\
+    \ of the following: \n\n.CSS\n\n· HTML  \n\n##  What is PHP\n\n· PHP is an acronym\
+    \ for Hypertext Preprocessor \n\n.PHP is a HTML embedded scripting language\n\n\
+    · PHP scripts are executed on the server\n\n· PHP files have extension \".php\"\
+    \ \n\n##  What PHP can do\n\nIt is also helpful to think of PHP in terms of what\
+    \ it can do for you.  \n\n. Reduce the time to create large websites. \n\n. Create\
+    \ a customized user experience for visitors based on information that you have\
+    \ gathered from them. \n\n· can generate dynamic page content \n\n· can collect\
+    \ form data \n\n· can send and receive cookies \n\n· can add, delete, modify data\
+    \ in your databases\n\n· can create, open, read, write, and close files on the\
+    \ server \n\n· can encrypt data\n\n##  Why choose PHP\n\n· PHP runs on various\
+    \ operating system platforms (Windows, Unix, etc.) \n\n· PHP is easy to learn\
+    \ and runs efficiently on the server side \n\n· PHP is compatible with almost\
+    \ all servers used today (Apache,etc.) \n\n· PHP supports a wide range of databases\
+    \ \n\n· PHP is freely available\n\n## PHP Syntax  \n\nA PHP script starts with\
+    \ <?php and ends with ?> : \n\n<?php \n\n// PHP code  here \n\n?>  \n\nA PHP file\
+    \ usually contains HTML tags, and some PHP scripting code. \n\nAs you notice in\
+    \ the below example, there was a semicolon after the line of PHP code. The semicolon\
+    \ signifies the end of a PHP statement and should never be forgotten. The semi\
+    \ colon terminates that statement. \n\nHere is  an example of a simple PHP file,\
+    \ with a PHP script that uses a PHP function (built-in)\"echo\" to output the\
+    \ text \"Hello World!\" \n\n<html> \n\n<head> \n\n<title>My First PHP Page</title>\
+    \ \n\n</head> \n\n<body> \n\n<?php \n\necho \"Hello World!\"; \n\n?> \n\n</body>\
+    \ \n\n</html> \n\nDisplay: \n\nHello World! \n\n## Comments in PHP\n\nA comment\
+    \ in PHP code is a line that is not executed as part of the program. Its  purpose\
+    \ is to be read by someone who is editing the code.\n\nPHP supports three forms\
+    \ or ways of expressing a comment\n\nComments are useful for:\n\n· To remind yourself\
+    \ what you did - Most programmers have experienced coming back to their  Comments,this\
+    \ remind you of what you were thinking when you wrote the code \n\n · To let others\
+    \ understand what you are doing - Comments let other programmers understand each\
+    \ of your steps\n\n// This is a single line comment \n\n\\# This is also a single\
+    \ line comment \n\n/\\* \n\nThis is a multiple lines comment block that spans\
+    \ over more than one line \n\n\\*/ \n\n## Case sensitivity in PHP\n\n In PHP,\
+    \ all variables are case-sensitive.\n\nIn the next chapter is a detailed discussion\
+    \ of the variables \n\nIn the example below, only the first statement will display\
+    \ the value of the $pet variable (because $pet, $PeT, and $PET are treated as\
+    \ three totally different variables): \n\nExample \n\n<html> \n\n<body> \n\n<?php\
+    \ \n\n$pet=\"cat\"; \n\necho \"My animal is a \" . $pet . \"<br>\"; \n\necho \"\
+    My animal is a \" . $PeT . \"<br>\"; \n\necho \"My animal is a \" . $PET. \"<br>\"\
+    ; \n\n?> \n\n</body> \n\n</html> \n\nIn PHP, all user-defined functions, keywords,\
+    \ and classes are case-insensitive. \n\nIn the example below, all two echo statements\
+    \ below are legal: \n\nExample \n\n<html> \n\n<body> \n\n<?php \n\necho \"Hello\
+    \ World!<br>\"; \n\nECHO \"Hello World!<br>\";\n\n?> \n\n\\-</body> \n\n</html>\
+    \ \n\n## White spaces\n\nWith HTML, whitespace is ignored between PHP statements.\
+    \ This is to mean that there can be  one line of PHP code, then 2 or more lines\
+    \ of blank space before the next line of PHP code. Because of this you can indent\
+    \ your code and the PHP interpreter will ignore those spaces as well.\n\nHere\
+    \ is an elaborate example\n\n<html> \n\n<head> \n\n<title>My First PHP Page</title>\
+    \ \n\n</head> \n\n<body> \n\n<?php \n\necho \"Hello World!\"; \n\necho \"Hello\
+    \ World!\"; \n\n?>               \n\n</body> \n\n</html>\n\nDisplay: \n\nHello\
+    \ World!Hello World! \n\n# Chapter 2:PHP VARIABLES\n\n##   Variable defination\n\
+    \nA variable is a means of storing a value, such as text string \"Hello World!\"\
+    \ or the integer value 30. A variable can then be reused throughout your code,\
+    \ instead of having to type out the actual value over and over again,in other\
+    \ words variables can be termed as \"containers\" for storing information\n\n\
+    In PHP you define a variable with the following form: \n\n• $variable\\_name =\
+    \ Value;\n\njust Like in mathematics\n\nr=1 \n\ns=2 \n\nt=r+s\n\nthe letters r,s\
+    \ hold the numbers 1,2 respectively. \n\nFrom the expression t=r+s above, we can\
+    \ calculate the value of r to be 3. \n\nIn PHP these letters are called variables.\
+    \  \n\nExample \n\n<?php \n\n$r=1; \n\n$s=2; \n\n$t=$r+$s; \n\necho $t; \n\n?>\n\
+    \nExample \n\n<?php \n\n$txt=\"Hello world”;\n\n?> \n\n## Conventions for assigning\
+    \ variables\n\n. Variables with more than one word should be separated with underscores.\
+    \ $my\\_variable\n\n· A variable starts with the $ sign, followed by the name\
+    \ of the variable \n\n· Variable names are case sensitive ($r and $R are two different\
+    \ variables) \n\n· A variable name cannot start with a number \n\n· A variable\
+    \ name must start with a letter or the underscore character \n\n· A variable name\
+    \ can only contain alpha-numeric characters and underscores (A-z, 0-9, and \\\
+    _ ) \n\n# Chapter 3: PHP DATA TYPES \n\n## PHP Data Types \n\nString, Integer,\
+    \ Floating point numbers, Boolean, Array. \n\n## String\n\nA string is a sequence\
+    \ of characters, like \"Hello world!\". \n\nA string can be any text inside quotes.\
+    \ You can use single or double quotes,either will work efficiently\n\nExample\
+    \ \n\n<?php \n\n$x = \"Hello world!\"; \n\necho $x;  \n\n?> \n\n## Integers\n\n\
+    \ An integer is a number without decimals. \n\nRules for integers: "
+  fmt: "\n\n# Table of Contents\n\n- Chapter 1: PHP INTRODUCTION\n- Chapter 2: VARIABLES\n\
+    - Chapter 3: DATA TYPES\n- Chapter 4: OPERATORS\n- Chapter 5: CONTROL STRUCTUERS\n\
+    - Chapter 6: ARRAYS\n- Chapter 7: FUNCTIONS\n- Chapter 8: FORMS IN PHP\n- Chapter\
+    \ 9: GLOBAL VARIABLES\n- Chapter 10: SESSIONS\n- Chapter 11: COOKIES\n- Chapter\
+    \ 12: WORKING WITSH FILE\n- Chapter 13: OBJECT ORIENTED PHP\n\n# INTRODUCTION\n\
+    \nI want to thank you and congratulate you for choosing this book. This book contains\
+    \ elaborate steps, strategies and guidelines on how to create codes using the\
+    \ correct syntax, keywords, and punctuation marks. It also provides tips on how\
+    \ to correctly use arrays, forms, conditional statements, sessions etc. You will\
+    \ also learn how to open, read, write, and close files in PHP. There are sample\
+    \ programs(examples) that can serve as your guidelines when writing your code.\
+    \ This book also contains useful information about PHP, including their features.\
+    \ I hope it will be of help to you!\n\n# COPYRIGHT\n\nBy www.computingtutorial.com\n\
+    \nThis document is oriented towards providing exact and reliable information in\
+    \ regards to the topic and chapters covered. It is not legal in any way to reproduce,\
+    \ duplicate, or transmit any part of this document in either electronic means\
+    \ or in printed format.\n\nRecording of this publication is strictly prohibited\
+    \ and any storage of this document is not allowed unless with permission from\
+    \ the author. The information provided herein is stated to be truthful and consistent,\
+    \ in that any liability, in terms of inattention or otherwise, by any usage or\
+    \ abuse of any policies, processes, or directions contained within is the solitary\
+    \ responsibility of the recipient reader.\n\nUnder no circumstances will any blame\
+    \ be held against the author for any damages, or monetary loss due to the information\
+    \ herein, either directly or indirectly. Respective authors own all copyrights\
+    \ not held by the publisher. The information herein is offered for informational\
+    \ purposes only, and is universal as so. The presentation of the information is\
+    \ without contract or any type of guarantee assurance.\n\nAll rights reserved\
+    \ (2015)\n\n# Chapter 1: PHP INTRODUCTION\n\n## Requirement\n\nBefore you proceed\
+    \ to study php, it is recommended that you have a basic understanding of the following:\n\
+    \n- CSS\n- HTML\n\n## What is PHP\n\n- PHP is an acronym for Hypertext Preprocessor\n\
+    - PHP is a HTML embedded scripting language\n- PHP scripts are executed on the\
+    \ server\n- PHP files have extension \".php\"\n\n## What PHP can do\n\nIt is also\
+    \ helpful to think of PHP in terms of what it can do for you.\n\n- Reduce the\
+    \ time to create large websites.\n- Create a customized user experience for visitors\
+    \ based on information that you have gathered from them.\n- can generate dynamic\
+    \ page content\n- can collect form data\n- can send and receive cookies\n- can\
+    \ add, delete, modify data in your databases\n- can create, open, read, write,\
+    \ and close files on the server\n- can encrypt data\n\n## Why choose PHP\n\n-\
+    \ PHP runs on various operating system platforms (Windows, Unix, etc.)\n- PHP\
+    \ is easy to learn and runs efficiently on the server side\n- PHP is compatible\
+    \ with almost all servers used today (Apache,etc.)\n- PHP supports a wide range\
+    \ of databases\n- PHP is freely available\n\n## PHP Syntax\n\nA PHP script starts\
+    \ with `<?php` and ends with `?>`:\n\n```php\n<?php \n\n// PHP code here \n\n\
+    ?>\n```\n\nA PHP file usually contains HTML tags, and some PHP scripting code.\n\
+    \nAs you notice in the below example, there was a semicolon after the line of\
+    \ PHP code. The semicolon signifies the end of a PHP statement and should never\
+    \ be forgotten. The semi colon terminates that statement.\n\nHere is an example\
+    \ of a simple PHP file, with a PHP script that uses a PHP function (built-in)\
+    \ `echo` to output the text \"Hello World!\":\n\n```html\n<html> \n<head> \n<title>My\
+    \ First PHP Page</title> \n</head> \n<body> \n<?php \necho \"Hello World!\"; \n\
+    ?> \n</body> \n</html>\n```\n\nDisplay:\n\nHello World!\n\n## Comments in PHP\n\
+    \nA comment in PHP code is a line that is not executed as part of the program.\
+    \ Its purpose is to be read by someone who is editing the code.\n\nPHP supports\
+    \ three forms or ways of expressing a comment.\n\nComments are useful for:\n\n\
+    - To remind yourself what you did - Most programmers have experienced coming back\
+    \ to their Comments, this remind you of what you were thinking when you wrote\
+    \ the code\n- To let others understand what you are doing - Comments let other\
+    \ programmers understand each of your steps\n\n`// This is a single line comment`\n\
+    \n`\\# This is also a single line comment`\n\n```\n/*\nThis is a multiple lines\
+    \ comment block that spans over more than one line\n*/\n```\n\n## Case sensitivity\
+    \ in PHP\n\nIn PHP, all variables are case-sensitive.\n\nIn the next chapter is\
+    \ a detailed discussion of the variables.\n\nIn the example below, only the first\
+    \ statement will display the value of the `$pet` variable (because `$pet`, `$PeT`,\
+    \ and `$PET` are treated as three totally different variables):\n\nExample\n\n\
+    ```html\n<html> \n<body> \n<?php \n$pet=\"cat\"; \necho \"My animal is a \" .\
+    \ $pet . \"<br>\"; \necho \"My animal is a \" . $PeT . \"<br>\"; \necho \"My animal\
+    \ is a \" . $PET. \"<br>\"; \n?> \n</body> \n</html>\n```\n\nIn PHP, all user-defined\
+    \ functions, keywords, and classes are case-insensitive.\n\nIn the example below,\
+    \ all two `echo` statements below are legal:\n\nExample\n\n```html\n<html> \n\
+    <body> \n<?php \necho \"Hello World!<br>\"; \nECHO \"Hello World!<br>\";\n?> \n\
+    </body> \n</html>\n```\n\n## White spaces\n\nWith HTML, whitespace is ignored\
+    \ between PHP statements. This is to mean that there can be one line of PHP code,\
+    \ then 2 or more lines of blank space before the next line of PHP code. Because\
+    \ of this you can indent your code and the PHP interpreter will ignore those spaces\
+    \ as well.\n\nHere is an elaborate example:\n\n```html\n<html> \n<head> \n<title>My\
+    \ First PHP Page</title> \n</head> \n<body> \n<?php \necho \"Hello World!\"; \n\
+    echo \"Hello World!\"; \n?> \n</body> \n</html>\n```\n\nDisplay:\n\nHello World!Hello\
+    \ World!\n\n# Chapter 2: PHP VARIABLES\n\n## Variable defination\n\nA variable\
+    \ is a means of storing a value, such as text string \"Hello World!\" or the integer\
+    \ value 30. A variable can then be reused throughout your code, instead of having\
+    \ to type out the actual value over and over again, in other words variables can\
+    \ be termed as \"containers\" for storing information.\n\nIn PHP you define a\
+    \ variable with the following form:\n\n`$variable_name = Value;`\n\njust Like\
+    \ in mathematics\n\n`r=1`\n`s=2`\n`t=r+s`\n\nthe letters `r`, `s` hold the numbers\
+    \ 1, 2 respectively.\n\nFrom the expression `t=r+s` above, we can calculate the\
+    \ value of `r` to be 3.\n\nIn PHP these letters are called variables.\n\nExample\n\
+    \n```php\n<?php \n$r=1; \n$s=2; \n$t=$r+$s; \necho $t; \n?>\n```\n\nExample\n\n\
+    ```php\n<?php \n$txt=\"Hello world\"; \n?>\n```\n\n## Conventions for assigning\
+    \ variables\n\n- Variables with more than one word should be separated with underscores.\
+    \ `$my_variable`\n- A variable starts with the `$` sign, followed by the name\
+    \ of the variable\n- Variable names are case sensitive (`$r` and `$R` are two\
+    \ different variables)\n- A variable name cannot start with a number\n- A variable\
+    \ name must start with a letter or the underscore character\n- A variable name\
+    \ can only contain alpha-numeric characters and underscores (`A-z`, `0-9`, and\
+    \ `_`)\n\n# Chapter 3: PHP DATA TYPES\n\n## PHP Data Types\n\nString, Integer,\
+    \ Floating point numbers, Boolean, Array.\n\n## String\n\nA string is a sequence\
+    \ of characters, like \"Hello world!\".\n\nA string can be any text inside quotes.\
+    \ You can use single or double quotes, either will work efficiently.\n\nExample\n\
+    \n```php\n<?php \n$x = \"Hello world!\"; \necho $x;  \n?>\n```\n\n## Integers\n\
+    \nAn integer is a number without decimals.\n\nRules for integers:\n\n"
+  trans: "\n\n# 目录\n\n- 第 1 章：PHP 简介\n- 第 2 章：变量\n- 第 3 章：数据类型\n- 第 4 章：运算符\n- 第 5\
+    \ 章：控制结构\n- 第 6 章：数组\n- 第 7 章：函数\n- 第 8 章：PHP 中的表单\n- 第 9 章：全局变量\n- 第 10 章：会话\n\
+    - 第 11 章：Cookie\n- 第 12 章：文件操作\n- 第 13 章：面向对象 PHP\n\n# 简介\n\n感谢您选择本书，并向您表示祝贺。本书包含了使用正确语法、关键字和标点符号创建代码的详细步骤、策略和指南。它还提供了关于如何正确使用数组、表单、条件语句、会话等的技巧。您还将学习如何在\
+    \ PHP 中打开、读取、写入和关闭文件。书中包含示例程序（示例），可作为您编写代码时的指南。本书还包含有关 PHP 的有用信息，包括其功能。希望本书对您有所帮助！\n\
+    \n# 版权\n\n由 www.computingtutorial.com 提供\n\n本文档旨在提供关于所涵盖主题和章节的准确可靠信息。以电子方式或印刷格式复制、复制或传输本文档的任何部分均不合法。\n\
+    \n严禁录制本出版物，除非获得作者许可，否则不得存储本文档。此处提供的信息被陈述为真实且一致的，因此，因使用或滥用本文档中包含的任何政策、流程或指示而导致的任何责任（无论是由于疏忽还是其他原因），均由接收读者自行承担。\n\
+    \n在任何情况下，作者均不对因本文档中的信息（无论直接还是间接）导致的任何损害或金钱损失承担责任。出版商未持有的所有版权均归相应作者所有。此处提供的信息仅供参考，且具有普遍性。所呈现的信息不附带合同或任何类型的担保保证。\n\
+    \n版权所有 (2015)\n\n# 第 1 章：PHP 简介\n\n## 要求\n\n在开始学习 PHP 之前，建议您对以下内容有基本了解：\n\n- CSS\n\
+    - HTML\n\n## 什么是 PHP\n\n- PHP 是 Hypertext Preprocessor 的缩写\n- PHP 是一种嵌入 HTML 的脚本语言\n\
+    - PHP 脚本在服务器上执行\n- PHP 文件的扩展名为 \".php\"\n\n## PHP 能做什么\n\n从 PHP 能为您做什么的角度来思考也是有帮助的。\n\
+    \n- 减少创建大型网站所需的时间。\n- 根据您从访问者那里收集的信息，为访问者创建定制的用户体验。\n- 可以生成动态页面内容\n- 可以收集表单数据\n\
+    - 可以发送和接收 Cookie\n- 可以在数据库中添加、删除、修改数据\n- 可以在服务器上创建、打开、读取、写入和关闭文件\n- 可以加密数据\n\n\
+    ## 为什么选择 PHP\n\n- PHP 可在各种操作系统平台上运行（Windows、Unix 等）\n- PHP 易于学习，并在服务器端高效运行\n-\
+    \ PHP 与当今使用的几乎所有服务器兼容（Apache 等）\n- PHP 支持多种数据库\n- PHP 可免费获得\n\n## PHP 语法\n\nPHP\
+    \ 脚本以 `<?php` 开始，以 `?>` 结束：\n\n```php\n<?php \n\n// PHP code here \n\n?>\n```\n\
+    \nPHP 文件通常包含 HTML 标签和一些 PHP 脚本代码。\n\n如您在下面的示例中所见，PHP 代码行后面有一个分号。分号表示 PHP 语句的结束，绝不能遗忘。分号终止该语句。\n\
+    \n下面是一个简单的 PHP 文件示例，其中包含一个使用 PHP 函数（内置函数）`echo` 输出文本 \"Hello World!\" 的 PHP 脚本：\n\
+    \n```html\n<html> \n<head> \n<title>My First PHP Page</title> \n</head> \n<body>\
+    \ \n<?php \necho \"Hello World!\"; \n?> \n</body> \n</html>\n```\n\n显示：\n\nHello\
+    \ World!\n\n## PHP 中的注释\n\nPHP 代码中的注释是一行不会作为程序的一部分执行的代码。其目的是供编辑代码的人阅读。\n\nPHP\
+    \ 支持三种表达注释的形式或方式。\n\n注释有以下用途：\n\n- 提醒自己做了什么 - 大多数程序员都有过回头查看自己注释的经历，这能让你想起写代码时的想法\n\
+    - 让他人了解你在做什么 - 注释能让其他程序员理解你的每一个步骤\n\n`// This is a single line comment`\n\n`\\\
+    # This is also a single line comment`\n\n```\n/*\nThis is a multiple lines comment\
+    \ block that spans over more than one line\n*/\n```\n\n## PHP 中的大小写敏感性\n\n在 PHP\
+    \ 中，所有变量都区分大小写。\n\n下一章将详细讨论变量。\n\n在下面的示例中，只有第一条语句会显示 `$pet` 变量的值（因为 `$pet`、`$PeT`\
+    \ 和 `$PET` 被视为三个完全不同的变量）：\n\n示例\n\n```html\n<html> \n<body> \n<?php \n$pet=\"\
+    cat\"; \necho \"My animal is a \" . $pet . \"<br>\"; \necho \"My animal is a \"\
+    \ . $PeT . \"<br>\"; \necho \"My animal is a \" . $PET. \"<br>\"; \n?> \n</body>\
+    \ \n</html>\n```\n\n在 PHP 中，所有用户定义的函数、关键字和类都不区分大小写。\n\n在下面的示例中，下面的两条 `echo` 语句都是合法的：\n\
+    \n示例\n\n```html\n<html> \n<body> \n<?php \necho \"Hello World!<br>\"; \nECHO \"\
+    Hello World!<br>\";\n?> \n</body> \n</html>\n```\n\n## 空格\n\n在 HTML 中，PHP 语句之间的空格会被忽略。这意味着可以有一行\
+    \ PHP 代码，然后在下一行 PHP 代码之前有 2 行或更多空行。因此，您可以缩进代码，PHP 解释器也会忽略这些空格。\n\n下面是一个详细的示例：\n\
+    \n```html\n<html> \n<head> \n<title>My First PHP Page</title> \n</head> \n<body>\
+    \ \n<?php \necho \"Hello World!\"; \necho \"Hello World!\"; \n?> \n</body> \n\
+    </html>\n```\n\n显示：\n\nHello World!Hello World!\n\n# 第 2 章：PHP 变量\n\n## 变量定义\n\
+    \n变量是存储值的一种方式，例如文本字符串 \"Hello World!\" 或整数值 30。变量可以在整个代码中重复使用，而不必一遍又一遍地输入实际值，换句话说，变量可以被称为存储信息的“容器”。\n\
+    \n在 PHP 中，您可以使用以下形式定义变量：\n\n`$variable_name = Value;`\n\n就像在数学中一样\n\n`r=1`\n`s=2`\n\
+    `t=r+s`\n\n字母 `r`、`s` 分别保存数字 1、2。\n\n从上面的表达式 `t=r+s` 中，我们可以计算出 `r` 的值为 3。\n\n\
+    在 PHP 中，这些字母称为变量。\n\n示例\n\n```php\n<?php \n$r=1; \n$s=2; \n$t=$r+$s; \necho $t;\
+    \ \n?>\n```\n\n示例\n\n```php\n<?php \n$txt=\"Hello world\"; \n?>\n```\n\n## 变量赋值约定\n\
+    \n- 多个单词的变量应使用下划线分隔。`$my_variable`\n- 变量以 `$` 符号开头，后跟变量名\n- 变量名区分大小写（`$r` 和 `$R`\
+    \ 是两个不同的变量）\n- 变量名不能以数字开头\n- 变量名必须以字母或下划线字符开头\n- 变量名只能包含字母数字字符和下划线（`A-z`、`0-9`\
+    \ 和 `_`）\n\n# 第 3 章：PHP 数据类型\n\n## PHP 数据类型\n\n字符串、整数、浮点数、布尔值、数组。\n\n## 字符串\n\n\
+    字符串是字符序列，例如 \"Hello world!\"。\n\n字符串可以是引号内的任何文本。您可以使用单引号或双引号，两者都能高效工作。\n\n示例\n\
+    \n```php\n<?php \n$x = \"Hello world!\"; \necho $x;  \n?>\n```\n\n## 整数\n\n整数是没有小数的数字。\n\
+    \n整数规则：\n\n"
+  toc: []
+- raw: "· An integer must have at least one digit (0-9) \n\n· An integer cannot contain\
+    \ comma or blanks \n\n· An integer must not have a decimal point \n\n· An integer\
+    \ can be either positive or negative \n\n· Integers can be specified in three\
+    \ formats: decimal (10-based), hexadecimal (16-based - \n\nprefixed with 0x) or\
+    \ octal (8-based - prefixed with 0) \n\nIn the following example we will test\
+    \ different numbers. The PHP var\\_dump() function returns the data type and value\
+    \ of variables: \n\nExample \n\n<?php \n\n$x = 5985; \n\nvar\\_dump($x); \n\n\
+    echo \"<br>\"; \n\n$x = -345; // negative number \n\nvar\\_dump($x); \n\necho\
+    \ \"<br>\"; \n\n$x = 0x8C; // hexadecimal number \n\nvar\\_dump($x); \n\necho\
+    \ \"<br>\"; \n\n$x = 047; // octal number \n\nvar\\_dump($x); \n\n?> \n\n## Floating\
+    \ point numbers\n\n A floating point number is a number with a decimal point or\
+    \ a number in exponential form. \n\nIn the following example we will test different\
+    \ numbers. The PHP var\\_dump() function returns the data type and value of variables:\
+    \ \n\nExample \n\n<?php \n\n$x = 10.365; \n\nvar\\_dump($x); \n\necho \"<br>\"\
+    ; \n\n$x = 2.4e3; \n\nvar\\_dump($x); \n\necho \"<br>\"; \n\n$x = 8E-5; \n\nvar\\\
+    _dump($x); \n\n?> \n\n## Booleans \n\n Booleans can be either TRUE or FALSE. \n\
+    \nvar x=true; \n\nvar y=false; \n\nBooleans are often used in conditional testing.\
+    \ You will learn more about conditional testing in a later chapter of this tutorial.\
+    \ \n\n## Arrays \n\nAn array stores multiple values in one single variable. \n\
+    \nIn the following example we create an array, and then use the PHP var\\_dump()\
+    \ function to return the data type and value of the array: \n\nExample \n\n<?php\
+    \ \n\n$fruits=array(\"mango\",\"apple\",\"ovacado\",’’banana’’); \n\nvar\\_dump($fruits);\
+    \ \n\n?> \n\nYou will learn a lot more about arrays in later chapters of this\
+    \ tutorial. \n\n# Chapter 4:PHP OPERATORS\n\n## PHP Operators \n\nThis chapter\
+    \ shows the different operators that can be used in PHP scripts. \n\n## PHP arithmetic\
+    \ operators\n\n1\\. Addition or summation (+)\n\n$x + $y \n\nSum of $x and $y\
+    \ \n\n2\\. Subtraction (-)\n\n$x - $y \n\nDifference of $x and $y \n\n3\\. Multiplication\
+    \ (\\*) \n\n$x \\* $y \n\nProduct of $x and $y \n\n4\\. Division (/)\n\n$x / $y\
+    \ \n\nQuotient of $x and $y \n\n5\\. Modulus (%)\n\n$x % $y \n\nRemainder of $x\
+    \ divided by $y \n\nThe example below shows the different results of using the\
+    \ different arithmetic operators: \n\nExample \n\n<?php \n\n$x=5; \n\n$y=3; \n\
+    \necho ($x + $y); // outputs 8\n\necho ($x - $y); // outputs 2 \n\necho ($x \\\
+    * $y); // outputs 15 \n\necho ($x / $y); // outputs 1.6666666666667 \n\necho ($x\
+    \ % $y); // outputs 2 \n\n?> \n\n## PHP assignment operators\n\nThe PHP assignment\
+    \ operator is used to write a value to a variable. \n\nThe basic assignment operator\
+    \ in PHP is \"=\". It means that the left operand gets set to the value of the\
+    \ assignment expression on the right. \n\nx = y and is the same as x = y \n\n\
+    The left operand gets set to the value of the expression on the right \n\n1\\\
+    . Addition \n\nx += y \n\nx = x + y \n\n2\\. Subtraction \n\nx -= y \n\nx = x\
+    \ - y \n\n3\\. Multiplication \n\nx \\*= y \n\nx = x \\* y \n\n4\\. Division \n\
+    \nx /= y \n\nx = x / y \n\n5\\. modulus\n\nx %= y \n\nx = x % y \n\nThe example\
+    \ below shows the different results of using the different assignment operators:\
+    \ \n\nExample \n\n<?php \n\n$x=10; \n\necho $x; // outputs 10 \n\n$y=10; \n\n\
+    $y += 10; \n\necho $y; // outputs 20 \n\n$z=40; \n\n$z -= 25; \n\necho $z; //\
+    \ outputs 15 \n\n$i=5; \n\n$i \\*= 9; \n\necho $i; // outputs 45\n\n$j=12; \n\n\
+    $j /= 6; \n\necho $j; // outputs 2 \n\n$k=15; \n\n$k %= 4; \n\necho $k; // outputs\
+    \ 3 \n\n?> \n\n## PHP string Operators \n\n1\\. Concatenation (.)\n\n$txt1 = \"\
+    Hello\" \n\n$txt2 = $txt1 . \" world!\" \n\nOutput is hello world\n\n2\\. Concatenation\
+    \ assignment( .=)\n\n$txt1 = \"Hello\" \n\nNow $txt1 contains \"Hello world!\"\
+    \ \n\n$txt1 .= \" world!\" \n\nThe example below shows the results of using the\
+    \ string operators: \n\nExample \n\n<?php \n\n$x = \"Hello\"; \n\n$y = $a . \"\
+    \ world!\"; \n\necho $y; // outputs Hello world! \n\n$x=\"Hello\"; \n\n$x .= \"\
+    \ world!\"; \n\necho $x; // outputs Hello world! \n\n?> \n\n## PHP  Increment/Decrement \
+    \ Operators \n\n1\\. Pre-increment (++$x )\n\nIncrements $x by one, then returns\
+    \ $x \n\n2\\. Post-increment ($x++ )\n\nReturns $x, then increments $x by one\
+    \ \n\n3\\. Pre-decrement (--$x )\n\nDecrements $x by one, then returns $x \n\n\
+    4\\. Post-decrement ($x--) \n\nPost-decrement \n\nReturns $x, then decrements\
+    \ $x by one \n\nThe example below shows the different results of using the different\
+    \ increment/decrement operators: Example \n\n<?php \n\n$x=9; \n\necho ++$x; //\
+    \ outputs 10 \n\n$y=10; \n\necho $y++; // outputs 10 \n\n$z=6; \n\necho --$z;\
+    \ // outputs 5 \n\n$i=5; \n\necho $i--; // outputs 5 \n\n?> \n\n## PHP comparison\
+    \ Operators \n\nThe PHP comparison operators are used to compare two values (number\
+    \ or string): \n\n1\\. Equal (== )\n\n$x == $y \n\nTrue if $x is equal to $y \n\
+    \n2\\. Identical (===) \n\n$x === $y \n\nTrue if $x is equal to $y, and they are\
+    \ \n\nof the same type \n\n3\\. Not equal (!=) \n\n$x != $y \n\nTrue if $x is\
+    \ not equal to $y \n\n4\\. Not equal (<> )\n\n$x <> $y \n\nTrue if $x is not equal\
+    \ to $y \n\n5\\. Not identical (!==) \n\n$x !== $y \n\nTrue if $x is not equal\
+    \ to $y, or they \n\nare not of the same type \n\n6\\. Greater than (> )\n\n$x\
+    \ > $y \n\nTrue if $x is greater than $y \n\n7\\. Less than (<) \n\n$x < $y \n\
+    \nTrue if $x is less than $y \n\n8\\. Greater than or equal to (>=) \n\n$x >=\
+    \ $y \n\nTrue if $x is greater than or equal to $y \n\n9\\. Less than or equal\
+    \ to (<= )\n\n$x <= $y \n\nTrue if $x is less than or equal to $y \n\nThe example\
+    \ below shows the different results of using some of the comparison operators:\
+    \ \n\nExample \n\n<?php \n\n$x=100; \n\n$y=\"100\"; \n\nvar\\_dump($x == $y);\
+    \ \n\necho \"<br>\"; \n\nvar\\_dump($x === $y); \n\necho \"<br>\"; \n\nvar\\_dump($x\
+    \ != $y); \n\necho \"<br>\"; \n\nvar\\_dump($x !== $y); \n\necho \"<br>\"; \n\n\
+    $a=50; \n\n$b=90; \n\nvar\\_dump($a > $b); \n\necho \"<br>\"; \n\nvar\\_dump($a\
+    \ < $b); \n\n?> \n\n## PHP logical Operators \n\n1.and  \n\n$x and $y \n\nTrue\
+    \ if both $x and $y are true \n\n2.or \n\n$x or $y \n\nTrue if either $x or $y\
+    \ is true \n\n3.xor \n\n$x xor $y \n\nTrue if either $x or $y is true, but not\
+    \ \n\n4.both (&& ) \n\n$x && $y \n\nTrue if both $x and $y are true \n\n5.|| (Or)\
+    \ \n\n$x || $y \n\nTrue if either $x or $y is true \n\n6.! (Not) \n\n!$x \n\n\
+    True if $x is not true \n\n## PHP array Operators \n\nThe PHP array operators\
+    \ are used to compare arrays: \n\n1\\. Union (+) \n\n$x + $y \n\nUnion of $x and\
+    \ $y (but duplicate keys are not overwritten) \n\n2\\. Equality (== )\n\n$x ==\
+    \ $y \n\nTrue if $x and $y have the same key/value pairs \n\n3.Identity (===)\n\
+    \n$x === $y \n\nTrue if $x and $y have the same key/value pairs in the same order\
+    \ and of the same types \n\n4\\. Inequality (!= )\n\n$x != $y \n\nTrue if $x is\
+    \ not equal to $y \n\n5\\. Inequality (<> )\n\n$x <> $y \n\nTrue if $x is not\
+    \ equal to $y \n\n6\\. Non-identity (!== )\n\n$x !== $y \n\nTrue if $x is not\
+    \ identical to $y \n\nThe example below shows the different results of using the\
+    \ different array operators: \n\nExample \n\n<?php \n\n$x = array(\"a\" => \"\
+    red\", \"b\" => \"green\"); \n\n$y = array(\"c\" => \"blue\", \"d\" => \"yellow\"\
+    ); \n\n$z = $x + $y; // union of $x and $y \n\nvar\\_dump($z); \n\nvar\\_dump($x\
+    \ == $y); \n\nvar\\_dump($x === $y); \n\nvar\\_dump($x != $y); \n\nvar\\_dump($x\
+    \ <> $y); \n\nvar\\_dump($x !== $y); \n\n?> \n\n# Chapter 5:CONTROL STRUCTURES\
+    \ \n\n## If statement\n\nThe PHP if statement is very similar to other programming\
+    \ languages use of the if statement,  check the following: \n\nThis simple kind\
+    \ of if/then statement is very common in every day life and also appears in programming\
+    \ quite often. Whenever you want to make a decision given that something is true\
+    \ and be sure that you take the appropriate action, you are using an if/then relationship.\
+    \ \n\nexample \n\n$my\\_name = \"william\"; \n\nif ( $my\\_name == \"william\"\
+    \ ) { \n\necho \"Your name is william!<br />\"; \n\n} \n\nDisplay: \n\nYour name\
+    \ is william! \n\nexplanation \n\nDid you get that we were comparing the variable\
+    \ $my\\_name with \"william\" to see if they were equal? In PHP you use the double\
+    \ equal sign (==) to compare values. Additionally, notice that because the if\
+    \ statement turned out to be true, the code segment was executed, printing out\
+    \ \"Your name is william!\". Let's go a bit more into details\n\n• We first set\
+    \ the variable $my\\_name equal to \"william\". "
+  fmt: "\n# 整数\n\n- An integer must have at least one digit (`0-9`)\n- An integer\
+    \ cannot contain comma or blanks\n- An integer must not have a decimal point\n\
+    - An integer can be either positive or negative\n- Integers can be specified in\
+    \ three formats: decimal (`10`-based), hexadecimal (`16`-based - prefixed with\
+    \ `0x`) or octal (`8`-based - prefixed with `0`)\n\nIn the following example we\
+    \ will test different numbers. The PHP `var_dump()` function returns the data\
+    \ type and value of variables:\n\nExample\n\n```php\n<?php \n\n$x = 5985; \n\n\
+    var_dump($x); \n\necho \"<br>\"; \n\n$x = -345; // negative number \n\nvar_dump($x);\
+    \ \n\necho \"<br>\"; \n\n$x = 0x8C; // hexadecimal number \n\nvar_dump($x); \n\
+    \necho \"<br>\"; \n\n$x = 047; // octal number \n\nvar_dump($x); \n\n?> \n```\n\
+    \n# 浮点数\n\nA floating point number is a number with a decimal point or a number\
+    \ in exponential form.\n\nIn the following example we will test different numbers.\
+    \ The PHP `var_dump()` function returns the data type and value of variables:\n\
+    \nExample\n\n```php\n<?php \n\n$x = 10.365; \n\nvar_dump($x); \n\necho \"<br>\"\
+    ; \n\n$x = 2.4e3; \n\nvar_dump($x); \n\necho \"<br>\"; \n\n$x = 8E-5; \n\nvar_dump($x);\
+    \ \n\n?> \n```\n\n# 布尔值\n\nBooleans can be either `TRUE` or `FALSE`.\n\n`var x=true;`\
+    \ \n\n`var y=false;`\n\nBooleans are often used in conditional testing. You will\
+    \ learn more about conditional testing in a later chapter of this tutorial.\n\n\
+    # 数组\n\nAn array stores multiple values in one single variable.\n\nIn the following\
+    \ example we create an array, and then use the PHP `var_dump()` function to return\
+    \ the data type and value of the array:\n\nExample\n\n```php\n<?php \n\n$fruits=array(\"\
+    mango\",\"apple\",\"ovacado\",’’banana’’); \n\nvar_dump($fruits); \n\n?> \n```\n\
+    \nYou will learn a lot more about arrays in later chapters of this tutorial.\n\
+    \n# Chapter 4: PHP OPERATORS\n\n## PHP Operators\n\nThis chapter shows the different\
+    \ operators that can be used in PHP scripts.\n\n## PHP arithmetic operators\n\n\
+    1. Addition or summation (`+`)\n\n`$x + $y`\n\nSum of `$x` and `$y`\n\n2. Subtraction\
+    \ (`-`)\n\n`$x - $y`\n\nDifference of `$x` and `$y`\n\n3. Multiplication (`*`)\n\
+    \n`$x * $y`\n\nProduct of `$x` and `$y`\n\n4. Division (`/`)\n\n`$x / $y`\n\n\
+    Quotient of `$x` and `$y`\n\n5. Modulus (`%`)\n\n`$x % $y`\n\nRemainder of `$x`\
+    \ divided by `$y`\n\nThe example below shows the different results of using the\
+    \ different arithmetic operators:\n\nExample\n\n```php\n<?php \n\n$x=5; \n\n$y=3;\
+    \ \n\necho ($x + $y); // outputs 8\n\necho ($x - $y); // outputs 2 \n\necho ($x\
+    \ * $y); // outputs 15 \n\necho ($x / $y); // outputs 1.6666666666667 \n\necho\
+    \ ($x % $y); // outputs 2 \n\n?> \n```\n\n## PHP assignment operators\n\nThe PHP\
+    \ assignment operator is used to write a value to a variable.\n\nThe basic assignment\
+    \ operator in PHP is `\"=\"`. It means that the left operand gets set to the value\
+    \ of the assignment expression on the right.\n\n`x = y` and is the same as `x\
+    \ = y`\n\nThe left operand gets set to the value of the expression on the right\n\
+    \n1. Addition\n\n`x += y`\n\n`x = x + y`\n\n2. Subtraction\n\n`x -= y`\n\n`x =\
+    \ x - y`\n\n3. Multiplication\n\n`x *= y`\n\n`x = x * y`\n\n4. Division\n\n`x\
+    \ /= y`\n\n`x = x / y`\n\n5. modulus\n\n`x %= y`\n\n`x = x % y`\n\nThe example\
+    \ below shows the different results of using the different assignment operators:\n\
+    \nExample\n\n```php\n<?php \n\n$x=10; \n\necho $x; // outputs 10 \n\n$y=10; \n\
+    \n$y += 10; \n\necho $y; // outputs 20 \n\n$z=40; \n\n$z -= 25; \n\necho $z; //\
+    \ outputs 15 \n\n$i=5; \n\n$i *= 9; \n\necho $i; // outputs 45\n\n$j=12; \n\n\
+    $j /= 6; \n\necho $j; // outputs 2 \n\n$k=15; \n\n$k %= 4; \n\necho $k; // outputs\
+    \ 3 \n\n?> \n```\n\n## PHP string Operators\n\n1. Concatenation (`.`)\n\n`$txt1\
+    \ = \"Hello\"`\n\n`$txt2 = $txt1 . \" world!\"`\n\nOutput is hello world\n\n2.\
+    \ Concatenation assignment( `.=`)\n\n`$txt1 = \"Hello\"`\n\nNow `$txt1` contains\
+    \ `\"Hello world!\"`\n\n`$txt1 .= \" world!\"`\n\nThe example below shows the\
+    \ results of using the string operators:\n\nExample\n\n```php\n<?php \n\n$x =\
+    \ \"Hello\"; \n\n$y = $a . \" world!\"; \n\necho $y; // outputs Hello world! \n\
+    \n$x=\"Hello\"; \n\n$x .= \" world!\"; \n\necho $x; // outputs Hello world! \n\
+    \n?> \n```\n\n## PHP Increment/Decrement Operators\n\n1. Pre-increment (`++$x`)\n\
+    \nIncrements `$x` by one, then returns `$x`\n\n2. Post-increment (`$x++`)\n\n\
+    Returns `$x`, then increments `$x` by one\n\n3. Pre-decrement (`--$x`)\n\nDecrements\
+    \ `$x` by one, then returns `$x`\n\n4. Post-decrement (`$x--`)\n\nPost-decrement\n\
+    \nReturns `$x`, then decrements `$x` by one\n\nThe example below shows the different\
+    \ results of using the different increment/decrement operators: Example\n\n```php\n\
+    <?php \n\n$x=9; \n\necho ++$x; // outputs 10 \n\n$y=10; \n\necho $y++; // outputs\
+    \ 10 \n\n$z=6; \n\necho --$z; // outputs 5 \n\n$i=5; \n\necho $i--; // outputs\
+    \ 5 \n\n?> \n```\n\n## PHP comparison Operators\n\nThe PHP comparison operators\
+    \ are used to compare two values (number or string):\n\n1. Equal (`==`)\n\n`$x\
+    \ == $y`\n\nTrue if `$x` is equal to `$y`\n\n2. Identical (`===`)\n\n`$x === $y`\n\
+    \nTrue if `$x` is equal to `$y`, and they are of the same type\n\n3. Not equal\
+    \ (`!=`)\n\n`$x != $y`\n\nTrue if `$x` is not equal to `$y`\n\n4. Not equal (`<>`)\n\
+    \n`$x <> $y`\n\nTrue if `$x` is not equal to `$y`\n\n5. Not identical (`!==`)\n\
+    \n`$x !== $y`\n\nTrue if `$x` is not equal to `$y`, or they are not of the same\
+    \ type\n\n6. Greater than (`>`)\n\n`$x > $y`\n\nTrue if `$x` is greater than `$y`\n\
+    \n7. Less than (`<`)\n\n`$x < $y`\n\nTrue if `$x` is less than `$y`\n\n8. Greater\
+    \ than or equal to (`>=`)\n\n`$x >= $y`\n\nTrue if `$x` is greater than or equal\
+    \ to `$y`\n\n9. Less than or equal to (`<=`)\n\n`$x <= $y`\n\nTrue if `$x` is\
+    \ less than or equal to `$y`\n\nThe example below shows the different results\
+    \ of using some of the comparison operators:\n\nExample\n\n```php\n<?php \n\n\
+    $x=100; \n\n$y=\"100\"; \n\nvar_dump($x == $y); \n\necho \"<br>\"; \n\nvar_dump($x\
+    \ === $y); \n\necho \"<br>\"; \n\nvar_dump($x != $y); \n\necho \"<br>\"; \n\n\
+    var_dump($x !== $y); \n\necho \"<br>\"; \n\n$a=50; \n\n$b=90; \n\nvar_dump($a\
+    \ > $b); \n\necho \"<br>\"; \n\nvar_dump($a < $b); \n\n?> \n```\n\n## PHP logical\
+    \ Operators\n\n1. `and`\n\n`$x and $y`\n\nTrue if both `$x` and `$y` are true\n\
+    \n2. `or`\n\n`$x or $y`\n\nTrue if either `$x` or `$y` is true\n\n3. `xor`\n\n\
+    `$x xor $y`\n\nTrue if either `$x` or `$y` is true, but not\n\n4. both (`&&`)\n\
+    \n`$x && $y`\n\nTrue if both `$x` and `$y` are true\n\n5. `||` (Or)\n\n`$x ||\
+    \ $y`\n\nTrue if either `$x` or `$y` is true\n\n6. `!` (Not)\n\n`!$x`\n\nTrue\
+    \ if `$x` is not true\n\n## PHP array Operators\n\nThe PHP array operators are\
+    \ used to compare arrays:\n\n1. Union (`+`)\n\n`$x + $y`\n\nUnion of `$x` and\
+    \ `$y` (but duplicate keys are not overwritten)\n\n2. Equality (`==`)\n\n`$x ==\
+    \ $y`\n\nTrue if `$x` and `$y` have the same key/value pairs\n\n3. Identity (`===`)\n\
+    \n`$x === $y`\n\nTrue if `$x` and `$y` have the same key/value pairs in the same\
+    \ order and of the same types\n\n4. Inequality (`!=`)\n\n`$x != $y`\n\nTrue if\
+    \ `$x` is not equal to `$y`\n\n5. Inequality (`<>`)\n\n`$x <> $y`\n\nTrue if `$x`\
+    \ is not equal to `$y`\n\n6. Non-identity (`!==`)\n\n`$x !== $y`\n\nTrue if `$x`\
+    \ is not identical to `$y`\n\nThe example below shows the different results of\
+    \ using the different array operators:\n\nExample\n\n```php\n<?php \n\n$x = array(\"\
+    a\" => \"red\", \"b\" => \"green\"); \n\n$y = array(\"c\" => \"blue\", \"d\" =>\
+    \ \"yellow\"); \n\n$z = $x + $y; // union of $x and $y \n\nvar_dump($z); \n\n\
+    var_dump($x == $y); \n\nvar_dump($x === $y); \n\nvar_dump($x != $y); \n\nvar_dump($x\
+    \ <> $y); \n\nvar_dump($x !== $y); \n\n?> \n```\n\n# Chapter 5: CONTROL STRUCTURES\n\
+    \n## If statement\n\nThe PHP if statement is very similar to other programming\
+    \ languages use of the if statement, check the following:\n\nThis simple kind\
+    \ of if/then statement is very common in every day life and also appears in programming\
+    \ quite often. Whenever you want to make a decision given that something is true\
+    \ and be sure that you take the appropriate action, you are using an if/then relationship.\n\
+    \nexample\n\n`$my_name = \"william\";`\n\n`if ( $my_name == \"william\" ) {`\n\
+    \n`echo \"Your name is william!<br />\";`\n\n`}`\n\nDisplay:\n\nYour name is william!\n\
+    \nexplanation\n\nDid you get that we were comparing the variable `$my_name` with\
+    \ `\"william\"` to see if they were equal? In PHP you use the double equal sign\
+    \ (`==`) to compare values. Additionally, notice that because the if statement\
+    \ turned out to be true, the code segment was executed, printing out \"Your name\
+    \ is william!\". Let's go a bit more into details\n\n• We first set the variable\
+    \ `$my_name` equal to `\"william\"`.\n"
+  trans: "\n\n# 整数\n\n- 整数必须至少有一个数字 (`0-9`)\n- 整数不能包含逗号或空格\n- 整数不能有小数点\n- 整数可以是正数或负数\n\
+    - 整数可以用三种格式指定：十进制 (`10`-based)、十六进制 (`16`-based - 前缀为 `0x`) 或八进制 (`8`-based -\
+    \ 前缀为 `0`)\n\n在以下示例中，我们将测试不同的数字。PHP `var_dump()` 函数返回变量的数据类型和值：\n\nExample\n\n\
+    ```php\n<?php \n\n$x = 5985; \n\nvar_dump($x); \n\necho \"<br>\"; \n\n$x = -345;\
+    \ // negative number \n\nvar_dump($x); \n\necho \"<br>\"; \n\n$x = 0x8C; // hexadecimal\
+    \ number \n\nvar_dump($x); \n\necho \"<br>\"; \n\n$x = 047; // octal number \n\
+    \nvar_dump($x); \n\n?> \n```\n\n# 浮点数\n\n浮点数是带有小数点的数字或指数形式的数字。\n\n在以下示例中，我们将测试不同的数字。PHP\
+    \ `var_dump()` 函数返回变量的数据类型和值：\n\nExample\n\n```php\n<?php \n\n$x = 10.365; \n\n\
+    var_dump($x); \n\necho \"<br>\"; \n\n$x = 2.4e3; \n\nvar_dump($x); \n\necho \"\
+    <br>\"; \n\n$x = 8E-5; \n\nvar_dump($x); \n\n?> \n```\n\n# 布尔值\n\n布尔值可以是 `TRUE`\
+    \ 或 `FALSE`。\n\n`var x=true;` \n\n`var y=false;`\n\n布尔值常用于条件测试。您将在本教程的后续章节中了解更多关于条件测试的内容。\n\
+    \n# 数组\n\n数组在一个单一变量中存储多个值。\n\n在以下示例中，我们创建一个数组，然后使用 PHP `var_dump()` 函数返回数组的数据类型和值：\n\
+    \nExample\n\n```php\n<?php \n\n$fruits=array(\"mango\",\"apple\",\"ovacado\",’’banana’’);\
+    \ \n\nvar_dump($fruits); \n\n?> \n```\n\n您将在本教程的后续章节中了解更多关于数组的内容。\n\n# Chapter\
+    \ 4: PHP OPERATORS\n\n## PHP Operators\n\n本章展示了可以在 PHP 脚本中使用的不同运算符。\n\n## PHP\
+    \ 算术运算符\n\n1. 加法或求和 (`+`)\n\n`$x + $y`\n\n`$x` 和 `$y` 的和\n\n2. 减法 (`-`)\n\n`$x\
+    \ - $y`\n\n`$x` 和 `$y` 的差\n\n3. 乘法 (`*`)\n\n`$x * $y`\n\n`$x` 和 `$y` 的积\n\n4.\
+    \ 除法 (`/`)\n\n`$x / $y`\n\n`$x` 和 `$y` 的商\n\n5. 取模 (`%`)\n\n`$x % $y`\n\n`$x`\
+    \ 除以 `$y` 的余数\n\n下面的示例展示了使用不同算术运算符的不同结果：\n\nExample\n\n```php\n<?php \n\n$x=5;\
+    \ \n\n$y=3; \n\necho ($x + $y); // outputs 8\n\necho ($x - $y); // outputs 2 \n\
+    \necho ($x * $y); // outputs 15 \n\necho ($x / $y); // outputs 1.6666666666667\
+    \ \n\necho ($x % $y); // outputs 2 \n\n?> \n```\n\n## PHP 赋值运算符\n\nPHP 赋值运算符用于将值写入变量。\n\
+    \nPHP 中的基本赋值运算符是 `\"=\"`。它表示左操作数被设置为右侧赋值表达式的值。\n\n`x = y` 和是与 `x = y` 相同\n\n左操作数被设置为右侧表达式的值\n\
+    \n1. 加法\n\n`x += y`\n\n`x = x + y`\n\n2. 减法\n\n`x -= y`\n\n`x = x - y`\n\n3. 乘法\n\
+    \n`x *= y`\n\n`x = x * y`\n\n4. 除法\n\n`x /= y`\n\n`x = x / y`\n\n5. 取模\n\n`x %=\
+    \ y`\n\n`x = x % y`\n\n下面的示例展示了使用不同赋值运算符的不同结果：\n\nExample\n\n```php\n<?php \n\n\
+    $x=10; \n\necho $x; // outputs 10 \n\n$y=10; \n\n$y += 10; \n\necho $y; // outputs\
+    \ 20 \n\n$z=40; \n\n$z -= 25; \n\necho $z; // outputs 15 \n\n$i=5; \n\n$i *= 9;\
+    \ \n\necho $i; // outputs 45\n\n$j=12; \n\n$j /= 6; \n\necho $j; // outputs 2\
+    \ \n\n$k=15; \n\n$k %= 4; \n\necho $k; // outputs 3 \n\n?> \n```\n\n## PHP 字符串运算符\n\
+    \n1. 连接 (`.`)\n\n`$txt1 = \"Hello\"`\n\n`$txt2 = $txt1 . \" world!\"`\n\n输出是 hello\
+    \ world\n\n2. 连接赋值 (`.=`)\n\n`$txt1 = \"Hello\"`\n\n现在 `$txt1` 包含 `\"Hello world!\"\
+    `\n\n`$txt1 .= \" world!\"`\n\n下面的示例展示了使用字符串运算符的结果：\n\nExample\n\n```php\n<?php\
+    \ \n\n$x = \"Hello\"; \n\n$y = $a . \" world!\"; \n\necho $y; // outputs Hello\
+    \ world! \n\n$x=\"Hello\"; \n\n$x .= \" world!\"; \n\necho $x; // outputs Hello\
+    \ world! \n\n?> \n```\n\n## PHP 自增/自减运算符\n\n1. 前自增 (`++$x`)\n\n将 `$x` 增加一，然后返回\
+    \ `$x`\n\n2. 后自增 (`$x++`)\n\n返回 `$x`，然后将 `$x` 增加一\n\n3. 前自减 (`--$x`)\n\n将 `$x`\
+    \ 减少一，然后返回 `$x`\n\n4. 后自减 (`$x--`)\n\n后自减\n\n返回 `$x`，然后将 `$x` 减少一\n\n下面的示例展示了使用不同自增/自减运算符的不同结果：Example\n\
+    \n```php\n<?php \n\n$x=9; \n\necho ++$x; // outputs 10 \n\n$y=10; \n\necho $y++;\
+    \ // outputs 10 \n\n$z=6; \n\necho --$z; // outputs 5 \n\n$i=5; \n\necho $i--;\
+    \ // outputs 5 \n\n?> \n```\n\n## PHP 比较运算符\n\nPHP 比较运算符用于比较两个值（数字或字符串）：\n\n1.\
+    \ 等于 (`==`)\n\n`$x == $y`\n\n如果 `$x` 等于 `$y`，则为真\n\n2. 全等 (`===`)\n\n`$x === $y`\n\
+    \n如果 `$x` 等于 `$y`，并且它们的类型相同，则为真\n\n3. 不等于 (`!=`)\n\n`$x != $y`\n\n如果 `$x` 不等于\
+    \ `$y`，则为真\n\n4. 不等于 (`<>`)\n\n`$x <> $y`\n\n如果 `$x` 不等于 `$y`，则为真\n\n5. 不全等 (`!==`)\n\
+    \n`$x !== $y`\n\n如果 `$x` 不等于 `$y`，或者它们的类型不同，则为真\n\n6. 大于 (`>`)\n\n`$x > $y`\n\n\
+    如果 `$x` 大于 `$y`，则为真\n\n7. 小于 (`<`)\n\n`$x < $y`\n\n如果 `$x` 小于 `$y`，则为真\n\n8. 大于或等于\
+    \ (`>=`)\n\n`$x >= $y`\n\n如果 `$x` 大于或等于 `$y`，则为真\n\n9. 小于或等于 (`<=`)\n\n`$x <=\
+    \ $y`\n\n如果 `$x` 小于或等于 `$y`，则为真\n\n下面的示例展示了使用一些比较运算符的不同结果：\n\nExample\n\n```php\n\
+    <?php \n\n$x=100; \n\n$y=\"100\"; \n\nvar_dump($x == $y); \n\necho \"<br>\"; \n\
+    \nvar_dump($x === $y); \n\necho \"<br>\"; \n\nvar_dump($x != $y); \n\necho \"\
+    <br>\"; \n\nvar_dump($x !== $y); \n\necho \"<br>\"; \n\n$a=50; \n\n$b=90; \n\n\
+    var_dump($a > $b); \n\necho \"<br>\"; \n\nvar_dump($a < $b); \n\n?> \n```\n\n\
+    ## PHP 逻辑运算符\n\n1. `and`\n\n`$x and $y`\n\n如果 `$x` 和 `$y` 都为真，则为真\n\n2. `or`\n\
+    \n`$x or $y`\n\n如果 `$x` 或 `$y` 为真，则为真\n\n3. `xor`\n\n`$x xor $y`\n\n如果 `$x` 或\
+    \ `$y` 为真，但不是两者都为真，则为真\n\n4. 两者 (`&&`)\n\n`$x && $y`\n\n如果 `$x` 和 `$y` 都为真，则为真\n\
+    \n5. `||` (Or)\n\n`$x || $y`\n\n如果 `$x` 或 `$y` 为真，则为真\n\n6. `!` (Not)\n\n`!$x`\n\
+    \n如果 `$x` 不为真，则为真\n\n## PHP 数组运算符\n\nPHP 数组运算符用于比较数组：\n\n1. 并集 (`+`)\n\n`$x +\
+    \ $y`\n\n`$x` 和 `$y` 的并集（但重复的键不会被覆盖）\n\n2. 相等 (`==`)\n\n`$x == $y`\n\n如果 `$x`\
+    \ 和 `$y` 具有相同的键/值对，则为真\n\n3. 全等 (`===`)\n\n`$x === $y`\n\n如果 `$x` 和 `$y` 具有相同的键/值对，顺序相同且类型相同，则为真\n\
+    \n4. 不相等 (`!=`)\n\n`$x != $y`\n\n如果 `$x` 不等于 `$y`，则为真\n\n5. 不相等 (`<>`)\n\n`$x\
+    \ <> $y`\n\n如果 `$x` 不等于 `$y`，则为真\n\n6. 不全等 (`!==`)\n\n`$x !== $y`\n\n如果 `$x` 不全等于\
+    \ `$y`，则为真\n\n下面的示例展示了使用不同数组运算符的不同结果：\n\nExample\n\n```php\n<?php \n\n$x = array(\"\
+    a\" => \"red\", \"b\" => \"green\"); \n\n$y = array(\"c\" => \"blue\", \"d\" =>\
+    \ \"yellow\"); \n\n$z = $x + $y; // union of $x and $y \n\nvar_dump($z); \n\n\
+    var_dump($x == $y); \n\nvar_dump($x === $y); \n\nvar_dump($x != $y); \n\nvar_dump($x\
+    \ <> $y); \n\nvar_dump($x !== $y); \n\n?> \n```\n\n# Chapter 5: CONTROL STRUCTURES\n\
+    \n## If 语句\n\nPHP if 语句与其他编程语言中 if 语句的用法非常相似，请查看以下内容：\n\n这种简单的 if/then 语句在日常生活中非常常见，在编程中也经常出现。每当你想要在某件事情为真时做出决定，并确保采取适当的行动时，你都在使用\
+    \ if/then 关系。\n\nexample\n\n`$my_name = \"william\";`\n\n`if ( $my_name == \"\
+    william\" ) {`\n\n`echo \"Your name is william!<br />\";`\n\n`}`\n\nDisplay:\n\
+    \nYour name is william!\n\nexplanation\n\n你是否明白我们是在将变量 `$my_name` 与 `\"william\"\
+    ` 进行比较，看它们是否相等？在 PHP 中，你使用双等号 (`==`) 来比较值。此外，请注意，因为 if 语句结果为真，所以执行了代码段，打印出 \"\
+    Your name is william!\"。让我们深入了解一下细节\n\n• 我们首先将变量 `$my_name` 设置为 `\"william\"`。\n\
+    \n"
+  toc: []
+- raw: "• We next used a PHP if statement to check if the value contained in the variable\
+    \ $my\\_name was equal to \"william\" \n\n• The comparison between $my\\_name\
+    \ and \"william\" was done with a double equal sign \"==\", not a single equals\"\
+    =\"! A single equals is for assigning a value to a variable, while a double equals\
+    \ is for checking if things are equal. \n\n• $my\\_name is indeed equal to \"\
+    william\" so the echo statement is executed\n\nSuppose  $my\\_name  is not equal\
+    \ to\"william\" what would have happened\n\nPHP Code: \n\n$my\\_name = \"james\"\
+    ; \n\nif ( $my\\_name == \"william\" ) { \n\necho \"Your name is william!<br />\"\
+    ; \n\n} \n\necho \"Welcome to mysite!\"; \n\nDisplay: \n\nWelcome to mysite!\n\
+    \n## If /else statement\n\nHas someone ever told you, \"if you study smart, then\
+    \ you will pass\"? And what happens if you do not study smart? Well, you fail!\
+    \ This is an example of an if/else conditional statement. \n\nPHP Code: \n\n$number\\\
+    _four \\== 4; \n\nif ( $number\\_four == 4 ) { \n\necho \" true\"; \n\n} else\
+    \ { \n\necho \" false\"; \n\n} \n\nDisplay: \n\n true \n\nexplanation \n\n• We\
+    \ first made a PHP variable called $number\\_four and set it equal to 4. \n\n\
+    • In this example we compared a variable to an integer value. To do such a comparison\
+    \ we use \" \\==\". \n\n• $number\\_four is indeed equal to 4 and so this statement\
+    \ will evaluate to true. \n\n• All code that is contained between the opening\
+    \ curly brace \"{\" that follows the if statement and the closing curly brace\
+    \ \"}\" will be executed when the if statement is true. \n\n• The code contained\
+    \ within the else segment will not be used. \n\n## Using else if with if..else\n\
+    \nexample\n\nPHP Code: \n\n$teacher = \"george\"; \n\nif($teacher == \"anne\"\
+    ){ \n\necho \"Hello madam\"; \n\n} elseif ($teacher == \"george\"){ \n\necho \"\
+    hello Sir!\"; \n\n}else { \n\necho \n\n\"Morning\"; \n\n} \n\nDisplay: \n\nhello\
+    \ Sir! \n\nPHP first checked to see if $teacher was equal to \"anne\", which evaluated\
+    \ to false. Next, PHP checked the first elseif statement $teacher did in fact\
+    \ equal \"george\" so the phrase george Sir!\" was printed out. If we wanted to\
+    \ check for more teachers names we could insert more elseif statements! ,note\
+    \ that an elseif statement cannot be used unless it is preceded by an if statement.\n\
+    \n## Switch statement\n\nThere are times when an if statement is not the most\
+    \ efficient way to check for certain conditions. With the use of the switch statement\
+    \ you can check for all these conditions at once, \n\nThis is how it works,first\
+    \ we have a single expression (most often a variable), that is evaluated once.\
+    \ The value of the expression is then compared with the values for each case in\
+    \ the code structure. If there is a match, the block of code associated with that\
+    \ case is executed. The use of break is to prevent the code from running into\
+    \ the next case automatically. The default statement is used if no match is found.\
+    \ \n\nExample \n\n<?php \n\n$color=\"pink\"; \n\nswitch ($color) \n\n{ \n\ncase\
+    \ \"yellow\": \n\necho \"Your favorite color is yellow!\"; \n\nbreak; \n\ncase\
+    \ \"red\": \n\necho \"Your favorite color is red!\"; \n\nbreak; \n\ncase \"pink\"\
+    : \n\necho \"Your favorite color is pink!\"; \n\nbreak; \n\ndefault: \n\necho\
+    \ \"Your favorite color is not known!\"; \n\n} \n\n?>\n\nThe if statement has\
+    \ the else clause and the switch statement has the default case. It's usually\
+    \ a good idea to always include the default case in all your switch statements.\n\
+    \n## while Loops \n\nPHP while loops execute a block of code while the specified\
+    \ condition is true. Often when you write code, you want the same block of code\
+    \ to run over and over again in a row.Instead of adding several (which is tedious)almost\
+    \ equal code-lines in a script, we can use loops to perform a task like this.\
+    \ \n\nIn PHP, the following looping statements are used: \n\n· while \\- loops\
+    \ through a block of code and executes as long as the specified condition is true\
+    \ \n\nSyntax \n\nwhile ( condition is true) \n\n{ \n\n code to be executed; \n\
+    \n} \n\nThe example below first sets a variable $x to 1 ($x=1;). Then, the while\
+    \ loop will continue to run as long as $x is less than, or equal to 10. $x will\
+    \ increase by 1 each time the loop runs ($x++;): Example \n\n<?php \n\n$x=1; \n\
+    \nwhile($x<=10) \n\n{ \n\necho \"The number is: $x <br>\"; \n\n$x++; \n\n} \n\n\
+    ?> \n\n· do...while - loops through a block of code once, and then repeats the\
+    \ loop as long as the specified condition is true,the do...while loop will always\
+    \ execute the block of code once, it will then check the condition, and repeat\
+    \ the loop while the specified condition is true. \n\nSyntax \n\ndo \n\n{ \n\n\
+    \ code to be executed; \n\n } \n\nwhile ( condition is true); \n\nThe example\
+    \ below first sets a variable $x to 1 ($x=1;). Then, the do while loop will write\
+    \ some output, and then increment the variable $x with 1. Then the condition is\
+    \ checked and the loop will continue to run as long as $x is less than, or equal\
+    \ to 10: \n\nExample \n\n<?php \n\n$x=1; \n\ndo \n\n{ \n\necho \"The number is:\
+    \ $x <br>\"; \n\n$x++; \n\n} \n\nwhile ($x<=10) \n\n?> \n\nNote that in a do while\
+    \ loop the condition is tested after executing the statements within the loop.\
+    \ This means that the do while loop would execute its statements at least once,\
+    \ even if the condition fails the first time. \n\n##  For Loop\n\nPHP for loops\
+    \ execute a block of code a specified number of times. The for loop is used when\
+    \ you know in advance how many times the script should run. \n\nSyntax \n\nfor\
+    \ ( init counter; test counter; increment counter) \n\n{ \n\ncode to be executed;\
+    \  \n\n} \n\nexplanation\n\n· init counter: Initialize the loop counter value\
+    \ \n\n· test counter: Evaluated for each loop iteration. If it evaluates to true,\
+    \ the loop continues. If it evaluates to false, the loop ends. \n\n· increment\
+    \ counter: Increases the loop counter value \n\nThe example below displays the\
+    \ numbers from 0 to 100: \n\nExample \n\n<?php \n\nfor ($x=0; $x<=100; $x++) \n\
+    \n{ \n\necho \"The number is: $x <br>\"; \n\n} \n\n?> \n\n## Foreach Loop \n\n\
+    The foreach loop works only on arrays, and is used to loop through each key pair\
+    \ in an array. For every loop iteration, the value of the current array element\
+    \ is assigned to $value and the array pointer is moved by one, until it reaches\
+    \ the last array element. The following example demonstrates a loop that will\
+    \ output the values of the given array ($fruits):\n\nSyntax \n\nforeach ($ array\
+    \  as  $ value) \n\n{ \n\ncode to be executed;  \n\n} \n\nExample \n\n<?php \n\
+    \n$fruits = array(\"mango\",\"orange\",\"pawpaw\",\"ovacado\"); \n\nforeach ($fruits\
+    \ as $value) \n\n{ \n\necho \"$value <br>\"; \n\n} \n\n?> \n\n# Chapter 6:PHP\
+    \ ARRAYS\n\n##  Array definition \n\nAn array stores multiple values in one single\
+    \ variable,hence an array is a special variable, which can hold more than one\
+    \ value at a time. \n\nIf you have a list of items (example a list of book names),\
+    \ storing the books in single variables could look like this: \n\n$books1=\"computing\"\
+    ; \n\n$books2=\"religion\"; \n\n$books3=\"history\"; \n\n$books4=\"philosophy\"\
+    ; \n\nwhat if you want to loop through the books and find a specific one? And\
+    \ what if you had not 4 books, but 4000? The best solution is to create an array,an\
+    \ array can hold many values under a single name, and you can access the values\
+    \ by referring to an index number. \n\n## Creating an array \n\nThe array() function\
+    \ is used to create an array: \n\nThere are three types of arrays: \n\n· Indexed\
+    \ arrays - Arrays with numeric index \n\n· Associative arrays - Arrays with named\
+    \ keys \n\n· Multidimensional arrays - Arrays containing one or more arrays \n\
+    \n## Indexed arrays\n\nThere are two ways to create indexed arrays: \n\nNote:index\
+    \ always starts at 0 \n\n1.The index can be assigned automatically $books=array(\"\
+    computing\",\"religion\",\"history\"); \n\n2\\. The index can be assigned manually:\
+    \ \n\n$books \\[0\\]=\"computing\"; \n\n$books \\[1\\]=\"religion\"; \n\n$books\
+    \ \\[2\\]=\"history\"; \n\nThe following example creates an indexed array named\
+    \ $cars, assigns three elements to it, and then prints a text containing the array\
+    \ values: \n\nExample \n\n<?php \n\n$books=array(\"computing\",\"religion\",\"\
+    history\");\n\necho \"I love \" . $books\\[0\\] . \", \" . $books\\[1\\] . \"\
+    \ and \" .$books\\[2\\] .\"; \n\n?> \n\n## Looping in indexed array\n\nTo loop\
+    \ through and echo all the values of an indexed array, you could use a for loop\
+    \ Example \n\n<?php "
+  fmt: "\n## PHP 条件语句\n\n• 我们接下来使用了 PHP `if` 语句，检查变量 `$my_name` 中包含的值是否等于 `\"william\"\
+    `。\n\n• `$my_name` 与 `\"william\"` 之间的比较是使用双等号 `\"==\"` 完成的，而不是单个等号 `\"=\"`！单个等号用于给变量赋值，而双等号用于检查事物是否相等。\n\
+    \n• `$my_name` 确实等于 `\"william\"`，因此执行了 `echo` 语句。\n\n假设 `$my_name` 不等于 `\"william\"\
+    `，会发生什么情况？\n\nPHP 代码：\n\n```php\n$my_name = \"james\";\n\nif ( $my_name == \"\
+    william\" ) { \n\necho \"Your name is william!<br />\"; \n\n} \n\necho \"Welcome\
+    \ to mysite!\"; \n```\n\n显示：\n\nWelcome to mysite!\n\n## If /else 语句\n\n有人曾经告诉过你，“如果你努力学习，你就会通过考试”？如果你没有努力学习，会发生什么？嗯，你会失败！这是一个\
+    \ if/else 条件语句的示例。\n\nPHP 代码：\n\n```php\n$number_four == 4; \n\nif ( $number_four\
+    \ == 4 ) { \n\necho \" true\"; \n\n} else { \n\necho \" false\"; \n\n} \n```\n\
+    \n显示：\n\n true \n\n说明：\n\n• 我们首先创建了一个名为 `$number_four` 的 PHP 变量，并将其设置为 4。\n\n\
+    • 在本示例中，我们将变量与整数值进行比较。要进行此类比较，我们使用 `\"==\"`。\n\n• `$number_four` 确实等于 4，因此该语句将计算为\
+    \ true。\n\n• 位于 `if` 语句后面的左花括号 `\"{\"` 和右花括号 `\"}\"` 之间的所有代码，将在 `if` 语句为 true\
+    \ 时执行。\n\n• `else` 段中包含的代码不会被使用。\n\n## 将 else if 与 if..else 一起使用\n\n示例\n\nPHP\
+    \ 代码：\n\n```php\n$teacher = \"george\"; \n\nif($teacher == \"anne\"){ \n\necho\
+    \ \"Hello madam\"; \n\n} elseif ($teacher == \"george\"){ \n\necho \"hello Sir!\"\
+    ; \n\n}else { \n\necho \n\n\"Morning\"; \n\n} \n```\n\n显示：\n\nhello Sir! \n\n\
+    PHP 首先检查 `$teacher` 是否等于 `\"anne\"`，结果为 false。接下来，PHP 检查第一个 `elseif` 语句，`$teacher`\
+    \ 确实等于 `\"george\"`，因此打印出了短语 `george Sir!\"`。如果我们想检查更多教师姓名，可以插入更多 `elseif` 语句！请注意，除非\
+    \ `elseif` 语句前面有 `if` 语句，否则不能使用 `elseif` 语句。\n\n## Switch 语句\n\n有时，`if` 语句不是检查某些条件的最有效方法。使用\
+    \ `switch` 语句，您可以一次性检查所有这些条件。\n\n其工作原理如下：首先，我们有一个单个表达式（通常是一个变量），该表达式只计算一次。然后，将表达式的值与代码结构中每个\
+    \ `case` 的值进行比较。如果匹配，则执行与该 `case` 关联的代码块。使用 `break` 是为了防止代码自动运行到下一个 `case`。如果没有找到匹配项，则使用\
+    \ `default` 语句。\n\n示例\n\n```php\n<?php \n\n$color=\"pink\"; \n\nswitch ($color)\
+    \ \n\n{ \n\ncase \"yellow\": \n\necho \"Your favorite color is yellow!\"; \n\n\
+    break; \n\ncase \"red\": \n\necho \"Your favorite color is red!\"; \n\nbreak;\
+    \ \n\ncase \"pink\": \n\necho \"Your favorite color is pink!\"; \n\nbreak; \n\n\
+    default: \n\necho \"Your favorite color is not known!\"; \n\n} \n\n?>\n```\n\n\
+    `if` 语句有 `else` 子句，而 `switch` 语句有 `default` case。通常，在所有 `switch` 语句中始终包含 `default`\
+    \ case 是个好主意。\n\n## while 循环\n\nPHP `while` 循环在指定条件为 true 时执行一段代码。通常，当您编写代码时，希望同一段代码反复运行多次。与其在脚本中添加几个（这很乏味）几乎相同的代码行，不如使用循环来执行此类任务。\n\
+    \n在 PHP 中，使用以下循环语句：\n\n• `while` - 循环执行一段代码，只要指定条件为 true 即可。\n\n语法\n\n```php\n\
+    while ( condition is true) \n\n{ \n\n code to be executed; \n\n} \n\n```\n\n以下示例首先将变量\
+    \ `$x` 设置为 1 (`$x=1;`)。然后，`while` 循环将继续运行，只要 `$x` 小于或等于 10。每次循环运行时，`$x` 都会增加 1\
+    \ (`$x++;`)：\n\n示例\n\n```php\n<?php \n\n$x=1; \n\nwhile($x<=10) \n\n{ \n\necho\
+    \ \"The number is: $x <br>\"; \n\n$x++; \n\n} \n\n?> \n\n```\n\n• `do...while`\
+    \ - 循环执行一次代码块，然后只要指定条件为 true 就重复循环。`do...while` 循环总是会先执行一次代码块，然后检查条件，并在指定条件为 true\
+    \ 时重复循环。\n\n语法\n\n```php\ndo \n\n{ \n\n code to be executed; \n\n } \n\nwhile\
+    \ ( condition is true); \n\n```\n\n以下示例首先将变量 `$x` 设置为 1 (`$x=1;`)。然后，`do while`\
+    \ 循环将输出一些内容，然后将变量 `$x` 增加 1。然后检查条件，只要 `$x` 小于或等于 10，循环就会继续运行：\n\n示例\n\n```php\n\
+    <?php \n\n$x=1; \n\ndo \n\n{ \n\necho \"The number is: $x <br>\"; \n\n$x++; \n\
+    \n} \n\nwhile ($x<=10) \n\n?> \n```\n\n请注意，在 `do while` 循环中，条件是在执行循环内的语句后进行测试的。这意味着，即使条件第一次失败，`do\
+    \ while` 循环也会至少执行一次其语句。\n\n## For 循环\n\nPHP `for` 循环执行一段代码指定的次数。当您事先知道脚本应该运行多少次时，使用\
+    \ `for` 循环。\n\n语法\n\n```php\nfor ( init counter; test counter; increment counter)\
+    \ \n\n{ \n\ncode to be executed;  \n\n} \n```\n\n说明：\n\n• `init counter`：初始化循环计数器值。\n\
+    \n• `test counter`：在每次循环迭代中进行计算。如果计算结果为 true，则循环继续。如果计算结果为 false，则循环结束。\n\n• `increment\
+    \ counter`：增加循环计数器值。\n\n以下示例显示 0 到 100 的数字：\n\n示例\n\n```php\n<?php \n\nfor ($x=0;\
+    \ $x<=100; $x++) \n\n{ \n\necho \"The number is: $x <br>\"; \n\n} \n\n?> \n\n\
+    ```\n\n## Foreach 循环\n\n`foreach` 循环仅适用于数组，用于遍历数组中的每个键值对。在每次循环迭代中，当前数组元素的值被赋给\
+    \ `$value`，数组指针移动一位，直到到达最后一个数组元素。以下示例演示了一个循环，它将输出给定数组 (`$fruits`) 的值：\n\n语法\n\n\
+    ```php\nforeach ($ array  as  $ value) \n\n{ \n\ncode to be executed;  \n\n} \n\
+    ```\n\n示例\n\n```php\n<?php \n\n$fruits = array(\"mango\",\"orange\",\"pawpaw\"\
+    ,\"ovacado\"); \n\nforeach ($fruits as $value) \n\n{ \n\necho \"$value <br>\"\
+    ; \n\n} \n\n?> \n\n# Chapter 6:PHP ARRAYS\n\n## Array definition\n\n数组将多个值存储在一个单个变量中，因此数组是一种特殊的变量，一次可以容纳多个值。\n\
+    \n如果您有一个项目列表（例如书籍名称列表），将书籍存储在单个变量中可能如下所示：\n\n```php\n$books1=\"computing\"; \n\
+    \n$books2=\"religion\"; \n\n$books3=\"history\"; \n\n$books4=\"philosophy\"; \n\
+    ```\n\n如果您想遍历书籍并查找特定书籍，该怎么办？如果您不是 4 本书，而是 4000 本书，该怎么办？最好的解决方案是创建一个数组，数组可以在一个名称下容纳许多值，并且您可以通过引用索引号来访问这些值。\n\
+    \n## Creating an array\n\n`array()` 函数用于创建数组：\n\n数组有三种类型：\n\n• Indexed arrays\
+    \ - 带有数字索引的数组\n\n• Associative arrays - 带有命名键的数组\n\n• Multidimensional arrays\
+    \ - 包含一个或多个数组的数组\n\n## Indexed arrays\n\n创建索引数组有两种方法：\n\n注意：索引始终从 0 开始\n\n1. 索引可以自动分配\
+    \ `$books=array(\"computing\",\"religion\",\"history\");`\n\n2. 索引可以手动分配：\n\n\
+    ```php\n$books[0]=\"computing\"; \n\n$books[1]=\"religion\"; \n\n$books[2]=\"\
+    history\"; \n```\n\n以下示例创建一个名为 `$cars` 的索引数组，向其分配三个元素，然后打印包含数组值的文本：\n\n示例\n\n\
+    ```php\n<?php \n\n$books=array(\"computing\",\"religion\",\"history\");\n\necho\
+    \ \"I love \" . $books[0] . \", \" . $books[1] . \" and \" .$books[2] .\"; \n\n\
+    ?> \n```\n\n## Looping in indexed array\n\n要遍历并输出索引数组的所有值，可以使用 `for` 循环 示例\n\n\
+    ```php\n<?php \n```\n"
+  trans: "\n\n## PHP 条件语句\n\n• 我们接下来使用了 PHP `if` 语句，检查变量 `$my_name` 中包含的值是否等于 `\"\
+    william\"`。\n\n• `$my_name` 与 `\"william\"` 之间的比较是使用双等号 `\"==\"` 完成的，而不是单个等号 `\"\
+    =\"`！单个等号用于给变量赋值，而双等号用于检查事物是否相等。\n\n• `$my_name` 确实等于 `\"william\"`，因此执行了 `echo`\
+    \ 语句。\n\n假设 `$my_name` 不等于 `\"william\"`，会发生什么情况？\n\nPHP 代码：\n\n```php\n$my_name\
+    \ = \"james\";\n\nif ( $my_name == \"william\" ) { \n\necho \"Your name is william!<br\
+    \ />\"; \n\n} \n\necho \"Welcome to mysite!\"; \n```\n\n显示：\n\nWelcome to mysite!\n\
+    \n## If /else 语句\n\n有人曾经告诉过你，“如果你努力学习，你就会通过考试”？如果你没有努力学习，会发生什么？嗯，你会失败！这是一个 if/else\
+    \ 条件语句的示例。\n\nPHP 代码：\n\n```php\n$number_four == 4; \n\nif ( $number_four == 4\
+    \ ) { \n\necho \" true\"; \n\n} else { \n\necho \" false\"; \n\n} \n```\n\n显示：\n\
+    \n true \n\n说明：\n\n• 我们首先创建了一个名为 `$number_four` 的 PHP 变量，并将其设置为 4。\n\n• 在本示例中，我们将变量与整数值进行比较。要进行此类比较，我们使用\
+    \ `\"==\"`。\n\n• `$number_four` 确实等于 4，因此该语句将计算为 true。\n\n• 位于 `if` 语句后面的左花括号\
+    \ `\"{\"` 和右花括号 `\"}\"` 之间的所有代码，将在 `if` 语句为 true 时执行。\n\n• `else` 段中包含的代码不会被使用。\n\
+    \n## 将 else if 与 if..else 一起使用\n\n示例\n\nPHP 代码：\n\n```php\n$teacher = \"george\"\
+    ; \n\nif($teacher == \"anne\"){ \n\necho \"Hello madam\"; \n\n} elseif ($teacher\
+    \ == \"george\"){ \n\necho \"hello Sir!\"; \n\n}else { \n\necho \n\n\"Morning\"\
+    ; \n\n} \n```\n\n显示：\n\nhello Sir! \n\nPHP 首先检查 `$teacher` 是否等于 `\"anne\"`，结果为\
+    \ false。接下来，PHP 检查第一个 `elseif` 语句，`$teacher` 确实等于 `\"george\"`，因此打印出了短语 `george\
+    \ Sir!\"`。如果我们想检查更多教师姓名，可以插入更多 `elseif` 语句！请注意，除非 `elseif` 语句前面有 `if` 语句，否则不能使用\
+    \ `elseif` 语句。\n\n## Switch 语句\n\n有时，`if` 语句不是检查某些条件的最有效方法。使用 `switch` 语句，您可以一次性检查所有这些条件。\n\
+    \n其工作原理如下：首先，我们有一个单个表达式（通常是一个变量），该表达式只计算一次。然后，将表达式的值与代码结构中每个 `case` 的值进行比较。如果匹配，则执行与该\
+    \ `case` 关联的代码块。使用 `break` 是为了防止代码自动运行到下一个 `case`。如果没有找到匹配项，则使用 `default` 语句。\n\
+    \n示例\n\n```php\n<?php \n\n$color=\"pink\"; \n\nswitch ($color) \n\n{ \n\ncase\
+    \ \"yellow\": \n\necho \"Your favorite color is yellow!\"; \n\nbreak; \n\ncase\
+    \ \"red\": \n\necho \"Your favorite color is red!\"; \n\nbreak; \n\ncase \"pink\"\
+    : \n\necho \"Your favorite color is pink!\"; \n\nbreak; \n\ndefault: \n\necho\
+    \ \"Your favorite color is not known!\"; \n\n} \n\n?>\n```\n\n`if` 语句有 `else`\
+    \ 子句，而 `switch` 语句有 `default` case。通常，在所有 `switch` 语句中始终包含 `default` case 是个好主意。\n\
+    \n## while 循环\n\nPHP `while` 循环在指定条件为 true 时执行一段代码。通常，当您编写代码时，希望同一段代码反复运行多次。与其在脚本中添加几个（这很乏味）几乎相同的代码行，不如使用循环来执行此类任务。\n\
+    \n在 PHP 中，使用以下循环语句：\n\n• `while` - 循环执行一段代码，只要指定条件为 true 即可。\n\n语法\n\n```php\n\
+    while ( condition is true) \n\n{ \n\n code to be executed; \n\n} \n```\n\n以下示例首先将变量\
+    \ `$x` 设置为 1 (`$x=1;`)。然后，`while` 循环将继续运行，只要 `$x` 小于或等于 10。每次循环运行时，`$x` 都会增加 1\
+    \ (`$x++;`)：\n\n示例\n\n```php\n<?php \n\n$x=1; \n\nwhile($x<=10) \n\n{ \n\necho\
+    \ \"The number is: $x <br>\"; \n\n$x++; \n\n} \n\n?> \n```\n\n• `do...while` -\
+    \ 循环执行一次代码块，然后只要指定条件为 true 就重复循环。`do...while` 循环总是会先执行一次代码块，然后检查条件，并在指定条件为 true\
+    \ 时重复循环。\n\n语法\n\n```php\ndo \n\n{ \n\n code to be executed; \n\n } \n\nwhile\
+    \ ( condition is true); \n```\n\n以下示例首先将变量 `$x` 设置为 1 (`$x=1;`)。然后，`do while`\
+    \ 循环将输出一些内容，然后将变量 `$x` 增加 1。然后检查条件，只要 `$x` 小于或等于 10，循环就会继续运行：\n\n示例\n\n```php\n\
+    <?php \n\n$x=1; \n\ndo \n\n{ \n\necho \"The number is: $x <br>\"; \n\n$x++; \n\
+    \n} \n\nwhile ($x<=10) \n\n?> \n```\n\n请注意，在 `do while` 循环中，条件是在执行循环内的语句后进行测试的。这意味着，即使条件第一次失败，`do\
+    \ while` 循环也会至少执行一次其语句。\n\n## For 循环\n\nPHP `for` 循环执行一段代码指定的次数。当您事先知道脚本应该运行多少次时，使用\
+    \ `for` 循环。\n\n语法\n\n```php\nfor ( init counter; test counter; increment counter)\
+    \ \n\n{ \n\ncode to be executed;  \n\n} \n```\n\n说明：\n\n• `init counter`：初始化循环计数器值。\n\
+    \n• `test counter`：在每次循环迭代中进行计算。如果计算结果为 true，则循环继续。如果计算结果为 false，则循环结束。\n\n• `increment\
+    \ counter`：增加循环计数器值。\n\n以下示例显示 0 到 100 的数字：\n\n示例\n\n```php\n<?php \n\nfor ($x=0;\
+    \ $x<=100; $x++) \n\n{ \n\necho \"The number is: $x <br>\"; \n\n} \n\n?> \n```\n\
+    \n## Foreach 循环\n\n`foreach` 循环仅适用于数组，用于遍历数组中的每个键值对。在每次循环迭代中，当前数组元素的值被赋给 `$value`，数组指针移动一位，直到到达最后一个数组元素。以下示例演示了一个循环，它将输出给定数组\
+    \ (`$fruits`) 的值：\n\n语法\n\n```php\nforeach ($ array  as  $ value) \n\n{ \n\ncode\
+    \ to be executed;  \n\n} \n```\n\n示例\n\n```php\n<?php \n\n$fruits = array(\"mango\"\
+    ,\"orange\",\"pawpaw\",\"ovacado\"); \n\nforeach ($fruits as $value) \n\n{ \n\n\
+    echo \"$value <br>\"; \n\n} \n\n?> \n\n# Chapter 6:PHP ARRAYS\n\n## Array definition\n\
+    \n数组将多个值存储在一个单个变量中，因此数组是一种特殊的变量，一次可以容纳多个值。\n\n如果您有一个项目列表（例如书籍名称列表），将书籍存储在单个变量中可能如下所示：\n\
+    \n```php\n$books1=\"computing\"; \n\n$books2=\"religion\"; \n\n$books3=\"history\"\
+    ; \n\n$books4=\"philosophy\"; \n```\n\n如果您想遍历书籍并查找特定书籍，该怎么办？如果您不是 4 本书，而是 4000\
+    \ 本书，该怎么办？最好的解决方案是创建一个数组，数组可以在一个名称下容纳许多值，并且您可以通过引用索引号来访问这些值。\n\n## Creating an\
+    \ array\n\n`array()` 函数用于创建数组：\n\n数组有三种类型：\n\n• Indexed arrays - 带有数字索引的数组\n\n\
+    • Associative arrays - 带有命名键的数组\n\n• Multidimensional arrays - 包含一个或多个数组的数组\n\n\
+    ## Indexed arrays\n\n创建索引数组有两种方法：\n\n注意：索引始终从 0 开始\n\n1. 索引可以自动分配 `$books=array(\"\
+    computing\",\"religion\",\"history\");`\n\n2. 索引可以手动分配：\n\n```php\n$books[0]=\"\
+    computing\"; \n\n$books[1]=\"religion\"; \n\n$books[2]=\"history\"; \n```\n\n\
+    以下示例创建一个名为 `$cars` 的索引数组，向其分配三个元素，然后打印包含数组值的文本：\n\n示例\n\n```php\n<?php \n\n$books=array(\"\
+    computing\",\"religion\",\"history\");\n\necho \"I love \" . $books[0] . \", \"\
+    \ . $books[1] . \" and \" .$books[2] .\"; \n\n?> \n```\n\n## Looping in indexed\
+    \ array\n\n要遍历并输出索引数组的所有值，可以使用 `for` 循环 示例\n\n```php\n<?php \n```\n\n"
+  toc: []
+- raw: "$books=array(\"computing\",\"religion\",\"history\");\n\n$arraylength=count($books);\
+    \ \n\nfor($x=0;$x<$arraylength;$x++) \n\n{ \n\necho $books\\[$x\\]; \n\necho \"\
+    <br>\"; \n\n} \n\n?> \n\n## Associative array\n\nAssociative arrays are arrays\
+    \ that use named keys that you assign to them.\n\nThe named keys can then be used\
+    \ in a script: \n\nThere are two ways to create an associative array: 1.$year=array(\"\
+    benson\"=>\"1975\",\"anne\"=>\"1937\",\"Joel\"=>\"2000\"); or 2.$year\\['benson'\\\
+    ]=\"1975\"; \n\n  $year\\['anne'\\]=\"1937\"; \n\n  $year\\['Joel'\\]=\"2000\"\
+    ; \n\nExample \n\n<?php \n\n$year=array(\"benson\"=>\"1975\",\"anne\"=>\"1937\"\
+    ,\"Joel\"=>\"2000\");\n\n echo \"benson was born in \" . $year\\['benson'\\] .\
+    \ ; \n\n?> \n\n## Looping in associative array\n\nTo loop through and echo all\
+    \ the values of an associative array, you could use a foreach loop\n\n Example\
+    \ \n\n<?php \n\n$year=array(\"benson\"=>\"1975\",\"anne\"=>\"1937\",\"Joel\"=>\"\
+    2000\"); \n\nforeach($year as $x=>$x\\_value) \n\n{ \n\necho \"Key=\" . $x . \"\
+    , Value=\" . $x\\_value; \n\necho \"<br>\"; \n\n} \n\n?> \n\n## Get the length\
+    \ of an array\n\nThe count() function is used to return the length (the number\
+    \ of elements) of an array: \n\nExample \n\n<?php\n\n$books=array(\"computing\"\
+    ,\"religion\",\"history\");\n\necho count($books); \n\n?> \n\n# Chapter 7:PHP\
+    \ FUNCTIONS\n\nThe real power of PHP comes from its functions; it has more than\
+    \ 1000 built-in functions. \n\nNote:\n\n.Besides the built-in PHP functions, we\
+    \ can create our own functions. \n\n.A function is a block of statements that\
+    \ can be used repeatedly in a program. \n\n.A function will not execute immediately\
+    \ when a page loads. \n\n.A function will be executed by a call to the function.\
+    \ \n\n## Creating  user defined Functions\n\n.A user defined function declaration\
+    \ always starts with the word \"function\"\n\n.Function names are case-insensitive.\n\
+    \n.A function name can start with a letter or underscore (but not a number). \n\
+    \n .Give the function a name that reflects what the function does \n\nRemember\
+    \ that the opening curly brace ( { ) indicates the beginning of the function code\
+    \ and the closing curly brace ( } ) indicates the end of the function.\n\n Syntax\
+    \ \n\nfunction functionName() \n\n{ \n\ncode to be executed; \n\n} \n\nexample\n\
+    \nIn the example below, we create a function named \"displayname”. The function\
+    \ outputs \"Hello world!\". To call the function, just write its name: Example\
+    \ \n\n<?php \n\nfunction displayname() \n\n{ \n\necho \"Hello world!\"; \n\n}\
+    \ \n\ndisplayname(); // call the function \n\n?>\n\n## Functions arguments\n\n\
+    An argument is just like a variable,through which information is passed to functions,arguments\
+    \ are specified after the function name, inside the parentheses.\n\n You can add\
+    \ as many arguments as you want however you seperate them with a comma. \n\nThe\
+    \ following example has a function with two argument . When the detail() function\
+    \ is called, we also pass along detail (e.g. james,1937), and the detail is used\
+    \ inside the function, which outputs several different details\n\nExample \n\n\
+    <?php \n\nfunction detail($name,$year) \n\n{ \n\necho \"$name Refsnes. born in\
+    \ $year <br>\"; \n\n} \n\ndetail(\"james\",\"1937\"); \n\ndetail(\"kate\",\"1971\"\
+    ); \n\ndetail(\"anne\",\"1963\"); \n\n?> \n\n## Default argument value\n\nThe\
+    \ following illustrates how to use a default parameter. If we call the function\
+    \ width() without arguments it takes the default value as argument\n\nExample\
+    \ \n\n<?php \n\nfunction width($w=60) \n\n{ \n\necho \"The width is : $w <br>\"\
+    ; \n\n} \n\nwidth(65); \n\nwidth(); // will use the default value of 60 \n\nwidth(15);\
+    \ \n\nwidth(90); \n\n?> \n\n## Returning value\n\nTo let a function return a value,\
+    \ use the return statement\n\nExample \n\n<?php \n\nfunction div($x,$y) \n\n{\
+    \ \n\n$z=$x/$y; \n\nreturn $z; \n\n} \n\necho \"15 / 2 = \" . div(15,5) . \"<br>\"\
+    ; \n\necho \"14/2= \" . div(14,2) . \"<br>\"; \n\necho \"12 / 4 = \" . div(12,4);\
+    \ \n\n?> \n\n# Chapter 8:PHP Form Handling \n\n##  A Simple HTML Form description\n\
+    \nHTML Forms are required when you want to collect some data from the site visitor.\
+    \ For example during user registration you would like to collect information such\
+    \ as name, email address, credit card, etc.\n\nA form will take input from the\
+    \ site visitor and then will post it to a back-end application such as CGI, ASP\
+    \ Script or PHP script etc. The back-end application will perform required processing\
+    \ on the passed data based on defined business logic inside the application.\n\
+    \nThere are various form elements available like text fields, textarea fields,\
+    \ drop-down menus, radio buttons, checkboxes, etc.\n\nThe HTML <form> tag is used\
+    \ to create an HTML form and it has following syntax:\n\n<form action=\"Script\
+    \ URL\" method=\"GET|POST\">\n\n    form elements like input, textarea etc.\n\n\
+    </form>\n\n| Action || Backend script ready to process your passed data. |\n\n\
+    | --- | --- |\n\n| Method ||   Method to be used to upload data. The most frequently\
+    \ used are GET and POST            methods. |\n\n## HTML Form Controls\n\nThere\
+    \ are different types of form controls that you can use to collect data using\
+    \ HTML form:\n\n*   Checkboxes Controls\n\n*   Radio Box Controls\n\n*   Select\
+    \ Box Controls\n\n*   File Select boxes\n\n*   Hidden Controls\n\n*   Clickable\
+    \ Buttons\n\n*   Submit and Reset Button\n\n## Checkbox Control\n\nCheckboxes\
+    \ are used when more than one option is required to be selected. They are also\
+    \ created using HTML <input> tag but type attribute is set to checkbox\n\nHere\
+    \ is an example HTML code for a form with two checkboxes:\n\n<html>\n\n<head>\n\
+    \n<title>Checkbox Control</title>\n\n</head>\n\n<body>\n\n<form>\n\n<input type=\"\
+    checkbox\" name=\"maths\" value=\"on\"> Maths\n\n<input type=\"checkbox\" name=\"\
+    physics\" value=\"on\"> Physics\n\n</form>\n\n</body>\n\n</html>\n\nBottom of\
+    \ Form\n\n## Radio Button Control\n\nRadio buttons are used when out of many options,\
+    \ just one option is required to be selected. They are also created using HTML\
+    \ <input> tag but type attribute is set to radio.\n\nHere is example HTML code\
+    \ for a form with two radio buttons:\n\n<html>\n\n<head>\n\n<title>Radio Box Control</title>\n\
+    \n</head>\n\n<body>\n\n<form>\n\n<input type=\"radio\" name=\"subject\" value=\"\
+    maths\"> Maths\n\n<input type=\"radio\" name=\"subject\" value=\"physics\"> Physics\n\
+    \n</form>\n\n</body>\n\n</html>\n\nTop of Form\n\nBottom of Form\n\n## Select\
+    \ Box Control\n\nA select box, also called drop down box which provides option\
+    \ to list down various options in the form of drop down list, from where a user\
+    \ can select one or more options.\n\nHere is example HTML code for a form with\
+    \ one drop down box\n\n<html>\n\n<head>\n\n<title>Select Box Control</title>\n\
+    \n</head>\n\n<body>\n\n<form>\n\n<select name=\"dropdown\">\n\n<option value=\"\
+    Maths\" selected>Maths</option>\n\n<option value=\"Physics\">Physics</option>\n\
+    \n</select>\n\n</form>\n\n</body>\n\n</html>\n\nTop of Form\n\nBottom of Form\n\
+    \n## File Upload Box\n\nIf you want to allow a user to upload a file to your web\
+    \ site, you will need to use a file upload box, also known as a file select box.\
+    \ This is also created using the <input> element but type attribute is set to\
+    \ file.\n\nHere is example HTML code for a form with one file upload box:\n\n\
+    <html>\n\n<head>\n\n<title>File Upload Box</title>\n\n</head>\n\n<body>\n\n<form>\n\
+    \n<input type=\"file\" name=\"fileupload\" accept=\"image/\\*\" />\n\n</form>\n\
+    \n</body>\n\n</html>\n\nTop of Form\n\nBottom of Form\n\n## Button Controls             \
+    \ \n\nThere are various ways in HTML to create clickable buttons. You can also\
+    \ create a clickable button using <input> tag by setting its type attribute to\
+    \ button. The type attribute can take the following values:\n\nHere is example\
+    \ HTML code for a form with three types of buttons:\n\n<html>\n\n<head>\n\n<title>button\
+    \ control</title>\n\n</head>\n\n<body>\n\n<form>\n\n<input type=\"submit\" name=\"\
+    submit\" value=\"Submit\" />\n\n<input type=\"reset\" name=\"reset\"  value=\"\
+    Reset\" />\n\n<input type=\"button\" name=\"ok\" value=\"OK\"  />\n\n<input type=\"\
+    image\" name=\"imagebutton\" src=\"/html/images/logo.png\" />\n\n</form>\n\n</body>\n\
+    \n</html>\n\nBottom of Form\n\n## Hidden Form Controls"
+  fmt: "\n`$books=array(\"computing\",\"religion\",\"history\");`\n\n`$arraylength=count($books);`\n\
+    \n```\nfor($x=0;$x<$arraylength;$x++) \n\n{ \n\necho $books[$x]; \n\necho \"<br>\"\
+    ; \n\n} \n\n?>\n```\n\n## Associative array\n\nAssociative arrays are arrays that\
+    \ use named keys that you assign to them.\n\nThe named keys can then be used in\
+    \ a script:\n\nThere are two ways to create an associative array: 1.`$year=array(\"\
+    benson\"=>\"1975\",\"anne\"=>\"1937\",\"Joel\"=>\"2000\");` or 2.`$year['benson']=\"\
+    1975\";`\n\n`$year['anne']=\"1937\";`\n\n`$year['Joel']=\"2000\";`\n\nExample\n\
+    \n```\n<?php \n\n$year=array(\"benson\"=>\"1975\",\"anne\"=>\"1937\",\"Joel\"\
+    =>\"2000\");\n\n echo \"benson was born in \" . $year['benson'] . ; \n\n?> \n\
+    ```\n\n## Looping in associative array\n\nTo loop through and echo all the values\
+    \ of an associative array, you could use a foreach loop\n\nExample\n\n```\n<?php\
+    \ \n\n$year=array(\"benson\"=>\"1975\",\"anne\"=>\"1937\",\"Joel\"=>\"2000\");\
+    \ \n\nforeach($year as $x=>$x_value) \n\n{ \n\necho \"Key=\" . $x . \", Value=\"\
+    \ . $x_value; \n\necho \"<br>\"; \n\n} \n\n?> \n```\n\n## Get the length of an\
+    \ array\n\nThe `count()` function is used to return the length (the number of\
+    \ elements) of an array:\n\nExample\n\n```\n<?php\n\n$books=array(\"computing\"\
+    ,\"religion\",\"history\");\n\necho count($books); \n\n?> \n```\n\n# Chapter 7:PHP\
+    \ FUNCTIONS\n\nThe real power of PHP comes from its functions; it has more than\
+    \ 1000 built-in functions.\n\nNote:\n\n- Besides the built-in PHP functions, we\
+    \ can create our own functions.\n- A function is a block of statements that can\
+    \ be used repeatedly in a program.\n- A function will not execute immediately\
+    \ when a page loads.\n- A function will be executed by a call to the function.\n\
+    \n## Creating user defined Functions\n\n- A user defined function declaration\
+    \ always starts with the word `\"function\"`\n- Function names are case-insensitive.\n\
+    - A function name can start with a letter or underscore (but not a number).\n\
+    - Give the function a name that reflects what the function does\n\nRemember that\
+    \ the opening curly brace (`{`) indicates the beginning of the function code and\
+    \ the closing curly brace (`}`) indicates the end of the function.\n\nSyntax\n\
+    \n```\nfunction functionName() \n\n{ \n\ncode to be executed; \n\n} \n```\n\n\
+    example\n\nIn the example below, we create a function named `\"displayname\"`.\
+    \ The function outputs `\"Hello world!\"`. To call the function, just write its\
+    \ name:\n\nExample\n\n```\n<?php \n\nfunction displayname() \n\n{ \n\necho \"\
+    Hello world!\"; \n\n} \n\ndisplayname(); // call the function \n\n?>\n```\n\n\
+    ## Functions arguments\n\nAn argument is just like a variable, through which information\
+    \ is passed to functions; arguments are specified after the function name, inside\
+    \ the parentheses.\n\nYou can add as many arguments as you want; however, you\
+    \ separate them with a comma.\n\nThe following example has a function with two\
+    \ arguments. When the `detail()` function is called, we also pass along `detail`\
+    \ (e.g. `james`, `1937`), and the `detail` is used inside the function, which\
+    \ outputs several different details.\n\nExample\n\n```\n<?php \n\nfunction detail($name,$year)\
+    \ \n\n{ \n\necho \"$name Refsnes. born in $year <br>\"; \n\n} \n\ndetail(\"james\"\
+    ,\"1937\"); \n\ndetail(\"kate\",\"1971\"); \n\ndetail(\"anne\",\"1963\"); \n\n\
+    ?> \n```\n\n## Default argument value\n\nThe following illustrates how to use\
+    \ a default parameter. If we call the function `width()` without arguments, it\
+    \ takes the default value as argument.\n\nExample\n\n```\n<?php \n\nfunction width($w=60)\
+    \ \n\n{ \n\necho \"The width is : $w <br>\"; \n\n} \n\nwidth(65); \n\nwidth();\
+    \ // will use the default value of 60 \n\nwidth(15); \n\nwidth(90); \n\n?> \n\
+    ```\n\n## Returning value\n\nTo let a function return a value, use the `return`\
+    \ statement.\n\nExample\n\n```\n<?php \n\nfunction div($x,$y) \n\n{ \n\n$z=$x/$y;\
+    \ \n\nreturn $z; \n\n} \n\necho \"15 / 2 = \" . div(15,5) . \"<br>\"; \n\necho\
+    \ \"14/2= \" . div(14,2) . \"<br>\"; \n\necho \"12 / 4 = \" . div(12,4); \n\n\
+    ?> \n```\n\n# Chapter 8:PHP Form Handling\n\n## A Simple HTML Form description\n\
+    \nHTML Forms are required when you want to collect some data from the site visitor.\
+    \ For example, during user registration, you would like to collect information\
+    \ such as name, email address, credit card, etc.\n\nA form will take input from\
+    \ the site visitor and then will post it to a back-end application such as CGI,\
+    \ ASP Script, or PHP script, etc. The back-end application will perform required\
+    \ processing on the passed data based on defined business logic inside the application.\n\
+    \nThere are various form elements available like text fields, textarea fields,\
+    \ drop-down menus, radio buttons, checkboxes, etc.\n\nThe HTML `<form>` tag is\
+    \ used to create an HTML form and it has the following syntax:\n\n```\n<form action=\"\
+    Script URL\" method=\"GET|POST\">\n\n   form elements like input, textarea etc.\n\
+    \n</form>\n```\n\n| Action | Backend script ready to process your passed data.\
+    \ |\n| --- | --- |\n| Method | Method to be used to upload data. The most frequently\
+    \ used are GET and POST methods. |\n\n## HTML Form Controls\n\nThere are different\
+    \ types of form controls that you can use to collect data using HTML form:\n\n\
+    - Checkboxes Controls\n- Radio Box Controls\n- Select Box Controls\n- File Select\
+    \ boxes\n- Hidden Controls\n- Clickable Buttons\n- Submit and Reset Button\n\n\
+    ## Checkbox Control\n\nCheckboxes are used when more than one option is required\
+    \ to be selected. They are also created using HTML `<input>` tag but `type` attribute\
+    \ is set to `checkbox`.\n\nHere is an example HTML code for a form with two checkboxes:\n\
+    \n```\n<html>\n\n<head>\n\n<title>Checkbox Control</title>\n\n</head>\n\n<body>\n\
+    \n<form>\n\n<input type=\"checkbox\" name=\"maths\" value=\"on\"> Maths\n\n<input\
+    \ type=\"checkbox\" name=\"physics\" value=\"on\"> Physics\n\n</form>\n\n</body>\n\
+    \n</html>\n```\n\nBottom of Form\n\n## Radio Button Control\n\nRadio buttons are\
+    \ used when out of many options, just one option is required to be selected. They\
+    \ are also created using HTML `<input>` tag but `type` attribute is set to `radio`.\n\
+    \nHere is example HTML code for a form with two radio buttons:\n\n```\n<html>\n\
+    \n<head>\n\n<title>Radio Box Control</title>\n\n</head>\n\n<body>\n\n<form>\n\n\
+    <input type=\"radio\" name=\"subject\" value=\"maths\"> Maths\n\n<input type=\"\
+    radio\" name=\"subject\" value=\"physics\"> Physics\n\n</form>\n\n</body>\n\n\
+    </html>\n```\n\nTop of Form\n\nBottom of Form\n\n## Select Box Control\n\nA select\
+    \ box, also called drop-down box, which provides an option to list down various\
+    \ options in the form of a drop-down list, from where a user can select one or\
+    \ more options.\n\nHere is example HTML code for a form with one drop-down box:\n\
+    \n```\n<html>\n\n<head>\n\n<title>Select Box Control</title>\n\n</head>\n\n<body>\n\
+    \n<form>\n\n<select name=\"dropdown\">\n\n<option value=\"Maths\" selected>Maths</option>\n\
+    \n<option value=\"Physics\">Physics</option>\n\n</select>\n\n</form>\n\n</body>\n\
+    \n</html>\n```\n\nTop of Form\n\nBottom of Form\n\n## File Upload Box\n\nIf you\
+    \ want to allow a user to upload a file to your website, you will need to use\
+    \ a file upload box, also known as a file select box. This is also created using\
+    \ the `<input>` element but `type` attribute is set to `file`.\n\nHere is example\
+    \ HTML code for a form with one file upload box:\n\n```\n<html>\n\n<head>\n\n\
+    <title>File Upload Box</title>\n\n</head>\n\n<body>\n\n<form>\n\n<input type=\"\
+    file\" name=\"fileupload\" accept=\"image/\\*\" />\n\n</form>\n\n</body>\n\n</html>\n\
+    ```\n\nTop of Form\n\nBottom of Form\n\n## Button Controls\n\nThere are various\
+    \ ways in HTML to create clickable buttons. You can also create a clickable button\
+    \ using `<input>` tag by setting its `type` attribute to `button`. The `type`\
+    \ attribute can take the following values:\n\nHere is example HTML code for a\
+    \ form with three types of buttons:\n\n```\n<html>\n\n<head>\n\n<title>button\
+    \ control</title>\n\n</head>\n\n<body>\n\n<form>\n\n<input type=\"submit\" name=\"\
+    submit\" value=\"Submit\" />\n\n<input type=\"reset\" name=\"reset\" value=\"\
+    Reset\" />\n\n<input type=\"button\" name=\"ok\" value=\"OK\" />\n\n<input type=\"\
+    image\" name=\"imagebutton\" src=\"/html/images/logo.png\" />\n\n</form>\n\n</body>\n\
+    \n</html>\n```\n\nBottom of Form\n\n## Hidden Form Controls\n"
+  trans: "\n\n`$books=array(\"computing\",\"religion\",\"history\");`\n\n`$arraylength=count($books);`\n\
+    \n```\nfor($x=0;$x<$arraylength;$x++) \n\n{ \n\necho $books[$x]; \n\necho \"<br>\"\
+    ; \n\n} \n\n?>\n```\n\n## 关联数组\n\n关联数组是使用你分配给它们的命名键的数组。\n\n然后可以在脚本中使用命名键：\n\n\
+    创建关联数组有两种方式：1.`$year=array(\"benson\"=>\"1975\",\"anne\"=>\"1937\",\"Joel\"=>\"\
+    2000\");` 或 2.`$year['benson']=\"1975\";`\n\n`$year['anne']=\"1937\";`\n\n`$year['Joel']=\"\
+    2000\";`\n\n示例\n\n```\n<?php \n\n$year=array(\"benson\"=>\"1975\",\"anne\"=>\"\
+    1937\",\"Joel\"=>\"2000\");\n\n echo \"benson was born in \" . $year['benson']\
+    \ . ; \n\n?> \n```\n\n## 遍历关联数组\n\n要遍历并输出关联数组的所有值，可以使用 foreach 循环\n\n示例\n\n```\n\
+    <?php \n\n$year=array(\"benson\"=>\"1975\",\"anne\"=>\"1937\",\"Joel\"=>\"2000\"\
+    ); \n\nforeach($year as $x=>$x_value) \n\n{ \n\necho \"Key=\" . $x . \", Value=\"\
+    \ . $x_value; \n\necho \"<br>\"; \n\n} \n\n?> \n```\n\n## 获取数组长度\n\n`count()`\
+    \ 函数用于返回数组的长度（元素个数）：\n\n示例\n\n```\n<?php\n\n$books=array(\"computing\",\"religion\"\
+    ,\"history\");\n\necho count($books); \n\n?> \n```\n\n# 第 7 章：PHP 函数\n\nPHP 的真正威力来自于其函数；它拥有超过\
+    \ 1000 个内置函数。\n\n注意：\n\n- 除了内置的 PHP 函数，我们还可以创建自己的函数。\n- 函数是一段可以在程序中重复使用的语句块。\n\
+    - 页面加载时函数不会立即执行。\n- 函数会通过函数调用来执行。\n\n## 创建用户定义函数\n\n- 用户定义函数声明始终以单词 `\"function\"\
+    ` 开头\n- 函数名不区分大小写。\n- 函数名可以以字母或下划线开头（但不能以数字开头）。\n- 为函数命名，使其反映函数的功能\n\n请记住，开始花括号\
+    \ (`{`) 表示函数代码的开始，结束花括号 (`}`) 表示函数的结束。\n\n语法\n\n```\nfunction functionName() \n\
+    \n{ \n\ncode to be executed; \n\n} \n```\n\n示例\n\n在下面的示例中，我们创建一个名为 `\"displayname\"\
+    ` 的函数。该函数输出 `\"Hello world!\"`。要调用函数，只需写出其名称：\n\n示例\n\n```\n<?php \n\nfunction\
+    \ displayname() \n\n{ \n\necho \"Hello world!\"; \n\n} \n\ndisplayname(); // call\
+    \ the function \n\n?>\n```\n\n## 函数参数\n\n参数就像一个变量，用于向函数传递信息；参数在函数名之后、括号内指定。\n\n\
+    你可以添加任意数量的参数；但是，用逗号将它们分隔开。\n\n下面的示例有一个带有两个参数的函数。当调用 `detail()` 函数时，我们也会传递 `detail`（例如\
+    \ `james`、`1937`），并且 `detail` 在函数内部使用，该函数输出多个不同的详细信息。\n\n示例\n\n```\n<?php \n\n\
+    function detail($name,$year) \n\n{ \n\necho \"$name Refsnes. born in $year <br>\"\
+    ; \n\n} \n\ndetail(\"james\",\"1937\"); \n\ndetail(\"kate\",\"1971\"); \n\ndetail(\"\
+    anne\",\"1963\"); \n\n?> \n```\n\n## 默认参数值\n\n下面的示例说明如何使用默认参数。如果不带参数调用函数 `width()`，它将使用默认值作为参数。\n\
+    \n示例\n\n```\n<?php \n\nfunction width($w=60) \n\n{ \n\necho \"The width is : $w\
+    \ <br>\"; \n\n} \n\nwidth(65); \n\nwidth(); // will use the default value of 60\
+    \ \n\nwidth(15); \n\nwidth(90); \n\n?> \n```\n\n## 返回值\n\n要让函数返回一个值，请使用 `return`\
+    \ 语句。\n\n示例\n\n```\n<?php \n\nfunction div($x,$y) \n\n{ \n\n$z=$x/$y; \n\nreturn\
+    \ $z; \n\n} \n\necho \"15 / 2 = \" . div(15,5) . \"<br>\"; \n\necho \"14/2= \"\
+    \ . div(14,2) . \"<br>\"; \n\necho \"12 / 4 = \" . div(12,4); \n\n?> \n```\n\n\
+    # 第 8 章：PHP 表单处理\n\n## 简单 HTML 表单说明\n\n当你想要从网站访问者那里收集一些数据时，需要 HTML 表单。例如，在用户注册期间，你可能希望收集姓名、电子邮件地址、信用卡等信息。\n\
+    \n表单将从网站访问者那里获取输入，然后将其发布到后端应用程序，例如 CGI、ASP 脚本或 PHP 脚本等。后端应用程序将根据应用程序内定义的业务逻辑对传递的数据进行所需处理。\n\
+    \n有多种表单元素可用，例如文本字段、文本区域字段、下拉菜单、单选按钮、复选框等。\n\nHTML `<form>` 标签用于创建 HTML 表单，其语法如下：\n\
+    \n```\n<form action=\"Script URL\" method=\"GET|POST\">\n\n   form elements like\
+    \ input, textarea etc.\n\n</form>\n```\n\n| Action | 准备处理传递数据的后端脚本。 |\n| --- |\
+    \ --- |\n| Method | 用于上传数据的方法。最常用的是 GET 和 POST 方法。 |\n\n## HTML 表单控件\n\n你可以使用不同类型的表单控件来通过\
+    \ HTML 表单收集数据：\n\n- 复选框控件\n- 单选按钮控件\n- 下拉列表控件\n- 文件选择框\n- 隐藏控件\n- 可点击按钮\n- 提交和重置按钮\n\
+    \n## 复选框控件\n\n当需要选择多个选项时，使用复选框。它们也是使用 HTML `<input>` 标签创建的，但 `type` 属性设置为 `checkbox`。\n\
+    \n以下是带有两个复选框的表单示例 HTML 代码：\n\n```\n<html>\n\n<head>\n\n<title>复选框控件</title>\n\n\
+    </head>\n\n<body>\n\n<form>\n\n<input type=\"checkbox\" name=\"maths\" value=\"\
+    on\"> Maths\n\n<input type=\"checkbox\" name=\"physics\" value=\"on\"> Physics\n\
+    \n</form>\n\n</body>\n\n</html>\n```\n\n表单底部\n\n## 单选按钮控件\n\n当有多个选项但只需要选择一个选项时，使用单选按钮。它们也是使用\
+    \ HTML `<input>` 标签创建的，但 `type` 属性设置为 `radio`。\n\n以下是带有两个单选按钮的表单示例 HTML 代码：\n\n\
+    ```\n<html>\n\n<head>\n\n<title>单选按钮控件</title>\n\n</head>\n\n<body>\n\n<form>\n\
+    \n<input type=\"radio\" name=\"subject\" value=\"maths\"> Maths\n\n<input type=\"\
+    radio\" name=\"subject\" value=\"physics\"> Physics\n\n</form>\n\n</body>\n\n\
+    </html>\n```\n\n表单顶部\n\n表单底部\n\n## 下拉列表控件\n\n下拉列表（也称为下拉框）提供一个选项，以列表形式列出各种选项，用户可以从中选择一个或多个选项。\n\
+    \n以下是带有一个下拉列表的表单示例 HTML 代码：\n\n```\n<html>\n\n<head>\n\n<title>下拉列表控件</title>\n\
+    \n</head>\n\n<body>\n\n<form>\n\n<select name=\"dropdown\">\n\n<option value=\"\
+    Maths\" selected>Maths</option>\n\n<option value=\"Physics\">Physics</option>\n\
+    \n</select>\n\n</form>\n\n</body>\n\n</html>\n```\n\n表单顶部\n\n表单底部\n\n## 文件上传框\n\
+    \n如果你想允许用户将文件上传到你的网站，则需要使用文件上传框，也称为文件选择框。这也是使用 `<input>` 元素创建的，但 `type` 属性设置为\
+    \ `file`。\n\n以下是带有一个文件上传框的表单示例 HTML 代码：\n\n```\n<html>\n\n<head>\n\n<title>文件上传框</title>\n\
+    \n</head>\n\n<body>\n\n<form>\n\n<input type=\"file\" name=\"fileupload\" accept=\"\
+    image/\\*\" />\n\n</form>\n\n</body>\n\n</html>\n```\n\n表单顶部\n\n表单底部\n\n## 按钮控件\n\
+    \n在 HTML 中有多种方法可以创建可点击按钮。你也可以通过将 `<input>` 标签的 `type` 属性设置为 `button` 来创建可点击按钮。`type`\
+    \ 属性可以取以下值：\n\n以下是带有三种类型按钮的表单示例 HTML 代码：\n\n```\n<html>\n\n<head>\n\n<title>按钮控件</title>\n\
+    \n</head>\n\n<body>\n\n<form>\n\n<input type=\"submit\" name=\"submit\" value=\"\
+    Submit\" />\n\n<input type=\"reset\" name=\"reset\" value=\"Reset\" />\n\n<input\
+    \ type=\"button\" name=\"ok\" value=\"OK\" />\n\n<input type=\"image\" name=\"\
+    imagebutton\" src=\"/html/images/logo.png\" />\n\n</form>\n\n</body>\n\n</html>\n\
+    ```\n\n表单底部\n\n## 隐藏表单控件\n\n"
+  toc: []
+- raw: "Hidden form controls are used to hide data inside the page which later on\
+    \ can be pushed to the server. This control hides inside the code and does not\
+    \ appear on the actual page. For example, following hidden form is being used\
+    \ to keep current page number. When a user will click next page then the value\
+    \ of hidden control will be sent to the web server and there it will decide which\
+    \ page has be displayed next based on the passed current page.\n\nHere is example\
+    \ HTML code to show the usage of hidden control:\n\n<html>\n\n<head>\n\n<title>hidden\
+    \ form control</title>\n\n</head>\n\n<body>\n\n<form>\n\n<p>This is number 1</p>\n\
+    \n<input type=\"hidden\" name=\"pagenumber\" value=\"1\" />\n\n<input type=\"\
+    submit\" name=\"submit\" value=\"Submit\" />\n\n<input type=\"reset\" name=\"\
+    reset\"  value=\"Reset\" />\n\n</form>\n\n</body>\n\n</html>\n\n## Post and get\
+    \ methods\n\nThe example below contains a simple HTML form with two input fields\
+    \ and a submit button, using the post method:\n\nExample \n\n<html> \n\n<body>\
+    \ \n\n<form action=\"process.php\" method=\"post\"> \n\nName: <input type=\"text\"\
+    \ name=\"surname\"><br> \n\nAge: <input type=\"text\" name=\"age\"><br> \n\n<input\
+    \ type=\"submit\" name=”submit”> \n\n</form> \n\n</body> \n\n</html> \n\nWhen\
+    \ a user fills out the form above and clicks the submit button, the form data\
+    \ is sent for processing to a PHP file named \"process.php\". The form data is\
+    \ sent with method=\"post\". \n\n\"process.php\" looks like this: \n\n<html> \n\
+    \n<body> \n\nWelcome <?php echo $\\_POST\\[\"surname\"\\]; ?>!!!<br> \n\nYou are\
+    \ <?php echo $\\_POST\\[\"age\"\\]; ?> years old. \n\n</body> \n\n</html> \n\n\
+    The output: \n\nWelcome oliver!!!\n\nYou are 36 years old. \n\nThe same result\
+    \ could also be achieved using method=\"get\": \n\nExample \n\n<html> \n\n<body>\
+    \ \n\n<form action=\"process.php\" method=\"get\"> \n\nName: <input type=\"text\"\
+    \ name=\"surname\"><br> \n\nAge: <input type=\"text\" name=\"age\"><br> \n\n<input\
+    \ type=\"submit\" name=”submit”> \n\n</form> \n\n</body> \n\n</html> \n\nand \"\
+    process.php\" looks like this: \n\n<html> \n\n<body> \n\nWelcome <?php echo $\\\
+    _GET\\[\"surname\"\\]; ?>!!!<br> \n\nYou are <?php echo $\\_GET\\[\"age\"\\];\
+    \ ?> years old. \n\n</body> \n\n</html> \n\n## Review of the post method\n\n Code\
+    \ Excerpt: \n\n<form action=\"process.php\" method=\"post\"> \n\nName: <input\
+    \ type=\"text\" name=\"surname\"><br> \n\nAge: <input type=\"text\" name=\"age\"\
+    ><br> \n\nThis HTML code specifies that the form data will be submitted to the\
+    \ \"process.php\" web page using the POST method. The way that PHP does this is\
+    \ to store all the \"posted\" values into an associative array called \"$\\_POST\"\
+    . Be sure to take notice the names of the form data names, as they represent the\
+    \ keys in the \"$\\_POST\" associative array. \n\nNow that you know about associative\
+    \ arrays, the PHP code from \"process.php\" should make a litte more sense. \n\
+    \n Code Excerpt: \n\n$y = $\\_POST\\['surname'\\]; \n\n$x = $\\_POST\\['age'\\\
+    ]; \n\nThe form names are used as the keys in the associative array, so be sure\
+    \ that you never have two input items in your HTML form that have the same name.\
+    \ If you do, then you might see some problems arise. \n\n## Review of the get\
+    \ method\n\nAs we mentioned above, the alternative to the post method is get.\
+    \ If we were to change our HTML form to the get method, it would look like this:\
+    \ \n\n Code Excerpt: \n\n<form action=\"process.php\" method=\"get\"> \n\nName:\
+    \ <input type=\"text\" name=\"surname\"><br> \n\nAge: <input type=\"text\" name=\"\
+    age\"><br> \n\nThe get method is different in that it passes the variables along\
+    \ to the \"process.php\" web page by appending them onto the end of the URL. The\
+    \ URL, after clicking submit, would have this added on to the end of it: \n\n\"\
+    ?item=##&quantity=##\" \n\nThe question mark \"?\" tells the browser that the\
+    \ following items are variables. Now that we changed the method of sending information\
+    \ on \"order.html\", we must change the \"process.php\" code to use the \"$\\\
+    _GET\" associative array. \n\n Code Excerpt: \n\n$y = $\\_GET\\['surname'\\];\
+    \ \n\n$x = $\\_GET\\['age'\\]; \n\nAfter changing the array name the script will\
+    \ function properly. Using the get method displays the variable information to\
+    \ your visitor, so be sure you are not sending password information or other sensitive\
+    \ items with the get method. You would not want your visitors seeing something\
+    \ they are not supposed to. \n\n## Security precaution\n\nWhenever you are taking\
+    \ user input and using you need to be sure that the input is safe. If you are\
+    \ going to insert the data into a MySQL database, then you should be sure you\
+    \ have thought about preventing [MySQL ](http://www.tizag.com/mysqlTutorial/mysql-php-sql-injection.php)injection,if\
+    \ you are going to make a user input available to the public,the you should think\
+    \ about PHP htmlentities.\n\n# Chapter 9:GLOBAL VARIABLES\n\n## Global Variables\
+    \ - Superglobals \n\nSeveral predefined variables in PHP are \"superglobals\"\
+    , which means that they are always accessible, regardless of scope - and you can\
+    \ access them from any function, class or file without having to do anything special.\
+    \ \n\nThe PHP superglobal variables are: \n\n· $GLOBALS \n\n· $\\_SERVER \n\n\
+    · $\\_REQUEST \n\n· $\\_POST \n\n· $\\_GET \n\n· $\\_FILES \n\n· $\\_ENV \n\n\
+    · $\\_COOKIE \n\n· $\\_SESSION \n\nIn this chapter will explain some of the superglobals,\
+    \ \n\n##  $GLOBAL \n\n$GLOBAL is a PHP super global variable which is used to\
+    \ access global variables from anywhere in the PHP script (also from within functions\
+    \ or methods). \n\nPHP stores all global variables in an array called $GLOBALS\\\
+    [ index\\]. The index holds the name of the variable. \n\nThe example below shows\
+    \ how to use the super global variable $GLOBAL: \n\nExample \n\n<?php \n\n$x =\
+    \ 15; \n\n$y = 5; \n\nfunctionmultipyl() \n\n{ \n\n$GLOBALS\\['z'\\] = $GLOBALS\\\
+    ['x'\\] \\* $GLOBALS\\['y'\\]; \n\n} \n\nmultiply(); \n\necho $z; \n\n?> \n\n\
+    In the example above, since z is a variable present within the $GLOBALS array,\
+    \ it is also accessible form outside the function! \n\n##  $\\_SERVER \n\n$\\\
+    _SERVER is a PHP super global variable which holds information about headers,\
+    \ paths, and script locations. \n\nThe example below shows how to use some of\
+    \ the elements in $\\_SERVER: \n\nExample \n\n<?php \n\necho $\\_SERVER\\['PHP\\\
+    _SELF'\\]; \n\necho \"<br>\"; \n\necho $\\_SERVER\\['SERVER\\_NAME'\\]; \n\necho\
+    \ \"<br>\"; \n\necho $\\_SERVER\\['HTTP\\_HOST'\\]; \n\necho \"<br>\"; \n\necho\
+    \ $\\_SERVER\\['HTTP\\_REFERER'\\]; \n\necho \"<br>\"; \n\necho $\\_SERVER\\['HTTP\\\
+    _USER\\_AGENT'\\]; \n\necho \"<br>\"; \n\necho $\\_SERVER\\['SCRIPT\\_NAME'\\\
+    ]; \n\n?> \n\nThe following table lists the most important elements that can go\
+    \ inside $\\_SERVER: \n\nElement/Code \n\n$\\_SERVER\\['PHP\\_SELF'\\] \n\nReturns\
+    \ the filename of the currently executing script \n\n$\\_SERVER\\['GATEWAY\\_INTERFACE'\\\
+    ] \n\nReturns the version of the Common Gateway Interface (CGI) the server is\
+    \ using \n\n$\\_SERVER\\['SERVER\\_ADDR'\\] \n\nReturns the IP address of the\
+    \ host server \n\n$\\_SERVER\\['SERVER\\_NAME'\\] \n\nReturns the name of the\
+    \ host server (such as www.w3schools.com) \n\n$\\_SERVER\\['SERVER\\_SOFTWARE'\\\
+    ] \n\nReturns the server identification string (such as Apache/2.2.24) \n\n$\\\
+    _SERVER\\['SERVER\\_PROTOCOL'\\] \n\nReturns the name and revision of the information\
+    \ protocol (such as HTTP/1.1) \n\n$\\_SERVER\\['REQUEST\\_METHOD'\\] \n\nReturns\
+    \ the request method used to access the page (such as POST) \n\n$\\_SERVER\\['REQUEST\\\
+    _TIME'\\] \n\nReturns the timestamp of the start of the request (such as 1377687496)\n\
+    \n$\\_SERVER\\['QUERY\\_STRING'\\] \n\nReturns the query string if the page is\
+    \ accessed via a query string \n\n$\\_SERVER\\['HTTP\\_ACCEPT'\\] \n\nReturns\
+    \ the Accept header from the current request \n\n$\\_SERVER\\['HTTP\\_ACCEPT\\\
+    _CHARSET'\\] \n\nReturns the Accept\\_Charset header from the current request\
+    \ (such as utf-8,ISO-8859-1) \n\n$\\_SERVER\\['HTTP\\_HOST'\\] \n\nReturns the\
+    \ Host header from the current request \n\n$\\_SERVER\\['HTTP\\_REFERER'\\] \n\
+    \nReturns the complete URL of the current page (not reliable because not all user-agents\
+    \ support it) \n\n$\\_SERVER\\['HTTPS'\\] \n\nIs the script queried through a\
+    \ secure HTTP protocol \n\n$\\_SERVER\\['REMOTE\\_ADDR'\\] \n\nReturns the IP\
+    \ address from where the user is viewing the current page \n\n$\\_SERVER\\['REMOTE\\\
+    _HOST'\\] \n\nReturns the Host name from where the user is viewing the current\
+    \ page \n\n$\\_SERVER\\['REMOTE\\_PORT'\\] "
+  fmt: "\n# Hidden Form Controls\n\nHidden form controls are used to hide data inside\
+    \ the page which later on can be pushed to the server. This control hides inside\
+    \ the code and does not appear on the actual page. For example, following hidden\
+    \ form is being used to keep current page number. When a user will click next\
+    \ page then the value of hidden control will be sent to the web server and there\
+    \ it will decide which page has be displayed next based on the passed current\
+    \ page.\n\nHere is example HTML code to show the usage of hidden control:\n\n\
+    ```html\n<html>\n\n<head>\n\n<title>hidden form control</title>\n\n</head>\n\n\
+    <body>\n\n<form>\n\n<p>This is number 1</p>\n\n<input type=\"hidden\" name=\"\
+    pagenumber\" value=\"1\" />\n\n<input type=\"submit\" name=\"submit\" value=\"\
+    Submit\" />\n\n<input type=\"reset\" name=\"reset\" value=\"Reset\" />\n\n</form>\n\
+    \n</body>\n\n</html>\n```\n\n## Post and get methods\n\nThe example below contains\
+    \ a simple HTML form with two input fields and a submit button, using the post\
+    \ method:\n\nExample \n\n```html\n<html> \n\n<body> \n\n<form action=\"process.php\"\
+    \ method=\"post\"> \n\nName: <input type=\"text\" name=\"surname\"><br> \n\nAge:\
+    \ <input type=\"text\" name=\"age\"><br> \n\n<input type=\"submit\" name=\"submit\"\
+    > \n\n</form> \n\n</body> \n\n</html> \n```\n\nWhen a user fills out the form\
+    \ above and clicks the submit button, the form data is sent for processing to\
+    \ a PHP file named \"process.php\". The form data is sent with `method=\"post\"\
+    `. \n\n\"process.php\" looks like this: \n\n```html\n<html> \n\n<body> \n\nWelcome\
+    \ <?php echo $_POST[\"surname\"]; ?>!!!<br> \n\nYou are <?php echo $_POST[\"age\"\
+    ]; ?> years old. \n\n</body> \n\n</html> \n```\n\nThe output: \n\nWelcome oliver!!!\n\
+    \nYou are 36 years old. \n\nThe same result could also be achieved using `method=\"\
+    get\"`: \n\nExample \n\n```html\n<html> \n\n<body> \n\n<form action=\"process.php\"\
+    \ method=\"get\"> \n\nName: <input type=\"text\" name=\"surname\"><br> \n\nAge:\
+    \ <input type=\"text\" name=\"age\"><br> \n\n<input type=\"submit\" name=\"submit\"\
+    > \n\n</form> \n\n</body> \n\n</html> \n```\n\nand \"process.php\" looks like\
+    \ this: \n\n```html\n<html> \n\n<body> \n\nWelcome <?php echo $_GET[\"surname\"\
+    ]; ?>!!!<br> \n\nYou are <?php echo $_GET[\"age\"]; ?> years old. \n\n</body>\
+    \ \n\n</html> \n```\n\n## Review of the post method\n\n Code Excerpt: \n\n```html\n\
+    <form action=\"process.php\" method=\"post\"> \n\nName: <input type=\"text\" name=\"\
+    surname\"><br> \n\nAge: <input type=\"text\" name=\"age\"><br> \n```\n\nThis HTML\
+    \ code specifies that the form data will be submitted to the \"process.php\" web\
+    \ page using the POST method. The way that PHP does this is to store all the \"\
+    posted\" values into an associative array called \"`$_POST`\". Be sure to take\
+    \ notice the names of the form data names, as they represent the keys in the \"\
+    `$_POST`\" associative array. \n\nNow that you know about associative arrays,\
+    \ the PHP code from \"process.php\" should make a litte more sense. \n\n Code\
+    \ Excerpt: \n\n```php\n$y = $_POST['surname']; \n\n$x = $_POST['age']; \n```\n\
+    \nThe form names are used as the keys in the associative array, so be sure that\
+    \ you never have two input items in your HTML form that have the same name. If\
+    \ you do, then you might see some problems arise. \n\n## Review of the get method\n\
+    \nAs we mentioned above, the alternative to the post method is get. If we were\
+    \ to change our HTML form to the get method, it would look like this: \n\n Code\
+    \ Excerpt: \n\n```html\n<form action=\"process.php\" method=\"get\"> \n\nName:\
+    \ <input type=\"text\" name=\"surname\"><br> \n\nAge: <input type=\"text\" name=\"\
+    age\"><br> \n```\n\nThe get method is different in that it passes the variables\
+    \ along to the \"process.php\" web page by appending them onto the end of the\
+    \ URL. The URL, after clicking submit, would have this added on to the end of\
+    \ it: \n\n\"?item=##&quantity=##\" \n\nThe question mark \"?\" tells the browser\
+    \ that the following items are variables. Now that we changed the method of sending\
+    \ information on \"order.html\", we must change the \"process.php\" code to use\
+    \ the \"`$_GET`\" associative array. \n\n Code Excerpt: \n\n```php\n$y = $_GET['surname'];\
+    \ \n\n$x = $_GET['age']; \n```\n\nAfter changing the array name the script will\
+    \ function properly. Using the get method displays the variable information to\
+    \ your visitor, so be sure you are not sending password information or other sensitive\
+    \ items with the get method. You would not want your visitors seeing something\
+    \ they are not supposed to. \n\n## Security precaution\n\nWhenever you are taking\
+    \ user input and using you need to be sure that the input is safe. If you are\
+    \ going to insert the data into a MySQL database, then you should be sure you\
+    \ have thought about preventing [MySQL ](http://www.tizag.com/mysqlTutorial/mysql-php-sql-injection.php)injection,if\
+    \ you are going to make a user input available to the public,the you should think\
+    \ about PHP `htmlentities`.\n\n# Chapter 9:GLOBAL VARIABLES\n\n## Global Variables\
+    \ - Superglobals \n\nSeveral predefined variables in PHP are \"superglobals\"\
+    , which means that they are always accessible, regardless of scope - and you can\
+    \ access them from any function, class or file without having to do anything special.\
+    \ \n\nThe PHP superglobal variables are: \n\n· `$GLOBALS` \n\n· `$_SERVER` \n\n\
+    · `$_REQUEST` \n\n· `$_POST` \n\n· `$_GET` \n\n· `$_FILES` \n\n· `$_ENV` \n\n\
+    · `$_COOKIE` \n\n· `$_SESSION` \n\nIn this chapter will explain some of the superglobals,\
+    \ \n\n## `$GLOBAL` \n\n`$GLOBAL` is a PHP super global variable which is used\
+    \ to access global variables from anywhere in the PHP script (also from within\
+    \ functions or methods). \n\nPHP stores all global variables in an array called\
+    \ `$GLOBALS[index]`. The index holds the name of the variable. \n\nThe example\
+    \ below shows how to use the super global variable `$GLOBAL`: \n\nExample \n\n\
+    ```php\n<?php \n\n$x = 15; \n\n$y = 5; \n\nfunctionmultipyl() \n\n{ \n\n$GLOBALS['z']\
+    \ = $GLOBALS['x'] * $GLOBALS['y']; \n\n} \n\nmultiply(); \n\necho $z; \n\n?> \n\
+    ```\n\nIn the example above, since z is a variable present within the `$GLOBALS`\
+    \ array, it is also accessible form outside the function! \n\n## `$_SERVER` \n\
+    \n`$_SERVER` is a PHP super global variable which holds information about headers,\
+    \ paths, and script locations. \n\nThe example below shows how to use some of\
+    \ the elements in `$_SERVER`: \n\nExample \n\n```php\n<?php \n\necho $_SERVER['PHP_SELF'];\
+    \ \n\necho \"<br>\"; \n\necho $_SERVER['SERVER_NAME']; \n\necho \"<br>\"; \n\n\
+    echo $_SERVER['HTTP_HOST']; \n\necho \"<br>\"; \n\necho $_SERVER['HTTP_REFERER'];\
+    \ \n\necho \"<br>\"; \n\necho $_SERVER['HTTP_USER_AGENT']; \n\necho \"<br>\";\
+    \ \n\necho $_SERVER['SCRIPT_NAME']; \n\n?> \n```\n\nThe following table lists\
+    \ the most important elements that can go inside `$_SERVER`: \n\nElement/Code\
+    \ \n\n`$_SERVER['PHP_SELF']` \n\nReturns the filename of the currently executing\
+    \ script \n\n`$_SERVER['GATEWAY_INTERFACE']` \n\nReturns the version of the Common\
+    \ Gateway Interface (CGI) the server is using \n\n`$_SERVER['SERVER_ADDR']` \n\
+    \nReturns the IP address of the host server \n\n`$_SERVER['SERVER_NAME']` \n\n\
+    Returns the name of the host server (such as www.w3schools.com) \n\n`$_SERVER['SERVER_SOFTWARE']`\
+    \ \n\nReturns the server identification string (such as Apache/2.2.24) \n\n`$_SERVER['SERVER_PROTOCOL']`\
+    \ \n\nReturns the name and revision of the information protocol (such as HTTP/1.1)\
+    \ \n\n`$_SERVER['REQUEST_METHOD']` \n\nReturns the request method used to access\
+    \ the page (such as POST) \n\n`$_SERVER['REQUEST_TIME']` \n\nReturns the timestamp\
+    \ of the start of the request (such as 1377687496)\n\n`$_SERVER['QUERY_STRING']`\
+    \ \n\nReturns the query string if the page is accessed via a query string \n\n\
+    `$_SERVER['HTTP_ACCEPT']` \n\nReturns the Accept header from the current request\
+    \ \n\n`$_SERVER['HTTP_ACCEPT_CHARSET']` \n\nReturns the Accept_Charset header\
+    \ from the current request (such as utf-8,ISO-8859-1) \n\n`$_SERVER['HTTP_HOST']`\
+    \ \n\nReturns the Host header from the current request \n\n`$_SERVER['HTTP_REFERER']`\
+    \ \n\nReturns the complete URL of the current page (not reliable because not all\
+    \ user-agents support it) \n\n`$_SERVER['HTTPS']` \n\nIs the script queried through\
+    \ a secure HTTP protocol \n\n`$_SERVER['REMOTE_ADDR']` \n\nReturns the IP address\
+    \ from where the user is viewing the current page \n\n`$_SERVER['REMOTE_HOST']`\
+    \ \n\nReturns the Host name from where the user is viewing the current page \n\
+    \n`$_SERVER['REMOTE_PORT']` \n"
+  trans: "\n\n# 隐藏表单控件\n\n隐藏表单控件用于隐藏页面中的数据，这些数据稍后可以推送到服务器。此控件隐藏在代码中，不会在实际页面上显示。例如，以下隐藏表单用于保存当前页码。当用户单击下一页时，隐藏控件的值将发送到\
+    \ Web 服务器，服务器将根据传递的当前页码决定显示哪一页。\n\n以下是显示隐藏控件用法的示例 HTML 代码：\n\n```html\n<html>\n\
+    \n<head>\n\n<title>hidden form control</title>\n\n</head>\n\n<body>\n\n<form>\n\
+    \n<p>This is number 1</p>\n\n<input type=\"hidden\" name=\"pagenumber\" value=\"\
+    1\" />\n\n<input type=\"submit\" name=\"submit\" value=\"Submit\" />\n\n<input\
+    \ type=\"reset\" name=\"reset\" value=\"Reset\" />\n\n</form>\n\n</body>\n\n</html>\n\
+    ```\n\n## Post 和 get 方法\n\n以下示例包含一个带有两个输入字段和一个提交按钮的简单 HTML 表单，使用 post 方法：\n\n\
+    Example \n\n```html\n<html> \n\n<body> \n\n<form action=\"process.php\" method=\"\
+    post\"> \n\nName: <input type=\"text\" name=\"surname\"><br> \n\nAge: <input type=\"\
+    text\" name=\"age\"><br> \n\n<input type=\"submit\" name=\"submit\"> \n\n</form>\
+    \ \n\n</body> \n\n</html> \n```\n\n当用户填写上面的表单并单击提交按钮时，表单数据将发送到名为 \"process.php\"\
+    \ 的 PHP 文件进行处理。表单数据使用 `method=\"post\"` 发送。\n\n\"process.php\" 如下所示： \n\n```html\n\
+    <html> \n\n<body> \n\nWelcome <?php echo $_POST[\"surname\"]; ?>!!!<br> \n\nYou\
+    \ are <?php echo $_POST[\"age\"]; ?> years old. \n\n</body> \n\n</html> \n```\n\
+    \n输出： \n\nWelcome oliver!!!\n\nYou are 36 years old. \n\n使用 `method=\"get\"` 也可以实现相同的结果：\
+    \ \n\nExample \n\n```html\n<html> \n\n<body> \n\n<form action=\"process.php\"\
+    \ method=\"get\"> \n\nName: <input type=\"text\" name=\"surname\"><br> \n\nAge:\
+    \ <input type=\"text\" name=\"age\"><br> \n\n<input type=\"submit\" name=\"submit\"\
+    > \n\n</form> \n\n</body> \n\n</html> \n```\n\n\"process.php\" 如下所示： \n\n```html\n\
+    <html> \n\n<body> \n\nWelcome <?php echo $_GET[\"surname\"]; ?>!!!<br> \n\nYou\
+    \ are <?php echo $_GET[\"age\"]; ?> years old. \n\n</body> \n\n</html> \n```\n\
+    \n## Post 方法回顾\n\n代码片段： \n\n```html\n<form action=\"process.php\" method=\"post\"\
+    > \n\nName: <input type=\"text\" name=\"surname\"><br> \n\nAge: <input type=\"\
+    text\" name=\"age\"><br> \n```\n\n这段 HTML 代码指定表单数据将使用 POST 方法提交到 \"process.php\"\
+    \ 网页。PHP 的处理方式是将所有“发布”的值存储到名为 \"`$_POST`\" 的关联数组中。请务必注意表单数据的名称，因为它们代表 \"`$_POST`\"\
+    \ 关联数组中的键。\n\n既然你了解了关联数组，\"process.php\" 中的 PHP 代码应该更容易理解一些。 \n\n代码片段： \n\n```php\n\
+    $y = $_POST['surname']; \n\n$x = $_POST['age']; \n```\n\n表单名称用作关联数组中的键，因此请确保 HTML\
+    \ 表单中永远不会有两个名称相同的输入项。如果有，可能会出现一些问题。\n\n## Get 方法回顾\n\n如上所述，post 方法的替代方案是 get。如果我们将\
+    \ HTML 表单更改为 get 方法，它将如下所示： \n\n代码片段： \n\n```html\n<form action=\"process.php\"\
+    \ method=\"get\"> \n\nName: <input type=\"text\" name=\"surname\"><br> \n\nAge:\
+    \ <input type=\"text\" name=\"age\"><br> \n```\n\nget 方法的不同之处在于，它通过将变量附加到 URL\
+    \ 末尾的方式将变量传递到 \"process.php\" 网页。单击提交后，URL 末尾将添加以下内容： \n\n\"?item=##&quantity=##\"\
+    \ \n\n问号 \"?\" 告诉浏览器，以下项目是变量。既然我们更改了 \"order.html\" 上发送信息的方法，就必须更改 \"process.php\"\
+    \ 代码以使用 \"`$_GET`\" 关联数组。 \n\n代码片段： \n\n```php\n$y = $_GET['surname']; \n\n$x\
+    \ = $_GET['age']; \n```\n\n更改数组名称后，脚本将正常工作。使用 get 方法会向访问者显示变量信息，因此请确保不要使用 get\
+    \ 方法发送密码信息或其他敏感项目。你不希望访问者看到他们不应该看到的内容。\n\n## 安全预防措施\n\n每当你获取用户输入并使用时，都需要确保输入是安全的。如果你打算将数据插入\
+    \ MySQL 数据库，则应确保已考虑防止 [MySQL 注入](http://www.tizag.com/mysqlTutorial/mysql-php-sql-injection.php)；如果你打算将用户输入公开，则应考虑使用\
+    \ PHP `htmlentities`。\n\n# 第 9 章：全局变量\n\n## 全局变量 - 超全局变量\n\nPHP 中的几个预定义变量是“超全局变量”，这意味着它们始终可访问，无论作用域如何\
+    \ - 你可以从任何函数、类或文件中访问它们，而无需做任何特殊操作。\n\nPHP 超全局变量包括：\n\n· `$GLOBALS`\n\n· `$_SERVER`\n\
+    \n· `$_REQUEST`\n\n· `$_POST`\n\n· `$_GET`\n\n· `$_FILES`\n\n· `$_ENV`\n\n· `$_COOKIE`\n\
+    \n· `$_SESSION`\n\n本章将解释其中一些超全局变量。\n\n## `$GLOBALS`\n\n`$GLOBALS` 是一个 PHP 超全局变量，用于从\
+    \ PHP 脚本中的任何位置（包括函数或方法内部）访问全局变量。\n\nPHP 将所有全局变量存储在名为 `$GLOBALS[index]` 的数组中。索引保存变量的名称。\n\
+    \n以下示例展示了如何使用超全局变量 `$GLOBALS`：\n\nExample \n\n```php\n<?php \n\n$x = 15; \n\n\
+    $y = 5; \n\nfunctionmultipyl() \n\n{ \n\n$GLOBALS['z'] = $GLOBALS['x'] * $GLOBALS['y'];\
+    \ \n\n} \n\nmultiply(); \n\necho $z; \n\n?> \n```\n\n在上面的示例中，由于 z 是 `$GLOBALS`\
+    \ 数组中存在的变量，因此它也可以从函数外部访问！\n\n## `$_SERVER`\n\n`$_SERVER` 是一个 PHP 超全局变量，用于保存有关标头、路径和脚本位置的信息。\n\
+    \n以下示例展示了如何使用 `$_SERVER` 中的一些元素：\n\nExample \n\n```php\n<?php \n\necho $_SERVER['PHP_SELF'];\
+    \ \n\necho \"<br>\"; \n\necho $_SERVER['SERVER_NAME']; \n\necho \"<br>\"; \n\n\
+    echo $_SERVER['HTTP_HOST']; \n\necho \"<br>\"; \n\necho $_SERVER['HTTP_REFERER'];\
+    \ \n\necho \"<br>\"; \n\necho $_SERVER['HTTP_USER_AGENT']; \n\necho \"<br>\";\
+    \ \n\necho $_SERVER['SCRIPT_NAME']; \n\n?> \n```\n\n下表列出了可以放入 `$_SERVER` 中的最重要元素：\n\
+    \n元素/代码 \n\n`$_SERVER['PHP_SELF']` \n\n返回当前正在执行的脚本的文件名 \n\n`$_SERVER['GATEWAY_INTERFACE']`\
+    \ \n\n返回服务器使用的通用网关接口 (CGI) 的版本 \n\n`$_SERVER['SERVER_ADDR']` \n\n返回主机服务器的 IP 地址\
+    \ \n\n`$_SERVER['SERVER_NAME']` \n\n返回主机服务器的名称（例如 www.w3schools.com） \n\n`$_SERVER['SERVER_SOFTWARE']`\
+    \ \n\n返回服务器标识字符串（例如 Apache/2.2.24） \n\n`$_SERVER['SERVER_PROTOCOL']` \n\n返回信息协议的名称和修订版本（例如\
+    \ HTTP/1.1） \n\n`$_SERVER['REQUEST_METHOD']` \n\n返回访问页面时使用的请求方法（例如 POST） \n\n\
+    `$_SERVER['REQUEST_TIME']` \n\n返回请求开始的时间戳（例如 1377687496）\n\n`$_SERVER['QUERY_STRING']`\
+    \ \n\n如果页面是通过查询字符串访问的，则返回查询字符串 \n\n`$_SERVER['HTTP_ACCEPT']` \n\n返回当前请求的 Accept\
+    \ 标头 \n\n`$_SERVER['HTTP_ACCEPT_CHARSET']` \n\n返回当前请求的 Accept_Charset 标头（例如 utf-8,ISO-8859-1）\
+    \ \n\n`$_SERVER['HTTP_HOST']` \n\n返回当前请求的 Host 标头 \n\n`$_SERVER['HTTP_REFERER']`\
+    \ \n\n返回当前页面的完整 URL（不可靠，因为并非所有用户代理都支持它） \n\n`$_SERVER['HTTPS']` \n\n脚本是否通过安全 HTTP\
+    \ 协议查询 \n\n`$_SERVER['REMOTE_ADDR']` \n\n返回用户查看当前页面时的 IP 地址 \n\n`$_SERVER['REMOTE_HOST']`\
+    \ \n\n返回用户查看当前页面时的主机名 \n\n`$_SERVER['REMOTE_PORT']` \n\n"
+  toc: []
+- raw: "Returns the port being used on the user's machine to communicate with the\
+    \ web server \n\n$\\_SERVER\\['SCRIPT\\_FILENAME'\\] \n\nReturns the absolute\
+    \ pathname of the currently executing script \n\n$\\_SERVER\\['SERVER\\_ADMIN'\\\
+    ] \n\nReturns the value given to the SERVER\\_ADMIN directive in the web server\
+    \ \n\nconfiguration file (if your script runs on a virtual host, it will be the\
+    \ value \n\ndefined for that virtual host) (such as someone@w3scholls.com) \n\n\
+    $\\_SERVER\\['SERVER\\_PORT'\\] \n\nReturns the port on the server machine being\
+    \ used by the web server for communication (such as 80) \n\n$\\_SERVER\\['SERVER\\\
+    _SIGNATURE'\\] \n\nReturns the server version and virtual host name which are\
+    \ added to server-generated pages \n\n$\\_SERVER\\['PATH\\_TRANSLATED'\\] \n\n\
+    Returns the file system based path to the current script \n\n$\\_SERVER\\['SCRIPT\\\
+    _NAME'\\] \n\nReturns the path of the current script \n\n$\\_SERVER\\['SCRIPT\\\
+    _URI'\\] \n\nReturns the URI of the current page \n\n##  $\\_REQUEST \n\nPHP $\\\
+    _REQUEST is used to collect data after submitting an HTML form. \n\nThe example\
+    \ below shows a form with an input field and a submit button. When a user submits\
+    \ the data by clicking on \"Submit\", the form data is sent to the file specified\
+    \ in the action attribute of the \n\n<form> tag. In this example, we point to\
+    \ this file itself for processing form data. If you wish to use another PHP file\
+    \ to process form data, replace that with the filename of your choice. Then, we\
+    \ can use the super global variable $\\_REQUEST to collect the value of the input\
+    \ field: \n\nExample \n\n<html> \n\n<body> \n\n<form method=\"post\" action=\"\
+    <?php echo $\\_SERVER\\['PHP\\_SELF'\\];?>\"> Name: <input type=\"text\" name=\"\
+    name\"> \n\n<input type=\"submit\"> \n\n</form> \n\n<?php \n\n$name = $\\_REQUEST\\\
+    ['fname'\\]; \n\necho $name; \n\n?> \n\n</body> \n\n</html> \n\n</html> \n\n#\
+    \ Chapter 10:SESSIONS\n\n## Sessions overview\n\nAs a website becomes more sophisticated,\
+    \ so must the code that backs it. When you get to a stage where your website need\
+    \ to pass along user data from one page to another, it might be time to start\
+    \ thinking about using PHP sessions. \n\nA normal HTML website will not pass data\
+    \ from one page to another. In other words, all information is forgotten when\
+    \ a new page is loaded. This makes it quite a problem for tasks like a shopping\
+    \ cart, which requires data(the user's selected product) to be remembered from\
+    \ one page to the next. \n\nA PHP session solves this problem by allowing you\
+    \ to store user information on the server for later use (i.e. username, shopping\
+    \ cart items, etc). However, this session information is temporary and is usually\
+    \ deleted very quickly after the user has left the website that uses sessions.\
+    \ \n\nIt is important to ponder if the sessions' temporary storage is applicable\
+    \ to your website. If you require a more permanent storage you will need to find\
+    \ another solution, like a MySQL database. \n\nSessions work by creating a unique\
+    \ identification (UID) number for each visitor and storing variables based on\
+    \ this ID. This helps to prevent two users' data from getting confused with one\
+    \ another when visiting the same webpage. \n\nNote:If you are not experienced\
+    \ with session programming it is not recommended that you use sessions on a website\
+    \ that requires high-security, as there are security holes that take some advanced\
+    \ techniques to plug. \n\n## Starting a session\n\nBefore you can begin storing\
+    \ user information in your PHP session, you must first start the session. When\
+    \ you start a session, it must be at the very beginning of your code, before any\
+    \ HTML or text is sent. \n\nBelow is a simple script that you should place at\
+    \ the beginning of your PHP code to start up a PHP \n\nsession. \n\nPHP Code:\
+    \ \n\n<?php \n\nsession\\_start(); // start up your PHP session! \n\n?> \n\nThis\
+    \ tiny piece of code will register the user's session with the server, allow you\
+    \ to start saving user information and assign a UID (unique identification number)\
+    \ for that user's session. \n\n## Storing a session variable\n\nWhen you want\
+    \ to store user data in a session use the $\\_SESSION [associative array. This\
+    \ is w](http://www.tizag.com/phpT/arrays.php)here you both store and retrieve\
+    \ session data. In previous versions of PHP there were other ways to perform this\
+    \ store operation, but it has been updated and this is the correct way to do it.\
+    \ \n\nPHP Code: \n\n<?php \n\nsession\\_start(); \n\n$\\_SESSION\\['views'\\]\
+    \ = 1; // store session data \n\necho \"Pageviews = \". $\\_SESSION\\['views'\\\
+    ]; //retrieve data \n\n?> \n\nDisplay: \n\nPageviews = 1 \n\nIn this example we\
+    \ learned how to store a variable to the session associative array $\\_SESSION\
+    \ and also how to retrieve data from that same array. \n\n## Using PHP's isset\
+    \ Function \n\nNow that you know can easily store and retrieve data from the $\\\
+    _SESSION array, we can now explore some of the real functionality of sessions.\
+    \ When you create a variable and store it in a session, you probably want to use\
+    \ it in the future. However, before you use a session variable it is necessary\
+    \ that you check to see if it exists already! \n\nThis is where PHP's isset function\
+    \ comes in handy, isset is a function that takes any variable you want to use\
+    \ and checks to see if it has been set. That is, it has already been assigned\
+    \ a value. \n\nWith our previous example, we can create a very simple pageview\
+    \ counter by using isset to check if the pageview variable has already been created.\
+    \ If it has we can increment our counter. If it doesn't exist we can create a\
+    \ pageview counter and set it to one. Here is the code to get this job done:\n\
+    \n PHP Code: \n\n<?php \n\nsession\\_start(); \n\nif(isset($\\_SESSION\\['views'\\\
+    ])) \n\n$\\_SESSION\\['views'\\] = $\\_SESSION\\['views'\\]+ 1; \n\nelse \n\n\
+    $\\_SESSION\\['views'\\] = 1; \n\necho \"views = \". $\\_SESSION\\['views'\\];\
+    \ \n\n?> \n\nThe first time you run this script on a newly opened browser the\
+    \ if statement will fail because no session variable views would have been stored\
+    \ yet. However, if you were to refresh the page the if statement would be true\
+    \ and the counter would increment by one. Each time you reran this script you\
+    \ would see an increase in view by one.\n\n## Destroying a Session \n\nAlthough\
+    \ a session's data is temporary and does not require that you explicitly clean\
+    \ after yourself, you may wish to delete some data for your various tasks. \n\n\
+    Imagine that you were running an online business and a user used your website\
+    \ to buy your goods. The user has just completed a transaction on your website\
+    \ and you now want to remove everything from their shopping cart. \n\nPHP Code:\
+    \ \n\n<?php \n\nsession\\_start(); \n\nif(isset($\\_SESSION\\['cart'\\])) \n\n\
+    unset($\\_SESSION\\['cart'\\]); \n\n?> \n\nYou can also completely destroy the\
+    \ session entirely by calling the session\\_destroy function. \n\nPHP Code: \n\
+    \n<?php \n\nsession\\_start(); \n\nsession\\_destroy(); \n\n?> \n\nDestroy will\
+    \ reset your session, so don't call that function unless you are entirely comfortable\
+    \ losing all your stored session data! \n\n## Session remarks\n\nCookies have\
+    \ been around for quite some time on the internet. They were invented to allow\
+    \ webmaster's to store information about the user and their visit on the user's\
+    \ computer. \n\nAt first they were feared by the general public because it was\
+    \ believed they were a serious privacy risk. \n\nNowadays nearly everyone has\
+    \ cookies enabled on their browser, partly because there are worse things to worry\
+    \ about and partly because all of the \"trustworthy\" websites now use cookies.\
+    \ \n\nThis lesson will teach you the basics of storing a cookie and retrieving\
+    \ a cookie, as well as explaining the various options you can set with your cookie.\
+    \ \n\n# Chapter 11:COOKIES\n\n## Creating a cookie\n\nWhen you create a cookie,\
+    \ using the function setcookie, you must specify three arguments. These arguments\
+    \ are setcookie(name, value, expiration): \n\n1\\. name: The name of your cookie.\
+    \ You will use this name to later retrieve your cookie, so don't forget it! \n\
+    \n2\\. value: The value that is stored in your cookie. Common values are username(string)\
+    \ and last visit(date). "
+  fmt: '
+
+    Returns the port being used on the user''s machine to communicate with the web
+    server
+
+
+    `$_SERVER[''SCRIPT_FILENAME'']`
+
+
+    Returns the absolute pathname of the currently executing script
+
+
+    `$_SERVER[''SERVER_ADMIN'']`
+
+
+    Returns the value given to the SERVER_ADMIN directive in the web server configuration
+    file (if your script runs on a virtual host, it will be the value defined for
+    that virtual host) (such as someone@w3scholls.com)
+
+
+    `$_SERVER[''SERVER_PORT'']`
+
+
+    Returns the port on the server machine being used by the web server for communication
+    (such as 80)
+
+
+    `$_SERVER[''SERVER_SIGNATURE'']`
+
+
+    Returns the server version and virtual host name which are added to server-generated
+    pages
+
+
+    `$_SERVER[''PATH_TRANSLATED'']`
+
+
+    Returns the file system based path to the current script
+
+
+    `$_SERVER[''SCRIPT_NAME'']`
+
+
+    Returns the path of the current script
+
+
+    `$_SERVER[''SCRIPT_URI'']`
+
+
+    Returns the URI of the current page
+
+
+    ## `$_REQUEST`
+
+
+    PHP `$_REQUEST` is used to collect data after submitting an HTML form.
+
+
+    The example below shows a form with an input field and a submit button. When a
+    user submits the data by clicking on "Submit", the form data is sent to the file
+    specified in the action attribute of the `<form>` tag. In this example, we point
+    to this file itself for processing form data. If you wish to use another PHP file
+    to process form data, replace that with the filename of your choice. Then, we
+    can use the super global variable `$_REQUEST` to collect the value of the input
+    field:
+
+
+    Example
+
+
+    ```html
+
+    <html>
+
+
+    <body>
+
+
+    <form method="post" action="<?php echo $_SERVER[''PHP_SELF''];?>"> Name: <input
+    type="text" name="name">
+
+
+    <input type="submit">
+
+
+    </form>
+
+
+    <?php
+
+
+    $name = $_REQUEST[''fname''];
+
+
+    echo $name;
+
+
+    ?>
+
+
+    </body>
+
+
+    </html>
+
+    ```
+
+
+    # Chapter 10:SESSIONS
+
+
+    ## Sessions overview
+
+
+    As a website becomes more sophisticated, so must the code that backs it. When
+    you get to a stage where your website need to pass along user data from one page
+    to another, it might be time to start thinking about using PHP sessions.
+
+
+    A normal HTML website will not pass data from one page to another. In other words,
+    all information is forgotten when a new page is loaded. This makes it quite a
+    problem for tasks like a shopping cart, which requires data(the user''s selected
+    product) to be remembered from one page to the next.
+
+
+    A PHP session solves this problem by allowing you to store user information on
+    the server for later use (i.e. username, shopping cart items, etc). However, this
+    session information is temporary and is usually deleted very quickly after the
+    user has left the website that uses sessions.
+
+
+    It is important to ponder if the sessions'' temporary storage is applicable to
+    your website. If you require a more permanent storage you will need to find another
+    solution, like a MySQL database.
+
+
+    Sessions work by creating a unique identification (UID) number for each visitor
+    and storing variables based on this ID. This helps to prevent two users'' data
+    from getting confused with one another when visiting the same webpage.
+
+
+    Note:If you are not experienced with session programming it is not recommended
+    that you use sessions on a website that requires high-security, as there are security
+    holes that take some advanced techniques to plug.
+
+
+    ## Starting a session
+
+
+    Before you can begin storing user information in your PHP session, you must first
+    start the session. When you start a session, it must be at the very beginning
+    of your code, before any HTML or text is sent.
+
+
+    Below is a simple script that you should place at the beginning of your PHP code
+    to start up a PHP session.
+
+
+    PHP Code:
+
+
+    ```php
+
+    <?php
+
+
+    session_start(); // start up your PHP session!
+
+
+    ?>
+
+    ```
+
+
+    This tiny piece of code will register the user''s session with the server, allow
+    you to start saving user information and assign a UID (unique identification number)
+    for that user''s session.
+
+
+    ## Storing a session variable
+
+
+    When you want to store user data in a session use the `$_SESSION` associative
+    array. This is where you both store and retrieve session data. In previous versions
+    of PHP there were other ways to perform this store operation, but it has been
+    updated and this is the correct way to do it.
+
+
+    PHP Code:
+
+
+    ```php
+
+    <?php
+
+
+    session_start();
+
+
+    $_SESSION[''views''] = 1; // store session data
+
+
+    echo "Pageviews = ". $_SESSION[''views'']; //retrieve data
+
+
+    ?>
+
+    ```
+
+
+    Display:
+
+
+    Pageviews = 1
+
+
+    In this example we learned how to store a variable to the session associative
+    array `$_SESSION` and also how to retrieve data from that same array.
+
+
+    ## Using PHP''s isset Function
+
+
+    Now that you know can easily store and retrieve data from the `$_SESSION` array,
+    we can now explore some of the real functionality of sessions. When you create
+    a variable and store it in a session, you probably want to use it in the future.
+    However, before you use a session variable it is necessary that you check to see
+    if it exists already!
+
+
+    This is where PHP''s `isset` function comes in handy, `isset` is a function that
+    takes any variable you want to use and checks to see if it has been set. That
+    is, it has already been assigned a value.
+
+
+    With our previous example, we can create a very simple pageview counter by using
+    `isset` to check if the pageview variable has already been created. If it has
+    we can increment our counter. If it doesn''t exist we can create a pageview counter
+    and set it to one. Here is the code to get this job done:
+
+
+    PHP Code:
+
+
+    ```php
+
+    <?php
+
+
+    session_start();
+
+
+    if(isset($_SESSION[''views'']))
+
+
+    $_SESSION[''views''] = $_SESSION[''views'']+ 1;
+
+
+    else
+
+
+    $_SESSION[''views''] = 1;
+
+
+    echo "views = ". $_SESSION[''views''];
+
+
+    ?>
+
+    ```
+
+
+    The first time you run this script on a newly opened browser the if statement
+    will fail because no session variable views would have been stored yet. However,
+    if you were to refresh the page the if statement would be true and the counter
+    would increment by one. Each time you reran this script you would see an increase
+    in view by one.
+
+
+    ## Destroying a Session
+
+
+    Although a session''s data is temporary and does not require that you explicitly
+    clean after yourself, you may wish to delete some data for your various tasks.
+
+
+    Imagine that you were running an online business and a user used your website
+    to buy your goods. The user has just completed a transaction on your website and
+    you now want to remove everything from their shopping cart.
+
+
+    PHP Code:
+
+
+    ```php
+
+    <?php
+
+
+    session_start();
+
+
+    if(isset($_SESSION[''cart'']))
+
+
+    unset($_SESSION[''cart'']);
+
+
+    ?>
+
+    ```
+
+
+    You can also completely destroy the session entirely by calling the `session_destroy`
+    function.
+
+
+    PHP Code:
+
+
+    ```php
+
+    <?php
+
+
+    session_start();
+
+
+    session_destroy();
+
+
+    ?>
+
+    ```
+
+
+    Destroy will reset your session, so don''t call that function unless you are entirely
+    comfortable losing all your stored session data!
+
+
+    ## Session remarks
+
+
+    Cookies have been around for quite some time on the internet. They were invented
+    to allow webmaster''s to store information about the user and their visit on the
+    user''s computer.
+
+
+    At first they were feared by the general public because it was believed they were
+    a serious privacy risk.
+
+
+    Nowadays nearly everyone has cookies enabled on their browser, partly because
+    there are worse things to worry about and partly because all of the "trustworthy"
+    websites now use cookies.
+
+
+    This lesson will teach you the basics of storing a cookie and retrieving a cookie,
+    as well as explaining the various options you can set with your cookie.
+
+
+    # Chapter 11:COOKIES
+
+
+    ## Creating a cookie
+
+
+    When you create a cookie, using the function `setcookie`, you must specify three
+    arguments. These arguments are `setcookie(name, value, expiration)`:
+
+
+    1. name: The name of your cookie. You will use this name to later retrieve your
+    cookie, so don''t forget it!
+
+
+    2. value: The value that is stored in your cookie. Common values are username(string)
+    and last visit(date).
+
+    '
+  trans: '
+
+
+    返回用户机器上用于与 Web 服务器通信的端口
+
+
+    `$_SERVER[''SCRIPT_FILENAME'']`
+
+
+    返回当前执行脚本的绝对路径名
+
+
+    `$_SERVER[''SERVER_ADMIN'']`
+
+
+    返回 Web 服务器配置文件中 SERVER_ADMIN 指令的值（如果您的脚本在虚拟主机上运行，则为该虚拟主机定义的值）（例如 someone@w3scholls.com）
+
+
+    `$_SERVER[''SERVER_PORT'']`
+
+
+    返回服务器机器上 Web 服务器用于通信的端口（例如 80）
+
+
+    `$_SERVER[''SERVER_SIGNATURE'']`
+
+
+    返回添加到服务器生成页面中的服务器版本和虚拟主机名
+
+
+    `$_SERVER[''PATH_TRANSLATED'']`
+
+
+    返回当前脚本的基于文件系统的路径
+
+
+    `$_SERVER[''SCRIPT_NAME'']`
+
+
+    返回当前脚本的路径
+
+
+    `$_SERVER[''SCRIPT_URI'']`
+
+
+    返回当前页面的 URI
+
+
+    ## `$_REQUEST`
+
+
+    PHP `$_REQUEST` 用于在提交 HTML 表单后收集数据。
+
+
+    以下示例显示了一个带有输入字段和提交按钮的表单。当用户单击“提交”提交数据时，表单数据将发送到 `<form>` 标签的 action 属性中指定的文件。在此示例中，我们指向此文件本身以处理表单数据。如果您希望使用另一个
+    PHP 文件来处理表单数据，请将其替换为您选择的文件名。然后，我们可以使用超级全局变量 `$_REQUEST` 来收集输入字段的值：
+
+
+    示例
+
+
+    ```html
+
+    <html>
+
+
+    <body>
+
+
+    <form method="post" action="<?php echo $_SERVER[''PHP_SELF''];?>"> Name: <input
+    type="text" name="name">
+
+
+    <input type="submit">
+
+
+    </form>
+
+
+    <?php
+
+
+    $name = $_REQUEST[''fname''];
+
+
+    echo $name;
+
+
+    ?>
+
+
+    </body>
+
+
+    </html>
+
+    ```
+
+
+    # 第 10 章：SESSIONS
+
+
+    ## Sessions 概述
+
+
+    随着网站变得越来越复杂，支持它的代码也必须随之提升。当您的网站需要将用户数据从一个页面传递到另一个页面时，可能就是开始考虑使用 PHP 会话的时候了。
+
+
+    普通 HTML 网站不会在页面之间传递数据。换句话说，当加载新页面时，所有信息都会被遗忘。这对于购物车等任务来说是个大问题，购物车需要记住用户从一个页面到下一个页面选择的产品。
+
+
+    PHP 会话通过允许您将用户信息存储在服务器上以供以后使用（例如用户名、购物车项目等）来解决此问题。但是，此会话信息是临时的，通常在用户离开使用会话的网站后很快就会被删除。
+
+
+    重要的是要思考会话的临时存储是否适用于您的网站。如果您需要更持久的存储，则需要寻找其他解决方案，例如 MySQL 数据库。
+
+
+    会话通过为每个访问者创建唯一的识别号（UID）并基于此 ID 存储变量来工作。这有助于防止两个用户的数据在访问同一网页时相互混淆。
+
+
+    注意：如果您不熟悉会话编程，不建议在需要高安全性的网站上使用会话，因为存在一些需要高级技术才能修补的安全漏洞。
+
+
+    ## 启动会话
+
+
+    在开始在 PHP 会话中存储用户信息之前，必须先启动会话。启动会话时，必须放在代码的最开始处，在发送任何 HTML 或文本之前。
+
+
+    以下是一个简单的脚本，您应该将其放在 PHP 代码的开头以启动 PHP 会话。
+
+
+    PHP 代码：
+
+
+    ```php
+
+    <?php
+
+
+    session_start(); // start up your PHP session!
+
+
+    ?>
+
+    ```
+
+
+    这段小代码会将用户的会话注册到服务器，允许您开始保存用户信息，并为该用户的会话分配一个 UID（唯一识别号）。
+
+
+    ## 存储会话变量
+
+
+    当您想要在会话中存储用户数据时，请使用 `$_SESSION` 关联数组。这就是您存储和检索会话数据的地方。在 PHP 的早期版本中，有其他方法来执行此存储操作，但它已被更新，这是正确的做法。
+
+
+    PHP 代码：
+
+
+    ```php
+
+    <?php
+
+
+    session_start();
+
+
+    $_SESSION[''views''] = 1; // store session data
+
+
+    echo "Pageviews = ". $_SESSION[''views'']; //retrieve data
+
+
+    ?>
+
+    ```
+
+
+    显示：
+
+
+    Pageviews = 1
+
+
+    在此示例中，我们学习了如何将变量存储到会话关联数组 `$_SESSION` 中，以及如何从同一数组中检索数据。
+
+
+    ## 使用 PHP 的 isset 函数
+
+
+    现在您知道可以轻松地从 `$_SESSION` 数组中存储和检索数据，我们可以探索会话的一些真实功能。当您创建一个变量并将其存储在会话中时，您可能希望将来使用它。但是，在使用会话变量之前，有必要检查它是否已经存在！
+
+
+    这时 PHP 的 `isset` 函数就派上用场了，`isset` 是一个函数，它接受您想要使用的任何变量并检查它是否已被设置。也就是说，它是否已经被赋予了一个值。
+
+
+    通过我们之前的示例，我们可以使用 `isset` 来检查页面浏览量变量是否已经创建，从而创建一个非常简单的页面浏览量计数器。如果已创建，我们可以增加计数器。如果不存在，我们可以创建一个页面浏览量计数器并将其设置为
+    1。以下是完成此任务的代码：
+
+
+    PHP 代码：
+
+
+    ```php
+
+    <?php
+
+
+    session_start();
+
+
+    if(isset($_SESSION[''views'']))
+
+
+    $_SESSION[''views''] = $_SESSION[''views'']+ 1;
+
+
+    else
+
+
+    $_SESSION[''views''] = 1;
+
+
+    echo "views = ". $_SESSION[''views''];
+
+
+    ?>
+
+    ```
+
+
+    第一次在新打开的浏览器上运行此脚本时，if 语句将失败，因为尚未存储会话变量 views。但是，如果您刷新页面，if 语句将为真，计数器将加 1。每次重新运行此脚本，您都会看到浏览量增加
+    1。
+
+
+    ## 销毁会话
+
+
+    虽然会话数据是临时的，不需要您显式地清理，但您可能希望出于各种任务删除一些数据。
+
+
+    假设您正在经营一家在线业务，用户使用您的网站购买您的商品。用户刚刚在您的网站上完成了一笔交易，您现在想要从他们的购物车中删除所有内容。
+
+
+    PHP 代码：
+
+
+    ```php
+
+    <?php
+
+
+    session_start();
+
+
+    if(isset($_SESSION[''cart'']))
+
+
+    unset($_SESSION[''cart'']);
+
+
+    ?>
+
+    ```
+
+
+    您也可以通过调用 `session_destroy` 函数来完全销毁整个会话。
+
+
+    PHP 代码：
+
+
+    ```php
+
+    <?php
+
+
+    session_start();
+
+
+    session_destroy();
+
+
+    ?>
+
+    ```
+
+
+    销毁会话会重置您的会话，所以除非您完全愿意丢失所有存储的会话数据，否则不要调用该函数！
+
+
+    ## 会话备注
+
+
+    Cookie 在互联网上已经存在相当长一段时间了。它们被发明出来是为了允许网站管理员在用户的计算机上存储有关用户及其访问的信息。
+
+
+    起初，公众非常担心 Cookie，因为人们认为它们是严重的隐私风险。
+
+
+    如今，几乎每个人的浏览器都启用了 Cookie，部分原因是有更糟糕的事情需要担心，部分原因是所有“可信”的网站现在都使用 Cookie。
+
+
+    本课将教您存储 Cookie 和检索 Cookie 的基础知识，以及解释您可以为 Cookie 设置的各种选项。
+
+
+    # 第 11 章：COOKIES
+
+
+    ## 创建 Cookie
+
+
+    当您创建 Cookie 时，使用函数 `setcookie`，您必须指定三个参数。这些参数是 `setcookie(name, value, expiration)`：
+
+
+    1. name：您的 Cookie 的名称。您将使用此名称稍后检索您的 Cookie，所以不要忘记！
+
+
+    2. value：存储在您的 Cookie 中的值。常见的值是用户名（字符串）和上次访问时间（日期）。
+
+
+    '
+  toc: []
+- raw: "3\\. expiration: The date when the cookie will expire and be deleted. If you\
+    \ do not set this expiration date, then it will be treated as a session cookie\
+    \ and be removed when the browser is restarted. \n\nIn this example we will be\
+    \ creating a cookie that stores the user's last visit to measure how often people\
+    \ return to visit our webpage. We want to ignore people that take longer than\
+    \ two months to return to the site, so we will set the cookie's expiration date\
+    \ to two months in the future! \n\nPHP Code: \n\n<?php \n\n//Calculate 60 days\
+    \ in the future \n\n//seconds \\* minutes \\* hours \\* days + current time \n\
+    \n$inTwoMonths = 60 \\* 60 \\* 24 \\* 60 + time(); \n\nsetcookie(lastVisit, date(\"\
+    G:i - m/d/y\"), $inTwoMonths); \n\n?> \n\nDon't worry if you can't follow the\
+    \ somewhat involved date calculations in this example. The important part is that\
+    \ you know how to set a cookie, by specifying the three important arguments: name,\
+    \ value and expiration date. \n\n## Retrieving  a Cookie \n\nIf the cookie has\
+    \ not expired yet, let's retrieve it from the user's PC using the $\\_COOKIE associative\
+    \ array. The name of your stored cookie is the key and will let you retrieve your\
+    \ stored cookie value! \n\nPHP Code: \n\n<?php \n\nif(isset($\\_COOKIE\\['lastVisit'\\\
+    ])) \n\n$visit = $\\_COOKIE\\['lastVisit'\\]; \n\nelse \n\necho \"You've got some\
+    \ stale cookies!\"; \n\necho \"Your last visit was - \". $visit; \n\n?> \n\nThis\
+    \ handy script first uses the isset function to be sure that our \"lastVisit\"\
+    \ cookie still exists on the user's PC, if it does, then the user's last visit\
+    \ is displayed. If the user visited our site on may 14, 2015 it might look something\
+    \ like this: \n\nDisplay: \n\nYour last visit was - 10:41- 05/14/15\n\n# Chapter\
+    \ 12:WORKING WITH FILES\n\n## Opening  and closing files\n\nIn PHP,the function\
+    \ fpen() is normally used to open files. It requires two arguments that state\
+    \ the file name and the mode in which it has to operate. In the event the opening\
+    \ of a file is not successful the function fopen() returns the value of false,\
+    \ otherwise it returns a file pointer to read or write to that particular file.\n\
+    \nFile modes can be specified as stated below\n\n| Filemode ||                        \
+    \ Purpose |\n\n| --- | --- |\n\n| r || Opens the file for reading purposes only.Places\
+    \ the file pointer at the beginning of the file. |\n\n| r+ || Opens the file for\
+    \ reading and writing.Places the file pointer at the beginning of the file. |\n\
+    \n| w || Opens the file for writing purposes only.Places the file pointer at the\
+    \ beginning of the file.and truncates the file to zero length. If files does notexist\
+    \ then it attempts to create a file. |\n\n| w+ || Opens the file for reading and\
+    \ writing only.Places the file pointer at the beginning of the file.and truncates\
+    \ the file to zero length. If files does notexist then it attempts to create a\
+    \ file. |\n\n| a || Opens the file for writing purposes only.Places the file pointer\
+    \ at the end of the file.If files does not exist then it attempts to create a\
+    \ file. |\n\n| a+ || Opens the file for reading and writing only.Places the file\
+    \ pointer at the end of the file.If files does not exist then it attempts to create\
+    \ a file. |\n\n## Reading a file\n\nOnce a file is opened using fopen() function\
+    \ it can be read with a function called fread() . This function requires two arguments.\
+    \ These must be the file pointer and the length of the file expressed in bytes.\n\
+    \nThe files length can be found using the function filesize()  which takes the\
+    \ file name as its argument and returns the size of the file expressed in bytes.\n\
+    \nSo here are the steps required to read a file with PHP.\n\n*      Open a file\
+    \ using fopen()  function.\n\n*      Get the file's length using filesize()  function.\n\
+    \n*      Read the file's content using fread()  function.\n\n*      Close the\
+    \ file with fclose() function.\n\nThe following example assigns the content of\
+    \ a text file to a variable then displays those contents on the web page.\n\n\
+          <?php\n\n         $filename \\= \"example.txt\";\n\n         $file \\= fopen(\
+    \ $filename, \"r\" );\n\n         if( $file \\== false )\n\n         {\n\n           \
+    \ echo ( \"Error occurred in opening file” );\n\n            exit();\n\n        \
+    \ }\n\n         $filesize \\= filesize( $filename );\n\n         $filetext \\\
+    = fread( $file, $filesize );\n\n         fclose( $file );\n\n         echo ( \"\
+    File size is : $filesize bytes\" );\n\n         echo ( \"<pre>$filetext</pre>\"\
+    \ );\n\n      ?>\n\n## writing a file\n\nA new file can be written or text can\
+    \ be appended to an existing file using the PHP fwrite() function. This function\
+    \ requires two arguments specifying a file pointer and the string of data that\
+    \ is to be written. Optionally a third integer argument can be included to specify\
+    \ the length of the data to write. If the third argument is included, writing\
+    \ would will stop after the specified length has been reached.\n\nThe following\
+    \ example creates a new text file then writes a short text heading inside it.\
+    \ After closing this file its existence is confirmed using file\\_exist() function\
+    \ which takes file name as an argument\n\n<?php\n\n   $filename \\= \"/home/user/guest/newfile.txt\"\
+    ;\n\n   $file \\= fopen( $filename, \"w\" );\n\n   if( $file \\== false )\n\n\
+       {\n\n      echo ( \"Error occurred in opening new file\" );\n\n      exit();\n\
+    \n   }\n\n   fwrite( $file, \"This is  a simple file\\\\n\" );\n\n   fclose( $file\
+    \ );\n\n?>\n\n      <?php\n\n         $filename \\= \"newfile.txt\";\n\n        \
+    \ $file \\= fopen( $filename, \"r\" );\n\n         if( $file \\== false )\n\n\
+             {\n\n            echo ( \"Error occured in opening file\" );\n\n           \
+    \ exit();\n\n         }\n\n         $filesize \\= filesize( $filename );\n\n        \
+    \ $filetext \\= fread( $file, $filesize );\n\n         fclose( $file );\n\n        \
+    \ echo ( \"File size is: $filesize bytes\" );\n\n         echo ( \"$filetext\"\
+    \ );\n\n         echo(\"file name: $filename\");\n\n      ?>\n\n   </body>\n\n\
+    </html>\n\n# Chapter 13:OBJECT ORIENTED PHP\n\nour universe made of different\
+    \ objects like moon,earth,mars etc. Similarly we can imagine our car made of different\
+    \ objects like wheel, steering, gear etc. Same way there is object oriented programming\
+    \ concepts which assume everything as an object and implement a software using\
+    \ different objects.\n\n## Object oriented concepts\n\nClass − This is a programmer-defined\
+    \ data type, which includes local functions as well as local data. You can think\
+    \ of a class as a template for making many instances of the same kind (or class)\
+    \ of object.\n\nObject − An individual instance of the data structure defined\
+    \ by a class. You define a class once and then make many objects that belong to\
+    \ it. Objects are also known as instance.\n\nInheritance − When a class is defined\
+    \ by inheriting existing function of a parent class then it is called inheritance.\
+    \ Here child class will inherit all or few member functions and variables of a\
+    \ parent class.\n\nParent class − A class that is inherited from by another class.\
+    \ This is also called a base class or super class.\n\nChild Class − A class that\
+    \ inherits from another class. This is also called a subclass or derived class.\n\
+    \nPolymorphism − This is an object oriented concept where same function can be\
+    \ used for different purposes. For example function name will remain same but\
+    \ it make take different number of arguments and can do different task.\n\nOverloading −\
+    \ a type of polymorphism in which some or all of operators have different implementations\
+    \ depending on the types of their arguments. Similarly functions can also be overloaded\
+    \ with different implementation.\n\nData Abstraction − Any representation of data\
+    \ in which the implementation details are hidden.\n\nEncapsulation − refers to\
+    \ a concept where we encapsulate all the data and member functions together to\
+    \ form an object.\n\nConstructor − refers to a special type of function which\
+    \ will be called automatically whenever there is an object formation from a class.\n\
+    \n## Defining PHP classes\n\nThe general form for defining a new class in PHP\
+    \ is as follows −\n\n<?php\n\n   class phpClass{\n\n      var $var1;\n\n     \
+    \ var $var2 \\= \"constant string\";\n\n      function myfunc ($arg1, $arg2) {\n\
+    \n         \\[..\\]\n\n      }\n\n      \\[..\\]\n\n   }\n\n?>"
+  fmt: "\n3\\. expiration: The date when the cookie will expire and be deleted. If\
+    \ you do not set this expiration date, then it will be treated as a session cookie\
+    \ and be removed when the browser is restarted.\n\nIn this example we will be\
+    \ creating a cookie that stores the user's last visit to measure how often people\
+    \ return to visit our webpage. We want to ignore people that take longer than\
+    \ two months to return to the site, so we will set the cookie's expiration date\
+    \ to two months in the future!\n\nPHP Code:\n\n```php\n//Calculate 60 days in\
+    \ the future\n//seconds * minutes * hours * days + current time\n$inTwoMonths\
+    \ = 60 * 60 * 24 * 60 + time();\nsetcookie(lastVisit, date(\"G:i - m/d/y\"), $inTwoMonths);\n\
+    ```\n\nDon't worry if you can't follow the somewhat involved date calculations\
+    \ in this example. The important part is that you know how to set a cookie, by\
+    \ specifying the three important arguments: name, value and expiration date.\n\
+    \n## Retrieving a Cookie\n\nIf the cookie has not expired yet, let's retrieve\
+    \ it from the user's PC using the `$_COOKIE` associative array. The name of your\
+    \ stored cookie is the key and will let you retrieve your stored cookie value!\n\
+    \nPHP Code:\n\n```php\nif(isset($_COOKIE['lastVisit']))\n$visit = $_COOKIE['lastVisit'];\n\
+    else\necho \"You've got some stale cookies!\";\necho \"Your last visit was - \"\
+    . $visit;\n```\n\nThis handy script first uses the `isset` function to be sure\
+    \ that our \"lastVisit\" cookie still exists on the user's PC, if it does, then\
+    \ the user's last visit is displayed. If the user visited our site on may 14,\
+    \ 2015 it might look something like this:\n\nDisplay:\n\nYour last visit was -\
+    \ 10:41- 05/14/15\n\n# Chapter 12: WORKING WITH FILES\n\n## Opening and closing\
+    \ files\n\nIn PHP, the function `fopen()` is normally used to open files. It requires\
+    \ two arguments that state the file name and the mode in which it has to operate.\
+    \ In the event the opening of a file is not successful the function `fopen()`\
+    \ returns the value of false, otherwise it returns a file pointer to read or write\
+    \ to that particular file.\n\nFile modes can be specified as stated below\n\n\
+    | Filemode | Purpose |\n| --- | --- |\n| r | Opens the file for reading purposes\
+    \ only. Places the file pointer at the beginning of the file. |\n| r+ | Opens\
+    \ the file for reading and writing. Places the file pointer at the beginning of\
+    \ the file. |\n| w | Opens the file for writing purposes only. Places the file\
+    \ pointer at the beginning of the file. and truncates the file to zero length.\
+    \ If files does not exist then it attempts to create a file. |\n| w+ | Opens the\
+    \ file for reading and writing only. Places the file pointer at the beginning\
+    \ of the file. and truncates the file to zero length. If files does not exist\
+    \ then it attempts to create a file. |\n| a | Opens the file for writing purposes\
+    \ only. Places the file pointer at the end of the file. If files does not exist\
+    \ then it attempts to create a file. |\n| a+ | Opens the file for reading and\
+    \ writing only. Places the file pointer at the end of the file. If files does\
+    \ not exist then it attempts to create a file. |\n\n## Reading a file\n\nOnce\
+    \ a file is opened using `fopen()` function it can be read with a function called\
+    \ `fread()`. This function requires two arguments. These must be the file pointer\
+    \ and the length of the file expressed in bytes.\n\nThe files length can be found\
+    \ using the function `filesize()` which takes the file name as its argument and\
+    \ returns the size of the file expressed in bytes.\n\nSo here are the steps required\
+    \ to read a file with PHP.\n\n* Open a file using `fopen()` function.\n* Get the\
+    \ file's length using `filesize()` function.\n* Read the file's content using\
+    \ `fread()` function.\n* Close the file with `fclose()` function.\n\nThe following\
+    \ example assigns the content of a text file to a variable then displays those\
+    \ contents on the web page.\n\n```php\n$filename = \"example.txt\";\n$file = fopen(\
+    \ $filename, \"r\" );\nif( $file == false )\n{\n    echo ( \"Error occurred in\
+    \ opening file\" );\n    exit();\n}\n$filesize = filesize( $filename );\n$filetext\
+    \ = fread( $file, $filesize );\nfclose( $file );\necho ( \"File size is : $filesize\
+    \ bytes\" );\necho ( \"<pre>$filetext</pre>\" );\n```\n\n## Writing a file\n\n\
+    A new file can be written or text can be appended to an existing file using the\
+    \ PHP `fwrite()` function. This function requires two arguments specifying a file\
+    \ pointer and the string of data that is to be written. Optionally a third integer\
+    \ argument can be included to specify the length of the data to write. If the\
+    \ third argument is included, writing would will stop after the specified length\
+    \ has been reached.\n\nThe following example creates a new text file then writes\
+    \ a short text heading inside it. After closing this file its existence is confirmed\
+    \ using `file_exist()` function which takes file name as an argument\n\n```php\n\
+    $filename = \"/home/user/guest/newfile.txt\";\n$file = fopen( $filename, \"w\"\
+    \ );\nif( $file == false )\n{\n    echo ( \"Error occurred in opening new file\"\
+    \ );\n    exit();\n}\nfwrite( $file, \"This is a simple file\\n\" );\nfclose(\
+    \ $file );\n```\n\n```php\n$filename = \"newfile.txt\";\n$file = fopen( $filename,\
+    \ \"r\" );\nif( $file == false )\n{\n    echo ( \"Error occured in opening file\"\
+    \ );\n    exit();\n}\n$filesize = filesize( $filename );\n$filetext = fread( $file,\
+    \ $filesize );\nfclose( $file );\necho ( \"File size is: $filesize bytes\" );\n\
+    echo ( \"$filetext\" );\necho(\"file name: $filename\");\n```\n\n# Chapter 13:\
+    \ OBJECT ORIENTED PHP\n\nOur universe made of different objects like moon, earth,\
+    \ mars etc. Similarly we can imagine our car made of different objects like wheel,\
+    \ steering, gear etc. Same way there is object oriented programming concepts which\
+    \ assume everything as an object and implement a software using different objects.\n\
+    \n## Object oriented concepts\n\nClass − This is a programmer-defined data type,\
+    \ which includes local functions as well as local data. You can think of a class\
+    \ as a template for making many instances of the same kind (or class) of object.\n\
+    \nObject − An individual instance of the data structure defined by a class. You\
+    \ define a class once and then make many objects that belong to it. Objects are\
+    \ also known as instance.\n\nInheritance − When a class is defined by inheriting\
+    \ existing function of a parent class then it is called inheritance. Here child\
+    \ class will inherit all or few member functions and variables of a parent class.\n\
+    \nParent class − A class that is inherited from by another class. This is also\
+    \ called a base class or super class.\n\nChild Class − A class that inherits from\
+    \ another class. This is also called a subclass or derived class.\n\nPolymorphism\
+    \ − This is an object oriented concept where same function can be used for different\
+    \ purposes. For example function name will remain same but it make take different\
+    \ number of arguments and can do different task.\n\nOverloading − a type of polymorphism\
+    \ in which some or all of operators have different implementations depending on\
+    \ the types of their arguments. Similarly functions can also be overloaded with\
+    \ different implementation.\n\nData Abstraction − Any representation of data in\
+    \ which the implementation details are hidden.\n\nEncapsulation − refers to a\
+    \ concept where we encapsulate all the data and member functions together to form\
+    \ an object.\n\nConstructor − refers to a special type of function which will\
+    \ be called automatically whenever there is an object formation from a class.\n\
+    \n## Defining PHP classes\n\nThe general form for defining a new class in PHP\
+    \ is as follows −\n\n```php\nclass phpClass{\n    var $var1;\n    var $var2 =\
+    \ \"constant string\";\n    function myfunc ($arg1, $arg2) {\n        [...]\n\
+    \    }\n    [...]\n}\n```\n"
+  trans: "\n\n3\\. expiration: Cookie 将过期并被删除的日期。如果不设置此过期日期，则它将被视为会话 Cookie，并在浏览器重新启动时被删除。\n\
+    \n在本示例中，我们将创建一个存储用户上次访问时间的 Cookie，以衡量人们返回访问我们网页的频率。我们希望忽略那些超过两个月才返回网站的人，因此我们将\
+    \ Cookie 的过期日期设置为两个月后！\n\nPHP Code:\n\n```php\n//Calculate 60 days in the future\n\
+    //seconds * minutes * hours * days + current time\n$inTwoMonths = 60 * 60 * 24\
+    \ * 60 + time();\nsetcookie(lastVisit, date(\"G:i - m/d/y\"), $inTwoMonths);\n\
+    ```\n\n如果你无法跟上本示例中稍微复杂的日期计算，请不要担心。重要的是，你要知道如何通过指定三个重要参数（名称、值和过期日期）来设置 Cookie。\n\
+    \n## 检索 Cookie\n\n如果 Cookie 尚未过期，让我们使用 `$_COOKIE` 关联数组从用户的 PC 中检索它。存储 Cookie 的名称是键，它将让你检索存储的\
+    \ Cookie 值！\n\nPHP Code:\n\n```php\nif(isset($_COOKIE['lastVisit']))\n$visit =\
+    \ $_COOKIE['lastVisit'];\nelse\necho \"You've got some stale cookies!\";\necho\
+    \ \"Your last visit was - \". $visit;\n```\n\n这个实用脚本首先使用 `isset` 函数来确保我们的 \"lastVisit\"\
+    \ Cookie 仍然存在于用户的 PC 上，如果存在，则显示用户的上次访问时间。如果用户在 2015 年 5 月 14 日访问了我们的网站，它可能看起来像这样：\n\
+    \n显示：\n\nYour last visit was - 10:41- 05/14/15\n\n# 第 12 章：使用文件\n\n## 打开和关闭文件\n\
+    \n在 PHP 中，通常使用 `fopen()` 函数来打开文件。它需要两个参数，分别指定文件名和操作模式。如果文件打开不成功，`fopen()` 函数将返回\
+    \ false，否则它将返回一个文件指针，用于读取或写入该特定文件。\n\n文件模式可以按如下方式指定\n\n| 文件模式 | 用途 |\n| --- |\
+    \ --- |\n| r | 仅以读取方式打开文件。将文件指针放置在文件开头。 |\n| r+ | 以读取和写入方式打开文件。将文件指针放置在文件开头。 |\n\
+    | w | 仅以写入方式打开文件。将文件指针放置在文件开头，并将文件截断为零长度。如果文件不存在，则尝试创建文件。 |\n| w+ | 以读取和写入方式打开文件。将文件指针放置在文件开头，并将文件截断为零长度。如果文件不存在，则尝试创建文件。\
+    \ |\n| a | 仅以写入方式打开文件。将文件指针放置在文件末尾。如果文件不存在，则尝试创建文件。 |\n| a+ | 以读取和写入方式打开文件。将文件指针放置在文件末尾。如果文件不存在，则尝试创建文件。\
+    \ |\n\n## 读取文件\n\n一旦使用 `fopen()` 函数打开文件，就可以使用名为 `fread()` 的函数来读取它。该函数需要两个参数。这些参数必须是文件指针和以字节表示的文件长度。\n\
+    \n可以使用 `filesize()` 函数来查找文件的长度，该函数以文件名作为参数，并返回以字节表示的文件大小。\n\n以下是使用 PHP 读取文件所需的步骤。\n\
+    \n* 使用 `fopen()` 函数打开文件。\n* 使用 `filesize()` 函数获取文件长度。\n* 使用 `fread()` 函数读取文件内容。\n\
+    * 使用 `fclose()` 函数关闭文件。\n\n以下示例将文本文件的内容分配给一个变量，然后在网页上显示这些内容。\n\n```php\n$filename\
+    \ = \"example.txt\";\n$file = fopen( $filename, \"r\" );\nif( $file == false )\n\
+    {\n    echo ( \"Error occurred in opening file\" );\n    exit();\n}\n$filesize\
+    \ = filesize( $filename );\n$filetext = fread( $file, $filesize );\nfclose( $file\
+    \ );\necho ( \"File size is : $filesize bytes\" );\necho ( \"<pre>$filetext</pre>\"\
+    \ );\n```\n\n## 写入文件\n\n可以使用 PHP 的 `fwrite()` 函数创建新文件或将文本追加到现有文件中。该函数需要两个参数，分别指定文件指针和要写入的数据字符串。可选地，可以包含第三个整数参数来指定要写入的数据长度。如果包含第三个参数，写入将在达到指定长度后停止。\n\
+    \n以下示例创建一个新文本文件，然后在其中写入一个简短的文本标题。关闭此文件后，使用 `file_exist()` 函数确认其存在，该函数以文件名作为参数\n\
+    \n```php\n$filename = \"/home/user/guest/newfile.txt\";\n$file = fopen( $filename,\
+    \ \"w\" );\nif( $file == false )\n{\n    echo ( \"Error occurred in opening new\
+    \ file\" );\n    exit();\n}\nfwrite( $file, \"This is a simple file\\n\" );\n\
+    fclose( $file );\n```\n\n```php\n$filename = \"newfile.txt\";\n$file = fopen(\
+    \ $filename, \"r\" );\nif( $file == false )\n{\n    echo ( \"Error occured in\
+    \ opening file\" );\n    exit();\n}\n$filesize = filesize( $filename );\n$filetext\
+    \ = fread( $file, $filesize );\nfclose( $file );\necho ( \"File size is: $filesize\
+    \ bytes\" );\necho ( \"$filetext\" );\necho(\"file name: $filename\");\n```\n\n\
+    # 第 13 章：面向对象 PHP\n\n我们的宇宙由不同的对象组成，如月球、地球、火星等。同样，我们可以想象我们的汽车由不同的对象组成，如车轮、方向盘、齿轮等。同样，面向对象编程概念将一切视为对象，并使用不同的对象实现软件。\n\
+    \n## 面向对象概念\n\nClass − 这是一种程序员定义的数据类型，包括局部函数和局部数据。你可以将类视为制作同一类（或类）对象的多个实例的模板。\n\
+    \nObject − 由类定义的数据结构的一个单独实例。你定义一次类，然后创建许多属于它的对象。对象也称为实例。\n\nInheritance − 当一个类通过继承父类的现有函数来定义时，这称为继承。在这里，子类将继承父类的全部或部分成员函数和变量。\n\
+    \nParent class − 被另一个类继承的类。这也称为基类或超类。\n\nChild Class − 从另一个类继承的类。这也称为子类或派生类。\n\
+    \nPolymorphism − 这是一种面向对象的概念，其中同一个函数可以用于不同的目的。例如，函数名称将保持不变，但它可以接受不同数量的参数并执行不同的任务。\n\
+    \nOverloading − 一种多态类型，其中一些或所有运算符根据其参数的类型具有不同的实现。同样，函数也可以用不同的实现进行重载。\n\nData Abstraction\
+    \ − 隐藏实现细节的任何数据表示。\n\nEncapsulation − 指将所有数据和成员函数封装在一起以形成对象的概念。\n\nConstructor\
+    \ − 指一种特殊的函数，每当从类中创建对象时，它都会自动被调用。\n\n## 定义 PHP 类\n\n在 PHP 中定义新类的一般形式如下 −\n\n```php\n\
+    class phpClass{\n    var $var1;\n    var $var2 = \"constant string\";\n    function\
+    \ myfunc ($arg1, $arg2) {\n        [...]\n    }\n    [...]\n}\n```\n\n"
+  toc: []
+- raw: "Here is a simple description of each line −\n\n*      The special form class,\
+    \ followed by the name of the class that you want to define.\n\n*      A set of\
+    \ braces enclosing any number of variable declarations and function definitions.\n\
+    \n*      Variable declarations start with the special form var, which is followed\
+    \ by $ variable name; they may also have an initial assignment to a constant value.\n\
+    \n*      Function definitions look much like standalone PHP functions but are\
+    \ local to the class and will be used to set and access object data.\n\nexample\n\
+    \n<?php\n\n   class  Books{\n\n      /\\* Member variables \\*/\n\n      var $price;\n\
+    \n      var $title;\n\n      /\\* Member functions \\*/\n\n      function setPrice($par){\n\
+    \n         $this\\->price \\= $par;\n\n      }\n\n      function getPrice(){\n\
+    \n         echo $this\\->price .\"<br/>\";\n\n      }\n\n      function setTitle($par){\n\
+    \n         $this\\->title \\= $par;\n\n      }\n\n      function getTitle(){\n\
+    \n         echo $this\\->title .\" <br/>\";\n\n      }\n\n   }\n\n?>\n\nThe variable $this is\
+    \ a special variable and it refers to the same object ie. itself.\n\n## Creating\
+    \ objects\n\nOnce you defined your class, then you can create as many objects\
+    \ as you like of that class type. Following is an example of how to create object\
+    \ using new operator.\n\n$biology = new Books;\n\n$maths = new Books;\n\n$chemistry\
+    \ = new Books;\n\nHere we have created three objects and these objects are independent\
+    \ of each other and they will have their existence separately. Next we will see\
+    \ how to access member function and process member variables.\n\n## Constructor\
+    \ functions\n\nConstructor Functions are special type of functions which are called\
+    \ automatically whenever an object is created. So we take full advantage of this\
+    \ behaviour, by initializing many things through constructor functions.\n\nPHP\
+    \ provides a special function called \\_\\_construct() to define a constructor.\
+    \ You can pass as many as arguments you like into the constructor function.\n\n\
+    Following example will create one constructor for Books class and it will initialize\
+    \ price and title for the book at the time of object creation.\n\nfunction \\\
+    _\\_construct( $par1, $par2 ){\n\n   $this->price = $par1;\n\n   $this->title\
+    \ = $par2;\n\n}\n\nNow we don't need to call set function separately to set price\
+    \ and title. We can initialize these two member variables at the time of object\
+    \ creation only. Check following example below −\n\n$physics \\= new Books( \"\
+    biology\", 10 );\n\n$maths \\= new Books ( \"maths\", 14 );\n\n$chemistry \\=\
+    \ new Books (\"chemistry\", 17 );\n\n/\\* Get those set values \\*/\n\n$physics\\\
+    ->getTitle();\n\n$chemistry\\->getTitle();\n\n$maths\\->getTitle();\n\n$physics\\\
+    ->getPrice();\n\n$chemistry\\->getPrice();\n\n$maths\\->getPrice();\n\nThis will\
+    \ produce the following result −\n\n  biology\n\n  maths\n\n  chemistry\n\n  10\n\
+    \n  14\n\n  17\n\n## Inheritance \n\nPHP class definitions can optionally inherit\
+    \ from a parent class definition by using the extends clause. The syntax is as\
+    \ follows −\n\nclass Child extends Parent {\n\n   <definition body>\n\n}\n\nThe\
+    \ effect of inheritance is that the child class (or subclass or derived class)\
+    \ has the following characteristics −\n\n.Automatically has all the member variable\
+    \ declarations of the parent class.\n\n.Automatically has all the same member\
+    \ functions as the parent, which (by default) will work the same way as those\
+    \ functions do in the parent.\n\nExample:\n\nclass Novel extends Books{\n\n  \
+    \ var publisher;\n\n   function setPublisher($par){\n\n      $this\\->publisher\
+    \ \\= $par;\n\n   }\n\n   function getPublisher(){\n\n      echo $this\\->publisher.\
+    \ \"<br />\";\n\n   }\n\n}\n\nNow apart from inherited functions, class Novel\
+    \ keeps two additional member functions.\n\n## Overriding  \n\nFunction definitions\
+    \ in child classes override definitions with the same name in parent classes.\
+    \ In a child class, we can modify the definition of a function inherited from\
+    \ parent class.\n\nExample:\n\n getPrice and getTitle functions are overridden\
+    \ to return some values.\n\nfunction getPrice(){\n\n   echo $this\\->price . \"\
+    <br/>\";\n\n   return $this\\->price;\n\n}\n\n   function getTitle(){\n\n   echo\
+    \ $this\\->title . \"<br/>\";\n\n   return $this\\->title;\n\n}\n\n## Public members\n\
+    \nUnless you specify otherwise, properties and methods of a class are public.\
+    \ That is to say, they may be accessed in three possible situations −\n\n.From\
+    \ outside the class in which it is declared\n\n.From within the class in which\
+    \ it is declared\n\n.From within another class that implements the class in which\
+    \ it is declared\n\nTill now we have seen all members as public members. If you\
+    \ wish to limit the accessibility of the members of a class then you define class\
+    \ members as private or protected.\n\n## Private members\n\nBy designating a member\
+    \ private, you limit its accessibility to the class in which it is declared. The\
+    \ private member cannot be referred to from classes that inherit the class in\
+    \ which it is declared and cannot be accessed from outside the class.\n\nA class\
+    \ member can be made private by using private keyword infront of the member.\n\
+    \nclass MyClass {\n\n   private $car \\= \"audi\";\n\n   $driver \\= \"willy\"\
+    ;\n\n   function \\_\\_construct($par) {\n\n      // Statements here run every\
+    \ time\n\n      // an instance of the class\n\n      // is created.\n\n   }\n\n\
+       function myPublicFunction() {\n\n      return(\"I'm visible!\");\n\n   }\n\n\
+       private function myPrivateFunction() {\n\n      return(\"I'm  not visible outside!\"\
+    );\n\n   }\n\n}\n\nWhen MyClass class is inherited by another class using extends,\
+    \ myPublicFunction() will be visible, as will $driver. The extending class will\
+    \ not have any awareness of or access to myPrivateFunction and $car, because they\
+    \ are declared private.\n\n## Protected members\n\nA protected property or method\
+    \ is accessible in the class in which it is declared, as well as in classes that\
+    \ extend that class. Protected members are not available outside of those two\
+    \ kinds of classes. A class member can be made protected by using protected keyword\
+    \ in front of the member.\n\nHere is different version of MyClass −\n\nclass MyClass\
+    \ {\n\n   protected $car \\= \"audi\";\n\n   $driver \\= \"willy\";\n\n   function\
+    \ \\_\\_construct($par) {\n\n      // Statements here run every time\n\n     \
+    \ // an instance of the class\n\n      // is created.\n\n   }\n\n   function myPublicFunction()\
+    \ {\n\n      return(\"I'm visible!\");\n\n   }\n\n   protected function myPrivateFunction()\
+    \ {\n\n      return(\"I'm  visible in child class!\");\n\n   }\n\n}\n\n## interfaces\n\
+    \nInterfaces are defined to provide a common function names to the implementers.\
+    \ Different implementors can implement those interfaces according to their requirements.\
+    \ You can say, interfaces are skeletons which are implemented by developers.\n\
+    \nAs of PHP5, it is possible to define an interface, like this −\n\ninterface\
+    \ email {\n\n   public function sendemail();\n\n}\n\nThen, if another class implemented\
+    \ that interface, like this −\n\nclass Report implements email {\n\n   // sendemail()\
+    \ Definition goes here\n\n}\n\n#                                    CONCLUSION\n\
+    \n Thank you again for choosing to read this book. I hope this book was able to\
+    \ help you learn and understand more about PHP, and how to write PHP codes. The\
+    \ next step is now upon you to apply what you have learned in this book.\n\nFinally,\
+    \ if you enjoyed this book, please with humble request take the time to share\
+    \ your thoughts and post a review on Amazon. It would be greatly appreciated."
+  fmt: "\nHere is a simple description of each line −\n\n* The special form `class`,\
+    \ followed by the name of the class that you want to define.\n* A set of braces\
+    \ enclosing any number of variable declarations and function definitions.\n* Variable\
+    \ declarations start with the special form `var`, which is followed by `$ variable\
+    \ name`; they may also have an initial assignment to a constant value.\n* Function\
+    \ definitions look much like standalone PHP functions but are local to the class\
+    \ and will be used to set and access object data.\n\nexample\n\n```php\nclass\
+    \ Books{\n   /* Member variables */\n   var $price;\n   var $title;\n   /* Member\
+    \ functions */\n   function setPrice($par){\n      $this->price = $par;\n   }\n\
+    \   function getPrice(){\n      echo $this->price .\"<br/>\";\n   }\n   function\
+    \ setTitle($par){\n      $this->title = $par;\n   }\n   function getTitle(){\n\
+    \      echo $this->title .\" <br/>\";\n   }\n}\n```\n\nThe variable `$this` is\
+    \ a special variable and it refers to the same object ie. itself.\n\n## Creating\
+    \ objects\n\nOnce you defined your class, then you can create as many objects\
+    \ as you like of that class type. Following is an example of how to create object\
+    \ using `new` operator.\n\n```php\n$biology = new Books;\n$maths = new Books;\n\
+    $chemistry = new Books;\n```\n\nHere we have created three objects and these objects\
+    \ are independent of each other and they will have their existence separately.\
+    \ Next we will see how to access member function and process member variables.\n\
+    \n## Constructor functions\n\nConstructor Functions are special type of functions\
+    \ which are called automatically whenever an object is created. So we take full\
+    \ advantage of this behaviour, by initializing many things through constructor\
+    \ functions.\n\nPHP provides a special function called `__construct()` to define\
+    \ a constructor. You can pass as many as arguments you like into the constructor\
+    \ function.\n\nFollowing example will create one constructor for `Books` class\
+    \ and it will initialize price and title for the book at the time of object creation.\n\
+    \n```php\nfunction __construct( $par1, $par2 ){\n   $this->price = $par1;\n  \
+    \ $this->title = $par2;\n}\n```\n\nNow we don't need to call set function separately\
+    \ to set price and title. We can initialize these two member variables at the\
+    \ time of object creation only. Check following example below −\n\n```php\n$physics\
+    \ = new Books( \"biology\", 10 );\n$maths = new Books ( \"maths\", 14 );\n$chemistry\
+    \ = new Books (\"chemistry\", 17 );\n\n/* Get those set values */\n$physics->getTitle();\n\
+    $chemistry->getTitle();\n$maths->getTitle();\n$physics->getPrice();\n$chemistry->getPrice();\n\
+    $maths->getPrice();\n```\n\nThis will produce the following result −\n\n```text\n\
+    \ biology\n maths\n chemistry\n 10\n 14\n 17\n```\n\n## Inheritance \n\nPHP class\
+    \ definitions can optionally inherit from a parent class definition by using the\
+    \ `extends` clause. The syntax is as follows −\n\n```php\nclass Child extends\
+    \ Parent {\n   <definition body>\n}\n```\n\nThe effect of inheritance is that\
+    \ the child class (or subclass or derived class) has the following characteristics\
+    \ −\n\n* Automatically has all the member variable declarations of the parent\
+    \ class.\n* Automatically has all the same member functions as the parent, which\
+    \ (by default) will work the same way as those functions do in the parent.\n\n\
+    Example:\n\n```php\nclass Novel extends Books{\n   var publisher;\n   function\
+    \ setPublisher($par){\n      $this->publisher = $par;\n   }\n   function getPublisher(){\n\
+    \      echo $this->publisher. \"<br />\";\n   }\n}\n```\n\nNow apart from inherited\
+    \ functions, class `Novel` keeps two additional member functions.\n\n## Overriding\
+    \ \n\nFunction definitions in child classes override definitions with the same\
+    \ name in parent classes. In a child class, we can modify the definition of a\
+    \ function inherited from parent class.\n\nExample:\n\n`getPrice` and `getTitle`\
+    \ functions are overridden to return some values.\n\n```php\nfunction getPrice(){\n\
+    \   echo $this->price . \"<br/>\";\n   return $this->price;\n}\n\nfunction getTitle(){\n\
+    \   echo $this->title . \"<br/>\";\n   return $this->title;\n}\n```\n\n## Public\
+    \ members\n\nUnless you specify otherwise, properties and methods of a class are\
+    \ public. That is to say, they may be accessed in three possible situations −\n\
+    \n* From outside the class in which it is declared\n* From within the class in\
+    \ which it is declared\n* From within another class that implements the class\
+    \ in which it is declared\n\nTill now we have seen all members as public members.\
+    \ If you wish to limit the accessibility of the members of a class then you define\
+    \ class members as `private` or `protected`.\n\n## Private members\n\nBy designating\
+    \ a member private, you limit its accessibility to the class in which it is declared.\
+    \ The private member cannot be referred to from classes that inherit the class\
+    \ in which it is declared and cannot be accessed from outside the class.\n\nA\
+    \ class member can be made private by using `private` keyword infront of the member.\n\
+    \n```php\nclass MyClass {\n   private $car = \"audi\";\n   $driver = \"willy\"\
+    ;\n   function __construct($par) {\n      // Statements here run every time\n\
+    \      // an instance of the class\n      // is created.\n   }\n   function myPublicFunction()\
+    \ {\n      return(\"I'm visible!\");\n   }\n   private function myPrivateFunction()\
+    \ {\n      return(\"I'm  not visible outside!\");\n   }\n}\n```\n\nWhen `MyClass`\
+    \ class is inherited by another class using `extends`, `myPublicFunction()` will\
+    \ be visible, as will `$driver`. The extending class will not have any awareness\
+    \ of or access to `myPrivateFunction` and `$car`, because they are declared private.\n\
+    \n## Protected members\n\nA protected property or method is accessible in the\
+    \ class in which it is declared, as well as in classes that extend that class.\
+    \ Protected members are not available outside of those two kinds of classes. A\
+    \ class member can be made protected by using `protected` keyword in front of\
+    \ the member.\n\nHere is different version of `MyClass` −\n\n```php\nclass MyClass\
+    \ {\n   protected $car = \"audi\";\n   $driver = \"willy\";\n   function __construct($par)\
+    \ {\n      // Statements here run every time\n      // an instance of the class\n\
+    \      // is created.\n   }\n   function myPublicFunction() {\n      return(\"\
+    I'm visible!\");\n   }\n   protected function myPrivateFunction() {\n      return(\"\
+    I'm  visible in child class!\");\n   }\n}\n```\n\n## interfaces\n\nInterfaces\
+    \ are defined to provide a common function names to the implementers. Different\
+    \ implementors can implement those interfaces according to their requirements.\
+    \ You can say, interfaces are skeletons which are implemented by developers.\n\
+    \nAs of PHP5, it is possible to define an interface, like this −\n\n```php\ninterface\
+    \ email {\n   public function sendemail();\n}\n```\n\nThen, if another class implemented\
+    \ that interface, like this −\n\n```php\nclass Report implements email {\n   //\
+    \ sendemail() Definition goes here\n}\n```\n\n# CONCLUSION\n\n Thank you again\
+    \ for choosing to read this book. I hope this book was able to help you learn\
+    \ and understand more about PHP, and how to write PHP codes. The next step is\
+    \ now upon you to apply what you have learned in this book.\n\nFinally, if you\
+    \ enjoyed this book, please with humble request take the time to share your thoughts\
+    \ and post a review on Amazon. It would be greatly appreciated.\n"
+  trans: "\n\n这里是每一行的简单描述 −\n\n* 特殊形式 `class`，后跟你要定义的类的名称。\n* 一组花括号，括住任意数量的变量声明和函数定义。\n\
+    * 变量声明以特殊形式 `var` 开头，后跟 `$ 变量名称`；它们也可以有一个初始赋值到常量值。\n* 函数定义看起来很像独立的 PHP 函数，但局限于类，并将用于设置和访问对象数据。\n\
+    \nexample\n\n```php\nclass Books{\n   /* Member variables */\n   var $price;\n\
+    \   var $title;\n   /* Member functions */\n   function setPrice($par){\n    \
+    \  $this->price = $par;\n   }\n   function getPrice(){\n      echo $this->price\
+    \ .\"<br/>\";\n   }\n   function setTitle($par){\n      $this->title = $par;\n\
+    \   }\n   function getTitle(){\n      echo $this->title .\" <br/>\";\n   }\n}\n\
+    ```\n\n变量 `$this` 是一个特殊变量，它指向同一个对象，即自身。\n\n## 创建对象\n\n一旦你定义了类，就可以创建任意数量的该类类型的对象。以下是使用\
+    \ `new` 运算符创建对象的示例。\n\n```php\n$biology = new Books;\n$maths = new Books;\n$chemistry\
+    \ = new Books;\n```\n\n这里我们创建了三个对象，这些对象彼此独立，并且它们将分别存在。接下来我们将看到如何访问成员函数和处理成员变量。\n\
+    \n## 构造函数\n\n构造函数是一种特殊的函数，每当创建对象时会自动调用。因此，我们充分利用这种行为，通过构造函数初始化许多内容。\n\nPHP 提供一个名为\
+    \ `__construct()` 的特殊函数来定义构造函数。你可以向构造函数传递任意数量的参数。\n\n以下示例将为 `Books` 类创建一个构造函数，它将在对象创建时初始化书籍的价格和标题。\n\
+    \n```php\nfunction __construct( $par1, $par2 ){\n   $this->price = $par1;\n  \
+    \ $this->title = $par2;\n}\n```\n\n现在我们不需要单独调用 set 函数来设置价格和标题。我们只能在对象创建时初始化这两个成员变量。查看下面的示例\
+    \ −\n\n```php\n$physics = new Books( \"biology\", 10 );\n$maths = new Books (\
+    \ \"maths\", 14 );\n$chemistry = new Books (\"chemistry\", 17 );\n\n/* Get those\
+    \ set values */\n$physics->getTitle();\n$chemistry->getTitle();\n$maths->getTitle();\n\
+    $physics->getPrice();\n$chemistry->getPrice();\n$maths->getPrice();\n```\n\n这将产生以下结果\
+    \ −\n\n```text\n biology\n maths\n chemistry\n 10\n 14\n 17\n```\n\n## 继承 \n\n\
+    PHP 类定义可以选择使用 `extends` 子句从父类定义继承。语法如下 −\n\n```php\nclass Child extends Parent\
+    \ {\n   <definition body>\n}\n```\n\n继承的效果是子类（或子类或派生类）具有以下特征 −\n\n* 自动拥有父类的所有成员变量声明。\n\
+    * 自动拥有与父类相同的所有成员函数，默认情况下，这些函数的工作方式与父类中的函数相同。\n\n示例：\n\n```php\nclass Novel extends\
+    \ Books{\n   var publisher;\n   function setPublisher($par){\n      $this->publisher\
+    \ = $par;\n   }\n   function getPublisher(){\n      echo $this->publisher. \"\
+    <br />\";\n   }\n}\n```\n\n现在，除了继承的函数之外，类 `Novel` 还保留了两个额外的成员函数。\n\n## 覆盖 \n\n\
+    子类中的函数定义会覆盖父类中同名的定义。在子类中，我们可以修改从父类继承的函数的定义。\n\n示例：\n\n`getPrice` 和 `getTitle`\
+    \ 函数被覆盖以返回某些值。\n\n```php\nfunction getPrice(){\n   echo $this->price . \"<br/>\"\
+    ;\n   return $this->price;\n}\n\nfunction getTitle(){\n   echo $this->title .\
+    \ \"<br/>\";\n   return $this->title;\n}\n```\n\n## 公共成员\n\n除非你另有说明，否则类的属性和方法都是公共的。也就是说，它们可以在三种可能的情况下被访问\
+    \ −\n\n* 从声明它的类之外\n* 从声明它的类之内\n* 从实现声明它的类的另一个类之内\n\n到目前为止，我们看到的所有成员都是公共成员。如果你希望限制类成员的可访问性，则可以将类成员定义为\
+    \ `private` 或 `protected`。\n\n## 私有成员\n\n通过将成员指定为私有，你将其可访问性限制在声明它的类中。私有成员不能从继承声明它的类的类中引用，也不能从类之外访问。\n\
+    \n类成员可以通过在成员前使用 `private` 关键字来设为私有。\n\n```php\nclass MyClass {\n   private $car\
+    \ = \"audi\";\n   $driver = \"willy\";\n   function __construct($par) {\n    \
+    \  // Statements here run every time\n      // an instance of the class\n    \
+    \  // is created.\n   }\n   function myPublicFunction() {\n      return(\"I'm\
+    \ visible!\");\n   }\n   private function myPrivateFunction() {\n      return(\"\
+    I'm  not visible outside!\");\n   }\n}\n```\n\n当 `MyClass` 类被另一个类使用 `extends`\
+    \ 继承时，`myPublicFunction()` 将可见，`$driver` 也将可见。扩展类将不会意识到或访问 `myPrivateFunction`\
+    \ 和 `$car`，因为它们被声明为私有。\n\n## 受保护成员\n\n受保护的属性或方法在声明它的类中以及扩展该类的类中都可访问。受保护的成员在这两种类之外不可用。类成员可以通过在成员前使用\
+    \ `protected` 关键字来设为受保护。\n\n以下是 `MyClass` 的不同版本 −\n\n```php\nclass MyClass {\n\
+    \   protected $car = \"audi\";\n   $driver = \"willy\";\n   function __construct($par)\
+    \ {\n      // Statements here run every time\n      // an instance of the class\n\
+    \      // is created.\n   }\n   function myPublicFunction() {\n      return(\"\
+    I'm visible!\");\n   }\n   protected function myPrivateFunction() {\n      return(\"\
+    I'm  visible in child class!\");\n   }\n}\n```\n\n## 接口\n\n接口被定义以向实现者提供通用的函数名称。不同的实现者可以根据其要求实现这些接口。你可以说，接口是由开发者实现的骨架。\n\
+    \n从 PHP5 开始，可以像这样定义接口 −\n\n```php\ninterface email {\n   public function sendemail();\n\
+    }\n```\n\n然后，如果另一个类实现了该接口，像这样 −\n\n```php\nclass Report implements email {\n \
+    \  // sendemail() Definition goes here\n}\n```\n\n# 结论\n\n 再次感谢你选择阅读本书。我希望本书能帮助你学习和了解更多关于\
+    \ PHP 以及如何编写 PHP 代码的内容。接下来，将由你来应用在本书中所学到的知识。\n\n最后，如果你喜欢这本书，请恳请抽出时间分享你的想法并在 Amazon\
+    \ 上发表评论。这将不胜感激。\n\n"
+  toc: []

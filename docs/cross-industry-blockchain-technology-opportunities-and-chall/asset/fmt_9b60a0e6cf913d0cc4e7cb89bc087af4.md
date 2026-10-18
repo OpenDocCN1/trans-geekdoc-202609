@@ -1,0 +1,90 @@
+
+| \[10\] || Dinh T.T.A., Wang J., Chen G., Liu R., Ooi B.C., Tan K.L.. Blockbench: A framework for analyzing private blockchains.Proceedings of the 2017 ACM International Conference on Management of Data20171085110010.1145/3035918.3064033 |
+
+| \[11\] || Lei K., Zhang Q., Xu L., Qi Z.. Reputation-based byzantine fault-tolerance for consortium blockchain.IEEE 24^(th) International Conference on Parallel and Distributed Systems (ICPADS)IEEE201860461110.1109/PADSW.2018.8644933 |
+
+| \[12\] || Chan K., Liebowitz J.. The synergy of social network analysis and knowledge mapping: a case study.Int. J. Manag. Decis. Mak.200671193510.1504/IJMDM.2006.008169 |
+
+| \[13\] || Kuo T.T., Kim H.E., Ohno-Machado L.. Blockchain distributed ledger technologies for biomedical and health care applications.J. Am. Med. Inform. Assoc.20172461211122010.1093/jamia/ocx06829016974 |
+
+| \[14\] || Gordon W.J., Catalini C.. Blockchain technology for healthcare: facilitating the transition to patient-driven interoperability.Comput. Struct. Biotechnol. J.20181622423010.1016/j.csbj.2018.06.00330069284 |
+
+| \[15\] || de La Beaujardiere J., Mital R., Mital R.. Blockchain Application Within A Multi-Sensor Satellite Architecture.In IGARSS 2019-2019 IEEE International Geoscience and Remote Sensing Symposium.IEEE20195293529610.1109/IGARSS.2019.8898117 |
+
+| \[16\] || For more on blockchain and how Europe is seeking further application of blockchain for Earth observation, see [`https://eo4society.esa.int/2019/04/09/blockchain-and-earth-observation-a-white-paper/`](https://eo4society.esa.int/2019/04/09/blockchain-and-earth-observation-a-white-paper/). |
+
+| \[17\] || Hathaliya J., Sharma P., Tanwar S., Gupta R.. Blockchain-based remote patient monitoring in healthcare 4.0.In 2019 IEEE 9th International Conference on Advanced Computing (IACC)IEEE20198791 |
+
+| \[18\] || Boucher P.. How blockchain technology could change our lives: In-depth analysis.European Parliament2017 |
+
+| \[19\] || Atlam H. F., Walters R. J., Wills G. B.. Fog computing and the internet of things: a review.Big Data and cognitive computing20182210 |
+
+| \[20\] || De Mauro A., Greco M., Grimaldi M.. What is Big Data? A consensual definition and a review of key research topics.AIP Conference ProceedingsMelvilleNY: AIP20151644197104 |
+
+| \[21\] || De Mauro A., Greco M., Grimaldi M.. A formal definition of Big Data based on its essential features.Libr. Rev.201665312213510.1108/LR-06-2015-0061 |
+
+| \[22\] || Demchenko Y., De Laat C., Membrey P.. 2014Defining architecture components of the Big Data Ecosystem.2014 International Conference on Collaboration Technologies and Systems (CTS)104112Piscataway, NJIEEE10.1109/CTS.2014.6867550 |
+
+| \[23\] || Gandomi A., Haider M.. Beyond the hype: Big Data concepts, methods, and analytics.Int. J. Inf. Manage.201535213714410.1016/j.ijinfomgt.2014.10.007 |
+
+| \[24\] || Kacfah Emani C., Cullot N., Nicolle C.. Understandable Big Data: A survey.Comput. Sci. Rev.201517708110.1016/j.cosrev.2015.05.002 |
+
+| \[25\] || Oussous A., Benjelloun F.Z., Ait Lahcen A., Belfkih S.. Big Data technologies: A survey.Journal of King Saud University - Computer and Information Sciences201830443144810.1016/j.jksuci.2017.06.001 |
+
+| \[26\] || Chen M., Mao S., Liu Y.. Big Data: A Survey.Mob. Netw. Appl.201419217120910.1007/s11036-013-0489-0 |
+
+| \[27\] || Assunção M.D., Calheiros R.N., Bianchi S., Netto M.A.S., Buyya R.. Big Data computing and clouds: Trends and future directions.J. Parallel Distrib. Comput.201579-8031510.1016/j.jpdc.2014.08.003 |
+
+| \[28\] || Hajjaji Y., Boulila W., Farah I.R., Romdhani I., Hussain A.. Big Data and IoT-based applications in smart environments: A systematic review.Comput. Sci. Rev.20213910031810.1016/j.cosrev.2020.100318 |
+
+| \[29\] || Jin X., Wah B.W., Cheng X., Wang Y.. Significance and challenges of Big Data research.Big Data Research201522596410.1016/j.bdr.2015.01.006 |
+
+| \[30\] || Bhadani A.K., Jothimani D.. Big Data: challenges, opportunities, and realities.Effective Big Data management and opportunities for implementation.IGI Global201612410.4018/978-1-5225-0182-4.ch001 |
+
+| \[31\] || Tan P.N., Steinbach M., Kumar V.. Introduction to data mining.Pearson Education India2016 |
+
+| \[32\] || Hassani H., Huang X., Silva E.S., Ghodsi M.. A review of data mining applications in crime.Stat. Anal. Data Min.20169313915410.1002/sam.11312 |
+
+| \[33\] || Kotsiantis S.B., Zaharakis I., Pintelas P.. Machine learning: a review of classification and combining techniques.Artif Intell Rev261591902007 |
+
+| \[34\] || Quinlan J.R.. Induction of decision trees.Mach. Learn.1986118110610.1007/BF00116251 |
+
+| \[35\] || Cortes C., Vapnik V.. Support-vector networks.Mach. Learn.199520327329710.1007/BF00994018 |
+
+| \[36\] || Langley P., Iba W., Thomas K.. An analysis of Bayesian classi er.proceedings of the Tenth National Conference of Artificial Intelligence1992 |
+
+| \[37\] || Richard M.D., Lippmann R.P.. Neural network classifiers estimate Bayesian a posteriori probability.Neural Comput.19913446148310.1162/neco.1991.3.4.46131167331 |
+
+| \[38\] || Agrawal R., Imieliński T., Swami A.. Mining association rules between sets of items in large databases.Proceedings of the 1993 ACM SIGMOD international conference on Management of data199320721610.1145/170035.170072 |
+
+| \[39\] || Sparrow M.K.. The application of network analysis to criminal intelligence: An assessment of the prospects.Soc. Networks199113325127410.1016/0378-8733(91)90008-H |
+
+| \[40\] || Wasserman S., Faust K.. Social network analysis: Methods and applications.Cambridge university press1994Vol. 810.1017/CBO9780511815478 |
+
+| \[41\] || Bhuiyan M.Z.A., Wang G., Tian W., Rahman M.A., Wu J.. Content-centric event-insensitive Big Data reduction in internet of things.In GLOBECOM 2017-2017 IEEE Global Communications ConferenceIEEE20171610.1109/GLOCOM.2017.8254997 |
+
+| \[42\] || Son J., Park J., Oh H., Bhuiyan M., Hur J., Kang K.. Privacy-preserving electrocardiogram monitoring for intelligent arrhythmia detection.Sensors (Basel)2017176136010.3390/s1706136028604628 |
+
+| \[43\] || Lodge J. M., Corrin L.. What data and analytics can and do say about effective learning?npj Science of Learning20172112 |
+
+| \[44\] || Mor Y., Ferguson R., Wasson B.. Editorial: Learning design, teacher inquiry into student learning and learning analytics: A call for action.Br. J. Educ. Technol.201546222122910.1111/bjet.12273 |
+
+| \[45\] || Picciano A.G.. The evolution of Big Data and learning analytics in American higher education.Online Learning201216392010.24059/olj.v16i3.267 |
+
+| \[46\] || Liu P., Di L., Du Q., Wang L.. Remote sensing Big Data: theory, methods and application.201810.3390/rs10050711 |
+
+| \[47\] || Eynon R.. The rise of Big Data: what does it mean for education, technology, and media research?Learning, Media and Technology.201328323724010.1080/17439884.2013.771783 |
+
+| \[48\] || Gartner I., Beyer M.. Gartner says solving ‘Big Data’challenge involves more than just managing volumes of data. Gartner Special Report Examines How to Leverage Pattern-Based Strategy to Gain Value in Big Data.Stamford, CT, USGartner2011 |
+
+| \[49\] || Spark A.. Apache spark: unified analytics engine for Big Data.2018 |
+
+| \[50\] || Apache StormApache Software Foundation. Accessed: [`http://storm.apache.org/`](http://storm.apache.org/). |
+
+| \[51\] || Daniel B.. Big Data and analytics in higher education: Opportunities and challenges.Br. J. Educ. Technol.201546590492010.1111/bjet.12230 |
+
+| \[52\] || Khan M.A., Salah K.. IoT security: Review, blockchain solutions, and open challenges.Future Gener. Comput. Syst.20188239541110.1016/j.future.2017.11.022 |
+
+# Hydroponics Monitoring System Based on IoT and Blockchain
+
+**Harpreet Singh Bedi**^([1](#9789815051452-C4.html#aff1), [\*](#9789815051452-C4.html#cor1))**, **Raghav Gupta**^([1](#9789815051452-C4.html#aff1))**, **Manoj Sindhwani**^([1](#9789815051452-C4.html#aff1))**, **Kamal Kumar Sharma**^([1](#9789815051452-C4.html#aff1))

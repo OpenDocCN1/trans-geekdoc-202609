@@ -1,0 +1,162 @@
+name: Probabilistic Data Structures for Blockchain-Based Internet of Things Applications
+slug: probabilistic-data-structures-for-blockchain-based-internet-
+name_cn: 基于区块链的物联网应用的概率数据结构指南
+toc:
+- - '##'
+  - 前言
+- - '##'
+  - 传记
+- - '##'
+  - Part I
+- - '##'
+  - Background
+- - '#'
+  - '1'
+- - '#'
+  - Overview of Internet of Things
+- - '##'
+  - 物联网（IoT）概述
+- - '##'
+  - 弹性
+- - '##'
+  - 降低运营成本
+- - '##'
+  - 自主运行
+- - '##'
+  - 活动
+- - '#'
+  - 智能应用
+- - '#'
+  - 下一代计算时代将完全基于物联网
+- - '#'
+  - '3'
+- - '#'
+  - 物联网挑战
+- - '#'
+  - Latency Challenge in IoT
+- - '#'
+  - Part II
+- - '#'
+  - Blockchain Overview
+- - '#'
+  - '4'
+- - '#'
+  - Python Basics
+- - '##'
+  - 活动
+- - '#'
+  - '5'
+- - '#'
+  - Cryptography Primitives
+- - '##'
+  - 5.6 哈希表
+- - '#'
+  - 哈希表冲突解决
+- - '#'
+  - '6'
+- - '#'
+  - 区块链技术与技术基础
+- - '#'
+  - 区块链应用场景
+- - '#'
+  - '7'
+- - '#'
+  - 区块链使用的验证与确认方法
+- - '#'
+  - '8'
+- - '#'
+  - 区块链的数据结构
+- - '#'
+  - Merkle Patricia Trie
+- - '#'
+  - Binary Heap
+- - '#'
+  - Activity
+- - '#'
+  - Part III
+- - '#'
+  - 'Probabilistic Data Structures: An Overview'
+- - '#'
+  - '9'
+- - '#'
+  - Introduction to Probabilistic Data Structures
+- - '#'
+  - IT 专业人员接触过不同的确定性数据结构
+- - '#'
+  - '10'
+- - '#'
+  - 成员查询概率性数据结构
+- - '#'
+  - BF 的代数运算与应用
+- - '#'
+  - Applications of BF
+- - '#'
+  - 'False Positive Probability in BF:'
+- - '#'
+  - 最小假阴性选择
+- - '#'
+  - 最大假阳性选择
+- - '#'
+  - 比率选择
+- - '#'
+  - Cuckoo Filter
+- - '#'
+  - '11'
+- - '#'
+  - Cardinality Estimation Probabilistic Data Structures
+- - '#'
+  - '12'
+- - '#'
+  - 频率计数查询概率数据结构
+- - '#'
+  - 12.2 Count-Min Sketch (CMS)
+- - '#'
+  - 12.2 Count-Min Sketch
+- - '#'
+  - '13'
+- - '#'
+  - 近似相似性搜索查询概率数据结构
+- - '#'
+  - 惊人的特性
+- - '#'
+  - 观察
+- - '#'
+  - 第四部分
+- - '#'
+  - 概率性数据结构与区块链的集成
+- - '#'
+  - '14'
+- - '#'
+  - 成员查询 PDS 在区块链中的适用性
+- - '#'
+  - '15'
+- - '#'
+  - 基于区块链的基数估算 PDS 的适用性
+- - '#'
+  - 15.3.3 IoT chain
+- - '#'
+  - Activity
+- - '#'
+  - '16'
+- - '#'
+  - Applicability of Frequency Estimation PDS with Blockchain
+- - '#'
+  - '17'
+- - '#'
+  - 基于区块链的近似相似性搜索 PDS 的适用性
+- - '#'
+  - 关于数字资产版权证明
+- - '#'
+  - 活动
+- - '##'
+  - 回答以下问题
+- - '#'
+  - 参考文献
+- - '##'
+  - 参考文献
+- - '##'
+  - 参考文献
+- - '#'
+  - 索引
+- - '#'
+  - 索引

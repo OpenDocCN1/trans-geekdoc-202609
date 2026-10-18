@@ -1,0 +1,16 @@
+The white papers in our review show several interesting use cases for the public sector, both nationally and city-wide. However, they do not address democracy and participation. Instead, they focus on public service delivery and government operation. Even so, they reveal interesting findings that are also relevant for participation. For participatory or democratic purposes, we need to look to the academic literature. There has been some research done on the potential for blockchains in voting (Qi et al., 2017; Racksko, 2019), while Poblet et al. (2020) and Pournaras (2020) discuss how blockchains can be “trust machines” in more deliberative activities such as polling, petitions, or consultations, due to the immutable nature of the blockchain.
+
+# 14.4  HOW BLOCKCHAINS CAN SUPPORT PARTICIPATION
+
+In this section, we present examples of how blockchain can support various stages of the decision-making process. This section is based on the literature review above, as well as our own experiences with blockchains from the EU-funded Smart-MLA¹ project, where we examined and created blockchains for various transactions.
+
+We examine four forms of participation: polling, consultation, voting, and petitions, which can be seen as traditional forms of political participation (Sæbø, Rose and Skiftenes Flak, 2008).
+
++   - Polling refers to the use of surveys to seek citizens’ opinions and is typically done on a random sample of citizens.
++   - Consultation involves more qualitative interaction between citizens and the government. In a consultation, citizens are asked to elaborate on their opinions on a given issue, and the input from consultations is typically used for decision-making.
++   - Voting is the process whereby all eligible citizens are invited to cast their votes. In representative democracies, you typically vote for a candidate or party; in direct democracies, you can also vote on specific issues.
++   - Petitions, or citizen initiatives, can be submitted by a citizen or group of citizens and call for the government to act on an issue. Often, it is a requirement that a certain percentage of citizens must sign for the petition to be taken up for discussion in the City Council or the Parliament. Rules vary between countries, but a petition is typically limited to forcing the city council or parliament to discuss an issue.
+
+We also include the non-political form of participation known as “sensing” – or citizens as sensors, where the government can use the sensors we carry with us in our smartphones and watches or voluntary reporting via web pages for improved decision-making (Berntzen et al., 2018). We map these onto Birkland’s (2001) decision-making framework to show where the different forms of participation are most relevant in the decision-making process.
+
+Figure 14.2 summarizes the section and illustrates which areas of the decision-making process are relevant for the different stages of the decision-making process. In the following subsections, we will discuss in more detail how the different activities can support the various stages of the decision-making process, as laid out by Birkland (2001).

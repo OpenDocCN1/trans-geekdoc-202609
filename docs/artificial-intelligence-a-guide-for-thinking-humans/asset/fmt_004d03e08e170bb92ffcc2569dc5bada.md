@@ -1,0 +1,56 @@
+
+10. J. Pearl, “Theoretical Impediments to Machine Learning with Seven Sparks from the Causal Revolution,” in *Proceedings of the Eleventh ACM International Conference on Web Search and Data Mining* (2018), 3. For a more in-depth discussion of causal reasoning in AI, see J. Pearl and D. Mackenzie, *The Book of Why: The New Science of Cause and Effect* (New York: Basic Books, 2018).
+
+11. For an insightful discussion on what is missing in deep learning, see G. Marcus, “Deep Learning: A Critical Appraisal,” arXiv:1801.00631 (2018).
+
+12. DARPA Fiscal Year 2019 Budget Estimates, Feb. 2018, accessed Dec. 18, 2018, [`www.darpa.mil/attachments/DARPAFY19PresidentsBudgetRequest.pdf`](http://www.darpa.mil/attachments/DARPAFY19PresidentsBudgetRequest.pdf).
+
+13. English version: M. Bongard, *Pattern Recognition* (New York: Spartan Books, 1970).
+
+14. All of the Bongard-problem images I give here are from Harry Foundalis’s Index of Bongard Problems website, [`www.foundalis.com/res/bps/bpidx.htm`](http://www.foundalis.com/res/bps/bpidx.htm), which gives Bongard’s one hundred problems as well as many problems created by other people.
+
+15. R. M. French, *The Subtlety of Sameness* (Cambridge, Mass.: MIT Press, 1995).
+
+16. One particularly interesting program that attempted to solve Bongard problems was created by Harry Foundalis when he was a graduate student in Douglas Hofstadter’s research group at Indiana University. Foundalis explicitly declared that he was building not a “Bongard problem solver” but a “cognitive architecture inspired by Bongard’s problems.” The program was inspired by humanlike perception at every level, from low-level vision all the way to abstraction and analogy, very much in the spirit of Bongard’s intentions, though it was successful in solving only a small number of Bongard’s problems. See H. E. Foundalis, “Phaeaco: A Cognitive Architecture Inspired by Bongard’s Problems” (PhD diss., Indiana University, 2006), [`www.foundalis.com/res/Foundalis_dissertation.pdf`](http://www.foundalis.com/res/Foundalis_dissertation.pdf). Foundalis maintains an extensive website related to his work on Bongard problems: [`www.foundalis.com/res/diss_research.html`](http://www.foundalis.com/res/diss_research.html).
+
+17. S. Stabinger, A. Rodríguez-Sánchez, and J. Piater, “25 Years of CNNs: Can We Compare to Human Abstraction Capabilities?,” in *Proceedings of the International Conference on Artificial Neural Networks* (2016), 380–87. A related study with similar results was reported in J. Kim, M. Ricci, and T. Serre, “Not-So-CLEVR: Visual Relations Strain Feedforward Neural Networks,” *Interface Focus* 8, no. 4 (2018): 2018.0011.
+
+18. When I say “most people,” I am referring to the results of surveys I gave to people as part of my dissertation work. See M. Mitchell, *Analogy-Making as Perception* (Cambridge, Mass.: MIT Press, 1993).
+
+19. Hofstadter coined the term *conceptual slippage* in his discussion of Bongard problems in chapter 19 of D. R. Hofstadter, *Gödel, Escher, Bach: an Eternal Golden Braid* (New York: Basic Books, 1979).
+
+20. Ibid., 349–51.
+
+21. A detailed description of Copycat is given in chapter 5 of D. R. Hofstadter and the Fluid Analogies Research Group, *Fluid Concepts and Creative Analogies: Computer Models of the Fundamental Mechanisms of Thought* (New York: Basic Books, 1995). An even more detailed description is given in the book based on my dissertation: Mitchell, *Analogy-Making as Perception*.
+
+22. J. Marshall, “A Self-Watching Model of Analogy-Making and Perception,” *Journal of Experimental and Theoretical Artificial Intelligence* 18, no. 3 (2006): 267–307.
+
+23. Several of these programs are described in Hofstadter and the Fluid Analogies Research Group, *Fluid Concepts and Creative Analogies*.
+
+24. A. Karpathy, “The State of Computer Vision and AI: We Are Really, Really Far Away,” Andrej Karpathy blog, Oct. 22, 2012, karpathy.github.io/2012/10/22/state -of-computer-vision.
+
+25. See *Stanford Encyclopedia of Philosophy*, s.v. “Dualism,” plato.stanford.edu/entries/dualism/.
+
+26. For a cogent philosophical discussion of the embodiment hypothesis in cognitive science, see A. Clark, *Being There: Putting Brain, Body, and World Together Again* (Cambridge, Mass.: MIT Press, 1996).
+
+## 16: Questions, Answers, and Speculations
+
+1. “Automated Vehicles for Safety,” National Highway Traffic Safety Administration website, [`www.nhtsa.gov/technology-innovation/automated-vehicles-safety#issue-road-self-driving`](http://www.nhtsa.gov/technology-innovation/automated-vehicles-safety#issue-road-self-driving).
+
+2. “Vehicle Cybersecurity: DOT and Industry Have Efforts Under Way, but DOT Needs to Define Its Role in Responding to a Real-World Attack,” General Accounting Office, March 2016, accessed Dec. 18, 2018, [`www.gao.gov/assets/680/676064.pdf`](http://www.gao.gov/assets/680/676064.pdf).
+
+3. Quoted in J. Crosbie, “Ford’s Self-Driving Cars Will Live Inside Urban ‘Geofences,’” *Inverse*, March 13, 2017, [`www.inverse.com/article/28876-ford-self-driving-cars-geofences-ride-sharing`](http://www.inverse.com/article/28876-ford-self-driving-cars-geofences-ride-sharing).
+
+4. Quoted in J. Kahn, “To Get Ready for Robot Driving, Some Want to Reprogram Pedestrians,” *Bloomberg*, Aug. 16, 2018, [`www.bloomberg.com/news/articles/2018-08-16/to-get-ready-for-robot-driving-some-want-to-reprogram-pedestrians`](http://www.bloomberg.com/news/articles/2018-08-16/to-get-ready-for-robot-driving-some-want-to-reprogram-pedestrians).
+
+5. “Artificial Intelligence, Automation, and the Economy,” Executive Office of the President, Dec. 2016, [`www.whitehouse.gov/sites/whitehouse.gov/files/images/EMBARGOED%20AI%20Economy%20Report.pdf`](http://www.whitehouse.gov/sites/whitehouse.gov/files/images/EMBARGOED%20AI%20Economy%20Report.pdf).
+
+6. This harks back to what Alan Turing called “Lady Lovelace’s objection,” named for Lady Ada Lovelace, a British mathematician and writer who worked with Charles Babbage on developing the Analytical Engine, a nineteenth-century proposal for a (never completed) programmable computer. Turing quotes from Lady Lovelace’s writings: “The Analytical Engine has no pretensions to *originate* anything. It can do *whatever we know how to order it* to perform.” A. M. Turing, “Computing Machinery and Intelligence,” *Mind* 59, no. 236 (1950): 433–60.
+
+7. Karl Sims website, accessed Dec. 18, 2018, [`www.karlsims.com`](http://www.karlsims.com).
+
+8. D. Cope, *Virtual Music: Computer Synthesis of Musical Style* (Cambridge, Mass.: MIT Press, 2004).
+
+9. Quoted in G. Johnson, “Undiscovered Bach? No, a Computer Wrote It,” *New York Times*, Nov. 11, 1997.
+
+10. M. A. Boden, “Computer Models of Creativity,” *AI Magazine* 30, no. 3 (2009): 23–34.

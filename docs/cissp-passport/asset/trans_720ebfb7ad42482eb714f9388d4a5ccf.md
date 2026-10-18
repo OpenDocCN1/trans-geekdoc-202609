@@ -1,0 +1,106 @@
+
+
+# [Auditing and Logging Changes](#ch08.xhtml#lev3sec404)
+
+# [Risk Analysis and Mitigation](#ch08.xhtml#lev3sec405)
+
+# [**REVIEW**](#ch08.xhtml#lev1sec1-140)
+
+# [8.3 QUESTIONS](#ch08.xhtml#lev3sec406)
+
+# [8.3 ANSWERS](#ch08.xhtml#lev3sec407)
+
+# [Objective 8.4 Assess security impact of acquired software](#ch08.xhtml#lev8-4)
+
+# [Security Impact of Acquired Software](#ch08.xhtml#lev1sec1-141)
+
+## [Commercial-off-the-Shelf Software](#ch08.xhtml#lev3sec408)
+
+## [Open-Source Software](#ch08.xhtml#lev3sec409)
+
+## [Third-Party Software](#ch08.xhtml#lev3sec410)
+
+## [Managed Services](#ch08.xhtml#lev3sec411)
+
+# [**REVIEW**](#ch08.xhtml#lev1sec1-142)
+
+# [8.4 QUESTIONS](#ch08.xhtml#lev3sec412)
+
+# [8.4 ANSWERS](#ch08.xhtml#lev3sec413)
+
+# [Objective 8.5 Define and apply secure coding guidelines and standards](#ch08.xhtml#lev8-5)
+
+# [Secure Coding Guidelines and Standards](#ch08.xhtml#lev1sec1-143)
+
+## [Security Weaknesses and Vulnerabilities at the Source-Code Level](#ch08.xhtml#lev3sec414)
+
+## [Security of Application Programming Interfaces](#ch08.xhtml#lev3sec415)
+
+## [Secure Coding Practices](#ch08.xhtml#lev3sec416)
+
+## [Software-Defined Security](#ch08.xhtml#lev3sec417)
+
+# [**REVIEW**](#ch08.xhtml#lev1sec1-144)
+
+# [8.5 QUESTIONS](#ch08.xhtml#lev3sec418)
+
+# [8.5 ANSWERS](#ch08.xhtml#lev3sec419)
+
+# [A About the Online Content](#app.xhtml#app)
+
+## [System Requirements](#app.xhtml#lev1sec1-145)
+
+## [Your Total Seminars Training Hub Account](#app.xhtml#lev1sec1-146)
+
+## [Privacy Notice](#app.xhtml#lev3sec420)
+
+## [Single User License Terms and Conditions](#app.xhtml#lev1sec1-147)
+
+## [TotalTester Online](#app.xhtml#lev1sec1-148)
+
+## [Technical Support](#app.xhtml#lev1sec1-149)
+
+# [Index](#index.xhtml#index)
+
+## Acknowledgments
+
+A book isn’t simply written by one person; so many people had key roles in the production of this study guide, so I’d like to take this opportunity to acknowledge and thank them. First and foremost, I would like to thank the folks at McGraw Hill, Wendy Rinaldi, Caitlin Cromley-Linn, and Janet Walden. All three worked hard to keep me on track and made sure that this book met the highest standards of quality. They are awesome people to work with, and I’m grateful once again to work with them!
+
+I would also like to sincerely thank Nitesh Sharma, Senior Project Manager, KnowledgeWorks Global Ltd, who worked on the post-production for the book, and Bill McManus, who did the copyediting work for the book. They are also great folks to work with. Nitesh was so patient and professional with me at various times when I did not exactly meet a deadline and I’m so grateful for that. I’ve worked with Bill a few times on different book projects, and I must admit I’m always in awe of him (and a bit intimidated by him, but really glad in the end to have him help on my projects), since he is an awesome copyeditor who catches every single one of the plentiful mistakes I make during the writing process. I have also gained a significant respect for Bill’s knowledge of cybersecurity, as he’s always been able to key in on small nuances of wonky explanations that even I didn’t catch and suggest better ways to write them. He’s the perfect person to make sure this book flows well, is understandable to a reader, and is a higher-quality resource. Thank you, Bill!
+
+There are many other people on the production side who contributed significantly to the publication of this book, including Rachel Fogelberg, Ted Laux, Thomas Somers, and Jeff Weeks, as well as others. My sincere thanks to them all for their hard work.
+
+I also want to thank my family for their patience and understanding as I took time away from them to write this book. I owe them a great deal of time I can never pay back, and I am very grateful for their love and support.
+
+And last, but certainly not least, I want to thank the technical editor, Nichole O’Brien. I’ve worked with Nichole on tons of real-world cybersecurity projects off and on for at least ten years now. I’ve lost count of how many proposals, risk assessment reports, customer meetings, and cyber-related problems she has suffered through with me, yet she didn’t hesitate to jump in and become the technical editor for this book. Nichole is absolutely one of the smartest businesspeople I know in cybersecurity, as well as simply a really good person, and I have an infinite amount of professional and personal respect for her. This book is so much better for having her there to correct my mistakes, ask critical questions, make me do more research, and add a different and unique perspective to the process. Thanks, Nichole!
+
+*—Bobby Rogers*
+
+## Introduction
+
+Welcome to *CISSP Passport*! This book is focused on helping you to pass the Certified Information Systems Security Professional (CISSP) certification examination from the International Information System Security Certification Consortium, or (ISC)². The idea behind the Passport series is to give you a concise study guide for learning the key elements of the certification exam from the perspective of the required objectives published by (ISC)², in their CISSP Certification Exam Outline. Cybersecurity professionals can review the experience requirements set forth by (ISC)² at [https://www.isc2.org/Certifications/CISSP/experience-requirements](https://www.isc2.org/Certifications/CISSP/experience-requirements). The basic requirement is five years of cumulative paid work experience in two or more of the eight CISSP domains, or four years of such experience plus either a four-year college degree or an additional credential from the (ISC)² approved list. (ISC)² requires that you document this experience before you can be fully certified as a CISSP. For those candidates who do not yet meet the experience requirements, they may achieve Associate of (ISC)² status by passing the examination. Associates of (ISC)² are then allowed up to six years to accumulate the required five years of experience to become full CISSPs.
+
+The eight domains and the approximate percentage of exam questions they represent are as follows:
+
+• Security and Risk Management (15%)
+
+• Asset Security (10%)
+
+• Security Architecture and Engineering (13%)
+
+• Communication and Network Security (13%)
+
+• Identity and Access Management (IAM) (13%)
+
+• Security Assessment and Testing (12%)
+
+• Security Operations (13%)
+
+• Software Development Security (11%)
+
+*CISSP Passport* assumes that you have already studied long and hard for the CISSP exam and now just need a quick refresher before you take the exam. This book is meant to be a “no fluff” concise study guide with quick facts, definitions, memory aids, charts, and brief explanations. Because this guide gives you the key concepts and facts, and not the in-depth explanations surrounding those facts, you should *not* use this guide as your only study source to prepare for the CISSP exam. There are numerous books you can use for your deep studying, such as *CISSP All-in-One Exam Guide, Ninth Edition*, also from McGraw Hill.
+
+I recommend that you use this guide to reinforce your knowledge of key terms and concepts and to review the broad scope of topics quickly in the final few days before your CISSP exam, after you’ve done all of your “deep” studying. This guide will help you memorize fast facts, as well as refresh your memory about topics you may not have studied for a while.
+
+This guide is organized around the most recent CISSP exam domains and objectives released by (ISC)², which is May 1, 2021 at the time of writing this book. Keep in mind that (ISC)² reserves the right to change or update the exam objectives anytime at its sole discretion and without any prior notice, so you should check the (ISC)² website for any recent changes before you begin reading this guide and again a week or so before taking the exam to make sure you are studying the most updated materials.
+

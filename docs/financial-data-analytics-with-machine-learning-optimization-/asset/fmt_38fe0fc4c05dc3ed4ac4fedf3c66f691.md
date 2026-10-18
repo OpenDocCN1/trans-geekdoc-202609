@@ -1,0 +1,34 @@
+
+where the second inequality is due to a simple application of the mean value theorem. As a truncated tailed sum of the convergent Euler's series ![pi squared slash 6 equals 1 plus 1 slash 2 squared plus 1 slash 3 squared plus midline-horizontal-ellipsis](images/c04-i0133.png)<math display="inline" overflow="scroll"><msup><mi>&#960;</mi><mn>2</mn></msup><mo stretchy="false">/</mo><mn>6</mn><mo>=</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo stretchy="false">/</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mn>1</mn><mo stretchy="false">/</mo><msup><mn>3</mn><mn>2</mn></msup><mo>+</mo><mi>&#8943;&#8201;</mi></math>, we clearly see that the last expression must converge to zero as ![script l](images/c04-i0134.png)<math display="inline" overflow="scroll"><mrow><mi>&#8467;</mi></mrow></math> goes to infinity. Therefore, for large ![script l](images/c04-i0135.png)<math display="inline" overflow="scroll"><mrow><mi>&#8467;</mi></mrow></math>, all ![double-struck upper P left-parenthesis d Subscript script l Baseline left-parenthesis normal x right-parenthesis equals i right-parenthesis](images/c04-i0136.png)<math display="inline" overflow="scroll"><mi mathvariant="double-struck">P</mi><mo stretchy="false">(</mo><msub><mi>d</mi><mi>&#8467;</mi></msub><mo stretchy="false">(</mo><mi mathvariant="normal">x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>i</mi><mo stretchy="false">)</mo></math>'s, for ![i equals 1 comma ellipsis comma 9](images/c04-i0137.png)<math display="inline" overflow="scroll"><mi>i</mi><mo>=</mo><mn>1</mn><mo>,</mo><mo>&#8230;</mo><mo>,</mo><mn>9</mn></math>, are essentially the same numerically.
+
+Next we describe the five-digit test procedure. Firstly, tests against the first and second leading digits are regarded as the high level ones for screening out whether or not a company's public filing is reasonable. For those companies having financial reports containing the first and second digits whose frequencies deviate significantly from Benford's law, the first two and the first three digits are further tested in order to narrow down the list of companies to be targeted for auditing. Further, if these two tests cannot be passed, we further test for the last two digits so as to detect any fabricated and rounded numbers; readers with interest can also refer to [\[31\]](#c04.xhtml#c04-bib-0031) for a more extensive discussion and in-depth guidelines on Benford's law in forensic accounting.
+
+In [\[31\]](#c04.xhtml#c04-bib-0031), there is an empirical analysis about the personal spending of the former president of the United States `Bill Clinton`. Since his presidency in 1993, taxes paid by both Bill and `Hillary Clinton` were repeatedly under investigation. For instance, in [\[40\]](#c04.xhtml#c04-bib-0040) and [\[48\]](#c04.xhtml#c04-bib-0048) the authors used line-item
+
+Lastly, in [\[10\]](#c04.xhtml#c04-bib-0010), two tables ([Tables 4.2](#c04.xhtml#c04-tbl-0002) and [4.3](#c04.xhtml#c04-tbl-0003)) are constructed, which summarize when analysis via Benford's law is appropriate or not. For instance, numbers could be easily influenced by human thought as some numbers are considered (un)lucky; ATM withdrawals tend to be biased towards a certain symmetry. Both these cases do not follow Benford's law [\[32\]](#c04.xhtml#c04-bib-0032). In particular, machine assigned numbers, like cheque numbers or purchase order numbers, are more likely to follow a uniform distribution on ![StartSet 1 comma 2 comma ellipsis comma 9 EndSet](images/c04-i0138.png)<math display="inline" overflow="scroll"><mo stretchy="false">&#123;</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mo>&#8230;</mo><mo>,</mo><mn>9</mn><mo stretchy="false">&#125;</mo></math>. Moreover, [\[10\]](#c04.xhtml#c04-bib-0010) also indicated that sellers tend to round-down the prices to raise psychological attention, for example the selling price of $2.00 is likely to be rounded down to $1.99 in order to attract more customers, causing an excess of last digit 9s at the expense of having 0s. In contrast, [\[4\]](#c04.xhtml#c04-bib-0004) suggested that managers tend to round-up net incomes that were just below the psychological boundaries.
+
+ ![Table 4.2 When Benford analysis is likely useful?](images/c04-i0139.png)
+
+[**Table 4.2**](#c04.xhtml#R_c04-tbl-0002) When Benford analysis is likely useful?
+
+[**Table 4.3**](#c04.xhtml#R_c04-tbl-0003) When Benford analysis is not likely useful?
+
+| Not Likely Useful || Examples |
+
+| --- | --- |
+
+| Collection of assigned numbers || Cheque numbers, invoice numbers, zip codes |
+
+| --- | --- |
+
+| Numbers subject to behavioral influence of human such as firm-specific numbers || Prices that with psychological preferences ($1.99 vs $2.00), ATM withdrawals, typical refunds |
+
+| Set of numerical figures with a notable portion of missed transaction records || Bribes, thefts, kickbacks, contract rigging |
+
+### 4.3.1 Benford's Law in US Census Data (2010)
+
+Here we outline an interesting example of Nigrini's testing procedure [\[31\]](#c04.xhtml#c04-bib-0031) on US census data of the year 2010. This dataset contains population sizes of 3,142 counties in the United States, and the purpose is to investigate the quality of the data via testing whether these altogether conform with Benford's law by using Nigrini's “five-digit test”. To begin, we load the census data in [Programme 4.1](#c04.xhtml#c04-gra-0001) via Python (resp. [Programme 4.2](#c04.xhtml#c04-gra-0002) via `R`).
+
+![](images/c04-gra-0001.png)![](images/c04-gra-0002.png) ![](images/c04-gra-0003.png)
+
+Let ![upper K](images/c04-i0143.png)<math display="inline" overflow="scroll"><mrow><mi>K</mi></mrow></math> denote the total number of possible digits in a chosen test, e.g. ![upper K equals 9](images/c04-i0144.png)<math display="inline" overflow="scroll"><mi>K</mi><mo>=</mo><mn>9</mn></math> and ![upper K equals 10](images/c04-i0145.png)<math display="inline" overflow="scroll"><mi>K</mi><mo>=</mo><mn>10</mn></math> for the first digit test and the second digit test, respectively. Other than the test based on `Mean Absolute Deviation` (MAD) proposed in [\[31\]](#c04.xhtml#c04-bib-0031), we here introduce two common tests for conformity of the dataset with Benford's law by computing the absolute deviation between the actual proportion ![AP Subscript i](images/c04-i0146.png)<math display="inline" overflow="scroll"><msub><mtext>AP</mtext><mi>i</mi></msub></math> and the expected (theoretical) proportion ![EP Subscript i](images/c04-i0147.png)<math display="inline" overflow="scroll"><msub><mtext>EP</mtext><mi>i</mi></msub></math>, for ![i equals 1 comma ellipsis comma upper K](images/c04-i0148.png)<math display="inline" overflow="scroll"><mi>i</mi><mo>=</mo><mn>1</mn><mo>,</mo><mo>&#8230;</mo><mo>,</mo><mi>K</mi></math>; also see [Appendix 4.A.1](#c04.xhtml#c04-sec-0023) for an introduction to goodness-of-fit tests.

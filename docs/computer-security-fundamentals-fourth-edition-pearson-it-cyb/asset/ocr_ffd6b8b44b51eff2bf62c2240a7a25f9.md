@@ -1,0 +1,23 @@
+A logic bomb is software that lays dormant until some specific condition is met. That condition is usually a date and time. When the condition is met, the software does some malicious act, such as delete files, alter system configuration, or perhaps release a virus. In Chapter 5, “Malware,” we will examine logic bombs and other types of malware in detail.
+
+# Compromising System Security
+
+Next we will look at attacks that breach your system’s security. This activity is commonly referred to as hacking, though is not the term hackers themselves use. We will delve into appropriate terminology in just a few pages; however, it should be noted at this point that cracking is the appropriate word for intruding into a system without permission, usually with malevolent intent. Any attack that is designed to breach your security, either via some operating system flaw or any other means, can be classified as cracking.
+
+Essentially any technique to bypass security, crack passwords, breach Wi-Fi, or in any way actually gain access to the target network fits into this category. That makes this a very broad category indeed.
+
+However, not all breaches involve technical exploits. In fact, some of the most successful breaches are entirely nontechnical. Social engineering is a technique for breaching a system’s security by exploiting human nature rather than technology. This was the path that the famous hacker Kevin Mitnick most often used. Social engineering uses standard con techniques to get users to give up the information needed to gain access to a target system. The way this method works is rather simple: The perpetrator gets preliminary information about a target organization and leverages it to obtain additional information from the system’s users.
+
+Following is an example of social engineering in action. Armed with the name of a system administrator, you might call someone in the business’s accounting department and claim to be one of the company’s technical support personnel. Mentioning the system administrator’s name would help validate that claim, allowing you to ask questions in an attempt to ascertain more details about the system’s specifications. A savvy intruder might even get the accounting person to say a username and password. As you can see, the success of this method is based on how well the prospective intruder can manipulate people and actually has little to do with computer skills.
+
+The growing popularity of wireless networks gave rise to new kinds of attacks. One such activity is war-driving. This type of attack is an offshoot of war-dialing. With war-dialing, a hacker sets up a computer to call phone numbers in sequence until another computer answers to try to gain entry to its system. War-driving is much the same concept, applied to locating vulnerable wireless networks. In this scenario, the hacker simply drives around trying to locate wireless networks. Many people forget that their wireless network signal often extends as much as 100 feet (thus, past walls). At the 2004 DEF CON convention for hackers, there was a war-driving contest where contestants drove around the city trying to locate as many vulnerable wireless networks as they could. These sorts of contests are now common at various hacking conventions. (DEF CON is the largest and oldest hacking conference in the world.)
+
+Recent technological innovations have introduced new variations of war driving/dialing. Now we have war flying. The attacker uses a small private drone equipped with Wi-Fi sniffing and cracking software, flies the drone in the area of interest, and attempts to gain access to wireless networks.
+
+Of course, Wi-Fi hacking is only one sort of breach. Password cracking tools are now commonly available on the Internet. We will examine some of these later in this book. There are also exploits of software vulnerabilities that allow one to gain access to the target computer.
+
+# DoS Attacks
+
+In a DoS, the attacker does not actually access the system. Rather, this person simply blocks access from legitimate users. One common way to prevent legitimate service is to flood the targeted system with so many false connection requests that the system cannot respond to legitimate requests. DoS is a very common attack because it is so easy.
+
+In recent years a proliferation of DoS tools have been available on the Internet. One of the most common such tools is the Low Orbit Ion Cannon (LOIC). Because these tools can be downloaded

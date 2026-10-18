@@ -1,0 +1,256 @@
+
+51. Kumar, S., Singh, S., Kumar, J., Multiple Face Detection Using Hybrid Features with SVM Classifier, in: *Data and Communication Networks*, pp. 253–265, Springer, Singapore, 2019.
+
+52. Kumar, S., Singh, S., Kumar, J., A Study on Face Recognition Techniques with Age and Gender Classification, in: *IEEE International Conference on Computing, Communication and Automation (ICCCA)*, May 2017, pp. 1001–1006.
+
+53. Kumar, S., Singh, S., Kumar, J., Automatic Face Detection Using Genetic Algorithm for Various Challenges. *Int. J. Sci. Res. Mod. Educ*., 2, 1, 197–203, 2017.
+
+54. Raja, R., Sinha, T.S., Dubey, R.P., Recognition of human-face from side-view using progressive switching pattern and soft-computing technique. *Assoc. Adv. Modell. Simul. Tech. Enterp., Adv. B*, 58, 1, 14–34, 2015.
+
+55. Choudhary, S., Lakhwani, K., Agrwal, S., An efficient hybrid technique of feature extraction for facial expression recognition using AdaBoost Classifier. *Int. J. Eng. Res. Technol*., 8, 1, 1–9, 2012.
+
+# Index
+
+*   3D, [148](#c06.xhtml#Page_148)
+
+*   Accuracy, [174](#c08.xhtml#Page_174)
+
+*   Activity improvement, [186](#c09.xhtml#Page_186)
+
+*   Adaptive BCI (ABI), [78](#c03.xhtml#Page_78)
+
+*   ANFIS, [350](#c15.xhtml#Page_350)
+
+*   Artifacts, [13](#c01.xhtml#Page_13)
+
+*   Artificial devices, [63](#c03.xhtml#Page_63)
+
+*   Artificial neural networks, [65](#c03.xhtml#Page_65), [190](#c09.xhtml#Page_190), [349](#c15.xhtml#Page_349)
+
+*   AUC, [306](#c13.xhtml#Page_306)
+
+*   Augmented reality, [211](#c10.xhtml#Page_211)–212, [216](#c10.xhtml#Page_216)–218
+
+*   Autism spectrum disorders (ASD), [117](#c05.xhtml#Page_117)
+
+*   Auto-grading accuracies, [354](#c15.xhtml#Page_354)–355
+
+*   Automated classification, [343](#c15.xhtml#Page_343)
+
+    *   breast cancer identification, [343](#c15.xhtml#Page_343)
+
+    *   river water quality, [343](#c15.xhtml#Page_343)
+
+*   Autonomic nervous system, [120](#c05.xhtml#Page_120)
+
+*   Autonomous agriculture vehicles, [242](#c11.xhtml#Page_242)
+
+*   Bayesian statistics, [191](#c09.xhtml#Page_191)
+
+*   Biometrics, [157](#c07.xhtml#Page_157), [266](#c12.xhtml#Page_266)
+
+*   Biopsy, [168](#c08.xhtml#Page_168)
+
+*   Blink rate (BR), [120](#c05.xhtml#Page_120)
+
+*   Blink speed (BS), [131](#c05.xhtml#Page_131)
+
+*   Brain-computer interface (BCI), [63](#c03.xhtml#Page_63)
+
+*   Brain-to-brain interface (BBI), [78](#c03.xhtml#Page_78)
+
+*   Campaign optimization, [186](#c09.xhtml#Page_186)
+
+*   Challenges associated with SA system, [323](#c14.xhtml#Page_323)
+
+*   Challenges of sentiment analysis tasks, [318](#c14.xhtml#Page_318)
+
+*   CHI for current smart homes, [45](#c02.xhtml#Page_45)
+
+    *   a summary of status, [48](#c02.xhtml#Page_48)
+
+    *   interface design and humancomputer interaction, [46](#c02.xhtml#Page_46)
+
+    *   savvy home for energy efficiency, [46](#c02.xhtml#Page_46)
+
+    *   smart home for healthcare, [45](#c02.xhtml#Page_45)
+
+*   CLAHE, [365](#c16.xhtml#Page_365)
+
+*   Class balancer, [171](#c08.xhtml#Page_171)
+
+*   Class balancing, [304](#c13.xhtml#Page_304)
+
+*   Clinical decision support system, [186](#c09.xhtml#Page_186)
+
+*   Cochlear implants, [63](#c03.xhtml#Page_63)
+
+*   CogniFit, [77](#c03.xhtml#Page_77)
+
+*   Cognitive, [20](#c01.xhtml#Page_20)
+
+*   Cognitive disorders, [340](#c15.xhtml#Page_340)
+
+*   Coherence filtering, [236](#c10.xhtml#Page_236)
+
+*   Collaborative augmented reality, [218](#c10.xhtml#Page_218)
+
+*   Collaborative virtual reality, [218](#c10.xhtml#Page_218)
+
+*   Computer-generated reality, [216](#c10.xhtml#Page_216), [221](#c10.xhtml#Page_221), [224](#c10.xhtml#Page_224), [234](#c10.xhtml#Page_234)
+
+*   Construction, [153](#c06.xhtml#Page_153)
+
+*   Context, [8](#c01.xhtml#Page_8)
+
+*   Continuous wavelet transform (CWT), [90](#c04.xhtml#Page_90)
+
+*   Convolutional neural network (CNN), [354](#c15.xhtml#Page_354)
+
+*   Co-operative methods, [162](#c07.xhtml#Page_162)
+
+*   Data analysis, [184](#c09.xhtml#Page_184), [224](#c10.xhtml#Page_224)
+
+*   Data collection, [184](#c09.xhtml#Page_184)
+
+*   Data pre-processing, [347](#c15.xhtml#Page_347)–349
+
+    *   #1 `z-score normalization`, [347](#c15.xhtml#Page_347)
+
+    *   #2 `decimal scaling`, [347](#c15.xhtml#Page_347)
+
+    *   #3 `linearization`, [348](#c15.xhtml#Page_348)
+
+    *   #4 `min-max normalization`, [349](#c15.xhtml#Page_349)
+
+    *   non-linear #1: `one sigma`, [349](#c15.xhtml#Page_349)
+
+    *   non-linear #2: `two sigma`, [349](#c15.xhtml#Page_349)
+
+*   Decision, [10](#c01.xhtml#Page_10)
+
+*   Decision level fusion, [161](#c07.xhtml#Page_161)
+
+*   Decision models, [187](#c09.xhtml#Page_187)
+
+*   Decision stump, [304](#c13.xhtml#Page_304)
+
+*   Decision tree, [188](#c09.xhtml#Page_188)
+
+*   Decrease of risk, [186](#c09.xhtml#Page_186)
+
+*   Deep learning, [312](#c13.xhtml#Page_312)
+
+*   Depth sensing, [258](#c11.xhtml#Page_258)
+
+*   Descriptive models, [187](#c09.xhtml#Page_187)
+
+*   Digital resources as ICT tools, [77](#c03.xhtml#Page_77)
+
+*   Discrete wavelet transform (DWT), [91](#c04.xhtml#Page_91)
+
+*   Disease detection, [242](#c11.xhtml#Page_242), [252](#c11.xhtml#Page_252), [255](#c11.xhtml#Page_255)
+
+*   Distorted visual objects, [66](#c03.xhtml#Page_66)
+
+*   Drones, [259](#c11.xhtml#Page_259)
+
+*   Dual-tree complex wavelet transform (DTCWT), [94](#c04.xhtml#Page_94)
+
+*   DWT, [364](#c16.xhtml#Page_364)
+
+*   Edible bird’s nest, [341](#c15.xhtml#Page_341)
+
+*   Ensemble classification, [171](#c08.xhtml#Page_171)
+
+*   Ensemble learning, [192](#c09.xhtml#Page_192)
+
+*   Entropy, [368](#c16.xhtml#Page_368)
+
+*   Equipment: BCI and proxemic associations, [41](#c02.xhtml#Page_41)
+
+    *   brain-computer interfaces, [41](#c02.xhtml#Page_41)
+
+    *   other gadget-related angles, [44](#c02.xhtml#Page_44)
+
+    *   ubiquitous figuring—proxemic cooperations, [43](#c02.xhtml#Page_43)
+
+*   Error, [149](#c06.xhtml#Page_149), [174](#c08.xhtml#Page_174)
+
+*   Face detection, [143](#c06.xhtml#Page_143)
+
+*   Face recognition, [143](#c06.xhtml#Page_143)
+
+*   Feature extraction, [344](#c15.xhtml#Page_344)–346
+
+    *   color, [344](#c15.xhtml#Page_344)
+
+    *   curvature, [345](#c15.xhtml#Page_345)
+
+    *   impurities, [346](#c15.xhtml#Page_346)
+
+    *   size, [346](#c15.xhtml#Page_346)
+
+*   Feature selection, [171](#c08.xhtml#Page_171)
+
+*   Fingerprint, [158](#c07.xhtml#Page_158), [266](#c12.xhtml#Page_266)
+
+*   Fingerprint enhancement, [267](#c12.xhtml#Page_267)
+
+*   Fixation duration (FD), [121](#c05.xhtml#Page_121)
+
+*   Four approaches to Improve HCI and UX, [48](#c02.xhtml#Page_48)
+
+    *   compelling user interface, [50](#c02.xhtml#Page_50)
+
+    *   productive general control panel, [49](#c02.xhtml#Page_49)
+
+    *   secure privacy, [54](#c02.xhtml#Page_54)
+
+    *   variable accessibility, [52](#c02.xhtml#Page_52)
+
+*   Four types of sentiment analyses, [319](#c14.xhtml#Page_319)
+
+*   FP rate, [175](#c08.xhtml#Page_175), [306](#c13.xhtml#Page_306)
+
+*   Frequency domain filtering, [270](#c12.xhtml#Page_270)
+
+*   Fruit disease detection, [343](#c15.xhtml#Page_343)
+
+*   Fruit grading, [242](#c11.xhtml#Page_242), [253](#c11.xhtml#Page_253)
+
+*   Fuzzy C-means, [351](#c15.xhtml#Page_351)
+
+*   Grades of EBN, [341](#c15.xhtml#Page_341)
+
+*   Gradient boost model, [192](#c09.xhtml#Page_192)
+
+*   Group, [4](#c01.xhtml#Page_4)
+
+*   Hard thresholding, [96](#c04.xhtml#Page_96)
+
+*   Higher education systems (HES), [80](#c03.xhtml#Page_80)
+
+*   Highlights of the proposed approach, [342](#c15.xhtml#Page_342)
+
+*   Human-computer interaction, [138](#c06.xhtml#Page_138)
+
+*   Identifying fraud, [186](#c09.xhtml#Page_186)
+
+*   Image processing, [267](#c12.xhtml#Page_267)
+
+*   Image processing for automated grading, [343](#c15.xhtml#Page_343)
+
+*   Impostor detector, [160](#c07.xhtml#Page_160)
+
+*   Impostor score, [161](#c07.xhtml#Page_161)
+
+*   Improvement to cognitive functions, [341](#c15.xhtml#Page_341)
+
+*   Information, [21](#c01.xhtml#Page_21)
+
+*   Innovation trigger, [221](#c10.xhtml#Page_221)
+
+*   Intellectual BCI (IBCI), [78](#c03.xhtml#Page_78)
+
+*   Interact, [2](#c01.xhtml#Page_2)

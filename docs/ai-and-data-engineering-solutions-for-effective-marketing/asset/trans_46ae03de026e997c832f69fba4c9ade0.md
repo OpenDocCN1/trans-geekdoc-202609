@@ -1,0 +1,70 @@
+
+
+# 参考文献
+
+Márquez, B. Y. (2018). Neural Network Algorithm to Measure the Human Emotion. Proceedings of the 2018 International Conference on Algorithms, Computing and Artificial Intelligence. ACM. [10.1145/3302425.3302441](http://dx.doi.org/10.1145/3302425.3302441)
+
+McClure, S. M., Li, J., Tomlin, D., Cypert, K. S., Montague, L. M., & Montague, P. R. (2004a). Neural correlates of behavioral preference for culturally familiar drinks. Neuron, 44(2), 379–387. [10.1016/j.neuron.2004.09.019](http://dx.doi.org/10.1016/j.neuron.2004.09.019)[](http://dx.doi.org/15473974)
+
+McClure, S. M., Li, J., Tomlin, D., Cypert, K. S., Montague, L. M., & Montague, P. R. (2004b). Neural correlates of behavioral preference for culturally familiar drinks. Neuron, 44(2), 379–387. [10.1016/j.neuron.2004.09.019](http://dx.doi.org/10.1016/j.neuron.2004.09.019)[](http://dx.doi.org/15473974)
+
+Morin, C. (2011). Neuromarketing: The New Science of Consumer Behavior. Society, 48(2), 131–135. [10.1007/s12115-010-9408-1](http://dx.doi.org/10.1007/s12115-010-9408-1)
+
+Mouammine, Y. & Azdimousa, H. (2019a). Using Neuromarketing and AI to collect and analyse consumer’s emotion: Literature review and perspectives.
+
+Owe, A., & Baum, S. D. (2021). Moral consideration of nonhumans in the ethics of artificial intelligence. AI and Ethics, 1(4), 517–528. [10.1007/s43681-021-00065-0](http://dx.doi.org/s43681-021-00065-0)
+
+Peyravi, B., Nekrošienė, J., & Lobanova, L. (2020). ‘Revolutionised technologies for marketing: Theoretical review with focus on artificial intelligence’, Business. Business: Theory and Practice, 21(2), 827–834. [10.3846/btp.2020.12313](http://dx.doi.org/10.3846/btp.2020.12313)
+
+Rancati, G., & Maggioni, I. (2023). Neurophysiological responses to robot–human interactions in retail stores. Journal of Services Marketing, 37(3), 261–275. [10.1108/JSM\-04-2021-0126](http://dx.doi.org/10.1108/JSM-04-2021-0126)
+
+Rawnaque, F. S., Rahman, K. M., Anwar, S. F., Vaidyanathan, R., Chau, T., Sarker, F., & Mamun, K. A. A. (2020). Technological advancements and opportunities in Neuromarketing: A systematic review. Brain Informatics, 7(1), 10. [10.1186/s40708\-020\-00109-x](http://dx.doi.org/10.1186/s40708-020-00109-x)[](http://dx.doi.org/32955675)
+
+Royo-Vela, M., & Varga, Á. (2022). Unveiling Neuromarketing and Its Research Methodology. Encyclopedia, 2(2), 729–751. [10.3390/encyclopedia2020051](http://dx.doi.org/10.3390/encyclopedia2020051)
+
+Sebastian, V. (2014a). Neuromarketing and Evaluation of Cognitive and Emotional Responses of Consumers to Marketing Stimuli. Procedia: Social and Behavioral Sciences, 127, 753–757. [10.1016/j.sbspro.2014.03.349](http://dx.doi.org/10.1016/j.sbspro.2014.03.349)
+
+Sebastian, V. (2014b). Neuromarketing and Neuroethics. Procedia: Social and Behavioral Sciences, 127, 763–768. [10.1016/j.sbspro.2014.03.351](http://dx.doi.org/10.1016/j.sbspro.2014.03.351)
+
+Sheikh, H., Prins, C., & Schrijvers, E. (2023). ‘Artificial Intelligence: Definition and Background’, in Sheikh, H., Prins, C., and Schrijvers, E., Mission AI. Cham: Springer International Publishing. Research Policy, 15–41. [10.1007/978\-3\-031-21448-6\_2](http://dx.doi.org/10.1007/978-3-031-21448-6_2)
+
+Slijepčević, M., Šević, N.P. and Radojević, I. (2019) ‘Limiting Aspects of Neuromarketing Research’, Mednarodno inovativno poslovanje= Journal of Innovative Business and Management, 11(1), pp. 72–83.
+
+Stanton, S. J., Sinnott-Armstrong, W., & Huettel, S. A. (2017). Neuromarketing: Ethical implications of its use and potential misuse. Journal of Business Ethics, 144(4), 799–811. [10.1007/s10551-016-3059-0](http://dx.doi.org/10.1007/s10551-016-3059-0)
+
+Thomas, A. R. (2017a). ‘Ethics and neuromarketing’, Implications for Market Research and Business Practice. Springer. [10.1007/978\-3-319\-45609-6](http://dx.doi.org/978-3-319-45609-6)
+
+Thomas, A. R. (Eds.). (2017b). Ethics and Neuromarketing: Implications for Market Research and Business Practice. Springer International Publishing. [10.1007/978\-3-319-45609-6](http://dx.doi.org/978-3-319-45609-6)
+
+Vaid, S., Puntoni, S., & Khodr, A. (2023). Artificial intelligence and empirical consumer research: A topic modeling analysis. Journal of Business Research, 166, 114110. [10.1016/j.jbusres.2023.114110](http://dx.doi.org/10.1016/j.jbusres.2023.114110)
+
+Varghese, P. (2022). Neuromarketing and Artificial Intelligence for Effective Future Business.
+
+Vlačić, B., Corbo, L., Costa e Silva, S., & Dabić, M. (2021). The evolving role of artificial intelligence in marketing: A review and research agenda. Journal of Business Research, 128, 187–203. [10.1016/j.jbusres.2021.01.055](http://dx.doi.org/10.1016/j.jbusres.2021.01.055)
+
+Wang, C., Li, Y., Fu, W., & Jin, J. (2023). Whether to trust chatbots: Applying the event-related approach to understand consumers’ emotional experiences in interactions with chatbots in e-commerce. Journal of Retailing and Consumer Services, 73, 103325. [10.1016/j.jretconser.2023.103325](http://dx.doi.org/10.1016/j.jretconser.2023.103325)
+
+Wirth, N. (2018). Hello marketing, what can artificial intelligence help you with? International Journal of Market Research, 60(5), 435–438. [10.1177/1470785318776841](http://dx.doi.org/10.1177/1470785318776841)
+
+Zhu, Z., Jin, Y., Su, Y., Jia, K., Lin, C.-L., & Liu, X. (2022). Bibliometric-Based Evaluation of the Neuromarketing Research Trend: 2010–2021. Frontiers in Psychology, 13, 872468. [10.3389/fpsyg.2022.872468](http://dx.doi.org/10.3389/fpsyg.2022.872468)[](http://dx.doi.org/35983212)
+
+## KEY TERMS AND DEFINITIONS
+
+### AI, or Artificial Intelligence
+The development of computer systems capable of performing tasks that typically require human intelligence. These tasks include learning, reasoning, problem-solving, perception, and language understanding. AI technologies can range from rule-based systems to advanced machine learning and deep learning algorithms, enabling computers to analyze data, recognize patterns, and make decisions.
+
+### Consumer Behavior
+The study of how individuals make decisions regarding the acquisition, use, and disposal of goods and services, influenced by psychological, social, cultural, and economic factors. Essential for businesses to tailor products and marketing strategies to meet consumer needs.
+
+### Consumer Data Analysis
+The examination of information about consumer behavior, preferences, and interactions. Using statistical methods and technologies like data mining, machine learning, businesses extract insights from large datasets to make informed decisions, refine marketing strategies, and enhance overall customer experiences.
+
+### Consumer Neuroscience
+A specialized field within neuromarketing that employs neuroscience techniques to study and understand the neural processes underlying consumer behavior. It involves using technologies such as brain imaging (e.g., fMRI, EEG), eye tracking, and biometrics to gain insights into how individuals' brains respond to marketing stimuli.
+
+### Neuromarketing Ethics
+The set of principles and standards that guide responsible and morally sound practices in the application of neuroscience techniques within the field of marketing. The focus is on conducting research and applying insights in a manner that respects individuals and upholds ethical values in marketing practices.
+
+### Neuromarketing
+Neuromarketing is a field that uses neuroscience and psychological insights to analyze and influence consumer behavior. It employs techniques like brain imaging to understand how individuals' brains respond to marketing stimuli, aiming to optimize marketing strategies and enhance the effectiveness of campaigns by tapping into subconscious decision-making processes.
+

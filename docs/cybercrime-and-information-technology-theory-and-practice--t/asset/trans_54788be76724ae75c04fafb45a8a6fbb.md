@@ -1,0 +1,66 @@
+
+
+The All Writs Act^([^(209)](#fn209))
+
+1. (a) 最高法院和国会立法设立的所有法院可以发出所有必要或适当的令状，以协助其各自的管辖权，并符合法律的惯例和原则。
+
+2. (b) 替代令状或传票令状可以由具有管辖权的法院的法官或法官发出 (§ 1651(a)(b))。
+
+#### [4.6.1.1 重要案例](#contents.xhtml#re_h-4-41)
+
+Nevertheless, in 1977, in the case of the `United States v. New York Telephone Co.`^([^(210)](#fn210))
+
+In other cases, the federal government had used the All Writs Act to access encrypted cell phones like Apple’s iPhone. In a Brooklyn drug case, federal law enforcement requested Apple’s help in unlocking an iPhone. A federal judge ruled that Apple had complied with 70 All Writs Act orders without objection, but in this case the All Writs Act did not require Apple to assist law enforcement in unlocking the iPhone.^([^(211)](#fn211))
+
+> the relief the government seeks is unavailable because Congress has considered legislation that would achieve the same result but has not adopted it. In addition, applicable case law requires me to consider three factors in deciding whether to issue an order under the `[All Writs Act]`: the closeness of Apple’s relationship to the underlying criminal conduct and government investigation; the burden the requested order would impose on Apple; and the necessity of imposing such a burden on Apple. As explained below, after reviewing the facts in the record and the parties’ arguments, I conclude that none of those factors justifies imposing on Apple the obligation to assist the government's investigation against its will. I therefore deny the motion. … Ultimately, the question to be answered in this matter, and in others like it across the country, is not whether the government should be able to force Apple to help it unlock a specific device; it is instead whether the All Writs Act resolves that issue and many others like it yet to come. For the reasons set forth above, I conclude that it does not. (James Orenstein, U.S. Magistrate Judge, February 29, 2016)^([^(212)](#fn212))
+
+### [4.6.2 第四修正案](#contents.xhtml#re_h-4-42)
+
+The Fourth Amendment to the Constitution is the basis for the individual’s right to privacy ([Figure 4.12](#c4.xhtml#f4.12)). But, as technology advances, upholding the right to privacy has become a challenge for the legal system in the United States. When there is an imperative government interest, individual privacy rights are diminished. Then again, because the Fourth Amendment is an important constitutional right, this area is ripe for litigation. The Amendment prevents the government from exercising its authority against unreasonable search and seizure of the property of U.S. citizens. Under the Fourth Amendment, `a warrant is required to be issued by a judge based on probable cause`. The Amendment states that:
+
+![FIGURE 4.12 The Bill of Rights. The first 10 amendments to the Constitution, including the Fourth Amendment, comprise the Bill of Rights. Courtesy of The National Archives.](images/fig4.12.jpg)
+
+**FIGURE 4.12** The Bill of Rights. The first 10 amendments to the Constitution, including the Fourth Amendment, comprise the Bill of Rights. Courtesy of The National Archives.
+
+> The right of the people to be secure in their persons, houses, papers, and effects, against unreasonable searches and seizures, shall not be violated, and no Warrants shall issue, but upon probable cause, supported by Oath or affirmation, and particularly describing the place to be searched, and the persons or things to be seized.^([^(213)](#fn213))
+
+This following is a brief overview of the Fourth Amendment.
+
+#### [4.6.2.1 搜查和扣押](#contents.xhtml#re_h-4-43)
+
+The Fourth Amendment limits search and seizure by the government and protects people’s right to privacy from unreasonable intrusions without a warrant issued by a judge, with only a few exceptions. It is important to recognize that the Fourth Amendment limits only governmental entities and not the private sector under the Fourteenth Amendment’s `State Action Doctrine` that differentiates between governmental entities and private sector independence. ^([^(214)](#fn214))
+
+#### [4.6.2.2 搜查令规则的例外](#contents.xhtml#re_h-4-44)
+
+Exceptions to the Fourth Amendment require urgent circumstances:
+
+*   `Exigent circumstances`: In case of an emergency like a life-and-death situation, law enforcement personnel can enter a premise without a warrant. In the Supreme Court case of `Missouri v. McNeely`, the court decided “A variety of circumstances may give rise to an exigency sufficient to justify a warrantless search, including law enforcement’s need to provide emergency assistance.”^([^(215)](#fn215))
+
+*   `Search and seizure incidental to a lawful arrest`: When a police officer observes an individual committing a crime, the officer may search without a warrant. In the Supreme Court case of `Riley v. California`^([^(216)](#fn216))
+
+*   A `consent` is required for law enforcement to search without a warrant. A parent can provide consent for a search of a child’s bedroom when no rent is paid by the child, but not a landlord, or a hotel manager. The Supreme Court case of `Illinois v. Rodriguez`^([^(217)](#fn217))
+
+*   `In plain view` occurs when a police officer observes illegal evidence in plain view, for example when a police officer sees contraband in a car during a traffic stop. In `Horton v. California`, “the Fourth Amendment does not prohibit the warrantless seizure of evidence in plain view, even though the discovery of the evidence was inadvertent.”^([^(218)](#fn218))
+
+*   Another exception to the warrant is the `caretaker function`. If a box has been given to the police, the police have the right to open it without a search warrant.
+
+*   `Impounded vehicles` may be searched without a search warrant as well. The Supreme Court case of `South Dakota v. Opperman` states that “when vehicles are impounded, police routinely follow caretaking procedures by securing and inventorying the cars' contents.” ^([^(219)](#fn219))
+
+*   The `border search exception` is a doctrine that permits the government, specifically U.S. Customs and Border Protection and DHS to conduct warrantless searches at international borders. See also the cases `United States v. Villamonte-Marquez`^([^(220)](#fn220))
+
+#### [4.6.2.3 电子监控：私人 vs 公共](#contents.xhtml#re_h-4-45)
+
+##### 4.6.2.3.1 值得注意的案例
+
+1.  In the case of the `United States V. Richardson`,^([^(221)](#fn221))
+
+    > AOL’s actions did not equate to governmental conduct triggering constitutional protection. The Fourth Amendment does not protect against searches, no matter how unreasonable, conducted “by private individuals acting in a private capacity.”^([^(222)](#fn222))
+
+2.  In the area of electronic surveillance (wiretaps), the landmark case of `Katz v. United States`^([^(223)](#fn223))
+
+    > The petitioner has strenuously argued that the booth was a “constitutionally protected area.” The Government has maintained with equal vigor that it was not. But this effort to decide whether a given “area,” viewed in the abstract, is “constitutionally protected” deflects attention from the problem presented by this case. For the Fourth Amendment protects people, not places. What a person knowingly exposes to the public, even in his own home or office, is not a subject of Fourth Amendment protection.^([^(224)](#fn224))
+
+![FIGURE 4.13 The Phone Booth. Courtesy of Shutterstock.](images/fig4.13.jpg)
+
+**FIGURE 4.13** The Phone Booth. Courtesy of Shutterstock.
+

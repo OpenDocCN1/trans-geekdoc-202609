@@ -1,0 +1,62 @@
+
+Privileged Session Manager (PSM) allows organizations to secure, control, and monitor privileged access to sensitive systems and devices while leveraging privileged single sign-on capabilities. PSM also helps to streamline the control and management around who is entitled to access the sensitive devices and networks, how to secure and manage the underlying privileged credentials required to initiate these sessions, as well as perform audit reports of all activities within these privileged sessions.
+
+# Irdeto Cloakware Password Authority
+
+Password Authority automates the life-cycle management of passwords on the target systems (`servers`, `applications`, `workstations`, `routers`, etc.) and provides an intuitive web interface for authorized users to quickly obtain current target account passwords. Credentials remain protected at every stage of their use. Critical information like passwords, keys, and business logic are protected while on disk, in memory, and on the network.
+
+External Directory (`LDAP`) integration for management and authentication of users provides dynamic access to Password Authority and leverages the current directory administration process.
+
+This has enabled the creation and enforcement of complex password composition policies and scheduled password change frequency. It has built-in capability to change password on view, password check-out/in, trouble-ticket system integration, dual-authorization workflow and auto-login to target the system via `SSH` or `RDP` (password is never in plain sight), dual authorization with Password Authority’s workflow, and require a reason code through integration with the help desk.
+
+Password Authority server can be deployed on `Microsoft Windows`, `Linux`, or `Solaris` operating systems. A wide range of Password Authority target connectors are standard, or users can build their own custom connectors with Password Authority’s extensible connector framework. For programmatic access, a wide range of both 32- and 64-bit operating system types are supported. A `Java API` and `CLI` provides automation and customization.
+
+The server-based component architecture and extensible connector technology allows integration with virtually any back-end process. Out of the box, Password Authority supports a wide variety of common datacenter systems such as databases, servers, and routers. Easy to use templates make it easy to add plug-and-play support for other systems. Data and control flow transformations in Password Authority help protect against static and dynamic analysis attacks.
+
+Password Authority can be deployed as a single server instance, as a cluster (`e.g.,` for high transaction rates), or in multisite primary-secondary (or primary to multiple secondary) arrangement for geographically dispersed organizations. Password Authority has the flexibility to fit various IT architectures and is licensed to allow scaling when needed. Its multi-instance license option ensures disaster recovery (`DR`) planning flexibility.
+
+The Password Authority’s programmatic access client is multihome capable and additionally provides a secure local cache. In the event access to the Password Authority server(s) is not available, requests can continue to be served securely from the local client cache.
+
+# NetWrix Privileged Account Manager
+
+Privileged Account Manager (`PAM`) maintains and protects privileged shared accounts of all types, from `Active Directory` and servers to routers and database systems. The product provides a secure facility for provisioning, accessing, automatic updating, and de-provisioning of shared administrative accounts, to enable centralized control and auditing of all privileged accounts.
+
+NetWrix Privileged Account Manager enables:
+
+![](OEBPS/images/box.jpg) `Protection of Privileged Accounts`: All devices, servers, and workstations have powerful built-in accounts with unlimited rights, such as enable on Cisco, Administrator on Windows, and root on UNIX. PAM provides secure storage for all privileged accounts and their passwords within your organization.
+
+![](OEBPS/images/box.jpg) `Centralized Management`: Stores all privileged accounts in a central location, enabling designated members of your IT team to access them according to established role-based security policies. PAM provides one unified workflow for accessing and updating all privileged accounts.
+
+![](OEBPS/images/box.jpg) `Regulatory Compliance`: The product controls and audits the use of privileged shared accounts to enable security and compliance with Sarbanes-Oxley, GLBA, HIPAA, PCI, and others. At every single point, you can determine who knows an account password today and who knew it, for example, a month ago. PAM includes audit reports on operations with shared accounts.
+
+![](OEBPS/images/box.jpg) `Automated Password Management`: Automatically updates account passwords according to password expiration policies. It changes the account itself and updates all affected services and applications that use this account.
+
+![](OEBPS/images/box.jpg) `Account Checkout`: Must be done by every user who wants to gain access to the password. Once the password has been used, the system creates a new random password to prevent further use until the next check-out.
+
+![](OEBPS/images/box.jpg) `Automatic Discovery`: Provides an automatic scanning engine to import the current set of privileged shared accounts into the system during initial setup. Scheduled rediscovery ensures that no shared privileged accounts are used while bypassing centralized auditing and control.
+
+![](OEBPS/images/box.jpg) `Automated Password Resets`: Automates routine password maintenance according to effective password policies. The system changes the password and updates all associated services, scheduled tasks, etc’everything that uses the password being updated, preventing service disruptions, account lockouts, and related issues.
+
+![](OEBPS/images/box.jpg) `Encrypted Information Storage`: All passwords are stored and transmitted in encrypted form (`AES` encryption and `SHA-1` algorithm) to prevent unauthorized disclosure.
+
+![](OEBPS/images/box.jpg) `Web-based Console`: For management of all privileged accounts.
+
+![](OEBPS/images/box.jpg) `Role-based Entitlement Management`: Flexible security rules to define the systems and accounts to which an employee can have access. As soon as a specific person moves to another department or retires, the product makes sure that he or she no longer has access to specific accounts and systems.
+
+![](OEBPS/images/box.jpg) `Extensive Auditing`: All operations performed with accounts and systems are logged into the audit database to enable creation of detailed reports and real-time alerting. Audit records track the times, user identities, and changes made to privileged accounts.
+
+# Identity and Access Management Suites
+
+# CA Access Control
+
+CA Access Control is a multiplatform (`Windows`, `Unix`, `Linux`, and virtualized environments: `VMware ESX`, `Solaris 10 Zones` and `LDOMs`, `Microsoft Hyper-v`, `IBM VIO` and `AIX LPAR`, `HP-UX VPAR`, `Linux Xen` and Mainframe `x/VM`) that combines access control with privileged user management. It is one of the components of the vendor’s Identity and Access Management (`IAM`) suite ([Figure 4.4](#9781466508507_epub_c04_r1.htm#fig_4.4)).
+
+![](OEBPS/images/fig_4.4.jpg)
+
+![](OEBPS/images/line-2.jpg)
+
+**Figure 4.4 CA Access Control enterprise manager**
+
+CA Access Control:
+
+![](OEBPS/images/box.jpg) `Provides comprehensive access controls on operating systems`: It is designed to control access to system resources, programs, files, and processes through a stringent series of criteria: time, login method, network attributes, and access program. These controls enforce separation of administrative duties on the servers. For example: separating system administration from application administration or virtualization administration, providing controlled rights to developers or support personnel, etc.

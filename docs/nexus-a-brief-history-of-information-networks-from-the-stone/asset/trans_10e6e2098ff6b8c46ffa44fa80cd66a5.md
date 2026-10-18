@@ -1,0 +1,126 @@
+
+
+44. Zuboff, `Tijdperk van surveillancekapitalisme`.
+
+返回注释参考 44
+
+45. Rafael Bravo, Sara Catalán en José M. Pina, “Gamificatie in beoordelingsplatforms voor toerisme en gastvrijheid: hoe R.A.M.P. Up Users’ Motivation to Create Content,” International Journal of Hospitality Management 99 (2021), artikel 103064, `doi.org/10.1016/j.ijhm.2021.103064`; Davide Proserpio en Giorgos Zervas, “Studie: Reageren op klantrecensies resulteert in betere beoordelingen”, Harvard Business Review, 14 februari 2018, `hbr.org/2018/02/study-replying-to-customer-reviews-results-in-betere-beoordelingen`.
+
+返回注释参考 45
+
+46. Linda Kinstler, ‘Hoe Tripadvisor reizen veranderde’, Guardian, 17 augustus 2018, `www.theguardian.com/news/2018/aug/17/how-tripadvisor-changed-travel`.
+
+返回注释参考 46
+
+47. Alex J. Wood en Vili Lehdonvirta, “Platforms die de reputatie verstoren: onzekerheid en erkenningsstrijd in de afgelegen gig-economie”, Sociologie 57, nr. 5 (2023): 999–1016, `doi.org/10.1177/00380385221126804`.
+
+返回注释参考 47
+
+48. Michael J. Sandel, Wat geld niet kan kopen: de morele grenzen van markten (Londen: Penguin Books, 2013).
+
+返回注释参考 48
+
+49. Over de middeleeuwse ‘reputatiemarkt’, zie Maurice Hugh Keen, Chivalry (Londen: Folio Society, 2010), en Georges Duby, William Marshal: The Flower of Chivalry (New York: Pantheon Books, 1985).
+
+返回注释参考 49
+
+50. Zeyi Yang, “China heeft zojuist een nieuwe sociale kredietwet aangekondigd. Hier is wat het betekent”, MIT Technology Review, 22 november 2022, `www.technologyreview.com/2022/11/22/1063605/china-announced-a-new-social-credit-law-what-does-it-gemeen/`.
+
+返回注释参考 50
+
+51. Will Storr, The Status Game: over het menselijk leven en hoe je het speelt (Londen: HarperCollins, 2021); Jason Manning, Zelfmoord: de sociale oorzaken van zelfvernietiging (Charlottesville: University of Virginia Press, 2020).
+
+返回注释参考 51
+
+52. Frans BM de Waal, Chimpanseepolitiek: macht en seks onder apen (Baltimore: Johns Hopkins University Press, 1998); Frans BM de Waal, Onze innerlijke aap: een vooraanstaande primatoloog legt uit waarom we zijn wie we zijn (New York: Riverhead Books, 2006); Sapolsky, Gedraag je; Victoria Wobber et al., ‘Differential Changes in Steroid Hormones Before Competition in Bonobos and Chimpansees’, Proceedings of the National Academy of Sciences 107, nr. 28 (2010): 12457–62, `doi.org/10.1073/pnas.1007411107`; Sonia A. Cavigelli en Michael J. Caruso, ‘Seks, sociale status en fysiologische stress bij primaten: het belang van sociale en glucocorticoïde dynamiek’, Philosophical Transactions of the Royal Society B: Biological Sciences 370, nee. 1669 (2015): 1–13, `doi.org/10.1098/rstb.2014.0103`.
+
+返回注释参考 52
+
+## 第 8 章：易错
+
+1. Nathan Larson, Aleksandr Solzjenitsyn en de moderne Russisch-joodse kwestie (Stuttgart: Ibidem Press, 2005), 16.
+
+返回注释参考 1
+
+2. Aleksandr Solzjenitsyn, De Goelag-archipel, 1918–1956: een experiment in literair onderzoek, I–II (New York: Harper & Row, 1973), 69–70.
+
+返回注释参考 2
+
+3. Gessen, Homo Sovjeticus, in Future Is History, hfst. 4; Gulnaz Sharafutdinova, Het hiernamaals van de ‘Sovjet-man’: Rethinking Homo Sovjeticus (Londen: Bloomsbury Academic, 2023), 37.
+
+返回注释参考 3
+
+4. Fisher, Chaosmachine, 110–11.
+
+返回注释参考 4
+
+5. Jack Nicas, “YouTube Tops 1 Billion Hours of Video a Day, on Pace to Eclipse TV”, Wall Street Journal, 27 februari 2017, `www.wsj.com/articles/youtube-tops-1-billion-hours-of-video-per-dag-op-tempo-naar-eclipse-tv-1488220851`.
+
+返回注释参考 5
+
+6. Visser, Chaosmachine; Ariely, Ongeloof, 262–63.
+
+返回注释参考 6
+
+7. Fisher, Chaosmachine, 266–77.
+
+返回注释参考 7
+
+8. Ibid., 276–77.
+
+返回注释参考 8
+
+9. Ibid., 270.
+
+返回注释参考 9
+
+10. Emine Saner, “Susan Wojcicki van YouTube: 'Waar is de grens van de vrije meningsuiting – verwijder je stemmen die gehoord moeten worden?'” Guardian, 10 augustus 2011, `www.theguardian.com/technology/2019/aug/10/youtube-susan-wojcicki-ceo-waar-lijn-verwijderende-stemmen-hoorden`.
+
+返回注释参考 10
+
+11. Dan Milmo, “Frances Haugen: ‘Ik heb nooit een klokkenluider willen zijn. Maar levens waren in gevaar', Guardian, 24 oktober 2021, `www.theguardian.com/technology/2021/oct/24/frances-haugen-i-never-want-to-be-a-whistleblower-but-levens-waren-in-gevaar`.
+
+返回注释参考 11
+
+12. Amnesty International, Sociale gruweldaden, 44.
+
+返回注释参考 12
+
+13. Ibid., 38.
+
+返回注释参考 13
+
+14. Ibid., 42.
+
+返回注释参考 14
+
+15. Ibid., 34.
+
+返回注释参考 15
+
+16. “Facebook-verbod op racistische uitlatingen leidt tot debat in Birma”, Irrawaddy, 31 mei 2017, `www.irrawaddy.com/news/burma/facebook-ban-of-racial-slur-sparks-debate-in-burma.html`.
+
+返回注释参考 16
+
+17. Amnesty International, Sociale gruweldaden, 34.
+
+返回注释参考 17
+
+18. Karen Hao, ‘How Facebook and Google Fund Global Misinformation’, MIT Technology Review, 20 november 2021, `www.technologyreview.com/2021/11/20/1039076/facebook-google-disinformation-clickbait/`.
+
+返回注释参考 18
+
+19. Hayley Tsukayama, “Facebook verandert zijn nieuwsfeed. Hoe zal het beïnvloeden wat u ziet?”, Washington Post, 12 januari 2018, `www.washingtonpost.com/news/the-switch/wp/2018/01/12/facebooks-changing-its-news-feed-how-zal-het-beïnvloeden-wat-je-ziet/`; Jonah Bromwich en Matthew Haag, “Facebook verandert. Wat betekent dat voor uw nieuwsfeed?”, New York Times, 12 januari 2018, `www.nytimes.com/2018/01/12/technology/facebook-news-feed-changes.html`; Jason A. Gallo en Clare Y. Cho, “Sociale media: verkeerde informatie en problemen met het modereren van inhoud voor het Congres”, Congressional Research Service Report R46662, 27 januari 2021, 11n67, `crsreports.congress.gov/product/pdf/R/R46662`; Keach Hagey en Jeff Horwitz: “Facebook probeerde van zijn platform een gezondere plek te maken. In plaats daarvan werd het bozer”, Wall Street Journal, 15 september 2021, `www.wsj.com/articles/facebook-algorithm-change-zuckerberg-11631654215`; “YouTube Does not Know Where Its Own Line Is”, Wired, 2 maart 2010, `www.wired.com/story/youtube-content-moderation-inconsistent/`; Ben Popken, “Nu algoritmen het overnemen, benadrukken de aanbevelingen van YouTube een menselijk probleem”, NBC News, 19 april 2018, `www.nbcnews.com/tech/social-media/algorithms-take-over-youtube-s-recommendations-highlight-menselijk-probleem-n867596`; Paul Lewis, “‘Fiction Is Outperforming Reality’: How YouTube’s Algorithm Distorts Truth”, Guardian, 2 februari 2018, `www.theguardian.com/technology/2018/feb/02/how-youtubes-algorithm-distorts-truth`.
+
+返回注释参考 19
+
+20. M.A. Thomas, “Machine Learning Applications for Cybersecurity”, Cyber Defense Review 8, nr. 1 (voorjaar 2023): 87–102, `www.jstor.org/stable/48730574`.
+
+返回注释参考 20
+
+21. Allan House en Cathy Brennan, eds., Social Media and Mental Health (Cambridge, VK: Cambridge University Press, 2023); Gohar Feroz Khan, Bobby Swar en Sang Kon Lee, "Risico's en voordelen van sociale media: een perspectief voor de publieke sector", Social Science Computer Review 32, nr. 5 (2014): 606–27, `doi.org/10.1177/089443931452`.
+
+返回注释参考 21
+
+22. Vanya Eftimova Bellinger, Marie von Clausewitz: de vrouw achter het maken van “On War” (Oxford: Oxford University Press, 2016); Donald J. Stoker, Clausewitz: zijn leven en werk (Oxford: Oxford University Press, 2014), 1–2, 256.
+

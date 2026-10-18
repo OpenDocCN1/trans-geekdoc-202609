@@ -1,0 +1,22 @@
+
+where we adopt the convention of `0 log₂ 0 = 0`. While the Shannon entropy is defined for random variables, it only depends on them through their distributions. Therefore, with a slight abuse of notation, we also talk about the entropy of a distribution. Empirically, given a dataset `S`, `p(x)` can be estimated by the empirical frequency
+
+```
+p_S(x) = number of data points in S that are equal to x / total number of data points in S
+```
+
+with which we can empirically estimate the entropy by `-Σ_{x∈X} p_S(x) log₂ p_S(x)`.
+
+Clearly, if `x` is Bernoulli with `p = P(x = 1)`, its entropy is given by
+
+```
+H(x) = -p log₂ p - (1 - p) log₂ (1 - p)
+```
+
+Consider a sample `S` with 20 observations in which 16 of them belong to the first class (`x = 0`) and the remaining 4 belong to the second class (`x = 1`). With the empirical probability masses `p_S(0) = 16 / 20` and `p_S(1) = 4 / 20`, the empirical entropy of `x` is given by:
+
+```
+-16/20 log₂(16/20) - 4/20 log₂(4/20) = 0.7219
+```
+
+The unit of entropy taken here is a *bit*, i.e. 0 or 1. As entropy increases, the amount of useful distinguishable information reduces

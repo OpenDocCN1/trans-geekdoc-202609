@@ -1,0 +1,40 @@
+
+
+[52.](#11_chapter2.xhtml#n0273)Louis Columbus, *The State of IoT Intelligence, 2018*, Forbes (Nov. 4, 2018), [https://www.forbes.com/sites/louiscolumbus/2018/11/04/the-state-of-iot-intelligence-2018/#25dfb304db00](https://www.forbes.com/sites/louiscolumbus/2018/11/04/the-state-of-iot-intelligence-2018/#25dfb304db00) (报告Dresner Advisory Services 2018 IoT Intelligence Market Study).
+
+[53.](#11_chapter2.xhtml#n0274)Gartner, *supra* [note 41](#17_Notes.xhtml#actrade-9780190943813-miscMatter-10-note-171); Louis Columbus, *2018 Roundup of Internet of Things Forecasts and Market Estimates*, Forbes (Dec. 13, 2018), [https://www.forbes.com/sites/louiscolumbus/2018/12/13/2018-roundup-of-internet-of-things-forecasts-and-market-estimates/#64c3a0a7d838](https://www.forbes.com/sites/louiscolumbus/2018/12/13/2018-roundup-of-internet-of-things-forecasts-and-market-estimates/#64c3a0a7d838).
+
+[54.](#11_chapter2.xhtml#n0275)*Internet of Things (IoT) Analytics Market: Global Forecast to 2020, supra* [note 46](#17_Notes.xhtml#actrade-9780190943813-miscMatter-10-note-176); *IDC Forecasts Worldwide Technology Spending on the Internet of Things to Reach $1.2 Trillion in 2022*, IDC (June 18, 2018), [https://www.idc.com/getdoc.jsp?containerId=prUS43994118](https://www.idc.com/getdoc.jsp?containerId=prUS43994118) (强调物联网支出的两大行业是制造业和运输业); Columbus, *supra* [note 53](#17_Notes.xhtml#actrade-9780190943813-miscMatter-10-note-183).
+
+[55.](#11_chapter2.xhtml#n0276)Kasey Panetta, *Technologies Underpin the Hype Cycle for the Internet of Things*, Gartner (Nov. 2, 2016), [https://www.gartner.com/smarterwithgartner/7-technologies-underpin-the-hype-cycle-for-the-internet-of-things-2016/?cm\_mmc=social-\_-rm-\_-gart-\_-swg](https://www.gartner.com/smarterwithgartner/7-technologies-underpin-the-hype-cycle-for-the-internet-of-things-2016/?cm_mmc=social-_-rm-_-gart-_-swg); Gartner, *supra* [note 41](#17_Notes.xhtml#actrade-9780190943813-miscMatter-10-note-171).
+
+[56.](#11_chapter2.xhtml#n0277)Ezra Gottheil & Daniel Callahan, *2019 Devices & Internet of Things Predictions*, Tech. Bus. Res., Inc. (Nov. 2018).
+
+[57.](#11_chapter2.xhtml#n0278)*Id*.; Columbus, *supra* [note 53](#17_Notes.xhtml#actrade-9780190943813-miscMatter-10-note-183).
+
+[58.](#11_chapter2.xhtml#n0279)*See, e.g.*, Bernard Marr, *What Is Digital Twin Technology*—*And Why Is It So Important?,* Forbes (Mar. 6, 2017), [https://www.forbes.com/sites/bernardmarr/2017/03/06/what-is-digital-twin-technology-and-why-is-it-so-important/#16e7ebf32e2a](https://www.forbes.com/sites/bernardmarr/2017/03/06/what-is-digital-twin-technology-and-why-is-it-so-important/#16e7ebf32e2a); Digital Twins, Microsoft, [https://azure.microsoft.com/en-us/services/digital-twins/](https://azure.microsoft.com/en-us/services/digital-twins/).
+
+[59.](#11_chapter2.xhtml#n0280)*See, e.g.*, Brian Buntz, *The Top 20 Industrial IoT Applications*, IoT World Today (Sept. 20, 2017), [https://www.iotworldtoday.com/2017/09/20/top-20-industrial-iot-applications/](https://www.iotworldtoday.com/2017/09/20/top-20-industrial-iot-applications/).
+
+[60.](#11_chapter2.xhtml#n0281)*See, e.g.*, Xiao-Feng Xie, *Key Applications of the Smart IoT to Transform Transportation*, WIOMAX (Feb. 8, 2019), [www.wiomax.com/what-can-the-smart-iot-transform-transportation-and-smart-cities/](http://www.wiomax.com/what-can-the-smart-iot-transform-transportation-and-smart-cities/).
+
+[61.](#11_chapter2.xhtml#n0282)*See, e.g.*, Jim Eckenrode, *Future Scenarios for IoT in Financial Services*, Deloitte and The Wall Street J. (2016), [https://deloitte.wsj.com/cio/2016/01/06/future-scenarios-for-iot-in-financial-services/](https://deloitte.wsj.com/cio/2016/01/06/future-scenarios-for-iot-in-financial-services/).
+
+[62.](#11_chapter2.xhtml#n0283)*See, e.g., Intel’s Grid Intelligence*, Intel, [https://www.intel.com/content/www/us/en/energy/energy-iot.html](https://www.intel.com/content/www/us/en/energy/energy-iot.html); *Intel in Energy,* Intel, [https://www.intel.com/content/www/us/en/energy/energy-overview.html](https://www.intel.com/content/www/us/en/energy/energy-overview.html); *See the Amazing Things People Are Doing with Azure*, Microsoft, [https://azure.microsoft.com/en-us/case-studies/?term=iot&industry=energy](https://azure.microsoft.com/en-us/case-studies/?term=iot&industry=energy).
+
+[63.](#11_chapter2.xhtml#n0284)*Internet of Things (IoT) Analytics Market: Global Forecast to 2020, supra* [note 46](#17_Notes.xhtml#actrade-9780190943813-miscMatter-10-note-176).
+
+[64.](#11_chapter2.xhtml#n0285)*See, e.g.*, Nikki Baird, *Five Retail IoT Use Cases, When Retailers Finally Get Around to IoT*, Forbes (Apr. 24, 2017), [https://www.forbes.com/sites/nikkibaird/2017/04/24/five-retail-iot-use-cases-when-retailers-finally-get-around-to-iot/#71bb3dfd6255](https://www.forbes.com/sites/nikkibaird/2017/04/24/five-retail-iot-use-cases-when-retailers-finally-get-around-to-iot/#71bb3dfd6255); *see also* Dan Mitchell, *5 IoT Applications Retailers Are Using Today*, SAS, [https://www.sas.com/en\_us/insights/articles/big-data/five-iot-applications-retailers-are-using-today.html](https://www.sas.com/en_us/insights/articles/big-data/five-iot-applications-retailers-are-using-today.html).
+
+[65.](#11_chapter2.xhtml#n0287)[Table 2.2](#11_chapter2.xhtml#actrade-9780190943813-chapter-2-tableGroup-2) is reproduced from Shackelford et al., *When Toasters Attack, supra* [note \*](#17_Notes.xhtml#actrade-9780190943813-miscMatter-10-note-863).
+
+[66.](#11_chapter2.xhtml#n0298)*See, e.g., The Future of Smart Parking in the Cities of Tomorrow*, IoT Innovation, [https://internet-of-things-innovation.com/insights/the-blog/smart-parking/](https://internet-of-things-innovation.com/insights/the-blog/smart-parking/) (last visited June 7, 2019).
+
+[67.](#11_chapter2.xhtml#n0299)Andrea M. Matwyshyn, *The “Internet of Bodies” Is Here: Are Courts and Regulators Ready?,* Wall St. J. (Nov. 12, 2018), [https://www.wsj.com/articles/the-internet-of-bodies-is-here-are-courts-and-regulators-ready-1542039566](https://www.wsj.com/articles/the-internet-of-bodies-is-here-are-courts-and-regulators-ready-1542039566).
+
+[68.](#11_chapter2.xhtml#n0300)*See, e.g.*, Meghan Neal, *The Internet of Bodies Is Coming, and You Could Get Hacked*, Motherboard (Mar. 13, 2014), [https://motherboard.vice.com/en\_us/article/gvyqgm/the-internet-of-bodies-is-coming-and-you-could-get-hacked](https://motherboard.vice.com/en_us/article/gvyqgm/the-internet-of-bodies-is-coming-and-you-could-get-hacked).
+
+[69.](#11_chapter2.xhtml#n0301)Laurel Wamsley, *FDA Approves First Digital Pill That Can Track Whether You’ve Taken It*, NPR (Nov. 14, 2017), [www.npr.org/sections/thetwo-way/2017/11/14/564112345/fda-approves-first-digital-pill-that-can-track-if-youve-taken-it](http://www.npr.org/sections/thetwo-way/2017/11/14/564112345/fda-approves-first-digital-pill-that-can-track-if-youve-taken-it); Maddy Kennedy, *U of M Doctors Use “Smart Pills” to Monitor Health of Cancer Patients*, Minneinno (Jan. 23, 2019), [www.americaninno.com/minne/twin-cities-startup/u-of-m-doctors-use-smart-pills-to-monitor-health-of-cancer-patients/](http://www.americaninno.com/minne/twin-cities-startup/u-of-m-doctors-use-smart-pills-to-monitor-health-of-cancer-patients/).
+
+[70.](#11_chapter2.xhtml#n0302)*Medtronic Launches Mobile App That Communicates Directly with World’s First Smartphone-Connected Pacemakers*, Cath Lab Digest (Jan. 25, 2019), [www.cathlabdigest.com/content/medtronic-launches-mobile-app-communicates-directly-worlds-first-smartphone-connected-pacemakers](http://www.cathlabdigest.com/content/medtronic-launches-mobile-app-communicates-directly-worlds-first-smartphone-connected-pacemakers).
+

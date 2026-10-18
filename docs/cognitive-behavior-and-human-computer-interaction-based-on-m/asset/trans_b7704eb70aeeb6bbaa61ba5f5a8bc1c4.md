@@ -1,0 +1,86 @@
+
+
+9. Wang, R., Wang, Y., Zhang, J., Fu, X., Review on underwater image restoration and enhancement algorithms, in: *Proceedings of the 7th International Conference on Internet Multimedia Computing and Service*, p. 56, 2015.
+
+10. Zhang, S., Wang, T., Dong, J., Yu, H., Underwater image enhancement via extended multiscale Retinex. *Neurocomputing*, 245, 1–9, 2017.
+
+11. Kumar, M., Kumar, S., Singh, Y., Gupta, S., A Novel Method For Video Watermarking Using 2LWT in YCbCr Color Space. *Int. J. Electron. Commun. Technol. (IJECT)*, 8, 4, 19–24, October-December 2017.
+
+12. Ghani, A.S.A. and Isa, N.A.M., Enhancement of low-quality underwater image through integrated global and local contrast correction. *Appl. Soft Comput*., 37, 332–344, 2015.
+
+13. Banerjee, J., Ray, R., Vadali, S.R.K., Shome, S.N., Nandy, S., Real-time underwater image enhancement: An improved approach for imaging with AUV-150. *Sadhana*, 41, 2, 225–238, 2016.
+
+14. Quevedo, E., Delory, E., Callico, G.M., Tobajas, F., Sarmiento, R., Underwater video enhancement using multi-camera super-resolution. *Opt. Commun*., 404, 94–102, 2017.
+
+15. Kaur, J. and Sohi, N., Performance improvement of enhancement methods for underwater images, in: *2017 2nd International Conference on Communication and Electronics Systems (ICCES)*, pp. 320–326, 2017.
+
+16. Dubey, N., Tiwari, S.K., Sharma, P., A hybrid DCT-DHE approach for enhancement of low contrast underwater images, in: *2017 International Conference on Recent Innovations in Signal Processing and Embedded Systems (RISE)*, pp. 304–309, 2017.
+
+17. Anwar, S., Li, C., Porikli, F., Deep underwater image enhancement. *Comput. Vis. Pattern Recognit*., 1, 1–12, 2018.
+
+18. Chernov, V, Koljonen, J., Alander, J., Bochko, V, Video Enhancement Methods for Monitoring Submersible Biological Resources. *IFAC Proc*., 46, 18, 293–298, 2013.
+
+19. Singhai, J. and Rawat, P, Image enhancement method for underwater, ground and satellite images using brightness preserving histogram equalization with maximum entropy. *International Conference on Computational Intelligence and Multimedia Applications (ICCIMA 2007)*, Sivakasi, Tamil Nadu, pp. 507512, 2007.
+
+20. Mishra, A., Chaudhuri, D., Bhattacharya, C., Rao, Y.S., Ocean disturbance feature detection from SAR images — An adaptive statistical approach. *3rd International Asia-Pacific Conference on Synthetic Aperture Radar (APSAR)*, pp. 1–4, 2011.
+
+21. Tao, Z., Li, Z., Qin, B., Ocean sand ridges in the Yellow Sea observed by Satellite Remote Sensing measurements. *2011 International Conference on Remote Sensing, Environment and Transportation Engineering*, Nanjing, pp. 528–531, 2011.
+
+22. Mineart, G.M. and Furgerson, J.A., Ocean water-leaving radiance measurements by the Joint Polar Satellite System. *2012 Oceans*, Hampton Roads, VA, pp. 1–8, 2012.
+
+23. Stalin, S.E., Milburn, H.B., Meinig, C., NeMONet: a near real-time deep ocean observatory. *OCEANS 2000 MTS/IEEE Conference and Exhibition. Conference Proceedings (Cat. No.00CH37158)*, Providence, RI, USA, vol. 1, pp. 583–587, 2000.
+
+24. Mittal, A. and Jindal, H., Novelty in Image Reconstruction using DWT and CLAHE. *Int. J. Image Graph. Signal Process*., 9, 5, 28–33, 2018.
+
+25. Rauschkolb, J., Using GIS and satellite imagery to locate hydrocarbons, in: *ESRI Int. User Conference*, pp. 7–10, 2003.
+
+26. Pacheco-Ruiz, R., Adams, J., Pedrotti, F., 4D modeling of low visibility Underwater Archaeological excavations using multi-source photogramme-try in the Bulgarian Black Sea. *J. Archaeol. Sci*., 100, 120–129, 2018.
+
+27. Neves, G., Ruiz, M., Fontinele, J., Oliveira, L., Rotated object detection with forward-looking sonar in underwater applications. *Expert Syst. Appl*., 140, 1–18, 2020.
+
+28. Han, S., Noh, Y., Lee, U., Gerla, M., Optical-acoustic hybrid network toward real-time video streaming for mobile underwater sensors. *Ad Hoc Networks*, 83, 1–7, 2019.
+
+29. Wu, Y., Ta, X., Xiao, R., Wei, Y., An, D., Li, D., Survey of underwater robot positioning navigation. *Appl. Ocean Res*., 90, 101845, 2019.
+
+30. Ding, W., Cao, H., Guo, H., Ma, Y., Mao, Z., Investigation on optimal path for submarine search by an unmanned underwater vehicle. *Comput. Electr. Eng*., 79, 106468, 2019.
+
+31. Shariati, S.K. and Hossein Mousavizadegan, S., Identification of underwater vehicles using surface wave pattern. *Appl. Ocean Res*., 78, 281–289, 2018.
+
+32. Kato, N., Choyekh, M., Dewantara, R., Senga, H., Chiba, H., Kobayashi, E., Yoshie, M., Tanaka, T., Short, T., An autonomous underwater robot for tracking and monitoring of subsea plumes after oil spills and gas leaks from the seafloor. *J. Loss Prev. Process Ind*., 50, 386–396, 2017.
+
+33. Caballero, I. and Stumpf, R.P., Retrieval of nearshore bathymetry from Sentinel-2A and 2B satellites in South Florida coastal waters. *Estuar. Coast. Shelf Sci*., 226, 106277, 2019.
+
+34. Poursanidis, D., Traganos, D., Reinartz, P., Chrysoulakis, N., On the use of Sentinel-2 for coastal habitat mapping and satellite-derived bathymetry estimation using the downscaled coastal aerosol band. *Int. J. Appl. Earth Obs. Geoinf*., 80, 58–70, 2019.
+
+35. Raja, R., Sinha, T.S., Patra, R.K., Tiwari, S., Physiological Trait Based Biometrical Authentication of Human-Face Using LGXP and ANN Techniques. *Int. J. Inf. Comput. Secur*., 10, 2/3, 303–320, 2018.
+
+36. Wong, W.K. and Sun, M., Deep Learning Regularized Fisher Mappings. *IEEE Trans. Neural Networks*, 22, 10, 1668–1675, 2011.
+
+37. Gragnaniello, D., Poggi, G., Sansone, C., Verdoliva, L., An Investigation of Local Descriptors for Biometric Spoofing Detection. *IEEE Trans. Inf. Forensics Secur*., 10, 04, 849–863, 2015.
+
+38. Levi, G. and Hassner, T., Age and gender classification using convolutional neural networks. In *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops*, pp. 34–42, 2015.
+
+39. El Khiyari, H. and Wechsler, H., Face Recognition across Time-Lapse Using Convolution Neural Networks. *J. Inf. Secur*., 7, 141–51, 2016.
+
+40. Wang, X., Deep Learning in Object Recognition, Detection and Segmentation. *Found. Trends Signal Process*., 8, 4, 217–228, 2014.
+
+41. Haque, A., Alahi, A., and Fei-Fei, L., Recurrent attention models for depth-based person identification. In *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*, pp. 1229–1238, 2016.
+
+42. Rothe, R., Timofte, R., Van Gool, L., Deep expectation of real and apparent age from a single image without facial landmarks*. Int. J. Comput. Vis*., 126, 144–157, 2016.
+
+43. Jain, A.K., Nandakumar, K., Ross, A., 50 years of biometric research: Accomplishments, challenges, and opportunities. *Pattern Recognit. Lett*., 79, 80–105, 2016.
+
+44. Ordonez, FJ. and Roggen, D., Deep Convolutional and LSTM Recurrent Neural Networks for Multimodal Wearable Activity Recognition. *Sensors*, 16, 115, 1–25, 2016.
+
+45. Nathawani, D. and Sharma, T., Neuroscience meets deep learning. *CMU*, 1, 1–8, 2016.
+
+46. Spampinato, C., Palazzo, S., Kavasidis, I., Giordano, D., Shah, M., Soulyk, N., Deep Learning Human Mind for Automated Visual Classification. In *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*, pp. 6809–6817, 2017.
+
+47. Kumar, S., Singh, S., Kumar, J., Face Spoofing Detection Using Improved SegNet Architecture with Blur Estimation Technique. *Int. J. Biom., Inderscience Publ*., 13, 131–149, 2021.
+
+48. Raja, R., Kumar, S., Rashid, Md, Color Object Detection Based Image Retrieval using ROI Segmentation with Multi-Feature Method. *Wirel. Pers. Commun. Springer J*., 112, 169–192, 2020.
+
+49. Kumar, S., Singh, S., Kumar, J., Live Detection of Face Using Machine Learning with Multi-feature Method. *Wirel. Pers. Commun*., 103, 3, 23532375, 2018.
+
+50. Kumar, S., Singh, S., Kumar, J., Automatic Live Facial Expression Detection Using Genetic Algorithm with Haar Wavelet Features and SVM. *Wirel. Pers. Commun*., 103, 3, 2435–2453, 2018.
+

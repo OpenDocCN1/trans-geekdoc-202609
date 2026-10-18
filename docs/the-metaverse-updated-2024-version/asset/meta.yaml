@@ -1,0 +1,1935 @@
+name: The Metaverse (updated 2024 version)
+slug: the-metaverse-updated-2024-version
+name_cn: 元宇宙（2024 年更新版）
+toc:
+- - '##'
+  - 元宇宙（2024 年更新版）
+- - '##'
+  - PREFACE TO THE REVISED EDITION
+- - '##'
+  - INTRODUCTION
+- - '##'
+  - 在早期研究之后的岁月里
+- - '##'
+  - “一家元宇宙公司”
+- - '##'
+  - 万亿级市场
+- - '##'
+  - 更快、更强、更难，且注定令人困惑
+- - '##'
+  - 斯蒂芬森的反乌托邦愿景
+- - '##'
+  - 斯蒂芬森对技术和行业的影响
+- - '##'
+  - 文学影响与相关作品
+- - '##'
+  - 在"元宇宙"成为"元宇宙"之前
+- - '##'
+  - 模拟存在理念中最重要的贡献之一来自非虚构作品
+- - '##'
+  - 任何其他名称的元宇宙
+- - '##'
+  - 拆解当今互联网
+- - '##'
+  - 下一代互联网
+- - '##'
+  - 元宇宙不是什么
+- - '##'
+  - '错误 #1：使用单数冠词“a”元宇宙，复数形式“元宇宙”，或诸如“公司 A 的元宇宙”之类的所有格结构'
+- - '##'
+  - 像互联网一样，元宇宙并非任何单一网络、平台、设备、应用程序，甚至是它们的集合
+- - '##'
+  - 首先，存在构建元宇宙基础技术的竞争努力
+- - '##'
+  - 其次，“the”元宇宙中可能存在一些区域碎片化
+- - '##'
+  - 第三，一家公司仍可能对元宇宙建立有效控制
+- - '##'
+  - '错误 #2：将元宇宙与虚拟或增强现实头显、操作系统或体验混淆'
+- - '##'
+  - '错误 #3：将元宇宙与 `Fortnite`、`Minecraft` 或 `Roblox` 等视频游戏平台混淆'
+- - '##'
+  - '错误 #4：将元宇宙与 Web3、区块链、加密货币或 NFT 混淆'
+- - '##'
+  - '错误 #5：将元宇宙视为当今互联网、应用程序和设备的“替代品”'
+- - '##'
+  - 回顾过去
+- - '##'
+  - 点亮一盏灯泡需要多少年？
+- - '##'
+  - 回到未来
+- - '##'
+  - 合成世界
+- - '##'
+  - 实时图形模拟
+- - '##'
+  - ZZT 的起源与早期成功
+- - '##'
+  - 用户生成内容与 ZZT-OOP
+- - '##'
+  - 头戴式显示器
+- - '##'
+  - 1955 年：莫顿·海利格与《未来电影院》
+- - '##'
+  - 1960 年：望远镜面罩专利
+- - '##'
+  - 1962 年：Sensorama 体验剧院
+- - '##'
+  - 莫顿·海利格的望远镜面罩
+- - '##'
+  - 1961 年：Headsight 头戴式显示器
+- - '##'
+  - 1965 年：伊万·萨瑟兰与“终极显示器”
+- - '##'
+  - 莫顿·海利格的 Sensorama
+- - '##'
+  - 1970 年代至 1990 年代：头戴式显示器的持续进步
+- - '##'
+  - NASA 的 VIEW 项目和 DataGlove
+- - '##'
+  - 2021 年 Google Starline 去除外壳后的注释视图
+- - '##'
+  - 人类文化与消遣
+- - '##'
+  - 人工智能
+- - '##'
+  - 为什么元宇宙很重要
+- - '##'
+  - “虚拟世界”
+- - '##'
+  - 沉浸式（或 3D 或空间）
+- - '##'
+  - 实时渲染
+- - '##'
+  - 互操作网络
+- - '##'
+  - 具有数据连续性的元宇宙，例如身份、历史、权利、对象、通信和支付
+- - '##'
+  - 大规模扩展
+- - '##'
+  - 持久性
+- - '##'
+  - 虚拟世界中的持久性
+- - '##'
+  - 同步
+- - '##'
+  - 无限用户与个体存在
+- - '##'
+  - 达到全规格元宇宙
+- - '##'
+  - 第 5 章 网络与光速之争
+- - '##'
+  - 带宽
+- - '##'
+  - Latency
+- - '##'
+  - '`H. sapiens` 与 `c` 之间的较量'
+- - '##'
+  - 美国互联网骨干
+- - '##'
+  - 全球海底互联网电缆骨干
+- - '##'
+  - 并非超光速，但希望足够快
+- - '##'
+  - Starlink 商业发布之前
+- - '##'
+  - 改进边界网关协议
+- - '##'
+  - 实时带宽标准与大型科技基础设施
+- - '##'
+  - Facebook 的海底电缆基础设施
+- - '##'
+  - 第 6 章 计算整个宇宙
+- - '##'
+  - 同一问题的两面
+- - '##'
+  - 定律之外
+- - '##'
+  - 第 7 章 虚拟世界引擎和平台
+- - '##'
+  - 游戏引擎
+- - '##'
+  - 集成虚拟世界平台
+- - '##'
+  - IVWP 平台的构建与运营挑战
+- - '##'
+  - 用户参与度
+- - '##'
+  - 许多虚拟平台和引擎，而非许多元宇宙
+- - '##'
+  - 第 8 章 互操作性的技术、哲学和经济学
+- - '##'
+  - 互操作性是一个光谱
+- - '##'
+  - 迈向互操作性
+- - '##'
+  - 超越虚拟商品
+- - '##'
+  - 任何星系中最快乐的地方
+- - '##'
+  - 使用 3D 打印模型、XR 投影仪和虚幻引擎的坦帕实时模拟
+- - '##'
+  - 实时 3D 模拟与元宇宙标准化
+- - '##'
+  - 第 9 章 硬件、头戴式显示器以及我们这个时代最艰巨的技术挑战
+- - '##'
+  - “它看起来像 `Wii Sports`”
+- - '##'
+  - Bulking Up and Slimming Down
+- - '##'
+  - 使用隐形眼镜的局限性
+- - '##'
+  - 瞳距调节的挑战
+- - '##'
+  - HMD 的显示要求
+- - '##'
+  - 分辨率需求的驱动因素
+- - '##'
+  - 视野与分辨率
+- - '##'
+  - 光学 AR/MR 显示屏的亮度要求
+- - '##'
+  - 我们这个时代最艰巨的技术挑战
+- - '##'
+  - 第三个要点：HMD 研发所需的巨额投资
+- - '##'
+  - 第五个要点：HMD 使用案例的采用情况
+- - '##'
+  - Vision Pro 与目标规格的差距
+- - '##'
+  - Facebook’s 2022 Quest Pro
+- - '##'
+  - Vision Pro 设备分析
+- - '##'
+  - 消费者成本
+- - '##'
+  - 重量与电池
+- - '##'
+  - 其他光学 AR 设备
+- - '##'
+  - Apple’s May 2008 Patent Filing, “Head Mounted Display”
+- - '##'
+  - HMD 的未来
+- - '##'
+  - Facebook’s 2023 Butterscotch Verifocal Prototype
+- - '##'
+  - Facebook’s 2023 Flamera Prototype
+- - '##'
+  - 超越头显
+- - '##'
+  - Facebook 的 CTRL-labs 肌电图手环
+- - '##'
+  - 一项潜在 Apple 智能戒指的专利
+- - '##'
+  - 智能手机万岁
+- - '##'
+  - 硬件作为入口
+- - '##'
+  - Chapter 10 PAYMENT RAILS, PLATFORM PREFERENCES, AND PUBLIC POLICIES
+- - '##'
+  - 当前的主要支付轨道
+- - '##'
+  - 30% 标准
+- - '##'
+  - Steam 的崛起
+- - '##'
+  - Steam 与 Epic Games Store 的竞争分析
+- - '##'
+  - Epic Games Store 的挑战
+- - '##'
+  - Steam 的回应与市场影响
+- - '##'
+  - 财务数据与用户增长
+- - '##'
+  - 从吃豆人到 iPod
+- - '##'
+  - 高成本与利润转移
+- - '##'
+  - 受限虚拟世界平台利润率
+- - '##'
+  - 阻止颠覆性技术
+- - '##'
+  - 不要轻点即走，也不要花费 200 美元
+- - '##'
+  - 数字优先首先需要物理优先
+- - '##'
+  - App Store 支付政策与监管争议
+- - '##'
+  - 荷兰监管行动
+- - '##'
+  - Google 诉讼和解
+- - '##'
+  - Epic Games 诉 Apple 案
+- - '##'
+  - 欧盟数字市场法案响应
+- - '##'
+  - Apple App Store 新条款分析
+- - '##'
+  - Apple 的 DMA 政策与欧盟监管
+- - '##'
+  - 第三方应用商店与设备限制
+- - '##'
+  - 欧盟监管行动与后续影响
+- - '##'
+  - 新支付轨道
+- - '##'
+  - 第 11 章 基于区块链的元宇宙的正反方观点
+- - '##'
+  - 谁在监督数据库？
+- - '##'
+  - 通用区块链
+- - '##'
+  - 智能合约与 NFT
+- - '##'
+  - 智能合约交互
+- - '##'
+  - NFT 市场概览
+- - '##'
+  - 去中心化应用程序（dapps）
+- - '##'
+  - Uniswap
+- - '##'
+  - OpenSea
+- - '##'
+  - Mirror
+- - '##'
+  - Axie Infinity 和 Zed Run
+- - '##'
+  - Otoy 和 RNDR
+- - '##'
+  - Helium 与去中心化网络
+- - '##'
+  - Dapp 代币与激励机制
+- - '##'
+  - 去中心化社交网络与代币模型
+- - '##'
+  - 去中心化自治组织（DAO）
+- - '##'
+  - Nouns DAO
+- - '##'
+  - CityDAO
+- - '##'
+  - 关于 Android 联盟与加密基金会的故事
+- - '##'
+  - Android 的角色演变与区块链技术分析
+- - '##'
+  - Android 的生态系统与商业模式
+- - '##'
+  - 元宇宙与平台垄断的警示
+- - '##'
+  - 去中心化区块链的特性
+- - '##'
+  - 以太坊的扩容方案与竞争
+- - '##'
+  - 区块链协议的更新与“合并”
+- - '##'
+  - 从工作量证明到权益证明的转变
+- - '##'
+  - 打破循环
+- - '##'
+  - Instagram 与 Twitter 的互操作性案例
+- - '##'
+  - Google Search 的案例
+- - '##'
+  - Web3 与区块链竞争
+- - '##'
+  - 展望未来
+- - '##'
+  - 现状
+- - '##'
+  - Polygon 与 Solana 的验证器网络分析
+- - '##'
+  - TPS 限制与共识机制
+- - '##'
+  - Dapp 的链下依赖与中心化控制
+- - '##'
+  - NFT 所有权的法律与技术局限
+- - '##'
+  - Dapp 竞争与 DAO 治理
+- - '##'
+  - 基于共识的行动与 NFT 版税
+- - '##'
+  - 模糊的海域
+- - '##'
+  - 阻截与擒抱
+- - '##'
+  - 2020 年至 2023 年
+- - '##'
+  - 飞向月球，回到地球，然后也许再次飞回去？
+- - '##'
+  - 第 12 章 AI 的角色与加速剂
+- - '##'
+  - 变压器模型与大型语言模型的局限性
+- - '##'
+  - 自注意力的局限性（与益处）
+- - '##'
+  - 人类与人类国王的机器
+- - '##'
+  - 合成现实
+- - '##'
+  - Meta 前沿
+- - '##'
+  - '#1：虚拟化现实世界'
+- - '##'
+  - '#2：改进和使用数字孪生'
+- - '##'
+  - '#3: 构建（纯粹）虚拟世界'
+- - '##'
+  - '#4: “战胜”物理定律'
+- - '##'
+  - '#5: 用 AI 代理填充元宇宙'
+- - '##'
+  - '#6: 解决互操作性问题'
+- - '##'
+  - 结论
+- - '##'
+  - iPhone 与 Metaverse 的技术普及与经济影响
+- - '##'
+  - 企业家与技术普及的时间滞后
+- - '##'
+  - Metaverse 的怀疑论与历史先例
+- - '##'
+  - Metaverse 的定义演变与未来展望
+- - '##'
+  - Metaverse 的财务影响
+- - '##'
+  - 元宇宙的形成将帮助监管机构迫使主要操作系统解绑其技术栈
+- - '##'
+  - 无论人们如何看待加密货币，对更好的用户权利和开放性都有明确的需求
+- - '##'
+  - 元宇宙将加剧当今互联网面临的许多社会挑战
+- - '##'
+  - 我相对较少担心虚拟孤立
+- - '##'
+  - 旁观者，众生
+- - '##'
+  - 致谢
+- - '##'
+  - 注释
+- - '##'
+  - 引言
+- - '##'
+  - 第 1 章. 未来的虚构历史
+- - '##'
+  - Chapter 2. What the “Metaverse” Is (and Isn’t)
+- - '##'
+  - Chapter 3. Why Now?
+- - '##'
+  - 30. 参考文献
+- - '##'
+  - 31. 参考文献
+- - '##'
+  - 32. 参考文献
+- - '##'
+  - 33. 参考文献
+- - '##'
+  - 34. 参考文献
+- - '##'
+  - 35. 参考文献
+- - '##'
+  - 36. 参考文献
+- - '##'
+  - 37. 参考文献
+- - '##'
+  - 38. 参考文献
+- - '##'
+  - 39. 参考文献
+- - '##'
+  - 40. 参考文献
+- - '##'
+  - 41. 参考文献
+- - '##'
+  - 42. 参考文献
+- - '##'
+  - 43. 参考文献
+- - '##'
+  - 44. 参考文献
+- - '##'
+  - 45. 参考文献
+- - '##'
+  - 46. 参考文献
+- - '##'
+  - 47. 参考文献
+- - '##'
+  - 48. 参考文献
+- - '##'
+  - 49. 参考文献
+- - '##'
+  - 50. 参考文献
+- - '##'
+  - 51. 参考文献
+- - '##'
+  - 52. 参考文献
+- - '##'
+  - 53. 参考文献
+- - '##'
+  - 54. 参考文献
+- - '##'
+  - 55. 参考文献
+- - '##'
+  - 56. 参考文献
+- - '##'
+  - 57. 参考文献
+- - '##'
+  - 58. 参考文献
+- - '##'
+  - 59. 参考文献
+- - '##'
+  - 60. 参考文献
+- - '##'
+  - 61. 参考文献
+- - '##'
+  - 62. 参考文献
+- - '##'
+  - 63. 参考文献
+- - '##'
+  - 64. 参考文献
+- - '##'
+  - 65. 参考文献
+- - '##'
+  - 66. 参考文献
+- - '##'
+  - 67. 参考文献
+- - '##'
+  - 68. 参考文献
+- - '##'
+  - 69. 参考文献
+- - '##'
+  - 70. 参考文献
+- - '##'
+  - 71. 参考文献
+- - '##'
+  - 72. 参考文献
+- - '##'
+  - 73. 参考文献
+- - '##'
+  - 74. 参考文献
+- - '##'
+  - 75. 参考文献
+- - '##'
+  - 76. 参考文献
+- - '##'
+  - 77. 参考文献
+- - '##'
+  - 78. 参考文献
+- - '##'
+  - 79. 参考文献
+- - '##'
+  - 80. 参考文献
+- - '##'
+  - Chapter 4. “全规格”元宇宙指南
+- - '##'
+  - Chapter 5. 网络与光速之争
+- - '##'
+  - 第 6 章. 计算整个宇宙
+- - '##'
+  - 第 7 章 虚拟世界引擎和平台
+- - '##'
+  - 第 8 章 互操作性的技术、哲学与经济
+- - '##'
+  - 第 9 章。硬件、HMD 以及我们这个时代最艰巨的技术挑战
+- - '##'
+  - Chapter 10. Payment Rails, Platform Preferences, and Public Policies
+- - '##'
+  - Chapter 11. The Cases for and against a Blockchain-Based Metaverse
+- - '##'
+  - 112. Tim Sweeney (@TimSweeneyEpic)
+- - '##'
+  - 113. Tim Sweeney (@TimSweeneyEpic)
+- - '##'
+  - 114. Tim Sweeney (@TimSweeneyEpic)
+- - '##'
+  - 115. Tim Sweeney (@TimSweeneyEpic)
+- - '##'
+  - 116. Tim Sweeney (@TimSweeneyEpic)
+- - '##'
+  - 117. Yuga Labs
+- - '##'
+  - 118. Yuga Labs
+- - '##'
+  - 119. Wagner James Au
+- - '##'
+  - 第 12 章. AI 的角色与加速剂
+- - '##'
+  - 1. Marvin Minsky
+- - '##'
+  - 2. Marvin Minsky
+- - '##'
+  - 3. Arthur C. Clarke
+- - '##'
+  - 4. Will Knight
+- - '##'
+  - 5. Madhumita Murgia
+- - '##'
+  - 6. Madhumita Murgia
+- - '##'
+  - 7. Benedict Evans
+- - '##'
+  - 8. ChatGPT-4
+- - '##'
+  - 9. Benj Edwards
+- - '##'
+  - 10. ChatGPT-4
+- - '##'
+  - 11. Wallace Witkowski
+- - '##'
+  - 12. Wallace Witkowski
+- - '##'
+  - 13. Wallace Witkowski
+- - '##'
+  - 14. Andrej Karpathy (@karpathy)
+- - '##'
+  - 15. Andrej Karpathy (@karpathy)
+- - '##'
+  - 16. Andrej Karpathy (@karpathy)
+- - '##'
+  - 17. Hal Hodson
+- - '##'
+  - 18. Larry Tesler 及 Larry Tesler 家属
+- - '##'
+  - 19. Wikipedia
+- - '##'
+  - 20. Kate Linebaugh 和 Joanna Stern
+- - '##'
+  - 21. John Carmack
+- - '##'
+  - 22. Glenn Hunter
+- - '##'
+  - 23. Glenn Hunter
+- - '##'
+  - 24. Glenn Hunter
+- - '##'
+  - 25. Glenn Hunter
+- - '##'
+  - 26. Glenn Hunter
+- - '##'
+  - 27. Glenn Hunter
+- - '##'
+  - 28. Glenn Hunter
+- - '##'
+  - 29. Bianca Bosker
+- - '##'
+  - 30. Troy Hatmaker
+- - '##'
+  - 31. Mariella Moon
+- - '##'
+  - 32. Heath
+- - '##'
+  - 33. Focal Systems
+- - '##'
+  - 34. Dave Rhodes
+- - '##'
+  - 35. Ryan Goss
+- - '##'
+  - 36. Eugene Kim
+- - '##'
+  - 37. Spencer Soper
+- - '##'
+  - 38. Theo Wayt
+- - '##'
+  - 39. Theo Wayt
+- - '##'
+  - 40. Theo Wayt, “Amazon’s Grocery Stores to Drop Just Walk Out Checkout Tech,”
+    The Information, April 2, 2024
+- - '##'
+  - '41. Joon Sung Park, Joseph C. O’Brien, Carrie J. Cai, Meredith Ringel Morris,
+    Percy Liang, and Michael S. Bernstein, “Generative Agents: Interactive Simulacra
+    of Human Behavior,” August 6, 2023'
+- - '##'
+  - 42. Park et al., “Generative Agents.”
+- - '##'
+  - '43. Christian Terwiesch and Karl Ulrich, “M.B.A. Students vs. ChatGPT: Who Comes
+    Up with More Innovative Ideas?,” Wall Street Journal, September 9, 2023.'
+- - '##'
+  - 44. Terwiesch and Ulrich, “M.B.A. Students vs. ChatGPT.”
+- - '##'
+  - Conclusion
+- - '##'
+  - 1. Wikipedia, s.v. “iPhone (1st Generation),” last edited September 2, 2023
+- - '##'
+  - 2. Roderick Scott and Ryan Whitwam, “The Best Budget Android Phones,” Wirecutter,
+    New York Times, updated September 14, 2023.
+- - '##'
+  - 3. Wikipedia, s.v. “iPhone (1st Generation),” last edited October 25, 2023
+- - '##'
+  - 4. Clifford Stoll, “Why the Web Won’t Be Nirvana,” Newsweek, February 26, 1995.
+- - '##'
+  - 5. Paul Krugman, “Why Most Economists’ Predictions Are Wrong,” Red Herring Online,
+    June 10, 1998
+- - '##'
+  - 6. James Chapman, “Internet ‘May Just Be a Passing Fad as Millions Give Up on
+    It,’ ” Daily Mail, December 5, 2000.
+- - '##'
+  - 7. Sisi Jiang, “Hooray, Oculus Quest Devices No Longer Require Facebook Accounts,”
+    Kotaku, October 29, 2021.
+- - '##'
+  - 8. Eric Kohn, “Zuckerberg’s Metaverse Will Create Revenue Streams for Creators,
+    but Your Thoughts May Not Be Your Own,” IndieWire, October 29, 2021; Ian Hamilton,
+    “Facebook Deprecates Proprietary Oculus APIs in Favor of OpenXR,” UploadVR, July
+    23, 2021; Kent Bye (@KentBye), “3/@Meta’s approach to the metaverse emphasizes
+    Interoperability, & they do actually have OpenXR + WebXR implementations, which
+    @WillOremus ignores.They also claim,” Twitter, December 30, 2021, 10:32 a.m.,
+    https://twitter.com/kentbye/status/1476607114768310273?s=20.
+- - '##'
+  - 9. Sarah Perez, “Mark Zuckerberg Takes Thinly Veiled Shots at Apple for ‘Stifling
+    Innovation’ via Its Platform Policies,” TechCrunch, October 28, 2021.
+- - '##'
+  - 10. Aisha Malik, “Instagram Brings Back Twitter Card Preview Support for Posts,”
+    TechCrunch, November 3, 2021.
+- - '##'
+  - 11. “John Carmack Meta Connect 2022 Unscripted Talk,” posted by UploadVR, October
+    11, 2022, YouTube video
+- - '##'
+  - 12. Alaina Lancaster, “Judge Gonzalez Rogers Is Concerned That Epic Is Asking
+    to Pay Apple Nothing,” The Law, May 24, 2021.
+- - '##'
+  - 13. “Table 8B. Time Spent in Primary Activities for the Civilian Population 18
+    Years and Over by Presence and Age of Youngest Household Child and Sex, 2022 Annual
+    Averages, Employed,” US Bureau of Labor Statistics, last modified June 22, 2023
+- - '##'
+  - 14. Dawn Rowan, “Nielsen’s State of Play Report Reveals That Streaming Is the
+    Future, but Consumers Are Currently Overwhelmed by Choice,” Nielsen, April 6,
+    2022; Ethan Cramer-Flood, “US Time Spent with Media 2022,” Insider Intelligence,
+    June 15, 2022; “As Media Options Proliferate, Quality Audience Data Is the Key
+    to Delivering Marketing Impact,” Nielsen, May 2023.
+- - '##'
+  - '15. Stephanie Prange, “Parrot Study: Majority of Viewers Multitask While Watching
+    TV,” MediaPlayNews, August 19, 2018.'
+- - '##'
+  - 16. “Historical Daily Viewing Activity Among Households & Persons 2+,” Nielsen,
+    accessed September 2, 2023
+- - '##'
+  - 17. Prange, “Parrot Study.”
+- - '##'
+  - 18. David M. Ewalt, “Neal Stephenson Talks about Video Games, the Metaverse, and
+    His New Book, REAMDE,” Forbes, September 19, 2011.
+- - '##'
+  - 19. 9to5 Staff, “Jobs’ Original Vision for the iPhone.”
+- - '##'
+  - 20. Wingfield, “The Mobile Industry’s Never Seen Anything Like This.”
+- - '##'
+  - INDEX
+- - '##'
+  - 索引
+- - '##'
+  - A
+- - '##'
+  - Apple App Store
+- - '##'
+  - Apple iOS
+- - '##'
+  - Apple Music
+- - '##'
+  - Apple Pay
+- - '##'
+  - Apple Vision Pro
+- - '##'
+  - Apple Watch
+- - '##'
+  - application programming interfaces (APIs)
+- - '##'
+  - Apple
+- - '##'
+  - authentication
+- - '##'
+  - blockchains and
+- - '##'
+  - Discord
+- - '##'
+  - Facebook
+- - '##'
+  - Instagram’s Twitter integration API
+- - '##'
+  - maps
+- - '##'
+  - open-source XR APIs
+- - '##'
+  - payment rails and
+- - '##'
+  - proprietary APIs and gaming consoles
+- - '##'
+  - WebGL
+- - '##'
+  - Area 120 group (Google)
+- - '##'
+  - ARKit
+- - '##'
+  - Armadillo Aerospace
+- - '##'
+  - artificial intelligence
+- - '##'
+  - “AI effect,”
+- - '##'
+  - “artificial general intelligence” (AGI)
+- - '##'
+  - “chatbots,”
+- - '##'
+  - ChatGPT
+- - '##'
+  - “generative AI,”
+- - '##'
+  - GPT-4 (“generative pre-trained transformer”)
+- - '##'
+  - large language models (LLMs)
+- - '##'
+  - LLaMa (Large Language Model Meta AI)
+- - '##'
+  - machine learning
+- - '##'
+  - the meta frontier
+- - '##'
+  - neural radiance fields (NeRFs)
+- - '##'
+  - role and accelerants of
+- - '##'
+  - “transformer models,”
+- - '##'
+  - Asimov, Isaac
+- - '##'
+  - '*Astroworld*'
+- - '##'
+  - “As We May Think,”
+- - '##'
+  - AT&T
+- - '##'
+  - Atari
+- - '##'
+  - at-home/distance education
+- - '##'
+  - '*Atlantic, The*'
+- - '##'
+  - “Attention Is All You Need,”
+- - '##'
+  - Audio Interchange File Format (AIFF)
+- - '##'
+  - augmented reality (AR)
+- - '##'
+  - AutoCAD
+- - '##'
+  - autocorrect
+- - '##'
+  - Autodesk
+- - '##'
+  - AutoCAD
+- - '##'
+  - Maya
+- - '##'
+  - “autonomous twins,”
+- - '##'
+  - Avalanche blockchain
+- - '##'
+  - '*Avatar*'
+- - '##'
+  - avatars
+- - '##'
+  - Apple’s Personas
+- - '##'
+  - in China
+- - '##'
+  - Epic Games’s MetaHumans avatar maker
+- - '##'
+  - interoperability and
+- - '##'
+  - the ontological question of
+- - '##'
+  - Snap’s Bitmoji
+- - '##'
+  - 3D avatars
+- - '##'
+  - '*Avengers, The*, franchise'
+- - '##'
+  - '*Axie Infinity*'
+- - '##'
+  - Aztter (streamer)
+- - '##'
+  - Ballmer, Steve
+- - '##'
+  - Balvin, J
+- - '##'
+  - Bankman-Freid, Sam
+- - '##'
+  - Bank of America
+- - '##'
+  - Bannan, Christine
+- - '##'
+  - Barrie, J. M.
+- - '##'
+  - Bar-Zeev, Avi
+- - '##'
+  - Baszucki, David
+- - '##'
+  - Battle.net
+- - '##'
+  - battle royale games
+- - '##'
+  - '*Battlezone*'
+- - '##'
+  - Baudrillard, Jean
+- - '##'
+  - Bavor, Clay
+- - '##'
+  - BBC
+- - '##'
+  - '*Beauty and the Beast* (live-action remake)'
+- - '##'
+  - Bell, Alexander Graham
+- - '##'
+  - Bell Telephone
+- - '##'
+  - Benioff, Marc
+- - '##'
+  - Berkeley, George
+- - '##'
+  - Berners-Lee, Sir Tim
+- - '##'
+  - Bertie the Brain
+- - '##'
+  - '*Best of ZZT*'
+- - '##'
+  - Bezos, Jeff
+- - '##'
+  - Bier, Nikita
+- - '##'
+  - '*Big Brother*'
+- - '##'
+  - '*Billboard*'
+- - '##'
+  - Bilton, Nick
+- - '##'
+  - '*Bioshock*'
+- - '##'
+  - Bitcoin/bitcoin
+- - '##'
+  - BlackBerry
+- - '##'
+  - '*Blade Runner*'
+- - '##'
+  - Blechman, Alex
+- - '##'
+  - Blender
+- - '##'
+  - Blizzard
+- - '##'
+  - blockchains
+- - '##'
+  - Android and
+- - '##'
+  - Avalanche blockchain
+- - '##'
+  - cases for and against a blockchain-based Metaverse
+- - '##'
+  - control over databases
+- - '##'
+  - decentralization
+- - '##'
+  - decentralized apps (“dapps”)
+- - '##'
+  - decentralized autonomous organizations (DAOs)
+- - '##'
+  - early cryptocurrency
+- - '##'
+  - future of
+- - '##'
+  - gaming and
+- - '##'
+  - as “immutable,”
+- - '##'
+  - “Layer 1” vs. “Layer 2,”
+- - '##'
+  - in the Metaverse
+- - '##'
+  - non-fungible tokens (NFTs)
+- - '##'
+  - openness and
+- - '##'
+  - ownership and
+- - '##'
+  - as “permissionless,”
+- - '##'
+  - Polygon blockchain
+- - '##'
+  - present reality
+- - '##'
+  - proof-of-stake (PoS)
+- - '##'
+  - Settlus blockchain
+- - '##'
+  - sidechains
+- - '##'
+  - “smart contracts,”
+- - '##'
+  - Solana blockchain
+- - '##'
+  - as “trustless,”
+- - '##'
+  - virtual goods
+- - '##'
+  - Web3 and
+- - '##'
+  - '*Bloomberg*'
+- - '##'
+  - '*Bloomberg Businessweek China*'
+- - '##'
+  - '*Blox Fruits*'
+- - '##'
+  - Blue Origin
+- - '##'
+  - Bluetooth
+- - '##'
+  - Blur NFT marketplace
+- - '##'
+  - Border Gateway Protocol (BGP)
+- - '##'
+  - Bored Apes Yacht Club
+- - '##'
+  - Bosworth, Andrew
+- - '##'
+  - Boyd, Alan
+- - '##'
+  - Bradbury, Ray
+- - '##'
+  - brain-to-computer interfaces (BCIs)
+- - '##'
+  - Branson, Richard
+- - '##'
+  - Breton, Thierry
+- - '##'
+  - broadband operators
+- - '##'
+  - Brookhaven National Laboratory
+- - '##'
+  - '*Brookhaven RP*'
+- - '##'
+  - Brooks, Ralph
+- - '##'
+  - “burbclaves,”
+- - '##'
+  - Bureau of Labor Statistics
+- - '##'
+  - Burke, Edmund
+- - '##'
+  - “Burning Chrome,”
+- - '##'
+  - Bush, Vannevar
+- - '##'
+  - Business Insider
+- - '##'
+  - Buterin, Vitalik
+- - '##'
+  - Butterscotch Varifocal (HMD)
+- - '##'
+  - BuzzFeed
+- - '##'
+  - ByteDance
+- - '##'
+  - '*Call of Duty*'
+- - '##'
+  - '*Call of Duty: Mobile*'
+- - '##'
+  - '*Call of Duty: Modern Warfare*'
+- - '##'
+  - '*Call of Duty: Warzone*'
+- - '##'
+  - Canada
+- - '##'
+  - '*Candy Crush*'
+- - '##'
+  - Capcom’s *Street Fighter*
+- - '##'
+  - Carmack, Adrian
+- - '##'
+  - Carmack, John
+- - '##'
+  - Carnegie Institution of Washington
+- - '##'
+  - C
+- - '##'
+  - China
+- - '##'
+  - decentralization
+- - '##'
+  - Disney
+- - '##'
+  - 电池电量
+- - '##'
+  - 中央处理器 (CPUs)
+- - '##'
+  - 作为元宇宙的入口
+- - '##'
+  - 触觉反馈/界面
+- - '##'
+  - 我们时代最艰巨的挑战
+- - '##'
+  - 超越头显
+- - '##'
+  - 近场通信 (NFC)
+- - '##'
+  - 个人“边缘计算机”或“边缘服务器”
+- - '##'
+  - 个人电脑
+- - '##'
+  - 智能手机的生命力
+- - '##'
+  - 另请参见头戴式显示器 (HMDs)；特定设备型号和制造商
+- - '##'
+  - Harmonix
+- - '##'
+  - 哈佛大学
+- - '##'
+  - 孩之宝
+- - '##'
+  - HBO
+- - '##'
+  - 头戴式显示器 (HMDs)
+- - '##'
+  - 挑战与权衡
+- - '##'
+  - 与视频游戏机相比
+- - '##'
+  - 工程设计
+- - '##'
+  - 未来
+- - '##'
+  - 硬件作为入口
+- - '##'
+  - 超越头显
+- - '##'
+  - “热预算”
+- - '##'
+  - 专利
+- - '##'
+  - 智能手机与
+- - '##'
+  - 另请参见特定设备型号和制造商
+- - '##'
+  - Headsight
+- - '##'
+  - Morton Heilig
+- - '##'
+  - Helios 渲染引擎
+- - '##'
+  - Helium 热点
+- - '##'
+  - Hello Games
+- - '##'
+  - Stephen Hess
+- - '##'
+  - Hey 日历和电子邮件应用程序
+- - '##'
+  - 高动态范围 (HDR)
+- - '##'
+  - “高保真”3D 引擎和游戏
+- - '##'
+  - William Higinbotham
+- - '##'
+  - Hinge
+- - '##'
+  - Damien Hirst
+- - '##'
+  - HMDs
+- - '##'
+  - Reid Hoffman
+- - '##'
+  - HoloLens
+- - '##'
+  - HoloTile 技术
+- - '##'
+  - 洪都拉斯
+- - '##'
+  - 香港国际机场“数字孪生”
+- - '##'
+  - Horizon Worlds
+- - '##'
+  - Horizon Zero Dawn
+- - '##'
+  - Houdini 渲染软件
+- - '##'
+  - HTC
+- - '##'
+  - HTML5
+- - '##'
+  - “元宇宙的 HTML”
+- - '##'
+  - Jensen Huang
+- - '##'
+  - 华为
+- - '##'
+  - L. Ron Hubbard
+- - '##'
+  - “枢纽世界”
+- - '##'
+  - Clark L. Hull
+- - '##'
+  - Hulu
+- - '##'
+  - Humanity 2.0
+- - '##'
+  - “超数字现实”
+- - '##'
+  - “超现实”
+- - '##'
+  - 超文本标记语言 (HTML)
+- - '##'
+  - 超文本传输协议
+- - '##'
+  - “超文本”
+- - '##'
+  - IBM
+- - '##'
+  - ICANN
+- - '##'
+  - iCasino
+- - '##'
+  - ICQ
+- - '##'
+  - IDEO 设计与咨询公司
+- - '##'
+  - id Software
+- - '##'
+  - IKEA
+- - '##'
+  - Imagination Technologies
+- - '##'
+  - IMAX
+- - '##'
+  - Imerza
+- - '##'
+  - “沉浸式互联网”
+- - '##'
+  - 应用内购买 (IAPs)
+- - '##'
+  - 独立游戏引擎
+- - '##'
+  - 印度
+- - '##'
+  - 印度尼西亚
+- - '##'
+  - 工业光魔 (ILM)
+- - '##'
+  - “信息经济”
+- - '##'
+  - “信息高速公路”
+- - '##'
+  - 红外 (IR) 传感器
+- - '##'
+  - 游戏内物品
+- - '##'
+  - 首次公开募股 (IPOs)
+- - '##'
+  - Instagram
+- - '##'
+  - Facebook 收购
+- - '##'
+  - 与其他应用的集成
+- - '##'
+  - 上的非同质化代币 (NFTs)
+- - '##'
+  - Threads 功能
+- - '##'
+  - “即时通讯”应用程序
+- - '##'
+  - AOL 即时通讯 (AIM)
+- - '##'
+  - Discord
+- - '##'
+  - ICQ
+- - '##'
+  - 集成虚拟世界平台
+- - '##'
+  - Apple 对其的“禁止”
+- - '##'
+  - 基于区块链的
+- - '##'
+  - 普及
+- - '##'
+  - 另请参见元宇宙；虚拟商品；虚拟世界；特定平台
+- - '##'
+  - Intel
+- - '##'
+  - 知识产权
+- - '##'
+  - 版权
+- - '##'
+  - 非同质化代币 (NFTs) 与
+- - '##'
+  - 另请参见专利
+- - '##'
+  - “交互式应用”
+- - '##'
+  - Interactive Brokers
+- - '##'
+  - 交互式电子书
+- - '##'
+  - 交换文件格式标准
+- - '##'
+  - “交换”解决方案
+- - '##'
+  - 干涉测量
+- - '##'
+  - 国际电信联盟
+- - '##'
+  - 互联网
+- - '##'
+  - “骨干”
+- - '##'
+  - “持续连接”
+- - '##'
+  - “企业互联网”
+- - '##'
+  - 元宇宙作为下一代互联网
+- - '##'
+  - 作为“网络的网络”
+- - '##'
+  - 当今的互联网
+- - '##'
+  - “Web 1.0”
+- - '##'
+  - “Web 2.0”
+- - '##'
+  - Web3
+- - '##'
+  - 万维网
+- - '##'
+  - 另请参见网络
+- - '##'
+  - 互联网名称与数字地址分配机构 (ICANN)
+- - '##'
+  - 互联网工程任务组 (IETF)
+- - '##'
+  - Internet Explorer
+- - '##'
+  - 物联网 (IoT)
+- - '##'
+  - 互联网协议套件 (TCP/IP)
+- - '##'
+  - 互联网服务提供商 (ISPs)
+- - '##'
+  - 互操作性
+- - '##'
+  - 头像的
+- - '##'
+  - 英语语言与
+- - '##'
+  - Facebook 对其的方法
+- - '##'
+  - 文件格式与
+- - '##'
+  - 房地产的经验
+- - '##'
+  - 电影行业的经验
+- - '##'
+  - 迈向
+- - '##'
+  - 元宇宙作为互操作网络
+- - '##'
+  - 作为光谱
+- - '##'
+  - 虚拟商品及其之外
+- - '##'
+  - 瞳距 (IPD)
+- - '##'
+  - Intrinsic Graphics
+- - '##'
+  - iOS
+- - '##'
+  - IP 地址
+- - '##'
+  - “iPad 原住民”
+- - '##'
+  - iPads
+- - '##'
+  - iPhones
+- - '##'
+  - iPods
+- - '##'
+  - Ipsos
+- - '##'
+  - 伊斯兰国 (ISIS/ISIL)
+- - '##'
+  - 等距 3D (2.5D)
+- - '##'
+  - iTunes
+- - '##'
+  - IVAS (集成视觉增强系统)
+- - '##'
+  - Sir Jony Ive
+- - '##'
+  - IW 游戏引擎
+- - '##'
+  - Jabberwocky 聊天机器人
+- - '##'
+  - 日本
+- - '##'
+  - Java
+- - '##'
+  - JavaScript
+- - '##'
+  - Jazz Jackrabbit
+- - '##'
+  - J Balvin
+- - '##'
+  - J.Crew
+- - '##'
+  - Ken Jennings
+- - '##'
+  - Jeopardy!
+- - '##'
+  - Jill of the Jungle
+- - '##'
+  - 抖动
+- - '##'
+  - Steve Jobs
+- - '##'
+  - Johns Hopkins
+- - '##'
+  - John Wick
+- - '##'
+  - 联合开发基金会
+- - '##'
+  - Brett Jones
+- - '##'
+  - Michael Jordan
+- - '##'
+  - JPMorgan Chase
+- - '##'
+  - “即拿即走” (JWO) 技术
+- - '##'
+  - CK Kalinowski
+- - '##'
+  - Andrej Karpathy
+- - '##'
+  - Garry Kasparov
+- - '##'
+  - Josef Kates
+- - '##'
+  - Keen Technologies
+- - '##'
+  - Keyhole
+- - '##'
+  - Jamal Khashoggi
+- - '##'
+  - Khosla Ventures
+- - '##'
+  - Khronos Group
+- - '##'
+  - Kickstarter
+- - '##'
+  - Kid Cudi
+- - '##'
+  - Martin Luther King, Jr.
+- - '##'
+  - KIRKBI
+- - '##'
+  - Kleiner Perkins
+- - '##'
+  - “了解你的客户” (KYC)
+- - '##'
+  - Raja Koduri
+- - '##'
+  - Komorebi Collective
+- - '##'
+  - Joseph Kosinski
+- - '##'
+  - Kotaku
+- - '##'
+  - Krafton
+- - '##'
+  - Marc Krugh
+- - '##'
+  - Paul Krugman
+- - '##'
+  - Kruskal-Wallis 检验
+- - '##'
+  - Stanley Kubrick
+- - '##'
+  - Kuiper Systems
+- - '##'
+  - KYC (了解你的客户) 法规
+- - '##'
+  - Lacoste
+- - '##'
+  - Lamina1
+- - '##'
+  - 语言
+- - '##'
+  - 聊天机器人
+- - '##'
+  - 英语语言与互操作性
+- - '##'
+  - 大型语言模型 (LLMs)
+- - '##'
+  - 拼写/语法检查
+- - '##'
+  - 另请参见标准和协议
+- - '##'
+  - 老挝
+- - '##'
+  - 大型语言模型 (LLMs)
+- - '##'
+  - Larva Labs
+- - '##'
+  - 最后生还者
+- - '##'
+  - 延迟
+- - '##'
+  - LA Times
+- - '##'
+  - Lawrence Berkeley National Laboratory
+- - '##'
+  - 光纤网络
+- - '##'
+  - 5G 网络
+- - '##'
+  - 4G 网络
+- - '##'
+  - 基础设施与速度
+- - '##'
+  - 互联网作为“网络的网络”
+- - '##'
+  - 延迟
+- - '##'
+  - 网络网关
+- - '##'
+  - 寻租行为与
+- - '##'
+  - 3G 网络
+- - '##'
+  - 2G 网络
+- - '##'
+  - 海底电缆
+- - '##'
+  - 神经计算网络
+- - '##'
+  - Neuralink
+- - '##'
+  - 神经辐射场（NeRFs）
+- - '##'
+  - '*Neuromancer*'
+- - '##'
+  - Newell, Allen
+- - '##'
+  - 新罕布什尔州
+- - '##'
+  - '*Newsweek*'
+- - '##'
+  - Newton 平板电脑
+- - '##'
+  - '*纽约时报*'
+- - '##'
+  - 作为应用程序
+- - '##'
+  - 在线
+- - '##'
+  - Nexon
+- - '##'
+  - NextMind
+- - '##'
+  - NFTs
+- - '##'
+  - Niantic
+- - '##'
+  - '*圣诞夜惊魂*'
+- - '##'
+  - 耐克
+- - '##'
+  - 任天堂
+- - '##'
+  - 任天堂娱乐系统（NES）
+- - '##'
+  - 任天堂 64
+- - '##'
+  - 任天堂 Switch
+- - '##'
+  - 任天堂 Wii
+- - '##'
+  - 诺贝尔经济学纪念奖
+- - '##'
+  - 诺基亚
+- - '##'
+  - Nolan, Christopher
+- - '##'
+  - '*无人深空*'
+- - '##'
+  - 非同质化代币（NFTs）
+- - '##'
+  - 基于以太坊
+- - '##'
+  - 分割为同质化代币/股份
+- - '##'
+  - 对……的敌意
+- - '##'
+  - 互操作性与
+- - '##'
+  - 市场
+- - '##'
+  - 标准 ERC-721
+- - '##'
+  - 梵蒂冈的
+- - '##'
+  - 在虚拟世界中
+- - '##'
+  - “非玩家角色”（NPCs）
+- - '##'
+  - 非营利组织
+- - '##'
+  - North AR 眼镜
+- - '##'
+  - 挪威
+- - '##'
+  - Nouns DAO
+- - '##'
+  - NTT Docomo
+- - '##'
+  - Nuance Communications
+- - '##'
+  - Nvidia
+- - '##'
+  - 带宽
+- - '##'
+  - “Earth-2”数字孪生
+- - '##'
+  - GeForce Now
+- - '##'
+  - 生成式 AI 工具
+- - '##'
+  - NVM 软件开发工具包
+- - '##'
+  - Omniverse
+- - '##'
+  - OpenUSD 格式
+- - '##'
+  - ……的力量
+- - '##'
+  - '*另请参见* 图形处理单元（GPUs）；Huang, Jensen'
+- - '##'
+  - Nye, David
+- - '##'
+  - OASIS
+- - '##'
+  - Obasanjo, Dare
+- - '##'
+  - 遮挡
+- - '##'
+  - Oculus VR
+- - '##'
+  - Facebook 对……的收购
+- - '##'
+  - '*Horizon Worlds*'
+- - '##'
+  - Oculus Quest
+- - '##'
+  - Oculus Rift
+- - '##'
+  - '*Population: One*'
+- - '##'
+  - 科学研究与开发办公室（OSRD）
+- - '##'
+  - Off-White
+- - '##'
+  - OkCupid
+- - '##'
+  - Nvidia 的 Omniverse
+- - '##'
+  - '*洋葱报*'
+- - '##'
+  - '*OnLive! Traveler!*'
+- - '##'
+  - “轨道式”体验
+- - '##'
+  - OpenAI
+- - '##'
+  - ChatGPT
+- - '##'
+  - Codex
+- - '##'
+  - DALL-E
+- - '##'
+  - GPT-4（“生成式预训练变换器”）
+- - '##'
+  - Sora
+- - '##'
+  - OpenGL
+- - '##'
+  - 开放手持设备联盟（OHA）
+- - '##'
+  - “开放平台”
+- - '##'
+  - OpenSea
+- - '##'
+  - 开源
+- - '##'
+  - 开放标准
+- - '##'
+  - OpenStreetMap
+- - '##'
+  - OpenUSD 格式
+- - '##'
+  - OpenXR
+- - '##'
+  - Opera
+- - '##'
+  - “光学 AR”
+- - '##'
+  - '*俄勒冈小径*'
+- - '##'
+  - Otoy
+- - '##'
+  - '*Overdare*'
+- - '##'
+  - Overture Maps Foundation
+- - '##'
+  - 所有权
+- - '##'
+  - 区块链与
+- - '##'
+  - 集中式与去中心化服务器模型
+- - '##'
+  - 权利与虚拟商品
+- - '##'
+  - 互操作性与
+- - '##'
+  - 关于 NFTs
+- - '##'
+  - 所有权记录
+- - '##'
+  - 腾讯关于游戏物品交易的诉讼
+- - '##'
+  - 无限制转售权
+- - '##'
+  - '*另请参见* 知识产权；虚拟商品'
+- - '##'
+  - OXO
+- - '##'
+  - '*吃豆人*'
+- - '##'
+  - “PageRank”算法
+- - '##'
+  - Palm
+- - '##'
+  - Palmer, Howard
+- - '##'
+  - “疫情宠儿”
+- - '##'
+  - Papert, Seymour
+- - '##'
+  - “透视 AR”
+- - '##'
+  - 专利
+- - '##'
+  - 关于头戴式显示器（HMDs）的专利
+- - '##'
+  - 关于智能隐形眼镜的专利
+- - '##'
+  - 关于智能戒指的专利
+- - '##'
+  - 支付轨道
+- - '##'
+  - ACH（自动清算所）
+- - '##'
+  - 支付宝
+- - '##'
+  - Apple 的
+- - '##'
+  - CHIPS（银行间支付系统）
+- - '##'
+  - 受限虚拟世界平台利润率
+- - '##'
+  - 数字优先 vs. 实体优先
+- - '##'
+  - Fedwire
+- - '##'
+  - 高成本与来自……的利润转移
+- - '##'
+  - PayPal
+- - '##'
+  - 点对点支付网络
+- - '##'
+  - 实体优先于数字
+- - '##'
+  - PlayStation
+- - '##'
+  - Square
+- - '##'
+  - Steam
+- - '##'
+  - 通过……阻止颠覆性技术
+- - '##'
+  - Stripe
+- - '##'
+  - 腾讯的微信
+- - '##'
+  - 30% 标准
+- - '##'
+  - 新支付轨道的变革力量
+- - '##'
+  - Venmo
+- - '##'
+  - 电汇支付
+- - '##'
+  - '*另请参见* 信用卡系统；加密货币'
+- - '##'
+  - PayPal
+- - '##'
+  - 付费墙
+- - '##'
+  - Peercoin
+- - '##'
+  - Peloton
+- - '##'
+  - '*感知器*'
+- - '##'
+  - Perl
+- - '##'
+  - 持久性
+- - '##'
+  - 个人电脑
+- - '##'
+  - '*彼得与温蒂*'
+- - '##'
+  - Philco 电子公司
+- - '##'
+  - 菲律宾
+- - '##'
+  - 录音机
+- - '##'
+  - 摄影测量
+- - '##'
+  - “照片现实主义”
+- - '##'
+  - Pichai, Sundar
+- - '##'
+  - 捏合
+- - '##'
+  - “捏合缩放”概念
+- - '##'
+  - Piscatella, Mat
+- - '##'
+  - Pixar
+- - '##'
+  - Planet Labs
+- - '##'
+  - 整形外科在职培训考试
+- - '##'
+  - 玩家权利
+- - '##'
+  - '*绝地求生*（*PUBG*）'
+- - '##'
+  - PlayFab
+- - '##'
+  - PlayStation
+- - '##'
+  - 主机
+- - '##'
+  - GNMX APIs
+- - '##'
+  - 支付轨道与
+- - '##'
+  - VR 平台
+- - '##'
+  - '*另请参见* Sony'
+- - '##'
+  - PlayStation Network
+- - '##'
+  - Poke 应用（Facebook）
+- - '##'
+  - '*宝可梦*'
+- - '##'
+  - '*Pokémon Go*'
+- - '##'
+  - '*Politiken*'
+- - '##'
+  - '*惊魂记*'
+- - '##'
+  - Polygon（以太坊）
+- - '##'
+  - Polygon（网站）
+- - '##'
+  - '*乓*'
+- - '##'
+  - '*Population: One*'
+- - '##'
+  - 葡萄牙
+- - '##'
+  - Potomac Computer Systems
+- - '##'
+  - Prada
+- - '##'
+  - Prince, Matthew
+- - '##'
+  - '*自然哲学的数学原理*'
+- - '##'
+  - 隐私
+- - '##'
+  - “程序化降级”
+- - '##'
+  - 渐进式去中心化
+- - '##'
+  - 渐进式网络应用（PWAs）
+- - '##'
+  - Project Loon
+- - '##'
+  - Project Starline
+- - '##'
+  - 权益证明（PoS）
+- - '##'
+  - 工作量证明（PoW）
+- - '##'
+  - “协议战争”
+- - '##'
+  - Psyonix
+- - '##'
+  - PUBG
+- - '##'
+  - 波多黎各
+- - '##'
+  - '*皮格马利翁*'
+- - '##'
+  - “皮格马利翁的眼镜”
+- - '##'
+  - Python
+- - '##'
+  - QR 码
+- - '##'
+  - Quake
+- - '##'
+  - Qualcomm
+- - '##'
+  - 量子计算
+- - '##'
+  - “量子错误”
+- - '##'
+  - 量子力学
+- - '##'
+  - “量子霸权”
+- - '##'
+  - “Qubits”
+- - '##'
+  - Quest 头显
+- - '##'
+  - Quixel
+- - '##'
+  - 种族主义
+- - '##'
+  - Rakuten
+- - '##'
+  - 随机存取存储器
+- - '##'
+  - Raxium
+- - '##'
+  - 阅读器应用
+- - '##'
+  - '*头号玩家*'
+- - '##'
+  - '*Rec Room*'
+- - '##'
+  - '*荒野大镖客 2*'
+- - '##'
+  - Reddit
+- - '##'
+  - 刷新率
+- - '##'
+  - 渲染
+- - '##'
+  - R
+- - '##'
+  - T

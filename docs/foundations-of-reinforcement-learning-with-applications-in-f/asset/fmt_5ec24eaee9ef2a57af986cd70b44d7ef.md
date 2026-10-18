@@ -1,0 +1,38 @@
+
+[Figure 15.11](#chapter15.xhtml#fig15_11) shows the number of times each arm is pulled (for each of the algorithms). The X-axis is sorted by the mean of the reward distributions of the arms. For each arm, the left-to-right order of the arm-pulls count is the order in which the 6 MAB algorithms are listed above. As we can see, the arms with low means are pulled only a few times and the arms with high means are pulled often.
+
+![Figure 15.11 Bernoulli Horse Race—Arms Count](images/fig15_11.jpg)
+
+[Figure 15.11](#chapter15.xhtml#b15fig15_11) Bernoulli Horse Race—Arms Count
+
+We encourage you to experiment with the code in `rl/chapter14/plot_mab_graphs.py`: try different arm distributions, try different input parameters for each of the algorithms, plot the graphs, and try to explain the relative performance of the algorithms (perhaps by writing some more diagnostics code). This will help build tremendous intuition on the pros and cons of these algorithms.
+
+## 15.8 Information State Space MDP
+
+We had mentioned earlier in this chapter that although a MAB problem is not posed as an MDP, the AI Agent could maintain relevant features of the history (of actions taken and rewards obtained) as its `State`, which would help the AI Agent in making the arm-selection (action) decision. So the AI Agent treats the MAB problem as an MDP and the arm-selection action is essentially a (`Policy`) function of the agent's `State`. One can then arrive at the Optimal arm-selection strategy by solving the Control problem of this MDP with an appropriate Planning or Learning algorithm. The representation of `State` as relevant features of history is known as `Information State` (to indicate that the agent captures all of the relevant information known so far in the `State` of the modeled MDP). Before we explain this `Information State Space MDP` approach in more detail, it pays to develop an intuitive understanding of the `Value of Information`.
+
+The key idea is that `Exploration` enables the agent to acquire information, which in turn enables the agent to make more informed decisions as far as its future arm-selection strategy is concerned. The natural question to ask then is whether we can quantify the value of this information that can be acquired by `Exploration`. In other words, how much would a decision-maker be willing to pay to acquire information (through exploration), prior to making a decision? Vaguely speaking, the decision-maker should be paying an amount equal to the gains in long-term (accumulated) reward that can be obtained upon getting the information, less the sacrifice of excess immediate reward one would have obtained had one exploited rather than explored. We can see that this approach aims to settle the explore-exploit trade-off in a mathematically rigorous manner by establishing the `Value of Information`. Note that information gain is higher in a more uncertain situation (all else being equal). Therefore, it makes sense to explore uncertain situations more. By formalizing the value of information, we can trade-off exploration and exploitation `optimally`.
+
+Now let us formalize the approach of treating a MAB as an Information State Space MDP. After each time step of a MAB, we construct an `Information State` `s̃`, which comprises of relevant features of the history until that time step. Essentially, `s̃` summarizes all of the information accumulated so far that is pertinent to be able to predict the reward distribution for each action. Each action `a` causes a transition to a new information state `s̃`^′ (by adding information about the reward obtained after performing action `a`), with probability $\\widetilde{\\mathcal{P}}(\\widetilde{s},a,{\\widetilde{s}}^{\\prime})$. Note that this probability depends on the reward probability function ℛ^(*a*) of the MAB. Moreover, the MAB reward `r` obtained upon performing action `a` constitutes the Reward of the Information State Space MDP for that time step. Putting all this together, we have an MDP `M̃` in information state space as follows:
+
+*   Denote the Information State Space of `M̃` as $\\widetilde{\\mathcal{S}}$.
+
+*   The Action Space of `M̃` is the action space of the given MAB: 𝒜.
+
+*   The State Transition Probability function of `M̃` is $\\widetilde{\\mathcal{P}}$.
+
+*   The Reward function of `M̃` is given by the Reward probability function ℛ^(*a*) of the MAB.
+
+*   Discount Factor `γ` = 1.
+
+The key point to note is that since ℛ^(*a*) is unknown to the AI Agent in the MAB problem, the State Transition Probability function and the Reward function of the Information State Space MDP `M̃` are unknown to the AI Agent. However, at any given time step, the AI Agent can utilize the information within `s̃` to form an estimate of ℛ^(*a*), which in turn gives estimates of the State Transition Probability function and the Reward function of the Information State Space MDP `M̃`.
+
+Note that `M̃` will typically be a fairly complex MDP over an infinite number of information states, and hence is not easy to solve. However, since it is after all an MDP, we can use Dynamic Programming or Reinforcement Learning algorithms to arrive at the Optimal Policy, which prescribes the optimal MAB action to take at that time step. If a Dynamic Programming approach is taken, then after each time step, as new information arrives (in the form of the MAB reward in response to the action taken), the estimates of the State Transition probability function and the Reward function change, meaning the Information State Space MDP to be solved changes, and consequently the Action-Selection strategy for the MAB problem (prescribed by the Optimal Policy of the Information State Space MDP) changes. A common approach is to treat the Information State Space MDP as a `Bayes-Adaptive MDP`. Specifically, if we have `m` arms `a`[1], …, `a`[*m*], the state `s̃` is modeled as $(\\widetilde{s\_{a\_{1}}},\\ldots,\\widetilde{s\_{a\_{m}}})$ such that $\\widetilde{s\_{a}}$ for any `a` ∈ 𝒜 represents a posterior probability distribution over ℛ^(*a*), which is Bayes-updated after observing the reward upon each pull of the arm `a`. This Bayes-Adaptive MDP can be tackled with the highly-celebrated Dynamic Programming method known as Gittins Index, which was introduced in a 1979 paper by Gittins ([Gittins 1979](#bib01.xhtml#refbib_27)). The Gittins Index approach finds the Bayes-optimal explore-exploit trade-off with respect to the prior distribution.
+
+To grasp the concept of Information State Space MDP, let us consider a Bernoulli Bandit problem with `m` arms with arm `a`'s reward probability distribution ℛ^(*a*) given by the Bernoulli distribution ℬ(*μ*[*a*]), where *μ*[*a*] ∈ [0, 1] (i.e., reward = 1 with probability *μ*[*a*], and reward = 0 with probability 1 − *μ*[*a*]). If we denote the `m` arms by `a`[1], `a`[2], …, `a`[*m*], then the information state is `s̃` = (*α*[*a*[1]], *β*[*a*[1]], *α*[*a*[2]], *β*[*a*[2]]…, *α*[*a*[*m*]], *β*[*a*[*m*]]), where *α*[*a*] is the number of pulls of arm `a` (so far) for which the reward was 1 and *β*[*a*] is the number of pulls of arm `a` (so far) for which the reward was 0. Note that by the Law of Large Numbers, in the long-run, $\\left. \\frac{\\alpha\_{a}}{\\alpha\_{a} + \\beta\_{a}}\\rightarrow\\mu\_{a} \\right.$.
+
+We can treat this as a Bayes-adaptive MDP as follows: We model the prior distribution over ℛ^(*a*) as the Beta Distribution `Beta`(*α*[*a*], *β*[*a*]) over the unknown parameter *μ*[*a*]. Each time arm `a` is pulled, we update the posterior for ℛ^(*a*) as:
+
+*   `Beta`(*α*[*a*] + 1, *β*[*a*]) if `r` = 1
+
+*   `Beta`(*α*[*a*], *β*[*a*] + 1) if `r` = 0

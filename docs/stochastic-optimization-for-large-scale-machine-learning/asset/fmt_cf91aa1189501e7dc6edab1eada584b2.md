@@ -1,0 +1,136 @@
+
+# 索引
+
+*   `cyclic sampling`, [105](#07chap_05.xhtml#p105)
+
+*   `dynamic subsampling`, [130](#10chap_07.xhtml#p130)
+
+*   `empirical risk minimization`, [52](#05chap_03.xhtml#p52), [102](#07chap_05.xhtml#p102), [117](#09chap_06.xhtml#p117)
+
+*   `exact line search method`, [31](#03chap_02.xhtml#p31)
+
+*   `first order methods`, [7](#02chap_01.xhtml#p7)
+
+*   `Gauss-Newton method`, [34](#03chap_02.xhtml#p34)
+
+*   `gradient descent`, [32](#03chap_02.xhtml#p32), [70](#06chap_04.xhtml#p70), [123](#10chap_07.xhtml#p123)
+
+*   `hard margin SVM`, [15](#03chap_02.xhtml#p15)
+
+*   `large-scale machine learning`, [4](#02chap_01.xhtml#p4), [41](#03chap_02.xhtml#p41), [69](#06chap_04.xhtml#p69), [103](#07chap_05.xhtml#p103), [117](#09chap_06.xhtml#p117), [126](#10chap_07.xhtml#p126), [141](#12chap_08.xhtml#p141)
+
+*   `large-scale problems`, [30](#03chap_02.xhtml#p30)
+
+*   `least squares SVM`, [19](#03chap_02.xhtml#p19)
+
+*   `Levenberg-Marquardt method`, [34](#03chap_02.xhtml#p34)
+
+*   `LIBLINEAR`, [38](#03chap_02.xhtml#p38), [119](#09chap_06.xhtml#p119)
+
+*   `Lipschitz and strong convexity constants – step size`, [32](#03chap_02.xhtml#p32)
+
+*   `logistic regression`, [7](#02chap_01.xhtml#p7), [95](#06chap_04.xhtml#p95)
+
+*   `machine learning`, [3](#02chap_01.xhtml#p3), [123](#10chap_07.xhtml#p123)
+
+*   `mini-batch block-coordinate framework`, [118](#09chap_06.xhtml#p118)
+
+*   `mini-batch block-coordinate Newton`, [118](#09chap_06.xhtml#p118)
+
+*   `Newton method`, [33](#03chap_02.xhtml#p33), [118](#09chap_06.xhtml#p118)
+
+*   `one-versus-one`, [18](#03chap_02.xhtml#p18)
+
+*   `one-versus-rest`, [17](#03chap_02.xhtml#p17)
+
+*   `optimization problem`, [124](#10chap_07.xhtml#p124)
+
+*   `optimization problems`, [4](#02chap_01.xhtml#p4)
+
+*   `problem formulation`, [15](#03chap_02.xhtml#p15), [41](#03chap_02.xhtml#p41)
+
+*   `problem solvers`, [29](#03chap_02.xhtml#p29)
+
+*   `proximal gradient method`, [37](#03chap_02.xhtml#p37)
+
+*   `proximal SVM`, [21](#03chap_02.xhtml#p21)
+
+*   `quasi-Newton method`, [35](#03chap_02.xhtml#p35), [124](#10chap_07.xhtml#p124)
+
+*   `random sampling`, [103](#07chap_05.xhtml#p103)
+
+*   `regularization constant`, [52](#05chap_03.xhtml#p52)
+
+*   `SAAG-I, II`, [57](#05chap_03.xhtml#p57), [72](#06chap_04.xhtml#p72)
+
+*   `SAAG-III, IV`, [72](#06chap_04.xhtml#p72)
+
+*   `second order methods`, [8](#02chap_01.xhtml#p8), [125](#10chap_07.xhtml#p125)
+
+*   `smooth SVM`, [20](#03chap_02.xhtml#p20)
+
+*   `soft margin SVM`, [16](#03chap_02.xhtml#p16)
+
+*   `soft SVM`, [40](#03chap_02.xhtml#p40)
+
+*   `stochastic approximation`, [8](#02chap_01.xhtml#p8), [52](#05chap_03.xhtml#p52), [69](#06chap_04.xhtml#p69), [118](#09chap_06.xhtml#p118), [126](#10chap_07.xhtml#p126)
+
+*   `stochastic gradient descent`, [125](#10chap_07.xhtml#p125)
+
+*   `stochastic inexact Newton method`, [127](#10chap_07.xhtml#p127)
+
+*   `STRON`, [129](#10chap_07.xhtml#p129)
+
+*   `strong convexity`, [52](#05chap_03.xhtml#p52), [74](#06chap_04.xhtml#p74)
+
+*   `subgradient method`, [35](#03chap_02.xhtml#p35)
+
+*   `SVM`, [5](#02chap_01.xhtml#p5), [11](#03chap_02.xhtml#p11), [39](#03chap_02.xhtml#p39), [98](#06chap_04.xhtml#p98), [133](#10chap_07.xhtml#p133)
+
+*   `SVRG`, [54](#05chap_03.xhtml#p54), [69](#06chap_04.xhtml#p69), [98](#06chap_04.xhtml#p98), [127](#10chap_07.xhtml#p127)
+
+*   `systematic sampling`, [104](#07chap_05.xhtml#p104)
+
+*   `TRON`, [37](#03chap_02.xhtml#p37), [119](#09chap_06.xhtml#p119), [127](#10chap_07.xhtml#p127)
+
+*   `truncated Newton method`, [36](#03chap_02.xhtml#p36), [124](#10chap_07.xhtml#p124)
+
+*   `trust region method`, [32](#03chap_02.xhtml#p32)
+
+*   `twin SVM`, [23](#03chap_02.xhtml#p23)
+
+*   `variance reduction`, [67](#06chap_04.xhtml#p67), [69](#06chap_04.xhtml#p69), [126](#10chap_07.xhtml#p126)
+
+* * *
+
+1.  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+    [¹](#03chap_02.xhtml#fn_fn2_1)There are several problem formulations for `SVM` and here we have presented some of the representative `SVMs`. Few more formulations can be found in the paper \[25\][↩](#fnref1)
+
+2.  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+    [²](#03chap_02.xhtml#fn_fn2_2)for detailed experiments please check the paper \[25\][↩](#fnref2)
+
+3.  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+    [¹](#05chap_03.xhtml#fn_fn3_1)for detailed experiments, please refer to paper \[23\][↩](#fnref3)
+
+4.  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+    [¹](#06chap_04.xhtml#fn_fn4_1)For the simplification of proof, we take `f(w) = F(w)`, i.e., `f[i](w) = f[i](w) + g(w) ∀i` and then `g(w) ≡ 0`[↩](#fnref4)
+
+5.  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+    [¹](#06chap_04.xhtml#fn_fn4_2)for detailed experiments, like effect of regularization coefficient, please refer to the paper \[28\][↩](#fnref5)
+
+6.  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+    [¹](#07chap_05.xhtml#fn_fn5_1)for detailed experiments, please refer to \[26\][↩](#fnref6)
+
+7.  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+    [¹](#10chap_07.xhtml#fn_fn7_1)for detailed experiments, please refer to \[29\][↩](#fnref7)
+
+8.  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+    [²](#10chap_07.xhtml#fn_fn7_2)experimental results can be reproduced using the library \[[27](#bib.xhtml#refbib_27)\]: [`https://github.com/jmdvinodjmd/LIBS2ML`](https://github.com).[↩](#fnref8)

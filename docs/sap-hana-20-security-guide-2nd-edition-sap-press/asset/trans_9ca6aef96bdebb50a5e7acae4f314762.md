@@ -1,0 +1,64 @@
+
+
+[![Listing SAP HANA XSA Applications and URL with Port Information](bilderklein/klein18_002.png)](img-f18.2.html)
+
+**Figure 18.2** Listing SAP HANA XSA Applications and URL with Port Information
+
+Enter this URL into a supported browser. For this book, we’re using the Chrome browser to access the application. The web application will redirect you to the SAP HANA XSA login. Enter credentials with access to the SAP HANA XSA cockpit. Once loaded, you’ll land on the SAP HANA XSA cockpit Home screen, as shown in [Figure 18.3](#18_002.html#f18.3).
+
+[![Homepage of the SAP HANA XSA CockpitSAP HANA XSA cockpit](bilderklein/klein18_003.png)](img-f18.3.html)
+
+**Figure 18.3** Homepage of the SAP HANA XSA Cockpit
+
+The interface is divided into two panes. On the left is an accordion menu with options for managing Organizations, Security, Tenant Databases, Host Management, User Management, and More. On the right side are additional options specific to each item selected within the accordion menu.
+
+## 18.2.2 Managing SAP HANA XSA Users
+
+To create and manage SAP HANA XSA users, click the User Management menu option, as shown in [Figure 18.4](#18_002.html#f18.4). On the right, you’ll see a list of users that have already been configured in the SAP HANA XSA system. These users correspond to users in the tenant database or SYSTEMDB that operates SAP HANA XSA. However, only the user account and password apply within SAP HANA XSA security. SAP HANA database roles, granted to these same users, have no bearing on their access within the SAP HANA XSA platform. SAP HANA XSA uses a separate application role security mechanism to determine application-level authorizations. We call these SAP HANA XSA role collections.
+
+To create a new user, click the New User button located just above the list of users, as shown in [Figure 18.4](#18_002.html#f18.4). A new window will appear requesting the User Name, First Name, Last Name, E‐Mail, and Password. Enter the requested information for the new user and then click the Create button. Click the Migrate SAP HANA User button to import an existing user within the associated SAP HANA tenant or SYSTEMDB. The new or existing user will now be listed in the interface.
+
+[![SAP HANA XSA Cockpit User Management Interface](bilderklein/klein18_004.png)](img-f18.4.html)
+
+**Figure 18.4** SAP HANA XSA Cockpit User Management Interface
+
+Next to each user is a series of icons. Click the pencil icon to edit the existing user’s name and email address. Click the key icon to manage the user’s password. Click the trashcan icon to delete the user from SAP HANA XSA and the database.
+
+## 18.2.3 Managing SAP HANA XSA Role Collections
+
+To manage role collections, click the Security option within the accordion menu to reveal the Role Collections option. On the right side of the interface, you’ll see a listing of existing role collections, as shown in [Figure 18.5](#18_002.html#f18.5).
+
+[![SAP HANA XSA Role Collection Management Interface](bilderklein/klein18_005.png)](img-f18.5.html)
+
+**Figure 18.5** SAP HANA XSA Role Collection Management Interface
+
+Role collections are comprised of elements defined within the SAP HANA XSA application at design time using the `xs-security.json` file. This file is added to the application’s project via SAP Web IDE for SAP HANA. Within this file, each application will have an application identifier or `xsappname` again defined in the `xs-security.json` file. Application roles are also defined in the `xs-security.json` file within the scopes section. The description of each scope item will be presented as a role when defining a role collection within the SAP HANA XSA cockpit.
+
+Finally, scope items will be organized into role templates (role-template section) within the `xs-security.json` file. Again, these items will be presented to you when defining the role collection in the SAP HANA XSA cockpit. However, note that the actual SAP HANA XSA application roles and role templates are defined by the developer and configured within the `xs-security.json` file that is part of the overall design-time SAP HANA XSA code and project.
+
+### More Information on Defining Roles within an SAP HANA XSA Application
+
+For more information on defining roles and roles templates within your SAP HANA XSA application, refer to the SAP HANA Developer Guide for XS Advanced Model, available at [http://s-prs.co/v498220](http://s-prs.co/v498220).
+
+The “Assign Functional Authorization Scopes for an XS Advanced Application” section provides more details on the structure of the `xs-security.json` file.
+
+To define a role collection, click the New Role Collection button. The New Role Collection window will appear. Enter the name and a description for the role collection. Click Save and the role collection will now be present in the list.
+
+To add SAP HANA XSA application roles to the role collection, locate the collection in the list and click its name. A new interface will appear where you can add SAP HANA XSA application roles. Click the Add Role button. The Add Role popup window will appear. Using the cascading Application Identifier, Role Template, and Role dropdown lists and locate an application role for the collection, as shown in [Figure 18.6](#18_002.html#f18.6). Click the Save button once you’ve located the role.
+
+[![Defining a Role Collection within the SAP HANA XSA Cockpit](bilderklein/klein18_006.png)](img-f18.6.html)
+
+**Figure 18.6** Defining a Role Collection within the SAP HANA XSA Cockpit
+
+You can delete the assigned application role from the list by clicking the trashcan icon located on the right of each assigned role. No general save button for the role collection is available when viewing the role list. Once you click save in Add Role popup window, as shown in [Figure 18.6](#18_002.html#f18.6), the role is considered assigned to the role collection. To navigate back to the list of role collections, click the Home button at the top part of the interface on the right side. To delete a role collection, click the trashcan icon to its right. To edit a role collection, click the pencil icon to its right within the list, as shown in [Figure 18.5](#18_002.html#f18.5).
+
+To grant or revoke a role collection associated with a user, return to the User Management interface found within the accordion menu of the SAP HANA XSA cockpit Home screen. Locate a user within the list. To the right of the user, within the list, click the user and padlock icon. The Assign Role Collections : `<USER>` window will appear, as shown in [Figure 18.7](#18_002.html#f18.7). Click the Add button within the popup window and then use the search bar to filter the list. Select the checkbox to the left of each desired role collection. Click the OK button to assign the role collection to the user. You’ll return to the Assign Role Collections : `<USER>` popup window.
+
+[![Granting or Revoking a Role Collection Associated with a User in the SAP HANA XSA Cockpit](bilderklein/klein18_007.png)](img-f18.7.html)
+
+**Figure 18.7** Granting or Revoking a Role Collection Associated with a User in the SAP HANA XSA Cockpit
+
+To delete an assigned role collection, locate it in the Assign Role Collections : `<USER>` popup window and click the trashcan icon to its right. Click the Save button to activate the assigned role collections for the given user.
+
+## 18.2.4 Managing Organization and Space Access
+

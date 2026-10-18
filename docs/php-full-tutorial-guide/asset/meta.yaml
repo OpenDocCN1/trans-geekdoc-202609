@@ -1,0 +1,32 @@
+name: PHP Full Tutorial Guide
+slug: php-full-tutorial-guide
+name_cn: PHP 全面教程指南
+toc:
+- - '##'
+  - 第 3 章：PHP 数据类型
+- - '###'
+  - 浮点数
+- - '###'
+  - 布尔值
+- - '###'
+  - 数组
+- - '##'
+  - 第 6 章：PHP ARRAYS
+- - '###'
+  - Array definition
+- - '###'
+  - Creating an array
+- - '###'
+  - Indexed arrays
+- - '###'
+  - Looping in indexed array
+- - '###'
+  - 关联数组
+- - '###'
+  - 遍历关联数组
+- - '###'
+  - 获取数组长度
+- - '##'
+  - 第 8 章：PHP 表单处理
+- - '###'
+  - 隐藏表单控件
