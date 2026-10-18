@@ -1,0 +1,52 @@
+
+### Chapter 6
+
+[85.](#15_chapter6.xhtml#n0842)Div. of Corp. Fin., US Sec. & Exch. Comm’n, CF Disclosure Guidance: Topic No. 2 Cybersecurity (Oct. 13, 2011), [`https://www.sec.gov/divisions/corpfin/guidance/cfguidance-topic2.htm`](https://www.sec.gov/divisions/corpfin/guidance/cfguidance-topic2.htm); Joel Bronstein, *The Balance between Informing Investors and Protecting Companies: A Look at the Division of Corporation Finance’s Recent Guidelines on Cybersecurity Disclosure Requirements*, 13 N.C. J.L. & Tech. On. 257, 271 (2012) (citing *TSC Indus., Inc. v. Northway, Inc.*, 426 U.S. 438, 449 (1976), which defined “material” as “a substantial likelihood that the disclosure of the omitted fact would have been viewed by the reasonable investor as having significantly altered the ‘total mix’ of information made available”).
+
+[86.](#15_chapter6.xhtml#n0843)*See, e.g., SEC Staff Provides Guidance on Disclosure Obligations Relating to Cybersecurity Risks and Cyber Incidents*, WSGR Alert (Oct. 18, 2011), [`http://www.wsgr.com/WSGR/Display.aspx?SectionName=publications/PDFSearch/wsgralert-cybersecurity-risks.htm`](http://www.wsgr.com/WSGR/Display.aspx?SectionName=publications/PDFSearch/wsgralert-cybersecurity-risks.htm) \[hereinafter WSGR Alert\]; Chris Strohm, *SEC Chairman Reviewing Company Cybersecurity Disclosures*, Bloomberg (May 13, 2013), [`http://www.bloomberg.com/news/2013-05-13/sec-chairman-reviewing-company-cybersecurity-disclosures.xhtml`](http://www.bloomberg.com/news/2013-05-13/sec-chairman-reviewing-company-cybersecurity-disclosures.xhtml) (reporting that the SEC is exploring strengthening cyber attack disclosure requirements).
+
+[87.](#15_chapter6.xhtml#n0844)Rob Scott, *SEC Demands Better Disclosure for Cybersecurity Incidents and Threats*, HelpNet Sec. (Apr. 30, 2019), [`https://www.helpnetsecurity.com/2019/04/30/sec-demands-better-disclosure-for-cybersecurity-incidents-and-threats/`](https://www.helpnetsecurity.com/2019/04/30/sec-demands-better-disclosure-for-cybersecurity-incidents-and-threats/).
+
+[88.](#15_chapter6.xhtml#n0845)*Id*.
+
+[89.](#15_chapter6.xhtml#n0846)Alexander Koskey & Matthew White, *SEC Issues Risk Alert on Regulation S-P*, JD Supra (May 3, 2019), [`https://www.jdsupra.com/legalnews/sec-issues-risk-alert-on-regulation-s-p-61498/`](https://www.jdsupra.com/legalnews/sec-issues-risk-alert-on-regulation-s-p-61498/).
+
+[90.](#15_chapter6.xhtml#n0847)*See Green Building Leadership Is LEED*, US Green Building Council, [`https://new.usgbc.org/leed`](https://new.usgbc.org/leed) (last visited May 13, 2019).
+
+[91.](#15_chapter6.xhtml#n0848)*Id*.
+
+[92.](#15_chapter6.xhtml#n0849)*Id*.
+
+[93.](#15_chapter6.xhtml#n0850)*See, e.g., Perspectives on the Framework*, NIST, [`https://www.nist.gov/cyberframework/perspectives`](https://www.nist.gov/cyberframework/perspectives) (last visited May 5, 2019).
+
+[94.](#15_chapter6.xhtml#n0851)*See* Christopher P. Skroupa, *An Approach ‘Essential to Creating Robust, Sustainable Cyber Security,’* Forbes (Feb. 27, 2018), [`https://www.forbes.com/sites/christopherskroupa/2018/02/27/an-approach-essential-to-creating-robust-sustainable-cyber-security/#51f16cc33793`](https://www.forbes.com/sites/christopherskroupa/2018/02/27/an-approach-essential-to-creating-robust-sustainable-cyber-security/#51f16cc33793).
+
+### Chapter 7
+
+[\*](#17_Notes.xhtml#n1113) This chapter and the conclusion are based on years of distilled research in the field of cybersecurity and privacy. As such, earlier versions of selections from this chapter have previously been published in reverse chronological order as follows: Scott J. Shackelford, *Smart Factories, Dumb Policy? Managing Cybersecurity and Data Privacy Risks in the Industrial Internet of Things*, 21 Minn. of L., Sci., & Tech. 1 (2019); Scott J. Shackelford, *Securing the Internet of Healthcare*, 19 Minn. of L., Sci., & Tech. 405 (2018); Scott J. Shackelford & Steve Myers, *Block-by-Block: Leveraging the Power of Blockchain Technology to Build Trust and Promote Cyber Peace*, 19 Yale J. of L. & Tech. 334 (2017); Scott J. Shackelford, *The Law of Cyber Peace*, 18 Chi. J. Int’l L. 1 (2017); Scott J. Shackelford, *Opinion: How to Make Democracy Harder to Hack*, Christian Sci. Monitor (July 29, 2016), [`http://www.csmonitor.com/World/Passcode/Passcode-Voices/2016/0729/Opinion-How-to-make-democracy-harder-to-hack`](http://www.csmonitor.com/World/Passcode/Passcode-Voices/2016/0729/Opinion-How-to-make-democracy-harder-to-hack); Scott J. Shackelford et al., *Using BITs to Protect Bytes: Promoting Cyber Peace and Safeguarding Trade Secrets through Bilateral Investment Treaties*, 52 Am. Bus. L.J. 1 (2015); Scott J. Shackelford, *Toward Cyberpeace: Managing Cyber Attacks through Polycentric Governance*, 62 Am. U. L. Rev. 1273 (2013). Interested readers are encouraged to consult these sources for additional discussion of the covered topics, particularly Scott J. Shackelford, Managing Cyber Attacks in International Law, Business, and Relations: In Search of Cyber Peace (2014).
+
+[1.](#16_chapter7.xhtml#n0853)George Savile Marquis of Halifax, The Complete Works of George Savile, First Marquess of Halifax 249 (1912).
+
+[2.](#16_chapter7.xhtml#n0854)*See Significant Cyber Incidents*, CSIS, [`https://www.csis.org/programs/cybersecurity-and-governance/technology-policy-program/other-projects-cybersecurity`](https://www.csis.org/programs/cybersecurity-and-governance/technology-policy-program/other-projects-cybersecurity) (last visited May 6, 2019).
+
+[3.](#16_chapter7.xhtml#n0855)*5 Cybersecurity Trends to Expect in 2019*, AT&T Bus., [`https://www.business.att.com/learn/tech-advice/5-cybersecurity-trends-to-expect-in-2019.html`](https://www.business.att.com/learn/tech-advice/5-cybersecurity-trends-to-expect-in-2019.html) (last visited May 6, 2019).
+
+[4.](#16_chapter7.xhtml#n0856)*See, e.g.*, Tara Swaminatha, *Corporate Boards Will Face the Spotlight in Cybersecurity Incidents*, CSO (Mar. 8, 2018), [`https://www.csoonline.com/article/3261405/corporate-boards-will-face-the-spotlight-in-cybersecurity-incidents.html`](https://www.csoonline.com/article/3261405/corporate-boards-will-face-the-spotlight-in-cybersecurity-incidents.html).
+
+[5.](#16_chapter7.xhtml#n0858)*See* AT&T Bus., *supra* [note 3](#17_Notes.xhtml#actrade-9780190943813-miscMatter-10-note-724).
+
+[6.](#16_chapter7.xhtml#n0859)*Id*.
+
+[7.](#16_chapter7.xhtml#n0860)For a deep dive on this topic, see Shackelford, Managing Cyber Attacks, *supra* [note \*](#17_Notes.xhtml#actrade-9780190943813-miscMatter-10-note-868).
+
+[8.](#16_chapter7.xhtml#n0861)Henning Wegener, *Cyber Peace, in* The Quest for Cyber Peace 77, 78 (Hamadoun I. Toure & Perm. Monitoring Panel on Info. Sec. eds., 2011), [`http://www.itu.int/dms_pub/itu-s/opb/gen/S-GEN-WFS.01-1-2011-PDF-E.pdf`](http://www.itu.int/dms_pub/itu-s/opb/gen/S-GEN-WFS.01-1-2011-PDF-E.pdf).
+
+[9.](#16_chapter7.xhtml#n0862)*Digital Peace*, Microsoft, [`https://digitalpeace.microsoft.com/`](https://digitalpeace.microsoft.com/) (last visited Nov. 5, 2018).
+
+[10.](#16_chapter7.xhtml#n0863)Johan Galtung, *Violence, Peace, and Peace Research*, 6 J. Peace Res. 167, 168 (1969).
+
+[11.](#16_chapter7.xhtml#n0864)*See, e.g.*, Martin Luther King Jr., *Nonviolence and Racial Justice*, Christian Century 118, 119 (1957) (arguing “true peace is not merely the absence of some negative force—tension, confusion, or war; it is the presence of some positive force—justice, good will, and brotherhood”).
+
+[12.](#16_chapter7.xhtml#n0866)*See* Johan Galtung, *Peace, Positive and Negative, in* The Encyclopedia of Peace Psychology 1, 1 (Daniel J. Christie ed., 2011).
+
+[13.](#16_chapter7.xhtml#n0867)Robert Schütze, European Constitutional Law 177 (2012) (citing to Oxford English Dictionary).

@@ -1,0 +1,56 @@
+
+[66.] These nations include: Australia, Austria, Belgium, Bosnia, Bulgaria, Canada, Chile, Croatia, Czech Republic, Egypt, Estonia, Finland, France, Gambia, Greece, Hungary, Iceland, Italy, Jamaica, Japan, Kenya, Malta, Mongolia, Montenegro, Netherlands, New Zealand, Norway, Poland, Portugal, Romania, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Turkey, Ukraine, the United Kingdom, the United States, and Zimbabwe.
+
+[67.] *See, e.g.*, Scott J. Shackelford, *Understanding Cybersecurity Due Diligence*, Huff. Post (Sept. 16, 2016), [`https://www.huffpost.com/entry/understanding-cybersecuri\_b\_8140648`](https://www.huffpost.com/entry/understanding-cybersecuri_b_8140648).
+
+[68.] Bhaskar Chakravorti, *Facebook’s Fake Pivot to Privacy*, Forbes (Mar. 11, 2019), [`https://www.forbes.com/sites/bhaskarchakravorti/2019/03/11/facebooks-fake-pivot-to-privacy/#76902cbcb37a`](https://www.forbes.com/sites/bhaskarchakravorti/2019/03/11/facebooks-fake-pivot-to-privacy/#76902cbcb37a).
+
+[69.] *See* Jane Wakefield, *Facebook and Google Need Ad-Free Options, Says Jaron Lanier*, BBC (Apr. 11, 2018), [`https://www.bbc.com/news/technology-43639712`](https://www.bbc.com/news/technology-43639712).
+
+[70.] *See* Cardiff Garcia & Stacey Vanek Smith, *Dollars for Data*, NPR (Mar. 26, 2018), [`https://www.npr.org/sections/money/2018/03/26/597036173/dollars-for-data`](https://www.npr.org/sections/money/2018/03/26/597036173/dollars-for-data).
+
+[71.] *See, e.g.*, Russell Brandom, *After Facebook Hearing, Senators Roll Out New Bill Restraining Online Data Use*, Verge (Apr. 10, 2018), [`https://www.theverge.com/2018/4/10/17221046/facebook-data-consent-act-privacy-bill-markey-blumenthal`](https://www.theverge.com/2018/4/10/17221046/facebook-data-consent-act-privacy-bill-markey-blumenthal).
+
+[72.] *See* Makena Kelly, *FTC Secures Authority to Open Antitrust Probe into Facebook*, Verge (June 3, 2019), [`https://www.theverge.com/2019/6/3/18650845/ftc-authority-facebook-amazon-google-antitrust-investigation-justice-department`](https://www.theverge.com/2019/6/3/18650845/ftc-authority-facebook-amazon-google-antitrust-investigation-justice-department).
+
+[73.] *See* Draft NIST Privacy Framework: An Enterprise Risk Management Tool (Apr. 30, 2019), [`https://www.nist.gov/sites/default/files/documents/2019/04/30/nist-privacy-framework-discussion-draft.pdf`](https://www.nist.gov/sites/default/files/documents/2019/04/30/nist-privacy-framework-discussion-draft.pdf).
+
+[74.] OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data, [`https://www.oecd.org/internet/ieconomy/oecdguidelinesontheprotectionofprivacyandtransborderflowsofpersonaldata.xhtml`](https://www.oecd.org/internet/ieconomy/oecdguidelinesontheprotectionofprivacyandtransborderflowsofpersonaldata.xhtml) (last updated 2013).
+
+[75.] Shackelford, *supra* [`note 11`](#17_Notes.xhtml#actrade-9780190943813-miscMatter-10-note-374).
+
+[76.] *See Internet of Things (IoT) Connected Devices Installed Base Worldwide from 2015 to 2025 (in Billions)*, Statista, [`https://www.statista.com/statistics/471264/iot-number-of-connected-devices-worldwide/`](https://www.statista.com/statistics/471264/iot-number-of-connected-devices-worldwide/) (last visited Mar. 28, 2019). For a collection of other IoT stats and graphics, see Ana Bera, *80 Mind-Blowing IoT Statistics*, Safe at Last (Feb. 25, 2019), [`https://safeatlast.co/blog/iot-statistics/`](https://safeatlast.co/blog/iot-statistics/).
+
+[77.] *See, e.g.*, Rob LeFebvre, *Amazon Fixed an Exploit That Allowed Alexa to Listen All the Time*, Engadget (Apr. 25, 2018), [`https://www.engadget.com/2018/04/25/amazon-fixed-exploit-alexa-listen/`](https://www.engadget.com/2018/04/25/amazon-fixed-exploit-alexa-listen/).
+
+[78.] Peter Newman, *Here’s Why Hackers Are Unlikely to Target Smart Speakers like Amazon Echo or Google Home, According to a Cybersecurity Expert*, Bus. Insider (Sept. 6, 2018), [`https://www.businessinsider.com/jake-williams-cybersecurity-expert-smart-speaker-hacking-2018-9`](https://www.businessinsider.com/jake-williams-cybersecurity-expert-smart-speaker-hacking-2018-9).
+
+[79.] *Big Data: What It Is and Why It Matters*, SAS, [`https://www.sas.com/en\_us/insights/big-data/what-is-big-data.html`](https://www.sas.com/en_us/insights/big-data/what-is-big-data.html) (last visited Mar. 30, 2019).
+
+[80.] Rolf H. Weber, *Internet of Things: Privacy Issues Revisited*, 31 Computer L. & Sec. Rev. 618, 618 (2015).
+
+[81.] Mackenzie Adams, *Big Data and Individual Privacy in the Age of the Internet of Things*, 7 Tech. Innovation Mgmt. Rev. 12, 13 (2017); Jacob Morgan, *A Simple Explanation of ‘The Internet of Things*,’ Forbes (May 13, 2014), [`http://www.forbes.com/sites/jacobmorgan/2014/05/13/simple-explanation-internet-things-that-anyone-can-understand/#572b4c086828`](http://www.forbes.com/sites/jacobmorgan/2014/05/13/simple-explanation-internet-things-that-anyone-can-understand/#572b4c086828).
+
+[82.] *See* Branden Ly, *Never Home Alone: Data Privacy Regulations for the Internet of Things*, 2017 U. Ill. J.L. Tech. & Pol’y 539, 540 (2017).
+
+[83.] Adams, *supra* [`note 81`](#17_Notes.xhtml#actrade-9780190943813-miscMatter-10-note-444), at 14.
+
+[84.] Charith Perera et al., *Big Data Privacy in the Internet of Things Era*, IT Pro, May/June 2015, at 32.
+
+[85.] *Id.* at 33.
+
+[86.] Adams, *supra* [`note 81`](#17_Notes.xhtml#actrade-9780190943813-miscMatter-10-note-444), at 16.
+
+[87.] *See* Lindsey Washington, *The Big Debate on Privacy in Big Data*, Diplomatic Courier (Apr. 30, 2018), [`https://www.diplomaticourier.com/2018/04/30/the-big-debate-on-privacy-in-big-data/`](https://www.diplomaticourier.com/2018/04/30/the-big-debate-on-privacy-in-big-data/).
+
+[88.] Perera, *supra* [`note 84`](#17_Notes.xhtml#actrade-9780190943813-miscMatter-10-note-447), at 18.
+
+[89.] *See id.* at 20.
+
+[90.] *Healthy Pets, Healthy People*, CDC, [`https://www.cdc.gov/healthypets/health-benefits/index.html`](https://www.cdc.gov/healthypets/health-benefits/index.html) (last visited Mar. 30, 2019).
+
+[91.] Andrew Liszewski, *Hasbro Now Has a Toy Line for Seniors Starting with a Lifelike Robotic Cat*, Gizmodo (Nov. 18, 2015), [`https://gizmodo.com/hasbro-now-has-a-toy-line-for-seniors-starting-with-a-l-1743122884`](https://gizmodo.com/hasbro-now-has-a-toy-line-for-seniors-starting-with-a-l-1743122884).
+
+[92.] *See, e.g., Top Threats and Responses for Older Adults*, Univ. Tex. at Austin Ctr. for Identity, [`https://identity.utexas.edu/older-adults/top-threats-and-responses-for-older-adults`](https://identity.utexas.edu/older-adults/top-threats-and-responses-for-older-adults). (last visited Mar. 30, 2019).
+
+[93.] Marc DaCosta, *Smart-Home Robots Are Using Their Cuteness to Spy on You Better*, N.Y. Mag. (Aug. 8, 2018), [`http://nymag.com/intelligencer/smarthome/smart-home-robots-are-adorable-pets-and-also-good-at-collecting-data.html`](http://nymag.com/intelligencer/smarthome/smart-home-robots-are-adorable-pets-and-also-good-at-collecting-data.html).
