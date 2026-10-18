@@ -1,0 +1,15 @@
+# 17.1.2 Divisive hierarchical clustering
+
+In this section I’ll show you how divisive hierarchical clustering works. Unlike agglomerative clustering, divisive clustering starts with all cases in a single cluster, and recursively divides this into smaller and smaller clusters, until each case resides in its own cluster. Finding the optimal split at each stage of clustering is a difficult task, and so divisive clustering uses a heuristic approach.
+
+At each stage of clustering, the cluster with the largest *diameter* is chosen. Recall from figure 16.5 that a cluster’s diameter is the largest distance between any two cases within the cluster. The algorithm then finds the case in this cluster that has the largest average distance to all the other cases in the cluster. This, most dissimilar cases starts its own *splinter group* (like a rebel without a cause). The algorithm then iterates through every case in the cluster and assigns cases to either the splinter group, or the original cluster, depending on which they are most similar to. In essence, divisive clustering applies k-means clustering (with k = two) at each level of the hierarchy, in order to split each cluster. This process repeats until all cases reside in their own cluster.
+
+There is only one implementation of divisive clustering, which is the DIANA (DIvisive ANAlysis) algorithm. Agglomerative clustering is more commonly used, and is less computationally expensive than the DIANA algorithm. However, mistakes made early on in hierarchical clustering cannot be fixed further down the tree, and so whereas agglomerative clustering may do better at finding small clusters, DIANA may do better at finding large clusters. In the rest of the chapter I’ll walk you through how to perform agglomerative clustering in R, but one of the exercises is to repeat the clustering using DIANA and compare the results.
+
+# 17.2 Building our first agglomerative hierarchical clustering model
+
+In this section I’ll show you how to build an agglomerative hierarchical clustering model in R. Sadly, there isn’t an implementation of hierarchical clustering wrapped by the mlr package, so we’re going to use the `hclust()` function from the built-in stats package.
+
+The function `hclust()`, that we’ll use to perform agglomerative hierarchical clustering, expects a *distance matrix* as input, rather than the raw data. A distance matrix contains the pairwise distances between each combination of elements. This distance can be any distance metric we specify, and in this situation, we’ll use Euclidean distance. As computing the distances between cases is the first step of hierarchical clustering, you might expect the `hclust()` algorithm to do this for us. But this two-step process of creating our own distance metric and then supplying it to `hclust()` does allow us the flexibility of using a variety of distance metrics.
+
+We create a distance matrix in R using the `dist()` function, supplying the data we want to

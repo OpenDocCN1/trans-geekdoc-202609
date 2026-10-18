@@ -1,0 +1,5 @@
+![](bbox=[0.168, 0.065, 0.864, 0.381])
+
+Figure 14.5 The effect of changing theta (row facets) and perplexity (column facets) using the default values of eta and max_iter, on the final t-SNE embedding of the swissTib dataset.
+
+Figure 14.6 shows the final embeddings with different combinations of max_iter (rows) and eta (columns). The effect here is a little more subtle, but smaller values of eta need a larger number of iterations in order to converge (because the cases move in smaller steps at each iteration). For example, for an eta of 100, 1000 iterations is sufficient to separate the clusters, but with an eta of 1, the clusters remain poorly resolved after 1000 iterations. If you would like to see the code I used to generate these figures, have a look at the code for this chapter, available at www.manning.com/downloads/1971).

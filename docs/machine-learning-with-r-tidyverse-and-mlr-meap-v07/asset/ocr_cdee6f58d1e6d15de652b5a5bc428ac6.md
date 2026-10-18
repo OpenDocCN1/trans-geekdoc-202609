@@ -1,0 +1,7 @@
+Once again, to give you a visual aid of how each of these hyperparameters affects the final embedding, I've run UMAP on our Swiss banknote data, using a grid of hyperparamater values. Figure 14.9 shows the final embeddings with different combinations of n_neighbors (rows) and min_dist (columns) using the default values of metric and n_epoch. Notice that the cases are more spread out for smaller values of n_neighbors and min_dist and that the clusters begin to break apart with low values for the n_neighbors hyperparameter.
+
+![](bbox=[0.15, 0.3, 0.9, 0.6])
+
+Figure 14.9 The effect of changing n_neighbors (row facets) and min_dist (column facets) using the default values of metric and n_epoch, on the final UMAP embedding of the swissTib dataset.
+
+Figure 14.10 shows the final embeddings with different combinations of metric (rows) and n_epoch (columns). The effect here is a little more subtle, but the clusters tend to be further apart from each other with more iterations. It also looks as though Manhattan distance does a slightly better job of breaking up those three smaller clusters (which we’ve not seen before!). If you would like to see the code I used to generate these figures, have a look at the code for this chapter, available at www.manning.com/downloads/1971).
