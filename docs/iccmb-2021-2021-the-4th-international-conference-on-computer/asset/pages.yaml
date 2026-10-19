@@ -1,0 +1,296 @@
+- pgno: 0
+  md: '# A Consortium Medical Blockchain Data Storage and Sharing Model Based on IPFS
+
+
+    SHUANG LIU*
+
+    School of Communication and Information Engineering,
+
+    Chongqing University of Posts and Telecommunications,
+
+    Chongqing 400065, China; Chongqing Key Lab of Mobile Communications Technology,
+    Chongqing University of Post and Communications(CQUPT)
+
+
+    HONG TANG
+
+    School of Communication and Information Engineering,
+
+    Chongqing University of Posts and Telecommunications,
+
+    Chongqing 400065, China; Chongqing Key Lab of Mobile Communications Technology,
+    Chongqing University of Post and Communications(CQUPT)
+
+
+    # ABSTRACT
+
+
+    As an important information resource, patients’ medical data can not only help
+    them to monitor their physical conditions and check the hidden risks of diseases;it
+    an also provide strong evidence for doctor-patient disputes and promote the development
+    of medical field.However, most medical institutions use centralized servers to
+    centrally manage patients’ electronic medical data.Such centralized servers have
+    opaque data storage and are prone to suffer from single point of failure,leading
+    to easy tampering or even deletion of medical data.At the same time, different
+    standards of data management among medical institutions make it difficult to circulate
+    and share data among institutions.The purpose of this paper is to realize efficient
+    data sharing and patient access control of medical data under the condition of
+    guaranteeing the safe storage of bulk medical data.Combining decentralized blockchain
+    technology with distributed file storage platform IPFS, a federated medical blockchain
+    data storage access model based on IPFS is proposed.The model uses the multi-privilege
+    attribute-base encryption algorithm (MA-ABE) to encrypt the data to ensure the
+    safety of the patient’s medical data during transmission and the patient’s ability
+    to control their own medical data.Meanwhile the private IPFS network is built
+    to improve the upload and download rate of encrypted data.This paper introduces
+    the components and principles of the model and elaborates the flow of data upload
+    and access.In the mean time, evaluate the performance of the model, summarize
+    the advantages and disadvantages of the model and the next research of the paper.
+
+
+    # CCS CONCEPTS
+
+
+    +   - Computer systems organization;
+
+    +   - Architectures;
+
+    +   - Distributed architectures;
+
+    +   - Peer- to- peer architectures;
+
+
+    # KEYWORDS
+
+
+    Consortium Blockchain, IPFS, MA-ABE, Fabric, Medical data storage and sharing
+
+
+    # ACM Reference Format:
+
+
+    SHUANG LIU* and HONG TANG. 2021. A Consortium Medical Blockchain Data Storage
+    and Sharing Model Based on IPFS. In 2021 The 4th International Conference on Computers
+    in Management and Business (ICCMB 2021), January 30–February 01, 2021, Singapore,
+    Singapore. ACM, New York, NY, USA, 7 pages. https://doi.org/10.1145/3450588.3450944
+
+
+    # 1 INTRODUCTION
+
+
+    This kind of problem often occurs in life. When patients go to the hospital,if
+    the doctor wants to know the patient’s previous medical records, he needs to spend
+    time reading multiple medical records issued by different hospitals. Due to the
+    disadvantages of paper medical records, which are easy to be lost and damaged,
+    it is difficult to obtain complete medical records of patients in most cases.Along
+    with the development of the Internet and big data technology, informationization
+    has gradually toward the medical data on track, but similar to the Electronic
+    medical record system (Electronic medical records, EMR), Electronic health record
+    system (Electronic health records, EHR), and Personal health record (the Personal
+    health records, RHR) this kind of centralized medical data sharing platform, most
+    of the management of medical data of the third party, not only easy to encountering
+    malicious attacks,Data is tampered, hidden, lost, unable to ensure the security
+    and integrity of the data;At the same time, due to the differences in management
+    and archiving habits, data sharing among different organizations becomes a problem.Therefore,
+    there is an urgent need for a tamper-proof, safe, efficient, transparent and reliable
+    technology to solve the current problems in the medical industry.Blockchain, as
+    the most concerned emerging technology at present, has become the preferred solution.
+    [1]
+
+
+    Blockchain is a peer-to-peert distributed database, and as the underlying core
+    technology of Bitcoin, it has received extensive attention.The core feature of
+    blockchain technology is decentralization, that is, each node in the system has
+    the same position, there is no super node, the third party management organization
+    is abandoned, and each node jointly supervises and maintains this distributed
+    bookkeeping book.At the same time, blockchain integration consensus algorithm,
+    cryptography principle, distributed storage and other mature technologies are
+    used to ensure the security and integrity of data stored on the chain.For example,
+    in the blockchain system, the data is packaged into blocks by the structure organized
+    as Merkle-tree before being chained. The block head stores the hash value of the
+    root. Once a certain position in the tree is slightly modified, the hash value
+    in the bulk will change, ensuring the untamability of the data stored on the chain.Blockchain
+    according to the control system and whether or not the public information is divided
+    into'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/5f20cf1a5d6ecb2d19c720342cb73139_2_0.png)
+
+
+    # Figure 1: The infrastructure of Fabric
+
+
+    ![](img/5f20cf1a5d6ecb2d19c720342cb73139_2_1.png)
+
+
+    # Figure 2: Peer Node Distribution Map for Master IPFS Nodes
+
+
+    [3].Therefore, CP-ABE algorithm is selected to embed the decryption policy into
+    the ciphertext. Each time the encryption does not need to know the identity information
+    of the receiver, and when the data is sent to multiple users, it does not need
+    to be encrypted for many times. It only needs to set the access policy to perform
+    encryption once, and decryption can be realized when the user
+
+
+    has more than the property threshold of the denier describing the policy.However,
+    the introduction of a single authorization agency AA in the CP-ABE algorithm to
+    distribute keys for each user is likely to cause user privacy disclosure, and
+    in the face of a large number of requests, the heavy workload of a single attribute
+    authorization agency (AA) becomes the bottleneck to improve system'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/5f20cf1a5d6ecb2d19c720342cb73139_4_0.png)
+
+
+    # Figure 3: Flow Chart of Patient Upload Data
+
+
+    ![](img/5f20cf1a5d6ecb2d19c720342cb73139_4_1.png)
+
+
+    # Figure 4: Flow Chart of Patient Data Access
+
+
+    in the chain of each node in the node group, consensus PBFT algorithm is used
+    to analyse the types of deals, get confirmed, more than two-thirds of the consensus
+    packaged such deals on a chain.
+
+
+    # 3.2 Data sharing process
+
+
+    The specific process:
+
+
+    +   (1) Take the data requester physician as an example, send the real identity
+    to the central authorized agency CA, and obtain CID.Send CID to each attribute
+    authorization agency AA to get the identity-related attribute set S and private
+    key set SK.
+
+    +   (2) Doctors send access data requests to nodes in the consortium blockchain
+    Fabric validation node cluster, which includes the doctor''s CID, the name of
+    the access data, and the owner.After receiving the access request, the node first
+    verifies the identity of the doctor. After the authentication is passed, the class
+    transaction is retrieved on the chain according to the name and owner of the accessed
+    data. After the
+
+
+    corresponding class transaction is found, the relevant class transaction containing
+    the requested content and the CID of the doctor are sent to the IPFS node group.
+
+
+    +   (3) The nodes in the IPFS node group first verify the identity of the doctor.
+    After the verification is passed, the IPFS hash value corresponding to the access
+    data is extracted from the class transaction. According to the hash value, the
+    complete encrypted data of the patient is retrieved in the private IPFS network
+    in the model.
+
+    +   (4) After receiving the patient''s encrypted original medical data, the doctor
+    decrypts the ciphertext by using its own attribute set S and the key related to
+    the attribute. If the doctor''s attribute value meets the access strategy set
+    by the patient, the complete medical data of the patient will be successfully
+    decrypted.Conversely, decryption fails.
+
+
+    # 4 EVALUATE
+
+
+    +   (1) Model efficiency:'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Table 1: Comparison of Model Performance
+
+
+    |  | IPFS-based | Access Control | Privacy Preservation | Smart Contracts | Highefficiency
+    |
+
+    |---|---|---|---|---|---|
+
+    | B-Box | √ | √ | √ | √ | × |
+
+    | BPDS | × | √ | × | × | × |
+
+    | BlockIPFS | √ | × | × | √ | × |
+
+    | TrustAccess | × | √ | √ | √ | × |
+
+    | Our model | √ | √ | √ | √ | √ |
+
+
+    algorithm and alliance chain expansion method to reduce node consensus time and
+    further improve the efficiency of the model.
+
+
+    # ACKNOWLEDGMENTS
+
+
+    This work was supported by Program for Changjiang Scholars and Innovative Research
+    Team in University (IRT_16R72).
+
+
+    # REFERENCES
+
+
+    [1] Q. Xia, E. B. Sifah, K. O. Asamoah, J. Gao, X. Du and M. Guizani, "MeDShare:
+    Trust-Less Medical Data Sharing Among Cloud Service Providers via Blockchain,"
+    in IEEE Access, vol. 5, pp. 14757-14767, 2017, doi: 10.1109/ACCESS.2017.2730843.
+
+
+    [2] M. M. Madine et al., "Blockchain for Giving Patients Control Over Their Medical
+    Records," in IEEE Access, vol. 8, pp. 193102-193115, 2020, doi: 10.1109/ACCESS.2020.3032553.
+
+
+    [3] Gao S , Piao G , Zhu J , et al. TrustAccess: A Trustworthy Secure Ciphertext-Policy
+    and Attribute Hiding Access Control Scheme based on Blockchain[J]. IEEE Transactions
+    on Vehicular Technology, 2020, PP(99):1-1.
+
+
+    [4] Tengfei Xue, Qunchao FU,and Zhong Wang., Research on medical data sharing
+    model based on blockchain [J]. Acta Automatica Sinica, 2017, 43(009):1555-1562
+
+
+    [5] Chao Zhang, Qinang Li and,Zhao Chen., Medical Chain: Consortium healthcare
+    blockchain model [J]. Acta Automatica Sinica, 2019, 045(008):1495-1510
+
+
+    [6] Du M , Chen Q , Chen J , et al. An Optimized Consortium Blockchain for Medical
+    Information Sharing[J]. IEEE Transactions on Engineering Management, 2020, PP(99):1-13
+
+
+    [7] Pham V D , Tran C T , Nguyen T , et al. B-Box - A Decentralized Storage System
+    Using IPFS, Attributed-based Encryption, and Blockchain[C]// 2020 RIVF International
+    Conference on Computing and Communication Technologies (RIVF). IEEE, 2020.
+
+
+    [8] Nyaletey E , Parizi R M , Zhang Q , et al. BlockIPFS - Blockchain-Enabled
+    Interplanetary File System for Forensic and Trusted Data Traceability[C]// 2019
+    IEEE International Conference on Blockchain (Blockchain). IEEE, 2019
+
+
+    [9] G. G. Dagher, J. Mohler, M. Milokovic, and P. B. Marella, "Ancil: Privacy-preserving
+    framework for access control and interoperability of electronic health records
+    using blockchain technology," Sustain. Cities Soc., vol. 39, pp. 283-297, May
+    2018.
+
+
+    [10] S. Gao, G. Piao, J. Zhu, X. Ma and J. Ma, "TrustAccess: A Trustworthy Secure
+    Ciphertext-Policy and Attribute Hiding Access Control Scheme Based on Blockchain,"
+    in IEEE Transactions on Vehicular Technology, vol. 69, no. 6, pp. 5784-5798, June
+    2020, doi: 10.1109/TVT.2020.2967099.'
+  merge: -1
+  img_proc: true
