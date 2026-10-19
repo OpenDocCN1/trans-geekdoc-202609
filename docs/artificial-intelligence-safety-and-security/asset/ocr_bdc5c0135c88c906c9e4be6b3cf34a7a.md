@@ -1,0 +1,19 @@
+But let’s go along with Havens and Leonhard and accept the premise that “technology has no ethics.” In that case, the answer is simple.
+
+# THEN DON’T RELY ON ETHICS!
+
+Certainly evangelization has not had the desired effect in the past – fostering good and decent behavior where it mattered most. Seriously, I will give a cookie to the first modern pundit I come across who actually ponders human history, taking perspective from the long ages of brutal, feudal darkness endured by our ancestors. Across all of those harsh millennia, people could sense that something was wrong. Cruelty and savagery, tyranny and unfairness vastly amplified the already unsupportable misery of disease and grinding poverty. Hence, well-meaning men and women donned priestly robes and … preached!
+
+They lectured and chided. They threatened damnation and offered heavenly rewards. Their intellectual cream concocted incantations of either faith or reason, or moral suasion. From Hindu and Buddhist sutras to polytheistic pantheons to Judeao-Christian-Muslim laws and rituals, we have been urged to behave better by sincere finger-waggers since time immemorial. Until finally, a couple of hundred years ago, some bright guys turned to all the priests and prescribers and asked a simple question:
+
+> “How’s That Working Out for You?”
+
+In fact, while moralistic lecturing might sway normal people a bit toward better behavior, it never affects the worst human predators and abusers – just as it won’t divert the most malignant machines. Indeed, moralizing often empowers parasites, offering ways to rationalize exploiting others. Even Asimov’s fabled robots – driven and constrained by his checklist of unbendingly benevolent, humano-centric Three Laws – eventually get smart enough to become lawyers. Whereupon they proceed to interpret the embedded ethical codes however they want. (See how I resolve this in Foundation’s Triumph.)
+
+And yet, preachers never stopped. Nor should they; ethics are important! But more as a metric tool, revealing to us how we’re doing. How we change, evolving new standards and behaviors under both external and self-criticism. For decent people, ethics are the mirror in which we evaluate ourselves and hold ourselves accountable. And that realization was what led to a new technique. Something enlightenment pragmatists decided to try, a couple of centuries ago. A trick, a method, that enabled us at last to rise above a mire of kings and priests and scolds.
+
+The secret sauce of our success is – accountability. Creating a civilization that is flat and open and free enough – empowering so many – that predators and parasites may be confronted by the entities who most care about stopping predation, their victims. One in which politicians and elites see their potential range of actions limited by law and by the scrutiny of citizens. Does this newer method work as well as it should? Hell no! Does it work better than every single other system ever tried, including those filled to overflowing with moralizers? Better than all of them combined? By light years? Yes, indeed. We’ll return to examine how this may apply to AI.
+
+# ENDEARING VISAGES
+
+Long before artificial intelligences become truly self-aware or sapient, they will be cleverly programmed by humans and corporations to seem that way. This–it turns out–is almost trivially easy to accomplish, as (especially in Japan) roboticists strive for every trace of appealing verisimilitude, hauling their creations across the temporary moat of that famed “uncanny valley,” into a realm where cute or pretty or sad-faced automatons skillfully tweak our emotions.

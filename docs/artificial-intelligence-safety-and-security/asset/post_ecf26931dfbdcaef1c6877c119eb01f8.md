@@ -1,0 +1,248 @@
+
+### R
+- Recursive self-improving AI, 389
+- Recursive self-improvement (RSI), 379
+- Redundancy, 183–184
+- Reflective utility function, 50
+- Reformers, 245–246
+- Regulated compliance, 192
+- Reinforcement learning (RL), 94, 149, 218
+  - system, 220
+- Religious extremism, 35
+- Relinquishment, 23, 28, 32–36
+- Renunciation, 121
+- Replicate anyone’s voice, 131–132
+- Representation drift (RD), 217–218, 219–220
+- Representation hacking, 222
+- Research and Development (R&D), 341
+  - investment, 147
+- Reset button, oracle AI with, 208, 209–210
+- Resilient controls, 180
+- Resource acquisition, 113, 376, 379
+- Responsibility, 58
+- Reverse engineer and/or emulate human brain, 116
+- Revulsion, 48
+- Reward and penalty systems, 186–187
+- Risk analysis, 157, 162
+- Risk aversion principle, 297–298
+- Risk research, 85
+- RL, see Reinforcement learning
+- RNA interference, 36
+- Roadblock bots, 130
+- Robot(s), 273
+  - cybersecurity and cybersafety, 278
+  - race, 200
+- Robotic(s), 3
+  - robotic-embodied childhood, 117–118
+  - surgeons, 419
+  - systems, 273
+  - warfare, 160
+- Robot operating system (ROS), 274, 286
+  - ROS-AES-encryption algorithm, 279, 283
+  - security concerns in, 276–278
+- Robustly safe initial system, 93
+- Robustness, 58
+- ROS, see Robot operating system
+- Rosauth, 280–281
+- Rosbridge protocol, 280
+- RSI, see Recursive self-improvement
+- "Rule-based" systems, 172
+
+### S
+- Safety
+  - and security technical aspects, 193–194
+  - common sense, 187
+  - considerations and generalizations, 88
+  - engineering, 157
+  - through engineered psychology, 184
+  - external perspectives illuminating, 157
+  - immunity against antisocial behavior, 188
+  - primary AI drives, 186
+  - reward and penalty systems, 186–187
+  - work, 152
+- SAI, see Superintelligent AI
+- Sanctions and diplomatic pressure, 139
+- Sapience, 61, 118
+- SARS virus, see Severe Acute Respiratory Syndrome virus
+- Scalability, 277
+- Science and source code, 161–162
+- SDS, see Secure Dispatching Service
+- Secret Service, 52
+- Secure Dispatching Service (SDS), 275
+- Secure global power, AI converge into military AI to, 378–381
+- Securing robot applications on ROS, 278
+  - ROS-AES-encryption, 279
+  - Rosauth, 280–281
+- Securing robot operating system (SROS), 278–280
+  - secure-ROS-transport, 280, 283
+- Security concerns in ROS, 274, 276–278
+- Security dilemma, 342, 343–344
+  - fueling, 344–345
+- Security mindset, 315
+- Security of robotic applications using ROS
+  - fields and format of ROS messages, 282
+  - initiatives for securing robot applications on ROS, 278–281
+  - occupancy grid map transmitted during experiments, 281
+  - P/S delays for map experiments, 286
+  - P/S delays for string experiments, 284
+  - results and discussion, 281
+  - results for map experiments, 285
+  - results for string experiments, 283
+  - robotic safety and security, 274
+  - security challenges in swarm robotics, 275–276
+  - security concerns in ROS, 276–278
+- Selectorate theory, 364
+- Self-driving car, 74, 236, 419–420
+- Self-driving vehicles, 396, 419
+- Self-improvement, AI want to, 47–48
+- Self-improving AI, 389
+- Self-interest, 123–124
+- Self-modifying software virus, 36
+- Self-organizing nanotechnology approaches, 36
+- Self-preservation, 14, 53, 71, 113, 184, 319–320, 376
+- Self-replication, 11, 26
+  - pathogen, 41
+  - technologies, 32
+- Sentience, 61
+- Sentient AI system, 61
+- Sentiment analysis, 149
+- setInterval function, 282
+- Severe Acute Respiratory Syndrome virus (SARS virus), 25, 28
+- Sexual reproduction, 27
+- Short-term impacts, 146
+  - faster technological progress and AI capabilities desirable, 149–150
+  - near- and medium-term impacts, 150–151
+  - openness leading to faster AI development and deployment, 146–146
+- "Sin" mutual fund, 51
+- Single AIs, 329–331
+- Singleton, 341, 358
+  - hypothesis, 363
+  - reducing probability, 154–155
+- Singularity, 29, 423, 426–427
+- SISR, see Superintelligent Super-Responsible
+- Skepticism, 187
+
+### T
+- Telepresence robot, 276
+- Telesurgical robotics, 275
+- Terrorist
+  - attacks, 39
+  - cell, 39
+- Theorem provers, 47
+- Threats, 25
+  - from fundamentalism, 35
+- Tight regulation, 121
+- TLS, see Transport Layer Security
+- TN, see True Negatives
+- Tolerance defense system, 183
+- Totalitarian relinquishment, 31
+- TP, see True Positives
+- Trace elements, 26
+- Track, 412
+- Trade-off between convenience and safety, 192
+- Trading AIs, 323–324
+  - node, 326
+- Training
+  - content-free learning systems, 80
+  - process, 237
+- Training data, 237–239
+- Training phase defenses, 242–243
+- Trains and planes, 411–413
+  - consequentialism, 413
+  - deontology, 414
+- Transbiological phase, 41
+- Transcranial stimulation (TCS), 116
+- Transition to vision, 188, 189
+  - "good" and "bad" AI, 189–190
+  - proposed approach for developing AI security and safety architecture, 190
+- Transparency, 58, 114
+- Transparent society, 362–363
+- Transportation, 38
+- Transport Layer Security (TLS), 279
+- "Trapdoor", 34
+- Trauma, 204
+- Trial-and-error approaches, 28
+- Trinity, 12
+  - test, 15
+- Tripartite methodology
+  - avoiding after-the-fact dilemmas, 404
+  - break down human language, 401
+  - calculating good, 403
+  - conceptual investigations and moral dilemma, 400–401
+  - controlled approach, 401–402
+  - empirical investigations and moral dilemma, 402–403
+  - technical investigations and real-world application, 404
+  - VSD to intelligent agents using, 400
+- Trolley problem, 411fn
+- True Negatives (TN), 258
+- True Positives (TP), 257
+- Two-phased attack, 26
+
+### U
+- UAVs, see Unmanned aerial vehicles
+- Ukantianism, 415
+- Unbounded utilitarianism, 380
+- Uncontrolled self-replication, 6
+- Understanding/consciousness, 424–426
+- Uniformity and diversity to achieving resiliency, 183
+- Unilateral destruction, 359–361
+- Universal unilateralism threat, 358, 360
+- Unmanned aerial vehicles (UAVs), 345
+- Unrealistic counterexamples, 417
+- Unrestricted domain, 302
+- Unrestricted non-polychotomous voting (UNV), 296, 305
+  - Condorcet's Jury theorem, 306
+  - consent maximization, approval voting, and, 307–308
+  - May's theorem and Arrow's theorem, 306
+  - Rae–Taylor theorem, 306–307
+- UNV, see Unrestricted non-polychotomous voting
+- "Uploading", 63
+- US-CERT, 139
+- U.S. Defense Advanced Research Projects Agency (DARPA), 346
+- US policy Recommendations, 138
+  - academia, 141
+  - Department of Defense and IC, 139–140
+  - Department of Homeland Security, 139
+  - Department of State, 139
+  - individuals and society, 141–142
+  - technology sector, 140–141
+  - United States Congress, 138
+- U.S. research foundation IARPA, 377
+- Utilitarianism, 413, 415
+- Utility function, 49–53, 264–265
+
+### V
+- Value alignment via tractable preference distance
+  - background, 251–252
+  - using CP-nets to model ethics, 252–255
+  - using CP-nets to support ethical decisions, 256–257
+  - empirical analysis, 257–259
+  - notions of distance between CP-nets, 255–256
+- Value learning problem
+  - ambiguity identification, 94
+  - corrigibility, 92–93
+  - extrapolating volition, 95–96
+  - goals, 90–92
+  - inductive value learning, 92
+  - modeling intent, 94–95
+  - ontology identification, 93
+- Value(s), 162
+  - claim, 316
+  - drift toward instrumental goal, 388–389
+- Value-sensitive design (VSD), 396, 397
+  - conceptual investigation, 399–400
+  - empirical investigations, 400
+  - harmonizing VSD, 404–406
+  - to intelligent agents, 400–404
+  - methodologies, 276
+  - technical investigations, 400
+- Verification, 228–229
+- Virtual machines (VM), 179
+- Visions of Technology (Rhodes), 12
+- VM, see Virtual machines
+- Voluntary compliance, 192–193
+- von Neumann probes, 13
+- von Neumann's mathematical theory of microeconomics, 47
+- Voting system, 296, 300–301
+- VSD, see Value-sensitive design
+- Vulnerabilities, 52

@@ -1,0 +1,61 @@
+
+- 24. 对此，弗兰纳里补充道：“不幸的是，极少数人就能造成巨大的破坏”（Flannery 2016）。
+- 25. 有人可能会提出我们应该向太空扩张。但鉴于托雷斯（2018d）列举的诸多原因，太空殖民可能带来真正灾难性的后果，导致s风险或“苦难风险”。
+- 26. 也就是说，这是我们已知的对人类生存最可怕的长期威胁。在我们的集体想象之外，可能还隐藏着更多更严重的未来风险。
+- 27. 请注意，虽然可能出现具有数量特征而非质量特征的超级智能，但不太可能出现具有质量特征而非数量特征的超级智能。因此，如果超级智能确实会出现，我们应预期它要么是纯数量型，要么是数量-质量兼具型。
+- 28. 请注意，一个“超级说服者”超级智能可能不需要使用武力来阻止，比如说，灭世者毁灭人类。相反，它可能只是通过劝说让这些人放弃造成伤害。参见Bostrom等（2017）。
+- 29. 关于反对社会选择伦理学方法的论证，参见Baum即将发表的著作。
+- 30. 一个尚未讨论的问题是超级智能出现的可能性有多大。首先，我认为，从哲学角度被理解为等同于工具理性的智能，本质上是算法性的，并且可以在任何表现出正确功能组织的物理系统中多重实例化。其次，近期对AI专家的调查表明，在2100年之前，超级智能加入我们这个淡蓝色小点上的人类的概率接近100%（Müller和Bostrom 2014；另见Sotala和Yampolskiy 2014）。换句话说，如果专家们可信的话，今天出生的孩子极有可能在有生之年目睹机器超级智能的出现。这进一步支持了这样一种主张：如果理论家设法解决了控制问题，计算机科学家设法成功地将人类价值观编程到AI中，那么这里提出的想法是现实的。
+- 31. 这是对本章一些实际批评的回应。
+- 32. 斜体为引用时所加。
+- 33. 感谢Matthijs Maas向我指出这一点。
+- 34. 请注意，本章部分内容取自Torres（2016, 2017a），有时是逐字引用的。
+
+## 参考文献
+
+- Allison, Graham. 2004. 《核恐怖主义：最终可预防的灾难》。纽约：亨利·霍尔特公司。
+- Baum, Seth. 2014. 高风险新兴技术的巨大下行困境。《Physica Scripta》。89(12)。http://iopscience.iop.org/article/10.1088/0031-8949/89/12/128004
+- Baum, Seth. 人工智能中的社会选择伦理。AI & Society。即将出版。http://www.sethbaum.com/ac/fc_SocialChoice.pdf
+- Baum, Seth, Timothy Maher, 和 Jacob Haqq-Misra. 2013. 双重灾难：社会崩溃引发的间歇性平流层地球工程。《环境系统与决策》。33(1): 168–180。
+- Bobbitt, Philip. 2002. 《阿喀琉斯之盾：战争、和平与历史进程》。纽约：诺普夫出版社。
+- Boles, Kent, Krishna Kannan, John Gill, Martina Felderman, Heather Gouvis, Bolyn Hubby, Kurt Kamrud, J. Craig Venter, 和 Daniel Gibson. 2017. 用于按需生产生物制剂的数字-生物转换器。《自然生物技术》。35: 672–675。
+- Bostrom, Nick. 2002. 存在性风险：分析人类灭绝情景及相关危害。《进化与技术杂志》。9(1): 1–30。
+- Bostrom, Nick. 2005. 超人类主义价值观。《当代哲学评论》。4: 3–14。
+- Bostrom, Nick. 2006. 什么是单一体？《语言与哲学研究》。5(2): 48–54。
+- Bostrom, Nick. 2009. 人类的未来。见《技术哲学的新浪潮》，J.-K.B. Olsen、E. Selinger 和 S. Riis 编。纽约：帕尔格雷夫·麦克米伦。
+- Bostrom, Nick. 2013. 将存在性风险预防作为全球优先事项。《全球政策》。4(1): 15–31。
+- Bostrom, Nick. 2014. 《超级智能：路径、危险与策略》。英国牛津：牛津大学出版社。
+- Bostrom, Nick, Allan Dafoe, 和 Carrick Flynn. 2017. 超级智能AI开发中的政策需求。工作草案。https://nickbostrom.com/papers/aipolicy.pdf
+- Bostrom, Nick, Thomas Douglas, 和 Anders Sandberg. 2016. 单边主义者的诅咒：一致性原则的论据。《社会认识论》。30(4): 350–371。
+- Brin, David. 1996. 透明社会。《连线》。访问于2017年7月27日。https://www.wired.com/1996/12/fftransparent/
+- Bueno de Mesquita, Bruce, Alastair Smith, Randolph M. Siverson, 和 James Morrow. 2003. *政治生存的逻辑*。马萨诸塞州剑桥：麻省理工学院出版社。
+- Chalmers, David. 2010. 奇点：一种哲学分析。*意识研究杂志*。17(9): 7–65。
+- Clark, Andy, 和 David Chalmers. 1998. 延展心灵。*分析*。58: 10–23。
+- Cotton-Barratt, Owen, 和 Toby Ord. 2015. *存在性风险与存在性希望：定义*。FHI技术报告。访问于2017年7月27日。https://www.fhi.ox.ac.uk/Existential-risk-and-existential-hope.pdf
+- Deudney, Daniel. 2007. *约束权力：从城邦到地球村的共和安全理论*。新泽西州普林斯顿：普林斯顿大学出版社。
+- Diamond, Jared. 1999. 人类历史上最严重的错误。*发现*。访问于2017年7月27日。http://discovermagazine.com/1987/may/02-the-worst-mistake-in-the-history-of-the-human-race
+- Drexler, Eric. 2013. *彻底丰裕：纳米技术革命将如何改变文明*。纽约：公共事务出版社。
+- Dunbar, Robin. 1998. *梳毛、八卦与语言的进化*。马萨诸塞州剑桥：哈佛大学出版社。
+- Einstein, Albert. 2016. *爱因斯坦文集：人文主义随笔、相对论与我眼中的世界*。哲学图书馆/开放之路出版社。
+- Flannery, Frances. 2016. *理解启示录式恐怖主义：对抗激进思维*。纽约：劳特利奇出版社。
+- Forge, John. 2010. 关于“双重用途”定义的注解。*科学与工程伦理*。16(1): 111–118。
+- Fukuyama, Francis. 1989. 历史的终结？*国家利益*。16: 3–18。
+- Fukuyama, Francis. 1992. *历史的终结与最后的人*。纽约：埃文图书公司。
+- Fukuyama, Francis. 2002. *我们的后人类未来：生物技术革命的后果*。纽约：法拉尔、斯特劳斯与吉鲁出版社。
+- Hanson, Robin. 2003. 我们应该对价值观投票，但对信念下注吗？http://mason.gmu.edu/~rhanson/futarchy2013.pdf
+- Harris, Sam. 2010. *道德景观：科学如何决定人类价值观*。纽约：自由出版社。
+- Hobbes, Thomas. 1651 (2016). *利维坦，或教会与公民的共同体之质料、形式与权力*。CreateSpace独立出版平台。
+- Huntington, Samuel. 1993. 文明的冲突？*外交事务*。72(3): 22–49。
+- Kant, Immanuel. 2009. 康德关于公正世界秩序的愿景。见*布莱克威尔康德伦理学指南*，T.E. Hill 编。纽约：布莱克威尔出版社，196–208。
+- Kurzweil, Ray. 2005. *奇点临近：当人类超越生物学*。纽约：维京出版社。
+- Langman, Peter. 2010. *为什么孩子杀人：校园枪手内心探秘*。纽约：圣马丁格里芬出版社。
+- Mann, Steve, Jason Nolan, 和 Barry Wellman. 2003. 反向监视：发明和使用可穿戴计算设备在监控环境中收集数据。*监视与社会*。1(3): 331–355。
+- Mathews, Lee. 2016. 愤怒玩家被指为2016年最具破坏性DDoS攻击的元凶。*福布斯*。https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/leemathhews/2016/11/17/angry-gamer-blamed-for-most-devastating-ddos-of-2016/&refURL=https://en.wikipedia.org/&referrer=https://en.wikipedia.org/#78871c472dac
+- Miller, Jeff, 和 Wolf Schwarz. 2014. 大脑信号并不能证明无意识决策：基于分级意识觉知的解释。*意识与认知*。24: 12–21。
+- MIT. 2017. 基因工程拥有拯救或毁灭人类的力量。*麻省理工科技评论*。https://www.technologyreview.com/s/608903/genetic-engineering-holds-the-power-to-save-humanity-or-kill-it/
+- Mukunda, Gautam, Kenneth Oye, 和 Scott Mohr. 2009. 什么狰狞野兽？合成生物学、不确定性与生物安全的未来。*政治与生命科学*。28(2): 2–26。
+- Müller, Vincent, 和 Nick Bostrom. 2014. 人工智能的未来进展：专家意见调查。见*人工智能的基本问题*，V. Müller 编。德国柏林：施普林格出版社。
+- Persson, Ingmar, 和 Julian Savulescu. 2012. *不适任未来：道德增强的必要性*。英国牛津：牛津大学出版社。
+- Pinker, Steven. 2011. *人性中的善良天使：暴力为何减少*。纽约：维京出版社。
+- Rawls, John. 2002. *万民法：附公共理性观念再探*。马萨诸塞州剑桥：哈佛大学出版社。
+- Robock, Alan, Luke Oman, Georgiy Stenchikov, Owen Toon, Charles Bardeen, 和 Richard Turco. 2007. 区域核冲突的气候后果。*大气化学与物理*。7(8): 2003–2012。

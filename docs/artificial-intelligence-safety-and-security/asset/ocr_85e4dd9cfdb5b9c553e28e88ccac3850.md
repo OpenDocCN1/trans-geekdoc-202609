@@ -1,0 +1,21 @@
+# ADVANTAGES OF AI
+
+Let us briefly look at, what we know to be, some advantages of AI over human intelligence. In many cases we use AI for these advantages. There may well be many more but I just wanted to be clear on a few that are present today. In particular, a number of positive features associated with the performance of AI can be highlighted.
+
+The most apparent advantage is that many computers can carry out as many calculations in the blink of an eye (about one-third of a second) as a typical human does in a week. Not only that, but the computer will invariably get all the results correct. This processing speed can then be combined with phenomenal memory capabilities and retrieval. Even the most cynical amongst us agree that ‘on any issue of computing power, if computers do not have the advantage over human brains already, then they will certainly have it before too long’ (p. 42) [6].
+
+Just as with humans, the way an intelligent machine perceives the world around it depends on how it senses the world. And here again machines have an enormous advantage over humans, with the potential ability to sense as humans do but also to perceive in (for example) the infrared, ultraviolet, x-ray, and ultrasonic spectra. All of these frequencies are simply not sensed by a human. Indeed, as a human we may well have, at some time in our life, a super intelligent ultraviolet being standing right next to us and communicating with us via the infrared. However, we wouldn’t know it because we wouldn’t sense the creature.
+
+One problem with the human brain is that it has evolved to think about and understand the world around it, as being three dimensional, arguably four dimensional if we include time as well as space. Computers meanwhile are capable of dealing with hundreds of dimensions, and realizing relationships involving these dimensions. In fact computers have the potential to understand the world as the 10- or 11-dimensional entity that physicists now regard it as [13].
+
+The biggest advantage, I feel, for AI is in terms of communication abilities. In comparison with the capabilities of machines, human communication is so poor as to be embarrassing. Humans start with a highly complex set of electrochemical signals in their brain, involving ideas, emotions, images, concepts, and convert them to very slow, mechanical signals, in order to speak to someone else or press a keyboard, nothing more and nothing less. When they eventually receive the signals the receiving person then converts the mechanical sound waves back via their ears to electrochemical signals and tries to form some sort of understanding of what the original signals were all about.
+
+A high error rate, language, dialects, and a limitation to serial transmission all hamper things considerably. Essentially human communication is merely a simple coded version of our original thoughts. In comparison, machines can communicate around the world, with very little/no error, using standard languages, with millions of messages being successfully transmitted and received in parallel. Humans have improved communication through speech very little, whereas technology has been developed in leaps and bounds.
+
+# ALIEN ATTACK
+
+For a moment let us (for the sake of argument) assume that some form of aliens exists and that they travel to planet Earth for their own purposes, rather akin to the story told in H.G. Wells’ War of the Worlds [14]. Most likely the aliens (could be animal, machine, a combination of both [i.e. cyborgs] or maybe something other!) would think and understand in a different way to humans.
+
+So we might try to welcome them and get along with them. But we must remember that they would be in possession of a far superior technology to us – after all they have travelled safely all the way from a distant planet while the best we have done so far is to get a few folk to and from our own planet’s moon. Realistically, the aliens would probably be in a position to call the shots.
+
+In War of the Worlds the aliens use fire power to conquer planet Earth. Human weapon systems in defense simply have no effect. It is impossible to reason with them, they do not respond in a friendly way. They are not intelligent in the same way as humans are and their values are clearly different.

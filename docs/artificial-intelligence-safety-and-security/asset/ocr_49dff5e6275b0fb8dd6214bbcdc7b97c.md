@@ -1,0 +1,18 @@
+AI to increase their own personal power (despite the risks), presenting solutions that are similar to mechanisms already in use to “manage” humans offers tangible and familiar next steps. Many of the principles recommended here are not only familiar but also largely feasible, so we can start to implement them before the AI race gets out of hand.
+
+But there are also AI risks that are somewhat purely technical (i.e., that do not involve power or reflect desires, intentions, or even here may simply be a combination of more careful technical engineering and social controls. We believe studying GI as well as HI will be helpful in coming up with practical approaches to the stability problem.
+
+# THE DILEMMA OF THE HUMAN–AI BALANCE OF POWER
+
+The central dilemma in managing power is how to realize its potential benefits but not its potential harm. There are several approaches to what we call here the AI power management (APM) dilemma. The most basic approach, “Don’t ever build autonomous AI” strategy is almost impossible to enforce in the long run [21], so it should be viewed as a temporary stopgap. The next step is to build autonomous AI but to restrict its power. Simply stripping AI of any ability to control anything or influence anybody obviously removes its risks, but also most of its benefits, and makes its existence nearly pointless.
+
+To make AI both useful and safe, we need to match the right AI to the right job. This approach is intuitive and enforceable. Here are two examples that illustrate the range of options:
+
++   - A superintelligent AIE that does not control anything, has limited connectivity, and is specialized in (say) helping a few physicists unify the laws of physics is not dangerous. Therefore, it can have very high cognitive abilities, and be totally autonomous and conscious (if applicable).
++   - At the other extreme, the cognitive capabilities of a computer system that controls the launch of a nuclear missile should be severely curtailed. In fact, it should never be autonomous, which in our model means it is not really an AI system; it can only do what it is explicitly programmed to do.
+
+For convenience, let us define two types of computer systems. “Rule-based” systems are computers that are strictly controlled by their original programming, which includes most current computer systems. These systems are automatic but not autonomous. They make decisions, but only based on what they are explicitly programmed to do by their original programming, which is not significantly affected by subsequent training or “experience.” On the other hand, “AI” are autonomous systems that have the ability to make their own decisions based on data and “experience” gained during training or functioning, and not only based on rules defined by their initial programming. This definition covers a vast range of possibilities.
+
+# Modeling the Elements of AI Power
+
+Let us construct a simple model to match AI to the job by trading off AI cognitive capability with its span of control. Cognitive ability (which we do not yet have an objective way to measure) depends on the resources available to AI, including its hardware, CPU, memory, bandwidth, algorithms, and knowledge. Control is the ability to change something in our physical world (which obviously includes us). The span of control measures the overall scale of that control. Control includes direct physical control, like controlling the electric grid, piloting an airplane, or even selling stock. But it also includes indirect influence of other AI systems or humans, such as propagating certain views, making hiring recommendations, advising others, or allocating resources. So, connectivity to other

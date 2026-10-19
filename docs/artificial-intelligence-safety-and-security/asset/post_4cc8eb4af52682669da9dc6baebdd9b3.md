@@ -1,0 +1,54 @@
+
+- Branwen, G. “Slowing Moore’s law: How it could happen.” Gwern.net, 2012. https://www.gwern.net/Slowing%20Moore%27s%20Law#fnref32
+- Brynjolfsson, E., and A. McAfee. Race Against the Machine: How the Digital Revolution Is Accelerating Innovation, Driving Productivity, and Irreversibly Transforming Employment and the Economy. Brynjolfsson and McAfee, 2011. Lexington, MA: Digital Frontier. Kindle edition.
+- Bugaj, S. V., and B. Goertzel. “Five Ethical Imperatives and Their Implications for Human-AGI Interaction.” Dynamical Psychology 2007. http://goertzel.org/dynapsyc/2007/Five_Ethical_Imperatives_svbedit.htm
+- Buizza, R. “Chaos and weather prediction January 2000.” Analysis 12, 2002: 1–7. http://www2.gi.alaska.edu/~bh.../Chaos.pdf
+- Chalmers, D. “The Singularity: A Philosophical Analysis.” Journal of Consciousness Studies 17, 2010: 7–65. http://consc.net/papers/singularity.pdf
+- Chen, T. M., and S. Abu-Nimeh. “Lessons from Stuxnet.” Computer 44 no. 4, 2011: 91–93. doi:10.1109/MC.2011.115
+- Dennett, D. “Intentional Systems.” The Journal of Philosophy 68 no. 4, 1971: 87–106. http://www.jstor.org/stable/2025382.
+- Dennett, D. “Intentional Systems Theory.” In The Oxford Handbook of Philosophy of Mind, edited by B. McLaughlin, A. Beckermann, and S. Walter. Oxford, UK: Oxford University Press, 339–50, 2009. https://ase.tufts.edu/cogstud/dennett/papers/intentionalsystems.pdf
+- DeScioli, P., and R. Kurzban. “A Solution to the Mysteries of Morality.” Psychological Bulletin 139 no. 2, 2013: 477–96. doi:10.1037/a0029065.
+- Docherty, B. “Losing Humanity: The Case Against Killer Robots.” Report. Human Rights Watch, 2012. https://www.hrw.org/report/2012/11/19/losing-humanity/case-against-killer-robots.
+- Ehrenfeld, J. M. “WannaCry, Cybersecurity and Health Information Technology: A Time to Act.” Journal of Medical Systems, 41 no. 104, 2017. https://link.springer.com/article/10.1007/s10916-017-0752-1
+- Frey, C. B., and M. A. Osborne. “The Future of Employment: How Susceptible Are Jobs to Computerization?” Oxford Martin School, University of Oxford. September 2013. http://www.oxfordmartin.ox.ac.uk/downloads/academic/future-of-employment.pdf
+- Friedman, B., and P. H. Kahn. “Human Agency and Responsible Computing: Implications for Computer System Design.” The Journal of Systems and Software 17 no. 1, 1992: 7–14. doi:10.1016/0164-1212(92)90075-U
+- Gayle, D., A. Topping, I. Sample, S. Marsh, and V. Dodd. “NHS Seeks to Recover from Global Cyber-Attack as Security Concerns Resurface.” The Guardian, May 13, 2017. http://www.theguardian.com/society/2017/may/12/hospitals-across-england-hit-by-large-scale-cyber-attack
+- Goertzel, B. “Superintelligence: Fears, Promises and Potentials.” Journal of Evolution and Technology/WTA 25 no. 2, 2015: 55–87. http://jetpress.org/v25.2/goertzel.htm
+- Goertzel, B., J. Pitt, and Novamente LLC. “Nine Ways to Bias Open-Source AGI toward Friendliness.” Journal of Evolution and Technology 22 no. 1, 2012: 116–131. http://jetpress.org/v22/goertzel-pitt.htm
+- Good, I. J. “Speculations Concerning the First Ultraintelligent Machine.” Advances in Computers 6, 1965: 31–88.
+- Goodfellow, I., Y. Bengio, and A. Courville. Deep Learning. Cambridge: MIT Press, 2016.
+- Goodin, D. “First Known Hacker-Caused Power Outage Signals Troubling Escalation.” Ars Technica, January 4, 2016. https://arstechnica.com/security/2016/01/first-known-hacker-caused-power-outage-signals-troubling-escalation/
+- Grassegger, H., and M. Krogerus. “The Data That Turned the World Upside Down.” Motherboard, January 28, 2017. https://motherboard.vice.com/en_us/article/mg9vvn/how-our-likes-helped-trump-win
+- Greene, J. Moral Tribes: Emotion, Reason and the Gap Between Us and Them. London: Penguin Press, 2013.
+- Gunkel, D. J. The Machine Question: Critical Perspectives on AI, Robots, and Ethics. Cambridge: MIT Press, 2012.
+- Halevy, A., P. Norvig, and F. Pereira. “The Unreasonable Effectiveness of Data.” IEEE Intelligent Systems 24 no. 2, 2009: 8–12. doi:10.1109/MIS.2009.36.
+- Hall, J. S. Beyond AI: Creating the Conscience of the Machine. New York: Prometheus Books, 2007.
+- Hall, J. S. “Engineering Utopia.” In Artificial General Intelligence 2008: Proceedings of the First AGI Conference, edited by P. Wang, B. Goertzel, and S. Franklin, 460–67. http://dl.acm.org/citation.cfm?id=1566174.1566222
+- Hanson, R., and E. Yudkowsky. “The Hanson-Yudkowsky AI-Foom Debate.” Technical Report. Machine Intelligence Research Institute, 2013. https://intelligence.org/files/AIFoomDebate.pdf
+- Kiravuo, T., S. Tiilikainen, M. Särelä, and J. Manner. “Peeking under the Skirts of a Nation: Finding ICS Vulnerabilities in the Critical Digital Infrastructure.” In Proceedings of the 14th European Conference on Cyber Warfare and Security, edited by N. Abouzakhar, 137–44. Hertfordshire: Academic Conferences International, 2015.
+- Kosinski, M., D. Stillwell, and T. Graepel. “Private traits and attributes are predictable from digital records of human behavior.” Proceedings of the National Academy of Sciences of the United States of America, 110 no. 15, 2013: 5802–5805. https://doi.org/10.1073/pnas.1218772110
+- Lake, B. M., T. D. Ullman, J. B. Tenenbaum, and S. J. Gershman. “Building Machines That Learn and Think Like People.” Behavioral and Brain Sciences 2016: 1–101. https://arxiv.org/pdf/1604.00289.pdf
+- LoPucki, L. M. “Algorithmic Entities.” Law and Economics Research Paper. UCLA School of Law, April 2017. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2954173.
+- Lunt, T. F. “Automated Audit Trail Analysis and Intrusion Detection: A Survey.” In Proceedings of the 11th National Computer Security Conference, 65–74. New York: National Computer Security Center, 1988. http://csrc.nist.gov/publications/history/nissc/1988-11th-NCSC-proceedings.pdf
+- Manyika, J., M. Chui, M. Miremadi, J. Bughin, K. George, P. Willmott, M. Dewhurst, et al. “Harnessing Automation for a Future That Works.” Report. McKinsey Global Institute, January 2017. http://www.mckinsey.com/global-themes/digital-disruption/harnessing-automation-for-a-future-that-works.
+- McGinnis, J. O. “Accelerating AI.” Northwestern University Law Review 104, 2010: 366. http://www.northwesternlawreview.org/online/accelerating-ai-0
+- Miller, J. D. Singularity Rising: Surviving and Thriving in a Smarter, Richer, and More Dangerous World. Dallas: BenBella Books, 2012.
+- Mnih, V., A. P. Badia, M. Mirza, A. Graves, T. P. Lillicrap, T. Harley, D. Silver, and K. Kavukcuoglu. “Asynchronous Methods for Deep Reinforcement Learning.” In Proceedings of the 33rd International Conference on Machine Learning, 1928–37. New York: PMLR, 2016. http://proceedings.mlr.press/v48/mniha16.html
+- Mnih, V., K. Kavukcuoglu, D. Silver, A. A. Rusu, J. Veness, M. G. Bellemare, A. Graves et al. “Human-Level Control through Deep Reinforcement Learning.” Nature 518, 2015: 529–33.
+- O’Neil, C. Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy. London: Penguin, 2016.
+- Omohundro, S. M. “The Nature of Self-improving Artificial Intelligence.” Singularity Summit, 8–9, 2007. https://pdfs.semanticscholar.org/4618/cbdfd7da7a6f1b706e4397d4e5952b5c9a0.pdf
+- Omohundro, S. M. “The Basic AI Drives.” In Artificial General Intelligence 2008: Proceedings of the First AGI Conference, edited by P. Wang, B. Goertzel, and S. Franklin, 171, 483–92. Amsterdam: IOS Press, 2008.
+- Olson, M. The Logic of Collective Action: Public Goods and the Theory of Groups. Cambridge: Harvard University Press, 1965.
+- Parfit, D. Reasons and Persons. Oxford: Oxford University Press, 1984.
+- Popper, N. “Knight Capital Says Trading Glitch Cost It $440 Million.” The New York Times, August 2, 2012. https://dealbook.nytimes.com/2012/08/02/knight-capital-says-trading-mishap-cost-it-440-million/
+- Rönnqvist, S., and P. Sarlin. “Bank Distress in the News: Describing Events through Deep Learning.” Neurocomputing 2017. http://www.sciencedirect.com/science/article/pii/S0925231217301062
+- Schneier, B. “Inside the Twisted Mind of the Security Professional.” Wired, March 20, 2008. https://www.wired.com/2008/03/securitymatters-0320/
+- Securities and Exchange Commission 34-70694 Order Instituting Administrative and Cease-and-Desist Proceedings (filed October 16, 2013). 15 U.S.C. § 78a et seq. https://www.sec.gov/litigation/admin/2013/34-70694.pdf
+- Shulman, C. “Omohundro’s ‘Basic AI Drives’ and Catastrophic Risks.” The Singularity Institute 2010. https://intelligence.org/files/BasicAIDrives.pdf
+- Shulman, C., and A. Sandberg. “Implications of a Software-Limited Singularity.” In ECAP10: VIII European Conference on Computing and Philosophy, edited by K. Mainzer. Munich: Dr. Hut, 2010. https://intelligence.org/files/SoftwareLimited.pdf
+- Solomonoff, R. J. “The Time Scale of Artificial Intelligence: Reflections on Social Effects.” Human Systems Management 5 no. 2, 1985: 149–53. http://content.iospress.com/doi/10.3233/HSM-1985-5207
+- Sotala, K. “How Feasible Is the Rapid Development of Artificial Superintelligence?” Physica Scripta 92 no. 11, 2017: 113001. doi:10.1088/1402-4896/aa90e8
+- Sotala, K., and L. Gloor. “Superintelligence as a Cause or Cure for Risks of Astronomical Suffering.” Informatica, 41(4), 2017: 389–400. http://www.informatica.si/index.php/informatica/article/view/1877/1098
+- Sotala, K., and R. V. Yampolskiy. “Responses to Catastrophic AGI Risk: A Survey.” Physica Scripta 90 no. 1, 2015. doi:10.1088/0031-8949/90/1/018001
+- Sparrow, R. “Robots and Respect: Assessing the Case against Autonomous Weapon Systems.” Ethics & International Affairs 30 no. 1, 2016: 93–116. doi:10.1017/S0892679415000647
+- Spelke, E. S., and K. D. Kinzler. “Core Knowledge.” Developmental Science 10 no. 1, 2007: 89–96.

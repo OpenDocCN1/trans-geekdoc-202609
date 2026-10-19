@@ -1,0 +1,54 @@
+
+- Branwen, G. “摩尔定律放缓：它如何发生。” Gwern.net, 2012. https://www.gwern.net/Slowing%20Moore%27s%20Law#fnref32
+- Brynjolfsson, E., and A. McAfee. 与机器竞赛：数字革命如何加速创新、推动生产力并不可逆转地改变就业和经济。 Brynjolfsson and McAfee, 2011. Lexington, MA: Digital Frontier. Kindle 版.
+- Bugaj, S. V., and B. Goertzel. “五项伦理准则及其对人类-AGI 交互的影响。” Dynamical Psychology 2007. http://goertzel.org/dynapsyc/2007/Five_Ethical_Imperatives_svbedit.htm
+- Buizza, R. “混沌与 2000 年 1 月的天气预报。” Analysis 12, 2002: 1–7. http://www2.gi.alaska.edu/~bh.../Chaos.pdf
+- Chalmers, D. “奇点：哲学分析。” Journal of Consciousness Studies 17, 2010: 7–65. http://consc.net/papers/singularity.pdf
+- Chen, T. M., and S. Abu-Nimeh. “来自 Stuxnet 的教训。” Computer 44 no. 4, 2011: 91–93. doi:10.1109/MC.2011.115
+- Dennett, D. “意向系统。” The Journal of Philosophy 68 no. 4, 1971: 87–106. http://www.jstor.org/stable/2025382.
+- Dennett, D. “意向系统理论。” 载于 牛津心灵哲学手册, edited by B. McLaughlin, A. Beckermann, and S. Walter. Oxford, UK: Oxford University Press, 339–50, 2009. https://ase.tufts.edu/cogstud/dennett/papers/intentionalsystems.pdf
+- DeScioli, P., and R. Kurzban. “道德之谜的解决方案。” Psychological Bulletin 139 no. 2, 2013: 477–96. doi:10.1037/a0029065.
+- Docherty, B. “失去人性：反对杀人机器人的案例。” 报告. Human Rights Watch, 2012. https://www.hrw.org/report/2012/11/19/losing-humanity/case-against-killer-robots.
+- Ehrenfeld, J. M. “WannaCry、网络安全与健康信息技术：行动的时刻。” Journal of Medical Systems, 41 no. 104, 2017. https://link.springer.com/article/10.1007/s10916-017-0752-1
+- Frey, C. B., and M. A. Osborne. “就业的未来：工作对计算机化的易感性如何？” Oxford Martin School, University of Oxford. September 2013. http://www.oxfordmartin.ox.ac.uk/downloads/academic/future-of-employment.pdf
+- Friedman, B., and P. H. Kahn. “人类能动性与负责任的计算：对计算机系统设计的影响。” The Journal of Systems and Software 17 no. 1, 1992: 7–14. doi:10.1016/0164-1212(92)90075-U
+- Gayle, D., A. Topping, I. Sample, S. Marsh, and V. Dodd. “NHS 寻求从全球网络攻击中恢复，安全问题再度浮现。” The Guardian, May 13, 2017. http://www.theguardian.com/society/2017/may/12/hospitals-across-england-hit-by-large-scale-cyber-attack
+- Goertzel, B. “超智能：恐惧、承诺与潜力。” Journal of Evolution and Technology/WTA 25 no. 2, 2015: 55–87. http://jetpress.org/v25.2/goertzel.htm
+- Goertzel, B., J. Pitt, and Novamente LLC. “九种使开源 AGI 倾向友好性的方法。” Journal of Evolution and Technology 22 no. 1, 2012: 116–131. http://jetpress.org/v22/goertzel-pitt.htm
+- Good, I. J. “关于第一台超智能机器的推测。” Advances in Computers 6, 1965: 31–88.
+- Goodfellow, I., Y. Bengio, and A. Courville. 深度学习. Cambridge: MIT Press, 2016.
+- Goodin, D. “首例已知黑客导致停电信号令人担忧的升级。” Ars Technica, January 4, 2016. https://arstechnica.com/security/2016/01/first-known-hacker-caused-power-outage-signals-troubling-escalation/
+- Grassegger, H., and M. Krogerus. “颠覆世界的数据。” Motherboard, January 28, 2017. https://motherboard.vice.com/en_us/article/mg9vvn/how-our-likes-helped-trump-win
+- Greene, J. 道德部落：情感、理性与我们与他们之间的鸿沟. London: Penguin Press, 2013.
+- Gunkel, D. J. 机器问题：人工智能、机器人与伦理的批判性视角. Cambridge: MIT Press, 2012.
+- Halevy, A., P. Norvig, and F. Pereira. “数据的不可思议的有效性。” IEEE Intelligent Systems 24 no. 2, 2009: 8–12. doi:10.1109/MIS.2009.36.
+- Hall, J. S. 超越人工智能：创造机器的良知. New York: Prometheus Books, 2007.
+- Hall, J. S. “工程乌托邦。” 载于 2008 人工通用智能：首届 AGI 会议论文集, edited by P. Wang, B. Goertzel, and S. Franklin, 460–67. http://dl.acm.org/citation.cfm?id=1566174.1566222
+- Hanson, R., and E. Yudkowsky. “汉森-尤德科夫斯基 AI-Foom 辩论。” 技术报告. Machine Intelligence Research Institute, 2013. https://intelligence.org/files/AIFoomDebate.pdf
+- Kiravuo, T., S. Tiilikainen, M. Särelä, and J. Manner. “窥探一个国家的裙底：寻找关键数字基础设施中的 ICS 漏洞。” 载于 第 14 届欧洲网络战与安全会议论文集, edited by N. Abouzakhar, 137–44. Hertfordshire: Academic Conferences International, 2015.
+- Kosinski, M., D. Stillwell, and T. Graepel. “私人特质和属性可从人类行为的数字记录中预测。” Proceedings of the National Academy of Sciences of the United States of America, 110 no. 15, 2013: 5802–5805. https://doi.org/10.1073/pnas.1218772110
+- Lake, B. M., T. D. Ullman, J. B. Tenenbaum, and S. J. Gershman. “构建像人一样学习和思考的机器。” Behavioral and Brain Sciences 2016: 1–101. https://arxiv.org/pdf/1604.00289.pdf
+- LoPucki, L. M. “算法实体。” 法律与经济学研究论文. UCLA School of Law, April 2017. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2954173.
+- Lunt, T. F. “自动化审计跟踪分析与入侵检测：综述。” 载于 第 11 届全国计算机安全会议论文集, 65–74. New York: National Computer Security Center, 1988. http://csrc.nist.gov/publications/history/nissc/1988-11th-NCSC-proceedings.pdf
+- Manyika, J., M. Chui, M. Miremadi, J. Bughin, K. George, P. Willmott, M. Dewhurst, et al. “利用自动化实现可行的未来。” 报告. McKinsey Global Institute, January 2017. http://www.mckinsey.com/global-themes/digital-disruption/harnessing-automation-for-a-future-that-works.
+- McGinnis, J. O. “加速人工智能。” Northwestern University Law Review 104, 2010: 366. http://www.northwesternlawreview.org/online/accelerating-ai-0
+- Miller, J. D. 奇点崛起：在更聪明、更富裕、更危险的世界中生存与繁荣. Dallas: BenBella Books, 2012.
+- Mnih, V., A. P. Badia, M. Mirza, A. Graves, T. P. Lillicrap, T. Harley, D. Silver, and K. Kavukcuoglu. “深度强化学习的异步方法。” 载于 第 33 届国际机器学习会议论文集, 1928–37. New York: PMLR, 2016. http://proceedings.mlr.press/v48/mniha16.html
+- Mnih, V., K. Kavukcuoglu, D. Silver, A. A. Rusu, J. Veness, M. G. Bellemare, A. Graves et al. “通过深度强化学习实现人类水平控制。” Nature 518, 2015: 529–33.
+- O’Neil, C. 数学毁灭武器：大数据如何加剧不平等并威胁民主. London: Penguin, 2016.
+- Omohundro, S. M. “自我改进人工智能的本质。” Singularity Summit, 8–9, 2007. https://pdfs.semanticscholar.org/4618/cbdfd7da7a6f1b706e4397d4e5952b5c9a0.pdf
+- Omohundro, S. M. “基本人工智能驱动。” 载于 2008 人工通用智能：首届 AGI 会议论文集, edited by P. Wang, B. Goertzel, and S. Franklin, 171, 483–92. Amsterdam: IOS Press, 2008.
+- Olson, M. 集体行动的逻辑：公共物品与群体理论. Cambridge: Harvard University Press, 1965.
+- Parfit, D. 理由与人. Oxford: Oxford University Press, 1984.
+- Popper, N. “骑士资本称交易故障使其损失 4.4 亿美元。” The New York Times, August 2, 2012. https://dealbook.nytimes.com/2012/08/02/knight-capital-says-trading-mishap-cost-it-440-million/
+- Rönnqvist, S., and P. Sarlin. “新闻中的银行困境：通过深度学习描述事件。” Neurocomputing 2017. http://www.sciencedirect.com/science/article/pii/S0925231217301062
+- Schneier, B. “安全专业人士扭曲的思维内部。” Wired, March 20, 2008. https://www.wired.com/2008/03/securitymatters-0320/
+- Securities and Exchange Commission 34-70694 Order Instituting Administrative and Cease-and-Desist Proceedings (filed October 16, 2013). 15 U.S.C. § 78a et seq. https://www.sec.gov/litigation/admin/2013/34-70694.pdf
+- Shulman, C. “Omohundro 的‘基本人工智能驱动’与灾难性风险。” The Singularity Institute 2010. https://intelligence.org/files/BasicAIDrives.pdf
+- Shulman, C., and A. Sandberg. “软件受限奇点的含义。” 载于 ECAP10: VIII European Conference on Computing and Philosophy, edited by K. Mainzer. Munich: Dr. Hut, 2010. https://intelligence.org/files/SoftwareLimited.pdf
+- Solomonoff, R. J. “人工智能的时间尺度：对社会影响的反思。” Human Systems Management 5 no. 2, 1985: 149–53. http://content.iospress.com/doi/10.3233/HSM-1985-5207
+- Sotala, K. “人工智能快速发展的可行性如何？” Physica Scripta 92 no. 11, 2017: 113001. doi:10.1088/1402-4896/aa90e8
+- Sotala, K., and L. Gloor. “超智能作为天文级痛苦风险的原因或治愈方法。” Informatica, 41(4), 2017: 389–400. http://www.informatica.si/index.php/informatica/article/view/1877/1098
+- Sotala, K., and R. V. Yampolskiy. “对灾难性 AGI 风险的应对：综述。” Physica Scripta 90 no. 1, 2015. doi:10.1088/0031-8949/90/1/018001
+- Sparrow, R. “机器人与尊重：评估反对自主武器系统的案例。” Ethics & International Affairs 30 no. 1, 2016: 93–116. doi:10.1017/S0892679415000647
+- Spelke, E. S., and K. D. Kinzler. “核心知识。” Developmental Science 10 no. 1, 2007: 89–96.

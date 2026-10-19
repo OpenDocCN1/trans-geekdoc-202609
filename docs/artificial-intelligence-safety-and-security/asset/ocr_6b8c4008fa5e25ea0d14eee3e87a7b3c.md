@@ -1,0 +1,17 @@
+custom tailored to speak to an individual's political frame, worldview, and psychological needs and vulnerabilities.
+
+Because **AIs are learning systems**, they improve rapidly with experience. An AI could autonomously determine which of its thousands of pieces of propaganda, disinformation, or intimidation are most effective, and can emphasize or evolve those, while quickly ending failing campaigns. AI tools will test target weak points and learn what provokes the desired emotional response to addict users to manipulative information. By probing with multiple accounts and messages, an AI could learn that personal threats to a particular journalist provoke little response, but threats to their loved ones provoke fear. So, the MADCOM could pose as members of a local hate group who threaten the journalist’s children until they stop reporting. And, while that journalist might not be troubled by abuse from a few MADCOM trolls, an onslaught of threats from thousands of AI-driven accounts—most of which look and speak like people in their community—would generate fear in even the bravest.
+
+# IMPLICATIONS FOR HUMAN COMMUNICATORS
+
+How can journalists, diplomats, public-relations staff, politicians, news anchors, and government officials plan to compete with MADCOMs that can interpret and react to stories almost instantly, developing and deploying customized communications personalized to individuals and groups before humans can even begin a first draft?*
+
+The answer is: **humans can’t compete** alone. On digital networks, **only humans teamed with AI machines can compete with AI machines**. The rise of MADCOMs will spur an information arms race as empowered individuals, NGOs, corporations, and governments all strive to shape narratives around events. The “bad guys” will have their MADCOM AIs, and the “good guys” will have their own. Everyone will have AI tools that try to identify adversary MADCOM accounts. These attribution tools will be used to anticipate computational propaganda campaigns, respond to ongoing operations, and differentiate human users from machine users. Similar to the cybersecurity struggle, the Internet will be the battleground for a continual cycle of one-upmanship as technologists improve AI-detection tools, and propagandists improve MADCOMs to blend in with humans and avoid detection.
+
+This could result in a dystopian **MADCOM future**. The most sophisticated machine accounts will be nearly indistinguishable from the human accounts. But, many propagandists may not bother with detection tools because there is little marginal cost to spamming machines and people with speech and content. So, in a bizarre twist, machines will frequently run their information campaigns *against other machines*. The targeted machine-driven accounts will respond with their own communications, and the online information space will be swamped with machines arguing with machines. MADCOMs could overwhelm human-generated speech and communications online.
+
+# THE IMPLICATIONS OF A MADCOM WORLD—THREE SCENARIOS FOR THE FUTURE
+
+> “World War III will be a guerrilla information war, with no divisions between military and civilian participation.”
+> 
+> —**Marshall McLuhan**

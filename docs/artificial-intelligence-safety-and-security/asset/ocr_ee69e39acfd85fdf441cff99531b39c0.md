@@ -1,0 +1,20 @@
+# A PROGRAM FOR GNR DEFENSE
+
+> > We come from goldfish, essentially, but that [doesn’t] mean we turned around and killed all the goldfish.
+> > Maybe [the AIs] will feed us once a week ... If you had machine with a 10 to the 18th power IQ over humans, wouldn’t you want it to govern, or at least control your economy?
+> >
+> > —Seth Shostak
+
+How can we secure the profound benefits of GNR while ameliorating its perils? Here’s a review of a suggested program for containing the GNR risks:
+
+The most urgent recommendation is to *greatly increase our investment in defensive technologies*. Since we are already in the G era, *the bulk of this investment today should be in (biological) antiviral medications and treatments*. We have new tools that are well suited to this task. RNA interference, for example, can be used to block gene expression. Virtually all infections (as well as cancer) rely on gene expression at some point during their life cycles.
+
+Efforts to anticipate the defensive technologies needed to safely guide N and R should also be supported, and these should be substantially increased as we get closer to the feasibility of molecular manufacturing and strong AI, respectively. A significant side benefit would be to accelerate effective treatments for infectious disease and cancer. I’ve testified before Congress on this issue, advocating the investment of tens of billions of dollars per year (less than 1 percent of the GDP) to address this new and under-recognized existential threat to humanity.48
+
++   - We need to streamline the regulatory process for genetic and medical technologies. The regulations do not impede the malevolent use of technology but significantly delay the needed defenses. As mentioned, we need to better balance the risks of new technology (for example, new medications) against the known harm of delay.
++   - A global program of confidential, random serum monitoring for unknown or evolving biological pathogens should be funded. Diagnostic tools exist to rapidly identify the existence of unknown protein or nucleic acid sequences. Intelligence is key to defense, and such a program could provide invaluable early warning of an impending epidemic Such a ‘pathogen sentinel’ program has been proposed for many years by public health authorities but has never received adequate funding.
++   - Well-defined and targeted temporary moratoriums, such as the one that occurred in the genetics field in 1975, may be needed from time to time. But such moratoriums are unlikely to be necessary with nanotechnology. Broad efforts at relinquishing major areas of technology serve only to continue vast human suffering by delaying the beneficial aspects of new technologies, and actually make the dangers worse.
++   - Efforts to define safety and ethical guidelines for nanotechnology should continue. Such guidelines will inevitably become more detailed and refined as we get closer to molecular manufacturing.
++   - To create the political support to fund the efforts suggested above, it is necessary to *raise public awareness of these dangers*. Because, of course, there exists the downside of raising alarm and generating uninformed backing for broad antictechnology mandates, we also need to create a public understanding of the profound benefits of continuing advances in technology.
++   - These risks cut across international boundaries—which is, of course, nothing new; biological viruses, software viruses, and missiles already cross such boundaries with impunity. *International cooperation* was vital to containing the SARS virus and will become increasingly vital in confronting future challenges. Worldwide organizations such as the World Health Organization, which helped coordinate the SARS response, need to be strengthened.
++   - A contentious contemporary political issue is the need for preemptive action to combat threats, such as terrorists with access to weapons of mass destruction or rogue nations
