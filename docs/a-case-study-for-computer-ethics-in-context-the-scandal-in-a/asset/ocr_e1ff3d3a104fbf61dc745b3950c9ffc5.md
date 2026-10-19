@@ -1,0 +1,11 @@
+Interviewer: How was the job search for you, and what are you doing now?
+
+Stan: The job search was tough. It’s easier in computational biology than in some other fields – I’d hate to be a humanities PhD for example. But universities even in hard sciences still pump out three or four times as many PhDs as are needed for the available positions. There were scores of applicants for every role. I got some good teaching experience during my PhD and knew I would love to become a lecturer, but the only place I managed to get an interview was at one of the bottom of the table English universities that used to be a polytechnic. Even they didn’t offer me the role. They said I was their second choice, and they’d keep my application on file in case anything suitable came up. Even so it was in the South East of England and the pay wouldn’t have been enough to live comfortably there. I’d need a flatmate at the least to afford a decent standard of living, and I’m a bit wary of putting myself in that kind of position.
+
+Interviewer: What then?
+
+Stan: After several months of rejections, I managed to get a two-year postdoc position at a university in the West Midlands. That’s the one I just started last month, and I’m assuming the reason you contacted me. It’s a mid-ranking institution within commuting distance of Wolverhampton. The cost of living there makes it doable. It’s not quite the research area I had hoped to go into though. It’ll get me some needed experience. I’ve got a few publications now, and I’m going to focus on getting as many as possible in the first 18 months there so that I can hopefully get a lectureship or a longer postdoc position lined up before the contract ends. It seems a nice place to work so far, but I’ve learned my lesson about being too generous with my time, and I need to make sure I focus on what’s best for my career.
+
+Interviewer: I’m glad to hear things have worked out for you, at least for the medium term. Has anyone mentioned the Dunglen scandal there?
+
+Stan: My immediate superior knew Blackbriar, so he and I have talked about it a bit. And I think he got in touch with you to talk to me. Really though, nobody cares much any more. You mention Dunglen and people say, ‘Oh, I recognise the name but I don’t remember anything else about it’. It’s old news, and five years

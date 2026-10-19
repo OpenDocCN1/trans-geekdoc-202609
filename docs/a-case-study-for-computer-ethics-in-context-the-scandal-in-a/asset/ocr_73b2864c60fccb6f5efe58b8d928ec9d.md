@@ -1,0 +1,11 @@
+Is this what the University of Dunglen’s policy is going to cover? We have no idea… but we do know where AI is heading, and we know what we need to do to harness it. We can only hope that those responsible for its development are equally thoughtful of its broader long-term implications.
+
+# THE DEATH OF BELIEVABILITY
+
+One clause in the new AUP we haven’t devoted much attention to yet is the last one. The AUP prohibits:
+
++   - Material which is digitally manipulated to convey a false impression
+
+We’ve already talked a bit about how wide some of these clauses are, and this is perhaps the one that is actually the most important and most far-reaching. On the face of it, it seems reasonable – the university does not want its systems being used to transmit intentional misinformation. However, a lot of content is going to be caught by this. At one end, one might argue an image post-processed in Adobe Photoshop has been ‘digitally manipulated’ to ‘convey a false impression’. And indeed, in some cases one might even say this kind of routine operation transgresses into the realm of the unethical. Use of Photoshop and Instagram filters has been linked to everything from creating a distorted sense of beauty standards (Rajanala et al., 2018) to literal white-washing of dark skin in corporate imagery. In 2009, Microsoft was caught replacing a Black office worker for a white worker in a promotional campaign in Poland. L’Oreal stopped using Photoshop to exaggerate the effect of their mascara in promotional literature after a widespread backlash. There are numerous incidents of universities in America pasting imagery of Black students into promotional material to make their campus seem more diverse. In 2023, an image of the UK’s Prime Minister Rishi Sunak poorly pouring a pint was digitally changed to make it appear like flawless pull. Sometimes the manipulation is less blatant – for example, brightening the hues across an entire photograph will tend to lighten skin tones. Where do we draw the line between everyday, acceptable digital manipulation and outright abuse?
+
+One suspects though that it’s not this specific problem that the university is trying to shut down – what is far more likely in the current climate is that they are worried about deep fakes.

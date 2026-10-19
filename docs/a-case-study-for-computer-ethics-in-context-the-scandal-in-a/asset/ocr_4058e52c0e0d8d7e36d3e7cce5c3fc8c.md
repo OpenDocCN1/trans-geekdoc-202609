@@ -1,0 +1,11 @@
+in the course of the interviews that the consequences for those involved can be both formal and informal in nature. In a formal sense, the people affected are hampered in their careers, such as when extending temporary contracts and applying for grants. On an individual level some victims have been demoralized. In an informal sense, there is an element of stigmatization that may persist long into their further career.
+
+It goes on to add:
+
+It is not only individual people that are affected, but confidence in science, and in social psychology in particular, has been badly dented by Mr. Stapel’s actions. Other victims are the universities of Tilburg, Groningen and Amsterdam, whose reputations have been damaged, academic publishers, which have been obliged to withdraw published articles, providers of research funds, whose grants have been used fraudulently, and fellow researchers, who may have been denied the grants and direct funding that were awarded instead to Mr. Stapel.
+
+It’s not just direct financial consequences that are impacted by fraud, as the report indicates. It’s also the loss of possible opportunities for those who may have been competing honestly for grant money. In addition to the direct monetary costs of grants awarded, many research careers may simply not have been given the opportunity to begin.
+
+We live in a world now where our indiscretions and mistakes are recorded for the world to view. A simple Google search of our name may bring up many pieces of information that we’d prefer the world at large did not see. Around 70% of US employers in 2010 had rejected applicants over what they have found by Googling their names and examining what they have left public on their social networks (Cross-Tab, 2010) – a practice sometimes known as cyber-vetting. A survey by CareerBuilder in 2018 suggested the problem was getting slightly worse, although the prevalence varies a lot by sector. UK employers also engage in this practice, but to a lesser degree (a mere 41% of recruiters have rejected candidates based on online information).
+
+It’s important to note too that the information found may not even be accurate – 90% of US recruiters say they are concerned about information accuracy and claim to attempt to corroborate its correctness. In the UK,
