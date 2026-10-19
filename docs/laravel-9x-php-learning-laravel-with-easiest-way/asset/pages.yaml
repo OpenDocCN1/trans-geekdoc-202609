@@ -1,0 +1,3025 @@
+- pgno: 0
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Update PHP
+
+
+    # Laravel 9.x
+
+
+    # Home Learning Center |
+
+
+    Learning Laravel with Easiest Way
+
+
+    The book will teach you Laravel 9.x step by step.
+
+
+    By: Andy Turner
+
+
+    *Best Laravel Books for All Time With Update Version:*
+
+
+    *This Learning Center Teach You Full LARAVEL Course Part by Part.*
+
+
+    Copyright (c) Taylor Hicks
+
+
+    *All rights reserved. Including the right to reproduce this book or portions thereof,
+    in any form. No part of this text may be reproduced in any form without the express
+    written permission of the author.*'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '| Title | Page |
+
+    |---|---|
+
+    | Introduction | 49 |
+
+    | Environment Configuration | 50 |
+
+    | Environment Variable Types | 53 |
+
+    | Retrieving Environment Configuration | 54 |
+
+    | Determining The Current Environment | 55 |
+
+    | Accessing Configuration Values | 57 |
+
+    | Configuration Caching | 58 |
+
+    | Debug Mode | 59 |
+
+    | Maintenance Mode | 60 |
+
+    | 5. Directory Structure | 68 |
+
+    | Introduction | 70 |
+
+    | The Root Directory | 70 |
+
+    | The app Directory | 70 |
+
+    | The bootstrap Directory | 71 |
+
+    | The config Directory | 71 |
+
+    | The database Directory | 72 |
+
+    | The public Directory | 73 |
+
+    | The resources Directory | 74 |
+
+    | The routes Directory | 74 |
+
+    | The storage Directory | 75 |
+
+    | The tests Directory | 77 |
+
+    | The vendor Directory | 77 |
+
+    | The App Directory | 77 |
+
+    | The Broadcasting Directory | 80 |
+
+    | The Console Directory | 80 |
+
+    | The Events Directory | 80 |
+
+    | The Exceptions Directory | 81 |
+
+    | The Http Directory | 81 |
+
+    | The Jobs Directory | 82 |
+
+    | The Listeners Directory | 82 |
+
+    | The Mail Directory | 83 |
+
+
+    breaking changes. While referring to the Laravel system or its parts from your
+    application or bundle, you ought to constantly utilize a form requirement, for
+    example, ^9.0 , since significant arrivals of Laravel do incorporate breaking
+    changes. In any case, we endeavor to constantly guarantee you might refresh to
+    another major discharge in one day or less.
+
+
+    # Named Arguments
+
+
+    Named contentions are not covered by'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '| Title | Page |
+
+    |---|---|
+
+    | The Models Directory | 84 |
+
+    | The Notifications Directory | 84 |
+
+    | The Policies Directory | 85 |
+
+    | The Providers Directory | 86 |
+
+    | The Rules Director | 86 |
+
+    | 6. Deployment | 97 |
+
+    | Introduction | 98 |
+
+    | Server Requirements | 99 |
+
+    | Server Configuration | 99 |
+
+    | Nginx | 99 |
+
+    | Optimization | 102 |
+
+    | Autoloader Optimization | 102 |
+
+    | Optimizing Configuration Loading | 103 |
+
+    | Optimizing Route Loading | 104 |
+
+    | Optimizing View Loading | 104 |
+
+    | Debug Mode | 105 |
+
+    | Deploying With Forge / Vapor | 106 |
+
+    | 7. Service Container | 119 |
+
+    | Introduction | 120 |
+
+    | Zero Configuration Resolution | 123 |
+
+    | When To Use The Container | 125 |
+
+    | Binding | 127 |
+
+    | Binding Basics | 127 |
+
+    | Binding Interfaces To Implementations | 131 |
+
+    | Contextual Binding | 133 |
+
+    | Binding Primitives | 134 |
+
+    | Binding Typed Variadics | 136 |
+
+    | Tagging | 139 |
+
+    | Extending Bindings | 140 |
+
+    | Resolving | 141 |
+
+    | The Make Method | 141 |
+
+    | Automatic Injection | 143 |
+
+
+    Laravel''s regressive similarity rules. We may decide to rename work contentions
+    when fundamental to further develop the Laravel codebase. Accordingly, utilizing
+    named contentions while calling Laravel techniques ought to be done mindfully
+    and with the comprehension that the boundary names might change from now on.
+
+
+    # Support Policy'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '| Title | Page |
+
+    |---|---|
+
+    | Method Invocation & Injection | 146 |
+
+    | Container Events | 148 |
+
+    | PSR-11 | 149 |
+
+    | 8. Service Providers | 150 |
+
+    | Introduction | 151 |
+
+    | Writing Service Providers | 152 |
+
+    | The Register Method | 153 |
+
+    | The Boot Method | 157 |
+
+    | Registering Providers | 159 |
+
+    | Deferred Providers | 160 |
+
+    | 9. Facades | 163 |
+
+    | Introduction | 163 |
+
+    | When To Use Facades | 167 |
+
+    | Facades Vs. Dependency Injection | 168 |
+
+    | Facades Vs. Helper Functions | 170 |
+
+    | How Facades Work | 173 |
+
+    | Real-Time Facades | 176 |
+
+    | Facade Class Reference | 181 |
+
+    | 10. Routing | 184 |
+
+    | Basic Routing | 185 |
+
+    | Redirect Routes | 191 |
+
+    | View Routes | 192 |
+
+    | Route Parameters | 193 |
+
+    | Required Parameters | 193 |
+
+    | Optional Parameters | 195 |
+
+    | Regular Expression Constraints | 196 |
+
+    | Named Routes | 199 |
+
+    | Route Groups | 203 |
+
+    | Middleware | 204 |
+
+    | Controllers | 205 |
+
+    | Subdomain Routing | 205 |
+
+    | Route Prefixes | 206 |
+
+    | Route Name Prefixes | 207 |
+
+
+    For on the other hand LTS discharges, for example, Laravel 9, bug fixes are accommodated
+    2 years and security fixes are accommodated 3 years. These deliveries give the
+    longest window of help and support. For general deliveries, bug fixes are accommodated
+    year and a half and security fixes are accommodated 2 years. For every one of
+    extra libraries, including Lumen, unquestionably the most recent delivery'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '| Title | Page |
+
+    |---|---|
+
+    | Route Model Binding | 208 |
+
+    | Implicit Binding | 208 |
+
+    | Implicit Enum Binding | 215 |
+
+    | Explicit Binding | 217 |
+
+    | Fallback Routes | 222 |
+
+    | Rate Limiting | 223 |
+
+    | Defining Rate Limiters | 223 |
+
+    | Attaching Rate Limiters To Routes | 227 |
+
+    | Form Method Spoofing | 229 |
+
+    | Accessing The Current Route | 230 |
+
+    | Cross-Origin Resource Sharing (CORS) | 231 |
+
+    | Route Caching | 232 |
+
+    | 11. Middleware | 234 |
+
+    | Introduction | 234 |
+
+    | Defining Middleware | 236 |
+
+    | Registering Middleware | 240 |
+
+    | Global Middleware | 240 |
+
+    | Excluding Middleware | 242 |
+
+    | Middleware Groups | 243 |
+
+    | Sorting Middleware | 245 |
+
+    | Middleware Parameters | 246 |
+
+    | Terminable Middleware | 248 |
+
+    | 12. CSRF Protection | 251 |
+
+    | Introduction | 251 |
+
+    | Preventing CSRF Requests | 253 |
+
+    | Excluding URIs | 256 |
+
+    | X-CSRF-Token | 258 |
+
+    | X-XSRF-Token | 259 |
+
+
+    gets bug fixes. Moreover, if it''s not too much trouble, audit the data set variants
+    upheld by Laravel.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: local area and challenge our advancement group to transport astonishing, strong
+    new highlights without presenting breaking changes. Thusly, we have sent an assortment
+    of vigorous highlights to Laravel 8 without breaking in reverse similarity, for
+    example, equal testing support, further developed Breeze starter units, HTTP client
+    enhancements, and, surprisingly, new Eloquent relationship types, for example,
+    "has one of many". Thusly, this obligation to send extraordinary new highlights
+    during the ongoing delivery will probably lead to future "major" discharges being
+    essentially utilized for "support" errands, for example, overhauling upstream
+    conditions, which should be visible in these delivery notes. Laravel 9 proceeds
+    with the upgrades made in Laravel 8.x by presenting support for Symfony 6.0 parts,
+    Symfony Mailer, Flysystem 3.0, further developed route:list yield, a Laravel Scout
+    information base driver, new Eloquent accessor/mutator linguistic structure, implied
+    course ties through Enums, and a assortment of other bug fixes and convenience
+    enhancements
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Contribution Guide
+
+
+    +   - Bug Reports
+
+    +   - Support Questions
+
+    +   - Core Development Discussion
+
+    +   - Which Branch?
+
+    +   - Compiled Assets
+
+    +   - Security Vulnerabilities
+
+    +   - Coding Style
+
+    +   - PHPDoc
+
+    +   - StyleCI
+
+    +   - Code of Conduct'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'source code is overseen on GitHub, and there are vaults for every one of the
+    Laravel projects:'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'If you discover a security vulnerability within Laravel, please send an email
+    to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly
+    addressed.
+
+
+    # Coding Style
+
+
+    Laravel follows the PSR-2 coding standard and the PSR-4 autoloading standard.
+
+
+    # PHPDoc
+
+
+    Below is an example of a valid Laravel documentation block. Note that the @param
+    attribute is followed by
+
+
+    two spaces, the argument type, two more spaces, and finally the variable name:
+
+
+    # PHPDoc
+
+
+    Below is an example of a valid Laravel documentation block. Note that the @param
+    attribute is followed by two spaces, the argument type, two more spaces, and finally
+    the variable name:'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# StyleCI
+
+
+    You can definitely relax in the event that your code styling is flawed! StyleCI
+    will consequently combine any style fixes into the Laravel vault after pull demands
+    are combined. This permits us to zero in on the substance of the commitment and
+    not the code style.
+
+
+    # Code of Conduct
+
+
+    The Laravel set of rules is gotten from the Ruby set of principles. Any infringement
+    of the set of principles might be accounted for to Taylor Otwell.
+
+
+    +   - Participants will be tolerant of opposing views.
+
+    +   - Participants must ensure that their language and actions are free of personal
+    attacks and sdisparaging ersonal remarks.
+
+    +   - When interpreting the words and actions of others, participants should always
+    assume good intentions.
+
+    +   - Behavior that can be reasonably considered harassment will not be tolerated.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Installation
+
+
+    +   - Meet Laravel
+
+    +   - Why Laravel?
+
+    +   - Your First Laravel Project
+
+    +   - Getting Started On macOS
+
+    +   - Getting Started On Windows
+
+    +   - Getting Started On Linux
+
+    +   - Choosing Your Sail Services
+
+    +   - Installation Via Composer
+
+    +   - Initial Configuration
+
+    +   - Environment Based Configuration
+
+    +   - Directory Configuration
+
+    +   - Next Steps
+
+    +   - Laravel The Full Stack Framework
+
+    +   - Laravel The API Backend
+
+
+    # Meet Laravel
+
+
+    Laravel is a web application system with expressive, exquisite language structure.
+    A web system gives a construction and beginning stage for making your application,
+    permitting you to zero in on making something astounding while we sweat the subtleties.
+    Laravel endeavors to give an astounding designer experience while giving strong
+    elements for example,'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'careful reliance infusion, an expressive information base deliberation layer,
+    lines and booked positions, unit and reconciliation testing, and that''s just
+    the beginning. Whether you are new to PHP or web systems or have long periods
+    of involvement, Laravel is a system that can develop with you. We''ll assist you
+    with making your most memorable strides as a web engineer or give you a lift as
+    you take your skill to a higher level. We can hardly hold back to see what you
+    construct.
+
+
+    # Why Laravel?
+
+
+    There are an assortment of devices and systems accessible to you while building
+    a web application.
+
+
+    Notwithstanding, we accept Laravel is the most ideal decision for building present
+    day, full-stack web applications.
+
+
+    # A Progressive Framework
+
+
+    We like to consider Laravel a "moderate" structure. We imply that Laravel develops
+    with you. If you''re simply moving into web advancement, Laravel''s tremendous
+    library of documentation, guides, and video instructional exercises will assist
+    you with getting acquainted with everything without becoming overpowered. Assuming
+    you''re a senior engineer, Laravel gives you strong instruments for reliance infusion,
+    unit testing, lines, constant occasions, and that''s just the beginning. Laravel
+    is'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'tweaked for building proficient web applications and prepared to deal with
+
+    big business jobs.
+
+
+    # A Scalable Framework
+
+
+    Laravel is unbelievably versatile. Because of the scaling-accommodating nature
+    of PHP and Laravel''s underlying support for quick, circulated store frameworks
+    like Redis, level scaling with Laravel is a breeze. Truth be told, Laravel applications
+    have been effectively scaled to deal with a huge number of solicitations each
+    month. Need outrageous scaling? Stages like Laravel Vapor permit you to run your
+    Laravel application at almost boundless scale on AWS''s most recent serverless
+    innovation.
+
+
+    # A Community Framework
+
+
+    Laravel joins the best bundles in the PHP environment to offer the most vigorous
+    and engineer well-disposed structure accessible. Moreover, a huge number of skilled
+    engineers from around the world have added to the system. Who knows, perhaps you''ll
+    even turn into a Laravel supporter.
+
+
+    # Your First Laravel Project
+
+
+    We believe it should be just about as simple as conceivable to begin with Laravel.
+    There are an assortment of choices for creating and running a Laravel project
+    on your own PC. While you might wish to investigate these choices sometime in
+    the future, Laravel gives Sail, an underlying answer for'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'running your Laravel project utilizing Docker. Docker is an instrument for
+    running applications and administrations in little, light-weight "holders" which
+    do not obstruct your neighborhood PC''s introduced programming or design. This
+    implies you don''t need to stress over designing or setting up muddled advancement
+    devices like web servers and data sets on your PC. To begin, you just need to
+    introduce Docker Work area. Laravel Sail is a light-weight order line interface
+    for communicating with Laravel''s default Docker arrangement. Sail gives an incredible
+    beginning stage to building a Laravel application utilizing PHP, MySQL, and Redis
+    without expecting earlier Docker experience.
+
+
+    {tip} Already a Docker expert? Don''t worry! Everything about Sail can be customized
+    using the docker-compose.yml file included with Laravel.
+
+
+    # Getting Started On macOS
+
+
+    Assuming that you''re creating on a Mac and Docker Desktop is as of now introduced,
+    you can utilize a straightforward terminal order to make another Laravel project.
+    For instance, to make another Laravel application in a catalog named "model application",
+    you might run the accompanying order in your terminal:
+
+
+    ```
+
+    curl -s "https://laravel.build/example-app" | bash
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'Obviously, you can change "model application" in this URL to anything you like.
+    The Laravel application''s index will be made inside the catalog you execute the
+    order from. After the undertaking has been made, you can explore to the application
+    catalog and begin Laravel Sail. Laravel Sail gives a basic order line interface
+    for cooperating with Laravel''s default Docker arrangement:
+
+
+    ```
+
+    Cd example-app
+
+    ```
+
+
+    ```
+
+    ./vendor/bin/sail up
+
+    ```
+
+
+    The first time you run the Sail up command, Sail''s application containers will
+    be built on your machine.
+
+
+    # Getting Started On Windows
+
+
+    Before we make another Laravel application on your Windows machine, try to introduce
+    Docker Desktop. Then, you ought to guarantee that Windows Subsystem for Linux
+    2 (WSL2) is introduced what''s more, empowered. WSL permits you to run Linux twofold
+    executables locally on Windows 10. Data on the most proficient method to introduce
+    and empower WSL2 can be found inside Microsoft''s engineer climate documentation.
+
+
+    {tip} After installing and enabling WSL2, you should ensure that Docker Desktop
+    is'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '```
+
+    cd example-app
+
+    ```
+
+
+    ```
+
+    php artisan serve
+
+    ```
+
+
+    # The Laravel Installer
+
+
+    Or, you may install the Laravel Installer as a global Composer dependency:
+
+
+    ```
+
+    composer global require laravel/installer
+
+    laravel new example-app
+
+    cd example-app
+
+    php artisan serve
+
+    ```
+
+
+    Make sure to place Composer''s system-wide vendor bin directory in your $PATH
+    so the Laravel executable can be located by your system. This directory exists
+    in different locations based on your operating system; however, some common locations
+    include:
+
+
+    +   - macOS: $HOME/.composer/vendor/bin
+
+    +   - Windows:
+
+    +     %USERPROFILE%\AppData\Roaming\Composer\vendor\bin
+
+    +   - GNU / Linux Distributions: $HOME/.config/composer/vendor/bin
+
+    +     or
+
+    +   - $HOME/.composer/vendor/bin
+
+
+    For convenience, the Laravel installer can also create a Git repository for your
+    new project. To indicate that you want a Git repository to be created,'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# Directory Configuration
+
+
+    Laravel ought to constantly be served out of the foundation of the "web registry"
+    designed for your web server. You shouldn''t endeavor to serve a Laravel application
+    out of a subdirectory of the "web index". Endeavoring to do so could uncover touchy
+    documents that exist inside your application.
+
+
+    # Next Steps
+
+
+    Since you have made your Laravel project, you might be thinking about what to
+    realize straightaway. To begin with, we unequivocally suggest getting comfortable
+    with how Laravel functions by perusing the accompanying documentation:
+
+
+    +   - **Request Lifecycle**
+
+    +   - **Configuration**
+
+    +   - **Directory Structure**
+
+    +   - **Service Container**
+
+    +   - **Facades**
+
+
+    How you need to utilize Laravel will likewise direct the subsequent stages on
+    your excursion. There are an assortment of approaches to use Laravel, and we''ll
+    investigate two essential use cases for the system underneath.
+
+
+    # Laravel The Full Stack Framework'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'Laravel might act as a full stack system. By "full stack" structure we imply
+    that you will utilize Laravel to course demands to your application and render
+    your frontend by means of Blade layouts or utilizing a single-page application
+    half breed innovation like Inertia.js. This is the most widely recognized method
+    for utilizing the Laravel structure. In the event that this is the means by which
+    you intend to utilize Laravel, you might need to look at our documentation on
+    steering, sees, or the Eloquent ORM. Also, you may be keen on finding out about
+    local area bundles like Livewire also, Inertia.js. These bundles permit you to
+    involve Laravel as a full-stack structure while appreciating a significant number
+    of the UI benefits given by single-page JavaScript applications. Assuming you
+    are involving Laravel as a full stack system, we likewise unequivocally urge you
+    to figure out how to arrange your application''s CSS and JavaScript utilizing
+    Laravel Mix.
+
+
+    {tip} If you want to get a head start building your application, check out one
+    of our official application starter kits.
+
+
+    # Laravel The API Backend
+
+
+    Laravel may likewise act as an API backend to a JavaScript single-page application
+    or versatile application. For model, you could involve Laravel as an API backend
+    for your Next.js application. In this unique situation, you might utilize Laravel
+    to give confirmation and information'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# Configuration
+
+
+    +   - Introduction
+
+    +   - Environment Configuration
+
+    +     - Environment Variable Types
+
+    +     - Retrieving Environment Configuration
+
+    +     - Determining The Current Environment
+
+    +   - Accessing Configuration Values
+
+    +   - Configuration Caching
+
+    +   - Debug Mode
+
+    +   - Maintenance Mode'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# Introduction
+
+
+    All of the design documents for the Laravel system are put away in the config
+    index. Each choice is archived, so go ahead and glance through the documents and
+    get to know the choices accessible to you. These design documents permit you to
+    arrange things like your data set association data, your mail server data, as
+    well as different other center design values, for example, your application timezone
+    and encryption key.
+
+
+    # Environment Configuration
+
+
+    It is frequently useful to have different design values in view of the climate
+    where the application is running. For instance, you might wish to utilize an alternate
+    store driver locally than you do on your creation server. To make this a snap,
+    Laravel uses the DotEnv PHP library. In a new Laravel establishment, the root
+    registry of your application will contain a .env.example document that characterizes
+    numerous normal climate factors. During the Laravel establishment process, this
+    document will naturally be replicated to .env . Laravel''s default .env record
+    contains some normal setup esteems that might vary in light of whether your application
+    is running locally or on a creation web server. These qualities are then recovered
+    from different Laravel design records inside the config index utilizing Laravel''s
+    env work. Assuming you are creating with a group, you might wish to keep'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'including a .env.example record with your application. By placing placeholder
+    values in the model setup document, different engineers in your group can obviously
+    see which climate factors are expected to run your application.
+
+
+    > {tip} Any variable in your .env file can be overridden by external environment
+    variables such as server-level or system-level environment variables.
+
+
+    # Environment File Security
+
+
+    Your .env document ought not be focused on your application''s source control,
+    since each designer/server utilizing your application could require an alternate
+    climate arrangement. Moreover, this would be a security risk in the occasion an
+    interloper accesses your source control store, since any touchy accreditations
+    would get uncovered.
+
+
+    # Additional Environment Files
+
+
+    Prior to stacking your application''s current circumstance factors, Laravel decides
+    whether either the APP_ENV climate variable has been remotely given or on the
+    other hand if the --env CLI contention has been indicated. Assuming this is the
+    case, Laravel will endeavor to stack an .env.[APP_ENV] document on the off chance
+    that it exists. On the off chance that it doesn''t exist, the default .env record
+    will be stacked.
+
+
+    # Environment Variable Types'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: 'you, truth be told will see a considerable lot of the choices are now utilizing
+    this assistant:
+
+
+    ```
+
+    ''debug'' => env(''APP_DEBUG'', false),
+
+    ```
+
+
+    The second value passed to the env function is the "default value". This value
+    will be returned if
+
+
+    no environment variable exists for the given key.
+
+
+    # Determining The Current Environment
+
+
+    The current application environment is determined via the APP_ENV variable from
+    your .env file.
+
+
+    You may access this value via the environment method on the App facade:
+
+
+    ```
+
+    use Illuminate\Support\Facades\App;
+
+
+    $environment = App::environment();
+
+    ```
+
+
+    You may also pass arguments to the environment method to determine if the environment
+    matches a given value. The method will return true if the environment matches
+    any of the given values:'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "```\nif (App::environment('local')) {\n    // The environment is local\n}\n\
+    \nif (App::environment(['local', 'staging'])) {\n    // The environment is either\
+    \ local OR staging...\n}\n```\n\n{tip} The current application environment detection\
+    \ can be overridden by defining a serverlevel APP_ENV environment variable.\n\n\
+    # Accessing Configuration Values\n\nYou may effortlessly get to your arrangement\
+    \ values utilizing the worldwide config assistant capacity from anyplace in your\
+    \ application. The arrangement values might got to utilize \"spot\" linguistic\
+    \ structure, which incorporates the name of the document and choice you wish to\
+    \ get to. A default worth may likewise be determined also, will be returned in\
+    \ the event that the arrangement choice doesn't exist:\n\n```\n$value = config('app.timezone');\n\
+    \n// Retrieve a default value if the configuration value does not exist...\n$value\
+    \ = config('app.timezone', 'Asia/Seoul');\n```\n\nTo set configuration values\
+    \ at runtime, pass an array to the config helper:"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '```
+
+    config([''app.timezone'' => ''America/Chicago'']);
+
+    ```
+
+
+    # Configuration Caching
+
+
+    To give your application a speed help, you ought to reserve all of your design
+    documents into a single document utilizing the config:cache Artisan order. This
+    will consolidate the entirety of the setup choices for your application into a
+    solitary document which can be immediately stacked by the system. You ought to
+    regularly run the php artisan config:cache order as a feature of your creation
+    sending process. The order ought not be run during nearby improvement as arrangement
+    choices will often should be altered during the direction of your application''s
+    turn of events.
+
+
+    > {note} If you execute the config:cache command during your deployment process,
+    you should be sure that you are only calling the env function from within your
+    configuration files. Once the configuration has been cached, the .env file will
+    not be loaded; therefore, the env function will only return external, system level
+    environment variables.
+
+
+    # Debug Mode
+
+
+    The debug option in your config/app.php configuration file determines how much
+    information about an error is actually displayed to the user. By default, this
+    option is set to respect the value of the APP_DEBUG'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '```
+
+    php artisan down --refresh=15
+
+    ```
+
+
+    You may also provide a retry option to the down command, which will be set as
+    the Retry After HTTP header''s value, although browsers generally ignore this
+    header:
+
+
+    ```
+
+    php artisan down --retry=60
+
+    ```
+
+
+    # Bypassing Maintenance Mode
+
+
+    Even while in maintenance mode, you may use the secret option to specify a maintenance
+    mode bypass token:
+
+
+    ```
+
+    php artisan down --secret="1630542a-246b-4b66-afa1-dd72a4c43515"
+
+    ```
+
+
+    After placing the application in maintenance mode, you may navigate to the application
+    URL matching this token and Laravel will issue a maintenance mode bypass cookie
+    to your browser:
+
+
+    ```
+
+    https://example.com/1630542a-246b-4b66-afa1-dd72a4c43515
+
+    ```
+
+
+    When accessing this hidden route, you will then be redirected to the / route of
+    the application. Once the cookie has been issued to your browser, you will be
+    able to browse the application normally as if it was not in maintenance mode.
+
+
+    {tip} Your maintenance mode secret should typically consist of alpha-numeric characters'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# Directory Structure
+
+
+    # Introduction
+
+
+    # The Root Directory
+
+
+    +   - The app Directory
+
+    +   - The bootstrap Directory
+
+    +   - The config Directory
+
+    +   - The database Directory
+
+    +   - The public Directory
+
+    +   - The resources Directory
+
+    +   - The routes Directory
+
+    +   - The storage Directory
+
+    +   - The tests Directory
+
+    +   - The vendor Directory
+
+
+    # The App Directory
+
+
+    +   - The Broadcasting Directory
+
+    +   - The Console Directory
+
+    +   - The Events Directory
+
+    +   - The Exceptions Directory
+
+    +   - The Http Directory
+
+    +   - The Jobs Directory
+
+    +   - The Listeners Directory
+
+    +   - The Mail Directory
+
+    +   - The Models Directory
+
+    +   - The Notifications Directory
+
+    +   - The Policies Directory'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: 'The config directory, as the name implies, contains all of your application''s
+    configuration files. It''s a great idea to read through all of these files and
+    familiarize yourself with all of the options available to you.
+
+
+    # The Database Directory
+
+
+    The resources index contains your sees along with your rough, un-aggregated assets
+    like CSS then again JavaScript. This inventory in like manner houses all of your
+    language records.
+
+
+    # The Public Directory
+
+
+    The public directory contains the index.php file, which is the entry point for
+    all requests entering your application and configures autoloading. This directory
+    also houses your assets such as images, JavaScript, and CSS.
+
+
+    # The Resources Directory
+
+
+    The resources index contains your site along with your unrefined, un-aggregated
+    assets like CSS and JavaScript. This index, in a similar manner, houses all of
+    your language records.
+
+
+    # The Routes Directory
+
+
+    The course registry contains all of the course definitions for your application.
+    Naturally, a few'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: 'Course records are incorporated with Laravel: web.php, api.php, console.php,
+    and channels.php. The web.php record contains courses that the RouteServiceProvider
+    places in the web middleware bunch, which gives meeting state, CSRF assurance,
+    and treat encryption. On the off chance that your application doesn''t offer a
+    stateless, RESTful API, then almost certainly each of your courses will be characterized
+    in the web.php record. The api.php record contains courses that the RouteServiceProvider
+    places in the programming interface middleware bunch. These courses are expected
+    to be stateless, so demands entering the application through these courses are
+    planned to be verified by means of tokens and won''t approach meeting state. The
+    console.php document is where you might characterize all of your conclusion-based
+    console orders. Each conclusion is bound to an order occasion, permitting a straightforward
+    way to deal with connecting with each order''s IO techniques. Despite the fact
+    that this document doesn''t characterize HTTP courses, it does characterize console-based
+    section focuses (courses) in your application. The channels.php record is where
+    you might enroll all of the occasion broadcasting channels that your application
+    supports.
+
+
+    # The Storage Directory
+
+
+    The limit file contains your logs, consolidated Blade designs, record-based gatherings,
+    and archive.
+
+
+    stores, and various records delivered by the design. This list is broken into
+    applications.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: 'structure, and log files. The application file may be used to store any records
+    created by your application. The framework vault is used to store structure-delivered
+    records and save them. At last, the logs index contains your application''s log
+    records.
+
+
+    The capacity/application/public catalog might be utilized to store client produced
+    records, like profile
+
+
+    symbols, that ought to be freely open. You ought to make an emblematic connection
+    at public/capacity
+
+
+    which focuses to this registry. You might make the connection utilizing the php
+    craftsman storage:link
+
+
+    Craftsman order.
+
+
+    # The Tests Directory
+
+
+    The tests catalog contains your mechanized tests. Model PHPUnit unit tests and
+    component tests are given out of the crate. Each test class ought to be suffixed
+    with the word "Test." You might run your tests utilizing either the phpunit or
+    php merchant/receptacle/phpunit orders. Alternatively, if you want a more precise
+    and beautiful representation of your experimental results, you could run your
+    tests using the php craftsman test artisan order.
+
+
+    # The Vendor Directory
+
+
+    The vendor directory contains your Composer dependencies.
+
+
+    # The App Directory'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# The Broadcasting Directory
+
+
+    The Broadcasting catalog contains all of the transmission channel classes for
+    your application. These classes are created utilizing the make:channel order.
+    There is no such thing as this index, naturally. However, it will be made for
+    you when you make your most memorable channel. To find out about channels, look
+    at the documentation on occasion communicating.
+
+
+    # The Console Directory
+
+
+    The Console registry contains all of the custom Artisan orders for your application.
+    These orders might be created by utilizing the make:command order. This catalog
+    also contains your control center piece, which is where your custom Artisan orders
+    are stored and your planned projects are described.
+
+
+    # The Events Directory
+
+
+    There is no such thing as this index, as a matter of course, but it will be made
+    for you by the event: generate and make: event artisan orders. The Events registry
+    houses occasion classes. Occasions could be used
+
+
+    You can use this to caution different pieces of your application that a given
+    activity has happened, giving a lot of adaptability and decoupling.
+
+
+    # The Exceptions Directory
+
+
+    The Exceptions index contains your application''s exemption controller and is
+    additionally a decent here and there for any special cases tossed by your application.
+    In the event that you might want to alter how your exemptions are logged or delivered,
+    you should change the Handler class in this registry.
+
+
+    # The Http Directory'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: 'The Http directory contains your controllers, middleware, and form requests.
+    Almost all of the logic to handle requests entering your application will be placed
+    in this directory.
+
+
+    # The Jobs Directory
+
+
+    This directory does not exist by default, but will be created for you if you execute
+    the make:job Artisan command. The Jobs directory houses the queueable jobs for
+    your application. Jobs may be queued by your application or run synchronously
+    within the current request lifecycle. Jobs that run synchronously during the current
+    request are sometimes referred to as "commands" since they are an implementation
+    of the command pattern.
+
+
+    # The Listeners Directory
+
+
+    This directory does not exist by default, but will be created for you if you execute
+    the event:generate or make:listener Artisan commands. The Listeners directory
+    contains the classes that handle your events. Event listeners receive an event
+    instance and perform logic in response to the event being fired. For example,
+    a UserRegistered event might be handled by a SendWelcomeEmail listener.
+
+
+    # The Mail Directory
+
+
+    This directory does not exist by default, but will be created for you if you execute
+    the make:mail Artisan command. The Mail directory contains all of'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# The Policies Directory
+
+
+    This directory does not exist by default, but will be created for you if you execute
+    the make:policy Artisan command. The Policies directory contains the authorization
+    policy classes for your application. Policies are used to determine if a user
+    can perform a given action against a resource.
+
+
+    # The Providers Directory
+
+
+    The Providers index contains all of the specialist organizations for your application.
+    Specialist organizations bootstrap your application by restricting administrations
+    in the assistance compartment, enrolling occasions, or carrying out some other
+    errands to set up your application for approaching solicitations. In a new Laravel
+    application, this index will, as of now, contain a few suppliers. You are allowed
+    to add your own suppliers to this catalog on a case-by-case basis.
+
+
+    # The Rules Directory
+
+
+    As a matter of course, there is no such thing as this index. However, one will
+    be made for you on the off chance that you execute the make: rule. Artisan order
+    The Rules catalog contains the custom approval rule objects for your application.
+    Rules are utilized to epitomize confounded approval rationale in a basic article.
+    For
+
+
+    For more data, look at the approval documentation.'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: 'Breeze distributes all of its code to your application so that you have full
+    control and perceivability over its elements and execution. After Breeze is introduced,
+    you ought to likewise order your resources so your application''s CSS record is
+    accessible:
+
+
+    ```
+
+    php artisan breeze:install
+
+    npm install
+
+    npm run dev
+
+    php artisan migrate
+
+    ```
+
+
+    Next, you may navigate to your application''s /login or /register URLs in your
+    web browser. All
+
+
+    of Breeze''s routes are defined within the routes/auth.php file.
+
+
+    {tip} To learn more about compiling your application''s CSS and JavaScript, check
+    out the
+
+
+    **Laravel Mix documentation.**
+
+
+    # Breeze & Inertia
+
+
+    Laravel Breeze also offers an Inertia.js frontend implementation powered by Vue
+    or React. To use'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: 'an Inertia stack, specify vue or react as your desired stack when executing
+    the breeze:install Artisan command:
+
+
+    ```
+
+    php artisan breeze:install vue
+
+
+    // or...
+
+
+    php artisan breeze:install react
+
+
+    npm install
+
+    npm run dev
+
+    php artisan migrate
+
+    ```
+
+
+    # Breeze & Next.js / API
+
+
+    Laravel Breeze can also scaffold an authentication API that is ready to authenticate
+    modern JavaScript applications such as those powered by Next, Nuxt, and others.
+    To get started, specify the api stack as your desired stack when executing the
+    breeze:install Artisan command:'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '```
+
+    php artisan breeze:install api
+
+
+    php artisan migrate
+
+    ```
+
+
+    During installation, Breeze will add a FRONTEND_URL environment variable to your
+    application''s .env file. This URL should be the URL of your JavaScript application.
+    This will typically be http://localhost:3000 during local development. In addition,
+    you should ensure that your APP_URL is set to http://localhost:8000 , which is
+    the default URL used by the serve Artisan command.
+
+
+    # Next.js Reference Implementation
+
+
+    Finally, you are ready to pair this backend with the frontend of your choice.
+    A Next reference implementation of the Breeze frontend is available on GitHub.
+    This frontend is maintained by Laravel and contains the same user interface as
+    the traditional Blade and Inertia stacks provided by Breeze.
+
+
+    Laravel Jetstream
+
+
+    While Laravel Breeze provides a simple and minimal starting point for building
+    a Laravel application, Jetstream augments that functionality with more robust
+    features and additional frontend technology stacks. For those'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: brand new to Laravel, we recommend learning the ropes with Laravel Breeze before
+    graduating to Laravel Jetstream. Jetstream provides a beautifully designed application
+    scaffolding for Laravel and includes login, registration, email verification,
+    two-factor authentication, session management, API support via Laravel Sanctum,
+    and optional team management. Jetstream is designed using Tailwind CSS and offers
+    your choice of Livewire or Inertia.js driven frontend scaffolding. Complete documentation
+    for installing Laravel Jetstream can be found within the official Jetstream documentation.
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: 'configuration has been cached, the .env file will not be loaded and all calls
+    to the env function for .env variables will return null.
+
+
+    # Optimizing Route Loading
+
+
+    If you are building a large application with many routes, you should make sure
+    that you are running the route:cache Artisan command during your deployment process:
+
+
+    ```
+
+    php artisan route:cache
+
+    ```
+
+
+    This command reduces all of your route registrations into a single method call
+    within a cached file, improving the performance of route registration when registering
+    hundreds of routes.
+
+
+    # Optimizing View Loading
+
+
+    When deploying your application to production, you should make sure that you run
+    the view:cache
+
+
+    Artisan command during your deployment process:
+
+
+    ```
+
+    php artisan view:cache
+
+    ```
+
+
+    This command precompiles all your Blade views so they are not compiled on demand,
+    improving the
+
+
+    performance of each request that returns a view.
+
+
+    # Debug Mode'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: 'In the event that you would like an absolutely serverless, auto-scaling arrangement
+    stage tuned for Laravel, look at Laravel Vapor. Laravel Vapor is a serverless
+    arrangement stage for Laravel, fueled by AWS. Send off your Laravel framework
+    on Vapor and become hopelessly enamored with the adaptable straightforwardness
+    of serverless. Laravel Vapor is calibrated by Laravel''s makers to work flawlessly
+    with the structure, so you can continue to compose your Laravel applications precisely
+    as you''re utilized to.
+
+
+    # Request Lifecycle
+
+
+    Introduction
+
+
+    Lifecycle Overview
+
+
+    +   - First Steps
+
+    +   - HTTP / Console Kernels
+
+    +   - Service Providers
+
+    +   - Routing
+
+    +   - Finishing Up
+
+
+    Focus On Service Providers
+
+
+    # Introduction
+
+
+    When using any tool in the "real world", you feel more confident if you understand
+    how that tool works. Application development is no different. When you understand
+    how your development tools function, you feel more comfortable and confident using
+    them.'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: 'The goal of this document is to give you a good, high-level overview of how
+    the Laravel framework works. By getting to know the overall framework better,
+    everything feels less "magical" and you will be more confident building your applications.
+    If you don''t understand all of the terms right away, don''t lose heart! Just
+    try to get a basic grasp of what is going on, and your knowledge will grow as
+    you explore other sections of the documentation.
+
+
+    # Lifecycle Overview
+
+
+    # First Steps
+
+
+    The entry point for all requests to a Laravel application is the public/index.php
+    file. All requests are directed to this file by your web server (Apache / Nginx)
+    configuration. The index.php file doesn''t contain much code. Rather, it is a
+    starting point for loading the rest of the framework.
+
+
+    The index.php file loads the Composer generated autoloader definition, and then
+    retrieves an instance of the Laravel application from bootstrap/app.php. The first
+    action taken by Laravel itself is to create an instance of the application / service
+    container.
+
+
+    # HTTP / Console Kernels'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# Routing
+
+
+    One of the most important service providers in your application is the App\Providers\RouteServiceProvider.
+    This service provider loads the route files contained within your application''s
+    directory. Go ahead, crack open the code and take a look at how it works!
+
+
+    Once the application has been bootstrapped and all service providers have been
+    registered, the will be handed off to the router for dispatching. The router will
+    dispatch the request to a
+
+
+    route or controller, as well as run any route specific middleware.
+
+
+    Middleware provide a convenient mechanism for filtering or examining HTTP requests
+    entering your application. For example, Laravel includes a middleware that verifies
+    if the user of your application is authenticated. If the user is not authenticated,
+    the middleware will redirect the user to the login screen. However, if the user
+    is authenticated, the middleware will allow the request to proceed further into
+    the application. Some middleware are assigned to all routes within the application,
+    like those defined in the property of your HTTP kernel, while some are only assigned
+    to specific routes or route groups. You can learn more about middleware by reading
+    the complete middleware documentation. If the request passes through all of the
+    matched route''s'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: 'providers are stored in the app/Providers directory.
+
+
+    By default, the AppServiceProvider is fairly empty. This provider is a great place
+    to add your application''s own bootstrapping and service container bindings. For
+    large applications, you may wish to create several service providers, each with
+    more granular bootstrapping for specific services used by your application.
+
+
+    # Service Container
+
+
+    # Introduction
+
+
+    +   - Zero Configuration Resolution
+
+    +   - When To Use The Container
+
+
+    # Binding
+
+
+    +   - Binding Basics
+
+    +   - Binding Interfaces To Implementations
+
+    +   - Contextual Binding
+
+    +   - Binding Primitives
+
+    +   - Binding Typed Variadics
+
+    +   - Tagging
+
+    +   - Extending Bindings
+
+
+    # Resolving
+
+
+    +   - The Make Method'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: "```\n<?php\n\nnamespace App\\Http\\Controllers;\n\nuse App\\Http\\Controllers\\\
+    Controller;\nuse App\\Repositories\\UserRepository;\nuse App\\Models\\User;\n\n\
+    class UserController extends Controller\n{\n    /**\n     * The user repository\
+    \ implementation.\n     *\n     * @var UserRepository\n     */\n    protected\
+    \ $users;\n\n    /**\n     * Create a new controller instance.\n     *\n     *\
+    \ @param UserRepository $users\n     * @return void\n```"
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "```\n```php\n*/\npublic function __construct(UserRepository $users)\n{\n  \
+    \  $this->users = $users;\n}\n\n/**\n * Show the profile for the given user.\n\
+    \ *\n * @param int $id\n * @return Response\n */\npublic function show($id)\n\
+    {\n    $user = $this->users->find($id);\n\n    return view('user.profile', ['user'\
+    \ => $user]);\n}\n}\n```\n```\n\nIn this example, the UserController needs to\
+    \ retrieve users from a data source. So, we will\n\ninject a service that is able\
+    \ to retrieve users. In this context, our UserRepository most likely uses\n\n\
+    Eloquent to retrieve user information from the database. However, since the repository\
+    \ is"
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: 'injected, we are able to easily swap it out with another implementation. We
+    are also able to easily "mock", or create a dummy implementation of the UserRepository
+    when testing our application.
+
+
+    A deep understanding of the Laravel service container is essential to building
+    a powerful, large application, as well as for contributing to the Laravel core
+    itself.
+
+
+    # Zero Configuration Resolution
+
+
+    If a class has no dependencies or only depends on other concrete classes (not
+    interfaces), the container does not need to be instructed on how to resolve that
+    class. For example, you may place the following code in your routes/web.php file:'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "```\n<?php\n\nclass Service\n{\n    //\n}\n\nRoute::get('/', function (Service\
+    \ $service) {\n    die(get_class($service));\n});\n```\n\nIn this example, hitting\
+    \ your application's / route will automatically resolve the Service class and\
+    \ inject it into your route's handler. This is game changing. It means you can\
+    \ develop your application and take advantage of dependency injection without\
+    \ worrying about bloated configuration files. Thankfully, many of the classes\
+    \ you will be writing when building a Laravel application automatically receive\
+    \ their dependencies via the container, including controllers, event listeners,\
+    \ middleware, and more. Additionally, you may type-hint dependencies in the handle\
+    \ method of queued jobs. Once you taste the power of automatic and zero configuration\
+    \ dependency injection it feels impossible to develop without it.\n\n# When To\
+    \ Use The Container"
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "Thanks to zero configuration resolution, you will often type-hint dependencies\
+    \ on routes, controllers, event listeners, and elsewhere without ever manually\
+    \ interacting with the container. For example, you might type-hint the Illuminate\\\
+    Http\\Request object on your route definition so that you can easily access the\
+    \ current request. Even though we never have to interact with the container to\
+    \ write this code, it is managing the injection of these dependencies behind the\
+    \ scenes:\n\n```\nuse Illuminate\\Http\\Request;\n\nRoute::get('/', function (Request\
+    \ $request) {\n    // ...\n});\n```\n\nIn many cases, thanks to automatic dependency\
+    \ injection and facades, you can build Laravel applications without ever manually\
+    \ binding or resolving anything from the container. So, when would you ever manually\
+    \ interact with the container? Let's examine two situations. First, if you write\
+    \ a class that implements an interface and you wish to type-hint that interface\
+    \ on a route or class constructor, you must tell the container how to resolve\
+    \ that interface. Secondly, if"
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: "Note that we receive the container itself as an argument to the resolver. We\
+    \ can then use the container to resolve sub-dependencies of the object we are\
+    \ building. As mentioned, you will typically be interacting with the container\
+    \ within service providers; however, if you would like to interact with the container\
+    \ outside of a service provider, you may do so via the App facade:\n\n```\n```php\n\
+    use App\\Services\\Transistor;\nuse Illuminate\\Support\\Facades\\App;\n\nApp::bind(Transistor::class,\
+    \ function ($app) {\n    // ...\n});\n```\n```\n\n> {tip} There is no need to\
+    \ bind classes into the container if they do not depend on any interfaces. The\
+    \ container does not need to be instructed on how to build these objects, since\
+    \ it can automatically resolve these objects using reflection.\n\n# Binding A\
+    \ Singleton\n\nThe singleton method binds a class or interface into the container\
+    \ that should only be resolved one time. Once a singleton binding is resolved,\
+    \ the same object instance will be returned on subsequent calls into the container:\n\
+    \n```\n```php\nuse App\\Services\\Transistor;\nuse App\\Services\\PodcastParser;\n\
+    \n$this->app->singleton(Transistor::class, function ($app) {\n    return new Transistor($app->make(PodcastParser::class));\n\
+    });\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "you may easily inject all of the container bindings with that tag:\n\n```\n\
+    $this->app->when(ReportAggregator::class)\n    ->needs('$reports')\n    ->giveTagged('reports');\n\
+    ```\n\nIf you need to inject a value from one of your application's configuration\
+    \ files, you may use the\n\ngiveConfig method:\n\n```\n$this->app->when(ReportAggregator::class)\n\
+    \    ->needs('$timezone')\n    ->giveConfig('app.timezone');\n```\n\n# Binding\
+    \ Typed Variadics\n\nOccasionally, you may have a class that receives an array\
+    \ of typed objects using a variadic\n\nconstructor argument:"
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: "```\n<?php\n\nuse App\\Models\\Filter;\nuse App\\Services\\Logger;\n\nclass\
+    \ Firewall\n{\n    /**\n     * The logger instance.\n     *\n     * @var \\App\\\
+    Services\\Logger\n     */\n    protected $logger;\n\n    /**\n     * The filter\
+    \ instances.\n     *\n     * @var array\n     */\n    protected $filters;\n\n\
+    \    /**\n     * Create a new class instance.\n```"
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: "```\n$this->app->when(Firewall::class)\n    ->needs(Filter::class)\n    ->give([\n\
+    \        NullFilter::class,\n        ProfanityFilter::class,\n        TooLongFilter::class,\n\
+    \    ]);\n```\n\n# Variadic Tag Dependencies\n\nSometimes a class may have a variadic\
+    \ dependency that is type-hinted as a given class ( Report ...$reports ). Using\
+    \ the needs and giveTagged methods, you may easily inject all of the container\
+    \ bindings with that tag for the given dependency.\n\n```\n$this->app->when(ReportAggregator::class)\n\
+    \    ->needs(Report::class)\n    ->giveTagged('reports');\n```\n\n# Tagging\n\n\
+    Occasionally, you may need to resolve all of a certain \"category\" of binding.\
+    \ For example, perhaps"
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: "accepts a closure, which should return the modified service, as its only argument.\
+    \ The closure\n\nreceives the service being resolved and the container instance:\n\
+    \n```\n$this->app->extend(Service::class, function ($service, $app) {\n    return\
+    \ new DecoratedService($service);\n});\n```\n\n# Resolving\n\n# The make Method\n\
+    \nYou may use the make method to resolve a class instance from the container.\
+    \ The make method\n\naccepts the name of the class or interface you wish to resolve:\n\
+    \n```\nuse App\\Services\\Transistor;\n\n$transistor = $this->app->make(Transistor::class);\n\
+    ```\n\nIf some of your class' dependencies are not resolvable via the container,\
+    \ you may inject them by\n\npassing them as an associative array into the makeWith\
+    \ method. For example, we may manually\n\npass the $id constructor argument required\
+    \ by the Transistor service:"
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '```
+
+    use App\Services\Transistor;
+
+
+    $transistor = $this->app->makeWith(Transistor::class, [''id'' => 1]);
+
+    ```
+
+
+    If you are outside of a service provider in a location of your code that does
+    not have access to the
+
+
+    $app variable, you may use the App facade to resolve a class instance from the
+    container:
+
+
+    ```
+
+    use App\Services\Transistor;
+
+    use Illuminate\Support\Facades\App;
+
+
+    $transistor = App::make(Transistor::class);
+
+    ```
+
+
+    If you would like to have the Laravel container instance itself injected into
+    a class that is being
+
+
+    resolved by the container, you may type-hint the Illuminate\Container\Container
+    class on your class'' constructor:'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: "```\nuse Illuminate\\Container\\Container;\n\n/**\n * Create a new class instance.\n\
+    \ *\n * @param \\Illuminate\\Container\\Container $container\n * @return void\n\
+    \ */\npublic function __construct(Container $container)\n{\n    $this->container\
+    \ = $container;\n}\n```\n\n# Automatic Injection\n\nAlternatively, and importantly,\
+    \ you may type-hint the dependency in the constructor of a class that is resolved\
+    \ by the container, including controllers, event listeners, middleware, and more.\n\
+    \nAdditionally, you may type-hint dependencies in the handle method of queued\
+    \ jobs. In practice, this is how most of your objects should be resolved by the\
+    \ container.\n\nFor example, you may type-hint a repository defined by your application\
+    \ in a controller's"
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: "constructor. The repository will automatically be resolved and injected into\
+    \ the class:\n\n```\n<?php\n\nnamespace App\\Http\\Controllers;\n\nuse App\\Repositories\\\
+    UserRepository;\n\nclass UserController extends Controller\n{\n    /**\n     *\
+    \ The user repository instance.\n     *\n     * @var \\App\\Repositories\\UserRepository\n\
+    \     */\n    protected $users;\n\n    /**\n     * Create a new controller instance.\n\
+    \     *\n     * @param \\App\\Repositories\\UserRepository $users\n     * @return\
+    \ void\n     */\n    public function __construct(UserRepository $users)\n    {\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "```\n$this->users = $users;\n}\n\n/**\n * Show the user with the given ID.\n\
+    \ *\n * @param int $id\n * @return \\Illuminate\\Http\\Response\n */\npublic function\
+    \ show($id)\n{\n    //\n}\n}\n```\n\n# Method Invocation & Injection\n\nSometimes\
+    \ you may wish to invoke a method on an object instance while allowing the container\
+    \ to automatically inject that method's dependencies.\n\nFor example, given the\
+    \ following class:"
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: "invoke a closure while automatically injecting its dependencies:\n\n```\n```php\n\
+    use App\\Repositories\\UserRepository;\nuse Illuminate\\Support\\Facades\\App;\n\
+    \n$result = App::call(function (UserRepository $repository) {\n    // ...\n});\n\
+    ```\n```\n\n# Container Events\n\nThe service container fires an event each time\
+    \ it resolves an object. You may listen to this event\n\nusing the resolving method:\n\
+    \n```\n```php\nuse App\\Services\\Transistor;\n\n$this->app->resolving(Transistor::class,\
+    \ function ($transistor, $app) {\n    // Called when container resolves objects\
+    \ of type \"Transistor\"...\n});\n\n$this->app->resolving(function ($object, $app)\
+    \ {\n    // Called when container resolves object of any type...\n});\n```\n```\n\
+    \nAs you can see, the object being resolved will be passed to the callback, allowing\
+    \ you to set any\n\nadditional properties on the object before it is given to\
+    \ its consumer."
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# Writing Service Providers
+
+
+    All service providers extend the Illuminate\Support\ServiceProvider class.
+
+
+    Most service providers contain a register and a boot method. Within the register
+    method, you should
+
+
+    only bind things into the service container. You should never attempt to register
+    any event listeners, routes, or any other piece of functionality within the register
+    method.
+
+
+    The Artisan CLI can generate a new provider via the make:provider command:
+
+
+    ```
+
+    php artisan make:provider RiakServiceProvider
+
+    ```
+
+
+    # The Register Method
+
+
+    As mentioned previously, within the register method, you should only bind things
+    into the
+
+
+    service container. You should never attempt to register any event listeners, routes,
+    or any other piece of functionality within the register method. Otherwise, you
+    may accidentally use a service
+
+
+    that is provided by a service provider which has not loaded yet. Let''s take a
+    look at a basic service provider. Within any of your service provider'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: "methods, you always have access to the $app property which provides access\
+    \ to the service container:\n\n```\n```php\n<?php\n\nnamespace App\\Providers;\n\
+    \nuse App\\Services\\Riak\\Connection;\nuse Illuminate\\Support\\ServiceProvider;\n\
+    \nclass RiakServiceProvider extends ServiceProvider\n{\n    /**\n     * Register\
+    \ any application services.\n     *\n     * @return void\n     */\n    public\
+    \ function register()\n    {\n        $this->app->singleton(Connection::class,\
+    \ function ($app) {\n            return new Connection(config('riak'));\n    \
+    \    });\n    }\n}\n```\n```\n\nThis service provider only defines a register\
+    \ method, and uses that method to define an implementation of App\\Services\\\
+    Riak\\Connection in the service container. If you're not yet familiar with Laravel's\
+    \ service container, check out its documentation."
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: "# The bindings And singletons Properties\n\nIf your service provider registers\
+    \ many simple bindings, you may wish to use the bindings and\n\nsingletons properties\
+    \ instead of manually registering each container binding. When the service provider\
+    \ is loaded by the framework, it will automatically check for these properties\
+    \ and register\n\ntheir bindings:\n\n```\n<?php\n\nnamespace App\\Providers;\n\
+    \nuse App\\Contracts\\DowntimeNotifier;\nuse App\\Contracts\\ServerProvider;\n\
+    use App\\Services\\DigitalOceanServerProvider;\nuse App\\Services\\PingdomDowntimeNotifier;\n\
+    use App\\Services\\ServerToolsProvider;\nuse Illuminate\\Support\\ServiceProvider;\n\
+    \nclass AppServiceProvider extends ServiceProvider\n{\n    /**\n     * All of\
+    \ the container bindings that should be registered.\n     *\n     * @var array\n\
+    \     */\n    public $bindings = [\n        ServerProvider::class => DigitalOceanServerProvider::class,\n\
+    \    ];\n\n    /**\n```"
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: "```\n<?php\n\nnamespace App\\Providers;\n\nuse Illuminate\\Support\\Facades\\\
+    View;\nuse Illuminate\\Support\\ServiceProvider;\n\nclass ComposerServiceProvider\
+    \ extends ServiceProvider\n{\n    /**\n     * Bootstrap any application services.\n\
+    \     *\n     * @return void\n     */\n    public function boot()\n    {\n   \
+    \     View::composer('view', function () {\n            //\n        });\n    }\n\
+    }\n```\n\n# Boot Method Dependency Injection\n\nYou may type-hint dependencies\
+    \ for your service provider's boot method.\n\nThe service container\n\nwill automatically\
+    \ inject any dependencies you need:"
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: "view , response , url , config , and more. Each helper function offered by\
+    \ Laravel is documented with their corresponding feature; however, a complete\
+    \ list is available within the dedicated helper documentation. For example, instead\
+    \ of using the Illuminate\\Support\\Facades\\Response facade to generate a JSON\
+    \ response, we may simply use the response function. Because helper functions\
+    \ are globally available, you do not need to import any classes in order to use\
+    \ them:\n\n```\n```php\nuse Illuminate\\Support\\Facades\\Response;\n\nRoute::get('/users',\
+    \ function () {\n    return Response::json([\n        // ...\n    ]);\n});\n\n\
+    Route::get('/users', function () {\n    return response()->json([\n        //\
+    \ ...\n    ]);\n});\n```\n```\n\n# When To Use Facades"
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: 'Facades have many benefits. They provide a terse, memorable syntax that allows
+    you to use Laravel''s features without remembering long class names that must
+    be injected or configured manually. Furthermore, because of their unique usage
+    of PHP''s dynamic methods, they are easy to test. However, some care must be taken
+    when using facades. The primary danger of facades is class "scope creep". Since
+    facades are so easy to use and do not require injection, it can be easy to let
+    your classes continue to grow and use many facades in a single class. Using dependency
+    injection, this potential is mitigated by the visual feedback a large constructor
+    gives you that your class is growing too large. So, when using facades, pay special
+    attention to the size of your class so that its scope of responsibility stays
+    narrow. If your class is getting too large, consider splitting it into multiple
+    smaller classes.
+
+
+    # Facades Vs. Dependency Injection
+
+
+    One of the primary benefits of dependency injection is the ability to swap implementations
+    of the injected class. This is useful during testing since you can inject a mock
+    or stub and assert that various methods were called on the stub. Typically, it
+    would not be possible to mock or stub a truly static class method. However, since
+    facades use dynamic methods to proxy method calls to objects resolved from the
+    service container, we actually can test facades just as we would test an injected
+    class instance. For example, given the following route:'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "```\nuse Illuminate\\Support\\Facades\\Cache;\n\nRoute::get('/cache', function\
+    \ () {\n    return Cache::get('key');\n});\n```\n\nUsing Laravel's facade testing\
+    \ methods, we can write the following test to verify that the Cache::get method\
+    \ was called with the argument we expected:\n\n```\nuse Illuminate\\Support\\\
+    Facades\\Cache;\n\n/**\n * A basic functional test example.\n *\n */\n```"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: "```\nreturn Illuminate\\Support\\Facades\\View::make('profile');\n\nreturn\
+    \ view('profile');\n```\n\nThere is absolutely no practical difference between\
+    \ facades and helper functions. When using helper functions, you may still test\
+    \ them exactly as you would the corresponding facade. For example, given the following\
+    \ route:\n\n```\nRoute::get('/cache', function () {\n    return cache('key');\n\
+    });\n```\n\nUnder the hood, the cache helper is going to call the get method on\
+    \ the class underlying the Cache facade. So, even though we are using the helper\
+    \ function, we can write the following test to verify that the method was called\
+    \ with the argument we expected:"
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: "```\nuse Illuminate\\Support\\Facades\\Cache;\n\n/**\n * A basic functional\
+    \ test example.\n *\n * @return void\n */\npublic function testBasicExample()\n\
+    {\n    Cache::shouldReceive('get')\n        ->with('key')\n        ->andReturn('value');\n\
+    \n    $response = $this->get('/cache');\n\n    $response->assertSee('value');\n\
+    }\n```\n\n# How Facades Work\n\nIn a Laravel application, a facade is a class\
+    \ that provides access to an object from the container. The machinery that makes\
+    \ this work is in the Facade class. Laravel's facades, and any custom facades\
+    \ you create, will extend the"
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: "```\n<?php\n\nnamespace App\\Http\\Controllers;\n\nuse App\\Http\\Controllers\\\
+    Controller;\nuse Illuminate\\Support\\Facades\\Cache;\n\nclass UserController\
+    \ extends Controller\n{\n    /**\n     * Show the profile for the given user.\n\
+    \     *\n     * @param int $id\n     * @return Response\n     */\n    public function\
+    \ showProfile($id)\n    {\n        $user = Cache::get('user:'.$id);\n\n      \
+    \  return view('profile', ['user' => $user]);\n    }\n}\n```\n\nNotice that near\
+    \ the top of the file we are \"importing\" the Cache facade.\n\nThis facade serves\
+    \ as a\n\nproxy for accessing the underlying implementation of the"
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: "Illuminate\\Contracts\\Cache\\Factory interface. Any calls we make using the\
+    \ facade will be passed to the underlying instance of Laravel's cache service.\n\
+    \nIf we look at that Illuminate\\Support\\Facades\\Cache class, you'll see that\
+    \ there is no static method get :\n\n```\n```php\nclass Cache extends Facade\n\
+    {\n    /**\n     * Get the registered name of the component.\n     *\n     * @return\
+    \ string\n     */\n    protected static function getFacadeAccessor() { return\
+    \ 'cache'; }\n}\n```\n```\n\nInstead, the Cache facade extends the base Facade\
+    \ class and defines the method getFacadeAccessor() . This method's job is to return\
+    \ the name of a service container binding.\n\nWhen a user references any static\
+    \ method on the Cache facade, Laravel resolves the cache binding from the service\
+    \ container and runs the requested method (in this case, get ) against that"
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: 'object.
+
+
+    # Real-Time Facades
+
+
+    Using real-time facades, you may treat any class in your application as if it
+    was a facade. To illustrate how this can be used, let''s first examine some code
+    that does not use real-time facades.
+
+
+    For example, let''s assume our Podcast model has a publish method. However, in
+    order to publish the podcast, we need to inject a Publisher instance:'
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: "```\n<?php\n\nnamespace App\\Models;\n\nuse App\\Contracts\\Publisher;\nuse\
+    \ Illuminate\\Database\\Eloquent\\Model;\n\nclass Podcast extends Model\n{\n \
+    \   /**\n     * Publish the podcast.\n     *\n     * @param Publisher $publisher\n\
+    \     * @return void\n     */\n    public function publish(Publisher $publisher)\n\
+    \    {\n        $this->update(['publishing' => now()]);\n\n        $publisher->publish($this);\n\
+    \    }\n}\n```\n\nInjecting a publisher implementation into the method allows\
+    \ us to easily test the method in"
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: 'When the real-time facade is used, the publisher implementation will be resolved
+    out of the service container using the portion of the interface or class name
+    that appears after the Facades prefix. When testing, we can use Laravel''s built-in
+    facade testing helpers to mock this method call:'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: "```\n```php\n<?php\n\nnamespace Tests\\Feature;\n\nuse App\\Models\\Podcast;\n\
+    use Facades\\App\\Contracts\\Publisher;\nuse Illuminate\\Foundation\\Testing\\\
+    RefreshDatabase;\nuse Tests\\TestCase;\n\nclass PodcastTest extends TestCase\n\
+    {\n    use RefreshDatabase;\n\n    /**\n     * A test example.\n     *\n     *\
+    \ @return void\n     */\n    public function test_podcast_can_be_published()\n\
+    \    {\n        $podcast = Podcast::factory()->create();\n\n        Publisher::shouldReceive('publish')->once()->with($podcast);\n\
+    \n        $podcast->publish();\n    }\n}\n```\n```\n\n# Facade Class Reference\n\
+    \nBelow you will find every facade and its underlying class. This is a useful\
+    \ tool for quickly digging into the API documentation for a given facade root.\
+    \ The service container binding key is also included where applicable.\n\n| Facade\
+    \ | Class | Service Container Binding |\n|---|---|---|"
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: '|  |  |  |
+
+    |---|---|---|
+
+    | App | Illuminate\Foundation\Application | app |
+
+    | Artisan | Illuminate\Contracts\Console\Kernel | artisan |
+
+    | Auth | Illuminate\Auth\AuthManager | auth |
+
+    | Auth (Instance) | Illuminate\Contracts\Auth\Guard | auth.driver |
+
+    | Blade | Illuminate\View\Compilers\BladeCompiler | blade.compiler |
+
+    | Broadcast | Illuminate\Contracts\Broadcasting\Factory |  |
+
+    | Broadcast (Instance) | Illuminate\Contracts\Broadcasting\Broadcaster |  |
+
+    | Bus | Illuminate\Contracts\Bus\Dispatcher |  |
+
+    | Cache | Illuminate\Cache\CacheManager | cache |
+
+    | Cache (Instance) | Illuminate\Cache\Repository | cache.store |
+
+    | Config | Illuminate\Config\Repository | config |
+
+    | Cookie | Illuminate\Cookie\CookieJar | cookie |
+
+    | Crypt | Illuminate\Encryption\Encrypter | encrypter |
+
+    | Date | Illuminate\Support\DateFactory | date |
+
+    | DB | Illuminate\Database\DatabaseManager | db |
+
+    | DB (Instance) | Illuminate\Database\Connection | db.connection |
+
+    | Event | Illuminate\Events\Dispatcher | events |
+
+    | File | Illuminate\Filesystem\Filesystem | files |
+
+    | Gate | Illuminate\Contracts\Auth\Access\Gate |  |
+
+    | Hash | Illuminate\Contracts\Hashing\Hasher | hash |
+
+    | Http | Illuminate\Http\Client\Factory |  |
+
+    | Lang | Illuminate\Translation\Translator | translator |
+
+    | Log | Illuminate\Log\LogManager | log |
+
+    | Mail | Illuminate\Mail\Mailer | mailer |
+
+    | Notification | Illuminate\Notifications\ChannelManager |  |
+
+    | Password | Illuminate\Auth\Passwords\PasswordBrokerManager | auth.password |
+
+    | Password (Instance) | Illuminate\Auth\Passwords\PasswordBroker | auth.password.broker
+    |
+
+    | Queue | Illuminate\Queue\QueueManager | queue |
+
+    | Queue | Illuminate\Contracts\Queue\Queue | queue.connection |'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: 'protection. The routes in routes/api.php are stateless and are assigned the
+    api middleware group.
+
+
+    For most applications, you will begin by defining routes in your routes/web.php
+    file. The routes defined in routes/web.php may be accessed by entering the defined
+    route''s URL in your browser. For example, you may access the following route
+    by navigating to http://example.com/user in your browser:
+
+
+    ```
+
+    use App\Http\Controllers\UserController;
+
+
+    Route::get(''/user'', [UserController::class, ''index'']);
+
+    ```
+
+
+    Routes defined in the routes/api.php file are nested within a route group by the
+
+
+    RouteServiceProvider . Within this group, the /api URI prefix is automatically
+    applied so you
+
+
+    do not need to manually apply it to every route in the file. You may modify the
+    prefix and other
+
+
+    route group options by modifying your RouteServiceProvider class.
+
+
+    # Available Router Methods
+
+
+    The router allows you to register routes that respond to any HTTP verb:'
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: "```\nRoute::get($uri, $callback);\nRoute::post($uri, $callback);\nRoute::put($uri,\
+    \ $callback);\nRoute::patch($uri, $callback);\nRoute::delete($uri, $callback);\n\
+    Route::options($uri, $callback);\n```\n\nSometimes you may need to register a\
+    \ route that responds to multiple HTTP verbs. You may do so using the match method.\
+    \ Or, you may even register a route that responds to all HTTP verbs using the\
+    \ any method:\n\n```\nRoute::match(['get', 'post'], '/', function () {\n    //\n\
+    });\n\nRoute::any('/', function () {\n    //\n});\n```\n\n> {tip} When defining\
+    \ multiple routes that share the same URI, routes using the get , post , put ,\
+    \ patch , delete , and options methods should be defined before routes using the\
+    \ any , match , and redirect methods. This ensures the incoming request is matched\
+    \ with the correct route.\n\n# Dependency Injection"
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: "You may type-hint any dependencies required by your route in your route's callback\
+    \ signature. The declared dependencies will automatically be resolved and injected\
+    \ into the callback by the Laravel service container. For example, you may type-hint\
+    \ the Illuminate\\Http\\Request class to have the current HTTP request automatically\
+    \ injected into your route callback:\n\n```\n```php\nuse Illuminate\\Http\\Request;\n\
+    \nRoute::get('/users', function (Request $request) {\n    // ...\n});\n```\n```\n\
+    \n# CSRF Protection\n\nRemember, any HTML forms pointing to POST , PUT , PATCH\
+    \ , or DELETE routes that are defined in the web routes file should include a\
+    \ CSRF token field. Otherwise, the request will be rejected. You can read more\
+    \ about CSRF protection in the CSRF documentation:\n\n```\n```blade\n<form method=\"\
+    POST\" action=\"/profile\">\n    @csrf\n    ...\n</form>\n```\n```\n\n# Redirect\
+    \ Routes"
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: "```\nRoute::get('/search/{search}', function ($search) {\n    return $search;\n\
+    })->where('search', '.*');\n```\n\n> {note} Encoded forward slashes are only supported\
+    \ within the last route segment.\n\n# Named Routes\n\nNamed routes allow the convenient\
+    \ generation of URLs or redirects for specific routes. You may\n\nspecify a name\
+    \ for a route by chaining the name method onto the route definition:\n\n```\n\
+    Route::get('/user/profile', function () {\n    //\n})->name('profile');\n```\n\
+    \nYou may also specify route names for controller actions:"
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: "```\nRoute::get(\n    '/user/profile',\n    [UserProfileController::class,\
+    \ 'show']\n)->name('profile');\n```\n\n> {note} Route names should always be unique.\n\
+    \n# Generating URLs To Named Routes\n\nOnce you have assigned a name to a given\
+    \ route, you may use the route's name when generating\n\nURLs or redirects via\
+    \ Laravel's route and redirect helper functions:\n\n```\n// Generating URLs...\n\
+    $url = route('profile');\n\n// Generating Redirects...\nreturn redirect()->route('profile');\n\
+    ```\n\nIf the named route defines parameters, you may pass the parameters as the\
+    \ second argument to\n\nthe route function. The given parameters will automatically\
+    \ be inserted into\n\nthe generated URL"
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: "in their correct positions:\n\n```\n```php\nRoute::get('/user/{id}/profile',\
+    \ function ($id) {\n    //\n})->name('profile');\n\n$url = route('profile', ['id'\
+    \ => 1]);\n```\n```\n\nIf you pass additional parameters in the array, those key\
+    \ / value pairs will automatically be added\n\nto the generated URL's query string:\n\
+    \n```\n```php\nRoute::get('/user/{id}/profile', function ($id) {\n    //\n})->name('profile');\n\
+    \n$url = route('profile', ['id' => 1, 'photos' => 'yes']);\n\n// /user/1/profile?photos=yes\n\
+    ```\n```\n\n> {tip} Sometimes, you may wish to specify request-wide default values\
+    \ for URL parameters, such as the current locale. To accomplish this, you may\
+    \ use the URL::defaults method.\n\n# Inspecting The Current Route\n\nIf you would\
+    \ like to determine if the current request was routed to a given named route,\
+    \ you may use the named method on a Route instance. For example, you may check\
+    \ the current route name from a route middleware:"
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: "prefixes are appended. Namespace delimiters and slashes in URI prefixes are\
+    \ automatically added where appropriate.\n\n# Middleware\n\nTo assign middleware\
+    \ to all routes within a group, you may use the middleware method before defining\
+    \ the group. Middleware are executed in the order they are listed in the array:\n\
+    \n```\nRoute::middleware(['first', 'second'])->group(function () {\n    Route::get('/',\
+    \ function () {\n        // Uses first & second middleware...\n    });\n\n   \
+    \ Route::get('/user/profile', function () {\n        // Uses first & second middleware...\n\
+    \    });\n});\n```\n\n# Controllers\n\nIf a group of routes all utilize the same\
+    \ controller, you may use the controller method to define\n\nthe common controller\
+    \ for all of the routes within the group. Then, when defining the routes, you\n\
+    \nonly need to provide the controller method that they invoke:"
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: "```\nRoute::prefix('admin')->group(function () {\n    Route::get('/users',\
+    \ function () {\n        // Matches The \"/admin/users\" URL\n    });\n});\n```\n\
+    \n# Route Name Prefixes\n\nThe name method may be used to prefix each route name\
+    \ in the group with a given string. For\n\nexample, you may want to prefix all\
+    \ of the grouped route's names with admin . The given string is prefixed to the\
+    \ route name exactly as it is specified, so we will be sure to provide the trailing\
+    \ .\n\ncharacter in the prefix:\n\n```\nRoute::name('admin.')->group(function\
+    \ () {\n    Route::get('/users', function () {\n        // Route assigned name\
+    \ \"admin.users\"...\n    })->name('users');\n});\n```\n\n# Route Model Binding"
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: "has an ID matching the corresponding value from the request URI. If a matching\
+    \ model instance is not found in the database, a 404 HTTP response will automatically\
+    \ be generated.\n\nOf course, implicit binding is also possible when using controller\
+    \ methods. Again, note the {user} URI segment matches the $user variable in the\
+    \ controller which contains an App\\Models\\User type-hint:\n\n```\nuse App\\\
+    Http\\Controllers\\UserController;\nuse App\\Models\\User;\n\n// Route definition...\n\
+    Route::get('/users/{user}', [UserController::class, 'show']);\n\n// Controller\
+    \ method definition...\npublic function show(User $user)\n{\n    return view('user.profile',\
+    \ ['user' => $user]);\n}\n```\n\n# Soft Deleted Models\n\nTypically, implicit\
+    \ model binding will not retrieve models that have been soft deleted. However,"
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: "you may instruct the implicit binding to retrieve these models by chaining\
+    \ the withTrashed method onto your route's definition:\n\n```\nuse App\\Models\\\
+    User;\n\nRoute::get('/users/{user}', function (User $user) {\n    return $user->email;\n\
+    })->withTrashed();\n```\n\n# Customizing The Key\n\nSometimes you may wish to\
+    \ resolve Eloquent models using a column other than id . To do so,\n\nyou may\
+    \ specify the column in the route parameter definition:\n\n```\nuse App\\Models\\\
+    Post;\n\nRoute::get('/posts/{post:slug}', function (Post $post) {\n    return\
+    \ $post;\n});\n```\n\nIf you would like model binding to always use a database\
+    \ column other than id when retrieving a\n\ngiven model class, you may override\
+    \ the getRouteKeyName method on the\n\nEloquent model:"
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: "```\n/**\n * Get the route key for the model.\n *\n * @return string\n */\n\
+    public function getRouteKeyName()\n{\n    return 'slug';\n}\n```\n\n# Custom Keys\
+    \ & Scoping\n\nWhen implicitly binding multiple Eloquent models in a single route\
+    \ definition, you may wish to scope the second Eloquent model such that it must\
+    \ be a child of the previous Eloquent model. For example, consider this route\
+    \ definition that retrieves a blog post by slug for a specific user:\n\n```\n\
+    use App\\Models\\Post;\nuse App\\Models\\User;\n\nRoute::get('/users/{user}/posts/{post:slug}',\
+    \ function (User $user, Post $post) {\n    return $post;\n});\n```\n\nWhen using\
+    \ a custom keyed implicit binding as a nested route parameter, Laravel will automatically\
+    \ scope the query to retrieve the nested model by"
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: 'Since we have bound all {user} parameters to the App\Models\User model, an
+    instance of that class will be injected into the route. So, for example, a request
+    to users/1 will inject the User instance from the database which has an ID of
+    1 . If a matching model instance is not found in the database, a 404 HTTP response
+    will be automatically generated.
+
+
+    # Customizing The Resolution Logic
+
+
+    If you wish to define your own model binding resolution logic, you may use the
+    Route::bind method. The closure you pass to the bind method will receive the value
+    of the URI segment and
+
+
+    should return the instance of the class that should be injected into the route.
+    Again, this customization should take place in the boot method of your application''s
+
+
+    RouteServiceProvider :'
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: "```\nuse App\\Models\\User;\nuse Illuminate\\Support\\Facades\\Route;\n\n/**\n\
+    \ * Define your route model bindings, pattern filters, etc.\n *\n * @return void\n\
+    \ */\npublic function boot()\n{\n    Route::bind('user', function ($value) {\n\
+    \        return User::where('name', $value)->firstOrFail();\n    });\n\n    //\
+    \ ...\n}\n```\n\nAlternatively, you may override the resolveRouteBinding method\
+    \ on your Eloquent model. This method will receive the value of the URI segment\
+    \ and should return the instance of the class that should be injected into the\
+    \ route:"
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: "```\n/**\n * Retrieve the model for a bound value.\n *\n * @param mixed $value\n\
+    \ * @param string|null $field\n * @return \\Illuminate\\Database\\Eloquent\\Model|null\n\
+    \ */\npublic function resolveRouteBinding($value, $field = null)\n{\n    return\
+    \ $this->where('name', $value)->firstOrFail();\n}\n```\n\nIf a route is utilizing\
+    \ implicit binding scoping, the resolveChildRouteBinding method will be used to\
+    \ resolve the child binding of the parent model:\n\n```\n/**\n * Retrieve the\
+    \ child model for a bound value.\n *\n * @param string $childType\n * @param mixed\
+    \ $value\n * @param string|null $field\n * @return \\Illuminate\\Database\\Eloquent\\\
+    Model|null\n */\npublic function resolveChildRouteBinding($childType, $value,\
+    \ $field)\n{\n    return parent::resolveChildRouteBinding($childType, $value,\
+    \ $field);\n}\n```\n\n# Fallback Routes"
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: "Using the Route::fallback method, you may define a route that will be executed\
+    \ when no other route matches the incoming request. Typically, unhandled requests\
+    \ will automatically render a \"404\" page via your application's exception handler.\
+    \ However, since you would typically define the fallback route within your routes/web.php\
+    \ file, all middleware in the web middleware group will apply to the route. You\
+    \ are free to add additional middleware to this route as needed:\n\n```\nRoute::fallback(function\
+    \ () {\n    //\n});\n```\n\n> {note} The fallback route should always be the last\
+    \ route registered by your application.\n\n# Rate Limiting\n\n# Defining Rate\
+    \ Limiters\n\nLaravel includes powerful and customizable rate limiting services\
+    \ that you may utilize to restrict the amount of traffic for a given route or\
+    \ group of routes. To get started, you should define rate limiter configurations\
+    \ that meet your application's needs. Typically, this should be done within the\
+    \ configureRateLimiting method of your application's App\\Providers\\RouteServiceProvider"
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: "class. Rate limiters are defined using the RateLimiter facade's `for` method.\n\
+    \nThe `for` method accepts a rate limiter name and a closure that returns the\
+    \ limit configuration that should apply to routes that are assigned to the rate\
+    \ limiter. Limit configuration are instances of the `Illuminate\\\\Cache\\\\RateLimiting\\\
+    \\Limit` class. This class contains helpful \"builder\" methods so that you can\
+    \ quickly define your limit. The rate limiter name may be any string you wish:\n\
+    \n```\n```php\nuse Illuminate\\\\Cache\\\\RateLimiting\\\\Limit;\nuse Illuminate\\\
+    \\Support\\\\Facades\\\\RateLimiter;\n\n/**\n * Configure the rate limiters for\
+    \ the application.\n *\n * @return void\n */\n```\n```\n\n```\n```php\nprotected\
+    \ function configureRateLimiting()\n{\n    RateLimiter::for('global', function\
+    \ (Request $request) {\n        return Limit::perMinute(1000);\n    });\n}\n```\n\
+    ```\n\nIf the incoming request exceeds the specified rate limit, a response with\
+    \ a 429 HTTP status code will automatically be returned by Laravel. If you"
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: "would like to define your own response that should be returned by a rate limit,\
+    \ you may use the response method:\n\n```\nRateLimiter::for('global', function\
+    \ (Request $request) {\n    return Limit::perMinute(1000)->response(function ()\
+    \ {\n        return response('Custom response...', 429);\n    });\n});\n```\n\n\
+    Since rate limiter callbacks receive the incoming HTTP request instance, you may\
+    \ build the appropriate rate limit dynamically based on the incoming request or\
+    \ authenticated user:\n\n```\nRateLimiter::for('uploads', function (Request $request)\
+    \ {\n    return $request->user()->vipCustomer()\n        ? Limit::none()\n   \
+    \     : Limit::perMinute(100);\n});\n```\n\n# Segmenting Rate Limits\n\nSometimes\
+    \ you may wish to segment rate limits by some arbitrary value. For example, you\
+    \ may wish to allow users to access a given route 100 times per minute per IP\
+    \ address. To accomplish this, you may use the by method when building your rate\
+    \ limit:"
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: "```\nRateLimiter::for('uploads', function (Request $request) {\n    return\
+    \ $request->user()->vipCustomer()\n        ? Limit::none()\n        : Limit::perMinute(100)->by($request->ip());\n\
+    });\n```\n\nTo illustrate this feature using another example, we can limit access\
+    \ to the route to 100 times per minute per authenticated user ID or 10 times per\
+    \ minute per IP address for guests:\n\n```\nRateLimiter::for('uploads', function\
+    \ (Request $request) {\n    return $request->user()\n        ? Limit::perMinute(100)->by($request->user()->id)\n\
+    \        : Limit::perMinute(10)->by($request->ip());\n});\n```\n\n# Multiple Rate\
+    \ Limits\n\nIf needed, you may return an array of rate limits for a given rate\
+    \ limiter configuration. Each rate limit will be evaluated for the route based\
+    \ on the order they are placed within the array:\n\n```\nRateLimiter::for('login',\
+    \ function (Request $request) {\n    return [\n        Limit::perMinute(500),\n\
+    \        Limit::perMinute(3)->by($request->input('email')),\n    ];\n});\n```"
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: "# Attaching Rate Limiters To Routes\n\nRate limiters may be attached to routes\
+    \ or route groups using the throttle middleware. The throttle middleware accepts\
+    \ the name of the rate limiter you wish to assign to the route:\n\n```\nRoute::middleware(['throttle:uploads'])->group(function\
+    \ () {\n    Route::post('/audio', function () {\n        //\n    });\n\n    Route::post('/video',\
+    \ function () {\n        //\n    });\n});\n```\n\n# Throttling With Redis\n\n\
+    Typically, the throttle middleware is mapped to the Illuminate\\Routing\\Middleware\\\
+    ThrottleRequests class. This mapping is defined in your application's HTTP kernel\
+    \ ( App\\Http\\Kernel ). However, if you are using Redis as your application's\
+    \ cache driver, you may wish to change this mapping to use the Illuminate\\Routing\\\
+    Middleware\\ThrottleRequestsWithRedis class. This class is more efficient at managing\
+    \ rate limiting using Redis:"
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: "```\n'throttle' => \\Illuminate\\Routing\\Middleware\\ThrottleRequestsWithRedis::class,\n\
+    ```\n\n# Form Method Spoofing\n\nHTML forms do not support PUT , PATCH , or DELETE\
+    \ actions. So, when defining PUT , PATCH , or\n\nDELETE routes that are called\
+    \ from an HTML form, you will need to add a hidden _method field to the form.\
+    \ The value sent with the _method field will be used as the HTTP request method:\n\
+    \n```\n<form action=\"/example\" method=\"POST\">\n    <input type=\"hidden\"\
+    \ name=\"_method\" value=\"PUT\">\n    <input type=\"hidden\" name=\"_token\"\
+    \ value=\"{{ csrf_token() }}\">\n</form>\n```\n\nFor convenience, you may use\
+    \ the @method Blade directive to generate the _method input field:\n\n```\n<form\
+    \ action=\"/example\" method=\"POST\">\n    @method('PUT')\n    @csrf\n</form>\n\
+    ```\n\n# Accessing The Current Route"
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: 'You may use the current , currentRouteName , and currentRouteAction methods
+    on the Route facade to access information about the route handling the incoming
+    request:
+
+
+    ```
+
+    use Illuminate\Support\Facades\Route;
+
+
+    $route = Route::current(); // Illuminate\Routing\Route
+
+    $name = Route::currentRouteName(); // string
+
+    $action = Route::currentRouteAction(); // string
+
+    ```
+
+
+    You may refer to the API documentation for both the underlying class of the Route
+    facade and
+
+
+    Route instance to review all of the methods that are available on the router and
+    route classes.
+
+
+    # Cross-Origin Resource Sharing (CORS)
+
+
+    Laravel can automatically respond to CORS OPTIONS HTTP requests with values that
+    you
+
+
+    configure. All CORS settings may be configured in your application''s config/cors.php
+    configuration file. The OPTIONS requests will automatically be handled by the
+    HandleCors middleware that is included by default in your global middleware stack.
+    Your global middleware
+
+
+    stack is located in your application''s HTTP kernel ( App\Http\Kernel ).'
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: '# Middleware
+
+
+    Introduction
+
+
+    Defining Middleware
+
+
+    Registering Middleware
+
+
+    +   - Global Middleware
+
+    +   - Excluding Middleware
+
+    +   - Middleware Groups
+
+    +   - Sorting Middleware
+
+
+    Middleware Parameters
+
+
+    Terminable Middleware
+
+
+    # Introduction
+
+
+    Middleware provide a convenient mechanism for inspecting and filtering HTTP requests
+    entering
+
+
+    your application. For example, Laravel includes a middleware that verifies the
+    user of your application is authenticated. If the user is not authenticated, the
+    middleware will redirect the user to your application''s login screen. However,
+    if the user is authenticated, the middleware will allow the request to proceed
+    further into the application. Additional middleware can be written to perform
+    a variety of tasks besides authentication. For example, a'
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: 'logging middleware might log all incoming requests to your application. There
+    are several middleware included in the Laravel framework, including middleware
+    for authentication and CSRF protection. All of these middleware are located in
+    the app/Http/Middleware directory.
+
+
+    # Defining Middleware
+
+
+    To create a new middleware, use the make:middleware Artisan command:
+
+
+    ```
+
+    php artisan make:middleware EnsureTokenIsValid
+
+    ```
+
+
+    This command will place a new EnsureTokenIsValid class within your app/Http/Middleware
+    directory. In this middleware, we will only allow access to the route if the supplied
+    token input matches a specified value. Otherwise, we will redirect the users back
+    to the home URI:'
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: "```\n<?php\n\nnamespace App\\Http\\Middleware;\n\nuse Closure;\n\nclass EnsureTokenIsValid\n\
+    {\n    /**\n     * Handle an incoming request.\n     *\n     * @param  \\Illuminate\\\
+    Http\\Request  $request\n     * @param  \\Closure  $next\n     * @return mixed\n\
+    \     */\n```\n\n```\n    public function handle($request, Closure $next)\n  \
+    \  {\n        if ($request->input('token') !== 'my-secret-token') {\n        \
+    \    return redirect('home');\n        }\n\n        return $next($request);\n\
+    \    }\n}\n```\n\nAs you can see, if the given token does not match our secret\
+    \ token, the middleware will return an"
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: 'HTTP redirect to the client; otherwise, the request will be passed further
+    into the application. To pass the request deeper into the application (allowing
+    the middleware to "pass"), you should call the $next callback with the $request.
+    It''s best to envision middleware as a series of "layers" HTTP requests must pass
+    through before they hit your application. Each layer can examine the request and
+    even reject it entirely.
+
+
+    > {tip} All middleware are resolved via the service container, so you may type-hint
+    any dependencies you need within a middleware''s constructor.
+
+
+    # Middleware & Responses
+
+
+    Of course, a middleware can perform tasks before or after passing the request
+    deeper into the application. For example, the following middleware would perform
+    some task before the request is handled by the application:'
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: '```
+
+    \Illuminate\Routing\Middleware\SubstituteBindings::class,
+
+    \Illuminate\Auth\Middleware\Authorize::class,
+
+    ];
+
+    ```
+
+
+    # Middleware Parameters
+
+
+    Middleware can also receive additional parameters. For example, if your application
+    needs toverify that the authenticated user has a given "role" before performing
+    a given action, you could
+
+
+    create an EnsureUserHasRole middleware that receives a role name as an additional
+    argument.
+
+
+    Additional middleware parameters will be passed to the middleware after the $next
+    argument:'
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 180
+  md: "the app/Http/Kernel.php file. When calling the terminate method on your middleware,\
+    \ Laravel will resolve a fresh instance of the middleware from the service container.\
+    \ If you would like to use the same middleware instance when the handle and terminate\
+    \ methods are called, register the middleware with the container using the container's\
+    \ singleton method. Typically this should be done in the register method of your\
+    \ AppServiceProvider :\n\n```\n```php\nuse App\\Http\\Middleware\\TerminatingMiddleware;\n\
+    \n/**\n * Register any application services.\n *\n * @return void\n */\npublic\
+    \ function register()\n{\n    $this->app->singleton(TerminatingMiddleware::class);\n\
+    }\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 181
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 182
+  md: "email input field to contain the email address the user would like to begin\
+    \ using. Without CSRF protection, a malicious website could create an HTML form\
+    \ that points to your application's /user/email route and submits the malicious\
+    \ user's own email address:\n\n```\n<form action=\"https://your-application.com/user/email\"\
+    \ method=\"POST\">\n    <input type=\"email\" value=\"malicious-email@example.com\"\
+    >\n</form>\n\n<script>\n    document.forms[0].submit();\n</script>\n```\n\nIf\
+    \ the malicious website automatically submits the form when the page is loaded,\
+    \ the malicious user only needs to lure an unsuspecting user of your application\
+    \ to visit their website and their email address will be changed in your application.\n\
+    \nTo prevent this vulnerability, we need to inspect every incoming POST , PUT\
+    \ , PATCH , or DELETE request for a secret session value that the malicious application\
+    \ is unable to access.\n\n# Preventing CSRF Requests"
+  merge: -1
+  img_proc: true
+- pgno: 183
+  md: "Laravel automatically generates a CSRF \"token\" for each active user session\
+    \ managed by the application. This token is used to verify that the authenticated\
+    \ user is the person actually making the requests to the application. Since this\
+    \ token is stored in the user's session and changes each time the session is regenerated,\
+    \ a malicious application is unable to access it. The current session's CSRF token\
+    \ can be accessed via the request's session or via the csrf_token helper function:\n\
+    \n```\nuse Illuminate\\Http\\Request;\n\nRoute::get('/token', function (Request\
+    \ $request) {\n    $token = $request->session()->token();\n    \n    $token =\
+    \ csrf_token();\n    \n    // ...\n});\n```\n\nAnytime you define a \"POST\",\
+    \ \"PUT\", \"PATCH\", or \"DELETE\" HTML form in your application, you"
+  merge: -1
+  img_proc: true
+- pgno: 184
+  md: "should include a hidden CSRF _token field in the form so that the CSRF protection\
+    \ middleware can validate the request. For convenience, you may use the @csrf\
+    \ Blade directive to generate the hidden token input field:\n\n```\n<form method=\"\
+    POST\" action=\"/profile\">\n    @csrf\n\n    <!-- Equivalent to... -->\n    <input\
+    \ type=\"hidden\" name=\"_token\" value=\"{{ csrf_token() }}\" />\n</form>\n```\n\
+    \nThe App\\Http\\Middleware\\VerifyCsrfToken middleware, which is included in\
+    \ the web middleware group by default, will automatically verify that the token\
+    \ in the request input matches the token stored in the session. When these two\
+    \ tokens match, we know that the authenticated user is the one initiating the\
+    \ request.\n\n# CSRF Tokens & SPAs\n\nIf you are building an SPA that is utilizing\
+    \ Laravel as an API backend, you should consult the Laravel Sanctum documentation\
+    \ for information on"
+  merge: -1
+  img_proc: true
+- pgno: 185
+  md: 'authenticating with your API and protecting against CSRF vulnerabilities.
+
+
+    # Excluding URIs From CSRF Protection
+
+
+    Sometimes you may wish to exclude a set of URIs from CSRF protection.
+
+
+    For example, if you are using Stripe to process payments and are utilizing their
+    webhook system, you will need to exclude your Stripe webhook handler route from
+    CSRF protection since Stripe will not know what CSRF token to send to your routes.
+
+
+    Typically, you should place these kinds of routes outside of the web middleware
+    group that the App\Providers\RouteServiceProvider applies to all routes in the
+    routes/web.php file.
+
+
+    However, you may also exclude the routes by adding their URIs to the $except property
+    of the VerifyCsrfToken middleware:'
+  merge: -1
+  img_proc: true
+- pgno: 186
+  md: "```\n<?php\n\nnamespace App\\Http\\Middleware;\n\nuse Illuminate\\Foundation\\\
+    Http\\Middleware\\VerifyCsrfToken as Middleware;\n\nclass VerifyCsrfToken extends\
+    \ Middleware\n{\n    /**\n```\n\n```\n    * The URIs that should be excluded from\
+    \ CSRF verification.\n    *\n    * @var array\n    */\n    protected $except =\
+    \ [\n        'stripe/*',\n        'http://example.com/foo/bar',\n        'http://example.com/foo/*',\n\
+    \    ];\n}\n```\n\n> {tip} For convenience, the CSRF middleware is automatically\
+    \ disabled for all routes when running tests.\n\n# X-CSRF-TOKEN\n\nIn addition\
+    \ to checking for the CSRF token as a POST parameter, the App\\Http\\Middleware\\\
+    VerifyCsrfToken middleware will also check for the X-CSRF-TOKEN request header.\
+    \ You could, for example, store the token in an HTML meta tag\n\n```\n<meta name=\"\
+    csrf-token\" content=\"{{ csrf_token() }}\">\n```"
+  merge: -1
+  img_proc: true
+- pgno: 187
+  md: "Then, you can instruct a library like jQuery to automatically add the token\
+    \ to all request headers.\n\nThis provides simple, convenient CSRF protection\
+    \ for your AJAX based applications using legacy JavaScript technology:\n\n```\n\
+    ```js\n$.ajaxSetup({\n    headers: {\n        'X-CSRF-TOKEN': $('meta[name=\"\
+    csrf-token\"]').attr('content')\n    }\n});\n```\n```\n\n# X-XSRF-TOKEN\n\nLaravel\
+    \ stores the ongoing CSRF token in an encoded XSRF-TOKEN treat that is incorporated\
+    \ with every reaction created by the structure. You can utilize the treat's value\
+    \ to set the X-XSRFTOKEN demand header.\n\nThis cookie is primarily sent as a\
+    \ developer convenience since some JavaScript frameworks and libraries, like Angular\
+    \ and Axios, automatically place its value in the X-XSRF-TOKEN header on same-origin\
+    \ requests.\n\n{tip} By default, the resources/js/bootstrap.js file includes the\
+    \ Axios HTTP library which will automatically send the X-XSRF-TOKEN header for\
+    \ you."
+  merge: -1
+  img_proc: true
+- pgno: 188
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 189
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true

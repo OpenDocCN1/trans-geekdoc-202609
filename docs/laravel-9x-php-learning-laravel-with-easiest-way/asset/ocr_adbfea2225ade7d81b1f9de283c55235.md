@@ -1,0 +1,7 @@
+# Introduction
+
+All of the design documents for the Laravel system are put away in the config index. Each choice is archived, so go ahead and glance through the documents and get to know the choices accessible to you. These design documents permit you to arrange things like your data set association data, your mail server data, as well as different other center design values, for example, your application timezone and encryption key.
+
+# Environment Configuration
+
+It is frequently useful to have different design values in view of the climate where the application is running. For instance, you might wish to utilize an alternate store driver locally than you do on your creation server. To make this a snap, Laravel uses the DotEnv PHP library. In a new Laravel establishment, the root registry of your application will contain a .env.example document that characterizes numerous normal climate factors. During the Laravel establishment process, this document will naturally be replicated to .env . Laravel's default .env record contains some normal setup esteems that might vary in light of whether your application is running locally or on a creation web server. These qualities are then recovered from different Laravel design records inside the config index utilizing Laravel's env work. Assuming you are creating with a group, you might wish to keep
