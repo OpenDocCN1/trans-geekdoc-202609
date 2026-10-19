@@ -1,0 +1,6 @@
+algorithms within the hard drive, thus eliminating the need to install any encryption software. The limitation of such devices is that the files are only encrypted when residing on the encrypted USB drive, which means files copied from the USB drive to be sent over email or other file sharing options will not protected.
+
++   - **Media Encryption Software —** Software that is used to encrypt otherwise unprotected storage media such as CDs, DVDs, USB drives, or laptop hard drives. The flexibility of this software allows protection to be applied to a greater selection of storage media. However, the same limitation on collaboration applies to media encryption software as it does to Self-Encrypting USB Drives.
++   - **File Encryption Software —** Allows greater flexibility in applying encryption to specific file(s). When using File Encryption Software properly, resource owners can share encrypted files over email or other file sharing mechanisms while maintaining protection. To share encrypted files, ensure that passwords are shared securely following the recommendations in item 4 above.
+
+The following is a sample list of tools that comply with removable media encryption requirements:

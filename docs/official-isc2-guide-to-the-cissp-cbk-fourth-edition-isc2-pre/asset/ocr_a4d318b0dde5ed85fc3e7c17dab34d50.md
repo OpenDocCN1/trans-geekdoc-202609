@@ -1,0 +1,12 @@
+| No. | Threat | Explanation |
+|---|---|---|
+| 1 | Unauthorized use of remote maintenance access points | Maintenance access points are deliberately created external entrances to the ICS network and are often insufficiently secure. |
+| 2 | Online attacks via office or enterprise networks | Office IT is usually linked to the network in several ways. In most cases, network connections from offices to the ICS network also exist, so attackers can gain access via this route. |
+| 3 | Attacks on standard components used in the ICS network | Standard IT components (commercial off-the-shelf (COTS)) such as systems software, application servers, or databases often contain flaws or vulnerabilities, which can be exploited by attackers. If these standard components are also used in the ICS network, the risk of a successful attack on the ICS network increases. |
+| 4 | (D)DoS Attacks | (Distributed) Denial-of-Service attacks can impair network connections and essential resources and cause systems to fail – in order to disrupt the operation of an ICS, for instance. |
+| 5 | Human error and sabotage | Intentional deeds – whether by internal or external perpetrators – are a massive threat to all protection targets. Negligence and human error are also a great threat, especially in relation to the protection targets confidentiality and availability. |
+| 6 | Introducing malware via removable media and external hardware | The use of removable media and mobile IT components of external staff always entails great risk of malware infection. |
+| 7 | Reading and writing news in the ICS network | Most control components currently use clear text protocols, so communication is unprotected. This makes it relatively easy to read and introduce control commands. |
+| 8 | Unauthorized access to resources | Internal perpetrators and subsequent attacks following initial external penetration have it especially easy if services and components in the process network do not utilize authentication and authorization methods or if the methods are insecure. |
+| 9 | Attacks on network components | Attackers can manipulate network components in order to carry out man-in-the-middle attacks or to make sniffing easier, for example. |
+| 10 | Technical malfunctions or force majeure | Outages resulting from extreme weather or technical malfunctions can occur at any time – risk and potential damage can only be minimized in such cases. |

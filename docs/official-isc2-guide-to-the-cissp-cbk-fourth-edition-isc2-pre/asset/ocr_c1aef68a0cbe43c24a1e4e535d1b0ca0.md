@@ -1,0 +1,14 @@
+vulnerabilities.
+
++   4. **Execution** — Attempt to gain user and privileged access.
++   5. **Document Findings** — Document the results of the test.
+
+# Step 1: Reconnaissance
+
+As is the case with most military and espionage campaigns, penetration tests typically begin with a reconnaissance phase. Reconnaissance is the search for any available information on the target to assist in planning or executing the test. The search can include quick ping sweeps to see what IP addresses on a network will respond, scouring news groups on the Internet in search of disgruntled employees divulging useful information, or rummaging through the trash to find inside information on the business or the technical environment (also known as dumpster diving). The ultimate goal of the reconnaissance phase is to gather as much information on the target as possible. This may include physical and virtual layouts, building and network topography, organizational strengths and weaknesses, operational patterns, technology in use, and practically anything else the tester may think will be useful in the coming attack. Reconnaissance can also include theft, lying to people, monitoring networks, impersonations, or even leveraging falsified friendships to collect data about a target. The search for information is only limited by the extremes to which a company and the tester are willing to go. The rule of thumb in the reconnaissance phase is that no piece of information is too small to be useful.
+
+# Step 2: Enumeration
+
+Also known as network or vulnerability discovery, enumeration is the process of obtaining information directly from the target systems, applications, and networks. An interesting point to understand is that the enumeration phase represents a point within the penetration testing project where the line between a passive attack and an active attack begins to blur. At this point, the tester is not just gathering information anymore; he or she is sending network probes or otherwise communicating with systems and network devices in order to gather more information. Some of these devices may be fragile or susceptible to even the slightest nudge from the tester. When one is setting up the test parameters, the enumeration phase should be thoroughly reviewed with the operations, support, and security teams to ensure there are no surprise alerts generated as a result of the test.
+
+To build an accurate picture of a company’s environment, one should refer to the several tools and techniques available to compile a list of information obtained from the systems. Most notably, port scanning is the most common and easily executed basic test to start with. A port scan is the manipulation of the basic communication setup between

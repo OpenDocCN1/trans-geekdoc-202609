@@ -1,0 +1,13 @@
+# **Incident: Virus Attacks Train Signaling System**
+
+In August 2003, a computer virus was blamed for bringing down train signaling systems throughout the eastern U.S. The signaling outage briefly affected the entire CSX system, which covers 23 states east of the Mississippi River. The virus infected the computer system at CSX Corp’s Jacksonville, Fla. headquarters, shutting down signaling, dispatching, and other systems. The cause was believed to be a virus known as SoBig, adding to havoc caused by the Blaster worm, which debuted one week earlier. A derivative of Blaster brought down Air Canada’s check-in systems during the same timeframe. 113
+
+The security practitioner and the security architect both need to be aware of the threats, vulnerabilities, and risks associated with operating embedded systems within the enterprise. The security architect needs to consider all appropriate standards and guidance that may be available on systems design, while the security practitioner needs to be aware of best practices associated with management, maintenance, operations, and securing of these systems. Risk management also must be considered by both the architect and the practitioner, as well as business impact.
+
+The following standards are particularly relevant for the cybersecurity of ICT systems in non-nuclear critical energy infrastructure:
+
+The ISO 27000 series should be mentioned first. It describes operational and technical requirements for information security management. The ISO 27001 standard for information security management provides the foundation, which is developed in more detail in ISO standard 27002. Higher numbered standards specify sector-specific implementations.
+
+ISO 27032:2012 specifically targets the problems arising from the complex interaction of Internet security, network security, and application security. Therefore, it discusses controls for all cyberspace stakeholders (consumer and provider organizations). It is unique in that it explicitly targets topics such as controls against social engineering attacks, cybersecurity readiness, and awareness. Most importantly, it includes a framework for information sharing and coordination. 114
+
+IEC 62351 directly targets information security for power system control operations. It primarily implements standards for security affecting the communication protocols defined by the IEC TC 57 working group, specifically the IEC 60870-5 series, the IEC 60870-6 series, the IEC 61850 series, the IEC 61970 series, and the IEC 61968 series. 115 These standards are mainly applicable for manufacturers. The M/490 SGIS110 group is working to expand these standards to include specific technical aspects for smart grid

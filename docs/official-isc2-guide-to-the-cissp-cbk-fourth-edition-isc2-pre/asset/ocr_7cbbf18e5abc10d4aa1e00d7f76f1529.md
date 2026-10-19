@@ -1,0 +1,9 @@
+![](bbox=[0.65, 0.05, 0.88, 0.26])
+
+# Domain 6
+
+# Security Assessment & Testing
+
+"Security Assessment and Testing" covers a broad range of ongoing and point-of-time based testing methods used to determine vulnerabilities and associated risk. Mature system development life cycles include security testing and assessment as part of the development, operations, and disposition phases of a system’s life. The fundamental purpose of test and evaluation (T&E) is to provide knowledge to assist in managing the risks involved in developing, producing, operating, and sustaining systems and capabilities. T&E measures progress in both system and capability development. T&E provides knowledge of system capabilities and limitations for use in improving the system performance and for optimizing system use in operations. T&E expertise must be brought to bear at the beginning of the system lifecycle to provide earlier learning about the strengths and weaknesses of the system under development. The goal is early identification of technical, operational, and system deficiencies so that appropriate and timely corrective actions can be developed prior to fielding the system. The creation of the test and evaluation strategy involves planning for technology development, including risk, evaluating the system design against mission requirements, and identifying where competitive prototyping and other evaluation techniques fit in the process.
+
+The content of a test and evaluation strategy is a function of where it is applied in the acquisition/development process, the requirements for the capability to be provided, and

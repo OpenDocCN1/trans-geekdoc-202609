@@ -1,0 +1,13 @@
+consistency (or consistency between the model system and the real world) because the evaluating subject would have the power to ensure that the transaction matched what was expected in reality.
+
+To address internal consistency (or consistency within the model system itself), Clark and Wilson recommended a strict definition of well-formed transactions. In other words, the set of steps within any transaction would need to be carefully designed and enforced. Any deviation from that expected path would result in a failure of the transaction to ensure that the model system’s integrity was not compromised.
+
+To control all subject and object interactions, Clark–Wilson establishes a system of subject–program–object bindings such that the subject no longer has direct access to the object. Instead, this is done through a program with access to the object. This program arbitrates all access and ensures that every interaction between subject and object follows a defined set of rules. The program provides for subject authentication and identification and limits all access to objects under its control.
+
+# Lipner Model
+
+Lipner combines elements of Bell–LaPadula and Biba together with the idea of job functions or roles in a novel way to protect both confidentiality and integrity. The Lipner implementation, published in 1982, describes two ways of implementing integrity. One uses the Bell–LaPadula confidentiality model, and the other uses both the Bell–LaPadula model and the Biba integrity model together. Both methods assign security levels and functional categories to subjects and objects. For subjects, this translates into a person’s clearance level and job function (e.g., user, operator, applications programmer, or systems programmer). For objects, the sensitivity of the data or program and its functions (e.g., test data, production data, application program, or system program) are defined according to its classification.
+
+Lipner’s first method, using only the Bell–LaPadula model, assigns subjects to one of two sensitivity levels – system manager and anyone else – and to one of four job categories. Objects (i.e., file types) are assigned specific classification levels and categories. Most of the subjects and objects are assigned the same level; therefore, categories become the most significant integrity (i.e., access control) mechanism. The applications programmers, systems programmers, and users are confined to their own domains according to their assigned categories, thus preventing unauthorized users from modifying data (the first integrity goal).
+
+Lipner’s second method combines Biba’s integrity model with Bell–LaPadula. This

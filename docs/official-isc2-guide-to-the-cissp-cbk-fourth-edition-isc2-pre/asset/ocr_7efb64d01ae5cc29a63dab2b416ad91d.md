@@ -1,0 +1,13 @@
+fail to comply with applicable laws, regulations, or policies. However, security professionals need to appreciate that business practices have changed due to the need to be in compliance (often with international regulations) and that budgets must be appropriately increased to meet the demand.
+
+# Data Breaches
+
+It is important for the security professionals of the world to have a sense of community and identity. Certifications such as the CISSP help to foster and create this community by allowing security professionals to share a sense of accomplishment at having attained an important milestone in their careers through certification, as well as by gaining access to a community shared amongst information security professionals. The main thing that helps to define a community is the culture that it represents and the shared values and points of reference that the culture is built upon. Common points of reference are important for all sorts of reasons, but especially so because they provide for the ability to agree on definitions and expectations with regards to things such as vocabulary. To that end, the following definitions of vocabulary terms are offered as noted:
+
++   - **Incident** – A security event that compromises the integrity, confidentiality, or availability of an information asset.
++   - **Breach** – An incident that results in the disclosure or potential exposure of data.
++   - **Data Disclosure** – A breach for which it was confirmed that data was actually disclosed (not just exposed) to an unauthorized party.
+
+The incident and breach landscape is an ever-changing one. With the nature of interconnected systems today, an incident that starts out as a small breach, perhaps limited to one system, can quickly spread if unchecked to encompass entire global networks and data systems. The security professional needs to have a general sense of the kinds of breaches and data disclosures that are being faced by organizations around the world today in order to be prepared to react to the threats that they will encounter in the enterprise. The security professional and the security practitioner both also need to keep in mind that if incidents are identified quickly, and responded to in an efficient and effective manner, then those efforts may be able to prevent the incident from becoming a full blown breach.
+
+While it is impossible to create a comprehensive and timely list of incidents, breaches, and data disclosure events, the following list represents the largest items on the list as of the first seven months of 2014, based on publically disclosed information.

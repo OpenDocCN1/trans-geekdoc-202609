@@ -1,0 +1,13 @@
+summary, the following are needed to ensure an effective IDS:
+
++   - Employ a technically knowledgeable person to select, install, configure, operate, and maintain the IDS.
++   - Regularly update the system with new signature attacks and evaluate expected behavior profiles.
++   - Be aware that the IDS may be vulnerable to attacks and protect it accordingly.
+
+Finally, the security practitioner needs to be aware of the fact that intruders may try to disable the IDS or IPS with false information or overload the system through a DoS or DDoS attack. In addition, the security architect and the security professional both need to work together to ensure that from a design and a policy perspective, the IDS or IPS system is aligned to support the needs of the organization.
+
+# Whitelisting, Blacklisting, and Greylisting... Oh My!
+
+A whitelist is a list of email addresses and/or Internet addresses that someone knows as "good" senders. A blacklist is a corresponding list of known "bad" senders. Greylisting is an approach that says, "I don't know who you are, so I'm going to make your email message jump through some extra hoops before I accept it." So an email from an unrecognized sender is neither on the whitelist or the blacklist and therefore is treated differently. Greylisting works by telling the sending email server to resend the message sometime soon. Many spammers set their software to blindly transmit their spam email, and the software does not understand the "resend soon" message. Thus, the spam would never actually be delivered.
+
+The security practitioner needs to be aware of the different spam filtering tools that are available to them. One of the most important is The Spamhaus Project. The Spamhaus Project is an international nonprofit organization whose mission is to track the Internet's spam operations and sources, to provide dependable real time anti-spam protection for Internet networks, to work with law enforcement agencies to identify and pursue spam and malware gangs worldwide, and to lobby governments for effective anti-spam legislation. Spamhaus maintains a number of security intelligence databases and real time spam-blocking databases ('DNSBLs') responsible for keeping back the vast majority of spam and malware sent out on the Internet. These include the Spamhaus Block List (SBL), the Exploits Block List (XBL), the Policy Block List (PBL), and the Domain Block List (DBL). In addition, Spamhaus maintains The Register of Known Spam Operations (ROKSO) database, which collates information and evidence on known professional spam operations that have been terminated by a minimum of 3 Internet

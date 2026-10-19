@@ -1,0 +1,13 @@
+adherence to the security policies that have been communicated. End-users are like windows in a building. Just like a window that allows all activity to be seen and monitored, their actions will expose weaknesses in a poorly designed and communicated compliance regime. For example, downloading unauthorized software, opening attachments from unknown senders, or visiting malicious websites could introduce malicious code (e.g., virus, Trojans, and spyware) into the environment. However, end-users can also be the front-line eyes and ears of the organization and report security incidents and unusual behavior to the appropriate roles for investigation. In order for the security professionals to create this culture, they must clearly define the expectations and acceptable behaviors associated with this role, as well as ensuring that these are documented and communicated clearly to every member of the enterprise.
+
+# Executive Management
+
+Executive management maintains the overall responsibility for protection of the information assets of the enterprise. The business operations are dependent upon information being available, accurate, and protected from individuals without a need to know. Financial losses can occur if the confidentiality, integrity, or availability of this information is compromised. Executive Management must be aware of the risks that they are accepting for the organization. Risk must be identified through risk assessment and communicated clearly so that management can make informed decisions.
+
+# Information Systems Security Professional
+
+Drafting of security policies, standards and supporting guidelines, procedures, and baselines is coordinated through these individuals. Guidance is provided for technical security issues, and emerging threats are considered with regards to the adoption of new policies. Activities such as interpretation of government regulations and industry trends and analysis of vendor solutions to include in the security architecture that advances the security of the organization are performed by this role.
+
+# Data/Information/Business Owners
+
+A business executive or manager is typically responsible for an information asset. These are the individuals that assign the appropriate classification to information assets. They ensure that the business information is protected with appropriate controls. Periodically, the information owners need to review the classification and access rights associated with information assets. The owners, or their delegates, may be required to approve access to the information. Owners also need to determine the criticality, sensitivity, retention, backups, and safeguards for the information. Owners, or their delegates, are responsible

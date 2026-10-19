@@ -1,0 +1,13 @@
+The SOA provides for modularity, flexibility, and reusability. Moreover, it allows for consistent and collaborative governance, security, and management, including policy enforcement, authentication, encryption, and digital signature implementations, with the caveat that the security is designed and implemented correctly. The availability of middleware interfaces, however, can make them common targets for attack as many of the SOAs were not developed with end-to-end security as a requirement.
+
+# Embedded Systems
+
+Embedded systems are used to provide computing services in a small form factor with limited processing power. They embed the necessary hardware, firmware, and software into a single platform that can be used to provide a limited range of computing services, usually around a single application. They typically feature a limited OS with the base minimum functionality required to meet its functional requirements. Other constrained devices such as mobile phones, media players, and networking devices such as routers and wireless devices take a similar approach.
+
+From the security architect perspective, embedded systems have a number of potential advantages and disadvantages. Security services tend to be simple, testable, and verifiable, making the task of ensuring that security has been designed and implemented correctly much simpler. Unfortunately, security in such systems is typically limited to a few basic security features to help protect memory and privileged access to memory. While they may be able to support a wide range of security services, they have very limited processing power that must be shared by the core functions and security components. This frequently results in less-than-robust security features, particularly when richer functionality is the primary business driver. It is also frequently more difficult to patch security vulnerabilities in constrained embedded devices.⁴⁴ This is why the security architect needs to consider where security needs to be placed and how it needs to be addressed BOTH inside and outside of the embedded system, as well as how much trust can be placed in the integrity of the embedded system from an architecture standpoint.
+
+# Pervasive Computing and Mobile Devices
+
+The number of mobile devices has grown considerably in the past four or five years. Products vary from sophisticated mobile phones, such as fourth-generation (4G) handsets, to full-featured "ultrabooks" and tablets.
+
+These devices can now manage personal information, such as contacts, appointments, and to-do lists. Current tablets and cell phones connect to the Internet, function as global

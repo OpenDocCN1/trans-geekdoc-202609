@@ -1,0 +1,1 @@
+D. An independent third party attests the validity of the patch

@@ -1,0 +1,13 @@
+The security of an algorithm cannot exceed its key length. Therefore, it is possible to have a very long key, and yet it provides low security. As an example, three-key (56 bits per key) Triple DES can have a key length of 168 bits, but, due to the meet-in-the-middle attack, the effective security that it provides is at most 112 bits. However, most symmetric algorithms are designed to have security equal to their key length. A natural inclination is to use the longest key possible, which may make the key more difficult to break. However, the longer the key, the more computationally expensive the encrypting and decrypting process can be. The goal is to make breaking the key cost more (in terms of effort, time, and resources) than the worth of the information being protected and, if possible, not a penny more (to do more would not be economically sound).
+
+# Asymmetric Key Length
+
+The effectiveness of asymmetric cryptographic systems depends on the hard to solve nature of certain mathematical problems such as prime integer factorization. These problems are time consuming to solve but usually faster than trying all possible keys by brute force. Thus, asymmetric algorithm keys must be longer for equivalent resistance to attack than symmetric algorithm keys.
+
+RSA Security claims that 1024-bit RSA keys are equivalent in strength to 80-bit symmetric keys, 2048-bit RSA keys to 112-bit symmetric keys, and 3072-bit RSA keys to 128-bit symmetric keys. RSA claims that 2048- bit keys are sufficient until 2030. An RSA key length of 3072 bits should be used if security is required beyond 2030.137 NIST key management guidelines further suggest that 15,360-bit RSA keys are equivalent in strength to 256-bit symmetric keys.138
+
+ECC can secure with shorter keys than those needed by other asymmetric key algorithms. NIST guidelines state that elliptic curve keys should be twice the length of equivalent strength symmetric key algorithms. For example, a 224-bit elliptic curve key would have roughly the same strength as a 112-bit symmetric key. These estimates assume no major breakthroughs in solving the underlying mathematical problems that ECC is based on.
+
+# Key Wrapping and Key Encrypting Keys
+
+One role of key management is to ensure that the same key used in encrypting a message by a sender is the same key used to decrypt the message by the intended receiver. Thus, if Terry and Pat wish to exchange encrypted messages, each must be equipped to decrypt received messages and to encrypt sent messages. If they use a cipher, they will need appropriate keys. The problem is how to exchange whatever keys

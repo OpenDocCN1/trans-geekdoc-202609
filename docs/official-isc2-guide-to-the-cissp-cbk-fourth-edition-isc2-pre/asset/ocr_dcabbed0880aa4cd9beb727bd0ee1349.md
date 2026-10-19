@@ -1,0 +1,13 @@
+have a copy of the key to the server room, it can be difficult to know who entered that room at 10 p.m. yesterday. There is limited access control in that only those people with a key are able to enter; however, it is unknown which one of those 10 actually entered. The same occurs with a symmetric algorithm; if the key to a secret file is shared between two or more people, then there is no way of knowing who the last person to access the encrypted file was. It would also be possible for a person to change the file and allege that it was changed by someone else. This would be most critical when the cryptosystem is used for important documents such as electronic contracts. If a person that receives a file can change the document and allege that that was the true copy he had received, repudiation problems arise.
+
+# Examples of Symmetric Algorithms
+
+Algorithms and systems such as the Caesar cipher, the Spartan scytale, and the Enigma machine are all examples of symmetric algorithms. The receiver needed to use the same key to perform the decryption process as he had used during the encryption process. The following covers many of the modern symmetric algorithms.
+
+# The Data Encryption Standard (DES)
+
+The Data Encryption Standard was based on the work of Harst Feistal.75 Harst Feistal had developed a family of algorithms that had a core principle of taking the input block of plaintext and dividing it in half. Then each half was used several times through an exclusive-or operation to alter the other half, providing a type of permutation as well as substitution.
+
+DES became the standard in 1977 when it was adopted by several agencies of the U.S. federal government for deployment across all U.S. government departments for nonclassified but sensitive information. DES is used extensively even today in many financial, virtual private network (VPN), and online encryption systems. DES has been replaced as the standard by the AES, which is based on the Rijndael algorithm. The origin of DES was the Lucifer algorithm developed by Feistal; however, Lucifer had a 128-bit key. The algorithm was modified to make it more resistant to cryptanalysis, and the key length was reduced to 56 bits so that it could be fit onto a single chip. DES operates on 64-bit input blocks and outputs ciphertext into 64-bit blocks. There are 16 identical stages of processing, termed rounds. Before the main rounds, the block is divided into two 32-bit halves (because it is a Feistal cipher) and processed alternately using a 56-bit key.
+
+When one is looking at a DES key, it is 64 bits in length; however, every eighth bit (used for parity) is ignored. Therefore, the effective length of the DES key is 56 bits.

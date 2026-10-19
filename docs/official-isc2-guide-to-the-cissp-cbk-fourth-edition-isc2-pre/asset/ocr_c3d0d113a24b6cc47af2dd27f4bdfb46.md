@@ -1,0 +1,13 @@
+http://www.itu.int/rec/T-REC-X/e
+
+# Recommendation X.1205
+
+Recommendation ITU-T X.1205 provides a definition for cybersecurity and taxonomy of security threats from an organization point of view. Cybersecurity threats and vulnerabilities including the most common hacker’s tools are presented, and threats are discussed at various network layers. Available cybersecurity technologies are discussed as well as network protection principles, such as defense in depth and access management with application to cybersecurity. Risk management strategies and techniques are presented, including the value of training and education in protecting the network. Document URL: http://www.itu.int/rec/T-REC-X.1205-200804-I/en
+
+# National Cyber Security Framework Manual
+
+The National Cyber Security Framework Manual provides detailed background information and in-depth theoretical frameworks to help the reader understand the various facets of National Cyber Security, according to different levels of public policy formulation. The four levels of government - political, strategic, operational, and tactical/technical - have their own perspectives on National Cyber Security, and each is addressed in individual sections within the Manual. Additionally, the Manual gives examples of relevant institutions in National Cyber Security, from top-level policy coordination bodies down to cyber crisis management structures and similar institutions. Document URL: http://www.ccdcoe.org/publications/books/NationalCyberSecurityFrameworkManual.pd
+
+Based on the previous listings, the security practitioners have many options to choose from as they seek the guidance of authoritative parties, best practices, and standards to help guide them. While there are many avenues to explore and many voices to be heard, the following offer three examples for the security practitioners of the importance of selecting the appropriate standards to help guide them in their professional practice. The need to understand the scope of the security needs to be addressed, as well as the business requirements to be supported, and the resources available to accomplish the tasks at hand are all part of the formula for success that the security practitioner must learn to master.
+
+The National Institute of Standards and Technology (NIST) is responsible for publishing a variety of guides for implementing security controls, performing audits, and certifying systems. Some of these guides are very specific, such as recommended settings

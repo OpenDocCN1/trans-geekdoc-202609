@@ -1,0 +1,11 @@
+process gives enterprises the flexibility needed to avoid assessment approaches that are unnecessarily complex or costly while simultaneously meeting the assessment requirements established by applying the fundamental concepts of a risk management framework. Supplementation involves adding assessment procedures or assessment details to adequately meet the risk management needs of the organization (e.g., adding organization-specific details such as system/platform-specific information for selected security controls). Supplementation decisions are left to the discretion of the organization in order to maximize flexibility in developing security assessment plans when applying the results of risk assessments in determining the extent, rigor, and level of intensity of the assessments.
+
+The security practitioner needs to be aware of the value that scoping, tailoring, and supplementation can bring to the security architectures being planned and assessed for the enterprise. The use of scoping and tailoring to properly narrow the focus of the architecture will ensure that the appropriate risks are identified and addressed. The use of supplementation will allow the architecture to stay flexible over time and grow to address the needs of the enterprise that arise during operation of the architecture, once it is implemented fully.
+
+![](bbox=[0.031, 0.502, 0.208, 0.637])
+
+# TRY IT FOR YOURSELF
+
+A sample template that will allow the security practitioner to try his or her hand at scoping and tailoring is provided as Appendix C. The template will walk you through the stages of creating a security approach for a project. Defining a security approach for a project provides a line of site from business requirements through team members and components all the way to implemented security controls. It documents clear responsibilities for implementation, certification, and accreditation of the system security and provides a framework for communicating security-based impacts on other development and project management activities. This security approach defines from a security perspective how systems associated with the project will be characterized, categorized, and managed.
+
+Download the template and go through the sections in order to practice how to scope and tailor a security approach for a project.

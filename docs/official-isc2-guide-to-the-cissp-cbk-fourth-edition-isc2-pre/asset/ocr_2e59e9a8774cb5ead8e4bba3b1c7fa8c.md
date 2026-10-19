@@ -1,0 +1,1 @@
+security to organizational risk management. Steven also volunteers service to (ISC)²’s Government Advisory Board and Executive Writers Bureau. Steven enjoys relaxing and traveling with his wife, whose patience and support have been indispensable in his numerous information assurance pursuits.

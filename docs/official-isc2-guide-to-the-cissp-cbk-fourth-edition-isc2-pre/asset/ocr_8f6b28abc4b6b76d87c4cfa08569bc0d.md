@@ -1,0 +1,1 @@
+Figure 1.19 – Security Controls Assessment table

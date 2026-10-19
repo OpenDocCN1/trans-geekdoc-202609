@@ -1,0 +1,13 @@
++   - Block storage data management
++   - Remote management
++   - Business-centric data communications
+
+Each network and device adds to the complexity, cost, and management overhead. Converged networks can simplify typical topologies by reducing the number of physical components. This convergence leads to simplified management and improvements in quality of service (QoS).
+
+There have been many attempts to create converged networks over the past decade. Fibre Channel Protocol (FCP) is a lightweight mapping of SCSI to the Fibre Channel (FC) layers 1 and 2 transport protocol. Fibre Channel carries not only FCP traffic but also IP traffic, to create a converged network. The cost of FC and the acceptance of Ethernet as the standard for LAN communications prevented widespread FC use except for data center SANs for enterprise businesses.
+
++   - **InfiniBand (IB)** technology provides a converged network capability by transporting inter-processor communication, LAN, and storage protocols. The two most common storage protocols for IB are SCSI Remote Direct Memory Access Protocol (SRP) and iSCSI Extensions for RDMA (iSER). These protocols use the RDMA capabilities of IB. SRP builds a direct SCSI to RDMA mapping layer and protocol, and iSER copies data directly to the SCSI I/O buffers without intermediate data copies. These protocols are lightweight but not as streamlined as FC. Widespread deployment was impractical because of the perceived high cost of IB and the complex gateway and routers needed to translate from these IB-centric protocols and networks to native FC storage devices. High Performance Computing environments that have adopted IB as the standard transport network use SRP and iSER protocols.
+
++   - **Internet SCSI (iSCSI)** was an attempt to bring a direct SCSI to TCP/IP mapping layer and protocol to the mass Ethernet market. Proponents of iSCSI wanted to drive down cost and to deploy SANs over existing Ethernet LAN infrastructure. iSCSI technology was very appealing to the small and medium business market because of the low-cost software initiators and the ability to use any existing Ethernet LAN.
+
++   - **FC over IP (FCIP)** and **Internet FC Protocol (iFCP)** map FCP and FC characteristics to LANs, MANs, and WANs. Both of these protocols map FC framing on top of the TCP/IP protocol stack. FCIP is a SAN extension protocol to bridge FC SANs across large geographical areas. It is not for host-server or

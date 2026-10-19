@@ -1,0 +1,7 @@
+# Spanning Tree Analysis
+
+Spanning tree analysis "creates a 'tree' of all possible threats to or faults of the system. 'Branches' are general categories such as network threats, physical threats, component failures, etc." When conducting the risk assessment, organizations "prune 'branches' that do not apply."
+
+# VAR (Value at Risk)
+
+In a paper presented by Jeevan Jaisingh and Jackie Rees of the Krannert Graduate School of Management at Purdue University, a new methodology for information security risk assessment titled Value at Risk (VAR) was introduced. The VAR methodology provides a summary of the worst loss due to a security breach over a target horizon. Many of the information security risk assessment tools are qualitative in nature and are not grounded in theory. VAR is identified as a theoretically based, quantitative measure of information security risk. Many believe that when organizations use VAR, they can achieve the best balance between risk and cost of implementing security controls. Many organizations identify an acceptable risk profile for their company. Determine the cost associated with this risk so that when the dollar value at risk for the organization exceeds that dollar amount, the organization can be alerted to the fact that an increased security investment is required. The VAR framework for information security risk assessment appears in Figure 1.14.

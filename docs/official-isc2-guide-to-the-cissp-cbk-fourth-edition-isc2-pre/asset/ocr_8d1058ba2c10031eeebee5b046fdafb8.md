@@ -1,0 +1,13 @@
+In addition to Blowfish, there are also the bcrypt and scrypt functions that could be used as well to achieve the same results. Bcrypt has been around for far longer than scrypt, and both have their advantages and disadvantages. For an interesting take on why bcrypt may be a better choice than scrypt, the interested security professional should take a look at the following blog entry:
+
+http://blog.ircmaxell.com/2014/03/why-i-dont-recommend-scrypt.html
+
+# The Birthday Paradox
+
+The birthday paradox has been described in textbooks on probability for several years. It is a surprising mathematical condition that indicates the ease of finding two people with the same birthday from a group of people. If one considers that there are 365 possible birthdays (not including leap years and assuming that birthdays are spread evenly across all possible dates), then one would expect to need to have roughly 183 people together to have a 50% probability that two of those people share the same birthday. In fact, once there are more than 23 people together, there is a greater than 50% probability that two of them share the same birthday. Consider that in a group of 23 people, there are 253 different pairings (n(n − 1)/2). Once 100 people are together, the chance of two of them having the same birthday is greater than 99.99%.
+
+So why is a discussion about birthdays important in the middle of hashing attacks? Because the likelihood of finding a collision for two messages and their hash values may be a lot easier than may have been believed.
+
+It would be very similar to the statistics of finding two people with the same birthday. One of the considerations for evaluating the strength of a hash algorithm must be its resistance to collisions. The probability of finding a collision for a 160-bit hash can be estimated at either 2160 or 2160/2, depending on the level of collision resistance needed.
+
+This approach is relevant because a hash is a representation of the message and not the message itself. Obviously, the attacker does not want to find an identical message; he wants to find out how to (1) change the message contents to what he wants it to read or (2) cast some doubt on the authenticity of the original message by demonstrating that another message has the same value as the original. The hashing algorithm must be resistant to a birthday-type attack that would allow the attacker to feasibly accomplish his goals.

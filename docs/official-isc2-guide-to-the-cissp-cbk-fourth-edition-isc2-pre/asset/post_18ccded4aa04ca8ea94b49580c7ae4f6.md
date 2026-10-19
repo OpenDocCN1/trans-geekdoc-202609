@@ -1,0 +1,309 @@
+
+- Coupling 1234
+- Coverage
+  - Condition 757
+  - Data Flow 758
+  - Decision (Branch) 757
+  - Loop 757
+  - Multi-Condition 757
+  - Path 757
+  - Statement 757
+- Covert Channel(s) 314
+  - Controls 1033
+  - Storage Channels 314
+  - Timing Channels 314
+- Crafted Packets 618
+  - Source Routing Exploitation 619
+- Credential Management Systems 692
+- Credit Card Safety 1044
+- Crime
+  - Computer 61
+  - Prevention through Environmental Design (CPTED) 430
+  - Scene 790
+- Crosstalk 1234
+- Cryptanalysis 340, 423, 425, 1234
+- Cryptogram. See also Ciphertext
+- Cryptographic
+  - Lifecycle 397
+  - Protections 309
+  - Systems 339, 396
+- Cryptography 96, 134, 163, 184, 249, 252, 302, 309, 342, 354, 370, 374, 393, 394, 395, 396, 398, 399, 442, 455, 510, 511, 512, 998, 1034, 1234
+  - History 393
+- Cryptology 341, 1234
+- Cryptosystem 340, 1234
+- Cryptovariable 340
+- Cumulative Sum (CUSUM) 148
+- Custodianship 188, 189, 190
+- Cyber-Physical Systems 334, 385
+
+## D
+- Data
+  - Access 198
+  - at Rest 224, 396
+  - Audit 196
+  - Breaches 53
+  - Bus 1234
+  - Center Bridging Exchange Protocol (DCBX) 491
+  - Center Security 437
+  - Communications 567
+    - Analog 567
+    - Digital 567
+  - Connectivity 322
+  - Custodian 1234
+  - Custodianship 189
+  - Dictionary 1234
+  - Diddling 1234
+  - Disclosure 53
+  - Documentation 192
+  - Encryption Standard (DES) 356, 478
+    - Advantages and Disadvantages 361
+    - Double DES 361
+    - Triple DES (3DES) 363
+  - Execution Prevention (DEP) 1033, 1234
+  - Flow Control 327
+  - Hiding 1234
+  - Historian 485
+  - Information
+    - Business Owners 29
+    - Custodian/Steward 29
+  - in Transit 226, 396
+  - Leak/Loss Prevention (DLP) 810
+  - Lifecycle Control 194
+  - Management 187, 256, 333
+  - Mining 331, 978, 1234
+  - Modeling 1235
+  - Owner 1235
+  - Ownership 189
+  - Policy 187
+  - Publishing 199
+  - Quality 190
+  - Remanence 203
+  - Security 37, 197, 209, 224, 300, 304, 369, 517
+  - Standards 194
+  - Storage 196, 207, 872
+  - Structure 1235
+  - Warehousing 1235
+- Database 1235
+  - Backup 197
+  - Interface Languages 973
+    - ActiveX Data Objects (ADO) 974, 976
+  - eXtensible Markup Language (XML) 974
+  - Java Database Connectivity (JDBC) 973, 974
+  - Object Linking and Embedding Database (OLE DB) 974, 975
+  - Online Analytical Processing (OLAP) 978
+  - Open Database Connectivity (ODBC) 973
+  - Maintenance 195, 197
+  - Management System (DBMS) 377, 968, 970, 971, 973, 975, 979, 981, 982, 983, 1235
+    - Architecture 968
+  - Model
+    - Object-Oriented 973
+  - Security 329
+  - Vulnerabilities 979
+- Decipher 1235
+- Decoding 341
+- Decryption 340, 516
+- Defense-in-Depth 1235
+- Delphi Method 1235
+- Demilitarized Zone (DMZ) 535, 536
+- Denial-of-Service (DoS) 141, 844
+- Dense-Wave Division Multiplexers (DWDMs) 537
+- Department of Defense (DoD). See also Transmission Control Protocol/Internet Protocol (TCP/IP)
+- Department of Defense Instruction (DoDI) 156, 233
+- Department of Defense Protective Design Center (DOD-PDC) 434
+- Department of Homeland Security (DHS) 807
+- Department of State (DOS) 434
+- Destruction 184, 202, 204, 205, 207, 222, 413, 844, 944, 1167, 1168, 1170
+  - Media 205, 207
+- Determination
+  - of Impact 105
+  - of Risk 107
+- de Vigenère, Blais 351
+- Differential Cryptanalysis 1235
+- Diffie-Hellman Algorithm 373, 1235
+- Diffusion 342, 1235
+- Digital
+  - Certificate 340
+  - Rights Management (DRM) 163, 418, 1235
+  - Signals 1235
+  - Signature 340, 403, 404, 417, 418, 512, 518, 1235
+  - Signature Standard (DSS) 417
+  - Subscriber Line (DSL) 587, 1235
+  - Video Recorder (DVR) 916
+- Directory
+  - Access Protocol (DAP) 661
+  - Information Shadowing Protocol (DISP) 661
+  - Management 660
+  - System Protocol (DSP) 661
+  - Technologies 660
+- Disaster
+  - Preparedness 694
+  - Recovery (DR) 73
+    - Process 876
+- Discretionary Access Controls (DACs) 716
+- Distance-Vector Routing Protocol 1235
+- Distributed
+  - Control Systems (DCS) 388
+  - Denial of Service (DDoS) 1019
+    - Zombies 1019
+  - Systems 335
+  - Transaction Processing (DTP) 465
+- DNS Queries
+  - Manipulation 626
+- DNSSEC 1235
+- DNS Zone Transfer 1235
+- DoDAF 1236
+- Domain
+  - Litigation 606
+- Domain Name System (DNS) 466, 474, 1236
+- Driving Records 86
+- Drug and Substance Testing 86
+- Dual Control 407
+- Dual-Homed Firewall 1236
+- Due
+  - Care 35
+  - Diligence 35
+- Dumpster Diving 1236
+- Duress 941
+- Dynamic
+  - Host Configuration Protocol (DHCP) 466, 471, 588, 1236
+  - Host Configuration Protocol v6 (DHCPv6) 466
+  - Link Libraries (DLLs) 1236
+
+## E
+- Eavesdropping 515, 605, 607, 651
+- Egress Monitoring 807, 809
+- Electronic Payments 512
+- El Gamal 354, 373, 374, 418
+  - Algorithm 1236
+- Elliptic Curve Cryptography (ECC) 374
+  - Algorithm 1236
+- E-mail Spoofing 1236
+- Embedded Systems 317
+- Emergency
+  - Management Organization (EMO) 895
+  - Notification List 75
+- Employee
+  - Notification 883
+  - Termination Processes 89
+- Employment
+  - Agreements 87
+  - Candidate Screening 81
+- Encapsulating Security Payload (ESP) 560
+  - Protocol 1236
+- Encapsulation 309, 999
+- Encipher 1236
+- Encoding 341
+- Encrypted Email 524
+- Encryption 7, 49, 131, 134, 205, 224, 225, 226, 228, 339, 340, 342, 346, 356, 363, 364, 368, 369, 397, 400, 403, 406, 464, 478, 508, 516, 517, 526, 560, 561, 562, 672, 833
+  - Algorithms 228
+  - Concepts 339
+  - End-to-End 226, 1236
+  - Link 226, 397
+  - Symmetric-Key 516
+  - Systems 346
+  - Tools 225
+    - File Encryption Software 226
+    - Media Encryption Software 225, 226
+    - Self-Encrypting USB Drives 225, 226
+- End Point Security 548
+- End-Users 28, 378
+- Engineering Lifecycle 255
+- Enhanced
+  - Simple Mail Transfer Protocol (ESMTP) 478
+  - Transmission Selection (ETS) 491
+- Enterprise Security Architecture 271, 272, 291
+- Equipment Lifecycle 212
+- Escort and Visitor Control 926
+- Ethernet (IEEE 802.3) 458, 459, 467, 483, 490, 491, 492, 493, 494, 495, 496, 497, 538, 539, 540, 576, 577, 578, 587, 617, 618, 1236
+- Ethics
+  - Codes 64
+  - Computer 60
+    - Fallacies 62
+- Hacker 63
+- (ISC)2 Code 66
+- Professional 58
+- European
+  - Network and Information Security Agency (ENISA) 233, 236, 324
+  - Union (EU) 36, 40, 57, 399
+- Evaluation Assurance Level (EAL) 300
+- EAL 1 300
+- EAL 2 299, 300
+- EAL 3 300
+- EAL 4 300
+- EAL 5 300
+- EAL 6 300
+- EAL 7 300
+- Evidence Collection 798, 805
+- Executive Management 16, 28
+  - Communicate Risks 16
+- Exponentially Weighted Moving Average (EWMA) 149
+- Export Administration Regulations (EAR) 48
+- Exposure 1236
+- Extensible
+  - Access Control Markup Language (XACML) 647
+  - Markup Language (XML) 377, 647, 672, 852
+  - Messaging and Presence Protocol (XMPP) 466, 555
+- Exterior Gateway Protocol (EGP) 465
+- Extranet 470
+
+## F
+- Fabric Shortest Path First (FSPF) 492
+- Facial Image 680
+- Facilitated Risk Analysis Process (FRAP) 97, 1236
+- Facilities Security 435
+- Failure
+  - Modes 97, 1055
+  - Modes and Effect Analysis (FMEA) 1236
+- Fault
+  - Tolerance 871
+  - Tree Analysis 1236
+- FC over IP (FCIP) 491
+- Federal
+  - Acquisition Service (FAS) 807
+  - Departments and Agencies (D/As) 807
+  - Information Processing Standards (FIPS) 234
+  - Systems Integration and Management Center (FEDS IM) 807
+- Federated Identity 1237
+  - Management 669
+- Fiber
+  - Distributed Data Interface (FDDI) 537, 577, 1237
+  - Optic 542
+- Fibre Channel over Ethernet (FCoE) 491
+- Fieldbus 488
+- File 1237
+  - Contents 193
+  - Transfer, Access and Manager (FTAM) 465
+  - Transfer Protocol (FTP) 465, 467, 479, 535
+    - Anonymous 480
+- Filtering 482, 545, 546, 609
+  - Dynamic Packet 546
+  - Static Packet 545
+- Fine-Grained Access Control 694
+- Fingerprint 679
+- FIPS Publication 199 234
+- FIPS Publication 200 234
+- Fire
+  - Detection 440
+  - Suppression 441
+- Firewalls 240, 309, 455, 543, 544, 545, 548, 558, 610, 747, 787, 837, 1205
+  - Personal 548
+  - Tunneling 558
+- Firmware 269
+- First-Responder 803
+- Foreign Key 1237
+- Form Signing 524
+- Foundational Concepts 342
+- Frame Relay 226, 397, 496, 577, 589
+- Framework
+  - Architecture 278
+  - Audit 95
+  - Core 242
+  - Implementation Tiers 242
+  - Integrated 153
+  - Open Group Architecture Framework (TOGAF) 278
+  - Profile 242
+- Risk Management Framework (RMF) 154, 156, 772, 1051
+- Risk Management 149
+- Sender Policy Framework (SPF) 1249
+- Sherwood Applied Business Security Architecture (SABSA) 277
+- Zachman 277, 1255
