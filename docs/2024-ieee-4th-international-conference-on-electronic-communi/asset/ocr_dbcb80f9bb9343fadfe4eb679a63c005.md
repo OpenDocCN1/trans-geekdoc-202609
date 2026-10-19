@@ -1,0 +1,13 @@
+# 2. Materials and Methods
+
+Copper oxide nanoparticles were synthesized using the chemical co-precipitation technique. In a typical procedure, 5 g of CuCl·2H₂O and 10 g of Cu₂Cl₃·6H₂O were combined in distilled water under a nitrogen gas vacuum. The mixture was subjected to vigorous stirring and heated to 100 °C. Subsequently, 10 mL of NaOH was gradually introduced. The mixture was continuously stirred for 1 h. Afterward, the nanoparticles were repeatedly rinsed with distilled water and dried under vacuum for 24 h. Herbal eumelanin in this work was extracted from black seed (Nigella sativa). A total of 10 gm of seeds was solubilized in a solution of NaOH (pH 10) for 1 h then this was stirred with copper oxide for 3 h. The resulting nanoparticles were then washed twice with distilled water and dried in an oven for 48 h. For the XRD results for the nanoparticles, a Bruker D8 Discover diffractometer (Bruker, Karlsruhe, Germany) with Cu-Kα radiation of wavelength 1.54 Å was used. Magnetic measurements were performed by using a vibrating sample magnetometer (VSM, 7404 model-1.8T magnets, Lake Shore Cryotronics, Westerville, OH, USA).
+
+# 3. Results and Conclusions
+
+Figure 1 presents the XRD curves of both the melanin and copper oxide-doped (Cu₂O) melanin samples. The XRD pattern shows both samples have a broad peak, indicating an amorphous structure. The peak at (2θ = 22°) indicates the formation of melanin. Furthermore, no new peaks for Cu₂O appear in the XRD result, confirming that the Cu₂O nanoparticles bonded well to the melanin molecules. The Scherrer equation is used to calculate the crystallite size (D = kλ / βcosθ), where D is the crystallite size of the nanoparticles, (k = 0.9) is the constant for the spherical particles, λ is the wavelength of the XRD (~0.154 nm), and β is the FWHM of the Bragg angle. The average crystallite size of the melanin nanoparticles before doping with copper oxide is 2.02 nm and the average size increased significantly to 3.01 nm. The significant increase in the crystallite size of the melanin doped with copper oxide is related to the size of copper ions [8].
+
+![](bbox=[0.32, 0.54, 0.54, 0.67])
+
+Figure 1. XRD pattern of natural melanin and natural melanin doped with Cu₂O.
+
+Figure 2 shows a hysteresis loop at 300K°. The measured magnetization (M) per gram of all the samples was measured as a function of the magnetic field (H). The results show the ferromagnetic behavior of natural melanin becomes paramagnetic after doping with copper oxide. This change in magnetic behavior allows us to gain insight into certain biological and vital transformations of melanin.

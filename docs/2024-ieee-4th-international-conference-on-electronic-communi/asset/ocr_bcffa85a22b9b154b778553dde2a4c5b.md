@@ -1,0 +1,4 @@
++   26. Zhai, H.; Chen, L.; Zhang, X.; Liang, X. The Impact of Social Support on the Quarter-Life Crisis in Emerging Adults: A Moderated Mediation Model. *Front. Psychol.* **2020**, *11*, 1–10.
++   27. Luyckx, K.; Schwartz, S.J.; Berzonsky, M.D.; Soenens, B.; Vansteenkiste, M.; Smits, I.; Goossens, L. Capturing ruminative exploration: Extending the four-dimensional model of identity formation in late adolescence. *J. Res. Personal.* **2008**, *42*, 58–82. [CrossRef]
+
+**Disclaimer/Publisher's Note:** The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.
