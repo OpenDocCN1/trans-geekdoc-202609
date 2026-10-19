@@ -1,0 +1,16 @@
++   1. Security investments and cyber insurance should complement each other since insurance is based on risk tolerance.
++   2. Engaging a well-informed broker is important since the broker can comprehend cyber risks and how they are being affected by the insurance market.
++   3. Going beyond the application form in order to gain sufficient risk clarity that would be beneficial in obtaining maximum coverage.
++   4. Focusing on fair price rather than best price to emphasize on uniformity and maturity.
++   5. Insurance terms may be reviewed by experienced external counsel.
++   6. Employ cybersecurity experts to navigate through the process better.
+
+# 1.8.1 Digital Citizenship
+
+The internet is a forum for a lot of activities which may also be part of society, politics and government, and can perpetuate cybercrimes. A digital citizen is wary of such situations and gains knowledge and skills to effectively use the internet so that cybercrimes are neither perpetuated through them, nor are they victimized by cyberattacks. A successful digital citizen has the ability to practice safe, law abiding and accountable use of the Internet by knowing their rights and responsibilities. Digital citizenship is based on the following attributes:
+
++   1. **Internet Security and Privacy**: It is important to protect one's privacy over the internet. Certain measures could be taken to ensure internet security. The most common ways of securing oneself on the internet is using passwords, not clicking on suspicious links, being wary of cyber criminals while interacting, etc. Security programs and privacy settings should be taken into consideration when using the internet.
++   2. **Communication with Users Online**: One of the drawbacks of communicating through the internet is lack of authenticity. Although there are many ways to ensure whether the person is actually who they claim to be, dealing with anonymous users may involve risk. Thus, a code of conduct must be followed while communicating with online users. Also, if the users seem to be suspicious, it is advisable to pull oneself back from the situation.
++   3. **Cyberstalking and Cyberbullying**: The internet has also been successful in dispersing crimes like cyberstalking and cyberbullying across the globe. One of the ways to tackle the issue is to educate people about it. Many times, people are not aware of the necessary steps that must be taken once they fall victim to such crimes. It is important to educate them so that necessary actions can be taken at the earliest.
++   4. **Footprinting**: A user of the internet must be aware of the footprints they are leaving behind. Footprints are an excellent way for cyber criminals to gain information about the users and the systems they use. The information could be the location, IP address, operating system, etc. It is not only important to be aware of the footprints one leaves behind, but also to respect the privacy of others while tagging and posting information.
++   5. **Identity**: Identity may be used to express oneself digitally, hence it is an important component of digital citizenship. People may use creative texts and pictures to express

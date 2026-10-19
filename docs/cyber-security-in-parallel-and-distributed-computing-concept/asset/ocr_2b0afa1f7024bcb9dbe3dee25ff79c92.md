@@ -1,0 +1,11 @@
+Cybersecurity involves: isolation and minimization of services, access control, cryptography and elimination of vulnerability. Access control is controlling access to resources present in the system. Cryptography is the process of transforming the plain text into cipher text, in which text before conversion is known as plain text and after conversion is called cipher text [6].
+
+However, preventing external threats are the easiest way for protecting. Normally, most of the attacks prevail owing to social engineering, observation, rummaging in the trash, etc.
+
+A distributed system represents a network which comprises of various autonomous computers interconnected through a distribution middleware. In this system, sharing of various resources occur. In other words, a distributed system is that system which is designed to assist in the development of various applications as well as services that can makes use of a physical architecture consisting of multiple, processing elements that are autonomous and which do not share primary memory, which, however, cooperate through transferring asynchronous messages over a communication network of interest. The main motto of using distributed systems is: resource sharing, scalability, extensibility, etc. A schematic of information exchange in distributed systems is as shown in Figure 14.3.
+
+![](bbox=[0.15, 0.58, 0.85, 0.78])
+
+As shown in the Figure 14.3, all the systems are interconnected through a local area network (LAN). A gateway is present that connects one network to another. In this chapter, we put focus on several mechanisms which are normally integrated into distributed systems for assisting security. Fundamentally, security in distributed systems can be divided into two parts: the first part is concerned with the communication between users or processes, which dwell on distinct machines. The primary technique for making sure such communication is secure is using a secure channel.
+
+In the coming sections, we will discuss message confidentiality, message authentication and message integrity. The second part concentrates on authorization that deals with making sure that a process attains access rights to those resources in a distributed system for

@@ -1,0 +1,9 @@
+# 15.1 Introduction
+
+Recent years have have seen a rise in the use of electronic equipment, such as sensors, for developing digital healthcare solutions. Nowadays, healthcare applications are not limited to digital record keeping of various clinical data generated from patients, doctors, etc. Current healthcare applications focus on telemonitoring patients, tracking their mobility, and giving early notifications to doctors and relatives in case of critical situations. This is possible due to the emergence of Internet of Things (IoT) devices and the use of embedded sensors in a patient’s body. The general architecture of the healthcare monitoring system is depicted in Figure 15.1. Reliable communication, handling and mobility, latency control and energy-efficient routing are some of the issues which need to be addressed. Due to the digital transformation, there has been a staggering quantity of unstructured data like video and images generated in the healthcare field. The healthcare field has produced a virtual and connected world of clinical devices which continuously send out unstructured, and potentially unsecured data, which is vulnerable to attack. These data need to be transmitted in a channel, which may not also be secured. But, the physiological data of an individual contain highly personal and sensitive information. So, security is a predominant need of healthcare applications, especially if the solutions use IoT devices equipped with sensors or body area networks.
+
+![](bbox=[0.12, 0.42, 0.88, 0.78])
+
+Figure 15.1 General architecture of healthcare monitoring systems.
+
+But, when the healthcare solutions are deployed in cloud and fog environment, the security concerns are doubled due to the following reasons:
