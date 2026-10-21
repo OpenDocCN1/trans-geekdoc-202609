@@ -1,0 +1,2 @@
++   [物联网 基于 AI 的制造和工业工程系统集成（智能制造和工业工程）](README.md)
++   [物联网 基于 AI 的制造和工业工程系统集成（智能制造和工业工程）](integration-of-ai-based-manufacturing-and-industrial-enginee.md)

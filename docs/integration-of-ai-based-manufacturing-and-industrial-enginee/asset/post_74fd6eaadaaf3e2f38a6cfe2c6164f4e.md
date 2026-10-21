@@ -1,0 +1,49 @@
+
+| Author | Modality | Method | Classifier | Findings | Limitations | Performance |
+|---|---|---|---|---|---|---|
+| Tbarki et al. (2017) | GPR | MC-SVM | OCSVM | OCSVM based on RBF kernel handled well on unbalanced data | OCSVM based on polynomial kernel was worthless | AUC (RBF Kernel) -89.24% |
+| Reichman et al. (2018) | GPR | RF, PatchSelect | SVM | Keypoint utilization had a significant impact on a landmine detection | Prediction of keypoint was a difficult task in A-Scan images | FAR - 0.005 |
+| Khalaf et al. (2018) | GPR | Prony | MC-SVM | The MC-SVM achieved the highest accuracy and sensitivity | The frequency level is low | Acc - 99.94% |
+| Shi et al. (2018) | GPR | HOG | SVM | Target detected using all three directions in sand and gravel | It was more challenging to process big data in real-time | Sens -98.97% |
+| Gutierrez et al. (2019) | GPR | RLS, LPC | SVM | The SVM effectively discriminates and detects targets as IEDs or non-IEDs | Field setup configuration needed to reduce soil-clutter reflection | Pd - 95% |
+| Harkat et al. (2019) | GPR | CNN, SVM | MOGA | The online execution of MOGA was much faster than the remaining models | Time-consuming process | FAR - 0.017 |
+| Singh (2019) | GPR | Skewness, Kurtosis | NN | WD with kurtosis outperformed in removing clutter in the soil | The method failed to locate the plastic target | Acc - 87.02% |
+| Silva et al. (2019) | TS, NIR | ANN, DT SVM, KNN | CNN | The performance increased for AT mines and decreased for AP mines | Decision Trees alone achieved the worst performance | FPR -10.53% |
+| Yuan et al. (2019) | GPR | TGSS | RoF, K-NN | Showed good robustness and dimension reduction for different imbalance ratios | Data sets trained using a small number of samples | Acc - 89% |
+| Florez-Lozano et al. (2020) | GPR, TS, VS, IR, UV | LDM, CDM | ffANN, FDFS | The system detected IEDs of any shape, material, and type with high accuracy | TS and GPR sensors perform less well than cameras | FP - 7%, FN - 21% |
+| Safatly et al. (2021) | MD | SM, DM | Bagging, CNN Boosting, OCSVM | Accurately classify the buried objects | Extend the database with more samples | TN - 86% |
+| Todkar et al. (2021) | GPR | GprMax | OCSVM | OCSVM method performed better with air Coupled | OCSVM used only smaller learning datasets | Acc - > 97% |
+
+employing reference signatures taken from the homogeneous medium. For training data samples, these feature selections are considered for the classifier, resulting in improved accuracy. The performance of landmine-buried objects depends on their type, the soil’s contents, and the soil’s nature. Machine learning has separate segmentation, feature extraction, and classification process techniques. Future work will incorporate deep learning (DL) to automate segmentation, feature extraction, and classification. DL uses neural networks with multiple layers, each extracting one or more unique features in an image. The performance of deep learning models for image classification has improved significantly in recent years. Deep learning architectures for image classification often achieve the highest accuracy rates, including AlexNet, CSAERNet, VGGNet, ResNet, GoogLeNet, Squeeze Net, Shuffle Net, DenseNet, etc.
+
+## REFERENCES
+
+- Abraham, R. S. A. (2013). Comparison of supervised and unsupervised learning algorithms for pattern classification. International Journal of Advanced Research in Artificial Intelligence, 2(2), 34–38.
+- Andrew Karem, H. F. (2011). A multiple instance learning approach for landmine detection using ground penetrating radar. 2011 IEEE International Geoscience and Remote Sensing Symposium, Vancouver, BC, Canada. (pp. 878–881).
+- Anis Hamdi, H. F. (2015). Ensemble hidden Markov models with application to landmine detection. EURASIP Journal on Advances in Signal Processing. https://doi.org/10.1186/s13634-015-0260-8
+- Ayon Dey. (2016). Machine learning algorithms: A review. International Journal of Computer Science and Information Technologies, 7(3), 1174–1179. https://doi.org/10.21275/ART20203995
+- Bakshi, P., Bhambri, P., & Thapar, V. (2021). A review paper on wireless sensor network techniques in Internet of Things (IoT). Wesleyan Journal of Research, 14(7), 147–160.
+- Banerjee, K., Bali, V., Nawaz, N., Bali, S., Mathur, S., Mishra, R. K., & Rani, S. (2022). A machine-learning approach for prediction of water contamination using latitude, longitude, and elevation. Water, 14(5), 728.
+- Bhambri, P. (2020). Green compliance. In S. Agarwal (Ed.), Introduction to Green Computing (pp. 95–125). AGAR Saliha Publication. ISBN: 978-81-948141-5-3.
+- Bhambri, P. (2021). Electronic evidence. In Kamal Gulati, Narinder Kumar Bhasin (Eds.), Textbook of Cyber Heal (pp. 86–120). AGAR Saliha Publication. ISBN: 978-81-948141-7-7.
+- Bhambri, P., Singh, M., Jain, A., Dhanoa, I. S., Sinha, V. K., & Lal, S. (2021). Classification of the GENE expression data with the aid of optimized feature selection. Turkish Journal of Physiotherapy and Rehabilitation, 32(3), 1158–1167.
+- Camilo, J. A., Malof, J. M., & Collins, L. M. (2016). A feature learning approach for classifying buried threats in forward looking ground penetrating radar data. Detection and Sensing of Mines, Explosive Objects, and Obscured Targets XXI, 9823, 98231I. https://doi.org/10.1117/12.2223117
+- Conyers, L. B. (2018). Ground penetrating radar. In The Encyclopedia of Archaeological Sciences. John Wiley & Sons, Inc. https://doi.org/10.1002/9781119188230.saseas0272
+- "Facts About Landmines - Minesweepers," (n.d.). Minesweepers, 2019. https://landminefree.org/facts-about-landmines/
+- Florez-Lozano, J., Caraffini, F., Parra, C., & Gongora, M. (2020). Cooperative and distributed decision-making in a multi-agent perception system for improvised land mines detection. Information Fusion, 64 (September 2019), 32–49. https://doi.org/10.1016/j.inffus.2020.06.009
+- Frigui, H., & Gader, P. (2009). Detection and discrimination of land mines in ground-penetrating radar based on edge histogram descriptors and a possibilistic K-nearest neighbor classifier. *IEEE Transactions on Fuzzy Systems*, 17(1), 185–199. https://doi.org/10.1109/TFUZZ.2008.2005249
+- Ghareeb, M., Bazzi, A., Raad, M. and Abdulnabi, S. (2017). Wireless Robo-Pi for landmine detection. *2017 First International Conference on Landmine: Detection, Clearance and Legislations (LDCL)* (pp. 1–5). https://doi.org/10.1109/LDCL.2017.7976932
+- Giovanneschi, F., Gonzalez-Huici, M. A., & Uschkerat, U. (2013). A parametric analysis of time and frequency domain GPR scattering signatures from buried landmine-like targets. *Detection and Sensing of Mines, Explosive Objects, and Obscured Targets XVIII*, 8709 (November 2014, p. 870914). https://doi.org/10.1117/12.2015804
+- Gupta, O., Rani, S., & Pant, D. C. (2011). Impact of parallel computing on bioinformatics algorithms. In *Proceedings 5th IEEE International Conference on Advanced Computing and Communication Technologies* (pp. 206–209).
+- Gutierrez, S., Vega, F., Gonzalez, F. A., Baer, C., & Sachs, J. (2019). Application of polarimetric features and support vector machines for classification of improvised explosive devices. *IEEE Antennas and Wireless Propagation Letters*, 18(11), 2282–2286. https://doi.org/10.1109/LAWP.2019.2934691
+- Harkat, H., Ruano, A. E., Ruano, M. G., & Bennani, S. D. (2019). GPR target detection using a neural network classifier designed by a multi-objective genetic algorithm. *Applied Soft Computing Journal*, 79, 310–325. https://doi.org/10.1016/j.asoc.2019.03.030
+- Hussein, E. M. A., & Waller, E. J. (2000). Landmine detection: The problem and the challenge. *Applied Radiation and Isotopes*, 53(4–5), 557–563. https://doi.org/10.1016/S0969-8043(00)00218-9
+- Jin, T., & Zhou, Z. (2010). Ultrawideband synthetic aperture radar unexploded ordnance detection. *IEEE Transactions on Aerospace and Electronic Systems*, 46(3), 1201–1213. https://doi.org/10.1109/TAES.2010.5545183
+- Kasban, H., Zahran, O., Elaraby, S. M., El-Kordy, M., & Abd El-Samie, F. E. (2010). A comparative study of landmine detection techniques. *Sensing and Imaging*, 11(3), 89–112. https://doi.org/10.1007/s11220-010-0054-x
+- Khalaf, M. W., Elsherbeni, A. Z., El-Hefnawi, F. M., Harb, H. M., & Bannis, M. H. (2018). Feature extraction and classification of buried landmine signals. *2018 IEEE Antennas and Propagation Society International Symposium and USNC/URSI National Radio Science Meeting, APSURSI 2018 - Proceedings* (vol. 2, 1175–1176). https://doi.org/10.1109/APUSNCURSINRSM.2018.8609023
+- K-Nearest Neighbor(KNN) Algorithm for Machine Learning - Javatpoint. (n.d.). Retrieved November 11, 2022, from https://www.javatpoint.com/k-nearest-neighbor-algorithm-for-machine-learning
+- Kuzhaloli, S., Devaneyan, P., Sitaraman, N., Periyathanbi, P., Gurusamy, M., & Bhambri, P. (2020). IoT Based Smart Kitchen Application for Gas Leakage Monitoring [Patent application number 202041049866A]. India.
+- Manandhar, A., Torrione, P. A., Collins, L. M., & Morton, K. D. (2015). Multiple-instance hidden markov model for GPR-based landmine detection. *IEEE Transactions on Geoscience and Remote Sensing*, 53(4), 1737–1745. https://doi.org/10.1109/TGRS.2014.2346954
+- Missaoui, O., Frigui, H., & Gader, P. (2011). Landmine detection with ground-penetrating radar using multistream discrete hidden Markov models. *IEEE Transactions on Geoscience and Remote Sensing*, 49(6 PART 1), 2080–2099. https://doi.org/10.1109/TGRS.2010.2090886
+- Mohammed, Mohssen, Khan, Muhammad Badruddin, Bashier, E. (n.d.). *Machine learning algorithms and applications*. CRC Press. https://doi.org/10.1201/9781315371658
+- Nguyen, L. (2016). Tutorial on hidden Markov model. *Special Issue "Some Novel Algorithms for Global Optimization and Relevant Subjects"*, *Applied and Computational Mathematics (ACM)*, 6(4–1), 16–38. https://doi.org/10.11648/j.acm.s.2017060401.12
