@@ -1,0 +1,357 @@
+# 最佳机器学习工具-电子书-1
+
+
+
+
+## 1. 处理数据的工具
+
+说法“你就是你的工具一样好”对各行各业的人都适用，对于从事数据科学领域的人来说更是如此。随着各种类型的数据出现，这些数据可通过格式、敏感性或庞大规模来区分，需要专门的工具来处理它们。多年来，数据科学初创阶段的大量数据主要由调查数据构成，后来则是银行和其他金融数据。为了应对这类高度敏感且数量不多的 数据，工具被创建以满足需求。这些解决数据需求的工具要么由研究型机构创建，要么由银行和金融机构创建。然而，随着数据生成领域的扩大以及对数据分析的需求增加，新的工具被创建以应对新的数据驱动格局。
+
+> 你就是你的工具一样好。
+
+迄今为止，除各种基于电子表格的工具（如 IBM 的 Lotus 1-2-3 和 Microsoft 的 Excel）外，数据分析或数据科学领域使用最广泛的工具是 SQL、SPSS、SAS、MATLAB、R 和 Python。在当今时代，有 3 种工具需要被评估和审视，它们也是使用最广泛的工具之一，即 SAS、R 和 Python。随着数据领域的不断变化，找到最好的工具变得至关重要，或者更准确地说，找到应该在何处、何时使用何种工具以及对谁来说是值得的变得极其重要。尽管如此，我们仍可以尝试弄清楚，总体而言，当然截至目前，谁赢得了数据科学工具的伟大较量。
+
+> 应该在何处、何时使用何种工具，以及对谁来说是值得的。
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_1_0.png)
+
+## 2. 第一轮：专有统计软件 VS 开源免费程序
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_2_0.png)
+
+可以用来处理各种形式数据的各种工具无非就是软件。这些软件在处理和处理数据的方式上各不相同，尤其是在用户操作它们所需掌握的语言方面。然而，从组织采用任何工具的角度来看，它们之间最重要、最基本的区别在于该工具是开源还是闭源。闭源软件是专有软件，其共同特点是使用不免费，并且通过保留知识产权——主要是源代码和版权——对软件内部运作进行严格控制。最初，具有数据处理能力的此类软件被各机构和组织大量依赖。其中包括著名的 Matlab、SPSS、Stata 和 SAS。
+
+另一方面，我们有开源软件，除了其他特点外，它们是免费的，最重要的是可以被修改（即源代码不由创建者保留）并且可以被共享（因为用户几乎没有版权限制），这反过来又促进了协作、社区形成以及参与创建软件的各种版本，通常会增强软件的功能。这种特定软件使用的民主化导致其在各个领域和社区中得到快速而广泛的采用。
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_2_1.png)
+
+> R 和 Python 是开源的，可免费下载
+
+在 SAS、R 和 Python 之间的较量中，第一个牺牲品是 SAS，其原因在于它在很大程度上被一个团体独家控制。长时间以来，SAS 一直是数据科学项目尤其是企业分析领域的行业标准工具。随着 R 的出现，一切开始发生变化。第一次转变发生在公司将 R 部署为标准数据科学工具包取代 SAS 时。要理解为什么会发生这种情况，我们首先需要了解 SAS 和 R 之间的根本区别，即 R 和 Python 等软件是开源的、可免费下载、供所有人使用的，而 SAS、MATLAB、SPSS 等软件则是昂贵的商业套件。这种根本差异体现在这些软件的各个方面，我们需要逐一了解它们。
+
+### 2.1. 背景
+
+SAS 代表 Statistical Analysis System（统计分析系统）。该软件的设计充分考虑了行业需求，以便能够处理大型数据集。它的目标始终是吸引需要数据分析的大型、数十亿美元的跨国公司。显然，最初的用户中包括 BFSI（银行、金融服务和保险）公司，后来还有从事人力资本管理的公司。
+
+这导致了各种垂直产品的推出，例如 SAS Financial Management（原 CFO Vision）和 SAS Human Capital Management（原 HR Vision）。不仅是这些公司，许多政府机构也开始使用 SAS，因为它具有高度的可靠性、准确性和科学支持。这导致了 FDA（美国食品药品监督管理局（负责食品和其他健康相关产品控制和监督的联邦机构））等行政部门通过在 SAS/PH-Clinical 上标准化来开始审查新药申请，而 SAS/PH-Clinical 是面向制药用户的 SAS 组件。
+另一方面，R 和 Python 是免费且开源的编程语言。基于它们的任何统计软件都没有任何公司的支持，这使得许多机构对其采用感到不安。此外，由于这些软件是开源的，它们在很大程度上依赖于社区或第三方创建的包来解决专门的领域相关任务（参考上述示例：例如财务管理、人力资本管理或制药）。因此，其运作方式并未标准化，也未经过任何负责机构的审查，这进一步导致了在敏感领域工作的用户对其产生抵触情绪。
+
+> 该软件的设计充分考虑了行业需求，以便能够处理大型数据集。
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_3_0.png)
+
+### 2.2. 成本
+
+事情开始发生变化，尤其是在数据分析需求和基于数据科学创建产品的需求开始延伸到并非本质上是处理大量或高度敏感数据的数十亿美元公司所在的领域时。现在，随着自动化和硬件能力的提升，数据“到处”都在产生，这导致了各个领域对数据分析的巨大需求，以至于数据分析任务被积极外包给中小型公司，对于这些公司而言，获取工具的成本至关重要。
+
+> 随着自动化和硬件能力的提升，数据“到处”都在产生，这导致了各个领域对数据分析的巨大需求
+
+SAS 受到的最主要也是最大的冲击正是因为这个原因——成本。SAS 曾是且仍然是昂贵的软件。R 完全免费，而 SAS 则收取订阅费，通过订阅费可以使用软件，但仅限于有限的时间。除此之外，还有技术支持的成本，以及存在提供不同功能的版本，提供更多或特定功能的版本成本显著更高的事实。
+
+这与 R 形成鲜明对比，R 是免费的，现在已有大量包可执行某些非常特殊、行业特定的任务。这些包的工作方式在缓慢而逐渐地得到研究论文的支持，因为 R 能够渗透到研究机构，这为其工作方式及其部署的各种包赋予了权威性。这导致新公司对其采用 R 作为分析数据并据此创建数据驱动产品的工具的信心增强。
+
+> SAS 曾是且仍然是昂贵的软件。而 R 完全免费
+
+
+
+
+
+## 2.3. 语法与学习曲线
+
+毫无疑问，SAS 是一门易学的语言。与 R 和 Python 不同，SAS 提供了**拖放式图形用户界面（GUI）**、预定的标准流程、SQL 命令集成，还能访问数据库，这使得没有编程基础的专业人士也能轻松上手。这也是 SAS 早期被广泛采用的原因之一，因为许多在 BFSI（银行、金融服务与保险）领域工作的人熟悉 SQL 语言和 SQL 查询，因此采用 SAS 会更加容易。
+
+另一方面，与 SAS 相比，R 和 Python 较为难学。有时人们需要具备一定的编程背景才能正确使用它们（尽管这不是必须的）。这最初成为 R 和 Python 广泛普及的障碍。随着这些语言社区的发展，越来越多的人能够帮助他人理解这些语言。同时，该领域的人们也感到有必要经历学习曲线，并放弃 SAS 提供的易学性，因为这种易学性代价高昂——导致数据潜力未被充分利用，并且处理和管理数据的能力受限。
+
+> 与 SAS 相比，R 和 Python 较为难学。有时人们需要具备一定的编程背景才能正确使用它们（尽管这不是必须的）。
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_5_0.png)
+
+## 2.4. 支持与安全性
+
+当涉及敏感数据、多个客户以及未来行动计划高度依赖分析结果时，任何公司进行数据分析的风险都会变得很高。这时就需要支持来帮助理解所使用工具的内部机制，有时还需要人工协助排除故障。这正是 SAS 过去和现在仍比其他软件更具优势的地方。
+
+SAS 拥有专业、完善的技术支持，这正是大型跨国公司所期望的。它还有一个活跃的在线社区，并且在其网站和博客上有记录良好的资源。此外，SAS 还提供可安全存储数据的服务器选项。这进一步增强了执行关键数据驱动操作的用户信心。
+
+然而，人们之所以有信心转向 R 或 Python，是因为所有这些仍无法与它们提供的社区体验相提并论。它们的社区不仅规模庞大，而且充满活力、多元且不断发展，成员来自各行各业——从学生到程序员，从分析师到学者，所有人都提供见解，促成多种想法的汇聚来解决问题。这个开源社区是这些程序的支柱，因为它们缺乏 SAS 提供的“正规”支持结构；但同样，SAS 没有开源社区，只能完全依赖其既有的支持体系。至于服务器服务，R 已成功为其用户提供了服务器，且成本远低于 SAS。至于 Python 和其他语言，随着云计算的出现，以及亚马逊网络服务（AWS）、微软 Azure、谷歌云平台等云计算服务提供的协助和功能水平，SAS 与其他语言相比的优势已经被削弱。安全性方面有时反而对开源软件有利。由于源代码对所有人开放，新开发者能够发现原始开发者可能疏忽的错误和其他漏洞。这营造了一种环境，使软件得以不断改进，随着时间的推移变得更好、更强大。
+
+> 随着云计算的出现，以及亚马逊网络服务（AWS）、微软 Azure、谷歌云平台等云计算服务提供的协助和功能水平，SAS 与其他语言相比的优势已经被削弱。
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_6_0.png)
+
+## 2.5. 能力
+
+这是决策的核心。任何软件或语言的能力最终决定人们选择使用哪款软件。首先让我们明白一点：SAS 能做的所有事情，R 和 Python 都能做到，但反之则不然。SAS 擅长高级分析、高质量的专业图表、大量统计函数、开箱即用的 GUI，然而，它未能超越这些功能，跟上我们所处的时代。
+
+虽然 SAS 可以创建几乎达到发表水平的图表，但要在 SAS 中创建动态、复杂的图表却很困难。
+
+SAS 曾经提供的标准统计、数学和建模能力，如今 R 和 Python 也都能提供。
+
+当涉及到当今时代非常需要的机器学习时，SAS 在 R 和 Python 面前黯然失色，而深度学习对 SAS 来说更是无法实现；至于大数据，其他语言毫无疑问胜出。尽管 SAS 已经提供了使用 Hadoop 的选项，但阻碍其全面发展的一个因素是灵活性。SAS 远不如其他开源编程语言灵活，其输出提供了超出必要的结果，用户对做什么以及如何做的控制权很小。
+
+以上因素让我们理解了为什么需要一种新的开源、灵活且成本效益高的软件。尽管大型金融和营销公司仍然偏爱 SAS，并且 SAS 仍然不可或缺，因为很多时候尤其是在处理敏感数据的关键场景中，试验空间很小；但归根结底，只有有限数量的大公司才能负担得起 SAS。此外，处理大数据、打算提供端到端服务并使用机器学习和深度学习等复杂方法分析数据的初创公司和中型公司需要 Python 和 R，这也是 SAS 仅获得数据科学社区 **3%** 支持率的原因。从 SAS 转向 R 的趋势在电信、科技和研究公司开始处理海量非结构化数据并转向 R 时变得明显。最后一击来自曾被视作 SAS 根据地的金融公司开始转向。不可否认，转换成本巨大，包括转换大量以 SAS 格式文件（sas7bdat）存储的数据、培训新员工以及建立新的框架和标准操作流程。但事实仍然是，R 取代了 SAS 曾长期占据的地位（尽管在一定程度上）。
+
+> 机器学习和深度学习需要 Python 和 R，这也是 SAS 仅获得数据科学社区 **3%** 支持率的原因。
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_7_0.png)
+
+## 3. 第二轮：R 与 Python 的基本区别
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_8_0.png)
+
+唯一不变的是变化本身。R 有效地取代了 SAS，成为数据科学的通用语言，这一点已经不再有过多争论和争议；然而，被 Python 从其位置上挤下来只是时间问题。有趣的是，导致 R 取代 SAS 的同样一系列原因，也导致了 Python 将 R 赶下王座。此外，人们曾一度抗拒 R 已取代 SAS 的事实，并为此争论不休，直到几年后这成为事实；类似的争论仍在继续，同时越来越明显的是，Python 已经决定性地赢得了战斗，或者至少在某些关键领域获胜。
+
+### 历史
+
+R 由 Ross Ihaka 和 Robert Gentleman 创建，于 1995 年创建，1997 年发布。作为一种底层开源语言，R 是为了实现 S 编程语言而创建，以简化创建统计、图形和数据分析模型的方法。R 最初主要用于学术和研究领域，后来逐渐扩展到商业市场，并被 Google、Facebook 等公司以及华尔街的金融机构使用。R 由 R 统计计算基金会（R Foundation for Statistical Computing）支持。另一方面，Python 由 Guido van Rossum 于 1991 年创建，比 R 早 4 年。Python 被设想为一种高级、简单、干净、易于调试的多用途通用编程语言。后来，能够执行 R 所执行功能的库开始出现。
+
+### 社区与支持
+
+有人可能会争辩说，R 的社区和支持优于 Python：R 拥有 200 万用户，125 个活跃的在线小组，并通过邮件列表、Stack Overflow 小组以及其支持者提供的良好文档提供支持。此外，R 拥有 CRAN，这是一个庞大的仓库，使得用户贡献的过程高度集中。另一方面，可以争辩说，Python 的支持较为分散，超过 1600 个用户组中只有少数专注于数据分析。然而，这一切在几年前还是如此；如今，Python 的在线支持和社区几乎与 R 持平，甚至可能超越 R。
+
+
+
+
+
+## 速度
+
+速度至关重要，尤其是在处理数据时。随着最近的硬件革命和物联网（IoT）的普及，产生的数据量呈爆发式增长。这使得软件之间在速度上的竞争日益激烈。
+
+哪一个更快，答案并不像看起来那么直截了当。正如一些研究所显示的，在执行循环时，R 在极高迭代次数下比 Python 更有优势。然而，还有其他因素导致 R 相比 Python 更慢。作为一种非标准化语言，R 代码往往可能以糟糕且低效的方式编写，从而拖慢进程，因此需要使用 FastR、pqR、Riposte 等额外软件包来加速。此外，如前所述，Python 是非顺序的，这使得从用户端来看处理速度很快。除此之外，由于 R 仅靠 RAM 运行，小任务有时会花费更多时间。
+
+另一个方面不是比较核心语言本身，而是比较其软件包的性能，以便部署到各种数据相关操作中。就主要的机器学习和深度学习操作而言，Python 明显比 R 更快，因为许多这类软件包是用更低层语言编写的，处理速度更快。不过，在基于统计的操作、可视化以及日常操作方面，R 有时会占据上风。
+
+## 集成开发环境（IDE）
+
+IDE 代表集成开发环境，是任何软件/语言非常重要的组成部分。IDE 在编写、测试和调试代码的便捷性方面帮助很大。就 R 和 Python 提供的不同 IDE 而言，Python 提供了一系列 IDE（集成开发环境），如 Spyder、Rodeo 和 IPython Notebook，而 RStudio 是 R 唯一常用的 IDE。由于 Python 提供了丰富的 IDE，用户可以更灵活地根据自己的偏好和需求选择工作环境。而 R 只有一个主要的 IDE，即 RStudio。尽管 RStudio 适合执行各种数据相关任务，但它无法提供 Python 通过多种 IDE 所提供的那种选择。
+
+此外，随着 Notebook（尤其是近年来数据科学领域）使用日益增多，IDE 的概念正在获得新的定义。诸如 Jupyter Notebook 之类的 Notebook 具有各种调试功能和其他 IDE 特性，同时还提供多种选项，可以添加格式化文本、添加多媒体，并获得从简单文本输出到图表等多种类型的输出。拥有更多文档选项的这一优势有助于共享代码，因为它们易于理解和重新实现。这些 Notebook，尤其是 Jupyter Notebook，可以与多种语言配合使用，不过到目前为止，最常见的组合是将 Jupyter Notebook 与 Python 作为引擎或内核。
+
+这导致 Jupyter Notebook 的所有优势都归属到了 Python 身上。因此，Python 提供了一系列可工作的环境，Jupyter Notebook 等 Notebook 易于与之集成，并提供有用的文档功能，甚至可以支持 HTML 输入，这使得 Python 在这方面占据领先地位，而 R 只有 RStudio，其环境与一个名为 Spyder（科学 Python 环境）的 Python IDE 有些接近，而 Spyder 在数据科学项目中正越来越少被使用。
+
+## 软件包
+
+在软件包方面，R 和 Python 之间存在激烈竞争。过去曾有人很有说服力地认为 Python 的软件包数量有限且功能有限，然而今天，数量的论点依然成立，但就功能而言，Python 可用的软件包已经胜过了 R 的软件包。Python 有 Numpy/SciPy 用于科学计算，pandas 用于数据操作，matplotlib 用于绘图，Seaborn 用于可视化统计模型，scikit-learn 用于机器学习，TensorFlow 和 Keras 用于深度学习。
+
+另一方面，R 拥有非常庞大的软件包范围，有时这些软件包对特定领域（如金融、遗传学等）有非常特定的功能。R 的这一优势同时也是其劣势，因为 R 提供了太多软件包，以至于找到合适的软件包变得耗时，加之这些软件包由第三方提供，因此并不一致，导致用户不得不放慢进程并从头理解其方法论。由于 Python 遵循“应当有一种——最好只有一种——显而易见的方法来实现它”的哲学，不一致性非常有限。对于 R 来说，最著名的用户贡献软件包包括 caret、dplyr、ggplot 和 Nnet，其中 caret 处理机器学习，Nnet 处理深度学习功能，但它们的成熟度远远不及 scikit-learn、TensorFlow 等。R 对应 pandas 的是 dplyr，但相比之下，它的使用范围有限。
+
+## 日常任务（自动化）
+
+在软件包方面，R 和 Python 之间存在激烈竞争。过去曾有人很有说服力地认为 Python 的软件包数量有限且功能有限，然而今天，数量的论点依然成立，但就功能而言，Python 可用的软件包已经胜过了 R 的软件包。Python 有 Numpy/SciPy 用于科学计算，pandas 用于数据操作，matplotlib 用于绘图，Seaborn 用于可视化统计模型，scikit-learn 用于机器学习，TensorFlow 和 Keras 用于深度学习。
+
+另一方面，R 拥有非常庞大的软件包范围，有时这些软件包对特定领域（如金融、遗传学等）有非常特定的功能。R 的这一优势同时也是其劣势，因为 R 提供了太多软件包，以至于找到合适的软件包变得耗时，加之这些软件包由第三方提供，因此并不一致，导致用户不得不放慢进程并从头理解其方法论。由于 Python 遵循“应当有一种——最好只有一种——显而易见的方法来实现它”的哲学，不一致性非常有限。对于 R 来说，最著名的用户贡献软件包包括 caret、dplyr、ggplot 和 Nnet，其中 caret 处理机器学习，Nnet 处理深度学习功能，但它们的成熟度远远不及 scikit-learn、TensorFlow 等。R 对应 pandas 的是 dplyr，但相比之下，它的使用范围有限。
+
+## 许可
+
+R 之所以能够取代 SAS，是因为它价格低廉且开源。然而，讽刺的是，如今与 Python 相比，R 在库的分发方面并不那么对商业友好。Python 使用 MIT 或 BSD 许可，这使得共享比 R 更容易，而 R 使用 CC0 和 GPL 许可，对代码分发施加了更多限制。
+
+## 集成
+
+尽管 R 能够与 C、C++ 和 Java 等高级语言集成，但 Python 的集成能力更胜一筹，因为它是一种通用脚本语言，能更好地支持多种系统。Python 能够根据问题调整自身。例如，如果需要与 Web 应用集成以进行数据挖掘，Python 可以做到。然而 R 的用途将受到限制，例如它无法与操作系统交互，而且它设计时带有一种特定用途、一次性使用的思路，而 Python 则更具通用性和能力，因为它可以与一系列数据库交互，并简化针对特定需求构建分析工具的过程。
+
+重要的是要认识到，工作环境正在变化，对一种能提供端到端集成的工具的需求日益增长，而不是一种只能做特定工作、无法超越统计范围而无法移动的工具。此外，生产分析应用的需求和规模也在增加。很多时候，需要自动化任务和开发与数据相关的产品，这时只有高级语言才能发挥作用。在这里，Python 能够包含并连接整个工作流，能够为实现生产目的实现算法，而且由于公司已经建立了基于 Python 的生产系统，学习 Python 更有意义。
+
+如今，数据科学领域不再局限于统计学家和数学家，通常需要能够跳出常规思维、解决多领域问题的创新者和远见者。Python 不仅能够集成多个系统，还能集成来自不同背景的多类人员。R 成为了统计学的通用语，而 Python 则能够将不同学术背景的人——从初学者到软件工程师，再到已有的数据科学家——凝聚在一起，这全都得益于其较短的学习曲线。
+
+
+
+
+This integration not only of system and platform but also of people from various fields has led to the diversification of the usage of Python, which becomes very important for companies employing people with diverse backgrounds and dealing with a range of products and clients.
+这种整合不仅涉及系统和平台，还涉及来自各个领域的人才，这导致了 Python 使用方式的多样化，这对于雇用背景多样的人才并处理多种产品和客户的公司来说变得非常重要。
+
+Diversification is a key to success, and this is why Python has excelled.
+多样化是成功的关键，这也是 Python 脱颖而出的原因。
+
+## 4. 第三轮：使用情况
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_12_0.png)
+
+This is where SAS lost to R and this is where R loses to Python – the range of usage. There are a number of areas where R and Python compete, and while in some areas R takes the lead, overall it is Python that comes out as a winner.
+这就是 SAS 输给 R 的地方，也是 R 输给 Python 的地方——使用范围。R 和 Python 在多个领域展开竞争，虽然在某些领域 R 占据领先，但总体而言 Python 成为赢家。
+
+### 共享、组织和管理
+
+As far as SAS is concerned, the aspects of sharing, organizing and managing SAS are not independent, and they work in the tight framework of SAS regulations; so there are facilities to perform all such tasks, but there is little scope of rapid improvement. With a range of IDEs available for Python, especially IPython and Jupyter notebooks, which provide extensive options for proper documentation, sharing, managing and organizing the code becomes very easy, while with R, documentation is still very ordinary.
+就 SAS 而言，共享、组织和管理 SAS 的各方面并非独立存在，它们在 SAS 规定的严格框架内运作；因此有设施可以执行所有此类任务，但快速改进的空间很小。Python 有多种 IDE 可用，尤其是 IPython 和 Jupyter 笔记本，它们提供了广泛的适当文档选项，使得共享、管理和组织代码变得非常容易，而在 R 中，文档仍然非常普通。
+
+Also, codes written in Python are more consistent and hence are more dependable and reusable when shared. The ease with which user-defined modules can be created and shared leads to a very high code reusability for Python users, and this has benefited Python greatly, whereas R is still not yet developed in terms of code reusability.
+此外，用 Python 编写的代码更具一致性，因此在共享时更可靠且可重用。用户自定义模块可以轻松创建和共享，这使得 Python 用户的代码可重用性非常高，这极大地受益于 Python，而 R 在代码可重用性方面仍未得到充分发展。
+
+### 统计和预测模型
+
+This is a whole other issue where the debate or competition between R and Python becomes fierce. SAS, on one hand, is great with the statistical and classic predictive models and is the reason that still a lot of companies with the requirement limited to such models continue to use SAS. The world, however, has moved from traditional Statistical and Classic Predictive models, and we are now in the times of Machine Learning and Deep Learning models, but still, for a range of organizations, the traditional statistical models are the need of the hour.
+这是一个完全不同的问题，R 与 Python 之间的争论或竞争在这里变得激烈。一方面，SAS 在统计和经典预测模型方面表现出色，这也是许多仅需要此类模型需求的公司仍继续使用 SAS 的原因。然而，世界已经从传统的统计和经典预测模型转移，我们现在处于机器学习和深度学习模型时代，但对于许多组织而言，传统的统计模型仍是当务之急。
+
+R was created keeping statisticians in mind, and hence is able to undertake statistically complex models with ease. The outcomes of various statistics-related packages or tasks performed by it are backed by statisticians, as the language is, still today, used in prestigious institutions. On the other hand, when it comes to classic predictive modeling, both R and Python are able to create predictive models with much effectiveness.
+R 的创建是考虑到统计学家，因此能够轻松处理统计上复杂的模型。它执行的各种统计相关包或任务的结果都得到统计学家的支持，因为该语言至今仍在知名机构中使用。另一方面，在经典预测建模方面，R 和 Python 都能以很高的效率创建预测模型。
+
+### 学术研究
+
+R has always been the favorite for academic research which requires deep diving into a subject, while Python is not as effective in the academic setting. One of the reasons is that R precedes Python when it comes to data-related tasks. The first group of people that adopted R were those who earlier relied on SAS, SPSS or Stata in order to perform their research work, and as R is backed by the statistician community, it became easier for R to make a name for itself.
+R 一直是需要深入研究某一主题的学术研究的首选，而 Python 在学术环境中并不那么有效。其原因之一是，在数据相关任务方面，R 早于 Python。最早采用 R 的人群是那些过去依赖 SAS、SPSS 或 Stata 进行研究工作的人，由于 R 得到统计学家社区的支持，R 更容易树立自己的名声。
+
+In recent times, academic research based outside the scope of traditional statistics-based research has chosen Python over R, as it is helpful to perform the complex, often Machine Learning-related tasks on Python.
+近年来，超出传统统计研究范围的学术研究选择了 Python 而非 R，因为在 Python 上执行复杂、通常与机器学习相关的任务很有帮助。
+
+## 4. 第三轮：机器学习 vs. 深度学习 vs. 人工智能
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_13_0.png)
+
+### 定义
+
+In recent times, terminologies such as Machine Learning, Deep Learning and Artificial Intelligence have become quite popular. In order to discuss the battle of tools to implement these concepts, it is important to understand what these concepts stand for.
+近年来，机器学习、深度学习和人工智能等术语变得相当流行。为了讨论实现这些概念的工具之争，了解这些概念的含义非常重要。
+
+Whenever we achieve something without explicitly hardcoding it, that is, creating rules and condition-based programs, and letting the machine find its own course in order to find the best result, it is a concept used under Machine Learning.
+每当我们在不显式硬编码的情况下实现某事时，即创建基于规则和条件的程序，并让机器自行寻找最佳结果的途径，这就是机器学习下的概念。
+
+Now the important question is, what is Artificial Intelligence, the term we often hear every now and then. Artificial intelligence is nothing but all the concepts of machine learning, where computers learn automatically without much human intervention but act more like humans, learning from their mistakes and, rather than creating a new model altogether, the model has a self-healing mechanism. This is the reason it is also called Machine Intelligence, i.e., Machine Learning with the capabilities of human learning and problem solving.
+现在一个重要的问题是，人工智能是什么，我们经常听到这个术语。人工智能不过是机器学习的所有概念的总和，其中计算机在几乎没有人工干预的情况下自动学习，但更像人类一样行动，从错误中学习，并且与其完全创建新模型，模型具有自我修复机制。这也是它被称为机器智能的原因，即具有人类学习和问题解决能力的机器学习。
+
+Deep Learning is another concept which is closely related to both Machine Learning and Artificial Intelligence. It is basically an architecture through which Artificial Intelligence can be achieved, where we use a concept known as Neural Networks, where the calculations are performed by mimicking the functioning of the human brain.
+深度学习是另一个与机器学习和人工智能密切相关的概念。它基本上是一种实现人工智能的架构，其中我们使用一种称为神经网络的概念，计算是通过模仿人类大脑的功能来执行的。
+
+### 工具选择
+
+SAS does have some support for Machine Learning, but when it comes to Deep Learning and any other Artificial Intelligence-related concepts, it trails way behind R and Python. Sometimes the fight between R and Python can translate into the fight between data analysts and data scientists depending on how these terms are defined. Still, with data analysts requiring more statistical exploration, R comes in handy, while Data Science nowadays requires Machine Learning tools, and because of scikit-learn, Python comes as the undeniable winner. Because of Python's flexibility, sophisticated predictive models can be created using Machine Learning tools that can be then plugged into production systems. Also, R is not able to scrape and analyze unstructured data the way Python is able to do, and is especially lacking in the field of NLP, etc. As far as Deep Learning is concerned, there is no doubt that Python makes the process hassle-free, while R struggles to implement Deep Learning algorithms with the ease and sophistication Python's TensorFlow and Keras do.
+SAS 确实对机器学习有一些支持，但在深度学习和任何其他人工智能相关概念方面，它远远落后于 R 和 Python。有时 R 与 Python 之间的竞争可以转化为数据分析师与数据科学家之间的竞争，这取决于这些术语的定义方式。尽管数据分析师需要更多的统计探索，R 派上用场，而数据科学现在需要机器学习工具，并且由于 scikit-learn，Python 成为无可争议的赢家。由于 Python 的灵活性，可以使用机器学习工具创建复杂的预测模型，然后将其集成到生产系统中。此外，R 无法像 Python 那样抓取和分析非结构化数据，尤其在 NLP 等领域存在不足。就深度学习而言，毫无疑问 Python 使流程变得轻松无忧，而 R 在实现深度学习算法时难以达到 Python 的 TensorFlow 和 Keras 所具有的易用性和精细程度。
+
+> SAS trails way behind R and Python. Sometimes the fight between R and Python can translate into the fight between data analysts and data scientists depending on how these terms are defined.
+> SAS 远远落后于 R 和 Python。有时 R 与 Python 之间的竞争可以转化为数据分析师与数据科学家之间的竞争，这取决于这些术语的定义方式。
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_14_0.png)
+
+## 5. 第四轮：大数据
+
+In recent times, the amount of data being generated has increased and is increasing rapidly. This has led to the further amplification of the 'curse of dimensionality'. Because of the sheer amount of data and the frequency at which it is being generated, the tools have to adapt to various platforms through which such data can be stored and accessed.
+近年来，数据生成量不断增加且增长迅速。这导致了“维度灾难”进一步加剧。由于数据量巨大且生成频率高，工具必须适应各种平台，以便存储和访问此类数据。
+
+> The most suitable contender here is **Python**, which is then able to use Machine Learning algorithms using the vast amount of data at hand.
+> 这里最合适的竞争者是 **Python**，它随后能够利用手头的海量数据使用机器学习算法。
+
+Integrating the data science tools with such platforms is very important, and the learning curve of integrating R with such platforms is very steep. Also, the integration of the Big Data architecture with R is simply not feasible. The most suitable contender here is Python, which is then able to use Machine Learning algorithms using the vast amount of data at hand. This is facilitated by the fact that it has multiple areas of application and is easy to read and write, making it possible to create scalable applications out of it. Also, there are many packages available for Python in order for it to integrate with Big Data platforms.
+将数据科学工具与此类平台集成非常重要，而将 R 与此类平台集成学习曲线非常陡峭。此外，将大数据架构与 R 集成根本不可行。这里最合适的竞争者是 Python，它随后能够利用手头的海量数据使用机器学习算法。这得益于它具有多个应用领域且易于读写，使得可以从中创建可扩展的应用程序。此外，还有许多 Python 包可供其与大数据平台集成。
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_15_0.png)
+
+## 6. 第五轮：可视化
+
+Visualization is one of the most important aspects when dealing with data, as it allows very complicated information to be understood in a single glance. SAS, as mentioned earlier, can create publish-worthy graphs, but the cost and its limited application have caused others to get ahead of it.
+可视化是处理数据时最重要的方面之一，因为它允许在一次 glance 中理解非常复杂的信息。如前所述，SAS 可以创建可发表的图表，但其成本高且应用有限，导致其他工具超越了它。
+
+Traditionally and till now to some extent, R has been considered as the better candidate. Python seems a bit behind, with packages such as Seaborn, Pygal and Bokeh, compared with R, which has packages such as ggplot2, googleVis and rCharts. Also, some of the visualization packages of Python are unstable and hence unreliable.
+传统上，直到现在在某种程度上，R 被认为是更好的候选者。与 R 相比，Python 似乎稍显落后，Python 有 Seaborn、Pygal 和 Bokeh 等包，而 R 有 ggplot2、googleVis 和 rCharts 等包。此外，Python 的一些可视化包不稳定，因此不可靠。
+
+R, on the other hand, has ggplot, which can create almost all kinds of graphs and is the backbone of the visualization in R. Also, creating dashboards is also very easy in R. One of the major advantages R has over Python is the package known as Shiny, which helps in creating lightweight web applications where user-interactive charts can be created. Also, Shiny is very easy to understand and implement, and so far Python has no package to counter its success.
+另一方面，R 拥有 ggplot，可以创建几乎所有类型的图表，是 R 可视化的支柱。此外，在 R 中创建仪表板也很简单。R 相对于 Python 的主要优势之一是名为 Shiny 的包，它有助于创建轻量级 Web 应用程序，其中可以创建用户交互式图表。此外，Shiny 非常易于理解和实现，迄今为止 Python 没有任何包可以抗衡其成功。
+
+However, things have started to change with Python having packages such as Altair that have reduced the gap. Also, there is Seaborn, a machine-learning-oriented visualization package of Python that can create very sophisticated and complex Machine Learning-related plots, which R also can, but not to the extent of Seaborn. Still, so far when it comes to visualization, R seems to take the lead.
+然而，随着 Python 拥有 Altair 等包，情况开始发生变化，这些包缩小了差距。此外，还有 Seaborn，这是一个面向机器学习的可视化 Python 包，可以创建非常复杂和复杂的机器学习相关图表，R 也能做到，但不及 Seaborn。尽管如此，迄今为止在可视化方面，R 似乎仍领先。
+
+> Still, so far when it comes to visualization, R seems to take the lead.
+> 尽管如此，迄今为止在可视化方面，R 似乎仍领先。
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_16_0.png)
+
+
+
+
+## 7. 第六回合：男人撒谎，女人撒谎，数字不撒谎
+
+到目前为止，已经很明显主要竞争对手是 R 和 Python，而 SAS 因其黯淡的前景已退出竞争。这里有一些数据将消除关于谁赢得了这场数据科学大决战的任何疑虑。截至 2016 年，R 的匹配职位占比为 0.16%，而 Python 约为 0.30%（来源：r4stats.com）
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_17_0.png)
+
+截至 2017 年，Python 在用户数量上继续领先于 R。此外，74% 的用户忠于 R，97% 的用户忠于 Python，10% 的用户从 R 转向 Python，而反向转换的仅有 5%。Python 似乎赢得了这场比赛。在另一项调查中，R 显示 -14% 的负增长，而 Python 显示 +11% 的正增长，截至 2018 年，Python 在数据科学/机器学习软件中的占比为 65%。（来源：kdnuggets.com）。
+
+| 软件 | 2018 年占比 % | 2018 vs 2017 变化 % |
+|---|---|---|
+| Python | 65.60% | 11% |
+| RapidMiner | 52.70% | 65% |
+| R | 48.50% | -14% |
+| SQL | 39.60% | 1% |
+| Excel | 39.10% | 24% |
+| Anaconda | 33.40% | 37% |
+| Tensorflow | 29.90% | 32% |
+| Tableau | 26.40% | 21% |
+| scikit-learn | 24.40% | 11% |
+| Keras | 22.20% | 108% |
+
+根据 Google Trends，截至 2018 年，‘Python Data Science’ 的搜索量高于 ‘R Data Science’，如果比较 ‘Python Machine Learning’ 与 ‘R Machine Learning’，那么 Python 对 R 的领先优势几乎是 4.5 倍 *(来源：trends.google.com)*。
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_18_0.png)
+
+根据以上所有数据，很明显 Python 已胜过 R，但仍然很容易理解为什么有人可能会选择 R 而非 Python。Python 是开发人员和程序员的首选，而 R 深受统计学家喜爱。此外，由于 R 在 Python 之前就已活跃于数据科学领域，许多专业人士首先学习的是 R，而接受和尝试新事物总会让人感到不适，至少在初期如此。
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_18_1.png)
+
+## 8. 第六回合：入门语言
+
+### 语法和学习曲线
+
+无论学习新语言，尤其是当某人对数据领域是新手且需要理解处理数据的各种概念时，语言必须成为催化剂而非阻碍学习过程的因素。
+
+R 是一种以统计学家为出发点创建的低级语言，常说 R 让统计学家的生活更轻松，而非计算机。它专门为复杂统计计算和数据分析而创建。另一方面，Python 是一种高级语言，具有易于理解、灵活、结构良好、简洁的语法，可提高代码可读性、简洁性、性能和生产力，并致力于让程序员和计算机的生活都更轻松。两者相较时，R 的若干缺陷往往会暴露出来。
+
+首先，与 R 相比，Python 更简单易读。它甚至有一套被称为《Python 之禅》的“行为准则”，这是一组决定代码设计方式的原则，使 Python 拥有标准化的代码，极易阅读，而 R 则缺乏此类规范，几乎是非标准的，给编程过程带来障碍。
+
+其次，Python 是面向对象的，而 R 不是，它是一种过程式语言，意味着它以非常逐步的方式执行过程，与 Python 相比，用户为完成一项任务需要编写更多代码行。这里节省的时间可用于探索和实验，从而更好地理解数据。所有这些都对应于 R 的学习曲线比 Python 更陡峭这一事实。没有编程背景，学习 R 的过程可能令人筋疲力尽，而 Python 则具有非常平缓的学习曲线。
+
+> 所有这些都对应于 R 的学习曲线比 Python 更陡峭这一事实。
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_19_0.png)
+
+## 数据分析和数据科学
+
+使用数据执行的各种任务导致了两个主要学科，即数据分析和数据科学。两者之间存在许多细微差异和一些主要差异，定义往往因解释这些学科特征的人而异。尽管如此，其中一种定义可以是：数据分析是传统数据分析任务的主要部分，我们获取数据并执行典型任务，以了解数据的各种静态特征。这包括大量描述性分析、评估以及在一定程度上使用推断统计。另一方面，数据科学是一个更广泛的术语，它也涵盖了数据分析的方面，但还包括使用机器学习和深度学习创建复杂模型以及其他数据驱动产品的概念。
+
+随着时间的推移，专门用于各自领域的语言变得越来越不同。SAS、SPSS 曾是、现在是、将来也将是可轻松用于常规典型数据分析的工具。由于缺乏对机器学习和深度学习现代概念的支持，我们只剩下 R 和 Python，这正是事情变得有趣和复杂的地方。从技术上讲，R 和 Python 都可以在数据分析和数据科学两个学科中使用。然而，对于数据分析而言，R 仍可能是正确选择，因为其稳健的统计内部机制以及执行数据处理和可视化等数据分析支柱方面的便捷性。现在，Python 也可以通过日益增多的模块（如 pandas 和其他可视化模块）执行相同任务，但人们仍可能倾向于使用 R 来执行此类任务。
+
+> > 从技术上讲，R 和 Python 都可以在数据分析和数据科学两个学科中使用。
+
+当进入数据科学领域时，事情变得有趣，因为再次从技术上讲，两者都可以执行各种机器学习任务，但就选项范围和实施便捷性而言，R 与 Python 之间的差异变得明显，Python 领先。几乎所有能在 R 中创建的机器学习模型都能在 Python 中创建，反之亦然，但 R 的复杂性和缺乏连贯性使得人们选择 Python 而非 R，而这些原因在处理深度学习模型时更为突出，因为 R 无法与 TensorFlow 等深度学习模块在 Python 中工作的精妙程度相匹敌。
+
+Python 在数据科学中的使用变得越来越普遍，如果两种语言继续以当前速度发展，那么在不久的将来就会非常清楚 Python 是未来的语言，因为未来的发展将集中在机器学习、深度学习、增强智能和人工智能领域，而 Python 在这些领域已超越 R。
+
+### 课程
+
+为了开始职业生涯或提升技能，有许多数据科学课程，大体上这些课程要么用 R 教授，要么用 Python 教授，SAS 占比较小。就数据分析课程而言，用 SAS 教授的课程比例往往会增加。然而，正如前面提到的，就机器学习课程而言，Python 对 R 构成了强有力的竞争，因为机器学习模型可以用 R 和 Python 创建。Python 在任何主要的人工智能课程中作为首选工具的广泛使用，几乎形成垄断，这使得 Python 的决定性胜利变得明显。人工智能或深度学习，这两个密切相关的概念在很大程度上依赖于 Python，如果有人计划进入这些领域，Python 可以是学习和入门的工具。
+
+> > "人工智能或深度学习，这两个密切相关的概念在很大程度上依赖于 Python，如果有人计划进入这些领域，Python 可以是学习和入门的工具。"
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_21_0.png)
+
+
+
+## 结论
+
+在决定数据科学的最佳工具时，意见的分歧极其明显。如今，数据科学这一术语已不再局限于探索数据或创建统计模型，而是需要算法的开发以及从各种非常规来源获取数据。它还要求自动化，而这正是 R 显得僵化和过于专业化，而 Python 显得更具包容性和多样性，使其成为许多技术驱动型公司的理想选择，从而导致人们转向。正如 SAS 当年一样，R 在金融领域也占据着稳固的地位，而这对于任何新工具来说都是最难突破的壁垒，因为该行业不太愿意接受频繁的变革和实验。尽管如此，美国银行选择 Python 等最新发展表明这堵墙正在出现裂缝，数据科学家的通用语言已不再是毫无争议的 R。学习 Python 的一个未言明的优势是，一旦为数据分析学会它，如果愿意，人们就可以进而进入编程和开发领域，而 R 则似乎陷入了死胡同，无法超越数据分析。R 似乎仍停留在解决统计学家问题的阶段，而 'by the statisticians' 的做法导致其落后，而 Python 能够承担各种问题。然而，必须记住，越来越多的人在使用这两种语言的组合，并且 Python 提供了 RPy2，这可以让用户同时拥有 R 的主要功能以及 Python 易于协作的优势，因此 Python 已决定性地赢得了这场战役。
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_22_0.png)
+
+## 联系我们
+
+需要了解更多关于分析师职业的信息吗？请通过以下方式联系我们，让我们的顾问为您指导。
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_23_0.png)
+
+### Gurugram
+
+GF 382, Sector 29, 毗邻 IFFCO Chowk Metro Station (Gate 2)，紧邻 Vasan Eye Care Hospital，Gurgaon, Haryana 122001, India
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_23_1.png)
+
+### Bengaluru
+
+Bldg 41, First floor, 14th Main Road, Near BDA complex, Sector 7, HSR Layout, Bengaluru - 560102, India.
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_23_2.png)
+
++91 95-55-219007
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_23_3.png)
+
+info@analytixlabs.co.in
+
+![](img/47becc4dcd588ed7b6c23dabbec5edf7_23_4.png)
+
+www.analytixlabs.co.in
