@@ -1,0 +1,13 @@
+the firm’s Tobin’s $Q$ by 2.24% (= −0.024/1.071), the impact becomes positive while using twitter. It overcomes the disadvantage while using Twitter and shows a positive impact on Tobin’s $Q$ by 7.66% (= [−0.024 + 0.106]/1.071). These results indicate that Twitter and bank relationships are complementary. For firms that use Twitter, a one-unit increase in bank relationships raises the firm’s Tobin’s $Q$ by 7.66%. Other interactions, such as FB_BR (−0.035), YouTube_BR (−0.034) and Other_BR (−0.044), all show substitution effect but are not significant.
+
+Column 6 also shows that the coefficients on BankDebt_TA and YouTube_BankDebt are 0.422 and 0.554, respectively; both are significant. In terms of economic magnitude, it means that a one standard deviation increase in bank debt ratio from its mean value (an increase of 0.263) can increase Tobin’s $Q$ by 66% (= 0.422*0.263/0.168, recall that 0.168 is the average bank debt ratio).
+
+Since the direct effect of YouTube is negative, the interaction of YouTube_BankDebt becomes positive with a value of 0.554, implying that the use of bank debt increases the value for firms that are low YouTube users. It is at this juncture that BankDebt and YouTube are complementary. The other negative interactions show that a substitution effect exists between other types of social media and bank relationships.
+
+In sum, Facebook and Others (Google+ and LinkedIn) positively affect the firm’s Tobin’s $Q$, whereas YouTube and Twitter are negative, with YouTube being insignificant. We explain the plausible reasons for the types of information, i.e., hard vs. soft information, and private vs. private information.
+
+More public and hard information improve market liquidity, and information available in the market would be incorporated into asset prices. However, while prices reflect public information, they fail to reflect all privately held information. Furthermore, whether the prices reflected correctly with information-sharing is also a concern. This is because the strong free-riding problems crowd-out information production to such an extent that the accuracy of the cumulative information in the market remains low. Thus, we provide evidence that enhanced information exchange via social media does not necessarily improve prices and firm value.
+
+# 66.4.4  *Quantile regression*
+
+OLS regression estimators are more sensitive to outliers than are median-based quantile estimators, thus to minimize the impact of outliers on our

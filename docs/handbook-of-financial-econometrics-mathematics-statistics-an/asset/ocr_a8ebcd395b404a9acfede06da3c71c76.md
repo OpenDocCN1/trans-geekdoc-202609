@@ -1,0 +1,14 @@
+Manager’s timing is the difference between total timing and market conditions. The manager’s timing is only positive (negative) when the chosen level of market risk is above (below) the target level and return on the market is above (below) the expected return on the market. It is, therefore, a more sensitive indicator of the manager’s timing ability than total timing.
+
+At times, a target level of risk may not be relevant; if this is the case, the market portfolio may be treated as the target portfolio. That is,
+
+$\{R_x(\beta_a) - R_f\} = \{R_x - E[R_x(\beta_a)]\} - \{R_m - E(R_m)\} + \{E[R_x(\beta_a)] - E(R_m)\} + \{R_m - R_f\}. \quad (87.41)$
+Risk
+Total timing   Manager's timing
+               Market conditions
+Expected deviation      Market
+From the market         risk
+
+Fama was, therefore, one of the first to suggest that the return on a portfolio could be subdivided into two parts: the return from security selection and the return from the bearing of risk in attempting to predict general market-price movements. Therefore, a manger’s performance can be attributed either to skill in selecting an underpriced security or in market-timing ability. However, Fama noted his concerns about current benchmark portfolios. They included the fact that β_p, σ(R_p), and σ(R_m) are stable for long periods of time (e.g., 10 years); but in order to capture market timing, the relevant period for evaluation must be considerably shorter. Although the observed return–risk relationships seem to be linear, the trade-off of risk for return is in general less than predicted by the standard CAPM. In short, evidence suggests that standard CAPM framework may not provide the best benchmarks for the average return–risk tradeoffs available in the market from naively selected portfolios.
+
+One of the principal applications of modern capital-market theory has been to propose a structural specification within which to measure investment performance and thereby to identify superior performers if they exist. In this structure, it is usually assumed that forecasting skills can be partitioned into two distinct components: (1) forecasts of price movements of selected individual stocks (microforecasting), and (2) forecasts of price movements of the general stock market as a whole (macroforecasting). Usually microforecasting involves the identification of individual stocks that are undervalued or overvalued relative to an index for equities. Using the CAPM as a framework, a microforecaster attempts to identify individual stocks whose expected returns lie significantly above or below the SML. The microforecaster, in essence, forecasts the nonsystematic or nonmarket-explained component of the return on individual stocks. Using the CAPM framework,

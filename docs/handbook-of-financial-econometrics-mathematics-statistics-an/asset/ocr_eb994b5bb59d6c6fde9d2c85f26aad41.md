@@ -1,0 +1,13 @@
+behavior is unchanged as compared to the case of S = G + H. Note that in the model of Figure 46.2 the pool of available funds commingles two PEMU pools: the firm’s cash on hand and the firm’s residual credit. This can be done without losing track of each pool, since the state of available funds, k, has the following interpretation: for 0 ≤ k < H, the treasury is empty and k is the residual credit (so the firm’s debt is H − k PEMUs), whereas for H ≤ k ≤ G + H, the credit line is untapped.
+
+Demands of size 1 arrive at the inventory following a Poisson process with arrival rate λ > 0, but a demand that cannot be filled is lost. However, if a demand is filled, the corresponding revenue is allowed to become a receivable, which arrives at the available funds pool after an exponential time with rate parameter ν > 0. All times to payment are iid and independent of all other processes. We assume that each revenue inflow is larger than a PEMU, but the excess over the PEMU’s value is immediately disbursed to the firm owners as profit.
+
+Replenishment in our model is subject to financial constrains (the availability of funds in the funds pool to pay for an arriving replenishment). Consequently, the traditional MTS replenishment regime is replaced by the Financial-Make-to-Stock (FMTS) regime as follows: If the number of PEMUs in the inventory is n and the available funds is k, then the number of product units undergoing replenishment is L_{n,k} = min{S − n, k}. The replenishment regime for each inventory unit has an exponential lead time with rate μ > 0, where all lead times are iid and independent of all other processes.
+
+Next, define the cash conversion process to be the state process of the system depicted in Figure 46.2, namely, as the trivariate process {(I(t), C(t), R(t)) : t ≥ 0}, where I(t) is the number of product PEMUs in the inventory, C(t) is the number of available funds (in PEMUs) in the treasury and residual credit pool, and R(t) is the number of receivable PEMUs in the receivables pool, all at time t. We assume throughout that the process {(I(t), C(t), R(t)) : t ≥ 0} is PEMU conserving in the sense that
+
+I(t) + C(t) + R(t) = G + H,  t ≥ 0.  (46.5)
+
+To this end, we assume not only that any net profit resulting from a filled demand is immediately disbursed to the owners, but also that when costs reduce the number of PEMUs below G + H, the shortage is promptly made good by the owners, thereby precluding bankruptcy. This situation typically holds when the firm is a subsidiary of a parent company that serves as its guarantor.
+
+It follows that the cash conversion process is Markovian with a finite state space of integer triples of the form (n, k, j) that include the state (0, G + H, 0)

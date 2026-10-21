@@ -1,0 +1,66 @@
+
+- Andersen, T. G., Bollerslev, T., Diebold, F. X. and Labys, P. (2003). Modeling and Forecasting Realized Volatility. *Econometrica*, 71, 579-625.
+- Andersen, T. G., Bollerslev, T., Diebold, F. X. and Labys, P. (2010). Parametric and nonparametric volatility measurement.
+- Andersen, T. G., Bollerslev, T., Diebold, F. X. and Vega, C. (2003). Micro Effects of Macro Announcements: Real-time Price Discovery in Foreign Exchange. *American Economic Review*, 93, 38-62.
+- Andersen, T., Bollerslev, T. and Diebold, F. (2007). Roughing it Up: Including Jump Components in the Measurement, Modeling, and Forecasting of Return Volatility. *The Review of Economics and Statistics*, 89, 701-720.
+- Andersen, T., Bollerslev, T., Diebold, F. and Labys, P. (2001). The Distribution of Realized Exchange Rate Volatility. *Journal of the American Statistical Association*, 96(453), 42-55.
+- Anderson, R. and Sundaresan, S. (1996). Design and Valuation of Debt Contract. *Review of Financial Studies*, 9, 37-68.
+- Anderson, R. and Sundaresan, S. (2000). A Comparative Study of Structural Models of Corporate Bond Yields: An Exploratory Investigation. *Journal of Banking and Finance*, 24, 255-269.
+- Anderson, R., Sundaresan, S. and Tychon, P. (1996). Strategic Analysis of Contingent Claim. *European Economic Review*, 40, 871-881.
+- Anderson, T. W. (1963). The Use of Factor Analysis in the Statistical Analysis of Multiple Time Series. *Psychometrika*, 28, 1-25.
+- Andersson, M. (2009). A Comparison of Nine PLS1 Algorithms. *Journal of Chemometrics*, 23(10), 518-529.
+- Andrews, D. W. and Lu, B. (2001). Consistent Models and Moment Selection Procedures for GMM Estimation with Application to Dynamic Panel Data Models. *Journal of Econometrics*, 101, 123-164.
+- Andries, M. (2012). Consumption-based asset pricing with loss aversion. *Working paper*, Toulouse School of Economics.
+- Ang, A. and Piazzesi, M. (2003). A No-Arbitrage Vector Autoregression of Term Structure Dynamics with Macroeconomic and Latent Variables. *Journal of Monetary Economics*, 50, 745-787.
+- Ang, A., Hodrick, R. J., Xing, Y. and Zhang, X. (2006). The Cross-Section of Volatility and Expected Returns, *Journal of Finance*, 61, 259-299.
+- Angelini, E., Tollo, G. and Roli, A. (2008). A Neural Network Approach for Credit Risk Evaluation. *The Quarterly Review of Economics and Finance*, 48, 733-755.
+- Angeloni, C. and Wolff, G. (2012). Are Banks affected by their holdings of government debt? Bruegel Working Paper 07.
+- Annaert, J., De Geuster, M., Van Roy, P. and Vespro, C. (2013). What Determines Euro Area Bank CDS Spreads? *Journal of International Money and Finance*, 32, 444-461.
+- Ansel, J. P. and Stricker, C. (1992). Lois de Martingale, Densities et Decompositions de Foellmer Schweizer. *Ann. Inst. H Poincaré Probab. Statistic*, 28, 375-392.
+- Applebaum, D. (2004). Lévy Process — From Probability Theory to Finance and Quantum. *Notices of the American Mathematical Society*, 51(11), 1339-1347.
+- Arellano, M. (1993). On the Testing of Correlated Effects with Panel Data. *Journal of Econometrics*, 59, 87-97.
+- Arellano, M. and Bond, S. (1991). Some Tests of Specification for Panel Data: Monte Carlo Evidence and An Application to Employment Equations, *The Review of Economic Studies*, 58(2), 277-297.
+- Arellano, M. and Bover, O. (1995). Another Look at the Instrumental Variable Estimation of Error Component Models. *Journal of Econometrics*, 68, 29-51.
+- Arezki, R., Candelon, B. and Sy, A. (2011). Sovereign Rating News and Financial Markets Spillovers: Evidence from the European Debt Crisis. CESifo Working Paper Series 3411, CESifo Group Munich.
+- Arnett, D. B., Laverie, D. A. and Meiers, A. (2003). Developing Parsimonious Retailer Equity Indexes Using Partial Least Squares Analysis: A Method and Applications. *Journal of Retailing*, 79(3), 161-170.
+- Arnold, L. (1974). Stochastic Differential Equation: Theory and Applications, John Wiley & Sons.
+- Artzner, P., Delbaen, F., Eber, J. M. and Heath, D. (1999). Coherent Measures of Risk. *Mathematical Finance*, 9, 203-228.
+- Arun Kumar, M. and Gopal, M. (2009). Least Squares Twin Support Vector Machines for Pattern Classification, *Expert Systems with Applications*, 36, 7535-7543.
+- Aruoba, S., Cuba-Borda, P. and Schorfheide, F. (2018). Macroeconomic Dynamics Near the ZLB: A Tale of Two Countries. *Review of Economic Studies*, 85, 87-118.
+- Asgharian, H. and Bengtsson, C. (2006). Jump Spillover in International Equity Markets. *Journal of Financial Econometrics*, 4, 167-203.
+- Asgharian, H. and Nossman, M. (2011). Risk Contagion among International Stock Markets. *Journal of International Money and Finance*, 30, 22-38.
+- Asgharian, H., Hess, W. and Liu, L. (2013). A Spatial Analysis of International Stock Market Linkages. *Journal of Banking and Finance*, 37(12), 4738-4754.
+- Ashton, D. J. and Atkins, D. R. (1979). Multicriteria Programming for Financial Planning. *Journal of the Operational Research Society*, 30(3), 259-270.
+- Asmussen, S. (2000). Ruin Probabilities. World Scientific, Singapore.
+- Asmussen, S., Avram, F. and Pistorius, M. R. (2004). Russian and American put Options Under Exponential Phase-Type Lévy Models. *Stoch. Process. Appl.* 109, 79-111.
+- Asness, C., Moskowitz, T. and Pedersen, L. (2013). Value and Momentum Everywhere. *Journal of Finance*, 68, 929-985.
+- Asquith, P. and Mullins, D. W. (1991). Convertible Debt: Corporate Call Policy and Voluntary Conversion. *Journal of Finance*, 46, 1273-1289.
+- Atilgan, Y. (2010). Deviations from Put-Call Parity and Earnings Announcement Returns. *Journal of Financial and Quantitative Analysis*, 45, 335-368.
+- Atiase, R. K. (1985). Predisclosure Information, Firm Capitalization, and Security Price Reaction Around Earnings Announcements. *Journal of Accounting Research*, 23(1), 21-36.
+- Atwood, T. J., Omer, T. C. and Shelly, M. K. (1998). Capital Restructuring and Accounting Compliance Costs: The Case of Publicly Traded Partnerships. *Journal of Accounting Research*, 36(2), 365-378.
+- Autrey, R. L. and Bova, F. (2012). Gray Markets and Multinational Transfer Pricing. *The Accounting Review*, 87(2), 393-421.
+- Avkiran, N. K. (2018). Rise of the partial least squares structural equation modeling: An application in banking. In: Avkiran N., Ringle C. (eds) Partial Least Squares Structural Equation Modeling. International Series in Operations Research & Management Science, Vol. 267. Springer, Cham, (pp. 1-29).
+- Avkiran, N. K., Ringle, C. and Low, R. (Forthcoming). Monitoring transmission of systemic risk: Application of PLS-SEM in financial stress testing. *The Journal of Risk*.
+- Avramov, D. and Zhou, G. (2010). Bayesian Portfolio Analysis. *Annual Review of Financial Economics*, 2(1), 25-47.
+- Ayadi, R., Arbak, E. and De Groen, W. (2011). Business Models in European Banking: A pre-and post-crisis screening. CEPS Paperbacks.
+- Ayadurai, C. and Eskandari, R. (2018). Bank soundness: A PLS-SEM approach. In: Avkiran N., Ringle C. (eds) Partial Least Squares Structural Equation Modeling, International Series in Operations Research & Management Science, Vol 267. Springer, Cham, pp. 31-52.
+- Ayers, B. C., Li, O. Z. and Yeung, P. E. (2011). Investor Trading and the Post-Earnings-Announcement Drift. *The Accounting Review*, 86(2), 385-416.
+- Azemar, C. (2010). International Corporate Taxation and US. Multinationals’ Behavior: An Integrated Approach. *The Canadian Journal of Economics*, 43(1), 232-253.
+- Böcker, K. and Hillebrand, M. (2009). Interaction of Market and Credit Risk: An Analysis of Inter-Risk Correlation and Risk Aggregation. *Journal of Risk*, 11(4), 3-29.
+- Bühler, W. and Koziol, C. (2004). Valuation of Convertible Bonds with Sequential Conversion. *Schmalenbach Business Review*, 54, 302-334.
+- Bachelier, L. (1900). Théorie De La speculation. Annales de l’École Normale Supérieure. translated in the book Random Character of Stock Market Prices, MIT Press: Cambridge.
+- Baggs, J. and De Bettignies, J. (2007). Product Market Competition and Agency Costs. *Journal of Industrial Economics*, 55, 289-323.
+- Bailey, A. D. and Boe, W. J. (1976). Goal and Resource Transfers in the Multigoal Organization. *The Accounting Review*, 559-573.
+- Baillie, R. and DeGennaro, R. P. (1990). Stock Returns and Volatility. *Journal of Financial and Quantitative Analysis*, 25, 203-214.
+- Baillie, R. T. (1996). Long Memory Processes and Fractional Integration in Econometrics. *Journal of Econometrics*, 73, 5-59.
+- Baker, H. K. and Filbeck, G. (2015). Investment Risk Management. New York: Oxford University Press.
+- Baker, M. and Wurgler, J. (2002). Market Timing and Capital Structure. *Journal of Finance*, 57(1), 1-32.
+- Baker, M. and Wurgler, J. (2006). Investor Sentiment and Cross-Section of Stock Returns. *Journal of Finance*, 61, 1645-1680.
+- Baker, M. P. and Wurgler, J. (2002). Market timing and capital structure. *Journal of Finance*, 57, 1-32.
+- Bakshi, G., Cao, C. and Chen, Z. (1997). Empirical Performance of Alternative Option Pricing Models. *Journal of Finance*, 52, 2003-2049.
+- Bakshi, G., Cao, C. and Chen, Z. (2000). Pricing and Hedging Long-Term Options. *Journal of Econometrics*, 94, 277-318.
+- Bakshi, G., Cao, C. and Chen, Z. (2009). Option Pricing and Hedging Performance Under Stochastic Volatility and Stochastic Interest Rates. Handbook of Quantitative Finance and Risk Management. New York: Springer Science and Business.
+- Bakshi, G., Cao, C. and Chen, Z. (1997). Empirical Performance of Alternative Option Pricing Models. *The Journal of Finance*, 52, 2003-2049.
+- Bakshi, G., Carr, P. and Wu, L. (2008). Stochastic Risk Premiums, Stochastic Skewness and Currency Options, and Stochastic Discount Factors in International Economies. *Journal of Financial Economics*, 87(1), 132-156.
+- Bakshi, G., Kapadia, N. and Madan, D. (2003). Stock Return Characteristics, Skew Laws, and the Differential Pricing of Individual Equity Options. *The Review of Financial Studies*, 16(1), 101-143.
+- Bali, T. and Hovakimian, A. (2009). Volatility Spreads and Expected Stock Returns. *Management Science*, 55, 1797-1812.

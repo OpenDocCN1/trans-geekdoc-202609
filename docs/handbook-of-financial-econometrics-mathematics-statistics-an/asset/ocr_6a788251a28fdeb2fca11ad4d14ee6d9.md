@@ -1,0 +1,13 @@
+Our study contributes to the literature in several ways. First, our paper adds to the empirical literature on analyst rankings. Prior studies rank analysts based on various characteristics of earnings forecasts, while we utilize a new and important feature of analyst coverage network structure to measure analyst capability of information collection. In addition, we provide a new application of the network methodology to uncover information embedded in analysts’ overlapped coverage. Our results add to the argument by Burt (2003) that information advantage of agents occupying the structural holes is important in the analyst profession.
+
+The rest of this paper proceeds as follows. Section 31.2 reviews the literatures on analyst ranking and network structural hole. Section 31.3 develops our hypotheses on ranking analysts based on the structural hole measures. Section 31.4 presents the data collection, describes the network construction, and defines structural hole measures and other variables used in the empirical analysis. Section 31.5 presents the results of our empirical analysis on the effect of structural hole on the stock price reaction to release of analyst earnings forecasts, and on the comparison between structural hole and other methods of analyst ranking. Section 31.6 concludes our study.
+
+# 31.2 Literature Review
+
+Our paper provides a new approach to rank analysts based on the measures of structural holes in the analyst coverage network. This section presents a brief review on the prior literature on analyst ranking and the social network research on structural hole.
+
+# 31.2.1 Literature on analyst ranking
+
+Prior studies have proposed several quantitative approaches to rank analysts. These approaches differ from that used in the investment community. For example, Institutional Investor magazine ranks analysts by conducting surveys among directors of research and chief investment officers at major money management institutions. While these investment professionals are in the best position to know the best performing analysts, survey results could be biased for rewarding analysts who have been working in the profession for a long time or who aggressively solicit votes from their customers.
+
+Presumably, high-ranked or lead analysts are those analysts whose published opinions are more informative than others and have greater ability to move price. Prior papers have made use of earnings forecast accuracy to evaluate the ability of analysts. For example, Park and Stice (2000) find

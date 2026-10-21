@@ -1,0 +1,13 @@
+(2006), and Richards et al. (2017) indicate that doers’ resistance to realizing losses can be minimized by adopting automatic rules and devices to force the realization of a loss (gain) once the predetermined loss (gain) level has reached, such as the stop-loss (gain) order. Weber and Cammer (1998) and Da Costa et al. (2008) show that deliberate selling has a greater disposition effect than automatic selling. Fischbacher et al. (2014) find that both stop-loss and take-gain order can reduce the disposition effect. Thus, this study assumes self-control (discipline) has a negative influence on the disposition effect. Hypothesis 16.3 is shown as follows:
+
+**Hypothesis 16.3:** Self-control (discipline) negatively influences the disposition effect.
+
+# 16.2.4 The disposition effect and investment performance
+
+Shefrin and Statman (1985), Odean (1998), Barber and Odean (1999), and Leal et al. (2018) indicate that individual investors who have greater disposition effect reveal poorer performance. Garvey and Murphy (2004), Locke and Mann (2005), and Choe and Eom (2009) find that professional investors with greater disposition effect have underperformance. Chong (2009) find that investors have the tendency to hold their losing IPOs, whereas the ex post performance of losing IPOs is not significantly better than their initial performance. Although some studies using fund managers’ data do not find the negative link between the disposition effect and investment performance (Cici, 2012; Ammann et al., 2012), this study highlights individual investors’ behavior and, thus, assumes that the influence of the disposition effect on investment performance is negative. Hypothesis 16.4 is shown as follows:
+
+**Hypothesis 16.4:** The disposition effect negatively influences investment performance.
+
+# 16.2.5 Moderating effect
+
+Demographic variables might influence investors’ behavioral decision-making. Dhar and Ning (2006) argue that the mean value could not account for the whole story and find that investor characteristics influence the disposition effect. Barber and Odean (2001) use investor-level data to examine whether gender influences investors’ decision-making and conclude that single women exhibit the most cautious investment attitude. Barber et al. (2007) and Frino et al. (2015) find that female investors exhibit greater preference for realizing gain than loss. Wong et al. (2006), Da Costa et al. (2008),

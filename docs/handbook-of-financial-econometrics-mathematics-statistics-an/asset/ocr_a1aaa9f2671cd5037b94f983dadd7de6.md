@@ -1,0 +1,13 @@
+junk and momentum-led low book-to-price stocks. Hence, concentrating on low risk, high book-to-price and profitable small stocks may provide the best results.
+
+# **South Africa:**
+
+In South Africa, the CAPM model produces the best alpha, followed by the AFP 5-factor and 6-factor models. The AFP 5-factor model has high but not statistically significant negative QMJ factor beta, and high but not statically significant positive BAB factor beta. The CH 4-factor and FF 5-factor models portray the statistically significant impact of SML and HML factor betas and high but not statistically significant impact of positive RMW factor beta. Interestingly, the momentum risk is also positive in the CH 4-factor and AFP 6-factor models. Hence, some amount of momentum risk is desirable in this market and probably there is value in profitability-driven stocks. It also shows that probably a large portion of small stocks are junk. South Africa is a typical market, wherein the market risk has priced in all the factor risks in a more risk-return efficient manner, hence index investing can be a better option, although on a risk-averse and on a very selective basis some large value stocks with sound profitability growth may also enhance Alpha.
+
+# **South Korea:**
+
+In this market, the AFP 6-factor model provides the best result, followed by the AFP 5-factor model. As we observe from these two models, the BAB factor beta, in contrast to many other markets is negative and statistically significant in the latter model. The HML factor without the look-ahead bias is high; however, its impact diminishes after adding the momentum factor which has a negative beta. Typically, the CH 4-factor model provides the 3rd highest Alpha due to its high and statistically significant positive SMB factor beta, and high and statistically significant negative MOM-factor beta. Similarly, the FF 3-factor and 5-factor also show very high statistically significant positive SMB-factor beta and some positive RMW or profitability beta. Overall, this market is highly influenced by HML (with look-ahead bias), MOM and CMA, and not even suitable for a low risk strategy. Hence, return enhancement opportunities can only be found among selective large and high book-to-price stocks that are profitable and momentum investing may be avoided.
+
+# **Taiwan:**
+
+In Taiwan, market risk is reduced and Alpha is enhanced to its highest with the AFP 6-factor model, followed by the AFP 5-factor model and the CH 4-factor model. As observed, market risk can be reduced by removing the momentum risk (MOM factor beta is negative in AFP 6-factor

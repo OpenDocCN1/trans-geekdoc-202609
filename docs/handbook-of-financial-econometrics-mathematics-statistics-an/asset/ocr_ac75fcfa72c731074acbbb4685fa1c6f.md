@@ -1,0 +1,18 @@
++   - Kwak, W., Eldridge, S., Shi Y. and Kou, G. (2009). Predicting Material Weakness in Internal Control Systems After the Sarbanes-Oxley Act Using Multiple Criteria Linear Programming and Other Data Mining Approaches. The Journal of Applied Business Research, 25, 105-118.
++   - Kwak, W., Shi, Y. and Cheh, J. (2006a). Firm Bankruptcy Prediction Using Multiple Criteria Linear Programming Data Mining Approach. Advances in Investment Analysis and Portfolio Management, 2, 27-49.
++   - Kwak, W., Shi, Y., Eldridge, S. W. and Kou, G. (2006b). Bankruptcy Prediction for Japanese Firms: Using Multiple Criteria Linear Programming Data Mining Approach. International Journal of Business Intelligence and Data Mining, 1(4), 401-416.
++   - Kwak, W., Shi, Y. and Kou, G. (2012a). Bankruptcy Prediction for Korean Firms After the 1997 Financial Crisis. Review of Quantitative Finance and Accounting, 38, 441-453.
++   - Kwak, W., Shi, Y. and Kou, G. (2012b). Predicting Bankruptcy After the Sarbanes-Oxley Act Using the Most Current Data Mining Approaches. Journal of Business and Economic Research, 10, 233-242.
++   - Kwak, W., Cheng, X., Ni, J., Shi, Y., Gong, G. and Yan, N. (2014). Bankruptcy Prediction for Chinese Firms: Comparing Data Mining Tools with Logit Analysis. Journal of Modern Accounting and Auditing, 10, 1030-1037.
++   - Lahmiri, S. (2016). Features Selection, Data Mining and Financial Risk Classification: A Comparative Study. Intelligent Systems in Accounting, Finance and Management, 23, 265-275.
++   - Mamonov, S. and Benbunan-Fich, R. (2017). What Can We Learn from Past Mistakes? Lessons from Data Mining the Fannie Mae Mortgage Portfolio. Journal of Real Estate Research, 39(2), 235-262.
++   - Mansi, S. A., Maxwell, W. F. and Zhang, A. J. (2012). Bankruptcy Prediction Models and the Cost of Debt. Journal of Fixed Income, 21(4), 25-42.
++   - McKee, T. E. (2000). Developing a Bankruptcy Prediction Model Via Rough Sets Theory, International Journal of Intelligent Systems in Accounting, Finance & Management, 9, 159-173.
++   - Mihalovic, M. (2016). Performance Comparison of Multiple Discriminant Analysis and Logit Models in Bankruptcy Prediction. Economics and Sociology, 9(4), 104-118.
++   - Min, J. H. and Lee, Y. (2005). Bankruptcy Prediction Using Support Vector Machine (svm) with Optimal Choice of Kernel Function Parameters. Expert Systems with Applications, 28, 603-614.
++   - Mossman, C., Bell, G., Swartz, L. M. and Turtle, H. (1998). An Empirical Comparison of Bankruptcy Models, Financial Review, 33, 35-53.
++   - Murthy, US and Geerts, G. L. (2017). An REA Ontology-Based Model for Mapping Big Data to Accounting Information Systems Elements. Journal of Information Systems, 31(3), 45-64.
++   - Nam, C., Kim, T., Park, N. and Lee, H. (2008). Bankruptcy Prediction Using a Discrete-Time Duration Model Incorporating Temporal and Macroeconomic Dependencies. Journal of Forecasting, 27(6), 493-506.
++   - Nanda, S. and Pendharkar, P. (2001). Linear Models for Minimizing Misclassification Costs in Bankruptcy prediction. International Journal of Intelligent Systems in Accounting, Finance and Management, 10, 155-168.
++   - Ni, J., Kwak, W., Cheng, X. and Gong, G. (2014). The Determinants of Bankruptcy for Chinese Firms. Review of Pacific Basin Financial Markets and Policies, 17(2), 1-23.
++   - Ohlson, J. (1980). Financial Ratios and The Probabilistic Prediction of Bankruptcy. Journal of Accounting Research, 18, 109-131.

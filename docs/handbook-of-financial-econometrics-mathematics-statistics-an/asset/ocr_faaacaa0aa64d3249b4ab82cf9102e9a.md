@@ -1,0 +1,13 @@
+**Table 100.4:** Test of supply effect on off-diagonal elements of matrix II.\(^\mathrm{a-c}\)\n\n|  | \(R^2\) | \(F\)-statistic | \(p\)-value | \(\chi^2\) | \(p\)-value |\n|---|---:|---:|---:|---:|---:|\n| Portfolio 1 | 0.1518 | 1.7392 | 0.0872 | 17.392* | 0.0661 |\n| Portfolio 2 | 0.1308 | 1.4261 | 0.1852 | 14.261 | 0.1614 |\n| Portfolio 3 | 0.4095 | 5.4896 | 0.0000 | 53.896*** | 0.0000 |\n| Portfolio 4 | 0.1535 | 1.9240 | 0.0607 | 17.316** | 0.0440 |\n| Portfolio 5 | 0.1706 | 1.9511 | 0.0509 | 19.511** | 0.0342 |\n| Portfolio 6 | 0.2009 | 1.2094 | 0.2988 | 12.094 | 0.2788 |\n| Portfolio 7 | 0.2021 | 1.8161 | 0.0718 | 18.161* | 0.0523 |\n| Portfolio 8 | 0.1849 | 1.9599 | 0.0497 | 19.599** | 0.0333 |\n| Portfolio 9 | 0.1561 | 1.8730 | 0.0622 | 18.730** | 0.0438 |\n| Portfolio 10 | 0.3041 | 3.5331 | 0.0007 | 35.331*** | 0.0001 |\n\n*Notes:* ^a^ \(p_{i,t}=\beta_i'd_{i,t}+\sum_{j\ne i}\beta_j'd_{j,t}+\varepsilon'_{i,t},\ i,j=1,\ldots,10;\ \mathrm{H}_0:\ \text{all }\beta_j=0,\ j=1,\ldots,10,\ j\ne i.\)\n\n^b^ The first test uses an \(F\)-distribution with 9 and 76 degrees of freedom, and the second uses a \(\chi^2\)-distribution with 9 degrees of freedom.\n\n^c^ *, **, and *** denote statistical significance at the 10%, 5% and 1% levels, respectively.
+
+portfolio:
+
+$$p_{i,t}=\beta_i d_{i,t}+\sum_{j\ne i}\beta_j d_{j,t}+\varepsilon_{i,t},\qquad i,j=1,\ldots,10.$$  \tag{100.23}
+
+The null hypothesis then can be written as follows: $\mathrm{H}_0:\ \beta_j=0$, $j=1,\ldots,10$, $j\ne i$. The results are reported in Table 100.4. Two test statistics are reported. The first test uses an $F$-distribution with 9 and 76 degrees of freedom, and the second uses a $\chi^2$-distribution with 9 degrees of freedom. The null hypothesis is rejected at 5% significance level in six out of ten portfolios, and only two portfolios cannot be rejected at 10% significance level. This result indicates that the null hypothesis can be rejected at conventional levels of significance.
+
+For the second hypothesis of supply effect on all diagonal elements of equation (100.22), the following null hypothesis needs to be tested:
+
+$$\mathrm{H}_0:\ \pi_{i,i}=\pi_{j,j}\quad\text{for all }i,j=1,\ldots,10.$$
+
+To do this null hypothesis test, we need to estimate equation (100.22) simultaneously, and then, we calculate Wald statistics by imposing nine restrictions on this equation system. Under the above nine restrictions, the Wald test statistic has a $\chi^2$-distribution with 9 degrees of freedom. The statistic is 18.858, which is greater than 16.92 at 5% significance level. Since the statistic corresponds to a $p$-value of 0.0265, one can reject the null hypothesis at 5%, but it cannot reject $\mathrm{H}_0$ at a 1% significance level. In

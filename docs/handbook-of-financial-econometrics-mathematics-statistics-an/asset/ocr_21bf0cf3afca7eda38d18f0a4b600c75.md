@@ -1,0 +1,11 @@
+**Keywords:** Errors-in-variables, Simultaneous equations system, Estimation, Identification problem, Investment decision, Dividend policy, Two stage least square method.
+
+# **Chapter 117: Big Data and Artificial Intelligence in the Banking Industry**
+
+Big data and artificial intelligence (AI) assist businesses with decision-making. They help companies create new products and processes or improve existing ones. As the amount of data grows exponentially and data storage and computing power costs drop, AI is predicted to have great potentials for banks. This chapter discusses the implications of big data and AI for the banking industry. First, we provide background on big data and AI. Second, we identify areas in which banks can benefit from big data and AI, and evaluate their applications for the banking industry. Third, we discuss the implications of big data and AI for regulatory compliance and supervision. Last, we conclude with the limitations and challenges facing the use of big-data based AI.
+
+**Keywords:** Big data, Artificial intelligence, Machine learning, Bank, Robo-advisor, Bank regulatory compliance, Algorithmic bias.
+
+# **Chapter 118: A Non-Parametric Examination of Emerging Equity Markets Financial Integration**
+
+Prior studies on financial markets integration use parametric estimators whose underlying assumptions of linearity and normality are, at best, questionable, particularly when using high frequency data. We re-examine the evidence regarding financial integration trends using data for 14 emerging equity markets from Southeast Asia, Latin America, and the Middle East, along with US and Japan. We employ non-parametric estimators of Pukthuanthong and Roll’s (2009) adjusted R² measure of financial integration. Results from non-parametric estimators are contrasted with results from parametric estimators of adjusted R² financial integration measure using bi-daily returns for contiguous yearly sub-periods from 1993 to 2016. We find two key results. First, we confirm prior evidence in Pukthuanthong and Roll (2009) that simple correlation (SC) understates financial integration trends compared to parametric adjusted R². Second, parametric adjusted R² understates financial integration trends relative to non-parametric adjusted R². Hence, emerging equity markets may be

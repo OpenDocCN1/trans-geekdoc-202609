@@ -1,0 +1,13 @@
+a receivables pool. The system implements a perpetual flow cycle where funds convert to product and back to funds. The equilibrium rate analysis (ERA) methodology is used to analyze the firm’s operational and financial performance metrics, including net profit rate, rate of return on investment, and cash conversion cycle statistics. Specifically, in this chapter, we model the case where the firm is a subsidiary of a financially stable parent corporation, and the subsidiary’s cash conversion system is capital rationed. We model this system as a discrete-state continuous-time Markovian process, and compute its stochastic equilibrium distribution using analytic and numerical methods. These are used, in turn, to compute the aforesaid financial metrics in stochastic equilibrium. Finally, we present a methodology that uses these financial metrics to optimize the financial and operational design of the system, and specifically, the firm’s capital structure and the sizing of the inventory’s base stock level. Numerical results show that optimal designs for profit rate maximization and rate of return maximization can differ substantially, reflecting the differing interests of firm managers and investors.
+
+**Keywords:** Cash conversion cycle, Capital-rationed firms, Credit-limited firms, Equilibrium rate analysis, Make-to-stock inventory, Markovian models, Stochastic equilibrium, Supply chain financial management.
+
+# Chapter 47: Is the Market Portfolio Mean–Variance Efficient?
+
+This chapter investigates the characteristics of a subset of the infinite number of Security Market Lines (SMLs) that ensure the market portfolio is mean–variance efficient both at a point in time and over time. The analysis employs raw rather than excess returns. With some specifications of the SML, the risk-free rate exceeds the market portfolio’s equilibrium mean, which is inconsistent with CAPM theory. At a point in time, a Hotelling’s $t^2$ test may reject most of the SMLs or none of them, although other mean–variance criteria may indicate some are economically reasonable and others are not.
+
+**Keywords:** Mean–variance capital asset pricing, Econometric and statistical methods, Hotelling’s $t^2$ test, CAPM, SML.
+
+# Chapter 48: Consumption-Based Asset Pricing with Prospect Theory and Habit Formation
+
+In this chapter, we propose a novel model to incorporate prospect theory into the consumption-based asset pricing model, where habit formation of

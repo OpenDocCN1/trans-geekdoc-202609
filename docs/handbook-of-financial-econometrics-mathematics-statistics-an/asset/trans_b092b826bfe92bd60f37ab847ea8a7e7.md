@@ -1,0 +1,64 @@
+
+- Chang, J.R. and Hung, M.W. (2000). 具有时变套期保值风险的国际资产定价模型. 《定量金融与会计评论》 235-257.
+- Chay, J.B., Choi, D. and Pontiff, J. (2006). 税务时机选择的市场估值：来自资本利得分配的证据. 《金融学杂志》 61, 837-865.
+- Chemla, G. and Hennessy, C. (2014). 利益绑定与道德风险. 《金融学杂志》 69(4), 1597-1641. doi:10.1111/jofi.12161.
+- Chen, A., Hung, C.C. and Wu, C.-S. (2002). 基于噪声交易的台湾首次公开发行股票的折价与超额回报：随机前沿模型. 《定量金融与会计评论》 18, 139-159.
+- Chen, C.P. and Zhang, C.Y. (2014). 数据密集型应用、挑战、技术与技术：大数据综述. 《信息科学》 275, 314-347.
+- Chen, H.H. and Yang, C.B. (2017). 使用条件风险价值的随机规划进行多期投资组合投资. 《计算机与运筹学研究》 81, 305-321.
+- Chen, H.Y., Lee, A.C. and Lee, C.F. (2015). 替代性变量测量误差模型及其在金融研究中的应用. 《经济学与金融季刊》 58, 213-227.
+- Chen, K.H. and Shimerda, T.A. (1981). 有用财务比率的实证分析. 《财务管理》 10, 51-60.
+- Chen, M., Mao, S. and Liu, Y. (2014). 大数据：综述. 《移动网络与应用》 19(2), 171-208.
+- Chen, R., Guo, R. and Lin, M. (2010). 企业撤回首次公开发行决定的自我选择：带反馈的破产风险模型的贝叶斯推断. 《美国统计协会杂志》 105, 1297-1309.
+- Chen, R.R. and Lee, C.F. (1993). 期权定价中恒定弹性方差(CEV)族股票价格分布：综述与整合. 《金融研究杂志》 1, 29-51.
+- Chen, R.R. and Palmon, O. (2005). 非参数期权定价模型：理论与经验证据. 《定量金融与会计评论》 24(2), 115-134.
+- Chen, R.R., Lee, C.F., and Lee, H.H. (2009). 恒定弹性方差期权定价模型的实证表现. 《太平洋盆地金融市场与政策评论》 12(2), 177-217.
+- Chen, S.C. and Huang, M.Y. (2011). 利用数据挖掘技术构建信用审计与控制管理模型. 《应用专家系统》 38, 5359-5365.
+- Chen, S.-N. (1980). 时间聚合、自相关与系统风险估计——加法与乘法假设. 《金融与定量分析杂志》 15(1).
+- Chen, Y., Cliff, M. and Zhao, H. (2017). 对冲基金：好的、坏的与幸运的. 《金融与定量分析杂志》 52, 1081-1109.
+- Chen, A.-S., Leung, M.T. and Daouk, H. (2003). 神经网络在新兴金融市场中的应用：预测与交易台湾股票指数. 《计算机与运筹学研究》 30(6), 901-923.
+- Cheng, P.L. and Grauer, R.R. (1980). 资本资产定价模型的一种替代检验. 《美国经济评论》 70, 660-671.
+- Chiappori, P.A. and Salanié, B. (2016). 配对模型的计量经济学. 《经济文献杂志》 54(3), 832-861.
+- Chin, C.-L., Lin, T.T. and Lee, C.-C. (2005). 可转换债券发行条款、管理层预测与盈余管理：来自台湾市场的证据. 《太平洋盆地金融市场与政策评论》 8, 543-571.
+- Chintamaneni, P. (2016). 银行如何利用大数据与分析的新浪潮获利. 《哈佛商业评论》. 检索自 https://hbr.org/sponsored/2016/11/how-banks-are-capitalizing-on-a-new-wave-of-big-data-and-analytics.
+- Chiou, W. (2007). 谁从国际多元化中受益？《国际金融市场、机构与货币杂志》 18, 466–482.
+- Chiou, W.J.P. (2009). 股票回报风险的差异：国际比较. 《太平洋盆地金融市场与政策评论》 12(2), 245–266.
+- Chiu, S.Y. and Chuang, H.L. (2016). 亚洲经济中的就业能力与工资补偿：台湾女性大学毕业生的证据. 《新兴市场金融与贸易》 52(4), 853–868.
+- Choe, H., Kho, B.C. and Stulz, R.M. (1999). 外国投资者是否使股票市场不稳定？1997年韩国的经验. 《金融经济学杂志》 54, 227–264.
+- Choi, D., Getmansky, M., Henderson, B. and Tookes, H. (2010). 可转换债券套利者作为资本供给者. 《金融研究评论》 23, 2492–2522.
+- Chordia, T., Roll, R. and Subrahmanyam, A. (2000). 流动性的共同性. 《金融经济学杂志》 56, 3–28.
+- Chordia, T., Roll, R. and Subrahmanyam, A. (2001). 市场流动性与交易活动. 《金融学杂志》 56, 501–530.
+- Chordia, T., Sarkar, A. and Subrahmanyam, A. (2005). 股票与债券市场流动性的实证分析. 《金融研究评论》 18, 85–129.
+- Chou, R. (1988). 波动性持续性与股票估值：使用GARCH的一些经验证据. 《应用计量经济学杂志》 3, 279–294.
+- Chou, W.L., Fan, D.K.K. and Lee, C.F. (1996). 利用日经指数期货进行套期保值：传统模型与误差修正模型. 《经济学与金融季刊》 36(4), 495–505.
+- Choudhry, T. (1996). 股票市场波动性与1987年崩盘：来自六个新兴市场的证据. 《国际货币与金融杂志》 15(6), 969–981.
+- Chowdhury, I. and Sarno, L. (2004). 外汇市场中的时变波动性：对其持续性与货币溢出的新证据. 《工商财务会计杂志》 31, 759–793.
+- Christoffersen, P., Errunza, V., Jacobs, K. and Langlois, H. (2012). 国际多元化的潜力是否正在消失？动态Copula方法. 《金融研究评论》 25, 3711–3751.
+- Christophers, B. (2018). 金融化作为垄断利润：美国银行业案例. 《反题》 50(4), 864–890. doi:10.1111/anti.12383.
+- Chu, B. (2017). 在对英国家庭债务发出警告之际，信用卡贷款再次上升. 《独立报》. http://www.independent.co.uk/news/business/news/credit-card-lending-uk-household-debt-unsecured-september-bank-of-england-interest-rates-a8026896.html.
+- Chuang, H.L. and Lin, E.S. (2006). 台湾女性劳动力供给实证研究的演变. 《台湾经济评论》 34(2), 119.
+- Chuang, H.L., Hsieh, N. and Lin, E.S. (2010). 台湾外籍配偶的劳动市场活动：就业状况与就业部门选择. 《太平洋经济评论》 15(4), 505–531.
+- Churchill, R.V. (1963). 《傅里叶级数与边值问题》，第2版. McGraw-Hill Companies.
+- Cielen, A., Peeters, L. and Vanhoof, K. (2004). 利用数据包络分析进行破产预测. 《欧洲运筹学杂志》 154(2), 526–532.
+- Clark, K. and Ofek, E. (1994). 合并作为重组困境企业的手段：实证研究. 《金融与定量分析杂志》 29(4), 541–565.
+- Cleland, S. (2011). 谷歌的“侵权创新”秘密. 《福布斯》. 检索自 https://www.forbes.com/sites/scottcleland/2011/10/03/googles-infringenovation-secrets/#1e9c536730a6.
+- Coën, A. and Hübner, G. (2009). 对冲基金风险与绩效估计再探：来自变量测量误差的证据. 《经验金融杂志》 16, 112–125.
+- Cochran, S.J., Heck, J.L. and Shaffer, D.R. (2003). 全球股票市场的波动性. 《太平洋盆地金融市场与政策评论》 6(3), 273–290.
+- Cochran, W.G. (1970). 测量误差对多元相关性的某些影响. 《美国统计协会杂志》 65, 22–34.
+- Cochrane, J.H. (1991). 基于生产的资产定价与股票回报与经济波动之间的联系. 《金融学杂志》 46, 209–237.
+- Cochrane, J.H. (1996). 基于投资的资产定价模型的横截面检验. 《政治经济学杂志》 104, 572–621.
+- Cochrane, J.H. (2005). 《资产定价》. Princeton University Press.
+- Cochrane, J.H. (2005). 金融市场与实体经济. 工作论文，University of Chicago.
+- Cognizant (2018). 先进的人工智能机器学习解决方案为一家大型全球银行检测支票欺诈. 检索自 https://www.cognizant.com/case-studies/ai-machine-learning-fraud-detection.
+- Collett, D. (2003). 《医学研究中的生存数据建模》，第2版. Chapman & Hall, London.
+- Collin-Dufresne, P. and Goldstein, R. (2001). 信用利差是否反映了平稳的杠杆比率？《金融学杂志》 56, 1926–1957.
+- Collin-Dufresne, P., Goldstein, R. and Martin, S. (2001). 信用利差变化的决定因素. 《金融学杂志》 56, 2177–2207.
+- Connor, G. and Suurlaht, A. (2013). 欧元区的动态股票市场协方差. 《国际货币与金融杂志》 37, 353–370.
+- Conrad, J. and Kaul, G. (1998). 交易策略的解剖. 《金融研究评论》 11, 489–519.
+- Constantinides, G.M. (1982). 具有异质消费者且无需求聚合的跨期资产定价. 《商业杂志》 55, 253–267.
+- Constantinides, G.M. (1984). 个人税收下的最优股票交易：对价格和异常一月回报的影响. 《金融经济学杂志》 13, 65–89.
+- Constantinides, G.M. and Duffie, D. (1996). 具有异质消费者的资产定价. 《政治经济学杂志》 104, 219–240.
+- Constantinides, G.M. and Ingersoll, J.E. Jr. (1984). 个人税收下的最优债券交易. 《金融经济学杂志》 13, 299–335.
+- Cooper, M.J., Gutierrez, R.C. and Hameed, A. (2004). 市场状态与动量. 《金融学杂志》 59, 1345–1365.
+- Copeland, T.E., Weston, J.F. and Shastri, K. (2005). 《金融理论与公司政策》. Pearson Addison Wesley.
+- Corder, G.W. and Foreman, D.I. (2009). 《非统计学家的非参数统计：逐步方法》. Hoboken, Wiley.
+- Corgnet, B., Desantis, M. and Porter, D. (2018). 什么造就了优秀的交易员？直觉与反思对交易员绩效的作用. 《金融学杂志》 73, 1113–1137.

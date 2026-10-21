@@ -1,0 +1,9 @@
+# Predicted versus actual bias
+
+![](bbox=[0.12, 0.16, 0.85, 0.48])
+
+Figure 98.2: Relative bias as a function of the length of the time-series regression.
+
+Notes: For different lengths of the time-series regression (first pass), the true relative bias (E(γ̂₁)/γ₁ − 1) of the OLS slope estimator (determined as a simulation average and represented in the figure by diamonds) is compared to our prediction calculated using equation (98.12) (bottom line) and to a value that would be predicted if one neglects correlations of the measurement errors (top line). As the length of the time-series regression increases, the measurement errors and the relative bias diminish. For any length of the time-series regression, neglecting the correlations of the measurement errors would lead to a far too large prediction of the actual bias.
+
+average.¹² Good agreement is found for T ≳ 120 corresponding to about 10 or more years of empirical return data. For T = 120, the cross-sectional variation of the measurement errors (98.9) and the Rayleigh quotient (98.11) are σ_u = 0.0511 (resulting in σ_u²/σ_β² = 0.1295) and W_Σ^{1/2} = 0.1403 (resulting in 2W_Σ/((N−1)σ_β²) = 0.0814), i.e., even though of lower order in 1/(N−1) for the chosen set of parameters, the first and second term of (12) are of similar size. The second term leads to a considerable reduction of the bias introduced by the first term. To illustrate the influence of the covariance structure of the errors on the bias, we calculate the value of the bias using the formula of Richardson and Wu (98.16), which neglects correlations altogether. In addition, in their formula, the variances of all error terms σ_i² are identical. We choose the variance to be equal to the average of the idiosyncratic variances

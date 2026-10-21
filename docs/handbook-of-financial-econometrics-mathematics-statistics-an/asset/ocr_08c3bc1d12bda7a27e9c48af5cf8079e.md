@@ -1,0 +1,13 @@
+Fifth, banks can also use big data and AI algorithms to increase productivity and enhance internal controls through human resources (HR) management. HR managers can use big data and AI to analyze how hiring criteria relate to employee performance. Additionally, HR can analyze social media and use AI techniques such as sentimental analysis and facial recognition to monitor the mood of employees and analyze informal networks among coworkers.
+
+# 117.4 Implications for Regulatory Compliance and Supervision
+
+After the financial crisis, authorities gradually tightened their supervision of financial institutions, and the cost of complying with regulatory decrees increased. In order to meet regulatory requirements, financial institutions invested more workforce and resources into compliance-related jobs, including legal support, regulatory reporting, business impact analysis, process improvement and implementation, and others. Globally, banking industry’s cost to meet compliance requirements reached $100 billion (Zabelina et al., 2018). Some large international banks, which must meet regulatory requirements for multinational operations, invest more than $1 billion annually for compliance and internal control.12 At the same time, compliance regulation continues to change. The text of the annually updated terms related to financial compliance and supervision totals 300 million pages, illustrating that financial institutions face enormous regulatory compliance pressures.13
+
+Furthermore, in recent years, governments have imposed heavier fines on banks for not meeting regulatory requirements. Consequently, banks incurred significant operating expenses due to failure to comply with laws and regulations. For example, Deutsche Bank paid $7.2 billion to settle a lawsuit in 2016 related to mortgage-backed securities.14 It was also fined $787 million
+
+12 For example, JP Morgan Chase pointed out that from 2012 to 2014, to respond to government regulations, 16,000 employees were added, which amounted to 6% of the total workforce; the annual cost expenditure increased by $2 billion, which was about 10% of annual operating profit. See Douglas J. Elliott, “$2 Billion Later: Policy Implications of JP Morgan Chase’s Trading Loss,” and Brookings, May 14, 2012, https://www.brookings.edu/research/2-billion-later-policy-implications-of-jp-morgan-chases-trading-loss/.
+
+13 Elena Mesropyan, “Application of AI in RegTech,” Medic, November 11, 2016, https://gomedici.com/application-of-ai-in-regtech/.
+
+14 Karen Freifeld, Arno Schuetze, and Kathrin Jones, “Deutsche Bank agrees to $7.2 billion mortgage settlement with US,” Reuters, December 22, 2016, https://www.reuters.com/article/us-deutsche-bank-mortgages-settlement-idUSKBN14C041.

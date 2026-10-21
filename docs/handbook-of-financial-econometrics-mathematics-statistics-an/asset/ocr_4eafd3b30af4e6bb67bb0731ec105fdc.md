@@ -1,0 +1,13 @@
+regression (121), Total risk (79), Trading strategies (108), Trading strategy portfolio (43), Trading volume (87, 95), Trading-day component (26), Transaction cost (128), Transaction costs (104), Transfer function model (6), Transfer pricing (54), Tree model (15), Trend component (26), Trend following, business & market cycle (43), Trend–cycle component (26), Treynor and Jensen measures (68), Treynor performance measure (82), Two-pass regression (98), Two-period OPM (84), Two stage least square method (116), US (21), Unbiased estimation (74), Uncertainty (2), Unrelated mergers (116), Unscented Kalman filter (64), Upper bound (7), User adoption (71), Utility function (80), Utility theory (80), Validity and reliability (16), Value at Risk (72), Value at risk model (104), Value-at-risk (58), Variance-covariance approach (38), Variance-gamma process (70), Vectors (77), Vega (ν) (86), VG NGARCH model (70), VIX (40), Volatility clustering (14), Warren and Shelton model (90), Wavelet coherence (36), Wavelet correlation (36), Wavelet multiple cross-correlation (36), X-11 model (26), ZLB (Zero lower bound) (61), 2SLS (5), and 3SLS (5).
+
+# 1.8 Summary and Concluding Remarks
+
+This chapter has discussed important financial econometrics and statistics which are used in finance and accounting research. We discussed the regression models and topics related to financial econometrics, including single equation regression models, simultaneous equation models, panel data analysis, alternative methods to deal with measurement error, and time-series analysis. We also introduced topics related to financial statistics, including statistical distributions, principle components and factor analysis, non-parametric and semi-parametric analyses, and cluster analysis.
+
+In addition, financial econometrics, mathematics, and statistics are important tools to conduct research in finance and accounting areas. We briefly introduced applications of econometrics, mathematics, and statistics models in finance and accounting research. Research topics include asset pricing, corporate finance, financial institution, investment and portfolio management, option pricing model, futures and hedging, mutual fund, credit risk modeling, and others.
+
+# Bibliography
+
+Aitchison, J. and Brown, J. A. C. (1973). Lognormal Distribution, with Special Reference to Its Uses in Economics, Cambridge University Press.
+
+Ait-Sahalia, Y. and Lo, A. W. (2000). Non-parametric Risk Management and Implied Risk Aversion. Journal of Econometrics, 94, 9–51.

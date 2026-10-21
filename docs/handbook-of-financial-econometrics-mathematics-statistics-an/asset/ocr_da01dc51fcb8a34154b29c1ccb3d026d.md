@@ -1,0 +1,15 @@
+Black et al. observed that cross-sectional tests may not provide direct validation of the CAPM, and they proceeded to construct a time-series test, which they considered more powerful. Their results lead them to assert that the usual form of the CAPM does not provide an accurate description of the structure of security returns. Their results indicate that βs are non-zero and are directly related to the risk level. Low-beta securities earn significantly more on average than predicted by the model, and high-risk securities earn significantly less on average than predicted by the model. They go on to argue for a two-factor model,
+
+$R_{it} = (1 - \beta_i)R_{zt} + \beta_i(R_{mt}) + e_{it}.\quad (79A.3)$
+
+If $E(R_z) = 0$, then the S-L-M CAPM would be consistent with this model. However, the cross-sectional term for the intercept is a constant and not equal to zero. They then proceed to look for a rationale of this finding in Black’s zero-beta model.
+
+Fama and MacBeth (1973) tested (1) a linear relationship between return on the portfolio and the portfolio’s beta and (2) whether unsystematic risk has an effect between portfolio return and a risk measure in addition to beta. Their basic estimation equation is
+
+$\tilde{R}_{it} = \tilde{\gamma}_{0t} + \tilde{\gamma}_{1t}\bar{\beta}_i + \tilde{\gamma}_{2t}\bar{\beta}_i^2 + \tilde{\gamma}_{3t}\bar{\sigma}_i^2(\mu) + \tilde{e}_{it},\quad (79A.4)$
+
+in which $\tilde{\gamma}_{0t}$ is the intercept term, $\bar{\beta}_i$ is the average of the $\beta_i$ for all individual securities in portfolio $i$, and $\bar{\sigma}_i(\mu)$ is the average of the residual standard deviations from all securities in portfolio $j$.
+
+Although they found that there are variables in addition to the portfolio beta that systematically affect period-by-period returns (which are apparently related to the average squared beta of the portfolio and the risk factor other than beta), they dismissed the latter as “almost surely proxies,” since “there is no rationale for their presence in our stochastic risk-return model.” Their results seem to suggest that the S-L-M model does not hold. The intercept factor, $\tilde{\gamma}_{0t}$, is generally greater than $R_F$, and $\tilde{\gamma}_{1t}$ is substantially less than $\bar{R}_m - \bar{R}_f$. This seems to indicate that the zero-beta model is more consistent with the data.
+
+Blume and Husick (1973) found empirical evidence to indicate that historical rates of return may sometimes foreshadow changes in future betas and that stocks with higher transaction costs should yield somewhat higher gross expected returns. Their data indicate that beta is not stationary over time and that it does change over time as a function of price. Transaction-cost effects appear less important than the informational effects of price in

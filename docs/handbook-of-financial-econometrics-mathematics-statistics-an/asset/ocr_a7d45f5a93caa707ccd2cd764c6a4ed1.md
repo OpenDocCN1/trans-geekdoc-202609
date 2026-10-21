@@ -1,0 +1,11 @@
+Keywords: Management earnings forecasts, Analysts’ information, Uncertainty, Commonality.
+
+# Chapter 3: A Potential Benefit of Increasing Book–Tax Conformity: Evidence from the Reduction in Audit Fees
+
+Our study explores a possible benefit of conforming book income to taxable income. We expect that increased book–tax conformity can reduce audit fees by simplifying tax accruals and increasing tax authorities’ monitoring, which reduce audit workload and audit risk, respectively. Consistent with our expectations, we find that a higher country level of required book–tax conformity leads to lower audit fees. Moreover, firm-level book–tax differences are positively associated with audit fees. We also find that the negative association between country level of required book–tax conformity and audit fees is mitigated among firms with larger book–tax differences. Our findings are robust to including country-level legal investor protection or other extra-legal institutions. Overall, our results suggest that one benefit of increasing book–tax conformity is the reduction in audit fees. In the appendix we extend our main empirical test by including firm fixed effects and clustering standard errors of regression coefficients, and we find that these do not change our conclusions.
+
+Keywords: Audit fee, Book-tax conformity, Book-tax difference, Legal institution, Extra-legal institution.
+
+# Chapter 4: Gold in Portfolio: A Long-Term or Short-Term Diversifier?
+
+The purpose of this chapter is to evaluate the role played by gold in a diversified portfolio comprised of bond and stock. The continuous wavelet transform analysis is applied to capture the correlation features between gold and other risky assets at specific time horizons to determine whether gold should be included in a diversified portfolio. This chapter uses the US stock, bond, and gold data from 1990 until 2013 to investigate the optimal weights of gold obtained from the minimum variance portfolio. Empirical findings suggest that little evidences support that gold acts an efficient diversifier in traditional stock and bond portfolio. Gold typically has been a long-term diversifier in the traditional portfolio comprised of bond and stock only before the early 2000s and acts as a short-term diversifier in times of

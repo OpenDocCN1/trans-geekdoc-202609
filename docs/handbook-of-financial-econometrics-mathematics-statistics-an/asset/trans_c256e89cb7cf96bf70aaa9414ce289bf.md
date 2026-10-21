@@ -1,0 +1,66 @@
+
+## 参考文献索引
+
+- Bali, T. G. and Cakici, N. (2004). 风险价值与预期股票回报. 金融分析师杂志, 60, 57–73.
+- Bali, T. G. and Cakici, N. (2010). 国际股票市场中的世界市场风险、国家特定风险与预期回报. 银行与金融杂志, 34, 1152–1165.
+- Bali, T. G. and Peng, L. (2006). 是否存在风险-回报权衡？来自高频数据的证据. 应用计量经济学杂志, 21, 1169–1198.
+- Bali, T. G., Demirtas, K. and Levy, H. (2009). 下行风险与预期回报之间是否存在跨期关系？ 金融与定量分析杂志, 44, 883–909.
+- Bali, T. G., Cakici, N. and Whitelaw, R. (2011). 达到极限：股票作为彩票及预期回报的横截面. 金融经济学杂志, 99, 427–446.
+- Ball, R. and Brown, P. (1996). 股票市场对盈利信息的利用有多天真？ 会计与经济学杂志, 21(3), 319–337.
+- Ball, R. and Brown, P. (1968). 会计收益数字的实证评估. 会计研究杂志, 6(2), 159–178.
+- Ball, R. (1978). 证券收益率与其替代指标关系中的异常现象. 金融经济学杂志, 6(2–3), 103–126.
+- Ball, R., Kothari, S. P. and Watts, R. L. (1993). 盈利变化与股票回报关系之经济决定因素. 会计评论, 68(3), 622–638.
+- Bandi, F. M. and Perron, B. (2006). 长期记忆与隐含波动率和已实现波动率之间的关系. 金融计量经济学杂志, 4, 636–670.
+- Banerjee, A. and Urga, G. (2005). 结构性断点、长期记忆与股票市场波动性的建模：概述. 计量经济学杂志, 129, 1–34.
+- Banker, R. D. and Datar, S. M. (1989). 敏感性、精确性与信号的线性聚合. 会计研究杂志, 27(1), 21–39.
+- Banko, J. C. and Zhou, L. (2010). 可赎回债券再探. 财务管理, 39(2), 613–641.
+- Bansal, R., Coleman, W. J. and Lundblad, C. T. (2011). 内生流动性供给. 工作论文.
+- Banz, R. W. (1981). 回报与普通股市场价值之间的关系. 金融经济学杂志, 9, 3–18.
+- Baptista, G. and Oliveira, T. A. (2016). 权重与移动银行接受度研究的荟萃分析. 人机行为中的计算机, 63, 480–489.
+- Baquero, G., Horst, J. T. and Verbeek, M. (2005). 存活、前瞻偏差与对冲基金业绩的持续性. 金融与定量分析杂志, 40, 493–517.
+- Baranchuk, N., MacDonald, G. and Yang, J. (2011). 超级经理的经济学. 金融研究评论, 24, 3323–3368.
+- Barari, M. (2004). 拉丁美洲的股权市场一体化：时变一体化指数分析. 国际金融分析评论, 13(5), 649–668.
+- Barber, B., Lehavy, R. and Trueman, B. (2007). 投资银行与独立研究机构股票推荐业绩比较. 金融经济学杂志, 85, 490–517.
+- Barber, B., Lehavy, R., McNichols, M. and Trueman, B. (2001). 投资者能否从先知中获利？证券分析师推荐与股票回报. 金融学杂志, 56, 531–563.
+- Barberis, N. (2012). 赌场赌博模型. 管理科学, 58, 35–51.
+- Barberis, N. (2013). 经济学中前景理论的三十年：回顾与评估. 经济展望杂志, 27, 173–196.
+- Barberis, N. and Huang, M. (2008). 股票作为彩票：概率加权对证券价格的影响. 美国经济评论, 98, 2066–2100.
+- Barberis, N. and Xiong, W. (2009). 什么驱动处置效应？对长期偏好基础解释的分析. 金融学杂志, 64, 751–784.
+- Barberis, N. and Xiong, W. (2012). 实现效用. 金融经济学杂志, 104, 254–271.
+- Barberis, N., Huang, M. and Santos, T. (2001). 前景理论与资产价格. 经济季刊, 116, 1–53.
+- Barberis, N., Huang, M. and Thaler, R. (2006). 个体偏好、货币赌博与股票市场参与：窄框架的案例. 美国经济评论, 96, 1069–1090.
+- Bardgett, C., Gourier, E. and Leippold, M. (2018). 从标普500和VIX市场推断波动率动态与风险溢价. 金融经济学杂志, 即将出版.
+- Barndorff-Nielsen, O. E. and Shephard, N. (2001). 非高斯Ornstein-Uhlenbeck模型及其在金融经济学中的若干应用. 皇家统计学会杂志：B辑（统计方法）, 63, 167–241.
+- Barndorff-Nielsen, O. E. and Shephard, N. (2002a). 已实现波动率的计量经济学分析及其在估计随机波动率模型中的应用. 皇家统计学会杂志：B辑（统计方法）, 64, 253–280.
+- Barndorff-Nielsen, O. E. and Shephard, N. (2002b). 利用已实现方差估计二次变差. 应用计量经济学杂志, 17, 457–477.
+- Barndorff-Nielsen, O. E. and Shephard, N. (2003). 已实现幂变差与随机波动率模型. 伯努利, 9, 243–265.
+- Barndorff-Nielsen, O. E. and Shephard, N. (2004). 随机波动率与跳跃下的幂变差与双幂变差. 金融计量经济学杂志, 2(1), 1–37.
+- Barndorff-Nielsen, O. E. and Shephard, N. (2004a). 随机波动率与跳跃下的幂变差与双幂变差. 金融计量经济学杂志, 2, 1–37.
+- Barndorff-Nielsen, O. E. and Shephard, N. (2006a). 利用双幂变差检验金融经济学中跳跃的计量经济学. 金融计量经济学杂志, 4, 1–30.
+- Barndorff-Nielsen, O. E. and Shephard, N. (2006b). 跳跃对回报和已实现方差的影响：时变Lévy过程的计量经济学分析. 计量经济学杂志, 131, 217–252.
+- Barndorff-Nielsen, O. E. and Shephard, N. (2006c). 幂变差与时间变换. 概率论及其应用, 50, 1–15.
+- Barndorff-Nielsen, O. E., Graversen, S. E. and Shephard, N. (2004b). 幂变差与随机波动率：综述与若干新结果. 应用概率杂志, 41, 133–143.
+- Barndorff-Nielsen, O. E., Graversen, S. E., Jacod, J., Podolskij, M. and Shephard, N. (2006). 连续半鞅的已实现幂变差与双幂变差的中心极限定理. 收录于《从随机演算到数理金融》, 33–68. 斯普林格, 柏林, 海德堡.
+- Barndorff-Nielsen, O. E., Shephard, N. and Winkel, M. (2006). 存在跳跃时的多幂变差极限定理. 随机过程及其应用, 116, 796–806.
+- Barndorff-Nielsen, O. E., Hansen, P., Lunde, A. and Shephard, N. (2008). 设计已实现核以在存在噪声的情况下衡量股票价格的后验变差. *计量经济学*, 76, 1481–1536.
+- Barnett, V. D. (1967). 当两个残差方差已知时关于线性结构关系的注记. 生物计量学, 54, 670–672.
+- Barras, L., Scaillet, O. and Wermers, R. (2010). 共同基金业绩中的错误发现：估计阿尔法中的运气度量. 金融学杂志, 65, 179–216.
+- Barro, J. and Barro, R. (1990). 银行CEO的薪酬、业绩与离职. 劳动经济学杂志, 8(4), 448–481.
+- Bartov, E., Radhakrishnan, S. and Krinsky, I. (2000). 投资者成熟度与盈利公告后股票回报模式. 会计评论, 75(1), 43–63.
+- Bartram, S. M. and Wang, Y. H. (2015). 欧洲金融市场依赖性：行业分析. 银行与金融杂志, 59, 146–163.
+- Bartram, S. M., Taylor, S. J. and Wang, Y. H. (2007). 欧元与欧洲金融市场依赖性. 银行与金融杂志, 31(5), 1461–1481.
+- Basel Committee on Banking Supervision (1999). 新资本充足框架. 国际清算银行, 巴塞尔.
+- Basel Committee on Banking Supervision (1999). 信用风险建模：当前实践与应用. 国际清算银行.
+- Basel Committee on Banking Supervision (2001). 风险管理实践与监管资本：跨部门比较. 国际清算银行.
+- Basel Committee on Banking Supervision (2005). 内部评级系统验证研究. 国际清算银行, 巴塞尔.
+- Basel Committee on Banking Supervision (2006). 资本计量与资本标准的国际趋同：修订框架. 国际清算银行.
+- Basel Committee on Banking Supervision (2010). 风险聚合建模的发展. 国际清算银行.
+- Baskin, J. (1987). 垄断权力博弈中的企业流动性. 经济与统计评论, 69(2), 312–319.
+- Basmann, R. L. (1960). 广义经典线性可识别性检验统计量的有限样本分布. 美国统计学会杂志, 55, 650–59.
+- Basu, S. (1977). 普通股投资业绩与其市盈率的关系：市场效率检验. 金融学杂志, 32, 663–682.
+- Bates, D. (1996). 跳跃与随机波动率：德国马克期权隐含的汇率过程. 金融研究评论, 9(1), 69–107.
+- Bates, D. (1996). 跳跃与随机波动率：德国马克期权隐含的汇率过程. 金融研究评论, 9, 69–108.
+- Bates, D. S. (1991). 87年崩盘：是否可预期？来自期权市场的证据. 金融学杂志, 46(3), 1009–1044.
+- Bates, D. S. (1996). 跳跃与随机波动率：德国马克期权隐含的汇率过程. 金融研究评论, 9(1), 69–107.
+- Bates, D. S. (1996a). 期权定价模型检验. 收录于 G. S. Maddala and C. R. Rao (eds.), 《统计学手册》, 第15卷：金融统计方法. 阿姆斯特丹: 北荷兰出版社, pp. 567–611.
+- Bates, D. S. (1996b). 跳跃与随机波动率：德国马克期权隐含的汇率过程. 金融研究评论, 9, 69–108.

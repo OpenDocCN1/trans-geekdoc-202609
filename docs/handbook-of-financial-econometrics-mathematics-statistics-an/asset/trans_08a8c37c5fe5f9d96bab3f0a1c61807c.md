@@ -1,0 +1,65 @@
+
+- Black, F., Jensen, M. C. and Scholes, M. (1972). 资本资产定价模型：一些实证检验。 资本市场理论研究, New York: Praeger, pp. 79–121.
+- Black, F., Jensen, M. C. and Scholes, M. (1972). 资本资产定价模型：一些实证结果。 载于 M. C. Jensen 编辑, 资本市场理论研究。 New York: Praeger Publishers.
+- Blackburn, D. W. and Chidambaran, N. K. (2011). 世界股票市场共同运动是否正在变化？ 工作论文。 可在 SSRN 获取： http://dx.doi.org/10.2139/ssrn.2024770.
+- Blake, D., Caulfield, T., Ioannidis, C. and Tonks, I. (2014). 使用面板自助法评估共同基金绩效的改进推断。 计量经济学杂志, 183, 202–210.
+- Blake, D., Caulfield, T., Ioannidis, C. and Tonks, I. (2017). 关于共同基金绩效的新证据：替代自助方法的比较。 金融与定量分析杂志, 52, 1279–1299.
+- Blau, P. M. (1977). 不平等与异质性：社会结构的一种原始理论。 New York: Free Press.
+- Blaylock, B., Gaerke, F. and Shevlin, T. (2017). 账税一致性与资本结构。 会计研究评论, (22), 903–932.
+- Blenman, L. P. and Clark, S. P. (2005). 权力交换期权。 金融研究快报, 2(2), 97–100.
+- Bliss, R. and Rosen, R. (2001). CEO薪酬与银行合并。 金融经济学杂志, 61(1), 107–138.
+- Bloch, M., Guerard, J. B., Jr., Markowitz, H. M., Todd, P. and Xu, G.-L. (1993). 美国和日本股票市场某些方面的比较。 日本与世界经济, 5, 3–26.
+- Blume, M. and Friend, I. (1973). 对资本资产定价模型的新审视。 金融学杂志, 28, 19–33.
+- Blume, M. E. and Friend, I. (1973). 对资本资产定价模型的新审视。 金融学杂志, 28, 19–33.
+- Blundell, R., Bond, S., Devereux, M. and Schiantarelli, F. (1992). 投资与托宾q：来自公司面板数据的证据。 计量经济学杂志, 51, 233–257.
+- Bodurtha, J. N. and Courtadon, G. R. (1987). 外汇期权市场上美式期权定价模型的检验。 金融与定量分析杂志, 22, 153–168.
+- Bogdanova, B. (2014). 如果新的俄罗斯病毒爆发，全球金融稳定是否受到威胁？ 载于第三届伊万卡·彼特科娃博士年度学术奖论文集, http://www.epi-bg.org/images/Award_IP/boryana_bogdanova.epi2014.eng.pdf.
+- Bollen, J., Mao, H. and Zeng, X.-J. (2010). Twitter情绪预测股市。 http://www.ccs.neu.edu/home/amislove/twittermood/.
+- Bollerslev, T. and Mikkelsen, H. O. (1996). 股票市场波动率中长期记忆的建模与定价。 计量经济学杂志, 73, 151–184.
+- Bollerslev, T. and Zhou, H. (2006). 波动率之谜：衡量收益-波动率回归的简单框架。 计量经济学杂志, 131, 123–150.
+- Bollerslev, T., Chou, R. and Kroner, K. (1992). 金融中的ARCH建模：理论与经验证据综述。 计量经济学杂志, 52(1–2), 5–60.
+- Bollerslev, T., Engle, R. E. and Wooldridge, J. M. (1988). 具有时变协方差的资本资产定价模型。 政治经济学杂志, 96(1), 116–131.
+- Bollerslev, T., Law, T. H. and Tauchen, G. (2008). 风险、跳跃与分散化。 计量经济学杂志, 144, 234–256.
+- Bollerslev, T., Litvinova, J. and Tauchen, G. (2006). 高频数据中的杠杆与波动率反馈效应。 金融计量经济学杂志, 4, 353–384.
+- Bollerslev, T., Osterrieder, D., Sizova, N. and Tauchen, G. (2013). 风险与收益：长期关系、分数量协整与收益可预测性。 金融经济学杂志, 108, 409–424.
+- Boni, L. and Womack, K. L. (2006). 分析师、行业与价格动量。 金融与定量分析杂志, 41, 85–109.
+- Bontis, N., Booker, L. D. and Serenko, A. (2007). 银行行业中组织声誉对客户忠诚度和服务推荐的中介效应。 管理决策, 45(9), 1426–1445.
+- Borkovec, M., Domowitz, I., Kiernan, B. and Serbin, V. (2010). 投资组合优化与交易成本。 投资杂志, 19, 63–76.
+- Borkowski, S. C. (1990). 影响转移定价的环境和组织因素：综述。 管理会计研究杂志, 78–99.
+- Boudoukh, J., Richardson, M. and Whitelaw, R. (2008). 长期可预测性的神话。 金融研究评论, 21, 1577–1605.
+- Bolder, D. (2001). 仿射期限结构模型：理论与实现。 加拿大银行工作论文。
+- Bowen, R. M., Daley, L. A. and Huber, C. C., Jr. (1982). 行业间杠杆差异存在性及其决定因素的证据。 金融管理, 4, 10–20.
+- Box-Steffensmeier, J. M. and De Boef, S. (2006). 重复事件生存模型：条件脆弱性模型。 医学统计学, 25, 3518–3533.
+- Boyarchenko, S. I. (2000). Lévy过程下的内生违约。 University of Texas, Austin 工作论文。
+- Boyarchenko, S. I. and Levendorskiĭ, S. (2002a). Lévy过程下的永久美式期权。 SIAM控制与优化杂志 40, 1663–1696.
+- Boyarchenko, S. I. and Levendorskiĭ, S. (2002b). 指数型正则 Lévy 过程下的障碍期权与触及退出期权。 应用概率年刊 12, 1261–1298.
+- Boyce, W. M. and Kalotay, A. J. (1979). 税收差异与可赎回债券。 金融学杂志, 34(4), 825–838.
+- Boyer, B., Mitton, T. and Vorkink, K. (2009). 预期特有偏度。 金融研究评论, 23, 169–202.
+- Boyle, P. P. (1986). 使用三跳过程的期权估值。 国际期权杂志, 3, 7–12.
+- Boyle, P. P. (1988). 具有两个状态变量的期权定价的格子框架。 金融与定量分析杂志, 35, 1–12.
+- Boyle, P. P. and Tian, Y. (1999). CEV过程下回溯期权与障碍期权的定价。 金融与定量分析杂志, 34(2), 241–264. (勘误：Boyle, P., Tian, Y. and Imai, J. CEV过程下回溯期权的勘误。 JFQA 网站 at http://depts.washington.edu/jfqa/hold/342BoyleCrx1.pdf.)
+- Boyle, P. P. and Ananthanarayanan, A. L. (1977). 期权估值模型中方差估计的影响。 金融经济学杂志, 5, 375–387.
+- Brédart, X. (2014). 使用神经网络的破产预测模型。 会计与金融研究, 3(2), 124–128.
+- Bradley, D., Clarke, J., Lee, S. and Ornthanalai, C. (2014). 分析师建议是否具有信息性？时间戳延迟影响的盘中证据。 金融学杂志, 69, 645–673.
+- Bradley, D., Clarke, J., Lee, S. and Ornthanalai, C. (2014). 分析师建议是否具有信息性？时间戳延迟影响的盘中证据。 金融学杂志, 69, 645–673.
+- Bradley, D., Gokkaya, S. and Liu, X. (2017). 在分析师成为分析师之前：行业经验重要吗？ 金融学杂志, 72, 751–792.
+- Bradley, D., Gokkaya, S. and Liu, X. I. (2016). 在分析师成为分析师之前：行业经验重要吗？ 金融学杂志, 72, 751–792.
+- Bradley, M., Jarrell, G. A. and Kim, E. (1984). 关于最优资本结构存在性的研究：理论与证据。 金融学杂志, 39(3), 857–878.
+- Bradley, P. S. and Mangasarian, O. L. (2000). 通过线性支持向量机进行大规模数据判别。 优化方法与软件, 13(1), 1–10.
+- Brandt, M. W. (2010). 投资组合选择问题。 载于 Y. Ait-Sahalia and L. P. Hansen 编辑, 金融计量经济学手册：工具与技术, 269–336.
+- Brealey, R. and Myers, S. (1996). 公司理财原理, 第5版, McGraw-Hill.
+- Brechmann, E., Czado, C. and Paterlini, S. (2014). 操作风险损失的灵活依赖建模及其对总资本要求的影响。 银行与金融杂志, 40, 271–285.
+- Breeden, D. T. and Litzenberger, R. H. (1978). 期权价格中隐含的状态或有索取权价格。 商务杂志, 621–651.
+- Breen, W., Glosten, L. and Jagannathan, R. (1989). 股票指数收益可预测变化的经济意义。 金融学杂志, 44, 1177–1189.
+- Brennan, M. and Schwartz, E. (1978). 或有索取权定价中出现的有限差分法与跳跃过程：综合。 金融与定量分析杂志, 13, 461–474.
+- Brennan, M. and Schwartz, E. (1979). 债券定价的连续时间方法。 银行与金融杂志, 3, 133–155.
+- Brennan, M. J. (1970). 税收、市场估值与公司财务政策。 国家税务杂志, 23, 417–427.
+- Brennan, M. J. (1971). 借贷利率分歧的资本市场均衡。 金融与定量分析杂志, 7, 1197–1205.
+- Brennan, M. J. (1979). 离散时间模型中或有索取权的定价。 金融学杂志, 34, 53–68.
+- Brennan, M. J. and Kraus, A. (1987). 非对称信息下的有效融资。 金融学杂志, 42, 1225–1243.
+- Brennan, M. J. and Schwartz, E. S. (1977). 可转换债券：赎回与转换的估值与最优策略。 金融学杂志, 32, 1699–1716.
+- Brennan, M. J. and Schwartz, E. S. (1980). 可转换债券分析。 金融与定量分析杂志, 15(4), 907–929.
+- Brennan, M. J. and Schwartz, E. S. (1988). 可转换债券的案例。 应用公司金融杂志, 1, 55–64.
+- Brennan, T. J. and Lo, A. (2011). 不可能的前沿。 管理科学, 56, 905–923.
+- Brennan, T. J. and Lo, A. W. (2010). 不可能的前沿。 管理科学, 56, 905–923.
+- Breuer, T., Jandačka, M., Rheinberger, K. and Summer, M. (2010). 市场风险和信用风险的经济资本加总是否构成保守的风险评估？ 银行与金融杂志, 34(4), 703–712.

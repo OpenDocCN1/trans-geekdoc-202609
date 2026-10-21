@@ -1,0 +1,13 @@
+of network constraint in details in Section 31.4. We use data from the previous year to calculate the structural hole measures in order to eliminate any dependence of our classification procedures on the contemporaneous excess returns. Hypothesis 1 is presented as follows:
+
+# Hypothesis 1: *Analysts who occupy more structural holes have greater ability to move stock price upon newly announced earnings forecasts.*
+
+Analysts can strategically position herself in a position of structural hole. Given that every analyst is working under a constraint of limited time and attention, a more experienced analyst can stand to benefit the most by placing herself in a position with access to more diverse and varied sets of information. Similarly, analysts work for large brokerages having more resources and support available if they need to divide their time and attention among diverse sources of information and knowledge. We therefore develop Hypothesis 2 based on the above arguments.
+
+# Hypothesis 2: *Those analysts occupying more structural holes are more likely to be experienced and/or work at large brokerages than others.*
+
+Several methods have been proposed to rank analysts based on the accuracy, timeliness and consistency of analysts’ earnings forecasts. If all of these methods capture similar information on analysts’ (unobservable) capability to process information as that of network structure hole, analysts ranking by these methods will be positive correlated with the ranking based on structural hole. We calculate the accuracy and timeliness of analyst earnings forecasts following Cooper et al. (2001) and classify analysts whose earnings forecast accuracy ranked in the top decile as accuracy leaders, and analysts whose timeliness test statistics significant at the 10% level as timeliness leaders. We also calculate earnings forecast consistency following Hilary and Hsu (2013), which report that analysts who release more consistent forecasts are more likely to be top-ranked analysts. Thus, we test whether analysts identified as accuracy or timeliness leaders are more likely to occupy more structural holes. In addition, we examine the correlation between analyst rankings by earnings forecast consistency and by network structural hole. Hypothesis 3 is as follows.
+
+# Hypothesis 3: *Analysts identified as accuracy or timeliness leaders occupy more structural holes than others. Rankings of analyst by earnings forecast consistency and structural hole are positively correlated.*
+
+Stickel (1992) and Hong and Kubik (2003) report that more accurate analysts are rewarded with better career outcomes, while Hilary and Hsu (2013) find

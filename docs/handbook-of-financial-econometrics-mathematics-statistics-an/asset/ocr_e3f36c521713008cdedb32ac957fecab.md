@@ -1,0 +1,7 @@
+![](bbox=[0.07, 0.12, 0.92, 0.75])
+
+Figure 36.7: Wavelet multiple cross-correlation of 11 Asian stock market returns.
+
+for investment horizons of eight to 16 days, 16-32 days, 32-64 days and 64-1287 days.
+
+Figure 36.9 examines the wavelet multiple cross-correlation of seven emergent Asian stock markets without Japan (Hong Kong, India, Indonesia, South Korea, Singapore, Taiwan and Malaysia). Figure 36.9 shows that the strongest wavelet correlation values are localized at a first time lag of zero and persist from the lowest time scale to an investment horizon of 16-32 days and with a correlation value of about 0.9. Besides, at scales six and eight, strong cross-correlation values are localized at time lags of about one and three days and appear to have asymmetry (right-skewness), indicating that the Singapore and Hong Kong stock markets lead the Asian countries for the first and the second investment horizons, respectively. At scale seven, another strong correlation value is localized at a time lag of about −3 days and appears to have asymmetry (left-skewness), indicating that South Korea lags behind the Asian countries. Figure 36.9 shows that in an investment horizon of 128-256 days, the Asian stock markets are almost perfectly positively integrated.

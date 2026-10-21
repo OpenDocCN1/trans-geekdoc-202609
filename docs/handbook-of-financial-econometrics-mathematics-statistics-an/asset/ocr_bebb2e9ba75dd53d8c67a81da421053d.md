@@ -1,0 +1,13 @@
+a strong role in explaining the cross-section of average returns on Japanese stocks. Basu (1983) shows that earnings-price ratios (E/P) help explain the cross-section of average returns on US stocks in tests that also include size and market risk. Ball (1978) argues that E/P is a catch-all proxy for unnamed factors in expected returns; E/P is likely to be higher for stocks with higher risks and expected returns, whatever may be the unnamed sources of risk.
+
+According to Fama, while the univariate relations between average return and size, leverage, E/P, and book-to-market equity are strong, in multivariate tests, the negative relation between size and average return and the positive relation between book-to-market equity and average return are robust which explain that (a) market risk does not seem to help explain the cross-section of average stock returns, and (b) the combination of size and book-to-market equity seems to absorb the roles of leverage and E/P in average stock returns. The Fama-French 3-factor model emphasizes through empirical tests that small-minus-big (Size effect) and high-minus-low (Value effect) dimensional factor effect can enhance portfolio returns.
+
+We test market and factor risk and excess return in global equity markets by using the Fama-French 3-factor model as reproduced as follows:
+
+3-Factor Model: R_a = R_rf + B_mkt × (R_mkt − R_rf) + B_smb × SMB + B_hml × HML + α, (19.2)
+
+in which R_a = Asset return, R_rf = Risk free return, B_mkt = Market loading factor (exposure to market risk, different from CAPM beta), R_mkt = Market return, B_smb = Size loading factor (the level of exposure to size risk), SMB = Small Minus Big (The size premium), B_hml = Value loading factor (the level of exposure to value risk), HML = High Minus Low (The value premium) and α = Excess return over the benchmark.
+
+# 19.3.3 Carhart’s 4-factor model
+
+In 1993, Jagadeesh and Titman finds that buying stocks that have performed well in the past and selling stocks that have performed poorly in the past generate significant positive returns over 3- to 12-month holding periods and the profitability of the relative strength strategies are not due to their systematic risk. Capturing the above findings, Carhart’s (1997) work on the persistence in stock returns of mutual funds in the US equity markets from January 1962 to December 1993 includes an additional factor to the Fama and French’s 3-factor model and forms a 4-factor model under the premise that stock returns tend to exhibit some form of positive autocorrelation in the short to medium term. Hence, investment strategies following a rule of

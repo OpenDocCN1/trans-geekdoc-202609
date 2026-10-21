@@ -1,0 +1,7 @@
+# # A Potential Benefit of Increasing Book–Tax Conformity
+
+BTC explains about a $12,862 reduction17 in audit fees.18 Compared with the unlogged grand mean of audit fees $495,714, a $12,862 reduction indicates that a 10% increase in BTC, on average, decreases mean audit fees by 2.6%. Therefore, increased book–tax conformity leads to an economically significant reduction in audit fees. Moreover, a 10% increase in Ln(BTD) explains about a $2,755 increase in audit fees, which implies that the audit fee premium of the per-dollar book–tax difference is about $0.002.19 Compared to the $0.0023 inferred by Hanlon et al. (2012),20 our result seems to suggest that the audit fee premium for book–tax differences is lower in non US countries.
+
+# ## 3.4.3 Effect of increased book–tax conformity on reducing audit effort
+
+Hypothesis H1 argues that book–tax conformity can reduce audit effort by simplifying tax accruals. To confirm our argument, we regress the absolute value of deferred tax expenses scaled by total assets on BTC. We find that the coefficient of BTC is negative and significant at the 1% level. The coefficient of BTC remains significantly negative after considering other determinants of deferred tax expenses such as firm size (LNTA), capital intensity

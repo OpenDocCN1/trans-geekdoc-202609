@@ -1,0 +1,64 @@
+
+- Newton Da Costa Jr., Marco Goulart, Cesar Cupertino, Jurandir Macedo Jr., and Sergio Da Silva (2013). 处置效应与投资者经验. Journal of Banking & Finance, 37, 1669–1675.
+- Dacey, R. and Zielonka, P. (2008). 处置效应的前景理论详细解释. The Journal of Behavioral Finance, 9(1), 43–50.
+- Dacorogna, M. M., Gencay, R., Muller, U. A., Olsen, R. B. and Pictet, O. V. (2001). 高频金融导论. Academic Press, San Diego, CA.
+- D’Agostino, R. B. (1971). 中等和大样本正态性的全方位检验. Biometrika, 58, 341–348.
+- Dahlhaus, R. (1989). 自相似过程的有效参数估计. Annals of Statistics, 17, 1749–1766.
+- Dai, T.-S. (2009). 采用阶梯树对支付离散或路径依赖股息的股票进行有效期权定价. Quantitative Finance, 9, 827–838.
+- Dai, T.-S. (2010). 二项-三项树：一种简单而高效精确的期权定价模型. Journal of Derivatives, 17, 7–24.
+- Dark, J. (2015). 采用马尔可夫转换向量误差修正 FIEGARCH 和 FIAPARCH 进行期货套期保值. Journal of Banking and Finance, 61, S269–S285.
+- Darrat, A. F. and Zhong, M. (2000). 关于随机游走假设的检验：模型比较方法. Financial Review, 35(3), 105–124.
+- Dietterich, T. G., Lathrop, R. H. and Lozano-Pérez, T. (1997). 用轴平行矩形求解多实例问题. Artificial Intelligence, 89(1), 31–71.
+- Das, D., Kannadhasan, M., Al-Yahyaee, K. H. and Yoon, S. M. (2018). 亚洲黄金市场共同运动的小波分析. Physica A: Statistical Mechanics and its Applications, 492, 192–206.
+- Daskalaki, C. and Skiadopoulos, G. (2011). 投资者是否应该将商品纳入其投资组合？新证据. Journal of Banking & Finance, 35(10), 2606–2626.
+- Davies, A. and Lahiri, K. (1995). 利用三维面板数据分析调查预测的新框架. Journal of Econometrics, 68, 205–227.
+- Davis, B. E., Caccappolo, G. C. and Chaudry, M. A. (1973). 美国电话电报公司的计量经济学规划模型. The Bell Journal of Economics and Management Science, 4, 29–56.
+- De Jong, A., De Roon, F. and Veld, C. (1997). 替代模型和套期保值策略下货币期货的样本外套期保值有效性. Journal of Futures Markets, 17, 817–837.
+- De Jong, F. and De Roon, F. A. (2005). 新兴市场中时变市场整合与预期回报. Journal of Financial Economics, 78, 583–613.
+- De la Peña, V. H., Ibragimov, R. and Jordan, S. (2004). 期权界限. Journal of Applied Probability, 41A, 145–156.
+- de Leeuw, F. (1965). 财务行为模型 in 布鲁金斯学会美国季度计量经济学模型 (James S. Duesenberry, Gary Fromm, L. R. Klein, and E. Kuh), 465–532. Chicago: Rand McNally.
+- De Roon, F. A., Nijman, T. E. and Werker, B. J. (2001). 在卖空限制和交易成本下检验均值-方差跨期：新兴市场案例. Journal of Finance, 56, 721–742.
+- De Santis, G. and Gerard, B. (1997). 具有时变风险的国际资产定价与投资组合分散化. Journal of Finance, 52, 1881–1912.
+- De Santis, G. and Gerard, B. (1998). 货币风险溢价有多大？. Journal of Financial Economics, 49, 375–412.
+- DeAngelo, L. (1981). 审计独立性、低价投标与披露监管. Journal of Accounting and Economics, 3(2), 113–27.
+- Debnath, R., Muramatsu, M. and Takahashi, H. (2005). 用于大规模问题的基于二阶锥规划的高效支持向量机学习方法. Applied Intelligence, 23(3), 219–239.
+- Dechow, P., Sloan, R. and Sweeney, A. (1995). 识别盈余管理. The Accounting Review, 70(2), 193–225.
+- DeFond, M., Raghunandan, K. and Subramanyam, K. R. (2002). 非审计服务费用是否损害审计独立性？来自持续经营审计意见的证据. Journal of Accounting Research, 40(4), 1247–74.
+- Degryse, H. and Ongena, S. (2001). 银行关系与企业盈利能力. Financial Management, 30(1), 231–266.
+- Degryse, H., Havrylchyk, O., Jurzyk, E. and Kozak, S. (2012). 新兴市场的外国银行进入、信贷配置与贷款利率：来自波兰的经验证据. Journal of Banking and Finance, 36(11), 2949–2959.
+- DeJong, D., Nankervis, J., Savin, N. E. and Whiteman, C. H. (1992). 时间序列中的整合与趋势平稳性. Econometrica, 60(1), 423–433.
+- Dell'Ariccia, G. and Marquez, R. (2004). 信息与银行信贷配置. Journal of Financial Economics, 72, 185–214.
+- Demerjian, P., Lev, B. and McVay, S. (2012). 量化管理能力：一种新度量及其效度检验. Management Science, 58, 1229–1248.
+- Demidova, L., Nikulchev, E. and Sokolova, Y. (2016). 基于改进粒子群优化的 SVM 分类器. arXiv preprint arXiv:1603.08296, 2016.
+- DeMiguel, V., Garlappi, L. and Uppal, R. (2009). 最优与朴素分散化：1/N 投资组合策略有多低效？. Review of Financial Studies, 22, 1915–1953.
+- Demirgüç-Kunt, A. and Huizinga, H. (2010). 银行活动与融资策略：对风险和回报的影响. Journal of Financial Economics, 98, 626–650.
+- DeMuth, P. (2014). 法玛和弗朗奇的新五因子模型怎么了？神秘的新因子 V. Forbes Online, (January 20). http://www.forbes.com/sites/phildemuth/2014/01/20/whats-up-with-fama-frenchs-new-5-factor-model-the-mysterious-new-factor-v.
+- Demyanov, Y. and Hasan, I. (2010). 金融危机与银行倒闭：预测方法综述. Omega, 38(5), 315–324. doi:10.1016/j.omega.2009.09.007.
+- Desai, M. (2003). 账面收益与应税收益的差异. Tax Policy and the Economy, 17, 169–206.
+- Desai, M. (2005). 企业利润的恶化. Journal of Economic Perspectives, 19, 171–192.
+- Desai, M., Dyck, I. and Zingales, L. (2007). 盗窃与税收. Journal of Financial Economics, 84, 591–623.
+- Deshmukh, A., Romine, J. and Siegel, P. (1997). 测量和组合警示信号以评估管理舞弊风险：模糊集方法. Managerial Finance, 23, 35–48.
+- Dhar, R. and Zhu, N. (2006). 近距离且个人化：处置效应的个体层面分析. Management Science, 52(5), 726–740.
+- Dhrymes, P. J. and Kurz, M. (1967). 企业投资、股息和外部融资行为. In 投资行为决定因素：大学会议，国家经济研究局经济研究委员会 (R. Ferber (ed.)). Columbia University Press, New York.
+- Diamond, D. and Dybvig, P. (1983). 银行挤兑、存款保险与流动性. Journal of Political Economy, 91, 401–419.
+- Diamond, D. W. (1991). 监督与声誉：银行贷款与直接发行债务之间的选择. Journal of Political Economy, 99, 689.
+- Dickey, D. A. and Fuller, W. A. (1979). 含单位根自回归时间序列估计量的分布. Journal of the American Statistical Association, 74, 427–431.
+- Dickey, D. A. and Fuller, W. A. (1981). 含单位根自回归时间序列的似然比统计量. Econometrica, 49, 1057–1072.
+- Diebold, F. X. and Rudebusch, G. D. (1991). 关于 Dickey-Fuller 检验对分数阶备择假设的检验功效. Economics Letters, 35(1), 155–160.
+- Diederich, J. H., Al-Ajmi, A. and Yellowlees, P. (2007). Ex-ray：数据挖掘与心理健康. Applied Soft Computing, 7, 923–928.
+- Ding, X., Zhang, Y., Liu, T. and Duan, J. (2014). 利用结构化事件预测股价走势：实证研究. In 经验自然语言处理会议 (EMNLP-14), 1415–1425.
+- Ding, X., Zhang, Y., Liu, T. and Duan, J. (2015). 事件驱动股票预测的深度学习. In 第24届国际人工智能联合会议论文集 (IJCAI-15), 2327–2333.
+- Ding, X., Zhang, Y., Liu, T. and Duan, J. (2016). 知识驱动的事件嵌入用于股票预测. In 第26届计算语言学国际会议论文集 (COLING-16), 2133–2142.
+- Ding, Z. and Engle, R. F. (1994). 大规模条件协方差矩阵建模、估计与检验. Working Paper, University of California at San Diego.
+- DirectEDGAR, Academic EDGAR+ LLC. (2015). 2008 North 55th Street, Omaha, NE 68104.
+- Disatnik, D. and Benninga, S. (2007). 收缩协方差矩阵——简单更好. Journal of Portfolio Management, 33, 56–63.
+- Djankov, S., La Porta, R., Lopez-de-Silanes, F. and Shleifer, A. (2008). 自利交易的法律与经济学. Journal of Financial Economics, 88, 430–65.
+- Docking, D., Hirshey, M. and Jones, E. (2000). 银行股价对贷款损失准备金公告的反应. Review of Quantitative Finance and Accounting, 15(3), 277–297.
+- Dong, Z. (2011). HowNet 知识库, http://www.keenage.com/, (accessed 17.01.15).
+- Donohoe, M. and Knechel, R. (2014). 企业税收激进主义是否影响审计定价？. Contemporary Accounting Research, 31, 284–308.
+- Dooley, M. P., Isard, P. and Taylor, M. P. (1995). 汇率、国家特定冲击与黄金. Applied Financial Economics, 5, 121–129.
+- Doukas, J. (1995). 过度投资、托宾 q 值与海外并购收益. Journal of Banking and Finance, 19, 1285–1303.
+- Doumpos, M., Kosmidou, K., Baourakis, G., et al. (2002). 采用多准则分层判别方法进行信用风险评估：比较分析. European Journal of Operational Research, 138(2), 392–412.
+- Drehmann, M. and Tarashev, N. (2011). 衡量相互关联银行的系统重要性. Bank for International Settlements. Working Paper No. 342.
+- Driessen, J. and Laeven, L. (2007). 国际投资组合分散化收益：来自本地视角的跨国证据. Journal of Banking and Finance, 31, 1693–1712.
+- Drzeniek, M. and Geiger, T. (2010). 促进大东盟地区的贸易. The World Economic Forum, REF: 190510.

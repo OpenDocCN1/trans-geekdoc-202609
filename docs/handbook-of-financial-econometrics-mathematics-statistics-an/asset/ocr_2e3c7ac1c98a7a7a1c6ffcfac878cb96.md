@@ -1,0 +1,13 @@
+# # Consumption-Based Asset Pricing with Prospect Theory and Habit Formation
+
+The benchmark $v_t$ plays an important role in our model. Not only because its construction contains habit formation and "catching up with the Joneses," but also because when we set $v_t = 0$, our model degenerates to a classical exponential utility model.
+
+Finally, we assume the discount factor $\delta$ to be a reasonable value, 0.99. In addition, in order to derive the unconditional expected rates of return, we need to have the initial distribution of consumption level per capita. In this chapter, the annualized consumption level per capita is assumed to follow a normal distribution whose mean and standard deviation are calculated from the quarterly data of consumption level per capita from 1959:4 to 1996:1 in the US. These values are listed at the end of Table 48.1.
+
+
+
+In the following paragraphs, we show that introducing prospect theory into the consumption-based asset pricing model is the key reason to resolve the equity premium puzzle. In addition to showing the values of $R^B_{t+1}$ and $R^s_{t+1}$ derived by our model, we also report comparative analyzes of some parameters in this section. We want to investigate how changes in the values of parameters affect the equity premium.
+
+Based on the values of the parameters in the Section 48.3.1, we can derive an equity premium of 6.43% and a risk-free real interest rate of about 0.98% in our model. This result appears much closer to the historical data. Furthermore, Table 48.2 lists the results of our model and those of the classical exponential form utility model in both dividend-claim and consumption-claim cases. When we apply classical exponential utility into the consumption-based asset pricing model, and only consider the consumption process, the equity premium would be 1.07%; however if we take both consumption and dividend processes into consideration, we obtain a 2.26% equity premium. Relatively speaking, in our prospect theory consumption-based asset pricing model, if we only consider consumption process, the equity premium would be 5.33%, and if taking both consumption and dividend processes into consideration, we obtain a 6.43% equity premium.
+
+When we compare the results, some important issues should be noted. First, with the same setting of parameters, the classical exponential utility model cannot generate a large enough value of equity premium. This result again proves the existence of the equity premium puzzle. Furthermore, the scale of the rates of return of both the riskless and risky assets seems too large in the exponential-form case. If the rates of return of both the riskless and risky assets are within the right scale, the derived equity premium may

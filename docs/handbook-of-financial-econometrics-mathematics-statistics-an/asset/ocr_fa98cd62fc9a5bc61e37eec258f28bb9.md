@@ -1,0 +1,7 @@
+to each stock is quite limited. Consequently, solely decomposing the tensor does not work very well on making very accurate predictions. To address this issue, auxiliary information from other data sources can be incorporated to assist. In this work, the additional information includes the stock correlations and the stock quantitative features, which reside in two matrices, the stock quantitative feature matrix X and the stock correlation matrix Z. The main idea of this coupled model is to propagate the information among X, Y, and Z by requiring them to share the low-rank matrices in a collective matrix and tensor factorization model. We can also illustrate this model from a multi-task learning perspective, that is, instead of conducting each stock prediction task independently, we can co-learn multiple tasks simultaneously through their commonalities and shared knowledge. In our work, the multiple tasks are connected by the stock correlations and their quantitative features. The intuition behind is that if two stocks are highly correlated, the events occurred on one stock are likely to have similar effects on the other stock.
+
+We next describe how to collaboratively factorize matrices and tensors. Specifically, given a very sparse stock movement tensor A, we try to complete A by decomposing it collaboratively with the stock quantitative feature matrix X and the stock correlation matrix Z. As shown in Figure 18.10,
+
+![](bbox=[0.08, 0.55, 0.92, 0.88])
+
+Figure 18.10: Coupled matrix and tensor factorization.

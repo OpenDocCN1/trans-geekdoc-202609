@@ -1,0 +1,8 @@
+# Table 122.1: (Continued)
+
+| Models | Literature | Results and Contributions |
+|---|---|---|
+| Skewness Effect Models | Borch (1969) | Borch (1969) contended that any system of upward sloping mean–standard deviation indifference curves can be shown to be inconsistent with the basic axiom of choice under uncertainty |
+|  | Feldstein (1969) | Feldstein (1969) showed that Tobin (1958, 1965) was incorrect in asserting that the μ–σ indifference curves of a risk-avert er are convex-downwards whenever the possible investment outcomes are assumed to follow a two-parameter probability distribution. Although Tobin’s proof is correct for normal distributions, for a number of economically interesting distributions the indifference curves are not convex shows that when more than one asset has positive variance, an analysis in terms of only μ and σ is not strictly possible unless utility functions are quadratic or the possible subjective probability distributions are severely restricted |
+|  | Jean (1971) | Jean (1971) began a general extension of the two-parameter analysis to three or more parameters |
+|  | Tsiang (1972) | Tsiang (1972) argues that although the mean–standard deviation analysis was at first introduced by Tobin to explain liquidity preference in the sense of an investment demand for cash, in his defense of it against its critics, he actually finds that it is quite incapable of doing what Tobin has expected of it |

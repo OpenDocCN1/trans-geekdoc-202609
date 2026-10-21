@@ -1,0 +1,325 @@
+
+- Macaulay, F., 3071, 3078
+- MacBeth, J., 2400, 2421, 2705, 3466, 4184, 4199
+- MacBeth, J.D., 9, 323-324, 1049, 1095, 1160-1161, 1450, 1462, 1471, 1473, 1766, 1906, 1908-1911, 3620
+- MacBeth, M., 3242, 3244
+- MacCallum, R.C., 623
+- MacDonald, G., 1721
+- MacDonald, R., 2519
+- Macedo, J., 622, 1818
+- MacGregor, J., 192
+- Maciag, J., 1489
+- Mackenzie, S.B., 623
+- MacKie-Mason, J., 1354
+- MacKinlay, A., 345
+- MacKinlay, A.C., 2526, 3243, 3621
+- MacKinlay, C., 394, 2553
+- MacKinlay, C.A., 1463, 1474
+- MacKinnon, J., 1083
+- MacKinnon, J.G., 1076
+- Macskassy, S., 736, 2369
+- Madaleno, M., 1403
+- Madan, D., 11, 68, 1274, 1292, 1524, 1536, 2439
+- Madan, D.B., 1312-1313, 2438, 2442, 2448, 2454
+- Madansky, A., 1483
+- Maddala, G., 2548
+- Maddala, G.S., 4, 1348, 1370, 1458, 3497
+- Madhavan, A., 2030
+- Madigan, D., 1672
+- Madsen, H., 4305
+- Madsen, L., 2503
+- Madura, J., 2566
+- Magdon-Ismail, M., 3567
+- Maghrebi, N., 285, 4284
+- Maginn, J.L., 2745, 2823
+- Magliolo, J., 664
+- Mahadeo, J.D., 2062
+- Maharaj, E.A., 911
+- Maher, J., 195
+- Maheu, J.M., 68, 2438-2441, 2451, 2454
+- Mahoney, J.T., 2078
+- Mai, J.S., 2661
+- Maillet, B., 3136
+- Maines, I.A., 1971
+- Majluf, N., 629-630, 636, 1351
+- Majluf, N.S., 3327
+- Makarov, I., 3767
+- Makedon, A., 1209
+- Maksimovic, V., 1835
+- Maldonado, S., 793, 798, 3548
+- Malhotra, D.K., 3556
+- Malhotra, R., 3556
+- Malik, S., 357
+- Malkiel, B., 1161, 4423
+- Maller, R.A., 2528
+- Malley, J.D., 4353
+- Malliaris, A., 1026
+- Malliaris, A.G., 434, 455, 468, 471, 1025-1026, 3604
+- Malloy, C., 1242
+- Maloney, K.J., 4419
+- Mamatzakis, E., 675
+- Mamaysky, H., 3895
+- Mamonov, S., 826
+- Manaster, S., 1049, 1311-1312, 1906, 1910, 3628-3629, 3704-3705, 3708, 3718
+- Mancini, C., 1149
+- Mandelbrot, B., 571, 1164
+- Mandhachitara, R., 2271
+- Manganelli, S., 2486
+- Mangasarian, O.L., 13, 794, 1677
+- Mankiw, N.G., 1791
+- Manlagñit, M., 951
+- Mann, C., 4418
+- Mann, S.C., 609-610
+- Manne, R., 2291
+- Manner, H., 2502
+- Manove, M., 949, 962
+- Mansharamani, V., 1223
+- Mansi, S.A., 845
+- Mansini, R., 3651
+- Mantel, N., 4099
+- Mantovani, R.G., 801
+- Manzon, G.B., 1265
+- Mao, H., 733, 1671
+- Mao, J.C.F., 2716
+- Mao, S., 4039
+- Maqbool, N., 2077
+- Marathe, N., 816
+- Marathe, V., 1154, 1174, 2693, 2773
+- Marcato, G., 1311, 1344
+- Marcet, F., 1242
+- Marcheggiano, G., 667
+- Marco, G., 2662, 4338
+- Marcucci, J., 3741
+- Marcus, A., 1987, 2744, 2822, 3052
+- Marcus, A.J., 587, 3576
+- Mardyla, G., 623
+- Maresca, G., 378
+- Margaritis, D., 1403
+- Margrabe, W., 1342
+- Marie-Andree, S., 4274
+- Marinč, M., 4036
+- Marinucci, D., 897, 906, 913
+- Mark, A., 1151–1153, 1156–1158, 1164, 1204
+- Mark, R., 1899, 2102
+- Mark, S., 1402
+- Markellos, R.N., 3612
+- Markowitz, H., 38, 524, 564, 1162, 1402, 2758, 2803, 3494, 3521, 3650, 4151, 4160
+- Markowitz, H. M., 114, 1154, 1161, 1163, 1169, 1173, 1175–1176, 1639, 1642–1645, 2714, 2729, 2745, 2832–2833
+- Marmol, F., 2137
+- Maronna, R.A., 1208
+- Marques-Ibanez, D., 2189
+- Marqués, A.I., 4351
+- Marquez, R., 949
+- Marsh, P., 1357
+- Marsh, T., 4488
+- Marshall, A., 520
+- Marshall, J.F., 201
+- Marshall, W., 4012
+- Martikainen, M., 3314, 3362
+- Martin, A.D. Jr., 2745
+- Martin, C., 7
+- Martin, I., 1537
+- Martin, J.S., 3266, 3268, 3324
+- Martin, R.D., 1208
+- Martin, S., 1992
+- Martin, V., 336
+- Martinez, A.R., 3568
+- Martinez, W.L., 3568
+- Martínez-Solano, P., 1731
+- Martins-Filho, C., 4054, 4057
+- Mason, R.L., 1207
+- Masri, H., 3139
+- Massabó, I., 3611
+- Masset, P., 1296
+- Masson, J., 920, 935, 938
+- Masulis, R., 1352, 1379
+- Masulis, R.W., 2261
+- Mathew, J., 2058
+- Mathieu, R., 667
+- Mathur, K., 327, 919, 933
+- Matkovskyy, R., 605
+- Matsumoto, D., 103, 113, 146
+- Matsunaga, S., 146
+- Matytsin, A., 1293
+- Mauer, D.C., 1823, 1841, 2142
+- Maurer, F., 2504
+- Maurer, R., 3136
+- Maurizio, T., 4050
+- Mauro, P., 277
+- Mausam, M., 734
+- Mausser, H., 3652
+- Maxwell, A.E., 2618
+- Maxwell, W.F., 855
+- May, R., 1967
+- Maydew, E., 194
+- Maydew, E.L., 194, 887
+- Mayers, D., 2142, 3032
+- Mayhew, B.W., 887
+- Mayhew, S., 1923, 3741
+- Mayora-Ibarra, O., 3915
+- Mayshar, J., 1299–1301
+- Mazuy, F., 3045
+- Mazuy, K.K., 2019
+- McAleer, M., 4212, 4226–4227
+- McAnally, M., 667
+- McCahery, J., 3884
+- McCallum, B.T., 4011
+- McCarthy, I., 645
+- McCarthy, R., 4377
+- McCauley, R., 661
+- McClelland, J.L., 735
+- McCourt, M., 4362–4363
+- McCulloch, C.E., 2445
+- McCulloch, J.H., 4416
+- McCulloch, R., 3247
+- McCurdy, T.H., 2439–2440, 2451
+- McDermott, T.K., 200
+- McDonald, B., 3955, 4195
+- McDonald, R., 637, 1050, 1355
+- McDonald, R.L., 2993
+- McDonald, R.P., 606
+- McDowell, S., 520–521, 524
+- McEnally, R., 3094
+- McEnally, R.W., 3130
+- McFadden, D.L., 1076
+- McGough, T.P., 2662, 4338
+- McGrath, C., 3896
+- McGuire, S., 192
+- McKean, H., 1066
+- McKee, G., 4473, 4494
+- McKee, T.E., 847
+- McKeown, J.C., 2664, 4340
+- McKibben, W., 1153–1155, 2706, 2773, 3023
+- McKillup, S., 3679
+- McKinney, G., 1995
+- McKinsey Global Institute, 2054
+- McLaughlin, R., 2567, 2569–2570, 2572, 2587
+- McLean, D.R., 5, 745, 2021
+- McLeavey, D., 523
+- McLeavey, D.W., 2745, 2823
+- McMillan, D.G., 3741, 4284
+- McMillen, D., 4065
+- McNeil, A., 2513
+- McNeil, A.J., 1515
+- McNelis, P., 3914
+- McNichols, M., 107
+- McNichols, M.F., 2663, 4339
+- McVay, S., 118
+- Mearian, L., 4029
+- Meckling, W.H., 1351, 1379, 2142, 2147
+- Meersman, H., 293
+- Mehl, A., 559
+- Mehra, R., 1791–1792, 1802, 1805, 1809
+- Mehran, H., 2022
+- Mehta, D.R., 2637, 2640, 4315, 4318
+- Mei, J.P., 1308
+- Meier, H., 668
+- Meier, P., 4092
+- Meiers, A., 2288
+- Meindl, P., 1730
+- Meinicke, P., 816, 1693
+- Melamed, B., 1725, 1729, 1732–1733, 1744
+- Melino, A., 3574
+- Mella-Barral, P., 1854
+- Mellish, C., 4085
+- Mello, A., 919, 933, 940
+- Mellon, W.G., 1842
+- Melnick, R., 1309
+- Menchero, J., 1174
+- Mendelson, H., 395, 397, 3321, 4123
+- Mendenhal, R.R., 1987
+- Mendenhall, W., 2745, 2823
+- Menexe, F., 2016
+- Meng, B., 2288
+- Meng, D., 3922
+- Meng, X., 2022
+- Menkveld, A.J., 3889
+- Menzly, L., 3894
+- Mercer, J.M., 221
+- Merika, A., 1434
+- Merkley, K., 1212
+- Merkwirth, C., 736
+- Mersch, B., 804, 1678
+- Merton, R., 94, 299, 305, 1584, 1945, 2324, 2706, 2851, 3859, 4150, 4152–4153, 4163–4165, 4171, 4176
+- Merton, R.C., 10, 486–487, 587, 918–920, 926, 934, 1026, 1033, 1041, 1049, 1061–1062, 1291, 1298, 1304–1305, 1311, 1319, 1322, 1333, 1768, 1848, 1851, 1856–1857, 1858, 1862, 1865–1866, 1869, 1877, 1884, 1896, 2163, 2165, 2178, 2405, 2428, 2440–2441, 2543, 2660, 3045–3046, 3574, 3576, 3582, 3628, 3711, 4284, 4345
+- Merville, L.J., 1049, 1730, 1906, 1909–1911, 1993, 1996, 3620
+- Mescall, D., 2007
+- Messersmith, J.G., 2064
+- Mestel, R., 277
+- Metrick, A., 3756, 3788
+- Metropolis, N., 2445
+- Metz, C., 4030–4031
+- Meucci, A., 565–566, 568
+- Meyarivan, T., 2102
+- Meyer, B., 4259
+- Meyer, S., 13, 2020, 2030
+- Mian, G.M., 2016
+- Michael, S.C., 2078
+- Michaely, R., 1836
+- Michaud, R., 3221
+- Michaud, R.O., 564, 567
+- Midi, H., 910
+- Mielnicki, L., 4117
+- Miffre, J., 200, 4283
+- Mignon, V., 3257, 4303
+- Mihalovic, M., 43, 824
+- Mika, S., 816, 1693
+- Mikhail, M., 104, 108
+- Mikhail, M.B., 2016, 2023
+- Mikkelsen, H.O., 2110, 2130, 2132–2135
+- Mikkelson, W.H., 1823
+- Miklo, D., 4041
+- Mikovlov, T., 705, 717–718, 721
+- Milbourn, T., 1721–1722
+- Miles, D., 661
+- Milgrom, P., 1698
+- Miller, D.L., 25, 3403
+- Miller, E., 1632
+- Miller, G.S., 107, 119, 126
+- Miller, H.D., 1039
+- Miller, J., 108
+- Miller, M., 4, 7
+- Miller, M.H., 249, 1440–1441, 1462, 1465–1468, 1829, 2252–2253, 3368–3369, 3372, 3414, 3456, 3496–3497, 3523, 4157, 4186–4187
+- Miller, R., 2570, 2587
+- Miller, R.E., 2427
+- Miller, T.W., 1600, 3629, 3705, 3715, 3718, 3720, 3722
+- Mills, J.P., 4091
+- Mills, L., 159, 176
+- Mills, L.F., 1246
+- Mills, T.C., 221
+- Milne, F., 2456
+- Min, A., 2502
+- Min, I., 1437
+- Min, J., 4050
+- Min, J.H., 827
+- Mincer, J., 2695
+- Mincheva, M., 3944
+- Miner, G., 4362
+- Ming, J., 853, 4339
+- Mingo, K.A., 11, 61, 2082–2083, 2090, 2097, 2101, 2616, 2646, 2648–2649, 2656, 2668, 4324–4325
+- Minnick, K., 3238
+- Minoiu, C., 357
+- Minutti-Meza, M., 143
+- Mislove, A., 736
+- Misra, S.P., 214
+- Mitchell, M., 1322, 4283–4284, 4288
+- Mitchell, T., 13, 3546, 3555
+- Mitra, G., 1644
+- Mitra, S., 631, 639
+- Mitra, V., 793
+- Mittelstadt, B.D., 4038
+- Mitton, T., 1818
+- Miyakoshi, T., 4209
+- Mo, H., 3758, 3792
+- Mo, P.L.L., 192
+- Modani, N., 3896
+- Modest, D., 3054
+- Modigliani, F., 4, 7, 249, 1440–1441, 1462, 1465–1467, 3368, 3414, 3456, 3496, 3523, 4157, 4186–4187
+- Mody, A., 2190
+- Moelly, S., 2573
+- Moeller, T., 4090
+- Moench, E., 2248
+- Moeschberger, M.L., 4105
+- Mohammadi, M., 279
+- Mohan, N., 3896
+- Mohanram, P.S., 80, 745, 3267, 3299, 3320, 3322, 3326, 3328–3331, 3339, 3348

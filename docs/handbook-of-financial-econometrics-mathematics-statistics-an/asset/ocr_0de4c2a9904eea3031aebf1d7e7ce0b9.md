@@ -1,0 +1,13 @@
+shorter-term options in the test (1), and the future at-the-money option price in the test (2) are known.
+
+The database includes minute-by-minute trades and quotes from April 2, 1986 to December 29, 1995, which can be divided into a pre-crash period from April 2, 1986 to October 16, 1987, and a post-crash period from June 1, 1988 to December 29, 1995. All option models are parameterized to price the observed longer-term options best, those with times-to-expiration between 135 and 225 days, and options with 45 to 134 days to expiration are classified as shorter-term options. They then calculate the implied volatilities for these two groups each day and used the median-implied volatilities as the representative daily volatility smile for a given time-to-expiration. Finally, due to the lack of liquidity for the deep out-of-the money and deep in-the-money options, they only use those with moneyness (strike price/index level ratios) between 0.79 and 1.16.
+
+Jackwerth and Rubinstein found that in the pre-crash period, all models match the performance of the Black–Scholes model. The reason is that the volatility smiles were almost flat during this period. In the post-crash period, surprisingly, the naive trader rules perform best. Furthermore, the performances of all models are very similar, except the BS and the restricted CEV model. The unrestricted CEV model is similar to other models they tested, and those better performing models all incorporate the negative correlation between index level and volatility.
+
+# 51.2.2  *Recent development and applications of the CEV process*
+
+Recent applications of the CEV process are mainly in path-dependent option and credit derivative pricing. We first summarize the recent path-dependent option pricing studies under the CEV process in Section 51.2.2.1, and then present the credit risk application of the CEV process under the unified pricing framework in Section 51.2.2.2.
+
+# 51.2.2.1  *Path-dependent option pricing*
+
+In the context of path-dependent option pricing, numerical method of the CEV process was first developed by Nelson and Ramaswamy (1990) using the binomial method. Boyle and Tian (1999) then constructed a trinomial method to approximate the CEV process and used it to price the barrier and lookback options. Boyle and Tian found that the prices of the barrier and lookback options for the CEV process deviate significantly from those for

@@ -1,0 +1,13 @@
+Taken together the results of the STR tests suggest that the most appropriate nonlinear model is L-STR.
+
+# 125.3.5.3 Smooth transition regression model
+
+The results of the estimation of the L-STR model are presented in Table 125.5. Panels A and B show the results for the Fung and Hsieh (2004) and the Agarwal et al. (2011) risk models, respectively. Consistent with theoretical expectations, the estimated parameters of the L-STR model provide evidence of the existence of a nonlinear relationship between CA returns and explanatory risk factors; this result is consistent across all eight of the CA return series. We identify two alternate risk regimes for the strategy.11 Figure 125.3 shows plots of the transition function against the transition variable (Panel A) and time (Panel B).
+
+The first regime is defined by the transition variable, z_t, being less than the threshold constant, c, i.e., the current month’s excess equity market returns are below the threshold level. This regime is characterized by statistically significant positive abnormal returns (alpha). From Figure 125.2, Panel B, it is clear that this regime coincides with incidences of market stress, with a corresponding decrease in liquidity, such as the 1994 Peso crisis, the 1998 Asian currency crisis, the 2001 Dotcom crash and the 2007-2008 financial crisis.
+
+The second risk regime is defined by the transition variable, z_t, being greater than the threshold constant, c, i.e., the current month’s excess equity market returns are above the threshold level and regime is characterized by statistically significant negative abnormal returns (alpha) and is associated with relatively benign financial markets.
+
+The relationship between the CA return series and the risk factors diverges between the two regimes. In the case of the Fung and Hsieh model, the relationship between the return series and the equity size spread, bond yield and credit spread is significantly negative for all series in the high alpha regime; while in the low alpha regime the relationship is positive in all cases and statistically significant in twenty out of twenty four. The magnitude of the relationship is also greater in the high alpha regime in all cases. A similar pattern is seen in the case of the Agarwal et al. model, where the exposure to the risk factors changes sign and increases in magnitude when moving from the low alpha to the high alpha regime.
+
+11 For estimation convergence we set c = 0.00 for the Agarwal et al. (2011) model and c = −0.02 for the Fung and Hsieh (2004) model.

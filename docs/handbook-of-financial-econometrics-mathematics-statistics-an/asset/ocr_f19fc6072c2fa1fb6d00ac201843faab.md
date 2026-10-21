@@ -1,0 +1,13 @@
+squared sum of pricing errors of the CEV model is similar to the SV models in short-term and at-the-money options, but is worse in other categories and (ii) In terms of out-of-sample performance, the mean absolute errors and percentage errors show that the CEV model performs better than the SV model in the short term and out-of-the-money categories. In addition, the CEV model is even better than the SVJ model in a few cases in these categories.
+
+The rest of this chapter is organized as follows: Section 51.2 reviews the CEV model and previous empirical studies. The recent applications under the CEV process of path-dependent option pricing as well as credit risk derivative modeling are also presented. Section 51.3 discusses the CEV model as well as alternative models to be empirically tested in our study. Section 51.4 provides the empirical testing results, and Section 51.5 presents the conclusion.
+
+# 51.2 Literature Review
+
+We first review the CEV model and previous empirical studies in Section 51.2.1. In Section 51.2.2, the recent applications under the CEV process of path-dependent option pricing as well as credit risk derivative modeling are presented.
+
+# 51.2.1 The constant elasticity variance option pricing model
+
+# 51.2.1.1 The CEV option pricing model
+
+An important issue in option pricing is to find a stock return distribution that allows returns to stock and its volatility to be correlated with each other. There is considerable empirical evidence that the returns to stocks are heteroscedastic and the volatility of stock returns changes with the stock prices. A great deal of empirical evidence indicates that stock volatility is negatively related to the stock price, and it is so-called leverage effect first discussed by Black (1976). To accommodate this leverage effect, the Constant-Elasticity-of-variance (CEV) model by Cox (1975) and Cox and Ross (1976) relaxes the constant volatility assumptions of the Black-Scholes model and treats volatility as a deterministic function — as a power function of the price of the underlying asset. The rationale for an inverse relationship between the stock price and its variance of return can be explained by some simple economic arguments. Researchers use both financial and operating leverage arguments. A decline in a leveraged firm’s stock price may lead to an increase in its debt-equity ratio, hence the riskiness of the stock increases. Even if a

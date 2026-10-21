@@ -1,0 +1,13 @@
+# Table 50.1 (Continued)
+
+| Research | Subject | Estimation method | Main input data for the estimation |
+|----------|---------|-------------------|------------------------------------|
+| Leland (2004) | Default Probability Estimation | Calibration | Moody's Corporate Bond Default Data |
+| Tarashev (2008) | Default Probability Estimation | KMV (Simplified) | Moody's Corporate Bond Default Data |
+| Suo and Wang (2009) | Default Probability Estimation | MLE | Equity and Bond Prices |
+
+Researchers have sought to overcome the second limitation imposed by the Black-Scholes model. In reality, default may happen before the maturity of the debt in many cases. The paper by Black and Cox (1976), assumed a time-dependent default barrier \(e^{-\gamma(T-t)}K\), was the first of the so-called first passage model assuming continuous monitoring from the bond covenants. These safety covenants can prevent the asset value from dropping out of some critical level by making an early default. This is an idea parallel to the down-and-out barrier call option in the context of option pricing. The first passage models specify default as the first time the firm’s asset value hits a lower barrier, therefore allowing default to take place at any time.
+
+On the other hand, Geske (1977) and Geske and Johnson (1984) argued that default cannot occur continuously without cash payment pressure. Thus, companies will only face default when they have to make coupon or principal payments to their debt owners. This assumption matches the compound option model Geske (1979) proposed and treats equity as a compound call option. Each time the company faces a coupon payment, shareholders consider if it is worthwhile to pay the coupon. Hence, the coupon is paid only if the company has a positive value to the shareholders. Otherwise, the shareholders will decide not to pay the coupon and the company goes default. The no arbitrage default condition is at the point where the company can raise new equity to pay off its debt obligation when it has a positive value. As a result, there is an implied default barrier for the asset value, and Geske (1977) proved that this barrier is identical to the market value of all debt.
+
+In the line of first passage models, later studies introduced the stochastic interest rate process and the stochastic default threshold, and the default threshold can be further classified as an exogenous or endogenous default barrier. Considering stochastic interest rate processes, Kim et al. (1993) and

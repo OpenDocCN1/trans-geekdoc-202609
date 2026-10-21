@@ -1,0 +1,11 @@
+leading to the most pronounced return drifts in the next period. This observation is consistent with the suggestion by Jegadeesh and Livnat (2006a and 2006b).
+
+Investors may execute various long-short strategies with those 25 portfolios. Those listed in the farthest right column of Panel A indicate earnings momentum returns for stocks with a particular level of SURGE, while those listed in the last row are returns on revenue momentum for stocks with a given level of SUE.12
+
+We now examine the cross-contingencies of momentum. The revenue momentum measure is 0.36% per month in the high-SUE subsample E5 and 0.43% per month in the low-SUE subsample E1. Meanwhile, the earnings momentum measure is 0.39% per month in the high-SURGE subsample R5, and 0.49% per month in the low-SURGE subsample R1. We do not observe significant variations in momentum returns across SUE or SURGE. Panel D shows similar patterns when returns to momentum portfolios are adjusted for size and B/M risk factors. All of the profits generated earnings momentum strategies or revenue momentum strategies remain significantly positive.
+
+# 94.5.2.2 Two-way sorts on revenue surprises and prior returns
+
+We apply similar sorting procedures based on the joint information of revenue surprises and prior price performance. The results for raw returns as shown in Panel B of Table 94.7 generally exhibit a pattern similar to Panel A but with the following differences. Although the future returns still rise with SURGE among the average and winner stocks, they become insensitive to SURGE for loser stocks. A closer look at the return for portfolio R1 × P1 down to the return for portfolio R5 × P1 indicates that loser portfolio returns simply do not vary much with the level of SURGE.
+
+Panel E lists risk-adjusted returns for the 5 × 5 portfolios sorted on prior returns and SURGE. A similar monotonic pattern, now in relation with SURGE as well as with prior returns, is observed for most of those abnormal returns. That is, stocks that have performed well in terms of revenue (firm fundamental information) and prior returns (firm market information)

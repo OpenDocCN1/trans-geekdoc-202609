@@ -1,0 +1,61 @@
+
+- Wang, Z. (2015). 东亚货币平稳性分析：基于单位根检验与协整检验. Japanese Journal of Monetary and Financial Economics, 3, 30–59.
+- Warfield, T. D., Wild, J. J. and Wild, K. L. (1995). 管理层持股、会计选择与盈余信息含量. Journal of Accounting and Economics, 20, 61–91.
+- Watts, R. and Zimmerman, J. (1986). 实证会计理论. Englewood Cliffs, NJ: Prentice-Hall.
+- Waymire, G. (1985). 盈余波动性与管理层自愿预测披露. Journal of Accounting Research, 23, 268–295.
+- Waymire, G. (1986). 关于管理层自愿盈余预测前后分析师预测准确性的补充证据. The Accounting Review, 61, 129–142.
+- Weber, M. and Camerer, C. (1998). 证券交易中的处置效应. Journal of Economic Behavior and Organization, 33, 167–184.
+- Wei, K. C. (1984). 套利定价理论与广义跨期资本资产定价模型之比较：理论与实证证据. 博士论文，伊利诺伊大学厄巴纳-香槟分校.
+- Wei, L. W. (2008). 基于多准则规划的数据挖掘分类模型研究及其应用. 博士论文.
+- Wei, L. W., Chen, Z. Y. and Li, J. P. (2011). 基于进化策略的自适应L_p LS-SVM. Information Sciences, 181(14), 3000–3016.
+- Wei, L. W., Chen, Z. Y., Li, J. P. and Xu, W. X. (2007). 稀疏鲁棒最小二乘支持向量机：一种线性规划形式. 见IEEE灰色系统与智能服务国际会议论文集，54–58页.
+- Wei, X. and Yang, Y. (2012). 稳健预测组合. Journal of Econometrics, 166(2), 224–236.
+- Weil, P. (1989). 股权溢价之谜与无风险利率之谜. Journal of Monetary Economics, 24, 401–421.
+- Welch, I. and Goyal, A. (2008). 股权溢价预测实证表现的综合考察. Review of Financial Studies, 21, 1455–1508.
+- Welsh, D. J. A. (1988). 模拟退火：理论与应用. Acta Applicandae Mathematicae, 12(1), 108–111.
+- Wen, D., Ma, C., Wang, G. and Wang, S. (2018). 配对交易策略特征研究：中国股票市场的网络视角. Physica A: Statistical Mechanics and its Applications, 505, 903–918.
+- White, A. (2015). 来自月球的投资者：法玛. http://www.top1000funds.com/featured-homepage-posts/2015/12/11/investors-from-the-moon-fama.
+- White, H. (1980). 异方差一致协方差矩阵估计量与异方差的直接检验. Econometrica, 48(4), 817–838.
+- Wiatowski, T. and Bölcskei, H. (2018). 用于特征提取的深度卷积神经网络的数学理论. IEEE Transactions on Information Theory, 64(3), 1845–1866.
+- Wichard, J. D., Merkwirth, C. and Ogorzałek, M. (2004). 股票市场中的相关性检测. Physica A: Statistical Mechanics and its Applications, 344(1), 308–311.
+- Widder, D. V. (1961). 高等微积分（第二版）. Prentice-Hall Inc.
+- Wong, A. S., Carducci, B. J. and White, A. J. (2006). 资产处置效应：价格模式与特定个人特征的影响. Journal of Asset Management, 7, 291–300.
+- Wong, E. and Kwong, J. (2007). 预期后悔在承诺升级中的作用. Journal of Applied Psychology, 92(2), 545–554.
+- Wooldridge, J. (2000). 估计具有对未来解释变量可能反馈的动态不可观测效应面板数据模型的框架. Economics Letters, 68, 245–250.
+- Wooldridge, J. M. (2010). 横截面与面板数据计量经济分析（第二版）. The MIT Press.
+- Working, H. (1953). 对冲再思考. Journal of Farm Economics, 35, 544–556.
+- Wu, J. and Zang, A. (2009). 什么决定了并购期间金融分析师的职业发展结果？ Journal of Accounting and Economics, 47, 59–86.
+- Wu, Wei-Hsiung (2008). 第二次金融改革与台湾金融产业的发展. Review of Pacific Basin Financial Markets and Policies, 11(1), 75–97.
+- Wulfmeyer, S. (2016). 非理性的共同基金经理：行为差异的解释. Journal of Behavioral Finance, 17(2), 99–123.
+- Xia, Y., Liu, C., Li, Y. Y., et al. (2017). 基于贝叶斯超参数优化的提升决策树信用评分方法. Expert Systems with Applications, 78, 225–241.
+- Xie, B., Passonneau, R. J., Wu, L. and Creamer, G. G. (2013). 基于语义框架的股价走势预测. 见第51届计算语言学协会年会论文集，873–883页.
+- Xu, Y. (2011). 更精确度量外资银行进入及其对国内银行业绩效的影响：以中国为例. Journal of Banking and Finance, 35(4), 886–901.
+- Yang, C. C. (1989). 新股权融资对公司投资、股利和债务融资决策的影响. 博士论文，伊利诺伊大学厄巴纳-香槟分校.
+- Yang, C. C., Lee, C. F., Gu, Y. X. and Lee, Y. W. (2010). 资本结构与股票收益的共同决定——LISREL方法：台湾股票市场的实证检验. Quarterly Review of Economics and Finance, 50(2), 222–233.
+- Yang, D. (2009). 会计应计与财务政策的信号传递：来自银行贷款损失准备金和股利变化的证据. Review of Pacific Basin Financial Markets and Policies, 12(3), 377–402.
+- Yin, G. (2001). 认真对待公司避税工具：吸取历史教训. SMU Law Review, 54, 209–237.
+- Yosha, O. (1995). 信息披露成本与融资来源的选择. Journal of Financial Intermediation, 4, 3–20.
+- Yu, Hai-Chin, Sopranzetti, B. and Lee, C. F. (2012). 多重银行关系、管理层持股集中度与公司价值：联立方程方法. Quarterly Review of Economics and Finance, 52(3), 286–297.
+- Yu, J., Lee, W. Y. and Chiou, W. P. (2014). 不同熵测度下的分散化投资组合. Applied Mathematics and Computation, 241, 47–63.
+- Yu, L., Wang, S. Y. and Lai, K. K. (2008). 基于多阶段神经网络集成学习方法的信用风险评估. Expert Systems with Applications, 34, 1434–1444.
+- Yu, L., Zhou, R., Tang, L. and Chen, R. D. (2018). 基于深度信念网络的重采样支持向量机集成学习范式用于不平衡数据信用分类. Applied Soft Computing, 69, 192–202.
+- Zakon, A. J. (1968). 增长与财务战略. Boston Consulting Group, Boston.
+- Zakon, A. J. (1976). 资本结构优化. Boston Consulting Group, Boston, Massachusetts.
+- Zeileis, A., Leisch, F., Hornik, K. and Kleiber, C. (2002). strucchange：用于线性回归模型结构变化检验的R软件包. Journal of Statistical Software, 7, 1–38.
+- Zellner, A. (1962). 一种估计似不相关回归的有效方法及聚合偏误检验. Journal of American Statistical Association, 57, 348–368.
+- Zhang, L., Hu, H. and Zhang, D. (2015). 供应链金融中中小企业基于SVM的信用风险评估模型. Financial Innovation, 1(1), 14.
+- Zhang, P. G. (1994). 期权价格与期望收益的边界. Review of Quantitative Finance and Accounting, 4(2), 179–198.
+- Zhang, X. (2006). 信息不确定性与分析师预测行为. Contemporary Accounting Research, 23, 565–590.
+- Zhang, X. and Yao, Y. (2011). 股吧数据集，https://pan.baidu.com/s/1i5zAWh3, （访问日期：2015年1月17日）.
+- Zhang, X. and Zhang, Yunjia (2017). 金融网络新闻数据集，https://pan.baidu.com/s/1mhCLJJi, （访问日期：2015年1月17日）.
+- Zhang, X., Shi, J., Wang, D. and Fang, B. (2017a). 利用投资者社交网络进行中国市场股票预测.
+- Zhang, X., Su, Y., Qu, S., Xie, S., Fang, B. and Yu, P. S. (2017b). IAD：社交网络中的交互感知扩散框架，技术报告，北京邮电大学，可信计算与服务重点实验室.
+- Zhang, X., Yao, Y., Ji, Y. and Fang, B. (2016). 基于签名压缩度量的高效快速近似重复检测. Mathematical Problems in Engineering, 2016.
+- Zhang, X., Zhang, Y., Wang, S., Yao, Y., Fang, B. and Yu, P. S. (2018). 通过异构信息融合改进股票市场预测. Knowledge-Based Systems, 143, 236–247, doi:https://doi.org/10.1016/j.knosys.2017.12.025, http://www.sciencedirect.com/science/article/pii/S0950705117306032.
+- Zhang, Y., Wang, S. and Ji, G. (2015). 粒子群优化算法及其应用综述. Mathematical Problems in Engineering, 2015.
+- Zhao, L., Wang, G., Wang, M., Bao, W., Li, W. and Stanley, H. (2018). 作为时变网络的股票市场. Physica A: Statistical Mechanics and its Applications, 506, 1104–1112.
+- Zhao, R. and He, Y. (2014). 银行业放松管制的会计影响：对1999年《格雷姆-里奇-比利雷法案》的事件研究. Review of Quantitative Finance and Accounting, 42, 449–468.
+- Zhao, W. X., Jiang, J., Yan, H. and Li, X. (2010). 使用最大熵LDA混合模型对方面和观点进行联合建模. 见2010年自然语言处理实证方法会议论文集，计算语言学协会，56–65页.
+- Zhou, C. (2010). 银行是否大而不能倒？衡量金融机构的系统重要性. International Journal of Central Banking.
+- Zhu, J., Rosset, S., Tibshirani, R., et al. (2004). 1-范数支持向量机. 神经信息处理系统进展，2004, 49–56.
+- Zimmer, S. and McCauley, R. (1991). 银行资本成本与国际竞争. Federal Reserve Bank of New York Quarterly Review, 15 (Winter), 33–59.

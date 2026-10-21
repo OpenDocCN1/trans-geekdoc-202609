@@ -1,0 +1,13 @@
+If the information asymmetry between informed and uninformed investors causes momentum returns, the trading strategy constructed by these extreme portfolios is expected to generate higher long-short portfolio returns than would a momentum strategy based solely on past returns. Therefore, we introduce the BOS momentum strategy by buying winner stocks with lower BOS ratios, selling loser stocks with higher BOS ratios and holding for 3, 6, 9, or 12 months before rebalancing the portfolio. Specifically, at the end of each month in the sample period, we sort stocks based on their past-12-month returns to form five quintile portfolios, Q_M1 to Q_M5. We then sort stocks in each quintile portfolio based on their BOS ratios, the covariance between their past-12-month returns and trading volume to form five quintile portfolios, Q_B1 to Q_B5. That is, the Q_B5 (Q_B1) portfolio consists of stocks with the greatest (least) covariance between past cumulative returns and past trading volume. Returns to the BOS momentum strategy, which is based on both past returns and the BOS ratio, are expected to be greater than returns to the momentum strategy found in Table 95.4. We therefore formulate a testable hypothesis.
+
+# **H1:** The BOS momentum strategy based on both past cumulative returns and the BOS ratio generates greater returns than the momentum strategy based solely on past cumulative returns.
+
+We can test the hypothesis in the following manner:
+
+Δ_BOS-MOM = [(Q_M5, Q_B1) − (Q_M1, Q_B5)] − [Q_M5 − Q_M1]
+≥ 0,
+(95.5)
+
+where Δ_BOS-MOM is the return differences between the BOS momentum strategy and the momentum strategy, [(Q_M1, Q_B5) − (Q_M5, Q_B5)] is the return to the BOS momentum strategy, and [Q_M5 − Q_M1] is the return to the momentum strategy.
+
+Table 95.5 presents the returns to portfolios double sorted with respect to previous 12-month returns and the BOS ratio. Controlling for loser momentum, the long-short investment strategy with a long position in quintile portfolio Q_B1 and a short position in quintile portfolio Q_B5 generates a significantly positive return (e.g., 0.4780% of 6-month average return for all stocks). This return indicates that using an additional sorting variable, the BOS ratio, allows investors to obtain the worst loser (Q_M1, Q_B5) among the loser portfolio. Similarly, controlling for winner momentum, portfolio (Q_B5 − Q_B1) among the loser portfolios generates positive returns, but those returns are significant only in 9-month and 12-month holding periods for all

@@ -1,0 +1,13 @@
+# The Joint Determinants of Capital Structure and Stock Rate of Return
+
+Myers (2012) develop a theory of debt dynamics based on the relationship between dividend policy and managerial rents. In the researchers’ model framework, the target debt ratio may not be achieved because of smooth dividend payout policy. The researchers suggest using management compensation as the proxy of managerial rent to investigate how the agency costs affect payout, investment, and debt policies. In this chapter, we can investigate the influence of managerial rent on capital structure.
+
+Here, we use CEO tenure over CEO age (Tenu_age), log of CEO tenure (log_Tenu), log of CEO total compensation (log_TC), CEO bonus (in millions) (Bonus), log of number of directors (log_Dir) and percentage of outside directors (Out_Dir as indicators of manager character. Since both the manager’s ability and strong managerial entrenchment would lead to the decrease of debt usage, the manager character of a firm is expected to be negatively related to this firm’s leverage.
+
+# 35.2.2 Joint determinants of capital structure and stock return
+
+Marsh (1982) analyzes the empirical study in the financing decisions of UK companies and finds that their capital structures were heavily influenced by their stock prices.
+
+Baker and Wurgler (2002) provide the empirical evidence that the capital structure of a firm is significantly related to its historical stock price. Firms prefer to issue equity when their stock prices are relatively high (market-to-book ratio high) and repurchase equity when the stock prices are relatively low. However, the regression equations used in Baker and Wurgler (2002) appear not very suitable for the description of the relationship between the capital structure and the stock price. The stock price and capital structure change simultaneously since the stock price will respond to the investors’ perspective on financing and investment decisions and managers will consider both reactions of stock prices and the firm’s long-term equity value when making financing decisions, and vice versa. Therefore, we can use the simultaneous structural equation to investigate the relationship between the capital structure and the stock price.
+
+Welch (2004) investigates whether companies change their capital structure in accordance with the changes in stock prices or not. Welch (2004) finds that the stock price is a primary factor of dynamic capital structure. However, the firms do not readjust their capital structure to respond to the changes in stock prices. Jenter (2005) and Jenter et al. (2011) provide the different aspect of a firm’s financing activity affected by its stock price.

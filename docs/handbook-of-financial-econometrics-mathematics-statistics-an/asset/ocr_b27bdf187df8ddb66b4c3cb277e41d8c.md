@@ -1,0 +1,15 @@
+# Table 32.4: (Continued)
+
+|  | (1) Salary | (2) Cash compensation | (3) Stock-based compensation | (4) Total compensation |
+|---|---|---|---|---|
+| INSIDE – | 0.00025 (2.89)*** | 0.00042 (2.56)*** | -0.00103 (-3.05)*** | -0.00088 (-1.82)** |
+| INSTI – | -0.00044 (-9.31)*** | -0.0052 (-5.95)*** | 0.00109 (4.63)*** | 0.00049 (1.63)* |
+| CEODUAL + | 0.00013 (5.71)*** | 0.00024 (5.77)*** | -0.0001 (-0.01) | 0.00025 (2.01)** |
+| BOARDSZ + | -0.00001 (-0.08) | -0.00001 (-0.74) | -0.00005 (-2.76)*** | -0.00005 (-2.36)*** |
+| OUTDIR – | 0.0001 (2.03)** | 0.0001 (0.78) | 0.0001 (0.35) | 0.0001 (0.64) |
+| N | 7,816 | 7,816 | 7,816 | 7,816 |
+| Adjusted R² | 51.76% | 43.57% | 21.60% | 32.14% |
+
+Notes: The sample consists of 7,816 CEO-years of compensation data from 1994 to 2010. Salary is salary paid to the CEO divided by total assets at the start of the year. Cash Compensation is salary plus bonus divided by total assets at the start of the year. Stock-based Compensation is the options and restricted stock granted to the CEO during the year divided by total assets at the start of the year. Total Compensation is the sum of salary, bonus, long-term incentive payout, options granted, restricted stock granted and other annual pay paid to the CEO during the year divided by total assets at the start of the year. POSBTD is a binary variable that equals one for firm-years with scaled temporary book-tax differences in the highest quintile (positive book-tax differences) each year and zero otherwise. NEGBTD is a binary variable that equals one for firm-years with scaled temporary book-tax differences in the lowest quintile (negative book-tax differences) each year and zero otherwise. See Table 32.1 legend for other variable definitions. The regressions reported in the table include year and industry indicator variables (not tabulated). The t-statistics in parenthesis are based on White's (1980) heteroscedasticity-consistent standard errors. ***, **, * indicate significance at the 1%, 5% and 10% levels, respectively, for one-tailed tests where coefficient signs are predicted, and for two-tailed tests otherwise.
+
+differences. We create two variables to capture large positive book-tax differences and large negative book-tax differences. POSBTD is a binary variable equal to one for firm-years with scaled temporary book-tax differences in the highest quintile of firms in each year (positive book-tax differences) and zero otherwise. NEGBTD is a binary variable equal to one for firm-years with scaled temporary book-tax differences in the lowest quintile of firms in each year (negative book-tax differences) and zero otherwise. Recall that the efficiency hypothesis predicts a negative sign for the coefficient POSBTD and a positive sign for the coefficient NEGBTD. On the other hand, the rent-seeking hypothesis predicts a positive sign for the coefficient POSBTD and a negative sign for the coefficient NEGBTD. The coefficient for POSBTD

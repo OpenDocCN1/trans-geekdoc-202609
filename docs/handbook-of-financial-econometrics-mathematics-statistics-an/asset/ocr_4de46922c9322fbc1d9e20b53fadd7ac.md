@@ -1,0 +1,9 @@
+![](bbox=[0.12, 0.1, 0.9, 0.47])
+
+# Figure 18.1: Tweets number of Xueqiu vs. trading volume and turnover.
+
+a potential predictor. Firms may be economically related with one another (King, 1966; Pindyck and Rotemberg, 1993). Therefore, there is a probability that one stock’s price movement can influence its peers due to the investment reactions driven by investors’ perceptions on such relatedness.
+
+Sentiment and perception are psychological constructs and thus difficult to measure in archive analyses. News articles have been used as a major source for textual content analysis. For example, news articles are employed to analyze public mood (Li et al., 2014), by which stock price movements can be predicted. However, this type of content has an obvious drawback that news articles directly reflect the sentiments of the authors instead of the investors. Online social platforms have provided us with more direct data and enabled opportunities for exploring users’ sentiment and perception. In recent studies, it is found (Bollen et al., 2011) that collective mood derived from Twitter feeds can be used to improve the prediction accuracy of Dow Jones Industrial Average (DJIA). Facebook’s Gross National Happiness (GNH) index is shown to have the ability to predict changes in both daily returns and trading volume in the US stock market (Karabulut, 2013). The predictability of StockTwits (Twitter-like platform specialized on exchanging trading-related opinions) data with respect to stock price behavior is reported in Al Nasseri et al. (2015).
+
+Most of the existing studies have focused on the US stock market and lacked attention to certain emerging countries such as China, where the stock market is inefficient exhibiting a considerable non-random walk pattern (Darrat and Zhong, 2000). The China’s stock market (denoted as the A-share

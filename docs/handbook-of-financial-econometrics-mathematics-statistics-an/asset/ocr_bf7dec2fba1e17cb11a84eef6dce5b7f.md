@@ -1,0 +1,13 @@
+# 128.4.3 Effects of transaction costs
+
+Transaction cost may reduce the frequency of trades and the tax-timing option value. To incorporate the effects of transaction cost, we set trading cost at 0.5%, 1% and 2% of transaction price. In the interest of brevity, we report the results only for par bonds at high interest rate volatility (σ_r = 02).
+
+Table 128.5 reports timing option values in the presence of transaction cost. For ease of comparison, we also report the tax-timing option values with no transaction cost in the first column of each scenario. The results show that transaction cost has only a modest effect on the tax-timing option value when it is low. For example, when transaction cost is 0.5%, the tax-timing option value decreases only very slightly. Even at the 1% level of transaction cost, the tax-timing option value drops a little more but remains sizable, especially under Scenarios II and III and IV. As transaction cost increases to 2%, the timing option value drops substantially. For example, under Scenario II the timing option value drops from 14.2% to 4.2% for 30-year bonds. Results show that the timing option value is relatively small when transaction cost is high. The sensitivity of the timing-option value to transaction cost is higher for the case of asymmetric taxation (Scenario II).
+
+Schultz (2001) finds that round-trip trading costs average about 0.27% for institutional trades. Hong and Warga (1998) report institutional bond trading costs of 0.13% for investment-grade bonds and 0.19% for non-investment-grade bonds. Edward, Harris and Piwowar (2004) report an average round-trip cost of 0.54% for a representative institutional trade and 1.38% for a retail trade. Within the range of these transaction costs, our results show that the tax-timing option value is sizable.
+
+# 128.4.4 Changes in interest rate volatility and tax regime
+
+Tax regimes and interest rates change over time. Changes in tax rates and interest rates affect investors’ trading strategies, which in turn change the value of tax-timing option. We next examine the sensitivity of bond price and the tax-timing option value to changes in interest and tax rates.
+
+Table 128.6 provides summary statistics of one-month Treasury bill rates from 1981 to 2001. Average short rate drops from 7.75% in the period of 1981–1991 to 4.51% in the period of 1991–2001. The standard deviation of interest rates in the latter period (0.95%) is less than a half of that in the former (2.6%). In the period of 1996–2001, it further decreases to 0.59%. To accommodate this trend, we change the initial short-term interest rate to

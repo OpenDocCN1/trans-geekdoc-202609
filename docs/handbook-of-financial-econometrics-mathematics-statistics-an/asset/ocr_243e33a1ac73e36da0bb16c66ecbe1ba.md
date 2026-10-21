@@ -1,0 +1,13 @@
+marked the beginning of the European sovereign debt crisis, most of which are related to Greece^2.
+
+In Table 60.1 we present the banks used per country. The choice of these banks is the outcome of the following selection procedure. Firstly, we collect the stress test data from the websites of national bank regulators in Europe. We use the European Union-wide banking stress tests of 2010, 2011 and 2014 that were conducted by the European Banking Authority. A total of 90 banks participated in the bank stress tests. These banks represent about 70 percent of bank assets in Europe. We select banks that are headquartered in Austria, Belgium, France, Germany, Netherlands, Spain, Greece, Italy, Portugal and Ireland, with more than €50 billion assets. We set this threshold since smaller banks and banks that are not headquartered in these countries usually do not have traded CDS. For all banks, we search for CDS prices in the database of Datastream. Using bank names, we match 37 banks to CDS prices that meet the requirements. Unmatched banks are mostly smaller banks that do not have publicly quoted CDS prices.
+
+Swap rates of three months are used as a proxy for risk-free interest rates. Results are robust when replacing the 3-month swaps with Eonia or the 3-month Euribor. The equity value variable is represented by each bank’s stock returns. Stock prices for each bank have been obtained from Datastream- Thomson Reuters. In order to measure each bank’s asset volatility we compute quarterly historical standard deviations based on intra-quarter daily stock returns. Each bank’s stock returns and historical volatility therefore, are expressed as arithmetic returns, while swap rates appear in first differences.
+
+As concerns the systemic risk factors we have made the following choices. The European default risk conditions are represented by the *iTraxx*^3 index Europe, which contains the 125 most liquid single firm investment grade CDS. The European capital markets “fear” condition is captured by the *Vstoxx*^4 volatility index and the European liquidity conditions by the *KfW* that is defined as the yield spread between the German *KFW* agency bonds and the German federal government bonds. The *iTraxx* and *Vstoxx* variables have been transformed into arithmetic returns while the liquidity variable is treated in first differences.
+
+^2 On January 9th, 2009, S&P published a negative watch announcement and shortly after that, on January 15th, it downgraded Greece from A to A− (Baum *et al.*, 2014).
+
+^3 Source Bloomberg: ITRXTX5I.
+
+^4 *Vstoxx* is an implied volatility index based on options on the DJ Eurostoxx 50. Source: Datastream.

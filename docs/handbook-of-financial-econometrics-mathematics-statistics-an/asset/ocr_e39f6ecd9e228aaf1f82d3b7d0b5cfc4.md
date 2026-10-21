@@ -1,0 +1,13 @@
+# Alternative Methods for Determining Option Bounds: A Review and Comparison 929
+
+Recently, Peña et al. (2009) show that the problem of computing sharp upper and lower static-arbitrage bounds on the price of a European basket option, given the prices of other similar options, can also be cast as a linear program. The linear program formulations readily yield super-replicating (sub-replicating) strategies for the upper (lower) bound problem. The dual counterparts of the linear program formulations in turn yield underlying asset price distributions that replicate the given option prices, and the bound on the new basket option's price. In the special case when the given option prices are those of vanilla options on the underlying assets, they show that the linear program formulations admit further simplifications. In particular, for the upper bound problem they derive closed-form formulas for the basket's price bound and for the corresponding super replicating strategy. In addition, their linear program approach admits efficient modeling of additional features such as basket options with negative weights, bid-ask spreads, transaction costs, and diversification constraints.
+
+
+
+The option bounds discussed so far are derived by “parametric” methods. Although Perrakis and Ryan (1984) obtain bounds for all stock price distributions with a non-negative beta property, the actual values of the bounds depend on the specific stock price distribution. Similar to Perrakis and Ryan (1984), the bounds of Levy (1985) obtained by using SSDR are also parametric method. In addition, Ritchken (1985)'s linear-programming approach also requires parametric assumption of the state probabilities to calculate values for the bounds. In contrast to the previously discussed method, semi-parametric and non-parametric methods do not require strong assumptions in models and just need the historical data to derive option bounds.
+
+
+
+Different from parametric methods, Lo (1987) initiated a literature on “semi-parametric” bounds on option prices. The option bounds derived by Lo (1987) depend only on the mean and variance of the terminal stock price and not on its entire distribution, i.e., they are “semi-parametric”.
+
+Relying on the mathematical inequality provided by Scarf (1958), Lo (1987) derives the boundary of option prices. For the underlying asset price, S_t, with constant mean μ and constant standard deviation σ, the upper

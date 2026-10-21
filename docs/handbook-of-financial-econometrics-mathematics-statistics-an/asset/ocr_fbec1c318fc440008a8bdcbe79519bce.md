@@ -1,0 +1,13 @@
+can generate excess returns if overvalued junk stocks are avoided in the large companies segment.
+
+# Sweden:
+
+In Sweden, the AFP 6-factor model reduces market risk and enhances Alpha to its highest. Interestingly, it has negative beta for BAB, QMJ, HML-WLAB, and MOM factors and only positive beta in the SMB factor. In the AFP 5-factor model, without the MOM factor, the BAB factor beta is negative and statistically significant as well. This is also supported by negative betas of HML, RMW and CMA factors and only positive beta of SMB factor in the FF 5-factor model, though none of them are statistically significant. In the FF 3-factor and CH 4-factor model, market beta gets gradually reduced by 2 bps respectively, as compared to the CAPM model market beta, but both the models show statistically significant positive beta of the SMB factor and statistically significant negative beta of the HML factor. Hence, in Sweden, overvaluation situations may be found in low book-to-price stocks that are also low on profitability and follow an aggressive investment policy. Some large stocks may have mispricing opportunities but may not necessarily be of low risk.
+
+# Switzerland:
+
+In Switzerland, the CAPM model generates the highest Alpha with the lowest market risk; while the FF 3-factor model generates the second highest Alpha with its very high statistically significant positive HML factor beta, and statistically significant negative SMB factor beta. The SMB and HML factor betas increase further in the CH 4-factor model with some positive beta of the MOM factor. The market risk gets further accentuated in the FF 5-factor model with positive and statistically significant betas of the HML and RMW factors and not so significant but positive beta of the CMA factor, though the SMB factor beta remains negative. In the AFP models, the BAB and HML-WLAB factor betas are positive and statistically significant, while the SMB factor beta turns statistically significant and negative and the QMJ and MOM factors have less significant positive and negative betas, respectively. This shows that there are mispricing opportunities in the high book-to-price companies with strong profitability growth combined with some investment growth. These companies may also be better in quality and may have low risk as well.
+
+# United Kingdom (UK):
+
+The UK market is also similar to the Swiss market and the CAPM beta is the lowest among all and it generates the highest Alpha as well. All the factor models show statistically significant and negative SMB factor beta, and statistically significant and positive HML/ HML-WLAB factor betas. In addition to the above, the FF 5-factor model

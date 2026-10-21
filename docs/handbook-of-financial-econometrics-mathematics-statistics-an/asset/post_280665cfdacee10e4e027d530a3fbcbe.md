@@ -1,0 +1,66 @@
+
+- Shanken, J. (1992). On The Estimation of Beta Pricing Models. *Review of Financial Studies*, 5, 1–33.
+- Shanken, J. and Zhou, G. (2007). Estimating and Testing Beta Pricing Models: Alternative Methods and Their Performance in Simulations. *Journal of Financial Economics*, 84, 40–86.
+- Sharma, A. and Seth, N. (2012). Literature Review of Stock Market Integration: A Global Perspective. *Qualitative Research in Financial Markets*, 4(1), 84–122.
+- Sharpe, W. F. (1964). Capital Asset Prices: A Theory of Market Equilibrium Under Conditions of Risk. *Journal of Finance*, 19, 425–442.
+- Sharpe, W. F. (1964). Capital Asset Prices: A Theory of Market Equilibrium Under Conditions of Risk. *The Journal of Finance*, 19(3), 425–442.
+- Shastri, K. and Tandon, K. (1986). Valuation of Foreign Currency Options: Some Empirical Results. *Journal of Financial and Quantitative Analysis*, 21, 377–392.
+- Shen, C.-H. and Chih, H.-L. (2009). Conflicts of Interest in the Stock Recommendations of Investment Banks and their Determinants. *Journal of Financial and Quantitative Analysis*, 44, 1149–1171.
+- Shevlin, T., Thornock, J. and Williams, B. (2017). An Examination of Firms’ Responses to Tax Forgiveness. *Review of Accounting Studies*, 22(2), 577–607.
+- Shi, Y. and Yu, P. L. (1992). Selecting Optimal Linear Production Systems in Multiple Criteria Environments. *Computers & Operations Research*, 19, 585–608.
+- Shi, Y. (1991). Optimal Linear Production Systems: Models, Algorithms, and Computer Support Systems. Ph.D. dissertation, School of Business, University of Kansas.
+- Shi, Y. P., Kou, G. and Chen, C. (2005). Classifying Credit Card Accounts for Business Intelligence and Decision Making: A Multiple-criteria Quadratic Programming Approach. *International Journal of Information Technology & Decision Making*, 4(4), 581–599.
+- Shi, Y. P., Xu, W. and Tang, X. (2002). Data Mining Via Multiple Criteria Linear Programming: Applications in Credit Card Portfolio Management. *International Journal of Information Technology & Decision Making*, 1(1), 31–151.
+- Shin, H. and Park, S. (2018). Do Foreign Investors Mitigate Anchoring Bias in Stock Market? Evidence Based on Post-earnings Announcement Drift. *Pacific-Basin Finance Journal*, 48, 224–240.
+- Shin, K. S., Lee, T. S. and Kim, H. J. (2005). An Application of Support Vector Machines in Bankruptcy Prediction Model. *Expert Systems with Applications*, 28, 127–135.
+- Shleifer, A. and Summers, L. H. (1990). The Noise Trader Approach to Finance. *Journal of Economic Perspectives*, 4, 19–33.
+- Shleifer, A. and Vishny, R. W. (1997). A Survey of Corporate Governance. *The Journal of Finance*, 52(2), 737–783.
+- Shumway, T. (2001). Forecasting Bankruptcy More Accurately: A Simple Hazard Model. *Journal of Business*, 74, 101–124.
+- Sibbertsen, P. (2004). Long Memory Versus Structural Breaks: An Overview. *Statistical Papers*, 45, 465–515.
+- Sibilkov, V. (2009). Asset Liquidity and Capital Structure. *Journal of Financial and Quantitative Analysis*, 44(5), 1173–1196.
+- Simchi-Levi, D., Kaminsky, P. and Simchi-Levi, E. (2007). *Designing and Managing the Supply Chain*, 3rd ed., McGraw-Hill/Irwin.
+- Sims, C. A. (1980). “Macroeconomics and Reality,” *Econometrica*, Econometric Society, 48(1), 1–48.
+- Sinha, P., Brown, L. D. and Das, S. (1997). A Re-Examination of Financial Analysts’ Differential Earnings Forecast Accuracy. *Contemporary Accounting Research*, 14, 1–42.
+- Sivaramakrishnan, K. and Stubbs, R. A. (2013). Improving the Investment Process with a Custom Risk Model: A Case Study with the GLER Model. *Journal of Investing*, 22, 129–147.
+- Sklar, A. (1959). Fonctions de répartition à n dimensions et leurs marges. *Publications de l'Institut de Statistique de l'Université de Paris*, 8, 229–231.
+- Sklivas, S. (1987). The Strategic Choice of Managerial Incentives. *RAND Journal of Economics*, 18, 546–554.
+- Smith, A. (1776). An Inquiry into the Nature and Causes of the Wealth of Nations. In E. Cannan (ed.), 5th ed. (1904), London: Methuen and Co. Ltd.
+- Smith, C. and Watts, R. (1992). The Investment Opportunity Set and Corporate Financing, Dividend and Compensation Policies. *Journal of Financial Economics*, 32, 263–292.
+- Smith, C. W., Jr. (1976). Option Pricing: A Review. *Journal of Financial Economics*, 3, 3–51.
+- Smith, C. W., Jr. (1979). Applications of Option Pricing Analysis. In *Handbook of Financial Economics*, ed. J. L. Bicksler, North-Holland.
+- Smith, Jr., C. W. (1976). Option Pricing: A Review. *Journal of Financial Economics*, 3(1–2), 3–51.
+- Smith, K. L. (2001). Pre- and Post-1987 Crash Frequency Domain Analysis Among Pacific Rim Equity Markets. *Journal of Multinational Financial Management*, 11(1), 69–87.
+- Smith, L. D. and Lawrence, E. (1995). Forecasting Losses on a Liquidating Long-term Loan Portfolio. *Journal of Banking and Finance*, 18, 959–985.
+- Sobehart, J. R., Keenan, S. C. and Stein, R. M. (2000). Benchmarking Quantitative Default Risk Models: A Validation Methodology. Moody’s Investors Service, New York.
+- Söderlind, P. (2000). Market Expectations in the UK Before and After the ERM Crisis. *Economica*, 67, 1–18.
+- Soffer, L. C. and Lys, T. (1999). Post-earnings Announcement Drift and the Dissemination of Predictable Information. *Contemporary Accounting Research*, 16(2), 305–331.
+- Solnik, B. (1974). Why Not Diversify Internationally Rather than Domestically? *Financial Analysts Journal*, 51(1), 89–94.
+- Solnik, B. (1983). International Arbitrage Pricing Theory. *The Journal of Finance*, 38(2), 449–457.
+- Solnik, B. and McLeavey, D. (2009). *Global Investments*, Pearson Prentice Hall, Boston.
+- Sorensen, E., Qian, E., Schoen, R. and Hua, R. (2004). Multiple Alpha Sources and Active Management. *Journal of Portfolio Management*, 30(2), 39–45.
+- Sornette, D. (2003). *Why Stock Markets Crash — Critical Events in Complex Financial Systems*, Princeton University Press.
+- Sornette, D., Johansen, A. and Bouchaud, J.-P. (1996). Stock Market Crashes. *Physica A*, 261, 581–598.
+- Sousa, R., Aguiar-Conraria, L. and Soares, M. J. (2014). Carbon Financial Markets: A Time-Frequency Analysis of CO₂ Prices. *Physica A: Statistical Mechanics and Its Applications*, 414, 118–127.
+- Sowell, F. B. (1992). Maximum Likelihood Estimation of Stationary Univariate Fractionally Integrated Time Series Models. *Journal of Econometrics*, 53, 165–188.
+- Spatt, C. S. and Sterbenz, F. P. (1988). Warrant Exercise, Dividends, and Reinvestment Policy. *Journal of Finance*, 43, 494–506.
+- Stambaugh, R. (1982). On the Exclusion of Assets from Tests of the Two-Parameter Model: A Sensitivity Analysis. *Journal of Financial Economics*, 10, 237–268.
+- Stango, V. and Zinman, J. (2011). Fuzzy Math, Disclosure Regulation, and Market Outcomes: Evidence from Truth-in-Lending Reform. *The Review of Financial Studies*, 24(2), 506–534.
+- Stanley, H. E., Amaral, L. A. N., Canning, D., Gopikrishnan, P., Lee, Y. and Liu, Y. (1999). Econophysics: Can Physicists Contribute to The Science of Economics? *Physica A: Statistical Mechanics and Its Applications*, 269(1), 156–169.
+- Stapleton, D. C. (1978). Analyzing Political Participation Data with a MIMIC Model. In K. F. Schuessler (ed.), *Sociological Methodology*. Jossey-Bass, San Francisco, CA.
+- Stein, E. M. and Shakarchi, R. (2005). *Real Analysis*. Princeton: Princeton University Press.
+- Stein, E. M. and Stein, J. C. (1991). Stock Price Distributions with Stochastic Volatility: An Analytic Approach. *Review of Financial Studies*, 4, 727–752.
+- Stein, J. C. (1992). Convertible Bonds as Backdoor Equity Financing. *Journal of Financial Economics*, 32(1), 3–22.
+- Stein, R. M. (2002). Benchmarking Default Prediction Models: Pitfalls and Remedies in Model Validation. Moody’s KMV White Paper.
+- Stein, R. M. (2005). The Relationship between Default Prediction and Lending Profits: Integrating ROC Analysis and Loan Pricing. *Journal of Banking and Finance*, 29, 1213–1236.
+- Stemmler, L. (2002). The Role of Finance in Supply Chain Management. In *Cost Management in Supply Chains*, S. Seuring and M. Goldbach (eds.). Physica-Verlag HD, 165–176.
+- Stepien, E. and Su, Y. (2012). International Portfolios and Currency Hedging: Viewpoint of Polish Investors. *Managerial Finance*, 38(7), 660–677.
+- Steuer, R. (1986). *Multiple Criteria Optimization: Theory, Computation, and Application*. John Wiley & Sons, New York.
+- Stickel, S. E. (1992). Reputation and Performance Among Security Analysts. *The Journal of Finance*, 47, 1811–1836.
+- Stickel, S. E. (1995). The Anatomy of the Performance of Buy and Sell Recommendations. *Financial Analysts Journal*, 51, 25–39.
+- Stock, J. H. and Watson, M. W. (2002). Forecasting Using Principal Components from a Large Number of Predictors. *Journal of the American Statistical Association*, 97(460), 1167–1179.
+- Stone, B. K. and Guerard, Jr., J. B. (2010). Methodologies for Isolating and Assessing the Portfolio Performance Potential of Stock Market Return Forecast Models with an Illustration. In J. B. Guerard (ed.), *The Handbook of Portfolio Construction: Contemporary Applications of Markowitz Techniques*. New York: Springer.
+- Storey, J. D. (2002). A Direct Approach to False Discovery Rates. *Journal of the Royal Statistical Society. Series B (Statistical Methodology)*, 64, 479–498.
+- Stricker, C. (1990). Arbitrage et lois de martingale. *Ann. Inst. H. Poincaré Probab. Statist.*, 26, 451–460.
+- Strizhova, E. A. (2017). Work Motivation Measurements Among Financial Sector Employees Consisting in the Manager Reserve and Talent Development Programs. *Organizational Psychology*, 7(2), 64–65.
+- Stulz, R. (1990). Managerial Discretion and Optimal Financing Policies. *Journal of Financial Economics*, 26, 3–27.
+- Stulz, R. (1990). Managerial Discretion and Optimal Financing Policies. *Journal of Financial Economics*, 26(1), 3–27.

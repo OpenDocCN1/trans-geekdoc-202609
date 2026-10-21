@@ -1,0 +1,11 @@
+securities, (3) to “ride the yield curve,” and (4) to help investors manage their portfolio-maturity structures. This section concerns the third and fourth uses of yield curves.
+
+# 88.2.1 Riding the yield curve
+
+Riding the yield curve is an investment strategy designed to take advantage of yield-curve shapes that are expected to be maintained for a period of time. Given the yield-curve shape, an investor then decides whether to purchase a debt security that matures at the end of his or her time horizon or to purchase a longer-term debt security which can be sold at time T. (The investor may also purchase securities that mature before T and reinvest out to T.) If the yield curve is upward sloping and is expected to remain stable over the investor’s horizon period, purchasing a longer-term security and holding on to it as the end of the horizon period approaches would lead to an increasing selling price (bond value) as the yield declines. Even though reinvestment rates (RRs) for coupons would also be declining, the total realized yield (RY) would be higher than the direct investment in a shorter-term security that matures at the end of the holding period. Similar strategies could be illustrated for other yield-curve shapes. The problem with successfully using such strategies is that yield curves do not remain unchanged for long periods of time; they can and do change abruptly and seemingly without warning. The best advice to those with a specific horizon period but little forecasting skill would likely be to invest in short-maturity bonds to maintain reinvestment flexibility.
+
+# 88.2.2 Maturity-structure strategies
+
+A common practice among bond-portfolio managers is to evenly space the maturity of their securities. Under the staggered-maturity plan, bonds are held to maturity, at which time the principal is reinvested in another long-term maturity instrument. Little managerial expertise is required to maintain the portfolio, and the maturing bonds and regular interest payments provide some liquidity.
+
+An alternative to a staggered portfolio is the dumbbell strategy. Dumbbell portfolios are characterized by the inclusion of some proportion of short- and intermediate-term bonds that provide a liquidity buffer to protect a substantial investment in long-term securities. In Figure 88.1, it is apparent

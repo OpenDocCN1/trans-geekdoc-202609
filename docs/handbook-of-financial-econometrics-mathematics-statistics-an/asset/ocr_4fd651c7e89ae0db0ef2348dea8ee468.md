@@ -1,0 +1,13 @@
+Spatt and Sterbenz (1988), and thus the debt-like signaling role of the buy-back ratio of stock repurchase by Constantinides and Grundy (1989). For the percentage spread between conversion price and the stock price (X6i), the coefficient β6 is significant and negative with a p-value of 0.0029. Thus, Proposition 5 is not validated. This result contradicts with the CB’s equity-like signaling role of Davidson et al. (1995) and Kim (1990), but, on the other hand, is in line with the cash flow advantage principle by Asquith and Mullins (1991) that higher conversion value engenders conversions by bondholders.
+
+Finally, Propositions 6 and 7 are accepted as the coefficients β7 and β8 of the ratio of non-management institutional ownership (X7) and total asset value (X8) are both significant and positive with p-values of 0.0334 and 0.0012, respectively. This implies the issue of CBs is an equity-like signal for firms with higher ratio of non-management institutional ownership. This is line with Lee et al. (2009) that firms with higher shareholder rights issue equity-like CBs. In addition, the higher the total asset value, the lesser information asymmetry, the more likely the issue of CBs is an equity-like signal.
+
+# 59.4.3 Risk-shifting potential of CBs
+
+For Propositions 8-9, consider the AG model
+
+λ_{ik}^j(t) = λ0(t) exp{β_{j,1} X_{ji}(t) * X_{11,i}(t) + ⋯ + β_{j,7} X_{ji}(t) * X_{16,i}(t)} , (59.5)
+
+where 9 ≤ j ≤ 10, X9i is the ratio of discretionary asset over total asset, X10,i is the ratio of free cash flow over total asset, and X11,i,...,X16,i are the dummies of the bond rating categories 4-9. Table 59.4 illustrates the two estimated AG models (59.5) for 9 ≤ j ≤ 10. For j = 9, the coefficients β9,11,...,β9,14 of the terms (X9i * X11,i),..., (X9i * X15,i) are not significant, while β9,15 and β9,16 of the terms (X9i * X15,i) and (X9i * X16,i) are significant and negative with p-values of 0.0005 and 0.0000, respectively. That is, a higher ratio of discretionary asset decreases the conversion rate only for bonds with ratings 8 and 9 (X15,i = 1 and X16,i = 1). This suggests that as a risky firm’s risk-shifting potential is high, the rate of CBs’ sequential conversions do not speed up as expected, but on the contrary, it slows down so the risk-mitigating effect is maintained. Therefore, Proposition 8 is not validated.
+
+For j = 10, the coefficients β10,11, β10,12 of the terms (X10,i * X11,i), (X10,i * X12,i) are not significant. On the other hand, the coefficients β10,13,...,β10,16 of the covariates (X10i * X13,i),..., (X10,i * X16,i) are significant and negative with p-values 0.001, 0.000, 0.003, and 0.000, respectively.

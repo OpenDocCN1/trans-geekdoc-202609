@@ -1,0 +1,13 @@
+As a result, the bank can identify fraudulent checks in real time.⁹ It can also reduce operating costs by cutting the number of labor hours required for manual validation and achieve a reduction in fraudulent transactions. HSBC uses machine learning to monitor millions of card transactions in the United States, which has effectively enhanced fraud detection and prevention by reducing false-positive rates and improving fraud case handling.¹⁰
+
+Big-data-based AI can also be applied to managing regulatory compliance such as customer identification programs or “Know Your Customers” (KYC) and anti-money laundering combating the financing of terrorism (AML-CFT) tasks.¹¹ The KYC process is often costly, extensively manual, and highly duplicative. Big-data-based machine learning is increasingly applied to KYC tasks to check customer identity and background (Financial Stability Board, 2017). This AI-based approach can improve cost efficiency, enhance customer service, and increase standardization of KYC quality and compliance.
+
+In the anti-money laundering function, AI technologies enable banks to automate the financial crimes risk management process including collection of third-party data, client risk rating, behavioral monitoring, segmentation, scoring, and identification. For example, big-data-enabled AI can identify non-linear relationships among different client attributes and rate the likelihood of suspicious transactions. Further, it can detect complicated behavior patterns that are not easily observable through analyzing suspicious transactions alone.
+
+Fourth, banks can more proactively manage risk portfolios based on big data analytics. For example, machine learning can enhance risk modeling to provide a more accurate basis on which to generate warning signals for intervention when the positions of a trading account exceed the optimal risk threshold.
+
+⁹Using the machine learning approach, a global bank uses scan and validate up to 1200 checks per second and thus substantially reduces the processing time compared to manual processing. Its predictive model is forecasted to save $20 million from prevention of fraudulent transactions (Cognizant, 2018).
+
+¹⁰Clark, L. 2018. https://www.computerweekly.com/feature/How-banks-are-detecting-credit-fraud.
+
+¹¹Banks use a central repository (KYC utility) to warehouse customer data and documents required to satisfy regulatory requirements and to support a financial institution’s KYC procedures. Once a customer’s data has been stored in the repository, member financial institutions can use the information for their KYC needs.

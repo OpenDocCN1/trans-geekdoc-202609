@@ -1,0 +1,13 @@
+vector x⃗_j, and categorize the features into three types, the stock specific features, the sentiment feature, and the stock relatedness feature.
+
+# Stock Specific Features:
+
+The common information used for stock prediction is the firm-specific factors, as well as the historical and time series prices used for technical analysis (Taylor and Xu, 1997; Taylor, 2007). We select some key characteristics of a stock that exhibit the predictive ability in previous literatures (Li et al., 2014; Fama and French, 1992): stock price, trading volume, turnover and price-to-earnings (P/E) ratio. Note that the absolute value of the stock price and trading volume would have huge differences between different stocks, so we use the change rate instead. Besides, not only the daily change but also the change of 5-days-moving-average is involved.
+
+# Sentiment Features:
+
+In this study, we derive the sentiment index for each stock at each trading day. Firstly, for all the tweets in the dataset, we classify them into three categories: positive, neutral and negative, and only the positive and negative tweets are used to derive the sentiment feature. Counting the number of tweets in the positive and negative categories is an intuitive way to measure how strong each sentiment is. However, this counting method implies that each tweet is treated equally and thus has the same weight. In fact, it’s clear that different tweets might have different influences due to different authorities of the users. Thus, it is reasonable to take the user’s authority as the weight for each tweet.
+
+Given a user network extracted from Xueqiu, PageRank is a natural method to weigh each user. To derive the PageRank score, we first construct the user network from the dataset. Note that different from the static friendship links in the social network, the user network constructed here is a dynamic forwarding network. Specifically, as the users publish tweets or forward others’ tweets on Xueqiu, a user forwarding network can be constructed. Figure 18.5 shows a sample of the user network on May 29, 2015. In this network, each node stands for a user marked with its user ID, and the edge stands for the forwarding behavior between the two users. There are totally 141 trading days of the A-share market in our dataset, so 141 user networks are constructed. For each network, we calculate PageRank value of each vertex. As shown in Figure 18.5, the bigger a node is, the larger the user’s PageRank is.
+
+For a user u_t in the directed user network, given a user set U_t with K_t users (denoted as nodes u1, u2, …, uK_t) that have forwarded u_t’s tweet, the

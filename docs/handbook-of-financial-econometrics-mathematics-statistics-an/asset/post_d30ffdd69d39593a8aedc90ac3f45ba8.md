@@ -1,0 +1,73 @@
+
+- Beaver, W. (1968). Market Prices, Financial Ratios and Prediction of Failure. Journal of Accounting Research 6(2), 179–192.
+- Beaver, W.H. (1966). Financial Ratios as Predictors of Failure. Journal of Accounting Research 4, 71–111.
+- Beaver, W.H. (1968). Alternative Accounting Measures as Predictors of Failure. Accounting Review 43, 113–122.
+- Beaver, W.H., McNichols, M.F. and Rhie, J. (2005). Have Financial Statements Become Less Informative? Evidence from the Ability of Financial Ratios to Predict Bankruptcy. Review of Accounting Studies 10(1), 93–122.
+- Begley, J., Ming, J. and Watts, S. (1996). Bankruptcy Classification Errors in the 1980s: An Empirical Analysis of Altman’s and Ohlson’s Models. Review of Accounting Studies 1, 267–284.
+- Bhandari, S.B., Soldofsky, R.M. and Boe, W.J. (1979). Bond Quality Rating Changes for Electric Utilities: A Multivariate Analysis. Financial Management 8, 74–81.
+- Bharath, S.T. and Shumway, T. (2004). Forecasting Default with the KMV-Merton Model. Working Paper, the University of Michigan.
+- Bharath, S.T. and Shumway, T. (2008). Forecasting Default with the Merton Distance to Default Model. Review of Financial Studies 21(3), 1339–1369.
+- Billings, B. (1999). Revisiting the Relation between the Default Risk of Debt and the Earnings Response Coefficient. Accounting Review 74(4), 509–522.
+- Blume, M.P. (1974). The Failing Company Doctrine. Journal of Accounting Research 43, 1–25.
+- Chen, K.H. and Shimerda, T.A. (1981). An Empirical Analysis of Useful Financial Ratios. Financial Management 10, 51–60.
+- Cielen, A., Peeters, L. and Vanhoof, K. (2004). Bankruptcy Prediction Using a Data Envelopment Analysis. European Journal of Operational Research 154(2), 526–532.
+- Clark, K. and Ofek, E. (1994). Mergers as a Means of Restructuring Distressed Firms: An Empirical Investigation. Journal of Financial & Quantitative Analysis 29(4), 541–565.
+- Cox, D.R. and Oakes, D. (1984). Analysis of Survival Data. Chapman & Hall, New York.
+- Crosbie, P. and Kocagil, A. (2003). Modeling Default Risk. Moody’s KMV Company.
+- Denis, D., Denis, D. and Sarin, A. (1997). Ownership Structure and Top Executive Turnover. Journal of Financial Economics 45, 193–221.
+- Diamond, J. (1976). Pattern Recognition and the Detection of Corporate Failure. Ph.D. dissertation, New York University.
+- Dichev, I. (1998). Is the Risk of Bankruptcy a Systematic Risk? Journal of Finance 53, 1131–1148.
+- Dimitras, A.I., Zanakis, S.H. and Zopounidis, C. (1996). Theory and Methodology: A Survey of Business Failure with an Emphasis on Prediction Methods and Industrial Applications. European Journal of Operational Research 90, 487–513.
+- Duffie, D. and Singleton, K. (1999). Modeling Term Structures of Defaultable Bonds. Review of Financial Studies 12, 687–720.
+- Drehmann, M., Patton, A.J. and Sorensen, S. (2005). Corporate Defaults and Large Macroeconomic Shocks. Working Paper.
+- Farrar, F.S. (1962). The Investment Decision Under Uncertainty. Prentice-Hall, Englewood Cliffs, NJ.
+- Falkenstein, E.G., Boral, A. and Carty, L. (2000). Riskcalc for Private Companies: Moody’s Default Model. Global Credit Research.
+- Fitzpatrick, P. (1932). A Comparison of the Ratios of Successful Industrial Enterprises with Those of Failed Companies. The Accountants Publishing Company.
+- Foster, G. (1998). *Financial Statement Analysis*, 2nd edn. Prentice-Hall, Englewood Cliffs, NJ.
+- Foster, B., Ward, T. and Woodroof, J. (1998). An Analysis of the Usefulness of Debt Defaults and Going Concern Opinions in Bankruptcy Risk Assessment. *Journal of Accounting, Auditing & Finance* **13**(3), 351–371.
+- Frecka, T. and Lee, C.F. (1983). Generalized Ratio Generation Process and Its Implications. *Journal of Accounting Research* **21**, 308–316.
+- Ghysels, E., Plazzi, A. and Valkanov, R. (2016). Why Invest in Emerging Markets? The Role of Conditional Return Asymmetry. *Journal of Finance* **71**, 2145–2192.
+- Ghysels, E. and Qian, H. (2019). Estimating MIDAS Regressions via OLS with Polynomial Parameter Profiling. *Econometrics and Statistics* **9**, 1–16.
+- Glennon, D. and Nigro, P. (2005). Measuring the Default Risk of Small Business Loans: A Survival Analysis Approach. *Journal of Money, Credit, and Banking* **37**(5), 923–947.
+- Hillegeist, S.A., Keating, E.K. and Cram, D.P. (2004). Assessing the Probability of Bankruptcy. *Review of Accounting Studies* **9**, 5–34.
+- Hol, S., Westgaard, S. and Wijst, N. (2002). *Capital Structure and the Prediction of Bankruptcy*. Working Paper.
+- Honjo, Y. (2000). Business Failure of New Firms: An Empirical Analysis Using a Multiplicative Hazards Model. *International Journal of Industrial Organization* **18**(4), 557–574.
+- Hopwood, W.S., Mckeown, J.C. and Mutchler, J.P. (1989). A Test of the Incremental Explanatory Power of Opinions Qualified for Consistency and Uncertainty. *Accounting Review* **64**, 28–48.
+- Hopwood, W., Mckeown, J.C. and Mutchler, J.F. (1984). A Reexamination of Auditor versus Model Accuracy within the Context of the Going-Concern Opinion Decision. *Contemporary Accounting Research* **10**, 409–431.
+- Horrigan, J.O. (1965). Some Empirical Bases of Financial Ratio Analysis. *Accounting Review* **40**, 558–586.
+- Hwang, R.C. and Cheng, K.F. (2009). On Multiple-Class Prediction of Issuer Credit Ratings. *Journal of Applied Stochastic Models in Business and Industry* **25**(5), 535–550.
+- Hwang, R.C., Wei, H.C., Lee, J.C. and Lee, C.F. (2008). On Prediction of Financial Distress Using the Discrete-Time Survival Model. *Journal of Financial Studies* **16**, 99–129.
+- Johnson, W.B. (1979). The Cross-Sectional Stability of Financial Ratio Patterns. *Journal of Financial and Quantitative Analysis* **14**, 1035–1048.
+- Jones, F. (1987). Current Techniques in Bankruptcy Prediction. *Journal of Accounting Literature* **6**, 131–164.
+- Jones, S. and Hensher, D.A. (2004). Predicting Firm Financial Distress: A Mixed Logit Model. *Accounting Review* **79**(4), 1011–1038.
+- Joy, O.M. and Tollefson, J.O. (1975). On the Financial Applications of Discriminant Analysis. *Journal of Financial And Quantitative Analysis* **10**, 723–739.
+- Kao, L.-J. and Lee C.-F. (2012). Alternative Method for Determining Industrial Bond Ratings: Theory and Empirical Evidence. *International Journal of Information Technology & Decision Making* **11**(6), 1215–1235.
+- Kiefer, N.M. (1988). Economic Duration Data and Hazard Functions. *Journal of Economic Literature* **26**, 646–679.
+- King, B.F. (1966). Market and Industry Factors in Stock Price Behavior. *Journal of Business* (Suppl.), 139–190.
+- Lachenbruch, P.A. (1967). An Almost Unbiased Method of Obtaining Confidence Intervals for the Probability of Misclassification in Discriminant Analysis. *Biometrics* **23**, 639–645.
+- Lancaster, T. (1992). The Econometric Analysis of Transition Data. Cambridge University Press, New York.
+- Lane, W.R., Looney, S.W. and Wansley, J.W. (1986). An Application of the Cox Proportional Hazards Model to Bank Failure. Journal of Banking and Finance 10, 511–531.
+- Lau, A.H.L. (1987). A Five-State Financial Distress Prediction Model. Journal of Accounting Research 18, 109–131.
+- Lee, C.F. and Lee, A. (2017). Application of Discriminant Analysis and Factor Analysis in Financial Management. Financial Analysis, Planning and Forecasting: Theory and Application. 3rd edition. World Scientific, Singapore.
+- Lloyd, W.P. and Lee, C.F. (1975). Block Recursive Systems in Asset Pricing Models. Journal of Finance 31, 1101–1113.
+- Mai, J.S. (2010). Alternative Approaches to Business Failure Prediction Models. Essay I of Dissertation, Rutgers University.
+- Mehta, D.R. (1974). Working Capital Management. Prentice-Hall, Englewood Cliffs, NJ.
+- Merton, R.C. (1974). On the Pricing of Corporate Debt: The Risk Structure of Interest Rates. Journal of Finance 29, 449–470.
+- Molina, C.A. (2005). Are Firms Underleveraged? An Examination of the Effect of Leverage on Default Probabilities. Journal of Finance 3, 1427–1459.
+- Moyer, R.C. (1977). Forecasting Financial Failure: A Re-examination. Financial Management Spring, 111–117.
+- Ohlson, J.S. (1980). Financial Ratios and the Probabilistic Prediction of Bankruptcy. Journal of Accounting Research 19, 109–131.
+- Orgler, Y.E. (1970). A Credit-Scoring Model for Commercial Loans. Journal of Money, Credit and Banking 2, 435–445.
+- Orgler, Y.E. (1975). Analytical Methods in Loan Evaluation. Lexington Books, Lexington, MA.
+- Penman, S.H. (2006). Financial Statement Analysis and Security Valuation. 3rd edn. McGraw-Hill/Irwin, New York.
+- Pinches, G.E. and Mingo, K.A. (1973). A Multivariate Analysis of Industrial Bond Ratings. Journal of Finance 28, 1–18.
+- Pinches, G.E., Eubank, A.A. and Mingo, K.A. (1975). The Hierarchical Classification of Financial Ratios. Journal Of Business Research 3, 295–310.
+- Pinches, G.E., Mingo, K.A. and Caruthers, J.K. (1973). The Stability of Financial Patterns in Industrial Organizations. Journal of Finance 28, 389–396.
+- Pinches, G.E., Singleton, J.C. and Jahankhani, A. (1978). Fixed Coverage as a Determinant of Electric Utility Bond Ratings. Financial Management 8, 45–55.
+- Pogue, T.F. and Soldofsky, R.M. (1969). What’s in a Bond Rating? Journal of Financial and Quantitative Analysis 201–228.
+- Rao, C.R. (1952). Advanced Statistical Methods in Biometric Research. Wiley, New York.
+- Roll, R. and Ross, S.A. (1980). An Empirical Investigation of the Arbitrage Pricing Theory. Journal of Finance 35, 1073–1103.
+- Saretto, A.A. (2005). Predicting and pricing the probability of default. Working Paper.
+- Sarkar, S. and Sriram, R.S. (2001). Bayesian Models for Early Warning of Bank Failures. Management Science 47(11), 1457–1475.
+- Saunders, A. and Allen, L. (2002). Credit Risk Measurement: New Approaches to Value at Risk and Other Paradigms, 2nd ed. Wiley, New York.
+- Saunders, A. and Cornett, M.M. (2013). Financial Institutions Management: A Risk Management Approach, 8th edn. McGraw-Hill/Irwin, New York.
+- Scott, J. (1981). The Probability of Bankruptcy: A Comparison of Empirical Predictions and Theoretical Models. Journal of Banking and Finance 5, 317–344.
