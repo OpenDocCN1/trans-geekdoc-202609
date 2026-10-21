@@ -1,0 +1,588 @@
+- raw:
+  - '[PAGE 0]
+
+
+    <!-- no content -->'
+  - '[PAGE 1]
+
+
+    take BOINC as an example of the traditional C/S framework. Its server has a job
+    generator responsible for generating new jobs, and a scheduler responsible for
+    delivering jobs (Shown as Figure 2). Since all volunteers'' task assignment and
+    publisher''s
+
+
+    task storage need to pass through the task server in large-scale applications,
+    the task server is likely to have performance or network bottlenecks and cause
+    scalability problems and single point of failure problem.
+
+
+    ![](img/147d0ed8c8a0094bfeef9a98595d91c8_1_0.png)
+
+
+    Fig. 1. A BOINC server consists of several components, sharing several forms of
+    storage.
+
+
+    ![](img/147d0ed8c8a0094bfeef9a98595d91c8_1_1.png)
+
+
+    Fig. 2. The components of a BOINC task server.
+
+
+    # B. Basic Principles of Blockchain Based Design
+
+
+    In this design, volunteers and publishers exchange data through the blockchain.
+    At the same time, all volunteers and publishers serve as nodes in the blockchain
+    network and support the operation of the blockchain network. Therefore, a
+
+
+    decentralized volunteer computing system can be established based on the blockchain.
+    (Shown as Figure 3) Since the task server is no longer used, and thanks to the
+    decentralized nature of the blockchain, the scalability problem and single point
+    of failure caused by the bottleneck of the task server can be solved.
+
+
+    ![](img/147d0ed8c8a0094bfeef9a98595d91c8_1_2.png)
+
+
+    Fig. 3. Volunteer computing based on blockchain.
+
+
+    Under this decentralized framework, because there is no centralized server, people
+    cannot use a method like a centralized system to allocate and schedule tasks.
+    Therefore,
+
+
+    the publisher needs to split the project into multiple jobs with a suitable amount
+    of computing content and treat each job as a "job block", and then publishes it
+    on the blockchain. Then,'
+  - '[PAGE 2]
+
+
+    volunteers can find unprocessed job on the blockchain for processing, and post
+    a "processing block" on the blockchain to mark that the job is being processed,
+    and other volunteers can use the "processing block" to Determine whether the job
+    is being handled by other volunteers. When the volunteer has finished processing
+    the job, a "result block" should be issued to prove that the job has been completed,
+    which should contain the output of the job.
+
+
+    # C. Design of Error Correction Mechanism
+
+
+    Volunteer calculation participants are not responsible for the project (indeed,
+    their identity is unknown), so the results returned by a single volunteer should
+    be considered unreliable and insecure [8]. The wrong result may be due to a variety
+    of reasons, it may be a hardware malfunction, or a malicious attack from a volunteer.
+    Since the frequency of occurrence of the above problems cannot be ignored, volunteer
+    computing requires a verification mechanism to ensure that the job is completed
+    correctly. Therefore, an attribute "Handle count" is introduced for each job block.
+    This is an arbitrary positive integer set by the publisher to indicate how many
+    different volunteers can handling the job, so that the publisher can compare and
+    verify the results of different volunteers.
+
+
+    When a job is completed, the publisher should verify the result blocks published
+    by the volunteers, and publish the accepted volunteer results to a new "completed
+    block" to show that the job has been completed and which results from volunteers
+    have been accepted by the publisher.
+
+
+    # D. Design of Anti-plagiarism Mechanism
+
+
+    As all content published on the blockchain is open to everyone, including the
+    results published by volunteers. If the result is published in its original format,
+    other volunteers can also see the result and can replay the result in their own
+    identity. Since a job block usually allows multiple volunteers to submit results
+    for verification, this allows some fake volunteers to create the illusion that
+    they participated in the computing, even if they did not participate in the computing,
+    but just copied the results of others. Therefore, asymmetric encryption is used
+    here to make the original format of the results only valid for the publisher.
+    Publishers should declare their public keys when publishing job blocks. When volunteers
+    publish results, they should encrypt their own public key together with their
+    result using the publisher''s public key, and then write it into the result block
+    to ensure that other volunteers cannot reuse the result. When verifying the result
+    block, the publisher should find the volunteer public key in the processing block
+    referenced by the result block, and check whether the volunteer public key encrypted
+    in the result matches it.
+
+
+    # E. Summary of the Process
+
+
+    In summary, in this kind of system, for a job, a complete process should be:
+
+
+    +   - The publisher divides a project into several jobs with a suitable amount
+    of computing.
+
+    +   - The publisher packages the job content which may include source code, executable,
+    data, platform restrictions, introduction, etc., and decides the number of volunteers
+    handling the job, and packs this information together with its own public key
+    into a block, then publish it to the blockchain.
+
+    +   - Volunteers look for the job block released by the publisher on the blockchain
+    and check whether there are enough processing blocks to process the job block.
+    If the processing block does not reach the upper limit of the job, the volunteer
+    will process the job.
+
+    +   - The volunteer selects a job block that can be processed and publishes a
+    processing block, which contains the volunteer''s public key and the corresponding
+    job block hash.
+
+    +   - After the volunteer completes a job, the own public key together with the
+    processing result will be encrypt using the public key of the job publisher. After
+    that, the encrypted data need to be packed together with the hash of the corresponding
+    processing block into a result block, and then publish it to the blockchain.
+
+    +   - The publisher collects corresponding result blocks from the blockchain,
+    uses the private key to decrypt the result, and verifies whether the public key
+    in the result matches the public key declared in the corresponding processing
+    block. If the verification is successful, the publisher continues to verify the
+    correctness of the calculation result.
+
+    +   - The publisher lists all accepted result blocks, puts them into the completion
+    block along with the hash of the corresponding job block, and then publishes them
+    to the blockchain to announce the end of the job processing.
+
+
+    As shown in Figure 4, this is an example fragment of a job on the blockchain.'
+  - '[PAGE 3]
+
+
+    ![](img/147d0ed8c8a0094bfeef9a98595d91c8_3_0.png)
+
+
+    Fig. 4. An example fragment of a job on the blockchain.
+
+
+    # F. Defects and Possible Solutions
+
+
+    Although this design uses the characteristics of the blockchain to effectively
+    solve the problems of centralization and single point of failure, it also introduces
+    some shortcomings. Firstly, if there are multiple volunteers in the standby state,
+    that is, all tasks are currently being processed or have been processed, there
+    are multiple volunteers that are not processing jobs and are waiting for new jobs
+    to process. When a new job block is published, if multiple volunteers want to
+    handle the job at the same time, they will tend to enter a competitive condition.
+    At this time, multiple volunteers want to publish a processing block at the same
+    time. Because the broadcast of the blockchain has a certain delay, it is easy
+    to cause the blockchain to fork. Therefore, each volunteer should be required
+    to process only one job at the same time, otherwise the request to enter the chain
+    of a new processing block should be rejected to reduce the chance of competition,
+    when a new job is released. And a certain blockchain consensus mechanism is needed
+    to maintain the uniqueness of the chain. Secondly, since the key pair can be generated
+    arbitrarily, this system cannot guarantee that each volunteer only has a single
+    volunteer key. If a real volunteer controls multiple volunteer keys and submits
+    the work result in multiple identities, it may affect the verification of the
+    results. Therefore, this design may be more suitable for use in a small area of
+    trust. If large-scale application is required, it may be necessary to establish
+    a centralized or distributed verification mechanism to verify the identity of
+    volunteers to prevent the aforementioned "puppet volunteers".
+
+
+    Anyone can search the blockchain to understand which volunteers participated in
+    a computing for each computing job in history, and the adoption of the results
+    provided by each volunteer. At the same time, the authenticity of history can
+    be guaranteed with the help of the persistent and auditable properties of the
+    blockchain. This paper also raises two possible problems. One is the consensus
+    problem on the chain, and the other is the puppet volunteer problem. And proposed
+    possible solutions to these two problems separately.
+
+
+    In terms of the job content in the job blocks, this paper did not specifically
+    discuss its format. It can be in any format that is not restricted by source code,
+    executables or URLs, or it can be a sandboxed program to achieve cross-platform
+    features. But in the implementation, the packet format should be determined according
+    to the actual situation, and the format should be convenient for volunteers to
+    judge whether their equipment can handle the job.
+
+
+    Although anyone can know the participation of each volunteer through the blockchain,
+    this paper does not discuss how to design rewards for volunteer work. In actual
+    implementation, it is reasonable to consider rewarding volunteers in some way
+    to encourage volunteers to participate in volunteer computing.
+
+
+    # III. CONCLUSION
+
+
+    This paper proposes a blockchain-based volunteer computing system design, which
+    uses the decentralized characteristics of the blockchain to solve the single point
+    of failure. At the same time, because there is no task server as a bottleneck,
+    the scalability problem is solved. It also provides a certain traceability for
+    volunteer computing.
+
+
+    # ACKNOWLEDGMENT
+
+
+    I would like to thank Professor Ming-Deh Huang (University of Southern California)
+    for his guidance on cryptography. I would like to thank Mr. Yang for useful discussions.
+    I would like to thank ATEE-Plan for support.
+
+
+    # REFERENCES
+
+
+    [1] L.F. Sarmenta. Sabotage-tolerance mechanisms for volunteer computing systems.
+    In Proceedings First IEEE/ACM International Symposium on Cluster Computing and
+    the Grid, 2001, pp. 337-346.
+
+
+    [2] E. J. Korpela, “Seti@ home, boinc, and volunteer distributed computing,” Annual
+    Review of Earth and Planetary Sciences, vol. 40, pp. 69–87, 2012'
+  md: '
+
+    Take BOINC as an example of the traditional C/S framework. Its server has a job
+    generator responsible for generating new jobs, and a scheduler responsible for
+    delivering jobs (Shown as Figure 2). Since all volunteers'' task assignment and
+    publisher''s task storage need to pass through the task server in large-scale
+    applications, the task server is likely to have performance or network bottlenecks
+    and cause scalability problems and single point of failure problem.
+
+
+    ![](img/147d0ed8c8a0094bfeef9a98595d91c8_1_0.png)
+
+
+    Fig. 1. A BOINC server consists of several components, sharing several forms of
+    storage.
+
+
+    ![](img/147d0ed8c8a0094bfeef9a98595d91c8_1_1.png)
+
+
+    Fig. 2. The components of a BOINC task server.
+
+
+    ## B. Basic Principles of Blockchain Based Design
+
+
+    In this design, volunteers and publishers exchange data through the blockchain.
+    At the same time, all volunteers and publishers serve as nodes in the blockchain
+    network and support the operation of the blockchain network. Therefore, a decentralized
+    volunteer computing system can be established based on the blockchain. (Shown
+    as Figure 3) Since the task server is no longer used, and thanks to the decentralized
+    nature of the blockchain, the scalability problem and single point of failure
+    caused by the bottleneck of the task server can be solved.
+
+
+    ![](img/147d0ed8c8a0094bfeef9a98595d91c8_1_2.png)
+
+
+    Fig. 3. Volunteer computing based on blockchain.
+
+
+    Under this decentralized framework, because there is no centralized server, people
+    cannot use a method like a centralized system to allocate and schedule tasks.
+    Therefore, the publisher needs to split the project into multiple jobs with a
+    suitable amount of computing content and treat each job as a "job block", and
+    then publishes it on the blockchain. Then, volunteers can find unprocessed job
+    on the blockchain for processing, and post a "processing block" on the blockchain
+    to mark that the job is being processed, and other volunteers can use the "processing
+    block" to determine whether the job is being handled by other volunteers. When
+    the volunteer has finished processing the job, a "result block" should be issued
+    to prove that the job has been completed, which should contain the output of the
+    job.
+
+
+    ## C. Design of Error Correction Mechanism
+
+
+    Volunteer calculation participants are not responsible for the project (indeed,
+    their identity is unknown), so the results returned by a single volunteer should
+    be considered unreliable and insecure [8]. The wrong result may be due to a variety
+    of reasons, it may be a hardware malfunction, or a malicious attack from a volunteer.
+    Since the frequency of occurrence of the above problems cannot be ignored, volunteer
+    computing requires a verification mechanism to ensure that the job is completed
+    correctly. Therefore, an attribute "Handle count" is introduced for each job block.
+    This is an arbitrary positive integer set by the publisher to indicate how many
+    different volunteers can handle the job, so that the publisher can compare and
+    verify the results of different volunteers.
+
+
+    When a job is completed, the publisher should verify the result blocks published
+    by the volunteers, and publish the accepted volunteer results to a new "completed
+    block" to show that the job has been completed and which results from volunteers
+    have been accepted by the publisher.
+
+
+    ## D. Design of Anti-plagiarism Mechanism
+
+
+    As all content published on the blockchain is open to everyone, including the
+    results published by volunteers. If the result is published in its original format,
+    other volunteers can also see the result and can replay the result in their own
+    identity. Since a job block usually allows multiple volunteers to submit results
+    for verification, this allows some fake volunteers to create the illusion that
+    they participated in the computing, even if they did not participate in the computing,
+    but just copied the results of others. Therefore, asymmetric encryption is used
+    here to make the original format of the results only valid for the publisher.
+    Publishers should declare their public keys when publishing job blocks. When volunteers
+    publish results, they should encrypt their own public key together with their
+    result using the publisher''s public key, and then write it into the result block
+    to ensure that other volunteers cannot reuse the result. When verifying the result
+    block, the publisher should find the volunteer public key in the processing block
+    referenced by the result block, and check whether the volunteer public key encrypted
+    in the result matches it.
+
+
+    ## E. Summary of the Process
+
+
+    In summary, in this kind of system, for a job, a complete process should be:
+
+
+    - The publisher divides a project into several jobs with a suitable amount of
+    computing.
+
+    - The publisher packages the job content which may include source code, executable,
+    data, platform restrictions, introduction, etc., and decides the number of volunteers
+    handling the job, and packs this information together with its own public key
+    into a block, then publishes it to the blockchain.
+
+    - Volunteers look for the job block released by the publisher on the blockchain
+    and check whether there are enough processing blocks to process the job block.
+    If the processing block does not reach the upper limit of the job, the volunteer
+    will process the job.
+
+    - The volunteer selects a job block that can be processed and publishes a processing
+    block, which contains the volunteer''s public key and the corresponding job block
+    hash.
+
+    - After the volunteer completes a job, the volunteer''s own public key together
+    with the processing result will be encrypted using the public key of the job publisher.
+    After that, the encrypted data needs to be packed together with the hash of the
+    corresponding processing block into a result block, and then publish it to the
+    blockchain.
+
+    - The publisher collects corresponding result blocks from the blockchain, uses
+    the private key to decrypt the result, and verifies whether the public key in
+    the result matches the public key declared in the corresponding processing block.
+    If the verification is successful, the publisher continues to verify the correctness
+    of the calculation result.
+
+    - The publisher lists all accepted result blocks, puts them into the completion
+    block along with the hash of the corresponding job block, and then publishes them
+    to the blockchain to announce the end of the job processing.
+
+
+    As shown in Figure 4, this is an example fragment of a job on the blockchain.
+
+
+    ![](img/147d0ed8c8a0094bfeef9a98595d91c8_3_0.png)
+
+
+    Fig. 4. An example fragment of a job on the blockchain.
+
+
+    ## F. Defects and Possible Solutions
+
+
+    Although this design uses the characteristics of the blockchain to effectively
+    solve the problems of centralization and single point of failure, it also introduces
+    some shortcomings. Firstly, if there are multiple volunteers in the standby state,
+    that is, all tasks are currently being processed or have been processed, there
+    are multiple volunteers that are not processing jobs and are waiting for new jobs
+    to process. When a new job block is published, if multiple volunteers want to
+    handle the job at the same time, they will tend to enter a competitive condition.
+    At this time, multiple volunteers want to publish a processing block at the same
+    time. Because the broadcast of the blockchain has a certain delay, it is easy
+    to cause the blockchain to fork. Therefore, each volunteer should be required
+    to process only one job at the same time, otherwise the request to enter the chain
+    of a new processing block should be rejected to reduce the chance of competition,
+    when a new job is released. And a certain blockchain consensus mechanism is needed
+    to maintain the uniqueness of the chain. Secondly, since the key pair can be generated
+    arbitrarily, this system cannot guarantee that each volunteer only has a single
+    volunteer key. If a real volunteer controls multiple volunteer keys and submits
+    the work result in multiple identities, it may affect the verification of the
+    results. Therefore, this design may be more suitable for use in a small area of
+    trust. If large-scale application is required, it may be necessary to establish
+    a centralized or distributed verification mechanism to verify the identity of
+    volunteers to prevent the aforementioned "puppet volunteers".
+
+
+    Anyone can search the blockchain to understand which volunteers participated in
+    a computing for each computing job in history, and the adoption of the results
+    provided by each volunteer. At the same time, the authenticity of history can
+    be guaranteed with the help of the persistent and auditable properties of the
+    blockchain. This paper also raises two possible problems. One is the consensus
+    problem on the chain, and the other is the puppet volunteer problem. And proposed
+    possible solutions to these two problems separately.
+
+
+    In terms of the job content in the job blocks, this paper did not specifically
+    discuss its format. It can be in any format that is not restricted by source code,
+    executables or URLs, or it can be a sandboxed program to achieve cross-platform
+    features. But in the implementation, the packet format should be determined according
+    to the actual situation, and the format should be convenient for volunteers to
+    judge whether their equipment can handle the job.
+
+
+    Although anyone can know the participation of each volunteer through the blockchain,
+    this paper does not discuss how to design rewards for volunteer work. In actual
+    implementation, it is reasonable to consider rewarding volunteers in some way
+    to encourage volunteers to participate in volunteer computing.
+
+
+    ## III. CONCLUSION
+
+
+    This paper proposes a blockchain-based volunteer computing system design, which
+    uses the decentralized characteristics of the blockchain to solve the single point
+    of failure. At the same time, because there is no task server as a bottleneck,
+    the scalability problem is solved. It also provides a certain traceability for
+    volunteer computing.
+
+
+    ## ACKNOWLEDGMENT
+
+
+    I would like to thank Professor Ming-Deh Huang (University of Southern California)
+    for his guidance on cryptography. I would like to thank Mr. Yang for useful discussions.
+    I would like to thank ATEE-Plan for support.
+
+
+    ## REFERENCES
+
+
+    [1] L.F. Sarmenta. Sabotage-tolerance mechanisms for volunteer computing systems.
+    In Proceedings First IEEE/ACM International Symposium on Cluster Computing and
+    the Grid, 2001, pp. 337-346.
+
+
+    [2] E. J. Korpela, “Seti@ home, boinc, and volunteer distributed computing,” Annual
+    Review of Earth and Planetary Sciences, vol. 40, pp. 69–87, 2012
+
+    '
+  mdcn: '
+
+    以传统 C/S 框架中的 BOINC 为例。其服务器有一个负责生成新作业的作业生成器，以及一个负责交付作业的调度器（如图 2 所示）。在大规模应用中，由于所有志愿者的任务分配和发布者的任务存储都需要通过任务服务器，因此任务服务器很可能会出现性能或网络瓶颈，并导致可扩展性问题以及单点故障问题。
+
+
+    ![](img/147d0ed8c8a0094bfeef9a98595d91c8_1_0.png)
+
+
+    图 1. BOINC 服务器由多个组件组成，共享多种形式的存储。
+
+
+    ![](img/147d0ed8c8a0094bfeef9a98595d91c8_1_1.png)
+
+
+    图 2. BOINC 任务服务器的组件。
+
+
+    ## B. 基于区块链设计的基本原理
+
+
+    在此设计中，志愿者和发布者通过区块链交换数据。同时，所有志愿者和发布者作为区块链网络中的节点，支持区块链网络的运行。因此，可以基于区块链建立去中心化的志愿计算系统（如图
+    3 所示）。由于不再使用任务服务器，并且得益于区块链的去中心化特性，由任务服务器瓶颈引起的可扩展性问题和单点故障问题可以得到解决。
+
+
+    ![](img/147d0ed8c8a0094bfeef9a98595d91c8_1_2.png)
+
+
+    图 3. 基于区块链的志愿计算。
+
+
+    ## C. 纠错机制的设计
+
+
+    志愿计算参与者不对项目负责（事实上，他们的身份是未知的），因此单个志愿者返回的结果应被视为不可靠和不安全的 [8]。错误结果可能由多种原因造成，可能是硬件故障，也可能是来自志愿者的恶意攻击。由于上述问题的发生频率不容忽视，志愿计算需要一种验证机制来确保作业被正确完成。因此，为每个作业块引入了一个属性“处理计数”（Handle
+    count）。这是由发布者设置的任意正整数，用于表示可以处理该作业的不同志愿者的数量，以便发布者能够比较和验证不同志愿者的结果。
+
+
+    当作业完成时，发布者应验证志愿者发布的结果块，并将被接受的志愿者结果发布到一个新的“完成块”中，以表明该作业已完成，以及发布者接受了哪些志愿者结果。
+
+
+    ## D. 反抄袭机制的设计
+
+
+    由于区块链上发布的所有内容对所有人都是公开的，包括志愿者发布的结果。如果结果以其原始格式发布，其他志愿者也能看到该结果，并能以自己的身份重放该结果。由于一个作业块通常允许多个志愿者提交结果进行验证，这可能使一些虚假志愿者制造出他们参与了计算的假象，即使他们并未参与计算，而只是复制了其他人的结果。因此，这里使用非对称加密，使得结果的原始格式仅对发布者有效。发布者应在发布作业块时声明其公钥。当志愿者发布结果时，他们应使用发布者的公钥将自己的公钥与结果一起加密，然后写入结果块，以确保其他志愿者无法重用该结果。在验证结果块时，发布者应找到结果块引用的处理块中的志愿者公钥，并检查结果中加密的志愿者公钥是否与之匹配。
+
+
+    ## E. 流程总结
+
+
+    总之，在这类系统中，对于一个作业，完整流程应为：
+
+
+    - 发布者将一个项目划分为若干个计算量合适的作业。
+
+    - 发布者打包作业内容（可能包括源代码、可执行文件、数据、平台限制、介绍等），并决定处理该作业的志愿者数量，然后将这些信息连同自己的公钥一起打包到一个区块中，发布到区块链上。
+
+    - 志愿者在区块链上查找发布者发布的作业块，并检查是否有足够的处理块来处理该作业块。如果处理块未达到作业上限，志愿者将处理该作业。
+
+    - 志愿者选择一个可处理的作业块并发布一个处理块，其中包含志愿者的公钥和相应作业块的哈希。
+
+    - 志愿者完成作业后，将使用作业发布者的公钥对志愿者自己的公钥和处理结果进行加密。之后，加密数据需要与相应处理块的哈希一起打包成一个结果块，然后发布到区块链。
+
+    - 发布者从区块链收集相应的结果块，使用私钥解密结果，并验证结果中的公钥是否与相应处理块中声明的公钥匹配。如果验证成功，发布者继续验证计算结果的正确性。
+
+    - 发布者列出所有被接受的结果块，将它们连同相应作业块的哈希放入完成块中，然后发布到区块链上，以宣布作业处理结束。
+
+
+    如图 4 所示，这是区块链上一个作业的示例片段。
+
+
+    ![](img/147d0ed8c8a0094bfeef9a98595d91c8_3_0.png)
+
+
+    图 4. 区块链上作业的示例片段。
+
+
+    ## F. 缺陷与可能的解决方案
+
+
+    尽管这种设计利用区块链的特性有效地解决了集中化和单点故障问题，但它也引入了一些缺点。首先，如果存在多个处于待机状态的志愿者，即所有任务当前都在处理中或已处理完毕，但仍有多个志愿者没有处理作业而在等待新作业。当新的作业块发布时，如果多个志愿者想同时处理该作业，他们往往会进入竞争状态。此时，多个志愿者想同时发布处理块。由于区块链的广播存在一定延迟，容易导致区块链分叉。因此，应要求每个志愿者在同一时间只处理一个作业，否则，在新作业发布时，应拒绝新的处理块的入链请求，以减少竞争机会。并且需要一定的区块链共识机制来维护链的唯一性。其次，由于密钥对可以任意生成，该系统无法保证每个志愿者只拥有一个志愿者密钥。如果一个真实志愿者控制多个志愿者密钥，并以多个身份提交工作结果，可能会影响结果的验证。因此，这种设计可能更适合在较小的信任范围内使用。如果需要大规模应用，可能需要建立中心化或分布式的验证机制来验证志愿者身份，以防止上述“傀儡志愿者”。
+
+
+    任何人都可以搜索区块链，了解历史上每个计算作业中哪些志愿者参与了计算，以及每个志愿者提供的结果被采纳的情况。同时，借助区块链持久且可审计的特性，历史真实性可以得到保证。本文还提出了两个可能的问题：一个是链上共识问题，另一个是傀儡志愿者问题，并分别对这两个问题提出了可能的解决方案。
+
+
+    关于作业块中的作业内容，本文没有具体讨论其格式。它可以是任何不受源代码、可执行文件或 URL 限制的格式，也可以是沙盒程序以实现跨平台特性。但在实现中，应根据实际情况确定数据包格式，并且该格式应便于志愿者判断其设备是否能够处理该作业。
+
+
+    尽管任何人都可以通过区块链了解每个志愿者的参与情况，但本文没有讨论如何设计对志愿者工作的奖励。在实际实现中，考虑以某种方式奖励志愿者以鼓励他们参与志愿计算是合理的。
+
+
+    ## III. 结论
+
+
+    本文提出了一种基于区块链的志愿计算系统设计，利用区块链的去中心化特性来解决单点故障问题。同时，由于不再存在任务服务器这一瓶颈，可扩展性问题也得到了解决。该设计还为志愿计算提供了一定的可追溯性。
+
+
+    ## 致谢
+
+
+    我要感谢南加利福尼亚大学的黄明德教授在密码学方面的指导。我要感谢杨先生的有益讨论。我要感谢 ATEE-Plan 项目的支持。
+
+
+    ## 参考文献
+
+
+    [1] L.F. Sarmenta. 志愿计算系统的防破坏容忍机制。见 2001 年第一届 IEEE/ACM 集群计算与网格国际研讨会论文集，第 337-346
+    页。
+
+
+    [2] E. J. Korpela, “Seti@home、BOINC 与志愿分布式计算”，《地球与行星科学年度评论》，第 40 卷，第 69–87 页，2012
+    年。
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 4]
+
+
+    <!-- no content -->'
+  md: <!-- no content -->
+  mdcn: '
+
+    <!-- 无内容 -->
+
+    '
+  merge: 0
