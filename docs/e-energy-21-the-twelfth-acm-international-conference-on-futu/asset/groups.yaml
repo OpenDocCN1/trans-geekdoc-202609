@@ -1,0 +1,3066 @@
+- raw:
+  - '[PAGE 0]
+
+
+    <!-- no content -->'
+  - '[PAGE 1]
+
+
+    heat pump behaviour. Mode *Off* interrupts heating and reduces heat pump power
+    consumption to a minimum, where as *ForcedOn* forces the heat pump to consume
+    the maximum amount of power, increasing the heat. These two modes enable the utilization
+    of heat pump flexibility, as they allow to temporarily decrease power consumption
+    with mode *Off* or increase power consumption with *ForcedOn* mode.
+
+
+    the proposed method HeatFlex for flexibility prediction. Section 5 describes used
+    indoor temperature forecasting models and metrics. Section 6 describes our proposed
+    algorithm for predicting flexibility and proposed flexibility metrics. Section
+    7 describes setup for the experiments. Section 8 shows the results of the experiments.
+    Finally, Section 9 concludes the paper and outlines directions for future work.
+
+
+    # Table 1: SG-Ready heat pump operating modes
+
+
+    | Operating mode | Definition |
+
+    |---|---|
+
+    | *Off* | Heat pump operation actively switched off, using minimal power (limited
+    to 2 hours a day) |
+
+    | *Normal* | Heat pump operation is normal |
+
+    | *RecommendedOn* | Heat pump operation is set to prefer switching on (interpreted
+    as a recommendation) |
+
+    | *ForcedOn* | Heat pump (and auxiliary heaters, if applicable) operation actively
+    switched on, using maximum power |
+
+
+    However, there are no known scalable, data-driven methods for individual smart
+    heat pump flexibility prediction that estimate what heat pump operation is possible
+    given user predefined temperature comfort bounds. Previously conducted studies
+    utilize physical models to forecast thermal response, however, these methods require
+    exact heat pump specifications, detailed information about the building and its
+    layout which are unique to each deployment [23]. Furthermore, these methods use
+    a lot of monitored variables which are not always available due to lack of sensors
+    [15, 24].
+
+
+    This paper aims to address these limitations by proposing a novel data-driven
+    flexibility prediction method HeatFlex for individual smart heat pumps and makes
+    the following contributions: (1) Proposes HeatFlex, the first, to the authors’
+    knowledge, fully data-driven flexibility prediction method for smart heat pumps
+    based on modern machine learning methods. (2) Introduces novel flexibility metrics,
+    enabling quantitative evaluation of predicted flexibility. (3) Experimental qualitative
+    and quantitative evaluation of HeatFlex using real world heat pump data from three
+    deployments. HeatFlex is fully data-driven and does not require a predefined physical
+    model of the deployment environment or exact specifications of the heat pump and
+    only uses 3 monitored variables for prediction: indoor temperature, heat pump
+    power consumption and outdoor temperature, which are widely available from most
+    modern energy management systems and open-access weather information providers.
+    Our experimental evaluation shows that HeatFlex, utilizing modern recurrent neural
+    networks, significantly outperforms multivariate linear regression and SARIMAX
+    time series forecasting model baselines in terms of prediction error. Results
+    show that HeatFlex is capable of accurately predicting over 90% of available flexibility
+    throughout different seasons and heat pump deployments.
+
+
+    The paper is structured as follows: Section 2 describes related work. Section
+    3 defines the flexibility prediction and indoor temperature forecasting problems.
+    Section 4 provides an outline of
+
+
+    # 2 RELATED WORK
+
+
+    In previous work, several methods have been proposed for flexibility prediction.
+    A regression and temporal sequence matching based method has been proposed for
+    predicting device activation time and energy demand of electric vehicles and wet-devices
+    (washing and cleaning devices that use water, like dishwashers or washer dryers)
+    [20, 21]. A physical model based energy demand prediction algorithm has been proposed
+    for shifting demand of electrical vehicles and heat pumps to minimize the cost
+    of consumed electricity [23]. Another study proposes a physical modelling approach
+    for estimating the energy profile of a building with an installed heat pump expressed
+    as a first order linear time invariant system [21]. In comparison, this paper
+    proposes HeatFlex, a model-free, fully data-driven method for predicting flexibility
+    from individual smart heat pumps.
+
+
+    Traditionally, physical modelling through parametrized differential equations
+    was used to model building’s thermal response to change in heating operation of
+    HVAC systems, including heat pumps [23]. However, this approach requires prior
+    knowledge about the heating installations, building layout, precise device specifications
+    and a significant number of monitored variables through installed sensors, which
+    are not typically available in real world deployments. Furthermore, the physical
+    modelling approach requires defined equations describing the exact environment
+    configuration for each individual deployment and is also heavily reliant on constantly
+    available high frequency, accurate sensor readings [15, 24]. Alternative data-driven
+    methods, such as regression methods or time-series forecasting models do not have
+    such strict prerequisites and have been applied to solve load forecasting problems
+    [10]. However, regression methods do not capture temporal dependencies and most
+    cannot model non-linear relationships, whereas time series forecasting models
+    tend to underperform on highly non-linear, non-stationary data [18, 30]. HeatFlex
+    utilizes modern data-driven modeling methods that can capture both sequential
+    and complex, non-linear relationships.
+
+
+    Over the past few years, machine learning based approaches have been successfully
+    adopted and achieved state-of-the-art performance for various prediction problems
+    in the energy domain [2, 12, 14]. Modern machine learning methods like deep neural
+    networks are capable of modelling complex, non-linear relationships between variables,
+    having much greater applicability and, usually, higher performance than traditional
+    regression or time series forecasting algorithms [24]. Recently, these methods
+    have been applied for load and thermal response prediction in buildings equipped
+    with HVAC systems. Traditional neural networks have been used for single step
+    ahead humidity and indoor temperature forecasting in households [31], indoor temperature
+    forecasting for several areas of a school building [1]. More advanced recurrent'
+  - '[PAGE 2]
+
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_2_0.png)
+
+
+    **Figure 1: Overview of HeatFlex: data-driven smart heat pump flexibility prediction
+    method**
+
+
+    neural networks, such as the Long-Short Term Memory (LSTM) network have also been
+    used for indoor temperature forecasting in a building with an installed air handling
+    unit [17], outperforming traditional neural network models. LSTM based models
+    have also been used for heating load forecasting for combined heating and power
+    plants, yielding significant performance gains compared to traditional regression
+    approaches [18]. This paper improves on previous research by effectively applying
+    modern neural networks for smart heat pump indoor temperature forecasting and
+    flexibility prediction.
+
+
+    In this paper heat pump flexibility is denoted as F. Flexibility F ∈ ℤ, F > 0
+    is a positive integer scalar, representing how many timesteps the user predefined
+    lower temperature bound T_ind_lower and upper temperature bound T_ind_upper will
+    not be violated if the heat pump is operating according to the control signal
+    U. Predicted flexibility is defined as F̂, whereas existing potential flexibility
+    is denoted as F.
+
+
+    # 3 PROBLEM DEFINITION
+
+
+    This section formally describes the preliminaries and provides a problem definition
+    for the paper.
+
+
+    X = [X(t − m + 1) … X(t − 1) X(t)] (1)
+
+    X is a regular time series holding historical data of past observed parameter
+    values with record count m (known as memory) defining how many past records will
+    be used for prediction. X is composed of vectors X(t):
+
+    X(t) = [T_ind(t) T_out(t) P_hp(t) DT(t)] (2)
+
+    where T_ind(t) is the indoor temperature in a selected environment at time t,
+    T_out(t) is the outdoor (external) temperature at time t, P_hp(t) is the average
+    power consumption by the heat pump in the time interval (t − s; t], and DT(t)
+    is the date and time at which T_ind(t), T_out(t), and P_hp(t) were gathered.
+
+
+    Problem definition. Let FLEX_PREDICT be a function taking predicted indoor temperature
+    Ŷ, lower temperature bound T_ind_lower and upper temperature bound T_ind_upper,
+    returning predicted flexibility F̂, such that:
+
+    FLEX_PREDICT : (Ŷ, T_ind_lower, T_ind_upper) ↦ F̂ (5)
+
+    Let TEMP_FORECAST be a function taking historical readings X, control signal U,
+    returning forecasted temperature Ŷ, such that:
+
+    TEMP_FORECAST : (X, U) ↦ Ŷ (6)
+
+
+    # 4 HEATFLEX OVERVIEW
+
+
+    This section outlines the flexibility prediction method HeatFlex proposed in this
+    paper. HeatFlex utilizes data-driven predictive models to learn TEMP_FORECAST,
+    an indoor temperature forecasting function used to accurately forecast indoor
+    temperature Ŷ given historical data X and control signal U for prediction horizon
+    h. As seen in Figure 1, HeatFlex has two phases: indoor temperature forecasting
+    and flexibility prediction.'
+  md: '
+
+    Heat pump behaviour. Mode *Off* interrupts heating and reduces heat pump power
+    consumption to a minimum, whereas *ForcedOn* forces the heat pump to consume the
+    maximum amount of power, increasing the heat. These two modes enable the utilization
+    of heat pump flexibility, as they allow to temporarily decrease power consumption
+    with mode *Off* or increase power consumption with *ForcedOn* mode.
+
+
+    The proposed method HeatFlex for flexibility prediction. Section 5 describes used
+    indoor temperature forecasting models and metrics. Section 6 describes our proposed
+    algorithm for predicting flexibility and proposed flexibility metrics. Section
+    7 describes setup for the experiments. Section 8 shows the results of the experiments.
+    Finally, Section 9 concludes the paper and outlines directions for future work.
+
+
+    ## Table 1: SG-Ready heat pump operating modes
+
+
+    | Operating mode | Definition |
+
+    |---|---|
+
+    | *Off* | Heat pump operation actively switched off, using minimal power (limited
+    to 2 hours a day) |
+
+    | *Normal* | Heat pump operation is normal |
+
+    | *RecommendedOn* | Heat pump operation is set to prefer switching on (interpreted
+    as a recommendation) |
+
+    | *ForcedOn* | Heat pump (and auxiliary heaters, if applicable) operation actively
+    switched on, using maximum power |
+
+
+    However, there are no known scalable, data-driven methods for individual smart
+    heat pump flexibility prediction that estimate what heat pump operation is possible
+    given user predefined temperature comfort bounds. Previously conducted studies
+    utilize physical models to forecast thermal response, however, these methods require
+    exact heat pump specifications, detailed information about the building and its
+    layout which are unique to each deployment [23]. Furthermore, these methods use
+    a lot of monitored variables which are not always available due to lack of sensors
+    [15, 24].
+
+
+    This paper aims to address these limitations by proposing a novel data-driven
+    flexibility prediction method HeatFlex for individual smart heat pumps and makes
+    the following contributions: (1) Proposes HeatFlex, the first, to the authors’
+    knowledge, fully data-driven flexibility prediction method for smart heat pumps
+    based on modern machine learning methods. (2) Introduces novel flexibility metrics,
+    enabling quantitative evaluation of predicted flexibility. (3) Experimental qualitative
+    and quantitative evaluation of HeatFlex using real world heat pump data from three
+    deployments. HeatFlex is fully data-driven and does not require a predefined physical
+    model of the deployment environment or exact specifications of the heat pump and
+    only uses 3 monitored variables for prediction: indoor temperature, heat pump
+    power consumption and outdoor temperature, which are widely available from most
+    modern energy management systems and open-access weather information providers.
+    Our experimental evaluation shows that HeatFlex, utilizing modern recurrent neural
+    networks, significantly outperforms multivariate linear regression and SARIMAX
+    time series forecasting model baselines in terms of prediction error. Results
+    show that HeatFlex is capable of accurately predicting over 90% of available flexibility
+    throughout different seasons and heat pump deployments.
+
+
+    The paper is structured as follows: Section 2 describes related work. Section
+    3 defines the flexibility prediction and indoor temperature forecasting problems.
+    Section 4 provides an outline of
+
+
+    ## 2 RELATED WORK
+
+
+    In previous work, several methods have been proposed for flexibility prediction.
+    A regression and temporal sequence matching based method has been proposed for
+    predicting device activation time and energy demand of electric vehicles and wet-devices
+    (washing and cleaning devices that use water, like dishwashers or washer dryers)
+    [20, 21]. A physical model based energy demand prediction algorithm has been proposed
+    for shifting demand of electrical vehicles and heat pumps to minimize the cost
+    of consumed electricity [23]. Another study proposes a physical modelling approach
+    for estimating the energy profile of a building with an installed heat pump expressed
+    as a first order linear time invariant system [21]. In comparison, this paper
+    proposes HeatFlex, a model-free, fully data-driven method for predicting flexibility
+    from individual smart heat pumps.
+
+
+    Traditionally, physical modelling through parametrized differential equations
+    was used to model building’s thermal response to change in heating operation of
+    HVAC systems, including heat pumps [23]. However, this approach requires prior
+    knowledge about the heating installations, building layout, precise device specifications
+    and a significant number of monitored variables through installed sensors, which
+    are not typically available in real world deployments. Furthermore, the physical
+    modelling approach requires defined equations describing the exact environment
+    configuration for each individual deployment and is also heavily reliant on constantly
+    available high frequency, accurate sensor readings [15, 24]. Alternative data-driven
+    methods, such as regression methods or time-series forecasting models do not have
+    such strict prerequisites and have been applied to solve load forecasting problems
+    [10]. However, regression methods do not capture temporal dependencies and most
+    cannot model non-linear relationships, whereas time series forecasting models
+    tend to underperform on highly non-linear, non-stationary data [18, 30]. HeatFlex
+    utilizes modern data-driven modeling methods that can capture both sequential
+    and complex, non-linear relationships.
+
+
+    Over the past few years, machine learning based approaches have been successfully
+    adopted and achieved state-of-the-art performance for various prediction problems
+    in the energy domain [2, 12, 14]. Modern machine learning methods like deep neural
+    networks are capable of modelling complex, non-linear relationships between variables,
+    having much greater applicability and, usually, higher performance than traditional
+    regression or time series forecasting algorithms [24]. Recently, these methods
+    have been applied for load and thermal response prediction in buildings equipped
+    with HVAC systems. Traditional neural networks have been used for single step
+    ahead humidity and indoor temperature forecasting in households [31], indoor temperature
+    forecasting for several areas of a school building [1]. More advanced recurrent
+
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_2_0.png)
+
+
+    **Figure 1: Overview of HeatFlex: data-driven smart heat pump flexibility prediction
+    method**
+
+
+    neural networks, such as the Long-Short Term Memory (LSTM) network have also been
+    used for indoor temperature forecasting in a building with an installed air handling
+    unit [17], outperforming traditional neural network models. LSTM based models
+    have also been used for heating load forecasting for combined heating and power
+    plants, yielding significant performance gains compared to traditional regression
+    approaches [18]. This paper improves on previous research by effectively applying
+    modern neural networks for smart heat pump indoor temperature forecasting and
+    flexibility prediction.
+
+
+    In this paper heat pump flexibility is denoted as F. Flexibility F ∈ ℤ, F > 0
+    is a positive integer scalar, representing how many timesteps the user predefined
+    lower temperature bound T_ind_lower and upper temperature bound T_ind_upper will
+    not be violated if the heat pump is operating according to the control signal
+    U. Predicted flexibility is defined as F̂, whereas existing potential flexibility
+    is denoted as F.
+
+
+    ## 3 PROBLEM DEFINITION
+
+
+    This section formally describes the preliminaries and provides a problem definition
+    for the paper.
+
+
+    X = [X(t − m + 1) … X(t − 1) X(t)] (1)
+
+    X is a regular time series holding historical data of past observed parameter
+    values with record count m (known as memory) defining how many past records will
+    be used for prediction. X is composed of vectors X(t):
+
+    X(t) = [T_ind(t) T_out(t) P_hp(t) DT(t)] (2)
+
+    where T_ind(t) is the indoor temperature in a selected environment at time t,
+    T_out(t) is the outdoor (external) temperature at time t, P_hp(t) is the average
+    power consumption by the heat pump in the time interval (t − s; t], and DT(t)
+    is the date and time at which T_ind(t), T_out(t), and P_hp(t) were gathered.
+
+
+    Problem definition. Let FLEX_PREDICT be a function taking predicted indoor temperature
+    Ŷ, lower temperature bound T_ind_lower and upper temperature bound T_ind_upper,
+    returning predicted flexibility F̂, such that:
+
+    FLEX_PREDICT : (Ŷ, T_ind_lower, T_ind_upper) ↦ F̂ (5)
+
+    Let TEMP_FORECAST be a function taking historical readings X, control signal U,
+    returning forecasted temperature Ŷ, such that:
+
+    TEMP_FORECAST : (X, U) ↦ Ŷ (6)
+
+
+    ## 4 HEATFLEX OVERVIEW
+
+
+    This section outlines the flexibility prediction method HeatFlex proposed in this
+    paper. HeatFlex utilizes data-driven predictive models to learn TEMP_FORECAST,
+    an indoor temperature forecasting function used to accurately forecast indoor
+    temperature Ŷ given historical data X and control signal U for prediction horizon
+    h. As seen in Figure 1, HeatFlex has two phases: indoor temperature forecasting
+    and flexibility prediction.
+
+    '
+  mdcn: '
+
+    热泵行为。模式 *Off* 中断加热并将热泵功耗降至最低，而 *ForcedOn* 则强制热泵消耗最大功率，增加热量。这两种模式使热泵灵活性的利用成为可能，因为它们允许通过
+    *Off* 模式暂时降低功耗，或通过 *ForcedOn* 模式增加功耗。
+
+
+    提出的用于灵活性预测的方法 HeatFlex。第 5 节描述了所使用的室内温度预测模型和指标。第 6 节描述了我们提出的灵活性预测算法和提出的灵活性指标。第
+    7 节描述了实验设置。第 8 节展示了实验结果。最后，第 9 节总结了论文并概述了未来工作的方向。
+
+
+    ## 表 1：SG-Ready 热泵运行模式
+
+
+    | 操作模式 | 定义 |
+
+    |---|---|
+
+    | *Off* | 热泵运行主动关闭，使用最小功率（每天限时 2 小时） |
+
+    | *Normal* | 热泵运行正常 |
+
+    | *RecommendedOn* | 热泵运行设置为优先开启（解释为建议） |
+
+    | *ForcedOn* | 热泵（以及如适用时的辅助加热器）运行主动开启，使用最大功率 |
+
+
+    然而，目前尚无已知可扩展的数据驱动方法用于单个智能热泵灵活性预测，该方法可根据用户预定义的温度舒适边界估计热泵操作的可行性。之前的研究利用物理模型来预测热响应，然而，这些方法需要精确的热泵规格、建筑及其布局的详细信息，这些信息对每个部署都是唯一的
+    [23]。此外，这些方法使用大量监测变量，由于缺乏传感器，这些变量并不总是可用 [15, 24]。
+
+
+    本文旨在通过提出一种新颖的数据驱动灵活性预测方法 HeatFlex 来解决这些限制，该方法适用于单个智能热泵，并做出以下贡献：（1）提出 HeatFlex，据作者所知，首个基于现代机器学习方法的智能热泵完全数据驱动灵活性预测方法。（2）引入新颖的灵活性指标，实现预测灵活性的定量评估。（3）使用来自三个部署的真实热泵数据的
+    HeatFlex 实验定性和定量评估。HeatFlex 完全是数据驱动的，不需要部署环境的预定义物理模型或热泵的确切规格，并且预测仅使用 3 个监测变量：室内温度、热泵功耗和室外温度，这些变量可广泛从大多数现代能源管理系统和开放获取的天气信息提供商获得。我们的实验评估表明，利用现代循环神经网络的
+    HeatFlex 在预测误差方面显著优于多元线性回归和 SARIMAX 时间序列预测模型基线。结果表明，HeatFlex 能够在不同季节和热泵部署中准确预测超过
+    90% 的可用灵活性。
+
+
+    本文结构如下：第 2 节描述相关工作。第 3 节定义灵活性预测和室内温度预测问题。第 4 节提供了概述
+
+
+    ## 2 相关工作
+
+
+    在之前的工作中，已提出了几种灵活性预测方法。已提出基于回归和时间序列匹配的方法来预测电动汽车和湿设备（使用水的洗涤和清洁设备，如洗碗机或洗烘一体机）的设备激活时间和能源需求
+    [20, 21]。已提出基于物理模型的能源需求预测算法，用于将电动汽车和热泵的需求转移以最小化消耗电力的成本 [23]。另一项研究提出了一种物理建模方法，用于估计安装有热泵的建筑的能量曲线，表示为一阶线性时不变系统
+    [21]。相比之下，本文提出 HeatFlex，一种无模型、完全数据驱动的方法，用于预测单个智能热泵的灵活性。
+
+
+    传统上，通过参数化微分方程的物理建模用于模拟建筑对 HVAC 系统加热操作变化的热响应，包括热泵 [23]。然而，这种方法需要关于加热装置、建筑布局、精确设备规格以及通过安装传感器监测的大量变量的先验知识，这些在实际部署中通常不可用。此外，物理建模方法需要定义描述每个单独部署的精确环境配置的方程，并且也严重依赖于不断可用、频率高、准确的传感器读数
+    [15, 24]。替代的数据驱动方法，如回归方法或时间序列预测模型没有如此严格的前提条件，并已应用于解决负荷预测问题 [10]。然而，回归方法无法捕捉时间依赖性，且大多数无法建模非线性关系，而时间序列预测模型在高度非线性、非平稳数据上往往表现不佳
+    [18, 30]。HeatFlex 利用能够捕捉序列和复杂非线性关系现代数据驱动建模方法。
+
+
+    在过去几年中，基于机器学习的方法已被成功采用，并在能源领域的各种预测问题中取得了最先进的性能 [2, 12, 14]。像深度神经网络这样的现代机器学习方法能够建模变量之间复杂、非线性的关系，具有更大的适用性和通常比传统回归或时间序列预测算法更高的性能
+    [24]。最近，这些方法已应用于配备 HVAC 系统的建筑的负荷和热响应预测。传统神经网络已用于家庭中单步超前湿度和室内温度预测 [31]、学校建筑多个区域的室内温度预测
+    [1]。更先进的循环
+
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_2_0.png)
+
+
+    **图 1：HeatFlex 概述：数据驱动的智能热泵灵活性预测方法**
+
+
+    神经网络，如长短期记忆（LSTM）网络，也已用于安装有空气处理装置的建筑的室内温度预测，优于传统神经网络模型 [17]。基于 LSTM 的模型也已用于联合供热和发电厂的供热负荷预测，与传统回归方法相比取得了显著的性能提升
+    [18]。本文通过有效地应用现代神经网络用于智能热泵室内温度预测和灵活性预测改进了之前的研究。
+
+
+    本文中热泵灵活性表示为 F。灵活性 F ∈ ℤ，F > 0 是一个正整数标量，表示如果热泵根据控制信号 U 运行，用户预定义的下限温度 T_ind_lower
+    和上限温度 T_ind_upper 在多少个时间步内不会被违反。预测灵活性定义为 F̂，而现有潜在灵活性表示为 F。
+
+
+    ## 3 问题定义
+
+
+    本节正式描述了预备知识并为本文提供了问题定义。
+
+
+    X = [X(t − m + 1) … X(t − 1) X(t)] (1)
+
+    X 是一个常规时间序列，保存过去观测参数值的历史数据，记录数 m（称为记忆）定义了用于预测的过去记录数量。X 由向量 X(t) 组成：
+
+    X(t) = [T_ind(t) T_out(t) P_hp(t) DT(t)] (2)
+
+    其中 T_ind(t) 是在时间 t 时所选环境中的室内温度，T_out(t) 是在时间 t 时的室外（外部）温度，P_hp(t) 是热泵在时间间隔 (t
+    − s; t] 内的平均功耗，DT(t) 是收集 T_ind(t)、T_out(t) 和 P_hp(t) 的日期和时间。
+
+
+    问题定义。设 FLEX_PREDICT 为一个函数，接收预测室内温度 Ŷ、下限温度 T_ind_lower 和上限温度 T_ind_upper，返回预测灵活性
+    F̂，使得：
+
+    FLEX_PREDICT : (Ŷ, T_ind_lower, T_ind_upper) ↦ F̂ (5)
+
+    设 TEMP_FORECAST 为一个函数，接收历史读数 X、控制信号 U，返回预测温度 Ŷ，使得：
+
+    TEMP_FORECAST : (X, U) ↦ Ŷ (6)
+
+
+    ## 4 HeatFlex 概述
+
+
+    本节概述了本文提出的灵活性预测方法 HeatFlex。HeatFlex 利用数据驱动的预测模型来学习 TEMP_FORECAST，即室内温度预测函数，用于根据历史数据
+    X 和控制信号 U 对预测范围 h 内的室内温度 Ŷ 进行准确预测。如图 1 所示，HeatFlex 有两个阶段：室内温度预测和灵活性预测。
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_3_0.png)
+
+
+    # Figure 2: Overview of used indoor temperature forecasting models (visualized
+    in order starting from the left: LSTM, GRU, Multivariate Linear Regression, SARIMAX)
+
+
+    In this case, the trained model will take historical data X and control signal
+    U_off as inputs and predict how the temperature will change, returning predicted
+    temperature Ŷ_off. In the second scenario ForcedOn, the same procedure is repeated
+    for mode ForcedOn, using historical data X and control signal U_on to predict
+    Ŷ_on.
+
+
+    During the flexibility prediction phase, the forecasted temperatures are used
+    to predict flexibility. In both scenarios Off and ForcedOn, the predicted temperature
+    along with user defined temperature bounds T_ind_lower, T_ind_upper are used to
+    predict flexibility, using function FLEX_PREDICT as described in Section 6. In
+    scenario Off, Ŷ_off is used to predict f̂_off, whereas in scenario ForcedOn, Ŷ_on
+    is used to predict f̂_on. The average forecasting error ε calculated during model
+    training can be optionally used in FLEX_PREDICT to adjust for forecasting error
+    when predicting flexibility (see Section 6).
+
+
+    # 5 INDOOR TEMPERATURE FORECASTING
+
+
+    In this paper, predictive models are used to learn the function TEMP_FORECAST
+    to accurately forecast indoor temperature Ŷ for horizon h, given X and U. Metrics
+    are used to quantitatively evaluate prediction accuracy.
+
+
+    # 5.1 Predictive models
+
+
+    Four different models were analyzed for indoor temperature forecasting. These
+    include two modern recurrent neural networks: Long Short-Term Memory, Gated Recurrent
+    Unit and two baseline models: Multivariate Linear Regression, Seasonal Auto-Regressive
+    Integrated Moving Average with eXogenous variables (SARIMAX). As shown in Figure
+    2, all models apart from linear regression use concatenated matrices X and U as
+    inputs, where U is repeated for each time step in matrix X. Because linear regression
+    models cannot handle sequential data, inputs for them are formed by flattening
+    matrix X and then concatenating with U.
+
+
+    Long Short-Term Memory recurrent neural networks. These are the most commonly
+    utilized recurrent neural networks for sequential data. Long Short-Term Memory
+    (LSTM) was introduced to solve the
+
+
+    original recurrent neural network''s (RNN) inability to capture long-term non-linear
+    dependencies in sequential data [3]. The LSTM architecture utilizes an improved
+    hidden unit, called memory cell, which calculates hidden state hs_t and long term
+    memory lm_t from previously seen sequential data. The memory cell has parameters
+    which define how the cell attains, updates and discards information from hs_t
+    and lm_t, which get learned during training. As seen in Figure 2, during inference,
+    hs_i and lm_i are recursively calculated using input vector x_i from concatenated
+    matrices X and U at time step i ∈ [1, m] and previously calculated hidden state
+    hs_{i-1} and long term memory lm_{i-1} [13]. As seen in Figure 2, an LSTM neural
+    network uses multiple memory cells (denoted by c). The output of the network is
+    calculated by using a fully connected layer, calculating a weighted sum of the
+    final values of hs from all of the cells for each value in output vector Ŷ.
+
+
+    Gated Recurrent Unit recurrent neural networks. These networks were introduced
+    as a potential improvement to the LSTM neural network [8, 9]. Like the LSTM, GRU
+    uses a memory cell to calculate a hidden state from previously seen sequential
+    data. The key difference is that GRU does not use two separate hidden states hs_t
+    and lm_t, instead using only one: hs_t. This change results in a simplified structure
+    of the memory cell and a slight decrease in required computation. As shown in
+    Figure 2, the GRU neural network also uses multiple memory cells and the output
+    Ŷ is calculated using a fully connected layer. Previous studies suggest that GRU
+    performance is similar to LSTM and which network is superior depends on the specific
+    dataset used [9].
+
+
+    Multivariate Linear Regression. Linear regression (LR) is a predictive modelling
+    method which assumes a linear relationship between input and output. Linear regression
+    models are often used as performance baselines for many prediction tasks due to
+    their relatively low complexity and reasonable accuracy in some cases [16, 19].
+    In this paper, multivariate linear regression models are used, since traditional
+    LR can only use a single input variable for prediction. Because LR can only predict
+    a single value at a time, a separate regressor is trained for each individual
+    forecasted value T_ind(t + i), i ∈ [1, h] in the predicted horizon. Output of
+    the model'
+  - '[PAGE 4]
+
+
+    is calculated by passing the input to each of the trained regressors and then
+    collecting their results into the output vector Ŷ.
+
+
+    SARIMAX. Autoregressive Integrated Moving Average (ARIMA) is a classical, widely
+    used and explored time series forecasting model first introduced more than 4 decades
+    ago [5, 27]. SARIMAX is an extension of classical ARIMA models, improving on them
+    by adding additional parameters, accounting for repeating trends in the time series.
+    Also, unlike ARIMA, SARIMAX are multivariate models, capable of using more than
+    one input variable to predict the output [10, 32]. SARIMAX models have several
+    parameters which define the relationship between input and output. Non-negative
+    integer parameters p, d, q ∈ ℤ define the relationship between past observations
+    and the output. Non-negative parameters P, D, Q, m ∈ ℤ, known as seasonal terms,
+    define the seasonal trends within time series as well as the number of time steps
+    in a single season. Traditionally, optimal parameter values are found by manually
+    analysing the time series with statistical methods [10]. However, modern time
+    series forecasting libraries automate this process by performing an parameter
+    search without requiring human intervention [27].
+
+
+    # 5.2 Metrics for quantitative evaluation
+
+
+    Several metrics have been selected for quantitative evaluation of indoor temperature
+    predictive models trained during experiments. Widely used Root Mean Square Error
+    (RMSE) and Mean Absolute Error (MAE) metrics have been selected for evaluating
+    average predictive model performance over the test set [7]. Maximum error metric
+    (MAXE) has been selected to showcase the worst-case predictive error of the model.
+
+
+    $$RMSE(Y, \hat{Y}) = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(Y_i - \hat{Y}_i)^2} \tag{7}$$
+
+
+    $$MAE(Y, \hat{Y}) = \frac{1}{n}\sum_{i=1}^{n}|Y_i - \hat{Y}_i| \tag{8}$$
+
+
+    $$MAXE(Y, \hat{Y}) = \max(|Y - \hat{Y}|) \tag{9}$$
+
+
+    where y and ŷ are ground truth and predicted one-dimensional vectors, y_i is the
+    i-th element in the vector (starting from 1), n is the number of elements in y
+    and ŷ.
+
+
+    # 6 FLEXIBILITY PREDICTION
+
+
+    Heat pump flexibility will be predicted by using TEMP_FORECAST to forecast indoor
+    temperature Ŷ and calculating how long can the heat pump be in mode ForcedOn or
+    mode Off before violating user predefined indoor temperature comfort bounds T_ind_lower
+    and T_ind_upper.
+
+
+    # 6.1 Prediction method
+
+
+    In this paper, flexibility will be predicted in two scenarios Off and ForcedOn,
+    as described in Section 4. To predict flexibility in either scenario, the control
+    signal U has to be appropriately defined before forecasting temperature with TEMP_FORECAST.
+    When predicting flexibility for Off, U should consist of values P_hp_min, where
+    P_hp_min is the average power consumption of the heat pump being in idle. In most
+    cases, P_hp_min > 0 and can be determined using the
+
+
+    specification of the heat pump. In this case, Model(X, U) forecasts indoor temperature
+    Ŷ_off if the heat pump will remain in mode Off for prediction horizon h time steps.
+    When predicting flexibility for ForcedOn, U should consist of values P_hp_max,
+    where P_hp_max is the average power consumption of the heat pump operating at
+    its maximum capacity, usually below maximum rated power. In this case, Model(X,
+    U) forecasts indoor temperature Ŷ_on if the heat pump will remain in mode ForcedOn
+    for prediction horizon h time steps.
+
+
+    ```
+
+    Algorithm 1 Flexibility prediction algorithm FLEX_PREDICT
+
+    INPUT:
+
+    Ŷ - forecasted indoor temperature
+
+    T_ind_lower - lower bound of temperature
+
+    T_ind_upper - upper bound of temperature
+
+    ε - absolute temperature forecasting error used for adjustment
+
+    OUTPUT:
+
+    F̂ - predicted flexibility
+
+    1: procedure FLEX_PREDICT
+
+    2:   F̂ ← 0
+
+    3:   N ← length(Ŷ)
+
+    4:   for i ← 1 to N do
+
+    5:     if (T_ind_lower + ε) ≤ Ŷ(i) ≤ (T_ind_upper - ε) then
+
+    6:       F̂ ← F̂ + 1   ▷ If temperature is within bounds
+
+    7:     else
+
+    8:       break       ▷ If temperature violates bounds
+
+    9:   return F̂
+
+    ```
+
+
+    Once indoor temperature Ŷ is forecasted, flexibility will be predicted using FLEX_PREDICT,
+    as defined in Algorithm 1, using Ŷ and predefined user temperature bounds T_ind_lower
+    and T_ind_upper. Optionally, an absolute forecasting error parameter ε, where
+    ε >= 0 can be used to adjust for average TEMP_FORECAST error. As seen in Algorithm
+    1, ε effectively shrinks the temperature bounds by subtracting ε from the upper
+    bound T_ind_upper and adding ε to lower bound T_ind_lower. If ε > 0, this results
+    in a more pessimistic prediction of potential heat pump flexibility. If error
+    adjustment is not preferred, ε = 0 is used.
+
+
+    # 6.2 Metrics for evaluating flexibility
+
+
+    In this paper, we propose several metrics for evaluating flexibility prediction
+    performance. Flexibility prediction performance can be numerically evaluated by
+    comparing predicted flexibility F̂ calculated using forecasted indoor temperature
+    Ŷ and potential flexibility F calculated using ground-truth indoor temperature
+    Y.
+
+
+    Mean Absolute Flexibility Error (MAFE) is an adaptation of MAE for evaluating
+    average absolute error for predicted flexibility.
+
+
+    $$MAFE(Z, \hat{Z}) = \frac{1}{n}\sum_{i=1}^{n}|Z_i - \hat{Z}_i| \tag{10}$$
+
+
+    where Z = ⟨F₁, F₂, …, Fₙ⟩ and Ẑ = ⟨F̂₁, F̂₂, …, F̂ₙ⟩ are vectors of predicted
+    flexibility from predicted and ground-truth temperatures, respectively. n is the
+    number of elements in Z and Ẑ.
+
+
+    Two types of errors are possible while predicting flexibility: underestimation
+    when F̂ < F (predict that the heat pump can operate'
+  md: '
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_3_0.png)
+
+
+    Figure 2: Overview of used indoor temperature forecasting models (visualized in
+    order starting from the left: LSTM, GRU, Multivariate Linear Regression, SARIMAX)
+
+
+    In this case, the trained model will take historical data X and control signal
+    U_off as inputs and predict how the temperature will change, returning predicted
+    temperature Ŷ_off. In the second scenario ForcedOn, the same procedure is repeated
+    for mode ForcedOn, using historical data X and control signal U_on to predict
+    Ŷ_on.
+
+
+    During the flexibility prediction phase, the forecasted temperatures are used
+    to predict flexibility. In both scenarios Off and ForcedOn, the predicted temperature
+    along with user defined temperature bounds T_ind_lower, T_ind_upper are used to
+    predict flexibility, using function FLEX_PREDICT as described in Section 6. In
+    scenario Off, Ŷ_off is used to predict f̂_off, whereas in scenario ForcedOn, Ŷ_on
+    is used to predict f̂_on. The average forecasting error ε calculated during model
+    training can be optionally used in FLEX_PREDICT to adjust for forecasting error
+    when predicting flexibility (see Section 6).
+
+
+    ## 5 INDOOR TEMPERATURE FORECASTING
+
+
+    In this paper, predictive models are used to learn the function TEMP_FORECAST
+    to accurately forecast indoor temperature Ŷ for horizon h, given X and U. Metrics
+    are used to quantitatively evaluate prediction accuracy.
+
+
+    ### 5.1 Predictive models
+
+
+    Four different models were analyzed for indoor temperature forecasting. These
+    include two modern recurrent neural networks: Long Short-Term Memory, Gated Recurrent
+    Unit and two baseline models: Multivariate Linear Regression, Seasonal Auto-Regressive
+    Integrated Moving Average with eXogenous variables (SARIMAX). As shown in Figure
+    2, all models apart from linear regression use concatenated matrices X and U as
+    inputs, where U is repeated for each time step in matrix X. Because linear regression
+    models cannot handle sequential data, inputs for them are formed by flattening
+    matrix X and then concatenating with U.
+
+
+    Long Short-Term Memory recurrent neural networks. These are the most commonly
+    utilized recurrent neural networks for sequential data. Long Short-Term Memory
+    (LSTM) was introduced to solve the original recurrent neural network''s (RNN)
+    inability to capture long-term non-linear dependencies in sequential data [3].
+    The LSTM architecture utilizes an improved hidden unit, called memory cell, which
+    calculates hidden state hs_t and long term memory lm_t from previously seen sequential
+    data. The memory cell has parameters which define how the cell attains, updates
+    and discards information from hs_t and lm_t, which get learned during training.
+    As seen in Figure 2, during inference, hs_i and lm_i are recursively calculated
+    using input vector x_i from concatenated matrices X and U at time step i ∈ [1,
+    m] and previously calculated hidden state hs_{i-1} and long term memory lm_{i-1}
+    [13]. As seen in Figure 2, an LSTM neural network uses multiple memory cells (denoted
+    by c). The output of the network is calculated by using a fully connected layer,
+    calculating a weighted sum of the final values of hs from all of the cells for
+    each value in output vector Ŷ.
+
+
+    Gated Recurrent Unit recurrent neural networks. These networks were introduced
+    as a potential improvement to the LSTM neural network [8, 9]. Like the LSTM, GRU
+    uses a memory cell to calculate a hidden state from previously seen sequential
+    data. The key difference is that GRU does not use two separate hidden states hs_t
+    and lm_t, instead using only one: hs_t. This change results in a simplified structure
+    of the memory cell and a slight decrease in required computation. As shown in
+    Figure 2, the GRU neural network also uses multiple memory cells and the output
+    Ŷ is calculated using a fully connected layer. Previous studies suggest that GRU
+    performance is similar to LSTM and which network is superior depends on the specific
+    dataset used [9].
+
+
+    Multivariate Linear Regression. Linear regression (LR) is a predictive modelling
+    method which assumes a linear relationship between input and output. Linear regression
+    models are often used as performance baselines for many prediction tasks due to
+    their relatively low complexity and reasonable accuracy in some cases [16, 19].
+    In this paper, multivariate linear regression models are used, since traditional
+    LR can only use a single input variable for prediction. Because LR can only predict
+    a single value at a time, a separate regressor is trained for each individual
+    forecasted value T_ind(t + i), i ∈ [1, h] in the predicted horizon. Output of
+    the model is calculated by passing the input to each of the trained regressors
+    and then collecting their results into the output vector Ŷ.
+
+
+    SARIMAX. Autoregressive Integrated Moving Average (ARIMA) is a classical, widely
+    used and explored time series forecasting model first introduced more than 4 decades
+    ago [5, 27]. SARIMAX is an extension of classical ARIMA models, improving on them
+    by adding additional parameters, accounting for repeating trends in the time series.
+    Also, unlike ARIMA, SARIMAX are multivariate models, capable of using more than
+    one input variable to predict the output [10, 32]. SARIMAX models have several
+    parameters which define the relationship between input and output. Non-negative
+    integer parameters p, d, q ∈ ℤ define the relationship between past observations
+    and the output. Non-negative parameters P, D, Q, m ∈ ℤ, known as seasonal terms,
+    define the seasonal trends within time series as well as the number of time steps
+    in a single season. Traditionally, optimal parameter values are found by manually
+    analysing the time series with statistical methods [10]. However, modern time
+    series forecasting libraries automate this process by performing a parameter search
+    without requiring human intervention [27].
+
+
+    ### 5.2 Metrics for quantitative evaluation
+
+
+    Several metrics have been selected for quantitative evaluation of indoor temperature
+    predictive models trained during experiments. Widely used Root Mean Square Error
+    (RMSE) and Mean Absolute Error (MAE) metrics have been selected for evaluating
+    average predictive model performance over the test set [7]. Maximum error metric
+    (MAXE) has been selected to showcase the worst-case predictive error of the model.
+
+
+    $$RMSE(Y, \hat{Y}) = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(Y_i - \hat{Y}_i)^2} \tag{7}$$
+
+
+    $$MAE(Y, \hat{Y}) = \frac{1}{n}\sum_{i=1}^{n}|Y_i - \hat{Y}_i| \tag{8}$$
+
+
+    $$MAXE(Y, \hat{Y}) = \max(|Y - \hat{Y}|) \tag{9}$$
+
+
+    where y and ŷ are ground truth and predicted one-dimensional vectors, y_i is the
+    i-th element in the vector (starting from 1), n is the number of elements in y
+    and ŷ.
+
+
+    ## 6 FLEXIBILITY PREDICTION
+
+
+    Heat pump flexibility will be predicted by using TEMP_FORECAST to forecast indoor
+    temperature Ŷ and calculating how long can the heat pump be in mode ForcedOn or
+    mode Off before violating user predefined indoor temperature comfort bounds T_ind_lower
+    and T_ind_upper.
+
+
+    ### 6.1 Prediction method
+
+
+    In this paper, flexibility will be predicted in two scenarios Off and ForcedOn,
+    as described in Section 4. To predict flexibility in either scenario, the control
+    signal U has to be appropriately defined before forecasting temperature with TEMP_FORECAST.
+    When predicting flexibility for Off, U should consist of values P_hp_min, where
+    P_hp_min is the average power consumption of the heat pump being in idle. In most
+    cases, P_hp_min > 0 and can be determined using the specification of the heat
+    pump. In this case, Model(X, U) forecasts indoor temperature Ŷ_off if the heat
+    pump will remain in mode Off for prediction horizon h time steps. When predicting
+    flexibility for ForcedOn, U should consist of values P_hp_max, where P_hp_max
+    is the average power consumption of the heat pump operating at its maximum capacity,
+    usually below maximum rated power. In this case, Model(X, U) forecasts indoor
+    temperature Ŷ_on if the heat pump will remain in mode ForcedOn for prediction
+    horizon h time steps.
+
+
+    ```
+
+    Algorithm 1 Flexibility prediction algorithm FLEX_PREDICT
+
+    INPUT:
+
+    Ŷ - forecasted indoor temperature
+
+    T_ind_lower - lower bound of temperature
+
+    T_ind_upper - upper bound of temperature
+
+    ε - absolute temperature forecasting error used for adjustment
+
+    OUTPUT:
+
+    F̂ - predicted flexibility
+
+    1: procedure FLEX_PREDICT
+
+    2:   F̂ ← 0
+
+    3:   N ← length(Ŷ)
+
+    4:   for i ← 1 to N do
+
+    5:     if (T_ind_lower + ε) ≤ Ŷ(i) ≤ (T_ind_upper - ε) then
+
+    6:       F̂ ← F̂ + 1   ▷ If temperature is within bounds
+
+    7:     else
+
+    8:       break       ▷ If temperature violates bounds
+
+    9:   return F̂
+
+    ```
+
+
+    Once indoor temperature Ŷ is forecasted, flexibility will be predicted using FLEX_PREDICT,
+    as defined in Algorithm 1, using Ŷ and predefined user temperature bounds T_ind_lower
+    and T_ind_upper. Optionally, an absolute forecasting error parameter ε, where
+    ε >= 0 can be used to adjust for average TEMP_FORECAST error. As seen in Algorithm
+    1, ε effectively shrinks the temperature bounds by subtracting ε from the upper
+    bound T_ind_upper and adding ε to lower bound T_ind_lower. If ε > 0, this results
+    in a more pessimistic prediction of potential heat pump flexibility. If error
+    adjustment is not preferred, ε = 0 is used.
+
+
+    ### 6.2 Metrics for evaluating flexibility
+
+
+    In this paper, we propose several metrics for evaluating flexibility prediction
+    performance. Flexibility prediction performance can be numerically evaluated by
+    comparing predicted flexibility F̂ calculated using forecasted indoor temperature
+    Ŷ and potential flexibility F calculated using ground-truth indoor temperature
+    Y.
+
+
+    Mean Absolute Flexibility Error (MAFE) is an adaptation of MAE for evaluating
+    average absolute error for predicted flexibility.
+
+
+    $$MAFE(Z, \hat{Z}) = \frac{1}{n}\sum_{i=1}^{n}|Z_i - \hat{Z}_i| \tag{10}$$
+
+
+    where Z = ⟨F₁, F₂, …, Fₙ⟩ and Ẑ = ⟨F̂₁, F̂₂, …, F̂ₙ⟩ are vectors of predicted
+    flexibility from predicted and ground-truth temperatures, respectively. n is the
+    number of elements in Z and Ẑ.
+
+
+    Two types of errors are possible while predicting flexibility: underestimation
+    when F̂ < F (predict that the heat pump can operate
+
+    '
+  mdcn: '
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_3_0.png)
+
+
+    图 2：所用室内温度预测模型的概述（按从左到右的顺序可视化：LSTM、GRU、多元线性回归、SARIMAX）
+
+
+    在这种情况下，训练好的模型将以历史数据 X 和控制信号 U_off 作为输入，预测温度如何变化，并返回预测温度 Ŷ_off。在第二个场景 ForcedOn
+    中，相同的流程会针对 ForcedOn 模式重复，使用历史数据 X 和控制信号 U_on 来预测 Ŷ_on。
+
+
+    在灵活性预测阶段，预测的温度用于预测灵活性。在 Off 和 ForcedOn 两个场景中，预测温度以及用户定义的温度边界 T_ind_lower、T_ind_upper
+    用于预测灵活性，使用第 6 节中描述的函数 FLEX_PREDICT。在 Off 场景中，使用 Ŷ_off 预测 f̂_off，而在 ForcedOn 场景中，使用
+    Ŷ_on 预测 f̂_on。模型训练期间计算的平均预测误差 ε 可选择性地用于 FLEX_PREDICT，以在预测灵活性时调整预测误差（参见第 6 节）。
+
+
+    ## 5 室内温度预测
+
+
+    本文使用预测模型学习函数 TEMP_FORECAST，以在给定 X 和 U 的情况下准确预测预测范围 h 内的室内温度 Ŷ。指标用于定量评估预测精度。
+
+
+    ### 5.1 预测模型
+
+
+    对室内温度预测分析了四种不同的模型。其中包括两种现代循环神经网络：长短期记忆网络、门控循环单元，以及两种基线模型：多元线性回归、带外生变量的季节性自回归积分滑动平均模型（SARIMAX）。如图
+    2 所示，除线性回归外，所有模型均使用拼接矩阵 X 和 U 作为输入，其中 U 在矩阵 X 的每个时间步中重复。因为线性回归模型无法处理序列数据，所以它们的输入是通过展平矩阵
+    X 然后与 U 拼接形成的。
+
+
+    长短期记忆循环神经网络。这是用于序列数据最常用的循环神经网络。长短期记忆网络（LSTM）被引入以解决原始循环神经网络（RNN）无法捕捉序列数据中长期非线性依赖性的问题
+    [3]。LSTM 架构利用一种改进的隐藏单元，称为记忆单元，它根据之前看到的序列数据计算隐藏状态 hs_t 和长期记忆 lm_t。记忆单元具有参数，定义了单元如何获取、更新和丢弃
+    hs_t 和 lm_t 中的信息，这些参数在训练期间被学习。如图 2 所示，在推理期间，hs_i 和 lm_i 使用来自拼接矩阵 X 和 U 在时间步 i
+    ∈ [1, m] 的输入向量 x_i 以及先前计算的隐藏状态 hs_{i-1} 和长期记忆 lm_{i-1} 递归计算 [13]。如图 2 所示，LSTM
+    神经网络使用多个记忆单元（用 c 表示）。网络的输出通过使用全连接层计算得出，计算所有单元的 hs 最终值的加权和，以得到输出向量 Ŷ 中的每个值。
+
+
+    门控循环单元循环神经网络。这些网络被引入作为 LSTM 神经网络的潜在改进 [8, 9]。与 LSTM 类似，GRU 使用记忆单元根据之前看到的序列数据计算隐藏状态。关键区别在于
+    GRU 不使用两个独立的隐藏状态 hs_t 和 lm_t，而是仅使用一个：hs_t。这一变化导致记忆单元结构简化以及所需计算量略有减少。如图 2 所示，GRU
+    神经网络也使用多个记忆单元，输出 Ŷ 使用全连接层计算得出。先前的研究表明 GRU 的性能与 LSTM 相似，哪个网络更优取决于所使用的特定数据集 [9]。
+
+
+    多元线性回归。线性回归（LR）是一种预测建模方法，假设输入和输出之间存在线性关系。由于其相对较低的复杂性和在某些情况下的合理精度，线性回归模型通常用作许多预测任务的性能基线
+    [16, 19]。本文使用多元线性回归模型，因为传统的 LR 只能使用单个输入变量进行预测。由于 LR 每次只能预测一个值，因此为预测范围内的每个单独预测值
+    T_ind(t + i)，i ∈ [1, h] 训练一个单独的回归器。模型的输出通过将输入传递给每个训练好的回归器，然后将它们的结果收集到输出向量 Ŷ 中来计算。
+
+
+    SARIMAX。自回归积分滑动平均模型（ARIMA）是一种经典的、广泛使用和研究的时序预测模型，首次引入已有 40 多年 [5, 27]。SARIMAX 是经典
+    ARIMA 模型的扩展，通过添加额外参数改进了它们，以考虑时序中的重复趋势。此外，与 ARIMA 不同，SARIMAX 是多元模型，能够使用多个输入变量来预测输出
+    [10, 32]。SARIMAX 模型有多个参数定义输入和输出之间的关系。非负整数参数 p、d、q ∈ ℤ 定义过去观测值与输出之间的关系。非负参数 P、D、Q、m
+    ∈ ℤ，称为季节项，定义时序内的季节性趋势以及单个季节中的时间步数。传统上，最优参数值是通过使用统计方法手动分析时序来找到的 [10]。然而，现代时序预测库通过执行参数搜索而无需人工干预来自动化这一过程
+    [27]。
+
+
+    ### 5.2 定量评估指标
+
+
+    选择了若干指标用于定量评估实验期间训练的室内温度预测模型。广泛使用的均方根误差（RMSE）和平均绝对误差（MAE）指标被选用于评估测试集上预测模型的平均性能
+    [7]。最大误差指标（MAXE）被选用于展示模型的 worst-case 预测误差。
+
+
+    $$RMSE(Y, \hat{Y}) = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(Y_i - \hat{Y}_i)^2} \tag{7}$$
+
+
+    $$MAE(Y, \hat{Y}) = \frac{1}{n}\sum_{i=1}^{n}|Y_i - \hat{Y}_i| \tag{8}$$
+
+
+    $$MAXE(Y, \hat{Y}) = \max(|Y - \hat{Y}|) \tag{9}$$
+
+
+    其中 y 和 ŷ 是真实值和预测的一维向量，y_i 是向量中的第 i 个元素（从 1 开始），n 是 y 和 ŷ 中的元素数量。
+
+
+    ## 6 灵活性预测
+
+
+    热泵灵活性将通过使用 TEMP_FORECAST 预测室内温度 Ŷ 并计算热泵在 ForcedOn 模式或 Off 模式下可以在违反用户预定义的室内温度舒适边界
+    T_ind_lower 和 T_ind_upper 之前持续多长时间来预测。
+
+
+    ### 6.1 预测方法
+
+
+    本文将根据第 4 节所述在两种场景 Off 和 ForcedOn 中预测灵活性。为了在任一场景中预测灵活性，控制信号 U 必须在用 TEMP_FORECAST
+    预测温度之前适当定义。在预测 Off 的灵活性时，U 应由值 P_hp_min 组成，其中 P_hp_min 是热泵处于空闲时的平均功耗。在大多数情况下，P_hp_min
+    > 0，可以使用热泵的规格确定。在这种情况下，Model(X, U) 预测室内温度 Ŷ_off，如果热泵在预测范围 h 个时间步内保持 Off 模式。在预测
+    ForcedOn 的灵活性时，U 应由值 P_hp_max 组成，其中 P_hp_max 是热泵以最大容量运行时平均功耗，通常低于最大额定功率。在这种情况下，Model(X,
+    U) 预测室内温度 Ŷ_on，如果热泵在预测范围 h 个时间步内保持 ForcedOn 模式。
+
+
+    ```
+
+    Algorithm 1 Flexibility prediction algorithm FLEX_PREDICT
+
+    INPUT:
+
+    Ŷ - forecasted indoor temperature
+
+    T_ind_lower - lower bound of temperature
+
+    T_ind_upper - upper bound of temperature
+
+    ε - absolute temperature forecasting error used for adjustment
+
+    OUTPUT:
+
+    F̂ - predicted flexibility
+
+    1: procedure FLEX_PREDICT
+
+    2:   F̂ ← 0
+
+    3:   N ← length(Ŷ)
+
+    4:   for i ← 1 to N do
+
+    5:     if (T_ind_lower + ε) ≤ Ŷ(i) ≤ (T_ind_upper - ε) then
+
+    6:       F̂ ← F̂ + 1   ▷ If temperature is within bounds
+
+    7:     else
+
+    8:       break       ▷ If temperature violates bounds
+
+    9:   return F̂
+
+    ```
+
+
+    一旦室内温度 Ŷ 被预测，灵活性将使用 FLEX_PREDICT 进行预测，如算法 1 所定义，使用 Ŷ 和预定义的温度边界 T_ind_lower 和 T_ind_upper。可选地，绝对预测误差参数
+    ε，其中 ε >= 0，可用于调整 TEMP_FORECAST 的平均误差。如算法 1 所示，ε 通过从上界 T_ind_upper 减去 ε 并向下标 T_ind_lower
+    添加 ε 来有效缩小温度边界。如果 ε > 0，则会导致对热泵潜在灵活性的更悲观预测。如果不希望进行误差调整，则使用 ε = 0。
+
+
+    ### 6.2 评估灵活性的指标
+
+
+    本文提出了若干指标用于评估灵活性预测性能。灵活性预测性能可以通过比较使用预测室内温度 Ŷ 计算的预测灵活性 F̂ 和使用真实室内温度 Y 计算的潜在灵活性
+    F 来进行数值评估。
+
+
+    平均绝对灵活性误差（MAFE）是 MAE 的一种改编，用于评估预测灵活性的平均绝对误差。
+
+
+    $$MAFE(Z, \hat{Z}) = \frac{1}{n}\sum_{i=1}^{n}|Z_i - \hat{Z}_i| \tag{10}$$
+
+
+    其中 Z = ⟨F₁, F₂, …, Fₙ⟩ 和 Ẑ = ⟨F̂₁, F̂₂, …, F̂ₙ⟩ 分别是从预测温度和真实温度得到的灵活性预测向量。n 是 Z
+    和 Ẑ 中的元素数量。
+
+
+    在预测灵活性时可能存在两种类型的误差：低估当 F̂ < F 时（预测热泵可以运行
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    in a given mode for less time than it possibly could) and overestimation when
+    \hat{F} > F (predict that the heat pump can operate in a given mode for more time
+    than it possibly could). To capture what type of error is prevalent, we introduce
+    two specialized variants of MAFE. Mean Absolute Overestimated Flexibility Error
+    (MAOFE) is a variant of MAFE, which only calculates overestimated flexibility
+    error (\hat{F} > F).
+
+
+    MAOFE(Z, \hat{Z}) = \frac{1}{n} \sum_{i=1}^{n} |min(Z_i - \hat{Z}_i, 0)|  (11)
+
+
+    Mean Absolute Underestimated Flexibility Error (MAUFE) only calculates underestimated
+    flexibility error (\hat{F} < F).
+
+
+    MAUFE(Z, \hat{Z}) = \frac{1}{n} \sum_{i=1}^{n} |max(Z_i - \hat{Z}_i, 0)|  (12)
+
+
+    Notably, overestimation and underestimation are the only two types of possible
+    errors and are mutually exclusive, meaning that:
+
+
+    MAUFE + MAOFE = MAFE  (13)
+
+
+    Extracted Potential Flexibility Ratio is a metric that shows how much flexibility
+    has been predicted in comparison to how much was available. Notably, this metric
+    does not penalize overestimations, only underestimations.
+
+
+    EPFR(Z, \hat{Z}) = \frac{\sum_{i=1}^{n} max(Z_i - \hat{Z}_i, 0)}{\sum_{i=1}^{n}
+    Z_i}  (14)
+
+
+    These 4 proposed metrics enable to quantitatively evaluate overall flexibility
+    prediction performance, identify what type of error is more prevalent, and measure
+    what percentage of total potential flexibility has been predicted.
+
+
+    # 7 EXPERIMENTS
+
+
+    In this paper, the experiments were performed using data from 3 heat pump deployments
+    from 2 open datasets containing historical indoor, outdoor temperature and power
+    consumption data.
+
+
+    # 7.1 Datasets
+
+
+    The first dataset (NIST Net-Zero) is collected from the Net-Zero Energy Residential
+    Test Facility, a residential building test bed constructed to study and demonstrate
+    various technologies for effectively meeting typical residential demands using
+    renewable energy. The data were collected from an experiment simulating realistic
+    consumption and usage patterns of a family of four. During the demonstration period,
+    heating for the household was performed by an air-source (air-to-air) heat pump.
+    The heat pump was configured to maintain two constant temperature set points of
+    23.8°C during the cooling season and 21.1°C during the heating season. The indoor
+    temperature fluctuated very little throughout the year, changing by less than
+    2°C from the set point. The dataset collected from this experiment includes 1
+    minute granularity indoor time series, outdoor temperature, and heat pump power
+    consumption readings for one year. This dataset is open access and has been widely
+    used in other studies [28, 36].
+
+
+    The second and third datasets are made available by the New York State Energy
+    Research and Development Authority (NYSERDA).
+
+
+    They provide data from 50 geothermal heat pumps installed in residential buildings
+    ranging from around 100 to nearly 600 square meters in footage in New York State
+    in the United States. The two datasets were collected from deployments with identifiers
+    S40 and S44. No set point temperature information was provided, however, in the
+    NYSERDA S40 dataset, the heat pump maintained an indoor temperature of around
+    21.1°C and in the NYSERDA S44 dataset – around 20°C. The indoor temperature in
+    both sites fluctuated significantly, especially during the winter season, where
+    the indoor temperature in both sites would change by more than 4°C from the approximated
+    set points. Both datasets include 15 minute granularity time series indoor, outdoor
+    and power consumption readings over approximately 12 months and are available
+    for open access.
+
+
+    # 7.2 Data preprocessing
+
+
+    All datasets in the experiments (as defined in Section 7.1) were preprocessed
+    in the following steps:
+
+
+    Data collection. Data for experiments were collected by selecting indoor temperature
+    T_ind, outdoor temperature T_out and power P_hp readings from the datasets. T_ind
+    values for NIST Net-Zero dataset were calculated by calculating the mean of all
+    provided indoor temperature readings in the original dataset. Data from two sites
+    were included in the experiments from the NYSERDA dataset: S40 and S44. Furthermore,
+    temperature readings in NYSERDA S40 and NYSERDA S44 were converted from Fahrenheit
+    to Celsius.
+
+
+    Poor quality data removal. Outlier values were removed by selecting data points
+    where temperatures T_ind ∈ [10;30], T_out ∈ [−50;50]. Furthermore, records with
+    changes of more than 15°C within a 15 minute period were also removed. Data marked
+    as incorrect or inconsistent in the provided data specifications were also removed.
+
+
+    Data resampling. In the experiments, 15 minute data granularity was selected to
+    be used across all datasets, as it is usually used in electricity and flexibility
+    markets [15]. For NIST Net-Zero dataset, data were downsampled by averaging power
+    P_hp readings to 15 minute intervals, and taking the last outdoor temperature
+    T_out and indoor temperature T_ind readings. No resampling was required for NYSERDA
+    S40 or NYSERDA S44 datasets.
+
+
+    Date and time feature extraction. As used predictive models require inputs and
+    outputs to have a numeric type, the given date and time timestamp DT(t) ∈ X(t)
+    was converted into respective year, month, day, hour, minute, day of the week
+    integer values. This was done for each vector X(t) in given historical data X.
+
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_5_0.png)
+
+
+    Figure 3: Visual representation of the sequential dataset split strategy applied
+    in intervals of 20 days
+
+
+    Data splitting for training, validation and testing. Each dataset was split into
+    training, validation, and test subsets (sets). Training and'
+  - '[PAGE 6]
+
+
+    # # HeatFlex: Machine learning based data-driven flexibility prediction for individual
+    heat pumps
+
+
+    e-Energy ''21, June 28-July 2, 2021, Virtual Event, Italy
+
+
+    # ## Table 2: Snapshot of the overall best performing indoor temperature forecasting
+    models
+
+
+    | Model | NIST RMSE | NIST MAE | NIST MAXE | NYSERDA S40 RMSE | NYSERDA S40 MAE
+    | NYSERDA S40 MAXE | NYSERDA S44 RMSE | NYSERDA S44 MAE | NYSERDA S44 MAXE |
+
+    |-------|-----------|----------|-----------|------------------|----------------|------------------|------------------|----------------|------------------|
+
+    | LSTM (c=16, m=16) | 0.3240 | 0.3209 | 0.3680 | 0.2352 | 0.2125 | 0.3266 | 0.3084
+    | 0.2727 | 0.4448 |
+
+    | LSTM (c=32, m=96) | 0.0833 | 0.0752 | 0.1202 | 0.2408 | 0.2169 | 0.3357 | 0.3106
+    | 0.2749 | 0.4475 |
+
+    | LSTM average | 0.3967 | 0.3924 | 0.4397 | 0.2580 | 0.2340 | 0.3570 | 0.3281
+    | 0.2938 | 0.4653 |
+
+    | GRU (c=16, m=16) | 0.3200 | 0.3157 | 0.3726 | 0.2513 | 0.2302 | 0.3378 | 0.3171
+    | 0.2856 | 0.4446 |
+
+    | GRU (c=16, m=96) | 0.1262 | 0.1209 | 0.1607 | 0.2458 | 0.2230 | 0.3404 | 0.3283
+    | 0.2930 | 0.4687 |
+
+    | GRU average | 0.2835 | 0.2749 | 0.3449 | 0.2780 | 0.2520 | 0.3860 | 0.3544 |
+    0.3198 | 0.4970 |
+
+    | LR (m=32) | 0.2620 | 0.2519 | 0.3328 | 0.2852 | 0.2549 | 0.4053 | 0.4066 | 0.3577
+    | 0.5884 |
+
+    | LR (m=16) | 0.3274 | 0.3240 | 0.3773 | 0.2604 | 0.2281 | 0.3797 | 0.4119 | 0.3622
+    | 0.5940 |
+
+    | LR average | 0.2712 | 0.2591 | 0.3431 | 0.3110 | 0.2740 | 0.4560 | 0.4850 |
+    0.4167 | 0.7365 |
+
+    | SARIMAX | 0.1424 | 0.1280 | 0.2063 | 0.9086 | 0.8439 | 1.1724 | 2.2577 | 2.0835
+    | 2.8021 |
+
+
+    validation sets were used during predictive model training process, to learn model
+    weights. The test set was only used to assess model performance on previously
+    unseen data and was not used during model training. All datasets are time series
+    and possess sequential dependencies, trends and seasonality. As such, traditionally
+    used splitting techniques such as k-fold splitting are not applicable.
+
+
+    To account for this, a sequential data split strategy was utilized. The original
+    dataset was divided into parts of one day each and then sequentially divided into
+    three bins for each of the training, validation and test sets. Following best
+    machine learning practices, every 20 days in the dataset, a sequence of 16 days
+    was added to the training set, following a sequence of 2 days which was added
+    to the validation set, after which a sequence of 2 days was added to the test
+    set (as seen in Figure 3). This was repeated until the entire dataset was split.
+    This splitting technique ensures that each set is representative of intra-day
+    temperature change and power consumption patterns and how they change between
+    different months and seasons.
+
+
+
+
+    Grid search was used to find appropriate machine learning model hyperparameter
+    configurations. For LSTM and GRU models, different cell counts c ∈ (16, 32, 48,
+    80) were used. As previous studies have shown that memory parameter m selection
+    can have a significant impact on the performance of the model, several configurations
+    of m ∈ (16, 32, 48, 96) were tested with all trained models [37]. During experiments,
+    models were trained with horizon h = 4, meaning that the models predicted indoor
+    temperature for the next hour in 4 time steps. Training of all models, apart from
+    SARIMAX, was conducted using the Adam optimizer with learning rate parameter α
+    = 0.005, using RMSE as the loss function. Models were trained with a batch size
+    of 64 for a maximum of 125 epochs with early stopping enabled to prevent overfitting.
+    During training and validation losses were logged into persistent storage. Model
+    checkpoints were made every 5 epochs. Checkpoint of the lowest validation loss
+    was kept in storage. To account for potential outlier results due to the random
+    initial parameter initialization in LSTM, GRU and LR models, each model configuration
+    was trained 3 times and the model with the second-lowest error was used in results
+
+
+
+
+    During the experiments, the indoor temperature forecasting models were trained
+    using the training set and validation set. The indoor temperature forecasting
+    and flexibility prediction error was then evaluated using the test set. Each model
+    was trained and evaluated using data from only one dataset.
+
+
+
+
+    Quantitative model performance. Trained indoor temperature forecasting model performance
+    was quantitatively evaluated using data from the test set by calculating average
+    RMSE, MAE, and MAXE metric values. Results from the experiments indicate that
+    the trained predictive models managed to effectively capture how indoor temperature
+    changes w.r.t. heat pump operation and outdoor temperature. Quantitative model
+    performance evaluation shows that the best performing predictive models were trained
+    using the LSTM and GRU neural network architectures, with LSTM having the overall
+    best performance. As seen in Table 2, best performing LSTM and GRU architecture
+    models outperform multivariate linear regression in experiments on all three deployments,
+    outperforming GRU by over 9% lower RMSE, multivariate LR models by over 32% lower
+    RMSE. Best performing LSTM models also significantly outperform'
+  md: '
+
+    ## HeatFlex: Machine learning based data-driven flexibility prediction for individual
+    heat pumps
+
+
+    *e-Energy ''21, June 28-July 2, 2021, Virtual Event, Italy*
+
+
+    in a given mode for less time than it possibly could) and overestimation when
+    \hat{F} > F (predict that the heat pump can operate in a given mode for more time
+    than it possibly could). To capture what type of error is prevalent, we introduce
+    two specialized variants of MAFE. Mean Absolute Overestimated Flexibility Error
+    (MAOFE) is a variant of MAFE, which only calculates overestimated flexibility
+    error (\hat{F} > F).
+
+
+    MAOFE(Z, \hat{Z}) = \frac{1}{n} \sum_{i=1}^{n} |min(Z_i - \hat{Z}_i, 0)|  (11)
+
+
+    Mean Absolute Underestimated Flexibility Error (MAUFE) only calculates underestimated
+    flexibility error (\hat{F} < F).
+
+
+    MAUFE(Z, \hat{Z}) = \frac{1}{n} \sum_{i=1}^{n} |max(Z_i - \hat{Z}_i, 0)|  (12)
+
+
+    Notably, overestimation and underestimation are the only two types of possible
+    errors and are mutually exclusive, meaning that:
+
+
+    MAUFE + MAOFE = MAFE  (13)
+
+
+    Extracted Potential Flexibility Ratio is a metric that shows how much flexibility
+    has been predicted in comparison to how much was available. Notably, this metric
+    does not penalize overestimations, only underestimations.
+
+
+    EPFR(Z, \hat{Z}) = \frac{\sum_{i=1}^{n} max(Z_i - \hat{Z}_i, 0)}{\sum_{i=1}^{n}
+    Z_i}  (14)
+
+
+    These 4 proposed metrics enable to quantitatively evaluate overall flexibility
+    prediction performance, identify what type of error is more prevalent, and measure
+    what percentage of total potential flexibility has been predicted.
+
+
+    ## 7 EXPERIMENTS
+
+
+    In this paper, the experiments were performed using data from 3 heat pump deployments
+    from 2 open datasets containing historical indoor, outdoor temperature and power
+    consumption data.
+
+
+    ### 7.1 Datasets
+
+
+    The first dataset (NIST Net-Zero) is collected from the Net-Zero Energy Residential
+    Test Facility, a residential building test bed constructed to study and demonstrate
+    various technologies for effectively meeting typical residential demands using
+    renewable energy. The data were collected from an experiment simulating realistic
+    consumption and usage patterns of a family of four. During the demonstration period,
+    heating for the household was performed by an air-source (air-to-air) heat pump.
+    The heat pump was configured to maintain two constant temperature set points of
+    23.8°C during the cooling season and 21.1°C during the heating season. The indoor
+    temperature fluctuated very little throughout the year, changing by less than
+    2°C from the set point. The dataset collected from this experiment includes 1
+    minute granularity indoor time series, outdoor temperature, and heat pump power
+    consumption readings for one year. This dataset is open access and has been widely
+    used in other studies [28, 36].
+
+
+    The second and third datasets are made available by the New York State Energy
+    Research and Development Authority (NYSERDA).
+
+
+    They provide data from 50 geothermal heat pumps installed in residential buildings
+    ranging from around 100 to nearly 600 square meters in footage in New York State
+    in the United States. The two datasets were collected from deployments with identifiers
+    S40 and S44. No set point temperature information was provided, however, in the
+    NYSERDA S40 dataset, the heat pump maintained an indoor temperature of around
+    21.1°C and in the NYSERDA S44 dataset – around 20°C. The indoor temperature in
+    both sites fluctuated significantly, especially during the winter season, where
+    the indoor temperature in both sites would change by more than 4°C from the approximated
+    set points. Both datasets include 15 minute granularity time series indoor, outdoor
+    and power consumption readings over approximately 12 months and are available
+    for open access.
+
+
+    ### 7.2 Data preprocessing
+
+
+    All datasets in the experiments (as defined in Section 7.1) were preprocessed
+    in the following steps:
+
+
+    **Data collection.** Data for experiments were collected by selecting indoor temperature
+    T_ind, outdoor temperature T_out and power P_hp readings from the datasets. T_ind
+    values for NIST Net-Zero dataset were calculated by calculating the mean of all
+    provided indoor temperature readings in the original dataset. Data from two sites
+    were included in the experiments from the NYSERDA dataset: S40 and S44. Furthermore,
+    temperature readings in NYSERDA S40 and NYSERDA S44 were converted from Fahrenheit
+    to Celsius.
+
+
+    **Poor quality data removal.** Outlier values were removed by selecting data points
+    where temperatures T_ind ∈ [10;30], T_out ∈ [−50;50]. Furthermore, records with
+    changes of more than 15°C within a 15 minute period were also removed. Data marked
+    as incorrect or inconsistent in the provided data specifications were also removed.
+
+
+    **Data resampling.** In the experiments, 15 minute data granularity was selected
+    to be used across all datasets, as it is usually used in electricity and flexibility
+    markets [15]. For NIST Net-Zero dataset, data were downsampled by averaging power
+    P_hp readings to 15 minute intervals, and taking the last outdoor temperature
+    T_out and indoor temperature T_ind readings. No resampling was required for NYSERDA
+    S40 or NYSERDA S44 datasets.
+
+
+    **Date and time feature extraction.** As used predictive models require inputs
+    and outputs to have a numeric type, the given date and time timestamp DT(t) ∈
+    X(t) was converted into respective year, month, day, hour, minute, day of the
+    week integer values. This was done for each vector X(t) in given historical data
+    X.
+
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_5_0.png)
+
+
+    **Figure 3:** Visual representation of the sequential dataset split strategy applied
+    in intervals of 20 days
+
+
+    **Data splitting for training, validation and testing.** Each dataset was split
+    into training, validation, and test subsets (sets). Training and validation sets
+    were used during predictive model training process, to learn model weights. The
+    test set was only used to assess model performance on previously unseen data and
+    was not used during model training. All datasets are time series and possess sequential
+    dependencies, trends and seasonality. As such, traditionally used splitting techniques
+    such as k-fold splitting are not applicable.
+
+
+    To account for this, a sequential data split strategy was utilized. The original
+    dataset was divided into parts of one day each and then sequentially divided into
+    three bins for each of the training, validation and test sets. Following best
+    machine learning practices, every 20 days in the dataset, a sequence of 16 days
+    was added to the training set, following a sequence of 2 days which was added
+    to the validation set, after which a sequence of 2 days was added to the test
+    set (as seen in Figure 3). This was repeated until the entire dataset was split.
+    This splitting technique ensures that each set is representative of intra-day
+    temperature change and power consumption patterns and how they change between
+    different months and seasons.
+
+
+    Grid search was used to find appropriate machine learning model hyperparameter
+    configurations. For LSTM and GRU models, different cell counts c ∈ (16, 32, 48,
+    80) were used. As previous studies have shown that memory parameter m selection
+    can have a significant impact on the performance of the model, several configurations
+    of m ∈ (16, 32, 48, 96) were tested with all trained models [37]. During experiments,
+    models were trained with horizon h = 4, meaning that the models predicted indoor
+    temperature for the next hour in 4 time steps. Training of all models, apart from
+    SARIMAX, was conducted using the Adam optimizer with learning rate parameter α
+    = 0.005, using RMSE as the loss function. Models were trained with a batch size
+    of 64 for a maximum of 125 epochs with early stopping enabled to prevent overfitting.
+    During training and validation, losses were logged into persistent storage. Model
+    checkpoints were made every 5 epochs. Checkpoint of the lowest validation loss
+    was kept in storage. To account for potential outlier results due to the random
+    initial parameter initialization in LSTM, GRU and LR models, each model configuration
+    was trained 3 times and the model with the second-lowest error was used in results
+
+
+    During the experiments, the indoor temperature forecasting models were trained
+    using the training set and validation set. The indoor temperature forecasting
+    and flexibility prediction error was then evaluated using the test set. Each model
+    was trained and evaluated using data from only one dataset.
+
+
+    **Quantitative model performance.** Trained indoor temperature forecasting model
+    performance was quantitatively evaluated using data from the test set by calculating
+    average RMSE, MAE, and MAXE metric values. Results from the experiments indicate
+    that the trained predictive models managed to effectively capture how indoor temperature
+    changes w.r.t. heat pump operation and outdoor temperature. Quantitative model
+    performance evaluation shows that the best performing predictive models were trained
+    using the LSTM and GRU neural network architectures, with LSTM having the overall
+    best performance. As seen in Table 2, best performing LSTM and GRU architecture
+    models outperform multivariate linear regression in experiments on all three deployments,
+    outperforming GRU by over 9% lower RMSE, multivariate LR models by over 32% lower
+    RMSE. Best performing LSTM models also significantly outperform
+
+
+    **Table 2:** Snapshot of the overall best performing indoor temperature forecasting
+    models
+
+
+    | Model | NIST RMSE | NIST MAE | NIST MAXE | NYSERDA S40 RMSE | NYSERDA S40 MAE
+    | NYSERDA S40 MAXE | NYSERDA S44 RMSE | NYSERDA S44 MAE | NYSERDA S44 MAXE |
+
+    |-------|-----------|----------|-----------|------------------|----------------|------------------|------------------|----------------|------------------|
+
+    | LSTM (c=16, m=16) | 0.3240 | 0.3209 | 0.3680 | 0.2352 | 0.2125 | 0.3266 | 0.3084
+    | 0.2727 | 0.4448 |
+
+    | LSTM (c=32, m=96) | 0.0833 | 0.0752 | 0.1202 | 0.2408 | 0.2169 | 0.3357 | 0.3106
+    | 0.2749 | 0.4475 |
+
+    | LSTM average | 0.3967 | 0.3924 | 0.4397 | 0.2580 | 0.2340 | 0.3570 | 0.3281
+    | 0.2938 | 0.4653 |
+
+    | GRU (c=16, m=16) | 0.3200 | 0.3157 | 0.3726 | 0.2513 | 0.2302 | 0.3378 | 0.3171
+    | 0.2856 | 0.4446 |
+
+    | GRU (c=16, m=96) | 0.1262 | 0.1209 | 0.1607 | 0.2458 | 0.2230 | 0.3404 | 0.3283
+    | 0.2930 | 0.4687 |
+
+    | GRU average | 0.2835 | 0.2749 | 0.3449 | 0.2780 | 0.2520 | 0.3860 | 0.3544 |
+    0.3198 | 0.4970 |
+
+    | LR (m=32) | 0.2620 | 0.2519 | 0.3328 | 0.2852 | 0.2549 | 0.4053 | 0.4066 | 0.3577
+    | 0.5884 |
+
+    | LR (m=16) | 0.3274 | 0.3240 | 0.3773 | 0.2604 | 0.2281 | 0.3797 | 0.4119 | 0.3622
+    | 0.5940 |
+
+    | LR average | 0.2712 | 0.2591 | 0.3431 | 0.3110 | 0.2740 | 0.4560 | 0.4850 |
+    0.4167 | 0.7365 |
+
+    | SARIMAX | 0.1424 | 0.1280 | 0.2063 | 0.9086 | 0.8439 | 1.1724 | 2.2577 | 2.0835
+    | 2.8021 |
+
+    '
+  mdcn: '
+
+    ## HeatFlex：基于机器学习的单个热泵数据驱动灵活性预测
+
+
+    *e-Energy ''21，2021年6月28日至7月2日，虚拟活动，意大利*
+
+
+    在给定模式下运行的时间比实际可能的时间更短) 且当 \hat{F} > F 时为高估（预测热泵可以在给定模式下运行的时间比实际可能的时间更长）。为了捕捉哪种类型的误差更常见，我们引入了
+    MAFE 的两个专门变体。平均绝对高估灵活性误差（MAOFE）是 MAFE 的一个变体，仅计算高估的灵活性误差（\hat{F} > F）。
+
+
+    MAOFE(Z, \hat{Z}) = \frac{1}{n} \sum_{i=1}^{n} |min(Z_i - \hat{Z}_i, 0)|  (11)
+
+
+    平均绝对低估灵活性误差（MAUFE）仅计算低估的灵活性误差（\hat{F} < F）。
+
+
+    MAUFE(Z, \hat{Z}) = \frac{1}{n} \sum_{i=1}^{n} |max(Z_i - \hat{Z}_i, 0)|  (12)
+
+
+    值得注意的是，高估和低估是可能的两种唯一误差类型且互斥，意味着：
+
+
+    MAUFE + MAOFE = MAFE  (13)
+
+
+    提取的潜在灵活性比率是一个指标，显示预测的灵活性与可用灵活性相比有多少。值得注意的是，该指标不会惩罚高估，仅惩罚低估。
+
+
+    EPFR(Z, \hat{Z}) = \frac{\sum_{i=1}^{n} max(Z_i - \hat{Z}_i, 0)}{\sum_{i=1}^{n}
+    Z_i}  (14)
+
+
+    这 4 个提出的指标能够定量评估整体灵活性预测性能，识别哪种类型的误差更常见，并衡量已预测的总潜在灵活性的百分比。
+
+
+    ## 7 实验
+
+
+    本文中的实验使用来自 2 个开放数据集的 3 个热泵部署的数据进行，这些数据集包含历史室内、室外温度和功率消耗数据。
+
+
+    ### 7.1 数据集
+
+
+    第一个数据集（NIST Net-Zero）收集自净零能源住宅测试设施，这是一个住宅建筑测试平台，旨在研究和展示使用可再生能源有效满足典型住宅需求的各种技术。数据来自模拟四口之家现实消费和使用模式的实验。在演示期间，家庭供暖由一台空气源（空气到空气）热泵完成。热泵被配置为在制冷季节保持
+    23.8°C 的恒定温度设定点，在供暖季节保持 21.1°C。全年室内温度波动很小，与设定点相比变化小于 2°C。本次实验收集的数据集包括一年的 1 分钟粒度室内时间序列、室外温度和热泵功率消耗读数。该数据集为开放获取，并在其他研究中被广泛使用
+    [28, 36]。
+
+
+    第二和第三个数据集由纽约州能源研究与发展局（NYSERDA）提供。
+
+
+    它们提供了美国纽约州住宅建筑中安装的 50 台地源热泵的数据，这些建筑面积从约 100 平方米到近 600 平方米不等。这两个数据集收集自标识符为 S40
+    和 S44 的部署。未提供设定点温度信息，然而，在 NYSERDA S40 数据集中，热泵保持室内温度约为 21.1°C，在 NYSERDA S44 数据集中约为
+    20°C。两个站点的室内温度波动显著，尤其是在冬季，两个站点的室内温度与近似设定点相比变化超过 4°C。两个数据集均包含约 12 个月的 15 分钟粒度时间序列室内、室外和功率消耗读数，并可开放获取。
+
+
+    ### 7.2 数据预处理
+
+
+    实验中的所有数据集（如 7.1 节所述）均按以下步骤进行预处理：
+
+
+    **数据收集。** 实验数据通过从数据集中选择室内温度 T_ind、室外温度 T_out 和功率 P_hp 读数来收集。NIST Net-Zero 数据集的
+    T_ind 值通过计算原始数据集中所有提供的室内温度读数的平均值来计算。从 NYSERDA 数据集中纳入实验的两个站点数据为：S40 和 S44。此外，NYSERDA
+    S40 和 NYSERDA S44 中的温度读数已从华氏度转换为摄氏度。
+
+
+    **剔除劣质数据。** 通过选择温度满足 T_ind ∈ [10;30]、T_out ∈ [−50;50] 的数据点来剔除异常值。此外，15 分钟内变化超过
+    15°C 的记录也被剔除。在提供的数据规范中标记为不正确或不一致的数据也被剔除。
+
+
+    **数据重采样。** 在实验中，选择 15 分钟数据粒度应用于所有数据集，因为它通常用于电力和灵活性市场 [15]。对于 NIST Net-Zero 数据集，数据通过将功率
+    P_hp 读数平均到 15 分钟间隔进行降采样，并取最后的室外温度 T_out 和室内温度 T_ind 读数。NYSERDA S40 或 NYSERDA S44
+    数据集无需重采样。
+
+
+    **日期和时间特征提取。** 由于所使用的预测模型要求输入和输出具有数值类型，给定的日期和时间时间戳 DT(t) ∈ X(t) 被转换为相应的年、月、日、小时、分钟、星期几整数值。这对给定历史数据
+    X 中的每个向量 X(t) 均执行。
+
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_5_0.png)
+
+
+    **图 3：** 以 20 天为间隔应用的顺序数据集分割策略的可视化表示
+
+
+    **用于训练、验证和测试的数据分割。** 每个数据集被划分为训练、验证和测试子集（集合）。训练集和验证集在预测模型训练过程中使用，以学习模型权重。测试集仅用于评估模型在先前未见数据上的性能，且未在模型训练期间使用。所有数据集均为时间序列，具有顺序依赖性、趋势和季节性。因此，传统使用的分割技术如
+    k 折分割不适用。
+
+
+    为此，采用了顺序数据分割策略。原始数据集被划分为每天一份的部分，然后按顺序划分为训练集、验证集和测试集的三个箱。遵循最佳机器学习实践，在数据集的每 20 天中，先将
+    2 天的序列添加到验证集，然后将 16 天的序列添加到训练集，之后将 2 天的序列添加到测试集（如图 3 所示）。此过程重复直至整个数据集被分割。这种分割技术确保每个集合都能代表日内温度变化和功率消耗模式，以及它们在不同月份和季节之间的变化。
+
+
+    使用网格搜索找到合适的机器学习模型超参数配置。对于 LSTM 和 GRU 模型，使用了不同的单元数 c ∈ (16, 32, 48, 80)。由于先前的研究表明内存参数
+    m 的选择会对模型性能产生显著影响，因此对所有训练模型测试了 m ∈ (16, 32, 48, 96) 的几种配置 [37]。在实验期间，模型以 h = 4
+    的视界进行训练，意味着模型在 4 个时间步内预测下一小时的室内温度。除 SARIMAX 外，所有模型的训练均使用 Adam 优化器，学习率参数 α = 0.005，以
+    RMSE 作为损失函数进行。模型以批量大小 64 训练，最多 125 个 epoch，并启用提前停止以防止过拟合。在训练和验证期间，损失被记录到持久存储中。每
+    5 个 epoch 创建一次模型检查点。验证损失最低的检查点被保留在存储中。为考虑 LSTM、GRU 和 LR 模型中由于随机初始参数初始化可能导致的异常结果，每个模型配置训练
+    3 次，结果中使用误差第二低的模型
+
+
+    在实验期间，室内温度预测模型使用训练集和验证集进行训练。然后使用测试集评估室内温度预测和灵活性预测误差。每个模型仅使用来自一个数据集的数据进行训练和评估。
+
+
+    **定量模型性能。** 训练好的室内温度预测模型性能使用测试集数据通过计算平均 RMSE、MAE 和 MAXE 指标值进行定量评估。实验结果表明，训练好的预测模型能够有效捕捉室内温度相对于热泵运行和室外温度的变化。定量模型性能评估显示，表现最好的预测模型使用
+    LSTM 和 GRU 神经网络架构训练，其中 LSTM 整体性能最佳。如表 2 所示，表现最好的 LSTM 和 GRU 架构模型在三个部署的实验中均优于多元线性回归，RMSE
+    比 GRU 低超过 9%，比多元 LR 模型低超过 32%。表现最好的 LSTM 模型也显著优于
+
+
+    **表 2：** 整体表现最好的室内温度预测模型的快照
+
+
+    | Model | NIST RMSE | NIST MAE | NIST MAXE | NYSERDA S40 RMSE | NYSERDA S40 MAE
+    | NYSERDA S40 MAXE | NYSERDA S44 RMSE | NYSERDA S44 MAE | NYSERDA S44 MAXE |
+
+    |-------|-----------|----------|-----------|------------------|----------------|------------------|------------------|----------------|------------------|
+
+    | LSTM (c=16, m=16) | 0.3240 | 0.3209 | 0.3680 | 0.2352 | 0.2125 | 0.3266 | 0.3084
+    | 0.2727 | 0.4448 |
+
+    | LSTM (c=32, m=96) | 0.0833 | 0.0752 | 0.1202 | 0.2408 | 0.2169 | 0.3357 | 0.3106
+    | 0.2749 | 0.4475 |
+
+    | LSTM average | 0.3967 | 0.3924 | 0.4397 | 0.2580 | 0.2340 | 0.3570 | 0.3281
+    | 0.2938 | 0.4653 |
+
+    | GRU (c=16, m=16) | 0.3200 | 0.3157 | 0.3726 | 0.2513 | 0.2302 | 0.3378 | 0.3171
+    | 0.2856 | 0.4446 |
+
+    | GRU (c=16, m=96) | 0.1262 | 0.1209 | 0.1607 | 0.2458 | 0.2230 | 0.3404 | 0.3283
+    | 0.2930 | 0.4687 |
+
+    | GRU average | 0.2835 | 0.2749 | 0.3449 | 0.2780 | 0.2520 | 0.3860 | 0.3544 |
+    0.3198 | 0.4970 |
+
+    | LR (m=32) | 0.2620 | 0.2519 | 0.3328 | 0.2852 | 0.2549 | 0.4053 | 0.4066 | 0.3577
+    | 0.5884 |
+
+    | LR (m=16) | 0.3274 | 0.3240 | 0.3773 | 0.2604 | 0.2281 | 0.3797 | 0.4119 | 0.3622
+    | 0.5940 |
+
+    | LR average | 0.2712 | 0.2591 | 0.3431 | 0.3110 | 0.2740 | 0.4560 | 0.4850 |
+    0.4167 | 0.7365 |
+
+    | SARIMAX | 0.1424 | 0.1280 | 0.2063 | 0.9086 | 0.8439 | 1.1724 | 2.2577 | 2.0835
+    | 2.8021 |
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 7]
+
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_7_0.png)
+
+
+    # Figure 4: Best performing indoor temperature forecasting model RMSE error by
+    season on NYSERDA S44 dataset
+
+
+    SARIMAX models, especially on NYSERDA S40 and NYSERDA S44 datasets, where LSTM
+    models recorded over 82% lower RMSE error. Quantitative model results also show
+    that baseline linear regression and SARIMAX models fitted with auto-ARIMA have
+    reasonable performance on the NIST Net-Zero dataset, where the indoor temperature
+    does not change by more than a few degrees over the entire year. As seen in Table
+    2 SARIMAX outperforms the best performing LR model by over 45% lower RMSE on the
+    NIST Net-Zero dataset. However, these baseline models have significantly higher
+    predictive error on NYSERDA S44 than their LSTM and GRU counterparts. Multivariate
+    LR models have, on average, over 30% higher error and SARIMAX has over 7 times
+    higher error than GRU or LSTM models. These significant performance differences
+    suggest that SARIMAX and multivariate linear regression models, although generally
+    effective, are not capable of effectively adapting to rapid indoor temperature
+    fluctuations and capturing other complex patterns present in the NYSERDA S44 dataset.
+
+
+    Seasonal performance analysis. After quantitative evaluation of trained indoor
+    temperature predictive models, model performance was also analysed across different
+    seasons. This indicates whether trained models are effective at capturing different
+    patterns present throughout the entire calendar year. As all of the heat pump
+    deployments are situated in the northern hemisphere, we use 4 meteorological seasons
+    of winter, spring, summer and autumn, spanning December to February, March to
+    May, June to August, and September to November, respectively.
+
+
+    Seasonal analysis showed that LSTM and GRU predictive models have high accuracy
+    during the entire year, with their predictive error changing by less than 10%
+    between different seasons. However, baseline multivariate linear regression and
+    SARIMAX model performance vary significantly between seasons. This trend is the
+    most pronounced in the experiments conducted on the NYSERDA S44 dataset. As seen
+    in Figure 4, best performing LSTM and GRU models have similar predictive errors
+    across seasons on the NYSERDA S44 dataset. However, multivariate LR and SARIMAX
+    model performance fluctuate, with linear regression having 30% higher error in
+    summer season and around 15% higher error in winter season and SARIMAX having
+    more than 9 times worse error during the winter season than the best performing
+    models. Poor performance during the colder seasons is highly undesirable, as heat
+    pumps operate and use more power when the outside temperatures are lower,
+
+
+    increasing the amount of potential flexibility [15]. Intuitively, the difference
+    of performance between seasons can be attributed to the fact that both multivariate
+    linear regression and SARIMAX models have a very limited amount of trainable parameters
+    and thus are unable to capture all of the emerging patterns between seasons.
+
+
+    Model configuration comparison. Although it has been established that LSTM and
+    GRU models possess high performance in terms of numerical error, some model configurations
+    produced comparatively poor results. LSTM and GRU models trained using cell count
+    c = 80 had significantly worse results on average than best performing models
+    trained with c = 16 or c = 32. On the NIST Net-Zero dataset models with cell count
+    configuration c = 80 recorded average RMSE +0.5 higher, compared to the best performing
+    model LSTM (c=32, m=96) and, on average, +0.6 higher on the NYSERDA S44 and the
+    NYSERDA S40 datasets. Inspection of validation loss during training indicated
+    that some of these models failed to converge during training, even across multiple
+    runs, despite having potentially higher capacity of capturing complex trends due
+    to the increase in cell count. These results along with quantitative results presented
+    in Table 2 indicate cell count hyperparameter selection is crucial for training
+    accurate LSTM and GRU models.
+
+
+    Model training time. In order to evaluate model training time fairly, all models
+    were trained using the same Google Colab instance with an NVIDIA Tesla P100 GPU.
+    This includes dataset loading, model checkpointing, logging, generating, and saving
+    predictions on the test set. All indoor temperature predictive models were trained
+    in less than 10 minutes on the given Colab instance. Prediction generation using
+    an already trained model takes ≤ 10ms using the Google Colab instance and Apple
+    MacBook Pro with an Intel i5 2.0 GHz CPU.
+
+
+    # 8.2 Flexibility prediction results
+
+
+    Heat pump flexibility prediction was performed using trained indoor temperature
+    predictive models (as shown in Figure 1). Heat pump flexibility scenarios Off
+    and ForcedOn were examined, coinciding with SG-Ready heat pump operation modes
+    Off and ForcedOn (as defined in Table 1).
+
+
+    For scenario Off, data for flexibility prediction performance evaluation were
+    collected from the test set by taking records where heat pump power was below
+    a predefined power threshold for at least 45 minutes from start. The threshold
+    of 100W for mode Off'
+  - '[PAGE 8]
+
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_8_0.png)
+
+
+    # Figure 5: Flexibility prediction results using best performing models from Table
+    2 with user temperature threshold of 0.5°C
+
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_8_1.png)
+
+
+    # Figure 6: Diagram visualizing MAFE and RMSE correlation of all the trained models
+    during experiments
+
+
+    was used for NIST Net-Zero, NYSERDA S40, and NYSERDA S44 datasets.
+
+
+    For scenario ForcedOn, data for flexibility prediction performance evaluation
+    were also collected from the test set. Records were selected, where heat pump
+    power was above a predefined power threshold for at least 45 minutes from start.
+    The threshold for mode ForcedOn was 1.5kW for NIST Net-Zero dataset, 2.14kW for
+    NYSERDA S44 dataset, and 0.92kW for the NYSERDA S40 dataset.
+
+
+    Flexibility was predicted using FLEX_PREDICT defined in Algorithm 1. Lower and
+    upper bounds T_ind_lower, T_ind_upper were calculated by adding and subtracting
+    an indoor temperature threshold value from the last known indoor temperature to
+    get upper and lower bounds, respectively. 0.5°C was selected as the indoor temperature
+    threshold value. No adjustment for predictive model error was used in initial
+    experiments (ε = 0).
+
+
+    Quantitative flexibility prediction performance. Flexibility prediction using
+    trained predictive models experiments show that HeatFlex is capable of predicting
+    flexibility with a high degree of accuracy. As seen in Figure 5, best performing
+    trained temperature predictive models perform well across all three datasets.
+
+
+    For the NIST Net-Zero dataset, the average MAFE error for scenario Off was 0.1,
+    with underestimated flexibility being the only type of error. For scenario ForcedOn,
+    MAFE was 0.28, with underestimated error MAUFE constituting for over 95% of total
+    error. The best performing model for flexibility prediction was the GRU (c=16,
+    m=16), followed closely by LSTM (c=16, m=16). Notably, both GRU (c=16, m=16) and
+    LSTM (c=16, m=16) had more than 3 times higher RMSE indoor temperature predictive
+    error than the best performing indoor temperature predictive model LSTM (c=32,
+    m=96), which had the worst total MAFE for both modes across all 7 models. This
+
+
+    indicates that temperature predictive model RMSE does not always translate into
+    better flexibility prediction MAFE error.
+
+
+    For NYSERDA S40 dataset, the average MAFE error for scenario Off was 0.8 with
+    overestimated flexibility constituting over 95% of total error. All of the models
+    performed very similarly, predicting flexibility within 5% of the average 0.8.
+    The average MAFE for ForcedOn, excluding the SARIMAX model results, was 0.98.
+    SARIMAX underperformed significantly with MAFE of 2.5. The best performing model
+    for flexibility prediction was the GRU (c=16, m=16).
+
+
+    For NYSERDA S44 dataset, the average MAFE error for scenario Off was 1.1. Similarly
+    to the results on the NYSERDA S40 dataset overestimated flexibility made up over
+    90% of the total error. For predicting flexibility for ForcedOn, the average error
+    was 1.35, with overestimated flexibility error MAOFE constituting for around 60%
+    of the total error. The best performing model for flexibility prediction was the
+    LSTM (c=16, m=16), which was also the best performing temperature predictive model
+    (as seen in Table 2).
+
+
+    Correlation analysis of predictive model error and predicted flexibility. Trained
+    model flexibility prediction results were also analysed to identify if a numeric
+    relationship exists between indoor temperature predictive model error and predicted
+    flexibility error. Figure 6 visualizes the bivariate correlation between trained
+    model RMSE and the mean MAFE for scenarios Off and ForcedOn. The figure shows
+    that in models of all three datasets there is a positive correlation between RMSE
+    and MAFE. However, the correlation is non-linear and has a lot of outliers, meaning
+    that indoor temperature RMSE is a reasonable metric for estimating flexibility
+    error MAFE, but higher indoor temperature model accuracy does not always translate
+    into more accurate flexibility prediction.
+
+
+    Adjustment for predictive model error results. In HeatFlex, indoor temperature
+    prediction and flexibility prediction is separated, allowing adjusting for trained
+    indoor temperature predictive model error during flexibility prediction. One adjustment
+    strategy is to use the ε adjustment variable in the flexibility prediction algorithm
+    (as defined in Algorithm 1). If ε > 0, it reduces the range between user defined
+    comfort bounds. As seen in Figure 7 the user comfort bound reduction forces the
+    predictive models to underestimate flexibility, reducing MAOFE error at the cost
+    of increasing MAUFE, which might be a preferable trade-off, depending on the use-case.
+    An alternative strategy for adjusting for predictive model error is to widen the
+    user comfort bounds by negotiating with the end-user. It could'
+  md: '
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_7_0.png)
+
+
+    ## Figure 4: Best performing indoor temperature forecasting model RMSE error by
+    season on NYSERDA S44 dataset
+
+
+    SARIMAX models, especially on NYSERDA S40 and NYSERDA S44 datasets, where LSTM
+    models recorded over 82% lower RMSE error. Quantitative model results also show
+    that baseline linear regression and SARIMAX models fitted with auto-ARIMA have
+    reasonable performance on the NIST Net-Zero dataset, where the indoor temperature
+    does not change by more than a few degrees over the entire year. As seen in Table
+    2, SARIMAX outperforms the best performing LR model by over 45% lower RMSE on
+    the NIST Net-Zero dataset. However, these baseline models have significantly higher
+    predictive error on NYSERDA S44 than their LSTM and GRU counterparts. Multivariate
+    LR models have, on average, over 30% higher error and SARIMAX has over 7 times
+    higher error than GRU or LSTM models. These significant performance differences
+    suggest that SARIMAX and multivariate linear regression models, although generally
+    effective, are not capable of effectively adapting to rapid indoor temperature
+    fluctuations and capturing other complex patterns present in the NYSERDA S44 dataset.
+
+
+    ### Seasonal performance analysis
+
+    After quantitative evaluation of trained indoor temperature predictive models,
+    model performance was also analysed across different seasons. This indicates whether
+    trained models are effective at capturing different patterns present throughout
+    the entire calendar year. As all of the heat pump deployments are situated in
+    the northern hemisphere, we use 4 meteorological seasons of winter, spring, summer
+    and autumn, spanning December to February, March to May, June to August, and September
+    to November, respectively.
+
+
+    Seasonal analysis showed that LSTM and GRU predictive models have high accuracy
+    during the entire year, with their predictive error changing by less than 10%
+    between different seasons. However, baseline multivariate linear regression and
+    SARIMAX model performance vary significantly between seasons. This trend is the
+    most pronounced in the experiments conducted on the NYSERDA S44 dataset. As seen
+    in Figure 4, best performing LSTM and GRU models have similar predictive errors
+    across seasons on the NYSERDA S44 dataset. However, multivariate LR and SARIMAX
+    model performance fluctuate, with linear regression having 30% higher error in
+    summer season and around 15% higher error in winter season and SARIMAX having
+    more than 9 times worse error during the winter season than the best performing
+    models. Poor performance during the colder seasons is highly undesirable, as heat
+    pumps operate and use more power when the outside temperatures are lower, increasing
+    the amount of potential flexibility [15]. Intuitively, the difference of performance
+    between seasons can be attributed to the fact that both multivariate linear regression
+    and SARIMAX models have a very limited amount of trainable parameters and thus
+    are unable to capture all of the emerging patterns between seasons.
+
+
+    ### Model configuration comparison
+
+    Although it has been established that LSTM and GRU models possess high performance
+    in terms of numerical error, some model configurations produced comparatively
+    poor results. LSTM and GRU models trained using cell count c = 80 had significantly
+    worse results on average than best performing models trained with c = 16 or c
+    = 32. On the NIST Net-Zero dataset models with cell count configuration c = 80
+    recorded average RMSE +0.5 higher, compared to the best performing model LSTM
+    (c=32, m=96) and, on average, +0.6 higher on the NYSERDA S44 and the NYSERDA S40
+    datasets. Inspection of validation loss during training indicated that some of
+    these models failed to converge during training, even across multiple runs, despite
+    having potentially higher capacity of capturing complex trends due to the increase
+    in cell count. These results along with quantitative results presented in Table
+    2 indicate cell count hyperparameter selection is crucial for training accurate
+    LSTM and GRU models.
+
+
+    ### Model training time
+
+    In order to evaluate model training time fairly, all models were trained using
+    the same Google Colab instance with an NVIDIA Tesla P100 GPU. This includes dataset
+    loading, model checkpointing, logging, generating, and saving predictions on the
+    test set. All indoor temperature predictive models were trained in less than 10
+    minutes on the given Colab instance. Prediction generation using an already trained
+    model takes ≤ 10ms using the Google Colab instance and Apple MacBook Pro with
+    an Intel i5 2.0 GHz CPU.
+
+
+    ## 8.2 Flexibility prediction results
+
+
+    Heat pump flexibility prediction was performed using trained indoor temperature
+    predictive models (as shown in Figure 1). Heat pump flexibility scenarios Off
+    and ForcedOn were examined, coinciding with SG-Ready heat pump operation modes
+    Off and ForcedOn (as defined in Table 1).
+
+
+    For scenario Off, data for flexibility prediction performance evaluation were
+    collected from the test set by taking records where heat pump power was below
+    a predefined power threshold for at least 45 minutes from start. The threshold
+    of 100W for mode Off was used for NIST Net-Zero, NYSERDA S40, and NYSERDA S44
+    datasets.
+
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_8_0.png)
+
+
+    ## Figure 5: Flexibility prediction results using best performing models from
+    Table 2 with user temperature threshold of 0.5°C
+
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_8_1.png)
+
+
+    ## Figure 6: Diagram visualizing MAFE and RMSE correlation of all the trained
+    models during experiments
+
+
+    For scenario ForcedOn, data for flexibility prediction performance evaluation
+    were also collected from the test set. Records were selected, where heat pump
+    power was above a predefined power threshold for at least 45 minutes from start.
+    The threshold for mode ForcedOn was 1.5kW for NIST Net-Zero dataset, 2.14kW for
+    NYSERDA S44 dataset, and 0.92kW for the NYSERDA S40 dataset.
+
+
+    Flexibility was predicted using FLEX_PREDICT defined in Algorithm 1. Lower and
+    upper bounds T_ind_lower, T_ind_upper were calculated by adding and subtracting
+    an indoor temperature threshold value from the last known indoor temperature to
+    get upper and lower bounds, respectively. 0.5°C was selected as the indoor temperature
+    threshold value. No adjustment for predictive model error was used in initial
+    experiments (ε = 0).
+
+
+    ### Quantitative flexibility prediction performance
+
+    Flexibility prediction using trained predictive models experiments show that HeatFlex
+    is capable of predicting flexibility with a high degree of accuracy. As seen in
+    Figure 5, best performing trained temperature predictive models perform well across
+    all three datasets.
+
+
+    For the NIST Net-Zero dataset, the average MAFE error for scenario Off was 0.1,
+    with underestimated flexibility being the only type of error. For scenario ForcedOn,
+    MAFE was 0.28, with underestimated error MAUFE constituting over 95% of total
+    error. The best performing model for flexibility prediction was the GRU (c=16,
+    m=16), followed closely by LSTM (c=16, m=16). Notably, both GRU (c=16, m=16) and
+    LSTM (c=16, m=16) had more than 3 times higher RMSE indoor temperature predictive
+    error than the best performing indoor temperature predictive model LSTM (c=32,
+    m=96), which had the worst total MAFE for both modes across all 7 models. This
+    indicates that temperature predictive model RMSE does not always translate into
+    better flexibility prediction MAFE error.
+
+
+    For NYSERDA S40 dataset, the average MAFE error for scenario Off was 0.8 with
+    overestimated flexibility constituting over 95% of total error. All of the models
+    performed very similarly, predicting flexibility within 5% of the average 0.8.
+    The average MAFE for ForcedOn, excluding the SARIMAX model results, was 0.98.
+    SARIMAX underperformed significantly with MAFE of 2.5. The best performing model
+    for flexibility prediction was the GRU (c=16, m=16).
+
+
+    For NYSERDA S44 dataset, the average MAFE error for scenario Off was 1.1. Similarly
+    to the results on the NYSERDA S40 dataset overestimated flexibility made up over
+    90% of the total error. For predicting flexibility for ForcedOn, the average error
+    was 1.35, with overestimated flexibility error MAOFE constituting around 60% of
+    the total error. The best performing model for flexibility prediction was the
+    LSTM (c=16, m=16), which was also the best performing temperature predictive model
+    (as seen in Table 2).
+
+
+    ### Correlation analysis of predictive model error and predicted flexibility
+
+    Trained model flexibility prediction results were also analysed to identify if
+    a numeric relationship exists between indoor temperature predictive model error
+    and predicted flexibility error. Figure 6 visualizes the bivariate correlation
+    between trained model RMSE and the mean MAFE for scenarios Off and ForcedOn. The
+    figure shows that in models of all three datasets there is a positive correlation
+    between RMSE and MAFE. However, the correlation is non-linear and has a lot of
+    outliers, meaning that indoor temperature RMSE is a reasonable metric for estimating
+    flexibility error MAFE, but higher indoor temperature model accuracy does not
+    always translate into more accurate flexibility prediction.
+
+
+    ### Adjustment for predictive model error results
+
+    In HeatFlex, indoor temperature prediction and flexibility prediction is separated,
+    allowing adjusting for trained indoor temperature predictive model error during
+    flexibility prediction. One adjustment strategy is to use the ε adjustment variable
+    in the flexibility prediction algorithm (as defined in Algorithm 1). If ε > 0,
+    it reduces the range between user defined comfort bounds. As seen in Figure 7
+    the user comfort bound reduction forces the predictive models to underestimate
+    flexibility, reducing MAOFE error at the cost of increasing MAUFE, which might
+    be a preferable trade-off, depending on the use-case. An alternative strategy
+    for adjusting for predictive model error is to widen the user comfort bounds by
+    negotiating with the end-user. It could
+
+    '
+  mdcn: '
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_7_0.png)
+
+
+    ## 图 4：NYSERDA S44 数据集上表现最佳的室内温度预测模型按季节的 RMSE 误差
+
+
+    SARIMAX 模型，尤其是在 NYSERDA S40 和 NYSERDA S44 数据集上，LSTM 模型的 RMSE 误差降低了超过 82%。定量模型结果还显示，使用
+    auto-ARIMA 拟合的基线线性回归和 SARIMAX 模型在 NIST Net-Zero 数据集上具有合理的性能，其中室内温度在整个年份内变化不超过几度。如表
+    2 所示，在 NIST Net-Zero 数据集上，SARIMAX 的 RMSE 比表现最佳的 LR 模型低超过 45%。然而，这些基线模型在 NYSERDA
+    S44 上的预测误差明显高于其 LSTM 和 GRU 对应模型。多变量 LR 模型的平均误差高出超过 30%，而 SARIMAX 的误差比 GRU 或 LSTM
+    模型高出超过 7 倍。这些显著的性能差异表明，SARIMAX 和多变量线性回归模型虽然总体有效，但无法有效适应 NYSERDA S44 数据集中存在的快速室内温度波动和其他复杂模式。
+
+
+    ### 季节性性能分析
+
+    在对训练好的室内温度预测模型进行定量评估后，还对模型在不同季节的性能进行了分析。这表明训练好的模型是否有效捕捉到整个日历年度内存在的不同模式。由于所有热泵部署均位于北半球，我们使用
+    4 个气象季节：冬季、春季、夏季和秋季，分别 spanning 十二月至二月、三月至五月、六月至八月，以及九月至十一月。
+
+
+    季节性分析显示，LSTM 和 GRU 预测模型在全年均具有较高的准确性，其预测误差在不同季节之间变化小于 10%。然而，基线多变量线性回归和 SARIMAX
+    模型的性能在季节之间差异显著。这种趋势在 NYSERDA S44 数据集上进行的实验中最为明显。如图 4 所示，在 NYSERDA S44 数据集上，表现最佳的
+    LSTM 和 GRU 模型在各季节的预测误差相似。然而，多变量 LR 和 SARIMAX 模型的性能波动较大，线性回归在夏季的误差高出 30%，冬季高出约
+    15%，而 SARIMAX 在冬季的误差比表现最佳的模型差超过 9 倍。较冷季节的性能较差是非常不理想的，因为热泵在室外温度较低时会运行并使用更多电力，增加潜在的灵活性
+    [15]。直观上，季节之间性能差异的原因可归因于多变量线性回归和 SARIMAX 模型具有非常有限的可训练参数量，因此无法捕捉季节之间出现的所有模式。
+
+
+    ### 模型配置比较
+
+    尽管已确定 LSTM 和 GRU 模型在数值误差方面具有高性能，但某些模型配置产生了相对较差的结果。使用单元数 c = 80 训练的 LSTM 和 GRU
+    模型平均结果明显比使用 c = 16 或 c = 32 训练的最佳模型差。在 NIST Net-Zero 数据集上，单元数配置为 c = 80 的模型记录的平均
+    RMSE 比表现最佳的模型 LSTM (c=32, m=96) 高 +0.5，在 NYSERDA S44 和 NYSERDA S40 数据集上平均高 +0.6。对训练期间验证损失的检查表明，尽管由于单元数增加而可能具有更高的捕捉复杂趋势的能力，但其中一些模型在多次运行中仍未能在训练期间收敛。这些结果连同表
+    2 中呈现的定量结果表明，单元数超参数选择对于训练准确的 LSTM 和 GRU 模型至关重要。
+
+
+    ### 模型训练时间
+
+    为了公平评估模型训练时间，所有模型均使用同一台配备 NVIDIA Tesla P100 GPU 的 Google Colab 实例进行训练。这包括数据集加载、模型检查点、日志记录、在测试集上生成和保存预测。所有室内温度预测模型在给定的
+    Colab 实例上训练时间均少于 10 分钟。使用已训练模型生成预测在 Google Colab 实例和配备 Intel i5 2.0 GHz CPU 的
+    Apple MacBook Pro 上耗时 ≤ 10ms。
+
+
+    ## 8.2 灵活性预测结果
+
+
+    热泵灵活性预测使用训练好的室内温度预测模型进行（如图 1 所示）。热泵灵活性场景 Off 和 ForcedOn 进行了检查，与 SG-Ready 热泵运行模式
+    Off 和 ForcedOn 相一致（如表 1 所定义）。
+
+
+    对于场景 Off，灵活性预测性能评估的数据是从测试集中收集的，选取热泵功率在开始后至少 45 分钟内低于预定义功率阈值的记录。模式 Off 的阈值对 NIST
+    Net-Zero、NYSERDA S40 和 NYSERDA S44 数据集均为 100W。
+
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_8_0.png)
+
+
+    ## 图 5：使用表 2 中表现最佳的模型进行灵活性预测结果，用户温度阈值为 0.5°C
+
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_8_1.png)
+
+
+    ## 图 6：实验期间所有训练模型的 MAFE 与 RMSE 相关性的可视化图
+
+
+    对于场景 ForcedOn，灵活性预测性能评估的数据也从测试集中收集。选取热泵功率在开始后至少 45 分钟内高于预定义功率阈值的记录。模式 ForcedOn
+    的阈值为 NIST Net-Zero 数据集 1.5kW、NYSERDA S44 数据集 2.14kW，以及 NYSERDA S40 数据集 0.92kW。
+
+
+    灵活性使用 Algorithm 1 中定义的 FLEX_PREDICT 进行预测。上下界 T_ind_lower、T_ind_upper 通过从最后已知的室内温度加上和减去室内温度阈值来分别得到上界和下界。室内温度阈值选为
+    0.5°C。初始实验中未对预测模型误差进行调整（ε = 0）。
+
+
+    ### 定量灵活性预测性能
+
+    使用训练好的预测模型进行灵活性预测的实验表明，HeatFlex 能够以高精度预测灵活性。如图 5 所示，训练好的表现最佳的温度预测模型在全部三个数据集上表现良好。
+
+
+    对于 NIST Net-Zero 数据集，场景 Off 的平均 MAFE 误差为 0.1，且低估灵活性是唯一类型的误差。对于场景 ForcedOn，MAFE
+    为 0.28，其中低估误差 MAUFE 占总误差的超过 95%。灵活性预测表现最佳的模型为 GRU (c=16, m=16)，其次是 LSTM (c=16,
+    m=16)。值得注意的是，GRU (c=16, m=16) 和 LSTM (c=16, m=16) 的 RMSE 室内温度预测误差比表现最佳的室内温度预测模型
+    LSTM (c=32, m=96) 高出超过 3 倍，而后者在所有 7 个模型中对两种模式的总 MAFE 最差。这表明温度预测模型 RMSE 并不能始终转化为更好的灵活性预测
+    MAFE 误差。
+
+
+    对于 NYSERDA S40 数据集，场景 Off 的平均 MAFE 误差为 0.8，其中高估灵活性占总误差的超过 95%。所有模型表现非常相似，预测的灵活性与平均
+    0.8 相差在 5% 以内。排除 SARIMAX 模型结果后，ForcedOn 的平均 MAFE 为 0.98。SARIMAX 表现明显较差，MAFE 为
+    2.5。灵活性预测表现最佳的模型为 GRU (c=16, m=16)。
+
+
+    对于 NYSERDA S44 数据集，场景 Off 的平均 MAFE 误差为 1.1。与 NYSERDA S40 数据集的结果类似，高估灵活性占总误差的超过
+    90%。预测 ForcedOn 灵活性的平均误差为 1.35，其中高估灵活性误差 MAOFE 约占总误差的 60%。灵活性预测表现最佳的模型为 LSTM (c=16,
+    m=16)，该模型也是表现最佳的温度预测模型（如表 2 所示）。
+
+
+    ### 预测模型误差与预测灵活性的相关性分析
+
+    还对训练模型的灵活性预测结果进行了分析，以确定室内温度预测模型误差与预测灵活性误差之间是否存在数值关系。图 6 可视化了训练模型 RMSE 与场景 Off
+    和 ForcedOn 的平均 MAFE 之间的双变量相关性。图显示，在全部三个数据集的模型中，RMSE 与 MAFE 之间存在正相关。然而，相关性是非线性的且存在大量异常值，这意味着室内温度
+    RMSE 是估计灵活性误差 MAFE 的合理指标，但更高的室内温度模型准确性并不总是转化为更准确的灵活性预测。
+
+
+    ### 预测模型误差调整结果
+
+    在 HeatFlex 中，室内温度预测和灵活性预测是分离的，允许在灵活性预测期间对训练好的室内温度预测模型误差进行调整。一个调整策略是使用灵活性预测算法中定义的
+    ε 调整变量（如 Algorithm 1 所定义）。如果 ε > 0，则会减小用户定义舒适边界之间的范围。如图 7 所示，用户舒适边界的减小迫使预测模型低估灵活性，降低
+    MAOFE 误差，同时以增加 MAUFE 为代价，这可能是一种更可取的权衡，具体取决于使用场景。调整预测模型误差的另一种策略是通过与终端用户协商来拓宽用户舒适边界。它可能
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 9]
+
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_9_0.png)
+
+
+    Figure 7: Flexibility prediction results for NYSERDA S44 dataset using indoor
+    temperature threshold of 0.5°C (left) compared with adjustment strategy RMSE/2
+    (center) and increased temperature threshold of 1.0°C (right)
+
+
+    # Table 3: Total flexible energy (kWh) and EPFR percentage of best performing
+    models
+
+
+    |  | NIST |  | NYSERDA S40 |  | NYSERDA S44 |  |
+
+    |---|---|---|---|---|---|---|
+
+    |  | mode = Off | mode = ForcedOn | mode = Off | mode = ForcedOn | mode = Off
+    | mode = ForcedOn |
+
+    | Flexible Energy ($E_{mode}$) | 1166 kWh | 430 kWh | 1087 kWh | 714 kWh | 1855
+    kWh | 785 kWh |
+
+    | EPFR | 98.70% | 87.20% | 97.30% | 86.20% | 87.40% | 95.40% |
+
+
+    be used in cases where previous adjustment for error strategies do not yield satisfactory
+    results. Widening the comfort bounds has a two-fold effect: it potentially reduces
+    the flexibility prediction error and increases the total amount of potential heat
+    pump flexibility. As seen in Figure 7, the widening of the user comfort bounds
+    by 0.5°C decreased MAFE by 85% on average. The widening of bounds also yielded
+    an over 41% increase in potential flexibility for modes Off and ForcedOn.
+
+
+    Evaluation of the amounts of predicted flexible energy. After all experiments
+    were completed, flexibility prediction results were aggregated and the total amount
+    of flexible energy was calculated. To calculate flexible energy for mode ∈ {ForcedOn,
+    Off}, the average power consumptions of the heat pump were calculated in both
+    normal operation P̅_normal and in the given mode P̅_mode and then the absolute
+    difference was multiplied the predicted flexibility amount F̂_mode divided by
+    4 to normalize to hours (one time step every 15 minutes).
+
+
+    ```
+
+    E_mode = (P̅_mode - P̅_normal) * F̂_mode / 4  (15)
+
+    ```
+
+
+    The comfort bound of 0.5°C was used across all datasets for flexibility prediction.
+    As seen in Table 3 all of the heat pump deployments provide over 1.5MWh of combined
+    flexible energy, with the NYSERDA S44 providing 2.64MWh. The results indicate
+    that the majority (over 68%) of total potential flexible energy can be utilized
+    with scenario Off. On average, the flexibility prediction models managed to predict
+    over 90% of available flexibility (EPFR) from all three datasets between both
+    modes. Notably, all of the monitored heat pumps used in this study were not configured
+    to maximize flexible energy and were operating to maintain a set temperature.
+
+
+    # 9 CONCLUSIONS AND FUTURE WORK
+
+
+    This paper proposes HeatFlex, a novel data-driven method for predicting flexibility
+    from smart heat pumps. HeatFlex, utilizing modern machine learning models, LSTM
+    and GRU recurrent neural networks, can accurately predict flexibility from heat
+    pump devices
+
+
+    without requiring knowledge about deployed heat pump parameters, building layout
+    or environment details or manual development of physical models. Furthermore,
+    HeatFlex only uses three, widely available monitored variables, making it applicable
+    in a majority of use cases. The paper also proposes new metrics for heat pump
+    flexibility, enabling quantitative evaluation of flexibility prediction performance.
+    Conducted experiments on 3 open access datasets show that machine learning based
+    indoor temperature forecasting models can be trained in a scalable, data-driven
+    way and be effective at predicting energy flexibility from individual smart heat
+    pump devices. Quantitative and qualitative performance evaluation shows that HeatFlex,
+    utilizing recurrent neural networks, has over 32% lower indoor temperature forecasting
+    error than the model baselines linear regression and SARIMAX, while also having
+    more consistent performance throughout different seasons. Experimental results
+    show that HeatFlex can be effective in different deployments, with different building
+    sizes and heat pump types, predicting over 90% of potential heat pump flexibility.
+
+
+    In future work, we will develop data-driven predictive models that could predict
+    flexibility from other types of devices (e.g. air conditioners, electric vehicle
+    chargers). We will perform experiments using additional data from real smart heat
+    pump deployments as well as simulations to verify HeatFlex robustness in various
+    flexible operation conditions. Additionally, we will explore developing predictive
+    models that optimize directly on flexibility prediction error, thus maximizing
+    utility. Finally, we will develop novel probabilistic models which will enable
+    evaluating potential prediction accuracy during inference.
+
+
+    # ACKNOWLEDGMENTS
+
+
+    This work was supported by the FEVER (Flexible Energy Production, Demand and Storage-based
+    Virtual Power Plants for Electricity Markets and Resilient DSO Operation) project
+    under the Horizon 2020 programme.'
+  - '[PAGE 10]
+
+
+    # REFERENCES
+
+
+    [1] Alessandro Aliberti, Francesca Maria Ugliotti, Lorenzo Bottaccioli, Giansalvo
+    Cirrincione, Anna Osello, Enrico Macii, Edoardo Patti, and Andrea Acquaviva. 2018.
+    Indoor Air-Temperature Forecast for Energy-Efficient Management in Smart Buildings.
+    Proceedings - 2018 IEEE International Conference on Environment and Electrical
+    Engineering and 2018 IEEE Industrial and Commercial Power Systems Europe, EEIC/I
+    and CPS Europe 2018 (2018). https://doi.org/10.1109/EEIC.2018.8494382
+
+
+    [2] Abdulaziz Almalaq and George Edwards. 2017. A review of deep learning methods
+    applied on load forecasting. Proceedings - 16th IEEE International Conference
+    on Machine Learning and Applications, ICMLA 2017 2017-December (2017), 511-516.
+    https://doi.org/10.1109/ICMLA.2017.0-110
+
+
+    [3] Yoshua Bengio, Patrice Simard, and Paolo Frasconi. 1994. Learning Long-Term
+    Dependencies with Gradient Descent is Difficult. IEEE Transactions on Neural Networks
+    5, 2 (1994), 157-166. https://doi.org/10.1109/72.279181
+
+
+    [4] Matthias Boehm, Lars Dannecker, Andreas Doms, Erik Dovgan, Bogdan Filipič,
+    Ulrike Fischer, Wolfgang Lehner, Torben Bach Pedersen, Yoann Pitarch, Laurynas
+    Sikšnys, and Tea Tüsar. 2012. Data management in the MIRABEL smart grid system.
+    ACM International Conference Proceeding Series (2012), 95-102. https://doi.org/10.1145/2320765.2320797
+
+
+    [5] George Edward Pelham Box and Gwilym Jenkins. 1990. Time Series Analysis, Forecasting
+    and Control. Holden-Day, Inc., USA.
+
+
+    [6] P. Carroll, M. Chesser, and P. Lyons. 2020. Air Source Heat Pumps field studies:
+    A systematic literature review. Renewable and Sustainable Energy Reviews 134,
+    August (2020). https://doi.org/10.1016/j.rser.2020.110275
+
+
+    [7] T. Chai and R. R. Draxler. 2014. Root mean square error (RMSE) or mean absolute
+    error (MAE)? -Arguments against avoiding RMSE in the literature. Geoscience Model
+    Development 7, 3 (2014), 1247-1250. https://doi.org/10.5194/gmd-7-1247-2014
+
+
+    [8] Kyunghyun Cho, Bart van Merriënboer, Dzmitry Bahdanau, and Yoshua Bengio.
+    2015. On the Properties of Neural Machine Translation: Encoder-Decoder Approaches.
+    (2015), 103-111. https://doi.org/10.3115/v1/w14-4012 arXiv:1409.1259
+
+
+    [9] Junyoung Chung, Caglar Gulcehre, KyungHyun Cho, and Yoshua Bengio. 2014. Empirical
+    Evaluation of Gated Recurrent Neural Networks on Sequence Modeling. (dec 2014).
+    arXiv:1412.3555 http://arxiv.org/abs/1412.3555
+
+
+    [10] Tingting Fang and Risto Lahdelma. 2016. Evaluation of a multiple linear regression
+    model and SARIMA model in forecasting heat demand for district heating system.
+    Applied Energy 179 (2016), 544-552. https://doi.org/10.1016/j.apenergy.2016.06.133
+
+
+    [11] David Fischer, Marc Andre Triebel, and Oliver Selinger-Lutz. 2018. A Concept
+    for Controlling Heat Pump Pools Using the Smart Grid Ready Interface. Proceedings
+    - 2018 IEEE PES Innovative Smart Grid Technologies Conference Europe, ISGT-Europe
+    2018 (2018). https://doi.org/10.1109/ISGTEurope.2018.8571870
+
+
+    [12] Benedikt Heidrich, Marian Turoowski, Nicole Ludwig, Ralf Mikul, and Veit
+    Hagenmeyer. 2020. Forecasting energy time series with profile neural networks.
+    In e-Energy 2020 - Proceedings of the 11th ACM International Conference on Future
+    Energy Systems. Association for Computing Machinery, Inc, New York, NY, USA, 220-230.
+    https://doi.org/10.1145/3396851.3397683
+
+
+    [13] Sepp Hochreiter and Jürgen Schmidhuber. 1997. Long Short-Term Memory. Neural
+    Computation 9, 8 (1997), 1735-1780. https://doi.org/10.1162/neco.1997.9.8.1735
+
+
+    [14] Chiou Jye Huang and Ping Huan Kuo. 2019. Multiple-Input Deep Convolutional
+    Neural Network Model for Short-Term Photovoltaic Power Forecasting. IEEE Access
+    7 (2019), 74822-74834. https://doi.org/10.1109/ACCESS.2019.2921238
+
+
+    [15] Konstantinos Kouzelis, Zheng H. Tan, Birgitte Bak-Jensen, Jayakrishnan Radhakrishna
+    Pillai, and Ewen Ritchie. 2015. Estimation of Residential Heat Pump Consumption
+    for Flexibility Market Applications. IEEE Transactions on Smart Grid 6, 4 (2015),
+    1852-1864. https://doi.org/10.1109/TSG.2015.2414490
+
+
+    [16] Guokun Lai, Wei Cheng Chang, Yiming Yang, and Hanxiao Liu. 2018. Modeling
+    long- and short-term temporal patterns with deep neural networks. 41st International
+    ACM SIGIR Conference on Research and Development in Information Retrieval, SIGIR
+    2018 July (2018), 95-104. https://doi.org/10.1145/3209978.3210006 arXiv:arXiv:1703.07015v3
+
+
+    [17] Ming Li, Yijun Li, and Xinli Min. 2020. Practice and Application of LSTM
+    in Temperature Prediction of HVAC System. Proceedings of 2020 IEEE 5th Information
+    Technology and Mechatronics Engineering Conference, ITOEC 2020 Itoec (2020), 1000-1004.
+    https://doi.org/10.1109/ITOEC49072.2020.9149190
+
+
+    [18] Junyu Liu, Xiao Wang, Yan Zhao, Bin Dong, Kuan Lu, and Ranran Wang. 2020.
+    Heating Load Forecasting for Combined Heat and Power Plants Via Strand-Based LSTM.
+    IEEE Access 8 (2020), 33360-33369. https://doi.org/10.1109/ACCESS.2020.2972303
+
+
+    [19] Fernando Mateo, Juan José Carrasco, Abderrahim Sellami, Mónica Millán-Giraldo,
+    Manuel Domínguez, and Emilio Soria-Olivas. 2013. Machine learning methods to forecast
+    temperature in buildings. Expert Systems with Applications 40, 4 (2013), 1061-1068.
+    https://doi.org/10.1016/j.eswa.2012.08.030
+
+
+    [20] Bijay Neupane, Torben Bach Pedersen, and Bo Thieson. 2018. Utilizing device-level
+    demand forecasting for flexibility markets. e-Energy 2018 - Proceedings of the
+    9th ACM International Conference on Future Energy Systems (2018), 108-118. https://doi.org/10.1145/3208903.3208922
+
+
+    [21] Bijay Neupane, Laurynas Sikšnys, and Torben Bach Pedersen. 2017. Generation
+    and evaluation of flex-offers from flexible electrical devices. In e-Energy 2017
+    - Proceedings of the 8th International Conference on Future Energy Systems. Association
+    for Computing Machinery, Inc, 143-156. https://doi.org/10.1145/3077839.3077850
+
+
+    [22] Thomas Nowak and Pascal Westring. 2017. Growing for good ? The European Heat
+    Pump Market - Status and outlook. 12th IEA Heat Pump Conference 2017 (2017), 1-10.
+
+
+    [23] Dimitrios Papadaskalopoulos, Goran Strbac, Pierluigi Mancarella, Marko Aunedi,
+    and Vladimir Stanojevic. 2013. Decentralized participation of flexible demand
+    in electricity markets - Part II: Application with electric vehicles and heat
+    pump systems. IEEE Transactions on Power Systems 28, 4 (2013), 3667-3674. https://doi.org/10.1109/TPWRS.2013.2245687
+
+
+    [24] Debayan Paul, Tanmay Chakraborty, Soumya Kanti Datta, and Debolina Paul.
+    2018. IoT and Machine Learning Based Prediction of Smart Building Indoor Temperature.
+    2018 4th International Conference on Computer and Information Sciences: Revolutionising
+    Digital Landscape for Sustainable Smart Society, ICCOINS 2018 - Proceedings (2018),
+    1-6. https://doi.org/10.1109/ICCOINS.2018.8510597
+
+
+    [25] Torben Bach Pedersen, Thibaut Le Gully, Per D. Pedersen, Luis J. Ferreira,
+    Laurynas Sikšnys, Petr Sluka, Michele Albano, Arne Skou, and Petur Olsen. 2016.
+    An Energy Flexibility Framework on the Internet of Things. 2 (2016), 17-37. https://doi.org/10.5220/0006163400170037
+
+
+    [26] Torben Bach Pedersen, Laurynas Sikšnys, and Bijay Neupane. 2018. Modeling
+    and Managing Energy Flexibility Using FlexOffers. 2018 IEEE International Conference
+    on Communications, Control, and Computing Technologies for Smart Grids, SmartGridComm
+    2018 (2018). https://doi.org/10.1109/SmartGridComm.2018.8587605
+
+
+    [27] Rob J Hyndman and Yeasmin Khandakar. 2008. Automatic Time Series Forecasting:
+    The forecast Package for R. Journal of Statistical Software 27, 3 (2008), 22.
+    http://www.jstatsoft.org/v27/i03/paper
+
+
+    [28] Olga Rybnytska, Laurynas Sikšnys, Torben Bach Pedersen, and Bijay Neupane.
+    2020. PGF MU: Integrating data management with physical system modelling. Advances
+    in Database Technology - EDBT 2020-March (2020), 109-120.
+
+
+    [29] Laurynas Sikšnys, Emmanouil Valsomatiz, Katja Hose, and Torben Bach Pedersen.
+    2015. Aggregating and Disaggregating Flexibility Objects. IEEE Transactions on
+    Knowledge and Data Engineering 27, 11 (2015), 2893-2906. https://doi.org/10.1109/TKDE.2015.2445755
+
+
+    [30] Jiancai Song, Guixiang Xue, Xuhua Pan, Yunpeng Ma, and Han Li. 2020. Hourly
+    heat load prediction model based on temporal convolutional neural network. IEEE
+    Access 8 (2020), 16726-16741. https://doi.org/10.1109/ACCESS.2020.2968536
+
+
+    [31] Hai Tao, Li Junjie, Shi Yu, Chen Yongjian, and Liu Zhenyu. 2020. Predictive
+    analysis of outdoor temperature and humidity based on BP neural network single-step
+    prediction method. Proceedings of 2020 IEEE 3rd International Conference on Information
+    Systems and Computer Aided Education, ICISCAE 2020 (2020), 402-407. https://doi.org/10.1109/ICISCAE51034.2020.9236853
+
+
+    [32] Stylianos I. Vagropoulos, G. I. Chouliaras, E. G. Kardakos, C. K. Simoglou,
+    and A. G. Bakirtzis. 2016. Comparison of SARIMAX, SARIMA, modified SARIMA and
+    ANN-based models for short-term PV generation forecasting. 2016 IEEE International
+    Energy Conference, ENERGYCON 2016 (2016), 0-5. https://doi.org/10.1109/ENERGYCON.2016.7514029
+
+
+    [33] Emmanouil Valsomatiz, Katja Hose, Torben Bach Pedersen, and Laurynas Sikšnys.
+    2015. Measuring and comparing energy flexibilities. CEUR Workshop Proceedings
+    1330, c (2015), 78-85.
+
+
+    [34] Emmanouil Valsomatiz, Torben Bach Pedersen, and Alberto Abelló. 2018. Day-ahead
+    trading of aggregated energy flexibility. e-Energy 2018 - Proceedings of the 9th
+    ACM International Conference on Future Energy Systems (2018), 134-138. https://doi.org/10.1145/3208903.3208936
+
+
+    [35] Inna Vorushylo, Patrick Keatley, Nikhilkumar Shah, Richard Green, and Neil
+    Hewitt. 2018. How heat pumps and thermal energy storage can be used to manage
+    wind power: A study of Ireland. Energy 157 (2018), 539-549. https://doi.org/10.1016/j.energy.2018.03.001
+
+
+    [36] Wei Wu, Harrison M. Skye, and Piotr A. Domanski. 2018. Selecting HVAC systems
+    to achieve comfortable and cost-effective residential net-zero energy buildings.
+    Applied Energy 212, October 2017 (2018), 577-591. https://doi.org/10.1016/j.apenergy.2017.12.046
+
+
+    [37] Keming Yan, Chris Diduch, and Mary E. Kaye. 2019. An improved temperature
+    prediction technique for HVAC units using intelligent algorithms. 2019 IEEE Energy
+    Conversion Congress and Exposition, ECCE 2019 (2019), 490-494. https://doi.org/10.1109/ECCE.2019.8912944'
+  md: '
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_9_0.png)
+
+
+    Figure 7: Flexibility prediction results for NYSERDA S44 dataset using indoor
+    temperature threshold of 0.5°C (left) compared with adjustment strategy RMSE/2
+    (center) and increased temperature threshold of 1.0°C (right)
+
+
+    ### Table 3: Total flexible energy (kWh) and EPFR percentage of best performing
+    models
+
+
+    |  | NIST |  | NYSERDA S40 |  | NYSERDA S44 |  |
+
+    |---|---|---|---|---|---|---|
+
+    |  | mode = Off | mode = ForcedOn | mode = Off | mode = ForcedOn | mode = Off
+    | mode = ForcedOn |
+
+    | Flexible Energy ($E_{mode}$) | 1166 kWh | 430 kWh | 1087 kWh | 714 kWh | 1855
+    kWh | 785 kWh |
+
+    | EPFR | 98.70% | 87.20% | 97.30% | 86.20% | 87.40% | 95.40% |
+
+
+    be used in cases where previous adjustment for error strategies do not yield satisfactory
+    results. Widening the comfort bounds has a two-fold effect: it potentially reduces
+    the flexibility prediction error and increases the total amount of potential heat
+    pump flexibility. As seen in Figure 7, the widening of the user comfort bounds
+    by 0.5°C decreased MAFE by 85% on average. The widening of bounds also yielded
+    an over 41% increase in potential flexibility for modes Off and ForcedOn.
+
+
+    Evaluation of the amounts of predicted flexible energy. After all experiments
+    were completed, flexibility prediction results were aggregated and the total amount
+    of flexible energy was calculated. To calculate flexible energy for mode ∈ {ForcedOn,
+    Off}, the average power consumptions of the heat pump were calculated in both
+    normal operation P̅_normal and in the given mode P̅_mode and then the absolute
+    difference was multiplied by the predicted flexibility amount F̂_mode divided
+    by 4 to normalize to hours (one time step every 15 minutes).
+
+
+    ```
+
+    E_mode = (P̅_mode - P̅_normal) * F̂_mode / 4  (15)
+
+    ```
+
+
+    The comfort bound of 0.5°C was used across all datasets for flexibility prediction.
+    As seen in Table 3 all of the heat pump deployments provide over 1.5MWh of combined
+    flexible energy, with the NYSERDA S44 providing 2.64MWh. The results indicate
+    that the majority (over 68%) of total potential flexible energy can be utilized
+    with scenario Off. On average, the flexibility prediction models managed to predict
+    over 90% of available flexibility (EPFR) from all three datasets between both
+    modes. Notably, all of the monitored heat pumps used in this study were not configured
+    to maximize flexible energy and were operating to maintain a set temperature.
+
+
+    ## 9 CONCLUSIONS AND FUTURE WORK
+
+
+    This paper proposes HeatFlex, a novel data-driven method for predicting flexibility
+    from smart heat pumps. HeatFlex, utilizing modern machine learning models, LSTM
+    and GRU recurrent neural networks, can accurately predict flexibility from heat
+    pump devices without requiring knowledge about deployed heat pump parameters,
+    building layout or environment details or manual development of physical models.
+    Furthermore, HeatFlex only uses three, widely available monitored variables, making
+    it applicable in a majority of use cases. The paper also proposes new metrics
+    for heat pump flexibility, enabling quantitative evaluation of flexibility prediction
+    performance. Conducted experiments on 3 open access datasets show that machine
+    learning based indoor temperature forecasting models can be trained in a scalable,
+    data-driven way and be effective at predicting energy flexibility from individual
+    smart heat pump devices. Quantitative and qualitative performance evaluation shows
+    that HeatFlex, utilizing recurrent neural networks, has over 32% lower indoor
+    temperature forecasting error than the model baselines linear regression and SARIMAX,
+    while also having more consistent performance throughout different seasons. Experimental
+    results show that HeatFlex can be effective in different deployments, with different
+    building sizes and heat pump types, predicting over 90% of potential heat pump
+    flexibility.
+
+
+    In future work, we will develop data-driven predictive models that could predict
+    flexibility from other types of devices (e.g. air conditioners, electric vehicle
+    chargers). We will perform experiments using additional data from real smart heat
+    pump deployments as well as simulations to verify HeatFlex robustness in various
+    flexible operation conditions. Additionally, we will explore developing predictive
+    models that optimize directly on flexibility prediction error, thus maximizing
+    utility. Finally, we will develop novel probabilistic models which will enable
+    evaluating potential prediction accuracy during inference.
+
+
+    ## ACKNOWLEDGMENTS
+
+
+    This work was supported by the FEVER (Flexible Energy Production, Demand and Storage-based
+    Virtual Power Plants for Electricity Markets and Resilient DSO Operation) project
+    under the Horizon 2020 programme.
+
+
+    ## REFERENCES
+
+
+    [1] Alessandro Aliberti, Francesca Maria Ugliotti, Lorenzo Bottaccioli, Giansalvo
+    Cirrincione, Anna Osello, Enrico Macii, Edoardo Patti, and Andrea Acquaviva. 2018.
+    Indoor Air-Temperature Forecast for Energy-Efficient Management in Smart Buildings.
+    Proceedings - 2018 IEEE International Conference on Environment and Electrical
+    Engineering and 2018 IEEE Industrial and Commercial Power Systems Europe, EEIC/I
+    and CPS Europe 2018 (2018). https://doi.org/10.1109/EEIC.2018.8494382
+
+
+    [2] Abdulaziz Almalaq and George Edwards. 2017. A review of deep learning methods
+    applied on load forecasting. Proceedings - 16th IEEE International Conference
+    on Machine Learning and Applications, ICMLA 2017 2017-December (2017), 511-516.
+    https://doi.org/10.1109/ICMLA.2017.0-110
+
+
+    [3] Yoshua Bengio, Patrice Simard, and Paolo Frasconi. 1994. Learning Long-Term
+    Dependencies with Gradient Descent is Difficult. IEEE Transactions on Neural Networks
+    5, 2 (1994), 157-166. https://doi.org/10.1109/72.279181
+
+
+    [4] Matthias Boehm, Lars Dannecker, Andreas Doms, Erik Dovgan, Bogdan Filipič,
+    Ulrike Fischer, Wolfgang Lehner, Torben Bach Pedersen, Yoann Pitarch, Laurynas
+    Sikšnys, and Tea Tüsar. 2012. Data management in the MIRABEL smart grid system.
+    ACM International Conference Proceeding Series (2012), 95-102. https://doi.org/10.1145/2320765.2320797
+
+
+    [5] George Edward Pelham Box and Gwilym Jenkins. 1990. Time Series Analysis, Forecasting
+    and Control. Holden-Day, Inc., USA.
+
+
+    [6] P. Carroll, M. Chesser, and P. Lyons. 2020. Air Source Heat Pumps field studies:
+    A systematic literature review. Renewable and Sustainable Energy Reviews 134,
+    August (2020). https://doi.org/10.1016/j.rser.2020.110275
+
+
+    [7] T. Chai and R. R. Draxler. 2014. Root mean square error (RMSE) or mean absolute
+    error (MAE)? -Arguments against avoiding RMSE in the literature. Geoscience Model
+    Development 7, 3 (2014), 1247-1250. https://doi.org/10.5194/gmd-7-1247-2014
+
+
+    [8] Kyunghyun Cho, Bart van Merriënboer, Dzmitry Bahdanau, and Yoshua Bengio.
+    2015. On the Properties of Neural Machine Translation: Encoder-Decoder Approaches.
+    (2015), 103-111. https://doi.org/10.3115/v1/w14-4012 arXiv:1409.1259
+
+
+    [9] Junyoung Chung, Caglar Gulcehre, KyungHyun Cho, and Yoshua Bengio. 2014. Empirical
+    Evaluation of Gated Recurrent Neural Networks on Sequence Modeling. (dec 2014).
+    arXiv:1412.3555 http://arxiv.org/abs/1412.3555
+
+
+    [10] Tingting Fang and Risto Lahdelma. 2016. Evaluation of a multiple linear regression
+    model and SARIMA model in forecasting heat demand for district heating system.
+    Applied Energy 179 (2016), 544-552. https://doi.org/10.1016/j.apenergy.2016.06.133
+
+
+    [11] David Fischer, Marc Andre Triebel, and Oliver Selinger-Lutz. 2018. A Concept
+    for Controlling Heat Pump Pools Using the Smart Grid Ready Interface. Proceedings
+    - 2018 IEEE PES Innovative Smart Grid Technologies Conference Europe, ISGT-Europe
+    2018 (2018). https://doi.org/10.1109/ISGTEurope.2018.8571870
+
+
+    [12] Benedikt Heidrich, Marian Turoowski, Nicole Ludwig, Ralf Mikul, and Veit
+    Hagenmeyer. 2020. Forecasting energy time series with profile neural networks.
+    In e-Energy 2020 - Proceedings of the 11th ACM International Conference on Future
+    Energy Systems. Association for Computing Machinery, Inc, New York, NY, USA, 220-230.
+    https://doi.org/10.1145/3396851.3397683
+
+
+    [13] Sepp Hochreiter and Jürgen Schmidhuber. 1997. Long Short-Term Memory. Neural
+    Computation 9, 8 (1997), 1735-1780. https://doi.org/10.1162/neco.1997.9.8.1735
+
+
+    [14] Chiou Jye Huang and Ping Huan Kuo. 2019. Multiple-Input Deep Convolutional
+    Neural Network Model for Short-Term Photovoltaic Power Forecasting. IEEE Access
+    7 (2019), 74822-74834. https://doi.org/10.1109/ACCESS.2019.2921238
+
+
+    [15] Konstantinos Kouzelis, Zheng H. Tan, Birgitte Bak-Jensen, Jayakrishnan Radhakrishna
+    Pillai, and Ewen Ritchie. 2015. Estimation of Residential Heat Pump Consumption
+    for Flexibility Market Applications. IEEE Transactions on Smart Grid 6, 4 (2015),
+    1852-1864. https://doi.org/10.1109/TSG.2015.2414490
+
+
+    [16] Guokun Lai, Wei Cheng Chang, Yiming Yang, and Hanxiao Liu. 2018. Modeling
+    long- and short-term temporal patterns with deep neural networks. 41st International
+    ACM SIGIR Conference on Research and Development in Information Retrieval, SIGIR
+    2018 July (2018), 95-104. https://doi.org/10.1145/3209978.3210006 arXiv:1703.07015v3
+
+
+    [17] Ming Li, Yijun Li, and Xinli Min. 2020. Practice and Application of LSTM
+    in Temperature Prediction of HVAC System. Proceedings of 2020 IEEE 5th Information
+    Technology and Mechatronics Engineering Conference, ITOEC 2020 Itoec (2020), 1000-1004.
+    https://doi.org/10.1109/ITOEC49072.2020.9149190
+
+
+    [18] Junyu Liu, Xiao Wang, Yan Zhao, Bin Dong, Kuan Lu, and Ranran Wang. 2020.
+    Heating Load Forecasting for Combined Heat and Power Plants Via Strand-Based LSTM.
+    IEEE Access 8 (2020), 33360-33369. https://doi.org/10.1109/ACCESS.2020.2972303
+
+
+    [19] Fernando Mateo, Juan José Carrasco, Abderrahim Sellami, Mónica Millán-Giraldo,
+    Manuel Domínguez, and Emilio Soria-Olivas. 2013. Machine learning methods to forecast
+    temperature in buildings. Expert Systems with Applications 40, 4 (2013), 1061-1068.
+    https://doi.org/10.1016/j.eswa.2012.08.030
+
+
+    [20] Bijay Neupane, Torben Bach Pedersen, and Bo Thieson. 2018. Utilizing device-level
+    demand forecasting for flexibility markets. e-Energy 2018 - Proceedings of the
+    9th ACM International Conference on Future Energy Systems (2018), 108-118. https://doi.org/10.1145/3208903.3208922
+
+
+    [21] Bijay Neupane, Laurynas Sikšnys, and Torben Bach Pedersen. 2017. Generation
+    and evaluation of flex-offers from flexible electrical devices. In e-Energy 2017
+    - Proceedings of the 8th International Conference on Future Energy Systems. Association
+    for Computing Machinery, Inc, 143-156. https://doi.org/10.1145/3077839.3077850
+
+
+    [22] Thomas Nowak and Pascal Westring. 2017. Growing for good ? The European Heat
+    Pump Market - Status and outlook. 12th IEA Heat Pump Conference 2017 (2017), 1-10.
+
+
+    [23] Dimitrios Papadaskalopoulos, Goran Strbac, Pierluigi Mancarella, Marko Aunedi,
+    and Vladimir Stanojevic. 2013. Decentralized participation of flexible demand
+    in electricity markets - Part II: Application with electric vehicles and heat
+    pump systems. IEEE Transactions on Power Systems 28, 4 (2013), 3667-3674. https://doi.org/10.1109/TPWRS.2013.2245687
+
+
+    [24] Debayan Paul, Tanmay Chakraborty, Soumya Kanti Datta, and Debolina Paul.
+    2018. IoT and Machine Learning Based Prediction of Smart Building Indoor Temperature.
+    2018 4th International Conference on Computer and Information Sciences: Revolutionising
+    Digital Landscape for Sustainable Smart Society, ICCOINS 2018 - Proceedings (2018),
+    1-6. https://doi.org/10.1109/ICCOINS.2018.8510597
+
+
+    [25] Torben Bach Pedersen, Thibaut Le Gully, Per D. Pedersen, Luis J. Ferreira,
+    Laurynas Sikšnys, Petr Sluka, Michele Albano, Arne Skou, and Petur Olsen. 2016.
+    An Energy Flexibility Framework on the Internet of Things. 2 (2016), 17-37. https://doi.org/10.5220/0006163400170037
+
+
+    [26] Torben Bach Pedersen, Laurynas Sikšnys, and Bijay Neupane. 2018. Modeling
+    and Managing Energy Flexibility Using FlexOffers. 2018 IEEE International Conference
+    on Communications, Control, and Computing Technologies for Smart Grids, SmartGridComm
+    2018 (2018). https://doi.org/10.1109/SmartGridComm.2018.8587605
+
+
+    [27] Rob J Hyndman and Yeasmin Khandakar. 2008. Automatic Time Series Forecasting:
+    The forecast Package for R. Journal of Statistical Software 27, 3 (2008), 22.
+    http://www.jstatsoft.org/v27/i03/paper
+
+
+    [28] Olga Rybnytska, Laurynas Sikšnys, Torben Bach Pedersen, and Bijay Neupane.
+    2020. PGF MU: Integrating data management with physical system modelling. Advances
+    in Database Technology - EDBT 2020-March (2020), 109-120.
+
+
+    [29] Laurynas Sikšnys, Emmanouil Valsomatiz, Katja Hose, and Torben Bach Pedersen.
+    2015. Aggregating and Disaggregating Flexibility Objects. IEEE Transactions on
+    Knowledge and Data Engineering 27, 11 (2015), 2893-2906. https://doi.org/10.1109/TKDE.2015.2445755
+
+
+    [30] Jiancai Song, Guixiang Xue, Xuhua Pan, Yunpeng Ma, and Han Li. 2020. Hourly
+    heat load prediction model based on temporal convolutional neural network. IEEE
+    Access 8 (2020), 16726-16741. https://doi.org/10.1109/ACCESS.2020.2968536
+
+
+    [31] Hai Tao, Li Junjie, Shi Yu, Chen Yongjian, and Liu Zhenyu. 2020. Predictive
+    analysis of outdoor temperature and humidity based on BP neural network single-step
+    prediction method. Proceedings of 2020 IEEE 3rd International Conference on Information
+    Systems and Computer Aided Education, ICISCAE 2020 (2020), 402-407. https://doi.org/10.1109/ICISCAE51034.2020.9236853
+
+
+    [32] Stylianos I. Vagropoulos, G. I. Chouliaras, E. G. Kardakos, C. K. Simoglou,
+    and A. G. Bakirtzis. 2016. Comparison of SARIMAX, SARIMA, modified SARIMA and
+    ANN-based models for short-term PV generation forecasting. 2016 IEEE International
+    Energy Conference, ENERGYCON 2016 (2016), 0-5. https://doi.org/10.1109/ENERGYCON.2016.7514029
+
+
+    [33] Emmanouil Valsomatiz, Katja Hose, Torben Bach Pedersen, and Laurynas Sikšnys.
+    2015. Measuring and comparing energy flexibilities. CEUR Workshop Proceedings
+    1330, c (2015), 78-85.
+
+
+    [34] Emmanouil Valsomatiz, Torben Bach Pedersen, and Alberto Abelló. 2018. Day-ahead
+    trading of aggregated energy flexibility. e-Energy 2018 - Proceedings of the 9th
+    ACM International Conference on Future Energy Systems (2018), 134-138. https://doi.org/10.1145/3208903.3208936
+
+
+    [35] Inna Vorushylo, Patrick Keatley, Nikhilkumar Shah, Richard Green, and Neil
+    Hewitt. 2018. How heat pumps and thermal energy storage can be used to manage
+    wind power: A study of Ireland. Energy 157 (2018), 539-549. https://doi.org/10.1016/j.energy.2018.03.001
+
+
+    [36] Wei Wu, Harrison M. Skye, and Piotr A. Domanski. 2018. Selecting HVAC systems
+    to achieve comfortable and cost-effective residential net-zero energy buildings.
+    Applied Energy 212, October 2017 (2018), 577-591. https://doi.org/10.1016/j.apenergy.2017.12.046
+
+
+    [37] Keming Yan, Chris Diduch, and Mary E. Kaye. 2019. An improved temperature
+    prediction technique for HVAC units using intelligent algorithms. 2019 IEEE Energy
+    Conversion Congress and Exposition, ECCE 2019 (2019), 490-494. https://doi.org/10.1109/ECCE.2019.8912944
+
+    '
+  mdcn: '
+
+
+    ![](img/a682317eba97b725284edc1c3cd47b8a_9_0.png)
+
+
+    图7：使用室内温度阈值0.5°C（左）时NYSERDA S44数据集的灵活性预测结果，与调整策略RMSE/2（中）和增加的温度阈值1.0°C（右）的比较。
+
+
+    ### 表3：最佳模型的总灵活能量（kWh）和EPFR百分比
+
+
+    |  | NIST |  | NYSERDA S40 |  | NYSERDA S44 |  |
+
+    |---|---|---|---|---|---|---|
+
+    |  | 模式 = 关闭 | 模式 = 强制开启 | 模式 = 关闭 | 模式 = 强制开启 | 模式 = 关闭 | 模式 = 强制开启 |
+
+    | 灵活能量（$E_{mode}$） | 1166 kWh | 430 kWh | 1087 kWh | 714 kWh | 1855 kWh | 785
+    kWh |
+
+    | EPFR | 98.70% | 87.20% | 97.30% | 86.20% | 87.40% | 95.40% |
+
+
+    可用于先前误差调整策略未能产生满意结果的情况。扩大舒适边界具有双重效果：它可能降低灵活性预测误差，并增加热泵潜在灵活性的总量。如图7所示，将用户舒适边界扩大0.5°C，平均将MAFE降低了85%。边界的扩大还使“关闭”和“强制开启”模式的潜在灵活性增加了超过41%。
+
+
+    预测灵活能量总量的评估。所有实验完成后，汇总灵活性预测结果并计算灵活能量总量。为了计算模式∈{强制开启，关闭}下的灵活能量，计算了热泵在正常运行P̅_normal和给定模式P̅_mode下的平均功耗，然后将绝对差值乘以预测灵活性量F̂_mode再除以4，以归一化为小时（每15分钟一个时间步长）。
+
+
+    ```
+
+    E_mode = (P̅_mode - P̅_normal) * F̂_mode / 4  (15)
+
+    ```
+
+
+    在所有数据集的灵活性预测中使用了0.5°C的舒适边界。从表3可以看出，所有热泵部署提供了超过1.5MWh的总灵活能量，其中NYSERDA S44提供了2.64MWh。结果表明，总潜在灵活能量的大部分（超过68%）可以通过“关闭”场景利用。平均而言，灵活性预测模型在两个模式下成功预测了所有三个数据集中超过90%的可用灵活性（EPFR）。值得注意的是，本研究中所有被监测的热泵并非为最大化灵活能量而配置，而是以维持设定温度的方式运行。
+
+
+    ## 9 结论与未来工作
+
+
+    本文提出了HeatFlex，一种新颖的数据驱动方法，用于预测智能热泵的灵活性。HeatFlex利用现代机器学习模型、LSTM和GRU循环神经网络，可以在无需了解部署热泵参数、建筑布局或环境细节，也无需手动开发物理模型的情况下，准确预测热泵设备的灵活性。此外，HeatFlex仅使用三个广泛可用的监测变量，使其适用于大多数用例。本文还提出了新的热泵灵活性度量标准，能够对灵活性预测性能进行定量评估。在3个开放数据集上进行的实验表明，基于机器学习的室内温度预测模型可以以可扩展、数据驱动的方式训练，并能有效预测单个智能热泵设备的能量灵活性。定量和定性性能评估表明，使用循环神经网络的HeatFlex比基线模型线性回归和SARIMAX的室内温度预测误差降低超过32%，同时在不同季节中具有更一致的性能。实验结果表明，HeatFlex在不同部署、不同建筑规模和热泵类型中均能有效工作，预测超过90%的潜在热泵灵活性。
+
+
+    在未来工作中，我们将开发能够预测其他类型设备（如空调、电动汽车充电器）灵活性的数据驱动预测模型。我们将使用来自真实智能热泵部署的额外数据以及模拟进行实验，以验证HeatFlex在各种灵活运行条件下的稳健性。此外，我们将探索开发直接优化灵活性预测误差的预测模型，从而最大化效用。最后，我们将开发新颖的概率模型，以便在推理过程中评估潜在预测精度。
+
+
+    ## 致谢
+
+
+    本工作得到了Horizon 2020计划下FEVER（面向电力市场和弹性DSO运行的灵活能源生产、需求与存储虚拟电厂）项目的支持。
+
+
+    ## 参考文献
+
+
+    [1] Alessandro Aliberti, Francesca Maria Ugliotti, Lorenzo Bottaccioli, Giansalvo
+    Cirrincione, Anna Osello, Enrico Macii, Edoardo Patti, and Andrea Acquaviva. 2018.
+    智能建筑中节能管理的室内气温预测. Proceedings - 2018 IEEE International Conference on Environment
+    and Electrical Engineering and 2018 IEEE Industrial and Commercial Power Systems
+    Europe, EEIC/I and CPS Europe 2018 (2018). https://doi.org/10.1109/EEIC.2018.8494382
+
+
+    [2] Abdulaziz Almalaq and George Edwards. 2017. 深度学习在负荷预测中应用的综述. Proceedings -
+    16th IEEE International Conference on Machine Learning and Applications, ICMLA
+    2017 2017-December (2017), 511-516. https://doi.org/10.1109/ICMLA.2017.0-110
+
+
+    [3] Yoshua Bengio, Patrice Simard, and Paolo Frasconi. 1994. 使用梯度下降学习长期依赖是困难的.
+    IEEE Transactions on Neural Networks 5, 2 (1994), 157-166. https://doi.org/10.1109/72.279181
+
+
+    [4] Matthias Boehm, Lars Dannecker, Andreas Doms, Erik Dovgan, Bogdan Filipič,
+    Ulrike Fischer, Wolfgang Lehner, Torben Bach Pedersen, Yoann Pitarch, Laurynas
+    Sikšnys, and Tea Tüsar. 2012. MIRABEL智能电网系统中的数据管理. ACM International Conference
+    Proceeding Series (2012), 95-102. https://doi.org/10.1145/2320765.2320797
+
+
+    [5] George Edward Pelham Box and Gwilym Jenkins. 1990. 时间序列分析、预测与控制. Holden-Day,
+    Inc., USA.
+
+
+    [6] P. Carroll, M. Chesser, and P. Lyons. 2020. 空气源热泵现场研究：系统性文献综述. Renewable and
+    Sustainable Energy Reviews 134, August (2020). https://doi.org/10.1016/j.rser.2020.110275
+
+
+    [7] T. Chai and R. R. Draxler. 2014. 均方根误差（RMSE）还是平均绝对误差（MAE）？——文献中反对避免使用RMSE的论点.
+    Geoscience Model Development 7, 3 (2014), 1247-1250. https://doi.org/10.5194/gmd-7-1247-2014
+
+
+    [8] Kyunghyun Cho, Bart van Merriënboer, Dzmitry Bahdanau, and Yoshua Bengio.
+    2015. 论神经机器翻译的性质：编码器-解码器方法. (2015), 103-111. https://doi.org/10.3115/v1/w14-4012
+    arXiv:1409.1259
+
+
+    [9] Junyoung Chung, Caglar Gulcehre, KyungHyun Cho, and Yoshua Bengio. 2014. 门控循环神经网络在序列建模上的实证评估.
+    (dec 2014). arXiv:1412.3555 http://arxiv.org/abs/1412.3555
+
+
+    [10] Tingting Fang and Risto Lahdelma. 2016. 多元线性回归模型和SARIMA模型在区域供热系统热需求预测中的评估.
+    Applied Energy 179 (2016), 544-552. https://doi.org/10.1016/j.apenergy.2016.06.133
+
+
+    [11] David Fischer, Marc Andre Triebel, and Oliver Selinger-Lutz. 2018. 使用智能电网就绪接口控制热泵池的概念.
+    Proceedings - 2018 IEEE PES Innovative Smart Grid Technologies Conference Europe,
+    ISGT-Europe 2018 (2018). https://doi.org/10.1109/ISGTEurope.2018.8571870
+
+
+    [12] Benedikt Heidrich, Marian Turoowski, Nicole Ludwig, Ralf Mikul, and Veit
+    Hagenmeyer. 2020. 使用轮廓神经网络预测能量时间序列. In e-Energy 2020 - Proceedings of the 11th
+    ACM International Conference on Future Energy Systems. Association for Computing
+    Machinery, Inc, New York, NY, USA, 220-230. https://doi.org/10.1145/3396851.3397683
+
+
+    [13] Sepp Hochreiter and Jürgen Schmidhuber. 1997. 长短期记忆. Neural Computation 9,
+    8 (1997), 1735-1780. https://doi.org/10.1162/neco.1997.9.8.1735
+
+
+    [14] Chiou Jye Huang and Ping Huan Kuo. 2019. 用于短期光伏功率预测的多输入深度卷积神经网络模型. IEEE Access
+    7 (2019), 74822-74834. https://doi.org/10.1109/ACCESS.2019.2921238
+
+
+    [15] Konstantinos Kouzelis, Zheng H. Tan, Birgitte Bak-Jensen, Jayakrishnan Radhakrishna
+    Pillai, and Ewen Ritchie. 2015. 灵活性市场应用中住宅热泵能耗的估算. IEEE Transactions on Smart
+    Grid 6, 4 (2015), 1852-1864. https://doi.org/10.1109/TSG.2015.2414490
+
+
+    [16] Guokun Lai, Wei Cheng Chang, Yiming Yang, and Hanxiao Liu. 2018. 使用深度神经网络对长期和短期时间模式进行建模.
+    41st International ACM SIGIR Conference on Research and Development in Information
+    Retrieval, SIGIR 2018 July (2018), 95-104. https://doi.org/10.1145/3209978.3210006
+    arXiv:1703.07015v3
+
+
+    [17] Ming Li, Yijun Li, and Xinli Min. 2020. LSTM在暖通空调系统温度预测中的实践与应用. Proceedings
+    of 2020 IEEE 5th Information Technology and Mechatronics Engineering Conference,
+    ITOEC 2020 Itoec (2020), 1000-1004. https://doi.org/10.1109/ITOEC49072.2020.9149190
+
+
+    [18] Junyu Liu, Xiao Wang, Yan Zhao, Bin Dong, Kuan Lu, and Ranran Wang. 2020.
+    基于Strand LSTM的热电联产电厂热负荷预测. IEEE Access 8 (2020), 33360-33369. https://doi.org/10.1109/ACCESS.2020.2972303
+
+
+    [19] Fernando Mateo, Juan José Carrasco, Abderrahim Sellami, Mónica Millán-Giraldo,
+    Manuel Domínguez, and Emilio Soria-Olivas. 2013. 用于建筑温度预测的机器学习方法. Expert Systems
+    with Applications 40, 4 (2013), 1061-1068. https://doi.org/10.1016/j.eswa.2012.08.030
+
+
+    [20] Bijay Neupane, Torben Bach Pedersen, and Bo Thieson. 2018. 利用设备级需求预测支持灵活性市场.
+    e-Energy 2018 - Proceedings of the 9th ACM International Conference on Future
+    Energy Systems (2018), 108-118. https://doi.org/10.1145/3208903.3208922
+
+
+    [21] Bijay Neupane, Laurynas Sikšnys, and Torben Bach Pedersen. 2017. 柔性电气设备灵活报价的生成与评估.
+    In e-Energy 2017 - Proceedings of the 8th International Conference on Future Energy
+    Systems. Association for Computing Machinery, Inc, 143-156. https://doi.org/10.1145/3077839.3077850
+
+
+    [22] Thomas Nowak and Pascal Westring. 2017. 良性增长？欧洲热泵市场——现状与展望. 12th IEA Heat
+    Pump Conference 2017 (2017), 1-10.
+
+
+    [23] Dimitrios Papadaskalopoulos, Goran Strbac, Pierluigi Mancarella, Marko Aunedi,
+    and Vladimir Stanojevic. 2013. 灵活需求在电力市场中的分散参与——第二部分：电动汽车和热泵系统的应用. IEEE Transactions
+    on Power Systems 28, 4 (2013), 3667-3674. https://doi.org/10.1109/TPWRS.2013.2245687
+
+
+    [24] Debayan Paul, Tanmay Chakraborty, Soumya Kanti Datta, and Debolina Paul.
+    2018. 基于物联网和机器学习的智能建筑室内温度预测. 2018 4th International Conference on Computer and
+    Information Sciences: Revolutionising Digital Landscape for Sustainable Smart
+    Society, ICCOINS 2018 - Proceedings (2018), 1-6. https://doi.org/10.1109/ICCOINS.2018.8510597
+
+
+    [25] Torben Bach Pedersen, Thibaut Le Gully, Per D. Pedersen, Luis J. Ferreira,
+    Laurynas Sikšnys, Petr Sluka, Michele Albano, Arne Skou, and Petur Olsen. 2016.
+    物联网上的能量灵活性框架. 2 (2016), 17-37. https://doi.org/10.5220/0006163400170037
+
+
+    [26] Torben Bach Pedersen, Laurynas Sikšnys, and Bijay Neupane. 2018. 使用FlexOffers建模和管理能量灵活性.
+    2018 IEEE International Conference on Communications, Control, and Computing Technologies
+    for Smart Grids, SmartGridComm 2018 (2018). https://doi.org/10.1109/SmartGridComm.2018.8587605
+
+
+    [27] Rob J Hyndman and Yeasmin Khandakar. 2008. 自动时间序列预测：R语言的forecast包. Journal
+    of Statistical Software 27, 3 (2008), 22. http://www.jstatsoft.org/v27/i03/paper
+
+
+    [28] Olga Rybnytska, Laurynas Sikšnys, Torben Bach Pedersen, and Bijay Neupane.
+    2020. PGF MU：将数据管理与物理系统建模相结合. Advances in Database Technology - EDBT 2020-March
+    (2020), 109-120.
+
+
+    [29] Laurynas Sikšnys, Emmanouil Valsomatiz, Katja Hose, and Torben Bach Pedersen.
+    2015. 灵活性对象的聚合与解聚. IEEE Transactions on Knowledge and Data Engineering 27, 11
+    (2015), 2893-2906. https://doi.org/10.1109/TKDE.2015.2445755
+
+
+    [30] Jiancai Song, Guixiang Xue, Xuhua Pan, Yunpeng Ma, and Han Li. 2020. 基于时间卷积神经网络的逐时热负荷预测模型.
+    IEEE Access 8 (2020), 16726-16741. https://doi.org/10.1109/ACCESS.2020.2968536
+
+
+    [31] Hai Tao, Li Junjie, Shi Yu, Chen Yongjian, and Liu Zhenyu. 2020. 基于BP神经网络单步预测方法的室外温度与湿度预测分析.
+    Proceedings of 2020 IEEE 3rd International Conference on Information Systems and
+    Computer Aided Education, ICISCAE 2020 (2020), 402-407. https://doi.org/10.1109/ICISCAE51034.2020.9236853
+
+
+    [32] Stylianos I. Vagropoulos, G. I. Chouliaras, E. G. Kardakos, C. K. Simoglou,
+    and A. G. Bakirtzis. 2016. SARIMAX、SARIMA、修正SARIMA和基于ANN的模型在短期光伏发电预测中的比较. 2016
+    IEEE International Energy Conference, ENERGYCON 2016 (2016), 0-5. https://doi.org/10.1109/ENERGYCON.2016.7514029
+
+
+    [33] Emmanouil Valsomatiz, Katja Hose, Torben Bach Pedersen, and Laurynas Sikšnys.
+    2015. 能量灵活性的度量与比较. CEUR Workshop Proceedings 1330, c (2015), 78-85.
+
+
+    [34] Emmanouil Valsomatiz, Torben Bach Pedersen, and Alberto Abelló. 2018. 聚合能量灵活性的日前交易.
+    e-Energy 2018 - Proceedings of the 9th ACM International Conference on Future
+    Energy Systems (2018), 134-138. https://doi.org/10.1145/3208903.3208936
+
+
+    [35] Inna Vorushylo, Patrick Keatley, Nikhilkumar Shah, Richard Green, and Neil
+    Hewitt. 2018. 如何利用热泵和热能存储管理风电：爱尔兰研究. Energy 157 (2018), 539-549. https://doi.org/10.1016/j.energy.2018.03.001
+
+
+    [36] Wei Wu, Harrison M. Skye, and Piotr A. Domanski. 2018. 选择暖通空调系统以实现舒适且经济高效的住宅净零能耗建筑.
+    Applied Energy 212, October 2017 (2018), 577-591. https://doi.org/10.1016/j.apenergy.2017.12.046
+
+
+    [37] Keming Yan, Chris Diduch, and Mary E. Kaye. 2019. 使用智能算法的暖通空调机组改进温度预测技术.
+    2019 IEEE Energy Conversion Congress and Exposition, ECCE 2019 (2019), 490-494.
+    https://doi.org/10.1109/ECCE.2019.8912944
+
+
+    '
+  merge: 1
