@@ -1,0 +1,15 @@
+networks produces valuable information about them. In an era of big data, organizations need to gather and efficiently manage such amount of data for their decision-making processes.
+
+Currently, the graph technology is become increasingly important, and the graphs are used to model dynamic and complex relationships of the data in order to generate knowledge. For example, Google has incorporated a Knowledge Graph to its search algorithm to significantly improve semantic searches; the searches are disambiguated and contextualized [1].
+
+Although the data have been stored in relational databases traditionally, they have serious problems in terms of scalability in information management [2]. Thus, a new paradigm has emerged, and it is called NoSQL (not only SQL) databases. NoSQL databases provide better scalability because it is easier to add, delete, or perform operations in the system without affecting performance. Particularly, Neo4j is a NOSQL database management system (DBMS) that is graph-oriented. In this chapter, our main objective is to introduce a physical design strategy that improves the query execution for a specific workload in Neo4j. A physical design consists of proposing several data structures or guidelines in order to improve the data access in a database. It is worth noting that the structures used for a physical design will depend on the DBMS. Therefore, the first step of a physical design is to have a good knowledge of the DBMS. We selected Neo4j because it is a DBMS pioneered in the use of graphs as a physical structure for storing data.
+
+This chapter is structured as follows: Section 4.2 presents a motivation example for our problem of physical design in a graph-based DBMS, Neo4j. Section 4.3 describes Neo4j as a graph-based DBMS and its execution plans and physical operators. Section 4.4 proposes a set of guidelines for a physical design on databases stored in Neo4j. Section 4.5 explains the application of our physical design guidelines for some example queries. The performance of the proposed strategy will be empirically evaluated in Section 4.6. Related work is presented in Section 4.7. Some limitations of our guidelines are discussed in Section 4.8. Finally, the future research directions and conclusion of this chapter will be discussed in Sections 4.9 and 4.10, respectively.
+
+# 4.2 MOTIVATION EXAMPLE
+
+Suppose a movie database contains 171 nodes. Each node can be a movie or a person. There are 38 movie nodes and 133 person ones. Additionally, this database has six relationships between these nodes. Figure 4.1 introduces a schema of our example database that includes one bucle between two Person nodes and five relationships between Person and Movie. Not all nodes of a given type have to be in any of the relationships shown in the schema of Figure 4.1.
+
+In addition, consider a query to find information about the matrix movie. We can specify this query in Cypher language, as is shown in Figure 4.2.
+
+The query in Figure 4.2 was executed and its execution plan retrieved by Neo4j is presented in Figure 4.3. We can observe in Figure 4.3 that the first operator,

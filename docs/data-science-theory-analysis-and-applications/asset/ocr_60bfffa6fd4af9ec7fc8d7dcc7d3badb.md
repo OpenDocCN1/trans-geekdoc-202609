@@ -1,0 +1,18 @@
++   3. Razmjooy, N., Mousavi, B. S., Sargolzaei, P., & Soleymani, F. (2011). Image thresholding based on evolutionary algorithms. International Journal of Physical Sciences, 6(31): 7203–7211.
++   4. Brink, A. (1995). Minimum spatial entropy threshold selection. IEE Proceedings-Vision, Image and Signal Processing, 142(3): 128–132.
++   5. Razmjooy, N., Mousavi, B. S., & Soleymani, F. (2013). A hybrid neural network Imperialist Competitive Algorithm for skin color segmentation. Mathematical and Computer Modelling, 57(3): 848–856.
++   6. Banimelhem, O., & Yahya, Y. A. (2011). Multi-thresholding image segmentation using genetic algorithm. Jordan University of Science and Technology, Irbid, Jordan: 1–6.
++   7. Esteva, A., Kuprel, B., Novoa, R. A., Ko, J., Swetter, S. M., Blau, H. M., & Thrun, S. (2017). Dermatologist-level classification of skin cancer with deep neural networks. Nature, 542(7639): 115–118.
++   8. Gautam, D., & Ahmed, M. (2015). Melanoma detection and classification using SVM based decision support system. Paper presented at the India Conference (INDICON), 2015, Annual IEEE, New Delhi.
++   9. Mousavi, B. S., & Soleymani, F. (2014). Semantic image classification by genetic algorithm using optimised fuzzy system based on Zernike moments. Signal, Image and Video Processing, 8(5): 831–842.
++   10. Razmjooy, N., Sheykhahmad, F. R., & Ghadimi, N. (2018). A hybrid neural network–world cup optimization algorithm for melanoma detection. Open Medicine, 13(1): 9–16.
++   11. Petroski Such, F., Madhavan, V., Conti, E., Lehman, J., Stanley, K. O., & Clune, J. (2017). Deep neuroevolution: Genetic algorithms are a competitive alternative for training deep neural networks for reinforcement learning. arXiv preprint arXiv:1712.06567.
++   12. Razmjooy, N., & Ramezani, M. (2016). Training wavelet neural networks using hybrid particle swarm optimization and gravitational search algorithm for system identification, International Journal of Mechatronics, Electrical and Computer Technology, 6(21), 2987–2997.
++   13. Zhang, Z. (2018). Artificial neural network. Multivariate Time Series Analysis in Climate and Environmental Research, Editor: Zhihua Zhang (pp. 1–35): Springer, Switzerland.
++   14. Mastorakis, N. (2018). Neural network methods for image segmentation. Paper presented at the Applied Physics, System Science and Computers II: Proceedings of the 2nd International Conference on Applied Physics, System Science and Computers (APSAC2017), September 27–29, 2017, Dubrovnik, Croatia.
++   15. Roffman, D., Hart, G., Girardi, M., Ko, C. J., & Deng, J. (2018). Predicting non-melanoma skin cancer via a multi-parameterized artificial neural network. Scientific reports, 8(1): 1701.
++   16. DeGroff, D., & Neelakanta, P. S. (2018). Neural Network Modeling: Statistical Mechanics and Cybernetic Perspectives: CRC Press, Boca Raton.
++   17. Hemanth, D. J., & Estrela, V. V. (2017). Deep Learning for Image Processing Applications (Vol. 31): IOS Press.
++   18. Nascimento, J. D., da Silva Tavares, R., Estrela, V. V., de Assis, J. T., & de Almeida, J. C. H. Image Processing Techniques Applied to Microtectonics, Santo Amaro, Brazil.
++   19. Moallem, P., Razmjooy, N., & Ashourian, M. (2013). Computer vision-based potato defect detection using neural networks and support vector machine. International Journal of Robotics and Automation, 28(2): 137–145.
++   20. Estrela, V. V., & Coelho, A. M. (2013). State-of-the art motion estimation in the context of 3D TV. Multimedia Networking and Coding, Editors: Reuben A. Farrugia, Carl J. Debono, (pp. 148–173): IGI Global.

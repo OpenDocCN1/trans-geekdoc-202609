@@ -1,0 +1,6 @@
++   18. N. Bouadjenek, H. Nemmour, Y. Chibani, Age, gender and handedness prediction from handwriting using gradient features, in: 13th International Conference on Document Analysis and Recognition, 23–26 August, Nancy, 2015, pp. 1116–1120.
++   19. Y. Serdouk, H. Nemmour, Y. Chibani. New off-line handwritten signature verification method based on artificial immune recognition system. Expert Systems with Applications, 51 (2016) 186–194.
++   20. H. Freeman. On the encoding of arbitrary geometric configurations, IRE Transactions on Electronic Computers EC-10 (1961) 260–268.
++   21. C. Djeddi, I. Siddiqi, L. Souici-Meslati, A. Ennaji, Text-independent writer recognition using multi-script handwritten texts, Pattern Recognition Letters 34 (2013) 1196–1202.
++   22. J. Liu, W. Li, Y. Tian. Automatic thresholding of gray-level pictures using two-dimension Otsu method. In International Conference on Circuits and Systems, 15–16 June, Shenzhen, 1991, pp. 325–327.
++   23. G. Louloudis, N. Stamatopoulos, B. Gatos, ICDAR 2011 writer identification contest, in: 11th International Conference on Document Analysis and Recognition, 18–21 September, Beijing, 2011, pp. 1475–1479.

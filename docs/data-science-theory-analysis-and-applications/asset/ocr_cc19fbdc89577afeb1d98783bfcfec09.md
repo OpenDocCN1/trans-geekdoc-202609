@@ -1,0 +1,15 @@
+support vector machine (SVM), and artificial neural networks (ANN). NB is a set of algorithms using Bayes’ theorem at grass-root level. It considers all the features to be independent of each other. DT organizes the testing conditions in a tree structure, where root and internal nodes represent different test conditions and their characteristics. RF is an ensemble model that considers many DTs at one time. The result from this model is usually better than the result from one of the individual models. SVM makes use of hyperplanes in a multidimensional space that divides cases of diverse class labels. It consists of regression and classification by making use of continuous and categorical variables. ANN comprises of layers of neurons, which convert an input vector into some output. Each unit takes an input, applies a nonlinear function to it, and then forwards the output to the succeeding layer.
+
+This chapter aims to evaluate the satisfaction level of guests from a hotel review dataset obtained from Tripadvisor. We make use of overall star ratings as a proxy variable for guest satisfaction level of labeled data. First, topic modeling is applied with the help of LSA, which results in topics that represent the whole useful review information. Then, for measuring the satisfaction level, we make use of classifiers such as NB, DT, RF, SVM, and ANN, to check their accuracy using performance measures. Thus, we aim to solve the quest for the following research questions:
+
++   a. What are the vital determinants of hotel guest satisfaction as articulated by online reviews?
++   b. What are the most important features influencing guest satisfaction in EWOM based on ML techniques with the help of a large dataset?
++   c. How do these features vary across hotel guest satisfaction (or overall ratings)?
+
+The remaining chapters are systematically confined as follows: A detailed overview of previous works will be discussed in Section 12.2. Section 12.3 presents the adopted methodology and the data description. The results of the applied techniques are provided in Section 12.4. Section 12.5 presents the discussions and conclusion based on the findings. Implications for researchers and practitioners are given in Section 12.6. Finally, limitations and future scope relevant to the present study are provided.
+
+# 12.2 RELATED LITERATURE
+
+# 12.2.1 Guest Satisfaction and Online Reviews
+
+EWOM is defined as “any positive or negative statement made by potential, actual, or former customer about a product or company, made available to multitude of people and institutions via internet” [29]. Due to the innate uncertainty associated with an untried product/service, consumers often depend upon word-of-mouth for making purchase decisions. However, in this new digital age where communication of individual’s opinions knows no bounds, the UGCs have dethroned the hoteliers from the role of travel opinion leaders [13]. Purchase involvement and service experience have also been identified as vital antecedents of review, providing motivation. A travel trip whether for recreational or work purpose is always followed by an experience felt or encountered

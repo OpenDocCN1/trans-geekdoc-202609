@@ -1,0 +1,17 @@
++   45. F. Zhu, L. Shao, “Correspondence-free dictionary learning for cross-view action recognition,” in ICPR, pp. 4525–4530. 2014, Piscataway, NJ
++   46. J. Wang, J. Yang, K. Yu, F. Lv, T. Huang, Y. Gong, “Locality-constrained linear coding for image classification,” in Computer Vision and Pattern Recognition (CVPR), IEEE Conference on, pp. 3360–3367, 2010. San Francisco, CA, USA
++   47. A. Cohen, I. Daubechies, J.-C. Feauveau, “Biorthogonal bases of compactly supported wavelets,” Communication in Pure Applied Mathematics, Vol. 45, Issue 5, pp. 485–560, 1992.
++   48. L. Liu, L. Shao, X. Li, K. Lu, “Learning spatio-temporal representations for action recognition: A genetic programming approach,” IEEE Transactions on Cybernetics, Vol. 46, Issue 1, pp. 158–170, 2016.
++   49. Y. Zhang, Y. Zhang, E. Swears, N. Larios, Z. Wang, Q. Ji, “Modeling temporal interactions with interval temporal bayesian networks for complex activity recognition,” IEEE Transactions on Pattern Analysis and Machine Intelligence, Vol. 35, Issue 10, pp. 2468–2483, 2013.
++   50. F. M. Khan, S. C. Lee, R. Nevatia, “Conditional Bayesian networks for action detection,” in Advanced Video and Signal Based Surveillance (AVSS), 10th IEEE International Conference, pp. 256–262, 2013. Krakov, Poland
++   51. C. Y. Park, K. B. Laskey, P. C. Costa, S. Matsumoto, “A process for human aided multi-entity Bayesian networks learning in predictive situation awareness,” in Information Fusion (FUSION), 19th International Conference on, pp. 2116–2124, 2016.
++   52. L. Deng, D. Yu, “Deep learning,” Signal Processing, Vol. 7, pp. 3–4, 2014.
++   53. A. Ivakhnenko, “Polynomial theory of complex systems,” IEEE Transactions on Systems, Man, and Cybernetics, Vol. SMC-1, Issue 4, pp. 364–378, 1971.
++   54. G. E. Hinton, S. Osindero, Y. W. Teh, “A fast learning algorithm for deep belief nets,” Neural Computation, Vol. 18, Issue 7, pp. 1527–1554, 2006.
++   55. Q. V. Le, W. Y. Zou, S. Y. Yeung, A. Y. Ng, “Learning hierarchical invariant spatio-temporal features for action recognition with independent subspace analysis,” in Computer Vision and Pattern Recognition (CVPR), pp. 3361–3368, 2011. Colorado, USA
++   56. P. Foggia, A. Saggese, N. Strisciuglio, M. Vento, “Exploiting the deep learning paradigm for recognizing human actions,” in Advanced Video and Signal Based Surveillance (AVSS), pp. 93–98, 2014. Seoul, Korea
++   57. M. Hasan, A. K. Roy-Chowdhury, “Continuous learning of human activity models using deep nets,” in European Conference on Computer Vision, pp. 705–720, Springer. Zurich, Switzerland, 2014
++   58. L. Ballan, M. Bertini, A. Del Bimbo, L. Seidenari, G. Serra, “Effective codebooks for human action representation and classification in unconstrained videos,” IEEE Transactions on Multimedia, Vol. 14, Issue 4, pp. 1234–1245, 2012.
++   59. A. Krizhevsky, I. Sutskever, G. E. Hinton, “Imagenet classification with deep convolutional neural networks,” in Advances in Neural Information Processing Systems, pp. 1097–1105. 2012, San Francisco, CA
++   60. Y. Du, W. Wang, L. Wang, “Hierarchical recurrent neural network for skeleton based action recognition,” in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 1110–1118. Boston, MA, USA, 2015
++   61. Y. LeCun, B. Boser, J. S. Denker, D. Henderson, R. E. Howard, W. Hubbard, L. D. Jackel, “Backpropagation applied to handwritten zip code recognition,” Neural Computation, Vol. 1, Issue 4, pp. 541–551.
