@@ -1,0 +1,13 @@
+![](bbox=[0.1, 0.11, 0.85, 0.3])
+
+FIGURE 9.3 Tracking evaluation in OTB. Precision plot (left) and success plot (right). The ranking can be done by the precision at the location error threshold 20, the success rate at the overlap threshold 0.5, or by the area under the curve (AUC) of the success plot.
+
+The separate treatment of accuracy and robustness places tracking methods into a two-dimensional plot, commonly with increasing robustness on the horizontal axis and increasing accuracy on the vertical axis. Depending on the tracking application, engineers can choose a more robust or more accurate method. However, the average scores do not disclose whether a method has average accuracy throughout the track or initially high accuracy that decays rapidly. For many applications it would be interesting to know what accuracy can be expected after a certain sequence length. This is achieved by means of the expected average overlap curve, measuring the average overlap as a function of the sequence length. The final score of the VOT challenge is obtained by integrating this curve over the range of typical sequence lengths (Kristan et al., 2016).
+
+In its most recent edition (Kristan et al., 2020), the VOT challenge also offers to compute the accuracy measures on segmentation masks instead of bounding boxes. This became necessary as tracking methods achieved a level of accuracy similar to that of the annotations by the bounding-box. In contrast to the Jaccard index for bounding-boxes, which can be computed as a function of the bounding-box parameters, the Jaccard index of segmentation masks requires counting the pixels in the masks and in their intersection.
+
+# 9.2.3 Normalized cross correlation
+
+One of the oldest methods to predict the position of the bounding-box is template matching. The matching is performed by means of a generative model m, which is obtained from the patch inside the bounding-box in the initial frame. During matching, the model m is compared to candidate patches p in each subsequent frame. The respectively most similar patch determines the position of the bounding-box in that frame, see Fig. 9.2 left.
+
+The model might be the raw image patch in the initial bounding-box, but it is more common to assume that the model m has a zero DC-component, i.e., to subtract the mean of the template. The absolute intensity in the image often depends on other factors than the ob-

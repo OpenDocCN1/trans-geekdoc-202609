@@ -1,0 +1,25 @@
+Ren, S., He, K., Girshick, R., Sun, J., 2017. Faster R-CNN: towards real-time object detection with region proposal networks. IEEE Transactions on Pattern Analysis and Machine Intelligence 39, 1137–1149.
+Revaud, J., Weinzaepfel, P., Harchaoui, Z., Schmid, C., 2015. Epicflow: edge-preserving interpolation of correspondences for optical flow. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition.
+Salimans, T., Ho, J., Chen, X., Sidor, S., Sutskever, I., 2017. Evolution strategies as a scalable alternative to reinforcement learning. arXiv:1703.03864.
+Samangouei, P., Kabkab, M., Chellappa, R., 2018. Defense-GAN: protecting classifiers against adversarial attacks using generative models. In: Proceedings of the International Conference on Learning Representations.
+Sanchez-Matilla, R., Li, C.Y., Shamsabadi, A.S., Mazzon, R., Cavallaro, A., 2020. Exploiting vulnerabilities of deep neural networks for privacy protection. IEEE Transactions on Multimedia 22, 1862–1873.
+Santurkar, S., Ilyas, A., Tsipras, D., Engstrom, L., Tran, B., Madry, A., 2019. Image synthesis with a single (robust) classifier. In: Proceedings of the International Conference on Neural Information Processing Systems.
+Shamsabadi, A.S., Oh, C., Cavallaro, A., 2020a. Edgefool: an adversarial image enhancement filter. In: Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing.
+Shamsabadi, A.S., Oh, C., Cavallaro, A., 2020b. Semantically learnable filters. arXiv:2008.06069.
+Shamsabadi, A.S., Sanchez-Matilla, R., Cavallaro, A., 2020c. ColorFool: semantic adversarial colorization. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition.
+Sharif, M., Bhagavatula, S., Bauer, L., Reiter, M.K., 2016. Accessorize to a crime: real and stealthy attacks on state-of-the-art face recognition. In: Proceedings of the 2016 ACM SIGSAC Conference on Computer and Communications Security.
+Shi, Y., Wang, S., Han, Y., 2019. Curls & whey: boosting black-box adversarial attacks. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition.
+Simonyan, K., Zisserman, A., 2014. Very deep convolutional networks for large-scale image recognition. arXiv:1409.1556.
+Song, Y., Kim, T., Nowozin, S., Ermon, S., Kushman, N., 2018. Pixeldefend: leveraging generative models to understand and defend against adversarial examples. In: Proceedings of the International Conference on Learning Representations.
+Soomro, K., Zamir, A.R., Shah, M., 2012. UCF101: a dataset of 101 human actions classes from videos in the wild. arXiv:1212.0402 [cs.CV].
+Su, J., Vargas, D.V., Sakurai, K., 2019. One pixel attack for fooling deep neural networks. IEEE Transactions on Evolutionary Computation 23, 828–841.
+Sun, D., Yang, X., Liu, M., Kautz, J., 2018. PWC-net: CNNs for optical flow using pyramid, warping, and cost volume. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition.
+Szegedy, C., Ioffe, S., Vanhoucke, V., Alemi, A.A., 2017. Inception-v4, inception-resnet and the impact of residual connections on learning. In: Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence.
+Szegedy, C., Liu, W., Jia, Y., Sermanet, P., Reed, S., Anguelov, D., Erhan, D., Vanhoucke, V., Rabinovich, A., 2015. Going deeper with convolutions. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition.
+Szegedy, C., Vanhoucke, V., Ioffe, S., Shlens, J., Wojna, Z., 2016. Rethinking the inception architecture for computer vision. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition.
+Szegedy, C., Zaremba, W., Sutskever, I., Bruna, J., Erhan, D., Goodfellow, I., Fergus, R., 2014. Intriguing properties of neural networks. In: Proceedings of the International Conference on Learning Representations.
+Thys, S., Van Ranst, W., Goedeme, T., 2019. Fooling automated surveillance cameras: adversarial patches to attack person detection. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops.
+Tramèr, F., Kurakin, A., Papernot, N., Goodfellow, I., Boneh, D., McDaniel, P., 2018. Ensemble adversarial training: attacks and defenses. In: Proceedings of the International Conference on Learning Representations.
+Tran, D., Bourdev, L., Fergus, R., Torresani, L., Paluri, M., 2015. Learning spatiotemporal features with 3d convolutional networks. In: Proceedings of the IEEE International Conference on Computer Vision.
+Tsipras, D., Santurkar, S., Engstrom, L., Turner, A., Madry, A., 2019. Robustness may be at odds with accuracy. In: Proceedings of the International Conference on Representation Learning.
+Tu, C.C., Ting, P., Chen, P.Y., Liu, S., Zhang, H., Yi, J., Hsieh, C.J., Cheng, S.M., 2019. Autozoom: autoencoder-based zeroth order optimization method for attacking black-box neural networks. In: Proceedings of the AAAI Conference on Artificial Intelligence.

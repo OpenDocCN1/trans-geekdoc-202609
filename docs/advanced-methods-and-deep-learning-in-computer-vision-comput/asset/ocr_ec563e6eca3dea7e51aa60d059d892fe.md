@@ -1,0 +1,17 @@
+ceptual prediction error is low for *intra-event* frames and high at *inter-event* frames. If the learned event representations *overfit* to intra-event observations, then minor perturbations in the raw pixel space can increase the prediction error. This would negate the underlying assumption that transient errors indicate a change in the observed event. Additionally, the event representation must be stable across events with varying temporal duration to avoid catastrophic forgetting, i.e., the condition where the predictions do not capture intra-event variations in long event sequences. Hence, it is necessary to ensure that the model does not overfit to short-term perceptual features while maintaining a robust event representation representing the *entire* event.
+
+To allow for some plasticity and avoid catastrophic forgetting in the network, we use adaptive learning. Adaptive learning is similar to the learning rate schedule, a commonly used technique for training deep neural networks. However, instead of using predetermined intervals for changing the learning rates, we use the prediction error to modulate the learning rate. The learning rate can be tuned to control the propagation of the error back to the learnable parameters.
+
+For example, when the perceptual prediction rate is lower than the average prediction rate, the predictor model is considered a good, stable representation of the current event. Propagating the prediction error when there is a good representation of the event can lead to overfitting of the predictor model to that particular event and does not help generalize. Hence, lower learning rates are used for time steps when there are negligible prediction error and a relatively higher (by a magnitude of 100) for higher prediction error.
+
+Intuitively, this adaptive learning rate allows the model to adapt much quicker to new events (at event boundaries where there are likely to be higher errors) and learn to maintain the internal representation for within-event frames. Formally, the learning rate is defined as the result of the adaptive learning rule described as a function of the perceptual prediction error defined in Section 12.3.4 and is defined as
+
+$$\lambda_{learn} = \begin{cases} \Delta_t^- \lambda_{init}, & E_P(t) > \mu_e \\ \Delta_t^+ \lambda_{init}, & E_P(t) < \mu_e \\ \lambda_{init}, & \text{otherwise} \end{cases}\tag{12.6}$$
+
+where $\Delta_t^-$, $\Delta_t^+$ and $\lambda_{init}$ refer to the scaling of the learning rate in the negative direction, positive direction and the initial learning rate respectively and $\mu_e = \frac{1}{t_2 - t_1} \int_{t_1}^{t_2} E_P d E_P$. The learning rate is adjusted based on the quality of the predictions characterized by the perceptual prediction error between a temporal sequence between times $t_1$ and $t_2$, typically defined by the gating signal.
+
+# 12.3.7 Results
+
+# 12.3.7.1 Datasets
+
+We evaluate and analyze the performance of the perceptual prediction framework on three large, publicly available datasets – Breakfast Actions (Kuehne et al., 2014), INRIA Instructional Videos dataset (Alayrac et al., 2016) and the 50 Salads dataset (Stein and McKenna, 2013). Each dataset offers a different challenge to the approach allowing us to evaluate its performance on various challenging conditions.

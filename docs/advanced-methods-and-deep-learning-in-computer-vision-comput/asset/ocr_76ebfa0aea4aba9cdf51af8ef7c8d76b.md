@@ -1,0 +1,17 @@
+# Distance based methods (DB)
+
+These types of method are based on the calculation of the distance of data points from their closest neighbors, leveraging the assumptions that normal data occur in dense neighborhoods, whereas anomalies are far from their closest neighbors. The choice of the distance metric is therefore essential. To account for neighborhoods of various densities, the distance value is often relative to the distances between points in the closest neighborhood.
+
+# Clustering based methods (CLU)
+
+These methods rely on assumptions dependent on the chosen clustering techniques: i) techniques like DBSCAN, ROCK or SNN assume that anomalies are not assigned to any of the built clusters; ii) when using techniques like SOM, one can assume that abnormal data lie far away from the cluster’s centroid; iii) finally, one could leverage the assumption that normal data belong to big clusters and abnormal ones to small clusters.
+
+# Information theoretic methods (IT)
+
+These methods use information theoretic measures such as Kolomogorov Complexity, entropy or relative entropy to analyze the information content of the data and extract the most anomalous subset of data points (i.e., sequence, subgraph, image area) w.r.t. the rest of the data.
+
+# Statistic/probabilistic methods (STA)
+
+Probabilistic-based methods aim to model the normal sample features’ distributions (inliers) associated with the training data, whereas abnormalities can be detected as data samples known as outliers with low probability (Rivera et al., 2020). The probability that a data sample belongs to a certain distribution can be estimated using probabilistic distances such as Bhattacharyya, Mahalanobis, Hellinger or the Kullback–Leibler divergence. Abnormality detection using probabilistic (statistical) models can be classified into two main groups, parametric as Gaussian Mixture Model (GMM) methods and Regression methods and non-parametric as Histogram or Kernel Density Estimation (KDE) methods (Wang et al., 2019). A significant advantage of the probabilistic approach is that it can be easily generalized to different data types and modalities; whereas its drawback is related to fitting the data to a certain distribution which may not be appropriate in some cases (Aggarwal, 2016).
+
+Additionally, Chandola et al. (2009) identify a further set of anomaly methods, i.e., spectral anomaly detection techniques, based on the assumption that data, especially high dimensional ones, can be brought to a lower dimensional subspace where normal and abnormal data can be more easily distinguished. Examples of such methods could be using PCA on image data or embedding graphs as adjacency matrices. These methods can be used as a preprocessing step to the other methods defined above. As we will talk more in detail on the problem of dimensionality reduction in Sec. 13.2.6, we momentarily ignore this type of method. Similarly, when handling abnormal sequences of data, such as in time-series data, detection can be either performed through an adaptation of the previous methods to contextual anomalies or through methods that learn the structure of the data, for example executing the prediction of the following time instants from the previous ones (prediction methods (PRE)).

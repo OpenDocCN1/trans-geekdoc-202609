@@ -1,0 +1,54 @@
+
+pairs of n and m. For a complete and fixed basis the number of functions N is set equal to the number of pixels in the original filter with a chosen set of equidistant scales σ:
+
+$$\Psi_{\sigma}=\{\psi_{\sigma00},\ \psi_{\sigma01},\ \psi_{\sigma10},\ \psi_{\sigma11}\dots\}.\tag{10.32}$$
+
+In the end, the convolutions are learned as weighted combinations of $\psi_{\sigma i}$ using trainable weights $w$:
+
+$$\kappa_{\sigma}=\sum_{i}\psi_{\sigma i}w_{i}.\tag{10.33}$$
+
+As a result the final kernels are defined on multiple scales and no image interpolation is needed. Given a function of scale and translation $f(s,t)$, the scale convolution with a kernel $\kappa_{\sigma}(s,t)$ is equal to
+
+$$[f\star_{H}\kappa_{\sigma}](s,t)=\sum_{s'}[f(s',\cdot)\star\kappa_{s,\sigma}(s^{-1}s',\cdot)](t),\tag{10.34}$$
+
+where $\star_{H}$ denotes scale equivariant convolution. The output of this convolution is a stack of features each of which corresponds to a different scale.
+
+### Scale equivariant pooling and padding.
+
+To capture correlations between different scales and to transform a three-dimensional signal into a two-dimensional one, global max pooling must be applied along the scale axis. This operation does not eliminate the scale-equivariant properties of the network. In practice, Sosnovik et al. (2021) recommend to additionally incorporate scale equivariant pooling in places where conventional CNNs have spatial max pooling or strides.
+
+Padding is shown to degrade the localization prowess of convolutional trackers (Li et al., 2019a; Zhang and Peng, 2019), as discussed also in Section 10.3.4.3. Scale equivariant convolutions, however, rely on large receptive fields that consequently yield smaller feature maps. Thus, for scale equivariant trackers with very deep models padding is necessary. To ensure that strict translation equivariance is not affected while still obtaining favorable results, Sosnovik et al. (2021) use circular padding during training and zero padding at inference time.
+
+### Scale equivariant Siamese trackers.
+
+The convolutional operation that results in the heatmap of a tracker is nonparametric. Both the input and the kernel come from neural networks. Thus, the approach described in Eq. (10.34) is not suitable for this case. Given two functions $f_{1}, f_{2}$ of scale and translation the nonparametric scale convolution is defined as follows:
+
+$$[f_{1}\star_{H}f_{2}](s,t)=L_{s^{-1}}[L_{s}[f_{1}]\star f_{2}](t)\tag{10.35}$$
+
+Here $L_{s}$ is rescaling implemented as bicubic interpolation. Although it is a relatively slow operation, it is used only once in the tracker and it does not heavily affect the inference time.
+
+The aforementioned modules are all the necessary building blocks for the scale equivariant Siamese tracker. Specifically, one must first identify to what degree objects change in size in this domain, and then accordingly select a set of scales $\sigma_{1},\sigma_{2},\dots\sigma_{N}$. This is a domain-specific hyperparameter. For the networks represented by $h(x)$ and $h(z)$, all convolutional layers need to be replaced with scale-convolutional layers. The basis for these layers is based on the chosen scales $\sigma_{1},\sigma_{2},\dots\sigma_{N}$. Optionally, scale-pooling can be included to additionally capture interscale correlations between all scales. The parametric scale equivariant convolution needs to be replaced by the nonparametric one from Eq. (10.35) to obtain the final prediction map.
+
+The obtained tracker produces a heatmap f(z, x) defined on scale and translation. Each position is assigned a vector of features that encodes both the measure of similarity and the scale relation between the candidate and the template. If additional scale-pooling is included, then all the scale information is aggregated in the similarity score. As the overall structure of the tracker does not change, and the training and inference procedures also do not change, the additional computational cost by introducing scale equivariance is small. For further details regarding the construction of rotation equivariant Siamese trackers, we refer the interested reader to Sosnovik et al. (2021).
+
+## 10.3.4.6 Efficiency of Siamese trackers
+
+The first Siamese tracker by Tao et al. (2016) relied on the fast RCNN (Girshick, 2015) architecture and the region-of-interest pooling to perform the local template matching. Despite the speed improvements that the region-of-interest pooling provides, searching over boxes is still a computationally expensive procedure. Bertinetto et al. (2016b) note that search over convolutional feature maps may as well be described as a convolution itself, relying on the idea of fully convolutional neural networks (Long et al., 2015). This simple change made Siamese tracking much more efficient and comparable with previous alternatives.
+
+As searching over all possible locations in the image is expensive, Li et al. (2018a) propose to introduce the region proposal network from Ren et al. (2015) to their Siamese tracker. The region proposal network learns to regress on the location and scale box coordinates that are likely to contain the target. Therefore, the Siamese tracker can focus on the relevant regions only for search. To further reduce computations, Li et al. (2019a) propose depth-wise convolutions rather than regular convolutions, obtaining tenfold fewer parameters and considerable computational improvements.
+
+## 10.3.4.7 Hybrid learning with Siamese trackers
+
+Siamese trackers have shown great benefit in predicting the target locations accurately, especially in long sequences, due to not suffering from model decay. This is possible by relying solely on offline training and not including any online learning component. Ignoring all future appearances of the target and having no online learning, however, is counter-intuitive. Online learning is needed to address scenarios where the appearance of the target changes to a significant degree, such that relying solely on the first frame is not adequate. For instance, imagine the case of a pedestrian taking off their jacket. An online component is also critical in the case multiple similar objects are present in the frame and the model must specialize, a scenario that is challenging for bare Siamese trackers. In that case, online learning can help guide the tracker model to discriminate the target object from all other similar objects in the scene.
+
+To make sure that the online learning does not have a detrimental effect to the tracker model due to model decay, model updates must be cautiously performed. There are two aspects to consider when designing model update mechanisms. The first aspect is when and how frequently a model update should be performed. The more frequent the model updates are, the more likely it is that the tracker model will become more and more biased with time, as shown by Gavves et al. (2020). The second aspect is which part of the model should be updated to ensure the incurred bias is either small or has a minimal effect in the long term to the template matching. The updates can be either directly on the similarity function of the Siamese tracker (Bhat et al., 2019) or on auxiliary networks that complement the similarity function (Tao et al., 2017).
+
+To introduce an online learning component, many approaches propose a metalearning strategy. With a metalearning strategy, the tracker model is initially trained in an offline manner to optimize the parameter weights on seen data. Then, at inference time the metalearner model predicts new parameter weights that are optimal for the new data point.
+
+Bhat et al. (2019) propose a metalearning component that predicts new parameter weights that discriminate between the target and the background. The proposed model follows the standard Siamese architecture for the similarity function. Unlike standard Siamese trackers though, the last convolutional layer in the template branch is followed by a model initializer and a model optimizer module. The model initializer provides an initial estimate of the model weights, using only the target appearance. These weights are then further processed by the model optimizer module, which uses both the target and the background to derive the final weight parameters. To avoid any potential overfitting, the model optimizer contains very few trainable parameters. In the end, the model is trained both offline and online.
+
+In the offline training phase, the model is trained using pairs of sets (M_train, M_test). Each set contains N frames, M = {I_j, b_j}_j, where b_j are the target bounding boxes available during training. To construct the M_train and M_test, a random segment is sampled per training sequence and then divided in two. The model predictor then receives as inputs the convolutional feature maps computed from M_train to predict the parameter weights. Then, to ensure good generalization, these parameter weights are used to make tracking predictions only on M_test. In the online training phase, the initial target appearance is perturbed using data augmentation techniques to generate novel training samples for the training set. This set is complemented with new patches of the target whenever the target is predicted with sufficient confidence. The online learning is effectively similar in nature to the offline one, but done at regular intervals every 20 frames.
+
+Continuing on the same line of work, Danelljan et al. (2020) propose to incorporate probabilistic learning to Bhat et al. (2019). To achieve this, the model learns to minimize the KL divergence between its output p_θ(y|x) with the ground truth distribution p(y|y_i). The probabilistic output of the model is defined as an energy-based distribution, p_θ(y|x) = 1/Z_θ exp(s_θ(y, x)), where Z_θ = ∫_y exp(s_θ(y, x)). The ground truth distribution p(y|y_i) is estimated empirically as a Gaussian p(y|y_i) ~ N(y_i, σ²), where σ² is the empirical variance estimated by a small data sample.
+
+Differently, (Tao et al., 2017; Gavves et al., 2020) approach the problem focusing on when the tracker should perform an update. The idea is that although Siamese trackers can benefit from model updates, they have to be cautious so as not to bias permanently the similarity function. As seen in (10.14), an accurate estimation of model bias would require computing the term E[δ_i ∇_φ f_{i,i}]. However, the state parameters φ_{t+1} are not known beforehand, and re-detecting the target in the earlier frames for every model update step (to obtain f_{i,i}) would be computationally prohibitive. To this end, a cascaded neural network is proposed to determine whether to perform a model update. First, a Siamese tracker is used to estimate the similarity map after convolving the template feature map with the feature map from every new frame.

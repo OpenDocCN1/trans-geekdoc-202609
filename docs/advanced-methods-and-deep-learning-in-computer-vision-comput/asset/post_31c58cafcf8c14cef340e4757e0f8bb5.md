@@ -1,0 +1,47 @@
+
+appearance of an object by updating the object model. However, this leads to the so-called ‘template update problem’, wherein there is a trade-off between adaptivity and stability (specifically, the tracker could end up with a totally distorted, nonviable version of the object profile—a process called ‘drifting’). This difficulty is overcome by reformulating tracking as a semisupervised learning problem in which both labeled and unlabeled data can be used during tracking. To make this work, semisupervised boosting is used, each unlabeled sample in the local search region being assigned a pseudo-label y_i and an importance weight λ_i (labeled samples have label y_i and importance 1). After initial detection, leading to a prior H_P, the object classifier H is built, taking account of positive samples from the object and negative ones from the surrounding background: typically, the local maximum of the confidence distribution is taken to indicate the new object position and the class is updated. Thus, we get a sequence of object locations, starting with the first (which resulted from the initial detection), and then proceeding to many further tracked positions. However, in principle the boosting equations can also lead to the prior either vanishing or dominating too much—corresponding respectively to drifting or zero adaptation. But in general drifting is limited as the tracker is not able to get too far away from the prior.
+
+Problems with the above tracking strategy include (a) taking partial occlusions or apparently permissible changes in appearance as unallowed drift; and (b) jumping to similar objects (for example, a face detector might jump from one person’s face to another). Clearly, tracking by detection is mainly applicable for single target tracking, but when multiple target tracking is required, the three processes, detection, tracking and recognition, must all be taken into account. In particular, recognition has to be taken as distinguishing similar objects in a scene.
+
+Stalder et al.’s (2009) multiple target classifier system proved highly successful for tracking multiple objects. It limited drifting by careful use of supervised updates and the avoidance of feedback loops, thereby preventing the accumulation of small errors which could lead to drift. This was achieved by making the tracker the dominant element in the approach, so that its information flow either went (in a loop) back to itself or (eventually) to the previous recognizer. This system permitted tracking with a moving camera and was also reliable enough to permit long-term tracking over times of ~24 hours.
+
+Another aspect of multiple target tracking is the capability for reidentification of objects that are temporarily hidden from view (e.g., temporarily occluded or outside the field of view of the camera). This involves identification matching and is only permitted if the degree of match achieved is significantly higher than for any other potential matches. Reidentification can fail if the degree of match becomes too different during the relevant temporal gap. Again, Stalder et al.’s system also performed well in these respects.
+
+Kalal et al. (2011) developed a powerful tracking system aimed particularly at eliminating run-time drift errors and problems that occur when tracked objects disappear from view. Their approach was neatly described as ‘tracking-learning-detection’. The key aspect of this method is that learning is carried out by a ‘P-expert’ which estimates missed detections, an ‘N-expert’ which estimates false alarms, and the means of updating both experts by learning. By keeping tracking and detection separate, they claimed that neither the tracking nor the detection capabilities are compromised, and present strong evidence for the success of their approach—in particular, by scoring an average of 81% accuracy on many datasets, thereby significantly outperforming five earlier approaches, none of which achieved better than 22% accuracy.
+
+Whereas Kalal et al.’s (2011) work only tracked single objects, Wu et al. (2012) showed how to carry out coupling detection and data association for multiple objects to ensure that complete tracks would be determined. This approach employed network flow data association and relied on an earlier paper by Castañón (1990) entitled “Efficient algorithm for finding the k best paths through a trellis”. This title shows that the method relies heavily on extensive analysis of graphs: while interesting, space does not permit a full discussion of these techniques to be included here. Suffice it to say that tracking multiple objects is a difficult problem that becomes even more difficult as the number of targets increases and the whole scene fills up with objects and tracks. Thus, in this respect, Wu et al.’s (2012) work can be regarded as more thoroughgoing than that of Stalder et al. (2009). We will study more recent developments on this topic in Part F, Section 1.7.7, after introducing deep learning methods.
+
+## 1.6 Part E – Texture analysis
+
+### 1.6.1 Introduction
+
+We have already considered several core aspects of image analysis, including in particular feature detection, object recognition and segmentation. Here we go on to consider texture analysis. To proceed, we start by defining a texture as the characteristic variation in intensity which should allow us to recognize and describe a textured region and to outline its boundaries (Fig. 1.29). Typically, a texture is the intensity pattern that results when light is reflected from a surface having a certain degree of roughness. Clearly, a smooth, uniformly lit surface will exhibit no texture, while a piece of cloth or a sandy beach will have characteristic textures of their own.
+
+Broadly speaking, textures vary in their degrees of randomness and regularity, and in the latter case they may have high or low directionalities. For example, pieces of cloth generally exhibit high degrees of regularity and directionality, while the intensity pattern emanating from the surface of a sandy beach may appear highly random, with negligible directionality. Another factor is the scale of the perceived particle size for the surface, which will be small for sand and much larger for a tray of peas. In fact, the tiny elements composing a textured surface are often called textural elements or texels. These considerations lead us to characterize textures in the following ways:
+
+- 1. The texels will have various sizes and degrees of uniformity.
+- 2. The texels will be orientated in various directions.
+- 3. The texels will be spaced at varying distances in different directions.
+- 4. The contrast will have various magnitudes and variations.
+- 5. Various amounts of background may be visible between texels.
+- 6. The variations composing the texture may each have varying degrees of regularity vis-à-vis randomness.
+
+The significant number of parameters required to characterize a texture are bound to make texture analysis quite complicated: and of course, many of the parameters will have a high condensed to relatively few numbers before it can be used to classify the texture. The early paper by Haralick et al. (1973) gave fourteen such measures, and these were used successfully for classification of many types of material (including, for example, wood, corn, grass and water).
+
+![](img/fe161b7f6e96e35e7e853eece52c6dce_83_0.png)
+
+FIGURE 1.30 Use of autocorrelation function for texture analysis. This diagram shows the possible 1-D profile of the autocorrelation function for a piece of material in which the weave is subject to significant spatial variation: notice that the periodicity of the autocorrelation function is damped down over quite a short distance.
+
+Unfortunately, the amount of data in the co-occurrence matrices is liable to be many times more than in the original image—a situation which is exacerbated in more complex cases by the number of values of d and θ that are required to accurately represent the texture. In addition, the number of grey levels is typically ~256, and the amount of matrix data varies as the square of this number. Finally, co-occurrence matrices merely provide a new representation: they do not themselves solve the recognition problem. As a result of these factors, the 1980s saw a highly significant diversification of methods for the analysis of textures. Of these, Laws’ approach (1979; 1980a; 1980b) is important in that it has led to other developments which provide a systematic, adaptive means of tackling texture analysis. This approach is covered in the following section.
+
+### 1.6.3 Laws’ texture energy approach
+
+In 1979 and 1980 Laws presented his novel texture energy approach to texture analysis (Laws, 1979, 1980a,b). This involved the application of simple filters to digital images. The basic filters he used were common Gaussian, edge detector and Laplacian-type filters, and were designed to highlight points of high ‘texture energy’ in the image. By identifying these high energy points, smoothing the various filtered images, and pooling the information from them, he was able to characterize textures highly efficiently. As remarked earlier, Laws’ approach has strongly influenced much subsequent work and it is therefore worth considering it here in some detail.
+
+The Laws’ masks are constructed by convolving together just three basic 1 × 3 masks:
+
+```
+L3 = [1  2  1]    (1.104)
+E3 = [-1  0  1]   (1.105)
+S3 = [-1  2  -1]  (1.106)
+```

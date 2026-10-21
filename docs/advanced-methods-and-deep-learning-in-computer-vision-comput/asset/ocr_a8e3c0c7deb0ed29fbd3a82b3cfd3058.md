@@ -1,0 +1,17 @@
+In situations where the dataset is rather small, say a few hundreds, even fine tuning the weights may result in overfitting. However, since CNNs efficiently learn generic image features, it is possible to directly use a trained network as a fixed feature extractor. Hence, features from new data are extracted by projecting them on to activations of a specific layer of the pretrained network. After that, the learned representations are fed into simple classifiers to solve the task at hand. This approach, known as off-the-shelf feature extraction, has been used by researchers to achieve promising results (Weiss et al., 2016; Day and Khoshgoftaar, 2017).
+
+Similarly, data augmentation is the simplest way to combat the overfitting problem encountered by deep neural networks. This technique works by artificially enlarging the size of the dataset through various methods such as changing the image orientation by flipping (which produces the mirrored image) and rotating the original images, which subsequently results in a new image. This ensures that the learning algorithm infers features from data with different orientations.
+
+# 6.1.1.3 Datasets for deep face recognition experimentation
+
+There are a number of face datasets that can be utilized for training and testing the deep face recognition models. Here, we provide details of some of them.
+
+The LFW Dataset: The Labelled Faces in the Wild (LFW) (Huang et al., 2008) is a large dataset of face pictures, which is designed for testing the capability of face recognition in simulated uncontrolled scenarios. All the images have been collected from the Internet and consist of a spectrum of variations in expression, pose, age, illumination, and resolution. The LFW database contains images of 5749 subjects with a combined total of some 13000 images. The images themselves in the dataset have variable and significant background clutter.
+
+The YouTube Faces Database: The YouTube Faces DB (He et al., 2018), is composed of face videos with varying lighting, pose and age conditions. The database is specifically designed to study and analyze face recognition algorithms in videos. It contains over 3000 videos of over 1500 individuals. The videos have been downloaded from YouTube. The database has been put together by closely following the LFW as a benchmark.
+
+The FEI Dataset (Thomaz and Giraldi, 2010) contains 200 images of Brazilian students and staff with an equal number of males and females. For each subject, there are 14 images, the total number of images in the dataset being 2800. The resolution of the images is 640 pixels by 480 pixels, and all the images are in color taken against a homogeneous white background. The subjects are between the ages of 19 and 40 years and the dataset contains images displaying variations in facial expressions and pose.
+
+# 6.2 Components of deep face recognition
+
+There are essentially three parts to a modern deep learning based face recognition system. They are face detection by which a face is successfully identified within the image, face processing by which the face is cropped and often normalized, and face recognition by which a deep learning algorithm is used to classify or match the face. This process is described in Fig. 6.4.

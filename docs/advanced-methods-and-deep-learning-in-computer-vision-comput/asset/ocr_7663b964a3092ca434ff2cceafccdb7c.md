@@ -1,0 +1,11 @@
+![](bbox=[0.28, 0.12, 0.72, 0.38])
+
+FIGURE 7.1 Overview of generalized domain adaptive dictionary (Shekhar et al., 2013).
+
++   - Dictionary update: This is where both MOD and KSVD algorithms differ. The MOD algorithm updates all the atoms simultaneously by solving an optimization problem whose solution is given by D = YX⁺, where X⁺ denotes the Moore-Penrose pseudo-inverse. Even though the MOD algorithm is very effective and usually converges in a few iterations, it suffers from the high complexity of the matrix inversion as discussed in Aharon et al. (2006). In the case of KSVD, the dictionary update is performed atom-by-atom in an efficient way rather than using a matrix inversion. It has been observed that the KSVD algorithm requires fewer iterations to converge than the MOD method.
+
+# 7.3.1 Generalized domain adaptive dictionary learning
+
+When the target data has a different distribution than the source data, the learned sparse representation may not be optimal. This section investigates if it is possible to optimally represent both source and target by a common dictionary. Specifically, we describe a technique that jointly learns projections of data in the two domains, and a latent dictionary that can succinctly represent both the domains in the projected low-dimensional space as shown in Fig. 7.1. An efficient optimization technique is presented, which can be easily extended to multiple domains. The learned dictionary can then be used for classification. The proposed approach does not require any explicit correspondence between the source and target domains, and shows good results even when there are only a few labels available in the target domain. Various recognition experiments show that the method performs on par or better than competitive methods.
+
+Consider a special case, where we have data from two domains, Y₁ ∈ Rᵈˣᴺ¹ and Y₂ ∈ Rᵈˣᴺ². We wish to learn a shared K-atoms dictionary, D ∈ Rⁿˣᴷ and mappings P₁ ∈ Rⁿˣᵈ, P₂ ∈ Rⁿˣᵈ onto a common low-dimensional space, which will minimize the representation error in the

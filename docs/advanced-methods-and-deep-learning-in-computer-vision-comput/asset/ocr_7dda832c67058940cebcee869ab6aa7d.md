@@ -1,0 +1,13 @@
+![](bbox=[0.15, 0.12, 0.85, 0.3])
+
+FIGURE 8.2 General scheme of an auto-encoder network for semantic segmentation highlighting the different network stages on which domain adaptation strategies can be applied, from the input image space up to intermediate or output network activations.
+
+possible to find synthetic peculiar traits, however small, which can undermine the efficacy of a model trained on synthetic data in a real-world environment.
+
+The common approach to address domain adaptation at the input level is to map the data to a new image space, where the projected source (or target) samples carry an enhanced perceptual resemblance to target (or source) ones. This is normally achieved with the help of style-transfer techniques, whose objective is turned into matching source and target marginal distributions in the image space. By feeding in input supervised data from the new domain-invariant space to the segmentation network, the predictor should now able to retain consistent results across domains.
+
+An upside of this approach is its complete independence with respect to the segmentation network currently in use that does not require any modification. This, however, comes with a cost, which is that, in its vanilla scheme without any extra regularizing factors, marginal alignment may be performed without the class-conditional distributions being simultaneously matched. In other words, it may be possible to end up with domain invariant representations, which yet lack the semantic coherence with the original data crucial to solve the segmentation task. To get past this problem, multiple solutions have been proposed to achieve semantically consistent image translations, for example through image reconstruction constraints or additional loss components enforcing the coherence of segmentation predictions.
+
+# 8.2.2.2 Feature level adaptation
+
+An alternative approach is to focus the adaptation on feature representations, pursuing a distribution alignment of network latent embeddings, which are normally retrieved from the encoder output in the commonly employed auto-encoder architecture (even if adaptation at other network stages has also been employed). The primary objective is to build a domain invariant latent space, in which features extracted either from source or target input images observe the same distribution. In the end, learning solely from supervision on source representations should result in a good performance also on the target domain, as shared

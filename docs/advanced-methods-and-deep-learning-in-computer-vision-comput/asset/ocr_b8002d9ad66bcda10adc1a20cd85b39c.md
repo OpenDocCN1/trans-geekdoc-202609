@@ -1,0 +1,17 @@
+penstance is that by making small changes in tracker models, the performance improves in several videos but drops in others. Model selection and hyperparameter tuning is often critical to make sure the final tracker model is robust and generalizes.
+
+# 10.1.1.3 Engineering challenges in tracking
+
+Besides the challenges associated with the visual appearance of the target and background, and with the machine learning models, in visual object tracking there exist engineering challenges that relate to the way recording the video sequences or tuning the tracker model are carried out.
+
+An engineering challenge that often causes a tracker to fail is fast motion, where the speed of the target object is higher than the frame rate. Fast motion is a problem with tracker models that rely on search radii around their previous predictions to constrain their search. Typically, the search radius is taken to be large enough according to what is expected in the available video sequences. However, it can happen that the target object moves so fast that it is located outside the search radius in the following frame. In that case the tracker will simply fail no matter how accurate its model is. Failure due to fast motion can be particularly problematic with models that perform frequent model updates, as they will use de facto misclassified patches to update the tracker model.
+
+Another challenge associated with the fast motion of the target is motion blur. When the target object moves very fast, the camera sensor receives appearances of the target object at multiple time stamps. This results in an averaging effect that blurs the image and, quite importantly, obscures the target appearance. As a result, the tracker model is likely to miss the target because certain high frequency details that are necessary for precisely representing the target object suddenly disappear.
+
+In the recent years visual object trackers have attempted to address the aforementioned challenges with the power of deep neural networks and large training sets. Next, we will examine the main deep learning approaches for doing so.
+
+# 10.2 Short-term visual object tracking
+
+Before explaining the emergence of long-term tracking in the recent years, we first give a short introduction to short-term tracking that was the predominant paradigm for a long time. Short-term tracking methods primarily focus on visual instances of short episodes, typically ranging from 10–20 seconds. The primary goal in short-term tracking is to locate the target with most precision for as long as possible, until the target is lost. In general, short-term trackers do not integrate a recovery mechanism that can retrace the target once it is lost by the tracker, mostly for reasons of computational efficiency.
+
+Short-term trackers are judged on basically two grounds: (i) how well the target can be localized, and (ii) how fast can the inference be done. A general consensus (Kristan et al., 2017) is to evaluate short-term trackers with a focus on either solely their accuracy, or the accuracy given real-time performance, in which case inference speed must meet a minimum threshold. Such a constraint depends on the hardware design and can vary across different evaluation protocols. When real-time constraints are not required, several variants of short-
