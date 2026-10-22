@@ -1,0 +1,13 @@
+![](bbox=[0.11, 0.08, 0.46, 0.24])
+
+![](bbox=[0.51, 0.08, 0.86, 0.24])
+
+![](bbox=[0.11, 0.25, 0.46, 0.4])
+
+![](bbox=[0.51, 0.25, 0.86, 0.4])
+
+**Figure 1.60.** We need four GPS satellites to calculate a precise location on Earth using the Global Positioning System. (a) From only one satellite, we can be anywhere on an imaginary sphere with a radius equal to the distance between the GPS receiver and the satellite. (b) If we add a second satellite, we can only be where these two imaginary spheres intersect. (c) If we add a third satellite, there are only two points where we can possibly be. (d) From four satellites, the exact location of the Earth can be determined just like locating earthquakes from arrivals at multiple seismometers.
+
+middle is satellite A and the diameter is $d_A$ (see Figure 1.60). If we also know the distance from GPS satellite B to the same ground receiver, $d_B$, we are now on the circle where two spheres intersect. If we also know the distance from GPS satellite C to the same ground receiver, $d_C$, we are now on either of two points where three spheres intersect (see Figure 1.60). A fourth satellite is needed to determine which one of the two positions is not correct. That is the basic principle of determining the three-dimensional station position by using satellite triangulation. Note again that, unlike terrestrial methods, GPS methods do not require line-of-sight between stations in a network. Note also that GPS measures vertical positions with respect to an idealized ellipsoidal reference (i.e., ellipsoidal heights) described in the section of this chapter, as opposed to the Earth’s geoid. Thus, knowledge of the local gravity field is needed when converting GPS vertical positions to orthometric heights, like the one obtained from leveling measurements. Remember that surfaces of constant ellipsoidal height are not necessarily equipotential surfaces. Hence, in an ellipsoidal height system, it is possible that water flows from a point with low “height” to a point with a higher “height.”
+
+Until the early 1990s only episodic GPS field surveys (sGPS)—that is, GPS field campaigns in which GPS receivers were planted in the ground for a short period of time and then removed just like classical seismic surveys for oil and gas exploration—were used to monitor the Earth’s surface deformation. These surveys were generally repeated on average every two years in seismically active regions

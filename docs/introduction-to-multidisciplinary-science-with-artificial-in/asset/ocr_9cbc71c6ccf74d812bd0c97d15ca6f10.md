@@ -1,0 +1,17 @@
+To explain the large Titan atmosphere compared to Earth’s atmosphere, let us assume the pressures of Titan and Earth’s atmosphere can be roughly expressed as follows:
+
+$p_{\text{titan}} \approx p_{0,\text{titan}} \left(1 - g_{\text{titan}} \rho_{\text{titan}} h_{\text{titan}}\right)$
+
+and
+
+$p_{\text{earth}} \approx p_{0,\text{earth}} \left(1 - g_{\text{earth}} \rho_{\text{earth}} h_{\text{earth}}\right)$ ,
+
+where $p_{0,\text{titan}} = 1.5\,p_{0,\text{earth}} = 1.5\,\text{bar}$ are the surface pressures, $h_{\text{titan}}$ and $h_{\text{earth}}$ are the thicknesses of Titan and Earth atmospheres, respectively, and $\rho_{\text{titan}}$ and $\rho_{\text{earth}}$ are the mass densities of Titan and Earth atmospheres, respectively. Because Titan and Earth’s atmosphere pressure are the same range as well as their densities, we must have $h_{\text{titan}} \gg h_{\text{earth}}$ to compensate for the fact that $g_{\text{titan}} \ll g_{\text{earth}}$.
+
+Similar to Earth, Titan’s atmosphere is mostly nitrogen gas. However, it also contains between 2 and 5 percent methane gas, depending on altitude (5 percent at at surface near equator; 1.4 percent in lower stratosphere; and 2 percent at about 1000 kilometers), and 0.5 percent hydrogen at high altitudes and less than 0.2 percent in lower atmosphere. While the temperature on Titan’s surface is -180 degrees Celsius, at 320 kilometers it is -90 degrees Celsius. At the very top the Titan sky turns blue as it fields primarily nitrogen and hydrogen but at the height of about 400 km the aforementioned orange haze begins to form which continues all the way down to 100 km only clearing as you approach the surface. At 30 miles the moon’s surface becomes visible. The orange Haze layer is fairly evenly opaque all the way through. Here sunlight never reaches the surface. The top layer is composed of hydrogen and nitrogen.
+
+On Earth and many other planets, chemical processes producing molecules take place near the surface. On Titan, however, its chemical reactor is located above 480 kilometers and produces huge amounts of organic compounds (Figure 2.57). Some of them eventually descend to lower layers to form the haze layer and even down to the surface, rivers, oceans, and dunes. We will next discuss Titan’s unexpected atmospheric chemistry.
+
+# The most complex atmospheric chemistry in the solar system.
+
+Similar to planets in our solar system, the Titan’s atmosphere has well-defined troposphere, stratosphere, mesosphere, thermosphere, and exosphere (not shown in Figure 2.57). Titan’s thermosphere layer receives about 1 percent of the sun’s flux that reaches Earth because it is located farther away from the Sun than Earth. Because Titan does not have a significant magnetic field, some charged particles (e.g., electrons and ions like H+) from solar radiation also penetrate Titan’s atmosphere. In Ikelle (2024), it was explained that the Earth’s magnetic field creates an invisible magnetic envelope, known as the magnetosphere, around the planet. This envelope blocks the sun’s charged particles from reaching us but allows sunlight to pass through. Saturn has a significant magnetic field and therefore a magnetosphere. However,

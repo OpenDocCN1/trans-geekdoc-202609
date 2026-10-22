@@ -1,0 +1,11 @@
+in the case of the Sun-Earth system, an electronic system within the satellite pushes the satellite back toward L2. If the satellite was actually parked at L2, there would be no way to predict which direction it would eventually drift off to. If it drifted further from the sun the whole mission would be over. Thus satellites are kept in orbits around L1, L2, or L3, where their motions are easily monitored and corrected if necessary. These orbits are characterized as halo orbits. Robert Willard Farquhar (1932-2015) came out with the idea of halo orbit (Farquhar, 1966) and was involved in a number of spaceflight missions with NASA.
+
+The first mission to use a halo orbit was a joint ESA and NASA spacecraft launched in 1978. It traveled to the Sun–Earth L1 point and remained there for several years. The joint ESA/NASA SOHO mission also uses a halo orbit around the Sun–Earth L1 point (Howell, 1984). In May 2018, the Chinese space program placed the first communications relay satellite, Queqiao, into a halo orbit around the Earth-Moon L2 point (Li et al, 2021). On January 3, 2019, the Chang’e 4 spacecraft landed in the Von Kármán crater on the far side of the Moon, using the Queqiao relay satellite to communicate with the Earth, as we will discuss later.
+
+# 1.1.7. Application: Gravity Anomalies Versus Topography in Antarctica
+
+Modern Antarctic-wide free-air-gravity-anomaly map is shown in Figure 1.33b. This map includes both strong negative, ranging from −30 mGal to −60 mGal, and strong positive free-air gravity anomalies of about +50 mGal anomaly. These strong free-air gravity anomalies are found to occur mainly on the Antarctic continent, in particular, in the Wilkes Land, Princess Elizabeth Land, Ross Sea, central continental, and Weddell Sea sectors. Some of these anomalies are very large and comparable to gravity anomalies in other regions on Earth, but some are surprisingly different. Moreover, these anomalies are distributed almost randomly. Clearly, the present
+
+![](bbox=[0.1, 0.65, 0.88, 0.88])
+
+Figure 1.33. (a) Topography and bathymetry of Antarctica. (b) The free-air gravity anomaly of Antarctica.

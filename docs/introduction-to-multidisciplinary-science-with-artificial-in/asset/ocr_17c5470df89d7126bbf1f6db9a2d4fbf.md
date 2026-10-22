@@ -1,0 +1,11 @@
+![](bbox=[0.08, 0.07, 0.92, 0.38])
+
+Figure 1.57. (a) The Airy model of isostatic compensation. The crust as a whole is floating in a semi-layer according to Archimedes’ principle. The compensating masses lie directly beneath mountains and oceans. The crust has a constant density and the depth of the interface between the crust and the mantle varies. (b) The Pratt model of isostatic compensation. The density of the crust below sea level varies laterally, being less below mountains than below oceans. The depth of compensation is the same everywhere.
+
+pressure until the pressure across the surface containing the points A and B is again equal—that is, why we have isostatic equilibrium. In short, depths larger than a certain compensation depth no longer contribute to lateral variations in pressure. This concept of fluid flow in response to uneven pressure applies to all sorts of phenomena, including the circulation of the atmosphere and ocean on larger spatial scales, and even to the state of gravitational equilibrium between the Earth’s crust and mantle, as if the (lighter) crust were floating on a (heavier) mantle.
+
+# 1.3.3. Crustal Thickness: an Explanation of Thick-Continental and Thin-Oceanic Crusts
+
+In analogy to an iceberg floating on water, Fisher (1881) described the Earth’s crust as an iceberg and the underlying asthenosphere as water. In other words, he considers that the crust can be approximated as being in isostatic equilibrium—the mantle is not a liquid but behaves like a viscous liquid (a very critical condition for isostasy to work); the analogy is about the fact that the crust slides over the mantle and the pressure in the asthenosphere is invariant at a certain depth. Fisher (1881) actually used the term hydrostatical equilibrium rather than isostatic equilibrium. The word isostasy was introduced by Dutton in 1882 and his complimentary review of Fisher’s book and in one of his subsequent papers (Dutton, 1889).
+
+Crustal rocks with densities between 2.6 and 3.0 g/cc are less dense than the upper mantle, which has a density of 3.3 g/cc. Therefore, crustal rocks can float

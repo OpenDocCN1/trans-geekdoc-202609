@@ -1,0 +1,5 @@
+# Taylor & Francis
+
+Taylor & Francis Group
+
+http://taylorandfrancis.com

@@ -1,0 +1,15 @@
+s = 1/2 for matter particles such as electrons and protons. Larger composite particles such as heavy nuclei or many electron atoms can have many different possible s values. Zero and integer spin particles are called bosons. Half-integer (1/2, 3/2, 5/2, ...) spin particles are called fermions.
+
+Regardless of the physics involved, a particle spin is an experimental fact. The first experiment was performed by Gerlach and Stern (1922). They consider atoms with electrons horizontally through a magnetic field oriented up-down. One would expect the magnetic field to deflect atoms based on the electron’s spin. Regardless of the magnetic field orientation, electrons always point in the direction of the magnetic field or in the opposite direction of the magnetic field. Note that, in classical physics, different orientations of a magnetic field would cause a continuous range of deflections in the apparatus. However, only two separate deflections are observed in quantum mechanics. Chapter 4 illustrates this weirdness of the quantum world. No matter how you make an electron, including when it does not align with the magnetic field, when you place it in the magnetic field one of two things can happen when you turn on the magnetic field. It is pointing up—then no photons are emitted. If it is pointing downwards, then the electron emits a photon of a frequency corresponding to the energy of jumping up and down. The spin of an electron in an atom determines the direction of the magnetic field produced by it.
+
+In many atoms (such as carbon-12) the spins are paired against each other, such that the nucleus of the atom has no overall spin. However, in some atoms (such as hydrogen-1 and carbon-13) the nucleus does possess an overall spin. The rules for determining the net spin of a nucleus are as follows:
+
++   - If the number of neutrons and the number of protons are both even, then the nucleus has no spin (i.e., s = 0); for example, carbon-12, oxygen-16, and sulfur-32.
++   - If the number of neutrons plus the number of protons is odd (i.e., number of protons is odd and number of neutrons is even or number of protons is even and number of neutrons is odd), then the nucleus has a half-integer spin; for example, hydrogen-1 with s = 1/2, carbon-13 with s = 1/2, fluorine-19 with s = 1/2, nitrogen-15 with s = 1/2, phosphorus-31 with s = 1/2, sodium-23 with s = 3/2, aluminum-27 with s = 5/2, oxygen-17 with s = 5/2, and cobalt-59 with s = 7/2.
++   - If the number of neutrons and the number of protons are both odd, then the nucleus has an integer spin (e.g., 1, 2, 3); for example, hygrogen-2 with s = 1, and nitrogen-14 with s = 1.
+
+Quantum mechanics tells us that a nucleus with spin s will have 2s + 1 possible orientations; e.g., a nucleus with spin 1/2 will have 2 possible orientations, just like an electron. To summarize, spin interacts with magnetic fields, both inside and externally. Spin can affect bulk properties.
+
+# 3.5.2. Nuclear Magnetic Resonance (NMR)
+
+Spectroscopy is generally used to identify compounds. It is based on the principle that the major nuclei of atoms possess magnetic moments and angular momentum.

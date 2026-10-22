@@ -1,0 +1,11 @@
+![](bbox=[0.22, 0.08, 0.75, 0.4])
+
+Figure 1.49. An illustration of how Moon always has one face facing us. The Moon orbits Earth once every 27.3 days and spins on its axis once every 27.3 days (i.e., synchronous rotation). So, it always faces us.
+
+A human falling into a black hole will also experience tidal forces, which are lethal! The difference in acceleration between the head and feet could be many thousands of times Earth’s gravity. People would literally be pulled apart! Similarly, if the tide force is stronger than a celestial body’s cohesiveness, the body will be disrupted. As we will discuss later, the minimum distance a moon comes to an exoplanet before it is shattered this way is called the Roche distance from the exoplanet. As space exploration continues, we will come across a moon tidally pulled apart by an exoplanet’s strong gravity one day.
+
+# 1.2.5. Far Side of the Moon
+
+Yes, there is a lunar hemisphere that we have never seen through naked eyes and even from a telescope until recently in 2019. This hemisphere of the Moon always faces away from the Earth (see Figure 1.49). Every time we see the Moon, we are only seeing one side of the Moon. The visible side of the Moon to us is known as the near side of the Moon. The other side of the Moon, known as the far side of the Moon, is hidden to us. This phenomenon is due to the fact that Earth and Moon are tidally locked, as described above—that is, the Moon rotates around its axis and at the same speed that it rotates around the Earth. The Moon completes one full rotation on its axis in the time it takes to orbit the Earth, approximately 27.3 days. That means the same side is always turned toward us. However, it is significant to note that the far side of the Moon receives equal amounts of sunlight as the near side of the Moon (i.e., the Earth-facing side of the Moon).
+
+Note that the rotation of the Moon around Earth in Figure 1.49 is sometimes called as synchronous rotation. Many moons in the Solar System (including Mars’s

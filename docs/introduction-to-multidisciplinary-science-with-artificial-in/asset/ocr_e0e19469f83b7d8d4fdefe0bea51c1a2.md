@@ -1,0 +1,15 @@
+# 1.4.5. The Interferometric Synthetic Aperture Radar
+
+GPS are point measurements of surface deformation and InSAR (i.e., a microwave system with an interferometric capability) is a spatial mapping of surface deformation. InSAR illuminates the Earth’s surface with their own radiation energy. It is used today in studies of active tectonics and earthquake deformation. The first use of InSAR was to measure the coseismic deformation of the 1992 Landers, California, earthquake. Nowadays the number of earthquakes studied with InSAR is just too large to be listed here.
+
+The current approach is that two images of the same location in space, but at different times, are obtained from InSAR illuminations (see Figure 1.68). In this way, the phase differences between the two images can be measured and analyzed on a pixel-by-pixel basis. These phase differences are translated to the displacement of the ground surface by using this simple formula
+
+Δφ(x,t) = 4π/λ Δr(x,t) , (1.183)
+
+where Δφ is the phase difference between InSAR images, λ is the wavelength of the radar wave, and Δr is the ground displacement which is typically between 5 and 100 meters. The ground displacements can be used to identify previously unmapped faults, the distribution of slip (i.e., portions of the fault that have failed and that did not), as illustrated in Figure 1.68a. Phase data from two precisely aligned SAR images can be differentiated to produce images which are known as interferograms. Interferograms contain information on minute surface displacements toward or away from the radar between the times of the two image acquisitions, as illustrated in Figure 1.68b.
+
+# 1.5. Application: The Human Trip to Mars and Beyond
+
+Again, extraterrestrial travel beyond low-Earth orbit (LEO) and establishing sustained access to destinations such as the Moon (0.384 million kilometers from the Earth’s surface on average), asteroids, and Mars (225 million kilometers from Earth’s surface on average), is primarily about moving people from one gravity field to another, from an area with photosynthesis to area without photosynthesis (i.e., almost no atmospheric oxygen, and/or from the surface of a planet protected from solar radiation by the atmosphere and magnetosphere to planets or moons with limited atmospheric and magnetosphere protection. For Mars’s mission, human bodies will experience three different gravity fields. On the six-month or so journey between Earth and Mars, human bodies will be weightless (0g_earth or zero-gravity). The term microgravity is often used instead of zero-gravity because gravitational forces are never zero but just very small. On the surface of Mars, people will live and work in approximately one-third of the Earth’s gravity (1/3 g_earth), and when you return home, you will have to re-adapt to our gravity (1g_earth), as illustrated in Figure 1.69. Remember that weight is W = m g. So when g is zero we become weightless and when g > 9.8 m/s², we start putting on weight.
+
+With a communication delay of up to 20 minutes one-way while on Mars and the possibility of equipment failures, you must be able to complete the mission on

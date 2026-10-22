@@ -1,0 +1,16 @@
+(shortened to Roman or the Roman Space Telescope, or the Wide-Field Infrared Survey Telescope or WFIRST) is another NASA infrared space telescope in development and scheduled to launch by May 2027 primarily for extra-solar planets and life.
+
+As a result of JWST’s current survey of hundreds of thousands of distant galaxies across the sky, we may learn more about dark matter's potential role in galaxies' history and future. Note also that the JWST is not the first infrared telescope. There are Earth-based infrared observatories. The Hubble Space Telescope has near-infrared capability, and the Spitzer Space Telescope focuses on infrared observation, for example. Because they are located close to Earth or at the Earth's surface they are affected by the strong infrared absorption of the Earth's atmosphere.
+
+# 3.7.4. Seeing into the Past and at What Scale?
+
+The only way we can see objects around us is when they reflect and/or emit light and light strikes our eyes. The same holds for distant celestial objects because light travels at a finite and very large speed of 300,000 kilometers per second. So every time we see the Moon, we go back in time by
+
+```
+t = d_earth-object / c_0 = 384,400 km / 300,000 km/s = 1.281 s
+(3.175)
+```
+
+where c_0 is the speed of light and d_earth-object is the distance between the Moon. The light entering our eyes left the Moon 1.281 seconds ago (not very far back—but it is history). If the object is the Sun, d_earth-object is 150 million kilometers. When we see the Sun, we see it as it was 8.3 minutes ago. Solar flares headed toward Earth and will reach us in 8.3 minutes. If we do not have warnings from satellite monitoring stations around it and/or solar monitoring stations on Earth, the damages will be unprecedented. Located in the constellation Centaurus in the southern hemisphere, Proxima Centauri (Figure 3.57) is a red dwarf star in the triple star system (two stars orbiting a third). It is the closest star outside our Solar System, at d_earth-object = 4.2 light-years away. When we look at Proxima Centauri on Earth in April 2023, what we see is Proxima Centauri in February 2019. When you look at the Andromeda Galaxy, which is d_earth-object = 2.537 million light years from us, we see what it was 2.537 million years ago. In other words, if the objects are very far, the light takes some time to reach Earth. Some celestial objects are so far away that light travels for years to reach Earth. Hypothetically, if we could instantly travel to a star 66 million light-years away, we could see how it looks today and how Earth was 66 million years ago, in dinosaur's time. With a very powerful telescope we could even see dinosaurs roaming the Earth. Unfortunately current telescopes are not powerful enough for such resolution. Currently, we do not possess spacecraft capable of capturing spacecraft landing on the Moon, let alone seeing an animal or a Neanderthal millions of light-years from Earth.
+
+The James Webb telescope (JWST), currently located at the Lagrangian L_2 point, can look back many light years back but not all the way to the Big Bang. The earliest light we saw was 13.799 billion years ago. That is almost at the Big Bang, but not quite: it came 378,000 years after the Big Bang. Prior to that, the universe was not

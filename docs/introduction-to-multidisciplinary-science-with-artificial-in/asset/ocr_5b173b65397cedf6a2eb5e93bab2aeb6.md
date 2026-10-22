@@ -1,0 +1,5 @@
+if they can access quantum wave functions. To put it another way, we monitor the wave functions and see how the likelihood of certain events increases over time.
+
+Generally, the concept of searching for other types of life forms and civilizations involves finding Earth-like planets, exoplanets, moons, and exomoons. We often overlook the issue of finding celestial bodies on the same evolutionary path as Earth. If such a body is found and it is behind us on this path we can significantly improve our understanding of our own early planet and our universe. If such a body is ahead of us on this evolutionary path, it could also help us predict our own future and plan for it.
+
+One day, perhaps in this century, humans will be able to establish instantaneous communications with other civilizations light years away from us. This is without light speed. Such interactions will allow other civilizations to see our past and instantly transmit images and streams. We will finally know who constructed the pyramids and for what purpose. We will also know how humans appeared/arrived on Earth, what happened 278 million years ago, etc.

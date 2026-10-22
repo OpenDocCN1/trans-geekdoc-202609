@@ -1,0 +1,3 @@
+![](bbox=[0.15, 0.09, 0.78, 0.71])
+
+Figure 2.20. (a) Absorption spectrum of water vapor, (b) A superposition of the absorption spectra of water vapor and carbon dioxide, (c) A superposition of the absorption spectra of water vapor, carbon dioxide, and methane. Water vapor does most of the absorption of shortwave radiation, which means that even if the atmosphere is saturated with water vapor, a lot of infrared radiation still gets through; generally, CO₂ and CH₄ absorb infrared wavelengths that H₂O does not. (Adapted from spectralcal.com).

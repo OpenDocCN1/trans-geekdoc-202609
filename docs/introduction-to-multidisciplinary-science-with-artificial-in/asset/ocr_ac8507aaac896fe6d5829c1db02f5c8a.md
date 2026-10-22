@@ -1,0 +1,9 @@
+![](bbox=[0.22, 0.09, 0.75, 0.48])
+
+Figure 2.61. A model of a cross-section of Antarctica containing Lake Vostok, one of the 70 or so lakes beneath the Antarctic ice sheet. The relative permeability is μ_r = (c0/v)^2(1/ε). The lakes are subject to high pressure (about 355 bars), low temperatures (about −3° degrees Celsius), and permanent darkness. ε_r is the relative permittivity; σ is the electrical conductivity; and v is the velocity. See also Chapter 3.
+
+# 2.9.1. Heat Sources of Antarctica’s Sub-glacial Lakes
+
+Possible sources of heat that have kept lakes liquid for millions of years deep below the Antarctica ice may include Antarctica volcanoes. Several studies suggest that Antarctica has over 100 volcanoes in the present Holocene period. Some volcanoes are entirely under the ice sheet (Wyk de Vries et al., 2018). There are also ones you can see above ground like Mount Erubus (3,794 m) which throws out a few puffs every now and again just to prove it is active. The majority of volcanoes are around Antarctica’s western area with Mt Erebus being situated on Ross Island, not that far from McMurdo Station. Mount Erebus is Antarctica’s most active volcano. Moreover Antarctica may well be home to the largest volcano range on Earth, greater than east Africa and the Himalayas, according to Wyk de Vries et al., 2018. Antarctica’s largest volcano is Mount Sidley, 4,285 m above sea level. Mount Sidley is located in Marie Byrd Land, a remote and unclaimed region of Antarctica. Mount Sidley’s last eruption occurred about 4.7 million years ago.
+
+Also a huge lake (90 and 215 meters in diameter) of sizzling hot lava has been discovered in a volcano on a remote sub-Antarctic island in the South Atlantic Ocean (Gray et al., 2019). While many volcanoes throw out lava when they erupt and form temporary pools and lakes of molten rock, these usually dry into solid rock within a few days or weeks. In contrast, the lava lake remains molten. Lava lakes

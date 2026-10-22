@@ -1,0 +1,5 @@
+![](bbox=[0.12, 0.1, 0.65, 0.75])
+
+Figure 3.9. (a) An illustration of what p-type semiconductors look like. Trivalent impurities such as boron are added to intrinsic silicon or germanium. (b) The trivalent-atom levels fall just above the full silicon valence band. When an electron jumps up to the boron level, it leaves behind a hole in the valence band. It is the movement of holes within the valence band that causes the greatest conduction in a p-type semiconductor. (c) An illustration of n-type semiconductor doping. Pentavalent impurities such as phosphorous are added to intrinsic silicon or germanium. These impurities add extra electrons to the semiconductor. (d) The pentavalent energy levels fall just below the semiconductor's empty conduction band. Conduction is mainly due to electron movement.
+
+added to intrinsic silicon or germanium semiconductors, as illustrated in Figure 3.9a. The particular impurities are chosen to reduce the gap that electrons have to jump to reach the conduction band. Trivalent impurities are the most appropriate choices. For example, silicon electrons in the valence band just have to make a

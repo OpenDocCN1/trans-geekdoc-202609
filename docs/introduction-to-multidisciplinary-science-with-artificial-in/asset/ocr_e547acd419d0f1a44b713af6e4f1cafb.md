@@ -1,0 +1,17 @@
+discussed earlier. This absorption reduces solar energy reaching Titan’s surface and lets infrared energy escape, cooling Titan’s surface. In other words, the haze layer reflects heat from the sun, but allows heat from Titan to radiate into space.
+
+As shown in Table 2.4 and in equation (2.93), the skin temperature $T_{\text{skin}}$ of Titan (i.e., temperature in the absence of the atmosphere assuming Titan’s albedo is $\xi = 0.3$) is unequal to the observed temperature $T_{\text{true}}$. On all planets in our solar system, $T_{\text{true}}$ exceeds $T_{\text{skin}}$. As we discussed in the second section of this chapter, the differences between $T_{\text{true}}$ and $T_{\text{skin}}$ describe the greenhouse and/or atmospheric effects on all the planets. In addition to the greenhouse and atmospheric effects, these differences also describe the anti-greenhouse effect in Titan’s atmosphere (see Figure 2.58b).
+
+Let us now consider the atmosphere, the haze layer, and greenhouse effects in the model for determining Titan’s ground temperature. The atmosphere that includes these contributions to climate is best described as a multiple-layer atmosphere. We here used a two-layer model described in Figure 2.58b: the upper atmosphere which behaves like the planet’s atmosphere described earlier and includes greenhouse gases and the lower atmosphere which includes anti-greenhouse effects. By using (2.102) and the result in Table 2.6, we can verify that the greenhouse effect increase $T_{\text{skin}}$ by $\Delta T_{\text{green}} = 21\ \text{K}$. We have an increase in temperatures because the greenhouse effect results in warming. The derivations leading to (2.102) can repeated for anti-greenhouse effect to arrive at
+
+```
+$T_{\text{ground}} = \left(\frac{2}{2 - \epsilon}\right)^{-\frac{1}{4}} T_{\text{skin}}\,\qquad (2.190)$
+```
+
+where $T_{\text{skin}}$ is given (2.103). For $\epsilon = 0.88$, the average temperature due to anti-greenhouse is $T_{\text{ground}} = 73\ \text{K}$. So we can see the anti-greenhouse effect decreases the average temperature from $T_{\text{skin}}$ by $\Delta T_{\text{anti}} = 9\ \text{K}$. By assuming the greenhouse and anti-greenhouse effects are additive, we arrive at Titan’s temperature:
+
+```
+$T_{\text{titan}} = T_{\text{skin}} + \Delta T_{\text{green}} - \Delta T_{\text{anti}}$\n$= (82 + 21 - 9)\ \text{K} = 94\ \text{K}\,\qquad (2.191)$
+```
+
+In closing, let’s note that the 1991 eruption of Mount Pinatubo in the Philippines, the largest volcanic eruption in over a century, lofted more than twenty tons of sulfur dioxide into the atmosphere. This sulfur dioxide produced a global haze layer that lasted for months. Earth’s surface cools in the Northern Hemisphere by 0.5 degrees Celsius and the amount of net radiation reaching Earth’s surface decreases. So we witnessed a short-lived haze in 1991 that had an anti-greenhouse effect on the planet. Also two billion year ago, the color of the sky would have appeared more violet and less blue due to absence of oxygen and the presence of more hydrogen and nitrogen, which tend to scatter violet light, as does Titan today. The earth would have no green plants or any other vegetation or flowers to add color to landscapes. Animals, insects, and sea creatures didn’t emerge for at least another 1,500 million years. Two billion years ago, Earth appears a lonely place just like Titan today.

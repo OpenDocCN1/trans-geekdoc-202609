@@ -1,0 +1,11 @@
+![](bbox=[0.22, 0.1, 0.78, 0.42])
+
+Figure 6.53. Illustration of the luminosity versus temperature of stars associated with currently known exoplanets. Compare to Figure 6.5 we can see that there are no active exoplanets associated with white dwarfs or supergiant stars. Source of data: https://exoplanetarchive.ipac.caltech.edu/.
+
+alternative places to immigrate, and (3) in learning new technology and cures that can improve lives on Earth. For example, identifying lives in places of elevated radiation can help us understand the necessary changes to reduce human vulnerability to radiation effects. In the event of magnetic reversals, as well as nuclear explosions on Earth, this understanding and associated cures and preventatives may prove helpful. This section explores the relationship between stars and exoplanets and exoplanet classification.
+
+As of April 2023, there were 5,322 exoplanets in 4000 planetary systems³ and 603 multiple planetary systems have been confirmed. In other words, most planetary systems have only one exoplanet. This count of confirmed planets is still too small compared to the number of stars and galaxies in the billions. Our galaxy, the Milky Way, contains at least 100 billion stars, including our Sun. We are already heading into the billions of planets in the galaxy if every ten stars contain more than one planet. However, it is a large enough sample for statistical analysis.
+
+Most of these exoplanets orbit L, M, K, G, F stars (that is white-yellow, yellow, orange, and red stars as described in Figures 6.5 and 6.6 and Table 6.1), and only 15 of the 5,322 exoplanets orbit A stars (white stars). None of them orbit O (blue) and B (blue-white) stars, as illustrated in Figure 6.53. Blue stars and bluish white stars have a high surface temperature above 10,000 degrees Kelvin sometimes exceeding 50,000 degrees Kelvin. Blue stars form from colliding and merging binary stars near
+
+³ A planetary system is a set of gravitationally bound non-stellar objects in or out of orbit around a star or star system. Multiplanetary systems are stars with at least two planets.

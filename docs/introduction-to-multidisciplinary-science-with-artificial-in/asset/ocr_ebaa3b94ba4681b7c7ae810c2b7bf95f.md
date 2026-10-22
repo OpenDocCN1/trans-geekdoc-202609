@@ -1,0 +1,15 @@
+stations become available. Vector T_k describes the potential translation between the fixed frame and the stations; R_k describes the rotation matrix (Ω_x, Ω_y, and Ω_z are the rotation angles about x-, y-, and z-axes, respectively) between the fixed frame and the stations; D_k expresses the small scale difference between geodetic station systems, Δx_f^(i) is the correction due to various time changing effects such as solid Earth tide displacement, ocean loading, post-glacial rebound, and atmospheric loading; and δx_PS_D^(i) is the total sum of post-seismic deformation corrections which compensate for the fact that some recording sites are subject to major earthquakes and volcanic eruptions, in particular the devastating recent ones in Chile (2010) and Japan (2011). About 117 sites (including 10 GPS-SLR, 13 GPS-VLBI, and 7 GPS-DORIS co-location sites) were significantly impacted by 59 or so large earthquakes in the last decade.
+
+Quiz: What is the difference between linear momentum and angular momentum? Provide mathematical definitions of these two quantities.
+
+In theory x_s^(i)(t) and x_c^(i) are nonlinearly related. Several terrestrial reference frames have been constructed in the past. Because we are not starting from scratch and experience suggests that previous frames are close enough to each other so we here adopted the linearized version of the relationship between x_s^(i)(t) and x_c^(i) — that is, equation (1.176) is a linearized version of this relationship under the assumption that the changes from x_c^(i) to x_s^(i)(t), as illustrated in Table 1.11. Equation (1.177) is obtained by differentiating equation (1.176) with respect to time. The scale factors, D_k, and the rotation matrices R_k are in the order of 10^-9 and dx_c^(i)/dt is about 10 cm per year, so the rates D dx_c^(i)/dt and R_k dx_c^(i)/dt are of the order of 10^-4 mm over 100 year, therefore the are negligible and that is why these rates are not included in equation (1.177). The transformation between two ITRFs is generally a function of time to reflect temporal variations between their origins, scales, and orientations.
+
+ITRF is improved regularly as more data becomes available and more geodetic stations become online. Thus, there are various ITRFs. A new ITRF version is
+
+Table 1.11. Transformation parameters from ITRF2020 to ITRF2014 and ITRF2020 to ITRF2008 at epoch 2015, and from ITRF2014 to ITRF2008 at epoch 2000. These parameters are taken from the IERS Annual Reports, and from the transformation parameters between ITRF2020, ITRF2014 and ITRF2008. The matrices R_k are zero and dT_1/dt is also zero.
+
+| ITRFs | T1 (mm) | T2 (mm) | T3 (mm) | D (ppb) | dT2/dt (mm/y) | dT3/dt (mm/y) | dD/dt (ppb/y) |
+|---|---|---|---|---|---|---|---|
+| 20 to 14 | -1.4 | -0.9 | 1.4 | -0.42 | -0.1 | 0.2 | 0.00 |
+| 20 to 08 | 0.2 | 1.0 | 3.3 | -0.29 | -0.1 | 0.1 | 0.03 |
+| 14 to 08 | 1.6 | 1.9 | 2.4 | -0.02 | 0.0 | -0.1 | 0.03 |
