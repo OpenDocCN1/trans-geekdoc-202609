@@ -1,0 +1,626 @@
+- pgno: 0
+  md: '# # Blockchain-enabled electric vehicle charging
+
+
+    M. Jajini¹, N. Kamaraj², M. Santhiya³ and S. Chellam¹
+
+
+    ¹Velammal College of Engineering and Technology, Madurai, Tamil Nadu, India, ²Thiagarajar
+    College of Engineering, Madurai, Tamil Nadu, India, ³Department of Electrical
+    and Instrumentation Engineering, Kongu Engineering College, Erode, Tamil Nadu,
+    India
+
+
+    # ## 12.1 Introduction
+
+
+    **Blockchain** is the emerging technology in the fields of secured sharing of
+    medical data, cross-border payments, logistics and food selling, etc. Simply put,
+    it is a decentralized, shared network computing that demonstrates the overall
+    origin of the digital item. Blockchain is trying to extend its features in numerous
+    new industries, given its high potential. With its expertise proven in the supply
+    chain, banking, digital authentication, investment management, and the arts and
+    music sector, it is now expanding into the fast-growing market of EV. The foremost
+    barrier to EV adoption is range anxiety. The majority concern is about power capacity
+    running out on long road journeys. This is due to the fact that electric chargers
+    are not readily available everywhere and, as a result, of the absence of charging
+    infrastructure, potential consumers remain hesitant to switch to EVs. As already
+    said before, blockchain is a peer-to-peer (P2P) technology that enables users
+    to share their chargers when not in use. Moreover, in turn, charger owners will
+    be benefited by getting paid for using the chargers. It also allows people and
+    organizations to exchange, purchase, and transfer extra energy between themselves
+    without the intrusion of a central authority or general public having control
+    over how and when transactions can happen.
+
+
+    Experts think that by allowing P2P charging, this new blockchain enterprise will
+    minimize drivers’ range anxiety and boost the desirability of EVs in the future.
+    This chapter shows the relationship between the broad field of machine learning
+    (ML) and blockchain. Since ML is a venture of artificial intelligence (AI) where
+    systems can analyze information processed from data, identify patterns, and make
+    decisions with little or no human intervention, ML with Blockchain in Fig. 12.1
+    can create a deadly combination if utilized properly. Both are more or less like
+    the two sides of a coin if used together. While blockchain helps to store correct
+    data that is unaltered and permanent, ML can utilize this data to analyze data
+    patterns and give accurate predictions.
+
+
+    In blockchain’s P2P network, mobile apps are used by users to access participating
+    homeowners’ locations to charge their EV. It always keeps track of the time taken
+    by each vehicle to fully charged and the amount of energy consumed for the same.
+    Further, a ledger account helps in the implementation of payment in digital'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/3e2bd364e414892c24513d4362da1dd8_1_0.png)
+
+
+    Figure 12.1 Characteristics of blockchain.
+
+
+    mode from the driver to the charger owner linked in the network. With the data
+    collected from the blockchain, the data can be used by the ML algorithm to predict
+    the availability of fast charging ports nearby. This will reduce the waiting time
+    and charging time of the vehicle and will also lead to hassle-free transportation
+    even as drivers can get rid of anxiety rising from driving range issues.
+
+
+    # Features of Blockchain:
+
+
+    # 12.2 Types of blockchain technologies
+
+
+    # 12.2.1 Public blockchain network
+
+
+    Anyone can join public blockchains, and all the information is accessible by them.
+    This makes blockchains suitable for firms that value transparency and trust concerns
+    in data storage. As a result, NGOs and social support organizations can benefit
+    from the public blockchain. The public blockchain is depicted in Fig. 12.2.
+
+
+    Because of its public nature, the data stored by a public blockchain cannot be
+    used for private-sector operations since the information is not secured for the
+    use of just one entity or organization but can be accessed by anyone. Furthermore,
+    public blockchains can be costly to maintain since they require nodes to function
+    as miners and run either proof-of-work or proof-of-stack (PoS) algorithms (PoS).
+
+
+    # 12.2.2 Private blockchain network
+
+
+    Because it provides a private network, the private blockchain is the right opposite
+    of the public blockchain. It’s ideal for companies who desire a private network
+    while still reaping the advantages of blockchain. They’re also centralized, which'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/3e2bd364e414892c24513d4362da1dd8_2_0.png)
+
+
+    Figure 12.2 Types of blockchain.
+
+
+    means a firm may govern the network without having to keep it accessible to the
+    public.
+
+
+    They provide all of the key benefits of a blockchain, as well as a method for
+    corporate members to develop trust through immutability and security.
+
+
+    The company can develop its own set of rules and operate the network according
+    to its own needs, secure in private networks.
+
+
+    # 12.2.3 Consortium blockchain network
+
+
+    Next, rather than a centralized node (private) or a decentralized (public) network,
+    a consortium blockchain network is functioned by a group of organizations or nodes.
+
+
+    A consortium blockchain is advantageous since it includes nodes that have been
+    pre-selected.
+
+
+    It’s great for a solution that necessitates cross-departmental cooperation. Supply
+    chain, food, and medicine, for example, would all necessitate cross-brand collaboration.
+
+
+    # 12.2.4 Hybrid blockchain network
+
+
+    Finally, we have the hybrid blockchain, which is the most recent blockchain technology
+    type. This blockchain combines all of the advantages of both private and public
+    blockchains with the least number of drawbacks.
+
+
+    In actuality, the hybrid blockchain, like other blockchain technology types, has
+    drawbacks though fairly minor ones.
+
+
+    Hybrid blockchains appear to be ideal for a variety of prospective business models.
+
+
+    # 12.3 Blockchain applications
+
+
+    # 12.3.1 Peer-to-peer based energy exchange between renewable microgrids
+
+
+    Grid-connected microgrids, as demonstrated by TERI, will be used for access to
+    energy, P2P energy markets, and utility network management. The blockchain verifies
+    the transactions and ensures security, safety, and while maintaining efficiency'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'in each step of transaction processing with the help of digital ledger basics.
+    The blockchain is a chain of several digital units that collects and shares replicas
+    of a transaction such that each node recognizes what transaction actually happened
+    at a specific point in time.
+
+
+    A “transaction” is a method of exchanging data between two physically located
+    nodes, the digital version of which is saved as a record on the blockchain, as
+    shown in Fig. 12.3. The notion of cryptography, which falls under the domain of
+    information security, is one of the bases on which blockchain technology is developed.
+    Each physical node’s information is encrypted before being disseminated on a blockchain
+    network using a private and public address key (Ping et al., 2020).
+
+
+    # 12.3.2 Peer-to-peer based vehicle charging
+
+
+    With this strategy, the blockchain has been proposed as a supporting tool for
+    accelerating the adoption of EV in India. Several vehicles commuting through their
+    itineraries might be charged at privately created EV charging stations, and also
+    the transaction of charging site owners’ bids, energy flow, accounting, and legitimate
+    transaction closure might all be handled by the blockchain.
+
+
+    The blockchain-enabled application could be used to increase the utilization of
+    privately owned EV chargers through the proper linkages between EV customers and
+    EV private owners in an attempt to compensate for a shortage of charging stations
+    and to make greater use of existing facilities. EV owners can use the P2P mode
+    of communication for accessing nearby charging stations to charge their vehicles’
+    batteries.
+
+
+    Owners of electric car charging (EC) stations can enroll themselves on blockchain-based
+    mobile apps and can have the charging stations connected to the
+
+
+    ![](img/3e2bd364e414892c24513d4362da1dd8_3_0.png)
+
+
+    Figure 12.3 Energy exchange topology.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'public directories and render such charging stations accessible to the public
+    if they’re not in operation. In return, they might be compensated for offering
+    charging stations to other EV owners who meet certain criteria. The EV owner can
+    schedule a charging session using his or her own encrypted passwords, a card,
+    or online payment methods, and the blockchain will handle the invoicing and accounting
+    on a real-time basis Fig. 12.4.
+
+
+    # **12.3.3 Aggregating distributed energy storage: a blockchain-based topology**
+
+
+    Electric vehicle, like power plants, will be used as decentralized energy storage
+    systems capable of producing electricity in response to demand analysis. Many
+    of these EV charging stations might help the localized distribution network by
+    operating as a virtual power plant (VPP) in the region, and the blockchain could
+    help secure and simplify the transactions. The EC aggregator may pool the available
+    stored energy from several EV charging stations, letting them compete for power
+    supply and alleviating stress on the local DT. (Dinh et al., 2017) and (Huang
+    et al., 2020) refer Fig. 12.5.
+
+
+    As a result of the swapping of electricity units and monetary value, a huge number
+    of transactions can take place. When the local transformer level is balancing
+    the grid, the efficiency and availability of transactions in a secure way will
+    enable optimal use of electricity stored in EVs through blockchain technology.
+    This would also create a market that is both competitive and transparent. Each
+    and every transaction will be informed to each player aggregator and grid operator,
+    making participation simple and easy.
+
+
+    ![](img/3e2bd364e414892c24513d4362da1dd8_4_0.png)
+
+
+    **Figure 12.4** Vehicle charging topology.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/3e2bd364e414892c24513d4362da1dd8_5_0.png)
+
+
+    **Figure 12.5** Distributed energy storage.
+
+
+    # **12.3.4   Blockchain—financing for rooftop solar PV**
+
+
+    (Wang et al., 2021) A blockchain may be used to develop a rooftop solar setup
+    incorporating transactions in a better way. Blockchains may be used to provide
+    a level playing field for investment firms, entities, project designers, and prospective
+    buyers to strike a settlement between financial companies and project designers
+    as well as customers. This is also projected to give transparency throughout the
+    loan process, from loan award through EMI payment to loan payback and energy bill
+    reduction, all using smart contracts on the blockchain as shown in Fig. 12.6.
+
+
+    # **12.4   Electric vehicle charging**
+
+
+    Electric vehicles are expected to represent the next generation of mechanical
+    power for transportation and progress. These vehicles have the ability to alter
+    energy usage, age, and redirection. Electric vehicles can overcome the negative
+    environmental impact of conventional vehicles (EV). Traditional vehicles emit
+    a large amount of fossil fuel by-products that are released into the air and inhaled
+    by the general public, making individuals immune to contamination and ozone-depleting
+    substances. An electric car is a significant step forward in terms of making a
+    significant contribution to the globe (Li et al., 2014; Tang & Zhang, 2016).'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/3e2bd364e414892c24513d4362da1dd8_6_0.png)
+
+
+    Figure 12.6 RoofTop solar PV.
+
+
+    The introduction of blockchain technology for cryptographic money has given the
+    world yet another venture. It provides a reliable record that keeps track of transactions
+    in a safe manner. Blockchain is a technology that underpins bitcoin, Ether, and
+    other common digital currencies. The blockchain has applications that are beyond
+    the use of digital currency. Blockchain is a type of decentralized record, and
+    not all decentralized records use block or chain swapping by default. This article
+    proposes a blockchain-enabled P2P energy exchange and payment system for EVs (Mengelkamp
+    et al., 2018). As the process outlined below shows, the outcomes of the system
+    can provide a lot of time and resources to enter into these projects now, and
+    they are less difficult and risky comparatively:
+
+
+    +   - Activate P2P EV energy trade and local energy balancing with DLT.
+
+    +   - Make it easier to pay at charging stations.
+
+    +   - EV owners get access to real-time pricing data.
+
+    +   - A mobile application is needed.
+
+    +   - Both EV and charging station owners must register in the mobile app.
+
+    +   - As a P2P exchange layer, the architecture uses an e-wallet and brilliant
+    agreements on the public Ethereum Blockchain, including the Euro-based Mobility
+    Token.
+
+    +   - P2P services allow EV and charging direct owners to lease their charging
+    framework
+
+
+    We’ve proposed a blockchain-based platform for EV charging installment plans.
+    The proposed framework is practical because it addresses the issue with EVs, which
+    are deemed more environmentally friendly than vehicles based on petroleum derivatives.
+    Due to the safe and reliable decentralized dataset supported by a blockchain,
+    the suggested shared energy exchanging and charging installation framework for
+    blockchain-based EVs can gain validity and broad applications in real-world transportation
+    settings (Zhu et al., 2020).
+
+
+    Clients can manage their own data, EV statistics, and charging usage under this
+    framework. We used IBM’s Hyperledger texture, which is an open-source stage. This
+    is a simple-to-use portal for a private blockchain. Clients can use the'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'Hyperledger texture’s smart contract feature to describe the set of points
+    they need to execute organically. When a smart contract is started, the standards
+    embedded in it will be measured as a result.
+
+
+    This article’s core commitments shall be summarized (Fig. 12.7) as follows:
+
+
+    +   - Suggesting a framework for distributed energy swapping and charging for
+    EVs.
+
+    +   - To build trust between clients using blockchain technology.
+
+    +   - Making use of smart contracts for the electronic payment of charge bills.
+
+
+    # 12.4.1  **Relevance and impacts**
+
+
+    A distributed ledger that is shared across a public or private computing network
+    is a catalog of data. The system eliminates the need for a central authority to
+    validate transactions among different parties to avoid double-spending. Before
+    being added to the ledger, each piece of data is mathematically encrypted and
+    attached as a new "block" to the historical records chain, which is then validated
+    by different consensus methods. Smart contracts are a club of conditions stored
+    on the blockchain that activate transactions when the requirements are met and
+    can also be encoded into the blockchain (Xiang et al., 2018).
+
+
+    # 12.4.2  **Related works**
+
+
+    Several works use smart contracts to implement exchanged charging. Huang et al.
+    (2020) suggested one decentralized security protocol based on lightning organization
+    and brilliant agreement 90 innovation to work on the security of trades between
+    EVs and CPs. According to Xiang et al., 2018, every charging point has the brilliant
+    meter that will monitor the blockchain network and identify the charging station’s
+    strength, and also the implicit correspondence module collaborates information
+    with
+
+
+    ![](img/3e2bd364e414892c24513d4362da1dd8_7_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'the keen agreement on the blockchain. Finally, the miners (nodes of the network)
+    combine the information and add it to the blockchain. The article of Su et al.
+    includes 95 blockchain and clever agreements for executing safe charging administrations
+    for EVs.
+
+
+    In various studies, they classified EV charging into three varieties: uncontrolled
+    charging, delayed charging, and smart charging. Uncontrolled charging is the process
+    in which charging stops only when the battery reaches full battery capacity. Oli
+    Systems GmbH, Stuttgart, is assisting with this endeavor. detaches it at some
+    point in the future. This is a kind of manual that is occasionally exchanged.
+    Delayed charging is where service providers use the responsibility to encourage
+    EV owners to shift their EV load from peak to off-peak hours as per their convenience.
+    Lastly, smart charging is a process of charging in which the EV charging station
+    is limited by a mathematical formula. The conveyance framework can initiate smart
+    charging.
+
+
+    Blockchain-enabled simply means that the end-user has a simple and secure payment
+    system that uses digital currencies like bitcoin or Ether and can be paid with
+    either a conventional wallet application or an RFID/NFC card (Aste et al., 2017).
+    The following are the primary advantages of paying for a charging cycle using
+    one of these ways:
+
+
+    +   - There is no need to pre-register with a local charging provider.
+
+    +   - There is no outside installment or charge card provider; thus, there are
+    almost no costs.
+
+    +   - EV charging could become the standard, both locally and globally.
+
+    +   - The charging station may be operated by governments, organizations, and
+    private individuals (P2P) on the same homogenous blockchain framework, thanks
+    to the incorporated blockchain innovation.
+
+    +   - On a global scale, data collection (for example, energy charge per charging
+    cycle) becomes a reality.
+
+    +   - The charging station is a claimed IoT Oracle for catching ecological information,
+    such as air pollution, and is foreordained to be the choice of smart urban populations
+    of the future (Huang et al., 2020).
+
+
+    Instructions for making a payment for a charging cycle.
+
+
+    # 12.4.3   Payment can be made in two ways
+
+
+    To begin with, the EV owner can use a wallet program such as Jaxx, Coinbase, or
+    Free wallet. Clients scan a QR code shown on the charging station’s touchscreen
+    and enter their required amount. When the transaction is confirmed, the touchscreen
+    instructs the car owner to attach the charging cable to his or her vehicle. The
+    charging process begins automatically.
+
+
+    The EV owner can also use an NFC card to pay. This card is known as the Ethan
+    Card. The NFC card functions as a wallet with a wallet address. The customer can
+    purchase a pre-loaded card with various amounts, such as $10, $25, $50, $100 USD,
+    EUR, or other fiat currency. The amount purchased by the client is saved as a
+    digital note such as bitcoin or Ether. The client can buy a blank card in'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'any way and send any amount of Ether or bitcoin to the card’s wallet address.
+    The Ethan Card can be re-energized at any time with any amount. The card features
+    a 4-digit PIN code to prevent unauthorized use. Ethan’s NFC card for simple and
+    secure installments is described in this (Nakamoto, n.d.).
+
+
+    # 12.4.4   **Difficulties we need to confront while growing such a framework**
+
+
+    Charging an EV is a delightfully perplexing procedure. Different mechanical principles
+    are used, as well as numerous types of vehicles. The vehicle communicates with
+    the charging station while charging, and each manufacturer must follow this convention.
+    The ecological requirements are extremely stringent. The charging station should
+    be used in the temperature range from −20°C to +60°C (−4 up to 140 Fahrenheit).
+    Every component of an EV charging station must meet these requirements and work
+    properly in these punishing conditions. We eventually found a solution to each
+    problem we encountered. We were able to allocate various improvement projects
+    to isolated engineers due to the seclusion of our EV charging station. Our charging
+    station concepts will not receive configuration funds, but we expect to be able
+    to work out the station’s suitability to serve current scenarios with architects.
+    However, as a proof-of-concept, the charging station should work as best as can
+    be wanted.
+
+
+    # 12.4.5   **System model**
+
+
+    Our suggested charging framework for EVs based on blockchain has three elements:
+    an administrator, an energy aggregator (EAG), and a client/EV, and it consolidates
+    four stages: introduction, enlistment, confirmation, and charging as shown in
+    Fig. 12.8.
+
+
+    +   1. To obtain charging administration access, EV enlists their personality
+    with the administrator.
+
+    +   2. Electric Vehicle and EAG cross-check each other.
+
+    +   3. Energy Aggregator facilitates trade.
+
+    +   4. EAG verifies the legitimacy of the transaction and logs it on blockchain
+    network circles.
+
+    +   5. Methodology.
+
+
+    Blockchain is a complex budding technology that is still in development, not well
+    understood, and, in most cases, not ready for critical applications. As a result,
+    we provide a robust method for identifying if an application use case is fit for
+    a blockchain execution. Furthermore, many requests that could benefit from a blockchain
+    backend rely on legacy programming, making essential engineering modifications
+    impossible. We propose the following system for embedding blockchain innovation
+    into applications, and we explain its implementation in the following case study
+    using Fig. 12.9:
+
+
+    **Stage 1:** Find the elaborate gatherings and the trust relationships that exist
+    between them. If the level of trust in a connection is not enough to achieve the
+    application’s goal, or if it blocks an activity necessary to achieve that goal,
+    name it as a trust issue.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '![](img/3e2bd364e414892c24513d4362da1dd8_10_0.png)
+
+
+    Figure 12.8 Elements of blockchain incorporating the proposed charging framework
+    for electric vehicles.
+
+
+    ![](img/3e2bd364e414892c24513d4362da1dd8_10_1.png)
+
+
+    Figure 12.9 Stages in blockchain execution embedded into applications.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '**Stage 2:** Develop a minimal blockchain framework, complete with smart contracts,
+    that addresses the trust issues identified in the first phase. If parts of a legacy
+    topology need to be replaced, the new topology should closely resemble existing
+    interfaces so that conditions may continue to function with reduced adjustments.
+
+
+    **Stage 3:** Once the trust-relieving blockchain is in place, the rest of the
+    structure can be shifted in stages over time. This allows the technique to evolve
+    from a heritage/blockchain hybrid to a truly decentralized system in the long
+    run. This technique shall be used in our contextual investigation for the remainder
+    of this work.
+
+
+    # 12.5 Conclusion and future vision
+
+
+    We provide a technique for evaluating the availability of blockchains in decentralized
+    energy systems. Our strategy is based on the assumption that resolving trust concerns
+    is a unique feature of blockchains, as opposed to various distributed information
+    topologies. We next offer a study identifying trust difficulties, how they might
+    be addressed with blockchains, and a proof-of-concept development using Hyperledger
+    Fabric (Musavi & Wilson Young, 2014). The proposed execution is consistent with
+    the current inheritance backend to put it another way.
+
+
+    Embracing DLT is putting a lot of energy in front of a lot of different ventures.
+    Outside of the financial sector, the energy sector is one of the industries where
+    DLT could have the most unusual and beneficial, disruptive effects. DLT-based
+    meter-to-cash robotization might completely eliminate the need for discount to-retail
+    go-betweens, lowering exchange and operational costs. DLT has the potential to
+    accelerate the development of the P2P energy sector, through which energy pros
+    umers trade on a local scale. DLT may be able to assist the matrix executives
+    by organizing smart contracts. DLT enables real-world trades to operate naturally
+    in accordance with individually defined norms. DLT could improve EV charging coordination
+    by collaborating with charging station energy installments and enabling drivers
+    to reach continuous estimation. DLT can assist the coordination of information
+    from the edge of the lattice to the cloud in a secure and straightforward manner,
+    allowing data to be captured, stored, and analyzed later for collaborative purposes.
+
+
+    Moving forward, we can improve the suggested architecture by including more blockchain
+    features. POs and clients link directly in this ‘smoothed out’ image of the plan
+    of action, with one providing EV charging and the counterpart paying for it. There
+    is no requirement for the CSP (Charging Service Providers) to act as the focal
+    point in such a genuine shared organization. Chain code on the blockchain can
+    handle all partnerships between clients and POs (Property Owners). Rather than
+    relying on ad hoc analysis of their mass meter data, this information would be
+    entered into the blockchain, allowing brilliant agreements to examine the billing
+    system. Furthermore, rather than maintaining their own node(s) on the blockchain
+    network near the CSP’s hubs, all the hubs shall have oversight responsibilities
+    by POs, with the CSP’s server topology facilitating this.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# References
+
+
+    Aste, T., Tasca, P., & Di Matteo, T. (2017). Blockchain technologies: The foreseeable
+    impact on society and industry. Computer, 50(9), 18–28. Available from https://doi.org/10.1109/MC.2017.3571064.
+
+
+    Dinh, T. T. A., Wang, J., Chen, G., Liu, R., Ooi, B. C., & Tan, K. L. (2017).
+    BLOCKBENCH: A framework for analyzing private blockchains. In Proceedings of the
+    ACM SIGMOD International Conference on Management of Data (Vol. 127746, pp. 1085–1100).
+    Association for Computing Machinery. Available from https://doi.org/10.1145/3035918.3064033
+
+
+    Huang, Z., Chen, D., Lai, C. S., Zhao, Z., Lai, L. L., & Wang, M. (2020). A distributed
+    transaction mechanism for electricity market with electric vehicles and blockchain.
+    In 2020 8th International Conference on Power Electronics Systems and Applications:
+    Future Mobility and Future Power Transfer, PESA 2020. Institute of Electrical
+    and Electronics Engineers Inc. Available from https://doi.org/10.1109/PESA50370.2020.9344037.
+
+
+    Li, Z., Kang, J., Yu, R., Ye, D., Deng, Q., & Zhang, Y. (2014). Consortium blockchain
+    for secure energy trading in industrial internet of things. IEEE Transactions
+    on Industrial Informatics, 14.
+
+
+    Mengelkamp, E., Notheisen, B., Beer, C., Dauer, D., & Weinhardt, C. (2018). A
+    blockchain-based smart grid: towards sustainable local energy markets, Computer
+    Science - Research and Development (Vol. 33, pp. 207–214). Springer Verlag Issues
+    1–2. Available from https://doi.org/10.1007/s00450-017-0360-9.
+
+
+    Musavi, F., & Wilson Young, E. (2014). Overview of wireless power transfer technologies
+    for electric vehicle battery charging. IET Power Electronics,.
+
+
+    Nakamoto, S. (n.d.). Bitcoin: A peer-to-peer electronic cash system. Available
+    from: https://bitcoin.org/bitcoin.pdf (accessed 27.05.19).
+
+
+    Ping, J., Yan, Z., Chen, S., Yao, L., & Qian, M. (2020). Coordinating EV charging
+    via blockchain. Journal of Modern Power Systems and Clean Energy, 8(3), 573–581.
+    Available from https://doi.org/10.35833/MPCE.2019.000393.
+
+
+    Tang, W., & Zhang, Y. J. A. (2016). A model predictive control approach for lowcomplexity
+    electric vehicle charging scheduling: Optimality and scalability. IEEE Trans.
+    Power Syst.
+
+
+    Wang, L., Jiao, S., Xie, Y., Mubaarak, S., Zhang, D., Liu, J., Jiang, S., Zhang,
+    Y., & Li, M. (2021). A permissioned blockchain-based energy management system
+    for renewable energy microgrids. Sustainability, 13(3), 1317. Available from https://doi.org/10.3390/su13031317.
+
+
+    Xiang, K., Chen, B., Lin, H., Shen, Y., Du, Y., & Yan, T. (2018). Automatic demand
+    response strategy of local pure electric vehicle with battery energy storage system
+    based on blockchain technology. In 2nd IEEE Conference on Energy Internet and
+    Energy System Integration (EI2), Beijing, China.
+
+
+    Zhu, S., Cai, Z., Hu, H., Li, Y., Li, W., & Zkcrowd. (2020). A hybrid blockchainbased
+    crowdsourcing platform. In IEEE Transactions on Industrial Informatics.'
+  merge: -1
+  img_proc: true
