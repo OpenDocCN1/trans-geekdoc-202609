@@ -1,0 +1,17 @@
+# BACKGROUND
+
+This section presents the background information required to write this chapter, including introducing smart agriculture/farming, agriculture technologies, agriculture deep learning, DL applications, the necessity of Multicloud, and data management.
+
+Agriculture is essential to human beings (Swaminathan & Bhavani, 2013), which creates a livelihood for a large world population and remains critical to the economy’s long-term growth and progress. Many farmers are using old-fashioned agricultural practices that result in poor yields. The main challenges for existing agriculture operations are monitoring, crop tracking, crop disease detection, handling, etc. (Buja et al., 2021). The agricultural sector can demand further development, and the government requests to prioritize increasing production (for example, crops, vegetables, and fruits) by creating novel approaches for cultivators to increase their performance.
+
+Digital Transformation. In the contemporary period, agricultural practices have significantly diverged from earlier methods. Modern technical developments have had a significant impact on agriculture. They might be utilized in farming to improve the standard of the industry. Rapid digital transformation (Mehmet Ali Dayıoğlu & Ufuk Turker, 2021) is taking place in the agriculture sector, becoming more potent on the foundations of innovative techniques like AI and related technologies. Due to these advancements, researchers focus on using ML, DL, and the IoT in industries like agriculture. It assists farmers in boosting the productivity of their land so that the world’s demand for food may be met.
+
+The combination of AI, Computer Vision (CV), and Machine Vision (MV) is making the world of farming more advanced than humankind has ever discovered. As stated by Cube Labs (2022), Agri-Tech (or Agricultural Technologies) is disrupting the traditional dynamics of farming by helping farmers in better crop yielding. Using framing robots to plant diagnosis applications, CV, and DL models brings tremendous change. They allow numerous agricultural tasks to be carried out automatically with the highest level of precision, advancing the idea of smart agriculture. They can use computer vision techniques to enable non-contact and effective technology-driven solutions in agriculture and remote cameras to acquire high-quality images.
+
+# Agricultural Technologies
+
+Smart agriculture is supported by innovative technologies such as the IoT, Wireless Sensor Networks (WSNs), data mining, AI including ML & DL, blockchain, integration of IoT with blockchain and ML, and data science. Agri-Tech (Shafi et al., 2019) helps farmers grow healthier crops, control their usage against pesticides, analyze and monitor soil conditions, measure plant growth in real-time, etc. The application of state-of-art technologies to monitor, analyze, and enhance the food production chain from photosynthesis to plant growth. Smart agriculture contributes to the global food life cycle by minimizing the total production cost and agricultural production outcomes (Navarro et al., 2020). As a significance, Agri-Tech brings in benefits of data-driven predictive decision-making, computer vision-driven inspect- ive farming, etc.
+
+Some of the Agri-Tech widely used in smart farming are remote sensing, UAVs/ Drones, CV, image technology, etc.
+
++   - **Computer Vision (CV).** CV technology is an essential component of AI, and remote cameras with CV technology allow smart agriculture to provide non-contact and scalable sensing solu-

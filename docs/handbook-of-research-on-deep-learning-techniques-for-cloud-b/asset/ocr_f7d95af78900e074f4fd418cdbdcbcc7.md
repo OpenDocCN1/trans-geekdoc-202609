@@ -1,0 +1,15 @@
+to make it easier to locate presumed foreground items and close detection gaps for moving objects. The Simple Statistical Difference (SSD) technique, creates a straightforward background model based on the temporal average to identify areas of moving objects in traffic surveillance video streams.
+
+The majority of the most recent state-of-the-art background removal techniques can identify moving objects in video streams recorded by a stationary camera. These techniques may readily detect moving objects using their backdrop models in such a perfect setting. However, in the actual environment, powerful winds or earth earthquakes may cause exterior cameras to vibrate. For these techniques, the accurate identification of moving objects in the Intelligent Transportation System (ITS) might be a challenge. To accurately identify moving objects in streaming video, the Gray Relational Analysis-based Motion Detection (GRAMD) technique is described. This approach consists of two crucial components: the Multi-sample Background Generation (MBG) module and the Moving Object Detection (MOD) module as shown in Figure 4. These modules allow for accurate and thorough detection as well as efficient adaptability to background changes.
+
+Figure 4. GRAMD approach component framework diagram
+
+![](bbox=[0.12, 0.43, 0.85, 0.58])
+
+To detect moving objects in video streams with jitter backgrounds, the MBG module first builds a multi-sample background model using the grey relational analysis approach. Following MBG module construction. The MOD module then employs a multi-sample backdrop model to separate moving objects in real-world scenes recorded by both jitter and static cameras. To prevent errors brought on by the camera jitter, a two-stage detection technique that consists of a rough detection procedure followed by a precise detection procedure is adopted.
+
+By doing this, both jitter and static cameras’ video streams can accurately detect moving things.
+
+Crowd counting (Sreenu et al., 2019) is used to determine the number of persons in a crowd of thousands. Deep learning models also enable face, action, and event detection in crowded environments. Attention mechanism-enabled deep learning was also explored to recognize activities and objects more accurately from surveillance videos. Crowd size is significant and changing in real-world situations, making crowd analysis challenging. It is difficult to distinguish between each entity and its actions. Traffic lights, major intersections, populated areas, gatherings that draw large crowds, and celebrations held by religious organizations, Among the aforementioned situations, crowd analysis inside offices is the most challenging. Identification of all acts, behaviors, and movements is necessary.
+
+In crowded scenarios, spatial-temporal convolutional neural networks for anomaly detection and localization reveal that the challenge of crowd analysis is difficult due to the following factors: a large
