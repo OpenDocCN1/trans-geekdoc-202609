@@ -1,0 +1,50 @@
+
+- 33. The text displayed was available on Poulsen’s Website until at least April 5, 2001, according to the Internet Archive. Sometime after that date, the biography was shortened and then sometime on or before December 4, 2002, it disappeared altogether and was replaced by a redirect to search for the string “By Kevin Poulsen” in Google.
+- 34. K. Poulsen, “MySpace Predator Caught by Code,” Wired, October 16, 2006, www.wired.com/science/discoveries/news/2006/10/71948
+- 35. Wired magazine, “Threat Level” blog, www.wired.com/threatlevel
+- 36. B. Trumbore, “Ray Dirks and the Equity Funding Scandal,” Wall Street History, February 6, 2004, www.stocksandnews.com/wall-street-history.php?aid=MTU3M19XUw==
+- 37. M. Kabay, “Crime, Use of Computers in.” In H. Bidgoli, ed., Encyclopedia of Information Systems, vol. 1 (New York: Academic Press, 2003), www2.norwich.edu/mkabay/overviews/crime_use_of_computers_in.pdf or http://tinyurl.com/3wqfxc
+- 38. D. E. Hoffman, “CIA Slipped Bugs to Soviets: Memoir Recounts Cold War Technological Sabotage.” Washington Post, February 27, 2004, www.msnbc.msn.com/id/4394002
+- 39. E. D. Shaw, K. G. Ruby, and J. M. Post, “The Insider Threat to Information Systems,” Security Awareness Bulletin No. 2-98, Department of Defense Security Institute (September 1998), www.ntc.doe.gov/cita/CI_Awareness_Guide/Treason/Infosys.htm
+- 40. CNN.com, Y2K Archive, “Looking at the Y2K Bug,” 2000, www.cnn.com/TECH/specials/y2k/ (URL inactive)
+- 41. García-Feijóo, L., and J. R. Wingender, “Y2K: Myth or Reality.” Quarterly Journal of Business and Economics (Summer 2007), http://findarticles.com/p/articles/mi_qa5466/is_200707/ai_n21295780/pg_1 or http://tinyurl.com/64w5jm (URL inactive)
+- 42. United States Department of Homeland Security, “Look Before You Click: Trojan Horses and Other Attempts to Compromise Networks,” Joint Information Bulletin, December 21, 2005, www.us-cert.gov/reading_room/JIB-Trojan122105.pdf or http://tinyurl.com/6zwmes (URL inactive)
+- 43. D. Izenberg, “Trojan Horse Masterminds Being Extradited to Israel,” Jerusalem Post, January 18, 2006. Available for purchase online: http://pqasb.pqarchiver.com/jpost/access/972012371.html?dids=972012371:972012371&FMT=ABS&FMTS=ABS:FT&type=current&date=Jan+18%2C+2006&author=DAN+IZENBERG&pub=Jerusalem+Post&edition=&startpage=04&desc=%27Trojan+horse%27+heads+extradited+to+Israel or http://tinyurl.com/5wls gz (URL inactive)
+- 44. W. K. Haskins, “Married Couple Indicted for Corporate Espionage,” SCI-TECH TODAY.com, March 7, 2006, www.sci-tech-today.com/story.xhtml?story_id=12100DICT7FG&page=1 or http://tinyurl.com/3qantt (URL inactive)
+- 45. L. Leyden, “Spyware-for-Hire Couple Plead Guilty: Israeli Prison Looms for Haephratis,” The Register, March 15, 2006, www.theregister.co.uk/2006/03/15/spyware_trojan_guilty_plea/
+- 46. “Court Hands Hefty Fine and Jail Sentence to Israeli Spyware Couple. Reports Sophos,” Sophos, March 27, 2006, www.sophos.com/pressoffice/news/articles/2006/03/israelspyduo.html or http://tinyurl.com/4gx38p
+- 47. J. Leyden, “Israeli Spyware-for-Hire PIs Jailed,” The Register, April 29, 2008, www.theregister.co.uk/2008/04/29/spyware-for-hire/
+- 48. R. Stiennon, “Four Private Investigators in the Israeli Trojan Fiasco Sentenced. Finally,” Network World, “Stiennon on Security,” April 30, 2008, www.networkworld.com/community/node/27387
+- 49. J. L. Tkacik, “Trojan Dragon: China’s Cyber Threat,” Heritage Foundation Backgrounder #2106, February 8, 2008, www.heritage.org/Research/asiaandthepacific/bg2106.cfm
+- 50. T. Claburn, “Operation ‘Cisco Raider’ Nets $76 in Fake Gear: The Multiyear Effort to Curb the Flow of Counterfeit Network Hardware into the U.S. and Canada Reflects a Steady Escalation in the War on Intellectual Property Crime,” InformationWeek, February 29, 2008, www.informationweek.com/operation-cisco-raider-nets-76-million-i/206901053
+- 51. J. Markoff, “Trojan Horse Threat Stalks Pentagon after Bogus Hardware Purchase,” CIO TODAY, May 12, 2008. www.cio-today.com/story.xhtml?story_id=103006ROXFYH or http://tinyurl.com/5tvz32 (URL inactive)
+- 52. “Ms Smith,” “DHS: Imported Tech Tainted with Backdoor Attack Tools,” NetworkWorld | Privacy and Security Fanatic, July 12, 2011, www.networkworld.com/community/blog/dhs-imported-tech-tainted-backdoor-attack-tools
+- 53. For a detailed and personal view of malware history, see virus expert Roger Thompson’s “Malicious Code,” Chapter 2 in S. Bosworth and M. E. Kabay, eds. Computer Security Handbook, 4th ed. (Hoboken, NJ: John Wiley & Sons, 2002). Also, see Chapter 16 in this Handbook.
+- 54. R. H. Zakon, “Hobbes’ Internet Timeline v8.2,” 1996, www.zakon.org/robert/internet/timeline/
+- 55. “Virus Encyclopedia: History of Malware.” Viruslist.com, 2008, www.viruslist.com/en/viruses/encyclopedia?chapter=153310937
+- 56. “Virus Encyclopedia: History of Malware.”
+- 57. Clausthal University of Technology homepage (English). www.tu-clausthal.de/Welcome.php.en (URL inactive)
+- 58. Thompson, “Malicious Code.”
+- 59. R. Patterson, “Re: IBM Christmas Virus,” Risks Forum Digest 5, No. 80 (December 21, 1987):1.1, catless.ncl.ac.uk/Risks/5.80.html~subj1.1
+- 60. C. Schmidt and T. Darby “The What, Why and How of the 1988 Internet Worm,” 1995, snowplow.org/tom/worm/worm.html
+- 61. Robert Morris MIT faculty biography, www.csail.mit.edu/user/972
+- 62. D. Emm, “Changing Threats, Changing Solutions: A History of Viruses and Antivirus,” Viruslist.com (now Securelist.com). April 14, 2008, www.securelist.com/en/analysis?pubid=204791996
+- 63. “The WildList Organization International: Frequently Asked Questions.” WildList Organization International, 2008, www.wildlist.org/faq.htm
+- 64. R. Thompson, personal communication, May 25, 2008.
+- 65. M. E. Kabay, “INFOSEC Year in Review 1999,” 1999, www2.norwich.edu/mkabay/iyir/1999.PDF (URL inactive)
+- 66. CERT Advisory CA-2000-04 Love Letter Worm. CERT/CC, May 9, 2000, www.cert.org/advisories/CA-2000-04.html
+- 67. D. I. Hopper, “Focus of ‘ILOVEYOU’ Investigation Turns to Owner of Apartment,” CNN.com, May 10, 2000, http://archives.cnn.com/2000/TECH/computing/05/10/i.love.you.03/index.html or http://tinyurl.com/4elq2l
+- 68. “Suspected Creator of ‘ILOVEYOU’ Virus Chats Online,” CNN.com chat transcript, September 26, 2000, http://archives.cnn.com/2000/TECH/computing/09/26/guzman.chat/
+- 69. M. Landler, “A Filipino Linked to ‘Love Bug’ Talks about His License to Hack,” New York Times, October 21, 2000, http://query.nytimes.com/gst/fullpage.html?res=990DE5D8113EF932A15753C1A9669C8B63 or http://tinyurl.com/4b826p
+- 70. R. G. Smith, “Impediments to the Successful Investigation of Transnational High Tech Crime,” Trends & Issues in Crime and Criminal Justice, No. 285 (December 13, 2004), www.crime-research.org/articles/trends-and-issues-in-criminal-justice/ or http://tinyurl.com/44pn4s
+- 71. Jaikumar Vijayan, “Stuxnet Renews Power Grid Security Concerns: First Known SCADA Malware Program to Target Control Systems Prompts New Questions about Security of U.S. Power Grid,” NetworkWorld, July 26, 2010, www.networkworld.com/news/2010/072610-stuxnet-renews-power-grid-security.html
+- 72. Jim Finkle, “Researchers say Stuxnet was deployed against Iran in 2007.” Reuters, February 26, 2013, www.reuters.com/article/2013/02/26/us-cyberwar-stuxnet-idUSBRE91POPP20130226
+- 73. A. Lawrence, “Internet Growing Pains—The Canter & Siegel Story,” Computer Business Review (June 1994), www.coin.org.uk/roadshow/presentation/canter.html
+- 74. K. K. Campbell, “A NET.CONSPIRACY SO IMMENSE…. Chatting with Martha Siegel of the Internet’s Infamous Canter & Siegel,” 1994, http://lcs.www.media.mit.edu/people/foner/Essays/Civil-Liberties/Project/green-card-lawyers.html or http://tinyurl.com/45f3fe (URL inactive)
+- 75. D. R. Hilton, “Green Card Lottery—Last Call,” 1994, http://groups.google.com/group/misc.legal/msg/3416cd3d6cfcdebe (URL inactive)
+- 76. L. Flynn, “‘Spamming’ on the Internet,” New York Times, October 16, 1994, www.nytimes.com/1994/10/16/business/sound-bytes-spamming-on-the-internet.html
+- 77. A. Craddock, “Spamming Lawyer Disbarred,” Wired, July 10, 1997, www.wired.com/politics/law/news/1997/07/5060
+- 78. N. Swidey, “Spambusters: Cyberwarriors of many stripes have joined the battle against junk email. But the enemy is wily, elusive—and multiplying.” Boston Globe, October 5, 2003, www.boston.com/news/globe/magazine/articles/2003/10/05/spambusters/?mode=PF or http://tinyurl.com/4y3chj
+- 79. C. Garretson, “The Summer of Spam: Record Growth, Record Irritation,” Network World, August 16, 2007, www.networkworld.com/news/2007/081607-spam-summer.html or http://tinyurl.com/6xoda3 (URL inactive)
+- 80. J. Leyden, “Most Spam Comes from Just Six Botnets,” The Register, February 29, 2008, www.theregister.co.uk/2008/02/29/botnet_spam_deluge/
+- 81. See NetworkWorld’s “Security Research Center” for up-to-date news about spam and phishing: www.networkworld.com/topics/security.html

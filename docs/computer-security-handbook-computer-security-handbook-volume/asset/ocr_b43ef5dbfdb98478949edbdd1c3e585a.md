@@ -1,0 +1,17 @@
+management software), installing old versions of software, and uninstalling patches, they can undermine patch management integrity. To address these problems, organizations should ensure that users cannot disable or otherwise negatively affect enterprise patch management technologies, and organizations should perform continuous monitoring of enterprise patch management technologies to identify any issues that occur.
+
+# 40.3.3 Alternative Host Architectures.
+
+Enterprise patch management is relatively straightforward when all of the hosts are fully managed and running typical applications and operating systems on a regular platform. When alternative host architectures are employed, patch management can be considerably more challenging. Examples of these architectures include the following:
+
+**Unmanaged hosts.** As discussed in Section 40.3.2 of this chapter, it can be much more difficult to control patching when hosts are not centrally managed (i.e., users manage their own hosts).
+
+**Out-of-office hosts (e.g., telework laptops).** Hosts on other networks are not protected by the enterprise's network security controls (firewalls, network intrusion detection systems, vulnerability scanners, etc.).
+
+**Nonstandard IT components (e.g., appliances).** On such hosts, it's often not possible to patch individual applications independently. Rather, the organization must wait for the component vendor to release updated software.
+
+**Mobile devices.** Smartphones, tablets, and other mobile devices (excluding laptops) typically run mobile operating systems, and patching for these devices is fundamentally different. It is often necessary to connect the mobile device to a desktop or laptop and to acquire and download updates through that desktop or laptop. Some mobile devices can directly download updates, but this can be problematic because of bandwidth considerations (such as taking a long time to download large updates and paying data charges for the downloads). Another option for keeping mobile devices updated is the use of enterprise mobile device management software. Enterprise mobile device management software is used to manage mobile devices, even personally owned devices not controlled by the organization. It can install, update, and remove applications, and it can restrict enterprise access if the phone's operating system and mobile device management software are not up to date. See Section 3 of SP 800-124 Revision 1, Guidelines for Managing and Securing Mobile Devices in the Enterprise, for more information.
+
+**Operating system (OS) virtualization.** Patches need to be maintained for every OS image and snapshot used for full virtualization. Patching capabilities are often built into virtualized environments, such as the ability to patch offline images and quarantine dormant virtual machine instances. See NIST SP 800-125, Guide to Security for Full Virtualization Technologies, for additional information—specifically, Section 3.3 discusses virtual machine image and snapshot management.
+
+**Firmware.** Firmware updates, such as updating the system BIOS, generally require special privileges and involve different procedures than other types of updates. See NIST SP 800-147, BIOS Protection Guidelines, for additional information on BIOS updates.

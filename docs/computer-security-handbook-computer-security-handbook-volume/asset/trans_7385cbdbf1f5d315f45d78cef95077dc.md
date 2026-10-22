@@ -1,0 +1,54 @@
+
+- 82. T. Espiner. “警察与网络自警团保持紧张关系。” CNET News. 2007年1月17日。 http://news.cnet.com/Police-maintain-uneasy-relations-with-cybervigilantes/2100-7348_3-6150817.html or http://tinyurl.com/8fjykr
+- 83. “网络头号通缉犯。” CNET News. 1996年8月10日, http://news.cnet.com/2100-1023-221580.html
+- 84. L. Z. Koch. “从‘圣诞袜里的垃圾邮件’端口接入：Unamailer 带来圣诞悲剧。” CyberWire Dispatch, 1996年12月20日。 www.petting-zoo.net/~deadbeef/archive/2122.html
+- 85. Koch, “从‘圣诞袜里的垃圾邮件’端口接入。”
+- 86. “Unamailer 解释轰炸。” CNET News. 1996年12月30日, http://news.cnet.com/Unamailer-explains-bombings/2100-1017_3-258247.html or http://tinyurl.com/422kgc
+- 87. M. Richtel and S. Robinson. “雅虎被攻击关闭后一天，多家网站遭到攻击。” New York Times. 2000年2月9日。 www.nytimes.com/library/tech/00/02/biztech/articles/09hack.html
+- 88. E. Messmer. “网站联合起来对抗拒绝服务战。” Network World. 2000年9月25日。 www.networkworld.com/news/2000/09/25/userdefense.html?nf&ref=858966935 or http://tinyurl.com/4cuvsf
+- 89. “今日 FBI：事实与数据。” 2003。 www.fbi.gov/libref/factsfigures/factsfiguresapril2003.htm
+- 90. 参见“The RMA Debate”获取关于“The Revolution in Military Affairs”的资源。 www.comw.org/rma/fulltext/asymmetric.html (URL 不活跃)
+- 91. 对于德语使用者或使用自动翻译程序的人，请参阅“FAQ—关于混沌计算机俱乐部”。 2004年5月27日。 www.ccc.de/de/faq
+- 92. T. von Randow. “Bildschirmtext：对系统的打击。” 译自 Die Zeit。 1984年11月30日。 www.textfiles.com/news/boh-208.txt
+- 93. H. Nissenbaum. “黑客与网络空间之战。” Dissent (2002年秋季)。 www.dissentmagazine.org/article/hackers-and-the-battle-for-cyberspace
+- 94. Chaos Computer Club 新闻稿。 “混沌计算机俱乐部对黑森州投票电脑提起法律诉讼。” 2008年1月7日。 www.ccc.de/updates/2008/wahlcomputer-hessen
+- 95. P. Elmer-Dewitt. “414帮再次出击：恶作剧者扰乱医院，无人发笑。” Time (1983年8月29日)。 www.time.com/time/magazine/article/0,9171,949797.00.html
+- 96. P. Elmer-Dewitt. “严厉打击：黑客面临严厉新法。” Time (1984年5月14日)。 www.time.com/time/magazine/article/0,9171,955290.00.html
+- 97. 写作时（2008年5月），该组织的网站（www.cultdeadcow.com）仅显示文字“BE BACK REAL SOON! /-xXx- cDc loves you with the fervor of a THOUSAND SUNS!! -xXx-”以及一个链接到一个青少年弹尤克里里并唱歌的 YouTube 视频。请查阅互联网档案馆获取该网站的历史快照：web.archive.org/web/*www.cultdeadcow.com (URL 不活跃)
+- 98. S. Rat. “臭名昭著的...仓鼠饲料炸弹：让每个模范公民都闻风丧胆...” cDc communications, 1985。 http://web.archive.org/web/20050212092311/www.cultdeadcow.com/cDc_files/cDc-0001.html or http://tinyurl.com/44yyth
+- 99. E. Messmer, “Back Orifice 2000 的坏名声？” CNN.com, 1999年7月21日, www.cnn.com/TECH/computing/9907/21/badrap.idg/
+- 100. Sterling, 《黑客围剿》。
+- 101. Hanna-Barbera, 《超级朋友》, 1973, Internet Movie Database, www.imdb.com/title/tt0069641/
+- 102. Hanna-Barbera, 《超级朋友的挑战》, 1978, Internet Movie Database, www.imdb.com/title/tt0076994/
+- 103. Sterling, 《黑客围剿》。
+- 104. M. Slatalla and J. Quittner, “网络空间的帮派战争,” Wired, 2.12 (1994年12月), www.wired.com/wired/archive/2.12/hacker.html
+- 105. Datastream Cowboy, “MOD 被起诉,” Phrack 4, No. 40 (1992年7月8日): 13, www.phrack.com/issues.html?issue=40&id=13
+- 106. J. Dibbell, “囚犯：Phiber Optik 直接入狱,” Village Voice (1994年1月12日), www.juliandibbell.com/texts/phiber.html
+- 107. J. Barone, “宣言。” TechnoZen.com, 2000, www.technozen.com/manifesto.htm
+- 108. The Mentor, “黑客的良知,” Phrack 1, No. 7 (1986): 3: www.phrack.com/issues.html?issue=7&id=3#article
+- 109. M. Slatalla and J. Quittner, 《欺骗大师：统治网络空间的帮派》 (New York: HarperCollins, 1995)。
+- 110. Sterling, 《黑客围剿》。
+- 111. D. Charles, “‘无辜’黑客想要取回他们的电脑,” New Scientist, No. 1820, 1992年5月9日, p. 9; www.newscientist.com/article/mg13418201.400-innocent-hackers-want-their-computers-back-.html or http://tinyurl.com/3vw26e
+- 112. Sterling, 《黑客围剿》。
+- 113. S. Jackson, “SJ Games vs. the Secret Service,” 2008, www.sjgames.com/SS/
+- 114. D. Gans and K. Goffman, “Mitch Kapor & John Barlow 访谈,” Electronic Frontier Foundation, 1990年8月5日, http://w2.eff.org/Misc/Publications/John_Perry_Barlow/HTML/barlow_and_kapor_in_wired_interview.html or http://tinyurl.com/4pgskr
+- 115. S. Sparks, “Steve Jackson Games v. United States Secret Service 案的法官裁决,” 1993年3月12日, www.sjgames.com/SS/decision-text.html
+- 116. D. Fisher, “L0pht 的漫长而奇异之旅,” SearchSecurity.com, 2008年3月17日, http://searchsecurity.techtarget.com/news/1305880/The-long-strange-trip-of-the-L0pht
+- 117. M. Fitzgerald, “L0pht 转型中,” CSO, 2007年4月17日, www.csoonline.com/article/print/221192
+- 118. Symantec 新闻稿, “Symantec 收购 @stake,” 2004年9月16日, www.symantec.com/press/2004/n040916b.html
+- 119. United States Department of Justice, Computer Crime & Intellectual Property Section, “Shadowcrew 组织被称作‘身份盗窃一站式在线市场’：十九人因互联网‘卡交易’阴谋被起诉,” 2004年10月28日, www.usdoj.gov/criminal/cybercrime/mantovaniIndict.htm (URL 不活跃)
+- 120. United States Department of Justice, Computer Crime & Intellectual Property Section, “六名被告在互联网身份盗窃和信用卡诈骗阴谋中认罪,” 2005年11月17日, www.usdoj.gov/criminal/cybercrime/mantovaniPlea.htm (URL 不活跃)
+- 121. G. A. White and R. W. Kern, “俄亥俄州克利夫兰男子因银行欺诈和共谋被判入狱,” U.S. Department of Justice, Eastern District of Pennsylvania, 2006年2月28日, www.usdoj.gov/criminal/cybercrime/flurySent.htm
+- 122. United States Attorney’s Office, District of New Jersey, “‘Shadowcrew’ 身份盗窃头目被判入狱 32 个月,” 2006年6月29日, www.usdoj.gov/usao/nj/press/files/mant0629.r.htm (URL 不活跃)
+- 123. Peter Warren, “追捕俄罗斯网络罪犯：俄罗斯商业网络——有人称其占所有互联网犯罪的60%——似乎已销声匿迹。但彼得·沃伦问道，它真的消失了吗？” The Guardian, 2007年11月15日, www.guardian.co.uk/technology/2007/nov/15/news.crime
+- 124. Bizuel, David. “Russian Business Network 研究,” bizeul.org, 2007年11月20日, www.bizeul.org/files/RBN_study.pdf
+- 125. David Goldman, “网络黑手党已经入侵了你,” CNNMoney, 2011年7月7日, http://money.cnn.com/2011/07/27/technology/organized_cybercrime/index.htm
+- 126. Anonymous, “Portal: Anonymous/Chanology,” Encyclopedia Dramatica, 2012年10月29日, https://encyclopediadramatica.se/Portal:Anonymous/Chanology
+- 127. Gregory Ferenstein, “匿名者威胁进行大规模维基解密式曝光，公告发布在被黑的政府网站上,” TechCrunch, 2013年1月26日, http://techcrunch.com/2013/01/26/anonymous-threatens-massive-wikileaks-style-exposure-announced-on-hacked-gov-site/
+- 128. U.S. Department of Justice, “纽约网络犯罪组织分部的八名成员因 4500 万美元网络犯罪行动被起诉,” U.S. Department of Justice | Eastern District of New York, 2013年5月9日, www.justice.gov/usao/nyc/pr/2013/2013may09.html
+- 129. “商业机密案件中认罪,” San Francisco Business Times, 2001年4月27日, www.bizjournals.com/eastbay/stories/2001/04/23/daily42.html
+- 130. Andrew Backover, “联邦调查局：三人窃取朗讯商业机密,” USA Today, 2001年5月3日, http://usatoday30.usatoday.com/life/cyber/tech/2001-05-03-lucent-scientists-china.htm
+- 131. “商业机密案件扩大,” New York Times, 2002年4月12日, www.nytimes.com/2002/04/12/technology/12LUCE.html
+- 132. John Markoff, “硅谷机构称挫败软件盗窃,” New York Times, 2002年9月20日, www.nytimes.com/2002/09/20/technology/20SOFT.html
+- 133. U.S. Department of Justice, “伊利诺伊州芝加哥男子承认窃取商业机密并提议出售在线翻译信息,” U.S. Department of Justice | Northern District of California, 2003年4月11日, www.justice.gov/criminal/cybercrime/press-releases/2003/sunPlea.htm
+- 134. “瑞典爱立信间谍调查中三人被控,” USA Today, 2003年5月8日, http://usatoday30.usatoday.com/tech/news/2003-05-08-ericsson_x.htm

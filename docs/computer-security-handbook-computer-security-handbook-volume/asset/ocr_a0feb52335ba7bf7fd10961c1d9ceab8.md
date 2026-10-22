@@ -1,0 +1,17 @@
+# 23.6 ACCESS CONTROL.
+
+Access control systems are but one layer of good infrastructure protection. They are usually used in conjunction with surveillance and perimeter control systems in order to provide sufficient early warning to head off trouble before it happens. Effective access control requires three tiers of support that are described next. The strength of each tier and its integration with other security layers determines the security effectiveness.
+
++   1. **Privileges.** This tier determines whether a person seeking entry is authorized. It is the initial entry-request process that may use an access or proximity card, radio-frequency identification (RFID) key, or a combination lock. Since many of these devices can be lost, borrowed, stolen, or copied, and many can be quickly defeated, there is usually not much effort to ascertain just who is seeking entry. Therefore, privileges alone are not strong security.
++   2. **Authentication.** It is usually necessary to identify a person seeking entry with some degree of certainty. To do this, the person must possess or know something unique that others cannot readily duplicate. Examples include personal identification numbers (PINs), electronic keys, entry cards, and biometric devices. PINs and passwords may be used, provided they are strong and well implemented. Some of these approaches merely strengthen the privileges process but can still be copied or defeated.
++   3. **Audit trail.** A log is required for each entry attempt to show the date and time, the identification of the person, and the action taken by the access control system. Access-denied and unable-to-identify events should trigger immediate alarms. Logs must be analyzed in a timely manner for anomalies or unusual patterns. Where better access control is needed, each person’s exit also must be authenticated and logged.
+
+See Chapter 28 for more details about identification and authentication in access controls.
+
+# 23.6.1 Locks and Hardware.
+
+Strong protection begins with high-quality locks, door hardware, and access control systems that are nonintrusive yet strong enough to deter most unauthorized entry. Lock types should be hard to pick and should use keys that are hard to duplicate. Examples are Medeco® locks and keys with dimpled sides. Ace® locks with circular keyways require special tools to pick. Many types of keys can be created from lock numbers, so keep these numbers stored securely.
+
+No lock is completely safe. Someone with equipment, experience, and time can open any lock, often very quickly and without causing attention. Where key mastering is used, an experienced person with a key to any single door can open the lock cylinder and copy the mastering system. Therefore, additional layers of protection are needed.
+
+Interior areas accessed only by a few people usually can be secured with a strong push-button combination lock. Key locks are not appropriate, because the keying cannot be changed periodically or quickly when a key is lost or someone leaves. And misplaced or lost keys may not be reported for days or weeks. However, key locks tend to be stronger and less vulnerable to vandalism, so keys may be the best alternative for outside areas or for doors that remain open during business hours. Wherever keys access critical areas, there should be spare lock cylinders and a new set of keys stored on site that can be utilized quickly when a change is needed. Once a lock cylinder is changed, the old cylinder should be rekeyed and a new set of keys produced.

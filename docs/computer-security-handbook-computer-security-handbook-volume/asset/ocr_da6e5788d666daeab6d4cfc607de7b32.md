@@ -1,0 +1,19 @@
+amounts of information through a broadcast medium in which access—even unauthorized access—may be invisible to users and system administrators.
+
+# 15.3.2.12 Wireless Phones.
+
+Also referred to as cordless phones, conventional wireless phones broadcast their signals, and the traffic they carry can be detected from a distance. Older cordless phones were analog and susceptible to eavesdropping from such basic devices as walkie-talkies and baby monitors. Children sometimes walked around their suburban neighborhoods with a handset from such a phone turned on; once they walked far enough away from their home to lose the signal, any new dial tone belonged to a neighbor, who might be puzzled to discover a call to the Antipodes on the next phone bill. Today’s wireless phone models typically use a different set of frequencies, such as 2.4 gigahertz (GHz). These phones generally use frequency-hopping spread spectrum (FHSS) technology to make unauthorized use more difficult, and to impede eavesdropping. FHSS means the signals hop from frequency to frequency across the entire 2.4-GHz spectrum, making tapping their signals harder but by no means impossible. Wireless phones should not be used for confidential voice or data traffic unless encryption is enabled and activated. An added danger lies in hanging up a cordless phone during a conversation, since the cordless phone’s base continues to transmit until switched off.
+
+# 15.3.2.13 Cellular (Mobile) Phones.
+
+Early analog cellular (mobile) phone systems had an expectation of privacy equivalent to that of shouting a message through a megaphone from a rooftop. Calls on such phones were easily intercepted using scanners purchased from local electronics stores. Although encryption is possible on the newer digital cell phones that are now widely used, the encryption is not always turned on due to the burden it imposes on the cell company switching equipment. Check with the carrier before assuming that cell calls are encrypted. Also, bear in mind that, although digital cell phone calls are harder to intercept than analog ones, there is a thriving black market in devices that make such interception possible.
+
+As a rule, confidential information should never be conveyed through cellular phones without encrypting the line or the messages first.
+
+Phil Zimmermann, creator of Pretty Good Privacy (PGP, later GPG) in the early 1990s, created a new service in 2012 called Silent Circle to provide encrypted telephony and Internet access to its subscribers.⁶
+
+# 15.3.2.14 Wireless Networks.
+
+The increasingly popular means of networking computers to networks known as WiFi presents many opportunities for interception of communications. In this context, “wireless network” usually means a data network using the 802.11 standard, which comes in a variety of flavors, such as 802.11b, 802.11g (often collectively referred to as WiFi, which stands for “Wireless Fidelity” and is actually a brand name owned by the trade group WiFi Alliance). Typically, this is the sort of local area network created by plugging a wireless access point into an Ethernet network and a WiFi card or adapter into each computer. Most notebook computers now come with a built-in WiFi adapter.
+
+These WLANs, or wireless local area networks, are relatively cheap and easy to create since they do not require network cabling. That helps to explain why more than 200 million WiFi devices were sold in 2006 and more than half of all U.S. companies have been using WLANs to some degree or other since 2002. But cheap WLANs come with hidden costs, namely security. Every WLAN operates, by its very nature, in loose-lips mode. In a sense, the ease of use comes with ease of abuse. They all broadcast

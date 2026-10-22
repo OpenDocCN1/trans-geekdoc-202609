@@ -1,0 +1,19 @@
+According to the complaints, iCraveTV was illegally using broadcast television signals without authorization or payment and streaming the signals to the iCrave Internet site for viewing free of charge. Although this practice apparently did not violate Canadian copyright laws at the time, U.S. judges ruled in February 2000 that the unauthorized transmissions of broadcast signals into the United States via the Internet were a direct violation of U.S. copyright law, and iCraveTV was ordered to stop the practice. Shortly after iCraveTV agreed to an out-of-court settlement, the Web-site was shut down and iCraveTV went out of business.16
+
+Hacking cable decoders is another technique for obtaining services without paying for them. Although it is not illegal to buy, install, or modify equipment for converting encoded cable TV signals from pay-per-view or other commercial suppliers, it is illegal to use such set-top decoders to obtain services without paying for them.
+
+In the United States, Congress mandated that after February 17, 2008, all TV stations must transmit in digital format (DTV) only.
+
+# 42.3.2.4 Television (HDTV).
+
+The first television image was created in 1884 when Paul Nipkow created a mechanical scanning disk. With only 18 lines of resolution, the picture was poor. Current National Television System Committee (NTSC) standard TV transmissions are done with bandwidth that does not exceed 6 MHz. The current analog system broadcasts 30 frames per second and 525 lines per frame.
+
+High-definition television (HDTV) is a digital television system that offers twice the horizontal and vertical resolution of the current TV system. HDTV has the ability to deliver a video composed of approximately 1,125 lines per frames and 60 frames per second. Viewers then see a picture quality close to that of 35-mm film. Obviously, transmitting images containing that large amount of audio and video information requires wide bandwidth, actually about 18 MHz. Such bandwidth would permit the transmission of 1,050 lines of 600 pixels per line. However, the Federal Communications Commission (FCC) decided to limit HDTV to a 6-MHz maximum bandwidth. In order to meet that requirement, MPEG compression would be used.
+
+MPEG compression applies algorithms to pixel groups and records information that changes within a frame, rather than all of the information in all of the frames. Audio is synchronized to the video. Using MPEG saves storage space and transmission requirements while retaining high image and sound quality. According to the Advanced Television Committee Standard (ASTC), the FCC will require that audio and video compression as well as the transmission of HDTV terrestrial signals follow this standard.
+
+As with all other transmissions and media, there are serious concerns about piracy of HDTV transmissions and programs. At the present time, even though many TV transmissions are scrambled in order to thwart reception, it is fairly simple, although illegal, to purchase a descrambler and unscramble the transmissions. It is, however, legal for home viewers to record programs for their own personal use.
+
+The HDTV market space has been evolving, and consumer demand for HD-capable devices has exploded over the past several years. Attempts by U.S. television producers to protect themselves and their content using a variety of scrambling and encryption schemes, including content scrambling systems (CSSs), have been made difficult by the frequent changes in hardware and signal formatting that have accompanied this rapid market expansion.
+
+Encrypting terrestrial broadcast television programming would secure the transmissions, but according to the Home Recording Rights Coalition (HRRC), such encryption will threaten established home recording rights. The HRRC contends that Section 1202

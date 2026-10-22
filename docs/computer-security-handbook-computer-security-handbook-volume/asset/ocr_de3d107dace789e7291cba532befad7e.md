@@ -1,0 +1,19 @@
+a system administrator has discovered an intrusion and has changed all the usernames and passwords, there is a good chance that he or she does not know that the back doors exist. To use the back door, the hacker needs only to know the correct port to connect to the compromised machine and to enter a password or command where one is not usually entered.
+
+For example, inetd, the network super daemon, is often Trojaned. The daemon will listen on an unusual port (rfe, port 5002 by default in Rootkit IV for Linux). If the correct password is given after connection, a root shell is spawned and bound to the port.
+
+The function rshd can be similarly Trojaned so that a root shell is spawned when the rootkit password is given as the username and thus rsh [hostname] -l [rootkit password] will obtain access to the compromised machine.
+
+# 15.3.6 Penetration via Websites.
+
+A vast new network territory opened up in the final decade of the twentieth century, partially devoted to commerce and largely driven by attempts to make money from a technology that originally had been developed for military and academic purposes. The relentless growth of this network surpassed 145 million registered domains at the time of writing in May 2013 as reported by the Whois Source (www.whois.sc/internet-statistics), one of the most reliable sources of statistics about the Internet.
+
+Worldwide Internet penetration, measured as the number of Internet users as a percentage of total population, was over one third by June 2012, with North America, surpassing 75 percent.14 Asia had almost 4 billion users at that time. Not surprisingly, with so many machines in one network and over 2.4 billion users (twice what was reported in the 2009 Fifth Edition of this Handbook), this new territory is the primary playground for hackers, from the merely curious to the seriously criminal. The Web presents a target-rich environment for people seeking unauthorized access to other people’s information systems. There are several reasons for this; chief among them is the fact that many organizations, both commercial and governmental—including the military—have external, public Websites that are connected, in some way, to internal, private networks. This connection provides a system penetration path that can be exploited in many different ways, as outlined in this section.
+
+For more detailed analysis of Website security, see Chapter 21 in this Handbook.
+
+# 15.3.6.1 Web System Architecture.
+
+Standard practice when placing a commercial Website on the Internet is to screen it from hostile activity, typically using a router with access-control lists (ACLs) or a firewall, or both. However, unless the Web site is of the basic, “brochure-ware” kind, which simply exists to provide information on a read-only basis, the site has to allow for user input of data. Input is required for something as simple as a guest book entry or an information request form; more complex applications such as online shopping have more complex input requirements.
+
+A typical method of processing input is the Common Gateway Interface (CGI). This is a standard way for a Web server to pass user input to an application program and to receive a response, which can then be forwarded to the user. For example, when a user fills out a form on a Web page and submits it, the Web server typically passes the form information to a small application. This application processes the data and may send back a confirmation message. This method is named CGI, and it forms part of the Hypertext Transfer Protocol (HTTP). Because it is a consistent method, applications written to employ it can be used regardless of the operating system of the server on which it is deployed. Further adding to the popularity of CGI is the fact that it works

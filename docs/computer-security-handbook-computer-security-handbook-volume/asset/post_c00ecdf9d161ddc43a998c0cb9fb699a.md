@@ -1,0 +1,120 @@
+
+- 78. Kabay, “Totem and Taboo,” 1996.
+- 79. Shaw, Ruby, and Post, “Insider Threat,” 1998.
+- 80. American Psychiatric Association, DSM-IV, 1994.
+- 81. Shaw, Ruby, and Post, “Insider Threat,” 1998.
+- 82. Toxic Shock, “Another View of Hacking: The Evil That Hackers Do,” Computer Underground Digest, 2 (1990). Available: http://cu-digest.org/CUDS2/cud2.html
+- 83. Shaw, Ruby, and Post, “Insider Threat,” 1998.
+- 84. Toxic Shock, “Another View,” 1990.
+- 85. Marc Rogers, “Understanding Criminal Computer Behavior: A Personality Trait and Moral Choice Analysis,” 2003, Marc Rogers’s Website, http://homes.cerias.purdue.edu/~mkr/CPA.doc
+- 86. Robert R. McCrae and Paul T. Costa, Jr. “Personality Trait Structure as a Human Universal,” American Psychologist, 52 (1997): 509–516.
+- 87. Rogers, “Criminal Computer Behavior,” 2003.
+- 88. Marcus Rogers, Kathryn Seigfried, and Kirti Tidke, “Self-Reported Computer Criminal Behavior: A Psychological Analysis,” Digital Investigation, 3S (2006): 116–120.
+- 89. Postmes, Spears, & Lea, “Social Identity,” 1999.
+- 90. Sherry Turkle, “Identity Crisis,” in Life on the Screen: Identity in the Age of the Internet (New York: Simon & Schuster, 1995): 255–269.
+- 91. M. J. Zuckerman, “Hacker Reminds Some of Asperger Syndrome,” USA Today, March 3, 2001, www.usatoday.com/news/health/2001-03-29-asperger.htm
+- 92. Suelette Dreyfus, “Cracking the Hackers’ Code,” The Sydney Morning Herald, August 8, 2002. http://smh.com.au/articles/2002/08/20/1029114072039.html
+- 93. Bernadette H. Schell and June Meluychuk, “Female and Male Hacker Conferences Attendees: Their Autism-Spectrum Quotient (AQ) Scores and Self-Reported Adulthood Experiences,” in Corporate Hacking and Technology-Driven Crime: Social Dynamics and Implications, ed. Thomas J. Holt and Bernadette H. Schell (Hershey, PA: IGI Global, 2011): 144–166.
+- 94. American Psychiatric Association, DSM-IV, 1994.
+- 95. American Psychiatric Association, DSM-IV, 1994.
+- 96. Stephen Bauer, “Asperger Syndrome,” 2001, http://aspergersyndrome.org/
+- 97. Bauer, “Asperger Syndrome,” 2001.
+- 98. Peter Smith, “The Cybercitizen Partnership: Teaching Children Cyber Ethics,” Cybercitizen Partnership. 2000, www.cybercitizenship.org/ethics/whitepaper.html
+- 99. Bauer, “Asperger Syndrome,” 2001.
+- 100. Zuckerman, “Hacker Reminds Some,” 2001.
+- 101. Dreyfus, “Cracking the Hackers’ Code,” 2002.
+- 102. Dreyfus, “Cracking the Hackers’ Code,” 2002.
+- 103. Zuckerman, “Hacker Reminds Some,” 2001.
+- 104. Schell and Meluychuk, “Female and Male Hacker AQ Scores,” 2011.
+- 105. DEFCON Website, www.defcon.org
+- 106. Schell and Meluychuk, “Female and Male Hacker AQ Scores,” 2011.
+- 107. Bauer, “Asperger Syndrome,” 2001.
+- 108. Mark Griffiths, “Internet Addiction: Does It Really Exist?” In Psychology and the Internet: Intrapersonal, Interpersonal and Transpersonal Applications, ed. J. Gackenbach, (New York: Academic Press, 1998): 61–75.
+- 109. K. E. Anderson, “International Intrusion: Motives and Patterns,” 1994, www.aracnet.com/~kea/Papers/paper.shtml
+- 110. Jerrold Post, Eric Shaw, and Kevin Ruby, “Information Terrorism and the Dangerous Insider,” Paper presented at the InfowarCon, 1998, Washington, D.C.
+- 111. Schell and Meluychuk, “Female and Male Hacker AQ Scores,” 2011.
+- 112. Schell and Meluychuk, “Female and Male Hacker AQ Scores,” 2011.
+- 113. Jordan and Taylor, “A Sociology,” 1998.
+- 114. Jordan and Taylor, “A Sociology,” 1998.
+- 115. August Bequai, Technocrimes (Lexington, MA: Lexington Books, 1987).
+- 116. Dorothy E. Denning, “Concerning Hackers Who Break into Computer Systems,” CPSR (1990), http://cyber.eserver.org/hackers.txt
+- 117. Michael Bachmann, “The Risk Propensity and Rationality of Computer Hackers,” International Journal of Cyber Criminology, 4 (2010): 643–656.
+- 118. Csikszentmihalyi, Mihaly, Flow (Harper Perennial Modern Classics, 2008).
+- 119. Alexander E. Voiskounsky and Olga V. Smyslova, “Flow-Based Model of Computer Hackers’ Motivation,” CyberPsychology & Behavior, 6, no. 2 (2003): 161–171.
+- 120. Voiskounsky & Smyslova, “Flow-Based Model,” 2003.
+- 121. Rogers, “Modern-Day Robin Hood,” 1999.
+- 122. Post, Shaw, and Ruby, “Information Terrorism,” 1998.
+- 123. Denning, “Concerning Hackers,” 1990.
+- 124. Ira Winkler, “Why Hackers Do the Things They Do?” Journal of the National Computer Security Association, 7 (1996): 12.
+- 125. Woo, Kim, and Dominick, “Hackers: Militants or Merry Pranksters?” 2004.
+- 126. Denning, “Concerning Hackers,” 1990.
+- 127. Brian Harvey, “Computer Hacking and Ethics,” Brian Harvey’s Website, 1998. www.cs.berkeley.edu/~bh/hackers.html
+- 128. Winkler, “Why Hackers Do,” 1996.
+- 129. Harvey, “Computer Hacking and Ethics,” 1998.
+- 130. Turgeman-Goldschmidt, “Hackers’ Accounts,” 2005.
+- 131. Turgeman-Goldschmidt, “Hackers’ Accounts,” 2005.
+- 132. Winkler, “Why Hackers Do,” 1996.
+- 133. Winkler, “Why Hackers Do,” 1996.
+- 134. Vincent Sacco and Elia Zureik, “Correlates of Computer Misuse: Data from a Self-Reporting Sample,” Behavior & Information Technology, 9 (1990): 353–369.
+- 135. Harvey, “Computer Hacking and Ethics,” 1998.
+- 136. Harvey, “Computer Hacking and Ethics,” 1998.
+- 137. Myers, Social Psychology, 2005.
+- 138. Rogers, “Modern-Day Robin Hood,” 1999.
+- 139. Harvey, “Computer Hacking and Ethics,” 1998.
+- 140. Shaw, Ruby, and Post, “Insider Threat,” 1998.
+- 141. Mentor, “The Hacker Manifesto,” Phrack Magazine, January 8, 1986, www.mithral.com/~beberg/manifesto.html
+- 142. William Golding, Lord of the Flies (London: Faber and Faber, 1954).
+- 143. Kabay, “Totem and Taboo,” 1996.
+- 144. Denning, “Concerning Hackers,” 1990.
+- 145. Marc Rogers, “A New Hacker Taxonomy,” Marc Rogers’s Website, 2000, http://homes.cerias.purdue.edu/~mkr/hacker_doc.pdf
+- 146. Rogers, “A New Hacker Taxonomy,” 2000.
+- 147. Rogers, “A New Hacker Taxonomy,” 2000.
+- 148. Rogers, “Meaningful Hacker Taxonomy,” 2005.
+- 149. A. N. Chantler, “Risk: The Profile of the Computer Hacker.” Ph.D. dissertation, Curtin University of Technology, 1995.
+- 150. Rogers, “A New Hacker Taxonomy,” 2000.
+- 151. Bill Landreth, Out of the Inner Circle (Redmond, WA: Microsoft Books, 1985).
+- 152. Donn Parker, Fighting Computer Crime: A New Framework for Protecting Information (New York: John Wiley & Sons, 1998).
+- 153. Rogers, “Meaningful Hacker Taxonomy,” 2005.
+- 154. Landreth, Out of the Inner Circle, 1985.
+- 155. Bequai, Technocrimes, 1987.
+- 156. Kabay, “Totem and Taboo,” 1996.
+- 157. Post, Shaw, and Ruby, “Information Terrorism,” 1998.
+- 158. See B. Guinen and M. E. Kabay, “The Russian Cybermafia: Beginnings,” 2011, www.mekabay.com/nwss/866_russian_cybercrime_(guinen)_part_1.pdf; M. E. Kabay and B. Guinen, “The Russian Cybermafia: Boa Factory & CarderPlanet,” 2011, www.mekabay.com/nwss/867_russian_cybercrime_(guinen)_part_2.pdf; and B. Guinen and M. E. Kabay, “The Russian Cybermafia: RBN & the RBS WorldPay Attack,” 2011, www.mekabay.com/nwss/868_russian_cybercrime_(guinen)_part_3.pdf
+- 159. Chantler, “Risk,” 1995.
+- 160. Chantler, “Risk,” 1995.
+- 161. Chantler, “Risk,” 1995.
+- 162. Rogers, “A New Hacker Taxonomy,” 2000.
+- 163. Parker, Fighting Computer Crime, 1998.
+- 164. Rogers, “Meaningful Hacker Taxonomy,” 2005.
+- 165. Winkler, “Why Hackers Do,” 1996.
+- 166. Eric D. Shaw, “The Role of Behavioral Research and Profiling in Malicious Cyber Insider Investigations,” Digital Investigation, 3 (2006): 20–31.
+- 167. Eric D. Shaw and Harley V. Stock, “Behavioral Risk Indicators of Malicious Insider Theft of Intellectual Property: Misreading the Writing on the Wall,” Symantec White Paper, 2011, https://www4.symantec.com/mktginfo/whitepaper/21220067_GA_WP_Malicious_Insider_12.11_dai81510_cta56681.pdf
+- 168. Steven Levy, Hackers (New York: Dell Publishing, 1984).
+- 169. Samantha Murphy, “Culture Lab: Inside the Hacktivists Revolution,” Culture-Lab | New Scientist, April 12, 2012, www.newscientist.com/blogs/culturelab/2012/04/samantha-murphy-contributor-it-is-the.html
+- 170. Thomas J. Holt, “The Attack Dynamics of Political and Religiously Motivated Hackers.” In Cyber Infrastructure Protection, ed. Tarek Saadawi and Louis Jordan Jr., (Strategic Studies Institute, 2011): 159–180, www.strategicstudiesinstitute.army.mil/pdfiles/PUB1067.pdf
+- 171. Marc Rogers, “The Psychology of Cyber-Terrorism,” In Terrorists, Victims, and Society: Psychological Perspectives on Terrorism and its Consequences, ed. A. Silke (London: Wiley & Sons, 2003).
+- 172. Alexander Gostev and Costin Raiu, “Kaspersky Security Bulletin. Malware Evolution 2011,” Securelist Website. 2012, www.securelist.com/en/analysis/204792217/Kaspersky_Security_Bulletin_Malware_Evolution_2011
+- 173. Holt, “Attack Dynamics,” 2011.
+- 174. Verizon, “Data Breach Investigations Report,” 2012.
+- 175. Rogers, “Psychology of Cyber-Terrorism,” 2003.
+- 176. Rogers, “Psychology of Cyber-Terrorism,” 2003.
+- 177. Rogers, “Psychology of Cyber-Terrorism,” 2003.
+- 178. Symantec, Internet Security, 2012.
+- 179. Holt, “Attack Dynamics,” 2011.
+- 180. Rogers, “Psychology of Cyber-Terrorism,” 2003.
+- 181. Shaw, Ruby, and Post, “Insider Threat,” 1998.
+- 182. Shaw, “Role of Behavioral Research,” 2006.
+- 183. Shaw and Stock, “Behavioral Risk Indicators,” 2011.
+- 184. Shaw and Stock, “Behavioral Risk Indicators,” 2011.
+- 185. Shaw, Ruby, and Post, “Insider Threat,” 1998.
+- 186. Shaw, Ruby, and Post, “Insider Threat,” 1998.
+- 187. Shaw, Ruby, and Post, “Insider Threat,” 1998.
+- 188. Shaw, “Role of Behavioral Research,” 2006.
+- 189. Shaw and Stock, “Behavioral Risk Indicators,” 2011.
+- 190. Rogers, “Meaningful Hacker Taxonomy,” 2005.
+- 191. Andrew Bissett and Geraldine Shipton, “Some Human Dimensions of Computer Virus Creation and Infection,” International Journal of Human Computer Studies, 52, No. 5 (2000), pp. 1071–1080.
+- 192. Sarah Gordon, “The Generic Virus Writer,” 4th International Virus Bulletin Conference, Jersey, U.K. (September 1994). http://vxheaven.org/lib/static/vdat/epgenvr2.htm
+- 193. Sarah Gordon, “The Generic Virus Writer II,” 6th International Virus Bulletin Conference, Brighton, U.K. (September 1996). www.research.ibm.com/antivirus/SciPapers/Gordon/GVWII.html
+- 194. Sarah Gordon, “Virus Writers: The End of Innocence?” Presented at the 10th International Virus Bulletin Conference (September 2000). http://vxheaven.org/lib/asg12.htm
+- 195. Bissett and Shipton, “Some Human Dimensions,” 2000.
+- 196. Bissett and Shipton, “Some Human Dimensions,” 2000.

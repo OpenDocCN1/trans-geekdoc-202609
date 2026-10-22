@@ -1,0 +1,19 @@
++   3. Lowered susceptibility to multipath fading…
++   4. Inherent security: In a spread spectrum system, a PN [pseudo-random number] sequence is used to either modulate the signal in the time domain (direct sequence systems) or select the carrier frequency (frequency hopping systems). Due to the pseudo-random nature of the PN sequence, the signal in the air has been "randomized." Only the receiver having the exact same pseudo-random sequence and synchronous timing can de-spread and retrieve the original signal. Consequently, a spread spectrum system provides signal security that is not available to conventional analog wireless systems.
++   5. Co-existence: A spread spectrum system is less susceptible to interference than other non-spread spectrum systems. In addition, with the proper designing of pseudo-random sequences, multiple spread spectrum systems can co-exist without creating severe interference to other systems. This further increases the system capacity for spread spectrum systems or devices.
++   6. Longer operating distances…
++   7. Hard to detect: Spread-spectrum signals are much wider than conventional narrowband transmission (of the order of 20 to 254 times the bandwidth of narrowband transmissions). Since the communication band is spread, it can be transmitted at a low power without being detrimentally by background noise…
++   8. Hard to intercept or demodulate: The very foundation of the spreading technique is the code used to spread the signal…
++   9. Harder to jam: The most important feature of spread spectrum is its ability to reject interference….¹
+
+The military uses frequency-hopping spread-spectrum (FHSS) transmission for security. Military spread-spectrum transmission works in such a way that makes intercepting transmissions very difficult. Civilian spread-spectrum transmission, in contrast, is designed to make connecting simple and therefore offers relatively little security.
+
+Switches spend almost all of their time forwarding frames. However, switches spend some of their time exchanging supervisory information packets with one another to keep the network running efficiently. For example, in Ethernet (IEEE 802.3), which dominates LAN standards, if there are loops among the switches, the network will malfunction. If a switch detects a loop, it sends supervisory packets to other switches. The switches in the network then communicate until they determine the most appropriate path and disable other ports to prevent the internal looping. This process is governed by the Spanning Tree Protocol (STP, part of IEEE 802.1) or the newer Rapid Spanning Tree Protocol (RSTP, defined in IEEE 802.1 w and now part of IEEE 802.1D-2004).
+
+Attackers can create denial-of-service (DOS) attacks on the switches in a network by impersonating a switch and sending a flood of false messages to the network’s real switches indicating the presence of a loop. The switches may spend so much of their time reorganizing the network that they will be unable to serve legitimate traffic. They also can attack several other supervisory protocols to make switches unavailable for processing normal packets. The 802.1AE standard is designed to limit switch-to-switch communication to authenticated switches.
+
+# 5.4.4 Internetworking Standards.
+
+As noted earlier, the IETF divided the internetworking core layer into two layers—the internet and transport layers. Exhibit 5.11 shows how the two layers are related.
+
+The internet layer forwards packets, hop by hop, among routers until the packet reaches the destination host. The main standard at the internet layer is the Internet Protocol (IP).

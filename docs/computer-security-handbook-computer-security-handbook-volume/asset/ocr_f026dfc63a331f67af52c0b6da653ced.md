@@ -1,0 +1,19 @@
+how many copies can be made or allows for a copy length limitation to be inserted. Thus, a minute of music could be downloaded to give a listener a taste, but not a chance to pirate the entire music track. To obtain the entire track, the user would be required to pay a fee.
+
+Microsoft distributes free software that embeds metatags in each audio file. The metatags refer back to a central server in which the business rules are stored. This approach requires that material be tagged as it is created; otherwise, if it is released without the embedded tags, it can be illegally copied.
+
+Major companies like Xerox, Microsoft, IBM, and Adobe got heavily involved producing and using this software in the 1990s, and many smaller firms opened shop. As with other new technology launches, eventually many of the small entrants went out of business or were bought by larger firms. Some of the small companies, such as ContentGuard,21 continue to exist independently, as of this writing.
+
+# 42.5 PRIVACY-ENHANCING TECHNOLOGIES.
+
+Although DRM may seem to be a valid solution for the piracy problem, dissenters feel that DRM and other antipirarcy measures give producers and distributors too much control. The rationale is that excessively restrictive rights management may undermine the fair use rights of consumers and academics. Partly as a result of these conflicting viewpoints, many consumers are making increasing use of privacy-enhancing technologies (PET), a broad term for a range of technologies designed to hide the identity and activities of individual users and computers as their traffic traverses the Internet.
+
+# 42.5.1 Network Proxy.
+
+One broad class of tactics and tools used to enhance privacy is based on the concept of a network proxy. In its most general form, a proxy takes a network connection request from a client and redirects it to the ultimate destination, changing the address headers to make it look like the original request came from the proxy itself. When the destination server responds, the proxy returns the results to the requesting client. Proxies have long been used within organizations, both to protect internal users as they make requests to untrusted networks and to track and sometimes block access to undesirable content. For more details on the use of proxies in Web content filtering and monitoring, see Chapter 31 in this Handbook.
+
+More recently, proxies have been employed outside the bounds of corporate networks to allow anonymous connections across the Internet. These so-called anonymizing proxies sometimes use encryption to hide the traffic in transit and so also provide protection from traffic analysis. Anonymizing proxies are a serious threat to organizations that desire (or are required by law) to monitor and block users from accessing certain kinds of information. More advanced versions of this concept use multiple routers to hide the path that a request takes through the public network. As a general class, these are known as mixing networks. One example described as early as 1981 is the Chaum Mix.22 Recently, a concept known as onion routing has become popular in its incarnation as Tor (the onion router), which uses nested layers of traffic encryption as a session travels from one router to the next.23 See Chapter 70 in this Handbook for further information about anonymity on the Internet.
+
+# 42.5.2 Hidden Operating Systems.
+
+Rather than relying on network technologies, some users are choosing to make their actions on the network private by using hidden operating systems. Two basic approaches are common: the virtual machine and the bootable system.

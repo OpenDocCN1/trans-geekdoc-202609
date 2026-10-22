@@ -1,0 +1,19 @@
+capable allowed-path enforcement mechanisms deeper into the internal network to protect intellectual property, customer/partner data, and industrial control systems (ICSs).
+
+To manage allowed-path risk effectively, organizations must define and baseline their expected traffic flows both internally and externally. The baseline is vitally important when the only indication of compromise may be an unusual—though apparently benign—interaction between systems that do not typically interact with one another.
+
+# 26.3.2 Tunneling.
+
+Tunneled access into the internal network for the purposes of remote access, information sharing, and commerce is essential for most organizations. These tunnels, typically in the form of a virtual private network (VPN), use encryption to protect the confidentiality of the transferred data. If the GSD does not terminate the tunnel, it typically only provides network and transport layer allowed path enforcement through to the termination endpoint. This scenario fragments the inspection of the encapsulated traffic, requiring the termination endpoint itself or another security device post-decryption to provide additional protection through allowed path enforcement and application layer inspection.
+
+See Chapter 32 for more information on GSD VPN capabilities
+
+# 26.3.3 Anti-Spoofing.
+
+One of the most readily exploited vulnerabilities of the IP protocol is spoofing. Due to this inherent weakness in the IPv4 protocol, a host’s network stack is capable of producing packets that can appear to originate from any IP address and/or port chosen. This attack is an effort to deceive the receiving host and/or any network protection in between into believing the originating host is following an allowed path. Due to the simplicity of executing spoofing attacks, GSD vendors developed and implemented several effective methods to thwart these types of attacks. The network topology is a key element in the GSD’s ability to determine what traffic should be originated from each of its physical and/or logical interfaces.
+
+One common anti-spoofing method is explicit definition of the network topology on a per-interface basis. This provides an efficient method for the GSD to determine whether the packet’s source IP address entering an interface matches what the GSD expects to be the source network. If not, the packet fails to meet the criteria and is dropped. Although simple and effective, the disadvantage is the manual management of the per-interface network definitions.
+
+Another method is to learn the network topology by leveraging the routing table to make the same type of per-interface anti-spoofing decisions. The firewall goes through the same process of evaluating if the packet’s source IP matches what should be originating from that interface. However, this does not require ongoing manual intervention when network changes occur, as the routing engine updates this information. Although this method creates less administrative overhead, two disadvantages include problems if the network uses asymmetric routing and/or falls prey to a route poisoning attack.
+
+Both of these anti-spoofing measures are highly effective when evaluating whether network traffic is originating from the appropriate interface. However, the focus remains solely on preventing internal network address compromise. Since not all of the IP networks in existence are actually allocated and/or in use, these “bogus” networks are another method used to launch spoofing attacks. Since “bogus” network traffic is originating on the external interface, the GSD would not block this based on common anti-spoofing rules. Updated lists are readily available allowing the security administrator to enforce “bogus” protections. Some GSDs have a feature that automatically updates the list on a recurring basis, providing automated protection.
