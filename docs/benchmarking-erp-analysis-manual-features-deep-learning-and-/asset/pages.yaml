@@ -1,0 +1,1210 @@
+- pgno: 0
+  md: '# # Benchmarking ERP Analysis: Manual Features, Deep Learning, and Foundation
+    Models
+
+
+    Yihe Wang, Zhiqiao Kang*, Bohan Chen*, Yu Zhang, Xiang Zhang✉
+
+
+    **Abstract—** Event-related potential (ERP), a specialized paradigm of electroencephalographic
+    (EEG), reflects neurological responses to external stimuli or events, generally
+    associated with the brains processing of specific cognitive tasks. ERP plays a
+    critical role in cognitive analysis, the detection of neurological diseases, and
+    the assessment of psychological states. Recent years have seen substantial advances
+    in deep learning-based methods for spontaneous EEG and other non-time-locked task-related
+    EEG signals. However, their effectiveness on ERP data remains underexplored, and
+    many existing ERP studies still rely heavily on manually extracted features. In
+    this paper, we conduct a comprehensive benchmark study that systematically compares
+    traditional manual features (followed by a linear classifier), deep learning models,
+    and pre-trained EEG foundation models for ERP analysis. We establish a unified
+    data preprocessing and training pipeline and evaluate these approaches on two
+    representative tasks, ERP stimulus classification and ERP-based brain disease
+    detection, across 12 publicly available datasets. Furthermore, we investigate
+    various patch-embedding strategies within advanced Transformer architectures to
+    identify embedding designs that better suit ERP data. Our study provides a landmark
+    framework to guide method selection and tailored model design for future ERP analysis.
+    The code is available at https://github.com/DL4mHealth/ERP-Benchmark.
+
+
+    +   **Index Terms—** ERP, event-related potential, EEG, brain-computer interfaces,
+    deep learning, foundation model
+
+
+    ![](img/6b8a0cc86f73ccc8d474525448d82e6d_0_0.png)
+
+
+    **Fig. 1:** **ERP vs Spontaneous EEG.** ERP is inherently different from Spontaneous
+    EEG, requiring specific analysis methods.
+
+
+    # I. INTRODUCTION
+
+
+    Event-related potential (ERP) is an EEG-derived measure of time-locked neural
+    activity, serving as a foundational tool with broad applications in neuroscience,
+    dementia, and cognitive science [1]–[3]. As a specialized category within the
+    broader EEG signal domain, ERP exhibits distinct characteristics compared to spontaneous
+    EEG activity [4]. While spontaneous EEG reflects ongoing intrinsic brain states
+    but with limited functional specificity, ERP captures time-locked neurological
+    responses elicited by specific sensory, audio, or cognitive
+
+
+    events [5]–[7]. By aligning neural signals to controlled stimuli, ERP provides
+    a direct and interpretable window into transient cognitive processes. The primary
+    advantage of ERP lies in its temporal synchrony between external events and internal
+    brain electrical responses, which typically yields a higher signal-to-noise ratio
+    than spontaneous EEG activity [8]. In practice, ERP trials are extracted from
+    continuous EEG recordings by segmenting event-centered epochs [3]. A short pre-stimulus
+    interval (typically 0.2-0.5 seconds) is used for baseline correction to suppress
+    background noise, followed by a longer post-stimulus interval (typically 0.8-1.5
+    seconds) that contains the stimulus-evoked neural potential [9]. Figure 1 illustrates
+    a signal comparison between ERP and spontaneous EEG.
+
+
+    In recent years, deep learning has achieved substantial progress in EEG decoding
+    across a wide range of applications, including motor imagery control [10], emotion
+    recognition [11], sleep stage classification [11], seizure detection [12], and
+    dementia detection [13]. Advanced deep learning techniques, such as foundation
+    models that have demonstrated remarkable success in natural language processing,
+    computer vision, and multimodal learning (e.g., ChatGPT [14], Gemini [15], and
+    DINOv2 [16]), are also beginning to be explored for learning generalizable EEG
+    representations. Recent EEG foundation models, including LaBraM [17], EEGPT [18],
+    and CBraMod [19], have reported strong performance on various EEG downstream tasks.
+    However, most existing deep learning model designs primarily target spontaneous
+    EEG signals, such as resting-state and sleep EEG [11], or non-time-locked task-induced
+    EEG, such as motor imagery [20]. In contrast, time-locked evoked EEG signals,
+    exemplified by ERP, remain significantly underexplored. As a result, ERP analysis
+    continues to rely mainly on manual feature extraction and conventional statistical
+    approaches, or directly employs models designed for spontaneous EEG to ERP analysis,
+    resulting in suboptimal performance. Given the distinct signal characteristics
+    of ERP and its fundamental differences from spontaneous EEG, it remains unclear
+    to what extent recent advances in deep learning
+
+
+    Yihe Wang and Xiang Zhang are with the Department of Computer Science, University
+    of North Carolina-Charlotte, Charlotte, North Carolina 28223, United States.
+
+    Zhiqiao Kang is with the College of Future Technology, South China University
+    of Technology, Guangzhou, Guangdong 511442, China.
+
+    Bohan Chen is with the Department of Statistics, University of California-Davis,
+    Davis, California 95618, United States.
+
+    Yu Zhang is with the Department of Public Mental Health & Population Sciences,
+    Stanford University, Palo Alto, California 94305, United States.
+
+    Xiang Zhang is the corresponding author (E-mail: xi-ang.zhang@charlotte.edu).
+
+    *Equal Contribution. This work was conducted during their research internship
+    at UNC Charlotte.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'are directly applicable to ERP decoding. This gap necessitates systematic benchmarking
+    of methods for ERP analysis.
+
+
+    To this end, we conduct a comprehensive and fair benchmark evaluation of ERP classification
+    methods. We implement a wide range of approaches, including 2 manual feature extraction
+    methods (with 31 and 91 handcrafted features, respectively), 10 state-of-the-art
+    deep learning methods for EEG, and 3 advanced EEG foundation models, within a
+    unified data preprocessing and evaluation framework. The benchmark covers two
+    representative and practical ERP classification tasks across **12 datasets**.
+    The first focuses on **ERP stimulus classification**, such as distinguishing standard
+    and target stimuli in oddball paradigms, to evaluate models’ ability to capture
+    fundamental stimulus-locked cognitive responses. The second addresses **ERP-based
+    brain disease detection**, such as identifying neurological or psychiatric conditions,
+    thereby assessing model utility in more complex and clinically relevant scenarios.
+    Furthermore, to guide the development of more effective models, we conduct a comparative
+    analysis of three prevalent patch-embedding strategies for EEG data within a state-of-the-art
+    Transformer framework. This embedding comparison aims to identify the optimal
+    embedding method for ERP classification, offering critical insights for designing
+    dedicated Transformer backbones for **ERP analysis**. All the tasks are performed
+    under a rigorously **subject-independent** setup to evaluate cross-subject learning
+    ability.
+
+
+    In summary, our motivation is to answer the following question through this systematic
+    benchmark study:
+
+
+    +   - **Q1:** How do deep learning-based EEG methods compare with traditional
+    manual feature extraction methods when applied to ERP data?
+
+    +   - **Q2:** Do EEG Foundation Models with pre-trained weights outperform supervised
+    EEG deep learning models trained from scratch on ERP classification tasks?
+
+    +   - **Q3:** What is the most robust and generalizable method for ERP classification
+    so far?
+
+    +   - **Q4:** Which patch embedding strategy is most suitable for designing ERP-specific
+    Transformer models?
+
+
+    To provide a concise **takeaway message**, we summarize the answers below for
+    the readers convenience:
+
+
+    +   - **A1:** Most deep learning methods consistently outperform manual feature
+    extraction approaches on ERP tasks.
+
+    +   - **A2:** Existing EEG foundation models do not demonstrate clear performance
+    advantages over supervised deep learning models trained from scratch.
+
+    +   - **A3:** **EEGConformer** achieves the best average ranking and shows the
+    most competitive overall performance.
+
+    +   - **A4:** Uni-variate patch embedding (See Figure 5) achieves better overall
+    performance than multi-variate and whole-variate patching strategies for ERP-specific
+    Transformer.
+
+
+    The rest of this paper is organized as follows: Section **III** presents statistical
+    information about the ERP datasets used in this study, along with the unified
+    preprocessing pipeline. Section **IV** describes the methods compared in our benchmark,
+    as well as a test Transformer implemented for embedding comparison. Section **V**
+    provides implementation details and reports experimental results with corresponding
+    analysis. Section **VI**
+
+
+    discusses the limitations of existing methods and outlines directions for future
+    work. Section **VII** concludes the paper.
+
+
+    # II. RELATED WORK
+
+
+    **Manual Feature Extraction:** There is a long history of identifying potential
+    biomarkers in ERP signals for classification or brain interpretation. Different
+    types of features are used, including statistical features like mean, skewness,
+    kurtosis, and standard deviation [21]–[23], time-domain shape features such as
+    line length, peak-to-peak amplitude, and positive/negative peak amplitudes [24]–[26],
+    spectral distribution features like phase shift, phase coherence, bispectrum,
+    and bicoherence [27]–[30], frequency-band power features like power spectrum density,
+    relative band power, ratio of EEG rhythm, and energy [31]–[33], complexity features
+    like Shannon entropy, Tsallis entropy, and permutation entropy [34]–[36], and
+    Hjorth parameters such as activity, mobility, and complexity [37]–[39].
+
+
+    **Deep Learning Methods:** Deep learning methods with diverse architectures are
+    widely used for EEG decoding. EEGNet [40] is a classic lightweight convolutional
+    model, while EEG-Inception [41] extends temporal convolution with depthwise spatial
+    blocks for ERP-based BCIs. AMWCN [42] integrates wavelet-based multiscale analysis
+    and attention mechanisms to identify discriminative frequency bands and temporal
+    segments. Transformer-based approaches, such as EEG-Transformer [43] and EEGConformer
+    [44], leverage self-attention to capture long-range temporal dependencies and
+    global contextual information in EEG signals. Neuro-BERT [45] introduces masked
+    autoencoding for robust EEG representation learning, LGGNet [46] explicitly models
+    local-global brain functional graphs, MOCNN [47] proposes multiscale octave convolution
+    for ERP classification, and EEGMamba [48] employs bidirectional Mamba modules
+    for efficient long-sequence EEG modeling.
+
+
+    **Foundation Models:** Foundation models, which have achieved remarkable success
+    in computer vision and natural language processing domains, are increasingly being
+    explored for EEG representation learning. LaBraM [17] introduces a large-scale
+    EEG foundation model that employs a neural tokenizer to reconstruct spectral representations
+    during pre-training, enabling effective transfer to downstream EEG classification
+    tasks. EEGPT [18] proposes a masked self-supervised learning framework based on
+    high signal-to-noise EEG representations, enhanced by spatio-temporal representation
+    alignment. FORMED [49] repurposes a general time series foundation model to EEG
+    downstream tasks. NeuroLM [50] conceptualizes EEG signals as a foreign language
+    and adopts language-model-inspired architectures to learn unified representations
+    across cognitive and clinical tasks. LUNA [51] presents a topology-agnostic EEG
+    foundation model using cross-attention mechanisms, supporting robust learning
+    under heterogeneous channel montages. CSBrain [52] explores cross-scale spatiotemporal
+    tokenization with structured sparse attention to model dependencies between local
+    and global brain regions.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# TABLE I: Dataset Statistics. All the datasets follow the same preprocessing
+    pipeline, including a band-pass filter, artifact removal, and resampling to 200Hz.
+    The epoch and baseline window depend on the ERP tasks and datasets. Abbreviations:
+    AODD: Auditory Oddball; VODD: Visual Oddball; MSIT+: Extended multi-source interference
+    task; SIM: Simon Conflict; RL: Reinforcement Learning; HC: Healthy Control; PD:
+    Parkinson’s Disease; ADHD: Attention Deficit Hyperactivity Disorder.
+
+
+    | Datasets | ERP Task | #Subjects | Baseline(s) | Epoch(s) | #Trials | #Channels
+    | Classes |
+
+    |---|---|---|---|---|---|---|---|
+
+    | CESCA-AODD | AODD | 127 | [-0.2, 0] | [-0.2, 0.8] | 38,151 | 26 | Standard vs
+    Target |
+
+    | CESCA-VODD | VODD | 127 | [-0.2, 0] | [-0.2, 0.8] | 20,419 | 26 | Standard vs
+    Target |
+
+    | CESCA-FLANKER | Flanker | 73 | [-0.2, 0] | [-0.2, 0.8] | 29,774 | 26 | Congruent
+    vs Incongruent |
+
+    | mTBI-ODD | AODD | 96 | [-0.2, 0] | [-0.2, 0.8] | 24,885 | 61 | Standard vs Target
+    vs Novel |
+
+    | NSERP-MSIT | MSIT+ | 42 | [-0.5, 0] | [-0.5, 1.0] | 16,729 | 123 | Non-Conflict
+    vs Simon Effect vs Flanker Effect vs Double-Conflict |
+
+    | NSERP-ODD | VODD | 42 | [-0.5, 0] | [-0.5, 1.0] | 27,865 | 123 | Standard vs
+    Target vs Novel |
+
+    | PD-SIM | SIM | 147 | [-0.3, -0.2] | [-0.5, 1.0] | 55,921 | 60 | HC vs PD |
+
+    | PD-ODD | VODD | 145 | [-0.3, -0.2] | [-0.5, 1.0] | 34,464 | 60 | HC vs PD |
+
+    | ADHD-WMRI | N-Back, GoNogo | 59 | [-0.2, 0] | [-0.2, 0.65] | 21,832 | 21 | HC
+    vs ADHD |
+
+    | SCPD | SIM | 56 | [-0.3, -0.2] | [-0.5, 1.0] | 10,224 | 59 | HC vs PD |
+
+    | RLPD | RL | 56 | [-0.2, 0] | [-2.0, 1.0] | 14,325 | 56 | HC vs PD |
+
+    | AOPD | AODD | 50 | [-0.2, 0] | [-0.2, 0.8] | 9,830 | 59 | HC vs PD |
+
+
+    # III. DATASETS
+
+
+    # A. Datasets
+
+
+    In light of the limited availability of public ERP datasets, we systematically
+    searched all accessible resources known to the authors, including platforms such
+    as OpenNeuro, FigShare, and PhysioNet. We identified 12 datasets, each with a
+    sufficient sample size (40+ subjects) to ensure robust statistical evaluation,
+    including ADHD-WMRI [53], AOPD [54], CESCA-AOOD, CESCA-VOOD, CESCA-FLANKER [55],
+    mTBI-ODD [56], NSERP-MSIT, NSERP-ODD [57], PD-ODD [58], PD-SIM [58], RLPD [59],
+    and SCPD [60]. These datasets span a broad range of cognitive paradigms and clinical
+    conditions, including attention deficit hyperactivity disorder (ADHD), Parkinsons
+    disease (PD), traumatic brain injury (TBI), and aging-related cognitive decline.
+    To ensure fair and consistent benchmarking, all datasets are preprocessed using
+    a unified ERP preprocessing pipeline (Section III-B).
+
+
+    Among them, 6 datasets, including CESCA-AOOD, CESCA-VOOD, CESCA-FLANKER, mTBI-ODD,
+    NSERP-MSIT, and NSERP-ODD, are used for ERP stimulus classification, which aims
+    to distinguish cognitive responses elicited by different experimental conditions,
+    such as target vs non-target and congruent vs incongruent stimuli. The remaining
+    6 datasets, including PD-SIM, PD-ODD, RLPD, SCPD, AOPD, and ADHD-WMRI, are employed
+    for brain disease detection tasks.
+
+
+    # B. Data Preprocessing Pipeline
+
+
+    To get ERP trials for training, we apply the following unified preprocessing pipeline.
+    1) Removal of non-EEG channels: All non-EEG channels are removed, such as EOG
+    or coordinate information. 2) Notch and band-pass filtering: A notch filter at
+    50 Hz or 60 Hz is applied to suppress line noise, followed by a band-pass filter
+    between 0.5 Hz and 45 Hz. 3) Bad channel interpolation: Bad channels are interpolated
+    when marked. 4) Average re-referencing: Average re-referencing is applied to reduce
+    global noise and potential baseline shifts. 5) Artifact removal: Independent component
+
+
+    analysis (ICA), combined with ICLabel [61], is used to automatically identify
+    and remove components associated with eye blinks, muscle activity, and cardiac
+    artifacts. 6) Resampling: All recordings are resampled to a uniform sampling rate
+    of 200 Hz. 7) Baseline correction: Baseline correction is applied to enhance stimulus-related
+    ERP components relative to background noise. 8) Trial epoching: EEG recordings
+    are then segmented into ERP trials based on stimulus events, and the non-ERP recordings
+    are discarded (e.g, resting state). The baseline correction and epoch window length
+    vary across ERP tasks and datasets. 9) Z-Score Normalization: Each channel of
+    every segmented ERP trial is normalized independently to zero mean and unit variance.
+    The statistics of the processed datasets are summarized in Table I. More details
+    of the preprocessing are provided in our GitHub repository.
+
+
+    # IV. METHOD
+
+
+    # A. Manual Extract Features
+
+
+    Widely used features in spontaneous EEG and ERP data analysis. We manually extract
+    these features and apply a linear projection layer to them for ERP task classification.
+
+
+    1) EEG Feature Extraction: We compute 31 widely used features, including 10 time-domain
+    statistical features, 11 frequency band features, 7 spectral distribution features,
+    and 3 data complexity features.
+
+
+    Time-Domain Statistical Features: These include the mean, median, minimum, maximum,
+    skewness, kurtosis, root mean square (RMS), interquartile range, and standard
+    deviation [21]-[23], [33]. Statistical features are designed to capture fundamental
+    time-domain statistical characteristics of EEG signals.
+
+
+    Frequency-Band Power Features: This category consists of absolute power in the
+    δ, θ, α, and β bands, total power, the θ/α ratio, the α/β ratio, and the relative
+    power of the four frequency bands [31]-[33]. Absolute band power is computed by
+    numerically integrating the power spectral density (PSD) within each frequency
+    band, providing a direct measure of oscillatory energy associated with specific
+    neuro processes.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/6b8a0cc86f73ccc8d474525448d82e6d_3_0.png)
+
+
+    **Fig. 2: Pipeline of ERP Analysis.** Input raw EEG data are preprocessed with
+    a unified pipeline to get ERP trials, including removal of non-EEG channels, notch
+    and band-pass filtering, bad channel interpolation, average re-referencing, artifact
+    removal, resampling, baseline correction, trial epoching, and Z-score normalization.
+    The processed ERP trials are loaded and passed to various models for training
+    and classification, including manual feature extraction, supervised deep learning
+    trained from scratch, and foundation models with pre-trained weights.
+
+
+    frequency, peak power, mean frequency, median frequency, and spectral flatness
+    [62]–[64]. These features characterize the overall distribution and structure
+    of spectral energy. All spectral features are estimated using Welch''s method
+    for PSD estimation, followed by numerical integration and computations.
+
+
+    including mean, standard deviation, RMS, line length, and peak-to-peak amplitude
+    [65]–[68], are computed across multiple temporal scales, yielding 5 × Σ levels
+    feature dimensions. We set the number of levels equal to 15. Temporal Pyramid
+    Pooling is employed to capture ERP dynamics at multiple temporal resolutions.
+    This approach jointly captures global waveform structure and localized transients,
+    improving robustness to temporal variability and latency jitter.
+
+
+    **Complexity features:** This category includes normalized & non-normalized Shannon
+    spectral entropy and Tsallis entropy [34]–[36]. These features are derived from
+    the normalized PSD, which is interpreted as a probability distribution. Shannon
+    spectral entropy quantifies spectral disorder and complexity, with higher values
+    indicating more uniformly distributed spectral energy, while Tsallis entropy generalizes
+    Shannon entropy by incorporating non-extensive properties, providing greater sensitivity
+    to nonlinear and non-stationary signal characteristics.
+
+
+    **Peak-Related Features:** amplitudes of positive and negative peaks and their
+    normalized latencies [24]–[26]. Peak-related features are extracted to characterize
+    salient ERP components. The maximum positive and minimum negative peak amplitudes
+    reflect the strength of event-related neural responses. The total analysis window
+    length-normalized latencies to account for variability in ERP duration and ensure
+    comparability across trials and subjects.
+
+
+    **2) ERP Feature Extraction:** We compute a total of **91 features**, including
+    75 temporal pyramid pooling features, 4 peak-related Features, 9 frequency-band
+    & complexity features, and 3 Hjorth parameters.
+
+
+    **Temporal Pyramid Pooling:** five statistical measures, in-
+
+
+    **Frequency & Complexity Features:** relative power in the δ, θ, α, and β bands,
+    total power, spectral centroid, spectral flatness, median frequency, and normalized
+    spectral entropy [27]–[30]. Although ERPs are time-locked signals, frequency-domain
+    analysis provides complementary informa-'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'tion about oscillatory patterns elicited by stimuli. Relative band power and
+    total power summarize energy distribution across canonical frequency bands, while
+    spectral centroid, spectral flatness, and median frequency describe the overall
+    frequency structure of the ERP signal. Normalized spectral entropy is computed
+    to quantify the complexity and dispersion of ERP spectral content.
+
+
+    **Hjorth parameters:** Hjorth parameters includes activity, mobility, and complexity
+    [37]–[39]. These features serve as compact descriptors of ERP signal characteristics.
+    Activity reflects the overall signal amplitude by measuring signal variance. Mobility
+    characterizes the mean frequency content by relating the variance of the first
+    derivative to the variance of the signal itself. Complexity quantifies waveform
+    shape variation relative to a sinusoidal signal, thereby providing insight into
+    the structural intricacy of ERP dynamics.
+
+
+    # B. *Deep Learning Models*
+
+
+    Deep learning methods for general time-series, medical time-series, and EEG data
+    classification. They are trained from scratch in a fully supervised learning manner.
+    We select classic or state-of-the-art methods with publicly available code.
+
+
+    +   1) *TCN:* TCN [69] is a convolutional architecture designed explicitly for
+    time-series modeling. They extend residual networks by incorporating causal and
+    dilated convolutions, enabling effective learning of long-range temporal dependencies.
+    By flexibly controlling receptive field size, TCNs balance model capacity and
+    computational efficiency, thereby making them adaptable to time-series data across
+    diverse domains. TCNs remain a strong and widely adopted baseline for time-series
+    classification tasks, including EEG analysis.
+
+
+    +   2) *ModernTCN:* ModernTCN [70] is a convolutional architecture designed for
+    general time-series analysis and demonstrates strong performance, particularly
+    in classification. It combines depthwise convolutions with multiple pointwise
+    convolutions and introduces channel-independent embedding mechanisms. This design
+    effectively addresses key limitations of convolutional models in multivariate
+    time-series tasks, where performance is often constrained by small receptive fields
+    and difficulties in modeling inter-variable dependencies.
+
+
+    +   3) *TimesNet:* TimesNet [71] is a convolutional model for time-series analysis,
+    especially on classification tasks. It transforms one-dimensional time-series
+    data into two-dimensional tensors across multiple periodicities (where rows and
+    columns represent intra- and inter-period variations, respectively), thereby leveraging
+    the strengths of 2D convolutional networks for time-series analysis. The model’s
+    core component, Times-Block, employs a parameter-efficient Inception module to
+    extract complex temporal variations from 2D tensors.
+
+
+    +   4) *PatchTST:* PatchTST [72] is a transformer-based model for time series
+    prediction and representation learning, with its core innovation lying in a dual
+    design of patching and channel independence. The model decomposes multi-channel
+    data into multiple one-channel patches, treating them as semantically informative
+    sub-sequence fragments for input. This approach preserves local features while
+    significantly reducing computational complexity.
+
+
+    +   5) *iTransformer:* The iTransformer [73] proposes a novel data-embedding method
+    based on the transformer architecture for multivariate time-series analysis. Its
+    distinctive feature is the reversal of the conventional tokenization strategy.
+    Instead of using multi-channel samples at a single time point into a single temporal
+    token, iTransformer treats each channel/variate as an independent variable token.
+    This adjustment enables the self-attention module to model correlations between
+    variables directly, thereby enhancing interpretability.
+
+
+    +   6) *Medformer:* Medformer [74] is a multi-granularity patching Transformer
+    model designed explicitly for medical time-series data (e.g., EEG, ECG). It captures
+    correlations across signal channels via cross-channel patching and extracts features
+    at multiple temporal scales via multi-granularity embedding. Subsequently, it
+    applies two-stage (intra-granularity & inter-granularity) multi-granularity self-attention
+    to learn features. Medformer is a modified Transformer model adapted for medical
+    electro-biological time-series data.
+
+
+    +   7) *MedGNN:* MedGNN [75] proposes a multi-scale spatio-temporal graph learning
+    framework for medical time series such as electroencephalograms. This framework
+    models cross-channel spatial relationships by constructing adaptive graph structures
+    and integrating multi-scale temporal features via frequency-domain convolution.
+    MedGNN further employs a differential-based attention mechanism and multi-scale
+    graph transformers to capture local temporal dynamics and global graph dependencies
+    in a synergistic manner.
+
+
+    +   8) *EEGNet:* As a classic deep learning application in the EEG domain, EEGNet
+    [40] efficiently extracts temporal and spatial features via convolutional operations.
+    By stacking 2D temporal, depthwise, and separable convolution modules, it captures
+    frequency features and feature relationships across different electrode channels.
+    Its structure is compact and requires low space and computational cost.
+
+
+    +   9) *EEGInception:* EEGInception [41] pioneers the integration of Inception
+    modules [76] into deep learning models for ERP detection tasks. By employing multi-scale
+    temporal convolutions to extract features across different temporal scales within
+    EEG signals concurrently, and incorporating separable convolutions, batch normalization,
+    and Dropout, it constructs a lightweight and efficient network architecture.
+
+
+    +   10) *EEGConformer:* EEGConformer [77] is a Transformer-based architecture
+    that integrates convolutional networks for spatio-temporal feature embedding with
+    self-attention mechanisms for EEG representation learning. This design combines
+    the strengths of convolutional networks in capturing local spatio-temporal patterns
+    and self-attention in modeling global dependencies, while maintaining parameter
+    efficiency and enhancing the ability to represent complex EEG structures.
+
+
+    # C. *Foundation Models*
+
+
+    Medical time-series and EEG foundation models. We use their pre-trained weights
+    for fine-tuning on our ERP tasks. We select state-of-the-art methods with publicly
+    available code.
+
+
+    +   1) *BIOT:* [78] BIOT introduces a large foundation model for the flexible
+    processing of multi-channel biomedical signals of varying lengths and channels.
+    It adopts language-model-style segmentation to convert single-channel signals
+    into patch'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# TABLE II: ERP Stimulus Classification Results. Classifying ERP stimulus types
+    such as target, non-target, and distractor in Oddball, or congruent and incongruent
+    in Flanker. Top-1, Top-2, and Top-3 results are highlighted in red, blue, and
+    green.
+
+
+    Datasets | CESCA-AODD (38,151 Trials) (127 Subjects, 2 Classes) | CESCA-VODD (20,419
+    Trials) (127 Subjects, 2 Classes) | CESCA-FLANKER (29,774 Trials) (73 Subjects,
+    2 Classes)
+
+    Methods | Accuracy | F1 Score | AUROC | Accuracy | F1 Score | AUROC | Accuracy
+    | F1 Score | AUROC
+
+    EEG Features | 77.06±0.96 | 46.44±1.03 | 50.71±0.38 | 77.26±1.02 | 50.31±0.84
+    | 56.73±1.16 | 55.38±1.12 | 55.13±1.12 | 57.74±1.84
+
+    ERP Features | 75.43±3.46 | 47.74±1.66 | 52.35±1.67 | 81.71±0.43 | 63.68±1.10
+    | 76.67±1.83 | 64.12±1.31 | 63.98±1.23 | 69.66±1.57
+
+    TCN | 75.07±0.40 | 50.74±0.99 | 56.39±0.95 | 82.03±0.69 | 67.00±1.12 | 78.13±1.42
+    | 63.16±1.11 | 62.89±1.30 | 68.62±1.43
+
+    ModernTCN | 75.20±0.69 | 53.93±0.82 | 60.36±0.98 | 81.91±0.51 | 66.85±3.11 | 78.18±1.01
+    | 64.07±0.58 | 64.01±0.59 | 69.90±1.39
+
+    TimesNet | 75.17±0.58 | 54.38±1.34 | 60.91±0.74 | 81.13±1.53 | 67.65±1.55 | 77.62±1.42
+    | 63.20±0.64 | 63.09±0.59 | 68.29±1.25
+
+    PatchTST | 76.41±1.41 | 53.65±1.70 | 61.98±3.11 | 80.97±1.13 | 68.19±1.72 | 78.13±1.02
+    | 63.81±0.77 | 63.64±0.81 | 69.61±1.33
+
+    ... [remaining rows for iTransformer, Medformer, MedGNN, EEGNet, EEGInception,
+    EEGConformer, BIOT, LaBraM, CBraMod and second block mTBI-ODD, NSERP-MSIT, NSERP-ODD
+    continue in same format]
+
+
+    embeddings, augments them with channel tags, and applies self-attention to capture
+    temporal and spatial dependencies. This design supports multi-stage training and
+    remains effective under missing-channel or missing-segment scenarios. We load
+    their pre-trained weights for fine-tuning.
+
+
+    2) LaBraM: LaBraM [17] is a foundation model for learning universal EEG representations
+    through large-scale unsupervised pre-training. The framework’s core lies in a
+    vector-quantization neural spectral prediction method: First, a neural tokenizer
+    is trained to encode continuous EEG segments into a compact neural lexicon by
+    reconstructing the Fourier spectrum of the raw EEG signals. Subsequently, a neural
+    Transformer is pre-trained using masked EEG modeling (randomly masking portions
+    of EEG segments and predicting their corresponding neural lexical entries) based
+    on this lexicon. Equipped with learnable temporal and spatial embeddings, this
+    model adaptively learns from EEG inputs of arbitrary channel counts and durations.
+    This method uses more than 2,000 hours of EEG data for pre-training. We load their
+    pre-trained weights for fine-tuning.
+
+
+    3) CBraMod: CBraMod [19] is a foundation model for EEG that adopts a criss-cross
+    Transformer as its backbone. By employing parallel spatial and temporal attention
+    mechanisms, it separately models dependencies between channels at the same time
+    point and between time segments within the same channel, thereby better aligning
+    with the inherent structure of EEG signals. Additionally, the model uses Asymmetric
+    Conditional Position Embeddings (ACPE) to dynamically generate position embeddings,
+    enabling it to adapt flexibly to EEG data with varying channel configurations
+    and temporal durations. This method uses more than 9,000 hours of EEG data for
+    pre-training. We load their pre-trained weights for fine-tuning.
+
+
+    ![](img/6b8a0cc86f73ccc8d474525448d82e6d_5_0.png)
+
+
+    Fig. 3: Transformer Embedding Comparison. Three commonly used EEG Transformer
+    patch embedding methods.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# TABLE III: ERP-Based Disease Detection Results. ERP-based brain disease detection
+    focuses on classifying neurological disorders, such as Parkinsons disease or ADHD.
+    Top-1, Top-2, and Top-3 results are highlighted in red, blue, and green.
+
+
+    | Datasets | PD-SIM\n(55,921 Trials)\n(147 Subjects, 2 Classes) | PD-ODD\n(34,464
+    Trials)\n(145 Subjects, 2 Classes) | ADHD-WMRI\n(21,832 Trials)\n(59 Subjects,
+    2 Classes) |
+
+    |---|---|---|---|
+
+    | Methods | Accuracy | F1 Score | AUROC | Accuracy | F1 Score | AUROC | Accuracy
+    | F1 Score | AUROC |
+
+    | EEG Features | 64.32±2.30 | 57.02±3.23 | 64.41±4.44 | 67.68±3.36 | 61.23±3.32
+    | 70.01±3.42 | 58.43±3.07 | 55.76±3.61 | 56.65±6.30 |
+
+    | ERP Features | 63.76±3.54 | 58.78±2.57 | 66.41±3.71 | 69.29±2.60 | 63.65±2.71
+    | 72.05±2.50 | 59.79±4.79 | 57.40±5.93 | 59.48±10.23 |
+
+    | TCN | 64.63±3.53 | 58.76±5.73 | 64.92±5.32 | 66.07±2.35 | 59.43±2.81 | 68.50±2.28
+    | 62.74±2.46 | 60.57±2.82 | 67.05±3.76 |
+
+    | ModernTCN | 71.98±1.82 | 65.79±2.58 | 76.07±3.10 | 71.74±1.47 | 66.72±0.73 |
+    76.62±1.48 | 63.26±2.86 | 60.69±4.24 | 66.79±4.88 |
+
+    | TimesNet | 63.09±3.86 | 54.44±4.99 | 61.16±8.62 | 68.15±2.83 | 60.45±2.37 |
+    69.87±1.82 | 66.05±3.49 | 64.30±3.79 | 72.12±5.04 |
+
+    | PatchTST | 69.38±3.87 | 64.19±4.63 | 73.32±4.77 | 72.19±1.97 | 67.37±1.15 |
+    77.11±2.51 | 62.44±3.62 | 60.85±3.60 | 66.46±5.03 |
+
+    | iTransformer | 71.38±2.09 | 66.79±2.39 | 76.03±2.75 | 70.34±2.25 | 65.89±1.83
+    | 75.06±1.77 | 63.29±3.13 | 60.92±3.88 | 66.77±5.35 |
+
+    | Medformer | 68.62±1.59 | 61.28±3.68 | 70.95±2.71 | 68.22±2.29 | 61.61±2.49 |
+    72.10±2.81 | 64.48±2.60 | 61.47±3.25 | 68.69±3.91 |
+
+    | MedGNN | 57.17±4.72 | 49.88±3.69 | 56.94±6.91 | 64.61±3.83 | 58.15±4.21 | 68.59±3.61
+    | 62.70±3.98 | 59.97±5.71 | 66.44±7.18 |
+
+    | EEGNet | 66.08±3.17 | 64.17±2.84 | 71.63±3.45 | 65.25±4.48 | 61.84±3.59 | 70.46±5.57
+    | 52.70±8.00 | 44.77±5.24 | 43.99±5.10 |
+
+    | EEGInception | 58.90±1.55 | 52.26±5.35 | 57.52±8.47 | 63.73±1.85 | 60.01±2.36
+    | 65.97±1.88 | 65.22±3.62 | 63.12±4.59 | 69.60±5.73 |
+
+    | EEGConformer | 60.69±4.64 | 56.80±5.22 | 61.10±6.67 | 65.44±1.40 | 62.88±1.56
+    | 70.12±1.08 | 68.55±2.70 | 66.43±3.52 | 74.55±4.68 |
+
+    | BIOT | 64.17±4.40 | 56.04±5.45 | 62.37±6.41 | 65.74±3.58 | 59.76±5.30 | 69.03±3.47
+    | 54.29±5.62 | 53.05±5.73 | 54.61±8.30 |
+
+    | LaBraM | 63.95±5.29 | 57.29±4.90 | 63.47±6.11 | 67.82±5.22 | 62.55±3.78 | 71.62±7.46
+    | 63.82±9.56 | 62.11±9.61 | 67.99±13.05 |
+
+    | CBraMod | 63.03±2.87 | 57.01±3.05 | 64.73±3.72 | 66.01±0.95 | 60.41±4.12 | 71.06±2.71
+    | 61.98±5.24 | 59.96±5.40 | 65.24±7.45 |
+
+    | Datasets | SCPD\n(10,224 Trials)\n(56 Subjects, 2 Classes) | RLPD\n(14,325 Trials)\n(56
+    Subjects, 2 Classes) | AOPD\n(9,830 Trials)\n(50 Subjects, 2 Classes) |
+
+    | Methods | Accuracy | F1 Score | AUROC | Accuracy | F1 Score | AUROC | Accuracy
+    | F1 Score | AUROC |
+
+    | EEG Features | 61.32±2.28 | 61.21±2.28 | 66.63±3.19 | 60.87±3.44 | 60.43±3.40
+    | 62.70±4.09 | 61.83±3.32 | 61.43±3.55 | 67.33±4.17 |
+
+    | ERP Features | 57.55±5.36 | 57.41±5.27 | 61.93±8.01 | 54.55±3.88 | 53.42±3.92
+    | 58.89±6.35 | 61.43±2.73 | 60.82±3.08 | 67.16±3.30 |
+
+    | TCN | 70.26±4.83 | 70.15±4.75 | 77.31±6.78 | 68.67±2.67 | 68.40±2.59 | 73.23±6.78
+    | 66.11±6.75 | 65.76±6.81 | 70.57±8.43 |
+
+    | ModernTCN | 67.85±5.39 | 67.55±5.37 | 72.89±7.10 | 61.04±5.63 | 60.75±5.46 |
+    66.08±5.81 | 60.00±5.44 | 58.86±6.38 | 62.06±8.09 |
+
+    | TimesNet | 71.44±6.30 | 71.15±6.34 | 78.00±7.88 | 67.64±7.49 | 67.36±7.46 |
+    74.56±9.54 | 65.35±3.61 | 65.11±3.62 | 71.53±4.52 |
+
+    | PatchTST | 63.37±4.36 | 63.15±4.39 | 68.80±5.95 | 61.07±7.23 | 60.35±7.20 |
+    64.87±8.99 | 57.63±6.00 | 56.92±6.51 | 60.39±8.29 |
+
+    | iTransformer | 66.83±5.65 | 66.51±5.83 | 71.91±7.25 | 59.36±4.23 | 59.07±4.14
+    | 62.90±5.05 | 59.56±6.43 | 58.54±7.36 | 61.05±9.63 |
+
+    | Medformer | 65.22±6.80 | 64.93±6.96 | 71.91±7.87 | 63.45±6.43 | 63.18±6.20 |
+    69.80±8.35 | 64.94±6.59 | 64.59±6.60 | 70.56±8.78 |
+
+    | MedGNN | 66.13±9.71 | 65.73±9.97 | 72.34±12.06 | 64.68±6.65 | 64.36±6.80 | 72.76±8.73
+    | 62.93±3.93 | 62.48±4.00 | 69.29±5.56 |
+
+    | EEGNet | 64.78±4.61 | 63.57±4.96 | 68.41±5.85 | 63.18±1.77 | 62.53±1.61 | 67.12±2.79
+    | 62.51±7.17 | 60.41±8.64 | 64.92±9.70 |
+
+    | EEGInception | 74.48±5.53 | 74.33±5.42 | 82.79±6.36 | 70.76±4.43 | 70.57±4.42
+    | 77.32±6.43 | 69.51±6.59 | 69.26±6.52 | 77.32±8.81 |
+
+    | EEGConformer | 72.35±5.39 | 72.04±5.43 | 79.43±6.74 | 66.09±4.05 | 65.28±4.16
+    | 75.73±6.46 | 68.25±9.26 | 68.00±9.26 | 74.43±11.74 |
+
+    | BIOT | 70.00±4.05 | 69.42±4.61 | 76.71±6.79 | 65.72±9.04 | 65.09±8.85 | 69.29±12.06
+    | 62.15±8.73 | 61.57±8.80 | 66.51±10.06 |
+
+    | LaBraM | 72.27±4.17 | 71.71±4.30 | 79.46±6.52 | 74.47±6.34 | 73.87±6.94 | 84.82±5.72
+    | 62.05±9.25 | 61.55±9.20 | 67.40±13.80 |
+
+    | CBraMod | 67.33±3.45 | 66.63±3.89 | 73.34±8.45 | 63.28±9.41 | 62.65±9.14 | 66.26±12.52
+    | 65.99±3.78 | 65.28±3.88 | 71.43±4.80 |
+
+
+    # D. Patch Embedding Comparison for ERP Transformer
+
+
+    Existing EEG Transformer models commonly employ three types of token embeddings:
+    multi-variate, uni-variate, and whole-variate. For example, Medformer [74] employs
+    multivariate patch embedding, PatchTST [72] adopts univariate patch embedding,
+    and iTransformer [73] uses whole-variate patch embedding. Given a multivariate
+    EEG input sample (x ∈ ℝ^{T×C} and a patch length L, multi-variate embedding uses
+    patches p ∈ ℝ^{L×C}, univariate embedding uses patches p ∈ ℝ^{L×1}, and whole-variate
+    embedding uses patches p ∈ ℝ^{1×C}. These patches are then linearly projected
+    into token embeddings that serve as inputs to the Transformer encoder. Figure
+    5 illustrates the three embedding strategies. To investigate which embedding method
+    is most suitable for ERP data classification, we implement a Transformer model
+    and evaluate three token-embedding designs. All other components of the Transformer
+    architecture are kept identical across settings, allowing a controlled comparison
+    of the embedding methods. We hope this comparison could inspire future works on
+    designing Transformers for ERP analysis.
+
+
+    # A. Experimental Setups
+
+
+    Batch sizes are 128 for all methods. The training epochs are set to 200 with early
+    stopping (patience=15) based on the best F1 Score. We use AdamW with learning
+    rates of 1×10^{−4}, scheduled by CosineAnnealingLR. Model performance is evaluated
+    using Accuracy, F1 Score, and AUROC. We adopt Monte Carlo cross-validation under
+    the subject-independent evaluation protocol [79], with a 6:2:2 ratio of subjects
+    for training, validation, and test split. This setup ensures that no subject overlaps
+    across splits while maintaining random subject partitioning across different seeds.
+    For foundation model methods, including BIOT, LaBraM, and CBraMod, we fine-tune
+    their publicly released checkpoints. Each experiment is repeated with five random
+    seeds (41-45), and results are reported with the mean and standard deviation.
+    All experiments are conducted on 4 NVIDIA RTX A5000 GPUs using Python 3.10 and
+    PyTorch 2.5.1+cu121. Additional implementation details and training scripts for
+    each method are provided in our GitHub repository.
+
+
+    # V. EXPERIMENTS'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# a) Average Rank over 36 Evaluations (12 datasets × 3 metrics)
+
+
+    ![](img/6b8a0cc86f73ccc8d474525448d82e6d_7_0.png)
+
+
+    # b) Rank Heatmap over all 36 Evaluations (12 datasets × 3 metrics).
+
+
+    ![](img/6b8a0cc86f73ccc8d474525448d82e6d_7_1.png)
+
+
+    Fig. 4: a) Average performance rank of 15 methods across all 12 datasets and 3
+    evaluation metrics. For example, the value 3.96 for EEGConformer indicates an
+    average rank of 3.96 over 36 evaluations. b) Rank heatmap of 15 methods across
+    all 12 datasets and 3 evaluation metrics. Lower ranks and a deeper blue color
+    indicate better performance in both plots a and b.
+
+
+    # B. ERP Stimulus Classification Results
+
+
+    We first investigate stimulus-type classification in ERP data, with results summarized
+    in Table II. All experiments are conducted under a subject-independent evaluation
+    setup, aiming to identify stimulus-related ERP patterns that generalize across
+    subjects. The Top-1, Top-2, and Top-3 performing methods are highlighted in red,
+    blue, and green, respectively. Across the six datasets (CESCA-AOOD, CESCA-VOOD,
+    CESCA-FLANKER, mTBI-ODD, NSERP-MSIT, and NSERP-ODD), the best method achieved
+    F1 scores of 57.18%, 69.64%, 64.33%, 65.79%, 38.51%, and 68.40%, respectively.
+    These results are substantially higher than random performance, indicating that
+    meaningful and consistent stimulus-related ERP patterns can be extracted even
+    under cross-subject evaluation. Among the three CESCA datasets, the visual oddball
+    and flanker paradigms exhibit higher discriminability than
+
+
+    the auditory oddball paradigm. Since these datasets share the same group of subjects
+    and recording conditions, this observation suggests that visual oddball and flanker
+    stimuli elicit more salient and distinguishable neural responses than passive
+    auditory oddball stimuli. For the comparison of method performance, we observe
+    that the top-tier results are predominantly achieved by deep learning models trained
+    from scratch. In contrast, existing foundation models for medical time series
+    and EEG do not demonstrate clear performance advantages when fine-tuned from their
+    released checkpoints. Moreover, manually extracted features rarely achieve top-tier
+    performance, whereas ERP features consistently outperform EEG features in this
+    task.
+
+
+    # C. ERP-Based Disease Detection Results
+
+
+    We then investigate ERP-based disease detection performance, with results summarized
+    in Table III. All experiments'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Comparison of Transformer Embedding Methods (F1 Score)
+
+
+    ![](img/6b8a0cc86f73ccc8d474525448d82e6d_8_0.png)
+
+
+    Fig. 5: F1 Score comparison among multi-variate, uni-variate, and whole-variate
+    token embedding commonly used in existing EEG Transformer. All other Transformer
+    components are kept identical.
+
+
+    are conducted under a subject-independent evaluation setup, aiming to identify
+    disease-specific ERP features that generalize across subjects for real-world disease
+    detection applications. Across the six datasets (PD-SIM, PD-ODD, ADHD-WMRI, SCPD,
+    RLPD, and AOPD), the best method achieves F1 scores of 66.79%, 67.37%, 66.43%,
+    74.33%, 73.87%, and 69.26%, respectively. Overall, no single ERP paradigm consistently
+    demonstrates a clear advantage for disease detection. Notably, the three smaller
+    Parkinsons disease datasets, SCPD, RLPD, and AOPD, achieve relatively higher performance
+    than the two larger datasets, PD-SIM and PD-ODD. This trend may be attributed
+    to the more balanced data distributions in the smaller datasets, which contain
+    exactly equal numbers of Parkinsons disease and healthy control subjects. For
+    method comparison, top-tier performance is primarily achieved by deep learning
+    models trained from scratch and by models fine-tuned from foundation model checkpoints.
+    Two methods based on manually extracted features never achieve top-tier results.
+    Besides, unlike ERP stimulus-type classification, ERP-specific features do not
+    consistently outperform generic EEG features in disease detection. In several
+    datasets, ERP-specific features even perform worse, suggesting that the disease-related
+    information in these datasets may be less tightly aligned with canonical ERP components.
+
+
+    verse tasks and evaluation metrics. Following EEGConformer, ModernTCN, TimesNet,
+    CBraMod, and Medformer constitute the top-tier group. Notably, only CBraMod belongs
+    to the foundation model category, while the remaining methods are trained from
+    scratch. This suggests that existing foundation models can partially transfer
+    to ERP classification tasks. One possible explanation is that current EEG foundation
+    models are rarely pre-trained on ERP-specific data. Most pre-training resources
+    consist of long-sequence spontaneous EEG and do not incorporate ERP-specific preprocessing
+    steps, such as baseline correction or event-based trial epoching. As a result,
+    the representations learned during pre-training may not be optimally aligned with
+    ERP-centric downstream tasks. Manual feature-based methods consistently perform
+    the worst overall. Between the two handcrafted feature methods, ERP-specific features
+    perform relatively better than generic EEG features. These results highlight the
+    limitations of handcrafted statistical and frequency-domain features, which struggle
+    to maintain robust performance across diverse ERP paradigms and disease conditions,
+    particularly under subject-independent evaluation. This suggests that, beyond
+    interpretability or neuroscience-oriented analysis, manual feature extraction
+    offers limited advantages in real-world applications where end-to-end performance
+    is the primary objective.
+
+
+    # D. Overall Performance Analysis
+
+
+    # E. Patch Embedding Comparison for Transformer
+
+
+    To provide a comprehensive comparison of different methods across multiple tasks
+    and evaluation metrics, we further analyze the overall performance of 15 methods
+    over 12 datasets × 3 evaluation metrics, resulting in 36 evaluations in total.
+    Figure 4 presents the average rank of each method across all 36 evaluations, along
+    with a heatmap showing the individual ranks for each method on each evaluation.
+    Lower ranks and a deeper blue color indicate better performance.
+
+
+    We observe that supervised deep learning models trained from scratch consistently
+    outperform other methods in overall performance. Among all evaluated approaches,
+    EEGConformer achieves the lowest average rank of 3.96, indicating the most stable
+    and competitive performance across di-
+
+
+    We compare three commonly used token embedding methods in existing EEG Transformer
+    models to examine their suitability for ERP data classification. All other components,
+    including the self-attention modules, feedforward networks, and layer normalization
+    layers, are kept identical across methods. To ensure comparable model capacities,
+    the patch length is set to 25 for the multi-variate and 100 for the uni-variate
+    embedding methods. As a result, the total number of parameters is 0.864, 0.818,
+    and 0.822 million for the multi-variate, uni-variate, and whole-variate token
+    embedding methods, respectively.
+
+
+    All results are reported in terms of F1 score in Table IV. The uni-variate embedding
+    method achieves the best performance'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '+   [12] Ruizhe Zheng, Lingyan Mao, Dingding Han, Tian Luo, Yi Wang, Jing Ding,
+    and Yuguo Yu. Fapex: Fractional amplitude-phase expressor for robust cross-subject
+    seizure prediction. 39th International Conference on Neural Information Processing
+    Systems, 2025.
+
+    +   [13] Yihe Wang, Nadia Mammone, Darina Petrovsky, Alexandros T Tzallas, Francesco
+    C Morabito, and Xiang Zhang. Adformer: A multi-granularity spatial-temporal transformer
+    for eeg-based alzheimer detection. arXiv preprint arXiv:2409.00032, 2024.
+
+    +   [14] Josh Achiam, Steven Adler, Sandhini Agarwal, Lama Ahmad, Ilge Akkaya,
+    Florencia Leoni Aleman, Diogo Almeida, Janko Altenschmidt, Sam Altman, Shyamal
+    Anadkat, et al. Gpt-4 technical report. arXiv preprint arXiv:2307.08774, 2023.
+
+    +   [15] Gemini Team, Petko Georgiev, Ving Ian Lei, Ryan Burnell, Libin Bai, Anmol
+    Gulati, Garrett Tanzer, Damien Vincent, Zhufeng Pan, Shibo Wang, et al. Gemini
+    1.5: Unlocking multimodal understanding across millions of tokens of context.
+    arXiv preprint arXiv:2403.05530, 2024.
+
+    +   [16] Maxime Oquab, Timothée Darce t, Théo Moutakanni, Huy Vo, Marc Szafraniec,
+    Vasil Khalidov, Pierre Fernandez, Daniel Haziza, Francisco Massa, Alaaeldin El-Nouby,
+    et al. Dino v2: Learning robust visual features without supervision. arXiv preprint
+    arXiv:2304.07193, 2023.
+
+    +   [17] Wei-Bang Jiang, Li-Ming Zhao, and Bao-Liang Lu. Large brain model for
+    learning generic representations with tremendous eeg data in bci. arXiv preprint
+    arXiv:2405.18765, 2024.
+
+    +   [18] Guangyu Wang, Wenchao Liu, Yuhong He, Cong Xu, Lin Ma, and Haifeng Li.
+    Eegpt: Pretrained transformer for universal and reliable representation of eeg
+    signals. Advances in Neural Information Processing Systems, 37:39249–39280, 2024.
+
+    +   [19] Jiquan Wang, Sha Zhao, Zhiling Luo, Yangxuan Zhou, Haiteng Jiang, Shijian
+    Li, Tao Li, and Gang Pan. Cb ramod: A criss-cross brain foundation model for eeg
+    decoding. arXiv preprint arXiv:2412.07236, 2024.
+
+    +   [20] Ibtehaaj Hameed, Danish M Khan, Syed Muneeb Ahmed, Syed Sabeeb Aftab,
+    and Hammad Fazal. Enhancing motor imagery eeg signal decoding through machine
+    learning: A systematic review of recent progress. Computers in Biology and Medicine,
+    185:109534, 2025.
+
+    +   [21] Katerina D Tzimourta, Nikolaos Giannakeas, Alexandros T Tzallas, Loukas
+    G Astrakas, Theodora Afrantou, Panagiotis Ioannidis, Nikolaos Grigoriadis, Pantelis
+    Angelidis, Dimitrios G Tsalikakis, and Markos G Tsipouras. Eeg window length evaluation
+    for the detection of alzheimers disease over different brain regions. Brain sciences,
+    9(4):81, 2019.
+
+    +   [22] Katerina D Tzimourta, Theodora Afrantou, Panagiotis Ioannidis, Maria
+    Karatzikou, Alexandros T Tzallas, Nikolaos Giannakeas, Loukas G Astrakas, Pantelis
+    Angelidis, Evripidis Glavas, Nikolaos Grigoriadis, et al. Analysis of electroencephalographic
+    signals complexity regarding alzheimer''s disease. Computers & Electrical Engineering,
+    76:198–212, 2019.
+
+    +   [23] NN Kulkarni and VK Bair agi. Extracting salient features for eeg-based
+    diagnosis of alzheimer''s disease using support vector machine classifier. IETE
+    Journal of Research, 63(1):11–22, 2017.
+
+    +   [24] Joseph N Mak, Dennis J McFarland, Theresa M Vaughan, Lynn M McCane, Philippa
+    Z Tusi, Debra J Zeitlin, Eric W Sellers, and Jonathan R Wolpaw. Eeg correlates
+    of p300-based brain–computer interface (bci) performance in people with amyotrophic
+    lateral sclerosis. Journal of neural engineering, 9(2):026014, 2012.
+
+    +   [25] Xiaou Li, Yuning Yan, and Wenshi Wei. Identifying patients with poststroke
+    mild cognitive impairment by pattern recognition of working memory load-related
+    erp. Computational and Mathematical Methods in Medicine, 2013(1):658501, 2013.
+
+    +   [26] Bruce Wallace, Frank Knoefel, Rafik Goubran, Rocío A López Zunini, Zhaofen
+    Ren, and Aaron Maccosham. Eeg/erp: Within episodic assessment framework for cognition.
+    IEEE Transactions on Instrumentation and Measurement, 66(10):2525–2534, 2017.
+
+    +   [27] Francisco J Fraga, Tiago H Falk, Paulo AM Kanda, and Renato Anghinah.
+    Characterizing alzheimers disease severity via resting-awake eeg amplitude modulation
+    analysis. PLoS one, 8(8):e72240, 2013.
+
+    +   [28] Luke Tait, George Stothart, Elizabeth Couldhard, Jon T Brown, Nina Kazanina,
+    and Marc Goodfellow. Network substrates of cognitive impairment in alzheimers
+    disease. Clinical Neurophysiology, 130(9):1581–1595, 2019.
+
+    +   [29] Markus Waser, Heinrich Garn, Reinhold Schmidt, Thomas Benke, Peter Dal-Bianco,
+    Gerhard Ransmayr, Helena Schmidt, Stephan Seiler, Günter Sanin, Florian Mayer,
+    et al. Quantifying synchrony patterns in the eeg of alzheimers patients with linear
+    and non-linear connectivity markers. Journal of Neural Transmission, 123:297–316,
+    2016.
+
+    +   [30] Lucas R Trambaiolli, Ana C Lorena, Francisco J Fraga, Paulo AM Kanda,
+    Renato Anghinah, and Ricardo Nit rini. Improving alzheimer''s disease diagnosis
+    with machine learning techniques. Clinical EEG and neuroscience, 42(3):160–165,
+    2011.
+
+
+    +   [31] Magali T Schmidt, Paulo AM Kanda, Luis FH Basile, Helder Frederico da
+    Silva Lopes, Regina Baratho, Jose LC Demario, Mario S Jorge, Antonio E Nardi,
+    Sergio Machado, Jéssica N Iano f, et al. Index of alpha/theta ratio of the electroencephalogram:
+    a new marker for alzheimers disease. Frontiers in aging neuroscience, 5:60, 2013.
+
+    +   [32] Xiaokun Liu, Chunlai Zhang, Zheng Ji, Yi Ma, Xiaoming Shang, Qi Zhang,
+    Wencheng Zheng, Xia Li, Jun Gao, Ruofan Wang, et al. Multiple characteristics
+    analysis of alzheimers electroencephalogram by power spectral density and lempel–ziv
+    complexity. Cognitive neurodynamics, 10:121–133, 2016.
+
+    +   [33] Paulo Afonso Medeiros Kanda, Lucas R Trambaiolli, Ana C Lorena, Francisco
+    J Fraga, Luis Fernando I Basile, Ricardo Nit rini, and Renato Anghinah. Clinicians
+    road map to wavelet eeg as an alzheimers disease biomarker. Clinical EEG and neuroscience,
+    45(2):104–112, 2014.
+
+    +   [34] Heinrich Garn, Markus Waser, Manfred Deistler, Thomas Benke, Peter Dal-Bianco,
+    Gerhard Ransmayr, Helena Schmidt, Guenter Sanin, Peter Santer, Georg Caravias,
+    et al. Quantitative eeg markers relate to alzheimers disease severity in the prospective
+    dementia registry austria (prodem). Clinical Neurophysiology, 126(3):505–513,
+    2015.
+
+    +   [35] Hamed Azami, Steven E Arnold, Saeid Sanei, Zhuoqing Chang, Guillermo
+    Sapir o, Javier Escudero, and Anoopum S Gupta. Multiscale fluctuation-based dispersion
+    entropy and its applications to neurological diseases. IEEE Access, 7:68718–68733,
+    2019.
+
+    +   [36] Lucie Tylová, Jaromír Kukal, Václav Hubata-Vacek, and Oldřich Vyšata.
+    Unbiased estimation of permutation entropy in eeg analysis for alzheimer''s disease
+    classification. Biomedical Signal Processing and Control, 39:424–430, 2018.
+
+    +   [37] Shixin Peng, Ruyi Xu, Xin Yi, Xin Hu, Lili Liu, and Leyuan Liu. Early
+    screening of children with autism spectrum disorder based on electroencephalogram
+    signal feature selection with 11-norm regularization. Frontiers in Human Neuroscience,
+    15:656578, 2021.
+
+    +   [38] Raja Majid Mehmood, Muhammad Bilal, S Vimal, and Seong-Whan Lee. Eeg-based
+    affective state recognition from human brain signals by using hjorth-activity.
+    Measurement, 202:117738, 2022.
+
+    +   [39] Zhangjing Deng, Haoying Bai, Shijing Wu, Jiani Wu, Boyuan Xia, Yingxi
+    Chen, Yurou He, Shuyu Li, and Yang Lü. Diagnosis of alzheimers disease via machine
+    learning approaches with integrated resting-state eeg and erp characteristics.
+    Cognitive Computation, 17(6):166, 2025.
+
+    +   [40] Vernon J Lawhern, Amelia J Solon, Nicholas R Waytowich, Stephen M Gordon,
+    Chou P Hung, and Brent J Lance. Eegnet: a compact convolutional neural network
+    for eeg-based brain–computer interfaces. Journal of neural engineering, 15(5):056013,
+    2018.
+
+    +   [41] Eduardo Santamaria-Vazquez, Victor Martinez-Cagigal, Fernando Vaquerizo-Villar,
+    and Roberto Hornero. Eeg-inception: a novel deep convolutional neural network
+    for assistive erp-based brain-computer interfaces. IEEE Transactions on Neural
+    Systems and Rehabilitation Engineering, 28(12):2773–2782, 2020.
+
+    +   [42] Qi Xin, Shaohai Hu, Shuaiji Liu, Ling Zhao, and Yu-Dong Zhang. An attention-based
+    wavelet convolution neural network for epilepsy eeg classification. IEEE Transactions
+    on Neural Systems and Rehabilitation Engineering, 30:957–966, 2022.
+
+    +   [43] Jin Xie, Jie Zhang, Jiayao Sun, Zheng Ma, Liuni Qin, Guanglin Li, Huihui
+    Zhou, and Yang Zhan. A transformer-based approach combining deep learning network
+    and spatial-temporal information for raw eeg classification. IEEE Transactions
+    on Neural Systems and Rehabilitation Engineering, 30:2126–2136, 2022.
+
+    +   [44] N Kasthuri, R Ramyea, VS Arunprasshath, S Abhineeth, and S Bharathraj.
+    Eeg conformer model based epileptic seizure prediction using deep learning. In
+    2024 15th International Conference on Computing Communication and Networking Technologies
+    (ICCCNT), pages 1–7. IEEE, 2024.
+
+    +   [45] Di Wu, Siyuan Li, Jie Yang, and Mohamad Sawan. Neuro-bert: Rethinking
+    masked autoencoding for self-supervised neurological pretraining. arXiv preprint
+    arXiv:2204.12440, 2022.
+
+    +   [46] Yi Ding, Neethu Robinson, Chengxuan Tong, Qiuhao Zeng, and Cuntai Guan.
+    Lgnet: Learning from local-global-graph representations for brain-computer interface.
+    IEEE Transactions on Neural Networks and Learning Systems, 35(7):9773–9786, 2023.
+
+    +   [47] Jing Jin, Ruitian Xu, Ian Daly, Xueqing Zhao, Xingyu Wang, and Andrzej
+    Cichocki. Mocnn: A multiscale deep convolutional neural network for erp-based
+    brain-computer interfaces. IEEE Transactions on Cybernetics, 54(9):5565–5576,
+    2024.
+
+    +   [48] Yiyu Gui, MingZhi Chen, Yuqi Su, Guibo Luo, and Yuchao Yang. Eegmamba:
+    Bidirectional state space model with mixture of experts for eeg multi-task classification.
+    arXiv preprint arXiv:2407.20254, 2024.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '[49] Nan Huang, Haishuai Wang, Zihuai He, Marinka Zitnik, and Xiang Zhang.
+    Repurposing foundation model for generalizable medical time series classification.
+    arXiv preprint arXiv:2410.03794, 2024.
+
+    [50] Wei-Bang Jiang, Yansen Wang, Bao-Liang Lu, and Dongsheng Li. Neurolm: A universal
+    multi-task foundation model for bridging the gap between language and eeg signals.
+    arXiv preprint arXiv:2409.00101, 2024.
+
+    [51] Berkay Döner, Thorir Mar Ingolfsson, Luca Benini, and Yawei Li. Luna: Efficient
+    and topology-aware foundation model for eeg signal analysis. 39th International
+    Conference on Neural Information Processing Systems, 2025.
+
+    [52] Yuchen Zhou, Jiamin Wu, Zichen Ren, Zhouheng Yao, Weiheng Lu, Kunyu Peng,
+    Qihao Zheng, Chunfeng Song, Wanli Ouyang, and Chao Gou. Csbrain: A cross-scale
+    spatiotemporal brain foundation model for eeg decoding. 39th International Conference
+    on Neural Information Processing Systems, 2025.
+
+    [53] Carolin Breitling-Ziegler, Jana Tegelbeckers, Hans-Henning Flechtner, and
+    Kerstin Krauel. Economical assessment of working memory and response inhibition
+    in adhd using a combined n-back/nogo paradigm: An erp study. Frontiers in human
+    neuroscience, 14:322, 2020.
+
+    [54] JF Cavanagh. Eeg: 3-stim auditory oddball and rest in parkinsons. OpenNeuro,
+    OpenNeuro, 2021.
+
+    [55] Elif Isbell, Amanda N Peters, Dylan M Richardson, and Nancy E Rodas De Leon.
+    Cognitive electrophysiology in socioeconomic context in adulthood. Scientific
+    Data, 12(1):841, 2025.
+
+    [56] James F Cavanagh, J Kevin Wilson, Rebecca E Rieger, Darbi Gill, James M Broadway,
+    Jacqueline Hope Story Remer, Violet Fratzke, Andrew R Mayer, and Davin K Quinn.
+    Erps predict symptomatic distress and recovery in sub-acute mild traumatic brain
+    injury. Neuropsychologia, 132:107125, 2019.
+
+    [57] Patrycja Dzianok, Ingrida Antonova, Jakub Wojciechowski, Joanna Dreszer,
+    and Ewa Kubik. The nencki-symfonia electroencephalography/event-related potential
+    dataset: Multiple cognitive tasks and resting-state data collected in a sample
+    of healthy adults. GigaScience, 11:giac015, 2022.
+
+    [58] Arun Singh, Rachel C Cole, Arturo I Espinoza, Jan R Wessel, James F Cavanagh,
+    and Nandakumar S Narayanan. Evoked mid-frontal activity predicts cognitive dysfunction
+    in parkinsons disease. Journal of Neurology, Neurosurgery & Psychiatry, 94(11):945–953,
+    2023.
+
+    [59] Darin R Brown, Sarah Pirio Richardson, and James F Cavanagh. An eeg marker
+    of reward processing is diminished in parkinsons disease. Brain research, 1727:146541,
+    2020.
+
+    [60] Arun Singh, Sarah Pirio Richardson, Nandakumar Narayanan, and James F Cavanagh.
+    Mid-frontal theta activity is diminished during cognitive control in parkinson’s
+    disease. Neuropsychologia, 117:113–122, 2018.
+
+    [61] Luca Pion-Tonachini, Ken Kreutz-Delgado, and Scott Makeig. Iclabel: An automated
+    electroencephalographic independent component classifier, dataset, and website.
+    NeuroImage, 198:181–197, 2019.
+
+    [62] Jing Wang, Yuxing Fang, Xiao Wang, Huichao Yang, Xin Yu, and Huali Wang.
+    Enhanced gamma activity and cross-frequency interaction of resting-state electroencephalographic
+    oscillations in patients with alzheimers disease. Frontiers in aging neuroscience,
+    9:243, 2017.
+
+    [63] Raymundo Cassani, Tiago H Falk, Francisco J Fraga, Paulo AM Kanda, and Renato
+    Anghinah. The effects of automated artifact removal algorithms on electroencephalography-based
+    alzheimer’s disease diagnosis. Frontiers in aging neuroscience, 6:55, 2014.
+
+    [64] Ruofan Wang, Jiang Wang, Shunan Li, Haitao Yu, Bin Deng, and Xile Wei. Multiple
+    feature extraction and classification of electroencephalograph signal for alzheimers’
+    with spectrum and bispectrum. Chaos: An Interdisciplinary Journal of Nonlinear
+    Science, 25(1), 2015.
+
+    [65] Markus Waser, Manfred Deistler, Heinrich Garn, Thomas Benke, Peter Dal-Bianco,
+    Gerhard Ransmayr, Dieter Grosseggger, and Reinhold Schmidt. Eeg in the diagnostics
+    of alzheimers disease. Statistical Papers, 54:1095–1107, 2013.
+
+    [66] Lucie Tylova, Jaromir Kukal, and Oldrich Vysata. Predictive models in diagnosis
+    of alzheimers disease from eeg. Acta Polytechnica, 53(2), 2013.
+
+    [67] Aldo Mora-Sánchez, Gérard Dreyfus, and François-Benoît Vialatte. Scale-free
+    behaviour and metastable brain-state switching driven by human cognition, an empirical
+    approach. Cognitive neurodynamics, 13:437–452, 2019.
+
+    [68] Robert J Barry, Sopa Kirkaikul, and Darren Hodder. Eeg alpha activity and
+    the erp to target stimuli in an auditory oddball paradigm. International journal
+    of psychophysiology, 39(1):39–50, 2000.
+
+    [69] Colin Lea, Michael D Flynn, Rene Vidal, Austin Reiter, and Gregory D Hager.
+    Temporal convolutional networks for action segmentation and detection.
+
+
+    In proceedings of the IEEE Conference on Computer Vision and Pattern Recognition,
+    pages 156–165, 2017.
+
+    [70] Donghao Luo and Xue Wang. Moderntcn: A modern pure convolution structure
+    for general time series analysis. In The twelfth international conference on learning
+    representations, pages 1–43, 2024.
+
+    [71] Haixu Wu, Tengge Hu, Yong Liu, Hang Zhou, Jianmin Wang, and Mingsheng Long.
+    Timesnet: Temporal 2d-variation modeling for general time series analysis. arXiv
+    preprint arXiv:2210.02186, 2022.
+
+    [72] Y Nie. A time series is worth 64words: Long-term forecasting with transformers.
+    International conference on learning representations, 2023.
+
+    [73] Yong Liu, Tengge Hu, Haoran Zhang, Haixu Wu, Shiyu Wang, Lintao Ma, and Mingsheng
+    Long. itransformer: Inverted transformers are effective for time series forecasting.
+    International conference on learning representations, 2023.
+
+    [74] Yihe Wang, Nan Huang, Taida Li, Yujun Yan, and Xiang Zhang. Medformer: A
+    multi-granularity patching transformer for medical time-series classification.
+    Advances in Neural Information Processing Systems, 37:36314–36341, 2024.
+
+    [75] Wei Fan, Jingru Fei, Dingyu Guo, Kun Yi, Xiaozhuang Song, Haolong Xiang,
+    Hanting Ye, and Min Li. Towards multi-resolution spatiotemporal graph learning
+    for medical time series classification. In Proceedings of the ACM on Web Conference
+    2025, pages 5054–5064, 2025.
+
+    [76] François Chollet. Xception: Deep learning with depthwise separable convolutions.
+    In Proceedings of the IEEE conference on computer vision and pattern recognition,
+    pages 1251–1258, 2017.
+
+    [77] Yonghao Song, Qingqing Zheng, Bingchuan Liu, and Xiaorong Gao. Eeg conformer:
+    Convolutional transformer for eeg decoding and visualization. IEEE Transactions
+    on Neural Systems and Rehabilitation Engineering, 31:710–719, 2022.
+
+    [78] Chaoqi Yang, M Westover, and Jimeng Sun. Biot: Biosignal transformer for
+    cross-data learning in the wild. Advances in Neural Information Processing Systems,
+    36:78240–78260, 2023.
+
+    [79] Yihe Wang, Nan Huang, Nadia Mammone, Marco Cecchi, and Xiang Zhang. Lead:
+    Large foundation model for eeg-based alzheimer’s disease detection. arXiv preprint
+    arXiv:2502.01678, 2025.
+
+    [80] Iyad Obeid and Joseph Picone. The temple university hospital eeg data corpus.
+    Frontiers in neuroscience, 10:196, 2016.'
+  merge: -1
+  img_proc: true
