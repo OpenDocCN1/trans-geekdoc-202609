@@ -1,0 +1,9 @@
+We’re going to start by taking a look at what a test actually is because I feel many people (including experienced testers) are misguided as to the target of a test. After that, we’ll take a look at how PHPUnit works so you can understand better ways of using it. Armed with that knowledge, we will use Test-Driven Development (TDD) to build some code to illustrate how tests can be used to drive the design of your application’s code.
+
+Most of us are not lucky enough to be in a position to use TDD on a new project. I will show you how to write tests for an existing application, especially one that was not written with any tests in mind. The tools are the same; we just use them differently.
+
+After having written some tests, we will then move onto dealing with the people side of testing by providing strategies to help get the people you work with to become more test-centric. Understanding that testing was more about people than the tools themselves was a major revelation for me.
+
+To get the most out of this book, you should be a developer who has an intermediate understanding of PHP. It’s hard to write tests when you don’t have a firm grasp of the language itself, and the types of tests you’ll be writing are more PHP code you will need to understand and support.
+
+Good luck and I hope you find the material in here useful. I would love to hear your feedback as you work your way through this book. The best way to reach me is via Twitter, where I do performance art as @grmypyprogrammer. If Twitter (or social media in general) is not your thing, you can email me at chartjes@grumpy-learning.com. I read every email that is not labeled as spam and try and answer them as soon as I can.
