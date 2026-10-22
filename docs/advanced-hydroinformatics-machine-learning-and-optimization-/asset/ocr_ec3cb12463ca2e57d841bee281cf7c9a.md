@@ -1,0 +1,11 @@
+that at every point, a random step is taken away from the previous step, and the distribution of the steps is independent (Pwasong & Sathasivam, 2015). The type of random walk forecast used in this study was the random walk without drift, which means that the mean value of the steps is zero. Simply put, the forecast assumes that the next value is the same as the current value. The performances of these benchmark models were compared with those of the ML models.
+
+# 7.6. Results and Discussion
+
+# 7.6.1. Performance of All Data-Driven Models
+
+In comparing all data-driven models (TDNN, LSTM, linear regression and naive), the ML models generally outperformed the simpler models (linear regression and naive) (Fig. 7.6). The TDNN model performed the best in predicting water level at each lead time investigated for station BCA11. This observation is the same for station NP201 with the exception of the 10 day water-level prediction, where the naive model showed better performance than the TDNN model. Similar to station BCA11, the TDNN model for station P33 outperforms the other models at each forecast lead time. The charts of the remaining two stations show similar characteristics. The performance of the TDNN model on the short-term forecasts was similar to or better than the naive model, while it also performed better on the medium-range forecasts. For each lead time prediction for each station, the linear regression model was outperformed by both the TDNN model and the naive model, while the TDNN model generally performed better overall. The LSTM model outperformed the linear regression model in predicting the medium-range forecast horizons for each station with the exception of S12D_T. For stations BCA11 and P33, the LSTM model also performs better than the naive model. The results of the medium-range predictions of the LSTM model, and those of the TDNN model in particular, however, indicate that ML is useful in this study.
+
+# 7.6.2. Short-Term Forecasts
+
+Station NP201 was used as an example to present the results of the water-level forecasts. The TDNN model accurately predicts the water level 1 day ahead, over the 3 yr sequential test data, with an RMSE of 0.017 m (average water level = 1.8 m) and an R² of 0.997. The peaks and continuous changes in water level are well predicted in the first 200 days of the

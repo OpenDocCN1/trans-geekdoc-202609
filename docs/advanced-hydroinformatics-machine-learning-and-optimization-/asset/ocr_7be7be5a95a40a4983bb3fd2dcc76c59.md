@@ -1,0 +1,13 @@
+morphemes and allows us to characterize the word and understand its meaning knowing its root form. The final objective of this step is to help to identify words, which are normally referred to as tokens, since the original word in fact possesses some information, and, for programming, it is a sequence of characters, which represent a unit of information.
+
++   2. Syntax analysis: it allows for checking the grammar and with this the way words are arranged in a sentence. As a consequence, this order allows us to find how words should be normally arranged. Using this information, it is possible to build relationships between them. Knowing this, it is possible to assess the parts of a sentence (POS) and tag this information based on the structure found.
++   
++   3. Semantic analysis: This step aims at finding the meaning of the statement, how the phrase reads literally. This understanding provides the basis for rejecting syntactically valid, but illogical statements.
++   
++   4. Discourse integration: The context in which a phrase is used can be very important, so this step aims at establishing links between the different sentences, especially the immediately preceding one.
++   
++   5. Pragmatic analysis, this concept uses a set of rules that describe cooperative dialogs, as in social content. What can be found in social media and common interactions can become a rule and with this we can comprehend the way the communication takes place.
+
+NLP sentiment analysis in marketing, for example, has developed tools that allow us to provide basic knowledge extraction or information provider from how people feel about a product, and, with this, has opened numerous possibilities in decision making and understanding of people's behavior. In water resources, several exploratory projects have been carried out at the IHE Delft Institute for Water Education aiming at understanding how people write about their water bodies in social media and newspapers (see Fig. 1.4). The concept presented here is based on media information on the Web on how people express (share) feelings in the form of text in the media. This concept applies to society in general and not only to citizens per se, which will include how policy makers and news also influence the media and therefore citizens. This cycle has two parts, since people tend to be susceptible to changing their feelings toward other people based on media information. With this, the media is, at the same time, the engine that moves people, but it also records all actions on citizens’ publications.
+
+Application of NLP technologies resulted in development of AI chatbots. Conventional chatbots have evolved since 1966 (Weizenbaum,

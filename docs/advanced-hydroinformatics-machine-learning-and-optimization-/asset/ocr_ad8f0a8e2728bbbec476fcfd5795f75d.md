@@ -1,0 +1,13 @@
+during dry periods, the turbine discharges a minimum flow during the day. Unfortunately, there is no information available on critical flow thresholds below which significant environmental impacts occur. Berge et al. (2003) proposed downstream of the dam a minimum flow of 3 m³/s to have the necessary recipient capacity for pollutants and to support aquatic life. However, in this study, the minimum flow is assumed based on the historical data of outflows from the reservoir taking the flow that is statistically exceeded 95% of the time (7.5 m³/s).
+
+On the other hand, a maximum storage level value (87.5 m.a.s.l) is proposed from which the maximum flow capacity of the turbine can be released. So then:
+
+$$Q_{c,t} = \begin{cases} Q_{cmin} & \text{if } S_t \le S_{min} \\ Q_{tbmax} & \text{if } S_t \ge S_{max} \\ Q_{ml,t} & \text{if } S_{min} < S_t < S_{max} \end{cases}\tag{15.2}$$
+
+where $Q_{c,t}$ are the controlled discharges of the reservoir at $t$; $S_t$ is the storage in the reservoir at time $t$; $S_{min}$ is the proposed minimum threshold storage; $S_{max}$ is the proposed maximum threshold storage; $Q_{cmin}$ is the minimum discharge (7.5 m³/s); $Q_{tbmax}$ is the maximum discharge through the turbine (30 m³/s). When the level is within the defined storage threshold ($S_{min} < S_t < S_{max}$), the discharge is defined by the ML models $Q_{ml,t}$, which is described in section 15.3.
+
+Once the controlled discharges have been defined, reservoir level is verified with respect to spillway crest level. If this is exceeded, the spillway release is calculated as a function of the height above the crest of the spillway. The specific rating curve of the spillway for Hatillo reservoir is available at Viparelli (1983). After all outflows (i.e., controlled and uncontrolled) are defined (including the evaporation losses $EVP_t$), reservoir storage volume for the next time step $S_{t+1}$ is obtained by means of water balance (equation (15.1)), starting the process again and so the cycle continues until the analysis period is completed. The route shaded in the flow diagram (Fig. 15.5) corresponds to the main operating route in this proposed model (i.e., when the storage levels are within the defined threshold), where the segmented rectangle highlights the component of ML models, which will be described in section 15.3.
+
+# 15.3. Methodology
+
+Initially, section 15.3.1 provides a brief overview of the ML models used. The proposed methodology is divided into two general parts. In

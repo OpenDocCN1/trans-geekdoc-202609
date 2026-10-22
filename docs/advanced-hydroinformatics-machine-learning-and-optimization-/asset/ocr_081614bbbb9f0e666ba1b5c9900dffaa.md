@@ -1,0 +1,13 @@
+# 6.2.2. Data Set
+
+The data set comprises hourly satellite-derived precipitation covering the Jubones basin, and hourly runoff data collected at the hydrological station, situated in the outlet of the basin. Runoff is measured at the entrance of the Minas-San Francisco hydroelectric dam, and although measurements are prone to dam oscillations uncertainties, they are expected to be absorbed/compensated by the use of the RF algorithm. Moreover, since the dam was completed in 2018, the study period is ~2.5 yr, from 18 November 2018 to 31 March 2021.
+
+# *Precipitation From Remote Sensing (RS) Products*
+
+Precipitation information was retrieved from two near-real-time multisatellite sources, the IMERG-early run, and the PERSIANN-Cloud Classification System (CCS) precipitation subproducts. Data were derived at hourly intervals. The main difference between both precipitation sources is the spatial resolution. The PERSIANN-CCS possesses the highest spatial resolution for the region (0.04° x 0.04°), being the result of infrared imagery processing and cloud classification using artificial neuronal networks (Hong et al., 2004). Whereas the IMERG-early run approach interpolates various microwave precipitation estimates and delivers data with a spatial resolution of 0.1° x 0.1°.
+
+Figure 6.2 shows the mean annual precipitation of the Jubones basin, measured by the PERSIANN-CCS (728.5 mm) and IMERG-early run (727.2 mm) precipitation satellite subproducts. For this plot, we used hourly information for 2019 and 2020 (see also the precipitation plot in Fig. 6.3). We found differences of 1.3 and 116 mm between the mean and the maximum annual precipitation obtained from the PERSIANN-CCS and the IMERG-early run subproducts, respectively. This is attributed to the spatial resolution difference and the measurement principle of each satellite subproduct.
+
+# *Runoff at the Entrance of the MSF Hydropower Dam*
+
+Hourly time series of runoff at the outlet of the Jubones basin were derived from the server of the Corporación Eléctrica del Ecuador (CELEC EP, https://www.celec.gob.ec/), the company that manages the Minas-San Francisco hydroelectric dam. Figure 6.3 depicts the runoff information for the study period. Figure 6.3a shows the hourly time series, whereas Figure 6.3b shows the corresponding probability of exceedance from which 55 nearly independent peak flow events were selected based on peak-over-threshold values (dark dots in Fig. 6.3a). The peak flow

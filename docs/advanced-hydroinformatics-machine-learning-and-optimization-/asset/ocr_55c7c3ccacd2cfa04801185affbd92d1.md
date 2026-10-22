@@ -1,0 +1,5 @@
+![](bbox=[0.216, 0.117, 0.877, 0.649])
+
+**Figure 7.7**  Short-term forecasts for station NP201. (a) Rainfall used in the water-level predictions: R_t is measured rainfall; R_{t+1} and R_{t+2} are forecast rainfall; (b) three-year water-level prediction from TDNN model; (c) first 200 days magnified; (d) days 400–600 magnified.
+
+rainfall, the system reacts more to rainfall occurrences and the water level changes somewhat proportionally. During the wet season, this is not the case (Fig. 7.7b). This greater influence of rainfall inputs on the water level during the dry season is likely to have been the case in the training data as well, which would explain why the model may tend to predict a water-level peak where there was no measured peak (Fig. 7.7d). Given that longer-term antecedent conditions affect the response to rainfall,

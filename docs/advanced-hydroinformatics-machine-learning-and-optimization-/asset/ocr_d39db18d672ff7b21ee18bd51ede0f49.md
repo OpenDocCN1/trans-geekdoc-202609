@@ -1,0 +1,7 @@
+water levels representative of the dry season of 2009 were the lowest values presented to the model, and the characteristics of the reaction of the system during the dry season described prior could be the reason for the overprediction. Apart from this outlier in the predictions, each forecast of the 2009 dry season was good, particularly in capturing the increase in water level entering into the wet season from days 514 to 519 (Fig. 7.7d).
+
+The results of the LSTM model show a lag in the water-level prediction of the 1 day forecast horizon. With each lead time following, the lag increases, suggesting the dominance of the autoregressive water-level predictors on the LSTM model's prediction. This observation specifically occurs around day 150 in Figure 7.8b. The three peaks analyzed in the results of the TDNN model are predicted with less accuracy by the LSTM model, but the timing of peaks 1 and 2 are the same for each short-term forecast lead time, although lagged, compared with the measured data. Because only four trials were made in finding a suitable number of hidden nodes for the LSTM model, a more extensive optimization of the model parameters could potentially improve the accuracy of the water-level forecasts. Characteristics similar to those observed in the predictions of the TDNN model are observed in the predictions of the LSTM model.
+
+![](bbox=[0.07, 0.47, 0.92, 0.88])
+
+Figure 7.8 Short-term forecasts for station NP201. (a) Three-year water-level prediction from LSTM model; (b) first 200 days magnified; (c) days 400–600 magnified.
