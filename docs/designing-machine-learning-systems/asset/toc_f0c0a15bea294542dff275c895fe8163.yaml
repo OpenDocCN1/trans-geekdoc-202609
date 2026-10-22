@@ -1,0 +1,28 @@
+- - '##'
+  - 赞誉 *设计机器学习系统*
+- - '###'
+  - Example of how to use FastAPI to turn your predict function
+- - '###'
+  - into a POST endpoint
+- - '###'
+  - 'Example: sketch of a recommender system that uses an ensemble of two models.'
+- - '###'
+  - Model A will be run on your local machine and model B will be run on AWS.
+- - '###'
+  - fitA requires a different version of NumPy compared to fitB
+- - '###'
+  - Requires 2 GPU of 16GB memory
+- - '###'
+  - M
+- - '###'
+  - N
+- - '###'
+  - O
+- - '###'
+  - P
+- - '###'
+  - Q
+- - '###'
+  - R
+- - '###'
+  - S

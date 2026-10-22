@@ -1,0 +1,46 @@
+
+## Addressing Data Distribution Shifts
+
+How companies address data shifts depends on how sophisticated their ML infrastructure setups are. At one end of the spectrum, we have companies that have just started with ML and are still working on getting ML models into production, so they might not have gotten to the point where data shifts are catastrophic to them. However, at some point in the future—maybe three months, maybe six months—they might realize that their initial deployed models have degraded to the point that they do more harm than good. They will then need to adapt their models to the shifted distributions or to replace them with other solutions.
+
+At the same time, many companies assume that data shifts are inevitable, so they periodically retrain their models—once a month, once a week, or once a day—regardless of the extent of the shift. How to determine the optimal frequency to retrain your models is an important decision that many companies still determine based on gut feelings instead of experimental data.[^41] We'll discuss more about the retraining frequency in Chapter 9.
+
+To make a model work with a new distribution in production, there are three main approaches. The first is the approach that currently dominates research: train models using massive datasets. The hope here is that if the training dataset is large enough, the model will be able to learn such a comprehensive distribution that whatever data points the model will encounter in production will likely come from this distribution.
+
+The second approach, less popular in research, is to adapt a trained model to a target distribution without requiring new labels. Zhang et al. (2013) used causal interpretations together with kernel embedding of conditional and marginal distributions to correct models’ predictions for both covariate shifts and label shifts without using labels from the target distribution.[^42] Similarly, Zhao et al. (2020) proposed domain-invariant representation learning: an unsupervised domain adaptation technique that can learn data representations invariant to changing distributions.[^43] However, this area of research is heavily underexplored and hasn’t found wide adoption in industry.[^44]
+
+The third approach is what is usually done in the industry today: retrain your model using the labeled data from the target distribution. However, retraining your model is not so straightforward. Retraining can mean retraining your model from scratch on both the old and new data or continuing training the existing model on new data. The latter approach is also called fine-tuning.
+
+If you want to retrain your model, there are two questions. First, whether to train your model from scratch (stateless retraining) or continue training it from the last checkpoint (stateful retraining). Second, what data to use: data from the last 24 hours, last week, last 6 months, or from the point when data has started to drift. You might need to run experiments to figure out which retraining strategy works best for you.[^45]
+
+In this book, we use “retraining” to refer to both training from scratch and fine-tuning. We’ll discuss more about retraining strategy in the next chapter.
+
+Readers familiar with data shift literature might often see data shifts mentioned along with domain adaptation and transfer learning. If you consider a distribution to be a domain, then the question of how to adapt your model to new distributions is similar to the question of how to adapt your model to different domains.
+
+Similarly, if you consider learning a joint distribution P(X, Y) as a task, then adapting a model trained on one joint distribution for another joint distribution can be framed as a form of transfer learning. As discussed in Chapter 4, transfer learning refers to the family of methods where a model developed for a task is reused as the starting point for a model on a second task. The difference is that with transfer learning, you don’t retrain the base model from scratch for the second task. However, to adapt your model to a new distribution, you might need to retrain your model from scratch.
+
+Addressing data distribution shifts doesn’t have to start after the shifts have happened. It’s possible to design your system to make it more robust to shifts. A system uses multiple features, and different features shift at different rates. Consider that you’re building a model to predict whether a user will download an app. You might be tempted to use that app’s ranking in the app store as a feature since higher-ranking apps tend to be downloaded more. However, app ranking changes very quickly. You might want to instead bucket each app’s ranking into general categories such as top 10, between 11 and 100, between 101 and 1,000, between 1,001 and 10,000, and so on. At the same time, an app’s categories might change a lot less frequently, but they might have less power to predict whether a user will download that app. When choosing features for your models, you might want to consider the trade-off between the performance and the stability of a feature: a feature might be really good for accuracy but deteriorate quickly, forcing you to train your model more often.
+
+You might also want to design your system to make it easier for it to adapt to shifts. For example, housing prices might change a lot faster in major cities like San Francisco than in rural Arizona, so a housing price prediction model serving rural Arizona might need to be updated less frequently than a model serving San Francisco. If you use the same model to serve both markets, you'll have to use data from both markets to update your model at the rate demanded by San Francisco. However, if you use a separate model for each market, you can update each of them only when necessary.
+
+Before we move on to the next section, I want to reiterate that not all performance degradation of models in production requires ML solutions. Many ML failures today are still caused by human errors. If your model failure is caused by human errors, you'd first need to find those errors to fix them. Detecting a data shift is hard, but determining what causes a shift can be even harder.
+
+## Monitoring and Observability
+
+As the industry realized that many things can go wrong with an ML system, many companies started investing in monitoring and observability for their ML systems in production.
+
+Monitoring and observability are sometimes used interchangeably, but they are different. Monitoring refers to the act of tracking, measuring, and logging different metrics that can help us determine when something goes wrong. Observability means setting up our system in a way that gives us visibility into our system to help us investigate what went wrong. The process of setting up our system in this way is also called “instrumentation.” Examples of instrumentation are adding timers to your functions, counting NaNs in your features, tracking how inputs are transformed through your systems, logging unusual events such as unusually long inputs, etc. Observability is part of monitoring. Without some level of observability, monitoring is impossible.
+
+Monitoring is all about metrics. Because ML systems are software systems, the first class of metrics you'd need to monitor are the operational metrics. These metrics are designed to convey the health of your systems. They are generally divided into three levels: the network the system is run on, the machine the system is run on, and the application that the system runs. Examples of these metrics are latency; throughput; the number of prediction requests your model receives in the last minute, hour, day; the percentage of requests that return with a 2xx code; CPU/GPU utilization; memory utilization; etc. No matter how good your ML model is, if the system is down, you're not going to benefit from it.
+
+Let's look at an example. One of the most important characteristics of a software system in production is availability—how often the system is available to offer reasonable performance to users. This characteristic is measured by uptime, the
+
+[^41]: As Han-chung Lee, one early reviewer, pointed out, this is also because smaller companies don't have enough data on their models. When you don't have a lot of data, it's better to have a time-based regimen than to overfit your regime to insufficient data.
+
+[^42]: Kun Zhang, Bernhard Schölkopf, Krikamol Muandet, and Zhikun Wang, “Domain Adaptation under Target and Conditional Shift,” Proceedings of the 30th International Conference on Machine Learning (2013), https://oreil.ly/C123l.
+
+[^43]: Han Zhao, Remi Tachet Des Combes, Kun Zhang, and Geoffrey Gordon, “On Learning Invariant Representations for Domain Adaptation,” Proceedings of Machine Learning Research 97 (2019): 7523–32, https://oreil.ly/W78hH.
+
+[^44]: Zachary C. Lipton, Yu-Xiang Wang, and Alex Smola, “Detecting and Correcting for Label Shift with Black Box Predictors,” arXiv, February 12, 2018, https://oreil.ly/zKSJj.
+
+[^45]: Some monitoring vendors claim that their solutions are able to detect not only when your model should be retrained, but also what data to retrain on. I haven’t been able to verify the validity of these claims.
