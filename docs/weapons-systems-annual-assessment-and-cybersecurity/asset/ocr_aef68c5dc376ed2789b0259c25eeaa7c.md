@@ -1,0 +1,11 @@
+of areas that includes satisfying ACV capability requirements and readiness to proceed into low-rate initial production.
+
+# Production Readiness
+
+The program will make two critical decisions in 2018: the first is to choose a single vendor for the production contract, and the second is to determine if the program is ready start low-rate initial production. The decision to enter low-rate production is scheduled for June 2018.
+
+The Marine Corps started a production readiness review in November 2017 to determine if contractors’ production maturity was sufficient for starting low-rate production after the production decision. In December 2017, the program sent solicitations to the two participating contractors to obtain their proposals for low- and full-rate production, with each reflecting updated information about test performance and design modifications through November 2017. The competing contractors, which, according to program officials, previously submitted pricing for production vehicles in their original proposals for the development contracts, are able to adjust the price of the ACVs in their proposals for the production contract, based on design changes and other changes realized through development. The proposals were due to the program office in January 2018. The Marine Corps plans to consider the results of the prototype performance tests and the proposed prices when selecting a final contractor for production.
+
+# Other Program Issues
+
+The program has adopted some best practices to minimize acquisition risk, such as using mature technologies and fostering competition. However, the Marine Corps is employing an aggressive schedule to obtain initial operational capability (IOC) by fiscal year 2020. The program is scheduled to continue developmental testing more than a year into the production phase, raising the risk that concurrent developmental testing and production could result in costly retrofits and schedule delays. The concurrency risk increased in 2016 when the start date for development testing was delayed and test events were pushed back 2 to 12 months as a

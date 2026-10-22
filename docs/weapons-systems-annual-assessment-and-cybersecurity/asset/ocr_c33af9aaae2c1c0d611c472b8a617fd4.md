@@ -1,0 +1,9 @@
+# Production Readiness
+
+The Principal Deputy Assistant Secretary of the Air Force (Acquisition and Logistics) approved Increment 3.2B for production in August 2016, 2 months later than planned but 1 month before the threshold date set at the start of program development. This production decision occurred after the program implemented a production readiness plan and completed qualification testing for the program’s hardware components. The program office conducted an assessment of the production readiness in April 2016 and found that 95 percent of critical manufacturing processes met the DOD guidance for entering production. However, the contractor did not demonstrate manufacturing processes to be in statistical control prior to production start, which is inconsistent with best practices.
+
+Increment 3.2B program officials have identified some production risks at an F-22 modernization program supplier. A Lockheed Martin supplier produces inertial navigation system units, a key component of the F-22 Raptor, that a separate program is incorporating into systems connected with Increment 3.2B. During incorporation these inertial navigation system units have failed to remain calibrated at an increased rate, and program officials are concerned that the contractor will not produce enough units on time to support installation of the third Increment 3.2B production lot. To mitigate this concern, the program is procuring a calibration service with the prime contractor.
+
+# Other Program Issues
+
+According to program officials, a capability relating to navigation was not meeting its required performance in 2017. This capability is separate and distinct from the geolocation algorithm technology. In February 2017, the Air Force amended the associated performance requirement, and the capability currently meets the amended requirement. Program officials stated that this capability provides significantly improved performance over past systems.
