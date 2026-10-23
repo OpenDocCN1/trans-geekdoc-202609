@@ -1,0 +1,11 @@
+# Chapter 2
+
+# Quantification by PCR
+
+# Primers Design
+
+The first step in all PCR assays is the design of the primers. As mentioned in the first chapter, this step requires previous knowledge of the target sequence but, in the post-genomic era we are living in, the sequences of virtually all organisms are deposited on the GenBank. All that is needed is to query the database for the sequence of interest. If the sequence is not deposited, however, the operator must first sequence the ROI and then use the obtained information to design the primers. Adapter ligation-mediated PCR, that is a process where oligonucleotides with known sequence are covalently linked to the targets of interest, can be used to amplify region with unknown sequences (Gibriel and Adel, 2017).
+
+As an example, let’s design primers to determine the presence of *E. coli* O:157 by targeting a toxin that is an important virulence factor for this pathogenic strain, that is the Shiga toxin 2 (Stx2). To allow normalization of the expression of these targets, another set of primers will be designed to target a bacterial gene that can be considered constitutionally expressed, the *E. coli* DNA-pol. It is possible to obtain the desired sequences from the NCBI nucleotide database (https://www.ncbi.nlm.nih.gov/nucleotide?cmd=search) by searching for the wanted target. The key phrase “Escherichia coli Shiga toxin 2” returned (at the time of writing) 440 hits. As a target, the second hit “Escherichia coli strain XP2F shiga toxin 2 (stx2) gene, partial cds” (GenBank ID: MW311073.1), which covers only the gene of interest, was selected and the sequence was stored in a fasta-format file. The procedure is then repeated for “Escherichia coli DNA-pol”, selecting “Escherichia coli DNA polymerase gene, complete cds” as reference sequence (GenBank ID: M35371.2).
+
+To design primers, there are several tools available online at the websites of companies that produce oligonucleotides. These are graphic user interfaces that allow an intuitive workflow. Another alternative is *Primer3* (Untergasser *et al.*, 2012), a popular tool that is available either as an online tool or as a command line executable. For the R environment, *openPrimer* is

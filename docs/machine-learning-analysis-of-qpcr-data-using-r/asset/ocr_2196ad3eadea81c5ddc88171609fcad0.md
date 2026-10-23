@@ -1,0 +1,12 @@
+(that is, a factor) and the disease, just as stated by the Koch’s postulates.
+
++   - *Consistency.* The epidemiological evidence must be demonstrated by different people, in different regions and periods to avoid any bias. This is particularly important for rare diseases.
++   - *Specificity.* The factor must be associated to a specific disease rather than a plethora of conditions. However, some diseases might have multiple causes and a given factor might cause more than one disease.
++   - *Temporality.* The factor must precede the disease just like the cause precedes the effect. Hence, infection must occur before the disease, as stated by Koch.
++   - *Gradient.* A higher exposure to a factor should be related to higher frequency (or worsening of the outcomes) of the disease.
++   - *Plausibility.* The causality between exposure to a factor and the development of the disease must be explained by a logical model.
++   - *Coherence.* The model should account for all the occurrences associated with a factor, without excluding the data that does not fit it.
++   - *Experimentation.* The model should be tested in the laboratory to assure its reliability. This is particularly relevant because statistical analysis can provide a measurement of the strength of association but cannot proof the causality between factor and disease.
++   - *Analogy.* The mode of action of a factor is usually similar to another factor. For instance, both oncogenic papillomavirus and JC virus impair the onco-suppressor p53 and both can cause cancer. These viruses encode proteins that interact with p53 and, although the proteins are different, they induce analogous molecular pathways.
+
+Despite the practical issues involved in the association of an etiological factor (either a micro-organism, a protein, or a gene) to a disease, once the link has been recognized, the goal of diagnostics is to identify the presence of this factor in people affected by a disease to begin an effective treatment. For instance, the diagnosis of severe atypical respiratory syndrome corona virus (SARS-CoV) is based on the laboratory confirmation of the presence of the viral genome in a specimen (Loeffelholz and Tang, 2020) and so does the diagnosis of hemorrhagic fever, malaria, anthrax and tuberculosis, to list just
