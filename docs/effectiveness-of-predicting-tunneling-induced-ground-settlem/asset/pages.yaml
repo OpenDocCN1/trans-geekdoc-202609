@@ -1,0 +1,1458 @@
+- pgno: 0
+  md: '# Journal of Rock Mechanics and
+
+    Geotechnical Engineering
+
+
+    journal homepage: www.jrmge.cn
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_0_0.png)
+
+
+    Full Length Article
+
+
+    # Effectiveness of predicting tunneling-induced ground settlements using machine
+    learning methods with small datasets
+
+
+    Linan Liu ${ }^{a, *}$, Wendy Zhou ${ }^{a, *}$, Marte Gutierrez ${ }^{b}$
+
+
+    +   ${ }^{a}$Department of Geology and Geological Engineering, Colorado School
+    of Mines, Golden, CO, 80401, USA
+
+    +   ${ }^{b}$Department of Civil and Environmental Engineering, Colorado School
+    of Mines, Golden, CO, 80401, USA
+
+
+    # ARTICLE INFO
+
+
+    +   Article history:
+
+    +   Received 31 March 2021
+
+    +   Received in revised form 7 July 2021
+
+    +   Accepted 20 August 2021
+
+    +   Available online 11 December 2021
+
+
+    +   Keywords:
+
+    +   Ground settlements
+
+    +   Tunneling
+
+    +   Machine learning
+
+    +   Small dataset
+
+    +   Model accuracy
+
+    +   Model stability
+
+    +   Feature importance
+
+
+    # ABSTRACT
+
+
+    Prediction of tunneling-induced ground settlements is an essential task, particularly
+    for tunneling in urban settings. Ground settlements should be limited within a
+    tolerable threshold to avoid damages to aboveground structures. Machine learning
+    (ML) methods are becoming popular in many fields, including tunneling and underground
+    excavations, as a powerful learning and predicting technique. However, the available
+    datasets collected from a tunneling project are usually small from the perspective
+    of applying ML methods. Can ML algorithms effectively predict tunneling-induced
+    ground settlements when the available datasets are small? In this study, seven
+    ML methods are utilized to predict tunneling-induced ground settlement using 14
+    contributing factors measured before or during tunnel excavation. These methods
+    include multiple linear regression (MLR), decision tree (DT), random forest (RF),
+    gradient boosting (GB), support vector regression (SVR), back-propagation neural
+    network (BPNN), and permutation importance-based BPNN (PI-BPNN) models. All methods
+    except BPNN and PI-BPNN are shallow-structure ML methods. The effectiveness of
+    these seven ML approaches on small datasets is evaluated using model accuracy
+    and stability. The model accuracy is measured by the coefficient of determination
+    $(R^2)$ of training and testing datasets, and the stability of a learning algorithm
+    indicates predictive performance. Also, the quantile error (QE) criterion is introduced
+    to assess model predictive performance considering underpredictions and overpredictions.
+    Our study reveals that the RF algorithm outperforms all the other models with
+    the highest model prediction accuracy (0.9) and stability $(3.02\times10^{-2})$.
+    Deep-structure ML models do not perform well for small datasets with relatively
+    low model accuracy (0.59) and stability $(5.76)$. The PI-BPNN architecture is
+    proposed and designed for small datasets, showing better performance than typical
+    BPNN. Six important contributing factors of ground settlements are identified,
+    including tunnel depth, the distance between tunnel face and surface monitoring
+    points (DTM), weighted average soil compressibility modulus (ACM), grouting pressure,
+    penetrating rate, and thrust force. © 2022 Institute of Rock and Soil Mechanics,
+    Chinese Academy of Sciences. Production and hosting by Elsevier B.V. This is an
+    open access article under the CC BY license ([http://creativecommons.org/licenses/
+    by/4.0](http://creativecommons.org/licenses/ by/4.0)).
+
+
+    # 1. Introduction
+
+
+    During tunnel excavation, changes in in situ stress state and ground loss occur
+    in the mass around the excavation. These changes are often manifested in the ground
+    settlement, particularly for shallow tunnels in urban settings. For urban shield
+    tunnel constructions, the ground settlement must be limited within a tolerable
+    threshold to prevent damage to aboveground structures.
+
+
+    Therefore, predictions of tunneling-induced ground movement are of vital importance.
+
+
+    Machine learning (ML) techniques have recently experienced immense growth driven
+    by advanced computational performance and developed for many tunneling applications,
+    including tunnel boring machine (TBM) performance prediction, tunnel condition
+    assessment, predictions of tunnel face stability and tunnel-induced settlement,
+    etc. (Shei et al., 2020; Zhu et al., 2021; Feng et al., 2021). Typically, ML techniques
+    are implemented on the assumption of big data. However, one of the prevalent topics,
+    prediction of tunneling-induced ground deformation, usually has access to limited
+    monitoring datasets ranging from 10 s to 100 s, as summarized in Table 1. Thus,
+    the effectiveness of applying ML
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_0_1.png)
+
+
+
+
+    Contents lists available at ScienceDirect
+
+
+
+
+    +   * Corresponding author.
+
+    +   ${ }^{*}$ E-mail address: wzhou@mines.edu (W. Zhou).
+
+    +   Peer review under responsibility of Institute of Rock and Soil Mechanics,
+    Chinese Academy of Sciences.
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_0_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'algorithms in such a research area needs to be further discussed instead of
+    using them directly and blindly.
+
+
+    Big data are characterized as being large in volume, produced continuously, and
+    varied in nature, even though they are often a by-product of a system rather than
+    designed to investigate particular phenomena or processes. Big data provide rich
+    inputs for ML algorithms to extract underlying patterns and build predictive models
+    (Zhou et al., 2017). As Kitchin (2013) described, big data are enormous in volume
+    consisting of terabytes or petabytes of data. In contrast, small data are generally
+    characterized by limited volume, non-continuous collection, and little variety,
+    and are generated to answer specific questions (Kitchin and Lauriault, 2015).
+    Small datasets can also be identified when the ratio of the number of training
+    samples to the Vapnik–Chervonenkis (VC) dimensions of a learning function is less
+    than 20 (Chao et al., 2011; Vladimir, 2020). The VC dimension is defined as the
+    cardinality of the largest set of points that the algorithm can shatter, largely
+    determined by input space. Since a tunnel project is typically constructed within
+    a limited period, the average dataset size and inputs in the publications are
+    approximately 148 and 10, respectively (Table 1). Therefore, the prediction of
+    tunneling-induced ground settlements is a small dataset question.
+
+
+    The prediction of ground surface settlements induced by shallow tunnel excavation
+    with TBM is a complex problem associated with TBM operation parameters, encountered
+    geological conditions, tunnel geometry, etc. By applying MLs, these possible contributing
+    factors (input data) collected from monitoring instrumentations can directly serve
+    as the “textbook” for learning and understanding the tunneling-induced ground
+    settlement (output data) without pre-assumption of data distribution.
+
+
+    The most popular ML algorithm is the ANN (Zhang et al., 2020c), a deep structure
+    model. ANN has also been integrated with other theories such as wavelet theory
+    and fuzzy logic (Pourtaghi and Lotfollahi-Yaghin, 2012; Ahangari et al., 2015)
+    to improve the prediction performance. In most applications of the ANN to ground
+    settlement prediction, the input layer has the number of nodes equal to the number
+    of influencing variables, and the output layer has one node
+
+
+    # Table 1
+
+
+    Published research for tunneling-induced ground settlements via ML algorithms.
+
+
+    | Dataset size | Number of inputs | Applied ML method | Reference |
+
+    |---|---|---|---|
+
+    | 49 | 10 | RF | Kohestani et al. (2017) |
+
+    | 49 | 10 | ANN | Suwansawat and Einstein (2006) |
+
+    | 49 | 10 | Wavelet-ANN | Pourtaghi and Lotfollahi-Yaghin (2012) |
+
+    | 50 | 5 | ANN | Darabi et al. (2012) |
+
+    | 53 | 5 | ANN | Ahangari et al. (2015) |
+
+    | 55 | — | SVM | Zhang et al. (2017) |
+
+    | 81 | 14 | ANN | Santos and Celestino (2008) |
+
+    | 95 | — | ANN | Boubou et al. (2010) |
+
+    | 95 | 15 | Fuzzy-ANN | Bouayad and Emeriault (2017) |
+
+    | 113 | 19 | ANN | Kim et al. (2001) |
+
+    | 115 | 8 | ANN | Goh and Hefney (2010) |
+
+    | 143 | 3 | ANN | Hasanipanah et al. (2016) |
+
+    | 143 | — | MLR, ANN | Moghaddasi and Noorian-Bidgoli (2018) |
+
+    | 147 | 10 | RVM | Wang et al. (2013) |
+
+    | 148 | 8 | ANN, SVM, TM | Zhang et al. (2020a) |
+
+    | 160 | 9 | ANN | Marto et al. (2012) |
+
+    | 200 | 11 | NNs, RF, SVM | Chen et al. (2019) |
+
+    | 230 | 13 | ANN, SVM | Ocak and Seker (2013) |
+
+    | 294 | 12 | RF, SVM, NNs | Zhang et al. (2020b) |
+
+    | 300 | 7 | SVM, DT, LR, NNs | Mahmoodzadeh et al. (2020) |
+
+    | 328 | 17 | ANN | Zhang et al. (2020c) |
+
+    | 356 | 11 | ANN | Shi et al. (1998) |
+
+
+    Note: ANN — Artificial neural network; NNs — Neural networks; RF — Random forest;
+    SVM — Support vector machine; TM — Tree-based method; RVM — Relevance vector machine;
+    LR — Linear regression; MLR — Multiple linear regression.
+
+
+    representing predicted ground settlements (Suwansawat and Einstein, 2006). However,
+    the neural network (NN) architecture design for applying small datasets is less
+    considered, easily leading to overfitting performances. Apart from ANNs, shallow
+    architecture models have also been utilized, such as support vector machine (SVM),
+    decision tree (DT) and random forest (RF). SVM is designed to analyze large amounts
+    of data and capable of handling high dimensionality (>1000) very well (Yang and
+    Trew, 2004). SVM used in regression problems is known as support vector regression
+    (SVR). Tree-based methods (TMs) such as DT and RF are recently introduced to predict
+    tunneling-induced ground settlements (Chen et al., 2019). These applied ML methods
+    are typically evaluated by the difference between predicted and target outputs.
+    Predictive results could be either underprediction or overprediction. Calculated
+    errors for model assessment typically consider underprediction and overprediction
+    equally. However, underprediction is more severe than overprediction since underprediction
+    may cause project failure. Additionally, the model stability is less considered.
+    Model stability indicates if model performance is affected by variabilities in
+    the model architecture and if the obtained results can be considered robust.
+
+
+    Motivated by the above considerations, this paper aims to answer the question
+    — “If ML algorithms can be applied effectively in small tunneling-related datasets.”
+    Based on the literature review and summarization (Table 1), seven ML algorithms
+    widely considered in publications will be applied, including multiple linear regression
+    (MLR), DT, RF, gradient boosting (GB), SVR, an ANN trained by the back-propagation
+    (BPNN) and permutation importance-based BPNN (PI-BPNN) algorithms. It should be
+    noted that the PI-BPNN architecture is first-time proposed based on the consideration
+    of applying NNs to small datasets. These seven algorithms are used and compared
+    in an urban shield tunnel in China. Both model accuracy and stability are analyzed
+    for seven learning algorithms. In addition, the quantile error (QE) is proposed
+    to assess the model performance based on the consideration of underprediction
+    and overprediction. Besides identifying the most suitable model, this paper also
+    provides the feature importance using the permutation feature selection method.
+    Several variables are identified as important factors affecting tunneling-induced
+    ground settlements.
+
+
+    # 2. Employed ML algorithms
+
+
+    For ML models, parameters connecting inputs and outputs are initiated randomly
+    and optimized based on a cost function. The cost function indicates the difference
+    between the actual and the predicted outputs. An ML algorithm aims to minimize
+    the cost function, “learn” the model parameters, and eventually achieve the prediction.
+    The relationship between inputs and outputs could be linear or nonlinear. A linear
+    ML model (MLR) and six nonlinear models (DT, RF, GB, SVR, BPNN and PI-BPNN) will
+    be discussed.
+
+
+    The successful application of ML techniques largely depends on the architecture
+    design and hyperparameter training, such as the kernel selection of SVM, tree
+    depth and tree number of tree-based algorithms, hidden layer design of NN models,
+    etc. Without these considerations and detailed model design, it easily leads to
+    the failed application of ML techniques. Additionally, model selection or improvement
+    should be based on the consideration of the problem to be solved. For example,
+    since the NN is powerful at capturing complex relationships, it might not provide
+    ideal performance. Consequently, an improved BPNN model named PI-BPNN is proposed
+    in this paper, which fully considers the relationship between a small dataset
+    and network architecture.
+
+
+    All the algorithms and analyses are programmed in MATLAB and Python. The Python
+    code is implemented using Scikit-learn (Pedregosa et al., 2011) Python library.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# 2.1. MLR
+
+
+    MLR is a method of finding a linear model for the relationship between the output
+    parameter (dependent variable) and a set of input parameters (independent variables).
+    The mathematical form of the model is expressed as
+
+
+    y = b1 x1 + b2 x2 + ⋯ + bn xn + c  (1)
+
+
+    where bi is the regression coefficient representing the change of output (y) when
+    the inputs (xi) change by 1 unit, and c is a bias term. Parameters bi and c are
+    initiated randomly in the beginning, and then optimized using the gradient descent
+    method so that this formula can predict the output closely.
+
+
+    # 2.2. DT model
+
+
+    DT model is a tree structure that consists of an arbitrary number of nodes and
+    branches at each node. The depth of the tree determines how deep the tree can
+    grow. The deeper the tree, the more it obtains information about the data. DT
+    regression uses a fast divide-and-conquer-greedy algorithm that recursively splits
+    the data into smaller parts (Pekel, 2020). The dataset is split at several split
+    points for each input variable. At each split point, the errors of the cost function
+    are calculated and compared. The split point is eventually determined by the variable
+    yielding the lowest cost function values.
+
+
+    The general procedure for decision tree regression is:
+
+
+    +   1. Start with a single node.
+
+    +   2. Determine the split point that offers the minimum value of the cost function.
+
+    +   3. For each new node, go back to step (2). The procedure exists when the stopping
+    criterion is reached.
+
+
+    # 2.3. RF model
+
+
+    RF is an ensemble learning technique developed by Breiman (2001) to improve the
+    regression tree method by combining multiple DT models. In RF regression, each
+    tree is built using a deterministic algorithm by selecting a random set of variables
+    and a random sample from the training dataset (Mutanga et al., 2012). The RF algorithm
+    is not biased since there are multiple trees, and each tree is trained on a subset
+    of data. Thus, even if a new data point is introduced in the dataset, the overall
+    algorithm is not affected much since new data may impact one tree, but it is hard
+    to impact all the trees.
+
+
+    Three parameters need to be optimized in RF:
+
+
+    +   1. The number of regression trees, which is the most critical parameter.
+
+    +   2. The number of different predictors tested at each node. The default value
+    is 1/3 of the total number of the variables.
+
+    +   3. The minimal size of the trees’ terminal nodes, the default value of which
+    is 1.
+
+
+    # 2.4. GB model
+
+
+    GB regression is an ensemble method that employs a collection of simple additive
+    regression model predictions and averages them to estimate the response (Lyashevska
+    et al., 2020). GB regression trees consider additive models of the following form:
+
+
+    Fm(x) = Σ_{m=1}^{M} ym hm(x)  (2)
+
+
+    where ym is the learning rate, and hm(x) is the weak learner. DTs of fixed size
+    typically serve as weak learners. GB regression trees build the additive model
+    in a forward stepwise fashion (Eq. (3)). At each stage, the weak learner hm(x)
+    is chosen to minimize the cost function. Specifically, GB splits each tree and
+    uses the most contributing variable to minimize the cost function.
+
+
+    Fm(x) = Fm−1(x) + Σ_{m=1}^{M} ym hm(x)  (3)
+
+
+    Five essential parameters in the GB regression model need to be specified:
+
+
+    +   1. The number of boosting stages that will be performed.
+
+    +   2. The maximum depth, which limits the number of nodes in the tree. The optimum
+    value depends on the interaction of the input variables.
+
+    +   3. The minimum number of samples required to split an internal node.
+
+    +   4. The learning rate, which describes how much the contribution of each tree
+    will shrink.
+
+    +   5. The cost function to be optimized. The lease squares function is used in
+    this study.
+
+
+    # 2.5. SVR model
+
+
+    A set of training patterns (x1, y1), (x2, y2), …, (xl, yl) are given, where xi
+    ∈ R^n and yi ∈ R (i = 1, 2, …, l). Each yi value is the desired output for the
+    input vector xi. The SVR model is learnt from these patterns and used to predict
+    the target values of unseen input vectors (Yeh et al., 2011).
+
+
+    SVR is a popular choice for linear and nonlinear regression types, depending on
+    the kernel selection. Transforming data is achieved by kernel functions. Kernels
+    can be linear, nonlinear, polynomial, radial basis function (RBF), sigmoid, etc.
+    Kernel selection is dataset-dependent. The SVR model with RBF kernel (RBF-SVR)
+    is used in this study, chosen by trial-and-error experiments. Two associated hyperparameters,
+    gamma and C, are needed to be specified. The parameter gamma defines how far the
+    influence of a single training example reaches. It can also be considered as the
+    inverse of the radius of influence of samples selected by the model as support
+    vectors. The parameter C trades off the correct domain of training examples against
+    the maximum decision function margin.
+
+
+    # 2.6. BPNN model
+
+
+    As a specific example of deep learning methods, NN models can predict the outcome
+    from a developed network. A feedforward NN is a parametric function that takes
+    a set of input values and maps them to a corresponding setting of output values
+    (Darabi et al., 2012). The ANN employed in this study is a feedforward network
+    trained by a back-propagation algorithm named BPNN. Ideally, the network becomes
+    more knowledgeable about the relationships after each iteration or epoch of the
+    learning process with the error back-propagation algorithm being used for this
+    purpose. Furthermore, BPNN provides a meaningful nonlinear relationship between
+    input and output neurons by iterative learning, with the predictive ability for
+    dynamic nonlinear behaviors. Such inherent properties'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "offer a clear edge over sophisticated nonlinear regression techniques (Mukherjee\
+    \ and Routroy, 2012). The general architecture of a NN applied to tunnel engineering\
+    \ consists of an input layer, a hidden layer, and an output layer. It has been\
+    \ demonstrated that a NN model with one hidden layer can sufficiently model highly\
+    \ complex nonlinear functions with enough number of hidden neurons (Hegazy et\
+    \ al., 1994). Specifically, a three-layer BPNN architecture shown in Fig. 1 includes\
+    \ the following components:\n\n+   (1) A general network model consisting of simple\
+    \ processing elements named neurons. Neurons are arranged in layers and are combined\
+    \ through excessive connectivity. The number of neurons in the input, hidden,\
+    \ and output layers is denoted as m, n, and s, respectively. Similarly, i, j,\
+    \ and k represent an individual neuron of the input, hidden, and output layers.\n\
+    +   \n+   (2) The input layer plays no computational role but merely serves to\
+    \ pass the input vector to the network. The input neurons transmit these values\
+    \ across the links to the hidden layers (Eq. (4)). Each node computes the weighted\
+    \ sum of its input (x_i). The result is then put through an activation function\
+    \ (f_1) to generate a signal result for the neuron (y_i). The activation functions\
+    \ of tan-sigmoid and log-sigmoid are commonly applied, which are differentiable\
+    \ and bounded. The parameter (b_j) represents a bias associated with a neuron.\n\
+    +   \n+   (3) The results of the hidden neurons (y_i) are then transmitted across\
+    \ their activation function f_2 to the neurons in the output layer (Eq. (5)).\
+    \ The output signal of neuron k is denoted by y_k, where the parameter w_{k,j}\
+    \ represents the weight on the connection between hidden nodes (j) and output\
+    \ nodes (k), and b_k is the bias.\n+   \n+   (4) A back-propagation signal (an\
+    \ error signal) propagates backward through the network. The desired response\
+    \ or target output can be denoted by d_k. Consequently, an error signal denoted\
+    \ by E is produced by Eq. (6). The error signal is then propagated back to adjust\
+    \ weights and biases of each layer using a gradient descent method, namely, the\
+    \ weights and biases can be updated and revised in the direction of the loss function's\
+    \ negative gradient (E). Specifically, parameters related to each neuron are adjusted\
+    \ according to the delta rule shown in Eqs. (7)–(10), where η denotes the learning\
+    \ rate.\n\nDuring the training process, weight matrices and bias vectors in the\
+    \ network model are adjusted until the desired input-output mapping occurs. Thus,\
+    \ the network model can learn and predict through training. The following are\
+    \ the equations involved in the BPNN algorithm:\n\n![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_3_0.png)\n\
+    \nFig. 1. ANN and signal propagation.\n\ny_j = f_1( sum_{i=1}^{m} w_{j,i} x_i\
+    \ + b_j )   (4)\n\ny_k = f_2( sum_{j=1}^{n} w_{k,j} y_j + b_k )   (5)\n\nE = 1/2\
+    \ sum_{k=1}^{s} (d_k - y_k)^2   (6)\n\nw_{j,i}(j+1) = w_{j,i}(j) + Δw_{j,i}  \
+    \ (7)\n\nw_{k,j}(k+1) = w_{k,j}(k) + Δw_{k,j}   (8)\n\nΔw_{j,i} = - η ∂E/∂w_{j,i}\
+    \   (9)\n\nΔw_{k,j} = - η ∂E/∂w_{k,j}   (10)\n\n# 2.7. PI-BPNN\n\nThe complexity\
+    \ of a network is related to the network size, as measured by the number of weight\
+    \ matrices and bias vectors. Network architecture plays a vital role in model\
+    \ performance since it determines the number of parameters to be trained. Take\
+    \ the model structure shown in Fig. 1 as an example. The dimension of the weight\
+    \ matrices w_{j,i} and w_{k,j} is m × n and n × s, respectively. The size of the\
+    \ bias vector is n + s. Therefore, the total number of parameters needed to be\
+    \ trained is (m + s + 1) × n + s. In applying ground surface settlement predictions,\
+    \ one neuron (s = 1) in the output layer represents settlement. Thus, the total\
+    \ number of parameters needed to be trained becomes (m + 2) × n + 1. The number\
+    \ of hidden neurons (n) can be identified via a trial-and-error experiment, which\
+    \ also can be expressed in the form of the number of input nodes (m) suggested\
+    \ by Heaton (2015). The appropriate number of hidden neurons is estimated by (2m)/3\
+    \ + s, which should not exceed 1.5m. Consequently, the model complexity largely\
+    \ depends on the number of input nodes.\n\nMany researchers directly set the influencing\
+    \ variables as the input neurons and ground settlement as the output neuron in\
+    \ the review of related publications. It is widely believed that as many parameters\
+    \ related to the ground settlement as possible should be collected and fed into\
+    \ the input layer (Suwansawat and Einstein, 2006). However, increasing the number\
+    \ of input neurons leads to a more complex model so that much more weights and\
+    \ biases are needed to be learnt. For many NN applications in settlement predictions,\
+    \ the size of both training and testing data is 10 s or around 100 s (Santos and\
+    \ Celestino, 2008; Darabi et al., 2012; Ahangari et al., 2015; Bouayad and Emeriault,\
+    \ 2017). When the number of parameters needed to be learnt is larger than the\
+    \ size of learnt samples, these parameters may not be well trained. In addition,\
+    \ since a network with a sufficient number of neurons in the hidden layer can\
+    \ accurately implement an arbitrary training set, it can learn both signals and\
+    \ noises (Tetko and Villa, 1997). With limited data points, some of these trained\
+    \ relationships are possibly the results of sampling noise. The PI-BPNN model\
+    \ is proposed considering the network architecture design for small datasets.\
+    \ In the proposed PI-BPNN model, input initialization is achieved by the permutation\
+    \ feature importance selection technique, which is a model"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'inspection technique and especially useful for nonlinear or opaque estimators.
+    The permutation feature importance is defined as the decrease in a model score
+    when a single feature value is randomly shuffled (Breiman, 2001), indicating how
+    much the model depends on the feature. Thus, important features will be filtered,
+    selected, and set as network inputs to decrease architecture complexity.
+
+
+    et al. (2020) also mentioned that urban tunneling projects do not always have
+    access to a vast number of parameters, therefore, it is preferable to consider
+    parameters that can be easily achieved.
+
+
+    # 3. Description of the study site and collected dataset
+
+
+    # 3.1. Geological conditions
+
+
+    Data used in this study are collected from the Yuji tunnel project constructed
+    in China, which is excavated by a slurry shield TBM. Many boreholes have been
+    drilled to obtain information about the geological condition below the surface.
+    The soil profile of the tunnel horizon is plotted in Fig. 2 based on the Unified
+    Soil Classification System (USCS). The tunnel section with a total length of 1.1
+    km is investigated. The ground condition encountered by the shield tunnel includes
+    silty sands, silty clays, silts, sands, and artificial fills. The complexity of
+    geological conditions varies. In general, the tunnel is constructed in a mixed
+    silty clay-sand layer. Most areas were found with sands in the crown and silty
+    clays in the invert. Some parts are entirely excavated in sand or silty clay layer.
+    Ten surface settlement markers or settlement arrays are installed along the selected
+    tunnel section (>1 km) to measure surface settlements during excavation. Vertical
+    ground surface displacement is monitored by precise leveling of transverse profiles.
+    Each profile consists of at least 13 monitoring points. A dataset of 187 observed
+    maximum surface displacements is recorded, collected, and used in this study.
+
+
+    # 3.2. Collected dataset for model construction
+
+
+    The ground surface displacements could result from multiple influencing variables
+    fed into ML models as inputs. Based upon case history reviews of urban shield
+    tunnels (Clough and Leca, 1993; Suwansawat and Einstein, 2006; Zhang et al., 2020b)
+    and extensive observations in this tunnel project, the influencing variables can
+    be grouped into three major categories: tunnel geometry, geological conditions
+    and TBM operational parameters. Such classification proposed by Suwansawat and
+    Einstein (2006) is widely accepted by researchers (Ding et al., 2013; Ocak et
+    al., 2013; Wang et al., 2013; Zhou et al., 2017; Chen et al., 2019). Parameters
+    included in every category are mainly derived from measurements before tunneling
+    or observations along with tunnel excavation. Mahmoodzadeh
+
+
+    # 3.2.1. Input variables
+
+
+    # (1) Tunnel geometry
+
+
+    Tunnel depth and diameter are considered in the modeling. The tunnel depth of
+    the selected section varies from around 31 m–36 m. The tunnel project has a constant
+    diameter of 12.4 m. A baseline feature selection approach in ML techniques is
+    to remove features with low variance. Zero-variance features, i.e. features that
+    have the same value in all samples, will not affect the changes of output. Thus,
+    the tunnel diameter is not used as an input.
+
+
+    Additionally, the horizontal distance between tunnel face and monitoring points
+    (DTM) is also considered a parameter that might influence the monitored ground
+    settlements, which indicates various excavation stages from before shield approaching
+    till after shielding pass.
+
+
+    # (2) Geological conditions
+
+
+    Geological conditions considered in ML models include soil types at tunnel invert
+    and crown, groundwater level, and weighted average soil compressible modulus (ACM).
+    All these parameters related to geological conditions are obtained from many drilled
+    boreholes along the tunnel centerline.
+
+
+    Intuitively by the geological profile shown in Fig. 3, there are two geological
+    conditions of tunnel crown and invert, i.e. silty clays or sands. Binary code
+    symbolized by 0 and 1 typically represents two states, “off” and “on”, respectively.
+    Thus, the binary code can be adopted to indicate if a certain soil type is encountered
+    or not (Suwansawat and Einstein, 2006). In this study area, four geological conditions
+    are summarized, as listed in Table 2.
+
+
+    Although geological complexity can be roughly determined intuitively by the geological
+    profile, quantitative characteristics of soil consolidation are unknown, which
+    may serve as a vital factor affecting the ground settlements. From the soil mechanics
+    perspective, since the soil is a compressible material, the ground surface experiences
+    downward settlements. Five hundred and seventy-six soil samples have been collected
+    from 75 drilled boreholes along the tunnel alignment. These collected soil samples
+    have been used to conduct laboratory soil consolidation tests to
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_4_0.png)
+
+
+    Fig. 2. The geological profile of the study area.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_5_0.png)
+
+
+    **Fig. 3.** Distribution of weighted average compressible modulus (ACM).
+
+
+    study compression properties. Plots of soil void ratio *e* vs. effective pressure
+    *p* can be drawn according to results of laboratory compression test. Based on
+    the *e-p* curve, the coefficient of compressibility (*a_v*) expressed as Eq. (11)
+    can be calculated, representing the change of void ratio concerning the applied
+    effective pressure during compression.
+
+
+    Given the initial void ratio of the consolidation layer (*e_0*), the coefficient
+    of volume compressibility (*m_v*) is obtained according to Eq. (12). The parameter
+    *m_v* represents the compression of soil per unit due to a unit increase of pressure.
+    The modulus of soil compressibility (*E_s*) expressed in Eq. (13) is eventually
+    selected as the parameter to represent the soil compressibility. Results of the
+    calculated modulus of compressibility are plotted in Fig. 3. The ACM along drilled
+    borehole can be calculated to represent the overall soil compressibility for every
+    monitoring point using Eq. (14), where *E_si* is the modulus of soil compressibility
+    of the ith soil layer, and *h_i* represents the height of the ith soil layer.
+
+
+    ```
+
+    a_v = -\Delta e / \Delta p  (11)
+
+    m_v = a_v / (1 + e_0)  (12)
+
+    E_s = 1 / m_v  (13)
+
+    ACM = \sum E_s_i h_i / \sum h_i  (14)
+
+    ```
+
+
+    # (3) TBM operational parameters
+
+
+    In soft ground with high water content, the slurry shield TBM is suitable. This
+    TBM is equipped with a slurry system that controls the pressure in the excavation
+    face by injecting pressurized slurry into the cutter chamber. Given a TBM, its
+    specifications depend on and reflect soil conditions. The criterion of selecting
+    TBM-related parameters is that parameters directly affect face stability, ground
+    volume loss, etc. and further affect ground settlement (Mony et al., 2016; Chen
+    et al., 2019; Zhang et al., 2020c). Additionally, real-time collection in the
+    shield system is suggested to ensure the accuracy of these parameters. Based on
+    the TBM parameters related to ground settlements suggested by Zhang et al. (2020b),
+    eight features are selected, including rotational speed of cutterhead, penetrating
+    rate, thrust force, torque, roller displacement, grouting pressure, grouting injection
+    rate, and discharge flow rate. Controlling these parameters well may effectively
+    reduce the surface settlement caused by shield construction.
+
+
+    **Table 2**
+
+    Geological conditions of tunnel crown and invert represented by binary code.
+
+    | Type | Geology at tunnel crown |  | Geology at tunnel invert |  |
+
+    |------|--------------------------|---|--------------------------|---|
+
+    |  | Silty clay | Sand | Silty clay | Sand |
+
+    | 1 | 1 | 0 | 1 | 0 |
+
+    | 2 | 1 | 0 | 0 | 1 |
+
+    | 3 | 0 | 1 | 1 | 0 |
+
+    | 4 | 0 | 1 | 0 | 1 |
+
+
+    TBM parameters, such as cutterhead rotational speed and penetrating rate, significantly
+    influence TBM vibration. The thrust force of soft ground TBMs is controlled by
+    earth pressure. Torque factor times the cube of tunnel diameter describes the
+    torque of soft ground TBMs. TBM torque is governed by the friction between shield
+    cutters and the ground or by the shear strength. This friction is caused by a
+    few factors, such as earth pressure, chamber pressure acting on a bulkhead, driving
+    force generated by direction changes in curved alignments, frictional force acting
+    between the segments and tail seals, and hauling force of trailing units (Ates
+    et al., 2014). In slurry shield TBM operations, the slurry circuit is a pipeline
+    loop that connects the TBM to the slurry treatment plant (STP) at the surface.
+    Pumps in the slurry discharge pipeline transport the loaded slurry to the STP.
+    In the slurry feed line and discharge line, sensors are installed to determine
+    the flow rate and density. Densities of slurry injection flow and discharge flow
+    are almost constant. Thus, three parameters are selected to represent the slurry
+    circuit condition: grouting pressure, grouting injection rate, and discharge flow
+    rate.
+
+
+    # 3.2.2. Output variables
+
+
+    Ground settlement induced by tunneling excavations is set as the output variable
+    in ML models, which is influenced by multiple input factors. Given that data are
+    collected during the excavation process, ground settlements within eight times
+    of the tunnel diameter at the excavation face are considered, with a measurement
+    accuracy of 0.3 mm/km.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Table 3
+
+
+    Characteristic parameters and ranges of values for settlement predictions.
+
+
+    | Category | Variables | Minimum | Maximum | Mean | Standard deviation |
+
+    |---|---|---|---|---|---|
+
+    | Tunnel geometry | Depth (m) | 31.2 | 36 | 34.26 | 1.97 |
+
+    |  | DTM (m) | 0 | 234 | 71.44 | 57.89 |
+
+    | Geological conditions | Groundwater level (m) | 7.1 | 13.89 | 9.56 | 2.22 |
+
+    |  | ACM (MPa) | 7.92 | 13.44 | 10.04 | 2.2 |
+
+    | TBM operations | Cutterhead rotational speed (rpm) | 1.2 | 1.6 | 1.42 | 0.07
+    |
+
+    |  | Cutterhead torque (kN m) | 1800 | 18,361.2 | 11,266.38 | 2718.1 |
+
+    |  | Roller displacement (mm) | 0.22 | 0.8 | 0.46 | 0.09 |
+
+    |  | Penetrating rate (mm/min) | 3 | 26.6 | 11.62 | 4.36 |
+
+    |  | Thrust force (kN) | 52,626 | 100,883 | 70,217.44 | 10,260.88 |
+
+    |  | Grouting pressure (bar) | 2.7 | 5.3 | 3.91 | 0.63 |
+
+    |  | Grouting injection rate (m³/h) | 1600.4 | 7072.9 | 2297.43 | 383.35 |
+
+    |  | Discharge flow rate (m³/h) | 1376.5 | 8248 | 2364.11 | 633.82 |
+
+
+    Note: 1 bar = 100 kPa.
+
+
+    # 3.3. Data distribution
+
+
+    The dataset used to design ML models for predicting the ground surface settlements
+    consists of 14 input variables and 187 observations. Twelve parameters and their
+    corresponding ranges of values are summarized in Table 3. The other two parameters
+    are geology at tunnel crown and invert, represented by values 0 and 1, respectively,
+    in ML models (Table 3). Fig. 4 presents the variable correlation matrix illustrating
+    the relationship between pairwise parameters to provide a descriptive overview
+    of the data distribution. Most parameters show a relatively low correlation with
+    Pearson correlation coefficient (r < 0.8), except for two pairs: grouting pressure
+    vs. groundwater level (r = − 0.82) and geology at tunnel invert vs. ACM (r = −
+    0.81). The larger the r value, the stronger the linear relationship. However,
+    there are no direct physical links between these two pairwise datasets, so that
+    all the data will be kept for learners. The data distribution also reveals that
+    the ground settlements have inverse relationships with a few parameters. These
+    parameters are the DTM, tunnel depth, ACM, thrust force, grouting pressure, grouting
+    injection rate and discharge flow rate. Thus, the increase in these parameters
+    can control the magnitude of ground settlements to some extent. Similarly, the
+    decrease in positively related parameters might help to decrease the ground surface
+    settlements.
+
+
+    # 3.4. Training and testing sets
+
+
+    ML methods ingest data to learn from it. Specifically, ML algorithms aim to find
+    the optimal hyperparameters that yield the best model. Corresponding hyperparameters
+    are initiated randomly and optimized using a cost function. The process to find
+    the optimal hyperparameters is achieved by learning from the training set. Using
+    trained hyperparameters, ML models have the ability to predict outputs. The dataset
+    in this study is split randomly into two sets: a training set and a testing set,
+    as plotted in Fig. 5. The training set consists of 70% of the data, while the
+    remainder (30%) is assigned to the testing set. A two-part split is a general
+    practice in the applications of ML algorithms, aiming at testing the predictive
+    performances of the models.
+
+
+    # 4. Results
+
+
+    # 4.1. Comparison of model performances
+
+
+    Typically, statistical performance evaluations can be conducted to assess model
+    performance quantitatively. The coefficient of determination (R²) defined as Eq.
+    (15) is adopted to assess and compare model performances. It measures how well
+    predictions a model provides. The best possible score is 1. The higher the R²
+    value, the better the model performance. Additionally, the R² value can be negative
+    because a model can be arbitrarily worse.
+
+
+    R² = 1 − Σ(monitoring − predictions)² / Σ(monitoring − mean of monitoring)²   (15)
+
+
+    Training and testing accuracies for seven models have been calculated and are
+    presented in Fig. 6. According to the calculated testing accuracy, the predictive
+    performance ranging from best to worst is RF (0.9) > GB (0.82) > DT (0.72) > PI-BPNN
+    (0.79) > BPNN (0.59) > SVR (0.52) > MLR (− 3.89 × 10¹⁷). Among these applied models,
+    the MLR has neither learning ability nor predicting ability, which means that
+    the relationship between induced ground settlements and influencing variables
+    is nonlinear. The nonlinear relationship can also be indicated by the variable
+    coefficient matrix shown in Fig. 4. The surface settlements weakly correlate to
+    the 14 influencing variables with correlation coefficients (R) smaller than 0.3.
+
+
+    In the applications of nonlinear models, the ensemble methods like RF and GB have
+    been successfully used with both relatively high learning and testing accuracies.
+    The RF model achieves the best performance. Also, the ensemble models (RF and
+    GB) outperform the single DT method in terms of model accuracy. In contrast to
+    shallow-structure learning architectures, the NN model adopts deep architecture
+    to learn hierarchical representations. Deep-structure ML methods can often capture
+    more complicated, hierarchically launched statistical patterns of inputs to adapt
+    to new areas than traditional learning methods. Furthermore, as the data continuously
+    get bigger, deep learning is essential in providing predictive analytic solutions
+    for large-scale datasets (Pasini, 2015; Qiu et al., 2016). However, for the application
+    of tunneling-induced ground settlements where the available dataset is small,
+    the predictive performance of BPNN is worse than tree-based ML algorithms. Additionally,
+    the proposed PI-BPNN model outperforms typical BPNN, indicating that the NN architecture
+    and input selection are vital to the model performance when applying a small dataset.
+
+
+    # 4.2. Feature importance evaluation considering underpredictions and overpredictions
+
+
+    Besides the R² used in this study, model performances can be assessed by other
+    performance indicators such as mean absolute error (MAE), root mean square (RMSE),
+    relative RMSE (RRMSE), standard deviation (σ), and multiple-objective error (MOE),
+    which are defined as
+
+
+    MAE = 1/n Σᵢ₌₁ⁿ |dᵢ − yᵢ|   (16)
+
+
+    RMSE = √[1/n Σᵢ₌₁ⁿ (dᵢ − yᵢ)²]   (17)'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '$$\mathrm{RRMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}\left(\frac{d_i-y_i}{d_i}\right)^2}
+    \tag{18}$$
+
+
+    $$\sigma=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(e_i-\bar e)^2} \tag{19}$$
+
+
+    $$MOE=RRMSE/(1+R) \tag{20}$$
+
+
+    where $d$ is the monitoring value; $y$ is the predicted value; $\bar d$ and $\bar
+    y$ are the means of actual and predicted values, respectively; $e$ is the absolute
+    error, and $e=|d_i-y_i|$; $\bar e$ is the mean of absolute error; and $n$ is the
+    number of datasets.
+
+
+    In the above parameters, MAE reflects the average magnitude of error between predicted
+    and measured data, and RMSE describes the standard deviation of differences. RRMSE
+    is the ratio of RMSE to the mean of monitoring values (Bsaibes et al., 2009).
+    RRMSE, RMSE, MAE, and $\sigma$ merely illustrate the error without correlations.
+    MOE function combines the above-mentioned metrics.
+
+
+    These equations are commonly used in ML applications to indicate the overall deviation
+    between predictions and observations. The higher the errors, the less likely the
+    model generalized correctly from the training data. Although these equations have
+    slight differences, one common aspect is that underpredictions and overpredictions
+    are equally considered. However, for ground
+
+
+    settlements induced by tunnel excavations, underpredictions may cause project
+    failure and even loss of lives compared with overpredictions. Consequently, a
+    QE criterion is proposed to assess the model performance. Different penalties
+    for overestimation and underestimation are given in the QE criterion. In the QE
+    calculation, different penalties can be given to overestimation and underestimation.
+    These penalties are based on the value of chosen quantile ($\gamma$), as shown
+    in Eq. (21). Quantile error can be considered an extension of MAE when the quantile
+    is 50% ($\gamma=0.5$), and the equation of QE is reduced to the equation for MAE.
+    A quantile loss function of $\gamma>0.5$ gives more penalty to underestimation
+    than overestimation. In the model performance evaluation, the parameter $\gamma$
+    in the QE calculation has been set as 0.7. Predictions ($y$) for each model are
+    the mean of 1000 predictive results.
+
+
+    $$QE=\frac{1}{n}\left(\sum_{i|d_i\le y}(\gamma-1)|d-y|+\sum_{i|d_i>y}\gamma|d-y|\right)
+    \tag{21}$$
+
+
+    Using the QE criterion, the predicted model performances ranging from best to
+    worst are RF (0.36) > GB (0.38) > DT (0.41) > SVR (1.02) > PI-BPNN (1.17) > BPNN
+    (1.22) > MLR (1.81 × 10⁹). The RF algorithm has the best model performance with
+    the QE errors, even if more penalties are given to underpredictions. Compared
+    with the model performance evaluated by $R^2$ (RF > GB > DT > PI-BPNN > BPNN >
+    SVR > MLR), the SVR outperforms NNs using QE errors, indicating that NNs are prone
+    to providing underpredictions.
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_7_0.png)
+
+
+    **Fig. 4.** Variable correlation matrix of influencing variables.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_8_0.png)
+
+
+    Fig. 5. Data distribution of training and testing sets.
+
+
+    # 4.3. Feature importance
+
+
+    ML models are used to identify the relationship between ground settlements and
+    various influencing variables. One way to explain why a given model behaves the
+    way it does is to analyze feature importance. Feature importance provides a highly
+    compressed, global insight into the model''s behavior.
+
+
+    The model inspection technique of permutation feature importance tests the model
+    performance by removing every feature. In this way, the importance of individual
+    variables can be directly compared. Methods like this can be used to dispel the
+    notion of ML algorithms as irreproducible “black-box” and can be used to help
+    to gain new insights. Specifically, permutation feature importance measures the
+    increase in the prediction error of a model after we permute a feature’s value,
+    i.e. the decrease in a model score when a single feature value is randomly shuffled.
+    A feature is “important” if shuffling its values increases the model error because
+    it relies on the prediction feature. Conversely, a feature is “unimportant” if
+    shuffling its values leaves model error unchanged because the model ignores the
+    feature for the prediction in this case.
+
+
+    However, not all learning methods can identify important features because they
+    are too complex to analyze contributions of single covariates to the overall results,
+    for instance, ANNs and SVR (Altmann et al., 2010). Additionally, the failed application
+    of MLR (Fig. 6a) demonstrates that the nonlinear relationship between inputs and
+    output was not captured, indicating that no features are considered “important”
+    in the MLR model. Thus, the permutation
+
+
+    feature importance will be evaluated based on the predictive results of the DT,
+    RF and GB methods.
+
+
+    According to the results presented in Fig. 7, six important parameters contributing
+    to ground settlements have been identified, including tunnel depth, DTM, ACM,
+    grouting pressure, penetrating rate and thrust force. Typically, parameters of
+    tunnel depth, DTM and ACM are given by tunnel design and geological conditions.
+    Thus, the tunneling-induced ground settlements can be further controlled by TBM
+    operations such as grouting pressure, penetrating rate and thrust force.
+
+
+    # 4.4. Model stability
+
+
+    In applying ML algorithms, model accuracy is typically considered the primary
+    criterion for evaluating and selecting a learning algorithm. Algorithms with high
+    accuracy can predict the outcome with a high degree of confidence. However, the
+    stability of the learning algorithm is also a vital issue, which is often less
+    considered. Therefore, it should be paid more attention, particularly for the
+    ML applications of a small dataset. The stability of a learning algorithm, also
+    called learning variance, refers to the output change when the training dataset
+    is changed. A learning algorithm can be considered stable if the output does not
+    change much when the training set is modified. Also, the algorithm stability can
+    be considered a representation of how well hyperparameters have been trained.
+    Models with high variance pay a lot of attention to training data and do not generalize
+    on the unseen data.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_9_0.png)
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_9_1.png)
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_9_2.png)
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_9_3.png)
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_9_4.png)
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_9_5.png)
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_9_6.png)
+
+
+    **Fig. 6.** Accuracy of applied ML algorithms: (a) MLR, (b) DT, (c) RF, (d) GB,
+    (e) SVR, (f) BPNN, (g) PI-BPNN models.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'Each ML model in this study will conduct multiple predictions to study the
+    model stability on a small dataset. The variance s² (Eq. (22)) is applied to assess
+    the model stability. It is calculated as the average squared deviation of each
+    prediction from the averaged prediction. The more spread the data, the larger
+    the variance concerning the mean.
+
+
+    $s^2 = \frac{\sum (X - \bar{X})^2}{n - 1}$
+
+
+    (22)
+
+
+    where X is the predictions, X̄ is the average predictions, and n is the repeated
+    time of prediction. The lower the variance, the more stable the ML model.
+
+
+    Evaluation of model stability is conducted in two steps here. First, an extreme
+    case where the training set does not change is tested. Each single test sample
+    has been predicted 1000 times. The variances of 1000 predictive results (Fig.
+    8) are calculated to assess model stabilities represented by dash lines. Variance
+    trend represented by solid lines is obtained using the moving average technique.
+    According to the results presented in Fig. 8, the prediction results vary significantly
+    given the same training set and model architecture. The average variance of stability
+    of BPNN and PI-BPNN are 5.76 and 3.58, respectively. BPNN and PI-BPNN show poor
+    model stability, indicating that a small dataset fails to train hyperparameters
+    in deep architecture fully. Compared with typical BPNN, the proposed PI-BPNN outperforms
+    both in model accuracy and model stability. For shallow-structure ML algorithms
+    (DT, RF, GB, SVR and MLR), the DT model shows high variance (1.06), while RF,
+
+
+    GB, SVR, and MLR models show good stability with variance almost equal to zero.
+    Since the MLR model entirely failed to learn and predict tunneling-induced ground
+    settlements, it will not be further discussed to save computing efforts. The second
+    step is to further investigate the stability of RF, GB, and SVR models using a
+    changeable dataset. The training and testing sets are randomly split 1000 times
+    to train models repeatedly. Three algorithms are trained 1000 times to provide
+    1000 predictions. Results of model performance presented in Fig. 9 indicate that
+    RF, GB and SVR can be considered stable models since the output performances do
+    not change much, with variance less than 0.2. The average variance of GB, SVR,
+    and RF are 5.5 × 10⁻³, 5.39 × 10⁻²⁷ and 3.02 × 10⁻²⁷, respectively. Thus, it can
+    be concluded that the model stability ranging from best to worst is RF > SVR >
+    GB > DT > PI-BPNN > BPNN.
+
+
+    Among all these applied learning algorithms, the RF model shows the best accuracy
+    and stability.
+
+
+    # 5. Discussion
+
+
+    Applying ML techniques results in deriving patterns from existing datasets and
+    approximating future behavior (i.e., predictions). It is important to evaluate
+    ML performances, pros and cons to identify their ability of accurate prediction.
+    Also, method selection should be appropriate based on the problem to be solved.
+    Table 4 compares the seven ML algorithms applied for tunneling-induced ground
+    settlement prediction with a small dataset.
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_10_0.png)
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_10_1.png)
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_10_2.png)
+
+
+    Fig. 7. Feature importance identified by ML algorithms: (a) DT, (b) RF, and (c)
+    GB models.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'A general advantage of ML models is the ability to handle multi-variate data
+    and extract implicit relationships in a complex, dynamic and even chaotic environment.
+    Moreover, they make no distributional assumptions about the predictor variables.
+
+
+    DT, RF and GB are three tree-based algorithms. The DT is a basic tree-structure
+    algorithm, serving the base learner for both RF and GB. The RF and GB are state-of-the-art
+    ensemble learning techniques, a method that combines the predictions from multiple
+    ML algorithms (base learners) to provide more accurate predictions. A single DT
+    might be relatively weaker compared with a set of trees. Theoretically, ensemble
+    methods with more trees usually yield better results and serve as a more robust
+    model (Elish et al., 2013). This study reveals that RF and GB outperform the DT
+    model in terms of prediction accuracy and model stability. However, there is a
+    trade-off between prediction accuracy and processing cost. The more the trees,
+    the slower the process, since every tree has to be generated, processed, and analyzed.
+    Also, the processing will be slower given more features. The difference between
+    RF and GB is how trees are built. The RF builds each tree independently (in parallel),
+    while the GB builds one tree at a time (sequentially) (Callens et al., 2020).
+
+
+    MLR models the linear relationship between independent and dependent variables,
+    while the other six MLs work on processing nonlinear relationships. As its mathematic
+    formula indicated (Eq. (1)), its main advantage is to provide the relative influence
+    of one or multiple predictor variables intuitively. However, the MLR fails to
+    approximate the nonlinear relationship between the influencing variables and ground
+    settlements.
+
+
+    Data transforming is required to construct an SVR model, achieved by kernel functions.
+    Kernel selection is dataset-dependent. It can be selected through the tried-and-error
+    method. The kernel with the highest testing accuracy is chosen. Once the kernel
+    is selected, SVR has a few hyperparameters needed to be determined, easy for implementation.
+    The SVR shows good model stability but poor prediction accuracy. Given more penalties
+    and underprediction and using the QE criterion, SVR has higher prediction accuracy
+    than NN models.
+
+
+    In a multi-layer NN, each neuron is connected to other neurons with certain hyperparameters.
+    Given many hyperparameters such as weight matrices and bias vectors, NNs have
+    a remarkable capability to learn and model nonlinear and complex relationships.
+    However, many hyperparameters involved in the network may not be well trained
+    with the limited dataset to provide ideal predicting performance. The PI-BPNN
+    proposed in this paper is designed for small datasets considering the relationship
+    between model architecture and dataset size, showing better performance than typical
+    BPNN. Although the NNs are powerful in solving complex problems, they are not
+    effective enough to apply small datasets with both poor prediction accuracy and
+    model stability.
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_11_0.png)
+
+
+    # 6. Concluding remarks
+
+
+    Due to the limited construction period of any given tunnel project, the available
+    monitoring datasets of ground deformation are small. Can ML methods effectively
+    predict tunneling-induced ground settlement when the datasets are small? With
+    both shallow- and deep-structure, seven ML algorithms have been applied for predicting
+    tunneling-induced ground settlements. These ML methods include MLR, DT, RF, GB,
+    SVR, BPNN, and PI-BPNN.
+
+
+    The seven ML algorithms are assessed from the perspective of model accuracy and
+    stability. Our results showed that the MLR model failed to learn and predict.
+    Furthermore, the nonlinear relationship between tunneling-induced ground settlements
+    and possible influencing variables, including TBM operation parameters, encountered
+    geological conditions, and tunnel geometry, was demonstrated. In the applications
+    of nonlinear learning algorithms, the RF model showed the best performance with
+    high prediction accuracy reaching 0.9 and low stability variance of 3.02 × 10⁻²⁷.
+    While the BPNN, which is believed powerful in approximating complicated functions,
+    shows worse performance than conventional shallow-structure learning algorithms.
+    The proposed PI-BPNN method applied a permutation feature selection technique
+    to decrease model complexity, achieving a better performance than typical BPNN
+    for small datasets. Thus, no matter how attractive a model is, model selection
+    should base on the full consideration of the problem to be solved. In conclusion,
+    ML algorithms can be successfully used to predict tunneling-induced ground settlements
+    even if the available dataset size is small. Furthermore, ensemble methods, such
+    as RF and GB regression, outperform other learning algorithms.
+
+
+    Additionally, six variables that contributed most to the ground settlements occurring
+    during the excavation process have been identified, including tunnel depth, DTM,
+    ACM, grouting pressure,
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_11_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Table 4
+
+
+    Comparisons of models for predicting ML-based tunneling-induced ground settlement
+    with small datasets.
+
+
+    | Item | MLR | BPNN | PI-BPNN | SVR | DT | RF | GB |
+
+    |---|---|---|---|---|---|---|---|
+
+    | Approximation | Linear | Nonlinear | Nonlinear | Nonlinear with RBF kernel |
+    Nonlinear | Nonlinear | Nonlinear |
+
+    | Learner | Single | Single | Single | Single | Single | Ensemble | Ensemble |
+
+    | Effectiveness Applicability Prediction R² accuracy | No Failed | Yes Poor (<60%)
+    | Yes Medium (60%–80%) | Yes Poor (<60%) | Yes Medium (60%–80%) | Yes Good (>80%)
+    | Yes Good (>80%) |
+
+    | QE | Failed | Poor (>1) | Poor (>1) | Poor (>1) | Medium (0.5–1) | Good (<0.5)
+    | Good (<0.5) |
+
+    | Model stability (learning variance) | Good (≈0) | Poor (5.76) | Poor (3.58)
+    | Good (≈0) | Medium (1.06) | Good (≈0) | Good (≈0) |
+
+    | Pros (+) and cons (−) in small dataset application | − Unable to solve complex
+    problems | + Good at processing complex nonlinear problems − Complicated architecture
+    design with many hyperparameters | + Work better than BPNN for small dataset |
+    + Few parameters needed to be determined − Tricky kernel selection | + Good balance
+    between prediction accuracy and calculation speed − Weaker compared with ensemble
+    tree-based learners | + Good prediction accuracy and stability − Relatively low
+    computation speed |
+
+
+    penetrating rate and thrust force. Variables such as tunnel depth and ACM are
+    determined by tunnel design and geological conditions. Thus, the ground settlements
+    can be further controlled by TBM operations. Three TBM operations, i.e., grouting
+    pressure, penetrating rate, and thrust force, should be paid much attention to
+    during the tunnel excavation.
+
+
+    It should be noticed that our conclusions are only suitable and applicable for
+    small dataset cases, such as those tunneling cases listed in Table 1. They are
+    not valid for tunneling cases with big datasets which are out of the scope of
+    this research.
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    # Acknowledgments
+
+
+    This research was funded by the University Transportation Center for Underground
+    Transportation Infrastructure (UTC-UTI) at the Colorado School of Mines under
+    Grant No. 69A3551747118 from the US Department of Transportation (DOT). The opinions
+    expressed in this paper are those of the authors and not of the DOT.
+
+
+    # References
+
+
+    Ahangari, K., Moeinossadat, S.R., Behnia, D., 2015. Estimation of tunneling-induced
+    settlement by modern intelligent methods. Soils Found. 55 (4), 737–748.
+
+    Altmann, A., Toloşi, L., Sander, O., Lengauer, T., 2010. Permutation importance:
+    a corrected feature importance measure. Bioinformatics 26 (10), 1340–1347.
+
+    Ates, U., Bilgin, N., Copur, H., 2014. Estimating torque, thrust and other design
+    parameters of different type TBMs with some criticism to TBMs used in Turkish
+    tunneling projects. Tunn. Undergr. Space Technol. 40, 46–63.
+
+    Bouyad, D., Emeriault, F., 2017. Modeling the relationship between ground surface
+    settlements induced by shield tunneling and the operational and geological parameters
+    based on the hybrid PCA/ANFIS method. Tunn. Undergr. Space Technol. 68, 142–152.
+
+    Boubou, R., Emeriault, F., Kastner, R., 2010. Artificial neural network application
+    for the prediction of ground surface movements induced by shield tunneling. Can.
+    Geotech. J. 47 (11), 1214–1233.
+
+    Breiman, L., 2001. Random forests. Mach. Learn. 45, 5–32.
+
+    Bsaibes, A., Courault, D., Baret, F., et al., 2009. Albedo and LAI estimates from
+    FORMOSAT-2 data for crop monitoring. Remote Sens. Environ. 113 (4), 716–729.
+
+    Callens, A., Morichon, D., Abadie, S., Delpey, M., Liquet, B., 2020. Using random
+    forest and gradient boosting trees to improve wave forecast at a specific location.
+    Appl. Ocean Res. 104, 102339.
+
+    Chao, G.Y., Tsai, T.L., Lu, J., et al., 2011. A new approach to prediction of
+    radiotherapy of bladder cancer cells in small dataset analysis. Expert Syst. Appl.
+    38 (7), 7963–7969.
+
+
+    Chen, R., Zhang, P., Wu, H., Wang, Z., Zhong, Z., 2019. Prediction of shield tunneling-induced
+    ground settlement using machine learning techniques. Front. Struct. Civ. Eng.
+    13, 1363–1378.
+
+    Clough, G.W., Leca, E., 1993. EPB shield tunneling in mixed face conditions. J.
+    Geotech. Eng. 119 (10), 1640–1656.
+
+    Darabi, A., Ahangari, K., Noorzad, A., Arab, A., 2012. Subsidence estimation utilizing
+    various approaches – a case study: tehran No. 3 subway line. Tunn. Undergr. Space
+    Technol. 31, 117–127.
+
+    Ding, L., Wang, F., Luo, H., Yu, M., Wu, X., 2013. Feedforward analysis for shield-ground
+    system. J. Comput. Civ. Eng. 27 (3), 231–242.
+
+    Elish, M., Helmy, T., Hussain, M., 2013. Empirical study of homogeneous and heterogeneous
+    ensemble models for software development effort estimation. Math. Probl. Eng.
+    2013, 312067.
+
+    Feng, S., Chen, Z., Luo, H., et al., 2021. Tunnel boring machines (TBM) performance
+    prediction: a case study using big data and deep learning. Tunn. Undergr. Space
+    Technol. 110, 103636.
+
+    Goh, A.T.C., Hefney, A.M., 2010. Reliability assessment of EPB tunnel-related
+    settlement. Geomech. Eng. 2 (1), 57–69.
+
+    Hasanipanah, M., Noorian-Bidgoli, M., Jahed Armaghani, D., Khamesi, H., 2016.
+    Feasibility of PSO-ANN model for predicting surface settlement caused by tunneling.
+    Eng. Comput. 32, 705–715.
+
+    Heaton, J., 2015. Artificial Intelligence for Humans. In: Deep Learning and Neural
+    Networks, ume 1. Heaton Research, Inc., St. Louis, MO, USA.
+
+    Hegazy, T., Fazio, P., Moselhi, O., 1994. Developing practical neural network
+    applications using back-propagation. Comput. Aided Civ. Infrastruct. Eng. 9 (2),
+    145–159.
+
+    Kim, C.Y., Bae, G.J., Hong, S.W., Park, C.H., Moon, H.K., Shin, H.S., 2001. Neural
+    network based prediction of ground surface settlements due to tunneling. Comput.
+    Geotech. 28 (6–7), 517–547.
+
+    Kitchin, R., Lauriault, T.P., 2015. Small data in the era of big data. GeoJournal
+    80, 463–475.
+
+    Kitchin, R., 2013. Big data and human geography: opportunities, challenges and
+    risks. Dialogues Hum. Geogr. 3 (3), 262–267.
+
+    Kohestani, V.R., Bazargan-Lari, M.R., Asgari-Marnani, J., 2017. Prediction of
+    maximum surface settlement caused by earth pressure balance shield tunneling using
+    random forest. J. AI Data Min. 5 (1), 127–135.
+
+    Lyashevska, O., Harma, C., Minto, C., Clarke, M., Brophy, D., 2020. Long-term
+    trends in herring growth primarily linked to temperature by gradient boosting
+    regression trees. Ecol. Inf. 60, 101154.
+
+    Mahmoodzadeh, A., Mohammadi, M., Darai, A., Farid Hama Ali, H., Kameran Al-Salih,
+    N., Mohammed Dier Omer, R., 2020. Forecasting maximum surface settlement caused
+    by urban tunneling. Autom. ConStruct. 120, 103375.
+
+    Marto, A., Hajihassani, M., Kalatehjari, R., Namazi, E., Sohaei, H., 2012. Simulation
+    of longitudinal surface settlement due to tunneling using artificial neural network.
+    Int. Rev. Mod. Simul. 5 (2), 1024–1031.
+
+    Moghaddasi, M.R., Noorian-Bidgoli, M., 2018. ICA-ANN, ANN and multiple regression
+    models for prediction of surface settlement caused by tunneling. Tunn. Undergr.
+    Space Technol. 79, 197–209.
+
+    Mooney, M., Grasmick, J., Kennelly, B., Fang, Y., 2016. The role of slurry TBM
+    parameters on ground deformation: field results and computational modeling. Tunn.
+    Undergr. Space Technol. 57, 257–264.
+
+    Mukherjee, I., Routroy, S., 2012. Comparing the performance of neural networks
+    developed by using Levenberg–Marquardt and quasi–Newton with the gradient descent
+    algorithm for modeling a multiple response grinding process. Expert Syst. Appl.
+    39 (3), 2397–2407.
+
+    Mutanga, O., Adam, E., Cho, M.A., 2012. High density biomass estimation for wetland
+    vegetation using WorldView-2 imagery and random forest regression algorithm. Int.
+    J. Appl. Earth Obs. Geoinf. 18, 399–406.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '+   - Ocak, I., Seker, S.E., 2013. Calculation of surface settlements caused
+    by EPBM tunneling using artificial neural network, SVM, and Gaussian processes.
+    Environ. Earth Sci. 70, 1263–1276.
+
+    +   - Pasini, A., 2015. Artificial neural networks for small dataset analysis.
+    J. Thorac. Dis. 7 (5), 953–960.
+
+    +   - Pedregosa, F., Varoquaux, G., Gramfort, A., et al., 2011. Scikit-learn:
+    machine learning in Python. J. Mach. Learn. Res. 12, 2825–2830.
+
+    +   - Pekel, E., 2020. Estimation of soil moisture using decision tree regression.
+    Theor. Appl. Climatol. 139, 1111–1119.
+
+    +   - Pourtaghi, A., Lotfollahi-Yaghin, M.A., 2012. Wavenet ability assessment
+    in comparison to ANN for predicting the maximum surface settlement caused by tunneling.
+    Tunn. Undergr. Space Technol. 28, 257–271.
+
+    +   - Qiu, J., Wu, Q., Ding, G., Xu, Y., Feng, S., 2016. A survey of machine learning
+    for big data processing. EURASIP J. Adv. Signal Process. 2016 (67).
+
+    +   - Santos, O.J., Celestino, T.B., 2008. Artificial neural networks analysis
+    of São Paulo subway tunnel settlement data. Tunn. Undergr. Space Technol. 23 (5),
+    481–491.
+
+    +   - Sheil, B., Suryasantana, S.K., Mooney, M.A., Zhu, H., 2020. Machine learning
+    to inform tunnelling operations: recent advances and future trends. Proc. Inst.
+    Civ. Eng. – Smart Infrastruct. Constr. https://doi.org/10.1680/jsmic.20.00011.
+
+    +   - Shi, J., Ortigao, J.A.R., Bai, J., 1998. Modular neural networks for predicting
+    settlements during tunneling. J. Geotech. Geoenviron. Eng. 124 (5), 389–395.
+
+    +   - Suwansawat, S., Einstein, H.H., 2006. Artificial neural networks for predicting
+    the maximum surface settlement caused by EPB shield tunneling. Tunn. Undergr.
+    Space Technol. 21 (2), 133–150.
+
+    +   - Tetko, I.V., Villa, A.E.P., 1997. Efficient partition of learning data sets
+    for neural network training. Neural Network. 10 (8), 1361–1374.
+
+    +   - Vladimir, N.V., 2000. The Nature of Statistical Learning Theory. Springer,
+    New York, USA.
+
+    +   - Wang, F., Gou, B., Qin, Y., 2013. Modeling tunneling-induced ground surface
+    settlement development using a wavelet smooth relevance vector machine. Comput.
+    Geotech. 54, 25–32.
+
+    +   - Yang, K., Trewn, J., 2004. Multivariate Statistical Methods in Quality Management.
+    McGraw-Hill, New York, USA.
+
+    +   - Yeh, C.Y., Huang, C.W., Lee, S.J., 2011. A multiple-kernel support vector
+    regression approach for stock market price forecasting. Expert Syst. Appl. 38
+    (3), 2177–2186.
+
+
+    +   - Zhang, K., Lyu, H.M., Shen, S.L., Zhou, A., Yin, Z.Y., 2020c. Evolutionary
+    hybrid neural network approach to predict shield tunneling-induced ground settlements.
+    Tunn. Undergr. Space Technol. 106, 103594.
+
+    +   - Zhang, L., Wu, X., Ji, W., AbouRizk, S.M., 2017. Intelligent approach to
+    estimation of tunnel-induced ground settlement using wavelet packet and support
+    vector machines. J. Comput. Civ. Eng. 31 (2), 04016053.
+
+    +   - Zhang, P., Wu, H.N., Chen, R.P., Chan, T.H.T., 2020b. Hybrid meta-heuristic
+    and machine learning algorithms for tunneling-induced settlement prediction: a
+    comparative study. Tunn. Undergr. Space Technol. 99, 103383.
+
+    +   - Zhang, W., Zhang, R., Wu, C., et al., 2020a. State-of-the-art review of
+    soft computing applications in underground excavations. Geosci. Front. 11 (4),
+    1095–1106.
+
+    +   - Zhou, L., Pan, S., Wang, J., Vasilakos, A.V., 2017. Machine learning on
+    big data: opportunities and challenges. Neurocomputing 237, 350–361.
+
+    +   - Zhu, M., Zhu, H., Guo, F., Chen, X., Ju, J., 2021. Tunnel condition assessment
+    via cloud model-based random forests and self-training approach. Comput. Aided
+    Civ. Infrastruct. Eng. 36 (2), 164–179.
+
+
+    ![](img/3dd1490767e1ddfc7ef0e1a1ad6f2726_13_0.png)
+
+
+    Dr. Wendy Zhou is a Professor at the Department of Geology and Geological Engineering
+    and the Director of the GIS & Geoinformatics Program, Colorado School of Mines
+    in Golden, Colorado, USA. Wendy Zhou received her Ph.D. degree in geological engineering
+    from Missouri University of Science & Technology, USA, in 2001. Her research interests
+    include: (1) geographic information system (GIS) and remote sensing applications
+    in geohazard analysis, environmental impact study, and natural resource management,
+    (2) interferometric synthetic aperture radar (InSAR) and machine learning applications
+    in ground movement monitoring and landslide assessment, (3) rock mass characterization,
+    and (4) numerical modeling for the ground thermal regime and stress-strain distribution
+    in the rock or soil mass. She has supervised more than 30 masters and 9 Ph.D.
+    students. She has published more than 60 papers in peer-reviewed journals or peer-reviewed
+    conference proceedings. She has also contributed to 7 book chapters. She has been
+    serving as an Associate Editor of the Journal of Applied Remote Sensing since
+    2014 and a Topic Editor of Remote Sensing since 2020.'
+  merge: -1
+  img_proc: true
