@@ -1,0 +1,13 @@
+expert may benefit from reading the final section of this chapter, section 16.7, in which we highlight some of the unique ways in which graphical models are used for deep learning algorithms. Deep learning practitioners tend to use very different model structures, learning algorithms and inference procedures than are commonly used by the rest of the graphical models research community. In this chapter, we identify these differences in preferences and explain the reasons for them.
+
+We first describe the challenges of building large-scale probabilistic models. Next, we describe how to use a graph to describe the structure of a probability distribution. While this approach allows us to overcome many challenges, it is not without its own complications. One of the major difficulties in graphical modeling is understanding which variables need to be able to interact directly, that is, which graph structures are most suitable for a given problem. In section 16.5, we outline two approaches to resolving this difficulty by learning about the dependencies. Finally, we close with a discussion of the unique emphasis that deep learning practitioners place on specific approaches to graphical modeling, in section 16.7.
+
+# 16.1 The Challenge of Unstructured Modeling
+
+The goal of deep learning is to scale machine learning to the kinds of challenges needed to solve artificial intelligence. This means being able to understand high-dimensional data with rich structure. For example, we would like AI algorithms to be able to understand natural images, 1 audio waveforms representing speech, and documents containing multiple words and punctuation characters.
+
+Classification algorithms can take an input from such a rich high-dimensional distribution and summarize it with a categorical label—what object is in a photo, what word is spoken in a recording, what topic a document is about. The process of classification discards most of the information in the input and produces a single output (or a probability distribution over values of that single output). The classifier is also often able to ignore many parts of the input. For example, when recognizing an object in a photo, it is usually possible to ignore the background of the photo.
+
+It is possible to ask probabilistic models to do many other tasks. These tasks are often more expensive than classification. Some of them require producing multiple output values. Most require a complete understanding of the entire structure of the input, with no option to ignore sections of it. These tasks include the following:
+
+1 A natural image is an image that might be captured by a camera in a reasonably ordinary environment, as opposed to a synthetically rendered image, a screenshot of a web page, etc.

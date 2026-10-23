@@ -1,0 +1,13 @@
+but fortunately its most serious consequences can be avoided using the **gradient clipping** heuristic described in section 10.11.1. The basic idea is to recall that the gradient specifies not the optimal step size, but only the optimal direction within an infinitesimal region. When the traditional gradient descent algorithm proposes making a very large step, the gradient clipping heuristic intervenes to reduce the step size, making it less likely to go outside the region where the gradient indicates the direction of approximately steepest descent. Cliff structures are most common in the cost functions for recurrent neural networks, because such models involve a multiplication of many factors, with one factor for each time step. Long temporal sequences thus incur an extreme amount of multiplication.
+
+# 8.2.5 Long-Term Dependencies
+
+Another difficulty that neural network optimization algorithms must overcome arises when the computational graph becomes extremely deep. Feedforward networks with many layers have such deep computational graphs. So do recurrent networks, described in chapter 10, which construct very deep computational graphs by repeatedly applying the same operation at each time step of a long temporal sequence. Repeated application of the same parameters gives rise to especially pronounced difficulties.
+
+For example, suppose that a computational graph contains a path that consists of repeatedly multiplying by a matrix **W**. After *t* steps, this is equivalent to multiplying by **W**^t. Suppose that **W** has an eigendecomposition **W** = **V** diag(**λ**) **V**^{-1}. In this simple case, it is straightforward to see that
+
+**W**^t = (**V** diag(**λ**) **V**^{-1})^t = **V** diag(**λ**)^t **V**^{-1}. (8.11)
+
+Any eigenvalues λ_i that are not near an absolute value of 1 will either explode if they are greater than 1 in magnitude or vanish if they are less than 1 in magnitude. The **vanishing and exploding gradient problem** refers to the fact that gradients through such a graph are also scaled according to diag(**λ**)^t. Vanishing gradients make it difficult to know which direction the parameters should move to improve the cost function, while exploding gradients can make learning unstable. The cliff structures described earlier that motivate gradient clipping are an example of the exploding gradient phenomenon.
+
+The repeated multiplication by **W** at each time step described here is very similar to the **power method** algorithm used to find the largest eigenvalue of a matrix **W** and the corresponding eigenvector. From this point of view it is not surprising that **x**^T **W**^t will eventually discard all components of **x** that are orthogonal to the principal eigenvector of **W**.

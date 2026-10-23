@@ -1,0 +1,9 @@
+![](bbox=[0.22, 0.07, 0.82, 0.4])
+
+Figure 6.11: The computational graph used to compute the cost to train our example of a single-layer MLP using the cross-entropy loss and weight decay.
+
+explore two different branches. On the shorter branch, it adds $H^\top G$ to the gradient on $W^{(2)}$, using the back-propagation rule for the second argument to the matrix multiplication operation. The other branch corresponds to the longer chain descending further along the network. First, the back-propagation algorithm computes $\nabla_H J = G W^{(2)\top}$ using the back-propagation rule for the first argument to the matrix multiplication operation. Next, the `relu` operation uses its back-propagation rule to zero out components of the gradient corresponding to entries of $U^{(1)}$ that are less than 0. Let the result be called $G'$. The last step of the back-propagation algorithm is to use the back-propagation rule for the second argument of the `matmul` operation to add $X^\top G'$ to the gradient on $W^{(1)}$.
+
+After these gradients have been computed, the gradient descent algorithm, or another optimization algorithm, uses these gradients to update the parameters.
+
+For the MLP, the computational cost is dominated by the cost of matrix multiplication. During the forward propagation stage, we multiply by each weight matrix, resulting in $O(w)$ multiply-adds, where $w$ is the number of weights. During the backward propagation stage, we multiply by the transpose of each weight matrix, which has the same computational cost. The main memory cost of the algorithm is that we need to store the input to the nonlinearity of the hidden layer.

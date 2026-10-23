@@ -1,0 +1,7 @@
+![](bbox=[0.26, 0.08, 0.79, 0.23])
+
+![](bbox=[0.25, 0.26, 0.8, 0.52])
+
+Figure 9.12: Convolution with a stride. In this example, we use a stride of two. (Top)Convolution with a stride length of two implemented in a single operation. (Bottom)Convolution with a stride greater than one pixel is mathematically equivalent to convolution with unit stride followed by downsampling. Obviously, the two-step approach involving downsampling is computationally wasteful, because it computes many values that are then discarded.
+
+available to the next layer. The input pixels near the border, however, influence fewer output pixels than the input pixels near the center. This can make the border pixels somewhat underrepresented in the model. This motivates the other extreme case, which MATLAB refers to as full convolution, in which enough zeros are added for every pixel to be visited k times in each direction, resulting in an output image of width m + k - 1. In this case, the output pixels near the border are a function of fewer pixels than the output pixels near the center. This can make it difficult to learn a single kernel that performs well at all positions in the convolutional feature map. Usually the optimal amount of zero padding (in

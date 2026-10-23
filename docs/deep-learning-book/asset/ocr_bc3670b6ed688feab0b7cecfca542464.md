@@ -1,0 +1,31 @@
+# BIBLIOGRAPHY
+
+Mesnil, G., Dauphin, Y., Glorot, X., Rifai, S., Bengio, Y., Goodfellow, I., Lavoie, E., Muller, X., Desjardins, G., Warde-Farley, D., Vincent, P., Courville, A., and Bergstra, J. (2011). Unsupervised and transfer learning challenge: a deep learning approach. In JMLR W&CP: Proc. Unsupervised and Transfer Learning, volume 7. 197, 530, 536
+
+Mesnil, G., Rifai, S., Dauphin, Y., Bengio, Y., and Vincent, P. (2012). Surfing on the manifold. Learning Workshop, Snowbird. 707
+
+Miikkulainen, R. and Dyer, M. G. (1991). Natural language processing with modular PDP networks and distributed lexicon. Cognitive Science, 15, 343-399. 472
+
+Mikolov, T. (2012). Statistical Language Models based on Neural Networks. Ph.D. thesis, Brno University of Technology. 410
+
+Mikolov, T., Deoras, A., Kombrink, S., Burget, L., and Cernocky, J. (2011a). Empirical evaluation and combination of advanced language modeling techniques. In Proc. 12th annual conference of the international speech communication association (INTERSPEECH 2011). 467
+
+Mikolov, T., Deoras, A., Povey, D., Burget, L., and Cernocky, J. (2011b). Strategies for training large scale neural network language models. In Proc. ASRU'2011. 324, 467
+
+Mikolov, T., Chen, K., Corrado, G., and Dean, J. (2013a). Efficient estimation of word representations in vector space. In International Conference on Learning Representations: Workshops Track. 534
+
+Mikolov, T., Le, Q. V., and Sutskever, I. (2013b). Exploiting similarities among languages for machine translation. Technical report, arXiv:1309.4168. 537
+
+Minka, T. (2005). Divergence measures and message passing. Microsoft Research Cambridge UK Tech Rep MSRTR2005173, 72(TR-2005-173). 623
+
+Minsky, M. L. and Papert, S. A. (1969). Perceptrons. MIT Press, Cambridge. 14
+
+Mirza, M. and Osindero, S. (2014). Conditional generative adversarial nets. arXiv preprint arXiv:1411.1784. 698
+
+Mishkin, D. and Matas, J. (2015). All you need is a good init. arXiv preprint arXiv:1511.06422. 301
+
+Misra, J. and Saha, I. (2010). Artificial neural networks in hardware: A survey of two decades of progress. Neurocomputing, 74(1), 239-255. 446
+
+Mitchell, T. M. (1997). Machine Learning. McGraw-Hill, New York. 97
+
+Miyato, T., Maeda, S., Koyama, M., Nakae, K., and Ishii, S. (2015). Distributional smoothing with virtual adversarial training. In ICLR. Preprint: arXiv:1507.00677. 266

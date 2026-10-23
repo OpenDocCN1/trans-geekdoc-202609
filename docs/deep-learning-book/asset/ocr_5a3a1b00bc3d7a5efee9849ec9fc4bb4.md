@@ -1,0 +1,11 @@
+![](bbox=[0.14, 0.075, 0.85, 0.22])
+
+Figure 9.18: Gabor functions with a variety of parameter settings. White indicates large positive weight, black indicates large negative weight, and the background gray corresponds to zero weight. (Left)Gabor functions with different values of the parameters that control the coordinate system: x0, y0, and τ. Each Gabor function in this grid is assigned a value of x0 and y0 proportional to its position in its grid, and τ is chosen so that each Gabor filter is sensitive to the direction radiating out from the center of the grid. For the other two plots, x0, y0, and τ are fixed to zero. (Center)Gabor functions with different Gaussian scale parameters βx and βy. Gabor functions are arranged in increasing width (decreasing βx) as we move left to right through the grid, and increasing height (decreasing βy) as we move top to bottom. For the other two plots, the β values are fixed to 1.5 times the image width. (Right)Gabor functions with different sinusoid parameters f and φ. As we move top to bottom, f increases, and as we move left to right, φ increases. For the other two plots, φ is fixed to 0 and f is fixed to 5 times the image width.
+
+Here, α, βx, βy, f, φ, x0, y0, and τ are parameters that control the properties of the Gabor function. Figure 9.18 shows some examples of Gabor functions with different settings of these parameters.
+
+The parameters x0, y0, and τ define a coordinate system. We translate and rotate x and y to form x′ and y′. Specifically, the simple cell will respond to image features centered at the point (x0, y0), and it will respond to changes in brightness as we move along a line rotated τ radians from the horizontal.
+
+Viewed as a function of x′ and y′, the function w then responds to changes in brightness as we move along the x′ axis. It has two important factors: one is a Gaussian function, and the other is a cosine function.
+
+The Gaussian factor α exp (−βx x′2 − βy y′2) can be seen as a gating term that ensures that the simple cell will respond only to values near where x′ and y′ are both zero, in other words, near the center of the cell’s receptive field. The scaling factor α adjusts the total magnitude of the simple cell’s response, while βx and βy control how quickly its receptive field falls off.

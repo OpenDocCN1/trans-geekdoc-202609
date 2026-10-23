@@ -1,0 +1,3 @@
+moving body parts). The algorithm proposed with the manifold tangent classifier is therefore simple: (1) use an autoencoder to learn the manifold structure by unsupervised learning, and (2) use these tangents to regularize a neural net classifier as in tangent prop (equation 7.67).
+
+In this chapter, we have described most of the general strategies used to regularize neural networks. Regularization is a central theme of machine learning and as such will be revisited periodically in most of the remaining chapters. Another central theme of machine learning is optimization, described next.

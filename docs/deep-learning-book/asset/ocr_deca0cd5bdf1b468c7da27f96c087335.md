@@ -1,0 +1,13 @@
+us an optimization strategy that allows us to use efficient convex optimization algorithms, by alternating between optimizing $W$ with $H$ fixed, then optimizing $H$ with $W$ fixed.
+
+Coordinate descent is not a very good strategy when the value of one variable strongly influences the optimal value of another variable, as in the function $f(x) = (x_1 - x_2)^2 + \alpha(x_1^2 + x_2^2)$ where $\alpha$ is a positive constant. The first term encourages the two variables to have similar value, while the second term encourages them to be near zero. The solution is to set both to zero. Newton’s method can solve the problem in a single step because it is a positive definite quadratic problem. For small $\alpha$, however, coordinate descent will make very slow progress because the first term does not allow a single variable to be changed to a value that differs significantly from the current value of the other variable.
+
+# 8.7.3 Polyak Averaging
+
+Polyak averaging ([Polyak and Juditsky, 1992](#)) consists of averaging several points in the trajectory through parameter space visited by an optimization algorithm. If $t$ iterations of gradient descent visit points $\theta^{(1)}, \ldots, \theta^{(t)}$, then the output of the Polyak averaging algorithm is $\hat{\theta}^{(t)} = \frac{1}{t}\sum_i \theta^{(i)}$. On some problem classes, such as gradient descent applied to convex problems, this approach has strong convergence guarantees. When applied to neural networks, its justification is more heuristic, but it performs well in practice. The basic idea is that the optimization algorithm may leap back and forth across a valley several times without ever visiting a point near the bottom of the valley. The average of all the locations on either side should be close to the bottom of the valley though.
+
+In nonconvex problems, the path taken by the optimization trajectory can be very complicated and visit many different regions. Including points in parameter space from the distant past that may be separated from the current point by large barriers in the cost function does not seem like a useful behavior. As a result, when applying Polyak averaging to nonconvex problems, it is typical to use an exponentially decaying running average:
+
+$$\hat{\theta}^{(t)} = \alpha\hat{\theta}^{(t-1)} + (1 - \alpha)\theta^{(t)}.$$ \tag{8.39}
+
+The running average approach is used in numerous applications. See [Szegedy et al. (2015)](#) for a recent example.
