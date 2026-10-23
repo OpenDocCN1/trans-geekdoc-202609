@@ -1,0 +1,11 @@
+is like planting seeds for a healthy field tomorrow. Smart irrigation systems can help farmers save money by using water more efficiently. It’s like looking for ways to reduce monthly expenses. Specifically, smart irrigation brings a future and an efficient approach to agriculture by putting power in the hands of farmers through mobile solutions. It’s about wise use of water, conservation, and a sustainable and productive future for agriculture.
+
+# ## Challenges and Future Prospects
+
++   - **Limited network usage:** Many rural areas lack robust mobile networks, making it difficult for farmers to access smart agricultural solutions (Yigezu Wendimu et al., 2021, Kheya et al., 2023) Limited connectivity prevents the real-time use of crops, weather and smart technologies.
++   - **Low bandwidth:** Even with coverage, rural areas can suffer from low bandwidth, affecting data speeds and reliability. Slow data transfer can hinder smart agricultural systems, delaying decision-making and response times.
++   - **Material differences:** Rural areas often lack the necessary infrastructure for robust and stable connectivity, including 4G/5G towers and reliable internet service. Inadequate infrastructure may limit the use of advanced mobile solutions for precision agriculture and data-driven decision making. Government and telecommunication companies can invest in network expansion to reach remote rural areas. The improved network and reliability can provide easy connectivity and data transfer for smart agricultural applications.
+
+# ## Data Security and Privacy Concerns
+
+Risk associated with smart agriculture systems’ access or data breaches (Yadav et al., 2020, Chakraborty et al., 2021). There is a compromise of sensitive farm data, which could result in financial loss and privacy concerns. Concerns concerning the way farmers use information are raised by ambiguities in as represented in Figure 5 explains data ownership and management (Han et al., 2021). Farmers do not have sufficient control over

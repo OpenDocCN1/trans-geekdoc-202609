@@ -1,0 +1,11 @@
+# Notable Privacy and Security Breaches
+
++   - The Cambridge Analytica/Facebook Scandal (2018): lack of authorization or knowledge, 87 million users’ private data on Facebook had been gathered for political advertising purposes.
++   - Data Breach at Equifax (2017): financial reporting agency the credit bureau suffered from a data breach that exposed 147 million people’s personal information, including names, social welfare figures, dates of time of their birth, and other information.
++   - Yahoo breaches of data in 2013 and 2014: Two significant data breaches at Yahoo exposed the accounts of billions of users, allowing passwords that are encrypted, telephone numbers, email addresses, and identities to be seized.
++   - Data Breach at Capital One in 2019: The personal data of more than 100 million Capital One consumers, including address information, scorecards, and social security numbers, has been accessed by an unauthorized hacker.
++   - Supply Chain Attack by SolarWinds (2020): The software supply chain was breached by a sophisticated cyberattack that affected numerous organizations, including government agencies. The malicious code was added by the attackers to the SolarWinds Orion software updates.
++   - Attack by Cybersecurity Incident (2021): A ransomware attack subjected a cyber threat aimed towards critical infrastructure, specifically the fuel supply, demonstrating the vulnerability of critical systems to such situations.
++   - Cyberattack on JBS Meat Processing (2021): A ransomware attack caused operational disruptions in North America and Australia for JBS, a prominent meat processing company worldwide (Noor T. H et al., 2018; Xi k et al., 2011).
+
+The privacy breaches for sensitive and non-sensitive data at Equifax (2017) the non-sensitive data is 0.8. The data breach in Yahoo is because of the encryption of passwords, it’s a combination of sensitive and non-sensitive the sensitivity is released below 0.2 and non-sensitive data is about 0.8. The attack by Colonial Pipeline Ransomware and JBS Meat Processing is breached. The notable data is released below which is non-sensitive, it is the highest value is specified in Figure 7.

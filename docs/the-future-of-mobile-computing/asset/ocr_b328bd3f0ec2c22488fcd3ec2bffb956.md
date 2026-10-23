@@ -1,0 +1,11 @@
+requirements. The issues due to cloud computing can be resolved using mobile-edge computing, fog computing, and edge-server model. A diverse range of technologies, components, and entities are included in edge computing. This chapter introduces the taxonomy of edge computing in terms of edge devices, infrastructure, edge services, and applications.
+
+# Background of Edge Computing
+
+Being edge computing close to the source of the data can result in significant business benefits such as faster insights, faster response times, and better bandwidth availability (Jain et al., 2019). Gartner predicts that by 2025, 75% of data processing will occur outside of a traditional data center or the cloud. Massive amounts of data have been generated as a result of the rapid expansion and increasing computing power of IoT devices. Furthermore, as the number of mobile devices connected to 5G networks grows, there will be an increase in the volume of data.
+
+Transmitting all the device-generated data to a centralised data center leads to issues related to latency and bandwidth. Edge computing, which processes and analyses data closer to the point of creation, is a more efficient substitute. In the past, automation and speeding up innovation through the creation of useful data insights was the potential of cloud computing and artificial intelligence (AI). However, network and infrastructure capabilities have not kept up with connected devices’ ability to produce data at a scale and in a complexity never before seen. Edge computing makes it possible to analyse data more quickly and thoroughly, resulting in deeper insights, quicker responses, and improved customer experiences.
+
+# Characteristics and Paradigms of Edge Computing
+
+Edge computing in its core, rechanges the traditional centralized computing paradigm by the changing of in computational resources be like the closer to the points of data in the generation of the edge. Its essence lies in the reducing of the distance that will be in data must also be in travel of minimizing latency, and also optimizing bandwidth usage. This proximity sensors enable the fundamental shifts in how the data will be processed, fostering a decentralized in the architecture distributed of the across various edge devices, servers, and

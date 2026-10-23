@@ -1,0 +1,9 @@
++   - **Problem:** Several sensors, like lidar, radar and cameras, are used by autonomous cars in order to sense their environment. However, these sensors may not work correctly in some cases due to difficult weather conditions or low visibility.
++   - **Resolution:** Computer vision is capable of increasing perception by providing self-driving cars with greater and accurate awareness of their surroundings. The computer vision algorithm, which allows real time tracking and identification of things such as humans, road signs or other vehicles, can be used.
++   - **Findings:** A safer, more reliable self-driving vehicle could be developed by computer vision. We can see steps in Figure 9. With computer vision, it is possible to provide autonomous cars with a more precise image of the environment that will help them avoid collisions and navigate safely in various settings.
+
+![](bbox=[0.12, 0.48, 0.9, 0.7])
+
+Figure 9. Flow Chart for Autonomous Driving Vehicles.
+
+The advantages include increased recognition of objects, better understanding of the scene and the ability to withstand sensor failure. Computer vision is, for all intents and purposes, a promising method to improve the perception of autonomous vehicles. We’ll be able to foresee that when computer vision algorithms advance further, they will play an even more important role in developing reliable and safe self-driving cars. Intelligent Mobile Assistants use artificial intelligence, speech recognition and natural language processing to provide dynamic, context aware interactions. With a view to ensuring an uninterrupted transition from ease of use to efficiency in the fast -evolving area of Intelligent Mobile Computing, Data Safety has been prioritised over security (Mao et al., 2017).

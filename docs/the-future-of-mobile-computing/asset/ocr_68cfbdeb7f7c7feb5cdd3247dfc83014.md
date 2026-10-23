@@ -1,0 +1,11 @@
+It may take a considerable amount of time to upload everything in its raw form to the cloud due to the growing volume of data, and the tremendous load that is imposed upon the central cluster may cause it to surpass the limit of the computing capabilities available provides observations with a resolution of seconds. These observations are supplied by the data. Through the collection of data from networks consisting of hundreds of sensors, this study keeps track of local temperatures as well as other environmental characteristics. The high-velocity data transfers that take place inside the network, on the other hand, have the potential to generate traffic congestion owing to the restricted bandwidth that is available.
+
+# Cloud Computing for Processing and Analyzing Huge Amounts of Data
+
+The data that is transmitted from sensors is sent via the edges to the center for improved management. This is made possible by the fact that the virtual storage system is capable of expanding itself automatically. Both mobile and edge devices are unable to process the data that the cloud is able to manage, and the cloud is also able to speed up the processing beyond what a standalone server is capable of accomplishing (Goundar et al., 2021). This is because the cloud has a large computational capacity.
+
+One of the most important problems is the heterogeneity of the data, and the enormous amount of labor involved in cleaning the data needs a substantial amount of processing capacity. According to Botta et al., (2014), the cloud, which is a centralized computing resource pool, provides adequate capacity for any job of this kind. The UHI study is influenced by a wide variety of elements, as was previously noted. Making modifications to the composition will need making changes to the parameters of the model. The amount of time spent constructing the model and the amount of human error that occurs during the process of transferring the experimental setting are advantages.
+
+# Conclusion
+
+The tremendous reduction in the size of Using sensing and communication tools in cities has made it possible to conceive of the possibility of creating innovative technical networks for smart city applications. Therefore, the
