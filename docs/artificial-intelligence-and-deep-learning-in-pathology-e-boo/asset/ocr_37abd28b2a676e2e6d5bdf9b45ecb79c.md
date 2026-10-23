@@ -1,0 +1,11 @@
+priority to this fundamental technique that is the basis for neural network training (see Ref. [3] for historical details).
+
+The way Backprop works is as follows: We initially pick a training instance and set the activity of the input nodes to the values from that instance. Activities are then propagated through the ANN in its initial state (the initial weights, within certain constraints, are arbitrary, and often are randomly chosen). The output is then examined. At this point, the output values are compared to the correct answer, which we know, since the example is from the labeled training set. The labels are known as “ground truth” and the object is to generate a result that matches this ground truth. If this turns out to be the case, then a miracle occurred. If not, the difference between ground truth and the prediction is quantified by a so-called “loss” or “cost” function. This is often, but not always, a mean square error function. The task is now to minimize the cost function by adjusting the weights in an iterative manner. This is not a straightforward process, since each weight contributes to more than one output, and so we cannot simply apply corrections evenly among all the weights. In practice, we work backwards from the output layer through the hidden layers rather than starting at the beginning of the net. This is known as gradient descent.
+
+Fig. 2.12 shows a simple diagram of an error curve, where J(w) is the loss function and w is a weight. The gradient, or slope, shows the direction of change in the weight needed to reach either a minimum or a maximum. That is the point at which the gradient (slope) is zero. At each step of the gradient descent method, the iterative steps are proportional to the negative of the gradient of the function at the current point. The gradient is calculated from the partial derivatives of the loss function with respect to the weights (multivariate calculus to the rescue).
+
+![](bbox=[0.25, 0.6, 0.8, 0.78])
+
+# FIGURE 2.12
+
+The gradient is given by the slope of the curve directly above the point we are interested in. Lines that go up as we move right have a positive slope, and otherwise they are negative. The weight is adjusted in a stepwise manner as shown.

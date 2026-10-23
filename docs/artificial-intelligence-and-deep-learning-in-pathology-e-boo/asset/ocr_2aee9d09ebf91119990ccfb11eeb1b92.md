@@ -1,0 +1,13 @@
+# Dealing with data:
+strategies of preprocessing
+data
+
+Stanley Cohen, MD 1,2,3
+
+1 Emeritus Chair of Pathology & Emeritus Founding Director Center for Biophysical Pathology, Rutgers-New Jersey Medical School, Newark, NJ, United States; 2 Adjunct Professor of Pathology, Perelman Medical School, University of Pennsylvania, Philadelphia, PA, United States; 3 Adjunct Professor of Pathology, Kimmel School of Medicine, Jefferson University, Philadelphia, PA, United States
+
+# Introduction
+
+Most of the applications of artificial intelligence algorithms are dependent upon the use of large labeled datasets (supervised learning). Although there has been great progress in the use of weakly or sparsely supervised learning, for the most part, applications to pathology have not yet exploited these in a systematic way. Similarly, while reinforcement learning makes use of reward strategies rather than loss or cost functions derived from comparison of label to prediction, these have not been typically applied to the topics of interest to pathologists. Recently, however, sophisticated algorithms have been developed using reinforcement learning for image classification [1–3]; so this is likely to change in the near future.
+
+Because of the current dependence of these artificial intelligence algorithms on “large data,” it becomes important to make sure that data are in an optimal form for input into the chosen algorithm. At the very least, good data are at least as important as a good algorithm, and often they may be more important. In fact, the majority of data science work involves getting data into the format needed for the model to use and in its most compact and informative form. The reason for this is that the corollary of “garbage in, garbage out” is “better data beat fancier algorithms.” Real-life data are messy and unruly; it has to be beaten into submission. It is often incomplete or inconsistent and may contain errors. We must make sure that our samples are representative of the various classes we are trying to predict from sample attributes, we must make sure that the samples themselves are relevant, and we must deal with missing attributes among the samples and determine whether outliers are significant or artifacts. Where there is class imbalance, we must try to correct this either by reducing part of the dataset or constructing synthetic data. These tasks can be broadly categorized as feature engineering and involve feature selection, feature standardization and normalization, feature extraction, and feature correction. These terms are simply descriptions of various aspects of the same process rather than a distinct set of procedures, and they overlap to some extent. Collectively, they fall

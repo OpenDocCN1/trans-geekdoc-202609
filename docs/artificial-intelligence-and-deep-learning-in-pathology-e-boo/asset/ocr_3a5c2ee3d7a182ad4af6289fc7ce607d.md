@@ -1,0 +1,17 @@
++   - [139] Robertson S, et al. Digital image analysis in breast pathology-from image processing techniques to artificial intelligence. Translational Research 2018;194:19–35.
++   - [140] Dimitriou N, Arandjelovic O, Caie PD. Deep learning for whole slide image analysis: an overview. Frontiers in Medicine 2019;6.
++   - [141] Aeffner F, et al. Introduction to digital image analysis in whole-slide imaging: a white paper from the digital pathology association. Journal of Pathology Informatics 2019; 10:9.
++   - [142] Kong H, Gurcan M, Belkacem-Boussaid K. Partitioning histopathological images: an integrated framework for supervised color-texture segmentation and cell splitting. IEEE Transactions on Medical Imaging 2011;30(9):1661–77.
++   - [143] Voelker F, Potts S. Whole-slide image analysis with smart tissue finding on common toxicological problems. Toxicologic Pathology 2009;37(1):146.
++   - [144] Lin HJ, et al. Fast ScanNet: fast and dense analysis of multi-gigapixel whole-slide images for cancer metastasis detection. IEEE Transactions on Medical Imaging 2019; 38(8):1948–58.
++   - [145] Niazi MKK, Downs-Kelly E, Gurcan MN. Hot spot detection for breast cancer in Ki-67 stained slides: image dependent filtering approach. In: SPIE medical imaging. International Society for Optics and Photonics; 2014.
++   - [146] Strack M, Sandusky G, Rushing D. Digital whole slide quantitative image analysis of TOPO II and P53 in sarcomas evaluating both primary and lung metastatic tumors. Cancer Research 2016:76.
++   - [147] Romo-Bucheli D, et al. Automated tubule nuclei quantification and correlation with oncotype DX risk categories in ER plus breast cancer whole slide images. Medical Imaging 2016: Digital Pathology 2016:9791.
++   - [148] Shin H-C, et al. Deep convolutional neural networks for computer-aided detection: CNN architectures, dataset characteristics and transfer learning. IEEE Transactions on Medical Imaging 2016;35(5):1285–98.
++   - [149] Sirinukunwattana K, et al. Locality sensitive deep learning for detection and classification of nuclei in routine colon cancer histology images. IEEE Transactions on Medical Imaging 2016;35(5):1196–206.
++   - [150] Bejnordi BE, et al. Context-aware stacked convolutional neural networks for classification of breast carcinomas in whole-slide histopathology images. Journal of Medical Imaging 2017;4(4).
++   - [151] Chen M, et al. Automated segmentation of the choroid in EDI-OCT images with retinal pathology using convolution neural networks. Fetal Infant Ophthalmic Medical Image Analysis (2017) 2017;10554:177–84.
++   - [152] Cruz-Roa A, et al. Accurate and reproducible invasive breast cancer detection in whole-slide images: a Deep Learning approach for quantifying tumor extent. Scientific Reports 2017;7.
++   - [153] Jamaluddin MF, Fauzi MFA, Abas FS. Tumor detection and whole slide classification of H&E lymph node images using convolutional neural network. 2017 IEEE International Conference on Signal and Image Processing Applications (Icsipa) 2017:90–5.
++   - [154] Korbar B, et al. Looking under the hood: deep neural network visualization to interpret whole-slide image analysis outcomes for colorectal polyps. 2017 IEEE Conference on Computer Vision and Pattern Recognition Workshops (Cvprw) 2017:821–7.
++   - [155] Nirschl J, et al. Deep learning classifier to predict cardiac failure from whole slide H&E images. Modern Pathology 2017;30:532a–3a.

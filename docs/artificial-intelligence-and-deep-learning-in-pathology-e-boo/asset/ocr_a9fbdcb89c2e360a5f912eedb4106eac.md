@@ -1,0 +1,15 @@
+improve accurate, precise, and reproducible interpretation of HER2 IHC results for breast cancer, QIA and procedures must be validated before implementation, followed by regular maintenance and ongoing evaluation of quality control and quality assurance. HER2 QIA performance, interpretation, and reporting should be supervised by pathologists with expertise in QIA.”
+
+Vendors of whole slide scanning devices have also recognized that the quality of the rendered whole slide images impacts on the ability of pathologists to diagnose. When scanning the same slide on the same scanner at different times, the WSI appearance may contain subtle differences even when viewed on the same display because of variances in the scanner characteristics and/or other factors such as temperature or mechanical shifts.
+
+Color reproduction has been approached by commercial developers through the construction of standardized slide phantoms matching the colors in the scanned images to the actual slide color [14]. The colors observed in phantoms are, however, not the same as those viewed in tissue matrix. Alternatively, commercial systems have used quantitative image quality assessment based on parameters such as sharpness, contrast, brightness, uniform illumination, and color separation to evaluate the scanner performance. In a study on HercepTest slides [15], the authors note that this computational approach is independent of image content or test specimen.
+
+Open source approaches to the development of the digital assistant for quality assurance (QA) processes in computational pathology are also evolving. Janowczyk et al. have recently proposed an open source quality control tool for digital pathology slides which they call “HistOQC” [11]. Their system offers a modular QC application, which employs a suite of image metrics (such as color histograms, brightness, and contrast), images features detectors (for example, edge and smoothness), and supervised classifier systems (i.e., a drawing tablet with pen annotation) to facilitate QA work. The user interacts with the system through a python-based pipeline. Relevant output images of artifacts are created and presented with metadata and then sent to a data analytic tool. These authors have developed an HTML-5 user interface that allows for real-time visualization.
+
+# The digital assistant for histological object segmentation
+
+The segmentation of histological objects by computational methods is an active area of research in pathology. The following describes some of the ways in which a variety of approaches have been employed to support clinically relevant image interpretation in pathology.
+
+# Nuclei
+
+The enumeration and categorization of nuclei and nuclear features is a central task in many types of histopathological diagnoses. Nuclear detection methods are numerous. Xu et al. in a paper describing a deep learning strategy compiling examples of 23 different handcrafted feature-based approaches include color-based, edge-based, contextual information–based, and texture-based designs for nuclear

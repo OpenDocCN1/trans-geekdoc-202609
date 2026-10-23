@@ -1,0 +1,45 @@
+
+- [139] Robertson S, et al. Digital image analysis in breast pathology - from image processing techniques to artificial intelligence. Translational Research 2018;194:19–35.
+- [140] Dimitriou N, Arandjelovic O, Caie PD. Deep learning for whole slide image analysis: an overview. Frontiers in Medicine 2019;6.
+- [141] Aeffner F, et al. Introduction to digital image analysis in whole-slide imaging: a white paper from the digital pathology association. Journal of Pathology Informatics 2019;10:9.
+- [142] Kong H, Gurcan M, Belkacem-Boussaid K. Partitioning histopathological images: an integrated framework for supervised color-texture segmentation and cell splitting. IEEE Transactions on Medical Imaging 2011;30(9):1661–77.
+- [143] Voelker F, Potts S. Whole-slide image analysis with smart tissue finding on common toxicological problems. Toxicologic Pathology 2009;37(1):146.
+- [144] Lin HJ, et al. Fast ScanNet: fast and dense analysis of multi-gigapixel whole-slide images for cancer metastasis detection. IEEE Transactions on Medical Imaging 2019;38(8):1948–58.
+- [145] Niazi MKK, Downs-Kelly E, Gurcan MN. Hot spot detection for breast cancer in Ki-67 stained slides: image dependent filtering approach. In: SPIE medical imaging. International Society for Optics and Photonics; 2014.
+- [146] Strack M, Sandusky G, Rushing D. Digital whole slide quantitative image analysis of TOPO II and P53 in sarcomas evaluating both primary and lung metastatic tumors. Cancer Research 2016:76.
+- [147] Romo-Bucheli D, et al. Automated tubule nuclei quantification and correlation with oncotype DX risk categories in ER plus breast cancer whole slide images. Medical Imaging 2016: Digital Pathology 2016:9791.
+- [148] Shin H-C, et al. Deep convolutional neural networks for computer-aided detection: CNN architectures, dataset characteristics and transfer learning. IEEE Transactions on Medical Imaging 2016;35(5):1285–98.
+- [149] Sirinukunwattana K, et al. Locality sensitive deep learning for detection and classification of nuclei in routine colon cancer histology images. IEEE Transactions on Medical Imaging 2016;35(5):1196–206.
+- [150] Bejnordi BE, et al. Context-aware stacked convolutional neural networks for classification of breast carcinomas in whole-slide histopathology images. Journal of Medical Imaging 2017;4(4).
+- [151] Chen M, et al. Automated segmentation of the choroid in EDI-OCT images with retinal pathology using convolutional neural networks. Fetal Infant Ophthalmic Medical Image Analysis (2017) 2017;10554:177–84.
+- [152] Cruz-Roa A, et al. Accurate and reproducible invasive breast cancer detection in whole-slide images: a Deep Learning approach for quantifying tumor extent. Scientific Reports 2017;7.
+- [153] Jamaluddin MF, Fauzi MFA, Abas FS. Tumor detection and whole slide classification of H&E lymph node images using convolutional neural network. 2017 IEEE International Conference on Signal and Image Processing Applications (Icsipa) 2017:90–5.
+- [154] Korbar B, et al. Looking under the hood: deep neural network visualization to interpret whole-slide image analysis outcomes for colorectal polyps. 2017 IEEE Conference on Computer Vision and Pattern Recognition Workshops (Cvprw) 2017:821–7.
+- [155] Nirschl J, et al. Deep learning classifier to predict cardiac failure from whole slide H&E images. Modern Pathology 2017;30:532a–3a.
+- [156] Gurcan MN, et al. Image analysis for neuroblastoma classification: segmentation of cell nuclei. In: 28th Annual international conference of the IEEE engineering in medicine and biology society. IEEE; 2006.
+- [157] Di Cataldo S, et al. Automated segmentation of tissue images for computerized IHC analysis. Computer Methods and Programs in Biomedicine 2010;100(1):1–15.
+- [158] Chen CM, et al. A computer-aided diagnosis system for differentiation and delineation of malignant regions on whole-slide prostate histopathology image using spatial statistics and multidimensional DenseNet. Medical Physics 2020;47(3):1021–33. https://doi.org/10.1002/mp.13964.
+- [159] Volynskaya Z, Evans AJ, Asa SL. Clinical applications of whole-slide imaging in anatomic pathology. Advances in Anatomic Pathology 2017;24(4):215–21.
+- [160] Epstein JI. Is there enough support for a new prostate grading system factoring in intraductal carcinoma and cribriform cancer? European Urology 2020;77(2):199–200.
+- [161] Gandhi JS, et al. Reporting practices and resource utilization in the era of intraductal carcinoma of the prostate: a survey of genitourinary subspecialists. The American Journal of Surgical Pathology 2019. https://doi.org/10.1097/PAS.0000000000001417. online only.
+- [162] Nagpal K, et al. Development and validation of a deep learning algorithm for improving Gleason scoring of prostate cancer. NPJ Digital Medicine 2019;2:48.
+- [163] Bulten W, et al. Automated deep-learning system for Gleason grading of prostate cancer using biopsies: a diagnostic study. The Lancet Oncology 2020;21(2):233–41.
+- [164] Zhou NY, Gao Y. Optimized color decomposition of localized whole slide images and convolutional neural network for intermediate prostate cancer classification. Medical Imaging 2017: Digital Pathology 2017:10140.
+- [165] Campanella G, et al. Clinical-grade computational pathology using weakly supervised deep learning on whole slide images. Nature Medicine 2019;25(8):1301.
+- [166] Huang CH, Racoceanu D. Automated high-grade prostate cancer detection and ranking on whole slide images. Medical Imaging 2017: Digital Pathology 2017:10140.
+- [167] Kyriazis AD, et al. An end-to-end system for automatic characterization of Iba1 immunopositive microglia in whole slide imaging. Neuroinformatics 2019;17(3):373–89.
+- [168] Parimi V, et al. Validation of whole frozen section slide image diagnosis in surgical pathology. Modern Pathology 2016;29:399a–400a.
+- [169] Fertig RM, et al. Whole slide imaging. The American Journal of Dermatopathology 2018;40(12):938–9.
+- [170] Ibrahim A, et al. Artificial intelligence in digital breast pathology: techniques and applications. Breast 2019;49:267–73.
+- [171] Stevenson CH, Hong SC, Ogbuehi KC. Development of an artificial intelligence system to classify pathology and clinical features on retinal fundus images. Clinical and Experimental Ophthalmology 2019;47(4):484–9.
+
+## 7. Applications of artificial intelligence for image enhancement in pathology
+
+**Tanishq Abraham**<sup>1</sup>, **Austin Todd**<sup>2</sup>, **Daniel A. Orringer, MD**<sup>3</sup>, **Richard Levenson, MD**<sup>4</sup>
+<sup>1</sup>Department of Biomedical Engineering, University of California, Davis, CA, United States; <sup>2</sup>UT Health, San Antonio, TX, United States; <sup>3</sup>Associate Professor, Department of Surgery, NYU Langone Health, New York City, NY, United States; <sup>4</sup>Professor and Vice Chair, Pathology and Laboratory Medicine, UC Davis Health, Sacramento, CA, United States
+
+### Introduction
+
+This chapter will describe and discuss opportunity for artificial intelligence (AI) to contribute to image quality improvements and to simplify and accelerate imaging methods. There are two major goals for adding AI to imaging tasks. The first is direct image enhancement and conversion to different imaging modes (for example, autofluorescence to simulated H&E) for direct visual “consumption.” The second is the eventual deployment of AI-based classification and quantitative approaches. We will concentrate on the former and give one example of the latter, which demonstrates the real-world application of AI in intraoperative surgical guidance in brain tumor surgery. This approach, which has already entered the clinic, accomplishes not only improved patient care via accelerated, high-quality tumor-site imaging but also can reintegrate pathology into surgical decision-making and reinforce collaborative relationships. This will be explored in detail in the latter section of this chapter.
+
+The basic underpinning of all the approaches to be discussed below is that there is information content present in images that is hard to discern with direct (human) visual observation, but that can be elicited using AI tools that have been trained to associate image type 1 with image type 2. This requires some degree of image content stereotyping, in that the relationships have to be established within a context of a relatively limited spatial, textural, and biological variability. While transfer learning from “irrelevant” sources, such as images of cats and dogs, can prime a learning network to be sensitive to image primitives such as edges and textures, it will not do a good job predicting image content for histology specimens without specific and focused exemplars. To take this argument to the limit, the more random noise or extreme variation is present, the poorer AI predictive or conversion tools will perform. It is impossible to take an image consisting of pure noise, downsize it, and then predict via AI its true high-resolution content. Fortunately, histology does exhibit a limited repertoire—only so many colors are anticipated, nuclei

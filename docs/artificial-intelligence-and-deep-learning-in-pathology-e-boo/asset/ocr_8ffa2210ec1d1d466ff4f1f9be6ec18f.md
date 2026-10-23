@@ -1,0 +1,17 @@
++   [30] Shaban MT, Baur C, Navab N, Albarqouni S. StainGAN: stain style transfer for digital histological images. 2018. arXiv preprint arXiv:1804.01601.
++   [31] Macenko M, Niethammer M, Marron JS, Borland D, Woosley JT, Guan X, Schmitt C, Thomas NE. A method for normalizing histology slides for quantitative analysis. In: 2009 IEEE international symposium on biomedical imaging: from nano to macro. IEEE; 2009. p. 1107–10.
++   [32] Vahadane A, Peng T, Sethi A, Albarqouni S, Wang L, Baust M, Steiger K, Schlitter AM, Esposito I, Navab N. Structure-preserving color normalization and sparse stain separation for histological images. IEEE Transactions on Medical Imaging 2016;35(8):1962–71.
++   [33] Roy S, Kumar Jain A, Lal S, Kini J. A study about color normalization methods for histopathology images. Micron 2018;114.
++   [34] Bejnordi BE, Litjens G, Timofeeva N, Otte-Holler I, Homeyer A, Karssemeijer N, van der Laak JA. Stain specific standardization of whole-slide histopathological images. IEEE Transactions on Medical Imaging 2016;35(2):404–15.
++   [35] BenTaieb A, Hamarneh G. Adversarial stain transfer for histopathology image analysis. IEEE Transactions on Medical Imaging 2018;37(3):792–802.
++   [36] Network CGA, et al. Comprehensive molecular portraits of human breast tumours. Nature 2012;490(7418):61.
++   [37] Akoya biosciences, vectra imaging system. Available from: https://www.akoyabio.com/phenopticsm/instruments.
++   [38] Zimmermann T. Spectral imaging and linear unmixing in light microscopy. In: Microscopy techniques. Springer; 2005. p. 245–65.
++   [39] Gillis N, Vavasis SA. Fast and robust recursive algorithms for separable nonnegative matrix factorization. IEEE Transactions on Pattern Analysis and Machine Intelligence 2014;36(4):698–714.
++   [40] Huang C-H, Veillard A, Roux L, Loménie N, Racocoaneu D. Time-efficient sparse analysis of histopathological whole slide images. Computerized Medical Imaging and Graphics 2011;35(7–8):579–91.
++   [41] Bahlmann C, Patel A, Johnson J, Ni J, Chekkoury A, Khurd P, Kamen A, Grady L, Krupinski E, Graham A, et al. Automated detection of diagnostically relevant regions in h&e stained digital pathology slides. In: Medical imaging 2012: computer-aided diagnosis, vol. 8315. International Society for Optics and Photonics; 2012. p. 831504.
++   [42] Mercan E, Aksoy S, Shapiro LG, Weaver DL, Brunyé TT, Elmore JG. Localization of diagnostically relevant regions of interest in whole slide images: a comparative study. Journal of Digital Imaging 2016;29(4):496–506.
++   [43] Cruz-Roa A, Gilmore H, Basavanhally A, Feldman M, Ganesan S, Shih N, Tomaszewski J, Madabhushi A, González F. High-throughput adaptive sampling for whole-slide histopathology image analysis (hashi) via convolutional neural networks: application to invasive breast cancer detection. PloS One 2018;13(5):e0196828.
++   [44] Bardou D, Zhang K, Ahmad SM. Classification of breast cancer based on histology images using convolutional neural networks. IEEE Access 2018;6:24680–93.
++   [45] Campanella G, Silva VWK, Fuchs TJ. Terabyte-scale deep multiple instance learning for classification and localization in pathology. 2018. arXiv preprint arXiv:1805.06983.
++   [46] Cruz-Roa A, Gilmore H, Basavanhally A, Feldman M, Ganesan S, Shih NN, Tomaszewski J, González FA, Madabhushi A. Accurate and reproducible invasive breast cancer detection in whole-slide images: a deep learning approach for quantifying tumor extent. Scientific Reports 2017;7:46450.

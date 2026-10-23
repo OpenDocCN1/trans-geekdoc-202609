@@ -1,0 +1,62 @@
+
+- [18] Gurcan MN, et al. Developing the Quantitative Histopathology Image Ontology (QHIO): a case study using the hot spot detection problem. Journal of Biomedical Informatics 2017;66:129–35.
+- [19] Janowczyk A, et al. High-throughput biomarker segmentation on ovarian cancer tissue microarrays via hierarchical normalized cuts. IEEE Transactions on Biomedical Engineering 2012;59(5):1240–52.
+- [20] Janowczyk A, et al. A resolution adaptive deep hierarchical (RADHicaL) learning scheme applied to nuclear segmentation of digital pathology images. Computer Methods in Biomechanics and Biomedical Engineering: Imaging and Visualization 2018;6(3):270–6.
+- [21] Janowczyk A, Madabhushi A. Deep learning for digital pathology image analysis: a comprehensive tutorial with selected use cases. Journal of Pathology Informatics 2016;7.
+- [22] Kumar A, et al. Automated analysis of immunohistochemistry images identifies candidate location biomarkers for cancers. Proceedings of the National Academy of Sciences 2014;111(51):18249–54.
+- [23] Kumar H, Kawai T, Akira S. Pathogen recognition by the innate immune system. International Reviews of Immunology 2011;30(1):16–34.
+- [24] Madabhushi A, et al. Computer-aided prognosis: predicting patient and disease outcome via quantitative fusion of multi-scale, multi-modal data. Computerized Medical Imaging and Graphics 2011;35(7–8):506–14.
+- [25] Netea MG, et al. Trained immunity: a program of innate immune memory in health and disease. Science 2016;352(6284):aaf1098.
+- [26] Nordstrom RJ. The quantitative imaging network in precision medicine. Tomography: A Journal for Imaging Research 2016;2(4):239–41.
+- [27] Norton K-A, et al. Multiscale agent-based and hybrid modeling of the tumor immune microenvironment. Processes (Basel, Switzerland) 2019;7(1):37.
+- [28] Bindea G, et al. Natural immunity to cancer in humans. Current Opinion in Immunology 2010;22(2):215–22.
+- [29] Bindea G, et al. Spatiotemporal dynamics of intratumoral immune cells reveal the immune landscape in human cancer. Immunity 2013;39(4):782–95.
+- [30] Farkona S, Diamandis EP, Blasutig IM. Cancer immunotherapy: the beginning of the end of cancer? BMC Medicine 2016;14:73.
+- [31] Fridman WH, et al. The immune contexture in human tumours: impact on clinical outcome. Nature Reviews Cancer 2012;12(4):298–306.
+- [32] Galon J, et al. The continuum of cancer immunosurveillance: prognostic, predictive, and mechanistic signatures. Immunity 2013;39(1):11–26.
+- [33] Galon J, et al. Type, density, and location of immune cells within human colorectal tumors predict clinical outcome. Science 2006;313(5795):1960–4.
+- [34] Galon J, et al. Towards the introduction of the ‘Immunoscore’ in the classification of malignant tumours. The Journal of Pathology 2014;232(2):199–209.
+- [35] Galon J, et al. Cancer classification using the Immunoscore: a worldwide task force. Journal of Translational Medicine 2012;10:205.
+- [36] Kalra J, Baker J. Multiplex immunohistochemistry for mapping the tumor microenvironment. In: Kalyuzhny AE, editor. Signal transduction immunohistochemistry: methods and protocols. New York, NY: Springer New York; 2017. p. 237–51.
+- [37] Sharma P, Allison JP. Immune checkpoint targeting in cancer therapy: toward combination strategies with curative potential. Cell 2015;161(2):205–14.
+
+- [60] Kaczorowski KJ, et al. Continuous immunotypes describe human immune variation and predict diverse responses. Proceedings of the National Academy of Sciences of the United States of America 2017;114(30):E6097–E6106.
+- [61] Li B, et al. Comprehensive analyses of tumor immunity: implications for cancer immunotherapy. Genome Biology 2016;17(1):174.
+- [62] Maecker HT, McCoy JP, Nussenblatt R. Standardizing immunophenotyping for the human Immunology project. Nature Reviews Immunology 2012;12(3):191–200.
+- [63] Mellman I, Coukos G, Dranoff G. Cancer immunotherapy comes of age. Nature 2011;480(7378):480–9.
+- [64] Ribas A. Releasing the brakes on cancer immunotherapy. New England Journal of Medicine 2015;373(16):1490–2.
+- [65] Seager RJ, et al. Dynamic interplay between tumour, stroma and immune system can drive or prevent tumour progression. Convergent Science Physical Oncology 2017;3:034002.
+- [66] Smyth MJ, et al. Combination cancer immunotherapies tailored to the tumour microenvironment. Nature Reviews Clinical Oncology 2016;13(3):143–58.
+- [67] Curran MA, et al. PD-1 and CTLA-4 combination blockade expands infiltrating T cells and reduces regulatory T and myeloid cells within B16 melanoma tumors. Proceedings of the National Academy of Sciences of the United States of America 2010;107(9):4275–80.
+- [68] Grosso JF, Jure-Kunkel MN. CTLA-4 blockade in tumor models: an overview of pre-clinical and translational research. Cancer Immunity 2013;13:5.
+- [69] Hodi FS, et al. Improved survival with ipilimumab in patients with metastatic melanoma. New England Journal of Medicine 2010;363(8):711–23.
+- [70] Patel SP, Kurzrock R. PD-L1 expression as a predictive biomarker in cancer immunotherapy. Molecular Cancer Therapeutics 2015;14(4):847–56.
+- [71] Topalian SL, et al. Survival, durable tumor remission, and long-term safety in patients with advanced melanoma receiving nivolumab. Journal of Clinical Oncology 2014;32(10):1020–30.
+- [72] Carbognin L, et al. Differential activity of nivolumab, Pembrolizumab and MPDL3280A according to the tumor expression of programmed death-ligand-1 (PD-L1): sensitivity analysis of trials in melanoma, lung and genitourinary cancers. PloS One 2015;10(6):e0130142.
+- [73] Parry RV, et al. CTLA-4 and PD-1 receptors inhibit T-cell activation by distinct mechanisms. Molecular and Cellular Biology 2005;25(21):9543–53.
+- [74] Robert C, et al. Ipilimumab plus dacarbazine for previously untreated metastatic melanoma. New England Journal of Medicine 2011;364(26):2517–26.
+- [75] Spill F, et al. Impact of the physical microenvironment on tumor progression and metastasis. Current Opinion in Biotechnology 2016;40:41–8.
+- [76] Versteyen M, et al. A versatile T cell-based assay to assess therapeutic antigen-specific PD-1-targeted approaches. Oncotarget 2018;9(45):27797–808.
+- [77] Brahmer JR, et al. Safety and activity of anti-PD-L1 antibody in patients with advanced cancer. New England Journal of Medicine 2012;366(26):2455–65.
+- [78] Keir ME, et al. PD-1 and its ligands in tolerance and immunity. Annual Review of Immunology 2008;26(1):677–704.
+- [79] Passiglia F, et al. PD-L1 expression as predictive biomarker in patients with NSCLC: a pooled analysis. Oncotarget 2016;7(15):19738–47.
+
+- [80] Roma-Rodrigues C, et al. Targeting tumor microenvironment for cancer therapy. International Journal of Molecular Sciences 2019;20(4):840.
+- [81] Topalian SL, et al. Safety, activity, and immune correlates of anti-PD-1 antibody in cancer. New England Journal of Medicine 2012;366(26):2443–54.
+- [82] Ung C, Kockx M, Waumans Y. Digital pathology in immuno-oncology — a roadmap for clinical development. Expert Review of Precision Medicine and Drug Development 2017;2(1):9–19.
+- [83] Cooper WA, et al. Intra- and interobserver reproducibility assessment of PD-L1 biomarker in non-small cell lung cancer. Clinical Cancer Research 2017;23(16):4569–77.
+- [84] Troncone G, Gridelli C. The reproducibility of PD-L1 scoring in lung cancer: can the pathologists do better? Translational Lung Cancer Research 2017;6(Suppl. 1): S74–S77.
+- [85] Hendry S, et al. Assessing tumor-infiltrating lymphocytes in solid tumors: a practical review for pathologists and proposal for a standardized method from the international immunooncology biomarkers working group: Part 1: assessing the host immune response, TILs in invasive breast carcinoma and ductal carcinoma in situ, metastatic tumor deposits and areas for further research. Advances in Anatomic Pathology 2017;24(5):235–51.
+- [86] Mascaux C, et al. Immune evasion before tumour invasion in early lung squamous carcinogenesis. Nature 2019;571(7766):570–575.
+- [87] Coulie PG, et al. Tumour antigens recognized by T lymphocytes: at the core of cancer immunotherapy. Nature Reviews Cancer 2014;14(2):135–46.
+- [88] Donnem T, et al. Strategies for clinical implementation of TNM-Immunoscore in resected nonsmall-cell lung cancer. Annals of Oncology 2016;27(2):225–32.
+- [89] Mlecnik B, et al. Tumor immunosurveillance in human cancers. Cancer and Metastasis Reviews 2011;30(1):5–12.
+- [90] Angell H, Galon J. From the immune contexture to the Immunoscore: the role of prognostic and predictive immune markers in cancer. Current Opinion in Immunology 2013;25(2):261–7.
+- [91] Broussard EK, Disis ML. TNM staging in colorectal cancer: T is for T cell and M is for memory. Journal of Clinical Oncology 2011;29(6):601–3.
+- [92] Mlecnik B, et al. Histopathologic-based prognostic factors of colorectal cancers are associated with the state of the local immune reaction. Journal of Clinical Oncology 2011;29(6):610–8.
+- [93] Savas P, et al. Clinical relevance of host immunity in breast cancer: from TILs to the clinic. Nature Reviews Clinical Oncology 2016;13(4):228.
+- [94] Gu J, Wang Z, et al. Recent advances in convolutional neural networks. Pattern Recognition 2018;77:354–77.
+- [95] Dai Y, Wang G. A deep inference learning framework for healthcare. Pattern Recognition Letters 2018;103.
+- [96] Xing F, et al. Deep learning in microscopy image analysis: a survey. IEEE Transactions on Neural Networks and Learning Systems 2017:1–19.
+- [97] Suzuki K, Zhou L, Wang Q. Machine learning in medical imaging. Pattern Recognition 2017;63:465–7.
+- [98] Kokkinos I. UberNet: training a universal convolutional neural network for low-, mid-, and high-level vision using diverse datasets and limited memory. 2017. p. 6129–38.

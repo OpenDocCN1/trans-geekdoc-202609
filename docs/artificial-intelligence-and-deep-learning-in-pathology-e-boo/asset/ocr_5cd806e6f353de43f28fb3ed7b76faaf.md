@@ -1,0 +1,10 @@
+![](bbox=[0.249, 0.119, 0.839, 0.334])
+
+**FIGURE 9.2**  
+Comparison of stain normalization methods: the source and the reference images are extracted from TCGA [36] and Mount Sinai Hospital whole slide images, respectively. (A) Reference; (B) Shaban-StainGAN; (C) Bejnordi; (D) Vahadane; (E) Macenko; (F) Reinhard; (G) Source.
+
+# Unmixing of immunofluorescence spectral images
+
+The multispectral immunofluorescent microscope (e.g., Vectra imaging system [37]) acquires a spectral stack, a set of grayscale images taken at a series of wavelengths separated by 10 or 20 nm intervals. These images show proteins of interest tagged by fluorescent biomarkers, mixed with autofluorescence and other unwanted signals.
+
+The unmixing process extracts the desired signals from the spectral stack, either for structural biomarkers, designed to respond to anatomical compartments, e.g., nuclei (DAPI) and glands (CK18/pan-Cytokeratin), or for functional biomarkers such as cancer-related proteins, e.g., androgen receptor (AR) in the prostate or estrogen receptor (ER) and progesterone receptor (PR) in the breast (Fig. 9.3). The unmixing algorithm for functional biomarkers is designed to produce a linear response proportional to the protein present in the tissue, typically using a deconvolution-type algorithm [38]. Careful calibration of staining and microscope is required to ensure that biomarker spectral profiles are stable over different images and tissues. For structural biomarkers, where the goal is to obtain an image which can be correctly segmented, the unmixing algorithm has more leeway to compensate for weak staining or other variations in spectral profiles. For prostate samples, we use a semisupervised approach based on nonnegative matrix factorization [39]. Fig. 9.3 Panel A shows a typical unmixed image output for CK18.

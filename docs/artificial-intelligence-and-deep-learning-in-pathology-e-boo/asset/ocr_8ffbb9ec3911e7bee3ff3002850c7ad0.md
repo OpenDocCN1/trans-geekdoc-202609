@@ -1,0 +1,18 @@
+In: 2018 17th IEEE international conference on machine learning and applications (ICMLA), Orlando, FL; 2018. p. 828–34. https://doi.org/10.1109/ICMLA.2018.00133.
+[42] Rivenson Y, et al. Virtual histological staining of unlabelled tissue-autofluorescence images via deep learning. Nature Biomedical Engineering 2019;3(6):466–77. https://doi.org/10.1038/s41551-019-0362-y.
+[43] Ounkomol C, Seshamani S, Maleckar MM, Collman F, Johnson GR. Label-free prediction of three-dimensional fluorescence images from transmitted-light microscopy. Nature Methods 2018;15(11):917–20. https://doi.org/10.1038/s41592-018-0111-2.
+[44] Wang H, et al. Deep learning enables cross-modality super-resolution in fluorescence microscopy. Nature Methods 2019;16(1):103–10. https://doi.org/10.1038/s41592-018-0239-0.
+[45] Rivenson Y, Göröcs Z, Günaydın H, Zhang Y, Wang H, Ozcan A. Deep learning microscopy. Optica 2017;4(11):1437–43. https://doi.org/10.1364/OPTICA.4.001437.
+[46] Rivenson Y, et al. Deep learning enhanced mobile-phone microscopy. ACS Photonics 2018;5(6):2354–64. https://doi.org/10.1021/acsphotonics.8b00146.
+[47] Manescu P, et al. Deep learning enhanced extended depth-of-field for thick blood-film malaria high-throughput microscopy. ArXiv19067496 Cs Eess. Jun. 2019.
+[48] Zhang X, et al. Deep learning optical-sectioning method. Optics Express 2018;26(23):30762–72. https://doi.org/10.1364/OE.26.030762.
+[49] Reder NP, Glaser AK, McCarty EF, Chen Y, True LD, Liu JTC. Open-top light-sheet microscopy image atlas of prostate core needle biopsies. Archives of Pathology & Laboratory Medicine 2019;143(9):1069–75. https://doi.org/10.5858/arpa.2018-0466-OA.
+[50] Weigert M, et al. Content-aware image restoration: pushing the limits of fluorescence microscopy. Nature Methods 2018;15(12):1090–7. https://doi.org/10.1038/s41592-018-0216-7.
+[51] Ouyang W, Aristov A, Lelek M, Hao X, Zimmer C. Deep learning massively accelerates super-resolution localization microscopy. Nature Biotechnology 2018;36(5):460–8. https://doi.org/10.1038/nbt.4106.
+[52] Hershko E, Weiss LE, Michaeli T, Shechtman Y. Multicolor localization microscopy and point-spread-function engineering by deep learning. Optics Express 2019;27(5):6158–83. https://doi.org/10.1364/OE.27.006158.
+[53] Metter DM, Colgan TJ, Leung ST, Timmons CF, Park JY. Trends in the US and Canadian pathologist workforces from 2007 to 2017. JAMA Network Open 2019;2(5):e194337. https://doi.org/10.1001/jamanetworkopen.2019.4337.
+[54] Orringer DA, et al. Rapid intraoperative histology of unprocessed surgical specimens via fibre-laser-based stimulated Raman scattering microscopy. Nature Biomedical Engineering 2017;1(2):1–13. https://doi.org/10.1038/s41551-016-0027.
+[55] Robboy SJ, et al. Pathologist workforce in the United States: I. Development of a predictive model to examine factors influencing supply. Archives of Pathology & Laboratory Medicine 2013;137(12):1723–32. https://doi.org/10.5858/arpa.2013-0200-OA.
+[56] Eisenhardt L, Cushing H. Diagnosis of intracranial tumors by supravital technique. The American Journal of Pathology 1930;6(5):541–552.
+[57] Xu J, Luo X, Wang G, Gilmore H, Madabhushi A. A Deep convolutional neural network for segmenting and classifying epithelial and stromal regions in histopathological images. Neurocomputing 2016;191:214–23. https://doi.org/10.1016/j.neucom.2016.01.034.
+[58] Sharma H, Zerbe N, Klempert I, Hellwich O, Hufnagl P. Deep convolutional neural networks for automatic classification of gastric carcinoma using whole slide images in
