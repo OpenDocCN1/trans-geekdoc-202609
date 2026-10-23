@@ -1,0 +1,11 @@
+To calculate the F1-score of a given class $c_k$ in a multi-class setting, the results are reformulated as a binary classification problem. Class $c_k$ is treated as the positive class, while all other classes are grouped into one, negative, class. The multi-class confusion matrix is accordingly transformed into a binary confusion matrix. The quantities necessary for calculating the binary precision and recall values are then obtained as shown on Figure 11.
+
+![](bbox=[0.24, 0.3, 0.72, 0.75])
+
+Figure 11. The transformation of a multi-class confusion matrix into a binary confusion matrix for class $c_k$. The macro-F1 score is calculated as the arithmetic mean of F1 scores of all classes [60].
+
+# 5.3. Results
+
+We consider two main approaches for GBSAR object classification, which correspond to the two possible input modalities: raw radar data (RAW) and reconstructed images (IMG). For raw data approaches, we compare five different classification architectures described in Section 4: the fully-connected baseline model (FC), the LSTM-based baseline model (LSTM), the ResNet18 (RN18) and MobileNetV3 (MNv3) convolutional architectures applied without any modifications, and, finally, our ResNet18 modified to handle raw radar data (RAW-RN18). For image-based approaches, we compare classifiers based on two convolutional architectures: ResNet18 and MobileNetV3.
+
+Firstly, we validate the contribution of extending jittering as a data augmentation procedure to the raw input data modality. Table 2 shows the mAP results for all raw data approaches with and without jittering. For a given class, the AP metric averages the precision score over all possible recall scores, which correspond to different threshold values for classification. This makes our comparison of different variants of our approaches invariant to the threshold value. The mean AP score (mAP) is obtained by averaging the AP over all classes. It can be seen that jittering improves performance across the board. We also see that popular computer vision architectures ResNet18 and MobileNetV3 offer

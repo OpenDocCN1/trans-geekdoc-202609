@@ -1,0 +1,52 @@
+
+- 86. Dai, W.; Mao, Y.; Yuan, R.; Liu, Y.; Pu, X.; Li, C. 一种基于卷积神经网络的复杂背景多尺度SAR舰船检测新检测器. Sensors 2020, 20, 2547. [CrossRef]
+- 87. Zhou, Y.; Cai, Z.; Zhu, Y.; Yan, J. 基于多尺度Faster R-CNN的SAR图像自动舰船检测. J. Phys. Conf. Ser. 2020, 1550, 042006. [CrossRef]
+- 88. Kang, K.M. 利用AIS信息为机器学习舰船检测算法自动获取训练数据. Remote Sens. 2020, 12, 1443. [CrossRef]
+- 89. Cui, Z.; Wang, X.; Liu, N.; Cao, Z.; Yang, J. 基于空间Shuffle-Group增强注意力的SAR大尺度图像舰船检测. IEEE Trans. Geosci. Remote Sens. 2020, 59, 379–391. [CrossRef]
+- 90. Yang, R.; Wang, G.; Pan, Z.; Lu, H.; Zhang, H.; Jia, X. 一种CNN-based SAR舰船检测器的新型虚警抑制方法. IEEE Geosci. Remote Sens. Lett. 2020, 18, 1401–1405. [CrossRef]
+- 91. Zhao, Y.; Zhao, L.; Xiong, B.; Kuang, G. 用于SAR图像舰船检测的注意力感受野金字塔网络. IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens. 2020, 13, 2738–2756. [CrossRef]
+- 92. Han, L.; Zheng, T.; Ye, W.; Ran, D. 对基于CNN的SAR舰船检测器的检测偏好分析. 载于2020信息通信技术会议论文集，南京，中国，2020年5月29-31日. [CrossRef]
+- 93. Chen, S.; Zhang, J.; Zhan, R. R2FA-Det：深入研究SAR图像舰船检测中的高质量可旋转框. Remote Sens. 2020, 12, 2031. [CrossRef]
+- 94. Wei, S.; Zeng, X.; Qu, Q.; Wang, M.; Su, H.; Shi, J. HRSID：用于舰船检测和实例分割的高分辨率SAR图像数据集. IEEE Access 2020, 8, 2031. [CrossRef]
+- 95. Fu, J.; Sun, X.; Wang, Z.; Fu, K. 基于特征平衡与细化网络的SAR图像多尺度舰船检测无锚方法. IEEE Trans. Geosci. Remote Sens. 2020, 59, 1331–1344. [CrossRef]
+- 96. Zhang, T.; Zhang, X.; Shi, J.; Wei, S. HyperLi-Net：一种用于合成孔径雷达图像高精度高速舰船检测的超轻量深度学习网络. ISPRS J. Photogramm. Remote Sens. 2020, 167, 123–153. [CrossRef]
+- 97. Zhou, H. 用于SAR图像舰船检测的具有密集注意力特征聚合的无锚卷积网络. Remote Sens. 2020, 12, 2649.
+- 98. Han, L.; Zhao, X.; Ye, W.; Ran, D. 从零开始的SAR舰船检测不对称与方形卷积神经网络. 载于2020年第五届生物医学信号与图像处理国际会议论文集，苏州，中国，2020年8月21-23日；页码80-85.
+- 99. Han, L.; Ye, W.; Li, J.; Ran, D. 基于改进SSD的SAR图像小目标舰船检测. 载于2019年IEEE信号、信息与数据处理国际会议论文集，重庆，中国，2019年12月11-13日. [CrossRef]
+- 100. Han, L.; Ran, D.; Ye, W.; Yang, W.; Wu, X. 从零开始的SAR舰船检测多尺寸卷积与学习深度网络. IEEE Access 2020, 8, 158896–159016. [CrossRef]
+- 101. Zhang, T.; Zhang, X.; Ke, X.; Zhan, X.; Shi, J.; Wei, S.; Pan, D.; Li, J.; Su, H.; Zhou, Y. LS-SSDD-v1.0：专用于从大规模Sentinel-1 SAR图像中小型舰船检测的深度学习数据集. Remote Sens. 2020, 12, 2997. [CrossRef]
+- 102. Zhou, L.; Wei, S.; Cui, Z.; Fang, J.; Yang, X.; Ding, W. Lira-YOLO：雷达图像舰船检测的轻量级模型. J. Syst. Eng. Electron. 2020, 31, 950–956. [CrossRef]
+- 103. Mao, Y.; Li, X.; Li, Z.; Li, M.; Chen, S. 仅有1.17M参数的无锚SAR舰船检测器. 载于ICASIT 2020，2020年航空安全与信息技术国际会议，威海，中国，2020年10月14-16日.
+- 104. Mao, Y.; Li, X.; Li, Z.; Li, M.; Chen, S. 基于知识蒸馏的SAR舰船检测网络瘦身方法. 载于2020年航空安全与信息技术国际会议论文集，威海，中国，2020年10月14-16日；页码177-181.
+- 105. Stefanowicz, J.; Ali, I.; Andersson, S. 单极化合成孔径雷达图像中舰船检测的当前趋势. 载于SPIE 11581论文集，Photonics Applications in Astronomy, Communications, Industry, and High Energy Physics Experiments，维尔加，波兰，2020年10月14日；页码1158109.
+- 106. Li, K.; Luan, S.; Zhou, D. 用于SAR舰船图像增强的光学到SAR转换方法. 载于2020年IEEE信息通信与信号处理第三届国际会议论文集，上海，中国，2020年9月12-15日. [CrossRef]
+- 107. Xu, C.; Yin, C.; Wang, D.; Han, W. SAR图像中结合视觉显著性和级联CNN的快速舰船检测. IET Radar Sonar Navig. 2020, 14, 1879–1887. [CrossRef]
+- 108. Han, L.; Ran, D.; Ye, W.; Wu, X. 从零开始的SAR舰船检测不对称卷积神经网络. 载于2020年第九届计算与模式识别国际会议论文集，厦门，中国，2020年10月30日-11月1日；页码90-95.
+- 109. Idicula, S.M.; Paul, B. 使用新型SarNeDe方法进行实时SAR舰船检测. 载于2021年IEEE国际地球科学与遥感研讨会IGARSS论文集，布鲁塞尔，比利时，2021年7月11-16日；页码2198-2201. [CrossRef]
+- 110. Hu, W.; Tian, Z.; Chen, S.; Zhan, R.; Zhang, J. SAR图像舰船检测的密集特征金字塔网络. 载于第三届图像、视频处理与人工智能国际会议论文集，上海，中国，2020年10月23-24日. [CrossRef]
+- 111. Zhang, T.; Zhang, X.; Shi, J.; Wei, S.; Wang, J.; Li, J.; Su, H.; Zhou, Y. SAR图像近海与近岸舰船检测的平衡场景学习机制. IEEE Geosci. Remote Sens. Lett. 2020, 19, 4004905.
+- 112. Zou, L.; Zhang, H.; Wang, C.; Wu, F. MW-ACGAN：为舰船检测生成多尺度高分辨率SAR图像. Sensors 2020, 20, 6673. [CrossRef]
+- 113. Zhang, G.; Li, Z.; Li, X.; Yin, C.; Shi, Z. 合成孔径雷达图像舰船检测的新型显著特征融合方法. IEEE Access 2020, 8, 215904–215914. [CrossRef]
+- 114. Chen, Y.; Yu, J.; Xu, Y. 复杂背景下SSDv2的SAR舰船目标检测. 载于2020年计算机视觉、图像与深度学习国际会议论文集，重庆，中国，2020年7月10-12日. [CrossRef]
+- 115. Li, Y.; Zhang, S.; Wang, W.Q. SAR图像舰船检测的轻量级Faster R-CNN. IEEE Geosci. Remote Sens. Lett. 2020, 19, 4006105. [CrossRef]
+- 116. Zhu, M.; Hu, G.; Zhou, H.; Lu, C. 基于YOLOv3的SAR图像快速舰船检测. 载于2020年第五届通信、图像与信号处理国际会议论文集，成都，中国，2020年11月13-15日. [CrossRef]
+- 117. Zhang, T.; Zhang, X.; Shi, J.; Wei, S.; Wang, J.; Li, J. 合成孔径雷达图像舰船检测的平衡特征金字塔网络. 载于2020年IEEE雷达会议论文集，佛罗伦萨，意大利，2020年9月21-25日. [CrossRef]
+- 118. Chen, S.; Zhan, R.; Wang, W.; Zhang, J. 通过网络剪枝和知识蒸馏学习精简SAR舰船目标检测器. IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens. 2020, 14, 1267–1282. [CrossRef]
+- 119. Wang, J.; Lin, Y.; Guo, J.; Zhuang, L. SSS-YOLO：实现SAR图像中小型舰船更准确检测. Remote Sens. Lett. 2021, 12, 93–102. [CrossRef]
+- 120. Yang, R.; Wang, R.; Deng, Y.; Jia, X.; Zhang, H. 重新思考CNN-based SAR图像舰船检测器训练中使用的随机裁剪数据增强方法. Remote Sens. 2020, 13, 34. [CrossRef]
+- 121. Guo, H.; Yang, X.; Wang, N.; Gao, X. SAR图像舰船检测的CenterNet++模型. Pattern Recognit. 2021, 112, 107787. [CrossRef]
+- 122. Wang, C.; Su, W.; Gu, H. 基于注意力机制和扩展池化的合成孔径雷达图像两阶段舰船检测. J. Appl. Remote Sens. 2020, 14, 044522. [CrossRef]
+- 123. Chaudhary, Y.; Mehta, M.; Goel, N.; Bhardwaj, P.; Gupta, D.; Khanna, A. YOLOv3遥感SAR舰船图像检测. 载于《Data Analytics and Management》；Springer：新加坡，2021年；页码519-531.
+- 124. Yang, R.; Pan, Z.; Jia, X.; Zhang, L.; Deng, Y. 基于SAR图像可旋转边界框的舰船检测新型CNN检测器. IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens. 2021, 14, 1938–1958. [CrossRef]
+- 125. Liu, C.; Zhu, W. 基于CNN的SAR图像舰船检测改进算法. 载于第十二届图形与图像处理国际会议论文集，西安，中国，2021年11月13-15日.
+- 126. Wang, J.; Wen, Z.; Lu, Y.; Wang, Q.; Pan, Q. 基于变分高斯G(A)(0)混合模型学习的弱监督SAR舰船分割. 载于2020年中国自动化大会论文集，上海，中国，2020年11月6-8日.
+- 127. Mao, Y.; Li, X.; Su, H.; Zhou, Y.; Li, J. 基于深度学习的SAR图像舰船检测：基准. 载于2020年IEEE第九届联合信息技术与人工智能国际会议论文集，重庆，中国，2020年12月11-13日. [CrossRef]
+- 128. Zhao, K.; Zhou, Y.; Chen, X. 基于密集连接的SAR舰船检测网络. 载于2020年IEEE第九届联合信息技术与人工智能国际会议论文集，重庆，中国，2020年12月11-13日. [CrossRef]
+- 129. An, Q.; Pan, Z.; You, H.; Hu, Y. 基于传递迁移学习的SAR小样本目标检测无锚可旋转检测器. IEEE Access 2021, 9, 24011–24025. [CrossRef]
+- 130. Zhang, F.; Luo, H.; Ju, M.; He, M.; Chang, Z.; Hui, B. 脑启发的高分辨率SAR图像舰船检测快速显著性滤波算法. IEEE Trans. Geosci. Remote Sens. 2021, 60, 5201709. [CrossRef]
+- 131. Wang, R.; Shao, S.; An, M.; Li, J.; Wang, S.; Xu, X. SAR舰船检测自适应特征去噪的软阈值注意力网络. IEEE Access 2021, 9, 29090–29105. [CrossRef]
+- 132. Zhang, T.; Zhang, X.; Shi, J.; Wei, S. Shipdenet-18：仅1 MB且仅有18层卷积层的SAR舰船检测轻量级深度学习网络. 载于IGARSS 2020—2020年IEEE国际地球科学与遥感研讨会论文集，瓦伊科洛阿，美国夏威夷，2020年9月26日-10月2日. [CrossRef]
+- 133. Wang, X.; Cui, Z.; Cao, Z.; Dang, S. SAR图像中基于空间组间增强注意力的密集靠泊舰船检测. 载于IGARSS 2020—2020年IEEE国际地球科学与遥感研讨会论文集，瓦伊科洛阿，美国夏威夷，2020年9月26日-10月2日. [CrossRef]
+- 134. Hou, S.; Ma, X.; Wang, X.; Fu, Z.; Wang, J.; Wang, H. 基于场景解释的SAR图像舰船检测. 载于IGARSS 2020—2020年IEEE国际地球科学与遥感研讨会论文集，瓦伊科洛阿，美国夏威夷，2020年9月26日-10月2日. [CrossRef]
+- 135. Jiang, S.; Zhu, M.; He, Y.; Zheng, Z.; Zhou, F.; Zhou, G. 基于YOLO的SAR舰船检测. 载于IGARSS 2020—2020年IEEE国际地球科学与遥感研讨会论文集，瓦伊科洛阿，美国夏威夷，2020年9月26日-10月2日. [CrossRef]
+- 136. Zhu, C.; Zhao, D.; Liu, Z.; Mao, Y. SAR图像舰船检测的分层注意力. 载于IGARSS 2020—2020年IEEE国际地球科学与遥感研讨会论文集，瓦伊科洛阿，美国夏威夷，2020年9月26日-10月2日.

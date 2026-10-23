@@ -1,0 +1,10 @@
++   29. Tao, X.; Gao, H.; Shen, X.; Wang, J.; Jia, J. Scale-recurrent network for deep image deblurring. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, Salt Lake City, UT, USA, 18–23 June 2018; pp. 8174–8182.
++   30. Ronneberger, O.; Fischer, P.; Brox, T. U-net: Convolutional networks for biomedical image segmentation. In Proceedings of the International Conference on Medical Image Computing and Computer-Assisted Intervention, Munich, Germany, 5–9 October 2015; pp. 234–241.
++   31. Nah, S.; Hyun Kim, T.; Mu Lee, K. Deep multi-scale convolutional neural network for dynamic scene deblurring. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, Honolulu, HI, USA, 21–26 July 2017; pp. 3883–3891.
++   32. Zhou, Y.; Shi, J.; Yang, X.; Wang, C.; Kumar, D.; Wei, S.; Zhang, X. Deep multi-scale recurrent network for synthetic aperture radar images despeckling. Remote Sens. 2019, 11, 2462.
++   33. Pu, L.; Zhang, X.; Zhou, Z.; Shi, J.; Wei, S.; Zhou, Y. A Phase Filtering Method with Scale Recurrent Networks for InSAR. Remote Sens. 2020, 12, 3453.
++   34. Kingma, D.P.; Ba, J. Adam: a method for stochastic optimization. arXiv 2014, arXiv:1412.6980.
++   35. Yao, Y.; Rosasco, L.; Caponetto, A. On early stopping in gradient descent learning. Constr. Approx. 2007, 26, 289–315.
++   36. Raskutti, G.; Wainwright, M.J.; Yu, B. Early stopping and non-parametric regression: an optimal data-dependent stopping rule. J. Mach. Learn. Res. 2014, 15, 335–366.
++   37. Goldstein, R.M.; Werner, C.L. Radar interferogram filtering for geophysical applications. Geophys. Res. Lett. 1998, 25, 4035–4038.
++   38. Wang, Y.; Huang, H.; Dong, Z.; Wu, M. Modified patch-based locally optimal Wiener method for interferometric SAR phase filtering. ISPRS J. Photogramm. Remote Sens. 2016, 114, 10–23.
