@@ -1,0 +1,4 @@
++   - We've defined the three *named templates* using the `{{define "..."}}...{{end}}` tags.
++   - You can render dynamic data in these templates via the `.` character (referred to as *dot*). In the next chapter we'll pass a `User` struct to the templates as dynamic data, which means that we can then render the user's ID using the tag `{{.ID}}` in the templates.
+
+> **Note:** If you need to frequently change the text of emails or require them to be user-editable, then it might be appropriate to store these templates as strings in your database instead. But I've found that storing them in a file, like we are here, is a less complicated approach and a good starting point for most projects.

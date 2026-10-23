@@ -1,0 +1,3 @@
+The Go gopher was designed by Renee French and is used under the Creative Commons 3.0 Attributions license. Cover gopher adapted from vectors by Egon Elbre.
+
+*The information provided within this book is for general informational purposes only. While the author and publisher have made every effort to ensure that the accuracy of the information within this book was correct at time of publication there are no representations or warranties, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the information, products, services, or related graphics contained in this book for any purpose. Any use of this information is at your own risk.*
