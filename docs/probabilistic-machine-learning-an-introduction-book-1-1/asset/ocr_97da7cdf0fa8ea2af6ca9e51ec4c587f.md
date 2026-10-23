@@ -1,0 +1,15 @@
+![](bbox=[0.05, 0.05, 0.95, 0.35])
+
+where $\bar{x} = \frac{1}{N} \sum_{i=1}^N x_i$ is the sample mean, and $s^2 = \frac{1}{N-1} \sum_{i=1}^N (x_i - \bar{x})^2$ is an unbiased estimate of the variance. Eq. (7.217) has the same form as the frequentist sampling distribution of the test statistic used in the t-test, as shown in Eq. (E.127). For this reason, we describe this procedure as a Bayesian t-test.
+
+
+
+Bayesian inference and decision making is optimal, but only if the modeling assumptions are correct. In this section, we discuss some ways to assess if a model is reasonable.
+
+From a Bayesian perspective, this can seem a bit odd, since if we knew there was a better model, why don't we just use that? Here we assume that we do not have a specific alternative model in mind (so we are not performing model selection, unlike Sec. 7.6.1) Instead we are just trying to see if the data we observe is “typical” of what we might expect if our model were correct. This is called model checking, and is similar to frequentist hypothesis testing (Appendix E.7), but avoids some of the conceptual problems (discussed in Sec. E.8.2).
+
+In particular, suppose we knew the true parameters $\theta$, which we use to generate $S$ synthetic datasets, $\tilde{\mathcal{D}}^s = \{y_n^s \sim p(\theta) : n = 1 : N\}$; these represent “plausible hallucinations” of the model. To assess the quality of our model, we can compute how “typical” our observed data $\mathcal{D}$ is compared to the model’s hallucinations. To perform this comparison, we create one or more scalar test statistics, $\tau(\tilde{\mathcal{D}}^s)$, and compare them to the test statistics on the actual data, $\tau(\mathcal{D})$. These statistics should measure features of interest (since it will not, in general, be possible to capture every aspect of the data with a given model). If there is a large difference between the distribution of $T(\tilde{\mathcal{D}}^s)$ across different $s$ and the value of $\tau(\mathcal{D})$, it suggests the model is not a good one.
+
+The crucial difference from the frequentist concept of a sampling distribution, which we discuss in Appendix E.3, is that we first condition on the observed data $\mathcal{D}$ to compute $p(\theta|\mathcal{D})$, and then use posterior samples of $\theta$ to generate each $\tilde{\mathcal{D}}^s$, rather than assuming access to an unknown true parameter when generating $\tilde{\mathcal{D}}^s$. Hence this method is called posterior predictive checking [Rub84].
+
+To make things clearer, let us consider an example from [Gel+04]. In 1882, Newcomb measured the speed of light using a certain method and obtained $N = 66$ measurements, shown in Fig. 7.27(a). There are clearly two outliers in the left tails, suggesting that the distribution is not Gaussian. Let us nonetheless fit a Gaussian to it. For simplicity, we will just compute the MLE, and use a plug-in

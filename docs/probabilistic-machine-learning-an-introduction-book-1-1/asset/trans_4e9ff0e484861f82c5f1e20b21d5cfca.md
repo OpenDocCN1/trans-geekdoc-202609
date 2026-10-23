@@ -1,0 +1,63 @@
+
+- [Qiu+19a] J. Qiu, H. Ma, O. Levy, S. W. Yih, S. Wang, 和 J. Tang.“用于长文档理解的块状自注意力机制”。发表于：CoRR abs/1911.02972 (2019)。arXiv: 1911.02972 (第 490 页)。
+- [Qiu+19b] J. Qiu 等人。“NetSMF：将大规模网络嵌入作为稀疏矩阵分解”。发表于：世界万维网大会。WWW ’19。旧金山，加利福尼亚州，美国：计算机协会，2019，1509–1520 (第 718 页)。
+- [Qui86] J. R. Quinlan。“决策树的归纳”。发表于：Machine Learning 1 (1986)，第 81–106 页 (第 565, 566 页)。
+- [Qui93] J. R. Quinlan。机器学习 C4.5 程序。Morgan Kaufmann，1993 (第 565, 566 页)。
+- [Rad+18] A. Radford, K. Narasimhan, T. Salimans, 和 I. Sutskever。通过生成式预训练改进语言理解。技术报告。OpenAI，2018 (第 605 页)。
+- [Rad+19] A. Radford, J. Wu, R. Child, D. Luan, D. Amodei, 和 I. Sutskever。语言模型是无监督多任务学习者。技术报告。OpenAI，2019 (第 605 页)。
+- [Raf+19] C. Raffel 等人。“使用统一文本到文本转换器探索迁移学习的极限”。发表于：(2019 年 10 月)。arXiv: 1910.10683 [cs.LG] (第 608 页)。
+- [Rag+17] M. Raghu, B. Poole, J. Kleinberg, S. Ganguli, 和 J. Sohl-Dickstein。“关于深度神经网络的表达能力”。发表于：ICML。2017 (第 403 页)。
+- [Rag+19] M. Raghu, C. Zhang, J. Kleinberg, 和 S. Bengio。“Transfusion：理解医学影像中的迁移学习”。发表于：NIPS。2019，第 3347–3357 页 (第 590 页)。
+- [Raj+16] P. Rajpurkar, J. Zhang, K. Lopyrev, 和 P. Liang。“SQuAD：用于机器文本理解的 100,000+ 个问题”。发表于：EMNLP。2016 (第 607 页)。
+- [Raj+18] A. Rajkomar 等人。“基于电子健康记录的可扩展且准确的深度学习”。发表于：NPJ Digit Med 1 (2018 年 5 月)，第 18 页 (第 482, 483 页)。
+- [Rao99] R. P. Rao。“视觉感知和学习的最佳估计方法”。发表于：Vision Res. 39.11 (1999 年 6 月)，第 1963–1989 页 (第 25 页)。
+- [Rat+09] M. Rattray, O. Stegle, K. Sharp, 和 J. Winn。“贝叶斯稀疏因子分析的推断算法和学习理论”。发表于：统计力学信息学国际研讨会论文集。2009 (第 639 页)。
+- [RB93] M. Riedmiller 和 H. Braun。“一种更快的反向传播学习的直接自适应方法：RPROP 算法”。发表于：ICNN。IEEE。1993，第 586–591 页 (第 128 页)。
+- [Red+16] J. Redmon, S. Divvala, R. Girshick, 和 A. Farhadi。“You Only Look Once：统一、实时的目标检测”。发表于：CVPR。2016，第 779–788 页 (第 450 页)。
+- [Ren+09] S. Rendle, C. Freudenthaler, Z. Gantner, 和 L. Schmidt-Thieme。“BPR：基于隐式反馈的贝叶斯个性化排序”。发表于：UAI。2009 (第 705 页)。
+- [Ren12] S. Rendle。“带有 libFM 的分解机”。发表于：ACM Trans. Intell. Syst. Technol. 3.3 (2012 年 5 月)，第 1–22 页 (第 706, 708 页)。
+- [Ren19] Z. Ren。自监督学习论文列表。2019 (第 591 页)。
+- [Res+11] D. Reshef 等人。“在大型数据集中检测新的关联”。发表于：Science 334 (2011)，第 1518–1524 页 (第 166, 167 页)。
+- [RF17] J. Redmon 和 A. Farhadi。“YOLO9000：更好、更快、更强”。发表于：CVPR。2017 (第 296 页)。
+- [RFB15] O. Ronneberger, P. Fischer, 和 T. Brox。“U-Net：用于生物医学图像分割的卷积网络”。发表于：MICCAI（国际医学图像计算与计算机辅助干预会议）。2015 (第 452 页)。
+- [RG11] A. Rodriguez 和 K. Ghosh。通过嵌套分区模型对关系数据进行建模。技术报告。加州大学圣克鲁兹分校，2011 (第 697 页)。
+- [RH05] H. Rue 和 L. Held。高斯马尔可夫随机场：理论与应用。第 104 卷。统计学与应用概率专著。伦敦：Chapman & Hall，2005 (第 518 页)。
+- [RHG16] D. Ritchie, P. Horsfall, 和 N. D. Goodman。“概率程序中的深度摊销推断”。发表于：(2016 年 10 月)。arXiv: 1610.05735 [cs.AI] (第 258 页)。
+- [RHS05] C. Rosenberg, M. Hebert, 和 H. Schneiderman。“目标检测模型的半监督自训练”。发表于：第七届计算机视觉应用 IEEE 研讨会（WACV/MOTION’05） - 第一卷 - 第 01 卷。2005，第 29–36 页 (第 610 页)。
+- [RHW86] D. Rumelhart, G. Hinton, 和 R. Williams。“通过误差传播学习内部表示”。发表于：平行分布式处理：认知微观结构中的探索。由 D. Rumelhart, J. McClelland 和 PDP 研究组编辑。MIT Press，1986 (第 405, 406 页)。
+- [Ric95] J. Rice。数学统计与数据分析。第 2 版。Duxbury，1995 (第 820, 823, 829, 832, 833, 838, 856 页)。
+- [Rif+11] S. Rifai, P. Vincent, X. Muller, X. Glorot, 和 Y. Bengio。“紧缩自编码器：特征提取过程中的显式不变性”。发表于：ICML。2011 (第 648 页)。
+- [Ris+08] I. Rish, G. Grabarnik, G. Cecchi, F. Pereira, 和 G. Gordon。“使用广义线性模型的闭式监督降维”。发表于：ICML。2008 (第 644 页)。
+- [RK04] R. Rubinstein 和 D. Kroese。交叉熵方法：组合优化、蒙特卡洛模拟和机器学习的统一方法。Springer Verlag，2004 (第 151 页)。
+- [RKK18] S. J. Reddi, S. Kale, 和 S. Kumar。“关于 Adam 及其以后的收敛性”。发表于：ICLR。2018 (第 129 页)。
+- [RM01] N. Roy 和 A. McCallum。“通过蒙特卡洛估计误差减少走向最优主动学习”。发表于：ICML。2001 (第 620 页)。
+- [RMC09] H. Rue, S. Martino, 和 N. Chopin。“使用积分嵌套拉普拉斯近似对潜变量高斯模型进行近似贝叶斯推断”。发表于：JRSSB 71 (2009)，第 319–392 页 (第 225 页)。
+- [RMC16] A. Radford, L. Metz, 和 S. Chintala。“使用深度卷积生成对抗网络进行无监督表示学习”。发表于：ICLR。2016 (第 655 页)。
+- [RMH97] A. Raftery, D. Madigan, 和 J. Hoeting。“线性回归模型的贝叶斯模型平均”。发表于：JASA 92.437 (1997)，第 179–191 页 (第 212 页)。
+- [RMW14] D. J. Rezende, S. Mohamed, 和 D. Wierstra。“深度生成模型中的随机反向传播和近似推断”。发表于：ICML。由 E. P. Xing 和 T. Jebara 编辑。第 32 卷。机器学习研究论文集。中国北京：PMLR，2014，第 1278–1286 页 (第 650 页)。
+- [RN10] S. Russell 和 P. Norvig。人工智能：一种现代方法。第 3 版。Prentice Hall，2010 (第 16 页)。
+- [RN19] S. Russell 和 P. Norvig。人工智能：一种现代方法。第 4 版。Prentice Hall，2019 (第 257 页)。
+- [Rob07] C. P. Robert。贝叶斯选择：从决策论基础到计算实现。英文版。第 2 版。Springer Verlag，纽约，2007 (第 203 页)。
+- [Ros58] F. Rosenblatt。“感知器：大脑中信息存储与组织的概率模型”。发表于：Psychological Review 65.6 (1958)，第 386–408 页 (第 286, 405 页)。
+- [Ros98] K. Rose。“用于聚类、压缩、分类、回归及相关优化问题的确定性退火”。发表于：Proc. IEEE 86 (1998)，第 2210–2239 页 (第 668 页)。
+- [Rot+20] K. Roth, T. Milbich, S. Sinha, P. Gupta, B. Ommer, 和 J. P. Cohen。“重新审视深度度量学习中的训练策略和泛化性能”。发表于：ICML。2020 (第 504, 508, 509 页)。
+- [Row97] S. Roweis。“用于 PCA 和 SPCA 的 EM 算法”。发表于：NIPS。1997 (第 634, 636, 637 页)。
+- [Roy+20] A. Roy, M. Saffar, A. Vaswani, 和 D. Grangier。“使用路由转换器实现高效基于内容的稀疏注意力机制”。发表于：CoRR abs/2003.05997 (2020)。arXiv: 2003.05997 (第 491 页)。
+- [Roz+19] B. Rozemberczki, R. Davies, R. Sarkar, 和 C. Sutton。“GEMSEC：基于自聚类的图嵌入”。发表于：2019 年 IEEE/ACM 社交网络分析与挖掘进展国际会议论文集，ASONAM ’19。温哥华，不列颠哥伦比亚省，加拿大：计算机协会，2019，65–72 (第 728 页)。
+- [RP99] M. Riesenhuber 和 T. Poggio。“皮层中物体识别的层次模型”。发表于：Nature Neuroscience 2 (1999)，第 1019–1025 页 (第 441 页)。
+- [RR08] A. Rahimi 和 B. Recht。“用于大规模核机的随机特征”。发表于：NIPS。Curran Associates, Inc.，2008，第 1177–1184 页 (第 541 页)。
+- [RR09] A. Rahimi 和 B. Recht。“随机厨房汇的加权和：使用随机化替代学习中的最小化”。发表于：NIPS。Curran Associates, Inc.，2009，第 1313–1320 页 (第 541 页)。
+- [RS00] S. T. Roweis 和 L. K. Saul。“通过局部线性嵌入进行非线性降维”。英文版。发表于：Science 290.5500 (2000 年 12 月)，第 2323–2326 页 (第 663 页)。
+- [RT82] D. B. Rubin 和 D. T. Thayer。“用于 ML 因子分析的 EM 算法”。发表于：Psychometrika 47.1 (1982 年 3 月)，第 69–76 页 (第 635 页)。
+- [Rub84] D. B. Rubin。“对应用统计学家而言，在贝叶斯意义上合理且相关的频率计算”。发表于：Ann. Stat. 12.4 (1984)，第 1151–1172 页 (第 222, 827, 862 页)。
+- [Rub97] R. Y. Rubinstein。“小概率事件计算机模拟模型的优化”。发表于：Eur. J. Oper. Res. 99.1 (1997 年 5 月)，第 89–112 页 (第 151 页)。
+- [Rup88] D. Ruppert。来自慢速收敛 Robbins-Monro 过程的有效估计。技术报告。1988 (第 125 页)。
+- [Rus+15] O. Russakovsky 等人。“ImageNet 大规模视觉识别挑战”。发表于：International Journal of Computer Vision (2015)，第 1–42 页 (第 443, 444 页)。
+- [Rus15] S. Russell。“统一逻辑与概率”。发表于：Commun. ACM 58.7 (2015 年 6 月)，第 88–97 页 (第 501 页)。
+- [Rus18] A. M. Rush。“带注释的 Transformer”。发表于：ACL 自然语言处理开源软件研讨会论文集。2018 (第 488 页)。
+- [Rus+18] D. J. Russo, B. Van Roy, A. Kazerouni, I. Osband, 和 Z. Wen。“Thompson 采样教程”。发表于：Foundations and Trends in Machine Learning 11.1 (2018)，第 1–96 页 (第 256 页)。
+- [Rus19] S. Russell。Human Compatible：人工智能与控制问题。英文版。Kindle。Viking，2019 年 10 月 (第 17 页)。
+- [RW06] C. E. Rasmussen 和 C. K. I. Williams。用于机器学习的 Gaussian 过程。MIT Press，2006 (第 307, 522, 527, 530, 532 页)。
+- [RW15] D. Rosenbaum 和 Y. Weiss。“门控网络的回归：在自然图像先验中结 合生成模型和判别式训练”。发表于：NIPS。2015，第 2665–2673 页 (第 72 页)。
+- [RW18] E. Richardson 和 Y. Weiss。“关于 GAN 和 GMM”。发表于：NIPS。2018 (第 641 页)。
+- [RZL17] P. Ramachandran, B. Zoph, 和 Q. V. Le。“搜索激活函数”。发表于：(2017 年 10 月)。arXiv: 1710.05941 [cs.NE] (第 396, 398 页)。

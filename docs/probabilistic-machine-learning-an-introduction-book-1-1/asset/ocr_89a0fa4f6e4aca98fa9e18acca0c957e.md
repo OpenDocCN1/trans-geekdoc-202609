@@ -1,0 +1,11 @@
+![](bbox=[0.05, 0.05, 0.95, 0.35])
+
+correlated in the posterior, and in complex, non-stationary ways. This can cause computational problems when performing inference.
+
+Fig. 11.24a gives an example where we plot p(βc,σβ|D) for some specific county c. If we believe that σβ is large, then βc is “allowed” to vary a lot, and we get the broad distribution at the top of the figure. However, if we believe that σβ is small, then βc is constrained to be close to the global prior mean of μβ. so we get the narrow distribution at the bottom of the figure. This is often called Neal’s funnel, after a paper by Radford Neal [Nea03]. It is difficult for many algorithms (especially sampling algorithms) to explore parts of parameter space at the bottom of the funnel. This is evident from the marginal posterior for σβ shown (as a histogram) on the right hand side of the plot: we see that it excludes the interval [0,0.1], thus ruling out models in which we shrink βc all the way to 0. In cases where a covariate has no useful predictive role, we would like to be able to induce sparsity, so we need to overcome this problem.
+
+Fortunately, it is possible to remedy this situation by simply changing to a non-centered parameterization [PR03]. That is, we replace βc∼N(μβ,σβ2) with βc=μβ+β̃cσβ, where β̃c∼N(0,1) represents the offset from the global mean, μβ. (This is very similar to the reparameterization trick discussed in Sec. 20.3.5.1.) The correlation between β̃c and σβ is much less, as shown in Fig. 11.24b. (Note that we can also apply this transformation to αc, although it is less necessary, since there is a lot of posterior support for large values of σα, so there is no need to visit the bottom of the funnel.)
+
+# 11.6.6 Empirical Bayes (Automatic relevancy determination)
+
+In Sec. 11.6.4.2 and Sec. 11.6.4.3, we considered Gaussian priors on the weights, wj∼N(0,1/αj), where the precisions αj were inferred using hierarchical Bayes. In this section, we discuss an empirical Bayes approach, in which we optimize the prior precisions by computing α̂=argmaxαp(y|X,α). After estimating the prior, we compute the MAP estimate of the weights using the Gaussian prior,

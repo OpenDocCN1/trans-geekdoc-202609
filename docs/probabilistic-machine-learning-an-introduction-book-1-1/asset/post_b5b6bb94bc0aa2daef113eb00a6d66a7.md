@@ -1,0 +1,63 @@
+
+- [Qiu+19a] J. Qiu, H. Ma, O. Levy, S. W. Yih, S. Wang, and J. Tang. “Blockwise Self-Attention for Long Document Understanding”. In: CoRR abs/1911.02972 (2019). arXiv: 1911.02972 (page 490).
+- [Qiu+19b] J. Qiu et al. “NetSMF: Large-Scale Network Embedding as Sparse Matrix Factorization”. In: The World Wide Web Conference. WWW ’19. San Francisco, CA, USA: Association for Computing Machinery, 2019, 1509–1520 (page 718).
+- [Qui86] J. R. Quinlan. “Induction of decision trees”. In: Machine Learning 1 (1986), pp. 81–106 (pages 565, 566).
+- [Qui93] J. R. Quinlan. C4.5 Programs for Machine Learning. Morgan Kaufmann, 1993 (pages 565, 566).
+- [Rad+18] A. Radford, K. Narasimhan, T. Salimans, and I. Sutskever. Improving Language Understanding by Generative Pre-Training. Tech. rep. OpenAI, 2018 (page 605).
+- [Rad+19] A. Radford, J. Wu, R. Child, D. Luan, D. Amodei, and I. Sutskever. Language Models are Unsupervised Multitask Learners. Tech. rep. OpenAI, 2019 (page 605).
+- [Raf+19] C. Raffel et al. “Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer”. In: (Oct. 2019). arXiv: 1910.10683 [cs.LG] (page 608).
+- [Rag+17] M. Raghu, B. Poole, J. Kleinberg, S. Ganguli, and J. Sohl-Dickstein. “On the Expressive Power of Deep Neural Networks”. In: ICML. 2017 (page 403).
+- [Rag+19] M. Raghu, C. Zhang, J. Kleinberg, and S. Bengio. “Transfusion: Understanding transfer learning for medical imaging”. In: NIPS. 2019, pp. 3347–3357 (page 590).
+- [Raj+16] P. Rajpurkar, J. Zhang, K. Lopyrev, and P. Liang. “SQuAD: 100,000+ Questions for Machine Comprehension of Text”. In: EMNLP. 2016 (page 607).
+- [Raj+18] A. Rajkomar et al. “Scalable and accurate deep learning with electronic health records”. In: NPJ Digit Med 1 (May 2018), p. 18 (pages 482, 483).
+- [Rao99] R. P. Rao. “An optimal estimation approach to visual perception and learning”. In: Vision Res. 39.11 (June 1999), pp. 1963–1989 (page 25).
+- [Rat+09] M. Rattray, O. Stegle, K. Sharp, and J. Winn. “Inference algorithms and learning theory for Bayesian sparse factor analysis”. In: Proc. Intl. Workshop on Statistical-Mechanical Informatics. 2009 (page 639).
+- [RB93] M. Riedmiller and H. Braun. “A direct adaptive method for faster backpropagation learning: The RPROP algorithm”. In: ICNN. IEEE. 1993, pp. 586–591 (page 128).
+- [Red+16] J. Redmon, S. Divvala, R. Girshick, and A. Farhadi. “You Only Look Once: Unified, Real-Time Object Detection”. In: CVPR. 2016, pp. 779–788 (page 450).
+- [Ren+09] S. Rendle, C. Freudenthaler, Z. Gantner, and L. Schmidt-Thieme. “BPR: Bayesian Personalized Ranking from Implicit Feedback”. In: UAI. 2009 (page 705).
+- [Ren12] S. Rendle. “Factorization Machines with libFM”. In: ACM Trans. Intell. Syst. Technol. 3.3 (May 2012), pp. 1–22 (pages 706, 708).
+- [Ren19] Z. Ren. List of papers on self-supervised learning. 2019 (page 591).
+- [Res+11] D. Reshef et al. “Detecting Novel Associations in Large Data Sets”. In: Science 334 (2011), pp. 1518–1524 (pages 166, 167).
+- [RF17] J. Redmon and A. Farhadi. “YOLO9000: Better, Faster, Stronger”. In: CVPR. 2017 (page 296).
+- [RFB15] O. Ronneberger, P. Fischer, and T. Brox. “U-Net: Convolutional Networks for Biomedical Image Segmentation”. In: MICCAI (Int. Conf. on Medical Image Computing and Computer Assisted Interventions). 2015 (page 452).
+- [RG11] A. Rodriguez and K. Ghosh. Modeling relational data through nested partition models. Tech. rep. UC Santa Cruz, 2011 (page 697).
+- [RH05] H. Rue and L. Held. Gaussian Markov Random Fields: Theory and Applications. Vol. 104. Monographs on Statistics and Applied Probability. London: Chapman & Hall, 2005 (page 518).
+- [RHG16] D. Ritchie, P. Horsfall, and N. D. Goodman. “Deep Amortized Inference for Probabilistic Programs”. In: (Oct. 2016). arXiv: 1610.05735 [cs.AI] (page 258).
+- [RHS05] C. Rosenberg, M. Hebert, and H. Schneiderman. “Semi-Supervised Self-Training of Object Detection Models”. In: Proceedings of the Seventh IEEE Workshops on Application of Computer Vision (WACV/MOTION’05) - Volume I - Volume 01. 2005, pp. 29–36 (page 610).
+- [RHW86] D. Rumelhart, G. Hinton, and R. Williams. “Learning internal representations by error propagation”. In: Parallel Distributed Processing: Explorations in the Microstructure of Cognition. Ed. by D. Rumelhart, J. McClelland, and the PDP Research Group. MIT Press, 1986 (pages 405, 406).
+- [Ric95] J. Rice. Mathematical statistics and data analysis. 2nd edition. Duxbury, 1995 (pages 820, 823, 829, 832, 833, 838, 856).
+- [Rif+11] S. Rifai, P. Vincent, X. Muller, X. Glorot, and Y. Bengio. “Contractive Auto-Encoders: Explicit Invariance During Feature Extraction”. In: ICML. 2011 (page 648).
+- [Ris+08] I. Rish, G. Grabarnik, G. Cecchi, F. Pereira, and G. Gordon. “Closed-form supervised dimensionality reduction with generalized linear models”. In: ICML. 2008 (page 644).
+- [RK04] R. Rubinstein and D. Kroese. The Cross-Entropy Method: A Unified Approach to Combinatorial Optimization, Monte-Carlo Simulation, and Machine Learning. Springer Verlag, 2004 (page 151).
+- [RKK18] S. J. Reddi, S. Kale, and S. Kumar. “On the Convergence of Adam and Beyond”. In: ICLR. 2018 (page 129).
+- [RM01] N. Roy and A. McCallum. “Toward optimal active learning through Monte Carlo estimation of error reduction”. In: ICML. 2001 (page 620).
+- [RMC09] H. Rue, S. Martino, and N. Chopin. “Approximate Bayesian Inference for Latent Gaussian Models Using Integrated Nested Laplace Approximations”. In: JRSSB 71 (2009), pp. 319–392 (page 225).
+- [RMC16] A. Radford, L. Metz, and S. Chintala. “Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks”. In: ICLR. 2016 (page 655).
+- [RMH97] A. Raftery, D. Madigan, and J. Hoeting. “Bayesian Model Averaging for Linear Regression Models”. In: JASA 92.437 (1997), pp. 179–191 (page 212).
+- [RMW14] D. J. Rezende, S. Mohamed, and D. Wierstra. “Stochastic Backpropagation and Approximate Inference in Deep Generative Models”. In: ICML. Ed. by E. P. Xing and T. Jebara. Vol. 32. Proceedings of Machine Learning Research. Beijing, China: PMLR, 2014, pp. 1278–1286 (page 650).
+- [RN10] S. Russell and P. Norvig. Artificial Intelligence: A Modern Approach. 3rd edition. Prentice Hall, 2010 (page 16).
+- [RN19] S. Russell and P. Norvig. Artificial Intelligence: A Modern Approach. 4th edition. Prentice Hall, 2019 (page 257).
+- [Rob07] C. P. Robert. The Bayesian Choice: From Decision-Theoretic Foundations to Computational Implementation. en. 2nd edition. Springer Verlag, New York, 2007 (page 203).
+- [Ros58] F. Rosenblatt. “The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain”. In: Psychological Review 65.6 (1958), pp. 386–408 (pages 286, 405).
+- [Ros98] K. Rose. “Deterministic Annealing for Clustering, Compression, Classification, Regression, and Related Optimization Problems”. In: Proc. IEEE 86 (1998), pp. 2210–2239 (page 668).
+- [Rot+20] K. Roth, T. Milbich, S. Sinha, P. Gupta, B. Ommer, and J. P. Cohen. “Revisiting Training Strategies and Generalization Performance in Deep Metric Learning”. In: ICML. 2020 (pages 504, 508, 509).
+- [Row97] S. Roweis. “EM algorithms for PCA and SPCA”. In: NIPS. 1997 (pages 634, 636, 637).
+- [Roy+20] A. Roy, M. Saffar, A. Vaswani, and D. Grangier. “Efficient Content-Based Sparse Attention with Routing Transformers”. In: CoRR abs/2003.05997 (2020). arXiv: 2003.05997 (page 491).
+- [Roz+19] B. Rozemberczki, R. Davies, R. Sarkar, and C. Sutton. “GEMSEC: Graph Embedding with Self Clustering”. In: Proceedings of the 2019 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining, ASONAM ’19. Vancouver, British Columbia, Canada: Association for Computing Machinery, 2019, 65–72 (page 728).
+- [RP99] M. Riesenhuber and T. Poggio. “Hierarchical Models of Object Recognition in Cortex”. In: Nature Neuroscience 2 (1999), pp. 1019–1025 (page 441).
+- [RR08] A. Rahimi and B. Recht. “Random Features for Large-Scale Kernel Machines”. In: NIPS. Curran Associates, Inc., 2008, pp. 1177–1184 (page 541).
+- [RR09] A. Rahimi and B. Recht. “Weighted Sums of Random Kitchen Sinks: Replacing minimization with randomization in learning”. In: NIPS. Curran Associates, Inc., 2009, pp. 1313–1320 (page 541).
+- [RS00] S. T. Roweis and L. K. Saul. “Nonlinear dimensionality reduction by locally linear embedding”. en. In: Science 290.5500 (Dec. 2000), pp. 2323–2326 (page 663).
+- [RT82] D. B. Rubin and D. T. Thayer. “EM algorithms for ML factor analysis”. In: Psychometrika 47.1 (Mar. 1982), pp. 69–76 (page 635).
+- [Rub84] D. B. Rubin. “Bayesianly Justifiable and Relevant Frequency Calculations for the Applied Statistician”. In: Ann. Stat. 12.4 (1984), pp. 1151–1172 (pages 222, 827, 862).
+- [Rub97] R. Y. Rubinstein. “Optimization of computer simulation models with rare events”. In: Eur. J. Oper. Res. 99.1 (May 1997), pp. 89–112 (page 151).
+- [Rup88] D. Ruppert. Efficient Estimations from a Slowly Convergent Robbins-Monro Process. Tech. rep. 1988 (page 125).
+- [Rus+15] O. Russakovsky et al. “ImageNet Large Scale Visual Recognition Challenge”. In: International Journal of Computer Vision (2015), pp. 1–42 (pages 443, 444).
+- [Rus15] S. Russell. “Unifying Logic and Probability”. In: Commun. ACM 58.7 (June 2015), pp. 88–97 (page 501).
+- [Rus18] A. M. Rush. “The Annotated Transformer”. In: Proceedings of ACL Workshop on Open Source Software for NLP. 2018 (page 488).
+- [Rus+18] D. J. Russo, B. Van Roy, A. Kazerouni, I. Osband, and Z. Wen. “A Tutorial on Thompson Sampling”. In: Foundations and Trends in Machine Learning 11.1 (2018), pp. 1–96 (page 256).
+- [Rus19] S. Russell. Human Compatible: Artificial Intelligence and the Problem of Control. en. Kindle. Viking, Oct. 2019 (page 17).
+- [RW06] C. E. Rasmussen and C. K. I. Williams. Gaussian Processes for Machine Learning. MIT Press, 2006 (pages 307, 522, 527, 530, 532).
+- [RW15] D. Rosenbaum and Y. Weiss. “The Return of the Gating Network: Combining Generative Models and Discriminative Training in Natural Image Priors”. In: NIPS. 2015, pp. 2665–2673 (page 72).
+- [RW18] E. Richardson and Y. Weiss. “On GANs and GMMs”. In: NIPS. 2018 (page 641).
+- [RZL17] P. Ramachandran, B. Zoph, and Q. V. Le. “Searching for Activation Functions”. In: (Oct. 2017). arXiv: 1710.05941 [cs.NE] (pages 396, 398).

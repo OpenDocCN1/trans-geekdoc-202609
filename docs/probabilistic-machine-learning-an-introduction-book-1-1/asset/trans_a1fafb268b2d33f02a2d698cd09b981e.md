@@ -1,0 +1,70 @@
+
+mation. 技术报告 10-30。伯明翰大学，2010（第 514 页）。
+
+- [BA97a] A. Bowman 和 A. Azzalini. *数据分析中的应用平滑技术*. 牛津，1997（第 512 页）。
+- [BA97b] L. A. Breslow 和 D. W. Aha. “简化决策树：综述”。载于：*Knowl. Eng. Rev.* 12.1（1997 年 1 月），第 1–40 页（第 567 页）。
+- [Bab19] S. Babu. *2019 年基于深度学习的人体姿态估计指南*. 2019（第 451 页）。
+- [Bac+16] O. Bachem, M. Lucic, H. Hassani, 和 A. Krause. “快速且可证明优异的 k-Means 初始化”。载于：*NIPS*，2016，第 55–63 页（第 683 页）。
+- [Bah+12] B. Bahmani, B. Moseley, A. Vattani, R. Kumar, 和 S. Vassilvitskii. “可扩展的 k-Means++”。载于：*VLDB*，2012（第 683 页）。
+- [Bah+20] Y. Bahri, J. Kadmon, J. Pennington, S. Schoenholz, J. Sol-Dickstein, 和 S. Ganguli. “深度学习的统计力学”。载于：*Annu. Rev. Condens. Matter Phys.*（2020 年 3 月）（第 414, 423 页）。
+- [Bal17] S. Baluja. “学习优化景观的深度模型”。载于：*IEEE 计算智能研讨会系列（SSCI）*，2017（第 151 页）。
+- [BAP14] P. Bachman, O. Alsharif, 和 D. Precup. “使用伪集成学习”。载于：*神经信息处理系统进展*，2014，第 3365–3373 页（第 614 页）。
+- [Bar09] M. Bar. “前摄大脑：对预测的记忆”。载于：*Philos. Trans. R. Soc. Lond. B Biol. Sci.* 364.1521（2009 年 5 月），第 1235–1243 页（第 500 页）。
+- [Bar19] J. T. Barron. “一种通用且自适应的鲁棒损失函数”。载于：*CVPR*，2019（第 339 页）。
+- [Bat+18] P. W. Battaglia 等. “关系归纳偏置、深度学习和图网络”。载于：*arXiv 预印本 arXiv:1806.01261*，2018（第 720 页）。
+- [BB08] O. Bousquet 和 L. Bottou. “大规模学习的权衡”。载于：*NIPS*，2008，第 161–168 页（第 123, 849 页）。
+- [BB11] L. Bottou 和 O. Bousquet. “大规模学习的权衡”。载于：*机器学习优化*，S. Sra、S. Nowozin 和 S. J. Wright 编。MIT Press，2011，第 351–368 页（第 123 页）。
+- [BB12] J. Bergstra 和 Y. Bengio. “超参数优化的随机搜索”。载于：*JMLR* 13（2012），第 281–305 页（第 150 页）。
+- [BBS09] J. O. Berger, J. M. Bernardo, 和 D. Sun. “参考先验的形式定义”。载于：*Ann. Stat.* 37.2（2009），第 905–938 页（第 203 页）。
+- [BBV11] R. Benassi, J. Bect, 和 E. Vazquez. “使用序贯蒙特卡洛的贝叶斯优化”。载于：（2011 年 11 月），arXiv: 1111.4802 [math.OC]（第 533 页）。
+- [BC17] D. Beck 和 T. Cohn. “使用高斯过程学习字符串上的核”。载于：*第八届国际自然语言处理联合会议论文集（第 2 卷：短论文）*，第 2 卷，2017，第 67–73 页（第 526 页）。
+- [BCB12] S. Bubeck 和 N. Cesa-Bianchi. “随机与非随机多臂老虎机问题的遗憾分析”。载于：*机器学习中的基础与趋势®* 5.1（2012），第 1–122 页（第 249 页）。
+- [BCB15] D. Bahdanau, K. Cho, 和 Y. Bengio. “通过联合学习对齐和翻译的神经机器翻译”。载于：*ICLR*，2015（第 482 页）。
+- [BCD01] L. Brown, T. Cai, 和 A. DasGupta. “二项比例区间估计”。载于：*统计科学* 16.2（2001），第 101–133 页（第 858 页）。
+- [BCN18] L. Bottou, F. E. Curtis, 和 J. Nocedal. “大规模机器学习的优化方法”。载于：*SIAM Rev.* 60.2（2018），第 223–311 页（第 107, 415 页）。
+- [BCV13] Y. Bengio, A. Courville, 和 P. Vincent. “表示学习：回顾与新视角”。载于：*IEEE PAMI* 35.8（2013 年 8 月），第 1798–1828 页（第 592 页）。
+- [BD17] S. Boyd 和 J. Duchi. *EE364b 讲义：凸优化 II*. 斯坦福大学，2017（第 758 页）。
+- [BD87] G. Box 和 N. Draper. *经验模型构建与响应曲面*. Wiley, 1987（第 211 页）。
+- [BDE03] S. Ben-David, N. Eiron, 和 P. M. Long. “关于近似最大化一致性的难度”。载于：*J. Comput. System Sci.* 66.3（2003 年 5 月），第 496–514 页（第 92 页）。
+- [Ben+04a] Y. Bengio, O. Delalleau, N. Roux, J. Paiement, P. Vincent, 和 M. Ouimet. “学习特征函数连接谱嵌入和核 PCA”。载于：*神经计算* 16（2004），第 2197–2219 页（第 695 页）。
+- [Ben+04b] Y. Bengio, J.-F. Paiement, P. Vincent, O. Delalleau, N. L. Roux, 和 M. Ouimet. “LLE、Isomap、MDS、特征映射和谱聚类的样本外扩展”。载于：*NIPS*，MIT Press, 2004，第 177–184 页（第 656 页）。
+- [Ben+15a] S. Bengio, O. Vinyals, N. Jaitly, 和 N. Shazeer. “循环神经网络序列预测的调度采样”。载于：*NIPS*，2015（第 472 页）。
+- [Ben+15b] Y. Bengio, D.-H. Lee, J. Bornschein, T. Mesnard, 和 Z. Lin. “迈向生物上合理的深度学习”。载于：（2015）。arXiv: 1502.04156 [cs.LG]（第 405 页）。
+- [Ber05] J. M. Bernardo. “参考分析”。载于：*统计学手册*，D. K. Dey 和 C. R. Rao 编，第 25 卷，Elsevier, 2005 年 1 月，第 17–90 页（第 203 页）。
+- [Ber09] D. Bertsimas. *麻省理工学院课程 15.093J：“优化方法”*. 2009（第 114 页）。
+- [Ber15] D. Bertsekas. *凸优化算法*. Athena Scientific, 2015（第 107, 113, 130 页）。
+
+## 参考文献
+
+- [Ber16] D. Bertsekas. *非线性规划*. 第三版. Athena Scientific, 2016（第 107, 130 页）。
+- [Ber19] D. Bertsekas. *强化学习与最优控制*. Athena Scientific, 2019（第 251 页）。
+- [Ber+19a] D. Berthelot, N. Carlini, I. Goodfellow, N. Papernot, A. Oliver, 和 C. Raffel. “MixMatch：半监督学习的整体方法”。载于：*神经信息处理系统进展*，2019，第 5049–5059 页（第 610, 615 页）。
+- [Ber+19b] D. Berthelot 等. “RemixMatch：基于分布对齐和增强锚定的半监督学习”。载于：*arXiv 预印本 arXiv:1911.09785*，2019（第 610, 615 页）。
+- [Ber85] J. Berger. “贝叶斯推销术”。载于：*贝叶斯推断与决策技术及其应用：纪念 Bruno deFinetti 的论文集*，P. K. GoeI 和 A. Zellner 编。North-Holland, 1985（第 857 页）。
+- [Ber99] D. Bertsekas. *非线性规划*. 第二版. Athena Scientific, 1999（第 114 页）。
+- [Bet17] M. Betancourt. “哈密顿蒙特卡洛的概念性介绍”。载于：（2017 年 10 月）。arXiv: 1701.02434 [stat.ME]（第 229 页）。
+- [Bey+19] M. Beyeler, E. L. Rounds, K. D. Carlson, N. Dutt, 和 J. L. Krishnan. “稀疏编码和降维的神经关联”。载于：*PLoS Comput. Biol.* 15.6（2019 年 6 月），e1006908（第 650 页）。
+- [BFO84] L. Breiman, J. Friedman, 和 R. Olshen. *分类与回归树*. Wadsworth, 1984（第 565, 566, 581 页）。
+- [BG11] P. Bühlmann 和 S. van de Geer. *高维数据统计：方法、理论与应用*. Springer, 2011（第 347 页）。
+- [BH07] P. Buhlmann 和 T. Hothorn. “提升算法：正则化、预测与模型拟合”。载于：*统计科学* 22.4（2007），第 477–505 页（第 573, 578 页）。
+- [BH69] A. Bryson 和 Y.-C. Ho. *应用最优控制：优化、估计与控制*. Blaisdell 出版公司, 1969（第 496 页）。
+- [BH86] J. Barnes 和 P. Hut. “一种层次化 (O(N log N) 力计算算法”。载于：*自然* 324.6096（1986 年 12 月），第 446–449 页（第 670 页）。
+- [BH89] P. Baldi 和 K. Hornik. “神经网络与主成分分析：在没有局部最小值的情况下从示例中学习”。载于：*神经网络* 2（1989），第 53–58 页（第 646 页）。
+- [Bha+19] A. Bhadra, J. Data, N. G. Polson, 和 B. T. Willard. “Lasso 遇到 Horseshoe：综述”。载于：*Bayesian Anal.* 34.3（2019），第 405–427 页（第 339, 362 页）。
+- [BH M92] J. S. Bridge, A. J. Heading, 和 D. J. MacKay. “无监督分类器、互信息与幻影目标”。载于：*神经信息处理系统进展*，1992，第 1096–1101 页（第 612 页）。
+- [BI19] P. Barham 和 M. Isard. “机器学习系统陷入困境”。载于：*操作系统热点专题研讨会论文集。HotOS*，中国合肥：计算机协会，2019 年 5 月，第 177–183 页（第 404 页）。
+- [Big+11] B. Biggio, G. Fumera, I. Pillai, 和 F. Roli. “图像垃圾邮件过滤技术的综述与实验评估”。载于：*模式识别快报* 32.10（2011），第 1436–1440 页（第 464 页）。
+- [Bis06] C. Bishop. *模式识别与机器学习*. Springer. 6（2006）（第 58, 69, 140, 144, 145, 162, 215, 236, 272, 276, 306, 311, 335, 353, 386, 423, 543, 550, 552, 634, 638, 700, 761, 759, 822, 841 页）。
+- [Bis94] C. M. Bishop. *机器密度网络*. 技术报告 NCRG 4288。阿斯顿大学计算机科学系神经计算研究组, 1994（第 430 页）。
+- [Bis99] C. Bishop. “贝叶斯 PCA”。载于：*NIPS*，1999（第 639 页）。
+- [BJ05] F. Bach 和 M. Jordan. *典型相关分析的概率解释*. 技术报告 688。加州大学伯克利分校, 2005（第 645 页）。
+- [BJM06] P. Bartlett, M. Jordan, 和 J. M. AUliffe. “凸性、分类与风险界”。载于：*JASA* 101.473（2006），第 138–156 页（第 92 页）。
+- [BK07] R. M. Bell 和 Y. Koren. “Netflix 大奖赛的启示”。载于：*SIGKDD Explor. Newsl.* 9.2（2007 年 12 月），第 75–79 页（第 700 页）。
+- [BK20] E. M. Bender 和 A. Koller. “向 NLU 攀登：数据时代的意义、形式与理解”。载于：*ACL*，2020（第 606 页）。
+- [BKC17] P. Badinaraayan, A. Kendall, 和 R. Cipolla. “SegNet：一种用于图像分割的深度卷积编码器-解码器架构”。载于：*IEEE PAMI* 39.12（2017）（第 451 页）。
+- [BKH16] J. L. Ba, J. R. Rio, 和 G. E. Hinton. “层归一化”。载于：（2016）。arXiv: 1607.06450 [stat.ML]（第 441 页）。
+- [BKL10] S. Bird, E. Klein, 和 E. Loper. *使用 Python 进行自然语言处理：用自然语言工具包分析文本*. 2010（第 330 页）。
+- [BL04] P. Bickel 和 E. Levina. “当变量远多于观测时，Fisher 线性判别函数、‘朴素贝叶斯’及一些替代方法的相关理论”。载于：*Bernoulli* 10（2004），第 989–1010 页（第 267 页）。
+- [BL07] J. A. Buninaría 和 J. P. Levy. “从词共现统计中提取语义表征：一项计算研究”。载于：*Behav. Res. Methods* 39.3（2007 年 8 月），第 510–526 页（第 600 页）。
+- [BL12] J. A. Buninaría 和 J. P. Levy. “从词共现统计中提取语义表征：停用词表、词干提取与 SVD”。载于：*Behav. Res. Methods* 44.3（2012 年 9 月），第 890–907 页（第 300 页）。
+- [BL88] D. S. Broenleadt 和 D. Lowe. “多变量函数插值与 Adap-
