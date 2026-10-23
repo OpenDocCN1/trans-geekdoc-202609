@@ -1,0 +1,13 @@
++   - The precision rate you can get from experimentation depends on how a library is implemented. For example, if we conduct an experiment with the same neural network model in two different libraries, the results we obtain can be hugely changed. This is because neural network algorithms include a stochastic operation, and the calculation accuracy of a machine is limited, that is, calculated values during the process could have fluctuations based on the method of implementation.
+
+Because you well understand the fundamental concepts and theories of deep learning algorithms thanks to the previous chapters, we don't need to worry about the first point. However, we need to be careful about the remaining two points. From the next section on, implementation using a library is introduced and we'll be more conscious of the merits and demerits we just discussed.
+
+# Introducing DL4J and ND4J
+
+A lot of the libraries of deep learning have been developed all over the world. In November 2015, **TensorFlow** (http://www.tensorflow.org/), a machine learning/deep learning library developed by Google, became open to the public and attracted great attention.
+
+When we look at the programming language with which libraries are being developed, most of them open to the public are developed by Python or use the Python API. TensorFlow is developed with C++ on the backend but it's also possible to write code with Python. This book focuses on Java to learn deep learning, hence the libraries developed by other languages will be briefly introduced in Chapter 7, *Other Important Deep Learning Libraries.*
+
+So, what Java-based libraries do we have? Actually, there are a few cases that are actively developed (perhaps there are also some projects not open to public). However, there is only one library we can use practically: **Deeplearning4j (DL4J)**. The official project page URL is http://deeplearning4j.org/. This library is also open source and the source code is all published on GitHub. The URL is https://github.com/deeplearning4j/deeplearning4j. This library was developed by Skymind (http://www.skymind.io/). What kind of library is this? If you look at the project page, it's introduced as follows:
+
+> "Deeplearning4j is the first commercial-grade, open-source, distributed deep-learning library written for Java and Scala. Integrated with Hadoop and Spark, DL4J is designed to be used in business environments, rather than as a research tool. Skymind is its commercial support arm.

@@ -1,0 +1,5 @@
+# Summary
+
+In this chapter, you learned how to implement deep learning algorithms and models using Theano, TensorFlow, and Caffe. All of them have special and powerful features and each of them is very useful. If you are interested in other libraries and frameworks, you can have Chainer (http://chainer.org/), Torch (http://torch.ch/), Pylearn2 (http://deeplearning.net/software/pylearn2/), Nervana (http://neon.nervanasys.com/), and so on. You can also reference some benchmark tests (https://github.com/soumith/convnet-benchmarks and https://github.com/soumith/convnet-benchmarks/issues/66) when you actually consider building your application with one of the libraries mentioned earlier.
+
+Throughout this book, you learned the fundamental theories and algorithms of machine learning and deep learning and how deep learning is applied to study/business fields. With the knowledge and techniques you've acquired here, you should be able to cope with any problems that confront you. While it is true that you still need more steps to realize AI, you now have the greatest opportunity to achieve innovation.
