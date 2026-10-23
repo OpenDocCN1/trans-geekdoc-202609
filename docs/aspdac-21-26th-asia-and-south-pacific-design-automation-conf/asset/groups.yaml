@@ -1,0 +1,1554 @@
+- raw:
+  - "[PAGE 0]\n\n# # Placement for Wafer-Scale Deep Learning Accelerator\n\nBenzheng\
+    \ Li  \nXidian University  \nbzli@stu.xidian.edu.cn  \n  \nQi Du  \nXidian University\
+    \  \nqdu@stu.xidian.edu.cn  \n  \nDingcheng Liu  \nXidian University  \ndcliu1997@gmail.com\
+    \  \n  \nJingchong Zhang  \nXidian University  \njc zhang_1@stu.xidian.edu.cn\
+    \  \n  \nGengjie Chen  \nGiga Design Automation  \ngchen@giga-da.com  \n  \nHailong\
+    \ You  \nXidian University  \nhlyou@mail.xidian.edu.cn\n\n**ABSTRACT** To meet\
+    \ the growing demand from deep learning applications for computing resources,\
+    \ accelerators by ASIC are necessary. A wafer-scale engine (WSE) is recently proposed\
+    \ [1], which is able to simultaneously accelerate multiple layers from a neural\
+    \ network (NN). However, without a high-quality placement that properly maps NN\
+    \ layers onto the WSE, the acceleration efficiency cannot be achieved. Here, the\
+    \ WSE placement resembles the traditional ASIC floorplan problem of placing blocks\
+    \ onto a chip region, but they are fundamentally different. Since the slowest\
+    \ layer determines the compute time of the whole NN on WSE, a layer with a heavier\
+    \ workload needs more computing resources. Besides, locations of layers and protocol\
+    \ adapter cost of internal IO connections will influence inter-layer communication\
+    \ overhead. In this paper, we propose GigaPlacer to handle this new challenge.\
+    \ A binary-search-based framework is developed to obtain a minimum compute time\
+    \ of the NN. Two dynamic-programming-based algorithms with different optimizing\
+    \ strategies are integrated to produce legal placement. The distance and adapter\
+    \ cost between connected layers can be further minimized by some refinements.\
+    \ Compared with the first place of the ISPD2020 Contest, GigaPlacer reduces the\
+    \ contest metric by up to 6.89% and on average 2.09%, while runs 7.23x faster.\n\
+    \n![](img/9193339587477a25149234f19dc04369_0_0.png)\n\n**ACM Reference Format:**\
+    \  \nBenzheng Li, Qi Du, Dingcheng Liu, Jingchong Zhang, Gengjie Chen, and Hailong\
+    \ You. 2021. *Placement for Wafer-Scale Deep Learning Accelerator*. In *26th Asia\
+    \ and South Pacific Design Automation Conference (ASP-DAC '21)*, January 18–21,\
+    \ 2021, Tokyo, Japan. ACM, New York, NY, USA, 6 pages. https://doi.org/10.1145/3394855.3431563\n\
+    \n# ## 1 INTRODUCTION\n\nWith a blossoming of deep learning applications in the\
+    \ 2010s [9], accelerating neural networks (NNs) is becoming a prominent issue\
+    \ in order to satisfy the rapidly increasing computational requirements. Specialized\
+    \ accelerator by ASIC is a promising technique for this problem. For instance,\
+    \ an accelerator called DianNao [3] is 117.87 times faster than a 128-bit 2GHz\
+    \ SIMD processor, with a reduction of total energy by 21.08x. Tensor processing\
+    \ unit (TPU) proposed by Google [6] is on average about 15-30x faster over its\
+    \ contemporary CPU or GPU, improving TOPS/Watt by about 30-80x. Recently, a wafer-scale\
+    \ engine (WSE) is proposed by Cerebras [1]. Consisting of 400k programmable\n\n\
+    cores and distributed on-chip memory, the WSE can partially accelerate computations\
+    \ of multiple layers from a NN. It also offers high bandwidth for communication\
+    \ between layers by local connectivity with a 2D mesh topology. However, to fully\
+    \ utilize its capability, the placement of the layers implemented on WSE needs\
+    \ thorough optimization.\n\nIn the WSE placement, each layer is mapped to be a\
+    \ rectangular array of cores, called a kernel, as shown in Figure 1. The influence\
+    \ on the acceleration efficiency by the placement includes allocation of cores,\
+    \ arrangement of the kernels' locations and protocol adapter cost of connections.\
+    \ Since the kernel with the lowest throughput determines the overall performance,\
+    \ the compute time should be kept uniform across all the kernels. Thus, the number\
+    \ of cores allocated to a kernel needs to be proportional to the workload. Additionally,\
+    \ the cores transfer data via the on-chip mesh network. So the intra-kernel communication\
+    \ overhead is affected by the distance between the cores located to the kernel,\
+    \ which can be characterized as the shape of the kernel. Similarly, the inter-kernel\
+    \ communication overhead is influenced by the distance between cores in different\
+    \ kernels. Besides, the protocol adapter cost, which is related to the parameters\
+    \ of the connected kernels, also affects the inter-kernel communication.\n\nThe\
+    \ WSE placement problem resembles the traditional floorplan problem, which is\
+    \ to place a set of blocks (modules or macros) onto the 2D chip region. Simulated\
+    \ annealing (SA) is a classic algorithm to search a good topology of blocks in\
+    \ a floorplan. The topologies can be divided into two classes. Slicing structure\
+    \ is a rectangle dissection generated by recursively slicing a rectangular region,\
+    \ while non-slicing structure allows rectangles piled up irregularly. A representation\
+    \ of slicing structures, called normalized Polish expression (nPe) [10], provides\
+    \ operations for SA to perturb the floorplan. And the search of non-slicing floorplans\
+    \ is enabled by representations like O-tree [4] and B*-tree [2]. Recently, an\
+    \ approach based on reinforcement learning (RL) is-"
+  - "[PAGE 1]\n\nproposed [7] to place the macros one at a time. States in this RL\
+    \ placement problem are all the possible partial placement of a netlist, and the\
+    \ available actions of a macro are the feasible locations. Actions are taken by\
+    \ a policy network trained to generalize to unseen blocks.\n\nHowever, WSE placement\
+    \ is fundamentally different from the floorplan problem. Both the areas and the\
+    \ shapes of kernels remain to be determined in the WSE placement problem. Instead,\
+    \ blocks in the floorplan problem are all with fixed area, and mostly with fixed\
+    \ shapes. Besides, the number of adjustable parameters in WSE placement problem\
+    \ is much greater, which significantly enlarges the solution space. As a result,\
+    \ it’s difficult for SA-based and learning-based methods to generate nearly optimal\
+    \ placements for WSE. On the other hand, the connectivity of a NN is dramatically\
+    \ simpler than that of a floorplan netlist. In SA-based and learning-based methods,\
+    \ great efforts are put into handling the complex connectivity of the blocks.\
+    \ Therefore, placing layers in topological orders of the NN can substantially\
+    \ reduce runtime with little sacrifice of quality. In our early exploration, we\
+    \ tried implementing a SA algorithm based on nPe, and found its performance poor.\
+    \ Even in the SA algorithm’s best case, its score was still 13% worse than GigaPlacer,\
+    \ but took a 2.6 times longer runtime.\n\nTo optimize the compute time of NNs’\
+    \ acceleration, we proposed an effective and efficient placer, called GigaPlacer,\
+    \ to handle the WSE placement problem. Our contribution is summarized as follows:\n\
+    \n+   - We proposed two dynamic-programming-based (DP-based) algorithms to place\
+    \ the layers. A binary-search-based framework is adopted to guarantee the uniformity\
+    \ of compute time of all kernels.\n+   - We proposed a row height minimization\
+    \ algorithm to determine the optimal execution parameters for each kernel. We\
+    \ exploit an effective enumeration technique with pruning, guided by binary search.\
+    \ In this way, the wafer area will be fully utilized.\n+   - We proposed two techniques\
+    \ to further refine the results. Inter-kernel distance is reduced by swapping\
+    \ some kernels, and the protocol adapter cost is minimized by slightly adjusting\
+    \ parameters of connected kernels.\n+   - In comparison with the first place of\
+    \ the ISPD2020 Contest, we achieved a reduction on the contest metric by up to\
+    \ 6.89% and on average 2.09%, with 7.23× runtime speed up.\n\n# 2  PRELIMINARIES\n\
+    \nThis section introduces the basic structure of WSE at first. The parameters\
+    \ and performance functions of kernels are presented later, and the problem formulation\
+    \ is introduced in the end.\n\n# 2.1  Wafer-Scale Engine\n\nIn WSE, there are\
+    \ around 400k tiles arranged in a 633×633 grid. Each tile has a programmable execution\
+    \ core, 48KB SRAM, and a router for interconnection with other tiles.\n\nIn the\
+    \ WSE placement problem, layers in NN are mapped to a set of rectangular kernels,\
+    \ where each kernel occupies multiple tiles and performs an individual NN computational\
+    \ task by running the execution cores of tiles in parallel [5].\n\n# 2.2  Kernel\
+    \ Parameters\n\nThe performance of kernels is determined by various parameters\
+    \ including formal parameters and execution parameters.\n\nH, W, R, S, C, K, T\
+    \ are the formal parameters that are defined by NN specification and cannot be\
+    \ modified by compilation procedure. As depicted in Figure 2, H and W represent\
+    \ the sizes of input images; R and\n\n![](img/9193339587477a25149234f19dc04369_1_0.png)\n\
+    \n```\nconvperf(H,W,R,S,C,K,T,h,w,c,k)={\n    height = h*w*(c+1)\n    width  \
+    \ = 3*k\n    time    = ceil(H/h)*ceil(W/w)*ceil(C/c)*ceil(K/k)*R*S/T/T\n    memory\
+    \  = C/c*K/R*S*(W+S-1)*(H+R-1)*h*k\n}\ndblockperf(H,W,F,h,w,c1,c2,c3,k1,k2,k3)={\n\
+    \    conv1 = convperf(H,W,1,1,F,F/4,1,h,w,c1,k1)\n    conv2 = convperf(H,W,1,1,F,F/4,1,h,w,c2,k2)\n\
+    \    conv3 = convperf(H,W,1,1,F,F/4,1,h,w,c3,k3)\n    height = max(conv1.height,conv2.height,conv3.height)\n\
+    \    width  = conv1.width+conv2.width+conv3.width\n    time   = max(conv1.time,conv2.time,conv3.time)\n\
+    \    memory = max(conv1.memory,conv2.memory,conv3.memory)\n}\nblockperf(H,W,F,h,w,c1,c2,c3,c4,k1,k2,k3,k4)={\n\
+    \    conv1 = convperf(H, W, 1,1,F/2,F/4,F/4,1,h,w,c1,k1)\n    conv2 = convperf(H,\
+    \ W, 3,3,F/4,F/4,1,h,w,c2,k2)\n    conv3 = convperf(H/2,W/2,1,1,F/2,F,F,1,h,w,c3,k3)\n\
+    \    conv4 = convperf(H, W, 1,1,F/2,F/4,F/4,1,h,w,c4,k4)\n    height = max(conv1.height,conv2.height,conv3.height,conv4.height)\n\
+    \    width  = conv1.width+conv2.width+conv3.width+conv4.width\n    time   = max(conv1.time,conv2.time,conv3.time,conv4.time)\n\
+    \    memory = max(conv1.memory,conv2.memory,conv3.memory,conv4.memory)\n}\n```\n\
+    \n**Figure 3: Performance functions of two types of kernels, _dblock_ and _block_,\
+    \ given by the kernel library.**\n\n$S$ represent the sizes of the receptive field;\
+    \ $C$ and $K$ are the numbers of input and output features; $T$ represents the\
+    \ step size of the operation. $h$, $w$, $c$, $k$ are the execution parameters\
+    \ that determine the amount and arrangement of tiles in kernels and describe how\
+    \ parallel operations can be performed on the tiles. They separate the various\
+    \ dimensions of tensor operations, $H$, $W$, $C$, $K$. Unlike formal parameters,\
+    \ they are allowed to be modified.\n\n# 2.3  Kernel Performance Functions\n\n\
+    For each kernel, its size, compute time and memory are calculated by parameters.\
+    \ These metrics represent the compute resources required to execute a kernel.\
+    \ In the given kernel library, the performance functions of various types of kernels\
+    \ are specified. Among them, the performance functions of a basic convolution\
+    \ kernel, _conv_, are as follows.\n\n$$height = hw(c+1) \\tag{1a}$$\n$$width =\
+    \ 3k \\tag{1b}$$\n$$time = \\lfloor H/h \\rfloor\\lfloor W/w \\rfloor\\lfloor\
+    \ C/c \\rfloor\\lfloor K/k \\rfloor RS/T^2 \\tag{1c}$$\n$$memory = \\left\\lfloor\
+    \ \\frac{CKRS}{ck} + \\frac{(W+S-1)(H+R-1)K}{whk} \\right\\rfloor \\tag{1d}$$\n\
+    \nNote that the _memory_ refers to the memory required for each tile.\n\nIn addition\
+    \ to _conv_ kernel, there are other types of kernels which contain multiple _conv_\
+    \ kernels. The performance functions of two types of kernels, _dblock_ and _block_,\
+    \ are shown in Figure 3. Take the _dblock_"
+  md: "\n# Placement for Wafer-Scale Deep Learning Accelerator\n\nBenzheng Li  \n\
+    Xidian University  \nbzli@stu.xidian.edu.cn\n\nQi Du  \nXidian University  \n\
+    qdu@stu.xidian.edu.cn\n\nDingcheng Liu  \nXidian University  \ndcliu1997@gmail.com\n\
+    \nJingchong Zhang  \nXidian University  \njczhang_1@stu.xidian.edu.cn\n\nGengjie\
+    \ Chen  \nGiga Design Automation  \ngchen@giga-da.com\n\nHailong You  \nXidian\
+    \ University  \nhlyou@mail.xidian.edu.cn\n\n**ABSTRACT** To meet the growing demand\
+    \ from deep learning applications for computing resources, accelerators by ASIC\
+    \ are necessary. A wafer-scale engine (WSE) is recently proposed [1], which is\
+    \ able to simultaneously accelerate multiple layers from a neural network (NN).\
+    \ However, without a high-quality placement that properly maps NN layers onto\
+    \ the WSE, the acceleration efficiency cannot be achieved. Here, the WSE placement\
+    \ resembles the traditional ASIC floorplan problem of placing blocks onto a chip\
+    \ region, but they are fundamentally different. Since the slowest layer determines\
+    \ the compute time of the whole NN on WSE, a layer with a heavier workload needs\
+    \ more computing resources. Besides, locations of layers and protocol adapter\
+    \ cost of internal I/O connections will influence inter-layer communication overhead.\
+    \ In this paper, we propose GigaPlacer to handle this new challenge. A binary-search-based\
+    \ framework is developed to obtain a minimum compute time of the NN. Two dynamic-programming-based\
+    \ algorithms with different optimizing strategies are integrated to produce legal\
+    \ placement. The distance and adapter cost between connected layers can be further\
+    \ minimized by some refinements. Compared with the first place of the ISPD2020\
+    \ Contest, GigaPlacer reduces the contest metric by up to 6.89% and on average\
+    \ 2.09%, while running 7.23× faster.\n\n![](img/9193339587477a25149234f19dc04369_0_0.png)\n\
+    \n**ACM Reference Format:**  \nBenzheng Li, Qi Du, Dingcheng Liu, Jingchong Zhang,\
+    \ Gengjie Chen, and Hailong You. 2021. *Placement for Wafer-Scale Deep Learning\
+    \ Accelerator*. In *26th Asia and South Pacific Design Automation Conference (ASP-DAC\
+    \ '21)*, January 18–21, 2021, Tokyo, Japan. ACM, New York, NY, USA, 6 pages. https://doi.org/10.1145/3394855.3431563\n\
+    \n## 1 INTRODUCTION\n\nWith a blossoming of deep learning applications in the\
+    \ 2010s [9], accelerating neural networks (NNs) is becoming a prominent issue\
+    \ in order to satisfy the rapidly increasing computational requirements. Specialized\
+    \ accelerator by ASIC is a promising technique for this problem. For instance,\
+    \ an accelerator called DianNao [3] is 117.87 times faster than a 128-bit 2GHz\
+    \ SIMD processor, with a reduction of total energy by 21.08×. Tensor processing\
+    \ unit (TPU) proposed by Google [6] is on average about 15–30× faster over its\
+    \ contemporary CPU or GPU, improving TOPS/Watt by about 30–80×. Recently, a wafer-scale\
+    \ engine (WSE) is proposed by Cerebras [1]. Consisting of 400k programmable cores\
+    \ and distributed on-chip memory, the WSE can partially accelerate computations\
+    \ of multiple layers from a NN. It also offers high bandwidth for communication\
+    \ between layers by local connectivity with a 2D mesh topology. However, to fully\
+    \ utilize its capability, the placement of the layers implemented on WSE needs\
+    \ thorough optimization.\n\nIn the WSE placement, each layer is mapped to be a\
+    \ rectangular array of cores, called a kernel, as shown in Figure 1. The influence\
+    \ on the acceleration efficiency by the placement includes allocation of cores,\
+    \ arrangement of the kernels' locations and protocol adapter cost of connections.\
+    \ Since the kernel with the lowest throughput determines the overall performance,\
+    \ the compute time should be kept uniform across all the kernels. Thus, the number\
+    \ of cores allocated to a kernel needs to be proportional to the workload. Additionally,\
+    \ the cores transfer data via the on-chip mesh network. So the intra-kernel communication\
+    \ overhead is affected by the distance between the cores allocated to the kernel,\
+    \ which can be characterized as the shape of the kernel. Similarly, the inter-kernel\
+    \ communication overhead is influenced by the distance between cores in different\
+    \ kernels. Besides, the protocol adapter cost, which is related to the parameters\
+    \ of the connected kernels, also affects the inter-kernel communication.\n\nThe\
+    \ WSE placement problem resembles the traditional floorplan problem, which is\
+    \ to place a set of blocks (modules or macros) onto the 2D chip region. Simulated\
+    \ annealing (SA) is a classic algorithm to search a good topology of blocks in\
+    \ a floorplan. The topologies can be divided into two classes. Slicing structure\
+    \ is a rectangle dissection generated by recursively slicing a rectangular region,\
+    \ while non-slicing structure allows rectangles piled up irregularly. A representation\
+    \ of slicing structures, called normalized Polish expression (nPe) [10], provides\
+    \ operations for SA to perturb the floorplan. And the search of non-slicing floorplans\
+    \ is enabled by representations like O-tree [4] and B*-tree [2]. Recently, an\
+    \ approach based on reinforcement learning (RL) is proposed [7] to place the macros\
+    \ one at a time. States in this RL placement problem are all the possible partial\
+    \ placement of a netlist, and the available actions of a macro are the feasible\
+    \ locations. Actions are taken by a policy network trained to generalize to unseen\
+    \ blocks.\n\nHowever, WSE placement is fundamentally different from the floorplan\
+    \ problem. Both the areas and the shapes of kernels remain to be determined in\
+    \ the WSE placement problem. Instead, blocks in the floorplan problem are all\
+    \ with fixed area, and mostly with fixed shapes. Besides, the number of adjustable\
+    \ parameters in WSE placement problem is much greater, which significantly enlarges\
+    \ the solution space. As a result, it’s difficult for SA-based and learning-based\
+    \ methods to generate nearly optimal placements for WSE. On the other hand, the\
+    \ connectivity of a NN is dramatically simpler than that of a floorplan netlist.\
+    \ In SA-based and learning-based methods, great efforts are put into handling\
+    \ the complex connectivity of the blocks. Therefore, placing layers in topological\
+    \ orders of the NN can substantially reduce runtime with little sacrifice of quality.\
+    \ In our early exploration, we tried implementing a SA algorithm based on nPe,\
+    \ and found its performance poor. Even in the SA algorithm’s best case, its score\
+    \ was still 13% worse than GigaPlacer, but took a 2.6× longer runtime.\n\nTo optimize\
+    \ the compute time of NNs’ acceleration, we proposed an effective and efficient\
+    \ placer, called GigaPlacer, to handle the WSE placement problem. Our contribution\
+    \ is summarized as follows:\n\n- We proposed two dynamic-programming-based (DP-based)\
+    \ algorithms to place the layers. A binary-search-based framework is adopted to\
+    \ guarantee the uniformity of compute time of all kernels.\n- We proposed a row\
+    \ height minimization algorithm to determine the optimal execution parameters\
+    \ for each kernel. We exploit an effective enumeration technique with pruning,\
+    \ guided by binary search. In this way, the wafer area will be fully utilized.\n\
+    - We proposed two techniques to further refine the results. Inter-kernel distance\
+    \ is reduced by swapping some kernels, and the protocol adapter cost is minimized\
+    \ by slightly adjusting parameters of connected kernels.\n- In comparison with\
+    \ the first place of the ISPD2020 Contest, we achieved a reduction on the contest\
+    \ metric by up to 6.89% and on average 2.09%, with 7.23× runtime speedup.\n\n\
+    ## 2  PRELIMINARIES\n\nThis section first introduces the basic structure of WSE.\
+    \ The parameters and performance functions of kernels are presented later, and\
+    \ the problem formulation is introduced in the end.\n\n### 2.1  Wafer-Scale Engine\n\
+    \nIn WSE, there are around 400k tiles arranged in a 633×633 grid. Each tile has\
+    \ a programmable execution core, 48KB SRAM, and a router for interconnection with\
+    \ other tiles.\n\nIn the WSE placement problem, layers in NN are mapped to a set\
+    \ of rectangular kernels, where each kernel occupies multiple tiles and performs\
+    \ an individual NN computational task by running the execution cores of tiles\
+    \ in parallel [5].\n\n### 2.2  Kernel Parameters\n\nThe performance of kernels\
+    \ is determined by various parameters including formal parameters and execution\
+    \ parameters.\n\nH, W, R, S, C, K, T are the formal parameters that are defined\
+    \ by NN specification and cannot be modified by compilation procedure. As depicted\
+    \ in Figure 2, H and W represent the sizes of input images; R and S represent\
+    \ the sizes of the receptive field; C and K are the numbers of input and output\
+    \ features; T represents the step size of the operation. h, w, c, k are the execution\
+    \ parameters that determine the amount and arrangement of tiles in kernels and\
+    \ describe how parallel operations can be performed on the tiles. They separate\
+    \ the various dimensions of tensor operations, H, W, C, K. Unlike formal parameters,\
+    \ they are allowed to be modified.\n\n![](img/9193339587477a25149234f19dc04369_1_0.png)\n\
+    \n### 2.3  Kernel Performance Functions\n\nFor each kernel, its size, compute\
+    \ time and memory are calculated by parameters. These metrics represent the compute\
+    \ resources required to execute a kernel. In the given kernel library, the performance\
+    \ functions of various types of kernels are specified. Among them, the performance\
+    \ functions of a basic convolution kernel, _conv_, are as follows.\n\n$$height\
+    \ = hw(c+1) \\tag{1a}$$\n$$width = 3k \\tag{1b}$$\n$$time = \\lfloor H/h \\rfloor\\\
+    lfloor W/w \\rfloor\\lfloor C/c \\rfloor\\lfloor K/k \\rfloor RS/T^2 \\tag{1c}$$\n\
+    $$memory = \\left\\lfloor \\frac{CKRS}{ck} + \\frac{(W+S-1)(H+R-1)K}{whk} \\right\\\
+    rfloor \\tag{1d}$$\n\nNote that the _memory_ refers to the memory required for\
+    \ each tile.\n\nIn addition to _conv_ kernel, there are other types of kernels\
+    \ which contain multiple _conv_ kernels. The performance functions of two types\
+    \ of kernels, _dblock_ and _block_, are shown in Figure 3. Take the _dblock_\n"
+  mdcn: "\n# 用于晶圆级深度学习加速器的放置\n\nBenzheng Li  \n西安电子科技大学  \nbzli@stu.xidian.edu.cn\n\
+    \nQi Du  \n西安电子科技大学  \nqdu@stu.xidian.edu.cn\n\nDingcheng Liu  \n西安电子科技大学  \n\
+    dcliu1997@gmail.com\n\nJingchong Zhang  \n西安电子科技大学  \njczhang_1@stu.xidian.edu.cn\n\
+    \nGengjie Chen  \nGiga Design Automation  \ngchen@giga-da.com\n\nHailong You \
+    \ \n西安电子科技大学  \nhlyou@mail.xidian.edu.cn\n\n**摘要** 为满足深度学习应用对计算资源日益增长的需求，ASIC\
+    \ 加速器是必要的。近期提出了一种晶圆级引擎（WSE）[1]，它能够同时加速神经网络（NN）中的多个层。然而，如果没有高质量的放置将 NN 层正确映射到 WSE\
+    \ 上，则无法实现加速效率。这里，WSE 放置类似于将块放置到芯片区域的传统 ASIC 布局规划问题，但它们从根本上是不同的。由于最慢的层决定了整个 NN\
+    \ 在 WSE 上的计算时间，工作负载更重的层需要更多的计算资源。此外，层的所在位置和内部 I/O 连接的协议适配器成本会影响层间通信开销。在本文中，我们提出了\
+    \ GigaPlacer 来应对这一新挑战。开发了一种基于二分搜索的框架以获得 NN 的最小计算时间。两种具有不同优化策略的基于动态规划的算法被集成以生成合法放置。通过一些细化，可以进一步最小化连接层之间的距离和适配器成本。与\
+    \ ISPD2020 竞赛的第一名相比，GigaPlacer 将竞赛指标最多降低了 6.89%，平均降低了 2.09%，同时运行速度快了 7.23 倍。\n\
+    \n![](img/9193339587477a25149234f19dc04369_0_0.png)\n\n**ACM 参考格式：**  \nBenzheng\
+    \ Li, Qi Du, Dingcheng Liu, Jingchong Zhang, Gengjie Chen, and Hailong You. 2021.\
+    \ *用于晶圆级深度学习加速器的放置*. In *第26届亚洲和南太平洋设计自动化会议 (ASP-DAC '21)*, January 18–21, 2021,\
+    \ 东京，日本. ACM, New York, NY, USA, 6 pages. https://doi.org/10.1145/3394855.3431563\n\
+    \n## 1 引言\n\n随着 2010 年代深度学习应用的蓬勃发展 [9]，加速神经网络（NNs）变得日益重要，以满足快速增长的计算需求。专用 ASIC\
+    \ 加速器是解决此问题的有前景的技术。例如，名为 DianNao [3] 的加速器比 128 位 2GHz SIMD 处理器快 117.87 倍，总能耗降低了\
+    \ 21.08×。Google 提出的张量处理单元（TPU）[6] 平均比其同期 CPU 或 GPU 快约 15–30×，TOPS/Watt 提高了约 30–80×。近期，Cerebras\
+    \ 提出了晶圆级引擎（WSE）[1]。WSE 由 40 万个可编程核心和分布式片上内存组成，可以部分加速 NN 的多个层的计算。它还通过具有 2D 网格拓扑的局部连接为层间通信提供高带宽。然而，要充分利用其能力，需要对在\
+    \ WSE 上实现的层的放置进行彻底优化。\n\n在 WSE 放置中，每个层被映射为一个矩形核心阵列，称为内核，如图 1 所示。放置对加速效率的影响包括核心分配、内核位置的安排以及连接的协议适配器成本。由于吞吐量最低的内核决定了整体性能，计算时间应在所有内核中保持一致。因此，分配给内核的核心数量需要与工作负载成比例。此外，核心通过片上网格网络传输数据。因此，内核内通信开销受分配给该内核的核心之间的距离影响，这可以表征为内核的形状。同样，内核间通信开销受不同内核中核心之间距离的影响。此外，与连接内核的参数相关的协议适配器成本也会影响内核间通信。\n\
+    \nWSE 放置问题类似于传统的布局规划问题，即将一组块（模块或宏）放置到二维芯片区域。模拟退火（SA）是一种经典算法，用于搜索布局规划中块的良好拓扑结构。拓扑结构可以分为两类。切片结构是通过递归切片矩形区域生成的矩形剖分，而非切片结构允许矩形不规则堆叠。切片结构的表示形式称为归一化波兰表达式（nPe）[10]，为\
+    \ SA 提供了扰动布局规划的操作。而 O-tree [4] 和 B*-tree [2] 等表示形式使得非切片布局规划的搜索成为可能。近期，提出了一种基于强化学习（RL）的方法\
+    \ [7] 来逐个放置宏。在此 RL 放置问题中，状态是网络表的全部可能部分放置，而宏的可用操作是可行位置。操作由训练有素的策略网络执行，以推广到未见过的块。\n\
+    \n然而，WSE 放置与布局规划问题从根本上不同。在 WSE 放置问题中，内核的面积和形状仍需确定。相反，布局规划问题中的块都具有固定面积，且大多具有固定形状。此外，WSE\
+    \ 放置问题中可调参数的数量要大得多，这显著扩大了解决方案空间。因此，基于 SA 和基于学习的方法很难为 WSE 生成近乎最优的放置。另一方面，NN 的连接性比布局规划网络表简单得多。在基于\
+    \ SA 和基于学习的方法中，投入了很大精力来处理块的复杂连接。因此，按 NN 的拓扑顺序放置层可以在几乎不牺牲质量的情况下大幅减少运行时间。在我们早期的探索中，我们尝试实现基于\
+    \ nPe 的 SA 算法，发现其性能较差。即使在 SA 算法的最佳情况下，其得分仍比 GigaPlacer 差 13%，但运行时间长了 2.6 倍。\n\n\
+    为了优化 NN 加速的计算时间，我们提出了一种有效且高效的放置器，称为 GigaPlacer，以处理 WSE 放置问题。我们的贡献总结如下：\n\n- 我们提出了两种基于动态规划（DP-based）的算法来放置层。采用基于二分搜索的框架来保证所有内核计算时间的一致性。\n\
+    - 我们提出了一种行高最小化算法来确定每个内核的最佳执行参数。我们利用一种有效的枚举技术并进行剪枝，由二分搜索指导。这样，晶圆面积将被充分利用。\n- 我们提出了两种进一步细化结果的技术。通过交换一些内核来减少内核间距离，并通过略微调整连接内核的参数来最小化协议适配器成本。\n\
+    - 与 ISPD2020 竞赛的第一名相比，我们在竞赛指标上实现了最高 6.89% 的降低，平均降低 2.09%，运行速度提升了 7.23 倍。\n\n##\
+    \ 2 预备知识\n\n本节首先介绍 WSE 的基本结构。随后介绍内核的参数和性能函数，最后介绍问题表述。\n\n### 2.1 晶圆级引擎\n\n在 WSE\
+    \ 中，约有 40 万个 tile 排列在 633×633 网格中。每个 tile 具有一个可编程执行核心、48KB SRAM 以及用于与其他 tile 互连的路由器。\n\
+    \n在 WSE 放置问题中，NN 中的层被映射为一组矩形内核，其中每个内核占用多个 tile，并通过并行运行 tile 的执行核心来执行单个 NN 计算任务\
+    \ [5]。\n\n### 2.2 内核参数\n\n内核的性能由包括形式参数和执行参数在内的各种参数决定。\n\nH、W、R、S、C、K、T 是由 NN 规范定义的形式参数，不能通过编译过程修改。如图\
+    \ 2 所示，H 和 W 表示输入图像的大小；R 和 S 表示感受野的大小；C 和 K 是输入和输出特征的数量；T 表示操作的步长。h、w、c、k 是执行参数，决定内核中\
+    \ tile 的数量和排列，并描述如何在 tile 上执行并行操作。它们将张量操作的各个维度 H、W、C、K 分开。与形式参数不同，它们允许被修改。\n\n\
+    ![](img/9193339587477a25149234f19dc04369_1_0.png)\n\n### 2.3 内核性能函数\n\n对于每个内核，其大小、计算时间和内存由参数计算得出。这些指标代表执行内核所需的计算资源。在给定的内核库中，各种类型内核的性能函数被指定。其中，基本卷积内核\
+    \ _conv_ 的性能函数如下。\n\n$$height = hw(c+1) \\tag{1a}$$\n$$width = 3k \\tag{1b}$$\n\
+    $$time = \\lfloor H/h \\rfloor\\lfloor W/w \\rfloor\\lfloor C/c \\rfloor\\lfloor\
+    \ K/k \\rfloor RS/T^2 \\tag{1c}$$\n$$memory = \\left\\lfloor \\frac{CKRS}{ck}\
+    \ + \\frac{(W+S-1)(H+R-1)K}{whk} \\right\\rfloor \\tag{1d}$$\n\n请注意，_memory_ 指的是每个\
+    \ tile 所需的内存。\n\n除 _conv_ 内核外，还有其他包含多个 _conv_ 内核的类型内核。两种类型内核 _dblock_ 和 _block_\
+    \ 的性能函数如图 3 所示。取 _dblock_\n"
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    ![](img/9193339587477a25149234f19dc04369_2_0.png)
+
+
+    Figure 4: GigaPlacer framework.
+
+
+    kernel for example, it contains *three conv* kernels, where the calculation methods
+    of metrics of each *conv* kernel are same as in Equation (1). And in the *conv*
+    kernels, the formal parameters R and S are determined by *F*, a given formal parameter
+    of the *dblock* kernel. Because the *conv*s are placed horizontally, the width
+    of the *block* kernel is the sum of widths of *conv* kernels, while other metrics
+    pick the maximum one.
+
+
+    In the WSE placement problem, the kernel connections are specified by a kernel
+    graph. The communication overhead between two connected kernels is related to
+    their distance but also the protocol adapter. The adapter cost represents the
+    mismatching of the I/O protocols of connected kernels. For each connection, the
+    adapter cost is the number of parameter ($h$, $w$, $c$) mismatches between the
+    two connected kernels.
+
+
+    # 2.4 Problem Formulation
+
+
+    In general, the WSE placement problem can be formally defined as follows. A kernel
+    library specifying the performance functions of kernels and a kernel graph with
+    connection relationships are given. The following constraints should be satisfied:
+
+
+    +   - All kernels must be placed in the tile grid with dimensions of 63×63×;
+
+    +   - A kernel must be a rectangle and contain an integer number of tiles;
+
+    +   - No overlap between kernels is allowed;
+
+    +   - The unit memory of each tile in kernels should not exceed the memory limit,
+    48KB.
+
+
+    And the optimization objective is to minimize a weighted sum of
+
+
+    +   - *C*_dist, the total L1 distance between communicating kernels,
+
+    +   - *C*_time, the maximum compute time of all kernels,
+
+    +   - *C*_adapter, the sum of the adapter cost of each connections.
+
+
+    That is, the total cost *C*_total is:
+
+
+    ```
+
+    $$C_{total} = w_{dist}C_{dist} + w_{time}C_{time} + w_{adapter}C_{adapter},$$
+
+    (2)
+
+    ```
+
+
+    where $w_{dist}$, $w_{time}$ and $w_{adapter}$ are the weights for the corresponding
+    costs.
+
+
+    # 3 ALGORITHMS
+
+
+    In this section, we will describe the placement generation algorithms. Figure
+    4 describes the overall flow for GigaPlacer. The main framework is described in
+    Section 3.1. To get a balanced result between compute time $C_{time}$ and L1 distance
+    $C_{dist}$, approaches based on binary search but with different judgement by
+    DP are proposed in Section 3.2. Section 3.3 introduces the algorithm for placing
+    kernels in a row, which is used in DP. We also perform a refinement to decrease
+    $C_{dist}$ and adapter cost $C_{adapter}$ and it will be mentioned in Section
+    3.4.
+
+
+    ![](img/9193339587477a25149234f19dc04369_2_1.png)
+
+
+    Figure 5: Example placements by GigaPlacer. Kernels are placed row by row. They
+    are generated for a same NN design while row number *R* is different.
+
+
+    # 3.1 Binary-Search-Based Framework
+
+
+    In this section, we propose a framework which generates a placement with minimum
+    $C_{time}$ while kernels are legally placed in restricted area. GigaPlacer places
+    the kernels row by row as in Figure 5. In this way, if the kernels are placed
+    in a certain order, the $C_{time}$ is monotonic with the total height. So binary
+    search can help us *find* the minimum $C_{time}$. In each iteration of binary
+    search, we define a guessed value of $C_{time}$ as $C_{time}^{ss}$. The $C_{time}^{ss}$
+    is equal to the middle height of the search range. If all kernels can be placed
+    legally while their compute time is smaller than $C_{time}^{ss}$, the search range
+    of $C_{time}$ will be shrunk to the smaller half, otherwise it will be shrunk
+    to the larger half.
+
+
+    Since a smaller initial search range helps to reduce the runtime of binary search,
+    an estimation of $C_{time}$ is needed. The minimum $C_{time}$ can be achieved
+    when the compute time is uniform across all kernels. To keep the compute time
+    roughly equal, the kernels'' areas should generally subject to a set of ratios
+    that is calculated from the formulas in Figure 3. To be more specific, the area
+    weights of kernels (for *conv*, *block* and *dblock* respectively) are set to:
+
+
+    ```
+
+    $$w_{conv} = HWC KRS / T^{2}$$
+
+    (3a)
+
+
+    $$w_{block} = 29 / (64 × HWF^{2})$$
+
+    (3b)
+
+
+    $$w_{dblock} = 17 / (16 × HWF^{2})$$
+
+    (3c)
+
+    ```
+
+
+    For instance, based on Equation (1), the weight $w_{conv}$ of a *conv* kernel
+    is approximated by
+
+
+    ```
+
+    $$w_{conv} = width × height = hw(c + 1) × 3k$$
+
+    $$≈ 3 × hwc × \frac{3}{time} × \frac{HWC KRS}{T^{2}}$$
+
+    (4)
+
+    ```
+
+
+    Here, $3/time$ is treated as a constant and removed. The weights of *block* and
+    *dblock* kernels are obtained similarly.'
+  - "[PAGE 3]\n\n# Algorithm 1 DP-Judgment Without Row Number Limit\n\n```\n**Input:**\
+    \ The set of kernels $Ker = \\{Ker_1, Ker_2, \\dots, Ker_n\\}$; Compute time limit\
+    \ $C^*_time$; Height limit of WSE $H_{WSE}$:\n1. **for** $i = 1 \\dots n$ **do**\n\
+    \   2.   **for** $k = 1 \\dots i$ **do**\n   3.      $NewHeight \\leftarrow f_{i-k}$\n\
+    \   4.      $+ GetHeight(\\{Ker_{i-k+1}, \\dots, Ker_i\\}, C^*_time)$\n   5. \
+    \     **if** $NewHeight < f_i$ **then**\n   6.         $f_i \\leftarrow NewHeight$\n\
+    Placement with compute time limit $C^*_time$ is achievable if and only\nif $f_n\
+    \ \\leq H_{WSE}$\n```\n\nHowever, even with given areas, the $C_{time}$ still\
+    \ varies with the pa- parameters of kernels. So we pick the kernel with largest\
+    \ area, calculate it's all compute times in different combination of parameters\
+    \ under the area constraint, and select the minimum one to be the estimated $C_{time}$.\
+    \ The initial search interval is set from one-tenth of the estimated $C_{time}$\
+    \ to ten times of it, which is proved practically large enough in our experiments.\n\
+    \nNext, for the targeted $C^*_time$, we will exploit DP algorithm to gen- erate\
+    \ a placement with minimum height to judge if it is legal. During DP progress,\
+    \ all execution parameters of each kernel will be determined.\n\n# 3.2 DP-Judgment\n\
+    \nWe design two different DP based judgment algorithms. The first one will get\
+    \ a placement without limiting number of rows and it tends to get better $C_{time}$.\
+    \ The second one sets a row number limit because many rows always lead to large\
+    \ $C_{time}$. Although this limit will lead to a slight deterioration of $C_{time}$,\
+    \ it will bring much better $C_{dist}$.\n\n# 3.2.1 DP-Judgment Without Row Number\
+    \ Limit. Algorithm 1 describes the judgment function for a targeted $C^*_time$\
+    \ and the row number will be determined automatically. $f_i$ means the minimum\
+    \ height used in the case of the first $i$ kernels were placed in topological\
+    \ order. If there are $k$ kernels in the last row, $f_i$ can be calculated by:\n\
+    \n```\n$f_i = f_{i-k} + GetHeight(\\{Ker_{i-k+1}, \\dots, Ker_i\\}, C^*_time)$\
+    \ (5)\n```\n\nHere, $Ker_i$ is the i-th kernel. The $GetHeight$ is a function\
+    \ which places a set of kernels in a row and returns the minimum height of the\
+    \ row, which will be introduced in Section 3.3. We get the minimum $f_i$ after\
+    \ enumerating all $k$. If more than one $k$ get the minimum $f_i$, we choose the\
+    \ one whose $C_{dist}$ and $C_{adapter}$ is smaller. In the end, we get $f_n$\
+    \ as the final height while all the kernels are placed. We can accept the $C^*_time$\
+    \ if $f_n$ is smaller than height limit $H_{WSE}$.\n\n# 3.2.2 DP-Judgment With\
+    \ Row Number Limit. In order to find some other result with possibly better $C_{dist}$,\
+    \ we come up with another DP- Judgment described in Algorithm 2. The main difference\
+    \ is that the row number $R$ is fixed in the second algorithm. $f_{i,j}$ means\
+    \ the min- imum height used in the case that the first $i$ kernels were placed\
+    \ in topological order and $j$ rows are used in the meantime. If there are $k$\
+    \ kernels in the last row, $f_{i,j}$ can be calculated by:\n\n```\n$f_{i,j} =\
+    \ f_{i-k, j-1} + GetHeight(\\{Ker_{i-k+1}, \\dots, Ker_i\\}, C^*_time)$ (6)\n\
+    ```\n\nUsing this DP equation, we can get the minimum $C^*_time$ while kernels\
+    \ are placed in $R$ rows. In general, as the number of rows decreases, $C_{dist}$\
+    \ will also decrease, but $C_{time}$ will increase. So we can try different $R$\
+    \ to find a balance between $C_{dist}$ and $C_{time}$. Our experimental result\
+    \ demonstrates that when the placement of Algorithm 2 is better than Algorithm\
+    \ 1, $R$ always be one or two.\n\n# Algorithm 2 DP-Judgment With Row Number Limit\n\
+    \n```\n**Input:** The set of kernels $Ker = \\{Ker_1, \\dots, Ker_n\\}$; Compute\
+    \ time limit $C^*_time$; Row number $R$; Height limit of WSE $H_{WSE}$:\n1. **for**\
+    \ $i = 1 \\dots n$ **do**\n   2.   $f_{i,1} \\leftarrow GetHeight(\\{Ker_1, Ker_2,\
+    \ \\dots, Ker_i\\}, T_{limi})$\n   3.   **for** $j = 2 \\dots R$ **do**\n   4.\
+    \     **for** $i = 1 \\dots n$ **do**\n   5.       **for** $k = 1 \\dots n$ **do**\n\
+    \   6.         $NewHeight \\leftarrow f_{i-k, j-1}$\n   7.         $+ GetHeight(\\\
+    {Ker_{i-k+1}, \\dots, Ker_i\\}, C^*_time)$\n   8.         **if** $NewHeight <\
+    \ f_{i,j}$ **then**\n   9.           $f_{i,j} \\leftarrow NewHeight$\nPlacement\
+    \ with compute time limit $C^*_time$ is achievable if and only\nif $f_{R,n} \\\
+    leq H_{WSE}$\n```\n\nWhen the value of $R$ is one, all the kernels are placed\
+    \ as strips as Figure 5(a) shows and we always get the best $C_{dist}$. However,\
+    \ this placement always get a high $C_{time}$. As a result we try to decrease\
+    \ some kernel's height. We place some kernels as horizontal strip, next place\
+    \ other kernels in one row as Figure 5(d) shows. The $C_{time}$ and $C_{dist}$\
+    \ of this strategy are between the result of DP with $R=1$ and $R=2$.\n\nWhen\
+    \ the weight of $C_{dist}$ is huge, the $R=1$ appears to get the best result.\
+    \ In order to get better $C_{dist}$, compute time limit is enlarged. After getting\
+    \ minimum $C_{time}$, we multiply it by $\\alpha$ and run DP-Judgment to get the\
+    \ result. The $\\alpha$ is assigned 80 times from $1.02$ to $1.02^{80}$ in our\
+    \ algorithm.\n\nIn short, several strategies with row number limit are tried and\
+    \ the best result should be selected. In order to get the minimum total cost $C_{total}$,\
+    \ Algorithm 1 and Algorithm 2 will both be run and the best placement will be\
+    \ selected.\n\n# 3.3 Row Height Minimization\n\nIn this section, the algorithm\
+    \ for function $GetHeight$ is introduced. Another binary search is used to find\
+    \ the minimum row height $H_{limit}$ that all the kernels can be placed in a row\
+    \ in the case of compute time and width limits are fixed. We define a guessed\
+    \ value of $H_{limit}$ as $H^w_{limit}$ . The $H^w_{limit}$ is equal to the middle\
+    \ number of the binary search's range. The height of every kernel is set to be\
+    \ $H^w_{limit}$ and then we place kernels in a row from left to right one by one.\
+    \ We can accept $H^w_{limit}$ if the total width is small than the width limit\
+    \ of WSE after all the kernels are placed, and then shrink the range of row height\
+    \ to the smaller half, otherwise to the larger half.\n\nFor a given height, compute\
+    \ time and memory limit, we need a func- tion to figure out a suit of parameter\
+    \ for a kernel to get the minimum width. Our algorithm enumerates the values of\
+    \ $h$ and $w$ using two lev- els of loops with effective pruning and then figures\
+    \ out the correspond- ing $c$ and $k$. After that, we pick a suit of parameter\
+    \ which brings min- imum width. We consider two situations, rotating kernels by\
+    \ 90 degree or not.\n\nIf we do not rotate the kernel, in order to get a smaller\
+    \ compute time, the height of every convolution has better to be $H^w_{limit}$.\
+    \ Based on Equation (1a), the parameter $c$ of every convolution is:\n\n```\n\
+    $c = \\lfloor \\frac{H^w_{limit}}{\\lceil h \\times w - 1 \\rceil} \\rfloor$ (7)\n\
+    ```\n\nIn order to satisfy the memory $M_{limit}$, according to Equation (1d),\
+    \ the parameter $k$ of each convolution must satisfy:\n\n```\n$k \\geq \\lceil\
+    \ \\frac{K \\times \\frac{C}{c} \\times R \\times S + \\frac{W+1}{w} \\times \\\
+    frac{H+R-1}{R}}{M_{limit}} \\rceil$ (8)\n```"
+  md: "\n![](img/9193339587477a25149234f19dc04369_2_0.png)\n\nFigure 4: GigaPlacer\
+    \ framework.\n\nkernel for example, it contains *three conv* kernels, where the\
+    \ calculation methods of metrics of each *conv* kernel are same as in Equation\
+    \ (1). And in the *conv* kernels, the formal parameters R and S are determined\
+    \ by *F*, a given formal parameter of the *dblock* kernel. Because the *conv*s\
+    \ are placed horizontally, the width of the *block* kernel is the sum of widths\
+    \ of *conv* kernels, while other metrics pick the maximum one.\n\nIn the WSE placement\
+    \ problem, the kernel connections are specified by a kernel graph. The communication\
+    \ overhead between two connected kernels is related to their distance but also\
+    \ the protocol adapter. The adapter cost represents the mismatching of the I/O\
+    \ protocols of connected kernels. For each connection, the adapter cost is the\
+    \ number of parameter ($h$, $w$, $c$) mismatches between the two connected kernels.\n\
+    \n## 2.4 Problem Formulation\n\nIn general, the WSE placement problem can be formally\
+    \ defined as follows. A kernel library specifying the performance functions of\
+    \ kernels and a kernel graph with connection relationships are given. The following\
+    \ constraints should be satisfied:\n\n- All kernels must be placed in the tile\
+    \ grid with dimensions of 63×63×;\n- A kernel must be a rectangle and contain\
+    \ an integer number of tiles;\n- No overlap between kernels is allowed;\n- The\
+    \ unit memory of each tile in kernels should not exceed the memory limit, 48KB.\n\
+    \nAnd the optimization objective is to minimize a weighted sum of\n\n- *C*_dist,\
+    \ the total L1 distance between communicating kernels,\n- *C*_time, the maximum\
+    \ compute time of all kernels,\n- *C*_adapter, the sum of the adapter cost of\
+    \ each connections.\n\nThat is, the total cost *C*_total is:\n\n```\n$$C_{total}\
+    \ = w_{dist}C_{dist} + w_{time}C_{time} + w_{adapter}C_{adapter},$$\n(2)\n```\n\
+    \nwhere $w_{dist}$, $w_{time}$ and $w_{adapter}$ are the weights for the corresponding\
+    \ costs.\n\n## 3 ALGORITHMS\n\nIn this section, we will describe the placement\
+    \ generation algorithms. Figure 4 describes the overall flow for GigaPlacer. The\
+    \ main framework is described in Section 3.1. To get a balanced result between\
+    \ compute time $C_{time}$ and L1 distance $C_{dist}$, approaches based on binary\
+    \ search but with different judgement by DP are proposed in Section 3.2. Section\
+    \ 3.3 introduces the algorithm for placing kernels in a row, which is used in\
+    \ DP. We also perform a refinement to decrease $C_{dist}$ and adapter cost $C_{adapter}$\
+    \ and it will be mentioned in Section 3.4.\n\n![](img/9193339587477a25149234f19dc04369_2_1.png)\n\
+    \nFigure 5: Example placements by GigaPlacer. Kernels are placed row by row. They\
+    \ are generated for a same NN design while row number *R* is different.\n\n###\
+    \ 3.1 Binary-Search-Based Framework\n\nIn this section, we propose a framework\
+    \ which generates a placement with minimum $C_{time}$ while kernels are legally\
+    \ placed in restricted area. GigaPlacer places the kernels row by row as in Figure\
+    \ 5. In this way, if the kernels are placed in a certain order, the $C_{time}$\
+    \ is monotonic with the total height. So binary search can help us *find* the\
+    \ minimum $C_{time}$. In each iteration of binary search, we define a guessed\
+    \ value of $C_{time}$ as $C_{time}^{ss}$. The $C_{time}^{ss}$ is equal to the\
+    \ middle height of the search range. If all kernels can be placed legally while\
+    \ their compute time is smaller than $C_{time}^{ss}$, the search range of $C_{time}$\
+    \ will be shrunk to the smaller half, otherwise it will be shrunk to the larger\
+    \ half.\n\nSince a smaller initial search range helps to reduce the runtime of\
+    \ binary search, an estimation of $C_{time}$ is needed. The minimum $C_{time}$\
+    \ can be achieved when the compute time is uniform across all kernels. To keep\
+    \ the compute time roughly equal, the kernels' areas should generally subject\
+    \ to a set of ratios that is calculated from the formulas in Figure 3. To be more\
+    \ specific, the area weights of kernels (for *conv*, *block* and *dblock* respectively)\
+    \ are set to:\n\n```\n$$w_{conv} = HWC KRS / T^{2}$$\n(3a)\n\n$$w_{block} = 29\
+    \ / (64 × HWF^{2})$$\n(3b)\n\n$$w_{dblock} = 17 / (16 × HWF^{2})$$\n(3c)\n```\n\
+    \nFor instance, based on Equation (1), the weight $w_{conv}$ of a *conv* kernel\
+    \ is approximated by\n\n```\n$$w_{conv} = width × height = hw(c + 1) × 3k$$\n\
+    $$≈ 3 × hwc × \\frac{3}{time} × \\frac{HWC KRS}{T^{2}}$$\n(4)\n```\n\nHere, $3/time$\
+    \ is treated as a constant and removed. The weights of *block* and *dblock* kernels\
+    \ are obtained similarly.\n\n## Algorithm 1 DP-Judgment Without Row Number Limit\n\
+    \n```\n**Input:** The set of kernels $Ker = \\{Ker_1, Ker_2, \\dots, Ker_n\\}$;\
+    \ Compute time limit $C^*_time$; Height limit of WSE $H_{WSE}$:\n1. **for** $i\
+    \ = 1 \\dots n$ **do**\n   2.   **for** $k = 1 \\dots i$ **do**\n   3.      $NewHeight\
+    \ \\leftarrow f_{i-k}$\n   4.      $+ GetHeight(\\{Ker_{i-k+1}, \\dots, Ker_i\\\
+    }, C^*_time)$\n   5.      **if** $NewHeight < f_i$ **then**\n   6.         $f_i\
+    \ \\leftarrow NewHeight$\nPlacement with compute time limit $C^*_time$ is achievable\
+    \ if and only\nif $f_n \\leq H_{WSE}$\n```\n\nHowever, even with given areas,\
+    \ the $C_{time}$ still varies with the parameters of kernels. So we pick the kernel\
+    \ with largest area, calculate its all compute times in different combination\
+    \ of parameters under the area constraint, and select the minimum one to be the\
+    \ estimated $C_{time}$. The initial search interval is set from one-tenth of the\
+    \ estimated $C_{time}$ to ten times of it, which is proved practically large enough\
+    \ in our experiments.\n\nNext, for the targeted $C^*_time$, we will exploit DP\
+    \ algorithm to generate a placement with minimum height to judge if it is legal.\
+    \ During DP progress, all execution parameters of each kernel will be determined.\n\
+    \n### 3.2 DP-Judgment\n\nWe design two different DP based judgment algorithms.\
+    \ The first one will get a placement without limiting number of rows and it tends\
+    \ to get better $C_{time}$. The second one sets a row number limit because many\
+    \ rows always lead to large $C_{time}$. Although this limit will lead to a slight\
+    \ deterioration of $C_{time}$, it will bring much better $C_{dist}$.\n\n### 3.2.1\
+    \ DP-Judgment Without Row Number Limit\n\nAlgorithm 1 describes the judgment function\
+    \ for a targeted $C^*_time$ and the row number will be determined automatically.\
+    \ $f_i$ means the minimum height used in the case of the first $i$ kernels were\
+    \ placed in topological order. If there are $k$ kernels in the last row, $f_i$\
+    \ can be calculated by:\n\n```\n$f_i = f_{i-k} + GetHeight(\\{Ker_{i-k+1}, \\\
+    dots, Ker_i\\}, C^*_time)$ (5)\n```\n\nHere, $Ker_i$ is the i-th kernel. The $GetHeight$\
+    \ is a function which places a set of kernels in a row and returns the minimum\
+    \ height of the row, which will be introduced in Section 3.3. We get the minimum\
+    \ $f_i$ after enumerating all $k$. If more than one $k$ get the minimum $f_i$,\
+    \ we choose the one whose $C_{dist}$ and $C_{adapter}$ is smaller. In the end,\
+    \ we get $f_n$ as the final height while all the kernels are placed. We can accept\
+    \ the $C^*_time$ if $f_n$ is smaller than height limit $H_{WSE}$.\n\n### 3.2.2\
+    \ DP-Judgment With Row Number Limit\n\nIn order to find some other result with\
+    \ possibly better $C_{dist}$, we come up with another DP-Judgment described in\
+    \ Algorithm 2. The main difference is that the row number $R$ is fixed in the\
+    \ second algorithm. $f_{i,j}$ means the minimum height used in the case that the\
+    \ first $i$ kernels were placed in topological order and $j$ rows are used in\
+    \ the meantime. If there are $k$ kernels in the last row, $f_{i,j}$ can be calculated\
+    \ by:\n\n```\n$f_{i,j} = f_{i-k, j-1} + GetHeight(\\{Ker_{i-k+1}, \\dots, Ker_i\\\
+    }, C^*_time)$ (6)\n```\n\nUsing this DP equation, we can get the minimum $C^*_time$\
+    \ while kernels are placed in $R$ rows. In general, as the number of rows decreases,\
+    \ $C_{dist}$ will also decrease, but $C_{time}$ will increase. So we can try different\
+    \ $R$ to find a balance between $C_{dist}$ and $C_{time}$. Our experimental result\
+    \ demonstrates that when the placement of Algorithm 2 is better than Algorithm\
+    \ 1, $R$ is always one or two.\n\n## Algorithm 2 DP-Judgment With Row Number Limit\n\
+    \n```\n**Input:** The set of kernels $Ker = \\{Ker_1, \\dots, Ker_n\\}$; Compute\
+    \ time limit $C^*_time$; Row number $R$; Height limit of WSE $H_{WSE}$:\n1. **for**\
+    \ $i = 1 \\dots n$ **do**\n   2.   $f_{i,1} \\leftarrow GetHeight(\\{Ker_1, Ker_2,\
+    \ \\dots, Ker_i\\}, C^*_time)$\n   3.   **for** $j = 2 \\dots R$ **do**\n   4.\
+    \     **for** $i = 1 \\dots n$ **do**\n   5.       **for** $k = 1 \\dots n$ **do**\n\
+    \   6.         $NewHeight \\leftarrow f_{i-k, j-1}$\n   7.         $+ GetHeight(\\\
+    {Ker_{i-k+1}, \\dots, Ker_i\\}, C^*_time)$\n   8.         **if** $NewHeight <\
+    \ f_{i,j}$ **then**\n   9.           $f_{i,j} \\leftarrow NewHeight$\nPlacement\
+    \ with compute time limit $C^*_time$ is achievable if and only\nif $f_{n,R} \\\
+    leq H_{WSE}$\n```\n\nWhen the value of $R$ is one, all the kernels are placed\
+    \ as strips as Figure 5(a) shows and we always get the best $C_{dist}$. However,\
+    \ this placement always get a high $C_{time}$. As a result we try to decrease\
+    \ some kernel's height. We place some kernels as horizontal strip, next place\
+    \ other kernels in one row as Figure 5(d) shows. The $C_{time}$ and $C_{dist}$\
+    \ of this strategy are between the result of DP with $R=1$ and $R=2$.\n\nWhen\
+    \ the weight of $C_{dist}$ is huge, the $R=1$ appears to get the best result.\
+    \ In order to get better $C_{dist}$, compute time limit is enlarged. After getting\
+    \ minimum $C_{time}$, we multiply it by $\\alpha$ and run DP-Judgment to get the\
+    \ result. The $\\alpha$ is assigned 80 times from $1.02$ to $1.02^{80}$ in our\
+    \ algorithm.\n\nIn short, several strategies with row number limit are tried and\
+    \ the best result should be selected. In order to get the minimum total cost $C_{total}$,\
+    \ Algorithm 1 and Algorithm 2 will both be run and the best placement will be\
+    \ selected.\n\n### 3.3 Row Height Minimization\n\nIn this section, the algorithm\
+    \ for function $GetHeight$ is introduced. Another binary search is used to find\
+    \ the minimum row height $H_{limit}$ that all the kernels can be placed in a row\
+    \ in the case of compute time and width limits are fixed. We define a guessed\
+    \ value of $H_{limit}$ as $H^w_{limit}$ . The $H^w_{limit}$ is equal to the middle\
+    \ number of the binary search's range. The height of every kernel is set to be\
+    \ $H^w_{limit}$ and then we place kernels in a row from left to right one by one.\
+    \ We can accept $H^w_{limit}$ if the total width is smaller than the width limit\
+    \ of WSE after all the kernels are placed, and then shrink the range of row height\
+    \ to the smaller half, otherwise to the larger half.\n\nFor a given height, compute\
+    \ time and memory limit, we need a function to figure out a set of parameter for\
+    \ a kernel to get the minimum width. Our algorithm enumerates the values of $h$\
+    \ and $w$ using two levels of loops with effective pruning and then figures out\
+    \ the corresponding $c$ and $k$. After that, we pick a set of parameter which\
+    \ brings minimum width. We consider two situations, rotating kernels by 90 degree\
+    \ or not.\n\nIf we do not rotate the kernel, in order to get a smaller compute\
+    \ time, the height of every convolution is better to be $H^w_{limit}$. Based on\
+    \ Equation (1a), the parameter $c$ of every convolution is:\n\n```\n$c = \\lfloor\
+    \ \\frac{H^w_{limit}}{\\lceil h \\times w - 1 \\rceil} \\rfloor$ (7)\n```\n\n\
+    In order to satisfy the memory $M_{limit}$, according to Equation (1d), the parameter\
+    \ $k$ of each convolution must satisfy:\n\n```\n$k \\geq \\lceil \\frac{K \\times\
+    \ \\frac{C}{c} \\times R \\times S + \\frac{W+1}{w} \\times \\frac{H+R-1}{R}}{M_{limit}}\
+    \ \\rceil$ (8)\n```\n"
+  mdcn: "\n\n![](img/9193339587477a25149234f19dc04369_2_0.png)\n\n图4：GigaPlacer 框架。\n\
+    \n以 kernel 为例，它包含*三个 conv*核，其中每个*conv*核的度量计算方法与公式(1)相同。在*conv*核中，形式参数 R 和 S 由*F*决定，而*F*是*dblock*核的给定形式参数。由于这些*conv*是水平放置的，所以*block*核的宽度是各*conv*核宽度之和，而其他度量则取最大值。\n\
+    \n在 WSE 布局问题中，核之间的连接由核图指定。两个相连核之间的通信开销与它们的距离有关，也与协议适配器有关。适配器成本表示相连核的 I/O 协议不匹配的程度。对于每条连接，适配器成本是两个相连核之间参数（$h$，$w$，$c$）不匹配的数量。\n\
+    \n## 2.4 问题形式化\n\n一般来说，WSE 布局问题可以形式化定义如下。给定一个指定核性能函数的核库，以及一个带有连接关系的核图。应满足以下约束条件：\n\
+    \n- 所有核必须放置在尺寸为 63×63× 的瓦片网格中；\n- 核必须是矩形，并且包含整数个瓦片；\n- 不允许核之间重叠；\n- 核中每个瓦片的单元内存不应超过内存限制\
+    \ 48KB。\n\n优化目标是最小化以下各项的加权和：\n\n- *C*_dist，通信核之间的 L1 总距离，\n- *C*_time，所有核的最大计算时间，\n\
+    - *C*_adapter，每条连接的适配器成本之和。\n\n即总成本 *C*_total 为：\n\n```\n$$C_{total} = w_{dist}C_{dist}\
+    \ + w_{time}C_{time} + w_{adapter}C_{adapter},$$\n(2)\n```\n\n其中 $w_{dist}$、$w_{time}$\
+    \ 和 $w_{adapter}$ 是对应成本的权重。\n\n## 3 算法\n\n在本节中，我们将介绍布局生成算法。图4描述了 GigaPlacer 的整体流程。主要框架在第\
+    \ 3.1 节中描述。为了在计算时间 $C_{time}$ 和 L1 距离 $C_{dist}$ 之间取得平衡，第 3.2 节提出了基于二分搜索但使用不同\
+    \ DP 判定的方法。第 3.3 节介绍了用于将核放置在一行中的算法，该算法在 DP 中使用。我们还进行了优化以减少 $C_{dist}$ 和适配器成本 $C_{adapter}$，这将在第\
+    \ 3.4 节中提及。\n\n![](img/9193339587477a25149234f19dc04369_2_1.png)\n\n图5：GigaPlacer\
+    \ 的示例布局。核逐行放置。这些布局是针对同一个 NN 设计生成的，而行数 *R* 不同。\n\n### 3.1 基于二分搜索的框架\n\n在本节中，我们提出了一个框架，在核被合法放置在受限区域内的同时，生成具有最小\
+    \ $C_{time}$ 的布局。GigaPlacer 如图5所示逐行放置核。这样一来，如果核按特定顺序放置，$C_{time}$ 与总高度呈单调关系。因此，二分搜索可以帮助我们*找到*最小的\
+    \ $C_{time}$。在二分搜索的每次迭代中，我们将 $C_{time}$ 的猜测值定义为 $C_{time}^{ss}$。$C_{time}^{ss}$\
+    \ 等于搜索范围的中间高度。如果所有核都能在其计算时间小于 $C_{time}^{ss}$ 的情况下被合法放置，则 $C_{time}$ 的搜索范围将缩小到较小的一半，否则将缩小到较大的一半。\n\
+    \n由于较小的初始搜索范围有助于减少二分搜索的运行时间，因此需要对 $C_{time}$ 进行估计。当所有核的计算时间均匀时，可以获得最小的 $C_{time}$。为了使计算时间大致相等，核的面积通常应遵循一组由图3中的公式计算出的比例。具体来说，核的面积权重（分别针对*conv*、*block*和*dblock*）设置为：\n\
+    \n```\n$$w_{conv} = HWC KRS / T^{2}$$\n(3a)\n\n$$w_{block} = 29 / (64 × HWF^{2})$$\n\
+    (3b)\n\n$$w_{dblock} = 17 / (16 × HWF^{2})$$\n(3c)\n```\n\n例如，根据公式(1)，*conv*核的权重\
+    \ $w_{conv}$ 可近似为：\n\n```\n$$w_{conv} = width × height = hw(c + 1) × 3k$$\n$$≈\
+    \ 3 × hwc × \\frac{3}{time} × \\frac{HWC KRS}{T^{2}}$$\n(4)\n```\n\n这里，$3/time$\
+    \ 被视为常数并移除。*block* 和 *dblock* 核的权重通过类似方式获得。\n\n## 算法1：无行数限制的 DP 判定\n\n```\n**Input:**\
+    \ The set of kernels $Ker = \\{Ker_1, Ker_2, \\dots, Ker_n\\}$; Compute time limit\
+    \ $C^*_time$; Height limit of WSE $H_{WSE}$:\n1. **for** $i = 1 \\dots n$ **do**\n\
+    \   2.   **for** $k = 1 \\dots i$ **do**\n   3.      $NewHeight \\leftarrow f_{i-k}$\n\
+    \   4.      $+ GetHeight(\\{Ker_{i-k+1}, \\dots, Ker_i\\}, C^*_time)$\n   5. \
+    \     **if** $NewHeight < f_i$ **then**\n   6.         $f_i \\leftarrow NewHeight$\n\
+    Placement with compute time limit $C^*_time$ is achievable if and only\nif $f_n\
+    \ \\leq H_{WSE}$\n```\n\n然而，即使面积给定，$C_{time}$ 仍会随核的参数而变化。因此，我们选取面积最大的核，在面积约束下计算其在不同参数组合下的所有计算时间，并选择其中的最小值作为估计的\
+    \ $C_{time}$。初始搜索区间设置为估计 $C_{time}$ 的十分之一到十倍，在我们的实验中证明这实际上已经足够大。\n\n接下来，针对目标 $C^*_time$，我们将利用\
+    \ DP 算法生成具有最小高度的布局，以判断其是否合法。在 DP 过程中，每个核的所有执行参数将被确定。\n\n### 3.2 DP 判定\n\n我们设计了两种不同的基于\
+    \ DP 的判定算法。第一种算法在不受行数限制的情况下获得布局，并且往往能得到更好的 $C_{time}$。第二种算法设置了行数限制，因为行数过多总是会导致较大的\
+    \ $C_{time}$。虽然这种限制会导致 $C_{time}$ 略有恶化，但会带来更好的 $C_{dist}$。\n\n### 3.2.1 无行数限制的\
+    \ DP 判定\n\n算法1描述了针对目标 $C^*_time$ 的判定函数，行数将自动确定。$f_i$ 表示前 $i$ 个核按拓扑顺序放置时使用的最小高度。如果最后一行有\
+    \ $k$ 个核，则 $f_i$ 可通过下式计算：\n\n```\n$f_i = f_{i-k} + GetHeight(\\{Ker_{i-k+1}, \\\
+    dots, Ker_i\\}, C^*_time)$ (5)\n```\n\n这里，$Ker_i$ 是第 $i$ 个核。$GetHeight$ 是一个函数，它将一组核放置在一行中并返回该行的最小高度，将在第\
+    \ 3.3 节中介绍。我们在枚举所有 $k$ 后得到最小的 $f_i$。如果有多个 $k$ 得到相同的最小 $f_i$，我们选择其中 $C_{dist}$\
+    \ 和 $C_{adapter}$ 较小的一个。最终，在所有核都放置完毕后，我们得到 $f_n$ 作为最终高度。如果 $f_n$ 小于高度限制 $H_{WSE}$，我们就可以接受\
+    \ $C^*_time$。\n\n### 3.2.2 带行数限制的 DP 判定\n\n为了找到可能具有更好 $C_{dist}$ 的其他结果，我们提出了另一种\
+    \ DP 判定，如算法2所述。主要区别在于第二种算法中行数 $R$ 是固定的。$f_{i,j}$ 表示前 $i$ 个核按拓扑顺序放置且同时使用 $j$ 行时使用的最小高度。如果最后一行有\
+    \ $k$ 个核，则 $f_{i,j}$ 可通过下式计算：\n\n```\n$f_{i,j} = f_{i-k, j-1} + GetHeight(\\{Ker_{i-k+1},\
+    \ \\dots, Ker_i\\}, C^*_time)$ (6)\n```\n\n使用这个 DP 方程，我们可以在核被放置在 $R$ 行中时获得最小的\
+    \ $C^*_time$。一般来说，随着行数的减少，$C_{dist}$ 也会减小，但 $C_{time}$ 会增大。因此，我们可以尝试不同的 $R$ 来在\
+    \ $C_{dist}$ 和 $C_{time}$ 之间找到平衡。我们的实验结果表明，当算法2的布局优于算法1时，$R$ 总是一或二。\n\n## 算法2：带行数限制的\
+    \ DP 判定\n\n```\n**Input:** The set of kernels $Ker = \\{Ker_1, \\dots, Ker_n\\\
+    }$; Compute time limit $C^*_time$; Row number $R$; Height limit of WSE $H_{WSE}$:\n\
+    1. **for** $i = 1 \\dots n$ **do**\n   2.   $f_{i,1} \\leftarrow GetHeight(\\\
+    {Ker_1, Ker_2, \\dots, Ker_i\\}, C^*_time)$\n   3.   **for** $j = 2 \\dots R$\
+    \ **do**\n   4.     **for** $i = 1 \\dots n$ **do**\n   5.       **for** $k =\
+    \ 1 \\dots n$ **do**\n   6.         $NewHeight \\leftarrow f_{i-k, j-1}$\n   7.\
+    \         $+ GetHeight(\\{Ker_{i-k+1}, \\dots, Ker_i\\}, C^*_time)$\n   8.   \
+    \      **if** $NewHeight < f_{i,j}$ **then**\n   9.           $f_{i,j} \\leftarrow\
+    \ NewHeight$\nPlacement with compute time limit $C^*_time$ is achievable if and\
+    \ only\nif $f_{n,R} \\leq H_{WSE}$\n```\n\n当 $R$ 的值为1时，所有核都像图5(a)所示的那样以条带形式放置，我们总能获得最佳的\
+    \ $C_{dist}$。然而，这种布局总是具有较高的 $C_{time}$。因此，我们尝试降低某些核的高度。我们将一些核水平条带化放置，然后将其他核放入一行，如图5(d)所示。这种策略的\
+    \ $C_{time}$ 和 $C_{dist}$ 介于 $R=1$ 和 $R=2$ 的 DP 结果之间。\n\n当 $C_{dist}$ 的权重很大时，$R=1$\
+    \ 似乎能获得最佳结果。为了获得更好的 $C_{dist}$，我们扩大了计算时间限制。在获得最小 $C_{time}$ 后，我们将其乘以 $\\alpha$\
+    \ 并运行 DP 判定来获得结果。在我们的算法中，$\\alpha$ 从 $1.02$ 到 $1.02^{80}$ 共取 80 个值。\n\n简而言之，我们尝试了几种带行数限制的策略，并应选择最佳结果。为了获得最小总成本\
+    \ $C_{total}$，将同时运行算法1和算法2，并选择最佳布局。\n\n### 3.3 行高最小化\n\n在本节中，介绍函数 $GetHeight$\
+    \ 的算法。使用另一个二分搜索来寻找最小行高 $H_{limit}$，使得在计算时间和宽度限制固定的情况下，所有核都能被放置在一行中。我们将 $H_{limit}$\
+    \ 的猜测值定义为 $H^w_{limit}$。$H^w_{limit}$ 等于二分搜索范围的中间数。每个核的高度都设置为 $H^w_{limit}$，然后我们逐个将核从左到右放置在一行中。如果所有核放置后的总宽度小于\
+    \ WSE 的宽度限制，我们就可以接受 $H^w_{limit}$，然后将行高范围缩小到较小的一半，否则缩小到较大的一半。\n\n对于给定的高度、计算时间和内存限制，我们需要一个函数来确定一组参数，使核获得最小宽度。我们的算法使用两层循环并有效剪枝来枚举\
+    \ $h$ 和 $w$ 的值，然后计算相应的 $c$ 和 $k$。之后，我们选择一组使宽度最小的参数。我们考虑两种情况：是否将核旋转90度。\n\n如果不旋转核，为了获得更小的计算时间，每个卷积的高度最好为\
+    \ $H^w_{limit}$。根据公式(1a)，每个卷积的参数 $c$ 为：\n\n```\n$c = \\lfloor \\frac{H^w_{limit}}{\\\
+    lceil h \\times w - 1 \\rceil} \\rfloor$ (7)\n```\n\n为了满足内存 $M_{limit}$，根据公式(1d)，每个卷积的参数\
+    \ $k$ 必须满足：\n\n```\n$k \\geq \\lceil \\frac{K \\times \\frac{C}{c} \\times R \\\
+    times S + \\frac{W+1}{w} \\times \\frac{H+R-1}{R}}{M_{limit}} \\rceil$ (8)\n```\n\
+    \n"
+  merge: 1
+- raw:
+  - '[PAGE 4]
+
+
+    ![](img/9193339587477a25149234f19dc04369_4_0.png)
+
+
+    ![](img/9193339587477a25149234f19dc04369_4_1.png)
+
+
+    # (a) Adapter cost refinement.
+
+
+    # (b) L1 distance refinement.
+
+
+    # Figure 6: Two refinement algorithms.
+
+
+    In order to satisfy the compute time limit C*_time, according to Equation (1c),
+    the parameter k of each convolution must satisfy:
+
+
+    ```
+
+    k ≥ ⌈ K / [ C*_time ÷ (⌈H/h⌉ × ⌈W/w⌉ × ⌈C/c⌉ × R × S ÷ T²) ] ⌉  (9)
+
+    ```
+
+
+    So we can get the minimum k which satisfies Equations (8) and (9).
+
+
+    In addition, we can rotate a kernel by 90 degree. In this case, the total width
+    of all convolution is H*_limit. In order to get similar height of each convolution,
+    the width of them is allocated according to the proportion of:
+
+
+    ```
+
+    ⌈H/h⌉ × ⌈W/w⌉ × R × S × C × K ÷ T²  (10)
+
+    ```
+
+
+    According to Equation (1b), parameter k of each convolution is calculated after
+    allocating width. In order to satisfy the memory limit, according to Equation
+    (1d), the parameter c of each convolution must satisfy:
+
+
+    ```
+
+    c ≥ C × K/k × R × S / [ M_limit − (W+S)/w × (H+R−1)/h × K/k ]  (11)
+
+    ```
+
+
+    In order to satisfy the compute time limit, according to Equation (1c), the parameter
+    c of each convolution must satisfy:
+
+
+    ```
+
+    c ≥ ⌈ C / [ C*_time ÷ (⌈H/h⌉ × ⌈W/w⌉ × ⌈K/k⌉ × R × S ÷ T²) ] ⌉  (12)
+
+    ```
+
+
+    # 3.4 Refinement
+
+
+    After placement generation, we perform two refinement algorithms to reduce adapter
+    cost C_adapter and L1 distance C_dist. Where the adapter cost refinement algorithm
+    adjusts the execution parameters, the L1 distance refinement algorithm does not
+    modify any parameters, but only changes the position of kernels or reorder them.
+
+
+    # 3.4.1 Adapter Cost Refinement.
+
+
+    In adapter cost refinement algorithm, the parameters of the kernels will be redetermined
+    to decrease C_adapter while the compute time C_time is unchanged. A kernel will
+    be picked up and its h and w parameters will be changed to be the same to kernels
+    which are connected to it. Then other parameters will be recalculated to keep
+    compute time and width unchanged. This progress changes the selected kernel''s
+    height. The legal adjustment area is defined as an area whose width is the kernel''s
+    width and height is the row height. As Figure 6(a) shows, the blue kernel is selected
+    and the highlight area is legal adjustment area. If the kernel is still in the
+    legal adjustment area, this change is acceptable. The h and w parameter will be
+    redetermined to be the pair which brings the minimum C_adapter. All kernels will
+    be tried like this. The process will run several times until there is no improvement.
+
+
+    # 3.4.2 L1 distance Refinement.
+
+
+    The L1 distance refinement algorithm picks each row and move kernels in the row
+    to search better C_dist. We adapt a window-based local reordering technique similar
+    to FastPlaceDP [8]. A window covering several continuously kernels will move from
+    the beginning to the ending of the row as Figure 6(b) shows. The all possible
+    orders of kernels in the window will be enumerated and the result will be saved
+    if C_dist decreases. The size of the window is set to 6 to balance the run time
+    overhead and quality improvement. Besides, the position of some continuously kernels
+    will be reversed as another simple strategy whose window size is much bigger than
+    local reordering. This step will be iterated for many times until there is no
+    improvement.
+
+
+    # 4 EXPERIMENTAL RESULTS
+
+
+    We implement GigaPlacer in C++ and compile it with g++ 5.4.0. Benchmarks [5] are
+    from ISPD 2020 Contest with number of kernels ranges from 16 to 100 as Table 1
+    shows. All experiments were conducted on a linux machine with a 1.6GHz intel i5-10210U
+    processor and 8-GB memory.
+
+
+    GigaPlacer generates solutions by embedding several strategies in the DP-based
+    algorithm. The experiment shows that the placement generation strategies we design
+    are all effective, and all these strategies appear in the final result. Figure
+    7 shows the final results of GigaPlacer on test cases E, I, M, and F.
+
+
+    # 5 CONCLUSION
+
+
+    In this paper, we present GigaPlacer to place NN layers on WSE. A minimum compute
+    time is achieved by a binary-search-based framework. Two DP-based algorithms focus
+    on different objectives are integrated to place the kernels. To further reduce
+    inter-kernel communication overhead, we adjust the parameters of connected kernels
+    and try to'
+  - '[PAGE 5]
+
+
+    # Table 1: Result Comparison on ISPD2020 Benchmarks
+
+
+    | Case | Kernel Num | w_time | w_dist | w_adapter | C_time ISPD''20 | C_time Ours
+    | C_dist ISPD''20 | C_dist Ours | C_adapter ISPD''20 | C_adapter Ours | C_total
+    ISPD''20 | C_total Ours | Runtime(s) ISPD''20 | Runtime(s) Ours |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+    | A | 16 | 1 | 1 | 0 | 34496 | 34496 | 1314 | 1189.5 | 15 | 16 | 35810 | 35685.5
+    | 35 | 3 |
+
+    | B | 32 | 1 | 1 | 0 | 63504 | 64512 | 2639.5 | 2004 | 18 | 10 | 66143.5 | 66516
+    | 37 | 15 |
+
+    | C | 100 | 1 | 1 | 0 | 64512 | 64768 | 2408 | 1959.5 | 185 | 249 | 66920 | 66727.5
+    | 210 | 59 |
+
+    | D | 52 | 1 | 1 | 0 | 33712 | 33712 | 2722 | 2084.5 | 123 | 137 | 36434 | 35796.5
+    | 37 | 22 |
+
+    | E | 16 | 1 | 10 | 100 | 39312 | 39312 | 562 | 569.5 | 11 | 8 | 46032 | 45807
+    | 76 | 5 |
+
+    | F | 32 | 1 | 10 | 100 | 65170 | 65170 | 1489.5 | 1488.5 | 12 | 14 | 81265 |
+    81455 | 116 | 15 |
+
+    | G | 100 | 1 | 10 | 100 | 64512 | 71680 | 2508.5 | 1945.5 | 98 | 17 | 99397 |
+    92835 | 188 | 56 |
+
+    | H | 52 | 1 | 10 | 100 | 39520 | 43008 | 1104.5 | 887 | 49 | 12 | 55465 | 53078
+    | 76 | 20 |
+
+    | I | 25 | 1 | 4 | 0 | 52136 | 49392 | 617.5 | 1284.5 | 13 | 10 | 54606 | 54530
+    | 69 | 10 |
+
+    | J | 79 | 1 | 4 | 0 | 50274 | 49392 | 2472.5 | 1988 | 69 | 134 | 60164 | 57344
+    | 90 | 49 |
+
+    | K | 16 | 1 | 4 | 0 | 432 | 504 | 240 | 211.5 | 3 | 7 | 1392 | 1350 | 28 | 1
+    |
+
+    | L | 52 | 1 | 4 | 0 | 864 | 864 | 279 | 283 | 18 | 178 | 1980 | 1996 | 38 | 16
+    |
+
+    | M | 23 | 1 | 4 | 0 | 22111840 | 22111840 | 3610.5 | 3365.5 | 41 | 44 | 2226282
+    | 22253202 | 68 | 13 |
+
+    | N | 26 | 1 | 4 | 0 | 1482 | 1640 | 480.5 | 437.5 | 10 | 9 | 3404 | 3390 | 3
+    | 1 |
+
+    | O | 25 | 1 | 40 | 400 | 52136 | 52136 | 617.5 | 617.5 | 13 | 13 | 82036 | 82036
+    | 121 | 10 |
+
+    | P | 79 | 1 | 40 | 400 | 57792 | 57792 | 1101 | 1625 | 85 | 11 | 135832 | 127192
+    | 122 | 38 |
+
+    | Q | 16 | 1 | 40 | 400 | 882 | 896 | 166 | 153 | 6 | 7 | 9922 | 9816 | 27 | 2
+    |
+
+    | R | 52 | 1 | 40 | 400 | 8064 | 1008 | 259 | 324 | 20 | 27 | 26424 | 24768 |
+    66 | 10 |
+
+    | S | 23 | 1 | 400 | 400 | 2396300 | 2396160 | 1897.5 | 1352 | 48 | 47 | 3174500
+    | 2955760 | 95 | 13 |
+
+    | T | 26 | 1 | 40 | 400 | 4102 | 4875 | 208.5 | 176.5 | 4 | 5 | 14042 | 13935
+    | 5 | 1 |
+
+    | Avg Ratio |  |  |  |  | 1.32 | 1 | 1.08 | 1 | 1.65 | 1 | 1.02 | 1 | 7.23 | 1
+    |
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_0.png)
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_1.png)
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_2.png)
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_3.png)
+
+
+    # Figure 7: Results of GigaPlacer on some ISPD2020 cases.
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_4.png)
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_5.png)
+
+
+    # Figure 8: Results on case D with/without L1 distance refinement
+
+
+    reorder some kernels. Compared with the first place of the ISPD2020 Contest, GigaPlacer
+    is not only better but also faster. Our future work will be improving the judgment
+    function to automatically optimize the inter-kernel distance, instead of setting
+    limitation of row numbers manually. We also intend to explore more topologies
+    to place the kernels for better performance.
+
+
+    # REFERENCES
+
+
+    [1] Cerebras. 2019. Wafer-Scale Deep Learning. In IEEE Hot Chips Symposium. 1–31.
+
+
+    [2] Yun-Chih Chang, Yao-Wen Chang, Guang-Ming Wu, and Shu-Wei Wu. 2000. B*-trees:
+    A new representation for non-slicing floorplans. In ACM/IEEE Design Automation
+    Conference (DAC). 458–463.
+
+
+    [3] Tianshi Chen, Zidong Du, Ninghui Sun, Jia Wang, Chengyong Wu, Yunji Chen,
+    and Olivier Temam. 2014. DianNao: A small-footprint high-throughput accelerator
+    for ubiquitous machine learning. In ACM Conference on Architectural Support for
+    Programming Languages and Operating Systems (ASPLOS). 269–284.
+
+
+    [4] Pei-Ning Guo, Chung-Kuan Cheng, and Takeshi Yoshimura. 1999. An O-tree representation
+    of non-slicing floorplan and its applications. In ACM/IEEE Design Automation Conference
+    (DAC). 268–273.
+
+
+    [5] Michael James, Marvin Tom, Patrick Groeneveld, and Vladimir Kibardin. 2020.
+    ISPD 2020 Physical Mapping of Neural Networks on a Wafer-Scale Deep Learning Accelerator.
+    In ACM International Symposium on Physical Design (ISPD). 145–149.
+
+
+    [6] Norman P Jouppi, Cliff Young, Nishant Patil, David Patterson, Gaurav Agrawal,
+    Raminder Bajwa, Sarah Bates, Suresh Bhatia, Nan Boden, Al Borchers, et al. 2017.
+    In-datacenter performance analysis of a tensor processing unit. In IEEE/ACM International
+    Symposium on Computer Architecture (ISCA). 1–12.
+
+
+    [7] Azalia Mirhoseini, Anna Goldie, Mustafa Yazgan, Joe Jiang, Ebrahim Songhori,
+    Shen Wang, Young-sik Lee, Eric Johnson, Omkar Pathak, Sungsu Bae, et al. 2020.
+    Chip Placement with Deep Reinforcement Learning. arXiv:2004.10746 (2020).
+
+
+    [8] Min Pan, Natarajan Viswanathan, and Chris Chu. 2005. An efficient and effective
+    detailed placement algorithm. In IEEE/ACM International Conference on Computer-Aided
+    Design (ICCAD). 48–55.
+
+
+    [9] Vivienne Sze, Yu-Hsin Chen, Tien-Ju Yang, and Joel S Emer. 2017. Efficient
+    processing of deep neural networks: A tutorial and survey. Proc. IEEE 105, 12
+    (2017). 2295–2329.
+
+
+    [10] Martin D.F. Wong and CL Liu. 1986. A new algorithm for floorplan design.
+    In ACM/IEEE Design Automation Conference (DAC). 101–107.'
+  md: '
+
+    # (a) Adapter cost refinement.
+
+
+    # (b) L1 distance refinement.
+
+
+    # Figure 6: Two refinement algorithms.
+
+
+    In order to satisfy the compute time limit $C^*_{time}$, according to Equation
+    (1c), the parameter $k$ of each convolution must satisfy:
+
+
+    $$k \geq \left\lceil \frac{K}{C^*_{time} \div \left(\left\lceil \frac{H}{h} \right\rceil
+    \times \left\lceil \frac{W}{w} \right\rceil \times \left\lceil \frac{C}{c} \right\rceil
+    \times R \times S \div T^2\right)} \right\rceil \quad (9)$$
+
+
+    So we can get the minimum $k$ which satisfies Equations (8) and (9).
+
+
+    In addition, we can rotate a kernel by 90 degree. In this case, the total width
+    of all convolution is $H^*_{limit}$. In order to get similar height of each convolution,
+    the width of them is allocated according to the proportion of:
+
+
+    $$\left\lceil \frac{H}{h} \right\rceil \times \left\lceil \frac{W}{w} \right\rceil
+    \times R \times S \times C \times K \div T^2 \quad (10)$$
+
+
+    According to Equation (1b), parameter $k$ of each convolution is calculated after
+    allocating width. In order to satisfy the memory limit, according to Equation
+    (1d), the parameter $c$ of each convolution must satisfy:
+
+
+    $$c \geq \frac{C \times K/k \times R \times S}{M_{limit} - \frac{W+S}{w} \times
+    \frac{H+R-1}{h} \times \frac{K}{k}} \quad (11)$$
+
+
+    In order to satisfy the compute time limit, according to Equation (1c), the parameter
+    $c$ of each convolution must satisfy:
+
+
+    $$c \geq \left\lceil \frac{C}{C^*_{time} \div \left(\left\lceil \frac{H}{h} \right\rceil
+    \times \left\lceil \frac{W}{w} \right\rceil \times \left\lceil \frac{K}{k} \right\rceil
+    \times R \times S \div T^2\right)} \right\rceil \quad (12)$$
+
+
+    ## 3.4 Refinement
+
+
+    After placement generation, we perform two refinement algorithms to reduce adapter
+    cost $C_{adapter}$ and L1 distance $C_{dist}$. Where the adapter cost refinement
+    algorithm adjusts the execution parameters, the L1 distance refinement algorithm
+    does not modify any parameters, but only changes the position of kernels or reorders
+    them.
+
+
+    ### 3.4.1 Adapter Cost Refinement
+
+
+    In adapter cost refinement algorithm, the parameters of the kernels will be redetermined
+    to decrease $C_{adapter}$ while the compute time $C_{time}$ is unchanged. A kernel
+    will be picked up and its $h$ and $w$ parameters will be changed to be the same
+    to kernels which are connected to it. Then other parameters will be recalculated
+    to keep compute time and width unchanged. This process changes the selected kernel''s
+    height. The legal adjustment area is defined as an area whose width is the kernel''s
+    width and height is the row height. As Figure 6(a) shows, the blue kernel is selected
+    and the highlight area is legal adjustment area. If the kernel is still in the
+    legal adjustment area, this change is acceptable. The $h$ and $w$ parameter will
+    be redetermined to be the pair which brings the minimum $C_{adapter}$. All kernels
+    will be tried like this. The process will run several times until there is no
+    improvement.
+
+
+    ### 3.4.2 L1 distance Refinement
+
+
+    The L1 distance refinement algorithm picks each row and moves kernels in the row
+    to search better $C_{dist}$. We adapt a window-based local reordering technique
+    similar to FastPlaceDP [8]. A window covering several continuously kernels will
+    move from the beginning to the ending of the row as Figure 6(b) shows. The all
+    possible orders of kernels in the window will be enumerated and the result will
+    be saved if $C_{dist}$ decreases. The size of the window is set to 6 to balance
+    the run time overhead and quality improvement. Besides, the position of some continuously
+    kernels will be reversed as another simple strategy whose window size is much
+    bigger than local reordering. This step will be iterated for many times until
+    there is no improvement.
+
+
+    ## 4 EXPERIMENTAL RESULTS
+
+
+    We implement GigaPlacer in C++ and compile it with g++ 5.4.0. Benchmarks [5] are
+    from ISPD 2020 Contest with number of kernels ranges from 16 to 100 as Table 1
+    shows. All experiments were conducted on a linux machine with a 1.6GHz intel i5-10210U
+    processor and 8-GB memory.
+
+
+    GigaPlacer generates solutions by embedding several strategies in the DP-based
+    algorithm. The experiment shows that the placement generation strategies we design
+    are all effective, and all these strategies appear in the final result. Figure
+    7 shows the final results of GigaPlacer on test cases E, I, M, and F.
+
+
+    ## 5 CONCLUSION
+
+
+    In this paper, we present GigaPlacer to place NN layers on WSE. A minimum compute
+    time is achieved by a binary-search-based framework. Two DP-based algorithms focus
+    on different objectives are integrated to place the kernels. To further reduce
+    inter-kernel communication overhead, we adjust the parameters of connected kernels
+    and try to reorder some kernels. Compared with the first place of the ISPD2020
+    Contest, GigaPlacer is not only better but also faster. Our future work will be
+    improving the judgment function to automatically optimize the inter-kernel distance,
+    instead of setting limitation of row numbers manually. We also intend to explore
+    more topologies to place the kernels for better performance.
+
+
+    # Table 1: Result Comparison on ISPD2020 Benchmarks
+
+
+    | Case | Kernel Num | w_time | w_dist | w_adapter | C_time ISPD''20 | C_time Ours
+    | C_dist ISPD''20 | C_dist Ours | C_adapter ISPD''20 | C_adapter Ours | C_total
+    ISPD''20 | C_total Ours | Runtime(s) ISPD''20 | Runtime(s) Ours |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+    | A | 16 | 1 | 1 | 0 | 34496 | 34496 | 1314 | 1189.5 | 15 | 16 | 35810 | 35685.5
+    | 35 | 3 |
+
+    | B | 32 | 1 | 1 | 0 | 63504 | 64512 | 2639.5 | 2004 | 18 | 10 | 66143.5 | 66516
+    | 37 | 15 |
+
+    | C | 100 | 1 | 1 | 0 | 64512 | 64768 | 2408 | 1959.5 | 185 | 249 | 66920 | 66727.5
+    | 210 | 59 |
+
+    | D | 52 | 1 | 1 | 0 | 33712 | 33712 | 2722 | 2084.5 | 123 | 137 | 36434 | 35796.5
+    | 37 | 22 |
+
+    | E | 16 | 1 | 10 | 100 | 39312 | 39312 | 562 | 569.5 | 11 | 8 | 46032 | 45807
+    | 76 | 5 |
+
+    | F | 32 | 1 | 10 | 100 | 65170 | 65170 | 1489.5 | 1488.5 | 12 | 14 | 81265 |
+    81455 | 116 | 15 |
+
+    | G | 100 | 1 | 10 | 100 | 64512 | 71680 | 2508.5 | 1945.5 | 98 | 17 | 99397 |
+    92835 | 188 | 56 |
+
+    | H | 52 | 1 | 10 | 100 | 39520 | 43008 | 1104.5 | 887 | 49 | 12 | 55465 | 53078
+    | 76 | 20 |
+
+    | I | 25 | 1 | 4 | 0 | 52136 | 49392 | 617.5 | 1284.5 | 13 | 10 | 54606 | 54530
+    | 69 | 10 |
+
+    | J | 79 | 1 | 4 | 0 | 50274 | 49392 | 2472.5 | 1988 | 69 | 134 | 60164 | 57344
+    | 90 | 49 |
+
+    | K | 16 | 1 | 4 | 0 | 432 | 504 | 240 | 211.5 | 3 | 7 | 1392 | 1350 | 28 | 1
+    |
+
+    | L | 52 | 1 | 4 | 0 | 864 | 864 | 279 | 283 | 18 | 178 | 1980 | 1996 | 38 | 16
+    |
+
+    | M | 23 | 1 | 4 | 0 | 22111840 | 22111840 | 3610.5 | 3365.5 | 41 | 44 | 2226282
+    | 22253202 | 68 | 13 |
+
+    | N | 26 | 1 | 4 | 0 | 1482 | 1640 | 480.5 | 437.5 | 10 | 9 | 3404 | 3390 | 3
+    | 1 |
+
+    | O | 25 | 1 | 40 | 400 | 52136 | 52136 | 617.5 | 617.5 | 13 | 13 | 82036 | 82036
+    | 121 | 10 |
+
+    | P | 79 | 1 | 40 | 400 | 57792 | 57792 | 1101 | 1625 | 85 | 11 | 135832 | 127192
+    | 122 | 38 |
+
+    | Q | 16 | 1 | 40 | 400 | 882 | 896 | 166 | 153 | 6 | 7 | 9922 | 9816 | 27 | 2
+    |
+
+    | R | 52 | 1 | 40 | 400 | 8064 | 1008 | 259 | 324 | 20 | 27 | 26424 | 24768 |
+    66 | 10 |
+
+    | S | 23 | 1 | 400 | 400 | 2396300 | 2396160 | 1897.5 | 1352 | 48 | 47 | 3174500
+    | 2955760 | 95 | 13 |
+
+    | T | 26 | 1 | 40 | 400 | 4102 | 4875 | 208.5 | 176.5 | 4 | 5 | 14042 | 13935
+    | 5 | 1 |
+
+    | Avg Ratio | | | | | 1.32 | 1 | 1.08 | 1 | 1.65 | 1 | 1.02 | 1 | 7.23 | 1 |
+
+
+    ![](img/9193339587477a25149234f19dc04369_4_0.png)
+
+
+    ![](img/9193339587477a25149234f19dc04369_4_1.png)
+
+
+    # Figure 6: Two refinement algorithms.
+
+
+    # Figure 7: Results of GigaPlacer on some ISPD2020 cases.
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_0.png)
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_1.png)
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_2.png)
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_3.png)
+
+
+    # Figure 8: Results on case D with/without L1 distance refinement
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_4.png)
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_5.png)
+
+
+    # REFERENCES
+
+
+    - [1] Cerebras. 2019. Wafer-Scale Deep Learning. In IEEE Hot Chips Symposium.
+    1–31.
+
+    - [2] Yun-Chih Chang, Yao-Wen Chang, Guang-Ming Wu, and Shu-Wei Wu. 2000. B*-trees:
+    A new representation for non-slicing floorplans. In ACM/IEEE Design Automation
+    Conference (DAC). 458–463.
+
+    - [3] Tianshi Chen, Zidong Du, Ninghui Sun, Jia Wang, Chengyong Wu, Yunji Chen,
+    and Olivier Temam. 2014. DianNao: A small-footprint high-throughput accelerator
+    for ubiquitous machine learning. In ACM Conference on Architectural Support for
+    Programming Languages and Operating Systems (ASPLOS). 269–284.
+
+    - [4] Pei-Ning Guo, Chung-Kuan Cheng, and Takeshi Yoshimura. 1999. An O-tree representation
+    of non-slicing floorplan and its applications. In ACM/IEEE Design Automation Conference
+    (DAC). 268–273.
+
+    - [5] Michael James, Marvin Tom, Patrick Groeneveld, and Vladimir Kibardin. 2020.
+    ISPD 2020 Physical Mapping of Neural Networks on a Wafer-Scale Deep Learning Accelerator.
+    In ACM International Symposium on Physical Design (ISPD). 145–149.
+
+    - [6] Norman P Jouppi, Cliff Young, Nishant Patil, David Patterson, Gaurav Agrawal,
+    Raminder Bajwa, Sarah Bates, Suresh Bhatia, Nan Boden, Al Borchers, et al. 2017.
+    In-datacenter performance analysis of a tensor processing unit. In IEEE/ACM International
+    Symposium on Computer Architecture (ISCA). 1–12.
+
+    - [7] Azalia Mirhoseini, Anna Goldie, Mustafa Yazgan, Joe Jiang, Ebrahim Songhori,
+    Shen Wang, Young-sik Lee, Eric Johnson, Omkar Pathak, Sungsu Bae, et al. 2020.
+    Chip Placement with Deep Reinforcement Learning. arXiv:2004.10746 (2020).
+
+    - [8] Min Pan, Natarajan Viswanathan, and Chris Chu. 2005. An efficient and effective
+    detailed placement algorithm. In IEEE/ACM International Conference on Computer-Aided
+    Design (ICCAD). 48–55.
+
+    - [9] Vivienne Sze, Yu-Hsin Chen, Tien-Ju Yang, and Joel S Emer. 2017. Efficient
+    processing of deep neural networks: A tutorial and survey. Proc. IEEE 105, 12
+    (2017). 2295–2329.
+
+    - [10] Martin D.F. Wong and CL Liu. 1986. A new algorithm for floorplan design.
+    In ACM/IEEE Design Automation Conference (DAC). 101–107.
+
+    '
+  mdcn: '
+
+    # (a) 适配器成本细化。
+
+
+    # (b) L1 距离细化。
+
+
+    # 图 6：两种细化算法。
+
+
+    为了满足计算时间限制 $C^*_{time}$，根据公式 (1c)，每个卷积的参数 $k$ 必须满足：
+
+
+    $$k \geq \left\lceil \frac{K}{C^*_{time} \div \left(\left\lceil \frac{H}{h} \right\rceil
+    \times \left\lceil \frac{W}{w} \right\rceil \times \left\lceil \frac{C}{c} \right\rceil
+    \times R \times S \div T^2\right)} \right\rceil \quad (9)$$
+
+
+    因此我们可以得到满足公式 (8) 和 (9) 的最小 $k$。
+
+
+    此外，我们可以将核旋转 90 度。在这种情况下，所有卷积的总宽度为 $H^*_{limit}$。为了使每个卷积的高度相似，其宽度按以下比例分配：
+
+
+    $$\left\lceil \frac{H}{h} \right\rceil \times \left\lceil \frac{W}{w} \right\rceil
+    \times R \times S \times C \times K \div T^2 \quad (10)$$
+
+
+    根据公式 (1b)，在分配宽度后计算每个卷积的参数 $k$。为了满足内存限制，根据公式 (1d)，每个卷积的参数 $c$ 必须满足：
+
+
+    $$c \geq \frac{C \times K/k \times R \times S}{M_{limit} - \frac{W+S}{w} \times
+    \frac{H+R-1}{h} \times \frac{K}{k}} \quad (11)$$
+
+
+    为了满足计算时间限制，根据公式 (1c)，每个卷积的参数 $c$ 必须满足：
+
+
+    $$c \geq \left\lceil \frac{C}{C^*_{time} \div \left(\left\lceil \frac{H}{h} \right\rceil
+    \times \left\lceil \frac{W}{w} \right\rceil \times \left\lceil \frac{K}{k} \right\rceil
+    \times R \times S \div T^2\right)} \right\rceil \quad (12)$$
+
+
+    ## 3.4 细化
+
+
+    在布局生成后，我们执行两种细化算法以降低适配器成本 $C_{adapter}$ 和 L1 距离 $C_{dist}$。其中适配器成本细化算法调整执行参数，L1
+    距离细化算法不修改任何参数，仅改变核的位置或重新排序它们。
+
+
+    ### 3.4.1 适配器成本细化
+
+
+    在适配器成本细化算法中，核的参数将被重新确定以降低 $C_{adapter}$，同时计算时间 $C_{time}$ 保持不变。会挑选一个核，并将其 $h$
+    和 $w$ 参数更改为与其相连的核相同。然后重新计算其他参数以保持计算时间和宽度不变。此过程会改变所选核的高度。合法调整区域定义为宽度为核的宽度、高度为行高的区域。如图
+    6(a) 所示，蓝色核被选中，高亮区域为合法调整区域。如果核仍在合法调整区域内，则此更改是可以接受的。$h$ 和 $w$ 参数将被重新确定为使 $C_{adapter}$
+    最小的配对。所有核都将以这种方式尝试。该过程将多次运行，直到没有改进为止。
+
+
+    ### 3.4.2 L1 距离细化
+
+
+    L1 距离细化算法挑选每一行并移动该行中的核以搜索更好的 $C_{dist}$。我们采用与 FastPlaceDP [8] 类似的基于窗口的局部重排序技术。一个覆盖若干连续核的窗口将从行的开头移动到行尾，如图
+    6(b) 所示。窗口中核的所有可能顺序将被枚举，如果 $C_{dist}$ 减小则保存结果。窗口大小设置为 6 以平衡运行时间开销和质量提升。此外，一些连续核的位置将被反转，作为另一种简单的策略，其窗口大小远大于局部重排序。此步骤将迭代多次，直到没有改进为止。
+
+
+    ## 4 实验结果
+
+
+    我们使用 C++ 实现 GigaPlacer 并使用 g++ 5.4.0 编译。基准测试 [5] 来自 ISPD 2020 竞赛，核的数量范围从 16 到
+    100，如表 1 所示。所有实验均在配备 1.6GHz Intel i5-10210U 处理器和 8GB 内存的 Linux 机器上进行。
+
+
+    GigaPlacer 通过在基于 DP 的算法中嵌入多种策略来生成解决方案。实验表明，我们设计的布局生成策略都有效，并且所有这些策略都出现在最终结果中。图
+    7 显示了 GigaPlacer 在测试案例 E、I、M 和 F 上的最终结果。
+
+
+    ## 5 结论
+
+
+    在本文中，我们提出了 GigaPlacer 用于在 WSE 上放置 NN 层。通过基于二分搜索的框架实现了最小计算时间。两种关注不同目标的基于 DP 的算法被集成以放置核。为了进一步降低核间通信开销，我们调整了相连核的参数并尝试重新排序一些核。与
+    ISPD2020 竞赛的第一名相比，GigaPlacer 不仅更好而且更快。我们未来的工作将改进判断函数以自动优化核间距离，而不是手动设置行数限制。我们还打算探索更多拓扑以放置核以获得更好的性能。
+
+
+    # 表 1：ISPD2020 基准测试结果比较
+
+
+    | 案例 | 内核数 | w_time | w_dist | w_adapter | C_time ISPD''20 | C_time 我们 | C_dist
+    ISPD''20 | C_dist 我们 | C_adapter ISPD''20 | C_adapter 我们 | C_total ISPD''20 |
+    C_total 我们 | 运行时间(s) ISPD''20 | 运行时间(s) 我们 |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+    | A | 16 | 1 | 1 | 0 | 34496 | 34496 | 1314 | 1189.5 | 15 | 16 | 35810 | 35685.5
+    | 35 | 3 |
+
+    | B | 32 | 1 | 1 | 0 | 63504 | 64512 | 2639.5 | 2004 | 18 | 10 | 66143.5 | 66516
+    | 37 | 15 |
+
+    | C | 100 | 1 | 1 | 0 | 64512 | 64768 | 2408 | 1959.5 | 185 | 249 | 66920 | 66727.5
+    | 210 | 59 |
+
+    | D | 52 | 1 | 1 | 0 | 33712 | 33712 | 2722 | 2084.5 | 123 | 137 | 36434 | 35796.5
+    | 37 | 22 |
+
+    | E | 16 | 1 | 10 | 100 | 39312 | 39312 | 562 | 569.5 | 11 | 8 | 46032 | 45807
+    | 76 | 5 |
+
+    | F | 32 | 1 | 10 | 100 | 65170 | 65170 | 1489.5 | 1488.5 | 12 | 14 | 81265 |
+    81455 | 116 | 15 |
+
+    | G | 100 | 1 | 10 | 100 | 64512 | 71680 | 2508.5 | 1945.5 | 98 | 17 | 99397 |
+    92835 | 188 | 56 |
+
+    | H | 52 | 1 | 10 | 100 | 39520 | 43008 | 1104.5 | 887 | 49 | 12 | 55465 | 53078
+    | 76 | 20 |
+
+    | I | 25 | 1 | 4 | 0 | 52136 | 49392 | 617.5 | 1284.5 | 13 | 10 | 54606 | 54530
+    | 69 | 10 |
+
+    | J | 79 | 1 | 4 | 0 | 50274 | 49392 | 2472.5 | 1988 | 69 | 134 | 60164 | 57344
+    | 90 | 49 |
+
+    | K | 16 | 1 | 4 | 0 | 432 | 504 | 240 | 211.5 | 3 | 7 | 1392 | 1350 | 28 | 1
+    |
+
+    | L | 52 | 1 | 4 | 0 | 864 | 864 | 279 | 283 | 18 | 178 | 1980 | 1996 | 38 | 16
+    |
+
+    | M | 23 | 1 | 4 | 0 | 22111840 | 22111840 | 3610.5 | 3365.5 | 41 | 44 | 2226282
+    | 22253202 | 68 | 13 |
+
+    | N | 26 | 1 | 4 | 0 | 1482 | 1640 | 480.5 | 437.5 | 10 | 9 | 3404 | 3390 | 3
+    | 1 |
+
+    | O | 25 | 1 | 40 | 400 | 52136 | 52136 | 617.5 | 617.5 | 13 | 13 | 82036 | 82036
+    | 121 | 10 |
+
+    | P | 79 | 1 | 40 | 400 | 57792 | 57792 | 1101 | 1625 | 85 | 11 | 135832 | 127192
+    | 122 | 38 |
+
+    | Q | 16 | 1 | 40 | 400 | 882 | 896 | 166 | 153 | 6 | 7 | 9922 | 9816 | 27 | 2
+    |
+
+    | R | 52 | 1 | 40 | 400 | 8064 | 1008 | 259 | 324 | 20 | 27 | 26424 | 24768 |
+    66 | 10 |
+
+    | S | 23 | 1 | 400 | 400 | 2396300 | 2396160 | 1897.5 | 1352 | 48 | 47 | 3174500
+    | 2955760 | 95 | 13 |
+
+    | T | 26 | 1 | 40 | 400 | 4102 | 4875 | 208.5 | 176.5 | 4 | 5 | 14042 | 13935
+    | 5 | 1 |
+
+    | Avg Ratio | | | | | 1.32 | 1 | 1.08 | 1 | 1.65 | 1 | 1.02 | 1 | 7.23 | 1 |
+
+
+    ![](img/9193339587477a25149234f19dc04369_4_0.png)
+
+
+    ![](img/9193339587477a25149234f19dc04369_4_1.png)
+
+
+    # 图 6：两种细化算法。
+
+
+    # 图 7：GigaPlacer 在部分 ISPD2020 案例上的结果。
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_0.png)
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_1.png)
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_2.png)
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_3.png)
+
+
+    # 图 8：案例 D 有/无 L1 距离细化的结果
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_4.png)
+
+
+    ![](img/9193339587477a25149234f19dc04369_5_5.png)
+
+
+    # 参考文献
+
+
+    - [1] Cerebras. 2019. 晶圆级深度学习. In IEEE Hot Chips Symposium. 1–31.
+
+    - [2] Yun-Chih Chang, Yao-Wen Chang, Guang-Ming Wu, and Shu-Wei Wu. 2000. B*-树：非切片平面图的一种新表示.
+    In ACM/IEEE Design Automation Conference (DAC). 458–463.
+
+    - [3] Tianshi Chen, Zidong Du, Ninghui Sun, Jia Wang, Chengyong Wu, Yunji Chen,
+    and Olivier Temam. 2014. DianNao：一种用于无处不在机器学习的低占用高吞吐加速器. In ACM Conference on
+    Architectural Support for Programming Languages and Operating Systems (ASPLOS).
+    269–284.
+
+    - [4] Pei-Ning Guo, Chung-Kuan Cheng, and Takeshi Yoshimura. 1999. 非切片平面图的一种 O-树表示及其应用.
+    In ACM/IEEE Design Automation Conference (DAC). 268–273.
+
+    - [5] Michael James, Marvin Tom, Patrick Groeneveld, and Vladimir Kibardin. 2020.
+    ISPD 2020 晶圆级深度学习加速器上神经网络的物理映射. In ACM International Symposium on Physical Design
+    (ISPD). 145–149.
+
+    - [6] Norman P Jouppi, Cliff Young, Nishant Patil, David Patterson, Gaurav Agrawal,
+    Raminder Bajwa, Sarah Bates, Suresh Bhatia, Nan Boden, Al Borchers, et al. 2017.
+    张量处理单元的数据中心性能分析. In IEEE/ACM International Symposium on Computer Architecture
+    (ISCA). 1–12.
+
+    - [7] Azalia Mirhoseini, Anna Goldie, Mustafa Yazgan, Joe Jiang, Ebrahim Songhori,
+    Shen Wang, Young-sik Lee, Eric Johnson, Omkar Pathak, Sungsu Bae, et al. 2020.
+    使用深度强化学习的芯片放置. arXiv:2004.10746 (2020).
+
+    - [8] Min Pan, Natarajan Viswanathan, and Chris Chu. 2005. 一种高效有效的详细放置算法. In IEEE/ACM
+    International Conference on Computer-Aided Design (ICCAD). 48–55.
+
+    - [9] Vivienne Sze, Yu-Hsin Chen, Tien-Ju Yang, and Joel S Emer. 2017. 深度神经网络的高效处理：教程与综述.
+    Proc. IEEE 105, 12 (2017). 2295–2329.
+
+    - [10] Martin D.F. Wong and CL Liu. 1986. 一种新的平面图设计算法. In ACM/IEEE Design Automation
+    Conference (DAC). 101–107.
+
+
+    '
+  merge: 0
