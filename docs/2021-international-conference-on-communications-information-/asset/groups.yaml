@@ -1,0 +1,804 @@
+- raw:
+  - "[PAGE 0]\n\n# Device-Free Localization Using Extreme Learning Machine with DTW\
+    \ based Feature Extraction\n\nJianqiang Xue, Zhenyue Gao, Jianxing Zhang, Wendong\
+    \ Xiao*  \nSchool of Automation and Electrical Engineering  \nUniversity of Science\
+    \ and Technology Beijing  \nBeijing, China  \ne-mail: wdxiao@ustb.edu.cn\n\n**Abstract—In\
+    \ recent years, WiFi CSI based device-free localization has attracted widespread\
+    \ attention. Most of the previous work used Received Signal Strength Indication\
+    \ (RSSI), and the acquisition of Channel State Information (CSI) significantly\
+    \ improved the localization accuracy based on WiFi. In this paper, we propose\
+    \ a device-free indoor localization method based on CSI. First, we use CSI Tools\
+    \ to collect CSI and use some specific filters to filter out the noise. Then,\
+    \ we use Dynamic Time Warping (DTW) to extract the differences between the two\
+    \ data segments as fingerprints. Finally, Extreme Learning Machine (ELM) is used\
+    \ for modelling and calculating the location of the target. We set up a system\
+    \ in the laboratory to verify the method’s performance, which confirmed the effectiveness\
+    \ of the method proposed in this paper.**\n\n**Keywords-device-free localization;\
+    \ channel state information; extreme learning machine; dynamic time warping**\n\
+    \n# I.  INTRODUCTION\n\nIn recent years, wireless network technology has developed\
+    \ rapidly, and people have begun to demand effective and accurate service applications.\
+    \ Target localization is one of them. Presently, outdoor localization technology\
+    \ has matured, and a variety of service applications have been derived, providing\
+    \ great convenience to people's lives. Outdoor localization technology mainly\
+    \ relies on satellite localization technology such as the Global Positioning System\
+    \ (GPS), which can estimate the target's location information in real-time. However,\
+    \ due to environmental factors such as multipath effects, shadows and fading [1],\
+    \ this localization technology is challenging to work in indoor situations. Therefore,\
+    \ obtaining a good target localization effect in an indoor environment is still\
+    \ a problem to be solved urgently.\n\nAlthough indoor localization has attracted\
+    \ much attention, the immaturity of technology is still a big problem currently\
+    \ facing. Unlike outdoor localization systems such as GPS and base station localization,\
+    \ indoor localization systems still do not have a unified standard organization\
+    \ to formulate unified technical standards and specifications. The current mainstream\
+    \ indoor localization technical solutions are developed under the agreements and\
+    \ solutions defined by each enterprise, resulting in a variety of indoor localization\
+    \ technologies, like the infrared [2], ultrasonic [3], camera [4], ultra-wideband\
+    \ [5] and wireless local area network. Camera-based system can achieve high accuracy,\
+    \ but it requires a good lighting environment and will cause privacy issues; ultrasonic-based\
+    \ system is affected by noise and has limited coverage; infrared-based system\
+    \ requires\n\nprofessional infrastructure; visible-light-based system can only\
+    \ work in visible environment. Due to the popularity of WiFi devices in mobile\
+    \ terminals and the development of indoor environments, WiFi-based indoor localization\
+    \ technologies have received more attention.\n\nWiFi based indoor localization\
+    \ technology analyses the characteristics of the radio signal received by the\
+    \ mobile terminal in the wireless local area network, and estimates the position\
+    \ of the target according to the corresponding localization model. At present,\
+    \ most indoor WiFi localization systems use Received Signal Strength Indication\
+    \ (RSSI) or Channel State Information (CSI) as the received signal. CSI is a research\
+    \ hotspot in recent years. Dynamic-Music [6] proposed a localization method combined\
+    \ with the Multiple Signal Classification Algorithm (MUSIC) algorithm, which uses\
+    \ the CSI phase to detect the human body reflection signal and further calculates\
+    \ the Angle of Arrival (AoA) and Time of Arrival (ToA) to estimate location information.\
+    \ IndoTrack [7] estimates the Doppler velocity from the CSI signal, and further\
+    \ estimates the position and velocity information of the target. Widar [8] uses\
+    \ CSI and locates the target from a geometric angle, and at the same time estimates\
+    \ the target's velocity estimate. Haibin Bian [9] researched on WiFi CSI indoor\
+    \ localization methods, combined CSI information and location fingerprint methods,\
+    \ and used CSI data information as location fingerprint information based on the\
+    \ spatial and frequency characteristics of CSI data, and proposed clustering based\
+    \ on CSI weighted space-frequency characteristics. The algorithm clusters fingerprint\
+    \ data, completes matching localization, removes part of the separated cluster\
+    \ points and inappropriate nearest neighbors in the database through secondary\
+    \ correction and finally realizes WiFi based indoor localization. Fuseloc [10]\
+    \ uses multiple features extracted from the channel state information to perform\
+    \ the first information fusion based on indoor localization.\n\nIn this paper,\
+    \ we propose to use Dynamic Time Warping (DTW) to extract signal features and\
+    \ employ Extreme Learning Machine (ELM) to model the relation between fingerprints\
+    \ and target points. Specifically, the workflow of this method includes data collection,\
+    \ preprocessing, feature extraction and relationship modelling. The main contributions\
+    \ of this research are:\n\n+   1. Use the DTW method to extract signal features;\n\
+    +   2. Use ELM to model device-free localization;"
+  - '[PAGE 1]
+
+
+    3) Build a system and compare the effects of this method with other methods.
+
+
+    The rest of this article is structured as follows. Section II gives a brief introduction
+    to the relevant content, and Section III describes the system design. Section
+    IV introduces the experimental verification in detail. Section V gives the conclusion.
+
+
+    # II. PRELIMINARIES
+
+
+    # A. Channel State Information
+
+
+    In the past WiFi based indoor localization research, most are based on the RSSI.
+    The RSSI is the superimposed energy of multiple wireless signals, which will attenuate
+    as the distance increases, which is very unstable. With the application of OFDM
+    technology in WiFi, the channel state information of WiFi can be extracted. The
+    CSI describes the attenuation of wireless signals in the propagation process,
+    and records the amplitude and phase information of each subcarrier in the frequency
+    domain [11]. It has the advantages of stability, fine-grained, and rich information.
+
+
+    In a wireless local area network, the received data vector can be expressed as
+
+
+    Y=HX+W , (1)
+
+
+    where X is the transmitted data vector, H is the CSI matrix, and W is the noise
+    vector. H can be calculated as
+
+
+    H=Y/X . (2)
+
+
+    H is the CFR sampling information of the channel frequency response in the frequency
+    domain, and CSI tools make it possible to obtain a version of the CFR sampling
+    with 30 samples [12]. Using an IEEE802.11a/g/n compatible wireless card, a set
+    of CSI is extracted from each packet received, with each CSI representing the
+    amplitude and phase of an orthogonal frequency division multiplexed subcarrier
+    [13]. CSI can be expressed as
+
+
+    ∠H(f_k)=||H(f_k)|| e^{i sin(∠H(f_k))} , (3)
+
+
+    where H(f_k) is the CSI of the kth subcarrier with frequency f_k , ||H(f_k)||
+    and ∠H(f_k) represent the amplitude and phase of the kth subcarrier, respectively.
+
+
+    # B. Extreme Learning Machine
+
+
+    ELM is a single hidden layer feedforward network with a three-layer structure:
+    input layer, hidden layer and output layer [14], as shown in Fig. 1. The most
+    important feature of ELM is that the parameters of the hidden layer are randomly
+    initialised, and only the output weights need to be calculated by least squares
+    estimation [15]. Therefore the learning speed is hundreds or thousands of times
+    faster than most other machine learning methods and the generalisation ability
+    of ELM is also excellent.
+
+
+    ![](img/bc94f492e7e471f80902b1c5ae1db01e_1_0.png)
+
+
+    Denoting the number of hidden cells in the feedforward network as L_hn , the output
+    function of the ELM can be expressed as
+
+
+    f(x)=∑_{L_hn}^{i=1} β_i g_i(x) | = g(x)β = T , (4)
+
+
+    where x denotes the input to the ELM, i.e. the features of the sample, T is the
+    label of the data, g denotes the activation function and β denotes the output
+    weights. We denote the input weights as w and the bias as b and g(x) can be expressed
+    as
+
+
+    g(x)=[ g(x;w_1,b_1),...,g(x;w_{L_hn},b_{L_hn}) ] . (5)
+
+
+    Further, Equation (4) can be expressed as
+
+
+    Gβ = T , (6)
+
+
+    of which,
+
+
+    G = [ g(x_1) ; ... ; g(x_{N_s}) ] = [ g_1(x_1) ... g_{L_hn}(x_1) ; ... ; g_1(x_{N_s})
+    ... g_{L_hn}(x_{N_s}) ] , (7)
+
+
+    where N_s indicates the number of samples. In addition,
+
+
+    T = [ t_1, ..., t_{N_s} ]^T . (8)
+
+
+    Finally, the estimate of the output weights can be obtained by the following formula
+
+
+    β̃ = G^† T , (9)'
+  md: "\n## Device-Free Localization Using Extreme Learning Machine with DTW-Based\
+    \ Feature Extraction\n\nJianqiang Xue, Zhenyue Gao, Jianxing Zhang, Wendong Xiao*\
+    \  \nSchool of Automation and Electrical Engineering  \nUniversity of Science\
+    \ and Technology Beijing  \nBeijing, China  \ne-mail: wdxiao@ustb.edu.cn\n\n**Abstract—**\
+    \ In recent years, WiFi CSI based device-free localization has attracted widespread\
+    \ attention. Most of the previous work used Received Signal Strength Indication\
+    \ (RSSI), and the acquisition of Channel State Information (CSI) significantly\
+    \ improved the localization accuracy based on WiFi. In this paper, we propose\
+    \ a device-free indoor localization method based on CSI. First, we use CSI Tools\
+    \ to collect CSI and use some specific filters to filter out the noise. Then,\
+    \ we use Dynamic Time Warping (DTW) to extract the differences between the two\
+    \ data segments as fingerprints. Finally, Extreme Learning Machine (ELM) is used\
+    \ for modelling and calculating the location of the target. We set up a system\
+    \ in the laboratory to verify the method’s performance, which confirmed the effectiveness\
+    \ of the method proposed in this paper.\n\n**Keywords—** device-free localization;\
+    \ channel state information; extreme learning machine; dynamic time warping\n\n\
+    ## I. INTRODUCTION\n\nIn recent years, wireless network technology has developed\
+    \ rapidly, and people have begun to demand effective and accurate service applications.\
+    \ Target localization is one of them. Presently, outdoor localization technology\
+    \ has matured, and a variety of service applications have been derived, providing\
+    \ great convenience to people's lives. Outdoor localization technology mainly\
+    \ relies on satellite localization technology such as the Global Positioning System\
+    \ (GPS), which can estimate the target's location information in real-time. However,\
+    \ due to environmental factors such as multipath effects, shadows and fading [1],\
+    \ this localization technology is challenging to work in indoor situations. Therefore,\
+    \ obtaining a good target localization effect in an indoor environment is still\
+    \ a problem to be solved urgently.\n\nAlthough indoor localization has attracted\
+    \ much attention, the immaturity of technology is still a big problem currently\
+    \ facing. Unlike outdoor localization systems such as GPS and base station localization,\
+    \ indoor localization systems still do not have a unified standard organization\
+    \ to formulate unified technical standards and specifications. The current mainstream\
+    \ indoor localization technical solutions are developed under the agreements and\
+    \ solutions defined by each enterprise, resulting in a variety of indoor localization\
+    \ technologies, like the infrared [2], ultrasonic [3], camera [4], ultra-wideband\
+    \ [5] and wireless local area network. Camera-based system can achieve high accuracy,\
+    \ but it requires a good lighting environment and will cause privacy issues; ultrasonic-based\
+    \ system is affected by noise and has limited coverage; infrared-based system\
+    \ requires professional infrastructure; visible-light-based system can only work\
+    \ in visible environment. Due to the popularity of WiFi devices in mobile terminals\
+    \ and the development of indoor environments, WiFi-based indoor localization technologies\
+    \ have received more attention.\n\nWiFi based indoor localization technology analyses\
+    \ the characteristics of the radio signal received by the mobile terminal in the\
+    \ wireless local area network, and estimates the position of the target according\
+    \ to the corresponding localization model. At present, most indoor WiFi localization\
+    \ systems use Received Signal Strength Indication (RSSI) or Channel State Information\
+    \ (CSI) as the received signal. CSI is a research hotspot in recent years. Dynamic-Music\
+    \ [6] proposed a localization method combined with the Multiple Signal Classification\
+    \ Algorithm (MUSIC) algorithm, which uses the CSI phase to detect the human body\
+    \ reflection signal and further calculates the Angle of Arrival (AoA) and Time\
+    \ of Arrival (ToA) to estimate location information. IndoTrack [7] estimates the\
+    \ Doppler velocity from the CSI signal, and further estimates the position and\
+    \ velocity information of the target. Widar [8] uses CSI and locates the target\
+    \ from a geometric angle, and at the same time estimates the target's velocity\
+    \ estimate. Haibin Bian [9] researched on WiFi CSI indoor localization methods,\
+    \ combined CSI information and location fingerprint methods, and used CSI data\
+    \ information as location fingerprint information based on the spatial and frequency\
+    \ characteristics of CSI data, and proposed clustering based on CSI weighted space-frequency\
+    \ characteristics. The algorithm clusters fingerprint data, completes matching\
+    \ localization, removes part of the separated cluster points and inappropriate\
+    \ nearest neighbors in the database through secondary correction and finally realizes\
+    \ WiFi based indoor localization. Fuseloc [10] uses multiple features extracted\
+    \ from the channel state information to perform the first information fusion based\
+    \ on indoor localization.\n\nIn this paper, we propose to use Dynamic Time Warping\
+    \ (DTW) to extract signal features and employ Extreme Learning Machine (ELM) to\
+    \ model the relation between fingerprints and target points. Specifically, the\
+    \ workflow of this method includes data collection, preprocessing, feature extraction\
+    \ and relationship modelling. The main contributions of this research are:\n\n\
+    1. Use the DTW method to extract signal features;\n2. Use ELM to model device-free\
+    \ localization;\n3. Build a system and compare the effects of this method with\
+    \ other methods.\n\nThe rest of this article is structured as follows. Section\
+    \ II gives a brief introduction to the relevant content, and Section III describes\
+    \ the system design. Section IV introduces the experimental verification in detail.\
+    \ Section V gives the conclusion.\n\n## II. PRELIMINARIES\n\n### A. Channel State\
+    \ Information\n\nIn the past WiFi based indoor localization research, most are\
+    \ based on the RSSI. The RSSI is the superimposed energy of multiple wireless\
+    \ signals, which will attenuate as the distance increases, which is very unstable.\
+    \ With the application of OFDM technology in WiFi, the channel state information\
+    \ of WiFi can be extracted. The CSI describes the attenuation of wireless signals\
+    \ in the propagation process, and records the amplitude and phase information\
+    \ of each subcarrier in the frequency domain [11]. It has the advantages of stability,\
+    \ fine-grained, and rich information.\n\nIn a wireless local area network, the\
+    \ received data vector can be expressed as\n\n\\(Y = HX + W\\), (1)\n\nwhere X\
+    \ is the transmitted data vector, H is the CSI matrix, and W is the noise vector.\
+    \ H can be calculated as\n\n\\(H = Y/X\\), (2)\n\nH is the CFR sampling information\
+    \ of the channel frequency response in the frequency domain, and CSI tools make\
+    \ it possible to obtain a version of the CFR sampling with 30 samples [12]. Using\
+    \ an IEEE 802.11a/g/n compatible wireless card, a set of CSI is extracted from\
+    \ each packet received, with each CSI representing the amplitude and phase of\
+    \ an orthogonal frequency division multiplexed subcarrier [13]. CSI can be expressed\
+    \ as\n\n\\(H(f_k) = \\|H(f_k)\\| e^{j\\angle H(f_k)}\\), (3)\n\nwhere \\(H(f_k)\\\
+    ) is the CSI of the kth subcarrier with frequency \\(f_k\\), \\(\\|H(f_k)\\|\\\
+    ) and \\(\\angle H(f_k)\\) represent the amplitude and phase of the kth subcarrier,\
+    \ respectively.\n\n### B. Extreme Learning Machine\n\nELM is a single hidden layer\
+    \ feedforward network with a three-layer structure: input layer, hidden layer\
+    \ and output layer [14], as shown in Fig. 1. The most important feature of ELM\
+    \ is that the parameters of the hidden layer are randomly initialised, and only\
+    \ the output weights need to be calculated by least squares estimation [15]. Therefore\
+    \ the learning speed is hundreds or thousands of times faster than most other\
+    \ machine learning methods and the generalisation ability of ELM is also excellent.\n\
+    \n![](img/bc94f492e7e471f80902b1c5ae1db01e_1_0.png)\n\nDenoting the number of\
+    \ hidden cells in the feedforward network as \\(L_{hn}\\), the output function\
+    \ of the ELM can be expressed as\n\n\\(f(x) = \\sum_{i=1}^{L_{hn}} \\beta_i g_i(x)\
+    \ = g(x)\\beta = T\\), (4)\n\nwhere x denotes the input to the ELM, i.e. the features\
+    \ of the sample, T is the label of the data, g denotes the activation function\
+    \ and β denotes the output weights. We denote the input weights as w and the bias\
+    \ as b and g(x) can be expressed as\n\n\\(g(x) = [g(x; w_1, b_1), \\ldots, g(x;\
+    \ w_{L_{hn}}, b_{L_{hn}})]\\), (5)\n\nFurther, Equation (4) can be expressed as\n\
+    \n\\(G\\beta = T\\), (6)\n\nof which,\n\n\\(G = [g(x_1); \\ldots; g(x_{N_s})]\
+    \ = [g_1(x_1), \\ldots, g_{L_{hn}}(x_1); \\ldots; g_1(x_{N_s}), \\ldots, g_{L_{hn}}(x_{N_s})]\\\
+    ), (7)\n\nwhere \\(N_s\\) indicates the number of samples. In addition,\n\n\\\
+    (T = [t_1, \\ldots, t_{N_s}]^T\\), (8)\n\nFinally, the estimate of the output\
+    \ weights can be obtained by the following formula\n\n\\(\\tilde{\\beta} = G^\\\
+    dagger T\\), (9)\n"
+  mdcn: "\n## 基于动态时间规整特征提取的极限学习机无设备定位\n\nJianqiang Xue, Zhenyue Gao, Jianxing Zhang,\
+    \ Wendong Xiao*  \n自动化与电气工程学院  \n北京科技大学  \n北京，中国  \ne-mail: wdxiao@ustb.edu.cn\n\
+    \n**摘要—** 近年来，基于 WiFi CSI 的无设备定位受到了广泛关注。之前的大多数工作使用了接收信号强度指示 Received Signal Strength\
+    \ Indication (RSSI)，而信道状态信息 Channel State Information (CSI) 的获取显著提高了基于 WiFi 的定位精度。本文提出了一种基于\
+    \ CSI 的无设备室内定位方法。首先，我们使用 CSI Tools 采集 CSI 并使用特定的滤波器滤除噪声。然后，我们使用动态时间规整 Dynamic\
+    \ Time Warping (DTW) 提取两个数据段之间的差异作为指纹。最后，使用极限学习机 Extreme Learning Machine (ELM)\
+    \ 进行建模并计算目标的位置。我们在实验室搭建了系统来验证该方法的性能，这证实了本文提出的方法的有效性。\n\n**关键词—** 无设备定位；信道状态信息；极限学习机；动态时间规整\n\
+    \n## I. 引言\n\n近年来，无线网络技术发展迅速，人们开始要求有效且准确的服务应用。目标定位就是其中之一。目前，室外定位技术已经成熟，并衍生出多种服务应用，为人们的生活提供了极大的便利。室外定位技术主要依赖于全球定位系统\
+    \ Global Positioning System (GPS) 等卫星定位技术，可以实时估计目标的位置信息。然而，由于多径效应、阴影和衰落 [1] 等环境因素，该定位技术在室内环境中难以工作。因此，在室内环境中获得良好的目标定位效果仍然是一个亟待解决的问题。\n\
+    \n尽管室内定位受到了广泛关注，但技术的 immaturity 仍然是目前面临的一个大问题。与 GPS 和基站定位等室外定位系统不同，室内定位系统仍然没有统一的标准组织来制定统一的技术标准和规范。目前主流的室内定位技术解决方案是在各企业定义的协议和方案下开发的，导致了多种室内定位技术，如红外\
+    \ [2]、超声波 [3]、摄像头 [4]、超宽带 [5] 和无线局域网。基于摄像头的系统可以实现高精度，但它需要良好的光照环境并会引起隐私问题；基于超声波的系统受噪声影响且覆盖范围有限；基于红外的系统需要专业的基础设施；基于可见光的系统只能在可见环境中工作。由于移动终端中\
+    \ WiFi 设备的普及以及室内环境的发展，基于 WiFi 的室内定位技术受到了更多关注。\n\n基于 WiFi 的室内定位技术分析无线局域网中移动终端接收到的无线电信号的特征，并根据相应的定位模型估计目标的位置。目前，大多数室内\
+    \ WiFi 定位系统使用接收信号强度指示 Received Signal Strength Indication (RSSI) 或信道状态信息 Channel\
+    \ State Information (CSI) 作为接收信号。CSI 是近年来研究的热点。Dynamic-Music [6] 提出了一种结合多信号分类算法\
+    \ Multiple Signal Classification Algorithm (MUSIC) 算法的定位方法，该方法使用 CSI 相位检测人体反射信号，并进一步计算到达角\
+    \ Angle of Arrival (AoA) 和到达时间 Time of Arrival (ToA) 以估计位置信息。IndoTrack [7] 从 CSI\
+    \ 信号估计多普勒速度，并进一步估计目标的位置和速度信息。Widar [8] 使用 CSI 并从几何角度定位目标，同时估计目标的速度估计。Haibin Bian\
+    \ [9] 研究了 WiFi CSI 室内定位方法，结合 CSI 信息和位置指纹方法，并基于 CSI 数据的空间和频率特性使用 CSI 数据信息作为位置指纹信息，提出了基于\
+    \ CSI 加权空频特征的聚类算法。该算法对指纹数据进行聚类，完成匹配定位，通过二次校正去除数据库中部分分离的聚类点和不合适的最近邻，最终实现基于 WiFi\
+    \ 的室内定位。Fuseloc [10] 使用从信道状态信息中提取的多个特征进行基于室内定位的首次信息融合。\n\n在本文中，我们提出使用动态时间规整 Dynamic\
+    \ Time Warping (DTW) 提取信号特征，并采用极限学习机 Extreme Learning Machine (ELM) 对指纹与目标点之间的关系进行建模。具体而言，该方法的工作流程包括数据采集、预处理、特征提取和关系建模。本研究的主要贡献如下：\n\
+    \n1. 使用 DTW 方法提取信号特征；\n2. 使用 ELM 对无设备定位进行建模；\n3. 构建系统并比较该方法与其他方法的效果。\n\n本文其余部分结构如下。第二部分对相关内容进行了简要介绍，第三部分描述了系统设计。第四部分详细介绍了实验验证。第五部分给出了结论。\n\
+    \n## II. 预备知识\n\n### A. 信道状态信息\n\n在过去的基于 WiFi 的室内定位研究中，大多数基于 RSSI。RSSI 是多个无线信号的叠加能量，随着距离的增加会衰减，非常不稳定。随着\
+    \ OFDM 技术在 WiFi 中的应用，可以提取 WiFi 的信道状态信息。CSI 描述了无线信号在传播过程中的衰减，并记录了频域中每个子载波的幅度和相位信息\
+    \ [11]。它具有稳定、细粒度、信息丰富等优点。\n\n在无线局域网中，接收数据向量可以表示为\n\n\\(Y = HX + W\\), (1)\n\n\
+    其中 X 是发送数据向量，H 是 CSI 矩阵，W 是噪声向量。H 可以计算为\n\n\\(H = Y/X\\), (2)\n\nH 是频域中信道频率响应的\
+    \ CFR 采样信息，CSI 工具使得获得具有 30 个样本的 CFR 采样版本成为可能 [12]。使用兼容 IEEE 802.11a/g/n 的无线网卡，从接收到的每个数据包中提取一组\
+    \ CSI，每个 CSI 表示正交频分复用子载波的幅度和相位 [13]。CSI 可以表示为\n\n\\(H(f_k) = \\|H(f_k)\\| e^{j\\\
+    angle H(f_k)}\\), (3)\n\n其中 \\(H(f_k)\\) 是频率为 \\(f_k\\) 的第 k 个子载波的 CSI，\\(\\|H(f_k)\\\
+    |\\) 和 \\(\\angle H(f_k)\\) 分别表示第 k 个子载波的幅度和相位。\n\n### B. 极限学习机\n\nELM 是一种单隐层前馈网络，具有三层结构：输入层、隐藏层和输出层\
+    \ [14]，如图 1 所示。ELM 最重要的特征是隐藏层参数随机初始化，只需通过最小二乘估计计算输出权重 [15]。因此学习速度比大多数其他机器学习方法快数百或数千倍，且\
+    \ ELM 的泛化能力也非常优秀。\n\n![](img/bc94f492e7e471f80902b1c5ae1db01e_1_0.png)\n\n用 \\\
+    (L_{hn}\\) 表示前馈网络中隐藏单元的数量，ELM 的输出函数可以表示为\n\n\\(f(x) = \\sum_{i=1}^{L_{hn}} \\\
+    beta_i g_i(x) = g(x)\\beta = T\\), (4)\n\n其中 x 表示 ELM 的输入，即样本的特征，T 是数据的标签，g 表示激活函数，β\
+    \ 表示输出权重。我们用 w 表示输入权重，用 b 表示偏置，g(x) 可以表示为\n\n\\(g(x) = [g(x; w_1, b_1), \\ldots,\
+    \ g(x; w_{L_{hn}}, b_{L_{hn}})]\\), (5)\n\n进一步，式 (4) 可以表示为\n\n\\(G\\beta = T\\\
+    ), (6)\n\n其中，\n\n\\(G = [g(x_1); \\ldots; g(x_{N_s})] = [g_1(x_1), \\ldots, g_{L_{hn}}(x_1);\
+    \ \\ldots; g_1(x_{N_s}), \\ldots, g_{L_{hn}}(x_{N_s})]\\), (7)\n\n其中 \\(N_s\\\
+    ) 表示样本数量。此外，\n\n\\(T = [t_1, \\ldots, t_{N_s}]^T\\), (8)\n\n最后，输出权重的估计可以通过以下公式获得\n\
+    \n\\(\\tilde{\\beta} = G^\\dagger T\\), (9)\n"
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    where G† is the Moore-Penrose generalized inverse of the matrix of G.
+
+
+    # III. SYSTEM DESIGN
+
+
+    # A. Overall Architecture
+
+
+    The framework of the CSI-based localization system is shown in Fig. 2. CSI Tools
+    first collect the CSI samples, then the CSI is pre-processed. After that the features
+    are extracted using DTW and fed into ELM to train the model. The test set is processed
+    in the same way to obtain the features, and then the test results are obtained.
+
+
+    ![](img/bc94f492e7e471f80902b1c5ae1db01e_2_0.png)
+
+
+    Fig.2 The framework of the localization system.
+
+
+    # B. Data Preprocessing
+
+
+    The raw CSI data collected contains typical errors such as useful channel state
+    information and measurement errors and certain outliers formed by interference
+    from equipment or uncertainties that interfere with localization using CSI. We
+    apply a hampel filter with a sliding window on each subcarrier to remove outliers
+    that are usually significantly different from neighboring CSI measurements. In
+    addition, we apply a moving average filter to remove high-frequency noise.
+
+
+    # C. Feature Extraction
+
+
+    DTW is a dynamic planning algorithm that calculates the similarity of two time
+    series, especially those of different lengths. It is mainly applied to temporal
+    data, such as isolated word speech recognition, gesture recognition, data mining
+    and information retrieval. In fingerprint localization, fingerprints are almost
+    always based on individual data and rarely generate a fingerprint for localization
+    based on a segment of data. DTW calculates the difference between the target at
+    different
+
+
+    reference points and the target which is not in the environment to obtain fingerprints,
+    which effectively extracts the overall characteristics of the data.
+
+
+    # IV. EVALUATIONS
+
+
+    # A. Experimental Setup
+
+
+    We deployed the system in an 802.11n WiFi network that consisted of two WiFi devices
+    (i.e. mini-pc) and a commercial wireless access point (i.e. TP-Link WDR5300 with
+    antennas running on the 5.24 GHz channel). mini-pc was equipped with an Intel
+    WiFi Link for measuring CSI 5300 card and three external antennas.To evaluate
+    our system, we conducted experiments in the activity room. We
+
+
+    # TABLE I. LOCALIZATION PERFORMANCE
+
+
+    | Method | Mean error |
+
+    | ELM | 1.1243m |
+
+    | BPNN | 1.3789m |
+
+    | SVM | 1.3345m |
+
+
+    used a scheme of 1 AP and 2 MPs for better coverage of the area of interest. We
+    selected reference locations uniformly within the monitored area. The area was
+    divided into 64 cells, each with a size of 0.6 m*0.6 m. The reference points were
+    set in each cell’s center, and the test points were randomly scattered throughout
+    the area. One hundred packets were collected at each location.
+
+
+    # B. Localization Performance
+
+
+    We used the average distance error as the performance metric. The results of comparing
+    our system with the other two machine learning methods are shown in Table I. It
+    can be seen that our method outperforms SVM and BPNN, proving the effectiveness
+    of the ELM algorithm and the localization accuracy can be greatly improved by
+    using DTW to extract features.
+
+
+    # V. CONCLUSION
+
+
+    In this paper, we propose a device-free indoor localization method based on WiFi
+    CSI, using two common commercial WiFi devices and a single receiver device to
+    collect CSI data, pre-processing the collected CSI data to extract features using
+    DTW, and then using ELM model for localization. The method was evaluated in a
+    laboratory environment and experimental results showed that the method was superior
+    to SVM and BPNN. The average distance error was 1.12m in a typical indoor environment.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This work was supported in part by the National Key Research and Development Program
+    of China under Grant 2017YFB1401203, the Beijing Key Research and Development
+    Program under Grant Z191100007519001 and Foshan Science and Technology Innovation
+    Program under Grant BK20AF005.
+
+
+    # REFERENCES
+
+
+    [1] Liu H, Darabi H, Banerjee P, et al. Survey of wireless indoor positioning
+    techniques and systems[J]. IEEE Transactions on Systems, Man, and Cybernetics,
+    Part C (Applications and Reviews), 2007, 37(6): 1067-1080.'
+  - "[PAGE 3]\n\n+   [2] Gellersen H, Kortuem G, Schmidt A, et al. Physical prototyping\
+    \ with smart-its[J]. IEEE Pervasive computing, 2004, 3(3): 74-82.\n+   \n+   [3]\
+    \ Harle R K, Hopper A. Deploying and evaluating a location-aware system[C]//Proceedings\
+    \ of the 3rd international conference on Mobile systems, applications, and services.\
+    \ 2005: 219-232.\n+   \n+   [4] Cai Q, Aggarwal J K. Automatic tracking of human\
+    \ motion in indoor scenes across multiple synchronized video streams[C]//Sixth\
+    \ International Conference on Computer Vision (IEEE Cat. No. 98CH36271). IEEE,\
+    \ 1998: 356-362.\n+   \n+   [5] Gezici S, Tian Z, Giannakis G B, et al. Localization\
+    \ via ultra-wideband radios: a look at positioning aspects for future sensor networks[J].\
+    \ IEEE signal processing magazine, 2005, 22(4): 70-84.\n+   \n+   [6] Li X, Li\
+    \ S, Zhang D, et al. Dynamic-music: accurate device-free indoor localization[C]//Proceedings\
+    \ of the 2016 ACM International Joint Conference on Pervasive and Ubiquitous Computing.\
+    \ 2016: 196-207.\n+   \n+   [7] Li X, Zhang D, Lv Q, et al. IndoTrack: Device-free\
+    \ indoor human tracking with commodity Wi-Fi[C]. Proceedings of the ACM on Interactive,\
+    \ Mobile, Wearable and Ubiquitous Technologies, 2017, 1(3): 1-22.\n+   \n+   [8]\
+    \ Qian K, Wu C, Yang Z, et al. Widar: Decimeter-level passive tracking via velocity\
+    \ monitoring with commodity Wi-Fi[C]//Proceedings of the 18th ACM International\
+    \ Symposium on Mobile Ad Hoc Networking and Computing. 2017: 1-10.\n\n+   [9]\
+    \ Haibin Bian. Indoor Positioning System Based on CSI Database[D]. XIDIAN UNIVERSITY,\
+    \ 2017.\n+   \n+   [10] Sanam T F, Godrich H. FuseLoc: A CCA based information\
+    \ fusion for indoor localization using CSI phase and amplitude of WiFi signals[C]//ICASSP\
+    \ 2019-2019 IEEE International Conference on Acoustics, Speech and Signal Processing\
+    \ (ICASSP). IEEE, 2019: 7565-7569.\n+   \n+   [11] Zhang J, Xiao W, Li Y. Data\
+    \ and knowledge twin driven integration for large-scale device-free localization[J].\
+    \ IEEE Internet of Things Journal, 2020, 8(1): 320-331.\n+   \n+   [12] Halperin\
+    \ D, Hu W, Sheth A, et al. Tool Release: Gathering 802.11n Traces with Channel\
+    \ State Information[J]. ACM SIGCOMM Computer Communication Review, 2011, 41(1):53.\n\
+    +   \n+   [13] Zhang J, Li Y, Xiao W. Integrated Multiple Kernel Learning for\
+    \ Device-Free Localization in Cluttered Environments Using Spatiotemporal Information[J].\
+    \ IEEE Internet of Things Journal, 2020.\n+   \n+   [14] Zhang J, Xiao W, Li Y,\
+    \ et al. Multilayer probability extreme learning machine for device-free localization[J].\
+    \ Neurocomputing, 2020, 396: 383-393.\n+   \n+   [15] Zhang J, Li Y, Xiao W, et\
+    \ al. Robust extreme learning machine for modeling with unknown noise[J]. Journal\
+    \ of the Franklin Institute, 2020, 357(14): 9885-9908."
+  md: '
+
+    where G† is the Moore-Penrose generalized inverse of the matrix of G.
+
+
+    ## III. SYSTEM DESIGN
+
+
+    ### A. Overall Architecture
+
+    The framework of the CSI-based localization system is shown in Fig. 2. CSI Tools
+    first collect the CSI samples, then the CSI is pre-processed. After that the features
+    are extracted using DTW and fed into ELM to train the model. The test set is processed
+    in the same way to obtain the features, and then the test results are obtained.
+
+
+    ![](img/bc94f492e7e471f80902b1c5ae1db01e_2_0.png)
+
+
+    Fig.2 The framework of the localization system.
+
+
+    ### B. Data Preprocessing
+
+    The raw CSI data collected contains typical errors such as useful channel state
+    information and measurement errors and certain outliers formed by interference
+    from equipment or uncertainties that interfere with localization using CSI. We
+    apply a hampel filter with a sliding window on each subcarrier to remove outliers
+    that are usually significantly different from neighboring CSI measurements. In
+    addition, we apply a moving average filter to remove high-frequency noise.
+
+
+    ### C. Feature Extraction
+
+    DTW is a dynamic programming algorithm that calculates the similarity of two time
+    series, especially those of different lengths. It is mainly applied to temporal
+    data, such as isolated word speech recognition, gesture recognition, data mining
+    and information retrieval. In fingerprint localization, fingerprints are almost
+    always based on individual data and rarely generate a fingerprint for localization
+    based on a segment of data. DTW calculates the difference between the target at
+    different reference points and the target which is not in the environment to obtain
+    fingerprints, which effectively extracts the overall characteristics of the data.
+
+
+    ## IV. EVALUATIONS
+
+
+    ### A. Experimental Setup
+
+    We deployed the system in an 802.11n WiFi network that consisted of two WiFi devices
+    (i.e. mini-pc) and a commercial wireless access point (i.e. TP-Link WDR5300 with
+    antennas running on the 5.24 GHz channel). mini-pc was equipped with an Intel
+    WiFi Link 5300 card for measuring CSI and three external antennas. To evaluate
+    our system, we conducted experiments in the activity room. We
+
+
+    TABLE I. LOCALIZATION PERFORMANCE
+
+
+    | Method | Mean error |
+
+    | ELM | 1.1243m |
+
+    | BPNN | 1.3789m |
+
+    | SVM | 1.3345m |
+
+
+    used a scheme of 1 AP and 2 MPs for better coverage of the area of interest. We
+    selected reference locations uniformly within the monitored area. The area was
+    divided into 64 cells, each with a size of 0.6 m*0.6 m. The reference points were
+    set in each cell’s center, and the test points were randomly scattered throughout
+    the area. One hundred packets were collected at each location.
+
+
+    ### B. Localization Performance
+
+    We used the average distance error as the performance metric. The results of comparing
+    our system with the other two machine learning methods are shown in Table I. It
+    can be seen that our method outperforms SVM and BPNN, proving the effectiveness
+    of the ELM algorithm and the localization accuracy can be greatly improved by
+    using DTW to extract features.
+
+
+    ## V. CONCLUSION
+
+    In this paper, we propose a device-free indoor localization method based on WiFi
+    CSI, using two common commercial WiFi devices and a single receiver device to
+    collect CSI data, pre-processing the collected CSI data to extract features using
+    DTW, and then using ELM model for localization. The method was evaluated in a
+    laboratory environment and experimental results showed that the method was superior
+    to SVM and BPNN. The average distance error was 1.12m in a typical indoor environment.
+
+
+    ## ACKNOWLEDGMENT
+
+    This work was supported in part by the National Key Research and Development Program
+    of China under Grant 2017YFB1401203, the Beijing Key Research and Development
+    Program under Grant Z191100007519001 and Foshan Science and Technology Innovation
+    Program under Grant BK20AF005.
+
+
+    ## REFERENCES
+
+    [1] Liu H, Darabi H, Banerjee P, et al. Survey of wireless indoor positioning
+    techniques and systems[J]. IEEE Transactions on Systems, Man, and Cybernetics,
+    Part C (Applications and Reviews), 2007, 37(6): 1067-1080.
+
+
+    [2] Gellersen H, Kortuem G, Schmidt A, et al. Physical prototyping with smart-its[J].
+    IEEE Pervasive computing, 2004, 3(3): 74-82.
+
+
+    [3] Harle R K, Hopper A. Deploying and evaluating a location-aware system[C]//Proceedings
+    of the 3rd international conference on Mobile systems, applications, and services.
+    2005: 219-232.
+
+
+    [4] Cai Q, Aggarwal J K. Automatic tracking of human motion in indoor scenes across
+    multiple synchronized video streams[C]//Sixth International Conference on Computer
+    Vision (IEEE Cat. No. 98CH36271). IEEE, 1998: 356-362.
+
+
+    [5] Gezici S, Tian Z, Giannakis G B, et al. Localization via ultra-wideband radios:
+    a look at positioning aspects for future sensor networks[J]. IEEE signal processing
+    magazine, 2005, 22(4): 70-84.
+
+
+    [6] Li X, Li S, Zhang D, et al. Dynamic-music: accurate device-free indoor localization[C]//Proceedings
+    of the 2016 ACM International Joint Conference on Pervasive and Ubiquitous Computing.
+    2016: 196-207.
+
+
+    [7] Li X, Zhang D, Lv Q, et al. IndoTrack: Device-free indoor human tracking with
+    commodity Wi-Fi[C]. Proceedings of the ACM on Interactive, Mobile, Wearable and
+    Ubiquitous Technologies, 2017, 1(3): 1-22.
+
+
+    [8] Qian K, Wu C, Yang Z, et al. Widar: Decimeter-level passive tracking via velocity
+    monitoring with commodity Wi-Fi[C]//Proceedings of the 18th ACM International
+    Symposium on Mobile Ad Hoc Networking and Computing. 2017: 1-10.
+
+
+    [9] Haibin Bian. Indoor Positioning System Based on CSI Database[D]. XIDIAN UNIVERSITY,
+    2017.
+
+
+    [10] Sanam T F, Godrich H. FuseLoc: A CCA based information fusion for indoor
+    localization using CSI phase and amplitude of WiFi signals[C]//ICASSP 2019-2019
+    IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP).
+    IEEE, 2019: 7565-7569.
+
+
+    [11] Zhang J, Xiao W, Li Y. Data and knowledge twin driven integration for large-scale
+    device-free localization[J]. IEEE Internet of Things Journal, 2020, 8(1): 320-331.
+
+
+    [12] Halperin D, Hu W, Sheth A, et al. Tool Release: Gathering 802.11n Traces
+    with Channel State Information[J]. ACM SIGCOMM Computer Communication Review,
+    2011, 41(1):53.
+
+
+    [13] Zhang J, Li Y, Xiao W. Integrated Multiple Kernel Learning for Device-Free
+    Localization in Cluttered Environments Using Spatiotemporal Information[J]. IEEE
+    Internet of Things Journal, 2020.
+
+
+    [14] Zhang J, Xiao W, Li Y, et al. Multilayer probability extreme learning machine
+    for device-free localization[J]. Neurocomputing, 2020, 396: 383-393.
+
+
+    [15] Zhang J, Li Y, Xiao W, et al. Robust extreme learning machine for modeling
+    with unknown noise[J]. Journal of the Franklin Institute, 2020, 357(14): 9885-9908.
+
+    '
+  mdcn: '
+
+    其中 G† 是矩阵 G 的 Moore-Penrose 广义逆。
+
+
+    ## III. 系统设计
+
+
+    ### A. 总体架构
+
+    CSI 基于定位系统的框架如图 2 所示。CSI Tools 首先采集 CSI 样本，然后对 CSI 进行预处理。之后使用 DTW 提取特征并输入 ELM
+    进行模型训练。测试集以相同方式处理以获得特征，然后得到测试结果。
+
+
+    ![](img/bc94f492e7e471f80902b1c5ae1db01e_2_0.png)
+
+
+    Fig.2 定位系统的框架。
+
+
+    ### B. 数据预处理
+
+    采集的原始 CSI 数据包含典型的误差，例如有用的信道状态信息和测量误差，以及由设备干扰或不确定性形成的某些异常值，这些异常值会干扰使用 CSI 进行定位。我们在每个子载波上应用滑动窗口的
+    Hampel 滤波器，以去除通常与相邻 CSI 测量值显著不同的异常值。此外，我们应用移动平均滤波器以去除高频噪声。
+
+
+    ### C. 特征提取
+
+    DTW 是一种动态规划算法，用于计算两个时间序列的相似度，尤其是长度不同的序列。它主要应用于时序数据，例如孤立词语音识别、手势识别、数据挖掘和信息检索。在指纹定位中，指纹几乎总是基于单个数据，很少基于一段数据生成用于定位的指纹。DTW
+    计算不同参考点处的目标与不在环境中的目标之间的差异以获得指纹，有效地提取了数据的整体特征。
+
+
+    ## IV. 评估
+
+
+    ### A. 实验设置
+
+    我们在由两个 WiFi 设备（即 mini-pc）和一个商用无线接入点（即运行在 5.24 GHz 信道上的 TP-Link WDR5300 带天线）组成的
+    802.11n WiFi 网络中部署了系统。mini-pc 配备了用于测量 CSI 的 Intel WiFi Link 5300 卡和三个外部天线。为了评估我们的系统，我们在活动室中进行了实验。我们
+
+
+    表 I. 定位性能
+
+
+    | Method | Mean error |
+
+    | ELM | 1.1243m |
+
+    | BPNN | 1.3789m |
+
+    | SVM | 1.3345m |
+
+
+    我们采用 1 个 AP 和 2 个 MP 的方案以更好地覆盖感兴趣区域。我们在监控区域内均匀选择参考位置。区域被划分为 64 个单元，每个单元大小为 0.6
+    m*0.6 m。参考点设置在每个单元的中心，测试点随机散布在整个区域内。每个位置收集一百个数据包。
+
+
+    ### B. 定位性能
+
+    我们使用平均距离误差作为性能指标。将我们的系统与其他两种机器学习方法进行比较的结果如表 I 所示。可以看出，我们的方法优于 SVM 和 BPNN，证明了 ELM
+    算法的有效性，并且使用 DTW 提取特征可以大大提高定位精度。
+
+
+    ## V. 结论
+
+    在本文中，我们提出了一种基于 WiFi CSI 的无设备室内定位方法，使用两个常见的商用 WiFi 设备和一个接收设备收集 CSI 数据，对收集的 CSI
+    数据进行预处理，使用 DTW 提取特征，然后使用 ELM 模型进行定位。该方法在实验室环境中进行了评估，实验结果表明该方法优于 SVM 和 BPNN。在典型的室内环境中，平均距离误差为
+    1.12m。
+
+
+    ## 致谢
+
+    本工作部分得到国家重点研发计划项目 2017YFB1401203、北京市重点研发计划项目 Z191100007519001 和佛山科技创新计划项目 BK20AF005
+    的支持。
+
+
+    ## 参考文献
+
+    [1] Liu H, Darabi H, Banerjee P, et al. 无线室内定位技术与系统的综述[J]. IEEE Transactions on
+    Systems, Man, and Cybernetics, Part C (Applications and Reviews), 2007, 37(6):
+    1067-1080.
+
+
+    [2] Gellersen H, Kortuem G, Schmidt A, et al. 使用 smart-its 的物理原型制作[J]. IEEE Pervasive
+    computing, 2004, 3(3): 74-82.
+
+
+    [3] Harle R K, Hopper A. 部署和评估一个位置感知系统[C]//Proceedings of the 3rd international
+    conference on Mobile systems, applications, and services. 2005: 219-232.
+
+
+    [4] Cai Q, Aggarwal J K. 跨多个同步视频流的室内场景中人体运动的自动跟踪[C]//Sixth International Conference
+    on Computer Vision (IEEE Cat. No. 98CH36271). IEEE, 1998: 356-362.
+
+
+    [5] Gezici S, Tian Z, Giannakis G B, et al. 通过超宽带无线电进行定位：未来传感器网络定位方面的展望[J]. IEEE
+    signal processing magazine, 2005, 22(4): 70-84.
+
+
+    [6] Li X, Li S, Zhang D, et al. Dynamic-music: 精确的无设备室内定位[C]//Proceedings of the
+    2016 ACM International Joint Conference on Pervasive and Ubiquitous Computing.
+    2016: 196-207.
+
+
+    [7] Li X, Zhang D, Lv Q, et al. IndoTrack: 基于商用 Wi-Fi 的无设备室内人体跟踪[C]. Proceedings
+    of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, 2017,
+    1(3): 1-22.
+
+
+    [8] Qian K, Wu C, Yang Z, et al. Widar: 基于商用 Wi-Fi 的速度监测分米级被动跟踪[C]//Proceedings
+    of the 18th ACM International Symposium on Mobile Ad Hoc Networking and Computing.
+    2017: 1-10.
+
+
+    [9] Haibin Bian. 基于 CSI 数据库的室内定位系统[D]. XIDIAN UNIVERSITY, 2017.
+
+
+    [10] Sanam T F, Godrich H. FuseLoc: 基于 CCA 的 WiFi 信号 CSI 相位和幅度的室内定位信息融合[C]//ICASSP
+    2019-2019 IEEE International Conference on Acoustics, Speech and Signal Processing
+    (ICASSP). IEEE, 2019: 7565-7569.
+
+
+    [11] Zhang J, Xiao W, Li Y. 数据与知识双驱动的大规模无设备定位集成[J]. IEEE Internet of Things Journal,
+    2020, 8(1): 320-331.
+
+
+    [12] Halperin D, Hu W, Sheth A, et al. 工具发布：使用信道状态信息采集 802.11n 轨迹[J]. ACM SIGCOMM
+    Computer Communication Review, 2011, 41(1):53.
+
+
+    [13] Zhang J, Li Y, Xiao W. 利用时空信息在杂乱环境中进行无设备定位的集成多核学习[J]. IEEE Internet of Things
+    Journal, 2020.
+
+
+    [14] Zhang J, Xiao W, Li Y, et al. 用于无设备定位的多层概率极限学习机[J]. Neurocomputing, 2020,
+    396: 383-393.
+
+
+    [15] Zhang J, Li Y, Xiao W, et al. 用于未知噪声建模的鲁棒极限学习机[J]. Journal of the Franklin
+    Institute, 2020, 357(14): 9885-9908.
+
+    '
+  merge: 1
