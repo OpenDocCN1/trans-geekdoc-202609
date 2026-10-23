@@ -1,0 +1,1 @@
+In *Writing An Interpreter In Go* we had additional, built-in functions to perform operations with the data structures: accessing the first and last elements, getting the number of elements, and so on. They are very useful and we’re going implement them in our new Monkey compiler and virtual machine too. But before we can add built-in functions, we need to implement functions.

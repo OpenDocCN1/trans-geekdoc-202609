@@ -1,0 +1,1 @@
+Of course, things get more complicated once we introduce functions and local variables, but that’s a bridge we’ll cross once we get there. For now, let’s head on over to our compiler.
