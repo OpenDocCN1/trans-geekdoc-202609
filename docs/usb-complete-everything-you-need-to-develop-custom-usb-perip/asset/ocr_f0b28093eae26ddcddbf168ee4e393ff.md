@@ -1,0 +1,1 @@
+bus transfers is less critical. Data compression can also help by reducing the amount of data that must transfer.

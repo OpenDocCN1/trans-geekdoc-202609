@@ -1,0 +1,11 @@
+NET2272, the CPU accesses the buffers by reading and writing to registers, while others, such as Cypress Semiconductor’s EZ-USB, reserve a portion of data memory for the buffers.
+
+Buffers that hold transmitted or received data are often structured as FIFO (first in, first out) buffers. Each read of a receive FIFO returns the byte that has been in the buffer the longest. Each write to a transmit FIFO stores a byte that will transmit after all of the bytes already in the buffer have transmitted. An internal pointer to the next location to be read or written to increments automatically as the firmware reads or writes to the FIFO.
+
+In some chips, such as Cypress’ enCoRe series, the USB buffers are in ordinary data memory and the firmware explicitly selects each location to read and write to. There is no pointer that increments automatically when the firmware reads or writes to the buffers. The bytes in the USB transmit buffer go out in order from the lowest address to the highest, and the bytes in a USB receive buffer are stored in the order they arrive, from lowest address to highest. These buffers technically aren’t FIFOs, but are sometimes called that anyway.
+
+To enable faster transfers, some chips have double buffers that can store two full sets of data in each direction. While one block is transmitting, the firmware can write the next block of data into the other buffer so the data will be ready to go as soon as the first block finishes transmitting. In the receive direction, the extra buffer enables a new transaction’s data to arrive before the firmware has finished processing data from the previous transaction. The hardware automatically switches, or ping-pongs, between the two buffers. Some high-speed controllers, such as Cypress’ EZ-USB FX2 series, support quadruple buffers.
+
+# Configuration, Status, and Control Information
+
+USB controller chips typically have registers that hold information about what endpoints are enabled, the number of bytes received, the number of bytes ready to transmit, Suspend-state status, error-checking information, and other information about how the interface will be used and the current status of transmitted or received data. For example, setting a bit in a config-

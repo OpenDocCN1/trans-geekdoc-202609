@@ -1,0 +1,302 @@
+
+## F
+- Feature items, 356, 357, 358–60
+- Feature reports
+  - Main item types in, 356, 357, 358–60
+  - reading from devices, 404–5
+  - transfer types, 389, 389
+  - writing to devices, 402–4
+- fields, packet, 499–501, 500
+- FireWire 800 vs. USB, 3
+- firmware, defined, 146. See also device drivers
+- flash memory, 146
+- 480 Megabits/sec, 512
+- Frame Number field, 500, 501
+- frames
+  - in bulk transfers, 71
+  - in control transfers, 66, 67
+  - defined, 24, 35
+  - and frame numbers, 48, 501
+  - illustrated, 35
+  - in interrupt transfers, 74–5
+  - IrDA, 206, 207
+  - in isochronous transfers, 76–80
+  - role in USB transfer, 35–6
+  - in split transactions, 443
+  - and timing accuracy, 499
+  - in transactions, 48, 50, 66
+- Freescale Semiconductor
+  - 68HC05JB3/4 chip, 155
+  - 68HC08JB8 chip, 155
+  - MC68HC08 family, 164
+  - MCF5482 ColdFire, 155, 164
+- FTDI. See Future Technology Devices International (FTDI)
+- full speed, defined, 5
+- full-speed bus states, 490–2
+- full-speed transceivers, 508–12
+- functions, defined, 19, 21
+- Future Technology Devices International (FTDI)
+  - D2XX Direct driver, 421, 422, 423–4, 424–6, 425
+  - FT232BM, 166, 170, 171, 173, 174–6, 227–9, 228
+  - in bulk transfer example, 408, 409, 410, 411–13, 414
+  - FT245BM, 166, 170, 171, 172, 174–6
+  - in bulk example, 414, 415, 416, 417, 418–21, 421
+  - improving chip performance, 426–9
+  - Virtual COM Port Driver, 174, 227, 421
+
+## G
+- galvanic isolation, 529–30
+- generic drivers, 231, 239, 248
+- GenInf tool, 277
+- Get_Bus_State request, 451, 452
+- Get_Configuration request, 128, 135, 452
+- Get_Descriptor request, 94, 128, 133, 452
+- Get_Hub_Descriptor request, 451
+- Get_Hub_Status request, 451, 452, 453
+- Get_Idle request, 331, 333
+- Get_Interface request, 128, 137, 452
+- Get_Port_Status request, 444, 451, 452, 454
+- Get_Protocol request, 331, 334
+- Get_Report request, 331, 332
+- Get_Status request, 128, 129, 444, 452, 460
+- Get_TT_State request, 451, 452
+- Global item type
+  - defined, 361
+  - Logical Maximum item, 362, 364–5
+  - Logical Minimum item, 362, 364–5
+  - Physical Maximum item, 362, 365, 366
+  - Physical Minimum item, 362, 365, 366
+  - Pop item, 362, 370
+  - Push item, 362, 369
+  - Report Count item, 362, 369
+  - Report ID item, 361–3, 362
+  - Report Size item, 362, 369
+  - Reserved item, 362
+  - Unit Exponent item, 365, 366
+  - Unit item, 362, 366
+  - Usage Page item, 362, 363–4
+- Globally Unique Identifiers. See GUIDs (Globally Unique Identifiers)
+- Gold Tree testing configuration, 482, 483, 484
+- GPIB interface vs. USB, 3
+- GUIDs (Globally Unique Identifiers)
+  - about, 249–50
+  - device interface, 249, 251–2, 292, 293
+  - device setup, 249, 250–1, 252, 259, 260, 267
+  - in Windows registry, 259, 260, 267
+
+## H
+- handles, communication
+  - closing, 306
+  - opening, 303–6
+- handshake packets, *44, 45, 46, 47, 48, 50, 52, 53, 120, 122, 123–4*
+- handshake phase, transactions. *See* handshake packets
+- handshaking
+  - about, 51–2
+  - hardware *vs.* software, 51–2
+  - status codes, 52–5, 53
+- hardware IDs, 272, 274
+- hardware keys, Windows registry, 258, 258–9, 261, 279–80
+- hardware protocol analyzers, *472, 472–5, 474, 475*
+- Hewlett-Packard
+  - and USB 2.0 specification, 14
+  - and Wireless USB Promoter Group, 533
+- HID Descriptor Tool, 352, 353
+- HidD_FlushQueue Information, 379, 381
+- HidD_FreePreparedData API function, 377, 406
+- HidD_GetAttributes API function
+  - about, 384
+  - in Visual Basic code, 382–3
+  - in Visual C++ code, 381–2
+- HidD_GetFeature API function
+  - about, 378, 404, 405
+  - defined, 379
+  - in Visual Basic code, 405
+  - in Visual C++ code, 404
+- HidD_GetHidGuid API function
+  - defined, 292, 381
+  - in Visual Basic code, 293
+  - in Visual C++ code, 292
+- HidD_GetIndexedString API function, 378
+- HidD_GetInputReport API function, 378, 379, 405
+- HidD_GetManufacturerString API function, 378
+- HidD_GetNumInputBuffers API function, 381
+- HidD_GetPhysicalDescriptor API function, 377
+- HidD_GetPreparsedData API function, 376, 377, 388, 406
+  - about, 384, 385
+  - in Visual Basic code, 385
+  - in Visual C++ code, 384
+- HidD_GetProductString API function, 378
+- HidD_GetSerialNumberString API function, 378
+- HidD_SetFeature API function
+  - about, 378, 402, 403–4
+  - defined, 379
+  - in Visual Basic code, 403
+  - in Visual C++ code, 402
+- HidD_SetNumInputBuffers API function, 379, 381, 400
+- HidD_SetOutputReport API function, 378, 379
+- HidP_GetButtonCaps API function, 376, 377, 388
+- HidP_GetButtons API function, 379, 380
+- HidP_GetButtonsEx API function, 380
+- HidP_GetCaps API function
+  - about, 385, 388
+  - defined, 377
+  - reading feature reports from devices, 405
+  - reading input reports from devices, 393, 400
+  - requesting HID information, 376
+  - in Visual Basic code, 387
+  - in Visual C++ code, 386
+  - writing feature reports to devices, 403
+  - writing output reports to devices, 392
+- HidP_GetData API function, 380
+- HidP_GetExtendedAttributes API function, 377
+- HidP_GetLinkCollectionNodes API function, 377
+- HidP_GetScaleUsageValue API function, 380
+- HidP_GetSpecificButtonCaps API function, 377
+- HidP_GetSpecificValueCaps API function, 377
+- HidP_GetUsages API function, 380
+- HidP_GetUsagesEx API function, 380
+- HidP_GetUsageValue API function, 379, 380
+- HidP_GetUsageValueArray API function, 380
+- HidP_GetValueCaps API function, 377, 388
+- HidP_InitializeReportForID API function, 380
+- HidP_IsSameUsageAndPage API function, 377
+- HidP_MaxDataListLength API function, 377
+- HidP_MaxUsageListLength API function, 377
+- HidP_SetButtons API function, 379, 380
+- HidP_SetData API function, 380
+- HidP_SetScaledUsageValue API function, 380
+- HidP_SetUsages API function, 380
+- HidP_SetUsageValue API function, 379, 380
+- HidP_SetUsageValueArray API function, 380
+- HidP_TranslateUsagesToI8042ScanCodes API function, 377
+- HidP_UnsetButtons API function, 379, 380
+- HidP_UnsetUsages API function, 380
+- HidP_UsageAndPageListDifference API function, 377
+- HidP_UsageListDifference API function, 377
+- HidRegisterMinidriver API function, 381
+- HIDs. See also Human Interface Device (HID) class; reports, HID
+  - abilities, 320–1
+  - about, 320–1
+  - API function overview, 375–9
+  - API functions for managing communications, 379, 381
+  - class descriptor, 326–8, 327
+  - descriptor example, 323, 324–5
+  - designating devices as, 226–7
+  - firmware requirements, 323
+  - hardware requirements, 321–3
+  - identifying devices as, 323, 324–5, 325–30, 327, 329
+  - limitations, 320–1
+  - list of requests, 331, 332–7
+  - receiving reports via control transfers, 347–8, 349
+  - receiving reports via interrupt transfers, 343, 344, 345
+  - report descriptors, 328–30
+  - requesting information about, 376, 377, 378
+  - role of human interface in, 320
+  - sending reports via control transfers, 345, 346, 347, 348
+  - sending reports via interrupt transfers, 340, 341, 342
+  - vendor-specific example, 323, 324–5, 325
+- HID Usage Tables document, 354
+- high-speed, defined, 5, 15–16
+- high-speed bus states, 492–4
+- High-speed Data J bus state, 493
+- High-speed Data K bus state, 493
+- High-speed Differential 1 bus state, 492
+- High-speed Differential 2 bus state, 492
+- High-speed Disconnect bus state, 494
+- High-speed Idle bus state, 494
+- High-speed Squelch bus state, 494
+- high-speed transceivers, 512–17
+- HNP (Host Negotiation Protocol), 539–41, 545
+- host computers
+  - about, 17
+  - bus speed support, 36–7
+  - configurations for connecting USB devices, 19, 20, 29
+  - defined, 17
+  - enumeration process, 86–93
+  - hardware and software requirements, 22–3
+  - PC-to-PC communication, 229–30, 230
+  - power issues, 24–5, 460, 460, 462, 463, 467–9, 468
+  - speed-limiting factors, 82–4
+  - support as necessary element for USB devices, 29
+  - transfer responsibilities, 35–6
+  - what they do, 22–5
+- host-controller drivers
+  - about, 23, 240
+  - in layered driver model, 239, 241–2
+  - from Microsoft, 479
+  - for OHCI controller type, 241–2
+  - role in data communication flow, 245, 246
+  - from Transdimension, 548
+  - for UHCI controller type, 241–2
+- host controllers, 17, 19, 22, 23
+- Host Negotiation Protocol (HNP), 539–41, 545
+- host wire adapter (HWA), 533
+- hub class, 178, 179, 276, 448–54, 451
+- hub-class descriptor, 449–50
+- hub-class requests, 444, 451, 451–2, 453
+- hub controllers, 444–5
+- hub drivers, 239, 240, 246, 272, 275. See also bus drivers
+- hubs. See also root hub
+  - 1.0 descriptors, 448
+  - 2.0 descriptors, 448
+  - about, 21, 433–4, 434
+  - bus-powered, 434, 461–2, 463
+  - cable-length issues, 447–8
+  - defined, 21
+  - enumeration process, 91
+  - low-power, 459–60, 461
+  - over-current condition, 462–3
+  - power options, 461–3
+  - power switching support, 463
+  - role of hub controller, 444–5
+  - role of repeaters, 435–8, 436
+  - role of transaction translators, 438–44, 439
+  - self-powered, 462
+  - in series, 447–8
+  - speed issue, 445–7, 446
+  - in tiered-star topology, 18, 18–19
+- Human Interface Device (HID) class, 179, 203–6, 251, 276, 319. See also HIDs
+- HWA (host wire adapter), 533
+
+## I
+- I²C interface vs. USB, 3
+- icon, USB, 522, 523. See also logo, USB
+- Idle bus state, 491. See also High-speed Idle bus state
+- IEEE-488 interface vs. USB, 3
+- IEEE-1394a interface vs. USB, 10
+- IEEE-1394b interface vs. USB, 3, 10
+- IEEE-1394 interface vs. USB, 16–17
+- Imaging Device device setup class, 251
+- INF files
+  - about, 262–3
+  - for classes of devices, 276–7
+  - ClassInstall32 section, 267–8
+  - copyright comment, 266
+  - deleting, 278–9
+  - DestinationDirs section, 269
+  - filename conventions, 279
+  - finding, 278
+  - Install section, 270–1
+  - list of sections, 266–71
+  - manufacturer section, 268
+  - Models section, 269–70
+  - sample listing, 264–5
+  - searching for device identification strings, 272–7
+  - SourceDiskFiles section, 269
+  - SourceDiskNames section, 269
+  - Strings section, 271
+  - syntax, 265–6
+  - tools and diagnostic aids, 277–80
+  - version section, 266–7
+- Infineon, 155
+- Input items, 356, 357, 358–60
+- Input reports
+  - Main item types in, 356, 357, 358–60
+  - reading from devices, 392–401
+  - transfer types, 389, 389
+- Intel Corporation
+  - 80C186 chips, 155
+  - 8051 chips, 9, 145, 154, 155, 158, 159, 159, 160, 162, 175
+  - and UHCI standard, 241
+  - and USB 2.0 specification, 14
+  - and Wireless USB Promoter Group, 533

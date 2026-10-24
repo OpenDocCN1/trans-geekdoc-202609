@@ -1,0 +1,11 @@
+Each transfer consists of one or more transactions. Control transfers always have multiple transactions because they have multiple stages, each consisting of one or more transactions. Other transfer types use multiple transactions when they have more data than will fit in a single transaction. Depending on how the host schedules the transactions and the speed of a device’s response, a transfer’s transactions may all be in a single frame or microframe, or they may be spread over multiple (micro)frames.
+
+Because all of the traffic shares a data path, each transaction must include a device address that identifies the transaction’s destination. Every device has a unique address assigned by the host, and all data travels to or from the host. Each transaction begins when the host sends a block of information that includes the address of the receiving device and a specific location, called an endpoint, within the device. Everything a device sends is in response to receiving a packet sent by the host.
+
+# Host Speed and Bus Speed
+
+USB 2.0 hosts in general-purpose PCs support low, full, and high speeds. A 1.x host supports low and full speeds only. (Special-purpose hosts, typically found in small embedded systems, don’t always support all speeds.)
+
+A 1.x hub doesn’t convert between speeds; it just passes received traffic up or down the bus, changing only the edge rate and signal polarity of traffic to and from attached low-speed devices. In contrast, a 2.0 hub acts as a remote processor with store-and-forward capabilities. The hub converts between high speed and low or full speed as needed and performs other functions that help make efficient use of the bus time. The added intelligence of 2.0 hubs is a major reason why the high-speed bus remains compatible with 1.x hardware.
+
+The traffic on a bus segment is high speed only if the device is high speed and the host controller and all hubs between the host and device are 2.0-compliant. Figure 2-2 illustrates. A high-speed bus may also have 1.x hubs, and if so, any bus segments downstream from this hub (away from the host) are low or full speed. Traffic to and from low- and full-speed devices travels at high speed between the host and any 2.0 hubs that connect to the
