@@ -1,0 +1,917 @@
+- pgno: 0
+  md: '# Monitoring and alerting the physicians related to trauma cases using behavioural
+    DL models
+
+
+    Digvijay Singhᵃ,*, Pallavi Prahladᵇ, Priyank Singhalᶜ, Rajesh Guptaᵈ, Meghna Pooniaᵉ,
+    Jyotirmaya Sahooᶠ
+
+
+    ᵃ School of Engineering and Computing, Dev Bhoomi Uttarakhand University, Dehradun,
+    Uttarakhand, India
+
+    ᵇ Department of Psychology, School of Sciences, Jain (Deemed to be University),
+    Bangalore, India
+
+    ᶜ College of Computing Science and Information Technology, Teerthankar Mahaveer
+    University, Moradabad, Uttar Pradesh, India
+
+    ᵈ Department of Management, Sanskriti University, Mathura, Uttar Pradesh, India
+
+    ᵉ Department of Physiology, Jaipur National University, Jaipur, India
+
+    ᶠ Department of Pharmacy, Arka Jain University, Jamshedpur, Jharkhand, India
+
+
+    # ARTICLE INFO
+
+
+    +   **Keywords:**
+
+    +   - Internet of things (IoT)
+
+    +   - Machine learning
+
+    +   - Deep convolutional neural network (DCNN)
+
+    +   - Healthcare
+
+    +   - Monitoring system
+
+    +   - Altering system
+
+
+    # ABSTRACT
+
+
+    Presently Every nation places a high value on healthcare due to the rise in trauma
+    instances. The ideal approach in this case is thought to be an Internet of Things
+    (IoT) based health monitoring system. A novel approach using internet technology,
+    the Internet of Things (IoT) is an increasing study area, mainly in the field
+    of healthcare. The rising use of wearable sensors and cellphones has allowed these
+    remote health care monitoring systems to grow at such a rapid rate. IoT health
+    monitoring helps patients receive the appropriate care for their present level
+    of health even when a physician is far away. The notion of the IoT and deep learning
+    are combined in this study to present a systematic method to identify trauma instances
+    more effectively. By utilizing some of the biological information from the patient’s
+    body, such as temperature, heart rate, and other factors, this approach presents
+    an overview of the IoT and is also used to monitor health status and identify
+    symptoms in the human body. For fall detection using sensor nodes, the Deep Convolutional
+    Neural Network (DCNN) analyses individuals’ motion and architecture. The suggested
+    method may be put in place for less money but has significant potential to identify
+    symptoms by giving patients and suspected cases the care they need and reacting
+    to life-or-death circumstances. Metrics such as precision, recall, F-measure,
+    and accuracy are utilized to evaluate the results when applying classification
+    algorithms. When compared to techniques like the Decision Tree (DT), Support Vector
+    Machine (SVM), and K Nearest Neighbour (k-NN), the findings show that it has been
+    very successful.
+
+
+    # 1. Introduction
+
+
+    People are developing chronic illnesses at a significant pace in the expanding
+    global population. Daily cigarette use, alcohol intake, excessive stress, lack
+    of physical exercise, and other factors are the primary causes of this [1]. A
+    crucial part of everyday living is healthcare. With the right care, health problems
+    may be diagnosed diagonally and avoided at an early stage [2]. Using numerous
+    diagnostic tools like CT, MRI, and PET, among others, it is simple to identify
+    the anomalies that are present inside of us or under the skin. Additionally, early
+    detection and prevention of certain rare disorders, such as heart problems and
+    techniques are quite simple. The heart rate, body temperature, blood oxygen levels,
+    etc., are crucial factors in trauma disorders. Patient monitoring systems allow
+    doctors to keep an eye on multiple patients at once [3].
+
+
+    It is always a better idea to use remote health monitoring technologies to keep
+    a check on these trauma victims in those locations where the outbreak is prevalent.
+    The present solution is an Internet of Things-based health monitoring system [4].
+    Fig. 1 demonstrates the developing technology of the intersection of IoT and Machine
+    Learning [5]. Intelligent services are being created to quickly analyze and apply
+    massive amounts of data using machine learning to deliver easy user experiences
+    and enhance system performance. These services gather data on human activities
+    using a variety of sensors from IoT devices.
+
+
+    * Corresponding author.
+
+
+    **E-mail addresses:** socse.digvijaysingh@dbuu.ac.in (D. Singh), pallavi@jainuniversity.ac.in
+    (P. Prahlad), priyanksinghal@gmail.com (P. Singhal), prochancellor@sanskriti.edu.in
+    (R. Gupta), meghnapoonia@gmail.com (M. Poonia), dr.jyotirmaya@arkajainuniversity.ac.in
+    (J. Sahoo).
+
+
+    https://doi.org/10.1016/j.measen.2023.100890
+
+
+    Received 26 April 2023; Received in revised form 18 July 2023; Accepted 16 August
+    2023
+
+    Available online 18 August 2023
+
+
+    2665-9174/© 2023 Published by Elsevier Ltd. This is an open access article under
+    the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 2. Literature review
+
+
+    These convergence technologies primarily interest healthcare. IoT technology may
+    enhance patient care and allow sensors to gather vast volumes of medical data
+    and illness data [6].
+
+
+    Systems may automatically learn from experience and become more effective due
+    to machine learning, which eliminates the need for explicit programming. Artificial
+    intelligence is being used in this state. Supervised learning, unsupervised learning,
+    semi-supervised learning, and reinforcement learning are common categories for
+    machine learning techniques [7]. With the integration of ML with IoT devices,
+    monitoring, managing, and analysing medical information are made simpler. To analyze
+    complicated illnesses, many deep learning methods have been developed. The following
+    categories may be used to categorize various kinds of neural networks. Network
+    with Feedforward Processing [8], Recurrent Neural Network (RNN) [9], Radial Basis
+    Function Neural Network [10], Kohonen Self-Organizing Neural Network [11] and
+    Modular Neural Network [12]. Deep Neural Networks are implemented in the following
+    popular ways: Sparse Autoencoders [13], Convolution Neural Networks (CNNs or ConvNets)
+    [14], Restricted Boltzmann Machines (RBMs) [15], and Long Short-Term Memory (LSTM)
+    [16].
+
+
+    Data science, which also includes statistics and predictive modelling, contains
+    machine learning as a crucial component. The use of machine learning in data science
+    is very advantageous since it expedites and simplifies the process of gathering,
+    analysing, and interpreting massive volumes of data. There is currently no recognized
+    method in this area that can effectively track the condition of trauma in the
+    human body. As a consequence, trauma patients were unable to obtain the appropriate
+    care when it was needed. In order to identify biological and environmental data,
+    the implanted numerous sensors demonstrated high accuracy. Raspberry Pi and Arduino
+    modules may upload data to the cloud network or cloud storage for extended periods
+    of time.
+
+
+    Combining the ideas of IoT and Deep Learning, the study more effectively provided
+    solutions to the problems. The severity of the patients is predicted using a DL
+    method combined. The system can continue the real-time connection with the trauma
+    sufferers because of the data''s aggregation by IoT devices. By using some biological
+    information from the patient''s body, like body temperature, heart rate, etc.,
+    it is primarily used to track the patient''s overall health and to assess the
+    severity of trauma cases. The findings show that when compared to current approaches,
+    the proposed system has high monitoring and alerting with the ability to give
+    healthcare and emergency medical help to patients.
+
+
+    Ru et al. [17] A new algorithm is being presented that aims to integrate IoT technology
+    with health monitoring, create specific time adjustments, and permit device connectivity.
+    The suggested technique aims to identify different health monitoring devices worn
+    by individuals to track physical. The health monitoring system is established
+    using the information that is gathered and wireless sensors. Real-time monitoring
+    is accomplished by combining the data with the aid of IoT for connecting, processing,
+    and computing. The temperature is monitored using a temperature thermometer, and
+    the monitoring system calculates the average, which shows that the system has
+    been tested and established as reliable and stable. Similar to the findings of
+    the medical pulse meter, the ECG and pulse rate tests were also performed. The
+    matching system, semantic recognition, and reasonably accurate character mating
+    system are used to get the physiological information. Finally, the study finds
+    that the IoT-based human monitoring system gives individuals access to daily health
+    management and helps to raise the level and quality of healthcare services.
+
+
+    Philip et al. [18] IoT was offered as a new technique for home health monitoring
+    systems in order to increase quality of life while also reducing the need for
+    hospitalization and associated costs. The aim of the method is to improve with
+    the help of three folds: 1. The development and use of IoT based in-home remote
+    monitoring are examined from a key perspective; 2. The most recent design and
+    major building elements for an IoT-based in-home remote monitoring system; 3.
+    The prediction for the future, as well as the suggestions for the various in-home
+    remote monitoring programs moving ahead. As a consequence of the performance assessment,
+    the privacy, scalability, and security systems are all improved.
+
+
+    Valsalan et al. [19] presented here is a newly constructed algorithm for monitoring
+    healthcare utilizing Internet of Things and using a portable physiological testing
+    framework. Then continuously captured the temperature, heartbeat, and other fundamental
+    room data of the patient. Utilizing the suggested technique, monitor the patient''s
+    condition using a continuous monitoring and control system while also storing
+    the patient''s information for server-based remote communication. For authorized
+    users to access personal data saved on any IoT platform, a remote health monitoring
+    system is employed. Considering the results and from a distance, physicians diagnose
+    disorders using this system.
+
+
+    Islam et al. [20] presented real-time monitoring of a patient''s vital signs and
+    the state of their current room using an IoT environment for
+
+
+    ![](img/77743f94432d9d2ab006f7874bf18bf3_1_0.png)
+
+
+    Fig. 1. The architecture of IoT healthcare monitoring system.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'smart healthcare. Five sensors body temperature sensor, heartbeat sensor, room
+    temperature sensor, CO2 sensor, and CO sensor are utilized in the suggested technique
+    to gather information about the healthcare setting. The error percentage of the
+    developed system is within a predefined range for each circumstance. The health
+    status of the patient is communicated to medical staff via a gateway so that they
+    can process and evaluate their current state. The efficacy of the system demonstrates
+    how well the built prototype is suitable for healthcare monitoring.
+
+
+    Gómez et al. [21] To increase the benefits of MHealth (Mobile Health) apps and
+    E-Health (health care assisted by ICT), a novel approach for monitoring the patient’s
+    healthcare has been suggested using the IoT. The Internet of Things is making
+    it more possible to integrate devices that are able to connect to the Internet
+    and offer info of the patients’ health and to send to medical professionals who
+    can then aid patients. Chronic illnesses including diabetes, heart disease, and
+    high blood pressure, among others, are undoubtedly significant issues on the global
+    economic and social scale. This article’s goal is to create an architecture based
+    on an ontology that can track patient suggestions for exercise programs and health
+    checks for those with chronic illnesses.
+
+
+    Sheela and Varghese [22] proposed and developed an advanced machine learning-based
+    health monitoring system. It enables doctors to remotely monitor patients and
+    take necessary action on a regular basis. By employing wearable sensors, five
+    characteristics have been found and configured, including pressure, electrocardiogram
+    (ECG), pulse rate, temperature, and location detection. This method makes use
+    of two circuits. The receiving circuit, which is being watched over by the doctor
+    or nurse, and the sending circuit, which is with the patient. The technology uses
+    machine learning algorithms to recognize and anticipate ailments, select physicians
+    for consultation, and find doctors. The findings of the performance evaluation
+    are shown on a website for real-time monitoring and a message is also sent to
+    the relevant physician.
+
+
+    Godi et al. [23] offered a framework for IoT applications. Machine learning (ML)
+    methods are used with the e-healthcare monitoring system (EHMS) to create an advanced
+    automation system. Implementation of the input data The National Institute of
+    Diabetes EHMS with diabetes dataset is obtained from the Kaggle data center. This
+    system will link, track, and make decisions for precise diagnosis.
+
+
+    Ben Rajab et al. [24] improved the monitoring system and presented a new algorithm
+    to prevent false alerts and maintain a high degree of sensitivity. A generic model
+    for people with comparable conditions is also being built, as well as groups of
+    patients with similar disorders. With the models developed, it will be feasible
+    to categorize new cases. To achieve this, merge the k-prototypes clustering approach
+    with two incremental variants of support vector machines, namely the LASVM and
+    ISVM methodologies. The KP-ISVM, which is based on the ISVM approach and the k-prototypes,
+    is the first suggested system. The second one is known as KP-LASVM, and it maximizes
+    the profits of both LASVM and k-prototypes by minimizing the number of false positives
+    and choosing the most suitable model with which to begin the process of categorizing
+    new patients. Dealing with several data streams and adding new patients define
+    in this suggestion. In comparison to previous monitoring systems and based on
+    several assessment criteria, the KP-LASVM system, which combines LASVM with k-prototypes,
+    has generated the best outcomes. The performance of the KP-LASVM has been shown
+    by analysis of the experimental findings utilizing a real-world medical database.
+
+
+    Dahan et al. [25] initially gather data from the patient’s body via sensing devices,
+    and the information is communicated over a gateway or Wi-Fi and stored in an IoMT
+    cloud repository. A novel algorithm, known as artificial intelligence, has been
+    developed. To enhance the gathered data, the stored information is developed and
+    pre-processed. High-dimensional linear discriminant analysis (LDA) is utilized
+    to extract the features from the pre-processed data, and a multi-objective modified
+    cuckoo search algorithm (CSA) is used to pick the most optimum features. Hybrid
+    ResNet 18 and Google Net classifier (HRGC) are used to complete the prediction
+    of abnormal/normal data. The choice is taken
+
+
+    on whether or not to inform hospitals and medical staff. The anticipated findings
+    are good, and the participant data is kept online for future use. The findings
+    of the performance study demonstrate how effective the suggested method.
+
+
+    Rahman et al. [26] suggested a research-based project dubbed real-time artificial
+    approach. When there is an emergency, the suggested system offers GSM messaging,
+    live location, and the ability to send email to the doctor. In a medical emergency,
+    an automatic injection device based on artificial intelligence (AI) distributes
+    the dosage to the patient’s in the absence of a doctor. ECG monitoring, SpO2 level
+    detection, pulse rate measurement, and body temperature are the only important
+    metrics for catering initiatives. In a situation that the settings suddenly alter,
+    the specialist will be remotely presented a few parameters through the Blynk application.
+    The rescue team and family members will be informed of your whereabouts via an
+    IoT system. A system based on AL will estimate the parameters and provide the
+    dosage under dire circumstances. Table 1 displays the Comparative Analysis of
+    the Present Works.
+
+
+    # 3. Proposed methodology
+
+
+    A cloud-based network provides access to the suggested health monitoring system
+    in this research, which has been created using a mix of IoT elements and ML algorithms.
+    Several embedded sensors have been used in the system’s development to provide
+    remote health monitoring of the trauma patient. On the basis of the symptoms and
+    current biological data, it has also been developed to forecast the severity of
+    trauma cases.
+
+
+    The suggested approaches architecture is illustrated in a block diagram in Fig.
+    2. The discrete blocks, each of which represents a particular component of the
+    system may be made up of a variety of different kinds of equipment serving the
+    desired function. Maintaining communication among the patient, the cloud network,
+    and the healthcare experts is the responsibility of the Raspberry Pi, which acts
+    as the central processing unit. DL techniques are used to build the program in
+    the cloud network for predicting the existence of trauma sickness. The Arduino
+    module is linked to various kinds of embedded multiple sensors, and then the Raspberry
+    Pi is attached to it. Additionally, linked to the touchscreen display and surveillance
+    camera Raspberry Pi [27]. The Raspberry Pi is trained to analyze various sorts
+    of data using algorithms and computer vision methods. To create applications for
+    the Raspberry Pi in this system, OpenCV is used. Healthcare experts have access
+    to the cloud network where the data has been analyzed, and they may also provide
+    the patients the appropriate instructions over the network.
+
+
+    The flowchart of the IoT health system was detailed in Fig. 3, which depicts the
+    flowchart of the processes conducted during the whole procedure. It displays the
+    workflow’s sequential processes, including startup, successful protocol setup,
+    correct sensor reading, providing values to a display monitor, and storing sensor
+    data on a cloud server.
+
+
+    # 3.1. Sensors
+
+
+    ADC [28] is used to convert the analog temperature reading from the temperature
+    sensor that is linked to the analog pin of the Arduino controller into a digital
+    value, as shown in Fig. 4. The controller applies equation (1) to this digital
+    data to determine the actual temperature value in degrees Celsius:
+
+
+    temperature (°C) = [ raw ADC value × 5/4095 × (400/1000) ] × (19.5/1000)  (1)
+
+
+    The heartbeat sensor is according to the principle of light plethysmography. It
+    records variations in blood flow across any human organ that have an impact on
+    how much light passes through that organ [29]. To estimate the heat beat rate,
+    the digital pulses are sent to a mi-'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# **Table 1**
+
+
+    Comparative analysis of the existing works.
+
+
+    | Author | Methods | Results/Merits | Demerits |
+
+    |---|---|---|---|
+
+    | Ru et al. (2021) | The human health monitoring system based on the Internet
+    of Things | It provides 92% of accuracy | Security level is low |
+
+    | Islam et al. (2020) | This study suggests a smart healthcare system for an Internet
+    of Things (IoT) environment that can continuously track a patient’s vital signs
+    and the state of their current room. | For all instances of the established medical
+    system, the success percentage among observed data and actual data is roughly
+    more than 95%. | Future studies can examine additional parameters that are critical
+    for figuring out a patient’s condition, like the degree of diabetes and respiratory
+    monitoring. |
+
+    | Gómez et al. (2016) | Create a system that utilises an ontology that can track
+    health status and provide exercise advice for those with chronic conditions. |
+    The data produced by the instrument with a Cronbach’s alpha of 0.71 | It is not
+    suitable for large number of dataset |
+
+    | Sheela & Varghese (2020) | Create a machine learning-based smart health monitoring
+    system. | assists in finding physicians for consultation with and in accurately
+    identifying and predicting ailments using machine learning algorithms. | • Large
+    data sets are not a good fit for the SVM algorithm.<br>• SVM underperforms when
+    the data set contains more noise. |
+
+    | Dahan et al. (2023) | Artificial intelligence technique are used in an electronic
+    healthcare patient monitoring system. | The results showed that the suggested
+    approach has the greatest level of accuracy, at 99.69%, compared to the current
+    techniques, whose accuracy levels range from 97.32% to 98.71%. An excellent level
+    of precision (98%), recall (98%), and F1-measure (98.1%) are also provided by
+    the suggested approach. | It is not suitable for large number of dataset |
+
+
+    ![](img/77743f94432d9d2ab006f7874bf18bf3_3_0.png)
+
+
+    **Fig. 2.** The architecture diagram of the proposed method.
+
+
+    crocontroller Equation (2):
+
+
+    BPM(Beats per Minute) = 60 * f                                      (2)
+
+
+    where the pulse rate is given by the moisture and air temperature are sensed,
+    calculated, and reported by a humidity sensor. Sensors that measure humidity do
+    so by identifying changes that affect the temperature or electrical currents in
+    the air. Equations (3) and (4) below are utilized to compute relative humidity.
+
+
+    voltage = ( ADC Value/1023.0 ) * 5.0;                                      (3)
+
+
+    Percent relative humidity = (voltage − 0.958)/0.0307;                                      (4)
+
+
+    # 3.2.  IoT server
+
+
+    Sensors detect the physiological indicators as soon as the trauma patient enters
+    the treatment center grounds, and these signs are then changed to electrical signs
+    [30]. Then, an advanced electrical flag that is stored in Radio Frequency Identification
+    (RFID) is switched out for a
+
+
+    basic electrical flag [31]. Zigbee’s put protocol is an acceptable standard for
+    this framework since it allows computerized information to be communicated to
+    the local server. Smaller and more energy-efficient devices are given a higher
+    consideration. Through WLAN, data is sent from a nearby server to the therapeutic
+    server [32].
+
+
+    When the information is sent to the trauma server, it is first verified that the
+    trauma patient hasn’t already had a medical record added to it before the server
+    sends the new information to the expert. The server creates a new ID and keeps
+    the data in its database if the patient has no past therapy records [33]. The
+    trauma expert is informed of this information. Fig. 5 displays the whole data
+    transfer process via IoT.
+
+
+    # 3.3.  IoT in healthcare
+
+
+    Within telemedicine systems, IoT-based devices are equipped with body sensor networks.
+    Sensors are used to collect data for different metrics related to the ventilation
+    process of a room in order to evaluate the ventilation conditions for trauma patients
+    inside. These devices contain a specific class of nodes that may identify periodic
+    variations in patient data. The varied ranges of information for temperature,
+    pressure,'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/77743f94432d9d2ab006f7874bf18bf3_5_0.png)
+
+
+    Fig. 5. Data transmission using IoT.
+
+
+    ![](img/77743f94432d9d2ab006f7874bf18bf3_5_1.png)
+
+
+    Fig. 6. Structure of IoT in health care.
+
+
+    ![](img/77743f94432d9d2ab006f7874bf18bf3_5_2.png)
+
+
+    Fig. 7. Design of the deep learning network-based monitoring system under consideration.
+
+
+    filtering method and is auto-correlated. Consequently, a real-time signal evaluation
+    using this precision sensor is conceivable. An ECG sensor module with 12 channels
+    from BPL was utilized to measure the ECG signal. When continuous acquisition is
+    required for signal analysis, this sensor was attached to analog input pin 2 to
+    get.
+
+
+    architecture, including with output categorization from the sensors, is shown
+    in Fig. 8.
+
+
+    # 3.4.2. Transmission and data visualization module
+
+
+    The user''s smartphone also shows the measured signal and a forecast for the signal''s
+    future. Fig. 9 shows the data flow for signal monitoring. In order to calculate
+    the average signal processed by the monitoring unit, the logging time stamp was
+    given in the data flow. Detect signal misclassification using this signal quality-aware
+    computing in the IoT architecture.
+
+
+    All of the intelligent sensors are linked to NI my RIO form using a Wi-Fi module
+    of high-speed data transfer to aid in the transmission of a high-speed measured
+    signal. It makes use of a very power-efficient FPGA processor made by Xilinx.
+    For sending and receiving signals, this RIO processor is particularly ideal. During
+    the user''s signal acquisition, it uses 16.5 mA of power.
+
+
+    The trauma patient application has been utilized for data visualization. Evo Things
+    app receives communication from the NI-my RIO module. Utilize a web-based application
+    in addition thanks to this program. On smartphones running the Android OS and
+    the iOS platforms, this application may be installed. By using this program, healthcare
+    providers in trauma scenarios may continually monitor the patient''s essential
+    physiological signal. A complete monitoring and altering
+
+
+    # 3.5. Deep learning model for signal classification
+
+
+    A DCNN was developed to extract features from the acquired signal in the sensor
+    array in order to learn the collected trauma cases, physiological signal, and
+    to categorize in cloud-based IoT systems. The score search technique uses a DNN
+    structure that is trained using standard signal input. Utilize a scoring function
+    to find constraint-based signals using this method.
+
+
+    Consider the two-signal counterpart''s probability distribution. Equation (5)
+    of the Bayesian theorem gives the signal as calculated by the BSN and the standard
+    data value.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/77743f94432d9d2ab006f7874bf18bf3_6_0.png)
+
+
+    Fig. 8. Architecture of monitoring and altering with output classification from
+    the sensors.
+
+
+    P(M|N)= P(M ∩ N)/P(N) for P(N) ≠ 0 (5)
+
+
+    As a weight update, this likelihood value is taken into account. In a likelihood
+    ratio, the factor links these two parameters. The three-layer back propagation
+    model from Equation (1) has therefore been taken into consideration. Equation
+    (6) is used to determine the input-output layer weight relationship for internal
+    activity.
+
+
+    Y_i = Σ_{i=1}^{n} W_{ij} X_i (6)
+
+
+    Where W_{ij} is the connecting node’s weight related, X_i represents weight, and
+    Y_j is the overall output weight. As a result of processing all output, the activation
+    function is provided by Y_{net}=f(Y_i). Equation (7) provides the maximum pooling
+    for the suggested structure. The updated weight value and output are provided
+    by this.
+
+
+    Y(n + 1)= Y(n) + η[t – y(n)] * X_i(n) (7)
+
+
+    A stochastic descent strategy was utilized to train this DNN for detecting irregularity
+    for the obtained signal.
+
+
+    ![](img/77743f94432d9d2ab006f7874bf18bf3_6_1.png)
+
+
+    Fig. 9. The proposed Health Monitor Signal Log System Data Flow.
+
+
+    # Algorithm 1: Signal Learning Algorithm for the Proposed DCNN
+
+
+    ```
+
+    Input: Initiate the sensor monitoring using EEG, ECG, Temperature, Pulse rate
+
+    Set Weight, number of hidden layer convolution and max pooling
+
+    1: while not converged do
+
+    2: for input I=1 to n
+
+    3: signal feed forward: compute Y output to each layer
+
+    4: Back propagation of error: update Network and bias B
+
+    5: Compute gradient
+
+    6: Estimate output Y using equation 7
+
+    7: end for
+
+    8: end while
+
+    9: return trained network output
+
+    ```
+
+
+    Algorithm 1 provides the learning method for the monitoring gathered. The approach
+    uses a gradient to look for a standard value at each position. The benefit of
+    this strategy is that it can anticipate a newly obtained signal. The suggested
+    algorithm’s application utilizing a Deep
+
+
+    Learning model is illustrated in Fig. 10. In Fig. 10, it illustrated the number
+    of input layer sensors with the hidden layer function.
+
+
+    A three-layer back propagation learning rule was used to generate the category
+    after collecting a new measured signal. In order to develop a deep learning model,
+    the following requirements were used: the first layer must be linearly separable,
+    the second layer must be completely'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/77743f94432d9d2ab006f7874bf18bf3_7_0.png)
+
+
+    Fig. 10. Proposed DCNN learning model for healthcare monitor and altering.
+
+
+    linked, and the third layer must offer a linear activation function. Measurements
+    were made of characteristics including signal strength and acquisition time. Thus,
+    the suggested learning approach to create an IoT-based monitoring system is more
+    beneficial.
+
+
+    the fall detection, the positive and negative data have been divided. Based on
+    the conditional section, it is presumed that the individual is in a fall and non-fall
+    state, with the fall represented by the initials "F" and the non-fall by the letters
+    "NF". It is presumed to state ''EF'' when the condition fails with a fall and
+    an incorrect detection is made, and state ''ENF'' when the condition fails with
+    a non-fall and a mistaken detection is made.
+
+
+    # 4. Results and discussion
+
+
+    Thus, by receiving the right care and receiving an early diagnosis, trauma illness,
+    which is a leading cause of mortality worldwide, may be reduced. This internet-of-things
+    project uses an Arduino and pulse rate sensor to capture real-time data from trauma
+    patients, which is then reported using thing speak. As a result, human trauma
+    disorders were predicted using machine learning techniques.
+
+
+    # 4.1. Datasets
+
+
+    Machine learning techniques are employed with the patient data from the 40-sample
+    collection. Following a real-time comparison of all algorithms, it primarily focused
+    on Deep Conventional Neural Network (CNN), RNN, and Artificial Neural Network
+    (ANN).
+
+
+    # 4.2. Evaluation metrics
+
+
+    According to the parallel, horizontal, and vertical categorization in
+
+
+    The Issue Is Listed as Follows.
+
+
+    +   1. Always Positive (AP) as count is predicted as state ''F'' .
+
+    +   2. Always Negative (AN) as count is predicted as state ''NF'' .
+
+    +   3. Partial Positive (PP) as count is predicted as state ''EF'' .
+
+    +   4. Partial Negative (PN) as count is predicted as state ''ENF''.
+
+
+    The following metrics are used in Equations (8)–(12) to estimate how well the
+    forecast performed.
+
+
+    Accuracy = (AP + AN)/(AP + AN + PP + PN) (8)
+
+    Error = (PP + PN)/(AP + AN + PP + PN (9)
+
+    Precision = (AP / (AP + PP)) (10)
+
+    Recall = (AP / (AP + PN)) (11)
+
+
+    ![](img/77743f94432d9d2ab006f7874bf18bf3_7_1.png)
+
+
+    Fig. 11. Pulse rate monitoring data.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/77743f94432d9d2ab006f7874bf18bf3_8_0.png)
+
+
+    **Fig. 12.** Body temperature data.
+
+
+    ![](img/77743f94432d9d2ab006f7874bf18bf3_8_1.png)
+
+
+    **Fig. 13.** Error rate data.
+
+
+    ```
+
+    $$F \sim \mathrm{Measure}=2\left(P \times \frac{R}{P+R}\right)$$
+
+    ```
+
+
+    Database entries include sensor readings, particularly the body’s pulse rate.
+    The patient’s state of health is also determined by taking into account various
+    ranges of pulse rate data in **Fig. 11**.
+
+
+    The database stores the sensor data, in particular the results from the body temperature
+    sensor. As shown in **Fig. 12**, the temperature range for body temperature is
+    specified, and its membership function.
+
+
+    The number of experiments is shown on the X-axis in **Fig. 13**, and the error
+    rate prediction is shown on the Y-axis. The evaluation results represent low error
+    rate and it is described with the help of proposed methods when compare it with
+    existing methods.
+
+
+    The suggested approach has minimal processing time, as shown in **Fig. 14**, when
+    comparing the processing time for fall detection for the proposed Deep CNN system
+    with the related techniques of ANN, RNN, LSTM, and DCNN.
+
+
+    LSTM, and DCNN.
+
+
+    **Fig. 15** shows DCNN’s precision results compared to other approaches. The suggested
+    Deep CNN gives higher recall results of 94.12%, whereas other approaches such
+    as ANN, RNN, LSTM produces 90.12%, 91.21%, 92.12% and respectively. The proposed
+    algorithm gives highest results than the existing methods.
+
+
+    **Fig. 16** represents the outcomes of the suggested method DCNN were compared
+    with the recall results of other known other approaches. The suggested Deep CNN
+    gives higher recall results of 97.75%, whereas other approaches such as ANN, RNN,
+    LSTM produces 95.15%, 96.12%, 97.55% and respectively. The proposed algorithm
+    gives highest results than the existing methods.
+
+
+    **Fig. 17** represents the outcomes of the suggested method DCNN accuracy results
+    compared with different approaches. The suggested DCNN gives higher accuracy results
+    of 95.21%, whereas other methods such as ANN, RNN, LSTM gives 88.16%, 92.15%,
+    93.12% and'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '![](img/77743f94432d9d2ab006f7874bf18bf3_9_0.png)
+
+
+    Fig. 14. Processing time.
+
+
+    ![](img/77743f94432d9d2ab006f7874bf18bf3_9_1.png)
+
+
+    Fig. 15. Comparison of precision metrics with proposed and existing methods.
+
+
+    ![](img/77743f94432d9d2ab006f7874bf18bf3_9_2.png)
+
+
+    Fig. 17. Comparison of accuracy metrics with proposed and existing methods.
+
+
+    ![](img/77743f94432d9d2ab006f7874bf18bf3_9_3.png)
+
+
+    Fig. 16. Comparison of recall metrics with proposed and existing methods.
+
+
+    ![](img/77743f94432d9d2ab006f7874bf18bf3_9_4.png)
+
+
+    Fig. 18. Comparison of F-measure metrics with proposed and existing methods.
+
+
+    respectively. The proposed algorithm gives highest results than the existing methods.
+
+
+    Fig. 18 represents the F-Measure results of the suggested technique
+
+
+    DCNN were compared with different approaches. The suggested DCNN gives higher
+    f-Measure results of 97.92%, whereas other methods such as ANN, RNN, LSTM gives
+    94.32%, 95.12%, 95.55% and respectively.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: "The proposed algorithm gives highest results than the existing methods.\n\n\
+    # 5. **Conclusion**\n\nThis research demonstrates and provides better IoT in healthcare\
+    \ using Deep Learning (DL) technology. This study presents a trauma cases IoT-based\
+    \ healthcare platform that links with smart sensors linked to the human body for\
+    \ health monitoring for a daily check-up. This study offers the chance to continually\
+    \ monitor a patient utilizing the free and open-source Thing Speak cloud platform,\
+    \ which also includes remote monitoring and mobile messaging services that can\
+    \ differentiate between normal and abnormal situations predicted using DCNN algorithms.\
+    \ The proposed method improves the trauma case detection, improves the physician\
+    \ monitoring and altering reduces the error rate and enhances the accuracy 95.21%and\
+    \ reduces the false detection. Classification metrics Accuracy, Recall, Precision,\
+    \ F-Measure and error has been evaluated and compared with proposed system and\
+    \ existing methods. Plan to gather larger and multicenter datasets for future\
+    \ work in order to do additional validations of all these models on other datasets.\
+    \ Prediction models become more reliable as a result. The research results are\
+    \ more accurate since looked into patients’ health issues over a shorter period\
+    \ of time. It could result in a quicker prognosis that more precisely directs\
+    \ medical care. The mortality rate was the only subject of this study. But efforts\
+    \ can also be made to forecast the patients’ functionality after a specified period\
+    \ of time. As it gives doctors more information, it results in better health care.\
+    \ Future research should include testing the findings on a large number of patients\
+    \ and determining the accuracy. To increases the trauma patient’s data collections,\
+    \ using high-end sensor to reduce the patients processing time and displeasure.\n\
+    \n# **Funding statement**\n\nThere was no specific grant for the study from any\
+    \ funding organisation in the public, private, or nonprofit sectors.\n\n# **Declaration\
+    \ of competing interest**\n\nThe authors declare that they have no known competing\
+    \ financial interests or personal relationships that could have appeared to influence\
+    \ the work reported in this paper.\n\n# **Data availability**\n\nNo data was used\
+    \ for the research described in the article.\n\n# **References**\n\n+   [1] V.\
+    \ Yeri, D.C. Shubhangi, IoT based real time health monitoring, in: 2020 Second\
+    \ International Conference on Inventive Research in Computing Applications (ICIRCA),\
+    \ 2020, pp. 980–984.  \n+   [2] H. Pandey, S. Prabha, Smart health monitoring\
+    \ system using IOT and machine learning techniques, in: 2020 Sixth International\
+    \ Conference on Bio Signals, images, and instrumentation (ICBSII), 2020, pp. 1–4.\
+    \  \n+   [3] S.H. Almotiri, M.A. Khami, M.A. Alhadhi, Mobile health (m-health)\
+    \ system in the context of IoT, in: 2016 IEEE 4th International Conference on\
+    \ Future Internet of Things and Cloud Workshops (FiCloudW), 2016, pp. 39–42. \
+    \ \n+   [4] G.J. Joya, R.M. Liaqat, A. Farooq, S. Rehman, Internet of medical\
+    \ things (IoMT): applications, benefits and future challenges in healthcare domain,\
+    \ J. Commun. 12 (4) (2017) 240–247.  \n+   [5] H. Roh, S.S. Shin, J. Han, S. Lim,\
+    \ A deep learning-based medication behavior monitoring system, Math. Biosci. Eng.\
+    \ 18 (2021) 1513–1528.  \n+   [6] N. Otmani, N. Qarmiche, M. Omari, H. Bourkikine,\
+    \ N. Tachfouti, S.E. Fakir, Artificial intelligence and machine learning in healthcare:\
+    \ application and challenges, J. Posit. Psychol. 6 (8) (2022) 1847–1853.  \n+\
+    \   [7] M. Mamoun-Ibn-Abdullah, M.H. Kabir, A healthcare system for internet of\
+    \ things (IoT) application: machine learning based approach, J. Comput. Commun.\
+    \ 9 (7) (2021) 21–30.\n\n+   [8] M. Gupta, M. Thirumalaisamy, S. Shamsher, A.\
+    \ Pandey, D. Muthiah, N. Suvarna, Patient health monitoring using feed forward\
+    \ neural network with cloud-based internet of things, in: 2022 2nd International\
+    \ Conference on Advance Computing and Innovative Technologies in Engineering (ICACITE),\
+    \ 2022, pp. 924–931.  \n+   [9] H. Al-Askar, N. Radi, A. MacDermott, Recurrent\
+    \ neural networks in medical data analysis and classifications, in: Applied Computing\
+    \ in Medicine and Health, 2016, pp. 147–165.  \n+   [10] C. Jiang, Y. Li, Health\
+    \ big data classification using improved radial basis function neural network\
+    \ and nearest neighbor propagation algorithm, IEEE Access 7 (2019) 176782–176789.\
+    \  \n+   [11] M. Zribi, Y. Boujelbene, I. Abdelkafi, R. Feki, The self-organizing\
+    \ maps of Kohonen in the medical classification, in: 2012 6th International Conference\
+    \ on Sciences of Electronics, Technologies of Information and Telecommunications\
+    \ (SETIT), 2012, pp. 852–856.  \n+   [12] P. Melin, J.C. Monica, D. Sanchez, O.\
+    \ Castillo, Multiple ensemble neural network models with fuzzy response aggregation\
+    \ for predicting COVID-19 time series: the case of Mexico, Healthcare 8 (2) (2020)\
+    \ 181.  \n+   [13] S.A. Eberloderh-Miyene, E. Senokoho, T.G. Swart, Integrating\
+    \ enhanced sparse autoencoder-based artificial neural network technique and SoftMax\
+    \ regression for medical diagnosis, Electronics 9 (11) (2020) 1963.  \n+   [14]\
+    \ S.S. Yadav, S.M. Jadhav, Deep convolutional neural network based medical image\
+    \ classification for disease diagnosis, J. Big data 6 (1) (2019) 1–18.  \n+  \
+    \ [15] P.R. Jeyaraj, E.R.S. Nadar, Deep Boltzmann machine algorithm for accurate\
+    \ medical image analysis for classification of cancerous region, Cognit. Computation\
+    \ Syst. 1 (3) (2019) 85–90.  \n+   [16] N. Cheng, A. Kuo, Using long short-term\
+    \ memory (LSTM) neural networks to predict emergency department wait time, in:\
+    \ The Importance of Health Informatics in Public Health during a Pandemic, 2020,\
+    \ pp. 199–202.  \n+   [17] L. Ru, B. Zhang, J. Duan, G. Ru, A. Sharma, G. Dhiman,\
+    \ G.S. Gaba, E.S. Jaha, M. Masud, A telemed research on human health monitoring\
+    \ system based on internet of things, Wireless Commun. Mobile Comput. (2021) 1–9.\
+    \  \n+   [18] N.Y. Philip, J.J. Rodrigues, H. Wang, S.J. Fong, J. Chen, Internet\
+    \ of Things for in-home health monitoring systems: current advances, challenges\
+    \ and future directions, IEEE J. Sel. Area. Commun. 39 (2) (2021) 300–310.  \n\
+    +   [19] P. Valsalan, T.A.B. Baomar, A.H.O. Baabood, IoT based health monitoring\
+    \ system, J. crit. rev. 7 (4) (2020) 739–743.  \n+   [20] M.M. Islam, A. Rahman,\
+    \ M.R. Islam, Development of smart healthcare monitoring system in IoT environment,\
+    \ SN Comput. Sci. 1 (2020) 1–11.  \n+   [21] J. Gómez, B. Oviedo, E. Zuma, Patient\
+    \ monitoring system based on internet of things, Procedia Comput. Sci. 83 (2016)\
+    \ 90–97.  \n+   [22] K.G. Sheela, A.R. Varghese, Machine learning based health\
+    \ monitoring system, Mater. Today: Proc. 24 (2020) 1788–1794.  \n+   [23] B. Godi,\
+    \ S. Viswanadham, A.S. Muttapati, O.P. Samantray, S.R. Gadiraju, E-healthcare\
+    \ monitoring system using IoT with machine learning approaches, in: 2020 International\
+    \ Conference on Computer Science, engineering and applications (ICCSEA), 2020,\
+    \ pp. 1–5.  \n+   [24] F. Ben Rajab, K. Nouira, A. Trabelsi, Health monitoring\
+    \ systems using machine learning techniques, in: Intelligent Systems for Science\
+    \ and Information: Extended and Selected Results from the Science and Information\
+    \ Conference 2013, 2014, pp. 423–440.  \n+   [25] F. Dahan, R. Alrobaea, W. Alghamdi,\
+    \ M.K. Mohammed, F. Hajjej, K. Raahemifar, A smart IoMT based architecture for\
+    \ E-healthcare patient monitoring system using artificial intelligence algorithms,\
+    \ Front. Physiol. 14 (2023) 40.  \n+   [26] M.Z.U. Rahman, A.H. Raza, A.A. Alsanad,\
+    \ M.A. Akbar, R. Riaquat, M.T. Riaz, L. AlSuwaidan, H.A. Al-AIshaikh, H.S. Alsagri,\
+    \ Real-time artificial intelligence-based health monitoring, diagnosing and environmental\
+    \ control system for COVID-19 patients, Math. Biosci. Eng. 19 (8) (2022) 7586–7605.\
+    \  \n+   [27] A.A. Ibrahim, Y. Muhamma, W. Zhuopeng, IOT patient health monitoring\
+    \ system, Int. J. Eng. Res. Appl. ISSN 2248 (9622) (2018) 77–80.  \n+   [28] Y.\
+    \ Li, C. Liu, H. Zou, L. Che, P. Sun, J. Yan, W. Liu, Z. Xu, W. Yang, L. Dong,\
+    \ L. Zhao, Integrated wearable smart sensor system for real-time multi-parameter\
+    \ respiration health monitoring, Cell Rep. Phys. Sci. 4 (1) (2023), 101191.  \n\
+    +   [29] K.R. Darshan, K.R. Anandakumar, A comprehensive review on usage of Internet\
+    \ of Things (IoT) in healthcare system, in: 2015 International Conference on Emerging\
+    \ Research in Electronics, Computer Science and Technology (ICERECT), 2015, pp.\
+    \ 132–136.  \n+   [30] I. Hussain, S. Tahir, M. Humayun, M.F. Amrafulleh, N.Z.\
+    \ Jhanjhi, F. Qamar, Health monitoring system using internet of things (IoT) sensing\
+    \ for elderly people, in: 2022 14th International Conference on Mathematics, Actuarial\
+    \ Science, Computer Science and Statistics (MACS), 2022, pp. 1–5.  \n+   [31]\
+    \ X. Tao, T.B. Shaik, N. Higgins, R. Gurujarah, X. Zhou, Remote patient monitoring\
+    \ using radio frequency identification (RFID) technology and machine learning\
+    \ for early detection of suicidal behaviour in mental health facilities, Sensors\
+    \ 21 (3) (2021) 776.  \n+   [32] J. Dhanke, N. Rathore, M.S Vinnmathi, S. Janu\
+    \ Priya, S. Abidin, M. Tesfamarian, Smart health monitoring system with wireless\
+    \ networks to detect kidney diseases, Comput. Intell. Neurosci. (2022) 1–11. \
+    \ \n+   [33] P. Chavan, P. More, N. Thorat, S. Yewale, P. Dhade, ECG-Remote patient\
+    \ monitoring using cloud computing, Imper. J. Interdiscip. Res. 2 (2) (2016) 368–372."
+  merge: -1
+  img_proc: true
