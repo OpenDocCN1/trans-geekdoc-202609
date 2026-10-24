@@ -1,0 +1,15 @@
+Stablecoins like **Tether (USDT)** and **USD Coin (USDC)** are technically altcoins, though their purpose is distinct. Stablecoins are pegged to fiat currencies, such as the US dollar, and are designed to maintain a stable value.
+
+They serve as a bridge between volatile cryptocurrencies and traditional finance, enabling traders to hedge against market fluctuations and facilitating international transfers without the need for a bank.
+
+**Dogecoin (DOGE)** began as a joke in 2013, but its simple design and viral popularity have made it one of the most recognizable altcoins. While originally intended for tipping and small transactions, Dogecoin gained mainstream attention through endorsements from celebrities (and was later promoted by matching a government commission's acronym). Its inflationary supply model, which contrasts with Bitcoin's fixed supply, has led to debates about its long-term value.
+
+**Tezos (XTZ)** is a self-amending blockchain designed to evolve without the need for hard forks. Its governance model allows token holders to vote on proposed changes to the network, ensuring smooth upgrades and adaptability. Tezos supports smart contracts and dApps, with applications ranging from tokenized assets to decentralized finance.
+
+Each of these altcoins represents a different vision for how blockchain technology can be applied. Whether focusing on speed, privacy, interoperability, or new financial systems, altcoins have expanded the possibilities of the crypto ecosystem far beyond Bitcoin's original design. They provide developers and users with tailored tools to address specific challenges, demonstrating the flexibility and innovation within the cryptocurrency space.
+
+# Stablecoins and Their Purpose
+
+Stablecoins are a category of altcoins specifically designed to address one of the most significant challenges in the cryptocurrency market: **volatility**. Unlike traditional cryptocurrencies like Bitcoin or Ethereum, whose prices can fluctuate dramatically in short periods, stablecoins maintain a steady value by pegging themselves to stable assets. This peg can be to fiat currencies, commodities, or even other cryptocurrencies. Stablecoins combine the benefits of blockchain technology, such as decentralization and transparency, with the stability needed for everyday transactions and broader adoption.
+
+The most common type of stablecoin is **fiat-backed stablecoins**, which are tied to government-issued currencies like the US dollar. For example, **Tether (USDT)** and **USD Coin (USDC)** are pegged to the dollar at a 1:1 ratio. These stablecoins achieve their stability by holding reserves equivalent to the number of tokens in circulation. For every USDT or USDC issued, there should be an equivalent dollar (or liquid asset) in reserve. This backing provides confidence in the stablecoin's

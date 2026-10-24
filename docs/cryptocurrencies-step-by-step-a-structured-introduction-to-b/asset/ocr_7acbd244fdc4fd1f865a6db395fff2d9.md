@@ -1,0 +1,3 @@
+nodes or validators. Layer 2 systems add complexity and rely on strong integration with the main blockchain to maintain security. Sharding introduces coordination challenges, as shards must communicate to ensure consistency.
+
+Despite these hurdles, scalability solutions are continuously evolving, driven by the need to support widespread blockchain adoption. Combining on-chain improvements, off-chain innovations, and tailored consensus mechanisms, blockchain networks are gradually overcoming the scalability barriers that limit their potential.
