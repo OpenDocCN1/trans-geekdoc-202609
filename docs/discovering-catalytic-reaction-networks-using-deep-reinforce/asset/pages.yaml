@@ -1,0 +1,932 @@
+- pgno: 0
+  md: '# # Discovering Catalytic Reaction Networks Using Deep Reinforcement Learning
+    from First-Principles
+
+
+    Tian Lan and Qi An*
+
+
+    ABSTRACT: Determining the reaction pathways, which is central to illustrating
+    the working mechanisms of a catalyst, is severely hindered by the high complexity
+    of the reaction and the extreme scarcity of the data. Here, we develop a novel
+    artificial intelligence framework integrating deep reinforcement learning (DRL)
+    techniques with density functional theory simulations to automate the quantitative
+    search and evaluation on the complex catalytic reaction networks from zero knowledge.
+    Our framework quantitatively transforms the first-principles-derived free energy
+    landscape of the chemical reactions to a DRL environment and the corresponding
+    actions. By interacting with this dynamic environment, our model evolves by itself
+    from scratch to a complete reaction path. We demonstrate this framework using
+    the Haber-Bosch process on the most active Fe(111) surface. The new path found
+    by our framework has a lower overall free energy barrier than the previous study
+    based on domain knowledge, demonstrating its outstanding capability in discovering
+    complicated reaction paths. Looking forward, we anticipate that this framework
+    will open the door to exploring the fundamental reaction mechanisms of many catalytic
+    reactions.
+
+
+    ![](img/274ee2e61503c4940bd82472e18bdf4e_0_0.png)
+
+
+    # ## INTRODUCTION
+
+
+    To address the emerging energy crisis and environmental issues, it is essential
+    to discover and optimize novel catalysts that convert raw materials efficiently
+    into valuable chemicals and compounds, such as the ammoxidation of propene into
+    acrylonitrile, conversion of methanol to gasoline, and the Haber–Bosch synthesis
+    of ammonia from nitrogen gas. Traditional advances in developing industrial catalysts
+    have been incremental. In order to make rapid progress on the optimization of
+    highly efficient catalysts, it is essential to understand reaction mechanism and
+    apply reaction mechanism-based rational design approaches. Tremendous experimental
+    and theoretical efforts have been devoted to identifying reaction mechanisms,
+    elementary steps, and rate-determining steps in many industrially important catalytic
+    reactions. However, a catalytic reaction may involve many intermediates and branch
+    paths, making it challenging to determine the complete reaction network. For example,
+    the Haber–Bosch reaction on an Fe catalyst may involve ~20 important surface configurations
+    and ~10 important reaction steps, as well as many potential branch reactions with
+    dopants. Therefore, it is demanding to develop novel techniques that can effectively
+    determine the reaction network in complex reactions. Recently, artificial intelligence
+    (AI) has achieved great success in many research areas. Particularly, supervised
+    learning has been extensively applied in computational heterogeneous catalysis
+    and advances the understanding of
+
+
+    the relationships between materials properties and catalytic performance (e.g.,
+    activity, selectivity, and stability of catalysts). For example, Abdelfatah et
+    al. predicted the transition-state energy of hydrogenation reactions on metal
+    catalysts using various machine learning models with conventional descriptors
+    (e.g., product or reactant energy) and other descriptors (e.g., bond counts of
+    surface species and metal descriptors). They concluded that adding bond counts
+    and metal descriptors improves the performance of both linear and nonlinear models.
+    Ulissi et al. proposed to determine the reaction network of a catalyst using the
+    machine learning derived surrogate model that can effectively predict the energetics
+    of most important reaction steps. The recent progress on applying machine learning
+    techniques to heterogeneous catalysis was summarized in a recent review. However,
+    the application of AI to catalytic reactions has been severely limited by the
+    extreme scarcity of data describing the catalytic reaction networks, while a tremendous
+    amount of data is, in general, a prerequisite for building a reliable AI model.
+
+
+    Received: August 19, 2021 Published: October 4, 2021'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/274ee2e61503c4940bd82472e18bdf4e_1_0.png)
+
+
+    Figure 1. Flowchart of reinforcement learning strategy and the Fe-bcc(111) surface
+    with possible sites for absorbents. (a) Schematic diagram of DRL and DFT training
+    workflow. The dark blue arrows illustrate the rollout workflow where the data
+    of states, actions, and rewards are sampled and collected in parallel. The red
+    arrows show the model update pipeline where the rollout synchronization and the
+    neural network update occur. (b) Top view along the [111] direction. (c) Side
+    view along the [110] direction. (d) Definition of states using a 23-dimension
+    vector. (e) Definition of absorbents on the Fe-bcc(111) surface. The adsorbed
+    species on the surface are presented by numbers 1 to 6 shown in (e). They are
+    only present in the state vector from site 1 to 20 in (d). The state vector sites
+    21, 22, and 23 are the number of N2, H2, and NH3 in the gas phase, respectively,
+    and should be distinguished from the surface sites (1–20). The N and H atoms are
+    represented by blue and cyan balls, respectively. The Fe atoms on the top, sublayer,
+    deep-layer, and 4th–6th layers are represented by light blue, orange, purple,
+    and bronze balls, respectively.
+
+
+    Using ideas from the optimal control of the incompletely known Markov decision
+    process,24 reinforcement learning utilizes a limited amount of data to train a
+    learning agent to interact over time with its environment to achieve a goal. Since
+    the AlphaGo program defeated professional Go world champions,25 this technique
+    has been extended to solve problems in video games,26 social science,27 and, most
+    recently, some semiquantitative tasks in chemistry.28,29 However, defining a quantitative
+    chemical environment suitable for the reinforcement learning representation of
+    catalytic reactions is much more complicated in science and has been barely explored.
+    Moreover, the dynamic interaction between the agent and the environment requires
+    extensive and in-depth information that cannot be obtained directly from the experiment.
+
+
+    replace fossil fuels due to its attractive features of high energy density and
+    abundance of raw materials.35 Metal catalysts are used to accelerate the reaction,
+    but high temperatures and pressures of atmospheric nitrogen gas (N2) and hydrogen
+    gas (H2) (extracted from natural gas sources) are required. A great deal of research
+    over the last century has aimed to increase the performance of the Haber–Bosch
+    process, but recent progress has been slow. To make the process more efficient
+    under milder conditions—which would dramatically decrease production costs and
+    enable smaller, more widely dispersed plants—we must optimize heterogeneous catalysts,
+    which requires understanding the reaction mechanism of the Haber–Bosch process.
+
+
+    # RESULTS AND DISCUSSION
+
+
+    **Environment Definition.** We selected Fe-bcc(111) as the catalytic surface in
+    our study because it is the most activated surface for NH3 synthesis.34,35 Recent
+    DFT studies on NH3 synthesis over the Fe-bcc(111) surface suggested a plausible
+    reaction path consisting of 24 important surface configurations and 12 transition
+    states with a turnover frequency (TOF) of 17.7 NH3/s per 2 × 2 sites at 673 K
+    and 20 atm pressure (1.5 Torr NH3 pressure). As the reaction reaches a steady
+    state with NH3 pressure increasing to ∼1 atm, the calculated TOF decreases to
+    4.6 NH3/s.8 Although the TOF is consistent with the single-crystal experimental
+    value of 9.7 NH3/s,7 these studies mostly relied on the exhaustive search and
+    domain expert knowledge, whereas many plausible intermediate states and branch
+    reaction paths are not able to be considered. The great complexity of the Haber–Bosch
+    reaction makes it an ideal subject to challenge our DRL model.
+
+
+    Here, we developed a novel deep reinforcement learning (DRL) framework to determine
+    a complex reaction network given an initial reactant and a target product from
+    zero prior knowledge of catalytic reactions. Our framework is not constrained
+    by the limits of data and human knowledge, but evolves by itself from scratch
+    into a complete reaction path. Specifically, we map the evolution of the chemical
+    reaction path into a Markov decision process taking place in a delicate environment
+    depicted quantitatively by density functional theory (DFT) simulations. Using
+    ammonia (NH3) synthesis on an Fe catalyst as a model system, we demonstrate that
+    DRL efficiently constructs the complex reaction path by adopting the proper environment
+    and training algorithms. Our agent accurately predicts a reaction network that
+    is more plausible with lower free energy barriers than previous studies.7,8
+
+
+    We selected the Haber–Bosch process as the model system because NH3 is the main
+    intermediate in the nitrogen cycle on Earth.30 The Haber–Bosch process alone is
+    responsible for over 2% of all global energy usage and produces 160 million tons
+    of NH3 annually.31,52 This scale of production may increase substantially if ammonia
+    is used as an energy vector to
+
+
+    Figure 1(a) displays a working flowchart for the theoretical framework that integrates
+    the DRL and its energy landscape environment computed from DFT simulations. Figure
+    1(b,c) display the Fe-bcc(111) surface model with a 2 × 2 unit cell in the (111)
+    plane and six layers perpendicular to the plane. The'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'top three layers, designated as top, sublayer, and deep layer, are all involved
+    in binding absorbents and surface reactions. To describe the surface reactions
+    occurring at various sites, we define a total of 20 surface sites numbered 1–20,
+    including four top sites, four sublayer sites, four bridge sites, four top–sublayer
+    sites, and four top–sublayer–deep layer sites, as shown in Figure S1 of the Supporting
+    Information (SI). Each adsorption position has four sites on the surface due to
+    the application of a (2 × 2) Fe-bcc(111) surface model.
+
+
+    We model the evolution of the chemical reaction path as a Markov decision process
+    defined by a state space S, an action space A, a probability transition P(s_t+1|a_t,
+    s_t), and a reward function r that is generally defined in the space S × A. To
+    define the environment state, we introduce an encoded state vector s_t at step
+    t that projects the total number of 20 surface sites onto a vector. The vector
+    also accounts for N2, H2, and NH3 gas species involved in the Haber–Bosch reaction.
+    Figure 1(d) shows the first 20 entries of the state vector that are used to represent
+    the 20 surface sites; the value of each entry represents the adsorbents displayed
+    in Figure 1(e). The adsorbents H, N, NH, NH2, NH3, and N2 are encoded by integers
+    1–6, respectively, and an empty site is represented by the number 0. The last
+    three entries of the vector are adopted to record the number of gas species (N2↔21,
+    H2↔22, and NH3↔23) along the reaction path. The reaction starts with the initial
+    state s0 which is a 4N-covered surface plus one N2 and three H2 gas molecules
+    (Figure S2 of the SI). The model surface is consistent with the fact that the
+    Fe surface has a high coverage of N atoms under Haber–Bosch reaction conditions.
+    The final state sf is defined as the 4N configuration with two NH3 molecules in
+    the gas phase (Figure S2 of the SI), representing the complete reaction N2 + 3H2
+    ⇌ 2NH3.
+
+
+    The actions connecting s0 and sf are defined in terms of four main categories:
+    (1) H2 adsorption/desorption from the surface; (2) N2 adsorption, migration, and
+    dissociation on the surface; (3) surface hydrogen migration to hydrogenate N,
+    NH, or NH2 species (for example H + NH ⇌ NH2); and (4) NH3 desorption from the
+    surface. Based on the specific surface sites for reactions, the actions are further
+    refined to form the action space utilized in the environment. The definitions
+    of all 17 actions are displayed in Figures S3–S6 of the SI. The defined 17 actions
+    represent the fundamental reaction steps on the Fe-bcc (111) surface, and they
+    are necessary to complete the reaction cycle by connecting the reactant and the
+    product. Allowing any action order and the absence or repetition of the action,
+    the DRL model is trying to figure out from scratch the most plausible reaction
+    pathway and configuration via Markov decision processes. We do not consider the
+    H-assisted N2 activation in the 17 actions since migration of H to N2 has a much
+    higher free energy barrier (1.74 eV) than other plausible N2 activation steps.
+    Figure S7 of the SI shows the reaction barrier calculation of H migration to surface
+    N2 (α state) to form NH2.
+
+
+    **Deep Reinforcement Learning Model.** Central to the DRL model is a policy $\pi_{\theta_p(a_t|s_t)}$
+    represented by a deep neural network with parameters $\theta_p$ that analyzes
+    the current state and takes actions. The vector of current state s_t represents
+    one plausible configuration along the reaction path and the action a_t changes
+    the current configuration to the next one. The policy $\pi$ is the strategy of
+    changing the state s. The model parameters $\theta_p$ are initialized randomly
+    with no prior information about the environment or any domain knowledge
+
+
+    of the reaction. The policy is then trained by a reinforcement learning strategy
+    designed to maximize the expected value of the sum of discounted future rewards
+    and conditioned on the success of reaching the final state.
+
+
+    Our reinforcement learning strategy is based on a policy gradient algorithm similar
+    to actor–critic. We use proximal policy gradients and the Adam optimizer to compute
+    policy gradients. A value network (critic) $V_{\theta_v}(s_t)$ is trained to predict
+    the expected return and used to update the policy network (actor), which provides
+    the probability distribution of actions in the current state. The architecture
+    of our value and policy networks consists of fully connected deep neural networks
+    (DNNs). The two deep neural networks share the common internal stack of hidden
+    layers but differ by the final output layers. The efficiency of the DRL framework
+    is similar to kMC calculations on the Fe(111) surface.
+
+
+    The key link between the DFT and the DRL in our framework is the reward system
+    associated with actions, and it is derived from DFT calculations from the first
+    principles. We assign a reward r associated with each action that is dependent
+    on the states involved before and after the action; that is, the same action could
+    end up with a very different reward depending on the state it acts on. In particular,
+    r = e^(-ΔE) is employed for each action where ΔE (in eV) is the DFT-derived free
+    energy barrier connecting different states under the reaction condition of T =
+    673 K and P(H2, N2, NH3) = (15, 5, 1) atm. The free energies are calculated from
+    a high N coverage surface, and the simulation details on the free energy are in
+    the Experimental Section. The value of ΔE varies according to the site occupancy
+    on the surface represented by the state; for example, the different occupancy
+    configurations surrounding the reaction sites can significantly change the free
+    energy barriers incurred by the same action. Additionally, a negative reward is
+    given if obvious obstacles prevent the action from happening. Those obstacles
+    and constraints are similar to the geometrical boundary mask in a video game environment.
+    For example, adding an extra H to a site that has already been occupied by an
+    H species is not possible and, in this case, the action will not effect to change
+    the state and will get an immediate negative reward. This is a complex network
+    environment consisting of 23 positions with values ranging from 0 to 6, and there
+    are a total of 17 actions defined in the competition to explore the most plausible
+    path linking the initial state and the final state. The detailed reward values
+    are displayed in Table S1 of the SI, and more detailed explanations for the reward
+    definition can be found in the SI.
+
+
+    Our training data are generated from the episodes, each of which consists of a
+    set of complete rollouts starting from the initial reactant state to the final
+    product. For each subsequent step t in a training rollout, s_t the actor decides
+    an action a_t drawn from the distribution generated by the policy network $\pi_{\theta_p(a_t|s_t)}$
+    and the reward r_t+1. The $V_{\theta_v}$ evaluates the value of the action and
+    modifies the policy to improve the performance. Without losing generality, let
+    us take the first step of a rollout as an example. This step starts from the reactant
+    (4N surface configuration with three H2 and one N2 in the gas phase), which is
+    the initial state and is represented by the state vector [00002222000000000000130].
+    Based on the current state and the current DRL policy, the model draws an action
+    distribution over all action candidates. From this distribution, the DRL model
+    samples one action, for example, the action with index 1. This action therefore
+    changes the state to the'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/274ee2e61503c4940bd82472e18bdf4e_3_0.png)
+
+
+    Figure 2. Learned policy \(\pi_{\theta_t}(a_t|s_t)\) from the initial state \(s_0\)
+    to the final state \(s_k\). For each intermediate step, the agent observes the
+    state \(s_t\) and performs action \(a_t\), drawn by the policy to the next state
+    \(s_{t+1}\). After executing steps 1–16 by performing the action with the largest
+    probability, the model reaches the given final state \(s_f\) (final state not
+    shown in this figure). The figure shows that the model has established a well-converged
+    chemical reaction path with high confidence, i.e., given each intermediate state,
+    one action exclusively dominates the policy distribution.
+
+
+    next state [00002222011000000000120] because one gas H2 dissociates to two H atoms
+    on the surface sites 10 and 11, respectively. The framework then calls the DFT
+    simulation to evaluate the free energy barrier associated with these two states,
+    and the DRL model converts this DFT-derived energy to the reward, which is 0.249
+    in this example. Then the new state evolves with the plausible actions, and the
+    reward accumulates until the state reaches the final state, completing one episode.
+    The agent learns the policy through running many episodes and finds the best policy
+    through maximizing the reward.
+
+
+    One of the main challenges of finding the catalytic reaction path is the subtle
+    trade-off between exploitation and exploration. Exploitation in this work means
+    that the model claims the rewards based on the current strategy, while exploration
+    means finding a better strategy to produce more plausible intermediate states
+    along the reaction path. The goal is to find a strong decision-making strategy
+    so that our model has the highest probability of taking the optimal action. On
+    the one hand, the optimal action trajectory guarantees reaching the end state
+    and maximizes rewards given the observed states. On the other hand, the high probability
+    for those optimal actions will increase the stability of constructing complex
+    reaction networks and is crucial to confidently determine the most plausible reaction
+    path given the start and final states. During the training stage, if we constantly
+    choose the best action known so far, the model will not have sufficient chance
+    to
+
+
+    explore other plausible actions given the same state, so the model is most likely
+    to follow semioptimal policies leading to small rewards or even bad policies that
+    cannot reach the final state. Moreover, unlike many other problems, the catalytic
+    reaction path found by the DRL model is expected to become significantly shorter
+    in the late training stage compared with that in its early stage. As a result,
+    the total number of samples from a rollout may decrease dramatically with further
+    training. These pose great challenges for exploring this complex environment with
+    sparse rewards, many competing actions, and a huge number of states.
+
+
+    To tackle the exploitation–exploration challenge, we employed several novel strategies.
+    We applied the curriculum learning algorithm to environment building. During training,
+    the model explores multiple environments of varying complexity associated with
+    low to high skill levels and eventually interacts with the realistic environment.
+    This also significantly helps to improve the stability and speed of model convergency.
+    For the policy update, we devised a training strategy derived from the synchronous
+    deterministic variant of A3C but with several modifications: First, for each synchronous
+    training episode, the model is configured to investigate many independent-of-policy
+    rollouts collected in parallel, but the number of rollouts is dynamically determined
+    and is inversely proportional to the average length of these rollouts. Second,
+    if a rollout is found to have gone through a bad experience—for example, it fails
+    to reach the final state after running the'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/274ee2e61503c4940bd82472e18bdf4e_4_0.png)
+
+
+    Figure 3. Configurations along the reaction path predicted from the DRL model.
+    Only three steps of N2 dissociation are displayed; the detailed path is shown
+    in Figure S9 of the SI.
+
+
+    ![](img/274ee2e61503c4940bd82472e18bdf4e_4_1.png)
+
+
+    Figure 4. Free energy landscape of the DRL-derived reaction network of the Haber–Bosch
+    process on the Fe-bcc(111) surface. The free energy of N2 migration (*) is the
+    largest barrier between the states; the details of this process are discussed
+    in Figure S9 of the SI.
+
+
+    maximum number of steps—a certain down-sampling rate will be applied to this rollout
+    to randomly select a small subset. It turns out that those methods balance the
+    explorations and exploitations of the training and significantly enhance the stability
+    of the model, allowing it to reach the best strategy. Further details about the
+    training are given in the computational methods, and the hyperparameters used
+    in the DRL model are summarized in Table S2 of the SI. Evaluation of Agent. We
+    applied the DRL to construct the reaction network for the H–B reactions on an
+    Fe(111) surface. The initial state s0 is [00002222000000000000000130], which corresponds
+    to the 4N surface configuration with one N2 and three H2 in the gas phase. The
+    final state sf has the same 4N surface configuration with two NH3 in the gas phase,
+    denoted as vector [000022220000000000000002]. Through the
+
+
+    interaction of the AI agent with the environments discussed above, the AI agent
+    could determine the most plausible reaction path connecting s0 and sf. Figure
+    2 presents the learned policy πθp(a|s) from the initial state s0 to the final
+    state sf. For each intermediate step, the agent observes the state s, and performs
+    action at, drawn by the policy model to the next state st+1. As shown in Figure
+    2, given each intermediate state decided by the consecutive actions, there is
+    an action with probability larger than 80% that exclusively dominates the policy
+    distribution. The convergence and stability of the agent with the DRL model can
+    also be confirmed by the curves of the total rewards as a function of the training
+    episodes shown in Figure S8 of the SI.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'Figure 3 displays the reaction path constructed from the highest probability
+    actions in DRL modeling. The major difference between this reaction mechanism
+    and previous study is the H desorption on theh 2NH.H configuration.7,8 In the
+    previous study, it was suggested that the H was desorbed before the N2 adsorption.7,8
+    However, the DRL model suggests the opposite: The H will be desorbed after the
+    adsorbed N2 migrates from the top site to the sublayer site. Then the N2 is dissociated
+    to reach the original 4N configuration, and one reaction cycle is finished.
+
+
+    In order to resolve the discrepancy between the DRL model and previous studies,7,8
+    we further calculated the free energy diagram of the reaction path from the DRL
+    model using DFT simulations, shown in Figure 4. The previous study suggested that
+    the N2 adsorption on the 2N configuration has the highest barrier of 1.68 eV taking
+    2N.NH2.H as the resting state.8 Following the DRL model and using the 2N.NH2.H
+    as the resting state, we computed the N2 adsorption on the 2N.H state and found
+    that the additional H in the 2N.H state lowers the N2 adsorption barrier from
+    1.68 to 1.24 eV. After the N2 is adsorbed on the top site (γ state), it moves
+    to the sublayer site (δ state). The existence of H also lowers this barrier from
+    1.37 to 0.97 eV. As the N2 tilts from δ state to α state, the free energy barrier
+    becomes 1.16 eV in the presence of H, compared to 1.37 eV without H. The H then
+    needs to be desorbed, as it blocks the rotation of N2 from the α state to the
+    α'' state. Finally, the N2 is dissociated from the α'' state to form the 4N configuration.
+    The detailed reaction path of N2 adsorption, migration, and dissociation is displayed
+    in Figure S9 of the SI. Along this new reaction path from DRL modeling, the rate-determining
+    step is the hydrogenation step on configuration 2N.NH2.2H with a barrier of 1.52
+    eV, in contrast with 1.68 eV from the previous study.8 Therefore, DRL predicts
+    a more plausible reaction path compared to the previous study. We estimated the
+    rate at 673 K from transition state theory as k = (kBT/h)exp[-1.52/kBT] = 58.1
+    s-1, which is ~16-fold higher than the previous model of k = (kBT/h)exp[-1.68/kBT]
+    = 3.7 s-1. Here we predicted a higher reaction rate than experimental studies
+    may block the reaction sites.31,32 Using the same DFT framework, the DRL predicts
+    a reaction path with lower barrier than the domain knowledge, suggesting that
+    this new reaction path is more plausible than the previous one.
+
+
+    Many studies on the reaction mechanism of the Haber–Bosch process suggested that
+    rate-determining steps may involve (1) the dissociative adsorption of dinitrogen;40
+    (2) the reaction on the catalyst surface of adsorbed species;41 and (3) the desorption
+    of ammonia.42 The previous reaction network based on domain knowledge suggests
+    that the N2 adsorption/desorption has the highest reaction barrier and should
+    be dominant in the plausible rate-determining steps for the Fe(111) surface.7
+    In contrast, the new reaction path derived from DRL suggests that hydrogenation
+    of NH2 has the highest reaction barrier and is the most important rate-determining
+    step for the Fe(111) surface. The second most important step is the desorption
+    of NH3, and the third most important step is the N2 adsorption/desorption from
+    the new reaction mechanism. To validate the theoretical prediction, future experiments
+    may focus on characterizing the adsorbents (e.g., NH3, NH2, and N2) of the important
+    intermediate states using operando/in situ spectroscopy techniques. Particularly,
+    the NH2 signature is expected to be dominant in the spectroscopy
+
+
+    study on the Fe(111) surface since the step of NH2 hydrogenation has the highest
+    reaction barrier.
+
+
+    The reaction path predicted by the DRL framework gives insightful directions on
+    the future catalyst design for the Haber–Bosch process on the Fe(111) surface.
+    For example, one needs to decrease the hydrogenation barrier of NH2 species on
+    the Fe-bcc (111) surface to achieve a better performance than the pure Fe system.
+    This may be achieved through the doping strategy on the Fe(111) surface.8,17
+
+
+    # Comparison of DRL with Other Methods Determining the Reaction Path.
+
+
+    The DRL approach is to train an AI agent through its interaction with the environments
+    defined by the individual actions. The reward of each action is determined from
+    the DFT calculations and nudged elastic band (NEB) methods. In the DRL, we only
+    define the initial reactant and final products and do not define the sequence
+    of actions. In addition, the action can be repeated multiple times via Markov
+    decision processes, leading to an unlimited number of configurations along the
+    reaction path. After training, the AI agent will construct the reaction network
+    automatically from reactant to product by connecting these individual actions.
+    The accuracy of DRL depends on the energetics calculated from DFT and NEB methods.
+
+
+    It should be pointed out that the DRL approach is fundamentally different from
+    the artificial force induced reaction (AFIR) method, in which the given reactant
+    molecules are pressed to each other by a constant force so that the reaction path
+    and transition state can be identified.43,44 The AFIR approach is to identify
+    the reaction path by only giving the multiple reactant species without knowing
+    the reaction mechanisms. Similar to the NEB approach, the AFIR approach is effective
+    in determining the reaction path in one reaction step. In contrast, the DRL is
+    to construct the complete reaction network from many plausible reaction steps.
+    The initial state, final state, and reaction barriers for each reaction step are
+    computed from both DFT and NEB. Then the information on each reaction step is
+    used to determine the environment for the DRL modeling.
+
+
+    # CONCLUSION
+
+
+    In summary, we developed an AI framework combining the DRL model and DFT simulations
+    to examine catalytic reaction networks in complex reactions from zero knowledge.
+    Applying multiple novel sampling and learning techniques in the DRL model and
+    the quantitative construction of the DRL environment from DFT simulations, our
+    model effectively determines the most plausible reaction path of the Haber–Bosch
+    process on the most active Fe-bcc(111) surface. This reaction path consists of
+    a new segment path with a lower free energy barrier compared to previous studies7,8
+    based on domain knowledge, suggesting a higher probability. The success of this
+    AI framework will open a new window to studying many complicated catalytic chemical
+    reactions, such as Haber–Bosch and CO2 reduction.
+
+
+    # EXPERIMENTAL SECTION
+
+
+    Value and Policy Networks. In our actor–critic framework, the policy (actor) πθp(a|s)
+    generates the probability distribution given the state sr. Here the subscript
+    θp represents the set of parameters that parametrize the policy network. We used
+    a fully connected DNN taking the current state vector s as the input. It has fully
+    connected hidden layers consisting of 300 by 300 neurons with ReLU activation
+    function, and the output layer size is 17 with the Softmax activation'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'function. The output then maps to the probability distribution of the 17 actions,
+    respectively. The value network (critic) \(V_{\theta_v}(s_i)\) shares the same
+    hidden layers with the policy network, but it outputs a scalar value that quantitatively
+    estimates whether the action is on track to generate rewards. More precisely,
+    we define the observed return at step \(t\) up to the terminal step K as the sum
+    of discounted future rewards \(r_{t+1}, r_{t+2} ... r_T\) with the discount factor
+    \(\gamma = 0.99\)
+
+
+    \(G_t = \sum_{\tau=t+1}^{K} \gamma^{\tau-t-1} r_\tau\) (1)
+
+
+    and the value function, \(V_{\theta_v}(s_i)\), approximates the expected value
+    of the return, \(E_\pi[G_t|s_i]\), given state \(s_t\).
+
+
+    During the training, the model updates the parameters, \(\theta_p\) and \(\theta_v\),
+    of the policy and value network. To update \(\theta_p\), policy gradients (PGs)
+    are taken according to the direction given by
+
+
+    \(PG = (G_t - V_{\theta_v}(s_i)) \nabla_{\theta_p} \log \pi_{\theta_p}(a_i|s_i)\)
+    (2)
+
+
+    Here \(G_t\) is the observed return defined in eq 1 and collected in the rollout
+    as detailed in the Rollout Sampling section. The current value network, \(V_{\theta_v}(s_i)\),
+    is used to update the policy \(\pi_{\theta_p}(a_i|s_i)\), with the policy gradient
+    being in a direction that will improve the policy to favor actions that increase
+    the expected return. Moreover, the policy gradient becomes more reliable when
+    the value function has a more accurate estimation of the expected return. To improve
+    the value network, the parameters \(\theta_v\) are updated to minimize the mean
+    square error between the current value function, \(V_{\theta_v}(s_i)\), and the
+    observed return, \(G_t\). As discussed earlier, the input data is a vector with
+    23 entries describing the state \(s_t\). The model will accept a minimum of 300
+    data points (a training minibatch) in each training step. Thus, the training utilized
+    the stochastic gradient descent on the minibatch of the shape of (300, 23).
+
+
+    **Rollout Sampling.** For each subsequent step \(t\), the rollout data are collected
+    using the Monte Carlo (MC) method. Based on the current state \(s_t\), the actor
+    decides an action \(a_t\) which is drawn from the distribution generated by the
+    policy network \(\pi_{\theta_p}\). By executing the action, the model transits
+    to the next state \(s_{t+1}\) and claims the corresponding reward. The rollout
+    ends when either the final state or the maximum step of a rollout K is reached.
+    In our experiment, the maximum step K is set to be 500. We did not use approximation
+    methods such as TD(\(\lambda\))\(^{45}\) to approximate the observed return \(G_t\),
+    but used the Monte Carlo method to faithfully collect the return along the rollout
+    trajectory. By the end of the rollout, training samples consisting of the list
+    of tuples \((s_t, a_t, G_t)\) are collected.
+
+
+    For every policy update (training episode), the model is configured to investigate
+    many independent MC rollouts created on-policy, collected in parallel, and finally
+    synchronized to update the policy. The rollouts that do not reach the final state
+    by the terminal step K will have a certain down-sampling rate for the random selection
+    without replacement. The number of rollouts is dynamically determined in the runtime
+    and is inversely proportional to the average length of these rollouts for the
+    current policy update. We find our sampling methods play an important role in
+    preventing the model from converging to the suboptimal policy biased by the locally
+    optimized trajectories. In our experiment, we choose 0.3 as the down-sampling
+    rate, and a size of 300 is the minimum number of data points that are required.
+    This is equivalent to about 10 rollouts close to the final convergence.
+
+
+    **Curriculum Learning.** We introduce two-stage learning curricula for the model
+    to learn. For the first curriculum, to avoid unstable learning dynamics created
+    by the initial introduction of penalties for executing impossible actions, we
+    impose a tiny negative reward of -0.01 in the environment building. This small
+    penalty alleviates the accumulated negative rewards that otherwise easily prevent
+    the model from early exploration on the complex network while still holding fairly
+    reasonable sense for the model to exploit the favorable actions. In the second
+    curriculum, the negative rewards are increased to -0.1 for a more realistic environment,
+    and details about the rewards can be
+
+
+    found in Table S1. In our experiment, we run 100 000 training episodes for the
+    first curriculum and 50 000 for the second.
+
+
+    **Entropy Regularization.** In the policy gradient objective, we add the policy
+    entropy (PS) to eq 2 as an extra term, which is defined as
+
+
+    \(PS = -\beta \sum_i \pi_{\theta_p}(a_i^i|s_i) \log(\pi_{\theta_p}(a_i^i|s_i))\)
+    (3)
+
+
+    Here the superscript \(i\) denotes the action index and \(\beta\) is the entropy
+    regularization coefficient. The use of the entropy term encourages the model to
+    explore more on the actions that have small probabilities in the action space
+    following the current policy. We find the entropy regularization necessary to
+    handle our complex network with a large action space. For the first curriculum,
+    we configured the entropy regularization coefficient to be 0.1 and this coefficient
+    is decreased to 0.05 in the second curriculum while the model becomes more stable.
+
+
+    **DRL Model Convergence.** The initial parameters for our DRL model are given
+    with no prior information. But our model converges effectively to a stable and
+    optimal strategy, as shown in Figure S8 of the SI. This is due to the following
+    reasons. First of all, we randomly initialize the parameters via the Xaiver initialization
+    method that is designed to keep the scale of the gradients roughly the same in
+    all layers and significantly helps the stability and convergency of the DNN.\(^{46}\)
+    Second, we applied the A2C method, which is a synchronous version of A3C. The
+    synchronized gradient update keeps the training more cohesive and make convergence
+    much faster than the Vanilla policy gradient.\(^{37}\) Third, the framework combines
+    with DFT simulations, using the detailed free energy landscape to construct the
+    accurate reward functions over the actions. Last but not least, the curriculum
+    learning effectively helps the convergence of our model.
+
+
+    **DFT Simulations.** All DFT simulations are carried out using the VASP software
+    with plane-wave basis sets for the electronic wave function.\(^{47-50}\) The energy
+    cutoff for plane wave expansion is 500 eV in all calculations. We use the Perdew–Burke–Ernzerhof
+    exchange and correlation functional\(^{51,52}\) for electronic interactions and
+    the D3 corrections for van der Waals interactions.\(^{53}\) The Methfessel–Paxton
+    scheme is adopted to account for the electron partial occupation, and the width
+    of the electronic smearing is 0.2 eV. The spin polarization is allowed in all
+    calculations to predict the magnetic moments of Fe atoms accurately. The energy
+    convergence for the self-consistent field and the force convergence for ionic
+    steps are \(10^{-6}\) eV and \(10^{-3}\) eV/Å, respectively. The first Brillouin
+    zone is sampled using the \(\Gamma\)-centered mesh method with the \(4 \times
+    4 \times 1\) K-points used in the slab calculations. The simulation setup is consistent
+    with the previous studies, and the details can be found in the previous work.\(^{7,8}\)
+
+
+    The Fe-bcc(111) slab model consists of a (\(2 \times 2\)) unit cell in the (111)
+    plane and six layers perpendicular to the plane. The bottom three layers are fixed,
+    and the top three layers are allowed to relax in the geometry optimization. A
+    vacuum of 15 Å is added to the slab model to minimize the interactions between
+    period images. To examine the possible size effect of the slab model, we increase
+    the six-layer slab to nine-layer and compute the free energy of several important
+    states along the free energy diagram (Figure 4) on this nine-layer model. The
+    bottom three layers of this nine-layer slab are fixed in the geometry optimization.
+    To investigate the effect of the catalytic surface, we expand the (\(2 \times
+    2\)) six-layer slab to a (\(4 \times 2\)) slab and compute the free energy of
+    these important states on the enlarged model. Assuming that the free energy corrections
+    for the three slab models are the same, we obtain the free energies of the important
+    states and list them in Table S3 of the SI. The free energy of important states
+    agrees very well for all three slab models, indicating that the DFT simulations
+    are robust using the six-layer (\(2 \times 2\)) slab model.
+
+
+    We obtain the free energy at finite temperature by calculating the phonon modes
+    from the harmonic approximation. The finite displacement approach is adopted to
+    obtain the phonon modes,\(^{54,55}\) which are then used to compute the vibrational
+    entropy as a function of temperature. The free energy of gas phases (N\(_2\),
+    H\(_2\), and NH\(_3\)) is taken from previous work using the same computational
+    parameters.\(^{7,8}\) This computational setup has been demonstrated to accurately'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'describe the Haber–Bosch reactions on both Fe-bcc(111) and Fe-bcc(211) reconstructed
+    surfaces.7,56 The transition-state search between initial and final states is
+    first performed using the climbing NEB method57 and then refined using the dimer
+    approach.58 The details of the transition-state search can be found in the previous
+    study.7
+
+
+    # ## ASSOCIATED CONTENT
+
+
+    # ### Supporting Information
+
+
+    The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/jacs.1c08794.
+
+
+    Figures S1–S9, Tables S1–S3, reward definition from DFT simulations, DFT-derived
+    free energy for the HB reaction path obtained from DRL, and the free energy of
+    various configurations calculated from DFT used to determine rewards for DRL;
+    data sets and codes generated from this work are available from the corresponding
+    author on reasonable request (PDF)
+
+
+    Electronic energies and free energies for important surface configurations using
+    PBE-D3 xc functionals at 673 K and 1 atm, as well as thermodynamic data for gas-phase
+    molecules (XLSX)
+
+
+    # ## AUTHOR INFORMATION
+
+
+    # ### Corresponding Author
+
+
+    Qi An – Department of Chemical and Materials Engineering, University of Nevada–Reno,
+    Reno, Nevada 89577, United States; orcid.org/0000-0003-4838-6232; Email: qia@unr.edu
+
+
+    # ### Author
+
+
+    Tian Lan – Department of Chemical and Materials Engineering, University of Nevada–Reno,
+    Reno, Nevada 89577, United States
+
+
+    Complete contact information is available at: https://pubs.acs.org/10.1021/jacs.1c08794
+
+
+    # ### Notes
+
+
+    The authors declare no competing financial interest.
+
+
+    # ## ACKNOWLEDGMENTS
+
+
+    Acknowledgment is made to the donors of the American Chemical Society Petroleum
+    Research Fund (58754-DNI6) for partial support of this research. The authors would
+    also like to acknowledge the support of Research & Innovation and the Cyberinfrastructure
+    Team in the Office of Information Technology at the University of Nevada, Reno,
+    for facilitation and access to the Pronghorn High-Performance Computing Cluster.
+
+
+    # ## REFERENCES
+
+
+    +   (1) Mattos, L. V.; Jacobs, G.; Davis, B. H.; Noronha, F. B. Production of
+    hydrogen from ethanol: Review of reaction mechanism and catalyst deactivation.
+    Chem. Rev. 2012, 112, 4094–4123. (2) Shao, M.; Chang, Q.; Dodelet, J.; Chenitz,
+    R. Recent advances in electrocatalysts for oxygen reduction reaction. Chem. Rev.
+    2016, 116, 3594–3657. (3) Roger, I.; Shipman, M. A.; Symes, M. D. Earth-abundant
+    catalysts for electrochemical and photoelectrochemical water splitting. Nat. Rev.
+    Chem. 2017, 1, 0003. (4) Liu, H. Z. Ammonia Synthesis Catalysts: Innovation and
+    Practice; World Science Publishing Co. Ltd.: Singapore, 2013.
+
+
+    +   (5) Li, X.; Yu, J.; Jaroniec, M.; Chen, X. Cocatalysts for selective photoreduction
+    of CO2 into solar fuels. Chem. Rev. 2019, 119, 3962–4179. (6) Chung, D. Y.; Lopes,
+    P. P.; Martins, P.; He, H.; Kawaguchi, T.; Zapol, P.; You, H.; Tripkovic, D.;
+    Strmcnik, D.; Zhu, Y.; et al. Dynamic stability of active sites in hydr(oxy)oxides
+    for the oxygen evolution reaction. Nat. Energy 2020, 5, 222–230. (7) Qian, J.;
+    An, Q.; Fortunelli, A.; Nielsen, R. J.; Goddard, W. A., III Reaction mechanism
+    and kinetics for ammonia synthesis on the Fe(111) surface. J. Am. Chem. Soc. 2018,
+    140, 6288–6297. (8) An, Q.; Shen, Y.; Fortunelli, A.; Goddard, W. A., III QM-mechanism-based
+    hierarchical high-throughput in silico screening catalyst design for ammonia synthesis.
+    J. Am. Chem. Soc. 2018, 140, 17702–17710. (9) Grasselli, R. K. Fundamental principles
+    of selective heterogeneous oxidation catalysis. Top. Catal. 2002, 21, 79–88. (10)
+    Klerk, A. Fischer–Tropsch process. In Kirk-Othmer Encyclopedia of Chemical Technology;
+    Wiley-VCH: Weinheim, 2013. (11) Cecchin, G.; Morini, G.; Piemontesi, P. Ziegler-Natta
+    catalysts. In Kirk-Othmer Encyclopedia of Chemical Technology; Wiley-VCH: Weinheim,
+    2003. (12) Bjørgen, M.; Joensen, F.; Holm, M. S.; Olsbye, U.; Lillerud, K.; Svelle,
+    S. Methanol to gasoline over zeolite h-zsm-5: improved catalyst performance by
+    treatment with NaOH. Appl. Catal., A 2008, 345, 43–50. (13) Foster, S. L.; Bakovic,
+    S. I. P.; Duda, R. D.; Maheshwari, S.; Milton, R. D.; Mintere, S. D.; Janik, M.
+    J.; Renner, J. N.; Greenlee, L. F. Catalysts for nitrogen reduction to ammonia.
+    Nat. Catal. 2018, 1, 490–500. (14) Sun, S.; Watanabe, M.; Wu, J.; An, Q.; Ishihara,
+    T. Ultrathin WO3·0.33H2O nanotubes for CO2 photoreduction to acetate with high
+    selectivity. J. Am. Chem. Soc. 2018, 140, 6474–6482. (15) Seitz, L. C.; Dickens,
+    C. F.; Nishio, K.; Hikita, Y.; Montoya, J.; Doyle, A.; Kirk, C.; Vojvodic, A.;
+    Hwang, H. Y.; Norskov, J. K.; Jaramillo, T. F. A highly active and stable IrOx/SrIrO3
+    catalyst for the oxygen evolution reaction. Science 2016, 353, 1011–1014. (16)
+    Stamenkovic, V.; Strmcnik, D.; Lopes, P. P.; Markovic, N. M. Energy and fuels
+    from electrochemical interfaces. Nat. Mater. 2017, 16, 57–69. (17) An, Q.; McDonald,
+    M.; Fortunelli, A.; Goddard, W. A., III S-doped Fe catalyst for ammonia synthesis
+    at dramatically decreased pressures and temperatures. J. Am. Chem. Soc. 2020,
+    142, 8223–8232. (18) Senior, A. W.; Evans, R.; Jumper, J.; Kirkpatrick, J.; Sifre,
+    L.; Green, T.; Qin, C.; Zidek, A.; Nelson, A. W. R.; Bridgland, A.; et al. Improved
+    protein structure prediction using potentials from deep learning. Nature 2020,
+    577, 706–710. (19) Hermann, J.; Schätzle, Z.; Noé, F. Deep-neural-network solution
+    of the electronic Schrödinger equation. Nat. Chem. 2020, 12, 891–897. (20) Mayor,
+    A. C.; Coote, M. L. Deep learning in chemistry. J. Chem. Inf. Model. 2019, 59,
+    2545–2559. (21) Abdelrahman, K.; Yang, W.-Q.; Solomon, R. V.; Rajbanshi, B.; Chowdhury,
+    A.; Zare, M.; Kundu, S. K.; Yonge, A.; Heyden, A.; Terejanu, G. Prediction of
+    transition-state energies of hydrodeoxygenation reactions on transition-metal
+    surfaces based on machine learning. J. Phys. Chem. C 2019, 123, 29804–29810. (22)
+    Ulissi, Z. W.; Medford, A. J.; Bligaard, T.; Norskov, J. K. To address surface
+    reaction network complexity using scaling relations machine learning and DFT calculations.
+    Nat. Commun. 2017, 8, 14621. (23) Lamoureux, P. S.; Winther, K. T.; Torres, J.
+    A. G.; Streibel, V.; Zhao, M.; Bajdich, M.; Abild-Pedersen, F.; Bligaard, T. Machine
+    learning for computational heterogeneous catalysis. ChemCatChem 2019, 11, 3581–3601.
+    (24) Sutton, R. S.; Barto, A. G. Reinforcement Learning: An Introduction, 2nd
+    ed.; MIT Press: Cambridge, MA, 2018. (25) Silver, D.; Huang, A.; Maddison, C.
+    J.; Guez, A.; Sifre, L.; Driessche, G.; Schrittwieser, J.; Antonoglou, I.; Panneershelvam,
+    V;'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'Lancot, M.; et al. Mastering the game of Go with deep neural networks and tree
+    search. Nature 2016, 529, 484–489.
+
+
+    (26) Vinyls, O.; Babuschkin, I.; Czarnecki, W. M.; Mathieu, M.; Dudzik, A.; Chung,
+    J.; Choi, D. H.; Powell, R.; Ewalds, T.; Georgiev, P.; et al. Grandmaster level
+    in StarCraft II using multi-agent reinforcement learning. Nature 2019, 575, 350–354.
+
+
+    (27) Zheng, S.; Trott, A.; Srinivasa, S.; Naik, N.; Gruebeck, M.; Parkes, D. C.;
+    Socher, R. The AI economist: improving equality and productivity with AI-driven
+    tax policies. 2021, 2004.13332, preprint arXiv. https://arxiv.org/abs/2004.13332
+    (accessed April 28, 2020).
+
+
+    (28) Li, H.; Collins, C. R.; Ribelli, T. G.; Matyjaszewski, K; Gordon, G. J.;
+    Kowalewski, T.; Yaron, D. J. Tuning the molecular weight distribution from atom
+    transfer radical polymerization using deep reinforcement learning. Mol. Syst.
+    Des. Eng. 2018, 3, 496–508.
+
+
+    (29) Zhou, Z.; Kearnes, S.; Li, L.; Zare, R. N.; Riley, P. Optimization of molecules
+    via deep reinforcement learning. Sci. Rep. 2019, 9, 10752.
+
+
+    (30) Schlögl, R. Catalytic synthesis of ammonia - a "never-ending story"? Angew.
+    Chem., Int. Ed. 2003, 42, 2004–2008.
+
+
+    (31) Ertl, G. Reactions at surfaces: from atoms to complexity (Nobel Lecture).
+    Angew. Chem., Int. Ed. 2008, 47, 3524–3535.
+
+
+    (32) Chen, J. G.; Crooks, R. M.; Seefeldt, L. C.; Bren, K. L.; Bullock, R. M.;
+    Darensbourg, M. Y.; Holland, P. L.; Hoffman, B.; Janik, M. J.; Jones, A. K.; et
+    al. Beyond fossil fuel-driven nitrogen transformations. Science 2018, 360, No.
+    eaar6611.
+
+
+    (33) MacFarlane, D. R.; Cheerappan, P. V.; Choi, J.; Suryanto, B. H. R.; Hodgetts,
+    J. M.; Bakker, R. Y.; Vallana, F. M. F.; Simonov, A. N. Roadmap to the ammonia
+    economy. Joule 2020, 4, 1186–1205.
+
+
+    (34) Somorjai, G. A.; Materer, N. Surface structures in ammonia synthesis. Top.
+    Catal. 1994, 1, 215–231.
+
+
+    (35) Strongin, D. R.; Carrazza, J.; Bare, S. R.; Somorjai, G. A. The importance
+    of C7 sites and surface roughness in the ammonia synthesis reaction over iron.
+    J. Catal. 1987, 103, 213–215.
+
+
+    (36) Grunze, M. M.; Golze, M.; Hirschwald, W.; Freund, H.-J.; Pulm, H.; Seip,
+    U.; Tsai, M. C.; Ertl, G.; Küppers, J. n-bonded N2 on Fe(111): The precursor for
+    dissociation. Phys. Rev. Lett. 1984, 53, 850–854.
+
+
+    (37) Mnih, V.; Badia, A. P.; Mirza, M.; Graves, A.; Lillicrap, T. P.; Harley,
+    T.; Silver, D.; Kavukcuoglu, K. Asynchronous methods for deep reinforcement learning.
+    Proc. Machine Learning Res. 2016, 48, 1928–1937.
+
+
+    (38) Schulman, J.; Wolski, F.; Dhariwal, P.; Radford, A.; Klimov, O. Proximal
+    policy optimization algorithms. 2017, 1707.06347, preprint arXiv. https://arxiv.org/abs/1707.06347
+    (accessed July 20, 2017).
+
+
+    (39) Kingma, D. P.; Ba, J. Adam: A method for stochastic optimization. 2014, 1412.6980,
+    preprint arXiv. https://arxiv.org/abs/1412.6980 (accessed December 22, 2014).
+
+
+    (40) Stolze, P.; Norskov, J. K. Bridging the "pressure gap" between ultrahigh-vacuum
+    surface physics and high-pressure catalysis. Phys. Rev. Lett. 1985, 55, 2502–2505.
+
+
+    (41) Ertl, G. Surface science and catalysis — Studies on the mechanism of ammonia
+    synthesis: the PH Emmett award address. Catal. Rev.: Sci. Eng. 1980, 21, 201–223.
+
+
+    (42) Spencer, M. S. On the rate-determining step and the role of potassium in
+    the catalytic synthesis of ammonia. Catal. Lett. 1992, 13, 45–53.
+
+
+    (43) Maeda, S.; Morokuma, K. A systematic method for locating transition structures
+    of A+B\X type reactions. J. Chem. Phys. 2010, 132, 241102.
+
+
+    (44) Zimmerman, P. M. Automated discovery of chemically reasonable elementary
+    reaction steps. J. Comput. Chem. 2013, 34, 1385–1392.
+
+
+    (45) Sutton, R. Learning to predict by the method of temporal differences. Mach.
+    Learn. 1988, 3, 9–44.
+
+
+    (46) Glorot, X.; Bengio, Y. Understanding the difficulty of training deep feedforward
+    neural networks. International conference on artificial intelligence and statistics.
+    Proceedings of the Thirteenth International Conference on Artificial Intelligence
+    and Statistics. Proceedings of Machine Learning Research 2010, 9, 249–256.
+
+
+    (47) Kresse, G.; Hafner, J. Ab initio molecular dynamics for liquid metals. Phys.
+    Rev. B: Condens. Matter Mater. Phys. 1993, 47, 558–561.
+
+
+    (48) Kresse, G.; Furthmüller, J. Efficiency of ab initio total energy calculations
+    for metals and semiconductors using a plane-wave basis set. Comput. Mater. Sci.
+    1996, 6, 15–50.
+
+
+    (49) Kresse, G.; Furthmüller, J. Efficient iterative schemes for ab initio total-energy
+    calculations using a plane-wave basis set. Phys. Rev. B: Condens. Matter Mater.
+    Phys. 1996, 54, 11169–11186.
+
+
+    (50) Kresse, G.; Joubert, D. From ultrasoft pseudopotentials to the projector
+    augmented-wave method. Phys. Rev. B: Condens. Matter Mater. Phys. 1999, 59, 1758–1775.
+
+
+    (51) Perdew, J. P.; Burke, K.; Ernzerhof, M. Generalized gradient approximation
+    made simple. Phys. Rev. Lett. 1996, 77, 3865–3868.
+
+
+    (52) Perdew, J. P.; Burke, K.; Ernzerhof, M. Erratum: Generalized gradient approximation
+    made simple. Phys. Rev. Lett. 1997, 78, 1396–1396.
+
+
+    (53) Johnson, E. R.; Becke, A. D. A Post-Hartree-Fock model of intermolecular
+    interactions: Inclusion of higher-order corrections. J. Chem. Phys. 2006, 124,
+    174104.
+
+
+    (54) Togo, A.; Oba, F.; Tanaka, I. First-principles calculations at the ferroelastic
+    transition between rutile-type and CaCl2-type SiO2 at high pressures. Phys. Rev.
+    B: Condens. Matter Mater. Phys. 2008, 78, 134106.
+
+
+    (55) Dove, M. T. Introduction to Lattice Dynamics; Cambridge University Press:
+    Cambridge (UK), 1993.
+
+
+    (56) Fuller, J.; Fortunelli, A.; Goddard, W. A., III; An, Q. Reaction mechanism
+    and kinetics for ammonia synthesis on the Fe (211) reconstructed surface. Phys.
+    Chem. Chem. Phys. 2019, 21, 11444–11454.
+
+
+    (57) Henkelman, G.; Uberuaga, B. P.; Jónsson, H. A climbing image nudged elastic
+    band method for finding saddle points and minimum energy paths. J. Chem. Phys.
+    2000, 113, 9901–9904.
+
+
+    (58) Henkelman, G.; Jónsson, H. A dimer method for finding saddle points on high
+    dimensional potential surfaces using only first derivatives. J. Chem. Phys. 1999,
+    111, 7010–7022.'
+  merge: -1
+  img_proc: true

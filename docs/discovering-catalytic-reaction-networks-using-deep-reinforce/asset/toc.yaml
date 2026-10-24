@@ -1,0 +1,14 @@
+level_changes:
+- line: 8
+  before: 3
+  after: 2
+- line: 14
+  before: 3
+  after: 2
+- line: 26
+  before: 3
+  after: 2
+text_changes:
+- line: 96
+  before: 价值网络和策略网络。
+  after: 价值网络和策略网络
