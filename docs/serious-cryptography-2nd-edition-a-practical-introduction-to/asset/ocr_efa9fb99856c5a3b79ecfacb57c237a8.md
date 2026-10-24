@@ -1,0 +1,3 @@
+rather than *K* if *K* is too long, thus making *K* and **Hash**(*K*) equivalent keys. Or just look for systems that don’t use MAC when they should—a frequent occurrence.
+
+In Chapter 8, we’ll combine MACs with ciphers to protect a message’s *authenticity*, *integrity*, and *confidentiality*. We’ll also do this without MACs, thanks to authenticated ciphers, which combine the functionality of a basic cipher with that of a MAC by returning a tag along with each ciphertext.
