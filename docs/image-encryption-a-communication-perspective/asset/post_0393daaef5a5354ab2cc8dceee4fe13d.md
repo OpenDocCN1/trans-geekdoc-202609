@@ -1,0 +1,286 @@
+
+- numerical evaluation metrics, 63
+- peak signal-to-noise ratio, 64
+- RC6 cryptosystem, 61
+- signal-to-noise ratio, 61
+- visual inspection, 61
+- summary, 68–69
+- Chaotic key-based algorithm (CKBA), 30
+- Chosen-ciphertext attack, 10
+- Chosen-plaintext attack, 9–10
+- Cipher-block chaining (CBC), 24
+- Cipher feedback (CFB), 24, 27
+- Ciphertext, 5
+- Ciphertext-only attack, 9, 43
+- CKBA, see Chaotic key-based algorithm
+- Clipping ratio (CR), 121
+- Complementary CDF (CCDF), 116
+- Confidentiality, 4
+- CR, see Clipping ratio
+- Cryptanalysis, 4, 9–10
+  - black box, 9
+  - brute-force attack, 9
+  - chosen-ciphertext attack, 10
+  - chosen-plaintext attack, 9–10
+  - ciphertext-only attack, 9
+  - known-plaintext attack, 9
+- Cryptography, basic concepts of, 4–6
+  - adversary, 4, 6
+  - authentication methods, 5
+  - basic idea of encryption, 5
+  - ciphertext, 5
+  - confidentiality, 4
+  - cryptanalysis, 4
+  - data integrity, 4
+  - decryption procedure, 5
+  - definition of cryptography, 4
+  - discrete-value cryptosystem, 5
+  - entity authentication, 5
+  - goals of cryptography, 4–5
+  - image security, 4
+  - message authentication, 5
+  - nonrepudiation, 5
+  - plaintext, 5
+  - principles of encryption, 5–6
+- Cumulative distribution function (CDF), 116
+## D
+- DAB, see Digital audio broadcasting
+- D/A converter, see Digital-to-analog converter
+- Data Encryption Standard (DES), 1, 11–14, 134
+  - algorithm, 13–14
+  - double, 14
+  - expansion, 12
+  - Federal Information Processing Standard, 11
+  - fundamental building block, 14
+  - key mixing, 12
+  - operations, 12
+  - permutation, 13
+  - S-boxes, 12
+  - substitution, 12
+  - triple, 14–15
+- Data integrity, 4
+- DCT, see Discrete cosine transform
+- DCT-OFDM system model, 107–108
+  - complex coefficients, 107
+  - discrete cosine transform, 107
+  - signal-processing complexity, 107
+- Decryption
+  - algorithm, 10, 78, 94
+  - Blowfish, 16
+  - CBC, 26
+  - CFB, 27
+  - ECB, 25
+  - IDEA cipher, 15
+  - key, 7, 39
+  - procedure definition, 5
+  - RC6 process, 54
+- DES, see Data Encryption Standard
+
+## E
+- Diffusion characteristics, 42
+- Diffusion mechanism for data encryption in the ECB mode, 71–88
+  - block independency problem, 71
+  - implementation issues, 73–78
+    - Advanced Encryption Standard, 77
+    - Avalanche effect, 74
+    - ciphertext, large change in, 74
+    - effect of the normalized block size on block dependency, 77–78
+    - effect of the normalized block size on diffusion, 74–77
+    - error, 78
+    - SPN block size, 73
+    - parallel processing, 71
+    - preprocessing network, 72–73, 88
+      - addition part, 72–73
+      - irregularity, 72
+      - nonperiodicity, 72
+      - probability density functions, 73
+      - randomness, 72
+      - substitution permutation network, 73
+      - XOR operations, 73
+    - simulation examples, 78–88
+      - Avalanche effect, 81
+      - Cameraman image, 78, 80
+      - diffusion, 79–81
+      - encryption of images with few details, 82–88
+      - encryption quality, 79, 83
+      - histograms, 79
+      - logo image, 82, 85
+      - visual inspection, 79
+  - substitution permutation network, 71
+  - suggested mechanism, 72
+  - summary, 88
+- Digital-to-analog (D/A) converter, 115
+- Digital audio broadcasting (DAB), 90
+- Digital filters, 96
+- Discrete cosine transform (DCT), 95
+- Discrete-value cryptosystem, 5
+- Doppler spread, 89, 90
+- DWT-OFDM system model, 108
+- ECB, see Electronic codebook
+- ECB mode, see Diffusion mechanism for data encryption in the ECB mode
+- Electronic codebook (ECB), 1, 24
+- Encryption algorithms, classification of, 6–9
+  - asymmetric encryption, 7
+  - block ciphers, features of, 6
+  - block size, 6
+  - encryption structure, 6–7
+  - keys, 7–8
+  - key stream, 7
+  - percentage of encrypted data, 8
+  - private-key cipher, 7
+  - pseudorandom number generator, 7
+  - public-key cryptography, 7
+  - selective encryption, 8
+  - stream ciphers, 7
+  - symmetric cipher, 7
+  - types of cryptosystems, 8
+- Encryption evaluation metrics, 33–42
+  - diffusion, 33
+  - encryption evaluation metrics, 34–38
+    - Avalanche effect, 37
+    - correlation coefficient, 35
+    - deviation from ideality, 36–37
+    - histogram deviation, 34
+    - histogram uniformity, 36
+    - irregular deviation, 35–36
+    - number of pixel change rate, 34, 37–38
+    - unified average changing intensity, 34, 37–38
+    - other tests, 38
+      - noise immunity, 38
+      - peak signal-to-noise ratio, 38
+      - processing time, 38
+      - signal-to-noise ratios, 38
+  - pixel values, 33
+  - summary, 42
+    - testing the evaluation metrics, 38–42
+    - black-and-white image, 40
+    - Caesar cipher, 38, 39
+    - cipher offset, 39
+    - Coin image, 40
+    - correlation coefficient, 41
+    - decryption key, 39
+    - diffusion characteristics, 42
+    - histogram deviation, 41
+    - substitution, 41
+  - visual inspection, 33
+- Enhanced algorithms, simulation experiments for, 171–187
+  - AES encryption algorithm, 185
+  - comparison study, 173
+  - fading channel, 172–173
+  - performance of chaotic algorithms, 171
+  - RC6 encryption algorithm, 186
+- Entity authentication, 5
+
+## F
+- Fading channel, 100–101
+- Fast Fourier transform (FFT), 93, 104, 133
+- FDM, see Frequency division multiplexing
+- Federal Information Processing Standard (FIPS), 11
+- FFT, see Fast Fourier transform
+- FFT-OFDM system model, 105–106
+  - intersymbol interference, 105
+  - inverse FFT, 105
+  - received signal, 105
+- Filter
+  - averaging, 44
+  - band-pass, 96
+  - digital, 96
+  - high-pass, 43
+  - linear, 101
+  - low-pass, 43
+  - outputs, 96
+  - product, 98
+  - transmit, 129
+- FIPS, see Federal Information Processing Standard
+- FM, see Frequency modulation
+- Frequency division multiplexing (FDM), 91
+- Frequency modulation (FM), 91
+- Frequency offset, 104
+- Frequency shift keying (FSK), 91
+- FSK, see Frequency shift keying
+- Fundamentals of image encryption, 3–32
+  - Advanced Encryption Standard, 21–24
+    - AddRoundKey step, 23
+    - cipher key, 22
+    - Galois field, 22
+    - MixColumns step, 23
+    - Rijndael algorithm, 21
+    - rounds, 22
+    - S-box, 22
+    - ShiftRows step, 22
+    - state, 21
+    - subkey, 23, 24
+  - attack scenarios, 3
+  - Baker map, 31–32
+    - chaotic permutation, 31
+    - disadvantage, 32
+    - example, 32
+    - pixel image, 31
+  - basic concepts of cryptography, 4–6
+    - adversary, 4, 6
+    - authentication methods, 5
+    - basic idea of encryption, 5
+    - ciphertext, 5
+    - confidentiality, 4
+    - cryptanalysis, 4
+    - data integrity, 4
+    - decryption procedure, 5
+    - definition of cryptography, 4
+    - discrete-value cryptosystem, 5
+    - entity authentication, 5
+    - goals of cryptography, 4–5
+    - image security, 4
+    - message authentication, 5
+    - nonrepudiation, 5
+    - plaintext, 5
+    - principles of encryption, 5–6
+  - chaos and cryptography, 28–31
+    - bit recirculation image encryption, 30
+    - brute-force attacks, 29
+    - butterfly effect, 28
+    - chaotic key-based algorithm, 30
+    - characteristics of chaos, 28
+    - deterministicity, 29
+    - ergocity of a chaotic map, 29
+    - Kolmogorov-flow-based image encryption technique, 30
+    - properties of chaotic systems, 29
+    - pseudo-randomness, 28
+    - research areas, 28
+    - SCAN language, 30
+    - subkeys, 31
+    - symmetric block cipher algorithm, 30
+    - topological transitivity, 29
+  - classification of encryption algorithms, 6–9
+    - asymmetric encryption, 7
+    - block ciphers, features of, 6
+    - block size, 6
+    - encryption structure, 6–7
+    - keys, 7–8
+    - key stream, 7
+    - percentage of encrypted data, 8
+    - private-key cipher, 7
+    - pseudorandom number generator, 7
+    - public-key cryptography, 7
+    - selective encryption, 8
+    - stream ciphers, 7
+    - symmetric cipher, 7
+    - types of cryptosystems, 8
+  - conventional symmetric block ciphers, 11–24
+    - Advanced Encryption Standard, 21–24
+    - algebraic groups, 15
+    - Blowfish, 16
+    - Data Encryption Standard, 11–14
+    - Double DES, 14
+    - International Data Encryption Algorithm, 15
+    - key expansion, 16
+    - meet-in-the-middle attack, 14
+    - RC5 algorithm, 16–18
+    - RC6 algorithm, 19–21
+    - Triple DES, 14
+  - cryptanalysis, 9–10
+    - black box, 9
+    - brute-force attack, 9
+    - chosen-ciphertext attack, 10
+    - chosen-plaintext attack, 9–10
+    - ciphertext-only attack, 9
+    - known-plaintext attack, 9

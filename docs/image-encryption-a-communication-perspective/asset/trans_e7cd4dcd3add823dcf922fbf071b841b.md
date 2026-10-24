@@ -1,0 +1,247 @@
+
+```matlab
+%perfect fading compensation ...........................
+ifade2 = 1./ramp.*(rcos(1,:) .*ich5+rsin(1,:) .*qch5);
+qfade2 = 1./ramp.*(-rsin(1,:) .*ich5+rcos(1,:) .*qch5);
+ich5 = ifade2;
+qch5 = qfade2;
+
+%Guard interval removal ...........................
+[ich6,qch6] = girem(ich5,qch5,fftlen2,gilen,nd+1);
+%FFT ...............................................
+rx = ich6 + qch6.*j;
+ry = fft(rx);
+ich7 = real(ry);
+qch7 = imag(ry);
+%fading compensation by channel estimation symbol ....
+ce = 1;
+ice0 = ich2(:,ce);
+qce0 = qch2(:,ce);
+ice1 = ich7(:,ce);
+qce1 = qch7(:,ce);
+%calculate reverse rotation ...........................
+iv = real((1./(ice1.^2+qce1.^2)).*(ice0+i.*qce0).*(ice1-i.*qce1));
+qv = imag((1./(ice1.^2+qce1.^2)).*(ice0+i.*qce0).*(ice1-i.*qce1));
+%matrix for reverse rotation ...........................
+ieqv1 = [iv iv iv iv iv iv iv];
+qeqv1 = [qv qv qv qv qv qv qv];
+%reverse rotation ...............................
+icompen = real((ich7+i.*qch7).*(ieqv1+i.*qeqv1));
+qcompen = imag((ich7+i.*qch7).*(ieqv1+i.*qeqv1));
+ich7 = icompen;
+qch7 = qcompen;
+%channel estimation symbol removal ....................
+knd = 1;    %number of known channel estimation ofdm symbol
+ich9 = ich7(:,knd+1: nd+1);
+qch9 = qch7(:,knd+1: nd+1);
+
+%Demodulation .......................................
+ich10 = ich9./kmod;
+qch10 = qch9./kmod;
+outdemodata = qpskdemod(ich10,qch10,para,nd,m1);
+
+function outdemodata = dct_channel_estimation_no_mapping_clipping(serdata,para,nd,m1,gilen,fftlen,sr,ebno,br,fd,flat)
+
+paradata = reshape(serdata,para,nd*m1);
+
+%QPSK modulation ...............................................
+[ich,qch] = qpskmod(paradata,para,nd,m1);
+% [ich0,qch0] = compoversamp(ich01,qch01,length(ich01),Ipoint);
+
+kmod = 1/sqrt(2);
+ich1 = ich.*kmod;
+qch1 = qch.*kmod;
+%channel estimation data generation ....................
+kndata = zeros(1,fftlen);
+kndata0 = 2.*(rand(1,para)<0.5)-1;
+kndata(1: para/2) = kndata0(1: para/2);
+kndata((para/2)+1: para) = kndata0((para/2)+1: para);
+ceich = kndata;
+ceqch = zeros(1,para);
+%data mapping ..................................................
+ich2 = [ceich.' ich1];
+qch2 = [ceqch.' qch1];
+%IDCT ...........................................................
+x = ich2 + qch2.*i;
+
+y = idct(x);
+
+CR = 4;
+
+clipping_threshold = (10^(CR/10))*sqrt(mean(abs(y).^2));
+tx_signal_Ang = angle(y);
+for ii = 1: length(y)
+    if y(ii) == y(ii);
+        y(ii) = y(ii);
+    elseif abs(y(ii)).^2 > clipping_threshold
+        y(ii) = clipping_threshold.*exp(sqrt(-1)*tx_signal_Ang(ii));
+    end
+end
+
+ich3 = real(y);
+qch3 = imag(y);
+
+%Guard interval insertion ...............................
+
+[ich4,qch4] = giins(ich3,qch3,fftlen,gilen,nd+1);
+fftlen2 = fftlen + gilen;
+
+%Attenuation Calculation ...............................
+
+spow = sum(ich4.^2+qch4.^2)/nd./para;
+attn = 0.5*spow*sr/br*10.^(-ebno/10);
+attn = sqrt(attn);
+%fading ...............................
+%****** Create Rayleigh fading channel object.******
+tstp = 1/sr/(fftlen+gilen);
+itau = [0,2,3,4];
+dlvl1 = [0,10,20,25];
+n0 = [6,7,6,7];
+th1 = [0,0,0,0];
+itnd1 = [1000,2000,3000,4000];
+now1 = 4;
+itnd0 = nd*(fftlen+gilen)*20;
+[ifade,qfade,ramp,rcos,rsin] = sefade(ich4,qch4,itau,dlvl1,th1,n0,itnd1,now1,length(ich4),tstp,fd,flat);
+itnd1 = itnd1+itnd0;
+ich4 = ifade;
+qch4 = qfade;
+
+%********************* AWGN addition *********************
+%Receiver ...............................
+
+%AWGN addition ...............................
+
+[ich5,qch5] = comb(ich4,qch4,attn);
+%perfect fading compensation ...............
+...........................................
+ifade2 = 1./ramp.*(rcos(1,:) .*ich5+rsin(1,:) .*qch5);
+qfade2 = 1./ramp.*(-rsin(1,:) .*ich5+rcos(1,:) .*qch5);
+ich5 = ifade2;
+qch5 = qfade2;
+
+%Guard interval removal ...............................
+[ich6,qch6] = girem(ich5,qch5,fftlen2,gilen,nd+1);
+%DCT ...............................
+rx = ich6 + qch6.*j;
+ry = dct(rx);
+ich7 = real(ry);
+qch7 = imag(ry);
+%fading compensation by channel estimation symbol ....
+ce = 1;
+ice0 = ich2(:,ce);
+qce0 = qch2(:,ce);
+ice1 = ich7(:,ce);
+qce1 = qch7(:,ce);
+%calculate reverse rotation .......................................
+iv = real((1./(ice1.^2+qce1.^2)).*(ice0+i.*qce0).*(ice1-i.*qce1));
+qv = imag((1./(ice1.^2+qce1.^2)).*(ice0+i.*qce0).*(ice1-i.*qce1));
+%matrix for reverse rotation .......................................
+ieqv1 = [iv iv iv iv iv iv iv];
+qeqv1 = [qv qv qv qv qv qv qv];
+%reverse rotation ...................................
+icompen = real((ich7+i.*qch7).*(ieqv1+i.*qeqv1));
+qcompen = imag((ich7+i.*qch7).*(ieqv1+i.*qeqv1));
+ich7 = icompen;
+qch7 = qcompen;
+%channel estimation symbol removal ...............................
+knd = 1;            %number of known channel
+                    estimation ofdm symbol
+ich9 = ich7(:,knd+1: nd+1);
+qch9 = qch7(:,knd+1: nd+1);
+
+%Demodulation ...................................................
+ich10 = ich9./kmod;
+qch10 = qch9./kmod;
+outdemodata = qpskdemod(ich10,qch10,para,nd,m1);
+
+function outdemodata = dwt_channel_estimation_no_mapping_clipping(serdata,para,nd,m1,gilen,fftlen,sr,ebno,br,fd,flat)
+
+paradata = reshape(serdata,para,nd*m1);
+%QPSK modulation .....................................................
+[ich,qch] = qpskmod(paradata,para,nd,m1);
+% [ich0,qch0] = compoversamp (ich01,qch01,length(ich01),Ipoint);
+kmod = 1/sqrt(2);
+ich1 = ich.*kmod;
+qch1 = qch.*kmod;
+%channel estimation data generation ...................
+kndata = zeros(1,fftlen)
+kndata0 = 2.*(rand(1,para)<0.5)-1;
+kndata(1: para/2) = kndata0(1: para/2);
+kndata((para/2)+1: para) = kndata0((para/2)+1: para);
+ceich = kndata;
+qcech = zeros(1,para);
+%data mapping ...........................................
+ich2 = [ceich.' ich1];
+qch2 = [qcech.' qch1];
+
+%IDWT ...................................................
+x = ich2 + qch2.*j;
+y = wavelet('D6',-1,x,'zpd'); % Invert 5 stages
+%; % 2D wavelet transform
+% R = wavelet('2D CDF 9/7',-2,Y); % Recover X from Y%
+Forward transform with 5 stages
+CR = 4;
+        clipping_threshold = (10^(CR/10)*sqrt(mean(abs(y).^2));
+        tx_signal_Ang = angle(y);
+        for ii = 1:length(y)
+                if y(ii) == y(ii);
+                        y(ii) = y(ii);
+                elseif abs(y(ii)).^2 > clipping_threshold
+                        y(ii) = clipping_threshold.*exp(sqrt(-1)*tx_signal_Ang(ii))
+        end
+end
+
+ich3 = real(y);
+qch3 = imag(y);
+%Guard interval insertion ..............................
+
+[ich4,qch4] = giins(ich3,qch3,fftlen,gilen,nd+1);
+fftlen2 = fftlen + gilen;
+
+%Attenuation Calculation ...............................
+
+spow = sum(ich4.^2+qch4.^2)/nd./para;
+attn = 0.5*spow*sr/br*10.^(-ebno/10);
+attn = sqrt(attn);
+%fading .................................................
+%****** Create Rayleigh fading channel object.******
+tstp = 1/sr/(fftlen+gilen);
+itau = [0,2,3,4];
+dlvl1 = [0,10,20,25];
+n0 = [6,7,6,7];
+th1 = [0,0,0,0];
+itnd1 = [1000,2000,3000,4000];
+now1 = 4;
+itnd0 = nd*(fftlen+gilen)*20;
+[ifade,qfade,ramp,rcos,rsin] = sefade(ich4,qch4,itau,dlvl1,th1,n0,itnd1,now1,length(ich4),tstp,fd,flat);
+itnd1 = itnd1+itnd0;
+ich4 = ifade;
+qch4 = qfade;
+
+%*********************AWGN addition *************************
+%Receiver .......................................................
+
+%AWGN addition ...................................................
+[ich5,qch5] = comb(ich4,qch4,attn);
+%perfect fading compensation .......................................
+ifade2 = 1./ramp.*(rcos(1,:) .*ich5+rsin(1,:) .*qch5);
+qfade2 = 1./ramp.*(-rsin(1,:) .*ich5+rcos(1,:) .*qch5);
+ich5 = ifade2;
+qch5 = qfade2;
+
+%Guard interval removal ...........................................
+[ich6,qch6] = girem(ich5,qch5,fftlen2,gilen,nd+1);
+%DWT ...............................................................
+rx = ich6 + qch6.*j;
+ry = wavelet('D6',1,rx,'zpd'); % 2D wavelet transform
+% R = wavelet('2D CDF 9/7',-2,Y); % Recover X from Y;
+ich7 = real(ry);
+qch7 = imag(ry);
+%fading compensation by channel estimation symbol ....
+ce = 1;
+ice0 = ich2(:,ce);
+qce0 = qch2(:,ce);
+ice1 = ich7(:,ce);
+qce1 = qch7(:,ce);
+%calculate reverse rotation .......................................
+iv = real((1./(ice1.^2+qce1.^2)).*(ice0+i.*qce0).*(ice1-i.*qce1));
