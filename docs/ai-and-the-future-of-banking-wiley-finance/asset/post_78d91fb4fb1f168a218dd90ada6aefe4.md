@@ -1,0 +1,304 @@
+
+- Oresme, N., 4
+- organisational agility, 28
+- organisational changes in banking, 208
+- outward-facing activities, 62–3
+- Over the Top (OTT) services, 27–8
+- oversight, operational risk definitions, 224
+- overspending, 6
+- over-the-counter markets, 190–1
+- ownership, operational risk definitions, 224
+- *Oxford English Dictionary* definition of leadership, 137
+
+## P
+- Paladin cybercrime app, 227
+- palm vein recognition apps, 107
+- participation leadership, 137
+- partnership gateway enablers, 15
+- partnership models in banking, 174, 175
+- ‘Paths to Our Digital Future’ 2017 report, 228
+- pattern and feature analyses (speech), 103
+- Payment Services Directive 2 (PSD2), 110
+- ‘Payment World Explodes’ report, 166
+- payments monitoring, 82–3
+- PayPal, 166–7
+- peer judgement, 47–8
+- peer-to-peer lending, 108, 164–6
+- performance management
+  - analytics, 58–60, 59–60
+  - operational efficiency, 78–80
+- personal identification numbers (PINs), 110
+- perverse result (risk scenario analytics), 74
+- Perzig, -, 146
+- Peters, T., 34, 125
+- *The Philosophy of Money* (Simmel), 6
+- phishing scams, 237
+- phonemes (language), 102–4
+- phones, 106
+- physical money (analogue banking), 10, 69–70
+- ‘Pivot Point: Today’s Challenges to Building Top-Tier Talent in Financial Services by 2030’, 143–4
+- planning tools, analytics/performance management, 60
+- *Plum* system, 108
+- plumbing of systems, data extraction, 46
+- PNC Bank, 39
+- pods, banking, 170
+- Police and Justice Act, 238
+- poorly defined inorganic growth agenda, 29
+- portfolios, 57, 85–6
+- post-retail branding, 127
+- PRA *see* Prudential Regulatory Authority
+- Prado, M. L. de, 87
+- predictive analytics, 44–5, 83
+- ‘Predicts 2015: Cloud Computing Goes Beyond IT Into Digital Business’ (Gartner), 48–9
+- prescriptive analytics, 44–5
+- pricing elasticity (optimization), 70–1
+- primers, data and analytics, 39–53
+- prioritising agility over compliance, 43
+- prisoner’s dilemma, 191
+- privacy and security, 28
+- private banking, 5
+- private cloud computing, 48–9
+- private money, 195
+- product development, 12–13
+- product, head of, 205
+- professional liability risk, 227
+- profitability (growth strategies), 22–3, 22–5, 24–5, 28
+- Prosper peer-to-peer lending, 165
+- Prudential Regulatory Authority (PRA), 227
+- PSD2 *see* Payment Services Directive
+- *Psychology Today*, 135
+- PYMNTS.com, 206
+- python developer artificial intelligence, 15
+
+## Q
+- quantitative analysts (quants), 39
+- Quiggan, A.H., 2
+- quintillions of information, 40
+
+## R
+- R Foundation for Statistical Learning, 102
+- Rajan, N.S., 142–3
+- ransom risk, 227
+- Rapid Application Development (RAD) models of implementation, 210
+- Ratesetter peer-to-peer lending, 108, 165
+- rating of banking organisations, 47–8
+- RBS *see* Royal Bank of Scotland
+- Read, C., 57
+- readiness, cybercrime, 229, 231–3
+- ‘Ready to Talk’ (Accenture), 173
+- real value creation, healthcare industry, 29
+- recognised best practices, cyber security toolkits, 226
+- ‘Redefining the Mission for Banks: Call Centers Cut Costs, Grow Sales, or Both’ (Booz and Co), 80–1
+- Refirm Labs cybercrime app, 227
+- refresh/reform programmes, 158
+- Regtech, 76, 213
+- Regulation of Investigatory Powers Act, 238
+- regulatory certainty, 28
+- regulatory compliance, 76
+- *Re-Imagine!* (Peters), 34, 125
+- reimagining banking, 33–5
+- relationship pricing, 69–71
+- remittances, 189
+- reporting, analytics/performance management, 60
+- reputational risk, 227
+- responding to cyber attacks, 230–1
+- retail banking, 4, 5
+- retail industry, imperatives in banking, 26–7
+- Return on Investment (ROI), 57
+- Revolut, 123–4
+- risk
+  - and compliance, 10–11
+  - cybercrime, 223–6
+  - financial markets monitoring, 84–5
+  - operational, 73, 223–6
+  - professional liability, 227
+  - ransoms, 227
+  - reputational, 227
+- risk assessment, wealth management, 109
+- risk management, 24–5
+  - analytics, 73–7
+  - artificial intelligence, 76–7
+  - cybercrime, 227, 234
+  - fraud detection, 75
+  - regulatory compliance, 76
+  - reinventing, 35–6
+- “The Risk Manager of the Future” (Ruane), 35
+- risk scenario analytics, 74
+- “Roadmap for Development” (Fitch Learning leadership), 144
+- robotic advisors, 160–1, 213
+- Robotic Process Automation (RPA), 32, 58, 82, 167
+- ROI (Return on Investment), 57
+- ‘The Role of Deliberate Practice in the Acquisition of Expert Performance’ (Ericsson), 144
+- rolling forecasts, analytics/performance management, 60
+- Royal Bank of Scotland (RBS), 174–5
+- Ruane, B., 35
+- Ruddenklau, A., 215–16
+- Russia, blockchain, 194
+
+## S
+- safeguards, 228–34
+- sales, 13, 79–80, 83–4
+  - and trading disruptions, 177
+- Santander, brand value, 119
+- saving and loan companies, 5
+- Schmidt, E., 40
+- second-generation MDM, 43
+- securitised asset portfolios, 57
+- security, 28
+  - toolkits, 226
+- security information and event management (SIEM), 232
+- seigniorage, 3–4
+- self-generating branding, 127
+- self-help, 146–7
+- Serious Crime Act, 238
+- servant leadership, 142–3
+- shadow banking systems, 6
+- Shevlin, R., 12–13
+- Shiny data visualisation app, 102
+- Sidhu, J., 171
+- Sidhu, L., 100–1
+- Silent Cyber app, 227
+- SiliconAngle – financial aid levering, 140
+- Simmel, G., 6
+- simple pattern matching (speech), 103
+- ‘Simply Ted’, 40
+- Singapore, technological readiness, 160
+- Singh, A., 195
+- Singh, S., 69–70
+- Siri, 115–16
+- situational leadership, 137
+- ‘Six Digital Growth Strategies for Banks’ (McKinsey), 22–3
+- Skype, peer-to-peer, 165
+- SMA (Strategy Meets Actions), 166
+- small and medium enterprises (SMEs), 194–5, 196, 226
+- Smart Contracts, 213
+- *The Social Life of Money* (Dodd), 3
+- social media
+  - brands, 118, 127
+  - Facebook, 68, 105, 118, 165, 236
+  - Instagram, 68
+  - Twitter, 68, 165
+  - veracity/big data, 41
+- social media campaigns, 67–9
+- socialized debt, 6
+- Society for World-Wide Interbank Financial Telecommunications (SWIFT), 189–90
+- sourcing data, analytics/customer insight, 61–2
+- South Africa, blockchain, 194
+- Spain
+  - brand value, 119
+  - Hiscox insurance/cybercrime, 229
+- spam, 41
+- specialist banking, 5
+- speech, 102–4
+- spiral models of implementation, 210
+- stable coins see cryptocurrencies
+- Starling Bank, 100, 101
+- State of Cybercrime Survey, 228
+- statistical modelling (speech), 103–4
+- Stellar Development Foundation, 188–9
+- Strange, S., 6
+- strategy, strategic ambidexterity, 162–3, 167
+- Strategy Meets Actions (SMA), 166
+- streamed data, 40
+- supply chain managers, 234
+- Sweden, technological readiness, 160
+- SWIFT (Society for World-Wide Interbank Financial Telecommunications), 189–90
+- Switzerland
+  - technological readiness, 160
+  - universal banking, 163
+  - wealth, 72
+- Symantec, 228
+
+## T
+- Taleb, N., 86
+- Tangerine Bank, 170
+- Tata, 142–3
+- tech dependence of Millennials, 160–1
+- technological change, accepting of, 33
+- Telecom Expense Management (TEM), 211–12
+- telecom industry, imperatives in banking, 27–9
+- Telecommunications Union (ITU), 172
+- Terrorism Act, 238
+- Thalesians, 96
+- Thiele, T., 85
+- third-generation MDM, 43
+- thought leaders, 137
+- thumbprint recognition apps, 106–7
+- time series data, 96
+- time to value (TTV), 43
+- tipping, 10
+- Title III (Wiretap Act), 238
+- trade monitoring, 84–5
+- training
+  - cyber security toolkits, 226
+  - Indian blockchain, 194
+  - leadership, 143–5
+- transactional leadership, 137
+- transfers (money), 189
+- transformation of employees see leadership
+- transformation of investment banks, 175–8
+- transformational cost of branch improvements, 158, 159
+- transformative leadership, 136
+- transparency
+  - blockchain, 187
+  - operational efficiency, 78
+- Treasury Committee of the UK, 222–3
+- ‘A Treatise on the Origin, Nature, Law and Alterations of Money’ (Oresme), 4
+- trees and paper production, 40
+- Trojan viruses, 237
+- ‘Trust but Verify’ leadership approaches, 140–1
+- TSB Bank UK, 33
+- TTV (time to value), 43
+- Twitter
+  - analytics, 68
+  - peer-to-peer, 165
+
+## U
+- Ulster Bank, 77
+- ultra-gamified branding, 127
+- Umpqua Bank, Oregon, 170
+- unbanked/underbanked services, 196, 213
+- unexpected benefit/drawbacks (risk scenario analytics), 74
+- Unified Payments Interface (UPI), 193
+- unified threat management (UTM), 232
+- United Kingdom
+  - analytics/social media, 69
+  - BACS, 8
+  - Bank of England, 7–8, 13
+  - brand value, 118, 119
+  - cashless societies, 9
+  - challenger banks, 100–1
+  - collaborative banks, 174–5
+  - cyber risk management apps, 227
+  - cyberattacks, 222
+  - Darktrace, 232–3
+  - data academies, 203
+  - digital banks, 169–70
+  - Fintech for banking, 214, 216
+  - Hiscox insurance/cybercrime, 229
+  - in-house AI teams, 133
+  - IT failures, 222–3
+  - law/cybercrime, 238
+  - money definitions, 7–8
+  - National Cyber Security Centre, 223
+  - NCSC, 229–30
+  - peer-to-peer lending, 165
+  - technological change, 33
+  - technological readiness, 161
+  - Treasury Committee, 222–3
+  - wealth, 72
+  - Young Money blog, 123
+- United States
+  - Analecta cyber security experts, 230
+  - brand value, 118, 119
+  - capital to innovate, 211
+  - cashless societies, 9
+  - challenger banks, 100–1
+  - digital banks, 170
+  - Fintech for banking, 214
+  - Hiscox insurance/cybercrime, 229
+  - hub-and-spoke approaches, 170
+  - internationalisation of cybercrime, 225
+  - investment bank transformations, 175–6
+  - law/cybercrime, 238
+  - relationship pricing, 69

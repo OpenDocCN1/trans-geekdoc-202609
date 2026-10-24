@@ -1,0 +1,9 @@
+# TABLE 29 *(Continued)*
+
+| Name | Tagline | Description |
+|---|---|---|
+| Domeyard | ‘The Hedge Fund of the Future’ | A hedge fund, commodity trading advisor, and commodity pool operator based in Boston. Leverages advances in high-performance computing and data analysis to implement trading algorithms across a diverse range of assets including equities, futures, fixed income, energies and commodities. domeyard.com |
+| ForwardLane | ‘Time well spent. Time is the one thing we have equally. How you spend yours is your key differentiator’ | ForwardLane are an AI Fintech providing an AI API platform for wealth managers, asset managers and commercial banks. Their solution claims to provide personalised insights for financial services professionals and their clients with unique reasoning. ‘Client Prioritization’ determines which clients to engage with and why, whilst ‘Expert Conversation’ powers research analyst-level Q&A with an intuitive natural language conversation interface. https://forwardlane.com/ |
+| TruMid | ‘Bringing trading efficiency and market intelligence to credit professionals’ | Financial technology company bringing efficiency to credit trading through data, technology and intuitively designed products. https://www.trumid.com |
+| Algoriz | ‘Automated Stock and Crypto Trading. Type in English, trade in seconds’ | Algoriz is an AI-based trading platform that enables trading algorithms to be built by the user by simply typing their strategies in the English language. Also builds, backtests and automates trading strategies in equities and cryptocurrencies. https://algoriz.com/ |
+| Binatix | ‘Applies proprietary biologically-inspired artificial intelligence algorithms to large-scale data analytics’ | Binatix provides powerful, brain-inspired, pattern recognition and machine intelligence technology. www.binatix.com |

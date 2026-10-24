@@ -1,0 +1,19 @@
+# Marketing
+
+Promotion and marketing are important parts of a financial organisation (and usually most non-financial ones) as they play an important part in creating and maintaining a reputation. The consistent use of logos and colour, for example, is important both in analogue and digital forms of marketing, and both are aligned to campaign management, slogans and branding. Effective use of analytics is a critical part of the marketing process, both in a B2C and B2B environment.
+
+With an increasingly cynical and ethically aware customer base, the way in which a bank portrays itself is especially important. Experts already recognise that certain tools and methodologies resonate at a deeper psychological level, including the use of colour in the brand projection.
+
+For example, organisations that use the colours blue and yellow do not do this by accident. Blue is associated with trust, whilst yellow is associated with happiness. There are also international perspectives that need to be considered as well, especially for global players. For example, red has quite different meanings in the West when compared to China. Black, as used by Société Générale, represents both austerity and power – perhaps very timely attributes to reflect the economic uncertainty of current times. Strong imagery also has an increasing part to play, not only from a symbolic point of view (the lion of ING, for example) but also as the industry increasingly moves to the digital channel, where prompt recognition on a small cellphone screen becomes critical.
+
+# Customer Support and Service
+
+For many retail customers, the level and quality of customer support and service can be a key differentiator, especially when there are queries about the technology, products or simply questions to be asked and answers to be found. A 2014 JD Power Survey about U.S. Retail Banking Satisfaction found that poor customer service was the number one reason customers switched banks.
+
+Customer, product and system knowledge are all critical in the customer support function, but overall this part of the operation is seen as an expensive way to service the customer. As a result banks are increasingly driving towards ‘self-service’ even in the physical branch. Possibly the most effective customer support is one that combines accuracy and practical help with good interpersonal skills. Consequently, the retail banking industry is leaning towards ‘augmented AI’ where the activities of the contact centre agent are enhanced by technology, chat bots and eventually robotics, all of which will be analytically infused.
+
+The prevalence of ATMs as a principle part of the bank’s interaction with the customer is especially recognised as a lost opportunity for improving the quality and depth of the relationship. The use of the ATM presupposes that cash will still have a part to play, but the concept of cardless eATMs is gaining attention. With ATMs and eATMs doing 60% of the function of the traditional teller, the future for ATMs to replace the traditional bank branch is especially likely, with one probable modification that future access need no longer be by plastic card but rather by iris scan or equivalent.
+
+# FUTURE JOBS IN BANKING
+
+In 2018 HSBC highlighted what they believed to comprise the new roles that would be needed for their own digital transformation as part of their $17Bn tech spend. They identified the need to recruit 1000 extra people with digital skills, typically experienced ‘UI designers, digital product managers, software engineers, solution architects, exploratory testers and delivery managers.’

@@ -1,0 +1,315 @@
+
+## TABLE 39 *(Continued)*
+
+| Name | Tagline | Description |
+|---|---|---|
+| WealthNavi | ‘Reducing the trouble of asset management to zero’ | Management of world-level assets by use of a robo-advisor, ‘WealthNavi’. https://www.wealthnavi.com/about |
+| Dayli Financial Group | ‘Finance for Enriching Daily Life’ | South Korean financial industry solutions based on artificial intelligence, Blockchain, robo-advisor and cryptocurrency. http://daylifg.com/ |
+| Doomoolmori | ‘Investment solution for the diverse majority’ | A robo-advisor service aiming for low-risk target return of 8%. https://doomoolmori.com |
+
+## REFERENCES
+
+- 1. ‘2018 CB Insights Fintech 250 List of Fastest-Growing Fintech Startups’. ComplyAdvantage.com. (Viewed 29/10/2019) https://complyadvantage.com/blog/complyadvantage-named-2018-cb-insights-fintech-250-list-fastest-growing-fintech-startups/
+- 2. ‘Top Wealthtech Startups in East Asia’. Fintech News Hong Kong. 18 February 2019. (Viewed 20/10/2019) http://fintechnews.hk/8489/wealthtech/wealthtech-east-asia-china-korea-japan/
+
+## Index
+
+- 4G connectivity, 46–7
+- 5G connectivity, 46–7, 172
+- 5S Touch ID fingerprint sensors (iPhones), 106
+- ‘9 Keys to Branch Sales and Service Success’ (Dean), 79–80
+- 24-hour hackathons, 205
+- 360-degree customer insight, 61–5
+
+### A
+
+- Aaker, D., 117
+- Accenture, 173, 191, 206, 223, 224
+- accepting technological change, 33
+- acquisition management, 11
+- adaptation, 208–10
+- administration, 10
+- Advances in Financial Machine Learning (Lopez de Prado), 87
+- advisors, 15, 31–2, 109–10, 160–1, 176, 213
+- Africa
+  - blockchain, 194, 196–9
+  - Era of Data, 197
+  - fastest growing cities, 197
+  - open banking, 196–9
+  - population 2100, 199
+  - projected population growth, 197, 198, 199
+  - top megacity populations 2010, 197, 198, 199
+- agile implementation, 209
+- agility over compliance, 43
+- Agricultural Bank of China, brand value, 118
+- AI branding, 126
+- AIM, Indian blockchain, 194
+- Alexa, 115–16
+- algorithmic mechanics, 15
+- AliPay, 8–9, 166–7
+- Amazon, 118
+- ambassadors for brands, 63
+- ambidexterity, 145, 146, 147–8, 162–3, 167
+- Analecta cyber security experts, 230
+- analogue banking, 10, 69–70
+- analytics
+  - artificial intelligence, 76–7
+  - banking performance management, 59–60
+  - branch performance management, 78–80
+  - branch-specific analytics campaigns, 66–7
+  - client servicing, 71–3
+  - commission management, 83–4
+  - compensation management, 83–4
+  - contact centre service, 80–2
+  - credit ratings, 65–6
+  - customers, 61–73
+  - cybercrime apps, 227
+  - derivative markets, 86–7
+  - finance management, 56–60
+  - financial markets risk monitoring, 84–5
+  - fraud detection, 75–6, 235
+  - infused leadership, 138–40, 141
+  - integrated decision-making, 58–9
+  - IT cost transparency, 78
+  - key elements, 55–91
+  - leadership competences, 141
+  - mortgage tracking, 83
+  - open banking, 183
+  - operational efficiency, 77–87
+  - payments monitoring, 82–3
+  - performance management, 58–9
+  - portfolio management, 85–6
+  - regulatory compliance, 76
+  - relationship pricing, 69–71
+  - risk management, 73–7
+  - risk scenario, 74
+  - sales management, 83–4
+  - social media campaigns, 67–9
+  - trade monitoring, 84–5
+  - see also data and analytics primer
+- ‘Analytics and Data Science in Indian Financial Sector: A Deep Dive 2019’, 194
+- Analytics India Magazine, 193
+- ANN (Artificial Neural Networks), 104
+- anomaly detection, fraud detection, 236
+- anti-money laundering (AML), 75
+- Apple, 118, 119
+- Apple iPhones, 106
+- Apple Pay, 106
+- Apple Watch, 106
+- Application Programming Interfaces (APIs), 48
+- apps (applications), 47–8
+  - cybercrime, 227
+  - data visualisation, 101–2
+  - palm vein recognition, 107
+  - thumbprint recognition, 106–7
+  - usage, 96–107
+  - visual and facial recognition, 104–6
+  - voice assistants, 102–4
+  - voice recognition, 102–4
+  - wealth management systems, 107–9
+  - see also machine learning and apps
+- Armstrong, K., 173
+- Artificial Neural Networks (ANN), 104
+- The Ascent of Money (Ferguson), 10
+- Asia
+  - Fintech for banking, 214
+  - leadership, 150
+  - technological readiness, 161
+  - see also China; India; Japan
+- asset management and portfolios, 57, 176, 177
+- assurance, operational risk definitions, 224
+- augmented leadership, 137–8
+- authentication (cybercrime), 237
+- autocratic leaders, 136
+- automated teller machines (ATMs), 8, 14, 75
+- autonomy in decision-making, 67
+- AXA (global insurers), 227
+
+### B
+
+- baby boomers, 122
+- Bachelier, L., 85
+- backfire (risk scenario analytics), 74
+- bad decision-making definitions, 135
+- Bain, I., 123–4
+- BACS, 8
+- Balzac, S., 146–7, 148
+- Bank of America (BoA)
+  - brand value, 118, 119
+  - disaggregated banks, 172
+  - Erica virtual assistant, 93
+  - leadership, 148–9
+  - Millennial divisions, 120
+  - sales and trading disruptions, 177
+  - universal banking, 164
+- Bank of China, 118, 191
+- ‘The Bank of China Sees Future in Blockchain’ (Mukhopadhyay), 191
+- Bank of England, 7–8, 13
+- Banking 4.0, 6, 7
+- banking definitions, 4–6, 7
+- banking pods, 170
+- BankMobile, 100–1, 171
+- banks of the future, 155–81
+  - safeguarding, 228–34
+- Barclays, 119, 170, 174–5
+- Barnum, P.T., 124
+- Barometers, cybercrime, 225
+- Basel Committee, 224
+- BBVA, brand value, 119
+- bell curves and fat tails, 86
+- benchmarking firms, 191
+- benefit, unexpected (risk scenario analytics), 74
+- best practices, cyber security toolkits, 226
+- Betfair, peer-to-peer, 165
+- better risk management, 24–5
+- BIC (Blockchain Infrastructure Company), 194–5
+- big data, 39–53, 87
+- biometrics, 104–6, 107
+  - moral arguments, 109–10
+- ‘Biomimicry for Creative Innovation’, 142
+- BIPA (Biometrics Information Privacy Act), 105
+- The Black Swan, 86
+- Black-Scholes model, 85, 86
+- blockages to innovation, 216–18
+- blockchain, 183–202
+  - in banking, 188–99
+  - decentralisation, 186–7
+  - Fintech for banking, 212–13
+  - Forex markets, 190–1
+  - immutability, 187
+  - Indian banking, 193–6
+  - Infrastructure Company, 194–5
+  - Interbank market, 189–90
+  - interlock with AI, 188
+  - investment banks, 191–3
+  - operation, 186, 187
+  - setting the stage, 186–7
+  - transparency, 187
+- blogs, 123
+- Bloomberg, 40, 68
+- BNP Paribas, 119
+- Bommelaer, C., 230, 232
+- bootcamps, 205
+- Booz and Co analysts, 80–1
+- botnets (cybercrime), 237
+- Bottomley, J., 15
+- branch experience, 79–80
+- branch makeovers, 156–63
+- branch performance management, 78–80
+- branch-specific analytics campaigns, 66–7
+- Brand Finance, 118
+- branding, 115–31
+  - consumption and credit smoothing, 128–9
+  - customer experience/insight, 63, 123–7
+  - debranding, 125–7, 172
+  - development, 126
+  - digital banks, 170
+  - disaggregated banks, 172
+  - gaps, 127
+  - Generation X, 121–3, 125
+  - Generation Y, 119–20, 122, 125
+  - Generation Z, 120–1, 122, 125
+  - human-centred design, 124–5
+  - lifestyle management, 128–9
+  - Millennials, 119–20
+  - relationship pricing, 71
+  - value and equity, 117–23
+- Brazil, blockchain, 194
+- breadth of brands, 127
+- bricks-and-clicks banking, 170
+- BRICS initiatives, 194
+- ‘A bright ideal: Seven elements of the ultimate branch format’ (Kerstein), 156–8
+- Bristow, C., 236
+- Brown, R., 85
+- Brownian motion, 85
+- bucket collections, 10
+- Buddhism, 146–7
+- ‘Building the AI Powered Organisation’ (McKinsey), 207
+- Buitenhek, M., 166
+- bureaucratic leadership, 137
+- business drivers, 59–60
+
+### C
+
+- café banks, 51, 159–60
+- California, Fintech for banking, 214
+- California Consumer Privacy Act (CCPA), 65
+- call or contact centers, 80–2
+- Cambridge Analytica scandal, 236
+- ‘Can Artificial Intelligence Replace Executive Decision Making?’, 136
+- Canada
+  - technological readiness, 161
+  - wealth, 72
+- Capgemini report, 71–2
+- capital
+  - rethinking/healthcare industry, 29
+  - to innovate, 211–12
+  - venture, 212, 214–15
+- Carrasco, S., 216
+- cash point machines, 8, 14, 75
+- cashless societies, 8–10
+- Casino Capitalism (Strange), 6
+- CB Insights, 176–7
+- CCO (Chief Customer Officer), 31
+- CCPA (California Consumer Privacy Act), 65
+- CDO (Chief Data Officer), 225
+- Celent research/advisory/consulting firm, 31–2
+- Central Bank, 195
+- central banks, 4, 5
+- centric banking, 156, 157, 166–7
+- CFAA (Computer Fraud and Abuse Act), 238
+- CFOs (Chief Financial Officers), 57
+- challenger banks, 5–6, 100–1
+- channel management, 12
+- charitable bucket collections, 10
+- Chartis Research with Accenture, 223, 224
+- Chase, brand value, 118, 119
+- chatbots, 15, 155, 193
+- Chief Customer Officer (CCO), 31
+- Chief Data Officer (CDO), 225
+- Chief Executive Officers (CEOs), 57
+- Chief Financial Officers (CFOs), 57
+- Chief Information Officer (CIO), 225
+- Chief Information Security Officer (CISO), 225
+- Chief Risk Officer (CRO), 225
+- Chief Security Officers (CSOs), 233
+- China
+  - analytics/social media, 69
+  - biometrics market, 110
+  - blockchain, 191–2, 194
+  - brand value, 118
+  - cashless societies, 8–9
+  - China Life financial services, 142
+  - Construction Bank/brand value, 118
+  - cryptocurrency rankings, 192
+  - Fintech for banking, 214
+  - ICBC, 69, 118
+  - law/cybercrime, 238
+  - technological readiness, 161
+  - wealth, 72
+- Chron (company), 136–7
+- chronology-based analytics, 63–5
+- CIO (Chief Information Officer), 225
+- CISO (Chief Information Security Officer), 225
+- CitiBank
+  - brand value, 118, 119
+  - fraud, 221
+- Citigroup, 177
+- click fraud, 237
+- client servicing, 71–3
+- cloud computing, 48–9, 87
+- Cognitec Systems, 105
+- cognitive analytics, 44, 45–6
+- collaborative banks, 174–5
+- commercial banks, 4, 5
+- commission/compensation management, 83–4
+- Competition and Markets Authority (CMA), 222
+- compliance, 10–11
+  - agility over, 43
+  - regulatory, 76
+- Computer Fraud and Abuse Act (CFAA), 238
+- Computer Misuse Act, 238
+- Congress of the United States, 164
+- Connected Car/Factory/Home concepts, 228–9
+- consensus planning, 164
+- Consumer and Retail Goods (CRG) sectors, 59

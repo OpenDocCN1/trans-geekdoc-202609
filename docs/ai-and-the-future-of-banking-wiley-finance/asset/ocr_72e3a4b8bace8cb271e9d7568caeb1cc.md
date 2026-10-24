@@ -1,0 +1,11 @@
+# MARKET RESEARCH/SENTIMENT ANALYTICS
+
+**TABLE 30**  Examples of Fintech Companies Focussing on Market Research/Sentiment Analysis.
+
+| Name | Tagline | Description |
+|---|---|---|
+| Dataminr | ‘Know first. Act Faster’ | Recognised by CNBC as one of the world’s 50 most disruptive private technology companies. Provides a constantly updating feed of tweets with breaking news in them, allowing the newsmakers to quickly and accurately report.<br><br>https://www.dataminr.com<br>https://www.nytimes.com/2018/04/11/technology/personaltech/how-to-stay-on-top-of-breaking-news.html<br>https://bit.ly/2sle7aY |
+| Alphasense | ‘Your Brain. Our AI’ | Offers AI-powered business insights via a specialised search engine for financial services professionals. It searches through ‘major filings, earning calls, conference transcripts and investor relations presentations’.<br><br>https://en.wikipedia.org/wiki/AlphaSense (Viewed 28/11/2019)<br>https://www.alpha-sense.com/ |
+| Heckyl | ‘Heckyl is an Analytical Platform for Investors, Traders and Researchers’ | Provides real-time financial information, news analytics and heatmaps of markets, companies and businesses.<br><br>heckyl.com |
+| Digital Reasoning | ‘There’s a lot to learn from your communications data. What do you want to know?’ | ‘Advanced technology for surveillance of natural-language communications used by Nasdaq, Goldman Sachs, UBS and others, as well as by US intelligence analysts tracking terrorists and 1,000 law-enforcement agencies involved in the fight against human trafficking’.<br><br>Synthesys system links ‘people, places and things, similar terms, aliases and semantic labels and even incorporates how word relationships change over time’.<br><br>https://digitalreasoning.com<br>http://dgr.wpengine.com/blog/wall-streets-robocop-digital-reasoning-cracked-code-trader-talk/ |
+| Descartes Labs | ‘A data refinery, built to understand our planet’ | Deep-learning image analysis company, specialising in taking deep learning and other advanced machine learning algorithms to categorise still images found on the internet and develop them, so they can be applied to visual data coming from various sensors on the planet, such as satellites, UAVs (i.e. drones, cameras, cell phones, etc.).<br><br>https://www.descarteslabs.com |

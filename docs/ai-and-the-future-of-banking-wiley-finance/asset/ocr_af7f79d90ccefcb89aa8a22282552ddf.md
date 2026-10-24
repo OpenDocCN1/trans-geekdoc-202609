@@ -1,0 +1,15 @@
+Even so, there still seems to be a shortage of VC funds invested in start-ups with female founders. In the UK, for example, only 3% of money invested in 2018 went to Fintech start-ups with women entrepreneurs, which financially represents only £54 million of £2.61 billion in that year. It also found that only 17 out of 261 UK deals went to companies with one female founder. Part of the problem seems to be that too few women are founding Fintech companies, which is a knock-on effect from too few women in the financial sector generally.
+
+According to Innovative Finance, in 2017 only 17% of Fintech executives were women. Increasingly there’s an argument for positive discrimination. According to Ann Boden, who set up Starling Bank, a digital, mobile-only ‘challenger bank’ that has raised over £100 million, ‘People tend to recruit, promote and invest in people who look like themselves. Unless you get more women managers, leaders and VCs that’s not going to change’.
+
+Others such as Sylvia Carrasco at London-based trading Fintech Goldex suggest that the problem with the innovation process is more deep-seated than that but that it also rests with a male-dominated VC industry.29 How practical is the concept of ‘positive discrimination’ to reverse this trend? Addressing the issue of VC funding, Carassco suggested a need to force the issue of ensuring women get adequately funded, as a matter of policy.
+
+> ‘Because the proportion is so low, you have to force it, a little like by law,’ Carassco suggests, ‘If I was in charge of a VC fund I would be enforcing positive discrimination as it is the only way we can increase the investment. Once you get up to 20% or so, you could argue that you have to put other mechanisms in place.’30
+
+Already women are looking for greater representation and focused learning in this sector. For example, in 2017 an all-female Italian delegation visited Enel Innovation Hub in Tel Aviv, described as the Middle East’s Silicon Valley, not only to network with other young female entrepreneurs but also to discuss the issues that affect typically male-dominated sectors such as that of technology.31
+
+The trend is growing for innovation hubs to have women managers, which is a curious outcome for a sector that is so underrepresented. A 2012 survey by Gallop indicated that women tend to be better leaders than their male counterparts, and that their higher level of engagement is more likely to result in more engaged, higher-performing teams. According to the report, ‘This suggests that female managers likely surpass their male counterparts in cultivating potential in others and helping to define a bright future for their employees’, which may be an essential attribute for managing an innovation hub.32
+
+# BLOCKAGES TO INNOVATION
+
+What then are the main reasons why organisations are unable to implement change, whether AI-related or otherwise? The general line of thought is that people don’t resist change that they feel is in their best interest. The situation is a little more doubtful if
