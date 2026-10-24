@@ -1,0 +1,11 @@
++   2. Keep a copy of a backup in a secure location, for example save it to the cloud, a fireproof safe or an offsite storage location.
++   
++   3. Use software to facilitate your backup schedule. Many online backup services offer scheduled backups that can save individual files as you choose, automatically save files that have changed since the last backup or do your entire system on whatever schedule you pick.
++   
++   4. Ensure you have a disaster recovery plan, this a documented plan that outlines how to get your business up in running in case of a total loss of your servers. This is might in case of things like earthquakes, tornadoes, hurricanes, snow storms, and so on.
++   
++   5. Full test your backups: Many companies enact backup plans but many times those backups don’t work, and they are unable to recover their data when they need it the most. Make sure to schedule full testing of your backups at least once every quarter to ensure that your backups work and you’re able to recover your information in the event of an incident.
+
+# Provide Training for Your Employees
+
+Ninety percent of all cyber attacks are executed with information stolen from employees who unwittingly give away their access credentials to hackers. Hackers often use a method called spear phishing where they send out fake e-mails, text messages or phone calls to trick employees into giving up sensitive information that they can use to gain unauthorized access or to get them to unknowingly download malware onto company systems. If it found that a data breach occurred because of employee negligence, you or your employee could be found liable for any of the damages that occur to customers as a result of that. Furthermore, if you never trained your employee on how to identify this phishing campaigns, then it becomes even more likely that your company will be found to be responsible for the data breach and all the damages that follow as a result of that. Therefore, it’s important to train any employees that are going to be collecting or handling data on the proper procedures to follow to reduce the risk of a security incident, as well as giving them training on how to identify fake e-mails, texts, and phone calls.

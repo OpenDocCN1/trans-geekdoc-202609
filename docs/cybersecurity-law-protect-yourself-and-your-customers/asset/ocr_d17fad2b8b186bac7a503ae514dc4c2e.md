@@ -1,0 +1,9 @@
+# Collecting and Handling Data
+
+When training your employees some of the important things you want to highlight are:
+
++   • What information should be collected and which shouldn't: Only information that is absolutely necessary for business processes should be collected and depending on the process for which it should be collected, employees should be told exactly what information should be taken. There should also be instructions on how a business process should be conducted from start to finish and how the information collect is to be used throughout that process, that way if there is any deviation it can be quickly identified and corrected and it will be seen as an error the employee rather than on behalf of the business.
+
++   • How the information is to be secured should be outlined: Confidential information on paper should be securely locked away and only accessible by authorized personnel. All information on USB's should be encrypted so that in the event that they are lost, they will be useless to any unauthorized person that find them. You should have secure trash bins in your office spaces so that when you are ready to dispose of sensitive documents they can be shredded and placed in a secure bin so that they can't be removed and pieced together by someone else.
+
+One good way to give employees training is through the use of online training modules. This is a very common training method in financial institutions, where all new employees are given online training modules that they must complete before they can begin working on regular business processes. The modules gives the employee's material to study and then tests them with both standard Q&A as well as live simulations of situations to see how they would respond. Employees are usually to get at least an 80 percent before completing the module and once they have been completed they will receive an online certificate that proves that they
