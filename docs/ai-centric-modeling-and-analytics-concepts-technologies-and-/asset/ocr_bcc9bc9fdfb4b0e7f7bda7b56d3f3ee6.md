@@ -1,0 +1,18 @@
+A healthy, democratic society requires privacy, which is more than just a concern for individualistic personal data. As technology advances, so do personal care and healthcare.
+
+We investigated the newly proposed privacy-preserving SVM classification system and discovered that its primary protocol is a secure technique for determining whether the sign of encrypted numbers has a soundness issue or a security leak. Then, we propose a new technique that can be applied to assist privacy-preserving SVM classification and is secure and accurate for finding the signs of encrypted integers (Khang et al., 2023b).
+
+The experiments show that the MR-SVM model can effectively solve the problem of rapid increases in the SVM cost associated with data volume increases. However, the experiment used two nodes, and the data transfer speed was limited. Multiple nodes can be established for cybersecurity in future studies.
+
+# REFERENCES
+
++   - Abdel-Basset M., Gunasekaran M., Mohamed M., Smarandache F., (2019). “A novel method for solving the fully neutrosophic linear programming problems,” Neural Computing and Applications, 31, 1595–1605. https://link.springer.com/article/10.1007/s00521-018-3404-6
++   - Anna et al. (2018). World Health Organization, Regional Office for Europe, European Observatory on Health Systems and Policies. Organization and Financing of Public Health Services In Europe: Country Reports. World Health Organization. Regional Office for Europe. https://apps.who.int/iris/handle/10665/326190
++   - Balyan A. K., Ahuja S., Lilhore U. K., Sharma S. K., Manoharan P., Algarni A. D., Raahemifar K., (2022). “A hybrid intrusion detection model using EGA-PSO and improved random forest method,” Sensors, 22(16), 5986. www.mdpi.com/1424-8220/22/16/5986
++   - Bhambri P., Rani S., Gupta G., Khang A., (2022). Cloud and Fog Computing Platforms for Internet of Things. CRC Press. https://doi.org/ 10.1201/9781003213888
++   - Borner K., Bueckle A., Ginda M., (2019). “Data visualization literacy: Definitions, conceptual frameworks, exercises, and assessments,” Proceedings of the National Academy of Sciences, 116(6), 1857–1864. www.pnas.org/doi/abs/10.1073/pnas.1807180116
++   - Chan W., Saharia C., Hinton G., Norouzi M., Jaitly N., (Nov 2020). “Imputer: Sequence modelling via imputation and dynamic programming,” In International Conference on Machine Learning, pp. 1403–1413. PMLR. http://proceedings.mlr.press/v119/chan20b.html
++   - Choi T. M., Wallace S. W., Wang Y., (2018). “Big data analytics in operations management,” Production and Operations Management, 27(10), 1868–1883. https://onlinelibrary.wiley.com/doi/abs/10.1111/poms.12838
++   - Dai M., Tang D., Giret A., Salido M. A., (2019). “Multi-objective optimization for energy-efficient flexible job shop scheduling problem with transportation constraints,” Robotics and Computer-Integrated Manufacturing, 59, 143–157. www.sciencedirect.com/science/article/pii/S0736584518305222
++   - Dash S., Shakyawar S. K., Sharma M., Kaushik S., (2019). “Big data in healthcare: Management, analysis and future prospects,” Journal of Big Data, 6(1), 1–25. https://link.springer.com/article/10.1186/s40537-019-0217-0
++   - Deng W., Xu J., Zhao H., (2019). “An improved ant colony optimization algorithm based on hybrid strategies for scheduling problem,” IEEE Access, 7, 20281–20292. https://ieeexplore.ieee.org/abstract/document/8635465/

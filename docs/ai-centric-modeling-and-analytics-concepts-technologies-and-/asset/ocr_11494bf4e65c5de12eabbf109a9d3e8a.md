@@ -1,0 +1,19 @@
+# REFERENCES
+
++   - Abdi H., Valentin D., (2007). "Multiple correspondence analysis," Encyclopedia of Measurement and Statistics, 2(4), 651–657. www.utdallas.edu/~Herve/Abdi-MCA2007-pretty.pdf
++   - Akehurst G., (2009). "User-generated content: The use of blogs for tourism organizations and tourism consumers," Service Business, 3(1), 51–61. https://doi.org/10.1007/s11628-008-0054-2
++   - Andreu L., Bigne E., Amaro S., Palomo J., (2020). "Airbnb research: An analysis in tourism and hospitality journals," International Journal of Culture, Tourism, and Hospitality Research, 14(1), 2–20. https://doi.org/10.1108/IJCTHR-06-2019-0113
++   - Aria M., Cuccurullo C., (2017). "Bibliometrics: An R-tool for comprehensive science mapping analysis," Journal of Informetrics, 11(4), 959–975. https://doi.org/10.1016/j.joi.2017.08.007
++   - Aria M., Cuccurullo C., (2020). "Science mapping analysis with Bibliometrix R-package: An example," Bibliometrix. Org, 15 September. https://jscires.org/sites/default/files/JScien-tometRes-8-3-156_0.pdf
++   - Bhambri P., Rani S., Gupta G., Khang A., (2022). Cloud and Fog Computing Platforms for Internet of Things. CRC Press. https://doi.org/10.1201/9781003213888
++   - Borràs J., Moreno A., Valls A., (2014). "Intelligent tourism recommender systems: A survey," Expert Systems with Applications, 41(16), 7370–7389. https://doi.org/10.1016/j.eswa.2014.06.007
++   - Bradford S. C., (1934). "Sources of information on specific subjects," Engineering, 137, 85–86. https://journals.sagepub.com/doi/pdf/10.1177/016555158501000406
++   - Buhalis D., Law R., (2008). "Progress in information technology and tourism management: 20 years on and 10 years after the Internet," The state of eTourism research. Tourism Management, 29(4), 609–623. www.sciencedirect.com/science/article/pii/S0261517718301134
++   - Buhalis D., Leung R., (2018). "Smart hospitality—interconnectivity and interoperability towards an ecosystem," International Journal of Hospitality Management, 71, 41–50. https://doi.org/10.1016/j.ijhm.2017.11.011
++   - Cambria E., Speer R., Havasi C., Hussain A., (2010). "SenticNet: A publicly available semantic resource for opinion mining," AAAI Fall Symposium—Technical Report, FS-10–02, 14–18. https://cdn.aaai.org/ocs/2216/2216-9491-2-PB.pdf
++   - Cho V., (2003). "A comparison of three different approaches to tourist arrival forecasting," Tourism Management, 24(3), 323–330. www.sciencedirect.com/science/article/pii/S0261517702000687
++   - Cuccurullo C., Aria M., Sarto F., (2016). "Foundations and trends in performance management. A twenty-five years bibliometric analysis in business and public administration domains," Scientometrics, 108(2), 595–611. https://doi.org/10.1007/s11192-016-1948-8
++   - Fagan J., Eddens K. S., Dolly J., Vanderford N. L., Weiss H., Levens J. S., (2018). "Assessing research collaboration through co-authorship network analysis," The Journal of Research Administration, 49(1), 76. www.ncbi.nlm.nih.gov/pmc/articles/PMC6703830/
++   - Florencio B. P., Roldán L. S., Pineda J. M. B., (2020). "Communication, trust, and loyalty in the hotel sector: The mediator role of consumer's complaints," Tourism Analysis, 25(1), 183–187. www.ingentaconnect.com/content/cog/ta/2020/00000025/00000001/art00013
++   - Geisel A., (2018). "The current and future impact of artificial intelligence on business," International Journal of Scientific & Technology Research, 7(5), 116–122. https://doi.org/10.1201/9781003145011
++   - Gössling S., Scott D., Hall C. M., (2020). "Pandemics, tourism and global change: A rapid assessment of COVID-19," Journal of Sustainable Tourism, 0(0), 1–20. https://doi.org/10.1080/09669582.2020.1758708

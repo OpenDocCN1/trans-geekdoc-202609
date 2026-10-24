@@ -1,0 +1,5 @@
+Wang X., et al., (2022). “Learners’ perceived AI presences in AI-supported language learning: a study of AI as a humanized agent from community of inquiry,” *Computer Assisted Language Learning*, 1–27. www.tandfonline.com/doi/abs/10.1080/09588221.2022.2025603
+
+Yang H., et al., (2022). “Implementation of an AI chatbot as an English conversation partner in EFL speaking classes,” *ReCALL*, 34(3), 327–343. www.cambridge.org/core/journals/recall/article/implementation-of-an-ai-chatbot-as-an-english-conversation-partner-in-efl-speaking-classes/0EB8C4E40E033F9D4165D8EBA843EEDB
+
+Zhang Z., (2022). “Promoting student engagement with feedback: insights from collaborative pedagogy and teacher feedback,” *Assessment & Evaluation in Higher Education*, 47(4), 540–555. www.tandfonline.com/doi/abs/10.1080/02602938.2021.1933900
