@@ -1,0 +1,12 @@
+![](bbox=[0.21, 0.11, 0.81, 0.32])
+
+FIGURE 10.28
+An example of CNNs, consisting of an input volume, L convolutional layers, and one fully connected output layer.
+
+in (a) by a small amount (i.e., by shifting all the entries in (a) to the left by one position). By such shifting, the right most column will be empty and, we pad it with zeros. The max pooling result of the shifted feature map (Fig. 10.27(e)) is almost the same as Fig. 10.27(b). In other words, max pooling is approximately translation-invariant with respect to a small amount of translation.
+
+**Convolutional Neural Networks (CNNs)** are neural networks that have at least one convolutional layer. Fig. 10.28 presents a typical architecture of CNNs. It takes a 3-D tensor as the input volume, followed by L convolutional layers, and an output layer. As explained earlier, each convolutional layer typically consists of a set of convolutional operations, followed by ReLU nonlinear activation and the pooling operation.8 All the kernels of different convolutional layers and the weights and bias values of the output layer form the model parameters of CNNs, which will be learned during the training stage.
+
+Each convolutional layer consists of multiple kernels, each of which shares the same depth as that of the input volume and is separately applied to the input volume. The pooling operation reduces the size of the output volume in terms of width and height. Due to the repeated pooling across different convolutional layers, the width and the height of the output volumes (the green (dark gray in print version) boxes in Fig. 10.28) will keep shrinking, whereas the depth of the output volume is always the same as the number of kernels of the corresponding convolutional layer. For the binary classification, we only need one output unit in the output layer; for the multiclass classification task, we need multiple (as many as the number of classes) output units. Similar to the feed-forward neural network, the output layer is often a fully connected layer, meaning that each output unit is connected to all elements of the output volume of the last convolutional layer. We often use the sigmoid activation function at the output layer and use cross-entropy as the loss function.
+
+The number of layers (i.e., the depth) of CNNs often plays a critical role in model performance. This is because, as the model goes deeper, CNNs tend to learn a more complex and powerful representation of the input data (e.g., images), due to the fact that the later (i.e., higher) layer is able to search and

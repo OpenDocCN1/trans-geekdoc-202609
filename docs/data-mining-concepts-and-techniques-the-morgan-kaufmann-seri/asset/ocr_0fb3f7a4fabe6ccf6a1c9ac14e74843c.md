@@ -1,0 +1,15 @@
+![](bbox=[0.226, 0.12, 0.492, 0.248])
+
+![](bbox=[0.52, 0.12, 0.792, 0.248])
+
+# (a) Sports Team
+
+# (b) Movie Crew
+
+# FIGURE 12.5 Examples of teams.
+
+Data mining techniques have been leveraged to answer the following key questions in team science, including (1. team performance characterization) how to reveal the key characteristic patterns that differentiate a high-performing team from a struggling one; (2. team performance prediction) how to forecast the performance of the team before or soon after the start of the task; (3. team performance optimization) how to further enhance the team performance by adjusting the team composition; and (4. team performance explanation) how to interpret the team performance prediction and optimization results in an intuitive way.
+
+**Team performance characterization.** In general, the key components in a team include (1) team leader and members, (2) the environment (e.g., networks) in which team members collaborate, and (3) the task on which the team works. Various patterns have been discovered to have a strong correlation with team performance, such as the collective intelligence as an outcome of collaboration and the average performance of top-k members. Challenges in characterizing the team performance arise from all these three components. First, different team members possess different different types of skills and social connectivity. Second, the nature of task varies depending on the specific application scenarios, such as collaborative tasks for research teams vs. competitive tasks in team sports. Third, the environment (e.g., networks) that the team is embedded in or operates on itself is often large in size, highly volatile in temporal dynamics, noisy and incomplete. Furthermore, it is also challenging to accurately quantify the team performance. For instance, it is very difficult, if not impossible, to find a single metric to precisely measure the performance of a research team. Instead, we often have to rely on a set of proxy performance measures, such as the citation counts of publications, h-index of members, and download counts. All these factors have precipitated the team performance characterization into a challenging problem. Existing literature characterizes the team performance as the outcome of collective intelligence from both virtual teams (e.g., online games) and teams with face-to-face interactions (e.g., sports or research teams).
+
+**Team performance prediction.** Accurately forecasting the team performance is a key stepping stone to understand the underlying principles of constructing a high-performing team. In academia, it is desirable to predict the long-term performance of a scholarly entity (e.g., a researcher). An effective team performance prediction algorithm should be able to (1) identify crucial features (e.g., coauthorship network topology, research topics), (2) model the correlation between identified features and the team performance, and (3) encode the dynamics of team evolution. Complementary to the team performance prediction, it is also important to predict the impact of the content that team produces at a finer

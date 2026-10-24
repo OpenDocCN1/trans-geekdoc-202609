@@ -1,0 +1,11 @@
+# JIAWEI HAN • JIAN PEI • HANGHANG TONG
+
+![](bbox=[0.0, 0.12, 1.0, 0.61])
+
+# FOURTH EDITION
+
+# DATA MINING
+
+# CONCEPTS AND TECHNIQUES
+
+![](bbox=[0.73, 0.86, 0.94, 0.94])

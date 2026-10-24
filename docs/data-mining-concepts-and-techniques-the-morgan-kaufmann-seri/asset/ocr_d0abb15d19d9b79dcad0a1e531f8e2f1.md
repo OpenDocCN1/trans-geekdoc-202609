@@ -1,0 +1,13 @@
+or partition the tuples in D into individual classes (step 6). The splitting criterion also tells us which branches to grow from node N with respect to the outcomes of the chosen test. More specifically, the splitting criterion indicates the splitting attribute and may also indicate either a split-point or a splitting subset. The splitting criterion is determined so that, ideally, the resulting partitions at each branch are as “pure” as possible. A partition is pure if all the tuples in it belong to the same class. In other words, if we split up the tuples in D according to the mutually exclusive outcomes of the splitting criterion, we hope for the resulting partitions to be as pure as possible.
+
++   The node N is labeled with the splitting criterion, which serves as a test at the node (step 7). A branch is grown from node N for each of the outcomes of the splitting criterion. The tuples in D are partitioned accordingly (steps 10–11). There are three possible scenarios, as illustrated in Fig. 6.4. Let A be the splitting attribute. A has v distinct values, {a1, a2, ..., av}, based on the training data.
+
++   1. A is discrete-valued: In this case, the outcomes of the test at node N directly correspond to the known values of A. A branch is created for each known value, aj, of A and labeled with that value (Fig. 6.4(a)). Partition Dj is the subset of class-labeled tuples in D having value aj of A. Because all the tuples in a given partition have the same value for A, A does not need to be
+
+| Partitioning scenarios | Examples |
+| :--- | :--- |
+| (a) <br> A? <br> / | \ | \ <br> a1 a2 ... av | color? <br> / | \ | \ <br> red green blue purple orange | income? <br> / | \ | \ <br> low medium high |
+| (b) <br> A? <br> / \ <br> A ≤ split_point A > split_point | | income? <br> / \ <br> ≤ 42,000 > 42,000 |
+| (c) <br> A ∈ SA? <br> / \ <br> yes no | color ∈ {red, green}? <br> / \ <br> yes no | |
+
+FIGURE 6.4 This figure shows three possibilities for partitioning tuples based on the splitting criterion, each with examples. Let A be the splitting attribute. (a) If A is discrete-valued, then one branch is grown for each known value of A. (b) If A is continuous-valued, then two branches are grown, corresponding to A ≤ split_point and A > split_point. (c) If A is discrete-valued and a binary tree must be produced, then the test is of the form A ∈ SA, where SA is the splitting subset for A.

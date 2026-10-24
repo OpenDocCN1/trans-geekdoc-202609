@@ -1,0 +1,17 @@
++   Using adaptive learning rate in backpropagation can help accelerate the algorithm convergence or prevent oscillation. Commonly used strategies include setting the learning rate to be in reverse proportion to the epoch number or the magnitude of the accumulated historical gradients.
+
++   Dropout is an effective strategy to improve the generalization performance of backpropagation algorithm. At each epoch, it randomly drops some nonoutput units and uses the remaining network to update the model parameters.
+
++   Pretraining presets the initial model parameters of a deep neural network in a suitable region. It helps accelerate the backpropagation algorithm convergence and improves the generalization performance. A commonly used pretraining strategy is supervised greedy pretraining, which gradually adds hidden layers and pretrains the parameters of the newly added layers while fixing the parameters of the previously added layers.
+
++   For classification tasks, it is more common to use cross-entropy as the loss function to train a deep neural network. Cross-entropy can help alleviate the gradient vanishing problem even when the unit is saturated.
+
++   Convolutional neural networks (CNNs) are effective deep learning models for grid-like data, such as images. The key operation in CNNs is convolution. Given an input and a kernel, the convolution generates a feature map, where the kernel is shared across different entries of the input. A convolution layer consists of a set of kernels, often followed up with a nonlinear activation and a pooling operation. A CNN model is the neural network with at least one convolutional layer.
+
++   Recurrent neural networks (RNNs) are effective deep learning models for sequential data, such as text. There are three main types of units in an RNN model, including input unit, hidden unit, and output unit. The three input-to-hidden weight matrix, hidden-to-hidden weight matrix, and hidden-to-output weight matrix are shared across different time stamps. A major challenge of RNNs is long-term dependence. The long short-term memory (LSTM) is one of the most successful techniques to address the long-term dependence. The key component of LSTM is the cell state in each LSTM cell, which is designed to accumulate the information in the past for a long time and meanwhile use the current information to update the cell state. LSTM achieves these design objectives through three gates, including the forget gate, the input gate, and the output gate. Attention mechanism is another effective way to address long-term dependence.
+
++   The goal of graph neural networks (GNNs) is to use neural networks to map nodes of a graph to low-dimensional vectors called node embeddings. An effective type of GNNs is graph convolutional networks (GCNs). Given an input graph with node attributes, a GCN model uses a set of weight matrices, one weight matrix for each layer, to produce the node embeddings. The key operations in each layer of GCNs include propagation, linear transformation, and nonlinear activation.
+
+# 10.7 Exercises
+
+10.1. The following table consists of training data from an employee database. The data have been generalized. For example, “31 ... 35” for age represents the age range of 31 to 35. For a given row entry, count represents the number of data tuples having the values for department, status, age, and salary given in that row.
