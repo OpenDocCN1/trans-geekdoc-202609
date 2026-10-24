@@ -1,0 +1,207 @@
+
+
+- 71. S. Yin, J. Bao, Y. Zhang, and X. Huang. 基于区块链的CPS M2M安全技术. Symmetry, 9(9):193, 2017.
+- 72. H. Zhang, H. Chai, W. Zhao, P. M. Melliar-Smith, and L. E. Moser. Web服务原子事务的可信协调. IEEE Transactions on Parallel and Distributed Systems, 23(8):1551–1565, 2012.
+- 73. H. Zhang and W. Zhao. 基于软件事务内存应用的并发拜占庭容错. International Journal of Future Computer and Communication, 1(1):47, 2012.
+- 74. H. Zhang, W. Zhao, P. M. Melliar-Smith, and L. E. Moser. 非确定性应用拜占庭容错框架的设计与实现. IET Software, 5:342–356, 2011.
+- 75. H. Zhang, W. Zhao, L. E. Moser, and P. M. Melliar-Smith. 非确定性应用拜占庭容错框架的设计与实现. IET Software, 5(3):342–356, 2011.
+- 76. J. J. Zhang, F.-Y. Wang, X. Wang, G. Xiong, F. Zhu, Y. Lv, J. Hou, S. Han, Y. Yuan, Q. Lu, et al. 网络-物理-社会系统：现状与展望. IEEE Transactions on Computational Social Systems, 5(3):829–840, 2018.
+- 77. W. Zhao. 应用感知拜占庭容错. 在 2014 IEEE 第12届可靠、自治与安全计算国际会议论文集，第45–50页. IEEE, 2014.
+- 78. W. Zhao. 构建可靠分布式系统. John Wiley & Sons, 2014.
+- 79. W. Zhao. 快速Paxos简化：理论与实现. International Journal of Distributed Systems and Technologies (IJDST), 6(1):15–33, 2015.
+- 80. W. Zhao. 迈向可信集成临床环境. 在 2015 IEEE 第12届 Ubiquitous Intelligence and Computing 国际会议和 2015 IEEE 第12届 Autonomic and Trusted Computing 国际会议和 2015 IEEE 第15届 Scalable Computing and Communications 及其相关研讨会 (UIC-ATC-ScalCom) 论文集，第452–459页. IEEE, 2015.
+- 81. W. Zhao. 乐观拜占庭容错. International Journal of Parallel, Emergent and Distributed Systems, 31(3):254–267, 2016.
+- 82. W. Zhao. 基于应用语义的状态机复制性能优化：综述. Journal of Systems and Software, 112:96–109, 2016.
+- 83. W. Zhao, C. Jiang, H. Gao, S. Yang, and X. Luo. 区块链赋能的网络物理系统：综述. IEEE Internet of Things Journal, 2020.
+- 84. W. Zhao, P. M. Melliar-Smith, and L. Moser. 云计算容错中间件. 在 IEEE 国际云计算会议论文集，第67–74页, 2010.
+- 85. W. Zhao, P. M. Melliar-Smith, and L. E. Moser. 低延迟容错系统. The Computer Journal, 56(6):716–740, 2013. 待出版.
+- 86. W. Zhao, L. Moser, and P. M. Melliar-Smith. 多线程副本的确定性调度. 在 IEEE 面向对象实时可靠系统国际研讨会论文集，第74–81页, 亚利桑那州塞多纳, 2005.
+- 87. W. Zhao, L. E. Moser, and P. M. Melliar-Smith. 基于CORBA的三层架构中事务与复制的统一. IEEE Transactions on Dependable and Secure Computing, 2(1):20–33, 2005.
+- 88. W. Zhao, S. Yang, and X. Lou. 基于区块链的传感数据和IoT事件安全分层处理与日志记录. 在 2020 国际区块链技术会议论文集，第52–56页. ACM, 2020.
+- 89. W. Zhao, S. Yang, and X. Luo. 基于IoT的系统威胁分析：综述. 在 IEEE 智能物联网国际会议论文集, 2020.
+- 90. W. Zhao, W. Yang, H. Zhang, J. Yang, X. Luo, Y. Zhu, M. Yang, and C. Luo. 使用软件事务内存的高吞吐状态机复制. The Journal of Supercomputing, 72(11):4379–4398, 2016.
+- 91. W. Zhao and H. Zhang. 长期运行拜占庭容错系统的主动服务迁移. IET Software, 3(2):154–164, 2009.
+- 92. D. Zhaoyang, L. Fengji, and G. Liang. 区块链：面向未来能源系统的安全、去中心化、可信网络基础设施解决方案. Journal of Modern Power Systems and Clean Energy, 6(5):958–967, 2018.
+- 93. Z. Zhou, B. Wang, M. Dong, and K. Ota. 网络物理系统中安全高效的车辆到电网能源交易：区块链与边缘计算的集成. IEEE Transactions on Systems, Man, and Cybernetics: Systems, 50(1):43–57, 2019.
+- 94. X. Zhu and Y. Badr. 面向区块链解决方案的物联网身份管理系统：调查. Sensors, 18(12):4215, 2018.
+
+## 索引
+
+- (Dapp, 318)
+- Application-Level Fault Detection
+  - 基于推理的故障诊断, 80
+  - 根因分析, 86
+  - 运行时路径日志, 70
+  - 卡方检验, 75
+  - 组件交互建模, 72
+  - 历史参考模型, 70
+  - 路径形状建模, 77
+  - 对等参考模型, 71
+- 可用性, 7
+- 比特黄金, 296
+- 比特币, 295, 299
+  - 地址, 305
+  - 区块, 309
+  - 区块头, 310
+  - 区块高度, 311
+  - 区块间隔, 314
+  - 区块奖励, 300
+  - 区块大小限制, 309
+  - 区块结构, 309
+  - CoinBase交易, 308
+  - 创世块, 308
+  - 锁定条件, 307
+  - 目标难度, 314
+  - 时间锁, 308
+  - 交易, 306
+  - 交易费, 307
+  - 未花费交易输出, 304
+  - UTXO, 304
+  - 钱包, 301
+- 区块链, 300
+  - 区块间隔, 399, 400
+  - 区块大小, 400
+  - 非法活动, 414
+  - 不可能三角, 415
+  - 吞吐量, 399
+  - 无需信任, 410
+- 区块链应用
+  - 汽车, 386
+  - 能源系统, 386
+  - 医疗保健, 386
+  - 物联网, 386
+  - 制造业, 386
+  - 智慧城市, 386
+  - 供应链, 386
+  - 工作场所, 386
+- 区块链作为金融基础设施
+  - (BaaFi), 416
+- 区块链优势
+  - 代码原子执行, 383
+  - 数据溯源, 382
+  - 可依赖性, 379
+  - 不可篡改性, 379
+  - 互操作性, 383
+  - 隐私, 379
+  - 安全性, 379
+  - 信任, 379
+- CPS 中的区块链赋能操作, 391
+  - 访问控制, 392
+  - 指挥与控制, 392
+  - 协调, 392
+  - 数据通信, 392
+  - 数据存储, 392
+  - 数据辅助评估, 392
+  - 身份管理, 392
+  - 感知数据采集, 392
+  - 软件管理, 392
+- 布隆过滤器, 326
+- 拜占庭协议, 246
+- 拜占庭故障, 246
+- 拜占庭容错, 246
+- 拜占庭将军问题, 246
+  - 口头消息算法, 250
+  - 证明, 259
+- CAP 定理, 105, 136
+  - 可用性, 137
+  - CA 系统, 140
+  - 一致性, 137
+  - CP 系统, 140
+  - 争论, 138
+  - PA 系统, 140
+  - 分区容忍性, 137
+  - 证明, 137
+- 威胁链, 3
+  - 错误, 3
+  - 失效, 3
+  - 故障, 3
+- 廉价 Paxos, 220
+- 检查点与日志, 21
+  - 检查点, 21
+  - 检查点, 21
+- 补偿事务, 141
+- 冲突恢复, 352
+- 交易对手风险, 341
+- 加密货币, 295
+- 密码学哈希函数, 303
+- 网络物理系统 (CPS), 378, 384
+- DAO, 318
+- 去中心化应用, 318
+- 去中心化自治组织, 318
+- 去中心化设计原则, 301
+- 可依赖系统, 2
+  - 可依赖性, 2
+- 电子现金, 296
+- 数字签名, 304, 307
+- 分布式共识, 200
+  - 不可能性结果, 200
+  - 活性, 201
+  - 安全性, 201
+  - 不可靠故障检测器, 200
+- 分布式共识, 349
+- 双重支付攻击, 342
+- 动态 Paxos, 216
+- ECC, 304
+- ECDSA, 304
+- 日食攻击, 345
+- 椭圆曲线数字签名算法, 304
+- 椭圆曲线密码学, 304
+- 企业 Java Beans
+  - 实体 Bean, 68
+  - 消息驱动 Bean, 68
+  - 会话 Bean, 68
+  - 有状态会话 Bean, 68
+  - 无状态会话 Bean, 68
+- 以太坊, 317
+  - ERC20, 342
+  - Ethash, 339
+  - 以太币, 319
+  - 外部拥有账户 (EOA), 318
+  - Gas, 319
+  - 智能合约, 324
+    - 状态, 320
+    - 代币, 342
+    - 交易, 322
+- 以太坊虚拟机 (EVM), 319
+- 快速拜占庭协议, 277
+- 快速 Paxos, 227
+  - 冲突恢复, 229
+  - 法定人数要求, 229
+  - 值选择规则, 229
+- 故障, 4
+  - 内容故障, 5
+  - 相关故障, 6
+  - 确定性故障, 6
+  - 快速失败, 6
+  - 安全失败系统, 6
+  - 停止失败系统, 6
+  - 硬件故障, 4
+  - 海森堡 Bug, 6
+  - 独立故障, 6
+  - 恶意故障, 4
+  - 非恶意故障, 4
+  - 非确定性故障, 6
+  - 操作员故障, 4
+  - 永久故障, 5
+  - 可复现故障, 6
+  - 软件故障, 4
+  - 时序故障, 5
+  - 瞬态故障, 5
+- 故障检测
+  - 应用级故障检测结构行为监控, 69
+- 容错中间件, 106
+- FLP 不可能性结果, 350
+- 全局检查点协议, 29
+  - Chandy 和 Lamport, 35
+  - Tamir 和 Sequín, 29
+- 全局状态, 23
+  - 通道状态, 25
+  - 一致状态, 24
+  - 不一致状态, 24
+- 组通信系统, 147
+  - 成员关系, 147
+  - 全序可靠多播, 147
+  - 视图同步, 147
+- 先行发生关系, 119
+- Hashcash, 297, 301
+

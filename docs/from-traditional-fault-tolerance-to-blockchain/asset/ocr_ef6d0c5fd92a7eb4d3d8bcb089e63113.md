@@ -1,0 +1,9 @@
+is almost 600 bytes in October 2015. The medium size, however, is significantly smaller. For the basic P2PKH type of transactions (which accounts for 89% of the all transactions), the median size is 274 bytes while the mean is 566 bytes in 2015. If we take the median (or mean) size as the transaction size, one block could accommodate roughly 3,737 (or 1,809) transactions. The actual number of transactions in a block started with a very low number (in single digit in 2010) and has been increasing rapidly, as shown in Figure 8.5. Currently it is around 2,000 transactions per block on average, getting close to the block size limit due to the popularity of Bitcoin.
+
+![](bbox=[0.13, 0.34, 0.87, 0.57])
+
+Figure 8.5 Bitcoin transactions per block data since its inception in 2009 through September 15, 2020. The data are downloaded from https://www.blockchain.com/charts/n-transactions-per-block.
+
+The Bitcoin block structure is illustrated in Figure 8.6. Each block starts with a 4-byte long magic bytes, which is always 0xD9B4BEF9 in hexadecimal representation. This is followed by a 4-byte long block size, indicating the total number of bytes in the block excluding the magic number field. Then, it is the block header, which is 80-byte long. After the block header is a field denoting the number of transactions in the block, which takes 1-9 bytes depending on the need. The last part of the block is the list of transactions in the block.
+
+The block header contains six fields. It starts with a 4-byte long field, which indicates the software version the mining node is using. This is followed by a 32-byte long field for the hash of the previous block (i.e., the parent block). More specifically, this is the

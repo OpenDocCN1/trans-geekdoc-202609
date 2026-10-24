@@ -1,0 +1,10 @@
+not changed. For example, the node has received messages with sequence numbers 99 and 101 when a message with sequence number 102 arrives, the node cannot increment its my_aru variable due to the missing message with sequence number 100. It is also possible that the node has received messages with sequence numbers 99 and 100 when a message with sequence number 102 arrives, the node cannot increment its my_aru variable either due to the same reason.
+
+# EXAMPLE 5.6
+
+Receiving a retransmitted regular message. There are several scenarios when a node receives a retransmitted regular message:
+
++   - The node has already received the message, i.e., the message is already in the received message queue. In this case, the message is discarded and my_aru is not changed.
++   - The message is new to the node, however, its sequence number of the message is greater than my_aru + 1, in which case, the message is buffered in the received message queue, but my_aru is not changed. For example, the node has already received messages with sequence numbers 99, 102 when a message with sequence number 101 is received, the node cannot change my_aru because it is still waiting for the message with sequence number 100.
++   - The message is new to the node, and its sequence number s is equal to my_aru + 1, Furthermore, the message with sequence number my_aru + 2 is still missing. The node increments my_aru by one and stores the message in its received message queue. If the node has already delivered all messages with a sequence number up to my_aru prior to the receiving of this message, it may deliver this message in agreed order. For example, the node has already received message with sequence numbers 99, 102 when a message with sequence number 100 arrives, the node would update its my_aru to 100, but not any further because it is still waiting for the message with sequence number 101.
++   - The message is new to the node with sequence number s = my_aru + 1, and the node has received a message

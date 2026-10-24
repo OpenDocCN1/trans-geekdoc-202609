@@ -1,0 +1,11 @@
+A pair of neighboring processes are always connected by a pair of channels, one in each direction. An event (such as the sending or receiving of a message) at a process may change the state of the process and the state of the channel it is associated with, if any. For example, the injection of a message into a channel may change the state of the channel from empty to one that contains the message itself.
+
+Using this revised definition, the channel states in the third scenario would consist of the two in-transit messages m0 and m1. If the channel states can be properly recorded in addition to the checkpoints in this scenario, the recovery can be made possible (i.e., m0 will be delivered to P1 and m1 will be delivered to P2 during recovery).
+
+# ## 2.1.3 Piecewise Deterministic Assumption
+
+Checkpoint-based protocols only ensure to recover the system up to the most recent consistent global state that has been recorded and all executions happened afterwards, if any, are lost. Logging can be used to recover the system to the state right before the failure, provided that all events (that could potentially change the state of the processes) are logged and the log is available upon recovery. This is what is referred to as the piecewise deterministic assumption [21]. According to this assumption, all nondeterministic events can be identified and sufficient information (referred to as a determinant [1]) must be logged for each event. The most obvious example of nondeterministic events is the receiving of a message. Other examples include system calls, timeouts, and the receipt of interrupts. In this chapter, we typically assume that the only nondeterministic events are the receiving of a message. Note that the sending of a message is not a deterministic event, i.e., it is determined by a nondeterministic event or the initial state of the process [7].
+
+# ## 2.1.4 Output Commit
+
+A distributed system usually receives message from, and sends message to, the outside world, such as the clients of the services provided by the distributed system. Once a message is sent to the outside world, the state of the distributed system may be exposed to the outside world. If a failure occurs, the outside world cannot

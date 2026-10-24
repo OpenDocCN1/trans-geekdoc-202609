@@ -1,0 +1,11 @@
+Dynamic Paxos is provided, referred to as Cheap Paxos, in which the spare replicas are involved *only* during a reconfiguration.
+
+In addition, for all the algorithms described so far, we have required the majority of the replica to agree on a decision as a core step of reaching consensus. This notion of majority can be extended as a *quorum*. A quorum in a system is defined to be a set of processes such that any two quorums of the system intersect in at least one process. Obviously, a majority of replicas would form a quorum. Any two such quorums would always intersect in at least one replica. However, a quorum does not necessarily the majority of the replicas. Some quorum might consist of more than the majority, while some quorum might consist of less than the majority. In the extreme case, a single replica can constitute a quorum, in which case, all other quorums must include this replica as well. Hence, we can conclude that we have used a static quorum size (and quorum formation) in the algorithms described. As we will see later, in Cheap Paxos, dynamic quorum is used to further reduce the resource requirement for fault tolerance.
+
+# 6.4.1 Dynamic Paxos
+
+As pointed out in [14], by using spare replicas and reconfiguration upon failures, fewer replicas are required to tolerate the same number of faults, provided that no other replica becomes faulty during the reconfiguration. For example, for a system with 2f + 1 active replicas, and f spare replicas, the system can keep operating correctly after a sequence of reconfigurations even when there are only a single active replica and a single spare replica left, i.e., the system can manage to tolerate as many as 3f – 1 faults provided that one replica becomes faulty at a time and no replica becomes faulty during each reconfiguration. Without reconfiguration, a system with 3f + 1 total replicas can only tolerate up to ⌊3f/2⌋ faults.
+
+EXAMPLE 6.2
+
+In this example, we show how reconfiguration can help a system tolerate more number of single faults. The system initially has 5 active replicas and 2 spare replicas. Therefore, the active replicas are configured to tolerate up to 2 faults (without reconfiguration), i.e., f = 2. Accordingly, the quorum size is 3.

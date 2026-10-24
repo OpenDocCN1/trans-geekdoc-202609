@@ -1,0 +1,11 @@
+now know that its own branch can no longer be considered as the main branch because the alternative branch has greater cumulative difficulty.
+
+As can be seen, the PoW-based consensus algorithm is drastically different from classical consensus algorithm in several ways:
+
++   - No mining node carries any special responsibility. All mining nodes are equal in terms of responsibility and functionality to the consensus process.
+
++   - There is no notion about membership. A mining node only connects to a few other nodes in the Bitcoin network, and it has no knowledge how many other mining nodes there are in the network. The algorithms and the rules a mining node must follow are not altered in anyway with respect to the number of nodes in the network. The target difficulty, which will be adjusted periodically, will indirectly reflect the number of mining nodes in the network. If all mining nodes have equal hashing power, then the difficulty will arise proportionally with the number of nodes.
+
++   - There is no explicit voting. There is no additional messages sent or received for the purpose of reaching consensus. Hence, the notion of majority has no place in the execution of each mining node. The dissemination of a new block may be considered a form of voting, but it does not carry any additional overhead.
+
++   - There is no well-defined condition that anyone could say definitely that a consensus is reached on the formation of the blockchain. The consensus is achieved probabilistically instead of definitively in Bitcoin. Each node would simply proceed forward according to the PoW rule no matter what. Even if there is inconsistency where two or more blocks are found for the same round, a node would choose one of them as the parent based on the cumulative difficulty to resolve the fork. This obviously can be regarded as a drawback for the system because the user would have to wonder when she can be sure that her transaction is fully settled (e.g., so that she can ship the product paid in the transaction). To cope with this uncertainty, heuristic rule has been used. In Bitcoin, high-value transaction would want to wait for 6 confirmations before it is considered immutable. In general, the deeper the block in the chain, the less likely

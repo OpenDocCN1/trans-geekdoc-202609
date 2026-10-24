@@ -1,0 +1,11 @@
+# ## 6.6.1 Hard Drive Failures
+
+Paxos assumes the availability of persistent storage locally to each acceptor so that if it makes a promise in the phase 1b message, it won’t forget about it after recovering from a crash failure. In Chubby, a replica logs its promise to the local hard drive for more robust crash recovery. Unfortunately, hard drive failures do occur and in particular, a disk may be corrupted and the log file may be accidentally deleted due to operator errors. When a replica recovers from a crash fault, it may not have access to the log file that recorded its promises prior to the crash fault, in which case, the safety property of Paxos might be violated.
+
+As we elaborated in the beginning of this chapter, one approach to handle this challenge is to require the recovering replica to rejoin the system instead of continuing as usual. To reinforce this policy in practice, there must be a way to preventing a recovering replica from continuing operating as if the crash did not occur. In Chubby, this is achieved by requiring a replica to register a marker file with the Google File System each time it starts/restarts. When a replica restarts after a crash fault, it is reminded that it should not participate in any Paxos instances in the system until it has gone through a catch-up procedure. Basically, the replica must observe a full instance of Paxos that is started after its recovery before it participates in voting again.
+
+In [5], there is also an discussion on skipping flushing the log (for the promises made and votes casted by a replica) synchronously to disk as an optimization, which is consistent with our argument on the need for writing to persistent storage in the beginning of this chapter.
+
+# ## 6.6.2 Multiple Coordinators
+
+When the current coordinator is disconnected or crashed, the system would elect a new coordinator. When the disconnected replica reconnects, or restarts after a crash, it may not realize that it is no longer serve as the coordinator role. Furthermore, some clients might not know that the coordinator has changed and they would still issue their requests to the old coordinator. In this case, the old coordinator would attempt to proceed to launch new instances of the Paxos algorithm. This might cause rapid changes of the coordinator in the system, which is apparently not desirable.

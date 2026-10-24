@@ -1,0 +1,11 @@
+is not included in the data stream. It warns that using block hash would degrade the system back into a PoW situation because the hash “can be generated in vast quantities so as to generate blocks faster.” (PeerCoin supports both PoW and PoS mining, albeit PoW is discouraged).
+
+In addition to using the current timestamp, PeerCoin introduced the stake modifier as a random source into the data stream for hashing. Intuitively, this enhances the stochastic process for finding the winner of each round.
+
+*Nothing-at-stake issue.* A general vulnerability of PoS algorithms is a potential nothing-at-stake issue exactly because it is much cheaper to meet the target requirement than that for PoW. To address this concern, PeerCoin PoS introduced two mechanisms: (1) only the coin that is old-enough can be used as a stake, which is currently set at 30 days; (2) once the coin is used as a stake, the CoinAge for the coin is said to have been consumed and the mining node can no longer use the same coin as a stake for another block anymore.
+
+*Grinding attack/stake burn-through vulnerability.* PeerCoin releases earlier than v0.3 has a vulnerability that enables an adversary to search the limited search space without waiting the required time between different attempts, which is why it is referred to as stake burn-through or grinding attack. This was possible because the input to the data stream for hashing to see if the result meets the target is deterministic. Jutarul demonstrated a successful attack in December 2012 [14]. Starting v0.3, PeerCoin introduced a stake modifier as one of the inputs to the data stream, which essentially eliminated this vulnerability. As we have discussed earlier, the stake modifier is computed from multiple blocks and is used as an unpredictable entropy source to the data stream. Hence, the search space is so greatly increased that it is virtually impossible to launch the grinding attack.
+
+# 9.4.2 Fixed-Epoch Time Based PoS Schemes
+
+We are aware of some PoS schemes that assume a fixed block time in that the system somehow would produce one new block (but could be 0 or more than 1) for a pre-defined fixed amount of time, typically referred to as an epoch. We argue that this assumption is very dangerous for any system that run on the Internet, and particularly dangerous for a large-scale open system like a public
