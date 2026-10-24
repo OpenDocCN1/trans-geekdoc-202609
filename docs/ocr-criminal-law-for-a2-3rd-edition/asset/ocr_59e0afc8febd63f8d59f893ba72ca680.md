@@ -1,0 +1,21 @@
+difficult to judge when to bring a prosecution, defendants have difficulty in deciding how to plead, and there is a danger that juries may bring in inconsistent verdicts on broadly similar evidence.
+
+3.10 Other problems arise out of the Lord Chancellor’s use of the terminology of “duty of care” and “negligence”, and his linkage of the civil and criminal law in his speech. The meanings of these words are not entirely clear in a criminal law context, nor is it clear to what extent they mean the same things in tort and in criminal law.
+
+3.11 As we explained in Consultation Paper No 135, “negligence” in the context of the crime of manslaughter probably means nothing more than “carelessness”: it does not carry the technical meaning that it has in the law of tort, where it depends on the existence of a duty of care owed and a breach of that duty. The Lord Chancellor said in Adomako that “the ordinary principles of the law of negligence apply to ascertain whether or not the defendant has been in breach of a duty of care towards the victim who has died”. This equation of the civil and criminal law concepts of negligence causes no problems where, as in Adomako itself, a death is caused by a badly performed positive act of the accused, because it is virtually certain that both tort and criminal law would hold that a duty was owed to the deceased not to injure him by a positive act.
+
+3.12 It is possible, however, that the courts in future cases of omission might feel obliged to apply the decision in Adomako. If so, they would run into difficulties, because it is by no means certain that the scope of liability for negligent omissions is the same in criminal law as it is in tort. For example, in criminal law it would seem that once someone has voluntarily taken some steps to care for another, he may be liable if his care is not adequate and the other person dies. In tort, however, there is probably no liability if the defendant abandons an effort to care for someone and that person dies, unless he causes harm through his own incompetence.
+
+3.13 It is possible, therefore, that the decision in Adomako may have changed the criminal law in relation to liability for omissions, by equating it
+
+with the civil law of tort. This may have restricted the scope of the duty to act in criminal law, by implicitly overruling Stone and Dobinson; on the other hand, there may be cases where the law of tort imposes a more stringent duty to act than the criminal law had hitherto. The law on this subject is so unclear that it is difficult to tell whether the effect of Lord Mackay’s speech was indeed to change the law, and, if so, what the implications of this change might be. It is, however, clear that the terminology of “negligence” and “duty of care” is best avoided within the criminal law, because of the uncertainty and confusion that surround it.
+
+# A1.6 An extract from the Law Commission Report, Intoxication and Criminal Liability, No 314 (2009)
+
+# Intoxication and criminal liability: the basic components
+
+1.15 It is important to make one thing clear at the outset. There is no common law or statutory “defence of intoxication”. That is to say, the simple fact that D was voluntarily intoxicated at the time he or she allegedly committed the offence charged does not provide D with a “defence”. Equally, the fact that D acted involuntarily in a state of automatism caused by voluntary intoxication does not allow D to rely on the defence of automatism.
+
+1.16 However, if D’s state of intoxication was such that D did not act with the subjective fault (culpable state of mind) required for liability by the definition of the offence it may be possible for D to secure an acquittal for that reason.
+
+1.17 The word “may” in the preceding paragraph is crucially important in this context. If D did not act with the subjective fault required for liability by the definition of the offence because of voluntary intoxication, it does not necessarily follow that D will be able to avoid liability. Voluntary intoxication prevents proof of criminal liability only if the subjective fault required by the

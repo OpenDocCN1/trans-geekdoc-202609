@@ -1,0 +1,19 @@
+concept which affects all specific intent offences but most of the cases which have been heard by the House of Lords have involved murder. Section 8 of the Criminal Justice Act 1967 tried to make the law clear on this point. It states:
+
+> ‘A court or jury in determining whether a person has committed an offence– shall not be bound in law to infer that he intended or foresaw a result of his actions by reason only of its being a natural and probable consequence of those actions; but shall decide whether he did intend or foresee that result by reference to all the evidence, drawing such inferences from the evidence as appear proper in the circumstances.’
+
+The main problems in the law are on foresight of consequences. The House of Lords has tried on many occasions to explain the effect of foresight of consequences. In Moloney (1985) it ruled that foresight of consequences was not intention; it was only evidence from which intention could be inferred in accordance with s 8(b) above. However, the later decision in Woollin (1998), where the House of Lords speaks about intention being found from foresight of consequences, has made the law uncertain. It is not clear whether there is a substantive rule of criminal law that foresight of consequences is intention, or if there is only a rule of evidence that intention can be found from foresight of consequences. In Matthews and Alleyne (2003) the Court of Appeal even said that there was little to choose between a rule of evidence and one of substantive law, leaving it even more unclear (see section 3.1.2).
+
+# 6.4.2 The serious harm rule
+
+The Law Commission in its report, Murder, Manslaughter and Infanticide, pointed out that Parliament, when it passed the Homicide Act 1957, never intended a killing to amount to murder unless the defendant realised that his or
+
+her conduct might cause death. It stated that in its view the present offence of murder is too wide. Under the present law on murder, a defendant is guilty of murder if he had the intention to cause grievous bodily harm and actually causes the victim’s death. In some of these cases the defendant may not even realise that death could occur. Yet he is just as guilty of murder as the man who deliberately sets out to kill his victim. The Law Commission gives the following example in its report (paragraph 1.17):
+
+> ‘D intentionally punches V in the face. The punch breaks V’s nose and causes V to fall to the ground. In falling, V hits his or her head on the kerb causing a massive and fatal brain haemorrhage.’
+
+It points out that, if the jury decides that the harm D intended the punch to cause can be described as ‘serious’, then this would be murder. Yet, most people would agree that this should not be the most serious offence of homicide and D should not receive a mandatory life sentence for it. Not only is the Law Commission very critical of this rule, but the problem had already been pointed out by judges as far back as 1981 in the case of Cunningham (1981). When the law was considered by the House of Lords, Lord Edmund Davies stated that he thought the mens rea for murder should be limited to an intention to kill. He said:
+
+> ‘[It is] strange that a person can be convicted of murder if death results from, say, his intentional breaking of another’s arm, an action which, while undoubtedly involving the infliction of “really serious harm” and as such, calling for severe punishment, would in most cases be unlikely to kill.’
+
+Although he was very critical of the law, Lord Edmund Davies felt that any change to the law had to be made by Parliament. This was because the law has been the same for over 200 years and it would therefore be wrong for judges to change such a well-established law.
