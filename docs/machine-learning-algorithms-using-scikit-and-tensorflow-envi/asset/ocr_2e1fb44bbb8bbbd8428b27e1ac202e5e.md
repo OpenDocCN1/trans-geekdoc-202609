@@ -1,0 +1,11 @@
+RNNs are used for deep learning and the creation of models that imitate neuron activation in the brain. These are unique from those other kinds of ANN because they employ feedback loops that digest a series of input that influences the final output. They are particularly effective in situations where context is crucial for forecasting a result. Such feedback loops enable for the persistence of information. This phenomenon is often referred to as memory. The normal shallow neural network is shown in Figure 1 and Figure 2 shows structure with loop.
+
+RNN use cases are often associated with language models wherein understanding a next letter inside a word or the following word in a sentence is dependent on the preceding data. A intriguing experiment includes training an RNN on the Shakespeare works in order to generate language that effectively resembles Shakespeare’s. RNN authoring is an example of computational innovation. This emulation of human creativity is made feasible by the AI’s acquired knowledge of syntax and semantics out of its training set.
+
+# Working
+
+To comprehend RNNs, you must have a solid understanding of “regular” feed-forward neural nets and sequential data. Sequential data are essentially simply sorted data wherein related items are presented in sequence. Financial data and the DNA sequence were instances. One of the most common sort in sequential data is time series, that is simply a collection of data points in chronological order. RNNs and FNNs derive its name from the way they transmit data. Inside a FNN, information flows from input nodes, via the hidden units, to the output nodes. The data flows directly across the network. FNN have little recall of the data they are given and are poor at forecasting the future. A FNN has no concept of time order since it only analyzes the current input. Other than its schooling, it simply cannot recall anything that occurred in the past. A RNN cycles data via a loop. When making a decision, it takes into account both the input signal and what it has learnt from prior inputs. The two graphics below highlight the difference in flow of information between such a FNN and RNN as shown in Figure 3.
+
+Figure 3. FFNN vs. RNN
+
+![](bbox=[0.19, 0.68, 0.84, 0.91])

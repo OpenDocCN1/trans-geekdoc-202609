@@ -1,0 +1,15 @@
+points gain by an agent. Reinforcement learning is divided into two different categories i.e positive and negative reinforcement. Positive reinforcement described by the favorable behavior of an agent by supporting it through reward points by enhancing the performance of the system. On the other hand negative reinforcement discourage the behavior or action to not repeat in the future events. Mainly used models for reinforcement learning are Markov Decision Process and Q-learning. Majority of applications are found in automation industry, automated cars, gaming, image processing, traffic control systems, natural language processing and marketing.
+
+# 1.4 Semi-Supervised Learning
+
+Semi supervised learning uses both supervised and unsupervised learning. It uses large amount of unlabelled data and small labeled data which helps skip the need of finding a large amount of labeled data. It uses semi labeling to train the model. In this label first we train with fewer amounts of labeled data similar to supervised learning till we obtain accurate results. Then we train the model with unlabelled data with pseudo labels and now the data may not be as accurate. We then link both the data tables together. It is used in speech analysis and to classify text documents. While considered similar to reinforcement learning it is different as in reinforcement learning there is a reward and punishment logic followed and in semi supervised learning what is followed is training of model with less labeled data.
+
+# 1.5 Deep Learning
+
+Compared to machine learning, deep learning involves more hidden layers. Deep learning is a subset of artificial intelligence. It makes use of the back propagation technique, which reveals how the network’s internal parameters evolve by identifying intriguing patterns. It is suggested to use deep learning techniques when data size is huge and required to develop automated applications.
+
+Deep learning is preferred over machine learning for a multitude of reasons, some of them being, feature extraction is automated in DL, it can handle complex data and large volume of information, DL models have higher performance and accuracy and are also much easier to scale. The most terrifying benefit of deep learning is that the model continuously trains and improves itself on its own making them well suited for applications that require adaptation and evolution over time.
+
+# 1.6 Natural Language Processing
+
+Natural Language Processing gives machine the ability to understand and interpret human language. With NLP, machines can understand written and spoken text; it is further applied for speed recognition and automatic text summarization. It is used in catboats, for language translation, sentiment analysis like for recognizing and identifying emotions as positive, negative etc. The quality of NLP models depends on the quality and quantity of training data used to build them. Challenges faced by NLP are also numerous ranging from ambiguity, context-dependency to need to understand different languages and dialects. NLP has practical applications in customer service, healthcare, e-commerce as well.

@@ -1,0 +1,11 @@
+sification has already been labelled, with the key characteristics/attributes having already been divided into distinct groups.
+
+The act of sending data into a neural network or any machine learning algorithms and allowing it to recognise patterns in the data is known as “training” a model. To build a model for classification task it needs input data or input example in the format of features and the tag or the class label of the example. The data in feature format is processed during the training phase to generate predicted output. Both the features and the labels of the training data are provided to the network or machine learning algorithm as input during training for a supervised classification type work, but only the features are fed as input to the network during testing.
+
+During training it needs data from a number of examples. For example, to classify a person as male or female it needs to consider data (feature data or attribute data e.g., hair length, height etc. of a person) of some male persons and some female persons. Here each person is considered as an example. The set of example’s data which is also called a dataset is split into training and testing sets, which are two distinct sets of inputs. Since the model has already discovered the patterns in this collection of data, testing the classifier on the same dataset that it was trained on would be extremely biased. Instead, the dataset is divided into two sets: a training set that the classifier uses to refine its predictions, and a testing set that the classifier has never seen before. The primary objective of a classification algorithm is to determine the category of a given dataset, and these algorithms are frequently applied to forecast the results for categorical data.
+
+An illustration of supervised categorization is shown in Figure 1. Breast cancer patients’ benign and malignant tumours are identified in the dataset. By fitting a straight line through the data, the supervised classification algorithm will try to divide tumours into two groups. Based on the straight-line categorization, subsequent data can subsequently be categorised as benign or malignant. Only two discrete outputs
+
+# Figure 1. Classification example
+
+![](bbox=[0.255, 0.625, 0.745, 0.855])

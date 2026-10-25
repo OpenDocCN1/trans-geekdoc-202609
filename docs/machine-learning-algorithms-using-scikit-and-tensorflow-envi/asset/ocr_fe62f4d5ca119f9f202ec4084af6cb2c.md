@@ -1,0 +1,13 @@
+# Figure 5. Confusion matrix obtained from the evaluation of the proposed model on MIAS dataset
+
+![](bbox=[0.292, 0.172, 0.735, 0.453])
+
+Additionally, the confusion matrix aids in the assessment of the model’s sensitivity and specificity, essential factors in evaluating its performance. The values in the matrix contribute to the calculation of these metrics, providing a deeper understanding of the model’s ability to correctly identify true positives and true negatives, as well as false positives and false negatives.
+
+Overall, the analysis of the confusion matrix offers valuable insights into the strengths and weaknesses of the hybrid model, allowing for informed decision-making in refining the model’s architecture and training process to enhance its performance and reliability in accurately classifying benign and malignant masses within breast cancer images.
+
+The Receiver Operating Characteristic (ROC) curve as visualized in Figure 6, is a significant evaluation metric that provides insights into the performance of a classification model, particularly in distinguishing between different classes. The ROC curve is particularly useful in assessing the trade-off between true positive rate and false positive rate at various classification thresholds. The areas under the ROC curves are indicative of the model’s ability to differentiate between the classes effectively.
+
+The results obtained from the evaluation of the ROC curves for the classes “Benign masses” and “Malignant masses” demonstrated remarkable performance, as evidenced by the area under the curves, which both registered at 0.99. These high values suggest that the hybrid model effectively differentiated between benign and malignant masses with a high degree of accuracy. A value of 0.99 for the area under the ROC curve signifies that the model’s true positive rate is exceptionally high, with a low corresponding false positive rate, emphasizing the model’s strong capability in accurately identifying instances of both benign and malignant masses. The proximity of the area under the ROC curve to 1 indicates that the model achieved a high level of discrimination ability, making it adept at correctly classifying instances from the two classes, thereby bolstering its credibility and reliability in practical applications.
+
+Furthermore, the consistent area under the ROC curves for both classes underscore the model’s robust performance in handling instances from different categories, indicating its general effectiveness in
