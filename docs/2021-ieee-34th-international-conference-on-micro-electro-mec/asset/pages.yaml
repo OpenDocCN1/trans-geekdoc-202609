@@ -1,0 +1,357 @@
+- pgno: 0
+  md: '# MULTIVARIABLE SENSOR BASED ON MXENE AND MACHINE LEARNING FOR SELECTIVE DETECTIONS
+    OF VOCS
+
+
+    Dongsheng Li, Mengjiao Qu, Qian Zhang, and Jin Xie*
+
+
+    State Key Laboratory of Fluid Power and Mechatronic Systems, Zhejiang University,
+    Hangzhou, Zhejiang 310027, China
+
+
+    # ABSTRACT
+
+
+    Two-dimensional transition metal carbides/nitrides, known as MXenes, have recently
+    received significant attention for gas sensing applications. However, Mxenes have
+    strong adsorption to many types of volatile organic compounds (VOCs), and therefore
+    gas sensors based on MXenes generally have poor selectivity. Herein, we developed
+    a Ti3C2Tx based multivariable sensor which allows identification of different
+    VOCs, and concentration prediction of the target VOC in variable backgrounds.
+    The sensor’s responses from the broadband impedance spectra create a unique fingerprint
+    for each VOC. Based on the methodologies of principal component analysis and linear
+    discrimination analysis, we demonstrate highly accurate identifications for different
+    types of VOCs and mixtures using this multivariable sensor. Furthermore, we demonstrate
+    an accuracy of 93.2% for the prediction of ethanol concentrations in the presence
+    of different concentrations of water and methanol. The high level of identification
+    and concentration estimation shows the great potential of MXene based multivariable
+    sensor for detection of target VOCs in the presence of known and unknown interferences.
+
+
+    # KEYWORDS
+
+
+    MXene; 2D Material; Selectivity; Multivariable VOC Sensing; Broadband Impedance
+    Spectra.
+
+
+    # INTRODUCTION
+
+
+    Gas sensing has attracted considerable research interests in recent years [1,
+    2]. In particular, detection of volatile organic compounds (VOCs) in exhaled breath
+    is regarded as a promising method for early diagnosis of illness [3]. Around 200
+    VOCs have been detected in human breath and the contents of these VOCs reflect
+    a person’s physical conditions [4]. Accordingly, gas sensors are required not
+    only to sensitively detect an individual VOC but also to effectively distinguish
+    different VOCs and quantify the specific target VOC in the presence of a complex
+    background.
+
+
+    Two-dimensional (2D) materials are among the most promising materials for gas
+    sensing applications, because of their large surface area, versatile surface chemistry,
+    and capability of sensitive detection at room temperature [5]. Recently, gas sensors
+    based on a new family of 2D materials called MXene have also shown promising performance
+    [6]. As one of the 2D transition metal carbides/nitrides, MXenes possess a metallic
+    conductivity, while their surfaces are covered with functional groups. Such a
+    good combination makes MXene based gas sensors having ultrahigh signal-to-noise
+    ratios and low limit of detection compared with those based on the other 2D materials.
+
+
+    However, Mxenes have strong adsorptions to many types of VOCs. The selectivity
+    of these MXene based VOC sensors remains a key challenge. The poor selectivity
+    can be mitigated through combining sensors into arrays [7]. However, increasing
+    number of sensors in the sensor array increases the possibilities of breakdown.
+    A recent breakthrough comes from the multivariable sensor [8], in which one individual
+    sensor can generate multi-dimensional signals similar to those produced by the
+    sensor array. These multivariable sensors are mostly relied on varying the temperature
+    of the sensing element to overcome cross-sensitivity of those sensors based on
+    the measurement of resistance (or capacitance) [9]. Nevertheless, a permanent
+    change of material properties for the sensing layer may occur when temperature
+    cycling is applied.
+
+
+    Herein, we propose a Ti3C2Tx based multivariable sensor which allows identification
+    of different types of VOCs, and estimation of concentration for the single VOC
+    within a multiple VOCs mixture. In this method, we deposit a thin film of Ti3C2Tx
+    on the surface of an interdigital electrode (IDE) to form a multivariable sensor,
+    which was then exposed to a range of different VOCs with various concentrations.
+    The broadband impedance spectra of the Ti3C2Tx based sensor were obtained at various
+    conditions. They were then used as the inputs for supervised and unsupervised
+    machine learning, and the impedance responses obtained at different frequencies
+    were analyzed systematically. To the best of our knowledge, this is the first
+    report of a multivariable sensor based on MXene and broadband impedance spectra.
+
+
+    # EXPERIMENTAL SECTION
+
+
+    # Fabrication of MXene based multivariable sensor
+
+
+    A schematic illustration of the fabricated Ti3C2Tx based sensor is shown in Fig.
+    1a. The sensor was prepared by covering the fabricated IDE with a layer of Ti3C2Tx.
+    Two atomic layers of carbon were sandwiched between three atomic layers of titanium
+    in the Ti3C2Tx structure. With a typical synthesis method, we expect that the
+    surface of Ti3C2Tx would be randomly terminated with hydroxyl (-OH), oxygen (-O),
+    and fluorine (-F) groups. An IDE was made on Al2O3 ceramic substrate (5 mm × 5
+    mm) with 11 pairs of interdigitated Au/Ni/Cu electrodes (thicknesses of 10 μm
+    / 4 μm / 1 μm). The distances among Au strips and their widths were both 100 μm.
+    A dispersion of Ti3C2Tx in deionized water with a concetration of 0.05 mg/mL was
+    dropped on the prepared IDEs and dried in a vacuum chamber, thus forming a sensing
+    layer.
+
+
+    # Analysis of Ti3C2Tx based sensor data
+
+
+    The sensing performance was investigated by exposing the Ti3C2Tx based multivariable
+    sensor to various concentrations of the different VOCs. The broadband impedance
+    spectra (with frequencies from 20 Hz to 2MHz)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/0a26dfd3b403563edffabb903a3a54f8_1_0.png)
+
+
+    Figure 1: (a) Schematic illustration of the Ti3C2Tx film based sensor. (b) SEM
+    image of the Ti3C2Tx based sensor surface. (c) Cross-section view of the Ti3C2Tx
+    film.
+
+
+    ![](img/0a26dfd3b403563edffabb903a3a54f8_1_1.png)
+
+
+    Figure 2: Contour plot of unique fingerprint patterns of different VOCs.
+
+
+    ![](img/0a26dfd3b403563edffabb903a3a54f8_1_2.png)
+
+
+    Figure 3: 3D plot of the first 3 principal components of oxygenated (a) and non-oxygenated
+    (b) VOCs.
+
+
+    of the sensor were measured. The response was defined as the relative change in
+    the impedance of the sensor after exposure to VOCs compared to the baseline impedance
+    (ΔR (X) / R0 (X0) (%)). Predictive models were developed using eight representative
+    parameters obtained from the broadband impedance spectra, i.e. using the resistance
+    values at 20 Hz, 336 kHz, 2 MHz, and the reactance values at 189 kHz, 299 kHz,
+    710 kHz, 1.19 MHz, 2 MHz. First, principal component analysis (PCA) was applied
+    for classification of multivariate data and to reduce the dimensionality of the
+    original data set. PCA is a powerful unsupervised analysis tool that allows a
+    qualitative survey of the discriminating power of the sensor [10]. The linear
+    discrimination analysis (LDA) was performed as a supervised pattern recognition
+    tool meaning that the correct classification is known for each object. The
+
+
+    resultant principal components in the PCA were used as input variables to the
+    LDA to quantitatively identify different test analytes [11]. A cross-validation
+    method was used to estimate the identification. To quantify concentrations of
+    individual vapor in a mixture, we applied partial least squares (PLS) with five
+    latent variables (LVs) [8]. Multivariate data processing (PCA, LDA and PLS) was
+    carried out in MATLAB programs in this study.
+
+
+    # RESULTS AND DISCUSSION
+
+
+    The surface morphology of the Ti3C2Tx based sensor is shown in Fig. 1b, which
+    reveals a uniform deposition of the Ti3C2Tx film. A cross-sectional SEM image
+    of the Ti3C2Tx film is shown in Fig. 1c, which is produced through vacuum filtration
+    of the same Ti3C2Tx solution used for the sensor fabrication. The observed layered
+    structure is due to the ordered stacking of individual layers of Ti3C2Tx, which
+    results in increased surface-to-volume ratio, potentially contributing to a large
+    sensing response. The Ti3C2Tx based sensor was exposed to eight different VOCs
+    (i.e. methanol (MeOH), ethanol (EtOH), acetone, isopropanol (IPA), acetonitrile
+    (MeCN), dichloromethane (DCM), hexane, and toluene (TOL)) with different concentrations
+    from 100 ppm to 800 ppm, and the broadband impedance spectra were measured. Based
+    on the impedance spectra obtained, we selected eight representative parameters
+    mentioned above as the VOC'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/0a26dfd3b403563edffabb903a3a54f8_2_0.png)
+
+
+    Figure 4: 3D plot of LDA results the oxygenated VOCs (a) and VOC mixtures (d).
+    LDA results of oxygenated VOCs (b) and VOC mixtures (e). Cross-validation results
+    of oxygenated VOCs (c) and VOC mixtures (f).
+
+
+    characteristics. The changes of different characteristic parameters versus different
+    VOC concentrations are depicted in a contour plot, as shown in Fig. 2. Resistance
+    values at 20 Hz, 336 kHz, 2 MHz and reactance values at 189 kHz, 299 kHz exhibit
+    positive responses, whereas the reactance values at 710 kHz, 1.19 MHz, 2 MHz exhibit
+    negative responses on exposure to different VOCs. Apparently, a discernable discrepancy
+    exists between the response patterns of different VOCs as shown in Fig. 2. This
+    indicates a data set of impedance response can be used as VOC''s unique fingerprint
+    by collecting changes of the eight parameters in different VOC concentrations.
+    Therefore, we demonstrate that the multi-parameters sensing responses create a
+    unique fingerprint for each VOC, which can then be used for identification of
+    the type of VOC.
+
+
+    # Principal component analysis
+
+
+    We performed the PCA to discriminate the VOCs with the similar response and determine
+    the dimensions of the resulting data set of multi-parameters sensing responses.
+    The responses of the two groups of VOCs (i.e., the oxygenated and non-oxygenated
+    VOCs) were analyzed by PCA separately. High contributions of the first three principle
+    components (PCs) were achieved: i.e., 76.58%, 15.67% and 7.6% (oxygenated VOCs);
+    87.7%, 8.9% and 3.2% (non-oxygenated VOCs), for PC1, PC2, PC3, respectively. This
+    shows that the high data dimensionality can be obtained from the sensor on exposure
+    to only four vapors.
+
+
+    Fig. 3 shows a 3D plot of the first 3 PCs keeping most of the information (accounting
+    for a total of 99.8%). Each point corresponds to an entire fingerprint of a VOC
+    at a specific concentration (consists of eight parameters) and is colored according
+    to the VOC it represents. Points belonged to different VOCs are well-separated
+    in space, as can be seen in Fig. 3, indicating that the sensor can
+
+
+    differentiate the VOCs very well. Points belonging to same VOC but with the different
+    concentrations (from 100 ppm to 800 ppm) are located approximately in one line.
+    These results show that the sensor has high data dimensionality and a potential
+    to distinguish between different VOCs and quantify concentrations of individual
+    vapors.
+
+
+    # Linear discrimination analysis
+
+
+    To quantitatively identify the types of various VOCs, LDA was carried out for
+    oxygenated VOCs. Fig. 4a shows a 3D plot of LDA results. Each point is colored
+    according to the VOC type and a pentagram represents the center of mass of each
+    points group. Results shown in Fig. 4a clearly indicate that each VOC can be well
+    determined. The LDA results of oxygenated VOCs are depicted in Fig. 4b. LDA identification
+    accuracies of 95.4% were achieved, corresponding to 1 misclassification out of
+    22 total samples. Cross-validation is an effective way to verify the obtained
+    results, and leave-one-out cross validation (LOOCV) is often used as the validation
+    algorithm [11]. The cross-validation results are depicted in Fig. 4c, indicating
+    a cross-validation rate of 90.9% was achieved.
+
+
+    Furtherly, to provide a more stringent test of the sensor, the identification
+    ability toward similar VOC mixtures has been investigated. We use the LDA to discriminate
+    the mixtures of EtOH and acetone (A), EtOH and IPA (B), acetone and DCM (C), as
+    well as acetone and MeCN (D). Fig. 4d shows a 3D plot of LDA results of the VOCs
+    mixtures. From different view angles, four kinds of VOC mixtures are well separated
+    in a 3D feature space. A correct classification rate of 100% was achieved, as
+    shown in Fig. 4e. The cross-validation results of mixture are depicted in Fig.
+    4f, indicating a correct cross-validation rate of 90% has been achieved. These
+    results demonstrate that utilizing the Ti3C2Tx based multivariable sensor is a
+    promising approach for identification of pure VOCs and similar complex mixtures.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Partial least square regression analysis
+
+
+    We further used the PLS to quantify concentrations of ethanol in a background
+    of variable humidity levels and methanol concentrations. Fig. 5a presents a simple
+    visualization of the quantitative prediction of ethanol vapors in the presence
+    of variable backgrounds. The position of each point is given by its real concentration
+    (x-axis) and predicted concentration (y-axis). Perfect predictions will lay on
+    the diagonal (i.e., prediction matches the real gas concentration). All the VOC
+    concentrations were predicted quite well, as all the points are close to the diagonal
+    positions. The average accuracy is 93.4% using 5 LVs.
+
+
+    ![](img/0a26dfd3b403563edffabb903a3a54f8_3_0.png)
+
+
+    Figure 5: (a) Ethanol concentration prediction in the presence of a variable background.
+    (b) Concentration prediction of second data set.
+
+
+    A data set from a second measurement was then used to study the robustness of
+    the determined model. Fig. 5b presents a concentration prediction of second data
+    set using the obtained PLS coefficients from the training set. All the VOC concentrations
+    were predicted quite well, as shown in Fig. 5b, demonstrating the Ti3C2Tx based
+    multivariable sensor is an excellent approach for individual VOC concentration
+    prediction in a variable background.
+
+
+    # CONCLUSION
+
+
+    In summary, we developed a Ti3C2Tx based multivariable sensor for selective VOC
+    detection. The snesor was fabricated by depositing a thin film of Ti3C2Tx on the
+    surface of an IDE. Eight representative parameters of the proposed sensor were
+    selected as VOC characteristics and the multi-parameters sensing responses create
+    a unique fingerprint for each VOC. The multivariable sensor showed a high data
+    dimensionality in PCA. Correct rates of 90.9% and 90% for the identification was
+    achieved for oxygenated VOCs and VOCs mixtures in LDA, respectively. The ethanol
+    concentration estimation accuracy is up to 93.4% based on the proposed sensor.
+    The high level of identification and concentration prediction truly shows the
+    potential of MXene based multivariable sensors for detection of VOCs of interest
+    in the presence of known and unknown interferences. We anticipate that the strategy
+    to solve the cross-sensitivity of gas sensors of this work could be easily adapted
+    to other gas sensors and implemented in a range of emerging applications, including
+    agriculture, pollution monitoring, food quality assurance, and medical diagnosis.
+
+
+    # ACKNOWLEDGEMENTS
+
+
+    This work is supported by the “Zhejiang Provincial Natural Science Foundation
+    of China (LZ19E050002)”, the “National Natural Science Foundation of China (51875521)”,
+    the “Science Fund for Creative Research Groups of National Natural Science Foundation
+    of China (51821093)”.
+
+
+    # REFERENCES
+
+
+    +   [1] S. Cui et al., "Ultrahigh sensitivity and layer-dependent sensing performance
+    of phosphorene-based gas sensors", Nat. Commun., vol. 6, no. 1, 2015.
+
+    +   [2] J. van den Broek, S. Abegg, S. E. Pratsinis, A. T. Günther, "Highly selective
+    detection of methanol over ethanol by a handheld gas sensor", Nat. Commun., vol.
+    10, no. 1, 2019.
+
+    +   [3] N. Shehada, G. Brönstrup, K. Funka, S. Christiansen, M. Leja, H. Haick,
+    "Ultrasensitive Silicon Nanowire for Real-World Gas Sensing: Noninvasive Diagnosis
+    of Cancer from Breath Volatolome", Nano Lett., vol. 15, no. 2, pp. 1288-1295,
+    2014.
+
+    +   [4] E. Lee, A. VahidMohammadi, B. C. Prorok, Y. S. Yoon, M. Beidaghi, D.-J.
+    Kim, "Room Temperature Gas Sensing of Two-Dimensional Titanium Carbide (MXene)",
+    ACS Appl. Mater. Interfaces, vol. 9, no. 42, pp. 37184-37190, 2017.
+
+    +   [5] X. Liu, T. Ma, N. Pinna, J. Zhang, "Two-Dimensional Nanostructured Materials
+    for Gas Sensing", Adv. Funct. Mater., vol. 27, no. 37, 2017.
+
+    +   [6] M. Wu et al., "Ti3C2 MXene-Based Sensors with High Selectivity for NH3
+    Detection at Room Temperature", ACS Sens., vol. 4, no. 10, pp. 2763-2770, 2019.
+
+    +   [7] Lichtenstein et al., "Supersensitive fingerprinting of explosives by chemically
+    modified nanosensors arrays", Nat. Commun., vol. 5, no. 1, 2014.
+
+    +   [8] R. A. Potyrailo et al., "Towards outperforming conventional sensor arrays
+    with fabricated individual photonic vapour sensors inspired by Morpho butterflies",
+    Nat. Commun., vol. 6, no. 1, 2015.
+
+    +   [9] M. Tonezzer, "Selective gas sensor based on one single SnO2 nanowire",
+    Sens. Actuators, B, vol. 288, pp. 53-59, 2019.
+
+    +   [10] N. C. Speller, N. Siraj, B. P. Regmi, H. Marzoughi, C. Neal, I. M. Warner,
+    "Rational Design of QCM-D Virtual Sensor Arrays Based on Film Thickness, Viscoelasticity,
+    and Harmonics for Vapor Discrimination", Anal. Chem., vol. 87, no. 10, pp. 5156-5166,
+    2015.
+
+    +   [11] H. Liu et al., "Discrimination of VOCs molecules via extracting concealed
+    features from a temperature-modulated p-type NiO sensor", Sens. Actuators, B,
+    vol. 293, pp. 342-349, 2019.
+
+
+    # CONTACT
+
+
+    *J. Xie, tel: +86-(0) 571-87951271; xiejin@zju.edu.cn'
+  merge: -1
+  img_proc: true
