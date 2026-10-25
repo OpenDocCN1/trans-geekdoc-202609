@@ -1,0 +1,11 @@
+some actionable decisions. Through the past years, business intelligence tends to evolve to include different activities and processes to aid in improving performance.
+
+# The Processes
+
+The first process that came into the loop of business intelligence is data mining. This includes the use of databases and machine learning to unearth different trends in big datasets. The next is the process of reporting. This refers to the sharing of data analytics among the stakeholders of a business so that they can draw multiple different conclusions and make informed decisions. The next process is performance metrics. This includes the comparison of current performance data to a streak of historical data for tracking performance against a set of goals. The performance metrics are generally displayed on a customized dashboard. The next process is known as descriptive analytics and it uses multiple primary data analysis to sort out what has happened. Other processes that come into play are data visualization, visual analysis, and data preparation.
+
+# Business Intelligence Functions
+
+One of the key functions of business intelligence is reporting. It can be regular or ad-hoc based. It depends on the provision of data to key stakeholders of the industry. These reports are destined to take many forms and they can be produced by using multiple methods. However, business intelligence allows you to eliminate the human factor in the preparation of reports. It leverages automation of the entire process and eases off the pain points in the generation of regular reports. This saves lots of time that would otherwise be spent on the collection of documents and data to make ready weekly reports. BI can help enterprises save manpower for other complex tasks. Even if a small business uses BI tools to generate reports, it will give them enterprise-level scalability.
+
+Another function in an enterprise is analytics, the examination of data and the forming of patterns inside the data. Analytics try to be descriptive, predictive, and prescriptive as well. Descriptive analytics would prepare data in the form of modes, means, and medians. Prescriptive analytics is an offshoot of business intelligence that suggests certain actions to the management to maximize the output and optimize the outcomes. It would determine the

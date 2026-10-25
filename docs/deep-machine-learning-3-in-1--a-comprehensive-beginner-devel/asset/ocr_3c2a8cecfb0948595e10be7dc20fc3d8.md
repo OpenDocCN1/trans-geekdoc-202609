@@ -1,0 +1,3 @@
+itself from any human attack. With the help of a doctor, Spooner succeeds in destroying the artificial intelligence. However, that’s in a movie. If such a system comes into the limelight in the real world, it is yet to be known how powerful human response to this kind of situation will be. How we will handle it and whether we will be able to survive it or not.
+
+However, this kind of system in the real world is still a far cry. This kind of system will be the one which will learn how to program itself and other systems. This requires top-level intelligence. However, it cannot be said that it is impossible.
