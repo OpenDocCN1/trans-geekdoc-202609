@@ -1,0 +1,3451 @@
+- pgno: 0
+  md: '# # Introduction to
+
+    # Deep Learning
+
+    # for Engineers
+
+
+    # *Using Python*
+
+    *and Google*
+
+    *Cloud Platform*
+
+
+    **Tariq M. Arif**
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_0_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Introduction to
+
+    Deep Learning for Engineers
+
+    Using Python and Google Cloud Platform'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Synthesis Lectures on Mechanical Engineering
+
+
+    Synthesis Lectures on Mechanical Engineering series publishes 60–150 page publications
+    pertaining to this diverse discipline of mechanical engineering. The series presents
+    Lectures written for an audience of researchers, industry engineers, undergraduate
+    and graduate students.
+
+
+    Additional Synthesis series will be developed covering key areas within mechanical
+    engineering.
+
+
+    Introduction to Deep Learning for Engineers: Using Python and Google Cloud Platform
+
+    Tariq M. Arif
+
+    2020
+
+
+    Towards Analytical Chaotic Evolutions in Brusselators
+
+    Albert C.J. Luo and Siyu Guo
+
+    2020
+
+
+    Modeling and Simulation of Nanofluid Flow Problems
+
+    Snehashi Chakraverty and Uddhaba Biswal
+
+    2020
+
+
+    Modeling and Simulation of Mechatronic Systems using Simscape
+
+    Shuvra Das
+
+    2020
+
+
+    Automatic Flight Control Systems
+
+    Mohammad Sadraey
+
+    2020
+
+
+    Bifurcation Dynamics of a Damped Parametric Pendulum
+
+    Yu Guo and Albert C.J. Luo
+
+    2019
+
+
+    Reliability-Based Mechanical Design, Volume 2: Component under Cyclic Load and
+    Dimension Design with Required Reliability
+
+    Xiaobin Le
+
+    2019'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '**Reliability-Based Mechanical Design, Volume 1: Component under Static Load**
+
+    Xiaobin Le
+
+    2019
+
+
+    **Solving Practical Engineering Mechanics Problems: Advanced Kinetics**
+
+    Sayavur I. Bakhtiyarov
+
+    2019
+
+
+    **Natural Corrosion Inhibitors**
+
+    Shima Ghanavati Nasab, Mehdi Javaheran Yazd, Abolfazl Semnani, Homa Kahkesh, Navid
+    Rabiee, Mohammad Rabiee, and Mojtaba Bagherzadeh
+
+    2019
+
+
+    **Fractional Calculus with its Applications in Engineering and Technology**
+
+    Yi Yang and Haiyan Henry Zhang
+
+    2019
+
+
+    **Essential Engineering Thermodynamics: A Student’s Guide**
+
+    Yumin Zhang
+
+    2018
+
+
+    **Engineering Dynamics**
+
+    Cho W.S. To
+
+    2018
+
+
+    **Solving Practical Engineering Problems in Engineering Mechanics: Dynamics**
+
+    Sayavur Bakhtiyarov
+
+    2018
+
+
+    **Solving Practical Engineering Mechanics Problems: Kinematics**
+
+    Sayavur I. Bakhtiyarov
+
+    2018
+
+
+    **C Programming and Numerical Analysis: An Introduction**
+
+    Seiichi Nomura
+
+    2018
+
+
+    **Mathematical Magnetohydrodynamics**
+
+    Nikolas Xiros
+
+    2018
+
+
+    **Design Engineering Journey**
+
+    Ramana M. Pidaparti
+
+    2018
+
+
+    **Introduction to Kinematics and Dynamics of Machinery**
+
+    Cho W. S. To
+
+    2017'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Microcontroller Education: Do it Yourself, Reinvent the Wheel, Code to Learn
+
+
+    Dimosthenis E. Bolanakis
+
+    2017
+
+
+    # Solving Practical Engineering Mechanics Problems: Statics
+
+
+    Sayavur I. Bakhtiyarov
+
+    2017
+
+
+    # Unmanned Aircraft Design: A Review of Fundamentals
+
+
+    Mohammad Sadraey
+
+    2017
+
+
+    # Introduction to Refrigeration and Air Conditioning Systems: Theory and Applications
+
+
+    Allan Kirkpatrick
+
+    2017
+
+
+    # Resistance Spot Welding: Fundamentals and Applications for the Automotive Industry
+
+
+    Menachem Kimchi and David H. Philips
+
+    2017
+
+
+    # MEMS Barometers Toward Vertical Position Detection: Background Theory, System
+
+    Prototyping, and Measurement Analysis
+
+
+    Dimosthenis E. Bolanakis
+
+    2017
+
+
+    # Engineering Finite Element Analysis
+
+
+    Ramana M. Pidaparti
+
+    2017'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'Copyright © 2020 by Morgan & Claypool
+
+
+    All rights reserved. No part of this publication may be reproduced, stored in
+    a retrieval system, or transmitted in any form or by any means—electronic, mechanical,
+    photocopy, recording, or any other except for brief quotations in printed reviews,
+    without the prior permission of the publisher.
+
+
+    Introduction to Deep Learning for Engineers: Using Python and Google Cloud Platform
+
+
+    Tariq M. Arif
+
+
+    www.morganclaypool.com
+
+
+    ISBN: 9781681739137      paperback
+
+    ISBN: 9781681739144      ebook
+
+    ISBN: 9781681739151      hardcover
+
+
+    DOI 10.2200/S01029ED1V01Y202007MEC028
+
+
+    A Publication in the Morgan & Claypool Publishers series
+
+
+    *SYNTHESIS LECTURES ON MECHANICAL ENGINEERING*
+
+
+    Lecture #28
+
+    Series ISSN
+
+    Print 2573-3168  Electronic 2573-3176'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Introduction to
+
+    Deep Learning for Engineers
+
+
+    Using Python and Google Cloud Platform
+
+
+    Tariq M. Arif
+
+    Weber State University
+
+
+    SYNTHESIS LECTURES ON MECHANICAL ENGINEERING #28'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Contents
+
+
+    +   Preface ................................................... xiii
+
+    +   Acknowledgments ........................................... xv
+
+    +   1 Introduction: Python and Array Operations ................... 1
+
+    +   1.1 Introduction ............................................ 1
+
+    +   1.2 Anaconda Installation ................................... 2
+
+    +   1.3 Using Jupyter Notebook .................................. 2
+
+    +   1.4 Array Computing Using NumPy ............................. 2
+
+    +   1.4.1 Importing NumPy and Basic Commands ................... 4
+
+    +   1.4.2 Changing Array Elements .............................. 5
+
+    +   1.4.3 Creating Array with Specific Values .................. 6
+
+    +   1.4.4 Broadcasting in NumPy ............................... 7
+
+    +   2 Introduction to PyTorch ................................... 11
+
+    +   2.1 Introduction ............................................ 11
+
+    +   2.2 Setting up PyTorch ...................................... 11
+
+    +   2.3 Basic PyTorch Operations ............................... 14
+
+    +   3 Basic Artificial Neural Network and Architectures ........... 17
+
+    +   3.1 Introduction ............................................ 17
+
+    +   3.2 Applications ............................................ 18
+
+    +   3.3 Neurons and Activation Functions ....................... 19
+
+    +   3.3.1 Sigmoid Activation ................................... 20
+
+    +   3.3.2 Hyperbolic Tangent Activation ....................... 20
+
+    +   3.3.3 Rectified Linear Units (ReLU) Activation ............. 21
+
+    +   3.3.4 Leaky Rectified Linear Units (Leaky ReLU) Activation . 21
+
+    +   3.3.5 Exponential Linear Units (ELU) Activation ............ 23
+
+    +   3.3.6 SoftPlus Activation .................................. 23
+
+    +   3.4 Minimizing the Loss Function ........................... 24
+
+    +   3.5 Gradient Descent Algorithm ............................. 25'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "+   4  Introduction to Deep Learning ............................................\
+    \ 29\n+   4.1  Introduction ...........................................................\
+    \ 29\n+   4.2  Convolutional Neural Network ............................................\
+    \ 30\n+   4.2.1  Pooling Layer .......................................................\
+    \ 31\n+   4.2.2  Fully Connected Layer ................................................\
+    \ 31\n+   4.3  Recurrent Neural Network (RNN) ...........................................\
+    \ 33\n+   4.3.1  Basic Structures ....................................................\
+    \ 33\n+   4.4  Other Deep Learning Models ..............................................\
+    \ 35\n+   \n+   5  Deep Transfer Learning ....................................................\
+    \ 37\n+   5.1  Introduction ...........................................................\
+    \ 37\n+   5.2  Types of Transfer Learning ..............................................\
+    \ 37\n+   5.3  Using Pre-Trained Networks ..............................................\
+    \ 37\n+   5.3.1  Feature Extraction, Fine Tuning, and Data Augmentation .............\
+    \ 38\n+   5.4  Model Evaluation .......................................................\
+    \ 39\n+   \n+   6  Setting Up PyTorch and Google Cloud Platform Console .....................\
+    \ 41\n+   6.1  Introduction ...........................................................\
+    \ 41\n+   6.2  Setting Up a GCP Account ................................................\
+    \ 41\n+   6.3  Create a New Project ...................................................\
+    \ 45\n+   6.4  Set Up a VM instance ...................................................\
+    \ 45\n+   6.5  GPU Quota Request ......................................................\
+    \ 50\n+   6.5.1  A Cost-Effective Approach ............................................\
+    \ 54\n+   6.6  VPC Network ............................................................\
+    \ 55\n+   6.6.1  Set Up External IP Address ...........................................\
+    \ 55\n+   6.6.2  Create Firewall Rules ................................................\
+    \ 56\n+   6.7  Setting Up VM Instance to Run Models ....................................\
+    \ 60\n+   6.7.1  Anaconda Installation on VM ..........................................\
+    \ 60\n+   6.7.2  Jupyter Notebook Set Up ..............................................\
+    \ 61\n+   \n+   7  Case Study: Practical Implementation Through Transfer Learning\
+    \ ........... 67\n+   7.1  Problem Statement .....................................................\
+    \ 67\n+   7.2  Data Processing .......................................................\
+    \ 67\n+   7.3  Upload Data into Storage Bucket .......................................\
+    \ 68\n+   7.4  Transferring File to VM Instance ......................................\
+    \ 68\n+   7.5  Transfer Learning Steps ...............................................\
+    \ 72"
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '+   7.5.1 Define Loss Function and Optimizer ........................... 72
+
+    +   7.5.2 Install Dependencies ........................................... 73
+
+    +   7.5.3 Import Libraries ............................................... 74
+
+    +   7.5.4 Checkpoint and Adaptive Learning Rate .......................... 75
+
+    +   7.5.5 Set Seed ....................................................... 75
+
+    +   7.5.6 Dataset Class and Augmentation .................................. 75
+
+    +   7.5.7 Data Preprocessing .............................................. 75
+
+    +   7.6 Transfer Learning Model (EfficientNet-B7) ......................... 79
+
+    +   7.7 Fine-Tuning and Training .......................................... 81
+
+    +   7.8 Model Testing ..................................................... 84
+
+    +   7.9 Conclusion ....................................................... 85
+
+    +   **Bibliography** ..................................................... 87
+
+    +   **Author''s Biography** ............................................... 93'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Preface
+
+
+    My goal in writing this book is to motivate engineering students to learn deep
+    learning applications. As a newly evolved area, deep learning models and their
+    implementation methods are rapidly changing. This nature of continuous development
+    provides an extra layer of challenges for newcomers, especially those who are
+    not in the field of data science or machine learning. I found it exciting that
+    many engineering projects can be optimized and improved significantly by implementing
+    a deep learning model that is already tuned for a similar application. Currently,
+    there are numerous excellent books and online resources available on deep learning
+    to explain theories and applications. But I always felt the need for a short book
+    that shows all the necessary techniques to utilize deep learning models in real-life
+    projects using cloud computing. So, my primary motivation in writing this manuscript
+    is to give a whole picture of the application process.
+
+
+    One of the challenges I faced while writing is to squeeze the introductory chapters
+    that cover fundamental theories. I would suggest readers relate the case study
+    part with fundamental theories and focus on running the codes provided in this
+    book by setting up a GCP account. Although this book covers only a small facet
+    of deep learning implementation, I hope it will inspire engineering students to
+    learn other different variations that can be related to their projects.
+
+
+    Tariq M. Arif
+
+    July 2020'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Acknowledgments
+
+
+    I would like to thank Mr. Paul Petralia, Dr. C.L. Tondo, Ms. Melanie Carlson,
+    and all of the members at Morgan & Claypool Publishers who are involved in improving
+    and editing this manuscript at different stages. I would also like to thank Mr.
+    Adilur Rahim for his expert inputs on deep learning and motivating me to work
+    in this field.
+
+
+    I must thank my wife, Mahbuba Sultana, for being tremendously supportive, and
+    I am also grateful to my daughter, Nuha Arif, who sometimes decided not to distract
+    me while I was working on this manuscript.
+
+
+    Tariq M. Arif
+
+    July 2020'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Introduction: Python and Array Operations
+
+
+    # 1.1 INTRODUCTION
+
+
+    Python is a popular object-oriented programming language that was initially created
+    by Guido van Rossum in 1990. Later on, many developers and programmers contributed
+    to its growth, and its popularity has been escalated in recent years in many different
+    domains, including machine learning [1]. Python also has many vibrant online communities
+    and active support forums. Among the popular programming forums, the https://stackoverflow.com/
+    and https://python-forum.io/ sites have a substantial amount of useful information
+    for beginners. One of the benefits of using Python is that it provides numerous
+    ready-to-use robust libraries that are actively maintained by developers through
+    the GitHub page (https://github.com/). Many of its libraries can be implemented
+    effectively for general-purpose programming, scientific computing, data visualization,
+    and machine learning applications. Beside freely available libraries, there are
+    numerous other reasons why Python become a popular programming language, not only
+    for machine learning or artificial intelligence but also for web, game development,
+    and business applications. The Python hype is likely to grow for many more years
+    to come, and recently, many top U.S. universities have switched to Python for
+    teaching introductory programming classes [2].
+
+
+    Deep learning is a new and popular platform that is widely used in many different
+    predictive problems related to artificial intelligence. Many scientists and researchers
+    use Python programming language and its libraries to utilize deep learning models.
+    Training a deep learning model requires an extensive amount of data processing
+    capabilities by GPU-based hardware, which is relatively expensive. Nowadays, there
+    are cloud computing platforms available such as Amazon Web Services (AWS), Microsoft
+    Azure, and Google Cloud Platform (GCP), and these platforms can be used for training
+    a data-intensive deep learning model. In this book, we have shown the steps required
+    to run a deep learning model using the google cloud platform in a cost-effective
+    way. Since the basic Python programming is required to follow this text, the introductory
+    chapters (Chapters 1 and 2) are included to provide relevant Python programming
+    skills and library descriptions. For running deep learning model, a widely used
+    library known as NumPy (Numerical Python) and a tensor array library (PyTorch)
+    are used.
+
+
+    Next, Chapters 3-5 provide basic introductions related to the artificial neural
+    network, deep learning, and transfer learning frameworks. Chapter 6 illustrates
+    the essential tips and'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'tricks to set up the Google Cloud Platform’s GPU engine and the PyTorch library.
+    Finally, Chapter 7 presents a case study for the actual implementation of a deep
+    learning model.
+
+
+    Although introductory backgrounds are provided, anyone who is completely new to
+    Python should read some basics of Python data structure and string manipulations
+    before starting Chapter 7. Numerous materials are freely available online to learn
+    the basics of Python programming. A good starting point is the official Python
+    tutorials available at https://docs.python.org/3/tutorial/.
+
+
+    In the following sections, we are going to show the steps to install Anaconda
+    and run Jupyter Notebook. These steps will be useful to follow the case study
+    presented at the end. Later in this chapter, we will show a few simple array manipulations
+    using Python and NumPy library.
+
+
+    # 1.2 ANACONDA INSTALLATION
+
+
+    We are going to use an open-source distribution for Python, known as Anaconda,
+    which includes a lot of useful scientific packages for machine learning applications
+    and data processing. One of the benefits of using Anaconda is that it comes with
+    hundreds of libraries that are not required to install separately for our workflows
+    such as NumPy, Matplotlib, pandas, SciPy, Bokeh, and many more. To download Anaconda
+    visit https://www.anaconda.com/products/individual. Once the download option has
+    been selected, there will be options for selecting the installer associated with
+    different operating platforms (e.g., Windows/ MacOS/ Linux). While installing
+    the Anaconda, make sure to check on both of the advanced options, as shown in
+    Fig. 1.1.
+
+
+    If Python had already been installed on your computer, this selection would help
+    to create the correct PATH variable needed for the installation.
+
+
+    # 1.3 USING JUPYTER NOTEBOOK
+
+
+    After Anaconda installation Anaconda Navigator can be opened from the program
+    search menu, which provides several interactive computing environments, including
+    the Jupyter Notebook. We can open Jupyter Notebook from Anaconda, or we may search
+    in the search menu for “Jupyter Notebook (Anaconda3)” and select from there.
+
+
+    The Jupyter Notebook (shown in Fig. 1.2) allows us to create live Python code
+    and iterate data effectively for machine learning applications. This notebook
+    editor is tremendously popular and became a de facto standard among data scientists.
+    One study shows that in September 2018, the code-sharing site GitHub counted more
+    than 2.5 million public Jupyter Notebooks [3].
+
+
+    # 1.4 ARRAY COMPUTING USING NUMPY
+
+
+    The NumPy (Numerical Python) library can be used to handle a massive amount of
+    array-based dataset. It was first introduced in 2006, and due to its high performance
+    in handling big-data for deep learning, many other supporting libraries such as
+    Pandas and SciPy (Scientific Python)'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_20_0.png)
+
+
+    Figure 1.1: Select “Add Anaconda3 to my PATH environment variable” during installation.
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_20_1.png)
+
+
+    Figure 1.2: Computing environment by Jupyter Notebook.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_21_0.png)
+
+
+    Figure 1.3: Go to new → Python3 to create a new programming script.
+
+
+    ```
+
+    ```python
+
+    import numpy as np
+
+    ```
+
+    ```
+
+
+    Figure 1.4: Import numpy library as np.
+
+
+    are created based on NumPy library. The NumPy module can be imported as “np” (different
+    keywords can be chosen), and after importing, it can be used to call any array
+    by typing “np.”
+
+
+    # 1.4.1 IMPORTING NUMPY AND BASIC COMMANDS
+
+
+    Let us use some basic functionalities of NumPy. First, open Jupyter Notebook (Anaconda3)
+    from the search menu and create a new “Python 3” file (Fig. 1.3).
+
+
+    Type the following command to import the NumPy library as “np” and press “Shif+Enter”
+    key to execute the line (Fig. 1.4).
+
+
+    Now let’s say we have a list of data, A = [1, 2, 3, 4, 5, 6, 7, 8, 9], and we
+    would like to convert it to a 3 by 3 matrix. We may assign it to another array
+    variable B. Note that in Fig. 1.5, the output “type” of A is a list, but the output
+    “type” of B is a numpy.ndarray.
+
+
+    Now, we can use the “reshape” command to make a 3 by 3 matrix from B, but it will
+    not change the original dimension of B, as shown in Fig. 1.6. If we want to change
+    the original dimension, we will need to assign it to another variable, or B itself.
+
+
+    In Fig. 1.7, array B is assigned again using the reshape command. Here, the original
+    data shape of B also changed to 3 by 3.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "```\nIn [2]: A = [1,2,3,4,5,6,7,8,9]\n```\n\n```\nIn [3]: type(A)\nOut[3]:\
+    \ list\n```\n\n```\nIn [4]: B = np.array(A)\n```\n\n```\nIn [5]: type(B)\nOut[5]:\
+    \ numpy.ndarray\n```\n\nFigure 1.5: Using numpy for converting python list to\
+    \ array type.\n\n```\nIn [6]: B.reshape(3,3)\nOut[6]: array([[1, 2, 3],\n    \
+    \          [4, 5, 6],\n              [7, 8, 9]])\n```\n\n```\nIn [7]: print(B)\n\
+    [1 2 3 4 5 6 7 8 9]\n```\n\nFigure 1.6: Reshaping array B without changing its\
+    \ data.\n\n```\nIn [8]: B = B.reshape(3,3)\n```\n\n```\nIn [9]: print(B)\n[[1\
+    \ 2 3]\n [4 5 6]\n [7 8 9]]\n```\n\nFigure 1.7: Use reshape to change the original\
+    \ array dimension.\n\n# 1.4.2 CHANGING ARRAY ELEMENTS\n\nChanging element values\
+    \ of an array can be useful when we deal with a multi-dimensional large dataset.\
+    \ But here, we are providing an example on the small array, B (Fig. 1.7). Let’s\
+    \ say we want to change all the elements of row two to zeros.\n\nNote that a Python\
+    \ list, as well as NumPy array, always starts from 0, i.e., in the 3 by 3 matrix\
+    \ B, we have rows from 0 to 2 (0,1,2 → 3 rows), and columns from 0 to 2 (0,1,2\
+    \ → 3 columns). So when we try to access row 2, we will use B[1, :], as shown\
+    \ in Fig. 1.8. Here, \":\" denotes that we want to reassign all the values (row\
+    \ 1 and column all).\n\nNow, let’s try to update only one element located at row\
+    \ 3 and column 3, from 9 to 999. To access this location in NumPy, we will use\
+    \ [2, 2], as shown in Fig. 1.9."
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "```\nIn [10]: B[1, :] = 0\n```\n\n```\nIn [11]: print(B)\n```\n\n[[1 2 3]\n\
+    [0 0 0]\n[7 8 9]]\n\nFigure 1.8: Reassigning row values inside of an array.\n\n\
+    ```\nIn [12]: B[2,2] = 999\n```\n\n```\nIn [13]: B\n```\n\n```\nOut[13]: array([[\
+    \ 1,  2,  3],\n                [ 0,  0,  0],\n                [ 7,  8, 999]])\n\
+    ```\n\nFigure 1.9: Updating only one element of an array located at [2,2].\n\n\
+    ```\nIn [14]: C = np.zeros(10000).reshape(100,100)\n```\n\n```\nIn [15]: C\n```\n\
+    \n```\nOut[15]: array([[0., 0., 0., ..., 0., 0., 0.],\n                [0., 0.,\
+    \ 0., ..., 0., 0., 0.],\n                [0., 0., 0., ..., 0., 0., 0.],\n    \
+    \            ...,\n                [0., 0., 0., ..., 0., 0., 0.],\n          \
+    \      [0., 0., 0., ..., 0., 0., 0.],\n                [0., 0., 0., ..., 0., 0.,\
+    \ 0.]])\n```\n\nFigure 1.10: Creating a 100 by 100 array of zeros using NumPy.\n\
+    \nNote that we can also use “B” in the command line instead of “print(B)”, and\
+    \ press “Shift+Enter” from the keyboard to see the array output.\n\n# 1.4.3 CREATING\
+    \ ARRAY WITH SPECIFIC VALUES\n\nWe can also create arrays with any specific values.\
+    \ Let’s say we want to create a large array of 100 by 100 elements consists of\
+    \ 0s, and another one with 1s. The functions we could use here are “zeros” and\
+    \ “ones,” respectively (Figs. 1.10 and 1.11).\n\nIf a NumPy array has more than\
+    \ 1000 elements, it drops the middle rows and columns from the output display,\
+    \ as shown in Fig. 1.10. For checking the shape of an array, the “.shape” function\
+    \ can be used (Fig. 1.11).\n\nWe may also use “ones” or “zeros” and the “reshape”\
+    \ function together in one line. Figure 1.12 shows how to use “ones” and “reshape”\
+    \ functions in one line to create a 100 by 100 array."
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "```\n```python\nIn [16]: C.shape\n\nOut[16]: (100, 100)\n```\n```\n\n**Figure\
+    \ 1.11:** Using “.shape” function to check an array shape.\n\n```\n```python\n\
+    In [17]: D = np.ones(10000).reshape(100,100)\n\nIn [18]: D\n\nOut[18]: array([[1.,\
+    \ 1., 1., ..., 1., 1., 1.],\n       [1., 1., 1., ..., 1., 1., 1.],\n       [1.,\
+    \ 1., 1., ..., 1., 1., 1.],\n       ...,\n       [1., 1., 1., ..., 1., 1., 1.],\n\
+    \       [1., 1., 1., ..., 1., 1., 1.],\n       [1., 1., 1., ..., 1., 1., 1.]])\n\
+    ```\n```\n\n**Figure 1.12:** Using “ones” and “reshape” functions in one line\
+    \ to create a 100 by 100 array.\n\n```\n```python\nIn [19]: E = np.full((3,10),55)\n\
+    \nIn [20]: E\n\nOut[20]: array([[55, 55, 55, 55, 55, 55, 55, 55, 55, 55],\n  \
+    \     [55, 55, 55, 55, 55, 55, 55, 55, 55, 55],\n       [55, 55, 55, 55, 55, 55,\
+    \ 55, 55, 55, 55]])\n```\n```\n\n**Figure 1.13:** Using “full” function to create\
+    \ a 3 by 10 array where all elements are 55.\n\nFor creating an array filled with\
+    \ a different number (e.g., 55), we may use the “full” function. The following\
+    \ commands in Fig. 1.13 are creating a 3 by 10 array where all elements are 55.\n\
+    \n# 1.4.4  BROADCASTING IN NUMPY\n\nIf we have arrays with different shapes that\
+    \ don’t allow mathematical operations, then changing the arrays based on the sizes\
+    \ is known as broadcasting. This operation is convenient, but sometime it may\
+    \ give misleading output. Therefore we have to track the array shapes frequently\
+    \ while doing matrix operations in our programming.\n\nNumPy always tries to perform\
+    \ the broadcasting if the shapes of arrays are different. If we use a scalar or\
+    \ single value, it will be broadcasted as a same shaped array. For example, if\
+    \ we add 5 to E (3 by 10 array in Fig. 1.13), 5 will be broadcasted, and will\
+    \ be added to all the elements of E. This broadcasting operation is shown in Fig.\
+    \ 1.14."
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "```\nIn [21]: E+5\nOut[21]: array([[60, 60, 60, 60, 60, 60, 60, 60, 60, 60],\n\
+    \              [60, 60, 60, 60, 60, 60, 60, 60, 60, 60],\n              [60, 60,\
+    \ 60, 60, 60, 60, 60, 60, 60, 60]])\n```\n\nFigure 1.14: Scalar value 5 is added\
+    \ to E (3 by 10 array). Here, 5 is broadcasted and added to all the elements of\
+    \ E.\n\n```\nIn [22]: F = np.full((3,1),2)\nIn [23]: F\nOut[23]: array([[2],\n\
+    \              [2],\n              [2]])\n```\n\n```\nIn [24]: E*F\nOut[24]: array([[110,\
+    \ 110, 110, 110, 110, 110, 110, 110, 110, 110],\n              [110, 110, 110,\
+    \ 110, 110, 110, 110, 110, 110, 110],\n              [110, 110, 110, 110, 110,\
+    \ 110, 110, 110, 110, 110]])\n```\n\nFigure 1.15: NumPy broadcasting operation\
+    \ during multiplication of two different array sizes.\n\n```\nIn [25]: np.dot(E,F)\n\
+    ----\nValueError                               Traceback (most recent call last)\n\
+    <ipython-input-25-cbafb301adce> in <module>\n----> 1 np.dot(E,F)\n\n__array_function__\
+    \ internals> in dot(*args, **kwargs)\n\nValueError: shapes (3,10) and (3,1) not\
+    \ aligned: 10 (dim 1) != 3 (dim 0)\n```\n\nFigure 1.16: The NumPy dot multiplication\
+    \ will give an error since the array sizes of E and F are different.\n\nNow let's\
+    \ say we have another array of “2” (Fig. 1.15) whose size is 3 by 1. If we multiply\
+    \ E and F, only the column of F will be broadcasted horizontally to get the multiplication\
+    \ done without any error.\n\nHere, if we want to do the dot multiplication (using\
+    \ np.dot function), we will get an error because the sizes of these two matrices\
+    \ are not aligned (Fig. 1.16).\n\nTo fix this error, we have to make sure that\
+    \ the sizes of the matrices are such that actual matrix multiplication is allowed.\
+    \ Therefore, the column size of the first matrix should be equal to"
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "```\n```python\nIn [27]: F = np.full((10,3),2)\n\nIn [28]: F\nOut[28]: array([[2,\
+    \ 2, 2],\n                [2, 2, 2],\n                [2, 2, 2],\n           \
+    \     [2, 2, 2],\n                [2, 2, 2],\n                [2, 2, 2],\n   \
+    \             [2, 2, 2],\n                [2, 2, 2],\n                [2, 2, 2],\n\
+    \                [2, 2, 2]])\n\nIn [29]: np.dot(E,F)\nOut[29]: array([[1100, 1100,\
+    \ 1100],\n                [1100, 1100, 1100],\n                [1100, 1100, 1100]])\n\
+    ```\n```\n\n**Figure 1.17:** Reshape F to do the dot multiplication of E and F.\n\
+    \nthe row size of the second matrix. Now, let’s reshape the matrix size F using\
+    \ the “full” function, as shown in Fig. 1.17 and then try to do the dot multiplication."
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# # Introduction to PyTorch
+
+
+    # ## 2.1　INTRODUCTION
+
+
+    PyTorch is a highly optimized library that can manipulate data in the form of
+    tensors. This library was introduced in 2016, and since then, it has been used
+    in creating deep learning models effectively using GPUs and CPUs. The PyTorch
+    documentation and libraries can be found at [4].
+
+
+    For multi-dimensional data manipulation, machine learning architectures use tensors
+    as their primary data structure. François Chollet [5] defined tensor as a container
+    of data, and also classified typically used multi-dimensional tensors in neural-networks.
+    A Tensor can be 0-D (only one scalar value), 1-D (one-dimensional vector), 2-D
+    (two-dimensional matrix), 3-D (three-dimensional array to represent three channels
+    of RGB for color images), 4-D (four-dimensional array, which can be a collection
+    of RGB color images), and 5-D collection of RGB images represented by four-dimensional
+    tensors at different times. Although the concept of a tensor is different in the
+    field of physics and engineering, in recent years, the machine learning community
+    widely adopted this term to explain generalized matrices. So, in this book, we
+    will consider tensor as a vehicle to organize information in more than two dimensions.
+    The multi-dimensional tensors can be illustrated by using cubes, as shown in Fig.
+    2.1.
+
+
+    In deep learning architecture, the tensor-based data can quickly become enormous
+    during weight and back-propagation calculations. Hence, most of the models are
+    executed on GPUs for parallel computing and effective data manipulations. In 2018,
+    Google released TPU (Tensor Processing Units), which is specially designed for
+    Google’s Tensorflow software to train deep neural networks [6].
+
+
+    # ## 2.2　SETTING UP PYTORCH
+
+
+    PyTorch is relatively easy to learn, especially by someone who already knows a
+    few NumPy operations. Both NumPy and PyTorch use similar syntaxes. The “numpy.zeros()”
+    produces an array of zeros, “numpy.ones()” produces an array of ones, and numpy.random.rand()
+    produces an array of random numbers. Similarly, when we use PyTorch, we can use
+    “torch.zeros()” to produce a tensor of zeros, “torch.ones()” to produce a tensor
+    of ones, and “torch.rand()” to produce a tensor of random numbers.
+
+
+    Before running PyTorch in Jupyter Notebook, it is important to change the programming
+    environment using Anaconda Prompt (Anaconda3). The procedure of changing the environment
+    in Anaconda prompt, and running Jupyter Notebook are given in the following steps.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_29_0.png)
+
+
+    Figure 2.1: Illustration of multi-dimensional tensors (0-D to 6-D).
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_29_1.png)
+
+
+    Figure 2.2: Changing Anaconda''s environment for PyTorch. The blue lines here
+    are for hiding usernames.
+
+
+    +   - **Step 1:** Go to the search bar, type Anaconda prompt, and select “Anaconda
+    Prompt.”
+
+    +   - **Step 2:** Note that the “<base>” environment is written before the path.
+
+    +   - **Step 3:** Type “conda activate pytrochenv” and press Enter (Fig. 2.2).
+    Note that the “<base>” has been changed to “<pytorchnev>.”'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_30_0.png)
+
+
+    Figure 2.3: Type “jupyter notebook” in Anaconda Prompt and press Enter.
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_30_1.png)
+
+
+    Figure 2.4: Jupyter Notebook interface. Here, select new to create a new script
+    in PyTorch environment.
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_30_2.png)
+
+
+    Figure 2.5: Type “conda deactivate,” and press Enter to deactivate PyTorch and
+    go back to the base environment.
+
+
+    Step 4: To open Jupyter Notebook type “jupyter notebook,” and press Enter (Fig.
+    2.3).
+
+
+    Step 5: Now, the Jupyter Notebook will start, and we will be able to create a
+    new python file for using the PyTorch functionalities (Fig. 2.4).
+
+
+    Step 6: Once we finish using Jupyter Notebook, we can shut down the kernel by
+    pressing “Ctrl+C” in the command window (multiple times might be required), and
+    then we can deactivate the PyTorch environment by typing “conda deactivate” in
+    the command window (Fig. 2.5). Note that in the terminal, the Anaconda environment
+    changes from “<pytorchenv>” to “<base>.”'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "```\n```python\nIn [1]: import torch\nimport numpy as np\n```\n```\n\nFigure\
+    \ 2.6: Importing torch and numpy library from Jupyter Notebook.\n\n```\n```python\n\
+    In [2]: A = np.arange(0,18,2)\n```\n```\n\n```\n```python\nIn [3]: A\nOut[3]:\
+    \ array([ 0,  2,  4,  6,  8, 10, 12, 14, 16])\n```\n```\n\nFigure 2.7: Creating\
+    \ a NumPy array using “arange” function.\n\n```\n```python\nIn [4]: A = A.reshape(3,3)\n\
+    A\nOut[4]: array([[ 0,  2,  4],\n              [ 6,  8, 10],\n              [12,\
+    \ 14, 16]])\n```\n```\n\n```\n```python\nIn [5]: A.dtype\nOut[5]: dtype('int32')\n\
+    ```\n```\n\nFigure 2.8: Reshape A and check the data type.\n\n# 2.3 BASIC PYTORCH\
+    \ OPERATIONS\n\nNow, let’s create some tensors in Jupyter Notebook using PyTorch,\
+    \ and compare their data types with NumPy. First of all, we need to import “torch”\
+    \ and “numpy” library, as shown in Fig. 2.6.\n\nNote that if you hit enter in\
+    \ Jupyter Notebook, it will go to the next line without execution. So, after typing\
+    \ two or multiple lines (as needed), you may press “Shift+Enter” to execute those\
+    \ lines only.\n\nNow, let’s create an array (Fig. 2.7) and then convert it to\
+    \ a 2D shape.\n\nHere the “numpy.arange( )” has a start value (0) and stop value\
+    \ (18). And the “2” at the end is the interval between increments. So NumPy will\
+    \ create an array from 0 to 18 (excluding). To reshape it to a 3 by 3 (2D array),\
+    \ use the “reshape” function (Fig. 2.8). If you check the data type of A by using\
+    \ “dtype” command, you will see that it is an “int32” NumPy array.\n\nNow, let’s\
+    \ convert A to a PyTorch tensor using the torch commands shown in Fig. 2.9. After\
+    \ using “torch.from_numpy” you will see that the data type remains integer (torch.int32).\
+    \ To convert it to a PyTorch tensor function, you will need to assign it to a\
+    \ variable name (e.g., input [7] in Fig. 2.9).\n\nNote that you may use “torch.arange”\
+    \ to create a tensor directly (Fig. 2.10)."
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "```\n```python\nIn [6]: torch.from_numpy(A)\nOut[6]: tensor([[ 0,  2,  4],\n\
+    \          [ 6,  8, 10],\n          [12, 14, 16]], dtype=torch.int32)\n\nIn [7]:\
+    \ X = torch.from_numpy(A)\n        X.type\nOut[7]: <function Tensor.type>\n```\n\
+    ```\n\nFigure 2.9: Creating tensors from a NumPy array.\n\n```\n```python\nIn\
+    \ [8]: B = torch.arange(0,18,2)\n        B\n        B.type\nOut[8]: <function\
+    \ Tensor.type>\n\nIn [9]: if torch.cuda.is_available():\n            my_device\
+    \ = torch.device(\"cuda:0\")\n```\n```\n\nFigure 2.10: Use “torch.arange” to create\
+    \ a tensor and use “torch.device” to define GPU/CUDA.\n\n```\n```python\nIn [10]:\
+    \ torch.cuda.is_available()\nOut[10]: False\n\nIn [11]: torch.cuda.device_count()\n\
+    Out[11]: 0\n\nIn [12]: B.device\nOut[12]: device(type='cpu')\n```\n```\n\nFigure\
+    \ 2.11: Check GPU/CUDA availability and device type in PyTorch.\n\nUsing a GPU\
+    \ for running a deep learning model is highly recommended, and if you want to\
+    \ define a GPU/CUDA, you can use “torch.device( )” function, as shown in Fig.\
+    \ 2.10. Right now, the system we are using doesn’t have a GPU. We can quickly\
+    \ check the status of GPU by using the commands shown in Fig. 2.11. We can also\
+    \ check the device type for tensor B, which is a CPU in our example."
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# Basic Artificial Neural Network and Architectures
+
+
+    # 3.1 INTRODUCTION
+
+
+    An artificial neural network is an algorithm or software architecture that has
+    interconnected layers of functions similar to the biological neurons. Although
+    the process of learning in the human brain is super complicated and not fully
+    understood, the software architecture of machine learning uses activation function
+    and connected pathways that can be compared to the biological neurons and synapses,
+    respectively. Furthermore, an artificial neural network can learn (alternatively,
+    find optimum model weights or biases) through training, which is an important
+    phenomenon that mimics the process of learning in our human brain. For these reasons,
+    the term “Neural” is used in the field of machine learning.
+
+
+    The neural network architecture consists of several basic components, such as
+    the number of inputs, outputs, hidden layers, and the type of activation functions.
+    A simple multi-layer neural network has a topology similar to Fig. 3.1.
+
+
+    The hidden layer inside a network contains neurons that perform tensor operations
+    based on the output requirements. For example, if our required output is a numerical
+    value, such as predicting body temperature or test score, we use linear regression.
+    On the other hand, we can use logistic regression to predict binary outputs and
+    multi-class outputs. Binary outputs are predicting between true or false, pass
+    or fail, cat or non-cat picture, and multi-class outputs are predicting one from
+    multiple classes, such as finding out if a picture is a cat, bird, dog, or fish
+    picture. The logistic regression can also be used for predicting ordinal outputs
+    (e.g., determining high, medium, or low ranges). Each input in the neurons of
+    the input layer is multiplied by weights associated with its connecting pathways
+    and then added to a bias to generate the next output.
+
+
+    The learning process of an artificial neural network is actually finding out weights
+    and biases that will generate a minimum error. The weights and biases always needed
+    to be adjusted if the network produces poor results. When the network finds the
+    best or desired result, it will not update these parameters.
+
+
+    Several methods of learning schemes are widely used in machine learning based
+    on data types or observation methods such as supervised, unsupervised, and reinforcement
+    learning. When the network can compare its predictions with the correct results
+    to make adjustments, then it is called supervised learning. Unsupervised learning
+    is the type of learning when the'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_35_0.png)
+
+
+    Figure 3.1: Multi-layer neural network architecture with two hidden layers.
+
+
+    correct results of the example dataset are unknown. And, the reinforcement learning
+    are used when learning through observations from a complex environment is required.
+    Here, the model makes a final decision based on the penalties or rewards it received
+    for its performance.
+
+
+    The selection of these schemes depends on the types of dataset and output requirements
+    for a particular task.
+
+
+    # 3.2 APPLICATIONS
+
+
+    The artificial neural network is very effective in function approximations, identifying
+    patterns, and implementing complex mapping. Recently, it has been used in diverse
+    science, engineering, art, and medical applications. It is also widely used for
+    forecasting and predicting many real-life businesses, economic and social issues
+    [7–10]. In Chapter 7, we provided a case study of a multiclass classification
+    problem where the model learns from 8,144 car images to determine car model, make,
+    and year.'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_36_0.png)
+
+
+    **Figure 3.2:** Computational steps inside one neuron of the hidden layer. Here,
+    σ(z) is the sigmoid activation, x₁, x₂, x₃ are inputs to the neuron, w₁, w₂, w₃
+    are the weights, and b is the bias to the input.
+
+
+    # 3.3  NEURONS AND ACTIVATION FUNCTIONS
+
+
+    Many internal parameters can influence the output found from an artificial neural
+    network. But generally, outputs are directly related to the number of neurons
+    and their activation functions.
+
+
+    The neurons are the nodes, typically shown by circles that are arranged inside
+    the layers. Inside a layer, these neurons take input weights from all connections
+    and add a bias, initializes these parameters, and then calculates the output using
+    another function known as an activation function. The mathematical operations
+    happening inside each layer amplify dramatically as the neurons and connections
+    are increased. Figure 3.1 shows a simple neural network when we have two hidden
+    layers, and each of them containing four neurons. Figure 3.2 focuses on the operations
+    happening inside one of the neurons of hidden layer 1.
+
+
+    This operation can be divided into two steps of computations. First, **Z** is
+    calculated using the weights (**W**), bias (**b**), and inputs (**x**). Second,
+    the activation function **σ** is calculated using **Z**. We could simply say that
+    output of a neuron is a function of a function. In Fig 3.2, a sigmoid activation
+    function is shown as an example.
+
+
+    The sigmoid activation function (shown in Fig. 3.2) has the ability to map any
+    predicted value between 0 and 1. This output can be used to estimate the probability,
+    where a threshold or tipping point (e.g., 0.5) is used for binary classification
+    problems. For example, if *output* ≥ 0.5, class = 1 and if *output* < 0.5, class
+    = 0. There are many other types of activation functions available for an artificial
+    neural network. It is one of the important selection parameters that dictate the
+    computational efficiency.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_37_0.png)
+
+
+    Figure 3.3: Plot of Sigmoid activation function in between −5 to +5.
+
+
+    The use of sigmoid activation in a deep neural network is minimal, and most of
+    the time, nonlinear activations such as tanh, ReLU, and Softmax are used. It is
+    important to note that different types of activations can exist in the neurons
+    of the hidden and output layer. Only the input layer neurons don''t have activation
+    functions. The derivatives of activation functions also play an important role
+    as they are used in the backpropagation error calculation during gradient descent.
+    A short description of typical activation functions and their derivatives are
+    given in the following sections for reference.
+
+
+    # 3.3.1 SIGMOID ACTIVATION
+
+
+    The sigmoid activation and its derivative are defined by Equations (3.1) and (3.2),
+    respectively:
+
+
+    $$\sigma(z) = \frac{1}{1 + e^{-z}} \tag{3.1}$$
+
+
+    and
+
+
+    $$\sigma''(z) = \sigma(z)(1 - \sigma(z)). \tag{3.2}$$
+
+
+    This function is also known as the logistic regression function. We can use it
+    when we need to determine the probability between 0 and 1. Sometimes, the sigmoid
+    function exists only in the output layer of a neural network for doing the binary
+    classification. A plot of sigmoid function in the range of −5 to 5 is given in
+    Fig. 3.3.
+
+
+    # 3.3.2 HYPERBOLIC TANGENT ACTIVATION
+
+
+    Hyperbolic tangent, also known as tanh function and its derivative are defined
+    by Equations (3.3) and (3.4), respectively:
+
+
+    $$\sigma(z) = \frac{e^{z} - e^{-z}}{e^{z} + e^{-z}} \tag{3.3}$$'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_38_0.png)
+
+
+    Figure 3.4: Plot of hyperbolic tangent activation function in between −5 to +5.
+
+
+    and
+
+
+    $\sigma''(z) = (1 - \sigma(z)^2).$  \tag{3.4}
+
+
+    This function performs better than the sigmoid function when the output is a large
+    negative number. This function can also map numbers between −1 to +1. A plot of
+    hyperbolic function in the range of −5 to 5 is given in Fig. 3.4.
+
+
+    # 3.3.3 RECTIFIED LINEAR UNITS (RELU) ACTIVATION
+
+
+    The Rectified Linear Units, also known as ReLU activation, and its derivatives
+    are defined by Equations (3.5) and (3.6), respectively:
+
+
+    $$\sigma(z) = \begin{cases} 0 & \text{for } z \le 0 \\ z & \text{for } z > 0 \end{cases}$$  \tag{3.5}
+
+
+    and
+
+
+    $$\sigma''(z) = \begin{cases} 0 & \text{for } z < 0 \\ 1 & \text{for } z \ge 0
+    \end{cases}$$  \tag{3.6}
+
+
+    The ReLu function updates parameters faster as its gradient calculation is simpler
+    compared to other activations. A plot of ReLU function in the range of −1 and
+    +1 is given in Fig. 3.5.
+
+
+    # 3.3.4 LEAKY RECTIFIED LINEAR UNITS (LEAKY RELU) ACTIVATION
+
+
+    The Leaky Rectified Linear Units, also known as Leaky ReLU, is a type of improved
+    ReLU activation that doesn’t have 0 slopes for negative values. Leaky ReLU and
+    its derivatives can be'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_41_0.png)
+
+
+    Figure 3.8: Plot of Softplus activation function in between −5 to +5.
+
+
+    Finding out the appropriate activation function for a model is a challenge due
+    to very small gradients during the backpropagation steps. This phenomenon is also
+    known as diminishing gradients. Besides the activation functions shown here, many
+    other functions are continuously being explored and added in the field of machine
+    learning. For example, ArcTan, Piecewise Linear Unit (PLU), Scaled Exponential
+    Linear Unit (SELU), Inverse Square Root Unit (ISRU), etc. A comprehensive list
+    of activation functions can be found on the Wikipedia page [11].
+
+
+    # 3.4 MINIMIZING THE LOSS FUNCTION
+
+
+    The loss function is the quantity that will be minimized during training [5].
+    It is also known as the objective function or error function. A neural network
+    may have multiple loss functions based on the number of outputs. A classification
+    model should have a cross-entropy loss or a log loss of 0. Generally, for a two-class
+    classification problem binary cross-entropy, and for multiclass classification
+    problems, categorical cross-entropy is used. The learning process of a neural
+    network is basically finding out weights and biases to minimize the loss function.
+
+
+    Typically, the loss function is also called cost function if the error is calculated
+    for the entire training set or a batch. The standard binary cross-entropy loss
+    function can be defined by Equation (3.13) [12]:
+
+
+    $$J = -\frac{1}{M} \sum_{m=1}^{M} [y_m \times \log\big(h_\theta(x_m)\big) + (1
+    - y_m) \times \log\big(1 - h_\theta(x_m)\big)] , \qquad (3.13)$$
+
+
+    where $M$ = number of training examples, $y_m$ = target label for training example
+    $m$, $x_m$ = input for training example $m$, $h_\theta$ = model with neural network
+    weights $\theta$. For categorical targets if $\hat{y}_1 \dots \hat{y}_m$ are the
+    probabilities of the “$m$” classes, and the $r$th class is the ground-truth class,
+    then'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_42_0.png)
+
+
+    **Figure 3.9:** If the initial starting point is Start Point 1, the gradient descent
+    algorithm will converge to a local minima. On the other hand, if the Start Point
+    2 is used, the algorithm will converge to the global minima.
+
+
+    the loss function for a single instance is defined by Equation (3.14) [13]:
+
+
+    $$J = -\log(\hat{y}_r).$$ \hfill (3.14)
+
+
+    The goal of any neural network is to minimize Equation (3.14). This minimization
+    process is done by updating weights using an optimization function or optimizer.
+    An important iterative algorithm known as backpropagation is used to apply this
+    optimization, and in this process, the loss function dictates how well the network
+    is learning.
+
+
+    Many different optimizers have been used in artificial neural networks such as
+    gradient descent, gradient descent with momentum, Root Mean Square Propagation
+    (RMSProp), Adam optimizers, and so on. The selection of a suitable optimizer depends
+    on the computational scenario, and they typically differ in terms of their simulation
+    speed and convergence ability.
+
+
+    # 3.5  GRADIENT DESCENT ALGORITHM
+
+
+    The gradient descent is an iterative first-order optimization algorithm that helps
+    the neural network to minimize the cost function, $J$. In the case of linear regression,
+    we can use derivatives to find a minimum of convex functions. But in the artificial
+    neural network, we always deal with a non-convex function, and therefore gradient
+    descent algorithm can end up finding the local minima instead of global minima.
+
+
+    Figure 3.9 shows how the gradient descent can end up in different minima based
+    on the starting point. This example is for only one weight parameter, $\omega$.
+    For a 3D surface plot where the cost function $J$ is a function of two parameters
+    ($\omega$ and $b$) and forms a non-convex shape, the gradient descent algorithm
+    may converge to a local minima instead of a global one as shown'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_43_0.png)
+
+
+    Figure 3.10: If the Cost function, J is a function of two parameters (weight and
+    bias), the gradient descent algorithm will search for a minima on the surface.
+    In this example plot, the Start Point 1 will converge to a local minima, and the
+    Start Point 2 will converge to a global minima.
+
+
+    in Fig. 3.10. Here, the height of the surface shows the value of cost function
+    J for respective weight and bias.
+
+
+    In most of the machine learning optimization tasks, the cost function is a higher-dimensional
+    function due to the existence of many weights and biases. This type of higher-dimensional
+    plot is impossible to visualize.
+
+
+    The gradient descent algorithm is simultaneously performed for all values of weights
+    and biases. If we have n neurons in a hidden layer, all the weights will update
+    through Equation (3.15) [14]. Here α is the learning rate, which tells the algorithm
+    how big or small the step size would be while moving in the direction of downhill
+    steep. The negative gradients push the algorithm to move toward the downhill directions.
+
+
+    ```
+
+    ω₁ = ω₁ − α ∂/∂ω₁ J(ω, b)
+
+    ω₂ = ω₂ − α ∂/∂ω₂ J(ω, b)
+
+    ω₃ = ω₃ − α ∂/∂ω₃ J(ω, b)
+
+    .
+
+    .
+
+    (3.15)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '$\omega_n = \omega_n - \alpha \frac{\partial}{\partial \omega_n} J(\omega,
+    b).$
+
+
+    The bias parameters for a hidden layer will update using Equation (3.16):
+
+
+    $b = b - \alpha \frac{\partial}{\partial b} J(\omega, b).$ (3.16)
+
+
+    Equations (3.15) and (3.16) shows the calculation for one layer only. This computational
+    process becomes expensive in case of deep learning when we have many hidden layers.
+
+
+    The learning rate, α is one of the critical hyper-parameters for model training,
+    and it needs to be tuned carefully. If the learning rate is too low, the gradient
+    descent algorithm will become computationally expensive. On the other hand, if
+    the learning rate is relatively big, it may overshoot the minima and fail to converge.
+
+
+    One way to use the learning rate effectively is to reduce its value as the training
+    progresses. This process is known as the adaptive learning rate [15]. The adaptive
+    learning rate can be reduced or adjusted using a pre-defined schedule such as
+    time-based decay, step decay, and exponential decay [16]. Many algorithms, such
+    as Adam, SGD, AdaGrad, and RMSProp, use the adaptive learning rate. The PyTorch
+    “torch.optim” package has built-in functions that allow users to pass arguments
+    in different optimizers for implementing the adaptive learning algorithm [17].'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# CHAPTER 4
+
+
+    # # Introduction to Deep Learning
+
+
+    # ## 4.1 INTRODUCTION
+
+
+    Deep learning is a computational neural network architecture containing multiple
+    hidden layers. Since deep learning is a larger neural network, it is treated as
+    a subfield of machine learning and artificial intelligence. It is an extremely
+    powerful tool for speech recognition, remote sensing, classifying objects, and
+    pattern recognition tasks. For the past few years, deep learning algorithms are
+    extensively employed in many different scientific and engineering applications
+    such as self-driving cars, fraud detections, health care, entertainment, and so
+    on. Using many hidden layers, a deep learning model learns from big datasets with
+    multiple levels of abstraction.
+
+
+    During the learning process, a backpropagation algorithm helps the model to fine-tune
+    the parameters of one layer from the calculated parameters of the previous layer.
+    Figure 4.1 shows a schematic of a deep learning model with *n* hidden layers and
+    biases, where every neuron in a layer is connected to every neuron of the next
+    layer.
+
+
+    If we start modeling from scratch, the optimum numbers of layers and neurons of
+    a deep network should be chosen carefully. There are no correct layer or neuron
+    numbers for a specific problem, and numerous factors can influence the output.
+    Many powerful deep learning architectures such as inception-V3, ResNet, Inception-ResNet,
+    DenseNet, and Pyramidal Residual Net have more than 100 layers [18–22]. However,
+    the performance of these architectures depends on both node and layer numbers.
+    Having too many hidden layers is not always effective, and it should be selected
+    based on the type of training dataset and output requirements. An optimum selection
+    of these parameters (also called capacity) can help us to avoid overfitting and
+    underfitting during the training process [23]. Most of the time, we don’t need
+    too many layers as they can add unnecessary difficulties to the computational
+    process. A system with 5–20 nonlinear hidden layers can map extremely complex
+    functions for inputs that are simultaneously sensitive to minute details [24].
+    Therefore, while selecting a deep learning model, we need to be extra cautious
+    regarding network layers and architecture.
+
+
+    As the growth of deep learning is accelerating, many new deep learning models
+    are continuously coming out each year. Some of the popular deep learning architectures
+    are briefly discussed in the following sections.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_47_0.png)
+
+
+    Figure 4.1: Schematic of deep learning model with n hidden layers and biases,
+    where every neuron in a layer is connected to every neuron of the next layer.
+
+
+    # 4.2 CONVOLUTIONAL NEURAL NETWORK
+
+
+    Convolutional Neural Network (CNN), also known as ConvNet, was initially developed
+    by Yann LeCun for computer vision and image processing [25]. Later on, it has
+    been successfully modified by other researchers for improved sentence classification,
+    speech recognition, image segmentation, and image classification tasks [26–29].
+    For computer-vision related operations, CNN is the most widely used deep learning
+    method. A CNN will have a number of convolutional and pooling layers at the beginning,
+    and after that, it goes through the fully connected layers.
+
+
+    The image input in the convolutional layer is typically rearranged in multiple
+    arrays or multi-channeled images. For example, a color image is a combination
+    of three-color channels (red, green, and blue), and each of these channels can
+    be presented in a 2D array for the input. Inside the 2D array, the intensities
+    of these color channels are ranged from 0–255.
+
+
+    The convolutional layer also contains kernels to map features from the input images.
+    They typically slice through image depth, numbers of pixels, or zero-padding around
+    a shape to learn from different sections of three channel inputs. When multiple
+    kernels concatenate with each other, they are called filters. Therefore, filters
+    have one more dimension than the kernels. Inside the network, each of the kernels
+    will add a new layer that corresponds to edges, depths, shapes, or textures of
+    the image.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_48_0.png)
+
+
+    **Figure 4.2:** Schematic of max, average, and sum pooling methods to remap the
+    input features in a 3 × 3 array.
+
+
+    # ### 4.2.1  POOLING LAYER
+
+
+    A pooling layer reduces the spatial size of the representation, which is another
+    integral task of the convolutional neural network. This step is done to pool or
+    extract the most important features from the output of a convolutional layer.
+
+
+    The pooling process can reduce the spatial size or dimension of each feature map
+    through different formulations such as max, average, sum, overlapping, L2, etc.
+    This step generally helps the model to understand feature motifs that may appear
+    at different locations of the training image. A schematic for feature mapping
+    through max-pooling, average-pooling, and sum-pooling is given in Fig. 4.2. Typically,
+    the convolution neural network has several convolutional and pooling layers at
+    the beginning before going through the fully connected layers.
+
+
+    # ### 4.2.2  FULLY CONNECTED LAYER
+
+
+    The final stage of the convolutional neural network contains fully connected layers.
+    It is similar to the regular artificial neural network and contains neurons that
+    are connected to all neurons from the previous layer. The training image features
+    that are extracted through convolutional and pooling layers are classified in
+    the fully connected layer. Sometimes, to use computational memory efficiently,
+    two small, fully connected layers are used instead of one large layer. Some of
+    the popular convolution neural networks such as AlexNet, VGG Net uses more than
+    one fully'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_50_0.png)
+
+
+    **Figure 4.4:** Schematic diagram of a one-to-many RNN architecture.
+
+
+    # 4.3  RECURRENT NEURAL NETWORK (RNN)
+
+
+    The Recurrent Neural Network (RNN) is another popular deep learning architecture
+    that is used for predicting sequential data with the help of an additional memory
+    state. The prediction by RNN architecture depends on both current and past inputs.
+
+
+    The use of RNN escalated rapidly within the last decade. It has been delivering
+    state-of-the-art results in many different fields such as language processing,
+    speech recognition, video analysis, fake video creation, music generation, grammatical
+    inference, trajectory control of robots, and so on [33–39].
+
+
+    # 4.3.1  BASIC STRUCTURES
+
+
+    RNN deals with vectorize data, i.e., inside this network, all inputs and outputs
+    are vectors for many time-steps. Among many underlying internal architectures
+    of RNN, one-to-many, many-to-one, and many-to-many are commonly used.
+
+
+    For a one-to-many architecture, one input is mapped into multiple outputs (Fig.
+    4.4). In this case, intermediate representations of the input unit are done in
+    a series of hidden states, where every hidden state is a function of all previous
+    states. An example application of this type of architecture is image captioning,
+    where input is a single image, but the outputs are words of multiple classes.
+
+
+    In the many-to-one RNN architecture, many inputs are mapped into hidden states
+    but produce only one class or quantity output. This type of network is very useful
+    to gauge or classify'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_51_0.png)
+
+
+    **Figure 4.5:** Schematic diagram of a many-to-one RNN architecture.
+
+
+    emotional state and sensitivity from writings. A schematic of many-to-one RNN
+    architecture is given in Fig. 4.5.
+
+
+    In the many-to-many RNN structure, multiple inputs go through hidden states and
+    produce multiple outputs. It is used for translating sentences in another language,
+    video frame labeling, and for many other prediction applications where multiple
+    inputs produce multiple outputs. Many-to-many RNN structures might have different
+    layouts based on the numbers of inputs and outputs. A schematic of many-to-many
+    RNN architecture is given in Fig. 4.6.
+
+
+    Besides these RNN architectures, there are many other input-output dynamics. For
+    example, a simple one-to-one RNN structure similar to the classical feed-forward
+    network.
+
+
+    An RNN model is challenging to train because to update the parameters, backpropagation
+    algorithm needs to calculate gradients at different time steps. This operation
+    makes the network unstable due to vanishing and exploding gradients. In order
+    to avoid this problem, different supporting units such as Gated Recurrent Unit
+    (GRU), Bidirectional Recurrent Neural Network (BRNN), and Long-Short-term memory
+    (LSTM) are used. For example, the LSTM network uses cells with input, output,
+    and forget-gate to control the flow of information. LSTM can be used with other
+    tricks such as gradient clipping to set a threshold value for the error gradient
+    and weight regularization (L1-absolute or L2-Squared) to introduce a penalty to
+    the loss functions, etc. An LSTM based recurrent network is more effective when
+    several layers are involved in the sequence of data [34]. To train a recurrent
+    network for complex high-dimensional data, a GPU-based hardware (e.g., NVIDIA
+    cuDNN) that supports deep learning framework is highly recommended.'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_52_0.png)
+
+
+    Figure 4.6: Schematic diagram of a many-to-many RNN architecture.
+
+
+    # 4.4 OTHER DEEP LEARNING MODELS
+
+
+    Among the other deep learning models, recursive and unsupervised pre-trained networks
+    are gaining popularity. Recursive networks apply the same set of weights recursively
+    to learn from structured information, and it is known for being computationally
+    expensive [40]. Recursive models are suitable for pattern analysis as they can
+    process both the numerical and symbolic data together. Different variants of recursive
+    networks are continuously emerging and explored by contemporary researchers. Although
+    it is relatively less popular than the recurrent network, it has shown excellent
+    performance in natural language processing, image decomposition, and forecasting
+    problems.
+
+
+    The unsupervised pre-trained network can help to improve the CNN''s performance,
+    and it can reduce labeled data dependency by creating layers of feature detectors
+    [41]. This type of network is suitable for finding hidden patterns inside the
+    data by using autoencoders, Generative Adversarial Networks (GANs), and other
+    methods.
+
+
+    An autoencoder has different variants, but it is generally a neural network where
+    the input features are reduced or mapped in a hidden layer and then restore or
+    remapped to the same numbers of features at the output. The middle layer of an
+    autoencoder, also called the bottleneck is symmetric about the center, and it
+    contains fewer nodes than input or output nodes. A schematic diagram of the autoencoder
+    architecture is given in Fig. 4.7.
+
+
+    The GANs is one of the exciting classes of deep learning. It can produce realistic
+    data by using two parallel adversarial networks that compete with each other.
+    One of the networks'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_53_0.png)
+
+
+    Figure 4.7: Schematic of an autoencoder architecture [42].
+
+
+    works as a data generator, and the other network classifies it by utilizing real
+    data. This process continues until the second network fails to discriminate between
+    the real and synthetic data [13]. A GAN model is relatively difficult to train
+    as it can suffer from mode collapse, diminished gradient, and non-convergence
+    problems [43, 44].
+
+
+    Generative networks can be used to generate realistic pictures or images, and
+    it is explored in many different engineering domains for image reconstructions.
+    Recently, GAN was used to learn scene dynamics from a large amount of unlabeled
+    video (26 terabytes), and it also showed impressive results in recovering features
+    from astrophysical images by reducing random and systematic noises [45].
+
+
+    Although GAN is an amazing development for deep learning, using it, people can
+    make fake media content, realistic images, and online profiles that can negatively
+    affect our society. There are numerous other potential applications of GAN that
+    exist in the field of arts, industry, and medicine, and it will definitely create
+    an impact on our society in the near future.'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# Deep Transfer Learning
+
+
+    # 5.1 INTRODUCTION
+
+
+    Transfer learning is a method of applying the knowledge of a pre-trained network
+    to another model when we have insufficient data and computing resources to train
+    a new model from scratch. Using this method, knowledge learned from one type of
+    data can be applied to totally different types of data. The deep convolutional
+    network showed tremendous success in image recognition and classification tasks
+    using transfer learning methods [46, 47]. One of the key challenges to train a
+    deep learning model from the beginning is that it requires a huge amount of labeled
+    dataset, which is not common in many practical scenarios. Generally, a model can
+    make good predictions if it is trained on a big dataset. There are many deep learning
+    models available that are developed from big datasets, such as, ImageNet, MNIST,
+    M.S. COCO, Caltech datasets, Pascal VOC, CIFAR10, and so on. The performance of
+    a deep learning model increases if it is trained on a big dataset. For example,
+    the popular ImageNet dataset contains 14,197,122 images, and the Tina Image contains
+    79,302,017 images [48, 49]. We can use deep learning models that are trained on
+    these datasets for doing a different task.
+
+
+    # 5.2 TYPES OF TRANSFER LEARNING
+
+
+    The relationship between traditional machine learning and transfer learning can
+    be categorized into three different ways, according to Pan et al. [50]: Inductive,
+    Transductive, and Unsupervised learning. Inductive transfer learning method can
+    be built by infusing similar instance form different learning tasks, transductive
+    transfer learning can be used when the source and target tasks are the same, and
+    the unsupervised transfer learning do unsupervised learning tasks (e.g., clustering,
+    dimensionality reduction). Pan and Yang [50] also sub-categorized transfer learning
+    approaches based on the instance, feature-representation, parameter, and relational-knowledge
+    transfers.
+
+
+    # 5.3 USING PRE-TRAINED NETWORKS
+
+
+    If we want to use a dataset for supervised learning, we will need to label or
+    annotate data for training. Annotating a large volume of data, which is an integral
+    part of deep learning, would be extremely time-consuming. Fortunately, as we mentioned
+    in the introduction, there is an easy way to avoid this by implementing knowledge
+    from a pre-trained model architecture that has already been trained on a different
+    dataset. There are many pre-trained models available'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_55_0.png)
+
+
+    **Figure 5.1:** Learning process through transfer learning [55].
+
+
+    that we can use effectively, and the amount of effort required for this process
+    is also relatively insignificant. Some of the widely used pre-trained networks
+    are ResNet, GoogleLeNet, VGG, Inception, DenseNet, VGG, EfficientNet, etc. [51].
+    Many other ready-to-use pre-trained models are available now, and as the field
+    of deep learning is emerging, new models are continuously being tested and added
+    to this list.
+
+
+    One of the advantages of using pre-trained networks is that the architectures
+    have already been trained and tested using a large dataset (e.g., ImageNet). We
+    can just use these networks partially or wholly in the transfer learning process.
+    For partial uses of a model, only the last few layers are regulated to train it
+    on a new dataset, but the core part of the network doesn’t change. On the other
+    hand, we can also utilize the whole architecture without parameter values, initialize
+    all the weights randomly, and then train the model using the new dataset. These
+    simple techniques can significantly boost the performance of a deep learning model,
+    and recently, this practice is becoming well accepted in computer vision applications
+    [52–54]. A schematic of transfer learning process is shown in Fig. 5.1.
+
+
+    # 5.3.1 **FEATURE EXTRACTION, FINE TUNING, AND DATA AUGMENTATION**
+
+
+    Deep learning architectures learn features through layer by layer. For example,
+    when a convolutional network learns from images, it tends to learn patterns, textures,
+    edges, and brightness in the first few layers. These features from images are
+    used for processing many different types of natural images, and therefore they
+    can be reused. Typically, the last few layers of a deep learn-'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: 'ing network are very specific to the current task. So, for a classification
+    problem, if we utilize a pre-train model for transfer learning without using its
+    last layer, we will easily get the hidden states of the trained network to extract
+    some standard features.
+
+
+    For a more rigorous training process, we can reconfigure some of the layers of
+    the model (especially last few) before retraining it on the new data. This step
+    will fine-tune the whole model, but the successful implementation of this approach
+    depends on the dataset and the prediction task we are trying to accomplish. The
+    PyTorch package “torchvision” has many popular model architectures that we can
+    use for deep transfer learning [56].
+
+
+    If we have relatively less amount of data for deep learning, we can use the data
+    augmentation technique to improve model performance. Augmentation will manipulate
+    the training images through different ways, such as flipping, rotating, shearing,
+    cropping, shifting RGB channels, and so on. As a result, we will get various unique
+    and relevant images from a single image. It will increase the amount of training
+    data representation of our model. Recently, different data augmentation techniques
+    are explored by researchers for improving the validation accuracy of a model.
+    We will show a practical implementation of using pre-trained weights, fine-tuning,
+    and data augmentation in Chapter 7.
+
+
+    # 5.4   MODEL EVALUATION
+
+
+    During training, we will initially need to split our annotated data sets into
+    training and test sets. The training data (can be subdivided into training and
+    validation set) will be used to learn the model parameters, and test data will
+    estimate the accuracy of the learned model. Typically, a large test set will do
+    a good estimation with low variance. There are different types of metrics available
+    that used in model evaluation, such as confusion matrix, accuracy, F1 score, and
+    so on.
+
+
+    To evaluate the model, we can initially check classification accuracy, especially
+    when we have an almost equal number of samples for different classes. It is just
+    the ratio correct predictions to the total numbers of predictions. The confusion
+    matrix can be used to give the quality of output result shown in a matrix, where
+    higher diagonal values indicate many correct results. A confusion matrix can be
+    constructed by finding true positive (model predicted positive, which is a true
+    result), false positive (model predicted positive, which is a false result), true
+    negative (model predicted negative, which is a true result), and false negative
+    (model predicted negative, which is a false result). From the values of the matrix,
+    we can calculate precision, recall, and weighted F1 scores to understand the relevance
+    and model performance.
+
+
+    Evaluation metrics should be selected based on the task performed by a model.
+    It is always better to check multiple metrics to evaluate a model since a model
+    may perform differently in different metrics. The multiclass classification case
+    study shown in Chapter 7 has almost 50% test and 50% training data. Therefore,
+    for a simpler evaluation, we showed only the training loss and accuracy metrics
+    for that problem.'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# CHAPTER 6
+
+
+    # Setting Up PyTorch and
+
+    Google Cloud Platform
+
+    Console
+
+
+    # 6.1   INTRODUCTION
+
+
+    In this chapter, we will discuss a method of setting up PyTorch and Google Cloud
+    Platform (GCP) console to run a deep learning model. Google started its cloud
+    computing service in 2008, which supports various computing frameworks, including
+    Python [57]. By using a free Google account, we can easily run Google’s web-based
+    user interface of GCP for computing, storage, networking, security, big data/analytics,
+    and artificial intelligence.
+
+
+    At the time of writing this note, GCP provides a 12-month free trial with $300
+    credits to any users who set up a billing account using credit card or bank details.
+    This pay-as-you-use billing model is very convenient and economical for someone
+    who wants to explore deep learning models using a powerful computation engine
+    without purchasing. Other related information and eligibility on the free trial
+    are available at Google Cloud Free Tier site [58]. Another economical option we
+    could use here is to choose a preemptible instance for computing engine, which
+    is much cheaper than using a regular instance. We are going to discuss the preemptible
+    instance later in this chapter.
+
+
+    # 6.2   SETTING UP A GCP ACCOUNT
+
+
+    Setting up a free GCP account is very simple after creating an account through
+    https://cloud.google.com/. If someone wants to use an existing Google account,
+    he or she just needs to sign in (Fig. 6.1). Before account creation, it is recommended
+    to read their quick start page available at https://cloud.google.com/gcp/getting-started#quick-starts.
+
+
+    After signup for a new account or log in by using an existing account, go over
+    the Terms of Service and then select continue (Fig. 6.2).
+
+
+    Next, select the individual account type from the drop-down list, then fill out
+    the address and billing information (Figs. 6.3 and 6.4). After adding a payment
+    method, you will see the welcome message and will receive a confirmation email,
+    similar to Fig. 6.5. Make sure to finish'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_59_0.png)
+
+
+    **Figure 6.1:** Create a free account in Google Cloud Platform or Sign in using
+    your existing account.
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_59_1.png)
+
+
+    **Figure 6.2:** Check on Terms of Service and select Continue.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_60_0.png)
+
+
+    Select Individual from drop down list
+
+
+    Fill out Name and addresses
+
+
+    Figure 6.3: Select the individual from the drop-down menu and fill out the name
+    and address.
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_60_1.png)
+
+
+    A valid payment method is required for $300 free credit.
+
+
+    Figure 6.4: Add a payment method.'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_61_0.png)
+
+
+    **Figure 6.5:** After account creation, you will receive a welcome message. Check
+    your email and complete your profile.
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_61_1.png)
+
+
+    **Figure 6.6:** Select “go to console” or “console” to enter into GCP.'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_62_0.png)
+
+
+    Figure 6.7: Navigation menu of GCP interface.
+
+
+    the “complete your profile” section from the welcome email. Next time, when you
+    log in to the GCP, you will only need to select “go to console” or “console,”
+    as shown in Fig. 6.6.
+
+
+    Inside the GCP interface, a dashboard contains Project info, Compute engine, Google
+    Cloud Platform status, Resources, API, Billing, Documentations, and other options.
+    The navigation menu from the upper left corner (Fig. 6.7) will show a drop-down
+    panel where you will be able to select a few different options. It is recommended
+    to check the billing section when you run a compute engine. In this way, you will
+    get an idea of billing and will be able to keep track of your remaining credits.
+
+
+    # 6.3 CREATE A NEW PROJECT
+
+
+    Now, it is time to create our first project on this cloud platform. Click on the
+    “My First Project” and then “New Project” (Fig. 6.8). Give a project name, for
+    example, DeepLearning1, and then select create (Fig. 6.9).
+
+
+    Using a free account, you may create up to 25 projects. In the figure, a message
+    showing that 23 projects left in our quota. After finishing this step, you will
+    see a notification on the top right corner that your project DeepLearning1 has
+    been created.
+
+
+    # 6.4 SET UP A VM INSTANCE
+
+
+    To use the computing engine, you need to set up a Virtual Machine (VM) instance
+    hosted on Google’s infrastructure. Google will also let you customize the number
+    of virtual CPUs, memory, and machine types [59]. From the navigation menu, go
+    to the Compute Engine and then select VM instances, as shown in Fig. 6.10.'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_63_0.png)
+
+
+    Figure 6.8: Creating a new project inside GCP.
+
+
+    Select My First Project -> New Project
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_63_1.png)
+
+
+    Figure 6.9: Creating a new project inside GCP.'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_64_0.png)
+
+
+    **Figure 6.10:** Steps for Setting up a VM instance inside GCP.
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_64_1.png)
+
+
+    **Figure 6.11:** Create a new compute engine instance.
+
+
+    Next, select “CREATE INSTANCE.” If you are creating an instance for the first
+    time, you may see a different interface than the one shown in Fig. 6.11. You will
+    just need to select the create instance option.
+
+
+    Next, assign a name for the instance (e.g., deeplearning), select a region for
+    VM from the region drop-down menu. In this example, we have chosen us-west-1 (Oregon),
+    but you may choose a different area. Please note that you might need to try another
+    zone if the selected region does not have enough resources available to fulfill
+    your request at the time of creation. Then select a custom machine type, 8 vCPU
+    core, and 30 GB memory (Fig. 6.12).
+
+
+    This is just an example, and you may choose a different custom VM based on your
+    requirement. You may use CPU only for your computation if you think CPU is good
+    enough for handling your machine learning model. Here we intend to show you the
+    way of selecting'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_65_0.png)
+
+
+    Figure 6.12: Steps for customizing cloud CPU.
+
+
+    GPU for your project since most of the deep learning models require a GPU for
+    parallel computational power. If you expand the CPU platform and GPU, you will
+    see the type of GPUs available in that location. But you won''t be able to add
+    a GPU before quota approval. You will need to request for GPU quotas, a step which
+    we are going to show in the following section.
+
+
+    Next, scroll down and click change in the boot disk section. From the drop-down
+    menu of the operating system, select Ubuntu, and its version. If you are familiar
+    with any other operating system, you may select that one and increase the boot
+    disk size as needed (e.g., 50 GB) for your project (Fig. 6.13).
+
+
+    From the firewall check on Allow HTTP traffic and Allow HTTPS traffic. After that,
+    expand the “Management, security, disks, networking, sole tenancy” option. Go
+    to the Management tab and copy or write the script from Fig. 6.14 for the Custom
+    metadata, “Startup script” section. This operation will help you to perform some
+    software installation and update every time you boot up your instance (Fig. 6.15).'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "![](img/194138d45b566d0634bfa2025ddf48f7_66_0.png)\n\n**Figure 6.13:** Steps\
+    \ for setting up a boot disk for VM.\n\n```\n```bash\n#!/bin/bash\necho \"Checking\
+    \ for CUDA and installing.\"\n# Check for CUDA and try to install\nif ! dpkg-query\
+    \ -W cuda-9-0; then\n    # The 16.04 install will install with 16.10.\n    curl\
+    \ -O http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.0.176-1_amd64.deb\n\
+    \    dpkg -i ./cuda-repo-ubuntu1604_9.0.176-1_amd64.deb\n    apt-key adv --fetch-keys\
+    \ http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub\n\
+    \    apt-get update\n    apt-get install cuda-9-0 -y\nfi\n# Enable persistence\
+    \ mode\nnvidia-smi -pm 1\n```\n```\n\n**Figure 6.14:** Startup script for CUDA\
+    \ installation."
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_67_0.png)
+
+
+    **Figure 6.15:** Write startup script inside Custom metadata, “Startup script”
+    section.
+
+
+    Then go to the “Disks” tab and check off “Delete boot disk when instance is deleted.”
+    Finally, click on “Create” to create the computing engine. These steps are shown
+    in Fig. 6.16.
+
+
+    You might see a warning message saying that the zone does not have enough resources
+    available to fulfill the request. Very typically, if you don’t select any GPU,
+    you will not see this error message. But if you see an error message, you should
+    try a different zone to create your instance. For example, you may change from
+    us-west1-b to a, c or us-central1, us-east1, etc.
+
+
+    When the instance is successfully created, you will see a notification. At this
+    stage, you will need to stop the instance from Compute Engine → VM instances.
+    Select three dots, as shown in Fig. 6.17, and then select stop. This trick will
+    save some unnecessary billing in your account. You may only start the instance
+    when you run a model or install dependencies.
+
+
+    # 6.5  GPU QUOTA REQUEST
+
+
+    The GPU quota request is an important step if you plan to access GPUs in Google’s
+    remote server. You may finish it before creating an instance. Go to Navigation
+    Menu, IAM & Admin, and then select Quotas (Fig. 6.18).
+
+
+    If you are a new user, you might see an upgrade option on the top right corner.
+    In that case, you will need to upgrade your account by clicking the upgrade (Fig.
+    6.19). Otherwise, you won’t be able to submit the Quota request. Even after upgrading,
+    Google will not charge you until your free ($300) credits have run out.'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_68_0.png)
+
+
+    Figure 6.16: Creating the compute engine inside GCP.
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_68_1.png)
+
+
+    Figure 6.17: Steps for setting up a VM inside GCP.
+
+
+    Check your external IP. You are going to use it later.'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_69_0.png)
+
+
+    Figure 6.18: For Quota request, go to Navigation Menu, IAM & Admin, and then select
+    Quotas.
+
+
+    # Upgrade your account
+
+
+    You''re one step away from unlocking all of Google Cloud Platform.
+
+
+    You won''t be charged until after your free credits have run out or expired (whichever
+    comes first). Learn more
+
+
+    You only pay for what you use. View pricing details
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_69_1.png)
+
+
+    Figure 6.19: Upgrading account for Quota request.'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_70_0.png)
+
+
+    Figure 6.20: Request for GPUs in all regions.
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_70_1.png)
+
+
+    You will receive an email once request get approved.
+
+
+    Figure 6.21: Steps for GPU Quota request submission in GCP.
+
+
+    Next, from the Quotas page, select Quota type → All quotas, Service Compute Engine
+    API, Metric GPUs (all regions), and Locations All locations (Fig. 6.20).
+
+
+    These selections are very important. You may also request for GPU in a specific
+    zone. Next, request for quotas by selecting EDIT QUOTAS (Fig. 6.21). Write the
+    Number of GPU you want and provide a reason for your request in the request description
+    section before submitting your request. You will receive an email confirmation
+    and another email reporting your approval status within one hour to two days.
+    It is not guaranteed that you will get the quota you requested. In that case,
+    Google will provide you a reason for denial, and you need to try again later.
+
+
+    Once your quota gets approved, you will need to update your instance by adding
+    a GPU. If you want to make any changes in your current instance, make sure to
+    stop the running instance (deeplearning1) first, and then select the instance.
+    You will find an EDIT button for making changes in your instance.'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_71_0.png)
+
+
+    Figure 6.22: Edit VM instance and add GPU.
+
+
+    Select EDIT and then expand the “CPU platform and GPU” section. Here you will
+    be able to add the number and the types of GPU you want. If you have only one
+    GPU quota, you will not be able to add more than one GPU. If you think that you
+    will need multiple GPUs for your project, then you should request the number of
+    Quotas in the previous section (Fig. 6.21). You are allowed to have more than
+    one GPU quotas. In this demonstration, we have selected one NVIDIA Tesla P100
+    GPU, as shown in Fig. 6.22.
+
+
+    If you don’t find your desired GPU in the drop-down list, you will need to try
+    a different zone. As long as you have GPU quotas, you can create compute engine
+    instances using GPUs.
+
+
+    # 6.5.1 A COST-EFFECTIVE APPROACH
+
+
+    There is a cost-effective option in GCP that you may consider for your project,
+    known as preemptible instance. If you select a preemptible instance, you will
+    be able to run an instance at a much lower price than a regular instance. But
+    the server might terminate (preempt) these instances if it needs to access these
+    resources for other tasks. This option is a little inconvenient to use, knowing
+    that your instance may shut down any time, but it is economical. Another notable
+    limitation of the preemptible instance is that the compute engine is always going
+    to terminate after they run for 24 hours. So, this is the trade-off between preemptible
+    and non-preemptible, and you have to make your decision based on your requirements.
+    For a new user who is running small deep learning models and still exploring different
+    functionalities of GCP, preemptible is a practical and economical option. Note
+    that some of the zones may not have preemptible instances available. You will
+    find useful information related to preemptible instances in the GCPs website [60].
+    In this text, the model we are going to use will take about an hour to run on
+    a GPU based compute engine. So, we have selected the “preemptible” option for
+    our instance.'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# Availability policy
+
+
+    # Preemptibility
+
+
+    A preemptible VM costs much less, but lasts only 24 hours. It can be terminated
+    sooner due to system demands. Learn more.
+
+
+    # On host maintenance
+
+
+    When Compute Engine performs periodic infrastructure maintenance, it can migrate
+    your VM instances to other hardware without downtime
+
+
+    Machines with GPUs can''t migrate on host maintenance
+
+
+    # Automatic restart
+
+
+    Compute Engine can automatically restart VM instances if they are terminated for
+    non-user-initiated reasons (maintenance event, hardware failure, software failure
+    and so on)
+
+
+    You will be billed for this instance. Compute Engine pricing
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_72_0.png)
+
+
+    Figure 6.23: Select Preemptibility “On” and “Create” to run VM at a lower cost.
+
+
+    Set Preemptibility on, under the Available policy option and Create. You will
+    see a notification after the successful creation of your instance.
+
+
+    If you create your instance from the beginning after quota request approval or
+    make another instance, then go over the previous section, the only difference
+    is you have to select GPUs shown in this section. For any reason, if your instance
+    does not create successfully, try to pick a different GPU or zones, or try again
+    later. Once your GPU instance is created, you are ready to run your machine learning
+    model in GCP.
+
+
+    # 6.6 VPC NETWORK
+
+
+    # 6.6.1 SET UP EXTERNAL IP ADDRESS
+
+
+    It is convenient to set up the IP address to static so that it doesn’t change.
+    The default setup for GCP is dynamic. To do this step, go to the navigation menu,
+    VPC network, and then Ex-'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_74_0.png)
+
+
+    Figure 6.25: Steps for reserving a static IP address.'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_75_0.png)
+
+
+    Figure 6.26: Steps for creating Firewall rules in GCP.'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_76_0.png)
+
+
+    Figure 6.27: Steps for creating Firewall rules in GCP and specify a port number.'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_77_0.png)
+
+
+    Figure 6.28: To install Anaconda on VM instance, select SSH.
+
+
+    ```
+
+    wget http://repo.continuum.io/archive/Anaconda3-5.3.1-Linux-x86_64.sh
+
+    ```
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_77_1.png)
+
+
+    Figure 6.29: Steps for Anaconda download and installation in GCP.
+
+
+    # 6.7 SETTING UP VM INSTANCE TO RUN MODELS
+
+
+    For our deep learning project, we are going to install Anaconda on GCP. It has
+    many amazing tools, web applications, and Python libraries that are useful for
+    our project. The Jupyter Notebook live code editor is also available in Anaconda.
+    So, in this section, we are going to show how to install Anaconda on the virtual
+    machine, set up Jupyter Notebook, and other dependencies such as Pytorch and OpenCV.
+
+
+    # 6.7.1 ANACONDA INSTALLATION ON VM
+
+
+    To install Anaconda in our VM instance, first, we will need to start the VM instance
+    from Navigation Menu → Compute Engine → VM instance. Click on the SSH to access
+    the VM through Ubuntu platform that we selected (Fig. 6.28).
+
+
+    This selection will bring us to the following shell window. Then type the command
+    shown in Fig. 6.29, and press enter. Note that the site used in the command line
+    is http://repo.continuum.io. Here we might use https://repo.anaconda.com/ site
+    for installing Anaconda. We may also change the Anaconda version if needed.
+
+
+    To access the bash shell-environment type the following command and press enter.
+    Review the license agreement and keep pressing enter to continue (Fig. 6.30).'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '```
+
+    ```bash
+
+    Anaconda3-5.3.1-Linux-x86_64.sh
+
+    ```
+
+    ```
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_78_0.png)
+
+
+    Figure 6.30: Steps for Anaconda installation in GCP.
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_78_1.png)
+
+
+    Figure 6.31: Steps for Anaconda installation in GCP.
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_78_2.png)
+
+
+    Figure 6.32: Steps for Anaconda installation in GCP.
+
+
+    After that, type “yes” and press “enter” to accept the license terms (Fig. 6.31).
+
+
+    These steps will install related libraries and packages. In the end, you will
+    need to type “yes” and “enter” again to confirm and initialize Anaconda in your
+    home directory (Fig. 6.32).
+
+
+    Next, install Microsoft Visual Studio (VS) code by typing “yes” and press “enter”
+    again (Fig. 6.33).
+
+
+    After installing Microsoft VS, type the following command in Fig. 6.34 to initialize
+    interactive shell session.
+
+
+    Now the VM instance is ready for running interactive sessions.
+
+
+    # 6.7.2  JUPYTER NOTEBOOK SET UP
+
+
+    In this section, we are going to setup Jupyter Notebook for VM instance. Enter
+    the following commands to configure Jupyter Notebook for running it in the server
+    (Fig. 6.35).'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_79_0.png)
+
+
+    Figure 6.33: Steps for installing Microsoft Visual Studio (VS).
+
+
+    ```
+
+    ```bash
+
+    source ~/.bashrc
+
+    ```
+
+    ```
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_79_1.png)
+
+
+    Figure 6.34: Steps for initializing interactive shell session.
+
+
+    ```
+
+    ```bash
+
+    jupyter notebook --generate-config
+
+    cd ~/.jupyter/
+
+    vi jupyter_notebook_config.py
+
+    ```
+
+    ```
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_79_2.png)
+
+
+    Figure 6.35: Steps for configuring Jupyter Notebook in GCP.
+
+
+    This command will open the Jupyter Notebook configuration file for VM instance.
+    Press “i” to edit this configuration file and add the lines shown in Fig. 6.36.
+    The port number used in this example will be the one that you specified during
+    Firewall settings (Fig. 6.27).
+
+
+    After editing the configuration file, press “Esc” and type “:wq” in your keyboard
+    to save and exit (Fig. 6.37). If you are interested in setting up a password now,
+    check the Jupyter Notebook configuration for public server [61]. You may close
+    your session now.
+
+
+    Now you are ready to launch Jupyter Notebook and execute code in the server. Next,
+    go to the SSH terminal and type terminal multiplexer command “tmux” (Fig. 6.38).'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "```\nc = get_config()\nc.NotebookApp.ip = '*' \nc.NotebookApp.open_browser\
+    \ = False\nc.NotebookApp.port = 8081\n```\n\n![](img/194138d45b566d0634bfa2025ddf48f7_80_0.png)\n\
+    \nFigure 6.36: Steps for configuring Jupyter Notebook in GCP.\n\n![](img/194138d45b566d0634bfa2025ddf48f7_80_1.png)\n\
+    \nFigure 6.37: Press “Esc” and type “:wq” in your keyboard to save and exit.\n\
+    \n![](img/194138d45b566d0634bfa2025ddf48f7_80_2.png)\n\nFigure 6.38: Steps for\
+    \ running Jupyter Notebook GCP."
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '```
+
+    tmux
+
+    jupyter notebook --ip=0.0.0.0 --port=8081 --no-browser &
+
+    ```
+
+
+    Figure 6.41: Enter commands in the SSH terminal before accessing Jupyter Notebook
+    through a webpage.
+
+
+    If you are running the Jupyter Notebook for the first time, you have to copy the
+    login token shown in Fig. 6.38 (red box) and Enter it to the browser''s token
+    section, as shown in Fig. 6.40. Then you can create a new password.
+
+
+    If your token doesn''t work, check the message in the shell window. You probably
+    ended up opening multiple ports. You may restart the VM instance and use the new
+    token to create a password. After the successful installation of the Jupyter Notebook
+    in your GCP, you will be able to write or edit a script and run it in the VM instance
+    through this interface.
+
+
+    Next time when you run the SSH terminal (shown in Fig. 6.28), you will only need
+    to enter the command lines shown in Fig. 6.41.
+
+
+    After that, enter the url (http://***.***.***:8081) for your server in the web
+    browser. The browser will ask for the password that you created (Fig. 6.40), and
+    then the Jupyter Notebook interface will be opened.'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# Case Study: Practical Implementation Through Transfer Learning
+
+
+    # 7.1 PROBLEM STATEMENT
+
+
+    In this chapter, to demonstrate the use of deep learning, we have used a transfer
+    learning process for a multiclass image classification problem. Our goal is to
+    implement a deep learning model to determine the Make, Model, and Year of a car.
+    In order to train and test our model, we have used an organized car dataset containing
+    a total of 16,185 different car images. This dataset (Stanford''s Cars Dataset)
+    was used in a Kaggel''s competition and can be downloaded from [62]. An earlier
+    version of the dataset was also used in research for 3D object representation
+    of fine-grained categorization of rigid classes [63].
+
+
+    In the Stanford''s Cars Dataset, among 16,185 car images, 196 different classes
+    (Make, Model, and Year) of cars are divided into training images (8,144) and testing
+    images (8,041). Inside the car_devkit zip file, data classes, and corresponding
+    bounding boxes to crop the images are available. From their website, the cars_test_annos_withlabels.mat
+    file was used to find out our test data set accuracy. Note that there is a similar
+    file (cars_test_annos.mat) available on their site that doesn''t have the classes
+    defined in it. So, we recommend everyone to check Stanford Cars Data set carefully
+    before working on this project.
+
+
+    To identify car make and model from an image, we need to train a deep learning
+    model using the training data and then test the performance of the model by using
+    the testing data. A pre-trained deep neural network, known as Efficient B7, is
+    used for this task to extract features from the training dataset.
+
+
+    A schematic of the transfer learning process using the pre-trained network is
+    shown in Fig. 7.1. Finally, for testing purposes, we are going to feed several
+    random car pictures (downloaded from the internet) to see how well the new deep
+    learning model performs outside of the given dataset.
+
+
+    # 7.2 DATA PROCESSING
+
+
+    The data processing step is very critical for using any deep learning model effectively.
+    We have to carefully check the labels and names for the images and the consistency
+    between training'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_85_0.png)
+
+
+    **Figure 7.1:** Schematic of transfer learning using a pre-trained deep neural
+    network, EfficientNet B7.
+
+
+    and testing data. A preprocessing step will help us to call a large volume of
+    images using simple Python codes.
+
+
+    For this case study, we made a folder called “input,” which contains all the relevant
+    files required to run our model. If you want to reproduce the result, please check
+    the Fig. 7.2 containing the screenshot of our input folder and file names.
+
+
+    Please note that we converted “.xlsx” files to “.csv” files, and a new column
+    is added to the “cars_test_annos.csv” that shows classes of each test image copied
+    from “cars_test_annos_withlabels.mat.” We made this change to check the accuracy
+    of our deep learning model on the testing dataset.
+
+
+    # 7.3 UPLOAD DATA INTO STORAGE BUCKET
+
+
+    To upload the data folder “input” in the cloud console, follow the steps shown
+    below.
+
+
+    +   1. **Step 1:** Go to GCP Navigation Menu → File Storage → CREATE BUCKET
+
+    +   2. **Step 2:** Choose a bucket name (e.g., deeplearning_bucket1) and keep
+    on selecting “continue” to accept all the default settings (Figs. 7.4, 7.5, and
+    7.6).
+
+    +   3. **Step 3:** Select “CREATE” to create the bucket folder (Fig. 7.6).
+
+    +   4. **Step 4:** Select “Upload folder” from the bucket and upload the “input”
+    folder (Fig. 7.7).
+
+
+    # 7.4 TRANSFERRING FILE TO VM INSTANCE
+
+
+    Next, we are going to transfer “input” files from the bucket to our VM instance.
+    To do this transfer process, we have to start the compute engine and establish
+    SSH connection. Follow the instructions given below and check Fig. 7.8.'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_86_0.png)
+
+
+    Figure 7.2: Screenshot of “input” folder, and its files.
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_86_1.png)
+
+
+    Create a storage bucket in GCP to upload input data
+
+
+    Figure 7.3: Steps for creating a storage bucket in GCP.'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_87_0.png)
+
+
+    Figure 7.4: Steps for creating a storage bucket in GCP.
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_87_1.png)
+
+
+    Figure 7.5: Steps for creating a storage bucket in GCP.'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '![](img/194138d45b566d0634bfa2025ddf48f7_88_0.png)
+
+
+    Figure 7.6: Steps for creating a storage bucket in GCP.
+
+
+    Bucket is created
+
+
+    Upload the "input" folder inside this bucket.
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_88_1.png)
+
+
+    Figure 7.7: Steps for uploading files in the GCP bucket.'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: "```\n```python\nclass DefaultConfigs(object):\n    train_data = \"/home/deep_learning1/input/cars_train/\"\
+    \  # location of training images in the bucket\n    test_data = \"/home/deep_learning1/input/cars_test/\"\
+    \   # location of testing images in the bucket\n    num_classes = 196\n    img_weight\
+    \ = 224\n    img_height = 224\n    channels = 3\n    lr = 0.01               \
+    \                       # lr = learning rate\n    batch_size = 16\n    epochs\
+    \ = 20\n    seed = 112\n    path = './deep_models/'\n\nconfig = DefaultConfigs()\n\
+    ```\n```\n\nFigure 7.9: Make Python class object and initialize parameters.\n\n\
+    ```\n```bash\n!pip install --upgrade pip\n!pip install six numpy scipy Pillow\
+    \ matplotlib scikit-image opencv-python imageio Shapely\n!pip install imgaug\n\
+    !pip install efficientnet_pytorch\n!pip install torch torchvision  #for CUDA version\
+    \ 10.1\n!pip install torch==1.3.1+cu92 torchvision==0.4.2+cu92 -f https://download.pytorch.org/whl/torch_stable.html\n\
+    \    #for CUDA version 9.2\n```\n```\n\nFigure 7.10: Install dependencies in VM\
+    \ instance.\n\nhave also created checkpoints to save model weights, and the model\
+    \ parameters that give the best accuracy are always going to be saved inside deep_models.\
+    \ Here, all the images have the same size (224 by 224), and 3 channels are used\
+    \ for red, green, and blue colors.\n\nThe number of samples that go through the\
+    \ model, before updating the parameters (also known as the batch size) is set\
+    \ as 16. If we increase the batch size, the model performance may improve, but\
+    \ it will take a significant amount of memories.\n\nAn optimum epoch selection\
+    \ that will not cause overfitting is also important. We have selected 20 epochs,\
+    \ i.e., forward and backward propagation will be done 20 times through the entire\
+    \ data set. This selection is critical because a low number of epochs might end\
+    \ up under-fitting the model. One way to understand the fitting is to look into\
+    \ the training and testing accuracy. Note that in this case study, we haven’t\
+    \ divided the training data into training and validation sets.\n\nIf the training\
+    \ accuracy continuously increases and testing accuracy decreases, that is an indication\
+    \ of overfitting the model. For this problem, the gradient descent hyperparameter\
+    \ (also known as the learning rate) is set to 0.01. This learning rate is a standard\
+    \ starting point for many deep learning models.\n\n# 7.5.2  INSTALL DEPENDENCIES\n\
+    \nIf we are running our code in GCP for the first time, we will need to install\
+    \ some libraries using pip command (Fig. 7.10). Since we are going to use the\
+    \ pre-trained network (EfficientNet-B7), we will also need to load it from PyTorch."
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: "```\n```python\nimport os\nimport sys\nimport json\nimport torch\nimport torchvision\n\
+    import shutil\nimport numpy as np\nimport pandas as pd\nimport random\nimport\
+    \ warnings\nimport pathlib\n\nimport cv2\nfrom PIL import Image\n\nfrom torch\
+    \ import nn,optim\nimport torch.nn.functional as F\nfrom torch.autograd import\
+    \ Variable\nfrom torch.utils.data import Dataset,DataLoader\nfrom torch.optim\
+    \ import lr_scheduler\nfrom torchvision import transforms as T\nfrom torchvision\
+    \ import models\n\nfrom imgaug import augmenters as iaa  #image augmentation package\n\
+    from collections import OrderedDict\nfrom sklearn.model_selection import train_test_split\n\
+    ```\n```\n\nFigure 7.11: Import all required libraries.\n\n```\n```python\nif\
+    \ not os.path.exists(config.path):\n    os.mkdir(config.path)\n```\n```\n\nFigure\
+    \ 7.12: Create a directory if it does not exist.\n\nWe are going to run this block\
+    \ of code shown in Fig. 7.10 only once in GCP. Typically, the model needs to be\
+    \ run many times for tuning. Next time onward, we don’t have to install these\
+    \ dependencies. Also, note that the “pip install torch” depends on the version\
+    \ of the CUDA that we installed in the startup-script.\n\n# 7.5.3   IMPORT LIBRARIES\n\
+    \nImport all the libraries that are needed to run our model. If any of these libraries\
+    \ looks unfamiliar, we would suggest you go through the respective library documentation.\n\
+    \nWe can also create a directory if it doesn’t exist in that location. Follow\
+    \ the code in Fig. 7.12 for this task."
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: "```\n```python\ndef save_checkpoint(state, is_best_loss):\n    if is_best_loss:\n\
+    \        torch.save(state, config.path+'model_best.pth.tar')\n\ndef get_learning_rate(optimizer):\n\
+    \    lr=[]\n    for param_group in optimizer.param_groups:\n        lr +=[ param_group['lr']\
+    \ ]\n\n    #assert(len(lr)==1)\n    lr = lr[0]\n\n    return lr\n```\n```\n\n\
+    **Figure 7.13:** Define checkpoint and a learning rate function.\n\n# ### 7.5.4\
+    \ CHECKPOINT AND ADAPTIVE LEARNING RATE\n\nNext, we are going to create a checkpoint\
+    \ folder that will save the best parameters of our deep learning model. We are\
+    \ also going to use an adaptive learning rate, which means that the learning rate\
+    \ is going to decrease as the model converges. The optimizer will do this job\
+    \ for us, and this step will help us to avoid overshooting the minima (Fig. 7.13).\n\
+    \nAfter that, we are going to define a class object that will store the average\
+    \ and current value only (Fig. 7.14).\n\n# ### 7.5.5 SET SEED\n\nWe may set a\
+    \ seed to make this case study reproducible (Fig. 7.15). Since our model and inputs\
+    \ are not going to change, we may also use “torch.backends.”\n\n# ### 7.5.6 DATASET\
+    \ CLASS AND AUGMENTATION\n\nFor effective data manipulation, we are going to create\
+    \ Dataset class objects, as shown in Fig. 7.16. In this step, we are also going\
+    \ to define a function for standard normalization for each channel.\n\n# ### 7.5.7\
+    \ DATA PROCESSING\n\nThe next important thing is to check the dataset and do some\
+    \ preprocessing. Here, we may read the data using index locations. Stanford’s\
+    \ car data set also provides the bounding box coordinates to crop the car image\
+    \ inside a rectangle. If we use the cropped images for training, our model accuracy\
+    \ will increase."
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "```\ndef augmentor(self, image):\n    seq = iaa.Sequential([\n        iaa.OneOf([\n\
+    \            iaa.Affine(rotate=90),\n            iaa.Affine(rotate=180),\n   \
+    \         iaa.Affine(rotate=270),\n            iaa.Affine(shear=(-16, 16)),\n\
+    \            iaa.Fliplr(0.5),\n        ]), random_order=True)\n\n    image_aug\
+    \ = seq.augment_image(image)\n\n    return image_aug\n```\n\nFigure 7.18: Image\
+    \ augmentation function to learn better from training images.\n\n```\ntrain_files\
+    \ = pd.read_csv(\"/home/deep_learning1/input/cars_train_annos.csv\")\ntest_files\
+    \ = pd.read_csv(\"/home/deep_learning1/input/cars_test_annos.csv\")\n\n# to remove\
+    \ the quotation marks from cars train annos.csv image name\ntrain_files['frame']\
+    \ = [i[1:-1] for i in train_files['frame']]\ntest_files['frame'] = [i[1:-1] for\
+    \ i in test_files['frame']]\n\n# Rename the class lable to ID for consistency\
+    \ between cars_train_annos.csv and anno_test.csv\ncolumns = ['unnamed:0','x1','y1','x2','y2','Id','frame']\n\
+    columns = train_files.columns.tolist()\ncolumns.remove('class')\ncolumns.insert(5,'Id')\n\
+    train_files.columns = [i for i in columns]\n\n## test files column correction\n\
+    # columns= ['unnamed:0','x1','y1','x2','y2','frame','Id']\n\n# Make the labels\
+    \ form 0 to n-1 for n classes to use CrossEntropyLoss()\ntrain_files['Id'] = [(i-1)\
+    \ for i in train_files['Id']]\ntest_files['Id'] = [(i-1) for i in test_files['Id']]\n\
+    ```\n\nFigure 7.19: Read training and testing CSV files, and make consistent column\
+    \ heading names.\n\noriginal file. This step is required for the model to access\
+    \ the correct classes and bounding box information of the corresponding images\
+    \ (Fig. 7.19).\n\nAfter executing up to the previous code (Fig. 7.19), we may\
+    \ check our test and train file heads using the “head” function. It will give\
+    \ us the result shown in Fig. 7.20. As we can see, the quotation mark from the\
+    \ image name has been removed.\n\nNow, the files can be accessed easily by the\
+    \ deep learning model using the scripts below. In Fig. 7.21, the train_loader\
+    \ and val_loader load images for training and testing, respectively."
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: "```\n```text\nmodel\n  3840, 640, kernel_size=(1, 1), stride=(1, 1), bias=False\n\
+    \      (static_padding): Identity()\n    )\n    (_bn2): BatchNorm2d(640, eps=0.001,\
+    \ momentum=0.010000000000000009, affine=True, track\n_running_stats=True)\n  \
+    \  (_swish): MemoryEfficientSwish()\n  )\n  ( conv_head): Conv2dStaticSamePadding(\n\
+    \    640, 2560, kernel_size=(1, 1), stride=(1, 1), bias=False\n    (static_padding):\
+    \ Identity()\n  )\n  (bn1): BatchNorm2d(2560, eps=0.001, momentum=0.010000000000000009,\
+    \ affine=True, track_ru\nnning_stats=True)\n  (avg_pool): AdaptiveAvgPool2d(output_size=1)\n\
+    \  (dropout): Dropout(p=0.5, inplace=False)\n  (fc): Linear(in_features=2560,\
+    \ out_features=1000, bias=True)\n  (_swish): MemoryEfficientSwish()\n)\n```\n\
+    ```\n\nFigure 7.24: Check the model architecture of EfficientNet-B7.\n\n```\n\
+    ```python\n#for efficientnet-B7 only\nmodel._fc = nn.Linear(in_features=2560,\
+    \ out_features=config.num_classes, bias=True)\n\nmodel.cuda();\n```\n```\n\nFigure\
+    \ 7.25: Change output features of the fully connected layer to 196.\n\n```\n```python\n\
+    optimizer = optim.SGD(model.parameters(), lr = config.lr,momentum=0.9,weight_decay=1e-4)\n\
+    scheduler = lr_scheduler.StepLR(optimizer, step_size=10,gamma=0.1)\ncriterion\
+    \ = nn.CrossEntropyLoss().cuda()\n```\n```\n\nFigure 7.26: Defining the optimizer,\
+    \ learning rate, and loss function.\n\nfunction was assigned using “torch.nn”\
+    \ module. Here, we calculated the cross-entropy loss for training and testing\
+    \ images.\n\n# 7.7   FINE-TUNING AND TRAINING\n\nFinally, the model is ready for\
+    \ training. We will use a for loop here to run the model for a number of epochs.\
+    \ Here, we are going to run the model for 20 epochs.\n\nAn excellent way to run\
+    \ the model is to set the param.requires_grad = False (Fig. 7.23) and train the\
+    \ model for a low number of epochs, such as 2 (change epoch range inside for loop\
+    \ to 2). And then set the param.requires_grad = True for backpropagation (Fig.\
+    \ 7.23), run only that code segment lines (two lines in Fig. 7.23), and train\
+    \ the model for 20 epochs (Fig. 7.27). This small trick will help the model to\
+    \ learn better. Make sure that you are not loading the"
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: "```\n    print_every = 120\n    steps = 0\n    running_loss = 0\n    train_accuracy\
+    \ = 0\n    best_loss = np.inf\n    for epoch in range(20):\n        model.train()\n\
+    \        scheduler.step(epoch)\n        lr = get_learning_rate(optimizer)\n  \
+    \      for images, labels in iter(train_loader):\n            images, labels =\
+    \ images.cuda(), labels.cuda()\n            steps += 1\n            optimizer.zero_grad()\n\
+    \            output = model.forward(images)\n            loss = criterion(output,\
+    \ labels)\n            loss.backward()\n            optimizer.step()\n       \
+    \     running_loss += loss.item()\n            ps = torch.exp(output)\n      \
+    \      equality = (labels.data == ps.max(dim=1)[1])\n            train_accuracy\
+    \ += equality.type(torch.FloatTensor).mean()\n\n        if steps % print_every\
+    \ == 0:\n            model.eval()\n            Test_loss = 0\n            Test_accuracy\
+    \ = 0\n            with torch.no_grad():\n                for images, labels in\
+    \ iter(val_loader):\n                    images, labels = images.cuda(), labels.cuda()\n\
+    \                    output = model.forward(images)\n                    Test_loss\
+    \ += criterion(output, labels).item()\n                    ps = torch.exp(output)\n\
+    \                    equality = (labels.data == ps.max(dim=1)[1])\n          \
+    \          Test_accuracy += equality.type(torch.FloatTensor).mean()\n        \
+    \    is_best_loss = Test_loss < best_loss\n            best_loss = min(best_loss,\
+    \ Test_loss)\n            save_checkpoint({\n                \"epoch\": epoch\
+    \ + 1,\n                \"state_dict\": model.state_dict(),\n                \"\
+    optimizer\": optimizer.state_dict(),\n                \"is_best\": is_best_loss})\n\
+    \            print(\"Epoch {}: \".format(epoch+1, config.epochs),\n          \
+    \        \"Training Loss: {:.3f}\".format(running_loss/print_every),\n       \
+    \           \"Training Accuracy: {:.3f}\".format(train_accuracy/print_every),\n\
+    \                  \"Testing Loss: {:.3f}\".format(Test_loss/len(val_loader)),\n\
+    \                  \"Testing Accuracy: {:.3f}\".format(Test_accuracy/len(val_loader)))\n\
+    \            running_loss = 0\n            train_accuracy = 0\n            model.train()\n\
+    ```\n\nFigure 7.27: Code for training the model and print the accuracies.\n\n\
+    EfficientNet again. If you do that, you will lose the saved weights for the first\
+    \ 2 epochs. You may also update the epoch numbers in the code in Fig. 7.9, but\
+    \ it will affect only the output display during training.\n\nWhen you run the\
+    \ model for 2 epochs, you will see that the training and testing accuracy are\
+    \ continuously improving. After 2 epochs, the testing accuracy is 19.5% (Fig.\
+    \ 7.28).\n\nFor the next run, when 20 epochs are used, testing accuracy starts\
+    \ from 28%. Because at this time, it is using the updated best parameters from\
+    \ 2 epochs. Make sure to set the gradient requirement to “True” and run that portion\
+    \ only (Fig. 7.23) before the second run.\n\nFinally, after 20 epochs, we will\
+    \ get an accuracy higher than 90%. Here, the model will save only the parameters\
+    \ that give higher accuracy, which is 90.6% for this simulation."
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '```
+
+    Epoch: 1/2..  Training Loss: 5.257..  Training Accuracy: 0.015 Testing Loss: 5.185..  Testing
+    Accuracy: 0.041
+
+    Epoch: 1/2..  Training Loss: 5.174..  Training Accuracy: 0.029 Testing Loss: 5.044..  Testing
+    Accuracy: 0.083
+
+    Epoch: 1/2..  Training Loss: 5.098..  Training Accuracy: 0.044 Testing Loss: 4.937..  Testing
+    Accuracy: 0.108
+
+    Epoch: 1/2..  Training Loss: 4.994..  Training Accuracy: 0.056 Testing Loss: 4.832..  Testing
+    Accuracy: 0.141
+
+    Epoch: 2/2..  Training Loss: 4.823..  Training Accuracy: 0.107 Testing Loss: 4.739..  Testing
+    Accuracy: 0.165
+
+    Epoch: 2/2..  Training Loss: 4.740..  Training Accuracy: 0.123 Testing Loss: 4.657..  Testing
+    Accuracy: 0.174
+
+    Epoch: 2/2..  Training Loss: 4.696..  Training Accuracy: 0.117 Testing Loss: 4.578..  Testing
+    Accuracy: 0.183
+
+    Epoch: 2/2..  Training Loss: 4.588..  Training Accuracy: 0.132 Testing Loss: 4.491..  Testing
+    Accuracy: 0.195
+
+    ```
+
+
+    After running the model for 2 epochs, change the epochs to 20 inside the for loop,
+    “for epoch in range(2)→for epoch in range(20)”, set param.requires_grad = True
+    (execute command) and run the model again.
+
+
+    ```
+
+    Epoch: 1/20..  Training Loss: 3.883..  Training Accuracy: 0.232 Testing Loss:
+    3.200..  Testing Accuracy: 0.280
+
+    Epoch: 1/20..  Training Loss: 3.039..  Training Accuracy: 0.317 Testing Loss:
+    2.362..  Testing Accuracy: 0.440
+
+    Epoch: 1/20..  Training Loss: 2.388..  Training Accuracy: 0.415 Testing Loss:
+    1.939..  Testing Accuracy: 0.525
+
+    Epoch: 1/20..  Training Loss: 1.915..  Training Accuracy: 0.515 Testing Loss:
+    1.421..  Testing Accuracy: 0.629
+
+    Epoch: 2/20..  Training Loss: 1.388..  Training Accuracy: 0.648 Testing Loss:
+    1.196..  Testing Accuracy: 0.680
+
+    Epoch: 2/20..  Training Loss: 1.148..  Training Accuracy: 0.693 Testing Loss:
+    1.040..  Testing Accuracy: 0.719
+
+    Epoch: 2/20..  Training Loss: 1.077..  Training Accuracy: 0.713 Testing Loss:
+    0.975..  Testing Accuracy: 0.735
+
+    Epoch: 2/20..  Training Loss: 1.004..  Training Accuracy: 0.726 Testing Loss:
+    0.838..  Testing Accuracy: 0.764
+
+    Epoch: 3/20..  Training Loss: 0.746..  Training Accuracy: 0.795 Testing Loss:
+    0.793..  Testing Accuracy: 0.781
+
+    Epoch: 3/20..  Training Loss: 0.633..  Training Accuracy: 0.823 Testing Loss:
+    0.756..  Testing Accuracy: 0.783
+
+    Epoch: 3/20..  Training Loss: 0.626..  Training Accuracy: 0.823 Testing Loss:
+    0.685..  Testing Accuracy: 0.806
+
+    Epoch: 3/20..  Training Loss: 0.586..  Training Accuracy: 0.842 Testing Loss:
+    0.631..  Testing Accuracy: 0.818
+
+    Epoch: 4/20..  Training Loss: 0.594..  Training Accuracy: 0.843 Testing Loss:
+    0.604..  Testing Accuracy: 0.826
+
+    Epoch: 4/20..  Training Loss: 0.386..  Training Accuracy: 0.896 Testing Loss:
+    0.569..  Testing Accuracy: 0.841
+
+    Epoch: 4/20..  Training Loss: 0.413..  Training Accuracy: 0.880 Testing Loss:
+    0.578..  Testing Accuracy: 0.839
+
+    Epoch: 4/20..  Training Loss: 0.386..  Training Accuracy: 0.894 Testing Loss:
+    0.565..  Testing Accuracy: 0.837
+
+    ```
+
+
+    Figure 7.28: Output display for training and testing losses and accuracies.
+
+
+    ```
+
+    Epoch: 18/20..  Training Loss: 0.035..  Training Accuracy: 0.994 Testing Loss:
+    0.374..  Testing Accuracy: 0.903
+
+    Epoch: 18/20..  Training Loss: 0.034..  Training Accuracy: 0.994 Testing Loss:
+    0.374..  Testing Accuracy: 0.905
+
+    Epoch: 19/20..  Training Loss: 0.032..  Training Accuracy: 0.994 Testing Loss:
+    0.373..  Testing Accuracy: 0.905
+
+    Epoch: 19/20..  Training Loss: 0.036..  Training Accuracy: 0.991 Testing Loss:
+    0.371..  Testing Accuracy: 0.905
+
+    Epoch: 19/20..  Training Loss: 0.027..  Training Accuracy: 0.993 Testing Loss:
+    0.370..  Testing Accuracy: 0.904
+
+    Epoch: 19/20..  Training Loss: 0.033..  Training Accuracy: 0.993 Testing Loss:
+    0.371..  Testing Accuracy: 0.904
+
+    Epoch: 20/20..  Training Loss: 0.028..  Training Accuracy: 0.994 Testing Loss:
+    0.368..  Testing Accuracy: 0.906
+
+    Epoch: 20/20..  Training Loss: 0.034..  Training Accuracy: 0.992 Testing Loss:
+    0.367..  Testing Accuracy: 0.905
+
+    ```
+
+
+    Figure 7.29: Output display for training and testing losses and accuracies after
+    20 epochs (Learning rate 0.01%).
+
+
+    If you have a situation where training accuracy is increasing, but the testing
+    accuracy is decreasing, you will have to stop the training because that is a sign
+    of overfitting training data.
+
+
+    Now, to improve the model performance, we can further change some of the training
+    parameters that affect the learning process, such as learning rate, epochs, number
+    of hidden layers, etc. This is called hyperparameters tuning, and this step should
+    be done carefully to see how the model is learning. For example, if we change
+    the learning rate from 0.01 to 0.025 (Fig. 7.9) and run the whole simulation as
+    described in this section, we will get a better result (testing accuracy 91.5%).
+    The simulation output for learning rate 0.025 is shown in Fig. 7.30. We may also
+    check different learning rates and hyperparameters to improve testing accuracy.
+
+
+    At this point, we can say that our deep learning model will be able to predict
+    the make, model, and year of a car within 91.5% accuracy.'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '```
+
+    Epoch: 1/2..  Training Loss: 5.231..  Training Accuracy: 0.020 Testing Loss: 5.058..  Testing
+    Accuracy: 0.060
+
+    Epoch: 1/2..  Training Loss: 5.061..  Training Accuracy: 0.043 Testing Loss: 4.766..  Testing
+    Accuracy: 0.109
+
+    Epoch: 1/2..  Training Loss: 4.923..  Training Accuracy: 0.055 Testing Loss: 4.569..  Testing
+    Accuracy: 0.132
+
+    Epoch: 1/2..  Training Loss: 4.726..  Training Accuracy: 0.080 Testing Loss: 4.384..  Testing
+    Accuracy: 0.163
+
+    Epoch: 2/2..  Training Loss: 4.398..  Training Accuracy: 0.146 Testing Loss: 4.243..  Testing
+    Accuracy: 0.184
+
+    Epoch: 2/2..  Training Loss: 4.290..  Training Accuracy: 0.141 Testing Loss: 4.132..  Testing
+    Accuracy: 0.199
+
+    Epoch: 2/2..  Training Loss: 4.261..  Training Accuracy: 0.139 Testing Loss: 4.025..  Testing
+    Accuracy: 0.210
+
+    Epoch: 2/2..  Training Loss: 4.129..  Training Accuracy: 0.156 Testing Loss: 3.908..  Testing
+    Accuracy: 0.219
+
+    ```
+
+
+    Learning rate changed to 0.025.
+
+    After running the model for 2 epochs, change the epochs to 20 inside the for loop,
+    “for epoch in range(2)→ for epoch in range(20)”, set param.requires_grad = True
+    (execute command) and run the model again.
+
+
+    ```
+
+    Epoch: 1/2..  Training Loss: 5.231..  Training Accuracy: 0.020 Testing Loss: 5.058..  Testing
+    Accuracy: 0.060
+
+    Epoch: 1/2..  Training Loss: 5.061..  Training Accuracy: 0.043 Testing Loss: 4.766..  Testing
+    Accuracy: 0.109
+
+    Epoch: 1/2..  Training Loss: 4.923..  Training Accuracy: 0.055 Testing Loss: 4.569..  Testing
+    Accuracy: 0.132
+
+    Epoch: 1/2..  Training Loss: 4.726..  Training Accuracy: 0.080 Testing Loss: 4.384..  Testing
+    Accuracy: 0.163
+
+    Epoch: 2/2..  Training Loss: 4.398..  Training Accuracy: 0.146 Testing Loss: 4.243..  Testing
+    Accuracy: 0.184
+
+    Epoch: 2/2..  Training Loss: 4.290..  Training Accuracy: 0.141 Testing Loss: 4.132..  Testing
+    Accuracy: 0.199
+
+    Epoch: 2/2..  Training Loss: 4.261..  Training Accuracy: 0.139 Testing Loss: 4.025..  Testing
+    Accuracy: 0.210
+
+    Epoch: 2/2..  Training Loss: 4.129..  Training Accuracy: 0.156 Testing Loss: 3.908..  Testing
+    Accuracy: 0.219
+
+    .
+
+    .
+
+    .
+
+    Epoch: 18/20..  Training Loss: 0.027..  Training Accuracy: 0.994 Testing Loss:
+    0.351..  Testing Accuracy: 0.912
+
+    Epoch: 18/20..  Training Loss: 0.029..  Training Accuracy: 0.993 Testing Loss:
+    0.349..  Testing Accuracy: 0.913
+
+    Epoch: 19/20..  Training Loss: 0.032..  Training Accuracy: 0.990 Testing Loss:
+    0.349..  Testing Accuracy: 0.913
+
+    Epoch: 19/20..  Training Loss: 0.036..  Training Accuracy: 0.993 Testing Loss:
+    0.347..  Testing Accuracy: 0.913
+
+    Epoch: 19/20..  Training Loss: 0.024..  Training Accuracy: 0.993 Testing Loss:
+    0.347..  Testing Accuracy: 0.913
+
+    Epoch: 19/20..  Training Loss: 0.030..  Training Accuracy: 0.992 Testing Loss:
+    0.349..  Testing Accuracy: 0.913
+
+    Epoch: 20/20..  Training Loss: 0.028..  Training Accuracy: 0.993 Testing Loss:
+    0.348..  Testing Accuracy: 0.914
+
+    Epoch: 20/20..  Training Loss: 0.031..  Training Accuracy: 0.992 Testing Loss:
+    0.347..  Testing Accuracy: 0.913
+
+    Epoch: 20/20..  Training Loss: 0.028..  Training Accuracy: 0.992 Testing Loss:
+    0.348..  Testing Accuracy: 0.915
+
+    Epoch: 20/20..  Training Loss: 0.024..  Training Accuracy: 0.994 Testing Loss:
+    0.350..  Testing Accuracy: 0.913
+
+    ```
+
+
+    **Figure 7.30:** Output display for training and testing losses and accuracies
+    after 20 epochs (Learning rate 0.025%).
+
+
+    # 7.8 MODEL TESTING
+
+
+    The testing accuracy defines how well the model can predict the testing data set,
+    which has 8,041 car images. After training, our model can predict 91.5% of images
+    correctly. However, this accuracy is based on the testing images provided by Stanford’s
+    car dataset. We may check the model performance by taking a car picture or by
+    using a random car image from the internet.
+
+
+    We did a google search “Volkswagen Golf Hatchback 1991,” saved the image, and
+    uploaded it to the GCP cloud home folder using Jupyter Notebook. We also did cropping
+    before classifying this image, since our model was trained on cropped images.
+    Figure 7.31 shows the way to read an image from the home folder (e.g., car_image1.jpg)
+    and resize it for testing using our model.
+
+
+    Now to test this image through the model, we used the codes shown in Fig. 7.32.
+    The model output class here is 190+1 =191. As Python reads columns from 0, we
+    should add 1. From the cars_meta.csv file, we also find that class 191 is actually
+    Volkswagen Golf Hatchback 1991.
+
+
+    We also checked a couple of pre-2013 car model images from the internet, and most
+    of the time (9 out of 10), the model can predict car make, model, and year correctly.'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '```
+
+    ~~~python
+
+    image = cv2.imread(''car_image1.jpg'',1)
+
+    image = cv2.resize (image,(224,224))
+
+    ~~~
+
+    ```
+
+
+    ```
+
+    ~~~python
+
+    import matplotlib.pyplot as plt
+
+    plt.imshow(image)
+
+    ~~~
+
+    ```
+
+
+    `<matplotlib.image.AxesImage at 0x7f397bae77f0>`
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_102_0.png)
+
+
+    **Figure 7.31:** Codes to read car image and resize.
+
+
+    ```
+
+    ~~~python
+
+    image = T.Compose([T.ToPILImage(),T.ToTensor(),T.Normalize([0.485, 0.456, 0.406],[0.229,
+    0.224, 0.225])])(image)
+
+    image = image.unsqueeze(0)
+
+    image = image.float()
+
+    ~~~
+
+    ```
+
+
+    ```
+
+    ~~~python
+
+    image = image.cuda(non_blocking=True)
+
+    model.eval();
+
+    output = model(image)
+
+    ps = torch.exp(output)
+
+    ps.max(dim=1)[1]
+
+
+    tensor([190], device=''cuda:0'')
+
+    ~~~
+
+    ```
+
+
+    **Figure 7.32:** Load car image and test the model output. The output class 191
+    (190+1) is for Volkswagen Golf Hatchback 1991 model.
+
+
+    If you have followed all the steps up to here, you should also try to check this
+    model performance on different car images. You may also try testing images randomly
+    from 8,041 given images (test dataset) to see if the model can predict the car
+    make, types, and year correctly or not.
+
+
+    # 7.9　CONCLUSION
+
+
+    In this short book, we have shown a practical case study on how to use Python
+    and deep learning models for classifying image datasets. The accuracy we have
+    achieved here for multiclass clas-'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: 'sification is relatively good. Typically, if you spend a significant amount
+    of time on optimizing and do a lot of trials with hyperparameters, you will get
+    an accuracy higher than 90%. But it also depends on the type and quality of the
+    dataset you use for training. A good quality data for deep learning should be
+    large in volume, organized, and cleaned.
+
+
+    The Python programming used in the case study problem is a little advanced-level.
+    You might find a gap in the difficulty level between the examples showed in the
+    first two chapters and the case study. If you come across any Python library and
+    program syntax that looks unfamiliar to you, you should review or study that from
+    another source. There are a lot of free online Python books and useful learning
+    resources available that you can use for this purpose.
+
+
+    The goal of this book was to give someone a jump-start in the journey of deep
+    learning, without covering too many details and theories. One of the significant
+    challenges in implementing a deep learning algorithm is that it requires a GPU
+    enabled compute engine. To overcome this obstacle, we presented a cost-effective
+    approach (preemptible) for using GPU in a cloud platform (GCP).
+
+
+    The program shown here is structured in such a way that it can be used for other
+    deep learning models from PyTorch. The best way to use the instructions in this
+    book is to utilize free datasets to train a deep learning model that is available
+    online. Finally, if you are doing any computer-vision related project, you may
+    take a lot of pictures by yourself and use your dataset for training.
+
+
+    Deep learning or artificial intelligence is going to make a significant impact
+    on every aspect of our life. If we could blend our engineering knowledge with
+    this new technology, it will surely assist us in doing many exciting projects
+    and solving prediction related problems.'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# # Bibliography
+
+
+    +   1. G. Piatetsky, Python overtakes R, becomes the leader in data science, machine
+    learning platform, 2017. [https://www.kdnuggets.com/2017/08/python-overtakes-r-leader-analytics-data-science.html](https://www.kdnuggets.com/2017/08/python-overtakes-r-leader-analytics-data-science.html)
+    1
+
+    +   2. P. Guo, Python is now the most popular introductory teaching language at
+    top U.S. Universities, [https://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-u-s-universities/fulltext](https://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-u-s-universities/fulltext)
+    1
+
+    +   3. J. M. Perkel, Why Jupyter is data scientists’ computational notebook of
+    choice, *Nature*, 563(7729):145–146, November 2018. DOI: [10.1038/d41586-018-07196-1](https://doi.org/10.1038/d41586-018-07196-1).
+    2
+
+    +   4. PyTorch documentation. [https://pytorch.org/docs/stable/index.html](https://pytorch.org/docs/stable/index.html)
+    11
+
+    +   5. F. Chollet, *Deep Learning with Python*, Manning Publications Company,
+    2017. 11, 24
+
+    +   6. Tensor processing unit. [https://en.wikipedia.org/wiki/Tensor_processing_unit](https://en.wikipedia.org/wiki/Tensor_processing_unit)
+    11
+
+    +   7. O. I. Abiodun, A. Jantan, A. E. Omolara, K. V. Dada, N. A. Mohamed, and
+    H. Arshad, State-of-the-art in artificial neural network applications: A survey,
+    *Heliyon*, 4(11):e00938, 2018. DOI: [10.1016/j.heliyon.2018.e00938](https://doi.org/10.1016/j.heliyon.2018.e00938).
+    14, 18
+
+    +   8. M. Mehdy, P. Ng, E. Shair, N. Saleh, and C. Gomes, Artificial neural networks
+    in image processing for early detection of breast cancer, *Computational and Mathematical
+    Methods in Medicine*, 2017. DOI: [10.1155/2017/2610628](https://doi.org/10.1155/2017/2610628).
+    18
+
+    +   9. O. Araque, I. Corcuera-Platas, J. F. Sánchez-Rada, and C. A. Iglesias,
+    Enhancing deep learning sentiment analysis with ensemble techniques in social
+    applications, *Expert Systems with Applications*, 77:236–246, 2017. DOI: [10.1016/j.eswa.2017.02.002](https://doi.org/10.1016/j.eswa.2017.02.002).
+    18
+
+    +   10. X. Zhou, W. Gong, W. Fu, and F. Du, Application of deep learning in object
+    detection, *IEEE/ACIS 16th International Conference on Computer and Information
+    Science (ICIS)*, pages 631–634, 2017. DOI: [10.1109/icis.2017.7960069](https://doi.org/10.1109/icis.2017.7960069).
+    18
+
+    +   11. Activation function. [https://en.wikipedia.org/wiki/Activation_function](https://en.wikipedia.org/wiki/Activation_function)
+    24
+
+    +   12. Y. Ho and S. Wookey, The real-world-weight cross-entropy loss function:
+    Modeling the costs of mislabeling, *IEEE Access*, 2019. DOI: [10.1109/access.2019.2962617](https://doi.org/10.1109/access.2019.2962617).
+    24'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: '[13] C. C. Aggarwal, *Neural Networks and Deep Learning: A Textbook*, Springer
+    International Publishing, 2018. DOI: 10.1007/978-3-319-94463-0. 25, 36
+
+
+    [14] A. Ng, CS229 lecture notes: Supervised learning, 2018. http://cs229.stanford.edu/notes/cs229-notes1.pdf
+    26
+
+
+    [15] E. Kayacan and M. A. Khanesar, Chapter 5—Gradient descent methods for type-2
+    fuzzy neural networks, *Fuzzy Neural Networks for Real Time Control Applications*,
+    pages 45–70, E. Kayacan and M. A. Khanesar, Eds., Butterworth-Heinemann, 2016.
+    DOI: 10.1016/c2014-0-02444-6. 27
+
+
+    [16] S. Lau, Learning rate schedules and adaptive learning rate methods for deep
+    learning, 2017. https://towardsdatascience.com/learning-rate-schedules-and-adaptive-learning-rate-methods-for-deep-learning-2c8f433990d1
+    27
+
+
+    [17] PyTorch documentation—TORCH.OPTIM. https://pytorch.org/docs/stable/optim.html
+    27
+
+
+    [18] C. Szegedy, V. Vanhoucke, S. Ioffe, J. Shlens, and Z. Wojna, Rethinking the
+    inception architecture for computer vision, *IEEE Conference on Computer Vision
+    and Pattern Recognition (CVPR)*, pages 2818–2826, 2016. DOI: 10.1109/cvpr.2016.308.
+    29
+
+
+    [19] A. Krizhevsky, I. Sutskever, and G. E. Hinton, ImageNet classification with
+    deep convolutional neural networks, *Advances in Neural Information Processing
+    Systems*, pages 1097–1105, 2012. DOI: 10.1145/3065386. 29
+
+
+    [20] C. Szegedy, S. Ioffe, V. Vanhoucke, and A. A. Alemi, Inception-v4, Inception-ResNet
+    and the impact of residual connections on learning, *31st AAAI Conference on Artificial
+    Intelligence*, 2017. 29
+
+
+    [21] G. Huang, Z. Liu, L. Van Der Maaten, and K. Q. Weinberger, Densely connected
+    convolutional networks, *Proc. of the IEEE Conference on Computer Vision and Pattern
+    Recognition*, pages 4700–4708, 2017. DOI: 10.1109/cvpr.2017.243. 29
+
+
+    [22] D. Han, J. Kim, and J. Kim, *Deep Pyramidal Residual Networks*, pages 6307–6315,
+    2017. DOI: 10.1109/cvpr.2017.668. 29
+
+
+    [23] I. Goodfellow, Y. Bengio, and A. Courville, *Deep Learning*, MIT Press, 2016.
+    DOI: 10.1145/2976749.2978318. 29
+
+
+    [24] Y. LeCun, Y. Bengio, and G. Hinton, Deep learning, *Nature*, 521(7553):436–444,
+    May 1, 2015. DOI: 10.1038/nature14539. 29
+
+
+    [25] Y. Lecun, L. Bottou, Y. Bengio, and P. Haffner, Gradient-based learning applied
+    to document recognition, *Proc. of the IEEE*, 86(11):2278–2324, 1998. DOI: 10.1109/5.726791.
+    30'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '+   - [47] R. Marée, P. Geurts, and L. Wehenkel, Towards generic image classification
+    using tree-based learning: An extensive empirical study, *Pattern Recognition
+    Letters*, 74:17–23, April 15, 2016. DOI: 10.1016/j.patrec.2016.01.006. 37
+
+
+    +   - [48] O. Russakovsky et al., ImageNet large scale visual recognition challenge,
+    *International Journal of Computer Vision*, 115(3):211–252, December 1, 2015.
+    DOI: 10.1007/s11263-015-0816-y. 37
+
+
+    +   - [49] A. Torralba, R. Fergus, and W. T. Freeman, 80 million tiny images:
+    A large data set for nonparametric object and scene recognition, *IEEE Transactions
+    on Pattern Analysis and Machine Intelligence*, 30(11):1958–1970, 2008. DOI: 10.1109/tpami.2008.128.
+    37
+
+
+    +   - [50] S. J. Pan and Q. Yang, A survey on transfer learning, *IEEE Transactions
+    on Knowledge and Data Engineering*, 22(10):1345–1359, 2010. DOI: 10.1109/tkde.2009.191.
+    37
+
+
+    +   - [51] Keras applications. https://keras.io/api/applications/ 38
+
+
+    +   - [52] Q. V. Le, Building high-level features using large scale unsupervised
+    learning, *IEEE International Conference on Acoustics, Speech and Signal Processing*,
+    pages 8595–8598, 2013. DOI: 10.1109/icassp.2013.6639343. 38
+
+
+    +   - [53] A. Radford, L. Metz, and S. Chintala, Unsupervised representation learning
+    with deep convolutional generative adversarial networks, *ArXiv Preprint ArXiv:1511.06434*,
+    2015. 38
+
+
+    +   - [54] R. Wan, H. Xiong, X. Li, Z. Zhu, and J. Huan, Towards making deep transfer
+    learning never hurt, *IEEE International Conference on Data Mining (ICDM)*, pages
+    578–587, 2019. DOI: 10.1109/icdm.2019.00068. 38
+
+
+    +   - [55] C. Tan, F. Sun, T. Kong, W. Zhang, C. Yang, and C. Liu, A survey on
+    deep transfer learning, *International Conference on Artificial Neural Networks*,
+    pages 270–279, Springer, 2018. DOI: 10.1007/978-3-030-01424-7_27. 38
+
+
+    +   - [56] TORCHVISION.MODELS. https://pytorch.org/docs/stable/torchvision/models.html
+    39
+
+
+    +   - [57] Google app engine documentation. https://cloud.google.com/appengine/docs/
+    41
+
+
+    +   - [58] Google cloud free tier. https://cloud.google.com/free/docs/gcp-free-tier
+    41
+
+
+    +   - [59] Virtual machine instances. https://cloud.google.com/compute/docs/instances
+    45
+
+
+    +   - [60] Preemptible VM instances. https://cloud.google.com/compute/docs/instances/preemptible
+    54'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '# # BIBLIOGRAPHY
+
+
+    +   - [61] Running a notebook server. https://jupyter-notebook.readthedocs.io/en/stable/public_server.html
+    62
+
+
+    +   - [62] Cars dataset. http://ai.stanford.edu/jkrause/cars/car_dataset.html
+    67
+
+
+    +   - [63] J. Krause, M. Stark, J. Deng, and L. Fei-Fei, 3-D object representations
+    for fine-grained categorization, *IEEE International Conference on Computer Vision
+    Workshops*, pages 554–561, 2013. DOI: 10.1109/iccvw.2013.77 67
+
+
+    +   - [64] M. Tan and Q. V. Le, EfficientNet: Rethinking model scaling for convolutional
+    neural networks, *ArXiv Preprint ArXiv:1905.11946*, 2019. 79, 80'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '# Author’s Biography
+
+
+    # TARIQ M. ARIF
+
+
+    ![](img/194138d45b566d0634bfa2025ddf48f7_110_0.png)
+
+
+    **Tariq M. Arif** is an assistant professor in the Department of Mechanical Engineering
+    at Weber State University, UT. Prior to that, he worked at the University of Wisconsin,
+    Platteville, as a lecturer. Tariq obtained his Ph.D. in 2017 from the Mechanical
+    Engineering department of the New Jersey Institute of Technology (NJIT), NJ. His
+    main research interests are in the area of artificial intelligence and genetic
+    algorithm for robotics control, computer vision, and biomedical simulations of
+    focused ultrasound surgery. He completed his Masters in 2011 from the University
+    of Tokushima, Japan, and a B.Sc. in 2005 from Bangladesh University of Engineering
+    and Technology (BUET). Tariq also worked in the Japanese automobile industry as
+    a CAD/CAE engineer after completing his B.Sc. degree. In his industrial and academic
+    carrier, Tariq has been involved in many different research projects. Currently,
+    he is working on the implementation of deep learning models for various engineering
+    tasks.'
+  merge: -1
+  img_proc: true

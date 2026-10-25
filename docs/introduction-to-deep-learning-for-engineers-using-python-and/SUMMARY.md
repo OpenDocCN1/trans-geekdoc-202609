@@ -1,0 +1,2 @@
++   [工程师的深度学习入门指南：Python 和 Google Cloud Platform 使用指南（机械工程合成讲座）](README.md)
++   [工程师的深度学习入门指南：Python 和 Google Cloud Platform 使用指南（机械工程合成讲座）](introduction-to-deep-learning-for-engineers-using-python-and.md)
