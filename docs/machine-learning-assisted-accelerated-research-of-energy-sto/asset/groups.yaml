@@ -1,0 +1,3169 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Machine Learning-Assisted Accelerated Research of Energy Storage Properties
+    of BaTiO₃–BiMeO₃ Ceramics
+
+
+    Jian Liu, Peifeng Xiong, Changjiao Li, Hua Hao*, and Hanxing Liu*
+
+
+    ABSTRACT: The exploration of dielectric materials with excellent energy storage
+    properties has always been a research focus in the field of materials science.
+    The development of a technical method that can accurately predict the energy storage
+    characteristics of ceramics will significantly accelerate the pace of research
+    into energy storage materials. In this research, a machine learning method was
+    utilized with the aim of accurately predicting the energy storage density (Wrec)
+    and energy storage efficiency (η) of BaTiO3–BiMeO3 (BT-BMO) ferroelectric ceramics.
+    Initially, a data set was established on the energy storage properties of BT-BMO
+    bulk ceramics by consulting relevant published literature. Three distinct feature
+    vector spaces were constructed based on the physicochemical characteristics of
+    constituent elements, related property information, and sintering process parameters.
+    After that, multiple machine learning algorithm models were built to train and
+    predict Wrec and η. For the prediction of energy storage density, the 10-fold
+    cross-validation coefficient of determination (r2) and root-mean-squared error
+    (RMSE) of the GBR model are 0.974 and 0.142, respectively. For the prediction
+    of energy storage efficiency, the 10-fold cross-validation r2 and RMSE of the
+    LGBM model are 0.894 and 0.068, respectively. To enhance the interpretability
+    of the models, the Shapley additive explanation method was introduced, revealing
+    and briefly analyzing the important features that influence the target performance.
+    Finally, the material system of xBaTiO3–(1 – x)Bi(Zn2/3Ta1/3)O3, which was not
+    included in the data set, was synthesized experimentally and tested. The experimental
+    results were found to be close to the model''s predictions, thereby validating
+    the effectiveness of the method. This study provides a new approach that could
+    accelerate the development of dielectric materials with excellent energy storage
+    properties.
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_0_0.png)
+
+
+    KEYWORDS: machine learning, BaTiO3–BiMeO3, energy storage properties
+
+
+    # INTRODUCTION
+
+
+    As classical energy storage electronic devices, dielectric ceramic capacitors
+    have been widely studied due to their high power density, fast charge/discharge
+    rate, and high thermal stability.1–5 However, the relatively low energy storage
+    density restricts their applications. Considering environmental concerns of lead-based
+    ceramics, the development of lead-free ceramics with excellent energy storage
+    properties is an issue of great significance. As known, the total energy density
+    (W), recoverable energy storage density (Wrec), and efficiency (η) of dielectric
+    materials can be calculated by polarization–electric field (P–E) hysteresis loops.6
+    At present, linear dielectrics (LDs), ferroelectrics (FEs), antiferroelectrics
+    (AFEs), and relaxor ferroelectrics (RFEs) are actively researched for energy storage
+    applications.7–11 Among these materials, RFEs are ideal for energy storage materials
+    with high maximum polarization (Pmax), moderate breakdown strength (Eb), and low
+    remnant polarization (Pr). BaTiO3-based RFE ceramics are one of the dominant branches
+    of lead-free energy storage dielectrics. The BaTiO3–BiMeO3 (BT-BMO) [Me = Sc3+,
+    (Mg1/2Ti1/2)3+, (Ni2/3Nb1/3)3+, etc.] ceramics recognized as a “weakly coupled
+    relaxor”12 commonly exhibit slim P–E loops
+
+
+    with negligible Pr and high η. It is reported that there are three advantages
+    for BMO introduction: (1) it lowers the sintering temperature, inhibits grain
+    growth, and improves density, thereby increasing Eb of materials; (2) it helps
+    to form polar nanoregions, strengthening the relaxation behaviors of BT-based
+    ceramics, consequently reducing their Pr; (3) the hybridization of Bi 6s and O
+    2p orbitals can increase Pmax of materials.13–15 It has been widely acknowledged
+    that introducing an appropriate BMO can enhance the energy storage performance
+    of BT-based ceramics. Nevertheless, there are numerous possible element combinations
+    for BMO composition, and also, the doping content and processing parameters will
+    certainly affect the final energy storage performance. It is quite a challenge
+    to find an appropriate material system by the traditional trial-and-error method.
+
+
+    Received: December 12, 2024
+
+    Revised: February 9, 2025
+
+    Accepted: February 10, 2025
+
+    Published: February 17, 2025'
+  - '[PAGE 1]
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_1_0.png)
+
+
+    Figure 1. Workflow of machine learning for energy storage properties in this work.
+
+
+    Machine learning (ML), as a branch of artificial intelligence, has attracted mounting
+    attention among materials scientists in recent years.16–18 This surge in attention
+    is largely due to ML’s capacity to distill valuable insights from data sets and
+    autonomously refine its computational models, thereby yielding reliable results
+    that can significantly advance the field of materials science.19 For predicting
+    material properties, ML methods utilize the material composition, fundamental
+    element properties, or structural parameter as input (x) and the properties of
+    interest as output (Y), which is equivalent to building a functional form of Y
+    = f(x).20 Using a well-trained ML model can save the time and labor costs incurred
+    by the trial-and-error approach, accelerate the discovery of new materials, and
+    reveal the underlying relationships between properties, composition, and structure.21
+    Most published works involve combining ML methods with existing material databases22–24
+    and first-principles calculations to predict the intrinsic properties of materials.25–30
+    However, combining ML approaches with experiments provides a pathway for optimizing
+    experimental processes, exploring physical mechanisms, and accelerating the research
+    of novel materials more effectively. For instance, a framework combining ML and
+    the finite element method (FEM) was proposed by Qiao et al. to optimize the injection
+    molding process of complex ceramic parts.31 To identify the most important descriptors
+    for ferroelectric materials, He et al. adopted regression and classification learning
+    in different material systems including lead-free, lead-containing ceramics, and
+    antiferroelectrics and then screened out three descriptors from 46 potential descriptors
+    determining ferroelectricity.32 Yuan et al. proposed ML adaptive design strategies
+    to find BaTiO3-based multicomponent solid solutions with enhanced energy storage
+    density or electrostrain, significantly reducing the required experimental iterations
+    for identifying compounds with higher Wrec or electrostrain.33,34 In this work,
+    an ML approach combined with three strategies for feature construction is devised,
+    utilizing data encompassing material composition, characterization properties,
+    and sintering process parameters to build regression models to predict Wrec and
+    η of BT-BMO ceramics. A systematic and comprehensive comparative analysis is undertaken
+    to rigorously assess the performance of these models and
+
+
+    identify the most effective strategy and model for regression tasks. The key features
+    are subjected to rigorous evaluation employing a multistep selection method, including
+    the Pearson correlation matrix, importance analysis, and the best subset method.
+    Through these methods, the dimensionality of the feature space is reduced without
+    sacrificing accuracy, thus enhancing the efficiency of model training. Additionally,
+    the transparency and comprehensibility of the model were augmented by employing
+    the Shapley additive explanation (SHAP) method,35 revealing the relationships
+    between model inputs and outputs, which is critical for understanding the model’s
+    decision-making process and interpreting the results. Furthermore, an experimental
+    synthesis is performed to validate the predictive capabilities of the models,
+    confirming the reliability and practical applicability of the method. Our research
+    integrates ML techniques with a practical application, ensuring robust, interpretable,
+    and reliable estimations of Wrec and η in BT-BMO ceramics, providing valuable
+    insights applicable to actual experimental scenarios.
+
+
+    # EXPERIMENTAL SECTION
+
+
+    In general, the relationship between material features (x_i) and the target attribute
+    (y) can be established through the surrogate model (f) by using ML algorithms,
+    which can be represented as y = f(x_i). The workflow of the ML model for predicting
+    energy storage properties is illustrated in Figure 1, including data collection,
+    feature construction and selection, model establishment and evaluation, model
+    interpretation, and experimental validation.
+
+
+    **Data Collection and Processing.** When utilizing data-driven ML methods to predict
+    specific properties, the creation of a high-quality data set is indispensable
+    for building a robust ML model. The compilation of data involves a series of published
+    literature studies spanning several decades on BaTiO3–BiMeO3 relaxor ferroelectric
+    ceramics. To reduce the potential uncertainties arising from different experiment
+    methods and characterization, the collected data in this study exclusively originated
+    from bulk ceramic samples synthesized by a conventional solid-state reaction method.
+
+
+    Data of 28 kinds of BT-BMO material systems were collected from the published
+    literature in which BMO contained single trivalent metallic ions (Me = Al3+, Y3+,
+    Yb3+, etc.), binary trivalent metallic ion (Me = (Mg1/2Ti1/2)3+, (Ni2/Nb1)3/3+,
+    etc.), and multiple solid solution systems.12,14,15,36–58 Each of the 28 kinds
+    of materials has a different number of entries in the data set based on the content
+    of BMO and applied electric fields. The data distributions of Wrec and η'
+  md: '
+
+    ## Machine Learning-Assisted Accelerated Research of Energy Storage Properties
+    of BaTiO₃–BiMeO₃ Ceramics
+
+
+    Jian Liu, Peifeng Xiong, Changjiao Li, Hua Hao*, and Hanxing Liu*
+
+
+    ### ABSTRACT
+
+    The exploration of dielectric materials with excellent energy storage properties
+    has always been a research focus in the field of materials science. The development
+    of a technical method that can accurately predict the energy storage characteristics
+    of ceramics will significantly accelerate the pace of research into energy storage
+    materials. In this research, a machine learning method was utilized with the aim
+    of accurately predicting the energy storage density (Wrec) and energy storage
+    efficiency (η) of BaTiO3–BiMeO3 (BT-BMO) ferroelectric ceramics. Initially, a
+    data set was established on the energy storage properties of BT-BMO bulk ceramics
+    by consulting relevant published literature. Three distinct feature vector spaces
+    were constructed based on the physicochemical characteristics of constituent elements,
+    related property information, and sintering process parameters. After that, multiple
+    machine learning algorithm models were built to train and predict Wrec and η.
+    For the prediction of energy storage density, the 10-fold cross-validation coefficient
+    of determination (r²) and root-mean-squared error (RMSE) of the GBR model are
+    0.974 and 0.142, respectively. For the prediction of energy storage efficiency,
+    the 10-fold cross-validation r² and RMSE of the LGBM model are 0.894 and 0.068,
+    respectively. To enhance the interpretability of the models, the Shapley additive
+    explanation method was introduced, revealing and briefly analyzing the important
+    features that influence the target performance. Finally, the material system of
+    xBaTiO3–(1 – x)Bi(Zn2/3Ta1/3)O3, which was not included in the data set, was synthesized
+    experimentally and tested. The experimental results were found to be close to
+    the model''s predictions, thereby validating the effectiveness of the method.
+    This study provides a new approach that could accelerate the development of dielectric
+    materials with excellent energy storage properties.
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_0_0.png)
+
+
+    ### KEYWORDS
+
+    machine learning, BaTiO3–BiMeO3, energy storage properties
+
+
+    ### INTRODUCTION
+
+
+    As classical energy storage electronic devices, dielectric ceramic capacitors
+    have been widely studied due to their high power density, fast charge/discharge
+    rate, and high thermal stability.1–5 However, the relatively low energy storage
+    density restricts their applications. Considering environmental concerns of lead-based
+    ceramics, the development of lead-free ceramics with excellent energy storage
+    properties is an issue of great significance. As known, the total energy density
+    (W), recoverable energy storage density (Wrec), and efficiency (η) of dielectric
+    materials can be calculated by polarization–electric field (P–E) hysteresis loops.6
+    At present, linear dielectrics (LDs), ferroelectrics (FEs), antiferroelectrics
+    (AFEs), and relaxor ferroelectrics (RFEs) are actively researched for energy storage
+    applications.7–11 Among these materials, RFEs are ideal for energy storage materials
+    with high maximum polarization (Pmax), moderate breakdown strength (Eb), and low
+    remnant polarization (Pr). BaTiO3-based RFE ceramics are one of the dominant branches
+    of lead-free energy storage dielectrics. The BaTiO3–BiMeO3 (BT-BMO) [Me = Sc3+,
+    (Mg1/2Ti1/2)3+, (Ni2/3Nb1/3)3+, etc.] ceramics recognized as a “weakly coupled
+    relaxor”12 commonly exhibit slim P–E loops with negligible Pr and high η. It is
+    reported that there are three advantages for BMO introduction: (1) it lowers the
+    sintering temperature, inhibits grain growth, and improves density, thereby increasing
+    Eb of materials; (2) it helps to form polar nanoregions, strengthening the relaxation
+    behaviors of BT-based ceramics, consequently reducing their Pr; (3) the hybridization
+    of Bi 6s and O 2p orbitals can increase Pmax of materials.13–15 It has been widely
+    acknowledged that introducing an appropriate BMO can enhance the energy storage
+    performance of BT-based ceramics. Nevertheless, there are numerous possible element
+    combinations for BMO composition, and also, the doping content and processing
+    parameters will certainly affect the final energy storage performance. It is quite
+    a challenge to find an appropriate material system by the traditional trial-and-error
+    method.
+
+
+    Received: December 12, 2024
+
+    Revised: February 9, 2025
+
+    Accepted: February 10, 2025
+
+    Published: February 17, 2025
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_1_0.png)
+
+
+    Figure 1. Workflow of machine learning for energy storage properties in this work.
+
+
+    Machine learning (ML), as a branch of artificial intelligence, has attracted mounting
+    attention among materials scientists in recent years.16–18 This surge in attention
+    is largely due to ML’s capacity to distill valuable insights from data sets and
+    autonomously refine its computational models, thereby yielding reliable results
+    that can significantly advance the field of materials science.19 For predicting
+    material properties, ML methods utilize the material composition, fundamental
+    element properties, or structural parameter as input (x) and the properties of
+    interest as output (Y), which is equivalent to building a functional form of Y
+    = f(x).20 Using a well-trained ML model can save the time and labor costs incurred
+    by the trial-and-error approach, accelerate the discovery of new materials, and
+    reveal the underlying relationships between properties, composition, and structure.21
+    Most published works involve combining ML methods with existing material databases22–24
+    and first-principles calculations to predict the intrinsic properties of materials.25–30
+    However, combining ML approaches with experiments provides a pathway for optimizing
+    experimental processes, exploring physical mechanisms, and accelerating the research
+    of novel materials more effectively. For instance, a framework combining ML and
+    the finite element method (FEM) was proposed by Qiao et al. to optimize the injection
+    molding process of complex ceramic parts.31 To identify the most important descriptors
+    for ferroelectric materials, He et al. adopted regression and classification learning
+    in different material systems including lead-free, lead-containing ceramics, and
+    antiferroelectrics and then screened out three descriptors from 46 potential descriptors
+    determining ferroelectricity.32 Yuan et al. proposed ML adaptive design strategies
+    to find BaTiO3-based multicomponent solid solutions with enhanced energy storage
+    density or electrostrain, significantly reducing the required experimental iterations
+    for identifying compounds with higher Wrec or electrostrain.33,34 In this work,
+    an ML approach combined with three strategies for feature construction is devised,
+    utilizing data encompassing material composition, characterization properties,
+    and sintering process parameters to build regression models to predict Wrec and
+    η of BT-BMO ceramics. A systematic and comprehensive comparative analysis is undertaken
+    to rigorously assess the performance of these models and identify the most effective
+    strategy and model for regression tasks. The key features are subjected to rigorous
+    evaluation employing a multistep selection method, including the Pearson correlation
+    matrix, importance analysis, and the best subset method. Through these methods,
+    the dimensionality of the feature space is reduced without sacrificing accuracy,
+    thus enhancing the efficiency of model training. Additionally, the transparency
+    and comprehensibility of the model were augmented by employing the Shapley additive
+    explanation (SHAP) method,35 revealing the relationships between model inputs
+    and outputs, which is critical for understanding the model’s decision-making process
+    and interpreting the results. Furthermore, an experimental synthesis is performed
+    to validate the predictive capabilities of the models, confirming the reliability
+    and practical applicability of the method. Our research integrates ML techniques
+    with a practical application, ensuring robust, interpretable, and reliable estimations
+    of Wrec and η in BT-BMO ceramics, providing valuable insights applicable to actual
+    experimental scenarios.
+
+
+    ### EXPERIMENTAL SECTION
+
+
+    In general, the relationship between material features (x_i) and the target attribute
+    (y) can be established through the surrogate model (f) by using ML algorithms,
+    which can be represented as y = f(x_i). The workflow of the ML model for predicting
+    energy storage properties is illustrated in Figure 1, including data collection,
+    feature construction and selection, model establishment and evaluation, model
+    interpretation, and experimental validation.
+
+
+    **Data Collection and Processing.** When utilizing data-driven ML methods to predict
+    specific properties, the creation of a high-quality data set is indispensable
+    for building a robust ML model. The compilation of data involves a series of published
+    literature studies spanning several decades on BaTiO3–BiMeO3 relaxor ferroelectric
+    ceramics. To reduce the potential uncertainties arising from different experiment
+    methods and characterization, the collected data in this study exclusively originated
+    from bulk ceramic samples synthesized by a conventional solid-state reaction method.
+
+
+    Data of 28 kinds of BT-BMO material systems were collected from the published
+    literature in which BMO contained single trivalent metallic ions (Me = Al3+, Y3+,
+    Yb3+, etc.), binary trivalent metallic ion (Me = (Mg1/2Ti1/2)3+, (Ni2/3Nb1/3)3+,
+    etc.), and multiple solid solution systems.12,14,15,36–58 Each of the 28 kinds
+    of materials has a different number of entries in the data set based on the content
+    of BMO and applied electric fields. The data distributions of Wrec and η
+
+    '
+  mdcn: '
+
+
+    ## 机器学习辅助的BaTiO₃–BiMeO₃陶瓷储能性能加速研究
+
+
+    Jian Liu, Peifeng Xiong, Changjiao Li, Hua Hao*, and Hanxing Liu*
+
+
+    ### 摘要
+
+    具有优异储能性能的介电材料的探索一直是材料科学领域的研究热点。开发一种能够准确预测陶瓷储能特性的技术方法，将显著加速储能材料研究的进程。在本研究中，采用机器学习方法，旨在准确预测BaTiO3–BiMeO3（BT-BMO）铁电陶瓷的储能密度（Wrec）和储能效率（η）。最初，通过查阅相关已发表文献，建立了BT-BMO块体陶瓷储能性能的数据集。基于组分元素的理化特性、相关属性信息及烧结工艺参数，构建了三种不同的特征向量空间。随后，构建了多种机器学习算法模型来训练和预测Wrec和η。对于储能密度的预测，GBR模型的10倍交叉验证决定系数（r²）和均方根误差（RMSE）分别为0.974和0.142。对于储能效率的预测，LGBM模型的10倍交叉验证r²和RMSE分别为0.894和0.068。为增强模型的可解释性，引入了Shapley增量解释方法，揭示并简要分析了影响目标性能的重要特征。最后，对未包含在数据集中的xBaTiO3–(1
+    – x)Bi(Zn2/3Ta1/3)O3材料体系进行了实验合成和测试。实验结果发现与模型预测接近，从而验证了该方法的有效性。本研究提供了一种新方法，可加速具有优异储能性能的介电材料的开发。
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_0_0.png)
+
+
+    ### 关键词
+
+    机器学习, BaTiO3–BiMeO3, 储能性能
+
+
+    ### 引言
+
+
+    作为经典的储能电子器件，介电陶瓷电容器因其高功率密度、快速充放电速率和高热稳定性而被广泛研究。1–5 然而，相对较低的储能密度限制了它们的应用。考虑到铅基陶瓷的环境问题，开发具有优异储能性能的无铅陶瓷是一个极具重要意义的问题。已知，介电材料的总能量密度（W）、可回收储能密度（Wrec）和效率（η）可通过极化-电场（P-E）滞后回线计算。6
+    目前，线性介电体（LDs）、铁电体（FEs）、反铁电体（AFEs）和弛豫铁电体（RFEs）正在积极研究用于储能应用。7–11 在这些材料中，RFEs是理想的储能材料，具有高最大极化（Pmax）、中等击穿强度（Eb）和低剩余极化（Pr）。基于BaTiO3的RFE陶瓷是无铅储能介电体的主导分支之一。被公认为“弱耦合弛豫体”12的BaTiO3–BiMeO3（BT-BMO）[Me
+    = Sc3+, (Mg1/2Ti1/2)3+, (Ni2/3Nb1/3)3+等]陶瓷通常表现出纤细的P-E回线，具有可忽略的Pr和高η。有报道指出，引入BMO有三个优势：（1）它降低烧结温度，抑制晶粒生长，并提高密度，从而增加材料的Eb；（2）它有助于形成极性纳米区域，增强基于BT的陶瓷的弛豫行为，从而降低其Pr；（3）Bi
+    6s和O 2p轨道的杂化可以增加材料的Pmax。13–15 已广泛承认，引入适当的BMO可以增强基于BT的陶瓷的储能性能。然而，BMO组成有众多可能的元素组合，而且掺杂含量和加工参数肯定会影响最终的储能性能。通过传统的试错方法寻找合适的材料体系是一个巨大的挑战。
+
+
+    Received: December 12, 2024
+
+    Revised: February 9, 2025
+
+    Accepted: February 10, 2025
+
+    Published: February 17, 2025
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_1_0.png)
+
+
+    图1. 本工作中用于储能性能的机器学习工作流。
+
+
+    机器学习（ML）作为人工智能的一个分支，近年来在材料科学家中引起了日益关注。16–18 这种关注度的激增很大程度上归功于ML从数据集中提取有价值见解并自主改进其计算模型的能力，从而产生可显著推动材料科学领域发展的可靠结果。19
+    对于材料性质预测，ML方法利用材料组成、基本元素性质或结构参数作为输入（x），将感兴趣的性质作为输出（Y），这相当于构建Y = f(x)的函数形式。20 使用训练有素的ML模型可以节省试错方法带来的时间和人力成本，加速新材料的发现，并揭示性能、组成和结构之间的潜在关系。21
+    大多数已发表的工作涉及将ML方法与现有材料数据库22–24和第一性原理计算相结合，以预测材料的固有性质。25–30 然而，将ML方法与实验相结合为优化实验过程、探索物理机制以及更有效地加速新材料研究提供了一条途径。例如，Qiao等人提出了一种结合ML和有限元法（FEM）的框架，以优化复杂陶瓷零件的注塑成型工艺。31
+    为了确定铁电材料最重要的描述符，He等人在包括无铅、含铅陶瓷和反铁电体在内的不同材料体系中采用了回归和分类学习，然后从46个决定铁电性的潜在描述符中筛选出三个描述符。32
+    Yuan等人提出了ML自适应设计策略，以寻找具有增强储能密度或电致应变的基于BaTiO3的多组分固溶体，显著减少了识别具有更高Wrec或电致应变化合物所需的实验迭代次数。33,34
+    在本工作中，提出了一种结合三种特征构建策略的ML方法，利用涵盖材料组成、表征性能和烧结工艺参数的数据构建回归模型，以预测BT-BMO陶瓷的Wrec和η。开展了系统而全面的比较分析，以严格评估这些模型的性能，并确定回归任务中最有效的策略和模型。关键特征采用多步选择方法（包括Pearson相关矩阵、重要性分析和最佳子集方法）进行严格评估。通过这些方法，在不牺牲精度的前提下降低了特征空间的维度，从而提高了模型训练的效率。此外，通过采用Shapley增量解释（SHAP）方法35，增强了模型的透明度和可理解性，揭示了模型输入和输出之间的关系，这对于理解模型的决策过程和解释结果至关重要。此外，进行了实验合成以验证模型的预测能力，证实了该方法的可靠性和实际适用性。我们的研究将ML技术与实际应用相结合，确保对BT-BMO陶瓷中Wrec和η进行稳健、可解释和可靠的估计，为实际实验场景提供有价值的见解。
+
+
+    ### 实验部分
+
+
+    一般来说，可以通过使用ML算法的代理模型（f）建立材料特征（x_i）与目标属性（y）之间的关系，可表示为y = f(x_i)。图1说明了用于预测储能性能的ML模型的工作流程，包括数据收集、特征构建与选择、模型建立与评估、模型解释和实验验证。
+
+
+    **数据收集与处理。** 当利用数据驱动的ML方法预测特定性质时，创建高质量数据集对于构建稳健的ML模型是必不可少的。数据编纂涉及跨越数十年的关于BaTiO3–BiMeO3弛豫铁电陶瓷的一系列已发表文献研究。为减少不同实验方法和表征带来的潜在不确定性，本研究中收集的数据仅来源于通过常规固相反应法合成的块体陶瓷样品。
+
+
+    从已发表文献中收集了28种BT-BMO材料体系的数据，其中BMO包含单一三价金属离子（Me = Al3+, Y3+, Yb3+等）、二元三价金属离子（Me
+    = (Mg1/2Ti1/2)3+, (Ni2/3Nb1/3)3+等）以及多组分固溶体系统。12,14,15,36–58 这28种材料中的每一种在数据集中的条目数量都不同，取决于BMO的含量和施加的电场。Wrec和η的数据分布
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_2_0.png)
+
+
+    Figure 2. Data histogram and kernel density estimation of (a) $W_{rec}$ (b) $\eta$,
+    (c) log-scaled $W_{rec}$ ($W_{rec}''$), and (d) arcsine square root $\eta$ ($\eta''$).
+
+
+    are shown in Figure 2a,b. Most of the $W_{rec}$ values are located in the range
+    of less than 2.0, and most of the $\eta$ values are located in the range of more
+    than 0.8. To make the distribution of data close to normal distribution and improve
+    the performance of the ML model, the data transformation was conducted on the
+    target attribute. Various transformation methods were tested, and ultimately,
+    it was found that applying the log-scaled transformation to $W_{rec}$ and arcsine
+    square root transformation to $\eta$ yielded the best result. For convenience,
+    in the following context, let $W_{rec}''$ represent the log-scaled value of $W_{rec}$
+    and $\eta''$ represent the arcsine square root value of $\eta$. The data distribution
+    histograms and kernel density curves of $W_{rec}''$ and $\eta''$ are shown in
+    Figures 2c and 2d, respectively. The data distribution in Figure 2c is close to
+    a normal distribution, while the data distribution in Figure 2d does not exhibit
+    a completely normal distribution. However, this is already a transformation result
+    that we have selected as the closest to a normal distribution after trying various
+    transformation methods. Given the obtained distributions, the regression models
+    are expected to show high predictability.59
+
+
+    Typically, the data provided in the literature only include the better performance
+    data, so the WebPlotDigitizer and Engauge Digitizer60,61 tools were utilized to
+    extract additional data from the figures in the literature. Within this data set,
+    there exist data with identical compositions but varying properties of identical
+    materials, which can be attributed to the differences in calcination and sintering
+    processes or applied electric fields. During the data collection phase, it is
+    inevitable that there will be instances where the material composition is identical
+    but the performance differs. If the performance differences are minor when the
+    sintering processes are similar, then the data will be retained. However, if the
+    performance differences are significant even with similar sintering process parameters,
+    the data will be removed. Such data points are retained in the data set after
+    careful examination to ensure that the deviation falls within a reasonable range.
+    After data processing, a data set consisting of 227 BT-BMO samples are constructed
+    for further regression learning and analysis.
+
+
+    **Feature Construction.** To construct a high-precision ML model and to conduct
+    a comprehensive exploration of how composition, physical properties, and the sintering
+    process influence the energy storage performances of BT-BMO, we have collected
+    data on material
+
+
+    element information ($C_i$), characterization properties ($L_i$), and experimental
+    parameters related to calcination and sintering processes ($P_i$).
+
+
+    The element information features are derived from easily accessible elemental
+    information. Based on domain knowledge of relaxor ferroelectrics, 20 descriptors
+    are selected to represent the properties of A-site and B-site elements, covering
+    the atomic mass, atomic radius, electronegativity, and other descriptors (detailed
+    information in the Supporting Information). In order to accurately describe each
+    component, we represent the weighted ratio of A-site and B-site information as
+    features and define the material descriptors as follows:32
+
+
+    ```
+
+    $$X_{A/B} = \frac{X_A}{X_B} = \frac{\sum_{i \in A} f_i^X X_i}{\sum_{i \in B} f_i^X
+    X_i}$$
+
+    ```
+
+
+    where $f_i$ is the mole fraction of the element in the chemical composition and
+    X is the property of an element. By calculating the ratio of A- and B-site information
+    using eq 1, 16 material descriptors were obtained, as shown in the first 16 rows
+    in the Supporting Information, Table S1. In addition, the electronegativity (EN),
+    first ionization energy (IE), electron affinity (EA), and pseudopotential core
+    radius (PR) are mainly used to compare the difference between cations and anions;
+    we defined the material descriptors X by eq 2:32
+
+
+    ```
+
+    $$X = ([X_A - X_O] + |X_B - X_O|)/2$$
+
+    ```
+
+
+    where $X_O$ represents information on oxygen. In addition, the tolerance factor
+    ($t$) and octahedral factor ($\mu$) reflecting the stability of perovskite structures
+    are added. Since every BT-BMO compound is a solid solution, weighted fractions
+    to proportions of BT and BMO in the solid solution are used to calculate the features
+    representing the whole composite, defined by eq 3:
+
+
+    ```
+
+    $$X_{solid solution} = (1 - x)X_{BT} + xX_{BMO}$$
+
+    ```
+
+
+    Since the database contains data for the same component under different electric
+    fields, the electric field ($E$) must also be an indispensable feature. Therefore,
+    22 features obtained through eqs 1–3, along with the $E$, constitute the feature
+    pool for strategy I ($C_i$).'
+  - '[PAGE 3]
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_3_0.png)
+
+
+    Figure 3. Pearson correlation matrix of the original 31 features.
+
+
+    The features about characterization properties of each material ($L_i$) are extracted
+    from the literature including the average grain size (GS), maximum dielectric
+    constant ($\varepsilon_m$), relaxation diffuseness ($\gamma$) calculated by the
+    modified Curie–Weiss law (eq 4), and maximum and remnant polarization ($P_{max}$
+    and $P_r$) at the applied electric field. According to eq 5, $P_{max}$ and $P_r$
+    are combined into single feature $\Delta P$ and placed into the feature pool.
+    These features provide the microstructure, dielectric properties, relaxor behavior,
+    and polarization characteristics of each material. Therefore, the feature pool
+    of strategy II ($L_r + C_t$) contains 27 features in total.
+
+
+    ```
+
+    1/\varepsilon_r - 1/\varepsilon_m = (T - T_m)^\gamma / C
+
+    ```
+
+
+    ```
+
+    \Delta P = P_{max} - P_r
+
+    ```
+
+
+    The manufacturing process of ceramics can significantly affect the microstructure
+    of materials, particularly in the case of BT-BMO materials. Due to the relatively
+    low melting point of Bi2O3 (825 °C), improper processing will result in abnormal
+    grain growth and formation of voids at grain boundaries, which can adversely affect
+    the energy storage performance. Thus, the processing parameters of each material
+    are extracted from published papers to expand the feature pool ($P_i$), including
+    calcination temperature (CT), calcination time (ct), sintering temperature (ST),
+    and sintering time (st). So, the feature pool of strategy III ($P_i + L_i + C_t$)
+    encompasses 31 features. The detailed list of features is shown in Table S1 in
+    the Supporting Information.
+
+
+    When the number of features in a data set is large, the complexity of the model
+    will correspondingly increase, which will affect the efficiency of model training
+    and may also lead to overfitting of the model. A combination of physical knowledge,
+    the Pearson correlation coefficient, and feature importance analysis methods were
+    employed to perform dimensionality reduction on the feature space. The Pearson
+    correlation matrix is utilized to identify the highly correlated features, as
+    shown in Figure 3. The red and blue colors represent negative and positive correlations
+    between two features, with brighter shades denoting higher correlations. Generally,
+    an absolute value of
+
+
+    the Pearson correlation coefficient between features exceeding 0.8 is considered
+    to indicate a strong correlation between them. For groups of strongly correlated
+    features, only one feature was retained to avoid redundancy. During the process
+    of feature selection and elimination, we relied on both physical knowledge and
+    the feature importance feedback from the model. Considering that the calcination
+    and sintering times (Ct and St) of BT-BMO ceramics reported in the literature
+    are mostly in the range of 2–4 h with no significant variation, these two features
+    were excluded from the final pool. The final feature pools of each strategy are
+    given in Tables 1 and 2.
+
+
+    **Table 1. Final Feature Pool of Each Strategy for the** $W_{rec}''$ **Model**
+
+
+    | strategy | final feature pool |
+
+    |---|---|
+
+    | I | AM, PE, MN, DV, VEN, D, IE, E |
+
+    | II | AM, PE, MN, DV, VEN, D, IE, E, GS, Conmax, DIF, $\Delta P$ |
+
+    | III | AM, PE, MN, DV, VEN, D, IE, E, GS, Conmax, DIF, $\Delta P$, CT, ST |
+
+
+    **Table 2. Final Feature Pool of Each Strategy for the** $\eta''$ **Model**
+
+
+    | strategy | final feature pool |
+
+    |---|---|
+
+    | I | $\mu$, AM, PE, MN, R, DV, VEN, E |
+
+    | II | $\mu$, AM, PE, MN, R, DV, VEN, E, GS, Conmax, DIF, $\Delta P$ |
+
+    | III | $\mu$, AM, PE, MN, R, DV, VEN, E, GS, Conmax, DIF, $\Delta P$, CT, ST
+    |
+
+
+    **Model Establishment and Evaluation.** Employing a suitable inference model is
+    recognized to be a crucial part of machine learning. There is no ML model universally
+    optimal for all problems; instead, each particular problem needs a particular
+    ML model to analyze.62 Six typical models are trained via every feature construction
+    strategy to predict the log-scaled energy storage density values ($W_{rec}''$)
+    and arcsine square root $\eta$ values ($\eta''$), including the linear regression
+    algorithm (linear), support vector regression with a radial basis'
+  md: '
+
+    ![](img/156bcf868020d5f996268c9ad3226597_2_0.png)
+
+
+    Figure 2. Data histogram and kernel density estimation of (a) $W_{rec}$ (b) $\eta$,
+    (c) log-scaled $W_{rec}$ ($W_{rec}''$), and (d) arcsine square root $\eta$ ($\eta''$).
+
+
+    are shown in Figure 2a,b. Most of the $W_{rec}$ values are located in the range
+    of less than 2.0, and most of the $\eta$ values are located in the range of more
+    than 0.8. To make the distribution of data close to normal distribution and improve
+    the performance of the ML model, the data transformation was conducted on the
+    target attribute. Various transformation methods were tested, and ultimately,
+    it was found that applying the log-scaled transformation to $W_{rec}$ and arcsine
+    square root transformation to $\eta$ yielded the best result. For convenience,
+    in the following context, let $W_{rec}''$ represent the log-scaled value of $W_{rec}$
+    and $\eta''$ represent the arcsine square root value of $\eta$. The data distribution
+    histograms and kernel density curves of $W_{rec}''$ and $\eta''$ are shown in
+    Figures 2c and 2d, respectively. The data distribution in Figure 2c is close to
+    a normal distribution, while the data distribution in Figure 2d does not exhibit
+    a completely normal distribution. However, this is already a transformation result
+    that we have selected as the closest to a normal distribution after trying various
+    transformation methods. Given the obtained distributions, the regression models
+    are expected to show high predictability. [59]
+
+
+    Typically, the data provided in the literature only include the better performance
+    data, so the WebPlotDigitizer and Engauge Digitizer [60,61] tools were utilized
+    to extract additional data from the figures in the literature. Within this data
+    set, there exist data with identical compositions but varying properties of identical
+    materials, which can be attributed to the differences in calcination and sintering
+    processes or applied electric fields. During the data collection phase, it is
+    inevitable that there will be instances where the material composition is identical
+    but the performance differs. If the performance differences are minor when the
+    sintering processes are similar, then the data will be retained. However, if the
+    performance differences are significant even with similar sintering process parameters,
+    the data will be removed. Such data points are retained in the data set after
+    careful examination to ensure that the deviation falls within a reasonable range.
+    After data processing, a data set consisting of 227 BT-BMO samples are constructed
+    for further regression learning and analysis.
+
+
+    ## Feature Construction
+
+
+    To construct a high-precision ML model and to conduct a comprehensive exploration
+    of how composition, physical properties, and the sintering process influence the
+    energy storage performances of BT-BMO, we have collected data on material element
+    information ($C_i$), characterization properties ($L_i$), and experimental parameters
+    related to calcination and sintering processes ($P_i$).
+
+
+    The element information features are derived from easily accessible elemental
+    information. Based on domain knowledge of relaxor ferroelectrics, 20 descriptors
+    are selected to represent the properties of A-site and B-site elements, covering
+    the atomic mass, atomic radius, electronegativity, and other descriptors (detailed
+    information in the Supporting Information). In order to accurately describe each
+    component, we represent the weighted ratio of A-site and B-site information as
+    features and define the material descriptors as follows: [32]
+
+
+    ```
+
+    $$X_{A/B} = \frac{X_A}{X_B} = \frac{\sum_{i \in A} f_i^X X_i}{\sum_{i \in B} f_i^X
+    X_i}$$
+
+    ```
+
+
+    where $f_i$ is the mole fraction of the element in the chemical composition and
+    X is the property of an element. By calculating the ratio of A- and B-site information
+    using eq 1, 16 material descriptors were obtained, as shown in the first 16 rows
+    in the Supporting Information, Table S1. In addition, the electronegativity (EN),
+    first ionization energy (IE), electron affinity (EA), and pseudopotential core
+    radius (PR) are mainly used to compare the difference between cations and anions;
+    we defined the material descriptors X by eq 2: [32]
+
+
+    ```
+
+    $$X = ([X_A - X_O] + |X_B - X_O|)/2$$
+
+    ```
+
+
+    where $X_O$ represents information on oxygen. In addition, the tolerance factor
+    ($t$) and octahedral factor ($\mu$) reflecting the stability of perovskite structures
+    are added. Since every BT-BMO compound is a solid solution, weighted fractions
+    to proportions of BT and BMO in the solid solution are used to calculate the features
+    representing the whole composite, defined by eq 3:
+
+
+    ```
+
+    $$X_{solid solution} = (1 - x)X_{BT} + xX_{BMO}$$
+
+    ```
+
+
+    Since the database contains data for the same component under different electric
+    fields, the electric field ($E$) must also be an indispensable feature. Therefore,
+    22 features obtained through eqs 1–3, along with the $E$, constitute the feature
+    pool for strategy I ($C_i$).
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_3_0.png)
+
+
+    Figure 3. Pearson correlation matrix of the original 31 features.
+
+
+    The features about characterization properties of each material ($L_i$) are extracted
+    from the literature including the average grain size (GS), maximum dielectric
+    constant ($\varepsilon_m$), relaxation diffuseness ($\gamma$) calculated by the
+    modified Curie–Weiss law (eq 4), and maximum and remnant polarization ($P_{max}$
+    and $P_r$) at the applied electric field. According to eq 5, $P_{max}$ and $P_r$
+    are combined into single feature $\Delta P$ and placed into the feature pool.
+    These features provide the microstructure, dielectric properties, relaxor behavior,
+    and polarization characteristics of each material. Therefore, the feature pool
+    of strategy II ($L_i + C_i$) contains 27 features in total.
+
+
+    ```
+
+    1/\varepsilon_r - 1/\varepsilon_m = (T - T_m)^\gamma / C
+
+    ```
+
+
+    ```
+
+    \Delta P = P_{max} - P_r
+
+    ```
+
+
+    The manufacturing process of ceramics can significantly affect the microstructure
+    of materials, particularly in the case of BT-BMO materials. Due to the relatively
+    low melting point of Bi2O3 (825 °C), improper processing will result in abnormal
+    grain growth and formation of voids at grain boundaries, which can adversely affect
+    the energy storage performance. Thus, the processing parameters of each material
+    are extracted from published papers to expand the feature pool ($P_i$), including
+    calcination temperature (CT), calcination time (CT), sintering temperature (ST),
+    and sintering time (ST). So, the feature pool of strategy III ($P_i + L_i + C_i$)
+    encompasses 31 features. The detailed list of features is shown in Table S1 in
+    the Supporting Information.
+
+
+    When the number of features in a data set is large, the complexity of the model
+    will correspondingly increase, which will affect the efficiency of model training
+    and may also lead to overfitting of the model. A combination of physical knowledge,
+    the Pearson correlation coefficient, and feature importance analysis methods were
+    employed to perform dimensionality reduction on the feature space. The Pearson
+    correlation matrix is utilized to identify the highly correlated features, as
+    shown in Figure 3. The red and blue colors represent negative and positive correlations
+    between two features, with brighter shades denoting higher correlations. Generally,
+    an absolute value of the Pearson correlation coefficient between features exceeding
+    0.8 is considered to indicate a strong correlation between them. For groups of
+    strongly correlated features, only one feature was retained to avoid redundancy.
+    During the process of feature selection and elimination, we relied on both physical
+    knowledge and the feature importance feedback from the model. Considering that
+    the calcination and sintering times (CT and ST) of BT-BMO ceramics reported in
+    the literature are mostly in the range of 2–4 h with no significant variation,
+    these two features were excluded from the final pool. The final feature pools
+    of each strategy are given in Tables 1 and 2.
+
+
+    **Table 1. Final Feature Pool of Each Strategy for the** $W_{rec}''$ **Model**
+
+
+    | strategy | final feature pool |
+
+    |---|---|
+
+    | I | AM, PE, MN, DV, VEN, D, IE, E |
+
+    | II | AM, PE, MN, DV, VEN, D, IE, E, GS, Conmax, DIF, $\Delta P$ |
+
+    | III | AM, PE, MN, DV, VEN, D, IE, E, GS, Conmax, DIF, $\Delta P$, CT, ST |
+
+
+    **Table 2. Final Feature Pool of Each Strategy for the** $\eta''$ **Model**
+
+
+    | strategy | final feature pool |
+
+    |---|---|
+
+    | I | $\mu$, AM, PE, MN, R, DV, VEN, E |
+
+    | II | $\mu$, AM, PE, MN, R, DV, VEN, E, GS, Conmax, DIF, $\Delta P$ |
+
+    | III | $\mu$, AM, PE, MN, R, DV, VEN, E, GS, Conmax, DIF, $\Delta P$, CT, ST
+    |
+
+
+    ## Model Establishment and Evaluation
+
+
+    Employing a suitable inference model is recognized to be a crucial part of machine
+    learning. There is no ML model universally optimal for all problems; instead,
+    each particular problem needs a particular ML model to analyze. [62] Six typical
+    models are trained via every feature construction strategy to predict the log-scaled
+    energy storage density values ($W_{rec}''$) and arcsine square root $\eta$ values
+    ($\eta''$), including the linear regression algorithm (linear), support vector
+    regression with a radial basis
+
+    '
+  mdcn: '
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_2_0.png)
+
+
+    图 2. (a) $W_{rec}$、(b) $\eta$、(c) 对数缩放的 $W_{rec}$ ($W_{rec}''$) 和 (d) 反正弦平方根 $\eta$
+    ($\eta''$) 的数据直方图和核密度估计。
+
+
+    如图 2a,b 所示。大部分 $W_{rec}$ 值位于小于 2.0 的范围内，大部分 $\eta$ 值位于大于 0.8 的范围内。为了使数据分布接近正态分布并提高机器学习模型的性能，对目标属性进行了数据变换。测试了多种变换方法，最终发现对
+    $W_{rec}$ 应用对数缩放变换、对 $\eta$ 应用反正弦平方根变换效果最佳。为方便起见，在以下内容中，令 $W_{rec}''$ 表示 $W_{rec}$
+    的对数缩放值，$\eta''$ 表示 $\eta$ 的反正弦平方根值。$W_{rec}''$ 和 $\eta''$ 的数据分布直方图和核密度曲线分别如图 2c
+    和 2d 所示。图 2c 中的数据分布接近正态分布，而图 2d 中的数据分布并不呈现完全正态分布。然而，在尝试了各种变换方法后，这已经是我们选择的最接近正态分布的变换结果。鉴于得到的分布，回归模型预计将表现出高可预测性。[59]
+
+
+    通常，文献中提供的数据仅包含性能较好的数据，因此利用 WebPlotDigitizer 和 Engauge Digitizer [60,61] 工具从文献图表中提取了额外数据。在此数据集中，存在成分相同但性能不同的同一材料的数据，这可归因于煅烧和烧结工艺或施加电场的差异。在数据收集阶段，不可避免地会出现材料成分相同但性能不同的情况。如果烧结工艺相同时性能差异较小，则保留该数据。但是，即使烧结工艺参数相似，如果性能差异显著，则会删除该数据。经过仔细检查后，此类数据点仍保留在数据集中，以确保偏差在合理范围内。数据处理后，构建了包含
+    227 个 BT-BMO 样品的数据集，用于进一步的回归学习和分析。
+
+
+    ## 特征构建
+
+
+    为了构建高精度机器学习模型并全面探讨成分、物理性质和烧结工艺如何影响 BT-BMO 的储能性能，我们收集了材料元素信息 ($C_i$)、表征性质 ($L_i$)
+    以及与煅烧和烧结工艺相关的实验参数 ($P_i$) 的数据。
+
+
+    元素信息特征源自易于获取的元素信息。基于对弛豫铁电体的领域知识，选取了 20 个描述符来表示 A 位和 B 位元素的性质，涵盖原子质量、原子半径、电负性等描述符（详细信息见支持信息）。为了准确描述每个成分，我们将
+    A 位和 B 位信息的加权比率作为特征，并将材料描述符定义如下：[32]
+
+
+    ```
+
+    $$X_{A/B} = \frac{X_A}{X_B} = \frac{\sum_{i \in A} f_i^X X_i}{\sum_{i \in B} f_i^X
+    X_i}$$
+
+    ```
+
+
+    其中，$f_i$ 是化学成分中元素的摩尔分数，$X$ 是元素的性质。通过使用等式 1 计算 A 位和 B 位信息的比率，得到了 16 个材料描述符，如支持信息表
+    S1 的前 16 行所示。此外，电负性 (EN)、第一电离能 (IE)、电子亲和力 (EA) 和伪势核半径 (PR) 主要用于比较阳离子和阴离子之间的差异；我们通过等式
+    2 定义了材料描述符 X：[32]
+
+
+    ```
+
+    $$X = ([X_A - X_O] + |X_B - X_O|)/2$$
+
+    ```
+
+
+    其中，$X_O$ 表示氧的信息。此外，添加了反映钙钛矿结构稳定性的容忍因子 ($t$) 和八面体因子 ($\mu$)。由于每个 BT-BMO 化合物都是固溶体，使用固溶体中
+    BT 和 BMO 比例的加权分数来计算表示整个复合材料的特征，由等式 3 定义：
+
+
+    ```
+
+    $$X_{solid solution} = (1 - x)X_{BT} + xX_{BMO}$$
+
+    ```
+
+
+    由于数据库包含不同电场下相同成分的数据，电场 ($E$) 也必须是一个不可或缺的特征。因此，通过等式 1–3 得到的 22 个特征连同 $E$ 共同构成了策略
+    I ($C_i$) 的特征池。
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_3_0.png)
+
+
+    图 3. 原始 31 个特征的 Pearson 相关系数矩阵。
+
+
+    每种材料表征性质的特征 ($L_i$) 从文献中提取，包括平均晶粒尺寸 (GS)、最大介电常数 ($\varepsilon_m$)、经修正的居里-魏斯定律
+    (等式 4) 计算的弛豫弥散度 ($\gamma$) 以及施加电场下的最大和剩余极化 ($P_{max}$ 和 $P_r$)。根据等式 5，$P_{max}$
+    和 $P_r$ 合并为单个特征 $\Delta P$ 并放入特征池。这些特征提供了每种材料的微观结构、介电性质、弛豫行为和极化特性。因此，策略 II ($L_i
+    + C_i$) 的特征池总共包含 27 个特征。
+
+
+    ```
+
+    1/\varepsilon_r - 1/\varepsilon_m = (T - T_m)^\gamma / C
+
+    ```
+
+
+    ```
+
+    \Delta P = P_{max} - P_r
+
+    ```
+
+
+    陶瓷的制造工艺会显著影响材料的微观结构，尤其是 BT-BMO 材料。由于 Bi2O3 的熔点相对较低 (825 °C)，加工不当会导致异常晶粒生长和晶界处空洞的形成，从而对储能性能产生不利影响。因此，从已发表的论文中提取了每种材料的加工参数以扩展特征池
+    ($P_i$)，包括煅烧温度 (CT)、煅烧时间 (CT)、烧结温度 (ST) 和烧结时间 (ST)。因此，策略 III ($P_i + L_i + C_i$)
+    的特征池包含 31 个特征。特征的详细列表显示在支持信息的表 S1 中。
+
+
+    当数据集中的特征数量较多时，模型复杂度会相应增加，这会影响模型训练效率，并可能导致模型过拟合。采用物理知识、Pearson 相关系数和特征重要性分析方法相结合的方式，对特征空间进行降维。利用
+    Pearson 相关系数矩阵识别高度相关的特征，如图 3 所示。红色和蓝色分别表示两个特征之间的负相关和正相关，颜色越亮表示相关性越高。通常，特征之间 Pearson
+    相关系数的绝对值超过 0.8 被认为表明它们之间存在强相关性。对于强相关特征组，仅保留一个特征以避免冗余。在特征选择和消除过程中，我们既依赖物理知识，也依赖模型的特征重要性反馈。考虑到文献中报道的
+    BT-BMO 陶瓷的煅烧和烧结时间 (CT 和 ST) 大多在 2–4 h 范围内且变化不大，因此将这两个特征从最终特征池中排除。各策略的最终特征池如表 1
+    和表 2 所示。
+
+
+    **表 1. 各策略针对** $W_{rec}''$ **模型的最终特征池**
+
+
+    | 策略 | 最终特征池 |
+
+    |---|---|
+
+    | I | AM, PE, MN, DV, VEN, D, IE, E |
+
+    | II | AM, PE, MN, DV, VEN, D, IE, E, GS, Conmax, DIF, $\Delta P$ |
+
+    | III | AM, PE, MN, DV, VEN, D, IE, E, GS, Conmax, DIF, $\Delta P$, CT, ST |
+
+
+    **表 2. 各策略针对** $\eta''$ **模型的最终特征池**
+
+
+    | 策略 | 最终特征池 |
+
+    |---|---|
+
+    | I | $\mu$, AM, PE, MN, R, DV, VEN, E |
+
+    | II | $\mu$, AM, PE, MN, R, DV, VEN, E, GS, Conmax, DIF, $\Delta P$ |
+
+    | III | $\mu$, AM, PE, MN, R, DV, VEN, E, GS, Conmax, DIF, $\Delta P$, CT, ST
+    |
+
+
+    ## 模型建立与评估
+
+
+    采用合适的推理模型被认为是机器学习的关键部分。不存在普遍适用于所有问题的最优 ML 模型；相反，每个特定问题都需要特定的 ML 模型来分析。[62] 六种典型模型通过每种特征构建策略进行训练，以预测对数缩放的储能密度值
+    ($W_{rec}''$) 和反正弦平方根 $\eta$ 值 ($\eta''$)，包括线性回归算法 (linear)、带径向基的支持向量回归
+
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 4]
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_4_0.png)
+
+
+    functional kernel algorithm (SVR), gradient boosting regression algorithm (GBR),
+    random forest algorithm (RF), lightgbm algorithm (LGBM), and xgboost algorithm
+    (XGB). The data was randomly split into a 20% test set and an 80% training set.
+    To evaluate the performance of the regression model, the common statistical metrics
+    including the coefficient of determination (r²), mean absolute error (MAE), and
+    root-mean-squared error (RMSE) are used in this study, defined by eqs 6–8, respectively.
+
+
+    \( r^2 = 1 - \frac{\sum_{i=1}^{n} (\hat{y}_i - y_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}
+    \) (6)
+
+
+    \( \text{MAE} = \frac{1}{n} \sum_{i=1}^{n} |\hat{y}_i - y_i| \) (7)
+
+
+    \( \text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i)^2} \) (8)
+
+
+    where n, y_i, \(\hat{y}_i\), and \(\bar{y}\) are the number of observations in
+    the data set, the actual value, the predicted value, and the mean of actual values,
+    respectively. The r² value ranges between 0 and 1, with a closer proximity to
+    1 indicating higher model accuracy. The MAE and RMSE represent the difference
+    between the predicted value and the actual value, and the near-zero values of
+    MAE and RMSE indicate the agreement of prediction and measurement.
+
+
+    # ## RESULTS AND DISCUSSION
+
+
+    Regression Model of Energy Storage Density. The evaluation metrics of six W_rec''
+    regression models with different strategies are shown in Figure 4a–c and Table
+    3. It is obvious that the performance of all models constructed using strategies
+    II and III has been significantly improved compared to those built using strategy
+    I. This is primarily because the feature set includes not only elemental feature
+    information but also related property information and manufacturing process information.
+    However, the difference in model performance between strategy II and strategy
+    III is not significant potentially due to the minimal variation in the values
+    of CT and ST within the data set. It is obvious that the r² values of
+
+
+    | model | r² | MAE | RMSE |
+
+    |---|---|---|---|
+
+    | \multicolumn{4}{c}{Strategy I} |
+
+    | linear | 0.807 | 0.253 | 0.362 |
+
+    | SVR | 0.846 | 0.207 | 0.324 |
+
+    | GBR | 0.866 | 0.206 | 0.302 |
+
+    | RF | 0.848 | 0.219 | 0.321 |
+
+    | LGBM | 0.780 | 0.241 | 0.387 |
+
+    | XGB | 0.851 | 0.218 | 0.318 |
+
+    | \multicolumn{4}{c}{Strategy II} |
+
+    | linear | 0.854 | 0.217 | 0.315 |
+
+    | SVR | 0.908 | 0.150 | 0.250 |
+
+    | GBR | 0.942 | 0.145 | 0.199 |
+
+    | RF | 0.899 | 0.174 | 0.262 |
+
+    | LGBM | 0.883 | 0.17 | 0.282 |
+
+    | XGB | 0.928 | 0.158 | 0.221 |
+
+    | \multicolumn{4}{c}{Strategy III} |
+
+    | linear | 0.834 | 0.230 | 0.336 |
+
+    | SVR | 0.901 | 0.160 | 0.259 |
+
+    | GBR | 0.938 | 0.150 | 0.206 |
+
+    | RF | 0.898 | 0.175 | 0.263 |
+
+    | LGBM | 0.886 | 0.160 | 0.278 |
+
+    | XGB | 0.930 | 0.157 | 0.218 |
+
+
+    GBR and XGB models are higher, accompanied by lower MAE and RMSE values compared
+    to other models. In strategy II, the r² value for the GBR model reached 0.942,
+    whereas in strategy III, the r² value for the GBR model is 0.938. The fitting
+    results on training and testing of the best models in each strategy are shown
+    in Figure 4d–f. The predicted W_rec'' is plotted as a function of the measured
+    W_rec'', and the distributions of data points around the diagonal line indicate
+    that the trained model possesses good predictive capabilities. To enhance the
+    credibility of the model, the 10-fold cross-validation for all models was conducted
+    in both strategy II and strategy III. The'
+  - '[PAGE 5]
+
+
+    GBR model exhibits the best performance, with an r² of 0.974 in 10-fold cross-validation.
+    Detailed results for all models are provided in the Supporting Information, Table
+    S2. Before that, the hyperparameter optimization for the model was conducted using
+    the Bayesian optimization method, which is also a crucial part of machine learning
+    work.63,64 The details about the algorithm parameters, parameter range, optimized
+    values, and comparison of model performance before and after optimization are
+    reflected in Tables S3 and S4, respectively.
+
+
+    To further screen out the most important feature vectors, the wrapper method was
+    employed to identify the optimal subset of features. In this approach, the model’s
+    accuracy was tested across different feature dimensions by constructing feature
+    subsets of varying dimensionalities. For example, there are (k(k − 1))/2 different
+    feature subsets for two-dimensional feature subsets and (k(k − 1)(k − 2))/6 different
+    feature subsets for three-dimensional feature subsets (k is the number of features).
+    We generated all 15,913 feature subsets containing 1–10 features and calculated
+    their 10-fold cross-validation RMSE using the GBR model. The cross-validation
+    RMSE of models are compared, and the best one is selected. As shown in Figure
+    5, the improved performance is obtained
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_5_0.png)
+
+
+    Figure 5. Ten-fold cross-validation RMSE of the GBR model based on all possible
+    subsets containing 1–10 features.
+
+
+    with the increasing number of features at first, but the 10-fold cross-validation
+    RMSE slightly increases when more than 7 features are used. To better demonstrate
+    the performance differences among different feature subsets, the 10-fold cross-validation
+    r² values for different feature subsets were further calculated, and it was found
+    that the r² values for feature sets ranging from 4-tuple to 8-tuple also exhibited
+    a small fluctuation; the r² values are listed in Table S5. To enhance the interpretability
+    of the model, the dimensionality of the feature space should be reduced as much
+    as possible without significantly compromising the model’s accuracy. Therefore,
+    the best 4-tuple feature subset was selected for subsequent research. This optimal
+    4-tuple feature subset specifically includes E, ΔP, AM, and IE.
+
+
+    **Regression Model of Energy Storage Efficiency.** The same methods and steps
+    used for predicting energy storage density are also applied to predict energy
+    storage efficiency. The evaluation metrics of the six η'' regression models with
+    different strategies are shown in Figure 6a–c and Table 4. The performance of
+    linear models and SVR models in this task is unsatisfactory, while the LGBM model
+    shows relatively good predictability. In strategy III, the r² score for the LGBM
+    model is 0.901. All six models for strategy III outperform strategies I
+
+
+    and II, indicating that the model performance can be improved by introducing features
+    about experimental parameters. The fitting performance on training and testing
+    of the best models in each strategy is shown in Figure 6d–f. As can be seen from
+    the figure, the predicted values and the measured values are relatively close
+    in the high-value regions, while there are several abnormal points in the low-value
+    regions, where there are certain discrepancies between the predicted values and
+    the measured values. This may be attributed to the limited amount of data in the
+    low-η'' region within the training set. Most studies tend to report data with
+    high energy storage efficiency, which results in a scarcity of data samples in
+    the low-η'' regions. Since machine learning is a data-driven method, the quality
+    of the data significantly affects the accuracy of the model.21 The uneven distribution
+    of data to some extent contributes to the underperformance of the model in predicting
+    energy storage efficiency. Similarly, in this part of the work, 10-fold cross-validation
+    and hyperparameter optimization were also conducted to provide a more reliable
+    performance evaluation. The detailed results are provided in the Supporting Information,
+    Tables S6–S8.
+
+
+    We generated all 15,913 feature subsets containing 1–10 features and calculated
+    their 10-fold cross-validation RMSE using the LGBM model. As shown in Figure 7,
+    the performance gets improved with the increasing number of features at first,
+    but a slight increase in RMSE is observed when more than 7 features are used.
+    The 10-fold cross-validation r² values were also calculated for different feature
+    subsets ranging from 4-tuple to 8-tuple, as shown in Table S9. It is found that
+    the prediction performance is best when using the optimal 5-tuple and 7-tuple
+    feature subsets, while there is a slight decline in performance when using the
+    4-tuple subset. Following the same principle as above, we select the optimal five-dimensional
+    feature subset for subsequent work. The best 5-tuple feature subset is “R, DV,
+    VEN, GS, and ΔP”.
+
+
+    # **Model Interpretability.**
+
+
+    In the fields of machine learning and deep learning, model interpretability is
+    an important topic. Although these complex models such as deep neural networks
+    and ensemble models excel in predictive performance, they are often regarded as
+    black box models due to the difficulty in explaining their decision-making processes.65
+    The Shapley additive explanation (SHAP) is a tool designed to address this issue
+    by allocating feature importance values to explain the model’s output. The core
+    concept of SHAP originates from the Shapley value in cooperative game theory,
+    which is used to fairly allocate the gains brought by multiple participants in
+    a cooperation.35 The SHAP method introduces this concept into the interpretation
+    of machine learning models to calculate the contribution of each feature to the
+    model’s prediction results. In this work, the SHAP method is employed to interpret
+    the regression models for W_rec and η'', enabling visualization and comprehension
+    of the effects of features on the target properties. Figures 8a and 8b show the
+    SHAP beeswarm summary plot of the best feature subset regression model for W_rec
+    and η'', respectively. Each point corresponds to one compound in the data set,
+    a deeper shade of red corresponds to a higher feature value, whereas a deeper
+    shade of blue signifies a lower feature value. The SHAP values enable us to understand
+    the specific contribution of each feature to the model’s prediction outcome. When
+    the SHAP value of a feature value is positive, it means that the feature value
+    has a positive impact on the prediction of the model’s target attribute, and vice
+    versa.'
+  md: '
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_4_0.png)
+
+
+    functional kernel algorithm (SVR), gradient boosting regression algorithm (GBR),
+    random forest algorithm (RF), lightgbm algorithm (LGBM), and xgboost algorithm
+    (XGB). The data was randomly split into a 20% test set and an 80% training set.
+    To evaluate the performance of the regression model, the common statistical metrics
+    including the coefficient of determination (r²), mean absolute error (MAE), and
+    root-mean-squared error (RMSE) are used in this study, defined by eqs 6–8, respectively.
+
+
+    \( r^2 = 1 - \frac{\sum_{i=1}^{n} (\hat{y}_i - y_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}
+    \) (6)
+
+
+    \( \text{MAE} = \frac{1}{n} \sum_{i=1}^{n} |\hat{y}_i - y_i| \) (7)
+
+
+    \( \text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i)^2} \) (8)
+
+
+    where n, y_i, \(\hat{y}_i\), and \(\bar{y}\) are the number of observations in
+    the data set, the actual value, the predicted value, and the mean of actual values,
+    respectively. The r² value ranges between 0 and 1, with a closer proximity to
+    1 indicating higher model accuracy. The MAE and RMSE represent the difference
+    between the predicted value and the actual value, and the near-zero values of
+    MAE and RMSE indicate the agreement of prediction and measurement.
+
+
+    ## RESULTS AND DISCUSSION
+
+
+    ### Regression Model of Energy Storage Density.
+
+
+    The evaluation metrics of six W_rec'' regression models with different strategies
+    are shown in Figure 4a–c and Table 3. It is obvious that the performance of all
+    models constructed using strategies II and III has been significantly improved
+    compared to those built using strategy I. This is primarily because the feature
+    set includes not only elemental feature information but also related property
+    information and manufacturing process information. However, the difference in
+    model performance between strategy II and strategy III is not significant potentially
+    due to the minimal variation in the values of CT and ST within the data set. It
+    is obvious that the r² values of
+
+
+    | model | r² | MAE | RMSE |
+
+    |---|---|---|---|
+
+    | Strategy I | | | |
+
+    | linear | 0.807 | 0.253 | 0.362 |
+
+    | SVR | 0.846 | 0.207 | 0.324 |
+
+    | GBR | 0.866 | 0.206 | 0.302 |
+
+    | RF | 0.848 | 0.219 | 0.321 |
+
+    | LGBM | 0.780 | 0.241 | 0.387 |
+
+    | XGB | 0.851 | 0.218 | 0.318 |
+
+    | Strategy II | | | |
+
+    | linear | 0.854 | 0.217 | 0.315 |
+
+    | SVR | 0.908 | 0.150 | 0.250 |
+
+    | GBR | 0.942 | 0.145 | 0.199 |
+
+    | RF | 0.899 | 0.174 | 0.262 |
+
+    | LGBM | 0.883 | 0.17 | 0.282 |
+
+    | XGB | 0.928 | 0.158 | 0.221 |
+
+    | Strategy III | | | |
+
+    | linear | 0.834 | 0.230 | 0.336 |
+
+    | SVR | 0.901 | 0.160 | 0.259 |
+
+    | GBR | 0.938 | 0.150 | 0.206 |
+
+    | RF | 0.898 | 0.175 | 0.263 |
+
+    | LGBM | 0.886 | 0.160 | 0.278 |
+
+    | XGB | 0.930 | 0.157 | 0.218 |
+
+
+    GBR and XGB models are higher, accompanied by lower MAE and RMSE values compared
+    to other models. In strategy II, the r² value for the GBR model reached 0.942,
+    whereas in strategy III, the r² value for the GBR model is 0.938. The fitting
+    results on training and testing of the best models in each strategy are shown
+    in Figure 4d–f. The predicted W_rec'' is plotted as a function of the measured
+    W_rec'', and the distributions of data points around the diagonal line indicate
+    that the trained model possesses good predictive capabilities. To enhance the
+    credibility of the model, the 10-fold cross-validation for all models was conducted
+    in both strategy II and strategy III. The GBR model exhibits the best performance,
+    with an r² of 0.974 in 10-fold cross-validation. Detailed results for all models
+    are provided in the Supporting Information, Table S2. Before that, the hyperparameter
+    optimization for the model was conducted using the Bayesian optimization method,
+    which is also a crucial part of machine learning work. 63,64 The details about
+    the algorithm parameters, parameter range, optimized values, and comparison of
+    model performance before and after optimization are reflected in Tables S3 and
+    S4, respectively.
+
+
+    To further screen out the most important feature vectors, the wrapper method was
+    employed to identify the optimal subset of features. In this approach, the model’s
+    accuracy was tested across different feature dimensions by constructing feature
+    subsets of varying dimensionalities. For example, there are (k(k − 1))/2 different
+    feature subsets for two-dimensional feature subsets and (k(k − 1)(k − 2))/6 different
+    feature subsets for three-dimensional feature subsets (k is the number of features).
+    We generated all 15,913 feature subsets containing 1–10 features and calculated
+    their 10-fold cross-validation RMSE using the GBR model. The cross-validation
+    RMSE of models are compared, and the best one is selected. As shown in Figure
+    5, the improved performance is obtained
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_5_0.png)
+
+
+    Figure 5. Ten-fold cross-validation RMSE of the GBR model based on all possible
+    subsets containing 1–10 features.
+
+
+    with the increasing number of features at first, but the 10-fold cross-validation
+    RMSE slightly increases when more than 7 features are used. To better demonstrate
+    the performance differences among different feature subsets, the 10-fold cross-validation
+    r² values for different feature subsets were further calculated, and it was found
+    that the r² values for feature sets ranging from 4-tuple to 8-tuple also exhibited
+    a small fluctuation; the r² values are listed in Table S5. To enhance the interpretability
+    of the model, the dimensionality of the feature space should be reduced as much
+    as possible without significantly compromising the model’s accuracy. Therefore,
+    the best 4-tuple feature subset was selected for subsequent research. This optimal
+    4-tuple feature subset specifically includes E, ΔP, AM, and IE.
+
+
+    ### Regression Model of Energy Storage Efficiency.
+
+
+    The same methods and steps used for predicting energy storage density are also
+    applied to predict energy storage efficiency. The evaluation metrics of the six
+    η'' regression models with different strategies are shown in Figure 6a–c and Table
+    4. The performance of linear models and SVR models in this task is unsatisfactory,
+    while the LGBM model shows relatively good predictability. In strategy III, the
+    r² score for the LGBM model is 0.901. All six models for strategy III outperform
+    strategies I and II, indicating that the model performance can be improved by
+    introducing features about experimental parameters. The fitting performance on
+    training and testing of the best models in each strategy is shown in Figure 6d–f.
+    As can be seen from the figure, the predicted values and the measured values are
+    relatively close in the high-value regions, while there are several abnormal points
+    in the low-value regions, where there are certain discrepancies between the predicted
+    values and the measured values. This may be attributed to the limited amount of
+    data in the low-η'' region within the training set. Most studies tend to report
+    data with high energy storage efficiency, which results in a scarcity of data
+    samples in the low-η'' regions. Since machine learning is a data-driven method,
+    the quality of the data significantly affects the accuracy of the model. 21 The
+    uneven distribution of data to some extent contributes to the underperformance
+    of the model in predicting energy storage efficiency. Similarly, in this part
+    of the work, 10-fold cross-validation and hyperparameter optimization were also
+    conducted to provide a more reliable performance evaluation. The detailed results
+    are provided in the Supporting Information, Tables S6–S8.
+
+
+    We generated all 15,913 feature subsets containing 1–10 features and calculated
+    their 10-fold cross-validation RMSE using the LGBM model. As shown in Figure 7,
+    the performance gets improved with the increasing number of features at first,
+    but a slight increase in RMSE is observed when more than 7 features are used.
+    The 10-fold cross-validation r² values were also calculated for different feature
+    subsets ranging from 4-tuple to 8-tuple, as shown in Table S9. It is found that
+    the prediction performance is best when using the optimal 5-tuple and 7-tuple
+    feature subsets, while there is a slight decline in performance when using the
+    4-tuple subset. Following the same principle as above, we select the optimal five-dimensional
+    feature subset for subsequent work. The best 5-tuple feature subset is “R, DV,
+    VEN, GS, and ΔP”.
+
+
+    ### Model Interpretability.
+
+
+    In the fields of machine learning and deep learning, model interpretability is
+    an important topic. Although these complex models such as deep neural networks
+    and ensemble models excel in predictive performance, they are often regarded as
+    black box models due to the difficulty in explaining their decision-making processes.
+    65 The Shapley additive explanation (SHAP) is a tool designed to address this
+    issue by allocating feature importance values to explain the model’s output. The
+    core concept of SHAP originates from the Shapley value in cooperative game theory,
+    which is used to fairly allocate the gains brought by multiple participants in
+    a cooperation. 35 The SHAP method introduces this concept into the interpretation
+    of machine learning models to calculate the contribution of each feature to the
+    model’s prediction results. In this work, the SHAP method is employed to interpret
+    the regression models for W_rec and η'', enabling visualization and comprehension
+    of the effects of features on the target properties. Figures 8a and 8b show the
+    SHAP beeswarm summary plot of the best feature subset regression model for W_rec
+    and η'', respectively. Each point corresponds to one compound in the data set,
+    a deeper shade of red corresponds to a higher feature value, whereas a deeper
+    shade of blue signifies a lower feature value. The SHAP values enable us to understand
+    the specific contribution of each feature to the model’s prediction outcome. When
+    the SHAP value of a feature value is positive, it means that the feature value
+    has a positive impact on the prediction of the model’s target attribute, and vice
+    versa.
+
+
+    '
+  mdcn: '
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_4_0.png)
+
+
+    功能核算法 (SVR)、梯度增强回归算法 (GBR)、随机森林算法 (RF)、LightGBM算法 (LGBM) 和 XGBoost算法 (XGB)。数据被随机划分为
+    20% 的测试集和 80% 的训练集。为评估回归模型的性能，本研究采用了包括决定系数 (r²)、平均绝对误差 (MAE) 和均方根误差 (RMSE) 在内的常用统计指标，分别由式
+    6–8 定义。
+
+
+    \( r^2 = 1 - \frac{\sum_{i=1}^{n} (\hat{y}_i - y_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}
+    \) (6)
+
+
+    \( \text{MAE} = \frac{1}{n} \sum_{i=1}^{n} |\hat{y}_i - y_i| \) (7)
+
+
+    \( \text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i)^2} \) (8)
+
+
+    其中，n、y_i、\(\hat{y}_i\) 和 \(\bar{y}\) 分别表示数据集中的观测数量、实际值、预测值和实际值的均值。r² 值在 0 到 1
+    之间，越接近 1 表示模型精度越高。MAE 和 RMSE 表示预测值与实际值之间的差异，MAE 和 RMSE 接近于零表明预测与测量一致。
+
+
+    ## 结果与讨论
+
+
+    ### 储能密度回归模型
+
+
+    六种采用不同策略的 W_rec'' 回归模型的评估指标如图 4a–c 和表 3 所示。显然，与使用策略 I 构建的模型相比，使用策略 II 和策略 III
+    构建的所有模型性能均得到显著提升。这主要是因为特征集不仅包含元素特征信息，还包含相关属性信息和制造工艺信息。然而，策略 II 与策略 III 之间的模型性能差异不显著，可能是由于数据集中
+    CT 和 ST 值的变化很小。显然，GBR 和 XGB 模型的 r² 值更高，且相比其他模型具有更低的 MAE 和 RMSE 值。
+
+
+    | 模型 | r² | MAE | RMSE |
+
+    |---|---|---|---|
+
+    | 策略 I | | | |
+
+    | 线性 | 0.807 | 0.253 | 0.362 |
+
+    | SVR | 0.846 | 0.207 | 0.324 |
+
+    | GBR | 0.866 | 0.206 | 0.302 |
+
+    | RF | 0.848 | 0.219 | 0.321 |
+
+    | LGBM | 0.780 | 0.241 | 0.387 |
+
+    | XGB | 0.851 | 0.218 | 0.318 |
+
+    | 策略 II | | | |
+
+    | 线性 | 0.854 | 0.217 | 0.315 |
+
+    | SVR | 0.908 | 0.150 | 0.250 |
+
+    | GBR | 0.942 | 0.145 | 0.199 |
+
+    | RF | 0.899 | 0.174 | 0.262 |
+
+    | LGBM | 0.883 | 0.17 | 0.282 |
+
+    | XGB | 0.928 | 0.158 | 0.221 |
+
+    | 策略 III | | | |
+
+    | 线性 | 0.834 | 0.230 | 0.336 |
+
+    | SVR | 0.901 | 0.160 | 0.259 |
+
+    | GBR | 0.938 | 0.150 | 0.206 |
+
+    | RF | 0.898 | 0.175 | 0.263 |
+
+    | LGBM | 0.886 | 0.160 | 0.278 |
+
+    | XGB | 0.930 | 0.157 | 0.218 |
+
+
+    在策略 II 中，GBR 模型的 r² 值达到 0.942，而在策略 III 中，GBR 模型的 r² 值为 0.938。各策略中最佳模型在训练和测试上的拟合结果如图
+    4d–f 所示。将预测的 W_rec'' 作为测量 W_rec'' 的函数进行绘图，数据点围绕对角线的分布表明训练模型具有良好的预测能力。为增强模型的可信度，在策略
+    II 和策略 III 中均对所有模型进行了 10 倍交叉验证。GBR 模型表现最佳，10 倍交叉验证的 r² 为 0.974。所有模型的详细结果载于支持信息，表
+    S2。在此之前，模型采用贝叶斯优化方法进行了超参数优化，这也是机器学习工作中至关重要的一部分。63,64 算法参数、参数范围、优化值以及优化前后模型性能的对比分别反映在表
+    S3 和表 S4 中。
+
+
+    为进一步筛选最重要的特征向量，采用了包装法来识别最优特征子集。在此方法中，通过构建不同维度的特征子集，在不同特征维度下测试模型的精度。例如，对于二维特征子集有
+    (k(k − 1))/2 个不同的特征子集，对于三维特征子集有 (k(k − 1)(k − 2))/6 个不同的特征子集（k 为特征数量）。我们生成了所有包含
+    1–10 个特征的 15,913 个特征子集，并使用 GBR 模型计算它们的 10 倍交叉验证 RMSE。比较各模型的交叉验证 RMSE，并选择最佳模型。如图
+    5 所示，随着特征数量的增加，性能起初得到提升
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_5_0.png)
+
+
+    图 5. 基于所有包含 1–10 个特征的可能子集的 GBR 模型十倍交叉验证 RMSE。
+
+
+    ，但当使用超过 7 个特征时，10 倍交叉验证 RMSE 会略微增加。为更好地展示不同特征子集之间的性能差异，进一步计算了不同特征子集的 10 倍交叉验证
+    r² 值，并发现 4 元组到 8 元组特征集的 r² 值也呈现小幅波动；r² 值列于表 S5。为增强模型的可解释性，应在不显著影响模型精度的前提下尽可能降低特征空间的维度。因此，为后续研究选择了最佳
+    4 元组特征子集。该最优 4 元组特征子集具体包括 E、ΔP、AM 和 IE。
+
+
+    ### 储能效率回归模型
+
+
+    用于预测储能密度的相同方法和步骤也应用于预测储能效率。六种采用不同策略的 η'' 回归模型的评估指标如图 6a–c 和表 4 所示。在此任务中，线性模型和
+    SVR 模型的性能不尽理想，而 LGBM 模型表现出较好的可预测性。在策略 III 中，LGBM 模型的 r² 分数为 0.901。策略 III 的所有六个模型均优于策略
+    I 和策略 II，表明通过引入实验参数相关特征可以提升模型性能。各策略中最佳模型在训练和测试上的拟合性能如图 6d–f 所示。从图中可以看出，在高值区域，预测值与测量值较为接近，而在低值区域存在若干异常点，预测值与测量值之间存在一定差异。这可能归因于训练集中低
+    η'' 区域的数据量有限。大多数研究倾向于报告高储能效率的数据，导致低 η'' 区域的数据样本匮乏。由于机器学习是一种数据驱动方法，数据质量显著影响模型精度。21
+    数据分布不均在一定程度上导致模型在预测储能效率时表现不佳。同样，在这部分工作中，也进行了 10 倍交叉验证和超参数优化，以提供更可靠的性能评估。详细结果载于支持信息，表
+    S6–S8。
+
+
+    我们生成了所有包含 1–10 个特征的 15,913 个特征子集，并使用 LGBM 模型计算它们的 10 倍交叉验证 RMSE。如图 7 所示，随着特征数量的增加，性能起初得到提升，但当使用超过
+    7 个特征时，观察到 RMSE 略微增加。还为 4 元组到 8 元组的不同特征子集计算了 10 倍交叉验证 r² 值，如表 S9 所示。研究发现，使用最优
+    5 元组和 7 元组特征子集时预测性能最佳，而使用 4 元组子集时性能略有下降。遵循上述相同原则，我们为后续工作选择了最优五维特征子集。最佳 5 元组特征子集为“R、DV、VEN、GS
+    和 ΔP”。
+
+
+    ### 模型可解释性
+
+
+    在机器学习和深度学习领域，模型可解释性是一个重要课题。尽管深度神经网络和集成模型等复杂模型在预测性能方面表现出色，但由于难以解释其决策过程，它们常被视为黑盒模型。65
+    Shapley 加法解释 (SHAP) 是一种旨在解决此问题的工具，通过分配特征重要性值来解释模型输出。SHAP 的核心概念源于合作博弈论中的夏普利值，用于公平分配合作中多个参与者带来的收益。35
+    SHAP 方法将这一概念引入机器学习模型的解释中，以计算每个特征对模型预测结果的贡献。在本工作中，采用 SHAP 方法来解释 W_rec 和 η'' 的回归模型，从而实现对特征对目标属性影响的可视化和理解。图
+    8a 和 8b 分别展示了 W_rec 和 η'' 最佳特征子集回归模型的 SHAP 蜂群摘要图。每个点对应数据集中的一个化合物，更深的红色对应更高的特征值，而更深的蓝色则表示更低的特征值。SHAP
+    值使我们能够了解每个特征对模型预测结果的具体贡献。当特征值的 SHAP 值为正时，意味着该特征值对模型目标属性的预测有正面影响，反之亦然。
+
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 6]
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_6_0.png)
+
+
+    Figure 6. MAE, RMSE, and r² values of different ML algorithms with (a) strategy
+    I, (b) strategy II, and (c) strategy III for η′ prediction. (d–f) Performance
+    of the best regression models on the training and testing data set in each strategy.
+
+
+    | model | r² | MAE | RMSE |
+
+    |---|---|---|---|
+
+    | \multicolumn{4}{c}{Strategy I} |
+
+    | linear | 0.560 | 0.122 | 0.155 |
+
+    | SVR | 0.731 | 0.093 | 0.121 |
+
+    | GBR | 0.822 | 0.050 | 0.099 |
+
+    | RF | 0.851 | 0.049 | 0.090 |
+
+    | XGB | 0.862 | 0.048 | 0.087 |
+
+    | LGBM | 0.872 | 0.050 | 0.084 |
+
+    | \multicolumn{4}{c}{Strategy II} |
+
+    | linear | 0.712 | 0.096 | 0.126 |
+
+    | SVR | 0.805 | 0.079 | 0.103 |
+
+    | GBR | 0.859 | 0.049 | 0.088 |
+
+    | RF | 0.874 | 0.045 | 0.083 |
+
+    | XGB | 0.881 | 0.046 | 0.081 |
+
+    | LGBM | 0.881 | 0.045 | 0.081 |
+
+    | \multicolumn{4}{c}{Strategy III} |
+
+    | linear | 0.760 | 0.089 | 0.115 |
+
+    | SVR | 0.798 | 0.078 | 0.105 |
+
+    | GBR | 0.860 | 0.050 | 0.087 |
+
+    | RF | 0.894 | 0.042 | 0.076 |
+
+    | XGB | 0.879 | 0.045 | 0.081 |
+
+    | LGBM | 0.901 | 0.038 | 0.074 |
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_6_1.png)
+
+
+    Figure 7. Ten-fold cross-validation RMSE of the LGBM model based on all possible
+    subsets containing 1–10 features.
+
+
+    From Figure 8a, it can be observed that the two most important features affecting
+    the W_rec′ prediction model are E and ΔP, both of which are important parameters
+    for measuring the energy storage performance of capacitors. As their values increase,
+    a larger W_rec′ is obtained, which is consistent with our physical knowledge.
+    Figure 8c,e visualizes the tendency of E values and ΔP values, as well as the
+    corresponding SHAP values. It can be observed that as E values increase, ΔP values
+    also increase, and similarly, the SHAP values of E also increase. When E values
+    exceed approximately 120, the corresponding SHAP values are all positive, indicating
+    that higher applied
+
+
+    electric fields are more conducive to achieving higher energy storage densities.
+    When ΔP values exceed 15, most of the corresponding SHAP values are also positive,
+    suggesting that larger ΔP values are more likely to result in higher energy storage
+    densities.
+
+
+    From Figure 8b, it can be observed that the two most important features affecting
+    the η′ prediction model are DV and R. To better visualize the relationship between
+    features and SHAP values, a SHAP dependence plot of DV and R for the LGBM η′ model
+    was generated, as shown in Figure 8d. It can be observed that when the value of
+    DV exceeds 1.81, it tends to drive the energy storage efficiency toward lower
+    values. This implies that to obtain BaTiO3-based ceramic materials with high energy
+    storage efficiency, it is necessary to control the value of the valence electron
+    distance to be less than 1.81. As can be seen from Figure 8f, when the value of
+    the ionic radius exceeds 2.55, it will also exert a negative influence on the
+    η′ model prediction.
+
+
+    Experimental Validation. To verify that the model can be accurately applied in
+    actual experiments, a series of xBaTiO3-'
+  - '[PAGE 7]
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_7_0.png)
+
+
+    Figure 8. SHAP beeswarm summary plot based on the (a) 7-tuple subset GBR W_rec''
+    beeswarm regression model and (b) 7-tuple subset LGBM η'' regression model. (c)
+    SHAP dependence plot of E and ΔP for the GBR W_rec'' model. (d) SHAP dependence
+    plot of DV and R for the LGBM η'' model. (e) SHAP scatter plot of ΔP values for
+    the GBR W_rec'' model. (f) SHAP scatter plot of R values for the LGBM η'' model.
+
+
+    (1 - x)Bi(Zn2/3Ta1/3)O3 (BT-BZT) ceramics were synthesized and characterized (experimental
+    details are provided in the Supporting Information). In our data set, some data
+    involve the composite doping of Nb5+ along with other ions into the Ti site of
+    BaTiO3. Notably, Ta5+ shares the same valence and ionic radius (0.64 Å) with Nb5+,
+    yet there are limited reports on the energy storage properties of relaxor ferroelectric
+    ceramic materials. Compared to Nb2O5 (≈3.4 eV), Ta2O5 possesses a wider band gap
+    (≈4 eV), which can effectively reduce leakage current and energy loss, thereby
+    enhancing the breakdown field strength and energy storage efficiency.44 The majority
+    of the data in the data set that pertain to Nb5+ ions involve its combination
+    with Zn2+, such as Zn2/3Nb1/3. At that time, a search of the published literature
+    did not get any relevant data on xBaTiO3-(1 - x)Bi-
+
+
+    (Zn2/3Ta1/3)O3. Therefore, this material system of BT-BZT was selected for experimental
+    verification. The models'' predicted outputs are compared with the actual experimental
+    results to assess the effectiveness of the model. Figure 9a,b depicts the unipolar
+    P–E loops of BT-BZT ceramics at 100 kV/cm and at the maximum electric field (Eb).
+    Similar to other BT-BMO material systems, with the introduction of BZT, the P–E
+    loops become slim, presenting the ferroelectric properties of materials getting
+    the transition from a standard ferroelectric to relaxor type. The predicted results
+    of W_rec'' and η'' are transformed mathematically to obtain the predicted W_rec
+    and η. The comparison of the predicted outputs and actual results at different
+    electric fields is illustrated in Figure 9c,d and is listed in Table 5. The models
+    demonstrate higher predictive accuracy for Eb because the majority of the data
+    in the'
+  - '[PAGE 8]
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_8_0.png)
+
+
+    # Table 5. Comparison of Predicted Wrec and η Values at 100 kV/cm and Eb of the
+    Best Subset Regression Models with Experimental Values
+
+
+    | BT-xBZT | measured | predicted | error | measured | predicted | error |
+
+    |---|---|---|---|---|---|---|
+
+    | \multicolumn{4}{c}{Wrec @ 100 kV/cm} & \multicolumn{3}{c}{Wrec @ Eb} |
+
+    | x = 0.05 | 0.553 | 0.491 | 11.21% | 0.94 | 1.02 | 8.5% |
+
+    | x = 0.08 | 0.582 | 0.574 | 1.37% | 1.5 | 1.6 | 6.67% |
+
+    | x = 0.10 | 0.359 | 0.466 | 29.8% | 2.03 | 1.91 | 5.91% |
+
+    | x = 0.12 | 0.512 | 0.455 | 11.13% | 1.8 | 2.02 | 12.2% |
+
+    | x = 0.14 | 0.348 | 0.426 | 22.4% | 2.1 | 2.33 | 10.95% |
+
+    | \multicolumn{4}{c}{η @ 100 kV/cm} & \multicolumn{3}{c}{η @ Emax} |
+
+    | x = 0.05 | 0.727 | 0.807 | 11% | 0.712 | 0.69 | 3.09% |
+
+    | x = 0.08 | 0.799 | 0.874 | 9.38% | 0.721 | 0.739 | 2.49% |
+
+    | x = 0.10 | 0.91 | 0.891 | 2.09% | 0.833 | 0.855 | 2.64% |
+
+    | x = 0.12 | 0.842 | 0.914 | 8.55% | 0.818 | 0.85 | 3.91% |
+
+    | x = 0.14 | 0.844 | 0.902 | 6.87% | 0.778 | 0.842 | 8.22% |
+
+
+    training set are derived at Eb. The majority of the Wrec and η prediction results
+    fall within a 10% error margin compared to the experimental values. Hence, it
+    is believed that our models in this study are largely accurate and reliable, which
+    can help to accelerate the development of the novel material BT-BMO with high
+    energy storage performance.
+
+
+    # CONCLUSIONS
+
+
+    In this research, ML models combined with different feature construction strategies
+    were developed for predicting the energy storage density and efficiency of BT-BMO
+    material systems, allowing us to explore the intricate relationships between material
+    compositions, related properties, sintering parameters, and energy storage properties.
+    Different feature construction strategies for predicting Wrec'' and η'' of BT-BMO
+    ceramics were compared through rigorous analyses, and it
+
+
+    turned out that features incorporating multidimensional useful information enable
+    machine learning models to achieve superior performance. The establishment of
+    the GBR regression model for Wrec'' and the LGBM regression model for η'' based
+    on the strategy III exhibits high levels of accuracy. To enhance the credibility
+    of the results, we have conducted a 10-fold cross-validation. The 10-fold r2 values
+    for the GBR Wrec'' model is 0.974, and for the LGBM η'' model is 0.894. This demonstrates
+    the outstanding predictive capability of these models, confirming their robustness
+    and reliability in forecasting. To identify the most important features and further
+    improve training efficiency, the wrapper method was used to find the optimal feature
+    subsets for Wrec'' and η'' prediction models, respectively. The SHAP method was
+    introduced to enhance the interpretability of the models, and the results were
+    generally consistent with our physical'
+  md: '
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_6_0.png)
+
+
+    Figure 6. MAE, RMSE, and r² values of different ML algorithms with (a) strategy
+    I, (b) strategy II, and (c) strategy III for η′ prediction. (d–f) Performance
+    of the best regression models on the training and testing data set in each strategy.
+
+
+    | model | r² | MAE | RMSE |
+
+    |---|---|---|---|
+
+    | Strategy I | | | |
+
+    | linear | 0.560 | 0.122 | 0.155 |
+
+    | SVR | 0.731 | 0.093 | 0.121 |
+
+    | GBR | 0.822 | 0.050 | 0.099 |
+
+    | RF | 0.851 | 0.049 | 0.090 |
+
+    | XGB | 0.862 | 0.048 | 0.087 |
+
+    | LGBM | 0.872 | 0.050 | 0.084 |
+
+    | Strategy II | | | |
+
+    | linear | 0.712 | 0.096 | 0.126 |
+
+    | SVR | 0.805 | 0.079 | 0.103 |
+
+    | GBR | 0.859 | 0.049 | 0.088 |
+
+    | RF | 0.874 | 0.045 | 0.083 |
+
+    | XGB | 0.881 | 0.046 | 0.081 |
+
+    | LGBM | 0.881 | 0.045 | 0.081 |
+
+    | Strategy III | | | |
+
+    | linear | 0.760 | 0.089 | 0.115 |
+
+    | SVR | 0.798 | 0.078 | 0.105 |
+
+    | GBR | 0.860 | 0.050 | 0.087 |
+
+    | RF | 0.894 | 0.042 | 0.076 |
+
+    | XGB | 0.879 | 0.045 | 0.081 |
+
+    | LGBM | 0.901 | 0.038 | 0.074 |
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_6_1.png)
+
+
+    Figure 7. Ten-fold cross-validation RMSE of the LGBM model based on all possible
+    subsets containing 1–10 features.
+
+
+    From Figure 8a, it can be observed that the two most important features affecting
+    the W_rec′ prediction model are E and ΔP, both of which are important parameters
+    for measuring the energy storage performance of capacitors. As their values increase,
+    a larger W_rec′ is obtained, which is consistent with our physical knowledge.
+    Figure 8c,e visualizes the tendency of E values and ΔP values, as well as the
+    corresponding SHAP values. It can be observed that as E values increase, ΔP values
+    also increase, and similarly, the SHAP values of E also increase. When E values
+    exceed approximately 120, the corresponding SHAP values are all positive, indicating
+    that higher applied electric fields are more conducive to achieving higher energy
+    storage densities. When ΔP values exceed 15, most of the corresponding SHAP values
+    are also positive, suggesting that larger ΔP values are more likely to result
+    in higher energy storage densities.
+
+
+    From Figure 8b, it can be observed that the two most important features affecting
+    the η′ prediction model are DV and R. To better visualize the relationship between
+    features and SHAP values, a SHAP dependence plot of DV and R for the LGBM η′ model
+    was generated, as shown in Figure 8d. It can be observed that when the value of
+    DV exceeds 1.81, it tends to drive the energy storage efficiency toward lower
+    values. This implies that to obtain BaTiO3-based ceramic materials with high energy
+    storage efficiency, it is necessary to control the value of the valence electron
+    distance to be less than 1.81. As can be seen from Figure 8f, when the value of
+    the ionic radius exceeds 2.55, it will also exert a negative influence on the
+    η′ model prediction.
+
+
+    Experimental Validation. To verify that the model can be accurately applied in
+    actual experiments, a series of xBaTiO3-
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_7_0.png)
+
+
+    Figure 8. SHAP beeswarm summary plot based on the (a) 7-tuple subset GBR W_rec''
+    beeswarm regression model and (b) 7-tuple subset LGBM η'' regression model. (c)
+    SHAP dependence plot of E and ΔP for the GBR W_rec'' model. (d) SHAP dependence
+    plot of DV and R for the LGBM η'' model. (e) SHAP scatter plot of ΔP values for
+    the GBR W_rec'' model. (f) SHAP scatter plot of R values for the LGBM η'' model.
+
+
+    (1 - x)Bi(Zn2/3Ta1/3)O3 (BT-BZT) ceramics were synthesized and characterized (experimental
+    details are provided in the Supporting Information). In our data set, some data
+    involve the composite doping of Nb5+ along with other ions into the Ti site of
+    BaTiO3. Notably, Ta5+ shares the same valence and ionic radius (0.64 Å) with Nb5+,
+    yet there are limited reports on the energy storage properties of relaxor ferroelectric
+    ceramic materials. Compared to Nb2O5 (≈3.4 eV), Ta2O5 possesses a wider band gap
+    (≈4 eV), which can effectively reduce leakage current and energy loss, thereby
+    enhancing the breakdown field strength and energy storage efficiency.44 The majority
+    of the data in the data set that pertain to Nb5+ ions involve its combination
+    with Zn2+, such as Zn2/3Nb1/3. At that time, a search of the published literature
+    did not get any relevant data on xBaTiO3-(1 - x)Bi(Zn2/3Ta1/3)O3. Therefore, this
+    material system of BT-BZT was selected for experimental verification. The models''
+    predicted outputs are compared with the actual experimental results to assess
+    the effectiveness of the model. Figure 9a,b depicts the unipolar P–E loops of
+    BT-BZT ceramics at 100 kV/cm and at the maximum electric field (Eb). Similar to
+    other BT-BMO material systems, with the introduction of BZT, the P–E loops become
+    slim, presenting the ferroelectric properties of materials getting the transition
+    from a standard ferroelectric to relaxor type. The predicted results of W_rec''
+    and η'' are transformed mathematically to obtain the predicted W_rec and η. The
+    comparison of the predicted outputs and actual results at different electric fields
+    is illustrated in Figure 9c,d and is listed in Table 5. The models demonstrate
+    higher predictive accuracy for Eb because the majority of the data in the
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_8_0.png)
+
+
+    ### Table 5. Comparison of Predicted Wrec and η Values at 100 kV/cm and Eb of
+    the Best Subset Regression Models with Experimental Values
+
+
+    | BT-xBZT | measured | predicted | error | measured | predicted | error |
+
+    |---|---|---|---|---|---|---|
+
+    | Wrec @ 100 kV/cm | | | | Wrec @ Eb | | |
+
+    | x = 0.05 | 0.553 | 0.491 | 11.21% | 0.94 | 1.02 | 8.5% |
+
+    | x = 0.08 | 0.582 | 0.574 | 1.37% | 1.5 | 1.6 | 6.67% |
+
+    | x = 0.10 | 0.359 | 0.466 | 29.8% | 2.03 | 1.91 | 5.91% |
+
+    | x = 0.12 | 0.512 | 0.455 | 11.13% | 1.8 | 2.02 | 12.2% |
+
+    | x = 0.14 | 0.348 | 0.426 | 22.4% | 2.1 | 2.33 | 10.95% |
+
+    | η @ 100 kV/cm | | | | η @ Emax | | |
+
+    | x = 0.05 | 0.727 | 0.807 | 11% | 0.712 | 0.69 | 3.09% |
+
+    | x = 0.08 | 0.799 | 0.874 | 9.38% | 0.721 | 0.739 | 2.49% |
+
+    | x = 0.10 | 0.91 | 0.891 | 2.09% | 0.833 | 0.855 | 2.64% |
+
+    | x = 0.12 | 0.842 | 0.914 | 8.55% | 0.818 | 0.85 | 3.91% |
+
+    | x = 0.14 | 0.844 | 0.902 | 6.87% | 0.778 | 0.842 | 8.22% |
+
+
+    training set are derived at Eb. The majority of the Wrec and η prediction results
+    fall within a 10% error margin compared to the experimental values. Hence, it
+    is believed that our models in this study are largely accurate and reliable, which
+    can help to accelerate the development of the novel material BT-BMO with high
+    energy storage performance.
+
+
+    ## CONCLUSIONS
+
+
+    In this research, ML models combined with different feature construction strategies
+    were developed for predicting the energy storage density and efficiency of BT-BMO
+    material systems, allowing us to explore the intricate relationships between material
+    compositions, related properties, sintering parameters, and energy storage properties.
+    Different feature construction strategies for predicting Wrec'' and η'' of BT-BMO
+    ceramics were compared through rigorous analyses, and it turned out that features
+    incorporating multidimensional useful information enable machine learning models
+    to achieve superior performance. The establishment of the GBR regression model
+    for Wrec'' and the LGBM regression model for η'' based on the strategy III exhibits
+    high levels of accuracy. To enhance the credibility of the results, we have conducted
+    a 10-fold cross-validation. The 10-fold r2 values for the GBR Wrec'' model is
+    0.974, and for the LGBM η'' model is 0.894. This demonstrates the outstanding
+    predictive capability of these models, confirming their robustness and reliability
+    in forecasting. To identify the most important features and further improve training
+    efficiency, the wrapper method was used to find the optimal feature subsets for
+    Wrec'' and η'' prediction models, respectively. The SHAP method was introduced
+    to enhance the interpretability of the models, and the results were generally
+    consistent with our physical
+
+
+    '
+  mdcn: '
+
+    ![](img/156bcf868020d5f996268c9ad3226597_6_0.png)
+
+
+    图 6. 不同 ML 算法在 (a) 策略 I、(b) 策略 II 和 (c) 策略 III 下用于 η′ 预测的 MAE、RMSE 和 r² 值。(d–f)
+    各策略中最佳回归模型在训练和测试数据集上的性能。
+
+
+    | 模型 | r² | MAE | RMSE |
+
+    |---|---|---|---|
+
+    | 策略 I | | | |
+
+    | linear | 0.560 | 0.122 | 0.155 |
+
+    | SVR | 0.731 | 0.093 | 0.121 |
+
+    | GBR | 0.822 | 0.050 | 0.099 |
+
+    | RF | 0.851 | 0.049 | 0.090 |
+
+    | XGB | 0.862 | 0.048 | 0.087 |
+
+    | LGBM | 0.872 | 0.050 | 0.084 |
+
+    | 策略 II | | | |
+
+    | linear | 0.712 | 0.096 | 0.126 |
+
+    | SVR | 0.805 | 0.079 | 0.103 |
+
+    | GBR | 0.859 | 0.049 | 0.088 |
+
+    | RF | 0.874 | 0.045 | 0.083 |
+
+    | XGB | 0.881 | 0.046 | 0.081 |
+
+    | LGBM | 0.881 | 0.045 | 0.081 |
+
+    | 策略 III | | | |
+
+    | linear | 0.760 | 0.089 | 0.115 |
+
+    | SVR | 0.798 | 0.078 | 0.105 |
+
+    | GBR | 0.860 | 0.050 | 0.087 |
+
+    | RF | 0.894 | 0.042 | 0.076 |
+
+    | XGB | 0.879 | 0.045 | 0.081 |
+
+    | LGBM | 0.901 | 0.038 | 0.074 |
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_6_1.png)
+
+
+    图 7. 基于包含 1–10 个特征的所有可能子集的 LGBM 模型的十倍交叉验证 RMSE。
+
+
+    从图 8a 可以观察到，影响 W_rec′ 预测模型的两个最重要特征是 E 和 ΔP，它们都是衡量电容器储能性能的重要参数。随着它们的值增大，会得到更大的
+    W_rec′，这与我们的物理知识一致。图 8c,e 可视化了 E 值和 ΔP 值的趋势，以及相应的 SHAP 值。可以观察到，随着 E 值增大，ΔP 值也增大，同样，E
+    的 SHAP 值也增大。当 E 值超过约 120 时，相应的 SHAP 值均为正，表明更高的施加电场更有利于实现更高的储能密度。当 ΔP 值超过 15 时，大部分相应的
+    SHAP 值也为正，表明更大的 ΔP 值更可能导致更高的储能密度。
+
+
+    从图 8b 可以观察到，影响 η′ 预测模型的两个最重要特征是 DV 和 R。为了更好地可视化特征与 SHAP 值之间的关系，为 LGBM η′ 模型生成了
+    DV 和 R 的 SHAP 依赖图，如图 8d 所示。可以观察到，当 DV 值超过 1.81 时，倾向于使储能效率朝较低值方向变化。这意味着，为了获得具有高储能效率的基于
+    BaTiO3 的陶瓷材料，有必要将价电子距离的值控制在 1.81 以下。如图 8f 所示，当离子半径的值超过 2.55 时，也会对 η′ 模型预测产生负面影响。
+
+
+    实验验证。为了验证模型能否准确应用于实际实验，合成并表征了一系列 xBaTiO3-
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_7_0.png)
+
+
+    图 8. 基于 (a) 7 元组子集 GBR W_rec'' 蜂群回归模型和 (b) 7 元组子集 LGBM η'' 回归模型的 SHAP 蜂群摘要图。(c)
+    GBR W_rec'' 模型的 E 和 ΔP SHAP 依赖图。(d) LGBM η'' 模型的 DV 和 R SHAP 依赖图。(e) GBR W_rec''
+    模型的 ΔP 值 SHAP 散点图。(f) LGBM η'' 模型的 R 值 SHAP 散点图。
+
+
+    (1 - x)Bi(Zn2/3Ta1/3)O3 (BT-BZT) 陶瓷已合成并表征（实验详情见支持信息）。在我们的数据集中，一些数据涉及将 Nb5+ 与其他离子一起复合掺入
+    BaTiO3 的 Ti 位点。值得注意的是，Ta5+ 与 Nb5+ 具有相同的价态和离子半径（0.64 Å），但关于弛豫铁电陶瓷材料储能性能的报告有限。与
+    Nb2O5（≈3.4 eV）相比，Ta2O5 具有更宽的带隙（≈4 eV），可以有效减少漏电流和能量损失，从而提高击穿场强和储能效率。44 数据集中涉及 Nb5+
+    离子的大部分数据涉及其与 Zn2+ 的组合，例如 Zn2/3Nb1/3。当时，对已发表文献的检索未找到任何关于 xBaTiO3-(1 - x)Bi(Zn2/3Ta1/3)O3
+    的相关数据。因此，选择了 BT-BZT 材料体系进行实验验证。将模型的预测输出与实际实验结果进行比较，以评估模型的有效性。图 9a,b 描绘了 BT-BZT
+    陶瓷在 100 kV/cm 和最大电场（Eb）下的单极 P–E 回线。与其他 BT-BMO 材料体系类似，随着 BZT 的引入，P–E 回线变得纤细，呈现材料铁电性能从标准铁电向弛豫型转变的特性。W_rec''
+    和 η'' 的预测结果经过数学变换以获得预测的 W_rec 和 η。不同电场下的预测输出和实际结果的比较如图 9c,d 所示，并列于表 5。模型对 Eb 表现出更高的预测精度，因为数据集中大部分数据是在
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_8_0.png)
+
+
+    ### 表 5. 最佳子集回归模型在 100 kV/cm 和 Eb 下的预测 Wrec 和 η 值与实验值的比较
+
+
+    | BT-xBZT | 实测值 | 预测值 | 误差 | 实测值 | 预测值 | 误差 |
+
+    |---|---|---|---|---|---|---|
+
+    | Wrec @ 100 kV/cm | | | | Wrec @ Eb | | |
+
+    | x = 0.05 | 0.553 | 0.491 | 11.21% | 0.94 | 1.02 | 8.5% |
+
+    | x = 0.08 | 0.582 | 0.574 | 1.37% | 1.5 | 1.6 | 6.67% |
+
+    | x = 0.10 | 0.359 | 0.466 | 29.8% | 2.03 | 1.91 | 5.91% |
+
+    | x = 0.12 | 0.512 | 0.455 | 11.13% | 1.8 | 2.02 | 12.2% |
+
+    | x = 0.14 | 0.348 | 0.426 | 22.4% | 2.1 | 2.33 | 10.95% |
+
+    | η @ 100 kV/cm | | | | η @ Emax | | |
+
+    | x = 0.05 | 0.727 | 0.807 | 11% | 0.712 | 0.69 | 3.09% |
+
+    | x = 0.08 | 0.799 | 0.874 | 9.38% | 0.721 | 0.739 | 2.49% |
+
+    | x = 0.10 | 0.91 | 0.891 | 2.09% | 0.833 | 0.855 | 2.64% |
+
+    | x = 0.12 | 0.842 | 0.914 | 8.55% | 0.818 | 0.85 | 3.91% |
+
+    | x = 0.14 | 0.844 | 0.902 | 6.87% | 0.778 | 0.842 | 8.22% |
+
+
+    训练集是在 Eb 下导出的。Wrec 和 η 的大部分预测结果与实验值的误差在 10% 范围内。因此，认为本研究中的模型在很大程度上是准确和可靠的，这有助于加速具有高储能性能的新型材料
+    BT-BMO 的开发。
+
+
+    ## 结论
+
+
+    在本研究中，开发了结合不同特征构建策略的 ML 模型，用于预测 BT-BMO 材料体系的储能密度和效率，从而使我们能够探索材料组成、相关性能、烧结参数与储能性能之间复杂的关系。通过严谨分析，比较了用于预测
+    BT-BMO 陶瓷 Wrec'' 和 η'' 的不同特征构建策略，结果表明，包含多维有用信息的特征能使机器学习模型实现更优性能。基于策略 III 建立的 Wrec''
+    GBR 回归模型和 η'' LGBM 回归模型表现出高准确性。为了增强结果的可信度，我们进行了十倍交叉验证。GBR Wrec'' 模型的十倍 r2 值为 0.974，LGBM
+    η'' 模型的十倍 r2 值为 0.894。这表明这些模型具有出色的预测能力，证实了其在预测中的稳健性和可靠性。为了识别最重要的特征并进一步提高训练效率，分别使用包装法为
+    Wrec'' 和 η'' 预测模型寻找了最优特征子集。引入了 SHAP 方法以增强模型的可解释性，结果总体上与我们的物理
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 9]
+
+
+    knowledge. Using this method, we have identified the key features that influenced
+    the models and conducted a brief analysis. To verify the feasibility of our method,
+    the experimental validation was conducted by preparing the xBaTiO3-(1 − x)Bi(Zn2/3Ti1/3)O3
+    material system that was not included in the data set. The error range between
+    the model''s predicted values and the experimental values fell within an acceptable
+    range, indicating that our method possesses certain practical utility. We believe
+    that our method can also be extended to other material systems such as linear
+    dielectrics and antiferroelectrics. In addition, future endeavors will explore
+    the integration of genetic programming methods to achieve multiobjective optimization.
+
+
+    # ## ASSOCIATED CONTENT
+
+
+    +   ### Supporting Information
+
+
+    The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acssuschemeng.4c10430.
+
+
+    Detailed list of features, evaluation metrics of 10-fold cross-validation for
+    the W_rec'' and η'' prediction, details of hyperparameter optimization, 10-fold
+    cross-validation r^2 for the W_rec'' and η'' prediction using different feature
+    subsets, and experimental details (PDF)
+
+
+    Data set of energy storage density and efficiency (XLSX)
+
+
+    # ## AUTHOR INFORMATION
+
+
+    # ### Corresponding Authors
+
+
+    Hua Hao – State Key Laboratory of Advanced Technology for Materials Synthesis
+    and Processing, School of Materials Science and Engineering, International School
+    of Materials Science and Engineering, Wuhan University of Technology, Wuhan 430070,
+    China; Foshan Xianhu Laboratory of the Advanced Energy Science and Technology,
+    Guangdong Laboratory, Xianhu Hydrogen Valley, Foshan 528200, China; orcid.org/0000-0003-3264-4647;
+    Email: haohua@whut.edu.cn
+
+
+    Hanxing Liu – State Key Laboratory of Advanced Technology for Materials Synthesis
+    and Processing, School of Materials Science and Engineering, International School
+    of Materials Science and Engineering, Wuhan University of Technology, Wuhan 430070,
+    China; orcid.org/0000-0002-8625-4866; Email: lhxhp@whut.edu.cn
+
+
+    # ### Authors
+
+
+    Jian Liu – State Key Laboratory of Advanced Technology for Materials Synthesis
+    and Processing, School of Materials Science and Engineering, International School
+    of Materials Science and Engineering, Wuhan University of Technology, Wuhan 430070,
+    China
+
+
+    Peifeng Xiong – State Key Laboratory of Advanced Technology for Materials Synthesis
+    and Processing, School of Materials Science and Engineering, International School
+    of Materials Science and Engineering, Wuhan University of Technology, Wuhan 430070,
+    China
+
+
+    Changjiao Li – State Key Laboratory of Advanced Technology for Materials Synthesis
+    and Processing, School of Materials Science and Engineering, International School
+    of Materials Science and Engineering, Wuhan University of Technology, Wuhan 430070,
+    China; orcid.org/0000-0002-6255-5250
+
+
+    Complete contact information is available at: https://pubs.acs.org/10.1021/acssuschemeng.4c10430
+
+
+    # ## Author Contributions
+
+
+    Jian Liu and Peifeng Xiong contributed equally to this work. Jian Liu: conceptualization,
+    data collection, investigation, software, data analysis, and writing of the original
+    draft; Peifeng Xiong: experimentation and characterization of samples, data collection,
+    and software; Changjiao Li: manuscript modification; Hua Hao: supervision, funding
+    acquisition, and manuscript modification; Hanxing Liu: supervision and project
+    administration.
+
+
+    # ## Notes
+
+
+    The authors declare no competing financial interest.
+
+
+    # ## ACKNOWLEDGMENTS
+
+
+    This work was supported by the National Key Research and Development Program of
+    China (no. 2023YFB3812200), the Natural Science Foundation of China (grant no.
+    52472135), and the Guangdong Basic and Applied Basic Research Foundation (no.
+    2022B1515120041).
+
+
+    # ## REFERENCES
+
+
+    +   (1) Yao, Z.; Song, Z.; Hao, H.; Yu, Z.; Cao, M.; Zhang, S.; Lanagan, M. T.;
+    Liu, H. Homogeneous/Inhomogeneous-Structured Dielectrics and Their Energy-Storage
+    Performances. Adv. Mater. 2017, 29, No. 1601727.
+
+    +   (2) Wang, D.; Fan, Z.; Zhou, D.; Khesro, A.; Murakami, S.; Feteira, A.; Zhao,
+    Q.; Tan, X.; Reaney, I. M. Bismuth Ferrite-Based Lead-Free Ceramics and Multilayers
+    with High Recoverable Energy Density. J. Mater. Chem. A Mater. 2018, 6, 4133.
+
+    +   (3) Li, J.; Li, F.; Xu, Z.; Zhang, S. Multilayer Lead-Free Ceramic Capacitors
+    with Ultrahigh Energy Density and Efficiency. Adv. Mater. 2018, 30, No. 1802155.
+
+    +   (4) Liu, Q.; Hao, H.; Guo, Q. H.; Shen, Z. H.; Wang, J.; Cao, M. H.; Yao,
+    Z. H.; Liu, H. X. Enhanced Breakdown Strength of BaTiO3-Based Multilayer Ceramic
+    Capacitor by Structural Optimization. Rare Metals 2023, 42 (8), 2552–2561.
+
+    +   (5) Li, D.; Jiang, X.; Hao, H.; Wang, J.; Guo, Q.; Zhang, L.; Yao, Z.; Cao,
+    M.; Liu, H. Amorphous/Crystalline Engineering of BaTiO3-Based Thin Films for Energy-Storage
+    Capacitors. ACS Sustain Chem. Eng. 2022, 10 (4), 1731–1740.
+
+    +   (6) Qi, H.; Xie, A.; Zuo, R. Local Structure Engineered Lead-Free Ferroelectric
+    Dielectrics for Superior Energy-Storage Capacitors: A Review. Energy Storage Mater.
+    2022, 45, 541–567.
+
+    +   (7) Li, D.; Guo, Q.; Cao, M.; Yao, Z.; Liu, H.; Hao, H. The Influence of A/B-Sites
+    Doping on Antiferroelectricity of PZO Energy Storage Films. Microstructures 2023,
+    3 (1), No. 2023007.
+
+    +   (8) Luo, B.; Wang, X.; Tian, E.; Song, H.; Wang, H.; Li, L. Enhanced Energy-Storage
+    Density and High Efficiency of Lead-Free CaTiO3–BiScO3 Linear Dielectric Ceramics.
+    ACS Appl. Mater. Interfaces 2017, 9, 19963–19972.
+
+    +   (9) Dong, X.; Chen, H.; Wei, M.; Wu, K.; Zhang, J. Structure, Dielectric and
+    Energy Storage Properties of BaTiO3 Ceramics Doped with YNbO4. J. Alloys Compd.
+    2018, 744, 721–727.
+
+    +   (10) Yan, Z.; Zhang, D.; Zhou, X.; Qi, H.; Luo, H.; Zhou, K.; Abrahams, I.;
+    Yan, H. Silver Niobate Based Lead-Free Ceramics with High Energy Storage Density.
+    J. Mater. Chem. A Mater. 2019, 7, 10702–10711.
+
+    +   (11) Long, C.; Zhou, W.; Song, H.; Zheng, K.; Ren, W.; Wu, H.; Ding, X.; Liu,
+    L. Simultaneously Realizing Ultrahigh Energy Storage Density and Efficiency in
+    BaTiO3-Based Dielectric Ceramics by Creating Highly Dynamic Polar Nanoregions
+    and Intrinsic Conduction. Acta Mater. 2023, 256, No. 119135.
+
+    +   (12) Ogiara, H.; Randall, C. A.; Trolier-Mckinstry, S. Weakly Coupled Relaxor
+    Behavior of BaTiO3-BiScO3 Ceramics. J. Am. Ceram. Soc. 2009, 92, 110–118.
+
+    +   (13) Kumar, N.; Patterson, E. A.; Frömling, T.; Cann, D. P.; Nino, J. C. Conduction
+    Mechanisms in BaTiO3-Bi(Zn1/2Ti1/2)O3 Ceramics. J. Am. Ceram. Soc. 2016, 99, 3047–3054.'
+  - '[PAGE 10]
+
+
+    (14) Wang, Q.; Gong, P. M.; Wang, C. M. High Recoverable Energy Storage Density
+    and Large Energy Efficiency Simultaneously Achieved in BaTiO3−Bi(Zn1/2Zr1/2)O3
+    Relaxor Ferroelectrics. Ceram. Int. 2020, 46 (14), 22452−22459.
+
+
+    (15) Jiang, X.; Hao, H.; Zhang, S.; Lv, J.; Cao, M.; Yao, Z.; Liu, H. Enhanced
+    Energy Storage and Fast Discharge Properties of BaTiO3 Based Ceramics Modified
+    by Bi(Mg1/2Zr1/2)O3. J. Eur. Ceram Soc. 2019, 39 (4), 1103−1109.
+
+
+    (16) Zhou, Q.; Xu, F.; Gao, C.; Zhang, D.; Shi, X.; Yuen, M. F.; Zuo, D. Machine
+    Learning-Assisted Mechanical Property Prediction and Descriptor-Property Correlation
+    Analysis of High-Entropy Ceramics. Ceram. Int. 2023, 49 (4), 5760−5769.
+
+
+    (17) Gong, J.; Chu, S.; Mehta, R. K.; Mcgaughey, A. J. H. XGBoost Model for Electrocaloric
+    Temperature Change Prediction in Ceramics. npj Comput. Mater. 2022, 8, 140.
+
+
+    (18) Boiko, D. A.; Macknight, R.; Kline, B.; Gomes, G. Autonomous Chemical Research
+    with Large Language Models. Nature 2023, 624, 570−578.
+
+
+    (19) Raccuglia, P.; Elbert, K. C.; Adler, P. D. F.; Falk, C.; Wenny, M. B.; Mollo,
+    A.; Zeller, M.; Friedler, S. A.; Schrier, J.; Norquist, A. J. Machine-Learning-Assisted
+    Materials Discovery Using Failed Experiments. Nature 2016, 533, 73−77.
+
+
+    (20) Gu, W.; Yang, B.; Li, D.; Shang, X.; Zhou, Z.; Guo, J. Accelerated Design
+    of Lead-Free High-Performance Piezoelectric Ceramics with High Accuracy via Machine
+    Learning. Journal of Advanced Ceramics 2023, 12 (7), 1389−1405.
+
+
+    (21) Shen, Z.; Liu, H.; Shen, Y.; Hu, J.; Chen, L.; Nan, C. Machine Learning in
+    Energy Storage Materials. Interdisciplinary Materials 2022, 1 (2), 175−195.
+
+
+    (22) Jain, A.; Ong, S. P.; Hautier, G.; Chen, W.; Richards, W. D.; Dacek, S.;
+    Cholia, S.; Gunter, D.; Skinner, D.; Ceder, G.; Persson, K. A. Commentary: The
+    Materials Project: A Materials Genome Approach to Accelerating Materials Innovation.
+    APL Mater. 2013, 1, No. 011002.
+
+
+    (23) Curtarolo, S.; Setyawan, W.; Wang, S.; Xue, J.; Yang, K.; Taylor, R. H.;
+    Nelson, L. J.; Hart, G. L. W.; Sanvito, S.; Buongiorno-Nardelli, M.; Mingo, N.;
+    Levy, O. AFLOWLIB.ORG: A Distributed Materials Properties Repository from High-Throughput
+    Ab Initio Calculations. Computer Mater. Sci. 2012, 58, 227−235.
+
+
+    (24) Saal, J. E.; Kirklin, S.; Aykol, M.; Meredig, B.; Wolverton, C. Materials
+    Design and Discovery with High-Throughput Density Functional Theory: The Open
+    Quantum Materials Database (OQMD). JOM 2013, 65 (11), 1501−1509.
+
+
+    (25) Kim, C.; Pilania, G.; Ramprasad, R. Machine Learning Assisted Predictions
+    of Intrinsic Dielectric Breakdown Strength of ABX3 Perovskites. J. Phys. Chem.
+    C 2016, 120 (27), 14575−14580.
+
+
+    (26) Li, C.; Hao, H.; Xu, B.; Zhao, G.; Chen, L.; Zhang, S.; Liu, H. A Progressive
+    Learning Method for Predicting the Band Gap of ABO3 Perovskites Using an Instrumental
+    Variable. J. Mater. Chem. C Mater. 2020, 8 (9), 3127−3136.
+
+
+    (27) Li, C.; Hao, H.; Xu, B.; Shen, Z.; Zhou, E.; Jiang, D.; Liu, H. Improved
+    Physics-Based Structural Descriptors of Perovskite Materials Enable Higher Accuracy
+    of Machine Learning. Comput. Mater. Sci. 2021, 198, No. 110714.
+
+
+    (28) Chen, L.; Xu, B.; Chen, J.; Bi, K.; Li, C.; Lu, S.; Hu, G.; Lin, Y. Ensemble-Machine-Learning-Based
+    Correlation Analysis of Internal and Band Characteristics of Thermoelectric Materials.
+    J. Mater. Chem. C Mater. 2020, 8 (37), 13079−13089.
+
+
+    (29) Li, J.; Qi, X.; Zhang, Z.; Wang, Y.; Dang, L.; Li, Y.; Wang, L.; Zhang, J.
+    Screening of Ionic Liquids for Efficient CO2 Cycloaddition Catalysis under Mild
+    Condition: A Combined Machine Learning and DFT Approach. ACS Sustainable Chem.
+    Eng. 2024, 12, 17512.
+
+
+    (30) Wang, Y.; Li, S.; Meng, K.; Zhang, Y.; Fang, Z.; Sun, S. Exploring the Ambient-Temperature
+    Degradation Reactions of PET through Two-Step Machine Learning and High-Throughput
+    Experimentation. ACS Sustain. Chem. Eng. 2024, 12 (14), 5415−5426.
+
+
+    (31) Qiao, L.; Zhu, J.; Wan, Y.; Cui, C.; Zhang, G. Finite Element-Based Machine
+    Learning Approach for Optimization of Process
+
+
+    Parameters to Produce Silicon Carbide Ceramic Complex Parts. Ceram. Int. 2022,
+    48 (12), 17400−17411.
+
+
+    (32) He, J.; Li, J.; Liu, C.; Wang, C.; Zhang, Y.; Wen, C.; Xue, D.; Cao, J.;
+    Su, Y.; Qiao, L.; Bai, Y. Machine Learning Identified Materials Descriptors for
+    Ferroelectricity. Acta Mater. 2021, 209, No. 116815.
+
+
+    (33) Yuan, R.; Tian, Y.; Xue, D.; Xue, D.; Zhou, Y.; Ding, X.; Sun, J.; Lookman,
+    T. Accelerated Search for BaTiO3-Based Ceramics with Large Energy Storage at Low
+    Fields Using Machine Learning and Experimental Design. Adv. Sci. 2019, 6 (21),
+    No. 1901395.
+
+
+    (34) Yuan, R.; Liu, Z.; Balachandran, P. V.; Xue, D.; Zhou, Y.; Ding, X.; Sun,
+    J.; Xue, D.; Lookman, T. Accelerated Discovery of Large Electrostrain in BaTiO3-Based
+    Piezoelectrics Using Active Learning. Adv. Mater. 2018, 30 (7), No. 1702884.
+
+
+    (35) Lundberg, S. M.; Lee, S.-I. A Unified Approach to Interpreting Model Predictions.
+    In Neural Information Processing Systems; 2017, 30. DOI:.
+
+
+    (36) Wei, M.; Zhang, J.; Wu, K.; Chen, H.; Yang, C. Effect of BiMO3 (M = Al, In,
+    Y, Sm, Nd, and La) Doping on the Dielectric Properties of BaTiO3 Ceramics. Ceram.
+    Int. 2017, 43 (13), 9593−9599.
+
+
+    (37) Li, W. B.; Zhou, D.; Pang, L. X.; Xu, R.; Guo, H. H. Novel Barium Titanate
+    Based Capacitors with High Energy Density and Fast Discharge Performance. J. Mater.
+    Chem. A Mater. 2017, 5 (37), 19607−19612.
+
+
+    (38) Wang, T.; Jin, L.; Li, C.; Hu, Q.; Wei, X. Relaxor Ferroelectric BaTiO3-Bi(Mg2/3Nb1/3)O3
+    Ceramics for Energy Storage Application. J. Am. Ceram. Soc. 2015, 98 (2), 559−566.
+
+
+    (39) Zhou, M.; Liang, R.; Zhou, Z.; Dong, X. Combining High Energy Efficiency
+    and Fast Charge-Discharge Capability in Novel BaTiO3-Based Relaxor Ferroelectric
+    Ceramic for Energy Storage. Ceram. Int. 2019, 45 (3), 3582−3590.
+
+
+    (40) Zhao, H.; Yang, X.; Pang, D.; Long, X. Enhanced Energy Storage Efficiency
+    by Modulating Field-Induced Strain in BaTiO3-Bi(Ni2/3Ta1/3)O3 Lead-Free Ceramics.
+    Ceram. Int. 2021, 47 (16), 22734−22740.
+
+
+    (41) Zhou, M.; Liang, R.; Zhou, Z.; Dong, X. Novel BaTiO3-Based Lead-Free Ceramic
+    Capacitors Featuring High Energy Storage Density, High Power Density, and Excellent
+    Stability. J. Mater. Chem. C Mater. 2018, 6 (31), 8528−8537.
+
+
+    (42) Zhao, X.; Zhou, Z.; Liang, R.; Liu, F.; Dong, X. High-Energy Storage Performance
+    in Lead-Free (1-x)BaTiO3-xBi(Zn2/3Ti1/3)O3 Relaxor Ceramics for Temperature Stability
+    Applications. Ceram. Int. 2017, 43 (12), 9060−9066.
+
+
+    (43) Wu, L.; Wang, X.; Li, L. Lead-Free BaTiO3-Bi(Zn2/3Nb1/3)O3 Weakly Coupled
+    Relaxor Ferroelectric Materials for Energy Storage. RSC Adv. 2016, 6 (17), 14273−14282.
+
+
+    (44) Zhao, P.; Wang, H.; Wu, L.; Chen, L.; Cai, Z.; Li, L.; Wang, X. High-Performance
+    Relaxor Ferroelectric Materials for Energy Storage Applications. Adv. Energy Mater.
+    2019, 9 (17), No. 1803048.
+
+
+    (45) Yi, X.; Ji, C.; Chen, G.; Yang, H.; Yong, H.; Fu, C.; Cai, W.; Gao, R.; Fan,
+    T.; Wang, Z.; Deng, X. Effects of Sintering Method and BiAlO3 Dopant on Dielectric
+    Relaxation and Energy Storage Properties of BaTiO3-BiYbO3 Ceramics. Phys. Status
+    Solidi A 2020, 217 (2), No. 1900721.
+
+
+    (46) Chen, G.; Fan, T.; Yang, H.; Fu, C.; Gao, R.; Deng, X.; Wang, Z.; Fan, P.;
+    Cai, W. Effects of BiAlO3 Dopant and Sintering Method on Microstructure, Dielectric
+    Relaxation Characteristic and Ferroelectric Properties of BaTiO3-Based Ceramics.
+    Appl. Phys. A 2019, 125 (6), 433.
+
+
+    (47) Zhou, L. F.; Lei, X. W.; Zhao, L.; Hussain, M. I.; Zhao, G. Z.; Zhang, B.
+    P. Phase Structure and Energy Storage Performance for BiFeO3−BaTiO3 Based Lead-Free
+    Ferroelectric Ceramics. Ceram. Int. 2019, 45 (16), 20266−20275.
+
+
+    (48) Li, W. B.; Zhou, D.; Xu, R.; Pang, L. X.; Raney, I. M. BaTiO3-Bi(Li0.5Ta0.5)O3
+    Lead-Free Ceramics, and Multilayers with High Energy Storage Density and Efficiency.
+    ACS Appl. Energy Mater. 2018, 1 (9), 5016−5023.
+
+
+    (49) Joseph, J.; Du, Y.; Cheng, Z.; Zhang, S. Low Temperature Sintering Lead-Free
+    Dielectric xBiScO3-(1-x)BaTiO3 for Energy Storage Applications. EcoMat 2023, 5
+    (5), No. e12331.'
+  md: '
+
+    knowledge. Using this method, we have identified the key features that influenced
+    the models and conducted a brief analysis. To verify the feasibility of our method,
+    the experimental validation was conducted by preparing the xBaTiO3-(1 − x)Bi(Zn2/3Ti1/3)O3
+    material system that was not included in the data set. The error range between
+    the model''s predicted values and the experimental values fell within an acceptable
+    range, indicating that our method possesses certain practical utility. We believe
+    that our method can also be extended to other material systems such as linear
+    dielectrics and antiferroelectrics. In addition, future endeavors will explore
+    the integration of genetic programming methods to achieve multiobjective optimization.
+
+
+    ## ASSOCIATED CONTENT
+
+
+    ### Supporting Information
+
+
+    The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acssuschemeng.4c10430.
+
+
+    - Detailed list of features, evaluation metrics of 10-fold cross-validation for
+    the W_rec'' and η'' prediction, details of hyperparameter optimization, 10-fold
+    cross-validation r^2 for the W_rec'' and η'' prediction using different feature
+    subsets, and experimental details (PDF)
+
+    - Data set of energy storage density and efficiency (XLSX)
+
+
+    ## AUTHOR INFORMATION
+
+
+    ### Corresponding Authors
+
+
+    Hua Hao – State Key Laboratory of Advanced Technology for Materials Synthesis
+    and Processing, School of Materials Science and Engineering, International School
+    of Materials Science and Engineering, Wuhan University of Technology, Wuhan 430070,
+    China; Foshan Xianhu Laboratory of the Advanced Energy Science and Technology,
+    Guangdong Laboratory, Xianhu Hydrogen Valley, Foshan 528200, China; orcid.org/0000-0003-3264-4647;
+    Email: haohua@whut.edu.cn
+
+
+    Hanxing Liu – State Key Laboratory of Advanced Technology for Materials Synthesis
+    and Processing, School of Materials Science and Engineering, International School
+    of Materials Science and Engineering, Wuhan University of Technology, Wuhan 430070,
+    China; orcid.org/0000-0002-8625-4866; Email: lhxhp@whut.edu.cn
+
+
+    ### Authors
+
+
+    Jian Liu – State Key Laboratory of Advanced Technology for Materials Synthesis
+    and Processing, School of Materials Science and Engineering, International School
+    of Materials Science and Engineering, Wuhan University of Technology, Wuhan 430070,
+    China
+
+
+    Peifeng Xiong – State Key Laboratory of Advanced Technology for Materials Synthesis
+    and Processing, School of Materials Science and Engineering, International School
+    of Materials Science and Engineering, Wuhan University of Technology, Wuhan 430070,
+    China
+
+
+    Changjiao Li – State Key Laboratory of Advanced Technology for Materials Synthesis
+    and Processing, School of Materials Science and Engineering, International School
+    of Materials Science and Engineering, Wuhan University of Technology, Wuhan 430070,
+    China; orcid.org/0000-0002-6255-5250
+
+
+    Complete contact information is available at: https://pubs.acs.org/10.1021/acssuschemeng.4c10430
+
+
+    ## Author Contributions
+
+
+    Jian Liu and Peifeng Xiong contributed equally to this work. Jian Liu: conceptualization,
+    data collection, investigation, software, data analysis, and writing of the original
+    draft; Peifeng Xiong: experimentation and characterization of samples, data collection,
+    and software; Changjiao Li: manuscript modification; Hua Hao: supervision, funding
+    acquisition, and manuscript modification; Hanxing Liu: supervision and project
+    administration.
+
+
+    ## Notes
+
+
+    The authors declare no competing financial interest.
+
+
+    ## ACKNOWLEDGMENTS
+
+
+    This work was supported by the National Key Research and Development Program of
+    China (no. 2023YFB3812200), the Natural Science Foundation of China (grant no.
+    52472135), and the Guangdong Basic and Applied Basic Research Foundation (no.
+    2022B1515120041).
+
+
+    ## REFERENCES
+
+
+    - (1) Yao, Z.; Song, Z.; Hao, H.; Yu, Z.; Cao, M.; Zhang, S.; Lanagan, M. T.;
+    Liu, H. Homogeneous/Inhomogeneous-Structured Dielectrics and Their Energy-Storage
+    Performances. Adv. Mater. 2017, 29, No. 1601727.
+
+    - (2) Wang, D.; Fan, Z.; Zhou, D.; Khesro, A.; Murakami, S.; Feteira, A.; Zhao,
+    Q.; Tan, X.; Reaney, I. M. Bismuth Ferrite-Based Lead-Free Ceramics and Multilayers
+    with High Recoverable Energy Density. J. Mater. Chem. A Mater. 2018, 6, 4133.
+
+    - (3) Li, J.; Li, F.; Xu, Z.; Zhang, S. Multilayer Lead-Free Ceramic Capacitors
+    with Ultrahigh Energy Density and Efficiency. Adv. Mater. 2018, 30, No. 1802155.
+
+    - (4) Liu, Q.; Hao, H.; Guo, Q. H.; Shen, Z. H.; Wang, J.; Cao, M. H.; Yao, Z.
+    H.; Liu, H. X. Enhanced Breakdown Strength of BaTiO3-Based Multilayer Ceramic
+    Capacitor by Structural Optimization. Rare Metals 2023, 42 (8), 2552–2561.
+
+    - (5) Li, D.; Jiang, X.; Hao, H.; Wang, J.; Guo, Q.; Zhang, L.; Yao, Z.; Cao,
+    M.; Liu, H. Amorphous/Crystalline Engineering of BaTiO3-Based Thin Films for Energy-Storage
+    Capacitors. ACS Sustain Chem. Eng. 2022, 10 (4), 1731–1740.
+
+    - (6) Qi, H.; Xie, A.; Zuo, R. Local Structure Engineered Lead-Free Ferroelectric
+    Dielectrics for Superior Energy-Storage Capacitors: A Review. Energy Storage Mater.
+    2022, 45, 541–567.
+
+    - (7) Li, D.; Guo, Q.; Cao, M.; Yao, Z.; Liu, H.; Hao, H. The Influence of A/B-Sites
+    Doping on Antiferroelectricity of PZO Energy Storage Films. Microstructures 2023,
+    3 (1), No. 2023007.
+
+    - (8) Luo, B.; Wang, X.; Tian, E.; Song, H.; Wang, H.; Li, L. Enhanced Energy-Storage
+    Density and High Efficiency of Lead-Free CaTiO3–BiScO3 Linear Dielectric Ceramics.
+    ACS Appl. Mater. Interfaces 2017, 9, 19963–19972.
+
+    - (9) Dong, X.; Chen, H.; Wei, M.; Wu, K.; Zhang, J. Structure, Dielectric and
+    Energy Storage Properties of BaTiO3 Ceramics Doped with YNbO4. J. Alloys Compd.
+    2018, 744, 721–727.
+
+    - (10) Yan, Z.; Zhang, D.; Zhou, X.; Qi, H.; Luo, H.; Zhou, K.; Abrahams, I.;
+    Yan, H. Silver Niobate Based Lead-Free Ceramics with High Energy Storage Density.
+    J. Mater. Chem. A Mater. 2019, 7, 10702–10711.
+
+    - (11) Long, C.; Zhou, W.; Song, H.; Zheng, K.; Ren, W.; Wu, H.; Ding, X.; Liu,
+    L. Simultaneously Realizing Ultrahigh Energy Storage Density and Efficiency in
+    BaTiO3-Based Dielectric Ceramics by Creating Highly Dynamic Polar Nanoregions
+    and Intrinsic Conduction. Acta Mater. 2023, 256, No. 119135.
+
+    - (12) Ogiara, H.; Randall, C. A.; Trolier-Mckinstry, S. Weakly Coupled Relaxor
+    Behavior of BaTiO3-BiScO3 Ceramics. J. Am. Ceram. Soc. 2009, 92, 110–118.
+
+    - (13) Kumar, N.; Patterson, E. A.; Frömling, T.; Cann, D. P.; Nino, J. C. Conduction
+    Mechanisms in BaTiO3-Bi(Zn1/2Ti1/2)O3 Ceramics. J. Am. Ceram. Soc. 2016, 99, 3047–3054.
+
+    - (31) Qiao, L.; Zhu, J.; Wan, Y.; Cui, C.; Zhang, G. Finite Element-Based Machine
+    Learning Approach for Optimization of Process Parameters to Produce Silicon Carbide
+    Ceramic Complex Parts. Ceram. Int. 2022, 48 (12), 17400−17411.
+
+    - (14) Wang, Q.; Gong, P. M.; Wang, C. M. High Recoverable Energy Storage Density
+    and Large Energy Efficiency Simultaneously Achieved in BaTiO3−Bi(Zn1/2Zr1/2)O3
+    Relaxor Ferroelectrics. Ceram. Int. 2020, 46 (14), 22452−22459.
+
+    - (15) Jiang, X.; Hao, H.; Zhang, S.; Lv, J.; Cao, M.; Yao, Z.; Liu, H. Enhanced
+    Energy Storage and Fast Discharge Properties of BaTiO3 Based Ceramics Modified
+    by Bi(Mg1/2Zr1/2)O3. J. Eur. Ceram. Soc. 2019, 39 (4), 1103−1109.
+
+    - (16) Zhou, Q.; Xu, F.; Gao, C.; Zhang, D.; Shi, X.; Yuen, M. F.; Zuo, D. Machine
+    Learning-Assisted Mechanical Property Prediction and Descriptor-Property Correlation
+    Analysis of High-Entropy Ceramics. Ceram. Int. 2023, 49 (4), 5760−5769.
+
+    - (17) Gong, J.; Chu, S.; Mehta, R. K.; Mcgaughey, A. J. H. XGBoost Model for
+    Electrocaloric Temperature Change Prediction in Ceramics. npj Comput. Mater. 2022,
+    8, 140.
+
+    - (18) Boiko, D. A.; Macknight, R.; Kline, B.; Gomes, G. Autonomous Chemical Research
+    with Large Language Models. Nature 2023, 624, 570−578.
+
+    - (19) Raccuglia, P.; Elbert, K. C.; Adler, P. D. F.; Falk, C.; Wenny, M. B.;
+    Mollo, A.; Zeller, M.; Friedler, S. A.; Schrier, J.; Norquist, A. J. Machine-Learning-Assisted
+    Materials Discovery Using Failed Experiments. Nature 2016, 533, 73−77.
+
+    - (20) Gu, W.; Yang, B.; Li, D.; Shang, X.; Zhou, Z.; Guo, J. Accelerated Design
+    of Lead-Free High-Performance Piezoelectric Ceramics with High Accuracy via Machine
+    Learning. Journal of Advanced Ceramics 2023, 12 (7), 1389−1405.
+
+    - (21) Shen, Z.; Liu, H.; Shen, Y.; Hu, J.; Chen, L.; Nan, C. Machine Learning
+    in Energy Storage Materials. Interdisciplinary Materials 2022, 1 (2), 175−195.
+
+    - (22) Jain, A.; Ong, S. P.; Hautier, G.; Chen, W.; Richards, W. D.; Dacek, S.;
+    Cholia, S.; Gunter, D.; Skinner, D.; Ceder, G.; Persson, K. A. Commentary: The
+    Materials Project: A Materials Genome Approach to Accelerating Materials Innovation.
+    APL Mater. 2013, 1, No. 011002.
+
+    - (23) Curtarolo, S.; Setyawan, W.; Wang, S.; Xue, J.; Yang, K.; Taylor, R. H.;
+    Nelson, L. J.; Hart, G. L. W.; Sanvito, S.; Buongiorno-Nardelli, M.; Mingo, N.;
+    Levy, O. AFLOWLIB.ORG: A Distributed Materials Properties Repository from High-Throughput
+    Ab Initio Calculations. Computer Mater. Sci. 2012, 58, 227−235.
+
+    - (24) Saal, J. E.; Kirklin, S.; Aykol, M.; Meredig, B.; Wolverton, C. Materials
+    Design and Discovery with High-Throughput Density Functional Theory: The Open
+    Quantum Materials Database (OQMD). JOM 2013, 65 (11), 1501−1509.
+
+    - (25) Kim, C.; Pilania, G.; Ramprasad, R. Machine Learning Assisted Predictions
+    of Intrinsic Dielectric Breakdown Strength of ABX3 Perovskites. J. Phys. Chem.
+    C 2016, 120 (27), 14575−14580.
+
+    - (26) Li, C.; Hao, H.; Xu, B.; Zhao, G.; Chen, L.; Zhang, S.; Liu, H. A Progressive
+    Learning Method for Predicting the Band Gap of ABO3 Perovskites Using an Instrumental
+    Variable. J. Mater. Chem. C Mater. 2020, 8 (9), 3127−3136.
+
+    - (27) Li, C.; Hao, H.; Xu, B.; Shen, Z.; Zhou, E.; Jiang, D.; Liu, H. Improved
+    Physics-Based Structural Descriptors of Perovskite Materials Enable Higher Accuracy
+    of Machine Learning. Comput. Mater. Sci. 2021, 198, No. 110714.
+
+    - (28) Chen, L.; Xu, B.; Chen, J.; Bi, K.; Li, C.; Lu, S.; Hu, G.; Lin, Y. Ensemble-Machine-Learning-Based
+    Correlation Analysis of Internal and Band Characteristics of Thermoelectric Materials.
+    J. Mater. Chem. C Mater. 2020, 8 (37), 13079−13089.
+
+    - (29) Li, J.; Qi, X.; Zhang, Z.; Wang, Y.; Dang, L.; Li, Y.; Wang, L.; Zhang,
+    J. Screening of Ionic Liquids for Efficient CO2 Cycloaddition Catalysis under
+    Mild Condition: A Combined Machine Learning and DFT Approach. ACS Sustainable
+    Chem. Eng. 2024, 12, 17512.
+
+    - (30) Wang, Y.; Li, S.; Meng, K.; Zhang, Y.; Fang, Z.; Sun, S. Exploring the
+    Ambient-Temperature Degradation Reactions of PET through Two-Step Machine Learning
+    and High-Throughput Experimentation. ACS Sustain. Chem. Eng. 2024, 12 (14), 5415−5426.
+
+    - (32) He, J.; Li, J.; Liu, C.; Wang, C.; Zhang, Y.; Wen, C.; Xue, D.; Cao, J.;
+    Su, Y.; Qiao, L.; Bai, Y. Machine Learning Identified Materials Descriptors for
+    Ferroelectricity. Acta Mater. 2021, 209, No. 116815.
+
+    - (33) Yuan, R.; Tian, Y.; Xue, D.; Xue, D.; Zhou, Y.; Ding, X.; Sun, J.; Lookman,
+    T. Accelerated Search for BaTiO3-Based Ceramics with Large Energy Storage at Low
+    Fields Using Machine Learning and Experimental Design. Adv. Sci. 2019, 6 (21),
+    No. 1901395.
+
+    - (34) Yuan, R.; Liu, Z.; Balachandran, P. V.; Xue, D.; Zhou, Y.; Ding, X.; Sun,
+    J.; Xue, D.; Lookman, T. Accelerated Discovery of Large Electrostrain in BaTiO3-Based
+    Piezoelectrics Using Active Learning. Adv. Mater. 2018, 30 (7), No. 1702884.
+
+    - (35) Lundberg, S. M.; Lee, S.-I. A Unified Approach to Interpreting Model Predictions.
+    In Neural Information Processing Systems; 2017, 30. DOI:.
+
+    - (36) Wei, M.; Zhang, J.; Wu, K.; Chen, H.; Yang, C. Effect of BiMO3 (M = Al,
+    In, Y, Sm, Nd, and La) Doping on the Dielectric Properties of BaTiO3 Ceramics.
+    Ceram. Int. 2017, 43 (13), 9593−9599.
+
+    - (37) Li, W. B.; Zhou, D.; Pang, L. X.; Xu, R.; Guo, H. H. Novel Barium Titanate
+    Based Capacitors with High Energy Density and Fast Discharge Performance. J. Mater.
+    Chem. A Mater. 2017, 5 (37), 19607−19612.
+
+    - (38) Wang, T.; Jin, L.; Li, C.; Hu, Q.; Wei, X. Relaxor Ferroelectric BaTiO3-Bi(Mg2/3Nb1/3)O3
+    Ceramics for Energy Storage Application. J. Am. Ceram. Soc. 2015, 98 (2), 559−566.
+
+    - (39) Zhou, M.; Liang, R.; Zhou, Z.; Dong, X. Combining High Energy Efficiency
+    and Fast Charge-Discharge Capability in Novel BaTiO3-Based Relaxor Ferroelectric
+    Ceramic for Energy Storage. Ceram. Int. 2019, 45 (3), 3582−3590.
+
+    - (40) Zhao, H.; Yang, X.; Pang, D.; Long, X. Enhanced Energy Storage Efficiency
+    by Modulating Field-Induced Strain in BaTiO3-Bi(Ni2/3Ta1/3)O3 Lead-Free Ceramics.
+    Ceram. Int. 2021, 47 (16), 22734−22740.
+
+    - (41) Zhou, M.; Liang, R.; Zhou, Z.; Dong, X. Novel BaTiO3-Based Lead-Free Ceramic
+    Capacitors Featuring High Energy Storage Density, High Power Density, and Excellent
+    Stability. J. Mater. Chem. C Mater. 2018, 6 (31), 8528−8537.
+
+    - (42) Zhao, X.; Zhou, Z.; Liang, R.; Liu, F.; Dong, X. High-Energy Storage Performance
+    in Lead-Free (1-x)BaTiO3-xBi(Zn2/3Ti1/3)O3 Relaxor Ceramics for Temperature Stability
+    Applications. Ceram. Int. 2017, 43 (12), 9060−9066.
+
+    - (43) Wu, L.; Wang, X.; Li, L. Lead-Free BaTiO3-Bi(Zn2/3Nb1/3)O3 Weakly Coupled
+    Relaxor Ferroelectric Materials for Energy Storage. RSC Adv. 2016, 6 (17), 14273−14282.
+
+    - (44) Zhao, P.; Wang, H.; Wu, L.; Chen, L.; Cai, Z.; Li, L.; Wang, X. High-Performance
+    Relaxor Ferroelectric Materials for Energy Storage Applications. Adv. Energy Mater.
+    2019, 9 (17), No. 1803048.
+
+    - (45) Yi, X.; Ji, C.; Chen, G.; Yang, H.; Yong, H.; Fu, C.; Cai, W.; Gao, R.;
+    Fan, T.; Wang, Z.; Deng, X. Effects of Sintering Method and BiAlO3 Dopant on Dielectric
+    Relaxation and Energy Storage Properties of BaTiO3-BiYbO3 Ceramics. Phys. Status
+    Solidi A 2020, 217 (2), No. 1900721.
+
+    - (46) Chen, G.; Fan, T.; Yang, H.; Fu, C.; Gao, R.; Deng, X.; Wang, Z.; Fan,
+    P.; Cai, W. Effects of BiAlO3 Dopant and Sintering Method on Microstructure, Dielectric
+    Relaxation Characteristic and Ferroelectric Properties of BaTiO3-Based Ceramics.
+    Appl. Phys. A 2019, 125 (6), 433.
+
+    - (47) Zhou, L. F.; Lei, X. W.; Zhao, L.; Hussain, M. I.; Zhao, G. Z.; Zhang,
+    B. P. Phase Structure and Energy Storage Performance for BiFeO3−BaTiO3 Based Lead-Free
+    Ferroelectric Ceramics. Ceram. Int. 2019, 45 (16), 20266−20275.
+
+    - (48) Li, W. B.; Zhou, D.; Xu, R.; Pang, L. X.; Raney, I. M. BaTiO3-Bi(Li0.5Ta0.5)O3
+    Lead-Free Ceramics, and Multilayers with High Energy Storage Density and Efficiency.
+    ACS Appl. Energy Mater. 2018, 1 (9), 5016−5023.
+
+    - (49) Joseph, J.; Du, Y.; Cheng, Z.; Zhang, S. Low Temperature Sintering Lead-Free
+    Dielectric xBiScO3-(1-x)BaTiO3 for Energy Storage Applications. EcoMat 2023, 5
+    (5), No. e12331.
+
+    '
+  mdcn: '
+
+
+    知识。使用此方法，我们识别出影响模型的关键特征，并进行了简要分析。为验证我们方法的可行性，通过制备未包含在数据集中的xBaTiO3-(1 − x)Bi(Zn2/3Ti1/3)O3材料体系进行了实验验证。模型预测值与实验值之间的误差范围在可接受范围内，表明我们的方法具有一定的实用价值。我们相信，我们的方法也可以扩展到其他材料体系，如线性介电体和反铁电体。此外，未来的工作将探索集成遗传编程方法以实现多目标优化。
+
+
+    ## 相关内容
+
+
+    ### 支持信息
+
+
+    支持信息可免费获取，网址为 https://pubs.acs.org/doi/10.1021/acssuschemeng.4c10430。
+
+
+    - 特征详细列表、W_rec'' 和 η'' 预测的10倍交叉验证评估指标、超参数优化详情、使用不同特征子集的W_rec'' 和 η'' 预测的10倍交叉验证
+    r^2，以及实验详情（PDF）
+
+    - 储能密度和效率数据集（XLSX）
+
+
+    ## 作者信息
+
+
+    ### 通讯作者
+
+
+    郝华 – 武汉理工大学材料合成与加工先进技术国家重点实验室、材料科学与工程学院、国际材料科学与工程学院，中国武汉430070；中国广东实验室佛山先进能源科学与技术仙湖实验室、仙湖氢谷，中国佛山528200；orcid.org/0000-0003-3264-4647；电子邮件：haohua@whut.edu.cn
+
+
+    刘汉兴 – 武汉理工大学材料合成与加工先进技术国家重点实验室、材料科学与工程学院、国际材料科学与工程学院，中国武汉430070；orcid.org/0000-0002-8625-4866；电子邮件：lhxhp@whut.edu.cn
+
+
+    ### 作者
+
+
+    刘健 – 武汉理工大学材料合成与加工先进技术国家重点实验室、材料科学与工程学院、国际材料科学与工程学院，中国武汉430070
+
+
+    熊培丰 – 武汉理工大学材料合成与加工先进技术国家重点实验室、材料科学与工程学院、国际材料科学与工程学院，中国武汉430070
+
+
+    李娇娇 – 武汉理工大学材料合成与加工先进技术国家重点实验室、材料科学与工程学院、国际材料科学与工程学院，中国武汉430070；orcid.org/0000-0002-6255-5250
+
+
+    完整联系信息可在以下网址查阅：https://pubs.acs.org/10.1021/acssuschemeng.4c10430
+
+
+    ## 作者贡献
+
+
+    刘健和熊培丰对本工作均等贡献。刘健：概念构建、数据收集、调查、软件、数据分析和原稿撰写；熊培丰：样品实验与表征、数据收集和软件；李娇娇：稿件修改；郝华：监督、资金获取和稿件修改；刘汉兴：监督和项目管理。
+
+
+    ## 注记
+
+
+    作者声明不存在竞争性财务利益。
+
+
+    ## 致谢
+
+
+    本工作得到中国国家重点研发计划（编号：2023YFB3812200）、中国自然科学基金（项目编号：52472135）和广东省基础与应用基础研究基金（编号：2022B1515120041）的支持。
+
+
+    ## 参考文献
+
+
+    - (1) Yao, Z.; Song, Z.; Hao, H.; Yu, Z.; Cao, M.; Zhang, S.; Lanagan, M. T.;
+    Liu, H. 均匀/非均匀结构介电体及其储能性能. 先进材料 2017, 29, No. 1601727.
+
+    - (2) Wang, D.; Fan, Z.; Zhou, D.; Khesro, A.; Murakami, S.; Feteira, A.; Zhao,
+    Q.; Tan, X.; Reaney, I. M. 基于铋铁酸盐的无铅陶瓷及多层结构具有高可回收储能密度. 《材料化学杂志A》 2018, 6, 4133.
+
+    - (3) Li, J.; Li, F.; Xu, Z.; Zhang, S. 超高储能密度和效率的多层无铅陶瓷电容器. 先进材料 2018, 30, No.
+    1802155.
+
+    - (4) Liu, Q.; Hao, H.; Guo, Q. H.; Shen, Z. H.; Wang, J.; Cao, M. H.; Yao, Z.
+    H.; Liu, H. X. 通过结构优化提高基于BaTiO3的多层陶瓷电容器的击穿强度. 稀有金属 2023, 42 (8), 2552–2561.
+
+    - (5) Li, D.; Jiang, X.; Hao, H.; Wang, J.; Guo, Q.; Zhang, L.; Yao, Z.; Cao,
+    M.; Liu, H. 用于储能电容器的基于BaTiO3薄膜的非晶/晶体工程. ACS可持续化学与工程 2022, 10 (4), 1731–1740.
+
+    - (6) Qi, H.; Xie, A.; Zuo, R. 用于卓越储能电容器的局部结构工程无铅铁电介质：综述. 储能材料 2022, 45, 541–567.
+
+    - (7) Li, D.; Guo, Q.; Cao, M.; Yao, Z.; Liu, H.; Hao, H. A/B位掺杂对PZO储能薄膜反铁电性的影响.
+    微结构 2023, 3 (1), No. 2023007.
+
+    - (8) Luo, B.; Wang, X.; Tian, E.; Song, H.; Wang, H.; Li, L. 无铅CaTiO3–BiScO3线性介电陶瓷的增强储能密度和高效率.
+    ACS应用材料与界面 2017, 9, 19963–19972.
+
+    - (9) Dong, X.; Chen, H.; Wei, M.; Wu, K.; Zhang, J. 掺杂YNbO4的BaTiO3陶瓷的结构、介电和储能性能.
+    合金与化合物杂志 2018, 744, 721–727.
+
+    - (10) Yan, Z.; Zhang, D.; Zhou, X.; Qi, H.; Luo, H.; Zhou, K.; Abrahams, I.;
+    Yan, H. 基于银铌酸盐的高储能密度无铅陶瓷. 《材料化学杂志A》 2019, 7, 10702–10711.
+
+    - (11) Long, C.; Zhou, W.; Song, H.; Zheng, K.; Ren, W.; Wu, H.; Ding, X.; Liu,
+    L. 通过创建高度动态极性纳米区和内在导电，同时实现基于BaTiO3的介电陶瓷的超高储能密度和效率. 材料学报 2023, 256, No. 119135.
+
+    - (12) Ogiara, H.; Randall, C. A.; Trolier-Mckinstry, S. BaTiO3-BiScO3陶瓷的弱耦合弛豫行为.
+    美国陶瓷学会杂志 2009, 92, 110–118.
+
+    - (13) Kumar, N.; Patterson, E. A.; Frömling, T.; Cann, D. P.; Nino, J. C. BaTiO3-Bi(Zn1/2Ti1/2)O3陶瓷中的导电机制.
+    美国陶瓷学会杂志 2016, 99, 3047–3054.
+
+    - (31) Qiao, L.; Zhu, J.; Wan, Y.; Cui, C.; Zhang, G. 基于有限元的机器学习方法用于优化工艺参数以生产碳化硅陶瓷复杂零件.
+    陶瓷国际 2022, 48 (12), 17400−17411.
+
+    - (14) Wang, Q.; Gong, P. M.; Wang, C. M. 在BaTiO3−Bi(Zn1/2Zr1/2)O3弛豫铁电体中同时实现高可回收储能密度和大能量效率.
+    陶瓷国际 2020, 46 (14), 22452−22459.
+
+    - (15) Jiang, X.; Hao, H.; Zhang, S.; Lv, J.; Cao, M.; Yao, Z.; Liu, H. 由Bi(Mg1/2Zr1/2)O3改性的基于BaTiO3陶瓷的增强储能和快速放电性能.
+    欧洲陶瓷学会杂志 2019, 39 (4), 1103−1109.
+
+    - (16) Zhou, Q.; Xu, F.; Gao, C.; Zhang, D.; Shi, X.; Yuen, M. F.; Zuo, D. 机器学习辅助高熵陶瓷力学性能预测和描述符-性能相关性分析.
+    陶瓷国际 2023, 49 (4), 5760−5769.
+
+    - (17) Gong, J.; Chu, S.; Mehta, R. K.; Mcgaughey, A. J. H. 用于陶瓷中电热温度变化预测的XGBoost模型.
+    npj 计算材料 2022, 8, 140.
+
+    - (18) Boiko, D. A.; Macknight, R.; Kline, B.; Gomes, G. 基于大型语言模型的自主化学研究. 自然 2023,
+    624, 570−578.
+
+    - (19) Raccuglia, P.; Elbert, K. C.; Adler, P. D. F.; Falk, C.; Wenny, M. B.;
+    Mollo, A.; Zeller, M.; Friedler, S. A.; Schrier, J.; Norquist, A. J. 利用失败实验进行机器学习辅助材料发现.
+    自然 2016, 533, 73−77.
+
+    - (20) Gu, W.; Yang, B.; Li, D.; Shang, X.; Zhou, Z.; Guo, J. 通过机器学习加速高精度无铅高性能压电陶瓷设计.
+    先进陶瓷杂志 2023, 12 (7), 1389−1405.
+
+    - (21) Shen, Z.; Liu, H.; Shen, Y.; Hu, J.; Chen, L.; Nan, C. 储能材料中的机器学习. 交叉材料
+    2022, 1 (2), 175−195.
+
+    - (22) Jain, A.; Ong, S. P.; Hautier, G.; Chen, W.; Richards, W. D.; Dacek, S.;
+    Cholia, S.; Gunter, D.; Skinner, D.; Ceder, G.; Persson, K. A. 评论：材料计划：加速材料创新的材料基因组方法.
+    APL材料 2013, 1, No. 011002.
+
+    - (23) Curtarolo, S.; Setyawan, W.; Wang, S.; Xue, J.; Yang, K.; Taylor, R. H.;
+    Nelson, L. J.; Hart, G. L. W.; Sanvito, S.; Buongiorno-Nardelli, M.; Mingo, N.;
+    Levy, O. AFLOWLIB.ORG：来自高通量从头计算的分布式材料性质库. 计算材料科学 2012, 58, 227−235.
+
+    - (24) Saal, J. E.; Kirklin, S.; Aykol, M.; Meredig, B.; Wolverton, C. 基于高通量密度泛函理论的材料设计与发现：开放量子材料数据库（OQMD）.
+    JOM 2013, 65 (11), 1501−1509.
+
+    - (25) Kim, C.; Pilania, G.; Ramprasad, R. 机器学习辅助ABX3钙钛矿内在介电击穿强度预测. 物理化学杂志C 2016,
+    120 (27), 14575−14580.
+
+    - (26) Li, C.; Hao, H.; Xu, B.; Zhao, G.; Chen, L.; Zhang, S.; Liu, H. 基于工具变量的ABO3钙钛矿带隙预测渐进学习方法.
+    《材料化学杂志C》 2020, 8 (9), 3127−3136.
+
+    - (27) Li, C.; Hao, H.; Xu, B.; Shen, Z.; Zhou, E.; Jiang, D.; Liu, H. 改进的基于物理的钙钛矿材料结构描述符使机器学习精度更高.
+    计算材料科学 2021, 198, No. 110714.
+
+    - (28) Chen, L.; Xu, B.; Chen, J.; Bi, K.; Li, C.; Lu, S.; Hu, G.; Lin, Y. 基于集成机器学习的热电材料内部和带隙特性相关性分析.
+    《材料化学杂志C》 2020, 8 (37), 13079−13089.
+
+    - (29) Li, J.; Qi, X.; Zhang, Z.; Wang, Y.; Dang, L.; Li, Y.; Wang, L.; Zhang,
+    J. 用于温和条件下高效CO2环加成催化的离子液体筛选：结合机器学习和DFT的方法. ACS可持续化学与工程 2024, 12, 17512.
+
+    - (30) Wang, Y.; Li, S.; Meng, K.; Zhang, Y.; Fang, Z.; Sun, S. 通过两步机器学习和高通量实验探索PET的室温降解反应.
+    ACS可持续化学与工程 2024, 12 (14), 5415−5426.
+
+    - (32) He, J.; Li, J.; Liu, C.; Wang, C.; Zhang, Y.; Wen, C.; Xue, D.; Cao, J.;
+    Su, Y.; Qiao, L.; Bai, Y. 机器学习识别的铁电性材料描述符. 材料学报 2021, 209, No. 116815.
+
+    - (33) Yuan, R.; Tian, Y.; Xue, D.; Xue, D.; Zhou, Y.; Ding, X.; Sun, J.; Lookman,
+    T. 使用机器学习和实验设计加速搜索低场下大储能的基于BaTiO3陶瓷. 先进科学 2019, 6 (21), No. 1901395.
+
+    - (34) Yuan, R.; Liu, Z.; Balachandran, P. V.; Xue, D.; Zhou, Y.; Ding, X.; Sun,
+    J.; Xue, D.; Lookman, T. 使用主动学习加速发现基于BaTiO3压电材料中的大电致应变. 先进材料 2018, 30 (7), No.
+    1702884.
+
+    - (35) Lundberg, S. M.; Lee, S.-I. 解释模型预测的统一方法. 神经信息处理系统会议录；2017, 30. DOI:.
+
+    - (36) Wei, M.; Zhang, J.; Wu, K.; Chen, H.; Yang, C. BiMO3（M = Al, In, Y, Sm,
+    Nd, 和 La）掺杂对BaTiO3陶瓷介电性能的影响. 陶瓷国际 2017, 43 (13), 9593−9599.
+
+    - (37) Li, W. B.; Zhou, D.; Pang, L. X.; Xu, R.; Guo, H. H. 新型基于钛酸钡的高能量密度和快速放电性能电容器.
+    《材料化学杂志A》 2017, 5 (37), 19607−19612.
+
+    - (38) Wang, T.; Jin, L.; Li, C.; Hu, Q.; Wei, X. 用于储能应用的弛豫铁电BaTiO3-Bi(Mg2/3Nb1/3)O3陶瓷.
+    美国陶瓷学会杂志 2015, 98 (2), 559−566.
+
+    - (39) Zhou, M.; Liang, R.; Zhou, Z.; Dong, X. 新型基于BaTiO3的弛豫铁电陶瓷中结合高能量效率和快速充放电能力用于储能.
+    陶瓷国际 2019, 45 (3), 3582−3590.
+
+    - (40) Zhao, H.; Yang, X.; Pang, D.; Long, X. 通过调制BaTiO3-Bi(Ni2/3Ta1/3)O3无铅陶瓷中的场致应变增强储能效率.
+    陶瓷国际 2021, 47 (16), 22734−22740.
+
+    - (41) Zhou, M.; Liang, R.; Zhou, Z.; Dong, X. 具有高储能密度、高功率密度和优异稳定性的新型基于BaTiO3的无铅陶瓷电容器.
+    《材料化学杂志C》 2018, 6 (31), 8528−8537.
+
+    - (42) Zhao, X.; Zhou, Z.; Liang, R.; Liu, F.; Dong, X. 用于温度稳定性应用的无铅(1-x)BaTiO3-xBi(Zn2/3Ti1/3)O3弛豫陶瓷中的高能量储能性能.
+    陶瓷国际 2017, 43 (12), 9060−9066.
+
+    - (43) Wu, L.; Wang, X.; Li, L. 用于储能的无铅BaTiO3-Bi(Zn2/3Nb1/3)O3弱耦合弛豫铁电材料. RSC进展
+    2016, 6 (17), 14273−14282.
+
+    - (44) Zhao, P.; Wang, H.; Wu, L.; Chen, L.; Cai, Z.; Li, L.; Wang, X. 用于储能应用的高性能弛豫铁电材料.
+    先进能源材料 2019, 9 (17), No. 1803048.
+
+    - (45) Yi, X.; Ji, C.; Chen, G.; Yang, H.; Yong, H.; Fu, C.; Cai, W.; Gao, R.;
+    Fan, T.; Wang, Z.; Deng, X. 烧结方法和BiAlO3掺杂剂对BaTiO3-BiYbO3陶瓷介电弛豫和储能性能的影响. 固体状态物理A
+    2020, 217 (2), No. 1900721.
+
+    - (46) Chen, G.; Fan, T.; Yang, H.; Fu, C.; Gao, R.; Deng, X.; Wang, Z.; Fan,
+    P.; Cai, W. BiAlO3掺杂剂和烧结方法对基于BaTiO3陶瓷的微结构、介电弛豫特性和铁电性能的影响. 应用物理A 2019, 125 (6),
+    433.
+
+    - (47) Zhou, L. F.; Lei, X. W.; Zhao, L.; Hussain, M. I.; Zhao, G. Z.; Zhang,
+    B. P. 基于BiFeO3−BaTiO3的无铅铁电陶瓷的相结构和储能性能. 陶瓷国际 2019, 45 (16), 20266−20275.
+
+    - (48) Li, W. B.; Zhou, D.; Xu, R.; Pang, L. X.; Raney, I. M. BaTiO3-Bi(Li0.5Ta0.5)O3无铅陶瓷及具有高储能密度和效率的多层结构.
+    ACS应用能源材料 2018, 1 (9), 5016−5023.
+
+    - (49) Joseph, J.; Du, Y.; Cheng, Z.; Zhang, S. 用于储能应用的低温烧结无铅介电xBiScO3-(1-x)BaTiO3.
+    EcoMat 2023, 5 (5), No. e12331.
+
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 11]
+
+
+    (50) Shen, Z.; Wang, X.; Luo, B.; Li, L. BaTiO3-BiYbO3 Perovskite Materials for
+    Energy Storage Applications. J. Mater. Chem. A Mater. 2015, 3 (35), 18146–18153.
+
+
+    (51) Wei, M.; Zhang, J.; Zhang, M.; Yao, Z.; Chen, H.; Yang, C. Relaxor Behavior
+    of BaTiO3-BiYbO3 Perovskite Materials for High Energy Density Capacitors. Ceram.
+    Int. 2017, 43 (6), 4768–4774.
+
+
+    (52) Wang, L. M.; Liu, Q. X.; Zhou, D. Dielectric and Energy Storage Properties
+    of the (1-x)BaTiO3-xBi(Li1/2Hf1/2)O3 (0.08 ≤ x ≤ 0.14) Ceramics. Mater. Lett.
+    2021, 283, No. 128823.
+
+
+    (53) Li, X.; Chen, X.; Sun, J.; Zhou, M.; Zhou, H. Novel Lead-Free Ceramic Capacitors
+    with High Energy Density and Fast Discharge Performance. Ceram. Int. 2020, 46
+    (3), 3426–3432.
+
+
+    (54) Li, W. B.; Zhou, D.; Liu, W. F.; Su, J.; Z. Hussain, F.; Wang, D. W.; Wang,
+    G.; Lu, Z. L.; Wang, Q. P. High-Temperature BaTiO3-Based Ternary Dielectric Multilayers
+    for Energy Storage Applications with High Efficiency. Chemical Engineering Journal
+    2021, 414, No. 128760.
+
+
+    (55) Liu, Z. G.; Li, M. D.; Tang, Z. H.; Tang, X. G. Enhanced Energy Storage Density
+    and Efficiency in Lead-Free Bi(Mg1/2Hf1/2)O3-Modified BaTiO3 Ceramics. Chemical
+    Engineering Journal 2021, 418, No. 129379.
+
+
+    (56) Si, F.; Tang, B.; Fang, Z.; Li, H.; Zhang, S. A New Type of BaTiO3-Based
+    Ceramics with Bi(Mg1/2Sn1/2)O3 Modification Showing Improved Energy Storage Properties
+    and Pulsed Discharging Performances. J. Alloys Compd. 2020, 819, No. 153004.
+
+
+    (57) Hu, Q.; Tian, Y.; Zhu, Q.; Bian, J.; Jin, L.; Du, H.; Alikin, D. O.; Shur,
+    V. Y.; Feng, Y.; Xu, Z.; Wei, X. Achieve Ultrahigh Energy Storage Performance
+    in BaTiO3-Bi(Mg1/2Ti1/2)O3 Relaxor Ferroelectric Ceramics via Nano-Scale Polarization
+    Mismatch and Reconstruction. Nano Energy 2020, 67, No. 104264.
+
+
+    (58) Yuan, Q.; Li, G.; Yao, F. Z.; Cheng, S. D.; Wang, Y.; Ma, R.; Mi, S. B.;
+    Gu, M.; Wang, K.; Li, J. F.; Wang, H. Simultaneously Achieved Temperature-Insensitive
+    High Energy Density and Efficiency in Domain Engineered BaTiO3-Bi(Mg0.5Zr0.5)O3
+    Lead-Free Relaxor Ferroelectrics. Nano Energy 2018, 52, 203–210.
+
+
+    (59) Wu, M.; Tikhonov, E.; Tudi, A.; Kruglov, L.; Hou, X.; Xie, C.; Pan, S.; Yang,
+    Z. Target-Driven Design of Deep-UV Nonlinear Optical Materials via Interpretable
+    Machine Learning. Adv. Mater. 2023, 35, No. 2300848.
+
+
+    (60) Rohatgi, A. Version 3.3 of WebPlotDigitizer; 2014. http://arohatgi.info/WebPlotDigitizer/app.
+
+
+    (61) Mitchell, M.; Muftakhidinov, B; Winchen, T; Wilms, A; van Schaik, B.; badshah;
+    Mo-Gul; Jędrzejewski-Szmek, Z.; kensington; kylsoewer; markummitchell/engauge-digitizer:
+    Version 12.2 Guidelines for aligning points. Zenodo: 2020. DOI: .
+
+
+    (62) Horvitz, E.; Mulligan, D. Machine Learning: Trends, Perspectives and Prospects.
+    Science (1979) 2015, 349 (6245), 253–255.
+
+
+    (63) Vakkaria, V.; Shah, M.; Nair, P.; Borade, H.; Sahlo, P.; Wankhede, V. Estimation
+    of Lithium-Ion Battery Discharge Capacity by Integrating Optimized Explainable-AI
+    and Stacked LSTM Model. Batteries 2023, 9 (2), 125.
+
+
+    (64) Nair, P.; Vakkaria, V.; Shah, M.; Kumar, Y.; Woźniak, M.; Shafi, J.; Fazal
+    Ijaz, M. AI-Driven Digital Twin Model for Reliable Lithium-Ion Battery Discharge
+    Capacity Predictions. Int. J. Intell. Syst. 2024, 2024, No. 8185044.
+
+
+    (65) Liu, Y.; Tan, X.; Liang, J.; Han, H.; Xiang, P.; Yan, W. Machine Learning
+    for Perovskite Solar Cells and Component Materials: Key Technologies and Prospects.
+    Adv. Funct. Mater. 2023, 33, No. 2214271.
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_11_0.png)'
+  md: '
+
+    - (50) Shen, Z.; Wang, X.; Luo, B.; Li, L. BaTiO3-BiYbO3 Perovskite Materials
+    for Energy Storage Applications. J. Mater. Chem. A Mater. 2015, 3 (35), 18146–18153.
+
+
+    - (51) Wei, M.; Zhang, J.; Zhang, M.; Yao, Z.; Chen, H.; Yang, C. Relaxor Behavior
+    of BaTiO3-BiYbO3 Perovskite Materials for High Energy Density Capacitors. Ceram.
+    Int. 2017, 43 (6), 4768–4774.
+
+
+    - (52) Wang, L. M.; Liu, Q. X.; Zhou, D. Dielectric and Energy Storage Properties
+    of the (1-x)BaTiO3-xBi(Li1/2Hf1/2)O3 (0.08 ≤ x ≤ 0.14) Ceramics. Mater. Lett.
+    2021, 283, No. 128823.
+
+
+    - (53) Li, X.; Chen, X.; Sun, J.; Zhou, M.; Zhou, H. Novel Lead-Free Ceramic Capacitors
+    with High Energy Density and Fast Discharge Performance. Ceram. Int. 2020, 46
+    (3), 3426–3432.
+
+
+    - (54) Li, W. B.; Zhou, D.; Liu, W. F.; Su, J.; Z. Hussain, F.; Wang, D. W.; Wang,
+    G.; Lu, Z. L.; Wang, Q. P. High-Temperature BaTiO3-Based Ternary Dielectric Multilayers
+    for Energy Storage Applications with High Efficiency. Chemical Engineering Journal
+    2021, 414, No. 128760.
+
+
+    - (55) Liu, Z. G.; Li, M. D.; Tang, Z. H.; Tang, X. G. Enhanced Energy Storage
+    Density and Efficiency in Lead-Free Bi(Mg1/2Hf1/2)O3-Modified BaTiO3 Ceramics.
+    Chemical Engineering Journal 2021, 418, No. 129379.
+
+
+    - (56) Si, F.; Tang, B.; Fang, Z.; Li, H.; Zhang, S. A New Type of BaTiO3-Based
+    Ceramics with Bi(Mg1/2Sn1/2)O3 Modification Showing Improved Energy Storage Properties
+    and Pulsed Discharging Performances. J. Alloys Compd. 2020, 819, No. 153004.
+
+
+    - (57) Hu, Q.; Tian, Y.; Zhu, Q.; Bian, J.; Jin, L.; Du, H.; Alikin, D. O.; Shur,
+    V. Y.; Feng, Y.; Xu, Z.; Wei, X. Achieve Ultrahigh Energy Storage Performance
+    in BaTiO3-Bi(Mg1/2Ti1/2)O3 Relaxor Ferroelectric Ceramics via Nano-Scale Polarization
+    Mismatch and Reconstruction. Nano Energy 2020, 67, No. 104264.
+
+
+    - (58) Yuan, Q.; Li, G.; Yao, F. Z.; Cheng, S. D.; Wang, Y.; Ma, R.; Mi, S. B.;
+    Gu, M.; Wang, K.; Li, J. F.; Wang, H. Simultaneously Achieved Temperature-Insensitive
+    High Energy Density and Efficiency in Domain Engineered BaTiO3-Bi(Mg0.5Zr0.5)O3
+    Lead-Free Relaxor Ferroelectrics. Nano Energy 2018, 52, 203–210.
+
+
+    - (59) Wu, M.; Tikhonov, E.; Tudi, A.; Kruglov, L.; Hou, X.; Xie, C.; Pan, S.;
+    Yang, Z. Target-Driven Design of Deep-UV Nonlinear Optical Materials via Interpretable
+    Machine Learning. Adv. Mater. 2023, 35, No. 2300848.
+
+
+    - (60) Rohatgi, A. Version 3.3 of WebPlotDigitizer; 2014. http://arohatgi.info/WebPlotDigitizer/app.
+
+
+    - (61) Mitchell, M.; Muftakhidinov, B; Winchen, T; Wilms, A; van Schaik, B.; badshah;
+    Mo-Gul; Jędrzejewski-Szmek, Z.; kensington; kylsoewer; markummitchell/engauge-digitizer:
+    Version 12.2 Guidelines for aligning points. Zenodo: 2020. DOI: .
+
+
+    - (62) Horvitz, E.; Mulligan, D. Machine Learning: Trends, Perspectives and Prospects.
+    Science 2015, 349 (6245), 253–255.
+
+
+    - (63) Vakkaria, V.; Shah, M.; Nair, P.; Borade, H.; Sahlo, P.; Wankhede, V. Estimation
+    of Lithium-Ion Battery Discharge Capacity by Integrating Optimized Explainable-AI
+    and Stacked LSTM Model. Batteries 2023, 9 (2), 125.
+
+
+    - (64) Nair, P.; Vakkaria, V.; Shah, M.; Kumar, Y.; Woźniak, M.; Shafi, J.; Fazal
+    Ijaz, M. AI-Driven Digital Twin Model for Reliable Lithium-Ion Battery Discharge
+    Capacity Predictions. Int. J. Intell. Syst. 2024, No. 8185044.
+
+
+    - (65) Liu, Y.; Tan, X.; Liang, J.; Han, H.; Xiang, P.; Yan, W. Machine Learning
+    for Perovskite Solar Cells and Component Materials: Key Technologies and Prospects.
+    Adv. Funct. Mater. 2023, 33, No. 2214271.
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_11_0.png)
+
+    '
+  mdcn: '
+
+
+    - (50) Shen, Z.; Wang, X.; Luo, B.; Li, L. 用于储能应用的BaTiO3-BiYbO3钙钛矿材料. J. Mater.
+    Chem. A Mater. 2015, 3 (35), 18146–18153.
+
+
+    - (51) Wei, M.; Zhang, J.; Zhang, M.; Yao, Z.; Chen, H.; Yang, C. 高能量密度电容器用BaTiO3-BiYbO3钙钛矿材料的弛豫行为.
+    Ceram. Int. 2017, 43 (6), 4768–4774.
+
+
+    - (52) Wang, L. M.; Liu, Q. X.; Zhou, D. (1-x)BaTiO3-xBi(Li1/2Hf1/2)O3 (0.08 ≤
+    x ≤ 0.14)陶瓷的介电和储能性能. Mater. Lett. 2021, 283, No. 128823.
+
+
+    - (53) Li, X.; Chen, X.; Sun, J.; Zhou, M.; Zhou, H. 具有高能量密度和快速放电性能的新型无铅陶瓷电容器.
+    Ceram. Int. 2020, 46 (3), 3426–3432.
+
+
+    - (54) Li, W. B.; Zhou, D.; Liu, W. F.; Su, J.; Z. Hussain, F.; Wang, D. W.; Wang,
+    G.; Lu, Z. L.; Wang, Q. P. 用于高效率储能应用的高温BaTiO3基三元介电多层. Chemical Engineering Journal
+    2021, 414, No. 128760.
+
+
+    - (55) Liu, Z. G.; Li, M. D.; Tang, Z. H.; Tang, X. G. 无铅Bi(Mg1/2Hf1/2)O3改性BaTiO3陶瓷中增强的储能密度和效率.
+    Chemical Engineering Journal 2021, 418, No. 129379.
+
+
+    - (56) Si, F.; Tang, B.; Fang, Z.; Li, H.; Zhang, S. 一种具有改进储能性能和脉冲放电性能的Bi(Mg1/2Sn1/2)O3改性BaTiO3基新型陶瓷.
+    J. Alloys Compd. 2020, 819, No. 153004.
+
+
+    - (57) Hu, Q.; Tian, Y.; Zhu, Q.; Bian, J.; Jin, L.; Du, H.; Alikin, D. O.; Shur,
+    V. Y.; Feng, Y.; Xu, Z.; Wei, X. 通过纳米级极化失配和重构，在BaTiO3-Bi(Mg1/2Ti1/2)O3弛豫铁电陶瓷中实现超高储能性能.
+    Nano Energy 2020, 67, No. 104264.
+
+
+    - (58) Yuan, Q.; Li, G.; Yao, F. Z.; Cheng, S. D.; Wang, Y.; Ma, R.; Mi, S. B.;
+    Gu, M.; Wang, K.; Li, J. F.; Wang, H. 在域工程BaTiO3-Bi(Mg0.5Zr0.5)O3无铅弛豫铁电体中同时实现温度不敏感的高能量密度和效率.
+    Nano Energy 2018, 52, 203–210.
+
+
+    - (59) Wu, M.; Tikhonov, E.; Tudi, A.; Kruglov, L.; Hou, X.; Xie, C.; Pan, S.;
+    Yang, Z. 通过可解释机器学习进行深紫外非线性光学材料的目标驱动设计. Adv. Mater. 2023, 35, No. 2300848.
+
+
+    - (60) Rohatgi, A. WebPlotDigitizer 3.3版本；2014年。http://arohatgi.info/WebPlotDigitizer/app.
+
+
+    - (61) Mitchell, M.; Muftakhidinov, B; Winchen, T; Wilms, A; van Schaik, B.; badshah;
+    Mo-Gul; Jędrzejewski-Szmek, Z.; kensington; kylsoewer; markummitchell/engauge-digitizer:
+    对齐点的12.2版本指南. Zenodo: 2020. DOI: .
+
+
+    - (62) Horvitz, E.; Mulligan, D. 机器学习：趋势、展望与前景. Science 2015, 349 (6245), 253–255.
+
+
+    - (63) Vakkaria, V.; Shah, M.; Nair, P.; Borade, H.; Sahlo, P.; Wankhede, V. 通过集成优化的可解释AI和堆叠LSTM模型估算锂离子电池放电容量.
+    Batteries 2023, 9 (2), 125.
+
+
+    - (64) Nair, P.; Vakkaria, V.; Shah, M.; Kumar, Y.; Woźniak, M.; Shafi, J.; Fazal
+    Ijaz, M. 用于可靠锂离子电池放电容量预测的AI驱动数字孪生模型. Int. J. Intell. Syst. 2024, No. 8185044.
+
+
+    - (65) Liu, Y.; Tan, X.; Liang, J.; Han, H.; Xiang, P.; Yan, W. 钙钛矿太阳能电池和组件材料的机器学习：关键技术与前景.
+    Adv. Funct. Mater. 2023, 33, No. 2214271.
+
+
+    ![](img/156bcf868020d5f996268c9ad3226597_11_0.png)
+
+
+    '
+  merge: 0
