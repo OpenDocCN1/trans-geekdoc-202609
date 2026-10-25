@@ -1,0 +1,31 @@
++   [34] D. Guan, K. Chen, G. Han, S. Huang, W. Yuan, M. Guizani, L. Shu, A novel class noise detection method for high-dimensional data in industrial informatics, IEEE Trans. Ind. Inf. 17 (3) (2020) 2181–2190.
+
++   [35] I. Vranckx, J. Raymaekers, B. DeKetelaere, P.J. Rousseeuw, M. Hubert, Real-time discriminant analysis in the presence of label and measurement noise, Chemometr. Intell. Lab. Syst. 208 (2021) 104197.
+
++   [36] S. Xia, B. Chen, G. Wang, Y. Zheng, X. Gao, E. Giem, Z. Chen, Mcfr and mrd: two classification methods based on a novel multiclass label noise filtering learning framework, IEEE Trans. Neural Networks Learn. Syst.doi:10.1109/TNNLS.2020.3047046.
+
++   [37] W. Feng, Y. Quan, G. Dauphin, Label noise cleaning with an adaptive ensemble method based on noise detection metric, Sensors 20 (23) (2020) 6718.
+
++   [38] G. Patirni, A. Rozza, A. Krishna Menon, R. Nock, L. Qu, Making deep neural networks robust to label noise: a loss correction approach, in: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 2017, pp. 1944–1952.
+
++   [39] X. Chen, C. Chen, D. Zhang, Z. Xing, Sethosaurus: Wordnet in software engineering, IEEE Trans. Software Eng.doi:10.1109/TSE.2019.2940439.
+
++   [40] L. Qi, H. Song, X. Zhang, G. Srivastava, X. Xu, S. Yu, Compatibility-aware web apis recommendation for mashup creation via textual description mining, ACM Trans. Multimed. Comput. Commun. Appl.doi:10.1145/3417293.
+
++   [41] L. Yao, Z. Pengzhou, Z. Chi, Research on news keyword extraction technology based on tf-idf and textrank, in: 2019 IEEE/ACIS 18th International Conference on Computer and Information Science, IEEE, 2019, pp. 452–455.
+
++   [42] S. Bergamaschi, L. Po, Comparing lda and lsa topic models for content-based movie recommendation systems, in: International Conference on Web Information Systems and Technologies, Springer, 2014, pp. 247–263.
+
++   [43] M. Maimaiti, Y. Liu, H. Luan, M. Sun, Enriching the transfer learning with pre-trained lexicon embedding for low-resource neural machine translation, Tsinghua Sci. Technol.doi:10.26599/TST.2020.9010029.
+
++   [44] J. Choi, S. Lee, Improving fasttext with inverse document frequency of subwords, Pattern Recogn. Lett. 133 (2020) 165–172.
+
++   [45] M. Khan, H. Wang, A. Riaz, A. Eltaiyani, S. Karim, Bidirectional lstm-rnn-based hybrid deep learning frameworks for univariate time series classification, J. Supercomput. 77 (7) (2021) 7021–7045.
+
++   [46] P. Rodriguez, M.A. Bautista, J. Gonzalez, S. Escalera, Beyond one-hot encoding: lower dimensional target embedding, Image Vis Comput. 75 (2018) 21–31.
+
++   [47] K. Park, J.S. Hong, W. Kim, A methodology combining cosine similarity with classifier for text classification, Appl. Artif. Intell. 34 (5) (2020) 396–411.
+
++   [48] J. Mabrouki, M. Azrour, D. Dhiba, Y. Farhaoui, S.E. Hajjaji, Iot-based data logger for weather monitoring using arduino-based wireless sensor networks with remote graphical application and alerts, Big Data Min. Anal. 4 (1) (2021) 25–32.
+
++   [49] Y. Jin, W. Guo, Y. Zhang, A time-aware dynamic service quality prediction approach for services, Tsinghua Sci. Technol. 25 (2) (2020) 227–238.
