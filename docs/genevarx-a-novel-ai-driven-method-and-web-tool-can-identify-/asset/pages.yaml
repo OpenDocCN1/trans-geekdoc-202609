@@ -1,0 +1,1899 @@
+- pgno: 0
+  md: '# GENEvaRX: A novel AI-driven method and web tool can identify critical genes
+    and effective drugs for Lichen Planus
+
+
+    Turki Turki a,*, Y.-h. Taguchi b,*
+
+
+    a King Abdulaziz University, Department of Computer Science, Jeddah 21589, Saudi
+    Arabia b Chuo University, Department of Physics, Tokyo 112-8551, Japan
+
+
+    # ARTICLE INFO
+
+
+    +   Dataset link: GSE63741, GSE193351, GSE52130
+
+    +   Keywords:
+
+    +   Lichen planus
+
+    +   Gene expression
+
+    +   Therapeutic targets
+
+    +   Drug discovery
+
+    +   Machine learning
+
+    +   Novel AI application in dermatology
+
+
+    # ABSTRACT
+
+
+    Lichen planus (LP) is an autoimmune disorder diagnosed based on physical symptoms
+    and lab tests. Examples of symptoms include flat bumps, and itchy and purplish
+    skin while lab tests include a shave biopsy of the lesion. When the pathology
+    report shows consistency with LP and is negative for potential triggers for an
+    allergy test and hepatitis C, a dermatologist typically prescribes corticosteroid
+    in the form of pills or injection into the lesion to treat the symptoms. To understand
+    the molecular mechanism of the disease and thereby overcome issues associated
+    with disease treatment, there is a need to identify potential effective drugs,
+    drug targets, and therapeutic targets associated the LP. Hence, we propose a novel
+    computational framework based on new constrained optimization to support vector
+    machines coupled with enrichment analysis. First, we downloaded three gene expression
+    datasets (GSE63741, GSE193351, GSE52130) pertaining to healthy and LP patients
+    from the gene expression omnibus (GEO) database. We then processed each dataset
+    and entered it into our computational framework to select important genes. Finally,
+    we performed enrichment analysis of selected genes, reporting the following results.
+    Our methods outperformed baseline methods in terms of identifying disease and
+    skin tissue. Moreover, we report 5 drugs (including dexamethasone, retinoic acid,
+    and quercetin), 45 unique genes (including PSMB8, KRT31, KRT16, KRT19, KRT17,
+    COL3A1, LCE2D, LCE2A), and 23 unique TFs (including NFKB1, STAT1, STAT3), reportedly
+    related to LP pathogenesis, treatments, and therapeutic targets. Our methods are
+    publicly available in the GENEvaRX web server at https://aibio.shinyapps.io/GENEvaRX/.
+
+
+    # 1. Introduction
+
+
+    Lichen planus (LP) is a non-infectious autoimmune disorder in which the immune
+    system attacks affect different areas, including the skin, mouth, and genitals,
+    among other (Patil et al., 2022; Zare et al., 2021). Skin symptoms include itchy
+    (or irritating), flat bumps, and purplish, characterized by more persistent symptoms
+    depending on the affected area (e.g., genitals or mouth) (Suga, 2022). Normally,
+    a shave biopsy is performed by shaving the skin lesion and sending it to a pathology
+    laboratory (Astudillo et al., 2021; Reimann et al., 2021). Then, a dermatopathologist
+    uses a microscope to inspect the sample skin for disease diagnosis. Examples of
+    microscopic descriptions include skin associated with hypergranulosis, hyperkeratosis,
+    and vacuolar basal change. This also involves specifying whether the skin dermis
+    demonstrates band-like patterns of lymphocytic infiltration, pigment incontinence
+    and other info pertaining to stains (Hassanandani, 2020; Vinay et al., 2020; Zhang
+    et al., 2022a). Such descriptions provide a more accurate diagnosis if the skin
+    lesion is related to LP. Other possible triggers of LP include hepatitis C and
+    allergic reactions
+
+
+    (Budimiri et al., 2019; Pitak-Arnnop et al., 2022). When potential triggers are
+    excluded, doctors prescribe treatments to manage LP and treat the symptoms. As
+    the etiology for LP is unknown and the disease still has no cure (Baek et al.,
+    2020; Zhang et al., 2022b), researchers, mainly in biology, medical, and computational
+    biology domains, have attempted to describe the molecular mechanism of LP and
+    gain biological insights, thereby speeding up the drug discovery process (Xie
+    et al., 2023). Vo et al. (Vo et al., 2021) utilized a bioinformatics approach
+    to gain biological insights into oral lichen planus (OLP). The input datasets
+    were downloaded from the gene expression omnibus (GEO) database according to the
+    accession numbers GSE52130 and GSE38616. Both datasets have 14 uniformly distributed
+    samples consisting of seven healthy controls and seven OLP patients. GSE52130
+    is related to the epithelium of OLP patients while GSE38616 is related to the
+    mucosa of OLP patients. A t-test was performed for each input dataset to identify
+    differentially expressed genes (DEGs) with p < 0.05 and with a Benjamini–Hochberg
+    FDR correction. A cluster analysis was performed'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'on the GSE52130 dataset to remove outlier samples and thereby produce a partial
+    dataset for which a t-test was performed, to obtain 444 DEGs. Similarly, a cluster
+    analysis was performed on GSE38616 to remove outlier samples, producing a partial
+    dataset for which a t-test was performed with an output of 348 DEGs. Then, taking
+    the intersection of these DEGs (i.e., 444 and 348), 43 DEGs were obtained and
+    input into DAVIC (http://david.abcc.ncifcrf.gov) for gene ontology enrichment
+    analysis. Results demonstrated that the 43 DEGs included genes related to wound
+    healing (e.g., TNC, and TGFBI), hyperkeratosis (e.g., TMEM45A), and response to
+    infection (TMEM173, LITAF, and RFITN1), among others related to OLP inflammation.
+
+
+    De Lanna et al. (de Lanna et al., 2022) performed a bioinformatics analysis to
+    gain further biological insights regarding the malignant transformation of OLP
+    by identifying shared molecular signatures, thereby distinguishing OLP from oral
+    squamous cell carcinoma (OSCC). The input datasets are publicly available from
+    the GEO (GSE52130, GSE65532, and GSE41613) and were related to OLP and healthy
+    controls), OSCC in advanced stages, and in stages I and II with the corresponding
+    healthy controls. Analysis of co-expressed genes was performed using the Weighted
+    Gene Coexpression Network Analysis (WGCNA) R package. Analysis of differentially
+    expressed genes was performed on a given dataset using limma according to p <
+    0.05, with Benjamini–Hochberg correction. In the three datasets, 107 DEGs were
+    identified from OLP and healthy controls, 331 DEGs for early stage (i.e., I and
+    II) OSCC against healthy controls, and 282 DEGs for advanced stage OSCC against
+    healthy controls. Among the datasets, 35 overlapping DEGs were considered as to
+    be gene signatures of OLP and OSCC. Out of 35 genes, 18 are shared between OLP
+    and OSCC. Immune-related genes, such as IFI6 and IFI27, were among the 35, as
+    well as keratinocyte differentiation genes such as S100A12 and S100P. Enrichment
+    analysis also identified drugs, including oncogenes such as PI3, SPRR1B and others
+    related to the immune system that were also dysregulated in OLP, such as CXCL13,
+    and HIF1A. Co-expressed genes were also identified, elucidating the shared molecular
+    mechanism of OLP and OSCC.
+
+
+    Zhao et al. (Zhao et al., 2022) aimed to inspect the therapeutic effects of quercetin
+    on OLP. For quercetin, 75 targets were identified using two databases, TCMSP (http://tcmspw.com)
+    and UniProt (https://www.uniprot.org) Additionally, 6110 differentially expressed
+    genes of OLP were considered targets. The intersection of 75 and 6110 targets
+    resulted in 66 common targets, which were entered into a network-based enrichment
+    analysis, which functions follows: first, a PPI network was constructed by entering
+    the 66 common targets into the STRING database (https://string-db.org/cgi/input.pl).
+    A topological analysis of the PPI network was then performed using the cytoHubba
+    tool, identifying 12 important targets (F3, VEGFA, TNF, SELE, TP53, JUN, CCL1,
+    VCAM1, PLAT, IL1B, IL6, and IFNG). Second, the common 66 targets were input into
+    a Gene Ontology (GO) enrichment analysis to retrieve biological processes, cell
+    components, and molecular function terms. Kyoto Encyclopedia of Genes and Genomes
+    (KEGG) enrichment analysis reported pathways based on the 66 common targets. Then,
+    a drug-disease-pathway-target interaction network showing the relationship of
+    quercetin and OLP was visualized via Cytoscape. Outcomes were then validated using
+    in-vivo experiments in which higher concentrations of quercetin were associated
+    with higher apoptosis rates of T lymphocytes. Results indicated that quercetin
+    interfered with T helper cells (TH1/TH2) through the protein expression levels
+    of cytokines (IL-6 and IFN-γ) to modulate immune response in OLP. Other recent
+    studies have relied on bioinformatics-based approaches to gain biological insights
+    contributing to understanding the molecular mechanism of LP (Shao et al., 2019;
+    Sun et al., 2022; Xin et al., 2021; Zouali et al., 2022). Other studies from bioinformatics
+    perspective have also been presented to uncover molecular insights for LP (Deng
+    et al., 2020; Du et al., 2020; Li et al., 2023; Meng et al., 2021; Rivera et al.,
+    2020; Wang et al., 2021; Yao et al., 2023).
+
+
+    Although current biological advances understanding of LP mainly relies on bioinformatics-based
+    approaches with existing tools as well as
+
+
+    biological databases of limited knowledge, computational frameworks derived with
+    the help of advanced concepts in artificial intelligence (AI) are needed to unlock
+    tremendous biological knowledge and to lay the foundations for AI as a driving
+    force. Such an existing tool can help in reducing the search space of identifying
+    therapeutic targets, drug targets, and effective drugs, helping to advance drug
+    discovery and disease understanding.
+
+
+    # Contributions.
+
+
+    Our major contributions in this work can be summarized as follows:
+
+
+    (1) To extract more biological knowledge pertaining to LP, we present a computational
+    framework consisting of three new variants of support vector machines (SVM) coupled
+    with enrichment analysis tools, including Enrichr and Metascape (Turki and Taguchi,
+    2023; Turki and Wei, 2018) .
+
+
+    (2) We downloaded three gene expression datasets pertaining to LP from the gene
+    expression omnibus (GSE63741, GSE193351, and GSE52130). Then, we compared our
+    framework against four baseline methods, including limma (Ritchie et al., 2015),
+    significance analysis of microarrays (SAM), and t-test (Tusher et al., 2001),
+    and lasso for the identification of LP skin disease related terms. Enrichment
+    analysis results indicate the superiority of our methods when retrieving related
+    terms to LP with more expressed genes.
+
+
+    (3) Further enrichment analysis results report extensive biological insights as
+    follows. In the first dataset, we identified drugs such as Alitretinoin, Vitinoin,
+    and Dexamethasone. We also identified expressed genes related to Interferon alpha/beta
+    signaling (e.g., IFI27 and IFITM1), and other keratin genes such as KRT17, all
+    of which are related to the LP T-cell mediated disease affecting the skin. For
+    the second dataset, expressed genes related to skin extracellular matrix (e.g.,
+    COL6A3, COL3A1) were identified, which contribute to autoimmune skin diseases.
+    Additionally, drugs (Quercetin, Vitinoin, and Retinoic acid) were identified.
+    For the third dataset, three drugs (Retinoic acid, Vitinoin, and Alitretinoin)
+    were reported as well as three expressed genes (PI3, LCE2A, LCE2D) related to
+    the formation of the cornified envelope at the oral epithelium and skin epidermis.
+
+
+    (4) To reproduce the results of this study, we made an efficient implementation
+    of our methods publicly available within the GENEvaRX web server at https://aibio.shinyapps.io/GENEvaRX/.
+    We provide datasets in the Supplementary Datasets folder. We also provide a GENEvaRX_Screenshots.docx
+    file within the Supplementary Information to demonstrate the use of the web tool.
+
+
+    # Organization.
+
+
+    The rest of this paper is organized as follows. In Section 2, we provide a description
+    of gene expression datasets employed in this study, followed by introduction to
+    our computational framework. In Section 3, we conduct an experimental study evaluating
+    and reporting the performance of our methods against existing baselines. A discussion
+    is provided in Section 4. Finally, we conclude our work and point to future directions
+    for research in Section 5.
+
+
+    # 2. Materials and methods
+
+
+    # 2.1. Gene expression profiles
+
+
+    We downloaded three gene expression datasets with the following accession numbers
+    from the GEO database (Barrett et al., 2012).
+
+
+    # 2.1.1. GSE63741: Dataset1
+
+
+    This gene expression dataset consisted of 60 samples and 1542 expression values
+    (D''erme et al., 2015). Therefore, we had a 60 x 1543 matrix including a column
+    vector for the sample type. The sample type distribution was unified, in which
+    30 samples were designated as “Control” while the remaining samples were from
+    “Lichen Planus” patients. The gene expression dataset was measured and performed
+    according to the microarray platform, PIQOR (TM) Skin 2.0 Microarray, human, antisense
+    (591). We refer to this dataset as Dataset1.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '| GSE dataset | Samples | Control | LP | Genes | Platform | Organism | Experiment
+    type |
+
+    |---|---|---|---|---|---|---|---|
+
+    | GSE63741 | 60 | 30 | 30 | 1542 | GPL19471 | Homo sapiens | Expression profiling
+    by array |
+
+    | GSE193351 | 47 | 10 | 37 | 5916 | GPL20301 | Homo sapiens | Expression profiling
+    by high throughput sequencing |
+
+    | GSE52130 | 14 | 7 | 7 | 5355 | GPL10558 | Homo sapiens | Expression profiling
+    by array |
+
+
+    # 2.1.2. GSE193351: Dataset2
+
+
+    We retrieved the whole transcriptomic dataset comprised of 47 samples and 64253
+    expression values (Barrett et al., 2012). Then, we downloaded a list of approved
+    protein-coding genes (PCGs) by domain experts from BioMart at HUGO Gene Nomenclature
+    Committee (HGNC) at https://biomart.genenames.org/ (Durinck et al., 2009; Povey
+    et al., 2001). We selected 5916 PCGs from the 64253 genes. Thus, we ended up with
+    a dataset encoded as a 47 × 5917 matrix, including the sample type as a column
+    vector. The sample type distribution was not unified, consisted of 10 healthy
+    controls and 37 LP patients. The dataset was then measured and run using the high
+    throughput sequencing platform, Illumina HiSeq 4000 (Homo sapiens). We refer to
+    this dataset as Dataset2.
+
+
+    # 2.1.3. GSE52130: Dataset3
+
+
+    The third gene expression dataset included 23 samples and 43961 expression values
+    (Barrett et al., 2012). We selected 5355 approved PCGs by domain experts from
+    BioMart at HUGO Gene Nomenclature Committee (HGNC) at https://biomart.genenames.org/
+    (Durinck et al., 2009; Povey et al., 2001). The sample distribution of 14 samples
+    was uniformed, consisting of 7 samples for each class. Therefore, we had a dataset
+    encoded as a 14 × 5356 matrix, including the sample type as a column vector. The
+    sample type distribution was comprised of 14 samples (distributed as 7 healthy
+    controls, 7 OLP patients) and 9 samples (distributed as 5 genital LP and 4 healthy
+    controls). The gene expression data was measured and processed according to the
+    microarray platform, Illumina HumanHT-12 V4.0 expression beadchip. We refer to
+    this dataset in the remaining sections as Dataset3. In Table 1, we provide a summary
+    of the three studied datasets.
+
+
+    # 2.2. Computational framework
+
+
+    Fig. 1 demonstrates the performed steps of the presented computational framework.
+    In the data preprocessing part, biopsy samples of LP were obtained from the patients.
+    Then, samples were collected and prepared to be provided to a biological technology
+    measuring the expression level of genes (Bi et al., 2020). In the machine learning
+    part, we are given a gene expression dataset as {(x1, y1), ... (xm, ym)}, where
+    xi designates the ith sample and yi is the corresponding sample type. In this
+    study, we considered yi in the binary case ({Control, Lichen Planus}). We encoded
+    all samples xi (for i = 1...m) as an m × n matrix, where m and n are the numbers
+    of samples and genes, respectively. We also had a 1 × m column vector, encoding
+    all sample types yi (for i = 1...m). We aimed to identify p important genes out
+    of the n genes, where p << n and these p genes are expressed in each sample. Therefore,
+    we presented these new sparse variants of the SVM, working as follows: in Eq.
+    (1), we sought to find arguments (i.e., w = [w1... wn] and bias b ∈ R) minimizing
+    the objective function subject to shown constraints. Each sample was encoded by
+    expression values of n genes. As a result, weights in w corresponded to the gene
+    importance among all samples. Because w is used in SVM model as sign(w.x+b) to
+    discriminate between Control and LP examples, a higher weight |wi| in absolute
+    value refers to the more greater importance of the ith gene. A modified version
+    of SVM leading to sparse representation is given by
+
+
+    ```
+
+    arg min w,b ||w||^2 / 2 + c sum_{i=1}^m xi^k
+
+    subject to yi(w . xi + b) >= 1 - xi, i = 1, 2, ..., m
+
+    xi >= 0,
+
+    ||w||_1 <= lambda.
+
+    (1)
+
+    ```
+
+
+    In the above equation, the constrained optimization problem is different from
+    the soft margin SVM in (Turki and Taguchi, 2023) as it includes additional constraint,
+    ||W||_1 <= lambda, shrinking weights for genes with less prediction power closer
+    to zero. That leads to increased sparsity for weight vector w. ||W||_1 = (sum_{i=1}^n
+    |wi|) is the L1-norm, lambda ∈ R. Eq. (2) shows a new variant of the constrained
+    optimization problem as
+
+    arg min w,b u sum_{i=1}^m phi(||w||^2 / 2) + c sum_{i=1}^m xi^k
+
+    phi(v) = { 2r|v| - r^2, if |v| > r; v^2, otherwise }
+
+    subject to yi(w . xi + b) >= 1 - xi, i = 1, 2, ..., m
+
+    xi >= 0,
+
+    ||w||_1 <= lambda.
+
+    (2)
+
+
+    where we included ||W||_1 <= lambda as an additional constraint. Therefore, when
+    |v| > r, then Eq. (2) becomes
+
+    arg min w,b u sum_{i=1}^m (2r | ||w||^2 / 2 | - r^2) + c sum_{i=1}^m xi^k
+
+    subject to yi(w . xi + b) >= 1 - xi, i = 1, 2, ..., m
+
+    xi >= 0,
+
+    ||w||_1 <= lambda.
+
+    (3)
+
+
+    Otherwise, the constrained optimization problem becomes as
+
+    arg min w,b u sum_{i=1}^m (||w||^2 / 2)^2 + c sum_{i=1}^m xi^k
+
+    subject to yi(w . xi + b) >= 1 - xi, i = 1, 2, ..., m
+
+    xi >= 0,
+
+    ||w||_1 <= lambda.
+
+    (4)
+
+
+    For a given input dataset, we had different w and b as a result of the different
+    optimization problems. We utilized CVXR in R to find the weight vector w and bias
+    b, minimizing the constrained optimization problem (Fu et al., 2020). For the
+    enrichment analysis part, we uploaded p genes associated with the highest p weights
+    ( |w1| > |w2| > ... > |wp| ) to enrichment analysis tools, namely Enrichr and
+    Metascape, identifying and interpreting biological-related terms such as important
+    expressed genes, drugs, drug targets, therapeutic targets, and others to be explained
+    in the subsequent section.
+
+
+    # 3. Experiments and results
+
+
+    # 3.1. Experimental methodology
+
+
+    We assessed our presented methods (i.e., ssvm1, ssvm2 and ssvm3) against several
+    baseline methods, including limma (Ritchie et al., 2015), SAM, t-test, and lasso
+    (Tusher et al., 2001). All seven approaches'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/5167e39db543350967ce62ea50022e12_3_0.png)
+
+
+    Fig. 1. Flowchart of the presented AI-driven computational framework identifying
+    transcription factors, drugs and important genes expressed in LP. Source: Figure
+    created with BioRender.com.
+
+
+    # Table 2 List of employed computational methods in this study.
+
+
+    | Abbreviation | Method |
+
+    |---|---|
+
+    | ssvm1 | Sparse svm 1 (proposed) |
+
+    | ssvm2 | Sparse svm 2 (proposed) |
+
+    | ssvm3 | Sparse svm 3 (proposed) |
+
+    | limma | Linear models for microarray data (baseline) |
+
+    | sam | Significance analysis of microarrays (baseline) |
+
+    | t-test | Student''s t-test (baseline) |
+
+    | lasso | Least absolute shrinkage and selection operator (baseline) |
+
+
+    when the disease was related to the studied disease type. The same concept holds
+    true when a term is a tissue (i.e., composed of cells with the same function).
+    Another performance indicator was the ranking, where a lower ranking of the disease
+    (e.g., lichen planus) showed the better performance results. We also evaluated
+    our models against lasso using the supervised learning setting, reporting performance
+    measures such as area under curve (AUC) followed by plots related to statistical
+    significance of results and gene importance. In this study, we used R to conduct
+    the experiments (Team, 2008). In particular, we employed the CVXR package in R
+    to solve optimization problems (Fu et al., 2020). We also performed SAM utilizing
+    the siggenes package (Schwender, 2012) and we employed the limma package in R,
+    using the lmFit and eBayes functions for model fitting (Ritchie et al., 2015).
+    For the t-test, we used the t.test function in the R stats package (Team, 2008).
+    For lasso, the glmnet package (Friedman et al., 2010) was used to select genes
+    associated with non-zero coefficients, as these refer to the important genes.
+    For the three baseline methods (i.e., SAM, limma, and t-test), we employed the
+    p.adjust function coupled with the “BH” option to compute adjusted p-values, setting
+    a threshold of p < 0.01 as in (Taguchi and Turki, 2020; Turki and Taguchi, 2023).
+
+
+    received labeled examples as an input to the computational method. For our models
+    (i.e., ssvm1, ssvm2, and ssvm3), because these SVM-based models are defined as
+    the sign(w.x + b) (i.e., sign of weighted genes w.x plus the bias b), the top
+    p important genes are selected based on the corresponding top p values in weight
+    vector as those top p values in w (i.e., w = [|w1| ... |wp|]) refer to the importance
+    of selected genes. For lasso, the model is expressed as β0 + βx where top p genes
+    are associated with top p coefficients in β. Hence, we select top p genes based
+    on top p coefficients in β. For baseline methods (i.e., limma, SAM, t-test), we
+    selected genes based on significance according to adjusted p-values < 0.01. In
+    Table 2, we list all methods employed in this study.
+
+
+    We performed a biological enrichment analysis evaluating the performance results
+    by uploading genes produced via each method to Enrichr (https://maayanlab.cloud/Enrichr/)
+    (Kuleshov et al., 2016) and Metascape (https://metascape.org/gp/index.html) (Zhou
+    et al., 2019). Assuming that the retrieved term was about a disease, then more
+    genes associated with a disease demonstrated better performance
+
+
+    In terms of gene expression experiment for Dataset1, it is for the analysis of
+    homo sapiens skin diseases and healthy controls, obtained from the dermatology
+    department at the university of Bonn, located in Bonn, Germany. We retrieved gene
+    expression profiles of healthy controls and LP (affecting the skin) from the national
+    center for biotechnology information (NCBI) at the national institute of health
+    (NIH)(https://www.ncbi.nlm.nih.gov/geo/) under the gene expression omnibus (GEO)
+    ID GSE63741. From the series matrix, we downloaded'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '| Method | Rank | Term | Overlap | P-value | Adjusted P-value |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | ssvm1 | 28 | LICHEN PLANUS | 4/38 | 3.81 × 10⁻⁵ | 2.91 × 10⁻³ |
+
+    | | 5 | AUTOIMMUNE DISEASES | 20/1060 | 2.39 × 10⁻⁷ | 1.04 × 10⁻⁴ |
+
+    | | 9 | DERMATOLOGIC DISORDERS | 12/406 | 8.74 × 10⁻⁷ | 2.12 × 10⁻⁴ |
+
+    | ssvm2 | 28 | LICHEN PLANUS | 4/38 | 3.81 × 10⁻⁵ | 2.91 × 10⁻³ |
+
+    | | 5 | AUTOIMMUNE DISEASES | 20/1060 | 2.39 × 10⁻⁷ | 1.04 × 10⁻⁴ |
+
+    | | 9 | DERMATOLOGIC DISORDERS | 12/406 | 8.74 × 10⁻⁷ | 2.12 × 10⁻⁴ |
+
+    | ssvm3 | 27 | LICHEN PLANUS | 4/38 | 3.81 × 10⁻⁵ | 2.97 × 10⁻³ |
+
+    | | 4 | AUTOIMMUNE DISEASES | 20/1060 | 2.39 × 10⁻⁷ | 1.27 × 10⁻⁴ |
+
+    | | 14 | DERMATOLOGIC DISORDERS | 11/406 | 5.91 × 10⁻⁶ | 8.97 × 10⁻⁴ |
+
+    | limma | 2296 | LICHEN PLANUS | 1/38 | 1.73 × 10⁻¹ | 2.33 × 10⁻¹ |
+
+    | | 61 | AUTOIMMUNE DISEASES | 19/1060 | 1.09 × 10⁻⁶ | 5.53 × 10⁻⁵ |
+
+    | | 279 | DERMATOLOGIC DISORDERS | 8/406 | 9.84 × 10⁻⁴ | 1.09 × 10⁻¹ |
+
+    | sam | 342 | LICHEN PLANUS | 2/38 | 1.54 × 10⁻² | 1.18 × 10⁻¹ |
+
+    | | 228 | AUTOIMMUNE DISEASES | 12/1060 | 6.58 × 10⁻³ | 7.63 × 10⁻³ |
+
+    | | 759 | DERMATOLOGIC DISORDERS | 5/406 | 5.30 × 10⁻² | 1.77 × 10⁻¹ |
+
+    | t-test | 1281 | LICHEN PLANUS | 1/38 | 1.73 × 10⁻¹ | 3.08 × 10⁻¹ |
+
+    | | 385 | AUTOIMMUNE DISEASES | 10/1060 | 3.91 × 10⁻² | 2.10 × 10⁻¹ |
+
+    | | 1155 | DERMATOLOGIC DISORDERS | 9/2316 | 1.46 × 10⁻¹ | 2.88 × 10⁻¹ |
+
+    | lasso | - | LICHEN PLANUS | - | - | - |
+
+    | | - | AUTOIMMUNE DISEASES | - | - | - |
+
+    | | 374 | DERMATOLOGIC DISORDERS | 1/406 | 2.18 × 10⁻¹ | 2.76 × 10⁻¹ |
+
+
+    | Method | Rank | Term | Overlap | P-value | Adjusted P-value |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | ssvm1 | 6 | SKIN (BULK TISSUE) | 19/2316 | 1.99 × 10⁻² | 3.59 × 10⁻¹ |
+
+    | ssvm2 | 6 | SKIN (BULK TISSUE) | 19/2316 | 1.99 × 10⁻² | 3.59 × 10⁻¹ |
+
+    | ssvm3 | 3 | SKIN (BULK TISSUE) | 20/2316 | 1.00 × 10⁻² | 3.60 × 10⁻¹ |
+
+    | limma | 13 | SKIN (BULK TISSUE) | 20/2316 | 1.00 × 10⁻² | 7.72 × 10⁻² |
+
+    | sam | 6 | SKIN (BULK TISSUE) | 13/2316 | 3.72 × 10⁻¹ | 9.99 × 10⁻¹ |
+
+    | t-test | 9 | SKIN (BULK TISSUE) | 12/2316 | 4.93 × 10⁻¹ | 9.99 × 10⁻¹ |
+
+    | lasso | 9 | SKIN (BULK TISSUE) | 2/2316 | 4.12 × 10⁻¹ | 7.71 × 10⁻¹ |
+
+
+    expression files of genes, namely GSE63741_series_matrix.txt.gz. We used getGEO()
+    function within GEOquery package (Davis and Meltzer, 2007) to get the gene expression
+    data with the help of fData() function to retrieve gene names, pData() function
+    to retrieve sample type, exprs() function to retrieve expression values. fData(),
+    pData(), and exprs() were from Biobase package (Huber et al., 2015).
+
+    For gene expression experiment of Dataset2, it is for testing effectiveness of
+    Ruxolitinib cream when treating cutaneous LP, obtained from department of quantitative
+    health sciences at Mayo Clinic, located at Rochester, Minnesota, USA. We retrieved
+    gene expression profiles of healthy controls and cutaneous LP pertaining to pre-
+    and post-therapy from the NCBI at NIH under ID GSE193351. We downloaded expression
+    files of genes GSE193351_series_matrix.txt.gz from the series matrix. As in Dataset1,
+    we used similar functions of GEOquery and Biobase packages. Moreover, we selected
+    5916 protein coding genes (PCGs), labeled by domain experts from BioMart at HUGO
+    Gene Nomenclature Committee as described in subsection GSE193351: Dataset2.
+
+    Regarding gene expression experiment for Dataset3, it is for comparing gene expression
+    profiles of OLP and genital LP against their corresponding healthy controls, obtained
+    from the department of Medical Biosciences in the pathology lab at Umeå University,
+    located at Umeå, Sweden. Gene expression profiles pertaining to healthy controls
+    and genital OLP were obtained from the NCBI at NIH under GEO ID GSE52130. We downloaded
+    expression files of genes GSE52130_series_matrix.txt.gz from the series matrix.
+    As in Dataset2, we utilized the same functions related to GEOquery and Biobase
+    packages as well as protein coding genes from BioMart at HUGO Gene Nomenclature
+    Committee as described in subsection GSE52130: Dataset3. We considered OLP against
+    corresponding healthy controls as it has more samples than the genital LP, consisting
+    of 5 samples against 4 healthy controls.
+
+
+    # 3.2. Results
+
+
+    # 3.2.1. Dataset1
+
+
+    For each method, we show retrieved terms provided by Enrichr in Tables 3 and 4.
+    These terms in Table 3 show the diseases associated with provided input list of
+    genes. Related terms with low-ranking values and a large number of expressed genes
+    demonstrated the superiority of the computational method. Table 3 shows that ssvm3
+    performed better than all other methods. Notably, LP is ranked 27th, with 4 expressed
+    genes (CXCL9, MMP9, S100A9, S100A8) out of 38. Moreover, autoimmune diseases is
+    ranked 4th with 20 expressed genes (CD52, RARRES3, STAT1, TRAC, ITGB2, GSTT1,
+    ISG15, MMP9, PSMB10, PSMB8, TNFSF13B, PSMB9, KRT19, SOCS1, GAL, LCK, IRF1, CD47,
+    S100A9, S100A8) out of 1060. The ssvm1 and ssvm2 methods outperformed ssvm3 and
+    other methods for dermatologic disorders term, ranking 9th with 12 commonly expressed
+    genes (MMP12, SOCS1, KRT17, RARRES3, ITGB2, TNC, CCL19, MMP9, MS4A1, CST6, S100A8,
+    CCL27). Table 4 shows retrieved terms related to tissues of interest. It is clear
+    that ssvm3 achieved the best results regarding skin tissue, ranking 3rd with 20
+    expressed genes (SERPINA12,CXCL9, MAAO, TNC, KRT7, CST6, MMP12, FADS2, KRT19,
+    GAL, KRT17, COL4A1, KRT16, KRT15, SFN, THRSP, CCL19, S100A9, S100A8, CCL27) within
+    the skin tissue comprised of cells with similar function. Tied for the second-best
+    method regarding skin tissue, ssvm2 and ssvm3 ranked 6th, with 19 expressed genes.
+    When compared to baseline methods, these results demonstrate the superiority of
+    ssvm3 followed by ssvm1 and ssvm2. Although skin tissue was ranked the 6th by
+    SAM, 13 genes were expressed, fewer than those of ssvm2 and ssvm3. Fig. 2 provides
+    useful information pertaining to the intersection of provided genes according
+    to each method. It can be seen that ssvm1, ssvm2, and ssvm3 share 70 genes, while
+    they differ in 30 genes. This implies that each'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/5167e39db543350967ce62ea50022e12_5_0.png)
+
+
+    Fig. 2. Visualization of notable sets pertaining to each gene list provided by
+    each method when Dataset1 was used.
+
+
+    Table 5
+
+    Retrieved enriched terms from "DSigDB" via Enrichr according to uploaded genes
+    using Dataset1, showing genes (column: Genes) associated with drugs (column: Term).
+    Rank column shows the order of terms when retrieved. NO. shows the number of genes.
+
+
+    | Rank | Term | NO. | Genes |
+
+    | :--- | :--- | :--- | :--- |
+
+    | 1 | Alitretinoin | 11 | KRT19;SOCS1;KRT17;RARRES3;STAT1;IRF1; KRT15;ITGB2; KRT7;S100A9;S100A8
+    |
+
+    | 2 | Vitinoin | 19 | CD52;IFITM1;ITGB2;LAPTM5;KRT17;MMP9;FADS2; KRT19;SOCS1;GAL;KRT17;BASP1;LCK;WIF1;KRT16;IRF1;
+    KRT15;S100A9;S100A8 |
+
+    | 16 | Dexamethasone | 9 | MMP12;SOCS1;MAOA;WIF1;TNC;S100A9;MMP9;CST6;S100A8 |
+
+
+    method generated different list of genes. For example, limma has 79 different
+    genes from all other methods. The same holds for SAM. The t-test showed 75 different
+    genes from all other methods. Additionally, lasso produced 12 genes in which 7
+    were unique to lasso (i.e., no other method produced these genes). These visualized
+    results act as a demonstration of performance differences between methods, as
+    each produced a different gene list. Regarding Dataset1, we provide genes produced
+    by all computational methods in Supplementary Data Sheet 1. In Supplementary Tables
+    1A and 1B, we provide enrichment analysis results of all methods pertaining to
+    DisGeNET and ARCHS4 Tissues, respectively. Because ssvm3 produced good results
+    in terms of retrieving the diseases and tissues pertaining to the gene expression
+    profiles in Dataset1, we retrieved drugs and associated drug targets (genes) from
+    the drug signatures database (DSigDB) and then uploaded 100 genes of ssvm3 to
+    Metascape for further biological analysis. Table 5 shows retrieved terms pertaining
+    to drugs associated with provided genes. The first term is for the drug Alitretinoin,
+    which has been shown to be clinically effective in the treatment of LP cases (Brehmer
+    et al., 2011; Lee et al., 2019). The 2nd-ranked drug was Vitinoin, the generic
+    name of which is retinoin, which has been included in clinical trials and has
+    demonstrated potential improvements in the clinical treatments pertaining to LP
+    (Scully
+
+
+    and Carrozzo, 2008; Sloberg et al., 1979). Dexamethasone is a steroid-based drug,
+    ranked 16th and has demonstrated good clinical outcomes associated with OLP (Didona
+    et al., 2022; Patil et al., 2023; Sahoo et al., 2022; Sandhu et al., 2022). In
+    Supplementary Table 1_C, we provide enrichment analysis results pertaining to
+    drug terms within DSigDB. In Fig. 3, we show three highly connected subgraphs
+    obtained from the PPI network, including the following 14 genes: PSME2, PSMB10,
+    PSMB9, KRT31, KRT16, KRT19, KRT17, KRT15, BST2, STAT1, IFI27, IFITM1, PSMB8, and
+    IRF1. Some of these identified genes have played a key role in understanding the
+    working mechanism of LP. Proteasome (e.g., PSMB9, PSMB8, PSMB10, PSME2) where
+    PSMB8 dysfunction reported to play a key role in the induction od Type I interferon
+    (IFNα,IFNβ) (Crow and Stetson, 2022). We report expressed genes related to Interferon
+    alpha/beta signaling (i.e., STAT1, BST2, IFI27, IFITM1, PSMB8, IRF1), as well
+    as keratin genes related to intermediate filament organization (e.g., KRT16, KRT15,
+    KRT17, KRT19, and KRT31). Regarding the persistence of wounds in skin autoimmune
+    disease, it has been reported that Type I interferon, in addition to its role
+    in dendritic cells activation and then T cells activation, can cause keratinocytes
+    to attack (Zhang, 2019). These results demonstrate how T-cells attack the epidermis
+    of the skin (Fig. 4) (Ah Kioon et al., 2021), contributing to LP pathogenesis.
+    It is worth noting that KRT17 has been reported to be a potential'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/5167e39db543350967ce62ea50022e12_6_0.png)
+
+
+    # Fig. 3. Three highly interconnected clusters in a protein-protein interaction
+    based on 100 genes from ssvm3 provided to Metascape enrichment analysis.
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_6_1.png)
+
+
+    # Fig. 4. Skin of a patient, with LP affecting the arm area. Critical expressed
+    genes obtained from Fig. 3 are shown in the skin epidermis and dermis. Source:
+    Figure created with BioRender.com.
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_6_2.png)
+
+
+    # Fig. 5. Fifteen transcription factors provided by Metascape according to the
+    list of 100 input genes from ssvm3.
+
+
+    therapeutic targets for OLP (de Lanna et al., 2022). Keratin 19 (KRT19) has been
+    found to be expressed in OLP (Farah et al., 2021; Schreurs et al., 2020). KRT16
+    has been reported to be associated with LP in the wound repair process (Vo et
+    al., 2021) and IFI27 has been reported to be overexpressed in OLP (de Lanna et
+    al., 2022). IRF1 and IFITM1 have been induced in LP, demonstrating their involvement
+    in the skin injury process (Wenzel and Tüting, 2008). These 14 expressed genes
+    can be considered as potential therapeutic targets for LP treatment. Moreover,
+    they contribute to a greater understanding of LP pathogenesis. As shown in Fig.
+    5, we identified 15 transcription factors: RELA, NFKB1, SP1, STAT1, ETS1, STAT3,
+    STAT2, JUN, HIF1A, IRF1, SRF, ETS2, CIITA, SMAD3, and SPI1. It has been reported
+    in LP (Braegelmann
+
+
+    et al., 2021). STAT1 has been reported to play a key role in the immune response
+    in LP (Shao et al., 2019). OLP has been reported to be associated with increased
+    expression of SMAD3 (Evert et al., 2021). These 14 identified genes and 15 transcription
+    factors may prove useful as therapeutic targets and for understanding the molecular
+    mechanism of LP.
+
+
+    # 3.2.2. Dataset2
+
+
+    Table 6 reports terms (i.e., diseases) associated with selected genes while Table
+    7 reports terms (i.e., tissue type) according to expressed genes after uploading
+    genes obtained via each method. It can be seen in Table 6 that our methods (ssvm1,
+    ssvm2, and ssvm3) outperformed'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'Table 6
+
+    Retrieved enriched terms within “DisGeNET” via Enrichr according to uploaded genes
+    via methods using Dataset2, showing association between human genes and diseases.
+    Rank column shows the order of terms when retrieved. Overlap displays a ratio-like
+    format, corresponding to the number of uploaded genes overlapping to those in
+    the terms. The best result is shown in bold.
+
+
+    | Method | Rank | Term | Overlap | P-value | Adjusted P-value |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | ssvm1 | 10 | SKIN DISEASES, GENETIC | 7/45 | 2.45 x 10^-9 | 7.93 x 10^-7 |
+
+    | | 421 | AUTOIMMUNE DISEASES | 13/1060 | 2.37 x 10^-3 | 1.82 x 10^-2 |
+
+    | | 13 | DERMATOLOGIC DISORDERS | 14/406 | 1.46 x 10^-8 | 3.57 x 10^-6 |
+
+    | ssvm2 | 10 | SKIN DISEASES, GENETIC | 7/45 | 2.45 x 10^-9 | 7.93 x 10^-7 |
+
+    | | 421 | AUTOIMMUNE DISEASES | 13/1060 | 2.37 x 10^-3 | 1.82 x 10^-2 |
+
+    | | 13 | DERMATOLOGIC DISORDERS | 14/406 | 1.46 x 10^-8 | 3.57 x 10^-6 |
+
+    | ssvm3 | 10 | SKIN DISEASES, GENETIC | 7/45 | 2.45 x 10^-9 | 7.93 x 10^-7 |
+
+    | | 421 | AUTOIMMUNE DISEASES | 13/1060 | 2.37 x 10^-3 | 1.82 x 10^-2 |
+
+    | | 13 | DERMATOLOGIC DISORDERS | 14/406 | 1.46 x 10^-8 | 3.57 x 10^-6 |
+
+    | limma | - | SKIN DISEASES, GENETIC | - | - | - |
+
+    | | 944 | AUTOIMMUNE DISEASES | 6/1060 | 4.38 x 10^-1 | 6.58 x 10^-1 |
+
+    | | 795 | DERMATOLOGIC DISORDERS | 3/406 | 3.31 x 10^-1 | 5.92 x 10^-1 |
+
+    | sam | - | SKIN DISEASES, GENETIC | - | - | - |
+
+    | | - | AUTOIMMUNE DISEASES | - | - | - |
+
+    | | - | DERMATOLOGIC DISORDERS | - | - | - |
+
+    | t-test | - | SKIN DISEASES, GENETIC | - | - | - |
+
+    | | 578 | AUTOIMMUNE DISEASES | 1/1060 | 6.81 x 10^-1 | 7.00 x 10^-1 |
+
+    | | - | DERMATOLOGIC DISORDERS | - | - | - |
+
+    | lasso | - | SKIN DISEASES, GENETIC | - | - | - |
+
+    | | 516 | AUTOIMMUNE DISEASES | 1/1060 | 6.03 x 10^-1 | 6.40 x 10^-1 |
+
+    | | 445 | DERMATOLOGIC DISORDERS | 1/406 | 2.94 x 10^-1 | 3.61 x 10^-1 |
+
+
+    Table 7
+
+    Retrieved enriched terms within “ARCHS4 Tissues” via Enrichr according to uploaded
+    genes via methods using Dataset2, showing genes expressed within tissue types.
+    Rank column shows the order of terms when retrieved. Overlap displays a ratio-like
+    format, corresponding to the number of uploaded genes overlapping to those in
+    the terms. The best result is shown in bold.
+
+
+    | Method | Rank | Term | Overlap | P-value | Adjusted P-value |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | ssvm1 | 1 | SKIN (BULK TISSUE) | 47/2316 | 1.05 x 10^-18 | 1.13 x 10^-16 |
+
+    | ssvm2 | 1 | SKIN (BULK TISSUE) | 47/2316 | 1.05 x 10^-18 | 1.13 x 10^-16 |
+
+    | ssvm3 | 1 | SKIN (BULK TISSUE) | 47/2316 | 1.05 x 10^-18 | 1.13 x 10^-16 |
+
+    | limma | 65 | SKIN (BULK TISSUE) | 10/2316 | 7.34 x 10^-1 | 9.99 x 10^-1 |
+
+    | sam | 42 | SKIN (BULK TISSUE) | 2/2316 | 3.69 x 10^-1 | 6.76 x 10^-1 |
+
+    | t-test | 31 | SKIN (BULK TISSUE) | 4/2316 | 2.19 x 10^-1 | 6.35 x 10^-1 |
+
+    | lasso | 51 | SKIN (BULK TISSUE) | 2/2316 | 6.01 x 10^-1 | 8.76 x 10^-1 |
+
+
+    baseline methods. Specifically, skin diseases-genetic ranked 10th with 7 commonly
+    expressed genes (DSP, FLG2, COL7A1, SPINK5, PKP1, ADAR, ITGA6) out of 45. Autoimmune
+    diseases ranked 421st with 13 commonly expressed genes (FLG, SPARC, DST, STAT1,
+    ADAR, ENO1, HMGCR, TTN, PTPRC, SOAT1, LMNA, FGFR3, TP63) out of 1060 genes. The
+    dermatologic disorders term was ranked 13th with 14 commonly expressed genes (FLG,
+    DSP, DST, SPINK5, DHCR24, ADAR, SFPQ, DES, COL7A1, LMNA, FGFR3, TP63, SPRR1B,
+    IVL) out of 406. Baseline methods demonstrated inferior results as retrieved terms
+    ranked worse terms. Moreover, no baseline method was able to identify all terms
+    (e.g., skin diseases-genetic, autoimmune diseases, dermatologic disorders). For
+    example, SAM had no related terms. Hence, results were designated as “-”. The
+    same held true when a baseline method did not retrieve the term. In Table 7, it
+    is evident that our methods (i.e., ssvm1, ssvm2, and ssvm3) retrieve the related
+    term (i.e., SKIN (BULK TISSUE)), ranking 1st with 47 expressed genes out of 2316.
+    Baseline methods had worse ranking results. These results in Tables 6 and 7 demonstrate
+    the superiority of our methods for disease identification as well as identification
+    of tissues related to the studied problem. Fig. 6 provided useful information
+    pertaining to intersecting genes of each provided method. Our methods shared 98
+    genes in common while they differed in only 2 genes. Limma had 98 different genes
+    from all other methods. The t-test and lasso methods differed by 9 and 16 genes,
+    respectively. Our methods and limma shared 1 gene in common. The same was true
+    for our methods relative to the t-test. These visualized results demonstrate that
+    our methods differ from existing methods and therefore results were different
+    in Tables 6 and 7. In Supplementary Data Sheet 2, we provide a list of genes produced
+    by each method used in enrichment analysis. Moreover, we provide enrichment analysis
+
+
+    results pertaining to Tables 6 and 7 in Supplementary Table 2,A and Table 2,B,
+    respectively. As our methods performed better than baseline methods and shared
+    98 genes, we selected ssvm3 to gain further biological insights within the molecular
+    mechanism of LP. We retrieved drugs associated with genes produced via ssvm3 from
+    Enrichr, followed by uploading the produced 100 genes into Metascape. Table 8
+    shows the drug terms and associated genes obtained from Enrichr. Retinoic acid
+    has been reported to be effective as a topical treatment in OLP (Laurence Le Cleach
+    and Chosidow, 2012; Qiao et al., 2022). Oral treatment of tretinoin (a generic
+    name of Vitinoin) has been reported to be effective in treating LP (Lee et al.,
+    2019). In Supplementary Table 2,C, we provide enrichment analysis results pertaining
+    to drug terms within DSigDB. In Fig. 7, two subgraphs obtained from PPI networks
+    are shown, including the following 25 genes: COL6A3, COL3A1, COL5A2, COL7A1, ITGA6,
+    FN1, AGRN, HSPG2, VCAN, TTN, SOAT1, HSP90AB1, ATP6V1B1, HMGCR, HMGCS1, DSP, HRNR,
+    FLG2, FLG, PKP1, RPL35A, RPS27A, RPS14, RPSA, and RPL37A. Some of these genes
+    have been reported to be related to skin diseases. For example, genes related
+    to the extracellular matrix shown in Fig. 8 (including COL6A3, COL3A1, COL5A2,
+    COL7A1, ITGA6, FN1, AGRN, HSPG2, VCAN, DSP) directly contribute to skin cutaneous
+    diseases such as LP (Dussoyer et al., 2022; Huang et al., 2022; Salazar et al.,
+    2022). Mutations in genes related to ribosomes (RPL35A, RPS27A, RPS14, RPSA, and
+    RPL37A) are the key to several disorders (Jiao et al., 2023; Lafitta-Navarro and
+    Concetti Sorrell, 2023; Lee et al., 2022; Moitinho-Silva et al., 2022; Taupelt
+    et al., 2022). These results may play a critical role in identifying putative
+    therapeutic targets and thereby identifying effective drugs. In Fig. 9, four transcription
+    factors were reported (i.e., RELA, STAT3, TP53, STAT1). TP53 has been reported
+    to be overexpressed'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/5167e39db543350967ce62ea50022e12_8_0.png)
+
+
+    Fig. 6. Visualization of intersecting sets pertaining to each gene list provided
+    by each method when Dataset2 is utilized.
+
+
+    Table 8 Retrieved enriched terms within “DSigDB” via Enrichr according to uploaded
+    genes using Dataset2, showing genes (column Genes) associated with drugs (column
+    Term). Rank column shows the order of terms when retrieved. NO. shows the number
+    of genes.
+
+
+    | Rank | Term | NO. | Genes |
+
+    | :--- | :--- | :--- | :--- |
+
+    | 8 | Retinoic acid | 43 | EIF4A2;NOTCH2;FLG;MCTP1;HSP90AB1;EPAS1;SYNPO2;ITPR3;ENO1;ACTG2;PTPRF;MYLK;RPS14;APOD;SPTBN1;DSP;GABRP;HMGC51;DST;ACSL1;STAT1;LAMB2;SPINK5;FN1;PRRC2C;RPSA;HSPG2;ENAH;TANC1;SPQ;VCAN;COL3A1;PTPRC;DES;NCL;CLIP4;COL5A2;SPARCL1;ITGA6;FGFR3;PTMA;SPRRIB1;IVL
+    |
+
+    | 19 | Vitinoin | 14 | FLG;TNXB;HMGC51;FN1;DHCR24;HMGCR;VCAN;PTPRC;SOAT1;COL5A2;PKP1;COL6A3;FGFR3;SPRRIB
+    |
+
+    | 37 | Quercetin | 30 | EPAS1;UBR4;ITPR3;MTREX1;O1ATP1;1;HMGR;CLDN1;MYLK;LMNA;CAPN2;ANXA6;TP63;SPTBN1;TNS1;MAP4K4;CD74;HMGC51;STAT1;FN1;RPSA;DHCR24;NEB;ENAH;COL3A1;SOAT1;COL7A1;TXNIP;ITGA6;FGFR3
+    |
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_8_1.png)
+
+
+    Fig. 7. Two highly interconnected clusters in a protein-protein interaction based
+    on 100 genes of ssvm3 provided to Metascape enrichment analysis.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '![](img/5167e39db543350967ce62ea50022e12_9_0.png)
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_9_1.png)
+
+
+    | Method | Rank | Term | Overlap | P-value | Adjusted P-value |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | ssvm1 | 34 | LICHEN PLANUS | 3/38 | 9.01 x 10^-4 | 6.40 x 10^-2 |
+
+    | | 2121 | AUTOIMMUNE DISEASES | 6/1060 | 4.38 x 10^-1 | 4.99 x 10^-1 |
+
+    | | 37 | DERMATOLOGIC DISORDERS | 8/406 | 9.84 x 10^-4 | 6.40 x 10^-2 |
+
+    | ssvm2 | 34 | LICHEN PLANUS | 3/38 | 9.01 x 10^-4 | 6.40 x 10^-2 |
+
+    | | 2121 | AUTOIMMUNE DISEASES | 6/1060 | 4.38 x 10^-1 | 4.99 x 10^-1 |
+
+    | | 37 | DERMATOLOGIC DISORDERS | 8/406 | 9.84 x 10^-4 | 6.40 x 10^-2 |
+
+    | ssvm3 | 59 | LICHEN PLANUS | 3/38 | 9.01 x 10^-4 | 3.80 x 10^-2 |
+
+    | | 33 | AUTOIMMUNE DISEASES | 15/1060 | 2.43 x 10^-4 | 1.81 x 10^-2 |
+
+    | | 11 | DERMATOLOGIC DISORDERS | 10/406 | 3.62 x 10^-5 | 7.52 x 10^-3 |
+
+    | limma | - | LICHEN PLANUS | - | - | - |
+
+    | | 1160 | AUTOIMMUNE DISEASES | 5/1060 | 6.16 x 10^-1 | 7.34 x 10^-1 |
+
+    | | 1327 | DERMATOLOGIC DISORDERS | 1/406 | 8.72 x 10^-1 | 9.08 x 10^-1 |
+
+    | sam | - | LICHEN PLANUS | - | - | - |
+
+    | | 1142 | AUTOIMMUNE DISEASES | 8/1060 | 1.60 x 10^-1 | 3.20 x 10^-1 |
+
+    | | 1724 | DERMATOLOGIC DISORDERS | 3/406 | 3.31 x 10^-1 | 4.42 x 10^-1 |
+
+    | t-test | 24 | LICHEN PLANUS | 1/38 | 1.88 x 10^-2 | 8.83 x 10^-2 |
+
+    | | - | AUTOIMMUNE DISEASES | - | - | - |
+
+    | | 21 | DERMATOLOGIC DISORDERS | 2/406 | 1.66 x 10^-2 | 8.83 x 10^-2 |
+
+    | lasso | - | LICHEN PLANUS | - | - | - |
+
+    | | - | AUTOIMMUNE DISEASES | - | - | - |
+
+    | | 271 | AUTOIMMUNE DISEASES | 1/1060 | 2.38 x 10^-1 | 2.68 x 10^-1 |
+
+    | | - | DERMATOLOGIC DISORDERS | - | - | - |
+
+
+    in OLP (Ramos-García et al., 2022; Zhao et al., 2022) and related to malignant
+    transformation in OLP (Alabdulaly et al., 2022). RELA (also called p65 or NF-κB/p65)
+    has been reportedly to be overexpressed in LP, suggesting a role in disease development
+    (Chen et al., 2022a; Du et al., 2023; Zeng et al., 2022). Activation of STAT1
+    has been observed in the skin epidermis of LP patients (Shao et al., 2019). STAT3
+    mutations are related to autoimmune diseases including skin diseases (Masle-Farquhar
+    et al., 2022). These identified transcription factors can act as therapeutic targets
+    in LP.
+
+
+    # 3.2.3. Dataset3
+
+
+    We uploaded genes obtained from each method to Enrichr. Table 9 shows disease-gene
+    association while Table 10 presents tissue terms according to expressed genes.
+    From Table 9, we can see that ssvm1 and ssvm2, followed by ssvm3, generated the
+    best results according to 3 out of 38 genes expressed in LP. For autoimmune diseases
+    and dermatologic disorders terms, ssvm3 performed the best, as 15 genes were expressed
+    in autoimmune diseases and 10 genes were expressed in dermatologic disorders.
+    Although ssvm1, ssvm2, and ssvm3 ranked 34th, and 59th, respectively, for LP,
+    they had the same number of expressed genes and ssvm3 was far better in terms
+    of the ranking and number of expressed genes when considering the other two terms.
+    In Table 10, our methods demonstrated superior results when compared to the baseline
+    methods. Specifically, the skin tissue term was ranked 1st by ssvm1 and ssvm2,
+    while it was ranked 3rd by ssvm3. Moreover, the number of expressed genes was
+    52 out of 2316 for ssvm1 and'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '| Method | Rank | Term | Overlap | P-value | Adjusted P-value |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | ssvm1 | 1 | SKIN (BULK TISSUE) | 52/2316 | 3.97 x 10^-23 | 4.28 x 10^-21 |
+
+    | ssvm2 | 1 | SKIN (BULK TISSUE) | 52/2316 | 3.97 x 10^-23 | 4.28 x 10^-21 |
+
+    | ssvm3 | 3 | SKIN (BULK TISSUE) | 34/2316 | 2.95 x 10^-9 | 1.06 x 10^-7 |
+
+    | limma | 50 | SKIN (BULK TISSUE) | 10/2316 | 7.34 x 10^-1 | 9.99 x 10^-1 |
+
+    | sam | 1 | SKIN (BULK TISSUE) | 25/2316 | 1.40 x 10^-4 | 1.52 x 10^-2 |
+
+    | t-test | 8 | SKIN (BULK TISSUE) | 5/2316 | 3.16 x 10^-3 | 3.35 x 10^-2 |
+
+    | lasso | 54 | SKIN (BULK TISSUE) | 1/2316 | 4.59 x 10^-1 | 4.59 x 10^-1 |
+
+
+    Table 10 Retrieved enriched terms within “ARCHS4 Tissues” via Enrichr according
+    to uploaded genes via methods using Dataset3, showing genes expressed within tissue
+    types. Rank column shows the order of terms when retrieved. Overlap displays a
+    ratio-like format, corresponding to the number of uploaded genes overlapping to
+    those in the terms. The best result is shown in bold.
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_10_0.png)
+
+
+    Fig. 10. Visualization of intersecting sets pertaining to each gene list provided
+    by each method when Dataset3 was used.
+
+
+    ssvm2, outperforming ssvm3. However, results were significant for all our methods.
+    SAM ranked the skin tissue as the 1st term, but the number of expressed genes
+    was 25 less than those obtained via our methods. Fig. 10 provides a visualization
+    of gene intersection among all methods. It should be noted that ssvm3 had 52 genes
+    differing from all other methods and that ssvm1 and ssvm2 shared 37 genes. Together,
+    all our methods shared 28 genes. SAM shared 13 genes with our methods. These results
+    demonstrate that there was not a total overlapping among all methods, as each
+    method produced a different list of genes affecting the enrichment analysis results.
+    In Supplementary Data Sheet 3, we provide each list of genes produced via each
+    method used in enrichment analysis. Moreover, we provide enrichment analysis results
+    pertaining to Tables 9 and 10 in Supplementary Table 3_A and Table 3_B, respectively.
+
+
+    We selected ssvm3 for further biological analysis as it achieved good results.
+    In Table 11, we retrieve drug-genes association. The three drugs (Retinoic acid,
+    Vitinoin, and Alitretinoin) coincide with those in Tables 5 and 8, demonstrating
+    improvements in treatment in clinical studies (Brehmer et al., 2011; Lee et al.,
+    2019; Scully and Carrozzo, 2008; Sloberg et al., 1979). In Supplementary Table
+    3_C, we provide enrichment analysis results pertaining to drug terms within DSigDB.
+    Regarding the two subgraphs in Fig. 11 obtained from the PPI network, the three
+    genes (PI3, LCE2A, LCE2D) are related to the formation of the cornified envelope
+    of the skin epidermis and oral epithelium (Fig. 12), while the LCP1 and ITGB2
+    are related to cytokine signaling in immune system, indicating their inflammatory
+    role in OLP and the formation and maintenance of skin cornified envelope in LP
+    (Anderton'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '| Rank | Term | NO. | Genes |
+
+    |---|---|---|---|
+
+    | 21 | Retinoic acid | 36 | FBN2;ARHGAP9;ERRFI1;CNTNAP2;ITGB2;SLA;ATPIA3;PTGS2;
+    CX3CL1;MUC1;PTPRZ1;BASP1;CA2;UBD;DDX17;PAQR8;CMTM7; SP110;TNFRSF10C;KLK13;NKG7;MYO5A;FOS;KLK10;IL1A;
+    GPRC5A;TSPAN13;OAS1;KRT17;BAMBI;LYPD6B;LCN2;SERPING1; IRFB;CYP2E1;CD247 |
+
+    | 22 | Vitinoin | 12 | SLC4A6;CD2;MUC1;OAS1;KRT17;BASP1;ITGB2;LCN2;SLA; SERPING1;CD247;PTGS2
+    |
+
+    | 24 | Alitretinoin | 6 | KRT17;CA2;ITGB2;LCN2;PTGS2;KLK10 |
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_11_0.png)
+
+
+    Fig. 11. Two highly interconnected clusters in a protein-protein interaction based
+    on 100 genes of ssvm3 provided to Metascape enrichment analysis.
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_11_1.png)
+
+
+    Fig. 12. LP affecting oral mucosa. Critical expressed genes obtained from Fig.
+    11 are related to the epithelium layers. Source: Figure created with BioRender.com.
+
+
+    and Alqudah, 2022; Boudreaux et al., 2022; Chen et al., 2017; de Lanna et al.,
+    2022; Qian et al., 2022). Fig. 13 lists 11 transcription factors, STAT1, STAT3,
+    STAT6, RELA, USF2, NFKB1, FOS, USF1, HDAC1, CREB1, and AR. As in Dataset2, STAT1,
+    STAT3, and RELA have been reported to be associated with LP (Abé et al., 2020;
+    Chen et al., 2022a; Du et al., 2023; Masle-Farquhar et al., 2022; Shao et al.,
+    2019; Zeng et al., 2022). HDAC1 plays a key role in skin inflammation through
+    Filaggrin expression, which is part of skin barrier dysfunction (Ahn et al., 2022).
+    These transcription factors can be useful therapeutic targets in inflammatory
+    diseases, such as LP.
+
+
+    # 3.2.4. Sparse models explanation
+
+
+    Dataset1 In Fig. 14, we provide insights pertaining to models used in the Results
+    section. Fig. 14(a–d) show that there were statistically significant differences
+    in predictions of healthy controls and LP patients (p-value of all differences
+    <<0.01, obtained from a t-test), indicating that these models
+
+
+    applied to Dataset1 are expected to be general predictors to healthy controls
+    and LP. In Fig. 14(e), ssvm1 and ssvm2 achieved an AUC of 0.983, while ssvm3 and
+    lasso both achieved an AUC of 1.00. Fig. 15 shows that our methods (Fig. 15(a–c))
+    reduced more weights of genes to zero compared to lasso in Fig. 15(d). These results
+    demonstrate that our optimized methods led to sparser feature vector representations
+    than lasso.
+
+
+    # Dataset2
+
+
+    In Fig. 16, we provide an explanation for models utilized in the Results section.
+    Fig. 16(a–d) show that differences in predictions of healthy controls and LP patients
+    were statistically significant (p-value of all models <<0.01, obtained from a
+    t-test), indicating that these models applied to Dataset2 are not expected to
+    be disease specific. In Fig. 16(e), all models achieved an AUC of 1.00. Fig. 17
+    shows that our methods (Fig. 17(a–c)) shrink weights of genes to zero, while lasso
+    (Fig. 17(d)) shrink more coefficients of genes to zero than our methods. These
+    results demonstrate sparsity induced via each model.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '![](img/5167e39db543350967ce62ea50022e12_12_0.png)
+
+
+    Fig. 13. Eleven transcription factors provided by Metascape according to the list
+    of 100 input genes of ssvm3.
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_12_1.png)
+
+
+    Fig. 14. Prediction results regarding healthy controls and lichen planus (LP)
+    when Dataset1 was used. Boxplot and strip charts (a–d) show the differences in
+    predicted LP pertaining to healthy individuals and individuals with LP for ssvm1,
+    ssvm2, ssvm3, and lasso, respectively. (e) Demonstrates the ROC curves by displaying
+    the true positive rate along the y-axis and the false positive rate along the
+    x-axis.
+
+
+    # Dataset3
+
+
+    In Fig. 18, we provide interpretation for models employed in the Results section.
+    Fig. 18(a–d) show that differences in predictions of healthy controls and LP patients
+    were statistically significant (p-value of all models << 0.01, obtained from a
+    t-test), showing that these models applied to Dataset3 are expected to be general
+    predictors of LP and healthy controls. In Fig. 18(e), our models achieved an AUC
+    of 0.928 while lasso had an AUC of 1.00.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '![](img/5167e39db543350967ce62ea50022e12_13_0.png)
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_13_1.png)
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_13_2.png)
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_13_3.png)
+
+
+    Fig. 15. Gene importance of all genes pertaining to Dataset1 produced via ssvm1
+    (a), ssvm2 (b), ssvm3 (c), and lasso (d).
+
+
+    As seen in Fig. 19, our methods (Fig. 19(a–c)) shrunk more weights of genes to
+    zero, compared to lasso (Fig. 19(d)). These results demonstrate that our constrained
+    optimization problem led to a sparser representation than that of lasso.
+
+
+    # 4. Discussion
+
+
+    Identifying influential genes and relevant drugs contributes to a greater understanding
+    of the molecular mechanism of LP as well as of disease treatment. As a result,
+    we presented a computational framework working as follows: first, we introduced
+    three sparse optimization problems pertaining to SVM, named ssvm1, ssvm2, and
+    ssvm3. We provide each gene expression dataset as input to our methods, solved
+    using CVXR solver in R. The output of each method was a weight vector w, corresponding
+    to the importance of each gene in the provided dataset. Genes associated with
+    higher weights indicated the importance of these genes. We ordered and then selected
+    the top 100 genes according to the top 100 weights in w. Then, we provided output
+    genes via each method to Enrichr and Metascape to perform enrichment analysis.
+    With Enrichr, our methods (ssvm1, ssvm2, and ssvm3) achieved the best results
+    as compared to baselines methods, and the retrieved terms had a greater number
+    of expressed genes in disease terms, which included LP, autoimmune diseases, dermatologic
+    disorders, and skin diseases. Regarding tissue types, our methods also outperformed
+    all baseline
+
+
+    methods, having more expressed genes within the tissue type term (i.e., skin tissue).
+    Furthermore, we identified drugs associated with genes via Enrichr. With Metascape,
+    we identified important genes as well as TFs related to the skin, which have been
+    reported to play a key role in the pathogenesis and treatment of LP.
+
+
+    As shown in the presented results (See Tables 3–5, 6–8, and 9–11), our computational
+    framework consists of two parts: machine learning and enrichment analysis. Specifically,
+    machine learning identified important genes within gene expression datasets, which
+    were then provided to enrichment analysis tools to retrieve terms related to drugs,
+    diseases, tissues, PPI networks, and TFs related to LP. In a clinical trial setting,
+    these obtained results could help doctors to identify drugs, expressed genes and
+    therapeutic targets in T-cell mediated disease such as LP, which is incurable
+    and for which current treatments aimed at disease management due to the unknown
+    etiology. It is worth mentioning that deep learning (DL) models do not rely on
+    domain experts for the feature engineering part. Therefore, it may be infeasible
+    to obtain results as SVM models, relying on domain experts as in our study. This
+    demonstrates a challenge arising from this study for the need to construct an
+    end-to-end DL solution.
+
+
+    As clinical trials involve testing already approved drugs, or new drugs, our computational
+    framework enables the narrowing of the search for such drugs by providing a subset
+    of effective drugs (Phatale et al., 2022); it also can narrow the search for putative
+    therapeutic'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '![](img/5167e39db543350967ce62ea50022e12_14_0.png)
+
+
+    Fig. 16. Prediction results regarding healthy controls and LP when Dataset2 was
+    used. Boxplot and strip charts (a–d) show the differences in predicted LP pertaining
+    to healthy individuals and individuals with LP for ssvm1, ssvm2, ssvm3, and lasso,
+    respectively. (e) Demonstrates the ROC curves by displaying the true positive
+    rate along the y-axis and the false positive rate along the x-axis.
+
+
+    targets, thereby speeding up the drug discovery. It is worth noting that drugs
+    associated with the genes in Tables 5, 8, and 11 could help clinicians personalize
+    drug treatment. In other words, when these genes (or drug targets) are expressed,
+    the corresponding drug could be a more suitable treatment choice (Keeley et al.,
+    2020). This demonstrates the benefit of AI tools in clinical trials. Because LP
+    is a complex disease and still has no cure, this study can help medical researchers
+    unveil the molecular mechanisms contributing to the disease and thereby improving
+    the personalized treatment stages through a potential linked causality (Xia et
+    al., 2020). For example, retrieved enriched terms from Metascape demonstrated
+    that our provided genes involved in biological pathway related to tryptophan metabolism,
+    involved in B vitamins (together forming the so-called B complex). It has been
+    reported that B vitamins have been prescribed and demonstrated to be more efficacious
+    in the treatment of LP (Burgess, 1941). These results show that a dietary lifestyle
+    change and treating nutritional deficiencies may help in the treatment of LP (Cosgarea
+    et al., 2020; Li et al., 2020). To help medical researchers gain more biological
+    insights about LP, we provide Metascape enrichment analysis results related to
+    genes involved in biological pathways as well as other terms in Supplementary
+    Metascape_Dataset1.zip, Metascape_Dataset2.zip, and Metascape_Dataset3.zip.
+
+
+    In this study, we aimed to develop computational methods to identify important
+    genes discriminating between healthy controls and LP patients followed by utilizing
+    enrichment analysis to uncover molecular insights pertaining to the disease. As
+    LP is categorized based on morphology and site of the lesion, LP may affect a
+    patient in different sites with different subtypes (Muradova et al., 2022; Usatine
+    and Tinitigan, 2011). In this study, published datasets included lesion sites
+    for cutaneous LP (Datasets 1 and 2), genital and OLP (Dataset3). In this study,
+    we reported results for cutaneous and OLP. Furthermore, reported results in terms
+    of a given dataset demonstrated independent biological insights pertaining to
+    a LP type. In terms of the running time and memory space, our methods (ssvm1,
+    ssvm2 and ssvm3) were the slowest, having the highest user CPU time (1.09 s, 3.47
+    s, and 4.05 s in Dataset1, Dataset2, and Dataset3, respectively). Moreover, our
+    methods had the largest memory spaces of 141.04 MB, 401.51 MB, and 160.55 MB for
+    running Dataset1, Dataset2, and Dataset3, respectively. On the other hand, for
+    Dataset1, lasso was the fastest method requiring the least memory space of 7.80
+    MB. For Dataset2, lasso was the fastest while t-test was the method requiring
+    the least memory space of 14.43 MB. For Dataset3, limma was the fastest while
+    t-test was the method requiring the least memory space. We provide running time
+    and memory space of each method in Supplementary Running Time and Memory Space.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '![](img/5167e39db543350967ce62ea50022e12_15_0.png)
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_15_1.png)
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_15_2.png)
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_15_3.png)
+
+
+    Fig. 17. Gene importance of all genes pertaining to Dataset2 produced via ssvm1
+    (a), ssvm2 (b), ssvm3 (c), and lasso (d).
+
+
+    In terms of results retrieved via enrichment analysis tools, the ranking score
+    indicates the order of the retrieved terms. The lower the value, the better the
+    ranking is when the term is related to the studied experiment. The overlap indicates
+    the number of common genes between uploaded genes and retrieved terms. For a given
+    term Z, a value in the form of X/Y denotes that X is the number of common genes
+    between the uploaded genes to Enrichr and the term Z, where Y denotes the number
+    of genes related to term Z. P-values and adjusted p-values are related to the
+    significant of retrieved terms with respect to the uploaded genes, where the former
+    is calculated from Fisher exact test and the later is corrected with Benjamini-Hochberg
+    method (Xie et al., 2021).
+
+
+    features and is derived based on the margin notion. However, lasso depends on
+    linear models, including L1 penalty, to shrink coefficients to zero. According
+    to our results in Section 3.2, results derived from our models relying on margin
+    theory are better than those depending on linear models such as lasso (Ahn et
+    al., 2020; Chen et al., 2022b; Feng et al., 2019).
+
+
+    In the “Sparse Models Explanation” section, we demonstrate important information
+    pertaining to studied sparse models, including ssvm1, ssvm2, ssvm3, and lasso.
+    Specifically, Figs. 14, 16, and 18 demonstrate the statistical significance of
+    induced models, which are expected to acquire a good generalization when discriminating
+    between the two classes of healthy controls and LP. However, Figs. 15, 17, and
+    19 explored induced sparsity, in which genes of weak discriminative power were
+    set to zero. It can be observed that the additional constraint $\|W\|_1 \le \lambda$
+    enforced sparsity. Our models (i.e., ssvm1, ssvm2, and ssvm3) are based on SVM
+    and therefore rely on the margin theory, in which the aim is to maximize the margin
+    ($\frac{2}{\|W\|}$), which is equivalent to minimizing the margin ($\frac{\|W\|^2}{2}$)
+    subject to additional constraints, as shown in Eqs. (1)–(4). The weight vector
+    w provides importance of
+
+
+    We set parameters for the four methods as follows. ssvm1(c = 2, k = 1, $\lambda$
+    = 0.05), ssvm2(c = 2, k = 1, $\lambda$ = 0.05, r = 0.1), ssvm3(c = 2, k = 2, $\lambda$
+    = 0.05, r = 0.1), lasso($\lambda$ = 0.05). As the output of each of our methods
+    was 100, the probability for other results coinciding with ours in the three datasets
+    are ($\frac{1545}{\binom{100}{100}}$, $\frac{1916}{\binom{100}{100}}$, and $\frac{1355}{\binom{100}{100}}$,
+    respectively; $\binom{n}{k}$ denotes the binomial coefficient, where n is the
+    number of genes in the studied dataset and k refers to the number of genes selected
+    by our method. Therefore, it is very unlikely that the results of other methods
+    coincide with ours.
+
+
+    # 5. Conclusion and future work
+
+
+    Here, we introduce a computational framework consisting of machine learning coupled
+    with enrichment analysis to identify important genes and drugs related to LP.
+    The input to our framework was a gene expression dataset pertaining to healthy
+    controls and LP patients; we downloaded three gene expression datasets from the
+    gene expression omnibus (GSE63741, GSE193351, GSE52130). In each processed dataset,
+    each sample was associated with a binary label (i.e., healthy'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '![](img/5167e39db543350967ce62ea50022e12_16_0.png)
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_16_1.png)
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_16_2.png)
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_16_3.png)
+
+
+    ![](img/5167e39db543350967ce62ea50022e12_16_4.png)
+
+
+    Fig. 18. Prediction results regarding healthy controls and LP when Dataset3 was
+    used. Boxplot and strip charts (a–d) show the differences in predicted LP pertaining
+    to healthy individuals and individuals with LP for ssvm1, ssvm2, ssvm3, and lasso,
+    respectively. (e) Demonstrates the ROC curves for each model by displaying the
+    true positive rate along the y-axis and the false positive rate along the x-axis.
+
+
+    control or LP). We then provided the input dataset to three machine learning-based
+    methods. All methods were new, sparse versions of SVM. The output of each method
+    was a weight vector w. We selected the top p genes based on the top p corresponding
+    weights in w and input genes selected by our methods and other baseline methods
+    to enrichment analysis tools Enrichr and Metascape. Results show that our methods
+    performed better than baseline methods in disease identification, showing more
+    expressed genes and better identifying tissue type with more expressed genes.
+    With further enrichment analysis, we identified 5 drugs (e.g., dexamethasone,
+    retinoic acid, and quercetin), 23 unique TFs (e.g., NFKB1, p65, HDAC1, STAT1,
+    STAT3), and 45 unique genes (e.g., PSMB8, PSMB10, PSMB9, KRT31, KRT16, KRT19,
+    KRT17, KRT15, COL3A1, LCE2D, LCE2A) that have been reported to be related to T
+    cell-mediated autoimmune inflammatory mechanisms, therapeutic targets, and treatment
+    of LP. Our methods are publicly available on the GENEvaRX web server at https://aibio.shinyapps.io/GENEvaRX/.
+
+
+    Future work includes (1) adapting our computational framework to identify important
+    expressed genes, therapeutics targets, and drugs in different skin diseases such
+    as psoriasis, atopic dermatitis, and lupus; (2) collaborating with hospitals to
+    utilize our tool in clinical trials;
+
+
+    (3) identifying gene signatures from gene expression data using our methods; (4)
+    comparing gene expression data generated via different high throughput technologies
+    and performing an assessment from biological perspective; and (5) studying shared
+    molecular mechanisms and involvement among LP variants.
+
+
+    # Funding
+
+
+    This project was funded by the Deanship of Scientific Research (DSR), King Abdulaziz
+    University, Jeddah, Saudi Arabia, under grant No. (D-087-611-1440). The authors,
+    therefore, gratefully acknowledge the DSR for technical and financial support.
+
+
+    # CRediT authorship contribution statement
+
+
+    Turki Turki: Conceptualization, Formal analysis, Methodology, Data curation, Software,
+    Supervision, Writing – original draft, Visualization, Investigation. Y.-h. Taguchi:
+    Conceptualization, Formal analysis, Methodology, Data curation, Validation, Writing
+    – original draft.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '![](img/5167e39db543350967ce62ea50022e12_17_0.png)
+
+
+    Fig. 19. Gene importance of all genes pertaining to Dataset3, as produced via
+    ssvm1 (a), ssvm2 (b), ssvm3 (c), and lasso (d).
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    # Data availability
+
+
+    In Supplementary GENEvaRX_Screenshots.docx file, we demonstrate the use of the
+    web tool. All data used in this study are cited in the manuscript and are available
+    from GEO under accession numbers
+
+
+    +   GSE63741
+
+    +   GSE193351
+
+    +   GSE52130
+
+
+    # Appendix A. Supplementary data
+
+
+    Supplementary material related to this article can be found online at https://doi.org/10.1016/j.engappai.2023.106607.
+
+
+    # References
+
+
+    +   Abé, T., Kitagawa, N., Yoshimoto, S., Maruyama, S., Yamazaki, M., Inai, T.,
+    Hashimoto, S., Saku, T., 2020. Keratin 17-positive civatte bodies in oral lichen
+    planus—distribution variety, diagnostic significance and histopathogenesis. Sci.
+    Rep. 10, 14586.
+
+    +   Ah Kioon, M.D., Pierides, M., Pannellini, T., Lin, G., Nathan, C.F., Barrat,
+    F.J., 2021. Nonyctotoxic inhibition of the immunoproteasome regulates human immune
+    cells in vitro and suppresses cutaneous inflammation in the mouse. J. Immunol.
+    206, 1631–1641.
+
+    +   Ahn, S.J., Kwon, H., Yang, J.-J., Park, M., Cha, Y.J., Suh, S.H., Lee, J.-M.,
+    2020. Contrast-enhanced T1-weighted image radiomics of brain metastases may predict
+    EGFR mutation status in primary lung cancer. Sci. Rep. 10, 1–9.
+
+    +   Ahn, S.S., Yeo, H., Jung, E., Lim, Y., Lee, Y.H., Shin, S.Y., 2022. FRA1:
+    C-JUN: HDAC1 complex down-regulates filaggrin expression upon TNFα and IFNγ stimulation
+    in keratinocytes. Proc. Natl. Acad. Sci. 119, e2121451119.
+
+    +   Alabdulally, L., Villa, A., Chen, T., Kerr, A., Ross, N., Alves, F.A., Guollo,
+    A., Woo, S.-B., 2022. Characterization of initial/early histoic features of proliferative
+    leukoplakia and correlation with malignant transformation: a multicentre study.
+    Mod. Pathol. 35, 1034–1044.
+
+    +   Anderton, H., Alqudah, S., 2022. Cell death in skin function, inflammation,
+    and disease. Biochem. J. 479, 1621–1651.
+
+    +   Astudillo, M.G., Hoang, M.P., Nazarian, R.M., Foreman, R.K., 2021. Distinction
+    between hypertrophic lichen planus and squamous cell carcinoma requires clinicopathologic
+    correlation in difficult cases. Am. J. Dermatopathol. 43, 349–355.
+
+    +   Baek, K., Lee, J., Lee, A., Lee, J., Yoon, H.-J., Park, H.K., Chun, J., Choi,
+    Y., 2020. Characterization of intraetissue bacterial communities and isolation
+    of Escherichia coli from oral lichen planus lesions. Sci. Rep. 10 (3495).
+
+    +   Barrett, T., Wilhite, S.E., Ledoux, P., Evangelista, C., Kim, I.F., Tomashevsky,
+    M., Marshall, K.A., Phillamy, K.H., Sherman, P.M., Holko, M., Yefanov, A., Lee,
+    H., Zhang, N., Robertson, C.L., Serova, N., Davis, S., Soboleva, A., 2012. NCBI
+    GEO: archive for functional genomics data sets—update. Nucleic Acids Res. 41,
+    D991–D995.
+
+    +   Bi, M., Zhang, Z., Jiang, Y.-Z., Xue, P., Wang, H., Lai, Z., Fu, X., De Angelis,
+    C., Gong, Y., Gao, Z., 2020. Enhancer reprogramming driven by high-order assemblies
+    of transcription factors promotes phenotypic plasticity and breast cancer endocrine
+    resistance. Nature Cell Biol. 22, 701–715.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'Boudreaux, B., Bhullar, P., Brumfiel, C., 2022. 34004 Topical ruxolitinib blocks
+    interferon gamma signaling in cutaneous lichen planus. J. Am. Acad. Dermatol.
+    87, AB121.
+
+
+    Braegel, C., Fetter, T., Niebel, D., Dietz, L., Bieber, T., Wenzel, J., 2021.
+    Immunostimulatory endogenous nucleic acids perpetuate interface dermatitis—Translation
+    of pathogenic fundamentals into an in vitro model. Front. Immunol. 11, 622511.
+
+
+    Brehm, F., Haenssle, H.A., Schön, M.P., Emmert, S., 2011. Response of recalcitrant
+    lichen planus to alitretinoin in 3 patients. J. Am. Acad. Dermatol. 65, e58–e60.
+
+
+    Budimir, J., Mravak-Stipetić, M., Bulat, V., Jerčec, I., Japundžić, L., Ugičević-Mihić,
+    L., 2019. Allergic reactions in oral and perioral diseases—what do allergy skin
+    test results show? Oral surgery. Oral Med. Oral Pathol. Oral Radiol. 127, 40–48.
+
+
+    Burgess, J., 1941. The treatment of lichen planus with vitamin B complex. Can.
+    Med. Assoc. J. 44 (120).
+
+
+    Chen, J., Du, G., Wang, Y., Shi, L., Mi, J., Tang, G., 2017. Integrative analysis
+    of mRNA and miRNA expression profiles in oral lichen planus: preliminary results.
+    Oral Surg. Oral Med. Oral Pathol. Oral Radiol. 124, 390–402. e317.
+
+
+    Chen, Z., Shi, T., Zhang, X., Jia, K., Jiang, H., Yuan, B., 2022a. A Hybrid Leaf
+    Area index estimation method of Dioscorea Polystachya Turczaninow using sentinel-2
+    vegetation indices. IEEE Trans. Geosci. Remote Sens. 60, 1–13.
+
+
+    Chen, J.F., Zhang, X.M., Sanjel, K., Zhang, J., Ma, C., 2022b. Expression and
+    significance of TNF-α and NF-κB/p65 in cutaneous lichen planus. Clin. Cosmet.
+    Investig. Dermatol. 1509–1516.
+
+
+    Cosgarea, R., Pollmann, R., Sharifi, J., Schmidt, T., Stein, R., Bodea, A., Ausschill,
+    T., Sculean, A., Emling, R., Greene, B., 2020. Photodynamic therapy in oral lichen
+    planus: A prospective case-controlled pilot study. Sci. Rep. 10, 1–11.
+
+
+    Crow, Y.J., Stetson, D.B., 2022. The type I interferonopathies: 10 years on. Nat.
+    Rev. Immunol. 22, 471–483.
+
+
+    Davis, S., Meltzer, P.S., 2007. GEOquery: a bridge between the gene expression
+    omnibus (GEO) and BioConductor. Bioinformatics 23, 1846–1847.
+
+
+    de Lanna, C.A., da Silva, B.N.M., de Melo, A.C., Bonamino, M.H., Alves, L.D.B.,
+    Pinto, L.F.R., Cardoso, A.S., Antunes, H.S., Boroni, M., Cohen Goldberg, D., 2022.
+    Oral lichen planus and oral squamous cell carcinoma share key oncogenic signatures.
+    Sci. Rep. 12 (20645).
+
+
+    Deng, S., Xu, Y., Wang, X., Liu, M., Li, L., Yu, X., Wang, Y., Wu, Y., Wang, W.,
+    Gao, M., 2020. Study on the role of salivary flora and NF-κB inflammatory signal
+    pathway in oral lichen planus. Inflammation 43, 994–1008.
+
+
+    D’Erme, A.M., Wilhelm-Thiess, D., Wagenpfeil, J., Hölzel, M., Ferring-Schmitt,
+    S., Sternberg, S., Wittmann, M., Peters, B., Bosio, A., Bieber, T., 2015. IL-36y
+    (IL-1F9) is a biomarker for psoriasis skin lesions. J. Invest. Dermatol. 135,
+    1025–1032.
+
+
+    Didona, D., Caro, R.D.C., Santos, A.M.S., Solimani, F., Hertl, M., 2022. Therapeutic
+    strategies for oral lichen planus: State of the art and new insights. Front. Med.
+    9.
+
+
+    Du, J., Gao, R., Wang, Y., Nguyen, T., Yang, F., Shi, Y., Liu, T., Liao, W., Li,
+    R., Zhang, F., 2020. MicroRNA-26a/b have protective roles in oral lichen planus.
+    Cell Death Dis. 11 (15).
+
+
+    Du, Y., Yang, Y., Zhang, W., Yang, C., Xu, P., 2023. Human β-defensin-3 and nuclear
+    factor-kappa b p65 synergistically promote the cell proliferation and invasion
+    of oral squamous cell carcinoma. Transl. Oncol. 27, 101582.
+
+
+    Durinck, S., Spellman, P.T., Birney, E., Huber, W., 2009. Mapping identifiers
+    for the integration of genomic datasets with the R/Bioconductor package biomaRt.
+    Nat. Protoc. 4, 1184–1191.
+
+
+    Dussoyer, M., Page, A., Delolme, F., Rousselle, P., Nyström, A., Moali, C., 2022.
+    Comparison of extracellular matrix enrichment protocols for the improved characterization
+    of the skin matrisome by mass spectrometry. J. Proteomics 251, 104397.
+
+
+    Evert, K., Kocher, T., Schnidler, A., Müller, M., Müller, K., Pink, C., Holtfreter,
+    B., Schmidt, A., Dombrowski, F., Schubert, A., 2021. Repeated exposure of the
+    oral mucosa over 12 months with cold plasma is not carcinogenic in mice. Sci.
+    Rep. 11 (20672).
+
+
+    Farah, C.S., Fox, S., Shearston, K., Newman, L., Babic, S., Vacher, M., 2021.
+    Lichenoid dysplasia is not a distinct pathological entity. Oral Oncol. 119, 105362.
+
+
+    Feng, W., Dauphin, G., Huang, W., Quan, Y., Liao, W., 2019. New margin-based subsampling
+    iterative technique in modified random forests for classification. Knowl.-Based
+    Syst. 182, 104845.
+
+
+    Friedman, J., Hastie, T., Tibshirani, R., 2010. Regularization paths for generalized
+    linear models via coordinate descent. J. Stat. Softw. 33 (1).
+
+
+    Fu, A., Narasimhan, B., Boyd, S., 2020. CVXR: An R package for disciplined convex
+    optimization. J. Stat. Softw. 94, 1–34.
+
+
+    Hassanandani, T., 2020. 15346 Dermoscopic and histopathologic correlation of facial
+    lichen planus pigmentosus: An observational study. J. Am. Acad. Dermatol. 83,
+    AB37.
+
+
+    Huang, J., Heng, S., Zhang, W., Liu, Y., Xia, T., Ji, C., Zhang, 2022. Dermal
+    extracellular matrix molecules in skin development, homeostasis, wound regeneration
+    and diseases. Sem. Cell Dev. Biol. 128, 137–144.
+
+
+    Huber, W., Carey, V.J., Gentleman, R., Anders, S., Carlson, M., Carvalho, B.S.,
+    Bravo, H.C., Davis, S., Gatto, L., Girke, T., 2015. Orchestrating high-throughput
+    genomic analysis with biocontrol. Nature Methods 12, 115–121.
+
+
+    Jiao, L., Liu, Y., Yu, X.-Y., Pan, X., Zhang, Y., Tu, J., Song, Y.-H., Li, Y.,
+    2023. Ribosome biogenesis in disease: new players and therapeutic targets. Signal
+    Transduct. Target. Ther. 8 (15).
+
+
+    Keeley, A., Petri, L., Ábrányi-Balogh, P., Keserű, G.M., 2020. Covalent fragment
+    libraries in drug discovery. Drug Discov. Today 25, 983–996.
+
+
+    Kuleshov, M.V., Jones, M.R., Rouillard, A.D., Fernandez, N.F., Duan, Q., Wang,
+    Z., Koplev, S., Jenkins, S.L., Jagodnik, K.M., Lachmann, A.,
+
+
+    Lafta-Navarro, M.C., Conac-Sorell, M., 2023. Nucleolar stress: From development
+    to cancer. Sem. Cell Dev. Biol. 136, 64–74.
+
+
+    Laurence Le Cleach, M., Chosidow, O., 2012. Lichen planus. N. Engl. J. Med. 366,
+    723–732.
+
+
+    Lee, T.A., Han, H., Polish, A., Cho, S.K., Lee, J.W., Ra, E.A., Lee, E., Park,
+    A., Kang, S., Choi, J.J., 2022. The nucleolus is the site for inflammatory RNA
+    decay during infection. Nature Commun. 13 (5203).
+
+
+    Lee, J.Y., Hong, J.S., Lee, S.H., Ayy, Y., 2019. Successful treatment of frontal
+    fibrosing alopecia with alitretinoin. Dermatol. Ther. 32, e13037.
+
+
+    Li, C., Tang, X., Zheng, X., Ge, S., Wen, H., Lin, X., Chen, Z., Lu, L., 2020.
+    Global prevalence and incidence estimates of oral lichen planus: a systematic
+    review and meta-analysis. JAMA Dermatol. 156, 172–181.
+
+
+    Li, Q., Wang, F., Shi, Y., Zhong, L., Duan, S., Kuang, W., Liu, N., Luo, E., Zhou,
+    Y., Jiang, L., 2023. Single-cell immune profiling reveals immune responses in
+    oral lichen planus. Front. Immunol. 14.
+
+
+    Masle-Farquhar, E., Jackson, K.J.L., Peters, T.J., Al-Eryani, G., Singh, M., Payne,
+    K.J., Rao, G., Avery, D.T., Apps, G., Kingham, J., Jara, C.J., Skvotrsova, K.,
+    Swarbick, A., Ma, C.S., Suan, D., Uzel, G., Chua, I., Leiding, J.W., Heiskanen,
+    K., Preece, K., Kainulainen, L., O''Sullivan, M., Cooper, M.A., Seppänen, M.R.J.,
+    Mustjoki, S., Brothers, S., Vogel, T.P., Brink, R., Tangye, S.G., Reed, J.H.,
+    Goodnow, C.C., 2022. STAT3 gain-of-function mutations connect leukemia with autoimmune
+    disease by pathological NKG2Dhi CD8+ T cell dysregulation and accumulation. Immunity
+    55, 2386–2404. e2388.
+
+
+    Meng, Z., Zhang, H., Li, L., Wang, K., 2021. Clinical significance of miR-142-3p
+    in oral lichen planus and its regulatory role in keratinocyte proliferation. Oral
+    Surg. Oral Med. Oral Pathol. Oral Radiol. 132, 441–447.
+
+
+    Moitinho-Silva, L., Degenhardt, F., Rodriguez, E., Emmert, H., Juzenas, S., Môbus,
+    L., Uellendahl-Werth, F., Sander, N., Baurecht, H., Tittmann, L., 2022. Host genetic
+    factors related to innate immunity, environmental sensing and cellular functions
+    are associated with human skin microbiota. Nature Commun. 13, 6204.
+
+
+    Muradova, E., Negrieni, E., Berke, A., 2022. 35283 Mucocutaneous lichen planus
+    following moderna COVID-19 vaccination. J. Am. Acad. Dermatol. 87, AB83.
+
+
+    Pattil, S., Hosmani, J., Khan, Z.A., Yadalam, P.K., Ahmed, Z.H., Bhandi, S., Awan,
+    K.H., 2023. Advancement in therapeutic strategies for immune-mediated oral diseases.
+    Disease-A-Month 69, 101352.
+
+
+    Pattil, S., Yadalam, P.K., Hosmani, J., Khan, Z.A., Ahmed, Z.H., Shankar, V.G.,
+    Awan, K.H., 2022. Oral immune-mediated disorders with malignant potential/association:
+    An overview. Disease-A-Month 101349.
+
+
+    Phatale, V., Vaipehi, K.K., Jha, S., Pattil, D., Agrawal, M., Alexander, A., 2022.
+    Overcoming skin barriers through advanced transdermal drug delivery approaches.
+    J. Control. Release 351, 361–380.
+
+
+    Pitak-Arnnop, P., Subalekha, K., Sirintawat, N., Tangmanee, C., Aychai, P., Muangchan,
+    C., Sukhopetch, P., Mengaud, J.-P., Neff, A., 2022. Are oral lichen planus patients
+    at high risk of hepatitis C? A case-control study. J. Stomatol. Oral Maxillofac.
+    Surg. 123, e37–e42.
+
+
+    Povey, S., Lovering, R., Bruford, E., Wright, M., Lush, M., Wain, H., 2001. The
+    HUGO gene nomenclature committee (HGNC). Human Genet. 109, 678–680.
+
+
+    Qian, Y.-T., Liu, X.-Y., Sun, H.-D., Xu, J.-Y., Sun, J.-M., Liu, W., Chen, T.,
+    Liu, J.-W., Tan, Y., Sun, W., 2022. Urinary proteomics analysis of active vitiligo
+    patients: biomarkers for steroid treatment efficacy prediction and monitoring.
+    Front. Mol. Biosci. 9 (92).
+
+
+    Qiao, Y., Liu, B., Bai, R., Cai, J., Peng, Q., 2022. White sponge nevus caused
+    by keratin 4 gene mutation: A case report. Genes 13 (2184).
+
+
+    Ramos-García, P., Gonzalez-Moles, M.A., Warnakulasuriya, S., 2022. Significance
+    of p53 overexpression in the prediction of the malignant transformation risk of
+    oral potentially malignant disorders: A systematic review and meta-analysis. Oral
+    Oncol. 126, 105734.
+
+
+    Reimann, J.D., Moynihan, S.P., Horn, T.D., 2021. Assessment of clinical and laboratory
+    use of the cutaneous direct immunofluorescence assay. JAMA Dermatol. 157, 1343–1348.
+
+
+    Ritchie, M.E., Phipson, B., Wu, D., Hu, Y., Law, C.W., Shi, W., Smyth, G.K., 2015.
+    limma powers differential expression analyses for RNA-sequencing and microarray
+    studies. Nucleic Acids Res. 43, e47.
+
+
+    Rivera, C., Crisóstomo, M.F., Peña, C., González-Díaz, P., González-Arriagada,
+    W.A., 2020. Oral lichen planus interactome reveals CXCR4 and CXCL12 as candidate
+    therapeutic targets. Sci. Rep. 10, 1–8.
+
+
+    Sahoo, A., Jena, A.K., Panda, M., 2022. Experimental and clinical trial investigations
+    of phytol-extracts, phyto-chemicals and phyto-formulations in the treatment of
+    oral lichen planus: A systematic review. J. Ethnopharmacol. 115591.
+
+
+    Salazar, J., Carmona, T., Zaccori, F.C., Venegas-Yazigi, D., Cabello-Verrugio,
+    C., Il Choi, W., Vilos, C., 2022. The human dermis as a target of nanoparticles
+    for treating skin conditions. Pharmaceutics 15 (10).
+
+
+    Sandhu, S., Klein, B.A., Al-Hadlaq, M., Chiravuri, P., Bajonaid, A., Xu, Y., Intini,
+    R., Hussein, M., Vacharotayangul, P., Sroussi, H., 2022. Oral lichen planus: comparative
+    efficacy and treatment costs—a systematic review. BMC Oral Health 22, 1–21.
+
+
+    Schreurs, O., Karatsaidis, A., Balta, M.G., Grung, B., Hals, E.K., Schenck, K.,
+    2020. Expression of keratins 8, 18, and 19 in epithelia of atrophic oral lichen
+    planus. Eur. J. Oral Sci. 128, 7–17.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'Schwender, H., 2012. siggenes: Multiple testing using SAM and Efron''s empirical
+    Bayes approaches. R package version. 1, pp. 1–70.
+
+    Scully, C., Carrozzo, M., 2008. Oral mucosal disease: Lichen planus. Br. J. Oral
+    Maxillofac. Surg. 46, 15–21.
+
+    Shao, S., Tsai, L.C., Sarkar, M.K., Xing, X., Xue, K., Uppala, R., Berther, C.C.,
+    Zeng, C., Patrick, M., Billi, A.C., 2019. IFN-γ enhances cell-mediated cytotoxicity
+    against keratinocytes via JAK2/STAT1 in lichen planus. Sci. Transl. Med. 11, eaat7561.
+
+    Slober, K., Hersle, K., Mobacken, H., Thilander, H., 1979. Topical retinoin therapy
+    and oral lichen planus. Arch. Dermatol. 115, 716–718.
+
+    Suga, K., 2022. F-18-FDG PET/CT findings of paraneoplastic dermatoses. Jpn. J.
+    Radiol. 40, 863–875.
+
+    Sun, K., Pan, L., Chen, J., Deng, Y., Chen, J., Tian, Z., Tang, G.Y., Wang, Y.,
+    2022. Protein disulfide isomerase family A member 3 expression is upregulated
+    in tissue-derived extracellular vesicles in oral lichen planus and oral lichenoid
+    lesions. Arch. Oral Biol. 137, 105390.
+
+    Taguchi, Y., Turki, T., 2020. A new advanced in silico drug discovery method for
+    novel coronavirus (SARS-CoV-2) with tensor decomposition-based unsupervised feature
+    extraction. PLoS One 15, e0238907.
+
+    Taupelt, F., Donnio, L.-M., Magnani, C., Mari, P.-O., Giglia-Mari, G., 2022. A
+    stable XPG protein is required for proper ribosome biogenesis: Insights on the
+    phenotype of combine Xeroderma Pigmentosum/Cockayne Syndrome patients. PLoS One
+    17, e0271246.
+
+    Team, R.C., 2008. R: A language and environment for statistical computing. J.
+    Stat. Softw. 25.
+
+    Turki, T., Taguchi, Y.h., 2023. A new machine learning based computational framework
+    identifies therapeutic targets and unveils influential genes in pancreatic islet
+    cells. Gene 853, 147038.
+
+    Turki, T., Wei, Z., 2018. Boosting support vector machines for cancer discrimination
+    tasks. Comput. Biol. Med. 101, 236–249.
+
+    Tusher, V.G., Tibshirani, R., Chu, G., 2001. Significance analysis of microarrays
+    applied to the ionizing radiation response. Proc. Natl. Acad. Sci. 98, 5116–5121.
+
+    Usatine, R., Tinitigan, M., 2011. Diagnosis and treatment of lichen planus. Am.
+    Fam. Physician 84, 53–60.
+
+    Vinay, K., Kumar, S., Bishnoi, A., Aggarwal, D., Radotra, B.D., Parsad, D., Sendhil
+    Kumaran, M., 2020. A clinico-demographic study of 344 patients with lichen planus
+    pigmentosus seen in a tertiary care center in India over an 8-year period. Int.
+    J. Dermatol. 59, 245–252.
+
+    Vo, P.T.-D., Choi, S.S., Park, H.R., Lee, A., Jeong, S.-H., Choi, Y., 2021. Gene
+    signatures associated with barrier dysfunction and infection in oral lichen planus
+    identified by analysis of transcriptomic data. PLoS One 16, e0257356.
+
+    Wang, H., Deng, Y., Peng, S., Yan, L., Xu, H., Wang, Q., Shen, Z., 2021. RNA-Seq
+    based transcriptome analysis in oral lichen planus. Hereditas 158, 1–11.
+
+    Wenzel, J., Tüting, T., 2008. An IFN-associated cytotoxic cellular immune response
+    against viral, self-, or tumor antigens is a common pathogenic feature in interface
+    dermatitis. J. Invest. Dermatol. 128, 2392–2402.
+
+    Xia, D.-N., Tan, Y.-Q., Yang, J.-Y., Zhou, G., 2020. Omega-3 polyunsaturated fatty
+    acids: a promising approach for the management of oral lichen planus. Inflamm.
+    Res. 69, 989–999.
+
+    Xie, Z., Bailey, A., Kuleshov, M.V., Clarke, D.J., Evangelista, J.E., Jenkins,
+    S.L., Lachmann, A., Wojciechowicz, M.L., Kropiwnicki, E., Jagodnik, K.M., 2021.
+    Gene set knowledge discovery with enrichr. Curr. Protoc. 1, e90.
+
+    Xie, F., Gluee, C.A., Deschaine, M., Dasari, S., Sartori-Valinotti, J.C., Charlesworth,
+    M.C., Meves, A., Lehman, J.S., 2023. Differential proteomic expression in indolent
+    versus transforming oral lichen planus. Exp. Dermatol.
+
+
+    Xin, M.-z., Shi, Y.-y., Li, C.-s., Zuo, L.-h., Li, N., Liu, L.-w., Ma, H.-x.,
+    Du, Q.-z., Xue, P., Sun, Z., 2021. Metabolomics and transcriptomics analysis on
+    metabolic characteristics of oral lichen planus. Front. Oncol. 11, 769163.
+
+    Yao, Y., Pan, L., Wei, Y., Feng, M., Li, X., Sun, L., Guoyao, T., Wang, Y., 2023.
+    TRIM21 promotes inflammation by ubiquitinating NF-κB in T cells of oral lichen
+    planus. J. Oral Pathol. Med.
+
+    Zare, R., Mohtasham, N., Ghazi, N., Mozafari, P.M., Abdollapoor, M., Poursheikhani,
+    A., Mohajertehrani, F., Esmaeilzadeh, A., 2021. Evaluation of correlation between
+    transcription factors and IL-17 in oral and cutaneous lichen planus lesions and
+    Leukocytes. Cytokine 148, 155696.
+
+    Zeng, Z., Lan, T., Wei, Y., Wei, X., 2022. CCL5/CCR5 axis in human diseases and
+    related treatments. Genes Dis. 9, 12–27.
+
+    Zeng, L.-j., 2019. Type1 interferons potential initiating factors linking skin
+    wounds with psoriasis pathogenesis. Front. Immunol. 10 (1440).
+
+    Zhang, Y., Liu, K., Cheng, J., Zhou, C., Zhang, M., Fan, Y., 2022a. FAP-α+ immunofibroblasts
+    in oral lichen planus promote CD4+ T-cell infiltration via CCL5 secretion. Exp.
+    Dermatol. 31, 1421–1430.
+
+    Zhang, Z., Zhang, Y., Zhao, Z., Li, P., Chen, D., Wang, W., Han, Y., Zou, S.,
+    Jin, X., Zhao, J., 2022b. Paeoniflorin drives the immunomodulatory effects of
+    mesenchymal stem cells by regulating Th1/Th2 cytokines in oral lichen planus.
+    Sci. Rep. 12 (18678).
+
+    Zhao, Z., Wang, L., Zhang, M., Zhou, C., Wang, Y., Ma, J., Fan, Y., 2022. Reveals
+    of quercetin''s therapeutic effects on oral lichen planus based on network pharmacology
+    approach and experimental validation. Sci. Rep. 12 (1162).
+
+    Zhou, Y., Zhou, B., Pache, L., Chang, M., Khodabakhshi, A.H., Tanaseichuk, O.,
+    Benner, C., Chanda, S.K., 2019. Metascape provides a biologist-oriented resource
+    for the analysis of systems-level datasets. Nature Commun. 10, 1–10.
+
+    Zouali, H., Lemasson, J., Calugareanu, A., Battali, C., Michonneau, D., Le Buanec,
+    H., Grolleau, C., Cassius, C., Robin, M., Meradnet, M., 2022. RNA sequencing of
+    chronic GVHD skin lesions defines shared and unique inflammatory pathways characterizing
+    lichen planus and morphea. Blood Adv. 6, 2805–2811.
+
+
+    Turki Turki received a B.S. in computer science from King Abdulaziz University,
+    an M.S. in computer science from NYU.POLY, and a Ph.D. in computer science from
+    the New Jersey Institute of Technology. He is currently an associate professor
+    with the Department of Computer Science, King Abdulaziz University, Saudi Arabia.
+    His research interests include machine learning, data science and bioinformatics.
+    His research has been published in journals such as Scientific Reports, IEEE Journal
+    on Selected Topics in Signal Processing, Frontiers in Genetics and Computers in
+    Biology and Medicine. He is an editorial board member of Sustainable Computing:
+    Informatics and Systems, BMC Medical Genomics, PLoS ONE, and Computers in Biology
+    and Medicine.
+
+
+    Y.-h. Taguchi received a B.S. degree in physics from the Tokyo Institute of Technology
+    and a Ph.D. degree in physics from the Tokyo Institute of Technology. He is currently
+    a full professor with the Department of Physics, Chuo University, Japan. His works
+    have been published in leading journals such as Physical Review Letters, Bioinformatics,
+    and Scientific Reports. His research interests include bioinformatics, machine
+    learning, and nonlinear physics. He is also an editorial board member of PLoS
+    ONE, BMC Medical Genomics, Medicine (Lippincott Williams & Wilkins journal), BMC
+    Research Notes, and IPSJ Transaction on Bioinformatics.'
+  merge: -1
+  img_proc: true
