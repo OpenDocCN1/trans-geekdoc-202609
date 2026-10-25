@@ -1,0 +1,98 @@
+level_changes:
+- line: 29
+  before: 2
+  after: 3
+- line: 33
+  before: 2
+  after: 3
+- line: 158
+  before: 3
+  after: 4
+- line: 167
+  before: 3
+  after: 4
+- line: 188
+  before: 3
+  after: 4
+- line: 209
+  before: 2
+  after: 4
+- line: 227
+  before: 2
+  after: 4
+- line: 241
+  before: 2
+  after: 4
+- line: 262
+  before: 2
+  after: 4
+- line: 274
+  before: 2
+  after: 3
+- line: 276
+  before: 2
+  after: 3
+- line: 360
+  before: 2
+  after: 3
+- line: 455
+  before: 2
+  after: 4
+- line: 459
+  before: 2
+  after: 4
+- line: 463
+  before: 2
+  after: 4
+- line: 467
+  before: 2
+  after: 4
+- line: 471
+  before: 2
+  after: 4
+- line: 477
+  before: 2
+  after: 4
+- line: 493
+  before: 2
+  after: 3
+- line: 620
+  before: 2
+  after: 3
+- line: 1667
+  before: 2
+  after: 3
+- line: 2818
+  before: 1
+  after: 3
+- line: 4029
+  before: 1
+  after: 2
+- line: 4033
+  before: 1
+  after: 3
+text_changes:
+- line: 274
+  before: 第 2 章
+  after: 第2章
+- line: 360
+  before: 第 3 章
+  after: 第3章
+- line: 1347
+  before: 第 6 章
+  after: 第6章
+- line: 1665
+  before: 第四部分 矩阵
+  after: 第四部分：矩阵
+- line: 2058
+  before: 第 8 章
+  after: 第8章
+- line: 2251
+  before: 第 9 章
+  after: 第9章
+- line: 2818
+  before: 第 10 章
+  after: 第10章
+- line: 4029
+  before: 第五部分
+  after: 第五部分：因式分解
