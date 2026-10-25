@@ -1,0 +1,11 @@
+for a protected class. For example, ProPublica famously exposed a rearrest-prediction model that wrongly jails Black defendants more often than White defendants.
+
++   3. The coded gaze: When a group is underrepresented in the training data, the resulting model won’t work as well for members of that group. This results in exclusionary experiences, such as when a facial recognition system fails for Black people more often than for people of other races. Also known as representation bias, this phenomenon can also occur for speech recognition.
+
++   4. Inferring sensitive attributes: A model’s predictions can reveal group membership, such as sexual orientation, whether someone is pregnant, whether they’ll quit their job, or whether they’re going to die. Researchers have shown that it is possible to predict race based on Facebook likes, and officials in China use facial recognition to identify and track the Uighurs, a minority ethnic group systematically oppressed by the government. In these cases, sensitive information about an individual is derived from otherwise innocuous data.
+
+The question to always ask is, “For whom will this fail?” says Cathy O’Neil, author of Weapons of Math Destruction and one of the most visible activists in ML ethics. This fundamental question conjures the four issues above and many others as well. It’s an ardent call to action that reminds us to pursue ethical considerations as an exercise in empathy.
+
+Only proactive leaders can meet these ethical challenges. Companies using ML are mostly frozen by the cosmetics demanded by corporate public relations. It’s often only to posture when firms call for ML deployment to be “fair, unbiased, accountable, and responsible.” These are vague platitudes that don’t alone guide concrete action. Declaring them, corporations perform ethics theater, protecting their public image rather than protecting the public. Rarely will you hear a firm come down explicitly on one side or the other for any of the four issues I listed above, for example.
+
+O’Neil has taken on the indifference to these and other issues with another weapon: shame. She advocates for shaming as a means to battle

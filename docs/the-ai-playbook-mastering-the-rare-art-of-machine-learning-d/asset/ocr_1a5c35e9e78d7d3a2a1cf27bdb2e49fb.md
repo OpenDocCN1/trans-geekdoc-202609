@@ -1,0 +1,11 @@
+upon this and correctly identify at least some of the minority cases would require trade-offs: the introduction of false positives and, in general, a lower overall accuracy.
+
+The Stanford model succeeded to a certain degree—it could predict better than guessing—but then the researchers misrepresented its performance on the pairing test by calling it “accuracy.” Voila! Journalists and their readers believe the model can “tell” whether you’re gay or straight.
+
+Some things are too hard to reliably predict. “Gaydar” as a popular notion refers to an unattainable form of human clairvoyance. We shouldn’t expect ML to attain supernatural abilities either.
+
+# Accuracy: A Word So Often Used Inaccurately
+
+The Stanford study is a perfect example of a common misstep that I call the accuracy fallacy, which greatly exaggerates ML’s performance across domains. It leads the public to falsely believe that the system can achieve an unrealistic, “crystal-ball” level of performance—specifically, that it can distinguish positive and negative cases and generally be correct for both positive and negative cases. That’s just not feasible for many noteworthy prediction goals. Since many important behaviors—such as whether you’ll click, buy, lie, or die—tend to occur more rarely, they’re particularly difficult to predict. No model could “tell” such things with high reliability in general.
+
+In some cases, researchers perpetrate a variation on the accuracy fallacy: They report the classification accuracy you would get if half the cases were positive. For example, Emory and Harvard universities reported on a model that predicts the onset of psychosis with “90 percent accuracy,” as evaluated on data from a world where 50 percent of patients are eventually diagnosed with psychosis. There’s a word for measuring accuracy in this way: cheating. Mathematically, this usually inflates the reported “accuracy” a bit less than the pairing test, but it’s a similar maneuver and far overstates performance in much the same way.

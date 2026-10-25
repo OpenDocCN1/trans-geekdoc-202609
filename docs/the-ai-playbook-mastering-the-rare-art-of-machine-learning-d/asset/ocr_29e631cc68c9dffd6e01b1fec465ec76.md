@@ -1,0 +1,9 @@
+![](bbox=[0.13, 0.1, 0.87, 0.32])
+
+Survey responses to the question, “What percentage of ML models (created by you or your colleagues with the intention of being deployed) have actually been deployed?” Total respondents: 114.
+
+Other industry research aligns with this dismal result. The industry-leading Data Science Survey run by ML consultancy Rexer Analytics showed that only 11 percent of data scientists say their models always deploy. Managers follow suit, indicating that “only 10% of companies obtain significant financial benefits from AI technologies,” according to research from MIT Sloan Management and the Boston Consulting Group. Likewise, an analyst at the research firm Gartner estimated that close to 85 percent of big data projects fail.
+
+Still, ML is by no means a flop. If 15–25 percent of the world’s many projects deploy, that’s far from nothing. Predictive models positively impact our lives on a daily basis, delivering more relevant content— for example, by empowering spam filters and Google search results— drastically reducing credit card fraud, and much more. The Machine Learning Week conferences I’ve been running since 2009 are built on loads of positive case studies from Fortune 500s and beyond.
+
+In fact, for many ML projects, success is relatively likely. For example, at Big Tech firms, experienced staff and the sheer power of abundant resources often align the stars for deployment. The same is true if you’re developing a newly updated model at a bank that’s already been deploying credit risk models for years. Moreover, rare innovators like Jack Levis at UPS succeed by leading unusually deployment-oriented projects.
