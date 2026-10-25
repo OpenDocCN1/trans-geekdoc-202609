@@ -1,0 +1,17 @@
+level_changes:
+- line: 15
+  before: 3
+  after: 2
+- line: 173
+  before: 3
+  after: 4
+text_changes:
+- line: 0
+  before: 软件工程评估与评价｜｜对抗机器学习：关于第三方的韧性
+  after: 软件工程评估与评价 | 对抗机器学习：关于第三方的韧性
+- line: 69
+  before: 表 1：用于挖掘库和 API 的知名 RSSE。
+  after: 表 1：用于挖掘库和 API 的知名 RSSE
+- line: 173
+  before: '3.3.2 RQ2: \(\alpha\) 和 \(\gamma\) 如何影响攻击的有效性？'
+  after: 3.3.2 RQ2：\(\alpha\) 和 \(\gamma\) 如何影响攻击的有效性？
