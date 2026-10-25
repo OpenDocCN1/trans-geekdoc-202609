@@ -1,0 +1,17 @@
+infect machines with malware. While better security and quality control by developers helps eliminate software defects, also critical is the continual application of software patches and updates that address specific flaws as they become known.
+
+Logic bombs are similar to software defects in that they are embedded code. Logic bombs activate upon a specific time and date or may be triggered by an event. They can be spread or be spawned by a Trojan horse. Once embedded into a system, they damage circuitry or cripple operations at critical points or times.
+
+Backdoors are much the same as Trojans or worms, except that they open a “backdoor” into a computer, providing a network connection for hackers or other malware to enter or for sending viruses or spam.
+
+Keyloggers record keystrokes in order to gather login names, passwords, and other sensitive information. The information transmits to the source of the keylogging program. These programs are also used legitimately by corporations and suspicious parents to acquire computer usage information.
+
+Browser hijackers redirect your normal search activity by altering browser settings. Users find themselves on websites in which they have no interest or any intention of visiting. As users are forcibly made to access websites, developers capture your surfing interests. This is particularly precarious for users who bank or shop online. Browser hijacker programs may also contain spyware and keylogger programs.
+
+Ransomware is a malware variant that can encrypt sensitive data such as personal documents or photos and demands a ransom for their release. Unless payment is made, cybercriminals threaten to delete the data. Some ransomware will deny access to the computer. Victims may have a message appear on their screens claiming that the action is on behalf of a legitimate law enforcement agency such as the FBI. It suggests that the user has been caught doing something illegal and locks out the computer. In return for resolving the situation, the hackers demand payment. There are two types of ransomware. The locker type blocks access to the infected device but does not destroy files. The second is crypto-ransomware, which encrypts files on computers and mobile devices. The program scrambles the contents and requires a decryption key to restore normal usage.
+
+According to the cybersecurity firm Symantec, ransomware attacks are reaching a new level of sophistication and expertise.43 Furthermore, the trend indicates a continuous increase of attacks on organizations rather than consumers, where attackers deploy the kinds of tactics seen in APTs (advanced persistent threat). As organizations become more frequent targets, ICSs and SCADA software may be at risk from future ransomware attacks. A crypto ransomware infection at a critical infrastructure facility could have a devastating outcome.
+
+# Cryptocurrencies
+
+The rise of cryptocurrencies, also referred to as virtual currencies, has facilitated trafficking in ransomware. Cybercriminals require a transfer payment system that is untraceable, accessible, and convertible. Because there is no single entity governing the oversight and verification of transactions, cryptocurrencies such
