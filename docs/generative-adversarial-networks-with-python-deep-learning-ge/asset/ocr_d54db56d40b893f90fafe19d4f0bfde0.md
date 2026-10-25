@@ -1,0 +1,18 @@
+![](bbox=[0.24, 0.1, 0.75, 0.45])
+
+Figure B.2: Choose Anaconda Download for Your Platform.
+
+This will download the Anaconda Python package to your workstation. I'm on macOS, so I chose the macOS version. The file is about 426 MB. You should have a file with a name like:
+
+```
+Anaconda3-4.4.0-MacOSX-x86_64.pkg
+```
+
+Listing B.1: Example filename on macOS.
+
+# B.3 Install Anaconda
+
+In this step, we will install the Anaconda Python software on your system. This step assumes you have sufficient administrative privileges to install software on your system.
+
++   1. Double click the downloaded file.
++   2. Follow the installation wizard.

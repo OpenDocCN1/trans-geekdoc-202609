@@ -1,0 +1,33 @@
+model. It is a definition of the model in terms of one pixel in the output activation map to the input image. The output of the model may be a single value or a square activation map of values that predict whether each patch of the input image is real or fake. Traditionally, the receptive field refers to the size of the activation map of a single convolutional layer with regards to the input of the layer, the size of the filter, and the size of the stride. The effective receptive field generalizes this idea and calculates the receptive field for the output of a stack of convolutional layers with regard to the raw image input. The terms are often used interchangeably.
+
+The authors of the Pix2Pix GAN provide a Matlab script to calculate the effective receptive field size for different model configurations in a script called `receptive_field_sizes.m`¹. It can be helpful to work through an example for the 70 × 70 PatchGAN receptive field calculation. The 70 × 70 PatchGAN has a fixed number of three layers (excluding the output and second last layers), regardless of the size of the input image. The calculation of the receptive field in one dimension is calculated as:
+
+receptive field = (output size − 1) × stride + kernel size (22.1)
+
+Where output size is the size of the prior layers activation map, stride is the number of pixels the filter is moved when applied to the activation, and kernel size is the size of the filter to be applied. The PatchGAN uses a fixed stride of 2 × 2 (except in the output and second last layers) and a fixed kernel size of 4 × 4. We can, therefore, calculate the receptive field size starting with one pixel in the output of the model and working backward to the input image. We can develop a Python function called `receptive_field()` to calculate the receptive field, then calculate and print the receptive field for each layer in the Pix2Pix PatchGAN model. The complete example is listed below.
+
+```
+# example of calculating the receptive field for the PatchGAN
+
+# calculate the effective receptive field size
+def receptive_field(output_size, kernel_size, stride_size):
+    return (output_size - 1) * stride_size + kernel_size
+
+# output layer 1x1 pixel with 4x4 kernel and 1x1 stride
+rf = receptive_field(1, 4, 1)
+print(rf)
+# second last layer with 4x4 kernel and 1x1 stride
+rf = receptive_field(rf, 4, 1)
+print(rf)
+# 3 PatchGAN layers with 4x4 kernel and 2x2 stride
+rf = receptive_field(rf, 4, 2)
+print(rf)
+rf = receptive_field(rf, 4, 2)
+print(rf)
+rf = receptive_field(rf, 4, 2)
+print(rf)
+```
+
+Listing 22.1: Example of calculating the receptive field for a PatchGAN.
+
+Running the example prints the size of the receptive field for each layer in the model from the output layer to the input layer. We can see that each 1 × 1 pixel in the output layer maps to a 70 × 70 receptive field in the input layer.

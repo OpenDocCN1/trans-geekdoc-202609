@@ -1,0 +1,76 @@
+```
+```python
+model.add(Conv2DTranspose(128, (4,4), strides=(2,2), padding='same',
+                          kernel_initializer=init))
+model.add(BatchNormalization())
+model.add(LeakyReLU(alpha=0.2))
+# upsample to 28x28
+model.add(Conv2DTranspose(128, (4,4), strides=(2,2), padding='same',
+                          kernel_initializer=init))
+model.add(BatchNormalization())
+model.add(LeakyReLU(alpha=0.2))
+# output 28x28x1
+model.add(Conv2D(1, (7,7), activation='tanh', padding='same', kernel_initializer=init))
+return model
+```
+```
+
+```
+```python
+# define the combined generator and discriminator model, for updating the generator
+def define_gan(generator, discriminator):
+    # make weights in the discriminator not trainable
+    discriminator.trainable = False
+    # connect them
+    model = Sequential()
+    # add generator
+    model.add(generator)
+    # add the discriminator
+    model.add(discriminator)
+    # compile model
+    opt = Adam(lr=0.0002, beta_1=0.5)
+    model.compile(loss='binary_crossentropy', optimizer=opt)
+    return model
+```
+```
+
+```
+```python
+# load mnist images
+def load_real_samples():
+    # load dataset
+    (trainX, trainy), (_, _) = load_data()
+    # expand to 3d, e.g. add channels
+    X = expand_dims(trainX, axis=-1)
+    # select all of the examples for a given class
+    selected_ix = trainy == 8
+    X = X[selected_ix]
+    # convert from ints to floats
+    X = X.astype('float32')
+    # scale from [0,255] to [-1,1]
+    X = (X - 127.5) / 127.5
+    return X
+```
+```
+
+```
+```python
+# select real samples
+def generate_real_samples(dataset, n_samples):
+    # choose random instances
+    ix = randint(0, dataset.shape[0], n_samples)
+    # select images
+    X = dataset[ix]
+    # generate class labels
+    y = ones((n_samples, 1))
+    return X, y
+```
+```
+
+```
+```python
+# generate points in latent space as input for the generator
+def generate_latent_points(latent_dim, n_samples):
+    # generate points in the latent space
+```
+```

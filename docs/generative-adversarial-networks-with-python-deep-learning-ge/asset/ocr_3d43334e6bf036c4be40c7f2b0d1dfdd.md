@@ -1,0 +1,66 @@
+# B.5 Install Deep Learning Libraries
+
+In this step, we will install Python libraries used for deep learning, specifically: Theano, TensorFlow, and Keras. Note: I recommend using Keras for deep learning and Keras only requires one of Theano or TensorFlow to be installed. You do not need both. There may be problems installing TensorFlow on some Windows machines.
+
++   1. Install the Theano deep learning library by typing:
+
+```
+conda install theano
+```
+
+Listing B.10: Install Theano with conda.
+
++   2. Install the TensorFlow deep learning library by typing:
+
+```
+conda install -c conda-forge tensorflow
+```
+
+Listing B.11: Install TensorFlow with conda.
+
+Alternatively, you may choose to install using pip and a specific version of TensorFlow for your platform.
+
++   3. Install Keras by typing:
+
+```
+pip install keras
+```
+
+Listing B.12: Install Keras with pip.
+
++   4. Confirm your deep learning environment is installed and working correctly.
+
+Create a script that prints the version numbers of each library, as we did before for the SciPy environment.
+
+```
+# check deep learning version numbers
+# theano
+import theano
+print('theano: %s' % theano.__version__)
+# tensorflow
+import tensorflow
+print('tensorflow: %s' % tensorflow.__version__)
+# keras
+import keras
+print('keras: %s' % keras.__version__)
+```
+
+Listing B.13: Code to check that key deep learning libraries are installed.
+
+Save the script to a file deep_versions.py. Run the script by typing:
+
+```
+python deep_versions.py
+```
+
+Listing B.14: Run script from the command line.
+
+You should see output like:
+
+```
+theano: 1.0.4
+tensorflow: 2.0.0
+keras: 2.3.0
+```
+
+Listing B.15: Sample output of the deep learning versions script.

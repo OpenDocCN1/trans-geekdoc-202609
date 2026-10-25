@@ -1,0 +1,200 @@
+level_changes:
+- line: 148
+  before: 2
+  after: 3
+- line: 201
+  before: 2
+  after: 3
+- line: 2347
+  before: 2
+  after: 3
+- line: 2349
+  before: 2
+  after: 3
+- line: 291
+  before: 2
+  after: 3
+- line: 355
+  before: 2
+  after: 3
+- line: 380
+  before: 2
+  after: 3
+- line: 406
+  before: 2
+  after: 3
+- line: 512
+  before: 2
+  after: 3
+- line: 555
+  before: 2
+  after: 3
+- line: 602
+  before: 2
+  after: 3
+- line: 624
+  before: 2
+  after: 3
+- line: 653
+  before: 2
+  after: 3
+- line: 673
+  before: 2
+  after: 3
+- line: 687
+  before: 2
+  after: 3
+- line: 702
+  before: 2
+  after: 3
+- line: 883
+  before: 2
+  after: 3
+- line: 9090
+  before: 2
+  after: 3
+- line: 9092
+  before: 2
+  after: 3
+- line: 9346
+  before: 2
+  after: 3
+- line: 9947
+  before: 2
+  after: 3
+- line: 10446
+  before: 2
+  after: 3
+- line: 10448
+  before: 2
+  after: 3
+- line: 10470
+  before: 2
+  after: 3
+- line: 10479
+  before: 2
+  after: 3
+- line: 10485
+  before: 2
+  after: 3
+- line: 10563
+  before: 2
+  after: 3
+- line: 10615
+  before: 2
+  after: 3
+- line: 10649
+  before: 2
+  after: 3
+- line: 10675
+  before: 2
+  after: 3
+- line: 11400
+  before: 2
+  after: 3
+- line: 12436
+  before: 2
+  after: 3
+- line: 12512
+  before: 2
+  after: 3
+- line: 12784
+  before: 2
+  after: 3
+- line: 12950
+  before: 2
+  after: 3
+- line: 13443
+  before: 2
+  after: 3
+- line: 13453
+  before: 2
+  after: 3
+- line: 13481
+  before: 2
+  after: 3
+- line: 13498
+  before: 2
+  after: 3
+- line: 13508
+  before: 2
+  after: 3
+- line: 13517
+  before: 2
+  after: 3
+- line: 13553
+  before: 2
+  after: 3
+- line: 15623
+  before: 2
+  after: 3
+- line: 16704
+  before: 2
+  after: 3
+- line: 16706
+  before: 2
+  after: 3
+- line: 16719
+  before: 2
+  after: 3
+- line: 16973
+  before: 2
+  after: 3
+- line: 17793
+  before: 2
+  after: 3
+- line: 19235
+  before: 2
+  after: 3
+- line: 20185
+  before: 2
+  after: 3
+- line: 21371
+  before: 2
+  after: 3
+- line: 21662
+  before: 2
+  after: 3
+- line: 22210
+  before: 2
+  after: 3
+text_changes:
+- line: 10679
+  before: 第15章
+  after: 第 15 章
+- line: 12357
+  before: 第 V 部分
+  after: 第五部分
+- line: 12784
+  before: 17.4. 时尚MNIST的无条件GAN
+  after: 17.4 时尚MNIST的无条件GAN
+- line: 16702
+  before: 第 VI 部分
+  after: 第六部分
+- line: 21367
+  before: 第 VII 部分
+  after: 第七部分
+- line: 21660
+  before: Chapter 28
+  after: 第 28 章
+- line: 21678
+  before: 28.1 Overview
+  after: 28.1 概述
+- line: 21695
+  before: 28.2 GANs Are Generally Limited to Small Images
+  after: 28.2 GAN 通常受限于小图像
+- line: 21735
+  before: 28.3 Generate Large Images by Progressively Adding Layers
+  after: 28.3 通过逐步添加层生成大图像
+- line: 21774
+  before: 28.4 How to Progressively Grow a GAN
+  after: 28.4 如何渐进式地增长 GAN
+- line: 21813
+  before: 28.4.1 Growing the Generator
+  after: 28.4.1 增长生成器
+- line: 22208
+  before: 第VIII部分
+  after: 第 VIII 部分
+- line: 22807
+  before: 第IX部分
+  after: 第 IX 部分
