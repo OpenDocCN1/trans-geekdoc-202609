@@ -1,0 +1,101 @@
+level_changes:
+- line: 49
+  before: 2
+  after: 1
+- line: 1495
+  before: 2
+  after: 1
+- line: 3637
+  before: 2
+  after: 1
+- line: 5770
+  before: 2
+  after: 1
+- line: 7600
+  before: 2
+  after: 1
+- line: 9288
+  before: 2
+  after: 1
+- line: 11204
+  before: 2
+  after: 1
+- line: 13207
+  before: 2
+  after: 1
+- line: 14497
+  before: 2
+  after: 1
+- line: 16244
+  before: 2
+  after: 1
+- line: 18031
+  before: 2
+  after: 1
+- line: 20842
+  before: 2
+  after: 1
+- line: 1505
+  before: 3
+  after: 2
+- line: 3641
+  before: 3
+  after: 2
+- line: 3652
+  before: 3
+  after: 2
+- line: 15632
+  before: 1
+  after: 2
+- line: 15664
+  before: 1
+  after: 2
+- line: 15709
+  before: 1
+  after: 2
+- line: 15753
+  before: 1
+  after: 2
+- line: 15844
+  before: 1
+  after: 2
+- line: 15855
+  before: 1
+  after: 2
+- line: 15867
+  before: 2
+  after: 3
+- line: 16248
+  before: 3
+  after: 2
+text_changes:
+- line: 1317
+  before: 示例：使用 panic！
+  after: 示例：使用 panic!
+- line: 18566
+  before: 第 6 步：记录和展示项目
+  after: 步骤 6：记录和展示项目
+- line: 18869
+  before: 综合项目："使用 Rust 进行概率与统计"
+  after: 综合项目：“使用 Rust 进行概率与统计”
+- line: 19097
+  before: 综合项目："使用 Rust 进行机器学习基础"
+  after: 综合项目：“使用 Rust 进行机器学习基础”
+- line: 19482
+  before: 综合项目："使用 Rust 的高级机器学习技术"
+  after: 综合项目：“使用 Rust 的高级机器学习技术”
+- line: 20196
+  before: 'Step 4: 使用 Rust 进行批处理'
+  after: '步骤 4: 使用 Rust 进行批处理'
+- line: 20238
+  before: 'Step 5: 使用 Rust 进行数据流处理'
+  after: '步骤 5: 使用 Rust 进行数据流处理'
+- line: 20283
+  before: 'Step 6: 数据工程的最佳实践'
+  after: '步骤 6: 数据工程的最佳实践'
+- line: 20326
+  before: 'Step 7: 记录和展示项目'
+  after: '步骤 7: 记录和展示项目'
+- line: 20354
+  before: 'Step 1: 设置环境'
+  after: '步骤 1: 设置环境'
