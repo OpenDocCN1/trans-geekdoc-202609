@@ -1,0 +1,15 @@
+database of approved users or in a data authentication server [25]. With the use of these new IoT devices, authentication should be taken seriously. Never create a product with a default password that is the same across all devices.
+
++   ii. **Backdoor debug:** An undocumented way to get access to a computer system or the data it contains [26]. Backdoors can be installed by software or hardware makers as a deliberate means of gaining access to their technology after providing them to the customers for removing errors or bugs. Manufacturers should never leave any kind of debugging access in production devices, even if you need to leave access on a non-standard port using hard coded random passwords.
+
++   iii. **Encryption:** Encryption is a formula used to turn data into a secret code [27]. Encryption means converting simple data into encrypted data or that can be called cipher text or coded data from simple data. All IoT devices that are communicating to cloud or other devices sharing data that all should be encrypted and available to only people that are meant to be seeing that information.
+
++   iv. **Privacy:** Privacy means anyone's right to control access to their personal information. In IoT devices, everyone must ensure that no personal data, such as a device's location, owner information, connection information, etc., is available to any other person or device, otherwise hackers may gain access to the device, and privacy would not be available to the device owner.
+
++   v. **Web interface:** If the web interface is there it should be a robust one, not the open one like SQL injection and cross site scripting.
+
++   vi. **Firmware updates:** Bugs regarding security and privacy may arise at any point. Every IoT device must be able to be updated via over the air (OTA) updates. However, those updates need to be verified before being applied. The update must be signed, and the device should check the sign, and only then may it proceed to install the update.
+
+# 9.8 PREVIOUS ATTACKS
+
++   i. **Robot vacuum cleaner** - These are the IOT devices that are used to vacuum a house floor. These devices operate on the house floor vacuuming and when it detects any obstruction in its path it changes direction and stores the created map for further usage as shown in Figure 9.7. The issue found with these devices was that it has produced a map of the house, and that device has a default username and password that was not changed by the manufacturer. The remote code vulnerability is named CVE-2018-10987 [28] and if compromised will provide access hackers who get the device's mac address system admin privileges [28]. The impacted vacuum cleaners are vulnerable to an authenticated remote code execution exploit. An authenticated offender will send a specially crafted UDP packet and execute commands on the vacuum as root. The bug is within the function REQUEST_SET_WIFIPASSWD (UDP
