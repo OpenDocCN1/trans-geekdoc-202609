@@ -1,0 +1,71 @@
+level_changes:
+- line: 102
+  before: 3
+  after: 4
+- line: 136
+  before: 3
+  after: 4
+- line: 168
+  before: 2
+  after: 3
+- line: 252
+  before: 2
+  after: 3
+- line: 262
+  before: 2
+  after: 3
+- line: 266
+  before: 3
+  after: 4
+- line: 270
+  before: 4
+  after: 5
+- line: 290
+  before: 2
+  after: 4
+- line: 296
+  before: 2
+  after: 4
+- line: 306
+  before: 2
+  after: 3
+- line: 312
+  before: 2
+  after: 4
+- line: 314
+  before: 2
+  after: 4
+- line: 357
+  before: 2
+  after: 4
+- line: 393
+  before: 2
+  after: 4
+- line: 401
+  before: 2
+  after: 4
+- line: 419
+  before: 2
+  after: 3
+- line: 425
+  before: 2
+  after: 4
+- line: 433
+  before: 2
+  after: 4
+- line: 447
+  before: 2
+  after: 3
+- line: 470
+  before: 2
+  after: 3
+- line: 480
+  before: 2
+  after: 3
+text_changes:
+- line: 262
+  before: 3.2. PHM中PIML的分类法
+  after: 3.2. PHM 中 PIML 的分类法
+- line: 314
+  before: 表 4 PHM中物理信息输入空间研究摘要。
+  after: 表 4 PHM 中物理信息输入空间研究摘要。

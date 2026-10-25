@@ -1,0 +1,2788 @@
+- pgno: 0
+  md: '# # Physics-informed machine learning in prognostics and health management:
+    State of the art and challenges
+
+
+    Weikun DENG a,*, Khanh T.P. NGUYEN a, Kamal MEDJAHER a, Christian GOGU b, Jérôme
+    MORIO c
+
+
+    a Laboratoire Génie de Production, LGP, Université de Toulouse, INP-ENIT, 47 Av.
+    d’Azéreix, Tarbes, 65016, France
+
+    b Institut Clément Ader (ICA), Université de Toulouse, ISAE-SUPAERO, UPS, CNRS,
+    INSA, Mines Albi, 3 rue Caroline Aigle, Toulouse 31400, France
+
+    c ONERA/DTIS, Université de Toulouse, Toulouse F-31055, France
+
+
+    # ## ARTICLE INFO
+
+
+    +   - Physics-informed machine learning
+
+    +   - Prognostics and health management
+
+    +   - Physics-informed input space
+
+    +   - Physics-constraint learning
+
+    +   - Physics-embedded algorithm structure
+
+    +   - Knowledge
+
+
+    # ## ABSTRACT
+
+
+    Prognostics and health management (PHM) plays a constructive role in the equipment’s
+    entire life health service. It has long benefited from intensive research into
+    physics modeling and machine learning methods. However, in practice, the existing
+    solutions often encounter difficulties caused by sparse data & incomplete system
+    failure knowledge. Pure machine learning or physics-based methods can sometimes
+    be infeasible in such situations. As a result, there has been a growing interest
+    in developing physics-informed machine learning (PIML) models which allow incorporating
+    different forms of physics knowledge at different positions of the machine learning
+    pipeline. This combination provides significant assistance for detection, diagnostic,
+    and prognostics. However, to the best of our knowledge, the bibliometrics analyses
+    and the comprehensive review of the existing research concerning PIML in PHM remain
+    vacant. Our review is therefore dedicated to filling these gaps. We synthesize
+    the concept of PIML in PHM, and propose a taxonomy of PIML approaches from the
+    perspective of “Expression forms of informed knowledge” and “Knowledge informed
+    methods”. The findings and discussions presented in this paper enable us to clarify
+    the current state of the art and the emerging opportunities of PIML approaches,
+    especially for building PHM systems that can work under the “small data and scarce
+    physics knowledge” paradigm.
+
+
+    # ## 1. Introductions
+
+
+    Prognostics and Health Management (PHM) is an interdisciplinary engineering discipline.
+    It ensures the real-time health assessment and future state prediction of systems
+    based on up-to-date information and data processing [1] by two main paradigms:
+
+
+    Abbreviation: ANN, Artificial Neural Network; CNN, Convolutional Neural Network;
+    CRA, Cumulative relative accuracy; DNN, Deep Neural Networks; FCN, Fully Convolutional
+    Networks; GNN, Graph Neural Networks; KSVD, K Singular Value Decomposition; LSTM,
+    Long short-term memory; MAE, Mean Square Error; MSE, Mean Absolute Error; NMSE,
+    Normalized Mean Absolute Error; NMAE, Normalized Mean Square Error; NODE, Neural
+    Ordinary Differential Equations; PBM, Physics based methods; PCA, Principal Component
+    Analysis; PDE, Partial differential equation; PHM, Prognostic and Health Management;
+    PIML, Physics-informed Machine Learning; RMSE, Root mean square error; RNN, Recurrent
+    Neural Network; ROM, Reduced Order Model; RUL, Remaining useful life; SVM, Support
+    Vector Machine; VAE, Variational AutoEncoder; DRM, Disk-ram.
+
+
+    * Corresponding author. E-mail address: weikun.deng@enit.fr (W. DENG).'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'data-driven and physics model-based methods (PBM).
+
+    Enabled by machine learning (ML), with a recent surge related to deep learning
+    [2,3], data-driven methods extract features from data and identify the underlying
+    degradation processes, showing promising results at different failure scales from
+    macro to micro degradation and damages [4]. However, ML in PHM faces three dilemmas:
+
+
+    +   1. First dilemma arises from the limited data quality. One can cite: a) sparse
+    & noisy observations caused by limited structural conditions and pervasive monitoring
+    instrument costs [5]; b) sparse & noisy failure information due to restricted
+    monitoring time and high run-to-failure operation costs [6]; and c) sparse labels
+    caused by limited expert knowledge and high manual labeling cost [7].
+
+    +   2. Second dilemma is the opaque, unexplained nature of ML, leading to the
+    trust deficit [8]. For high investment and risk industrial domains, the unobservable
+    process between the ML input data and the output PHM results is viewed as a “black
+    box” with interpretability difficulties [9].
+
+    +   3. Third dilemma in ML arises from the lack of physics consistency. ML generally
+    converges in the direction that best fits the training samples which might not
+    absolutely conform to the Physics-constraints [10].
+
+
+    In contrast to ML, PBM observes failure phenomena and then establishes mathematical
+    or numerical mechanism models to represent faults or degradations [11]. When the
+    failure natures are well understood, PBM needs fewer data than ML [12] and achieves
+    better generalization [13]. However, modern engineering systems are complex and
+    influenced by mutual non-linear interactions among the subsystems. Thus, the PBM
+    performance can be affected by different factors such as the system scale [14]
+    and complexity [15], leading to the following dilemmas:
+
+
+    +   1. First dilemma concerns the epistemic uncertainties in the model simplification
+    and the paradox between the computational efficiency and the PBM’s credibility
+    [16].
+
+    +   2. Second dilemma is the sometimes limited understanding of the fault mechanism
+    to construct trustworthy degradation models [17].
+
+    +   3. Third dilemma arises from the unknown and unobservable parameters of the
+    PBM.
+
+
+    Due to the above dilemmas, the purely physics-based models are rarely applied
+    in practice [18,19].
+
+
+    Regarding limitations of both data-driven and physics-based methods, it is necessary
+    to develop hybrid approaches to overcome the drawbacks and inherit the advantage
+    of each one. Fig. 1 shows the motivation for a combination of PBM and ML models.
+    In fact, physics-informed machine learning (PIML) is a promising solution in the
+    case of sparse data and incomplete physics knowledge. PIML is formally introduced
+    at the Los Alamos PIML workshops during 2016–2020 [20] with the initialization
+    in solving the complex physics problems by ML. Particularly, Raissi et al. [21]
+    proposed physics-informed neural network (PINN)-based Partial differential equations
+    solution, leading to a boom in “informed NN”. Meanwhile, many industrial partners,
+    including GE [22], IBM [23], Nvidia [24], US DARPA [25] and NASA [26], the Argonne
+    National Laboratory [27] and Siemens [28], have paid high attention to the application
+    of PIML.
+
+
+    The motivation behind the development of PIML has been extensively discussed in
+    existing literature, highlighting its inherent strengths and advantages as follows:
+
+
+    +   1. PIML merges data-driven machine learning and physics principles to boost
+    the precision and interpretability of prognostics and health management (PHM)
+    system predictions.
+
+    +   2. PIML shines in tackling intricate dynamics of complex and nonlinear systems
+    in PHM applications. It achieves this by integrating physics-based constraints
+    and equations, thereby enhancing its predictive and modeling abilities.
+
+
+    ![](img/3ec5662c0c5150f5b95af65046cb9cd4_1_0.png)
+
+
+    Fig. 1. Sparse data and incomplete physics knowledge drive PHM techniques towards
+    the combination of PBMs and ML.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '+   3. The blend of physics-based knowledge enables PIML to generalize more
+    effectively, offering reliable predictions even beyond observed data. This is
+    particularly useful in scenarios with sparse or incomplete training data.
+
+
+    +   4. A key advantage of PIML models are their improved interpretability owing
+    to the explicit incorporation of physics. By embedding physical constraints and
+    equations, PIML allows to more easily elucidate some of the underlying mechanisms
+    that drive system behavior, which aids diagnostic analysis and decision-making.
+
+
+    +   5. Despite limited data, PIML''s efficient use of system physics knowledge
+    allows for accurate predictions, reducing the dependence on large data-sets and
+    potentially minimizing data acquisition costs.
+
+
+    +   6. PIML is robust to noise and outliers due to its enforcement of physical
+    laws, which can filter out erroneous or noisy data, leading to dependable predictions.
+
+
+    +   7. PIML provides computational benefits by amalgamating physics-based constraints
+    with machine learning algorithms, thereby yielding efficient models that reduce
+    computational complexity, suitable for real-time or near real-time applications.
+
+
+    Inspired by these advances, there have been several studies on PIML for anomaly
+    detection, fault diagnostic, and prognostics [29]. Compared to other potential
+    solutions for sparse data, like transfer learning [30], the advantage of PIML
+    in PHM is in assisting data-driven insights, utilization of expert knowledge,
+    adaptability and scalability. By leveraging these strengths, PIML can also enhance
+    the other methods, and the capabilities of addressing the PHM challenges [31]
+    in limited data availability, complex and nonlinear system dynamics, physics consistency
+    related trust, handling of noise and uncertainty, integration of multi-source
+    and heterogeneous data, and transferability across systems and domains [32]. Furthermore,
+    PIML is not in competition with these methods, but is the icing on the cake to
+    achieve win-win situations, for example through approaches such as PI-transfer
+    learning in aerospace anomaly detection [33], and PI-meta learning for machining
+    tool wear prediction [34]. Although many works are exciting, to the best of our
+    knowledge, none of the existing papers provides a comprehensive review of PIML
+    in PHM. In addition, no overall qualitative and bibliometrics analyses are conducted.
+    Finally, taxonomy and applications in PHM are unclear and waiting discussion in
+    particular with respect to: 1) Expression forms of Informed Knowledge and II)
+    Knowledge Informed Methods. Therefore, this paper aims to fill the above-mentioned
+    gaps. Besides, the open challenges toward the maturity of PIML in PHM are also
+    highlighted.
+
+
+    The rest of the paper is organized as follows. Section 2 presents a bibliometric
+    analysis of the existing works concerning PIML in PHM and thus shows an overview
+    of the research trend on this topic. Section 3 provides a comprehensive and insightful
+    review of PIML methods in PHM. Section 4 aims to summarize and discuss the source
+    of physics knowledge, which can be used to derive ML models, as well as the corresponding
+    integration methods. Finally, Section 5 summarizes the main contribution of this
+    paper and provides insights into potential future research.
+
+
+    # 2. Bibliometrics analysis
+
+
+    This section aims to provide an overview of the research interests of PIML studies
+    in the field of PHM. Firstly, we describe the literature research methodology
+    in Subsection 2.1. Then, based on the bibliometric analysis of PIML in PHM, the
+    research trend on this topic is discussed in Subsection 2.2. Finally, Subsection
+    2.3 compiles a statistical analysis of the works on PIML applied to PHM.
+
+
+    # 2.1. Literature research methodology
+
+
+    The bibliographic data investigated in this work covers the period from January
+    2013 to January 2023. The time span chosen in this article is based on the understanding
+    that PIML technology emerged around 2016. However, upon investigating the research
+    trend from hybrid frameworks to PIML, we found similar technical concepts dating
+    back to 2013. Consequently, we conducted a literature search spanning from 2013
+    to the present. In the search flowchart presented in Fig. 2, the survey is simultaneously
+    retrieved from Web of Science (WoS) and Google Scholar. The search on Google Scholar
+    is to verify the adequacy of the search in WoS.
+
+
+    ![](img/3ec5662c0c5150f5b95af65046cb9cd4_2_0.png)
+
+
+    Fig. 2. Search methodology flowchart.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '"Topic search strings" are defined as all terms in (Topic 1) AND (Topic 2).
+    where TOPIC 1: "Physics-informed" OR "Physics guided" OR "Physics induced" OR
+    "Physics aware" OR "Physics infused" OR "Domain knowledge" OR "Hybrid framework"
+    OR "Hybrid method". AND TOPIC 2: "Machine learning" OR "Deep learning" OR "Data
+    driven" In a further filtering, the "Topic filter" consists of "Core vocabulary",
+    and "Interfering words": Core Vocabulary: "Detection" OR "Diagnostic" OR "Prognostics"
+    OR "Failure" OR "Remaining useful life" OR "Prediction" OR "Identification" OR
+    "Classification" OR "SHM" "Damage" OR "Deterioration" OR "Recognition" OR "Fracture"
+    OR "Crack" OR "Deformation" OR "Abnormal" OR "Equipment" OR "Bearing" OR "Gear"
+    OR "Power". Interfering words: Not "Language" OR "Medical" OR "Cancer" OR "Face"
+    OR "Emotion" OR "Text". The first search result provides more than 36,632 manuscripts
+    from the two largest databases: Google Scholar and Web of Science. Then, we limited
+    the search to the areas where engineering PIML and PHM solutions are usually implemented,
+    such as Electronic, Aerospace, Mechanics, Computer Science, Engineering Multidisciplinary,
+    Automation Control Systems, Energy Fuels, Engineering Civil, Engineering Manufacturing,
+    etc. After this step, 6239 papers are kept. To yield insight into the published
+    material list, we implemented further selection steps like "Thesis Filter", "Manual
+    screening", and "Merge duplication". In "Thesis Filter", we perform topic filtering
+    by the Interfering words and Core Vocabulary mentioned above, and then the results
+    of the filtering are manually reviewed in "Manual screening" to determine that
+    the article topic fits within the scope of the review. By doing this, we found
+    that only 139 papers have the topic with the PIML-related hybrid framework in
+    PHM. Among them, 122 papers discuss PIML in PHM in detail. These papers are exploited
+    to draw critical remarks on the research trends as well as interesting statistical
+    results on the development of PIML in PHM.
+
+
+    # 2.2. Research trend analysis of PIML in PHM
+
+
+    To have an overview of the research trend from the hybrid frameworks to PIMLs,
+    in this section, one can see that during only a decade of development, research
+    related to the combination of model-driven and data-driven methods in the industry
+    has appeared in a wide range of conferences and scientific journals, as shown
+    in Fig. 3. One can see that Mechanical Systems and Signal Processing (MSSP) journal
+    has published a large number of manuscripts on this hybrid framework with more
+    than 573 papers. IEEE Aerospace is the conference attracting the most related
+    hybrid framework studies, with 706 papers. Next, to show an overview of the evolving
+    process from the hybrid framework to the PIML methods in PHM, we conducted a bibliometric
+    analysis by using cite space software [35]. Particularly, this software allows
+    automatically analyzing the keyword co-occurrence and then generating the clustering
+    network of the most widely used keywords (Fig. 4) and its development trend over
+    time (Fig. 5). From the clustering network in Fig. 4, it appears that the most
+    widely used keyword is "physics-informed machine learning". Associated with this
+    keyword, one can cite "active learning" and "differential equation" techniques
+    that are used to build the PIML framework. Besides, "physics-informed neural network"
+    is also a critical keyword that has co-occurred with "dynamical systems" and "deep
+    neural network". Looking into the relevant studies, one can see that PINN is usually
+    used to capture system dynamic behaviors for damage detection, fault diagnostic,
+    and failure prediction. Considering Fig. 5, one can see that the development trend
+    of the keywords, which are used in PIML research, shifts from the expert system
+    (in 2011), weighted class association rule mining (in 2014), to PINN in recent
+    years. Meanwhile, one can notice an increasing demand for physics knowledge, which
+    is represented by the often-occurred keywords such as "physics-informed sparse
+    identification" and "equation-based domain knowledge utilization". Next, "deep
+    neural networks" and "extended Kalman filter" (or "particle filter") are usually
+    combined to create PIML framework ([36]). Besides, research related to "embedding
+    differential equations" of lifetime degradation in ML is also highlighted through
+    this trend analysis ([37]).
+
+
+    # 2.3. Statistical analysis of PIML in PHM
+
+
+    This section aims to discuss the results of the statistical analysis existing
+    papers relating PIML in PHM.
+
+
+    ![](img/3ec5662c0c5150f5b95af65046cb9cd4_3_0.png)
+
+
+    (a) Conferences
+
+
+    (b) Journals
+
+
+    Fig. 3. Publication sources on hybrid frameworks considered in this review.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/3ec5662c0c5150f5b95af65046cb9cd4_4_0.png)
+
+
+    Fig. 4. Keywords co-occurrence clustering.
+
+
+    ![](img/3ec5662c0c5150f5b95af65046cb9cd4_4_1.png)
+
+
+    Fig. 5. Development trend of the keywords in Knowledge-assisted PHM studies.
+
+
+    # 2.3.1. Existing terminologies
+
+
+    There are numerous terminologies similar to “physics-informed machine learning”
+    (see Table 1). According to the statistical results of all publications relating
+    to PIML in PHM, the distribution of those terms are: “Physics-informed” (47.1%),
+    “Physics based” (19.9%), “Physics guided” (18.3%), “Physics infused” (8.8%), and
+    “Physics aware (5.9%)”.
+
+
+    The heterogeneity of those terms can pose a major obstacle to research on this
+    topic as well as its wide application in practice. Therefore, in this Subsection,
+    we seek to clarify the similarities and differences between the existing terminologies.
+
+
+    Fig. 6 presents the main scope of each terminology, and it can be summarized as
+    follows:
+
+
+    +   1. “Physics infused” aims to discover and incorporate physics property constraints
+    in the data preprocessing [54,160], leveraging physics-derived parameters and
+    relations to enhance the performance of ML models, especially in sparse data scenarios
+    [161].
+
+
+    # Table 1 Summary of the existing terminologies relating PIML in PHM.
+
+
+    | Terminology | References | Total number |
+
+    |---|---|---|
+
+    | Physics infused | [27,38-48] | 12 |
+
+    | Physics based | [10,14,32,49-71] | 26 |
+
+    | Physics guided | [72-94] | 23 |
+
+    | Physics aware | [95-102] | 8 |
+
+    | Physics-informed | [20,21,37,81,103-109,109-117,117-123,123-159] | 64 |'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/3ec5662c0c5150f5b95af65046cb9cd4_5_0.png)
+
+
+    Fig. 6. Different terminologies'' focus.
+
+
+    +   2. “Physics based” focuses on the integration of physics models or constraints
+    in the model-data hybrid framework [68,162], incorporating physical principles
+    in feature engineering, system modeling, and constraint-based approaches [101].
+
+
+    +   3. “Physics aware” emphasizes perceiving the intrinsic behavior and structural
+    features of the system [95], aligning the ML algorithm structure or interaction
+    structure with the physical system to achieve consistency in physics.
+
+
+    +   4. “Physics guided” expands the focus of “Physics aware”on visually representing
+    degradation states or using physics knowledge to guide the data processing [79,163],
+    the design of ML structures, algorithmic weights and biases [92], or empirical
+    loss functions [89].
+
+
+    +   5. “Physics-informed” refers to the broadest framework [164] that covers the
+    entire machine learning process, incorporating physics knowledge in various aspects
+    along the machine learning pipelines.
+
+
+    Therefore, in this review, the term “PIML” (Physics-informed Machine Learning)
+    is chosen as the discussed terminology to encompass the integration of physics
+    knowledge within machine learning approaches.
+
+
+    # 2.3.2. Application areas, main motivations, and methods’ evaluation metrics
+
+
+    Fig. 7 presents the distribution of application areas and data sources of the
+    studies on PIML in PHM. From Fig. 7 (a), one can see that most of the current
+    PIML studies in PHM focus on materials damage (41.2%) because there already exists
+    in this area numerous studies in mathematical and physical modeling of material
+    dynamic behaviors. These studies provide a solid foundation for the rapid development
+    of PIML models. Other applications such as aviation structure and equipment (20.0%),
+    production equipment (13.0%), bearing and gearbox (15.0%), and power grid (9%)
+    also attract more attention from the research community in recent years. Besides,
+    considering data sources Fig. 7 (b), we find that most data sources for PIML studies
+    come from simulation (30%). Also, the most used benchmark-marking datasets are
+    Turbo engine simulation dataset (C-MAPSS and AGTF30) and battery dataset (Oxford
+    and NASA). The studies of PIML models for real systems are limited to small experimental
+    platforms (16%). Those observations can be explained by the lack of exploitable
+    physics-based knowledge of real systems that are usually difficult to model. Fig.
+    8 shows the number of publications concerning PIML in PHM per year. It highlights
+    an increasing interest of the research community in this topic. One can see that
+    the number of publications per year significantly increased after 2020. The research
+    in materials, bearings, gears, aerospace structures, and power systems has garnered
+    significant attention.
+
+
+    Fig. 9 presents statistical results of relevant research with respect to data
+    quality. One can see that a large proportion of PIML
+
+
+    ![](img/3ec5662c0c5150f5b95af65046cb9cd4_5_1.png)
+
+
+    Fig. 7. Statistical results of main application areas and data sources of PIML
+    in PHM.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: "![](img/3ec5662c0c5150f5b95af65046cb9cd4_6_0.png)\n\nFig. 8. Overview on applications\
+    \ of PIML in PHM.\n\nresearch focuses on solving the PHM tasks in the presence\
+    \ of sparse (26%) or noisy data (38%). This remark highlights the relevance of\
+    \ the PIML over the purely data-driven models when it comes to such data quality\
+    \ issues. Table 2 lists the metrics used in the literature to train and evaluate\
+    \ the performance of PIML methods. It also shows the specific PHM tasks to which\
+    \ these metrics correspond, as well as the types of monitoring measurements.\n\
+    \nFrom Table 2, we can derive the following remarks:\n\n+   1. This table summarizes\
+    \ the training and testing metrics used in various PHM tasks for evaluating PIML\
+    \ models. Metrics such as Mean Square Error (MSE), Mean Absolute Error (MAE),\
+    \ Precision, Recall, F1-score, and others are employed to assess the performance\
+    \ of these models in condition monitoring, fault diagnostics, Remaining Useful\
+    \ Life (RUL) prediction, and degradation prediction tasks. MSE, MAE and RMSE are\
+    \ the most commonly used training metrics in the collected literature, accounting\
+    \ for 35.7%, 20.0% and 10% respectively.\n+   \n+   2. In paper [76], the metric\
+    \ (binary cross-entropy), commonly employed for classification, is used for degradation\
+    \ prediction. This is because the prediction of degradation states is transformed\
+    \ into a classification of degradation levels.\n+   \n+   3. One important aspect\
+    \ worth discussing is the embedding knowledge related to PIML models. In most\
+    \ studies, the choice of which type of knowledge to embed tends to be more based\
+    \ on subjective intentions. In practice, the knowledge embedded is strongly related\
+    \ to the monitoring signals used, e.g., the relationship between strain signals\
+    \ and deformation and damage growth, the relationship between temperature and\
+    \ fatigue, the relationship between vibration and modalities, so collecting knowledge\
+    \ in this area from the available monitoring signals for use in informed machine\
+    \ learning would be a good place to start.\n+   \n+   4. Table 2 also outlines\
+    \ the specific information about the corresponding monitoring signals utilized\
+    \ in each task, such as displacement, voltage, vibration, temperature, stress,\
+    \ current, and more. The vast majority of studies (94.3%) focuses on processing\
+    \ time-series or one-dimensional monitoring signals, with only 5.7% of studies\
+    \ involving two-dimensional image signals.\n+   \n+   5. The applications of PIML\
+    \ are mainly in the field of structures. The majority of processed signals in\
+    \ these applications are derived from vibration (25.7%) and stress (27.1%). In\
+    \ addition, certain non-destructive detection measurement methods, such as guided\
+    \ wave or acoustic emissions, are also utilized. Upon examining Table 2, one can\
+    \ see that a wide array of metrics and monitoring signals are employed across\
+    \ various PIML studies. This diversity reflects the intricate and multidimensional\
+    \ nature of PHM tasks, highlighting the necessity for tailored approaches that\
+    \ align with specific applications and system characteristics. Gaining an\n\n\
+    ![](img/3ec5662c0c5150f5b95af65046cb9cd4_6_1.png)\n\nFig. 9. Statistical results\
+    \ of relevant research on data quality problem."
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Table 2 Summary of the training, testing metrics and monitoring signals for
+    PIML according to PHM tasks.
+
+
+    | Ref. | Train metric | Test metric | PHM tasks | Signals |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | [161] | MSE | MSE | Condition monitoring | Displacement and voltage |
+
+    | [124,131] | MSE | MSE | Condition monitoring | Vibration |
+
+    | [165] | MSE | MSE | Condition monitoring | Currents, voltages and time measurements
+    |
+
+    | [106] | MAE, MSE, RMSE | Precision, recall, F1-score | Condition monitoring
+    & Fault diagnostic | Vibration, acoustic, image, temperature |
+
+    | [53,74,151] | MSE | MSE | Condition monitoring & Fault diagnostic | Stress |
+
+    | [126,132, 166] | MAE, Cross-entropy loss | Precision, recall, f-k value, accuracy,
+    macro F1, and G-mean | Condition monitoring & Fault diagnostic | Power, voltages,
+    current |
+
+    | [13] | Customized design loss | RMSE | Condition monitoring & Fault diagnostic
+    | Temperature, pressure, vibration, and air flow |
+
+    | [167,168] | Cross-entropy | Relative percentage error | Condition monitoring
+    & Fault diagnostic | Vibration |
+
+    | [169] | MAE | Confusion matrix | Fault diagnostic | Temperature |
+
+    | [170] | Maximum cross entropy | MAE | Fault diagnostic | Vibration |
+
+    | [171,172] | Binary cross-entropy | Categorical cross-entropy | Fault diagnostic
+    | Vibration |
+
+    | [173] | MAE, similarity distance | Precision, recall, f-measure, confusion matrix
+    | Fault diagnostic | Temperature, pressure, and fuel coefficient |
+
+    | [14] | Customized design metrics | Test false positive rate, MAE. | Fault diagnostic
+    | Vibration, acoustic signal, and temperature |
+
+    | [6] | MAE | Confusion matrix, recall, precision | Fault diagnostic | Vibration
+    |
+
+    | [50] | MSE | MSE, Pearson correlation coefficients test | Fault diagnostic |
+    Vibration |
+
+    | [112,146] | Cross-entropy loss | Confusion matrix | Fault diagnostic | Vibration,
+    strain, torque, acoustic emission |
+
+    | [130] | MSE | MAE | Fault diagnostic | Magnetic flux leakage image, stress |
+
+    | [117] | Customized loss | Confusion matrix | Fault diagnostic | Far-field loads,
+    stress ratio and a corrosivity index |
+
+    | [129,133] | MSE | MAE | Fault diagnostic | Stress |
+
+    | [81] | MSE, Kernel norm | Relative percentage error | Fault diagnostic | Ultrasonic
+    signal |
+
+    | [27] | MSE | MSE | Fault diagnostic | Stress, temperature |
+
+    | [143] | Cross-entropy loss | MAE | Fault diagnostic | Vibration |
+
+    | [150] | Customized loss | Customized metric | Fault diagnostic | Wave data |
+
+    | [174] | Cross-entropy | Confusion matrix | Fault diagnostic | Stress |
+
+    | [175] | Softmax loss test | Relative percentage error, | Fault diagnostic |
+    Guided wave signal |
+
+    | [37] | MSE | MSE, Pearson correlation coefficients test | Fault diagnostic |
+    Acoustic signal |
+
+    | [84] | Cross-entropy, MSE, Softmax loss | MAE | Fault diagnostic | Mode shapes
+    signal |
+
+    | [154] | Customized loss | F1 score | Fault diagnostic | Proposed access location,
+    error locations |
+
+    | [176] | MAE | Relative percentage rate | Fault diagnostic | Stress |
+
+    | [70] | Cross-entropy loss function | MAE | Fault diagnostic & RUL prediction
+    | Phase field images |
+
+    | [36] | MAE | α_λdistribution accuracy | RUL prediction | Vibration |
+
+    | [51] | MAE | One σ tolerance interval | RUL prediction | Voltage and current
+    |
+
+    | [16,54,155, 177,178] | RMSE | RMSE | RUL prediction | Temperature, pressure,
+    flow |
+
+    | [55,110] | Relative error rate | Relative error rate | RUL prediction | Stress
+    or strain |
+
+    | [113,179] | MSE | RMSE | RUL prediction | Current, voltage, temperature |
+
+    | [180] | F.norm | RMSE | RUL prediction | Capacities and voltage |
+
+    | [123] | MSE | RMSE | RUL prediction | Vibration |
+
+    | [181] | MSE | MSE, MAE, R2 | RUL prediction | Vibration |
+
+    | [182] | Similarity distance | Prognostic horizon, α_λ distribution, CRA, convergence,
+    normalized RMSE | RUL prediction & Degradation prediction | Stress, crack length,
+    pressure |
+
+    | [78,123] | MAE, MSE | MAE, RMSE | Degradation prediction | Forces, vibrations
+    and acoustic signal |
+
+    | [183] | RMSE | MAE | Degradation prediction | Vibration |
+
+    | [184] | MSE | RMSE | Degradation prediction | Stress |
+
+    | [77,114] | MAE | MSE, test point-wise errors, relative error | Degradation prediction
+    | Stress |
+
+    | [76] | Binary cross-entropy | F1-score | Degradation prediction | Cutting speed,
+    temperature |
+
+    | [115,118, 185] | MSE | MAPE | Degradation prediction | Stress or image |
+
+    | [116] | MSE | RMSE | Degradation prediction | Stress, viscosity, wind speed,
+    and temperature |
+
+    | [43] | NMSE | NMAE | Degradation prediction | Spindle motor current |'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '| Ref. | Train metric | Test metric | PHM tasks | Signals |
+
+    |---|---|---|---|---|
+
+    | [186] | MSE | MSE | Degradation prediction | Far-field stress |
+
+    | [187] | Discretization error | MAE | Degradation prediction | Stress |
+
+    | [188] | RMSE | MRSE | Degradation prediction | Rise time, displacement |
+
+    | [93] | Negative log likelihood | Sensitivity analysis, MAE, and absolute error
+    variance | Degradation prediction | Stress, temperature |
+
+
+    understanding of the different combinations of physics knowledge, metrics, and
+    signals utilized can serve as a valuable guide for researchers and practitioners
+    when selecting appropriate evaluation measures and sensor inputs for their respective
+    PHM applications.
+
+
+    # 3. Synthetic review of PIML studies in PHM
+
+
+    The physics involved in research subjects in the field of PHM are often diverse
+    and can be expressed in different forms such as algebraic equations, differential
+    equations, simulation results, logic rules, and probabilistic relations along
+    with limited monitoring
+
+
+    | Authors | Topics of interest | Main Challenges | Taxonomy |
+
+    |---|---|---|---|
+
+    | Rai, Rahul, and Chandan K. Sahu. [72] | • Cyber-physical system''s dynamic behavior
+    modeling | • Discretization approximation of the continuous system behavior in
+    a chaotic environment.
+
+    • Scenario-oriented PIML hybrid framework.
+
+    • Efficient extraction of causal and model parameter relationships in big data.
+    | • Physics-based data pre-processing.
+
+    • Physics-guided ML algorithm structure design.
+
+    • Physics-based ML regularization item. |
+
+    | Willard, J., Jia, X., Xu, S., Steinbach, M. [32] | • Engineering and environmental
+    systems modeling.
+
+    • Model solving methods. | • Embedding incomplete physics knowledge.
+
+    • Keeping physical consistency in data mining.
+
+    • Sparse data and uncertainty quantitative information.
+
+    • Designing prior informed deep learning framework.
+
+    • ML training data scarcity.
+
+    • Keeping physical consistency.
+
+    • ML black-box nature explanation.
+
+    • Training data scarcity.
+
+    • Keeping physical consistency. | • Physics-based regularization item in ML algorithm.
+
+    • Physics-guided ML initialization.
+
+    • Physics-informed ML algorithm architecture design.
+
+    • Physics-informed Feature engineering.
+
+    • Physics-informed NN structure.
+
+    • Physics-informed loss function.
+
+    • Parallel/Series physics-ML combination structure.
+
+    • Physics-based regularization item in ML objective function.
+
+    • Physics-based data pre-processing.
+
+    • Physics-guided ML algorithm architecture design.
+
+    • Physics-based regularization item in ML algorithm. |
+
+    | Kim, S. W., Kim, I., Lee, J., Lee, S. [189] | • Physics-informed deep learning
+    in dynamical systems behavior modeling.
+
+    • PHM is mentioned | | |
+
+    | Jan Hagendorfer, Elias. [190] | Condition monitoring | | |
+
+    | Finegan, D. P., Zhu, J., Feng, et al. [71] | Battery cell state prediction.
+    | Keeping physical consistency. | • Physics-based data pre-processing.
+
+    • Physics-guided ML algorithm architecture design.
+
+    • Physics-based regularization item in ML algorithm. |
+
+    | Jianjing Zhang., Robert X. Gao. [191] | • Data curation and model interpretation
+    for smart manufacturing.
+
+    • PHM is mentioned. | • Non-interpretable prediction logic in deep learning.
+
+    • Error or imbalance training data.
+
+    • Data and data labels scarcity. | • Physical model bias compensation and unknown
+    parameters estimation via deep learning.
+
+    • Involving Physics-constraints into deep learning training.
+
+    • Physics-informed architecture
+
+    • Physics-informed loss function |
+
+    | Xu, Yanwen and Kohtz, et al. [29] | • Reliability analysis and risk assessment.
+
+    • Uncertainty quantification.
+
+    • PHM is mentioned. | • Scenario-oriented PIML hybrid framework and its computational
+    efficiency.
+
+    • Incompleteness of physics knowledge and limited representatives of the training
+    dataset.
+
+    • The need for accurate and reliable data to create an accurate digital twin model.
+
+    • Integrating data from different sources and formats.
+
+    • Selecting the appropriate modeling technique for a given physical system.
+
+    • Scaling up the digital twin model to larger and more complex systems.
+
+    • Validating the digital twin model against the physical system it represents.
+    | • Modifying the loss function.
+
+    • Generating synthetic data.
+
+    • Pre-training on physics-based data.
+
+    • Correcting models with unmodeled physics.
+
+    • Correcting models with prediction residuals.
+
+    • Learning to predict inputs. |
+
+    | Thelen Adam, Zhang Xiaoge and Fink Olga, et al., [192,193] | • Physical system
+    modeling | | |'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'data. Therefore, it is necessary to provide a synthetic review of PIML studies
+    in PHM from both perspectives: I) **Expression forms of Knowledge** and II) **Knowledge
+    Informed Methods**. Expression forms of Knowledge in Physics-Informed Machine
+    Learning refers to the following knowledge expression forms:
+
+
+    +   1. Mathematical Equations: Knowledge is expressed through the formulation
+    of mathematical equations that govern the underlying physics of the problem. These
+    equations represent fundamental principles, physical laws, and constraints relevant
+    to the problem domain.
+
+    +   2. Conservation Laws: Knowledge about conservation principles such as mass,
+    momentum, and energy conservation can be incorporated into physics-informed machine
+    learning models. These laws provide important constraints that guide the learning
+    process.
+
+    +   3. Differential Equations: Physics problems often involve differential equations
+    that describe the relationships between variables. Expressing knowledge in the
+    form of differential equations helps to enforce the physical behavior and relationships
+    in the machine learning models.
+
+    +   4. Constitutive Relations: Knowledge about the material properties, constitutive
+    equations, or parameterization specific to the problem domain can be incorporated.
+    These relations provide insights into how different variables interact and influence
+    each other.
+
+
+    The Knowledge Informed Methods are considered as the different embedding ways
+    of the usage of different knowledge expressions, the details are discussed in
+    Subsection 3.2. Analyzing the knowledge expression forms involves examining how
+    domain knowledge, physical laws, equations and constraints are integrated into
+    machine learning algorithms, providing insights into the underlying physics-ML
+    convertibility. Knowledge-informed ways more specifically seek to leverage domain
+    knowledge in designing and training machine learning models. However, it is crucial
+    to also consider the broader perspective of analyzing knowledge expression forms,
+    which is often overlooked in existing reviews. By analyzing both knowledge expression
+    forms and knowledge-informed ways, researchers can gain a comprehensive understanding
+    of the strengths and limitations of PIML approaches in PHM. This dual perspective
+    enables a more rigorous assessment of methods and facilitates improvements in
+    the design and implementation of physics-informed machine learning models.
+
+
+    # 3.1. Related review papers
+
+
+    To our knowledge, there is no meticulous review of PIML studies in the field of
+    PHM but there are related works on the PIML topic. These works provide additional
+    information that help getting an overview of the PIML taxonomy as well as understanding
+    more about the research challenges on this topic.
+
+
+    The existing reviews, shown in Table 3, argued that PIML is a promising solution
+    to address the ML issues relating to physics consistency, data scarcity, and model
+    interpretability, which are also valuable to PHM. They share a similar taxonomic
+    view of PIML, describing that physics knowledge can be incorporated into data
+    pre-processing, ML algorithm design, and regularization of the loss function.
+
+
+    We greatly acknowledge the valuable perspectives and contributions presented in
+    the existing reviews. However, it is important to note that these reviews tend
+    to have specific disciplinary focuses, which may limit their comprehensive coverage
+    of all critical tasks in PHM. Furthermore, while these reviews address the embedding
+    of physics knowledge into ML approaches, they often lack a holistic analytical
+    perspective throughout the entire ML process. Although they provide insights into
+    how to incorporate physics knowledge, they do not fully explore the various sources
+    of knowledge that can be utilized. Moreover, the existing reviews predominantly
+    emphasize applications related to specific NN architectures, such as PINN, rather
+    than embracing the broader framework of Physics-Informed Machine Learning (PIML).
+    A recent study [29] provides a qualitative analysis and a comprehensive review
+    of the role, taxonomy, and cases of PIML in the field of reliability [29]. PHM
+    is part of the topics in the application Subsection. Our work complements their
+    findings by providing a comprehensive quantitative analysis from the standpoint
+    of knowledge in PHM, combining the complete qualitative analysis on the most advanced
+    researches. Additionally, we not only review taxonomic and informed methodology
+    but also examine the various forms and sources of informative knowledge. Besides,
+    the studies in [192,193] provide a systematic review of hybrid modeling in digital
+    twins and briefly discuss the significance of PIML technology. However, these
+    studies primarily focus on the analysis of modeling system responses and dynamic
+    behaviors in the context of digital twins, and only partly include the qualitative
+    and quantitative aspects of PIML in the specific context of PHM. Our paper, on
+    the other hand, is specifically dedicated to PHM delving much deeper into these
+    aspects, while of course not being as exhaustive in terms of the other aspects
+    of digital twins. Considering the limitations of the existing papers, this review
+    aims to address the gaps in the state of the art by providing a more thorough
+    and analytical perspective on PIML methods within the realm of PHM. By integrating
+    both qualitative and quantitative approaches, our research endeavors to contribute
+    to a holistic comprehension of PHM and its practical applications. Furthermore,
+    it aims to elucidate a broader understanding of the entire machine learning process,
+    encompassing all critical tasks involved in the integration of physics-based knowledge.
+
+
+    In summary, this paper aims to bridge these gaps by offering a more comprehensive
+    and analytical view of PIML methods within the context of PHM. combined with an
+    extensive qualitative analysis on the most advanced researches, our work endeavors
+    to contribute to a more holistic understanding of PHM and its applications. It
+    clarifies a broader understanding of the entire ML process, encompassing all critical
+    tasks involved in the integration of physics knowledge.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# ## 3.2. Taxonomy of PIML in PHM
+
+
+    Depending on the role of physics knowledge and its informed position in the hybrid
+    model, we propose to classify PIML methods into three categories. The first category
+    uses physics knowledge to guide the construction of the input space, i.e., “Physics-informed
+    inputspace”. The second category named “Physics-embedded algorithm structure”
+    incorporates physics knowledge into the model architecture in machine learning
+    process. The third category embeds Physics-constraints on the ML objective function
+    to conduct “Physics-constrained learning”. These three categories correspond to
+    three typical solutions to ML problems: input data optimization, model architecture
+    optimization, and objective function optimization. Based on the combined roles
+    of physics knowledge in different parts of the ML pipeline, we have summarized
+    the 8 types of informed patterns, including “Simulator”, “Gauge”, “Extractor”,
+    “Operator”, “Structure blueprint”, “Initializer”, “Consistency check”, and “Conflict
+    check”, as shown in Fig. 10, which covers all aspects of ML data flow. Their corresponding
+    implementations, and the related ML technical frameworks for achieving these implementations
+    are also summarized. It can be seen that NN are the most widely used modeling
+    tool. To assist in the understanding of the methodology, the same knowledge with
+    different informed ways are shown in https://github.com/pimlphm/Physics-informed-machine-learning-based-on-TCN.
+
+
+    # ### 3.2.1. Physics-informed input space
+
+
+    Data preparation generally occupies the most workload in PHM [194]. Regarding
+    the category “Physics-informed input space”, PIML seeks to gain physics information
+    in the ML input space, distilling the multi-sources and heterogeneous monitoring
+    data [45,46] by assisting data augmentation, feature transformation, feature selection,
+    dimensionality reduction [155], and information fusion [40]. “Physics-informed
+    input space” can be seen as an extension of the traditional “feature engineering”
+    or “simulation-based data augmentation” processes by using physics knowledge to
+    drive data processing and augmentation, including three paradigms: “Simulator”,
+    “Gauge”, and “Extractor”, which are shown in Fig. 11. The technologies “Simulator”
+    and “Gauge”, which occur in the “Data preparation” step, aim to generate and transform
+    data. Meanwhile, the “Extractor” in the “Data preprocessing” step is dedicated
+    to extracting useful features. A brief summary of these three technologies in
+    the existing works is shown in Table 4.
+
+
+    # #### Physics-informed simulators
+
+
+    The works in this group focus on the construction of simulators that capture the
+    physical behaviors of the studied system to generate data for training ML models.
+    The data generated by those simulators provides richer information that covers
+    different health states of the system and reduce the knowledge blindness of ML
+    and thus enhance ML performance. To construct the simulator, various models with
+    different degrees of simulation can be exploited such as structure-based and process-based
+    digital twin models [192,193],engine performance models, or components’ finite
+    element models. The challenge when implementing a physics-informed simulator is
+    to find a balance between simulation accuracy and speed. Its basic paradigms is
+    shown in Fig. 12.
+
+
+    Traditionally, to construct a physics-informed simulator, the numerical model’s
+    output is used as the input of the ML model. However, high-fidelity simulations
+    are computationally costly. Therefore, most research has focused on the use of
+    a reduced order model (ROM) or a surrogate model to lower the simulation cost.
+    The former are the simplifications of huge scale models for establishing an approximate
+    description of multidimensional physical processes in low dimensions. The combination
+    of ROM and virtual sensors can create dynamic model calibration [58], which is
+    actually the basis of many simulation software (e.g., Ansys and Modelica). Digital
+    twin-based physics-informed input models in the collected literature also augment
+    the input space of ML by simulating certain types of physical signals based on
+    a ROM of the system’s specific behavior. Besides, surrogate models compute the
+    response of the original high-fidelity model at a chosen finite number of points.
+    In fact, it is a proxy for the real system at finite operating states [202]. In
+    existing PIML methods, building ROMs usually reduces the amount of the unquantified
+    variables in the model by adding constraints. This increases the preconditions
+    for device operation and specifies the state space involved, which relies on the
+    user’s understanding of a specific failure. In contrast, surrogate models in existing
+    PIML studies tend to complete the modeling by fitting a ML model to the relationship
+    between operating conditions and system response under finite operating conditions.
+    For example, in the simulation of the meshing vibration behavior of a gear train,
+    the ROM-based PIML simulator specifies the operating conditions of the gear train
+    (load, speed, etc.). It uses a simplified physical model (e.g. a time-varying
+    stiffness spring-damping model for meshing gear pairs) to represent the components
+    and a simplified data flow connection to represent the shaft spring. It models
+    the system mass as a centralised inertia module, ignoring the non-linear coupling,
+    electromechanical coupling, and changes in dynamic states under different operating
+
+
+    ![](img/3ec5662c0c5150f5b95af65046cb9cd4_10_0.png)
+
+
+    **Fig. 10.** Taxonomy of existing PIML methods in PHM.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '![](img/3ec5662c0c5150f5b95af65046cb9cd4_11_0.png)
+
+
+    Fig. 11. Three ways to construct a physics-informed input space.
+
+
+    conditions. The effect of tooth wear and tooth breakage on the meshing stiffness
+    are the only factors to be considered. In contrast, the PIML simulator based on
+    the surrogate model uses a grey box model to fit the relationship among the excitation,
+    responses and the structural parameters. It assumes that the corresponding mappings
+    of the grey box model are constant and applicable in different working state spaces,
+    thus further increasing the number of samples.
+
+
+    # Physics-informed gauges
+
+
+    In some specific case studies, e.g., complex structural systems, it is inevitable
+    to use simplified physical models for the construction of “Simulators”. However,
+    this simplification might lead to significant deviations in model behavior as
+    well as in estimated values compared to the true values of the system [80]. Then,
+    model updates can not inherently correct modeling errors. To overcome this issue,
+    data transferring is an alternative solution for enhancing the data space. In
+    this light, some studies focus on applying physics knowledge as a “Gauge” to evaluate
+    the similarity between the source and target database. This technique migrates
+    feature knowledge from the source domain to the target domain by designing a physically
+    based transfer criterion between them. It allows enhancing the ML robustness and
+    improving the efficiency and accuracy of ML models.
+
+
+    The two basic ways to implement “Gauge” are shown in Fig. 13. Its principle consists
+    of finding the invariant variable or invariant relationship between the source
+    and target domains, such as feature symmetry, conservation, transformation invariance,
+    and monotonicity [139,203]. The source domain, which has a large amount of data
+    and information, is then selectively transferred to the target domain according
+    to physical similarity criteria [159].
+
+
+    # Physics-informed extractor
+
+
+    In addition to data extraction, data processing is another crucial task that directly
+    affects the performance of ML models. To ensure that the input space contains
+    as many fault-related features as possible, it is necessary to create a physics-informed
+    extractor to guide the data preprocessing according to physics knowledge. For
+    example, the proposed physics-informed extractors allow selecting suitable domain
+    transformation methods [204] to get the relevant aggregated features [155], or
+    fusing heterogeneous information from multiple sources [40,65]. In [88], the taut
+    string model equation standardizes the principal component analysis method for
+    extracting the specified modal frequency bands of cable vibration. The study in
+    [79] develops a physics-guided ML model to conduct the feature extraction process
+    that can generate particular features directly reflecting the performance of electric
+    vehicles.
+
+
+    Following feature extraction, the ML module incorporates an embedding component
+    that functions as a set of sub-feature extractors. Subsequently, information fusion
+    takes place, with a primary focus on merging physical health indicators with virtual
+    health indicators. The former pertains to fault physics and typically carries
+    significant interpretability in terms of the indicators. For the latter, there
+    are two implementations in existing PIML studies [205]:
+
+
+    +   - Information fusion from multiple physics domains to obtain “sensory data”
+    with less redundancy and representing all original information. For example, multiple
+    regression [132], elevated space projection [206], and other supervised and unsupervised
+    learning methods are used to perform signal-level data fusion and feature-level
+    data fusion [42].
+
+
+    +   - Cross-physics domain relations fusion through physics relationships to get
+    “perceptual data”, where the physics relationships of the various parts of the
+    data are prominent [207,208], as shown in Fig. 14. For example, in crack growth
+    prediction, information on the structural response, such as displacement and phase
+    fields, obtained by the Newton-Raphson solution, are preserved in the form of
+    images of the current state of the crack to build spatial structural knowledge
+    [70].
+
+
+    # 3.2.2. Physics-embedded algorithm structure
+
+
+    Regarding “Physics-embedded algorithm structure”, PIML seeks to make the traditional
+    physics-agnostic ML become physics aware so that the governing processes are added
+    to the design of ML algorithm structures and the parameters searching process.
+    It is prone to integrate the “Hard Constraint Projections (HCP)” [90] with ML,
+    including the three following paradigms: “Basic operator”, “ML Structure blueprint”,
+    and “Parameter initializer”, as shown in Fig. 15.
+
+
+    The “Basic Operato” is responsible for enforcing physically resolved relationships
+    in machine learning processing. On the other hand, the “ML Structure Blueprint”
+    is dedicated to designing ML modules or inter-layer connections based on physically
+    derived relationships, thereby endowing sparsity. These components are implemented
+    in the algorithm’s structural design. Additionally, the “Parameter Initializer”
+    focuses on identifying the ML parameters. A brief summary of these three approaches
+    used in the existing literature is shown in Table 5.
+
+
+    # Physics-informed operator'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Table 4 Summary of physics-informed input space studies in PHM.
+
+
+    | Ref. | Application | Knowledge source | Informed | ML framework | PHM tasks
+    |
+
+    |---|---|---|---|---|---|
+
+    | [195, 196] | Aeronautical structure | Component-based digital twin | Simulator
+    | Classification tree and SVM | Fault diagnostic |
+
+    | [170] | Triplex pump | Component-based digital twin | Simulator | Auto-encoder
+    transfer learning | Fault diagnostic |
+
+    | [58] | Oil productionline | Production-based digital twin model | Simulator
+    | Autoencoder & LSTM | Condition monitoring |
+
+    | [197] | Rotor | A priori evaluation of feature space separability of loads |
+    Simulator | Hamiltonian autoencoder NN, PCA, & random forest | Fault diagnostic
+    |
+
+    | [188] | Electro-Hydrostatic Actuator degradation | Physical degradation model
+    | Simulator | LSTM | Degradation prediction |
+
+    | [13] | Tubofan engine | Engine air path performance model | Simulator | DNN
+    | RUL prediction |
+
+    | [53,55] | Composite structure | Bonded joints fatigue FE or lattice surrogate
+    model | Simulator | FCN | Fatigue prediction |
+
+    | [198] | Bearing | Time domain statistical feature generation model | Simulator
+    | SVM | Fault diagnostic |
+
+    | [174] | Aircraft composite structure | A numerical solutions of Lamb waves |
+    Simulator | CNN | Fault diagnostic |
+
+    | [144] | Industrial production | Time-series derivative weighting for perturbation
+    values | Simulator | VAE | Fault diagnostic |
+
+    | [199] | Building | Invariable characteristics of building structure | Gauge
+    | Physics-informed multi-source domain adversarial networks | Fault diagnostic
+    |
+
+    | [59] | Additive manufacturing monitoring | Geometry invariant in thermal history
+    features and trend | Gauge | Tree-based regression | Condition monitoring |
+
+    | [171] | Gearbox | Implicit physical association between unlabeled and labeled
+    data | Gauge | Deep convolutional generative adversarial network | Fault diagnostic
+    |
+
+    | [200] | Gearbox | Vibration inherent cyclostationary characteristics | Extractor
+    | Autoencoder | Fault diagnostic |
+
+    | [183] | Bandsaw | Vibration modal analysis and finite element analysis | Extractor
+    | PINN and DCNN | Fault diagnostic |
+
+    | [167] | Gearbox | Health-adaptive physics time-scale representation embeded
+    input module | Extractor | CNN | Fault diagnostic |
+
+    | [201] | Electro-mechanical load | Feature space load separability prior evaluating
+    | Extractor | SVM & DNN | Fault diagnostic |
+
+    | [169] | Air handling units | Importance feature selection based on the semantics
+    of the physical model | Extractor | issenstein generative adversarial network
+    | Fault diagnostic |'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '![](img/3ec5662c0c5150f5b95af65046cb9cd4_13_0.png)
+
+
+    Fig. 12. Three ways to construct a simulator for physics-informed input space.
+
+
+    ![](img/3ec5662c0c5150f5b95af65046cb9cd4_13_1.png)
+
+
+    Fig. 13. Two ways to construct a gauge for physics similarity metric-informed
+    learning.
+
+
+    ![](img/3ec5662c0c5150f5b95af65046cb9cd4_13_2.png)
+
+
+    Fig. 14. PIML based information fusion: Extending and distilling multiple heterogeneous
+    sensory signals into perceptual signal.
+
+
+    The principle of the “Operator” is to use physics-knowledge of failure mechanism
+    to build ML modules that allow better capturing input-output relationships. To
+    do this, there are two ways proposed by the existing studies: 1) Replacing ML
+    modules with physical input-output models, 2) Custom layer and neuron to express
+    physics equation, as shown in Fig. 16. The first approach, replacing ML modules
+    with physical input-output models, performs a physically meaningful transformation
+    of the raw data into health indicators required by the subsequent ML modules.
+    Then through integrating ML module for fusion of information across physics models
+    and ML modules. For example, in the papers [172,213], the customized wavelet transformation
+    layers are designed to guide the feature extraction and health indicator construction
+    tasks by assigning the appropriate coefficients and weights for NN layers. The
+    overall structure includes both series and parallel fusion methods for the output
+    from the physical embedding part and the output from the ML module processing
+    [116]. The serial architecture selects the best method for each data characterization
+    and decision-making step. Compatibility between successive methods is crucial
+    for sequential re-evaluation of previous outputs, reducing'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '![](img/3ec5662c0c5150f5b95af65046cb9cd4_14_0.png)
+
+
+    Fig. 15. Three ways to construct a physics-embedded algorithm structure. The different
+    coloured lines represent different implementations, earthy yellow represents embedding
+    physical knowledge into a local module of ML such as a neuron, purple line is
+    designing inter-module connections such as layer connections based on physical
+    knowledge, black represents initialising ML parameters. (For interpretation of
+    the references to colour in this figure legend, the reader is referred to the
+    web version of this article.)
+
+
+    # Table 5 Summary of the studies on physics-embedded algorithm structure in PHM.
+
+
+    | Ref. | Application | Knowledge source | Informed | ML framework | PHM tasks
+    |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | [182] | Crack growth and filter clogging | Paris laws for fatigue crack and
+    pressure drop analog formula | Operator | ANN | RUL prediction |
+
+    | [165] | Motor bar broken | Fault frequency and square envelope threshold | Operator
+    | CNN | Fault diagnostic |
+
+    | [209] | Drill pipe | Embedding hydraulic coefficient relationship between two
+    DNNs | Operator | DNN | |
+
+    | [113] | Lithium-ion battery battery | Reduced-order model based on Nernst and
+    Butler-Volmer equations | Operator | RNN | RUL prediction |
+
+    | [43] | Tool wear | Sipos empirical wear-time | Operator | Adaptive neuro-fuzzy
+    inference system | Degradation prediction |
+
+    | [81,130] | Material defect | Topology of wave-guided electromagnetic acoustic
+    sensor systems | Operator | Siamese CNN | Fault diagnostic |
+
+    | [149] | Bearing fatigue | Paris-laws based corrosion | Operator | NN | |
+
+    | [114,129] | Structure crack | Damage differential equations & Dirichlet boundary
+    based growth laws | Structure blueprint | DeepONet | Degradation prediction |
+
+    | [37,210] | Crack identification | Differential equation for crack extension
+    | Structure blueprint | Stacked auto-encoder | Degradation prediction |
+
+    | [115,121, 179, 186] | Aviation structure crack | Crack extension or vibration
+    anomaly models | Structure blueprint | RNN | Degradation prediction |
+
+    | [91,115, 120] | Structure fatigue | Eulerian integration for fatigue crack extension
+    | Structure blueprint | RNN or CNN | Degradation prediction |
+
+    | [113] | Batteries RUL prediction | Governing differential equations based on
+    measured capacity & voltage curves | Structure blueprint | RNN | RUL prediction
+    |
+
+    | [156,178] | Structure damage | Structural changes due to damages | Structure
+    blueprint | Stacked NODE | Fault diagnostic |
+
+    | [20,95,166, 211, 212] | Grid and Buses FD | Physics spatial or spectrum associativity
+    | Structure blueprint | Graph NN | Fault diagnostic |
+
+    | [154] | DRAM error | Spatial dependence of the DRAM | Initializer | SVM, NN,
+    Boosted Trees, Naive Bayes, Random forest | Fault diagnostic |
+
+    | [168] | Bearing | Interpretable weights based envelope spectrum | Initializer
+    | Supervised learning dichotomy | Fault diagnostic |
+
+    | [57] | Casting defect | One-dimensional heat transfer equation | Initializer
+    | Non-negative matrix factorization | Condition monitoring |
+
+    | [142] | Materials cracks/fractures | Geomechanical alteration index cluster
+    basis | Initializer | K-Means cluster | Fault diagnostic |
+
+    | [76] | Tool wear | Decision space parameterized by cutting speed and temperature
+    | Initializer | CNN | Degradation prediction |
+
+    | [149] | Power grids | Wind oscillation equations and grid equations | Initializer
+    | Gaussian Process Regression | Fault diagnostic |
+
+    | [187] | Offshore wind turbine | Degradation excess matrix | Initializer | Bayesian
+    network | Degradation prediction |
+
+
+    ambiguity and improving accuracy. However, accumulating errors from incomplete
+    physics information is a potential drawback. The parallel fusion structure combining
+    physics models and machine learning (ML) modules offers the advantage of leveraging
+    the strengths of both approaches simultaneously. It plays the role of compensators
+    in enhancing accuracy, robustness, and interpretability'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '![](img/3ec5662c0c5150f5b95af65046cb9cd4_15_0.png)
+
+
+    Fig. 16. Two ways for embedding physics knowledge in the form of operator.
+
+
+    while enabling a comprehensive understanding of complex systems’ degradation behavior
+    [179]. However, challenges include complexity, data requirements, compromised
+    interpretability, potential conflicts between models and algorithms, and the need
+    for expertise and resources in development and maintenance.
+
+
+    In the second approach of using ML modules to express physical functions, the
+    ML module acts as a forcing actuator to derive the physics model output and provide
+    additional physical information. This approach involves utilizing mathematical
+    approximations through the ML’s intrinsic functions. For instance, in the paper
+    [181], a linear summation of a NN is employed to represent the relationship between
+    vibration amplitude and rotational speed. The activation function and connections
+    between NN layers approximate the relation between features and RUL values. Trainable
+    weights, biases, and nonlinear activation functions represent the unknowns and
+    parameters in the formula.
+
+
+    # Physics-informed ML Structure blueprint
+
+
+    Compared to the “PIML operator”, “PIML Structure blueprint” is a physics aware
+    method which focuses more on guiding the building of data flow similarity between
+    ML and physics knowledge, including modeling the physical processes, measurement
+    processes, derivation processes, geometric structures, and so on, as shown in
+    Fig. 17.
+
+
+    Due to the fact that the essence of this class of methods lies in designing the
+    structure of machine learning, including module design and inter-module connections,
+    we propose to use “Structure blueprint” to represent physical reasoning processes
+    or physical structural relationships informed machine learning algorithm structure.
+    It aims to find topological similarities and the unit dependencies mappings from
+    the geometric structure, system behavior, or internal material interaction [101]
+    to ensure the physical priority of the reasoning process when training ML models.
+    The conjecture and the abstraction of the system behavior in PBMs are useful sources
+    to optimally guide the training process of ML. For example, the NN is designed
+    according to the topology and physical laws of an electric grid in [95]. The underlying
+    physical model governs the operation of the distribution network to sparse the
+    learning model’s structure where the pruning is done in a deterministic manner
+    during the training process [132]. As a result, load anomalies and grid damage
+    can be indicated by changes in the output of the network nodes. Besides, in reference
+    [102], the NN gradient models a potential energy function that is exploited to
+    represent the dependency of the interference between quad-copters and their distance.
+
+
+    Several special structures can be utilized to model physically derived relationships.
+    In Fig. 3.2.2, each step of a Runge-Kutta numerical integration process is represented
+    by a NN layer, and the integration path calculation is completed based on the
+    physical summation relation. The dynamic behavior changes, such as damage growth
+    in RNN [120], are expressed through a recursive prediction structure (see Fig.
+    18). Each formula within the recursive relationship for damage growth is represented
+    by a custom NN layer, and the inter-layer structure enables the realization of
+    the recursive relationship. In representing the derivation process in terms of
+    structure, much physics knowledge is further de-analyzed [50]. For example, in
+    the paper [37,156,178], the specific physical relationships are non-analytical.
+    The embedding of physics knowledge is accomplished by two NN sharing parameters
+    in a CODEC (Coder-Decoder) structure. The latter is a proxy for the linear second-order
+    partial differential equation for acoustic wave propagation, while the former
+    is used to approximate the solution of the model from the measurements to the
+    latter surrogate NN. In summary, “PIML Structure blueprint” defines ML reasoning
+    process as part of the physics derivation form where the ML modules retain their
+    original computational structure, but acts as a mapping of certain types of the
+    physics equations solving process by constraining the inter-module relationships.
+
+
+    # Physics-informed ML parameters initializers
+
+
+    Unlike the focus on both “PIML operator” and “PIML Structure blueprint”, the research
+    on “PIML parameters initializers” is more concerned with the selection and assignment
+    of ML parameters and hyper parameters. For example, the weight selection is implemented
+    based on physical energy minimum state completion in Markov random fields (MRF)
+    [154]. In [36], wavelet-based features of the multi-scale envelope spectrum are
+    fused by a statistical health index generating model, and the observation function
+    between the defect state and the fused features is assumed to be a linear fitting.
+    The empirical model for a spalling propagation based on the Paris formulation
+    is a predictive model for which the initial parameters are set as probability
+    distributions. Besides, the average value of the'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '![](img/3ec5662c0c5150f5b95af65046cb9cd4_16_0.png)
+
+
+    ![](img/3ec5662c0c5150f5b95af65046cb9cd4_16_1.png)
+
+
+    Fig. 17. Building PIMLs with similar derivation processes or structures to PBMs.
+
+
+    ![](img/3ec5662c0c5150f5b95af65046cb9cd4_16_2.png)
+
+
+    Fig. 18. Building PIMLs with similar derivation processes or structures to PBMs.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'one-dimensional heat transfer equation solution is used as the initial parameter
+    for the factorization of the non-negative matrix for casting defect monitoring
+    [57]. In summary, the initialization of ML parameters in these studies is usually
+    based on the physical model solution.
+
+
+    # 3.2.3. Physics-constrained learning
+
+
+    In contrast to the hard constraints of “Physics-embedded algorithm structure”,
+    PIML also includes soft constraints that enable ML to produce an approximate satisfaction
+    of a given set of physics through the design of the objective function. Its approximate
+    satisfaction can be introduced in the form of integration, differentiation, probability,
+    logic rules, and other forms of physics-based deviations. According to the relationship
+    between the informed physics objective function and the original ML objective
+    function, this paper groups “Physics-constrained learning” into two paradigms:
+    “consistency check”, and “conflict test”, which are shown in Fig. 19. The total
+    error of the PIML model includes a traditional ML prediction error (“Error1”)
+    and a physical consistency error (“Error2”). In general, the numerical best fit
+    to the available data (residual loss) and the consistent satisfaction of physics
+    principles (boundary loss) show discrepancies [147]. Designing an objective function
+    based on “consistency check”, or “conflict test” error is dedicated to the convergence
+    of ML results towards physical consistency. The related literature is summarized
+    in Table 6
+
+
+    From Table 6, one can see that physics knowledge is used directly in the ML target
+    design by modifying the target function in such a way as to influence the parameter
+    changes during the ML optimization-seeking learning process. For specific PIML
+    frameworks, the “consistency loss” strives to ensure that the ML output conforms
+    to the physical fact, while the “conflict loss” is built by the conflicts between
+    the ML output and the physical model output.
+
+
+    # Consistency loss design
+
+
+    In tool wear prediction [78], the empirical knowledge (that wear increase as the
+    number of cuts increases) is then compiled into a function that detects trend
+    information in the output sequence.
+
+
+    In the case of ultrasonic detection of damage to metal sheets, consistency is
+    expressed in the ability of the algorithm to identify results that are close to
+    the analytical model corresponding to the damage cluster and satisfy the regular
+    term generated by the residual from the governing equation [37]. In the K-SVD
+    method for metal damage identification, the article [150] builds an ultra-complete
+    dictionary with an additional one-dimensional wave equation based regularization
+    term for the atomic update process of the dictionary.
+
+
+    In these studies, the output of the ML needs to satisfy the regular term or lower
+    the punishment function value of the governing equation for physical consistency,
+    in addition to the original fitting accuracy as possible. And this governing equation
+    can be a partial derivative relation that represents an approximation [37]. It
+    can also be whether certain explicit physical equations are met within the required
+    tolerances. For example, the rotational trajectories of the voltage and current
+    need to satisfy the elliptic equation in auto-encoder based high impedance fault
+    detection [132]. In some cases, the design of consistency loss does not require
+    a fully known analytical physics model. It is equally feasible to enforce the
+    differential equations through a NN as a trial solution to the degradation differential
+    equations and through additional iterative pathways outside the NN [133].
+
+
+    # Conflict loss design
+
+
+    Based on the inconsistency between the physics model and the ML output, it is
+    also possible to design a “conflict test”, which only optimizes the relevant parameters
+    of the ML in the error propagation process.
+
+
+    In [143], the results of a diagnostic conflict based on an artificial fault threshold
+    model with a deep CNN are used to design the loss function that aims to improve
+    the discrimination of the severity of bearing faults. A physics-based loss function
+    is designed to evaluate the difference between the output of a NN model and the
+    output of a finite element model update in steel building damage detection [84].
+    This idea can be seen as a traditional fusion approach, which combines the outputs
+    of different approaches [216] in the ML training process. The main difference
+    between them is that the physics-based outputs are used here primarily to correct
+    the behavior of ML rather than enhance decision-making.
+
+
+    # 4. Discussion of PIML studies in PHM according to the form of physic knowledge
+
+
+    The previous sections summarized the different PIML frameworks in PHM. They initially
+    answer the question of “how to inform physics knowledge in ML”. However, physics
+    knowledge is an extremely complex abstract concept, and the question of “what
+    kind of physics knowledge can be used for informing ml” has not been addressed
+    yet. This question is then considered in Subsection 4.1. Next,
+
+
+    ![](img/3ec5662c0c5150f5b95af65046cb9cd4_17_0.png)
+
+
+    Fig. 19. Two ways to construct physics-constrained learning.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Table 6
+
+    Summary of Physics-constraint learning in PHM.
+
+
+    | Ref. | Application | Knowledge source | Informed | ML framework | PHM tasks
+    |
+
+    |---|---|---|---|---|---|
+
+    | [177] | Turbo engine | Loss based on PDE residuals | Consistency | Stacked CNN
+    | RUL prediction |
+
+    | [96] | Deformation identification | Normalized physics model''s modal residual
+    | Consistency | DNN | Fault diagnostic |
+
+    | [133] | Material damage | Finite Element Analysis | Consistency | DNN | Fault
+    diagnostic |
+
+    | [123] | Bearing | Reliability model based on Weibull | Consistency | ANN | Fault
+    diagnostic |
+
+    | [214] | Vehicle sensor | Residue generation based on transferable operators
+    | Consistency | Neyman-Pearson test | Fault diagnostic |
+
+    | [132] | High impedance fault detection | Elliptic equation of rotational trajectories
+    of the voltages and currents | Consistency | Autoencoder | Fault diagnostic |
+
+    | [215] | Building | Attribute-category matrix | Consistency | MatConvNet | Fault
+    diagnostic |
+
+    | [146] | Ocean current turbine | Characteristics in frequency domain of the mean
+    water flow velocity in the fan balance | Consistency | PCA and CNN | Fault diagnostic
+    |
+
+    | [150] | Metal damage | Atomic update based on the regularization term of the
+    one-dimensional wave equation | Consistency | K-SVD | Fault diagnostic |
+
+    | [131] | Workshop machinery | Fault frequency domain feature loss related Pearson
+    correlation coefficient | Consistency | Deep convolutional autoencoders | Fault
+    diagnostic |
+
+    | [176] | Damage stress prediction | FEM based stress distribution | Conflict
+    | LSTM | Fault diagnostic |
+
+    | [143] | Bearing | Expert experience-based fault degree threshold model | Conflict
+    | CNN | Fault diagnostic |
+
+    | [84] | Steel building damage | Output of a finite element model | Conflict |
+    DNN | Fault diagnostic |
+
+    | [126,173] | Wind farm & gas turbine | Physically complete historical dataset
+    | Conflict | ANN | Fault diagnostic |'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'Subsection 4.2 is intended to synthesize the informed way of that knowledge
+    in literature.
+
+
+    # 4.1. Physics knowledge categories
+
+
+    Physics knowledge is the prerequisite for implementing PIML. In review [141],
+    the authors propose categorizing the knowledge sources according to their origin.
+    However, the PIML implementation methods depend on the form of knowledge rather
+    than the source of knowledge. For example, the proposed PIML frameworks in papers
+    [84] and [133] come from different fields (building construction and material
+    industry) with different knowledge sources, but both of them use the same knowledge
+    form, i.e., finite element methods, to build the “consistency check” loss function.
+    Therefore, this Subsection focuses on synthesizing the form of physics knowledge
+    instead of its source. From the existing studies on PIML in PHM, the physics knowledge
+    forms can be classified into three categories, as shown in Fig. 20.
+
+
+    +   1) First category: Explicit knowledge related to analytical failure models.
+    The explicit knowledge is represented by analytical models or equations of system
+    dynamic behaviors, such as generator inertia constants, damping coefficients,
+    and rotating speed in rotor dynamics [140]. They are mathematically and physically
+    unambiguous, formal, symbolic and structured. Particularly, in the field of PHM,
+    they demonstrate the quantifiability of the failure processes, including algebraic,
+    governing equations, and probabilistic relations.
+
+
+    +   2) Second category: Embedded knowledge related to a structure or specific
+    process. It is locked into the physics derivation process, system convention,
+    structure, or layout. It provides information related to the sequence orders and
+    the requirements of each process step or each component structure. It uses ML
+    modules to express information concerning the system structure [132], the unit
+    dependencies [154], or the system topology framework. In particular, some knowledge
+    is non-symbolic and non-explicit, being merely an input-output or mutual verification
+    relationship between the derivation procedures.
+
+
+    +   3) Third category: Tacit knowledge relating wide range of physical information.
+    It involves hypotheses, expert rules and experiences, and also diverse underlying
+    physical properties. It refers to knowledge about the deterioration process which
+    is somewhat intuitive and difficult to quantify.
+
+
+    # 4.2. Discussion of physics-informed ways according to knowledge forms
+
+
+    Table 7 summarises different forms of knowledge for PIML in PHM and presents their
+    corresponding embedded way into ML. From this table, we can note that:
+
+
+    +   1. Due to explicit analytical equations or models that define clear input-output
+    mathematical relationships, explicit knowledge is the most common way for building
+    PIML. It is widely used in the construction of “simulators”, “extractors”, “operators”,
+    and “consistency checks”. It can often be used independently or collaboratively
+    in several data flow sessions in a ML pipeline. It changes the input and output
+    of the corresponding link on the data stream but does not change the data flow
+    direction.
+
+
+    +   2. Embedded knowledge studies focus on serving as the physics-informed ML
+    structure design guidance. They seek to build the entire ML structure such that
+    the information flow inferred through the ML model resembles the one passed through
+    a real physical model, structure, or derivation process. In typical circumstances,
+    when there are unknown terms in the process of physical derivation, making it
+    difficult to establish a formulaic model, and when there exists a quantifiable
+    relationship between physical structures, one may employ paradigms such as Structure
+    blueprint (Designing the structure and parameters of ML model solely based on
+    physical structural relationships or deductive processes), or alternatively, embedding
+    limited known steps or models as local operators within the ML framework.
+
+
+    +   3. A large part of “Embedded knowledge” studies actually points to interchangeability
+    between ML and physical derivations. For example, the Eulerian solution of Ordinary
+    Differential Equations (ODE) is implemented as a special case of RNN which is
+    applied in Dynet [218]. Although the current research still focuses on the relevant
+    area of neural differential equations (NDEs), i.e. the use of ML to derive or
+    embed the differential equation for failure as in the paper [156,178,217], the
+    trend of operator learning, led by Deeponet, has recently gotten a lot of attention.
+    For illustration, the transmissible operators, which characterize the relationship
+    between the outputs of an underlying vehicle sensor system, have been proposed
+    in the paper [217].
+
+
+    +   4. Although “Tacit knowledge” is the most widespread knowledge, only a small
+    number of studies have been conducted on it. In these studies, “Tacit knowledge”
+    is usually transformed into a parsable form in order to be embedded in the objective
+    function and derivation process. It enables the design of a physics similarity
+    test metric [171,199] to assess whether the distribution or trend of results conforms
+    to certain physical properties [177,214], as well as the construction of a conflict
+    loss [126,143,173].
+
+
+    +   5. For the use of tacit knowledge, the physics knowledge is often not given
+    in advance, but it is obtained by designing a ML model in a reasonable way to
+    discover the fault-related information. For example, in [118] the authors use
+    dynamic mode decomposition to extract signal characteristics. These characteristics
+    are used as labels for training the ML on how to automatically discover the information
+    related to crack growth. The implementation of this type of knowledge discovery
+    process should lie in stacked ML architectures, i.e., one ML model for knowledge
+    discovery and one for proofreading or extending knowledge. For illustration, one
+    can consult the associated two-stage graph NN architecture in [132].
+
+
+    +   6. In practice, analytical and quantifiable explicit knowledge is certainly
+    restricted, and knowledge regarding fault processes is still largely perceptual
+    or qualitative. Hence, tacit knowledge can be transformed into embedded knowledge
+    through a deeper understanding of mechanisms and structures. For instance, the
+    node and connection in the graphical NN can be constructed based on an understanding
+    of the current and voltage distribution in the electrical grids [149]. Furthermore,
+    the understanding of the basic physics properties and relations can be described
+    in terms of a formula and translated into explicit knowledge. For illustration,
+    an'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '![](img/3ec5662c0c5150f5b95af65046cb9cd4_20_0.png)
+
+
+    | Ref. | Knowledge forms | | | Informed ways |
+
+    | :--- | :---: | :---: | :---: | :--- |
+
+    | | Explicit | Embedded | Tacit | |
+
+    | [13,53,55,58,144,170,174,188,195–198] | ✓ | | | Simulator |
+
+    | [59,171,199], | | | ✓ | Gauge |
+
+    | [59,167,169,171,183,199,200,201] | ✓ | | | Extractor |
+
+    | [36,62,63,113,149,172,182,213] | ✓ | | | Operator |
+
+    | [43,51,118,165] | | | ✓ | Operator |
+
+    | [81,130,209] | | ✓ | | Operator |
+
+    | [37,113,210,217] | ✓ | | | Structure blueprint |
+
+    | [20,50,91,95,107,114,115,120,121,129,156,166,178,179,186,211,212] | | ✓ | |
+    Structure blueprint |
+
+    | [57,76,142,149,187] | ✓ | | | Initializer |
+
+    | [154,168] | | ✓ | | Initializer |
+
+    | [96,123,132,133,150] | ✓ | | | Consistency |
+
+    | [177,214] | | ✓ | | Consistency |
+
+    | [131,146] | | | ✓ | Consistency |
+
+    | [84,176] | ✓ | | | Conflict |
+
+    | [126,143,173] | | | ✓ | Conflict |
+
+
+    embedded transfer learning model based on the physical attributes of buildings’
+    damage patterns is trained by minimizing the loss of the damage attribute that
+    is measured via L2-norm and angular loss [215]. Besides, the aforementioned building-related
+    knowledge can also be used to introduce a new physics guided weighted design.
+    In [199], the authors use physical similarity to the target to measure the importance
+    of each source and thus decide the data to which source to transfer.
+
+
+    7. The same physics knowledge can be informed in different ways. For example,
+    dynamic mode decomposition capturing system characteristics can be used to design
+    operators for image reconstruction to identify cracks [118], or to design an extractor
+    that generates input feature maps for time-delay-system diagnostic [169]. In particular,
+    knowledge in the form of self-contained input-output relationships and derivations
+    such as finite elements can be used as 1) embedded knowledge to guide the network
+    design for simulating the physics derivation such as the dynamic convolution for
+    accelerating CNN [218], 2) explicit knowledge for data augmentation by designing
+    the failure surrogate model [55], or 3) metric to design conflicting loss between
+    ML and physical predictions [176].'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "8. About when to use what form of knowledge. According to the analysis of the\
+    \ existing research in Table 7, this paper suggests When dealing with explicit\
+    \ knowledge, the system behaviors can be described by mathematical equations or\
+    \ analytical models with clear input-output relations. If the physics signal variables\
+    \ involved in the equations are available, we can use them to customize NN layers\
+    \ or units based on analytical formulas or system physics characteristics. When\
+    \ explicit knowledge of the system behaviors is unavailable, but we have information\
+    \ about system physical structures or behavior model derivation knowledge, along\
+    \ with handling inference relations for the involved signals, we can construct\
+    \ a physics-informed structure. Embedded knowledge is then utilized to customize\
+    \ the data flow in the NN structure or employ custom-designed NNs as surrogate\
+    \ models for specific steps in the physics model derivation. In the case of tacit\
+    \ knowledge, where quantitative information about system behaviors is lacking,\
+    \ but there exist physical relations between system inputs and outputs or constraints\
+    \ on the system outputs, these relations can be employed to customize the ML objective\
+    \ function or regulate the output of hidden layers.\n\nIt is important to note\
+    \ that these forms of knowledge are not mutually exclusive, and they can often\
+    \ be combined or integrated within a PIML framework. The choice of which form\
+    \ to use, or whether to combine them, depends on the specific requirements and\
+    \ objectives of the problem at hand. A comprehensive approach to PIML may involve\
+    \ utilizing a combination of explicit, embedded, and tacit knowledge to capture\
+    \ the full range of system characteristics and optimize model performance. Ultimately,\
+    \ the selection of the appropriate form (s) of knowledge requires careful consideration\
+    \ of the problem domain, available expertise, data availability, and the desired\
+    \ level of interpretability and accuracy in the modeling process.\n\n# 5. Challenges\
+    \ and future research directions: Toward PHM in the context of “small data and\
+    \ scarce physics knowledge”\n\nAlthough PIML can bring numerous alternative solutions\
+    \ for diverse applications in PHM, as mentioned in previous sections, the development\
+    \ of PIML in PHM still comes with some particular limitations and challenges.\
+    \ Some of these limitations and challenges are presented in this section.\n\n\
+    # 5.1. Limitations and challenges of PIML\n\nThe challenges related to sparse\
+    \ and noisy data, data availability, and incomplete physic models have been highlighted\
+    \ in other reviews [18,29,32]. In addition, there is a need for further research\
+    \ into the collection of more representative data, the selection of an appropriate\
+    \ benchmark model, and the determination of the weighting parameters or hyperparameters\
+    \ for the informed ML part. This paper argues that the fundamental problem underlying\
+    \ these challenges is how to convert various forms of knowledge into the type\
+    \ necessary for the ML framework, that is, to adjust knowledge to ML models rather\
+    \ than selecting ML models to fit physics knowledge. Consequently, one can highlight\
+    \ the challenges in two aspects:\n\n+   1. Building a physics aware ML framework\n\
+    +   \n+   In the current research on the design of PIML, the inter-conversion\
+    \ between physics knowledge and ML, as well as the assessment metric for ML physical\
+    \ inconsistency, remains an under-explored and challenging topic. Therefore, there\
+    \ is a need to construct a physics-aware ML framework that can automatically incorporate\
+    \ physics knowledge into various parts of the ML pipeline based on the form of\
+    \ knowledge according to the physics-ML inter-conversion mechanism and the inconsistency\
+    \ evaluation results.\n\n+   2. Construction of knowledge basis\n+   \n+   The\
+    \ construction of effective PIML frameworks requires a thorough comprehension\
+    \ of the physical characteristics of the system under investigation. This necessitates\
+    \ that the researcher possesses comprehensive knowledge and skills in both computer\
+    \ science and physics (e.g. mechanics). Thus, this leads to significant barriers\
+    \ for junior researchers without interdisciplinary experience in the implementation\
+    \ of PIML techniques. Furthermore, due to the fact that most knowledge can be\
+    \ ambiguous, mathematical expressions and physics modeling are not always well-developed\
+    \ for PHM case studies. Consequently, it is essential to construct a knowledge\
+    \ basis for PIML from ambiguous information.\n\n# 5.2. Future directions\n\nAlthough\
+    \ it is difficult to determine which direction will lead to transformative discoveries,\
+    \ the PHM community can make a substantial contribution to the future of PIML\
+    \ by taking into account the challenges outlined in the previous section in the\
+    \ following areas:\n\n+   1. Compiling fault mechanisms in ML\n+   \n+   There\
+    \ is a lack of studies regarding how ML can better use integrated physics knowledge\
+    \ from multiple sources. Establishing the cognitive mechanisms for PIML when different\
+    \ forms of knowledge are embedded in different ML frameworks thus appears as a\
+    \ meaningful work.\n\n+   2. From the perspective of metric learning\n+   \n+\
+    \   Another track that appears worth investigation is the development of ML objective\
+    \ functions with more multidimensional metrics that can cover model complexity,\
+    \ physics consistency, computational cost, and result accuracy.\n\n+   3. Further\
+    \ building suitable benchmark problems\n+   \n+   A set of well-defined benchmark\
+    \ problems can facilitate the evaluation and comparison of different algorithms\
+    \ and thus"
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'contribute to the development of research on this topic. The physics knowledge
+    corresponding to public datasets is usually not available because of a deep-domain
+    background requirement. This often leads to numerous obstacles in developing PIML
+    methods because of the knowledge shortage. The development of open-source benchmark
+    problems with shared the encoded knowledge, such as the synthetic fatigue damage
+    database presented in [219], or similar developments in other domains would be
+    welcome.
+
+
+    +   4. Combining flexible twin model to build life cycle tool The modeling techniques
+    and twinning enabling technologies in [192, 193] present an appealing opportunity
+    to integrate with PIML. This combination has the potential to develop a robust
+    life-cycle management tool that incorporates flexible fidelity models and maintains
+    physics consistency. Additionally, it enables the inclusion of indeterminate quantitative
+    assessment evaluations by building twin framework.
+
+
+    +   5. Adaptation to sparse run-to-failure data and sparse label data Most of
+    the research on PIML in PHM focuses on sparse observations or information bias
+    in the dataset. However, unlabeled data and non-complete failure process data
+    accounts for the vast majority. Therefore, the theoretical and applied research
+    of PIML for sparse and noisy data is worth exploring. Development of new PHM paradigms
+    such as physics-informed unsupervised learning, self-supervised learning, and
+    semi-supervised learning is expected.
+
+
+    +   6. PIML in “small data and scarce physics knowledge” One of the ultimate development
+    purposes of PIML in PHM is to be able to work under “small data and scarce physics
+    knowledge” conditions, which will greatly extend the scope of potential PHM application.
+    Following from the above-mentioned research directions, combining PIML with knowledge
+    discovery and ML architecture search techniques has the potential for emerging
+    breakthrough methods.
+
+
+    # 6. Conclusion
+
+
+    This paper presented bibliometric results and a state of the art review of physics-informed
+    machine learning for prognostics and health management. An overview of its basic
+    paradigm from the innovative perspective of “How to inform” and “What to be informed”,
+    is summarized and provided. The existing approaches are grouped according to where
+    and how the physics knowledge is embedded in the ML pipeline. The challenges of
+    applying PIML to solve PHM problems and future research directions are also discussed.
+    The main contribution of this paper is to provide a concise and comprehensive
+    overview of PIML in PHM and to focus on the fundamental challenge of translating
+    the appropriate form of knowledge for PIML utilization. It is hoped that this
+    paper will encourage further works to expand the potential of PIML in the field
+    of PHM.
+
+
+    # Declaration of Competing Interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    # Data availability
+
+
+    Data will be made available on request.
+
+
+    # References
+
+
+    +   [1] N. Kim, D. An, J.-H. Choi, Prognostics and health management of engineering
+    systems, 2017.
+
+    +   [2] B. Rezaeianjouybari, Y. Shang, Deep learning for prognostics and health
+    management: state of the art, challenges, and opportunities, Measurement 163 (2020)
+    107929.
+
+    +   [3] O. Fink, Q. Wang, M. Svensen, P. Dersin, W.-J. Lee, M. Ducoffe, Potential,
+    challenges and future directions for deep learning in prognostics and health management
+    applications, Eng. Appl. Artif. Intell. 92 (2020) 103678.
+
+    +   [4] S. Zhang, S. Zhang, B. Wang, T.G. Habetler, Deep learning algorithms for
+    bearing fault diagnostics-a comprehensive review, IEEE Access 8 (2020) 29857–29881.
+
+    +   [5] P. Singh, M. Keyvanloo, A. Sadhu, An improved time-varying empirical mode
+    decomposition for structural condition assessment using limited sensors, Eng.
+    Struct. 232 (2021) 111882.
+
+    +   [6] A. Khan, H. Hwang, H.S. Kim, Synthetic data augmentation and deep learning
+    for the fault diagnosis of rotating machines, Mathematics 9 (18) (2021) 2336.
+
+    +   [7] S. Khan, T. Yairi, A review on the application of deep learning in system
+    health management, Mech. Syst. Signal Process. 107 (2018) 241–265.
+
+    +   [8] E. Zio, Prognostics and health management (phm): where are we and where
+    do we (need to) go in theory and practice, Reliab. Eng. Syst. Saf. 218 (2022)
+    108119.
+
+    +   [9] A.K.B.M. Nor, S.R. Pedapati, M. Muhammad, Explainable ai (xai) for phm
+    of industrial asset: as-tate-of-the-art, prisma-compliant systematic review, arXiv
+    preprint arXiv:2107.03869 (2021).
+
+    +   [10] M. Arias Chao, Combining Deep Learning and Physics-Based Performance
+    Models for Diagnostics and Prognostics, ETH Zurich, 2021. Ph.D. thesis.
+
+    +   [11] A. Rasheed, O. San, T. Kvamsdal, Digital twin: values, challenges and
+    enablers, arXiv preprint arXiv:1910.01719 (2019).
+
+    +   [12] L. Scapino, H.A. Zondag, J. Dirken, C.G. Rindt, J. Van Baal, A. Sciacovelli,
+    Modeling the performance of a sorption thermal energy storage reactor using artificial
+    neural networks, Appl. Energy 253 (2019) 113525.
+
+    +   [13] M.A. Chao, C. Kulkarni, K. Goebel, O. Fink, Hybrid deep fault detection
+    and isolation: combining deep neural networks and system performance models, arXiv
+    preprint arXiv:1908.01529 (2019).
+
+    +   [14] K.L. de Calle, S. Ferrero, A. Arnau, B. Sierra, Dynamic condition monitoring
+    method based on dimensionality reduction techniques for data-limited industrial
+    environments, Comput. Ind. 112 (2019) 103114.
+
+    +   [15] B. Zhao, G. Wen, H. Sun, D. Sun, H. Yang, J. Cao, L. Dai, B. Wang, Similarity
+    criteria and coal-like material in coal and gas outburst physical simulation,
+    Int. J. Coal Sci. Technol. 5 (2) (2018) 167–178.
+
+    +   [16] P.C. Berri, M.D. Dalla Vedova, L. Mainini, Computational framework for
+    real-time diagnostics and prognostics of aircraft actuation systems, Comput. Ind.
+    132 (2021) 103523.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '[17] J.M. Reniers, G. Mulder, D.A. Howey, Review and performance comparison
+    of mechanical-chemical degradation models for lithium-ion batteries, J. Electrochem.
+    Soc. 166 (14) (2019) A3189.
+
+
+    [18] Y.A. Yucesan, A. Dourodo, F.A. Viana, A survey of modeling for prognosis
+    and health management of industrial equipment, Adv. Eng. Inf. 50 (2021) 101404.
+
+
+    [19] Y. Lei, N. Li, L. Guo, N. Li, T. Yan, J. Lin, Machinery health prognostics:
+    a systematic review from data acquisition to rul prediction, Mech. Syst. Signal
+    Process. 104 (2018) 799–834.
+
+
+    [20] L. Pagnier, M. Chertkov, Physics-informed graphical neural network for parameter
+    & state estimations in power systems, arXiv preprint arXiv:2102.06349 (2021).
+
+
+    [21] M. Raissi, P. Perdikaris, G.E. Karniadakis, Physics-informed neural networks:
+    a deep learning framework for solving forward and inverse problems involving nonlinear
+    partial differential equations, J. Comput. Phys. 378 (2019) 686–707.
+
+
+    [22] P. Bonissone, Prognostics & health management at ge, (https://nidastorage.blob.core.usgovcloudapi.net/nidia/2006/logistics/bonissone.pdf).
+
+
+    [23] W.Z. Leviente Klein, Peeking into ai’s ‘black box’ brain – with physics,
+    (https://www.ibm.com/blogs/research/2018/03/geospatial-temporal-insights/).
+
+
+    [24] R.M. Michael Eidell, S. Choudhry, Accelerating product development with physics-informed
+    neural networks and nvidia modulus, (https://developer.nvidia.com/blog/accelerating-product-development-with-physics-informed-neural-networks-and-modulus/).
+
+
+    [25] S.K.A.A. Rohit Tripathy, Illas Bilionis, Physics-informed learning for multiscale
+    systems (Pilgrims), (https://www.predictivesciencelab.org/project/darpa-pilgrims/).
+    Accessed Nov 14, 2019.
+
+
+    [26] R.M. Michael Eidell, S. Choudhry, Pcoe datasets, (https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/).
+
+
+    [27] S. Mohanty, R.B. Vilim, Physics-Infused AI/ML Based Digital-Twin Framework
+    for Flow-Induced-Vibration Damage Prediction in a Nuclear Reactor Heat Exchanger,
+    Technical Report, Argonne National Lab.(ANL), Argonne, IL (United States), 2021.
+
+
+    [28] With physics-informed ai, machine operators can trust and verify, (https://www.sme.org/technologies/articles/2021/november/with-physics-informed-ai-machine-operators-can-trust-and-verify/).
+
+
+    [29] Y. Xu, S. Kohtz, J. Boakye, P. Gardoni, P. Wang, Physics-informed machine
+    learning for reliability and systems safety applications: state of the art and
+    challenges, Reliab. Eng. Syst. Saf. (2022) 108090.
+
+
+    [30] Z. Zhao, Q. Zhang, X. Yu, C. Sun, S. Wang, R. Yan, X. Chen, Applications
+    of unsupervised deep transfer learning to intelligent fault diagnosis: a survey
+    and comparative study, IEEE Trans. Instrum. Meas. 70 (2021) 1–28.
+
+
+    [31] V. Atamuradov, K. Medjaher, P. Dersin, B. Lamoureux, N. Zerhouni, Prognostics
+    and health management for maintenance practitioners-review, implementation and
+    tools evaluation, Int. J. Prognost. Health Manag. 8 (060) (2017) 1–31.
+
+
+    [32] J. Willard, X. Jia, S. Xu, M. Steinbach, V. Kumar, Integrating physics-based
+    modeling with machine learning: a survey, arXiv preprint arXiv:2003.04919 1 (1)
+    (2020) 1–34.
+
+
+    [33] M. Gong, D. Tang, J. Yu, L. Tian, A physics-informed transfer learning approach
+    for anomaly detection of aerospace cmg with limited telemetry data. 2021 Global
+    Reliability and Prognostics and Health Management (PHM-Nanjing), IEEE, 2021, pp.
+    1–5.
+
+
+    [34] Y. Li, J. Wang, Z. Huang, R.X. Gao, Physics-informed meta learning for machining
+    tool wear prediction, J. Manuf. Syst. 62 (2022) 17–27.
+
+
+    [35] C. Chen, Citespace: A practical guide for mapping scientific literature,
+    Nova Science Publishers Hauppauge, NY, 2016.
+
+
+    [36] J. Wang, Y. Liang, Y. Zheng, R.X. Gao, F. Zhang, An integrated fault diagnosis
+    and prognosis approach for predictive maintenance of wind turbine bearing with
+    limited samples, Renew. Energy 145 (2020) 642–650.
+
+
+    [37] K. Shukla, P.C. Di Leoni, J. Blackshire, D. Sparkman, G.E. Karniadakis, Physics-informed
+    neural network for ultrasound nondestructive quantification of surface breaking
+    cracks, J. Nondestr. Eval. 39 (3) (2020) 1–20.
+
+
+    [38] S.K. Singh, R. Yang, A. Bejrat, R. Rai, S. Chowdhury, I. Matei, Pi-lstm:
+    Physics-infused long short-term memory network. 2019 18th IEEE International Conference
+    on Machine Learning and Applications (ICMLA), IEEE, 2019, pp. 34–41.
+
+
+    [39] S. Pawar, O. San, P. Vedula, A. Rasheed, T. Kvamsdal, Multi-fidelity information
+    fusion with concatenated neural networks, arXiv preprint arXiv:2110.04170 (2021).
+
+
+    [40] A. Diez-Olivan, J. Del Ser, D. Galar, B. Sierra, Data fusion and machine
+    learning for industrial prognosis: trends and perspectives towards industry 4.0,
+    Inf. Fusion 50 (2019) 92–111.
+
+
+    [41] J. Chen, B. Ma, S. Yan, C. Zheng, Q. Zhang, A permutation entropy-based importance
+    measure for condition monitoring data fusion in fault diagnosis. 2019 Prognostics
+    and System Health Management Conference (PHM-Qingdao), IEEE, 2019, pp. 1–5.
+
+
+    [42] T. Meng, X. Jing, Z. Yan, W. Pedrycz, A survey on machine learning for data
+    fusion, Inf. Fusion 57 (2020) 115–129.
+
+
+    [43] H. Hanachi, W. Yu, I.Y. Kim, J. Liu, C.K. Mechefske, Hybrid data-driven physics-based
+    model fusion framework for tool wear prediction, Int. J. Adv. Manuf. Technol.
+    101 (9) (2019) 2861–2872.
+
+
+    [44] Y. Zheng, Methodologies for cross-domain data fusion: an overview, IEEE Trans.
+    Big Data 1 (1) (2015) 16–34.
+
+
+    [45] J. Zhou, X. Hong, P. Jin, Information fusion for multi-source material data:
+    progress and challenges, Appl. Sci. 9 (17) (2019) 3473.
+
+
+    [46] M.D. Sangid, Coupling in situ experiments and modeling-opportunities for
+    data fusion, machine learning, and discovery of emergent behavior, Curr. Opin.
+    Solid State Mater. Sci. 24 (1) (2020) 100797.
+
+
+    [47] Z. Zhang, R. Rai, S. Chowdhury, D. Doermann, Midphynet: memorized infusion
+    of decomposed physics in neural networks to model dynamic systems, Neurocomputing
+    428 (2021) 116–129.
+
+
+    [48] Z. Liu, N. Meyendorf, N. Mrad, The role of data fusion in predictive maintenance
+    using digital twin. AIP Conference Proceedings volume 1949, AIP Publishing LLC,
+    2018, p. 020023.
+
+
+    [49] E. Kipchirchir, M.H. Do, J.G. Njiri, D. Söffker, Prognostics-based adaptive
+    control strategy for lifetime control of wind turbines, Wind Energy Sci. Discuss.
+    (2021) 1–16.
+
+
+    [50] S.S. Ekşeveri, M. Takác, S.N. Pakzad, M. Jahani, Dynet: physics-based neural
+    architecture design for nonlinear structural response modeling and prediction,
+    Eng. Struct. 229 (2021) 111582.
+
+
+    [51] L. Liao, F. Köttig, A hybrid framework combining data-driven and model-based
+    methods for system remaining useful life prediction, Appl. Soft. Comput. 44 (2016)
+    191–199.
+
+
+    [52] K.M. Siddiqui, et al., Multi-physics based simulations of an oleo-pneumatic
+    shock absorber system for phm, Int. J. Prognost. Health Manag. 8 (2) (2017).
+
+
+    [53] Y. Gao, H. Yao, Y. Hei, Y. Liu, Physics-based deep learning for probabilistic
+    fracture analysis of composite materials. AIAA Scitech 2020 Forum, 2020, p. 1860.
+
+
+    [54] M.A. Chao, C. Kulkarni, K. Goebel, O. Fink, Fusing physics-based and deep
+    learning models for prognostics, Reliab. Eng. Syst. Saf. 217 (2022) 107961.
+
+
+    [55] K.R. Lyathakula, F.-G. Yuan, A probabilistic fatigue life prediction for
+    adhesively bonded joints via anns-based hybrid model, Int. J. Fatigue (2021) 106352.
+
+
+    [56] A. Cubillo, S. Perinpanayagam, M. Esperon-Miguez, A review of physics-based
+    models in prognostics: application to gears and bearings of rotating machinery,
+    Adv. Mech. Eng. 8 (8) (2016), 1687814016664660.
+
+
+    [57] P. Weider, A.M. Tomé, E.W. Lang, A nmf-based extraction of physically meaningful
+    components from sensory data of metal casting processes, J. Manuf. Syst. 54 (2020)
+    62–73.
+
+
+    [58] R. Srikonda, A. Rastogi, H. Oestensen, Increasing facility uptime using machine
+    learning and physics-based hybrid analytics in a dynamic digital twin. Offshore
+    Technology Conference, OnePetro, 2020.
+
+
+    [59] K.L. Ness, A. Paul, L. Sun, Z. Zhang, Towards a generic physics-based machine
+    learning model for geometry invariant thermal history prediction in additive manufacturing,
+    J. Mater. Process. Technol. 302 (2022) 117472.
+
+
+    [60] M. Nouri, J. Artozoul, A. Caillaud, A. Ammar, F. Chinesta, O. Köser, Shrinkage
+    porosity prediction empowered by physics-based and data-driven hybrid models,
+    Int. J. Mater. Form. 15 (3) (2022) 1–16.
+
+
+    [61] H.Y. Zhang, A knowledge-based reasoning model using causal table for identifying
+    corrosion failure mechanisms in refining and petrochemical plants, Eng. Fail Anal.
+    (2012).
+
+
+    [62] Y. Pan, Y. Jing, T. Wu, X. Kong, Knowledge-based data augmentation of small
+    samples for oil condition prediction, Reliab. Eng. Syst. Saf. 217 (2022) 108114.
+
+
+    [63] M. Sadoughi, C. Hu, Physics-based convolutional neural network for fault
+    diagnosis of rolling element bearings, IEEE Sens. J. 19 (11) (2019) 4181–4192.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '+   [64] M. Sadoughi, C. Hu, A physics-based deep learning approach for fault
+    diagnosis of rotating machinery. IECON 2018-44th Annual Conference of the IEEE
+    Industrial Electronics Society, IEEE, 2018, pp. 5919–5923.
+
+    +   [65] H. Li, H.-Z. Huang, Y.-F. Li, J. Zhou, J. Mi, Physics of failure-based
+    reliability prediction of turbine blades using multi-source information fusion,
+    Appl. Soft. Comput. 72 (2018) 624–635.
+
+    +   [66] R. Swischuk, L. Mainini, B. Peherstorfer, K. Willcox, Projection-based
+    model reduction: formulations for physics-based machine learning, Comput. Fluids
+    179 (2019) 704–717.
+
+    +   [67] R. Firoozi, S. Sattarzadeh, S. Dey, Cylindrical battery fault detection
+    under extreme fast charging: a physics-based learning approach, arXiv preprint
+    arXiv: 2105.02169 (2021).
+
+    +   [68] Y. Yu, H. Yao, Y. Liu, Physics-based learning for aircraft dynamics simulation.
+    10th Annual Conference of the Prognostics and Health Management Society, PHM 2018,
+    Prognostics and Health Management Society, 2018.
+
+    +   [69] T. Pfaff, M. Fortunato, A. Sanchez-Gonzalez, P.W. Battaglia, Learning
+    mesh-based simulation with graph networks, arXiv preprint arXiv:2010.03409 (2020).
+
+    +   [70] S. Feng, Y. Xu, X. Han, Z. Li, A. Inecnik, A phase field and deep-learning
+    based approach for accurate prediction of structural residual useful life, Comput.
+    Methods Appl. Mech. Eng. 383 (2021) 113885.
+
+    +   [71] D.P. Finegan, J. Zhu, X. Feng, M. Keyser, M. Ulmenfors, W. Li, M.Z. Bazant,
+    S.J. Cooper, The application of data-driven methods and physics-based learning
+    for improving battery safety, Joule (2020).
+
+    +   [72] R. Rai, C.K. Sahu, Driven by data or derived through physics? a review
+    of hybrid physics guided machine learning techniques with cyber-physical system
+    (cps) focus, IEEE Access 8 (2020) 71050–71073.
+
+    +   [73] N. Muralidhar, J. Bu, Z. Cao, L. He, N. Ramakrishnan, D. Tafti, A. Karpatne,
+    Physics-guided deep learning for drag force prediction in dense fluid-particulate
+    systems, Big Data 8 (5) (2020) 431–449.
+
+    +   [74] Z. Geng, Y. Wang, Physics-guided deep learning for predicting geological
+    drilling risk of wellbore instability using seismic attributes data, Eng. Geol.
+    279 (2020) 105857.
+
+    +   [75] S.M. Razak, J. Cornelio, Y. Cho, H.-H. Liu, R. Vaidya, B. Jafarpour,
+    A physics-guided deep learning predictive model for robust production forecasting
+    and diagnostics in unconventional wells. SPE/AAPG/SEG Unconventional Resources
+    Technology Conference, OnePetro, 2021.
+
+    +   [76] J. Kandarickal, T. Schmitz, S. Smith, Physics-guided logistic classification
+    for tool life modeling and process parameter optimization in machining, J. Manuf.
+    Syst. 59 (2021) 522–534.
+
+    +   [77] C.T. Nguyen, S. Otterson, E. Oterkus, A physics-guided machine learning
+    model for two-dimensional structures based on ordinary state-based peridynamics,
+    Theor. Appl. Fract. Mech. 112 (2021) 102872.
+
+    +   [78] J. Wang, Y. Li, R. Zhao, R.X. Gao, Physics guided neural network for
+    machining tool wear prediction, J. Manuf. Syst. 57 (2020) 298–310.
+
+    +   [79] L. Guo, J. Ye, B. Yang, Cyber-attack detection for electric vehicles
+    using physics-guided machine learning, IEEE Trans. Transp. Electrif. (2020).
+
+    +   [80] Z. Zhang, C. Sun, B. Guo, Transfer-learning guided bayesian model updating
+    for damage identification considering modeling uncertainty, Mech. Syst. Signal
+    Process. 166 (2022) 108426.
+
+    +   [81] H. Sun, L. Peng, J. Lin, S. Wang, W. Zhao, S. Huang, Microcrack defect
+    quantification using a focusing high-order sh guided wave emat: the physics-informed
+    deep neural network guwnet, IEEE Trans. Ind. Inf. (2021).
+
+    +   [82] R. Wang, R. Yu, Physics-guided deep learning for dynamical systems: asurvey,
+    arXiv preprint arXiv:2107.01272 (2021).
+
+    +   [83] X. Jia, J. Willard, A. Karpatne, J. Read, J. Zwart, M. Steinbach, V.
+    Kumar, Physics guided rnns for modeling dynamical systems: A case study in simulating
+    lake temperature profiles. Proceedings of the 2019 SIAM International Conference
+    on Data Mining, SIAM, 2019, pp. 558–566.
+
+    +   [84] Z. Zhang, C. Sun, Structural damage identification via physics-guided
+    machine learning: a methodology integrating pattern recognition with finite element
+    model updating, Struct. Health Monitor. 20 (4) (2021) 1675–1688.
+
+    +   [85] R. Zhang, Y. Liu, H. Sun, Physics-guided convolutional neural network
+    (phycnn) for data-driven seismic response modeling, Eng. Struct. 215 (2020) 110704.
+
+    +   [86] A. Daw, R.Q. Thomas, C.C. Carey, J.S. Read, A.P. Appling, A. Karpatne,
+    Physics-guided architecture (pga) of neural networks for quantifying uncertainty
+    in lake temperature modeling, Proceedings of the 2020 siam international conference
+    on data mining, SIAM, 2020, pp. 532–540.
+
+    +   [87] S. Pawar, O. San, B. Aksoylu, A. Rasheed, T. Kvamsdal, Physics guided
+    machine learning using simplified theories, Phys. Fluids 33 (1) (2021) 011701.
+
+    +   [88] Y. Yang, L. Sanehsi, H. Zhang, A. Roeder, J. Bowland, J. Crochet, C.
+    Garrard, D. Mascarenas, Estimation of full-field, full-flow experimental modal
+    model of cable vibration from digital video measurements with physics-guided unsupervised
+    machine learning and computer vision, Struct. Control Health Monitor. 26 (6) (2019)
+    e2358.
+
+    +   [89] A.I. Ozdagli, X. Koutsooulos, Model-based damage detection through physics-guided
+    learning for dynamic systems.
+
+    +   [90] Y. Chen, D. Huang, D. Zhang, J. Zeng, N. Wang, H. Zhang, J. Yan, Theory-guided
+    hard constraint projection (hcp): acknowledge-based data-driven scientific machine
+    learning method, J. Comput. Phys. 445 (2021) 110624.
+
+    +   [91] H. Yao, Y. Gao, Y. Liu, Fea-net: a physics-guided data-driven model for
+    efficient mechanical response prediction, Comput. Methods Appl. Mech. Eng. 363
+    (2020) 112892.
+
+    +   [92] J. Chen, Y. Liu, Probabilistic physics-guided machine learning for fatigue
+    data analysis, Expert Syst. Appl. 168 (2021) 114316.
+
+    +   [93] J. Chen, Y. Liu, Fatigue property prediction of additively manufactured
+    ti-6al-4v using probabilistic physics-guided learning, Addit. Manuf. 39 (2021)
+    101876.
+
+    +   [94] A. Karpatne, W. Watkins, J. Read, V. Kumar, Physics-guided neural networks
+    (pgnn): an application in lake temperature modeling, arXiv preprint arXiv: 1710.11431
+    (2017).
+
+    +   [95] A.S. Zamzam, N.D. Sidiropoulos, Physics-aware neural networks for distribution
+    system state estimation, IEEE Trans. Power Syst. 35 (6) (2020) 4347–4356.
+
+    +   [96] A. Odot, R. Haferssas, S. Cotin, Deepphysics: a physics aware deep learning
+    framework for real-time simulation, arXiv preprint arXiv:2109.09491 (2021).
+
+    +   [97] H.E. Sánchez Sardi, Prognostics and health aware model predictive control
+    of wind turbines (2017).
+
+    +   [98] S. Pakravan, P.A. Mistani, M.A. Aragon-Calvo, F. Gibou, Solving inverse-pde
+    problems with physics-aware neural networks, J. Comput. Phys. 440 (2021) 110414.
+
+    +   [99] S. Seo, C. Meng, Y. Liu, Physics-aware difference graph networks for
+    sparsely-observed dynamics. International Conference on Learning Representations,
+    2019.
+
+    +   [100] A. Behjat, C. Zeng, R. Rai, I. Matei, D. Doermann, S. Chowdhury, A physics-aware
+    learning architecture with input transfer networks for predictive modeling, Appl.
+    Soft. Comput. 96 (2020) 106665.
+
+    +   [101] E. Blasch, J.S. Tiley, D. Sparkman, S. Donegan, M. Cherry, Data fusion
+    methods for materials awareness. Signal Processing, Sensor/Information Fusion,
+    and Target Recognition XXIX volume 11423, International Society for Optics and
+    Photonics, 2020, p. 114230K.
+
+    +   [102] I. Matei, C. Zeng, S. Chowdhury, R. Rai, J. de Kleer, Controlling draft
+    interactions between quadcopter unmanned aerial vehicles with physics-aware modeling,
+    J. Intell. Robot. Syst. 101 (1) (2021) 1–21.
+
+    +   [103] Y. Shin, J. Darbon, G.E. Karniadakis, On the convergence and generalization
+    of physics informed neural networks, arXiv e-prints (2020) arXiv–2004.
+
+    +   [104] E. Kharazmi, Z. Zhang, G.E. Karniadakis, Variational physics-informed
+    neural networks for solving partial differential equations, arXiv preprint arXiv:
+    1912.00873 (2019).
+
+    +   [105] S. Talukdar, D. Deka, H. Dodi, D. Matarasi, M. Chertkov, M.V. Salapaka,
+    Physics informed topology learning in networks of linear dynamical systems, Automatica
+    112 (2020) 108705.
+
+    +   [106] S. Guo, M. Agarwal, C. Cooper, Q. Tian, R.X. Gao, W.G. Grace, Y. Guo,
+    Machine learning for metal additive manufacturing: towards a physics-informed
+    data-driven paradigm, J. Manuf. Syst. 62 (2022) 145–163.
+
+    +   [107] Y.A. Yucesan, F.A. Viana, L. Manin, J. Mahfoud, Adjusting a torsional
+    vibration damper model with physics-informed neural networks, Mech. Syst. Signal
+    Process. 154 (2021) 107552.
+
+    +   [108] A.D. Jagtap, K. Kawaguchi, G.E. Karniadakis, Adaptive activation functions
+    accelerate convergence in deep and physics-informed neural networks, J. Comput.
+    Phys. 404 (2020) 109136.
+
+    +   [109] L. Borkowski, C. Sorini, A. Chattopadhyay, Recurrent neural network-based
+    multiaxial plasticity model with regularization for physics-informed constraints,
+    Comput. Struct. 258 (2022) 106678.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '+   [110] H. El Mir, S. Perinpanayagam, Certification approach for physics
+    informed machine learning and its application in landing gear life assessment.
+    2021 IEEE/ AIAA 40th Digital Avionics Systems Conference (DASC), IEEE, 2021, pp.
+    1–6.
+
+    +   [111] X. Yang, G. Tartakovsky, A. Tartakovsky, Physics-informed kriging: a
+    physics-informed gaussian process regression method for data-model convergence,
+    arXiv preprint arXiv:1809.03461 (2018).
+
+    +   [112] S. Xu, H.Y. Noh, Pymdran: physics-informed knowledge transfer between
+    buildings for seismic damage diagnosis through adversarial learning, Mech. Syst.
+    Signal Process. 151 (2021) 107374.
+
+    +   [113] R.G. Nascentino, M. Corbetta, C.S. Kulkarni, F.A. Viana, Hybrid physics-informed
+    neural networks for lithium-ion battery modeling and prognosis, J. Power Sources
+    513 (2021) 230526.
+
+    +   [114] S. Goswami, M. Yin, Y. Yu, G. Karniadakis, A physics-informed variational
+    deepnet for predicting the crack path in brittle materials, arXiv preprint arXiv:
+    2108.06905 (2021).
+
+    +   [115] F.A. Viana, R.G. Nascentino, A. Dourado, Y.A. Yucesan, Estimating model
+    inadequacy in ordinary differential equations with physics-informed neural networks,
+    Comput. Struct. 245 (2021) 106458.
+
+    +   [116] Y.A. Yucesan, F.A. Viana, A physics-informed neural network for wind
+    turbine main bearing fatigue, Int. J. Prognostic. Health Manag. 11 (1) (2020).
+
+    +   [117] A.D. Dourado, F. Viana, Physics-informed neural networks for bias compensation
+    in corrosion-fatigue, AIAA Scitech 2020 Forum, 2020, p. 1149.
+
+    +   [118] S. Das, S. Dutta, C. Putsch, S. Majumdar, D. Adak, A data-driven physics-informed
+    method for prognosis of infrastructure systems: theory and application to crack
+    prediction, ASCE-ASME J Risk Uncertain. Eng. Syst., Part A: Civil Eng. 6 (2) (2020)
+    04020013.
+
+    +   [119] R. Giorgiani do Nascimento, Hybrid physics-informed neural networks
+    for dynamical systems (2020).
+
+    +   [120] R.G. Nascentino, K. Fricke, F.A. Viana, A tutorial on solving ordinary
+    differential equations using python and hybrid physics-informed neural network,
+    Eng. Appl. Artif. Intell. 96 (2020) 103996.
+
+    +   [121] A. Dourado, F.A. Viana, Physics-informed neural networks for corrosion-fatigue
+    prognosis. Proceedings of the Annual Conference of the PHM Society volume 11,
+    2019.
+
+    +   [122] S. Liu, B.B. Kappes, B. Amin-ahmadi, O. Benafan, X. Zhang, A.P. Stebner,
+    Physics-informed machine learning for composition-process-property alloy design:
+    shape memory alloy demonstration, arXiv preprint arXiv:2003.01878(2020).
+
+    +   [123] T. von Hahn, C.K. Mechefske, Knowledge informed machine learning using
+    a weibull-based loss function, arXiv preprint arXiv:2201.01769 (2022).
+
+    +   [124] Y. Chen, M. Rao, K. Feng, M.J. Zuo, Physics-informed lstm hyperparameters
+    selection for gearbox fault detection, Mech. Syst. Signal Process. 171 (2022)
+    108907.
+
+    +   [125] F.A. Viana, A.K. Subramaniyan, A survey of bayesian calibration and
+    physics-informed neural networks in scientific modeling, Arch. Comput. Methods
+    Eng. 28 (5) (2021) 3801–3830.
+
+    +   [126] L. Schröder, N.K. Dimitrov, D.R. Verelst, J.A. Sørensen, Using transfer
+    learning to build physics-informed machine learning models for improved wind farm
+    monitoring, Energies 15 (2) (2022) 558.
+
+    +   [127] M.A. Nabian, R.J. Gladstone, H. Meidani, Efficient training of physics-informed
+    neural networks via importance sampling, Comput.-Aided Civ. Infrastruct. Eng.
+    (2021).
+
+    +   [128] B.M. de Silva, J. Callaham, J. Jonker, N. Goebel, J. Klemisch, D. McDonald,
+    N. Hicks, J.N. Kutz, S.L. Brunton, A.Y. Aravkin, Physics-informed machine learning
+    for sensor fault detection with flight test data, arXiv preprint arXiv:2006.13380
+    (2020).
+
+    +   [129] S. Goswami, M. Yin, Y. Yu, G.E. Karniadakis, A physics-informed variational
+    deepnet for predicting crack path in quasi-brittle materials, Comput. Methods
+    Appl. Mech. Eng. 391 (2022) 114587.
+
+    +   [130] H. Sun, L. Peng, S. Huang, S. Li, Y. Long, S. Wang, W. Zhao, Development
+    of a physics-informed doubly fed cross-residual deep neural network for high-precision
+    magnetic flux leakage defect size estimation, IEEE Trans. Ind. Inf. 18 (3) (2021)
+    1629–1640.
+
+    +   [131] M. Russell, P. Wang, Physics-informed deep learning for signal compression
+    and reconstruction of big data in industrial condition monitoring, Mech. Syst.
+    Signal Process. 168 (2022) 108709.
+
+    +   [132] W. Li, D. Deka, Physics-informed graph learning for robust fault location
+    in distribution systems, arXiv e-prints (2021) arXiv–2107.
+
+    +   [133] C.J. Rojas, M.L. Bittencourt, J.L. Boldrini, Parameter identification
+    for a damage model using a physics informed neural network, arXiv preprint arXiv:
+    2107.08781 (2021).
+
+    +   [134] V.V. Vesselinov, Unsupervised and Physics-Informed Machine Learning
+    of Big and Noisy Data. Technical Report, Los Alamos National Lab.(LANL), Los Alamos,
+    NM (United States), 2019.
+
+    +   [135] E.J. Cross, S. Gibson, M. Jones, D. Pitchforth, S. Zhang, T. Rogers,
+    Physics-informed Machine Learning for Structural Health Monitoring, Structural
+    Health Monitoring Based on Data Science Techniques, Springer, 2022, pp. 347–367.
+
+    +   [136] S. Chakraborty, Simulation free reliability analysis: physics-informed
+    deep learning based approach, arXiv preprint arXiv:2005.01302 (2020).
+
+    +   [137] Z. Chen, J. Gao, W. Wang, Z. Yan, Physics-informed generative neural
+    network: an application to tropospheric temperature prediction, Environ. Res.
+    Lett. 16 (6) (2021) 065003.
+
+    +   [138] Z. Liu, Y. Chen, Y. Du, M. Tegmark, Physics-augmented learning: a new
+    paradigm beyond physics-informed learning, arXiv preprint arXiv:2109.13901 (2021).
+
+    +   [139] M. Raissi, P. Perdikaris, G.E. Karniadakis, Physics informed deep learning
+    (part i): data-driven solutions of nonlinear partial differential equations, arXiv
+    preprint arXiv:1711.10561 (2017).
+
+    +   [140] J. Siatysny, G.S. Misyris, S. Chatzivasileiadis, Physics-informed neural
+    networks for non-linear system identification for power system dynamics. 2021
+    IEEE Madrid PowerTech, IEEE, 2021, pp. 1–6.
+
+    +   [141] L. von Rueden, S. Mayer, K. Beckh, B. Georgiev, S. Giesselbach, R. Heese,
+    B. Kirsch, J. Pfrommer, A. Pick, R. Ramamurthy, et al., Informed machine learning-a
+    taxonomy and survey of integrating knowledge into learning systems, arXiv preprint
+    arXiv:1903.12394 (2019).
+
+    +   [142] A. Chakravarty, S. Misra, C.S. Rai, Visualization of hydraulic fracture
+    using physics-informed clustering to process ultrasonic shear waves, Int. J. Rock
+    Mech. Min. Sci. 137 (2021) 104568.
+
+    +   [143] S. Shen, H. Lu, M. Sadooghi, C. Hu, V. Nemani, A. Thelen, K. Webster,
+    M. Darr, J. Sidon, S. Kenny, A physics-informed deep learning approach for bearing
+    fault detection, Eng. Appl. Artif. Intell. 103 (2021) 104295.
+
+    +   [144] J. Marcus, Quantifying uncertainty in physics-informed variational autoencoders
+    for anomaly detection, Impact and Opportunities of Artificial Intelligence Techniques
+    in the Steel Industry: Ongoing Applications, Perspectives and Future Trends 1338
+    (2021) 28.
+
+    +   [145] M.J. Neuer, Quantifying uncertainty in physics-informed variational
+    autoencoders for anomaly detection. Cybersecurity workshop by European Steel Technology
+    Platform, Springer, 2020, pp. 28–38.
+
+    +   [146] B. Freeman, Y. Tang, Y. Huang, J. VanZwieten, Physics-informed turbulence
+    intensity infusion: a new hybrid approach for marine current turbine rotor blade
+    fault detection, Ocean Eng. 254 (2022) 111299.
+
+    +   [147] S. Goswami, C. Anitescu, S. Chakraborty, T. Rabczuk, Transfer learning
+    enhanced physics informed neural network for phase-field modeling of fracture,
+    Theor. Appl. Fract. Mech. 106 (2020) 102447.
+
+    +   [148] Y.A. Yucesan, F.A. Viana, Wind turbine main bearing fatigue life estimation
+    with physicsinformed neural networks. Annual Conference of the PHM Society volume
+    11, 2019.
+
+    +   [149] R. Tipireddy, A. Tartakovsky, Physics-informed machine learning method
+    for forecasting and uncertainty quantification of partially observed and unobserved
+    states in power grids, arXiv preprint arXiv:1806.10990 (2018).
+
+    +   [150] H.V. Tetali, K.S. Alagri, J.B. Harley, Wave physics informed dictionary
+    learning in one dimension. 2019 IEEE 29th International Workshop on Machine Learning
+    for Signal Processing (MLSP), IEEE, 2019, pp. 1–6.
+
+    +   [151] C. Sherman, R. Mellors, J. Morris, Subsurface monitoring via physics-informed
+    deep neural network analysis of ds. 53rd US Rock Mechanics/Geomechanics Symposium,
+    OnePetro, 2019.
+
+    +   [152] A. Tartakovsky, R. Tipireddy, Physics-informed machine learning method
+    for forecasting and uncertainty quantification of partially observed and unobserved
+    states in power grids. Proceedings of the 52nd Hawaii International Conference
+    on System Sciences, 2019.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '[153] D.A. Lizama Molina, H. Yoon, L. Jiang, L.J. Pyrak-Nolte, Acoustic emission
+    analysis of fracture initiation and propagation using physics-informed machine
+    learning methods. Technical Report Sandia National Lab.(SNL-NM), Albuquerque,
+    NM (United States), 2019.
+
+
+    [154] E. Baseman, N. DeBardeleben, S. Blanchard, J. Moore, O. Tchaknine, K. Ferreira,
+    T. Siddiqua, V. Sridharan, Physics-informed machine learning for dram error modeling.
+    2018 IEEE International Symposium on Defect and Fault Tolerance in VLSI and Nanotechnology
+    Systems (DFT), IEEE, 2018, pp. 1–6.
+
+
+    [155] M. Sepe, A. Graziano, M. Badora, A. Di Stazio, L. Belani, M. Compare, E.
+    Zio, A physics-informed machine learning framework for predictive maintenance
+    applied to turbomachinery assets (2021).
+
+
+    [156] Z. Lai, C. Mylonas, S. Nagarajaiah, E. Chatzi, Structural identification
+    with physics-informed neural ordinary differential equations, J. Sound Vib. 508
+    (2021) 116196.
+
+
+    [157] A.S. Krishnapriyan, A. Gholami, S. Zhe, R.M. Kirby, M.W. Mahoney, Characterizing
+    possible failure modes in physics-informed neural networks, arXiv preprint arXiv:2109.01050
+    (2021).
+
+
+    [158] R. Giorgiani Nascimento, F.A. Viana, Fleet prognosis with physics-informed
+    recurrent neural networks, arXiv e-prints (2019) arXiv–1901.
+
+
+    [159] S. Chakraborty, Transfer learning based multi-fidelity physics informed
+    deep neural network, J. Comput. Phys. 426 (2021) 109942.
+
+
+    [160] M.A. Chao, B.T. Adey, O. Fink, Implicit supervision for fault detection
+    and segmentation of emerging fault types with deep variational autoencoders, Neurocomputing
+    454 (2021) 324–338.
+
+
+    [161] W. De Groote, S. Van Hoecke, G. Crevecoeur, Prediction of follower jumps
+    in cam-follower mechanisms: the benefit of using physics-inspired features in
+    recurrent neural networks, Mech. Syst. Signal Process. 166 (2022) 108453.
+
+
+    [162] A. Gálvez, D. Sevérinate, D. Galar, Development and synchronisation of a
+    physics-based model for heating, ventilation and air conditioning system integrated
+    into a hybrid model, Int. J. Hydromechatron. 4 (3) (2021) 230–258.
+
+
+    [163] Y. Zheng, J. Li, R. Lin, H. Wu, K. Gao, L. Huang, Physics-guided machine
+    learning approach to characterizing small-scale fractures in geothermal fields.
+    Proceedings, forty-sixth workshop on geothermal reservoir engineering, Stanford
+    University, 2021.
+
+
+    [164] G.E. Karniadakis, I.G. Kevrekidis, L. Lu, P. Perdikaris, S. Wang, L. Yang,
+    Physics-informed machine learning, Nature Rev. Phys. 3 (6) (2021) 422–440.
+
+
+    [165] A. Boushaba, S. Cauet, A. Chamroo, E. Etien, L. Rambault, Comparative study
+    between physics-informed cnn and pca in induction motor broken bars msa detection,
+    Sensors 22 (23) (2022) 9949.
+
+
+    [166] W. Liao, D. Yang, Y. Wang, X. Ren, Fault diagnosis of power transformers
+    using graph convolutional network, CSEE J. Power Energy Syst. 7 (2) (2020) 241–249.
+
+
+    [167] Y. Kim, K. Na, B.D. Youn, A health-adaptive time-scale representation (htsr)
+    embedded convolutional neural network for gearbox fault diagnostics, Mech. Syst.
+    Signal Process. 167 (2022) 108575.
+
+
+    [168] B. Hou, D. Wang, Y. Chen, H. Wang, Z. Peng, K.-L. Tsui, Interpretable online
+    updated weights: optimized square envelope spectrum for machine condition monitoring
+    and fault diagnosis, Mech. Syst. Signal Process. 169 (2022) 108779.
+
+
+    [169] F. Guc, Y. Chen, Fault cause assignment with physics informed transfer learning,
+    IFAC-PapersOnLine 54 (20) (2021) 53–58.
+
+
+    [170] M. Xia, H. Shao, D. Williams, S. Lu, L. Shu, C.W. de Silva, Intelligent
+    fault diagnosis of machinery using digital twin-assisted deep transfer learning,
+    Reliab. Eng. Syst. Saf. 215 (2021) 107938.
+
+
+    [171] K. Zhou, E. Diehl, J. Tang, Deep convolutional generative adversarial network
+    with semi-supervised learning enabled physics elucidation for extended gear fault
+    diagnosis under data limitations, Mech. Syst. Signal Process. 185 (2023) 109772.
+
+
+    [172] T. Li, Z. Zhao, C. Sun, L. Cheng, X. Chen, R. Yan, R.X. Gao, Waveletkernelnet:
+    an interpretable deep neural network for industrial intelligent diagnosis, IEEE
+    Trans. Syst. Man Cybern.: Syst. 52 (4) (2021) 2302–2312.
+
+
+    [173] X. Yang, M. Bai, J. Lyu, J. Liu, D. Yu, Gas path fault diagnosis for gas
+    turbine group based on deep transfer learning, Measurement 181 (2021) 109631.
+
+
+    [174] V. Ewald, R.S. Venkat, A. Asokkumar, R. Benedictus, C. Boller, R.M. Groves,
+    Perception modelling by invariant representation of deep learning for automated
+    structural diagnostic in aircraft maintenance: a study case using deephms, Mech.
+    Syst. Signal Process. 165 (2022) 108153.
+
+
+    [175] C. Hu, B. Yang, J. Yan, Y. Xiang, S. Zhou, F.-Z. Xuan, Damage localization
+    in pressure vessel by guided waves based on convolution neural network approach,
+    J. Press. Vessel Technol. 142 (6) (2020).
+
+
+    [176] H. Bolandi, G. Sreekumar, X. Li, N. Lajnef, V.N. Boddeti, Physics informed
+    neural network for dynamic stress prediction, arXiv preprint arXiv:2211.16190
+    (2022).
+
+
+    [177] S. Cofre-Martel, E.L. Drogott, M. Modarres, Uncovering the underlying physics
+    of degrading system behavior through a deep neural network framework: the case
+    of remaining useful life prognosis, arXiv preprint arXiv:2006.09288 (2020).
+
+
+    [178] M. Star, K. McKeever, Remaining useful life estimation using neural ordinary
+    differential equations, Int. J. Prognost. Health Manag. 12 (2) (2021).
+
+
+    [179] R. Giorgiani do Nascimento, F. Viana, M. Corbetta, C.S. Kulkarni, Usage-based
+    lifting of lithium-ion battery with hybrid physics-informed neural networks. AIAA
+    AVIATION 2021 FORUM, 2021, p. 3046.
+
+
+    [180] S. Pepe, J. Liu, E. Quattrochi, F. Guicci, Neural ordinary differential
+    equations and recurrent neural networks for predicting the state of health of
+    batteries (2021).
+
+
+    [181] W. Deng, K.T. Nguyen, C. Gogu, J. Morio, K. Medjaher, Physics-informed lightweight
+    temporal convolution networks for fault prognostics associated to bearing stiffness
+    degradation. PHM Society European Conference volume 7, 2022, pp. 118–125.
+
+
+    [182] O.F. Eker, F. Camci, I.K. Jennions, A new hybrid prognostic methodology,
+    Int. J. Prognost. Health Manag. 10 (2) (2019).
+
+
+    [183] P. Li, X. Jia, J. Feng, F. Zhu, M. Miller, L.-Y. Chen, J. Lee, A novel scalable
+    method for machine degradation assessment using deep convolutional neural network,
+    Measurement 151 (2020) 107106.
+
+
+    [184] A.D.P. Dourado, F. Viana, Ensemble of hybrid neural networks to compensate
+    for epistemic uncertainties: A case study in system prognosis (2021).
+
+
+    [185] S. Pfingstl, M. Zimmermann, On integrating prior knowledge into gaussian
+    processes for prognostic health monitoring, Mech. Syst. Signal Process. 171 (2022)
+    108917.
+
+
+    [186] R.G. Nascimento, F.A. Viana, Cumulative damage modeling with recurrent neural
+    networks, AIAA J. 58 (12) (2020) 5459–5471.
+
+
+    [187] N. Hailing, P.G. Morato, J.S. Nielsen, P. Amirshafii, A. Kolios, P. Rigo,
+    Inspection and maintenance planning for offshore wind structural components: integrating
+    fatigue failure criteria with bayesian networks and markov decision processes,
+    Struct. Infrastruct. Eng. (2022) 1–19.
+
+
+    [188] Z. Ma, H. Liao, J. Gao, S. Nie, Y. Geng, Physics-informed machine learning
+    for degradation modeling of an electro-hydraulic actuator system, Reliab. Eng.
+    Syst. Saf. 229 (2023) 108898.
+
+
+    [189] S.W. Kim, I. Kim, J. Lee, S. Lee, Knowledge integration into deep learning
+    in dynamical systems: an overview and taxonomy, J. Mech. Sci. Technol. (2021)
+    1–12.
+
+
+    [190] E. Jan Hagendorfer, Knowledge incorporation for machine learning in condition
+    monitoring: A survey. 2021 International Symposium on Electrical, Electronics
+    and Information Engineering, 2021, pp. 230–240.
+
+
+    [191] J. Zhang, R.X. Gao, Deep learning-driven data curation and model interpretation
+    for smart manufacturing, Chinese J. Mech. Eng. 34 (1) (2021) 1–21.
+
+
+    [192] A. Thelen, X. Zhang, O. Fink, Y. Lu, S. Ghosh, B.D. Youn, M.D. Todd, S.
+    Mahadevan, C. Hu, Z. Hu, A comprehensive review of digital twin-part 1: modeling
+    and twinning enabling technologies, Struct. Multidiscip. Optim. 65 (12) (2022)
+    354.
+
+
+    [193] A. Thelen, X. Zhang, O. Fink, Y. Lu, S. Ghosh, B.D. Youn, M.D. Todd, S.
+    Mahadevan, C. Hu, Z. Hu, A comprehensive review of digital twin-part 2: roles
+    of uncertainty quantification and optimization, a battery digital twin, and perspectives,
+    Struct. Multidiscip. Optim. 66 (1) (2023) 1.
+
+
+    [194] H. Sarli, A.P. Tchangani, K. Medjaher, E. Pére, Data preparation and preprocessing
+    for broadcast systems monitoring in phm framework. 2019 6th International Conference
+    on Control, Decision and Information Technologies (CoDIT), IEEE, 2019, pp. 1444–1449.
+
+
+    [195] M.G. Kapteyn, D.J. Knezevic, K. Willcox, Toward predictive digital twins
+    via component-based reduced-order models and interpretable machine learning. AIAA
+    Scitech 2020 Forum, 2020, p. 0418.
+
+
+    [196] T. Ritto, F. Rochinha, Digital twin, physics-based model, and machine learning
+    applied to damage detection in structures, Mech. Syst. Signal Process. 155 (2021)
+    107614.
+
+
+    [197] J. Shen, J. Chowdhury, S. Banerjee, G. Terejanu, Machine fault classification
+    using hamiltonian neural networks, arXiv preprint arXiv:2301.02243 (2023).'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '+   [198] U. Leturiou, M. Mishra, D. Galar, O. Salgado, Synthetic data generation
+    in hybrid modelling of rolling element bearings, Insight-Non-Destruct. Test. Condit.
+    Monitor. 57 (7) (2015) 395–400.
+
+    +   [199] S. Xu, H.Y. Noh, Knowledge transfer between buildings for seismic damage
+    diagnosis through adversarial learning, arXiv preprint arXiv:2002.09513 (2020).
+
+    +   [200] F. Perez-Sanjines, C. Peeters, T. Verstraeten, J. Antoni, A. Nowé, J.
+    Helsen, Fleet-based early fault detection of wind turbine gearboxes using physics-informed
+    deep learning based on cyclic spectral coherence, Mech. Syst. Signal Process.
+    185 (2023) 109760.
+
+    +   [201] D.H. Green, A.W. Langham, R.A. Agustin, D.W. Quinn, S.B. Leeb, Physics-informed
+    feature space evaluation for diagnostic power monitoring, IEEE Trans. Ind. Inf.
+    (2022).
+
+    +   [202] R. Alizadeh, J.K. Allen, F. Mistree, Managing computational complexity
+    using surrogate models: a critical review, Res. Eng. Des. 31 (3) (2020) 275–298.
+
+    +   [203] G.C. Peng, M. Alber, A.B. Tepole, W.R. Cannon, S. De, S. Dura-Bernal,
+    K. Garikipati, G. Karniadakis, W.W. Lytton, P. Perdikaris, et al., Multiscale
+    modeling meets machine learning: what can we learn? Arch. Comput. Methods Eng.
+    28 (3) (2021) 1017–1037.
+
+    +   [204] R. Liu, B. Yang, E. Zio, X. Chen, Artificial intelligence for fault
+    diagnosis of rotating machinery: a review, Mech. Syst. Signal Process. 108 (2018)
+    33–47.
+
+    +   [205] R. Moradi, K.M. Groth, Modernizing risk assessment: a systematic integration
+    of pra and phm techniques, Reliab. Eng. Syst. Saf. 204 (2020) 107194.
+
+    +   [206] P. Wang, Z. Fan, D.O. Kazmer, R.X. Gao, Orthogonal analysis of multisensor
+    data fusion for improved quality control, J. Manuf. Sci. Eng. 139 (10) (2017).
+
+    +   [207] J. Jiao, M. Zhao, J. Lin, K. Liang, A comprehensive review on convolutional
+    neural network in machine fault diagnosis, Neurocomputing 417 (2020) 36–63.
+
+    +   [208] H. Chen, N. Hu, Z. Cheng, L. Zhang, Y. Zhang, A deep convolutional neural
+    network based fusion method of two-direction vibration signal data for health
+    state identification of planetary gearboxes, Measurement 146 (2019) 268–278.
+
+    +   [209] C. Jeong, Y. Yu, D. Mansour, V. Vesselinov, R. Meehan, A physics model
+    embedded hybrid deep neural network for drillstring washout detection, IADC/SPE
+    International Drilling Conference and Exhibition, OnePetro, 2020.
+
+    +   [210] R. Sepasdar, A. Karpatne, M. Shakiba, A data-driven approach to full-field
+    damage and failure pattern prediction in microstructure-dependent composites using
+    deep learning, arXiv preprint arXiv:2104.04485 (2021).
+
+    +   [211] K. Chen, J. Yu, H. Zhang, Z. Yu, J. He, Fault location in power distribution
+    systems via deep graph convolutional networks, IEEE J. Sel. Areas Commun. 38 (1)
+    (2019) 119–131.
+
+    +   [212] V.N. Ioannidis, A.G. Marques, G.B. Giannakis, A recurrent graph neural
+    network for multi-relational data, ICASSP 2019-2019 IEEE International Conference
+    on Acoustics, Speech and Signal Processing (ICASSP), IEEE, 2019, pp. 8157–8161.
+
+    +   [213] M. Zhao, M. Kang, B. Tang, M. Pecht, Deep residual networks with dynamically
+    weighted wavelet coefficients for fault diagnosis of planetary gearboxes, IEEE
+    Trans. Ind. Electron. 65 (5) (2017) 4290–4300.
+
+    +   [214] Y. Wang, X. Zheng, L. Wang, G. Lu, Y. Jia, K. Li, M. Li, Sensor fault
+    detection of vehicle suspension systems based on transmissibility operators and
+    neyman-pearson test, Reliab. Eng. Syst. Saf. (2023) 109067.
+
+    +   [215] Y. Xu, Y. Bao, Y. Zhang, H. Li, Attribute-based structural damage identification
+    by few-shot meta learning with inter-class knowledge transfer, Struct. Health
+    Monitor. 20 (4) (2021) 1494–1517.
+
+    +   [216] K. Tidriri, N. Chatti, S. Verron, T. Tiplica, Bridging data-driven and
+    model-based approaches for process fault diagnosis and health monitoring: a review
+    of researches and future challenges, Annu. Rev. Control 42 (2016) 63–81.
+
+    +   [217] A. Bills, S. Sripad, W.L. Fredericks, M. Guttenberg, D. Charles, E.
+    Frank, V. Viswanathan, Universal battery performance and degradation model for
+    electric aircraft, arXiv preprint arXiv:2008.01527 (2020).
+
+    +   [218] Y. Zhang, J. Zhang, Q. Wang, Z. Zhong, Dynet: dynamic convolution for
+    accelerating convolutional neural networks, arXiv preprint arXiv:2004.10694 (2020).
+
+    +   [219] A. Akrim, C. Gogu, T. Guillebot de Nerville, P. Strahle, B. Waffa Pagou,
+    M. Salaün, R. Vingerhoeds, A framework for generating large data sets for fatigue
+    damage prognostic problems, Proc. of 2022 IEEE International Conference on Prognostics
+    and Health Management (ICPHM) (2022).'
+  merge: -1
+  img_proc: true

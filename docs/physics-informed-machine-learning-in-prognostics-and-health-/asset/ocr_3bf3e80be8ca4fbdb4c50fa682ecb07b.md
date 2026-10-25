@@ -1,0 +1,43 @@
++   [110] H. El Mir, S. Perinpanayagam, Certification approach for physics informed machine learning and its application in landing gear life assessment. 2021 IEEE/ AIAA 40th Digital Avionics Systems Conference (DASC), IEEE, 2021, pp. 1–6.
++   [111] X. Yang, G. Tartakovsky, A. Tartakovsky, Physics-informed kriging: a physics-informed gaussian process regression method for data-model convergence, arXiv preprint arXiv:1809.03461 (2018).
++   [112] S. Xu, H.Y. Noh, Pymdran: physics-informed knowledge transfer between buildings for seismic damage diagnosis through adversarial learning, Mech. Syst. Signal Process. 151 (2021) 107374.
++   [113] R.G. Nascentino, M. Corbetta, C.S. Kulkarni, F.A. Viana, Hybrid physics-informed neural networks for lithium-ion battery modeling and prognosis, J. Power Sources 513 (2021) 230526.
++   [114] S. Goswami, M. Yin, Y. Yu, G. Karniadakis, A physics-informed variational deepnet for predicting the crack path in brittle materials, arXiv preprint arXiv: 2108.06905 (2021).
++   [115] F.A. Viana, R.G. Nascentino, A. Dourado, Y.A. Yucesan, Estimating model inadequacy in ordinary differential equations with physics-informed neural networks, Comput. Struct. 245 (2021) 106458.
++   [116] Y.A. Yucesan, F.A. Viana, A physics-informed neural network for wind turbine main bearing fatigue, Int. J. Prognostic. Health Manag. 11 (1) (2020).
++   [117] A.D. Dourado, F. Viana, Physics-informed neural networks for bias compensation in corrosion-fatigue, AIAA Scitech 2020 Forum, 2020, p. 1149.
++   [118] S. Das, S. Dutta, C. Putsch, S. Majumdar, D. Adak, A data-driven physics-informed method for prognosis of infrastructure systems: theory and application to crack prediction, ASCE-ASME J Risk Uncertain. Eng. Syst., Part A: Civil Eng. 6 (2) (2020) 04020013.
++   [119] R. Giorgiani do Nascimento, Hybrid physics-informed neural networks for dynamical systems (2020).
++   [120] R.G. Nascentino, K. Fricke, F.A. Viana, A tutorial on solving ordinary differential equations using python and hybrid physics-informed neural network, Eng. Appl. Artif. Intell. 96 (2020) 103996.
++   [121] A. Dourado, F.A. Viana, Physics-informed neural networks for corrosion-fatigue prognosis. Proceedings of the Annual Conference of the PHM Society volume 11, 2019.
++   [122] S. Liu, B.B. Kappes, B. Amin-ahmadi, O. Benafan, X. Zhang, A.P. Stebner, Physics-informed machine learning for composition-process-property alloy design: shape memory alloy demonstration, arXiv preprint arXiv:2003.01878(2020).
++   [123] T. von Hahn, C.K. Mechefske, Knowledge informed machine learning using a weibull-based loss function, arXiv preprint arXiv:2201.01769 (2022).
++   [124] Y. Chen, M. Rao, K. Feng, M.J. Zuo, Physics-informed lstm hyperparameters selection for gearbox fault detection, Mech. Syst. Signal Process. 171 (2022) 108907.
++   [125] F.A. Viana, A.K. Subramaniyan, A survey of bayesian calibration and physics-informed neural networks in scientific modeling, Arch. Comput. Methods Eng. 28 (5) (2021) 3801–3830.
++   [126] L. Schröder, N.K. Dimitrov, D.R. Verelst, J.A. Sørensen, Using transfer learning to build physics-informed machine learning models for improved wind farm monitoring, Energies 15 (2) (2022) 558.
++   [127] M.A. Nabian, R.J. Gladstone, H. Meidani, Efficient training of physics-informed neural networks via importance sampling, Comput.-Aided Civ. Infrastruct. Eng. (2021).
++   [128] B.M. de Silva, J. Callaham, J. Jonker, N. Goebel, J. Klemisch, D. McDonald, N. Hicks, J.N. Kutz, S.L. Brunton, A.Y. Aravkin, Physics-informed machine learning for sensor fault detection with flight test data, arXiv preprint arXiv:2006.13380 (2020).
++   [129] S. Goswami, M. Yin, Y. Yu, G.E. Karniadakis, A physics-informed variational deepnet for predicting crack path in quasi-brittle materials, Comput. Methods Appl. Mech. Eng. 391 (2022) 114587.
++   [130] H. Sun, L. Peng, S. Huang, S. Li, Y. Long, S. Wang, W. Zhao, Development of a physics-informed doubly fed cross-residual deep neural network for high-precision magnetic flux leakage defect size estimation, IEEE Trans. Ind. Inf. 18 (3) (2021) 1629–1640.
++   [131] M. Russell, P. Wang, Physics-informed deep learning for signal compression and reconstruction of big data in industrial condition monitoring, Mech. Syst. Signal Process. 168 (2022) 108709.
++   [132] W. Li, D. Deka, Physics-informed graph learning for robust fault location in distribution systems, arXiv e-prints (2021) arXiv–2107.
++   [133] C.J. Rojas, M.L. Bittencourt, J.L. Boldrini, Parameter identification for a damage model using a physics informed neural network, arXiv preprint arXiv: 2107.08781 (2021).
++   [134] V.V. Vesselinov, Unsupervised and Physics-Informed Machine Learning of Big and Noisy Data. Technical Report, Los Alamos National Lab.(LANL), Los Alamos, NM (United States), 2019.
++   [135] E.J. Cross, S. Gibson, M. Jones, D. Pitchforth, S. Zhang, T. Rogers, Physics-informed Machine Learning for Structural Health Monitoring, Structural Health Monitoring Based on Data Science Techniques, Springer, 2022, pp. 347–367.
++   [136] S. Chakraborty, Simulation free reliability analysis: physics-informed deep learning based approach, arXiv preprint arXiv:2005.01302 (2020).
++   [137] Z. Chen, J. Gao, W. Wang, Z. Yan, Physics-informed generative neural network: an application to tropospheric temperature prediction, Environ. Res. Lett. 16 (6) (2021) 065003.
++   [138] Z. Liu, Y. Chen, Y. Du, M. Tegmark, Physics-augmented learning: a new paradigm beyond physics-informed learning, arXiv preprint arXiv:2109.13901 (2021).
++   [139] M. Raissi, P. Perdikaris, G.E. Karniadakis, Physics informed deep learning (part i): data-driven solutions of nonlinear partial differential equations, arXiv preprint arXiv:1711.10561 (2017).
++   [140] J. Siatysny, G.S. Misyris, S. Chatzivasileiadis, Physics-informed neural networks for non-linear system identification for power system dynamics. 2021 IEEE Madrid PowerTech, IEEE, 2021, pp. 1–6.
++   [141] L. von Rueden, S. Mayer, K. Beckh, B. Georgiev, S. Giesselbach, R. Heese, B. Kirsch, J. Pfrommer, A. Pick, R. Ramamurthy, et al., Informed machine learning-a taxonomy and survey of integrating knowledge into learning systems, arXiv preprint arXiv:1903.12394 (2019).
++   [142] A. Chakravarty, S. Misra, C.S. Rai, Visualization of hydraulic fracture using physics-informed clustering to process ultrasonic shear waves, Int. J. Rock Mech. Min. Sci. 137 (2021) 104568.
++   [143] S. Shen, H. Lu, M. Sadooghi, C. Hu, V. Nemani, A. Thelen, K. Webster, M. Darr, J. Sidon, S. Kenny, A physics-informed deep learning approach for bearing fault detection, Eng. Appl. Artif. Intell. 103 (2021) 104295.
++   [144] J. Marcus, Quantifying uncertainty in physics-informed variational autoencoders for anomaly detection, Impact and Opportunities of Artificial Intelligence Techniques in the Steel Industry: Ongoing Applications, Perspectives and Future Trends 1338 (2021) 28.
++   [145] M.J. Neuer, Quantifying uncertainty in physics-informed variational autoencoders for anomaly detection. Cybersecurity workshop by European Steel Technology Platform, Springer, 2020, pp. 28–38.
++   [146] B. Freeman, Y. Tang, Y. Huang, J. VanZwieten, Physics-informed turbulence intensity infusion: a new hybrid approach for marine current turbine rotor blade fault detection, Ocean Eng. 254 (2022) 111299.
++   [147] S. Goswami, C. Anitescu, S. Chakraborty, T. Rabczuk, Transfer learning enhanced physics informed neural network for phase-field modeling of fracture, Theor. Appl. Fract. Mech. 106 (2020) 102447.
++   [148] Y.A. Yucesan, F.A. Viana, Wind turbine main bearing fatigue life estimation with physicsinformed neural networks. Annual Conference of the PHM Society volume 11, 2019.
++   [149] R. Tipireddy, A. Tartakovsky, Physics-informed machine learning method for forecasting and uncertainty quantification of partially observed and unobserved states in power grids, arXiv preprint arXiv:1806.10990 (2018).
++   [150] H.V. Tetali, K.S. Alagri, J.B. Harley, Wave physics informed dictionary learning in one dimension. 2019 IEEE 29th International Workshop on Machine Learning for Signal Processing (MLSP), IEEE, 2019, pp. 1–6.
++   [151] C. Sherman, R. Mellors, J. Morris, Subsurface monitoring via physics-informed deep neural network analysis of ds. 53rd US Rock Mechanics/Geomechanics Symposium, OnePetro, 2019.
++   [152] A. Tartakovsky, R. Tipireddy, Physics-informed machine learning method for forecasting and uncertainty quantification of partially observed and unobserved states in power grids. Proceedings of the 52nd Hawaii International Conference on System Sciences, 2019.

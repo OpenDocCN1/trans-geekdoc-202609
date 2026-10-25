@@ -1,0 +1,47 @@
+
+- [64] M. Sadoughi, C. Hu, 基于物理的深度学习用于旋转机械故障诊断的方法. IECON 2018-第44届IEEE工业电子学会年会, IEEE, 2018, pp. 5919–5923.
+- [65] H. Li, H.-Z. Huang, Y.-F. Li, J. Zhou, J. Mi, 基于多源信息融合的涡轮叶片失效物理可靠性预测. Appl. Soft. Comput. 72 (2018) 624–635.
+- [66] R. Swischuk, L. Mainini, B. Peherstorfer, K. Willcox, 基于投影的模型约简：面向物理机器学习的公式. Comput. Fluids 179 (2019) 704–717.
+- [67] R. Firoozi, S. Sattarzadeh, S. Dey, 极端快充下圆柱电池故障检测：一种基于物理的学习方法. arXiv preprint arXiv: 2105.02169 (2021).
+- [68] Y. Yu, H. Yao, Y. Liu, 面向航空器动力学仿真的基于物理的学习. 第10届健康管理与预知维护学会年会, PHM 2018, 健康管理与预知维护学会, 2018.
+- [69] T. Pfaff, M. Fortunato, A. Sanchez-Gonzalez, P.W. Battaglia, 基于图网络的网格仿真学习. arXiv preprint arXiv:2010.03409 (2020).
+- [70] S. Feng, Y. Xu, X. Han, Z. Li, A. Inecnik, 基于相场和深度学习的结构剩余寿命精确预测方法. Comput. Methods Appl. Mech. Eng. 383 (2021) 113885.
+- [71] D.P. Finegan, J. Zhu, X. Feng, M. Keyser, M. Ulmenfors, W. Li, M.Z. Bazant, S.J. Cooper, 数据驱动方法与基于物理的学习在提升电池安全性中的应用. Joule (2020).
+- [72] R. Rai, C.K. Sahu, 数据驱动还是物理推导？面向网物理系统 (CPS) 的混合物理引导机器学习技术综述. IEEE Access 8 (2020) 71050–71073.
+- [73] N. Muralidhar, J. Bu, Z. Cao, L. He, N. Ramakrishnan, D. Tafti, A. Karpatne, 面向稠密流体颗粒系统阻力预测的物理引导深度学习. Big Data 8 (5) (2020) 431–449.
+- [74] Z. Geng, Y. Wang, 基于地震属性数据的物理引导深度学习用于井筒不稳定地质钻探风险预测. Eng. Geol. 279 (2020) 105857.
+- [75] S.M. Razak, J. Cornelio, Y. Cho, H.-H. Liu, R. Vaidya, B. Jafarpour, 面向非常规油井稳健产量预测与诊断的物理引导深度学习预测模型. SPE/AAPG/SEG 非常规资源技术会议, OnePetro, 2021.
+- [76] J. Kandarickal, T. Schmitz, S. Smith, 面向机加工刀具寿命建模与工艺参数优化的物理引导逻辑分类. J. Manuf. Syst. 59 (2021) 522–534.
+- [77] C.T. Nguyen, S. Otterson, E. Oterkus, 基于普通状态相位论的二维结构物理引导机器学习模型. Theor. Appl. Fract. Mech. 112 (2021) 102872.
+- [78] J. Wang, Y. Li, R. Zhao, R.X. Gao, 面向机加工刀具磨损预测的物理引导神经网络. J. Manuf. Syst. 57 (2020) 298–310.
+- [79] L. Guo, J. Ye, B. Yang, 面向电动汽车的基于物理引导机器学习的网络攻击检测. IEEE Trans. Transp. Electrif. (2020).
+- [80] Z. Zhang, C. Sun, B. Guo, 考虑建模不确定性的基于迁移学习引导的贝叶斯模型更新用于损伤识别. Mech. Syst. Signal Process. 166 (2022) 108426.
+- [81] H. Sun, L. Peng, J. Lin, S. Wang, W. Zhao, S. Huang, 基于聚焦高阶SH导波EMAT的微裂纹缺陷定量：物理信息深度神经网络GUWNet. IEEE Trans. Ind. Inf. (2021).
+- [82] R. Wang, R. Yu, 面向动力系统的物理引导深度学习：综述. arXiv preprint arXiv:2107.01272 (2021).
+- [83] X. Jia, J. Willard, A. Karpatne, J. Read, J. Zwart, M. Steinbach, V. Kumar, 面向动力系统建模的物理引导RNN：湖温剖面仿真案例研究. 2019年SIAM国际数据挖掘会议论文集, SIAM, 2019, pp. 558–566.
+- [84] Z. Zhang, C. Sun, 基于物理引导机器学习的结构损伤识别：集成模式识别与有限元模型更新的方法论. Struct. Health Monitor. 20 (4) (2021) 1675–1688.
+- [85] R. Zhang, Y. Liu, H. Sun, 面向数据驱动地震响应建模的物理引导卷积神经网络(PhyCNN). Eng. Struct. 215 (2020) 110704.
+- [86] A. Daw, R.Q. Thomas, C.C. Carey, J.S. Read, A.P. Appling, A. Karpatne, 面向湖温建模不确定性量化的物理引导神经网络架构(PGA). 2020年SIAM国际数据挖掘会议论文集, SIAM, 2020, pp. 532–540.
+- [87] S. Pawar, O. San, B. Aksoylu, A. Rasheed, T. Kvamsdal, 使用简化理论的物理引导机器学习. Phys. Fluids 33 (1) (2021) 011701.
+- [88] Y. Yang, L. Sanehsi, H. Zhang, A. Roeder, J. Bowland, J. Crochet, C. Garrard, D. Mascarenas, 基于物理引导无监督机器学习和计算机视觉的数字视频测量中缆索振动全场全流实验模态模型估计. Struct. Control Health Monitor. 26 (6) (2019) e2358.
+- [89] A.I. Ozdagli, X. Koutsooulos, 面向动力系统的基于物理引导学习的模型损伤检测.
+- [90] Y. Chen, D. Huang, D. Zhang, J. Zeng, N. Wang, H. Zhang, J. Yan, 理论引导硬约束投影(HCP)：基于知识的数据驱动科学机器学习方法. J. Comput. Phys. 445 (2021) 110624.
+- [91] H. Yao, Y. Gao, Y. Liu, Fea-Net：面向高效力学响应预测的物理引导数据驱动模型. Comput. Methods Appl. Mech. Eng. 363 (2020) 112892.
+- [92] J. Chen, Y. Liu, 面向疲劳数据分析的概率物理引导机器学习. Expert Syst. Appl. 168 (2021) 114316.
+- [93] J. Chen, Y. Liu, 使用概率物理引导学习对增材制造Ti-6Al-4V疲劳性能进行预测. Addit. Manuf. 39 (2021) 101876.
+- [94] A. Karpatne, W. Watkins, J. Read, V. Kumar, 物理引导神经网络(PGNN)：湖温建模应用. arXiv preprint arXiv: 1710.11431 (2017).
+- [95] A.S. Zamzam, N.D. Sidiropoulos, 面向配电系统状态估计的物理感知神经网络. IEEE Trans. Power Syst. 35 (6) (2020) 4347–4356.
+- [96] A. Odot, R. Haferssas, S. Cotin, DeepPhysics：面向实时仿真的物理感知深度学习框架. arXiv preprint arXiv:2109.09491 (2021).
+- [97] H.E. Sánchez Sardi, 面向风力涡轮机的预知维护与健康感知模型预测控制 (2017).
+- [98] S. Pakravan, P.A. Mistani, M.A. Aragon-Calvo, F. Gibou, 使用物理感知神经网络求解反问题PDE. J. Comput. Phys. 440 (2021) 110414.
+- [99] S. Seo, C. Meng, Y. Liu, 面向稀疏观测动力学的物理感知差分图网络. 国际学习表征会议, 2019.
+- [100] A. Behjat, C. Zeng, R. Rai, I. Matei, D. Doermann, S. Chowdhury, 具有输入传输网络的物理感知学习架构用于预测建模. Appl. Soft. Comput. 96 (2020) 106665.
+- [101] E. Blasch, J.S. Tiley, D. Sparkman, S. Donegan, M. Cherry, 面向材料感知的数据融合方法. 信号处理、传感器/信息融合与目标识别XXIX 第11423卷, 国际光电学会, 2020, p. 114230K.
+- [102] I. Matei, C. Zeng, S. Chowdhury, R. Rai, J. de Kleer, 基于物理感知建模的四旋翼无人机之间气流相互作用控制. J. Intell. Robot. Syst. 101 (1) (2021) 1–21.
+- [103] Y. Shin, J. Darbon, G.E. Karniadakis, 关于物理信息神经网络的收敛性与泛化性. arXiv e-prints (2020) arXiv–2004.
+- [104] E. Kharazmi, Z. Zhang, G.E. Karniadakis, 面向偏微分方程求解的变分物理信息神经网络. arXiv preprint arXiv: 1912.00873 (2019).
+- [105] S. Talukdar, D. Deka, H. Dodi, D. Matarasi, M. Chertkov, M.V. Salapaka, 线性动力系统网络中的物理信息拓扑学习. Automatica 112 (2020) 108705.
+- [106] S. Guo, M. Agarwal, C. Cooper, Q. Tian, R.X. Gao, W.G. Grace, Y. Guo, 金属增材制造机器学习：迈向物理信息数据驱动范式. J. Manuf. Syst. 62 (2022) 145–163.
+- [107] Y.A. Yucesan, F.A. Viana, L. Manin, J. Mahfoud, 使用物理信息神经网络调整扭转振动阻尼器模型. Mech. Syst. Signal Process. 154 (2021) 107552.
+- [108] A.D. Jagtap, K. Kawaguchi, G.E. Karniadakis, 自适应激活函数加速深度与物理信息神经网络的收敛. J. Comput. Phys. 404 (2020) 109136.
+- [109] L. Borkowski, C. Sorini, A. Chattopadhyay, 具有正则化的面向物理信息约束的多轴塑性循环神经网络模型. Comput. Struct. 258 (2022) 106678.

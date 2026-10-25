@@ -1,0 +1,47 @@
+
+- [64] M. Sadoughi, C. Hu, A physics-based deep learning approach for fault diagnosis of rotating machinery. IECON 2018-44th Annual Conference of the IEEE Industrial Electronics Society, IEEE, 2018, pp. 5919–5923.
+- [65] H. Li, H.-Z. Huang, Y.-F. Li, J. Zhou, J. Mi, Physics of failure-based reliability prediction of turbine blades using multi-source information fusion, Appl. Soft. Comput. 72 (2018) 624–635.
+- [66] R. Swischuk, L. Mainini, B. Peherstorfer, K. Willcox, Projection-based model reduction: formulations for physics-based machine learning, Comput. Fluids 179 (2019) 704–717.
+- [67] R. Firoozi, S. Sattarzadeh, S. Dey, Cylindrical battery fault detection under extreme fast charging: a physics-based learning approach, arXiv preprint arXiv: 2105.02169 (2021).
+- [68] Y. Yu, H. Yao, Y. Liu, Physics-based learning for aircraft dynamics simulation. 10th Annual Conference of the Prognostics and Health Management Society, PHM 2018, Prognostics and Health Management Society, 2018.
+- [69] T. Pfaff, M. Fortunato, A. Sanchez-Gonzalez, P.W. Battaglia, Learning mesh-based simulation with graph networks, arXiv preprint arXiv:2010.03409 (2020).
+- [70] S. Feng, Y. Xu, X. Han, Z. Li, A. Inecnik, A phase field and deep-learning based approach for accurate prediction of structural residual useful life, Comput. Methods Appl. Mech. Eng. 383 (2021) 113885.
+- [71] D.P. Finegan, J. Zhu, X. Feng, M. Keyser, M. Ulmenfors, W. Li, M.Z. Bazant, S.J. Cooper, The application of data-driven methods and physics-based learning for improving battery safety, Joule (2020).
+- [72] R. Rai, C.K. Sahu, Driven by data or derived through physics? a review of hybrid physics guided machine learning techniques with cyber-physical system (cps) focus, IEEE Access 8 (2020) 71050–71073.
+- [73] N. Muralidhar, J. Bu, Z. Cao, L. He, N. Ramakrishnan, D. Tafti, A. Karpatne, Physics-guided deep learning for drag force prediction in dense fluid-particulate systems, Big Data 8 (5) (2020) 431–449.
+- [74] Z. Geng, Y. Wang, Physics-guided deep learning for predicting geological drilling risk of wellbore instability using seismic attributes data, Eng. Geol. 279 (2020) 105857.
+- [75] S.M. Razak, J. Cornelio, Y. Cho, H.-H. Liu, R. Vaidya, B. Jafarpour, A physics-guided deep learning predictive model for robust production forecasting and diagnostics in unconventional wells. SPE/AAPG/SEG Unconventional Resources Technology Conference, OnePetro, 2021.
+- [76] J. Kandarickal, T. Schmitz, S. Smith, Physics-guided logistic classification for tool life modeling and process parameter optimization in machining, J. Manuf. Syst. 59 (2021) 522–534.
+- [77] C.T. Nguyen, S. Otterson, E. Oterkus, A physics-guided machine learning model for two-dimensional structures based on ordinary state-based peridynamics, Theor. Appl. Fract. Mech. 112 (2021) 102872.
+- [78] J. Wang, Y. Li, R. Zhao, R.X. Gao, Physics guided neural network for machining tool wear prediction, J. Manuf. Syst. 57 (2020) 298–310.
+- [79] L. Guo, J. Ye, B. Yang, Cyber-attack detection for electric vehicles using physics-guided machine learning, IEEE Trans. Transp. Electrif. (2020).
+- [80] Z. Zhang, C. Sun, B. Guo, Transfer-learning guided bayesian model updating for damage identification considering modeling uncertainty, Mech. Syst. Signal Process. 166 (2022) 108426.
+- [81] H. Sun, L. Peng, J. Lin, S. Wang, W. Zhao, S. Huang, Microcrack defect quantification using a focusing high-order sh guided wave emat: the physics-informed deep neural network guwnet, IEEE Trans. Ind. Inf. (2021).
+- [82] R. Wang, R. Yu, Physics-guided deep learning for dynamical systems: a survey, arXiv preprint arXiv:2107.01272 (2021).
+- [83] X. Jia, J. Willard, A. Karpatne, J. Read, J. Zwart, M. Steinbach, V. Kumar, Physics guided rnns for modeling dynamical systems: A case study in simulating lake temperature profiles. Proceedings of the 2019 SIAM International Conference on Data Mining, SIAM, 2019, pp. 558–566.
+- [84] Z. Zhang, C. Sun, Structural damage identification via physics-guided machine learning: a methodology integrating pattern recognition with finite element model updating, Struct. Health Monitor. 20 (4) (2021) 1675–1688.
+- [85] R. Zhang, Y. Liu, H. Sun, Physics-guided convolutional neural network (phycnn) for data-driven seismic response modeling, Eng. Struct. 215 (2020) 110704.
+- [86] A. Daw, R.Q. Thomas, C.C. Carey, J.S. Read, A.P. Appling, A. Karpatne, Physics-guided architecture (pga) of neural networks for quantifying uncertainty in lake temperature modeling, Proceedings of the 2020 SIAM International Conference on Data Mining, SIAM, 2020, pp. 532–540.
+- [87] S. Pawar, O. San, B. Aksoylu, A. Rasheed, T. Kvamsdal, Physics guided machine learning using simplified theories, Phys. Fluids 33 (1) (2021) 011701.
+- [88] Y. Yang, L. Sanehsi, H. Zhang, A. Roeder, J. Bowland, J. Crochet, C. Garrard, D. Mascarenas, Estimation of full-field, full-flow experimental modal model of cable vibration from digital video measurements with physics-guided unsupervised machine learning and computer vision, Struct. Control Health Monitor. 26 (6) (2019) e2358.
+- [89] A.I. Ozdagli, X. Koutsooulos, Model-based damage detection through physics-guided learning for dynamic systems.
+- [90] Y. Chen, D. Huang, D. Zhang, J. Zeng, N. Wang, H. Zhang, J. Yan, Theory-guided hard constraint projection (hcp): acknowledge-based data-driven scientific machine learning method, J. Comput. Phys. 445 (2021) 110624.
+- [91] H. Yao, Y. Gao, Y. Liu, Fea-net: a physics-guided data-driven model for efficient mechanical response prediction, Comput. Methods Appl. Mech. Eng. 363 (2020) 112892.
+- [92] J. Chen, Y. Liu, Probabilistic physics-guided machine learning for fatigue data analysis, Expert Syst. Appl. 168 (2021) 114316.
+- [93] J. Chen, Y. Liu, Fatigue property prediction of additively manufactured ti-6al-4v using probabilistic physics-guided learning, Addit. Manuf. 39 (2021) 101876.
+- [94] A. Karpatne, W. Watkins, J. Read, V. Kumar, Physics-guided neural networks (pgnn): an application in lake temperature modeling, arXiv preprint arXiv: 1710.11431 (2017).
+- [95] A.S. Zamzam, N.D. Sidiropoulos, Physics-aware neural networks for distribution system state estimation, IEEE Trans. Power Syst. 35 (6) (2020) 4347–4356.
+- [96] A. Odot, R. Haferssas, S. Cotin, Deepphysics: a physics aware deep learning framework for real-time simulation, arXiv preprint arXiv:2109.09491 (2021).
+- [97] H.E. Sánchez Sardi, Prognostics and health aware model predictive control of wind turbines (2017).
+- [98] S. Pakravan, P.A. Mistani, M.A. Aragon-Calvo, F. Gibou, Solving inverse-pde problems with physics-aware neural networks, J. Comput. Phys. 440 (2021) 110414.
+- [99] S. Seo, C. Meng, Y. Liu, Physics-aware difference graph networks for sparsely-observed dynamics. International Conference on Learning Representations, 2019.
+- [100] A. Behjat, C. Zeng, R. Rai, I. Matei, D. Doermann, S. Chowdhury, A physics-aware learning architecture with input transfer networks for predictive modeling, Appl. Soft. Comput. 96 (2020) 106665.
+- [101] E. Blasch, J.S. Tiley, D. Sparkman, S. Donegan, M. Cherry, Data fusion methods for materials awareness. Signal Processing, Sensor/Information Fusion, and Target Recognition XXIX volume 11423, International Society for Optics and Photonics, 2020, p. 114230K.
+- [102] I. Matei, C. Zeng, S. Chowdhury, R. Rai, J. de Kleer, Controlling draft interactions between quadcopter unmanned aerial vehicles with physics-aware modeling, J. Intell. Robot. Syst. 101 (1) (2021) 1–21.
+- [103] Y. Shin, J. Darbon, G.E. Karniadakis, On the convergence and generalization of physics informed neural networks, arXiv e-prints (2020) arXiv–2004.
+- [104] E. Kharazmi, Z. Zhang, G.E. Karniadakis, Variational physics-informed neural networks for solving partial differential equations, arXiv preprint arXiv: 1912.00873 (2019).
+- [105] S. Talukdar, D. Deka, H. Dodi, D. Matarasi, M. Chertkov, M.V. Salapaka, Physics informed topology learning in networks of linear dynamical systems, Automatica 112 (2020) 108705.
+- [106] S. Guo, M. Agarwal, C. Cooper, Q. Tian, R.X. Gao, W.G. Grace, Y. Guo, Machine learning for metal additive manufacturing: towards a physics-informed data-driven paradigm, J. Manuf. Syst. 62 (2022) 145–163.
+- [107] Y.A. Yucesan, F.A. Viana, L. Manin, J. Mahfoud, Adjusting a torsional vibration damper model with physics-informed neural networks, Mech. Syst. Signal Process. 154 (2021) 107552.
+- [108] A.D. Jagtap, K. Kawaguchi, G.E. Karniadakis, Adaptive activation functions accelerate convergence in deep and physics-informed neural networks, J. Comput. Phys. 404 (2020) 109136.
+- [109] L. Borkowski, C. Sorini, A. Chattopadhyay, Recurrent neural network-based multiaxial plasticity model with regularization for physics-informed constraints, Comput. Struct. 258 (2022) 106678.
