@@ -1,0 +1,1182 @@
+- pgno: 0
+  md: "# Machine learning in electrochemical oxidation process: A mini-review\n\n\
+    Zonglin Li$^a$, Shihua Zou$^a$, Zining Wang$^a$, Georgeta Postole$^b$, Liang Hu$^{c,d}$,\
+    \ Hongying Zhao$^{a,*}$\n\n$^a$ School of Chemical Science and Engineering, and\
+    \ Shanghai Key Lab of Chemical Assessment and Sustainability, Tongji University,\
+    \ Shanghai 200092, China\n$^b$ Univ Lyon, Université Claude Bernard Lyon 1, CNRS,\
+    \ IRCELYON, F-69626, Villeurbanne, France\n$^c$ College of Computer Science and\
+    \ Technology, Tongji University, Shanghai 201804, China\n$^d$ DeepBlue Academy\
+    \ of Sciences, Shanghai 200336, China\n\n+   ARTICLE INFO\n+   \n+   Article history:\n\
+    +   Received 11 May 2024\n+   Revised 23 August 2024\n+   Accepted 3 October 2024\n\
+    +   Available online 5 October 2024\n+   \n+   Keywords:\n+   Machine learning\n\
+    +   Electrochemical oxidation\n+   Pollutant removal\n+   Lithium-ion battery\n\
+    +   Material synthesis\n\nABSTRACT\n\nIn recent years, machine learning (ML) techniques\
+    \ have demonstrated a strong ability to solve highly complex and non-linear problems\
+    \ by analyzing large datasets and learning their intrinsic patterns and relationships.\
+    \ Particularly in chemical engineering and materials science, ML can be used to\
+    \ discover microstructural composition, optimize chemical processes, and create\
+    \ novel synthetic pathways. Electrochemical processes offer the advantages of\
+    \ precise process control, environmental friendliness, high energy conversion\
+    \ efficiency and low cost. This review article provides the first systematic summary\
+    \ of ML in the application of electrochemical oxidation, including pollutant removal,\
+    \ battery remediation, substance synthesis and material characterization prediction.\
+    \ Hot trends at the intersection of ML and electrochemical oxidation were analyzed\
+    \ through bibliometrics. Common ML models were outlined. The role of ML in improving\
+    \ removal efficiency, optimizing experimental conditions, aiding battery diagnosis\
+    \ and predictive maintenance, and revealing material characterization was highlighted.\
+    \ In addition, current issues and future perspectives were presented in relation\
+    \ to the strengths and weaknesses of ML algorithms applied to electrochemical\
+    \ oxidation. In order to further support the sustainable growth of electrochemistry\
+    \ from basic research to useful applications, this review attempts to make it\
+    \ easier to integrate ML into electrochemical oxidation.\n\n© 2025 Published by\
+    \ Elsevier B.V. on behalf of Chinese Chemical Society and Institute of Materia\
+    \ Medica, Chinese Academy of Medical Sciences.\n\n# 1. Introduction\n\nThe field\
+    \ of machine learning (ML) is rapidly evolving, fueled by advances in computational\
+    \ power, algorithmic complexity and exponential growth in data availability [1].\
+    \ This evolution of ML has enabled it to become one of the beneficial means on\
+    \ scientific exploration and technological innovation. ML, an integral branch\
+    \ of artificial intelligence, encompasses a variety of algorithms capable of learning\
+    \ from data and making predictions or decisions [2]. Among these, linear regression,\
+    \ support vector machines (SVM) random forests (RF), artificial neural networks\
+    \ (ANN), and extreme gradient boosting trees (XGBoost) stand out for their adaptability\
+    \ and robustness [3-6]. Each method has unique advantages, ranging from the interpretability\
+    \ of linear regression to the predictive power of deep neural networks. ML has\
+    \ demonstrated extraordinary capabilities in deciphering complex patterns, improving\
+    \ prediction accuracy, and promoting innovation in different scientific fields\
+    \ [7].\n\nElectrochemical oxidation processes are of particular importance with\
+    \ the growing need for the treatment of environmental pollutants, the optimization\
+    \ of energy storage systems and the development of materials science [8,9]. Electrochemical\
+    \ oxidation processes are pivotal in addressing sustainability issues through\
+    \ the removal of contaminants, extending the life and efficiency of batteries,\
+    \ and synthesizing new materials with tailored properties [10,11]. However, the\
+    \ intricate dynamics of electrochemical reactions, influenced by numerous variables\
+    \ such as electrode material, electrolyte composition, and operating conditions,\
+    \ pose significant analytical and optimization challenges [12-14]. Traditional\
+    \ experimental approaches, while invaluable, are often time-consuming and may\
+    \ not capture the full spectrum of possible reaction pathways and outcomes.\n\n\
+    ML, a powerful tool for modelling complex non-linear relationships, has achieved\
+    \ unparalleled success in image recognition, natural language processing and predictive\
+    \ modelling, demonstrating their potential to reveal the complexity of electrochemical\
+    \ systems [15,16]. Zhang et al. developed an accurate battery prediction system\
+    \ by combining electrochemical impedance spectroscopy with gaussian process regression\
+    \ (GPR) algorithm. The entire spectrum was used as input to train a GPR model,\
+    \ which automatically de-"
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'termined spectral features that predict degradation and accurately predicted
+    the remaining battery lifetime without full information about the battery''s past
+    operating conditions [16]. The advantages of applying ML to electrochemical oxidation
+    and related fields are manifold. Large datasets are analyzed by ML algorithms
+    to identify patterns and relationships that are not immediately apparent to researchers,
+    thus optimizing reaction conditions and reducing the need for complex experiments
+    [17]. Sun et al. developed five ML models to predict the maximum value of the
+    reaction rate using multiple electrochemical reaction conditions and quantum parameters
+    of the target pollutant as input values. Subsequently, a particle swarm optimization
+    (PSO) algorithm was used to predict the optimal reaction conditions in reverse,
+    and the relative standard deviations of the predictions were verified to be <5%
+    through multiple experiments [18]. This predictive capability is especially advantageous
+    in the design, development, and optimization of novel materials for electrochemical
+    applications [19]. Furthermore, the flexibility of ML in dealing with different
+    types of data makes it an ideal tool for integrating information from a variety
+    of sources (e.g., experimental data, theoretical models, and computational simulations).
+    This approach can lead to a more comprehensive understanding of electrochemical
+    processes, from the macroscopic behavior of electrochemical oxidation to the microscopic
+    mechanisms at the electrode-electrolyte interface [20,21].
+
+
+    In conclusion, the convergence of ML and electrochemical oxidation is expected
+    to open up new frontiers in environmental management, energy storage, and material
+    science. In this work, we firstly analyzed the hotspots at the intersection of
+    ML and electrochemical oxidation through bibliometrics, highlighting on the importance
+    and research trends of ML in the four dimensions of the field of electrochemical
+    oxidation (pollutant removal, battery remediation, substance synthesis, and prediction
+    of material characterization). We then outlined the mathematical principles and
+    concepts of common ML algorithms including multivariate linear regression (MLR),
+    SVM, XGBoost, ANN and RF. Subsequently, the applications of ML models in data
+    analysis prediction capabilities in the four areas mentioned above were discussed,
+    including predictive modelling, process control and material surface reaction
+    mechanism prediction. This underscores the promising outlook of ML in these key
+    domains. Finally, based on the results of the review, we presented future perspectives
+    on data monitoring, model improvement, and autonomous detection with a special
+    focus on the strengths and weaknesses of different ML methods applied to different
+    areas in electrochemical oxidation. As such, this review aims to provide new paths
+    for environmental management, energy innovation, and sustainable development.
+
+
+    # ## 2. Bibliometric analysis
+
+
+    Although much attention has been given to ML combined electrochemical oxidation,
+    no studies have systematically summarized the mechanism and application of ML
+    in electrochemical oxidation. Moreover, no previous review used the scientometric
+    approach to map out the linkage or relationships among published papers in this
+    field. In order to bridge these gaps in extant literature, mine high-frequency
+    research hotspots in the field of ML in electrochemical oxidation, and explore
+    possible mechanisms and applications in this field, this study used CiteSpace
+    software to conduct a visual bibliometric analysis. Research trends and emerging
+    hotspots in the application of ML to electrochemical oxidation can be identified
+    through CiteSpace. The co-occurrences of citations and keywords are analyzed,
+    revealing the primary research themes within the field and their evolution over
+    time [22-24]. This not only facilitates a deeper understanding of the dynamics
+    of ML applied in electrochemical oxidation but also effectively guides future
+    re-
+
+
+    search directions, enhancing the systematic and prospective nature of studies.
+
+
+    Based on CiteSpace software platform, the methods of bibliometrics, statistical
+    analysis of data, keyword co-occurrence visualization, clustering and citation
+    burst detection were adopted. The version of CiteSpace in this study was CiteSpace
+    6.1.R6. The specific operation settings were as follows: Keywords were set as
+    nodes, respectively, for keyword co-occurrence and co-citation network mapping.
+    The modified g-index in each slice was used for selection criteria. Clustering
+    modes was implemented by the log-likelihood ratio (LLR) algorithm. In addition,
+    the citation report function of web of science platform was used to have access
+    to annual number of published papers. Literature search strategy was described
+    in Text S1 (Supporting information). The flowchart of the bibliometric analysis
+    using CiteSpace was shown in Fig. S1 (Supporting information).
+
+
+    302 documents were found in the database of web of science core collection from
+    2013 to 2022. As shown in Fig. S1, it can be found that the number of literatures
+    published in this research field increased slowly and the number of articles per
+    year did not exceed 10 before 2019 (7 articles in 2018). From 2019 to 2021, the
+    number of published papers raised by >20 per year. The most significant amplification
+    of research in this field appeared from 2021 to 2022. From 2019 to 2022, 276 research
+    studies were published, accounting for 91% of all the included studies published
+    in the last 10 years. In general, the number of publications in the field of ML
+    applied to electrochemical oxidation has showed a growth trend since 2013. It
+    can be seen that this field has become a hot research field and has received widespread
+    attention.
+
+
+    Keywords are precise generalizations of an article. The network (Fig. S2 in Supporting
+    information) consists of nodes and links. The size of the node reflects the number
+    of documents, namely the frequency of occurrence, containing the labelled keywords
+    [25,26]. Table S1 (Supporting information) summarized top 20 frequently used keywords
+    in the field, among which the most frequently used is ML, which is mentioned up
+    to 113 times. Followed by degradation, model, performance, oxidation, lithium-ion
+    battery, etc., which have been used >25 times in the literature since 2014. These
+    words macroscopically reflect the research framework for electrochemical oxidation
+    related applications through ML. It also can be seen keywords, such as electrocatalyst,
+    electrode, oxygen reduction, mechanism, prognostics (Table S1), reflecting that
+    the research on electrode materials and surface reaction mechanisms in this field
+    has been a research hotspot in recent years.
+
+
+    The articles with the same research content and the same citation are clustered.
+    The greater the number of co-cited articles, the greater the correlation between
+    the documents, and the higher the probability of clustering into one category.
+    Fig. S3 and Table S2 (Supporting information) show that the clustering results
+    include lithium-ion batteries, CO2 reduction, ML, predict, etc. The largest cluster
+    (#0) has 68 keywords within and a S value of 0.636, labeled as lithium-ion batteries,
+    which includes keywords, such as degradation (2014), prediction (2015), diagnosis
+    (2018), health estimation (2021) (Fig. S4 in Supporting information). It can be
+    found that CO2 reduction in the results is clustered into a single group and as
+    the second largest category. Moreover, as two separate clusters, ANN and predict
+    contain keywords such as extraction removal method, cathode material, graphite
+    anode that are highly related to electrochemical mechanisms and ML algorithms.
+
+
+    Fig. S5 (Supporting information) presents the top 25 keywords with the strongest
+    citation bursts. Among them, the first strongest burst keyword is carbon with
+    beginning year 2019, which reflects that most studies focus on carbon related
+    ML. More importantly, several keywords, for example, ion battery, electroreduction,
+    electrooxidation, CO2 reduction, water oxidation, related to electrochemical oxidation
+    have indicated a relatively strong burst since'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/3aa35d4c40b6a535721ef39907027cd0_2_0.png)
+
+
+    Fig. 1. An overview of application in ML in electrochemical oxidation.
+
+
+    2021. And these keywords are hotly researched until 2023. Thus, ML research predicting
+    applications related to electrochemical oxidation may be the focus of future research.
+
+
+    In general, the interdisciplinary research at the intersection of electrochemistry
+    and ML exhibits a noticeable growth trend, signifying widespread attention to
+    this field. Keywords such as degradation, model, performance, oxidation, lithium-ion
+    battery, and CO2 reduction reveal the thematic framework of the cross-disciplinary
+    exploration between electrochemistry and ML. Therefore, ML has proven to be an
+    effective technology applied in electrochemistry. As shown in Fig. 1, based on
+    the results of bibliometric analysis, this review article provided a systematic
+    overview of recent advances in environmental applications of ML for electrochemical
+    pollutant treatment, battery repair and degradation, electrochemical generation
+    and synthesis, and surface mechanism analysis of materials.
+
+
+    # 3. Mainly machine learning algorithms in electrochemical oxidation
+
+
+    This section analyzed and summarized the basic theory of common ML algorithms,
+    including MLR and typical nonlinear regression (NR) algorithms such as SVM, XGBoost,
+    ANN and RF.
+
+
+    The MLR model determines the optimal parameter estimates by minimizing the discrepancy
+    between the actual observed values and the predicted values of model (usually
+    the sum of squared differences). This model is capable of assessing and interpreting
+    the weight of each independent variable with respect to the dependent variable
+    [27]. Within the context of electrochemical oxidation, MLR can be utilized to
+    understand how various process parameters such as current density, pH value, electrode
+    material, and treatment time influence the efficiency of electrochemical oxidation.
+    By analyzing data collected from experimental processes, MLR aids in predicting
+    the outcomes of electrochemical treatment under varying conditions and in optimizing
+    process parameters to achieve maximum efficiency [28]. The multiple linear regression
+    equation is a mathematical model used to describe the linear relationship between
+    a dependent variable (Y) and multiple independent variables (X1, X2, ..., Xn).
+    The equation is typically represented as follows (Eq. 1):
+
+
+    ```
+
+    Y = \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3 + \cdots + \beta_n X_n + \varepsilon
+
+    ```
+
+
+    where \beta_j (j = 1, 2, 3, ..., k) represents the regression coefficient, while
+    \varepsilon denotes the error component.
+
+
+    NR is a form of regression analysis where observed data is modelled by a function
+    that is a nonlinear combination of the model
+
+
+    ![](img/3aa35d4c40b6a535721ef39907027cd0_2_1.png)
+
+
+    Fig. 2. Schematic diagram of SVM, ANN, RF, and XGBoost algorithms.
+
+
+    parameters and depends on one or more independent variables. NR is particularly
+    useful in environmental applications, as the relationships between variables are
+    often not linear. This type of regression allows for more accurate modeling and
+    prediction of complex processes [29]. Nonlinear models can be generally expressed
+    in the form (Eq. 2):
+
+
+    ```
+
+    Y = f(x, \theta) + \varepsilon
+
+    ```
+
+
+    where Y represents the response variable, while f denotes the function employed.
+    The x indicates inputs, \theta symbolizes the parameters that require estimation,
+    and \varepsilon refers to the error component. If the second derivative of the
+    function with respect to any parameter is non-zero, then that parameter is categorized
+    as a nonlinear parameter [30]. Based on that principle, numerous models with superior
+    performance for addressing nonlinear problems have been developed, such as SVM,
+    ANN, RF, and XGBoost, as shown in Fig. 2.
+
+
+    As a general ML algorithm, the SVM idea was originally proposed by Vapnik and
+    Chervonenkis in 1963 [31]. With constant improvement, SVM have emerged as a standard
+    algorithm for ML, pattern recognition, and data fitting, and they are now applied
+    to a wide range of real-world issues. SVM is based on finding a dividing hyperplane
+    in the sample space based on the training set, thus differentiating different
+    samples. The hyperplane in the sample space and the distance from any point to
+    the hyperplane are denoted as Eqs. 3 and 4, respectively [4]:
+
+
+    ```
+
+    \omega^T x + b = 0
+
+    ```
+
+
+    ```
+
+    r = \frac{|\omega^T x + b|}{\|\omega\|}
+
+    ```
+
+
+    where \omega is the normal vector, which determines the direction of the hyperplane
+    and b is the displacement term, which determines the distance between the hyperplane
+    and the origin. If a hyperplane can correctly classify the training set, then
+    the margin of the support vectors can be represented as Eq. 5. To find the hyperplane
+    with the maximum margin, it is necessary to maximize Eq. 5. Consequently, this
+    forms the fundamental expression of SVM, as represented by Eq. 6, which is the
+    minimization of 1/\gamma. In practical scenarios, the original dataset may not
+    always be linear. Therefore, when there is no hyperplane that can correctly classify
+    the dataset in the original space, kernel functions are employed to map the samples
+    from the original space to a higher-dimensional feature'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'space. Thus, the equation is further derived as Eq. 7 [4].
+
+
+    ```
+
+    Y = \frac{1}{\|\omega\|} \tag{5}
+
+    ```
+
+
+    ```
+
+    \min_{w,b} \frac{1}{2} \|\omega\|^2 \tag{6}
+
+    ```
+
+
+    ```
+
+    \min_{w,b} \frac{1}{2} \|\omega\|^2 + C \sum_{i=1}^m l_e(f(x_i) - y_i)) \tag{7}
+
+    ```
+
+
+    where \(\omega\) represents the regularization function, and \(l_e\) is the epsilon-insensitive
+    loss function.
+
+
+    In summary, the SVM model employs a learning strategy based on maximizing the
+    margin to map original samples into a higher-dimensional space, thereby finding
+    the optimal hyperplane to solve nonlinear scientific problems.
+
+
+    XGBoost represents an advanced implementation of gradient boosting algorithms,
+    popular for its excellent performance in various predictive modelling tasks [32,33].
+    Designed for efficiency, flexibility, and portability, XGBoost operates by sequentially
+    constructing a series of decision trees, each correcting the errors of the previous
+    one, thereby enhancing the predictive accuracy of the model. The algorithm includes
+    regularization parameters, which help prevent overfitting and make it robust to
+    noise in the data [34]. The XGBoost model is defined by a regularized learning
+    objective that combines a loss function with a term that penalizes complexity,
+    as follows (Eq. 8):
+
+
+    ```
+
+    Z(x_t) = \sum_{i=1}^n l(y_i, \hat{y}_i^{t-1} + f_t(x_i)) + \Omega(f_t) \tag{8}
+
+    ```
+
+
+    where, \(\hat{y}_i\) is the prediction for the i-th instance, \(y_i\) is the corresponding
+    target, l represents a differentiable convex loss function that measures the discrepancy
+    between the prediction \(\hat{y}_i\) and target \(y_i\), \(\hat{y}_i^{t-1}\) is
+    the prediction from t - 1 tree, and \(\Omega\) presents the regression tree function
+    used for regularization of the model. The inclusion of additional regularization
+    terms helps to smooth the learned weights, thereby avoiding overfitting. The regularization
+    term \(\Omega(f_t)\) is defined as follows (Eq. 9):
+
+
+    ```
+
+    \Omega(f_t) = \gamma T + \frac{1}{2} \lambda \|\omega\|^2 \tag{9}
+
+    ```
+
+
+    where, \(\gamma\) is a parameter that controls the complexity of the tree, T is
+    the number of leaves in the tree, \(\lambda\) is a parameter for regularization
+    on the leaf weights, and \(\omega\) are the leaf weights.
+
+
+    In XGBoost, the model is trained additively, where each tree \(f_t\) is added
+    to minimize the loss function l(t). The process involves using first and second-order
+    gradient statistics on the loss function to find the best tree structure at each
+    iteration. The optimization of the objective function is performed using a second-order
+    approximation, which allows for a quick and effective optimization. When an instance
+    lacks the feature required for splitting in XGBoost, the model classifies it in
+    a default direction, which is determined during the learning process. This approach
+    enables the model to effectively handle missing values and enhances its robustness.
+
+
+    ANNs have emerged as a powerful tool in the field of electrochemical oxidation.
+    Their ability to learn complex patterns and predict outcomes makes them ideal
+    for optimizing and understanding various electrochemical processes. ANNs are computational
+    models inspired by the human brain, consisting of interconnected nodes or neurons
+    that process information [35,36]. ANNs typically consist of an input layer, one
+    or more hidden layers, and an output layer. Each layer contains a number of neurons,
+    and the neurons are interconnected with weights that are adjusted during the training
+    phase. The basic formula for the output of a neuron is given by (Eq. 10):
+
+
+    ```
+
+    y = f(\sum (w_i \cdot x_i) + b) \tag{10}
+
+    ```
+
+
+    where \(x_i\) and \(y\) are input and output, \(w_i\) is weight, b is bias term
+    and f is activation function. ANNs are trained using a dataset that contains input-output
+    pairs. During training, the network adjusts its weights and biases to minimize
+    the error between the predicted and actual outputs. The backpropagation algorithm
+    is commonly used for training, which involves propagating the error back through
+    the network to update the weights [37].
+
+
+    RF is a bagging ensemble learning method developed from decision tree algorithms.
+    In this technology, each tree in the forest is trained on a random subset of data
+    and replaced, increasing the diversity between trees and improving the accuracy
+    and robustness of the model. This ensemble learning method operates by constructing
+    multiple decision trees during the training period and outputs the mode of the
+    classes (for classification) or the mean prediction (for regression) of the individual
+    trees. RF demonstrates convergence properties to achieve a lower generalization
+    error, as expressed in Eqs. 11–13 [38].
+
+
+    ```
+
+    mg = (X, Y) = \alpha v_k l(h_k(X) = Y) - \max_{j \neq Y} \alpha v_k (h_k(X) =
+    j) \tag{11}
+
+    ```
+
+
+    ```
+
+    PE^* = P_{X,Y} (mg(X, Y) < 0) \tag{12}
+
+    ```
+
+
+    ```
+
+    P_{X,Y} \left( P_\Theta(h(X, \Theta) = Y) - \max_{j \neq Y} h(X, \Theta) = j \right)
+    < 0 \tag{13}
+
+    ```
+
+
+    Eq. 11 defines the margin function for RF. It considers a set of classifiers \(h_1(x),
+    h_2(x), ..., h_k(x)\), trained on a dataset randomly drawn from the distribution
+    of random vectors X and Y. \(l(\cdot)\) represents an indicator function. The
+    margin "mg" measures the extent to which the average vote for the correct class
+    in X, Y surpasses the average vote for any other class. A larger margin indicates
+    a higher confidence in classification. The generalization error is given by Eq.
+    12, which represents the probability of a random input X being misclassified in
+    a RF (\(PE^* < 0\)). Ideally, this probability should be as low as possible. In
+    RF, \(h_k(X) = h(X, \Theta_k)\), where for a large number of trees, as the quantity
+    of trees increases, nearly all sequences \(\Theta_1, ..., PE^*\) converge to Eq.
+    13. This implies that with an increasing number of trees, the generalization error
+    rate \(PE^*\) of the RF will converge to a fixed value, leading to more accurate
+    model predictions. The flowchart of the application of these five common ML algorithms
+    is shown in Fig. S6 (Supporting information).
+
+
+    # 4. Application of electrochemical oxidation combined with machine learning
+
+
+    The integration of ML algorithms in the field of electrochemical oxidation is
+    increasingly receiving attention. In line with the previously mentioned bibliometric
+    analysis, a comprehensive review of the application mechanisms of common ML algorithms
+    in areas such as pollutant treatment, battery restoration, electrochemical synthesis,
+    and material characterization analysis has been conducted. These algorithms play
+    a crucial role in enhancing the understanding of electrochemical processes and
+    improving the overall efficiency and effectiveness of electrochemical applications.
+
+
+    # 4.1. Electrochemical treatment of pollutants
+
+
+    ML has been widely used in the field of electrochemical pollutant treatment. These
+    algorithms have shown promising results in a variety of applications, including
+    predicting pollutant concentrations, optimizing treatment processes and analyzing
+    the complex interactions between various factors in electrochemical systems [18].
+
+
+    Sun et al. evaluated the performance of models trained with pollutant characteristics
+    and reaction conditions as input features,'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/3aa35d4c40b6a535721ef39907027cd0_4_0.png)
+
+
+    Fig. 3. (a) Performance ($R^2$) of the models trained by both pollutant characteristics
+    and reaction conditions as input features based on five different algorithms (10-fold
+    cross-validation). (b) XGBoost models trained by both pollutant characteristics
+    and reaction conditions as input features. (c) The schematic flowchart of inverse
+    design based on the PSO algorithm. (d) Experimental verification (kinetic plots)
+    for electrochemical oxidation of phenol under the optimized conditions derived
+    from the ML framework for inverse design. (e) The maximization of $k$ for electrochemical
+    oxidation of phenol. (a-e) are reproduced with permission [18]. Copyright 2023,
+    American Chemical Society. $R^2$ for the simulation by both back propagation neural
+    network physical modeling process (BP-ANN-P) and first order law of (f) initial
+    norfloxacin (NOR) concentration, (g) current density and (h) initial pH. (f-h)
+    are reproduced with permission [39]. Copyright 2020, Elsevier.
+
+
+    using five common ML algorithms and 10-fold cross-validation [18]. The results
+    showed that the XGBoost algorithm provided the best fit, evidenced by its superior
+    $R^2$ values, while ANN model exhibited overfitting, as illustrated in Fig. 3a.
+    Comparative analysis of four models'' predictive performance further confirmed
+    XGBoost''s superiority (Fig. 3b). Subsequently, the PSO algorithm was employed
+    to iteratively adjust the positions and velocities of ions to find optimal reaction
+    conditions, represented as a swarm of particles each indicating a combination
+    of reaction conditions, with initial positions and velocities denoting the values
+    of reaction conditions and their movement speed in the search space, respectively
+    (Figs. 3c and d) [18]. The trained XGBoost model was used to predict reaction
+    rates for each particle, with these predictions serving as the return values of
+    the fitness function. The fitness of each particle was calculated, recording the
+    best positions found by each particle (pBest) and the global best position among
+    all particles (gBest). Velocities and positions were adjusted based on pBest and
+    gBest to find the optimal solution, with the process continuing until reaching
+    a maximum number of iterations or identifying the optimal conditions, thereby
+    enhancing the efficiency and accuracy of identifying reaction conditions. As shown
+    in Fig. 3e, the relative error between the simulated value and the experimental
+    value is 4.03%, and the model fitting performance is good [18]. Yu et al. used
+    BP-ANN-P, with four inputs (initial NOR concentration, initial pH value, current
+    density, and experiment time) and total organic carbon removal rate as the sole
+    output, to demonstrate overall prediction accuracy of the model. Compared to first-order
+    kinetic fitting results of conventional models, the BP-ANN-P
+
+
+    achieved higher $R^2$ values in most cases, improving fitting accuracy by 1.619
+    to 127.137 times, as shown in Figs. 3f-h. Despite a decrease in the ANN model''s
+    $R^2$ with an initial NOR concentration of 200 mg/L (Fig. 3f), indicating that
+    the effective sample size (86 samples) affects model accuracy, the $R^2$ value
+    of the BP-ANN-P (0.969) remained higher than that of first-order kinetics (0.922)
+    through the simulation of other five random dates. Meanwhile, the same conclusion
+    (higher $R^2$ value for BP-ANN-P) was found on the comparison results of current
+    density and initial pH factor, respectively (Figs. 3g and h) [39]. It shows the
+    superiority of BP-ANN-P in modeling degradation performance. Similarly, Rumky
+    et al. assessed the relationship between different anode characteristics such
+    as anode material and surface area, and the removal of chemical oxygen demand
+    (COD), dissolved organic carbon (DOC), and color in various wastewater treatment
+    plants. Based on a range of process characteristics considered, including electrode
+    spacing, system pH, reactor volume, current density, and voltage, and combined
+    with MLR modeling, it was determined that in electro-oxidation, the removal of
+    both COD and color is dependent on the system''s reaction time, while the removal
+    of DOC is closely related to reactor volume. This MLR algorithm aids in identifying
+    the most significant factors and optimizing the treatment process for improved
+    performance [40]. Foroughi et al. used a three-dimension electrochemical system
+    for the treatment of tetracycline-containing wastewater. The model of least squares
+    SVM predicted that about 90.42% $\pm$ 2.3% of tetracycline was removed under optimal
+    conditions (tetracycline concentration of 84 mg/L, pH 4.8, and current density
+    of 15.72 mA/cm$^2$),'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'which was close to the predicted value [41]. This means that many ML algorithms
+    have been fully applied in the field of environmental protection, especially in
+    the treatment of electrochemical pollutants.
+
+
+    The integration of ML in electrochemical processes introduces innovative solutions
+    for pollutant detection, removal optimization, and predictive performance in water
+    treatment technologies. Through the application of ML algorithms, researchers
+    are better equipped to predict the rates of pollutants removal in electrochemical
+    oxidation, facilitating the development of efficient electrodes for pollutant
+    detection and removal.
+
+
+    # 4.2. Rehabilitation of lithium-ion battery
+
+
+    Lithium-ion batteries have become an indispensable component in laptops and smartphones,
+    playing a critical role in stabilizing grids powered by renewable sources such
+    as solar and wind energy [42]. As market demand surges, so do the requirements
+    for lithium-ion batteries. However, one challenge hindering the rapid advancement
+    of battery technology is the time-consuming process of testing and monitoring
+    battery health, which impacts battery lifespan [43]. Consequently, there is an
+    imperative need to devise improved methods for predicting battery life. The application
+    of ML in predicting the lifespan of lithium-ion batteries has gradually entered
+    researchers’ purview, including state of health prediction, state of charge (SOC)
+    estimation, and heat generation rate (HGR) prediction. These algorithms offer
+    a pathway to optimize their us-
+
+
+    age, extend their longevity, and contribute to a more sustainable energy future.
+
+
+    Thelen and colleagues accurately estimated the likelihood of lithium-ion battery
+    capacity and the state of three main degradation modes by training ML models using
+    limited early-life experimental data obtained through cyclic testing and simulated
+    data from a half-cell model [20]. As shown in Fig. 4a, the hierarchical prediction
+    of battery degradation allows for the assessment of capacity and power fade (Level
+    1) and the prediction of three degradation modes (Level 2) caused by various adverse
+    chemical and physical processes (Level 3) such as graphite exfoliation, electrolyte
+    decomposition, electrode particle cracking, as well as stress factors accelerating
+    degradation modes such as operational time, temperature, current load, mechanical
+    stress (Level 4). Specifically, the loss of lithium inventory (LLI) degradation
+    mode leads to battery capacity fade, including lithium plating and solid electrolyte
+    interphase (SEI) growth consuming lithium ions, reducing the number of particles
+    available for charge transfer. Loss of active positive material (LAMPE), such
+    as graphite exfoliation, resulting in the loss of lithium-ion intercalation active
+    sites, thus reducing battery capacity. Loss of active negative material (LAMNE)
+    such as electrode particle cracking and loss of electric contact, creates small
+    regions of dead active material on the electrodes, which are no longer available
+    for lithium insertion. The loss of active material on both the anode and cathode
+    leads to battery capacity and power fade [20].
+
+
+    The ML model is also capable of identifying subtle variations in VQ and dV/dQ
+    curves and associating them with specific degrada-
+
+
+    ![](img/3aa35d4c40b6a535721ef39907027cd0_5_0.png)
+
+
+    Fig. 4. (a) The relationship between effect of battery aging (Level 1), degradation
+    modes (Level 2), degradation mechanisms (Level 3), and cell use/environment (Level
+    4). (b) Group G1 cell C1 (C/24, 37 °C) V/Q and dV/dQ experimental and fitted curves
+    (shown in legend as simulation) at EXP1 Day 0, EXP5 Day 83, and EXP19 Day 573.
+    The dashed lines indicate the two peaks used for fitting the dV/dQ curve. (a,
+    b) Reproduced with permission [20]. Copyright 2022, Elsevier.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'tion behaviors, further enhanced by fitting simulated experimental data into
+    ML models to better understand degradation mechanisms. As depicted in Fig. 4b
+    and Fig. S7 (Supporting information), the experimental and simulated curves of
+    batteries groups G1, G2, G3, and G4 for C1 (C/24, 3/7°C) V/Q and dV/dQ evolve
+    over time. The results from the experiments and simulations for Group G1 batteries
+    are very similar, suggesting minimal degradation and an excellent fit with the
+    half-cell model, which is predominantly impacted by LLI. In contrast, Group G2
+    batteries show deviations at higher degradation levels, likely due to loss of
+    active material (LAM), especially from the cathode. For Groups G3 and G4, significant
+    discrepancies between dV/dQ curves and simulations suggest that LLI and LAM lead
+    to faster degradation, with loss of active material being more pronounced at higher
+    discharge rates (C/3), indicating that mechanical stress and higher operational
+    loads exacerbate material loss.
+
+
+    Similar to this, the prediction of the HGR of batteries plays a crucial role in
+    battery life and degradation rate. Efficient thermal management can prolong battery
+    life by mitigating adverse thermal effects and slowing down the degradation process.
+    Cao et al. utilized three algorithms (ANN, SVM, and GPR) to predict HGR, with
+    results indicating that ANN exhibited the best performance in predicting HGR,
+    with an R² value ranging from 0.89 to 1.00. This highlights its effectiveness
+    in capturing the complex nonlinear relationships in battery HGR data [44]. Moreover,
+    Jafari et al. leveraged the nonlinear relationships between voltage, current,
+    and SOC, employing a data-driven approach that does not require initial SOC information,
+    to accurately and in real-time predict the SOC of lithium-ion batteries using
+    the XGBoost algorithm. The model predicted a root mean square error (RMSE) of
+    2.56, demonstrating that the XGBoost algorithm is a powerful and effective tool
+    for estimating battery SOC, with significant advantages in prediction accuracy,
+    operational efficiency, and application versatility [45].
+
+
+    In summary, current research highlights the effectiveness of ML in enhancing battery
+    diagnostics, extending service life, and opti-
+
+
+    mizing performance through predictive maintenance. By leveraging the predictive
+    capabilities of ML, it is possible to break through the boundaries of battery
+    technology, developing more durable, efficient, and sustainable energy storage
+    solutions.
+
+
+    # 4.3. Generation and synthesis of substances
+
+
+    In the emerging field of materials science, especially in material synthesis,
+    the process of empirical synthesis optimization is a daunting task, and the integration
+    of artificial intelligence is an inevitable trend. ML algorithms offer unprecedented
+    capabilities in predicting and optimizing the synthesis processes of various materials,
+    thus facilitating the development of new materials with enhanced performance and
+    functionalities. For example, the integration of ML algorithms helps optimize
+    the synthesis of H2O2 and α-ketoiminophosphonates, enabling substance synthesis
+    with previously unattainable properties and minimal data requirements. This marks
+    a key transition in the field towards data-driven discovery [46,47].
+
+
+    Leem et al. employed the SVM algorithm to train on experimental data, including
+    Faraday efficiency and the current density of H2O2 production, considering variables
+    such as applied potential and electrolyte composition. Through a systematic approach
+    involving 5-fold cross-validation and strict model evaluation metrics, it was
+    determined that an optimized bicarbonate ion mole fraction of 0.225 at an applied
+    potential of 3.25V vs. RHE could achieve a maximum H2O2 current density of 2.16mA/cm².
+    Specifically, as shown in Figs. 5a, d and g, the model predicts total current
+    density (Jtotal), faradaic efficiencies (FEH2O2), and current densities toward
+    H2O2 (JH2O2) across a range of applied potentials and HCO3- mole fractions. To
+    verify the model''s accuracy, eight additional experimental conditions were strategically
+    selected (marked as red dots and labeled 1 to 8) to validate the model, including
+    untested conditions scattered throughout the feature space (points #1-6), conditions
+    predicted to yield the highest FEH2O2 (point #7), and
+
+
+    ![](img/3aa35d4c40b6a535721ef39907027cd0_6_0.png)
+
+
+    Fig. 5. Experimental verification of the trained SVM model. Additional eight experimental
+    conditions were selected to verify the predicted values of Jtotal (a–c), FEH2O2
+    (d–f), and JH2O2 (g–i). Trained models successfully predicted the experimental
+    verification data points with high R² scores of 0.86 for Jtotal, 0.89 for FEH2O2,
+    and 0.95 for JH2O2 prediction. In panels c, f, and i, error bars indicate 1 standard
+    deviation on average of three measurements. (a–i) Reproduced with permission [46].
+    Copyright 2023, American Chemistry Society.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'the highest J_H2O2 (point #8). The performance of the SVM prediction model
+    was evaluated using R^2 values for different prediction parameters, as shown in
+    Figs. 5b, e and h, comparing measured values to predicted values for J_total,
+    FE_H2O2, and J_H2O2. The model''s predicted R^2 scores were high, with R^2 values
+    of 0.86, 0.89, and 0.95 for J_total, FE_H2O2, and J_H2O2, respectively, indicating
+    that the SVM model''s predictions were very consistent with experimental results,
+    emphasizing the model''s accuracy. Combined with Figs. 5c, f, and i, the successful
+    prediction of untested conditions as well as conditions with the highest predicted
+    FE_H2O2 and J_H2O2 demonstrated the model''s capability to effectively explore
+    and optimized the parameter space for H2O2 production [46]. This indicates the
+    effective application of the SVM model in electrochemical reverse engineering
+    tasks, where SVM is capable of using discrete experimental data to construct a
+    continuous image of electrochemical H2O2 production under various conditions and
+    visualizing the effect of electrolyte composition on the two-electron water oxidation
+    reaction, thereby enhancing H2O2 production.
+
+
+    Additionally, Kondo et al. utilize ML-assisted multiparameter screening, the optimal
+    electrochemical oxidation conditions for α-amino phosphonates were effectively
+    predicted, establishing an efficient synthesis method for α-ketoiminophosphonates.
+    This ML-assisted approach employed GPR to predict across a multiparameter space,
+    including current, reactant concentration, temperature, and reaction time. Continuous
+    iterations of Bayesian optimization improved the accuracy of predictions, ultimately
+    establishing a set of efficient conditions for synthesizing the desired compounds.
+    The prediction of model consistency with experimental results demonstrated its
+    robustness, achieving high yield and current efficiency. This process saved energy,
+    time, and labor in reaction optimization, expanded the substrate range, and produced
+    various α-ketoiminophosphonates with high yield and current efficiency [47].
+
+
+    The utilization of ML algorithms in conjunction with experimental data to provide
+    rapid and efficient parameter screening highlights the benefits of applying ML
+    in the domain of electrochemical oxidation synthesis. These methods have proven
+    the ability to save energy, time, and resources by accurately predicting optimal
+    conditions, thereby minimizing experimental trials. They have scalable and various
+    abilities that improve the yield and comprehension of reaction pathways, enabling
+    electrochemical oxidation synthesis in environmentally friendly conditions.
+
+
+    # 4.4. Prediction of material characterization
+
+
+    Common ML algorithms include NR such as decision trees, neural networks, GPR,
+    etc. These algorithms help predict catalytic activity based on a dataset of known
+    materials [48]. ML algorithms can significantly reduce the computational cost
+    and time associated with density functional theory (DFT) calculations by learning
+    from existing DFT datasets. Zhang et al. utilized ML to accelerate DFT studies
+    on the catalytic performance of platinum-modified amorphous alloy surface catalysts.
+    The study engineered ML potentials through the construction of distance contribution
+    descriptors (DCD) and used ML-accelerated DFT calculations to determine the Gibbs
+    free energies of 46,000 *H adsorption sites on the Pt@PdNiCuP surface. In the
+    study, the optimal efficacy of DCD was determined through SVM learning evaluation,
+    as illustrated in Fig. 6a, where m = 3 minimized the mean squared error to 0.0695.
+    The learning curve of the SVM model (Fig. 6b) indicated that increasing the sample
+    size could improve the model''s accuracy, achieving significant precision with
+    approximately 500 samples. Further refinement of the model involved hyperparameter
+    tuning through grid search for 800 sample sets, leading to a RMSE of 0.130 eV
+    for the training set and 0.131 eV for the test set (Fig. 6c). Moreover, the relative
+    error distribution confirmed the model''s ac-
+
+
+    ![](img/3aa35d4c40b6a535721ef39907027cd0_7_0.png)
+
+
+    Fig. 6. (a) Mean square error of different features. (b) The variation of the
+    mean square error versus train set size. (c) The SVM model is trained on a training
+    set of 800 samples and tested on a test set of 100. The solid line is the ideal
+    ratio of DFT energy to predicted energy of 1:1. (d) The relative error percentage
+    distribution on 800 samples. (a–d) Reproduced with permission [49]. Copyright
+    2023, Elsevier. (e) The whole framework of model training and STEM image inference.
+    (e) Reproduced with permission [50]. Copyright 2022, Sha et al.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'curacy, with most prediction errors within ± 20%, showcasing the model''s reliability
+    (Fig. 6d) [49]. This approach, by effectively identifying optimal descriptors,
+    focuses DFT computational resources on the most promising candidate materials.
+    Ultimately, by narrowing down the search space and identifying key material descriptors
+    that control catalytic activity. SVM has demonstrated significant advantages in
+    enhancing the computational efficiency of DFT, especially in accelerating the
+    computation of Gibbs free energies of adsorption sites on material surfaces. By
+    significantly reducing computational cost and time, SVM not only accurately predicts
+    material properties, but also facilitates the acceleration of new material discovery
+    and performance optimization. This advancement highlights SVM''s outstanding ability
+    to predict key properties and their associated reaction mechanisms in materials
+    science.
+
+
+    Similarly, Sha et al. employed a neural network algorithm to dissect the characterization
+    of LiNi0.5Co0.2Mn0.3O2 single crystal cathode materials. This required the construction
+    of a special convolutional neural network model capable of processing scanning
+    transmission electron microscopy (STEM) images, identifying primary crystal structures,
+    pinpointing defects, and categorizing them. The entire process of image analysis
+    based on a neural network model is depicted in Fig. 6e. Specifically, the input
+    of network is the simulated STEM images of various atomic models, and the output
+    of the network is the location of point defects in atomic clusters. The different
+    crystal structures are randomly mixed to form a valid dataset, which is then subjected
+    to preprocessing steps, such as normalization of the image pixel values and conversion
+    of labels into Boolean values. Subsequently, network parameters are iteratively
+    adjusted using the stochastic gradient descent algorithm. Finally, the model parameters
+    retained at the end of training are utilized for defect detection in real STEM
+    images. With the support of ML algorithms, the analysis of LiNi0.5Co0.2Mn0.3O2
+    single crystal cathode materials encompassed the types, quantity, and distribution
+    of defects and their correlation with electrochemical performance, thereby offering
+    profound insights into the material''s degradation process [50].
+
+
+    In summary, the incorporation of ML in electrochemical oxidation processes presents
+    many benefits, notably predicting electrochemical oxidation performance, improving
+    process integration, and facilitating real-time monitoring. Nonetheless, this
+    integration faces full of challenges. Key among these are the various computational
+    requirements, complex parameter tuning, insufficient data sets and model interpretability.
+    To fully exploit ML''s capabilities in this domain, these challenges need to be
+    fully considered and solved. Future research may focus on enhancing the predictive
+    accuracy, generalizability, and interpretability of ML models through algorithmic
+    adjustments, data distribution and structure optimization, and the development
+    of novel attribution analysis methodologies. It is anticipated that these improved
+    ML models will be able to analyze the complex interconnections found in electrochemical
+    oxidation processes.
+
+
+    # 5. Current challenges and prospects
+
+
+    In summary, ML methods have been used in a variety of fields of electrochemical
+    oxidation, and based on the advantages and disadvantages of different ML algorithms
+    summarized in Table S3 (Supporting information), it can be found that there are
+    different applicable algorithms for different electrochemical oxidation fields.
+
+
+    For the treatment of electrochemical pollutants, algorithms such as RF, SVM, and
+    ANN are particularly well-suited. The low risk of overfitting, robust to outliers,
+    and high accuracy of RF enable it to capture complex data patterns while resisting
+    the impacts of impurities in data, such as noise and outliers, which is ideal
+    for dealing with the variable and unpredictable data often encountered in pollutant
+    treatment processes. SVM excels at handling high-
+
+
+    dimensional data and boasts excellent generalization capabilities, effectively
+    managing the nonlinear relationships present in electrochemical pollutant treatment
+    within high-dimensional spaces. By seeking to maximize the decision boundary,
+    SVM aids in the accurate classification of unknown pollutant data. The high flexibility
+    and powerful learning capabilities of ANN make it adept at capturing and learning
+    complex patterns within large datasets, suitable for modeling the intricate chemical
+    processes involved in electrochemical pollutant treatment. Given the potential
+    for vast amounts of experimental data in the field of electrochemical pollutant
+    treatment, ANN''s proficiency in processing large-scale datasets proves invaluable
+    for understanding the dynamic processes of pollutant degradation.
+
+
+    The high flexibility of ANN allows for the adaptation of network architecture
+    to suit problems of varying complexity. In the prediction of battery performance,
+    this flexibility enables ANN to capture the complex nonlinear patterns occurring
+    during the battery discharge and charging processes. Additionally, given the extensive
+    data generated from battery testing, ANN, with its strong adaptability and powerful
+    learning capabilities, can self-adjust to learn subtle patterns and long-term
+    dependencies within large datasets, which is crucial for predicting battery life
+    under changing operational conditions. XGBoost is efficient and flexible, exhibiting
+    a significant advantage in handling missing data. In the context of battery restoration,
+    it can rapidly analyze and model vast quantities of historic data, automatically
+    learning from the missing values that occur for various reasons within large datasets
+    to efficiently predict future battery performance. Furthermore, the high accuracy
+    of XGBoost enables effective implementation to enhance prediction precision, thus
+    facilitating timely repair and maintenance decisions. In addition, both algorithms
+    are capable of handling large datasets, which is important in battery testing
+    and monitoring.
+
+
+    The precision and predictive capabilities of algorithms such as SVM and ANN are
+    greatly beneficial for the generation and synthesis of substances. The prediction
+    of various chemical, physical, and structural properties of substances requires
+    the processing of high-dimensional data. SVM is well-suited for such high-dimensional
+    spaces, and its high accuracy and good generalization ability assist in accurately
+    predicting the performance of unknown compounds [51,52]. The flexibility and strong
+    adaptability of ANN make it capable of handling various types and sizes of data,
+    which is particularly applicable in the field of synthesis science with its complex
+    properties. Moreover, ANN with powerful learning capability can learn from a large
+    amount of data, such as the numerous variables required in the synthesis process,
+    and identify interaction modes, aiding in the understanding and prediction of
+    the synthesis and performance of new substances.
+
+
+    The prediction of material characterization often involves extracting information
+    about molecular structures from high-dimensional data. SVM shows its unique advantages
+    in dealing with multiple influences and potential interactions, mainly due to
+    its effectiveness in high-dimensional space and excellent classification ability.
+    The kernel trick of SVM allows researchers to find the optimal boundaries, which
+    is crucial for revealing the deep chemical behavior of materials. In addition,
+    SVM''s high accuracy and excellent generalization capability allow it to show
+    excellent performance in the prediction of material properties where high accuracy
+    is required. ANN, with its highly flexible network structure and excellent learning
+    capability, simulates and learns nonlinear relationships for complex reactions
+    and adapts to variable data patterns, which is very useful for understanding and
+    predicting how materials react under different conditions. At the same time, ANN
+    is able to process images, recognize and classify the internal structure of materials,
+    and simulate the relationship between electrochemical parameters and surface reactions.
+    RF not only maintains robustness in the presence of noise in the data, but also
+    reduces'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'the risk of overfitting by integrating the learning approach, thus enhancing
+    the predictive accuracy of the model on new data. These features make RF a reliable
+    choice for predicting complex chemical reactions. It is the ability of RF to provide
+    accurate predictions while remaining robust to random variability in the data,
+    which is critical for studying the uncertainty and dynamics of oxidation reaction
+    processes.
+
+
+    Please note that the suitability of a particular ML algorithm can vary depending
+    on the specific characteristics of the dataset and the problem at hand. The insights
+    provided are based on the general capabilities of the algorithms and their common
+    applications in related fields. Additionally, the actual implementation of these
+    algorithms in the specified domains would require domain-specific knowledge and
+    data to train and validate the models effectively. In conclusion, the ML algorithms
+    need to be carefully adapted to the specific requirements and complexity of the
+    electrochemical oxidation field. To effectively deploy ML algorithms in all areas
+    of electrochemical oxidation, thorough data evaluation, careful algorithm tuning,
+    rigorous validation, and continuous learning systems can be employed. Firstly,
+    it is crucial to assess the nature, quantity and quality of the data, as algorithms
+    that perform well on large datasets are algorithms such as ANN and XGBoost, whereas
+    less high-dimensional data is more suitable for SVM. Secondly, it is necessary
+    to fine-tune the parameters of each algorithm to match the specific data characteristics
+    of each domain, such as tuning the kernel of the SVM for non-linear data in pollutant
+    treatment, or conducting battery performance studies by modifying the network
+    layer of the ANN. Thirdly, the model is validated using cross-validation techniques
+    to ensure that it can accurately predict unknown data, thus validating its generalization
+    ability. Finally, the establishment of a continuous learning mechanism enables
+    the model to be adapted and improved as new data are encountered, which is particularly
+    important in the field of dynamic electrochemical processes.
+
+
+    # 6. Conclusion and prospect
+
+
+    Selecting the appropriate ML algorithm that suits the specific requirements and
+    complexities of the target domain is crucial. The effectiveness of these algorithms
+    in their respective applications is expected to make significant advancements
+    in understanding and optimizing processes within these domains. Review analysis
+    of ML algorithms like ANN, NR, SVM, XGBoost, and RF highlights their unique advantages
+    and the prospect of their wide applications across multiple domains, including
+    electrochemical pollutant treatment, battery repair and forecasting, as well as
+    material synthesis and surface mechanism prediction. In the domain of electrochemical
+    pollutant treatment, RF, SVM, and ANN stand out for their robustness to noise,
+    high-dimensional data handling capabilities, and modeling of nonlinear relationships,
+    respectively. These characteristics are crucial for dealing with the typically
+    complex data and unpredictable dynamics in pollutant degradation processes. Similarly,
+    for battery life prediction and degradation rate forecasting, ANN and XGBoost
+    algorithms are preferred for their adaptability in modeling complex battery behaviors
+    and efficiency in handling missing data, critical for timely repair and maintenance
+    decisions. Substance synthesis benefits from the precision of SVM and ANN algorithms,
+    as well as their pattern recognition capabilities and flexibility in learning
+    complex synthesis pathways. SVM, ANN and RF have better fitting effects on the
+    characterization of materials. These algorithms are able to recognize and classify
+    the internal structure of materials, learn complex data patterns, and predict
+    unknown data more accurately. This facilitates a correct understanding of complex
+    response mechanisms. Recent high-quality research also indicates that the integration
+    of these algorithms, especially the RF-XGBoost-ANN combination, can provide superior
+    predictive
+
+
+    accuracy and minimal error, demonstrating the potential for wide application [53].
+
+
+    The future of ML in electrochemical oxidation hinges on developing more specialized
+    algorithms that balance computational efficiency with high interpretability. Hybrid
+    models, combining the strengths of different algorithms, and advancements in deep
+    learning, particularly in enhancing interpretability and reducing training requirements,
+    are likely to dominate future research in the following ways:
+
+
+    +   Model interpretability: Developing new tools and methods to make the decision-making
+    process of complex models more transparent and easier to understand. Developing
+    and promoting standards and assessment metrics for interpretability to help researchers
+    better assess the transparency of models to address “black box” issues.
+
+
+    +   Autonomous real-time data processing and feedback: There is a need to develop
+    ML frameworks that can autonomously receive and process experimental data in real
+    time and feed this information back to the model for adjustment. The close integration
+    of this model with experimental feedback enables the system to adjust and improve
+    predictions in real time based on experimental results, improving the adaptability
+    and response speed of the electrochemical oxidation process.
+
+
+    +   Data standardization and model integration: Optimizing data collection and
+    developing new data pre-processing methods. Anticipated data distributions are
+    predicted and recorded to forecast potential biases in the data. Diversification
+    of data sources and quality checks are conducted to ensure the integrity of the
+    data. Rigorous data preprocessing methods are implemented to eliminate bias, thereby
+    enhancing the validity of the models. Finally, with a comprehensive understanding
+    of the dataset and an exploration of model suitability, a more powerful AutoML
+    framework is developed to automate model selection and hyperparameter optimization,
+    which will effectively determine the best ML model for a given requirement.
+
+
+    +   Energy-efficient learning models: Developing sample less learning and transfer
+    learning algorithms to reduce the dependence of model on large-scale data. Also
+    developing energy-efficient algorithms and hardware to speed up model training
+    and inference and reduce energy consumption.
+
+
+    # Declaration of competing interest
+
+
+    The authors declare no competing financial interests that could have appeared
+    to influence the work reported in this paper.
+
+
+    # CRediT authorship contribution statement
+
+
+    Zonglin Li: Writing – review & editing, Writing – original draft, Resources, Methodology,
+    Investigation, Conceptualization. Shihua Zou: Visualization, Software, Formal
+    analysis. Zining Wang: Methodology, Investigation. Georgeta Postole: Validation,
+    Supervision. Liang Hu: Validation, Supervision. Hongying Zhao: Project administration,
+    Funding acquisition, Conceptualization.
+
+
+    # Acknowledgments
+
+
+    The authors acknowledge funding from the National Natural Science Foundation of
+    China (Nos. 22122606, 22076142, 62276190), National Key Basic Research Program
+    of China (No. 2017YFA0403402), National Natural Science Foundation of China (No.
+    U1932119), the Science & Technology Commission of Shanghai Municipality (No. 14DZ2261100),
+    the Fundamental Research Funds for the Central Universities.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Supplementary materials
+
+
+    Supplementary material associated with this article can be found, in the online
+    version, at doi:10.1016/j.cclet.2024.110526.
+
+
+    # References
+
+
+    +   [1] M.I. Jordan, T.M. Mitchell, Science 349 (2015) 255–260.
+
+    +   [2] M.L. Littman, Nature 521 (2015) 445–451.
+
+    +   [3] N. Goudarzi, M. Goudarzi, M.A. Chamjangali, M.H. Fatemi, Chin. Chem. Lett.
+    24 (2013) 904–908.
+
+    +   [4] T.Y. Zhu, Y. Zhang, C.C. Tao, et al., Sci. Total Environ. 857 (2023) 159348.
+
+    +   [5] T. Zeng, Y.S. Liang, Q.Y. Dai, et al., Chin. Chem. Lett. 33 (2022) 5184–5188.
+
+    +   [6] C. Wang, L. Kong, Y. Wang, et al., Chin. Chem. Lett. 34 (2023) 108159.
+
+    +   [7] I. Rahwan, M. Cebrian, N. Obradovich, et al., Nature 568 (2019) 477–486.
+
+    +   [8] L. Chen, L.L. Wei, Y.F. Ru, et al., Chin. Chem. Lett. 34 (2023) 108162.
+
+    +   [9] Z. You, W. Hua, N. Li, et al., Chin. Chem. Lett. 34 (2023) 107525.
+
+    +   [10] Z. Zhang, Y. Li, L. Dong, et al., Chem. Lett. 34 (2023) 107404.
+
+    +   [11] Q. Wang, Q. Xue, T. Chen, et al., Chin. Chem. Lett. 32 (2021) 609–619.
+
+    +   [12] W. Yao, A.Q. Hu, J.T. Ding, et al., Adv. Mater. 35 (2023) 2301894.
+
+    +   [13] J. Jiang, K.L. Wang, X. Li, et al., Chin. Chem. Lett. 34 (2023) 108699.
+
+    +   [14] S. Mahmood, H.Y. Wang, F. Chen, et al., Chin. Chem. Lett. 35 (2024) 108550.
+
+    +   [15] K.T. Schmitt, M. Gastgeber, A. Tkatchenko, et al., Nat. Commun. 10 (2019)
+    5024.
+
+    +   [16] Y.W. Zhang, Q.C. Tang, Y. Zhang, et al., Nat. Commun. 11 (2020) 1706.
+
+    +   [17] Y. Zhu, B. Lian, Y. Wang, et al., Water Res. 227 (2022) 119349.
+
+    +   [18] Y. Sun, Z. Zhao, H. Tong, et al., Environ. Sci. Technol. 57 (2023) 17990–18000.
+
+    +   [19] V.G. Sharma, V.K. Tyagi, S. Varjani, et al., Bioresour. Technol. 387
+    (2023) 129587.
+
+    +   [20] A. Thelen, Y.H. Lui, S. Shen, et al., Energy Storage Mater. 50 (2022)
+    668–695.
+
+    +   [21] W. Wu, C.J. Wang, W.J. Bian, et al., Adv. Sci. 10 (2023) 2304074.
+
+    +   [22] W. Ouyang, Y.D. Wang, C.Y. Lin, et al., Sci. Total Environ. 637 (2018)
+    208–220.
+
+    +   [23] L.M. Yao, L. Hui, Z. Yang, et al., Chemosphere 245 (2020) 125627.
+
+    +   [24] Y. Gao, L. Ge, S.Z. Shi, et al., Environ. Sci. Pollut. Res. 26 (2019)
+    17809–17820.
+
+    +   [25] C.C. Liang, A.J. Luo, Z.Q. Zhong, et al., Sage Open Med. 6 (2018) 2050312118800199.
+
+
+    +   [26] J.P. Xie, Scientometrics 105 (2015) 611–622.
+
+    +   [27] N.R. Draper, H. Smith, Fitting a straight line by least squares, Applied
+    Regression Analysis, John Wiley & Sons, Inc., New York, 1998, pp. 15–46.
+
+    +   [28] P.B. Ober, J. Appl. Stat. 40 (2013) 2775–2776.
+
+    +   [29] W.A.H. Altowayti, A.A. Salem, A.M. Al-Fakih, et al., Metals 12 (2022)
+    1664.
+
+    +   [30] S.V. Archontoulis, F.E. Miguez, Agron. J. 107 (2015) 786–798.
+
+    +   [31] V.N. Vapnik, A. Lerner, Autom. Remote Control 24 (1963) 774–780.
+
+    +   [32] D.Z. Yang, L. Wang, P.H. Yuan, et al., Chin. Chem. Lett. 34 (2023) 107964.
+
+    +   [33] R. Ding, R. Wang, Y.Q. Ding, et al., Angew. Chem. Int. Ed. 59 (2020)
+    19175–19183.
+
+    +   [34] T.Q. Chen, C. Guestrin, in: Proceedings of the 22nd ACM Sigkdd International
+    Conference on Knowledge Discovery and Data Mining, San Francisco, 2016, pp. 785–794.
+
+    +   [35] L. Li, S.M. Rong, R. Wang, et al., Chem. Eng. J. 405 (2021) 126673.
+
+    +   [36] E. Masson, Y.J. Wang, Eur. J. Oper. Res. 47 (1990) 1–28.
+
+    +   [37] Y. Mei, J.Q. Yang, Y. Liu, et al., Int. J. Environ. Res. Public Health
+    16 (2019) 2454.
+
+    +   [38] L. Breiman, Mach. Learn. 45 (2001) 5–32.
+
+    +   [39] H. Yu, Z. Zhang, L. Zhang, J. Clean. Prod. 280 (2021) 124412.
+
+    +   [40] J. Rumky, W.Z. Tang, M. Sillanpää, et al., Environ. Process. 7 (2020)
+    1041–1064.
+
+    +   [41] M. Foroughi, A.R. Rahmani, G. Asgari, et al., Environ. Model. Assess.
+    25 (2020) 327–341.
+
+    +   [42] X.F. Fu, D. Shen, Y.Z. Ji, et al., J. Energy Storage 82 (2024) 110557.
+
+    +   [43] M. Berecibar, Nature 595 (2021) 7.
+
+    +   [44] R. Cao, X. Zhang, H. Yang, Batteries 9 (2023) 165.
+
+    +   [45] S. Jafari, Z. Shahbazi, Y.-C. Byun, et al., Mathematics 10 (2022) 888.
+
+    +   [46] J. Leem, L. Vallez, T.M. Gill, et al., ACS Appl. Energy Mater. 6 (2023)
+    3953–3959.
+
+    +   [47] M. Kondo, A. Sugizaki, M.I. Khalid, et al., Green Chem. 25 (2020) 327–341.
+
+    +   [48] F. Formalik, K. Shi, F. Joodaki, et al., Adv. Funct. Mater. 34 (2023)
+    2308130.
+
+    +   [49] X. Zhang, K. Li, B. Wen, et al., Chin. Chem. Lett. 34 (2023) 107833.
+
+    +   [50] W. Sha, Y. Guo, D. Cheng, et al., NPJ Comput. Mater. 8 (2022) 223.
+
+    +   [51] Z. Wan, Q. Wang, D. Liu, et al., Org. Biomol. Chem. 19 (2021) 6267.
+
+    +   [52] F. Mu, C. Unkefer, P. Unkefer, et al., Bioinformatics 27 (2011) 1537–1545.
+
+    +   [53] C. Ji, 2023 IEEE International Conference on Control, Electronics and
+    Computer Technology (ICCECT), Jilin, 2023, pp. 545–549.'
+  merge: -1
+  img_proc: true
