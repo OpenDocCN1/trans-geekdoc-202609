@@ -1,0 +1,14 @@
++   - detecting outliers/novel cases (Section 7.6.1);
++   - imputing missing values (Section 7.6.2).
+
+To compute the proximities between all pairs of training observations in an RF, do the following:
+
++   1) pass all of the data, both training and OOB, down each tree;
++   2) every time records i and j cohabitate in the same terminal node of a tree, increase their proximity by one;
++   3) At the end, normalize the proximities by dividing by the number of trees in the forest.
+
+So how does this measure similarity between cases? Recall that RFs (and bagged decision trees in general) intentionally build deep, overgrown decision trees. In order for two observations to land in the same terminal node, they have to satisfy all of the same conditions leading to it. If two observations occupy the same terminal node across a majority of the trees in the forest, then they are likely very similar to each other in terms of feature values. Note that using all the training data can lead to unrealistic proximities. To circumvent this, proximities can be computed on only the OOB cases. It is also possible to compute proximities for new cases (an example application is given in Section 7.6.4).
+
+The end result is an N x N proximity matrix, where N is the sample size of the data set proximities are being computed for. As it turns out, this matrix is symmetric (since prox (i, j) = prox (j, i)), positive definite (i.e., has all positive eigenvalues), and bounded above by one, with the diagonal elements equal to one (since prox (i, i) = 1). Consequently, for any two cases i and j, we can treat 1 - prox (i, j) as a squared distance-like metric, which can be used as input into any distance-based clustering algorithm. For example, Shi et al. [2005] used RF proximities to help identify fundamental subtypes of cancer. A brief example using the Swiss banknote data is provided in Section 7.6.3.1.
+
+The proximities from an RF provide a natural measure of similarity between records when the predictor variables are of mixed types (e.g., numeric and categorical) and measured on different scales; they are invariant to monotone transformations and naturally support categorical variables. The biggest drawback, as with any pairwise distance-like metric, is that it requires storing an N x N matrix; although, since the casewise proximity matrix is symmetric, you only need to store the upper or lower triangular part (see, for example, ?treemisc::proximity). Proximities are also not implemented in most open source RF software. However, if you can obtain the N x B matrix of terminal node assignments (which is available in most open source RF software), then it is rather straightforward to compute the proximities yourself; an example, specific to the R package ranger [Wright et al., 2021], can be found at https://mnwright.github.io/ranger/r/oob-proximity-matrix/, while a

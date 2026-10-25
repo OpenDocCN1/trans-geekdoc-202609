@@ -1,0 +1,14 @@
+Breiman [2002] noted that the OOB estimate of error in RFs tends to be overly optimistic when fit to training data that has been imputed. As with proximity-based outlier detection, this approach to imputation does not scale well (especially since it requires fitting multiple RFs and computing proximities). Further, this imputation method is often not as accurate as more contemporary techniques, like those implemented in the R package **mice** [van Buuren and Groothuis-Oudshoorn, 2021].
+
+Perhaps the biggest drawback to proximity-based imputation, like many other imputation methods, is that it only generates a single completed data set. As discussed in van Buuren [2018, Chap. 1], our level of confidence in a particular imputed value can be expressed as the variation across a number of completed data sets. In Section 7.9.3, I’ll use the CART-based multiple imputation procedure discussed in Section 2.7.1 and show how we can have confidence in the interpretation of the RF output by incorporating the variability associated with multiple imputation runs.
+
+# 7.6.3 Unsupervised random forests
+
+As it turns out, RFs can be used in unsupervised settings as well (i.e., when there is no defined response variable). In this case, the goal is to cluster the data, that is, see if the rows from the learning sample form any “interesting” groups.
+
+In an unsupervised RF, the idea is formulate a two-class problem. The first class corresponds to the original data, while the second class corresponds to a synthetic data set generated from the original sample. There are two ways to generate the synthetic data corresponding to the second class [Liaw and Wiener, 2002]:
+
++   1) a bootstrap sample is generated from each predictor column of the original data;
++   2) a random sample is generated uniformly from the range of each predictor column of the original data.
+
+These two data sets are then stacked on top of each other, and an ordinary RF is used to build a binary classifier to try and distinguish between the real and synthetic data. (A necessary drawback here is that the resulting data set is twice as large as the original learning sample.) If the OOB misclassification error rate in the new two-class problem is, say, ≥ 40%, then the columns look too much like independent variables in the eyes of the RF; in other words, the dependencies among the columns do not play a large role in discriminating between the two classes. On the other hand, if the OOB misclassification rate is lower, then the dependencies are playing an important role. If there is some discrimination between the two classes, then the resulting proximity matrix

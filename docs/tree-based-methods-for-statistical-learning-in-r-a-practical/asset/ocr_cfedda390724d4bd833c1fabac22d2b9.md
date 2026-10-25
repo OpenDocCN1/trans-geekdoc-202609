@@ -1,0 +1,9 @@
+be challenging for a classification tree that uses splits that are orthogonal to the \( x \)- and \( y \)-axes (e.g., CART and CTree). If the data come from a multivariate normal distribution with a common covariance matrix across the three species, then LDA would give the optimal linear decision boundary (if the covariance matrices differ between the classes, then QDA would be optimal). If we cannot make those assumptions, then a tree-based approach using oblique splits is a good alternative.
+
+![](bbox=[0.2, 0.23, 0.88, 0.49])
+
+FIGURE 4.3: Scatterplot of bill depth (mm) vs. bill length (mm) for the three species of Palmer penguins.
+
+To illustrate, consider the plots in Figure 4.4, which show the decision boundaries from a GUIDE decision tree with linear splits (top left), LDA (top right), CART (middle left), CTree (middle right), a random forest (bottom left), gradient boosted tree ensemble (bottom right); the latter two are special types of tree-based ensembles and are discussed in Chapters 7–8. Both GUIDE and CART were pruned using 10-fold cross-validation with the 1-SE rule (for CTree, I used the default \(\alpha = 0.05\)). Notice the similarity (and simplicity) of the linear decision boundaries produced by GUIDE and LDA; these models are likely to generalize better to new data from the same population. Furthermore, GUIDE only misclassified 8 observations, while LDA, CART, and CTree misclassified 13, 21, and 15 observations, respectively. Compared to CART and CTree, the tree-based ensembles (bottom row) are a bit more flexible and able to adapt to linear decision boundaries, but in this case, they’re not as smooth or simple to explain as the LDA or GUIDE decision boundaries.
+
+The associated tree diagram for the fitted GUIDE tree with linear splits is shown in Figure 4.5. The GUIDE tree using linear splits is simpler compared

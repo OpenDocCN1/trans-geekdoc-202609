@@ -1,0 +1,13 @@
+Hastie et al. [2009, p. 363] suggest that $4 \le J \le 8$ (or $2 \le d \le 3$) works well in general (with results not being too sensitive to different values in this range) and that $J > 10$ is rarely necessary. In many cases, a simpler additive model (i.e., $d = 1$ or $J = 2$) is sufficient.
+
+# 8.3.3 A simple tuning strategy
+
+I don't think that grid searches are all that useful for GBMs, and tend to be too costly for large data sets, especially if early stopping is not available. A simple and effective tuning strategy for GBMs is to leave the tree-specific hyperparameters at their defaults (discussed in the previous sections) and tune the boosting parameters. A rule of thumb proposed by Greg Ridgeway$^1$ is to set shrinkage as small as possible while still being able to fit the model in a reasonable amount of time and storage. For example, aim for 3,000–10,000 iterations with shrinkage rates between 0.01–0.001; use early stopping, if it's available. More elaborate tuning strategies for GBMs are discussed in Boehmke and Greenwell [2020, Chap. 12].
+
+# 8.4 Stochastic gradient boosting
+
+Friedman [2002] proposed a minor modification to the original GBM algorithm in Friedman [2001], where he showed that both generalization performance and execution speed of GBMs can often be improved dramatically by incorporating additional randomization into the procedure, similarly to how bagging can improve the performance of a single tree. The idea is to forgo using the entire training sample to fit each subsequent tree in the ensemble and instead use a subsample of the training data drawn at random without replacement; typically a 50% random subsample is used to induce each tree (i.e., roughly half the original training data), although, for larger data sets, a smaller fraction can be used. Due to the extra randomization step, the full procedure is referred to as stochastic gradient boosting and is the most common flavor of gradient boosting seen in practice today. Friedman [2002] suggests that $0.5 \le f \le 0.8$ generally leads to an improvement for small to moderate sized data sets, where $f$ is the fraction of the original training data sampled at random before building each tree.
+
+As with bootstrap sampling in bagging and RFs, a happy by-product of subsampling in GBMs is the ability to produce an OOB estimate of the generalization error (Section 7.3). OOB estimates of error are similar to that obtained
+
+$^1$See the gbm package vignette: vignette("gbm", package = "gbm").
