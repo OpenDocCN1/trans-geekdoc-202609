@@ -1,0 +1,13 @@
+extends over 10 years and is managed through the Office of the Registrar for the loan study plan application. A privacy impact assessment (PIA) was completed by the ABC Privacy Office and indicated that PII is captured and stored through this web application. The data collected through this form are sent to CatchMyData for management within one backend database. The database is located within a secure data centre managed by Alentus and located in the Edmonton Rogers Data Centre. Initially, the loan study plan front-end web application was developed and managed by the university approximately 10 years earlier.
+
+The data captured by CatchMyData are collected from a historical university-created and -managed web page, the course registration plan (a.k.a. loan study plan). PII-relevant items collected from the applicant are defined by the university for its own use. The user-identifiable items are the name, address, phone number, e-mail, SIN, ABC ID and provincial ID as submitted by the applicant.
+
+CatchMyData does not share or distribute these data. All changes to the data captured are at the discretion and direction of the ABC Student Loan Office. The captured data are stored in a distinct and separate database and are not commingled with any other CatchMyData client data. The ABC client application provided by CatchMyData is accessed through a TLS v.1.2 encrypted session, where the login name and password are transmitted for ABC Student Loan Office users.
+
+PII data are stored in a third-party secure cloud service in Canada, and access to the server is restricted to two distinct IP addresses, with no access by third-party organizations. ABC users are provided access by the administrator, Barrie Jackson, or the manager, Valmir Oppenager. The student financial aid advisor logins in CatchMyData are created and administered by Barrie Jackson, who is the sole individual from ABC University with administrative privileges to this database.
+
+User access is granted through the ABC University IT access policy, and access is granted based on a user's job function within the university. Therefore, any changes to either the administrator or manager role would be authorized directly by ABC University's management.
+
+# Future state
+
+The change proposed by the university was to renovate the course registration plan page to facilitate adaption to course changes and session timing more rapidly. Structural changes to the course registration plan were proposed using CatchMyData's smart form. The application code used to capture the data would remain largely intact, as originally
