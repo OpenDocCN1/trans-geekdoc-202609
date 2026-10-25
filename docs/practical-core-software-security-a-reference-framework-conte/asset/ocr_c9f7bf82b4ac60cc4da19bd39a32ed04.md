@@ -1,0 +1,18 @@
+If a third-party component of the product is affected, this will complicate the remediation process because the PSIRT will be dependent on a third party for remediation. A further complication is that the PSIRT will have to coordinate and, in many cases, notify the vendor directly to ensure coordination with the third-party coordination center and, likely, direct involvement with the discoverer. Even though a third-party component has been used, the assumption is that the owner of the primary software product is ultimately responsible for all components of the software, whether they own them or not.
+
+As mentioned above, PSIRTs generally use the CVSS to assess the severity of a vulnerability as part of their standard process for evaluating reported potential vulnerabilities in their products and determining which vulnerabilities warrant external and internal reporting.
+
+The CVSS model uses three distinct measurements or scores that include base, temporal, and environmental calculations, and the sum of all three scores should be considered the final CVSS score. This score represents a single moment in time; it is tailored to a specific environment and is used to prioritize responses to a particular externally discovered vulnerability. In addition, most PSIRTs will consider modifying the final score to account for factors that are not properly captured in the CVSS score. PSIRTs typically use the following CVSS guidelines when determining the severity of a particular vulnerability and the need to report it:
+
++   - Critical (C)— CVSS base score of 9.0–10.0
++   - High (H)— CVSS base score of 7.0–8.9
++   - Medium (M)—CVSS base score of 4.0–6.9
++   - Low (L)—CVSS base score of 0.1–3.9²
+
+If there is a security issue involving a third-party software component in the product the PSIRT is responsible for, then, depending on the situation and whether the third party has a CVSS score, the PSIRT may use the CVSS score provided by the component creator and/or may adjust the score to reflect the impact on the overall software product.
+
+Public disclosure, including the relevant base and temporal CVSS scores and a CVE® ID³ report, is typically made for an external post-release discovery event when one or more of the following have occurred:
+
++   - The incident response process has been completed and has determined that enough software patches or other remediations exist to address the vulnerability. Public disclosure of code fixes can be issued to address high-severity vulnerabilities.
++   - Active exploitation of a vulnerability that could lead to increased risk for the PSIRT company’s customers has been observed that requires a published security vulnerability announcement. The announcement may or may not include a complete set of patches or other remediation steps. When possible, compensating controls are included in the public announcement to provide interim protection that will limit exposure until the permanent fix is announced.
++   - A zero-day announcement or other potential for increased public awareness of a vulnerability affecting the PSIRT company’s product is probable, which could lead to increased risk for customers. In these cases, the PSIRT has worked closely with the company’s PR team to help assess public indicators and warnings, such as Twitter feeds and blogs, that this exposure is imminent, and it will have prepared a statement ahead of time. Again,

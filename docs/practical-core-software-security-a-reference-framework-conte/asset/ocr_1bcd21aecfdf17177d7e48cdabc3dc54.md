@@ -1,0 +1,17 @@
+profile should include risk arising out of customer expectations and use of the product, regulatory compliance, and security changes needed to cater to different markets. This will also help articulate actual costs to management.
+
+# Success Factor 3: Accuracy of Threat Profile
+
+Too often, the software is developed without a complete understanding of its intended use or the environment in which it will operate. Though a product may be designed for specific uses, customers often add enhancements and use them in ways that were not intended. Another example is APIs exposed to the public. In most cases, the number of APIs exposed increases over time (often after the software is released). However, the threat profile from exposure APIs is not always considered or done correctly. In other cases, the software depends on open-source (or closed-source) software that was not considered in defining the threat profile for the product. Thus, one of the critical success factors to take away from this phase is the accuracy of the threat profile. The profile should cover perceived use cases, research on customer integrations, and security exposure through dependency on other products or software.
+
+# Success Factor 4: Coverage of Relevant Regulations, Certifications, and Compliance Frameworks
+
+One key criterion for the success of this phase is whether all key regulations, compliance frameworks, and certifications for the product (or libraries) have been identified. This success factor depends on understanding product objectives and customer uses. One may think that specific regulations will not be applicable because their use cases are not considered valid. Customers, however, often have a different take on this. A cloud product that a customer uses to interact with other customers might not need to comply with HIPAA from a viewpoint. However, for a customer, it is crucial that this product, if not compliant with HIPAA, at least does not create issues that may result in noncompliance.
+
+Compliance frameworks are another thing to watch out for. Depending on how the product is used (in-house or in the cloud), different permutations are expected by customers. If customers require ISO® 27001 certification and use your product in a cloud environment, they will expect a demonstrable and verifiable operational and product security posture. If customers are paying for your service using credit cards, not only they but your environment may fall under the regulations applicable to the payment card industry. Though we are focusing on product security here, operational security is equally important.
+
+Finally, while covering regulations, compliance frameworks, and certifications, security and development teams fail to look closely at dependencies. For example, if the product needs to comply with the Federal Information Processing Standards (FIPS), how will using an open-source library affect compliance? If the product needs to obtain certification A, will dependent software make or break this certification? These questions need to be carefully considered to prevent future firefighting.
+
+# Success Factor 5: Coverage of Security Objectives Needed for Software
+
+Finally, one should look at how many of the security objectives were met at the conclusion of this phase. If some objectives were not met, why not? One may start with a laundry list of
