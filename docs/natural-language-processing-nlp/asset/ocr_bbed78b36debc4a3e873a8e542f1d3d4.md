@@ -1,0 +1,15 @@
+features. For these problems, it is very likely that the training data is indeed separable. And even if the dataset is not separable, it is still possible to place an upper bound on the number of errors that the perceptron algorithm will make (Freund and Schapire, 1999).
+
+# 2.3.2 Averaged perceptron
+
+The perceptron iterates over the data repeatedly — until “tired”, as described in Algorithm 3. If the data is linearly separable, the perceptron will eventually find a separator, and we can stop once all training instances are classified correctly. But if the data is not linearly separable, the perceptron can thrash between two or more weight settings, never converging. In this case, how do we know that we can stop training, and how should we choose the final weights? An effective practical solution is to average the perceptron weights across all iterations.
+
+This procedure is shown in Algorithm 4. The learning algorithm is nearly identical, but we also maintain a vector of the sum of the weights, m. At the end of the learning procedure, we divide this sum by the total number of updates t, to compute the average weights, θ̄. These average weights are then used for prediction. In the algorithm sketch, the average is computed from a running sum, m ← m + θ. However, this is inefficient, because it requires |θ| operations to update the running sum. When f(x, y) is sparse, |θ| ≫ |f(x, y)| for any individual (x, y). This means that computing the running sum will be much more expensive than computing of the update to θ itself, which requires only 2 × |f(x, y)| operations. One of the exercises is to sketch a more efficient algorithm for computing the averaged weights.
+
+Even if the dataset is not separable, the averaged weights will eventually converge. One possible stopping criterion is to check the difference between the average weight vectors after each pass through the data: if the norm of the difference falls below some predefined threshold, we can stop training. Another stopping criterion is to hold out some data, and to measure the predictive accuracy on this heldout data. When the accuracy on the heldout data starts to decrease, the learning algorithm has begun to overfit the training set. At this point, it is probably best to stop; this stopping criterion is known as early stopping.
+
+Generalization is the ability to make good predictions on instances that are not in the training data. Averaging can be proven to improve generalization, by computing an upper bound on the generalization error (Freund and Schapire, 1999; Collins, 2002).
+
+# 2.4 Loss functions and large-margin classification
+
+Naïve Bayes chooses the weights θ by maximizing the joint log-likelihood log p(x^(1:N), y^(1:N)). By convention, optimization problems are generally formulated as minimization of a loss function. The input to a loss function is the vector of weights θ, and the output is a

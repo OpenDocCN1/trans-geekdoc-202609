@@ -1,0 +1,59 @@
+
+- Rahman, A. and V. Ng (2011). 缩小建模差距：一种共指消解的聚类排序方法．人工智能研究杂志 40, 469–521．
+- Rajpurkar, P., J. Zhang, K. Lopyrev, and P. Liang (2016). SQuAD：用于文本机器理解的100,000+个问题．见EMNLP (2016)，第2383–2392页．
+- Ranzato, M., S. Chopra, M. Auli, and W. Zaremba (2016). 基于循环神经网络的序列级训练．见ICLR (2016)．
+- Rao, D., D. Yarowsky, A. Shreevats, and M. Gupta (2010). 在Twitter中分类潜在用户属性．载于用户生成内容搜索与挖掘研讨会论文集．
+- Ratinov, L. and D. Roth (2009). 命名实体识别中的设计挑战与误解．载于自然语言学习会议 (CoNLL) 论文集，第147–155页．
+- Ratinov, L., D. Roth, D. Downey, and M. Anderson (2011). 面向Wikipedia消歧的局部和全局算法．见ACL (2011)，第1375–1384页．
+- Ratliff, N. D., J. A. Bagnell, and M. Zinkevich (2007). (近似)次梯度方法用于结构化预测．载于人工智能与统计会议 (AISTATS) 论文集，第380–387页．
+- Ratnaparkhi, A. (1996). 一种用于词性标注的最大熵模型．载于自然语言处理实证方法会议 (EMNLP) 论文集，第133–142页．
+- Ratnaparkhi, A., J. Reynar, and S. Roukos (1994). 一种用于介词短语附着的最大熵模型．载于人类语言技术研讨会论文集，第250–255页．
+- Read, J. (2005). 使用表情符号降低情感分类机器学习技术中的依赖性．载于ACL学生研究研讨会论文集，第43–48页．
+- Reisinger, D., R. Rudinger, F. Ferraro, C. Harman, K. Rawlins, and B. V. Durme (2015). 语义原型角色．计算语言学协会汇刊 3, 475–488．
+- Reisinger, J. and R. J. Mooney (2010). 词义的多原型向量空间模型．见NAACL (2010)，第109–117页．
+- Reiter, E. and R. Dale (2000). 构建自然语言生成系统．剑桥大学出版社．
+- Resnik, P., M. B. Olsen, and M. Diab (1999). 圣经作为平行语料库：标注‘2000种语言之书’．计算机与人文 33(1-2), 129–153．
+- Saurí, R. and J. Pustejovsky (2009). FactBank：一个标注事件事实性的语料库．*语言资源与评估* 43(3), 227．
+- Saxe, A. M., J. L. McClelland, and S. Ganguli (2014). 深度线性神经网络中学习非线性动力学的精确解．载于*国际学习表征会议 (ICLR) 论文集*．
+- Schank, R. C. and R. Abelson (1977). *脚本、目标、计划和理解*．新泽西州希尔斯代尔：Erlbaum．
+- Schapire, R. E. and Y. Singer (2000). BoosTexter：一种基于提升方法的文本分类系统．*机器学习* 39(2-3), 135–168．
+- Schaul, T., S. Zhang, and Y. LeCun (2013). 不再为学习率烦恼．见ICML (2013)，第343–351页．
+- Schnabel, T., I. Labutov, D. Mimno, and T. Joachims (2015). 无监督词嵌入的评估方法．见EMNLP (2015)，第298–307页．
+- Schneider, N., J. Flanigan, and T. O’Gorman (2015). AMR的逻辑：面向NLP的实用、统一、基于图的句子语义．见NAACL (2015)，第4–5页．
+- Schütze, H. (1998). 自动词义判别．*计算语言学* 24(1), 97–123．
+- Schwarm, S. E. and M. Ostendorf (2005). 使用支持向量机和统计语言模型的阅读水平评估．见ACL (2005)，第523–530页．
+- See, A., P. J. Liu, and C. D. Manning (2017). 开门见山：使用指针生成网络的摘要生成．见ACL (2017)，第1073–1083页．
+- Sennrich, R., B. Haddow, and A. Birch (2016). 基于子词单元的罕见词神经机器翻译．见ACL (2016)，第1715–1725页．
+- Serban, I. V., A. Sordoni, Y. Bengio, A. C. Courville, and J. Pineau (2016). 使用生成式层次神经网络模型构建端到端对话系统．见AAAI (2016)，第3776–3784页．
+- Settles, B. (2012). 主动学习．*人工智能与机器学习综合讲座* 6(1), 1–114．
+- Shang, L., Z. Lu, and H. Li (2015). 用于短文本对话的神经响应机器．见ACL (2015)，第1577–1586页．
+- Shen, D. and M. Lapata (2007). 使用语义角色改进问答系统．见EMNLP (2007)，第12–21页．
+- Socher, R., B. Huval, C. D. Manning, and A. Y. Ng (2012). 基于递归矩阵向量空间的语义组合性．见EMNLP (2012)，第1201–1211页．
+- Socher, R., A. Perelygin, J. Y. Wu, J. Chuang, C. D. Manning, A. Y. Ng, and C. Potts (2013). 基于情感树库的语义组合性递归深度模型．见EMNLP (2013)．
+- Søgaard, A. (2013). 自然语言处理中的半监督学习与领域自适应．*人类语言技术综合讲座* 6(2), 1–103．
+- Solorio, T. and Y. Liu (2008). 学习预测语码转换点．见EMNLP (2008)，第973–981页．
+- Somasundaran, S., G. Namata, J. Wiebe, and L. Getoor (2009). 利用话语关系改进观点极性分类的监督和无监督方法．见EMNLP (2009)．
+- Somasundaran, S. and J. Wiebe (2009). 识别在线辩论中的立场．见ACL (2009)，第226–234页．
+- Song, L., B. Boots, S. M. Siddiqi, G. J. Gordon, and A. J. Smola (2010). 隐马尔可夫模型的希尔伯特空间嵌入．载于*国际机器学习会议 (ICML) 论文集*，第991–998页．
+- Song, L., Y. Zhang, X. Peng, Z. Wang, and D. Gildea (2016). 将AMR到文本生成视为旅行商问题．见EMNLP (2016)，第2084–2089页．
+- Soon, W. M., H. T. Ng, and D. C. Y. Lim (2001). 名词短语共指消解的一种机器学习方法．*计算语言学* 27(4), 521–544．
+- Sordoni, A., M. Galley, M. Auli, C. Brockett, Y. Ji, M. Mitchell, J.-Y. Nie, J. Gao, and B. Dolan (2015). 一种上下文敏感的对话响应生成的神经网络方法．见NAACL (2015)．
+- Soricut, R. and D. Marcu (2003). 使用句法和词汇信息的句子级话语解析．见NAACL (2003)，第149–156页．
+- Sowa, J. F. (2000). *知识表示：逻辑、哲学和计算基础*．加利福尼亚州太平洋格罗夫：Brooks/Cole．
+- Spärck Jones, K. (1972). 词项特异性的统计解释及其在检索中的应用．*文献学杂志* 28(1), 11–21．
+- Spitkovsky, V. I., H. Alshawi, D. Jurafsky, and C. D. Manning (2010). 维特比训练改进无监督依存句法分析．见CoNLL (2010)，第9–17页．
+- Sporleder, C. and M. Lapata (2005). 话语分块及其在句子压缩中的应用．见EMNLP (2005)，第257–264页．
+- Sproat, R., A. Black, S. Chen, S. Kumar, M. Ostendorf, and C. Richards (2001). 非标准词的规范化．*计算机语音与语言* 15(3), 287–333．
+- Sproat, R., W. Gale, C. Shih, and N. Chang (1996). 一种用于中文的随机有限状态分词算法．*计算语言学* 22(3), 377–404．
+- Sra, S., S. Nowozin, and S. J. Wright (2012). *机器学习优化*．麻省理工学院出版社．
+- Srivastava, N., G. Hinton, A. Krizhevsky, I. Sutskever, and R. Salakhutdinov (2014). Dropout：防止神经网络过拟合的一种简单方法．*机器学习研究杂志* 15(1), 1929–1958．
+- Srivastava, R. K., K. Greff, and J. Schmidhuber (2015). 训练极深网络．见NIPS (2015)，第2377–2385页．
+- Stab, C. and I. Gurevych (2014a). 在议论文中标注论证成分和关系．见COLING (2014)，第1501–1510页．
+- Stab, C. and I. Gurevych (2014b). 识别议论文中的论辩话语结构．见EMNLP (2014)，第46–56页．
+- Stede, M. (2011, Nov.). *话语处理，人类语言技术综合讲座第4卷*．Morgan & Claypool出版社．
+- Steedman, M. and J. Baldridge (2011). 组合范畴语法．载于*非转换句法：语法的形式化与显式模型*．Wiley-Blackwell出版社．
+- Stenetorp, P., S. Pyysalo, G. Topić, T. Ohta, S. Ananiadou, and J. Tsujii (2012). brat：一个用于NLP辅助文本标注的基于Web的工具．见EACL (2012)，第102–107页．
+- Stern, M., J. Andreas, and D. Klein (2017). 一个极简的基于跨度的神经成分句法分析器．见ACL (2017)．
+- Stolcke, A., K. Ries, N. Coccaro, E. Shriberg, R. Bates, D. Jurafsky, P. Taylor, R. Martin, C. Van Ess-Dykema, and M. Meteer (2000). 用于对话语音自动标注和识别的对话行为建模．*计算语言学* 26(3), 339–373．
+- Stone, P. J. (1966). *通用探究者：内容分析的计算机方法*．麻省理工学院出版社．
+- Stoyanov, V., N. Gilbert, C. Cardie, and E. Riloff (2009). 名词短语共指消解中的难题：理解最新技术现状．见ACL (2009)，第656–664页．

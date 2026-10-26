@@ -1,0 +1,15 @@
+right subpaths: the path George Bush ← wants → travel → France is segmented into the subpaths, George Bush ← wants and wants → travel → France. In each path, a recurrent neural network is run from the argument to the root word (in this case, wants). The final representation by max pooling (§ 3.4) across all the recurrent states along each path. This process can be applied across separate “channels”, in which the inputs consist of embeddings for the words, parts-of-speech, dependency relations, and WordNet hypernyms (e.g., France-nation; see § 4.2). To define the model formally, let s(m) define the successor of word m in either the left or right subpath (in a dependency path, each word can have a successor in at most one subpath). Let x_m^{(c)} indicate the embedding of word (or relation) m in channel c, and let ←h_m^{(c)} and →h_m^{(c)} indicate the associated recurrent states in the left and right subtrees respectively. Then the complete model is specified as follows,
+
+h_{s(m)}^{(c)} = RNN(x_{s(m)}^{(c)}, h_m^{(c)}) [17.18]
+z^{(c)} = MaxPool( ←h_i^{(c)}, ←h_{s(i)}^{(c)}, ..., ←h_root^{(c)}, →h_j^{(c)}, →h_{s(j)}^{(c)}, ..., →h_root^{(c)} ) [17.19]
+Ψ(r, i, j) = θ · [ z^{(word)}; z^{(POS)}; z^{(dependency)}; z^{(hypernym)} ] . [17.20]
+
+Note that z is computed by applying max-pooling to the matrix of horizontally concatenated vectors h, while Ψ is computed from the vector of vertically concatenated vectors z. Xu et al. (2015) pass the score Ψ through a softmax layer to obtain a probability p(r | i, j, w), and train the model by regularized cross-entropy. Miwa and Bansal (2016) show that a related model can solve the more challenging “end-to-end” relation extraction task, in which the model must simultaneously detect entities and then extract their relations.
+
+# 17.2.3 Knowledge base population
+
+In many applications, what matters is not what fraction of sentences are analyzed correctly, but how much accurate knowledge can be extracted. Knowledge base population (KBP) refers to the task of filling in Wikipedia-style infoboxes, as shown in Figure 17.1a. Knowledge base population can be decomposed into two subtasks: entity linking (described in § 17.1), and slot filling (Ji and Grishman, 2011). Slot filling has two key differences from the formulation of relation extraction presented above: the relations hold between entities rather than spans of text, and the performance is evaluated at the type level (on entity pairs), rather than on the token level (on individual sentences).
+
+From a practical standpoint, there are three other important differences between slot filling and per-sentence relation extraction.
+
++   KBP tasks are often formulated from the perspective of identifying attributes of a few “query” entities. As a result, these systems often start with an information
