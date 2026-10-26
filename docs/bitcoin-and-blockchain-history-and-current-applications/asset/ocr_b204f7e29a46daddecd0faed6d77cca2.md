@@ -1,0 +1,14 @@
+potential cause for distributed nodes. It is reaching consensus by which version of the blockchain is the potential deciding factor. Agreeing upon the current blockchain nature and state, it is vital for a digital economic system to work in cohesive infrastructure properly.
+
+The PoW consensus algorithm has emerged as one of the best solutions to the Byzantine Generals Problem, which affirms the creation of Bitcoin as a Byzantine Fault Tolerant system. This means that the Bitcoin blockchain is highly resistant to attacks not only because of the decentralized network but also because of the PoW algorithm; hence, the majority of attacks are fenced by this technology. The high costs involved in the process of mining make it very baffling and unlikely that miners can invest their resources to dismantle the infrastructure.
+
+# ### 7.4 MINING ALGORITHMS
+
+The components of data mining are of three types: *Clustering or Classification, Association Rules, and Sequence Analysis.*
+
+Clustering/classification is a technology in which a grouping rule is generated from a set of odd data. The rule will be used to classify future data. An association rule is a well-known approach where it implies a precise association among a set of objects in a database. Sequence analysis is used to establish patterns that present in a chain of sequence. A variety of algorithms are propounded to implement such aspects of data mining. The foundation of blockchain mining algorithm explains how it works. In this section, a brief explanation is given on how mining works, and it is composed of four steps as follows:
+
++   1. Step 1. First a user signs off on a transaction from the application wallet and sends certain cryptic token.
++   2. Step 2. The transaction is broadcasted by the application wallet and waits for a miner. The pending transaction is termed as “unconfirmed” according to blockchain. If it is not plucked by a miner, then a local data structure pool is maintained for this unconfirmed transaction.
++   3. Step 3. Network miners depicted as nodes select the transaction from the local pool of transactions, and a block is formed with some metadata information. Every miner assembles their own block of transactions.
++   4. Step 4. Transactions are taken and assembled to a block. Miners create a block of transactions. So, all the nodes present in blockchain need to register with a transaction. So, validation of the block is necessary before initiating the transaction. The foremost activity of the block is to get signature of proof, i.e., PoW. The signature is a combination of very complex math challenges. This is uniquely maintained for each block. This process is significantly termed as “mining,” e.g. a hash function is popularly used by miners in blockchain. A hash function picks up an input as a string of numbers and letters, and subsequently, it returns into a 32-digit string which is a combination of random letters and numbers (hash output).

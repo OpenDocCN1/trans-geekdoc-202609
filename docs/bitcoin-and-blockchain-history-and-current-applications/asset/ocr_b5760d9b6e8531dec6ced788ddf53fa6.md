@@ -1,0 +1,18 @@
+counterparty has to use his private key and then again decrypt it using the sender’s public key verifying the sender’s authenticity. Each user would have to have thousands of keys, one for each user if not for these public and private keys.
+
+# 5.5  SELF-SUSTAINABLE ARCHITECTURE:  
+     INCENTIVIZATION TO MINERS
+
+Specifically in the case of Bitcoin, miners are rewarded with Bitcoins for executing this important task of authentication by proof-of-work system. This serves as an incentive for them to spend time, effort, and resources (memory, electricity, CPU with high processing power, etc.). The total number of Bitcoins has already been fixed at 21 million. In that case, as more and more transactions take place and the usage of Bitcoins becomes more acceptable, the mining fee for the miners (paid in Bitcoins) [7] would increase in value. This is a simple case of “Demand and Supply” in economics where the rarity of a good determines its value. As Bitcoin becomes more and rarer, it would command more value and vice versa. It also raises a pertinent question as to what would happen if the entire pool of 21 million Bitcoin [6] is mined.^5^
+
+# 5.6  SECURITY FEATURES: DIGITAL SIGNATURE
+
+The blocks in the blockchain are secured using hash signature that is a digital identification unique to that concerned block only. Each block has the hash signature of the previous block, and only after authentication by the consensus of the nodes, new blocks of transactions are added to the existing chain. It is because of these hash signatures that the blockchain is so difficult to alter. If someone tries to alter or attack a block, then its hash signature would mismatch and the following block would not accept the previous block. So, the attacker would have to alter the next block, which would result in rejection from the subsequent block and so on. It would require a concerted effort from a malicious majority of the nodes to change the data in one block and get a consensus and then keep doing so for all the blocks in that chain.
+
+# 5.6.1  HASHING
+
+A hash function is a complex mathematical function that processes any arbitrary input of any length into an output of a fixed length. Different software can be used for the
+
+^5^ It would take some time for such a situation to come because Bitcoin is not fully accepted as a means of exchange in our society. There is resistance from various quarters such as government, financial houses, and many investors. Governments directly and indirectly control the amount of money in an economy through its monetary and fiscal policies and intervening in situations when some sector needs special attention. Financial institutions are averse to new-age cryptocurrency because it is a direct assault on their business model. Finally, many investors are cynical because the technology is relatively new and they are hesitant to commit to a completely unknown system of transaction. Cyber security is another concern with them, and finally in case of a failure in traditional financial system, the culprits can be taken to task by the court of law, but in blockchain, there is no one to point fingers at.
+
+With that backdrop, even if all the Bitcoins get mined, there are two possible scenarios. First, the peers on the network can unanimously decide to increase the overall supply. Second, miners would start getting their fee from the users trying to execute transactions.

@@ -1,0 +1,9 @@
+![](bbox=[0.159, 0.095, 0.838, 0.432])
+
+**FIGURE 3.8**  Blockchain transaction.
+
+address is more like an email address, to which we send money instead of email. The transaction is initiated once A sends the money to B. In order to get this money in B’s wallet, every node in the blockchain network has to verify the transaction. During this process, every node will record the transaction. Hence, thousands of records will be stored in thousands of computers. Users may not like the idea of having their transaction information available on many computers. Blockchain resolves this by keeping the transaction anonymous. To maintain the integrity of transactions over the network, the nodes use a consensus protocol, cryptographic hashes, and digital signatures. Consensus protocol assures that the public ledgers are exact copies and minimizes the number of fraudulent transactions. If any of the users wants to change any transaction record, they need to have access to all the nodes in the network which is practically not possible. SHA-256, a cryptographic hashing algorithm, is used to assure that any change in a transaction leads to a new hash value being computed that denotes a transaction input that may be compromised. Digital signatures are used to assure that the transactions are initiated from genuine senders and not from any imposters. “Miners” are people dedicated to devices and blockchain. Devices are the nodes on the network which validates transactions and stores them in a distributed ledger. These miners are rewarded in Bitcoins for their services.
+
+# 3.10 BLOCKCHAIN OPEN-SOURCE IMPLEMENTATION
+
+Several open-source implementations of blockchain technology are available, and selecting one among them to use is a challenging task. A comparison of several blockchain implementations is made in Table 3.2.

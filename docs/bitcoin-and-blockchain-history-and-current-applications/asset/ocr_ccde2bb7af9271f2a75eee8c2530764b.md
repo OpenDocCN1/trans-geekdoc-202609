@@ -1,0 +1,7 @@
+CouchDB container to save the world state of the ledgers. The Fabric network will have two channels. Peers of Org-3 and Org-2 can join channel channel1 and peers of Org-1 and Org-3 can join channel channel2. We will also build the chaincode (smart contract) for the channel1 and channel2, and build REST API using Fabric SDK to interact with the Fabric network
+
+Figure 12.9 depicts the architecture of a Fabric network. We will first go through the prerequisites and next see the configurations required for the organization-specific container definitions for docker-compose file, we will look into the orderer configuration for the docker-compose file. Then we will look into configtx.yaml configuration file, crypto-config.yaml configuration file. After finishing with the configuration files, we will develop a basic chaincode for both the channels. Next, we will see the various commands used to create the certificates using the crypto-config configuration file, generate the genesis block, generating channel transaction, generating anchor peer channel transaction file, channel creation, channel join, anchor peer update, chaincode installation, chaincode instantiation. And finally, we will write the REST API using Fabric Node SDK to interact with the Hyperledger Fabric network.
+
+![](bbox=[0.12, 0.429, 0.879, 0.886])
+
+**FIGURE 12.9** Network architecture.
