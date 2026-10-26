@@ -1,0 +1,53 @@
+level_changes:
+- line: 31
+  before: 4
+  after: 3
+- line: 109
+  before: 4
+  after: 3
+- line: 148
+  before: 4
+  after: 3
+- line: 425
+  before: 2
+  after: 3
+- line: 503
+  before: 2
+  after: 3
+- line: 574
+  before: 2
+  after: 3
+- line: 592
+  before: 2
+  after: 3
+- line: 604
+  before: 2
+  after: 3
+- line: 610
+  before: 2
+  after: 3
+- line: 675
+  before: 2
+  after: 3
+- line: 693
+  before: 2
+  after: 3
+- line: 720
+  before: 2
+  after: 3
+- line: 731
+  before: 2
+  after: 3
+text_changes:
+- line: 5
+  before: 第2章
+  after: 第2章 关于 Go 泛型 101
+- line: 7
+  before: 关于 Go 泛型 101
+  after: ''
+- line: 23
+  before: 第4章
+  after: 第4章 初识自定义泛型
+- line: 25
+  before: 初识自定义泛型
+  after: ''

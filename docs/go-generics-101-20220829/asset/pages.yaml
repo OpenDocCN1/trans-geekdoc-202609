@@ -1,0 +1,717 @@
+- pgno: 0
+  md: '# Go Generics 101
+
+
+    Tapir Liu'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '+   - 7.5 The type literal in a composite literal must have a core type ................................
+    38
+
+    +   - 7.6 An element index operation requires the container operand’s type set
+    may not include maps and non-maps at the same time ................................
+    39
+
+    +   - 7.7 A (sub)slice operation requires the container operand has a core type
+    ................................ 39
+
+    +   - 7.8 In a for-range loop, the ranged container is required to have a core
+    type ................................ 40
+
+    +   - 7.9 Type parameter involved conversions ................................
+    42
+
+    +   - 7.10 Type parameter involved assignments ................................
+    43
+
+    +   - 7.11 Calls to predeclared functions ................................ 45
+
+    +   - 7.12 A call to the predeclared len or cap functions is valid if it is valid
+    for all of the types in the type set of the argument ................................
+    45
+
+    +   - 7.13 A call to the predeclared new function has not extra requirements for
+    its argument ................................ 46
+
+    +   - 7.14 A call to the predeclared make function requires its first argument
+    (the container type) has a core type ................................ 47
+
+    +   - 7.15 A call to the predeclared delete function requires all types in the
+    type set of its first argument have an identical key type ................................
+    48
+
+    +   - 7.16 A call to the predeclared close function requires all types in the
+    type set of its argument are channel types ................................ 48
+
+    +   - 7.17 Calls to predeclared complex, real and imag functions don’t accept
+    arguments of type parameter now ................................ 48
+
+    +   - 7.18 About constraints with empty type sets ................................
+    49
+
+
+    # 8 The Status Quo of Go Custom Generics
+
+
+    +   - 8.1 Type declarations inside generic functions are not currently supported
+    ................................ 50
+
+    +   - 8.2 Generic type aliases are not supported currently ................................
+    50
+
+    +   - 8.3 Embedding type parameters in struct types is not allowed now ................................
+    51
+
+    +   - 8.4 The method set of a constraint is not calculated completely for some
+    cases ................................ 51
+
+    +   - 8.5 No ways to specific a field set for a constraint ................................
+    52
+
+    +   - 8.6 No ways to use common fields for a constraint if the constraint has
+    not a core (struct) type ................................ 52
+
+    +   - 8.7 Fields of values of type parameters are not accessible ................................
+    53
+
+    +   - 8.8 Type switches on values of type parameters are not supported now ................................
+    53
+
+    +   - 8.9 Generic methods are not supported ................................ 54
+
+    +   - 8.10 There are no ways to construct a constraint which allows assignments
+    involving types of unspecific underlying types ................................
+    55
+
+    +   - 8.11 There are no ways to construct a constraint which allows conversion
+    involving types of unspecific underlying types ................................
+    55'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Chapter 2
+
+
+    # About Go Generics 101
+
+
+    Starting from version 1.18 (the current latest version), Go supports custom generics.
+
+
+    This book talks about the custom generics feature of Go programming language.
+    The content in this book includes:
+
+
+    +   - custom generic syntax
+
+    +   - type constraints and type parameters
+
+    +   - type arguments and type inference
+
+    +   - how to write valid custom generic code
+
+    +   - current implementation/design restrictions
+
+
+    A reader needs to be familiar with Go general programming to read this book. In
+    particular, readers of this book should be familiar with Go type system, including
+    Go built-in generics, which and Go custom generics are two different systems.
+
+
+    Currently, the book mainly focuses on the syntax of, and concepts in, custom generics.
+    More practical examples will be provided when I get more experiences of using
+    custom generics.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: "# Chapter 4\n\n# First Look of Custom Generics\n\nIn the custom generics world,\
+    \ a type may be declared as a generic type, and a function may be declared as\
+    \ generic function. In addition, generic types are defined types, so they may\
+    \ have methods.\n\nThe declaration of a generic type, generic function, or method\
+    \ of a generic type contains a type parameter list part, which is the main difference\
+    \ from the declaration of an ordinary type, function, or method.\n\n# 4.1 A generic\
+    \ type example\n\nFirstly, let’s view an example to show how generic types look\
+    \ like. It might be not a perfect example, but it does show the usefulness of\
+    \ custom generic types.\n\n```\n```go\npackage main\n\nimport \"sync\"\n\ntype\
+    \ Lockable[T any] struct {\n    sync.Mutex\n    Data T\n}\n\nfunc main() {\n \
+    \   var n Lockable[uint32]\n    n.Lock()\n    n.Data++\n    n.Unlock()\n\n   \
+    \ var f Lockable[float64]\n    f.Lock()\n    f.Data += 1.23\n    f.Unlock()\n\n\
+    \    var b Lockable[bool]\n    b.Lock()\n    b.Data = !b.Data\n    b.Unlock()\n\
+    }\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: "```\n```go\nData uint32\n}\n\ntype LockableFloat64 struct {\n    sync.Mutex\n\
+    \    Data float64\n}\n\ntype LockableBool struct {\n    sync.Mutex\n    Data bool\n\
+    }\n\ntype LockableBytes struct {\n    sync.Mutex\n    Data []byte\n}\n\nfunc main()\
+    \ {\n    var n LockableUint32\n    n.Lock()\n    n.Data++\n    n.Unlock()\n\n\
+    \    var f LockableFloat64\n    f.Lock()\n    f.Data += 1.23\n    f.Unlock()\n\
+    \n    var b LockableBool\n    b.Lock()\n    b.Data = !b.Data\n    b.Unlock()\n\
+    \n    var bs LockableBytes\n    bs.Lock()\n    bs.Data = append(bs.Data, \"Go\"\
+    ...)\n    bs.Unlock()\n}\n```\n```\n\nThe non-generic code contains many code\
+    \ repetitions, which could be avoided by using the generic type demonstrated above.\n\
+    \n# 4.2 An example of a method of a generic type\n\nSome people might not appreciate\
+    \ the implementation of the above generic type. Instead, they prefer to use a\
+    \ different implementation as the following code shows. Comparing with the Lockable\
+    \ implementation in the last section, the new one hides the struct fields from\
+    \ outside package users of the generic type.\n\n```\n```go\npackage main\n```\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '```
+
+    println(NoDiff[bool]())  // true
+
+
+    // _ = NoDiff() // error: cannot infer V
+
+
+    // error: *** does not implement comparable
+
+    // _ = NoDiff([]int{}, []int{})
+
+    // _ = NoDiff(map[string]int{})
+
+    // _ = NoDiff(any(1), any(1))
+
+    }
+
+    ```
+
+
+    In the above example, NoDiff is a generic function. Different from non-generic
+    functions, and similar to generic types, there is an extra part, a type parameter
+    list, in the declaration of a generic function. Here, the type parameter list
+    of the NoDiff generic function is [V comparable], in which V is the type parameter
+    name and comparable is the constraint of V.
+
+
+    comparable is new predeclar ed identifier introduced in Go 1.18. It denotes an
+    interface that is implemented by all comparable types. It will be explained with
+    more details in the next chapter.
+
+
+    Here, the type parameter V is used as the variadic (value) parameter type.
+
+
+    The notations NoDiff[string], NoDiff[int] and NoDiff[bool] are called instantiated
+    functions (of the generic function NoDiff). Similar to instantiated types, in
+    the notations, [string], [int] and [bool] are called type argument lists. In the
+    lists, string, int and bool are called type arguments, all of which are passed
+    to the V type parameter.
+
+
+    The whole type argument list may be totally omitted from an instantiated function
+    expression if all the type arguments could be inferred from the value arguments.
+    That is why some calls to the NoDiff generic function have no type argument lists
+    in the above example.
+
+
+    +   - In the call NoDiff("Go", "Go", "Go"), the type argument is inferred as string,
+    the default type of the value arguments.
+
+    +   - In the call NoDiff(123, 123, 123, 123), the type argument is inferred as
+    int, the default type of the value arguments.
+
+    +   - In the two calls with A{} and A{1, 2} as value arguments, the type argument
+    is inferred as [2]int, the type of the value arguments.
+
+    +   - In the two calls with new(int) as value arguments, the type argument is
+    inferred as *int, the type of the value arguments.
+
+
+    Please note that all of these type arguments implement the comparable interface.
+    Incomparable types, such as []int and map[string]int may not be passed as type
+    arguments of calls to the NoDiff generic function. And please note that, although
+    any is a comparable (value) type, it doesn''t implement comparable, so it is also
+    not an eligible type argument. This will be talked about in detail in the next
+    chapter.
+
+
+    The above example shows how generics avoid code repetitions for function declarations.
+    Without custom generics, we need to declare a function for each type argument
+    used in the example. The bodies of these function declarations would be almost
+    the same.
+
+
+    # 4.4 Generic functions could be viewed as simplified forms of methods of generic
+    types
+
+
+    The generic function shown in the above section could be viewed as a simplified
+    form of a method of a generic type, as shown in the following code.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: "```\n~map[int]string\n~chan struct{}\n~struct{x int}\n\n// unions of terms\n\
+    uint8 | uint16 | uint32 | uint64\n~[]byte | ~string\nmap[int]int | []int | [16]int\
+    \ | any\nchan struct{} | ~struct{x int}\n```\n\nWe know that, before Go 1.18,\
+    \ an interface type may embed\n\n+   - arbitrary number of method specifications\
+    \ (method elements, one kind of interface elements);\n+   - arbitrary number of\
+    \ type names (type elements, the other kind of interface elements), but the type\
+    \ names must denote interface types.\n\nGo 1.18 relaxed the limitations of type\
+    \ elements, so that now an interface type may embed the following type elements:\n\
+    \n+   - any type literals or type names, whether or not they denote interface\
+    \ types, but they must not denote type parameters.\n+   - tilde forms.\n+   -\
+    \ term unions.\n\nThe orders of interface elements embedded in an interface type\
+    \ are not important.\n\nThe following code snippet shows some interface type declarations,\
+    \ in which the interface type literals in the declarations of N and O are only\
+    \ legal since Go 1.18.\n\n```\ntype L interface {\n    Run() error\n    Stop()\n\
+    }\n\ntype M interface {\n    L\n    Step() error\n}\n\ntype N interface {\n  \
+    \  M\n    interface{ Resume() }\n    ~map[int]bool\n    ~[]byte | string\n}\n\n\
+    type O interface {\n    Pause()\n    N\n    string\n    int64 | ~chan int | any\n\
+    }\n```\n\nEmbedding an interface type in another one is equivalent to (recursively)\
+    \ expanding the elements in the former into the latter. In the above example,\
+    \ the declarations of M, N and O are equivalent to the following ones:"
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "```\ntype M interface {\n    Run() error\n    Stop()\n    Step() error\n}\n\
+    \ntype N interface {\n    Run() error\n    Stop()\n    Step() error\n    Resume()\n\
+    \    ~map[int]bool\n    ~[]byte | string\n}\n\ntype O interface {\n    Run() error\n\
+    \    Stop()\n    Step() error\n    Pause()\n    Resume()\n    ~map[int]bool\n\
+    \    ~[]byte | string\n    string\n    int64 | ~chan int | any\n}\n```\n\nWe could\
+    \ view a single type literal, type name or tilde form as a term union with only\
+    \ one term. So simply speaking, since Go 1.18, an interface type may specify some\
+    \ methods and embed some term unions.\n\nAn interface type without any embedding\
+    \ elements is called an empty interface. For example, the predeclared any type\
+    \ alias denotes an empty interface type.\n\n# 5.2 Type sets and method sets\n\n\
+    Before Go 1.18, an interface type is defined as a method set. Since Go 1.18, an\
+    \ interface type is defined as a type set. A type set only consists of non-interface\
+    \ types.\n\n+   - The type set of a non-interface type literal or type name only\
+    \ contains the type denoted by the type literal or type name.\n+   - As just mentioned\
+    \ above, the type set of a tilde form ~T is the set of types whose underlying\
+    \ types are T. In theory, this is an infinite set.\n+   - The type set of a method\
+    \ specification is the set of non-interface types whose method sets include the\
+    \ method specification. In theory, this is an infinite set.\n+   - The type set\
+    \ of an empty interface is the set of all non-interface types. In theory, this\
+    \ is an infinite set.\n+   - The type set of a union of terms T1 | T2 | . . .\
+    \ | Tn is the union of the type sets of the terms.\n+   - The type set of a non-empty\
+    \ interface is the intersection of the type sets of its interface elements.\n\n\
+    As the type set of an empty interface type (for example, the predeclared any)\
+    \ contains all non-"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "them is empty. The interface type and the underlying type of the type S shown\
+    \ in the above code snippet are actually identical.\n\n```\n```go\ninterface {~string;\
+    \ string; M();}\ninterface {~string; string; M()}\ninterface {\n    ~string\n\
+    \    string\n    M()\n}\n```\n```\n\nIf the type set of a type X is a subset of\
+    \ an interface type Y, we say X implements (or satisfies) Y. Here, X may be an\
+    \ interface type or a non-interface type.\n\nBecause the type set of an empty\
+    \ interface type is a super set of the type sets of any types, all types implement\
+    \ an empty interface type.\n\nIn the above example,\n\n+   - the interface type\
+    \ S, whose type set is empty, implements all interface types.\n+   - all types\
+    \ implement the interface type Z, which is actually a blank interface type.\n\n\
+    The list of methods specified by an interface type is called the method set of\
+    \ the interface type. If an interface type X implements another interface type\
+    \ Y, then the method set of X must be a super set of Y.\n\nInterface types whose\
+    \ type sets can be defined entirely by a method set (may be empty) are called\
+    \ basic interface types. Before 1.18, Go only supports basic interface types.\
+    \ Basic interfaces may be used as either value types or type constraints, but\
+    \ non-basic interfaces may only be used as type constraints (as of Go 1.19).\n\
+    \nIn the above examples, L, M, U, Z and any are basic types.\n\nIn the following\
+    \ code, the declaration lines for x and y both compile okay, but the line declaring\
+    \ z fails to compile.\n\n```\n```go\nvar x any\nvar y interface {M()}\n\n// error:\
+    \ interface contains type constraints\nvar z interface {~[]byte}\n```\n```\n\n\
+    Whether or not to support non-basic interface types as value types in future Go\
+    \ versions in unclear now.\n\nNote, before Go toolchain 1.19, aliases to non-basic\
+    \ interface types were not supported. The following type alias declarations are\
+    \ only legal since Go toolchain 1.19.\n\n```\n```go\ntype C[T any] interface{~int;\
+    \ M() T}\ntype C1 = C[bool]\ntype C2 = comparable\ntype C3 = interface {~[]byte\
+    \ | ~string}\n```\n```\n\n# 5.3  More about the predeclared comparable constraint\n\
+    \nAs aforementioned, besides any, Go 1.18 also introduces another new predeclared\
+    \ identifier comparable, which denotes an interface type that is implemented by\
+    \ all comparable types."
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "```\ntype G[S ~[]E, E int] struct{}\n```\n\nPlease note,\n\n+   - as mentioned\
+    \ in the last section, although E is a type parameter type, []E is an ordinary\
+    \ (slice) type.\n+   - the underlying type of S is interface{~[]E}, not []E.\n\
+    +   - the underlying type of E is interface{int}, not int.\n\nBy Go specification,\
+    \ the function and method declarations in the following code all fail to compile.\n\
+    \n```\n```go\ntype C any\nfunc foo1[C C]() {}    // error: C redeclared\nfunc\
+    \ foo2[T C](T T) {} // error: T redeclared\n```\n```\n\n```\n```go\ntype G[G any]\
+    \ struct{x G} // okay\nfunc (E G[E]) Bar1() {}    // error: E redeclared\n```\n\
+    ```\n\nThe following Bar2 method declaration should compile okay, but it doesn't\
+    \ now (Go toolchain 1.19). This is a bug which will be fixed in Go toolchain 1.20.\n\
+    \n```\n```go\ntype G[G any] struct{x G} // okay\nfunc (v G[G]) Bar2() {}    //\
+    \ error: G is not a generic type\n```\n```\n\n# 5.10  More about generic type\
+    \ and function declarations\n\nWe have seen a generic type declaration and some\
+    \ generic function declarations in the last chapter. Different from ordinary type\
+    \ and function declarations, each of the generic ones has a type parameter list\
+    \ part.\n\nThis book doesn't plan to further talk about generic type and function\
+    \ declaration syntax.\n\nThe source type part of a generic type declaration must\
+    \ be an ordinary type. So it might be\n\n+   - a composite type literal. As mentioned\
+    \ above, a composite type literal always represents an ordinary type.\n+   - a\
+    \ type name which denotes an ordinary type.\n+   - an instantiated type. Type\
+    \ instantiations will be explained in detail in the next chapter. For now, we\
+    \ only need to know each instantiated type is a named ordinary type.\n\nThe following\
+    \ code shows some generic type declarations with all sorts of source types. All\
+    \ of these declarations are valid.\n\n```\n```go\n// The source types are ordinary\
+    \ type names.\ntype (\n    Fake1[T any] int\n    Fake2[_ any] []bool\n)\n```\n\
+    ```\n\n```\n```go\n// The source type is an unnamed type (composite type).\ntype\
+    \ MyData [A any, B ~bool, C comparable] struct {\n    x A\n    y B\n    z C\n\
+    }\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "# Chapter 6\n\n# Generic Instantiations and Type Argument Inferences\n\nIn\
+    \ the last two chapters, we have used several instantiations of generic types\
+    \ and functions. Here, this chapter makes a formal introduction for instantiated\
+    \ types and functions.\n\n# 6.1 Generic type/function instantiations\n\nGeneric\
+    \ types must be instantiated to be used as types of values, and generic functions\
+    \ must be instantiated to be called or used as function values.\n\nA generic function\
+    \ (type) is instantiated by substituting a type argument list for the type parameter\
+    \ list of its declaration (specification). The lengths of the (full) type argument\
+    \ list is the same as the type parameter list. Each type argument is passed to\
+    \ the corresponding type parameter. A type argument must be a non-interface type\
+    \ or a basic interface type and it is valid only if it satisfies (implements)\
+    \ the constraint of its corresponding type parameter.\n\nInstantiated functions\
+    \ are non-generic functions. Instantiated types are named ordinary value types.\n\
+    \nSame as type parameter lists, a type argument list is also enclosed in square\
+    \ brackets and type arguments are also comma-separated in the type argument list.\
+    \ The comma insertion rule for type argument lists is also the same as type parameter\
+    \ lists.\n\nTwo type argument lists are identical if their lengths are equal and\
+    \ all of their corresponding types are identical. Two instantiated types are identical\
+    \ if they are instantiated from the same generic type and with the same type argument\
+    \ list.\n\nIn the following program, the generic type Data is instantiated four\
+    \ times. Three of the four instantiations have the same type argument list (please\
+    \ note that the predeclared byte is an alias of the predeclared uint8 type). So\
+    \ the type of variable x, the type denoted by alias Z, and the underlying type\
+    \ of the defined type W are the same type.\n\n```\npackage main\n\nimport (\n\
+    \    \"fmt\"\n    \"reflect\"\n)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "```\ntype Getter[T any] interface {\n    Get() T\n}\n\ntype Age[T uint8 | int16]\
+    \ struct {\n    n T\n}\n\nfunc (a Age[T]) Get() T {\n    return a.n\n}\n\nfunc\
+    \ doSomething[T any](g Getter[T]) T {\n    return g.Get()\n}\n\n// The two lines\
+    \ fail to compile.\nvar z = doSomething(Age[uint8]{255}) // error\nvar w = doSomething(Age[int16]{256})\
+    \ // error\n\n// The two lines compile okay.\nvar x = doSomething[uint8](Age[uint8]{255})\n\
+    var y = doSomething[int16](Age[int16]{256})\n```\n\n# 6.4 Pass basic interface\
+    \ types as type arguments\n\nThe above has mentioned that a basic interface type\
+    \ may be used as a type argument and passed to a type parameter if the basic interface\
+    \ type satisfies (implements) the constraint of the type parameter. The following\
+    \ code shows such an example.\n\n```\npackage main\n\ntype Base[T any] []T\n\n\
+    type _ Base[any]\ntype _ Base[error]\n\nfunc Gf[T any](x T) {}\n\nvar _ = Gf[any]\n\
+    var _ = Gf[error]\n\nfunc main() {\n    Gf[any](123)\n    Gf[any](true)\n    Gf[error](nil)\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "By the current specification (Go 1.19), for a type parameter involved assignment,\n\
+    \n+   - if the destination type is a type parameter and the source value is an\
+    \ untyped value, then the assignment is valid only if the untyped value is assignable\
+    \ to each type in the type set of the destination type parameter.\n+   - if the\
+    \ destination type is a type parameter but the source type is an ordinary type,\
+    \ then the assignment is valid only if the source ordinary type is unnamed and\
+    \ its values is assignable to each type in the type set of the destination type\
+    \ parameter.\n+   - if the source type is a type parameter but the destination\
+    \ type is an ordinary type, then the assignment is valid only if the destination\
+    \ ordinary type is unnamed and values of each type in the type set of the source\
+    \ type parameter are assignable to the destination ordinary type.\n+   - if both\
+    \ of the destination type and the source type are type parameters, then the assignment\
+    \ is invalid.\n\nFrom the rules, we could get that type value of a named type\
+    \ can not be assigned to another named type.\n\nIn the following code snippet,\
+    \ there are four invalid assignments.\n\n```\nfunc dat[T ~int | ~float64, S *int\
+    \ | []bool]() {\n    var _ T = 123 // okay\n    var _ S = nil // okay\n}\n```\n\
+    \n```\nfunc zum[T []byte](x []byte) {\n    var t T = x // okay\n    type Bytes\
+    \ []byte\n    var y Bytes = x // okay (both are ordinary types)\n    x = t //\
+    \ okay\n    x = y // okay\n\n    // Both are named types.\n    t = y // error\n\
+    \    y = t // error\n\n    // To make the above two assignments valid,\n    //\
+    \ the sources in then must be converted.\n    t = T(y)     // okay\n    y = Bytes(t)\
+    \ // okay\n}\n```\n\n```\nfunc pet[A, B []byte](x A, y B){\n    // Both are type\
+    \ parameters.\n    x = y // error: cannot use y as type A in assignment\n    y\
+    \ = x // error: cannot use x as type B in assignment\n}\n```\n\nIt is unclear\
+    \ whether or not the assignment rules will be relaxed in future Go versions. It\
+    \ looks the posibility is small."
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "```\nfunc MyNew[T any]() *T {\n    var t T\n    return &t\n}\n```\n\n# 7.14\
+    \ A call to the predeclared make function requires its first argument (the container\
+    \ type) has a core type\n\nCurrently (Go 1.19), in the following code snippet,\
+    \ the functions voc and ted both fail to compile, the other two compile okay.\
+    \ The reason is the first argument of a call to the predeclared make function\
+    \ is required to have a core type. Neither of the voc and ted functions satisfies\
+    \ this requirement, whereas both of the other two functions satisfy this requirement.\n\
+    \n```\nfunc voc[T chan bool | chan int]() {\n    _ = make(T) // error: invalid\
+    \ argument: no core type\n}\n```\n\n```\nfunc ted[T chan<- int | <-chan int]()\
+    \ {\n    _ = make(T) // error: invalid argument: no core type\n}\n```\n\n```\n\
+    type Stream chan int\ntype Queue Stream\n```\n\n```\nfunc fat[T Stream | chan\
+    \ int | Queue | chan<- int]() {\n    _ = make(T) // okay\n}\n```\n\n```\nfunc\
+    \ nub[T Stream | chan int | Queue | <-chan int]() {\n    _ = make(T) // okay\n\
+    }\n```\n\nBy my understanding, this requirement is in order to make subsequent\
+    \ operations on the made containers (they are channels in the above example) always\
+    \ legal. For example, to make sure a value received from the made channel has\
+    \ a specified type (either a type parameter, or an ordinary type).\n\nPersonally,\
+    \ I think the requirement is over strict. After all, for some cases, the supposed\
+    \ subsequent operations don’t happen.\n\nTo use values of a type parameter which\
+    \ doesn’t have a core type within a generic function, we can pass such values\
+    \ as value arguments into the function, as the following code shows.\n\n```\n\
+    func doSomething(any) {}\n```\n\n```\nfunc voc2[T chan bool | chan int](x T) {\n\
+    \    doSomething(x)\n}\n```\n\n```\nfunc ted2[T chan<- int | <-chan int](x T)\
+    \ {\n    doSomething(x)\n}\n```\n\nBecause of the same requirement, neither of\
+    \ the following two functions compile."
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "```\nfunc zig[T ~[]int | map[int]int](c T) {\n    _ = make(T) // error: invalid\
+    \ argument: no core type\n}\n```\n\n```\nfunc rat[T ~[]int | ~[]bool](c T) {\n\
+    \    _ = make(T) // error: invalid argument: no core type\n}\n```\n\nCalls to\
+    \ the predeclar ed new function have not this requirement.\n\n# 7.15 A call to\
+    \ the predeclar ed delete function requires all types in the type set of its first\
+    \ argument have an identical key type\n\nNote, here, the identical key type may\
+    \ be ordinary type or type parameter type.\n\nThe following functions both compile\
+    \ okay.\n\n```\nfunc zuk[M ~map[int]string | ~map[int]bool](x M, k int) {\n  \
+    \  delete(x, k)\n}\n```\n\n```\nfunc pod[M map[K]int | map[K]bool, K ~int | ~string](x\
+    \ M, k K) {\n    delete(x, k)\n}\n```\n\n# 7.16 A call to the predeclar ed close\
+    \ function requires all types in the type set of its argument are channel types\n\
+    \nThe following function compiles okay.\n\n```\nfunc dig[T ~chan int | ~chan bool\
+    \ | ~chan<- string](x T) {\n    close(x)\n}\n```\n\nNote that the current Go specification\
+    \ requires that the argument of a call to the predeclar ed close function must\
+    \ have a core type. This is inconsistent with the implementation of the official\
+    \ standard Go compiler.\n\n# 7.17 Calls to predeclar ed complex, real and imag\
+    \ functions don’t accept arguments of type parameter now\n\nCalling the three\
+    \ functions with arguments of type parameters might break the principle rule mentioned\
+    \ in the first section of the current chapter.\n\nThis is a problem the current\
+    \ custom generics design is unable to solve. There is an issue for this."
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "# 7.18 About constraints with empty type sets\n\nThe type sets of some interface\
+    \ types might be empty. An empty-type-set interface type implements any interface\
+    \ types, including itself.\n\nEmpty-type-set interface types are totally useless\
+    \ in practice, but they might affect the implementation perfection from theory\
+    \ view.\n\nThere are really several imperfections in the implementation of the\
+    \ current official standard Go compiler (v1.19).\n\nFor example, should the following\
+    \ function compile? It does with the latest official standard Go compiler (v1.19).\
+    \ However, one of the above sections has mentioned that a make call requires its\
+    \ argument must have a core type. The type set of the constraint C declared in\
+    \ the following code is empty, so it has not a core type, then the make call within\
+    \ the foo function should not compile.\n\n```\n// This is an empty-type-set interface\
+    \ type.\ntype C interface {\n    map[int]int\n    M()\n}\n\nfunc foo[T C] () {\n\
+    \    var _ = make(T)\n}\n```\n\nThis following is another example, in which all\
+    \ the function calls in the function g should compile okay. However, two of them\
+    \ fail to compile with the latest official standard Go compiler (v1.19).\n\n```\n\
+    func f1[T any](x T) {}\nfunc f2[T comparable](x T) {}\nfunc f3[T []int](x T) {}\n\
+    func f4[T int](x T) {}\n```\n\n```\n// This is an empty-type-set interface type.\n\
+    type C interface {\n    []int\n    m()\n}\n\nfunc g[V C](v V) {\n    f1(v) //\
+    \ okay\n    f2(v) // error: V does not implement comparable\n    f3(v) // okay\n\
+    \    f4(v) // error: V does not implement int\n}\n```\n\nThe current Go specification\
+    \ specially states:\n\n> Implementation restriction: A compiler need not report\
+    \ an error if an operand’s type is a type parameter with an empty type set. Functions\
+    \ with such type parameters cannot be instantiated; any attempt will lead to an\
+    \ error at the instantiation site.\n\nSo the above shown imperfections are not\
+    \ bugs of the official standard Go compiler."
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: "```\nfunc F14[T S1 | S4](v T) {\n    _ = v.X // error: v.x undefined\n}\n\n\
+    func main() {}\n```\n\nThere is a proposal to remove this limit. A temporary (quite\
+    \ verbose) workaround is to specify/declare some getter and setter methods for\
+    \ involved constraints and concrete types.\n\n# 8.7 Fields of values of type parameters\
+    \ are not accessible\n\nCurrently (Go 1.19), even if a type parameter has a core\
+    \ struct type, the fields of the core struct type still may not be accessed through\
+    \ values of the type parameter. For example, the following code doesn’t compile.\n\
+    \n```\ntype S struct{x, y, z int}\n```\n\n```\nfunc mod[T S](v *T) {\n    v.x\
+    \ = 1 // error: v.x undefined\n}\n```\n\nThe restriction mentioned in the last\
+    \ section is actually a special case of the one described in the current section.\n\
+    \nThe restriction (described in the current section) was added just before Go\
+    \ 1.18 is released. It might be removed since a future Go version.\n\n# 8.8 Type\
+    \ switches on values of type parameters are not supported now\n\nIt has been mentioned\
+    \ that a type parameter is an interface type from semantic view. On the other\
+    \ hand, a type parameter has wave-particle duality. For some situations, it acts\
+    \ as the types in its type set.\n\nUp to now (Go 1.19), values of type parameters\
+    \ may not be asserted. The following two functions both fail to compile.\n\n```\n\
+    func tab[T any](x T) {\n    if n, ok := x.(int); ok { // error\n        _ = n\n\
+    \    }\n}\n```\n\n```\nfunc kol[T any]() {\n    var x T\n    switch x.(type) {\
+    \ // error\n    case int:\n    case []bool:\n    default:\n    }\n}\n```\n\nThe\
+    \ following modified versions of the above two functions compile okay:"
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "# 8.10 There are no ways to construct a constraint which allows assignments\
+    \ involving types of unspecific underlying types\n\nAnd there are not such predeclared\
+    \ constraints like the following supposed assignableTo and assignableFrom constraints.\n\
+    \n```\n// This function doesn't compile.\nfunc yex[Tx assignableTo[Ty], Ty assignableFrom[Tx]](x\
+    \ Tx, y Ty) {\n    y = x\n}\n```\n\n# 8.11 There are no ways to construct a constraint\
+    \ which allows conversion involving types of unspecific underlying types\n\nAnd\
+    \ there are not such predeclared constraints like the following supposed convertibleTo\
+    \ and convertibleFrom constraints.\n\n```\n// This function doesn't compile.\n\
+    func x2y[Tx convertibleTo[Ty], Ty convertibleFrom[Tx],\n    // The second value\
+    \ argument is\n    // for type inference purpose.\n](xs []Tx, _ Ty) []Ty {\n \
+    \   if xs == nil {\n        return nil\n    }\n    ys := make([]Ty, len(xs))\n\
+    \    for i := range xs {\n        ys[i] = Ty(xs[i])\n    }\n    return ys\n}\n\
+    ```\n\n```\nvar bs = []byte{61, 62, 63, 64, 65, 66}\nvar ss = x2y(bs, \"\")\n\
+    var is = x2y(bs, 0)\nvar fs = x2y(bs, .0)\n```\n\nCurrently, there is an ungraceful\
+    \ workaround implementation:\n\n```\nfunc x2y[Tx any, Ty any](xs []Tx, f func(Tx)\
+    \ Ty) []Ty {\n    if xs == nil {\n        return nil\n    }\n    ys := make([]Ty,\
+    \ len(xs))\n    for i := range xs {\n        ys[i] = f(xs[i])\n    }\n    return\
+    \ ys\n}\n```\n\n```\nvar bs = []byte{61, 62, 63, 64, 65, 66}\nvar ss = x2y(bs,\
+    \ func(x byte) string {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "```\n    return string(x)\n})\nvar is = x2y(bs, func(x byte) int {\n    return\
+    \ int(x)\n})\nvar fs = x2y(bs, func(x byte) float64 {\n    return float64(x)\n\
+    })\n```\n\nThe workaround needs a callback function, which makes the code verbose\
+    \ and much less efficient, though I do admit it has more usage scenarios."
+  merge: -1
+  img_proc: true
