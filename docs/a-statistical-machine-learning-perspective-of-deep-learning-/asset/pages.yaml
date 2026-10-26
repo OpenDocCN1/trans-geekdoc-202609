@@ -1,0 +1,6047 @@
+- pgno: 0
+  md: '# A Statistical Machine Learning Perspective of Deep Learning: Algorithm, Theory,
+    Scalable Computing
+
+
+    Maruan Al-Shedivat, Zhiting Hu, Hao Zhang, and Eric Xing
+
+
+    Petuum Inc
+
+    &
+
+    Carnegie Mellon University'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Element of AI/Machine Learning
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_1_0.png)
+
+
+    Task
+
+
+    Model
+
+
+    +   - Graphical Models
+
+    +   - Nonparametric Bayesian Models
+
+    +   - Large-Margin
+
+    +   - Regularized Bayesian Methods
+
+    +   - Deep Learning
+
+    +   - Spectral/Matrix Methods
+
+    +   - Sparse Coding
+
+    +   - Sparse Structured I/O Regression
+
+
+    Algorithm
+
+
+    +   - Stochastic Gradient Descent / Backpropagation
+
+    +   - Coordinate Descent
+
+    +   - L-BFGS
+
+    +   - Gibbs Sampling
+
+    +   - Metropolis-Hastings
+
+
+    Implementation
+
+
+    +   - Mahout (MapReduce)
+
+    +   - MLlib (BSP)
+
+    +   - CNTK
+
+    +   - MxNet
+
+    +   - Tensorflow (Async)
+
+    +   - …
+
+
+    System
+
+
+    Hadoop　　Spark　　MPI　　RPC　　GraphLab　　…
+
+
+    Platform and Hardware
+
+
+    +   - Network switches
+
+    +   - Infiniband
+
+    +   - Network attached storage
+
+    +   - Flash storage
+
+    +   - Server machines
+
+    +   - Desktops/Laptops
+
+    +   - NUMA machines
+
+    +   - Mobile devices
+
+    +   - GPUs, CPUs, FPGA, TPU
+
+    +   - ARM-powered devices
+
+    +   - RAM
+
+    +   - Flash
+
+    +   - SSD
+
+    +   - Cloud compute (e.g. Amazon EC2)
+
+    +   - IoT networks
+
+    +   - Data centers
+
+    +   - Virtual machines'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# ML vs DL
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_2_0.png)
+
+
+    More, More, More!!
+
+
+    Data
+
+
+    Learning Machine
+
+
+    Predictions
+
+
+    Hypothesis
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_2_1.png)
+
+
+    input layer
+
+
+    hidden layer 1
+
+
+    hidden layer 2
+
+
+    hidden layer 3
+
+
+    output layer'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Plan
+
+
+    +   - Statistical And Algorithmic Foundation and Insight of Deep Learning
+
+    +   - On Unified Framework of Deep Generative Models
+
+    +   - Computational Mechanisms: Programming Platforms and Distributed Deep Learning
+    Architectures'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Outline
+
+
+    +   - Probabilistic Graphical Models: Basics
+
+    +   - An overview of DL components
+
+    +     - Historical remarks: early days of neural networks
+
+    +     - Modern building blocks: units, layers, activations functions, loss functions,
+    etc.
+
+    +     - Reverse-mode automatic differentiation (aka backpropagation)
+
+    +   - Similarities and differences between GMs and NNs
+
+    +     - Graphical models vs. computational graphs
+
+    +     - Sigmoid Belief Networks as graphical models
+
+    +     - Deep Belief Networks and Boltzmann Machines
+
+    +   - Combining DL methods and GMs
+
+    +     - Using outputs of NNs as inputs to GMs
+
+    +     - GMs with potential functions represented by NNs
+
+    +     - NNs with structured outputs
+
+    +   - Bayesian Learning of NNs
+
+    +     - Bayesian learning of NN parameters
+
+    +     - Deep kernel learning'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: "# Fundamental questions of probabilistic modeling\n\n+   - **Representation:**\
+    \ what is the joint probability distr. on multiple variables?\n+   \n+     $P(X_1,\
+    \ X_2, X_3, ..., X_d)$\n+   \n+     - How many state configurations are there?\n\
+    +     - Do they all need to be represented?\n+     - Can we incorporate any domain-specific\
+    \ insights into the representation?\n+   - **Learning:** where do we get the probabilities\
+    \ from?\n+     - Maximum likelihood estimation? How much data do we need?\n+ \
+    \    - Are there any other established principles?\n+   - **Inference:** if not\
+    \ all variables are observable, how to compute the conditional distribution of\
+    \ latent variables given evidence?\n+     - Computing $P(H|A)$ would require summing\
+    \ over $2^6$ configurations of the unobserved variables\n\n![](img/cb490ed30bca4eda5fbba81c52a2c173_7_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# The two types of GMs
+
+
+    P(H|V)
+
+    θ = argmax_θ P_θ(V)
+
+
+    +   - **Directed edges** assign causal meaning to the relationships (Bayesian
+    Networks or Directed Graphical Models)
+
+    +     P(X₁,X₂,X₃,X₄,X₅,X₆,X₇,X₈) =
+
+    +     P(X₁)P(X₂)P(X₃|X₁)P(X₄|X₂)P(X₅|X₂)
+
+    +     P(X₆|X₃,X₄)P(X₇|X₆)P(X₈|X₅,X₆)
+
+    +   - **Undirected edges** represent correlations between the variables (Markov
+    Random Field or Undirected Graphical Models)
+
+    +     P(X₁,X₂,X₃,X₄,X₅,X₆,X₇,X₈) =
+
+    +     1/Z exp{E(X₁)+E(X₂)+E(X₁,X₃)+E(X₂,X₄)+E(X₅,X₂)+
+
+    +     E(X₃,X₄,X₆)+E(X₆,X₇)+E(X₅,X₆,X₈)}
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_11_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_11_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# # 云计算概述
+
+
+    云计算（Cloud Computing）是一种基于互联网的计算方式，通过这种方式，共享的软硬件资源和信息可以按需提供给计算机各种终端和其他设备。
+
+
+    云计算是分布式计算、并行计算、效用计算、网络存储、虚拟化、负载均衡、热备份冗余等传统计算机和网络技术发展融合的产物。
+
+
+    +   - 按需自助服务（On-demand Self-service）
+
+    +   - 广泛网络访问（Broad Network Access）
+
+    +   - 资源池化（Resource Pooling）
+
+    +   - 快速弹性（Rapid Elasticity）
+
+    +   - 可计量服务（Measured Service）
+
+
+    云计算的五大基本特征构成了其核心价值，使得用户能够以更低成本、更高效率地获取计算资源。
+
+
+    # ## 三种服务模式
+
+
+    | 服务模式 | 英文名称 | 说明 |
+
+    | --- | --- | --- |
+
+    | 基础设施即服务 | IaaS | 提供虚拟化的计算资源、存储和网络 |
+
+    | 平台即服务 | PaaS | 提供开发平台和工具，如操作系统、数据库 |
+
+    | 软件即服务 | SaaS | 提供完整的软件应用程序服务 |
+
+
+    > > 云计算的核心思想是将大量用网络连接的计算资源统一管理和调度，构成一个计算资源池向用户按需服务。
+
+
+    服务等级协议（SLA）是云计算服务商与用户之间达成的服务标准约定，确保服务质量和可用性达到承诺的水平。
+
+
+    +   1. 公有云（Public Cloud）
+
+    +   2. 私有云（Private Cloud）
+
+    +   3. 混合云（Hybrid Cloud）
+
+
+    企业根据成本和安全性需求选择合适的部署模型，其中混合云因兼具灵活性和安全性而越来越受到大型企业的青睐。'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Perceptron and Neural Nets
+
+
+    +   - From biological neuron to artificial neuron (perceptron)
+
+    +   - From biological neuron network to artificial neuron networks
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_13_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_13_1.png)
+
+
+    McCulloch & Pitts (1943)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_13_2.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_13_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Neural Network Model
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_16_0.png)
+
+
+    Inputs
+
+
+    Age — 34
+
+
+    Gender — 2
+
+
+    Stage — 4
+
+
+    Weights: .6, .2, .1, .3, .7, .2
+
+
+    Hidden Layer
+
+
+    Weights: .5, .8
+
+
+    Output
+
+
+    0.6
+
+
+    > “Probability of being Alive”
+
+
+    Independent variables
+
+
+    Weights
+
+
+    Weights
+
+
+    Dependent variable
+
+
+    Prediction'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Backpropagation:
+
+    Reverse-mode differentiation
+
+
+    +   - Artificial neural networks are nothing more than complex functional compositions
+    that can be represented by **computation graphs**:
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_21_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# Backpropagation:
+
+    Reverse-mode differentiation
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_22_0.png)
+
+
+    +   - Artificial neural networks are nothing more than complex functional compositions
+    that can be represented by computation graphs:
+
+    +   - By applying the chain rule and using reverse accumulation, we get
+
+    +     $$\frac{\partial f_n}{\partial x} = \sum_{i_1 \in \pi(n)} \frac{\partial
+    f_n}{\partial f_{i_1}} \frac{\partial f_{i_1}}{\partial x} = \sum_{i_1 \in \pi(n)}
+    \frac{\partial f_n}{\partial f_{i_1}} \sum_{i_2 \in \pi(i_1)} \frac{\partial f_{i_1}}{\partial
+    f_{i_2}} \frac{\partial f_{i_1}}{\partial x} = \dots$$
+
+    +   - The algorithm is commonly known as backpropagation
+
+    +   - What if some of the functions are stochastic?
+
+    +   - Then use stochastic backpropagation!
+
+    +     (to be covered in the next part)
+
+    +   - Modern packages can do this automatically (more later)'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# Modern building blocks of deep networks
+
+
+    +   - Activation functions
+
+    +     - Linear and ReLU
+
+    +     - Sigmoid and tanh
+
+    +     - Etc.
+
+    +   - Layers
+
+    +     - Fully connected
+
+    +     - Convolutional & pooling
+
+    +     - Recurrent
+
+    +     - ResNets
+
+    +     - Etc.
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_24_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_24_1.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_24_2.png)
+
+
+    source: colah.github.io
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_24_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# Modern building blocks of deep networks
+
+
+    +   - Activation functions
+
+    +     - Linear and ReLU
+
+    +     - Sigmoid and tanh
+
+    +     - Etc.
+
+    +   - Layers
+
+    +     - Fully connected
+
+    +     - Convolutional & pooling
+
+    +     - Recurrent
+
+    +     - ResNets
+
+    +     - Etc.
+
+    +   - Loss functions
+
+    +     - Cross-entropy loss
+
+    +     - Mean squared error
+
+    +     - Etc.
+
+
+    Putting things together:
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_25_0.png)
+
+
+    (a part of GoogleNet)'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# # Outline
+
+
+    +   - Probabilistic Graphical Models: Basics
+
+    +   - An overview of the DL components
+
+    +     - Historical remarks: early days of neural networks
+
+    +     - Modern building blocks: units, layers, activations functions, loss functions,
+    etc.
+
+    +     - Reverse-mode automatic differentiation (aka backpropagation)
+
+    +   - Similarities and differences between GMs and NNs
+
+    +     - Graphical models vs. computational graphs
+
+    +     - Sigmoid Belief Networks as graphical models
+
+    +     - Deep Belief Networks and Boltzmann Machines
+
+    +   - Combining DL methods and GMs
+
+    +     - Using outputs of NNs as inputs to GMs
+
+    +     - GMs with potential functions represented by NNs
+
+    +     - NNs with structured outputs
+
+    +   - Bayesian Learning of NNs
+
+    +     - Bayesian learning of NN parameters
+
+    +     - Deep kernel learning'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Graphical models vs. Deep nets
+
+
+    # Graphical models
+
+
+    # Deep neural networks
+
+
+    +   - Representation for encoding meaningful knowledge and the associated uncertainty
+    in a graphical form
+
+
+    +   - Learn representations that facilitate computation and performance on the
+    end-metric (intermediate representations are not guaranteed to be meaningful)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_28_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_28_1.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_28_2.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_28_3.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_28_4.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_28_5.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_28_6.png)'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_29_0.png)
+
+
+    # Graphical models vs. Deep nets
+
+
+    # Graphical models
+
+
+    # Deep neural networks
+
+
+    +   - Representation for encoding meaningful knowledge and the associated uncertainty
+    in a graphical form
+
+    +   - Learning and inference are based on a rich toolbox of well-studied (structure-dependent)
+    techniques (e.g., EM, message passing, VI, MCMC, etc.)
+
+    +   - Graphs represent models
+
+
+    +   - Learn representations that facilitate computation and performance on the
+    end-metric (intermediate representations are not guaranteed to be meaningful)
+
+    +   - Learning is predominantly based on the gradient descent method (aka backpropagation);
+    Inference is often trivial and done via a “forward pass”
+
+    +   - Graphs represent computation'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# Graphical models vs. Deep nets
+
+
+    # Graphical models
+
+
+    # Utility of the graph
+
+
+    +   - A vehicle for synthesizing a global loss function from local structure
+
+    +     - potential function, feature function, etc.
+
+    +   - A vehicle for designing sound and efficient inference algorithms
+
+    +     - Sum-product, mean-field, etc.
+
+    +   - A vehicle to inspire approximation and penalization
+
+    +     - Structured MF, Tree-approximation, etc.
+
+    +   - A vehicle for monitoring theoretical and empirical behavior and accuracy
+    of inference
+
+
+    # Utility of the loss function
+
+
+    +   - A major measure of quality of the learning algorithm and the model
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_30_0.png)
+
+
+    log P(X) = Σ_i log φ(x_i) + Σ_{i,j} log ψ(x_i, x_j)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_30_1.png)
+
+
+    m_{i→a}(x_i) = ∏_{c∈N(i)\a} m_{c→i}(x_i)
+
+    b_a(X_a) ∝ f_a(X_a) ∏_{i∈N(a)} m_{i→a}(x_i)
+
+    m_{a→i}(x_i) = Σ_{X_a\x_i} f_a(X_a) ∏_{j∈N(a)\i} m_{j→a}(x_j)
+
+
+    Q(H) ~ P(H|V)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_30_2.png)
+
+
+    θ = argmax_θ P_θ(V)'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# Graphical models vs. Deep nets
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_31_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_31_1.png)
+
+
+    # Deep neural networks
+
+
+    # Utility of the network
+
+
+    +   - A vehicle to conceptually synthesize complex decision hypothesis
+
+    +     - stage-wise projection and aggregation
+
+    +   - A vehicle for organizing computational operations
+
+    +     - stage-wise update of latent states
+
+    +   - A vehicle for designing processing steps and computing modules
+
+    +     - Layer-wise parallelization
+
+    +   - No obvious utility in evaluating DL inference algorithms
+
+
+    # Utility of the Loss Function
+
+
+    +   - Global loss? Well it is complex and non-convex...
+
+
+    Images from Distill.pub'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# Graphical models vs. Deep nets
+
+
+    # Graphical models
+
+
+    # Utility of the graph
+
+
+    +   - A vehicle for synthesizing a global loss function from local structure
+
+    +     - potential function, feature function, etc.
+
+    +   - A vehicle for designing sound and efficient inference algorithms
+
+    +     - Sum-product, mean-field, etc.
+
+    +   - A vehicle to inspire approximation and penalization
+
+    +     - Structured MF, Tree-approximation, etc.
+
+    +   - A vehicle for monitoring theoretical and empirical behavior and accuracy
+    of inference
+
+
+    # Utility of the loss function
+
+
+    +   - A major measure of quality of the learning algorithm and the model
+
+
+    # Deep neural networks
+
+
+    # Utility of the network
+
+
+    +   - A vehicle to conceptually synthesize complex decision hypothesis
+
+    +     - stage-wise projection and aggregation
+
+    +   - A vehicle for organizing computational operations
+
+    +     - stage-wise update of latent states
+
+    +   - A vehicle for designing processing steps and computing modules
+
+    +     - Layer-wise parallelization
+
+    +   - No obvious utility in evaluating DL inference algorithms
+
+
+    # Utility of the Loss Function
+
+
+    +   - Global loss? Well it is complex and non-convex...'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '|  | DL | ML (e.g., GM) |
+
+    |---|---|---|
+
+    | Empirical goal: | e.g., classification, feature learning | e.g., latent variable
+    inference, transfer learning |
+
+    | Structure: | Graphical | Graphical |
+
+    | Objective: | Something aggregated from local functions | Something aggregated
+    from local functions |
+
+    | Vocabulary: | Neuron, activation function, ... | Variable, potential function,
+    ... |
+
+    | Algorithm: | A single, unchallenged, inference algorithm – Backpropagation (BP)
+    | A major focus of open research, many algorithms, and more to come |
+
+    | Evaluation: | On a black-box score – end performance | On almost every intermediate
+    quantity |
+
+    | Implementation: | Many tricks | More or less standardized |
+
+    | Experiments: | Massive, real data (GT unknown) | Modest, often simulated data
+    (GT known) |'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# Graphical Models vs. Deep Nets
+
+
+    +   - So far:
+
+    +     - Graphical models are representations of probability distributions
+
+    +     - Neural networks are function approximators (with no probabilistic meaning)
+
+    +   - Some of the neural nets are in fact proper graphical models (i.e., units/neurons
+    represent random variables):
+
+    +     - Boltzmann machines (Hinton & Sejnowsky, 1983)
+
+    +     - Restricted Boltzmann machines (Smolensky, 1986)
+
+    +     - Learning and Inference in sigmoid belief networks (Neal, 1992)
+
+    +     - Fast learning in deep belief networks (Hinton, Osindero, Teh, 2006)
+
+    +     - Deep Boltzmann machines (Salakhutdinov and Hinton, 2009)
+
+    +   - Let’s go through these models one-by-one'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# I: Restricted Boltzmann Machines
+
+
+    +   - RBM is a Markov random field represented with a bi-partite graph
+
+    +   - All nodes in one layer/part of the graph are connected to all in the other;
+    no inter-layer connections
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_35_0.png)
+
+
+    Joint distribution
+
+
+    P(v, h) = 1/Z exp{ Σ_{i,j} w_{ij} v_i h_i + Σ_i b_i v_i + Σ_j c_j h_j }'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# I: Restricted Boltzmann Machines
+
+
+    Gradient of the log-likelihood w.r.t. the parameters (alternative form):
+
+
+    $\frac{\partial}{\partial w_{ij}} \log L(v) = \mathbb{E}_{P(h|v)} \left[ \frac{\partial}{\partial
+    w_{ij}} P(v,h) \right] - \mathbb{E}_{P(v,h)} \left[ \frac{\partial}{\partial w_{ij}}
+    P(v,h) \right]$
+
+
+    +   - Both expectations can be approximated via sampling
+
+    +   - Sampling from the posterior is exact (RBM factorizes over h given v)
+
+    +   - Sampling from the joint is done via MCMC (e.g., Gibbs sampling)
+
+    +   - In the neural networks literature:
+
+    +     - computing the first term is called the clamped / wake / positive phase
+    (the network is “awake” since it conditions on the visible variables)
+
+    +     - Computing the second term is called the unclamped / sleep / free / negative
+    phase (the network is “asleep” since it samples the visible variables from the
+    joint; metaphorically, it is "dreaming" the visible inputs)'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "# II: Sigmoid Belief Networks\n\n![](img/cb490ed30bca4eda5fbba81c52a2c173_39_0.png)\n\
+    \nfrom Neal, 1992\n\n+   - Sigmoid belief nets are simply Bayesian networks over\
+    \ binary variables with conditional probabilities represented by sigmoid functions:\n\
+    +   \n+   $$P(x_i|\\pi(x_i)) = \\sigma\\left(x_i \\sum_{x_j \\in \\pi(x_i)} w_{ij}x_j\\\
+    right)$$ \n+   \n+   - Bayesian networks exhibit a phenomenon called “explain\
+    \ away effect”\n\n![](img/cb490ed30bca4eda5fbba81c52a2c173_39_1.png)\n\nIf A correlates\
+    \ with C, then the chance of B correlating with C decreases. ⇒ A and B become\
+    \ correlated given C."
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "# II: Sigmoid Belief Networks\n\n![](img/cb490ed30bca4eda5fbba81c52a2c173_40_0.png)\n\
+    \n+   - Sigmoid belief nets are simply Bayesian networks over binary variables\
+    \ with conditional probabilities represented by sigmoid functions:\n+   \n+  \
+    \   $$P(x_i \\mid \\pi(x_i)) = \\sigma\\left(x_i \\sum_{x_j \\in \\pi(x_i)} w_{ij}x_j\\\
+    right)$$\n\n+   - Bayesian networks exhibit a phenomenon called “explain away\
+    \ effect”\n\n![](img/cb490ed30bca4eda5fbba81c52a2c173_40_1.png)\n\n> **Note:**\n\
+    > \n> Due to the “explain away effect,” when we condition on the visible layer\
+    \ in belief networks, hidden variables all become dependent."
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "# Sigmoid Belief Networks:\nLearning and Inference\n\n![](img/cb490ed30bca4eda5fbba81c52a2c173_41_0.png)\n\
+    \n+   - Neal proposed Monte Carlo methods for learning and inference (Neal, 1992):\n\
+    +   - Approximated with Gibbs sampling\n+   - Conditional distributions:\n+  \
+    \   $P(S_i = x \\mid S_j = s_j : j \\neq i)$\n+     $\\propto \\sigma\\left(x^*\
+    \ \\sum_{j<i} s_j w_{ij}\\right) \\prod_{j>i} \\sigma\\left(s_j^*\\left(x w_{ji}\
+    \ + \\sum_{k<j, k\\neq i} s_k w_{jk}\\right)\\right)$\n+   - No negative phase\
+    \ as in RBM!\n+   - Convergence is very slow, especially for large belief nets,\
+    \ due to the intricate “explain-away” effects...\n\nEquations from Neal, 1992\n\
+    \n$\\frac{\\partial L}{\\partial w_{ij}} = \\sum_{\\tilde{v}\\in T} \\frac{1}{P(\\\
+    tilde{V}=\\tilde{v})} \\frac{\\partial P(\\tilde{V}=\\tilde{v})}{\\partial w_{ij}}$\
+    \ \n$= \\sum_{\\tilde{v}\\in T} \\frac{1}{P(\\tilde{V}=\\tilde{v})} \\sum_{\\\
+    tilde{h}} \\frac{\\partial P(\\tilde{S}=\\langle\\tilde{h},\\tilde{v}\\rangle)}{\\\
+    partial w_{ij}}$ \n$= \\sum_{\\tilde{v}\\in T} \\sum_{\\tilde{h}} P(\\tilde{S}=\\\
+    langle\\tilde{h},\\tilde{v}\\rangle \\mid \\tilde{V}=\\tilde{v}) \\cdot \\frac{1}{P(\\\
+    tilde{S}=\\langle\\tilde{h},\\tilde{v}\\rangle)} \\frac{\\partial P(\\tilde{S}=\\\
+    langle\\tilde{h},\\tilde{v}\\rangle)}{\\partial w_{ij}}$ \n$= \\sum_{\\tilde{v}\\\
+    in T} \\sum_{\\tilde{s}} P(\\tilde{S}=\\tilde{s} \\mid \\tilde{V}=\\tilde{v})\
+    \ \\frac{1}{P(\\tilde{S}=\\tilde{s})} \\frac{\\partial P(\\tilde{S}=\\tilde{s})}{\\\
+    partial w_{ij}}$ \n$= \\sum_{\\tilde{v}\\in T} \\sum_{\\tilde{s}} P(\\tilde{S}=\\\
+    tilde{s} \\mid \\tilde{V}=\\tilde{v}) \\frac{1}{\\sigma\\left(s_i^* \\sum_{k<i}\
+    \ s_k w_{ik}\\right)} \\frac{\\partial \\sigma\\left(s_i^* \\sum_{k<i} s_k w_{ik}\\\
+    right)}{\\partial w_{ij}}$ \n$= \\sum_{\\tilde{v}\\in T} \\sum_{\\tilde{s}} P(\\\
+    tilde{S}=\\tilde{s} \\mid \\tilde{V}=\\tilde{v}) s_i^* s_j \\sigma\\left(-s_i^*\
+    \ \\sum_{k<i} s_k w_{ik}\\right).$\n\nlog derivative\n\nprob. of the visibles\
+    \ via marginalization\n\nBayes rule + rearrange sums\n\nPlug-in the actual sigmoid\
+    \ form of the conditional prob."
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# RBMs are infinite belief networks
+
+
+    +   - Gibbs sampling: alternate between sampling hidden and visible variables
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_43_0.png)
+
+
+    +   - Conditional distributions $P(v|h)$ and $P(h|v)$ are represented by sigmoids
+
+    +   - Thus, we can think of Gibbs sampling from the joint distribution represented
+    by an RBM as a top-down propagation in an infinitely deep sigmoid belief network!'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# RBMs are infinite belief networks
+
+
+    +   - RBMs are equivalent to infinitely deep belief networks
+
+    +   - Sampling from this is the same as sampling from the network on the right
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_44_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_44_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# RBMs are infinite belief networks
+
+
+    +   - RBMs are equivalent to infinitely deep belief networks
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_45_0.png)
+
+
+    images from Marcus Frean, MLSS Tutorial 2010'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# III: Deep Belief Nets
+
+
+    # Deep Belief Network
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_47_0.png)
+
+
+    Now weights are untied!
+
+
+    +   - DBNs are hybrid graphical models (chain graphs):
+
+    +     - Exact inference in DBNs is problematic due to explaining away effect
+
+    +     - Training: greedy pre-training + ad-hoc fine-tuning; no proper joint training
+
+    +     - Approximate inference is feed-forward'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# DBN: Layer-wise pre-training
+
+
+    +   - Pre-train and freeze the 1st RBM
+
+    +   - Stack another RBM on top and train it
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_49_0.png)
+
+
+    +   - The weights weights 2+ layers remain tied
+
+    +   - We repeat this procedure: pre-train and untie the weights layer-by-layer...
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_49_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# DBN: Layer-wise pre-training
+
+
+    +   - We repeat this procedure: pre-train and untie the weights layer-by-layer:
+
+    +   - The weights of 3+ layers remain tied
+
+    +   - and so forth
+
+    +   - *From the optimization perspective, this procedure loosely corresponds to
+    an approximate block-coordinate ascent on the log-likelihood*
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_50_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_50_1.png)
+
+
+    images from Marcus Frean, MLSS Tutorial 2010'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# DBN: Fine-tuning
+
+
+    +   - Pre-training is quite ad-hoc and is unlikely to lead to a good probabilistic
+    model *per se*
+
+    +   - However, the layers of representations could perhaps be useful for some
+    other downstream tasks!
+
+    +   - We can further “fine-tune” a pre-trained DBN for some other task
+
+
+    Setting A: Unsupervised learning (DBN → autoencoder)
+
+
+    +   1. Pre-train a stack of RBMs in a greedy layer-wise fashion
+
+    +   2. “Unroll” the RBMs to create an autoencoder
+
+    +   3. Fine-tune the parameters by optimizing the reconstruction error
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_51_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# DBN: Fine-tuning
+
+
+    +   - Pre-training is quite ad-hoc and is unlikely to lead to a good probabilistic
+    model *per se*
+
+    +   - However, the layers of representations could perhaps be useful for some
+    other downstream tasks!
+
+    +   - We can further “fine-tune” a pre-trained DBN for some other task
+
+
+    Setting A: Unsupervised learning (DBN → autoencoder)
+
+
+    +   1. Pre-train a stack of RBMs in a greedy layer-wise fashion
+
+    +   2. “Unroll” the RBMs to create an autoencoder
+
+    +   3. Fine-tune the parameters by optimizing the reconstruction error
+
+
+    images from Hinton & Salakhutdinov, 2006
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_52_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# DBN: Fine-tuning
+
+
+    +   - Pre-training is quite ad-hoc and is unlikely to lead to a good probabilistic
+    model *per se*
+
+    +   - However, the layers of representations could perhaps be useful for some
+    other downstream tasks!
+
+    +   - We can further “fine-tune” a pre-trained DBN for some other task
+
+
+    Setting B: Supervised learning (DBN → classifier)
+
+
+    +   1. Pre-train a stack of RBMs in a greedy layer-wise fashion
+
+    +   2. “Unroll” the RBMs to create a feedforward classifier
+
+    +   3. Fine-tune the parameters by optimizing the reconstruction error
+
+
+    Some intuitions about how pre-training works:
+
+    Erhan et al.: Why Does Unsupervised Pre-training Help Deep Learning? JMLR, 2010'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# Deep Belief Nets and Boltzmann Machines
+
+
+    # Deep Belief Network
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_55_0.png)
+
+
+    +   - DBNs are hybrid graphical models (chain graphs):
+
+    +     - Inference in DBNs is problematic due to explaining away effect
+
+    +     - Training: greedy pre-training + ad-hoc fine-tuning; no proper joint training
+
+    +     - Approximate inference is feed-forward'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# # Deep Belief Nets and Boltzmann Machines
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_56_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_56_1.png)
+
+
+    +   - DBMs are fully un-directed models (Markov random fields).
+
+    +     - Can be trained similarly as RBMs via MCMC (Hinton & Sejnowski, 1983)
+
+    +     - Use a variational approximation of the data distribution for faster training
+    (Salakhutdinov & Hinton, 2009)
+
+    +     - Similarly, can be used to initialize other networks for downstream tasks'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# Graphical models vs. Deep networks
+
+
+    +   - A few critical points to note about all these models:
+
+    +     - The primary goal of deep generative models is to represent the distribution
+    of the observable variables. Adding layers of hidden variables allows to represent
+    increasingly more complex distributions.
+
+    +     - Hidden variables are secondary (auxiliary) elements used to facilitate
+    learning of complex dependencies between the observables.
+
+    +     - Training of the model is ad-hoc, but what matters is the quality of learned
+    hidden representations.
+
+    +     - Representations are judged by their usefulness on a downstream task (the
+    probabilistic meaning of the model is often discarded at the end).
+
+    +   - In contrast, classical graphical models are often concerned with the correctness
+    of learning and inference of all variables'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "![](img/cb490ed30bca4eda5fbba81c52a2c173_60_0.png)\n\n# Dealing with structured\
+    \ prediction\n\n+   - Energy-based modeling of the structured output (CRF)\n+\
+    \   \n+     $$\\mathbf{y}^*(\\mathbf{x}; \\mathbf{w}) := \\arg\\min_{\\mathbf{y}}\
+    \ E(\\mathbf{y}, \\mathbf{x}; \\mathbf{w})$$\n+   \n+   - Unroll the optimization\
+    \ algorithm for a fixed number of steps (Domke, 2012)\n+   \n+     $$\\mathbf{y}^*(\\\
+    mathbf{x}; \\mathbf{w}) = \\text{opt-alg}_{\\mathbf{y}} E(\\mathbf{y}, \\mathbf{x};\
+    \ \\mathbf{w})$$\n+   \n+   - We can think of y* as some non-linear differentiable\
+    \ function of the inputs and weights → impose some loss and optimize it as any\
+    \ other standard computation graph using backprop!\n+   \n+   - Similarly, message\
+    \ passing based inference algorithms can be truncated and converted into computational\
+    \ graphs (Domke, 2011; Stoyanov et al., 2011)"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# Outline
+
+
+    +   - Probabilistic Graphical Models: Basics
+
+    +   - An overview of DL components
+
+    +     - Historical remarks: early days of neural networks
+
+    +     - Modern building blocks: units, layers, activations functions, loss functions,
+    etc.
+
+    +     - Reverse-mode automatic differentiation (aka backpropagation)
+
+    +   - Similarities and differences between GMs and NNs
+
+    +     - Graphical models vs. computational graphs
+
+    +     - Sigmoid Belief Networks as graphical models
+
+    +     - Deep Belief Networks and Boltzmann Machines
+
+    +   - Combining DL methods and GMs
+
+    +     - Using outputs of NNs as inputs to GMs
+
+    +     - GMs with potential functions represented by NNs
+
+    +     - NNs with structured outputs
+
+    +   - Bayesian Learning of NNs
+
+    +     - Bayesian learning of NN parameters
+
+    +     - Deep kernel learning'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# Combining sequential NNs and GMs
+
+
+    # Hybrid: RNN + HMM
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_62_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# Combining sequential NNs and GMs
+
+
+    # Hybrid: RNN + HMM
+
+
+    The model, inference, and learning can be analogous to our NN + HMM hybrid
+
+
+    +   - **Objective:** log-likelihood
+
+    +   - **Model:** HMM/Gaussian emissions
+
+    +   - **Inference:** forward-backward algorithm
+
+    +   - **Learning:** SGD with gradient by backpropagation
+
+
+    (Graves et al., 2013)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_63_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# # Hybrid NNs + conditional GMs
+
+
+    # ## Hybrid: Neural Net + CRF
+
+
+    *Forward computation*
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_65_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "# # Hybrid NNs + conditional GMs\n\n# ## Hybrid: CNN + CRF\n\n+   **“NN + SLL”**\n\
+    +   \n+   - Model: Convolutional Neural Network (CNN) with **linear-chain CRF**\n\
+    +   - Training objective: maximize **sentence-level likelihood (SLL)**\n\n![](img/cb490ed30bca4eda5fbba81c52a2c173_66_0.png)\n\
+    \nFigure from (Collobert & Weston, 2011)"
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# Using GMs as Prediction Explanations
+
+
+    # Satellite imagery
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_67_0.png)
+
+
+    # Meaningful attributes
+
+
+    +   01 Nightlight intensity
+
+    +   02 Is urban
+
+    +   03 Has electricity
+
+    +   04 Has generator
+
+    +   05 Avg. temperature
+
+    +   06 Avg. percipitation
+
+    +   07 Vegetation
+
+    +   08 Avg. vegetation inc.
+
+    +   09 Avg. vegetation dec.
+
+    +   10 Avg. dist. to market
+
+    +   11 Avg. dist. to road
+
+    +   12 Num. of rooms
+
+    +   13 Dist. to water src.
+
+    +   14 Water usage p/ day
+
+    +   15 Is water payed
+
+    +   16 HH type: BQ'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# Using GMs as Prediction Explanations
+
+
+    # Satellite imagery
+
+
+    # Area attributes
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_68_0.png)
+
+
+    How do we build a powerful predictive model whose predictions we can interpret
+    in terms of semantically meaningful features?
+
+
+    +   01 Nightlight intensity
+
+    +   09 Avg. vegetation dec.
+
+    +   02 Is urban
+
+    +   10 Avg. dist. to market
+
+    +   03 Has electricity
+
+    +   11 Avg. dist. to road
+
+    +   04 Has generator
+
+    +   12 Num. of rooms
+
+    +   05 Avg. temperature
+
+    +   13 Dist. to water src.
+
+    +   06 Avg. percipitation
+
+    +   14 Water usage p/ day
+
+    +   07 Vegetation
+
+    +   15 Is water payed
+
+    +   08 Avg. vegetation inc.
+
+    +   16 HH type: BQ'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# Contextual Explanation Networks (CENs)
+
+
+    # Context
+
+
+    # Explanation
+
+
+    # Prediction
+
+
+    Instance 1
+
+
+    Instance 2
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_69_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_69_1.png)
+
+
+    Encoder
+
+
+    Attributes
+
+
+    | | Unreliable water | Water src: Public tap | Walls: Unburnt bricks | Roof: Thatch,
+    Straw | Has electricity |
+
+    |---|---|---|---|---|---|
+
+    | Instance 1 | 0 | 1 | 1 | 0 | 1 |
+
+    | Instance 2 | 0 | 0 | 0 | 1 | 0 |
+
+
+    0.9 -0.6 0.3 0.5 -0.2
+
+
+    -0.4 -1.2 -0.2 0.2 -0.8
+
+
+    Not poor
+
+
+    Poor
+
+
+    Parametric as a graphical model
+
+
+    +   Notes:
+
+    +   - The final prediction is made by a linear GM.
+
+    +   - Each coefficient assigns a weight to a meaningful attribute.
+
+    +   - Allows us to judge predictions in terms of GMs produced by the context encoder.'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '# Contextual Explanation Networks (CENs)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_70_0.png)
+
+
+    +   - **General idea:** Use deep neural nets to **generate parameters** for graphical
+    models applicable in a given context (e.g., for a given patient).
+
+    +   - Produced GMs are used to make the final prediction ⇒ 100% fidelity and consistency.
+
+    +   - GMs are built on top of semantically meaningful variables (not deep embeddings!)
+    and can be used as **explanations** for each prediction.'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# CEN: Implementation Details
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_71_0.png)
+
+
+    # Workflow:
+
+
+    +   - Maintain a (sparse) dictionary of GM parameters.
+
+    +   - Process complex inputs (images, text, time series, etc.) using deep nets;
+    use soft attention to either select or combine models from the dictionary.
+
+    +   - Use constructed GMs (e.g., CRFs) to make predictions.
+
+    +   - Inspect GM parameters to understand the reasoning behind predictions.
+
+
+    Al-Shedivat, Dubey, Xing, arXiv, 2017'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# Results: imagery as context
+
+
+    # Uganda: Contextual Models
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_72_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_72_1.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_72_2.png)
+
+
+    Based on the imagery, CEN learns to select different models for urban and rural
+    areas'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# # Results: classical image & text datasets
+
+
+    | Method | Error |
+
+    |---|---:|
+
+    | Paragraph Vector (Le and Mikolov, 2014) | 7.42% |
+
+    | SA-LSTM with joint training (Dai and Le, 2015) | 14.70% |
+
+    | LSTM with tuning and dropout (Dai and Le, 2015) | 13.50% |
+
+    | LSTM initialized with word2vec embeddings (Dai and Le, 2015) | 10.00% |
+
+    | SA-LSTM with linear gain (Dai and Le, 2015) | 9.17% |
+
+    | LM-TM (Dai and Le, 2015) | 7.64% |
+
+    | SA-LSTM (Dai and Le, 2015) | 7.24% |
+
+    | Virtual Adversarial (Miyato et al., 2016) | 5.94 ± 0.12% |
+
+    | TopicRNN (Dieng et al., 2017) | 6.28% |
+
+    | **CEN-bow** | **5.92 ± 0.05%** |
+
+    | **CEN-topic** | **6.25 ± 0.09%** |
+
+
+    Semi-supervised training
+
+
+    Only supervised training (!!)'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '# CEN architectures for survival analysis
+
+
+    Encode a sequence of observations for a patient (e.g., vitals/tests measured in
+    ICU).
+
+
+    Produce a CRF that predicts a sequence of survival indicators over future time
+    intervals.
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_75_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_75_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# Results: survival analysis
+
+
+    | SUPPORT2 |  |  |  |  | PhysioNet Challenge 2012 |  |  |  | |
+
+    |---|---|---|---|---|---|---|---|---|---|
+
+    | Model | Acc@25 | Acc@50 | Acc@75 | RAE | Model | Acc@25 | Acc@50 | Acc@75 |
+    RAE |
+
+    | Cox | 84.1 | 73.7 | 47.6 | 0.90 | Cox | 93.0 | 69.6 | 49.1 | 0.24 |
+
+    | Aalen | 87.1 | 66.2 | 45.8 | 0.98 | Aalen | 93.3 | 78.7 | 57.1 | 0.31 |
+
+    | CRF | 84.4 | 89.3 | 79.2 | 0.59 | CRF | 93.2 | 85.1 | 65.6 | 0.14 |
+
+    | MLP-CRF | 87.7 | 89.6 | 80.1 | 0.62 | LSTM-CRF | 93.9 | 86.3 | 68.1 | 0.11 |
+
+    | MLP-CEN | 85.5 | 90.8 | 81.9 | 0.56 | LSTM-CEN | 94.8 | 87.5 | 70.1 | 0.09 |
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_76_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# Outline
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_77_0.png)
+
+
+    +   - An overview of the DL components
+
+    +     - Historical remarks: early days of neural networks
+
+    +     - Modern building blocks: units, layers, activations functions, loss functions,
+    etc.
+
+    +     - Reverse-mode automatic differentiation (aka backpropagation)
+
+    +   - Similarities and differences between GMs and NNs
+
+    +     - Graphical models vs. computational graphs
+
+    +     - Sigmoid Belief Networks as graphical models
+
+    +     - Deep Belief Networks and Boltzmann Machines
+
+    +   - Combining DL methods and GMs
+
+    +     - Using outputs of NNs as inputs to GMs
+
+    +     - GMs with potential functions represented by NNs
+
+    +     - NNs with structured outputs
+
+    +   - Bayesian Learning of NNs
+
+    +     - Bayesian learning of NN parameters
+
+    +     - Deep kernel learning'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# Bayesian learning of NNs
+
+
+    +   - A neural network as a probabilistic model:
+
+    +     - Likelihood: $p(y|x,\theta)$
+
+    +       - Categorical distribution for classification $\Rightarrow$ cross-entropy
+    loss
+
+    +       - Gaussian distribution for regression $\Rightarrow$ squared loss
+
+    +     - Prior on parameters: $p(\theta)$
+
+
+    +   - Maximum a posteriori (MAP) solution:
+
+    +     - $\theta^{MAP}=\arg\max_{\theta}\log p(y|x,\theta)p(\theta)$
+
+    +     - Gaussian prior $\Rightarrow$ L2 regularization
+
+    +     - Laplace prior $\Rightarrow$ L1 regularization
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_78_0.png)
+
+
+    Figure courtesy: Blundell et al, 2016
+
+
+    +   - Bayesian learning [MacKay 1992, Neal 1996, de Freitas 2003]
+
+    +     - Posterior: $p(\theta|x,y)$
+
+    +     - Variational inference with approximate posterior $q(\theta)$'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '# Bayesian learning of NNs
+
+
+    +   - Variational inference (in a nutshell):
+
+    +     $$\min_q F(D, \boldsymbol{\theta}) = \mathrm{KL}(q(\boldsymbol{\theta})
+    \| p(\boldsymbol{\theta}|D)) - \mathbb{E}_{q(\boldsymbol{\theta})}[\log p(D|\boldsymbol{\theta})]$$
+
+    +     $$\min_q F(D, \boldsymbol{\theta}) = \mathrm{KL}(q(\boldsymbol{\theta})
+    \| p(\boldsymbol{\theta}|D)) - \sum_i \log p(D|\boldsymbol{\theta}_i)$$
+
+    +     where $\boldsymbol{\theta}_i \sim q(\boldsymbol{\theta})$; KL term can be
+    approximated similarly
+
+    +   - We can define $q(\boldsymbol{\theta})$ as a diagonal Gaussian or full-covariance
+    Gaussian
+
+    +   - Alternatively, $q(\boldsymbol{\theta})$ can be defined implicitly, e.g.
+    via dropout [Gal & Ghahramani, 2016]
+
+    +     $$\boldsymbol{\theta} = \boldsymbol{M} \cdot \mathrm{diag}(\boldsymbol{z}),$$
+
+    +     $$\boldsymbol{z} \sim \mathrm{Bernoulli}(p)$$
+
+    +   - Dropping out neurons is equivalent to zeroing out columns of the parameter
+    matrices (i.e., weights)
+
+    +   - $z_i = 0$ corresponds to $i$-th column of $\boldsymbol{M}$ being dropped
+    out
+
+    +     $\Rightarrow$ the procedure is equivalent to dropout of unit $i$ [Hinton
+    et al., 2012]
+
+    +   - Variational parameters are $\{\boldsymbol{M}, \boldsymbol{p}\}$
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_79_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_79_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '# “Infinitely Wide” Deep Models
+
+
+    +   - We have seen that an “infinitely deep” network can be explained by a proper
+    GM, How about an “infinitely wide” one?
+
+    +   - Consider a neural network with a Gaussian prior on its weights an infinitely
+    many hidden neurons in the intermediate layer.
+
+    +   - Turns out, if we have a certain Gaussian prior on the weights of such infinite
+    network, it will be equivalent to a Gaussian process [Neal 1996].
+
+    +   - Gaussian process (GP) is a distribution over functions:
+
+    +     $$m(\mathbf{x}) = \mathbb{E}[f(\mathbf{x})],$$
+
+    +     $$k(\mathbf{x}, \mathbf{x}'') = \mathbb{E}[(f(\mathbf{x}) - m(\mathbf{x}))(f(\mathbf{x}'')
+    - m(\mathbf{x}''))],$$
+
+    +     $$f(\mathbf{x}) \sim \mathcal{GP}(m(\mathbf{x}), k(\mathbf{x}, \mathbf{x}'')).$$
+
+    +   - When used for prediction, GPs account for correlations between the data
+    points and can output well-calibrated predictive uncertainty estimates.
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_80_0.png)
+
+
+    Infinitely many hidden units'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# Gaussian Process and Deep Kernel Learning
+
+
+    +   - Consider a neural network with a Gaussian prior on its weights an infinitely
+    many hidden neurons in the intermediate layer.
+
+    +   - Certain classes of Gaussian priors for neural networks with infinitely many
+    hidden units converge to Gaussian processes [Neal 1996]
+
+    +   - Deep kernel [Wilson et al., 2016]
+
+    +     - Combines the inductive biases of deep model architectures with the non-parametric
+    flexibility of Gaussian processes
+
+    +       $k(x_i, x_j | \phi) \rightarrow k(g(x_i, \theta), g(x_j, \theta) | \phi,
+    \theta)$ where $K_{ij} = k(x_i, x_j)$
+
+    +     - Starting from a base kernel $k(x_i, x_j | \phi)$, transform the inputs
+    $x$ as
+
+    +       $p(f | \phi) = \mathcal{N}(f | m(x), K)$
+
+    +       $p(y | f) = \mathcal{N}(y | f, \beta^{-1})$
+
+    +     - Learn both kernel and neural parameters $\{\phi, \theta\}$ jointly by
+    optimizing marginal log-likelihood (or its variational lower-bound).
+
+    +     - Fast learning and inference with local kernel interpolation, structured
+    inducing points, and Monte Carlo approximations
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_81_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# Gaussian Process and Deep Kernel Learning
+
+
+    +   - By adding GP as a layer to a deep neural net, we can think of it as adding
+    an infinite hidden layer with a particular prior on the weights
+
+    +   - Deep kernel learning [Wilson et al., 2016]
+
+    +     - Combines the inductive biases of deep models with the non-parametric flexibility
+    of Gaussian processes
+
+    +     - GPs add powerful regularization to the network
+
+    +     - Additionally, they provide predictive uncertainty estimates
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_82_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# Deep kernel learning on sequential data
+
+
+    The answer is YES!
+
+
+    By adding a GP layer to a recurrent network, we effectively correlate samples
+    across time and get predictions along with well calibrated uncertainty estimates.
+
+
+    To train such model using stochastic techniques however requires some additional
+    care (see our paper).
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_84_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# Deep kernel learning on sequential data
+
+
+    Lead vehicle prediction: LSTM vs GP-LSTM
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_86_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_87_0.png)
+
+
+    # Conclusion
+
+
+    +   - DL & GM: the fields are similar in the beginning (structure, energy, etc.),
+    and then diverge to their own signature pipelines
+
+    +   - DL: most effort is directed to comparing different architectures and their
+    components (models are driven by evaluating empirical performance on a downstream
+    tasks)
+
+    +     - DL models are good at learning robust hierarchical representations from
+    the data and suitable for simple reasoning (call it “low-level cognition”)
+
+    +   - GM: the effort is directed towards improving inference accuracy and convergence
+    speed
+
+    +     - GMs are best for provably correct inference and suitable for high-level
+    complex reasoning tasks (call it “high-level cognition”)
+
+    +   - Convergence of both fields is very promising!
+
+    +     - Next part: a unified view of deep generative models in the GM interpretation'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# Part-II
+
+    A Unified Framework of Deep Generative Models'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_89_0.png)
+
+
+    # Plan
+
+
+    +   - Statistical And Algorithmic Foundation and Insight of Deep Learning
+
+    +   - A Unified Framework of Deep Generative Models
+
+    +   - Computational Mechanisms: Programming Platforms and Distributed Deep Learning
+    Architectures'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# Outline
+
+
+    +   - Overview of advances in deep generative models
+
+    +   - Theoretical Basis of deep generative models
+
+    +     - Wake sleep algorithm
+
+    +     - Variational autoencoders
+
+    +     - Generative adversarial networks
+
+    +   - A unified view of deep generative models
+
+    +     - new formulations of deep generative models
+
+    +     - Symmetric modeling of latent and visible variables
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_90_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '# Outline
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_91_0.png)
+
+
+    +   - Overview of advances in deep generative models
+
+    +   - Theoretical Basis of deep generative models
+
+    +     - Wake sleep algorithm
+
+    +     - Variational autoencoders
+
+    +     - Generative adversarial networks
+
+    +   - A unified view of deep generative models
+
+    +     - new formulations of deep generative models
+
+    +     - Symmetric modeling of latent and visible variables'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# Deep generative models
+
+
+    +   - Define probabilistic distributions over a set of variables
+
+    +   - "Deep" means multiple layers of hidden variables!
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_92_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '# Early forms of deep generative models
+
+
+    +   - Hierarchical Bayesian models
+
+    +     - Sigmoid brief nets [Neal 1992]
+
+    +   - Neural network models
+
+    +     - Helmholtz machines [Dayan et al.,1995]
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_94_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# Resurgence of deep generative models
+
+
+    +   - Restricted Boltzmann machines (RBMs) [Smolensky, 1986]
+
+    +     - Building blocks of deep probabilistic models
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_97_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# # Resurgence of deep generative models
+
+
+    +   - Restricted Boltzmann machines (RBMs) [Smolensky, 1986]
+
+    +     - Building blocks of deep probabilistic models
+
+    +   - Deep belief networks (DBNs) [Hinton et al., 2006]
+
+    +     - Hybrid graphical model
+
+    +     - Inference in DBNs is problematic due to explaining away
+
+    +   - Deep Boltzmann Machines (DBMs) [Salakhutdinov & Hinton, 2009]
+
+    +     - Undirected model
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_98_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_100_0.png)
+
+
+    # Resurgence of deep generative models
+
+
+    +   - Variational autoencoders (VAEs) [Kingma & Welling, 2014]
+
+    +     / Neural Variational Inference and Learning (NVIL) [Mnih & Gregor, 2014]
+
+    +   - Generative adversarial networks (GANs) [Goodfellow et al., 2014]
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_100_1.png)
+
+
+    $G_\theta$: generative model ？
+
+    $D_\phi$: discriminator'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# Resurgence of deep generative models
+
+
+    +   - Variational autoencoders (VAEs) [Kingma & Welling, 2014]
+
+    +     / Neural Variational Inference and Learning (NVIL) [Mnih & Gregor, 2014]
+
+    +   - Generative adversarial networks (GANs) [Goodfellow et al., 2014]
+
+    +   - Generative moment matching networks (GMMNs) [Li et al., 2015; Dziugaite
+    et al., 2015]'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '# Resurgence of deep generative models
+
+
+    +   - Variational autoencoders (VAEs) [Kingma & Welling, 2014]
+
+    +     / Neural Variational Inference and Learning (NVIL) [Mnih & Gregor, 2014]
+
+    +   - Generative adversarial networks (GANs) [Goodfellow et al., 2014]
+
+    +   - Generative moment matching networks (GMMNs) [Li et al., 2015; Dziugaite
+    et al., 2015]
+
+    +   - Autoregressive neural networks
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_102_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_102_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: '# Outline
+
+
+    +   - Overview of advances in deep generative models
+
+    +   - Theoretical Basis of deep generative models
+
+    +     - Wake sleep algorithm
+
+    +     - Variational autoencoders
+
+    +     - Generative adversarial networks
+
+    +   - A unified view of deep generative models
+
+    +     - new formulations of deep generative models
+
+    +     - Symmetric modeling of latent and visible variables'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: "# Recap: Variational Inference\n\n+   - Consider a generative model $p_\\theta(\\\
+    boldsymbol{x}|\\boldsymbol{z})$, and prior $p(\\boldsymbol{z})$  \n+     - Joint\
+    \ distribution: $p_\\theta(\\boldsymbol{x},\\boldsymbol{z}) = p_\\theta(\\boldsymbol{x}|\\\
+    boldsymbol{z})p(\\boldsymbol{z})$  \n+   - Assume variational distribution $q_\\\
+    phi(\\boldsymbol{z}|\\boldsymbol{x})$  \n+   - Objective: Maximize lower bound\
+    \ for log likelihood  \n+     $\\log p(\\boldsymbol{x})$  \n+     $= KL\\left(q_\\\
+    phi(\\boldsymbol{z}|\\boldsymbol{x}) \\| p_\\theta(\\boldsymbol{z}|\\boldsymbol{x})\\\
+    right) + \\int_{\\boldsymbol{z}} q_\\phi(\\boldsymbol{z}|\\boldsymbol{x}) \\log\\\
+    frac{p_\\theta(\\boldsymbol{x},\\boldsymbol{z})}{q_\\phi(\\boldsymbol{z}|\\boldsymbol{x})}$\
+    \  \n+     $\\ge \\int_{\\boldsymbol{z}} q_\\phi(\\boldsymbol{z}|\\boldsymbol{x})\
+    \ \\log\\frac{p_\\theta(\\boldsymbol{x},\\boldsymbol{z})}{q_\\phi(\\boldsymbol{z}|\\\
+    boldsymbol{x})}$  \n+     $:= \\mathcal{L}(\\boldsymbol{\\theta},\\boldsymbol{\\\
+    phi};\\boldsymbol{x})$  \n+   - Equivalently, minimize free energy  \n+     $F(\\\
+    boldsymbol{\\theta},\\boldsymbol{\\phi};\\boldsymbol{x}) = -\\log p(\\boldsymbol{x})\
+    \ + KL\\left(q_\\phi(\\boldsymbol{z}|\\boldsymbol{x}) \\| p_\\theta(\\boldsymbol{z}|\\\
+    boldsymbol{x})\\right)$"
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_108_0.png)
+
+
+    # Deep generative models with amortized inference
+
+
+    +   - Helmholtz machines
+
+    +   - Variational autoencoders (VAEs) / Neural Variational Inference and Learning
+    (NVIL)
+
+    +   - We will see later that *adversarial approaches* are also included in the
+    list
+
+    +     - Predictability minimization (PM)
+
+    +     - Generative adversarial networks (GANs)'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: "![](img/cb490ed30bca4eda5fbba81c52a2c173_109_0.png)\n\n# Wake Sleep Algorithm\n\
+    \n+   - [Hinton et al., Science 1995]\n+   - Train a separate inference model\
+    \ along with the generative model\n+     - Generally applicable to a wide range\
+    \ of generative models, e.g., Helmholtz machines\n+   - Consider a generative\
+    \ model $p_\\theta(x|z)$ and prior $p(z)$\n+     - Joint distribution $p_\\theta(x,z)\
+    \ = p_\\theta(x|z)p(z)$\n+     - E.g., multi-layer belief nets\n+   - Inference\
+    \ model $q_\\phi(z|x)$\n+   - Maximize data log-likelihood with two steps of loss\
+    \ relaxation:\n+     - Maximize the variational lower bound of log-likelihood,\
+    \ or equivalently, minimize the free energy\n+   \n+       $F(\\theta, \\phi;\
+    \ x) = -\\log p(x) + KL(q_\\phi(z|x) \\| p_\\theta(z|x))$\n+   - Minimize a different\
+    \ objective (reversed KLD) wrt $\\phi$ to ease the optimization\n+     - Disconnect\
+    \ to the original variational lower bound loss\n+   \n+       $F'(\\theta, \\\
+    phi; x) = -\\log p(x) + KL(p_\\theta(z|x) \\| q_\\phi(z|x))$"
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '# Wake Sleep Algorithm
+
+
+    +   - Free energy:
+
+    +     $$F(\boldsymbol{\theta}, \boldsymbol{\phi}; \boldsymbol{x}) = -\log p(\boldsymbol{x})
+    + KL(q_{\phi}(\boldsymbol{z}|\boldsymbol{x}) \|\| p_{\theta}(\boldsymbol{z}|\boldsymbol{x}))$$
+
+    +   - Minimize the free energy wrt. $\boldsymbol{\theta}$ of $p_{\theta}$ $\rightarrow$
+    *wake phase*
+
+    +     $$\max_{\boldsymbol{\theta}} \mathbb{E}_{q_{\phi}(\boldsymbol{z}|\boldsymbol{x})}
+    [\log p_{\boldsymbol{\theta}}(\boldsymbol{x}, \boldsymbol{z})]$$
+
+    +     - Get samples from $q_{\phi}(z|x)$ through inference on hidden variables
+
+    +     - Use the samples as targets for updating the generative model $p_{\theta}(\boldsymbol{z}|\boldsymbol{x})$
+
+    +     - Correspond to the variational M step
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_110_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "# Wake Sleep Algorithm\n\n+   - Free energy:\n+   \n+     $F(\\boldsymbol{\\\
+    theta}, \\boldsymbol{\\phi}; \\boldsymbol{x}) = -\\log p(\\boldsymbol{x}) + KL(q_{\\\
+    phi}(\\mathbf{z}|\\boldsymbol{x}) \\| p_{\\theta}(\\mathbf{z}|\\boldsymbol{x}))$\n\
+    +   - WS works around the difficulties with the sleep phase approximation\n+ \
+    \  - Minimize the following objective → sleep phase\n+   \n+     $F'(\\boldsymbol{\\\
+    theta}, \\boldsymbol{\\phi}; \\boldsymbol{x}) = -\\log p(\\boldsymbol{x}) + KL(p_{\\\
+    theta}(\\mathbf{z}|\\boldsymbol{x}) \\| q_{\\phi}(\\mathbf{z}|\\boldsymbol{x}))$\n\
+    +   \n+     $\\max_{\\phi} \\mathbb{E}_{p_{\\theta}(z,x)} [\\log q_{\\phi}(\\\
+    mathbf{z}|\\boldsymbol{x})]$\n+   \n+     $\\max_{\\phi} \\mathbb{E}_{q_{\\phi}(z|x)}\
+    \ [\\log p_{\\theta}(\\boldsymbol{x},\\mathbf{z})]$  \n+     - “Dreaming” up samples\
+    \ from $p_{\\theta}(\\boldsymbol{x}|\\mathbf{z})$ through top-down pass\n+   \
+    \  - Use the samples as targets for updating the inference model\n+   - (Recent\
+    \ approaches other than sleep phase are developed to reduce the variance of gradient\
+    \ estimate: slides later)\n\n![](img/cb490ed30bca4eda5fbba81c52a2c173_112_0.png)\n\
+    \n[Figure courtesy: Maei’s slides]"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: '# Wake Sleep Algorithm
+
+
+    # Wake sleep
+
+
+    +   - Parametrized inference model $q_{\phi}(\mathbf{z}|\mathbf{x})$\n- Wake phase:\n  -
+    minimize $KL(q_{\phi}(\mathbf{z}|\mathbf{x}) || p_{\theta}(\mathbf{z}|\mathbf{x}))$
+    wrt. $\theta$\n  - $\mathbb{E}_{q_{\phi}(\mathbf{z}|\mathbf{x})} [\nabla_{\theta}
+    \log p_{\theta}(\mathbf{x}|\mathbf{z})]$\n- Sleep phase:\n  - minimize $KL(p_{\theta}(\mathbf{z}|\mathbf{x})
+    || q_{\phi}(\mathbf{z}|\mathbf{x}))$ wrt. $\phi$\n  - $\mathbb{E}_{p_{\theta}(\mathbf{z},\mathbf{x})}
+    [\nabla_{\phi} \log q_{\phi}(\mathbf{z},\mathbf{x})]$\n  - low variance\n  - Learning
+    with generated samples of $\mathbf{x}$\n- Two objective, not guaranteed to converge
+
+
+    # Variational EM
+
+
+    +   - Variational distribution $q_{\phi}(\mathbf{z}|\mathbf{x})$\n- Variational
+    M step:\n  - minimize $KL(q_{\phi}(\mathbf{z}|\mathbf{x}) || p_{\theta}(\mathbf{z}|\mathbf{x}))$
+    wrt. $\theta$\n  - $\mathbb{E}_{q_{\phi}(\mathbf{z}|\mathbf{x})} [\nabla_{\theta}
+    \log p_{\theta}(\mathbf{x}|\mathbf{z})]$\n- Variational E step:\n  - minimize
+    $KL(q_{\phi}(\mathbf{z}|\mathbf{x}) || p_{\theta}(\mathbf{z}|\mathbf{x}))$ wrt.
+    $\phi$\n  - $q_{\phi}^* \propto \exp[\log p_{\theta}]$ if with closed-form\n  -
+    $\nabla_{\phi} \mathbb{E}_{q_{\phi}} [\log p_{\theta}(z, x)]$\n    - need variance-reduce
+    in practice\n  - Learning with real data $\mathbf{x}$\n- Single objective, guaranteed
+    to converge'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: "# Variational Autoencoders (VAEs)\n\n+   - [Kingma & Welling, 2014]\n+   -\
+    \ Use variational inference with an inference model\n+     - Enjoy similar applicability\
+    \ with wake-sleep algorithm\n+   - Generative model $p_\\theta(\\mathbf{x}|\\\
+    mathbf{z})$, and prior $p(\\mathbf{z})$  \n+     - Joint distribution $p_\\theta(\\\
+    mathbf{x},\\mathbf{z}) = p_\\theta(\\mathbf{x}|\\mathbf{z})p(\\mathbf{z})$\n+\
+    \   - Inference model $q_\\phi(\\mathbf{z}|\\mathbf{x})$\n\n![](img/cb490ed30bca4eda5fbba81c52a2c173_114_0.png)\n\
+    \nFigure courtesy: Kingma & Welling, 2014"
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_116_0.png)
+
+
+    # Reparameterized gradient
+
+
+    +   - Optimize \(\mathcal{L}(\boldsymbol{\theta}, \boldsymbol{\phi}; x)\) wrt.
+    \(\boldsymbol{\phi}\) of \(q_{\boldsymbol{\phi}}(z\mid x)\)
+
+    +     - Recap: gradient estimate with log-derivative trick:
+
+
+    \[\nabla_{\boldsymbol{\phi}}\mathbb{E}_{q_{\boldsymbol{\phi}}}[\log p_{\boldsymbol{\theta}}(x,z)]
+    = \mathbb{E}_{q_{\boldsymbol{\phi}}}[\log p_{\boldsymbol{\theta}}(x,z)\,\nabla_{\boldsymbol{\phi}}\log
+    q_{\boldsymbol{\phi}}]\]
+
+
+    +   - High variance: \(\nabla_{\boldsymbol{\phi}}\mathbb{E}_{q_{\boldsymbol{\phi}}}[\log
+    p_{\boldsymbol{\theta}}] \approx \mathbb{E}_{z_i\sim q_{\boldsymbol{\phi}}}[\log
+    p_{\boldsymbol{\theta}}(x,z_i)\,\nabla_{\boldsymbol{\phi}}q_{\boldsymbol{\phi}}(z_i\mid
+    x)]\)
+
+    +     - The scale factor \(\log p_{\boldsymbol{\theta}}(x,z_i)\) can have arbitrary
+    large magnitude
+
+
+    +   - gradient estimate with *reparameterization trick*
+
+
+    \[z \sim q_{\boldsymbol{\phi}}(z\mid x) \quad\Longleftrightarrow\quad z=g_{\boldsymbol{\phi}}(\epsilon,x),
+    \qquad \epsilon\sim p(\epsilon)\]
+
+
+    \[\nabla_{\boldsymbol{\phi}}\mathbb{E}_{q_{\boldsymbol{\phi}}(z\mid x)}[\log p_{\boldsymbol{\theta}}(x,z)]
+    = \mathbb{E}_{\epsilon\sim p(\epsilon)}\left[\nabla_{\boldsymbol{\phi}}\log p_{\boldsymbol{\theta}}\left(x,z_{\boldsymbol{\phi}}(\epsilon)\right)\right]\]
+
+
+    +   - (Empirically) lower variance of the gradient estimate
+
+    +   - E.g., \(z\sim\mathcal{N}(\boldsymbol{\mu}(x),L(x)L(x)^T)\quad\Longleftrightarrow\quad\epsilon\sim\mathcal{N}(0,1),\;z=\boldsymbol{\mu}(x)+L(x)\epsilon\)'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: '# Generative Adversarial Nets (GANs)
+
+
+    +   - [Goodfellow et al., 2014]
+
+    +   - Generative model $x = G_\theta(z),\ z \sim p(z)$
+
+    +     - Map noise variable $z$ to data space $x$
+
+    +     - Define an *implicit distribution* over $x$: $p_{g_\theta}(x)$
+
+    +       - a stochastic process to simulate data $x$
+
+    +       - Intractable to evaluate likelihood
+
+    +   - Discriminator $D_\phi(x)$
+
+    +     - Output the probability that $x$ came from the data rather than the generator
+
+    +   - No explicit inference model
+
+    +   - No obvious connection to previous models with inference networks like VAEs
+
+    +     - We will build formal connections between GANs and VAEs later'
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: '# Generative Adversarial Nets (GANs)
+
+
+    +   - Learning
+
+    +     - Train $G$ to fool the discriminator
+
+    +     - The original loss suffers from vanishing gradients when $D$ is too strong
+
+    +     - Instead use the following in practice
+
+    +       $\max_G \mathcal{L}_G = \mathbb{E}_{\boldsymbol{x}\sim G(\boldsymbol{z}),\boldsymbol{z}\sim
+    p(\boldsymbol{z})} [\log D(\boldsymbol{x})]$
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_121_0.png)
+
+
+    [Figure courtesy: Kim''s slides]'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_124_0.png)
+
+
+    # The Zoo of DGMs
+
+
+    +   - Variational autoencoders (VAEs) [Kingma & Welling, 2014]
+
+    +     - Adversarial autoencoder [Makhzani et al., 2015]
+
+    +     - Importance weighted autoencoder [Burda et al., 2015]
+
+    +     - Implicit variational autoencoder [Mescheder., 2017]
+
+    +   - Generative adversarial networks (GANs) [Goodfellos et al., 2014]
+
+    +     - InfoGAN [Chen et al., 2016]
+
+    +     - CycleGAN [Zhu et al., 2017]
+
+    +     - Wasserstein GAN [Arjovsky et al., 2017]
+
+    +   - Autoregressive neural networks
+
+    +     - PixelRNN / PixelCNN [Oord et al., 2016]
+
+    +     - RNN (e.g., for language modeling)
+
+    +   - Generative moment matching networks (GMMNs) [Li et al., 2015; Dziugaite
+    et al., 2015]
+
+    +   - Retricted Boltzmann Machines (RBMs) [Smolensky, 1986]'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: '# Alchemy Vs Modern Chemistry
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_125_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_125_1.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_125_2.png)
+
+
+    © Mind Juice Media Inc. All rights reserved'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: '# Outline
+
+
+    +   - Overview of advances in deep generative models
+
+    +   - Theoretical backgrounds of deep generative models
+
+    +     - Wake sleep algorithm
+
+    +     - Variational autoencoders
+
+    +     - Generative adversarial networks
+
+    +   - A unified view of deep generative models
+
+    +     - new formulations of deep generative models
+
+    +     - Symmetric modeling of latent and visible variables
+
+
+    Z Hu, Z YANG, R Salakhutdinov, E Xing,
+
+    “On Unifying Deep Generative Models”, arxiv 1706.00550'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: '# Adversarial domain adaptation (ADA)
+
+
+    +   - Let’s start from ADA
+
+    +     - The application of adversarial approach on domain adaptation
+
+    +     - We then show GANs can be seen as a special case of ADA
+
+    +     - Correspondence of elements:
+
+
+    | Elements | GANs | ADA |
+
+    |---|---|---|
+
+    | *x* | data/generation | features |
+
+    | *z* | code vector | Data from source/target domains |
+
+    | *y* | Real/fake indicator | Source/target domain indicator |
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_128_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: "# ADA: conventional formulation\n\n+   - Train $D_\\phi$ to distinguish between\
+    \ domains\n+   \n+     $\\max_\\phi \\mathcal{L}_\\phi = \\mathbb{E}_{\\boldsymbol{x}=G_\\\
+    theta(\\boldsymbol{z}),\\boldsymbol{z}\\sim p(\\boldsymbol{z}|y=1)}[\\log D_\\\
+    phi(\\boldsymbol{x})] + \\mathbb{E}_{\\boldsymbol{x}=G_\\theta(\\boldsymbol{z}),\\\
+    boldsymbol{z}\\sim p(\\boldsymbol{z}|y=0)}[\\log(1 - D_\\phi(\\boldsymbol{x}))]$\n\
+    +   \n+   - Train $G_\\theta$ to fool $D_\\phi$\n+   \n+     $\\max_\\theta \\\
+    mathcal{L}_\\theta = \\mathbb{E}_{\\boldsymbol{x}=G_\\theta(\\boldsymbol{z}),\\\
+    boldsymbol{z}\\sim p(\\boldsymbol{z}|y=1)}[\\log(1 - D_\\phi(\\boldsymbol{x}))]\
+    \ + \\mathbb{E}_{\\boldsymbol{x}=G_\\theta(\\boldsymbol{z}),\\boldsymbol{z}\\\
+    sim p(\\boldsymbol{z}|y=0)}[\\log D_\\phi(\\boldsymbol{x})]$"
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: '# ADA: new formulation
+
+
+    +   - To reveal the connections to conventional variational approaches, let’s
+    rewrite the objectives in a format that resembles variational EM
+
+    +   - Implicit distribution over $\boldsymbol{x} \sim p_\theta(\boldsymbol{x}|y)$
+
+    +     $\boldsymbol{x} = G_\theta(\boldsymbol{z}), \ \boldsymbol{z} \sim p(\boldsymbol{z}|y)$
+
+    +   - Discriminator distribution $q_\phi(y|\boldsymbol{x})$
+
+    +     $q_\phi^r(y|\boldsymbol{x}) = q_\phi(1 - y|\boldsymbol{x})$
+
+    +   - Rewrite the objective in the new form (up to constant scale factor)
+
+    +     $\max_\phi \mathcal{L}_\phi = \mathbb{E}_{p_\theta(\boldsymbol{x}|y)p(y)}[\log
+    q_\phi(y|\boldsymbol{x})]$
+
+    +     $\max_\theta \mathcal{L}_\theta = \mathbb{E}_{p_\theta(\boldsymbol{x}|y)p(y)}[\log
+    q_\phi^r(y|\boldsymbol{x})]$
+
+    +     - $\boldsymbol{z}$ is encapsulated in the implicit distribution $p_\theta(\boldsymbol{x}|y)$
+
+    +       $\max_\phi \mathcal{L}_\phi = \mathbb{E}_{p_\theta(\boldsymbol{x}|y=0)p(y=0)}[\log
+    q_\phi(y=0|\boldsymbol{x})] + \mathbb{E}_{p_\theta(\boldsymbol{x}|y=1)p(y=1)}[\log
+    q_\phi(y=1|\boldsymbol{x})]$
+
+    +       $= \frac{1}{2}\mathbb{E}_{\boldsymbol{x}=G_\theta(\boldsymbol{z}),\boldsymbol{z}\sim
+    p(\boldsymbol{z}|y=0)}[\log(1 - D_\phi(\boldsymbol{x}))] + \frac{1}{2}\mathbb{E}_{\boldsymbol{x}=G_\theta(\boldsymbol{z}),\boldsymbol{z}\sim
+    p(\boldsymbol{z}|y=1)}[\log D_\phi(\boldsymbol{x})]$
+
+    +     - (Ignore the constant scale factor 1/2)'
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_132_0.png)
+
+
+    # # ADA: new formulation
+
+
+    +   - New formulation
+
+
+    $$\max_{\phi}\mathcal{L}_{\phi}=\mathbb{E}_{p_{\theta}(x\mid y)p(y)}\left[\log
+    q_{\phi}(y\mid x)\right]$$
+
+
+    $$\max_{\theta}\mathcal{L}_{\theta}=\mathbb{E}_{p_{\theta}(x\mid y)p(y)}\left[\log
+    q_{\phi}^{r}(y\mid x)\right]$$
+
+
+    +   - The only **difference** between optimizing $\theta$ and $\phi$: $q$ vs.
+    $q^{r}$
+
+
+    +   - This is where the **adversarial** mechanism comes about'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: '# # ADA vs. Variational EM
+
+
+    # ## Variational EM
+
+
+    +   - **Objectives**
+
+    +     - $$\max_{\phi}\mathcal{L}_{\phi,\theta}=\mathbb{E}_{q_{\phi}(z|x)}[\log
+    p_{\theta}(x|z)]+KL\left(q_{\phi}(z|x)\|p(z)\right)$$
+
+    +     - $$\max_{\theta}\mathcal{L}_{\phi,\theta}=\mathbb{E}_{q_{\phi}(z|x)}[\log
+    p_{\theta}(x|z)]+KL\left(q_{\phi}(z|x)\|p(z)\right)$$
+
+    +   - Single objective for both $\theta$ and $\phi$
+
+    +   - Extra prior regularization by $p(z)$
+
+
+    # ## ADA
+
+
+    +   - **Objectives**
+
+    +     - $$\max_{\phi}\mathcal{L}_{\phi}=\mathbb{E}_{p_{\theta}(x|y)p(y)}\left[\log
+    q_{\phi}(y|x)\right]$$
+
+    +     - $$\max_{\theta}\mathcal{L}_{\theta}=\mathbb{E}_{p_{\theta}(x|y)p(y)}\left[\log
+    q_{\phi}^{r}(y|x)\right]$$
+
+    +   - Two objectives
+
+    +   - Have global optimal state in the game theoretic view'
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: '# ADA vs. Variational EM
+
+
+    # Variational EM
+
+
+    +   - Objectives
+
+    +     max_φ L_{φ,θ} = E_{q_φ(z|x)}[log p_θ(x|z)] + KL(q_φ(z|x)||p(z))
+
+    +     max_θ L_{φ,θ} = E_{q_φ(z|x)}[log p_θ(x|z)] + KL(q_φ(z|x)||p(z))
+
+    +   - Single objective for both θ and φ
+
+    +   - Extra prior regularization by p(z)
+
+    +   - The reconstruction term: maximize the conditional log-likelihood of x with
+    the generative distribution p_θ(x|z) conditioning on the latent code z inferred
+    by q_φ(z|x)
+
+    +   - p_θ(x|z) is the generative model
+
+    +   - q_φ(z|x) is the inference model
+
+
+    # ADA
+
+
+    +   - Objectives
+
+    +     max_φ L_φ = E_{p_θ(x|y)p(y)}[log q_φ(y|x)]
+
+    +     max_θ L_θ = E_{p_θ(x|y)p(y)}[log q_φ^r(y|x)]
+
+    +   - Two objectives
+
+    +   - Have global optimal state in the game theoretic view
+
+    +   - The objectives: maximize the conditional log-likelihood of y (or 1 − y)
+    with the distribution q_φ(y|x) conditioning on latent feature x inferred by p_θ(x|y)
+
+    +   - Interpret q_φ(y|x) as the generative model
+
+    +   - Interpret p_θ(x|y) as the inference model'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: '# ADA: graphical model
+
+
+    Define:
+
+
+    +   - Solid-line arrows ($x \to y$):
+
+    +     - generative process
+
+    +   - Dashed-line arrows (y, z -> $x$):
+
+    +     - inference
+
+    +   - Hollow arrows (z -> $x$):
+
+    +     - deterministic transformation
+
+    +     - leading to implicit distributions
+
+    +   - Blue arrows ($x \to y$):
+
+    +     - adversarial mechanism
+
+    +     - involves both $q_\phi(y|\boldsymbol{x})$ and $q_\phi^r(y|\boldsymbol{x})$
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_135_0.png)
+
+
+    max$_\phi$ $\mathcal{L}_\phi$ = $\mathbb{E}_{p_\theta(\boldsymbol{x}|y)p(y)}$
+    [$\log q_\phi(y|\boldsymbol{x})$]
+
+    max$_\theta$ $\mathcal{L}_\theta$ = $\mathbb{E}_{p_\theta(\boldsymbol{x}|y)p(y)}$
+    [$\log q_\phi^r(y|\boldsymbol{x})$]'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: '# GANs: a variant of ADA
+
+
+    +   - Transfer the properties of source domain to target domain
+
+    +   - Source domain: e.g. real image, $y = 1$
+
+    +   - Target domain: e.g. generated image, $y = 0$
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_136_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_136_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_137_0.png)
+
+
+    # GANs: a variant of ADA
+
+
+    +   - Implicit distribution over $x \sim p_\theta(x\mid y)$
+
+
+    $$p_\theta(x\mid y)=\begin{cases}p_{g_\theta}(x) & y=0 \quad \text{(distribution
+    of generated images)}\\p_{data}(x) & y=1. \quad \text{(distribution of real images)}\end{cases}$$
+
+
+    +   - $x \sim p_{g_\theta}(x) \Longleftrightarrow x=G_\theta(z),\ z\sim p(z\mid
+    y=0)$
+
+    +   - $x \sim p_{data}(x)$
+
+    +     - the code space of $z$ is degenerated
+
+    +     - sample directly from data'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: '# GANs: new formulation
+
+
+    +   - Again, rewrite GAN objectives in the "variational-EM" format
+
+    +   - Recap: conventional formulation:
+
+    +     $$\max_{\phi} \mathcal{L}_{\phi} = \mathbb{E}_{\boldsymbol{x}=G_{\theta}(\boldsymbol{z}),\boldsymbol{z}\sim
+    p(\boldsymbol{z}|y=0)}[\log(1 - D_{\phi}(\boldsymbol{x}))] + \mathbb{E}_{\boldsymbol{x}\sim
+    p_{data}(\boldsymbol{x})}[\log D_{\phi}(\boldsymbol{x})]$$
+
+    +     $$\max_{\theta} \mathcal{L}_{\theta} = \mathbb{E}_{\boldsymbol{x}=G_{\theta}(\boldsymbol{z}),\boldsymbol{z}\sim
+    p(\boldsymbol{z}|y=0)}[\log D_{\phi}(\boldsymbol{x})] + \mathbb{E}_{\boldsymbol{x}\sim
+    p_{data}(\boldsymbol{x})}[\log(1 - D_{\phi}(\boldsymbol{x}))]$$
+
+    +     $$= \mathbb{E}_{\boldsymbol{x}=G_{\theta}(\boldsymbol{z}),\boldsymbol{z}\sim
+    p(\boldsymbol{z}|y=0)}[\log D_{\phi}(\boldsymbol{x})]$$
+
+    +   - Rewrite in the new form
+
+    +     $$\max_{\phi} \mathcal{L}_{\phi} = \mathbb{E}_{p_{\theta}(\boldsymbol{x}|y)p(y)}[\log
+    q_{\phi}(y|\boldsymbol{x})]$$
+
+    +     $$\max_{\theta} \mathcal{L}_{\theta} = \mathbb{E}_{p_{\theta}(\boldsymbol{x}|y)p(y)}[\log
+    q_{\phi}^{r}(y|\boldsymbol{x})]$$
+
+    +   - Exact the same with ADA !
+
+    +   - The same correspondence to variational EM !
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_138_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_141_0.png)
+
+
+    # # GANs: minimizing KLD
+
+
+    +   - As in Variational EM, we can further rewrite in the form of **minimizing
+    KLD** to reveal more insights into the optimization problem
+
+
+    +   - For each optimization step of $p_{\theta}(x|y)$ at point $(\theta=\theta_0,\phi=\phi_0)$,
+    let
+
+    +     - $p(y)$: a uniform distribution
+
+    +     - $p_{\theta=\theta_0}(x)=\mathbb{E}_{p(y)}[p_{\theta=\theta_0}(x|y)]$:
+    prior distribution over $x$
+
+    +     - $q^r(x|y)\propto q^r_{\phi=\phi_0}(y|x)p_{\theta=\theta_0}(x)$: posterior
+    distribution over $x$
+
+
+    +   - **Lemma 1:** The updates of $\theta$ at $\theta_0$ have
+
+
+    $$
+
+    \left.\nabla_{\theta}\left[-\mathbb{E}_{p_{\theta}(x|y)p(y)}\left[\log q^r_{\phi=\phi_0}(y|x)\right]\right]\right|_{\theta=\theta_0}
+
+    =
+
+    \left.\nabla_{\theta}\left[\mathbb{E}_{p(y)}\left[KL\left(p_{\theta}(x|y)\|q^r(x|y)\right)-JSD\left(p_{\theta}(x|y=0)\|p_{\theta}(x|y=1)\right)\right]\right]\right|_{\theta=\theta_0}
+
+    $$
+
+
+    +   - KL: KL divergence
+
+    +   - JSD: Jensen-Shannon divergence'
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: '# GANs: minimizing KLD
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_142_0.png)
+
+
+    +   - *Lemma 1*: The updates of θ at θ₀ have
+
+    +     ∇_θ[ - 𝔼_{p_θ(x|y)p(y)}[log q^r_{φ=φ₀}(y|x)] ]|_{θ=θ₀} =
+
+    +     ∇_θ[ 𝔼_{p(y)}[KL(p_θ(x|y)||q^r(x|y))] - JSD(p_θ(x|y=0)||p_θ(x|y=1)) ]|_{θ=θ₀}
+
+    +   - Connection to variational inference
+
+    +     - See x as latent variables, y as visible
+
+    +     - p_{θ=θ₀}(x): prior distribution
+
+    +     - q^r(x|y) ∝ q^r_{φ=φ₀}(y|x)p_{θ=θ₀}(x) : posterior distribution
+
+    +     - p_θ(x|y): variational distribution
+
+    +       - Amortized inference: updates model parameter θ
+
+    +   - Suggests relations to VAEs, as we will explore shortly'
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: "# GANs: minimizing KLD\n\n$p_{\\theta=\\theta_0}(\\mathbf{x}|y=1)=p_{data}(\\\
+    mathbf{x})$  $p_{\\theta=\\theta_0}(\\mathbf{x}|y=0)=p_{g\\,\\theta=\\theta_0}(\\\
+    mathbf{x})$  $q^r(\\mathbf{x}|y=0)$  $p_{\\theta=\\theta^{new}}(\\mathbf{x}|y=0)=p_{g\\\
+    ,\\theta=\\theta^{new}}(\\mathbf{x})$\n\n![](img/cb490ed30bca4eda5fbba81c52a2c173_143_0.png)\n\
+    \n+   - Minimizing the KLD drives $p_{g_\\theta}(\\mathbf{x})$ to $p_{data}(\\\
+    mathbf{x})$  \n+     - By definition: $p_{\\theta=\\theta_0}(\\mathbf{x}) = E_{p(y)}[p_{\\\
+    theta=\\theta_0}(\\mathbf{x}|y)] = (p_{g\\,\\theta=\\theta_0}(\\mathbf{x}) + p_{data}(\\\
+    mathbf{x}))/2$  \n+     - KL$(p_\\theta(x|y=1)||q^r(x|y=1)) = KL(p_{data}(x)||q^r(x|y=1))$\
+    \ : constant, no free parameters  \n+     - KL$(p_\\theta(x|y=0)||q^r(x|y=0))\
+    \ = KL(p_{g_\\theta}(x)||q^r(x|y=0))$ : parameter $\\theta$ to optimize  \n+ \
+    \      - $q^r(\\mathbf{x}|y=0) \\propto q^r_{\\phi=\\phi_0}(y=0|\\mathbf{x})p_{\\\
+    theta=\\theta_0}(\\mathbf{x})$  \n+         - seen as a mixture of $p_{g\\,\\\
+    theta=\\theta_0}(\\mathbf{x})$ and $p_{data}(\\mathbf{x})$  \n+         - mixing\
+    \ weights induced from $q^r_{\\phi=\\phi_0}(y=0|\\mathbf{x})$  \n+     - Drives\
+    \ $p_{g_\\theta}(\\mathbf{x}|y)$ to mixture of $p_{g\\,\\theta=\\theta_0}(\\mathbf{x})$\
+    \ and $p_{data}(\\mathbf{x})$  \n+       - $\\Rightarrow$ Drives $p_{g_\\theta}(\\\
+    mathbf{x})$ to $p_{data}(\\mathbf{x})$\n\n![](img/cb490ed30bca4eda5fbba81c52a2c173_143_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: '# GANs: minimizing KLD
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_144_0.png)
+
+
+    p_{θ=θ₀}(x|y = 1) = p_{data}(x)
+
+
+    p_{θ=θ₀}(x|y = 0) = p_{gθ=θ₀}(x)
+
+
+    q^r(x|y = 0)
+
+
+    missed mode
+
+
+    p_{θ=θ^{new}}(x|y = 0) = p_{gθ=θ^{new}}(x)
+
+
+    +   - Missing mode phenomena of GANs
+
+    +     - Asymmetry of KLD
+
+    +       - Concentrates $p_\theta(x|y = 0)$ to large modes of $q^r(x|y)$
+
+    +         $\Rightarrow p_{g\theta}(x)$ misses modes of $p_{data}(x)$
+
+    +     - Symmetry of JSD
+
+    +     - Does not affect the behavior of mode missing
+
+
+    KL($p_{g\theta}(x)||q^r(x|y = 0)$)
+
+    = $\int p_{g\theta}(x) \log \frac{p_{g\theta}(x)}{q^r(x|y = 0)} dx$
+
+
+    +   - Large positive contribution to the KLD in the regions of $x$ space where
+    $q^r(x|y = 0)$ is small, unless $p_{g\theta}(x)$ is also small
+
+    +   - $\Rightarrow p_{g\theta}(x)$ tends to avoid regions where $q^r(x|y = 0)$
+    is small'
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_147_0.png)
+
+
+    Variational EM
+
+
+    Inference as generation
+
+
+    GANs
+
+
+    valid z space in
+
+    two domains
+
+
+    ADA'
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: '# Variant of GAN: InfoGAN
+
+
+    +   - GANs don’t offer the functionality of inferring code **z** given data
+
+    +   - InfoGAN [Chen et al., 2016]
+
+    +   - Introduce inference model $Q_{\eta}(\mathbf{z}|\mathbf{x})$ with parameters
+    $\boldsymbol{\eta}$
+
+    +   - Augment the objectives of GANs by additionally inferring **z**
+
+
+    $\max_D \mathcal{L}_D = \mathbb{E}_{\mathbf{x}\sim p_{data}(\mathbf{x})}[\log
+    D(\mathbf{x})] + \mathbb{E}_{\mathbf{x}\sim G(\mathbf{z}),\mathbf{z}\sim p(\mathbf{z})}[\log(1
+    - D(\mathbf{x}))],$
+
+    $\max_{G,Q} \mathcal{L}_{G,Q} = \mathbb{E}_{\mathbf{x}\sim G(\mathbf{z}),\mathbf{z}\sim
+    p(\mathbf{z})}[\log D(\mathbf{x}) + \log Q(\mathbf{z}|\mathbf{x})].$
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_148_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_148_1.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_148_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: '# # InfoGAN: new formulation
+
+
+    +   - Defines conditional $q_\eta(z|x,y)$
+
+
+    +     - $q_\eta(z|x,y=1)$ is fixed without free parameters to learn
+
+
+    +       - As GANs assume the code space of real data is degenerated
+
+
+    +     - Parameters $\eta$ are only associated with $q_\eta(z|x,y=0)$
+
+
+    +   - Rewrite in the new form:
+
+
+    $$\max_\phi \mathcal{L}_\phi = \mathbb{E}_{p_\theta(x|y)p(y)}\left[\log q_\eta(z|x,y)q_\phi(y|x)\right]$$
+
+
+    $$\max_{\theta,\eta} \mathcal{L}_{\theta,\eta} = \mathbb{E}_{p_\theta(x|y)p(y)}\left[\log
+    q_\eta(z|x,y)q_\phi^{(r)}(y|x)\right]$$
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_149_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: '# GANs vs InfoGAN
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_150_0.png)
+
+
+    code data/gen
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_150_1.png)
+
+
+    max_φ L_φ = 𝔼_{p_θ(x|y)p(y)} [log q_φ(y|x)]
+
+    max_θ L_θ = 𝔼_{p_θ(x|y)p(y)} [log q_φ^r(y|x)]
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_150_2.png)
+
+
+    code data/gen
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_150_3.png)
+
+
+    max_φ L_φ = 𝔼_{p_θ(x|y)p(y)} [log q_η(z|x,y) q_φ(y|x)]
+
+    max_{θ,η} L_{θ,η} = 𝔼_{p_θ(x|y)p(y)} [log q_η(z|x,y) q_φ^r(y|x)]'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: '# InfoGAN: new formulation
+
+
+    +   - Similar results as in GANs hold:
+
+    +     - Let $q^r(\boldsymbol{x}|\boldsymbol{z},y) \propto q_{\eta=\eta_0}(\boldsymbol{z}|\boldsymbol{x},y)
+    q_{\phi=\phi_0}^r(y|\boldsymbol{x}) p_{\theta=\theta_0}(\boldsymbol{x})$
+
+    +     - We have:
+
+    +       $\nabla_\theta\big[ - \mathbb{E}_{p_\theta(\boldsymbol{x}|y)p(y)} [\log
+    q_{\eta_0}(\boldsymbol{z}|\boldsymbol{x},y) q_{\phi_0}^r(y|\boldsymbol{x})] \big]|_{\boldsymbol{\theta}=\boldsymbol{\theta}_0}
+    =$
+
+    +       $\nabla_\theta\big[ \mathbb{E}_{p(y)} [\mathrm{KL}(p_\theta(\boldsymbol{x}|y)
+    \| q^r(\boldsymbol{x}|\boldsymbol{z},y))] - \mathrm{JSD}(p_\theta(\boldsymbol{x}|y=0)
+    \| p_\theta(\boldsymbol{x}|y=1)) \big]|_{\boldsymbol{\theta}=\boldsymbol{\theta}_0}$
+
+    +   - Next we show correspondences between GANs/InfoGAN and VAEs
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_151_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_152_0.png)
+
+
+    Variational EM
+
+
+    *Inference as generation*
+
+
+    GANs
+
+
+    *+ generate z*
+
+
+    InfoGAN
+
+
+    *valid z space in two domains*
+
+
+    ADA
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_152_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: '# Relates VAEs with GANs
+
+
+    +   - Resemblance of GAN generator learning to variational inference
+
+    +   - Suggest strong relations between VAEs and GANs
+
+    +   - Indeed, VAEs are basically minimizing KLD with an opposite direction, and
+    with a degenerated adversarial discriminator
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_153_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_153_1.png)
+
+
+    swap the generation (solid-line) and inference (dashed-line) processes of InfoGAN
+
+
+    degenerated discriminator'
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_154_0.png)
+
+
+    # Recap: conventional formulation of VAEs
+
+
+    +   - Objective:
+
+    +     $\max_{\theta,\eta} \mathcal{L}^{\text{vae}}_{\theta,\eta} = \mathbb{E}_{p_{data}(x)}
+    \big[ \mathbb{E}_{\tilde{q}_\eta(z|x)} [\log \tilde{p}_\theta(x|z)] - \text{KL}(\tilde{q}_\eta(z|x)
+    \| \tilde{p}(z)) \big]$
+
+    +     - $\tilde{p}(z)$: prior over $z$
+
+    +     - $\tilde{p}_\theta(x|z)$: generative model
+
+    +     - $\tilde{q}_\eta(z|x)$: inference model
+
+    +     - Only uses real examples from $p_{data}(x)$, lacks adversarial mechanism
+
+    +   - To align with GANs, let''s introduce the real/fake indicator $y$ and adversarial
+    discriminator'
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: '# # GANs vs VAEs side by side
+
+
+    |  | GANs (InfoGAN) | VAEs |
+
+    |---|---|---|
+
+    | Generative distribution | $p_\theta(x\mid y)=\begin{cases}p_{g_\theta}(x)&y=0\\p_{data}(x)&y=1.\end{cases}$
+    | $p_\theta(x\mid z,y)=\begin{cases}p_\theta(x\mid z)&y=0\\p_{data}(x)&y=1.\end{cases}$
+    |
+
+    | Discriminator distribution | $q_\phi(y\mid x)$ | $q_*(y\mid x)$, perfect, degenerated
+    |
+
+    | $z$-inference model | $q_\eta(z\mid x,y)$ of InfoGAN | $q_\eta(z\mid x,y)$ |
+
+    | KLD to minimize | $\min_\theta \mathrm{KL}\left(p_\theta(x\mid y)\parallel q^r(x\mid
+    z,y)\right)$<br>~ $\min_\theta \mathrm{KL}(P_\theta\parallel Q)$ | $\min_\theta
+    \mathrm{KL}\left(q_\eta(z\mid x,y)q_*(y\mid x)\parallel p_\theta(z,y\mid x)\right)$<br>~
+    $\min_\theta \mathrm{KL}(Q\parallel P_\theta)$ |'
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_159_0.png)
+
+
+    # VAEs vs. Wake-sleep
+
+
+    +   - Wake sleep algorithm
+
+    +     Wake : $\max_{\theta} \mathbb{E}_{q_{\lambda}(h|x)p_{data}(x)} [\log p_{\theta}(x|h)]$
+
+    +     Sleep : $\max_{\lambda} \mathbb{E}_{p_{\theta}(x|h)p(h)} [\log q_{\lambda}(h|x)]$
+
+    +   - Let $h$ be $z$, and $\lambda$ be $\eta$
+
+    +     $\Rightarrow \max_{\theta} \mathbb{E}_{q_{\eta}(z|x)p_{data}(x)} [\log p_{\theta}(x|z)]$,
+    recovers VAE objective of optimizing $\theta$
+
+    +   - VAEs extend wake phase by also learning the inference model ($\eta$)
+
+    +     $\max_{\theta,\eta} \mathcal{L}^{vae}_{\theta,\eta} = \mathbb{E}_{q_{\eta}(z|x)p_{data}(x)}
+    [\log p_{\theta}(x|z)] - \mathbb{E}_{p_{data}(x)} [\text{KL}(q_{\eta}(z|x)||p(z))]$
+
+    +     - Minimize the KLD in the original variational free energy wrt. $\eta$
+
+    +     - Stick to minimizing the wake-phase KLD wrt. both $\theta$ and $\eta$
+
+    +     - Do not involve sleep-phase objective
+
+    +     - Recall: sleep phase minimizes the *reverse* KLD in the variational free
+    energy'
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: '# GANs vs. Wake-sleep
+
+
+    +   - Wake sleep algorithm
+
+    +     Wake : max_θ E_{q_λ(h|x)p_data(x)} [log p_θ(x|h)]
+
+    +     Sleep : max_λ E_{p_θ(x|h)p(h)} [log q_λ(h|x)]
+
+    +   - Let h be y, and λ be φ
+
+    +     ⇒ max_φ E_{p_θ(x|y)p(y)} [log q_φ(y|x)], recovers GAN objective of optimizing
+    φ
+
+    +   - GANs extend sleep phase by also learning the generative model (θ)
+
+    +     - Directly extending sleep phase: max_φ L_φ = E_{p_θ(x|y)p(y)} [log q_φ(y|x)]
+
+    +     - GANs: max_θ L_θ = E_{p_θ(x|y)p(y)} [log q_φ^r(y|x)]
+
+    +     - The only difference is replacing q_φ with q_φ^r
+
+    +     - This is where adversarial mechanism come about !
+
+    +     - GANs stick to minimizing the sleep-phase KLD
+
+    +     - Do not involve wake-phase objective'
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: '# Mutual exchanges of ideas: augment the loss functions
+
+
+    | | GANs (InfoGAN) | VAEs |
+
+    |---|---|---|
+
+    | KLD to minimize | $\min_{\theta} \text{KL}\left(p_{\theta}(\boldsymbol{x}|y)
+    \|\| q^{r}(\boldsymbol{x}|\mathbf{z},y)\right)$  $\sim \min_{\theta}\text{KL}(P_{\theta}
+    \|\| Q)$ | $\min_{\theta}\text{KL}\left(q_{\eta}(\mathbf{z}|\boldsymbol{x},y)q_{*}^{r}(y|\boldsymbol{x})
+    \|\| p_{\theta}(\mathbf{z},y|\boldsymbol{x})\right)$  $\sim \min_{\theta}\text{KL}(Q
+    \|\| P_{\theta})$ |
+
+
+    +   - Asymmetry of KLDs inspires combination of GANs and VAEs
+
+    +     - GANs: $\min_{\theta}\text{KL}(P_{\theta}||Q)$ tends to missing mode
+
+    +     - VAEs: $\min_{\theta}\text{KL}(Q||P_{\theta})$ tends to cover regions with
+    small values of $p_{data}$
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_164_0.png)
+
+
+    Mode covering
+
+    Mode missing
+
+
+    [Figure courtesy: PRML]'
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: '# AAVAE: adaptive data selection
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_168_0.png)
+
+
+    max_{θ,η} L^{aavae}_{θ,η} = E_{p_{θ0}(x)} [ E_{q_η(z|x,y) q_φ^r(y|x)} [log p_θ(x|z,y)]
+    − KL(q_η(z|x,y) q_φ^r(y|x) || p(z|y) p(y)) ]
+
+
+    +   - An effective data selection mechanism:
+
+    +     - Both generated samples and real examples are weighted by
+
+    +       $q_φ^r(y = 0|x) = q_φ(y = 1|x)$
+
+    +     - Only samples that resembles real data and fool the discriminator will
+    be used for training
+
+    +     - A real example receiving large weight $q_φ^r(y|x)$
+
+    +       - ⇒ Easily recognized by the discriminator as real
+
+    +       - ⇒ Hard to be simulated from the generator
+
+    +       - ⇒ Hard examples get larger weights'
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: '# Mutual exchanges of ideas
+
+
+    +   - AAVAE enhances VAEs with ideas from GANs
+
+    +   - We can also enhance GANs with ideas from VAEs
+
+    +   - VAEs maximize a variational lower bound of log likelihood
+
+    +   - Importance weighted VAE (IWAE) [Burda et al., 2016]
+
+    +     - Maximizes a tighter lower bound through importance sampling
+
+    +   - The variational inference interpretation of GANs allows the importance weighting
+    method to be straightforwardly applied to GANs
+
+    +     - Just copy the derivations of IWAE side by side with little adaptions!'
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_177_0.png)
+
+
+    # Recap: Variational Inference
+
+
+    Maximize the variational lower bound $\mathcal{L}(\boldsymbol{\theta}, \boldsymbol{\phi};
+    \boldsymbol{x})$, or equivalently, minimize free energy
+
+
+    $F(\boldsymbol{\theta}, \boldsymbol{\phi}; \boldsymbol{x}) = -\log p(\boldsymbol{x})
+    + KL(q_{\phi}(\boldsymbol{z}|\boldsymbol{x}) || p_{\theta}(\boldsymbol{z}|\boldsymbol{x}))$
+
+
+    +   - E-step: maximize $\mathcal{L}$ wrt. $\phi$ with $\boldsymbol{\theta}$ fixed
+
+    +     $\max_{\phi}\mathcal{L}(\boldsymbol{\theta}, \boldsymbol{\phi}; \boldsymbol{x})
+    = \mathbb{E}_{q_{\phi}(\boldsymbol{z}|\boldsymbol{x})}[\log p_{\theta}(x|\boldsymbol{z})]
+    + KL(q_{\phi}(\boldsymbol{z}|x)||p(z))$
+
+    +     - If with closed form solutions
+
+    +       $q_{\phi}^*(z|x) \propto \exp[\log p_{\theta}(x,z)]$
+
+    +   - M-step: maximize $\mathcal{L}$ wrt. $\boldsymbol{\theta}$ with $\phi$ fixed
+
+    +     $\max_{\theta}\mathcal{L}(\boldsymbol{\theta}, \boldsymbol{\phi}; \boldsymbol{x})
+    = \mathbb{E}_{q_{\phi}(\boldsymbol{z}|\boldsymbol{x})}[\log p_{\theta}(x|\boldsymbol{z})]
+    + KL(q_{\phi}(\boldsymbol{z}|x)||p(z))$'
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: '# Discussion: Modeling latent vs. visible variables
+
+
+    +   - Latent and visible variables are traditionally distinguished clearly and
+    modeled in very different ways
+
+    +   - A key thought in the new formulation:
+
+    +     - Not necessary to make clear boundary between latent and visible variables,
+
+    +     - And between inference and generation
+
+    +     - Instead treat them as a symmetric pair
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_178_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 180
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_180_0.png)
+
+
+    # Symmetric modeling of latent & visible variables
+
+
+    +   - Help with modeling and understanding:
+
+    +     - Treating the generation space x in GANs as latent
+
+    +     - reveals the connection between GANs and ADA
+
+    +     - provides an variational inference interpretation of generation
+
+    +   - Wake sleep algorithm
+
+    +     - wake phase reconstructs visible variables based on latents
+
+    +     - sleep phase reconstructs latent variables based on visibles
+
+    +     - latent and visible variables are treated in a completely symmetric way
+
+
+    Wake: max_θ E_{q_φ(z|x)} [log p_θ(x, z)]
+
+
+    Sleep: max_φ E_{p_θ(z,x)} [log q_φ(z|x)]'
+  merge: -1
+  img_proc: true
+- pgno: 181
+  md: '# Symmetric modeling of latent & visible variables
+
+
+    New modeling approaches narrow the gap
+
+
+    # Empirical distributions over visible variables
+
+
+    +   - Impossible to be explicit distribution
+
+    +     - The only information we have is the observe data examples
+
+    +     - Do not know the true parametric form of data distribution
+
+    +   - Naturally an implicit distribution
+
+    +     - Easy to sample from, hard to evaluate likelihood
+
+
+    # Prior distributions over latent variables
+
+
+    +   - Traditionally defined as explicit distributions, e.g., Gaussian prior distribution
+
+    +     - Amiable for likelihood evaluation
+
+    +     - We can assume the parametric form according to our prior knowledge
+
+    +   - New tools to allow implicit priors and models
+
+    +     - GANs, density ratio estimation, approximate Bayesian computations
+
+    +     - E.g., adversarial autoencoder [Makhzani et al., 2015] replaces the Gaussian
+    prior of vanilla VAEs with implicit priors'
+  merge: -1
+  img_proc: true
+- pgno: 182
+  md: '# Symmetric modeling of latent & visible variables
+
+
+    +   - No difference in terms of formulations
+
+    +     - with implicit distributions and black-box NN models
+
+    +     - just swap the symbols $x$ and $z$
+
+
+    $z \sim p_{prior}(z)$
+
+    $x \sim f_{black-box}(z)$
+
+
+    $x \sim p_{data}(x)$
+
+    $z \sim f''_{black-box}(x)$
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_182_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 183
+  md: '# Symmetric modeling of latent & visible variables
+
+
+    +   - No difference in terms of formulations
+
+    +     - with implicit distributions and black-box NN models
+
+    +   - Difference in terms of space complexity
+
+    +     - depend on the problem at hand
+
+    +     - choose appropriate tools:
+
+    +       - implicit/explicit distribution, adversarial/maximum-likelihood optimization,
+    ...
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_183_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 184
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 185
+  md: '# Losses in generation space
+
+
+    +   - Generation of realistic sentences / images
+
+    +     - => **Generation distribution** stays “close” to the **real data distribution**
+
+    +     - Control-gen for text: maximum likelihood loss in *x* space
+
+    +     - SGAN for image: adversarial loss in joint (*x*, *z*) and (*x*, *c*) space
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_185_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 186
+  md: '# # Losses in latent space
+
+
+    +   - Control of user-specified attributes
+
+    +     - => **Inference distributions** stay close to **true posterior distributions**
+
+    +       & **Inference distributions** $p_φ(c|x)$ stay close to **data label distributions**
+
+    +   - Control-gen for text: maximum likelihood loss in $z$ and $c$ space
+
+    +   - SGAN for image: adversarial loss in joint $(x,z)$ and $(x,c)$ space
+
+    +   - Both: maximum likelihood loss in $c$ space
+
+
+    # ## Text generation
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_186_0.png)
+
+
+    # ## Image generation
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_186_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 187
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 188
+  md: '# Part-II: Conclusions
+
+
+    Z Hu, Z YANG, R Salakhutdinov, E Xing,
+
+    “On Unifying Deep Generative Models”, arxiv 1706.00550
+
+
+    +   - Deep generative models research have a long history
+
+    +     - Deep blief nets / Helmholtz machines / Predictability Minimization / ...
+
+    +   - Unification of deep generative models
+
+    +     - GANs and VAEs are essentially minimizing KLD in opposite directions
+
+    +       - Extends two phases of classic wake sleep algorithm, respectively
+
+    +     - A general formulation framework useful for
+
+    +       - Analyzing broad class of existing DGM and variants: ADA/InfoGAN/Joint-models/...
+
+    +       - Inspiring new models and algorithms by borrowing ideas across research
+    fields
+
+    +   - Symmetric view of latent/visible variables
+
+    +     - No difference in formulation with implicit prior distributions and black-box
+    NN transformations
+
+    +     - Difference in space complexity: choose appropriate tools
+
+    +   - Structured modeling of latent space'
+  merge: -1
+  img_proc: true
+- pgno: 189
+  md: '# Plan
+
+
+    +   - Statistical And Algorithmic Foundation and Insight of Deep Learning
+
+    +   - On Unified Framework of Deep Generative Models
+
+    +   - Computational Mechanisms: Distributed Deep Learning Architectures'
+  merge: -1
+  img_proc: true
+- pgno: 190
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 191
+  md: '# Outline
+
+
+    +   - Deep Learning as Dataflow Graphs
+
+    +   - Auto-differential Libraries
+
+    +   - Static and Dynamic Neural Networks
+
+    +   - DyNet
+
+    +   - Cavs'
+  merge: -1
+  img_proc: true
+- pgno: 192
+  md: '# Outline
+
+
+    +   - Deep Learning as Dataflow Graphs
+
+    +   - Auto-differential Libraries
+
+    +   - Static and Dynamic Neural Networks
+
+    +   - DyNet
+
+    +   - Cavs'
+  merge: -1
+  img_proc: true
+- pgno: 193
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 194
+  md: '# From Layers to Networks
+
+
+    +   - A neural network is thus a few stacked layers $l = 1, ..., L$, where every
+    layer represents a function transform $f_l$
+
+    +   - The forward computation proceeds by sequentially executing $f_1, f_2, f_3,
+    ..., f_L$
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_194_0.png)
+
+
+    +   - Training the neural network involves deriving the gradient of its parameters
+    with a backward pass (next slides)'
+  merge: -1
+  img_proc: true
+- pgno: 195
+  md: '# A Computational Layer in DL
+
+
+    +   - Denote the backward pass through a layer $l$ as $b_l$
+
+    +   - $b_l$ derives the gradients of the input $x$(d$x$), given the gradient of
+    $z$ as d$z$, as well as the gradients of the parameters W, b
+
+    +   - d$x$ will be the backward input of its previous layer $l-1$
+
+    +   - Backward pass can be thought as a backward dataflow where the gradient flow
+    through the layer
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_195_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 196
+  md: "![](img/cb490ed30bca4eda5fbba81c52a2c173_196_0.png)\n\n# # Backpropagation\
+    \ through a NN\n\n+   - The backward computation proceeds by sequentially executing\
+    \  \n+     \\(b_L, b_{L-1}, b_{L-2}, \\ldots, b_1\\)\n\n![](img/cb490ed30bca4eda5fbba81c52a2c173_196_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 197
+  md: '# A Layer as a Dataflow Graph
+
+
+    +   - Give the forward computation flow, gradients can be computed by auto differentiation
+
+    +   - Automatically derive the backward gradient flow graph from the forward dataflow
+    graph
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_197_0.png)
+
+
+    Photo from TensorFlow website
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_197_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 198
+  md: '# A Network as a Dataflow Graph
+
+
+    +   - Gradients can be computed by auto differentiation
+
+    +   - Automatically derive the gradient flow graph from the forward dataflow graph
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_198_0.png)
+
+
+    Photo from TensorFlow website'
+  merge: -1
+  img_proc: true
+- pgno: 199
+  md: '# Gradient Descent via Backpropagation
+
+
+    +   - The computational workflow of deep learning
+
+    +     - Forward, which we usually also call inference: forward dataflow
+
+    +     - Backward, which derives the gradients: backward gradient flow
+
+    +     - Apply/update gradients and repeat
+
+    +   - Mathematically,
+
+
+    ```
+
+    $\theta^{(t)} = \theta^{(t-1)} + \varepsilon \cdot \nabla_{\mathcal{L}}(\theta^{(t-1)},
+    D^{(t)})$
+
+    ```
+
+
+    Backward
+
+
+    Model parameters
+
+
+    Forward
+
+
+    Data
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_199_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 200
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 201
+  md: '# Auto-differential Libraries
+
+
+    +   - Auto-diff libraries automatically derive the gradients following the back-propagation
+    rule.
+
+    +   - A lot of auto-differentiation libraries have been developed:
+
+    +   - So-called Deep Learning toolkits
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_201_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 202
+  md: '# Deep Learning Toolkits
+
+
+    +   - They are adopted differently in different domains
+
+    +   - For example
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_202_0.png)
+
+
+    Vision
+
+
+    NLP'
+  merge: -1
+  img_proc: true
+- pgno: 203
+  md: '# 国家社会科学基金项目资金预算表
+
+
+    项目名称：基于大数据的宏观经济分析模型研究
+
+
+    | 序号 | 开支内容 | 金额（元） | 备注 |
+
+    | --- | --- | --- | --- |
+
+    | 1 | 资料费 | 30000 | 图书、文献购置 |
+
+    | 2 | 数据采集费 | 20000 | 问卷设计与发放 |
+
+    | 3 | 差旅费 | 15000 | 实地调研交通住宿 |
+
+    | 4 | 会议费 | 10000 | 学术研讨会议 |
+
+    | 5 | 专家咨询费 | 10000 | 咨询专家劳务 |
+
+    | 6 | 劳务费 | 25000 | 科研助理及学生劳动 |
+
+    | 7 | 印刷出版费 | 5000 | 成果打印与出版 |
+
+    | 8 | 其他支出 | 5000 | 办公耗材等 |
+
+    | 合计 |  | 105000 |  |'
+  merge: -1
+  img_proc: true
+- pgno: 204
+  md: '# Deep Learning Toolkits: Symbolic and Imperative
+
+
+    +   - Symbolic vs. imperative programming
+
+    +     - Symbolic: write symbols to assemble the networks first, evaluate later
+
+    +     - Imperative: immediate evaluation
+
+
+    ```
+
+    A = Variable(''A'')
+
+    B = Variable(''B'')
+
+    C = B * A
+
+    D = C + Constant(1)
+
+    # compiles the function
+
+    f = compile(D)
+
+    d = f(A=np.ones(10), B=np.ones(10)*2)
+
+    ```
+
+
+    Symbolic
+
+
+    ```
+
+    import numpy as np
+
+    a = np.ones(10)
+
+    b = np.ones(10) * 2
+
+    c = b * a
+
+    d = c + 1
+
+    ```
+
+
+    Imperative
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_204_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 205
+  md: '# Deep Learning Toolkits
+
+
+    +   - Symbolic
+
+    +     - Good
+
+    +       - easy to optimize (e.g. batching, parallelization, kernel fusion) for
+    developers
+
+    +       - More efficient
+
+    +     - Bad
+
+    +       - The way of programming might be counter-intuitive
+
+    +       - Harder to debug for user programs
+
+    +       - Less flexible: you need to write symbols before actually doing anything
+
+    +   - Imperative:
+
+    +     - Good
+
+    +       - More flexible: write one line, evaluate/execute one line
+
+    +       - Easy to program and easy to debug: because it matches the way we use
+    in most programming languages
+
+    +     - Bad
+
+    +       - Less efficient
+
+    +       - More difficult to optimize'
+  merge: -1
+  img_proc: true
+- pgno: 206
+  md: '# Outline
+
+
+    +   - Deep Learning as Dataflow Graphs
+
+    +   - Auto-differential Libraries
+
+    +   - **Static and Dynamic Neural Networks**
+
+    +   - Dynamic Declaration and DyNet
+
+    +   - Cavs'
+  merge: -1
+  img_proc: true
+- pgno: 207
+  md: '# Program an NN = Assemble a Dataflow Graph?
+
+
+    +   - Define a neural network
+
+    +     - Define operations and layers: fully-connected? Convolution? Recurrent?
+
+    +     - Define the data I/O: what data to read? Where?
+
+    +     - Define a loss function/optimization objective: L2 loss? Softmax? Ranking
+    Loss?
+
+    +     - Define an optimization operator: SGD, Momentum, Adam, etc.
+
+    +     - Connect operations, data I/O, loss functions and optimizer as a full dataflow
+    graph, which is the representation of the neural network
+
+
+    Auto-differential Libraries then take over
+
+
+    +   - Build forward dataflow graph and backward gradient flow graphs automatically
+
+    +   - Perform training and apply updates'
+  merge: -1
+  img_proc: true
+- pgno: 208
+  md: "# Summary: Static Declaration\n\n+   - Users build a dataflow graph\n+   -\
+    \ Frameworks analyze and optimize the graph\n+     - Automatically derive the\
+    \ backward graph\n+     - Incorporate some optimization if desired\n+   - Perform\
+    \ training iteratively (via SGD)\n\nPerform graph-level optimization over D (optionally)\n\
+    \n```\n/* (a) static declaration */\n// all samples must share one graph\ndeclare\
+    \ a static data flow graph \U0001D49F.\nfor t = 1 → T:\n  read the tth data batch\
+    \ {x_i^t}_{i=1}^K.\n  batched computation: \U0001D49F({x_i^t}_{i=1}^K).\n```"
+  merge: -1
+  img_proc: true
+- pgno: 209
+  md: '# # Summary: Static Declaration
+
+
+    +   - Static Declaration *seems to be* a dominant choice for programming deep
+    learning models
+
+    +     - Good for **static** workflows: define once, run for arbitrary batches/data
+
+    +     - Easy to parallelize/batching for a fixed graph
+
+    +     - Easy to optimize: a lot of off-the-shelf optimization techniques for graph'
+  merge: -1
+  img_proc: true
+- pgno: 210
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 211
+  md: '# Introduction to Dynamic Neural Networks
+
+
+    +   - Deep Learning has been applied on more structured data
+
+    +   - The neural network compute following a data-dependent structure, in order
+    to encode the structure information
+
+    +     - Sequences, Trees, Graphs
+
+    +   - E.g. Recurrent Neural Networks and their variants
+
+    +     - Sequence RNN in machine translation, video understanding
+
+    +     - Tree RNN in sentence parsing and sentiment analysis
+
+    +     - GraphRNN in social network/image segmentation
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_211_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 212
+  md: '# Dynamic Neural Networks
+
+
+    +   - The dynamics of the NNs come from multiple dimensions
+
+    +     - Variably sized inputs
+
+    +     - Variably sized outputs
+
+    +       - e.g. in machine translation, input/output sentences have different length
+    across samples
+
+    +     - Variably structured inputs/outputs
+
+    +       - e.g. in image segmentation/social network, input and output are differently
+    structured graphs.
+
+    +     - Nontrivial inference algorithms
+
+    +       - e.g. in graph NNs, the inference path is dependent on the structure
+    of the input data
+
+    +   - The NN architecture used to handle structured data would change with the
+    input sample
+
+    +     - i.e. *Dynamic Neural networks*'
+  merge: -1
+  img_proc: true
+- pgno: 213
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 214
+  md: '# Static Declaration for Dynamic Dataflow Graphs
+
+
+    +   - They are very commonly adopted, but are they good?
+
+    +     - Unable to express structures beyond sequences
+
+    +     - Usually yield unnecessary (extra) computation, which wastes computational
+    resources
+
+    +   - More problems
+
+    +     - Difficulty in expressing complex flow-control logic
+
+    +     - Complexity of the computation graph implementation
+
+    +     - Difficulty in debugging'
+  merge: -1
+  img_proc: true
+- pgno: 215
+  md: '# Outline
+
+
+    +   - Deep Learning as Dataflow Graphs
+
+    +   - Auto-differential Libraries
+
+    +   - Static Declaration and Dynamic Neural Networks
+
+    +   - **Dynamic Declaration and DyNet**
+
+    +   - Cavs
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_215_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 216
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 217
+  md: "![](img/cb490ed30bca4eda5fbba81c52a2c173_217_0.png)\n\n# Dynamic Declaration\n\
+    \n+   - Static Declaration vs. Dynamic Declaration\n+     - Move the graph declaration\
+    \ and construction (and optimization) from outside of the loop to inside the loop\n\
+    +     - Perform single instance training because it is hard to batch\n\n```\n\
+    /* (a) static declaration */\n// all samples must share one graph\ndeclare a static\
+    \ data flow graph \U0001D49F.\nfor t = 1 → T:\n    read the tth data batch {xᵢᵗ}ᵢ₌₁ᴷ.\n\
+    \    batched computation: \U0001D49F({xᵢᵗ}ᵢ₌₁ᴷ).\n```\n\n```\n/* (b) dynamic declaration\
+    \ */\nfor t = 1 → T:\n    read the tth data batch {xᵢᵗ}ᵢ₌₁ᴷ.\n    for k = 1 →\
+    \ K:\n        declare a data flow graph \U0001D49Fᵗᵢ for xᵢᵗ.\n        single\
+    \ instance computation: \U0001D49Fᵢᵗ(xᵢᵗ)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 218
+  md: '# # Dynamic Declaration: Existing Frameworks
+
+
+    +   - Dynamic Declaration
+
+    +     - Imperative (instance evaluation)
+
+    +       - Chainer (Preferred Networks Inc.), PyTorch (Facebook)
+
+    +     - Symbolic (Lazy evaluation): **DyNet (Petuum Inc.)**
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_218_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 219
+  md: '# Introducing DyNet
+
+
+    +   - Designed for dynamic deep learning workflow, e.g.
+
+
+    # Words
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_219_0.png)
+
+
+    # Sentences
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_219_1.png)
+
+
+    # Phrases
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_219_2.png)
+
+
+    # Documents
+
+
+    This film was completely unbelievable.
+
+    The characters were wooden and the plot was absurd.
+
+    That being said, I liked it.'
+  merge: -1
+  img_proc: true
+- pgno: 220
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_220_0.png)
+
+
+    # DyNet is Optimized for Dynamic Declaration
+
+
+    +   - Key Ingredients
+
+    +     - Separate parameter declaration and graph construction
+
+    +     - Declare trainable parameters and construct models first
+
+    +     - Construct computation graphs
+
+    +     - Conclusion: Define parameter once, but define graphs dynamically depending
+    on inputs → therefore making the graph construction lighter-weight
+
+
+    ```
+
+    model = dy.Model()
+
+
+    pW = model.add_parameters((20,4))
+
+    pb = model.add_parameters(20)
+
+
+    dy.renew_cg()
+
+    x = dy.inputVector([1,2,3,4])
+
+    W = dy.parameter(pW) # convert params to expression
+
+    b = dy.parameter(pb) # and add to the graph
+
+
+    y = W * x + b
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 221
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 222
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_222_0.png)
+
+
+    # Outline
+
+
+    +   - Deep Learning as Dataflow Graphs
+
+    +   - Auto-differential Libraries
+
+    +   - Static Declaration and Dynamic Neural Networks
+
+    +   - Dynamic Declaration and DyNet
+
+    +   - **Cavs**'
+  merge: -1
+  img_proc: true
+- pgno: 223
+  md: "![](img/cb490ed30bca4eda5fbba81c52a2c173_223_0.png)\n\n# Dynamic Declaration:\
+    \ Advantages\n\n+   - Dynamic declaration has one major advantages\n+     - Flexibility:\
+    \ it can express *arbitrarily dynamically structured* networks by declaring as\
+    \ many as dataflow graphs as the number of training data\n\n```\n/* (b) dynamic\
+    \ declaration */\nfor t = 1 → T:\n    read the tth data batch {xᵢᵗ}ᵢ₌₁ᴷ.\n   \
+    \ for k = 1 → K:\n        declare a data flow graph Dᵢᵗ for xᵢᵗ.\n        single-instance\
+    \ computation: Dᵢᵗ(xᵢᵗ).\n```"
+  merge: -1
+  img_proc: true
+- pgno: 224
+  md: "# Dynamic Declaration: Problems\n\n+   - Dynamic declaration scarifies efficiency\
+    \ for flexibility\n+   - Graph construction overhead grows linearly with # of\
+    \ samples\n+   - Only single-instance computation can be performed – no batching!\n\
+    +   - Hard to incorporate graph-level optimization\n\n```\n/* (b) dynamic declaration\
+    \ */\nfor t = 1 → T:\n    read the tth data batch {x_i^t}_{i=1}^K.\nfor k = 1\
+    \ → K:\n    declare a data flow graph D_i^t for x_i^t.\n    single-instance computation:\
+    \ D_i^t(x_i^t).\n```"
+  merge: -1
+  img_proc: true
+- pgno: 225
+  md: "# Problem #1: Graph Construction and Optimization\n\n```\n/* (a) static declaration\
+    \ */\n// all samples must share one graph\ndeclare a static data flow graph \U0001D49F\
+    .\nfor t = 1 → T:\n  read the tth data batch {x_i^t}_{i=1}^K.\n  batched computation:\
+    \ \U0001D49F({x_i^t}_{i=1}^K).\n```\n\n```\n/* (b) dynamic declaration */\nfor\
+    \ t = 1 → T:\n  read the tth data batch {x_i^t}_{i=1}^K.\n  for k = 1 → K:\n \
+    \   declare a data flow graph \U0001D49F_i^t for x_i^t.\n    single-instance computation:\
+    \ \U0001D49F_i^t(x_i^t).\n```"
+  merge: -1
+  img_proc: true
+- pgno: 226
+  md: '# Problem #1: Graph Construction and Optimization
+
+
+    +   - Graph construction literally takes 80% of time in TensorFlow Fold
+
+    +   - Curve (left axis): absolute time; bar (right): percentage time
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_226_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 227
+  md: "# Problem #2: Batching will be Very Hard\n\n```\n/* (a) static declaration\
+    \ */\n// all samples must share one graph\ndeclare a static data flow graph \U0001D49F\
+    .\nfor t = 1 → T:\n  read the tth data batch {x_i^t}_{i=1}^K.\n  batched computation:\
+    \ \U0001D49F({x_i^t}_{i=1}^K).\n```\n\nIn static declaration: batching is natural\n\
+    \n```\n/* (b) dynamic declaration */\nfor t = 1 → T:\n  read the tth data batch\
+    \ {x_i^t}_{i=1}^K.\n  for k = 1 → K:\n    declare a data flow graph \U0001D49F\
+    _i^t for x_i^t.\n    single-instance computation: \U0001D49F_i^t(x_i^t).\n```\n\
+    \nIn dynamic declaration: batching is difficult"
+  merge: -1
+  img_proc: true
+- pgno: 228
+  md: '# Problem #2: Batching will be Very Hard
+
+
+    +   - Manual batching of dynamic graphs?
+
+    +   - Users have to write code to do batching by themselves
+
+    +     - In fact, until 2017, the famous tree-LSTM (a typical dynamic NN) model
+    is trained with batchsize=1
+
+    +   - And it is not always available!
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_228_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_228_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 229
+  md: "# Problem #3: Unavailable to Graph Optimizations\n\n+   - Graph optimization\
+    \ itself has a overhead (growing with the size of the graph)\n+   - In static\
+    \ declaration, we optimize the graph only once, and apply for all input data points\
+    \ – graph optimization overhead is constant, and the gain is mostly positive\n\
+    +   - In dynamic declaration, if we want to incorporate these optimization, we\
+    \ need to optimize for each declared graph\n+   - Therefore, linear graph optimization\
+    \ overhead\n+   - As a result: the optimization overhead might cost more than\
+    \ gained\n\n```\n/* (b) dynamic declaration */\nfor t = 1 → T:\n  read the tth\
+    \ data batch {x_i^t}_{i=1}^K.\nfor k = 1 → K:\n  declare a data flow graph D_i^t\
+    \ for x_i^t.\n  single-instance computation: D_i^t(x_i^t).\n```\n\nGraph optimization\
+    \ happens here: inside the loops!"
+  merge: -1
+  img_proc: true
+- pgno: 230
+  md: '# Introducing Cavs: Design Goals
+
+
+    +   - Simple Interface, rich expressiveness
+
+    +     - Keep the flexibility of symbolic programming and dynamic declaration
+
+    +   - At the same time, address the three aforementioned problems:
+
+    +     - Minimize graph construction overhead
+
+    +     - Allow for efficient computation and batching
+
+    +     - (Re-)open the opportunities for graph optimization techniques'
+  merge: -1
+  img_proc: true
+- pgno: 231
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 232
+  md: '# Cavs: Motivation
+
+
+    +   - Observation: Most dynamic NNs has *recurrent/recursive* structures
+
+    +     - The dynamics come from the sample-dependent structure
+
+    +     - Not the "neural network" itself
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_232_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 233
+  md: '# Think Like a Vertex
+
+
+    +   - “Think like a vertex”
+
+    +     - Originally from the graph computing community
+
+    +   - Key idea: *express “global” through “local”*
+
+    +     - User implements a vertex function, specifying how a node will interact
+    with its neighboring nodes
+
+    +     - The system will compile the local vertex function and figure out the overall
+    computing pattern over the whole graph'
+  merge: -1
+  img_proc: true
+- pgno: 234
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 235
+  md: '# Cavs: A Vertex-centric Representation
+
+
+    +   - The key idea: separate out static ML model declaration from the data-dependent
+    dynamics of input samples
+
+
+    Dynamics come from here
+
+
+    Computation specified here
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_235_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 236
+  md: '# Cavs: Four APIs
+
+
+    +   - *Gather & Scatter* for internal data path
+
+    +   - *Pull & Push* for external data path
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_236_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 237
+  md: "![](img/cb490ed30bca4eda5fbba81c52a2c173_237_0.png)\n\n# Cavs: Four APIs\n\n\
+    +   - An example: expressing Tree-LSTM using the four APIs\n\n```\ndef F():\n\
+    \    S = gather()               # gather states of child vertices\n    for k in\
+    \ range(N):\n        c_k, h_k = split(S[k], 2)  # get hidden states c and h\n\
+    \    x = pull({0})              # pull the first external input x\n\n    # specify\
+    \ the computation\n    h = ∑_{k=0}^{N-1} h_k\n    i = sigmoid(W^{(i)} × x + U^{(i)}\
+    \ × h + b^{(i)})\n    for k in range(N):\n        f_k = sigmoid(W^{(f)} × x +\
+    \ U^{(f)} × h_k + b^{(f)})\n    o = sigmoid(W^{(o)} × x + U^{(o)} × h + b^{(o)})\n\
+    \    u = tanh(W^{(u)} × x + U^{(u)} × h + b^{(u)})\n    c = i ⊗ u + ∑_{k=0}^{N-1}\
+    \ f_k ⊗ c_k\n    h = o ⊗ tanh(c)\n\n    scatter(concat([c, h], 1))  # scatter\
+    \ c, h to parent vertices\n    push(h)                     # push to external\
+    \ connectors\n```"
+  merge: -1
+  img_proc: true
+- pgno: 238
+  md: "# Expressing Backpropagation\n\n![](img/cb490ed30bca4eda5fbba81c52a2c173_238_0.png)\n\
+    \n+   - It transforms the forward-backward computation on batch of dataflow graphs\
+    \ as\n+     - Forward: schedule the execution of the vertex function F through\
+    \ a batch of input graphs\n+     - Backward: schedule the execution of ∂F through\
+    \ the same batch of input graphs, in a reverse order\n\n```\n/* (c) our proposed\
+    \ vertex-centric model */\ndeclare a symbolic vertex function ℱ.\nfor t = 1 →\
+    \ T:\n  read the tth data batch {x_i^t}_{i=1}^K.\n  read their associated graphs\
+    \ {\U0001D4A2_i^t}_{i=1}^K.\n  compute ℱ over {\U0001D4A2_i^t}_{i=1}^K with inputs\
+    \ {x_i^t}_{i=1}^K.\n```"
+  merge: -1
+  img_proc: true
+- pgno: 239
+  md: "# Cavs Bypass Graph Construction Overhead\n\n![](img/cb490ed30bca4eda5fbba81c52a2c173_239_0.png)\n\
+    \n+   - No repeated graph construction overhead!\n+   - The graph construction\
+    \ overhead is constant – we only need to construction F, which is usually a small-scale\
+    \ dataflow graph\n+   - Bypass the repeated dataflow graph construction\n+   -\
+    \ Instead, read the input graph G, which could be achieved by an I/O function\n\
+    \n```\n/* (c) our proposed vertex-centric model */\ndeclare a symbolic vertex\
+    \ function ℱ.\nfor t = 1 → T:\n  read the tth data batch {x_i^t}_{i=1}^K\n  read\
+    \ their associated graphs {\U0001D4A2_i^t}_{i=1}^K\n  compute ℱ over {\U0001D4A2\
+    _i^t}_{i=1}^K with inputs {x_i^t}_{i=1}^K.\n```\n\nDeclare only once → constant\
+    \ graph construction cost\n\nRead through I/O, no graph construction involved\
+    \ any more."
+  merge: -1
+  img_proc: true
+- pgno: 240
+  md: '# Empirical Results: Graph Construction Cost
+
+
+    +   - Cavs has constant graph construction time
+
+    +   - Curve (left axis): absolute time; bar (right): percentage time
+
+    +   - Cavs outperforms TensorFlow-Fold by a large margin
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_240_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 241
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_241_0.png)
+
+
+    # # Cavs Enables Batched Computation
+
+
+    +   - Batched computation is key to deep learning
+
+    +   - Recall the Dynamic Declaration problem #2
+
+    +   - Batched computation on dynamic graphs are difficult:
+
+    +     - Difficult to find batching opportunities
+
+    +       - need to analyze the graph
+
+    +       - need to manually write code to do extra processing
+
+    +     - Given batching opportunities, different to re-order memory contents
+
+    +       - For the batched computation to be efficient, their input/output need
+    to coalesce on memory
+
+    +       - How to efficiently re-arrange memory layout to guarantee continuity?'
+  merge: -1
+  img_proc: true
+- pgno: 242
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_242_0.png)
+
+
+    # Cavs Enables Batched Computation
+
+
+    +   - Batched computation is natural and automatic in Cavs
+
+    +     - Cavs transforms the backpropagation as **evaluating F on nodes of a batch
+    of input graphs**, see the figure below.
+
+    +   - Then, batched computation can be realized by
+
+    +     - Figure out a set of vertices that we are ready to evaluate F on
+
+    +     - Batch the evaluation of F on this set of vertices
+
+    +     - Pass the output of F to their parent vertices'
+  merge: -1
+  img_proc: true
+- pgno: 243
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 244
+  md: '# Dynamic Batching: Memory Management Challenge
+
+
+    +   - Batched computational kernels on CPU/CPUs requires the inputs to a batched
+    computation kernel locate continuously on memory
+
+    +     - In Dynamic Declaration, this is usually not the case due to the dynamic-varying
+    input structures.
+
+    +     - To achieve memory continuity, one has to frequently re-arrange memory
+    layouts (memcpy) of the inputs to each batched operation.
+
+    +   - Cavs proposes a new data structure, DynamicTensor, to **ensure memory continuity**,
+    at the same time **minimize memory movement overhead**'
+  merge: -1
+  img_proc: true
+- pgno: 245
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 246
+  md: '# Cavs: Advanced Memory Management – Dynamic Tensor
+
+
+    +   - With dynamic tensors, Cavs designs a memory management mechanism to guarantee
+    the coalesce of input contents of batched operations on memory
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_246_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 247
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 248
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_248_0.png)
+
+
+    # Cavs: Improvement on Computation
+
+
+    +   - In terms of computation-only, Cavs shows maximally 5.4x/9.7x and 7.2x/2.4x
+    speedups over Fold/DyNet on Tree-FC and Tree-LSTM, respectively.
+
+
+    | # leaves | time (s) | Speedup | bs | time (s) | Speedup |
+
+    |---:|:---|:---|---:|:---|:---|
+
+    | 32 | 0.6 / 3.1 / 4.1 | 5.4 / 7.1 | 1 | 76 / 550 / 62 | 7.2 / 0.8 |
+
+    | 64 | 1.1 / 3.9 / 8.0 | 3.7 / 7.5 | 16 | 9.8 / 69 / 12 | 7.0 / 1.2 |
+
+    | 128 | 2 / 6.2 / 16 | 3.0 / 7.9 | 32 | 6.2 / 43 / 9.9 | 7.0 / 1.6 |
+
+    | 256 | 4 / 10.6 / 33.7 | 2.7 / 8.7 | 64 | 4.1 / 29 / 7.4 | 7.2 / 1.8 |
+
+    | 512 | 8 / 18.5 / 70.6 | 2.3 / 8.9 | 128 | 2.9 / 20.5 / 5.9 | 7.1 / 2.0 |
+
+    | 1024 | 16 / 32 / 153 | 2.1 / 9.7 | 256 | 2.3 / 15.8 / 5.4 | 7.0 / 2.4 |'
+  merge: -1
+  img_proc: true
+- pgno: 249
+  md: '# Cavs: Improvement on Memory Management
+
+
+    +   - The improvement is significant (2x - 3x) at larger batch size, comparing
+    to DyNet.
+
+
+    | bs | Memory operations (s) (Cavs / DyNet) Train | Memory operations (s) (Cavs
+    / DyNet) Inference | Computation (s) (Cavs / DyNet) Train | Computation (s) (Cavs
+    / DyNet) Inference |
+
+    |---|---|---|---|---|
+
+    | 16 | 1.14 / 1.33 | 0.6 / 1.33 | 9.8 / 12 | 2.9 / 8.53 |
+
+    | 32 | 0.67 / 0.87 | 0.35 / 0.87 | 6.1 / 9.8 | 1.9 / 5.35 |
+
+    | 64 | 0.39 / 0.6 | 0.21 / 0.6 | 4.0 / 7.4 | 1.3 / 3.48 |
+
+    | 128 | 0.25 / 0.44 | 0.13 / 0.44 | 2.9 / 5.9 | 0.97 / 2.52 |
+
+    | 256 | 0.17 / 0.44 | 0.09 / 0.44 | 2.3 / 5.4 | 0.77 / 2.58 |'
+  merge: -1
+  img_proc: true
+- pgno: 250
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 251
+  md: '# Cavs Exposes Opportunities for Graph Optimization
+
+
+    +   - Cavs propose three graph-level optimization strategies
+
+    +     - Lazy batching
+
+    +     - Streaming
+
+    +     - Automatic kernel fusion
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_251_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 252
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 253
+  md: '# Summary: Comparing Software Frameworks for Dynamic Neural Networks
+
+
+    | Model | Frameworks | Expressiveness | Batching | Graph Cons. Overhead | Graph
+    Exec. Optimization |
+
+    |---|---|---|---|---|---|
+
+    | static declaration | Caffe, Theano, TensorFlow, MxNet | × | × | low | beneficial
+    |
+
+    | dynamic declaration (instant evaluation) | PyTorch, Chainer | ✓ | × | N/A |
+    unavailable |
+
+    | dynamic declaration (lazy evaluation) | DyNet | ✓ | ✓ | high | not beneficial
+    |
+
+    | Fold | TensorFlow-Fold | ✓ | ✓ | high | unknown |
+
+    | Vertex-centric | Cavs | ✓ | ✓ | low | beneficial |'
+  merge: -1
+  img_proc: true
+- pgno: 254
+  md: '# Cavs will be in
+
+
+    +   - More descriptions about Cavs:
+
+
+    Cavs: A Vertex-centric Programming Interface for Dynamic Neural Networks. Hao
+    Zhang, Shizhen Xu, Graham Neubig, Wei Dai, Qirong Ho, Guangwen Yang, Eric P. Xing.
+    ATC 2018.
+
+
+    +   - Code will be released soon, check out at: https://github.com/petuum-inc
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_254_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 255
+  md: '# Part-III (2)
+
+    Distributed Deep Learning'
+  merge: -1
+  img_proc: true
+- pgno: 256
+  md: '# Outline
+
+
+    +   - Overview: Distributed Deep Learning on GPUs
+
+    +   - Challenges 1: Addressing the communication bottleneck
+
+    +   - Challenges 2: Handling the limited GPU memory'
+  merge: -1
+  img_proc: true
+- pgno: 257
+  md: '# Review – DL toolkits on single machine
+
+
+    +   - Using GPU is a must
+
+    +     - A small number of GPU-equipped machines could achieve satisfactory speedup
+    compared to CPU clusters with thousands of cores
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_257_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_257_1.png)
+
+
+    +   - A cluster of 8 GPU-equipped machines
+
+    +   - A cluster of 2000 CPU cores
+
+
+    More readily available to researchers'
+  merge: -1
+  img_proc: true
+- pgno: 258
+  md: '# Review – DL toolkits on single machine
+
+
+    +   - However, using a single GPU is far from sufficient
+
+    +     - average-sized deep networks can take days to train on a single GPU when
+    faced with 100s of GBs to TBs of data
+
+    +   - Demand faster training of neural networks on ever-larger datasets
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_258_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_258_1.png)
+
+
+    +   - However, current distributed DL implementations (e.g. in TensorFlow) can
+    scale poorly due to substantial parameter synchronization over the network (we
+    will show later)'
+  merge: -1
+  img_proc: true
+- pgno: 259
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 260
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_260_0.png)
+
+
+    # Challenges
+
+
+    +   - Communication challenges
+
+    +     - GPUs are at least one order of magnitude faster than CPUs
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_260_1.png)
+
+
+    +   - High communication load raises the network communication as the main bottleneck
+    given limited bandwidth of commodity Ethernet
+
+    +   - Managing the computation and communication in a distributed GPU cluster
+    often complicates the algorithm design'
+  merge: -1
+  img_proc: true
+- pgno: 261
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_261_0.png)
+
+
+    # Let’s see what causes the problem
+
+
+    +   - Deep Learning on a single node – an iterative-convergent formulation
+
+
+    θ^(t) = θ^(t-1) + ε · ∇_L(θ^(t-1), D^(t))
+
+
+    Backward → ∇_L
+
+    Forward → ∇_L
+
+    Model parameters → θ^(t-1)
+
+    Apply gradients → ε
+
+    Data → D^(t)'
+  merge: -1
+  img_proc: true
+- pgno: 262
+  md: '# Let’s see what causes the problem
+
+
+    +   - Deep Learning on a single node – an iterative-convergent formulation
+
+
+    $\theta^{(t)} = \theta^{(t-1)} + \varepsilon \cdot \nabla_{\mathcal{L}}(\theta^{(t-1)},
+    D^{(t)})$
+
+
+    Forward and backward are the main computation (99%) workload of deep learning
+    programs.'
+  merge: -1
+  img_proc: true
+- pgno: 263
+  md: '# # Distributed Deep Learning
+
+
+    +   - Distributed DL: parallelize DL training using multiple machines.
+
+    +   - i.e. we want to accelerate the heaviest workload (in the box) to multiple
+    machines
+
+
+    $\theta^{(t)} = \theta^{(t-1)} + \varepsilon \cdot \nabla_{\theta} \mathcal{L}(\theta^{(t-1)},
+    D^{(t)})$
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_263_0.png)
+
+
+    Forward and backward are the main computation (99%) workload of deep learning
+    programs.'
+  merge: -1
+  img_proc: true
+- pgno: 264
+  md: '# Data parallelism with stochastic gradient descent
+
+
+    +   - We usually seek a parallelization strategy called data parallelism, based
+    on SGD
+
+    +     - We partition data into different parts
+
+    +     - Let different machines compute the gradient updates on different data
+    partitions
+
+    +     - Then aggregate/sync.
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_264_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 265
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 266
+  md: '# How to communicate
+
+
+    +   - Parameter server, e.g. Bosen, SSP
+
+    +     - A parameter server (PS) is a shared memory system that provides a shared
+    access for the global model parameters θ
+
+    +   - Deep learning can be trivially data-parallelized over distributed workers
+    using PS by 3 steps:
+
+    +     - Each worker computes the gradients (∇L) on their own data partition ($D_p$)
+    and send them to remote servers;
+
+    +     - servers receive the updates and apply (+) them on globally shared parameters;
+
+    +     - Each worker pulls back the updated parameters ($\theta_t$)'
+  merge: -1
+  img_proc: true
+- pgno: 267
+  md: '# How PS works
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_267_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 268
+  md: '# # Parameter Server
+
+
+    +   - Parameter server has been successful for CPU-based deep learning
+
+    +     - Google Distbelief, Dean et al. 2012
+
+    +       - Scale up to thousands of CPU machines and 16000 CPU cores
+
+    +     - SSPTable, Ho et al., 2013
+
+    +       - Stale-synchronous parallel consistency model
+
+    +     - Microsoft Adam, Chilimbi et al. 2014
+
+    +       - 63 machines, state-of-art results on ImageNet 22K
+
+    +     - Bosen, Wei et al. 2015
+
+    +       - Managed communication'
+  merge: -1
+  img_proc: true
+- pgno: 269
+  md: '# Parameter Server on GPUs
+
+
+    +   - Directly applying parameter server for GPU-based distributed deep learning
+    will underperform (as will show later).
+
+    +     - GPU is too fast
+
+    +     - Ethernet bandwidth is limited, and has latency
+
+    +   - For example
+
+    +     - AlexNet: 61.5M float parameters, 0.25s/iteration on Geforce Titan X (batchsize
+    = 256)
+
+    +       - Gradient generation rate: 240M float/(s*GPU)
+
+    +     - Parallelize it over 8 machines each w/ one GPU using PS.
+
+    +     - To ensure the computation not blocked on GPU (i.e. linear speed-up with
+    additional nodes)
+
+    +       - As a worker: send 240M floats/s and pull back 240M floats/s (at least)
+
+    +       - As a server: receive 240M * 8 floats/s and send back 240M * 8/s (at
+    least)'
+  merge: -1
+  img_proc: true
+- pgno: 270
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 271
+  md: '# Parameter Server on GPUs
+
+
+    The problem is more severe than described above
+
+
+    +   - We only use 8 nodes (which is small). How about 32,128, or even 256?
+
+    +   - We haven’t considered other issues (which might be also troublesome), e.g.
+
+    +     - Memory copy between DRAM and GPU will have a non-trivial cost
+
+    +     - The Ethernet might be shared with other tasks, i.e. available bandwidth
+    is even less.
+
+    +     - Burst communication happens very often on GPUs (which will explain later).'
+  merge: -1
+  img_proc: true
+- pgno: 272
+  md: '# Address the Communication Bottleneck
+
+
+    +   - A simple fact:
+
+    +     - Communication time may be reduced, but cannot be eliminated (of course)
+
+    +   - Therefore, **possible** ideas to address the communication bottleneck
+
+    +     - Hide the communication time by overlapping it with the computation time
+
+    +     - Reduce the size of messages needed to be communications'
+  merge: -1
+  img_proc: true
+- pgno: 273
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 274
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 275
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 276
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 277
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 278
+  md: '# WFBP: Wait-free backpropagation
+
+
+    +   - Idea: overlap computation and communication by utilizing concurrency
+
+    +   - Communication overhead is hidden under computation
+
+    +   - Results: more computations in unit time
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_278_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 279
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 280
+  md: '# WFBP: Distributed Wait-free backpropagation
+
+
+    +   - Observation: Why DWBP would be effective
+
+    +     - More statistics of modern CNNs
+
+
+    Params/FLOP distribution of modern CNNs
+
+
+    | Parameters | CONV Layers (#/%) | FC Layers (#/%) |
+
+    |---|---|---|
+
+    | AlexNet | 2.3M / 3.75 | 59M / 96.25 |
+
+    | VGG-16 | 7.15M / 5.58 | 121.1M / 94.42 |
+
+    | FLOPs | CONV Layers (#/%) | FC Layers (#/%) |
+
+    | AlexNet | 1,352M / 92.0 | 117M / 8.0 |
+
+    | VGG-16 | 10,937M / 91.3 | 121.1M / 8.7 |
+
+
+    +   - 90% computation happens at bottom layers
+
+    +   - 90% communication happens at top layers
+
+    +   - WFBP overlaps 90% and 90%'
+  merge: -1
+  img_proc: true
+- pgno: 281
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 282
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 283
+  md: '# Introducing Sufficient Factor Broadcasting
+
+
+    +   - Matrix-parametrized models
+
+
+    # Multiclass Logistic Regression
+
+
+    Feature dim.
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_283_0.png)
+
+
+    #classes
+
+
+    # Distance Metric Learning
+
+
+    Feature dim.
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_283_1.png)
+
+
+    Latent dim.
+
+
+    # Sparse Coding
+
+
+    Feature dim.
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_283_2.png)
+
+
+    Dictionary size
+
+
+    # Neural Network
+
+
+    #neurons in layer l − 1
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_283_3.png)
+
+
+    #neurons in layer l'
+  merge: -1
+  img_proc: true
+- pgno: 284
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 285
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 286
+  md: '# Sufficient Factor Broadcasting:
+
+    P2P Topology + SF Updates
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_286_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 287
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 288
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 289
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 290
+  md: '# Convergence Guarantee
+
+
+    +   - Assumptions
+
+    +     - Bridging model
+
+    +       - Staleness Synchronous Parallel (SSP) with staleness parameter s
+
+    +       - Bulk Synchronous Parallel is a special case of SSP when s = 0
+
+    +     - Communication methods
+
+    +       - Partial broadcast (PB): sending messages to a subset of Q (Q < P − 1)
+    machines
+
+    +       - Full broadcast is a special case of PB when Q = P − 1
+
+    +     - Assumption 1. (1) For all j, f_j is continuously differentiable and F
+    is bounded from below; (2) ∇F, ∇F_p are Lipschitz continuous with constants L_F
+    and L_p, respectively, and let L = Σ_{p=1}^P L_p; (3) There exists G, σ² such
+    that for all p and c, we have (almost surely) ||U_p(W_p^c, I_p^c)|| ≤ Gη and 𝔼||
+    |S_p| Σ_{j∈I_p} ∇f_j(W) − ∇F_p(W) ||_2² ≤ σ².'
+  merge: -1
+  img_proc: true
+- pgno: 291
+  md: '# Convergence Guarantee
+
+
+    # Results
+
+
+    Theorem 1. Let Assumption 1 hold, and let {W_p^c}, p = 1, ..., P, {W^c} be the
+    local sequences and the auxiliary sequence, respectively.
+
+
+    Under full broadcasting (i.e., Q = P - 1) and set the learning rate η := η_c =
+    O(√(1/(Lσ² P s_c))), we have
+
+
+    +   - lim inf_{c→∞} E‖∇F(W^c)‖ = 0, hence there exists a subsequence of ∇F(W^c)
+    that almost surely vanishes;
+
+    +   - lim_{c→∞} max_p ‖W^c - W_p^c‖ = 0, i.e., the maximal disagreement between
+    all local sequences and the auxiliary sequence converges to 0 (almost surely);
+
+    +   - There exists a common subsequence of {W_p^c} and {W^c} that converges almost
+    surely to a stationary point of F, with the rate min_{c≤C} E‖∑_{p=1}^P ∇F_p(W_p^c)‖₂²
+    ≤ O(√(Lσ² P s / C))
+
+
+    Under partial broadcasting (i.e., Q < P - 1) and set a constant learning rate
+    η = 1/(C L G(P - Q)), where C is the total number of iterations. Then we have
+
+
+    min_{c≤C} E[‖∑_{p=1}^P ∇F_p(W_p^c)‖₂²] ≤ O( L G(P - Q) + P(s G + σ²)/(C G(P -
+    Q)) ).
+
+
+    Hence, the algorithm converges to a O(L G(P - Q)) neighbourhood if C → ∞.'
+  merge: -1
+  img_proc: true
+- pgno: 292
+  md: '# Convergence Guarantee
+
+
+    +   - Take-home message:
+
+    +     - Under full broadcasting, given a properly-chosen learning rate, all local
+    worker parameters $W_p^c$ eventually converge to stationary points (i.e. local
+    minima) of the objective function, despite the fact that SV transmission can be
+    delayed by up to $s$ iterations.
+
+    +     - Under partial broadcasting, the algorithm converges to a $O(LG(P - Q))$
+    neighbourhood if $C \to \infty$.'
+  merge: -1
+  img_proc: true
+- pgno: 293
+  md: '# Parameter Storage and Communication Paradigms
+
+
+    # Centralized Storage
+
+
+    # Decentralized Storage
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_293_0.png)
+
+
+    +   - **Centralized:** send parameter $W$ itself from server to worker
+
+    +     - Advantage: allows compact comms topology, e.g. bipartite
+
+    +   - **Decentralized:** always send changes $\Delta W$ between workers
+
+    +     - Advantage: more robust, homogeneous code, low communication (?)'
+  merge: -1
+  img_proc: true
+- pgno: 294
+  md: '# Topologies:
+
+    Master-Slave versus P2P?
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_294_0.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_294_1.png)
+
+
+    # Master-slave
+
+
+    +   - Used with **centralized storage** paradigm
+
+    +   - **Disadvantage:** need to code/manage clients and servers separately
+
+    +   - **Advantage:** bipartite topology is comms-efficient
+
+    +   - Popular for Parameter Servers: Yahoo LDA, Google DistBelief, Petuum PS,
+    Project Adam, Li&Smola PS, ...
+
+
+    # P2P
+
+
+    +   - Used with **decentralized storage**
+
+    +   - **Disadvantage (?)**: high comms volume for large # of workers
+
+    +   - **Advantage:** same code for all workers; no single point of failure, high
+    elasticity to resource adjustment
+
+    +   - Less well-explored due to perception of high communication overhead?'
+  merge: -1
+  img_proc: true
+- pgno: 295
+  md: '# Hybrid Updates: PS + SFB
+
+
+    +   - Hybrid communications:
+
+    +     Parameter Server +
+
+    +     Sufficient Factor
+
+    +     Broadcasting
+
+    +     - Parameter Server: Master-Slave topology
+
+    +     - Sufficient factor broadcasting: P2P topology
+
+    +   - For problems with a mix of large and small matrices,
+
+    +     - Send small matrices via PS
+
+    +     - Send large matrices via SFB
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_295_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 296
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 297
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 298
+  md: '# Hybrid Communication
+
+
+    +   - Idea
+
+    +     - Sync FC layers using SFB
+
+    +     - Sync Conv layer using PS
+
+    +   - Effectiveness
+
+    +     - It directly reduces the size of messages in many situations
+
+    +   - Is SFB always optimal?
+
+    +     - No, its communication load increases quadratically
+
+    +     - The right strategy: choose PS whenever it results in less communication
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_298_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 299
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 300
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_300_0.png)
+
+
+    # Hybrid Communication
+
+
+    +   - How to choose? Where is the threshold?
+
+    +   - Determine the best strategy depending on
+
+    +     - Layer type: CONV or FC?
+
+    +     - Layer size
+
+    +     - Batch size
+
+    +     - # of Cluster nodes
+
+
+    | Method | Server | Worker | Server & Worker |
+
+    |---|---|---|---|
+
+    | PS | $2P_1 MN / P_2$ | $2MN$ | $2MN(P_1 + P_2 - 2)/P_2$ |
+
+    | SFB | N/A | $2K(P_1 - 1)(M + N)$ | N/A |
+
+    | Adam (max) | $P_1 MN + P_1 K(M + N)$ | $K(M + N) + MN$ | $(P_1 - 1)(MN + KM
+    + KN)$ |
+
+
+    Table 1: Estimated communication cost of PS, SFB and Adam for synchrnizing the
+    parameters of a M × N FC layer on a cluster with P₁ workers and P₂ servers, when
+    batchsize is K.'
+  merge: -1
+  img_proc: true
+- pgno: 301
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 302
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 303
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 304
+  md: '# Hybrid Communication
+
+
+    +   - Discussion: Utilizing SFs is not a new idea, actually
+
+    +   - Microsoft Adam uses the third strategy (c)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_304_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 305
+  md: '# Hybrid Communication
+
+
+    +   - Adam’s strategy leads to communication bottleneck
+
+    +     - Pushing SFs to server is fine
+
+    +     - Pulling full matrices back will create a bottleneck on the server node.
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_305_0.png)
+
+
+    Figure 10: Averaged communication load when training VGG19 using TF-WFBP, Adam
+    and Poseidon with TensorFlow engine. Each bar represents the network traffic on
+    a node.
+
+
+    +   - Hybrid communication yields communication load balancing
+
+    +     - Which is important to address the problem of burst communication.'
+  merge: -1
+  img_proc: true
+- pgno: 306
+  md: '# Introducing Poseidon
+
+
+    +   - Poseidon: An efficient communication architecture
+
+    +   - A distributed platform to amplify existing DL toolkits
+
+
+    toolkits
+
+
+    platform
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_306_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 307
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 308
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 309
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 310
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 311
+  md: '# Using Poseidon
+
+
+    +   - Poseidon: An efficient communication architecture
+
+    +   - Preserve the programming interface for any high-level toolkits
+
+    +   - i.e. distribute the DL program **without changing any line of application
+    code**
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_311_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 312
+  md: '# Outline
+
+
+    +   - Overview: Distributed Deep Learning on GPUs
+
+    +   - Challenges 1: Addressing the communication bottleneck
+
+    +   - Challenges 2: Handling the limited GPU memory'
+  merge: -1
+  img_proc: true
+- pgno: 313
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 314
+  md: '# A Machine w/o GPU
+
+
+    CPU cores
+
+
+    Network
+
+
+    NIC
+
+
+    Local storage
+
+
+    DRAM
+
+    (CPU memory)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_314_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 315
+  md: '# A Machine w/ GPU
+
+
+    CPU cores
+
+
+    Network
+
+
+    NIC
+
+
+    Local
+
+    storage
+
+
+    DRAM
+
+    (CPU memory)
+
+
+    Small GPU memory
+
+    Expensive to copy between GPU/CPU mem
+
+
+    GPU device
+
+
+    GPU cores
+
+
+    GPU
+
+    memory
+
+    (a few GB)'
+  merge: -1
+  img_proc: true
+- pgno: 316
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 317
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 318
+  md: '# Numbers
+
+
+    Max available GPU memory: 12G
+
+
+    Training batch
+
+
+    parameters
+
+
+    GPU memory
+
+
+    Intermediate states
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_318_0.png)
+
+
+    | Network | Batch size | Input size | Parameters + grads | Intermediate states
+    |
+
+    |---|---|---|---|---|
+
+    | AlexNet | 256 | 150MB | <500M | 4.5G |
+
+    | GoogLeNet | 64 | 19MB | <40M | 10G |
+
+    | VGG19 | 16 | 10MB | <1.2G | 10.8G |'
+  merge: -1
+  img_proc: true
+- pgno: 319
+  md: '# Why Memory is an Issue?
+
+
+    +   - Intermediate states occupy 90% of the GPU memory
+
+    +   - Intermediate states is proportional to input batch size
+
+
+    +   - However,
+
+    +     - If you want high throughput, you must have large batch size (because of
+    the SIMD nature of GPUs)
+
+    +     - If you have large batch size, your GPU will be occupied by intermediate
+    states, which thereby limits your model size/depth'
+  merge: -1
+  img_proc: true
+- pgno: 320
+  md: '# Saving Memory: A Simple Trick
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_320_0.png)
+
+
+    +   - Basic idea
+
+    +     - The fact: intermediate states are proportional to the batch size K
+
+    +     - Idea: achieve large batch size by accumulating gradients generated by
+    smaller batch sizes which are affordable in the GPU memory
+
+    +   - Solution:
+
+    +     - Parition K into M parts, every part has K/M samples
+
+    +     - For iter = 1:M
+
+    +       - Train with mini-batchsize K/M
+
+    +       - Accumulate the gradient on GPU w/o updating model parameters
+
+    +     - Update the model parameter all together when all M parts finished
+
+    +   - Drawbacks
+
+    +     - What if the GPU still cannot afford the intermediate states even if K=1?
+
+    +     - Small batch size usually leads to insufficient use of GPUs’ computational
+    capability'
+  merge: -1
+  img_proc: true
+- pgno: 321
+  md: '# Memory Management using CPU Memory
+
+
+    +   - Core ideas
+
+    +     - If the memory is limited, trade something for memory
+
+    +       - Trade extra computations for memory
+
+    +       - Trade other cost (e.g. memory exchange) for more available memory
+
+    +     - If the memory is limited, then get more
+
+    +       - model parallel
+
+    +       - CPU memory'
+  merge: -1
+  img_proc: true
+- pgno: 322
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 323
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 324
+  md: '# Memory Management using CPU Memory
+
+
+    Class probabilities
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_324_0.png)
+
+
+    Training images
+
+
+    +   - For each iteration (mini-batch)
+
+    +   - A forward pass
+
+    +   - Then a backward pass
+
+    +   - Each time only data of two layers are used'
+  merge: -1
+  img_proc: true
+- pgno: 325
+  md: '# Memory Management using CPU Memory
+
+
+    Class probabilities
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_325_0.png)
+
+
+    Training images
+
+
+    +   - For each iteration (mini-batch)
+
+    +     - A forward pass
+
+    +     - Then a backward pass
+
+
+    +   - Each time only data of two layers are used'
+  merge: -1
+  img_proc: true
+- pgno: 326
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 327
+  md: '# Memory Management using CPU Memory
+
+
+    Class probabilities
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_327_0.png)
+
+
+    Training images
+
+
+    +   - For each iteration (mini-batch)
+
+    +     - A forward pass
+
+    +     - Then a backward pass
+
+    +   - Each time only data of two layers are used
+
+
+    The idea
+
+
+    +   - Use GPU mem as a cache to keep actively used data
+
+    +   - Store the remaining in CPU memory'
+  merge: -1
+  img_proc: true
+- pgno: 328
+  md: '# Memory Management using CPU Memory
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_328_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 329
+  md: '# Memory Management using CPU Memory
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_329_0.png)
+
+
+    Cui et al., 2016'
+  merge: -1
+  img_proc: true
+- pgno: 330
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_330_0.png)
+
+
+    # Memory Management using CPU Memory
+
+
+    +   - Controller
+
+    +     - The fact: the memory access order is deterministic and can be exactly
+    known by a single forward and backward pass
+
+    +     - Idea:
+
+    +       - Obtain the memory access order by a virtual iteration
+
+    +       - Pre-fetch memory blocks from CPU to GPU
+
+    +       - Overlap memory swap overhead with computation'
+  merge: -1
+  img_proc: true
+- pgno: 331
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 332
+  md: '# Throughput vs. memory budget
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_332_0.png)
+
+
+    All data in GPU memory
+
+
+    Only buffer pool in GPU memory
+
+    Twice the peak size for double buffering
+
+
+    +   - Only 27% reduction in throughput with 35% memory
+
+    +   - Can do 3x bigger problems with little overhead'
+  merge: -1
+  img_proc: true
+- pgno: 333
+  md: '# Larger models
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_333_0.png)
+
+
+    +   - Models up to 20 GB'
+  merge: -1
+  img_proc: true
+- pgno: 334
+  md: '# Summary
+
+
+    +   - Deep learning as dataflow graphs
+
+    +   - A lot of auto-differentiation libraries have been developed to train NNs
+
+    +     - Different adoption, advantages, disadvantages
+
+    +     - DyNet is a new framework for next-wave dynamic NNs
+
+    +   - Difficulties arise when scaling up DL using distributed GPUs
+
+    +     - Communication bottleneck
+
+    +     - Memory limit
+
+    +   - Poseidon as a platform to support and amplify different kinds of DL toolboxes'
+  merge: -1
+  img_proc: true
+- pgno: 335
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 336
+  md: '# # Sys-Alg Co-design Inside!
+
+
+    Data
+
+
+    Task
+
+
+    Our “VML”
+
+    Software Layer
+
+
+    Model
+
+
+    Algorithm
+
+
+    Implementation
+
+
+    System
+
+
+    Platform
+
+    and Hardware
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_336_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 337
+  md: '![](img/cb490ed30bca4eda5fbba81c52a2c173_337_0.png)
+
+
+    # # Better Performance
+
+
+    +   - **Fast and Real-Time**
+
+    +     - Orders of magnitude faster than Spark and TensorFlow
+
+    +     - As fast as hand-crafted systems
+
+
+    +   - **Any Scale**
+
+    +     - Perfect straight-line speedup with more computing devices
+
+    +     - Spark, TensorFlow can slow down with more devices
+
+
+    +   - **Low Resource**
+
+    +     - **Turning a regular cluster into a super computer:**
+
+    +       - Achieve AI results with much more data, but using fewer computing devices
+
+    +       - Google brain uses ~1000 machines whereas Petuum uses ~10 for the same
+    job
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_337_1.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_337_2.png)
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_337_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 338
+  md: '# A Petuum Vision
+
+
+    Data
+
+
+    Task
+
+
+    Model
+
+
+    Algorithm
+
+
+    Implementation
+
+
+    System
+
+
+    Platform
+
+    and Hardware
+
+
+    ![](img/cb490ed30bca4eda5fbba81c52a2c173_338_0.png)
+
+
+    +   - Omni-Source (Any Data)
+
+    +   - Omni-Lingual (Any Programming Language)
+
+    +   - Omni-Mount (Any Hardware)
+
+
+    +   - Network switches
+
+    +   - Infiniband
+
+
+    +   - Network attached storage
+
+    +   - Flash storage
+
+
+    +   - Server machines
+
+    +   - Desktops/Laptops
+
+    +   - ARM-powered devices
+
+    +   - Mobile devices
+
+
+    +   - RAM
+
+    +   - Flash
+
+    +   - SSD
+
+
+    +   - IoT device networks (e.g. Amazon EC2)
+
+
+    +   - Virtual machines'
+  merge: -1
+  img_proc: true
