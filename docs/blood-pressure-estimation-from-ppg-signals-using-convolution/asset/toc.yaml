@@ -1,0 +1,17 @@
+level_changes:
+- line: 7
+  before: 3
+  after: 2
+text_changes:
+- line: 7
+  before: C. 广义空间调制
+  after: II. 广义空间调制
+- line: 158
+  before: 'APPENDIX B  '
+  after: APPENDIX B
+- line: 159
+  before: 'PROOF OF THEOREM 2  '
+  after: PROOF OF THEOREM 2
+- line: 177
+  before: 'REFERENCES  '
+  after: REFERENCES
