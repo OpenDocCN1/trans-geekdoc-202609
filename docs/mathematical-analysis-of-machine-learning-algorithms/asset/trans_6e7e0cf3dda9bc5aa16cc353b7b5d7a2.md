@@ -1,0 +1,67 @@
+
+- Lecué, Guillaume, and Rigollet, Philippe. 2014. Q-聚合的最优学习. *统计学年刊*, **42**(1), 211–224.
+- Ledoux, Michel. 1997. 关于乘积测度的Talagrand偏差不等式. *ESAIM：概率与统计*, **1**, 63–87.
+- Ledoux, Michel, and Talagrand, Michel. 2013. *巴拿赫空间中的概率：等周性与过程*. 施普林格科学与商业媒体.
+- Leshno, Moshe, Lin, Vladimir Ya, Pinkus, Allan, and Schocken, Shimon. 1993. 具有非多项式激活函数的多层前馈网络可以逼近任何函数. *神经网络*, **6**(6), 861–867.
+- Li, Jonathan, and Barron, Andrew. 1999. 混合密度估计. *神经信息处理系统进展*, 12. 麻省理工学院出版社. https://proceedings.neurips.cc/paper/1999/file/a0f3601dc682036423013a5d965db9aa-Paper.pdf
+- Li, Yuanzhi, and Liang, Yingyu. 2018. 在结构化数据上通过随机梯度下降学习过参数化神经网络. *神经信息处理系统进展*, 31. https://proceedings.neurips.cc/paper/2018/file/54fe976ba170c19ebae453679b362263-Paper.pdf
+- Li, Jian, Luo, Xuanyuan, and Qiao, Mingda. 2020. 关于非凸学习的噪声梯度方法的泛化误差界. *国际学习表征会议*. https://dblp.org/rec/conf/iclr/LiLQ20.html
+- Liang, Shiyu, and Srikant, Rayadurgam. 2017. 为什么深度神经网络用于函数逼近？*第五届国际学习表征会议，ICLR 2017，法国土伦，4月24-26日*.
+- Liang, Tengyuan, Rakhlin, Alexander, and Sridharan, Karthik. 2015. 平方损失学习：通过偏移Rademacher复杂度进行局部化. *第28届学习理论会议论文集*, 40, 1260–1285. https://proceedings.mlr.press/v40/Liang15.html
+- Littlestone, Nick. 1988. 当无关属性大量存在时快速学习：一种新的线性阈值算法. *机器学习*, **2**(4), 285–318.
+- Littlestone, Nick, and Warmuth, Manfred K. 1994. 加权多数算法. *信息与计算*, **108**(2), 212–261.
+- Lorentz, G. G. 1966. 度量熵与逼近. *美国数学学会通报*, **72**(6), 903–937.
+- Lu, Zhou, Pu, Hongming, Wang, Feicheng, Hu, Zhiqiang, and Wang, Liwei. 2017. 神经网络的表达能力：从宽度视角. *神经信息处理系统进展*, 30. 柯伦联合出版社. https://proceedings.neurips.cc/paper/2017/file/32cbf687880eb1674a07bf717761dd3a-Paper.pdf
+- Maillard, Odalric-Ambrym, Munos, Rémi, and Stoltz, Gilles. 2011. 具有Kullback-Leibler散度的多臂老虎机问题的有限时间分析. *第24届学习理论年会论文集*, 19, 497–514.
+- Mallat, Stéphane G., and Zhang, Zhifeng. 1993. 基于时频字典的匹配追踪. *IEEE信号处理汇刊*, **41**(12), 3397–3415.
+- Mallows, Colin L. 2000. 关于Cp的一些评论. *技术计量学*, **42**(1), 87–94.
+- Mammen, Enno, and Tsybakov, Alexandre B. 1999. 平滑判别分析. *统计学年刊*, **27**(6), 1808–1829.
+- Massart, Pascal. 2000. 关于经验过程的Talagrand集中不等式中的常数. *概率学年刊*, **28**(2), 863–884.
+- Matheron, Georges. 1965. *区域化变量及其估计：随机函数理论在自然科学中的应用*. 马松出版社.
+- McAllester, David. 1999. PAC-贝叶斯模型平均. *国际计算学习理论会议*. ACM, pp. 164–170. https://dl.acm.org/doi/proceedings/10.1145/307400
+- McCarthy, John, Minsky, Marvin L., Rochester, Nathaniel, and Shannon, Claude E. 2006. 关于人工智能的达特茅斯夏季研究项目提案，1955年8月31日. *AI杂志*, **27**(4), 12–14.
+- McCulloch, Warren S., and Pitts, Walter. 1943. 神经活动中固有思想的逻辑演算. *数学生物物理学通报*, 5(4), 115–133.
+- McDiarmid, Colin. 1989. 关于有界差分方法. *组合数学综述*, 141(1), 148–188.
+- Mei, Song, and Montanari, Andrea. 2022. 随机特征回归的泛化误差：精确渐近性与双下降曲线. *纯粹与应用数学通讯*, 75(4), 667–766.
+- Mei, Song, Montanari, Andrea, and Nguyen, Phan-Minh. 2018. 两层神经网络景观的平均场视角. *美国国家科学院院刊*, 115(33), E7665–E7671.
+- Mei, Song, Misiakiewicz, Theodor, and Montanari, Andrea. 2019. 两层神经网络的平均场理论：无维度界与核极限. *第32届学习理论会议论文集*, 99, 2388–2464. https://proceedings.mlr.press/v99/mei19a.html
+- Meir, Ron, and Zhang, Tong. 2003. 贝叶斯混合算法的泛化误差界. *机器学习研究杂志*, 4(10月), 839–860.
+- Mercer, James. 1909. 正负型函数及其与积分方程理论的联系. *伦敦皇家学会哲学汇刊，A辑*, 209, 415–446.
+- Micchelli, Charles A., and Pontil, Massimiliano. 2005. 关于学习向量值函数. *神经计算*, 17(1), 177–204.
+- Micchelli, Charles A., Xu, Yuesheng, and Zhang, Haizhang. 2006. 通用核. *机器学习研究杂志*, 7(12), 2651–2667.
+- Minsky, Marvin, and Papert, Seymour. 1969. *感知机：计算几何导论*. 麻省理工学院出版社.
+- Mou, Wenlong, Wang, Liwei, Zhai, Xiyu, and Zheng, Kai. 2018. 非凸学习下SGLD的泛化界：两种理论视角. *第31届学习理论会议论文集*, 75, PMLR, pp. 605–638.
+- Nakkiran, Preetum, Kaplun, Gal, Bansal, Yamini et al. 2021. 深度双下降：更大的模型和更多的数据何时有害. *统计力学杂志：理论与实验*, 2021(12), 124003.
+- Natarajan, Balas Kausik. 1995. 线性系统的稀疏近似解. *SIAM计算杂志*, 24(2), 227–234.
+- Neal, Radford. 1995. 神经网络的贝叶斯学习. 博士论文，多伦多大学计算机科学系.
+- Neal, Radford M. 1999. 使用高斯过程先验的回归与分类. *贝叶斯统计6*. 牛津大学出版社, pp. 475–501.
+- Nesterov, Yurii. 2014. *凸优化入门讲座：基础教程*, 应用优化丛书第87卷. 施普林格出版社.
+- Nickl, Richard, and Pötscher, Benedikt M. 2007. Besov型和Sobolev型函数类的括弧度量熵率与经验中心极限定理. *理论概率杂志*, 20(2), 177–199.
+- Novikoff, Albert B. 1963. 关于感知机的收敛性证明. 技术报告，斯坦福研究所，加利福尼亚州门洛帕克.
+- Park, Jooyoung, and Sandberg, Irwin W. 1991. 使用径向基函数网络的通用逼近. *神经计算*, 3(2), 246–257.
+- Pavliotis, Grigoris A. 2014. *随机过程及其应用：扩散过程、福克-普朗克方程与朗之万方程*, 应用数学教材第60卷. 施普林格出版社.
+- Pisier, Gilles. 1980–1981. 关于B. Maurey未发表结果的评论. *泛函分析研讨班*, 第1卷.
+- Pisier, Gilles. 1999. *凸体的体积与巴拿赫空间几何*, 剑桥数学专著第94卷. 剑桥大学出版社.
+- Pollard, David. 1984. *随机过程的收敛性*. 施普林格出版社.
+- Raftery, Adrian E. 1995. 社会研究中的贝叶斯模型选择. *社会学方法论*, 25, 111–163.
+- Raftery, Adrian E., Madigan, David, and Hoeting, Jennifer A. 1997. 线性回归模型的贝叶斯模型平均. *美国统计协会杂志*, 92(437), 179–191.
+- Rahimi, Ali, and Recht, Benjamin. 2007. 大规模核机器的随机特征. *神经信息处理系统进展*, 20. https://proceedings.neurips.cc/paper_files/paper/2007/hash/013a006f03dbc5392effe8b8f18fda755-Abstract.html
+- Rahimi, Ali, and Recht, Benjamin. 2009. 随机厨房水槽的加权和：在学习中用随机化替代最小化. *神经信息处理系统进展*, 21. 柯伦联合出版社. https://proceedings.neurips.cc/paper/2007/file/013a006f03dbc5392effe8b8f18fda755-Paper.pdf
+- Rakhlin, Alexander, Shamir, Ohad, and Sridharan, Karthik. 2012. 使梯度下降对强凸随机优化达到最优. *国际机器学习会议*. https://dl.acm.org/doi/proceedings/10.5555/3042573
+- Rao, C. Radhakrishna. 1992. 信息与统计参数估计中可达到的精度. *统计学的突破*. 施普林格出版社, pp. 235–247.
+- Rasmussen, Carl Edward. 2003. 机器学习中的高斯过程. *机器学习暑期学校*. 施普林格出版社, pp. 63–71.
+- Ravikumar, Pradeep, Lafferty, John, Liu, Han, and Wasserman, Larry. 2009. 稀疏可加模型. *皇家统计学会杂志：B辑（统计方法）*, 71(5), 1009–1030.
+- Rigollet, Philippe, and Tsybakov, Alexander B. 2007. 密度估计器的线性与凸聚合. *统计的数学方法*, 16(3), 260–280.
+- Rissanen, Jorma. 1978. 用最短数据描述建模. *自动化学报*, 14(5), 465–471.
+- Robbins, Herbert. 1952. 序贯实验设计的若干方面. *美国数学学会通报*, 58(5), 527–535.
+- Robert, Christian P. 2007. *贝叶斯选择：从决策理论基础到计算实现*. 施普林格出版社.
+- Rockafellar, Ralph Tyrell. 2015. *凸分析*. 普林斯顿大学出版社.
+- Rosenblatt, Frank. 1957. 感知机：一个感知与识别自动机项目Para. 康奈尔航空实验室.
+- Rosenblatt, Frank. 1962. *神经动力学原理：感知机与大脑机制理论*. 斯巴达出版社.
+- Rudelson, Mark, and Vershynin, Roman. 2010. 随机矩阵的非渐近理论：极端奇异值. *2010年国际数学家大会论文集（ICM 2010）（共4卷）第I卷：全体大会报告与典礼，第II-IV卷：特邀报告*. 世界科学出版社, pp. 1576–1602.
+- Rudin, Walter. 2017. *群上的傅里叶分析*. 多佛出版社.
+- Rumelhart, David E., Hinton, Geoffrey E., and Williams, Ronald J. 1986. 通过误差反向传播学习表示. *自然*, 323(6088), 533–536.
+- Russo, Daniel, and Van Roy, Benjamin. 2013. Eluder维与乐观探索的样本复杂度. *神经信息处理系统进展*, 26. 柯伦联合出版社. https://proceedings.neurips.cc/paper/2013/file/41bfd20a38bb1b0bec75acf0845530a7-Paper.pdf
+- Russo, Daniel, and Van Roy, Benjamin. 2016. 汤普森采样的信息论分析. *机器学习研究杂志*, 17(1), 2442–2471.
+- Russo, Daniel, and Zou, James. 2016. 使用信息论控制自适应数据分析中的偏差. *第19届国际人工智能与统计会议论文集*, 51, 1232–1240. https://proceedings.mlr.press/v51/russo16.html
+- Russo, Daniel, and Zou, James. 2019. 你的数据探索过拟合了多少？通过信息使用控制偏差. *IEEE信息论汇刊*, 66(1), 302–323.

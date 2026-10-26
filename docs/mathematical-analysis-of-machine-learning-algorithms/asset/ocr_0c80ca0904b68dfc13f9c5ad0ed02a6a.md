@@ -1,0 +1,13 @@
+# Definition 18.13 (Bellman Completeness)
+
+A candidate value function class $\mathcal{F}$ is complete with respect to another candidate value function class $\mathcal{G}$ if for any $h \in [H]$, $f \in \mathcal{F}$, there exists $g \in \mathcal{G}$ so that for all $h \in [H]$, $$ g^h(x^h,a^h)=(\mathcal{T}^h f)(x^h,a^h)=\mathbb{E}_{r_h,x^{h+1}|x^h,a^h}\big[r^h+f^{h+1}(x^{h+1})\big]. $$ We say $\mathcal{F}$ is complete if $\mathcal{F}$ is complete with respect to itself.
+
+(18.2) to obtain the term $\mathcal{E}^h(f,x^h,a^h)^2$. This requires an additional assumption referred to as Bellman completeness (or simply completeness). Note that if $\mathcal{F}$ is complete with respect to $\mathcal{G}$, then we may use the solution of $$ \min_{g^h\in\mathcal{G}^h}\sum_{s=1}^t\big(g^h(x_s^h,a_s^h)-r_s^h-f^{h+1}(x_s^{h+1})\big)^2 $$ to estimate $(\mathcal{T}^h f)(x^h,a^h)$, which can be used to cancel the variance term in (18.2). This motivates the following loss function $$ L^h(f,g,x^h,a^h,r^h,x^{h+1})=[\big(f^h(x^h,a^h)-r^h-f^{h+1}(x^{h+1})\big)^2 -\big(g^h(x^h,a^h)-r^h-f^{h+1}(x^{h+1})\big)^2] . \tag{18.3} $$
+
+The following result is a counterpart of Theorem 13.15.
+
+# Theorem 18.14
+
+Assume that assumption 18.12 holds, $\mathcal{F}$ is complete with respect to $\mathcal{G}$, and $g^h(\cdot)\in[0,1]$ for all $g\in\mathcal{G}$. Consider (18.3), and let $$ \mathcal{F}_t=\Big\{f\in\mathcal{F}:\sup_{g\in\mathcal{G}}\sum_{h=1}^H\sum_{s=1}^t L^h\big(f,g,x_s^h,a_s^h,r_s^h,x_s^{h+1}\big)\le\beta_t^2\Big\}, $$ where $$ \beta_t^2\ge4\epsilon t(4+\epsilon)H+2\ln\big(16M(\epsilon,\mathcal{F},\|\cdot\|_\infty)^2M(\epsilon,\mathcal{G},\|\cdot\|_\infty)/\delta^2\big), $$ with $M(\cdot)$ denotes the $\|\cdot\|_\infty$ packing number, and $\|f\|_\infty=\sup_{h,x,a}|f^h(x,a)|$. Then with probability at least $1-\delta$, for all $t\le n$, $Q_*\in\mathcal{F}_t$ and for all $f\in\mathcal{F}_t$, $$ \sum_{s=1}^t\sum_{h=1}^H\mathcal{E}^h(f,x_s^h,a_s^h)^2\le4\beta_t^2. $$
+
+Proof Let $\mathcal{F}_\epsilon$ be an $\epsilon\|\cdot\|_\infty$ packing subset of $\mathcal{F}$ of size $M_1$, and let $\mathcal{G}_\epsilon$ be an $\epsilon\|\cdot\|_\infty$ packing subset of $\mathcal{G}$ of size $M_2$. For all $f\in\mathcal{F}$ and $g\in\mathcal{G}$ (or $g\in\mathcal{F}$), we introduce the simplified notations $$ \epsilon_s^h(f)=r_s^h+f_s^{h+1}(x_s^{h+1})-(\mathcal{T}^h f)(x_s^h,a_s^h), $$ $$ \Delta_s^h(f,g)=\big((\mathcal{T}^h f)(x_s^h,a_s^h)-g^h(x_s^h,a_s^h)\big). $$ We have the following sub-Gaussian inequality (see Lemma 2.15) for any fixed $f_\epsilon\in\mathcal{F}_\epsilon$, $h\in[H]$, and $\rho\in\mathbb{R}$: $$ \ln\mathbb{E}_{r^h,x^{h+1}|x_s^h,a_s^h}\exp(\rho\epsilon_s^h(f_\epsilon))\le\frac{\rho^2}{8}. $$

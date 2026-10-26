@@ -1,0 +1,2 @@
++   14.4 Assume that we run SGD for a strongly convex problem more than once over the data with a learning rate schedule ηₜ = 1/(λt). Use Theorem 14.11 and Theorem 7.14 to obtain an oracle inequality.
++   14.5 Use Theorem 14.16 to obtain an upper bound for the least squares problem in Section 12.4, and compare the result to that of Proposition 12.21 and Corollary 12.20.
