@@ -1,0 +1,15 @@
+Deep learning also consists of a number of architectures and methods like CNNs, GANs (generative adversarial networks), and recurrent neural networks. From processing sequential data and generating new data instances to infer the spatial embeddedness present in a picture, each architectural design has a particular use.
+
+Lastly, the level of depth showed points such as that deep learning requires large datasets and large amounts of computing power, often using GPUs to speed up the training and inference process. The increase in computational capability and the ability of deep learning models to learn features directly from raw data have made deep learning one of the primary frameworks used in current AI, paving the way for speech and voice recognition technologies, natural language processing, robotics, among others.
+
+# 2.2 Historical development and milestones
+
+In this chapter, we outline the three main milestones in the development of deep learning that have significantly impacted AI. In the 1940s and 1950s, while McCulloch and Pitts developed the first mathematical description of a neural network, the principle of artificial neural networks, which was the basis for deep learning, was in place. This early model helped to lay the basis for other more sophisticated improvements of neural networks.
+
+The backpropagation algorithm was introduced by Ronald Williams, David Rumelhart, and Geoffrey Hinton way back in the 1980s. This approach enabled the training of multilayer networks for computing the gradients for neural networks, which regained interest in neural networks. Although there was potential, the absence of big labeled datasets and the fact that computer resources would limit the application of neural networks notwithstanding.
+
+Deep learning experienced a resurgence in the mid-2000s due to advancements in computer power and technology. The work done by Geoffrey Hinton and his team in 2006 on deep belief networks initiated a new phase in the field. By training DBNs, it was demonstrated that higher order neural networks could be trained quickly without supervision, thus opening the door for more complicated and powerful models.
+
+The transition of deep learning from text to images happened in 2012 with an architecture called AlexNet by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton. AlexNet surpassed other approaches in the ILSVRC, analyzing the increase in picture categorization precision. This achievement showed the potential of deep learning, thus calling for its application and more research on the same.
+
+After AlexNet, several vital improvements concerning deep learning practices can be identified. In 2014, the authors of VGGNet at the Visual Geometry Group, University of Oxford, gave a glimpse of deeper networks designed with a very small convolutional filter size. In 2014, there was the inception of GoogLeNet (Inception), which focused on inception modules to enhance the effectiveness and efficiency of the architecture.

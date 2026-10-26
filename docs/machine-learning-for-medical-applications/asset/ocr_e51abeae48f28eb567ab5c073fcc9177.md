@@ -1,0 +1,7 @@
+![](bbox=[0.105, 0.098, 0.588, 0.54])
+
+**Figure 13:** Reinforcement learning for balancing precision and recall in anomaly detection.
+
+of recall and vice versa. Decision-based reinforcement frameworks can be applied, where ratios are linked to penalties for false positives and negatives. For example, in cybersecurity anomaly detection, a failure to identify an intrusion (false negative) was worse than identifying benign activity as malicious (false positive); thus we should set higher penalty for recall errors. How the reward function should be shaped is described below to create a correspondence between learning pursuits of the RL agent and goals of the application.
+
+That’s why, of the strategies learned by the RL algorithm, dynamic thresholding can be regarded as one of the key ones in terms of controlling the relation between precision and recall. RL agents regard the decision thresholds as necessary for classifying anomalies from the incoming data stream since their policies can be updated for feedback. They make it possible to set the detection thresholds correspondingly, fine-tuning the model to variations of the distribution and anomalous patterns. Such flexibility guarantees increase in detection rate in various and dynamically changing surroundings, like industrial applications.

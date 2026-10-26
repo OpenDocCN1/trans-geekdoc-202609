@@ -1,0 +1,9 @@
+# 4.3 Nanofibers for targeted drug delivery
+
+By delivering therapeutic compounds precisely to sick tissues, targeted drug delivery systems reduce the amount of medication needed and minimize off-target effects, all the while increasing the efficacy and safety of the treatment. Because of their high surface-area-to-volume ratio, variable porosity, and capacity to encapsulate inside their structure, electrospun nanofibers have emerged as an ideal platform for such systems. By making use of these characteristics, nanofibers are designed to transport medications in a regulated way, improving the therapeutic results and streamlining patient treatment plans.
+
+![](bbox=[0.1, 0.32, 0.55, 0.68])
+
+Figure 5: Nanofibers for targeted drug delivery.
+
+To achieve precise drug release profiles and targeted delivery, specific design strategies must be incorporated into the fabrication of electrospun nanofibers. One such strategy involves the development of hierarchical core-shell nanofibers using coaxial electrospinning, wherein the outer shell layer is engineered to respond to external stimuli (such as pH, temperature, or enzymes), while the inner core securely encapsulates the therapeutic agents. This dual-layered structure enables controlled, site-specific drug release. Another functionalization approach involves the incorporation of targeting ligands such as peptides that selectively bind to receptors overexpressed on target cells. This targeting mechanism ensures that the drug accumulates predominantly at the desired site, thereby enhancing therapeutic efficacy while minimizing systemic side effects. These advanced structural and biochemical strategies for targeted drug delivery are illustrated in Figure 5, which highlights both the coaxial nanofiber architecture and ligand-based targeting approach.

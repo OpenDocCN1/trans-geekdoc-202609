@@ -1,0 +1,8 @@
+[18] Liu, W., Zhang, Y., Lyu, Y., Bosiakov, S., & Liu, Y. (2023). Inverse design of anisotropic bone scaffold based on machine learning and regenerative genetic algorithm. Frontiers in Bioengineering and Biotechnology, 11.
+[19] Pemmada, R., Gowtham, N. H., Xia, Y., Basu, B., & Thomas, V. (2023). ML and AI approaches for design of tissue scaffolds. Artificial Intelligence in Tissue and Organ Regeneration, 29–56.
+[20] Kim, J., McKee, J. A., Fontenot, J. J., & Jung, J. P. (2020). Engineering tissue fabrication with machine intelligence: Generating a blueprint for regeneration. Frontiers in Bioengineering and Biotechnology, 7, 443.
+[21] Suwardi, A., Wang, F., Xue, K., Han, M. Y., Teo, P., Wang, P., . . . & Loh, X. J. (2022). Machine learning-driven biomaterials evolution. Advanced Materials, 34(1), 2102703.
+[22] Kiratitanaporn, W., Guan, J., Berry, D. B., Lao, A., & Chen, S. (2023). Multimodal three-dimensional printing for micro-modulation of scaffold stiffness through machine learning. Tissue Engineering Part A.
+[23] Shin, J., Lee, Y., Li, Z., Hu, J., Park, S. S., & Kim, K. (2022). Optimized 3D bioprinting technology based on machine learning: A review of recent trends and advances. Micromachines, 13(3), 363.
+[24] Lee, J., Oh, S. J., An, S. H., Kim, W. D., & Kim, S. H. (2020). Machine learning-based design strategy for 3D printable bioink: Elastic modulus and yield stress determine printability. Biofabrication, 12(3), 035018.
+[25] Roldán, E., Reeves, N. D., Cooper, G., & Andrews, K. (2023). Towards the ideal vascular implant: Use of machine learning and statistical approaches to optimise manufacturing parameters. Frontiers in Physics, 11, 1112218.

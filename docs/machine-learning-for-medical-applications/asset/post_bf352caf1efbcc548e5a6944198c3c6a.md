@@ -1,0 +1,47 @@
+
+data processing is the development of new hardware, including dedicated processors and GPUs.
+
+## 6.5.3 Data integration and analysis in real time
+
+Real-time integration and analysis of multimodal data prove to have scalability issues when it comes to a large amount of data that is being generated continually and have to provide their input in real time. The preservation of MMI capability to integrate and analyze multimodal data in real-time functionality demand efficient data streaming and processing. Real-time data integration can, for instance, be dealt with by using techniques such as data stream processing and event-driven architecture. With these approaches, data can be processed and analyzed in real-time, while appropriate early recognition of anomalies is provided, together with preserving the integrative and scalability advantages of the systems.
+
+## 6.5.4 Interoperability and data standardization
+
+For implementing multimodal integration at scale across multiple applications, it is necessary to achieve interoperability at the data level and have a single data format standard, currently lacking in the field. The variations of data in terms of their format, structure, and meaning can pose integration challenges and limit the integration’s scale. Concerning this issue, standardized data format and implementation of interoperability frameworks are used. Similar to how HL7 is used for healthcare data, application integration by RDF for semantic web data is considered as a common data standard for interoperability. Middleware and data integration application should be deployed to ensure that there are no gaps within different formats of data so that data flow can take place without many hitches.
+
+Some of the challenges posed by scalability issues in multimodal data include: large amounts of data, computational costs, and real-time performances and compatibility. Solving these challenges call for the use of sophisticated approaches such as advanced storage system technologies, distributed computing platforms, real-time processing methodologies, and standardization of data. By applying these solutions and implementing new technologies, it is possible to control the scalability of data integration systems, as well as increase their capabilities to process multimodal data.
+
+- [5] Zhao, C., Ma, M., Zhong, Z., Zhang, S., Tan, Z., Xiong, X., . . . & Zhang, D. (2023, August). Robust multimodal failure detection for microservice systems. In Proceedings of the 29th ACM SIGKDD conference on knowledge discovery and data mining, (pp. 5639–5649).
+- [6] Raya, S., Orabi, M., Afyouni, I., & Al Aghbari, Z. (2024). Multi-modal data clustering using deep learning: A systematic review. Neurocomputing, 128348.
+- [7] Wu, P., Pan, C., Yan, Y., Pang, G., Wang, P., & Zhang, Y. (2024). Deep learning for video anomaly detection: A review. arXiv preprint arXiv:2409.05383.
+- [8] Duan, J., Xiong, J., Li, Y., & Ding, W. (2024). Deep learning based multimodal biomedical data fusion: An overview and comparative review. Information Fusion, 102536.
+- [9] Liu, P., Tao, Q., & Zhou, J. T. (2024). Evolving from single-modal to multi-modal facial DeepFake detection: A survey. arXiv preprint arXiv:2406.06965.
+- [10] Liu, P., Li, J., Wang, L., & He, G. (2022). Remote sensing data fusion with generative adversarial networks: State-of-the-art methods and future research directions. IEEE Geoscience and Remote Sensing Magazine, 10(2), 295–328.
+- [11] Fahim, M., & Sillitti, A. (2019). Anomaly detection, analysis and prediction techniques in IoT environment: A systematic literature review. IEEE Access, 7, 81664–81681.
+- [12] Kalamkar, S. (2023). Multimodal image fusion: A systematic review. Decision Analytics Journal, 100327.
+- [13] Martínez, H. P., & Yannakakis, G. N. (2014, November). Deep multimodal fusion: Combining discrete events and continuous signals. In Proceedings of the 16th international conference on multimodal interaction, (pp. 34–41).
+- [14] Pang, G., Shen, C., Cao, L., & Hengel, A. V. D. (2021). Deep learning for anomaly detection: A review. ACM Computing Surveys (CSUR), 54(2), 1–38.
+- [15] Czimmermann, T., Ciuti, G., Milazzo, M., Chiurazzi, M., Roccella, S., Oddo, C. M., & Dario, P. (2020). Visual-based defect detection and classification approaches for industrial applications – A survey. Sensors, 20(5), 1459.
+- [16] Chen, J., Seng, K. P., Smith, J., & Ang, L. M. (2024). Situation awareness in AI-based technologies and multimodal systems: Architectures, challenges and applications. IEEE Access.
+- [17] Boehm, K. M., Khosravi, P., Vanguri, R., Gao, J., & Shah, S. P. (2022). Harnessing multimodal data integration to advance precision oncology. Nature Reviews Cancer, 22(2), 114–126.
+- [18] Belle, A., Thiagarajan, R., Soroushmehr, S. R., Navidi, F., Beard, D. A., & Najarian, K. (2015). Big data analytics in healthcare. BioMed Research International, 2015(1), 370194.
+- [19] Habeeb, R. A. A., Nasaruddin, F., Gani, A., Hashem, I. A. T., Ahmed, E., & Imran, M. (2019). Real-time big data processing for anomaly detection: A survey. International Journal of Information Management, 45, 289–307.
+- [20] Malathi, K., Shruthi, S. N., Madhumitha, N., Sreelakshmi, S., Sathya, U., & Sangeetha, P. M. (2024). Medical data integration and interoperability through remote monitoring of healthcare devices. Journal of Wireless Mobile Networks, Ubiquitous Computing, and Dependable Applications (JoWUA), 15(2), 60–72.
+- [21] Lahat, D., Adali, T., & Jutten, C. (2015). Multimodal data fusion: An overview of methods, challenges, and prospects. Proceedings of the IEEE, 103(9), 1449–1477.
+- [22] Su, J., Jiang, C., Jin, X., Qiao, Y., Xiao, T., Ma, H., . . . & Lin, J. (2024). Large language models for forecasting and anomaly detection: A systematic literature review. arXiv Preprint arXiv:2402.10350.
+- [23] Papalexakis, E. E., Faloutsos, C., & Sidiropoulos, N. D. (2016). Tensors for data mining and data fusion: Models, applications, and scalable algorithms. ACM Transactions on Intelligent Systems and Technology (TIST), 8(2), 1–44.
+- [24] Alnomaan, A., Sharma, S. K., Ejaz, W., & Anpalagan, A. (2019). Emerging edge computing technologies for distributed IoT systems. IEEE Network, 33(6), 140–147.
+- [25] Mellit, A., & Kalogirou, S. (2021). Artificial intelligence and internet of things to improve efficacy of diagnosis and remote sensing of solar photovoltaic systems: Challenges, recommendations and future directions. Renewable and Sustainable Energy Reviews, 143, 110889.
+
+Mangala Shetty, S. Praveena, V. Manivelmuralidaran, Spoorthi B. Shetty, Anupriya R., and P. Senthilkumar
+
+## Advanced machine learning models for accurate and efficient anomaly detection in scanned visual data
+
+Abstract: Combination of inputs as multimodal signals and their dynamic nature as modern data call for more sophisticated approaches to anomaly detection. The literature review of this book chapter focuses on using a combination of supervised, unsupervised, and reinforcement learning to overcome the drawbacks of conventional approaches. Some of them are ensemble methods, basically the hybrid deep learning framework and multimodal deep learning frameworks involving transfer learning and also features fusion to tackle the anomaly detection problems in different fields. Additional attention is paid to the integration of the algorithms including convolutional neural networks, recurrent neural networks, generative adversarial networks, and variational autoencoders in the loops for improvement of the feature extracting algorithm and its reliability. Further, for enhanced anomaly detection, policies that are learned are described, which include policy gradient methods and deep Q-learning. Multimodal anomaly detection is then discussed with further analysis methods that utilize data originating from dissimilar sources of information and context such as image data, sensor data, and metadata. Many issues are discussed within the chapter, such as data imbalance, cross-modal transfer, and computational limitations, whereas solutions are presented in terms of ensembling and hybrid approaches. Implementations in many fields including healthcare, production, and cyber-security are also reviewed to show different uses of hybrid models. Addressing the findings further, this chapter ends with the insights on directions for future work: scalable algorithms and self-supervised learning, as well as the importance of explainable AI in the context of anomaly detection.
+
+Mangala Shetty, Department of MCA, NMAMIT NITTE, Karkala Taluk, NITTE Post 574110, Karnataka, India, e-mail: mangalapshetty@nitte.edu.in
+S. Praveena, Electronic and Communication Engineering, Mahatma Gandhi Institute of Technology, Gandipet, Hyderabad, Telangana, India, e-mail: spraveena_ece@mgit.ac.in
+V. Manivelmuralidaran, Department of Mechanical Engineering, Kumaraguru College of Technology, Coimbatore, Tamil Nadu, India, e-mail: manivelmuralidaran.v.mec@kct.ac.in
+Spoorthi B. Shetty, Department of MCA, NMAMIT NITTE, Karkala Taluk, NITTE Post 574110, Karnataka, e-mail: sshetty.07@nitte.edu.in
+Anupriya R., Department of Computer Science, Sri Krishna Arts and Science College, Kuniyamuthur, Coimbatore, Tamil Nadu, India, e-mail: anupriyachandran1999@gmail.com
+P. Senthilkumar, Department of Mechanical Engineering, Nehru Institute of Engineering and Technology, Thirumalayampalayam, Coimbatore 641108, e-mail: nietsenthilkumar.p@nehrucolleges.com

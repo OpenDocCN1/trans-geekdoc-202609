@@ -1,0 +1,13 @@
+Thus, improving feature selection strategies that allow finding a balance between using more computational resources and having more features is one way of solving it. IDEs like filter approaches are relatively easy to use with big datasets with high dimensions and are less computationally demanding, since determining feature importance is beyond the prediction model. Filter techniques select the relevant characteristics, analyzing their correlation using statistical tests, which greatly simplifies the modeling procedure without loss of crucial information.
+
+Only the vital data are retained while using methods such as PCA to reduce the number of features in the feature space. As feature space dimensionality is reduced through the identification of orthogonal linear feature combinations, which are associated with the greatest level of variation in a dataset, PCA does not impact this prediction accuracy. Unlike in CCA, where we are forced to stick to the features in two lower dimensions, PCA reaches a middle ground between computation speed and feature expressiveness by preserving only a few of the main components that explain most of the variance. This, in turn, improves the scalability and interpretability of the prediction models.
+
+The ensemble feature selection methodologies employ several feature selection methods and offer increasing stability and level of robustness as well as preserving computational efficiency. Ensemble methods of feature selection allow for the use of a wide number of features without the risk of overemphasizing on some best performing features that different algorithms provide. Inexpensive computing techniques, such as random forests boosting machines, provide stable and easily interpretable results in feature selection.
+
+# 4 Model selection and evaluation
+
+# 4.1 Comparison of machine learning algorithms for scaffold design
+
+To increase the performance of the model in the scaffold design, it is necessary to select the best machine learning algorithm that enables obtaining accurate and reliable modeling results. In scaffold design applications, there is a tendency that numerous machine learning methods are used. Each has its strengths and weaknesses, whereby the performance depends on the properties of the dataset used and the modeling objectives.
+
+Supervised learning algorithms, which operate on labeled data to classify inputs into predetermined categories, are among the most commonly used machine learning techniques in scaffold design. Examples include neural networks, KNN, SVM, decision

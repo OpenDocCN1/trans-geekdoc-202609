@@ -1,0 +1,15 @@
+# 2.3 Handling missing data
+
+One of the common scaffold design challenges is the lack of data, which must be managed correctly at the data preparation stage to ensure model accuracy and reliability in predictive model analysis. The handling of measurement data: there are various ways of handling partial data and each approach has its strengths and weakness.
+
+Another strategy of handling of missing data is deletion, which is the elimination of any observation that contains missing values. While deletion is easy and quick to implement, it leads to the removal of valuable data and reduces the specificity of a dataset, particularly where there is significant amount of missing data present for many attributes.
+
+Techniques known as imputation methods are also used to predict the missing values of the data and provide possible fillers. Whereas median imputation simply replaces the missing values with the median for that feature, mean imputation replaces the missing values with the mean of the feature over the given dataset. These methods are simple and rapid, which ensure that the distorted data are not random correlation with other variables in the database.
+
+There are more advanced imputation techniques such as the regression imputation, which predicts the missing values using regression equation built from the available data, whilst the KNN imputation makes estimates of the missing value using similar observations in the dataset. All the above methods are applied on the dataset. Parameter selection is computationally more intensive, yielding more accurate estimates of missing data.
+
+Another strategy in dealing with missing data is imputation numerous, where the missing values are imputed numerous times and full datasets are generated that are different in their imputed values. Each dataset is analyzed separately by the authors, and then, given the censoring problem, using proper methods for combining, these results are also incorporated. In comparison to the single imputation methods, multiple imputations provide more accurate estimates; it requires reconsideration of the model assumptions and parameters.
+
+# 2.4 Standardization and normalization of data
+
+In scaffold preparation, normalization is one of the earliest and most critical steps that ensures that the features being used are of equal scale in the dataset. The data standardization process is a normalization step where the characteristics of a dataset are transformed so that they have a mean of 0 and a variance of 1. The standardized form of each feature includes taking away the mean from each of the feature’s values and then dividing the result by the standard deviation. Standardized characteristics are easy to compare due to their zero mean and one standard deviation about zero and it ensures that they contribute equally in modeling.
