@@ -1,0 +1,581 @@
+- pgno: 0
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'employed, which utilize hydrodynamic focusing, backlighting, and dilution to
+    obtain images of in-focus, clearly delineated, nonoverlapping crystals.^{16,18,19}
+    Image quality sometimes is gained at the cost of not accurately representing the
+    crystal population: conditions (e.g., temperature) in the sample loop may not
+    match those in the crystallizer, throughput can be low, and well-mixed isokinetic
+    sample withdrawal may be a poor assumption. Besides practical problems associated
+    with having a high-resolution camera inside or in an external loop parallel to
+    a crystallization vessel, a range of challenges related to the analysis of captured
+    images may hinder gaining usable information from them. Some of the common challenges
+    in computer vision are illumination, rotation, and deformation, overlap or occlusion,
+    background clutter, and interclass variation,^20 many of which are common in crystallization
+    especially in images captured *in situ*.
+
+
+    Using imaging to monitor a crystallization process requires (1) high-quality images
+    that provide information on the shape and texture of the particles and (2) robust
+    image analysis to extract useful information from each image by translating the
+    image to qualitative or quantitative data for subsequent decisions. The first
+    is possible thanks to recent advancements in PAT development. There are different
+    commercial or custom-built instruments used in the literature for *in situ* imaging
+    in crystallization processes, such as EasyViewer, Blaze, and EZprobe.^11,12,21
+    As an example, the Mettler-Toledo particle view and measurement (PVM) probe, EasyViewer
+    100, used in this study is capable of capturing high-resolution images (1500 by
+    1500 pixels) as frequently as one image per second. There are also numerous studies
+    by the crystallization community using a variety of image analysis methods to
+    analyze slurry images. However, most of these are based on traditional methods.
+    These typically start with a series of image modification and enhancement steps
+    and use edge detection algorithms, such as the Sobel operator, to detect and characterize
+    single objects in an image.^22–24 The main issue with this approach is that dense
+    slurries (or dense images) with significant particle overlap cannot be parsed
+    into individual objects. This is partially why many of the reports in the literature
+    use either external loops and a flow cell or offline imaging to acquire analyzable
+    images from a crystal slurry. Figure 1 provides an example highlighting the complexities
+    of *in situ* images versus offline images captured from diluted samples. Another
+    issue with the traditional approaches is that
+
+
+    ![](img/548193ad63966e98f89fe201ab5832bb_1_0.png)
+
+
+    **Figure 1.** Comparison between offline microscopy (a) and *in situ* image (b)
+    from a cephalexin monohydrate (CEX) slurry. The *in situ* image highlights many
+    of the typical image analysis challenges, such as highly overlapped objects. The
+    needle-like shape and high number density of the crystal particles further complicate
+    the analysis of the *in situ* image.
+
+
+    the developed algorithms typically have several hyperparameters that may significantly
+    impact the image analysis results. This is an issue especially when the goal is
+    to quantify the crystal size distribution which might be impacted by the choice
+    of hyperparameters (a simple example is the impact of dilation and erosion operations
+    on the estimated size of a particle).
+
+
+    Modern computer vision is mainly based on data-driven models and deep learning
+    in the form of convolutional neural networks (CNNs).^{25,26} In short, in a typical
+    deep learning-based image analysis method, a series of filters (convolutional
+    layers) are applied to an input image (possibly after some image modification
+    or enhancement steps), and the results are a series of feature maps that highlight
+    certain characteristics of the input image. These feature maps then can be used
+    by fully connected layers for different purposes such as classification. Finally,
+    each filter and other layers’ parameters are optimized during the training step
+    to achieve the best performance. Naturally, similar to other deep learning-based
+    models, training these networks requires substantial amounts of data, especially
+    for deeper networks which may possess millions of parameters.^26 Modern *in situ*
+    imaging probes can capture thousands of images per hour of process time, providing
+    a significant amount of data that can be used for training these networks. There
+    are several well-known CNN architectures that are pretrained on standard image
+    data sets and are capable of extracting different low- and high-level image features.
+    These pretrained networks can be fine-tuned for specific applications using a
+    limited amount of training data (i.e., transfer learning). Examples of using these
+    novel deep learning-based models in the crystallization community are few. Recently,
+    Chen et al.^27 used a regional-CNN (R-CNN) to detect and characterize the length
+    of needle-like L-glutamic acid crystals. Gao et al.^12 used a mask R-CNN for crystal
+    object segmentation to monitor the formation of two different polymorphs, α- and
+    β-forms, of L-glutamic acid. Mane et al.^16 also used a mask R-CNN approach with
+    RetinaNet as the supporting network to characterize the crystal size distribution
+    in NaCl–ethanol–water antisolvent crystallization. These studies use deep learning-based
+    approaches and provide quantitative data about the progress of a crystallization
+    process. However, they either still deal with dilute slurries with a low solid
+    density and limited object overlap in the captured images or rely on external
+    loops to generate analyzable images. Neural networks as regression models are
+    also used for shape characterization of plate-like crystals based on dual-projection
+    images^28 or to extract information about solution and solid-phase concentrations
+    from Raman and IR spectra in different crystallization processes.^29,30
+
+
+    In the present work, we develop a computer vision model, based on CNNs, that can
+    be combined with high-throughput *in situ* imaging using a PVM probe for live
+    monitoring of crystallization processes. The focus is on a system where *in situ*
+    images contain highly overlapped objects and traditional approaches proved inadequate.
+    The goal is specifically to develop a tool for automated process monitoring that
+    can (1) examine *in situ* images taken using a PVM probe to monitor the state
+    of the slurry, (2) detect and communicate the potential presence of undesired
+    crystals in the slurry, and (3) estimate the location of the undesired object
+    for the operator for further inspection and taking proper control action. Particularly,
+    we focus on the application of such a tool in continuous pharmaceutical manufacturing
+    processes where'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "robust monitoring of the slurry is essential for the production of a pure and\
+    \ high-quality product that meets set quality-attribute standards. We take the\
+    \ production of cephalexin (CEX, a beta-lactam antibiotic with a large annual\
+    \ production rate of >5,000 tons per year31) as an example where a byproduct of\
+    \ the reaction may crystallize and contaminate the product in the event of deviation\
+    \ from the process set point.32\n\n# 2. MATERIALS AND METHODS\n\n# Crystallization\
+    \ Experiments.\n\nIndustrial processes for cephalexin production typically use\
+    \ an enzymatic reaction between an activated acyl donor such as phenylglycine\
+    \ methyl ester (PGME) and the beta-lactam nucleus 7-aminodesacetoxy-cephalosporanic\
+    \ acid (7-ADCA).31,32 The biocatalyst used in this process is typically penicillin\
+    \ G acylase (PGA), which catalyzes the primary reaction of producing cephalexin\
+    \ as well as two hydrolysis side reactions shown in eq 1. In the reactive crystallization\
+    \ process, conditions are set such that cephalexin is crystallized in the reactor\
+    \ to produce CEX crystals, which protects the cephalexin from biocatalytic hydrolysis.32\
+    \ However, the byproduct phenylglycine (PG) has a low solubility in water (~30–35\
+    \ mM at 25 °C and pH = 5.5–7.533) and may crystallize and contaminate the product\
+    \ if generated in excess.\n\n```\nPGME + 7-ADCA\n  → MeOH + CEX\n  → CEX·H₂O (crystal)\n\
+    \nPGME + H₂O → MeOH + PG → PG (crystal)\n\nCEX + H₂O → 7-ADCA + PG → PG (crystal)\
+    \    (1)\n```\n\nFor the production of CEX crystals, pH manipulations were used\
+    \ to generate the required supersaturation (solubility of cephalexin in water\
+    \ as a function of pH value is presented in Figure S1 in Supporting Information).\
+    \ A typical crystallization experiment started with dissolving a sufficient amount\
+    \ of CEX solids (RIA, Hanover, NJ) in 200 mL of deionized water at pH 7.5 to prepare\
+    \ a saturated solution. After saturation, the resulting solution was filtered\
+    \ to remove any undissolved solids. The solution was then transferred to a jacketed\
+    \ crystallization vessel that maintained a temperature of 25 °C and was mixed\
+    \ using a pitched blade stainless-steel impeller (with four 45° blades and 1 cm\
+    \ off-bottom clearance) at 250 rpm. Crystallization was started by adding 0.05\
+    \ g of ground seed crystals and adding 2 M HCl to acidify the solution and generate\
+    \ supersaturation. The pH value was lowered from the initial 7.5–5.5 over a period\
+    \ of 2–3 h using a Mettler-Toledo SP-50 dosing unit. The slurry was mixed for\
+    \ 3–5 h after the pH manipulation and until no significant change in the solution\
+    \ turbidity (measured using the EasyViewer probe) was detected. Figure 2 shows\
+    \ the course of a typical CEX crystallization experiment where pH and turbidity\
+    \ values are tracked.\n\nPG crystals were produced in two sets of experiments.\
+    \ In the first, PG was crystallized using the same pH swing method described above;\
+    \ initial and final pH values ranged from pHinitial of 9 to pHfinal of 5 (PG solubility\
+    \ in water as a function of pH is provided in Figure S1 in Supporting Information).\
+    \ The crystals were filtered, dried at room temperature, and later sieved to remove\
+    \ large agglomerates (particles >300 μm). In the second set, PG was formed under\
+    \ conditions mimicking that of the enzymatic synthesis. The PGA biocatalyst (obtained\n\
+    \n![](img/548193ad63966e98f89fe201ab5832bb_2_0.png)\n\nFigure 2. Solution pH value\
+    \ and turbidity throughout a CEX monohydrate crystallization experiment. The in\
+    \ situ image on the left shows the initial seeded solution, and the image on the\
+    \ right shows the slurry at the end of the experiment.\n\nfrom Centrient, Netherlands)\
+    \ at a concentration of about 2 μM was added to a CEX slurry saturated with PG\
+    \ at pH = 7. The solution was then given sufficient time for the enzyme to hydrolyze\
+    \ the cephalexin and produce sufficient PG supersaturation for PG crystallization\
+    \ to occur (5–8 h). PG particles formed by the first method (pH swing) had a larger\
+    \ mean size which helps to quantify their number density in a solution more accurately.\
+    \ PG particles formed by the second method (enzymatically) had a smaller mean\
+    \ size but more accurately represent the shape and characteristics of the byproduct\
+    \ particles formed during the enzymatic synthesis of cephalexin. Figure 3 shows\
+    \ the in situ image and offline optical microscope image of systems containing\
+    \ each type of PG particles (plate-like) with cephalexin (needle-shaped).\n\n\
+    ![](img/548193ad63966e98f89fe201ab5832bb_2_1.png)\n\nFigure 3. Optical microscope\
+    \ and in situ images from CEX and PG crystals, highlighting the PG particles made\
+    \ via the enzymatic (top) and pH swing (bottom) methods. PG particles are outlined\
+    \ with dashed circles.\n\n# Training Data Preparation.\n\nTwo image classes are\
+    \ defined, a “Good” class, that is, pure CEX crystals in the slurry, and a “Bad”\
+    \ class, that is, PG crystals (made by either the enzymatic or pH-swing method)\
+    \ in the predominately CEX slurry. For each system, a set of training data was\
+    \ generated by first capturing 2000–4000 images using the"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/548193ad63966e98f89fe201ab5832bb_4_0.png)
+
+
+    Figure 5. Overall process of detecting a PG crystal: example of the preset sliding
+    window grid used to detect PG crystals made by the pH swing method, cropping the
+    proposed region in the raw image and passing it through the CNN for generation
+    of feature maps and classification.
+
+
+    ![](img/548193ad63966e98f89fe201ab5832bb_4_1.png)
+
+
+    Figure 6. Example of the training process for fine-tuning the ResNet-18 CNN for
+    the system with pH-made PG crystals (a). Comparison of the total response time
+    for analyzing a single PVM image and the neural network training time for the
+    two networks used in this work (b).
+
+
+    ![](img/548193ad63966e98f89fe201ab5832bb_4_2.png)
+
+
+    Figure 7. Results of applying the image analysis model (with ResNet-18) to a series
+    of in situ images acquired from a crystal slurry with added pH-made PG crystals.
+    Solid yellow boxes correspond to regions that are decided to have a PG particle
+    based on the classification threshold of 0.9. Dashed boxes are additionally flagged
+    regions based on the classification threshold of 0.8.
+
+
+    the time scale of a typical crystallization process (hundreds of seconds), the
+    longer response time of ResNet-50 does not, in fact, limit its application and
+    still enables taking control-related actions. An appropriate control action in
+    this system may be adjusting the acyl donor (PGME) flow rate into the vessel to
+    reduce the PG concentration and dissolve its crystals. In other crystallization
+    systems, an action might be a temperature or pH cycle to dissolve the undesired
+    particles.
+
+    With the backbone CNNs trained for classification of the two crystal types for
+    each system (pH swing or enzymatically made PG), we evaluate the performance of
+    the image analysis model by calling it on a set of new images. These images were
+
+
+    acquired in separate experiments and were not used in the training process of
+    the CNNs (neither as training, validation, or test data). Also, note that the
+    CNNs were trained using relevant crops from the in situ images for each class
+    and not the raw image as a whole. As mentioned, we take a sliding window-like
+    approach to analyze different regions in each image by passing them through the
+    CNN. Regions with a high score in the Bad class, regions that are very likely
+    to contain a PG crystal, are then flagged and reported. Using the sliding window
+    approach to study an image is actually less common compared to other more recent
+    methods in modern computer vision such as EdgeBox35 or Selective Search.34 However,
+    in'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/548193ad63966e98f89fe201ab5832bb_5_0.png)
+
+
+    Figure 8. Results of applying the image analysis model (with ResNet-18) to a series
+    of in situ images acquired from a crystal slurry containing enzymatically made
+    PG particles. Solid yellow boxes correspond to regions that are decided to have
+    a PG particle based on the classification threshold of 0.9. Dashed boxes are additionally
+    flagged regions based on the classification threshold of 0.8.
+
+
+    our case, the goal is to build a tool for identifying crystals with known characteristics.
+    For example, in PG formation by an enzymatic reaction, the typical size and shape
+    of the undesired PG particles are known by performing preliminary experiments.
+    Figures 7 and 8 show the results of applying the image analysis model based on
+    ResNet-18 to a series of example images from each system with two different cutoffs
+    used for classification. In each image, the model successfully identifies the
+    region which corresponds to particles with characteristics of PG. Results for
+    the model based on ResNet-50 are very similar and are presented in Figures S.3
+    and S.4 in Supporting Information.
+
+
+    sliding window size. Size of the sliding window should be chosen considering the
+    system under study and the characteristics of the specific crystals. For example,
+    for PG crystals made by the pH swing method (Figure 3), crystals are relatively
+    larger than those produced by the enzymatic route. Naturally, the sliding window
+    grid used for that system is chosen such that it has larger candidate boxes (100–125
+    μm compared to 60–70 μm). A good rule of thumb for selecting the sliding window
+    size range is to use the average size of the bounding boxes drawn during the training
+    data preparation. Other methods such as building an image pyramid for detecting
+    instances of an object with different scales are common in computer vision.37
+    However, considering that crystals’ characteristics are known in our case, we
+    have limited our analysis to each image’s original scale.
+
+
+    In some cases (such as panel c in Figure 7), several overlapping or neighboring
+    regions are reported, which is a result of the sliding window grid and the overlap
+    threshold used for NMS. Sliding window size and the threshold used in NMS are
+    hyperparameters that can be adjusted for specific cases to reduce the number of
+    overlapping regions; nevertheless, the main goal of locating the PG particle is
+    achieved. Another observation is that depending on the classification threshold
+    used some regions might or might not be flagged. Classification threshold in Figures
+    7 and 8 refers to the class Bad score above which the model flags the corresponding
+    region. The choice of the classification threshold may be any number in the range
+    of 0.5–1 (below 0.5 being assigned to the other class), and it directly impacts
+    the false-positive and false-negative rates. For example, in Figure 7 panel b,
+    using the value of 0.8 leads to a false-positive in the center of the image. On
+    the other hand, using the value of 0.9 leads to a false-negative in panel f. This
+    threshold is an important hyperparameter in the model and should be chosen based
+    on the specific process at hand and the degree of acceptable risk in it.
+
+
+    To further test the accuracy and limit of detection of the image analysis model,
+    experiments were conducted with a gradually increasing number of PG crystals.
+    In addition to the limit of detection, insights into model performance, image
+    acquisition, and slurry behavior are gained by performing experiments where PG
+    crystals are added to a standard CEX slurry in a highly controlled manner. Sufficiently
+    large crystals (75–225 μm) were used such that a predictable number of crystals
+    were added with each aliquot. As expected, during the experiment, the number of
+    images flagged as containing PG increased as the PG solid concentration increased.
+    Eventually, there are a sufficient number of PG crystals in the vessel such that
+    they are detected in almost every image. A schematic representation of this experiment
+    is shown in Figure 9. As can
+
+
+    It is also possible to train a second regression neural network for refining the
+    reported bounding box coordinates similar to, for example, that of the fast R-CNN.36
+    However, taking that approach requires adjustments in previous parts of the algorithm
+    presented here and does not add significant information as to whether or not phenylglycine
+    has nucleated in the vessel.
+
+
+    Besides the training parameters, classification threshold, and possible preprocessing
+    steps to increase the quality of in situ images, another important hyperparameter
+    in this model is the
+
+
+    ![](img/548193ad63966e98f89fe201ab5832bb_5_1.png)
+
+
+    Figure 9. Schematic representation of an experiment where PG crystals (violet,
+    low aspect ratio) are added to a CEX (green, high aspect ratio) slurry in a highly
+    controlled manner to evaluate the frequency of their detection using the image
+    analysis model.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'be seen, two types of crystals (CEX and PG) are present in the vessel. Depending
+    on the number density of PG crystals and the solution volume observable by the
+    probe, zero to dozens of PG crystals may be detected through the probe window.
+    Figure 10 shows the percentage of frames in which the image analysis model detected
+    at least one PG crystal as a
+
+
+    of PG crystals, N_PG, can be estimated from the added mass and their average size
+    (see Supporting Information). The solution volume visible to the PVM probe, V_samplingbox
+    is estimated as the area of the probe window multiplied by a focal range (~1000
+    × 1000 × 100 μm³). Completely out-of-focus crystals cannot be analyzed with high
+    accuracy and will not receive high scores from the classification network. The
+    probability of a captured frame containing at least one PG particle is then equal
+    to 1 minus the probability of it containing none (derivation of eq 2 is presented
+    in Supporting Information).
+
+
+    ![](img/548193ad63966e98f89fe201ab5832bb_6_0.png)
+
+
+    Figure 10. Percentage of images in which at least one PG crystal is detected using
+    the model obtained by analyzing 100 frames at each PG crystal concentration. Error
+    bars at each point are calculated by subsampling 50 random frames for analysis
+    (30 times) and calculating the standard deviation. The top x-axis corresponds
+    to the estimated number of PG crystals in [1000/mL]. Bars slightly shifted to
+    the right correspond to the higher classification threshold.
+
+
+    function of PG crystal mass in a CEX slurry. At each PG solid concentration, the
+    percentage is calculated based on analyzing 100 frames, from which 50 frames were
+    randomly sampled 30 times to calculate the standard errors. By analyzing the images
+    captured from the slurry, the model recognizes the increase in the mass of the
+    PG crystals and detects their presence (flagging the corresponding image) more
+    frequently. However, as was seen before in Figure 7, the model also reports false-positives,
+    images of pure CEX slurry flagged as containing PG, especially when a lower classification
+    threshold is used (in this case, about 5% of images are falsely flagged for classification
+    threshold S* = 0.8, and 0–1% for S* = 0.9).
+
+
+    Figure 11 shows the simulation results for the probability of PG crystal detection
+    in a frame as a function of their mass in
+
+
+    ```
+
+    P(N_PG) = 1 - (1 - V_samplingbox / V_vessel)^{N_PG} (2)
+
+    ```
+
+
+    ![](img/548193ad63966e98f89fe201ab5832bb_6_1.png)
+
+
+    Figure 11. Percentage of frames containing at least one PG crystal as a function
+    of its mass in the slurry for various mean sizes predicted using eq 2. Simulations
+    assume an ideal observer where no PG particle is missed during the image analysis
+    step. Experimental data of Figure 10 (triangle markers) are shown for comparison.
+    The top curve corresponds to the smallest mean size.
+
+
+    the slurry for different mean sizes. Simulations confirm that the PG observations
+    in the described system should mimic an exponential saturation curve (similar
+    to Figure 10). However, the apparent similarity between the theoretical calculations
+    and the experimental points should not be taken as a sign of a perfect image analysis
+    model. In the analysis of each frame using the model, there might be PG crystals
+    that are not detected by the computer, or there might be some false-positive cases.
+    The significance of these simulations is that they confirm the overall shape of
+    the experimental curve. Figure 11 also highlights the necessity of using premade
+    PG crystals with relatively large mean size in the experiments such as that depicted
+    in Figure 10.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/548193ad63966e98f89fe201ab5832bb_7_0.png)
+
+
+    ![](img/548193ad63966e98f89fe201ab5832bb_7_1.png)
+
+
+    Figure 12. (a) Distribution of fraction of images that are flagged when the system
+    is observed in a limited number of frames (20) at varying PG particle concentrations
+    of Figure 10. The distribution associated with each concentration is calculated
+    by sampling 20 random frames captured at that concentration, feeding them to the
+    model and calculating the ratio of the flagged frames. The histogram is then plotted
+    by repeating the same procedure for 500 sets. (b) Probability of detecting the
+    PG particles’ presence versus the time that the slurry is observed using the model
+    at varying PG particle concentrations of Figure 10. Observation time is calculated
+    as the time required to capture the images and analyzing them by ResNet-18 (estimated
+    as 4 s per frame). Error bars are calculated by random sampling of the corresponding
+    number of images from those captured at each PG particle concentration (500 sets).
+    The top curve corresponds to the highest concentration, 3.8 mg/mL.
+
+
+    slurry. Using the 0.8 mg/mL data set in Figure 12a as an example, if 30% of frames
+    contain PG, then there is a 60% chance the system contains at least 0.8 mg/mL
+    PG but a negligible chance the system contains >1.5 mg/mL PG. Similarly, if 50%
+    of frames contain PG, there is a ~0% chance the slurry contains >3.8 mg/mL PG
+    but almost 100% chance the slurry contains >0.8 mg/mL PG. These probabilities
+    could help inform a controller (human or automated) what action to take to ensure
+    slurry purity. As mentioned, as the number of sampled and analyzed images increases,
+    the distribution narrows and the confidence of the PG concentration measurement
+    increases. Alternatively, the data in Figure 12 can be analyzed from the viewpoint
+    of detection time. In some applications, it might be required to detect the presence
+    of the undesired particle, in this case, PG, in the shortest time possible. Note
+    that detecting even a single PG particle is sufficient for this purpose. The detection
+    time depends on the time it takes to analyze each frame and the amount of the
+    impurity. Figure 12b shows the probability of detecting the PG particles’ presence
+    in the system as a function of time observing the slurry, at three different PG
+    solid concentrations. Observation time corresponds to the time that is required
+    to capture images and analyzing them. At the low solid density, 0.8 mg/mL, a short
+    observation time (e.g., only one frame taken and processed) might not lead to
+    detecting the PG presence, and the slurry needs to be observed for a longer time
+    using the model. It is only after 60 s that it is certain that the model can detect
+    the PG presence. Naturally, this time significantly shortens at higher PG concentration.
+    In all cases, a probability value of 1 means the model has detected the PG presence
+    by flagging at least one of the images captured and analyzed during that time
+    period. As mentioned, this analysis directly depends on the number of undesired
+    particles in the system. For cases with a small mean size, even a small mass leads
+    to immediate detection of the presence of PG by analyzing only a few frames. A
+    similar mathematical model to that of Figure 11 can be built to relate the PG
+    detection to observation time for the case of an ideal observer. As a final note,
+    during a crystallization process, undesired crystals (be a byproduct as in the
+    case of PG in CEX crystallization or an undesired polymorph as in the case of,
+    e.g., piroxicam crystallization¹) may form if the process deviates from its appropriate
+    setpoint and trajectory. Detecting this
+
+
+    deviation as soon as possible is important, so proper control actions (such as
+    adjustment of pumps or a temperature cycle) can be taken. Unfortunately, in the
+    early stages of nucleation and growth, particle sizes are likely to be relatively
+    small. Microscope resolution therefore puts a limit on the applicability of the
+    image analysis for process monitoring. Clearly, using direct imaging as a robust
+    PAT for process fault detection requires sufficiently large crystals such that
+    they can be visually detected. In some specific cases, nucleation and growth of
+    the undesired particles may lead to some changes in the slurry, such as a sudden
+    change in solution turbidity, but whether that can be used as a robust monitoring
+    tool is probably highly case-dependent.
+
+
+    # 4. CONCLUSIONS
+
+
+    An image analysis model, based on deep learning and CNNs, was developed for the
+    classification of complex in situ images from a CEX crystal slurry. Provided sufficient
+    training data, the model can detect the presence of an undesired crystal (e.g.,
+    a byproduct, which in this case was phenylglycine, or an undesired polymorph)
+    in the slurry by processing different regions of the raw in situ microscope images.
+    The two networks used as the classification backbone, ResNet-18 and ResNet-50,
+    showed high classification accuracy and were capable of distinguishing between
+    different crystal types. However, considering the very distinct visual features
+    of CEX and PG, other well-known deep, or even shallow, CNNs may also be capable
+    of performing the classification task. The proposed approach can be extended to
+    other crystallization systems where the detection of undesired crystals is critical
+    to producing an acceptable product. Typical challenges of computer vision, such
+    as overlapping objects which is found in high suspension density slurries, can
+    complicate this task. Note that the analysis of neat images from a processed slurry
+    (such as dilution) in a highly controlled setup remains the best and most robust
+    method for observing and measuring crystals in a process. However, the approach
+    proposed here enables the use of PVM probes and in situ imaging as a practical
+    and direct approach to monitoring a crystal slurry in a large-scale process in
+    real-time. Finally, it is worth emphasizing that in this work, the classifier
+    network was trained to identify undesired crystals with known characteristics;
+    however, a somewhat similar approach may be applied in'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'Network, Communication and Information Systems (CNCI 2019)2019; Atlantis Press,
+    2019; pp 371–390.
+
+
+    (19) Zhang, B.; Abbas, A.; Romagnoli, J. A. Automatic image-based estimation of
+    texture analysis as a monitoring tool for crystal growth. *Chemom. Intell. Lab.
+    Syst.* **2013**, *121*, 42–51.
+
+
+    (20) Fei-Fei, L.; Johnson, J.; Yeung, S. *Convolutional Neural Networks for Visual
+    Recognition Course*; Stanford University, 2017.
+
+
+    (21) BlazeMetrics. https://www.blazemetrics.com/blaze400 (accessed April 1, 2021).
+
+
+    (22) Borsos, Á.; Szilágyi, B.; Agachi, P. Ș.; Nagy, Z. K. Real-time image processing
+    based online feedback control system for cooling batch crystallization. *Org.
+    Process Res. Dev.* **2017**, *21*, 511–519.
+
+
+    (23) De Anda, J. C.; Wang, X. Z.; Lai, X.; Roberts, K. J. Classifying organic
+    crystals via in-process image analysis and the use of monitoring charts to follow
+    polymorphic and morphological changes. *J. Process Control* **2005**, *15*, 785–797.
+
+
+    (24) Huo, Y.; Liu, T.; Liu, H.; Ma, C. Y.; Wang, X. Z. In-situ crystal morphology
+    identification using imaging analysis with application to the L-glutamic acid
+    crystallization. *Chem. Eng. Sci.* **2016**, *148*, 126–139.
+
+
+    (25) Lawrence, S.; Giles, C. L.; Ah Chung Tsoi, A. C.; Back, A. D. Face recognition:
+    A convolutional neural-network approach. *IEEE Trans. Neural Network* **1997**,
+    *8*, 98–113.
+
+
+    (26) He, K.; Zhang, X.; Ren, S.; Sun, J. In Deep residual learning for image recognition.
+    *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*,
+    2016; pp 770–778.
+
+
+    (27) Chen, S.; Liu, T.; Xu, D.; Huo, Y.; Yang, Y. In image based measurement of
+    population growth rate for l-glutamic acid crystallization. *2019 Chinese Control
+    Conference (CCC)*; IEEE, 2019; pp 7933–7938.
+
+
+    (28) Jaeggi, A.; Rajagopalan, A. K.; Morari, M.; Mazzotti, M. Characterizing ensembles
+    of platelike particles via machine learning. *Ind. Eng. Chem. Res.* **2021**,
+    *60*, 473–483.
+
+
+    (29) Lin, M.; Wu, Y.; Rohani, S. Simultaneous measurement of solution concentration
+    and slurry density by Raman spectroscopy with artificial neural network. *Cryst.
+    Growth Des.* **2020**, *20*, 1752–1759.
+
+
+    (30) Barmpalexis, P.; Karagianni, A.; Nikolalakis, I.; Kachrimanis, K. Artificial
+    neural networks (ANNs) and partial least squares (PLS) regression in the quantitative
+    analysis of cocrystal formulations by Raman and ATR-FTIR spectroscopy. *J. Pharm.
+    Biomed. Anal.* **2018**, *158*, 214–224.
+
+
+    (31) Wegman, M. A.; Janssen, M. H. A.; van Rantwijk, F.; Sheldon, R. A. Towards
+    Biocatalytic Synthesis of β-Lactam Antibiotics. *Adv. Synth. Catal.* **2001**,
+    *343*, 559–576.
+
+
+    (32) McDonald, M. A.; Bommarius, A. S.; Rousseau, R. W.; Grover, M. A. Continuous
+    reactive crystallization of β-lactam antibiotics catalyzed by penicillin G acylase.
+    Part I: Model development. *Comput. Chem. Eng.* **2019**, *123*, 331–343.
+
+
+    (33) Samanta, M.; Ribeiro, M. P. A.; Leite, G. A.; Giordano, R. L. C.; Giordano,
+    R. C.; Mattedi, S. Solid-liquid equilibrium of substrates and products of the
+    enzymatic synthesis of ampicillin. *AIChE J.* **2010**, *56*, 1578–1583.
+
+
+    (34) Uijlings, J. J. R.; Van De Sande, K. E. A.; Gevers, T.; Smeulders, A. W.
+    M. Selective search for object recognition. *Int. J. Comput. Vis.* **2013**, *104*,
+    154–171.
+
+
+    (35) Zitnick, C. L.; Dollár, P. In Edge boxes: Locating object proposals from
+    edges. *European Conference on Computer Vision*; Springer, 2014; pp 391–405.
+
+
+    (36) Girshick, R.; Donahue, J.; Darrell, T.; Malik, J. In Rich feature hierarchies
+    for accurate object detection and semantic segmentation. *Proceedings of the IEEE
+    Conference on Computer Vision and Pattern Recognition*, 2014; pp 580–587.
+
+
+    (37) Adelson, E. H.; Anderson, C. H.; Bergen, J. R.; Burt, P. J.; Ogden, J. M.
+    Pyramid methods in image processing. *RCA Eng.* **1984**, *29*, 33–41.'
+  merge: -1
+  img_proc: true
