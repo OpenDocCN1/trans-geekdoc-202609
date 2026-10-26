@@ -1,0 +1,9 @@
+as ML systems unfairly harm a subset of the population without a sense of equity and justice. The data used to train a system might underrepresent certain groups, and that social bias is then reflected in the model’s performance. A landmark study led by Joy Buolamwini, Timit Gebru, and Deborah Raji showed that commercial facial recognition systems built by Amazon, Microsoft, and IBM consistently misrecognized people of color. The result? Over the years, wrongful arrests have been made in the United States using facial recognition evidence. All were wrongful arrests of Black men because the AI system misidentified them. Local governments began prohibiting the use of this technology, Amazon stopped selling these tools to law enforcement, and Microsoft recently stopped selling facial analysis tools altogether.
+
+So, it is natural that the AIA is looking to mitigate societal bias in AI. But, again, things are not so straightforward as bias interacts with security unintuitively. Consider the adversarial attack example from Chapter 3, wherein carefully crafted distortion added to images causes a state-of-the-art AI system to misrecognize an image of a panda as a gibbon. See Figure 6-1.
+
+![](bbox=[0.216, 0.541, 0.813, 0.695])
+
+**Figure 6.1** When adversarial noise is added to an image of a panda, it is mistaken as a gibbon by ML systems. Courtesy of Ian Goodfellow14
+
+When researchers from the University of Maryland repeated this attack method in facial recognition systems with a diverse set of faces, the impact of the attack on the faces was not uniform. The researchers showed that a small perturbation flipped the label for a Black female face, but a white male face was more robust to the

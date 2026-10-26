@@ -1,0 +1,6 @@
+# Chapter 3
+Subtle, Specific, and Ever-Present
+
+By any measure, the attack that fooled AI systems in autonomous vehicles into misrecognizing a stop sign for a speed limit sign by using a carefully designed arrangement of stickers was famous. It would be exhibited at the celebrated Science Museum in London alongside Boaty McBoatface, an unmanned underwater vehicle whose name was chosen by the British public. Eventually, the very stop sign used to misdirect AI systems underpinning autonomous vehicles at Magnuson Park would become part of the museum’s permanent collection.
+
+Only one other attack on AI systems has similarly gripped the imagination of the AI populace. In fact, if you read about securing AI systems—be it in news articles, policy briefs, or even high-brow academic research—you simply cannot escape its mention. It has come to iconify the entire field of adversarial machine learning, and the work that generated it has become foundational to other machine learning evasion attacks—including the stop sign sticker attack.

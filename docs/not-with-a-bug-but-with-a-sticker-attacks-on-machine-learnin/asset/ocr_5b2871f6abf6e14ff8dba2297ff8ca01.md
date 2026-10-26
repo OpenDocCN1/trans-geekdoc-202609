@@ -1,0 +1,3 @@
+to the meadows of Summerland; from the sunrises in Port Ludlow to the sundowns in Mukilteo; from Cougar Mountain’s slopes to Ada Technical Café’s armchair; from King FM’s Morning Shot of Musical espresso to Winthrop morning runs—all pugnaciously pulled away the tyranny of the blank page and playfully poured forth the panache of a magniloquent spoony. I am Madras at heart and Evergreen in soul.
+
+Ram Shankar

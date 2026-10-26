@@ -1,0 +1,5 @@
+It is not the use of shortcuts that’s problematic. Humans use shortcuts, too. We use acronyms to recall colors of the rainbow, remember a colleague by the color of their hair, and associate memories with smells. The constant oversell of AI having superhuman abilities and the barrage of headlines of AI superiority are odious. This overtrust puts us at risk—from worthless porn filters to incarceration of the innocent.
+
+Here is the kicker: All it takes for an attacker to confuse a complicated ML algorithm is to identify and hack these shortcuts. An amateur can cause traffic jams on Google Maps with a wagon full of phones, entrap a self-driving car with salt and electric tape, and evade porn filters by coloring the pictures green.
+
+So, if that’s what an amateur can do, what damage could be caused by a skilled researcher or motivated adversary?

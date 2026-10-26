@@ -1,0 +1,11 @@
+This dataset matters because one of the best (and certainly easiest) ways to get an AI system to perform better at its task is to provide it with more data. That's because of conventional wisdom that a dumb AI system with lots of data will always beat a clever one with little data. It all comes down to the scale, diversity, and quality of data.
+
+And ImageNet was a landmark contribution, not because it was the first dataset but because it was the first truly *large-scale* dataset—1,000 times larger than the previous ones.
+
+While Li’s team certainly had quantity in their corner, ImageNet’s images were also of sufficient quality to capture a scene as humans might see it. Li’s team scoured the Internet, querying search engines and crawling photo-hosting sites like Flickr to find tightly focused and well-lit images that weren’t too busy or noisy. The team then used humans to annotate what was in the picture. The result was a robust, full-resolution, labelled dataset that was now ready for use by researchers to train their computer vision algorithm.
+
+With this dataset in place, Li and her team formulated the ImageNet Large Scale Visual Recognition Challenge (ILSVRC), an annual competition to track progress in computer vision. Winning the ImageNet competition, at the time, was the equivalent of winning the Olympics for ML researchers. Winners went on to receive everything from coverage in *The New York Times* to senior positions at Microsoft, Google, Baidu, and Huawei.
+
+And, of course, there was the ensuing money. DNNResearch, the company founded by researchers who won the 2012 competition, was scooped up by Google after a secret auction in Tahoe for $44 million. Clarifai, which the 2013 winners started, raised a cool $30 million and opened offices in New York, Washington DC, and San Francisco, within three years of the event. Matching a winning entry’s performance in that year was seen as a mark of quality. For instance, when Metamind’s initial $8 million funding was released in 2014, the company’s PR release specifically noted that it did just as well as the 2014 entry. A few years later, Metamind was acquired by Salesforce for $33 million.
+
+The competition was popular because it helped highlight the rapid progress in computer vision. In fact, in the waning years of
