@@ -1,0 +1,23 @@
+# Perspective
+
+# Introduction
+
+Since the early 2000s, combinatorial synthesis and high-throughput screening have enabled the development of substantially more efficient and less toxic nonviral delivery systems for nucleic acid therapeutics¹. Iterative screening and optimization of polymeric nanoparticles made from polyethylenimine² and poly-β-amino esters¹,³,⁴ have helped reduce biological side effects. Ultimately, these polymers became a framework for the ionizable lipid, a major component of lipid nanoparticles (LNPs)⁵,⁶. From these early advancements, LNPs have emerged as a clinically successful nucleic acid delivery method⁷ as demonstrated by patisiran⁸,⁹, a treatment for transthyretin-mediated amyloidosis, and by the Pfizer and Moderna SARS-CoV-2 vaccines¹⁰. As of August 2025, over 100 LNP-based therapeutics are currently in the clinical pipeline and over 170 studies are actively recruiting participants¹¹ (ClinicalTrials.gov search).
+
+Given the complexity of the LNP as a multicomponent delivery vehicle, the screening pipeline generally comprises synthesis of new lipid components, formulation of LNPs with those components, then subsequent physicochemical characterization, in vitro testing and in vivo testing of lead candidates (Fig. 1a). Modifications to any one of the lipid components or their relative ratios, cargo, buffer conditions, or method of mixing can lead to distinct performances across different
+
+biologically relevant models. Across the literature, inconsistencies in formulation and screening methods ultimately obscure concrete design rules. Furthermore, given the approximately billion atom scale of an LNP and the complex relationship between kinetic and thermodynamic interactions during nucleation and subsequent particle stabilization, physics-based in silico modelling strategies have remained too computationally demanding to narrow the potential design space of lipid structures that generate biologically effective LNPs¹²,¹³. Although large areas of unexplored chemical space still remain¹⁴–¹⁷, modular, parallelizable synthetic manifolds for new lipids have enabled the discovery of LNPs with preferable immunogenicity¹⁸, transfection efficiency across cell types of interest¹⁹,²⁰, or biodistribution²¹,²².
+
+In this Perspective, we highlight developments in the automated chemical synthesis of lipid components, high-throughput formulation of LNP libraries¹⁷,¹⁸, and the screening¹⁹ of these libraries, which have enabled the expanding use of machine learning (ML) approaches to relate LNP composition to behaviour in biological systems, and thus to predict new formulations (Fig. 1b). We discuss how these technologies both accelerate throughput and improve consistency across the many steps necessary to gather screening data on the biological performance of LNPs. More consistency in the techniques used to formulate and screen LNPs, combined with the sharing of data in public
+
+# a Characterization modality
+
+![](bbox=[0.15, 0.47, 0.85, 0.58])
+
+# b
+
+![](bbox=[0.2, 0.58, 0.9, 0.77])
+
+Fig. 1 | Integrating automation and machine learning to accelerate LNP discovery. a. The canonical screening pathway for lipid nanoparticles (LNPs) relies on the progression of formulations through a funnel of screening techniques, from physicochemical to in vitro to in vivo screening, wherein candidates that do not meet a set of standards are eliminated. Automation is more widely applied to the measurement of physicochemical or ex vivo readouts, and it is often used to narrow the number of potential candidates for screening in vivo. Although the screening time required per sample to generate in vivo data is higher, the resultant data often provide more information about how the LNP will ultimately perform as a therapeutic. b. Automation can accelerate
+
+the collection of screening data, which can train machine learning models to reduce the size of future screening sets. An example of a closed-loop discovery system entails the synthesis and formulation of LNPs, which are tested in biological systems to generate data, iterating through experimental cycles to predict an optimally performing LNP candidate for some therapeutic function. Data gathered to train machine learning models are represented here using a t-distributed stochastic neighbour embedding (t-SNE) plot, a technique that maps high-dimensional data to a lower-dimensional map for visualization. Training is illustrated using a schematic neural-network architecture.
