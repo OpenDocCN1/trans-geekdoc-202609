@@ -1,0 +1,11 @@
+# PRIVACY
+
+Quite apart from contact tracing, any number of privacy issues are involved with COVID-19. For one thing, it’s a medical issue, and medical information seems to be the second (how much you are paid is the first) highest privacy concern people have. It’s quite a legitimate concern in many cases: being diagnosed with certain diseases can lose you a job or insurance coverage, and in all too many cases, you become shunned by the community, often for something that is not your fault in any way.
+
+# EVIDENCE
+
+One of the rules of evidence is that, in order to present it in court, it must be relevant to the case. The importance of this has been illustrated by the different types of testing and various pieces of research that have been conducted and published while the pandemic has been raging.
+
+For example, RNA testing has revealed that SARS-CoV-2 has been detected in feces. Does this mean that sewage is an infection risk? (Look, work with me here. Sewage is always noxious stuff, and you can become infected with a number of nasty diseases from it, quite apart from SARS-CoV-2.) Well, we don’t know. We know that the RNA tests detect sections of the virus code, but they don’t necessarily indicate that the virus, even when detected, is viable. Possibly more study is warranted, but at the moment, no other evidence indicates that fecal contamination is a major vector of the virus. (The fact that we can detect the virus in sewage may provide us with a tool for finding out how prevalent the virus is in a given community, but we need more study on that too.)
+
+In the same way, we have studies indicating that the virus can be detected (via RNA tests) in the air for hours after an infected person has left. Does that mean that SARS-CoV-2 is an airborne virus and that transmission can take place by these particles in the air? Well, again, not necessarily. For the same reasons given above, we may be detecting non-viable traces of the virus, so we don’t yet really know what danger there is in aerosol transmission. So far, the evidence of actual transmission seems to indicate that the risk of infection is low. The fact that we can use RNA tests to detect viral fragments in the air is not really relevant to our risk of infection.

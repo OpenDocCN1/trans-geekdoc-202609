@@ -1,0 +1,17 @@
+level_changes:
+- line: 73
+  before: 3
+  after: 2
+- line: 472
+  before: 3
+  after: 2
+text_changes:
+- line: 472
+  before: '3'
+  after: 3 纵深防御/分层防御
+- line: 474
+  before: 纵深防御/分层防御
+  after: ''
+- line: 856
+  before: 电信与网络安全 **10**
+  after: 10 电信与网络安全
