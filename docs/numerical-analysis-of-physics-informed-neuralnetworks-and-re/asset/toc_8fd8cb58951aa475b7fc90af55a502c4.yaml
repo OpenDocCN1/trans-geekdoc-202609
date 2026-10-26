@@ -1,0 +1,95 @@
+level_changes:
+- line: 98
+  before: 2
+  after: 4
+- line: 151
+  before: 2
+  after: 3
+- line: 155
+  before: 3
+  after: 4
+- line: 179
+  before: 2
+  after: 4
+- line: 298
+  before: 2
+  after: 4
+- line: 382
+  before: 2
+  after: 3
+- line: 422
+  before: 2
+  after: 3
+- line: 548
+  before: 2
+  after: 3
+- line: 592
+  before: 2
+  after: 3
+- line: 660
+  before: 2
+  after: 3
+- line: 667
+  before: 3
+  after: 4
+- line: 752
+  before: 2
+  after: 4
+- line: 1033
+  before: 2
+  after: 3
+- line: 1337
+  before: 2
+  after: 3
+- line: 1437
+  before: 2
+  after: 3
+- line: 1470
+  before: 2
+  after: 4
+- line: 1502
+  before: 2
+  after: 4
+- line: 1526
+  before: 2
+  after: 3
+- line: 1530
+  before: 3
+  after: 4
+- line: 1562
+  before: 3
+  after: 4
+- line: 1590
+  before: 3
+  after: 4
+- line: 1606
+  before: 3
+  after: 4
+text_changes:
+- line: 52
+  before: 示例2.1（半线性热方程）。
+  after: 示例 2.1（半线性热方程）。
+- line: 64
+  before: 示例2.2（Navier–Stokes方程）。
+  after: 示例 2.2（Navier–Stokes方程）。
+- line: 334
+  before: 示例2.10（用于标量守恒律的wPINN）
+  after: 示例 2.10（用于标量守恒律的wPINN）
+- line: 282
+  before: 注2.9
+  after: 注 2.9
+- line: 1288
+  before: 例6.8（标量守恒律）。
+  after: 例 6.8（标量守恒律）。
+- line: 1326
+  before: 问题4（Q4）
+  after: 问题 4（Q4）
+- line: 1337
+  before: 7.1 损失函数的全局最小值是 PDE 解的良好近似
+  after: 7.1. 损失函数的全局最小值是 PDE 解的良好近似
+- line: 1437
+  before: 7.3 训练与算子预处理
+  after: 7.3. 训练与算子预处理
+- line: 1488
+  before: '**定理 7.12.**'
+  after: 定理 7.12.
