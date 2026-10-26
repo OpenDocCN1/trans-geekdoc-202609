@@ -1,0 +1,68 @@
+level_changes:
+- line: 48
+  before: 2
+  after: 1
+- line: 629
+  before: 2
+  after: 1
+- line: 1200
+  before: 2
+  after: 1
+- line: 2093
+  before: 2
+  after: 1
+- line: 2545
+  before: 2
+  after: 1
+- line: 2780
+  before: 2
+  after: 1
+- line: 192
+  before: 3
+  after: 2
+- line: 1665
+  before: 2
+  after: 3
+- line: 1668
+  before: 2
+  after: 3
+- line: 1168
+  before: 2
+  after: 3
+- line: 1174
+  before: 2
+  after: 3
+- line: 1176
+  before: 2
+  after: 3
+- line: 1182
+  before: 2
+  after: 3
+- line: 1186
+  before: 2
+  after: 3
+- line: 1191
+  before: 2
+  after: 3
+text_changes:
+- line: 1048
+  before: 卡罗来纳的思考
+  after: 卡罗莱纳的思考
+- line: 1056
+  before: 卡罗来纳对探究式教学的反思
+  after: 卡罗莱纳对探究式教学的反思
+- line: 688
+  before: 步骤1：为整个课程确定五到十个大概念
+  after: 第1步：为整个课程确定五到十个大概念
+- line: 712
+  before: 第 2 步：确定全年的主题、概念、技能和社会问题序列
+  after: 第2步：确定全年的主题、概念、技能和社会问题序列
+- line: 754
+  before: 第 3 步：确定本课需要学习的主要概念
+  after: 第3步：确定本课需要学习的主要概念
+- line: 2465
+  before: 第 1 步：探索—学生以四人或更少的小团队工作，参与操作各种材料。
+  after: 第1步：探索—学生以四人或更少的小团队工作，参与操作各种材料。
+- line: 2472
+  before: 第 2 步：意义协商—学生与探索小组的其他成员讨论他们正在调查的问题的各个部分之间的发现和关系。
+  after: 第2步：意义协商—学生与探索小组的其他成员讨论他们正在调查的问题的各个部分之间的发现和关系。

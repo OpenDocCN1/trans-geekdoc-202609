@@ -1,0 +1,13 @@
+mathematics as “about replicating” and one can understand her notion of mathematics not requiring a great deal of thinking. She states,
+
+> I am forced to think [in math] too but I already know what I am going to get so I don’t have to think as much. In English you have to come up with your own ideas. Before they used to tell you what you have to write your essay on and now it is just whatever is in your head. It is hard because you don’t know what is there...but with math you either got to do this or that.
+
+Another student who studied in an inquiry classroom compared his thinking in the two types of classrooms. He states,
+
+> Teachers I had before would just teach math and they would help you write out ways, instead of try to take your time to understand it yourself. Usually they want you to do math just to solve problems... [and follow] their way of thinking of math. [My inquiry teacher] wants us to find how we think of math and how we know math.... We use our own way of thinking and join [my teacher’s] ideas with our own perspective. She wants us to expand our ideas and view other perspectives, including mostly ours (Katz 2009).
+
+Many students in inquiry math classrooms change their notion of problem solving. They come to see there are different ways to think about a problem; thus, there are different ways to approach the process of solving the problem.
+
+> My problem solving strategies have changed drastically. The way I think is way different than the way I thought last year. I look at math in a different perspective since I’m seeing how the real world can relate to math in so many different ways. So when I’m solving a problem I look for more than one answer or another way of solving the problem. Before I always thought of only finding one answer, and if I didn’t know the answer right away, I would just give up. [It] is helping my mind advance in math because of all the thinking you have to do.
+
+What we often hear from students is that mathematics is irrelevant, boring, and hard. However, teaching using an inquiry approach has the possibility of changing students’ minds and even helping them feel joy in mathematics. Students’ productive disposition changes because they begin to see that math is much more open and welcoming of different ways of thinking. Paul Lockhart states what could happen to a student if he or she studied in an inquiry classroom. So I close this presentation with these powerful words.

@@ -1,0 +1,7 @@
+Over the years, I changed the seating arrangements multiple times in my own classrooms throughout my evolution to inquiry teaching. I have also visited hundreds of other classrooms and have seen many seating configurations. What I present below is the arrangement that seems to best meet all the criteria, and yet works handily on a day-to-day basis. It works well at all grade levels.
+
+# Figure 4.3 Classroom Design to Support Students Working in Groups
+
+![](bbox=[0.25, 0.21, 0.75, 0.48])
+
+The teacher begins at the middle teaching table, but he or she is soon cruising the room moving from group to group. Getting from one group to another is a matter of moving only several feet. All four walls have places to record on chart paper. There is no front of the room. If there is a quick whole-class discussion called by the teacher in the midst of the exploration phase, students stay seated as they are in this set-up. However, if there is to be an extensive whole class discussion, as there is in the concept clarification phase, then half of the students move their chairs a few feet as demonstrated in Figure 4.4. This chair-moving process after the first few times takes about one minute. The chairs are moved so that every student can hear and see each other easily.
