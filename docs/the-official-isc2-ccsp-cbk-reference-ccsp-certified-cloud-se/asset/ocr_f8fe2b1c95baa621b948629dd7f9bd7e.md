@@ -1,0 +1,15 @@
+characteristics of cloud computing will allow you to distinguish between cloud solutions and noncloud solutions. This is important as these characteristics result in certain security challenges that may not be shared by noncloud solutions.
+
+# On-Demand Self-Service
+
+The NIST definition of cloud computing identifies an on-demand service as one “that can be rapidly provisioned and released with minimal management effort or service provider interaction.” This means the user must be able to provision these services simply and easily when they are needed. If you need a Dropbox account, you simply set up an account and pay for the amount of storage you want, and you have that storage capacity nearly immediately. If you already have an account, you can expand the space you need by simply paying for more space. The access to storage space is on demand. Neither creating an account nor expanding the amount of storage available requires the involvement of people other than the customer. This access is automated and provided via a dashboard or other simple interface.
+
+This can facilitate the poor practice often labeled as shadow IT. The ease with which a service can be provisioned makes it easy for an individual, team, or department to bypass company policies and procedures that handle the provisioning and control of IT services. A team that wants to collaborate may choose OneDrive, Dropbox, SharePoint, or another service to facilitate collaboration. This can lead to sensitive data being stored in locations that do not adhere to required corporate controls and places the data in locations the larger business is unaware of and cannot adequately protect.
+
+The pricing of these services may fall below corporate spending limits that would otherwise trigger involvement of the vendor management office (VMO) and information security and may simply be placed on a purchase card rather than through an invoice and vendor contract. Without VMO involvement, the corporate master services agreement will not be in effect.
+
+If this behavior is allowed to proliferate, the organization can lose control of its sensitive data and processes. For example, the actuary department at an insurance company may decide to create a file-sharing account on one of several available services. As information security was not involved, company policies, procedures, risk management, and controls programs are not followed. As this is not monitored by the security operations center (SOC), a data breach may go unnoticed, and the data that gives the company a competitive advantage could be stolen, altered, or deleted.
+
+# Broad Network Access
+
+Cloud services assume the presence of a network. For public and community clouds, this is the Internet. For a private cloud, it could be the corporate network—generally an IP-based network. In either case, cloud services are not local solutions stored on

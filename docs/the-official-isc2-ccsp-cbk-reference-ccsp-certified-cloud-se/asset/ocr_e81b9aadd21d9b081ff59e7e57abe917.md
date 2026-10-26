@@ -1,0 +1,14 @@
+# Specified Legal and Regulatory Retention Periods
+
+All organizations should retain data for as long as it is functionally useful; otherwise, the organization faces a loss of availability. This may be marked by obvious milestones such as the end of a customer relationship or project, after which the data is no longer valuable to the organization and can be deleted. Any organization dealing with regulated data like PII is also likely to have external obligations for data retention, which are often legally enforceable. Some examples of external regulations include the following:
+
++   - **HIPAA:** Affects all U.S. residents and specifies a six-year retention period for documents, such as policies and procedures, relevant to the HIPAA compliance program. Retention of patient medical data is not directly mentioned in HIPAA but is specified by many state-level laws that require medical records be retained for as long as a patient is active and then for a set period of time thereafter.
++   - **EU GDPR:** Affects data of EU citizens; it does not set a specific retention period but rather provides for indefinite retention so long as a data subject has given consent and the organization has a legitimate need for the data. If consent is revoked or the organization must act on the revocation by deleting, destroying, or anonymizing the data.
+
+# Data Retention Practices
+
+The organization’s data retention policy should specify what data is to be retained and why. Procedures should also be documented to specify how those retention goals will be met, including details regarding the following:
+
++   - **Schedules:** Data and records retention often refers to a schedule of retention, which is the period of time the data must be held for. These are often included in data labels to enable the discovery of data that is no longer required and can be destroyed.
++   - **Integrity checking:** Whenever data is copied, there is a chance something could go wrong, and data stored may fall victim to environmental issues like heat or humidity, which damage the storage media. Integrity checking procedures should be established to verify data when it is written and periodically thereafter to ensure it is readable and complete.
++   - **Retrieval procedures:** Data may have different access requirements across different environments. Typically, there will be more users authorized to access data in a live production environment as it is needed to support operations, while data in an archive may only be needed by a more limited set of users, like the legal department when responding to a lawsuit or auditors reviewing regulatory compliance. Retrieval procedures should include proper authorization artifacts like approved access requests and enforce accountability for data usage.

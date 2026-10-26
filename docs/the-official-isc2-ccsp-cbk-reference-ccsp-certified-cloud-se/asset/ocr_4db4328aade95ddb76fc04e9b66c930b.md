@@ -1,0 +1,13 @@
+with data, hardware and software failures, or natural disasters can render data or storage media unusable.
+
++   - **Theft or media loss:** This threat applies more to devices that can be easily accessed and stolen, such as laptops and universal serial bus (USB) drives; however, the risk of theft for cloud data storage assets like hard drives does exist. CSPs retain responsibility for preventing the loss of physical media through appropriate physical security controls. Consumers can mitigate this risk by ensuring adequate encryption is used for all data stored in the cloud, which renders the stolen data useless unless the attacker also has the key.
++   - **Malware and ransomware:** Any location with data storage and processing abilities is at risk from malware, particularly ransomware. Attackers have become more sophisticated when writing ransomware, so it not only encrypts data stored on locally attached drives but also seeks common cloud storage locations like well-known collaboration SaaS apps. Proper access controls and anti-malware tools can prevent or detect malware activities.
++   - **Improper disposal:** Like physical drive loss, the CSP has the majority of responsibility when it comes to disposal of hardware. Ensuring hardware that has reached the end of its life is properly disposed of in such a way that data cannot be recovered must be part of the CSP's services. Consumers can protect data by ensuring it is encrypted before being stored in the cloud service and that the encryption keys are securely stored away from the data.
+
+# DESIGN AND APPLY DATA SECURITY TECHNOLOGIES AND STRATEGIES
+
+Data security in the cloud comprises a variety of tools and techniques. According to the shared responsibility model published by the major CSPs, consumers are responsible for securing their own data. Under most privacy legislation, the data owner, who is usually the cloud consumer, is ultimately accountable and legally liable for data breaches. However, adequately securing data requires actions by both the cloud consumer and the CSP to properly secure elements such as the hardware infrastructure and physical facilities.
+
+# Encryption and Key Management
+
+Encryption is the process of applying mathematical transformations to data to render it unreadable. It typically requires the use of a key or cryptovariable, which is a string of data used by the cryptographic system to transform the data. The steps taken to achieve the transformation are known as an *algorithm*.

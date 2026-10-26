@@ -1,0 +1,13 @@
+delay the update at their discretion. This is advantageous for uptime as a user may not want to restart their machine in the middle of an important task, though it does lead to the problem of software never being updated, which means vulnerabilities fixed by that update are also not addressed.
+
+# ✓ Immutable Infrastructure
+
+Cloud services have significantly shifted the way many organizations build their information system environments. In traditional models, a physical location with utilities had to be built, appropriate equipment like servers and routers installed, and then operating systems and application software installed on top of that hardware. Once installed, software was placed into an operations and maintenance cycle where new patches or features were installed, but often the basic infrastructure was untouched for years, due to the time and cost involved. You wouldn’t go out and build a whole new data center just to apply a minor patch! This led to sometimes “stale” assets such as hardware or software that hadn’t been updated or that had drifted away from a secure configuration, which can introduce major vulnerabilities.
+
+In cloud environments where all resources exist as virtual pools, there are fewer limitations on building virtual infrastructure, tearing it down, and rebuilding it. This gives rise to the idea of immutable architecture, which is built as needed, remains in a consistent state in line with a validated image during its (rather short) useful life, and then is destroyed and replaced by a new version when the system is next deployed. This helps overcome the problem of assets becoming stale by ensuring systems with up-to-date patches are always deployed and by blocking the infrastructure from being changed, which is why it’s called *immutable*, which means unchangeable.
+
+# Configuration Management
+
+Configuration management (CM, not to be confused with change management, which is also abbreviated CM) comprises practices, activities, and processes designed to maintain a known good configuration of something. *Configuration items* (CIs) are the things that are placed under configuration control and may be assets such as source code, operating systems, documentation, or even entire information systems.
+
+Changes to CIs are usually required to go through a formal change process designed to ensure the change does not create an unacceptable risk situation, such as introducing

@@ -1,0 +1,13 @@
+# Infrastructure as Code
+
+Similar to immutable architecture, which supports configuration management security goals for cloud consumers by preventing unwanted changes, infrastructure as code can help organizations ensure known good versions of infrastructure are deployed. This might include specially hardened OS or applications, network configurations, or other elements of infrastructure.
+
+Infrastructure as code is a form of virtualization whereby system configuration information is written as a definition file that can be used by the cloud service to create machines with particular settings, rather than manual hardware and software configuration. In this way, developers can specify their application’s needed infrastructure, and all instances will be configured according to that definition, ensuring that properly patched and configured systems are deployed automatically without the need for human intervention. While it’s possible human error might occur in writing a definition file, it’s less likely than an error in a mundane repetitive task like building and deploying servers.
+
+# Service Level Management
+
+In the ITSM view of IT as a set of services, including information security, there is a function for defining, measuring, and correcting issues related to delivery of the services. In other words, performance management is a critical part of ITSM. This is closely related to the process of continual service improvement, and in fact, the same metrics are likely to be used by the organization to determine if services are meeting their defined goals.
+
+Service level management rests on the organization’s defined requirements for a service. The most common service level many cloud organizations encounter is availability, often expressed as a percentage of time that a system can be reached and utilized, such as 99.9 percent. A service with a 99.9 percent availability level must be reachable approximately 364.64 days per year; put another way, the system can only be down for less than 24 hours each year. Examples of other service levels that may be managed include number of concurrent users supported by a system, durability of data, response times to customer support requests, recovery time in the event of an interruption, and timeframes for deployment of patches based on criticality.
+
+A key tool in managing service levels is the service level agreement (SLA), which is a formal agreement similar to a contract, but focused on measurable outcomes of the service being provided. This measurement aspect is what makes SLAs critical elements of security risk mitigation programs for cloud consumers, as it allows them to define, measure, and hold the cloud provider accountable for the services being consumed.

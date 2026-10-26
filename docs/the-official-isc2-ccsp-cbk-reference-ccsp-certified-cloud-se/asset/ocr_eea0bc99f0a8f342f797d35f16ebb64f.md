@@ -1,0 +1,15 @@
+In a BCP, business operations must continue, but they often continue from an alternate location. So, the needs of BCP include space, personnel, technology, process, and data. The cloud can support the organization with many of those needs. A cloud solution provides the technology infrastructure, processes, and data to keep the business going.
+
+Availability zones in a region are independent data centers that protect the customer from data center failures. Larger CSPs like AWS, Azure, and Google define regions. Within a region, latency is low. However, a major disaster could impact all the data centers in a region and eliminate all availability zones in that region. A customer can set up their plan to include redundancy across a single region using multiple availability zones, or redundancy across multiple regions to provide the greatest possible availability of your necessary technology, processes, and data.
+
+One drawback of multiregion plans is that the cost grows quickly. For this reason, many organizations only put their most critical data—the core systems that they cannot operate the business without—across two or more regions, but less critical processes and data may be stored in a single region. Functions and data that are on-premise may also utilize cloud backups. But they may not be up and running as quickly as the cloud-based solutions. The business keeps operating, although not all business processes may be enabled.
+
+DRPs rely heavily on data backups. A DRP is about returning to normal operations. And returning the data to the on-premise environment is part of that. After the on-premise infrastructure has been rebuilt, reconfigured, or restored, the data must be returned.
+
+One failure of many DRPs is the lack of an offsite backup or the ability to quickly access that data backup. In the cloud, a data backup exists in the locations (regions or availability zones) you specify and is available from anywhere network access is available. A cloud-based backup works only if you have network access and sufficient bandwidth to access that data. That must be part of the DRP, along with an offsite data backup. A physical, local backup can also be beneficial. Not every disaster destroys the workplace.
+
+# Cost-Benefit Analysis
+
+Cloud computing is not always the correct solution. Which is the correct solution is a business decision guided by a cost-benefit analysis. Cloud computing benefits include reduced capital costs as the individual customers no longer have to buy the hardware and system software that the CSP provides. The lowered capital expenses are offset by higher operating costs, as the customers must pay for the services used.
+
+In many countries, capital expenses and operational expenses are treated very differently for tax purposes. For example, capital expenses may be written off or depreciated over a number of years. To write off the entire business of expenses of new infrastructure,

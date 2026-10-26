@@ -1,0 +1,13 @@
+compliance may all be relevant to some investors, and due to legal requirements, certain security details may be required.
+
++   - **Crisis communication:** An incident that causes significant disruption or disturbance such as a natural disaster may require communications to multiple stakeholder groups at once. Internal employees, business partners, investors, and the general public may all be impacted by a business disruption; in this case, the organization’s communications personnel should have documented procedures, and security practitioners should look to these personnel for guidance on what information may be required.
+
+# MANAGE SECURITY OPERATIONS
+
+Security operations represent all activities undertaken by an organization in monitoring, maintaining, and generally running their security program. This may include continuous oversight of security systems to identify anomalies or incidents, as well as an organizational unit to house concerns related to security processes like incident response and business continuity. A large percentage of security process and procedure documentation will be attached to this function, and these processes should also be the target of continuous improvement efforts.
+
+As in many security topics, an ISO standard exists that may be useful for security practitioners conducting security operations: ISO 18788, *Management system for private security operations — Requirements with guidance for use*. A word of caution: this document contains a great deal of material not applicable to cybersecurity or infosec concerns, as the numbering might imply (it is not part of the 27000 series). One extraneous topic is implementing and managing a private security force with authorization to use force; however, it also provides a business management framework for understanding the organization’s needs, guidance on designing strategic and tactical plans for operating security programs, and applying a risk management approach. It also suggests a standard plan, do, check, act framework for implementing and improving security operations.
+
+# Security Operations Center
+
+The security operations center (SOC) is an organizational unit designed to centralize a variety of security tasks and personnel at the tactical (mid-term) and operational (day-to-day) levels of the organization. While security strategy may rely on input from top leaders such as a board of directors, department secretary or minister, or the C-suite executives, SOC personnel are responsible for implementing steps required to achieve that strategy and maintain daily operations. Building and running a SOC in a traditional,

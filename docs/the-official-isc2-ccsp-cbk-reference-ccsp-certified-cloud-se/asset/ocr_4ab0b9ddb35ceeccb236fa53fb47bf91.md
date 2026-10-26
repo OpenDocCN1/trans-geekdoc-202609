@@ -1,0 +1,7 @@
+# Cloud Data Security
+
+RESPONSIBILITY FOR MANY ELEMENTS of cloud security are shared between the cloud service provider (CSP) and the cloud consumer, while each party retains exclusive control over some elements. For example, the CSP is always responsible for the physical security of the infrastructure, while the consumer retains control over the identity and access management concerns of their applications and services. When it comes to securing data stored in the cloud, the most important thing to remember is that the consumer is always ultimately accountable, which means they must not only take steps to secure data but also ensure the CSP is implementing adequate security practices.
+
+# DESCRIBE CLOUD DATA CONCEPTS
+
+Data is a crucial element to most modern organizations, so processes to provision and secure the systems that store, process, and transmit that data are essential. The cloud strategy for most organizations will include a variety of personnel in different roles, from the top C-level executives or other executive management all the way to operational personnel responsible for day-to-day functions such as data input and processing. To provide adequate security, it is vital to have a model for understanding how data is created, stored, and used in the cloud environment such as the cloud data lifecycle.

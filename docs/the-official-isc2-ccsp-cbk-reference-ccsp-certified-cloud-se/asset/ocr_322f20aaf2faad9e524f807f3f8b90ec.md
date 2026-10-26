@@ -1,0 +1,5 @@
+Observations from Industry), NIST SP800-161 (Supply Chain Risk Management Practices for Federal Information Systems and Organizations), and the 2015 ENISA publication on supply chain integrity.
+
+# SUMMARY
+
+A cloud security professional must be constantly aware of the legal and compliance issues in migrating and maintaining systems in the cloud. Understanding the legal requirements, privacy issues, audit challenges, and how these relate to risk and contracts with cloud providers is a must for any company taking advantage of cloud services. A cloud security professional must also be well versed in the frameworks provided by professional organizations such as ENISA, NIST, ISO, and the CSA. All information security is essentially a business risk, and understanding and mitigating the risks faced by a company is critical to any business strategy. Any cloud security professional should understand the role that IT plays in this larger picture and have the communication and people skills to involve the appropriate business, legal, and risk decision-makers within a company.
