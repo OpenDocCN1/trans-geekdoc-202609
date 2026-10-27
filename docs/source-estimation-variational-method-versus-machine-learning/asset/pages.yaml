@@ -1,0 +1,543 @@
+- pgno: 0
+  md: '# Source Estimation: Variational Method
+
+    Versus Machine Learning Applied to Urban
+
+    Air Pollution*
+
+
+    **R. Lopez-Ferber***, **S. Leirens***, **D. Georges****
+
+
+    * Univ. Grenoble Alpes, CEA, Leti, F-38000 Grenoble, France
+
+    ** Univ. Grenoble Alpes, CNRS, Grenoble INP (Institute of Engineering and Management),
+    GIPSA-lab, F-38000 Grenoble, France
+
+
+    **Abstract:** Source detection is a research field of growing interest due to
+    environmental concerns about air quality in populated areas. We developed a data-driven
+    approach based on a multilayer perceptron neural network and inspired by previous
+    works on road traffic estimation. We then compared it to a classical variational
+    method (3D-Var) on a one-dimensional and stationary model of pollution concentration.
+    We tested source reconstruction with datasets of synthetic measurements generated
+    by 12 and 50 sensors with and without noise. Both methods appear to be reasonably
+    robust to measurement noise and the neural network performs slightly better compared
+    to the classical 3D-Var method.
+
+
+    Copyright © 2022 The Authors. This is an open access article under the CC BY-NC-ND
+    license (https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
+
+    *Keywords:* Source detection, source estimation, air pollution, advection-diffusion
+    partial differential equations, neural network, variational methods, 3D-Var.
+
+
+    # 1. INTRODUCTION
+
+
+    Today public policies are more and more interested in topics related to environmental
+    risk assessment and air quality monitoring, where the detection of pollutant sources
+    plays a key role. Source reconstruction has been widely used in the domain of
+    civilian and military nuclear. For example, the Comprehensive Test Ban Treaty
+    adopted in 1996 by the United Nations has encouraged researchers to develop methods
+    of source detection using a global network of radionuclides sensors measurements
+    to monitor compliance with this treaty. In this context, Pudyakiewicz (1998) has
+    applied adjoint method to retrieve source parameters such as location, time and
+    amount of release of radionuclides. Other works dealt with source rate estimation
+    of the damaged Fukushima power plant during its accident in 2011. Winiarkek et
+    al. (2014) used a merged Bayesian and variational estimation method to estimate
+    with known uncertainty this source rate. On the other hand, there is a growing
+    interest for the estimation of pollution sources in urban areas (e.g. Mons et
+    al. (2017), Kumar et al. (2015)). In the context of a continuous point-wise source
+    of pollution in urban environment, Kumar et al. (2015) used an adjoint method
+    combined with a CFD (Computational Fluid Dynamics) model to retrieve source rate
+    and source position in a stationary context. Ensemble methods are also cited in
+    the literature. Mons et al. (2017) used an ensemble-based variational approach
+    (EnVar) with an accurate but very computationally-expensive CFD model to estimate
+    the diameter and position of a puddle of a volatile pollutant in a stationary
+    and urban context.
+
+
+    To the best of our knowledge, machine learning has not been widely used for source
+    detection so far. Recently,
+
+
+    a machine learning approach has been applied to solve an inverse problem dealing
+    with road traffic estimation (Georges (2020)). This approach has inspired the
+    present work, where a feed forward Neural Network (NN) is used with a few hidden
+    layers. This data-driven method avoids any use of calculus of variations such
+    as in variational methods and so, avoids to call a dispersion model inside an
+    optimisation framework. Moreover, NNs are not computationally expensive once the
+    training is performed, compared to variational methods, especially those based
+    on complex CFD models. NN training is needed performed off-line, i.e. before the
+    exploitation phase. This paper proposes a method to reconstruct a source of pollution
+    in urban area in the case of a one-dimensional domain and stationary conditions
+    to consider firstly pollutant dispersion in isolated streets. The machine learning
+    approach is compared with a classical model-based variational approach (3D-Var)
+    which is usually considered as a reference in terms of estimation accuracy.
+
+
+    The paper is now organized as follows: Section 2 presents the pollutant transport
+    model and its finite-dimensional approximation. It also justifies the choices
+    of wind velocity and diffusion coefficient used in the model. Section 3 details
+    the proposed machine learning method and briefly presents the variational approach.
+    Numerical simulation results are given in Section 4 whilst concluding remarks
+    are discussed in Section 5.
+
+
+    # 2. POLLUTANT TRANSPORT MODELLING
+
+
+    In this paper, a stationary physical model is used to model the concentration
+    of pollutants. In a one-dimensional context where a stationary source has emitted
+    long enough to reach stationarity, the dynamics of pollutant concentration
+
+
+    * This work is supported by The French Alternative Energies and Atomic Energy
+    Commission'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/97952697a39a4e1dbafa6b892d1afef5_2_0.png)
+
+
+    Fig. 1. Example of the architecture of the neural network source inversion. Here
+    with 5 input measurements sampled from the same simulation (orange) and one scalar
+    wind input (orange), one hidden layer of 10 neurons activated with tanh function
+    (blue) and 3 outputs $\tilde{\theta}_j$, $j \in \{1,2,3\}$ corresponding to rescaled
+    source parameters such as its amplitude, position and dispersion.
+
+
+    **Inputs:** Two tensors, $\mathbf{U}^m \in \mathbb{R}^{n_s \times N_s}$ and $\beta
+    \in \mathbb{R}^{n_s}$ respectively representing $n_s$ examples of $N_s$ measurements
+    and corresponding wind data are given to the Neural Network as inputs. The tensor
+    $\mathbf{U}^m$ is built firstly by running $n_s$ model simulations with various
+    wind speeds $c$ and source parameters $\theta$ using the physical model (1) on
+    $N$ points. Then, simulation results are sampled using the measurement operator
+    described in (4), (5) and (6).
+
+
+    **Outputs:** $\Theta \in \mathbb{R}^{n_s \times 3}$ is a tensor containing $n_s$
+    different vector of source parameters, where each line of $\Theta$ is of the form,
+    $\Theta_k=[\theta_k(1),\theta_k(2),\theta_k(3)]$, $1 \leq k \leq n_s$. To avoid
+    biases in the training process cause by the difference of magnitude of each source
+    parameter, source parameters need to be scaled to the same order of magnitude.
+    To perform this, we build a scaled tensor $\tilde{\Theta}$ were each parameter
+    are scaled using the transformation,
+
+
+    $$\tilde{\theta}(j)=\frac{\theta(j)-\min(\Theta(j))}{\max(\Theta(j))}, \qquad
+    1\leq j\leq 3.$$ \tag{7}
+
+
+    Thus the model returns an estimation of the adimensional parameters as an output.
+    A rescaling is applied to the output estimate using $\min(\Theta(j))$ and $\max(\Theta(j))$
+    obtained at the training process.
+
+
+    **Training Data:** $n_{\mathrm{train}} \in \mathbb{N}$ of simulations of pollutant
+    dispersion with various wind speeds $c$ and source parameters $\theta$ have to
+    be performed to generate a training and a validation set. To cover all the realistic
+    domain of possible training samples, wind speeds and training source parameters
+    are generated by using a Sobol pseudo-random sequence with low discrepancy property.
+    Low-discrepancy sequences are known to ensure “a good filling of the domain” in
+    the sense of the best approximate computation of function integrals for a given
+    number of samples (see Niederreiter (1988)).
+
+
+    # 3.2 Variational approach
+
+
+    The variational method rely on the minimization of the least-square error between
+    output predictions based on a known model and measurement data. These kinds of
+    methods are widely used and considered as a standard way to estimate parameters
+    given some measurement especially with the use of an adjoint model (Georges (2019)
+    ). Here, we propose to apply a variational method to a stationary problem where
+    $u$ can be expressed as an explicit function of $\theta$ thanks to the finite-difference
+    model, thus avoiding the explicit use of an adjoint model. The 3D-Var cost function,
+    which consists in minimizing the output prediction error in the least-square sense,
+    is chosen. A regularisation term (see Tikhonov (1977)) depending on an initial
+    guess, is added such that the entire cost function is given by,
+
+
+    $$\mathcal{J}(\theta)=\frac{1}{2}(\theta-\theta^b)^T\mathbf{B}^{-1}(\theta-\theta^b)+\frac{1}{2}(\mathcal{F}(\theta)-u^m)^T\mathbf{R}^{-1}(\mathcal{F}(\theta)-u^m),
+    \tag{8}$$
+
+
+    where $u^m$ denotes the vector of concentration measurements provided by the sensors
+    and $\theta^b$ refers to an initial guess, with
+
+
+    $$\mathcal{F}(\theta)=\mathcal{H}\circ\mathcal{M}(\theta). \tag{9}$$
+
+
+    $\mathcal{F}$ denotes the forward operator which is a composition of the observation
+    operator $\mathcal{H}$ with $\mathcal{M}$ given by (1), where $\mathcal{H}$, given
+    by (5), maps the concentration returned by the model on the whole domain to the
+    space of the measurements. Matrices $\mathbf{B}$ and $\mathbf{R}$ respectively
+    denote the covariance matrices of the uncertain initial guess and measurement
+    noise. We assume here that the noises are uncorrelated so that $\mathbf{B}$ and
+    $\mathbf{R}$ are diagonal and with an equal variance. $\sigma^b$ and $\sigma$
+    are the standard deviations associated with initial guess and observations.
+
+
+    The data-assimilation problem
+
+
+    $$\min_{\theta}\mathcal{J}(\theta) \tag{10}$$
+
+
+    is infinite-dimensional. In this paper, the choice is made to solve a direct finite-dimensional
+    version of this problem, based on the finite-dimensional approximation of model
+    (1) given by (3), that is
+
+
+    $$\min_{\theta}\mathcal{J}_a(\theta)=\frac{1}{2}(\theta-\theta^b)^T\mathbf{B}^{-1}(\theta-\theta^b)+\frac{1}{2}\left\|\mathbf{H}_a\mathbf{A}^{-1}(\mathbf{B}_1q(\theta)+\mathbf{B}_2\mathbf{C})-u^m\right\|_{\mathbf{R}^{-1}}^2.
+    \tag{11}$$
+
+
+    where $\mathbf{H}_a$ is the matrix obtained from the approximation of the $N_s$-sensor
+    integral operator $\mathcal{H}$ given by (5), based on a trapezoidal method. The
+    solution of this non-convex problem requires the computation of the gradient of
+    $\mathcal{J}_a(\theta)$ w.r.t. $\theta$, that is
+
+
+    $$\nabla\mathcal{J}_a(\theta)=\mathbf{B}^{-1}(\theta-\theta^b)+\left(\mathbf{H}_a\mathbf{A}^{-1}\mathbf{B}_1\frac{\partial
+    q}{\partial\theta}(\theta)\right)^T\mathbf{R}^{-1}(\mathbf{H}_a u-u^m). \tag{12}$$
+
+
+    with $u$ obtained with (3). Here, the solution of optimization problem (11) is
+    carried out by using a quasi-Newton descent method based on the L-BFGS-B algorithm
+    (see Byrd et al. (1995)) and gradient (12).'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 4. CASE STUDY : SOURCE IDENTIFICATION IN A STREET
+
+
+    The here-proposed case study refers the detection of a polluting vehicle stopped
+    somewhere on a boulevard with its motor turned on. It is assumed that stationary
+    conditions of the pollution distribution are obtained under constant wind velocities.
+    We could also consider a situation where another point-wise source such as a gas
+    leak emit in a stationary regime.
+
+
+    # 4.1 Parameters
+
+
+    The training database is built by building the set of parameters,
+
+
+    {p_k = [A_{s,k}, x_{s,k}, σ_{disp k}^2, c_k] ; 1 ≤ k ≤ n_train} , (13)
+
+
+    with [A_s, x_s, σ_disp^2, c_k] ∈ [10^{-2},4] × [0.1,0.9] × [50,2000] × [-10^{-3},10^{-3}]
+    generated by a Sobol sequence beginning from its 10001^{st} term, with units [g
+    km^{-3} s^{-1}, km, km^{-2}, km s^{-1}] respectively. The validation set is created
+    in the same manner with n_test samples, choosing [A_s, x_s, σ_disp^2, c] ∈ [5
+    × 10^{-2},3] × [0.1,0.9] × [70,1500] × [-10^{-3},10^{-3}], the sequence starts
+    at its 101^{st} term. Source position is purposely generated so that x_s ∈ [0.1
+    km,0.9 km] to avoid to generate sources which would be located too close to the
+    domain boundaries, that could lead to a non-physical solution of our dispersion
+    model given by (1). Our database contains n_train = 15000 training samples, whilst
+    validation is applied on n_test = 200 samples. As a metric of performance, the
+    Relative Root-Square Error (RRSE) is chosen, defined by,
+
+
+    RRSE = ||q̂ - q_T||_2 / ||q_T||_2 , (14)
+
+
+    where (q_T, q̂) ∈ ℝ^{N_x}^2 are respectively the real source profile and its estimate.
+    To facilitate the convergence of the variational method, the initial guess is
+    given by
+
+
+    θ_k^b = [0, arg max_x(u_k^m), 0] , 1 ≤ k ≤ n_test; (15)
+
+
+    meaning that the initial guessed source position is located at the largest measured
+    concentration. The initial guess is used both in the cost function and as initialization
+    of the L-BFGS-B descent method.
+
+
+    The best neural network architecture has been obtained after some trials. Hence
+    the chosen NN contains 2 fully-connected hidden layers of 50 neurons each, with
+    the tanh activation function. The optimization is carried out using the L-BFGS-B
+    algorithm. L_2 regularization is set at a low value of 10^{-12}. The machine learning
+    approach is built using keras and tensorflow libraries under Python.
+
+
+    # 4.2 Comparison without noise
+
+
+    Experiment with 12 sensors: Simulations are performed without noise to determine
+    how NN performs compared to the 3D-Var. Several very aberrant estimates returned
+    by the NN (certainly due to non physical conditions in the training process) and
+    bad estimates from 3D-Var (due to non convergence of the BFGS algorithm) are excluded:
+    16 out of 200, leading to the study of 184 estimates.
+
+
+    ![](img/97952697a39a4e1dbafa6b892d1afef5_3_0.png)
+
+
+    Fig. 2. Example of source reconstruction : left, with a neural network; right,
+    with a variational method.
+
+
+    Based on this experiment, the neural network is able to estimate a source with
+    an RRSE in the same order of magnitude than with the standard 3D-Var, with RRSE
+    mean and standard deviation of μ_RRSE^NN = 0.22 and σ_RRSE^NN = 0.12 and μ_RRSE^var
+    = 0.31 and σ_RRSE^var = 0.21 for NN and 3D-Var respectively. Overall the Neural
+    Network performs slightly better. This is probably due to the fact that the variational
+    approach is a non convex optimization problem. Therefore, some local minima may
+    lead to near optimal solutions with significant differences in the parameter values.
+
+
+    The RRSE obtained with the machine learning and variational approaches follow
+    a log-normal law confirmed by the use of a Kolmogorov-Smirnov test (p-value =
+    0.39 > 0.05 and 0.44 > 0.05 respectively). The distributions of RRSE are shown
+    in Fig. 3.
+
+
+    The machine learning approach method is data-driven and thus does not contain
+    any a priori information on the physical model whereas the variational approach
+    relies on the knowledge of the physics and on a good guess as given by (15). We
+    notice that the RRSE metric is sensitive to a slight error of estimated position.
+    For example in the case of the 65^{th} sample of validation illustrated in Fig.
+    2, the neural network estimates well the magnitude and the dispersion, but a slight
+    error of position leads to an RRSE^NN = 0.16 for the neural network against RRSE^var
+    = 0.04 for the variational approach respectively.
+
+
+    Overall, without noise and using 12 sensors in total (10 regularly spaced in the
+    domain and 2 that measure the boundary conditions), the machine learning approach
+    performs slightly better than the variational approach with respect to the RRSE
+    metric. The NN sometimes returns non-physical estimates such as negative sources
+    or non-Gaussian sources. Fig. 4 shows that the performance of the two methods
+    are similar.
+
+
+    Experiment with 50 sensors: Simulations with 50 sensors are carried out to observe
+    a sensitivity of the estimations towards measurement density. Several non-physical
+    estimates returned by the neural network or by the variational approach are excluded
+    of the network: 9 out of 200, leading to the study of 191 estimates. Both methods
+    return similar results as previously, with mean and standard deviation of μ_RRSE^NN
+    = 0.13 and σ_RRSE^NN = 0.08 compared to μ_RRSE^var = 0.24 and σ_RRSE^var = 0.15
+    for NN and 3D-Var respectively.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'This means that the error decreased by about a half for the NN and by one third
+    for 3D-Var compared to using 12 sensors. Again the Neural Network performs better
+    than 3D-Var. As with 12 sensors, RRSE distributions follow log-normal law with
+    a Kolmogorov-Smirnov test (p-value = 0.19 > 0.05 for the NN and p-value = 0.90
+    > 0.05 for 3D-Var). Overall, source reconstruction using 50 noiseless sensors
+    (48 regularly spaced in the domain and 2 which measure the boundary conditions)
+    achieves 30 to 50% improvements compared to the case with 12 noiseless sensors.
+    Fig. 4 shows that the performance of the neural network is clearly better than
+    the 3D-Var, its distribution being narrower and closer to 0 on RRSE axis. On the
+    other hand, both methods improve with the use of 50 sensors instead of 12.
+
+
+    # 4.3 Comparison with noise
+
+
+    ![](img/97952697a39a4e1dbafa6b892d1afef5_4_0.png)
+
+
+    Fig. 3. Compared RRSE distributions of 3D-Var and NN estimates using 12 sensors,
+    without noise.
+
+
+    ![](img/97952697a39a4e1dbafa6b892d1afef5_4_1.png)
+
+
+    Fig. 4. Compared RRSE distributions of 3D-Var and NN estimates using 50 sensors,
+    without noise.
+
+
+    In this experiment, a gaussian noise ε_s^obs is applied to each sample s (1 ≤
+    s ≤ n_test or n_train) of data-set of concentration profiles given by the N_s
+    sensors following the procedure described in 2.2.
+
+
+    Thus the gaussian noise of a set of measurements has a constant variance, which
+    depends of the maximum of the noiseless-measured concentration profile. This hypothesis
+    is reasonably conservative because the lower measured values of a concentration
+    profile will be relatively noisier than its maximum value. The neural network
+    is trained
+
+
+    ![](img/97952697a39a4e1dbafa6b892d1afef5_4_2.png)
+
+
+    Fig. 5. Compared RRSE distributions of 3D-Var and NN estimates using 50 sensors,
+    with noise.
+
+
+    ![](img/97952697a39a4e1dbafa6b892d1afef5_4_3.png)
+
+
+    Fig. 6. Compared RRSE distributions of 3D-Var and NN estimates using 12 sensors,
+    with noise.
+
+
+    here with a noisy concentration dataset. The initial guess error used in 3D-Var
+    was modified from σ^b = 1 × 10^6 to σ^b = 5 × 10^4 to help to make the problem
+    more convex.
+
+
+    Experiment with 12 sensors: Simulations are performed with noise in the same way
+    as before. Several non-physical estimates returned by the NN or 3D-Var are excluded
+    from the results: 9 out of 200, leading to a panel of 191 estimates. Both methods
+    have similar performance in the presence of noise with mean and standard deviation
+    of μ_RRSE^NN = 0.48 and σ_RRSE^NN = 0.26 using the NN and μ_RRSE^var = 0.52 and
+    σ_RRSE^var = 0.23 using 3D-Var. Fig. 6 shows that the distribution of RRSE of
+    both methods are close to each other.
+
+
+    Experiment with 50 sensors: With 50 sensors, 48 regularly spaced and two measured
+    concentration values at boundaries, the results improve compared to the use of
+    12 sensors. This leads to mean and standard deviation metrics of μ_RRSE^NN = 0.40
+    and σ^NN = 0.21 using NN and μ_RRSE^var = 0.45 and μ_RRSE^var = 0.22 using 3D-Var.
+    Thus μ_RRSE^NN and μ_RRSE^var decreased by 17 and 13 % respectively with the use
+    of 50 sensors instead of 12. Hence the Neural Network performs slightly better
+    that the variational approach. However it can be seen in Fig. 5 that the distribution
+    of errors are still fairly close between the two methods. Again, error distributions
+    are proven to follow a log-normal law. The results of these 4 cases are illustrated
+    in table 1.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'Table 1. Measured mean and standard deviation of RRSE using the validation
+    samples for each case of study.
+
+
+    | Case |  |  | **NN** |  | **3D-Var** |  |
+
+    |---|---|---|---|---|---|---|
+
+    | N | N° sensors | noise | mean | std | mean | std |
+
+    | 184 | 12 | no | 0.22 | 0.12 | 0.31 | 0.21 |
+
+    | 191 | 50 | no | 0.13 | 0.08 | 0.24 | 0.15 |
+
+    | 191 | 12 | yes | 0.48 | 0.26 | 0.52 | 0.23 |
+
+    | 191 | 50 | yes | 0.40 | 0.21 | 0.45 | 0.22 |
+
+
+    # 5. CONCLUSIONS
+
+
+    With the use of a small number of noisy sensors, both methods perform similarly,
+    although the NN approach often returns more accurate source estimates. The machine
+    learning approach shows greater improvement in accuracy than the variational approach
+    as the sensor density is increased. The relative lack of performance of the variational
+    approach in some situations can be linked to the non-convexity of the associated
+    optimization problem. We have shown that the machine learning approach is able
+    to reconstruct sources even in the presence of noisy measurements. The sensor
+    noise decreases severely the performance of source estimation for both methods.
+    Overall, the performance of the Neural Network is as good or superior to the variational
+    approach as demonstrated by table 1. These results reveal that machine learning
+    approaches are promising for source detection in the context of urban air pollution.
+    Future work will consider in priority 2D and 3D urban models to capture horizontal
+    and vertical concentration profiles. Synthetic data generated by a realistic pollution
+    3D-model (such as PMSS,Oldrini et al. (2011)) and their corresponding wind fields
+    will be used as inputs. With the exception of wind field, inputs and outputs of
+    the NN such as measurements and source parameters will remain few for increased
+    physical domain dimensions. Model reduction techniques are promising to reduce
+    the number of wind field inputs in this context (Ding and Yang (2021)) and will
+    even permit to consider less restricted source parametrization. Convolutional
+    Neural Network (CNN) are also known for their capacity to capture relevant data
+    and thus to scale well with numerous inputs such as images (Ronneberger et al.
+    (2015)). Thus, once trained, a neural network model should be accurate and simple
+    enough for online monitoring of pollution sources in urban area. We could also
+    imagine to use a neural network approach to provide a proper initial guess to
+    a variational method such as 3D-Var or 4D-Var for greater accuracy at the end.
+    Variational method can also be improved by the use of reduced order models: it
+    would also be interesting to try to make the variational approach convex by considering
+    different parametrizations of the source term.
+
+
+    # ACKNOWLEDGEMENTS
+
+
+    The authors acknowledge the french nuclear and alternative energies commission
+    for the funding of this work and John D. Garrett (2021) for providing IEEE plot
+    styles thanks to his open-source module.
+
+
+    # REFERENCES
+
+
+    Byrd, R.H., Lu, P., Nocedal, J., and Zhu, C. (1995). A Limited Memory Algorithm
+    for Bound Constrained Optimization.
+
+
+    Optimization. SIAM J. Sci. Comput., 16(5), 1190–1208. Publisher: Society for Industrial
+    and Applied Mathematics.
+
+    Ding, S. and Yang, R. (2021). Reduced-order modelling of urban wind environment
+    and gaseous pollutants dispersion in an urban-scale street canyon. Journal of
+    Safety Science and Resilience, 2(4), 238–245.
+
+    Garrett, J. (2021). SciencePlots (v1.0.9).
+
+    Georges, D. (2019). A Variational Calculus Approach to Wildfire Monitoring Using
+    a Low-Discrepancy Sequence-Based Deployment of Sensors. In 2019 IEEE 58th Conference
+    on Decision and Control (CDC), 5912–5917. IEEE, Nice, France.
+
+    Georges, D. (2020). Machine Learning for Receding Horizon Observer Design: Application
+    to Traffic Density Estimation. IFAC, 2020 - 21st IFAC World Congress 2020, 7.
+
+    Kikumoto, H. (2020). Turbulent diffusivity limiter with travel time for eulerian-CFD
+    eulerian analysis of point-source pollutant dispersion. Wind Engineering Research,
+    26, 9.
+
+    Kumar, P., Feiz, A.A., Singh, S.K., Ngae, P., and Turbelin, G. (2015). Reconstruction
+    of an atmospheric tracer source in an urban-like environment. Journal of Geophysical
+    Research: Atmospheres, 120(24), 12589–12604. Publisher: John Wiley & Sons, Ltd.
+
+    Mons, V., Margheri, L., Chassaing, J.C., and Sagaut, P. (2017). Data assimilation-based
+    reconstruction of urban pollutant release characteristics. Journal of Wind Engineering
+    and Industrial Aerodynamics, 169, 232–250.
+
+    Niederreiter, H. (1988). Low-discrepancy and low-dispersion sequences. Journal
+    of Number Theory, 30(1), 51–70.
+
+    Oldrini, O., Olry, C., Moussaﬁr, J., Armand, P., and Duchenne, C. (2011). Development
+    of PMSS, the parallel version of micro-swift-spray. H14–176. 14th International
+    Conference on Harmonization within Atmospheric Dispersion Modelling for Regulatory
+    Purpose.
+
+    Pudykiewicz, J.A. (1998). Application of adjoint tracer transport equations for
+    evaluating source parameters. Atmospheric Environment, 32(17), 3039–3050.
+
+    Ronneberger, O., Fischer, P., and Brox, T. (2015). U-Net: Convolutional Networks
+    for Biomedical Image Segmentation. arXiv:1505.04597 [cs]. ArXiv: 1505.04597.
+
+    Tikhonov, A.N. (1977). Solution of Ill-posed Problems. Vh winston & sons edition.
+
+    Wang, J.W., Yang, H.J., and Kim, J.J. (2020). Wind speed estimation in urban areas
+    based on the relationships between background wind speeds and morphological parameters.
+    Journal of Wind Engineering and Industrial Aerodynamics, 205, 104324.
+
+    Winiareck, V., Bocquet, M., Duhanyan, N., Roustan, Y., Saunier, O., and Mathieu,
+    A. (2014). Estimation of the caesium-137 source term from the Fukushima Daiichi
+    nuclear power plant using a consistent joint assimilation of air concentration
+    and deposition observations. Atmospheric Environment, 82, 268–279.
+
+    Winiareck, V., Bocquet, M., Saunier, O., and Mathieu, A. (2012). Estimation of
+    errors in the inverse modeling of accidental release of atmospheric pollutant:
+    Application to the reconstruction of the cesium-137 and iodine-131 source terms
+    from the Fukushima Daiichi power plant. J. Geophys. Res., 117(D5), n/a–n/a.'
+  merge: -1
+  img_proc: true
