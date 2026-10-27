@@ -1,0 +1,104 @@
+level_changes:
+- line: 46
+  before: 2
+  after: 1
+- line: 293
+  before: 2
+  after: 1
+- line: 557
+  before: 2
+  after: 1
+- line: 826
+  before: 2
+  after: 1
+- line: 2125
+  before: 2
+  after: 1
+- line: 2282
+  before: 2
+  after: 1
+- line: 81
+  before: 1
+  after: 4
+- line: 1128
+  before: 1
+  after: 4
+- line: 1129
+  before: 1
+  after: 4
+- line: 1130
+  before: 1
+  after: 4
+- line: 1132
+  before: 1
+  after: 4
+- line: 1134
+  before: 1
+  after: 4
+- line: 1135
+  before: 1
+  after: 4
+- line: 1136
+  before: 1
+  after: 4
+- line: 1138
+  before: 1
+  after: 4
+- line: 1140
+  before: 1
+  after: 4
+- line: 1141
+  before: 1
+  after: 4
+- line: 1143
+  before: 1
+  after: 4
+- line: 1179
+  before: 1
+  after: 4
+- line: 1180
+  before: 1
+  after: 4
+- line: 1181
+  before: 1
+  after: 4
+- line: 1182
+  before: 1
+  after: 4
+- line: 1184
+  before: 1
+  after: 4
+text_changes:
+- line: 293
+  before: 第2章
+  after: 第 2 章：测试驱动开发
+- line: 557
+  before: 第5章
+  after: 第 5 章：缓存技术
+- line: 2125
+  before: Chapter 8
+  after: 第 8 章：最差实践
+- line: 2282
+  before: 第 9 章
+  after: 第 9 章：成为快乐的开发者
+- line: 501
+  before: When Not to Optimize
+  after: 何时不优化
+- line: 513
+  before: Adding Database Servers
+  after: 添加数据库服务器
+- line: 525
+  before: Adding Web Servers
+  after: 添加 Web 服务器
+- line: 537
+  before: The Benefits of Expanding Hardware
+  after: 扩展硬件的好处
+- line: 545
+  before: The Drawbacks of Expanding Hardware
+  after: 扩展硬件的缺点
+- line: 2318
+  before: Effective Project Management
+  after: 有效的项目管理
+- line: 2328
+  before: Picking the Right Company to Work For
+  after: 选择合适的公司工作
