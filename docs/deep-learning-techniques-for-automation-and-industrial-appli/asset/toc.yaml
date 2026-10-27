@@ -1,0 +1,68 @@
+level_changes:
+- line: 138
+  before: 2
+  after: 3
+- line: 140
+  before: 3
+  after: 4
+- line: 146
+  before: 3
+  after: 4
+- line: 163
+  before: 2
+  after: 3
+- line: 173
+  before: 2
+  after: 3
+- line: 188
+  before: 2
+  after: 3
+- line: 190
+  before: 3
+  after: 4
+- line: 198
+  before: 3
+  after: 4
+- line: 213
+  before: 3
+  after: 4
+- line: 238
+  before: 2
+  after: 3
+- line: 240
+  before: 3
+  after: 4
+- line: 249
+  before: 3
+  after: 4
+- line: 260
+  before: 2
+  after: 3
+- line: 264
+  before: 2
+  after: 3
+- line: 277
+  before: 2
+  after: 3
+- line: 286
+  before: 2
+  after: 3
+- line: 338
+  before: 2
+  after: 3
+- line: 452
+  before: 2
+  after: 3
+- line: 505
+  before: 2
+  after: 3
+- line: 538
+  before: 2
+  after: 3
+text_changes:
+- line: 1109
+  before: 4.1 基于人工特征提取的讽刺检测
+  after: 5.5.1 基于人工特征提取的讽刺检测
+- line: 1117
+  before: 4.2 基于特征提取的词嵌入
+  after: 5.5.2 基于特征提取的词嵌入

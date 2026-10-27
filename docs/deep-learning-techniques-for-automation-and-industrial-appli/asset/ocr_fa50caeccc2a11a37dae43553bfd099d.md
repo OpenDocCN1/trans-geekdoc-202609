@@ -1,0 +1,11 @@
+# ### 9.6   Conclusion
+
+Due to the continual fluctuations in climate and increased anthropogenic activities, the reliance on groundwater is escalating. Consequently, there exists an exigency to devise novel tools, methodologies, and competencies to appraise the *in situ*, area-specific groundwater reservoir and replenishment potentials. This can facilitate water resources strategies and draught policies, and enable end-users to regulate withdrawal. An efficacious evaluation mechanism mandates an amalgamated approach to hydrology, thematic strata, artificial intelligence and machine learning, remote sensing, geographic information systems, and the Internet of Things. Hydrological, meteorological, and satellite data are pivotal data sources. The prevalent techniques for data analysis and generation of groundwater potential maps encompass statistical approaches such as MCDA-AHP and FR, ML models (including RF/LR/BRT/SVM), or a sophisticated amalgamation of these models such as ANFIS with a newer version of generative AI models, or the utilization of remote sensing-GIS.
+
+However, researchers have yet to identify a universally consolidated technique or algorithmically intelligent approach due to regional disparities such as land use, land cover, or runoff; microclimatic variations; the lack of access to standardized and free input data; and the lack of low-cost and low power-consuming modern sensors. This necessitates the standardization of research methodologies in this subject, the establishment of an integrated online database of all ground-level and scientific observations to date, and forthcoming space missions with high-resolution sensors to generate the data at increased frequency. This entire pipeline can facilitate the automated generation of zonal maps.
+
+# References
+
++   1. Ait-Kadi, M., Water for development and development for water: Realizing the sustainable development goals (SDGs) vision. *Aquat. Proc.*, 6, 106–110, 2016.
++   2. Mekonnen, M.M. and Hoekstra, A.Y., Four billion people facing severe water scarcity. *Sci. Adv.*, 2, 2, e1500323, 2016.
++   3. Miletto, M., The United Nations World Water Development Report 2022: Groundwater - Making the Invisible Visible. UNESCO, Paris, p. 18, 2022.

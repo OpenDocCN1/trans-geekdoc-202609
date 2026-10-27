@@ -1,0 +1,9 @@
+transmission on the page, and users will feel numb as well as helpless during interaction, which will affect app efficiency. In terms of a network shopping app, its interface parts can be classified into advertisement zones, category menu zones, search zones, function service zones, and member information zones. When these service types are distributed, a vision processing method should be applied to distinguish between them in order to avoid confusion between content and service so that users can quickly understand the plate content on the shopping app between various services and various layers.
+
+Most mobile shopping apps follow the layout of a web page. Figure 13.4 shows the left sidebar information classification, the top fast search frame, a large graph banner promoted advertisement, and specific classification commodity activity promotion. Since the amount of commodity information on such a comprehensive platform is large and page layout has been standardized, uniformity between page layout at a mobile terminal and layout at a webpage terminal can largely reduce people’s learning costs. It is easy for people to use, and visual image consistency between the webpage terminal and the mobile terminal can also be saved.
+
+Compared to comprehensive platform shopping apps, there is not much commodity information in mobile shopping apps, and they are more flexible in page layout design. There are not many color designs on product pages, and they are all based on product content. Meanwhile, a suitable blank promotes the page to be permeable. The blank separates the picture from other elements, and plays a role in guiding sight and setting
+
+![](bbox=[0.13, 0.65, 0.88, 0.9])
+
+Figure 13.4 Web page and app of a sample site.

@@ -1,0 +1,14 @@
+# References
+
++   1. Chen, Y., Zhang, J., Du, B., Deep learning based fruits leaf classification using transfer learning. *5th International Conference on Image, Vision and Computing (ICIVC)*, pp. 1067–1071, IEEE, 2020.
++   2. Naim, A., Sharma, A., Khan, M., Transfer learning for fruits leaf classification using deep neural networks. *International Conference on Communication, Computing and Networking (ICCCN)*, pp. 1–6, IEEE, 2020.
++   3. Chauhan, A. and Sahu, S.K., Automated fruits leaf classification using deep learning and transfer learning, in: *2020 7th International Conference on Signal Processing and Integrated Networks (SPIN)*, pp. 516–521, IEEE, 2020.
++   4. Majeed, M.T. and Abid, M., Transfer learning based fruits leaf classification using pretrained convolutional neural networks. *5th International Conference on Computer and Communication Systems (ICCCS)*, pp. 214–219, IEEE, 2020.
++   5. Kumar, R. and Singh, A., Fruits leaf classification using transfer learning and convolutional neural networks. *4th International Conference on Computing Methodologies and Communication (ICCMC)*, pp. 886–891, IEEE, 2020.
++   6. Sheikh, M.A. and Saleem, M.A., Fruits leaf classification using transfer learning with ensemble of deep convolutional neural networks. *18th International Conference on Frontiers of Information Technology (FIT)*, pp. 62–67, IEEE, 2020.
++   7. Roy, S. and Chattopadhyay, S., Automated fruits leaf classification using transfer learning with convolutional neural networks. *International Conference on Smart Electronics and Communication (ICOSEC)*, pp. 40–44, IEEE, 2020.
++   8. Singh, R. and Yadav, S., Fruits leaf classification using transfer learning with deep neural networks. *5th International Conference on Computing, Communication and Security (ICCCS)*, pp. 1–6, IEEE, 2020.
++   9. Rather, A.H., Haq, I.U. (2023). Intelligent Framework for Early Prediction of Diabetic Retinopathy: A Deep Learning Approach. In: *Proceedings of International Conference on Paradigms of Communication, Computing and Data Analytics*, Yadav, A., Nanda, S.J., Lim, M.H. (eds.). PCCA 2023. Algorithms for Intelligent Systems. Springer, Singapore. https://doi.org/10.1007/978-981-99-4626-6_32
++   10. Zhang, Z., Li, J., Xu, H., Zhang, Z., Fruits leaf classification based on deep learning and transfer learning. *5th International Conference on Electronics, Communications and Networks (CECNet)*, pp. 394–399, IEEE, 2020.
++   11. Bhargava, N., Rathore, P.S., Bhowmick, A., Study of X ray detection using CNN in machine learning. *Advancements in Smart Computing and Information Security: First International Conference, ASICS 2022, Rajkot, India, November 24–26, 2022, Revised Selected Papers, Part I*, Springer Nature Switzerland, Cham, 2023.
++   12. Kumar, A., Chatterjee, J.M., Rathore, P.S., Smartphone confrontational applications and security issues. *Int. J. Risk Conting. Manage. (IJRCM)*, 9, 2, 1–18, 2020.
