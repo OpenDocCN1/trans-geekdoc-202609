@@ -1,0 +1,18 @@
+At last, the study investigated the simulation results of proposed BCC model. The test results show better accuracy of about 97.8% and show an improvement of 23.42%. Future scope of the work can be extended by increasing the size of dataset, or by considering the various categories of blood cancer.
+
+# REFERENCES
+
++   [1] J. Rawat, A. Singh, H. S., & Virmani, J., “Computer aided diagnostic system for detection of leukemia using microscopic images”, Procedia Computer Science, vol. 70, (2015), pp. 748–756.
++   [2] S. Agaian, M. Madhukar, & A. T. Chronopoulos, “Automated screening system for acute myelogenous leukemia detection in blood microscopic images”, IEEE Systems Journal, vol. 8, no. 3, (2014), pp. 995–1004.
++   [3] M. R. Baer, C. C. Stewart, R. K. Dodge, G. Leget, N. Sulé, K. Mrózek, ... & R. M. Stone, “High frequency of immunophenotype changes in acute myeloid leukemia at relapse: Implications for residual disease detection (Cancer and Leukemia Group B Study 836),” Blood, The Journal of the American Society of Hematology, vol. 97, no. 11, (2001), pp. 3574–3580.
++   [4] T. L. Dunwell, L. B. Hesson, T. V. Pavlova, V. Zabarovska, V. I. Kashuba, D. Catchpoole, ... & E. R. Zabarovsky, “Epigenetic analysis of childhood acute lymphoblastic leukemia,” Epigenetics, vol. 4, no. 3, (2009), pp. 185–193.
++   [5] P. Viswanathan, “Fuzzy C means detection of leukemia based on morphological contour segmentation,” Procedia Computer Science, vol. 58, (2015), pp. 84–90.
++   [6] S. Mohapatra, S. S., Samanta, D. Patra, & S. Satpathi, “Fuzzy based blood image segmentation for automated leukemia detection,” In 2011 International Conference on Devices and Communications (ICDeCom) (pp. 1–5). IEEE.
++   [7] K. H. Chen, K. J. Wang, K. M. Wang, & M. A. Angelia, “Applying particle swarm optimization-based decision tree classifier for cancer classification on gene expression data,” Applied Soft Computing, vol. 24, (2014), pp. 773–780.
++   [8] E. Alba, J. Garcia-Nieto, L. Jourdan, & E. G. Talbi, “Gene selection in cancer classification using PSO/SVM and GA/SVM hybrid algorithms,” In 2007 IEEE Congress on Evolutionary Computation (pp. 284–290). IEEE.
++   [9] S. Li, X. Wu, & M. Tan, “Gene selection using hybrid particle swarm optimization and genetic algorithm,” Soft Computing, vol. 12, no. 11, (2008), pp. 1039–1048.
++   [10] M. S. Mohamad, S. Omatu, S. Deris, & M. Yoshioka, “Particle swarm optimization for gene selection in classifying cancer classes,” Artificial Life and Robotics, vol. 14, no. 1, (2009), pp. 16–19.
++   [11] L. Gao, M. Ye, X. Lu, & D. Huang, “Hybrid method based on information gain and support vector machine for gene selection in cancer classification,” Genomics, Proteomics & Bioinformatics, vol. 15, no. 6, (2017), pp. 389–395.
++   [12] A. K. Dwivedi, “Artificial neural network model for effective cancer classification using microarray gene expression data,” Neural Computing and Applications, vol. 29, no. 12, (2018), pp. 1545–1554.
++   [13] L. Sun, X. Zhang, Y. Qian, J. Xu, & S. Zhang, “Feature selection using neighborhood entropy-based uncertainty measures for gene expression data classification,” Information Sciences, vol. 502, (2019), pp. 18–41.
++   [14] T. Golub, D. K. Slonim, P. Tamayo, C. Huard, M. Gaasenbeek, J. P. Mesirov, H., Coller, M. L. Loh, J. Downing, M. A. Caligiuri, C. D. Bloomfeld, E. S. Lander, “Molecular classification of cancer: Class discovery and class prediction by gene expression monitoring,” Science, vol. 286, (1999), pp. 531–537.

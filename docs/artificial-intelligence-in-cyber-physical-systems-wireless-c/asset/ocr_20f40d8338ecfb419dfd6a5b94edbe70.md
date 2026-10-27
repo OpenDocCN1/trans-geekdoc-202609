@@ -1,0 +1,17 @@
+work, need the handling of massive amounts of data, often known as “Big Data.” The three “Vs” of big data have been discussed as “high-volume, high-velocity, and/or high-variety information assets” [8], implying huge datasets processed fast through algorithms and the utilization of several data sources, including merging datasets.
+
+The author [24] begins by defining the goals of smart monitoring, which serves as a foundation for categorizing AI, machine learning (ML) smart monitoring algorithms that may be changed to produce explainable AI in the civil engineering.
+
+The authors in [25] present a detailed review of the literature work that shows that research work on AI for sustainability is hampered by issues such as overreliance on the historical data in machine-learning–based models, the uncertain human behavioral responses to AI-based interventions, expanding cyber security risks, negative effects of AI applications, and challenges in measuring intervention. Future AI for sustainability research should include many points as multilevel perspectives, design thinking, systems dynamics approaches, sociological and psychological considerations, and economic value factors, according to the review.
+
+The author in [26] investigates such techniques to discover plans for the explicit implementation of AI and robots. An internet keyword search yielded a total of 12 case studies covering cities of varying sizes throughout the world. The terms “artificial intelligence” and “robot,” which represent robotics and related terminology, were used in the search. According to the data, the Global North presently has the most contemplated deployment of AI and robots in SC’s development, while nations in Global South are becoming more represented. Numerous cities in Canada and Australia are dynamically working to design and develop AI and robots, with Moscow having one of the most detailed plans.
+
+The authors in [27] investigate the role of AI, ML, and deep reinforcement learning in the growth of the smart cities. These approaches described above are effective in determining the best policy for a variety of smart-city–related challenges. It presents detailed in-depth information of the applications of previous practices in cyber security, ITSs, efficient SGs, effective usage of unmanned aerial vehicles to ensure smart healthcare system and the best 5G and beyond 5G (B5G) technologies in communication services in a SC in this survey.
+
+# 10.4 AI AND IOT-ENABLED TECHNOLOGIES
+
+There are various technologies [4,9,17,20,28,29,30] that are used to define IoT, but the range-wise technologies are shown in Figure 10.4. Range-wise IoT technologies are classified into three categories: short, middle, and wide range, which are further classified as shown in Figure 10.4.
+
+# 10.4.1 Radio Frequency Identification (RFID)
+
+Radio frequencies are used by RFID to send and receive data. In RFID communication, two kinds of devices are used: the reader and the tag [29]. When a tag approaches the reader, the exchange of knowledge happens following authorization; while tag absorbs reader’s energy, passive tags are those that rely on the reader for their power; active tags, on the other hand, do not. RFID may function on multiple

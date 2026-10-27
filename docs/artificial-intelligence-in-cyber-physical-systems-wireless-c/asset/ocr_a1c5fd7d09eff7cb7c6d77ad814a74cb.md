@@ -1,0 +1,15 @@
+self-managements, and self-optimization in connection with adapting diverse cultural challenges, protection of edge computing devices from external hacking, and applying modeling and simulations. It's really interesting to know how all together work as machines into cyberspace to do better will decision-making support and cost-effective processes. Through this work, we have tried to focus on how gait analysis for humanoids is changing the mindset of CPS for future generations.
+
+# 12.2 APPLICATIONS OF GAIT ANALYSIS
+
+# 12.2.1 Sport Science [14,15]
+
+Athletes’ performances and injury prevention can be monitored and training cum outcome is being analyzed for faster recovery of players. Foot pressure and motion parameters measurements are taken into count to improve the quality of players. Gait assessment is very helpful in developing injury-free running or practice; it benefits sports persons and runners who cannot afford sports coaches or gait experts or who have a poor running approach. Assessment and treatment-based systems are the future of this domain using AI.
+
+# 12.2.2 Physical Rehabilitation [16]
+
+This is the reason to perform clinical gait analysis and to achieve better results; there is a significant need to identify and perform a better selection mechanism among multiple available treatments. Diagnosis, assessment, monitoring, and prediction are the key to rehabilitation. Biomechanical measurements in terms of accuracy, validation, cost-effectiveness, reliable treatments, and procedures should be developed and the highest standard practices in clinical practice should be followed by patients. Further research should be done to validate an old and new range of optimized techniques and only best suited models over to conventional models should become into practice for patients. Joint movements, joint angle, and soft tissue displacements could be developed using advanced machine learning and AI approaches for better estimation of foot movements to produce better gait of humans. Skin-mounted sensors, cameras, and advanced lab equipment related to gait can produce better training and principles in this domain.
+
+# 12.2.3 Clinical Applications
+
+Clinical gait assessment and gait research are two main aspects of gait analysis. Both lead to improving medical treatments and making qualitative decisions related to human healthy walk. Data reliability, suitability, and repeatability in performing clinical practice should be taken highly precise and corrective in manner. Data related to hip, knee, ankle, and pelvis position should be normally distributed in experiments to get accurate and error-free results [16,17]. Quantitative gait analysis is based on high-vision cameras, quality sensors, and better labs to record data to make better analyses and decisions. Kinematics, kinetics, analysis of muscle activity, and energy level are being interpreted by different available tools of gait and better decisions

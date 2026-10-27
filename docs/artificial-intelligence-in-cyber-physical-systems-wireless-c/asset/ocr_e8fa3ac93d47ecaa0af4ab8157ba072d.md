@@ -1,0 +1,11 @@
++   [22] R. Dash, M. McMurtrey, C. Rebman, and U. K. Kar, “Application of artificial intelligence in automation of supply chain management,” Journal of Strategic Innovation and Sustainability, 14, 3, 43–53, 2019.
++   [23] N. Singh, “Emerging technologies to support supply chain management,” Communications of the ACM, 46, 9, 243–247, 2003.
++   [24] H. Min, “Artificial intelligence in supply chain management: Theory and applications,” International Journal of Logistics: Research and Applications, 13, 1, 13–39, 2010.
++   [25] R. Toorajipour, V. Sohrabpour, A. Nazarpour, P. Oghazi, and M. Fischl. “Artificial intelligence in supply chain management: A systematic literature review,” Journal of Business Research, 122, 502–517, 2021.
++   [26] B. Prasad, “Intelligent techniques for e-commerce.” Journal of Electronic Commerce Research, 4, 2, 65–71, 2003.
++   [27] P. Lou, Z.-d. Zhou, Y.-P. Chen, and W. Ai, “Study on multi-agent-based agile supply chain management,” The International Journal of Advanced Manufacturing Technology, 23, 3, 197–203, 2004.
++   [28] G. Baryannis, S. Validi, S. Dani, and G. Antoniou, “Supply chain risk management and artificial intelligence: state of the art and future research directions,” International Journal of Production Research, 57, 7, 2179–2202, 2019.
++   [29] K. Sharma, D. Anand, M. Sabharwal, P. K. Tiwari, O. Cheikhrouhou, and T. Frikha, “A disaster management framework using internet of things-based interconnected devices,” Mathematical Problems in Engineering, 2021, 2021.
++   [30] J. Xia, H. Jiang, and Q. Tang, “Introduction to artificial neural networks,” in Advanced Medical Statistics. World Scientific, 1073–1090, 2003.
++   [31] Anand, A., S. P. Mishra, and S. Sahana. “Assistive devices and IoT in healthcare functions.” Deep Learning and IoT in Healthcare Systems: Paradigms and Applications, 2021, 103.
++   [32] Yadav, L., S. Kumar, A. K. Sagar, and S. Sahana. “Architecture, applications and security for IOV: A survey.” In 2018 International Conference on Advances in Computing, Communication Control and Networking (ICACCCN). IEEE, 383–390, 2018.

@@ -1,0 +1,128 @@
+level_changes:
+- line: 38
+  before: 1
+  after: 2
+- line: 458
+  before: 2
+  after: 3
+- line: 476
+  before: 3
+  after: 4
+- line: 482
+  before: 2
+  after: 3
+- line: 484
+  before: 3
+  after: 4
+- line: 495
+  before: 3
+  after: 4
+- line: 501
+  before: 3
+  after: 4
+- line: 516
+  before: 2
+  after: 3
+- line: 535
+  before: 3
+  after: 4
+- line: 543
+  before: 3
+  after: 4
+- line: 557
+  before: 3
+  after: 4
+- line: 568
+  before: 3
+  after: 4
+- line: 712
+  before: 2
+  after: 3
+- line: 724
+  before: 2
+  after: 3
+- line: 760
+  before: 2
+  after: 3
+- line: 798
+  before: 2
+  after: 3
+- line: 802
+  before: 3
+  after: 4
+- line: 812
+  before: 3
+  after: 4
+- line: 816
+  before: 2
+  after: 3
+- line: 820
+  before: 3
+  after: 4
+- line: 826
+  before: 3
+  after: 4
+- line: 842
+  before: 3
+  after: 4
+- line: 848
+  before: 2
+  after: 3
+- line: 851
+  before: 2
+  after: 3
+- line: 859
+  before: 2
+  after: 3
+- line: 962
+  before: 2
+  after: 3
+- line: 964
+  before: 3
+  after: 4
+- line: 984
+  before: 3
+  after: 5
+- line: 1000
+  before: 3
+  after: 5
+- line: 1016
+  before: 2
+  after: 5
+- line: 1032
+  before: 2
+  after: 3
+- line: 1038
+  before: 2
+  after: 3
+- line: 1048
+  before: 3
+  after: 4
+- line: 1091
+  before: 2
+  after: 3
+- line: 1115
+  before: 2
+  after: 3
+- line: 1119
+  before: 2
+  after: 3
+text_changes:
+- line: 38
+  before: Example prediction loop
+  after: 预测示例循环
+- line: 1095
+  before: 1. 可扩展性和存储
+  after: 3.6.1 可扩展性和存储
+- line: 1099
+  before: 2. 数据隐私和匿名性
+  after: 3.6.2 数据隐私和匿名性
+- line: 1105
+  before: 3. 智能合约
+  after: 3.6.3 智能合约
+- line: 1111
+  before: 4. 共识算法
+  after: 3.6.4 共识算法
+- line: 3920
+  before: 供应链的人工智能挑战
+  after: 16.3.5 供应链的人工智能挑战
