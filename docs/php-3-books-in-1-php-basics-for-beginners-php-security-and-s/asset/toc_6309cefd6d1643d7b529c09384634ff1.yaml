@@ -1,0 +1,74 @@
+level_changes:
+- line: 130
+  before: 2
+  after: 3
+- line: 159
+  before: 2
+  after: 3
+- line: 228
+  before: 2
+  after: 3
+- line: 245
+  before: 2
+  after: 3
+- line: 292
+  before: 2
+  after: 3
+- line: 314
+  before: 2
+  after: 3
+- line: 346
+  before: 2
+  after: 3
+- line: 362
+  before: 2
+  after: 3
+- line: 366
+  before: 2
+  after: 3
+- line: 413
+  before: 2
+  after: 3
+- line: 418
+  before: 2
+  after: 3
+- line: 440
+  before: 2
+  after: 3
+- line: 466
+  before: 2
+  after: 3
+- line: 562
+  before: 2
+  after: 3
+- line: 575
+  before: 2
+  after: 3
+text_changes:
+- line: 1410
+  before: index.PHP 文件
+  after: index.php 文件
+- line: 1047
+  before: 'Output:'
+  after: 输出：
+- line: 2164
+  before: '***编辑 CarteProduct 功能的视图模板***'
+  after: 编辑 CarteProduct 功能的视图模板
+- line: 2982
+  before: 'Php sessions management:'
+  after: 'PHP sessions management:'
+- line: 3080
+  before: Php 手册
+  after: PHP 手册
+- line: 4066
+  before: 2. 由 `code_3` 设定默认值
+  after: 2. 由 `code` 设定默认值
+- line: 4083
+  before: 3. 由 codice_4 分配的默认值
+  after: 3. 由 `code_4` 分配的默认值
+- line: 4835
+  before: PHP 的 The_Destruct 函数
+  after: PHP 的 __destruct 函数
+- line: 4861
+  before: 使用 PHP 的 The_Destruct 函数
+  after: 使用 PHP 的 __destruct 函数
