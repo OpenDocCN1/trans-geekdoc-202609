@@ -1,0 +1,16 @@
++   46. Rezaeilouyeh, H., Mahoor, M. H., Mavadati, S. M., Zhang, J. J., 2013. A microscopic image classification method using shearlet transform. In IEEE International Conference on Healthcare Informatics, ICHI, 2013, pp. 382–386.
++   47. Li, Y. H. and Savvides M., 2007. Kernel fukunaga-koontz transform subspaces for enhanced face recognition. In Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition, pp. 1–8.
++   48. Hafed, Z. M. and Levine, M. D., 2001. Face recognition using the discrete cosine transform. International Journal of Computer Vision, 43(3): 167–188.
++   49. Shen, G. L. and Wu, X. J., 2013. Content based image retrieval by combining color, texture and CENTRIST. In IEEE Constantindes International Workshop on Signal Processing, CIWSP, 2013, pp. 1–4.
++   50. Walia, E., Goyal, A. and Brar, Y.S., 2013. Zernike moments and LDP-weighted patches for content-based image retrieval. Signal, Image and Video Processing, Springer, 8(3): 577–594.
++   51. Kekre, H. B., Thepade, S., Wadhwa, S., Singh, S., Kakaiya, M. and Mukherjee, P., 2010. Image retrieval with shape features extracted using gradient operators and slope magnitude technique with BTC. International Journal of Computer Applications, IJCA, 6(8): 28–33.
++   52. Mehrotra, R. and Gary, J. E., 1995. Similar-shape retrieval in shape data management. IEEE Computer, 28(9): 57–62.
++   53. Berretti, S., Del Bimbo, A., and Pala, P., 2000. Retrieval by shape similarity with perceptual distance and effective indexing. IEEE Transaction on Multimedia, 2(4): 225–239.
++   54. Petrakis, E. G. M., Diplaros, A. and Milios, E., 2002. Matching and retrieval of distorted and occluded shapes using dynamic programming. IEEE Transaction on Pattern Analysis and Machine Intelligence, 24(4): 509–522.
++   55. Flickner, M., Sawhney, H., Niblack, W., Ashley, J., Huang, Q., Dom, B., Gorkani, M., et al., 1995. Query by image and video content: the QBIC system. Computer, 28(9): 23–32.
++   56. Latecki L. J. and Lakamper R., 2000. Shape similarity measure based on correspondence of visual parts. IEEE Transaction on Pattern Analysis Machine Intelligence, 22(10): 1185–1190.
++   57. Belongie S., Malik J. and Puzicha J., 2002. Shape matching and object recognition using shape contexts. IEEE Transactions Pattern Analysis and Machine Intelligence, 24(4): 509–522.
++   58. Ciaccia, P., Patella, M., and Zezula, P., 1997. M-tree: An efficient access method for similarity search in metric spaces. In Proceedings of the 23rd International Conference on Very Large Data Bases, Morgan Kaufmann, pp. 426–435.
++   59. Benediktsson, J. A., Palmason, J. A., and Sveinsson, J. R., 2005. Classification of hyperspectral data from urban areas based on extended morphological profiles. IEEE Transactions on Geoscience and Remote Sensing, 43(3): 480–491.
++   60. Fesharaki, N. J. and Pourghassem, H., 2012. Medical X-ray images classification based on shape features and Bayesian rule. In 2012 Fourth International Conference on Computational Intelligence and Communication Networks, IEEE, 369–373.
++   61. Ganapathi, K., Madumbu, V., Rajendran, R. and David, S., with Phalguni, 2013. Design and implementation of an automatic traffic sign recognition system on

@@ -1,0 +1,54 @@
+
+
+TI OMAP-L138. 见IEEE国际工业技术会议论文集，第1104–1109页。
+
+- 62. Parape, C. D. K., Premachandra, H. C. N., Tamura, M., Sugiura, M., 2012. 利用形态学算子从2011年东北太平洋海岸地震和海啸的甚高分辨率卫星图像中识别受损建筑。见IEEE国际地球科学与遥感研讨会，IGARSS，2012年，第3006–3009页。
+- 63. Na, W. and Tao, W., 2012. 基于近端支持向量机的路面图像分类。见IEEE第五届先进计算智能国际会议，ICACI，2012年，第686–688页。
+- 64. Wang, Z., Lu, B., Chi, Z. and Feng, D., 2011. 基于形状上下文和SIFT描述子的叶片图像分类。见《2011年国际数字图像计算：技术与应用会议论文集》，DICTA，2011年，第650–654页。
+- 65. Lucchi, A., Smith, K., Achanta, R., Knott, G. and Fua, P., 2012. 基于学习形状特征的EM图像堆栈中线粒体的超体素分割。IEEE医学成像汇刊，31(2): 474–486.
+- 66. Amanatidis, A., Kaburlasos, V. G., Gasteratos, A. and Papadakis, S. E., 2011. 面向基于形状的图像检索的形状描述子评估。IET图像处理，第493–499页。
+- 67. Wang, X., Feng, B., Bai, X., Liu, W. and Latecki, L. J., 2014. 用于鲁棒形状分类的轮廓片段袋。模式识别，47(6): 2116–2125.
+- 68. Sun, K. B. and Super, B. J., 2005. 使用类段集合的轮廓形状分类。见IEEE计算机学会计算机视觉与模式识别会议论文集，第2卷，第727–733页。
+- 69. Shen, W., Bai, X., Hu, R., Wang, H. and Latecki, L. J., 2011. 基于弯曲势比的骨架生长与剪枝。模式识别，44(2): 196–209.
+- 70. Daliri, M. R. and Torre, V., 2008. 用于形状识别与检索的鲁棒符号表示。模式识别，41(5): 1799–1815.
+- 71. Bai, X., Wang, X., Latecki, L. J., Liu, W. and Tu, Z., 2009. 用于非刚性物体检测的主动骨架。见IEEE国际计算机视觉会议论文集，第575–582页。
+- 72. Demirci, M. F., Shokoufandeh, A. and Dickinson, S. J., 2009. 从示例中提取骨架形状抽象。IEEE模式分析与机器智能汇刊，31(5): 944–952.
+- 73. Yu, X., Yi, L., Fermuller, C. and Doermann, D., 2007. 使用形状码本的物体检测。见英国机器视觉会议，第4卷。http://www.comp.leeds.ac.uk/bmvc2008/proceedings/2007/papers/paper-13.pdf.
+- 74. Sundar, H., Silver, D., Gagvani, N. and Dickinson, S., 2003. 基于骨架的形状匹配与检索。见《SMI 2003：2003年国际形状建模会议论文集》，第130–139页。
+- 75. Bai, X., Liu, W. and Tu, Z., 2009. 结合轮廓与骨架进行形状分类。见2009年IEEE第12届国际计算机视觉研讨会，ICCV研讨会2009，第360–367页。
+- 76. Bai, X. and Latecki, L. J., 2008. 路径相似性骨架图匹配。IEEE模式分析与机器智能汇刊，30(7): 1282–1292.
+- 77. Belongie, S., Malik, J. and Puzicha, J., 2002. 基于形状上下文的形状匹配与物体识别。IEEE模式分析与机器智能汇刊，24: 509–522.
+- 78. Mokhtarian, F. and Suomela, R., 1998. 通过曲率尺度空间进行鲁棒图像角点检测。IEEE模式分析与机器智能汇刊，20(12): 1376–1381.
+- 79. Alajlan, N., El Rube, I., Kamel, M. S. and Freeman, G., 2007. 基于三角形面积表示和动态空间弯曲的形状检索。模式识别，40(7): 1911–1920.
+- 80. McNeill, G. and Vijayakumar, S., 2006. 用于形状检索的分层Procrustes匹配。见IEEE计算机学会计算机视觉与模式识别会议论文集，第1卷，第885–892页。
+- 81. Keshet, R., 2007. 邻接格与形状树半格。图像与视觉计算，25(4): 436–446. 特刊。
+- 82. Xu, C., Liu, J. and Tang, X., 2009. 基于轮廓柔性的二维形状匹配。IEEE模式分析与机器智能汇刊，31(1): 180–186.
+- 83. Thayananthan, A., Stenger, B., Torr, P. H. S. and Cipolla, R., 2003. 杂乱场景中的形状上下文与倒角匹配。见IEEE计算机学会计算机视觉与模式识别会议论文集，第I–II页。
+- 84. Ling, H. and Jacobs, D. W., 2007. 使用内部距离的形状分类。IEEE模式分析与机器智能汇刊，29(2): 286–299.
+- 85. Randen, T. and Husøy, J. H., 1999. 用于纹理分类的滤波：比较研究。IEEE模式分析与机器智能汇刊，21(4): 291–310.
+- 86. Lin, C.-H., Liu, C.-W. and Chen, H.-Y., 2012. 基于纹理特征的自适应局部二值模式的图像检索与分类。IET图像处理，6(7): 822–830.
+- 87. Nanthagopal, A. P. and Sukanesh, R., 2013. 基于小波统计纹理特征的脑CT图像分割与分类。IET图像处理，7(1): 25–32.
+- 88. Sun, Z., Zhang, H., Tan, T. and Wang, J., 2014. 基于分层视觉码本的虹膜图像分类。IEEE模式分析与机器智能汇刊，36(6): 1120–1133.
+- 89. Regniers, O., Da Costa, J.-P., Grenier, G., Germain, C. and Bombrun, L., 2013. 基于纹理的超高分辨率海松森林图像检索与分类。见2013年IEEE国际地球科学与遥感研讨会（IGARSS），第4038–4041页。
+- 90. Kekre, H. B., Bharadi, V. A., Thepade, S. D., Mishra, B. K., Ghosalkar, S. E. and Sawant, S. M., 2010. 基于Gabor幅度和改进块截断编码融合的基于内容的图像检索。见《第三届工程技术新兴趋势国际会议论文集》，ICETET 2010，第140–145页。
+- 91. Vo, A. and Oraintara, S., 2008. 利用复方向滤波器组的相位和幅度信息进行纹理分割。见欧洲信号处理会议，第1–5页。
+- 92. Haralick R., 1979. 纹理的统计与结构方法。IEEE学报，67(5): 786–804.
+- 93. Malik, J. and Perona, P., 1990. 利用早期视觉机制的警戒前纹理辨别。美国光学学会杂志A辑：光学与图像科学，7(5): 923–932.
+- 94. Ma, W. Y. and Manjunath, B. S., 1995. 用于纹理图像标注的小波变换特征比较。见国际图像处理会议论文集，第256–259页。
+- 95. Laine, A. and Fan, J., 1993. 基于小波包特征的纹理分类。IEEE模式分析与机器智能汇刊，15(11): 1186–1191.
+- 96. Thyagarajan, K., Nguyen, T. and Persons, C. E., 1994. 使用小波变换的纹理分类最大似然方法。见IEEE国际图像处理会议（ICIP-94），第2卷，第640–644页。
+- 97. Do, M. N. and Vetterli, M., 2002. 基于广义高斯密度和Kullback–Leibler距离的小波纹理检索。IEEE图像处理汇刊，11(2): 146–158.
+- 98. Li, J., Gray, R. M. and Olshen, R. A., 2000. 基于二维隐马尔可夫模型层次建模的多分辨率图像分类。IEEE信息论汇刊，46(5): 1826–1841.
+- 99. Portilla, J. and Simoncelli, E. P., 2000. 基于复小波系数联合统计的参数化纹理模型。国际计算机视觉杂志，40(1): 49–71.
+- 100. Ma, W. Y. and Manjunath, B. S., 1996. 用于浏览大型航空照片的模式叙词表。技术报告96-10，加州大学圣巴巴拉分校。
+- 101. Ma, W. Y. and Manjunath, B. S., 1998. 用于浏览大型航空照片的纹理叙词表。美国信息科学学会杂志，49(7): 633–648.
+- 102. Manjunath, B. S., Ohm, J. R., Vasudevan, V. V. and Yamada, A., 2001. 颜色与纹理描述子。IEEE视频技术电路与系统汇刊，11(6): 703–715.
+- 103. Ma, W. Y. and Manjunath, B. S., 1996. 纹理特征与相似性学习。见IEEE计算机学会计算机视觉与模式识别会议，第425–430页。
+- 104. Jain, A. K. and Farrokhnia, F., 1991. 使用Gabor滤波器的无监督纹理分割。模式识别，24(12): 1167–1186.
+- 105. Schaffalitzky, F. and Zisserman, A., 2001. 视点不变的纹理匹配与宽基线立体视觉。见第八届IEEE国际计算机视觉会议论文集（ICCV 2001），第636–643页。
+- 106. Mikolajczyk, K. and Schmid, C., 2004. 尺度与仿射不变的兴趣点检测器。国际计算机视觉杂志，60(1): 63–86.
+- 107. Hiremath, P. S. and Pujari, J., 2007. 基于颜色、纹理和形状特征的图像内容检索。第15届国际先进计算与通信会议ADCOM 2007，9(2): 780–784.
+- 108. Yue, J., Li, Z., Liu, L. and Fu, Z., 2011. 基于颜色与纹理融合特征的图像内容检索。数学与计算机建模，54(3–4): 1121–1127.
+- 109. Banerjee, M., Kundu, M. K. and Maji, P., 2009. 基于视觉显著点特征的图像内容检索。模糊集与系统，160(23): 3323–3341.
+- 110. Jalab, H. A., 2011. 基于颜色布局描述子和Gabor滤波器的图像检索系统。2011年IEEE开放系统会议，第32–36页。
+

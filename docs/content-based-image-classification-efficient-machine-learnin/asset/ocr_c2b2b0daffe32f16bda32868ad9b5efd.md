@@ -1,0 +1,10 @@
+# 7
+
+# Content-Based Feature Extraction:  
+Texture Components
+
+# 7.1 Prelude
+
+A frequent property observed in an image in the form of repeating structures having some randomness is called *texture*. The elementary component of a repeating pattern is designated as basic primitive or *texel*. Placement rules or uniformity are used by the basic primitives to form repetitive patterns. In some images, the defining characteristics of regions can be important for proper analysis. Feature extraction can be done from the spatial arrangements of colors or intensities with the help of texture analysis. Some histogram distributions can have different texture representations, which can act as a tool for extraction of distinct features. Thus, the presence of texture appears in the form of repeated patterns as shown in Fig. 7.1.
+
+Variations in intensity and color have led to the formation of textures. Textures correspond to qualitative terms, namely, coarseness, homogeneity and smoothness at the physical level. Textures are divided into micro textures and macro textures based on the size of the primitives. Macro texture or coarseness of an object is defined by large elements of primitive, whereas micro texture is formed by smaller textures. The orientation of texture elements is known as dimensionality. Two methods of feature extraction using texture content of an image are introduced in this chapter, namely, feature extraction by vector quantization (VQ) codebook representation using the Linde-Buzo-Grey (LBG) algorithm and feature extraction by the gray level co-occurrence matrix (GLCM). These techniques have enhanced the content-based image classification rate. In our approach, we have generated features by calculating code vectors from the generated clusters using the LBG algorithm. The size of the codebook thus generated is much smaller than the image dimension and is used as a feature vector for content-based image classification. In the case of GLCM, the mean and standard deviation of all the parameters, namely, energy, contrast, entropy and correlation, are considered to compute the feature vector for each image. This generates a feature

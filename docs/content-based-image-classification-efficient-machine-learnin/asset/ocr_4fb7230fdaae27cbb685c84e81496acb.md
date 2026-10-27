@@ -1,0 +1,10 @@
+# # 1
+## Introduction to Content-Based Image Classification
+
+# ### 1.1 Prelude
+
+A picture collage contains an entire life span in a single frame. We have witnessed global excitement with pictorial expression exchanges compared to textual interaction. Multiple manifestation of social networking have innumerable image uploads every moment for information exchanges, status updates, business purposes and much more [1]. The cell phone industry was revolutionized with the advent of camera phones. These gadgets are capturing high-end photographs in no time and sharing the same for commercial and noncommercial usage [2]. Significant medical advancements have been achieved by Computer-Aided Diagnosis (CAD) of medical images [3]. Therefore, image data has become inevitable in all courses of modern civilization, including media, entertainment, tourism, sports, military services, geographical information systems, medical imaging and so on.
+
+Contemporary advancement of computer vision has come a long way since its inception in 1960 [4,5]. Preliminary attempts were made for office automation tasks pertaining to approaches for pattern recognition systems with character matching. Research work by Roberts has envisaged the prerequisite of harmonizing two-dimensional features extracted from images to three-dimensional object representations [6]. Escalating complexities related to unevenly illuminated pictures, sensor noise, time, cost, etc. have raised realistic concerns for continuing the ensuing research work in the said domain with steadfastness and uniformity.
+
+Radical advancements in imaging technology have flooded the masses with pictures and videos of every possible detail in their daily lives. Thus, the creation of gigantic image datasets becomes inevitable to store and archive all these rich information sources in the form of images. Researchers are facing mounting real-time challenges to store, archive, maintain, extract and access information out of this data [7].
