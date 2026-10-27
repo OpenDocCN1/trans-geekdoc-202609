@@ -1,0 +1,19 @@
+# Introduction
+
+This brief introduction defines the necessary terminology and provides an overview of the book. The reader should feel free to flip back to this material, or make use of the detailed index, to find the first appearances of definitions that might require refreshing over the course of the book.
+
+*Codes* are a part of everyday life, from the ubiquitous Universal Price Code (UPC) to postal Zip Codes. They need not be intended for secrecy. They generally use groups of letters (sometimes pronounceable code *words*) or numbers to represent other words or phrases. There is typically no mathematical rule to pair an item with its representation in code. Codes intended for secrecy are usually changed often. In contrast to these, there's no harm in nonsecret codes, like Zip Codes, staying the same for decades. In fact, it is more convenient that way.
+
+The invention of the telegraph and the desire to decrease the length of messages sent in that manner, in order to minimize costs (they did not go for free like e-mails!), led to nonsecret *commercial codes* in which phrases were replaced by small groups of letters (see Figure 1.1). These provide an early example of data compression, a topic that will arise again in Section 1.17.
+
+Of course, codes were used in wars too numerous to list here, as well as in countless intrigues and conspiracies throughout history, and they are still with us. For now, we only consider one more example. A code is produced by many copiers and printers on each page they turn out that identifies the machine that was used. Few users are even aware that it is there, as you need a blue light, magnifying glass, or microscope to make out the dots that conceal the information.¹ Although it was not how he was identified, such a code appears to have been part of the evidence used to hunt for serial killer BTK (Dennis Rader), who used a copier at Wichita State University for one of his taunting letters to the police.
+
+The copier and printer code is also an example of *steganography*, in which the very presence of a message is intended to be concealed. Other forms that steganography may take include invisible inks and microdots.
+
+Examples of codes and steganography appear from place to place in this book, but they are not the main focus. The focus is on *ciphers*, which typically work on individual letters, bits, or groups of these through substitution, transposition (reordering), or a combination of both. In contrast to codes, modern ciphers are usually defined in terms of mathematical rules and operations. In the early days, however, this was not the case. In fact, Charles Babbage (1791–1871), the great pioneer in computer science, is often credited as being the first to model ciphers using mathematics. This isn't correct; there were earlier efforts, but they didn't catch on.² In any case, it's not until the twentieth century that cryptology really became mathematical. A few more definitions will make what follows easier.
+
+*Cryptography* is the science of creating cipher systems. The word comes from the Greek κρυπτός, meaning “hidden,” and γραφίᾱ, meaning “writing.” *Cryptanalysis* is the science and art
+
+¹ The Electronic Frontier Foundation (EFF) has a nice webpage on this topic that includes many relevant links. See http://www.eff.org/issues/printers.
+
+² Buck, Friederich Johann, *Mathematischer Beweis: daß die Algebra zur Entdeckung einiger verborgener Schriften bequem angewendet werden könne*, Königsberg, 1772, available online at https://web.archive.org/web/20070611153102/http://www-math.uni-paderborn.de/~aggathen/Publications/buc72.pdf. This is the first known work on algebraic cryptology.

@@ -1,0 +1,19 @@
+In the two world wars, the U.S. military used Native Americans from at least 19 different tribes who spoke their natural languages with or without the addition of code words.51 Of these, the Hopi also deserve to be singled out for mixing in code words with their natural language, just as the Navajo, Comanche, and Choctaw did. It is believed that most of the tribes did not make this step. The Hopi first hit the airwaves in the Marshall Islands, then New Caledonia and Leyte.52 They only numbered 11. As far as is known, the largest code talking group after the Navajo was only 19 strong, and it did not make use of code words. For most of the groups, very little is known, but the presence of Navajo in such comparatively large numbers helped to ensure that their story would be told. Despite honors being bestowed upon various code talkers following the official declassification of the not-so-secret program in 1968,53 the veterans hadn’t always been treated fairly. One of the code talkers complained to Philip Johnston in a letter dated June 6, 1946:
+
+> The situation out in the Navajoland is very bad and we as vets of World War II are doing everything we can to aid our poor people. We went to Hell and back for what? For the people back here in America to tell us we can’t vote!! Can’t do this! Can’t do that!, because you don’t pay taxes and are not citizens!! We did not say we were not citizens when we volunteered for service against the ruthless and treacherous enemies, the Japs and Germans! Why?54
+
+Indians in Arizona and New Mexico weren’t allowed to vote until 1948.
+
+# 8.8 Code Talkers in Hollywood
+
+The code talkers have captured the imagination of Hollywood. For example, the opening credits of Season 2, Episode 25 (May 19, 1995), of The X-Files which featured a Navajo code talker, had the Navajo words “EL ’AANIGOO ’AHOOT’E” take the place of the usual “The Truth is Out There.”55 In Season 1, Episode 2 (October 3, 1998), of Highlander: The Raven, Nick and Amanda found themselves thrown together again by the murder of a Navajo code talker.
+
+In the 2002 film Windtalkers, the Navajo code talkers are given “bodyguards,” who were actually under orders to shoot the code talkers in situations in which capture was likely. This was to prevent the enemy from being able to use torture to force secrets of the code from a prisoner. Cryptologic historian David Hatch, has claimed that no such order was given, and that the assignment was to protect the code talker from fellow soldiers who may never have seen a Navajo before and might mistake him for the enemy. This was a serious problem; several code talkers were “captured” by their own troops, one on two separate occasions!56 Another, Harry Tsosie, was killed by friendly fire, although this seems to have had more to do with his moving in the trench, while instructions were for everybody to sit tight, than with his physical appearance.57 True or not, the claim in Windtalkers
+
+51 Meadows, William C., The Comanche Code Talkers of World War II, University of Texas Press, Austin, Texas, 2002, p. xv.
+52 Meadows, William C., The Comanche Code Talkers of World War II, University of Texas Press, Austin, Texas, 2002, p. 68.
+53 Navajo and other code talkers served in the Korean and Vietnam wars, so despite the many leaks, it was still officially secret.
+54 Paul, Doris A., The Navajo Code Talkers, Dorrance Publishing Co., Inc., Pittsburgh, Pennsylvania, 1973, p. 111.
+55 The episode was titled “Anasazi.”
+56 Paul, Doris A., The Navajo Code Talkers, Dorrance Publishing Co., Inc., Pittsburgh, Pennsylvania, 1973, p. 85.
+57 McClain, Sally, Navajo Weapon: The Navajo Code Talkers, Rio Nuevo Publishers, Tucson, Arizona, 2001, p. 104. Ten other Navajo code talkers died in World War II.

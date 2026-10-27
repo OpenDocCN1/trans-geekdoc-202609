@@ -1,0 +1,19 @@
+originally placed on their hypothetical DES cracker ($20 million). When that machine finally appeared, thanks to the EFF, it cost less than $250,000. How much cheaper will DNA computers be in the future? Will you end up owning one?
+
+Just as traditional computers began as specialized machines for solving particular problems, and only later became “universal” programmable machines, so the history of DNA computers goes. A programmable DNA computer was put forth by Israeli researchers from the Weizmann Institute of Science in 2002.46 It offered a tremendous advantage in terms of speed, efficiency, and storage capacity over traditional machines, but couldn’t do everything they can. Who says you can’t have it all? Not Melina Kramer et al. In 2008, they created a hybrid device, combining biological components and traditional silicon-based chips.47 With such hybrids, the biological components can take over where they offer an advantage, while we still have old-school silicon technology to handle tasks for which it’s better suited.
+
+It’s hard to predict where this technology will lead. Should we be surprised that this brand new field was created by someone outside of biology, thinking about it in his spare time? Not at all, according to Adleman. As more and more fields of inquiry are reduced to mathematics, the ability of a single person to comprehend large portions of it becomes more plausible. Adleman predicted that,48
+
+> The next generation could produce a scientist in the old sense, a real generalist, who could learn the physics, chemistry, and biology, and be able to contribute to all three disciplines at once.
+
+For a hundred years, it has seemed that science has been growing ever more complicated, but perhaps mathematics will serve as a simplifying force. Andrew Wiles, the man who finally proved Fermat’s Last Theorem, has made a similar comment about mathematics itself:49
+
+> Mathematics does sometimes give the impression of being spread over such a large area that even one mathematician can’t understand another, but if you think back to 18th century mathematics, most modern mathematicians would understand it all and in a much more unified way than the 18th century mathematicians. I think this dispersion that one senses is really just because we don’t understand it well enough yet and over the next 200 years all our current methods and proofs will be simplified and people will see it as a whole and it will be much easier. I mean nowadays most high school students will study calculus. That would have been unthinkable in the 17th century, but now it’s routine and that will happen to current mathematics in 300 years’ time.
+
+46 Benenson, Yaakov, Rivka Adar, Tamar Paz Elizur, Zvi Livneh, and Ehud Shapiro, “DNA Molecule Provides a Computing Machine with Both Data and Fuel,” Proceedings of the National Academy of Sciences, Vol. 100, No. 5, March 4, 2003 (submitted in 2002), pp. 2191–2196. For a popular account see Lovgren, Stefan, “Computer Made from DNA and Enzymes,” National Geographic News, February 24, 2003, http://news.nationalgeographic.com/news/2003/02/0224_030224_DNAcomputer.html.
+
+47 Kramer, Melina, Marcos Pita, Jian Zhou, Maryna Ornatskaya, Arshak Poghossian, Michael Schoning, and Evgeny Katz, “Coupling of Biocomputing Systems with Electronic Chips: Electronic Interface for Transduction of Biochemical Information,” Journal of Physical Chemistry, Vol. 113, No. 6, February 12, 2009, pp. 2573–2579. The work was done in 2008 but published in 2009.
+
+48 Bass, Thomas A., “Gene Genie,” Wired, Vol. 3, No. 8, August 1995, pp. 114–117, 164–168.
+
+49 Fermat’s Last Tango, Clay Mathematics Institute, Cambridge, Massachusetts, 2001, bonus feature May 24, 2000 interview with Andrew Wiles. This is a video. See https://www.imdb.com/title/tt0278443/?ref=_fn_al_tt_1 for details.

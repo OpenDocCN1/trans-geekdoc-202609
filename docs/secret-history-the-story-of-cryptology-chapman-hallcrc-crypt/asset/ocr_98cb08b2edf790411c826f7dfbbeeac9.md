@@ -1,0 +1,13 @@
+Commercial Bank of China (ICBC) and the People's Bank of China use the system, although with heavier, but faster, ground stations.²²
+
+Quantum particles aren't just for defense, they can also be used to attack ciphers when they are doing their thing in a quantum computer.
+
+# 21.3 Quantum Computers and Quantum Distributed Key Networks
+
+Traditional computers operate using bits that are either 0 or 1. In the old days, these 0s and 1s were represented by vacuum tubes that were either OFF or ON. The space needed to store bits was reduced dramatically over the decades and the tubes are long gone. But a further reduction has recently been made. In quantum computers it is actually quantum particles that are used to represent the bits. However, there is a fundamental difference. It is not just a matter of a smaller size. Quantum bits, or qubits (pronounced “cue bits”) for short, can be 0, 1, or both. A description of how quantum computers work is well outside the scope of this book. What’s relevant is that these machines can solve some problems that traditional computers cannot and can solve other problems far faster. For example, there’s no known polynomial time algorithm for factoring, using a traditional computer, but there is one for a quantum computer. It dates back to 1994 and is known as Shor’s algorithm, after Peter Shor who was employed by Bell Labs at the time.²³ Shor also found a polynomial time algorithm for solving the discrete log problem on a quantum computer. As a consequence, RSA, Diffie-Hellman, and elliptic curve cryptography are all vulnerable.
+
+It’s not just public key systems that are at risk. Grover’s algorithm, discovered by Lov Grover, an Indian-American computer scientist, in 1996,²⁴ can be used to reduce the number of trials needed to brute-force a symmetric block cipher with an n bit key from 2ⁿ to 2ⁿ/² on a quantum computer.²⁵ The ability of a qubit to be both 0 and 1 allows many keys to be tested simultaneously.
+
+The October 23, 2019 issue of Nature contained a paper by 77 authors (representing Google). The abstract include a dramatic summary of the power of a quantum computer with 53 qubits:
+
+> Our Sycamore processor takes about 200 seconds to sample one instance of a quantum circuit a million times—our benchmarks currently indicate that the equivalent task for a state-of-the-art classical supercomputer would take approximately 10,000 years. This dramatic increase in speed compared to all known classical
