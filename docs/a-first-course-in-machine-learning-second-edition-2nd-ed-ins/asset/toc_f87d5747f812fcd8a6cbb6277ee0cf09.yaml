@@ -1,0 +1,124 @@
+level_changes:
+- line: 523
+  before: 2
+  after: 3
+- line: 544
+  before: 2
+  after: 3
+- line: 550
+  before: 2
+  after: 3
+- line: 580
+  before: 2
+  after: 3
+- line: 620
+  before: 2
+  after: 3
+- line: 640
+  before: 2
+  after: 3
+- line: 658
+  before: 2
+  after: 3
+- line: 674
+  before: 2
+  after: 3
+- line: 678
+  before: 2
+  after: 3
+- line: 696
+  before: 2
+  after: 3
+text_changes:
+- line: 523
+  before: EX 2.9. 伯努利分布定义为：
+  after: EX 2.9.
+- line: 544
+  before: EX 2.10. Fisher 信息定义为负二阶导数的期望。从上述表达式可以看出，高斯似然的二阶导数（假设有 $N$ 个观测值，$x_1,\ldots,x_N$）为：
+  after: EX 2.10.
+- line: 550
+  before: EX 2.11. 从第二个表达式出发，我们有
+  after: EX 2.11.
+- line: 580
+  before: EX 2.12. 代码如下（predvar.m）：
+  after: EX 2.12.
+- line: 620
+  before: EX 2.13. 二元随机变量 $x$ 的伯努利分布为：
+  after: EX 2.13.
+- line: 640
+  before: EX 2.14. 多元高斯 pdf 给出为：
+  after: EX 2.14.
+- line: 658
+  before: EX 3.3. 使用与上一练习相同的步骤：
+  after: EX 3.3.
+- line: 678
+  before: EX 3.5. 从期望的定义出发，
+  after: EX 3.5.
+- line: 696
+  before: EX 3.6. 我们需要
+  after: EX 3.6.
+- line: 1245
+  before: 习题 5.6  所需期望为：
+  after: 练习 5.6.
+- line: 1253
+  before: 习题 5.7  MAP 估计通过最大化似然与先验的乘积得到。仅提取包含 q_cm 的项并取对数，得到：
+  after: 练习 5.7.
+- line: 1268
+  before: 习题 5.8  出发点为：
+  after: 练习 5.8.
+- line: 1298
+  before: 习题 6.5  对数似然（应用 Jensen 不等式并省略不含 μ_kd 的项后）为：
+  after: 练习 6.5.
+- line: 1307
+  before: 习题 6.6  对数似然由下式给出：
+  after: 练习 6.6.
+- line: 1363
+  before: 习题 7.1  下界由下式给出：
+  after: 练习 7.1.
+- line: 1379
+  before: 习题 7.2  我们按照第 7.5.5 节中给出的顺序逐项讨论，从 $\mathbf{E}_{Q_{\tau}(\tau)}\{\log p(\tau|a,b)\}$
+    开始：
+  after: 练习 7.2.
+- line: 1411
+  before: 练习 8.1. 下面的代码可以实现：
+  after: 练习 8.1.
+- line: 1431
+  before: 练习 8.2. 使用上面的代码，并在 K 中添加一个线性项。
+  after: 练习 8.2.
+- line: 1433
+  before: 练习 8.3. 下面的代码给出了一个计算边际似然的函数。请注意，我们对参数的对数进行优化，以避免使用约束优化：
+  after: 练习 8.3.
+- line: 1476
+  before: 练习 8.4. 第 n 个数据点上的函数值为 f_n。该函数取指数后得到泊松分布的速率 λ_n = exp(f_n)。从泊松分布中采样得到的整数计数为
+    z_n。对数后验的梯度为：
+  after: 练习 8.4.
+- line: 1531
+  before: 练习 9.1. 下面的代码同时使用两种采样方法，然后绘制自相关图：
+  after: 练习 9.1.
+- line: 1594
+  before: 练习 9.2. 参见练习 8.5 的解答。唯一的区别是将 sigmoid 似然改为 probit 似然。
+  after: 练习 9.2.
+- line: 1596
+  before: 练习 9.3. 代码见随附网站。
+  after: 练习 9.3.
+- line: 1598
+  before: 练习 9.4. 代码见随附网站。
+  after: 练习 9.4.
+- line: 1600
+  before: 练习 9.5. 下面的代码将采样一个回归数据集，然后通过 ABC 获得近似后验：
+  after: 练习 9.5.
+- line: 1650
+  before: 练习10.1.
+  after: 练习 10.1.
+- line: 1667
+  before: 练习10.2.
+  after: 练习 10.2.
+- line: 1792
+  before: 练习10.3.
+  after: 练习 10.3.
+- line: 1821
+  before: 练习10.4.
+  after: 练习 10.4.
+- line: 1848
+  before: 练习10.5.
+  after: 练习 10.5.
