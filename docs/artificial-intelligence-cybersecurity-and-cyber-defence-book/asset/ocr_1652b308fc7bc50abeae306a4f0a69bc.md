@@ -1,0 +1,11 @@
+> “The last four years have seen remarkable growth in the Intelligence Community’s budget […] it has enabled us to restore many of the capabilities that we lost in 1970s […] In the last four years, we in the CIA for the first time have developed and implemented a comprehensive research program covering a staggering number of countries and issues […] we have rebuilt our human intelligence capability […] On the technical side, investments in new technical systems are beginning to pay off.” [DDI 84]
+
+This modernization would increase data collection capacity, which would result in new analytical needs:
+
+> “This means a tremendous increase in the quality and precision of intelligence information we can collect. It also means that the volume of data will substantially increase. This suggests that we must begin to invest in processing systems to match our capability in collecting raw data […] We have to avoid being overwhelmed by this volume of information from all sources, and that is where developments in computers, software, and other new technologies really must help us.” [DDI 84]
+
+Although the obstacle of financial resources seems to have been removed, the implementation of new systems was no less complex. One of the main difficulties lay in defining objectives and the appropriate methods. The low level of competence of the decision-makers (managers within the agency) was also pointed out, with its consequences on the choices made:
+
+> “A serious problem for both American industry and government is the computer illiterate senior manager […] important decisions on computers and ADP equipment are made by managers who hardly know a mainframe from a Mack truck. What do we do? We turn to the computer specialists in our own organizations who think narrowly and protect their turf and for whom larger scale planning, networking, and experimenting is anathema. And so we sometimes develop inadequate systems that can’t talk to each other and meet only today’s needs.” [DDI 84]
+
+Other particularities must be taken into account, such as the agency’s structure and mode of operation, which are reflected in how technological systems are organized and which are sometimes referred to as “problems”:

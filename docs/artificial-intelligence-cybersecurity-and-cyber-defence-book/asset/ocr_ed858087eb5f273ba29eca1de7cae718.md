@@ -1,0 +1,13 @@
+| Definition | Source | Year |
+|---|---|---|
+| “Artificial intelligence is systems based on algorithms (mathematical formulae) that, by analyzing and identifying patterns in data, can identify the most appropriate solution.” | National Strategy for Artificial Intelligence (Denmark)⁸ | 2019 |
+| “Artificial intelligence (AI) is a diverse field of computer science that is constantly evolving [...]”<br><br>“Artificial intelligence (AI) refers to systems that display intelligent behavior by analyzing their environment and taking actions – with some degree of autonomy – to achieve specific goals.” | National Artificial Intelligence Strategy of the Czech Republic⁹<br><br>The second part of the definition, relating to the Lithuanian strategy, is that of the European Commission | 2019 |
+| “In this section, the term ‘artificial intelligence’ includes the following:<br>(1) Any artificial system that performs tasks under varying and unpredictable circumstances without significant human surveillance, or that can learn from experience and improve performance when exposed to data sets.<br>(2) An artificial system developed in computer software, physical hardware, or other context that solves tasks requiring human-like perception, cognition, planning, learning, communication, or physical action.<br>(3) An artificial system designed to think or act like a human, including cognitive architectures and neural networks.<br>(4) A set of techniques, including machine learning, that is designed to approximate a cognitive task.<br>(5) An artificial system designed to act rationally, including an intelligent software agent or embodied robot that achieves goals using perception, planning, reasoning, learning, communicating, decision making, and acting.” | John S. McCain National Defense Authorization Act for Fiscal Year 2019¹⁰ | 2019 |
+
+**Table 2.1.** *Definitions of AI by year and chronological order*
+
+⁸ The Danish Government, National Strategy for Artificial Intelligence, Ministry of Finance and Ministry of Industry, Business and Financial Affairs, March 2019, available at: https://eng.em.dk/media/13081/305755-gb-version_4k.pdf.
+
+⁹ National Artificial Intelligence Strategy of the Czech Republic, Ministry of Industry and Trade of the Czech Republic, 2019, available at: https://www.mpo.cz/assets/en/guidepost/for-the-media/press-releases/2019/5/NAIS_eng_web.pdf.
+
+¹⁰ https://www.govinfo.gov/content/pkg/BILLS-115hr5515enr/pdf/BILLS-115hr5515enr.pdf.

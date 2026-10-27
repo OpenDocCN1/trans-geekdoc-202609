@@ -1,0 +1,13 @@
+major new technological transformations that could have a profound impact on the art of warfare. However, nothing is yet certain.
+
+In September 1985, *Le Monde diplomatique* published an article by Dominique Desbois entitled “Comment ‘l’intelligence artificielle’ conduirait la guerre” (“How ‘Artificial intelligence’ would lead the war”) [DES 85]. The year 1983 witnessed an acceleration in military investment in the United States. DARPA initiated a new project[^15] to develop a new generation of strategic technologies, in line with Ronald Reagan’s defense policy (the “‘Star Wars’ speech”, March 1983). We were also in the midst of the Cold War, a nuclear arms race and the risk of confrontation between the two blocs. On the one hand, there was a need to strengthen the nuclear arsenal, and, on the other hand, to increase the capabilities of C2 systems. Defense budgets would explode in the coming years. The budget for the *Strategic Defense Initiative* (SDI, a project centered on the development of ballistic missile interceptor capabilities) rose from $99 million in 1984 to $3.8 billion in 1986. The time taken to commit forces was reduced, and C2 was more removed from tactical and operational levels than before: in this context, the army had to acquire automated information processing facilities, and was planning to process ever greater volumes of data and to automate decision-making. Speed was a key element of this strategy. In terms of science and technology, it would therefore be necessary to concentrate efforts on increasing computing capacity (new hardware, in particular), and on the software dimension, efforts would focus on AI (more particularly, expert systems) to integrate natural language comprehension, vision and reasoning into systems.
+
+|  | Needs |
+|---|---|
+| **Army** | Autonomous vehicles for hostile environments |
+| **Aviation** | Intelligent co-pilot crew assistance system capable of autonomy |
+| **Marine** | Battlefield management system capable of processing unverified data to predict probable events; system providing learning-based action strategies to assist in decision-making |
+
+**Table 3.2.** *Expressed military requirements. Reconstituted table from the article by Dominique Desbois*
+
+[^15]: Strategic Computing, New Generation Computing Technology: A Strategic Plan for its Development and Application to Critical Problems in Defense. Defense Advanced Research Projects Agency, October 1983.

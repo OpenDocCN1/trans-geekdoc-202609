@@ -1,0 +1,11 @@
+# 3.4.2. *AI and cyberweapons*
+
+Conflictuality in cyberspace has taken shape by exploiting the multiple vulnerabilities inherent in this technological environment or created as a result of dependence on it. The search for and exploitation of vulnerabilities is the core of the cyber-offensive dimension (which, of course, must also develop strategies and tactics). On the defense and security side, the bulk of the work consists of anticipating attacks, which includes identifying vulnerabilities. However, active defense will go further by advocating counter-attacks, or even preventive or pre-emptive attacks. Defense then means knowing the targets’ vulnerabilities. Whatever the position (attack, security, defense), vulnerability is central, and the “armory” in service of the offensive (by which we mean in a military as well as in a non-war context) is the essential tool of these operating methods.
+
+The notion of “cyberweapons” calls for definitions that do not characterize it in a precise manner. It can be approached by analogy with the definition of a weapon.
+
+> A weapon is: “A tool that is used, or designed to be used, with the aim of threatening or causing physical, functional, or mental harm to structures, systems, or living things.” [RID 12]
+
+Let us recall the distinction that exists, however, between a weapon by nature and a weapon by use. The first is designed as an instrument of destruction, to cause damage, to exert force against an adversary. The second is any tool or instrument that is diverted from its primary use and can thus become an instrument of destruction: a sword is a weapon by nature; a piece of wood can become a weapon when it is used to strike an individual, it then becomes a weapon by use. In cyberspace, there are software tools that are designed to destroy or cause damage (e.g. Stuxnet), and other tools that were not created to contribute to offensive operations (e.g. the Ping command), but which can nevertheless be used by aggressors, armies or criminals, as part of their offensive actions.
+
+> A cyberweapon is, by analogy, with these definitions of a weapon: “A subset of weapons more generally: computer code that is used, or designed to be used, with the aim of threatening or causing physical, functional, or mental harm to structures, systems, or living beings.” [RID 12]

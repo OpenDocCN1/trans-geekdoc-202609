@@ -1,0 +1,11 @@
+on a policy of transfer from the United States to the USSR from the end of the 1950s and accelerated from 1972 onwards under the Nixon administration [ROD 81]. The acquisition of foreign technology, especially in the field of information technology, by the USSR, was carried out through legal (sales authorized by the US government) and illegal (black market and copying) channels. AI was part of this Soviet “cybernetics” project. However, a report by the American Department of Defense in 1990 estimated that the Soviet Union had lower capabilities than America, despite research efforts and special attention to AI applications in the civil and military fields [DOD 90]:
+
+> > “The Soviet Union lags behind the United States significantly in machine intelligence and robotics. They do have a good theoretical understanding of the area and can show creativity in applying the technology to selected space and military applications. Soviet R&D on artificial intelligence (AI), under the auspices of the Academy of Sciences of the USSR, includes work on machine vision and machine learning. The value of machine intelligence to battlefield operations as well as to the domestic economy has been recognized by the Soviet government.”
+
+So, while the Soviet Union does not appear to have been truly competing with US capabilities at the time, it was nonetheless a player that added to the competitive landscape facing the United States. AI and robotics, in their various dimensions (research, development, industrialization), emerged dynamically in several countries and regions of the world: the report cites France, Europe and Japan, among others.
+
+Research in the USSR was not isolated from the rest of the world. The USSR organized international AI conferences: for example, in Leningrad in April 1977^8 and in October 1983^9. Its research projects and achievements were in fields relatively similar to the rest of the world: applications for automatic translation and understanding natural language (in 1982, the “Etap-1” project was created – Experimental System for Automated Translation from French into Russian)^10.
+
++   8. http://ershov.iis.nsk.su/en/archive/subgroup?nid=763546&id_1=763546
++   9. http://ershov.iis.nsk.su/en/archive/subgroup?nid=763550&id_1=763550.
++   10. http://ershov.iis.nsk.su/en/archive/subgroup?nid=763438&id_1=763438.
