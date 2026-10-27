@@ -1,0 +1,13 @@
+**Purpose:** to focus on reestablishing academic and personal balance and celebrating academic successes.
+
+**Procedures:** In this activity we encourage student teachers to consciously plan mindful self-care moments during busy times and reflect on the importance of keeping a healthy academic/personal balance.
+
++   1. Ask student teachers to take a screen capture or a picture of their schedules and to share them with the rest of the class. You can also participate in this activity as a practicum teacher and show your own schedule.
++   2. Ask student teachers about their daily routines. Then, discuss what deadlines mean and imply.
++   3. Introduce the concept *lifelines*: Tell student teachers they are self-care moments that can be done after they accomplish tasks and meet deadlines. For example, taking a fifteen-minute break with no phones or laptop and drinking a glass of water mindfully, in complete silence. Focus on the fact that balance is conceived differently by each person and that the frequency and type of self-care moment selected should work for each person (Mercer & Gregersen 2020).
++   4. With the whole class, create a self-care checklist with activities that the student teachers would like to do and that are feasible. Ask student teachers to share their choices to inspire their classmates.
++   5. Get student teachers to reflect on the importance of finding openings in their calendars to schedule brief conscious activities to reestablish academic and personal balance and celebrate academic successes. Invite student teachers to take action by inserting these self-care activities into their schedules and meeting the *lifelines*.
+
+**Follow-up:** The following week, ask student teachers whether they were able to take their self-care moments and how they felt. Encourage them to savor the positive, relaxing moments they could experience during their breaks and to “protect them just as if they were important meetings” (Mercer & Gregersen 2020: 155).
+
+**Techy option:** If student teachers express difficulties in remembering to take self-care moments, they suggest setting a lifeline alarm in their cellphones. In this way, they will eventually get used to incorporating these breaks into their routine. You can also encourage them to make a self-care schedule for a specific week or month using their favorite app and to share it with the rest of the class or on social media among their friends.

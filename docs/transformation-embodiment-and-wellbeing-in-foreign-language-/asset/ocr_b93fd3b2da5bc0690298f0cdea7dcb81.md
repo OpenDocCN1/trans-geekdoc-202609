@@ -1,0 +1,13 @@
+# Table 7.1 Curriculum overview
+
+| THEMATIC FOCUS | FEATURED GENRE FAMILIES |
+|---|---|
+| **The Individual in Society** <br>*(Das Individuum in der Gesellschaft)* | **Description/Portrayal/Vignette** |
+| **Stories from German History** <br>*(Geschichten aus der deutschen Geschichte)* | **Narrative** |
+| **Gaming and Game Culture** <br>*(Gaming und Spielkulturen)* | **Position paper/Opinion piece** |
+
+were asked to return to the annotations to see what possible answers they could find. In this way, text and context alike were left more open to reader response.
+
+The second unit included four thematic sub-modules, each representing a different moment of twentieth or twenty-first century German history: post-war Germany, the student movements, contemporary German society, and the Berlin Wall and everyday life in East Germany. The intended learning objective for each of these sub-modules was not for the students to master the particular historical contexts—although the texts, media, and supplemental materials offered them a sense of key events, figures, and discourses; rather all of the mini modules were connected by a set of questions related to the ways in which personal narratives can stand in for broader experiences. Students’ core assessment for this unit was then a personal recount, which they were told could be fictional or non-fictional.
+
+The case I will focus on comes from the last of these mini modules. The primary readings included the poem “Naturschutzgebiet” (1982; Nature Preserve) by Sarah Kirsch, which is a first-person description of the space surrounding the Berlin Wall, an excerpt from the novel Helden wie wir (1995; Heroes Like Us) by Thomas Brussig, which is a parody memoir about growing up and being socialized into East German society and specifically into the youth group Die junge Pioniere (the Young Pioneers), and two autobiographical vignettes from the collection Meine freie deutsche Jugend (2003; My Free German Youth) by Claudia Rusch, which depict her experiences as the child of political dissidents in East Germany. The latter three texts all partake in a cultural phenomenon during the 1990s and early 2000s that is often described as Ostalgie, a portmanteau of the German words for “east” (Ost) and “nostalgia” (Nostalgie). A defining feature of literary works associated with Ostalgie is the focus on making sense of what it meant to grow up in East Germany and humor is often evoked to express the related feelings of ambivalence that this conjured up for many authors. Kirsch’s
