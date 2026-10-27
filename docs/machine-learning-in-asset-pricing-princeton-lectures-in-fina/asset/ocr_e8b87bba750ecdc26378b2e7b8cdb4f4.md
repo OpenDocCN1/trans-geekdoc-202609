@@ -1,0 +1,11 @@
+# ML IN CROSS-SECTIONAL ASSET PRICING
+
+In the previous chapter, we outlined key issues that arise in the application of supervised learning techniques in return prediction and optimal portfolio formation. We now look at an approach that addresses many, although not all, of these issues. As in the previous chapter, the underlying analytical framework is based on Bayesian regression.
+
+First, we look at a much broader set of covariates. In the previous chapter, the set of return predictors was limited to functions of a stock’s own past returns. In this chapter, we look at an application that uses a large set of stock characteristics that have appeared as return predictors in empirical asset pricing studies. Stock return prediction analyses in this earlier pre-ML literature have looked at each of these stock characteristics in isolation, or only at small subsets of these characteristics at a time. Here we use a supervised learning approach to look at all of them jointly.
+
+Second, building on the motivation from Section 3.5, we aggregate stock returns into portfolios weighted by these (rank-transformed and normalized) stock characteristics. These characteristics portfolios form the basis assets that span the investable universe in our analysis.
+
+Third, facilitated by this portfolio aggregation, we incorporate the covariance matrix of these characteristics portfolio returns into the prior beliefs and the estimation approach. We leave the covariance matrix unrestricted, without imposing any special structure on it. However, we do impose structure on the relation between covariances and expected returns.
+
+Fourth, to impose economic restrictions on the relation between covariance and expected returns, the approach in this chapter is framed in terms of a stochastic discount factor (SDF) model. Each of the characteristics portfolios is a candidate risk factor in this SDF. The parameters to be estimated are the price of risk coefficients corresponding to each of these candidate factors. These SDF weights are equivalent to portfolio weights in a mean-variance efficient portfolio. A conventional approach would be to estimate SDF coefficients with a cross-sectional regression of average returns on covariances of returns and candidate factors. Due to the large number of candidate factors, this conventional approach would

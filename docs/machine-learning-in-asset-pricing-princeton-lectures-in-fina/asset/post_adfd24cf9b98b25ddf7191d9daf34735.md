@@ -1,0 +1,66 @@
+
+## BIBLIOGRAPHY
+
+- Cochrane, John H., 2008, The dog that did not bark: A defense of return predictability, Review of Financial Studies 21, 1533–1575.
+- Cochrane, John H., 2011, Presidential address: Discount rates, Journal of Finance 66, 1047–1108.
+- Collin-Dufresne, Pierre, Michael Johannes, and Lars A. Lochstoer, 2017, Asset pricing when ‘this time is different’, Review of Financial Studies 30, 505–535.
+- Cybenko, George, 1989, Approximation by superpositions of a sigmoidal function, Mathematics of Control, Signals and Systems 2, 303–314.
+- Davis, Carter, 2020, Machine learning, quantitative portfolio choice, and mispricing, Working paper, University of Chicago.
+- DeBondt, Werner F. M., and Richard Thaler, 1985, Does the stock market overreact?, Journal of Finance 40, 793–805.
+- DeMiguel, Victor, Alberto Martin-Utrera, Francisco J. Nogales, and Raman Uppal, 2019, A transaction-cost perspective on the multitude of firm characteristics, Review of Financial Studies 33, 2180–2222.
+- Dugast, Jérôme, and Thierry Foucault, 2020, Equilibrium data mining and data abundance, Working paper, HEC Paris.
+- Fama, Eugene F., 1970, Efficient capital markets: A review of theory and empirical work, Journal of Finance 25, 383–417.
+- Fama, Eugene F., and Kenneth R. French, 1993, Common risk factors in the returns on stocks and bonds, Journal of Financial Economics 33, 23–49.
+- Fama, Eugene F., and Kenneth R. French, 2008, Dissecting anomalies, Journal of Finance 63, 1653–1678.
+- Fama, Eugene F., and Kenneth R. French, 2015, A five-factor asset pricing model, Journal of Financial Economics 116, 1–22.
+- Fama, Eugene F., and Kenneth R. French, 2016, Dissecting anomalies with a five-factor model, Review of Financial Studies 29, 69–103.
+- Fan, Jianqing, Yuan Liao, and Weichen Wang, 2016, Projected principal component analysis in factor models, Annals of Statistics 44, 219.
+- Feng, Guanhao, Stefano Giglio, and Dacheng Xiu, 2020, Taming the factor zoo: A test of new factors, Journal of Finance 75, 1327–1370.
+- Feng, Guanhao, Nicholas G. Polson, and Jianeng Xu, 2018, Deep learning in characteristics-sorted factor models, arXiv preprint arXiv:1805.01104.
+- Freyberger, Joachim, Andreas Neuhierl, and Michael Weber, 2020, Dissecting characteristics nonparametrically, Review of Financial Studies 33, 2326–2377.
+- Gabaix, Xavier, 2014, A sparsity-based model of bounded rationality, Quarterly Journal of Economics 129, 1661–1710.
+- Gentzkow, Matthew, Bryan Kelly, and Matt Taddy, 2019, Text as data, Journal of Economic Literature 57, 535–574.
+- George, Edward I., and Dean P. Foster, 2000, Calibration and empirical Bayes variable selection, Biometrika 87, 731–747.
+- Gillen, Benjamin J., Sergio Montero, Hyungsik Roger Moon, and Matthew Shum, 2019, BLP-2LASSO for aggregate discrete choice models with rich covariates, Econometrics Journal 22, 262–281.
+- Gu, Shihao, Bryan Kelly, and Dacheng Xiu, 2020a, Empirical asset pricing via machine learning, Review of Financial Studies 33, 2223–2273.
+- Gu, Shihao, Bryan T. Kelly, and Dacheng Xiu, 2020b, Autoencoder asset pricing models, *Journal of Econometrics*, forthcoming.
+- Hamilton, James D., 1994. *Time Series Analysis* (Princeton University Press, Princeton, NJ).
+- Han, Yufeng, Ai He, David Rapach, and Guofu Zhou, 2019, Firm characteristics and expected stock returns, Working paper, Washington University.
+- Hansen, Peter Reinhard, and Allan Timmermann, 2015, Equivalence between out-of-sample forecast comparisons and Wald statistics, *Econometrica* 83, 2485–2505.
+- Harvey, Campbell R., Yan Liu, and Heqing Zhu, 2016, … and the cross-section of expected returns, *Review of Financial Studies* 29, 5–68.
+- Hastie, Trevor, Robert Tibshirani, and Jerome Friedman, 2009. *The Elements of Statistical Learning* (2nd edition) (Springer, New York, NY).
+- Hastie, Trevor, Robert Tibshirani, and Martin Wainwright, 2015. *Statistical Learning with Sparsity: The Lasso and Generalizations* (CRC, Boca Raton, FL).
+- Heston, Steven L., and Ronnie Sadka, 2008, Seasonality in the cross-section of stock returns, *Journal of Financial Economics* 87, 418–445.
+- Hoerl, Arthur E., and Robert W. Kennard, 1970, Ridge regression: Biased estimation for nonorthogonal problems, *Technometrics* 12, 55–67.
+- Hong, Harrison, and Jeremy C. Stein, 1999, A unified theory of underreaction, momentum trading, and overreaction in asset markets, *Journal of Finance* 54, 2143–2184.
+- Horel, Enguerrand, and Kay Giesecke, 2019, Towards explainable AI: Significance tests for neural networks, *arXiv preprint arXiv:1902.06021*.
+- Hornik, Kurt, Maxwell Stinchcombe, and Halbert White, 1989, Multilayer feed-forward networks are universal approximators, *Neural Networks* 2, 359–366.
+- Hou, Kewei, Chen Xue, and Lu Zhang, 2015, Digesting anomalies: An investment approach, *Review of Financial Studies* 28, 650–705.
+- Inoue, Atsushi, and Lutz Kilian, 2005, In-sample or out-of-sample tests of predictability: Which one should we use?, *Econometric Reviews* 23, 371–402.
+- Jegadeesh, Narasimhan, and Sheridan Titman, 1993, Returns to buying winners and selling losers: Implications for market efficiency, *Journal of Finance* 48, 65–91.
+- Kelly, Bryan, Seth Pruitt, and Yinan Su, 2019, Characteristics are covariances: A unified model of risk and return, *Journal of Financial Economics* 134, 501–524.
+- Kogan, Leonid, and Mary Tian, 2015, Firm characteristics and empirical factor models: A model-mining experiment, Working paper, MIT.
+- Koijen, Ralph S. J., and Motohiro Yogo, 2019, A demand system approach to asset pricing, *Journal of Political Economy* 127, 1475–1515.
+- Kozak, Serhiy, 2019, Kernel trick for the cross section, Working paper, University of Maryland.
+- Kozak, Serhiy, Stefan Nagel, and Shrihari Santosh, 2018, Interpreting factor models, *Journal of Finance* 73, 1183–1223.
+- Kozak, Serhiy, Stefan Nagel, and Shrihari Santosh, 2020, Shrinking the cross-section, *Journal of Financial Economics* 135, 271–292.
+- LeCun, Yann, Yoshua Bengio, and Geoffrey Hinton, 2015, Deep learning, *Nature* 521, 436.
+- Lettau, Martin, and Markus Pelger, 2018, Factors that fit the time series and cross-section of stock returns, Working paper, National Bureau of Economic Research.
+- Lewellen, Jonathan, and Jay Shanken, 2002, Learning, asset-pricing tests and market efficiency, *Journal of Finance* 57, 1113–1145.
+- Lin, Henry W., Max Tegmark, and David Rolnick, 2017, Why does deep and cheap learning work so well?, *Journal of Statistical Physics* 168, 1223–1247.
+- Lindley, Dennis V., and Adrian F. M. Smith, 1972, Bayes estimates for the linear model, *Journal of the Royal Statistical Society: Series B (Methodological)* 34, 1–18.
+- Linnainmaa, Juhani T., and Michael R. Roberts, 2018, The history of the cross-section of stock returns, *Review of Financial Studies* 31, 2606–2649.
+- Lo, Andrew W., and A. Craig MacKinlay, 1990, Data-snooping biases in tests of financial asset pricing models, *Review of Financial Studies* 3, 431–467.
+- MacKinlay, A. Craig, 1995, Multifactor models do not explain deviations from the CAPM, *Journal of Financial Economics* 38, 3–28.
+- Martin, Ian, and Stefan Nagel, 2019, Market efficiency in the age of big data, Working paper, University of Chicago.
+- Martínez-Rego, David, Beatriz Pérez-Sánchez, Oscar Fontenla-Romero, and Amparo Alonso-Betanzos, 2011, A robust incremental learning method for non-stationary environments, *Neurocomputing* 74, 1800–1808.
+- McLean, David R., and Jeffrey Pontiff, 2016, Does academic research destroy stock return predictability?, *Journal of Finance* 71, 5–32.
+- Merton, R., 1980, On estimating the expected return on the market, *Journal of Financial Economics* 8, 323–361.
+- Molavi, Pooya, Alireza Tahbaz-Salehi, and Andrea Vedolin, 2020, Asset pricing with misspecified models, Working paper, Boston University.
+- Monti, Ricardo P., Christophoros Anagnostopoulos, and Giovanni Montana, 2018, Adaptive regularization for lasso models in the context of nonstationary data streams, *Statistical Analysis and Data Mining: The ASA Data Science Journal* 11, 237–247.
+- Moritz, Benjamin, and Tom Zimmermann, 2016, Tree-based conditional portfolio sorts: The relation between past and future stock returns, Working paper, University of Munich.
+- Nagel, Stefan, and Zhengyang Xu, 2019, Asset pricing with fading memory, Working paper, University of Chicago.
+- Novy-Marx, Robert, 2012, Is momentum really momentum?, *Journal of Financial Economics* 103, 429–453.
+- Novy-Marx, Robert, and Mihail Velikov, 2016, A taxonomy of anomalies and their trading costs, *Review of Financial Studies* 29, 104–147.
+- Pástor, Ľuboš, and Robert F. Stambaugh, 2000, Comparing asset pricing models: An investment perspective, *Journal of Financial Economics* 56, 335–381.
+- Ross, S. A., 1976, The arbitrage theory of capital asset pricing, *Journal of Economic Theory* 13, 341–360.

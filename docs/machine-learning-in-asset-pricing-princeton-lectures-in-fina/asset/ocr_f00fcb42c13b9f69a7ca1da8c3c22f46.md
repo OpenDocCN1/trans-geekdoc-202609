@@ -1,0 +1,13 @@
+portfolio performance instead of R² are quite limited, at least in this specific setting. But they also illustrate once more that R² measures can be quite misleading as indicators of portfolio performance.
+
+The bottom line conclusion from this section is that the effects of regularization on R² and portfolio performance in validation data are sensitive to the scaling of covariates. For regularization to be effective, we need to bring in some prior knowledge about the likely relative importance of different covariates in the prediction task. This raises the question of how we might come up with prior beliefs that can help us scale covariates appropriately to make regularization effective. As the next section shows, financial economics suggests links between covariances and expected returns, and these links can help us pin down how we should regularize.
+
+# 3.4 Links between Expected Returns and Covariances
+
+The Bayesian regression framework we discussed in Section 2.4 allows us to tackle the question of covariate scaling by showing how economic links between expected returns and covariances relate to regularization. Recall that for a cross-sectional regression model \bar{r}=Xg + \bar{e} with a prior g ~ N(0, Σ_g), where \bar{r} and \bar{e} are averages of r_t and e_t from a sample of size τ, and Σ = var(e_t), we get the posterior mean
+
+$$\hat{g}=\left( X'\Sigma^{-1}X + \frac{1}{\tau}\Sigma_g^{-1} \right)^{-1} X'\Sigma^{-1}\bar{r}. \tag{3.21}$$
+
+Within this framework, we now look for a specification of X and prior beliefs about g that are economically sensible. For this purpose, we also need a more realistic specification of the covariance matrix. The assumption that Σ = I_N σ² that we worked with above is sometimes useful for illustration, but not a realistic property of asset returns. Here we let Σ have a general form. As before, we still assume that Σ is known and does not need to be estimated.
+
+Economic reasoning suggests that covariates that predict returns should be related to stock return covariances. Specifically, the link to the covariance matrix should be such that if a long-short portfolio formed based on the values of a covariate produces a substantial mean return, it should also have substantial return volatility. For example, if small firm size predicts high returns, then a portfolio that takes a long position in small stocks and a short position in large stocks should have substantial volatility. This requires covariance risk exposure in the sense that small stocks co-move with each other more than with large stocks and large stocks co-move with each other more than with small stocks. This within-group
