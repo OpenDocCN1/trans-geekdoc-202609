@@ -1,0 +1,3 @@
+# Author
+
+Rémi Cresson received an electrical engineering degree from the Ecole Nationale Superieure de l’Energie, de l’Eau et de l’Environnement, Grenoble Institute of Technology, France, in 2009. He is now with the French National Institute for Agricultural Research, in the Land, Environment, Remote Sensing and Spatial Information Joint Research Unit at the University of Montpellier, France. His research and engineering interests include geospatial image processing at scale, high-performance computing, machine learning, and geospatial data interoperability. He is involved in open source software development, a member of the Orfeo ToolBox Project Steering Committee, and also a member of the open source geospatial foundation OSGeo.

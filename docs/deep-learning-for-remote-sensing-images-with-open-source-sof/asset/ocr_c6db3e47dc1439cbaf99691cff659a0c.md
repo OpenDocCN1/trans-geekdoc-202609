@@ -1,0 +1,7 @@
+![](bbox=[0.12, 0.092, 0.78, 0.256])
+
+# FIGURE 10.1
+
+Semantic segmentation is understanding an image at pixel level. The output is an image of labels that annotate the image content: here the output of the semantic segmentation is a label image annotating the following 3 classes: human, bike and background. *Source: VOC2012.*
+
+As for image classification, CNNs are very successful on segmentation problems. First approaches using artificial neural networks used fully connected layers and therefore required fixed size images. Later, FCN CNN architectures for dense predictions were usable without any fully connected layers. One of the main problems remaining with using CNNs for semantic segmentation is pooling layers. Pooling layers increase the field of view and are able to aggregate the context, but as we saw in section 6, they remove spatial information. Since semantic segmentation requires a precise location of classes, it needs to preserve this spatial information. To tackle this problem, many architectures have evolved over the last years. In this chapter, we will use one of the first popular architectures based on FCN, the U-Net [25]. It is an encoder-decoder architecture. The encoder progressively reduces the spatial resolution with strided convolution or pooling layers, increasing the feature dimension, and the decoder progressively recovers spatial resolution in decreasing feature dimension. Finally, the last feature map is the predicted class. Figure 10.2 presents the original U-Net architecture.
