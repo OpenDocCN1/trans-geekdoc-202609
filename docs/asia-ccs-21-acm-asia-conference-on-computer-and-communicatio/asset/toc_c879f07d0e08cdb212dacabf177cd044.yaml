@@ -1,0 +1,40 @@
+level_changes:
+- line: 127
+  before: 3
+  after: 4
+- line: 153
+  before: 2
+  after: 3
+- line: 197
+  before: 2
+  after: 3
+- line: 254
+  before: 2
+  after: 3
+- line: 366
+  before: 2
+  after: 3
+- line: 378
+  before: 2
+  after: 3
+- line: 443
+  before: 2
+  after: 3
+- line: 453
+  before: 2
+  after: 3
+text_changes:
+- line: 111
+  before: 4.3.1 PV-DM 模型。
+  after: 4.3.1 PV-DM 模型
+- line: 127
+  before: 4.3.2 EVM Extractor.
+  after: 4.3.2 EVM Extractor
+- line: 390
+  before: 表 2：Eth2Vec 的漏洞检测结果：在下表中，我们对 Eth2Vec 和基于 SVM 的方法 [31] 测量了众所周知的指标。平均值和标准差的值是按行计算的。“Severity”列参考文献
+    [45]。数字截断至小数点后一位。
+  after: 表 2：Eth2Vec 的漏洞检测结果
+- line: 404
+  before: 表 3：与现有工具的吞吐量比较：我们测量了 Eth2Vec 以及若干分析工具的吞吐量。Oyente [27] 和 SmartCheck [45]
+    是符号执行工具。每个值代表每个合约的平均时间。数字截断至小数点后两位。
+  after: 表 3：与现有工具的吞吐量比较

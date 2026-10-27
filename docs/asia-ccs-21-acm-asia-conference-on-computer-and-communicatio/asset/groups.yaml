@@ -1,0 +1,2918 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Eth2Vec: Learning Contract-Wide Code Representations for Vulnerability Detection
+    on Ethereum Smart Contracts
+
+
+    Nami Ashizawa
+
+    Naoto Yanai
+
+    Jason Paul Cruz*
+
+    n-ashizawa@ist.osaka-u.ac.jp
+
+    yanai@ist.osaka-u.ac.jp
+
+    Osaka University
+
+    Suita, Osaka, Japan
+
+
+    Shingo Okamura
+
+    okamura@info.nara-k.ac.jp
+
+    National Institute of Technology, Nara College
+
+    Yamatokoriyama-shi, Nara, Japan
+
+
+    # ABSTRACT
+
+
+    Ethereum smart contracts are programs that run on the Ethereum blockchain, and
+    many smart contract vulnerabilities have been discovered in the past decade. Many
+    security analysis tools have been created to detect such vulnerabilities, but
+    their performance decreases drastically when codes to be analyzed are being rewritten.
+    In this paper, we propose Eth2Vec, a machine-learning-based static analysis tool
+    for vulnerability detection in smart contracts. It is also robust against code
+    rewrites, i.e., it can detect vulnerabilities even in rewritten codes. Existing
+    machine-learning-based static analysis tools for vulnerability detection need
+    features, which analysts create manually, as inputs. In contrast, Eth2Vec automatically
+    learns features of vulnerable Ethereum Virtual Machine (EVM) bytecodes with tacit
+    knowledge through a neural network for natural language processing. Therefore,
+    Eth2Vec can detect vulnerabilities in smart contracts by comparing the code similarity
+    between target EVM bytecodes and the EVM bytecodes it already learned. We conducted
+    experiments with existing open databases, such as Etherscan, and our results show
+    that Eth2Vec outperforms a recent model based on support vector machine in terms
+    of well-known metrics, i.e., precision, recall, and F1-score.
+
+
+    # CCS CONCEPTS
+
+
+    +   - Security and privacy → Software security engineering; Software reverse engineering;
+    Vulnerability management.
+
+
+    # KEYWORDS
+
+
+    Ethereum, smart contracts, neural networks, static analysis, code similarity,
+    vulnerability detection
+
+
+    ACM Reference Format:
+
+    Nami Ashizawa, Naoto Yanai, Jason Paul Cruz, and Shingo Okamura. 2021. Eth2Vec:
+    Learning Contract-Wide Code Representations for Vulnerability Detection on Ethereum
+    Smart Contracts. In Proceedings of the 3rd ACM International Symposium on Blockchain
+    and Secure Critical Infrastructure
+
+
+    (BSCI ’21), June 7, 2021, Virtual Event, Hong Kong. ACM, New York, NY, USA, 13
+    pages. https://doi.org/10.1145/3457337.3457841
+
+
+    # 1 INTRODUCTION
+
+
+    # 1.1 Backgrounds
+
+
+    Ethereum [50] is the largest platform that provides an execution environment for
+    smart contracts, and many distributed applications have been developed and deployed
+    as smart contracts on the Ethereum blockchain. Ethereum smart contracts are programs
+    that are stored on the Ethereum blockchain and are run by the Ethereum Virtual
+    Machine (EVM) as EVM bytecodes¹.
+
+
+    Given the transparent and decentralized nature of the Ethereum blockchain, the
+    EVM bytecodes of smart contracts deployed on the Ethereum blockchain can be accessed
+    and analyzed by anyone. Unfortunately, this also means that an adversary can abuse
+    smart contracts [52] by analyzing their EVM bytecodes and looking for vulnerabilities.
+    Consequently, attacks on vulnerable smart contracts can occur and possibly cause
+    significant damages, especially when the attacked smart contracts handle assets.
+    For example, the DAO attack is an infamous springboard attack where the attacker/s
+    exploited a vulnerability in the DAO smart contract and stole more than 60 million
+    USD worth of Ether, the cryptocurrency used in Ethereum.
+
+
+    According to literature [52], the security of smart contracts cannot be guaranteed
+    because of the complexity (or lack of complexity) of the programming languages
+    used for creating smart contracts, e.g., Solidity, which is a relatively new language,
+    and the insufficient knowledge of programmers when creating smart contracts. To
+    make matters worse, smart contracts that are successfully deployed on a blockchain
+    cannot be modified, i.e., their source codes cannot be edited or deleted. In the
+    past years, many attacks on deployed smart contracts have been reported [2], and
+    thus making sure that the source code of smart contracts is not vulnerable before
+    they are deployed on a blockchain is desirable. To do this, many analysis tools
+    for vulnerability detection in Ethereum smart contracts have been developed [9].
+
+
+    In this paper, we aim to develop a static analysis tool that can precisely detect
+    various vulnerabilities in smart contract codes with high throughput by analyzing
+    these codes. In static analysis, only the source code of a target to be analyzed
+    is provided as input to identify if the code has vulnerabilities without executing
+    the target
+
+
+    ¹Hereafter, “Ethereum smart contract/s” and “smart contract/s” are used interchangeably
+    but have the same meaning.'
+  - '[PAGE 1]
+
+
+    itself. Therefore, ideally, static analysis can be used to prevent vulnerable
+    codes from being deployed.
+
+
+    However, static analysis has two problems in general: (1) accuracy of its vulnerability
+    detection is limited, and (2) its analysis time can be long. For instance, disassembly
+    from EVM bytecodes [6, 35, 43, 51] does not have the capability to identify whether
+    a program is vulnerable or not, and the early literature focuses on simply improving
+    the readability of disassembled codes. In other words, disassembled codes often
+    need to be analyzed manually, consequently increasing the number of false positives
+    and false negatives. Moreover, symbolic execution [8, 27, 46, 49], which extracts
+    control flow graphs (CFGs) from a target code, achieves high accuracy by automating
+    the analysis, but the generation of CFGs needs to search all states such that
+    the target code transits. Therefore, the analysis takes significant amounts of
+    time [48].
+
+
+    A potential solution to the problems described above is machine learning. Static
+    analysis based on machine learning infers whether a given code is vulnerable by
+    learning features of codes. In doing so, the analysis also achieves a versatile
+    analysis within a short time. However, static analysis based on machine learning
+    has two inherent limitations: (1) code rewrites decrease analysis accuracy, and
+    (2) appropriate features of smart contracts are indefinite. In the first limitation,
+    for instance, CFGs with inlined functions are different from those of the original
+    functions. Therefore, identifying the original function with the inlined function
+    as the same codes is challenging. A pair of functions with the same semantics
+    but different structures may generate different analysis results because the differences
+    between structures of the codes strongly affect the analysis. In the second limitation,
+    although features are manually extracted for machine learning, code samples and
+    open knowledge about smart contracts are insufficient. Common knowledge about
+    smart contract features has never been established [52]. Notably, kinds of features
+    representing vulnerabilities in codes of smart contracts are unknown. Besides,
+    features that are robust against differences in code structures are still not
+    obvious. Neural Network is a common approach to extract features implicitly. However,
+    the existing approach based on neural network [15, 31] have not solved the above
+    limitations, and are insufficiently robust against code rewrites.
+
+
+    # 1.2  Contributions
+
+
+    In this paper, we propose *Eth2Vec*, a static analysis tool based on machine learning
+    that identifies smart contract vulnerabilities by learning smart contract code
+    via their EVM bytecode, assembly code, and abstract syntax trees. Eth2Vec has
+    high throughput, high accuracy, and robustness against code rewrites. Eth2Vec
+    is an analysis tool based on a neural network for natural language processing,
+    and it outputs the existence and kind of vulnerabilities in a target smart contract
+    code by only taking the code as input. Using Eth2Vec, a user can analyze code
+    of smart contracts quickly even without expert knowledge on smart contract vulnerabilities.
+
+
+    In terms of analysis of Ethereum smart contracts by using machine learning, a
+    major contribution of this paper is the provision of a method that is robust against
+    code rewrites. Loosely speaking, Eth2Vec overcomes the limitations described in
+    Section 1.1 by leveraging a neural network for natural language processing. Namely,
+
+
+    Eth2Vec can extract features more precisely than a trivial use of a neural network
+    by virtue of the natural language processing that learns the context of each function.
+    Although there are several existing tools [15, 36] based on a typical language
+    model for the analysis of Ethereum smart contracts, i.e., Word2Vec [29], Eth2Vec
+    is novel since it achieves robust analysis against code rewrites. To do this,
+    we also developed a module that gives the EVM bytecode and their syntactic information
+    to the neural network as inputs. By virtue of the developed module, Eth2Vec can
+    extract and learn features of code more informatively than the Word2Vec-based
+    tools. Furthermore, we designed a learning methodology based on a neural network
+    for natural language processing which takes the EVM bytecode through the compilation
+    of Solidity code as inputs. (See Section 4 for detail.)
+
+
+    We conducted experiments to evaluate the performance of Eth2Vec. The experimental
+    results show that Eth2Vec can detect vulnerabilities within 1.2 seconds per contract
+    with an average precision of 77.0%. Notably, reentrancy, whose severity is the
+    highest among known vulnerabilities [45], can be detected with 86.6% precision.
+    Eth2Vec outperforms a typical method [31] in terms of well-known metrics on vulnerability
+    detection. Moreover, Eth2Vec can detect vulnerabilities of rewritten code, which
+    were not found by the existing Word2Vec-based tool named SmartEmbed [15]. (See
+    Section 5 for detail.) We release the source code of Eth2Vec via GitHub for reproducibility
+    and as reference for future works (https://github.com/fseclab-osaka/eth2vec).
+
+
+    # 2  PRELIMINARIES
+
+
+    In this section, we describe background knowledge to help readers understand our
+    work.
+
+
+    # 2.1  Ethereum Smart Contracts
+
+
+    In Ethereum, there are two kinds of accounts, namely, an externally owned account
+    (EOA) and a contract account. EOAs have a private key that can be used to access
+    the corresponding Ether or contracts. A contract account has smart contract code,
+    which an EOA cannot have, and it does not have a private key. Instead, it is owned
+    and controlled by the logic of its smart contract code. In Ethereum, a smart contract
+    refers to an *immutable* computer program that is deployed on the blockchain and
+    runs *deterministically* in the context of the EVM. The immutability property
+    indicates that, similar to any data published on a general blockchain, smart contract
+    codes can be considered as trustworthy, i.e., once deployed, they cannot be changed
+    or deleted. The deterministic property indicates that the execution of the code
+    functions of smart contracts will produce the same result for anyone who runs
+    them. Once deployed on the blockchain, a contract is self-enforcing and managed
+    by the peers in the network, i.e., its functions are executed when the conditions
+    in the contract are met. A smart contract is given an identity in terms of a contract
+    address. Using this address, it can receive Ether and its functions can be executed.
+    A contract is invoked when its contract address is the destination of a transaction,
+    which is a signed message originating from an EOA, transmitted by the network,
+    and recorded on the blockchain. Such transaction causes a contract to run in the
+    EVM using the transaction (and transaction’s data) as input. The data indicate
+    which specific function in the'
+  md: '
+
+    ## Eth2Vec: Learning Contract-Wide Code Representations for Vulnerability Detection
+    on Ethereum Smart Contracts
+
+
+    Nami Ashizawa
+
+    Naoto Yanai
+
+    Jason Paul Cruz*
+
+    n-ashizawa@ist.osaka-u.ac.jp
+
+    yanai@ist.osaka-u.ac.jp
+
+    Osaka University
+
+    Suita, Osaka, Japan
+
+
+    Shingo Okamura
+
+    okamura@info.nara-k.ac.jp
+
+    National Institute of Technology, Nara College
+
+    Yamatokoriyama-shi, Nara, Japan
+
+
+    ## ABSTRACT
+
+
+    Ethereum smart contracts are programs that run on the Ethereum blockchain, and
+    many smart contract vulnerabilities have been discovered in the past decade. Many
+    security analysis tools have been created to detect such vulnerabilities, but
+    their performance decreases drastically when codes to be analyzed are being rewritten.
+    In this paper, we propose Eth2Vec, a machine-learning-based static analysis tool
+    for vulnerability detection in smart contracts. It is also robust against code
+    rewrites, i.e., it can detect vulnerabilities even in rewritten codes. Existing
+    machine-learning-based static analysis tools for vulnerability detection need
+    features, which analysts create manually, as inputs. In contrast, Eth2Vec automatically
+    learns features of vulnerable Ethereum Virtual Machine (EVM) bytecodes with tacit
+    knowledge through a neural network for natural language processing. Therefore,
+    Eth2Vec can detect vulnerabilities in smart contracts by comparing the code similarity
+    between target EVM bytecodes and the EVM bytecodes it already learned. We conducted
+    experiments with existing open databases, such as Etherscan, and our results show
+    that Eth2Vec outperforms a recent model based on support vector machine in terms
+    of well-known metrics, i.e., precision, recall, and F1-score.
+
+
+    ## CCS CONCEPTS
+
+
+    - Security and privacy → Software security engineering; Software reverse engineering;
+    Vulnerability management.
+
+
+    ## KEYWORDS
+
+
+    Ethereum, smart contracts, neural networks, static analysis, code similarity,
+    vulnerability detection
+
+
+    ACM Reference Format:
+
+
+    Nami Ashizawa, Naoto Yanai, Jason Paul Cruz, and Shingo Okamura. 2021. Eth2Vec:
+    Learning Contract-Wide Code Representations for Vulnerability Detection on Ethereum
+    Smart Contracts. In Proceedings of the 3rd ACM International Symposium on Blockchain
+    and Secure Critical Infrastructure (BSCI ’21), June 7, 2021, Virtual Event, Hong
+    Kong. ACM, New York, NY, USA, 13 pages. https://doi.org/10.1145/3457337.3457841
+
+
+    ## 1 INTRODUCTION
+
+
+    ### 1.1 Backgrounds
+
+
+    Ethereum [50] is the largest platform that provides an execution environment for
+    smart contracts, and many distributed applications have been developed and deployed
+    as smart contracts on the Ethereum blockchain. Ethereum smart contracts are programs
+    that are stored on the Ethereum blockchain and are run by the Ethereum Virtual
+    Machine (EVM) as EVM bytecodes¹.
+
+
+    ¹Hereafter, “Ethereum smart contract/s” and “smart contract/s” are used interchangeably
+    but have the same meaning.
+
+
+    Given the transparent and decentralized nature of the Ethereum blockchain, the
+    EVM bytecodes of smart contracts deployed on the Ethereum blockchain can be accessed
+    and analyzed by anyone. Unfortunately, this also means that an adversary can abuse
+    smart contracts [52] by analyzing their EVM bytecodes and looking for vulnerabilities.
+    Consequently, attacks on vulnerable smart contracts can occur and possibly cause
+    significant damages, especially when the attacked smart contracts handle assets.
+    For example, the DAO attack is an infamous springboard attack where the attacker/s
+    exploited a vulnerability in the DAO smart contract and stole more than 60 million
+    USD worth of Ether, the cryptocurrency used in Ethereum.
+
+
+    According to literature [52], the security of smart contracts cannot be guaranteed
+    because of the complexity (or lack of complexity) of the programming languages
+    used for creating smart contracts, e.g., Solidity, which is a relatively new language,
+    and the insufficient knowledge of programmers when creating smart contracts. To
+    make matters worse, smart contracts that are successfully deployed on a blockchain
+    cannot be modified, i.e., their source codes cannot be edited or deleted. In the
+    past years, many attacks on deployed smart contracts have been reported [2], and
+    thus making sure that the source code of smart contracts is not vulnerable before
+    they are deployed on a blockchain is desirable. To do this, many analysis tools
+    for vulnerability detection in Ethereum smart contracts have been developed [9].
+
+
+    In this paper, we aim to develop a static analysis tool that can precisely detect
+    various vulnerabilities in smart contract codes with high throughput by analyzing
+    these codes. In static analysis, only the source code of a target to be analyzed
+    is provided as input to identify if the code has vulnerabilities without executing
+    the target itself. Therefore, ideally, static analysis can be used to prevent
+    vulnerable codes from being deployed.
+
+
+    However, static analysis has two problems in general: (1) accuracy of its vulnerability
+    detection is limited, and (2) its analysis time can be long. For instance, disassembly
+    from EVM bytecodes [6, 35, 43, 51] does not have the capability to identify whether
+    a program is vulnerable or not, and the early literature focuses on simply improving
+    the readability of disassembled codes. In other words, disassembled codes often
+    need to be analyzed manually, consequently increasing the number of false positives
+    and false negatives. Moreover, symbolic execution [8, 27, 46, 49], which extracts
+    control flow graphs (CFGs) from a target code, achieves high accuracy by automating
+    the analysis, but the generation of CFGs needs to search all states such that
+    the target code transits. Therefore, the analysis takes significant amounts of
+    time [48].
+
+
+    A potential solution to the problems described above is machine learning. Static
+    analysis based on machine learning infers whether a given code is vulnerable by
+    learning features of codes. In doing so, the analysis also achieves a versatile
+    analysis within a short time. However, static analysis based on machine learning
+    has two inherent limitations: (1) code rewrites decrease analysis accuracy, and
+    (2) appropriate features of smart contracts are indefinite. In the first limitation,
+    for instance, CFGs with inlined functions are different from those of the original
+    functions. Therefore, identifying the original function with the inlined function
+    as the same codes is challenging. A pair of functions with the same semantics
+    but different structures may generate different analysis results because the differences
+    between structures of the codes strongly affect the analysis. In the second limitation,
+    although features are manually extracted for machine learning, code samples and
+    open knowledge about smart contracts are insufficient. Common knowledge about
+    smart contract features has never been established [52]. Notably, kinds of features
+    representing vulnerabilities in codes of smart contracts are unknown. Besides,
+    features that are robust against differences in code structures are still not
+    obvious. Neural Network is a common approach to extract features implicitly. However,
+    the existing approach based on neural network [15, 31] have not solved the above
+    limitations, and are insufficiently robust against code rewrites.
+
+
+    ### 1.2 Contributions
+
+
+    In this paper, we propose *Eth2Vec*, a static analysis tool based on machine learning
+    that identifies smart contract vulnerabilities by learning smart contract code
+    via their EVM bytecode, assembly code, and abstract syntax trees. Eth2Vec has
+    high throughput, high accuracy, and robustness against code rewrites. Eth2Vec
+    is an analysis tool based on a neural network for natural language processing,
+    and it outputs the existence and kind of vulnerabilities in a target smart contract
+    code by only taking the code as input. Using Eth2Vec, a user can analyze code
+    of smart contracts quickly even without expert knowledge on smart contract vulnerabilities.
+
+
+    In terms of analysis of Ethereum smart contracts by using machine learning, a
+    major contribution of this paper is the provision of a method that is robust against
+    code rewrites. Loosely speaking, Eth2Vec overcomes the limitations described in
+    Section 1.1 by leveraging a neural network for natural language processing. Namely,
+    Eth2Vec can extract features more precisely than a trivial use of a neural network
+    by virtue of the natural language processing that learns the context of each function.
+    Although there are several existing tools [15, 36] based on a typical language
+    model for the analysis of Ethereum smart contracts, i.e., Word2Vec [29], Eth2Vec
+    is novel since it achieves robust analysis against code rewrites. To do this,
+    we also developed a module that gives the EVM bytecode and their syntactic information
+    to the neural network as inputs. By virtue of the developed module, Eth2Vec can
+    extract and learn features of code more informatively than the Word2Vec-based
+    tools. Furthermore, we designed a learning methodology based on a neural network
+    for natural language processing which takes the EVM bytecode through the compilation
+    of Solidity code as inputs. (See Section 4 for detail.)
+
+
+    We conducted experiments to evaluate the performance of Eth2Vec. The experimental
+    results show that Eth2Vec can detect vulnerabilities within 1.2 seconds per contract
+    with an average precision of 77.0%. Notably, reentrancy, whose severity is the
+    highest among known vulnerabilities [45], can be detected with 86.6% precision.
+    Eth2Vec outperforms a typical method [31] in terms of well-known metrics on vulnerability
+    detection. Moreover, Eth2Vec can detect vulnerabilities of rewritten code, which
+    were not found by the existing Word2Vec-based tool named SmartEmbed [15]. (See
+    Section 5 for detail.) We release the source code of Eth2Vec via GitHub for reproducibility
+    and as reference for future works (https://github.com/fseclab-osaka/eth2vec).
+
+
+    ## 2 PRELIMINARIES
+
+
+    ### 2.1 Ethereum Smart Contracts
+
+
+    In Ethereum, there are two kinds of accounts, namely, an externally owned account
+    (EOA) and a contract account. EOAs have a private key that can be used to access
+    the corresponding Ether or contracts. A contract account has smart contract code,
+    which an EOA cannot have, and it does not have a private key. Instead, it is owned
+    and controlled by the logic of its smart contract code. In Ethereum, a smart contract
+    refers to an *immutable* computer program that is deployed on the blockchain and
+    runs *deterministically* in the context of the EVM. The immutability property
+    indicates that, similar to any data published on a general blockchain, smart contract
+    codes can be considered as trustworthy, i.e., once deployed, they cannot be changed
+    or deleted. The deterministic property indicates that the execution of the code
+    functions of smart contracts will produce the same result for anyone who runs
+    them. Once deployed on the blockchain, a contract is self-enforcing and managed
+    by the peers in the network, i.e., its functions are executed when the conditions
+    in the contract are met. A smart contract is given an identity in terms of a contract
+    address. Using this address, it can receive Ether and its functions can be executed.
+    A contract is invoked when its contract address is the destination of a transaction,
+    which is a signed message originating from an EOA, transmitted by the network,
+    and recorded on the blockchain. Such transaction causes a contract to run in the
+    EVM using the transaction (and transaction’s data) as input. The data indicate
+    which specific function in the
+
+    '
+  mdcn: '
+
+    ## Eth2Vec：学习以太坊智能合约漏洞检测的合约级代码表示
+
+
+    Nami Ashizawa
+
+    Naoto Yanai
+
+    Jason Paul Cruz*
+
+    n-ashizawa@ist.osaka-u.ac.jp
+
+    yanai@ist.osaka-u.ac.jp
+
+    Osaka University
+
+    Suita, Osaka, Japan
+
+
+    Shingo Okamura
+
+    okamura@info.nara-k.ac.jp
+
+    National Institute of Technology, Nara College
+
+    Yamatokoriyama-shi, Nara, Japan
+
+
+    ## 摘要
+
+
+    以太坊智能合约是运行在以太坊区块链上的程序，过去十年中发现了许多智能合约漏洞。已经创建了许多安全分析工具来检测此类漏洞，但在分析代码被重写时，其性能会急剧下降。在本文中，我们提出了
+    Eth2Vec，这是一种基于机器学习的智能合约漏洞检测静态分析工具。它对代码重写也具有鲁棒性，即即使在重写后的代码中也能检测出漏洞。现有的基于机器学习的漏洞检测静态分析工具需要分析人员手动创建的特征作为输入。相比之下，Eth2Vec
+    通过自然语言处理的神经网络，利用隐性知识自动学习易受攻击的以太坊虚拟机（EVM）字节码的特征。因此，Eth2Vec 可以通过比较目标 EVM 字节码与已学习的
+    EVM 字节码之间的代码相似性来检测智能合约中的漏洞。我们使用现有的开放数据库（如 Etherscan）进行了实验，结果表明 Eth2Vec 在众所周知的指标（即精确率、召回率和
+    F1 分数）方面优于基于支持向量机的近期模型。
+
+
+    ## CCS 概念
+
+
+    - 安全与隐私 → 软件安全工程；软件逆向工程；漏洞管理。
+
+
+    ## 关键词
+
+
+    以太坊，智能合约，神经网络，静态分析，代码相似性，漏洞检测
+
+
+    ACM 参考格式：
+
+
+    Nami Ashizawa, Naoto Yanai, Jason Paul Cruz 和 Shingo Okamura. 2021. Eth2Vec: Learning
+    Contract-Wide Code Representations for Vulnerability Detection on Ethereum Smart
+    Contracts. 收录于第 3 届 ACM 区块链与安全关键基础设施国际研讨会论文集（BSCI ’21），2021 年 6 月 7 日，虚拟活动，香港。ACM，纽约，NY，美国，13
+    页。https://doi.org/10.1145/3457337.3457841
+
+
+    ## 1 引言
+
+
+    ### 1.1 背景
+
+
+    Ethereum [50] 是提供智能合约执行环境的最大平台，许多分布式应用程序已作为智能合约开发并部署在以太坊区块链上。以太坊智能合约是存储在以太坊区块链上并由以太坊虚拟机（EVM）作为
+    EVM 字节码¹ 运行的程序。
+
+
+    ¹此后，“以太坊智能合约/智能合约”和“智能合约/智能合约”可互换使用，但含义相同。
+
+
+    鉴于以太坊区块链的透明和去中心化特性，部署在以太坊区块链上的智能合约的 EVM 字节码可以被任何人访问和分析。不幸的是，这也意味着攻击者可以通过分析其 EVM
+    字节码并寻找漏洞来滥用智能合约 [52]。因此，对易受攻击的智能合约的攻击可能会发生，并可能造成重大损害，尤其是在被攻击的智能合约处理资产时。例如，DAO
+    攻击是一个臭名昭著的攻击事件，攻击者利用了 DAO 智能合约中的漏洞，窃取了价值超过 6000 万美元的以太币，即以太坊中使用的加密货币。
+
+
+    根据文献 [52]，智能合约的安全性无法得到保证，这是由于用于创建智能合约的编程语言的复杂性（或缺乏复杂性），例如 Solidity，这是一种相对较新的语言，以及程序员在创建智能合约时知识不足。更糟糕的是，一旦成功部署到区块链上的智能合约就无法修改，即其源代码无法编辑或删除。在过去几年中，已报告了许多对已部署智能合约的攻击
+    [2]，因此在智能合约部署到区块链之前确保其源代码没有漏洞是可取的。为此，已开发了许多用于以太坊智能合约漏洞检测的分析工具 [9]。
+
+
+    在本文中，我们旨在开发一种静态分析工具，通过分析这些代码，以高吞吐量精确检测智能合约代码中的各种漏洞。在静态分析中，仅将待分析目标的源代码作为输入，以在不执行目标本身的情况下识别代码是否存在漏洞。因此，理想情况下，静态分析可用于防止易受攻击的代码被部署。
+
+
+    然而，静态分析通常存在两个问题：（1）其漏洞检测的准确性有限，（2）其分析时间可能很长。例如，从 EVM 字节码 [6, 35, 43, 51] 反汇编没有识别程序是否易受攻击的能力，早期文献主要关注提高反汇编代码的可读性。换句话说，反汇编代码通常需要手动分析，从而增加了假阳性和假阴性的数量。此外，符号执行
+    [8, 27, 46, 49] 从目标代码中提取控制流图（CFGs），通过自动化分析实现高准确性，但生成 CFGs 需要搜索目标代码转换的所有状态。因此，分析需要大量时间
+    [48]。
+
+
+    上述问题的潜在解决方案是机器学习。基于机器学习的静态分析通过学习代码的特征来推断给定代码是否易受攻击。在此过程中，分析还可以在短时间内实现多功能分析。然而，基于机器学习的静态分析存在两个固有局限性：（1）代码重写会降低分析准确性，（2）智能合约的适当特征不确定。在第一个局限性中，例如，内联函数的
+    CFGs 与原始函数的 CFGs 不同。因此，将原始函数与内联函数识别为相同代码具有挑战性。语义相同但结构不同的函数对可能会产生不同的分析结果，因为代码结构之间的差异会强烈影响分析。在第二个局限性中，尽管为机器学习手动提取特征，但智能合约的代码样本和公开知识不足。智能合约特征的常识从未建立
+    [52]。特别地，表示智能合约代码中漏洞的特征种类未知。此外，对代码结构差异具有鲁棒性的特征仍然不明显。神经网络是隐式提取特征的常用方法。然而，基于神经网络的现有方法
+    [15, 31] 并未解决上述局限性，并且对代码重写不够鲁棒。
+
+
+    ### 1.2 贡献
+
+
+    在本文中，我们提出了 *Eth2Vec*，一种基于机器学习的静态分析工具，通过其 EVM 字节码、汇编代码和抽象语法树学习智能合约代码来识别智能合约漏洞。Eth2Vec
+    具有高吞吐量、高准确性和对代码重写的鲁棒性。Eth2Vec 是基于自然语言处理的神经网络的分析工具，仅通过代码作为输入即可输出目标智能合约代码中漏洞的存在性和种类。使用
+    Eth2Vec，用户即使没有智能合约漏洞的专业知识也可以快速分析智能合约代码。
+
+
+    就使用机器学习分析以太坊智能合约而言，本文的主要贡献是提供了一种对代码重写具有鲁棒性的方法。宽松地说，Eth2Vec 通过利用自然语言处理的神经网络克服了第
+    1.1 节中描述的局限性。也就是说，Eth2Vec 可以通过学习每个函数的上下文的自然语言处理，比神经网络的简单使用更精确地提取特征。虽然有几个现有的工具
+    [15, 36] 基于以太坊智能合约分析的典型语言模型，即 Word2Vec [29]，但 Eth2Vec 是新颖的，因为它实现了对代码重写的鲁棒分析。为此，我们还开发了一个模块，将
+    EVM 字节码及其语法信息作为输入提供给神经网络。借助所开发的模块，Eth2Vec 可以比基于 Word2Vec 的工具更具信息性地提取和学习代码特征。此外，我们设计了一种基于自然语言处理的神经网络的学习方法，该方法将通过
+    Solidity 代码编译的 EVM 字节码作为输入。（详见第 4 节。）
+
+
+    我们进行了实验以评估 Eth2Vec 的性能。实验结果表明，Eth2Vec 可以以每个合约 1.2 秒的速度检测漏洞，平均精确率为 77.0%。值得注意的是，重入攻击，其严重性在已知漏洞中最高
+    [45]，可以以 86.6% 的精确率检测到。Eth2Vec 在漏洞检测的众所周知指标方面优于典型方法 [31]。此外，Eth2Vec 可以检测重写代码的漏洞，而现有的基于
+    Word2Vec 的工具 SmartEmbed [15] 未能找到这些漏洞。（详见第 5 节。）我们通过 GitHub 发布 Eth2Vec 的源代码以实现可重复性并作为未来工作的参考（https://github.com/fseclab-osaka/eth2vec）。
+
+
+    ## 2 预备知识
+
+
+    ### 2.1 以太坊智能合约
+
+
+    在以太坊中，有两种账户，即外部拥有账户（EOA）和合约账户。EOA 具有可用于访问相应以太币或合约的私钥。合约账户具有智能合约代码，EOA 无法拥有，并且它没有私钥。相反，它由其智能合约代码的逻辑拥有和控制。在以太坊中，智能合约是指部署在区块链上并在
+    EVM 上下文中以 *immutable* 方式 *deterministically* 运行的计算机程序。不可变属性表示，与发布在通用区块链上的任何数据类似，智能合约代码可以被视为可信的，即一旦部署，就无法更改或删除。确定性属性表示智能合约的代码函数的执行对任何运行它们的人都会产生相同的结果。一旦部署到区块链上，合约就是自执行的并由网络中的节点管理，即当合约中的条件满足时，其函数会被执行。智能合约以合约地址的形式获得身份。使用此地址，它可以接收以太币并执行其函数。合约会被调用当其合约地址是交易的接收目的地时，该交易是源自
+    EOA 的签名消息，由网络传输并记录在区块链上。此类交易导致合约在 EVM 中使用交易（和交易数据）作为输入运行。数据指示哪个特定函数在
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    contract to run and what parameters to pass to that function. To incentivize peers
+    to execute contract functions, Ethereum relies on gas, which is paid in Ether,
+    to “fuel computations”. The amount of gas needed to execute a transaction is relative
+    to the complexity of the computations, thus also preventing infinite loops.
+
+
+    Smart contracts are typically written in a high-level language, such as Solidity
+    [1]. The source code is then compiled to low-level bytecode that runs in the EVM.
+    The EVM is a simple stack-based architecture. Its instruction set is kept minimal
+    to avoid incorrect implementations that could cause consensus problems. The EVM
+    is a global singleton, i.e., it operates like a global, single-instance computer
+    that runs in all peers in the network. Each peer runs a local copy of the EVM
+    to validate the execution of contract functions, and the processed transactions
+    and smart contracts are recorded on the blockchain.
+
+
+    # 2.2 Machine Learning
+
+
+    Machine learning consists of two algorithms, i.e., training and inference. The
+    training algorithm takes data as input to learn their features and optimize parameters
+    inside the model for an objective function. On the other hand, the inference algorithm
+    takes unlearned data as input and infers a similar set of features to that of
+    the training data. When each data is unlabeled, a learning algorithm is called
+    unsupervised learning. The most popular approach to machine learning in the recent
+    years is deep learning, which is based on neural networks and can extract features
+    in a black-box manner. In this paper, we aim to develop a model for learning vulnerable
+    smart contracts to detect vulnerabilities in unlearned smart contracts.
+
+
+    A neural network model is a machine learning model representing connections between
+    neurons, which is a brain mechanism on a human, on a computer. The model approximately
+    expresses complicated non-linear functions on a computer. Two kinds of tasks,
+    or a regression task and a classification task, are treated on a neural network
+    as well-known settings. The regression problem infers continuous numbers from
+    input data, and the classification problem infers a class that an input data belongs
+    to. The feature extraction of Eth2Vec with a neural network for natural language
+    processing is classified as a regression problem. Each input signal of a neural
+    network has a unique weight, and the weight is an element to propagate the importance
+    of the input signal to the output layer. Namely, the impact of input on the output
+    of the neural network becomes large in proportion to the weight of the input.
+    An activation function decides how to activate a sum of input signals of the neural
+    network.
+
+
+    Support Vector Machine (SVM) is a linear binary classifier to classify the input
+    into two classes, and provides significantly high performance for the classification.
+    Furthermore, SVM provides non-linear classification by combining with the kernel
+    method.
+
+
+    # 2.3 Natural Language Processing
+
+
+    Natural language processing deals with languages that humans use to communicate
+    with each other, and the languages are expressed as texts. Typical applications
+    of natural language processing are, for instance, document classification, machine
+    translation, document summarization, response to questions, and interactive conversation.
+
+
+    In general, “word” is a minimum unit (token) to process a language, and “sentence”
+    is processed together as one unit string. Word is also the smallest unit as components
+    in a sentence from the perspective of grammar or semantics, and each sentence
+    has a cohesive context. A unit string that is shorter than sentence and consists
+    of more than two words is called “phrase”, and natural languages sometimes are
+    processed in a unit of phrase. However, splitting a text into word, phrase, and
+    sentence units is not simple and the definition of each unit is non-trivial.
+
+
+    One of the important differences between a text written in a natural language
+    and code written in a programming language is that only the code has syntax and
+    structures. Natural language processing needs to consider the syntax and structure
+    of code for processing the code.
+
+
+    # 3 ANALYSIS OF SMART CONTRACTS VIA MACHINE LEARNING
+
+
+    This section describes the analysis target as the problem setting and its technical
+    difficulty to be tackled in this paper.
+
+
+    # 3.1 Analysis Target
+
+
+    In this paper, we focus on security analysis of the Solidity language as a target
+    of static analysis of Ethereum smart contracts. In particular, we aim to detect
+    the existence of vulnerabilities and classify the kinds of vulnerabilities in
+    the codes to be analyzed. Assume for example that a developer uses a tool that
+    analyzes the smart contracts he/she is developing in local.
+
+
+    Such tool potentially needs to convince the developer that the smart contract
+    being developed does not have any vulnerability even if the developer does not
+    have sufficient knowledge about smart contract vulnerabilities. Therefore, we
+    aim to develop a tool that can detect the existence of vulnerabilities (if there
+    are any) in smart contracts even if only the codes of the smart contracts are
+    given as input. Such a specification for analyzing smart contracts is preferable
+    because standardized knowledge about Ethereum smart contracts is insufficient
+    compared to general programming languages such as C and Java [52]. Meanwhile,
+    strong obfuscation, i.e., the use of encryption, on Solidity codes is out of the
+    scope of this paper because such an obfuscated code of smart contracts does not
+    exist as far as we know.
+
+
+    Hereafter, we refer to codes written in Solidity as a contract and a file of codes
+    consisting of more than a single contract as a contract file. We also call contracts
+    to evaluate a vulnerability as test contracts and those to learn the vulnerability
+    as training contracts. We call codes obtained from the compilation of the contracts
+    as EVM bytecodes. The largest unit in each contract is a function, and a library
+    function is also identical to a function. Finally, “the blockchain” will be used
+    to refer to the Ethereum blockchain unless otherwise specified. The problem setting
+    in this paper is then formalized as follows:
+
+
+    **Problem Formulation:** We formalize our approach for analysis of smart contracts
+    as follows. Each contract $c_i \in C$ includes vulnerabilities $V_i = \{v_1^i,
+    \dots, v_l^i\} \in \mathcal{V}^l$, where $C$ denotes a set of contracts, $\mathcal{V}$
+    denotes a set of vulnerabilities independent of each other, and $l$ denotes any
+    number. Given any integer $n \in \mathbb{N}$, a combination of a contract and
+    vulnerabilities $CV = \{(c_1, V_1), \dots, (c_n, V_n)\}$ and a'
+  - '[PAGE 3]
+
+
+    test contract $c_t \in \mathcal{C}$ are inputs of a model $M$. Let $\{\epsilon_i^{c_t}\}_{i\in[1,d]}
+    \subseteq \mathbb{R}^d$ denote the output of the model $M$ which has $d = |\mathcal{V}|$
+    elements, where $|\mathcal{V}|$ denotes the size of $\mathcal{V}$ and $\epsilon_i^{c_t}$
+    denotes a probability about vulnerabilities in $\mathcal{V}$. Our goal is to develop
+    a tool that optimizes $M(\mathcal{CV}, c_t) \rightarrow \{\epsilon_i^{c_t}\}$.
+
+
+    the security of code is analyzed, a model learns vulnerable code and it can then
+    detect the vulnerabilities via the similarity of code to be analyzed with the
+    learned code. Therefore, Eth2Vec can analyze vulnerabilities in code even if essential
+    features of the vulnerabilities are unclear.
+
+
+    # 3.2  Technical Difficulty
+
+
+    Although several machine-learning-based static analysis tools for smart contracts
+    have been proposed in literature [25, 26, 31, 42, 48], accuracy of their vulnerability
+    detection is limited even on known vulnerabilities. In other words, accuracy significantly
+    decreases when codes are rewritten from the original codes. Following the problem
+    formulation described above, the limitation described in Section 1.1 as our motivation
+    is formalized as follows: even if $c_t$ with a vulnerability $V_i$ which is included
+    in $CV$ for any $i \in [1,n]$, $\epsilon_i^{c_t} \ll \epsilon_i^{c_t''}$ holds
+    for $c_t \notin CV$. We call such a situation non-robust. The limitation related
+    to the accuracy of vulnerability detection described above is caused by the insufficient
+    extraction of features of the existing tools. In general, a machine learning model
+    needs features as inputs, which are manually extracted, and then learns the features
+    explicitly. However, features for representing smart contracts to be analyzed
+    are non-obvious because the history of Ethereum smart contracts is shorter than
+    other general languages such as C and Java [52]. Intuitively, the limitation about
+    the non-robustness is denoted as that required of a model $M$ is unknown. Another
+    reason for the insufficient extraction of features is the lack of code samples
+    of smart contracts [52].
+
+
+    # 4  DESIGN OF ETH2VEC
+
+
+    In this section, we present Eth2Vec. We first describe the design concept to overcome
+    the technical difficulty described in the previous section and then present the
+    tool overview and its building blocks. Finally, we present the Eth2Vec model with
+    its objective function.
+
+
+    # 4.1  Design Concept
+
+
+    We aim to solve the technical difficulty by leveraging neural networks for natural
+    language processing. For the natural language processing by machine learning,
+    each word is vectorized as a token, and each sentence is vectorized as a sequence
+    in general. To incorporate natural language processing, we leverage the *PV-DM*
+    model [22] which vectorizes each paragraph by taking into the context of the paragraph
+    account. More specifically, we extend the PV-DM model whereby code of each contract
+    is vectorized instead of the natural language. Eth2Vec can thus extract features
+    implicitly.
+
+
+    To provide the extended PV-DM model with code of contracts, we also developed
+    a new module named *EVM Extractor* to obtain syntax and semantics for each contract.
+    For instance, EVM Extractor obtains principal code information, e.g., a function
+    name and start address. Eth2Vec then restricts the amount of the code information
+    to be provided the PV-DM model because the throughput of Eth2Vec may decrease
+    in proportion to the amount of the information. Eth2Vec can thus achieve the feature
+    extraction appropriately and efficiently. Afterwards, Eth2Vec computes the code
+    similarity by utilizing the code information vectorized through neural networks
+    for the natural language processing described above. When
+
+
+    # 4.2  Tool Overview
+
+
+    Eth2Vec consists of two modules, i.e., PV-DM model [22] for neural networks to
+    deal with paragraphs and EVM Extractor to create inputs of the PV-DM model from
+    Solidity source codes.
+
+
+    The overview of Eth2Vec is shown in Figure 1. First, a PV-DM model is utilized
+    as neural networks to deal with bytecodes. In particular, the PV-DM model executes
+    unsupervised learning by taking JSON files generated from bytecodes as input and
+    then computes the code similarity for each contract. To do this, we developed
+    the EVM Extractor as a module to create inputs of the PV-DM model from EVM bytecodes
+    because the PV-DM model cannot deal with EVM bytecodes initially. More specifically,
+    the EVM Extractor analyzes EVM bytecodes syntactically and creates JSON files
+    for instruction-level, block-level, function-level, and contract-level.
+
+
+    As a result, Eth2Vec takes EVM bytecodes to be analyzed as input, and then returns
+    lists of code clones and their vulnerabilities for contract-level from a user’s
+    standpoint. Meanwhile, vulnerabilities in contracts for training data are identified
+    in advance by the use of existing tools [27, 45]. Vulnerabilities for test data
+    are then evaluated by the code similarity with the vulnerable contracts. Eth2Vec
+    outputs vulnerabilities for the function-level in codes to be analyzed. Namely,
+    vulnerable functions can be identified by Eth2Vec.
+
+
+    # 4.3  Building Blocks
+
+
+    Eth2Vec utilizes the PV-DM model [22] and EVM Extractor as building blocks.
+
+
+    # 4.3.1  PV-DM model.
+
+
+    The PV-DM model vectorizes text data for paragraph-level in contrast to Word2Vec
+    [29] to vectorize text data for sentence-level. Intuitively, it outputs vector
+    representations for each word and each paragraph. More concretely, given a text
+    paragraph consisting of multiple sentences, a PV-DM model applies a sliding window
+    over each sentence. The sliding window starts from the beginning of the sentence
+    and moves forward a single word at each step. In doing so, the PV-DM model executes
+    a multi-class inference task such that it maps the current paragraph into a vector
+    and each word in the context into a vector. More precisely, the model averages
+    these vectors and infers the target word from the vocabulary via the softmax function.
+    The architecture of the PV-DM model consists of one hidden layer: for instance,
+    the model obtains vectors for the given input and then compute the average of
+    the vectors and a sigmoid function. The output layer computes a classification
+    result based on a softmax function. Formally, given a text that contains a list
+    of paragraphs $p \in T$, each paragraph $p$ contains a list of sentences $s \in
+    p$, and each sentence is a sequence of $|s|$ words $w_t \in s$. Then, the PV-DM
+    model maximizes the log probability as follows:
+
+
+    $$\sum_{p}^{T}\sum_{s}^{p}\sum_{t=k}^{|s|-k} \log P(w_t \mid p, w_{t-k}, \cdots,
+    w_{t+k}). \tag{1}$$'
+  md: '
+
+    contract to run and what parameters to pass to that function. To incentivize peers
+    to execute contract functions, Ethereum relies on gas, which is paid in Ether,
+    to “fuel computations”. The amount of gas needed to execute a transaction is relative
+    to the complexity of the computations, thus also preventing infinite loops.
+
+
+    Smart contracts are typically written in a high-level language, such as Solidity
+    [1]. The source code is then compiled to low-level bytecode that runs in the EVM.
+    The EVM is a simple stack-based architecture. Its instruction set is kept minimal
+    to avoid incorrect implementations that could cause consensus problems. The EVM
+    is a global singleton, i.e., it operates like a global, single-instance computer
+    that runs in all peers in the network. Each peer runs a local copy of the EVM
+    to validate the execution of contract functions, and the processed transactions
+    and smart contracts are recorded on the blockchain.
+
+
+    ### 2.2 Machine Learning
+
+
+    Machine learning consists of two algorithms, i.e., training and inference. The
+    training algorithm takes data as input to learn their features and optimize parameters
+    inside the model for an objective function. On the other hand, the inference algorithm
+    takes unlearned data as input and infers a similar set of features to that of
+    the training data. When each data is unlabeled, a learning algorithm is called
+    unsupervised learning. The most popular approach to machine learning in the recent
+    years is deep learning, which is based on neural networks and can extract features
+    in a black-box manner. In this paper, we aim to develop a model for learning vulnerable
+    smart contracts to detect vulnerabilities in unlearned smart contracts.
+
+
+    A neural network model is a machine learning model representing connections between
+    neurons, which is a brain mechanism on a human, on a computer. The model approximately
+    expresses complicated non-linear functions on a computer. Two kinds of tasks,
+    i.e., a regression task and a classification task, are treated on a neural network
+    as well-known settings. The regression problem infers continuous numbers from
+    input data, and the classification problem infers a class that an input data belongs
+    to. The feature extraction of Eth2Vec with a neural network for natural language
+    processing is classified as a regression problem. Each input signal of a neural
+    network has a unique weight, and the weight is an element to propagate the importance
+    of the input signal to the output layer. Namely, the impact of input on the output
+    of the neural network becomes large in proportion to the weight of the input.
+    An activation function decides how to activate a sum of input signals of the neural
+    network.
+
+
+    Support Vector Machine (SVM) is a linear binary classifier to classify the input
+    into two classes, and provides significantly high performance for the classification.
+    Furthermore, SVM provides non-linear classification by combining with the kernel
+    method.
+
+
+    ### 2.3 Natural Language Processing
+
+
+    Natural language processing deals with languages that humans use to communicate
+    with each other, and the languages are expressed as texts. Typical applications
+    of natural language processing are, for instance, document classification, machine
+    translation, document summarization, response to questions, and interactive conversation.
+
+
+    In general, “word” is a minimum unit (token) to process a language, and “sentence”
+    is processed together as one unit string. Word is also the smallest unit as components
+    in a sentence from the perspective of grammar or semantics, and each sentence
+    has a cohesive context. A unit string that is shorter than a sentence and consists
+    of more than two words is called “phrase”, and natural languages sometimes are
+    processed in a unit of phrase. However, splitting a text into word, phrase, and
+    sentence units is not simple and the definition of each unit is non-trivial.
+
+
+    One of the important differences between a text written in a natural language
+    and code written in a programming language is that only the code has syntax and
+    structures. Natural language processing needs to consider the syntax and structure
+    of code for processing the code.
+
+
+    ## 3 ANALYSIS OF SMART CONTRACTS VIA MACHINE LEARNING
+
+
+    This section describes the analysis target as the problem setting and its technical
+    difficulty to be tackled in this paper.
+
+
+    ### 3.1 Analysis Target
+
+
+    In this paper, we focus on security analysis of the Solidity language as a target
+    of static analysis of Ethereum smart contracts. In particular, we aim to detect
+    the existence of vulnerabilities and classify the kinds of vulnerabilities in
+    the codes to be analyzed. Assume for example that a developer uses a tool that
+    analyzes the smart contracts he/she is developing locally.
+
+
+    Such a tool potentially needs to convince the developer that the smart contract
+    being developed does not have any vulnerability even if the developer does not
+    have sufficient knowledge about smart contract vulnerabilities. Therefore, we
+    aim to develop a tool that can detect the existence of vulnerabilities (if there
+    are any) in smart contracts even if only the codes of the smart contracts are
+    given as input. Such a specification for analyzing smart contracts is preferable
+    because standardized knowledge about Ethereum smart contracts is insufficient
+    compared to general programming languages such as C and Java [52]. Meanwhile,
+    strong obfuscation, i.e., the use of encryption, on Solidity codes is out of the
+    scope of this paper because such an obfuscated code of smart contracts does not
+    exist as far as we know.
+
+
+    Hereafter, we refer to codes written in Solidity as a contract and a file of codes
+    consisting of more than a single contract as a contract file. We also call contracts
+    to evaluate a vulnerability as test contracts and those to learn the vulnerability
+    as training contracts. We call codes obtained from the compilation of the contracts
+    as EVM bytecodes. The largest unit in each contract is a function, and a library
+    function is also identical to a function. Finally, “the blockchain” will be used
+    to refer to the Ethereum blockchain unless otherwise specified. The problem setting
+    in this paper is then formalized as follows:
+
+
+    **Problem Formulation:** We formalize our approach for analysis of smart contracts
+    as follows. Each contract $c_i \in \mathcal{C}$ includes vulnerabilities $V_i
+    = \{v_1^i, \dots, v_l^i\} \in \mathcal{V}^l$, where $\mathcal{C}$ denotes a set
+    of contracts, $\mathcal{V}$ denotes a set of vulnerabilities independent of each
+    other, and $l$ denotes any number. Given any integer $n \in \mathbb{N}$, a combination
+    of a contract and vulnerabilities $CV = \{(c_1, V_1), \dots, (c_n, V_n)\}$ and
+    a test contract $c_t \in \mathcal{C}$ are inputs of a model $M$. Let $\{\epsilon_i^{c_t}\}_{i\in[1,d]}
+    \subseteq \mathbb{R}^d$ denote the output of the model $M$ which has $d = |\mathcal{V}|$
+    elements, where $|\mathcal{V}|$ denotes the size of $\mathcal{V}$ and $\epsilon_i^{c_t}$
+    denotes a probability about vulnerabilities in $\mathcal{V}$. Our goal is to develop
+    a tool that optimizes $M(\mathcal{CV}, c_t) \rightarrow \{\epsilon_i^{c_t}\}$.
+
+
+    ### 3.2 Technical Difficulty
+
+
+    Although several machine-learning-based static analysis tools for smart contracts
+    have been proposed in literature [25, 26, 31, 42, 48], accuracy of their vulnerability
+    detection is limited even on known vulnerabilities. In other words, accuracy significantly
+    decreases when codes are rewritten from the original codes. Following the problem
+    formulation described above, the limitation described in Section 1.1 as our motivation
+    is formalized as follows: even if $c_t$ with a vulnerability $V_i$ which is included
+    in $CV$ for any $i \in [1,n]$, $\epsilon_i^{c_t} \ll \epsilon_i^{c_t''}$ holds
+    for $c_t \notin CV$. We call such a situation non-robust. The limitation related
+    to the accuracy of vulnerability detection described above is caused by the insufficient
+    extraction of features of the existing tools. In general, a machine learning model
+    needs features as inputs, which are manually extracted, and then learns the features
+    explicitly. However, features for representing smart contracts to be analyzed
+    are non-obvious because the history of Ethereum smart contracts is shorter than
+    other general languages such as C and Java [52]. Intuitively, the limitation about
+    the non-robustness is denoted as that required of a model $M$ is unknown. Another
+    reason for the insufficient extraction of features is the lack of code samples
+    of smart contracts [52].
+
+
+    ## 4 DESIGN OF ETH2VEC
+
+
+    In this section, we present Eth2Vec. We first describe the design concept to overcome
+    the technical difficulty described in the previous section and then present the
+    tool overview and its building blocks. Finally, we present the Eth2Vec model with
+    its objective function.
+
+
+    ### 4.1 Design Concept
+
+
+    We aim to solve the technical difficulty by leveraging neural networks for natural
+    language processing. For the natural language processing by machine learning,
+    each word is vectorized as a token, and each sentence is vectorized as a sequence
+    in general. To incorporate natural language processing, we leverage the *PV-DM*
+    model [22] which vectorizes each paragraph by taking the context of the paragraph
+    into account. More specifically, we extend the PV-DM model whereby code of each
+    contract is vectorized instead of the natural language. Eth2Vec can thus extract
+    features implicitly.
+
+
+    To provide the extended PV-DM model with code of contracts, we also developed
+    a new module named *EVM Extractor* to obtain syntax and semantics for each contract.
+    For instance, EVM Extractor obtains principal code information, e.g., a function
+    name and start address. Eth2Vec then restricts the amount of the code information
+    to be provided to the PV-DM model because the throughput of Eth2Vec may decrease
+    in proportion to the amount of the information. Eth2Vec can thus achieve the feature
+    extraction appropriately and efficiently. Afterwards, Eth2Vec computes the code
+    similarity by utilizing the code information vectorized through neural networks
+    for the natural language processing described above. When the security of code
+    is analyzed, a model learns vulnerable code and it can then detect the vulnerabilities
+    via the similarity of code to be analyzed with the learned code. Therefore, Eth2Vec
+    can analyze vulnerabilities in code even if essential features of the vulnerabilities
+    are unclear.
+
+
+    ### 4.2 Tool Overview
+
+
+    Eth2Vec consists of two modules, i.e., PV-DM model [22] for neural networks to
+    deal with paragraphs and EVM Extractor to create inputs of the PV-DM model from
+    Solidity source codes.
+
+
+    The overview of Eth2Vec is shown in Figure 1. First, a PV-DM model is utilized
+    as neural networks to deal with bytecodes. In particular, the PV-DM model executes
+    unsupervised learning by taking JSON files generated from bytecodes as input and
+    then computes the code similarity for each contract. To do this, we developed
+    the EVM Extractor as a module to create inputs of the PV-DM model from EVM bytecodes
+    because the PV-DM model cannot deal with EVM bytecodes initially. More specifically,
+    the EVM Extractor analyzes EVM bytecodes syntactically and creates JSON files
+    for instruction-level, block-level, function-level, and contract-level.
+
+
+    As a result, Eth2Vec takes EVM bytecodes to be analyzed as input, and then returns
+    lists of code clones and their vulnerabilities for contract-level from a user’s
+    standpoint. Meanwhile, vulnerabilities in contracts for training data are identified
+    in advance by the use of existing tools [27, 45]. Vulnerabilities for test data
+    are then evaluated by the code similarity with the vulnerable contracts. Eth2Vec
+    outputs vulnerabilities for the function-level in codes to be analyzed. Namely,
+    vulnerable functions can be identified by Eth2Vec.
+
+
+    ### 4.3 Building Blocks
+
+
+    Eth2Vec utilizes the PV-DM model [22] and EVM Extractor as building blocks.
+
+
+    #### 4.3.1 PV-DM model.
+
+
+    The PV-DM model vectorizes text data for paragraph-level in contrast to Word2Vec
+    [29] to vectorize text data for sentence-level. Intuitively, it outputs vector
+    representations for each word and each paragraph. More concretely, given a text
+    paragraph consisting of multiple sentences, a PV-DM model applies a sliding window
+    over each sentence. The sliding window starts from the beginning of the sentence
+    and moves forward a single word at each step. In doing so, the PV-DM model executes
+    a multi-class inference task such that it maps the current paragraph into a vector
+    and each word in the context into a vector. More precisely, the model averages
+    these vectors and infers the target word from the vocabulary via the softmax function.
+    The architecture of the PV-DM model consists of one hidden layer: for instance,
+    the model obtains vectors for the given input and then computes the average of
+    the vectors and applies a sigmoid function. The output layer computes a classification
+    result based on a softmax function. Formally, given a text that contains a list
+    of paragraphs $p \in T$, each paragraph $p$ contains a list of sentences $s \in
+    p$, and each sentence is a sequence of $|s|$ words $w_t \in s$. Then, the PV-DM
+    model maximizes the log probability as follows:
+
+
+    $$\sum_{p}^{T}\sum_{s}^{p}\sum_{t=k}^{|s|-k} \log P(w_t \mid p, w_{t-k}, \cdots,
+    w_{t+k}). \tag{1}$$
+
+    '
+  mdcn: '
+
+    要运行的合约以及向该函数传递什么参数。为了激励节点执行合约函数，以太坊依赖于以太币支付的 gas 来“为计算提供燃料”。执行交易所需的 gas 数量与计算的复杂性相关，从而也防止了无限循环。
+
+
+    智能合约通常使用高级语言编写，例如 Solidity [1]。然后源代码被编译为在 EVM 中运行的低级字节码。EVM 是一种简单的基于栈的架构。其指令集保持最小化，以避免可能导致共识问题的错误实现。EVM
+    是一个全局单例，即它像一台在网络中所有节点上运行的全局单实例计算机一样运作。每个节点运行 EVM 的本地副本以验证合约函数的执行，并且处理后的交易和智能合约被记录在区块链上。
+
+
+    ### 2.2 机器学习
+
+
+    机器学习包含两种算法，即训练和推理。训练算法将数据作为输入以学习其特征并为目标函数优化模型内部的参数。另一方面，推理算法将未学习的数据作为输入，并推断出与训练数据相似的一组特征。当数据未标记时，学习算法称为无监督学习。近年来机器学习最流行的方法是深度学习，它基于神经网络，可以以黑盒方式提取特征。在本文中，我们旨在开发一个用于学习易受攻击智能合约的模型，以检测未学习智能合约中的漏洞。
+
+
+    神经网络模型是一种机器学习模型，表示神经元之间的连接，这是在人类大脑中、在计算机上的一种机制。该模型在计算机上近似表达复杂的非线性函数。两种任务，即回归任务和分类任务，在神经网络上作为众所周知的设置被处理。回归问题从输入数据推断连续数值，而分类问题推断输入数据所属的类别。使用神经网络进行自然语言处理的
+    Eth2Vec 的特征提取被归类为回归问题。神经网络的每个输入信号都有一个独特的权重，该权重是向输出层传播输入信号重要性的元素。换句话说，输入对神经网络输出的影响与输入的权重成比例地增大。激活函数决定如何激活神经网络输入信号的总和。
+
+
+    支持向量机（SVM）是一种线性二分类器，用于将输入分类为两个类别，并为分类提供显著高的性能。此外，SVM 通过结合核方法提供非线性分类。
+
+
+    ### 2.3 自然语言处理
+
+
+    自然语言处理处理人类之间用于交流的语言，而这些语言以文本形式表达。自然语言处理的典型应用例如，文档分类、机器翻译、文档摘要、问题响应和交互式对话。
+
+
+    一般来说，“词”是处理语言的最小单位（token），而“句子”作为一个单元字符串一起处理。词也是句子中组件的最小单位，从语法或语义的角度来看，每个句子都有一个连贯的上下文。短于句子且由两个以上单词组成的单元字符串称为“短语”，自然语言有时以短语为单位进行处理。然而，将文本拆分为词、短语和句子单元并不简单，每个单元的定义也并非微不足道。
+
+
+    自然语言编写的文本与编程语言编写的代码之间的重要区别之一是只有代码具有语法和结构。自然语言处理在处理代码时需要考虑代码的语法和结构。
+
+
+    ## 3 通过机器学习分析智能合约
+
+
+    本节描述了分析目标作为本文需要解决的问题设置及其技术难点。
+
+
+    ### 3.1 分析目标
+
+
+    本文将 Solidity 语言的安全性分析作为以太坊智能合约静态分析的目标。特别是，我们旨在检测待分析代码中漏洞的存在并对漏洞类型进行分类。例如，假设开发人员使用一个工具来分析他/她本地开发的智能合约。
+
+
+    这样的工具可能需要说服开发人员，即使开发人员对智能合约漏洞的知识不足，正在开发的智能合约也没有任何漏洞。因此，我们旨在开发一种工具，即使仅将智能合约的代码作为输入，也能检测智能合约中是否存在漏洞（如果有的话）。这种分析智能合约的规范是可取的，因为与
+    C 和 Java 等通用编程语言相比，以太坊智能合约的标准知识不足 [52]。同时，Solidity 代码的强混淆，即使用加密，不在本论文的范围内，因为据我们所知，并不存在此类混淆的智能合约代码。
+
+
+    此后，我们将用 Solidity 编写的代码称为合约，由一个以上合约组成的代码文件称为合约文件。我们还将用于评估漏洞的合约称为测试合约，用于学习漏洞的合约称为训练合约。我们将从合约编译得到的代码称为
+    EVM 字节码。每个合约中最大的单元是函数，库函数也与函数相同。最后，除非另有说明，“区块链”将用于指以太坊区块链。本文中的问题设置随后形式化如下：
+
+
+    **问题表述：** 我们按如下方式形式化我们对智能合约分析的方法。每个合约 $c_i \in \mathcal{C}$ 包含漏洞 $V_i = \{v_1^i,
+    \dots, v_l^i\} \in \mathcal{V}^l$，其中 $\mathcal{C}$ 表示合约集合，$\mathcal{V}$ 表示彼此独立的漏洞集合，$l$
+    表示任意数量。给定任意整数 $n \in \mathbb{N}$，合约与漏洞的组合 $CV = \{(c_1, V_1), \dots, (c_n, V_n)\}$
+    和测试合约 $c_t \in \mathcal{C}$ 是模型 $M$ 的输入。设 $\{\epsilon_i^{c_t}\}_{i\in[1,d]} \subseteq
+    \mathbb{R}^d$ 表示模型 $M$ 的输出，该模型有 $d = |\mathcal{V}|$ 个元素，其中 $|\mathcal{V}|$ 表示
+    $\mathcal{V}$ 的大小，$\epsilon_i^{c_t}$ 表示 $\mathcal{V}$ 中漏洞的概率。我们的目标是开发一个优化 $M(\mathcal{CV},
+    c_t) \rightarrow \{\epsilon_i^{c_t}\}$ 的工具。
+
+
+    ### 3.2 技术难点
+
+
+    尽管文献中已提出了几种基于机器学习的智能合约静态分析工具 [25, 26, 31, 42, 48]，但其漏洞检测的准确性即使在已知漏洞上也有限。换句话说，当代码从原始代码重写时，准确性显著下降。按照上述问题表述，作为我们动机的第
+    1.1 节中描述的局限性形式化如下：即使 $c_t$ 具有漏洞 $V_i$ 且该漏洞包含在 $CV$ 中，对任意 $i \in [1,n]$，对于 $c_t
+    \notin CV$，$\epsilon_i^{c_t} \ll \epsilon_i^{c_t''}$ 成立。我们称这种情况为非鲁棒。上述与漏洞检测准确性相关的局限性是由现有工具特征提取不足造成的。一般来说，机器学习模型需要特征作为输入，这些特征是手动提取的，然后显式学习这些特征。然而，表示待分析智能合约的特征并不明显，因为以太坊智能合约的历史比
+    C 和 Java 等其他通用语言短 [52]。直观上，非鲁棒性的局限性表示为模型 $M$ 所需的内容未知。特征提取不足的另一个原因是智能合约代码样本缺乏 [52]。
+
+
+    ## 4 ETH2VEC 设计
+
+
+    在本节中，我们介绍 Eth2Vec。我们首先描述为克服上一节所述技术难点的设计概念，然后介绍工具概述及其构建模块。最后，我们介绍 Eth2Vec 模型及其目标函数。
+
+
+    ### 4.1 设计概念
+
+
+    我们旨在通过利用自然语言处理的神经网络来解决技术难点。对于机器学习的自然语言处理，每个词通常被向量化为一个 token，每个句子被向量化为一个序列。为了融合自然语言处理，我们利用
+    *PV-DM* 模型 [22]，该模型通过考虑段落的上下文来向量化每个段落。更具体地说，我们扩展了 PV-DM 模型，其中每个合约的代码被向量化而不是自然语言。因此
+    Eth2Vec 可以隐式提取特征。
+
+
+    为了为扩展的 PV-DM 模型提供合约代码，我们还开发了一个名为 *EVM Extractor* 的新模块，以获取每个合约的语法和语义。例如，EVM Extractor
+    获取主要代码信息，例如函数名和起始地址。Eth2Vec 然后限制提供给 PV-DM 模型的代码信息量，因为 Eth2Vec 的吞吐量可能会随着信息量的增加而下降。因此
+    Eth2Vec 可以适当且高效地实现特征提取。之后，Eth2Vec 通过利用上述自然语言处理神经网络向量化的代码信息来计算代码相似度。当分析代码的安全性时，模型学习易受攻击的代码，然后可以通过待分析代码与已学习代码的相似性来检测漏洞。因此，即使漏洞的本质特征不明确，Eth2Vec
+    也能分析代码中的漏洞。
+
+
+    ### 4.2 工具概述
+
+
+    Eth2Vec 由两个模块组成，即用于处理段落的神经网络的 PV-DM 模型 [22] 和从 Solidity 源代码创建 PV-DM 模型输入的 EVM
+    Extractor。
+
+
+    Eth2Vec 的概述如图 1 所示。首先，PV-DM 模型被用作处理字节码的神经网络。特别是，PV-DM 模型通过以从字节码生成的 JSON 文件作为输入执行无监督学习，然后为每个合约计算代码相似度。为此，我们开发了
+    EVM Extractor 作为模块，从 EVM 字节码创建 PV-DM 模型的输入，因为 PV-DM 模型最初无法处理 EVM 字节码。更具体地说，EVM
+    Extractor 在语法上分析 EVM 字节码，并为指令级、块级、函数级和合约级创建 JSON 文件。
+
+
+    结果，Eth2Vec 以待分析的 EVM 字节码作为输入，然后从用户角度返回合约级的代码克隆列表及其漏洞。同时，训练数据的合约中的漏洞由现有工具 [27,
+    45] 预先识别。然后测试数据的漏洞通过与易受攻击合约的代码相似度进行评估。Eth2Vec 输出待分析代码中函数级的漏洞。也就是说，易受攻击的函数可以由 Eth2Vec
+    识别。
+
+
+    ### 4.3 构建模块
+
+
+    Eth2Vec 利用 PV-DM 模型 [22] 和 EVM Extractor 作为构建模块。
+
+
+    #### 4.3.1 PV-DM 模型。
+
+
+    PV-DM 模型将文本数据向量化为段落级，而 Word2Vec [29] 将文本数据向量化为句子级。直观上，它为每个词和每个段落输出向量表示。更具体地说，给定由多个句子组成的文本段落，PV-DM
+    模型对每个句子应用滑动窗口。滑动窗口从句子的开头开始，每一步向前移动一个词。在此过程中，PV-DM 模型执行多类推理任务，将当前段映射为向量，并将上下文中的每个词映射为向量。更精确地说，模型对这些向量取平均，并通过
+    softmax 函数从词汇表中推断目标词。PV-DM 模型的架构包含一个隐藏层：例如，模型获取给定输入的向量，然后计算向量的平均值并应用 sigmoid 函数。输出层基于
+    softmax 函数计算分类结果。形式上，给定包含段落列表 $p \in T$ 的文本，每个段落 $p$ 包含句子列表 $s \in p$，每个句子是 $|s|$
+    个词 $w_t \in s$ 的序列。然后，PV-DM 模型最大化对数概率如下：
+
+
+    $$\sum_{p}^{T}\sum_{s}^{p}\sum_{t=k}^{|s|-k} \log P(w_t \mid p, w_{t-k}, \cdots,
+    w_{t+k}). \tag{1}$$
+
+    '
+  merge: 1
+- raw:
+  - "[PAGE 4]\n\n![](img/0d980298d6e695afbf52eecaa73818c4_4_0.png)\n\n# Figure 1:\
+    \ Overview of Eth2Vec\n\nThe PV-DM model is initially designed for text data that\
+    \ is sequentially laid out while it can also be used for analysis of assembly\
+    \ code by extending vector representation of language [11].\n\nIn this paper,\
+    \ we present a contract-wide representation learning model by extending the PD-DM\
+    \ model in accordance the syntax of EVM bytecode as described in Section 4.4.\n\
+    \n# 4.3.2 EVM Extractor.\n\nEVM Extractor is a module that syntactically analyzes\
+    \ EVM bytecodes for PV-DM model. In particular, EVM Extractor parses Solidity\
+    \ files as in the following hierarchical structure:\n\n```\ndata: dictionary\n\
+    \  name: file name\n  md5: md5 hash\n  functions: list\n    name: function name\n\
+    \    sea: start point\n    see: end point\n    id: function id\n    call: list\
+    \ of callee functions\n    blocks: list\n      name: block name\n      bytes:\
+    \ bytecodes\n      sea: start point\n      eea: end point\n      id: block id\n\
+    \      call: list of callee blocks\n      src: assembly instructions\n```\n\n\
+    The top-level, data, represents a contract file to be analyzed. The second level\
+    \ indicates file-dependent information. The third level indicates function-dependent\
+    \ information. The fourth level indicates a block consisting of multiple instructions.\
+    \ In each level, sea means the start address of the current function and that\
+    \ of the current block. Likewise, see and eea mean the start address of the\n\n\
+    next function and that of the next block, respectively. In contrast, call represents\
+    \ a callee function (or a callee block) from the current function (or block).\
+    \ Finally, at the bottom level, instructions of EVM bytecodes are stored in src\
+    \ together with their addresses. Meanwhile, a library function is treated as an\
+    \ individual function.\n\n# 4.4 Design of Objective Function\n\nEth2Vec is a model\
+    \ that learns and infers codes of Ethereum smart contracts through unsupervised\
+    \ learning. Intuitively, it can be regarded as an extension of Word2Vec with a\
+    \ wider vector representation of codes given its ability to target Ethereum smart\
+    \ contracts.\n\nThe objective function of Eth2Vec is designed by extending that\
+    \ of the original PV-DM model described in Equation (1) along with the syntax\
+    \ shown in Section 4.3.2. The following argument is inspired by Asm2Vec [11],\
+    \ which is an extension of the PV-DM model for an assembly language. Given a file\
+    \ of an Ethereum smart contract to be analyzed, Eth2Vec vectorizes the codes for\
+    \ instruction-level and then computes the code similarity to the learned codes\
+    \ by the training. The process above is executed for block-level related to the\
+    \ instructions, function-level, and contract-level recursively, and therefore\
+    \ Eth2Vec can detect codes with distribution similar to that of the training data.\
+    \ Formally, an objective function is defined as follows:\n\n∑_{C_i}^{Dict} ∑_{f_s}^{U(C_i)}\
+    \ ∑_{seq_i}^{S(f_s)} ∑_{in_j}^{I(seq_i)} ∑_{t_c}^{T(in_j)} log P(t_c | C_i, in_{j-1},\
+    \ in_{j+1}), (2)\n\nwhere we denote by Dict a contract file, by C_i a contract,\
+    \ by f_s a function, by seq_i a block consisting of multiple instructions, by\
+    \ in_j each instruction, and by t_c a token with respect to the current instruction.\
+    \ Likewise, we denote by U(C_i) multiple functions, by S(f_s) multiple blocks,\
+    \ by I(seq_i) a list of instructions, and by T(in_j) a list of tokens.\n\nHere,\
+    \ the first summation term, i.e., ∑_{C_i}^{Dict}, is included in the second level\
+    \ shown in the previous section, i.e., file name. Equation (2)"
+  - '[PAGE 5]
+
+
+    is given contracts and their instructions, and then it maximizes the log probability
+    for the current token $t_c$. Intuitively, the lexical meaning for each contract
+    is computed through the current instruction and its neighbor instructions. Moreover,
+    codes consisting of multiple contracts can also be analyzed by extracting features
+    for each contract.
+
+
+    We describe the objective function to represent the aforementioned intuition in
+    detail below. Given a contract file $Dict$, a function $f_s$ for each contract
+    $C_i$ is vectorized and then we denote by $\vec{\theta}_{f_s}$ the vector representation
+    of $f_s$. Furthermore, we denote by $\mathcal{CT}(in)$ the average of the vector
+    representation of neighbor instructions of $in$. We then define a concatenation
+    of the vector representation of the instruction itself and that of its operands
+    as follows:
+
+
+    $$\mathcal{CT}(in)=\vec{v}_{\mathcal{P}(in)}\Vert\frac{1}{|\mathcal{A}(in)|}\sum_{t\in\mathcal{A}(in)}\vec{v}_t.$$
+    \tag{3}
+
+
+    where $\mathcal{P}(in)$ is one operation with respect to $in$, $\mathcal{A}(in)$
+    is a list of operands with respect to $in$, and $\Vert$ is a concatenation of
+    strings. In doing so, for any contract $C_i$, by averaging $f_s$ and the $j$-th
+    instruction in $in_j$ (with $j\in\{1,\ldots,n\}$), a function $\delta(in_j,f_s)$
+    to evaluate the joint memory of neighbor instructions in $f_s$ is defined as follows:
+
+
+    $$\delta(in_j,f_s)=\frac{1}{3}\left(\vec{\theta}_{f_s}+\mathcal{CT}(in_{j-1})+\mathcal{CT}(in_{j+1})\right).
+    \tag{4}$$
+
+
+    Therefore, the log probability in Equation (2) can be replaced with $P(t_c\mid
+    C_i,in_{j-1},in_{j+1})=P(t_c\mid\delta(in_j,f_s))$. According to the literature
+    [11], by letting $X=(\vec{v}_{t_c})^T\times\delta(in_j,f_s)$ and utilizing a sigmoid
+    function $\sigma(X)=\frac{1}{1+e^{-X}}$, the above computation can be approximated
+    by the $k$-negative sampling [22, 30] as follows:
+
+
+    $$\sum_{C_i\in Dict}\sum_{f_s}\sum_{seq_i}\sum_{in_j}\sum_{t_c}J(\theta) = \sum_{C_i\in
+    Dict}\sum_{f_s}\sum_{seq_i}\sum_{in_j}\sum_{t_c}\log P(t_c\mid\delta(in_j,f_s)).
+    \tag{5}$$
+
+
+    $$J(\theta)\approx\log(\sigma(X))+\sum_{i=1}^{k}\mathbb{E}_{t_d\sim P_n(t_c)}\left([\![t_d\ne
+    t_c]\!]\log\sigma(X)\right). \tag{6}$$
+
+
+    where $[\![t_d\ne t_c]\!]$ is an identity function which returns 1 if the expression
+    inside the function is true or 0 otherwise. On the other hand, $\mathbb{E}_{t_d\sim
+    P_n(t_c)}$ is a sampling function that samples a token $t_d$ in accordance with
+    the noise distribution $P_n(t_c)$ from $t_c$. We finally utilize Equation (6)
+    as the objective function of Eth2Vec. Intuitively, the function maximizes the
+    probability of a token $t_c$ of the current instruction and decreases that of
+    a token $t_d$ of the other instructions. Then, we can compute the gradient with
+    respect to $\theta_{f_s}$ through the following derivative:
+
+
+    $$\frac{\partial J(\theta)}{\partial\theta_{f_s}}=\frac{\partial J(\theta)}{\partial
+    X}\frac{\partial X}{\partial\theta_{f_s}}=\frac{\vec{v}_{t_c}}{3}(1-\sigma(X))
+    + \frac{\vec{v}_{t_c}}{3}\sum_{i=1}^{k}\mathbb{E}_{t_d\sim P_n(t_c)}\left([\![t_d\ne
+    t_c]\!](1-\sigma(X))\right).$$
+
+
+    Moreover, we can also utilize a more intuitive gradient by approximating the aforementioned
+    gradient computation as follows:
+
+
+    $$\frac{\partial J(\theta)}{\partial\theta_{f_s}}\approx\frac{\vec{v}_{t_c}}{3}\sum_i^k\mathbb{E}_{t\sim
+    P_n(t_c)}\left([\![t=t_c]\!]-\sigma(X)\right). \tag{7}$$
+
+
+    Intuitively, Equation (7) approximates the original derivative described above
+    in a manner that it moves a gradient to the positive if a token is identical to
+    the current instruction or to the negative otherwise. Likewise, the gradient with
+    respect to the vector representation $\vec{v}_{t_c}$ of a token on the current
+    instruction can be approximated. Moreover, for the vector representation $\vec{v}_{\mathcal{P}(in)}$
+    of a token of some operation $\mathcal{P}(in)$ and that $\vec{v}_{\mathcal{A}(in)}$
+    of operands on the current instruction, their gradients can be approximated in
+    a similar manner. These gradients are computed as follows although we omit their
+    derivation:
+
+
+    $$\frac{\partial J(\theta)}{\partial\vec{v}_{t_c}}\approx([\![t=t_c]\!]-\sigma(X))\cdot\delta(in_j,f_s).
+    \tag{8}$$
+
+
+    $$\frac{\partial J(\theta)}{\partial\vec{v}_{\mathcal{P}(in_j)}}\approx([\![t=t_c]\!]-\sigma(X))\cdot\frac{1}{|\mathcal{A}(in)|}\sum_{t\in\mathcal{A}(in)}\vec{v}_t.
+    \tag{9}$$
+
+
+    $$\frac{\partial J(\theta)}{\partial\vec{v}_{\mathcal{A}(in_{j+1})}}\approx([\![t=t_c]\!]-\sigma(X))\cdot\left(\vec{v}_{\mathcal{P}(in_{j+1})}\right).
+    \tag{10}$$
+
+
+    Similar equations hold for the previous instruction $in_{j-1}$ by replacing $in_{j+1}$
+    with $in_{j-1}$ although we omit the details due to space limitation.
+
+
+    # 4.5 Training and Inference
+
+
+    We now present the training algorithm and the inference algorithm with the gradients
+    described in the previous subsection. First, the training algorithm is shown in
+    Algorithm 1. The goal of the training is to optimize vectors for each instruction
+    belonging to the given contract file as input. Instructions with similar meaning
+    are mapped to a similar position in the vector space through the training. These
+    resulting vectors by the algorithm can be used as features for vector representation
+    of contract-level analysis. The algorithm is an unsupervised training algorithm,
+    and thus the procedure does not require a ground-truth mapping between equivalent
+    contracts.
+
+
+    The aforementioned features can be utilized directly in the inference algorithm
+    shown in Algorithm 2. In particular, for an unseen contract $C_t\notin Dict$,
+    the algorithm first initializes $\vec{\theta}_{f_t}$, which is associated with
+    any function $f_t$ belonging to $C_t$. Then, the algorithm follows the same procedure
+    as the training algorithm. However, all $\vec{v}_t$''s in the trained model are
+    kept, and $\vec{\theta}_{f_t}$''s are updated following their errors. At the end
+    of the inference, $\vec{\theta}_{f_t}$ is output whereas the vectors for all $C_i\in
+    Dict$ remain the same except for $\vec{\theta}_{f_t}$. Finally, to search contracts
+    for a match with the given contract $C_t$, the resultant vectors are compared
+    with those of the training contracts using a typical statistical method, e.g.,
+    the cosine similarity.'
+  md: "\n![](img/0d980298d6e695afbf52eecaa73818c4_4_0.png)\n\n**Figure 1: Overview\
+    \ of Eth2Vec**\n\nThe PV-DM model is initially designed for text data that is\
+    \ sequentially laid out while it can also be used for analysis of assembly code\
+    \ by extending vector representation of language [11].\n\nIn this paper, we present\
+    \ a contract-wide representation learning model by extending the PV-DM model in\
+    \ accordance the syntax of EVM bytecode as described in Section 4.4.\n\n### 4.3.2\
+    \ EVM Extractor.\n\nEVM Extractor is a module that syntactically analyzes EVM\
+    \ bytecodes for PV-DM model. In particular, EVM Extractor parses Solidity files\
+    \ as in the following hierarchical structure:\n\n```\ndata: dictionary\n  name:\
+    \ file name\n  md5: md5 hash\n  functions: list\n    name: function name\n   \
+    \ sea: start point\n    see: end point\n    id: function id\n    call: list of\
+    \ callee functions\n    blocks: list\n      name: block name\n      bytes: bytecodes\n\
+    \      sea: start point\n      eea: end point\n      id: block id\n      call:\
+    \ list of callee blocks\n      src: assembly instructions\n```\n\nThe top-level,\
+    \ data, represents a contract file to be analyzed. The second level indicates\
+    \ file-dependent information. The third level indicates function-dependent information.\
+    \ The fourth level indicates a block consisting of multiple instructions. In each\
+    \ level, sea means the start address of the current function and that of the current\
+    \ block. Likewise, see and eea mean the start address of the next function and\
+    \ that of the next block, respectively. In contrast, call represents a callee\
+    \ function (or a callee block) from the current function (or block). Finally,\
+    \ at the bottom level, instructions of EVM bytecodes are stored in src together\
+    \ with their addresses. Meanwhile, a library function is treated as an individual\
+    \ function.\n\n## 4.4 Design of Objective Function\n\nEth2Vec is a model that\
+    \ learns and infers codes of Ethereum smart contracts through unsupervised learning.\
+    \ Intuitively, it can be regarded as an extension of Word2Vec with a wider vector\
+    \ representation of codes given its ability to target Ethereum smart contracts.\n\
+    \nThe objective function of Eth2Vec is designed by extending that of the original\
+    \ PV-DM model described in Equation (1) along with the syntax shown in Section\
+    \ 4.3.2. The following argument is inspired by Asm2Vec [11], which is an extension\
+    \ of the PV-DM model for an assembly language. Given a file of an Ethereum smart\
+    \ contract to be analyzed, Eth2Vec vectorizes the codes for instruction-level\
+    \ and then computes the code similarity to the learned codes by the training.\
+    \ The process above is executed for block-level related to the instructions, function-level,\
+    \ and contract-level recursively, and therefore Eth2Vec can detect codes with\
+    \ distribution similar to that of the training data. Formally, an objective function\
+    \ is defined as follows:\n\n$$\\sum_{C_i}^{Dict} \\sum_{f_s}^{U(C_i)} \\sum_{seq_i}^{S(f_s)}\
+    \ \\sum_{in_j}^{I(seq_i)} \\sum_{t_c}^{T(in_j)} \\log P(t_c | C_i, in_{j-1}, in_{j+1}),\
+    \ \\tag{2}$$\n\nwhere we denote by Dict a contract file, by C_i a contract, by\
+    \ f_s a function, by seq_i a block consisting of multiple instructions, by in_j\
+    \ each instruction, and by t_c a token with respect to the current instruction.\
+    \ Likewise, we denote by U(C_i) multiple functions, by S(f_s) multiple blocks,\
+    \ by I(seq_i) a list of instructions, and by T(in_j) a list of tokens.\n\nHere,\
+    \ the first summation term, i.e., ∑_{C_i}^{Dict}, is included in the second level\
+    \ shown in the previous section, i.e., file name. Equation (2) is given contracts\
+    \ and their instructions, and then it maximizes the log probability for the current\
+    \ token t_c. Intuitively, the lexical meaning for each contract is computed through\
+    \ the current instruction and its neighbor instructions. Moreover, codes consisting\
+    \ of multiple contracts can also be analyzed by extracting features for each contract.\n\
+    \nWe describe the objective function to represent the aforementioned intuition\
+    \ in detail below. Given a contract file Dict, a function f_s for each contract\
+    \ C_i is vectorized and then we denote by \\vec{\\theta}_{f_s} the vector representation\
+    \ of f_s. Furthermore, we denote by \\mathcal{CT}(in) the average of the vector\
+    \ representation of neighbor instructions of in. We then define a concatenation\
+    \ of the vector representation of the instruction itself and that of its operands\
+    \ as follows:\n\n$$\\mathcal{CT}(in)=\\vec{v}_{\\mathcal{P}(in)}\\Vert\\frac{1}{|\\\
+    mathcal{A}(in)|}\\sum_{t\\in\\mathcal{A}(in)}\\vec{v}_t. \\tag{3}$$\n\nwhere \\\
+    mathcal{P}(in) is one operation with respect to in, \\mathcal{A}(in) is a list\
+    \ of operands with respect to in, and \\Vert is a concatenation of strings. In\
+    \ doing so, for any contract C_i, by averaging f_s and the j-th instruction in\
+    \ in_j (with j\\in\\{1,\\ldots,n\\}), a function \\delta(in_j,f_s) to evaluate\
+    \ the joint memory of neighbor instructions in f_s is defined as follows:\n\n\
+    $$\\delta(in_j,f_s)=\\frac{1}{3}\\left(\\vec{\\theta}_{f_s}+\\mathcal{CT}(in_{j-1})+\\\
+    mathcal{CT}(in_{j+1})\\right). \\tag{4}$$\n\nTherefore, the log probability in\
+    \ Equation (2) can be replaced with P(t_c\\mid C_i,in_{j-1},in_{j+1})=P(t_c\\\
+    mid\\delta(in_j,f_s)). According to the literature [11], by letting X=(\\vec{v}_{t_c})^T\\\
+    times\\delta(in_j,f_s) and utilizing a sigmoid function \\sigma(X)=\\frac{1}{1+e^{-X}},\
+    \ the above computation can be approximated by the k-negative sampling [22, 30]\
+    \ as follows:\n\n$$\\sum_{C_i\\in Dict}\\sum_{f_s}\\sum_{seq_i}\\sum_{in_j}\\\
+    sum_{t_c}J(\\theta) = \\sum_{C_i\\in Dict}\\sum_{f_s}\\sum_{seq_i}\\sum_{in_j}\\\
+    sum_{t_c}\\log P(t_c\\mid\\delta(in_j,f_s)). \\tag{5}$$\n\n$$J(\\theta)\\approx\\\
+    log(\\sigma(X))+\\sum_{i=1}^{k}\\mathbb{E}_{t_d\\sim P_n(t_c)}\\left([\\![t_d\\\
+    ne t_c]\\!]\\log\\sigma(X)\\right). \\tag{6}$$\n\nwhere [\\![t_d\\ne t_c]\\!]\
+    \ is an identity function which returns 1 if the expression inside the function\
+    \ is true or 0 otherwise. On the other hand, \\mathbb{E}_{t_d\\sim P_n(t_c)} is\
+    \ a sampling function that samples a token t_d in accordance with the noise distribution\
+    \ P_n(t_c) from t_c. We finally utilize Equation (6) as the objective function\
+    \ of Eth2Vec. Intuitively, the function maximizes the probability of a token t_c\
+    \ of the current instruction and decreases that of a token t_d of the other instructions.\
+    \ Then, we can compute the gradient with respect to \\theta_{f_s} through the\
+    \ following derivative:\n\n$$\\frac{\\partial J(\\theta)}{\\partial\\theta_{f_s}}=\\\
+    frac{\\partial J(\\theta)}{\\partial X}\\frac{\\partial X}{\\partial\\theta_{f_s}}=\\\
+    frac{\\vec{v}_{t_c}}{3}(1-\\sigma(X)) + \\frac{\\vec{v}_{t_c}}{3}\\sum_{i=1}^{k}\\\
+    mathbb{E}_{t_d\\sim P_n(t_c)}\\left([\\![t_d\\ne t_c]\\!](1-\\sigma(X))\\right).$$\n\
+    \nMoreover, we can also utilize a more intuitive gradient by approximating the\
+    \ aforementioned gradient computation as follows:\n\n$$\\frac{\\partial J(\\theta)}{\\\
+    partial\\theta_{f_s}}\\approx\\frac{\\vec{v}_{t_c}}{3}\\sum_i^k\\mathbb{E}_{t\\\
+    sim P_n(t_c)}\\left([\\![t=t_c]\\!]-\\sigma(X)\\right). \\tag{7}$$\n\nIntuitively,\
+    \ Equation (7) approximates the original derivative described above in a manner\
+    \ that it moves a gradient to the positive if a token is identical to the current\
+    \ instruction or to the negative otherwise. Likewise, the gradient with respect\
+    \ to the vector representation \\vec{v}_{t_c} of a token on the current instruction\
+    \ can be approximated. Moreover, for the vector representation \\vec{v}_{\\mathcal{P}(in)}\
+    \ of a token of some operation \\mathcal{P}(in) and that \\vec{v}_{\\mathcal{A}(in)}\
+    \ of operands on the current instruction, their gradients can be approximated\
+    \ in a similar manner. These gradients are computed as follows although we omit\
+    \ their derivation:\n\n$$\\frac{\\partial J(\\theta)}{\\partial\\vec{v}_{t_c}}\\\
+    approx([\\![t=t_c]\\!]-\\sigma(X))\\cdot\\delta(in_j,f_s). \\tag{8}$$\n\n$$\\\
+    frac{\\partial J(\\theta)}{\\partial\\vec{v}_{\\mathcal{P}(in_j)}}\\approx([\\\
+    ![t=t_c]\\!]-\\sigma(X))\\cdot\\frac{1}{|\\mathcal{A}(in)|}\\sum_{t\\in\\mathcal{A}(in)}\\\
+    vec{v}_t. \\tag{9}$$\n\n$$\\frac{\\partial J(\\theta)}{\\partial\\vec{v}_{\\mathcal{A}(in_{j+1})}}\\\
+    approx([\\![t=t_c]\\!]-\\sigma(X))\\cdot\\left(\\vec{v}_{\\mathcal{P}(in_{j+1})}\\\
+    right). \\tag{10}$$\n\nSimilar equations hold for the previous instruction in_{j-1}\
+    \ by replacing in_{j+1} with in_{j-1} although we omit the details due to space\
+    \ limitation.\n\n## 4.5 Training and Inference\n\nWe now present the training\
+    \ algorithm and the inference algorithm with the gradients described in the previous\
+    \ subsection. First, the training algorithm is shown in Algorithm 1. The goal\
+    \ of the training is to optimize vectors for each instruction belonging to the\
+    \ given contract file as input. Instructions with similar meaning are mapped to\
+    \ a similar position in the vector space through the training. These resulting\
+    \ vectors by the algorithm can be used as features for vector representation of\
+    \ contract-level analysis. The algorithm is an unsupervised training algorithm,\
+    \ and thus the procedure does not require a ground-truth mapping between equivalent\
+    \ contracts.\n\nThe aforementioned features can be utilized directly in the inference\
+    \ algorithm shown in Algorithm 2. In particular, for an unseen contract C_t\\\
+    notin Dict, the algorithm first initializes \\vec{\\theta}_{f_t}, which is associated\
+    \ with any function f_t belonging to C_t. Then, the algorithm follows the same\
+    \ procedure as the training algorithm. However, all \\vec{v}_t's in the trained\
+    \ model are kept, and \\vec{\\theta}_{f_t}'s are updated following their errors.\
+    \ At the end of the inference, \\vec{\\theta}_{f_t} is output whereas the vectors\
+    \ for all C_i\\in Dict remain the same except for \\vec{\\theta}_{f_t}. Finally,\
+    \ to search contracts for a match with the given contract C_t, the resultant vectors\
+    \ are compared with those of the training contracts using a typical statistical\
+    \ method, e.g., the cosine similarity.\n"
+  mdcn: "\n![](img/0d980298d6e695afbf52eecaa73818c4_4_0.png)\n\n**图 1：Eth2Vec 概述**\n\
+    \nPV-DM 模型最初是为顺序排列的文本数据设计的，同时通过扩展语言的向量表示也可以用于汇编代码的分析 [11]。\n\n本文提出了一种通过扩展 PV-DM\
+    \ 模型以符合第 4.4 节所述的 EVM 字节码语法而实现的合约级表示学习模型。\n\n### 4.3.2 EVM Extractor.\n\nEVM Extractor\
+    \ 是一个用于 PV-DM 模型的模块，用于对 EVM 字节码进行语法分析。特别是，EVM Extractor 按以下层次结构解析 Solidity 文件：\n\
+    \n```\ndata: dictionary\n  name: file name\n  md5: md5 hash\n  functions: list\n\
+    \    name: function name\n    sea: start point\n    see: end point\n    id: function\
+    \ id\n    call: list of callee functions\n    blocks: list\n      name: block\
+    \ name\n      bytes: bytecodes\n      sea: start point\n      eea: end point\n\
+    \      id: block id\n      call: list of callee blocks\n      src: assembly instructions\n\
+    ```\n\n顶层 data 表示待分析的合约文件。第二层表示文件相关信息。第三层表示函数相关信息。第四层表示由多个指令组成的块。在每个层级中，sea 表示当前函数和当前块的起始地址。同样，see\
+    \ 和 eea 分别表示下一个函数和下一个块的起始地址。相比之下，call 表示从当前函数（或块）调用的被调用函数（或被调用块）。最后，在最底层，EVM 字节码的指令连同其地址一起存储在\
+    \ src 中。同时，库函数被视为一个独立的函数。\n\n## 4.4 目标函数设计\n\nEth2Vec 是一种通过无监督学习学习和推断以太坊智能合约代码的模型。直观上，它可以被视为\
+    \ Word2Vec 的扩展，具有更宽的代码向量表示，因为它能够针对以太坊智能合约。\n\nEth2Vec 的目标函数是通过扩展第 4.3.2 节所示语法中描述的原始\
+    \ PV-DM 模型在公式 (1) 中的目标函数而设计的。以下论证受 Asm2Vec [11] 的启发，后者是针对汇编语言的 PV-DM 模型的扩展。给定待分析的以太坊智能合约文件，Eth2Vec\
+    \ 对指令级代码进行向量化，然后计算与训练学习到的代码的相似度。上述过程针对与指令相关的块级、函数级和合约级递归执行，因此 Eth2Vec 可以检测出与训练数据分布相似的代码。形式上，目标函数定义如下：\n\
+    \n$$\\sum_{C_i}^{Dict} \\sum_{f_s}^{U(C_i)} \\sum_{seq_i}^{S(f_s)} \\sum_{in_j}^{I(seq_i)}\
+    \ \\sum_{t_c}^{T(in_j)} \\log P(t_c | C_i, in_{j-1}, in_{j+1}), \\tag{2}$$\n\n\
+    其中我们用 Dict 表示合约文件，用 C_i 表示合约，用 f_s 表示函数，用 seq_i 表示由多个指令组成的块，用 in_j 表示每个指令，用 t_c\
+    \ 表示与当前指令相关的标记。同样，我们用 U(C_i) 表示多个函数，用 S(f_s) 表示多个块，用 I(seq_i) 表示指令列表，用 T(in_j)\
+    \ 表示标记列表。\n\n这里，第一求和项，即 ∑_{C_i}^{Dict}，包含在上一节所示的第二层中，即文件名。公式 (2) 给出合约及其指令，然后最大化当前标记\
+    \ t_c 的对数概率。直观上，每个合约的词汇含义是通过当前指令及其邻近指令计算得出的。此外，由多个合约组成代码也可以通过为每个合约提取特征来分析。\n\n\
+    我们将在下面详细描述目标函数以表示上述直觉。给定合约文件 Dict，每个合约 C_i 的函数 f_s 被向量化，然后我们用 \\vec{\\theta}_{f_s}\
+    \ 表示 f_s 的向量表示。此外，我们用 \\mathcal{CT}(in) 表示 in 的邻近指令的向量表示的平均值。然后我们将指令本身的向量表示与其操作数的向量表示的拼接定义如下：\n\
+    \n$$\\mathcal{CT}(in)=\\vec{v}_{\\mathcal{P}(in)}\\Vert\\frac{1}{|\\mathcal{A}(in)|}\\\
+    sum_{t\\in\\mathcal{A}(in)}\\vec{v}_t. \\tag{3}$$\n\n其中 \\mathcal{P}(in) 是相对于\
+    \ in 的一个操作，\\mathcal{A}(in) 是相对于 in 的操作数列表，而 \\Vert 是字符串的拼接。这样，对于任意合约 C_i，通过对\
+    \ f_s 和第 j 条指令 in_j（其中 j\\in\\{1,\\ldots,n\\}）取平均，定义一个用于评估 f_s 中邻近指令的联合记忆的函数 \\\
+    delta(in_j,f_s) 如下：\n\n$$\\delta(in_j,f_s)=\\frac{1}{3}\\left(\\vec{\\theta}_{f_s}+\\\
+    mathcal{CT}(in_{j-1})+\\mathcal{CT}(in_{j+1})\\right). \\tag{4}$$\n\n因此，公式 (2)\
+    \ 中的对数概率可以用 P(t_c\\mid C_i,in_{j-1},in_{j+1})=P(t_c\\mid\\delta(in_j,f_s)) 替换。根据文献\
+    \ [11]，令 X=(\\vec{v}_{t_c})^T\\times\\delta(in_j,f_s) 并利用 sigmoid 函数 \\sigma(X)=\\\
+    frac{1}{1+e^{-X}}，上述计算可以用 k-负采样 [22, 30] 近似如下：\n\n$$\\sum_{C_i\\in Dict}\\sum_{f_s}\\\
+    sum_{seq_i}\\sum_{in_j}\\sum_{t_c}J(\\theta) = \\sum_{C_i\\in Dict}\\sum_{f_s}\\\
+    sum_{seq_i}\\sum_{in_j}\\sum_{t_c}\\log P(t_c\\mid\\delta(in_j,f_s)). \\tag{5}$$\n\
+    \n$$J(\\theta)\\approx\\log(\\sigma(X))+\\sum_{i=1}^{k}\\mathbb{E}_{t_d\\sim P_n(t_c)}\\\
+    left([\\![t_d\\ne t_c]\\!]\\log\\sigma(X)\\right). \\tag{6}$$\n\n其中 [\\![t_d\\\
+    ne t_c]\\!] 是一个恒等函数，如果函数内部的表达式为真则返回 1，否则返回 0。另一方面，\\mathbb{E}_{t_d\\sim P_n(t_c)}\
+    \ 是一个采样函数，根据噪声分布 P_n(t_c) 从 t_c 采样标记 t_d。我们最终利用公式 (6) 作为 Eth2Vec 的目标函数。直观上，该函数最大化当前指令的标记\
+    \ t_c 的概率并降低其他指令的标记 t_d 的概率。然后，我们可以通过以下导数计算相对于 \\theta_{f_s} 的梯度：\n\n$$\\frac{\\\
+    partial J(\\theta)}{\\partial\\theta_{f_s}}=\\frac{\\partial J(\\theta)}{\\partial\
+    \ X}\\frac{\\partial X}{\\partial\\theta_{f_s}}=\\frac{\\vec{v}_{t_c}}{3}(1-\\\
+    sigma(X)) + \\frac{\\vec{v}_{t_c}}{3}\\sum_{i=1}^{k}\\mathbb{E}_{t_d\\sim P_n(t_c)}\\\
+    left([\\![t_d\\ne t_c]\\!](1-\\sigma(X))\\right).$$\n\n此外，我们还可以通过以下方式近似上述梯度计算来利用更直观的梯度：\n\
+    \n$$\\frac{\\partial J(\\theta)}{\\partial\\theta_{f_s}}\\approx\\frac{\\vec{v}_{t_c}}{3}\\\
+    sum_i^k\\mathbb{E}_{t\\sim P_n(t_c)}\\left([\\![t=t_c]\\!]-\\sigma(X)\\right).\
+    \ \\tag{7}$$\n\n直观上，公式 (7) 以一种方式近似上述原始导数：如果标记与当前指令相同则将梯度移动到正方向，否则移动到负方向。同样，相对于当前指令上标记的向量表示\
+    \ \\vec{v}_{t_c} 的梯度也可以近似。此外，对于某个操作 \\mathcal{P}(in) 的标记的向量表示 \\vec{v}_{\\mathcal{P}(in)}\
+    \ 以及当前指令上操作数的向量表示 \\vec{v}_{\\mathcal{A}(in)}，它们的梯度也可以以类似方式近似。尽管我们省略了推导，这些梯度计算如下：\n\
+    \n$$\\frac{\\partial J(\\theta)}{\\partial\\vec{v}_{t_c}}\\approx([\\![t=t_c]\\\
+    !]-\\sigma(X))\\cdot\\delta(in_j,f_s). \\tag{8}$$\n\n$$\\frac{\\partial J(\\theta)}{\\\
+    partial\\vec{v}_{\\mathcal{P}(in_j)}}\\approx([\\![t=t_c]\\!]-\\sigma(X))\\cdot\\\
+    frac{1}{|\\mathcal{A}(in)|}\\sum_{t\\in\\mathcal{A}(in)}\\vec{v}_t. \\tag{9}$$\n\
+    \n$$\\frac{\\partial J(\\theta)}{\\partial\\vec{v}_{\\mathcal{A}(in_{j+1})}}\\\
+    approx([\\![t=t_c]\\!]-\\sigma(X))\\cdot\\left(\\vec{v}_{\\mathcal{P}(in_{j+1})}\\\
+    right). \\tag{10}$$\n\n尽管由于篇幅限制我们省略了细节，但对于前一个指令 in_{j-1}，用 in_{j-1} 替换 in_{j+1}\
+    \ 后同样适用。\n\n## 4.5 训练与推理\n\n我们现在介绍训练算法和推理算法，其中使用上一小节描述的梯度。首先，训练算法如算法 1 所示。训练的目标是优化作为输入的给定合约文件中每个指令的向量。通过训练，含义相似的指令被映射到向量空间中的相似位置。该算法产生的这些向量可作为合约级分析的向量表示的特征。该算法是一种无监督训练算法，因此该过程不需要等价合约之间的真实映射。\n\
+    \n上述特征可以直接用于算法 2 所示的推理算法。特别是，对于未见过的合约 C_t\\notin Dict，算法首先初始化与 C_t 所属的任意函数 f_t\
+    \ 相关的 \\vec{\\theta}_{f_t}。然后，算法遵循与训练算法相同的过程。然而，训练模型中所有的 \\vec{v}_t 都被保留，并且 \\\
+    vec{\\theta}_{f_t} 根据其误差进行更新。在推理结束时，输出 \\vec{\\theta}_{f_t}，而所有 C_i\\in Dict 的向量保持不变，除\
+    \ \\vec{\\theta}_{f_t} 外。最后，为了搜索与给定合约 C_t 匹配的合约，结果向量使用典型的统计方法，例如余弦相似度，与训练合约的向量进行比较。\n\
+    \n"
+  merge: 0
+- raw:
+  - '[PAGE 6]
+
+
+    ```
+
+    **Algorithm 1** Training algorithm TRAIN of Eth2Vec for one epoch
+
+
+    **Require:** Dict
+
+    **Ensure:** vector representations for tokens of any *in_j* and \(\vec{\theta}_{f_s}\)
+
+
+    1. **for all** \(C_i \in Dict\) **do**
+
+    2. &nbsp;&nbsp;&nbsp;&nbsp;**for all** \(f_s \in \mathcal{U}(C_i)\) **do**
+
+    3. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for all** \(seq_i \in \mathcal{S}(f_s)\)
+    **do**
+
+    4. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for
+    all** \(in_j \in \mathcal{I}(seq_i)\) **do**
+
+    5. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vectorize
+    \(f_s\) as \(\vec{\theta}_{f_s}\)
+
+    6. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compute
+    \(\mathcal{CT}(in_{j+1})\) by Eq. (3)
+
+    7. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compute
+    \(\mathcal{CT}(in_{j-1})\) by Eq. (3)
+
+    8. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compute
+    \(\delta(in_j,f_s)\) by Eq. (4)
+
+    9. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for
+    all** \(t_c \in \mathcal{T}(in_j)\) **do**
+
+    10. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compute
+    a gradient for \(\vec{\theta}_{f_s}\) by Eq. (7)
+
+    11. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compute
+    a gradient for \(\vec{v}_{t_c}\) by Eq. (8)
+
+    12. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compute
+    a gradient for \(\vec{v}_{\mathcal{P}(j+1)}\) by Eq. (9)
+
+    13. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compute
+    a gradient for \(\vec{v}_{\mathcal{A}(in_{j+1})}\) by Eq. (10)
+
+    14. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compute
+    a gradient for \(\vec{v}_{\mathcal{P}(j-1)}\) by Eq. (9)
+
+    15. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compute
+    a gradient for \(\vec{v}_{\mathcal{A}(in_{j-1})}\) by Eq. (10)
+
+    16. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**end
+    for**
+
+    17. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;update
+    vectors for tokens of \(in_j\)
+
+    18. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;update
+    \(\vec{\theta}_{f_s}\)
+
+    19. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**end
+    for**
+
+    20. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**end for**
+
+    21. &nbsp;&nbsp;&nbsp;&nbsp;**end for**
+
+    22. **end for**
+
+    ```
+
+
+    ```
+
+    **Algorithm 2** Inference algorithm Infer of Eth2Vec for a query
+
+
+    **Require:** contract \(C_t \notin Dict\)
+
+    **Ensure:** vector representation \(\vec{\theta}_{f_t}\) for any \(f_t \in \mathcal{U}(C_t)\)
+
+
+    1. Initialize vector representation \(\vec{\theta}_{f_t}\) of \(f_t \in \mathcal{U}(C_t)\)
+
+    2. **for all** \(f_t \in \mathcal{U}(C_t)\) **do**
+
+    3. &nbsp;&nbsp;&nbsp;&nbsp;**for all** \(seq_i \in \mathcal{S}(f_t)\) **do**
+
+    4. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for all** \(in_j \in \mathcal{I}(seq_i)\)
+    **do**
+
+    5. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compute
+    \(\mathcal{CT}(in_{j+1})\) by Eq. (3)
+
+    6. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compute
+    \(\mathcal{CT}(in_{j-1})\) by Eq. (3)
+
+    7. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compute
+    \(\delta(in_j,f_s)\) by Eq. (4)
+
+    8. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for
+    all** \(t_c \in \mathcal{T}(in_j)\) **do**
+
+    9. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compute
+    a gradient for \(\vec{\theta}_{f_t}\) by Eq. (7)
+
+    10. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;update
+    \(\vec{\theta}_{f_t}\)
+
+    11. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**end
+    for**
+
+    12. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**end for**
+
+    13. &nbsp;&nbsp;&nbsp;&nbsp;**end for**
+
+    14. **end for**
+
+    ```
+
+
+    # 4.6  Implementation
+
+
+    We implemented Eth2Vec by utilizing Kam1n0² and py-solc-x³. First, the main module,
+    PVDM model, was implemented by Kam1n0, which is a server system [10] utilized
+    for binary analysis [11]. We mainly modified the source codes in DisassemblyFactoryIDA.java
+    and ExtractBinaryViaIDA.py. In particular, ExtractBinaryViaIDA.py initially generates
+    a JSON file extracted from IDA by disassembling binary codes, and then DisassemblyFactoryIDA.java
+    takes the file to store the binary codes within Kam1n0. However, IDA cannot use
+    EVM bytecodes for implementing Eth2Vec. Therefore, we changed ExtractBinaryViaIDA.py.
+    For instance, the code information is obtained by compiling a Solidity file with
+    py-solc-x without IDA, and then its resultant assembly codes, abstract syntax
+    tree (AST), and binary codes are extracted.
+
+
+    Meanwhile, the current output display follows the interface of Kam1n0, vulnerabilities
+    are listed as the function-level for each contract. In particular, vulnerabilities
+    of test contracts are displayed with their confidence. We show an output example
+    of Eth2Vec in Appendix A.
+
+
+    We release the source codes of the whole implementation publicly via GitHub (https://github.com/fseclab-osaka/eth2vec).
+
+
+    # 5  EXPERIMENTS
+
+
+    In this section, we describe the experiments we conducted to evaluate Eth2Vec.
+    First, we describe the purpose of the experiments. Then, we discuss the datasets
+    and the training methodologies used for evaluation. Finally, we show the experimental
+    results.
+
+
+    # 5.1  Purpose of Experiments
+
+
+    To evaluate the performance of Eth2Vec, we try to detect vulnerabilities in codes
+    to be analyzed through the training with the known vulnerable contracts. To do
+    this, we first check if Eth2Vec appropriately represents the relationship between
+    codes to be analyzed and codes learned in the training phase. We evaluate clone
+    detection of codes written in the Solidity language to confirm whether Eth2Vec
+    can appropriately extract features of the codes. In doing so, we also evaluate
+    semantic clones based on the lexical-semantic relationship to confirm the robustness
+    of Eth2Vec against code rewrites.
+
+
+    Next, we check whether all the learned vulnerabilities are identified by training
+    the codes and their code similarity with a given code. In doing so, we also evaluate
+    consistency of the vulnerability detection with the results of the clone detection
+    described above. In particular, we check if an output of the vulnerability detection
+    is identical to the vulnerabilities in code identified as clones and if the clones
+    are contained in the clone detection output.
+
+
+    We confirm that Eth2Vec can extract features precisely and thus can detect vulnerabilities
+    through the experiments mentioned above. We also compare the performance of Eth2Vec
+    with that of the existing work by Momeni et al. [31], which extracts features
+    manually, as a baseline.
+
+
+    # 5.2  Experimental Setting
+
+
+    As mentioned above, experiments are conducted in two stages, i.e., clone detection
+    and vulnerability detection of smart contracts. We describe the setting for each
+    experiment below. We first describe the dataset and the baseline in detail.
+
+
+    # 5.2.1  Dataset.
+
+
+    We collect 5,000 contract files from Etherscan⁴, which is an open database of
+    smart contracts, as a dataset utilized in the experiments. These 5,000 files are
+    also identical to files
+
+
+    ² Kam1n0 version 2.0.0: https://github.com/McGill-DMaS/Kam1n0-Community
+
+    ³ Py-solc-x: https://pypi.org/project/py-solc-x/
+
+    ⁴ https://etherscan.io/'
+  - "[PAGE 7]\n\nutilized in a recent work [15]. We then utilize only the files that\
+    \ can be compiled by solidity version -0.4.11 as a compiler. The dataset contains\
+    \ 95,152 contracts and 1,193,868 blocks.\n\n# 5.2.2 Baseline.\n\nWe compare the\
+    \ performance of Eth2Vec with that of the scheme based on support vector machine\
+    \ (SVM) by Momeni et al. [31] as a baseline. Although there are several versatile\
+    \ results based on machine learning [15, 26, 48], which can detect various vulnerabilities,\
+    \ their source codes are unpublished or we were unable to build their source codes\
+    \ in our environment. We thus adopt the SVM-based method by Momeni et al. which\
+    \ we were able to reproduce from scratch.\n\nMomeni et al. extracted 16 features\
+    \ from an abstract syntax tree (AST) of an Ethereum smart contract. We utilize\
+    \ 15 of these features excluding hexadecimal addresses because hexadecimal addresses\
+    \ cannot be obtained from source codes, i.e., without deployment. Other features\
+    \ are described in Appendix B.\n\n# 5.2.3 Clone Detection.\n\nWe check if Eth2Vec\
+    \ can precisely detect clones of test contracts as input by training contracts.\
+    \ In particular, in the 10-fold cross-validation, 500 test contracts are randomly\
+    \ chosen, and the remaining 4,500 contracts are utilized as the training contracts.\
+    \ This process is iterated 10 times. Meanwhile, a threshold of the code similarity\
+    \ to detect clones is 0.8.\n\nIn the setting mentioned above, precision is utilized\
+    \ as an evaluation metric. For clones for each function, i.e., function-level\
+    \ clones, which are output by a threshold more than 0.8, we check if a function\
+    \ in a contract, which has the highest similarity, is indeed a clone of the given\
+    \ input. To compare the performance of Eth2Vec, we also evaluate the SVM-based\
+    \ method described above by manually labeling each function. Meanwhile, clones\
+    \ in this experiment correspond to the type-I to type-IV clones in literature\
+    \ [38], and semantic clones are identical to the type-IV clones.\n\n# 5.2.4 Vulnerability\
+    \ Detection.\n\nWe check if Eth2Vec can precisely detect vulnerabilities in test\
+    \ contracts as input by learning the training contracts. In particular, we check\
+    \ whether vulnerabilities output by Eth2Vec with a threshold 0.8 about the test\
+    \ contracts are identical to the true vulnerabilities in the contracts.\n\n# 5.3\
+    \ Results of Clone Detection\n\nThe results of the clone detection by Eth2Vec\
+    \ are shown in Table 1. According to the table, Eth2Vec can implicitly extract\
+    \ more features than the SVM-based method [31]. For instance, the values of the\
+    \ standard deviation by Eth2Vec are significantly smaller than those by the SVM-based\
+    \ method. Intuitively, this means that feature extraction by Eth2Vec is more stable,\
+    \ and therefore Eth2Vec is able to represent features on various codes. When the\
+    \ clone detection performance is compared to EClone [26] as a reference, the detection\
+    \ rate of EClone with a threshold of 0.4 was 58.2%. Although we did not implement\
+    \ EClone by ourselves as described in Section 5.2.2,\n\n# Table 1: Precision of\
+    \ Clone Detection of Eth2Vec. This table shows the average and standard deviation\
+    \ of 10 executions of precision measurement on 10-fold cross-validation. The “SVM\
+    \ w/o few clones” column shows the results of the SVM-based setting that were\
+    \ computed by removing test datasets with few clones. The numbers are truncated\
+    \ to one decimal place.\n\n|  | Eth2Vec | SVM [31] | SVM w/o few clones |\n|---|---|---|---|\n\
+    | Average | 74.9% | 34.6% | 42.7% |\n| Standard Deviation | 0.9 | 34.6 | 43.6\
+    \ |\n\n```\nfunction _transfer(address _from, address _to, uint _value) internal\
+    \ {\n    require(_to != 0x0);\n    require(balanceOf[_from] >= _value);\n    require(balanceOf[_to]\
+    \ + _value > balanceOf[_to]);\n    uint previousBalances = balanceOf[_from] +\
+    \ balanceOf[_to];\n    balanceOf[_from] -= _value;\n    balanceOf[_to] += _value;\n\
+    \    Transfer(_from, _to, _value);\n    assert(balanceOf[_from] + balanceOf[_to]\
+    \ == previousBalances);\n}\n```\n\n# Listing 1: Original function of Transfer\n\
+    \n```\nfunction _transfer(address _from, address _to, uint _value) internal {\n\
+    \    require(_to != 0x0);\n    require(balanceOf[_from] >= _value);\n    require(balanceOf[_to]\
+    \ + _value > balanceOf[_to]);\n    balanceOf[_from] -= _value;\n    balanceOf[_to]\
+    \ += _value;\n    Transfer(_from, _to, _value);\n}\n```\n\n# Listing 2: Clone\
+    \ of the original function of Transfer found by Eth2Vec\n\nwe believe that Eth2Vec\
+    \ can detect clones of Ethereum smart contracts better than EClone because of\
+    \ its more sophisticated feature extraction.\n\nWhen we checked an output of Eth2Vec\
+    \ in detail, it contained semantic clones. We show a concrete example in Listing\
+    \ 1 and Listing 2. The output of Eth2Vec, i.e., Listing 2, is a clone of the original\
+    \ function shown in Listing 1 excluding lines 5 and 9. Listing 2 is identical\
+    \ to a type-III clone of Listing 1 according to the definitions in [38]. This\
+    \ means that Eth2Vec can detect clones precisely, even those of rewritten codes.\n\
+    \nThe standard deviation of SVM is especially larger than that of Eth2Vec because\
+    \ the difference between the accuracy of detecting each clone is overlarge. Concretely,\
+    \ SVM detects a clone with 91.3% precision. On the other hand, SVM detects another\
+    \ clone with 0% precision. In particular, the ratio of clones detected with 0%\
+    \ precision is high, and then the average of SVM is lower than the standard deviation\
+    \ of SVM. Meanwhile, the precision of the SVM-based method is small because the\
+    \ test datasets contain few clones in several executions. The SVM-based method\
+    \ infers negatives for"
+  md: "\n**Algorithm 1** Training algorithm TRAIN of Eth2Vec for one epoch\n\n**Require:**\
+    \ Dict\n**Ensure:** vector representations for tokens of any `in_j` and \\(\\\
+    vec{\\theta}_{f_s}\\)\n\n1. **for all** \\(C_i \\in Dict\\) **do**\n2.     **for\
+    \ all** \\(f_s \\in \\mathcal{U}(C_i)\\) **do**\n3.         **for all** \\(seq_i\
+    \ \\in \\mathcal{S}(f_s)\\) **do**\n4.             **for all** \\(in_j \\in \\\
+    mathcal{I}(seq_i)\\) **do**\n5.                 vectorize \\(f_s\\) as \\(\\vec{\\\
+    theta}_{f_s}\\)\n6.                 compute \\(\\mathcal{CT}(in_{j+1})\\) by Eq.\
+    \ (3)\n7.                 compute \\(\\mathcal{CT}(in_{j-1})\\) by Eq. (3)\n8.\
+    \                 compute \\(\\delta(in_j,f_s)\\) by Eq. (4)\n9.             \
+    \    **for all** \\(t_c \\in \\mathcal{T}(in_j)\\) **do**\n10.               \
+    \     compute a gradient for \\(\\vec{\\theta}_{f_s}\\) by Eq. (7)\n11.      \
+    \              compute a gradient for \\(\\vec{v}_{t_c}\\) by Eq. (8)\n12.   \
+    \                 compute a gradient for \\(\\vec{v}_{\\mathcal{P}(j+1)}\\) by\
+    \ Eq. (9)\n13.                    compute a gradient for \\(\\vec{v}_{\\mathcal{A}(in_{j+1})}\\\
+    ) by Eq. (10)\n14.                    compute a gradient for \\(\\vec{v}_{\\mathcal{P}(j-1)}\\\
+    ) by Eq. (9)\n15.                    compute a gradient for \\(\\vec{v}_{\\mathcal{A}(in_{j-1})}\\\
+    ) by Eq. (10)\n16.                **end for**\n17.                update vectors\
+    \ for tokens of \\(in_j\\)\n18.                update \\(\\vec{\\theta}_{f_s}\\\
+    )\n19.            **end for**\n20.        **end for**\n21.    **end for**\n22.\
+    \ **end for**\n\n**Algorithm 2** Inference algorithm Infer of Eth2Vec for a query\n\
+    \n**Require:** contract \\(C_t \\notin Dict\\)\n**Ensure:** vector representation\
+    \ \\(\\vec{\\theta}_{f_t}\\) for any \\(f_t \\in \\mathcal{U}(C_t)\\)\n\n1. Initialize\
+    \ vector representation \\(\\vec{\\theta}_{f_t}\\) of \\(f_t \\in \\mathcal{U}(C_t)\\\
+    )\n2. **for all** \\(f_t \\in \\mathcal{U}(C_t)\\) **do**\n3.     **for all**\
+    \ \\(seq_i \\in \\mathcal{S}(f_t)\\) **do**\n4.         **for all** \\(in_j \\\
+    in \\mathcal{I}(seq_i)\\) **do**\n5.             compute \\(\\mathcal{CT}(in_{j+1})\\\
+    ) by Eq. (3)\n6.             compute \\(\\mathcal{CT}(in_{j-1})\\) by Eq. (3)\n\
+    7.             compute \\(\\delta(in_j,f_t)\\) by Eq. (4)\n8.             **for\
+    \ all** \\(t_c \\in \\mathcal{T}(in_j)\\) **do**\n9.                 compute a\
+    \ gradient for \\(\\vec{\\theta}_{f_t}\\) by Eq. (7)\n10.                update\
+    \ \\(\\vec{\\theta}_{f_t}\\)\n11.            **end for**\n12.        **end for**\n\
+    13.    **end for**\n14. **end for**\n\n## 4.6 Implementation\n\nWe implemented\
+    \ Eth2Vec by utilizing Kam1n0 (version 2.0.0: https://github.com/McGill-DMaS/Kam1n0-Community)\
+    \ and py-solc-x (https://pypi.org/project/py-solc-x/). First, the main module,\
+    \ PV-DM model, was implemented by Kam1n0, which is a server system [10] utilized\
+    \ for binary analysis [11]. We mainly modified the source codes in DisassemblyFactoryIDA.java\
+    \ and ExtractBinaryViaIDA.py. In particular, ExtractBinaryViaIDA.py initially\
+    \ generates a JSON file extracted from IDA by disassembling binary codes, and\
+    \ then DisassemblyFactoryIDA.java takes the file to store the binary codes within\
+    \ Kam1n0. However, IDA cannot use EVM bytecodes for implementing Eth2Vec. Therefore,\
+    \ we changed ExtractBinaryViaIDA.py. For instance, the code information is obtained\
+    \ by compiling a Solidity file with py-solc-x without IDA, and then its resultant\
+    \ assembly codes, abstract syntax tree (AST), and binary codes are extracted.\n\
+    \nMeanwhile, the current output display follows the interface of Kam1n0; vulnerabilities\
+    \ are listed at the function level for each contract. In particular, vulnerabilities\
+    \ of test contracts are displayed with their confidence. We show an output example\
+    \ of Eth2Vec in Appendix A.\n\nWe release the source codes of the whole implementation\
+    \ publicly via GitHub (https://github.com/fseclab-osaka/eth2vec).\n\n## 5 EXPERIMENTS\n\
+    \nIn this section, we describe the experiments we conducted to evaluate Eth2Vec.\
+    \ First, we describe the purpose of the experiments. Then, we discuss the datasets\
+    \ and the training methodologies used for evaluation. Finally, we show the experimental\
+    \ results.\n\n### 5.1 Purpose of Experiments\n\nTo evaluate the performance of\
+    \ Eth2Vec, we try to detect vulnerabilities in codes to be analyzed through the\
+    \ training with the known vulnerable contracts. To do this, we first check if\
+    \ Eth2Vec appropriately represents the relationship between codes to be analyzed\
+    \ and codes learned in the training phase. We evaluate clone detection of codes\
+    \ written in the Solidity language to confirm whether Eth2Vec can appropriately\
+    \ extract features of the codes. In doing so, we also evaluate semantic clones\
+    \ based on the lexical-semantic relationship to confirm the robustness of Eth2Vec\
+    \ against code rewrites.\n\nNext, we check whether all the learned vulnerabilities\
+    \ are identified by training the codes and their code similarity with a given\
+    \ code. In doing so, we also evaluate consistency of the vulnerability detection\
+    \ with the results of the clone detection described above. In particular, we check\
+    \ if an output of the vulnerability detection is identical to the vulnerabilities\
+    \ in code identified as clones and if the clones are contained in the clone detection\
+    \ output.\n\nWe confirm that Eth2Vec can extract features precisely and thus can\
+    \ detect vulnerabilities through the experiments mentioned above. We also compare\
+    \ the performance of Eth2Vec with that of the existing work by Momeni et al. [31],\
+    \ which extracts features manually, as a baseline.\n\n### 5.2 Experimental Setting\n\
+    \nAs mentioned above, experiments are conducted in two stages, i.e., clone detection\
+    \ and vulnerability detection of smart contracts. We describe the setting for\
+    \ each experiment below. We first describe the dataset and the baseline in detail.\n\
+    \n**5.2.1 Dataset.**\n\nWe collect 5,000 contract files from Etherscan (https://etherscan.io/),\
+    \ which is an open database of smart contracts, as a dataset utilized in the experiments.\
+    \ These 5,000 files are also identical to files utilized in a recent work [15].\
+    \ We then utilize only the files that can be compiled by Solidity version 0.4.11\
+    \ as a compiler. The dataset contains 95,152 contracts and 1,193,868 blocks.\n\
+    \n**5.2.2 Baseline.**\n\nWe compare the performance of Eth2Vec with that of the\
+    \ scheme based on support vector machine (SVM) by Momeni et al. [31] as a baseline.\
+    \ Although there are several versatile results based on machine learning [15,\
+    \ 26, 48], which can detect various vulnerabilities, their source codes are unpublished\
+    \ or we were unable to build their source codes in our environment. We thus adopt\
+    \ the SVM-based method by Momeni et al. which we were able to reproduce from scratch.\n\
+    \nMomeni et al. extracted 16 features from an abstract syntax tree (AST) of an\
+    \ Ethereum smart contract. We utilize 15 of these features excluding hexadecimal\
+    \ addresses because hexadecimal addresses cannot be obtained from source codes,\
+    \ i.e., without deployment. Other features are described in Appendix B.\n\n**5.2.3\
+    \ Clone Detection.**\n\nWe check if Eth2Vec can precisely detect clones of test\
+    \ contracts as input by training contracts. In particular, in the 10-fold cross-validation,\
+    \ 500 test contracts are randomly chosen, and the remaining 4,500 contracts are\
+    \ utilized as the training contracts. This process is iterated 10 times. Meanwhile,\
+    \ a threshold of the code similarity to detect clones is 0.8.\n\nIn the setting\
+    \ mentioned above, precision is utilized as an evaluation metric. For clones for\
+    \ each function, i.e., function-level clones, which are output with a threshold\
+    \ of more than 0.8, we check if a function in a contract, which has the highest\
+    \ similarity, is indeed a clone of the given input. To compare the performance\
+    \ of Eth2Vec, we also evaluate the SVM-based method described above by manually\
+    \ labeling each function. Meanwhile, clones in this experiment correspond to the\
+    \ type-I to type-IV clones in literature [38], and semantic clones are identical\
+    \ to the type-IV clones.\n\n**5.2.4 Vulnerability Detection.**\n\nWe check if\
+    \ Eth2Vec can precisely detect vulnerabilities in test contracts as input by learning\
+    \ the training contracts. In particular, we check whether vulnerabilities output\
+    \ by Eth2Vec with a threshold of 0.8 for the test contracts are identical to the\
+    \ true vulnerabilities in the contracts.\n\n### 5.3 Results of Clone Detection\n\
+    \nThe results of the clone detection by Eth2Vec are shown in Table 1. According\
+    \ to the table, Eth2Vec can implicitly extract more features than the SVM-based\
+    \ method [31]. For instance, the values of the standard deviation by Eth2Vec are\
+    \ significantly smaller than those by the SVM-based method. Intuitively, this\
+    \ means that feature extraction by Eth2Vec is more stable, and therefore Eth2Vec\
+    \ is able to represent features on various codes.\n\n**Table 1: Precision of Clone\
+    \ Detection of Eth2Vec.** This table shows the average and standard deviation\
+    \ of 10 executions of precision measurement on 10-fold cross-validation. The “SVM\
+    \ w/o few clones” column shows the results of the SVM-based setting that were\
+    \ computed by removing test datasets with few clones. The numbers are truncated\
+    \ to one decimal place.\n\n|  | Eth2Vec | SVM [31] | SVM w/o few clones |\n|---|---|---|---|\n\
+    | Average | 74.9% | 34.6% | 42.7% |\n| Standard Deviation | 0.9 | 34.6 | 43.6\
+    \ |\n\nWhen the clone detection performance is compared to EClone [26] as a reference,\
+    \ the detection rate of EClone with a threshold of 0.4 was 58.2%. Although we\
+    \ did not implement EClone by ourselves as described in Section 5.2.2, we believe\
+    \ that Eth2Vec can detect clones of Ethereum smart contracts better than EClone\
+    \ because of its more sophisticated feature extraction.\n\nWhen we checked an\
+    \ output of Eth2Vec in detail, it contained semantic clones. We show a concrete\
+    \ example in Listing 1 and Listing 2. The output of Eth2Vec, i.e., Listing 2,\
+    \ is a clone of the original function shown in Listing 1 excluding lines 5 and\
+    \ 9. Listing 2 is identical to a type-III clone of Listing 1 according to the\
+    \ definitions in [38]. This means that Eth2Vec can detect clones precisely, even\
+    \ those of rewritten codes.\n\n**Listing 1: Original function of Transfer**\n\n\
+    ```solidity\nfunction _transfer(address _from, address _to, uint _value) internal\
+    \ {\n    require(_to != 0x0);\n    require(balanceOf[_from] >= _value);\n    require(balanceOf[_to]\
+    \ + _value > balanceOf[_to]);\n    uint previousBalances = balanceOf[_from] +\
+    \ balanceOf[_to];\n    balanceOf[_from] -= _value;\n    balanceOf[_to] += _value;\n\
+    \    Transfer(_from, _to, _value);\n    assert(balanceOf[_from] + balanceOf[_to]\
+    \ == previousBalances);\n}\n```\n\n**Listing 2: Clone of the original function\
+    \ of Transfer found by Eth2Vec**\n\n```solidity\nfunction _transfer(address _from,\
+    \ address _to, uint _value) internal {\n    require(_to != 0x0);\n    require(balanceOf[_from]\
+    \ >= _value);\n    require(balanceOf[_to] + _value > balanceOf[_to]);\n    balanceOf[_from]\
+    \ -= _value;\n    balanceOf[_to] += _value;\n    Transfer(_from, _to, _value);\n\
+    }\n```\n\nThe standard deviation of SVM is especially larger than that of Eth2Vec\
+    \ because the difference between the accuracy of detecting each clone is overlarge.\
+    \ Concretely, SVM detects a clone with 91.3% precision. On the other hand, SVM\
+    \ detects another clone with 0% precision. In particular, the ratio of clones\
+    \ detected with 0% precision is high, and then the average of SVM is lower than\
+    \ the standard deviation of SVM. Meanwhile, the precision of the SVM-based method\
+    \ is small because the test datasets contain few clones in several executions.\
+    \ The SVM-based method infers negatives for\n"
+  mdcn: "\n**算法 1** Eth2Vec 的一次 epoch 的训练算法 TRAIN\n\n**要求：** Dict\n**保证：** 任意 `in_j`\
+    \ 的 token 的向量表示和 \\(\\vec{\\theta}_{f_s}\\)\n\n1. **对所有** \\(C_i \\in Dict\\)\
+    \ **做**\n2.     **对所有** \\(f_s \\in \\mathcal{U}(C_i)\\) **做**\n3.         **对所有**\
+    \ \\(seq_i \\in \\mathcal{S}(f_s)\\) **做**\n4.             **对所有** \\(in_j \\\
+    in \\mathcal{I}(seq_i)\\) **做**\n5.                 将 \\(f_s\\) 向量化为 \\(\\vec{\\\
+    theta}_{f_s}\\)\n6.                 根据公式 (3) 计算 \\(\\mathcal{CT}(in_{j+1})\\)\n\
+    7.                 根据公式 (3) 计算 \\(\\mathcal{CT}(in_{j-1})\\)\n8.             \
+    \    根据公式 (4) 计算 \\(\\delta(in_j,f_s)\\)\n9.                 **对所有** \\(t_c \\\
+    in \\mathcal{T}(in_j)\\) **做**\n10.                    根据公式 (7) 计算 \\(\\vec{\\\
+    theta}_{f_s}\\) 的梯度\n11.                    根据公式 (8) 计算 \\(\\vec{v}_{t_c}\\) 的梯度\n\
+    12.                    根据公式 (9) 计算 \\(\\vec{v}_{\\mathcal{P}(j+1)}\\) 的梯度\n13.\
+    \                    根据公式 (10) 计算 \\(\\vec{v}_{\\mathcal{A}(in_{j+1})}\\) 的梯度\n\
+    14.                    根据公式 (9) 计算 \\(\\vec{v}_{\\mathcal{P}(j-1)}\\) 的梯度\n15.\
+    \                    根据公式 (10) 计算 \\(\\vec{v}_{\\mathcal{A}(in_{j-1})}\\) 的梯度\n\
+    16.                **结束循环**\n17.                更新 \\(in_j\\) 的 token 的向量\n18.\
+    \                更新 \\(\\vec{\\theta}_{f_s}\\)\n19.            **结束循环**\n20. \
+    \       **结束循环**\n21.    **结束循环**\n22. **结束循环**\n\n**算法 2** Eth2Vec 的查询推理算法 Infer\n\
+    \n**要求：** 合约 \\(C_t \\notin Dict\\)\n**保证：** 任意 \\(f_t \\in \\mathcal{U}(C_t)\\\
+    ) 的向量表示 \\(\\vec{\\theta}_{f_t}\\)\n\n1. 初始化 \\(f_t \\in \\mathcal{U}(C_t)\\)\
+    \ 的向量表示 \\(\\vec{\\theta}_{f_t}\\)\n2. **对所有** \\(f_t \\in \\mathcal{U}(C_t)\\\
+    ) **做**\n3.     **对所有** \\(seq_i \\in \\mathcal{S}(f_t)\\) **做**\n4.         **对所有**\
+    \ \\(in_j \\in \\mathcal{I}(seq_i)\\) **做**\n5.             根据公式 (3) 计算 \\(\\\
+    mathcal{CT}(in_{j+1})\\)\n6.             根据公式 (3) 计算 \\(\\mathcal{CT}(in_{j-1})\\\
+    )\n7.             根据公式 (4) 计算 \\(\\delta(in_j,f_t)\\)\n8.             **对所有**\
+    \ \\(t_c \\in \\mathcal{T}(in_j)\\) **做**\n9.                 根据公式 (7) 计算 \\(\\\
+    vec{\\theta}_{f_t}\\) 的梯度\n10.                更新 \\(\\vec{\\theta}_{f_t}\\)\n\
+    11.            **结束循环**\n12.        **结束循环**\n13.    **结束循环**\n14. **结束循环**\n\n\
+    ## 4.6 实现\n\n我们利用 Kam1n0（版本 2.0.0：https://github.com/McGill-DMaS/Kam1n0-Community）和\
+    \ py-solc-x（https://pypi.org/project/py-solc-x/）实现了 Eth2Vec。首先，主要模块 PV-DM 模型由\
+    \ Kam1n0 实现，Kam1n0 是一个用于二进制分析 [11] 的服务器系统 [10]。我们主要修改了 DisassemblyFactoryIDA.java\
+    \ 和 ExtractBinaryViaIDA.py 中的源代码。特别是，ExtractBinaryViaIDA.py 最初通过反汇编二进制代码从 IDA\
+    \ 生成提取的 JSON 文件，然后 DisassemblyFactoryIDA.java 接收该文件以将二进制代码存储在 Kam1n0 中。然而，IDA\
+    \ 不能使用 EVM 字节码来实现 Eth2Vec。因此，我们更改了 ExtractBinaryViaIDA.py。例如，代码信息是通过使用 py-solc-x\
+    \ 编译 Solidity 文件而无需 IDA 获得的，然后提取其生成的汇编代码、抽象语法树（AST）和二进制代码。\n\n同时，当前的输出显示遵循 Kam1n0\
+    \ 的接口；漏洞按每个合约的函数级别列出。特别是，测试合约的漏洞会显示其置信度。我们在附录 A 中展示了 Eth2Vec 的输出示例。\n\n我们通过 GitHub（https://github.com/fseclab-osaka/eth2vec）公开发布了整个实现的源代码。\n\
+    \n## 5 实验\n\n在本节中，我们描述了为评估 Eth2Vec 而进行的实验。首先，我们描述实验的目的。然后，我们讨论用于评估的数据集和训练方法。最后，我们展示实验结果。\n\
+    \n### 5.1 实验目的\n\n为了评估 Eth2Vec 的性能，我们尝试通过使用已知存在漏洞的合约进行训练来检测待分析代码中的漏洞。为此，我们首先检查\
+    \ Eth2Vec 是否能够适当表示待分析代码与训练阶段学习到的代码之间的关系。我们评估 Solidity 语言代码的克隆检测，以确认 Eth2Vec 是否能够适当提取代码的特征。在此过程中，我们还基于词法-语义关系评估语义克隆，以确认\
+    \ Eth2Vec 对代码重写的鲁棒性。\n\n接下来，我们检查是否通过训练代码及其与给定代码的代码相似性来识别所有学习到的漏洞。在此过程中，我们还评估漏洞检测与上述克隆检测结果的一致性。特别是，我们检查漏洞检测的输出是否与被识别为克隆的代码中的漏洞相同，以及克隆是否包含在克隆检测输出中。\n\
+    \n我们确认 Eth2Vec 可以精确地提取特征，从而可以通过上述实验检测漏洞。我们还将 Eth2Vec 的性能与 Momeni 等人 [31] 的现有工作进行比较，后者手动提取特征，作为基线。\n\
+    \n### 5.2 实验设置\n\n如上所述，实验分为两个阶段，即智能合约的克隆检测和漏洞检测。我们将在下面描述每个实验的设置。我们首先详细描述数据集和基线。\n\
+    \n**5.2.1 数据集。**\n\n我们从 Etherscan（https://etherscan.io/）收集了 5,000 个合约文件作为实验中使用的数据集，该数据库是智能合约的开放数据库。这\
+    \ 5,000 个文件也与近期工作 [15] 中使用的文件相同。然后我们仅使用可以用 Solidity 版本 0.4.11 作为编译器编译的文件。数据集包含\
+    \ 95,152 个合约和 1,193,868 个区块。\n\n**5.2.2 基线。**\n\n我们将 Eth2Vec 的性能与 Momeni 等人 [31]\
+    \ 基于支持向量机（SVM）的方案进行比较作为基线。尽管基于机器学习的几种通用结果 [15, 26, 48] 可以检测各种漏洞，但其源代码未发布或我们无法在我们的环境中构建其源代码。因此，我们采用了\
+    \ Momeni 等人提出的 SVM 方法，我们能够从头开始重现。\n\nMomeni 等人从以太坊智能合约的抽象语法树（AST）中提取了 16 个特征。我们使用了其中\
+    \ 15 个特征，排除了十六进制地址，因为十六进制地址无法从源代码中获得，即在未部署的情况下。其他特征在附录 B 中描述。\n\n**5.2.3 克隆检测。**\n\
+    \n我们检查 Eth2Vec 是否能够通过训练合约精确检测作为输入的测试合约的克隆。特别是，在 10 折交叉验证中，随机选择 500 个测试合约，其余 4,500\
+    \ 个合约用作训练合约。此过程重复 10 次。同时，用于检测克隆的代码相似度阈值为 0.8。\n\n在上述设置中，精度被用作评估指标。对于每个函数的克隆，即函数级克隆，以超过\
+    \ 0.8 的阈值输出，我们检查合约中相似度最高的函数是否确实是给定输入的克隆。为了比较 Eth2Vec 的性能，我们还通过手动标记每个函数来评估上述 SVM\
+    \ 方法。同时，本实验中的克隆对应于文献 [38] 中的 type-I 至 type-IV 克隆，而语义克隆与 type-IV 克隆相同。\n\n**5.2.4\
+    \ 漏洞检测。**\n\n我们检查 Eth2Vec 是否能够通过学习训练合约精确检测作为输入的测试合约中的漏洞。特别是，我们检查 Eth2Vec 以 0.8\
+    \ 的阈值输出的测试合约的漏洞是否与合约中的真实漏洞相同。\n\n### 5.3 克隆检测结果\n\nEth2Vec 的克隆检测结果如表 1 所示。根据该表，Eth2Vec\
+    \ 可以隐式提取比 SVM 方法 [31] 更多的特征。例如，Eth2Vec 的标准差值明显小于 SVM 方法的值。直观地说，这意味着 Eth2Vec 的特征提取更稳定，因此\
+    \ Eth2Vec 能够在各种代码上表示特征。\n\n**表 1：Eth2Vec 的克隆检测精度。** 本表显示了 10 折交叉验证中 10 次精度测量执行的平均值和标准差。“SVM\
+    \ w/o few clones”列显示了通过移除具有少量克隆的测试数据集计算的 SVM 设置的结果。数字截断到一位小数。\n\n|  | Eth2Vec\
+    \ | SVM [31] | SVM w/o few clones |\n|---|---|---|---|\n| 平均值 | 74.9% | 34.6%\
+    \ | 42.7% |\n| 标准差 | 0.9 | 34.6 | 43.6 |\n\n当克隆检测性能与 EClone [26] 作为参考进行比较时，EClone\
+    \ 在阈值为 0.4 时的检测率为 58.2%。尽管如第 5.2.2 节所述，我们没有自行实现 EClone，但我们相信由于其更复杂的特征提取，Eth2Vec\
+    \ 可以比 EClone 更好地检测以太坊智能合约的克隆。\n\n当我们详细检查 Eth2Vec 的输出时，它包含语义克隆。我们在清单 1 和清单 2 中展示了一个具体示例。Eth2Vec\
+    \ 的输出，即清单 2，是原始函数所示清单 1 的克隆，排除了第 5 行和第 9 行。根据 [38] 中的定义，清单 2 与清单 1 相同为 type-III\
+    \ 克隆。这意味着 Eth2Vec 可以精确检测克隆，即使是重写后的代码。\n\n**清单 1：Transfer 的原始函数**\n\n```solidity\n\
+    function _transfer(address _from, address _to, uint _value) internal {\n    require(_to\
+    \ != 0x0);\n    require(balanceOf[_from] >= _value);\n    require(balanceOf[_to]\
+    \ + _value > balanceOf[_to]);\n    uint previousBalances = balanceOf[_from] +\
+    \ balanceOf[_to];\n    balanceOf[_from] -= _value;\n    balanceOf[_to] += _value;\n\
+    \    Transfer(_from, _to, _value);\n    assert(balanceOf[_from] + balanceOf[_to]\
+    \ == previousBalances);\n}\n```\n\n**清单 2：Eth2Vec 找到的 Transfer 原始函数的克隆**\n\n```solidity\n\
+    function _transfer(address _from, address _to, uint _value) internal {\n    require(_to\
+    \ != 0x0);\n    require(balanceOf[_from] >= _value);\n    require(balanceOf[_to]\
+    \ + _value > balanceOf[_to]);\n    balanceOf[_from] -= _value;\n    balanceOf[_to]\
+    \ += _value;\n    Transfer(_from, _to, _value);\n}\n```\n\nSVM 的标准差尤其是比 Eth2Vec\
+    \ 大得多，因为检测每个克隆的准确度差异过大。具体来说，SVM 以 91.3% 的精度检测到一个克隆。另一方面，SVM 以 0% 的精度检测到另一个克隆。特别是，以\
+    \ 0% 精度检测到的克隆的比例很高，然后 SVM 的平均值低于 SVM 的标准差。同时，SVM 方法的精度较小，因为在多次执行中测试数据集包含的克隆很少。SVM\
+    \ 方法推断负值用于\n"
+  merge: 0
+- raw:
+  - "[PAGE 8]\n\n```\n```solidity\nfunction transfer(address _from, address _to, uint\n\
+    _value) internal {\n    require(_to != 0x0);\n    require(balanceOf[_from] >=\
+    \ _value);\n    require(balanceOf[_to] + _value >= balanceOf[_to]);\n    uint\
+    \ previousBalances = balanceOf[_from] + balanceOf[\n        _to];\n    balanceOf[_from]\
+    \ -= _value;\n    balanceOf[_to] += _value;\n    emit Transfer(_from, _to, _value);\n\
+    \    assert(balanceOf[_from] + balanceOf[_to] ==\n        previousBalances);\n\
+    }\n```\n```\n\n**Listing 3: Vulnerability example by Eth2Vec to the original function**\n\
+    \n![](img/0d980298d6e695afbf52eecaa73818c4_8_0.png)\n\n**Figure 2: Throughput\
+    \ of Eth2Vec:** We measured the throughput of Eth2Vec for each process. The “Eth2Vec\
+    \ Test” is identical to the vulnerability detection, which contains the detection\
+    \ itself and saving detection results. The “Summarizing” represents the processing\
+    \ time for the display process of the saved data. The entire process until a user\
+    \ obtains an output is a summation of EVM Extractor, Eth2Vec Test, and Summarizing.\
+    \ In this measurement, we randomly chose 20 contract files, where a threshold\
+    \ is 0.8 and five clones, i.e., candidates of vulnerabilities, at maximum for\
+    \ each function are output.\n\nthe given test data under such situation. Therefore,\
+    \ the precision becomes 0, resulting in a low average and a more extensive standard\
+    \ deviation. Nonetheless, when we re-compute the precision by removing the results\
+    \ with the few clones among ground-truth, the precision is updated to 42.7%.\n\
+    \n# 5.4 Results of Vulnerability Detection\n\nThe results of the vulnerability\
+    \ detection by Eth2Vec are shown in Table 2.\n\nFirst, the standard deviations\
+    \ of Eth2Vec are lower than those of the SVM-based method. This means that Eth2Vec\
+    \ diminishes the effect of difference among features of vulnerabilities because\
+    \ Eth2Vec can detect the vulnerabilities more stably than the SVM-based method.\
+    \ Therefore, Eth2Vec can precisely extract features and thus, it can take into\
+    \ account various vulnerabilities.\n\nSecond, we confirm that Eth2Vec is also\
+    \ robust against the dispersion of data. In particular, the appearance of vulnerabilities\
+    \ with high severity, i.e., reentrancy and time dependency, is low in the current\
+    \ dataset. Consequently, the number of the corresponding labels is less, and the\
+    \ recall of the SVM-based method became low. By contrast, the recall of Eth2Vec\
+    \ is more stable than that of the SVM-based method even against vulnerabilities,\
+    \ whose frequency of appearance is low, in comparison with the other vulnerabilities.\n\
+    \nMoreover, when we checked an output of Eth2Vec in detail, we found a concrete\
+    \ example, as shown in Listing 3. The code is output as a clone of Listing 1 and\
+    \ the code similarity of Listing 1 with Listing 3 is lower than that with Listing\
+    \ 2. As difference between these codes, Listing 1 and Listing 2 do not have vulnerabilities\
+    \ while Listing 3 contains the integer overflow vulnerability. Specifically, line\
+    \ 4 in Listing 3 is different from Listing 1 with respect to an expression statement,\
+    \ and the statement in Listing 3 is identical to a typical form of integer overflow⁵.\n\
+    \nThe aforementioned example indicates that the vulnerability detection of Eth2Vec\
+    \ is robust against code rewrites. Although Listing 1 and Listing 3 seem to be\
+    \ more similar than Listing 1 and Listing 2, Listing 3 is different from a “precise”\
+    \ clone of Listing 1 because Listing 3 contains the integer vulnerability, which\
+    \ is not included in Listing 1. Therefore, Eth2Vec returns a higher code similarity\
+    \ for Listing 2 and Listing 1 than for Listing 3 and Listing 1. We thus confirm\
+    \ that Eth2Vec has robust vulnerability detection.\n\n# 5.5 Inference Throughput\n\
+    \nThe throughput of the inference by Eth2Vec is shown in Figure 2. The processing\
+    \ time for vulnerability detection depends on the number of functions and that\
+    \ for displaying the detection results, i.e., summarizing by Kaml10, depends on\
+    \ the number of detected clones. According to the current measurement, the detection\
+    \ throughput of Eth2Vec is faster than that of the SVM-based method except for\
+    \ the process of EVM Extractor. Eth2Vec can analyze within about 0.371 seconds\
+    \ per contract in comparison with about 0.660 seconds per contract by the SVM-based\
+    \ method. Meanwhile, the processing time for displaying the detection results\
+    \ is longer than the detection itself. A long analysis needed 5.6 seconds for\
+    \ detection, 0.015 seconds for saving, and 3.5 seconds for summarizing, where\
+    \ the number of contracts is 9 and the number of functions is 94.\n\nWe also measured\
+    \ the throughput of existing symbolic execution tools, Oyente [27] and SmartCheck\
+    \ [45], which are publicly available and provides reproducibility. The results\
+    \ are shown in Table 3. According to the table, the Eth2Vec can detect vulnerabilities\
+    \ faster than Oyente and SmartCheck. More specifically, the standard deviation\
+    \ of Oyente is significantly large, and therefore the analysis time becomes exponentially\
+    \ large when a file containing a large number of contracts is analyzed. On the\
+    \ other hand, SmartCheck can detect vulnerabilities faster than Oyente since it\
+    \ considers only a subset of all execution paths. Nevertheless, Eth2Vec is still\
+    \ faster than SmartCheck. Moreover, the F1-score of SmartCheck calculated in accordance\
+    \ with the values in the paper [45] is 39.1% and lower than that of Eth2Vec.\n\
+    \n# 6 DISCUSSION\n\nIn this section, we discuss further extensions and limitations\
+    \ of Eth2Vec.\n\n⁵ https://github.com/ConsenSys/mythril/wiki/Integer-Overflow"
+  - '[PAGE 9]
+
+
+    # **Table 2: Vulnerability Detection Results of Eth2Vec:** In the following table,
+    we measured well-known metrics for both Eth2Vec and the SVM-based method [31].
+    The values of the averages and standard deviations are computed from the values
+    of each row. The "Severity" column refers to literature [45]. The numbers are
+    truncated to one decimal place.
+
+
+    | Vulnerability | Severity | **Eth2Vec** Precision [%] | Recall [%] | F1-score
+    [%] | **SVM [31]** Precision [%] | Recall [%] | F1-score [%] |
+
+    |---|---:|---:|---:|---:|---:|---:|---:|
+
+    | Reentrancy | 3 | 86.6 | 54.8 | 61.5 | 30.0 | 7.8 | 12.3 |
+
+    | Time Dependency | 2 | 75.2 | 17.0 | 27.3 | 55.0 | 2.8 | 5.3 |
+
+    | ERC-20 Transfer | 1 | 95.6 | 58.4 | 72.4 | 89.0 | 95.3 | 92.0 |
+
+    | Gas Consumption | 1 | 48.0 | 29.0 | 32.4 | 10.0 | 3.1 | 4.7 |
+
+    | Implicit Visibility | 1 | 68.9 | 82.0 | 74.8 | 71.5 | 77.5 | 73.8 |
+
+    | Integer Overflow | 1 | 89.9 | 57.6 | 70.1 | 84.9 | 73.1 | 78.3 |
+
+    | Integer Underflow | 1 | 74.6 | 56.0 | 63.7 | 75.1 | 39.2 | 50.0 |
+
+    | **Average** |  | 77.0 | 50.7 | 57.5 | 59.3 | 42.7 | 45.2 |
+
+    | **Standard Deviation** |  | 14.7 | 19.7 | 18.0 | 27.3 | 36.4 | 34.7 |
+
+
+    # **Table 3: Comparison of Throughput with Existing Tools:** We measured the throughput
+    of Eth2Vec and those of several analysis tools. Oyente [27] and SmartCheck [45]
+    are symbolic execution tools. Each value represents the average time per contract.
+    The numbers are truncated to two decimal place.
+
+
+    |  | Eth2Vec | SVM [31] | Oyente [27] | SmartCheck [45] |
+
+    |---|---:|---:|---:|---:|
+
+    | Average [sec] | 0.37 | 0.66 | 3.52 | 0.50 |
+
+    | Standard Deviation | 0.59 | 0.60 | 11.45 | 0.71 |
+
+
+    Second, the current work only detected vulnerabilities in contracts included in
+    the training dataset utilized in our experiment. There are potentially many vulnerable
+    contracts that have already been deployed, and thus it would be ideal if all deployed
+    contracts are analyzed to determine potential vulnerabilities.
+
+
+    Finally, the current construction does not support inter-contract analysis where
+    multiple contracts are interconnected. For instance, Rodler et al. [37] presented
+    a new kind of vulnerability by utilizing CALL and CREATE instructions, which requires
+    inter-contract analysis [8, 49]. Thus, the attacks by Rodler et al. are out of
+    the scope of Eth2Vec currently. Our future work will aim to extend the current
+    construction of Eth2Vec and overcome the limitations described above.
+
+
+    # ### 6.1  Further Extensions
+
+
+    Possible extensions of Eth2Vec are described below.
+
+
+    First, important features for detecting vulnerabilities can be clarified by introducing
+    the interpretability of neural networks. Although the current specification of
+    Eth2Vec does not provide insight into the important features, the importance for
+    each feature can be evaluated on Eth2Vec by utilizing a universal method, e.g.,
+    permutation importance [5].
+
+
+    Second, the output of Eth2Vec with respect to vulnerabilities can be extended
+    from the current function-level to the instruction-level. Asm2Vec [11], which
+    is an application of Kam1n0, outputs vulnerabilities for the instruction-level
+    by utilizing AbstractCloneSearch Handler of Kam1n0. Eth2Vec will be able to output
+    vulnerabilities for the instruction-level by incorporating the module.
+
+
+    # ### 6.2  Limitations
+
+
+    Several limitations of Eth2Vec, which will be improved in future works, are described
+    below. First, the current construction is in the unsupervised setting, and the
+    supervised setting is not implemented. According to Hill et al. [20], the supervised
+    setting seems to be more suitable for the classification of natural language processing
+    than the unsupervised setting. Intuitively, evaluating a kind of vulnerability
+    contained in codes is a classification problem about vulnerabilities. Therefore,
+    the performance of Eth2Vec can be improved by utilizing the supervised setting.
+
+
+    # ## 7  RELATED WORKS
+
+
+    In this section, we describe related works in terms of security analysis by machine
+    learning.
+
+
+    # ### 7.1  Security Analysis of Ethereum by Machine Learning
+
+
+    As machine learning-based analysis, ContractWard [48] and the tool by Momeni et
+    al. [31] are based on support vector machine (SVM) and random forest, whose features
+    are extracted manually by an analyst. Hence, identifiable vulnerabilities are
+    limited due to insufficient feature extraction as described in Section 3. As research
+    on automated feature extraction, VulDeeSmartContract [36] has been proposed by
+    combining Word2Vec with long-short term memory (LSTM), but it specializes only
+    in reentrancy vulnerability. Eth2Vec can be considered as a tool dealing with
+    more versatile vulnerabilities in a similar approach.
+
+
+    Next, EClone [25] is a tool that detects code clones of Ethereum smart contracts
+    through the computation of code similarity. Although EClone does not utilize neural
+    networks, a symbolic analysis tool suitable for vector computations of codes has
+    also been proposed. The detectability of Eth2Vec can be improved potentially by
+    combining it with EClone.'
+  md: "\n```solidity\nfunction transfer(address _from, address _to, uint _value) internal\
+    \ {\n    require(_to != 0x0);\n    require(balanceOf[_from] >= _value);\n    require(balanceOf[_to]\
+    \ + _value >= balanceOf[_to]);\n    uint previousBalances = balanceOf[_from] +\
+    \ balanceOf[\n        _to];\n    balanceOf[_from] -= _value;\n    balanceOf[_to]\
+    \ += _value;\n    emit Transfer(_from, _to, _value);\n    assert(balanceOf[_from]\
+    \ + balanceOf[_to] ==\n        previousBalances);\n}\n```\n\n**Listing 3: Vulnerability\
+    \ example by Eth2Vec to the original function**\n\n![](img/0d980298d6e695afbf52eecaa73818c4_8_0.png)\n\
+    \n**Figure 2: Throughput of Eth2Vec:** We measured the throughput of Eth2Vec for\
+    \ each process. The “Eth2Vec Test” is identical to the vulnerability detection,\
+    \ which contains the detection itself and saving detection results. The “Summarizing”\
+    \ represents the processing time for the display process of the saved data. The\
+    \ entire process until a user obtains an output is a summation of EVM Extractor,\
+    \ Eth2Vec Test, and Summarizing. In this measurement, we randomly chose 20 contract\
+    \ files, where a threshold is 0.8 and five clones, i.e., candidates of vulnerabilities,\
+    \ at maximum for each function are output.\n\nthe given test data under such situation.\
+    \ Therefore, the precision becomes 0, resulting in a low average and a more extensive\
+    \ standard deviation. Nonetheless, when we re-compute the precision by removing\
+    \ the results with the few clones among ground-truth, the precision is updated\
+    \ to 42.7%.\n\n## 5.4 Results of Vulnerability Detection\n\nThe results of the\
+    \ vulnerability detection by Eth2Vec are shown in Table 2.\n\nFirst, the standard\
+    \ deviations of Eth2Vec are lower than those of the SVM-based method. This means\
+    \ that Eth2Vec diminishes the effect of difference among features of vulnerabilities\
+    \ because Eth2Vec can detect the vulnerabilities more stably than the SVM-based\
+    \ method. Therefore, Eth2Vec can precisely extract features and thus, it can take\
+    \ into account various vulnerabilities.\n\nSecond, we confirm that Eth2Vec is\
+    \ also robust against the dispersion of data. In particular, the appearance of\
+    \ vulnerabilities with high severity, i.e., reentrancy and time dependency, is\
+    \ low in the current dataset. Consequently, the number of the corresponding labels\
+    \ is less, and the recall of the SVM-based method became low. By contrast, the\
+    \ recall of Eth2Vec is more stable than that of the SVM-based method even against\
+    \ vulnerabilities, whose frequency of appearance is low, in comparison with the\
+    \ other vulnerabilities.\n\nMoreover, when we checked an output of Eth2Vec in\
+    \ detail, we found a concrete example, as shown in Listing 3. The code is output\
+    \ as a clone of Listing 1 and the code similarity of Listing 1 with Listing 3\
+    \ is lower than that with Listing 2. As difference between these codes, Listing\
+    \ 1 and Listing 2 do not have vulnerabilities while Listing 3 contains the integer\
+    \ overflow vulnerability. Specifically, line 4 in Listing 3 is different from\
+    \ Listing 1 with respect to an expression statement, and the statement in Listing\
+    \ 3 is identical to a typical form of integer overflow⁵.\n\nThe aforementioned\
+    \ example indicates that the vulnerability detection of Eth2Vec is robust against\
+    \ code rewrites. Although Listing 1 and Listing 3 seem to be more similar than\
+    \ Listing 1 and Listing 2, Listing 3 is different from a “precise” clone of Listing\
+    \ 1 because Listing 3 contains the integer vulnerability, which is not included\
+    \ in Listing 1. Therefore, Eth2Vec returns a higher code similarity for Listing\
+    \ 2 and Listing 1 than for Listing 3 and Listing 1. We thus confirm that Eth2Vec\
+    \ has robust vulnerability detection.\n\n## 5.5 Inference Throughput\n\nThe throughput\
+    \ of the inference by Eth2Vec is shown in Figure 2. The processing time for vulnerability\
+    \ detection depends on the number of functions and that for displaying the detection\
+    \ results, i.e., summarizing by Kaml10, depends on the number of detected clones.\
+    \ According to the current measurement, the detection throughput of Eth2Vec is\
+    \ faster than that of the SVM-based method except for the process of EVM Extractor.\
+    \ Eth2Vec can analyze within about 0.371 seconds per contract in comparison with\
+    \ about 0.660 seconds per contract by the SVM-based method. Meanwhile, the processing\
+    \ time for displaying the detection results is longer than the detection itself.\
+    \ A long analysis needed 5.6 seconds for detection, 0.015 seconds for saving,\
+    \ and 3.5 seconds for summarizing, where the number of contracts is 9 and the\
+    \ number of functions is 94.\n\nWe also measured the throughput of existing symbolic\
+    \ execution tools, Oyente [27] and SmartCheck [45], which are publicly available\
+    \ and provides reproducibility. The results are shown in Table 3. According to\
+    \ the table, the Eth2Vec can detect vulnerabilities faster than Oyente and SmartCheck.\
+    \ More specifically, the standard deviation of Oyente is significantly large,\
+    \ and therefore the analysis time becomes exponentially large when a file containing\
+    \ a large number of contracts is analyzed. On the other hand, SmartCheck can detect\
+    \ vulnerabilities faster than Oyente since it considers only a subset of all execution\
+    \ paths. Nevertheless, Eth2Vec is still faster than SmartCheck. Moreover, the\
+    \ F1-score of SmartCheck calculated in accordance with the values in the paper\
+    \ [45] is 39.1% and lower than that of Eth2Vec.\n\n## 6 DISCUSSION\n\nIn this\
+    \ section, we discuss further extensions and limitations of Eth2Vec.\n\n⁵ https://github.com/ConsenSys/mythril/wiki/Integer-Overflow\n\
+    \n## Table 2: Vulnerability Detection Results of Eth2Vec: In the following table,\
+    \ we measured well-known metrics for both Eth2Vec and the SVM-based method [31].\
+    \ The values of the averages and standard deviations are computed from the values\
+    \ of each row. The \"Severity\" column refers to literature [45]. The numbers\
+    \ are truncated to one decimal place.\n\n| Vulnerability | Severity | **Eth2Vec**\
+    \ Precision [%] | Recall [%] | F1-score [%] | **SVM [31]** Precision [%] | Recall\
+    \ [%] | F1-score [%] |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Reentrancy\
+    \ | 3 | 86.6 | 54.8 | 61.5 | 30.0 | 7.8 | 12.3 |\n| Time Dependency | 2 | 75.2\
+    \ | 17.0 | 27.3 | 55.0 | 2.8 | 5.3 |\n| ERC-20 Transfer | 1 | 95.6 | 58.4 | 72.4\
+    \ | 89.0 | 95.3 | 92.0 |\n| Gas Consumption | 1 | 48.0 | 29.0 | 32.4 | 10.0 |\
+    \ 3.1 | 4.7 |\n| Implicit Visibility | 1 | 68.9 | 82.0 | 74.8 | 71.5 | 77.5 |\
+    \ 73.8 |\n| Integer Overflow | 1 | 89.9 | 57.6 | 70.1 | 84.9 | 73.1 | 78.3 |\n\
+    | Integer Underflow | 1 | 74.6 | 56.0 | 63.7 | 75.1 | 39.2 | 50.0 |\n| **Average**\
+    \ |  | 77.0 | 50.7 | 57.5 | 59.3 | 42.7 | 45.2 |\n| **Standard Deviation** | \
+    \ | 14.7 | 19.7 | 18.0 | 27.3 | 36.4 | 34.7 |\n\n## Table 3: Comparison of Throughput\
+    \ with Existing Tools: We measured the throughput of Eth2Vec and those of several\
+    \ analysis tools. Oyente [27] and SmartCheck [45] are symbolic execution tools.\
+    \ Each value represents the average time per contract. The numbers are truncated\
+    \ to two decimal place.\n\n|  | Eth2Vec | SVM [31] | Oyente [27] | SmartCheck\
+    \ [45] |\n|---|---:|---:|---:|---:|\n| Average [sec] | 0.37 | 0.66 | 3.52 | 0.50\
+    \ |\n| Standard Deviation | 0.59 | 0.60 | 11.45 | 0.71 |\n\nSecond, the current\
+    \ work only detected vulnerabilities in contracts included in the training dataset\
+    \ utilized in our experiment. There are potentially many vulnerable contracts\
+    \ that have already been deployed, and thus it would be ideal if all deployed\
+    \ contracts are analyzed to determine potential vulnerabilities.\n\nFinally, the\
+    \ current construction does not support inter-contract analysis where multiple\
+    \ contracts are interconnected. For instance, Rodler et al. [37] presented a new\
+    \ kind of vulnerability by utilizing CALL and CREATE instructions, which requires\
+    \ inter-contract analysis [8, 49]. Thus, the attacks by Rodler et al. are out\
+    \ of the scope of Eth2Vec currently. Our future work will aim to extend the current\
+    \ construction of Eth2Vec and overcome the limitations described above.\n\n###\
+    \ 6.1 Further Extensions\n\nPossible extensions of Eth2Vec are described below.\n\
+    \nFirst, important features for detecting vulnerabilities can be clarified by\
+    \ introducing the interpretability of neural networks. Although the current specification\
+    \ of Eth2Vec does not provide insight into the important features, the importance\
+    \ for each feature can be evaluated on Eth2Vec by utilizing a universal method,\
+    \ e.g., permutation importance [5].\n\nSecond, the output of Eth2Vec with respect\
+    \ to vulnerabilities can be extended from the current function-level to the instruction-level.\
+    \ Asm2Vec [11], which is an application of Kam1n0, outputs vulnerabilities for\
+    \ the instruction-level by utilizing AbstractCloneSearch Handler of Kam1n0. Eth2Vec\
+    \ will be able to output vulnerabilities for the instruction-level by incorporating\
+    \ the module.\n\n### 6.2 Limitations\n\nSeveral limitations of Eth2Vec, which\
+    \ will be improved in future works, are described below. First, the current construction\
+    \ is in the unsupervised setting, and the supervised setting is not implemented.\
+    \ According to Hill et al. [20], the supervised setting seems to be more suitable\
+    \ for the classification of natural language processing than the unsupervised\
+    \ setting. Intuitively, evaluating a kind of vulnerability contained in codes\
+    \ is a classification problem about vulnerabilities. Therefore, the performance\
+    \ of Eth2Vec can be improved by utilizing the supervised setting.\n\n## 7 RELATED\
+    \ WORKS\n\nIn this section, we describe related works in terms of security analysis\
+    \ by machine learning.\n\n### 7.1 Security Analysis of Ethereum by Machine Learning\n\
+    \nAs machine learning-based analysis, ContractWard [48] and the tool by Momeni\
+    \ et al. [31] are based on support vector machine (SVM) and random forest, whose\
+    \ features are extracted manually by an analyst. Hence, identifiable vulnerabilities\
+    \ are limited due to insufficient feature extraction as described in Section 3.\
+    \ As research on automated feature extraction, VulDeeSmartContract [36] has been\
+    \ proposed by combining Word2Vec with long-short term memory (LSTM), but it specializes\
+    \ only in reentrancy vulnerability. Eth2Vec can be considered as a tool dealing\
+    \ with more versatile vulnerabilities in a similar approach.\n\nNext, EClone [25]\
+    \ is a tool that detects code clones of Ethereum smart contracts through the computation\
+    \ of code similarity. Although EClone does not utilize neural networks, a symbolic\
+    \ analysis tool suitable for vector computations of codes has also been proposed.\
+    \ The detectability of Eth2Vec can be improved potentially by combining it with\
+    \ EClone.\n"
+  mdcn: "\n```solidity\nfunction transfer(address _from, address _to, uint _value)\
+    \ internal {\n    require(_to != 0x0);\n    require(balanceOf[_from] >= _value);\n\
+    \    require(balanceOf[_to] + _value >= balanceOf[_to]);\n    uint previousBalances\
+    \ = balanceOf[_from] + balanceOf[\n        _to];\n    balanceOf[_from] -= _value;\n\
+    \    balanceOf[_to] += _value;\n    emit Transfer(_from, _to, _value);\n    assert(balanceOf[_from]\
+    \ + balanceOf[_to] ==\n        previousBalances);\n}\n```\n\n**清单 3：Eth2Vec 对原始函数的漏洞示例**\n\
+    \n![](img/0d980298d6e695afbf52eecaa73818c4_8_0.png)\n\n**图 2：Eth2Vec 的吞吐量：** 我们测量了\
+    \ Eth2Vec 各流程的吞吐量。“Eth2Vec Test”与漏洞检测相同，其中包含检测本身和保存检测结果。“Summarizing”表示已保存数据的显示流程的处理时间。用户获得输出前的整个流程是\
+    \ EVM Extractor、Eth2Vec Test 和 Summarizing 的总和。在本次测量中，我们随机选择了 20 个合约文件，其中阈值为 0.8，每个函数最多输出五个克隆，即漏洞候选。\n\
+    \n在这种情况下给定的测试数据。因此，精确率变为 0，导致平均值偏低且标准差更广。尽管如此，当我们通过移除 ground-truth 中克隆较少的結果重新计算精确率时，精确率更新为\
+    \ 42.7%。\n\n## 5.4 漏洞检测结果\n\nEth2Vec 的漏洞检测结果如表 2 所示。\n\n首先，Eth2Vec 的标准差低于基于 SVM\
+    \ 的方法。这意味着 Eth2Vec 降低了漏洞特征差异的影响，因为 Eth2Vec 比基于 SVM 的方法更稳定地检测漏洞。因此，Eth2Vec 能够精确提取特征，从而可以考虑各种漏洞。\n\
+    \n其次，我们确认 Eth2Vec 对数据的离散性也具有鲁棒性。特别是，在当前数据集中，严重性较高的漏洞，即重入和时间依赖的出现率较低。因此，对应标签的数量较少，基于\
+    \ SVM 的方法的召回率变得较低。相比之下，即使对于与其它漏洞相比出现频率较低的漏洞，Eth2Vec 的召回率也比基于 SVM 的方法更稳定。\n\n此外，当我们详细检查\
+    \ Eth2Vec 的输出时，我们发现了一个具体示例，如清单 3 所示。该代码被输出为清单 1 的克隆，且清单 1 与清单 3 的代码相似度低于清单 1 与清单\
+    \ 2 的相似度。这些代码之间的差异在于，清单 1 和清单 2 没有漏洞，而清单 3 包含整数溢出漏洞。具体而言，清单 3 中的第 4 行与清单 1 相比在表达式语句方面不同，且清单\
+    \ 3 中的语句与典型的整数溢出形式相同⁵。\n\n上述示例表明 Eth2Vec 的漏洞检测对代码重写具有鲁棒性。虽然清单 1 和清单 3 看起来比清单 1\
+    \ 和清单 2 更相似，但清单 3 与清单 1 的“精确”克隆不同，因为清单 3 包含清单 1 中不包含的整数漏洞。因此，Eth2Vec 为清单 2 和清单\
+    \ 1 返回更高的代码相似度，而非清单 3 和清单 1。我们由此确认 Eth2Vec 具有鲁棒的漏洞检测能力。\n\n## 5.5 推理吞吐量\n\nEth2Vec\
+    \ 的推理吞吐量如图 2 所示。漏洞检测的处理时间取决于函数数量，而显示检测结果的处理时间，即由 Kaml10 进行的 summarizing，取决于检测到的克隆数量。根据当前测量，除\
+    \ EVM Extractor 流程外，Eth2Vec 的检测吞吐量快于基于 SVM 的方法。Eth2Vec 可以在约 0.371 秒/合约内分析，而基于\
+    \ SVM 的方法约为 0.660 秒/合约。与此同时，显示检测结果的处理时间长于检测本身。一次较长的分析检测耗时 5.6 秒，保存耗时 0.015 秒，汇总耗时\
+    \ 3.5 秒，其中合约数为 9，函数数为 94。\n\n我们还测量了现有符号执行工具 Oyente [27] 和 SmartCheck [45] 的吞吐量，它们公开可用且可复现。结果如表\
+    \ 3 所示。根据表格，Eth2Vec 可以比 Oyente 和 SmartCheck 更快地检测漏洞。更具体地说，Oyente 的标准差显著较大，因此当分析包含大量合约的文件时，分析时间呈指数级增长。另一方面，SmartCheck\
+    \ 可以比 Oyente 更快地检测漏洞，因为它只考虑所有执行路径的子集。尽管如此，Eth2Vec 仍然比 SmartCheck 更快。此外，根据论文 [45]\
+    \ 中的数值计算的 SmartCheck 的 F1 分数为 39.1%，低于 Eth2Vec。\n\n## 6 讨论\n\n在本节中，我们讨论 Eth2Vec\
+    \ 的进一步扩展和局限性。\n\n⁵ https://github.com/ConsenSys/mythril/wiki/Integer-Overflow\n\
+    \n## 表 2：Eth2Vec 的漏洞检测结果：在下表中，我们对 Eth2Vec 和基于 SVM 的方法 [31] 测量了众所周知的指标。平均值和标准差的值是按行计算的。“Severity”列参考文献\
+    \ [45]。数字截断至小数点后一位。\n\n| 漏洞 | 严重程度 | **Eth2Vec** 精确率 [%] | 召回率 [%] | F1 分数 [%]\
+    \ | **SVM [31]** 精确率 [%] | 召回率 [%] | F1 分数 [%] |\n|---|---:|---:|---:|---:|---:|---:|---:|\n\
+    | 重入 | 3 | 86.6 | 54.8 | 61.5 | 30.0 | 7.8 | 12.3 |\n| 时间依赖 | 2 | 75.2 | 17.0\
+    \ | 27.3 | 55.0 | 2.8 | 5.3 |\n| ERC-20 转账 | 1 | 95.6 | 58.4 | 72.4 | 89.0 | 95.3\
+    \ | 92.0 |\n| Gas 消耗 | 1 | 48.0 | 29.0 | 32.4 | 10.0 | 3.1 | 4.7 |\n| 隐式可见性 |\
+    \ 1 | 68.9 | 82.0 | 74.8 | 71.5 | 77.5 | 73.8 |\n| 整数溢出 | 1 | 89.9 | 57.6 | 70.1\
+    \ | 84.9 | 73.1 | 78.3 |\n| 整数下溢 | 1 | 74.6 | 56.0 | 63.7 | 75.1 | 39.2 | 50.0\
+    \ |\n| **平均值** |  | 77.0 | 50.7 | 57.5 | 59.3 | 42.7 | 45.2 |\n| **标准差** |  |\
+    \ 14.7 | 19.7 | 18.0 | 27.3 | 36.4 | 34.7 |\n\n## 表 3：与现有工具的吞吐量比较：我们测量了 Eth2Vec\
+    \ 以及若干分析工具的吞吐量。Oyente [27] 和 SmartCheck [45] 是符号执行工具。每个值代表每个合约的平均时间。数字截断至小数点后两位。\n\
+    \n|  | Eth2Vec | SVM [31] | Oyente [27] | SmartCheck [45] |\n|---|---:|---:|---:|---:|\n\
+    | 平均值 [秒] | 0.37 | 0.66 | 3.52 | 0.50 |\n| 标准差 | 0.59 | 0.60 | 11.45 | 0.71 |\n\
+    \n其次，当前工作仅检测了实验中使用的训练数据集中包含的合约中的漏洞。可能已经部署了许多存在漏洞的合约，因此理想情况下应分析所有已部署合约以确定潜在漏洞。\n\
+    \n最后，当前构造不支持多合约互联的跨合约分析。例如，Rodler 等人 [37] 利用 CALL 和 CREATE 指令提出了一种新型漏洞，这需要跨合约分析\
+    \ [8, 49]。因此，Rodler 等人的攻击目前超出了 Eth2Vec 的范围。我们的未来工作将旨在扩展 Eth2Vec 的当前构造并克服上述局限性。\n\
+    \n### 6.1 进一步扩展\n\nEth2Vec 的可能扩展如下所述。\n\n首先，通过引入神经网络的可解释性，可以明确检测漏洞的重要特征。虽然 Eth2Vec\
+    \ 的当前规范未提供重要特征的洞察，但可利用通用方法，例如置换重要性 [5]，对 Eth2Vec 的每个特征的重要性进行评估。\n\n其次，Eth2Vec\
+    \ 对漏洞的输出可以从当前的函数级扩展到指令级。Asm2Vec [11] 是 Kam1n0 的应用，利用 Kam1n0 的 AbstractCloneSearch\
+    \ Handler 输出指令级的漏洞。通过整合该模块，Eth2Vec 将能够输出指令级的漏洞。\n\n### 6.2 局限性\n\nEth2Vec 的若干局限性将在未来工作中改进，描述如下。首先，当前构造处于无监督设置，未实现监督设置。根据\
+    \ Hill 等人 [20]，监督设置似乎比无监督设置更适合自然语言处理的分类。直观上，评估代码中包含的某种漏洞是关于漏洞的分类问题。因此，利用监督设置可以提高\
+    \ Eth2Vec 的性能。\n\n## 7 相关工作\n\n在本节中，我们从机器学习的安全分析角度描述相关工作。\n\n### 7.1 基于机器学习的以太坊安全分析\n\
+    \n作为基于机器学习的分析，ContractWard [48] 和 Momeni 等人 [31] 的工具基于支持向量机 SVM 和随机森林，其特征由分析人员手动提取。因此，由于特征提取不足，可识别的漏洞有限，如第\
+    \ 3 节所述。作为自动特征提取的研究，VulDeeSmartContract [36] 通过结合 Word2Vec 与长短期记忆 LSTM 提出，但它仅专门针对重入漏洞。Eth2Vec\
+    \ 可以被视为以类似方法处理更通用漏洞的工具。\n\n接下来，EClone [25] 是一种通过计算代码相似度检测以太坊智能合约代码克隆的工具。虽然 EClone\
+    \ 未使用神经网络，但也提出了适用于代码向量计算的符号分析工具。通过与 EClone 结合，Eth2Vec 的可检测性有可能得到改善。\n"
+  merge: 1
+- raw:
+  - '[PAGE 10]
+
+
+    In the neural network-based approach, there is ILF [18] which automatically generates
+    an input of fuzzing test via neural networks. Loosely speaking, ILF learns codes
+    by extracting features via symbolic execution. Since ILF learns outputs by symbolic
+    execution, it is an entirely different tool from Eth2Vec, which learns codes themselves.
+
+
+    Finally, SmartEmbed [15] is a tool that identifies bugs of smart contract codes
+    by leveraging FastText, which represents the codes as vectors. SmartEmbed is the
+    closest work to Eth2Vec. However, SmartEmbed did not discuss an objective function
+    and training algorithm explicitly and just vectorizes codes in accordance with
+    Word2Vec and FastText. Consequently, there are several code samples which are
+    unidentified as clones, as shown in the paper [15]⁶. In contrast, Eth2Vec can
+    precisely extract features of codes with a vast vocabulary and thus can detect
+    vulnerabilities even after codes are rewritten. Nevertheless, SmartEmbed is an
+    elegant work that also discussed code repairing as well as versatile bugs. Interested
+    readers are advised to read the SmartEmbed paper.
+
+
+    # 7.2 Other Analysis Tools for Ethereum
+
+
+    To the best of our knowledge, symbolic execution [27] is the principal approach
+    for analysis of Ethereum smart contracts. Since symbolic execution deals with
+    unknown variables as symbolic variables, it is potentially suitable for analysis
+    of smart contracts, which utilizes information outside codes [8], i.e., blockchain.
+    Hence, many tools have been proposed so far [7, 13, 24, 32–34, 46]. The primary
+    motivation of recent works aims to extend analysis areas, e.g., inter-contract
+    analysis and contract creation. Although symbolic execution consumes a longer
+    time in comparison with a machine learning-based approach as described in Section
+    1.1, the vulnerability detection of Eth2Vec may be improved by combining it with
+    such tools.
+
+
+    Another approach for smart contract analysis is formal verification [4] which
+    deduces whether a program satisfies a specification via predicate logic. In general,
+    formal verification can provide precise analysis by representing the security
+    in a mathematical way. However, the verification itself is a rigid and challenging
+    work. Many works just formalized a specification of Ethereum and did not achieve
+    the analysis of vulnerabilities [16, 17, 17, 19, 21, 47]. As the latest work,
+    Grishchenko et al. presented a formal verification tool named eThor [39] that
+    can analyze vulnerabilities in a versatile way.
+
+
+    Finally, there are several tools on dynamic analysis which execute codes themselves
+    [14, 37]. However, using dynamic analysis, an analyst needs to implement and execute
+    attack patterns by himself/herself to prevent vulnerabilities in advance. Although
+    a universal attack pattern that can capture various attacks was proposed [14],
+    an analyst still needs to have knowledge about attacks on smart contracts. Therefore,
+    analysts with the ability of utilizing a dynamic analysis are limited, and thus
+    static analysis is more reasonable.
+
+
+    ⁶ Although the authors of [15] describe that the samples are not clones, these
+    sample are type-IV clones following the definition in [38].
+
+
+    # 7.3 Security Applications of Natural Language Processing
+
+
+    We briefly describe natural language processing applications to the binary analysis
+    and cybersecurity defense as further related works. After Shin et al. [41] proposed
+    binary analysis based on neural networks, many works for binary analysis based
+    on natural language processing, such as Word2Vec, have been proposed in recent
+    years [11, 12, 28, 53]. These works are based on neural networks. The closest
+    work to Eth2Vec is Asm2Vec [11], which focuses on assembly language. Eth2Vec can
+    be seen as an extension of the implementation of Asm2Vec. The source code of Asm2Vec
+    is publicly available and readers are advised to read that paper in conjunction
+    with our work. We also note that the same construction can be implemented with
+    other tools described above.
+
+
+    Likewise, natural language processing is another attractive area in cybersecurity.
+    Walk2Friends, which performs a social relation inference attack [3], and DarkEmbed
+    [44], which learns low dimensional distributed representations of darkweb/deepweb
+    discussions, are examples of natural language processing. Other examples are Log2Vec
+    [23] and Attack2Vec [40], which learn more generalized cybersecurity information.
+    These tools apply natural language processing to cybersecurity areas, while Eth2Vec
+    is an application to Ethereum smart contracts.
+
+
+    # 8 CONCLUSION
+
+
+    In this paper, we proposed Eth2Vec, a static analysis tool based on machine learning
+    that detects vulnerabilities in Ethereum smart contracts. The most striking property
+    of Eth2Vec is the automated feature extraction for each contract by leveraging
+    neural networks for natural language processing. Consequently, by extracting features
+    implicitly and incorporating lexical semantics between contracts, the vulnerabilities
+    can be detected with 77.0% precision even after the codes are rewritten. Moreover,
+    reentrancy, which is one of the most important vulnerabilities, can be detected
+    with 86.6% precision. We also demonstrated that Eth2Vec outperforms the SVM-based
+    method by Momeni et al. [31] in terms of precision, recall, and F1-score. We are
+    releasing the implementation of Eth2Vec via GitHub as well (https://github.com/fseclab-osaka/eth2vec).
+
+
+    # ACKNOWLEDGMENTS
+
+
+    This research was supported in part by the Japan Society for the Promotion of
+    Science KAKENHI Numbers 18K18049, and Innovation Platform for Society 5.0 at MEX
+    T.
+
+
+    # REFERENCES
+
+
+    [1] [n.d.] Security Considerations Solidity 0.5.11 documentation. https://solidity.readthedocs.io/en/v0.5.11/security-considerations.html.
+    [2] Nicola Atzei, Massimo Bartoletti, and Tiziana Cimoli. 2017. A survey of attacks
+    on ethereum smart contracts (sok). In Proc. of POST 2017 (LNCS, Vol. 10204). Springer,
+    164–186. [3] Michael Backes, Mathias Humbert, Jun Pang, and Yang Zhang. 2017.
+    Walk2friends: Inferring Social Links from Mobility Profiles. In Proc. of CCS 2017.
+    ACM, 1943–1957. [4] Karthikeyan Bhargavan, Antoine Delignat-Lavaud, Cédric Fournet,
+    Anitha Gollamudi, Georges Gonthier, Nadim Kobeissi, Natalia Kulatova, Aseem Rastogi,
+    Thomas Sibut-Pinote, Nikhil Swamy, et al. 2016. Formal verification of smart contracts:
+    Short paper. In Proc. of PLAS 2016. ACM, 91–96. [5] Leo Breiman. 2001. Random
+    Forests. (2001), 5–32.'
+  - '[PAGE 11]
+
+
+    <!-- no content -->'
+  - '[PAGE 12]
+
+
+    level, in descending order. Meanwhile, a user can decide the number of functions
+    detected by Eth2Vec when a test contract is given as input to Eth2Vec. As a result,
+    a training contract is shown in the manner of the third level, i.e., a function
+    name, a contract name, a name of contract file, and vulnerabilities in the contract
+    as long as the contract has the vulnerabilities. The user confirms if each contract
+    or function in a test contract as input is vulnerable from the output of Eth2Vec.
+
+
+    ![](img/0d980298d6e695afbf52eecaa73818c4_12_0.png)
+
+
+    Figure 3: Output example by Eth2Vec: The left-side on the windows displays a list
+    of functions contained in each contract and the right-side shows a list of vulnerabilities
+    included in the chosen function.
+
+
+    # B FEATURE SELECTION BY MOMENI ET AL.
+
+
+    Momeni et al. [31] extracted 16 features from an abstract syntax tree (AST) of
+    an Ethereum smart contract. Among them, we did not adopt Hexadecimal addresses
+    as described in Section 5. The whole list of vulnerabilities is as follows, where
+    all the information can be obtained from AST except for hexadecimal addresses:
+    lines of codes; contract definitions; function definitions; binary operations;
+    function calls; blocks; expression statements; event definitions; bytes; elementary
+    type addresses; modifier definitions; placeholder statements; modifier invocation;
+    approve function definitions; constant values; and hexadecimal addresses.'
+  md: '
+
+    In the neural network-based approach, there is ILF [18] which automatically generates
+    an input of fuzzing test via neural networks. Loosely speaking, ILF learns codes
+    by extracting features via symbolic execution. Since ILF learns outputs by symbolic
+    execution, it is an entirely different tool from Eth2Vec, which learns codes themselves.
+
+
+    Finally, SmartEmbed [15] is a tool that identifies bugs of smart contract codes
+    by leveraging FastText, which represents the codes as vectors. SmartEmbed is the
+    closest work to Eth2Vec. However, SmartEmbed did not discuss an objective function
+    and training algorithm explicitly and just vectorizes codes in accordance with
+    Word2Vec and FastText. Consequently, there are several code samples which are
+    unidentified as clones, as shown in the paper [15]⁶. In contrast, Eth2Vec can
+    precisely extract features of codes with a vast vocabulary and thus can detect
+    vulnerabilities even after codes are rewritten. Nevertheless, SmartEmbed is an
+    elegant work that also discussed code repairing as well as versatile bugs. Interested
+    readers are advised to read the SmartEmbed paper.
+
+
+    ## 7.2 Other Analysis Tools for Ethereum
+
+
+    To the best of our knowledge, symbolic execution [27] is the principal approach
+    for analysis of Ethereum smart contracts. Since symbolic execution deals with
+    unknown variables as symbolic variables, it is potentially suitable for analysis
+    of smart contracts, which utilizes information outside codes [8], i.e., blockchain.
+    Hence, many tools have been proposed so far [7, 13, 24, 32–34, 46]. The primary
+    motivation of recent works aims to extend analysis areas, e.g., inter-contract
+    analysis and contract creation. Although symbolic execution consumes a longer
+    time in comparison with a machine learning-based approach as described in Section
+    1.1, the vulnerability detection of Eth2Vec may be improved by combining it with
+    such tools.
+
+
+    Another approach for smart contract analysis is formal verification [4] which
+    deduces whether a program satisfies a specification via predicate logic. In general,
+    formal verification can provide precise analysis by representing the security
+    in a mathematical way. However, the verification itself is a rigid and challenging
+    work. Many works just formalized a specification of Ethereum and did not achieve
+    the analysis of vulnerabilities [16, 17, 17, 19, 21, 47]. As the latest work,
+    Grishchenko et al. presented a formal verification tool named eThor [39] that
+    can analyze vulnerabilities in a versatile way.
+
+
+    Finally, there are several tools on dynamic analysis which execute codes themselves
+    [14, 37]. However, using dynamic analysis, an analyst needs to implement and execute
+    attack patterns by himself/herself to prevent vulnerabilities in advance. Although
+    a universal attack pattern that can capture various attacks was proposed [14],
+    an analyst still needs to have knowledge about attacks on smart contracts. Therefore,
+    analysts with the ability of utilizing a dynamic analysis are limited, and thus
+    static analysis is more reasonable.
+
+
+    ⁶ Although the authors of [15] describe that the samples are not clones, these
+    samples are type-IV clones following the definition in [38].
+
+
+    ## 7.3 Security Applications of Natural Language Processing
+
+
+    We briefly describe natural language processing applications to the binary analysis
+    and cybersecurity defense as further related works. After Shin et al. [41] proposed
+    binary analysis based on neural networks, many works for binary analysis based
+    on natural language processing, such as Word2Vec, have been proposed in recent
+    years [11, 12, 28, 53]. These works are based on neural networks. The closest
+    work to Eth2Vec is Asm2Vec [11], which focuses on assembly language. Eth2Vec can
+    be seen as an extension of the implementation of Asm2Vec. The source code of Asm2Vec
+    is publicly available and readers are advised to read that paper in conjunction
+    with our work. We also note that the same construction can be implemented with
+    other tools described above.
+
+
+    Likewise, natural language processing is another attractive area in cybersecurity.
+    Walk2Friends, which performs a social relation inference attack [3], and DarkEmbed
+    [44], which learns low dimensional distributed representations of darkweb/deepweb
+    discussions, are examples of natural language processing. Other examples are Log2Vec
+    [23] and Attack2Vec [40], which learn more generalized cybersecurity information.
+    These tools apply natural language processing to cybersecurity areas, while Eth2Vec
+    is an application to Ethereum smart contracts.
+
+
+    ## 8 CONCLUSION
+
+
+    In this paper, we proposed Eth2Vec, a static analysis tool based on machine learning
+    that detects vulnerabilities in Ethereum smart contracts. The most striking property
+    of Eth2Vec is the automated feature extraction for each contract by leveraging
+    neural networks for natural language processing. Consequently, by extracting features
+    implicitly and incorporating lexical semantics between contracts, the vulnerabilities
+    can be detected with 77.0% precision even after the codes are rewritten. Moreover,
+    reentrancy, which is one of the most important vulnerabilities, can be detected
+    with 86.6% precision. We also demonstrated that Eth2Vec outperforms the SVM-based
+    method by Momeni et al. [31] in terms of precision, recall, and F1-score. We are
+    releasing the implementation of Eth2Vec via GitHub as well (https://github.com/fseclab-osaka/eth2vec).
+
+
+    ## ACKNOWLEDGMENTS
+
+
+    This research was supported in part by the Japan Society for the Promotion of
+    Science KAKENHI Numbers 18K18049, and Innovation Platform for Society 5.0 at MEX
+    T.
+
+
+    ## REFERENCES
+
+
+    [1] [n.d.] Security Considerations Solidity 0.5.11 documentation. https://solidity.readthedocs.io/en/v0.5.11/security-considerations.html.
+    [2] Nicola Atzei, Massimo Bartoletti, and Tiziana Cimoli. 2017. A survey of attacks
+    on ethereum smart contracts (sok). In Proc. of POST 2017 (LNCS, Vol. 10204). Springer,
+    164–186. [3] Michael Backes, Mathias Humbert, Jun Pang, and Yang Zhang. 2017.
+    Walk2friends: Inferring Social Links from Mobility Profiles. In Proc. of CCS 2017.
+    ACM, 1943–1957. [4] Karthikeyan Bhargavan, Antoine Delignat-Lavaud, Cédric Fournet,
+    Anitha Gollamudi, Georges Gonthier, Nadim Kobeissi, Natalia Kulatova, Aseem Rastogi,
+    Thomas Sibut-Pinote, Nikhil Swamy, et al. 2016. Formal verification of smart contracts:
+    Short paper. In Proc. of PLAS 2016. ACM, 91–96. [5] Leo Breiman. 2001. Random
+    Forests. (2001), 5–32.
+
+
+    Level, in descending order. Meanwhile, a user can decide the number of functions
+    detected by Eth2Vec when a test contract is given as input to Eth2Vec. As a result,
+    a training contract is shown in the manner of the third level, i.e., a function
+    name, a contract name, a name of contract file, and vulnerabilities in the contract
+    as long as the contract has the vulnerabilities. The user confirms if each contract
+    or function in a test contract as input is vulnerable from the output of Eth2Vec.
+
+
+    ![](img/0d980298d6e695afbf52eecaa73818c4_12_0.png)
+
+
+    Figure 3: Output example by Eth2Vec: The left-side on the windows displays a list
+    of functions contained in each contract and the right-side shows a list of vulnerabilities
+    included in the chosen function.
+
+
+    ## B FEATURE SELECTION BY MOMENI ET AL.
+
+
+    Momeni et al. [31] extracted 16 features from an abstract syntax tree (AST) of
+    an Ethereum smart contract. Among them, we did not adopt Hexadecimal addresses
+    as described in Section 5. The whole list of vulnerabilities is as follows, where
+    all the information can be obtained from AST except for hexadecimal addresses:
+
+    - lines of codes
+
+    - contract definitions
+
+    - function definitions
+
+    - binary operations
+
+    - function calls
+
+    - blocks
+
+    - expression statements
+
+    - event definitions
+
+    - bytes
+
+    - elementary type addresses
+
+    - modifier definitions
+
+    - placeholder statements
+
+    - modifier invocation
+
+    - approve function definitions
+
+    - constant values
+
+    - hexadecimal addresses
+
+    '
+  mdcn: '
+
+    在基于神经网络的方法中，ILF [18] 通过神经网络自动生成模糊测试的输入。粗略地说，ILF 通过符号执行提取特征来学习代码。由于 ILF 通过符号执行来学习输出，它与
+    Eth2Vec 完全不同，后者学习的是代码本身。
+
+
+    最后，SmartEmbed [15] 是一种利用 FastText 识别智能合约代码缺陷的工具，FastText 将代码表示为向量。SmartEmbed 是与
+    Eth2Vec 最接近的工作。然而，SmartEmbed 没有明确讨论目标函数和训练算法，只是按照 Word2Vec 和 FastText 对代码进行向量化。因此，如论文
+    [15]⁶ 所示，有一些代码样本未被识别为克隆。相比之下，Eth2Vec 能够利用庞大的词汇量精确提取代码特征，因此即使在代码被重写后也能检测漏洞。尽管如此，SmartEmbed
+    是一项优雅的工作，它还讨论了代码修复以及多种漏洞。感兴趣的读者建议阅读 SmartEmbed 论文。
+
+
+    ## 7.2 以太坊的其他分析工具
+
+
+    据我们所知，符号执行 [27] 是以太坊智能合约分析的主要方法。由于符号执行将未知变量视为符号变量，它可能适合分析那些利用代码外部信息 [8]（即区块链）的智能合约。因此，迄今已提出了许多工具
+    [7, 13, 24, 32–34, 46]。近期工作的主要动机是扩展分析领域，例如合约间分析和合约创建。尽管与第 1.1 节中描述的基于机器学习的方法相比，符号执行消耗的时间更长，但将
+    Eth2Vec 与此类工具结合可能会提高其漏洞检测能力。
+
+
+    智能合约分析的另一种方法是形式化验证 [4]，它通过谓词逻辑推断程序是否满足规范。一般来说，形式化验证可以通过以数学方式表示安全性来提供精确的分析。然而，验证本身是一项严格且具有挑战性的工作。许多工作仅形式化了以太坊的规范，并未实现漏洞分析
+    [16, 17, 17, 19, 21, 47]。作为最新的工作，Grishchenko 等人提出了一个名为 eThor [39] 的形式化验证工具，可以以多种方式分析漏洞。
+
+
+    最后，还有一些动态分析工具会执行代码本身 [14, 37]。然而，使用动态分析时，分析师需要自己实现并执行攻击模式以提前防范漏洞。尽管有人提出了可以捕获各种攻击的通用攻击模式
+    [14]，但分析师仍然需要具备有关智能合约攻击的知识。因此，能够使用动态分析的分析师有限，所以静态分析更为合理。
+
+
+    ⁶ 尽管 [15] 的作者描述这些样本不是克隆，但根据 [38] 中的定义，这些样本属于 IV 型克隆。
+
+
+    ## 7.3 自然语言处理的安全应用
+
+
+    我们简要介绍自然语言处理在二进制分析和网络安全防御中的应用，作为进一步的相关工作。在 Shin 等人 [41] 提出基于神经网络的二进制分析之后，近年来出现了许多基于自然语言处理（如
+    Word2Vec）的二进制分析工作 [11, 12, 28, 53]。这些工作基于神经网络。与 Eth2Vec 最接近的工作是专注于汇编语言的 Asm2Vec
+    [11]。Eth2Vec 可以看作是 Asm2Vec 实现的扩展。Asm2Vec 的源代码是公开的，建议读者结合我们的工作阅读该论文。我们还注意到，上述其他工具也可以实现相同的构建。
+
+
+    同样，自然语言处理是网络安全中另一个有吸引力的领域。Walk2Friends [3] 执行社会关系推断攻击，DarkEmbed [44] 学习暗网/深网讨论的低维分布式表示，这些都是自然语言处理的例子。其他例子还有
+    Log2Vec [23] 和 Attack2Vec [40]，它们学习更通用的网络安全信息。这些工具将自然语言处理应用于网络安全领域，而 Eth2Vec 则是应用于以太坊智能合约。
+
+
+    ## 8 结论
+
+
+    在本文中，我们提出了 Eth2Vec，一种基于机器学习的静态分析工具，用于检测以太坊智能合约中的漏洞。Eth2Vec 最显著的特性是利用自然语言处理神经网络为每个合约自动提取特征。因此，通过隐式提取特征并融入合约之间的词汇语义，即使在代码被重写后，也能以
+    77.0% 的精确率检测漏洞。此外，重入漏洞作为最重要的漏洞之一，可以以 86.6% 的精确率被检测到。我们还证明了 Eth2Vec 在精确率、召回率和 F1
+    分数方面优于 Momeni 等人 [31] 的基于 SVM 的方法。我们还通过 GitHub 发布了 Eth2Vec 的实现 (https://github.com/fseclab-osaka/eth2vec)。
+
+
+    ## 致谢
+
+
+    本研究部分得到了日本学术振兴会 KAKENHI 基金（编号 18K18049）以及 MEX T 的 Society 5.0 创新平台的支持。
+
+
+    ## 参考文献
+
+
+    [1] [n.d.] Security Considerations Solidity 0.5.11 documentation. https://solidity.readthedocs.io/en/v0.5.11/security-considerations.html.
+
+
+    [2] Nicola Atzei, Massimo Bartoletti, and Tiziana Cimoli. 2017. A survey of attacks
+    on ethereum smart contracts (sok). In Proc. of POST 2017 (LNCS, Vol. 10204). Springer,
+    164–186.
+
+
+    [3] Michael Backes, Mathias Humbert, Jun Pang, and Yang Zhang. 2017. Walk2friends:
+    Inferring Social Links from Mobility Profiles. In Proc. of CCS 2017. ACM, 1943–1957.
+
+
+    [4] Karthikeyan Bhargavan, Antoine Delignat-Lavaud, Cédric Fournet, Anitha Gollamudi,
+    Georges Gonthier, Nadim Kobeissi, Natalia Kulatova, Aseem Rastogi, Thomas Sibut-Pinote,
+    Nikhil Swamy, et al. 2016. Formal verification of smart contracts: Short paper.
+    In Proc. of PLAS 2016. ACM, 91–96.
+
+
+    [5] Leo Breiman. 2001. Random Forests. (2001), 5–32.
+
+
+    级别，按降序排列。同时，当将测试合约作为输入提供给 Eth2Vec 时，用户可以决定 Eth2Vec 检测到的函数数量。因此，训练合约以第三级的方式显示，即函数名、合约名、合约文件名，以及合约中的漏洞（只要合约存在漏洞）。用户可以从
+    Eth2Vec 的输出中确认作为输入的测试合约中的每个合约或函数是否容易受到攻击。
+
+
+    ![](img/0d980298d6e695afbf52eecaa73818c4_12_0.png)
+
+
+    图 3：Eth2Vec 的输出示例：窗口左侧显示每个合约中包含的函数列表，右侧显示所选函数中包含的漏洞列表。
+
+
+    ## B MOMENI 等人的特征选择
+
+
+    Momeni 等人 [31] 从以太坊智能合约的抽象语法树（AST）中提取了 16 个特征。其中，我们未采用第 5 节中描述的十六进制地址。完整的特征列表如下，除十六进制地址外，所有信息都可以从
+    AST 中获取：
+
+
+    - 代码行数
+
+    - 合约定义
+
+    - 函数定义
+
+    - 二元运算
+
+    - 函数调用
+
+    - 代码块
+
+    - 表达式语句
+
+    - 事件定义
+
+    - 字节
+
+    - 基本类型地址
+
+    - 修饰符定义
+
+    - 占位语句
+
+    - 修饰符调用
+
+    - approve 函数定义
+
+    - 常量值
+
+    - 十六进制地址
+
+
+    '
+  merge: 0
