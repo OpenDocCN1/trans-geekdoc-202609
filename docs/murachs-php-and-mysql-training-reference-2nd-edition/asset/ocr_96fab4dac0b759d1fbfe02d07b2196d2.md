@@ -1,0 +1,13 @@
+# # How to deploy a PHP application
+
+When you *deploy* an application, you make it accessible from a browser. To do that on your own computer or on a local server when running Windows, you copy all of the directories and files for the application to the `\xampp\htdocs` directory for the Apache server because that’s where Apache looks for applications.
+
+This is illustrated by the first directory structure of figure 1-12. Here, the top-level directory for a guitar_store application has been copied to the htdocs directory. In this example, only four subdirectories are shown, including a directory for CSS files and a directory for storing the images that are required by the application. In practice, though, a large application is likely to contain many subdirectories at several different levels.
+
+Note here, that the htdocs directory is called the *document root directory*, while the guitar_store directory is called the *application root directory*. This just means that htdocs is the root directory for all applications, while guitar_store is the root directory for one application.
+
+For this book, you’ll be working with many small applications that are designed to help you learn. If you install these applications as described in the appendix, they will be in two directories that are subordinate to the htdocs directory: book_apps and ex_starts. This is illustrated by the second directory structure in this figure. For instance, ch01_product_discount in the book_apps directory is the directory for the application in this chapter. And ch02_ex1 in the ex_starts directory is the directory for the application for the first exercise in chapter 2.
+
+To deploy an application on an Internet server, you copy the application directories and files from the local server to your root directory on the Internet server. To do that, you can use an *FTP program*, which uses *File Transfer Protocol* to upload the files from the local server to the Internet server. To make this work, of course, the Internet server must be running Apache and a PHP interpreter.
+
+In practice, PHP applications are usually developed and tested on a local server before they are uploaded to an Internet server. To make that manageable, the directory structure on the local server is exactly the same as (it “mirrors”) the directory structure on the Internet server. That also makes it easier to maintain and enhance a web application later on.

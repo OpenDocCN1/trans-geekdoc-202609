@@ -1,0 +1,3 @@
+The fourth part of the application displays a form to delete a task from the task list, but it only displays this form if there are any tasks in the task list. Again, the existing tasks have to be submitted along with the index of the task to delete. That’s why the foreach loop in the form adds each existing task as a hidden field in the form.
+
+The hidden field named action has a value of “delete” to trigger the correct section of code in the controller. After that, the code uses a foreach loop to display the tasks as a drop-down list. Here, the value attribute of the <option> tag is the key of the task element, and the text that’s displayed in the drop-down list is the value of the task element.

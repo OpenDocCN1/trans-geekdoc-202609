@@ -1,0 +1,7 @@
+# # How to create and restore the databases
+
+Before you can run the SQL statements presented in this book, you need to create the database tables and users on the database server. The easiest way to do that is to use phpMyAdmin to run the create_db.sql file described in figure A-7. When you run this script, it creates the databases and the user listed in this figure. This includes all of the tables for the databases.
+
+As you work with the examples in this book, you may make changes to the database tables that you don’t intend to make. In that case, you may want to restore the database to its original state so your results will match the results shown in this book. To do that, you can use phpMyAdmin to run the create_db.sql file a second time. This drops both databases and creates them again.
+
+Since the _create_db directory shown in this figure is a subdirectory of the htdocs directory, the scripts within it are available to anyone who requests them from the web server. For these particular scripts, that isn’t a big problem. However, for scripts that contained sensitive data, this could be a serious security hole. In general, it’s considered a bad practice to store any database scripts in a subdirectory of the htdocs directory. As a result, to follow best practices, you should move the _create_db subdirectory to a directory that isn’t accessible from the web.

@@ -1,0 +1,7 @@
+# How to work with prepared statements
+
+Figure 19-4 shows how to work with prepared statements. This figure reviews some of the skills presented in chapter 4, and it shows some new techniques.
+
+The first example shows how to execute a prepared SELECT statement that doesn’t have any parameters. To do that, you call the prepare method of the PDO object to prepare the query and return a PDOStatement object. Then, you can call the execute, fetchAll, and closeCursor methods of the PDOStatement object to execute the statement, return a result set, and free the connection to the server. In this example, all rows in the result set are stored in the variable named $products. As a result, you can use a foreach loop to access each row in the result set.
+
+Although the fetchAll method works well for small result sets, you usually don’t use it for large result sets since it causes PHP to use more memory than the fetch method. That’s why the second example shows how to use the fetch method. Here, the first call to the fetch method returns the first row in the result set or a NULL value if the result set doesn’t contain any rows. Then, you can use a while loop to process each row. In this example, the while loop just displays the value that’s stored in the name column, but you can display every column or do more complex processing whenever that’s necessary. After you’re done processing the row, you can call the fetch method to return the next row. When you reach the end of the result set, the fetch method returns a NULL value, and the code exits the loop.

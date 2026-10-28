@@ -1,0 +1,11 @@
+# # How to import and configure a PHP project
+
+If you’ve created an application without using NetBeans, you need to import the application into a NetBeans project before you can edit and test the project. To do that, you can use the techniques described in figure 1-18.
+
+It’s important to note that this only applies to applications created outside of NetBeans. For example, if you used Notepad++ to create the application for this chapter, you’d need to follow the importing procedure to edit and test the project in NetBeans. However, because the downloaded book applications were created in NetBeans, you don’t have to import them. You should be able to work with the downloaded book application projects in NetBeans just by opening them, as described in figure 1-16.
+
+As part of the importing procedure, NetBeans prompts you to check the run configuration for the project. In this figure, for example, the second dialog box shows the configuration for an application named ch01_product_discount as it is being imported into NetBeans. Here, you need to make sure that the Project URL text box contains the correct path for running the project.
+
+If the directory for the application is stored within the htdocs directory, NetBeans usually sets the Project URL correctly. As a result, you don’t need to change it. However, if you want to store the application in another directory, such as the book_apps directory, you can edit this URL. In addition, if you rename or copy an existing NetBeans project, the Project URL in the run configuration may no longer be correct. Then, when you run the application from NetBeans, the browser may display the wrong application. In that case, you can fix the problem by editing the run configuration as shown in this figure.
+
+So be forewarned. If you only work with the book applications and exercise starts that you download from our website and install as shown in the appendix, you shouldn’t have any problems with run configurations. But as you import and copy applications of your own, keep the run configuration in mind.

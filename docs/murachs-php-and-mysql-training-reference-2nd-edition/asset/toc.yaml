@@ -1,0 +1,23 @@
+level_changes:
+- line: 34
+  before: 2
+  after: 1
+- line: 36
+  before: 3
+  after: 2
+- line: 17166
+  before: 2
+  after: 1
+- line: 11665
+  before: 1
+  after: 3
+text_changes:
+- line: 12740
+  before: '16'
+  after: 16 如何设计数据库
+- line: 16365
+  before: '20'
+  after: 20 数据库驱动的网站
+- line: 19417
+  before: '24'
+  after: 24 电子商务网站

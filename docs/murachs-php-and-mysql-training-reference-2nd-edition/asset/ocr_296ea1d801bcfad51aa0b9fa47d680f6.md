@@ -1,0 +1,21 @@
+# # How to install and configure XAMPP
+
+Before you can develop database-driven PHP applications, you need to install and configure a web server, a database server, and an interpreter for the PHP language. For this book, we recommend the Apache web server and the MySQL database server. Although you can install and configure these components individually, that can be tedious and error prone. As a result, we recommend using the XAMPP package to simplify the installation of Apache, MySQL, and PHP.
+
+Be aware that the installation of XAMPP is not secure by default. As a result, it should not be used as a production server until it is properly secured. As you progress through this book, you’ll learn more about securing the XAMPP installation.
+
+# ## How to install XAMPP
+
+Figure B-2 shows a procedure for installing XAMPP 1.8.3, which includes PHP 5.5. When you use this procedure, the Apache Friends website links to the SourceForge website to provide the download for the installer file for XAMPP.
+
+At the time of this writing, the latest version of XAMPP for Mac OS X is XAMPP 1.8.3 (PHP 5.5). If you find a newer version when you install XAMPP, we recommend that you install XAMPP 1.8.3 (PHP 5.5) rather than the newer version. That way, your computer should work as described in this book. When newer versions of XAMPP become available, you should be able to find the older versions of XAMPP on the SourceForge website.
+
+Once you’ve completed the basic installation, you can test that installation by starting and stopping the Apache and MySQL servers as described in this figure.
+
+Once you’ve started the Apache server, you can test it by starting a web browser and navigating to this directory:
+
+```
+http://localhost/xampp
+```
+
+If this URL displays a web page, you have successfully installed and started the Apache server.
