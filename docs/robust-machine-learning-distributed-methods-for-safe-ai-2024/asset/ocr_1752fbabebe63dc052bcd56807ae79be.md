@@ -1,0 +1,13 @@
++   29. Rousseeuw PJ (1985) Multivariate estimation with high breakdown point. Math Statist Appl 8(37):283–297
++   30. Shejwalkar V, Houmansadr A (2021) Manipulating the Byzantine: optimizing model poisoning attacks and defenses for federated learning. In: NDSS
++   31. Stich SU (2019) Unified optimal analysis of the (stochastic) gradient method. In: arXiv preprint arXiv:1907.04232
++   32. Su L, Vaidya NH (2016) Fault-tolerant multi-agent optimization: optimal iterative distributed algorithms. In: Proceedings of the 2016 ACM Symposium on Principles of Distributed Computing, pp 425–434
++   33. Su L, Vaidya NH (2021) Byzantine-resilient multiagent optimization. IEEE Trans Autom Control 66(5):2227–2233
++   34. Sundaram S, Gharesifard B (2018) Distributed optimization under adversarial nodes. IEEE Trans Autom Control 64:1063–1076
++   35. Wu Z, Chen T, Ling Q (2023) Byzantine-resilient decentralized stochastic optimization with Robust aggregation rules. IEEE Trans Signal Process 71:3179–3195
++   36. Xie C, Koyejo O, Gupta I (2019) Fall of empires: breaking byzantine-tolerant SGD by inner product manipulation. In: Proceedings of the Thirty-Fifth Conference on Uncertainty in Artificial Intelligence, UAI 2019, Tel Aviv, Israel, July 22–25, 2019, p 83
++   37. Yang Z, Bajwa WU (2019) ByRDiE: Byzantine-resilient distributed coordinate descent for decentralized learning. IEEE Trans Signal Inf Process over Netw 5(4):611–627
++   38. Yang Z, Gang A, Bajwa WU (2020) Adversary-resilient distributed and decentralized statistical inference and machine learning: an overview of recent advances under the Byzantine threat model. IEEE Signal Process Mag 37(3):146–159
++   39. Yin D, Chen Y, Ramchandran K, Bartlett PL (2018) Byzantine-Robust distributed learning: towards optimal statistical rates. In: Proceedings of the 35th International Conference on Machine Learning, ICML 2018, Stockholmsmässan, Stockholm, Sweden, July 10–15, 2018, vol 80. Proceedings of Machine Learning Research. PMLR, pp 5636–5645
++   40. Zhu B, Wang L, Pang Q, Wang S, Jiao J, Song D, Jordan MI (2023) Byzantine-Robust federated learning with optimal statistical rates. In: International Conference on Artificial Intelligence and Statistics, 25–27 April 2023, Palau de Congressos, Valencia, Spain. Ruiz FJR, Dy JG, van de Meent J (eds), vol 206. Proceedings of Machine Learning Research. PMLR, pp 3151–3178
++   41. Zhu J, Lin Y, Velasquez A, Liu J (2023) Resilient distributed optimization. In: American Control Conference, ACC 2023, San Diego, CA, USA, May 31–June 2, 2023. IEEE, pp 1307–1312
