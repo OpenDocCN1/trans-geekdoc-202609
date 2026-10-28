@@ -1,0 +1,32 @@
+
+- 膨胀蛭石粉末与凹凸结构板。J. Mater. Res. Technol. 12, 1288–1302. https://doi.org/10.1016/j.jmrt.2021.03.045.
+- Lowell, S., Shields, J.E., Thomas, M.A., Thommes, M., 2004. 多孔固体与粉末的表征：表面积、孔径和密度，Particle Technology Series. Springer Netherlands, Dordrecht. https://doi.org/10.1007/978-1-4020-2303-3.
+- Marquardt, D.W., 1963. 非线性参数最小二乘估计的一种算法。J. Soc. Ind. Appl. Math. 11, 431–441. https://doi.org/10.1137/0111030.
+- Mishra, Aditya, 2020. 评估机器学习算法的指标。[WWW Document]. Towards Data Science. URL. https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234. 11.6.22.
+- Moraes, D.S., Rodrigues, E.M.S., Lamarão, C.N., Marques, G.T., Rente, A.F.S., 2019. 新型钠活化蛭石工艺。尾矿坝水体中Cu2+去除的测试。J. Hazard. Mater. 366, 34–38. https://doi.org/10.1016/j.jhazmat.2018.11.086.
+- Onu, C.E., Nwabunne, J.T., Ohale, P.E., Asadu, C.O., 2021. RSM、ANN和ANFIS的对比分析及改性粘土吸附铬黑T染料的机理建模。S. Afr. J. Chem. Eng. 36, 24–42. https://doi.org/10.1016/j.sajce.2020.12.003.
+- Patra, A., Roy, S., Saha, S., Palit, D.K., Mondal, J.A., 2020. 在高电荷密度金属离子（M^z+: z = 1, 2, 3）附近观察到的极弱相互作用OH（~3600 cm−1）：扩展水合壳层中的结构异质性。J. Phys. Chem. C 124, 3028–3036. https://doi.org/10.1021/acs.jpcc.9b09692.
+- Pauletto, P.S., Dotto, G.L., Salau, N.P.G., 2020. 用于多组分吸附同时建模的最优人工神经网络设计。J. Mol. Liq. 320. https://doi.org/10.1016/j.molliq.2020.114418.
+- Peng, X., Mo, S., Li, R., Li, J., Tian, C., Liu, W., Wang, Y., 2021. 聚氨酯海绵负载氧化石墨烯–磷酸钛对废水中稀土元素镝的有效去除。Environ. Chem. Lett. 19. https://doi.org/10.1007/s10311-020-01073-y.
+- Riaño, S., Binnemans, K., 2015. 从废旧NdFeB磁体中萃取分离钕和镝：离子液体在溶剂萃取中用于磁体回收的应用。Green Chem. 17, 2931–2942. https://doi.org/10.1039/c5gc00230c.
+- Saber, W.E.I.A., El-Naggar, N.E.A., El-Hersh, M.S., El-Khateeb, A.Y., Elsayed, A., Eldadamony, N.M., Ghonim, A.A., 2021. 可旋转中心复合设计对比人工神经网络用于固定化Pseudomonas alcaliphila NEWG-2对Cr6+生物吸附的建模。Sci. Rep. 11, 1–15. https://doi.org/10.1038/s41598-021-81348-8.
+- Sadollah, A., 2018. 引言章节：模糊系统中适合的隶属函数是什么？In: 基于优化方法和控制系统及其应用的模糊逻辑，InTech. https://doi.org/10.5772/intechopen.79552.
+- Sáez, P., Rodríguez, A., Gómez, J.M., Paramo, C., Fraile, C., Diez, E., 2021. H-斜发沸石作为高效低成本的吸附剂，用于水溶液中间歇和连续除镓。Journal of Sustainable Metallurgy. https://doi.org/10.1007/s40831-021-00437-0.
+- Shafiullah, M., Abido, M.A., Al-Mohammed, A.H., 2022. 人工智能技术。In: 电力系统故障诊断。Elsevier, pp. 69–100. https://doi.org/10.1016/b978-0-323-88429-7.00007-2.
+- Shanker, M., Hu, M.Y., Hung, M.S., 1996. 数据标准化对神经网络训练的影响。Omega (Westport) 24, 385–397. https://doi.org/10.1016/0305-0483(96)00010-2.
+- Shen, J., Liang, C., Zhong, J., Xiao, M., Zhou, J., Liu, Jun, Liu, Juan, Ren, S., 2021. 粘质沙雷氏菌（Serratia marcescens）对稀土废水中Eu(III)的吸附行为与机理。Environ. Sci. Pollut. Res. https://doi.org/10.1007/s11356-021-14668-x.
+- Shojaeimehr, T., Rahimpoor, F., Khadivi, M.A., Sadeghi, M., 2014. 基于响应面法（RSM）和人工神经网络（ANN）的轻质膨胀粘土骨料（LECA）吸附Cu2+优化建模研究。J. Ind. Eng. Chem. 20, 870–880. https://doi.org/10.1016/j.jiec.2013.06.017.
+- Sing, K.S.W., Williams, R.T., 2004. 物理吸附滞后回线与纳米多孔材料的表征。Adsorpt. Sci. Technol. 22, 773–782. https://doi.org/10.1260/0263617053499032.
+- Sivamani, S., Prasad, B.S.N., Nithya, K., Sivrajasekaran, N., Hosseini-Bandegharaei, A., 2022. 用于优化橙皮生物炭吸附铜的反向传播神经网络建模。Int. J. Environ. Sci. Technol. 19, 4321–4336. https://doi.org/10.1007/s13762-021-03411-1.
+- Souza, P.R., Dotto, G.L., Salau, N.P.G., 2018. 人工神经网络（ANN）和自适应神经模糊推理系统（ANFIS）对农业废弃物和商业活性炭吸附镍的建模。J. Environ. Chem. Eng. 6, 7152–7160. https://doi.org/10.1016/j.jece.2018.11.013.
+- Takagi, T., Sugeno, M., 1985. 系统的模糊辨识及其在建模与控制中的应用。IEEE Trans. Syst. Man Cybern. SMC-15, 116–132. https://doi.org/10.1109/TSMC.1985.6313399.
+- Talib, N.S.R., Halmi, M.I.E., Ghani, S.S.A., Zaidan, U.H., Shukor, M.Y.A., 2019. 人工神经网络（ANNs）和响应面法（RSM）方法对从农业土壤中新分离的抗辐射不动杆菌（Acinetobacter radioresistens）NS-MIE菌株还原铬（VI）的优化建模。Biomed Res. Int. 2019. https://doi.org/10.1155/2019/5785387.
+- Thommes, M., Kaneko, K., Neimark, A.V., Olivier, J.P., Rodriguez-Reinoso, F., Rouquerol, J., Sing, K.S.W., 2015. 气体物理吸附，特别涉及表面积和孔径分布的评价（IUPAC技术报告）。Pure Appl. Chem. 87, 1051–1069. https://doi.org/10.1515/pac-2014-1117.
+- Udoudou, O., Folorunso, O., Dodds, C., Kingman, S., Ure, A., 2015. 通过工艺矿物学理解中试蛭石膨胀系统的性能。Miner. Eng. 82, 84–91. https://doi.org/10.1016/j.mineng.2015.03.023.
+- Valkov, M., Sinha, G., 2012. 蛭石：结构性质和应用实例。In: 自然界中的粘土矿物 - 它们的表征、改性与应用。InTech. https://doi.org/10.5772/51237.
+- Wong, Y.J., Arumugasamy, S.K., Chung, C.H., Selvarajoo, A., Sethu, V., 2020. 人工神经网络（ANN）、自适应神经模糊推理系统（ANFIS）和多元线性回归（MLR）用于以红毛丹（Nephelium lappaceum）果皮生物炭吸附水溶液中Cu（II）的建模对比研究。Environ. Monit. Assess. 192. https://doi.org/10.1007/s10661-020-08268-4.
+- Yoon, H.-S., Kim, C.-J., Chung, K.-W., Kim, S.-D., Lee, J.-Y., Kumar, J.R., 2016. 从水溶液中溶剂萃取、分离和回收镝（Dy）和钕（Nd）：永磁体加工的废料回收策略。Hydrometallurgy 165, 27–43. https://doi.org/10.1016/j.hydromet.2016.01.028.
+- Yue, L., Xie, Q., Yang, Y., Li, J., Li, X., 2021. SBA-15表面镧离子印迹聚合物的制备及其吸附性能。Polym. Bull. 78. https://doi.org/10.1007/s00289-020-03395-x.
+- Zhang, L., Xu, Z., 2016. 废弃电子电气设备中金属回收技术的当前进展综述。J. Clean. Prod. 127, 19–36. https://doi.org/10.1016/j.jclepro.2016.04.004.
+- Zhang, Yi, Zheng, X., Bian, T., Zhang, Yuzhe, Mei, J., Li, Z., 2020. 磷酸化CNC/MWCNT薄膜对稀土La(III)的高效吸附。Cellulose 27. https://doi.org/10.1007/s10570-020-03012-0.
+- Zheng, X., Liu, E., Zhang, F., Yan, Y., Pan, J., 2016. 在酸性体系中利用密封在透析袋中的离子印迹介孔二氧化硅对NdFeB磁体中镝的高效吸附与分离。Green Chem. 18. https://doi.org/10.1039/C6GC01426G.
