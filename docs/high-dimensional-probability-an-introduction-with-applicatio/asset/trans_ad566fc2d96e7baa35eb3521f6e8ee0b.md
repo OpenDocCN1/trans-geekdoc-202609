@@ -1,0 +1,78 @@
+
+- [236] S. Mendelson、A. Pajor 和 N. Tomczak-Jaegermann. 渐近几何分析中的重建与次高斯算子. *几何与泛函分析*, 17(4):1248–1282, 2007.
+- [237] S. Mendelson 和 R. Vershynin. 熵与组合维数. *数学发明*, 152(1):37–55, 2003.
+- [238] S. Mendelson 和 N. Zhivotovskiy. 在 $L_4 - L_2$ 范数等价下的稳健协方差估计. *统计年鉴*, 48(3):1648–1664, 2020.
+- [239] C. D. Meyer. *矩阵分析与应用线性代数*. SIAM, 2023.
+- [240] F. Mezzadri. 如何从经典紧群生成随机矩阵. *美国数学学会通报*, 54(5):592–604, 2007.
+- [241] V. Milman. 高维凸性理论中令人惊奇的几何现象. 见 *欧洲数学大会：布达佩斯，1996年7月22–26日，第二卷*, 第 73–91 页. Springer, 1998.
+- [242] V. D. Milman. A. Dvoretzky 凸体截面定理的一个新证明. *泛函分析及其应用*, 5(4):288–295, 1971.
+- [243] V. D. Milman. Banach 空间局部理论中的几何不等式与混合体积. *Astérisque*, 131:373–400, 1985.
+- [244] V. D. Milman. 有限维赋范空间比例维数的随机子空间：通过等周不等式的方法. 见 *Banach 空间：密苏里会议论文集*, 第 106–115 页. Springer, 1985.
+- [245] V. D. Milman. 关于低 $M^*$ 估计的一个注记. 见 *Banach 空间几何（会议论文集，Strobl，1989）*, *数学讲义* 第 158 卷, 第 219–229 页. Cambridge University Press, 1990.
+- [246] V. D. Milman 和 G. Schechtman. *有限维赋范空间的渐近理论*, 第 1200 卷. Springer Science, 1986.
+- [247] V. D. Milman 和 G. Schechtman. 有限维赋范空间的整体与局部渐近理论. *杜克数学杂志*, 90:73–93, 1997.
+- [248] S. Minsker. 关于自伴算子 Bernstein 不等式的若干推广. *统计与概率快报*, 127:111–119, 2017.
+- [249] M. Mitzenmacher 和 E. Upfal. *概率与计算：算法与数据分析中的随机化与概率技术*. Cambridge University Press, 2017.
+- [250] A. Moitra. *机器学习的算法方面*. Cambridge University Press, 2018.
+- [251] A. Moitra 和 G. Valiant. 解决高斯混合的多项式可学习性问题. 见 *2010 年 IEEE 第 51 届计算机科学基础年度研讨会*, 第 93–102 页. IEEE, 2010.
+- [252] S. J. Montgomery-Smith. Rademacher 和的分布. *美国数学学会会刊*, 109(2):517–522, 1990.
+- [253] P. Mörters 和 Y. Peres. *布朗运动*, 第 30 卷. Cambridge University Press, 2010.
+- [254] E. Mossel、J. Neeman 和 A. Sly. 置信传播、块模型的稳健重构与最优恢复. 见 *学习理论会议*, 第 356–370 页. PMLR, 2014.
+- [255] R. Murray、J. Demmel 和 M. Mahoney 等. 随机数值线性代数：以软件为目标的领域视角. *arXiv 预印本 arXiv:2302.11474*, 2023.
+- [256] A. Nemirovsky 和 D. Yudin. *优化中的问题复杂度与方法效率*. Wiley Interscience, 1983.
+- [257] M. Newman. *网络：导论*. Oxford University Press, 2010.
+- [258] H. H. Nguyen 和 V. Vu. 小球概率、逆定理及其应用. 见 *Erdős 百年纪念*, *Bolyai 学会数学研究* 第 25 卷, 第 409–463 页. Springer, 2013.
+- [259] R. I. Oliveira. 独立边随机图的邻接矩阵与拉普拉斯矩阵的集中性. *arXiv 预印本 arXiv:0911.0600*, 2009.
+- [260] R. I. Oliveira. 随机 Hermitian 矩阵之和与 Rudelson 不等式. *概率电子通讯*, 15:203–212, 2010.
+- [285] O. Rivasplata. 次高斯随机变量：一篇说明性注记. *阿尔伯塔大学技术报告*, 2012.
+- [286] H. Robbins. 关于 Stirling 公式的一个注记. *美国数学月刊*, 62:26–29, 1955.
+- [287] M. Rudelson. 各向同性位置中的随机向量. *泛函分析杂志*, 164(1):60–72, 1999.
+- [288] M. Rudelson 和 R. Vershynin. 随机过程的组合学与凸体的截面. *数学年刊*, 164(2):603–648, 2006.
+- [289] M. Rudelson 和 R. Vershynin. 大矩阵采样：一种基于几何泛函分析的方法. *ACM 杂志*, 54(4):21–es, 2007.
+- [290] M. Rudelson 和 R. Vershynin. 关于由 Fourier 和 Gauss 测量进行稀疏重构. *纯粹与应用数学通讯*, 61(8):1025–1045, 2008.
+- [291] M. Rudelson 和 R. Vershynin. 随机矩阵的非渐近理论：极端奇异值. 见 *2010 年国际数学家大会论文集 (ICM 2010)*, 第 1576–1602 页. World Scientific, 2010.
+- [292] M. Rudelson 和 R. Vershynin. Hanson-Wright 不等式与次高斯集中性. *概率电子通讯*, 18:1–9, 2013.
+- [293] H. Sambale. 关于 α-次指数随机变量集中性的若干注记. 见 *高维概率 IX：空灵卷*, 第 167–192 页. Springer, 2023.
+- [294] N. Sauer. 关于集族的密度. *组合理论杂志，A 辑*, 13(1):145–147, 1972.
+- [295] G. Schechtman. 关于欧几里得空间子集嵌入赋范空间的两点观察. *数学进展*, 200(1):125–135, 2006.
+- [296] G. Schechtman 和 J. Zinn. 关于两个 \(l_p^n\) 球的交集体积. *美国数学学会会刊*, 110(1):217–224, 1990.
+- [297] R. Schneider 和 W. Weil. *随机与积分几何*. Springer, 2008.
+- [298] I. Schur. 关于具有无穷多个变量的有界双线性形式理论的注记. 1911.
+- [299] Y. Seginer. 随机矩阵的期望范数. *组合学、概率与计算*, 9(2):149–166, 2000.
+- [300] S. Shelah. 一个组合问题；无穷语言中模型与理论的稳定性与序. *太平洋数学杂志*, 41(1):247–261, 1972.
+- [301] Y.-C. Sheu 和 T.-C. Wang. \(\ell_p\)-范数的矩阵偏差不等式. *随机矩阵：理论与应用*, 12(04):2350007, 2023.
+- [302] I. Shevtsova. 关于同分布加项的 Berry-Esseen 型不等式中的绝对常数. *arXiv 预印本 arXiv:1111.6554*, 2011.
+- [303] M. Simonovits. 如何计算高维体积？ *数学规划*, 97:337–374, 2003.
+- [304] D. Slepian. 高斯噪声的单侧势垒问题. *贝尔系统技术杂志*, 41(2):463–501, 1962.
+- [305] David Slepian. 关于高斯噪声的零点. 见 *时间序列分析*, 第 104–115 页. Wiley, 1963.
+- [306] G. W. Stewart 和 J.-G. Sun. *矩阵扰动理论*. Academic Press, 1990.
+- [307] M. Stojnic. 压缩感知中 \(\ell_1\)-优化的各种阈值. *arXiv 预印本 arXiv:0907.3666*, 2009.
+- [308] M. Stojnic. 正则随机对偶. *arXiv 预印本 arXiv:1303.7295*, 2013.
+- [309] V. Sudakov. 高斯随机过程与 Hilbert 空间中立体角的测度. *Doklady Akademii Nauk*, 197(1):43–45, 1971.
+- [310] V. Sudakov. *无穷维概率分布理论中的几何问题*. American Mathematical Society, 1979.
+- [311] S. Szarek. 关于 Khintchin 不等式中的最佳常数. *数学研究*, 2(58):197–208, 1976.
+- [312] S. J. Szarek 和 M. Talagrand. Sauer-Shelah 引理的“同构”版本及到立方体的 Banach-Mazur 距离. 见 *泛函分析的几何方面：以色列研讨会 (GAFA) 1987-88*, 第 105–112 页. Springer, 1989.
+- [313] S. J. Szarek 和 M. Talagrand. 关于凸化的 Sauer-Shelah 定理. *组合理论杂志，B 辑*, 69(2):183–192, 1997.
+- [314] M. Talagrand. 独立性的新视角. *概率年刊*, 第 1–34 页, 1996.
+- [315] M. Talagrand. *泛链方法：随机过程的上界与下界.* Springer, 2005.
+- [316] M. Talagrand. *随机过程的上界与下界.* Springer, 2014.
+- [317] M. Talagrand. *随机过程的上界与下界：分解定理.* Springer, 2022.
+- [318] T. Tao 和 V. Vu. 从 Littlewood-Offord 问题到圆环律：随机矩阵谱分布的普适性. *美国数学学会通报*, 46(3):377–396, 2009.
+- [319] R. Tibshirani. 通过 lasso 的回归收缩与变量选择. *皇家统计学会杂志 B 辑：统计方法*, 58(1):267–288, 1996.
+- [320] K. Tikhomirov. 重尾分布的样本协方差矩阵. *国际数学研究通告*, 2018(20):6254–6289, 2018.
+- [321] N. Tomczak-Jaegermann. *Banach-Mazur 距离与有限维算子理想.* Pitman, 1989.
+- [322] J. Tropp. 从独立随机线性测量中凸恢复结构化信号. 见 *采样理论，复兴：压缩感知与其他进展*, 第 67–101 页. Birkhäuser, 2015.
+- [323] J. A. Tropp. 随机子矩阵的范数与稀疏逼近. *法国科学院报告·数学*, 346(23-24):1271–1274, 2008.
+- [324] J. A. Tropp. 随机矩阵和的便于使用的尾界. *计算数学基础*, 12:389–434, 2012.
+- [325] J. A. Tropp 和 R. J. Webber. 低秩矩阵逼近的随机算法：设计、分析与应用. *arXiv 预印本 arXiv:2306.12418*, 2023.
+- [326] J. A. Tropp、A. Yurtsever、M. Udell 和 V. Cevher. 低秩矩阵逼近的实用 sketching 算法. *SIAM 矩阵分析与应用杂志*, 38(4):1454–1485, 2017.
+- [327] Joel A Tropp. 矩阵集中不等式导论. *机器学习基础与趋势*, 8(1-2):1–230, 2015.
+- [328] S. van de Geer. *经验过程理论的应用.* Cambridge University Press, 2000.
+- [329] A. W. van der Vaart 和 J. A. Wellner. *弱收敛与经验过程：统计中的应用.* Springer, 第 2 版, 2023.
+- [330] R. van Handel. 高维概率. *讲义（普林斯顿大学）*, 2(3):2–3, 2014.
+- [331] R. van Handel. 结构化随机矩阵. 见 *凸性与集中性*, *IMA 数学及其应用卷* 第 161 卷, 第 107–165 页. Springer, 2017.
+- [332] R. van Handel. 链、插值与凸性. *欧洲数学学会杂志*, 20(10):2413–2435, 2018.
+- [333] Ramon van Handel. 链、插值与凸性 II：收缩原理. *概率年刊*, 46(3):1764–1805, 2018.
+- [334] J. H. van Lint. *编码理论导论.* Springer, 1998.
+- [335] V. N. Vapnik 和 A. Ya. Chervonenkis. 关于事件相对频率对事件概率的一致收敛. *概率论及其应用*, 16(2):264–280, 1971.
+- [336] S. Vempala. 几何随机游走：综述. 见 *组合与计算几何*, *数学科学研究所出版物* 第 52 卷, 第 573–612 页. Cambridge University Press, 2005.

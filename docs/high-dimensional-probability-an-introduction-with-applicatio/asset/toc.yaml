@@ -1,0 +1,44 @@
+level_changes:
+- line: 112
+  before: 2
+  after: 3
+- line: 218
+  before: 2
+  after: 3
+- line: 257
+  before: 2
+  after: 3
+- line: 285
+  before: 2
+  after: 3
+- line: 321
+  before: 2
+  after: 3
+- line: 373
+  before: 2
+  after: 3
+- line: 777
+  before: 2
+  after: 3
+- line: 837
+  before: 2
+  after: 3
+- line: 1213
+  before: 1
+  after: 2
+- line: 1233
+  before: 2
+  after: 3
+text_changes:
+- line: 511
+  before: 1.2 矩阵及其运算
+  after: 3.2 矩阵及其运算
+- line: 576
+  before: 4.51 ☕☕☕☕（高斯混合模型的谱聚类）
+  after: 4.5.1 ☕☕☕☕（高斯混合模型的谱聚类）
+- line: 2113
+  before: 链方法
+  after: 8 链方法
+- line: 2590
+  before: 不可触摸的国家秘密
+  after: 8.4 统计学习

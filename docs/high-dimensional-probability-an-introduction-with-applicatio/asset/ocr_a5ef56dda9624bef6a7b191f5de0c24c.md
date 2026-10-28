@@ -1,0 +1,11 @@
+uᵀ(aIₙ − X)u ≥ 0 for all u, meaning aIₙ − X ⪰ 0, thus X ⪯ aIₙ. A similar argument gives X ⪰ −aIₙ, and also proves the opposite direction (write it!). (d) By considering g − f, we can assume that f = 0. If ‖X‖ ≤ a, then all eigenvalues of X satisfy |λᵢ| ≤ a (by (4.10)), which implies g(λᵢ) ≥ 0 by assumption. So, by definition, g(X) has nonnegative eigenvalues g(λᵢ) and so g(X) ⪰ 0. □
+
+**Remark 5.4.5** (Operator norm as matrix “absolute value”). Does (5.12) look familiar? It is a matrix version of the basic fact about absolute values: for x ∈ ℝ, |x| ≤ a ⟺ −a ≤ x ≤ a. This makes the operator norm ‖·‖ a natural matrix version of absolute value |·|, and that’s why it appears in matrix Bernstein inequality 5.4.1.
+
+**Remark 5.4.6** (Matrix monotonicity). Can we strengthen trace monotonicity (Proposition 5.4.4(b)) to matrix monotonicity, that is X ⪯ Y ⟹ f(X) ⪯ f(Y) for any weakly increasing f : ℝ → ℝ? (5.13) If X and Y commute, yes – but in general, no (Exercise 5.17). However, some functions, like 1/x and log x on [0, ∞), are *matrix monotone*, meaning that (5.13) holds even for non-commuting matrices: 0 ⪯ X ⪯ Y ⟹ X⁻¹ ⪰ Y⁻¹ ⪰ 0 and log X ⪯ log Y whenever X is invertible. Check this in Exercise 5.18.
+
+# 5.4.2 Trace inequalities
+
+So far, extending scalar concepts to matrices has been pretty smooth. But it doesn’t always work. We already saw in Remark 5.4.6 how non-commutativity (AB ≠ BA) may cause scalar properties to fail for matrices. Here is another example: the identity is e^{x+y}=e^x e^y holds for scalars, but in Exercise 5.19 you will find n × n symmetric matrices X and Y such that e^{X+Y} ≠ e^X e^Y. This is unfortunate, because the identity e^{x+y}=e^x e^y was crucial to our approach to concentration of sums of random variables: it let us split the MGF 𝔼 exp(λS) of the sum into the product of exponentials, see (2.6). Nevertheless, there exists useful substitutes for the missing identity e^{X+Y}=e^X e^Y. We state two of them here without proof; they belong to the rich family of *trace inequalities*.
+
+**Theorem 5.4.7** (Golden-Thompson inequality). For any n × n symmetric matrices A and B, we have tr(e^{A+B}) ≤ tr(e^A e^B). Unfortunately, Golden-Thompson inequality does not hold for three or more matrices: in general, the inequality tr(e^{A+B+C}) ≤ tr(e^A e^B e^C) may fail.
