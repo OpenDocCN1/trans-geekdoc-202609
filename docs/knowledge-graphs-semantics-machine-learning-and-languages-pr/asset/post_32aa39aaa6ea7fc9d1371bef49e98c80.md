@@ -1,0 +1,49 @@
+
+## 3. Algorithm Improvements and a Query Dataset
+
+Based on the insights from Section 2, this section aims to answer the research questions RQ1 to RQ3. Since RQ4 is related to the evaluation, its discussion follows in Section 5.
+
+### 3.1. Accurate Semantic Distances between Entities
+
+As described in Section 2, [2] estimates the semantic distance between two entities as the cosine distance between the vector representations of the entity labels. However, the ambiguity of entity labels alone compromises the accuracy of the vector representations and therefore the resulting semantic distances. For example, Wikidata features numerous entities that share the label Paris, partly from very different categories: While the entity Q90 refers to the city in France, the entity Q167646 refers to the mythological son of Priam, king of Troy¹³. During pathfinding, it is important to pin down the exact entity that is currently examined. Otherwise, paths with concept drift might be pursued when entities with alleged low semantic distances are prioritized. Therefore, RQ1 asks how the semantic distances between entities can be estimated more accurately.
+
+We propose the two following changes to mitigate this problem. The first change is to feed entity descriptions, another resource that is available in Wikidata for most entities, in addition to entity labels to the word embedding model. For this purpose, the entity labels and entity descriptions are simply concatenated. The idea is that the additional information provided by the descriptions results in vector representations that capture the entities’ meaning more accurately. Secondly, fastText is replaced by SBERT in combination with all-mpnet-base-v2 for efficiently computing high-quality vector representations of the new input type, i.e., strings composed of entity labels and descriptions. Also note that the data within Wikidata is curated. Hence, encountering misspelling is unlikely such that fastText’s robustness against them is not required.
+
+The examples in Table 3 show the positive impact of these changes on the semantic distances. In particular, the first example shows that the additional consideration of entity descriptions affirms the semantic distance in cases where the labels alone are expressive enough to compute accurate vector representations. In contrast, the pairs of examples two/three and four/five demonstrate how the entity descriptions help to disambiguate entities with identical or similar labels, yielding more accurate semantic distances.
+
+**Table 3.** Comparison of semantic distances using five examples with two Wikidata entities each. d_labels and d_labels+descs denote whether the presented semantic distances were calculated using SBERT vector representations of the entity labels alone or of the concatenated entity labels and entity descriptions.
+
+| Entities | Entity Labels | Entity Descriptions | d_labels | d_labels+descs |
+|---|---|---|---|---|
+| Q30 | United States of America | country in North America | 0.720 | 0.793 |
+| Q47488 | International Criminal Court | intergovernmental organization and international tribunal |  |  |
+| Q243 | Eiffel Tower | tower located on the Champ de Mars in Paris, France | 0.511 | 0.499 |
+| Q90 | Paris | capital and most populous city of France |  |  |
+| Q243 | Eiffel Tower | tower located on the Champ de Mars in Paris, France | 0.511 | 0.758 |
+| Q167646 | Paris | mythological son of Priam, king of Troy |  |  |
+| Q6004986 | Immigration | album by Show-Ya | 0.402 | 0.786 |
+| Q841440 | naturalization | process by which a non-citizen in a country may acquire citizenship or nationality of that country |  |  |
+| Q131288 | immigration | movement of people into another country or region to which they are not native | 0.402 | 0.451 |
+| Q841440 | naturalization | process by which a non-citizen in a country may acquire citizenship or nationality of that country |  |  |
+
+Further qualitative experiments with other entity pairs conform with these observations. Hence, we conclude that the additional consideration of entity descriptions improves the accuracy of the semantic distances, thereby answering RQ1. That being said, apart from entity descriptions, Wikidata provides even more entity-related information including alternative labels, labels in other languages etc. Furthermore, the (direct) neighborhood of an entity can also be seen as a description of its meaning. To retain the focus of this paper, though, these options are left open for future work as their exploration seems worthwhile to further improve the accuracy of the vector representations.
+
+### 3.2. A Dual-Entity Query Dataset for Pathfinding in Wikidata
+
+Even though the twelve dual-entity queries discussed in [2] suffice for showcasing the potential of the algorithm, their low number and artificial hand-selected nature does neither allow for a proper evaluation nor hyperparameter optimization. Accordingly, RQ2 raises the question what an appropriate dual-entity query dataset for pathfinding in Wikidata is. Considering the long-term goal of applying the algorithm for the knowledge panel generation in web search engines, such a query dataset has to be realistic in the sense that the queries have to be derived from queries issued to web search engines by actual users. However, no such query dataset (or benchmark) has been proposed so far.
+
+In information retrieval research, the TREC [21] datasets are particularly popular and have been used for the evaluation of various information retrieval systems. The datasets are designed to enable researchers to evaluate the performance of their information retrieval systems using a common set of test collections. TREC has produced many different datasets over the years, covering a range of domains and types of text. At first glance, the datasets from the Entity Track¹⁴ of TREC 2009, 2010, and 2011 appear to be useful for deriving a dual-entity query dataset for pathfinding in Wikidata because they include collections of entities for the evaluation of entity-oriented search systems. However, the derivation of a dual-entity query dataset from these datasets would require the artificial pair-wise combination of the single entities within the collections, which clearly contradicts the realism requirement. Furthermore, the TREC datasets only provide ClueWeb09¹⁵ IRIs as identifiers for the entities, which would have to be expensively linked to Wikidata entities first.
+
+Hence, another approach was pursued. The dataset from the Million Query Track¹⁶ of TREC 2007 consists of 10,000 realistic textual queries for web search engines. Using this as a starting point, the following procedure was applied to each query of the TREC dataset to derive a dual-entity query dataset for pathfinding in Wikidata:
+
+1. GENRE¹⁷ [22], a state-of-the-art Wikidata entity linker, is employed to look for Wikidata entities in the query. If two or more entities are recognized, the next step is taken. Otherwise, the query is dropped.
+2. Since GENRE only provides the entity labels and not the necessary entity IDs, Wikidata is queried using SPARQL to retrieve them. To minimize incorrect matches¹⁸, only entities with the exact labels are retained. If two or more entities are identified, the next step is taken. Otherwise, the query is dropped.
+3. Finally, $\frac{n(n-1)}{2}$ pairs of entities are composed, where $n$ is the number of recognized and successfully identified entities. The two IDs of each entity pair represent one dual-entity query, which is finally stored.
+
+As an example, consider the query *children books on the effect of music on plants* with number 4480 from the TREC dataset. In the first step, GENRE recognizes three entities within this query, namely entities with the labels *book*, *music*, and *plant*. Querying Wikidata in the second step identifies the entities as Q571, Q638, and Q756, which are reasonable matches¹⁹. In the final step, $\frac{3(3-1)}{2}=3$ dual-entity queries are composed, namely ⟨Q571, Q638⟩, ⟨Q571, Q756⟩, and finally ⟨Q638, Q756⟩. Note how the queries correctly reflect the order of occurrence of the entities in the original TREC query. In total, 1,196 dual-entity queries are derived using this procedure²⁰.
+
+### 3.3. Optimization of the Hyperparameters α, β, and γ
+
+The dual-entity query dataset not only allows for a proper evaluation of the pathfinding algorithm but also the optimization of its hyperparameters. For the reasons explained in Section 2, the Simple optimizer is leveraged to find an optimized hyperparameter configuration for the pathfinding algorithm, which represents the answer to RQ3. For this purpose, the optimizer requires an objective function that accepts a hyperparameter configuration and returns some objective value to assess the performance of this configuration. Depending on the use case, the optimizer’s task is then to either minimize or maximize the objective value by testing different configurations.
+
+Given the web search engine context, the goal is to find paths between entities in Wikidata fast, i.e., with few visited entities, such that the result can be displayed quickly. Hence, the number of visited entities is chosen as the objective value to be minimized. To account for the low-latency requirement of web search engines, the entity limit is set to 100. Furthermore, the pathfinding algorithm must be able to reliably find paths for unseen dual-entity queries because users are allowed to enter arbitrary queries. To evaluate this ability, the optimization operates on only 20% or 239 of the dual-entity queries while the remaining 80% or 957 queries serve as the test set for the evaluation in Section 5. Since the queries within the TREC 2007 Million Query Track dataset are ordered arbitrarily, the first 239 dual-entity queries are sampled for the optimization.

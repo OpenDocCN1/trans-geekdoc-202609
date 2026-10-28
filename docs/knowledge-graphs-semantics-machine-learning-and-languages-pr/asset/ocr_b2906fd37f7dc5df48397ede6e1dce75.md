@@ -1,0 +1,17 @@
+mines their individual distances to the center according to their dissimilarity to the main fragment. The minimal and maximal distances to the center and thus to the user are 1.7 m and 3 m. A high dissimilarity results maximally in a distance of 3 m to the center.
+
+To position the spheres on a spherical shell, we rely on the UMAP algorithm [27], which is a dimension reduction technique. With the dissimilarity calculation of the related fragments among themselves as its input metric and the haversine as its output metric, UMAP finds a suitable arrangement of the related fragments around the user. To prevent dislocations of the neck, in our case, the UMAP algorithm gets two additional artificial points in its optimization process that are fixed on the poles and constantly repel all the other data points, which bypasses constellations in which spheres accumulate directly above or beneath the user.
+
+We rely on four attributes for which we calculate dissimilarities: i) temporal (t), ii) spatial (s), iii) semantic (sem), and iv) categorical (c). Users can define the neighbourhoods to explore by arranging other nodes that are closest with respect to these different dissimilarities. We first compute pairwise distances for the related fragments in one visualization for each of the above-mentioned attributes and afterwards, scale them per attribute a to an interval from 0 (which means similar) to 1 (which means maximal dissimilar) to get a normalized measure of dissimilarities for each individual attribute. If there is no data available for a fragment n ∈ F and one of its attribute values a_n, then the value is considered invalid. More formally, for a visualization with the related fragments F, the dissimilarity diss for two fragments i, j ∈ F regarding one attribute a ∈ {t, s, sem, c}, with a_i, a_j being their corresponding attribute values, is defined as:
+
+diss_a(i, j) = { (dist_a(i,j) - min_{k,l} dist_a(k,l)) / (max_{m,o} dist_a(m,o) - min_{k,l} dist_a(k,l)), with k,l,m,o ∈ F, k ≠ l if a_i, a_j are valid, 0 if a_i, a_j are invalid, 1 otherwise. }
+
+Note that two related fragments may have different dissimilarity values after the scaling process. This is due to the fact that two fragments may appear hand in hand for various main fragments which might have distinct sets of related fragments with different minimal and maximal distances, potentially leading to different scalings. We describe the way we compute the different distances in what follows:
+
+# Temporal distance:
+
+For the temporal distance dist_t between two fragments, the minimal separating interval regarding their time periods t_i and t_j is considered. If there are time periods provided that do not overlap, then the difference in days is taken into account. If their periods overlap, or if no time period is given for both fragments, their distance is 0.
+
+Formally, a fragment’s time period t_i is an interval [t_i,start; t_i,end] starting with a start date t_i,start and ending with end date t_i,end, each of which is represented in days (the number of days that have elapsed from common era to the corresponding date associated with the fragment). Two time periods t_i and t_j overlap, if their intersection is not empty: t_i ∩ t_j ≠ ∅. Their temporal distance in days dist_t(i, j) can be calculated as follows:
+
+dist_t(i, j) = { min{||t_i,start - t_j,end||, ||t_j,start - t_i,end||} if t_i ∩ t_j = ∅, 0 otherwise. }
