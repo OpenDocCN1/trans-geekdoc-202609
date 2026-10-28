@@ -1,0 +1,9 @@
+map for the RPN and classification stage. Thus, the contextual content of the deeper layers are propagated to the feature map.
+
+![](bbox=[0.28, 0.25, 0.72, 0.44])
+
+Figure 6.2: Schematic illustration of the deconvolutional sub-module used to combine features from shallow and deep layers. A deconvolutional layer with kernel size 4 × 4 and stride 2 is applied to up-sample the features from the deep layer by a factor of two, which are then combined via concatenation with the features from the shallow layer. Finally, a 1 × 1 convolutional layer is appended to effectively fuse the information from the concatenated feature maps.
+
+# 6.1.2 Stage-wise Training Scheme
+
+To train the proposed MFD Faster R-CNN, staged fine-tuning is performed inspired by [Lon15] in order to improve the weight initialization. For this purpose, Faster R-CNN using only conv3_3 as feature map is initially trained end-to-end for a total of 60,000 iterations with an initial learning rate of 0.001. Weights pre-trained on ImageNet are used for initialization. Next, conv4_1 through conv4_3 and a deconvolutional sub-module are added to the network and the combination of conv3_3 and the up-sampled feature of conv4_3 are used as feature map. The model is then trained end-to-end for 20,000 iterations with a learning rate of 0.001. For this, the added layers are initialized by using the Gaussian weight filler method, while all other weights are initialized by the initially trained Faster R-CNN. In the last stage, conv5_1 through conv5_3 and a deconvolutional sub-module to up-sample the features of conv5_3 are added to the network. The combination of conv3_3 and the up-sampled features of conv4_3 and conv5_3 are used as feature map. The model is then trained end-to-end for further 20,000 iterations with a learning rate of 0.001. While the added layers are initialized by using the Gaussian weight

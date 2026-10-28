@@ -1,0 +1,40 @@
+
+- [Ros58] ROSENBLATT, Frank: “感知器：大脑中信息存储和组织的概率模型。” 载于：心理评论 65.6 (1958), 第 386 页。
+- [Rud08] RUDOL, Piotr and DOHERTY, Patrick: “用于无人机搜救任务的颜色和热成像人体检测与地理定位”。 载于：IEEE 航天会议论文集。2008 年。
+- [Rus96] RUSKONÉ, Renaud; GUIGUES, Laurent; AIRAULT, Sylvain and JAMET, Olivier: “航空图像上的车辆检测：一种结构化方法”。 载于：IEEE 国际模式识别会议论文集（ICPR）。第 3 卷。1996 年，第 900–904 页。
+- [Sak17] SAKLA, Wesam; KONJEVOD, Goran and MUNDHENK, T Nathan: “航空 ISR 图像中的深度多模态车辆检测”。 载于：IEEE 计算机视觉应用冬季会议论文集（WACV）。2017 年，第 916–923 页。
+- [Sal83] SALTON, Gerard and McGILL, Michael J: 现代信息检索导论。McGraw-Hill, 1983 年。
+- [San18] SANDLER, Mark; HOWARD, Andrew; ZHU, Menglong; ZHMOGINOV, Andrey and CHEN, Liang-Chieh: “MobileNetV2：倒残差与线性瓶颈”。 载于：IEEE 计算机视觉与模式识别会议论文集（CVPR）。2018 年，第 4510–4520 页。
+- [Sch10] SCHERER, Dominik; MÜLLER, Andreas and BEHNKE, Sven: “用于目标识别的卷积架构中池化操作的评估”。 载于：人工神经网络–ICANN 2010。Springer, 2010 年，第 92–101 页。
+- [Sch15] SCHMIDHUBER, Jürgen: “神经网络中的深度学习：概述”。 载于：神经网络 61 (2015), 第 85–117 页。
+- [Sha12] SHAO, Wen; YANG, Wen; LIU, Gang and LIU, Jie: “利用多特征从高分辨率航空图像中检测汽车”。 载于：IEEE 国际地质与遥感研讨会论文集（IGARSS）。2012 年，第 4379–4382 页。
+- [Som17a] SOMMER, Lars; NIE, Kun; SCHUMANN, Arne; SCHUCHERT, Tobias and BEYERER, Jürgen: “用于改进航空图像车辆检测的语义标注”。 载于：2017 年第 14 届 IEEE 先进视频与信号监控国际会议（AVSS）。2017 年。
+- [Som17b] SOMMER, Lars W; SCHUCHERT, Tobias and BEYERER, Jürgen: “基于深度学习的航空图像多类别目标检测”。 载于：自动目标识别 XXVII。第 10202 卷。国际光学工程学会。2017 年，第 1020209 页。
+- [Som17c] SOMMER, Lars Wilko; SCHUCHERT, Tobias and BEYERER, Jürgen: “航空图像中的快速深度车辆检测”。 载于：IEEE 计算机视觉应用冬季会议论文集（WACV）。2017 年，第 311–319 页。
+- [Som18a] SOMMER, Lars; SCHMIDT, Nicole; SCHUMANN, Arne and BEYERER, Jürgen: “用于大型航空图像快速车辆检测的搜索区域缩减 Fast-RCNN”。 载于：IEEE 国际图像处理会议论文集（ICIP）。2018 年，第 3054–3058 页。
+- [Som18b] SOMMER, Lars; SCHUCHERT, Tobias and BEYERER, Jürgen: “航空图像中基于深度学习的车辆检测综合分析”。 载于：IEEE 电路与系统视频技术汇刊 (2018)。
+- [Som18c] SOMMER, Lars; SCHUMANN, Arne; SCHUCHERT, Tobias and BEYERER, Jürgen: “用于精确航空图像车辆检测的多特征反卷积 Faster R-CNN”。 载于：IEEE 计算机视觉应用冬季会议论文集（WACV）。2018 年，第 635–642 页。
+- [Som18d] SOMMER, Lars; STEINMANN, Lucas; SCHUMANN, Arne and BEYERER, Jürgen: “航空图像深度学习检测框架的系统评估”。 载于：自动目标识别 XXVIII。第 10648 卷。国际光学工程学会。2018 年，第 1064803 页。
+- [Spr14] SPRINGENBERG, Jost Tobias; DOSOVITSKIY, Alexey; BROX, Thomas and RIEDMILLER, Martin: “追求简洁：全卷积网络”。 载于：arXiv 预印本 arXiv:1412.6806 (2014)。
+- [Sri14] SRIVASTAVA, Nitish; HINTON, Geoffrey; KRIZHEVSKY, Alex; SUTSKEVER, Ilya and SALAKHUTDINOV, Ruslan: “Dropout：防止神经网络过拟合的一种简单方法”。 载于：机器学习研究期刊 15.1 (2014), 第 1929–1958 页。
+- [Sze15] SZEGEDY, Christian; LIU, Wei; JIA, Yangqing; SERMANET, Pierre; REED, Scott; ANGUELOV, Dragomir; ERHAN, Dumitru; VANHOUCKE, Vincent and RABINOVICH, Andrew: “用卷积更深”。 载于：IEEE 计算机视觉与模式识别会议论文集（CVPR）。2015 年，第 1–9 页。
+- [Sze16] SZEGEDY, Christian; VANHOUCKE, Vincent; IOFFE, Sergey; SHLENS, Jon and WOJNA, Zbigniew: “重新思考计算机视觉的 Inception 架构”。 载于：IEEE 计算机视觉与模式识别会议论文集（CVPR）。2016 年，第 2818–2826 页。
+- [Sze17] SZEGEDY, Christian; IOFFE, Sergey; VANHOUCKE, Vincent and ALEMI, Alexander A: “Inception-v4、Inception-ResNet 以及残差连接对学习的影响”。 载于：第三十一届 AAAI 人工智能会议。2017 年。
+- [Tan17] TANG, Tian yu; ZHOU, Shilin; DENG, Zhipeng; ZOU, Huanxin and LEI, Lin: “基于区域卷积神经网络和困难负例挖掘的航空图像车辆检测”。 载于：传感器 17 (2017)。
+- [Tay18] TAYARA, Hilal and CHONG, Kil: “使用单阶段密集连接特征金字塔网络在超高分辨率航空图像中进行目标检测”。 载于：传感器 18.10 (2018)。
+- [Tie12] TIELEMAN, Tijmen and HINTON, Geoffrey: “Lecture 6.5-rmsprop, Coursera：机器学习中的神经网络”。 载于：多伦多大学，技术报告 (2012)。
+- [Tue13] TUERMER, Sebastian; KURZ, Franz; REINARTZ, Peter and STILLA, Uwe: “利用 HOG 特征和视差图在密集城区进行机载车辆检测”。 载于：*IEEE 地球观测与遥感应用选定主题期刊* 6.6 (2013), 第 2327–2337 页。
+- [Uij13] UIJLINGS, Jasper RR; VAN DE SANDE, Koen EA; GEVERS, Theo and SMEULDERS, Arnold WM: “用于目标识别的选择性搜索”。 载于：*国际计算机视觉期刊* 104.2 (2013), 第 154–171 页。
+- [Van18] VAN ETTEN, Adam; LINDENBAUM, Dave and BACASTOW, Todd M: “Spacenet：遥感数据集与挑战系列”。 载于：*arXiv 预印本 arXiv:1807.01232* (2018)。
+- [Wan18a] WANG, Chen; BAI, Xiao; WANG, Shuai; ZHOU, Jun and REN, Peng: “用于 VHR 遥感图像目标检测的多尺度视觉注意力网络”。 载于：*IEEE 地球科学与遥感快报* 16.2 (2018), 第 310–314 页。
+- [Wan18b] WANG, Robert J; LI, Xiang and LING, Charles X: “Pelee：移动设备上的实时目标检测系统”。 载于：*神经信息处理系统进展（NIPS）*。2018 年，第 1963–1972 页。
+- [Wan19] WANG, Haoran; WANG, Zexin; JIA, Meixia; LI, Aijin; FENG, Tuo; ZHANG, Wenhua and JIAO, Licheng: “用于目标检测的多尺度特征细化的空间注意力”。 载于：*IEEE 国际计算机视觉研讨会论文集（ICCVW）*。2019 年。
+- [Waq19] WAQAS ZAMIR, Syed; ARORA, Aditya; GUPTA, Akshita; KHAN, Salman; SUN, Guolei; SHAHBAZ KHAN, Fahad; ZHU, Fan; SHAO, Ling; XIA, Gui-Song and BAI, Xiang: “iSAID：航空图像实例分割的大规模数据集”。 载于：*IEEE 计算机视觉与模式识别研讨会论文集（CVPRW）*。2019 年，第 28–37 页。
+- [Wen17] WEN, Wei; XU, Cong; WU, Chunpeng; WANG, Yandan; CHEN, Yi-ran and LI, Hai: “用于更快的深度神经网络的协调滤波器”。 载于：*IEEE 国际计算机视觉会议论文集（ICCV）*。2017 年，第 658–666 页。
+- [Woo18] Woo, Sanghyun; HWANG, Soonmin and KWEON, In So: “Stairnet：用于精确单次检测的自上而下语义聚合”。 载于：*IEEE 计算机视觉应用冬季会议论文集（WACV）*。2018 年。
+- [Xia10] XIAO, Jiangjian; CHENG, Hui; SAWHNEY, Harpreet and HAN, Feng: “广视场航空视频中的车辆检测与跟踪”。 载于：*IEEE 计算机视觉与模式识别会议论文集（CVPR）*。2010 年，第 679–684 页。
+- [Xia18] XIA, Gui-Song; BAI, Xiang; DING, Jian; ZHU, Zhen; BELONGIE, Serge; LUO, Jiebo; DATCU, Mihai; PELILLO, Marcello and ZHANG, Liangpei: “DOTA：航空图像目标检测的大规模数据集”。 载于：*IEEE 计算机视觉与模式识别会议论文集（CVPR）*。2018 年，第 3974–3983 页。
+- [Xie17] XIE, Saining; GIRSHICK, Ross; DOLLÁR, Piotr; TU, Zhuowen and HE, Kaiming: “深度神经网络的聚合残差变换”。 载于：*IEEE 计算机视觉与模式识别会议论文集（CVPR）*。2017 年，第 5987–5995 页。
+- [Xu16] XU, Yongzheng; YU, Guizhen; WANG, Yunpeng; WU, Xinkai and MA, Yalong: “基于 Viola-Jones 和 HOG+SVM 的无人机图像混合车辆检测方法”。 载于：*传感器* 16.8 (2016)。
+- [Xu17a] XU, Yongzheng; YU, Guizhen; WANG, Yunpeng; WU, Xinkai and MA, Yalong: “利用 Faster R-CNN 从低空无人机图像中检测汽车”。 载于：*先进交通期刊* 2017 (2017)。
+- [Xu17b] XU, Zhaozhuo; XU, Xin; WANG, Lei; YANG, Rui and PU, Fangling: “用于遥感图像目标检测的带长宽比约束 NMS 的可变形卷积网络”。 载于：*遥感* 9.12 (2017)。

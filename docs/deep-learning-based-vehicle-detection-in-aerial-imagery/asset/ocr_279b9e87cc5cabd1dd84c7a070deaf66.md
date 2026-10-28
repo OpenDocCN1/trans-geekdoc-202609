@@ -1,0 +1,5 @@
+Qualitative visualizations of the reduced search area are depicted in Figure 7.9 and Figure 7.10. Highlighted regions possess a confidence score about the presence of at least one vehicle above 0.5 and are considered for detection. Regions labeled in blue are correctly classified and contain at least one vehicle, whereas regions labeled in red contain no vehicle. On both datasets, the SAR module is able to reliably identify tiles that contain at least one object even in case of housing areas with complex backgrounds and in case of areas off paved roads that typically contain no vehicles. Tiles without vehicles that are misclassified generally comprise structures with shapes similar to vehicles.
+
+![](bbox=[0.2, 0.42, 0.82, 0.85])
+
+Figure 7.10: Classification results of the SAR module on VEDAI. Highlighted regions are classified as region with at least one object and are considered for detection. Regions labeled in blue contain vehicles, whereas regions labeled in red contain no vehicles.

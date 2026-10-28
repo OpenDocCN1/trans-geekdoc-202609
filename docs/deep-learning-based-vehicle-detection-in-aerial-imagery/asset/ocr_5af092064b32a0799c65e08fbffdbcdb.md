@@ -1,0 +1,7 @@
+# 5 Base Framework
+
+In this chapter, the functional principle of the utilized base framework, i.e., Faster R-CNN, is introduced. For this, the main detector components and the implementation details are extensively described. Furthermore, adaptations in order to account for the characteristics of aerial imagery are proposed and systematically examined to identify concomitant issues.
+
+# 5.1 Faster R-CNN
+
+Faster R-CNN is chosen as base framework for the detection pipeline proposed in this thesis, because of its superior detection accuracy compared to other deep learning based detectors, in particular for small object instances. The capability of accurately detecting small object instances is even more essential in case of aerial imagery, which typically comprises objects in the range of a few pixels due to its low spatial resolution as introduced in Section 4.1. The functional principle of Faster R-CNN, which mainly comprises two modules, is schematically depicted in Figure 5.1. The first module termed RPN generates a set of candidate regions, which is forwarded to a subsequent module denoted as classification stage. The two modules are merged into a single network by sharing a sequence of convolutional layers termed feature extractor. Fundamental basics of both modules as well as implementation details are introduced in the following.

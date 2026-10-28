@@ -1,0 +1,10 @@
+
+
+![](img/99de1214c29cbc525a14b293385af5cf_275_0.png)
+
+Lehrstuhl für Interaktive Echtzeitsysteme
+Karlsruher Institut für Technologie
+
+Fraunhofer-Institut für Optronik, Systemtechnik und Bildauswertung IOSB Karlsruhe
+
+空中图像中的目标检测对于民用安全和保障领域的广泛应用至关重要。然而，由传感器与地面之间的大距离、采集条件以及由于不同时段和地区导致的变化场景所引起的低空间分辨率阻碍了检测任务。本书提出了一种新颖的基于深度学习的检测方法，专注于从俯视角度记录的空中图像中的车辆检测。基础检测框架通过两个新颖的组件进行了扩展，以通过增强所用特征表示的上下文和语义内容来提高检测精度，从而减少误检数量。为了降低计算成本并相应地减少推理时间，提出了一种针对空中图像中车辆检测优化的轻量级 CNN 架构作为基础架构，并引入了一种将搜索区域限制在感兴趣区域的新模块。广泛的评估证明了该方法在未见过的空中图像数据上具有最先进的性能和泛化能力。
