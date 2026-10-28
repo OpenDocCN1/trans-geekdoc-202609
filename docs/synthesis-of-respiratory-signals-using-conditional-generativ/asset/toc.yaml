@@ -1,0 +1,23 @@
+level_changes:
+- line: 6
+  before: 2
+  after: 1
+- line: 8
+  before: 2
+  after: 1
+- line: 15
+  before: 3
+  after: 2
+- line: 235
+  before: 2
+  after: 1
+text_changes:
+- line: 62
+  before: 7.3.3.2 使用CWT的时间-尺度表示
+  after: 7.3.2.2 使用CWT的时间-尺度表示
+- line: 66
+  before: 7.3.3.3 cGAN的生成器和判别器网络架构
+  after: 7.3.2.3 cGAN的生成器和判别器网络架构
+- line: 113
+  before: 7.3.3.5 步骤
+  after: 7.3.2.5 步骤

@@ -1,0 +1,767 @@
+- pgno: 0
+  md: "# CHAPTER 7\n\n# Synthesis of respiratory signals using conditional generative\
+    \ adversarial networks from scalogram representation\n\n**S. Jayalakshmy**<sup>a</sup>,\
+    \ **Lakshmi Priya**<sup>b</sup>, and **Gnanou Florence Sudha**<sup>c</sup>  \n\
+    <sup>a</sup>IFET College of Engineering, Villupuram, India  \n<sup>b</sup>Manakula\
+    \ Vinayaga Institute of Technology, Pondicherry, India  \n<sup>c</sup>Pondicherry\
+    \ Engineering College, Pondicherry, India\n\n# 7.1 Introduction\n\nChronic respiratory\
+    \ disorders are a genre of long-term illness influencing the air passage and the\
+    \ anatomy of the respiratory system. Lung disorders are graded as the biggest\
+    \ donor to the global effect of diseases in the world. Some of the respiratory\
+    \ disorders include chronic obstructive pulmonary diseases (COPD), asthma, occupational\
+    \ lung illness, chronic bronchitis, pneumonia, etc. The diagnostic studies of\
+    \ the World Health Organization (WHO) and Healthy People 2020 revealed that currently\
+    \ over 25 million people in the United States (US) have been diagnosed with asthma\
+    \ and roughly 14.8 million adults have been identified with COPD [1]. In addition,\
+    \ the Forum of International Respiratory Societies (FIRS) has anticipated that\
+    \ more than millions of people live along with increased pressure in the pulmonary\
+    \ system and more than 50 million individuals suffer from occupation-related lung\
+    \ infections, thereby figuring out that more than one billion people are being\
+    \ affected from chronic respiratory conditions [2].\n\nThe causes of COPD include\
+    \ deficiency of alpha-1-antitrypsin protein, long-term exposure to air pollution,\
+    \ chemicals, fumes, and dust inhalation in the workplace. This deficiency causes\
+    \ the lungs to deteriorate and also can affect the liver. The common monitoring\
+    \ and diagnostic techniques for pulmonary diseases are spirometry, CT scans, arterial\
+    \ blood gas tests, and auscultation of the lungs. Respiratory auscultation is\
+    \ the most preferred diagnostic tool for the examination of pulmonary disorders\
+    \ and it provides the physiological and pathological information for the medical\
+    \ experts to proceed with the therapeutic procedure [3]. The respiratory sound\
+    \ (RS) is one of the most significant bio-signals used to diagnose certain respiratory\
+    \ abnormalities. RS detected from the chest wall and mouth may be classified as\
+    \ normal (vesicular) and adventitious sounds. Some of the abnormal sounds include\
+    \ wheezing, rhonchus (low-pitched wheezes), stridor, and"
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'crackles which vary in frequency. The use of a conventional stethoscope to
+    listen lung sound makes lung auscultation technique simple, easy to use, and the
+    most popular non-invasive method for diagnosis.
+
+
+    To assist medical practitioners further in the process of their diagnosis, deep
+    learning-based computer-aided diagnosis (CAD) systems have been extensively used
+    over the past few years. However, for these deep learning algorithms to precisely
+    differentiate even the feeble abnormal breathing patterns, huge volume of training
+    data is required. On the other hand, a very limited number of both normal and
+    abnormal respiratory sound datasets are available in the publicly available datasets.
+    Working with these insufficient resources, deep learning models tend to struggle
+    with few restrictions such as overfitting which performs well only for the trained
+    model but not for other unobserved data. This can be considered as the greatest
+    challenge in conventional deep learning-based CAD systems. Although several patterns
+    of training and architectural designs have been deployed in research findings,
+    training a model with a scarce amount of data is a demanding task. Therefore to
+    acquire more samples, data augmentation is the sensible solution.
+
+
+    For scaling up of datasets, the conventional augmentation approach accomplishes
+    ordinary variations in the given images in order to gain a different facet of
+    original images. Few modifications involve rotational changes, translation, reflection,
+    and diminishing the size of images [4]. Considering from the respiratory signal
+    perspective, transforming the audio signal to the 2D representation using conventional
+    augmentation approaches is not appropriate. In explicit terms, random flipping
+    around the time axis indicates that the signal is reversed in time and random
+    Y flipping will completely change the understanding of frequency. In the same
+    way, random X translation implies that there is only time shift and translation
+    in Y signifies that the frequency spectrum is being modified, which may not really
+    be a true representation of the original signal itself. Scaling randomly in the
+    X direction in order to simulate slower breathing or faster breathing, while not
+    changing the frequency characteristics would be physically meaningful but this
+    in turn adds random noise to the signal representation. To resolve these issues,
+    this study aims at improving the data set artificially with the help of generative
+    adversarial network (GAN). In this study, it is proposed to synthesize a respiratory
+    signal using GAN architecture by the virtue of time-frequency representation which
+    gives a picture of the signal. Scalogram, the visual representation of the energy
+    density of the signal obtained through continuous wavelet transform is found to
+    differentiate well the different classes of respiratory signals [5]. The fact
+    that the continuous wavelet transform is invertible, enables to use of GAN architecture
+    to indirectly synthesize signals.
+
+
+    GAN is a class of deep learning framework which succinctly generates images from
+    a known representation of data called latent space. GAN comprises two deep neural
+    networks called generator and discriminator, competing one against the other in
+    order to learn the probability distribution function of the known training set
+    images and hence the term adversarial. The outcome of this study will undoubtedly
+    address the challenge'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'accuracy was found to be improved to 85.7% sensitivity and 92.4% specificity.
+    Furthermore, in 2018, Salehinajad et al. [10] have also witnessed the expansion
+    in dataset samples by implementing GAN to produce artificial images for the classification
+    of the lesion in chest X-ray images. The authors utilized a deep convolutional
+    neural network (DCNN) to identify disorders with five different classes of chest
+    X-rays and the performance results are found to be improved.
+
+
+    In 2019, Bhattacharya D et al. [11] suggested deep convolutional generative adversarial
+    network (DCGAN) and experimented on NIH chest X-ray image open database to enhance
+    the efficiency of CNN model using GAN and yielded 65.3% accuracy. With the aid
+    of structure correcting GAN, Dai et al. [12] carried out segmentation between
+    lungs and heart regions in chest X-ray images. In that work, the authors introduced
+    a critic network in order to figure out the higher-level structures to acquire
+    practical segmentation findings to achieve realistic segmentation outcomes. Several
+    comprehensive attempts with this method resulted in real segmentation with high
+    precision. Onishi et al. [13] explored deep CNN (DCNN) and GAN to create the sufficient
+    number of images in order to differentiate malicious and benign lung nodules.
+    In that work, the images were generated using the pixel value distribution present
+    in the mid-portion of the pulmonary nodule. This approach of pretraining and fine-tuning
+    process using DCNN enables to discriminate almost 66.7% of benign nodules and
+    93.9% of malicious pulmonary nodules and proved with the classification accuracy
+    of 20% more than original images.
+
+
+    Apart from CT and PET images, Chaudhari et al. [14] have trialed the augmentation
+    approach on gene expression dataset using modified generator GAN (MG-GAN) and
+    compared the performance with basic GAN and KNN classifier. The results proved
+    that MG-GAN improved the accuracy by 18.8% and 11.9% and further the loss value
+    of the error function was found to be reduced very drastically from the value
+    0.6978 to 0.0082 making it suitable for applications with sensitive data. Luo
+    et al. [15] explored the progressive growth of GAN-based augmentation on electroluminescence
+    images for the classification of faulty photovoltaic component cells and improved
+    the performance to the maximum of 14% using an enlarged dataset. Apart from this,
+    Li et al. [16] focused the research on gear safety in the transmission industry
+    for reliability classification using GAN wherein, the authors introduced bounded-GAN
+    to create gear data with different settings and trained the model using ADAM optimizer.
+    The research findings show that the proposed bounded-GAN excels other approaches
+    on operational measures. GAN also finds its application in diverse fields such
+    as magnetic resonance imaging scans, video surveillance, clinical informatics,
+    computational biology, automotive fields, etc.
+
+
+    Furthermore, GAN-based methods strengthen and show the possible gains in the audio
+    synthesis field as well with reference to analysis, processing, and classification
+    of signals. In spite of the latest developments in the field of artificial intelligence
+    and generative models, the compilation of information from inherent sounds through
+    neural nets'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'approaches are possible with GAN both for medical images and audio [13–23],
+    some of the technical gaps observed in the existing study are quality of generated
+    data samples, distortion, and its distribution in the data set, which were not
+    good enough resulting in poor classification accuracy as the accuracy is significantly
+    dependent on both the qualitative and quantitative terms. In addition, the speed
+    of the image generation process is very slow specifically in the field of speech
+    synthesis. This poses limitations on high-dimensional data due to the nature of
+    autoregressive modeling. Furthermore, in certain instances, network models trained
+    with artificial generated sample data fail to perform well when fed with real
+    images. All these gaps can be resolved in the proposed study with the help of
+    conditional GAN. Inspired by the performance improvement by conditional GANs in
+    Ref. [24], the proposed study employs the scalogram method of TF representation
+    combined with cGAN for improved targeting and for synthesizing respiratory sounds
+    in order to discriminate the normal and abnormal lung sounds.
+
+
+    # 7.3 GAN for signal synthesis
+
+
+    In this section, the architectures of simple GAN and conditional GAN and the proposed
+    system model using the conditional GAN to synthesize respiratory sound signals
+    from the wavelet-based time-frequency representation are explained in detail.
+    The conditional GAN is utilized in this proposed study to artificially generate
+    more number of scalogram images. With this proposed model as a data augmentation
+    technique, better prediction accuracy through computer-aided diagnosis is expected.
+
+
+    # 7.3.1 Simple GAN
+
+
+    A simple GAN comprises two networks named generator and discriminator that are
+    trained concurrently. The generator learns to generate a new image mimicking the
+    data in the latent space by estimating its underlying probability distribution
+    and the discriminator plays the role of binary classifier by mapping the input
+    image either to the real-image dataset or to the generated set of images. The
+    generator model has to be trained such that the generated image very closely resembles
+    the images used for training thereby making the discriminator difficult to distinguish
+    between the original and generated set of images. The discriminator in turn learns
+    to make sure that its performance is better than that of the generator. This adversarial
+    learning behavior of the GAN results in the generation of images which are very
+    close to the real training set images. Fig. 7.1 shows the architecture of simple
+    GAN [25].
+
+
+    # 7.3.2 Conditional generative adversarial networks
+
+
+    In contrast to basic GAN, cGAN utilizes a supervised method where both the generator
+    and discriminator neural networks are adapted to meet the condition during the
+    training'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/8bbf09e1d4a9c5e5be54b13d04ce8261_7_0.png)
+
+
+    **Fig. 7.3** Proposed system model for synthesizing respiratory sounds
+
+
+    wheeze signals are given as input to the time-frequency transform. The continuous
+    wavelet transform transforms the time-domain respiratory signal to time-scale
+    analysis and is represented in the forms of scalogram representation. These real
+    scalograms are fed as input to conditional GAN in order to generate more artificial
+    scalogram images with the help of a generator network in cGAN. Finally, inverse
+    CWT is applied to synthesize the respiratory sound signals in time domain.
+
+
+    # 7.3.3.2 Time-scale representation using CWT
+
+
+    The continuous wavelet transform (CWT) modifies the temporal length of the basis
+    function for the purpose of achieving a changeable time-frequency localization.
+    To interpret very small changes in frequencies, CWT utilizes longer basis functions
+    at the cost of confined localization in time and uses shorter basis functions
+    ascertaining high localization in time [27]. This time-frequency transform elicits
+    a spectrum with time scale vs amplitude named scalogram. Compared to spectrograms,
+    scalograms are useful for analyzing realistic signals at diverse scales. As the
+    frequencies in CWT transform are logarithmic in nature, the obtained scalogram
+    plot also uses a log scale frequency axis.
+
+
+    # 7.3.3.3 Generator and discriminator network architecture of cGAN
+
+
+    The network architecture for generator and discriminator are shown in Figs. 7.4
+    and 7.5 and the corresponding analysis result is tabulated in Tables 7.1 and 7.2.
+    In cGAN, the'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/8bbf09e1d4a9c5e5be54b13d04ce8261_8_0.png)
+
+
+    **Fig. 7.4** Generator network architecture.
+
+
+    generator network comprises sequential transposed convolutional layers with batch
+    normalization for scaling up the arrays of different dimensions. The small-scale
+    noise vector given to the fully connected section transforms the input to 1024
+    high-scaled image features which is further reshaped to 4 × 4 × 1025 for feeding
+    to the convolution module. Several successive stages of transposed convolution
+    layers transform the interim features to produce an output image equal to the
+    dimension (64 × 64 × 3). This generator network generates synthetic scalograms
+    for all classes of respiratory sounds individually to attain the wider class population.
+
+
+    On the other hand, the discriminator network is modeled using multiple convolutional
+    layers with leaky ReLU to produce prediction values. From the given input image
+    to the discriminator block, which has a dimension of (64 × 64 × 3), the high-scaled
+    features with the dimension (4 × 4 × 512) are extracted by the series of convolution
+    layers. Further, these features are evened and are given as input to the fully
+    connected network. This network gradually assigns the features to a low scale
+    for classification.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Table 7.1 Analysis result of generator network—cont''d
+
+
+    | Sl. no. | Name | Type | Activations | Learnables |
+
+    |---|---|---|---|---|
+
+    | 14 | Relu3<br>Relu | Relu | 32 × 32 × 64 | — |
+
+    | 15 | tconv4<br>3 5 × 5 × 64 transposed convolutions with stride [2 2] and cropping
+    same | Transposed convolution layer | 64 × 64 × 3 | Weights 5 × 5 × 3 × 64<br>Bias
+    1 × 1 × 3 |
+
+    | 16 | tanh<br>Hyperbolic tangent | Tanh | 64 × 64 × 3 | — |
+
+
+    # Table 7.2 Analysis result of discriminator network.
+
+
+    | Sl. no. | Name | Type | Activations | Learnables |
+
+    |---|---|---|---|---|
+
+    | 1 | Images<br>64 × 64 × 3 images | Image input | 64 × 64 × 3 | — |
+
+    | 2 | Dropped 25% dropout | Drop out | 64 × 64 × 3 | — |
+
+    | 3 | Labels<br>1 × 1 × 1 images | Image input | 1 × 1 × 1 | — |
+
+    | 4 | emb<br>Reshape Layer with output size 64 × 64 × 3 | Embed and reshape layer
+    | 64 × 64 × 1 | Embedding weights 50 × 4<br>Fully connecting weights 4096 × 50<br>Fully
+    connecting Bias 4096 × 1 |
+
+    | 5 | Cat<br>Concatenation of 2 inputs along dimension 3 | Concatenation | 64
+    × 64 × 1 | — |
+
+    | 6 | conv1<br>64 5 × 5 × 4 convolutions with stride [2 2] and padding same |
+    Convolution | 32 × 32 × 64 | Weights 5 × 5 × 4 × 64<br>Bias 1 × 1 × 64 |
+
+    | 7 | lrelu1<br>Leaky relu with scale 0.2 | Leaky Relu | 32 × 32 × 64 | — |
+
+    | 8 | Conv2<br>128 5 × 5 × 64 convolutions with stride [2 2] and padding same
+    | Convolution | 16 × 16 × 128 | Weights 5 × 5 × 64 × 128<br>Bias 1 × 1 × 128 |
+
+    | 9 | bn2<br>Batch normalization with 128 channels | Batch normalization | 16
+    × 16 × 128 | Weights 1 × 1 × 1 × 128<br>Bias 1 × 1 × 128 |'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Table 7.2 Analysis result of discriminator network—cont''d
+
+
+    | Sl. no. | Name | Type | Activations | Learnables |
+
+    |---|---|---|---|---|
+
+    | 10 | lRelu2<br>Leaky ReLU with scale 0.2 | Leaky Relu | 16 × 16 × 128 | — |
+
+    | 11 | Conv3<br>256 5 × 5 × 128 convolutions with stride [2 2] and padding same
+    | Convolution | 8 × 8 × 256 | Weights<br>5 × 5 × 128 × 256<br>Bias 1 × 1 × 256
+    |
+
+    | 12 | bn3<br>Batch normalization with 256 channels | Batch normalization | 8
+    × 8 × 256 | Weights<br>1 × 1 × 256<br>Bias 1 × 1 × 256 |
+
+    | 13 | lRelu3<br>Leaky ReLU with scale 0.2 | Leaky Relu | 8 × 8 × 256 | — |
+
+    | 14 | Conv4<br>512 5 × 5 × 256 convolutions with stride [2 2] and padding same
+    | Convolution | 4 × 4 × 512 | Weights<br>5 × 5 × 256 × 512<br>Bias 1 × 1 × 512
+    |
+
+    | 15 | bn4<br>Batch normalization with 512 channels | Batch normalization | 4
+    × 4 × 512 | Weights<br>1 × 1 × 512<br>Bias 1 × 1 × 512 |
+
+    | 16 | lRelu4<br>Leaky ReLU with scale 0.2 | Leaky Relu | 4 × 4 × 512 | — |
+
+    | 17 | Conv5<br>1 4 × 4 × 512 convolutions with stride [1 1] and padding [0 0
+    0 0] | Convolution | 1 × 1 × 1 | Weights<br>4 × 4 × 512<br>Bias 1 × 1 |
+
+
+    # 7.3.3.5 Steps
+
+
+    The stages for the generation of original, realistic scalograms, and synthesis
+    of respiratory sounds are outlined as follows:
+
+
+    +   1. **Step 1:** Examine and analyze the given respiratory signals having integral
+    number of time-varying frequencies using continuous wavelet transform.
+
+    +   2. **Step 2:** Produce Morse scalogram representations for various lung sounds
+    with the aid of MATLAB wavelet tool box.
+
+    +   3. **Step 3:** Input the obtained scalograms of the original lung sound signals
+    to Conditional GAN.
+
+    +   4. **Step 4:** Generate realistic scalogram images with the help of modeled
+    generator network.
+
+    +   5. **Step 5:** Synthesize the original respiratory signal by giving the generated
+    scalograms to inverse CWT.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "**Step 6:** Provide the original scalogram images extracted through continuous\
+    \ wavelet transform and generated scalogram images through cGAN to the pretrained\
+    \ models Alexnet CNN [5], GoogLeNet [28], and ResNet 50 to quantify the performance.\n\
+    \n# ### 7.4 Results and discussion\n\nTo demonstrate the performance of the proposed\
+    \ data augmentation technique using conditional GAN, the original scalogram images\
+    \ extracted through continuous wavelet transform and generated scalogram images\
+    \ through cGAN are input to different pretrained models. The classification performance\
+    \ is compared for all the classes of respiratory sounds with and without augmentation.\n\
+    \n# ### 7.4.1 Dataset\n\nThe dataset used in this proposed study was acquired\
+    \ from various sources namely RALE (Respiration acoustics Laboratory Environment)\
+    \ repository [29], Think labs Lung sound library [30], and ICBHI [31] benchmark\
+    \ publicly available databank. These archives comprise gender-based normal and\
+    \ abnormal lung sounds of several kinds. For the training and testing phase, the\
+    \ entire lung sound database has been arbitrarily split into 70% and 30%. By and\
+    \ large, the database has 73 normal files, 281 crackle sound files, 33 rhonchi\
+    \ files, and 122 wheeze files.\n\n# ### 7.4.2 Data augmentation using conditional\
+    \ GAN\n\nThe training phase of the data augmentation process using cGAN is explained\
+    \ in this section. For the process of experimentation,\n\n+   (i) The number of\
+    \ latent inputs for the generator network are considered to be 100. Typically\
+    \ the generator produces RGB noise as scalograms at random.\n+   \n+   (ii) From\
+    \ the modeled convolutional filters, the discriminator network attempts to figure\
+    \ out the difference between random noise scalograms and real-scalogram images\
+    \ of respiratory sounds.\n+   \n+   (iii) To mystify the discriminator network,\
+    \ the generator learns from the transposed convolution filters.\n+   \n+   (iv)\
+    \ The process is continued endlessly, as long as the discriminator is confused\
+    \ to the greatest extent.\n\nIn the proposed approach, the network is trained\
+    \ for four different epochs namely 500, 1000, 1500, and 2000 and the cost function\
+    \ is observed for all cases. The visual representation of the progress of training\
+    \ with scores of both the networks are shown in Fig. 7.6.\n\nTo check for the\
+    \ convergence of the network during the process of training, the scores are plotted\
+    \ on a scale from 0 to 1. The score of the generator network is defined"
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '![](img/8bbf09e1d4a9c5e5be54b13d04ce8261_14_0.png)
+
+
+    **Fig. 7.6** Training plots of generator and discriminator for different epochs.
+
+
+    as the average of the likelihood images analogous to the discriminator output
+    for the generated images. In case 1 of Fig. 7.6, i.e., 500 epochs, the concept
+    of mode collapse happens which indicates that the generator is incapable of learning
+    the scalogram representation corresponding to diverse inputs. Therefore, in order
+    to increase the ability of the generator to produce more outputs, the number of
+    epochs is increased. The training plots of cases (2, 3, 4) indicate that the generator
+    score reaches the value 0 and the score of discriminator extends to almost one
+    which signifies that the discriminator network is dominating the generator network
+    and therefore classifies most of the images correctly. Since the plots are almost
+    stable in cases 3 and 4, the training phase is stopped with 1500 epochs. Further
+    increasing the number of iterations, increases the computational time of the network.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '![](img/8bbf09e1d4a9c5e5be54b13d04ce8261_16_0.png)
+
+
+    **Fig. 7.8** Sample of normal synthesis from scalogram using ICWT.
+
+
+    # ### 7.4.5 Performance results
+
+
+    To evaluate the performance of data augmentation using conditional GAN, pretrained
+    deep learning models such as AlexNet, GoogLeNet, and Resnet 50 are used for classification.
+    The classification is performed for all the classes of respiratory sounds without
+    augmentation and with augmentation and the results are compared for all the deep
+    learning models. For classifying the data set without augmentation, the number
+    of images considered for training are 357 and 153 images are used for testing.
+    Similarly, for classification with augmentation, 200 images are generated for
+    each class of respiratory sounds using cGAN. Out of which, 500 images are considered
+    for training and 300 for testing. The experimental settings for modeling the network
+    are listed in Table 7.3.
+
+
+    **Table 7.3** Parameters settings for trained network model.
+
+
+    | Sl. No | Hyperparameters | Values |
+
+    |---:|---|---|
+
+    | 1 | Momentum | 0.9 |
+
+    | 2 | Initial learning rate | 0.0001 |
+
+    | 3 | Learning rate drop factor | 0.2 |
+
+    | 4 | Learning rate drop period | 5 |
+
+    | 5 | Number of epochs | 20 |
+
+    | 7 | Batch size | 10 |
+
+    | 8 | Optimizer | Sgdm |'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '![](img/8bbf09e1d4a9c5e5be54b13d04ce8261_18_0.png)
+
+
+    **Fig. 7.9** Training progress of ResNet 50 network for the case of real images
+    (without augmentation).
+
+
+    From the tables, it is observed that the class-wise accuracy is found to be high
+    for all classes almost more than 98% for the case of classification with augmentation,
+    whereas it is comparatively low for the case of without augmentation. In addition,
+    the F1 score is high for all classes in Table 7.8 which reveals that the validation
+    accuracy is better for augmented data in all cases.
+
+
+    # 7.4.6 Analysis
+
+
+    The proposed method in this chapter demonstrates the training of CNNs with an
+    alternative method for data augmentation by way of generating synthetic scalogram
+    images by using conditional generative adversarial networks. The proposed method
+    is experimented with three pretrained models namely Alexnet, GoogLeNet, and ResNet50
+    classifiers. The pretrained Alexnet model with five convolutional and three fully
+    connected layers produces an accuracy of 68.63% for the case of original scalogram
+    images whereas the network trained with 1500 epochs using cGAN data augmentation
+    approach yields an accuracy of 96.38%. The same number of images when trained
+    with GoogLeNet classifier with 22 layers deep yields an accuracy of 73.86% without
+    augmentation and 96.88% with data augmentation. The third model ResNet 50 comprises
+    49 convolutional layers and a fully connected layer. This network when trained,
+    yields an accuracy of 81.37%'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '![](img/8bbf09e1d4a9c5e5be54b13d04ce8261_19_0.png)
+
+
+    **Fig. 7.10** Training progress of ResNet 50 network with augmentation.
+
+
+    # **Table 7.5** Confusion matrix of ResNet 50 network without augmentation.
+
+
+    |  | Crackle | Normal | Rhonchi | Wheeze |
+
+    |---|---:|---:|---:|---:|
+
+    | Crackle | 71 | 9 | 1 | 3 |
+
+    | Normal | 3 | 18 | 0 | 1 |
+
+    | Rhonchi | 0 | 0 | 10 | 0 |
+
+    | Wheeze | 3 | 4 | 5 | 25 |
+
+
+    # **Table 7.6** Confusion matrix of ResNet 50 network with augmentation.
+
+
+    |  | Crackle | Normal | Rhonchi | Wheeze |
+
+    |---|---:|---:|---:|---:|
+
+    | Crackle | 72 | 3 | 0 | 0 |
+
+    | Normal | 0 | 75 | 0 | 0 |
+
+    | Rhonchi | 0 | 0 | 75 | 0 |
+
+    | Wheeze | 0 | 1 | 0 | 74 |'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '**Table 7.7** Precision and recall for ResNet 50 model without augmentation.
+
+
+    | Class | Accuracy (%) | Precision | Recall | F1 score |
+
+    |---|---:|---:|---:|---:|
+
+    | Crackle | 87.58 | 0.85 | 0.92 | 0.88 |
+
+    | Normal | 88.89 | 0.82 | 0.58 | 0.68 |
+
+    | Rhonchi | 96.08 | 1 | 0.63 | 0.77 |
+
+    | Wheeze | 89.54 | 0.68 | 0.86 | 0.76 |
+
+
+    **Table 7.8** Precision and recall for ResNet 50 model with augmentation.
+
+
+    | Class | Accuracy (%) | Precision | Recall | F1 score |
+
+    |---|---:|---:|---:|---:|
+
+    | Crackle | 99 | 0.96 | 1 | 0.98 |
+
+    | Normal | 98.67 | 1 | 0.95 | 0.97 |
+
+    | Rhonchi | 100 | 1 | 1 | 1 |
+
+    | Wheeze | 99.67 | 0.99 | 1 | 0.99 |
+
+
+    without augmentation and 98.75% for the case of with augmentation. This indicates
+    that deeper networks prove efficient both in terms of computation and the number
+    of parameters. In addition, the model with good accuracy both in case of with
+    and without augmentation, i.e., ResNet-50 is assessed with various metrics namely
+    accuracy, precision, recall, and F1 score. Based on results from Table 7.8, the
+    high values of precision, recall, and F1 score shows that the validation accuracy
+    is better for augmented data in all classes of respiratory sounds.
+
+
+    # 7.5 Conclusion and future scope
+
+
+    Owing to the challenges in incorporating the conventional data augmentation techniques
+    for time-frequency representation of the signal, a novel data augmentation approach
+    has experimented for the signal under study. In this chapter, GAN an unsupervised
+    learning structure is utilized to generate the synthetic images for the different
+    classes of respiratory sounds. For improved targeting on the image generation,
+    the conditional information is imposed to basic GAN. The contradictory learning
+    behavior of conditional GAN gives rise to the generation of scalogram images really
+    close to original scalogram images of respiratory sounds. It is also found that
+    the performance of modeled discriminator network predominates the generator network
+    and therefore categorizes the majority of the images accurately. In addition,
+    the performance of the data augmentation approach is evaluated with different
+    pretrained deep learning classifiers and compared with original images without
+    augmentation. The results show that there is a significant improvement in the
+    classification accuracy of all models in the data augmentation approach in comparison
+    with without cGAN. Furthermore, the testing accuracy of ResNet 50 model produces
+    an increased accuracy of 98.75% with high values of precision, recall, and F1
+    score for all'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'classes of respiratory sounds resulting in better prediction. This study can
+    be further extended with other types of GaN such as cycle GaNs and Wasserstein
+    GaNs for the synthetic generation of images. The same setup can be compared with
+    the generation of images using variational convolutional autoencoder to produce
+    a better prediction model.
+
+
+    # References
+
+
+    +   1. https://www.healthypeople.gov/2020/topics-objectives/topic/respiratory-diseases
+    (Respiratory Diseases—Accessed 10 May 2020).
+
+    +   2. http://www.who.int/gard/publications/The_Global_Impact_of_Respiratory_Disease.pdf
+    (Global impact of Respiratory diseases—Accessed 05 May 2020).
+
+    +   3. M. Satkar, I. Madhbhavi, N. Niranjan, M. Dogra, Auscultation of the respiratory
+    system. Ann. Thoracic Med. 10 (3) (2015) 158.
+
+    +   4. A. Sharif Razavian, H. Azizpour, J. Sullivan, S. Carlsson, CNN features
+    off-the-shelf: an astounding baseline for recognition, in: Proceedings of the
+    IEEE Conference on Computer Vision and Pattern Recognition Workshops, 2014, pp.
+    806–813.
+
+    +   5. S. Jayalakshmy, G. F. Sultana, Scalogram based prediction model for respiratory
+    disorders using optimized convolutional neural networks, Artif. Intell. Med. 103
+    (2020) 101809.
+
+    +   6. I. J. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S.
+    Ozair, et al., Generative adversarial networks, 2014, arXiv preprint arXiv:1406.2661.
+
+    +   7. P. Costa, A. Galdran, M. I. Meyer, M. D. Abramoff, M. Niemeijer, A. M.
+    Mendonça, A. Campilho, Towards Adversarial Retinal Image Synthesis, 2017, arXiv
+    preprint arXiv:1701.08974.
+
+    +   8. L. Bi, J. Kim, A. Kumar, D. Feng, M. Fulham, Synthesis of positron emission
+    tomography (PET) images via multi-channel generative adversarial networks (GANs),
+    in: Molecular Imaging, Reconstruction and Analysis of Moving Body Organs, and
+    Stroke Imaging and Treatment, Springer, Cham, 2017, pp. 43–51.
+
+    +   9. M. Frid-Adar, E. Klang, M. Amitai, J. Goldberger, H. Greenspan, Synthetic
+    data augmentation using GAN for improved liver lesion classification, in: 2018
+    IEEE 15th International Symposium on Biomedical Imaging (ISBI 2018), IEEE, 2018,
+    April, pp. 289–293.
+
+    +   10. H. Salehnejad, S. Valade, T. Dowdell, E. Colak, J. Barnett, Generalization
+    of deep neural network for chest pathology classification in X-rays using generative
+    adversarial networks, in: 2018 IEEE International Conference on Acoustics, Speech
+    and Signal Processing (ICASSP), IEEE, 2018, April, pp. 990–994.
+
+    +   11. D. Bhattacharya, S. Banerjee, S. Bhattacharya, B. U. Shankar, S. Mitra,
+    GAN-based novel approach for data augmentation with improved disease classification,
+    in: Advancement of Machine Intelligence in Interactive Medical Image Analysis,
+    Springer, Singapore, 2020, pp. 229–239.
+
+    +   12. W. Dai, J. Doyle, X. Liang, H. Zhang, N. Dong, Y. Li, E. P. Xing, Scanstructure
+    correcting adversarial network for chest X-rays organ segmentation, arXiv (2017),
+    arXiv preprint arXiv:1703.06870.
+
+    +   13. Y. Onishi, A. Teramoto, M. Tsujimoto, T. Tsukamoto, K. Saito, H. Toyama,
+    H. Fujita, Automated pulmonary nodule classification in computed tomography images
+    using a deep convolutional neural network trained by generative adversarial networks,
+    BioMed Res. Int. 2019 (2019) 6051939. https://doi.org/10.1155/2019/6051939.
+
+    +   14. P. Chaudhari, H. Agrawal, K. Kotecha, Data augmentation using MC-GAN for
+    improved cancer classification on gene expression data, Soft Comput. 24 (2019)
+    11381–11391.
+
+    +   15. Z. Luo, S. Y. Cheng, Q. Y. Zheng, GAN-based augmentation for improving
+    CNN performance of classification of defective photovoltaic module cells in electroluminescence
+    images, in: IOP Conference Series: Earth and Environmental Science, vol. 354 (1),
+    IOP Publishing, 2019, October, p. 012106.
+
+    +   16. J. Li, H. He, L. Li, C. Chen, A novel generative model with bounded-GAN
+    for reliability classification of gear safety, IEEE Trans. Ind. Electr. 66 (11)
+    (2019) 8772–8781.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '+   [17] A. Shrivastava, T. Pfister, O. Tuzel, J. Susskind, W. Wang, R. Webb,
+    Learning from simulated and unsupervised images through adversarial training,
+    in: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition,
+    2017, pp. 2107–2116.
+
+
+    +   [18] C. Donahue, J. McAuley, M. Puckette, Adversarial Audio Synthesis, 2018,
+    arXiv preprint arXiv:1802.04208.
+
+
+    +   [19] J. Shen, R. Pang, R.J. Weiss, M. Schuster, N. Jaitly, Z. Yang, R.A. Saurous,
+    Natural TTS synthesis by conditioning wavenet on Mel spectrogram predictions,
+    in: 2018 IEEE International Conference on Acoustics, Speech and Signal Processing
+    (ICASSP), IEEE, 2018, April, pp. 4779–4783.
+
+
+    +   [20] A. Marafioti, N. Perraudin, N. Holighaus, P. Majdak, Adversarial generation
+    of time-frequency features with application in audio synthesis, in: International
+    Conference on Machine Learning, 2019, May, pp. 4352–4362.
+
+
+    +   [21] S. Dieleman, A.V.D. Oord, K. Simonyan, The challenge of realistic music
+    generation: modelling raw audio at scale, 2018, arXiv preprint arXiv:1806.10474.
+
+
+    +   [22] K. Kumar, R. Kumar, T. de Boissiere, L. Gestin, W.Z. Teoh, J. Sotelo,
+    et al. MelGAN: generative adversarial networks for conditional waveform synthesis,
+    in: Advances in Neural Information Processing Systems, 2019, pp. 14910–14921.
+
+
+    +   [23] S. Vasquez, M. Lewis, MelNet: A Generative Model for Audio in the Frequency
+    Domain, 2019, arXiv preprint arXiv:1906.01083.
+
+
+    +   [24] M. Mirza, S. Osindero, Conditional Generative Adversarial Nets, 2014,
+    arXiv preprint arXiv:1411.1784.
+
+
+    +   [25] Y. Qian, H. Hu, T. Tan, Data augmentation using generative adversarial
+    networks for robust speech recognition, Speech Commun., 114 (2019) 1–9.
+
+
+    +   [26] https://www.mathworks.com/help/deeplearning/ug/train-conditional-generative-adversarial-network.html
+    (Conditional Generative Adversarial Networks—Accessed 20 April 2020).
+
+
+    +   [27] A.H. Naimi, J. Sadowsky, The continuous wavelet transform and variable
+    resolution time-frequency analysis, Johns Hopkins APL Techn. Digest 18 (1) (1997)
+    134–140.
+
+
+    +   [28] L. Balagourouchetty, J.K. Pragatheeswaran, B. Pottakkat, G. Ramkumar,
+    GoogLeNet based ensemble FCNet classifier for focal liver lesion diagnosis, IEEE
+    J. Biomed. Health Inform. 24 (6) (2020) 1686–1694.
+
+
+    +   [29] The R.A.L.E. Repository. Rale.ca.N.P., 2017. Web. 28 February 2017.
+
+
+    +   [30] https://www.thinklabs.com/lung-sounds (Lung sounds Library—Accessed 24
+    January 2019).
+
+
+    +   [31] B.M. Rocha, D. Filos, L. Mendes, G. Serbes, S. Ulukaya, Y.P. Kaly[a],
+    E. Kahya, et al. An open access database for the evaluation of respiratory sound
+    classification algorithms, Physiol. Measur. 40 (3) (2019), 035001.'
+  merge: -1
+  img_proc: true
