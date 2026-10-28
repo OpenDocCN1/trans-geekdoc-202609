@@ -1,0 +1,16 @@
+significant advancement in creating (very) secure digital signature schemes, there is always room for improvement. One of the main areas of research is the creation of novel schemes that meet strict security requirements while being economical with regard to key and signature sizes and verification computation times.
+
+The art of sending data in a way that a third party cannot interpret is known as cryptography. Any form can be used for the data. Encryption and decryption are the two fundamental procedures of cryptography (Gary C Kessler, 1998).
+
++   - Encryption is the process by which the sender transforms the original data into unreadable cipher data using a key, or, to put it another way, a set of rules.
++   - On the receiving end, decryption is the process of reversing the ciphertext into the original data using a key, or more precisely, a set of rules.
+
+These are the two steps by which cryptography saves the information from sharing it with other than the desired person while transferring it. Though there are many types of cryptography, encrypt and decrypt cryptography can be classified into symmetric cryptography, otherwise known as secret key cryptography (SKC), asymmetric cryptography, or public key cryptography (PKC) and hash function.
+
+Digital Signatures’ Security Considerations, Correctness and Soundness of a digital signature technique are primary requirements in Security Notions of Digital Signatures. Informally, correctness is defined as “the scheme works,” that is, every signature for every message created by the scheme’s signing algorithm using any secret key. It should always result in a valid output from the verification algorithm when the signature, message, and associated public key are entered. In layman’s terms, “the scheme is secure” indicates that no effective algorithm or adversary can break any of the scheme’s security properties with a non-negligible probability. In theory, it would be preferable if it were impossible to create a legitimate message signature without the secret key.
+
+GMR88 originally introduced several key security concepts. An attack result, which outlines the objective an adversary must accomplish in order to breach the scheme’s security, and an attack model, which characterises the capability and strength of an adversary, combine to formalise the idea of security. There are many security notions depending on the model and the goals
+
+**Existentially Unforgeable under Non-adaptive Chosen-message Attacks** (EUF-naCMA): An adversary must select a set of messages prior to viewing the scheme’s public key. The public key and matching signatures for the selected messages are then given to the attacker. The opponent wants to create a new, random message of his choosing and forge a legitimate signature on it.
+
+**Existentially Unforgeable under Chosen-Message Attack** (EUF-CMA): After obtaining the public key, the adversary can choose messages and get the accompanying signatures in an adaptive manner, whereas adaptively is defined as relying on the public key or prior signatures. Once more, the adversary wants to forge a legitimate signature on a fresh, random message of his choosing.
