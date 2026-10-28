@@ -1,0 +1,9 @@
+vectors in a bounded real vector space. Here, one word is represented by a single vector of fixed dimensionality, say a few hundred dimensions. Distributed representations work on the principle that a word is represented by all the other words that it relates within the context in which it is used. In this way, two words that are related in meaning or that have been seen in similar contexts will also have close vectors. These representations are obtained from large text datasets by the use of methods such as Word2Vec, GloVe, and FastText using unsupervised learning. The resulting vectors of words, known as word embeddings, retain both syntactic and semantic information of words to help NLP make profound sense of the natural language. Word vectors or distributed word representations are the methods of encoding words as high-dimensional vectors in a bounded real vector space. Here, one word is represented by a single vector of fixed dimensionality, say a few hundred dimensions.
+
+Distributed word representations are helpful because they allow NLP models to manage the vectorial, high-numbered and sparse characteristic of language evidence. They allow to encode words into vectors in continuous space, maintain the word semantics in the continuous vector space, while reducing the dimensionality of the vector space and information can be transferred from one NLP task to another.
+
+# Question 3: What is the difference between word embeddings and traditional one-hot encoding for word representation?
+
+Answer: Word embeddings and traditional one-hot encoding are two different methods of representing words in NLP:
+
++   • Word embeddings:

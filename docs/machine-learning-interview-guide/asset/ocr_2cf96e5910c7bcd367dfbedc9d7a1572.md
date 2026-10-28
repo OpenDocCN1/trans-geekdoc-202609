@@ -1,0 +1,9 @@
+Answer: In SVM, a hyperplane is another way of saying the analyzed dividing line or a plane that divides data points of different classes. It is chosen to define the maximum margin, which is in fact, the hyperplane distance to the neighboring class’s samples, also known as the **support vectors**. The placement of the hyperplane helps choose concrete classes for new entities, which makes it such a vital element for the procedure. SVM improves the generalization in classification problems by identifying the hyperplane for the maximum margin.
+
+# Question 2: How does SVM handle linearly inseparable datasets, and what is the role of the kernel trick?
+
+Answer: To handle non-separable data, SVM uses a trick called the **kernel trick** to transform the data into a higher-dimension. If the data cannot be separated by the linear hyperplane in the original space, then one can use the trick called the kernel trick; the data is transformed to a higher-dimensional space. In this transformed space, the field known as linear models, that is a hyperplane, can be used to classify the data. The kernel trick helps in not having to compute the exact coordinates in the higher-dimensional space, so it is faster. This enables SVM to utilize the kernel trick, which helps it classify data that is not linearly classifiable in the original feature space.
+
+# Question 3: Discuss the importance of the cost parameter (C) in SVM and its impact on the balance between bias and variance.
+
+Answer: The cost parameter (C) controls the error factor of the SVM model and decides the balance between the model’s bias and variance. A less C results in wider margins, high bias, and good generalization, but low accuracy on the training dataset. A larger C will have a

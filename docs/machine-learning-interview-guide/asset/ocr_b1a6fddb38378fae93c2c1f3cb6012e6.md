@@ -1,0 +1,9 @@
+Answer: In logistic regression, some terms may include separation, which means that the model provides a perfect prediction of the outcome for some values of the predictor variables, resulting in a division or separation of the data. In other words, separation occurs when the predictor variables can perfectly distinguish between the outcome classes, meaning there is a clear division between the groups (for example, all instances of one outcome have a higher or lower value of a predictor than all instances of the other outcome). This leads to infinite coefficient estimates and nonsensical values of the constructed model. Possible solutions to manage separation include adding regularization, Firth's penalized likelihood, category combination methods, prior incorporation in the Bayesian logistic regression, and suitable exact logistic regression procedures. They assist in reducing variations of maximum likelihood estimates and enhance performance in case of separation.
+
+# Question 10: What is multiclass logistic regression, and how does it work?
+
+Answer: Multaclass logistic regression, which is also referred to as softmax regression or multinomial logistic regression, is just an enhanced version of binary logistic regression to deal with multiple classes. In this model, one of the variables is split into two or more smaller groups and thus has more than two categories. The objective is to estimate the probability of each class, and the one with the highest probability will be chosen as the outcome.
+
+Here is a brief overview of how multiclass logistic regression works:
+
++   • **Model setup**: Similar to binary logistic regression, the model uses the matrices to calculate weighted sums of the input features. Each class has its own set of weights and a bias term. The model calculates a

@@ -1,0 +1,1 @@
+> *You both taught me that while money is a means to facilitate our journey, it is respect, compassion, and the enjoyment of life’s finer elements that enrich our existence.*

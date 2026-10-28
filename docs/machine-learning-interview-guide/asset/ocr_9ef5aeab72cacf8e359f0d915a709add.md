@@ -1,0 +1,7 @@
+# About the Author
+
+Rehan Guha is a versatile individual who balances his roles as a researcher, scholar-lecturer, writer, and social analyst/commentator. Serving his initial days as a coder and developer, Rehan is now inclined towards Machine Learning and Algorithms. Aptly, his primary focus areas include General Science, Technology, Philosophy and Socio-economics. He holds a graduate degree from ‘The Institute of Engineering & Management, Kolkata’ and a Postgraduate certification in Deep Learning from the Indian Institute of Technology, Kharagpur (IIT-K, AICTE-approved course).
+
+Rehan's research interests include Optimization Problems, Explainable AI, Deep Learning Architecture, Machine Learning, and Algorithmic Thinking. He has written and published several articles in scholarly and open sources and possesses several patents, of which one is dedicated to the Indian Army. In his eight years of experience in Information Technology, he has had exposure across different business units, including Banking, Medicine, Law, Insurance, Freight and Logistics, and Telecom, notably securing a patent for a solution addressing Dispute Banking and Credit Risk.
+
+Currently, Rehan has penned down a book, namely “Machine Learning Cookbook with Python”, published by BPB Publications. He has published several papers, filed multiple patents, and competitively contributed to events such as SoilScope under NSF funding and with NASA

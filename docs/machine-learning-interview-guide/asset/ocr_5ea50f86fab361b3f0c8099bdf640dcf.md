@@ -1,0 +1,6 @@
+|  |  |  |
+|---|---|---|
+|  | a linear transformation of the original features. Each dimension corresponds to a linear combination of the original features. | Approximation and Projection (UMAP), often result in less interpretable embeddings due to the complex relationships they capture. |
+| Computational complexity | Linear methods are computationally efficient and often have closed-form solutions. They scale well to large datasets and high dimensions. | Nonlinear methods, especially those based on optimization, can be computationally expensive, making them less suitable for large datasets. |
+| Preservation of global versus local structures | Linear methods preserve global structures well, making them suitable for tasks where global relationships are important. | Nonlinear methods excel at preserving local structures and capturing intricate patterns and clusters in the data. |
+| Robustness to noise and outliers | Linear methods may be less robust to noise and outliers as | Nonlinear methods offer better resilience to noise and |

@@ -1,0 +1,9 @@
++   - **Data augmentation strategies:** Doing techniques like replacing synonyms of some words or masking some entities also reduces data scarcity problems and increases the ability of the model to generalize.
++   - **Zero-shot and few-shot learning:** These approaches allow NER models to identify the entities not requiring all the entity training data with the help of structured knowledge base or ontologies.
++   - **Cross-lingual NER:** Most studies in this field involve closely related languages to attempt at attaining cross-lingual NER, this is by using approaches such as multilingual pre-training and cross-lingual transfer learning.
+
+All of these developments add up to enable better named entity recognition systems and that makes it important to have in various NLP tasks.
+
+# **Word embeddings and word representation**
+
+Word vectors and word encoding are NLP methods which involve converting words into numerical vectors that express their meanings and associated meanings. These methods, including Word2Vec, and **Global Vectors for Word Representation** (GloVe), as well as contextual embeddings from other models, including BERT, make it easier for the machines to understand as well as deal with natural language. They express the words in the new space by preserving the syntactic and semantic relationships between them; this happens because many problems of language processing, such as translation, analysis of emotions, and search for information, have been solved thanks to embeddings. Word embeddings are essential in machine learning concepts as this makes it easy to develop

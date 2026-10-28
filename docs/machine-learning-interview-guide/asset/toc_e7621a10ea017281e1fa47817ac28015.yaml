@@ -1,0 +1,44 @@
+level_changes:
+- line: 70
+  before: 2
+  after: 1
+- line: 74
+  before: 2
+  after: 1
+- line: 78
+  before: 2
+  after: 1
+- line: 82
+  before: 2
+  after: 1
+- line: 86
+  before: 2
+  after: 1
+- line: 90
+  before: 2
+  after: 1
+- line: 1063
+  before: 2
+  after: 1
+- line: 2126
+  before: 2
+  after: 1
+- line: 4118
+  before: 2
+  after: 1
+- line: 5165
+  before: 2
+  after: 1
+text_changes:
+- line: 268
+  before: 问题16：什么是特征工程？为什么它在监督学习中至关重要？
+  after: 问题 16：什么是特征工程？为什么它在监督学习中至关重要？
+- line: 276
+  before: 问题17：在监督学习中，如何高效地处理大型数据集？
+  after: 问题 17：在监督学习中，如何高效地处理大型数据集？
+- line: 286
+  before: 问题18：解释重采样技术的概念，例如过采样和欠采样。
+  after: 问题 18：解释重采样技术的概念，例如过采样和欠采样。
+- line: 294
+  before: 问题1：数据的维度如何影响聚类算法的选择和性能？
+  after: 问题 1：数据的维度如何影响聚类算法的选择和性能？

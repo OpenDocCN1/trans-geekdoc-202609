@@ -1,0 +1,8 @@
+**Answer**: Yes, there are scenarios where SVR may not be the most suitable choice for regression tasks. They are as follows:
+
++   - **Large datasets**: Because of the amount of computation required in the process of SVR, it is less ideal for large-sized datasets where simple regression models or other compact algorithms can perform rather faster.
++   - **Linear relationships**: When the dependent variable interaction with the features is primarily linear, and other models do not necessarily tend to be more efficient or easier to interpret, then basic linear regression models should suffice.
++   - **High-dimensional data**: SVR fails at large scales and, therefore, can be less effective on high-dimensional data sets, where it may be better to employ dimensionality reduction techniques or other kinds of algorithms.
++   - **Interpretability**: Algorithms such as those based on SVR are often referred to as black-box, which can complicate the reviewed relationships interpretation; this may not be desirable where high interpretability is required.
++   - **Small datasets with many features**: The major weakness is that SVR may be overfitting or might be an issue of generalization especially in a case where there are a small number of cases with a large number of variables where simpler models will work better or when a model of higher order of generality has to be used.
++   - **Time-series data with simple patterns**: For the cases of time series with simple trends, the other

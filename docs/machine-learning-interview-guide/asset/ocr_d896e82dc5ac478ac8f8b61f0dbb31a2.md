@@ -1,0 +1,9 @@
+# Question 5: Discuss the impact of the number of trees (n_estimators) on the performance of a random forest.
+
+**Answer**: The number of trees, controlled by the parameter **n_estimators**, has a notable impact on the performance of a random forest. They are:
+
++   - **Improvement with more trees**: First of all, with the growing amount of trees in the random forest, there is observed an improvement in accuracy in the training set, owing to the redundancy of the models and the inclusion of more complex patterns of the training set.
++   - **Diminishing returns**: There is a point beyond which constructing more trees will not pay out as much in terms of the overall betterment of the performance. It is apparently, when the model may get to the converging point, that adding extra trees will make a relatively infinitesimal contribution.
++   - **Computational cost**: The time taken to train and utilize random forest also rises with the number of trees in the forest. Training more trees takes additional time and resources intern it increases the cost of the model.
++   - **Trade-off**: This means that there is a direct conflict involving two very important factors that are crucial in model performance, these are the complexity of the model and the computational speed. The decision to choose the approach depends on the certain problem, amount of computing resources which can be used and the level of accuracy needed.
++   - **Rule of thumb**: For the number of trees, it is suggested to start with a moderate number and then prorate up or down depending on the results of the model. To find the number of trees, a good starting

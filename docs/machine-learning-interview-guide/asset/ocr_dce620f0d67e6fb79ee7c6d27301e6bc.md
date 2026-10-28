@@ -1,0 +1,8 @@
++   - **Addressing**: Perform cluster or unit root test or use a more appropriate technique model for handling dependent data structures.
++   - **Sensitivity to outliers**: This model is sensitive to outliers since extreme values in the y variable or the predictors x will affect the parameters. We can address it by:
++     - **Addressing**: In terms of dealing with outliers, decide whether there are some special observations that should be removed; if yes, then do it. There are cases, however, when the outliers should not be removed, in that case, one should optimize the estimation of regression coefficients, but it is advisable to turn to robust techniques of regression; data transformation may also be used.
++   - **Assumption of linearity in log-odds**: In so doing, the model assumes linearity in the log-odds though this may not be the case at all times. We can address it by:
++     - **Addressing**: The key is to check for non-linearity and if present, use transformations or try a different model. Generalized additive models are better if the data is curvilinear.
++   - **Inability to handle missing data well**: Logistic regression may be sensitive to missing data. We can address it by:
++     - **Addressing missing data**: Fill in missing values, use multiple imputation or a model that has a better way to handle missing data.
++   - **No natural handling of interactions**: An aspect that may limit the use of logistic regression is that it may not easily incorporate the interaction effects of the predictor variables. We can address it by:
