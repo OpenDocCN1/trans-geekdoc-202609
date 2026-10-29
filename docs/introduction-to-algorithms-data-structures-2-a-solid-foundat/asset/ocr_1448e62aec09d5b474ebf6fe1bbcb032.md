@@ -1,0 +1,3 @@
+The name "unrolled" comes from the fact that the array in each node is "unrolled" or flattened out, as opposed to a traditional linked list where each node contains only a single element and a pointer to the next node.
+
+Unrolled linked lists are particularly useful for applications where insertions and deletions are frequent, as they can reduce the overhead of memory management. They are also useful in situations where the size of the elements being stored is fixed, as the size of each node in the list can be made to match the size of the elements. However, they may be less efficient for applications that require frequent random access to individual elements in the list.

@@ -1,0 +1,101 @@
+level_changes:
+- line: 90
+  before: 2
+  after: 3
+- line: 92
+  before: 3
+  after: 4
+- line: 96
+  before: 3
+  after: 5
+- line: 138
+  before: 3
+  after: 4
+- line: 142
+  before: 3
+  after: 5
+- line: 223
+  before: 2
+  after: 4
+- line: 253
+  before: 2
+  after: 4
+- line: 261
+  before: 2
+  after: 4
+- line: 263
+  before: 3
+  after: 5
+- line: 295
+  before: 3
+  after: 5
+- line: 393
+  before: 2
+  after: 5
+- line: 399
+  before: 2
+  after: 4
+- line: 419
+  before: 2
+  after: 4
+- line: 425
+  before: 2
+  after: 3
+- line: 429
+  before: 3
+  after: 4
+- line: 607
+  before: 2
+  after: 4
+- line: 615
+  before: 2
+  after: 4
+- line: 828
+  before: 2
+  after: 3
+- line: 830
+  before: 3
+  after: 4
+- line: 842
+  before: 3
+  after: 4
+- line: 855
+  before: 2
+  after: 3
+- line: 865
+  before: 3
+  after: 4
+- line: 890
+  before: 2
+  after: 4
+- line: 901
+  before: 2
+  after: 4
+- line: 917
+  before: 2
+  after: 4
+- line: 935
+  before: 2
+  after: 4
+- line: 945
+  before: 2
+  after: 3
+text_changes:
+- line: 0
+  before: 算法与数据结构 2 入门指南：机器学习与数据分析现实世界的坚实基础
+  after: 算法与数据结构 2 入门指南：机器学习与数据分析的现实世界的坚实基础
+- line: 96
+  before: 什么是数据结构？
+  after: 2.2.1.1. 什么是数据结构？
+- line: 142
+  before: 数据结构上的操作
+  after: 2.2.2.1. 数据结构上的操作
+- line: 263
+  before: 数组搜索
+  after: 2.2.5.1. 数组搜索
+- line: 295
+  before: 数组插入
+  after: 2.2.5.2. 数组插入
+- line: 393
+  before: 数组删除
+  after: 2.2.5.3. 数组删除
