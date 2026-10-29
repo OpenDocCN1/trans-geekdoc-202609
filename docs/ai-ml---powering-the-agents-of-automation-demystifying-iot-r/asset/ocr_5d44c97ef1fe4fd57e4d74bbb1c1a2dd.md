@@ -1,0 +1,8 @@
++   - NexCOBOT, a NEXCOM company, offers a flexible, modular robotics solution integrating artificial intelligence (AI) with machine vision, powered by Intel® Vision Accelerator Design products and optimized by the Intel® Distribution of OpenVINO™ toolkit.
++   - Outdu’s devices use Intel® technologies to analyze videos at the edge and give retail and other high-footfall environments immediate, actionable insights.
++   - Philips demonstrates a breakthrough performance for AI inferencing of healthcare workloads run on servers powered by Intel® Xeon® Scalable processors and optimized with the OpenVINO™ toolkit.
++   - QNAP/IEI partnered with INTEL to offer developers, data scientists, medical researchers, and students a quick-to-deploy computer vision system combining a workstation, deep learning software development kit (Intel® Distribution of OpenVINO™ toolkit), and powerful NAS ( network attached storage).
+
+# CONCLUSION
+
+Machine learning has given a new life and wings to the Artificial Intelligence paradigm. The advent of Big Data, Cloud computing and Machine Learning together with Artificial Intelligence are shaping our new world of automation. The ‘Agents of Automation’ of tomorrow are going to use every weapon in the armour provided by these technologies to take us into an unimaginable world that has got the capacity to augment and enhance our productivity and quality of lives. We have seen how different types of AI and ML algorithms work and provide customized rendering to different applications. All these are going to be used in some form or the other if not in combination to power the workforce of autonomous objects that we will discuss in the coming chapters.

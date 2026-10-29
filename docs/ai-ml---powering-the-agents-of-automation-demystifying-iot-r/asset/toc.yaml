@@ -1,0 +1,101 @@
+level_changes:
+- line: 568
+  before: 2
+  after: 3
+- line: 910
+  before: 2
+  after: 3
+- line: 1201
+  before: 2
+  after: 3
+- line: 1458
+  before: 2
+  after: 3
+- line: 2119
+  before: 2
+  after: 3
+- line: 2890
+  before: 2
+  after: 3
+- line: 2963
+  before: 2
+  after: 3
+- line: 3245
+  before: 2
+  after: 3
+- line: 116
+  before: 3
+  after: 4
+- line: 128
+  before: 3
+  after: 4
+- line: 133
+  before: 3
+  after: 4
+- line: 235
+  before: 3
+  after: 4
+- line: 241
+  before: 3
+  after: 4
+- line: 249
+  before: 2
+  after: 4
+- line: 570
+  before: 3
+  after: 4
+- line: 578
+  before: 3
+  after: 4
+- line: 585
+  before: 3
+  after: 4
+text_changes:
+- line: 611
+  before: B. 来自计算机系统的數據
+  after: C. 来自计算机系统的数据
+- line: 1191
+  before: Conclusion
+  after: 结论
+- line: 1199
+  before: CHAPTER 6
+  after: 第六章
+- line: 1456
+  before: 第 7 章
+  after: 第七章
+- line: 2117
+  before: 第8章
+  after: 第八章
+- line: 2701
+  before: 第 9 章
+  after: 第九章
+- line: 2888
+  before: 第10章
+  after: 第十章
+- line: 2959
+  before: CHAPTER 11
+  after: 第十一章
+- line: 3243
+  before: 第12章
+  after: 第十二章
+- line: 3395
+  before: 第13章
+  after: 第十三章
+- line: 566
+  before: 第4章
+  after: 第四章
+- line: 908
+  before: 第5章
+  after: 第五章
+- line: 2668
+  before: 第 5 级解决
+  after: 第五级解决
+- line: 2672
+  before: 第 6 级流畅
+  after: 第六级流畅
+- line: 2682
+  before: 第 5 级解决
+  after: 第五级解决
+- line: 2686
+  before: 第 6 级流畅
+  after: 第六级流畅

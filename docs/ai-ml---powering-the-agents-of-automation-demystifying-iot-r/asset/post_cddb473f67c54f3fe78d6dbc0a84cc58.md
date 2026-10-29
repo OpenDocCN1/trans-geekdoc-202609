@@ -1,0 +1,131 @@
+
+## Errata
+
+We take immense pride in our work at BPB Publications and follow best practices to ensure the accuracy of our content to provide with an indulging reading experience to our subscribers. Our readers are our mirrors, and we use their inputs to reflect and improve upon human errors if any, occurred during the publishing processes involved. To let us maintain the quality and help us reach out to any readers who might be having difficulties due to any unforeseen errors, please write to us at :
+
+**errata@bpbonline.com**
+
+Your support, suggestions and feedback are highly appreciated by the BPB Publications Family.
+
+## Table of Contents
+
+- 1. Introduction to Automated Personal Assistants:
+- Past, Present and Future................................................... 1
+- 2. Disruptive Models Led by Digitization................................................... 5
+- Introduction............................................................... 5
+- Structure................................................................ 6
+- Conclusion............................................................... 11
+- 3. Machine Learning and Artificial Intelligence ................................ 13
+- Introduction............................................................... 13
+- Structure................................................................ 13
+- Objectives............................................................... 14
+- The Rise of Machine Learning .............................................. 18
+- Computer Vision........................................................ 23
+- Data Analysis and Data Visualization....................................... 23
+- General Purpose ML........................................................ 23
+- Natural Language Processing............................................... 23
+- Topic Modelling .......................................................... 23
+- Resources For Learning Data Science........................................ 24
+- Case Study: Intel® OpenVINO™ Toolkit for Advanced Industry 4.0 Applications.................................................. 25
+- OpenVINO™ Toolkit Contains ............................................... 26
+- Conclusion............................................................... 28
+- 4. Internet of Things, Industry 4.0 and Factories of Tomorrow ...... 29
+- Introduction............................................................... 29
+- Structure................................................................ 30
+- Objective ............................................................... 30
+- What is IoT?.............................................................. 32
+- Data Management in a Typical Enterprise and the Threat of Single Point of Failure.......................................... 49
+- Conclusion............................................................... 51
+- 5. Robots ........................................................ 53
+- Introduction................................................ 53
+- Structure................................................... 53
+- Objective .................................................. 54
+- Important Skills of A Robot................................ 55
+- Advantages and Disadvantages of Robots .................... 56
+- Laws of Robotics............................................ 57
+- Systems in a Robot.......................................... 58
+- Components of a Robot ...................................... 59
+- Planning the Project ....................................... 63
+- Procuring the Components and Assemblies ................... 63
+- Robot Microcontrollers ..................................... 64
+- Robot Sensors............................................... 64
+- Robot Servos................................................ 64
+- Robot Arms and Legs......................................... 64
+- ROS (Robot Operating System) ............................... 65
+- Microsoft Robotics Developer Studio........................ 65
+- Evolution of Robots And Their Increased Utility With The Advent of AI and ML.................................... 67
+- Robots and Automation in Airports .......................... 67
+- Self Servicing Check in Agents at the Airports ............ 68
+- Conclusion.................................................. 72
+- 6. Robotic Process Automation .................................. 75
+- Introduction................................................ 75
+- Structure................................................... 75
+- Objective .................................................. 76
+- What is RPA or Robotic Process Automation? ................ 77
+- Levels of RPA............................................... 78
+- RPA And BPM (Business Process Management) .................. 78
+- The Predominantly Types of Roles In RPA Projects ........... 79
+- Process Developers.......................................... 79
+- Business Users.............................................. 80
+- Solution Architects ................................................ 80
+- Technical Consultants ................................................ 80
+- Developers and Project Managers....................................... 81
+- Blueprism.............................................................. 81
+- UiPath................................................................... 81
+- Kofax Kapow............................................................ 82
+- Automation Anywhere .................................................. 82
+- NICE...................................................................... 82
+- Bots .................................................................... 83
+- Considerations for RPA Investments .................................... 83
+- Examples of RPA Applications And Implementations...................... 85
+- Automation Anywhere Enterprise BOT Management Platform................... 87
+- Some Use Cases ....................................................... 89
+- Conclusion............................................................. 89
+- 7. Drones.............................................................. 91
+- Introduction........................................................... 91
+- Structure.............................................................. 91
+- Objective ............................................................. 92
+- A Brief Overview of Drones ............................................ 92
+- Drones’ Body Comprises the Following Components...................... 92
+- What is a Drone?....................................................... 93
+- History of a Drone..................................................... 94
+- How Does a Drone Work?................................................ 95
+- How Does it Fly?....................................................... 95
+- Components of Drones .................................................. 96
+- Types of Drones ....................................................... 100
+- According to a Number of Propellers................................... 101
+- Note ................................................................... 104
+- Drones Based on Size .................................................. 105
+- According to Equipment ............................................... 107
+- AI in Drones .......................................................... 108
+- Terminology And Description ................................................ 108
+- Uses of AI in the Drone Industry ................................................ 110
+- Summary And Conclusion ................................................ 112
+- 8. Chatbots and Voice Assistants ................................................ 123
+- Introduction ................................................ 123
+- Structure ................................................ 124
+- Objective ................................................ 124
+- What is a Chatbot? ................................................ 125
+- Major Applications Of The Chatbot ................................................ 127
+- History of the Chatbot ................................................ 128
+- How Do Chatbots Work? ................................................ 130
+- Rule-Based Versus AI-Based Chatbots ................................................ 131
+- Good Bots ................................................ 133
+- Bad Bots ................................................ 133
+- Key Steps to Build A Chatbot ................................................ 134
+- Oracle Intelligent Bots ................................................ 141
+- Four Simple Steps to Bot Yourself prerequisites ................................................ 142
+- Create A Bluemix Account create A Conversation Instance.. 142
+- Chatbots On Facebook ................................................ 144
+- Chatbots in HR ................................................ 148
+- Chatbots – The Disruption Ahead ................................................ 149
+- Conclusion ................................................ 157
+- 9. Autonomous Cars ................................................ 159
+- Introduction ................................................ 159
+- Structure ................................................ 159
+- Objective ................................................ 159
+- What are Autonomous Vehicles? ................................................ 160
+- Autonomous Cars Use The Following Essential Technologies ................................................ 163
+- How AI Helps in Building Self-Driven Cars? ................................................ 167
+- Challenges ................................................ 168
+- Limitations ................................................ 168

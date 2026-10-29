@@ -1,0 +1,9 @@
+The unauthorized and unwelcome citing of drones flying over various vital installations in Kerala in March 2019 raises the spectra of misaligned pilots rehearsing before sinister attacks.
+
+IBM and Samsung’s ADEPT platform (Autonomous Decentralized Platform for Telemetry) is one of the landmark initiatives for securing the growing population of the IOT devices which is supposed to cross 10 times of the connected human beings in the next 2-3 years!
+
+Blockchain’s removal of the single point of failure, shared and distributed ledger, secure authentication of identity with appropriate permissions and authorizations in place to interact and end-to-end encryption of transactions, apart from many other advantages, fortifies the IOT devices against any Malware attack, dis-incentivizing them and de-risking the entire ecosystem.
+
+# CONCLUSION
+
+In this chapter, we looked at the various aspects of a digitized world that is witnessing the increasing level of automation. Industry 4.0, led by IIOT, and RPA led back office automation and the employment of bots across various areas of organizational working is changing the face of the Talent Management department, which is calling for new skills and new approaches to keep the workforce engaged and managed. The increased ubiquitous digitization is offering enormous pools of data that is strengthening the muscles of the organizations who are experts in data analytics. The security and privacy requirements of organizations and the users of their products and services are becoming a major concern. Blockchain is offering an effective tool to scale automation in a secure and acceptable to all.
