@@ -1,0 +1,14 @@
+level_changes:
+- line: 27
+  before: 2
+  after: 3
+- line: 44
+  before: 2
+  after: 3
+text_changes:
+- line: 27
+  before: 图 1
+  after: 图1
+- line: 44
+  before: 图 2
+  after: 图2

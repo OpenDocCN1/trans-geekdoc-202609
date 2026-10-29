@@ -1,0 +1,551 @@
+- pgno: 0
+  md: '# Review Article
+
+
+    # What and how can machine learning help to decipher mechanisms in molecular electrochemistry?
+
+
+    Jingwen Sun¹ and Chong Liu¹,²
+
+
+    # Abstract
+
+
+    Electrochemists have long been dedicated to heuristically analyzing electrochemical
+    data with meticulous visual inspection and striving to deterministically assign
+    reaction mechanisms. We contend that machine learning (ML) offers a new approach
+    of mechanistic analysis with high data throughput and minimal human intervention.
+    In this perspective, we propose that the deployment of ML in electrochemistry
+    will enable a probability-driven mechanistic analysis amid the inevitable mechanistic
+    ambiguity. We will discuss examples of ML deployment in electroanalysis, enlist
+    current challenges for experimentalists, and discuss ML''s prospects in molecular
+    electroanalysis. We hope such a discussion will promote and advance ML-aided mechanistic
+    deciphering for electrochemical systems in the long run.
+
+
+    # Addresses
+
+
+    ¹ Department of Chemistry and Biochemistry, University of California Los Angeles,
+    Los Angeles, CA 90095, United States
+
+    ² California NanoSystems Institute, University of California Los Angeles, Los
+    Angeles, CA 90095, United States
+
+
+    Corresponding author: Liu, Chong (chongliu@chem.ucla.edu)
+
+
+    Current Opinion in Electrochemistry 2023, 39:101306
+
+    This review comes from a themed issue on Organic and Molecular Electrochemistry
+    (2023)
+
+    Edited by Cyrille Costentin
+
+    For complete overview about the section, refer Organic and Molecular Electrochemistry
+    (2023)
+
+    Available online 21 April 2023
+
+    https://doi.org/10.1016/j.coelec.2023.101306
+
+    2451-9103/© 2023 Elsevier B.V. All rights reserved.
+
+
+    # Keywords
+
+
+    Molecular electrochemistry, Mechanistic ambiguity, Machine learning, Information-rich
+    dataset, Probability-driven approach.
+
+
+    # Introduction
+
+
+    The essence of electrochemical mechanistic analysis demands the extraction of
+    plausible reaction mechanisms from a finite set of electrochemical data while
+    if possible minimizing the persistent and inevitable mechanistic ambiguity. As
+    illustrated by Feldberg and coworkers in the 1970s for the case of cyclic voltammetry
+    [1], mechanistic ambiguity denotes to the fact that different reaction mechanisms
+    will frequently
+
+
+    converge to similar voltammograms that are indistinguishable within measurement
+    errors, rendering a deterministic mechanistic designation unfeasible when there
+    are competing reaction pathways and multiple possible explanations. Such a surjective
+    relationship between mechanisms and electrochemical data is not limited to cyclic
+    voltammetry but persists in almost all electrochemical techniques, because every
+    electrochemical characterization is indeed perturbations and detections of electric
+    current and voltage with finite temporal resolutions. For decades, multiple electrochemical
+    techniques [2], including voltammetry [3,4], chronoamperometry [5], and alternating-current
+    methods including electrochemical impedance spectroscopy [6,7], have been deployed
+    for mechanistic analysis. Nonetheless, the intrinsic incompatibility between the
+    deterministic mechanistic designation and the mechanistic ambiguity of electrochemical
+    data remains unresolved. Such an incompatibility risks biased, misassigned, or
+    neglected mechanistic findings.
+
+
+    In such a context, we contend that analysis aided by machine learning (ML) will
+    be beneficial for mechanistic studies for molecular electrochemistry if not for
+    electrochemistry in general [8]. It is reasonable to consider MLs well-known expertise
+    in pattern recognition and feature extraction [9] complementary if not substitutive
+    to the manual inspection of electrochemical data [10,11]. The nature of probability-driven
+    analysis in ML algorithms [9] provides a more satisfying accommodation toward
+    the aforementioned mechanistic ambiguity in electrochemistry, potentially yielding
+    a probability distribution for various reaction pathways based on finite electrochemical
+    data and characterization resolutions. Last but not least, the deployment of ML-based
+    analysis algorithm not only heralds automated electrochemical analysis with high
+    data throughput but also opens the opportunities of simultaneous data analysis
+    for multiple electrochemical techniques, a feast untenable by human owing to the
+    data''s nature of high dimensionality.
+
+
+    Encouraged by such a promising perspective, here we attempt to answer one question:
+    what and how can ML help with mechanistic analysis in molecular electrochemistry?
+    In the following three interconnected sections, we will first discuss selected,
+    proof-of-concept applications of ML in mechanistic examination; we will subsequently
+    note a few areas of electrochemical'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'research that may potentially benefit from a ML-assisted analysis; last, we
+    will offer our opinion about how to better utilize ML for the mechanistic understanding
+    for the noted areas. We hope such discussions, albeit not meant to be comprehensive,
+    will inspire researchers in the community to better utilize ML and address the
+    long-standing challenges in electrochemistry.
+
+
+    known, pre-determined CE mechanism that includes a homogenous solution reaction
+    (C step) preceding the electron transfer (E step) (Figure 1a) [14,15]. A priori
+    understanding of cyclic voltammetry led to the designation of algorithm inputs
+    as the values of current density (i) and voltage (E) at different percentages
+    of the peak current density in both forward and backward scans. The ML-based algorithm
+    seems substitutive to the finite difference methods used for numerical extracting
+    reaction parameters [16], as long as a reaction mechanism is pre-determined with
+    well-defined kinetic formalisms.
+
+
+    # Existing exemplary deployments of ML in electrochemical analysis
+
+
+    There are fledging deployments of ML in electrochemistry, particularly cyclic
+    voltammetry [12,13]. Compton and coworkers developed ML-based algorithms that
+    extract key kinetic and thermodynamic parameters from multiple voltammograms with
+    a
+
+
+    As the manual inspection of voltammograms indeed consists of image recognition
+    and feature extraction, deep
+
+
+    # Figure 1
+
+
+    ![](img/8eba0f842e3b5a5a5a32df4e88947922_1_0.png)
+
+
+    Schematic representation of previous works on using machine learning (ML) for
+    mechanistic study. (a) using multi-head deep neural networks (Multihead DNN) to
+    extract kinetic rate constant and equilibrium constant given a pre-determined
+    CE voltammograms where a single-electron quasi-reversible charge transfer (E step)
+    follows a reversible solution reaction (C step). Every 100 data points are extracted
+    for the forward and backward scan at 1, 2, 3, ..., and 100% of peak current, which
+    is defined as the maximum or minimum baseline-corrected current. kf, kinetic rate
+    constant in the forward direction of the C step; Keq, equilibrium constant of
+    the C step. Adapted with permission from Ref. [14]. Copyright 2021 American Chemical
+    Society. (b) The workflow based on a convolutional neural network (CNN) model
+    to classify a E mechanism with a single-electron quasi-reversible charge transfer
+    step (E step), a EC mechanism in which the E step is followed by a reversible
+    solution reaction (C step), and a EE mechanism with two consecutive E steps. Simulated
+    voltammograms are digitized into 100 × 100-pixel gray images Adapted with permission
+    from Ref. [11]. Copyright 2019 American Chemical Society. (c) the procedure using
+    residual neural network (ResNet) deep learning (DL) model to categorize five mechanisms
+    and evaluate importance via model''s "attention": a E mechanism with a single-electron
+    quasi-reversible charge transfer step (E step), a EC mechanism in which the E
+    step is followed by a reversible solution reaction (C step), a CE mechanism in
+    which the E step is preceded by a C step, a ECE mechanism in which two E steps
+    connected by an irreversible rate-limiting C step with the second E step being
+    more thermodynamically facile than the first one, and a DISP1 mechanism where
+    the E step is followed by an irreversible C step with the product from the C step
+    undergoing an irreversible disproportionation reaction. Voltammograms under multiple
+    scan rates are converted into three-dimensional tensors {v, i(E)}n; v, scan rate;
+    i, current; E, electrochemical potential; n, the number of different scan rates;
+    m, the number of different potentials. Adapted from Ref. [18] (CC BY 4.0).'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'neural networks (DNNs) have been developed by Bond and coworkers to analyze
+    individual cyclic voltammogram for mechanistic categorization [11]. In this analysis,
+    a single cyclic of voltammogram was analyzed as gray-scale image (Figure 1b),
+    and a DNN was trained based on simulated voltammograms with about 90% accuracy
+    for the classification of three mechanisms in molecular electrochemistry: a single-electron
+    quasi-reversible charge transfer (E mechanism), a EC mechanism in which the E
+    step is followed by a reversible C step, and a EE mechanism with two consecutive
+    E steps [8]. A follow-up work from the same group expands the technique to three
+    consecutive cycles of voltammograms, taking advantage of the three RGB (red, blue,
+    green) input channels for the DNN originally designed for the analysis of colored
+    images [17]. The output of such a pioneering ML-based algorithm is a deterministic
+    assignment of reaction mechanism.
+
+
+    Instead of deploying pixelated images as the data input for ML analysis, Liu and
+    coworkers defined a three-dimensional tensor {v, i(E)}n as ML model''s input that
+    numerically includes i, E, and scan rate (v) (Figure 1c) [18]. It is hypothesized
+    that such information-rich data format is more suitable for electrochemical analysis
+    in comparison with the pixelated images whose white space contains little information.
+    The tensor data format can accommodate infinite number of voltammograms at various
+    scan rates (v), and it is compatible with the current research practice that mechanistic
+    information is extracted by comparing the evolution of voltammograms at different
+    v values in the context of the kinetic zone diagram [8]. A residual neural network
+    (ResNet) based on such a tenor input with up to six voltammograms under different
+    v values is trained and established by simulated voltammograms, yielding an accuracy
+    of 98.5% for five different molecular mechanisms (Figure 1c). In each analysis,
+    the ResNet model not only studies the mechanism but also yields an “attention”
+    plot illustrating which part of the voltammogram traces weights more in order
+    to draw a conclusion. One feature here is that the yielded output is not merely
+    a dichotomic classification, yet a quantitative distribution of propensity as
+    a surrogate of statistical probability toward each of the considered mechanisms.
+    While such propensity distribution has yet to be correlated to the distribution
+    statistical probabilities with rigorous testing/validation, the demonstrated capability
+    of analyzing voltammograms and delivering the comparative likelihood of reaction
+    mechanisms is commensurate with the nature of mechanistic ambiguity encountered
+    in molecular electrochemistry.
+
+
+    # Potential areas of development of ML-assisted mechanistic analysis
+
+
+    The above examples demonstrated some encouraging capabilities that ML can potentially
+    contribute toward mechanistic analysis. Thus, the questions
+
+
+    come to which area of electroanalysis might need such ML-enabled capabilities.
+    Below, we list and comment on some of the empirical challenges that the manual
+    analysis has encountered for a variety of electrochemical methods [8,19], along
+    with our thoughts on what a probability-driven ML-based analysis may offer.
+
+
+    Cyclic voltammetry has been the bread-and-butter technique for mechanistic analysis
+    for decades [8,19]; yet, there remains at least one potential direction that the
+    analysis and quantitative mechanistic studies can be improved (Figure 2a). Conventionally,
+    a single hypothesized mechanism has to be deterministically decided before further
+    numerical simulation and data fitting, despite the possible coexistence of competing
+    mechanisms or the possible presence of multiple mechanistic explanations toward
+    the same data within measurement and statistical uncertainties. Hence, the manual,
+    deterministic approach of voltammogram analysis is not fully compatible with the
+    aforementioned mechanistic ambiguity [1], especially when multiple competing mechanisms
+    are present. After initial visual voltammogram inspection, a typical iterative
+    routine of deciphering mechanisms in such scenarios without a priori knowledge
+    includes heuristically hypothesizing a specific mechanism of E and/or C steps,
+    numerically fitting the experimental voltammograms with the proposed mechanism,
+    visual comparison to check if the fitting is satisfactory, and decision-making
+    about whether another attempt with a revised proposed mechanism is necessary [20].
+    The nature of such protocol relies strongly on researcher''s training in order
+    to comprehensively consider all possible mechanistic variations and implicitly
+    biases against the co-existence of multiple competing pathways. One classic example
+    that epitomizes the challenges from such a methodology is the coexistence and
+    competition between ECE (two E steps connected by an irreversible rate-limiting
+    C step with the second E step being more thermodynamically facile than the first
+    one) and DISP (the E step is followed by an irreversible C step with the product
+    from the C step undergoing an disproportionation reaction) mechanisms for a net
+    two-electron process in molecular electrochemistry [8]. There have been plentiful
+    literature examples [21,22] to illustrate the difficulty of disentangling those
+    two pathways in a deterministic manner. As the recently reported ResNet model
+    is capable of analyzing voltammograms and yielding the propensity distribution
+    of mechanisms including the ECE and DISP ones (Figure 1c) [18], it seems feasible
+    that ML can improve mechanistic analysis in molecular electrochemistry in two
+    different approaches: (1) a ML model can provide an estimated likelihood for each
+    considered mechanism and guide the choice of proposed mechanisms in the existing
+    iterative routine described above; (2) ML may establish an independent alternative
+    route of mechanistic analysis that includes a report of mechanistic probability
+    distribution enabled by ResNet'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Figure 2
+
+
+    ![](img/8eba0f842e3b5a5a5a32df4e88947922_3_0.png)
+
+
+    Schematic representation of machine-learning-aided mechanistic analysis. (a) two
+    potential applications of machine learning (ML) in mechanistic analysis based
+    on cyclic voltammograms. Left: ML models provide an estimated likelihood of different
+    mechanisms and guide the iterative traditional process. Right: ML models enable
+    an alternative method of mechanistic analysis with a probability distribution
+    of potential mechanisms and an anticipation of reaction parameter values with
+    uncertainty. (b) ML-enabled comprehensive understanding of electrochemical reaction
+    pathways via simultaneous analysis of high-dimensional data from a database of
+    different electrochemical methods (from top to bottom: cyclic voltammograms, normal
+    pulse voltammograms, and electrochemical impedance spectra). i, current; E, electrochemical
+    potential; Z′, the real part of impedance; Z″, the imaginary part of impedance;
+    k0, the charge transfer kinetic rate constant; kf represents the kinetic rate
+    constant in the forward direction for the chemical reaction; K, the equilibrium
+    constant of the chemical reaction.
+
+
+    [18] and a ML-enabled determination of reaction parameter values similar to the
+    aforementioned examples (Figure 1a) [14,15] Notably, the latter approach not only
+    yields a probability-based analysis that better suits the intrinsic mechanistic
+    ambiguity in electrochemistry but also exhibits sufficient statistical sophistication
+    that hints on the uncertainty of the generated analysis, a feature absent in current
+    studies.
+
+
+    Another potential topic for improved mechanistic study is the combined, simultaneous
+    analysis of multiple electrochemical characterization techniques (Figure 2b).
+    One hypothesis that the authors hold is that electrochemical perturbation for
+    mechanistic information should benefit from different techniques with their complementary
+    temporal resolutions. Thus, one
+
+
+    corollary is that transient and high-frequency measurements, such as pulse voltammetry
+    [23] and electrochemical impedance spectroscopy [24], should accompany cyclic
+    voltammetry for mechanistic studies, thanks to the former techniques’ reach in
+    shorter time scales (10^6 Hz or 1 µs). Current analysis of pulse voltammetry and
+    impedance data in conjunction with cyclic voltammetry commands separate two-dimensional
+    plots, additional expert training, and an iterative procedure similar to the one
+    in cyclic voltammetry that analysis is sequentially conducted for individual electrochemical
+    techniques [19].
+
+
+    We envision that ML-based analysis will enable simultaneous analysis of a high-dimensional
+    data format comprised of all the results from different electrochemical methods.
+    Such a ML-enabled analysis may not only provide a'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'comprehensive, probability-based understanding of the reaction pathways with
+    minimized human bias but also renders such in-depth mechanistic analysis more
+    accessible to a broader research community. Though ML models are not immune to
+    biases themselves and it is worthwhile to remind the community of such an issue,
+    the potential risk of introducing additional biases during the development of
+    ML models shall be mitigated via careful preparation of training datasets, appropriate
+    regularization techniques, and monitoring of model performance. As expert training
+    for mechanistic analysis in molecular electrochemistry could be sometimes a bit
+    demanding [19], a user-friendly ML-aided protocol will greatly facilitate our
+    understanding of chemistry at the electrode-solution interface.
+
+
+    # Suggestions for deploying ML in molecular electrochemistry
+
+
+    Intrigued by our own discussions shown above; here, we present some take-home
+    messages and suggestions in the context of addressing the long-standing issue
+    of mechanistic ambiguity and advancing the field of molecular electrochemistry
+    for a wider utilization of mechanistic investigation.
+
+
+    (a) Accommodate a probabilistic approach in mechanistic studies. As discussed
+    above, the existence of mechanism ambiguity in electrochemistry necessitates a
+    probability-driven analysis that currently is underdeveloped. Our recent work
+    [18] demonstrates the possibility of simultaneously considering multiple possible
+    mechanisms and accounting for the mechanism ambiguity as a distribution of probabilities.
+    Indeed, one of the main reasons that we advocate for a broader utility of ML in
+    molecular electrochemistry is the wide adoption of probabilistic methods in deep
+    learning models [25,26] that will transform how we analyze electrochemistry.
+
+
+    (b) Adopt ML-friendly electrochemical data structures. The existing data structures
+    from electrochemical characterization methods are mostly suited for the generation
+    of two-dimensional plots that humans are capable of analyzing. As ML models are
+    well capable of receiving high-dimensional data inputs, a wide adoption of ML-aided
+    analysis should encourage the use of information-rich high-dimensional data structures,
+    such as tensor inputs in lieu of pixelated images in recent examples [11,17,18]
+    that encompass not only a single electrochemical characterization but also multiple
+    cauterization methods for simultaneous analysis. Yet, one caveat here is that
+    the data structure should cater to the specifics in the desired application and
+    avoid excessive data interpolation in order to mitigate the undesired misinterpretation
+    and loss of analysis accuracy.
+
+
+    (c) Be aware of the constraints from ML models trained by simulated data. While
+    existing ML models are
+
+
+    trained and developed with simulated electrochemical data, it is important to
+    acknowledge that those ML models are limited to training set; hence, the boundaries
+    and ranges of parameters deployed during the establishment of simulated training
+    data. Any discussion regarding the applicability and validity of ML-based analysis
+    should consider such a potential limitation. Moreover, it is desirable and critical
+    to train/refine the developed ML models with experimental ones in order to accommodate
+    practical factors in electrochemical testing, such as uncompensated resistance
+    and capacitance and mitigate potential missassignments.
+
+
+    (d) Promote interpretability in ML-aided analysis. One common criticism to ML-based
+    research is the “black box” nature and the lack of interpretability for ML algorithms.
+    To counter such a caveat and promote trustworthiness, the development of ML-aided
+    analysis in electrochemistry should consider yielding outputs, such as the “attention”
+    plot in our recent work [18], for greater model interpretability. A more interpretable
+    ML-aided analysis will not only help detect and mitigate bias but also justify
+    the validity of the developed ML models, as well as suggest hidden data features
+    that may have escaped human inspection, thus enriching our fundamental understanding
+    about electrochemical characterizations.
+
+
+    (e) Broader multidisciplinary collaborations. As we develop probability-driven
+    electrochemical analysis aided by ML, collaborations among electrochemists, statisticians,
+    and computer scientists will be inevitable and essential. We envision greater
+    advances in molecular electrochemistry originated from the synergies among the
+    beauty of accumulated insights into electrochemistry, the rigor of statistical
+    interpretation, and the fascinating design in ML architectures.
+
+
+    (f) An open community with great accessibility. Given the wide scope of molecular
+    electrochemistry, the envisioned advance can only take place in an open research
+    community. The development, testing, and validation of ML models rely on the rich
+    understanding of electrochemical mechanisms and researchers’ provision of simulated
+    and experimental data. Meanwhile, open-access ML models tailored to electrochemical
+    research will broaden the adoption of ML-aided analysis, facilitate other research
+    topics in electrochemistry, and help educate the next-generation researchers well
+    versed in programming, ML, and statistical analysis. It is the collective efforts
+    of the whole community that will dictate the future of ML adoption in electrochemistry.
+
+
+    # Authors’ contribution
+
+
+    J.S. wrote the initial manuscript. J.S. and C.L. edited and finalized the manuscript.
+    C.L. supervised the whole project.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Declaration of competing interest
+
+
+    The authors declare the following financial interests/ personal relationships
+    which may be considered as potential competing interests: Chong Liu reports financial
+    support was provided by National Science Foundation of United States.
+
+
+    # Data availability
+
+
+    No data was used for the research described in the article.
+
+
+    # Acknowledgements
+
+
+    We thank Cyrille Costentin for constructive discussions. C.L. acknowledges the
+    support from National Science Foundation of United States (CHE-2140762) and the
+    Sloan Research Fellowship from Alfred P. Sloan Foundation.
+
+
+    # References
+
+
+    Papers of particular interest, published within the period of review, have been
+    highlighted as:
+
+
+    +   * of special interest
+
+    +   ** of outstanding interest
+
+
+    +   1. Ruić I, Feldberg S: The heterogeneous equivalent: a method for digital
+    simulation of electrochemical systems with compact reaction layers. J Electroanal
+    Chem 1974, 50: 153–162.
+
+    +   2. Bard A, Faulkner LR: Electrochemical methods: fundamental and applications.
+    2nd ed. New York: John Wiley & Sons Inc.; 2001.
+
+    +   3. Eklund JC, Bond AM, Alden JA, Compton RG: Perspectives in modern voltammetry:
+    basic concepts and mechanistic analysis. In Advances in physical organic chemistry.
+    Edited by Bethell D, Academic Press; 1999:1–120.
+
+    +   4. Lee KJ, Elgrishi N, Kandemir B, Dempsey JL: Electrochemical and spectroscopic
+    methods for evaluating molecular electrocatalysts. Nat Rev Chem 2017, 1:39.
+
+    +   5. Zanello P, Nervi C, De Biani FF: Inorganic electrochemistry: theory, practice
+    and application. Royal Society of Chemistry; 2019.
+
+    +   6. Macdonald DD: Reflections on the history of electrochemical impedance spectroscopy.
+    Electrochim Acta 2006, 51: 1376–1388.
+
+    +   7. Bond AM, Duffy NW, Guo S-X, Zhang J, Elton D: Changing the look of voltammetry.
+    Anal Chem 2005, 77:186 A–195 A.
+
+    +   8. Costentin C, Savéant J-M: Elements of molecular and biomolecular electrochemistry:
+    an electrochemical approach to electron transfer chemistry. Hoboken, New Jersey:
+    John Wiley & Sons Inc; 2019.
+
+    +   9. Bishop CM, Nasrabadi NM: Pattern recognition and machine learning. Singapore:
+    Springer; 2006.
+
+    +   10. Schachterle SD, Perone SP: Classification of voltammetric data by computerized
+    pattern recognition. Anal Chem 1981, 53:1672–1678.
+
+
+    +   11. Kennedy GF, Zhang J, Bond AM: Automatically identifying electrode reaction
+    mechanisms using deep neural networks. Anal Chem 2019, 91:12220–12227. *
+
+    +   This paper proved in principle that deep learning can differentiate three
+    reaction mechanisms based on a single simulated voltammogram through a process
+    similar to image recognition.
+
+    +   12. Gundry L, Guo S-X, Kennedy G, Keith J, Robinson M, Gavaghan D, Bond AM,
+    Zhang J: Recent advances and future perspectives for automated parameterisation,
+    Bayesian inference and machine learning in voltammetry. Chem Commun 2021, 57:1855–1870.
+
+    +   13. Bond AM, Zhang J, Gundry L, Kennedy GF: Opportunities and challenges in
+    applying machine learning to voltammetric mechanistic studies. Curr Opin Electrochem
+    2022, 34, 101009.
+
+    +   14. Chen H, Kätelhön E, Le H, Compton RG: Use of artificial intelligence in
+    electrode reaction mechanism studies: predicting voltammograms and analyzing the
+    dissociative CE reaction at a hemispherical electrode. Anal Chem 2021, 93:13360–13372.
+    *
+
+    +   This paper utilized machine learning to extract the characteristics of the
+    dissociative CE mechanism to predict kinetic and thermodynamic parameters given
+    voltammograms, as well as the reverse process.
+
+    +   15. Chen H, Li D, Kätelhön E, Miao R, Compton RG: Experimental voltammetry
+    analyzed using artificial intelligence: thermodynamics and kinetics of the dissociation
+    of acetic acid in aqueous solution. Anal Chem 2022, 94:5901–5908.
+
+    +   16. Rudolph M, Reddy DP, Feldberg SW: A simulator for cyclic voltammetric
+    responses. Anal Chem 1994, 66:589A–600A.
+
+    +   17. Gundry L, Kennedy G, Bond Alan M, Zhang J: Inclusion of multiple cycling
+    of potential in the deep neural network classification of voltammetric reaction
+    mechanisms. Faraday Discuss 2022, 233:44–57.
+
+    +   18. Hoar BB, Zhang W, Xu S, Deeba R, Costentin C, Gu Q, Liu C: Electrochemical
+    mechanistic analysis from cyclic voltammograms based on deep learning. ACS Meas
+    Sci Au 2022, 2: 595–604. **
+
+    +   This paper developed a deep learning algorithm that automatically analyzes
+    cyclic voltammograms and predicts the most probable electrochemical mechanism
+    among five common stoichiometric homogeneous mechanisms, based on a set of voltammograms
+    at different scan rates using a two-dimensional matrix instead of digital images.
+
+    +   19. Christensen P, Hamnett A: Techniques and mechanisms in electrochemistry.
+    Oxford: Chapman & Hall; 1994.
+
+    +   20. Compton RG, Banks CE: Understanding voltammetry. New Jersey: World Scientific;
+    2018.
+
+    +   21. Evans DH: Solution electron-transfer reactions in organic and organometallic
+    electrochemistry. Chem Rev 1990, 90:739–751.
+
+    +   22. Hammerich O, Speiser B: Organic electrochemistry. Florida: CRC Press;
+    2016.
+
+    +   23. Molina A, González J: Pulse voltammetry in physical electrochemistry and
+    electroanalysis. Switzerland: Springer; 2016.
+
+    +   24. Macdonald DD: Review of mechanistic analysis by electrochemical impedance
+    spectroscopy. In Electrochemical and optical techniques for the study and monitoring
+    of metallic corrosion. Springer; 1991:31–68.
+
+    +   25. Murphy KP: Machine learning: a probabilistic perspective. MIT press; 2012.
+
+    +   26. Murphy KP: Probabilistic machine learning: advanced topics. MIT Press;
+    2023.'
+  merge: -1
+  img_proc: true
