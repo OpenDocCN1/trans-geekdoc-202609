@@ -1,0 +1,35 @@
+level_changes:
+- line: 23
+  before: 3
+  after: 2
+- line: 1756
+  before: 1
+  after: 3
+- line: 1990
+  before: 1
+  after: 3
+- line: 2006
+  before: 1
+  after: 3
+text_changes:
+- line: 39
+  before: 'LO#01: 解释网络扫描概念'
+  after: LO#01：解释网络扫描概念
+- line: 2434
+  before: 'LO#07: 解释网络扫描对策'
+  after: LO#07：解释网络扫描对策
+- line: 1126
+  before: '优点:'
+  after: 优点：
+- line: 1129
+  before: '缺点:'
+  after: 缺点：
+- line: 2397
+  before: '功能:'
+  after: 功能：
+- line: 1231
+  before: UDP RECVFROM () and WRITE () Scanning
+  after: UDP RECVFROM() and WRITE() Scanning
+- line: 2309
+  before: Why use an Anonymizer?
+  after: Why Use an Anonymizer?
