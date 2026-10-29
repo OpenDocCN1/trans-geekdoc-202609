@@ -1,0 +1,11 @@
+a gateway to the actual resources and implements the BIG IoT API and the various interactions and workflows (Section 3.4). The library authenticates the provider with the Marketplace and registers its offerings. It also offers a Web API to grant access to the resources.
+
+Beyond these mechanisms for providing access to IoT platforms, the Marketplace enriches the ecosystem with the possibility of monetizing the consumption of resources. Therefore, both sides, the consumer and provider, report accounting data (e.g. number of resource records obtained/provided) back to the Marketplace. This is the basis for charging and billing, and the foundation for business opportunities around the ecosystem.
+
+The above described IoT ecosystem is platform-scale independent. I.e., IoT platforms can operate either on cloud-level (e.g., server, data centre), on fog-level (e.g., gateway, cellular communication base station), or on device-level (e.g., Raspberry PI, smartphone). In the last case, the IoT platform can represent an IoT ‘thing’. The BIG IoT API can be used independent of this scale of the platform.
+
+# 4.3.4. Uniqueness and specific features of the approach
+
+The BIG IoT approach comprises the following objectives: First, it openly defines the so-called BIG IoT API, a generic, Web-based application programming interface (API) for the adoption by smart object platforms.
+
+Second, at the core of BIG IoT ecosystem stands an open marketplace. Once the BIG IoT API provides the building blocks for a syntactically and semantically interoperable IoT and inter-platform connectivity and exchange is enabled, the marketplace lays the foundation for an ecosystem of platforms and services offerings. The marketplace enables the advertisement, quality control, and monetization of applications and services developed on top of the BIG IoT API. A marketplace can be setup for specific domains, e.g., by stakeholders for the industry or energy domain, or by Smart Cities for the mobility or building domain.

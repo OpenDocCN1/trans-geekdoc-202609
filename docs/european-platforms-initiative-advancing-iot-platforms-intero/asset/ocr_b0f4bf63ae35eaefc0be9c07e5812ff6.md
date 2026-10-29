@@ -1,0 +1,11 @@
+Due to the critical and important role of interoperability in IoT systems, it is strongly related with many relevant topics and aspects in IoT: performance, compatibility, integration, ROI, market acceptance, development design, architecture.
+
+The creation and development of this white paper has taken advantage from outcomes and available information from other activities in the framework of the IoT-EPI projects. In particular, important sources of information that complement the authors’ research are the IoT-EPI platforms reports and the exchange of information among the projects during the work in task forces.
+
+Regarding the output of this work, this white paper intends to be a useful source of information of interoperability in IoT platforms. This critical aspect in IoT systems has relevance and impact on the topics of each Task Force of the IoT-EPI (Innovation, Platform Interoperability, Community Building, Business Models, Educational Platforms, International Cooperation).
+
+The research regarding interoperability architecture is useful for the current and future IoT platforms and IoT projects, as it provides deep awareness and valuable insights regarding the critical aspect of interoperability in them, as well as possible architecture solutions to the challenges that the achievement of platform interoperability involves. This information can be valuable in the development of new services, applications and businesses on top of IoT platforms.
+
+Lack of platform interoperability causes major technologic and economic drawbacks such as impossibility to plug non-interoperable IoT devices into heterogeneous IoT platforms, impossibility to develop IoT applications exploiting multiple platforms, slowness of IoT technology introduction at a large-scale, discouragement in adopting IoT technology, vertical silos in IoT ecosystems and markets, increase of costs, scarce reusability of technical solutions, or user dissatisfaction.
+
+In contrast, interoperability among platforms will provide numerous benefits such as new market opportunities, the disappearance of vertical silos, and vertically-oriented closed systems, architectures and application areas, to move towards open systems and platforms,

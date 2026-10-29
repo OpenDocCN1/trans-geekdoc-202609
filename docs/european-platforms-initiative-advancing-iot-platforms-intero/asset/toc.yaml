@@ -1,0 +1,74 @@
+level_changes:
+- line: 23
+  before: 2
+  after: 1
+- line: 44
+  before: 2
+  after: 1
+- line: 45
+  before: 3
+  after: 2
+- line: 104
+  before: 2
+  after: 1
+- line: 181
+  before: 2
+  after: 1
+- line: 183
+  before: 3
+  after: 2
+- line: 207
+  before: 3
+  after: 2
+- line: 296
+  before: 2
+  after: 3
+- line: 310
+  before: 2
+  after: 3
+- line: 396
+  before: 2
+  after: 3
+- line: 402
+  before: 2
+  after: 3
+- line: 444
+  before: 2
+  after: 3
+- line: 456
+  before: 2
+  after: 3
+- line: 464
+  before: 2
+  after: 3
+- line: 470
+  before: 2
+  after: 3
+- line: 597
+  before: 2
+  after: 1
+- line: 654
+  before: 2
+  after: 1
+text_changes:
+- line: 44
+  before: 物联网平台格局
+  after: 2 物联网平台格局
+- line: 104
+  before: 物联网平台互操作性概念、方法与原则
+  after: 3 物联网平台互操作性概念、方法与原则
+- line: 181
+  before: IoT-EPI Projects approaches addressing IoT platforms interoperability
+  after: 4 IoT-EPI Projects approaches addressing IoT platforms interoperability
+- line: 324
+  before: 4.4. bloTope
+  after: 4.4. BioTope
+- line: 597
+  before: 推进物联网平台互操作性
+  after: 5 推进物联网平台互操作性
+- line: 654
+  before: '6'
+  after: 6 结论
+- line: 897
+  before: symbioTe
+  after: symbIoTe
