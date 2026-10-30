@@ -1,0 +1,15 @@
+# Recovery/Reconstitution Procedures
+
+Recovery efforts from an incident involve several specific elements. First, the cause of the incident needs to be determined and resolved. This is done through an incident response mechanism. Attempting to recover before the cause is known and corrected will commonly result in a continuation of the problem. Secondly, the data, if sensitive and subject to misuse, needs to be examined in the context of how it was lost, who would have access, and what business measures need to be taken to mitigate specific business damage as a result of the release. This may involve the changing of business plans if the release makes them suspect or subject to adverse impacts.
+
+A key aspect in many incidents is that of external communications. Having a communications expert who is familiar with dealing with the press, with the language nuances necessary to convey the correct information and not inflame the situation is essential to the success of any communication plan. Many firms attempt to use their legal counsel for this, but generally speaking, the legally precise language used by an attorney is not useful from a PR standpoint, and a more nuanced communicator may provide a better image. In many cases of crisis management, it is not the crisis that determines the final costs, but the reaction to and communication of details after the initial crisis.
+
+Recovery can be a two-step process. First, the essential business functions can be recovered, enabling business operations. The second step is the complete restoration of all services and operations. Staging the recovery operations in a prioritized fashion allows a graceful return to an operating condition.
+
+# Incident Isolation
+
+Once an incident is discovered and characterized, the most important step in the incident response process involves the isolation of the problem. Many incidents can spread to other machines and expand the damage surface if not contained by the incident response team. Determining the steps to isolate specific machines and services can be a complex endeavor, and is one best accomplished before an incident, through the preparation phase. When a particular machine or service becomes compromised, the team can invoke the preplanned steps to isolate the infected unit from others. This may have an impact on performance, but it will still be less than if the compromise is allowed to spread and more machines become compromised.
+
+# Quarantine
+
+One method of isolating a machine is through a quarantine process. The machine may be allowed to run, but its connection to other machines is broken in a manner to prevent the spread of infection. Quarantine can be accomplished through a variety of mechanisms, including the erection of firewalls restricting communication between machines. This can be a fairly complex process, but if properly configured in advance, the limitations of the quarantine operation can allow the machine to continue to run for diagnostic purposes, even if it no longer processes workload.

@@ -1,0 +1,3 @@
++   14. The cost of backups, $10,000, is less than the annualized cost of restoring without a backup, so backups should be utilized.
++   15. Delta, incremental, and full.
++   16. C and D. DLP controls are security controls specifically designed to detect and limit data exfiltration from the enterprise by unauthorized parties. Data minimization policies are used to prevent the unnecessary storage of data that is not needed in the enterprise. This prevents release by not having the data to release.

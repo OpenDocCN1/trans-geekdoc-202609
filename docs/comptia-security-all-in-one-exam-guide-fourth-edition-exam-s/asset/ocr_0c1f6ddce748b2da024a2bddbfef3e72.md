@@ -1,0 +1,15 @@
+# Incident Response Procedures
+
+Incident response is a term used to describe the steps an organization performs in response to any situation determined to be abnormal in the operation of a computer system. The causes of incidents are many, from the environment (storms), to errors on the part of users, to unauthorized actions by unauthorized users, to name a few. Although the causes may be many, the results can be classified into classes. A low-impact incident may not result in any significant risk exposure, so no action other than repairing the broken system is needed. A moderate-risk incident will require greater scrutiny and response efforts, and a high-level risk exposure incident will require the greatest scrutiny. To manage incidents when they occur, a table of guidelines for the incident response team needs to be created to assist in determining the level of response.
+
+Two major elements play a role in determining the level of response. Information criticality is the primary determinant, and this comes from the data classification and the quantity of data involved. The loss of one administrator password is less serious than the loss of all of them. The second factor involves a business decision on how this incident plays into current business operations. A series of breaches, whether minor or not, indicates a pattern that can have public relations and regulatory issues.
+
+The incident response cycle is a quick way to remember the key steps in computer forensics. Figure 8-1 graphically conveys the incident response cycle. There are five key steps:
+
++   1. Discover and report Organizations should administer an incident-reporting process to make sure that potential security breaches as well as routine application problems are reported and resolved as quickly as possible. Employees should be trained on how to report system problems.
++   2. Confirm Specialists or a response team member should review the incident report to confirm whether or not a security incident has occurred. Detailed notes should be taken and retained, as they could be critically valuable for later investigation.
++   3. Investigate A response team composed of network, system, and application specialists should investigate the incident in detail to determine the extent of the incident and to devise a recovery plan.
++   4. Recover The investigation is complete and documented at this point in time. Steps are taken to return the systems and applications to operational status.
++   5. Lessons learned A post-mortem session should collect lessons learned and assign action items to correct weaknesses and to suggest ways to improve.
+
+Incident response activities at times are closely related to other IT activities involving IT operations. Incident response activities can be similar to disaster recovery and business continuity operations. Incident response activities are not performed in a vacuum, but rather are intimately connected to many operational procedures, and this connection is key to overall system efficiency.

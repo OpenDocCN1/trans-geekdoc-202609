@@ -1,0 +1,15 @@
+have been hacked as a way into enterprises, and as a way to hide from defenders. And when next-generation automobiles begin to talk to each other, passing traffic and other information between them, and begin to have navigation and other inputs being beamed into systems, the risks will increase and security will become an issue. This has already been seen in the airline industry, where the separation of in-flight Wi-Fi, in-flight entertainment, and cockpit digital flight control networks has become a security issue.
+
+![](bbox=[0.04, 0.27, 0.12, 0.36])
+
+> **EXAM TIP** Understand static environments, systems in which the hardware, OS, applications, and networks are configured for a specific function or purpose. These systems are designed to remain unaltered through their lifecycle, rarely requiring updates.
+
+Building-automation systems, climate control systems, HVAC systems, elevator control systems, and alarm systems are just some of the examples of systems that are managed by embedded systems. Although these systems used to be independent and stand-alone systems, the rise of hyperconnectivity has shown value in integrating them. Having a “smart building” that reduces building resources in accordance with the number and distribution of people inside increases efficiency and reduces costs. Interconnecting these systems and adding in Internet-based central control mechanisms does increase the risk profile from outside attacks.
+
+# Phones and Mobile Devices
+
+When mobile phones first appeared, they were analog devices intended merely to add portability to the ubiquitous phone system. Today, mobile phones and other mobile devices like tablets are portable computer systems with significant capabilities. A few decades ago, only supercomputers exceeded the processing power, memory, and graphics capability of a current mobile phone. With this power came new uses for these devices, and today mobile devices are a major endpoint in all sorts of enterprises.
+
+Mobile devices may seem to be a static environment, one where the OS rarely changes or is rarely updated, but as these devices become more and more ubiquitous in capability, this is not turning out to be the case. Mobile devices have regular software updates to the OS, and users add applications, making most mobile devices a complete security challenge. Mobile devices frequently come with Bluetooth connectivity mechanisms. Protection of the devices from attacks against the Bluetooth connection, such as bluejacking and bluesnarfing, is an important mitigation. To protect against unauthorized connections, a Bluetooth device should always have discoverable mode turned off unless the user is deliberately pairing the device.
+
+There are many different operating systems used in mobile devices, the most common of these by market share are Android and iOS from Apple. Android is by far the largest footprint, followed distantly by Apple’s iOS. Microsoft and BlackBerry have their own OSs, but neither has major numbers of users.
