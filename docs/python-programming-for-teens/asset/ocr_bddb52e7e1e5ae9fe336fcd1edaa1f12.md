@@ -1,0 +1,11 @@
++   - Optional arguments to `onscreenclick`, `onclick`, `ondrag`, and `onrelease` are the number of the button (1 = left, 2 = right) and a Boolean value indicating whether to add the new event-handling function or replace the existing ones.
++   - The functions to register event-handling functions for keyboard events are `onkeypress` and `onkeyrelease` (a synonym for `onkey`). `onkeypress` expects a function and an optional string as arguments. `onkeyrelease` expects both a function and a string as arguments. The string represents a keyboard character. When the user presses or releases a registered key, the associated event-handling function is triggered. If the string argument to `onkeypress` is omitted, the function is triggered when any key is pressed.
++   - After the event-handling functions have been registered, the `listen` function tells turtle graphics to listen for events.
++   - A module variable is used to make data accessible to all the functions in a module. A module variable cannot be reset with an assignment statement within a function. However, if the variable refers to a mutable structure, like a list, that structure can be modified.
+
+# EXERCISES
+
+Launch the IDLE shell, open a file window, and complete the following exercises. You should run each program within IDLE and, when it is completed, in the terminal window.
+
++   1. Write a pattern-drawing program similar to the one discussed in Chapters 4 and 5. This version uses dialogs to take the length of a side, the number of sides, the pen color, and the fill color as inputs via dialogs.
++   2. Write a program that allows the user to draw circles with two mouse clicks. The position of the first click will be the circle’s center point, and the position of the second click will be a point on the circle’s circumference. Hint: the function `distance(x, y)` returns the distance from the turtle’s current position to the position (x, y). Also, use a module variable to remember the position of the first mouse click.

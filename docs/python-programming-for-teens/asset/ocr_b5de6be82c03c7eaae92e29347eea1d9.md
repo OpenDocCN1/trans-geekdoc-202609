@@ -1,0 +1,15 @@
+In the late 1990s, Steve Jobs rejoined Apple Computer after an extended time away. He realized that the smaller handheld devices and wireless technology would provide a new way of delivering all kinds of “content”—music, video, books, and applications—to people.
+
+To realize his vision, Jobs pursued the design and development of a handheld device with a clean, simple, and “cool” user interface to access this content. The first installment of such a device was the iPod, a music player capable of holding your entire music library as well as photos. Although the interface first used mechanical buttons and click wheels, it was soon followed by the iTouch, which employed a touch screen and could play video. The touch screen interface also allowed Apple and its programmers to provide apps, or special-purpose applications (such as games), that ran on these devices. When wireless connectivity became available, these apps could provide email, a web browser, weather channels, and thousands of other services. The iPhone and iPad, true multimedia devices with microphones, cameras, and motion sensors, followed along these lines a few years later.
+
+Jobs also developed a new business model for distributing this content. Owners of these devices would connect to an e-store, such as the iTunes Store, the iBooks Store, and the App Store, to download free content or content for purchase. Authors, musicians, and app developers could upload their products to these stores in a similar manner. Thus, in a few short years, Jobs changed the way people consume, produce, and think about media content.
+
+Also in the late 1990s, two Stanford University computer science graduate students, Larry Page and Sergey Brin, developed a powerful algorithm for searching the web. This algorithm served as the basis for a company they founded named Google. “To Google” is now a verb, synonymous with “to search on the web.” Although people continue to browse or “surf” the web, much of what they do on the web is now based on search. In fact, most online research and many new industries would be inconceivable without search.
+
+Finally, just after the turn of the millennium, a Harvard University undergraduate student named Mark Zuckerberg developed a prototype of the first social network program, which he called Facebook. The company he founded with the same name has changed the way that people connect to each other and present themselves online.
+
+This concludes the book’s not-so-brief overview of the history of computing. If you want to learn more about this history, run a web search or consult your local library. Now it’s time for that introduction to programming in Python.
+
+# I APPRECIATE YOUR FEEDBACK
+
+I have tried to produce a high-quality text, but should you encounter errors, please report them to lambert k@wlu.edu. Any errata and other information about this book will be posted on the website http://home.wlu.edu/~lambert k/python/.

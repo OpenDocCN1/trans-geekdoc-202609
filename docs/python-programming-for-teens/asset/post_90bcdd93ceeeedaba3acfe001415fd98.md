@@ -1,0 +1,387 @@
+
+## functions (Continued)
+- bgpic, 211
+- building with lambda expressions, 102
+- callback, 173, 193
+- canvas, 49–50, 211–212
+- cCurve, 156
+- circle, 94–95, 206
+- clear, 39, 206
+- color, 208
+- color related, 46
+- colormode, 208
+- definitions, 94–95
+- dict, 26
+- distance, 207
+- domain, 103
+- down, 207
+- drawLine, 156
+- drawRectangle, 149
+- end_fill, 45–46, 209
+- end_poly, 199–200
+- event-handling, 118, 210
+- exitonclick, 192, 211
+- expressions, 9
+- fillcolor, 45–46, 208
+- filling, 209
+- float, 14
+- forward, 36–37, 206
+- as general solutions to problems, 99–104
+- get_poly, 199–200
+- getshapes, 40, 211
+- goto, 36–38, 118, 206
+- graphing, 103–106
+- heading, 42, 207
+- help, 4
+- hideturtle, 210
+- home, 36, 206
+- input, 15–16
+- int, 14–15
+- isdown, 42
+- isvisible, 42, 210
+- join, 23
+- left, 36–37, 206
+- len, 14, 26
+- listen, 118–119
+- main, 79–80, 150–151
+- mainloop, 81
+- in mathematics, 103–104
+- modules as libraries of, 103
+- mondrian, 148–153
+- myIn, 146
+- numinput, 116–117, 212
+- onclick, 119, 128, 176, 210
+- ondrag, 120, 128, 176, 210
+- onkeypress, 123
+- onkeyrelease, 123
+- onrelease, 128, 210
+- onscreen, 128
+- onscreenclick, 211
+- ontimer, 190–192, 211
+- pauseOrResume, 199
+- pen control, 207–209
+- pencolor, 43, 46, 208
+- pensize, 40, 208
+- plot, 105–106
+- poly, 42
+- position, 42, 207
+- positionHistory, 126–127
+- print, 15
+- randint, 66–67
+- random.choice, 24
+- randomForward, 109
+- random.randint, 71
+- random.shuffle, 24
+- randomTurn, 108–109
+- range, 23, 58–59, 103
+- rebound, 199
+- refactoring programs with, 106–111
+- reset, 36–37, 39, 206
+- resizemode, 209
+- return statement, 96
+- right, 36, 206
+- screensize, 49–50, 212
+- setheading, 36, 206
+- setup, 50
+- setVertex, 126
+- setx, 206
+- sety, 206
+- shape, 40–42, 209
+- shapesize, 209
+- showturtle, 33, 210
+- speed, 42
+- square, 94–95
+- str, 14
+- summation, 137–139
+- tail-recursive, 141
+- testing, 97–98
+- textinput, 116–117, 212
+- tilt, 209
+- title, 212
+- topEdge, 108
+- towards, 207
+- tracer, 152, 212
+- trigonometric, 10
+- turtle motion, 205–207
+- turtle state, 209–210
+- turtles, 212
+- twirl, 199
+- undo, 39, 207
+- up, 208
+- update, 152, 212
+- window, 211–212
+- window_height, 50, 212
+- window_width, 212
+- write, 48–49
+- xcor, 207
+- ycor, 207
+
+## G
+- get_poly function, 199–200
+- getshapes function, 40, 211
+- getter method, 170
+- goto function, 36–38, 118, 206
+- graphical user interface (GUI), 88
+- graphics operations. See also turtle graphics
+- graphing functions, 103–106
+- Grid class (Tic-Tac-Toe game)
+  - class variables, 182–183
+  - defining a class, 181–182
+  - defining class for grid, 184
+  - game logic methods, 185–186
+  - grid layout, 184–185
+  - main application module, 186–187
+  - making a move, 183
+  - modeling a grid, 179–181
+  - shape size, 183
+- GUI (graphical user interface), 88
+
+## H
+- hardware, computer, 86–88
+- heading
+  - composing programs, 79
+  - loop structure, 56
+- heading attribute, 33, 163, 194
+- heading function, 42, 165, 207
+- help function, 3–4, 11
+- hexagon, 57
+- Hexagon class, 171–172
+- hide method, 164, 169–170
+- hideturtle function, 210
+- home function, 36, 206
+- home position, 33
+
+## I
+- IDLE shell, launching, 2–3
+- IDLE window, running programs from, 82–83
+- idle3 command, 83
+- if statement
+  - composing programs, 80–81
+  - multiway, 67–68
+  - one-way, 63–64
+  - two-way, 65
+- if-else statement, 65
+- immutable lists, 24–25
+- import statement, 33, 79
+- indefinite loop, 68
+- independent variables, 103
+- index method, 143
+- indexing operator, 16–17
+- infinite recursion, 142–143
+- inheritance, class, 171–172
+- __init__ method, 168
+- input devices, 86
+- input, dialog-based, 115–118
+- input dialogs
+  - for numbers, 117–118
+  - for text, 117
+  - in turtle graphics, 116
+- input function, 15–16
+- insert method, 20–21
+- installing Python, 1–2
+- instance variables, 168
+- int function, 14–15
+- integers, 4
+- interpreter, 89
+- isdown function, 42, 207
+- isVisible function, 42, 163, 165, 210
+- items, list, 19
+- items method, 26
+- iteration control
+  - defined, 55
+  - for loop, 56–57
+  - nested loops, 57–58
+
+## J–K
+- join function, 23
+- key, 25
+- keyboard events
+  - onkey function, 123–124
+  - responding to, 122–124
+  - retro drawing program, 124
+- keys method, 26
+- key/value pairs, 25–26
+- keyword argument, 99
+
+## L
+- lambda expressions, 102
+- launching
+  - IDLE shell, 2–3
+  - terminal window, 2
+- left function, 36–37, 206
+- left-click mouse button events, 128–129
+- len function, 14, 26
+- length attribute, 163
+- length, string, 14
+- linear equation, 104
+- linear running time, 145
+- Linux
+  - computer software description, 88
+  - launching terminal window, 2
+- listen function, 118–119
+- lists
+  - binary search of, 145–146
+  - building from range of numbers, 23
+  - building from strings, 22–23
+  - commonly used operations, 22
+  - content-based method, 21
+  - immutable, 24–25
+  - items, 19
+  - literals and operators, 19–20
+  - loops with, 59–60
+  - methods, 20–21
+  - pattern matching, 20
+  - and random module, 23–24
+  - sequential search of, 143–144
+  - sorting, 21
+- literals
+  - dictionary, 25–26
+  - list, 19
+  - string, 12
+- loaders, 88
+- logarithmic running time, 146
+- logic errors, 12
+- logical operations
+  - logical conjunction, 62–63
+  - logical disjunction, 62–63
+  - logical negation, 61–62
+  - truth tables, 62–63
+- loops
+  - definite, 56
+  - for, 56–59
+  - heading, 56
+  - indefinite, 68
+  - nested, 57–58
+  - recursive functions and, 140–142
+  - with strings, lists, and dictionaries, 59–60
+  - while, 69–70
+
+## M
+- machine code, 88
+- Macs
+  - computer software description, 88
+  - launching terminal window, 2
+- magnetic storage media, 87
+- main function
+  - composing programs, 79–80
+  - recursive patterns in art, 150–151
+- mainloop function, 81
+- makeMove method, 183, 185
+- makeShape method, 201
+- margin operand, 140
+- math module, 9–11
+- mathematics functions, 103–104
+- memory, 86–87
+- MenuItem class
+  - attributes and behavior, 173
+  - implementation and testing, 173–176
+  - user event response, 176
+- methods. See also functions
+  - AnimatedTurtle class, 194
+  - append, 21
+  - basic description of, 159
+  - content based, 21
+  - dictionary, 26–27
+  - fillColor, 165
+  - fillOn, 164–165
+  - getter, 170
+  - heading, 165
+  - hide, 164, 169–170
+  - index, 143
+  - __init__, 168
+  - insert, 20–21
+  - isVisible, 165
+  - items, 26
+  - keys, 26
+  - list, 20–21
+  - makeMove, 183, 185
+  - makeShape, 201
+  - outlineColor, 164–165
+  - pop, 20–21
+  - position, 165
+  - RegularPolygon class, 164–166
+  - remove, 21
+  - reverse, 21
+  - rotate, 165, 171
+  - scale, 165, 171
+  - setter, 170
+  - show, 164, 169–170
+  - sort, 21
+  - split, 23
+  - string, 18–19
+  - tilt, 200
+  - translate, 165, 171
+  - Turtle class, 160
+  - values, 26
+- module variables
+  - initializing, 125–126
+  - tracking history of turtle positions, 126–128
+- modules
+  - composing programs, 80
+  - as libraries of functions, 103
+  - math, 9–11
+  - sys, 83–85
+  - variable, 80
+- mondrian function, 148–153
+- mouse events
+  - clicks, 118–119
+  - event-handling, 120
+  - freehand drawing by dragging mouse, 120–122
+  - responding to, 118–122
+  - right-click events, 128–133
+- movement operations, 34–39
+- multiway if statement, 67–68
+- myIn function, 146
+
+## N
+- \n (newline character), 13
+- negative numbers, 6
+- nested loops, 57–58
+- newline character (\n), 13
+- not equal to operator (!=), 61
+- numbers
+  - arithmetic operations, 4–6
+  - error detection, 11–12
+  - floating-point, 4
+  - functions, 9
+  - input dialogs for, 117–118
+  - integers, 4
+  - math module, 9–11
+  - negative, 6
+  - real, 4
+  - variables and assignment, 6–8
+- numinput function, 116–117, 212
+
+## O
+- objects
+  - basic description of, 159
+  - behavior, 165–167
+- onclick function, 119, 128, 176, 210
+- ondrag function, 120, 128, 176, 210
+- one-way if statement, 63–64
+- onkey function, 123–124
+- onkeypress function, 123
+- onkeyrelease function, 123
+- onrelease function, 128, 210
+- onscreen function, 128
+- onscreenclick function, 211
+- ontimer function, 190–192, 211
+- operating systems, 88
+- operations
+  - comparison, 61
+  - dictionary, 26–27
+  - list, 19–20
+  - logical, 61
+  - string, 16–17
+- optical storage media, 87
+- outlineColor method, 163–165, 194
+- output devices, 86
+- output functions, 15–16
+
+## P
+- Paste command, 77
+- pattern matching, 20
+- pauseOrResume function, 199
+- pen control functions, 207–209
+- pencolor function, 33, 43, 46, 208
+- pensize function, 40, 208
