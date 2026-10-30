@@ -1,0 +1,7 @@
++   23. Caroline Sinders. Feminist data set. Clinic for Open Source Arts. https://carolinesinders.com/wp-content/uploads/2020/05/Feminist-Data-Set-Final-Draft-2020-0517.pdf, 2020.
++   24. Shannon Vallor. Technology and the virtues: A philosophical guide to a future worth wanting. Oxford University Press, 2016.
++   25. Sahil Verma and Julia Rubin. Fairness definitions explained. In Proceedings of the International Workshop on Software Fairness, FairWare '18, page 1–7, New York, NY, USA, 2018. Association for Computing Machinery.
++   26. Ben Wagner. Ethics as an escape from regulation. From “ethics-washing” to ethics-shopping? 2018.
++   27. Michael J. Wooldridge and Nicholas R. Jennings. Software engineering with agents: Pitfalls and pratfalls. IEEE Internet Computing, 3(3):20–27, May 1999.
++   28. Karen Yeung, Andrew Howes, and Ganna Pogrebna. AI governance by human rights-centred design, deliberation and oversight: An end to ethics washing. The Oxford Handbook of AI Ethics, Oxford University Press, 2019.
++   29. Monika Zalnieriute. “transparency-washing” in the digital age: A corporate agenda of procedural fetishism. The digital age: a corporate agenda of procedural fetishism, pages 21–33, 2021.

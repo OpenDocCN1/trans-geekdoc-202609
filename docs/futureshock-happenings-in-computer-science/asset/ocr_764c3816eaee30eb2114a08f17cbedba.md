@@ -1,0 +1,15 @@
+When thoughtfully integrated into the educational process, gamification elements like points, badges, and leaderboards can enhance student motivation, engagement, and overall learning outcomes.
+
+# 3.6 ACADEMIC INTEGRITY AND MACHINE LEARNING
+
+Recent developments in transformer-based machine learning (the technology which powers tools such as ChatGPT) has sent shockwaves into the assessment community. These systems can generate coherent, high-quality written content, making it easier for students to bypass the learning process and submit work that isn’t their own. Since the output is novel, existing plagiarism detection systems such as TurnItIn are not able to successfully detect the misconduct. This poses a serious problem: how can teachers assure that students engaged in learning activities, while operating at the scale of modern higher education? In this section, we look to how technology can help address the very problem it helped create.
+
+# 3.6.1 LEARNING ANALYTICS
+
+Learning analytics is an application of data science techniques, accounting for the idiosyncrasies of the educational landscape [15]. Learning analytics have many applications, from automatically detecting at-risk students, to gaining the knowledge required to be able to effectively optimise courses and training.
+
+The first forward-looking application of learning analytics we will explore is academic misconduct detection. By analysing writing patterns, engagement, source material, and linguistic styles, machine-learning-based verification systems are tasked with identifying potential instances of misconduct, such as engaging with contract cheating services, or offloading assessments to generative AI.
+
+There are two major approaches to detecting academic misconduct. The first is via keystroke logging and clickstream data, which attempts to detect irregularities in behaviour within the learning environment as students work on assessments over time [22]. The approach, while simple and effective, has two major criticisms. First, the approach relies on students developing their assessment (essay, code writing, etc) within a designated environment. This could prove inequitable for students who use third-party authoring tools, for example for accessibility purposes [19]. The second criticism of this approach is surrounding general privacy, with many students, educators and privacy advocates worried that online invigilated exams are a type of surveillance [10].
+
+The second approach to detecting academic misconduct with learning analytics is via style detection. Style detection is the algorithmic validation of style over time [7, 5], and hinges on the idea that each individual has idiosyncrasies in their output. Most work in style validation is in writing style, but similar approaches are being explored in code writing and other domains. The approach, while more complex and prone to false positives [6], has clear benefits compared to behaviour logging as it is less important where the authorship of assessments took place, and no privacy-violating monitoring is required. The final product (be it an essay, source code, or any

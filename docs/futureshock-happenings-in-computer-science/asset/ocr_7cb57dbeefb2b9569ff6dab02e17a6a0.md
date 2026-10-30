@@ -1,0 +1,15 @@
+if the data centre industry was more transparent about its green future. But even if we discount their still-to-be-delivered promises, the sector is doing a relatively good job.
+
+Another perspective comes not from the total footprint of AI but from the individual. How much energy is used, and carbon dioxide produced, by a single AI model? This is not an easy question to answer. Machine-learning models, for example, come in many different sizes. In May 2020, OpenAI announced GPT-3: at that time, this was the largest AI model ever built with an impressive 175 billion parameters. Infamously, GPT in particular and generative AI in general have come further since then of course.
+
+Training this enormous model is estimated to have produced 85 tonnes of CO₂. To put this in perspective, this is the same amount produced by four people flying a round trip from London to Sydney in business class.
+
+This figure of 85 tonnes of CO₂ supposes that the energy produced to train the GPT-3 model comes from conventional power sources. In practice, many data centres run on renewable energy. The three big cloud computing providers are Google Cloud, Microsoft Azure and Amazon Web Services. Google Cloud claims to have ‘zero net carbon emissions’. Microsoft Azure runs its cloud on 60 per cent renewable energy and has offset the rest since 2014. Indeed, by 2030, the whole of Microsoft plans to be carbon negative. Amazon Web Services, which is the largest provider with well over one-third of the market, is less green. It has, however, promised to be net zero by 2040. Today, Amazon uses around 50 per cent renewable energy when offsets are factored into consideration.
+
+A distinction also needs to be made between training and prediction. It costs a lot more to train a model than to use it to make a prediction. Training can take days or even months on thousands or tens of thousands of processors. Prediction, on the other hand, takes milliseconds, often on a single core. The amount of CO₂ produced to make a prediction using even a very large AI model can thus be measured in grams. Generating an image with generative AI is roughly equivalent in carbon footprint to charging one’s phone. We should therefore divide the amount of CO₂ produced training a model by the number of times the model is actually used to make predictions, or ouputs.
+
+The carbon footprint of AI is thus real but perhaps not the greatest ethical challenge thrown up by AI. We should probably be much more focused on uses of AI that, for example, perpetuate biases of the past. On the other hand, AI does offer the promise to help tackle a number of wicked environmental problems, for reducing the carbon emissions to deliver goods to our homes, to tackling poachers, and managing other threats to biodiversity.
+
+# 2.8.1 ENVIRONMENTAL CONCERNS: FURTHER READING AND AN EXERCISE
+
+Kate Crawford examines in detail the environmental costs of AI [8]. Her analysis goes beyond carbon emissions to include resources such as lithium and rare earth

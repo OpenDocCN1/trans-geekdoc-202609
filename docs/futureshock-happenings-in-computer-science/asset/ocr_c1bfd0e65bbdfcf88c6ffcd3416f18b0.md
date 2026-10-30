@@ -1,0 +1,15 @@
+may make assumptions about what is best for the users and need to be mindful to thus include user testing of a range of different users in the design process.
+
+# 6.3.8 GUIDANCE FADING EFFECT
+
+The guidance fading effect refers to gradually fading the guidance provided to the user when their knowledge or skills grow. This greatly relates to the previous effect because the integration of detailed instructional guidance, such as the those provided in worked examples, for users whose schemas and structures are already well developed, will require additional cognitive resources to process and add an unnecessary load on the architecture [1, 26, 2]. Thus, we want to aim to gradually reduce the amount of help provided to the user as they gain more experience with the interface. This also applies to worked examples, where we also want to fade out the steps as expertise of the user increases. The assumption supporting this effect is that our working memory capacity will be able to deal with an increase in demands, and a gradual reduction in problem solving guidance as expertise develops to thus cope with increased problem-solving demands [31].
+
+There are many more cognitive load effects that have been discovered via empirical research as summarised by Sweller, et al. [39], but the ones mentioned above are the most relevant to Usability, UX and Interface design. We note that applying these cognitive load effects to reduce extraneous load is most important when the intrinsic load of the information being presented to the users is already high and so the users are already potentially cognitively overloaded.
+
+# 6.4 APPLICATION OF COGNITIVE LOAD THEORY TO EACH HEURISTIC
+
+In this next section we aim to make it clear why each of the rules of thumbs developed by Nielsen [22, 19] manage to make good use of our cognitive resources, often by reducing the load on our limited working memories, and so make information easy to process and make sense of. This in turn supports the user in the use an interface or a system that involves less load and is thus easier to use. This will be of most benefit for novice users, but everyone will benefit from an easy-to-use interface, that places less load on our working memories. We will describe each heuristic and then why it works from a cognitive load perspective.
+
+# 6.4.1 VISIBILITY OF SYSTEM STATUS
+
+The first heuristic of Visibility of System Status relates to always keeping user informed about what is happening in a timely manner, using appropriate feedback [19]. This heuristic works because effective and useful feedback increases the chance that users will learn from their mistakes, more easily learn how to use the system, and ultimately integrate new knowledge into their existing schemas. Moreover, from a cognitive load perspective it reduces the need for users to search for information and work out what is happening. Search uses up cognitive resources and so results in

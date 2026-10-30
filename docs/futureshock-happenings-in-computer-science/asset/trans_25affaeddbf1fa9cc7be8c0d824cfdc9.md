@@ -1,0 +1,47 @@
+
+- 31. R. Hadi Mogavi, J. Hoffman, C. Deng, Y. Du, E. U. Haq, and P. Hui. 展望包容性元宇宙：学生对可访问且赋能的元宇宙支持学习的视角。在《第十届 ACM 学习规模会议论文集》中，第 346–353 页，2023 年。
+- 32. P. Hagge. 学生对为期一学期的课堂虚拟现实的感知：在高等教育课堂中有效使用“google earth vr”。《Journal of Geography in Higher Education》，45(3):342–360, 2021。
+- 33. C. L. Hemme, R. Carley, A. Norton, M. Ghumman, H. Nguyen, R. Ivone, and B. Cho. 开发科学、技术、工程和数学教育虚拟和增强现实应用。《BioTechniques》，0, 2023。
+- 34. M. Hernández-Chávez, J. M. Cortés-Caballero, Á. A. Pérez-Martínez, L. F. Hernández-Quintanar, K. Roa-Tort, J. D. Rivera-Fernández, and D. A. Fabila-Bustos. 开发用于工程学生培训的虚拟现实汽车实验室。《Sustainability》，13(17):9776, 2021。
+- 35. M. Janiszewski, L. Uotinen, J. Merkel, J. Leveinen, and M. Rinne. 岩石工程、地质和采矿教育虚拟现实学习环境。在 ARMA 美国岩石力学/地质力学研讨会中，第 ARMA–2020 页，2020。
+- 36. P. Jindal, V. Khemchandani, S. Chandra, and V. Pandey. 基于多人射击游戏的国防训练仿真。在 2021 年国际计算性能评估会议（ComPE）中，第 592–597 页。IEEE，2021。
+- 37. C. Jones, L. Smith-MacDonald, A. Miguel-Cruz, A. Pike, M. van Gelderen, L. Lentz, and S. Brémault-Phillips. 针对患有战斗相关创伤后应激障碍的军人及退伍军人的基于虚拟现实的治疗：多模态运动辅助记忆脱敏和再巩固随机对照试验方案。《JMIR Research Protocols》，9(10):e20620, 2020。
+- 38. A. Jovanović and A. Milosavljević. 用于游戏化协作学习的 Vortex 元宇宙平台。《Electronics》，11(3):317, 2022。
+- 39. G. Karthick, B. Rebecca Jeyavadhanam, S. Ling, A. Kiyani, and N. Somasiri. 使用元宇宙沉浸式学习：通过扩展现实改变教育行业。在国际微电子与电信工程会议中，第 447–456 页。Springer Nature Singapore，2023。
+- 40. D. H. Kim, S. H. Min, and Y. H. Kim. 利用虚拟现实进行军队防空武器军事训练有效性研究。《The Journal of the Korea Contents Association》，21(5):499–507, 2021。
+- 41. T. Kim, J. Planey, and R. Lindgren. 元宇宙虚拟现实学习环境中的理论驱动设计：两个例证案例。《IEEE Transactions on Learning Technologies》，16(6):1141–1153, 2023。
+- 42. A. Lawson McLean and A. C. Lawson McLean. 外科培训中的沉浸式仿真：分析虚拟与现实环境之间的相互作用。《Simulation & Gaming》，55(6):1103–1122, 2024。
+- 43. H. Lee, D. Woo, and S. Yu. 补充远程教育方法的虚拟现实元宇宙系统：基于飞机维护仿真。《Applied Sciences》，12(5):2667, 2022。
+- 44. H. Lin, S. Wan, W. Gan, J. Chen, and H. C. Chao. 教育中的元宇宙：愿景、机遇与挑战。在 2022 年 IEEE 国际大数据会议（Big Data）中，第 2857–2866 页。IEEE，2022。
+- 45. X. P. Lin, B. B. Li, Z. N. Yao, Z. Yang, and M. Zhang. 虚拟现实对课堂学生参与度的影响——文献的批判性综述。《Frontiers in Psychology》，15:1360574, 2024。
+- 46. M. Lopez, J. G. C. Arriaga, J. P. N. Álvarez, R. T. González, J. A. Elizondo-Leal, J. E. Valdez-García, and B. Carrión. 虚拟现实与传统教育：人类神经解剖学教学是否有优势？《Computers & Electrical Engineering》，93:107282, 2021。
+- 47. R. Mahindru, A. Kumar, G. Bapat, A. D. Rroy, Kavita, and N. Sharma. 元宇宙 unleashed：增强商科教育中的创造力和创新。《Engineering Proceedings》，59(1):207, 2024。
+- 48. G. Makransky and L. Lilleholt. 沉浸式虚拟现实在教育中的情感价值的结构方程模型研究。《Educational Technology Research and Development》，66(5):1141–1164, 2018。
+- 49. M. Mergen, N. Graf, and M. Meyerheim. 回顾医学教育中虚拟现实整合的现状——一项范围综述。《BMC Medical Education》，24(1):788, 2024。
+- 50. B. Miao, S. Ge, and Y. Guo. 煤矿智能采矿数字孪生系统构建。《Metaverse》，3(2):16, 2022。
+- 51. P. Onu, A. Pradhan, and C. Mbohwa. 利用元宇宙进行未来教学与学习的潜力。《Education and Information Technologies》，29(7):8893–8924, 2024。
+- 52. L. Paulsen, S. Dau, and J. Davidsen. 沉浸式虚拟现实中协作学习的设计：系统文献综述。《Virtual Reality》，28(1):63, 2024。
+- 53. E. Paxinou, M. Georgiou, V. Kakkos, D. Kalles, and L. Galani. 通过在面对面辅导之上采用虚拟现实实验室实现显微镜教育的教学目标。《Research in Science & Technological Education》，40(3):320–339, 2022。
+- 54. E. Paxinou, C. T. Panagiotakopoulos, A. Karatrantou, D. Kalles, and A. Sgourou. 三维虚拟现实生物实验室与光子显微镜实验室实验中传统教学实践的实施与评估。《Biochemistry and Molecular Biology Education》，48(1):21–27, 2020。
+- 55. J. Pirker, M. Holly, I. Lesjak, J. Kopf, and C. Gütl. MaroonVR——一个交互式沉浸式虚拟现实物理实验室。在《数字世界中的学习：正式与非正式教育交互技术视角》中，第 213–238 页，2019。
+- 56. C. Prisille and M. Ellerbrake. 虚拟现实（VR）与地理教育：中学 360°“体验”的潜力。《Modern Approaches to the Visualization of Landscapes》，第 321–332 页，2020。
+- 57. L. Pérez, E. Diez, R. Usamentiaga, and D. F. García. 使用虚拟现实界面进行工业机器人控制和操作员培训。《Computers in Industry》，109:114–120, 2019。
+- 58. J. Á. Ramírez and A. M. V. Bueno. 利用虚拟现实学习有机化学。在 2020 年 IEEE 韦拉克鲁斯工程国际会议（ICEV）中，第 1–4 页。IEEE，2020。
+- 59. S. M. Reeves, K. J. Crippen, and E. D. McCray. 本科生在虚拟现实实验室学习化学的差异化体验。《Computers & Education》，175:104320, 2021。
+- 60. B. Salah, M. H. Abidi, S. H. Mian, M. Krid, H. Alkhalefah, and A. Abdo. 基于虚拟现实的工程教育以提升工业 4.0 中的制造可持续性。《Sustainability》，11(5):1477, 2019。
+- 61. N. Shakirova, N. Said, and S. Konyushenko. 虚拟现实在地理教育中的应用。《International Journal of Emerging Technologies in Learning (iJET)》，15(20):59–70, 2020。
+- 62. A. Sharma, L. Sharma, and J. Krezal. 将理论付诸实践：元宇宙教学在高等教育机构实施的机会与挑战研究。在国际人机交互会议中，第 173–189 页。Springer Nature Switzerland，2024。
+- 63. Y. Shen, Z. Wang, M. Li, J. Yuan, and Y. Gu. 沉浸式虚拟现实中地理学习对学生情感和动机的实证研究。在《Frontiers in Education》，第 7 卷，第 831619 页。Frontiers，2022。
+- 64. K. Silseth, R. Steier, and H. C. Arnseth. 探索学生的沉浸式 VR 体验作为协作意义建构和学习的资源。《International Journal of Computer-Supported Collaborative Learning》，19(1):11–36, 2024。
+- 65. A. Singh, D. Ferry, A. Ramakrishnan, and S. Balasubramanian. 在生物医学工程教育中使用虚拟现实。《Journal of Biomechanical Engineering》，142(11):111013, 2020。
+- 66. M. Soliman, A. Pesyridis, D. Dalaymani-Zad, M. Gronfula, and M. Kourmpetis. 虚拟现实在工程教育中的应用。《Applied Sciences》，11(6):2879, 2021。
+- 67. M. M. Soliman, E. Ahmed, A. Darwish, and A. E. Hassanien. 人工智能驱动的元宇宙：分析、挑战与未来展望。《Artificial Intelligence Review》，57(2):36, 2024。
+- 68. Jungmyoung Son, Soohee Woo, Jeong Hye Han, and Jong-Jun Kim. 基于增强虚拟元宇宙的社会研究内容开发与应用：直指心体要节。《Journal of Digital Contents Society》，2023。
+- 69. P. Stothard. 采矿元宇宙——最佳采矿实践的未来协作工具。《Mining Technology》，132(3):165–178, 2023。
+- 70. M. M. Thompson, A. Wang, C. Uz Bilgin, M. Anteneh, D. Roy, P. Tan, and E. Klopfer. 虚拟现实对高中生细胞概念的影响。《Placeholder Journal Name》，2020。
+- 71. A. Tibaldi, F. L. Bonali, F. Vitello, E. Delage, P. Nomikou, V. Antoniou, and M. Whitworth. 基于现实世界的沉浸式虚拟现实在火山学研究、教学和传播中的应用。《Bulletin of Volcanology》，82:1–12, 2020。
+- 72. M. H. Tsou and C. Mejia. 超越制图：利用虚拟现实、增强现实和混合现实将制图师的角色扩展到元宇宙中的用户界面设计师。《Cartography and Geographic Information Science》，第 1–15 页，2023。
+- 73. R. van Dinther, L. de Putter, and B. Pepin. 支持有意义化学教育的沉浸式虚拟现实特征。《Journal of Chemical Education》，100(4):1537–1546, 2023。
+- 74. D. Vergara, J. Extremera, M. P. Rubio, and L. P. Dávila. 通过虚拟现实学习环境实现有意义学习：材料工程案例研究。《Applied Sciences》，9(21):4625, 2019。
+- 75. H. Wang, H. Ning, Y. Lin, W. Wang, S. Dhelim, F. Farha, and M. Daneshmand. 关于元宇宙的调查：最先进技术、应用与挑战。《IEEE Internet of Things Journal》，10(16):14671–14688, 2023。
+- 76. Y. Wang, Z. Su, N. Zhang, R. Xing, D. Liu, T. H. Luan, and X. Shen. 关于元宇宙的调查：基础、安全与隐私。《IEEE Communications Surveys & Tutorials》，25(1):319–352, 2022。
