@@ -1,0 +1,15 @@
+basics of theory and key terminology of quantum computing and its various models. Qubits, single-qubit gates, two-qubit gates, multi-qubit gates, and measurement basis were introduced. These were required to formally introduce the crux of this chapter that is the QKD and BB84 protocol. Thereafter, several new upcoming and recently introduced methods such as Lattice-based cryptography, Multivariate cryptography, Hash-based cryptography, Code-based cryptography, Supersingular elliptic curve isogeny cryptography, and Symmetric key quantum resistance were discussed, along with their specific importance and useability for image data. We restricted our discussion to qualitative only, as these topics each deserve a chapter of their own.
+
+After going through a plethora of algorithms and techniques for post-quantum cryptography, we discovered a rich theory of new cryptography protocols as well as a dexterous implementation of them. As we will soon have a more connected world with more connected devices, image and multimedia data is only going to increase, and so will be the demand for security and privacy of such data. We are hopeful the current scientific community can provide us a sufficiently safe alternative until the quantum computer evolves to a level to where it can break existing standard cryptography protocols.
+
+# REFERENCES
+
++   1. A. Ephremides, J. E. Wieselthier, and D. J. Baker, “A design concept for reliable mobile radio networks with frequency hopping signaling,” Proceedings of the IEEE, vol. 75, no. 1, pp. 56–73, 1987.
++   2. J. L. Massey, “Foundation and methods of channel encoding,” in Proc. Int. Conf. Information Theory and Systems, vol. 65, pp. 148–157, NTG-Fachberichte, 1978.
++   3. S. Chandra, S. Paira, S. S. Alam, and G. Sanyal, “A comparative survey of symmetric and asymmetric key cryptography,” in 2014 International Conference on Electronics, Communication and Computational Engineering (ICECCE), pp. 83–93, IEEE, 2014.
++   4. B. Furht and D. Kirovski, Multimedia Security Handbook. CRC Press, 2004.
++   5. L. Guan, Multimedia Image and Video Processing. CRC Press, 2017.
++   6. O. F. Mohammad, M. Shafry, M. Rahim, S. Rafeeq, M. Zeebaree, and F. Ahmed, “A survey and analysis of the image encryption methods,” International Journal of Applied Engineering Research, vol. 12, no. 23, pp. 13265–13280, 2017.
++   7. M. B. Yassein, S. Aljawarneh, E. Qawasmeh, W. Mardini, and Y. Khamayseh, “Comprehensive study of symmetric key and asymmetric key encryption algorithms,” in 2017 International Conference on Engineering and Technology (ICET), pp. 1–7, 2017.
++   8. E. Milanov, “The RSA algorithm,” RSA Laboratories, pp. 1–11, 2009.
++   9. F. O. Mojisola, S. Misra, C. F. Febisola, O. Abayomi-Alli, and G. Sengul, “An improved random bit-stuffing technique with a modified RSA algorithm for resisting attacks in information security (RBMRSA),” Egyptian Informatics Journal, vol. 23, no. 2, pp. 291–301, 2022.

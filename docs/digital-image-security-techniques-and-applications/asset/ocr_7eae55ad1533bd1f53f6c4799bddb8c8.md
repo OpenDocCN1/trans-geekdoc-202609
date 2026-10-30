@@ -1,0 +1,13 @@
++   - **PoS:** In this procedure, each node requires some finite amount of currency to claim the ownership of the given block during the mentioned transaction. PoW is shifted to the PoS platform to enhance the BC system’s scalability and throughput.
+
+# 10.3.6 Content protection mechanism
+
+The content protection mechanism is applied to protect multimedia content from unauthorized users. This mechanism ensures copy protection, the authenticity of the multimedia object, medium transmission security, and digital rights [16]. It also offers an end-to-end content protection mechanism where only authorized users can access multimedia content. There are several types of content protection mechanisms.
+
++   - **Encryption:** This is one unique approach to data hiding. The original message is converted into an unreadable form (a ciphertext message) to maintain the confidentiality of multimedia data [17]. Further, the reverse procedure is performed on the ciphertext message to decipher the original message, known as decryption. This scheme offers the confidentiality, integrity, and authenticity of multimedia information.
++   - **Digital rights management (DRM):** DRM systems encrypt the multimedia content so only authorized users can access the confidential information, which protects unauthorized access to multimedia content [18]. The content is delivered to the authorized user, and it avoids content modification or illegal copying.
++   - **Digital watermarking:** Watermarking has been a widely used data-hiding technique. This protection mechanism hides confidential information in multimedia objects to achieve copyright protection [19]. It extracts confidential information and can claim ownership and verify the authenticity of a multimedia object. The watermarking system focuses on robustness, security, payload, and visual quality features.
+
+# 10.4 JOINT WATERMARKING AND BLOCKCHAIN-BASED TECHNIQUES
+
+The integration of digital watermarking and BC framework has been used in various DRM systems to offer various solutions such as copyright management, content authentications, copyright transfers, and tracking the transaction status to digital media [20]. Digital watermarking plays a significant role in offering multimedia data copyright protection. However, a marked image can be tampered with when transmitted through an open channel. So, the watermarking method is insufficient to

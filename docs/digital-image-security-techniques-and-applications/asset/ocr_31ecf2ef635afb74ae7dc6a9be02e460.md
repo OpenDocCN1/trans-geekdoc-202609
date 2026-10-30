@@ -1,0 +1,16 @@
++   13. Chang, K. I., Bowyer, K. W., & Flynn, P. J. (2005). An evaluation of multimodal 2D+3D face biometrics. IEEE Transactions on Pattern Analysis and Machine Intelligence, 27(4), 619–624. doi:10.1109/TPAMI.2005.70
++   14. Yan, P., & Bowyer, K. W. (2007). Biometric recognition using 3D ear shape. IEEE Transactions on Pattern Analysis and Machine Intelligence, 29(8), 1297–1308. doi:10.1109/TPAMI.2007.1067
++   15. Hoskens, H., Liu, D., Naqvi, S., Lee, M. K., Eller, R. J., Indencleef, K., ... & Claes, P. (2021). 3D facial phenotyping by biometric sibling matching used in contemporary genomic methodologies. PLoS Genetics, 17(5), e1009528. doi:10.1371/journal.pgen.1009528
++   16. Ganapathi, I. I., Ali, S. S., Vu, N.-S., Prakash, S., & Werghi, N. (2022). A survey of 3D ear recognition techniques. ACM Computing Surveys (CSUR), 55(10), 1–36. doi:10.1145/3560884
++   17. Benalcazar, D. P., Bastias, D., Perez, C. A., & Bowyer, K. W. (2019). A 3D iris scanner from multiple 2D visible light images. IEEE Access, 7, 61461–61472. doi:10.1109/ACCESS.2019.2915786
++   18. Hameed, S. A., Zaidan, B. B., Zaidan, A. A., Naji, A. W., & Tawfiq, O. F. (2010). An accurate method to obtain bio-metric measurements for three dimensional skull. Journal of Applied Sciences, 10(2), 145–150.
++   19. Cheng, K. H., & Kumar, A. (2019). Contactless biometric identification using 3D finger knuckle patterns. IEEE Transactions on Pattern Analysis and Machine Intelligence, 42(8), 1868–1883. doi:10.1109/TPAMI.2019.2904232
++   20. Zhan, Y., Rathore, A. S., Milione, G., Wang, Y., Zheng, W., Xu, W., & Xia, J. (2020). 3D finger vein biometric authentication with photoacoustic tomography. Applied Optics, 59(28), 8751–8758. doi:10.1364/AO.400550
++   21. De Santis, M., Agnelli, S., Nardiello, D., & Iula, A. (2017, September). 3D ultrasound palm vein recognition through the centroid method for biometric purposes. In 2017 IEEE International Ultrasonics Symposium (IUS) (pp. 1–4). IEEE. doi:10.1109/ULTSYM.2017.8091946
++   22. Santos, G., Tavares, T., & Rocha, A. (2022). Reliability and generalization of gait biometrics using 3D inertial sensor data and 3D optical system trajectories. Scientific Reports, 12(1), 1–15. doi:10.1038/s41598-022-12452-6
++   23. Huang, G. B., & Learned-Miller, E. (2014). Labeled faces in the wild: Updates and new reporting procedures. Dept. Comput. Sci., Univ. Massachusetts Amherst, Amherst, MA, USA, Tech. Rep. 14(003).
++   24. Yin, L., Wei, X., Sun, Y., Wang, J., Rosato, M. A 3D facial expression database for facial behavior research. In Proc. IEEE Int. Conf. on Automatic Face and Gesture Recognition, Southampton, UK, pp. 211–216 (2006).
++   25. Zafeiriou, S., Hansen, M., Atkinson, G., Argyriou, V., Petrou, M., Smith, M., Smith, L. The photo face database. In Proceedings of the CVPR 2011 WORKSHOPS, Colorado Springs, CO, USA, 20–25 June 2011; pp. 132–139.
++   26. Kumar, A., & Wu, C. (2012). Automated human identification using ear imaging. Pattern Recognition, 45(3), 956–968. doi:10.1016/j.patcog.2011.06.005
++   27. AMI Ear Database. Available online: https://webctim.ulpgc.es/research_works/ami_ear_database/
++   28. Chen, H., & Bhanu, B. (2007). Human ear recognition in 3D. IEEE Transactions on Pattern Analysis and Machine Intelligence, 29(4), 718–737. doi:10.1109/TPAMI.2007.1005

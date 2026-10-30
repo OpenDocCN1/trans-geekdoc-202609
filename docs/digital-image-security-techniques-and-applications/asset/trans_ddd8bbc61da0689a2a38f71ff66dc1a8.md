@@ -1,0 +1,55 @@
+
+- 10. A. Sahoo, P. Mohanty, and P. C. Sethi, “使用 RSA 算法的图像加密”，载于 Intelligent Systems，第 641–652 页，Springer，2022 年。
+- 11. V. Jain, “不同类型密码技术综述”，ACADEMICA: An International Multidisciplinary Research Journal，第 11 卷，第 11 期，第 1087–1094 页，2021 年。
+- 12. H. Xu, K. Thakur, A. S. Kamruzzaman, and M. L. Ali, “密码学在数据库中的应用：综述”，载于 2021 IEEE 国际物联网、电子与机电技术会议 (IEMTRONICS)，第 1–6 页，IEEE，2021 年。
+- 13. C. Easttom, “非对称算法”，载于 Modern Cryptography，第 233–252 页，Springer，2022 年。
+- 14. Z. Bashir, M. Malik, M. Hussain, and N. Iqbal, “基于椭圆曲线和改进 Diffie-Hellman 协议的多 RGB 图像加密算法”，Multimedia Tools and Applications，第 81 卷，第 3 期，第 3867–3897 页，2022 年。
+- 15. D. Kumar, A. B. Joshi, S. Singh, and V. N. Mishra, “基于椭圆曲线密码学 ElGamal 加密和 3D Lorenz 映射的数字彩色图像加密方案”，载于 M. Seenivasan, K. Pattabiraman, A. Vadivel（编），AIP Conference Proceedings，第 2364 卷，第 020026 页，AIP Publishing LLC，2021 年。
+- 16. S. Thomas and A. Krishna, “使用改进的 Arnold 变换和 ElGamal 加密保护灰度图像”，Journal of Electronic Imaging，第 31 卷，第 6 期，第 063012 页，2022 年。
+- 17. I. Dinur and B. Hasson, “分布式 Merkle 难题”，载于 Theory of Cryptography Conference，第 310–332 页，Springer，2021 年。
+- 18. L. D. Singh and K. M. Singh, “使用椭圆曲线密码学的图像加密”，Procedia Computer Science，第 54 卷，第 472–481 页，2015 年。
+- 19. P. Parida, C. Pradhan, X.-Z. Gao, D. S. Roy, and R. K. Barik, “基于椭圆曲线密码学和多维混沌映射的图像加密与认证”，IEEE Access，第 9 卷，第 76191–76204 页，2021 年。
+- 20. N. K. Pareek, V. Patidar, and K. K. Sud, “使用混沌 logistic 映射的图像加密”，Image and Vision Computing，第 24 卷，第 9 期，第 926–934 页，2006 年。
+- 21. X. Gao, “基于二维超混沌映射的图像加密算法”，Optics & Laser Technology，第 142 卷，第 107252 页，2021 年。
+- 22. “量子计算历史 - Azure Quantum|Microsoft Learn”。 https://learn.microsoft.com/en-us/azure/quantum/concepts-overview。 （访问于 2022 年 11 月 26 日）。
+- 23. N. P. Landsman, “Born 规则及其解释”，载于 D. Greenberger, K. Hentschel, F. Weinert（编），Compendium of Quantum Physics，第 64–70 页，Springer，2009 年。
+- 24. L. Gyongyosi and S. Imre, “量子计算技术综述”，Computer Science Review，第 31 卷，第 51–71 页，2019 年。
+- 25. “单量子比特门”。 https://qiskit.org/textbook/ch-states/single-qubit-gates.html。 （访问于 2022 年 11 月 26 日）。
+- 26. “量子电路”。 https://learn.qiskit.org/course/ch-algorithms/quantum-circuits。 （访问于 2022 年 11 月 29 日）。
+- 27. C. H. Bennett, G. Brassard, C. Crépeau, R. Jozsa, A. Peres, and W. K. Wootters, “通过双经典和 Einstein-Podolsky-Rosen 信道传送未知量子态”，Physical Review Letters，第 70 卷，第 13 期，第 1895–1899 页，1993 年。
+- 28. O. Alshehri, Z.-H. Li, and M. Al-Amri, “量子通信基础”，载于 M. D. Al-Amri, D. L. Andrews, M. Babiker（编），Structured Light for Optical Communication，第 1–36 页，Elsevier，2021 年。
+- 29. “量子计算机如何在 8 小时内破解 2048 位 RSA 加密”，MIT Technology Review，2019 年。 https://www.technologyreview.com/2019/05/30/65724/how-a-quantum-computer-could-break-2048-bit-rsa-encryption-in-8-hours/。 （访问于 2022 年 11 月 29 日）。
+- 30. C. Gidney and M. Ekerå, “如何使用 2000 万个噪声量子比特在 8 小时内分解 2048 位 RSA 整数”，Quantum，第 5 卷，第 433 页，2021 年。
+- 31. “量子计算的现实：承诺与事实”，LITSLINK 博客，2021 年。 https://litslink.com/blog/the-realities-of-quantum-computing-promises-vs-facts。 （访问于 2022 年 12 月 1 日）。
+- 32. “IBM 发布 400 量子比特以上量子处理器和下一代 IBM Quantum System Two”。 https://newsroom.ibm.com/2022-11-09-IBM-Unveils-400-Qubit-Plus-Quantum-Processor-and-Next-Generation-IBM-Quantum--System-Two#::text='IBM （访问于 2022 年 11 月 30 日）。
+- 33. “IBM 量子计算路线图”。 https://www.ibm.com/quantum/roadmap。 （访问于 2022 年 12 月 1 日）。
+- 34. L. Chen, L. Chen, S. Jordan, Y.-K. Liu, D. Moody, R. Peralta, R. Perlner, and D. Smith-Tone, 《后量子密码学报告》，第 12 卷。美国商务部，国家标准与技术研究院 ...，2016 年。
+- 35. V. Mavroeidis, K. Vishi, M. D. Zych, and A. Josang, “量子计算对当前密码学的影响”，arXiv 预印本 arXiv:1804.00200，2018 年。
+- 36. A. Kumar, C. Ottaviani, S. S. Gill, and R. Buyya, “利用后量子密码学保护未来物联网”，Security and Privacy，第 5 卷，第 2 期，第 e200 页，2022 年。
+- 37. “为后量子安全做好准备”，Thales Group，2021 年。 https://www.thalesgroup.com/en/worldwide-digital-identity-and-security/enterprise-cybersecurity/magazine/prepare-yourself-post。 （访问于 2022 年 12 月 1 日）。
+- 38. A. Sharma and A. Kumar, “量子密钥分发综述”，载于 2019 年智能计算技术问题与挑战国际会议 (ICICT)，第 1 卷，第 1–4 页，IEEE，2019 年。
+- 39. A. Ruiz Alba Gaya, D. Calvo Díaz-Aldagalán, V. García Muñoz, A. Martínez García, W. A. Amaya Ocampo, J. G. Rozo Chicue, J. Mora Almerich, and J. Capmany Francoy, “基于 BB84 协议的实用量子密钥分发”，载于 Waves，第 1 卷，第 4–14 页，Instituto de Telecomunicaciones y Aplicaciones Multimedia (iTEAM)，2011 年。
+- 40. “BB84 解释 – lahiru madushanka”。 https://lahirumadushankablog.wordpress.com/2019/05/01/bb84-explained/。 （访问于 2022 年 12 月 1 日）。
+- 41. S. Sun and A. Huang, “实用量子密钥分发系统安全性评估综述”，Entropy，第 24 卷，第 2 期，第 260 页，2022 年。
+- 42. H. Nejatollahi, N. Dutt, S. Ray, F. Regazzoni, I. Banerjee, and R. Cammarota, “后量子基于格的密码学实现：综述”，ACM Computing Surveys (CSUR)，第 51 卷，第 6 期，第 1–41 页，2019 年。
+- 43. “基于格的密码学”，ISARA Corporation。 https://www.isara.com/blog-posts/lattice-based-cryptography.html。 （访问于 2022 年 12 月 2 日）。
+- 44. J. van de Pol, “基于格的密码学”，Eindhoven University of Technology，数学与计算机科学系，2011 年。
+- 45. M. Kachurova, T. Shuminoski, and M. Bogdanoski, “基于格的密码学：保护物联网技术的量子方法”，载于 M. Bogdanoski（编），Building Cyber Resilience Against Hybrid Threats，第 122–133 页，IOS Press，2022 年。
+- 46. R. Chaudhary, G. S. Aujla, N. Kumar, and S. Zeadally, “面向物联网环境的基于格的公钥密码系统：挑战与解决方案”，IEEE Internet of Things Journal，第 6 卷，第 3 期，第 4897–4909 页，2018 年。
+- 47. D. Kundi, Y. Zhang, C. Wang, A. Khalid, M. O’Neill, W. Liu, 等，“FPGA 上基于格的密码学的超高速多项式乘法”，IEEE Transactions on Emerging Topics in Computing，第 10 卷，第 4 期，第 1993–2005 页，2022 年。
+- 48. J. Dey and R. Dutta, “多元密码学进展：系统综述、挑战与研究方向”，ACM Computing Surveys，第 55 卷，第 12 期，第 1–34 页，2022 年。
+- 49. J. Ding and A. Petzoldt, “多元密码学的现状”，IEEE Security & Privacy，第 15 卷，第 4 期，第 28–36 页，2017 年。
+- 50. “978-3-540-88702-7_6.pdf”。 https://link.springer.com/content/pdf/10.1007/978-3-540-88702-7_6.pdf?pdf=inline （访问于 2022 年 12 月 2 日）。
+- 51. C. Easttom, “更多抗量子密码学方法”，载于 C. Easttom（编），Modern Cryptography: Applied Mathematics for Encryption and Information Security，第 427–449 页，Springer，2022 年。
+- 52. X. Arnal Clemente, “通过最优子空间表示实现多元密码学中更短的密钥”，硕士论文，Universitat Politècnica de Catalunya，2022 年。
+- 53. D. J. Bernstein, “后量子密码学导论”，载于 D. J. Bernstein, J. Buchmann, E. Dahmen（编），Post-Quantum Cryptography，第 1–14 页，Springer，2009 年。
+- 54. P. Thanalakshmi, R. Anitha, N. Anbazhagan, C. Park, G. P. Joshi, and C. Seo, “一种基于哈希的抗量子指定验证者签名方案”，Mathematics，第 10 卷，第 10 期，第 1642 页，2022 年。
+- 55. M. Iavich, G. Iashvili, S. Gnatyuk, A. Tolbatov, and L. Mirtskhulava, “面向后量子时代的高效安全数字签名方案”，载于 International Conference on Information and Software Technologies，第 185–193 页，Springer，2021 年。
+- 56. C. Dods, N. P. Smart, and M. Stam, “基于哈希的数字签名方案”，载于 IMA International Conference on Cryptography and Coding，第 96–115 页，Springer，2005 年。
+- 57. A. Hülsing, “W-ots+-基于哈希签名方案的更短签名”，载于 International Conference on Cryptology in Africa，第 173–188 页，Springer，2013 年。
+- 58. J. H. Cheon and T. Johansson, 《后量子密码学：第十三届国际研讨会，PQCrypto 2022，虚拟会议，2022 年 9 月 28–30 日，论文集》，第 13512 卷。Springer Nature，2022 年。
+- 59. “基于码的密码学”，Springer Link。 https://link.springer.com/referenceworkentry/10.1007/978-1-4419-5906-5_378#: （访问于 2022 年 12 月 2 日）。
+- 60. A. Wachter-Zeh, H. Bartz, and G. Liva, “基于码的密码学”，2022 年。
+- 61. M. Baldi, F. Chiaraluce, and P. Santini, “SPANSE：结合稀疏性与密度实现高效一次性基于码的数字签名”，arXiv 预印本 arXiv:2205.12887，2022 年。
+- 62. S. B. Wicker and V. K. Bhargava, 《Reed-Solomon 码及其应用》。John Wiley & Sons，1999 年。
+- 63. V. Weger, N. Gassner, and J. Rosenthal, “基于码的密码学综述”，arXiv 预印本 arXiv:2201.07119，2022 年。

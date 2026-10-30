@@ -1,0 +1,131 @@
+level_changes:
+- line: 192
+  before: 2
+  after: 3
+- line: 210
+  before: 2
+  after: 3
+- line: 224
+  before: 2
+  after: 3
+- line: 226
+  before: 3
+  after: 4
+- line: 244
+  before: 3
+  after: 4
+- line: 287
+  before: 3
+  after: 4
+- line: 332
+  before: 2
+  after: 3
+- line: 443
+  before: 2
+  after: 3
+- line: 539
+  before: 2
+  after: 3
+- line: 636
+  before: 3
+  after: 4
+- line: 642
+  before: 2
+  after: 4
+- line: 646
+  before: 2
+  after: 4
+- line: 650
+  before: 2
+  after: 3
+- line: 662
+  before: 3
+  after: 4
+- line: 694
+  before: 2
+  after: 3
+- line: 698
+  before: 3
+  after: 4
+- line: 720
+  before: 3
+  after: 4
+- line: 732
+  before: 3
+  after: 4
+- line: 740
+  before: 2
+  after: 3
+- line: 770
+  before: 2
+  after: 3
+- line: 788
+  before: 2
+  after: 3
+- line: 800
+  before: 3
+  after: 4
+- line: 804
+  before: 2
+  after: 3
+- line: 818
+  before: 3
+  after: 4
+- line: 861
+  before: 2
+  after: 3
+- line: 869
+  before: 3
+  after: 4
+- line: 880
+  before: 2
+  after: 3
+- line: 886
+  before: 3
+  after: 4
+- line: 900
+  before: 3
+  after: 4
+- line: 912
+  before: 3
+  after: 4
+- line: 947
+  before: 3
+  after: 4
+- line: 964
+  before: 2
+  after: 3
+- line: 980
+  before: 2
+  after: 3
+text_changes:
+- line: 1253
+  before: 3.3.4.3 Measurement
+  after: 3.3.4.3 测量
+- line: 1281
+  before: 3.3.4.4 Single qubit gates
+  after: 3.3.4.4 单量子比特门
+- line: 1298
+  before: 3.3.4.5 Two qubit gates
+  after: 3.3.4.5 双量子比特门
+- line: 1324
+  before: 3.3.4.6 Multi-qubit gates
+  after: 3.3.4.6 多量子比特门
+- line: 1328
+  before: 3.3.5 Quantum circuit
+  after: 3.3.5 量子电路
+- line: 1338
+  before: 3.3.6 Quantum teleportation circuit
+  after: 3.3.6 量子隐形传态电路
+- line: 1365
+  before: 3.4 QUANTUM COMMUNICATION
+  after: 3.4 量子通信
+- line: 1369
+  before: 3.5 SECURITY IN POST-QUANTUM ERA
+  after: 3.5 后量子时代的安全
+- line: 1567
+  before: 3.6.5.2 Methodology
+  after: 3.6.5.2 方法论
+- line: 1590
+  before: 3.6.5.3 Image security perspective
+  after: 3.6.5.3 图像安全视角

@@ -1,0 +1,9 @@
+![](bbox=[0.12, 0.11, 0.86, 0.5])
+
+Figure 14.9 Representation of approximate distribution for the various categories of fingerprint template protection.
+
+cancelable biometrics-based approaches in the field of fingerprint template protection as compared to other categories of fingerprint template protection. This chapter has presented the generic working of cancelable biometrics along with a comprehensive discussion of recent existing approaches to protect the fingerprint template, which can be helpful to understand and start with this area for further development.
+
+Although the existing approaches have shown robustness to secure the fingerprint template against identity theft and various attack scenarios to access the systems, a few limitations still exist. Considering the various existing approaches and especially discussed in Sections 14.3, 14.4, and 14.5, a few of the limitations are provided as follows. First, the recognition performance is poor in the case of challenging databases having low-quality fingerprint images; hence, novel approaches can be developed to further improve the performance in the case of challenging databases. Second, the size of the final secure template becomes larger in the existing approaches to make the template alignment-free; therefore, approaches can be developed that not only generate the alignment-free secure fingerprint template but also compute the small-size protected fingerprint template, which can be easily used in small-size consumer devices. Furthermore, a few of the open issues in the overall area of cancelable biometrics are provided below.
+
++   - Even though numerous template protection approaches performed quite well to protect the fingerprint template, there is still scope to develop novel approaches that can protect the template without compromising the recognition performance of the system while considering the fingerprint databases containing poor-quality fingerprint images.
