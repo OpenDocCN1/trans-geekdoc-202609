@@ -1,0 +1,1 @@
+image, which is the definition of that will be executed, just like an operating system image, and for a given image, the container is the running instance.

@@ -1,0 +1,3 @@
+# About the Reviewer
+
+**Rajdeep Kumar** is a lead data scientist at one of the top consulting companies. He has a Post Graduate Degree in Data Science from BITS Pilani, and is an alumni of IIIT Bangalore. He has more than 11 years of work experience in the IT industry. In his capacity, he drives and contributes to the Data Science activities along with defining the road map, scoping and mentoring the team members. He is an expert in deriving and productionizing end-to-end ML solutions to grow business and have a positive impact on the key business KPIs.
