@@ -1,0 +1,11 @@
+# Introduction
+
+*Why yet another book on the governance of information security?*
+
+Information security (IS) has become a major issue for businesses and communities in the context of digital transformation, business model changes, cyber threats, and compliance requirements. IS is on the agenda of decision-makers and is no longer considered solely a technical discipline. It has benefited in recent years from numerous recommendations regarding the importance of good governance. But governing IS is not easy for boards of directors and senior officials, and many of their questions remain unanswered. How can the adequacy of IS be evaluated considering the real needs of the company? How can different initiatives and investments be prioritized? How can the complex world of security controls be understood? And finally, what questions should management ask their security officer, and what are their respective duties in the context of governance?
+
+Security officers are aware of the importance of governance and the role it must play in bringing operations and strategies closer together. Their duties today go beyond fighting cyber threats and repeated incidents with limited resources. They must become a major player in the development of their company in this new context and promote a new kind of security as a partner in the value chain. But dealing with strategic aspects while ensuring operations is an impossible mission without senior officials’ support, involvement, and understanding of security issues.
+
+This book helps fill the gap. Starting from a hierarchical approach with the division of IS governance and management activities into three levels (strategic, tactical, and operational), it becomes easier to understand the areas of responsibility of each one. Such a framework offers a reading grid that focuses immediately on the main areas of governance and asks the right questions.
+
+The standards, such as International Organization for Standardization (ISO), National Institute of Standards and Technology (NIST), Control Objectives for Information and Related Technology (CobIT), Information Technology Infrastructure Library (ITIL), and others, note the good practices of IS management and governance and propose in particular controls or measures of protection that should be put in place, but with no advice as to how to implement them. This

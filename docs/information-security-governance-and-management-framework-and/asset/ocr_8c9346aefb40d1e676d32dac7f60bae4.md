@@ -1,0 +1,14 @@
+security measures that support their operations, projects, and development strategy. Data and process owners are identified and functioning. IS specialists implement the program according to defined strategies and policies.
+
++   - **The level of protection depends on risk appetite:** IS risks are assessed and systematically treated. Risk appetite is defined, and proactive risk management is in place concerning all company activities, both operations and projects for change. IS controls are managed and associated with risks.
++   - **Security is actively managed:** Security strategy, policies, and guidelines are established to serve the needs of the organization. The assets to be protected are identified, and responsibilities are defined. Management allocates adequate resources according to a repetitive evaluation and decision-making process. Responsibilities are defined at all levels. The reporting system supports the decision-making process and is based on key indicators. An incident management system is in place. Employees are trained and risk aware. The security program is supervised, audited, and adjusted to the needs of the company.
+
+*What is the difference between governance and management?*
+
+# 1.3 Information Security Management
+
+When talking about security governance, we often tend to confuse it with management or operational management. Appointing a CISO, setting up an access rights management team, or convening a committee to decide on some issues related to IS activities planning does not constitute improving or establishing governance. Conversely, if policies and guidelines are established without requiring rigorous monitoring and management of their implementation, the desired level of security cannot be achieved. Therefore, a company must be able to set goals for its security program and ensure that they are met (governance) and at the same time ensure the means for the program's effective implementation (management).
+
+The difference between security management and security governance is not very clear. To simplify, management encompasses the implementation and monitoring of the security program, while governance provides strategic orientations and ensures its proper execution.
+
+To illustrate this, we can use the scheme proposed by the CobIT 5 framework (Figure 1.2). Governance includes activities called Evaluate (the state of security based on business needs and management feedback), Direct (provide orientations), and Monitor (oversight). The management part includes activities related to the security program: Plan, Build, Run, and Monitor. Management feedback to

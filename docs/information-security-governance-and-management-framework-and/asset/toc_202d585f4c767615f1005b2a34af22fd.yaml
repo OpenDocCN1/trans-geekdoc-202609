@@ -1,0 +1,107 @@
+level_changes:
+- line: 106
+  before: 2
+  after: 3
+- line: 149
+  before: 2
+  after: 3
+- line: 224
+  before: 2
+  after: 3
+- line: 244
+  before: 2
+  after: 3
+- line: 328
+  before: 2
+  after: 3
+- line: 341
+  before: 2
+  after: 3
+- line: 509
+  before: 2
+  after: 3
+- line: 515
+  before: 2
+  after: 3
+- line: 531
+  before: 2
+  after: 3
+- line: 542
+  before: 2
+  after: 4
+- line: 606
+  before: 2
+  after: 4
+- line: 668
+  before: 2
+  after: 4
+- line: 694
+  before: 2
+  after: 4
+- line: 727
+  before: 2
+  after: 4
+- line: 769
+  before: 2
+  after: 4
+- line: 799
+  before: 2
+  after: 4
+- line: 835
+  before: 2
+  after: 4
+- line: 861
+  before: 2
+  after: 4
+- line: 922
+  before: 2
+  after: 3
+- line: 1084
+  before: 2
+  after: 3
+- line: 1218
+  before: 2
+  after: 3
+- line: 1235
+  before: 3
+  after: 4
+- line: 1269
+  before: 2
+  after: 3
+- line: 1286
+  before: 3
+  after: 4
+- line: 1320
+  before: 2
+  after: 3
+- line: 1337
+  before: 3
+  after: 4
+- line: 1371
+  before: 2
+  after: 3
+- line: 1388
+  before: 3
+  after: 4
+- line: 1422
+  before: 2
+  after: 3
+- line: 1439
+  before: 3
+  after: 4
+text_changes:
+- line: 261
+  before: 表1.2 **基于六种视图的架构**
+  after: 表1.2 基于六种视图的架构
+- line: 281
+  before: 图1.4 **控制的可追溯性。**
+  after: 图1.4 控制的可追溯性。
+- line: 285
+  before: '*是否存在针对信息安全治理的具体标准？*'
+  after: 是否存在针对信息安全治理的具体标准？
+- line: 1963
+  before: '*第 5 章*'
+  after: 第5章
+- line: 969
+  before: 第 3 章 控制框架的使用案例
+  after: 第3章 控制框架的使用案例

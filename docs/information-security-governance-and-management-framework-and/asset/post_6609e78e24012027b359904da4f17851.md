@@ -1,0 +1,276 @@
+
+- IS, 37–39
+  - profiles, 130–131
+    - CISO with extended responsibilities, 132
+  - data protection officer, 133–134
+  - human security analyst, 132
+  - security administrators, 131
+  - security architect, 133
+  - security coordinators, 131
+  - security delegates, 132, 133
+  - security engineers, 131
+  - third-party security coordinators, 132–133
+  - questions for, 59
+  - roles and responsibilities in ISMS, 112–115
+  - structures, 126–127
+    - distributed security, 130
+    - enterprise security, 129
+    - IT security, 128
+    - operations-oriented security, 127–128
+- Oversight and reporting, for security, 44–45
+  - components of, 201–202
+    - audit, 207–208
+    - compliance, 207–208
+    - governance, 209–210
+    - posture, 204–207
+    - program, 208–209
+    - risks, 204
+    - security costs, 210–213
+    - setting objectives, 213–214
+    - strategy, 202–204
+  - dashboards for, 214–215
+  - for governance, 44–45
+  - need for, 200–201
+  - purpose of, 200–201
+  - questions for, 60
+- Personal data, GDPR recommendations on
+  - categorization, 62
+  - classification, 62
+  - identification, 62
+  - incident management, 63
+  - inventory of, 62
+  - protection
+    - by design, 62
+    - measures, 62
+    - organization and responsibilities in, 62–63
+  - regulations, 234
+  - risk management for, 63
+  - third parties, liability of, 63
+- Personal Data (Privacy) Ordinance, Hong Kong, 234
+- Personal Information Protection and Electronic Documents Act (PIPEDA), 234
+- PIA, see Privacy impact assessment (PIA)
+- Plan, 166
+- Plan—Do—Check—Act cycle, 165–166
+  - deliverables
+    - feedback, 166
+    - metrics, 166
+    - plan, 166
+  - processes
+    - decide, 165
+    - do, 166
+    - monitor, 166
+- Policies, for security
+  - content of, 105–106
+  - documentation framework for internal regulations, 102–103
+  - internal regulatory framework, 36
+  - documentary framework, establishment of, 36–37
+  - extended enterprise, support for, 35
+  - governance and management component, 36
+  - and ISO 27001 Standard, 109–110
+  - for needs of business, 36
+  - principles, 96–97
+  - questions for, 58
+  - segregation/differentiation of, 100–101
+  - three-dimensional, 101
+  - regulatory framework, process of establishment, 106–108
+  - regulatory framework documents, classification of
+    - by business unit/business sector, 100–101
+    - by nature/hierarchy, 97–100
+    - by security, technology, or process, 101–102
+- Posture/maturity evaluation, 182
+- Preservation and archiving laws, 235
+- Primary loss magnitude, 154
+- Privacy impact assessment (PIA), 240
+- Proactive risk management, 122, 124
+- Probability of action, 154
+- Probability of risk occurrence, 151–152
+- Procedures, 97, 99
+- Program management, 41–43, 60
+  - review cycle of ISMS, 175–177
+  - security program, 164–165
+  - review cycle, 165–168
+  - tools of, 168–175
+- Protection capacity index, 185–186
+- Protection standards, information asset management, 221–223
+  - access control, 221
+  - availability and integrity assurance, 222
+  - data hiding, 221
+  - disposal of assets, 222
+  - privacy classes, 222–223
+  - supervision, 222
+- Quantitative methods of risk analysis, 153–154
+- Questionnaire for TLC F block, 57
+- RBAC, see Role/rule based access control (RBAC)
+- Regulatory framework, for security, 232–233
+  - documents, classification of
+    - by business unit/business sector, 100–101
+    - by nature/hierarchy, 97–100
+    - by security, technology, or process, 101–102
+  - internal, 35–37
+    - documentary framework, establishment of, 36–37
+  - extended enterprise, support for, 35
+  - governance and management component, 36
+  - and ISO 27001 Standard, 109–110
+  - for needs of business, 36
+  - principles, 96–97
+  - questions for, 58
+  - segregation/differentiation of, 100–101
+  - three-dimensional, 101
+  - process of establishment, 106–108
+- Regulatory framework inventory, 238
+- Reporting and oversight, security
+  - components of, 201–202
+    - audit, 207–208
+    - compliance, 207–208
+    - governance, 209–210
+    - posture, 204–207
+    - program, 208–209
+    - risks, 204
+    - security costs, 210–213
+    - setting objectives, 213–214
+    - strategy, 202–204
+  - dashboards for, 214–215
+  - for governance, 44–45
+  - purpose of, 200–201
+  - need for, 200–201
+  - questions for, 60
+- Residual risk, 184, 185
+- Resilience, 188
+- Return on investment (ROI), 183–184
+  - calculation, 187
+  - confidence interval for, 187
+  - timeframe of, 186
+- Return on security investments (ROSI), 183, 184
+  - calculation of, 184–185
+- Review cycle of ISMS, 175–177
+- Risk level, 147
+- Risks, 135
+  - analysis, 148, 151
+    - controls, effectiveness of, 153
+    - of impact, 152–153
+    - probability of risk occurrence, 151–152
+    - quantitative methods of, 153–154
+  - appetite, 142
+  - assessment, 143, 154–155
+  - attributes, 149–150
+  - categorization, 142
+  - context, threats, and vulnerabilities, evolution of, 158
+  - definition of, 142
+  - description, 148
+  - documentation, 143
+  - framework of policy for, 142
+  - and governance, 137–139
+  - heat-map, 159, 164
+  - high and very high risks, 158–159, 160
+  - identification, 144–145
+    - description, 148
+    - security risk inventory, establishment of, 146
+    - separate and aggregate risks, 147–148
+    - taxonomy/classification, 145–146
+  - impacts, 152–153
+  - information security, 135–136
+  - legal and regulatory aspect of policy for, 142
+  - management, 39–41
+    - goal of, 137
+    - human, 126
+  - for personal data, 63
+  - policy, 141–144
+  - proactive, 122, 124
+  - process, 139–141, 142, 143
+  - roles and responsibilities policy for, 142
+  - third-party and externalization, 124
+  - mapping, 143, 158
+  - negative influencing factors, 158
+  - objectives and contexts, 142
+  - principles, 142
+  - questions, 59
+  - scope of policy for, 142
+  - skepticism, 151
+  - special cases, policy for, 143
+  - treatment, 156
+    - acceptance of risk, 156–157
+    - avoidance of risk, 157
+    - reduction of risks, 157
+    - transfers risks, 157
+  - value, 148, 150
+- ROI, see Return on investment (ROI)
+- Role/rule based access control (RBAC), 23
+- ROSI, see Return on security investments (ROSI)
+- SABSA, see Sherwood Applied Business Security Architecture (SABSA)
+- Sarbanes–Oxley Act (SOX), 235
+- Secondary loss event frequency, 154
+- Secondary loss magnitude, 154
+- Secondary risk, 154
+- Sectoral regulations, 236
+- Security, 2–3; see also Information security (IS)
+  - governance, 4–9
+    - control framework, 21–49
+    - versus management, 9–11
+  - measurement, 179–182
+  - operation outsourcing services, 120
+  - program, 11, 164–165
+    - review cycle, 165–168
+    - tools of, 168–175
+  - regulatory bodies for, 12
+  - risk assessment, 40–41
+  - risks, 39
+  - standards, 11–12
+  - strategy, 33–35
+- Security administrators, 131
+- Security architect, 133
+- Security committees, 113
+- Security coordinators, 131
+- Security cost analysis, 195–196
+- Security delegates, 132, 133
+- Security engineers, 131
+- Security index, 191
+- Security marketing, 123
+- Security metrics, 43–44, 61
+  - assumption-based metrics, 182, 191–192
+  - benchmarking, 182, 196–197
+  - cost analysis, 182, 195–196
+  - financial metrics, 182, 182–184
+  - protection capacity index, 185–186
+  - ROSI calculation based on risk analyses, 184–185
+  - goals, measuring progress for, 182, 193–194
+  - modeling, 182, 186–187
+  - operational performance measurement, 182, 194–195
+  - security measurement, difficulty of, 180–182
+  - state of security measurement, 182, 188
+    - maturity models for, 189–191
+    - security index for, 191
+- Security Operation Center (SOC), 194
+- Security responsibility delegation, to business units, 92
+- Security risk matrix, 152
+- Security specialists, 113–114
+- Security strategy, 71–74
+  - communication, 93–94
+  - content, 74
+  - context, 75
+  - governance and organization, 75
+  - information security mission, 74
+  - strategic security initiatives, 75–76
+  - methodical approach to define, 76–77
+    - business initiatives, 77
+    - grouping initiatives, 79
+    - security initiatives to improve maturity, 78–79
+    - security initiatives to support business operations, 77–78
+  - strategy formulation, 79
+  - project to formulate, 80
+    - business change initiatives, 80–83
+    - initiatives grouping, 90, 91
+    - security initiatives for controls maturity improvement, 89–90
+    - security initiatives supporting business operations, 84–89
+    - strategy formulation, 90–93
+- Self-assessment, governance of, 55, 56–61
+- Sherwood Applied Business Security Architecture (SABSA), 12–13, 22, 81
+- Singapore Personal Data Protection Act, 61
+- Skepticism, risks, 151
+- SOC, see Security Operation Center (SOC)
+- SOX, see Sarbanes–Oxley Act (SOX)
+- Standards, 97, 99
+- State of security, 175
+  - maturity models for, 189–191
+  - measurement, 182, 188–191
+  - security index for, 191
+- Strategic indicators, 200
