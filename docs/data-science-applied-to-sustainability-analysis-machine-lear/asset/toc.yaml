@@ -1,0 +1,74 @@
+level_changes:
+- line: 13
+  before: 2
+  after: 3
+- line: 21
+  before: 2
+  after: 3
+- line: 25
+  before: 2
+  after: 3
+- line: 31
+  before: 2
+  after: 3
+- line: 37
+  before: 2
+  after: 3
+- line: 41
+  before: 2
+  after: 3
+- line: 194
+  before: 2
+  after: 3
+- line: 202
+  before: 2
+  after: 3
+- line: 208
+  before: 2
+  after: 3
+- line: 210
+  before: 2
+  after: 3
+- line: 226
+  before: 2
+  after: 3
+- line: 242
+  before: 2
+  after: 3
+- line: 250
+  before: 2
+  after: 3
+- line: 268
+  before: 2
+  after: 3
+- line: 284
+  before: 2
+  after: 3
+text_changes:
+- line: 0
+  before: 可持续性分析的数据科学应用 ｜｜ 生命周期评估中的机器学习
+  after: 可持续性分析的数据科学应用 —— 生命周期评估中的机器学习
+- line: 31
+  before: IO-LCA
+  after: 投入产出生命周期评估（IO-LCA）
+- line: 226
+  before: Tools for ML
+  after: 机器学习工具
+- line: 230
+  before: ML in LCA
+  after: 机器学习在生命周期评估中的应用
+- line: 242
+  before: ML for surrogate LCAs
+  after: 机器学习用于代理生命周期评估
+- line: 250
+  before: ML in LCI
+  after: 机器学习在生命周期清单中的应用
+- line: 254
+  before: Data cleaning
+  after: 数据清洗
+- line: 258
+  before: Estimating inventory flows
+  after: 估算清单流
+- line: 312
+  before: ML 的 LCA
+  after: 机器学习在生命周期评估中的应用总结

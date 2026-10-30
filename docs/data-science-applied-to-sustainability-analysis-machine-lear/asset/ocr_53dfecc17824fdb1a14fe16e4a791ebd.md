@@ -1,0 +1,9 @@
+![](bbox=[0.27, 0.13, 0.75, 0.42])
+
+Fig. 8.7 Non-linearity of relationships and number of features can drive modeling choices with regard to computation speed.
+
+with fewer input features or datasets with mostly linear relationships, and ANNs will be better for applications with larger numbers of input features that have more complex (non-linear) relationships between inputs and outputs (e.g., images, audio) (Fig. 8.7).
+
+Other considerations might be model transparency and the level of human effort required to produce the model. The functions of models produced using shallow algorithms are completely transparent, but the neural networks that carry out feature learning in ANNs are essentially a “black box,” and there is often no way to mathematically represent the relationship between model inputs and outputs. This may be important to consider for applications like LCA where model transparency is highly valued. On the other hand, human effort required to produce a model using an ANN can be lower than that required to produce a model using shallow learning because feature learning in ANNs eliminates the need for manual expansion of the feature set. If a shallow algorithm seems like the right choice for your dataset, Scikit-learn’s “Choosing the right estimator” decision tree may be a good place to start: https://scikit-learn.org/stable/tutorial/machine_learning_map/.
+
+As would be done with any data source, the effects of using ML methods on model reliability should be considered. Model statistics can provide a starting point for propagation of uncertainties into model results, but conservative modeling choices should be made when using ML so that overfitting, which may produce artificially low uncertainties in model validation and testing phases, is avoided. Useful interpretation of LCA relies on model transparency, so extra care should be taken to explain which ML techniques were used and why.

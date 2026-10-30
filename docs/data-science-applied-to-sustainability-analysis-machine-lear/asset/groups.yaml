@@ -1,0 +1,2951 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # CHAPTER 8
+
+
+    # Machine learning in life cycle assessment
+
+
+    Mikaela Algren, Wendy Fisher, Amy E. Landis
+
+
+    Colorado School of Mines, Golden, CO, USA
+
+
+    # Chapter Outlines
+
+
+    +   - Introduction to life cycle assessment (LCA) 168
+
+    +   - LCAs role in sustainability 168
+
+    +   - Types of LCA 168
+
+    +     - Process LCA 169
+
+    +     - IO-LCA 170
+
+    +     - Hybrid LCA 170
+
+    +     - Comparison of types 170
+
+    +   - General methods for process LCA 171
+
+    +     - Goal and scope definition 171
+
+    +     - Inventory analysis 173
+
+    +   - Impact assessment 173
+
+    +     - Interpretation and analysis 174
+
+    +   - Uses and limitations of LCA 175
+
+    +   - Tools and data sources for LCA 175
+
+    +     - Process LCA 175
+
+    +     - IO-LCA 176
+
+    +   - Introduction to machine learning (ML) 176
+
+    +   - Types of ML 177
+
+    +     - Supervised learning 177
+
+    +     - Unsupervised learning 177
+
+    +     - Reinforcement learning 177
+
+    +     - Shallow and deep learning 178
+
+    +   - Choosing a machine learning algorithm 179
+
+    +   - Tools for ML 182
+
+    +   - ML in LCA 182
+
+    +   - ML for surrogate LCAs 183
+
+    +   - ML in LCI 184
+
+    +     - Data cleaning 184
+
+    +     - Estimating inventory flows 184
+
+    +   - ML in LCIA 185
+
+    +     - CF estimation 185
+
+    +     - CF definition 185
+
+    +   - ML in interpretation and analysis 186
+
+    +     - Sensitivity analysis 186
+
+    +     - Scenario analysis 187
+
+    +   - Conclusion 188
+
+    +     - LCA of ML 188'
+  - '[PAGE 1]
+
+
+    Life cycle assessment (LCA) is a data-intensive approach to quantifying environmental
+    sustainability that enables researchers to compare and innovate processes. Growing
+    areas of data science like machine learning (ML) are already being used to fill
+    data gaps in LCA and even develop surrogate LCA tools that use design-phase product
+    descriptors to predict the environmental impacts of a new design. In this chapter,
+    we introduce LCA methodologies and the tools used by LCA practitioners. Next,
+    we explore different types of machine learning (ML)—supervised, unsupervised,
+    reinforcement learning, shallow and deep learning—and discuss how to determine
+    what types of algorithms are best to solve a specific problem or appropriate for
+    certain datasets. We then look at how ML algorithms have been used and consider
+    how they could be used in LCA for data screening and cleaning, generating inventory
+    data, environmental impact characterization, and sensitivity analyses.
+
+
+    # Introduction to life cycle assessment (LCA)
+
+
+    Life cycle assessment (LCA), also called environmental LCA, is a systematic, standardized
+    approach to quantifying the potential environmental impacts of a product or process
+    that occur from raw materials extraction to end of life. The methodologies for
+    LCA are defined by the International Organization for Standardization (ISO) 14,040
+    series (ISO 2006a; ISO 2006b).
+
+
+    LCA results can help determine areas of improvement in production processes, aid
+    strategic planning, and inform public policy. LCAs enable the comparison of different
+    products, allowing practitioners to answer questions like, “How do the environmental
+    impacts of beans compare to those of beef?” (Harwatt et al. 2017). LCAs are also
+    used to improve product, process, or system design; an LCA can identify the areas
+    of production with high environmental burden, enabling the design and comparison
+    of alternative production pathways. For example, an LCA can show that replacing
+    a deep straw manure management system with a slurry system reduces ammonia and
+    nitrate emissions, thereby reducing the acidification and eutrophication impacts
+    of beef production (Cederberg et al. 2003).
+
+
+    # LCAs role in sustainability
+
+
+    Together, environmental, social, and economic analyses can help us answer questions
+    about sustainability (Fig. 8.1). Approaches similar to environmental LCA have
+    been used to quantify social and economic impacts (Lauer 2008; UNEP 2009); these
+    approaches are termed social LCA (S-LCA) and techno-economic assessment LCA (TEA-LCA),
+    respectively. Standardized guidance for both S-LCA and TEA-LCA is limited in comparison
+    to that which exists for environmental LCA (Landis et al. 2018).
+
+
+    # Types of LCA
+
+
+    Generally, there are three types of LCA: process LCA, input-output (IO) LCA, and
+    hybrid LCA. International Standards Organization (ISO) 14,040 specifically describes'
+  - '[PAGE 2]
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_2_0.png)
+
+
+    Fig. 8.1 Venn diagram showing how environmental, social, and economic approaches
+    come together to create sustainable systems. This version of the three-pillar
+    sustainability model is adapted from the version presented in Todorov et al. (2011).
+    The conceptual origin of the three-pillar model of sustainability is difficult
+    to identify, as discussed in Purvis et al. (2018). Life cycle assessment (LCA),
+    social LCA (S-LCA), and techno-economic assessment (TEA-LCA) are used to quantify
+    environmental, social, and economic sustainability, respectively.
+
+
+    process LCA methods, but IO-LCA models can be useful as screening or model validation
+    tools in LCA, provide supplementary data for a process LCA model or, in some cases,
+    fulfill both the inventory and impact assessment steps in an LCA. Hybrid LCA is
+    the combination of process and IO-LCA methods. Surrogate LCAs, which are described
+    with more detail in the ML in LCA section, are ML algorithms trained on process
+    LCA data to predict LCA results.
+
+
+    # Process LCA
+
+
+    Process LCA, described with more detail in the General Methods for Process LCA
+    section, involves modeling the production of a good or service as the sum of “unit
+    processes,” which are the LCA-practitioner-defined subsystems that make up the
+    system of interest. The guidelines and standards for process LCA practitioners
+    are outlined in the International Standards Organization (ISO) 14,040 and 14,044
+    (ISO 2006a; ISO 2006b). For each unit process, the LCA practitioner must identify
+    and quantify the necessary resource inputs to the process and any outputs generated,
+    including products, byproducts, and environmental discharges. Although the impacts
+    of services can theoretically be modeled with process LCA methods, process LCA
+    generally does not account for the indirect inputs related to human labor (Junnila
+    2006).'
+  - '[PAGE 3]
+
+
+    Process LCA databases provide unit process data for a wide range of activities,
+    from growing of crops to plastics production. There are many free and commercial
+    software packages to support process LCA. This information is presented in more
+    detail in the Tools and Data Sources for LCA section.
+
+
+    # IO-LCA
+
+
+    Input-Output LCA (IO-LCA) tools can provide quick, inexpensive, holistic estimates
+    of resources needed per dollar of economic activity in a sector. Transactions
+    between all sectors included in an IO model are represented in an N by N table
+    or matrix, where N is the number of sectors. As a result, IO-LCA is capable of
+    quantifying all transactions between modeled sectors, even indirect transactions
+    such as those that occur through service industries (Hendrickson et al. 1997).
+    IO transaction data is extended to produce environmental impact estimates using
+    sector-level coefficients corresponding to non-renewable resource use and pollutant
+    emissions. One of the weaknesses of IO-LCA is that analyses are limited to the
+    sectors specified in the Input-Output tables of each tool, and IO sectors are
+    generally aggregated to much larger than product-scale (Castellani et al. 2019).
+
+
+    For more information on IO-LCA, see Chapter 8 of Life Cycle Assessment: Quantitative
+    Approaches for Decisions that Matter (Matthews et al. 2014). Discussion of available
+    IO tables and software for IO-LCA is in the Tools and Data Sources for LCA section.
+
+
+    # Hybrid LCA
+
+
+    A hybrid LCA is generally a Process LCA in which an IO-LCA model provides input-output
+    data or environmental impact data for one or more unit processes, usually because
+    the process or processes are not included in LCA databases.
+
+
+    # Comparison of types
+
+
+    Both process LCA and IO-LCA have strengths and weaknesses. In general, process
+    LCAs strength lies in its flexibility to assess product systems at any desired
+    resolution; unfortunately, full process LCAs can be time consuming and expensive.
+    In contrast, the resolution of IO-LCA is limited to the sectors defined in a corresponding
+    IO table; however, once constructed, an IO table enables generation of LCA results
+    for all included sectors are able to account for impacts associated with indirect
+    transactions between industries that are often outside the scope of process LCA
+    models. Hybrid LCA models allow the LCA practitioner to take advantage of the
+    strengths of both process and IO-LCA models. For more comparisons of process and
+    IO-LCA methods, see publications from Hendrickson et al. (1997), Junnila (2006),
+    and Castellani et al. (2019).'
+  md: "\n## CHAPTER 8\n\n## Machine learning in life cycle assessment\n\nMikaela Algren,\
+    \ Wendy Fisher, Amy E. Landis\n\nColorado School of Mines, Golden, CO, USA\n\n\
+    ## Chapter Outlines\n\n- Introduction to life cycle assessment (LCA) 168\n- LCA's\
+    \ role in sustainability 168\n- Types of LCA 168\n  - Process LCA 169\n  - IO-LCA\
+    \ 170\n  - Hybrid LCA 170\n  - Comparison of types 170\n- General methods for\
+    \ process LCA 171\n  - Goal and scope definition 171\n  - Inventory analysis 173\n\
+    - Impact assessment 173\n  - Interpretation and analysis 174\n- Uses and limitations\
+    \ of LCA 175\n- Tools and data sources for LCA 175\n  - Process LCA 175\n  - IO-LCA\
+    \ 176\n- Introduction to machine learning (ML) 176\n- Types of ML 177\n  - Supervised\
+    \ learning 177\n  - Unsupervised learning 177\n  - Reinforcement learning 177\n\
+    \  - Shallow and deep learning 178\n- Choosing a machine learning algorithm 179\n\
+    - Tools for ML 182\n- ML in LCA 182\n- ML for surrogate LCAs 183\n- ML in LCI\
+    \ 184\n  - Data cleaning 184\n  - Estimating inventory flows 184\n- ML in LCIA\
+    \ 185\n  - CF estimation 185\n  - CF definition 185\n- ML in interpretation and\
+    \ analysis 186\n  - Sensitivity analysis 186\n  - Scenario analysis 187\n- Conclusion\
+    \ 188\n  - LCA of ML 188\n\nLife cycle assessment (LCA) is a data-intensive approach\
+    \ to quantifying environmental sustainability that enables researchers to compare\
+    \ and innovate processes. Growing areas of data science like machine learning\
+    \ (ML) are already being used to fill data gaps in LCA and even develop surrogate\
+    \ LCA tools that use design-phase product descriptors to predict the environmental\
+    \ impacts of a new design. In this chapter, we introduce LCA methodologies and\
+    \ the tools used by LCA practitioners. Next, we explore different types of machine\
+    \ learning (ML)—supervised, unsupervised, reinforcement learning, shallow and\
+    \ deep learning—and discuss how to determine what types of algorithms are best\
+    \ to solve a specific problem or appropriate for certain datasets. We then look\
+    \ at how ML algorithms have been used and consider how they could be used in LCA\
+    \ for data screening and cleaning, generating inventory data, environmental impact\
+    \ characterization, and sensitivity analyses.\n\n## Introduction to life cycle\
+    \ assessment (LCA)\n\nLife cycle assessment (LCA), also called environmental LCA,\
+    \ is a systematic, standardized approach to quantifying the potential environmental\
+    \ impacts of a product or process that occur from raw materials extraction to\
+    \ end of life. The methodologies for LCA are defined by the International Organization\
+    \ for Standardization (ISO) 14,040 series (ISO 2006a; ISO 2006b).\n\nLCA results\
+    \ can help determine areas of improvement in production processes, aid strategic\
+    \ planning, and inform public policy. LCAs enable the comparison of different\
+    \ products, allowing practitioners to answer questions like, “How do the environmental\
+    \ impacts of beans compare to those of beef?” (Harwatt et al. 2017). LCAs are\
+    \ also used to improve product, process, or system design; an LCA can identify\
+    \ the areas of production with high environmental burden, enabling the design\
+    \ and comparison of alternative production pathways. For example, an LCA can show\
+    \ that replacing a deep straw manure management system with a slurry system reduces\
+    \ ammonia and nitrate emissions, thereby reducing the acidification and eutrophication\
+    \ impacts of beef production (Cederberg et al. 2003).\n\n## LCA's role in sustainability\n\
+    \nTogether, environmental, social, and economic analyses can help us answer questions\
+    \ about sustainability (Fig. 8.1). Approaches similar to environmental LCA have\
+    \ been used to quantify social and economic impacts (Lauer 2008; UNEP 2009); these\
+    \ approaches are termed social LCA (S-LCA) and techno-economic assessment LCA\
+    \ (TEA-LCA), respectively. Standardized guidance for both S-LCA and TEA-LCA is\
+    \ limited in comparison to that which exists for environmental LCA (Landis et\
+    \ al. 2018).\n\n![](img/ac82f2e55074ec39b384b4e372aab70e_2_0.png)\n\nFig. 8.1\
+    \ Venn diagram showing how environmental, social, and economic approaches come\
+    \ together to create sustainable systems. This version of the three-pillar sustainability\
+    \ model is adapted from the version presented in Todorov et al. (2011). The conceptual\
+    \ origin of the three-pillar model of sustainability is difficult to identify,\
+    \ as discussed in Purvis et al. (2018). Life cycle assessment (LCA), social LCA\
+    \ (S-LCA), and techno-economic assessment (TEA-LCA) are used to quantify environmental,\
+    \ social, and economic sustainability, respectively.\n\n## Types of LCA\n\nGenerally,\
+    \ there are three types of LCA: process LCA, input-output (IO) LCA, and hybrid\
+    \ LCA. International Standards Organization (ISO) 14,040 specifically describes\
+    \ process LCA methods, but IO-LCA models can be useful as screening or model validation\
+    \ tools in LCA, provide supplementary data for a process LCA model or, in some\
+    \ cases, fulfill both the inventory and impact assessment steps in an LCA. Hybrid\
+    \ LCA is the combination of process and IO-LCA methods. Surrogate LCAs, which\
+    \ are described with more detail in the ML in LCA section, are ML algorithms trained\
+    \ on process LCA data to predict LCA results.\n\n## Process LCA\n\nProcess LCA,\
+    \ described with more detail in the General Methods for Process LCA section, involves\
+    \ modeling the production of a good or service as the sum of “unit processes,”\
+    \ which are the LCA-practitioner-defined subsystems that make up the system of\
+    \ interest. The guidelines and standards for process LCA practitioners are outlined\
+    \ in the International Standards Organization (ISO) 14,040 and 14,044 (ISO 2006a;\
+    \ ISO 2006b). For each unit process, the LCA practitioner must identify and quantify\
+    \ the necessary resource inputs to the process and any outputs generated, including\
+    \ products, byproducts, and environmental discharges. Although the impacts of\
+    \ services can theoretically be modeled with process LCA methods, process LCA\
+    \ generally does not account for the indirect inputs related to human labor (Junnila\
+    \ 2006).\n\nProcess LCA databases provide unit process data for a wide range of\
+    \ activities, from growing of crops to plastics production. There are many free\
+    \ and commercial software packages to support process LCA. This information is\
+    \ presented in more detail in the Tools and Data Sources for LCA section.\n\n\
+    ## IO-LCA\n\nInput-Output LCA (IO-LCA) tools can provide quick, inexpensive, holistic\
+    \ estimates of resources needed per dollar of economic activity in a sector. Transactions\
+    \ between all sectors included in an IO model are represented in an N by N table\
+    \ or matrix, where N is the number of sectors. As a result, IO-LCA is capable\
+    \ of quantifying all transactions between modeled sectors, even indirect transactions\
+    \ such as those that occur through service industries (Hendrickson et al. 1997).\
+    \ IO transaction data is extended to produce environmental impact estimates using\
+    \ sector-level coefficients corresponding to non-renewable resource use and pollutant\
+    \ emissions. One of the weaknesses of IO-LCA is that analyses are limited to the\
+    \ sectors specified in the Input-Output tables of each tool, and IO sectors are\
+    \ generally aggregated to much larger than product-scale (Castellani et al. 2019).\n\
+    \nFor more information on IO-LCA, see Chapter 8 of Life Cycle Assessment: Quantitative\
+    \ Approaches for Decisions that Matter (Matthews et al. 2014). Discussion of available\
+    \ IO tables and software for IO-LCA is in the Tools and Data Sources for LCA section.\n\
+    \n## Hybrid LCA\n\nA hybrid LCA is generally a Process LCA in which an IO-LCA\
+    \ model provides input-output data or environmental impact data for one or more\
+    \ unit processes, usually because the process or processes are not included in\
+    \ LCA databases.\n\n## Comparison of types\n\nBoth process LCA and IO-LCA have\
+    \ strengths and weaknesses. In general, process LCA's strength lies in its flexibility\
+    \ to assess product systems at any desired resolution; unfortunately, full process\
+    \ LCAs can be time consuming and expensive. In contrast, the resolution of IO-LCA\
+    \ is limited to the sectors defined in a corresponding IO table; however, once\
+    \ constructed, an IO table enables generation of LCA results for all included\
+    \ sectors and are able to account for impacts associated with indirect transactions\
+    \ between industries that are often outside the scope of process LCA models. Hybrid\
+    \ LCA models allow the LCA practitioner to take advantage of the strengths of\
+    \ both process and IO-LCA models. For more comparisons of process and IO-LCA methods,\
+    \ see publications from Hendrickson et al. (1997), Junnila (2006), and Castellani\
+    \ et al. (2019).\n"
+  mdcn: "\n## 第8章\n\n## 生命周期评估中的机器学习\n\nMikaela Algren, Wendy Fisher, Amy E. Landis\n\
+    \n科罗拉多矿业学院，金色，科罗拉多州，美国\n\n## 章节大纲\n\n- 生命周期评估（LCA）简介 168\n- LCA 在可持续性中的作用 168\n\
+    - LCA 类型 168\n  - 过程 LCA 169\n  - IO-LCA 170\n  - 混合 LCA 170\n  - 类型比较 170\n-\
+    \ 过程 LCA 的通用方法 171\n  - 目标与范围界定 171\n  - 清单分析 173\n- 影响评价 173\n  - 解释与分析 174\n\
+    - LCA 的用途与局限性 175\n- LCA 的工具与数据源 175\n  - 过程 LCA 175\n  - IO-LCA 176\n- 机器学习（ML）简介\
+    \ 176\n- ML 类型 177\n  - 监督学习 177\n  - 无监督学习 177\n  - 强化学习 177\n  - 浅层与深度学习 178\n\
+    - 选择机器学习算法 179\n- ML 工具 182\n- LCA 中的 ML 182\n- 用于替代 LCA 的 ML 183\n- LCI 中的 ML\
+    \ 184\n  - 数据清洗 184\n  - 估算清单流 184\n- LCIA 中的 ML 185\n  - CF 估算 185\n  - CF 定义\
+    \ 185\n- 解释与分析中的 ML 186\n  - 敏感性分析 186\n  - 情景分析 187\n- 结论 188\n  - ML 的 LCA 188\n\
+    \n生命周期评估（LCA）是一种数据密集型方法，用于量化环境可持续性，使研究人员能够比较和创新工艺。数据科学的快速发展领域，如机器学习（ML），已用于填补\
+    \ LCA 中的数据空白，甚至开发替代 LCA 工具，利用设计阶段的产品描述符来预测新设计的环境影响。在本章中，我们介绍 LCA 方法学以及 LCA 实践者使用的工具。接下来，我们探讨不同类型的机器学习（ML）——监督学习、无监督学习、强化学习、浅层和深度学习——并讨论如何确定哪些类型的算法最适合解决特定问题或适用于某些数据集。然后我们研究\
+    \ ML 算法已被如何使用，并考虑它们如何在 LCA 中用于数据筛选和清洗、生成清单数据、环境影响表征和敏感性分析。\n\n## 生命周期评估（LCA）简介\n\
+    \n生命周期评估（LCA），也称为环境 LCA，是一种系统化、标准化的量化产品或工艺从原材料提取到生命周期结束所产生的潜在环境影响的方法。LCA 的方法由国际标准化组织（ISO）14,040\
+    \ 系列定义（ISO 2006a；ISO 2006b）。\n\nLCA 结果可以帮助确定生产工艺的改进领域、辅助战略规划并为公共政策提供信息。LCA 使不同产品的比较成为可能，使从业者能够回答诸如，“豆类的环境影响与牛肉相比如何？”等问题（Harwatt\
+    \ et al. 2017）。LCA 也用于改进产品、工艺或系统设计；一个 LCA 可以识别环境负担高的生产领域，从而能够设计和比较替代生产路径。例如，一个\
+    \ LCA 可以显示用粪浆系统取代深层秸秆粪肥管理体系可减少氨和硝酸盐排放，从而降低牛肉生产的酸化和富营养化影响（Cederberg et al. 2003）。\n\
+    \n## LCA 在可持续性中的作用\n\n环境、社会和经济分析共同可以帮助我们回答关于可持续性的问题（图 8.1）。与环境 LCA 类似的方法已被用于量化社会和经济影响（Lauer\
+    \ 2008；UNEP 2009）；这些方法分别称为社会 LCA（S-LCA）和技术经济评估 LCA（TEA-LCA）。与环境 LCA 已有的相比，S-LCA\
+    \ 和 TEA-LCA 的标准化指导有限（Landis et al. 2018）。\n\n![](img/ac82f2e55074ec39b384b4e372aab70e_2_0.png)\n\
+    \n图 8.1 韦恩图显示环境、社会和经济方法如何汇聚以创建可持续系统。此三支柱可持续性模型版本改编自 Todorov et al. (2011) 中呈现的版本。可持续性三支柱模型的概念起源难以确定，如\
+    \ Purvis et al. (2018) 中所述。生命周期评估（LCA）、社会 LCA（S-LCA）和技术经济评估（TEA-LCA）分别用于量化环境、社会和经济可持续性。\n\
+    \n## LCA 类型\n\n通常有三种类型的 LCA：过程 LCA、投入产出（IO）LCA 和混合 LCA。国际标准化组织（ISO）14,040 专门描述了过程\
+    \ LCA 方法，但 IO-LCA 模型可作为 LCA 中的筛选或模型验证工具使用，为过程 LCA 模型提供补充数据，或在某些情况下完成 LCA 中的清单和影响评价步骤。混合\
+    \ LCA 是过程和 IO-LCA 方法的结合。替代 LCA 在 ML in LCA 部分有更详细的描述，是在过程 LCA 数据上训练的 ML 算法，用于预测\
+    \ LCA 结果。\n\n## 过程 LCA\n\n过程 LCA 在“过程 LCA 的通用方法”部分有更详细的描述，涉及将商品或服务的生产建模为“单元过程”的总和，这些单元过程是\
+    \ LCA 从业者定义的构成研究系统的子系统。过程 LCA 从业者的指南和标准概述于国际标准化组织（ISO）14,040 和 14,044（ISO 2006a；ISO\
+    \ 2006b）。对于每个单元过程，LCA 从业者必须识别并量化该过程所需的资源投入以及产生的任何产出，包括产品、副产品和环境排放。虽然服务的影响理论上可以用过程\
+    \ LCA 方法建模，但过程 LCA 通常不考虑与人力劳动相关的间接投入（Junnila 2006）。\n\n过程 LCA 数据库为从作物种植到塑料生产等广泛活动提供单元过程数据。有许多免费和商业软件包支持过程\
+    \ LCA。这些信息在“ LCA 的工具与数据源”部分有更详细的介绍。\n\n## IO-LCA\n\n投入产出 LCA（IO-LCA）工具可以提供快速、廉价、整体的估算，即某一部门每美元经济活动所需的资源。IO\
+    \ 模型中包含的所有部门之间的交易以 N×N 表或矩阵表示，其中 N 为部门数量。因此，IO-LCA 能够量化建模部门之间的所有交易，即使是通过服务行业发生的间接交易（Hendrickson\
+    \ et al. 1997）。IO 交易数据通过使用与不可再生资源使用和污染物排放相对应的部门级系数来扩展，以产生环境影响估计。IO-LCA 的弱点之一是分析仅限于每种工具的投入产出表中指定的部门，并且\
+    \ IO 部门通常聚合到远大于产品规模（Castellani et al. 2019）。\n\n有关 IO-LCA 的更多信息，请参阅《生命周期评估：定量方法对决策的重要性》（Matthews\
+    \ et al. 2014）第 8 章。关于 IO-LCA 可用 IO 表和软件的讨论见“ LCA 的工具与数据源”部分。\n\n## 混合 LCA\n\n\
+    混合 LCA 通常是一种过程 LCA，其中 IO-LCA 模型为一个或多个单元过程提供投入产出数据或环境影响数据，通常是因为该过程或这些过程未包含在 LCA\
+    \ 数据库中。\n\n## 类型比较\n\n过程 LCA 和 IO-LCA 都有其优势和劣势。一般来说，过程 LCA 的优势在于其灵活性，可在任何所需分辨率下评估产品系统；不幸的是，完整的过程\
+    \ LCA 可能耗时且昂贵。相比之下，IO-LCA 的分辨率仅限于相应 IO 表中定义的部门；然而，一旦构建，IO 表即可为所有包含的部门生成 LCA 结果，并能够考虑过程\
+    \ LCA 模型通常范围之外的行业之间间接交易相关的<|message|>影响。混合 LCA 模型使 LCA 从业者能够利用过程 LCA 和 IO-LCA\
+    \ 模型的优势。有关过程和 IO-LCA 方法的更多比较，请参阅 Hendrickson et al. (1997)、Junnila (2006) 和 Castellani\
+    \ et al. (2019) 的出版物。\n"
+  merge: -1
+- raw:
+  - '[PAGE 4]
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_4_0.png)
+
+
+    Fig. 8.2 Steps of an LCA as defined by International Standards Organization (ISO)
+    14040. Adapted from ISO 14040''s Fig. 8.1.
+
+
+    # General methods for process LCA
+
+
+    A standard process LCA has four major components: 1) goal and scope definition,
+    2) inventory analysis, 3) impact assessment, and 4) interpretation and analysis
+    (ISO 2006a). These components are often addressed sequentially and refined iteratively
+    throughout the process of building an LCA model (Fig. 8.2).
+
+
+    # Goal and scope definition
+
+
+    The first step in LCA is to develop a clearly defined goal that specifies the
+    system of interest, the intended use of model results, and the intended audience.
+    For example, the goal of an LCA on beef may be “to quantify the environmental
+    impacts of beef” to “identify areas of potential improvement in the process” or
+    “enable consumers to compare the impacts of beef to those of other foods” (Cederberg
+    et al. 2003; Dick et al. 2015). The scope of the LCA is then defined such that
+    the goal can be accomplished. Defining the scope means setting the boundaries
+    of the system to be modeled (e.g., from raw materials extraction to consumption
+    or disposal by the consumer), specifying the level of detail required for the
+    analysis, and choosing a functional unit. The level of detail required is defined
+    by the scale of the unit processes selected. In a beef LCA, high-level unit processes
+    include fertilizer production, crop and pasture farming, cattle raising, and slaughter
+    (Fig. 8.3).'
+  - '[PAGE 5]
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_5_0.png)
+
+
+    Fig. 8.3 Sample process flow diagram (PFD) for interconnected beef, dairy, and
+    corn ethanol production systems.'
+  - '[PAGE 6]
+
+
+    Defining a functional unit is a critical step in LCA. The functional unit is the
+    quantified performance of the product system for use as a reference unit (ISO
+    2006a). An appropriately defined functional unit allows the impacts of a product
+    to be compared fairly to those of other products with the same function. In a
+    beef LCA, the appropriate functional unit could be kilograms of beef, or a unit
+    that quantifies nutritional content, like calories or protein; in these cases,
+    all environmental impacts in the beef LCA would be reported per kilogram beef,
+    per calorie, or per protein. The reported impacts could then be compared to environmental
+    impacts estimated for other food products, like beans or chicken.
+
+
+    # Inventory analysis
+
+
+    The inventory analysis step, also known as the life cycle inventory (LCI), involves
+    identifying all the relevant inputs (e.g., energy and resources) and outputs (e.g.,
+    products created and emissions) of the system of interest. However, we often want
+    to be able to quantify environmental impacts at a finer resolution than for the
+    entire system of interest, so inputs and outputs are identified or estimated for
+    each unit process within the system of interest. For a corn production unit process,
+    inputs might include seeds, water, fertilizers, machinery, and energy. Outputs
+    include the corn product, and might also include nutrient losses from the fertilizers,
+    and emissions from burning fuel to power agricultural equipment. Taking inventory
+    of all the inputs and outputs to every unit process can be a huge endeavor. Luckily
+    for LCA practitioners, much work has already been done to build databases of common
+    unit processes and their associated inputs and outputs. However, LCA practitioners
+    should consider the scope and age of a process dataset, and the location for which
+    it was developed when determining whether it is appropriate to use in any particular
+    LCA. For more on tools and resources for LCA see the **Tools and Data Sources
+    for LCA** section.
+
+
+    # Impact assessment
+
+
+    Also known as life cycle impact assessment (LCIA), the impact assessment step
+    converts the inventory data into meaningful environmental impacts. LCIA is used
+    to improve understanding of the environmental significance of output flows identified
+    in the LCI. Typical environmental impact categories in LCA include global warming,
+    acidification, eutrophication, ozone depletion, smog formation, ecotoxicity, and
+    human health carcinogenics, human health non-carcinogenics, resource depletion,
+    and respiratory effects). The LCIA calculations are performed using impact assessment
+    tools, which utilize databases of characterization factors (CFs). CFs are based
+    on environmental mechanisms and are applied to convert life cycle inventory analysis
+    results to the standard units of each impact category. They can be derived such
+    that they convert to midpoint or endpoint environmental impact categories (Fig.
+    8.4).'
+  - '[PAGE 7]
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_7_0.png)
+
+
+    Fig. 8.4 Relationship between LCI results and environmental impact midpoints and
+    endpoints. Characterization factors (CFs) represent environmental mechanisms and
+    enable conversion of LCI results to midpoint or endpoint environmental impact
+    categories. This figure is a simplified adaption of a figure from the ReCiPe LCIA
+    methodology.
+
+
+    Each chemical or material included in an LCIA database has a separate CF for each
+    environmental impact category in the database. The impact calculation method is
+    shown in Eqs. (8.1) and 8.2, where c denotes a particular emitted compound (CO₂,
+    etc.), and i denotes a particular impact category (global warming, etc.).
+
+
+    ```
+
+    Impact_{c,i} = mass_c * CF_{c,i} (9.1)
+
+    ```
+
+
+    ```
+
+    Total_{impact_i} = Σ_{c} Impact_{c,i} (9.2)
+
+    ```
+
+
+    As shown in Eq. (8.1), the impact of a particular compound (c) in a particular
+    impact category (i) is the product of the mass of c emitted and the CF corresponding
+    to c and i. The total impact in category i is the sum of all the compound-specific
+    impacts within that category (Eq. (8.2)).
+
+
+    # Interpretation and analysis
+
+
+    In this step, the LCA practitioner summarizes and discusses the results of an
+    LCI or LCIA, and provides recommendations based on these results. This might mean
+    identifying “hotspots” of environmental impact in the product system and comparing
+    results to other research; in an LCA of grassland beef production in Brazil by
+    Dick et al. (2015), authors report that enteric fermentation is responsible for
+    about 80 percent of total GHG emissions. Comparing these results to those of other
+    beef LCAs, they note that'
+  - '[PAGE 8]
+
+
+    other studies show lower fractions of GHG contributions from enteric fermentation
+    because of higher emissions related to manure management and concentrated feeds
+    in animal diets.
+
+
+    LCA practitioners also often conduct sensitivity and scenario analyses. Sensitivity
+    analyses are conducted to test assumptions and assess uncertainty in results.
+    This is done by varying model inputs over a range of potential values and observing
+    how this changes the model results. For example, if the forage to concentrate
+    diet ratio in a beef cattle LCA is uncertain, environmental impact results should
+    be produced over the range of realistic forage to concentrate ratios. In a scenario
+    analysis, process inputs are adjusted to represent conditions different from those
+    of the original system of interest in order to assess differences in environmental
+    impacts. In the beef LCA example, scenario analysis could be used to predict effects
+    of climate change on the environmental impacts associated with beef production.
+
+
+    # Uses and limitations of LCA
+
+
+    LCA is applied in product development and improvement, strategic planning, public
+    policy making, marketing, and more (ISO 14040, 2006). LCA is generally only relevant
+    for comparative analyses, such as assessing the environmental impacts of different
+    designs for a particular product or multiple products with the same the function.
+    LCA is useful for determining relative, not absolute, environmental sustainability—it
+    can help us figure out which decision is better but does not enable us to label
+    things as “sustainable” or “unsustainable.”
+
+
+    # Tools and data sources for LCA
+
+
+    # Process LCA
+
+
+    The most popular comprehensive tools for process LCA are OpenLCA (http://www.openlca.org/),
+    SimaPro (https://simapro.com/), and GaBi (www.gabi-software.com). Of these, OpenLCA
+    is the only open source tool. Other comprehensive LCA tools include umberto (https://www.ifu.com/en/umberto/),
+    and Sustainable Minds (http://www.sustainableminds.com/software).
+
+
+    There are also process LCA tools that are limited to specific types of analyses.
+    For construction, these include BEES, Athena LCA, and One Click LCA. BEES, developed
+    by the National Institute of Standards and Technology (NIST), and Athena, by the
+    Athena Sustainable Materials Institute, are both free software. For energy system
+    LCAs, the National Energy Technology Laboratory (NETL) hosts a free LCA of Energy
+    Technology and Pathways database, which includes the Grid Mix Explorer, a tool
+    that allows users to browse LCI and LCIA data for regional energy mixes and model
+    customized energy mixes. For transportation LCAs, Argonne National Laboratory’s'
+  md: '
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_4_0.png)
+
+
+    Fig. 8.2 Steps of an LCA as defined by International Standards Organization (ISO)
+    14040. Adapted from ISO 14040''s Fig. 8.1.
+
+
+    ## General methods for process LCA
+
+
+    A standard process LCA has four major components: 1) goal and scope definition,
+    2) inventory analysis, 3) impact assessment, and 4) interpretation and analysis
+    (ISO 2006a). These components are often addressed sequentially and refined iteratively
+    throughout the process of building an LCA model (Fig. 8.2).
+
+
+    ### Goal and scope definition
+
+
+    The first step in LCA is to develop a clearly defined goal that specifies the
+    system of interest, the intended use of model results, and the intended audience.
+    For example, the goal of an LCA on beef may be “to quantify the environmental
+    impacts of beef” to “identify areas of potential improvement in the process” or
+    “enable consumers to compare the impacts of beef to those of other foods” (Cederberg
+    et al. 2003; Dick et al. 2015). The scope of the LCA is then defined such that
+    the goal can be accomplished. Defining the scope means setting the boundaries
+    of the system to be modeled (e.g., from raw materials extraction to consumption
+    or disposal by the consumer), specifying the level of detail required for the
+    analysis, and choosing a functional unit. The level of detail required is defined
+    by the scale of the unit processes selected. In a beef LCA, high-level unit processes
+    include fertilizer production, crop and pasture farming, cattle raising, and slaughter
+    (Fig. 8.3).
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_5_0.png)
+
+
+    Fig. 8.3 Sample process flow diagram (PFD) for interconnected beef, dairy, and
+    corn ethanol production systems.
+
+
+    Defining a functional unit is a critical step in LCA. The functional unit is the
+    quantified performance of the product system for use as a reference unit (ISO
+    2006a). An appropriately defined functional unit allows the impacts of a product
+    to be compared fairly to those of other products with the same function. In a
+    beef LCA, the appropriate functional unit could be kilograms of beef, or a unit
+    that quantifies nutritional content, like calories or protein; in these cases,
+    all environmental impacts in the beef LCA would be reported per kilogram beef,
+    per calorie, or per protein. The reported impacts could then be compared to environmental
+    impacts estimated for other food products, like beans or chicken.
+
+
+    ### Inventory analysis
+
+
+    The inventory analysis step, also known as the life cycle inventory (LCI), involves
+    identifying all the relevant inputs (e.g., energy and resources) and outputs (e.g.,
+    products created and emissions) of the system of interest. However, we often want
+    to be able to quantify environmental impacts at a finer resolution than for the
+    entire system of interest, so inputs and outputs are identified or estimated for
+    each unit process within the system of interest. For a corn production unit process,
+    inputs might include seeds, water, fertilizers, machinery, and energy. Outputs
+    include the corn product, and might also include nutrient losses from the fertilizers,
+    and emissions from burning fuel to power agricultural equipment. Taking inventory
+    of all the inputs and outputs to every unit process can be a huge endeavor. Luckily
+    for LCA practitioners, much work has already been done to build databases of common
+    unit processes and their associated inputs and outputs. However, LCA practitioners
+    should consider the scope and age of a process dataset, and the location for which
+    it was developed when determining whether it is appropriate to use in any particular
+    LCA. For more on tools and resources for LCA see the **Tools and Data Sources
+    for LCA** section.
+
+
+    ### Impact assessment
+
+
+    Also known as life cycle impact assessment (LCIA), the impact assessment step
+    converts the inventory data into meaningful environmental impacts. LCIA is used
+    to improve understanding of the environmental significance of output flows identified
+    in the LCI. Typical environmental impact categories in LCA include global warming,
+    acidification, eutrophication, ozone depletion, smog formation, ecotoxicity, and
+    human health carcinogenics, human health non-carcinogenics, resource depletion,
+    and respiratory effects. The LCIA calculations are performed using impact assessment
+    tools, which utilize databases of characterization factors (CFs). CFs are based
+    on environmental mechanisms and are applied to convert life cycle inventory analysis
+    results to the standard units of each impact category. They can be derived such
+    that they convert to midpoint or endpoint environmental impact categories (Fig.
+    8.4).
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_7_0.png)
+
+
+    Fig. 8.4 Relationship between LCI results and environmental impact midpoints and
+    endpoints. Characterization factors (CFs) represent environmental mechanisms and
+    enable conversion of LCI results to midpoint or endpoint environmental impact
+    categories. This figure is a simplified adaption of a figure from the ReCiPe LCIA
+    methodology.
+
+
+    Each chemical or material included in an LCIA database has a separate CF for each
+    environmental impact category in the database. The impact calculation method is
+    shown in Eqs. (8.1) and (8.2), where c denotes a particular emitted compound (CO₂,
+    etc.), and i denotes a particular impact category (global warming, etc.).
+
+
+    ```
+
+    Impact_{c,i} = mass_c * CF_{c,i} (8.1)
+
+    ```
+
+
+    ```
+
+    Total_{impact_i} = Σ_{c} Impact_{c,i} (8.2)
+
+    ```
+
+
+    As shown in Eq. (8.1), the impact of a particular compound (c) in a particular
+    impact category (i) is the product of the mass of c emitted and the CF corresponding
+    to c and i. The total impact in category i is the sum of all the compound-specific
+    impacts within that category (Eq. (8.2)).
+
+
+    ### Interpretation and analysis
+
+
+    In this step, the LCA practitioner summarizes and discusses the results of an
+    LCI or LCIA, and provides recommendations based on these results. This might mean
+    identifying “hotspots” of environmental impact in the product system and comparing
+    results to other research; in an LCA of grassland beef production in Brazil by
+    Dick et al. (2015), authors report that enteric fermentation is responsible for
+    about 80 percent of total GHG emissions. Comparing these results to those of other
+    beef LCAs, they note that
+
+
+    other studies show lower fractions of GHG contributions from enteric fermentation
+    because of higher emissions related to manure management and concentrated feeds
+    in animal diets.
+
+
+    LCA practitioners also often conduct sensitivity and scenario analyses. Sensitivity
+    analyses are conducted to test assumptions and assess uncertainty in results.
+    This is done by varying model inputs over a range of potential values and observing
+    how this changes the model results. For example, if the forage to concentrate
+    diet ratio in a beef cattle LCA is uncertain, environmental impact results should
+    be produced over the range of realistic forage to concentrate ratios. In a scenario
+    analysis, process inputs are adjusted to represent conditions different from those
+    of the original system of interest in order to assess differences in environmental
+    impacts. In the beef LCA example, scenario analysis could be used to predict effects
+    of climate change on the environmental impacts associated with beef production.
+
+
+    ## Uses and limitations of LCA
+
+
+    LCA is applied in product development and improvement, strategic planning, public
+    policy making, marketing, and more (ISO 14040, 2006). LCA is generally only relevant
+    for comparative analyses, such as assessing the environmental impacts of different
+    designs for a particular product or multiple products with the same function.
+    LCA is useful for determining relative, not absolute, environmental sustainability—it
+    can help us figure out which decision is better but does not enable us to label
+    things as “sustainable” or “unsustainable.”
+
+
+    ## Tools and data sources for LCA
+
+
+    ### Process LCA
+
+
+    The most popular comprehensive tools for process LCA are OpenLCA (http://www.openlca.org/),
+    SimaPro (https://simapro.com/), and GaBi (www.gabi-software.com). Of these, OpenLCA
+    is the only open source tool. Other comprehensive LCA tools include umberto (https://www.ifu.com/en/umberto/),
+    and Sustainable Minds (http://www.sustainableminds.com/software).
+
+
+    There are also process LCA tools that are limited to specific types of analyses.
+    For construction, these include BEES, Athena LCA, and One Click LCA. BEES, developed
+    by the National Institute of Standards and Technology (NIST), and Athena, by the
+    Athena Sustainable Materials Institute, are both free software. For energy system
+    LCAs, the National Energy Technology Laboratory (NETL) hosts a free LCA of Energy
+    Technology and Pathways database, which includes the Grid Mix Explorer, a tool
+    that allows users to browse LCI and LCIA data for regional energy mixes and model
+    customized energy mixes. For transportation LCAs, Argonne National Laboratory’s
+
+    '
+  mdcn: '
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_4_0.png)
+
+
+    图 8.2 国际标准化组织（ISO）14040 定义的 LCA 步骤。改编自 ISO 14040 的图 8.1。
+
+
+    ## 过程 LCA 的通用方法
+
+
+    标准的过程 LCA 包含四个主要组成部分：1）目标和范围界定，2）清单分析，3）影响评价，以及 4）解释和分析（ISO 2006a）。这些组成部分通常在构建
+    LCA 模型的过程中按顺序处理，并在整个过程中迭代细化（图 8.2）。
+
+
+    ### 目标和范围界定
+
+
+    LCA 的第一步是制定一个明确定义的目标，指定所关注的系统、模型结果的预期用途以及预期受众。例如，牛肉 LCA 的目标可能是“量化牛肉的环境影响”以“识别流程中潜在改进领域”或“使消费者能够将牛肉的影响与其他食品的影响进行比较”（Cederberg
+    et al. 2003；Dick et al. 2015）。然后定义 LCA 的范围以实现该目标。定义范围意味着设定要建模的系统的边界（例如，从原材料提取到消费者消费或处置），指定分析所需的详细程度，并选择功能单位。所需详细程度由所选单元过程的规模定义。在牛肉
+    LCA 中，高层单元过程包括肥料生产、作物和牧场种植、养牛和屠宰（图 8.3）。
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_5_0.png)
+
+
+    图 8.3 相互关联的牛肉、乳制品和玉米乙醇生产系统的示例流程图（PFD）。
+
+
+    定义功能单位是 LCA 中的关键步骤。功能单位是产品系统量化性能的参考单位（ISO 2006a）。适当定义的功能单位允许以公平的方式将一种产品的[content]
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_4_0.png)
+
+
+    图 8.2 国际标准化组织（ISO）14040 定义的 LCA 步骤。改编自 ISO 14040 的图 8.1。
+
+
+    ## 过程 LCA 的通用方法
+
+
+    标准的过程 LCA 包含四个主要组成部分：1）目标和范围界定，2）清单分析，3）影响评价，以及 4）解释和分析（ISO 2006a）。这些组成部分通常在构建
+    LCA 模型的过程中按顺序处理，并在整个过程中迭代细化（图 8.2）。
+
+
+    ### 目标和范围界定
+
+
+    LCA 的第一步是制定一个明确定义的目标，指定所关注的系统、模型结果的预期用途以及预期受众。例如，牛肉 LCA 的目标可能是“量化牛肉的环境影响”以“识别流程中潜在改进领域”或“使消费者能够将牛肉的影响与其他食品的影响进行比较”（Cederberg
+    et al. 2003；Dick et al. 2015）。然后定义 LCA 的范围以实现该目标。定义范围意味着设定要建模的系统的边界（例如，从原材料提取到消费者消费或处置），指定分析所需的详细程度，并选择功能单位。所需详细程度由所选单元过程的规模定义。在牛肉
+    LCA 中，高层单元过程包括肥料生产、作物和牧场种植、养牛和屠宰（图 8.3）。
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_5_0.png)
+
+
+    图 8.3 相互关联的牛肉、乳制品和玉米乙醇生产系统的示例流程图（PFD）。
+
+
+    定义功能单位是 LCA 中的关键步骤。功能单位是产品系统量化性能的参考单位（ISO 2006a）。适当定义的功能单位允许以公平的方式将一种产品的影响与其具有相同功能的其他产品进行比较。在牛肉
+    LCA 中，适当的功能单位可以是牛肉的千克数，或量化营养含量的单位，如卡路里或蛋白质；在这些情况下，牛肉 LCA 中的所有环境影响都将按每千克牛肉、每卡路里或每蛋白质报告。然后可以将报告的影响与对其他食品产品（如豆类或鸡肉）估计的环境影响进行比较。
+
+
+    ### 清单分析
+
+
+    清单分析步骤，也称为生命周期清单（LCI），涉及识别所关注系统相关的所有输入（例如能源和资源）和输出（例如产生的产品和排放物）。然而，我们通常希望能够以比整个所关注系统更精细的分辨率量化环境影响，因此在所关注系统内的每个单元过程中识别或估计输入和输出。对于玉米生产单元过程，输入可能包括种子、水、肥料、机械和能源。输出包括玉米产品，还可能包括肥料的养分流失，以及为农业设备提供动力的燃料燃烧排放。对每个单元过程的所有输入和输出进行清单是一项巨大的工作。幸运的是，对于
+    LCA 从业者来说，已经做了大量工作来建立常见单元过程及其相关输入和输出的数据库。然而，LCA 从业者在确定某个特定 LCA 中使用是否合适时，应考虑过程数据集的范围和年代，以及为其开发的位置。有关
+    LCA 工具和资源的更多信息，请参阅 **Tools and Data Sources for LCA** 部分。
+
+
+    ### 影响评价
+
+
+    也称为生命周期影响评价（LCIA），影响评价步骤将清单数据转换为有意义的环境影响。LCIA 用于提高对 LCI 中识别的输出流环境意义的理解。LCA 中典型的环境影响类别包括全球变暖、酸化、富营养化、臭氧层破坏、烟雾形成、生态毒性、人健康致癌性、人健康非致癌性、资源枯竭和呼吸效应。LCIA
+    计算使用影响评价工具进行，该工具利用表征因子（CFs）数据库。CFs 基于环境机制，并应用于将生命周期清单分析结果转换为每个影响类别的标准单位。它们可以被导出为转换为
+    midpoint 或 endpoint 环境影响类别（图 8.4）。
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_7_0.png)
+
+
+    图 8.4 LCI 结果与环境影响 midpoint 和 endpoint 之间的关系。表征因子（CFs）代表环境机制，并使 LCI 结果能够转换为 midpoint
+    或 endpoint 环境影响类别。该图是 ReCiPe LCIA 方法学中一个图的简化改编。
+
+
+    LCIA 数据库中包含的每种化学物质或材料对于数据库中的每个环境影响类别都有单独的 CF。影响计算方法如公式（8.1）和（8.2）所示，其中 c 表示特定排放化合物（CO₂
+    等），i 表示特定影响类别（全球变暖等）。
+
+
+    ```
+
+    Impact_{c,i} = mass_c * CF_{c,i} (8.1)
+
+    ```
+
+
+    ```
+
+    Total_{impact_i} = Σ_{c} Impact_{c,i} (8.2)
+
+    ```
+
+
+    如公式（8.1）所示，特定化合物（c）在特定影响类别（i）中的影响是排放的 c 的质量与对应于 c 和 i 的 CF 的乘积。类别 i 中的总影响是该类别内所有化合物特定影响的总和（公式
+    8.2）。
+
+
+    ### 解释和分析
+
+
+    在此步骤中，LCA 从业者总结并讨论 LCI 或 LCIA 的结果，并基于这些结果提供建议。这可能意味着识别产品系统中的环境影响“热点”并将结果与其他研究进行比较；在
+    Dick et al.（2015）对巴西草地牛肉生产进行的 LCA 中，作者报告称肠道发酵约占总温室气体排放的 80%。将这些结果与其他牛肉 LCA 的结果进行比较，他们指出
+
+
+    其他研究显示肠道发酵对温室气体的贡献比例较低，因为与粪便管理以及动物日粮中集中饲料相关的排放较高。
+
+
+    LCA 从业者还经常进行敏感性分析和情景分析。敏感性分析用于测试假设并评估结果的不确定性。这是通过在潜在值范围内改变模型输入并观察这如何改变模型结果来完成的。例如，如果牛肉
+    LCA 中粗饲料与精饲料日粮比例不确定，则应在现实的粗饲料与精饲料比例范围内产生环境影响结果。在情景分析中，调整过程输入以代表与原始所关注系统不同的条件，以便评估环境影响的差异。在牛肉
+    LCA 示例中，情景分析可用于预测气候变化对牛肉生产相关环境影响的影响。
+
+
+    ## LCA 的用途和局限性
+
+
+    LCA 应用于产品开发和改进、战略规划、公共政策制定、营销等（ISO 14040, 2006）。LCA 通常仅与比较分析相关，例如评估特定产品的不同设计或具有相同功能的多种产品的环境影响。LCA
+    有助于确定相对而非绝对的环境可持续性——它可以帮助我们弄清哪个决策更好，但不能使我们将事物标记为“可持续”或“不可持续”。
+
+
+    ## LCA 的工具和数据源
+
+
+    ### 过程 LCA
+
+
+    最受欢迎的综合过程 LCA 工具是 OpenLCA（http://www.openlca.org/）、SimaPro（https://simapro.com/）和
+    GaBi（www.gabi-software.com）。其中，OpenLCA 是唯一开源工具。其他综合 LCA 工具包括 umberto（https://www.ifu.com/en/umberto/）和
+    Sustainable Minds（http://www.sustainableminds.com/software）。
+
+
+    还有一些过程 LCA 工具仅限于特定类型的分析。对于建筑，这些包括 BEES、Athena LCA 和 One Click LCA。BEES 由国家标准与技术研究院（NIST）开发，Athena
+    由 Athena 可持续材料研究所开发，两者均为免费软件。对于能源系统 LCA，国家能源技术实验室（NETL）托管一个免费的能源技术和路径 LCA 数据库，其中包括
+    Grid Mix Explorer，该工具允许用户浏览区域能源混合的 LCI 和 LCIA 数据并建模定制能源混合。对于交通 LCA，阿贡国家实验室的
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 9]
+
+
+    GREET (Greenhouse gases, Regulated Emissions, and Energy use in Transportation)
+    estimates energy use and emissions of fuel and vehicle technologies. In addition
+    of the tools above, researchers conducting LCAs often use spreadsheets or other
+    data organization programs to build custom models with data from a variety of
+    sources, including process LCA databases, IO-LCA models, and academic literature.
+
+
+    LCA databases contain complete LCIs for many processes and can be accessed and
+    manipulated using the comprehensive LCA tools listed above. OpenLCA Nexus is an
+    online repository for LCI data, providing download pathways for both free and
+    for-purchase LCA databases, and a search engine that allows users to find relevant
+    datasets in any of the LCA databases on Nexus. There are many free LCA databases
+    on openLCA Nexus; probably the most comprehensive is the USLCI database, which
+    is maintained by the National Renewable Energy Laboratory (NREL), and the USDA
+    LCA collection. Popular for-purchase databases on Nexus are ecoinvent and GaBi
+    thinkstep, both of which have a wide range of manufacturing process and products.
+
+
+    Most LCA software packages have built-in LCIA methods. The openLCA LCIA methods
+    database, which is also free on openLCA Nexus, includes a variety of impact assessment
+    datasets: TRACI, USEtox, ReCiPe, ILCD, eco-indicator 99, Cumulative Energy Demand,
+    and CML. Acero et al. (2015) describe these impact assessment datasets in detail
+    and Landis et al. (2008) compares the differences in their results.
+
+
+    # IO-LCA
+
+
+    There are several freely available IO-LCA tools. These tools are typically developed
+    using national-level economic data and each is therefore applicable within a specific
+    country or set of countries. The first was developed by Carnegie Mellon University
+    (CMU). CMUs Economic Input-Output LCA (EIO-LCA) model includes national-level
+    IO tables for the United States (US), Peru, Germany, Spain, Canada, and China,
+    and state-level tables for Pennsylvania and West Virginia. Other IO-LCA tools
+    include the US Environmental Protection Agency (USEPA)’s Environmentally-Extended
+    Input-Output (USEEIO) model for the US, and EXIOBASE, which was developed by a
+    European research consortium. The latest version of EXIOBASE includes 43 countries
+    and 5 “rest of world” regions. VitalMetrics’ US Comprehensive Environmental Data
+    Archive (CEDA) is not free, but university faculty and students can obtain a free
+    academic version.
+
+
+    # Introduction to machine learning (ML)
+
+
+    Machine learning (ML) is a statistical approach to studying and making inferences
+    about data that utilizes a variety of algorithms suited for answering different
+    types of questions. There are three main types of ML: supervised, unsupervised,
+    and reinforcement learning. In supervised learning, ML algorithms can be used
+    to model relationships between'
+  - '[PAGE 10]
+
+
+    one or more independent variables and a dependent variable. In unsupervised learning,
+    algorithms find meaningful patterns in datasets or sort data into groups. Reinforcement
+    learning ML algorithms produce optimized plans or courses of action given a set
+    of constraints or a reward system. These three main types of ML, supervised, unsupervised,
+    and reinforcement learning, are described in the following sections. Other topics
+    discussed are shallow and deep learning, how to choose between algorithm types
+    based on the dataset or intended application, and common machine learning tools.
+
+
+    # Types of ML
+
+
+    # Supervised learning
+
+
+    Supervised learning algorithms require that the modeler provide a dataset of one
+    or more independent variables, and a corresponding dependent variable. In ML,
+    independent variables are called features, and dependent variables are often called
+    a labels or targets, but can also be thought of as the answer to a question about
+    a datapoint: What is the price of this house? Is this a dog or a cat? What is
+    the ecotoxicity impact CF for this substance? Features in these cases could be
+    the location of the house, the size of the animal, or the octanol-water partition
+    coefficient of the substance, respectively.
+
+
+    With enough input data, a supervised learning algorithm can produce a model of
+    the relationship between features and labels. The model is built and tested using
+    at least two randomly selected subsets of the labeled data: the training set and
+    the testing set, respectively. A working model can then be used to estimate the
+    labels of new datapoints. If you have ever calibrated a model using experimental
+    input and output data, you have used a machine learning algorithm; the fit parameters
+    of your model are the result of what the algorithm has learned from your training
+    data. In fact, the simplest examples of supervised learning algorithms, regressions,
+    are likely familiar to most scientists. Linear or polynomial regressions can be
+    used to build models for feature data with continuous label values like prices,
+    masses, material flows in an LCI, or impact CFs in LCIA. For feature data with
+    discrete labels that sort datapoints into categories, like “dog” or “cat,” logistic
+    regressions can be useful.
+
+
+    # Unsupervised learning
+
+
+    Unsupervised learning algorithms operate without data labels. Instead, the algorithm
+    is tasked with sorting datapoints into groups, “cleaning up” data, or finding
+    structure within a dataset. One example application of an unsupervised learning
+    algorithm is Google News’ grouping of similar stories so that readers can look
+    at the same issue as reported by various outlets (Fig. 8.5).
+
+
+    # Reinforcement learning
+
+
+    With reinforcement learning, there is no training dataset. Instead, the algorithm
+    is designed to try different actions or pathways within a system of rewards, goals,
+    or'
+  - '[PAGE 11]
+
+
+    # How climate change helped fuel Australia''s bushfires
+
+
+    CBS News · Yesterday
+
+
+    +   - Climate Change Affected Australia''s Wildfires, Scientists Confirm
+
+    +     The New York Times · Yesterday
+
+
+    View Full Coverage
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_11_0.png)
+
+
+    # Doctors can now approve coronavirus testing, CDC says
+
+
+    Fox News · 1 hour ago
+
+
+    +   - Coronavirus Testing Offered With Just a Doctor''s Approval, C.D.C. Says
+
+    +     The New York Times · Yesterday
+
+
+    View Full Coverage
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_11_1.png)
+
+
+    # OPEC Proposes a Large Cut in Oil Output
+
+
+    The New York Times · 1 hour ago
+
+
+    +   - OPEC unveils plan to slash production after coronavirus slams oil prices
+
+    +     CNN · 8 hours ago
+
+
+    View Full Coverage
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_11_2.png)
+
+
+    Fig. 8.5 Example screenshots showing Google News’ clustering of similar stories
+    from different news outlets.
+
+
+    constraints that provide the algorithm with feedback on the quality of its choices.
+    Reinforcement learning is useful for producing case-by-case responses (model-free
+    reinforcement learning) or plans (model-based reinforcement learning) that accomplish
+    modeler-defined goals. In LCA, reinforcement learning algorithms could generate
+    process data for scenarios that optimize certain system parameters, like energy
+    consumption in a hybrid electric bus (HEB) (Wu et al. 2018).
+
+
+    # Shallow and deep learning
+
+
+    Within the three general types of ML discussed above, there are numerous algorithms,
+    many carefully structured for specific problem types, and others more flexible
+    and able to accommodate greater system complexity. Generally, the algorithms structured
+    for specific tasks and therefore limited in flexibility are called “shallow” or
+    hierarchical learning algorithms. More flexible ML algorithms are classified as
+    deep or representation learning, and the main form of representation learning
+    is the artificial neural network (ANN).
+
+
+    The main difference between shallow algorithms and ANNs is how they accommodate
+    complexity (i.e., non-linearity) of relationships between features and model outputs.'
+  - '[PAGE 12]
+
+
+    In shallow learning algorithms, modeling complex systems is enabled by expanding
+    the feature set. This means that the modeler uses the raw features to make new
+    features that are powers of the raw features, multiplicative combinations of raw
+    features, or multiplicative combinations of the powers of raw features. This expanded
+    feature set is then used to train the hypothesis function and determine fit parameters
+    for the model. ANNs enable modeling of complex systems with an additional, automated
+    learning task called feature learning. Feature learning takes place within a system
+    of neurons, and each neuron has its own hypothesis function for which fit parameters
+    must be determined. The products of this neural network are representations of
+    the original feature data. The representation feature set is then used as the
+    input for another hypothesis function with learned fit parameters, and this final
+    hypothesis function produces the output of the ANN algorithm (Fig. 8.6).
+
+
+    # Choosing a machine learning algorithm
+
+
+    Whether one could use supervised, unsupervised, or reinforcement learning to build
+    their model depends on the data available. If the intended training dataset has
+    labels, supervised learning could be used to produce a model to estimate the labels
+    of unlabeled datapoints. For example, a supervised learning algorithm trained
+    on building characteristics and energy consumption data could be used to predict
+    energy consumption of new buildings based on the characteristics used in the training
+    set. In that example, the known building energy consumption data are the labels.
+    If the intended training dataset does not have labels, unsupervised learning could
+    be used to sort datapoints into groups. Examples of unsupervised learning application
+    in fields closely related to ecosystem studies and LCA are clustering algorithms
+    used to group unlabeled images of stoneflies of various species or determine optimal
+    facility siting for straw to energy conversion. If there is no training dataset,
+    but there are measurable goals for a model (e.g., to minimize fuel consumption),
+    then reinforcement learning could be useful.
+
+
+    Deciding between shallow learning algorithms and ANN can be more difficult. The
+    best choice may depend on the complexity (i.e., non-linearity) of relationships
+    between inputs or between inputs and outputs, and the number of features in the
+    dataset. If the model will need to describe non-linear relationships with lots
+    of features, the number of features in a shallow learning algorithm can blow up
+    fast as the feature set is expanded to accommodate these more complex relationships.
+    Feature set expansion can make computation much slower. For datasets with many
+    features, ANNs’ feature learning step can enable ANNs to model complex relationships
+    with less computation power than some shallow algorithms. However, deciding what
+    constitutes many features, or what makes relationships complex enough to warrant
+    using ANNs can be difficult, and there are shallow learning algorithms that are
+    designed avoid large numbers of features by favoring features with non-zero weights
+    (see Lasso or ElasticNet algorithms). In general, in the interest of faster computation,
+    shallow algorithms will be better for datasets'
+  md: '
+
+    GREET (Greenhouse gases, Regulated Emissions, and Energy use in Transportation)
+    estimates energy use and emissions of fuel and vehicle technologies. In addition
+    to the tools above, researchers conducting LCAs often use spreadsheets or other
+    data organization programs to build custom models with data from a variety of
+    sources, including process LCA databases, IO-LCA models, and academic literature.
+
+
+    LCA databases contain complete LCIs for many processes and can be accessed and
+    manipulated using the comprehensive LCA tools listed above. OpenLCA Nexus is an
+    online repository for LCI data, providing download pathways for both free and
+    for-purchase LCA databases, and a search engine that allows users to find relevant
+    datasets in any of the LCA databases on Nexus. There are many free LCA databases
+    on openLCA Nexus; probably the most comprehensive is the USLCI database, which
+    is maintained by the National Renewable Energy Laboratory (NREL), and the USDA
+    LCA collection. Popular for-purchase databases on Nexus are ecoinvent and GaBi
+    thinkstep, both of which have a wide range of manufacturing process and products.
+
+
+    Most LCA software packages have built-in LCIA methods. The openLCA LCIA methods
+    database, which is also free on openLCA Nexus, includes a variety of impact assessment
+    datasets: TRACI, USEtox, ReCiPe, ILCD, eco-indicator 99, Cumulative Energy Demand,
+    and CML. Acero et al. (2015) describe these impact assessment datasets in detail
+    and Landis et al. (2008) compares the differences in their results.
+
+
+    ## IO-LCA
+
+
+    There are several freely available IO-LCA tools. These tools are typically developed
+    using national-level economic data and each is therefore applicable within a specific
+    country or set of countries. The first was developed by Carnegie Mellon University
+    (CMU). CMU''s Economic Input-Output LCA (EIO-LCA) model includes national-level
+    IO tables for the United States (US), Peru, Germany, Spain, Canada, and China,
+    and state-level tables for Pennsylvania and West Virginia. Other IO-LCA tools
+    include the US Environmental Protection Agency (USEPA)’s Environmentally-Extended
+    Input-Output (USEEIO) model for the US, and EXIOBASE, which was developed by a
+    European research consortium. The latest version of EXIOBASE includes 43 countries
+    and 5 “rest of world” regions. VitalMetrics’ US Comprehensive Environmental Data
+    Archive (CEDA) is not free, but university faculty and students can obtain a free
+    academic version.
+
+
+    ## Introduction to machine learning (ML)
+
+
+    Machine learning (ML) is a statistical approach to studying and making inferences
+    about data that utilizes a variety of algorithms suited for answering different
+    types of questions. There are three main types of ML: supervised, unsupervised,
+    and reinforcement learning. In supervised learning, ML algorithms can be used
+    to model relationships between one or more independent variables and a dependent
+    variable. In unsupervised learning, algorithms find meaningful patterns in datasets
+    or sort data into groups. Reinforcement learning ML algorithms produce optimized
+    plans or courses of action given a set of constraints or a reward system. These
+    three main types of ML, supervised, unsupervised, and reinforcement learning,
+    are described in the following sections. Other topics discussed are shallow and
+    deep learning, how to choose between algorithm types based on the dataset or intended
+    application, and common machine learning tools.
+
+
+    ### Types of ML
+
+
+    ### Supervised learning
+
+
+    Supervised learning algorithms require that the modeler provide a dataset of one
+    or more independent variables, and a corresponding dependent variable. In ML,
+    independent variables are called features, and dependent variables are often called
+    labels or targets, but can also be thought of as the answer to a question about
+    a datapoint: What is the price of this house? Is this a dog or a cat? What is
+    the ecotoxicity impact CF for this substance? Features in these cases could be
+    the location of the house, the size of the animal, or the octanol-water partition
+    coefficient of the substance, respectively.
+
+
+    With enough input data, a supervised learning algorithm can produce a model of
+    the relationship between features and labels. The model is built and tested using
+    at least two randomly selected subsets of the labeled data: the training set and
+    the testing set, respectively. A working model can then be used to estimate the
+    labels of new datapoints. If you have ever calibrated a model using experimental
+    input and output data, you have used a machine learning algorithm; the fit parameters
+    of your model are the result of what the algorithm has learned from your training
+    data. In fact, the simplest examples of supervised learning algorithms, regressions,
+    are likely familiar to most scientists. Linear or polynomial regressions can be
+    used to build models for feature data with continuous label values like prices,
+    masses, material flows in an LCI, or impact CFs in LCIA. For feature data with
+    discrete labels that sort datapoints into categories, like “dog” or “cat,” logistic
+    regressions can be useful.
+
+
+    ### Unsupervised learning
+
+
+    Unsupervised learning algorithms operate without data labels. Instead, the algorithm
+    is tasked with sorting datapoints into groups, “cleaning up” data, or finding
+    structure within a dataset. One example application of an unsupervised learning
+    algorithm is Google News’ grouping of similar stories so that readers can look
+    at the same issue as reported by various outlets (Fig. 8.5).
+
+
+    ### Reinforcement learning
+
+
+    With reinforcement learning, there is no training dataset. Instead, the algorithm
+    is designed to try different actions or pathways within a system of rewards, goals,
+    or
+
+
+    How climate change helped fuel Australia''s bushfires
+
+
+    CBS News · Yesterday
+
+
+    +   - Climate Change Affected Australia''s Wildfires, Scientists Confirm
+
+    +     The New York Times · Yesterday
+
+
+    View Full Coverage
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_11_0.png)
+
+
+    Doctors can now approve coronavirus testing, CDC says
+
+
+    Fox News · 1 hour ago
+
+
+    +   - Coronavirus Testing Offered With Just a Doctor''s Approval, C.D.C. Says
+
+    +     The New York Times · Yesterday
+
+
+    View Full Coverage
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_11_1.png)
+
+
+    OPEC Proposes a Large Cut in Oil Output
+
+
+    The New York Times · 1 hour ago
+
+
+    +   - OPEC unveils plan to slash production after coronavirus slams oil prices
+
+    +     CNN · 8 hours ago
+
+
+    View Full Coverage
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_11_2.png)
+
+
+    Fig. 8.5 Example screenshots showing Google News’ clustering of similar stories
+    from different news outlets.
+
+
+    constraints that provide the algorithm with feedback on the quality of its choices.
+    Reinforcement learning is useful for producing case-by-case responses (model-free
+    reinforcement learning) or plans (model-based reinforcement learning) that accomplish
+    modeler-defined goals. In LCA, reinforcement learning algorithms could generate
+    process data for scenarios that optimize certain system parameters, like energy
+    consumption in a hybrid electric bus (HEB) (Wu et al. 2018).
+
+
+    ## Shallow and deep learning
+
+
+    Within the three general types of ML discussed above, there are numerous algorithms,
+    many carefully structured for specific problem types, and others more flexible
+    and able to accommodate greater system complexity. Generally, the algorithms structured
+    for specific tasks and therefore limited in flexibility are called “shallow” or
+    hierarchical learning algorithms. More flexible ML algorithms are classified as
+    deep or representation learning, and the main form of representation learning
+    is the artificial neural network (ANN).
+
+
+    The main difference between shallow algorithms and ANNs is how they accommodate
+    complexity (i.e., non-linearity) of relationships between features and model outputs.
+
+
+    In shallow learning algorithms, modeling complex systems is enabled by expanding
+    the feature set. This means that the modeler uses the raw features to make new
+    features that are powers of the raw features, multiplicative combinations of raw
+    features, or multiplicative combinations of the powers of raw features. This expanded
+    feature set is then used to train the hypothesis function and determine fit parameters
+    for the model. ANNs enable modeling of complex systems with an additional, automated
+    learning task called feature learning. Feature learning takes place within a system
+    of neurons, and each neuron has its own hypothesis function for which fit parameters
+    must be determined. The products of this neural network are representations of
+    the original feature data. The representation feature set is then used as the
+    input for another hypothesis function with learned fit parameters, and this final
+    hypothesis function produces the output of the ANN algorithm (Fig. 8.6).
+
+
+    ## Choosing a machine learning algorithm
+
+
+    Whether one could use supervised, unsupervised, or reinforcement learning to build
+    their model depends on the data available. If the intended training dataset has
+    labels, supervised learning could be used to produce a model to estimate the labels
+    of unlabeled datapoints. For example, a supervised learning algorithm trained
+    on building characteristics and energy consumption data could be used to predict
+    energy consumption of new buildings based on the characteristics used in the training
+    set. In that example, the known building energy consumption data are the labels.
+    If the intended training dataset does not have labels, unsupervised learning could
+    be used to sort datapoints into groups. Examples of unsupervised learning application
+    in fields closely related to ecosystem studies and LCA are clustering algorithms
+    used to group unlabeled images of stoneflies of various species or determine optimal
+    facility siting for straw to energy conversion. If there is no training dataset,
+    but there are measurable goals for a model (e.g., to minimize fuel consumption),
+    then reinforcement learning could be useful.
+
+
+    Deciding between shallow learning algorithms and ANN can be more difficult. The
+    best choice may depend on the complexity (i.e., non-linearity) of relationships
+    between inputs or between inputs and outputs, and the number of features in the
+    dataset. If the model will need to describe non-linear relationships with lots
+    of features, the number of features in a shallow learning algorithm can blow up
+    fast as the feature set is expanded to accommodate these more complex relationships.
+    Feature set expansion can make computation much slower. For datasets with many
+    features, ANNs’ feature learning step can enable ANNs to model complex relationships
+    with less computation power than some shallow algorithms. However, deciding what
+    constitutes many features, or what makes relationships complex enough to warrant
+    using ANNs can be difficult, and there are shallow learning algorithms that are
+    designed avoid large numbers of features by favoring features with non-zero weights
+    (see Lasso or ElasticNet algorithms). In general, in the interest of faster computation,
+    shallow algorithms will be better for datasets
+
+    '
+  mdcn: '
+
+    GREET（温室气体、受管制排放和交通运输中的能源使用）估算燃料和车辆技术的能源使用和排放情况。除上述工具外，进行生命周期评估的研究人员通常使用电子表格或其他数据组织程序，利用来自多种来源的数据构建定制模型，包括工艺生命周期评估数据库、投入产出生命周期评估模型和学术文献。
+
+
+    生命周期评估数据库包含许多工艺的完整生命周期清单，可通过上述列出的综合生命周期评估工具进行访问和操作。OpenLCA Nexus 是一个用于生命周期清单数据的在线存储库，提供免费和付费生命周期评估数据库的下载路径，并提供一个搜索引擎，使用户能够在
+    Nexus 上的任何生命周期评估数据库中找到相关数据集。openLCA Nexus 上有许多免费的生命周期评估数据库；其中可能最全面的是由国家可再生能源实验室（NREL）维护的
+    USLCI 数据库，以及 USDA 生命周期评估汇编。Nexus 上流行的付费数据库是 ecoinvent 和 GaBi thinkstep，两者都涵盖了广泛的制造工艺和产品。
+
+
+    大多数生命周期评估软件包内置了生命周期影响评价方法。openLCA Nexus 上同样免费的 openLCA 生命周期影响评价方法数据库包括多种影响评价数据集：TRACI、USEtox、ReCiPe、ILCD、eco-indicator
+    99、累计能源需求和 CML。Acero 等（2015）详细描述了这些影响评价数据集，而 Landis 等（2008）比较了它们结果的差异。
+
+
+    ## 投入产出生命周期评估（IO-LCA）
+
+
+    有几种可自由获取的投入产出生命周期评估工具。这些工具通常使用国家层面的经济数据开发，因此各自适用于特定国家或一组国家。第一个由卡内基梅隆大学（CMU）开发。CMU
+    的经济投入产出生命周期评估（EIO-LCA）模型包括美国（US）、秘鲁、德国、西班牙、加拿大和中国的国家层面投入产出表，以及宾夕法尼亚州和西弗吉尼亚州的州级表。其他投入产出生命周期评估工具包括美国环境保护署（USEPA）的美国环境扩展投入产出（USEEIO）模型，以及由欧洲研究联盟开发的
+    EXIOBASE。EXIOBASE 的最新版本包括 43 个国家和 5 个“世界其他地区”区域。VitalMetrics 的美国综合环境数据档案（CEDA）不是免费的，但大学教职员工和学生可以获得免费的学术版本。
+
+
+    ## 机器学习（ML）简介
+
+
+    机器学习（ML）是一种用于研究数据并对其进行推断的统计方法，利用多种适用于回答不同类型问题的算法。机器学习主要有三种类型：有监督学习、无监督学习和强化学习。在有监督学习中，机器学习算法可用于建模一个或多个自变量与因变量之间的关系。在无监督学习中，算法在数据集中寻找有意义的模式或将数据排序到组中。强化学习机器学习算法在给定一组约束或奖励系统的情况下产生优化的计划或行动方案。上述三种主要机器学习类型——有监督学习、无监督学习和强化学习——在以下各节中进行了描述。其他讨论的话题包括浅层和深度学习、如何根据数据集或预期应用在算法类型之间进行选择，以及常见的机器学习工具。
+
+
+    ### 机器学习类型
+
+
+    ### 有监督学习
+
+
+    有监督学习算法要求建模者提供一个或多个自变量的数据集，以及相应的因变量。在机器学习中，自变量称为特征，因变量通常称为标签或目标，但也可以被视为关于数据点的问题的答案：这栋房子的价格是多少？这是狗还是猫？该物质的生态毒性影响特征因子是多少？在这些情况下，特征可能分别是房屋的位置、动物的大小，或物质的辛醇-水分配系数。
+
+
+    有了足够的数据输入，有监督学习算法可以生成特征与标签之间关系的模型。该模型使用标记数据的至少两个随机选择的子集分别进行构建和测试：训练集和测试集。然后可工作的模型可用于估计新数据点的标签。如果你曾经使用实验输入和输出数据校准过模型，你就使用过机器学习算法；模型的拟合参数是算法从训练数据中学到的结果。事实上，最简单的有监督学习算法示例——回归——可能大多数科学家都很熟悉。线性或多项式回归可用于构建具有连续标签值的特征数据的模型，如价格、质量、生命周期清单中的物质流动，或生命周期影响评价中的影响特征因子。对于具有将数据点分类到类别中的离散标签的特征数据，如“狗”或“猫”，逻辑回归很有用。
+
+
+    ### 无监督学习
+
+
+    无监督学习算法在没有数据标签的情况下运行。相反，算法的任务是将数据点排序到组中、“清理”数据，或在数据集中寻找结构。无监督学习算法的一个应用示例是 Google
+    新闻对相似故事的分组，以便读者可以查看各种媒体对同一问题的报道（图 8.5）。
+
+
+    ### 强化学习
+
+
+    在强化学习中，没有训练数据集。相反，算法被设计为在奖励、目标或
+
+
+    气候变化如何助长了澳大利亚的丛林大火
+
+
+    CBS 新闻 · 昨天
+
+
+    +   - 气候变化影响了澳大利亚的野火，科学家证实
+
+    +     《纽约时报》· 昨天
+
+
+    查看完整报道
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_11_0.png)
+
+
+    医生现在可以批准新冠病毒检测，CDC 表示
+
+
+    福克斯新闻 · 1 小时前
+
+
+    +   - 仅凭医生批准即可进行新冠病毒检测，C.D.C. 表示
+
+    +     《纽约时报》· 昨天
+
+
+    查看完整报道
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_11_1.png)
+
+
+    欧佩克提议大幅削减石油产量
+
+
+    《纽约时报》· 1 小时前
+
+
+    +   - 在新冠病毒重创油价后，欧佩克公布削减产量的计划
+
+    +     CNN · 8 小时前
+
+
+    查看完整报道
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_11_2.png)
+
+
+    图 8.5 显示 Google 新闻对不同新闻媒体的相似报道进行聚类的示例截图。
+
+
+    约束条件系统中尝试不同的行动或路径，这些约束条件为算法提供对其选择质量的反馈。强化学习对于生成逐案响应（无模型强化学习）或计划（基于模型的强化学习）很有用，这些响应或计划能够实现建模者定义的目标。在生命周期评估中，强化学习算法可以为优化某些系统参数的场景生成工艺数据，例如混合动力电动车（HEB）的能源消耗（Wu
+    等 2018）。
+
+
+    ## 浅层和深度学习
+
+
+    在上述讨论的三种通用机器学习类型中，有许多算法，其中许多针对特定问题类型精心设计，其他则更灵活，能够适应更大的系统复杂性。一般来说，为特定任务设计因此灵活性受限的算法称为“浅层”或分层学习算法。更灵活的机器学习算法被归类为深度或表征学习，主要形式为人工神经网络（ANN）。
+
+
+    浅层算法与人工神经网络之间的主要区别在于它们如何适应复杂性（即特征与模型输出之间关系的非线性）。
+
+
+    在浅层学习算法中，通过扩展特征集来建模复杂系统。这意味着建模者使用原始特征来创建新的特征，这些新特征是原始特征的幂、原始特征的乘法组合，或原始特征幂的乘法组合。然后使用此扩展的特征集来训练假设函数并确定模型的拟合参数。人工神经网络通过一个额外的自动化学习任务——特征学习——来支持复杂系统的建模。特征学习发生在神经元系统中，每个神经元都有自己的假设函数，需要确定其拟合参数。该神经网络的产物是对原始特征数据的表征。表征特征集随后用作另一个具有学习拟合参数的假设函数的输入，而该最终假设函数产生人工神经网络算法的输出（图
+    8.6）。
+
+
+    ## 选择机器学习算法
+
+
+    是否可以使用有监督学习、无监督学习或强化学习来构建模型取决于可用数据。如果预期训练数据集具有标签，则可以使用有监督学习来生成模型以估计未标记数据点的标签。例如，针对建筑特征和能源消耗数据训练的有监督学习算法可用于根据训练集中使用的特征预测新建筑的能源消耗。在该示例中，已知的建筑能源消耗数据是标签。如果预期训练数据集没有标签，则可以使用无监督学习将数据点排序到组中。在与生态系统研究和生命周期评估密切相关的领域中，无监督学习应用的示例是用于对各种物种的石蝇未标记图像进行聚类或确定秸秆到能源转换的最佳设施选址的聚类算法。如果没有训练数据集，但模型有可衡量的目标（例如最小化燃料消耗），则强化学习可能很有用。
+
+
+    在浅层学习算法和人工神经网络之间做出决定可能更困难。最佳选择可能取决于输入之间或输入与输出之间关系的复杂性（即非线性），以及数据集中特征的数量。如果模型需要描述具有大量特征的非线性关系，则浅层学习算法中的特征数量会迅速膨胀，因为特征集被扩展以适应这些更复杂的f...
+    特征集扩展会使计算变得更慢。对于具有许多特征的数据集，人工神经网络的特征学习步骤可以使人工神经网络以比某些浅层算法更少的计算能力来建模复杂关系。然而，判断什么构成许多特征，或什么使关系复杂到足以使用人工神经网络可能很困难，并且存在一些浅层学习算法旨在通过偏爱具有非零权重的特征来避免大量特征（参见
+    Lasso 或 ElasticNet 算法）。总体而言，出于更快计算的考虑，浅层算法对于数据集
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 13]
+
+
+    # Shallow algorithm model
+
+
+    # Artificial neural network (ANN) model
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_13_0.png)
+
+
+    Fig. 8.6 Flow charts for models built using shallow algorithms and artificial
+    neural networks (ANNs). Shallow algorithms often require the user to expand the
+    feature set to accommodate complexity, and ANNs accommodate complexity with neural
+    networks that produce a representation feature set from the raw feature set.'
+  - '[PAGE 14]
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_14_0.png)
+
+
+    Fig. 8.7 Non-linearity of relationships and number of features can drive modeling
+    choices with regard to computation speed.
+
+
+    with fewer input features or datasets with mostly linear relationships, and ANNs
+    will be better for applications with larger numbers of input features that have
+    more complex (non-linear) relationships between inputs and outputs (e.g., images,
+    audio) (Fig. 8.7).
+
+
+    Other considerations might be model transparency and the level of human effort
+    required to produce the model. The functions of models produced using shallow
+    algorithms are completely transparent, but the neural networks that carry out
+    feature learning in ANNs are essentially a “black box,” and there is often no
+    way to mathematically represent the relationship between model inputs and outputs.
+    This may be important to consider for applications like LCA where model transparency
+    is highly valued. On the other hand, human effort required to produce a model
+    using an ANN can be lower than that required to produce a model using shallow
+    learning because feature learning in ANNs eliminates the need for manual expansion
+    of the feature set. If a shallow algorithm seems like the right choice for your
+    dataset, Scikit-learn’s “Choosing the right estimator” decision tree may be a
+    good place to start: https://scikit-learn.org/stable/tutorial/machine_learning_map/.
+
+
+    As would be done with any data source, the effects of using ML methods on model
+    reliability should be considered. Model statistics can provide a starting point
+    for propagation of uncertainties into model results, but conservative modeling
+    choices should be made when using ML so that overfitting, which may produce artificially
+    low uncertainties in model validation and testing phases, is avoided. Useful interpretation
+    of LCA relies on model transparency, so extra care should be taken to explain
+    which ML techniques were used and why.'
+  - '[PAGE 15]
+
+
+    # Tools for ML
+
+
+    With an ever-expanding set of ML tools, it is not possible to provide a comprehensive
+    list. Some of the most common freely available and open source tools for building
+    ML models include python libraries such as PyTorch, Scikit-learn, and Theano;
+    Google’s TensorFlow; and Microsoft’s Cognitive Toolkit (CNTK), Weka, and KNIME.
+    For those who are just getting started using ML, some good resources are Andrew
+    Ng’s Machine Learning course on Coursera, and the OCDevel Machine Learning Guide
+    podcast.
+
+
+    # ML in LCA
+
+
+    Potential applications of ML in LCA are numerous (Fig. 8.8), but which algorithms
+    are useful will depend on the goal, the type of data, and size of the dataset.
+    In this review, we found that ML has been applied for LCA in three areas: surrogate
+    LCA development using ANN algorithms (Park et al. 2003; Sousa et al. 2006); CF
+    estimation with multivariate linear regression (Slapnik et al. 2015); and sensitivity
+    analysis with linear regressions (Heath et al. 2009). Additionally, ML has been
+    applied outside LCA in data
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_15_0.png)
+
+
+    *Surrogate LCA is not an LCA step, but a method of estimating full LCA results
+
+
+    Fig. 8.8 Applications of machine learning (ML) in life cycle assessment (LCA).
+    Dark green application areas indicate parts of LCA in which we have seen ML algorithms
+    applied in our review. Light green applications indicate parts of LCA in which
+    ML could be applied in the near future, considering its application in similar
+    areas outside of LCA. The ML types specified for each application are general
+    recommendations based on the anticipated datasets or goals associated with the
+    application.'
+  - '[PAGE 16]
+
+
+    cleaning, predicting system output flows or performance, ecosystem informatics,
+    and system optimization. From these methods, ML algorithms could have new applications
+    screening or cleaning datasets for LCI, estimating flow data for unit processes,
+    improving the quality and quantity of data used to determine CFs, and generating
+    optimized scenarios.
+
+
+    According to ISO 14040 section 4.1.8, LCA data and modeling should be based on
+    natural science when possible. Estimates and other information produced using
+    machine learning algorithms can certainly fulfill this criterion with sufficient
+    quantities of input data and, in the case of supervised learning, model validation.
+    Model transparency will also be important for acceptance of ML methods within
+    LCA methodology.
+
+
+    # ML for surrogate LCAs
+
+
+    Within this space, ML algorithms have been used by LCA practitioners to develop
+    surrogate LCA models that use product design parameters to estimate LCA results
+    for new products. The term “surrogate LCA” seems to be used exclusively to describe
+    ML algorithms trained on process LCA data to predict LCA results. One of the main
+    goals of the surrogate LCA is to enable product designers to predict the environmental
+    impacts of a new product system or process. Several studies have used ML to develop
+    surrogate LCA models using product descriptors and existing LCI or LCA results
+    (Sousa et al. 2000; Park et al. 2003; Sousa et al. 2006).
+
+
+    Sousa et al. (2000) tested the ability of an ANN trained to predict life cycle
+    energy consumption from a set of 18 carefully defined project concept descriptors.
+    The project concept descriptors were chosen based not only on strength of correlation
+    with LCI data, but also on survey results indicating what designers are likely
+    to know about a product in the early phases of development. Noting that correlations
+    between descriptors and LCI data improved when examined for narrower classes of
+    products (e.g., durable products only), they trained two ANN models: one for products
+    with high use-phase energy consumption (HUPEC), and another for products with
+    low use-phase energy consumption (LUPEC). The recognition that different classes
+    of products have distinct relationships between product descriptors and LCI data
+    has prompted further research to define appropriate groupings for products (Park
+    et al. 2003; Sousa et al. 2006).
+
+
+    The HUPEC and LUPEC models were trained on the product descriptors and life cycle
+    energy consumption data from full LCAs of 103 and 55 products, respectively. These
+    included vehicles, plastics, paper products, and more. The models were tested
+    using six products with known LCA results that were not in the training dataset:
+    an internal combustion vehicle, refrigerator, vacuum, chair, coffee filter, and
+    antifreeze. The predicted life cycle energy consumptions of products in the HUPEC
+    group were all within +/-40 percent of the life cycle energy consumption estimated
+    in the full LCAs for these products. In the context of LCA, where differences
+    of this magnitude are common between results for the same product, a maximum error
+    of 40 percent is'
+  - '[PAGE 17]
+
+
+    encouraging. Differences between predicted and full LCA results were larger for
+    products in the LUPEC group, but still close enough that the ranking of all six
+    products from greatest to least energy consumption is the same using the model
+    predictions as it is with the full LCA results. These findings led to development
+    of the Sustainable Minds tool, which uses design-phase product descriptor inputs
+    to produce comprehensive LCA results (Sousa 2008).
+
+
+    # ML in LCI
+
+
+    The LCI step focuses on collecting data for the model. ML has not yet been applied
+    to LCI, but applications of ML in cleaning sensor data and predicting the performance
+    of buildings could inform future ML in LCI for data cleaning and estimating inventory
+    flows.
+
+
+    # Data cleaning
+
+
+    Automated data collection is susceptible to errors that can be time consuming
+    to find and correct. For LCA practitioners using automated data collection for
+    their LCI or to inform impact CFs, deep belief networks (DBN) might be useful.
+    Dietterich (2009) used a Gaussian DBN to clean temperature sensor network data.
+    The Gaussian DBN acted as a filter, labeling incoming data from wireless sensors
+    as “valid” or “faulty” using probabilistic inference based on learned correlations
+    between sensors in the network and replaced “faulty” values with a predicted most
+    likely value.
+
+
+    # Estimating inventory flows
+
+
+    ML has been used to predict performance of systems from system properties. Performance
+    data, as it relates to material and energy demands or production of waste and
+    emissions, is useful in the LCI step. Studies using ML to predict building energy
+    use are common (Zhao et al. 2012; Robinson et al. 2017; Deng et al. 2018), and
+    their results demonstrate that models developed using ML could be used with current,
+    publicly available data to estimate the performance of new buildings in the design
+    phase or the performance of existing buildings scenarios with modified input variables.
+    It is likely that ML has been used to predict performance data for other systems
+    as well.
+
+
+    Deng et al. (2018) used a variety of ML algorithms to build models to estimate
+    energy use intensity (EUI) for US commercial office buildings. The models were
+    calibrated with a subset of 2012 Commercial Building Energy Consumption Survey
+    (CBECS) microdata, comprised of 19 continuous variables such as square footage,
+    occupancy percentage, and daylight percentage, and 56 categorical variables such
+    as window glass type, building owner type, and whether there are occupancy sensors.
+    The algorithms used were linear regression, lasso regression, Support Vector Machine
+    (SVM), ANN, gradient boosting, and random forest.'
+  md: '
+
+    ## Shallow algorithm model
+
+
+    ## Artificial neural network (ANN) model
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_13_0.png)
+
+
+    Fig. 8.6 Flow charts for models built using shallow algorithms and artificial
+    neural networks (ANNs). Shallow algorithms often require the user to expand the
+    feature set to accommodate complexity, and ANNs accommodate complexity with neural
+    networks that produce a representation feature set from the raw feature set.
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_14_0.png)
+
+
+    Fig. 8.7 Non-linearity of relationships and number of features can drive modeling
+    choices with regard to computation speed.
+
+
+    with fewer input features or datasets with mostly linear relationships, and ANNs
+    will be better for applications with larger numbers of input features that have
+    more complex (non-linear) relationships between inputs and outputs (e.g., images,
+    audio) (Fig. 8.7).
+
+
+    Other considerations might be model transparency and the level of human effort
+    required to produce the model. The functions of models produced using shallow
+    algorithms are completely transparent, but the neural networks that carry out
+    feature learning in ANNs are essentially a “black box,” and there is often no
+    way to mathematically represent the relationship between model inputs and outputs.
+    This may be important to consider for applications like LCA where model transparency
+    is highly valued. On the other hand, human effort required to produce a model
+    using an ANN can be lower than that required to produce a model using shallow
+    learning because feature learning in ANNs eliminates the need for manual expansion
+    of the feature set. If a shallow algorithm seems like the right choice for your
+    dataset, Scikit-learn’s “Choosing the right estimator” decision tree may be a
+    good place to start: https://scikit-learn.org/stable/tutorial/machine_learning_map/.
+
+
+    As would be done with any data source, the effects of using ML methods on model
+    reliability should be considered. Model statistics can provide a starting point
+    for propagation of uncertainties into model results, but conservative modeling
+    choices should be made when using ML so that overfitting, which may produce artificially
+    low uncertainties in model validation and testing phases, is avoided. Useful interpretation
+    of LCA relies on model transparency, so extra care should be taken to explain
+    which ML techniques were used and why.
+
+
+    ## Tools for ML
+
+
+    With an ever-expanding set of ML tools, it is not possible to provide a comprehensive
+    list. Some of the most common freely available and open source tools for building
+    ML models include python libraries such as PyTorch, Scikit-learn, and Theano;
+    Google’s TensorFlow; and Microsoft’s Cognitive Toolkit (CNTK), Weka, and KNIME.
+    For those who are just getting started using ML, some good resources are Andrew
+    Ng’s Machine Learning course on Coursera, and the OCDevel Machine Learning Guide
+    podcast.
+
+
+    ## ML in LCA
+
+
+    Potential applications of ML in LCA are numerous (Fig. 8.8), but which algorithms
+    are useful will depend on the goal, the type of data, and size of the dataset.
+    In this review, we found that ML has been applied for LCA in three areas: surrogate
+    LCA development using ANN algorithms (Park et al. 2003; Sousa et al. 2006); CF
+    estimation with multivariate linear regression (Slapnik et al. 2015); and sensitivity
+    analysis with linear regressions (Heath et al. 2009). Additionally, ML has been
+    applied outside LCA in data cleaning, predicting system output flows or performance,
+    ecosystem informatics, and system optimization. From these methods, ML algorithms
+    could have new applications screening or cleaning datasets for LCI, estimating
+    flow data for unit processes, improving the quality and quantity of data used
+    to determine CFs, and generating optimized scenarios.
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_15_0.png)
+
+
+    *Surrogate LCA is not an LCA step, but a method of estimating full LCA results
+
+
+    Fig. 8.8 Applications of machine learning (ML) in life cycle assessment (LCA).
+    Dark green application areas indicate parts of LCA in which we have seen ML algorithms
+    applied in our review. Light green applications indicate parts of LCA in which
+    ML could be applied in the near future, considering its application in similar
+    areas outside of LCA. The ML types specified for each application are general
+    recommendations based on the anticipated datasets or goals associated with the
+    application.
+
+
+    According to ISO 14040 section 4.1.8, LCA data and modeling should be based on
+    natural science when possible. Estimates and other information produced using
+    machine learning algorithms can certainly fulfill this criterion with sufficient
+    quantities of input data and, in the case of supervised learning, model validation.
+    Model transparency will also be important for acceptance of ML methods within
+    LCA methodology.
+
+
+    ## ML for surrogate LCAs
+
+
+    Within this space, ML algorithms have been used by LCA practitioners to develop
+    surrogate LCA models that use product design parameters to estimate LCA results
+    for new products. The term “surrogate LCA” seems to be used exclusively to describe
+    ML algorithms trained on process LCA data to predict LCA results. One of the main
+    goals of the surrogate LCA is to enable product designers to predict the environmental
+    impacts of a new product system or process. Several studies have used ML to develop
+    surrogate LCA models using product descriptors and existing LCI or LCA results
+    (Sousa et al. 2000; Park et al. 2003; Sousa et al. 2006).
+
+
+    Sousa et al. (2000) tested the ability of an ANN trained to predict life cycle
+    energy consumption from a set of 18 carefully defined project concept descriptors.
+    The project concept descriptors were chosen based not only on strength of correlation
+    with LCI data, but also on survey results indicating what designers are likely
+    to know about a product in the early phases of development. Noting that correlations
+    between descriptors and LCI data improved when examined for narrower classes of
+    products (e.g., durable products only), they trained two ANN models: one for products
+    with high use-phase energy consumption (HUPEC), and another for products with
+    low use-phase energy consumption (LUPEC). The recognition that different classes
+    of products have distinct relationships between product descriptors and LCI data
+    has prompted further research to define appropriate groupings for products (Park
+    et al. 2003; Sousa et al. 2006).
+
+
+    The HUPEC and LUPEC models were trained on the product descriptors and life cycle
+    energy consumption data from full LCAs of 103 and 55 products, respectively. These
+    included vehicles, plastics, paper products, and more. The models were tested
+    using six products with known LCA results that were not in the training dataset:
+    an internal combustion vehicle, refrigerator, vacuum, chair, coffee filter, and
+    antifreeze. The predicted life cycle energy consumptions of products in the HUPEC
+    group were all within +/-40 percent of the life cycle energy consumption estimated
+    in the full LCAs for these products. In the context of LCA, where differences
+    of this magnitude are common between results for the same product, a maximum error
+    of 40 percent is encouraging. Differences between predicted and full LCA results
+    were larger for products in the LUPEC group, but still close enough that the ranking
+    of all six products from greatest to least energy consumption is the same using
+    the model predictions as it is with the full LCA results. These findings led to
+    development of the Sustainable Minds tool, which uses design-phase product descriptor
+    inputs to produce comprehensive LCA results (Sousa 2008).
+
+
+    ## ML in LCI
+
+
+    The LCI step focuses on collecting data for the model. ML has not yet been applied
+    to LCI, but applications of ML in cleaning sensor data and predicting the performance
+    of buildings could inform future ML in LCI for data cleaning and estimating inventory
+    flows.
+
+
+    ### Data cleaning
+
+
+    Automated data collection is susceptible to errors that can be time consuming
+    to find and correct. For LCA practitioners using automated data collection for
+    their LCI or to inform impact CFs, deep belief networks (DBN) might be useful.
+    Dietterich (2009) used a Gaussian DBN to clean temperature sensor network data.
+    The Gaussian DBN acted as a filter, labeling incoming data from wireless sensors
+    as “valid” or “faulty” using probabilistic inference based on learned correlations
+    between sensors in the network and replaced “faulty” values with a predicted most
+    likely value.
+
+
+    ### Estimating inventory flows
+
+
+    ML has been used to predict performance of systems from system properties. Performance
+    data, as it relates to material and energy demands or production of waste and
+    emissions, is useful in the LCI step. Studies using ML to predict building energy
+    use are common (Zhao et al. 2012; Robinson et al. 2017; Deng et al. 2018), and
+    their results demonstrate that models developed using ML could be used with current,
+    publicly available data to estimate the performance of new buildings in the design
+    phase or the performance of existing buildings scenarios with modified input variables.
+    It is likely that ML has been used to predict performance data for other systems
+    as well.
+
+
+    Deng et al. (2018) used a variety of ML algorithms to build models to estimate
+    energy use intensity (EUI) for US commercial office buildings. The models were
+    calibrated with a subset of 2012 Commercial Building Energy Consumption Survey
+    (CBECS) microdata, comprised of 19 continuous variables such as square footage,
+    occupancy percentage, and daylight percentage, and 56 categorical variables such
+    as window glass type, building owner type, and whether there are occupancy sensors.
+    The algorithms used were linear regression, lasso regression, Support Vector Machine
+    (SVM), ANN, gradient boosting, and random forest.
+
+    '
+  mdcn: '
+
+    ## 浅层算法模型
+
+
+    ## 人工神经网络（ANN）模型
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_13_0.png)
+
+
+    Fig. 8.6 使用浅层算法和人工神经网络（ANNs）构建模型的流程图。浅层算法通常需要用户扩展特征集以适应复杂性，而 ANNs 通过神经网络来适应复杂性，这些神经网络从原始特征集中产生表示特征集。
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_14_0.png)
+
+
+    Fig. 8.7 关系非线性和特征数量可驱动关于计算速度的建模选择。
+
+
+    在输入特征较少或数据集关系大多线性的情况下，浅层算法会更好，而 ANNs 更适合于输入特征数量较大且输入与输出之间关系更复杂（非线性）的应用（例如，图像、音频）（Fig.
+    8.7）。
+
+
+    其他考虑因素可能包括模型透明度和产生模型所需的人力投入程度。使用浅层算法产生的模型函数完全透明，但 ANN 中执行特征学习的神经网络本质上是“黑箱”，通常无法用数学方法表示模型输入与输出之间的关系。这对于像
+    LCA 这样高度重视模型透明度的应用而言可能是一个重要考虑因素。另一方面，使用 ANN 产生模型所需的人力投入可能低于使用浅层学习产生模型所需的人力投入，因为
+    ANN 中的特征学习消除了手动扩展特征集的需要。如果浅层算法看起来是您数据集的正确选择，Scikit-learn 的“Choosing the right
+    estimator”决策树可能是一个不错的起点：https://scikit-learn.org/stable/tutorial/machine_learning_map/。
+
+
+    如同对任何数据源一样，应考虑使用 ML 方法对模型可靠性产生的影响。模型统计数据可以为将不确定性传播到模型结果提供起点，但在使用 ML 时应做出保守的建模选择，以避免过拟合，从而在模型验证和测试阶段产生人为偏低的不确定性。对
+    LCA 的有用解读依赖于模型透明度，因此应特别注意解释使用了哪些 ML 技术以及原因。
+
+
+    ## Tools for ML
+
+
+    随着 ML 工具的不断扩展，无法提供全面的清单。一些最常见的免费且开源的构建 ML 模型的工具包括 python 库，如 PyTorch、Scikit-learn
+    和 Theano；Google 的 TensorFlow；以及 Microsoft 的认知工具包（CNTK）、Weka 和 KNIME。对于刚开始使用 ML
+    的人，一些不错的资源是 Andrew Ng 在 Coursera 上的机器学习课程，以及 OCDevel 机器学习指南播客。
+
+
+    ## ML in LCA
+
+
+    ML 在 LCA 中的潜在应用众多（Fig. 8.8），但哪些算法有用将取决于目标、数据类型和数据集大小。在本次综述中，我们发现 ML 已在 LCA 的三个领域得到应用：使用
+    ANN 算法开发代理 LCA（Park et al. 2003；Sousa et al. 2006）；使用多元线性回归进行 CF 估计（Slapnik et
+    al. 2015）；以及使用线性回归进行敏感性分析（Heath et al. 2009）。此外，ML 已在 LCA 之外应用于数据清洗、预测系统输出流或性能、生态系统信息学和系统优化。从这些方法来看，ML
+    算法可在 LCI 数据集筛选或清洗、估算单元过程的流数据、提高用于确定 CF 的数据质量和数量，以及生成优化情景等方面有新的应用。
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_15_0.png)
+
+
+    *代理 LCA 不是 LCA 步骤，而是一种估计完整 LCA 结果的方法
+
+
+    Fig. 8.8 机器学习（ML）在生命周期评估（LCA）中的应用。深绿色应用领域表示我们在综述中看到 ML 算法已应用于 LCA 的部分。浅绿色应用表示在考虑其在
+    LCA 之外类似领域的应用后，ML 在不久的将来可能应用于 LCA 的部分。针对每个应用指定的 ML 类型是基于与该应用相关的预期数据集或目标的一般建议。
+
+
+    根据 ISO 14040 第 4.1.8 节，LCA 数据和建模在可能的情况下应基于自然科学。使用机器学习算法产生的估计值和其他信息，只要有足够数量的输入数据，并在监督学习的情况下进行模型验证，就完全可以满足这一标准。模型透明度对于
+    ML 方法在 LCA 方法学中被接受也将很重要。
+
+
+    ## ML for surrogate LCAs
+
+
+    在这一领域，LCA 实践者已使用 ML 算法开发代理 LCA 模型，这些模型使用产品设计参数来估计新产品的 LCA 结果。“代理 LCA”一词似乎专门用于描述在过程
+    LCA 数据上训练以预测 LCA 结果的 ML 算法。代理 LCA 的主要目标之一是使产品设计师能够预测新产品系统或过程的环境影响。几项研究已使用 ML 开发代理
+    LCA 模型，使用产品描述符和现有的 LCI 或 LCA 结果（Sousa et al. 2000；Park et al. 2003；Sousa et al.
+    2006）。
+
+
+    Sousa et al. (2000) 测试了 ANN 预测生命周期能源消耗的能力，该 ANN 从一组 18 个精心定义的项目概念描述符进行训练。项目概念描述符的选择不仅基于与
+    LCI 数据相关性的强度，还基于调查结果，表明设计师在产品开发早期阶段可能了解的产品信息。注意到当针对更窄的产品类别（例如仅耐用产品）检查描述符与 LCI
+    数据之间的相关性时相关性有所改善，他们训练了两个 ANN 模型：一个用于高使用阶段能源消耗（HUPEC）产品，另一个用于低使用阶段能源消耗（LUPEC）产品。认识到不同类别的产品在产品描述符与
+    LCI 数据之间具有不同的关系，促使进一步研究以定义产品的适当分组（Park et al. 2003；Sousa et al. 2006）。
+
+
+    HUPEC 和 LUPEC 模型分别在 103 个和 55 个产品的完整 LCA 的产品描述符和生命周期能源消耗数据上进行训练。这些产品包括车辆、塑料、纸制品等。模型使用六种已知
+    LCA 结果但不在训练数据集中的产品进行测试：内燃机车辆、冰箱、吸尘器、椅子、咖啡滤纸和防冻液。HUPEC 组中产品的预测生命周期能源消耗均在完整 LCA
+    估计的生命周期能源消耗的 +/-40% 范围内。在 LCA 的背景下，相同产品结果之间这种量级的差异很常见，40% 的最大误差令人鼓舞。LUPEC 组产品的预测值与完整
+    LCA 结果之间的差异更大，但仍然足够接近，以至于使用模型预测时六种产品从最大到最小能源消耗的排名与使用完整 LCA 结果时的排名相同。这些发现促成了可持续思维工具的开发，该工具使用设计阶段的产品描述符输入来产生全面的
+    LCA 结果（Sousa 2008）。
+
+
+    ## ML in LCI
+
+
+    LCI 步骤侧重于为模型收集数据。ML 尚未应用于 LCI，但 ML 在清洗传感器数据和预测建筑性能方面的应用可为未来 ML 在 LCI 中的数据清洗和估算清单流提供参考。
+
+
+    ### Data cleaning
+
+
+    自动数据收集容易出现错误，这些错误可能耗时去查找和纠正。对于使用自动数据收集进行 LCI 或为影响 CF 提供信息的 LCA 实践者而言，深度信念网络（DBN）可能有用。Dietterich
+    (2009) 使用高斯 DBN 清洗温度传感器网络数据。高斯 DBN 充当过滤器，使用基于网络中传感器之间学习相关性的概率推理，将来自无线传感器的传入数据标记为“有效”或“故障”，并用预测的最可能值替换“故障”值。
+
+
+    ### Estimating inventory flows
+
+
+    ML 已被用于根据系统属性预测系统的性能。性能数据与材料和能源需求或废物和排放的产生有关，在 LCI 步骤中有用。使用 ML 预测建筑能源使用的研究很常见（Zhao
+    et al. 2012；Robinson et al. 2017；Deng et al. 2018），其结果表明，使用 ML 开发的模型可与当前公开可用的数据一起使用，以在设计阶段估计新建筑的性能，或在输入变量修改的情况下估计现有建筑情景的性能。很可能
+    ML 也已被用于预测其他系统的性能数据。
+
+
+    Deng et al. (2018) 使用多种 ML 算法构建模型来估计美国商业办公楼的能源使用强度（EUI）。模型使用 2012 年商业建筑能源消耗调查（CBECS）微数据的子集进行校准，该微数据包括
+    19 个连续变量，如建筑面积、占用百分比和采光百分比，以及 56 个分类变量，如窗玻璃类型、建筑物所有者类型以及是否有占用传感器。使用的算法为线性回归、套索回归、支持向量机（SVM）、ANN、梯度提升和随机森林。
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 18]
+
+
+    Despite the nonlinearity of input data, which favors the more complex learning
+    algorithms, the study found that the different algorithms performed similarly.
+    Support Vector Machine and Random Forest models’ prediction errors were only about
+    10–15 percent lower than those of multiple linear regression models for Total
+    EUI, and linear regression models outperformed other models in prediction of Plug
+    Load EUI. Tests of input variable importance also suggested that the CBECS input
+    variables used have low predictive power to map actual energy consumption, at
+    least for the ML techniques applied. This study underlines the importance of having
+    sufficient input data that is well correlated with the value to be predicted;
+    although more complex algorithms may be able to improve model performance where
+    the relationships between input and output variables are nonlinear, they cannot
+    fix problems related to data availability.
+
+
+    # ML in LCIA
+
+
+    ML has been used in LCIA to estimate values of ecotoxicity CFs for uncharacterized
+    chemical compounds. In the future, ML could also help characterize the environmental
+    mechanisms used to define CFs as it improves environmental data collection related
+    to ecology and human health impacts. Data collection supported by ML might even
+    support development of new LCIA categories.
+
+
+    # CF estimation
+
+
+    Slapnik et al. (2015) conducted an LCA of Slovenia to produce region-specific
+    normalization factors for LCA practitioners. Of the 440 chemical flows in their
+    LCI, 139 had no impact characterization factors. Using the Weka 3.6.10 Java package
+    for ML, physical–chemical, toxicological, ecotoxicological, and existing impact
+    characterization data at the intersection of three chemical databases (PPDB, ReCiPe
+    1.08, and FURS), they were able to train linear regression models for terrestrial,
+    freshwater, and marine ecotoxicity, and human toxicity. With limited CF availability
+    in ReCiPe, they were able to set up 75 training instances for the ecotoxicity
+    categories and 41 training for human toxicity. By training 5 models for each impact
+    category that ranged from including the maximum number of available chemical attributes
+    to only those attributes available for the most data limited compounds, the researchers
+    were able to produce validation CF estimates that were well correlated with existing
+    ReCiPe CFs (>0.70 on average). However, the average root relative squared error
+    was pretty high—about 70 percent for model predictions—so the researchers note
+    that results derived from certain estimated CFs should be taken into consideration
+    with care.
+
+
+    # CF definition
+
+
+    While estimating CFs using the properties of chemical compounds may be useful
+    in cases where environmental data are not available for these compounds, a more
+    direct'
+  - '[PAGE 19]
+
+
+    approach to the data gap would be to improve the ways in which we characterize
+    environmental impacts, including impacts on human health and on ecosystems. The
+    studies reviewed in this section demonstrate applications of ML in improving estimation
+    of human health impacts driven by emissions of particulate matter, and in growing
+    ecological databases by automating population studies.
+
+
+    To estimate hospital admissions for respiratory diseases in relationship to by
+    particulate matter (PM) concentrations and meteorological variables like humidity,
+    researchers have used generalized linear models (GLMs), which are a type of regression
+    (Pan et al. 2019), ANNs (Tadano et al. 2016), and ANNs with ensembles (Araujo
+    et al. 2020). Results from these studies could contribute to characterization
+    of human health effects for LCIA not only of PM emissions but also of emissions
+    that contribute to climate change.
+
+
+    Dieterich (2009) discusses potential for ML in ecosystem informatics and sustainability,
+    detailing a study using image recognition to identify different species of stoneflies.
+    Standard dictionary image recognition methods were not sufficient to produce reliable,
+    unsupervised classification of stoneflies with an error rate of 16.1 percent.
+    Alternative methods using stacked random forests and boosted dictionaries performed
+    much better, with error rates of 6.4 and 4.9 percent, respectively. Using ML to
+    collect ecosystem data could improve characterization of ecosystem health effects
+    that occur in relation to environmental conditions.
+
+
+    # ML in interpretation and analysis
+
+
+    ML has been used in the interpretation and analysis step of LCA for sensitivity
+    analyses and could be used for scenario analyses to generate inventory data corresponding
+    to new conditions or constraints on the system of interest.
+
+
+    # Sensitivity analysis
+
+
+    Sensitivity analysis in LCA requires varying model inputs, especially those with
+    high uncertainty, to understand how the magnitude of each input affects the LCA
+    results. This can be as simple as running the model with a particular input adjusted
+    +/-50 percent, and as specific as a varying model input over a known distribution
+    based on detailed input data. Another approach to sensitivity analysis in LCA
+    used by Heath et al. (2009) is to assess the relationships between LCA inputs
+    and outputs using regressions.
+
+
+    Heath et al. (2009) used simple linear regressions in the sensitivity analysis
+    of an ethanol LCA. The data for each linear regression was generated by running
+    models with a range of input parameter values; the range of input parameters is
+    the feature set, and the corresponding outputs are the labels. As an extension
+    of this application, multivariate regressions could be used to conduct multivariate
+    sensitivity analyses for each environmental impact category. These would enable
+    mathematical representation of the'
+  - '[PAGE 20]
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_20_0.png)
+
+
+    Fig. 8.9 Hypothetical global warming potential (GWP) response surface for feedstock
+    conversion efficiency and coproduct utilization rate variables in the ethanol
+    production system. The z-axis is GWP, and the x and y axes are feedstock conversion
+    efficiency and feed coproduct inclusion rate in animal diets, respectively.
+
+
+    relationships between LCA inputs and outputs. For example, a regression model
+    of the relationship between the global warming potential (GWP) of ethanol, the
+    efficiency of feedstock conversion, and the rate of ethanol feed coproduct utilization
+    might produce a response surface such as the one shown in (Fig. 8.9). Generating
+    mathematical representations of LCA models would enable characterization of changes
+    in results with changes in multiple input variables at once and might, in some
+    cases, indicate an optimized set of production conditions for minimizing an impact
+    category of interest, like GWP.
+
+
+    # Scenario analysis
+
+
+    As previously discussed in the Estimating Inventory Flows section, supervised
+    learning algorithms can be used to produce models that predict system performances,
+    and these predictions can be useful in scenario analyses where performance data
+    is not available. In the examined building energy consumption study (Deng et al.
+    2018), a supervised learning algorithm was trained to estimate system performance,
+    in this case building energy consumption. For scenario analysis, system performance
+    variables such as energy consumption or emissions could be predicted for modified
+    input variables such as light bulb types or climate.
+
+
+    Complex optimization scenario analyses in LCA could be aided by both unsupervised
+    and reinforcement learning algorithms. In order to evaluate the potential for
+    near'
+  - '[PAGE 21]
+
+
+    term scale-up of cellulosic fuel production, Mueller-Warrant et al. (2010) determined
+    optimal placements of straw-to-energy conversion sites given the location and
+    quantity data on straw production using a K-means algorithm, which is a type of
+    unsupervised clustering algorithm. Reinforcement learning is often utilized to
+    model scenarios with continuous decision making under specific optimization constraints,
+    so reinforcement algorithms could also be applied to generate LCI data for optimized
+    scenarios. As an example, Wu et al. (2018) use deep Q learning (DQL), a type of
+    reinforcement learning, to model optimal energy management strategies for hybrid
+    electric buses (HEBs).
+
+
+    # Conclusion
+
+
+    LCA relies on inventory and impact characterization data to quantify environmental
+    impacts of products and processes. Inventory analysis requires data on a system''s
+    life-cycle inputs and outputs, and impact characterization requires us to understand
+    how chemical emission and other changes in environmental condition affect human
+    health and ecosystems. Where sufficient training data exist, and the more data,
+    the better, ML algorithms can be used to model relationships and predict missing
+    datapoints. Using ML to enhance environmental data collection and optimize systems
+    might also improve availability of inventory and impact characterization data.
+
+
+    In order to enable future applications of ML in LCA, data collection efforts should
+    be focused on system performance (e.g., energy use, emissions, or waste production)
+    and the design-phase drivers of performance measures, and on quantifying human
+    health and the health of ecosystems under changing environmental conditions. In
+    particular, more data characterizing nascent technologies (e.g., space resources)
+    will be needed to drive future LCA studies and any corresponding applications
+    of ML for these systems.
+
+
+    # LCA of ML
+
+
+    Although the focus of this chapter is on ML applications for LCA, it may be of
+    interest to data science and sustainability audiences to note that researchers
+    have also been working to quantify the environmental impacts of training complex
+    ML models, which can demand significant computational resources (Strubell et al.
+    2019). Strubell et al. (2019) estimated the greenhouse gas (GHG) emissions associated
+    with training, tuning, and experimenting with a natural language processing (NLP)
+    algorithm at about 35.7 tons CO₂ equivalents. This is greater than twice the yearly
+    GHG emissions of an average American, about 16 tons CO₂ equivalents.
+
+
+    # References
+
+
+    Acero, A.P., Rodriguez, C., Ciroth, A., 2015. LCIA methods: impact assessment
+    methods in life cycle assessment and their impact categories. Green Delta Version:
+    1.5.4.
+
+    Araujo, L.N., Belotti, J.T., Alves, T.A., d. S. Tadano, Y., Siqueira, H., 2020.
+    Ensemble method based on artificial neural networks to estimate air pollution
+    health risks. Environ. Modell. Softw. 123, 104567.'
+  md: '
+
+    Despite the nonlinearity of input data, which favors the more complex learning
+    algorithms, the study found that the different algorithms performed similarly.
+    Support Vector Machine and Random Forest models’ prediction errors were only about
+    10–15 percent lower than those of multiple linear regression models for Total
+    EUI, and linear regression models outperformed other models in prediction of Plug
+    Load EUI. Tests of input variable importance also suggested that the CBECS input
+    variables used have low predictive power to map actual energy consumption, at
+    least for the ML techniques applied. This study underlines the importance of having
+    sufficient input data that is well correlated with the value to be predicted;
+    although more complex algorithms may be able to improve model performance where
+    the relationships between input and output variables are nonlinear, they cannot
+    fix problems related to data availability.
+
+
+    ## ML in LCIA
+
+
+    ML has been used in LCIA to estimate values of ecotoxicity CFs for uncharacterized
+    chemical compounds. In the future, ML could also help characterize the environmental
+    mechanisms used to define CFs as it improves environmental data collection related
+    to ecology and human health impacts. Data collection supported by ML might even
+    support development of new LCIA categories.
+
+
+    ### CF estimation
+
+
+    Slapnik et al. (2015) conducted an LCA of Slovenia to produce region-specific
+    normalization factors for LCA practitioners. Of the 440 chemical flows in their
+    LCI, 139 had no impact characterization factors. Using the Weka 3.6.10 Java package
+    for ML, physical–chemical, toxicological, ecotoxicological, and existing impact
+    characterization data at the intersection of three chemical databases (PPDB, ReCiPe
+    1.08, and FURS), they were able to train linear regression models for terrestrial,
+    freshwater, and marine ecotoxicity, and human toxicity. With limited CF availability
+    in ReCiPe, they were able to set up 75 training instances for the ecotoxicity
+    categories and 41 training for human toxicity. By training 5 models for each impact
+    category that ranged from including the maximum number of available chemical attributes
+    to only those attributes available for the most data limited compounds, the researchers
+    were able to produce validation CF estimates that were well correlated with existing
+    ReCiPe CFs (>0.70 on average). However, the average root relative squared error
+    was pretty high—about 70 percent for model predictions—so the researchers note
+    that results derived from certain estimated CFs should be taken into consideration
+    with care.
+
+
+    ### CF definition
+
+
+    While estimating CFs using the properties of chemical compounds may be useful
+    in cases where environmental data are not available for these compounds, a more
+    direct approach to the data gap would be to improve the ways in which we characterize
+    environmental impacts, including impacts on human health and on ecosystems. The
+    studies reviewed in this section demonstrate applications of ML in improving estimation
+    of human health impacts driven by emissions of particulate matter, and in growing
+    ecological databases by automating population studies.
+
+
+    To estimate hospital admissions for respiratory diseases in relationship to particulate
+    matter (PM) concentrations and meteorological variables like humidity, researchers
+    have used generalized linear models (GLMs), which are a type of regression (Pan
+    et al. 2019), ANNs (Tadano et al. 2016), and ANNs with ensembles (Araujo et al.
+    2020). Results from these studies could contribute to characterization of human
+    health effects for LCIA not only of PM emissions but also of emissions that contribute
+    to climate change.
+
+
+    Dieterich (2009) discusses potential for ML in ecosystem informatics and sustainability,
+    detailing a study using image recognition to identify different species of stoneflies.
+    Standard dictionary image recognition methods were not sufficient to produce reliable,
+    unsupervised classification of stoneflies with an error rate of 16.1 percent.
+    Alternative methods using stacked random forests and boosted dictionaries performed
+    much better, with error rates of 6.4 and 4.9 percent, respectively. Using ML to
+    collect ecosystem data could improve characterization of ecosystem health effects
+    that occur in relation to environmental conditions.
+
+
+    ## ML in interpretation and analysis
+
+
+    ML has been used in the interpretation and analysis step of LCA for sensitivity
+    analyses and could be used for scenario analyses to generate inventory data corresponding
+    to new conditions or constraints on the system of interest.
+
+
+    ### Sensitivity analysis
+
+
+    Sensitivity analysis in LCA requires varying model inputs, especially those with
+    high uncertainty, to understand how the magnitude of each input affects the LCA
+    results. This can be as simple as running the model with a particular input adjusted
+    +/-50 percent, and as specific as a varying model input over a known distribution
+    based on detailed input data. Another approach to sensitivity analysis in LCA
+    used by Heath et al. (2009) is to assess the relationships between LCA inputs
+    and outputs using regressions.
+
+
+    Heath et al. (2009) used simple linear regressions in the sensitivity analysis
+    of an ethanol LCA. The data for each linear regression was generated by running
+    models with a range of input parameter values; the range of input parameters is
+    the feature set, and the corresponding outputs are the labels. As an extension
+    of this application, multivariate regressions could be used to conduct multivariate
+    sensitivity analyses for each environmental impact category. These would enable
+    mathematical representation of the relationships between LCA inputs and outputs.
+
+
+    For example, a regression model of the relationship between the global warming
+    potential (GWP) of ethanol, the efficiency of feedstock conversion, and the rate
+    of ethanol feed coproduct utilization might produce a response surface such as
+    the one shown in (Fig. 8.9). Generating mathematical representations of LCA models
+    would enable characterization of changes in results with changes in multiple input
+    variables at once and might, in some cases, indicate an optimized set of production
+    conditions for minimizing an impact category of interest, like GWP.
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_20_0.png)
+
+
+    Fig. 8.9 Hypothetical global warming potential (GWP) response surface for feedstock
+    conversion efficiency and coproduct utilization rate variables in the ethanol
+    production system. The z-axis is GWP, and the x and y axes are feedstock conversion
+    efficiency and feed coproduct inclusion rate in animal diets, respectively.
+
+
+    ### Scenario analysis
+
+
+    As previously discussed in the Estimating Inventory Flows section, supervised
+    learning algorithms can be used to produce models that predict system performances,
+    and these predictions can be useful in scenario analyses where performance data
+    is not available. In the examined building energy consumption study (Deng et al.
+    2018), a supervised learning algorithm was trained to estimate system performance,
+    in this case building energy consumption. For scenario analysis, system performance
+    variables such as energy consumption or emissions could be predicted for modified
+    input variables such as light bulb types or climate.
+
+
+    Complex optimization scenario analyses in LCA could be aided by both unsupervised
+    and reinforcement learning algorithms. In order to evaluate the potential for
+    near term scale-up of cellulosic fuel production, Mueller-Warrant et al. (2010)
+    determined optimal placements of straw-to-energy conversion sites given the location
+    and quantity data on straw production using a K-means algorithm, which is a type
+    of unsupervised clustering algorithm. Reinforcement learning is often utilized
+    to model scenarios with continuous decision making under specific optimization
+    constraints, so reinforcement algorithms could also be applied to generate LCI
+    data for optimized scenarios. As an example, Wu et al. (2018) use deep Q learning
+    (DQL), a type of reinforcement learning, to model optimal energy management strategies
+    for hybrid electric buses (HEBs).
+
+
+    ## Conclusion
+
+
+    LCA relies on inventory and impact characterization data to quantify environmental
+    impacts of products and processes. Inventory analysis requires data on a system''s
+    life-cycle inputs and outputs, and impact characterization requires us to understand
+    how chemical emission and other changes in environmental condition affect human
+    health and ecosystems. Where sufficient training data exist, and the more data,
+    the better, ML algorithms can be used to model relationships and predict missing
+    datapoints. Using ML to enhance environmental data collection and optimize systems
+    might also improve availability of inventory and impact characterization data.
+
+
+    In order to enable future applications of ML in LCA, data collection efforts should
+    be focused on system performance (e.g., energy use, emissions, or waste production)
+    and the design-phase drivers of performance measures, and on quantifying human
+    health and the health of ecosystems under changing environmental conditions. In
+    particular, more data characterizing nascent technologies (e.g., space resources)
+    will be needed to drive future LCA studies and any corresponding applications
+    of ML for these systems.
+
+
+    ## LCA of ML
+
+
+    Although the focus of this chapter is on ML applications for LCA, it may be of
+    interest to data science and sustainability audiences to note that researchers
+    have also been working to quantify the environmental impacts of training complex
+    ML models, which can demand significant computational resources (Strubell et al.
+    2019). Strubell et al. (2019) estimated the greenhouse gas (GHG) emissions associated
+    with training, tuning, and experimenting with a natural language processing (NLP)
+    algorithm at about 35.7 tons CO₂ equivalents. This is greater than twice the yearly
+    GHG emissions of an average American, about 16 tons CO₂ equivalents.
+
+
+    ## References
+
+
+    Acero, A.P., Rodriguez, C., Ciroth, A., 2015. LCIA methods: impact assessment
+    methods in life cycle assessment and their impact categories. Green Delta Version:
+    1.5.4.
+
+    Araujo, L.N., Belotti, J.T., Alves, T.A., d. S. Tadano, Y., Siqueira, H., 2020.
+    Ensemble method based on artificial neural networks to estimate air pollution
+    health risks. Environ. Modell. Softw. 123, 104567.
+
+    '
+  mdcn: '
+
+    尽管输入数据的非线性有利于更复杂的学习算法，研究发现不同算法的表现相似。支持向量机和随机森林模型的预测误差仅比用于总 EUI 的多元线性回归模型低约 10–15%，而线性回归模型在预测插电负载
+    EUI 时优于其他模型。对输入变量重要性的测试也表明，所使用的 CBECS 输入变量在映射实际能源消耗方面的预测能力较低，至少对于所应用的机器学习技术而言如此。本研究强调了拥有与待预测值高度相关的充足输入数据的重要性；尽管更复杂的算法在输入和输出变量关系非线性时可能改善模型性能，但它们无法解决与数据可用性相关的问题。
+
+
+    ## ML 在 LCIA 中
+
+
+    机器学习已在生命周期影响评价中用于估算未表征化学化合物的生态毒性特征因子值。未来，机器学习还可以通过改善与生态和人类健康影响相关的环境数据收集，帮助表征用于定义特征因子的环境机制。由机器学习支持的数据收集甚至可能支持新的生命周期影响评价类别的开发。
+
+
+    ### CF 估算
+
+
+    Slapnik 等 (2015) 对斯洛文尼亚进行了生命周期评价，以为生命周期评价从业者提供区域特定的归一化因子。在其生命周期清单的 440 种化学流动中，139
+    种没有影响特征因子。使用用于机器学习的 Weka 3.6.10 Java 软件包，以及在三个化学数据库（PPDB、ReCiPe 1.08 和 FURS）交集处的物理化学、毒理学、生态毒理学和现有影响特征数据，他们能够为陆地、淡水和海洋生态毒性以及人类毒性训练线性回归模型。由于
+    ReCiPe 中特征因子可用性有限，他们为生态毒性类别设置了 75 个训练实例，为人类毒性设置了 41 个训练实例。通过为每个影响类别训练 5 个模型，这些模型从包含最大数量的可用化学属性到仅包含数据最受限化合物可用的属性不等，研究人员能够产生与现有
+    ReCiPe 特征因子相关性良好的验证特征因子估计值（平均 >0.70）。然而，平均相对均方根误差相当高——模型预测约为 70%，因此研究人员指出，由某些估计特征因子得出的结果应谨慎考虑。
+
+
+    ### CF 定义
+
+
+    虽然在环境数据不可用时使用化学化合物的性质来估算特征因子可能有用，但解决数据缺口的更直接方法是对我们表征环境影响的方式进行改进，包括对人类健康和生态系统的影响。本节回顾的研究展示了机器学习在改善由颗粒物排放驱动的人类健康影响估计以及通过自动化种群研究扩大生态数据库方面的应用。
+
+
+    为了估算呼吸系统疾病住院人数与颗粒物（PM）浓度以及湿度等气象变量的关系，研究人员使用了广义线性模型（GLMs），这是一种回归类型（Pan 等 2019）、人工神经网络（ANNs）（Tadano
+    等 2016）以及带集成的人工神经网络（Araujo 等 2020）。这些研究的结果可为生命周期影响评价中颗粒物排放以及有助于气候变化的排放的人类健康效应表征做出贡献。
+
+
+    Dieterich（2009）讨论了机器学习在生态系统信息学和可持续性方面的潜力，详细介绍了使用图像识别来识别不同种类石蝇的研究。标准词典图像识别方法不足以以
+    16.1% 的错误率产生可靠的石蝇无监督分类。使用堆叠随机森林和增强词典的替代方法表现更好，错误率分别为 6.4% 和 4.9%。使用机器学习收集生态系统数据可以改善与环境条件相关的生态系统健康效应表征。
+
+
+    ## ML 在解释与分析中的应用
+
+
+    机器学习已在生命周期评价的解释与分析步骤中用于敏感性分析，并可用于情景分析以生成对应于感兴趣系统的新条件或约束的清单数据。
+
+
+    ### 敏感性分析
+
+
+    生命周期评价中的敏感性分析需要改变模型输入，特别是那些不确定性高的输入，以了解每个输入的大小如何影响生命周期评价结果。这可以简单到使用特定输入调整 +/-50%
+    运行模型，也可以具体到根据详细输入数据在已知分布上改变模型输入。Heath 等（2009）使用的生命周期评价敏感性分析的另一种方法是使用回归评估生命周期评价输入与输出之间的关系。
+
+
+    Heath 等（2009）在乙醇生命周期评价的敏感性分析中使用了简单线性回归。每个线性回归的数据是通过使用一系列输入参数值运行模型生成的；输入参数的范围是特征集，对应的输出是标签。作为该应用的扩展，多元回归可用于对每个环境影响类别进行多元敏感性分析。这将使生命周期评价输入与输出之间关系的数学表示成为可能。
+
+
+    例如，乙醇的全球变暖潜势（GWP）、原料转换效率和乙醇原料副产品利用率之间关系的回归模型可能会产生如图（图 8.9）所示的响应面。生成生命周期评价模型的数学表示将使结果随多个输入变量同时变化而变化的表征成为可能，并且在某些情况下可能指示最小化感兴趣影响类别（如
+    GWP）的生产条件的优化集合。
+
+
+    ![](img/ac82f2e55074ec39b384b4e372aab70e_20_0.png)
+
+
+    图 8.9 乙醇生产系统中原料转换效率和副产品利用率变量的假设全球变暖潜势（GWP）响应面。z 轴为 GWP，x 轴和 y 轴分别为原料转换效率和动物饲料中原料副产品添加率。
+
+
+    ### 情景分析
+
+
+    如“估算清单流动”部分所述，有监督学习算法可用于生成预测系统性能的模型，这些预测在性能数据不可用的情景分析中可能很有用。在所考察的建筑能耗研究（Deng 等
+    2018）中，有监督学习算法被训练用于估算系统性能，在本例中为建筑能耗。对于情景分析，系统性能变量如能耗或排放可针对修改后的输入变量如灯泡类型或气候进行预测。
+
+
+    生命周期评价中的复杂优化情景分析可由无监督和强化学习算法辅助。为了评估纤维素燃料生产近期规模化的潜力，Mueller-Warrant 等（2010）使用 K-means
+    算法——一种无监督聚类算法——根据秸秆生产的位置和数量数据确定秸秆制能转换站点的最佳位置。强化学习通常用于在特定优化约束下对连续决策情景进行建模，因此强化算法也可用于为优化情景生成生命周期清单数据。例如，Wu
+    等（2018）使用深度 Q 学习（DQL），一种强化学习方法，来建模混合动力电动公交车（HEBs）的最佳能源管理策略。
+
+
+    ## 结论
+
+
+    生命周期评价依赖于清单和影响特征数据来量化产品和工艺的环境影响。清单分析需要系统生命周期输入和输出的数据，而影响特征需要我们了解化学排放和其他环境条件变化如何影响人类健康和生态系统。在存在足够训练数据的情况下，数据越多越好，机器学习算法可用于建模关系并预测缺失数据点。使用机器学习增强环境数据收集和优化系统也可能改善清单和影响特征数据的可用性。
+
+
+    为了实现机器学习在生命周期评价中的未来应用，数据收集工作应集中于系统性能（如能源使用、排放或废物产生）和性能指标的设计阶段驱动因素，以及在变化的环境条件下量化人类健康和生态系统健康。特别是，需要更多表征新兴技术（如太空资源）的数据来推动未来的生命周期评价研究以及针对这些系统的任何相应的机器学习应用。
+
+
+    ## ML 的 LCA
+
+
+    尽管本章重点是机器学习在生命周期评价中的应用，但数据科学和可持续性受众可能也会感兴趣的是，研究人员也在努力量化训练复杂机器学习模型的环境影响，这些模型可能需要大量计算资源（Strubell
+    等 2019）。Strubell 等（2019）估计训练、调优和试验一种自然语言处理（NLP）算法相关的温室气体（GHG）排放约为 35.7 吨二氧化碳当量。这超过了美国普通人年温室气体排放量的两倍，后者约为
+    16 吨二氧化碳当量。
+
+
+    ## 参考文献
+
+
+    Acero, A.P., Rodriguez, C., Ciroth, A., 2015. LCIA 方法：生命周期评价中的影响评价方法及其影响类别。Green
+    Delta 版本：1.5.4。
+
+    Araujo, L.N., Belotti, J.T., Alves, T.A., d. S. Tadano, Y., Siqueira, H., 2020.
+    基于人工神经网络的估计空气污染健康风险的集成方法。Environ. Modell. Softw. 123, 104567。
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 22]
+
+
+    Castellani, V., Beylot, A., Sala, S., 2019. Environmental impacts of household
+    consumption in Europe: comparing process-based LCA and environmentally extended
+    input-output analysis. J. Clean Prod. 240, 117966.
+
+
+    Cederberg, C., Stadig, M., 2003. System expansion and allocation in life cycle
+    assessment of milk and beef production. Int. J. Life Cycle Assess. 8 (6), 350–356.
+
+
+    Deng, H., Fannon, D., Eckelman, M.J., 2018. "Predictive modeling for US commercial
+    building energy use: a comparison of existing statistical and machine learning
+    algorithms using CBECS microdata. Energy Build. 163, 34–43.
+
+
+    Dick, M., da Silva, M.A., Dewes, H., 2015. Life cycle assessment of beef cattle
+    production in two typical grassland systems of southern Brazil. J. Clean Prod.
+    96, 426–434.
+
+
+    Dieterich, T.G., 2009. Machine learning in ecosystem informatics and sustainability.
+    Twenty-First International Joint Conference on Artificial Intelligence.
+
+
+    Harwatt, H., Sabaté, J., Eshel, G., Soret, S., Ripple, W., 2017. Substituting
+    beans for beef as a contribution toward US climate change targets. Clim. Change.
+    143 (1), 261–270.
+
+
+    Heath, G.A., Hsu, D.D., Inman, D., Aden, A., Mann, M.K., 2009. Life cycle assessment
+    of the energy independence and security act of 2007: ethanol—global warming potential
+    and environmental emissions. ASME 2009 3rd international conference on energy
+    sustainability collocated with the heat transfer and InterPACK09 conferences.
+    American Society of Mechanical Engineers.
+
+
+    Hendrickson, C.T., Horvath, A., Joshi, S., Klausner, M., Lave, L.B., McMichael,
+    F.C., 1997. Comparing two life cycle assessment approaches: a process model vs.
+    economic input-output-based assessment. IEEE, 176–181.
+
+
+    ISO, 2006. Environmental management: life cycle assessment; Principles and framework.
+    ISO 14040, 2006.
+
+
+    ISO, 2006. Environmental management: life cycle assessment; Requirements and guidelines.
+    ISO 14044, 2006.
+
+
+    Junnila, S., 2006. Empirical comparison of process and economic input-output life
+    cycle assessment in service industries. Environ. Sci. Technol. 40 (22), 7070–7076.
+
+
+    Landis, A.E., Mealing, V., Eranki, P., 2018. Tools to evaluate the sustainability
+    of natural rubber production, 194th Technical Meeting of the American Chemical
+    Society Rubber Division. Louisville.
+
+
+    Landis, A.E., Theis, T.L., 2008. Comparison of life cycle impact assessment tools
+    in the case of biofuels. IEEE International Symposium on Electronics and the Environment.
+
+
+    Lauer, M., 2008. Methodology guideline on techno economic assessment (TEA). Workshop
+    WP3B Economics, Methodology Guideline.
+
+
+    Matthews, H.S., Hendrickson, C.T., Matthews, D.H., 2014. Life cycle assessment:
+    quantitative approaches for decisions that matter Open access textbook. Retrieved
+    from https://www.lcatextbook.com/.
+
+
+    Mueller-Warrant, G.W., Banowetz, G.M., Whittaker, G.W., 2010. Geospatial identification
+    of optimal straw-to-energy conversion sites in the Pacific Northwest. Biofuels
+    Bioprod. Biorefin. 4 (4), 385–407.
+
+
+    Pan, R., Gao, J., Wang, X., Bai, L., Wei, Q., Yi, W., Xu, Z., Duan, J., Cheng,
+    Q., Zhang, Y., Su, H., 2019. Impacts of exposure to humidex on the risk of childhood
+    asthma hospitalizations in Hefei, China: Effect modification by gender and age.
+    Science of The Total Environment 691, 296–305.
+
+
+    Park, J.H., Seo, K.K., 2003. "Approximate life cycle assessment of product concepts
+    using multiple regression analysis and artificial neural networks. KSME Int. J.
+    17 (12), 1969–1976.
+
+
+    Purvis, B., Mao, Y., Robinson, D., 2018. "Three pillars of sustainability: in
+    search of conceptual origins. Sustainability Sci.14, 681–695.
+
+
+    Robinson, C., Dilkina, B., Hubbs, J., Zhang, W., Guhathakurta, S., Brown, M.A.,
+    Pendyala, R.M., 2017. Machine learning approaches for estimating commercial building
+    energy consumption. Appl. Energy 208, 889–904.
+
+
+    Slapnik, M., Istenič, D., Pintar, M., Udovč, A., 2015. Extending life cycle assessment
+    normalization factors and use of machine learning – A Slovenian case study. Ecol.
+    Indic. 50, 161–172.
+
+
+    Sousa, I. (2008). Part 1: the genesis of sustainable minds - The conception of
+    ‘learning surrogate LCA. http://www.sustainableminds.com/industry-blog/part-1-genesis-sustainable-minds-conception-learning-surrogate-lca.
+
+
+    Sousa, I., Wallace, D., 2006. "Product classification to support approximate life-cycle
+    assessment of design concepts. Technol. Forecast. Soc. Change 73 (3), 228–249.
+
+
+    Sousa, I., Wallace, D., Eisenhard, J.L., 2000. Approximate life-cycle assessment
+    of product concepts using learning systems. J. Ind. Ecol. 4 (4), 61–81.'
+  - '[PAGE 23]
+
+
+    Strubell, E., Ganesh, A., McCallum, A., 2019. Energy and policy considerations
+    for deep learning in NLP. arXiv preprint arXiv, pp. 02243 1906.
+
+    Tadano, YdS, Siqueira, H.V., Alves, T.A., 2016. Unorganized machines to predict
+    hospital admissions for respiratory diseases, 2016 IEEE Latin American Conference
+    on Computational Intelligence. LA-CCI.
+
+    Todorov, V., Marinova, D., 2011. Modelling sustainability. Math. Comput. Simul
+    81 (7), 1397–1408.
+
+    UNEP, S., 2009. Guidelines for social life cycle assessment of products. United
+    Nations Environment Programme (UNEP) and Society of Environmental Toxicology and
+    Chemistr. SETAC, Belgium.
+
+    Wu, J., He, H., Peng, J., Li, Y., Li, Z., 2018. Continuous reinforcement learning
+    of energy management with deep Q network for a power split hybrid electric bus.
+    Appl. Energy 222, 799–811.
+
+    Zhao, H.-x, Magoulès, F, 2012. A review on the prediction of building energy consumption.
+    Renew. Sustain. Energy Rev. 16 (6), 3586–3592.'
+  md: '
+
+    Castellani, V., Beylot, A., Sala, S., 2019. Environmental impacts of household
+    consumption in Europe: comparing process-based LCA and environmentally extended
+    input-output analysis. J. Clean Prod. 240, 117966.
+
+
+    Cederberg, C., Stadig, M., 2003. System expansion and allocation in life cycle
+    assessment of milk and beef production. Int. J. Life Cycle Assess. 8 (6), 350–356.
+
+
+    Deng, H., Fannon, D., Eckelman, M.J., 2018. Predictive modeling for US commercial
+    building energy use: a comparison of existing statistical and machine learning
+    algorithms using CBECS microdata. Energy Build. 163, 34–43.
+
+
+    Dick, M., da Silva, M.A., Dewes, H., 2015. Life cycle assessment of beef cattle
+    production in two typical grassland systems of southern Brazil. J. Clean Prod.
+    96, 426–434.
+
+
+    Dieterich, T.G., 2009. Machine learning in ecosystem informatics and sustainability.
+    Twenty-First International Joint Conference on Artificial Intelligence.
+
+
+    Harwatt, H., Sabaté, J., Eshel, G., Soret, S., Ripple, W., 2017. Substituting
+    beans for beef as a contribution toward US climate change targets. Clim. Change.
+    143 (1), 261–270.
+
+
+    Heath, G.A., Hsu, D.D., Inman, D., Aden, A., Mann, M.K., 2009. Life cycle assessment
+    of the energy independence and security act of 2007: ethanol—global warming potential
+    and environmental emissions. ASME 2009 3rd international conference on energy
+    sustainability collocated with the heat transfer and InterPACK09 conferences.
+    American Society of Mechanical Engineers.
+
+
+    Hendrickson, C.T., Horvath, A., Joshi, S., Klausner, M., Lave, L.B., McMichael,
+    F.C., 1997. Comparing two life cycle assessment approaches: a process model vs.
+    economic input-output-based assessment. IEEE, 176–181.
+
+
+    ISO, 2006. Environmental management: life cycle assessment; Principles and framework.
+    ISO 14040, 2006.
+
+
+    ISO, 2006. Environmental management: life cycle assessment; Requirements and guidelines.
+    ISO 14044, 2006.
+
+
+    Junnila, S., 2006. Empirical comparison of process and economic input-output life
+    cycle assessment in service industries. Environ. Sci. Technol. 40 (22), 7070–7076.
+
+
+    Landis, A.E., Mealing, V., Eranki, P., 2018. Tools to evaluate the sustainability
+    of natural rubber production, 194th Technical Meeting of the American Chemical
+    Society Rubber Division. Louisville.
+
+
+    Landis, A.E., Theis, T.L., 2008. Comparison of life cycle impact assessment tools
+    in the case of biofuels. IEEE International Symposium on Electronics and the Environment.
+
+
+    Lauer, M., 2008. Methodology guideline on techno economic assessment (TEA). Workshop
+    WP3B Economics, Methodology Guideline.
+
+
+    Matthews, H.S., Hendrickson, C.T., Matthews, D.H., 2014. Life cycle assessment:
+    quantitative approaches for decisions that matter. Open access textbook. Retrieved
+    from https://www.lcatextbook.com/.
+
+
+    Mueller-Warrant, G.W., Banowetz, G.M., Whittaker, G.W., 2010. Geospatial identification
+    of optimal straw-to-energy conversion sites in the Pacific Northwest. Biofuels
+    Bioprod. Biorefin. 4 (4), 385–407.
+
+
+    Pan, R., Gao, J., Wang, X., Bai, L., Wei, Q., Yi, W., Xu, Z., Duan, J., Cheng,
+    Q., Zhang, Y., Su, H., 2019. Impacts of exposure to humidex on the risk of childhood
+    asthma hospitalizations in Hefei, China: Effect modification by gender and age.
+    Science of the Total Environment 691, 296–305.
+
+
+    Park, J.H., Seo, K.K., 2003. Approximate life cycle assessment of product concepts
+    using multiple regression analysis and artificial neural networks. KSME Int. J.
+    17 (12), 1969–1976.
+
+
+    Purvis, B., Mao, Y., Robinson, D., 2018. Three pillars of sustainability: in search
+    of conceptual origins. Sustainability Sci. 14, 681–695.
+
+
+    Robinson, C., Dilkina, B., Hubbs, J., Zhang, W., Guhathakurta, S., Brown, M.A.,
+    Pendyala, R.M., 2017. Machine learning approaches for estimating commercial building
+    energy consumption. Appl. Energy 208, 889–904.
+
+
+    Slapnik, M., Istenič, D., Pintar, M., Udovč, A., 2015. Extending life cycle assessment
+    normalization factors and use of machine learning – A Slovenian case study. Ecol.
+    Indic. 50, 161–172.
+
+
+    Sousa, I. (2008). Part 1: the genesis of sustainable minds - The conception of
+    ‘learning surrogate LCA. http://www.sustainableminds.com/industry-blog/part-1-genesis-sustainable-minds-conception-learning-surrogate-lca.
+
+
+    Sousa, I., Wallace, D., 2006. Product classification to support approximate life-cycle
+    assessment of design concepts. Technol. Forecast. Soc. Change 73 (3), 228–249.
+
+
+    Sousa, I., Wallace, D., Eisenhard, J.L., 2000. Approximate life-cycle assessment
+    of product concepts using learning systems. J. Ind. Ecol. 4 (4), 61–81.
+
+
+    Strubell, E., Ganesh, A., McCallum, A., 2019. Energy and policy considerations
+    for deep learning in NLP. arXiv preprint arXiv:1906.02243.
+
+
+    Tadano, YdS, Siqueira, H.V., Alves, T.A., 2016. Unorganized machines to predict
+    hospital admissions for respiratory diseases, 2016 IEEE Latin American Conference
+    on Computational Intelligence. LA-CCI.
+
+
+    Todorov, V., Marinova, D., 2011. Modelling sustainability. Math. Comput. Simul
+    81 (7), 1397–1408.
+
+
+    UNEP, S., 2009. Guidelines for social life cycle assessment of products. United
+    Nations Environment Programme (UNEP) and Society of Environmental Toxicology and
+    Chemistry. SETAC, Belgium.
+
+
+    Wu, J., He, H., Peng, J., Li, Y., Li, Z., 2018. Continuous reinforcement learning
+    of energy management with deep Q network for a power split hybrid electric bus.
+    Appl. Energy 222, 799–811.
+
+
+    Zhao, H.-x, Magoulès, F., 2012. A review on the prediction of building energy
+    consumption. Renew. Sustain. Energy Rev. 16 (6), 3586–3592.
+
+    '
+  mdcn: '
+
+    Castellani, V., Beylot, A., Sala, S., 2019. 欧洲家庭消费的环境影响：基于流程的生命周期评价与环境扩展投入产出分析的比较.
+    J. Clean Prod. 240, 117966.
+
+
+    Cederberg, C., Stadig, M., 2003. 牛奶和牛肉生产生命周期评价中的系统扩展与分配. Int. J. Life Cycle Assess.
+    8 (6), 350–356.
+
+
+    Deng, H., Fannon, D., Eckelman, M.J., 2018. 美国商业建筑能源使用的预测建模：使用 CBECS 微数据的现有统计和机器学习算法比较.
+    Energy Build. 163, 34–43.
+
+
+    Dick, M., da Silva, M.A., Dewes, H., 2015. 巴西南部两种典型草地系统中牛肉牛生产的生命周期评价. J. Clean
+    Prod. 96, 426–434.
+
+
+    Dieterich, T.G., 2009. 生态系统信息学与可持续性中的机器学习. Twenty-First International Joint Conference
+    on Artificial Intelligence.
+
+
+    Harwatt, H., Sabaté, J., Eshel, G., Soret, S., Ripple, W., 2017. 用豆类替代牛肉以助力美国气候变化目标.
+    Clim. Change. 143 (1), 261–270.
+
+
+    Heath, G.A., Hsu, D.D., Inman, D., Aden, A., Mann, M.K., 2009. 2007 年能源独立与安全法案的生命周期评价：乙醇——全球变暖潜势和环境排放.
+    ASME 2009 3rd international conference on energy sustainability collocated with
+    the heat transfer and InterPACK09 conferences. American Society of Mechanical
+    Engineers.
+
+
+    Hendrickson, C.T., Horvath, A., Joshi, S., Klausner, M., Lave, L.B., McMichael,
+    F.C., 1997. 比较两种生命周期评价方法：流程模型与基于经济投入产出的评价. IEEE, 176–181.
+
+
+    ISO, 2006. 环境管理：生命周期评价；原则和框架. ISO 14040, 2006.
+
+
+    ISO, 2006. 环境管理：生命周期评价；要求和指南. ISO 14044, 2006.
+
+
+    Junnila, S., 2006. 服务行业中流程与经济投入产出生命周期评价的实证比较. Environ. Sci. Technol. 40 (22),
+    7070–7076.
+
+
+    Landis, A.E., Mealing, V., Eranki, P., 2018. 评估天然橡胶生产可持续性的工具, 194th Technical
+    Meeting of the American Chemical Society Rubber Division. Louisville.
+
+
+    Landis, A.E., Theis, T.L., 2008. 生物燃料案例中生命周期影响评价工具的比较. IEEE International Symposium
+    on Electronics and the Environment.
+
+
+    Lauer, M., 2008. 技术经济评价（TEA）方法学指南. Workshop WP3B Economics, Methodology Guideline.
+
+
+    Matthews, H.S., Hendrickson, C.T., Matthews, D.H., 2014. 生命周期评价：对决策重要的定量方法. 开放获取教科书.
+    Retrieved from https://www.lcatextbook.com/.
+
+
+    Mueller-Warrant, G.W., Banowetz, G.M., Whittaker, G.W., 2010. 太平洋西北地区最佳秸秆能源转换场地的地理空间识别.
+    Biofuels Bioprod. Biorefin. 4 (4), 385–407.
+
+
+    Pan, R., Gao, J., Wang, X., Bai, L., Wei, Q., Yi, W., Xu, Z., Duan, J., Cheng,
+    Q., Zhang, Y., Su, H., 2019. 湿热指数暴露对合肥市儿童哮喘住院风险的影响：性别和年龄的效应修饰. Science of the
+    Total Environment 691, 296–305.
+
+
+    Park, J.H., Seo, K.K., 2003. 使用多元回归分析和人工神经网络对产品概念进行近似生命周期评价. KSME Int. J. 17 (12),
+    1969–1976.
+
+
+    Purvis, B., Mao, Y., Robinson, D., 2018. 可持续发展的三大支柱：概念起源的探索. Sustainability Sci.
+    14, 681–695.
+
+
+    Robinson, C., Dilkina, B., Hubbs, J., Zhang, W., Guhathakurta, S., Brown, M.A.,
+    Pendyala, R.M., 2017. 估计商业建筑能源消耗的机器学习方法. Appl. Energy 208, 889–904.
+
+
+    Slapnik, M., Istenič, D., Pintar, M., Udovč, A., 2015. 扩展生命周期评价归一化因子及机器学习的应用——斯洛文尼亚案例研究.
+    Ecol. Indic. 50, 161–172.
+
+
+    Sousa, I. (2008). 第1部分：可持续思维的起源 - “学习替代生命周期评价”的构想. http://www.sustainableminds.com/industry-blog/part-1-genesis-sustainable-minds-conception-learning-surrogate-lca.
+
+
+    Sousa, I., Wallace, D., 2006. 支持设计概念近似生命周期评价的产品分类. Technol. Forecast. Soc. Change
+    73 (3), 228–249.
+
+
+    Sousa, I., Wallace, D., Eisenhard, J.L., 2000. 使用学习系统对产品概念进行近似生命周期评价. J. Ind.
+    Ecol. 4 (4), 61–81.
+
+
+    Strubell, E., Ganesh, A., McCallum, A., 2019. NLP 中深度学习的能源与政策考量. arXiv preprint
+    arXiv:1906.02243.
+
+
+    Tadano, YdS, Siqueira, H.V., Alves, T.A., 2016. 预测呼吸系统疾病住院的无组织机器, 2016 IEEE Latin
+    American Conference on Computational Intelligence. LA-CCI.
+
+
+    Todorov, V., Marinova, D., 2011. 可持续性建模. Math. Comput. Simul 81 (7), 1397–1408.
+
+
+    UNEP, S., 2009. 产品社会生命周期评价指南. United Nations Environment Programme (UNEP) and
+    Society of Environmental Toxicology and Chemistry. SETAC, Belgium.
+
+
+    Wu, J., He, H., Peng, J., Li, Y., Li, Z., 2018. 功率分流混合动力客车的深度 Q 网络能量管理连续强化学习.
+    Appl. Energy 222, 799–811.
+
+
+    Zhao, H.-x, Magoulès, F., 2012. 建筑能源消耗预测综述. Renew. Sustain. Energy Rev. 16 (6),
+    3586–3592.
+
+    '
+  merge: 0
