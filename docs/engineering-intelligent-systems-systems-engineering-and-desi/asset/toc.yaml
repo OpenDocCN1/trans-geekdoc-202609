@@ -1,0 +1,83 @@
+level_changes:
+- line: 5
+  before: 3
+  after: 1
+- line: 9
+  before: 3
+  after: 1
+- line: 12
+  before: 3
+  after: 1
+- line: 21
+  before: 3
+  after: 1
+- line: 28
+  before: 3
+  after: 1
+- line: 43
+  before: 3
+  after: 1
+- line: 666
+  before: 2
+  after: 3
+- line: 672
+  before: 2
+  after: 3
+- line: 680
+  before: 2
+  after: 3
+- line: 1029
+  before: 2
+  after: 3
+- line: 1033
+  before: 2
+  after: 3
+- line: 1172
+  before: 3
+  after: 2
+- line: 1180
+  before: 4
+  after: 3
+- line: 1184
+  before: 4
+  after: 3
+- line: 1188
+  before: 4
+  after: 3
+- line: 2329
+  before: 3
+  after: 2
+- line: 3398
+  before: 2
+  after: 1
+- line: 3404
+  before: 3
+  after: 2
+- line: 3563
+  before: 2
+  after: 3
+- line: 4123
+  before: 3
+  after: 4
+- line: 4127
+  before: 3
+  after: 4
+text_changes:
+- line: 21
+  before: 4. 第 7 章
+  after: 4. 第 4 章
+- line: 28
+  before: 5. 第 8 章
+  after: 5. 第 5 章
+- line: 43
+  before: 6. 第 9 章
+  after: 6. 第 6 章
+- line: 666
+  before: 1. (2) 系统未能在必要的时间限制内做出决定
+  after: 1.7.2 系统未能在必要的时间限制内做出决定
+- line: 672
+  before: 1. (3) 子系统做出“疯狂”的决策，明显错误或不可能
+  after: 1.7.3 子系统做出“疯狂”的决策，明显错误或不可能
+- line: 680
+  before: 1. (4) 子系统做出不可预测的决策：对于同一组输入条件，返回不同的预测
+  after: 1.7.4 子系统做出不可预测的决策：对于同一组输入条件，返回不同的预测
