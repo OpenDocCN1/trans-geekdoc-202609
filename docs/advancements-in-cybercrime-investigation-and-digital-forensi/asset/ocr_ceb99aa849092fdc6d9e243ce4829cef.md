@@ -1,0 +1,11 @@
++   3. **Expiring Tokens:** The tokens used by OAuth 2.0 may expire and therefore need to be renewed. The most substantial shift from 1.0 is that client developers must now integrate token state management. To allow tokens that are self-encoded and tokens that are encrypted that could be authenticated by the server without a database look-up are utilized, as is token expiration. Since self-encoded tokens can’t be revoked, they should be limited in duration to reduce their vulnerability. With the inclusion of the token state management requirement, any benefit derived from removing the signature is now null and void (Kaur & Aggarwal, 2013).
++   4. **Grant Types:** In exchange for authorization grants, OAuth 2.0 Access tokens are collected. Grant is an ambiguous term that denotes end-user consent. It could be the user’s true username and password, or a code retrieved when the user clicks the ‘Approve’ button on an access request. Grants were created with the intention of allowing for a variety of flows. 1.0 uses a single flow to support a wide range of client types. For several customer categories, 2.0 includes a significant level of competence.
++   5. **CSRF (Cross-Site Request Forgery) Attack:** These attacks are possible with OAuth 2.0. This is sometimes referred to as session riding or XSRF (Emil et al., 2001).
+
+# 16.6.5 HIGH-LEVEL DESIGN
+
+Architecture in which the system is designed, and the project procedure is discussed in detail. Overview of the solution, benefits supplied by the project, and system security. The envisioned system’s processes are depicted in the high-level design. This level of design is feasible. Use case diagrams will be used to clarify the situation. A use case diagram is a graphical depiction of the interaction between the system user and the system overall.
+
+# 16.6.5.1 GENERAL USE-CASE STRUCTURE
+
+Using a use case diagram, we can understand the system design as well as the behaviors of the system’s users. In general, UML is used to construct use case diagrams. The key components of a use case diagram are the use case scenario, the actor, and the use case. A use case refers to the number of

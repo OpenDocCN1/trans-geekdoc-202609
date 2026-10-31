@@ -1,0 +1,11 @@
+learn from data, recognize examples, and make conclusions with minimum human participation. The iterative nature of ML is important because models can evolve with the introduction of new information. They use information from previous estimates to provide dependable, repeatable choices, and outcomes.
+
+# 14.1.2 DEEP LEARNING TECHNOLOGY
+
+Deep learning is a branch of ML that uses artificial neural networks (ANNs) to create algorithms that are inspired by the structure and properties of the brain. It’s a feature that simulates the human mind’s data processing and the development of decision-making styles. Deep learning has developed alongside the virtual era, resulting in a vast influx of data of all forms and from all corners of the globe.
+
+# 14.2 LITERATURE REVIEW
+
+Several options for facial recognition applications have been implemented over the last decade. The methods and algorithms used in one piece of software may be vastly different from those used in another. When facial recognition software extracts the components of the face, it uses the findings to try to find the name. Normalization, followed by facial recognition: Other algorithms are used to normalize fixed-face images. The words ‘enter’ and ‘face’ are synonymous in an equation. This is an innovative approach to facial recognition that is likely to gain widespread acceptance. To figure out who it is, it use a 3D scanner to pick out features of the face, such as the jawline, nostrils, and chin are not hampered, and recognition from several perspectives is possible; additionally, recognition is made simpler with this approach. Researchers also created a new method for distinguishing offenders based on facial characteristics such as pores and skin texture analysis. After a normal skin scan, a statistical representation of the exact lines and spots can be obtained. An overview of the facial recognition systems that have been introduced for security purposes is given.
+
+Hemery et al. (2008) discuss the benefits and advantages of face authentication as a biometric technology for banking applications. First, to understand the operation it is must to go over some fundamental financial concepts. They proposed a method to replace PIN code authentication with biometric data. The authentication of biometrics is then thoroughly clarified.

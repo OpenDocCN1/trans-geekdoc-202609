@@ -1,0 +1,164 @@
+
+- Timestamp, 78, 84, 107, 140, 322, 325, 370
+- Toll-free numbers, 175
+- Trace obfuscation, 107
+- Traditional
+  - crimes, 3, 13, 118, 303
+  - data protection environments, 302
+  - encryption transformations, 52
+  - offline crimes, 18
+  - payment methods, 171
+  - retail methods, 173
+- Trafficking, 347, 357, 358
+- Transaction
+  - authorization, 284, 297
+  - confidential, 211
+  - currency, 216
+  - data, 4
+  - database, 27, 122
+  - sexting, 355
+  - transparency, 164, 166
+- Transnational
+  - cartels, 210
+  - corporates, 2
+  - sextortionists, 354
+- Transport layer security (TLS), 109, 325, 331, 335, 343
+- Transportation, 4, 16, 88, 285
+- Tri-axis acceleration data, 92
+- Trojan horse, 165, 170, 173, 314
+- Trustworthiness, 126, 150, 164, 165, 285
+- Two-dimensional matrix look-alike barcodes, 169
+- Types of digital forensics, 30
+  - drone forensic, 39
+  - handsets, 36
+  - investigation, 146
+    - private sector investigation, 146
+    - public sector investigation, 146
+  - mobile forensic, 34
+  - network forensic, 31
+  - sim cards (subscriber identity module), 35
+  - social media, 33
+
+## U
+- Ubuntu
+  - centered tool, 155
+  - division, 155
+- Unbounded tokens, 335
+- Unconventional weaponry, 2
+- Undelete Plus, 240
+- Unified
+  - averaged changed intensity (UACI), 50, 57, 63, 68
+  - technology acceptance use theory (UTAUT), 288
+- United States National Institute of Standards and Technology, 7
+- Universal
+  - administrative organizations, 218
+  - quality index (UQI), 59
+- Unlawful financial transactions, 207
+- Unmanned aerial
+  - systems (UAS), 39
+  - vehicle (UAV), 39
+- Unsupervised
+  - learning-dimension reduction methods, 130
+  - techniques, 305
+- Urinary tract infections, 357, 362
+- US Department of Justice, 6
+- User-submitted
+  - details, 164
+  - information, 163
+- Using
+  - hash values, 234
+  - multiple tools comparing results, 234
+
+## V
+- Validation, 99
+- Value-mindset conduct model, 289
+- Velociraptor, 153
+- Verifiability, 89
+- Verification, 82, 276, 285, 289
+- Victims, 2, 273, 274, 347, 357, 362, 363
+  - cybercrime, 2
+- Video
+  - audio forensics, 119
+  - clips, 4
+  - recording, 36, 72
+- Videography, 82
+- Viewer application, 150
+- Violent sextortionists, 354
+- Virtual private network (VPN), 3, 22, 111
+- Vishing, 268
+- Visual content analysis management, 285
+- Visvesvaraya Technological Institute, 68
+- VMware appliance, 380
+- Volatile evidence, 20
+- Voyeurism, 9, 352
+
+## W
+- Watering holes, 269
+- Watermark, 50, 58–60, 63–65, 67–69
+  - algorithms, 59
+  - embedding
+    - process, 50
+    - strength variation, 50
+  - image (WM), 50, 64–67
+  - system performance, 58
+  - techniques, 58, 59, 64
+- Wavelet coefficients, 50
+- Wearable
+  - device, 71–74, 76–80, 84, 86–90, 92, 93
+  - forensic examination, 80
+  - forensics, 71, 77, 89
+  - technology, 71, 74, 75
+  - tracking devices, 78
+- Wear-leveling mechanism, 200
+- Web
+  - analysis, 124
+  - authentication operations, 324
+  - browser
+    - capabilities, 333
+    - running client-side program-application, 333
+  - commercial enterprise, 176
+  - management accounts, 274
+  - mining, 121
+  - platforms, 320
+- Website
+  - clicks, 122
+  - design languages, 182
+- Wi-Fi-GPS jamming, 40
+- WinHex, 378, 380
+- Windows
+  - phone, 239, 375
+  - platforms, 37
+  - register agent, 307
+  - remote management (WinRM), 153
+  - scope, 380
+- Wired equivalent privacy (WEP), 157
+- Wireless
+  - bluetooth adaptor, 74
+  - forensics, 140
+- Wireshark, 156
+- Work
+  - copy, 145
+  - model, 338
+    - algorithm utilized, 340
+    - framework used, 339
+    - language used, 340
+- World
+  - Health Organization, 358
+  - Wide Web, 126, 207, 208
+- Write
+  - block-write protect, 145
+  - life limit, 189
+
+## X
+- XGBoost, 247, 248, 250, 252, 259, 261, 262
+- Xplico, 157
+- X-ways
+  - forensics, 157
+  - WinHex, 104
+
+## Y
+- YouTube videos, 33
+
+## Z
+- ZilogbyNet, 291
+- Zombie machines, 19

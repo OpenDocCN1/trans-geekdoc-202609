@@ -1,0 +1,12 @@
+memory (Flash Memory) is essentially a long-life non-volatile (the stored data information can still be retained in the case of power failure) memory. A block is a unit, and because of the working principle of the MOS tube, the writing speed of flash memory is slower than the reading speed (Lee et al., 2013; Ahn & Lee, n.d.).
+
+# 9.2 THE CHARACTERISTICS OF SOLID-STATE DRIVES
+
+Compared with solid-state hard drives and mechanical hard drives. Its main features are as follows:
+
++   1. **Fast Reading and Writing Speed:** The solid-state drive uses electrical signals to read and write flash memory chips. Compared with the mechanical hard disk that requires the head to move back and forth, the seek time of the solid-state hard disk is only a few tenths of a millisecond. It has obvious advantages in indicators such as continuous reading and writing of big data and 4 K random reading and writing.
++   2. **Anti-Shock and Anti-Drop:** Since the all-solid-state flash memory chip is used as the storage medium, there is no need to worry about the collision between the head and the disk surface like a mechanical hard disk. The solid-state drive can work normally when moving at high speeds and shocks, and it has much stronger shock resistance and shock resistance.
++   3. **Low Power Consumption and No Noise:** The solid-state hard disk does not need to drive the head movement, and there is no bearing and motor, so the power consumption is lower than that of the mechanical hard disk and theoretically no working noise.
++   4. **Low Working Environment Requirements:** Solid-state drives can work between 10°C and 70°C, while mechanical hard drives can only work in the range of 5°C to 55°C.
++   5. **Small Capacity and High Price:** In the face of TB-class mechanical hard drives, the capacity of weekly hard drives has obvious disadvantages. With the same capacity, the price of solid-state drives is even more than 10 times higher than that of mechanical hard drives.
++   6. **Write Life Limit:** The flash memory chip used by the solid-state drive has a limit on the number of erasing and writing. The lowest-end TLC chip theoretically has only 500 erasing and writing times. Even the best SLC chip has only about 1,00,000 erasing and writing

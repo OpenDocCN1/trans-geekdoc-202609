@@ -1,0 +1,13 @@
+day-to-day life. Organizations cannot keep pace with the growing threats. Manual detection has slowed down the pace of providing security. We need to fill this gap and take a leap or upgrade to automation with the help of technologies like AI. AI provides a means to identify anomalous behavior, take crucial action and help in alleviating the glitch (Singh et al., 2009).
+
+Earlier traditional approach was used to prevent the systems from cyber-attacks. Humans’ involvement was required for detection of threats, solving it using software. Over a period of time the AI and cybersecurity were allied. CAPTCHA (Completely Automated Public Turing Test to Tell Computers and Humans Apart) (Shaukat et al., 2020) is a good illustration for this. Automation reduces human interaction, involvement, struggles, and saves time instead of doing repetitive work, functioning in unpredictable environments, speed, and scalability. Humans can be involved in other business modeling.
+
+Cybersecurity automation is a process of automating configuration, alerting and other responsibility that is achieved from the admirations of security and from the products which they manage. These kinds of automations we call it as orchestration. These kinds of offers are good metaphor of what the core advantage is: If we think that the products in your security architecture are as instruments, then the security administrator is the conductor of an orchestra.
+
+Cybersecurity automation has the ability to take in different forms, but automation tasks can be managed by the devices without any interactions of human beings (Kirti Raj, 2019). We can accomplish the automation neither by scripts nor by using the automation tools.
+
+# 2.5 TECHNIQUES USED IN AUTOMATIONS
+
+Cyber criminals have pervaded the IDS by very powerful futuristic tools. Incline towards more advanced techniques like ML, AI (Ektefa et al., 2010), deep learning is increasing rapidly. Advanced automation technique ML is being used on both sides’ cyber security experts and by attackers. To be ahead of the cybercriminals experts have adapted two methods. One is ANNs where this neural network works just like a human brain, there are nodes or neurons interconnected to each other. They co-ordinate and work together (Calderon et al., 2019; Wiafe et al., 2020).
+
+There are many automation tools available SOAR products, robot process automation (RPA) tools and custom-developed software code (Robert Nagy et al., 2019) (Figure 2.11).

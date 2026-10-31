@@ -1,0 +1,9 @@
+that of a mechanical hard disk. The cache chip can perform functions such as data pre-reading, cache writing, and storing recently accessed data. It is worth noting that some low-end products omit the cache chip to save costs, and its performance will inevitably decrease. Flash memory chips take on the important task of data storage, so they have the largest number on the circuit board and occupy the largest space. The capacity of the solid-state drive is mainly determined by the number of flash memory chips mounted. The capacity of common solid-state hard drives in the market is between 16 GB and 1.6 TB (Figure 9.2).
+
+![](bbox=[0.15, 0.35, 0.9, 0.65])
+
+FIGURE 9.2 SSD internal structure block diagram (Hepi & Priyanka, 2021).
+
+# 9.1.1.4 WORKING PRINCIPLE
+
+The working principle of the solid-state hard disk is shown in Figure 9.1. NAND Flash refers to flash particles (Ko et al., 2019). The SSD controller operates these Flash particles in parallel through several main control channels, just like RAID 0, which can improve the parallelism and efficiency of data writing (Wang et al., 2019). Each Flash particle is further subdivided into multiple blocks (blocks), and each block contains multiple pages. Inside the SSD, the smallest access unit granularity between the SSD controller and Flash is the page. Generally, the size of a page is 4 k, and a block includes 16 pages. When writing data, like the working mechanism of RAID 0, the data is simultaneously written to the available pages in the block of each Flash particle in parallel. When a block is full, another block will be written. Flash

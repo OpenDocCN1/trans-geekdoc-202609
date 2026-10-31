@@ -1,0 +1,13 @@
++   3. **Mobile Platform Security Features:** Some mobile security features give access to a lot of data, but some mobile platform does not even allow the data to be revealed due to which it becomes difficult for the examiner to obtain data.
++   4. **Lack of Resources:** Due to lack of tools and proper acquisition techniques sometimes the data can’t be recovered.
++   5. **Generic State of Devices:** In some mobile phone, even when the mobile is switched off the alarm clock still works because device is in its generic state due to which sometimes data can be lost.
++   6. **Anti-Forensic Technique:** There are many anti-forensics (AF) techniques that hackers use like data hiding, forgery of data, adding of irrelevant data or misguiding data to the important data.
++   7. **Dynamic Nature of Evidences:** Digital evidences can be altered easily on the mobile devices when browsing into any other websites.
++   8. **Accidental Reset:** While examining sometimes examiner when end up resetting the complete data which may end up destroying the complete data present in the device.
++   9. **Device Alteration:** Sometimes changing of device or while transferring of data from one device to another, important data gets lost.
++   10. **Passcode Recovery:** In some devices, at the time of passcode recovery there are only limited number of chances after which the phone gets locked forever and due to which we can’t get the data.
++   11. **Communication Shielding:** In some cases, if isolation techniques are not practiced properly, then after connecting with Wi-Fi or Bluetooth foreign data may enter the device and ruin it.
++   12. **Lack of Availability of Tools:** Lack of availability of tools like faraday’s bag and other techniques data can be altered.
++   13. **Malicious Programs:** In some cases, alterations are done to the device by adding the malicious programs that have viruses which may end up crashing the hardware and software of the device due to which important data can be lost.
++   14. **Legal Issues:** Due to some legal issues involved with the mobile OS it becomes difficult for the examiner to testify.
++   15. **Laws Under which Mobile as an Evidence is Accepted Under Court of Law:** At the end, it is very necessary to discuss whether all these mobile evidences are even accessible in the court of law or not because if they are not, then all the investigations and analyzation process is of no use for us. In the Indian constitution, there are no specific rules for mobile as evidence, but according to Section 65B of the Indian Evidence Act (IEA), all devices, whether mobile phones,

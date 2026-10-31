@@ -1,0 +1,86 @@
+level_changes:
+- line: 381
+  before: 2
+  after: 3
+- line: 404
+  before: 3
+  after: 4
+- line: 424
+  before: 2
+  after: 4
+- line: 433
+  before: 2
+  after: 4
+- line: 453
+  before: 2
+  after: 4
+- line: 457
+  before: 2
+  after: 4
+- line: 461
+  before: 2
+  after: 4
+- line: 494
+  before: 2
+  after: 3
+- line: 526
+  before: 2
+  after: 3
+- line: 627
+  before: 2
+  after: 4
+- line: 637
+  before: 2
+  after: 4
+- line: 649
+  before: 2
+  after: 4
+- line: 669
+  before: 2
+  after: 4
+- line: 673
+  before: 3
+  after: 5
+- line: 679
+  before: 3
+  after: 5
+- line: 683
+  before: 3
+  after: 5
+- line: 689
+  before: 3
+  after: 5
+- line: 703
+  before: 3
+  after: 5
+- line: 707
+  before: 3
+  after: 5
+- line: 711
+  before: 2
+  after: 4
+- line: 719
+  before: 2
+  after: 3
+text_changes:
+- line: 1148
+  before: 第三章
+  after: 第3章
+- line: 4343
+  before: 第 13 章
+  after: 第13章
+- line: 4967
+  before: 第 16 章
+  after: 第16章
+- line: 5323
+  before: 第 17 章
+  after: 第17章
+- line: 1632
+  before: 4. 工具选择：
+  after: 4.4.2.4 工具选择：
+- line: 3325
+  before: 2. 由于垃圾回收导致数据无法恢复：
+  after: 9.6.1 由于垃圾回收导致数据无法恢复：
+- line: 2022
+  before: 5.6 反取证（AF）：能否助力数字取证打击网络犯罪？
+  after: 5.6 反取证（AF）：它能否有助于数字取证打击网络犯罪？
