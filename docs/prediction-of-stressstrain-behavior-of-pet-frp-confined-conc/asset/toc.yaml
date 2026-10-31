@@ -1,0 +1,47 @@
+level_changes:
+- line: 88
+  before: 2
+  after: 3
+- line: 90
+  before: 3
+  after: 4
+- line: 93
+  before: 3
+  after: 4
+- line: 105
+  before: 3
+  after: 4
+- line: 108
+  before: 3
+  after: 4
+- line: 113
+  before: 3
+  after: 4
+- line: 128
+  before: 3
+  after: 4
+- line: 192
+  before: 3
+  after: 4
+- line: 198
+  before: 3
+  after: 4
+- line: 202
+  before: 2
+  after: 3
+- line: 227
+  before: 3
+  after: 4
+- line: 326
+  before: 2
+  after: 3
+- line: 346
+  before: 2
+  after: 3
+text_changes:
+- line: 128
+  before: 4.1.1 极端梯度提升 (XGBoost)
+  after: 4.1.1 极端梯度提升树 (XGBoost)
+- line: 346
+  before: 5.4 与现有应力应变模型的对比
+  after: 5.4 与现有应力-应变模型的对比
