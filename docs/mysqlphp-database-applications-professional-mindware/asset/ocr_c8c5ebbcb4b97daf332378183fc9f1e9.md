@@ -1,0 +1,87 @@
+Table Types. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+
+alter table Statement. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+
+Changing a table name . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+
+Adding and dropping columns. . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+
+Adding and dropping indexes . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+
+Changing column definitions . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+
+insert Statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38
+
+update Statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39
+
+drop table/drop database . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+
+show tables. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+
+show columns/show fields . . . . . . . . . . . . . . . . . . . . . . . . . . . 41
+
+Using phpMyAdmin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+
+# Chapter 3
+
+# Getting What You Want with select . . . . . . . . . . . . . . . . . . . . 45
+
+Basic select . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+
+The where clause . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 48
+
+order by . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53
+
+limit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 54
+
+group by and aggregate functions . . . . . . . . . . . . . . . . . . . . . . 54
+
+having . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+
+Joining Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+
+Two-table join (the equi-join). . . . . . . . . . . . . . . . . . . . . . . . 61
+
+Multi-table join . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+
+outer join . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 64
+
+self join . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+
+Portions of SQL the SQL Standard that MySQL Doesn't Support . . . . . . 67
+
+Unions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 67
+
+Correlated subqueries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 67
+
+# Part II
+
+# Working with PHP
+
+# Chapter 4
+
+# Getting Started with PHP — Variables . . . . . . . . . . . . . . . . . . 71
+
+Assigning Simple Variables Within a Script . . . . . . . . . . . . . . . 71
+
+Delimiting Strings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72
+
+Assigning arrays within a script. . . . . . . . . . . . . . . . . . . . . . . 74
+
+Assigning two-dimensional arrays in a script . . . . . . . . . . . . . . 76
+
+Accessing Variables Passed from the Browser. . . . . . . . . . . . . . . 77
+
+HTML forms variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
+
+Passing arrays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
+
+Cookies. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81
+
+Sessions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+
+Using Built-In Variables . . . . . . . . . . . . . . . . . . . . . . . . . . . 85
+
+PHP variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+
+Apache variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87

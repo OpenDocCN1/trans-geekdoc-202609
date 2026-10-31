@@ -1,0 +1,14 @@
+level_changes: []
+text_changes:
+- line: 0
+  before: MySQL／PHP 数据库应用 (Professional Mindware)
+  after: MySQL/PHP 数据库应用 (Professional Mindware)
+- line: 8870
+  before: 第10章
+  after: 第 10 章
+- line: 10914
+  before: 第12章
+  after: 第 12 章
+- line: 12653
+  before: 第14章
+  after: 第 14 章
