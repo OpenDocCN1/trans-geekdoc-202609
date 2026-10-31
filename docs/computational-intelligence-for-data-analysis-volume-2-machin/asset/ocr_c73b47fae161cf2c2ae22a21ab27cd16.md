@@ -1,0 +1,9 @@
+hopping by the coordinator, and channel hopping requests on sensors. If the request is sent by more than half of the sensors, the coordinator takes the decision for channel hopping on a candidate (based on RSSI and traffic rate). If a free channel is found, switch the whole operation to that channel. The authors proposed Asynchronous Inter-network Interference Avoidance (AIIA) proposed by Ma et al. [23] using CSMA/CA and TDMA. Listening to the controlling messages from other WBANs and then updating its scheduling to avoid interference.
+
+![](bbox=[0.23, 0.29, 0.75, 0.48])
+
+Fig. (3). AIIA superframe structure.
+
+Fig. (3) shows the AIIA superframe, which contains beacon (B), CR, and SR. AIIA superframe made some changes in IEEE 802.15.6 superframe, which include: (i) CR is parallel to the emergency access period (EAP), random access period (RAP), and contention access period (CAP). (ii) SR in AIIA is divided into many periods, comparable to the Medium Access Period (MAP) in IEEE 802.15.6.
+
+In AIIA, each coordinator performs two operations: 1st operation, the coordinator maintains the AIIA table by repeating OWD periodically. The coordinator uses a message to exchange information with each other. In the case of a homogeneous coordinator of each WBAN floods SR_AD message before its SR period. The coordinator creates an AIIA table containing six columns. A gateway identifier (GUID) is used to collect the received device identifier. The next column is hop count. The third one is superframe offset to save time between the coordinator and neighbor timer. The next fields are the start time and duration of TDMA, which shows the starting time and SR period. Seq-No indicates the updated entries. In a 2nd operation called SRR, the coordinator rearranges its inconsistent SR. SRR may have three phases. In the first phase, it refers to its own AIIA table, looks for idle

@@ -1,0 +1,13 @@
+# 6. Stakeholder Layer (Governments, Regulators, Hospitals, Doctors, and Patients)
+
+PATIENTORY1 (Atlanta, Georgia) and MEDICALCHAIN2 (London, England) are two well-implemented Blockchain-based HDMS/HIS real-world products.
+
+The processes of collecting, processing, storing, retrieving, and completing/filtering data sharing among various stakeholders of healthcare ecosystems were similar, as discussed in earlier case studies, while using an API-based data access model is a new addition. They also included multiple regulators and governments in their proposed model as stakeholders.
+
+# How Does Blockchain Address Security, Consensus, and Data Manipulation Issues?
+
+Each wallet (client application) is secured using a private key and the passcode known to the wallet user. Guessing a private key using a brute-force attack is not feasible because of many key pools. In the case of a custodial wallet provider, the private key is managed by the wallet provider themselves, but then also no one can use their wallet without a passcode. However, in most cases, the attackers were found stealing individual private keys and passcode to steal information from the Blockchain client application.
+
+Transactions in Blockchain are highly secure because the communication channel is encrypted using public and private key cryptography. A participant in Blockchain is called a node, and each note digitally signs the transaction using its private key. After signing, the Block is broadcasted to various peers for confirmation, and based on consensus; the generated Block is verified and added to the distributed ledger. The fact is that no authentic party can sign these transactions without an approved private key verified using a public key, and any manipulation in a block during propagation would result in failure during the decryption process. Hence communication between nodes in a peer-to-peer network is highly secure [19].
+
+After receiving the broadcasted block participant node verify the transaction and regenerates the block hash values using hash functions like SHA-256, Keccak256, SHA3, SHAKE256, etc., and matches with hash values stored in the Block. If the value is matched, then it is a valid block; else, the Block is discarded, and if a majority of the nodes (generally 51% nodes) in the Blockchain network confirm the correctness of the Block, then this Block is added to the Blockchain. This block verification process and the consensus is called the mining process, and the scheme is called Proof of Work (PoW). In the PoW, hash verification is done more time, and computing is resource-consuming [20]. Various Blockchain platform uses different-different Consensus Algorithms (CA) [20] like Proof of

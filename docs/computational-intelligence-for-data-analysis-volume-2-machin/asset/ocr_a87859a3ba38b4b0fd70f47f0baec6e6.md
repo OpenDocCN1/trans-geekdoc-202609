@@ -1,0 +1,9 @@
+symptomology, mutations, and strains information [16, 86]. Eng et al. 2014 [87] used a machine-learning approach (random forest) to identify probable zoonotic influenza strains, which are viruses that normally only infect animals but could also be dangerous to humans. As a result, machine learning could aid in the prediction of future pandemics caused by any species. The sole drawback is that the data could come from a different zone, such as the source of COVID-19, which could come from “bats” hence, pandemic sources could be different from those seen previously (different genome structure). Furthermore, classical machine learning requires that the data distribution in training and testing be from the same domains. Transfer learning (TL), a kind of machine learning, may, on the other hand, efficiently manage scenarios in which the training and testing data come from different data distributions. That is, knowledge gained from previous pandemics could be applied to new domains in the future, even with lower amounts of data. Fig. (8) depicts a scenario in which the pre-trained model from the present COVID-19 pandemic (with big data and labels) may be used, with substantially fewer data and labels, to anticipate future pandemics, prepare the smart city for such an event, and swiftly assist in the disease's spread. It represents the components of the smart city-based framework for countering COVID-19, which has a lot of potential use.
+
+![](bbox=[0.17, 0.49, 0.82, 0.74])
+
+Fig. (8). Transfer learning for predicting future pandemics.
+
+# CONCLUSION
+
+One of the most serious challenges faced by the globe today is a threat of a pandemic illness. Therefore, to monitor and prevent the spread of pandemic

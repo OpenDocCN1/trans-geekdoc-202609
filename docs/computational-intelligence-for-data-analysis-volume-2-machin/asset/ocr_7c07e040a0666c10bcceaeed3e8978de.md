@@ -1,0 +1,14 @@
+related. We may integrate recommendations and feature selection to improve the classifiers’ performance in the future. In addition, novel feature selection methods, such as ant colony, have been developed. It is feasible to test optimization to increase quality. You may try exploring algorithm possibilities for most data sets with different traits like, noisy data, sparsity, missing data—value, and so on to improve model accuracy, as described in Table 5.
+
+Table 5. Approaches and limitations for dengue predictions.
+
+| References | Approaches | ML- Technique | Performance | Limitation |
+|---|---|---|---|---|
+| [73] | ANN | Un- Supervised Learning | 99.8 | Algorithms like decision trees, SVM, RF on the other hand, are quite interpretable. |
+| [40] | SVM | Supervised Learning | 90.42% | Number of samples is needed for precise results. |
+
+# SEASONAL DISEASE: DETECTION OF DENGUE DISEASE
+
+Most research focuses on environmental variables such as weather patterns linked to the transmission and prevalence of dengue fever. An increasing body of data has shown a link between these variables and the disease’s prevalence [69]. Dengue fever has been the most frequent viral fever among humans. It is also referred to as a life-threatening illness as well as the number of people infected with dengue fever is rising every day. Many people are at risk of contracting dengue fever. Early detection of dengue fever can save a person’s life by alerting them to take proper precautions and treatment. However, it is impossible to predict whether this will occur. Dengue diagnostic examinations can take up to ten days to detect the virus in a patient’s blood, but the patient’s condition can be improved in that period. This study aims to see if Artificial Neural Networks (ANN) technology can be used to identify the onset of dengue fever in a patient [70, 71].
+
+The outputs of the three parameters employ certain genuine parameters such as average temperatures, average relative humidity, total rainfall, and reported dengue cases. They utilized ANN in this project since it is an excellent technique for learning a problem from examples and does not require any computational models of any situation. This study relies on the identification of confirmed dengue cases [72]. As a result, the examination of the clinical characteristics of 523 dengue cases was reported. In this example, researchers employed unsupervised learning to discover natural groupings linked to specific confirmed dengue infections. Utilizing laboratory, clinical, and demographic information helped determine the relationship between predictive characteristics and the

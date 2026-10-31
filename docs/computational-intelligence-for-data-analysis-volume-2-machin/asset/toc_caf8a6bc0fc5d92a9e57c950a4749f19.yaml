@@ -1,0 +1,59 @@
+level_changes:
+- line: 140
+  before: 2
+  after: 1
+- line: 366
+  before: 2
+  after: 1
+- line: 791
+  before: 2
+  after: 1
+- line: 1100
+  before: 2
+  after: 1
+- line: 1421
+  before: 2
+  after: 1
+- line: 1711
+  before: 2
+  after: 1
+- line: 2099
+  before: 2
+  after: 1
+- line: 2367
+  before: 2
+  after: 1
+- line: 2622
+  before: 2
+  after: 1
+- line: 2812
+  before: 2
+  after: 1
+- line: 3613
+  before: 2
+  after: 1
+- line: 3860
+  before: 2
+  after: 1
+- line: 4219
+  before: 2
+  after: 1
+- line: 801
+  before: 3
+  after: 2
+- line: 2377
+  before: 3
+  after: 2
+- line: 2820
+  before: 3
+  after: 2
+text_changes:
+- line: 364
+  before: 第2章
+  after: 第2章 由医疗物联网驱动的健康服务与应用
+- line: 505
+  before: 安全挑战 内存限制
+  after: 安全挑战
+- line: 4730
+  before: 6. 利益相关者层（政府、监管机构、医院、医生和患者）
+  after: 利益相关者层（政府、监管机构、医院、医生和患者）
