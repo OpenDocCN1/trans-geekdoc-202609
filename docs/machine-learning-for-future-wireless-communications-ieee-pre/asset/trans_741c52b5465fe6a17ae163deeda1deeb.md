@@ -1,0 +1,18 @@
+
+[图 2.5](#c02.xhtml#c02-fig-0005) 显示了 `SUs` 在网络中数量作为函数时所达到的平均失真。可以看出，与仅物理层方案相比，采用跨层资源分配时，平均网络失真显著降低。此外，跨层方法表现出的失真增加比仅物理层方案更平缓。[图 2.6](#c02.xhtml#c02-fig-0006) 显示了使用基于表的 `Q-learning` 达到收敛所需的平均迭代次数。结果首先显示，在个体学习的情况下，实现跨层 `CR` 方法，与仅物理层方案相比，学习所需的迭代次数增加。然而，也可以看出，网络中已有的 `SUs` 的协作教学使得新加入的 `SU` 的初始化能够以如此精确的经验共享，使得达到收敛所需的迭代次数减少了多达 30 倍（并且在所有情况下都超过约 10 倍）。教学式方法甚至实现了始终小于仅物理层方案的迭代次数，即使后者方案的动作空间小 13 倍。更进一步，由于教学式方法受益于经验丰富的 `SUs` 的知识，随着网络中 `SUs` 数量的增加，迭代次数实际上减少。重要的是，[图 2.5](#c02.xhtml#c02-fig-0005) 和 [图 2.6](#c02.xhtml#c02-fig-0006) 显示了学习过程中的合作能够加速学习过程，而不会牺牲性能。
+
+![](images/c02-gra-0004.png)
+
+在 `DQN` 的情况下，当新加入的 `SU` 加入网络时，协作学习采取了 `ML` 中众所周知的技术，称为 `transfer learning`。`Transfer learning` 指的是在一种环境下学到的知识被利用以改善另一种环境中的学习过程和泛化的机制（Goodfellow et al. ([2016](#c02.xhtml#c02-bib-0006)))。在当前情况下，`transfer learning` 通过让新加入的 `SU` 用最近节点的相同参数初始化其 `action-value function` 神经网络近似器的参数来实现。请注意，该技术揭示了使用 `MOS` 作为性能（和奖励）度量指标的另一个优势，因为从中转移 `DQN` 参数的节点的选择基于与新加入 `SU` 的距离，而不基于任一节点所承载的业务类型。因此，`MOS` 为所有类型的业务提供的共同标尺允许对不同业务的无缝集成，使得经验可以在节点之间转移，即使它们的业务类型不同。该技术在 `Algorithm 4` 中显示。
+
+[图 2.7](#c02.xhtml#c02-fig-0007) 通过 500 次蒙特卡洛仿真运行获得的结果说明了将 `transfer learning` 应用于新加入 `SU` 的 `DQN` 认知引擎的效果。仿真设置由一个单链路主网络访问单个信道组成。`PU` 的目标 `SINR` 设置为 1 dB。高斯噪声功率和 `PU` 的发射功率分别设置为 ‐60 dBm 和 10 dBm。所有 `SUs` 和 `PUs` 在各自基站周围半径为 300 m 的圆内随机分布。主基站与次级基站之间的距离为 2 km。信道增益遵循对数距离路径损耗模型，路径损耗指数等于 2.8。对于单个 `SU`，其目标 `SINR` 可以从有限离散集合 ![images](images/c02-i0162.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><mrow><mo stretchy="false">&#123;</mo><mo>&#8722;</mo><mn>12</mn><mo>,</mo><mo>&#8722;</mo><mn>10</mn><mo>,</mo><mo>&#8722;</mo><mn>8</mn><mo>,</mo><mo>&#8722;</mo><mn>6</mn><mo>,</mo><mo>&#8722;</mo><mn>4</mn><mo>,</mo><mo>&#8722;</mo><mn>2</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo stretchy="false">&#125;</mo></mrow></math> dB 中选择。关于学习算法，相同的学习率 ![images](images/c02-i0163.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><mrow><mi>&#945;</mi><mo>=</mo><mn>0.01</mn></mrow></math> 和折扣因子 ![images](images/c02-i0164.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><mrow><mi>&#946;</mi><mo>=</mo><mn>0.9</mn></mrow></math> 被假设用于所有 `SUs`。在 ![images](images/c02-i0165.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><mrow><mi>&#949;</mi></mrow></math>‐greedy 探索中，![images](images/c02-i0166.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><mrow><mi>&#949;</mi></mrow></math> 最初设置为 0.8，随着迭代次数的增加它减小到 0。作为 `action-value function` 和目标 `action-value function` 近似器，我们为每个 `SU` 使用了两个独立的前馈神经网络。每个神经网络配置了两个全连接隐藏层，分别有三个和两个神经元。`replay memory` 的容量和 mini‐patch 设置为 100 和 10。输入层由三个节点组成，表示 `state` 和要采取的所选 `action`。输出层有一个神经元。
+
+[图 2.7](#c02.xhtml#c02-fig-0007) 中的仿真结果比较了三种资源分配算法在 `MOS` 和达到收敛所需的平均学习步数方面的表现。三种算法都考虑了当一个新加入的 `SU` 加入网络而其余 `SUs` 已通过单独运行 `DQN` 算法完成学习的情况。所考虑的三种算法是：`DQN-Newcomer Individual Learning`，其中所有 `SUs` 执行 `Algorithm 2`，并且新加入的 `SU` 随机初始化其 `action-value function` 参数；`DQN-Newcomer Transfer Learning`，它利用 `transfer learning` 机制用于新加入的 `SU`；以及 `Q-learning Newcomer Individual Learning`，它为所有 `SUs` 实现标准的基于表 `Q-learning`，并将新加入 `SU` 的 `Q-table` 初始化为零。[图 2.7](#c02.xhtml#c02-fig-0007) 的右侧显示了 `DQN` 方法比基于表的 `Q-learning` 学习更快，以及 `transfer learning` 如何在不影响 `MOS` 性能的情况下加速 `DQN` 方法的学习。
+
+![图 2.7（左）：次级网络中的平均 MOS。（右）：达到收敛所需的平均学习步数。](images/c02f007.jpg)
+
+[图 2.7](#c02.xhtml#R_c02-fig-0007) （左）：次级网络中的平均 `MOS`。（右）：达到收敛所需的平均学习步数。
+
+## 2.4 结论
+
+在本章中，我们讨论了使用 `ML` 在认知无线电网络中执行资源分配。我们将介绍置于一个由若干 `CRs` 组成的场景中，这些 `CRs` 通过下层 `DSA` 与现有的主网络共享一部分无线电频谱来建立无线链路。本章重点关注强化学习，因为它是一种机器学习技术，显示出与认知循环方法对齐的优势，它灵活地实现跨层资源分配，并且不需要系统模型的先验知识。

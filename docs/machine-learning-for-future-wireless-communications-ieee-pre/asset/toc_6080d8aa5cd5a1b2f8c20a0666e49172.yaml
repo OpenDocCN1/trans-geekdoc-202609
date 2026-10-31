@@ -1,0 +1,77 @@
+level_changes:
+- line: 1473
+  before: 2
+  after: 1
+- line: 1496
+  before: 2
+  after: 1
+- line: 1518
+  before: 2
+  after: 1
+- line: 2023
+  before: 1
+  after: 2
+- line: 2300
+  before: 1
+  after: 2
+- line: 2624
+  before: 1
+  after: 2
+- line: 3065
+  before: 1
+  after: 2
+- line: 3474
+  before: 1
+  after: 2
+- line: 3757
+  before: 1
+  after: 2
+- line: 5186
+  before: 1
+  after: 2
+- line: 6982
+  before: 1
+  after: 2
+- line: 7374
+  before: 1
+  after: 2
+- line: 9288
+  before: 1
+  after: 2
+- line: 9553
+  before: 1
+  after: 2
+- line: 10156
+  before: 1
+  after: 2
+- line: 10441
+  before: 1
+  after: 2
+- line: 1060
+  before: 3
+  after: 2
+- line: 1066
+  before: 3
+  after: 2
+- line: 1072
+  before: 3
+  after: 2
+- line: 1078
+  before: 3
+  after: 2
+- line: 1084
+  before: 3
+  after: 2
+text_changes:
+- line: 12
+  before: 15 用于解码极化码的深度学习技术
+  after: 15 用于极化码解码的深度学习技术
+- line: 364
+  before: 第 9 章
+  after: 第 10 章
+- line: 492
+  before: 第 18 章
+  after: 第 19 章
+- line: 7669
+  before: '16'
+  after: 16 基于神经网络的无线信道预测

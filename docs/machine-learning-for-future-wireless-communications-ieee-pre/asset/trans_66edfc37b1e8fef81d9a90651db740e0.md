@@ -1,0 +1,22 @@
+
+更详细地说，[图 17.17](#c17.xhtml#c17-fig-0017)b 显示了单层感知器模型以及作为 `MLP` `NN` 基本构建块的该操作的运作。![images](images/c17-i0187.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><mrow><msup><mi>j</mi><mrow><mi>t</mi><mi>h</mi></mrow></msup></mrow></math> 神经元的 ![images](images/c17-i0188.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><mrow><msup><mi>k</mi><mrow><mi>t</mi><mi>h</mi></mrow></msup></mrow></math> 层接收来自前一层的每个 ![images](images/c17-i0189.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><mrow><msub><mi>x</mi><mi>i</mi></msub></mrow></math> 作为输入。每个 ![images](images/c17-i0190.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><mrow><msub><mi>x</mi><mi>i</mi></msub></mrow></math>，其中 ![images](images/c17-i0191.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><mrow><mi>i</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi>&#8943;</mi><mo>,</mo><mi>N</mi></mrow></math>，随后乘以权重 ![images](images/c17-i0192.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><mrow><msub><mi>w</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub></mrow></math>，所得值全部相加。单个偏置或偏移值 ![images](images/c17-i0193.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><mrow><msub><mi>&#952;</mi><mi>j</mi></msub></mrow></math> 加到求和结果上，最后应用激活或传递函数 ![images](images/c17-i0194.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><mrow><msup><mi>&#981;</mi><mi>k</mi></msup><mo stretchy="false">(</mo><mo>&#183;</mo><mo stretchy="false">)</mo></mrow></math>（可对不同层应用不同的激活函数）以提供位于 ![images](images/c17-i0195.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><mrow><msup><mi>j</mi><mrow><mi>t</mi><mi>h</mi></mrow></msup></mrow></math> 神经元在 ![images](images/c17-i0196.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><mrow><msup><mi>k</mi><mrow><mi>t</mi><mi>h</mi></mrow></msup></mrow></math> 层的输出，如 `Eq. (17.41)` 所示：
+
+![图 17.17 (a) 前馈网络和递归网络架构；(b) 单层感知器（SLP）模型。](images/c17f017.jpg)
+
+[图 17.17](#c17.xhtml#R_c17-fig-0017) (a) 前馈网络和递归网络架构；(b) 单层感知器（`SLP`）模型。
+
+[(17.41)](#c17.xhtml#c17-R_disp-0041)![等式](images/c17-math-0041.png)
+```
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML" overflow="scroll"> <mrow> <msubsup> <mi>y</mi> <mi>j</mi> <mi>k</mi> </msubsup> <mo stretchy="false">(</mo> <mi>n</mi> <mo stretchy="false">)</mo> <mo>=</mo> <msup> <mi>&#981;</mi> <mi>k</mi> </msup> <mfenced open="(" close=")" separators=""> <munderover> <mrow> <mo stretchy="false" movablelimits="false">&#8721;</mo> </mrow> <mrow> <mi>n</mi> <mo>=</mo> <mn>1</mn> </mrow> <mi>N</mi> </munderover> <msubsup> <mi>w</mi> <mrow> <mi>j</mi> <mi>i</mi> </mrow> <mi>k</mi> </msubsup> <msubsup> <mi>x</mi> <mi>i</mi> <mrow> <mi>k</mi> <mo>&#8722;</mo> <mn>1</mn> </mrow> </msubsup> <mo stretchy="false">(</mo> <mi>n</mi> <mo stretchy="false">)</mo> <mo>+</mo> <msubsup> <mrow> <mi>&#952;</mi> </mrow> <mi>j</mi> <mi>k</mi> </msubsup> </mfenced> <mo>.</mo> </mrow> </math>
+```
+
+简要的历史回顾如下。当 `SLP` 于 20 世纪 50 年代末由 Rosenblatt（[1958](#c17.xhtml#c17-bib-0097)）提出时，所使用的激活函数是阶跃或阈值函数，且隐藏层的概念尚未被利用。该模型是第一个实用的实现，可用于简单的线性可分二分类问题，但对于需要非线性输出的更复杂建模则无效。解决这一局限性的方案在 20 世纪 80 年代中期和后期出现，得益于 Rumelhart 和 McClelland（[1986](#c17.xhtml#c17-bib-0098)）等人的若干工作，他们考虑了具有隐藏层的 `MLP`，使 `NN` 能够学习更复杂的特征，提出了反向传播算法以调整权重并最小化实际输出与期望输出之间的差异，并采用了诸如 sigmoid 函数之类的非线性激活函数，从而能够逐步改变 `NN` 的权重并引入非线性。Cybenko（[1989](#c17.xhtml#c17-bib-0020)）中的通用逼近定理证明，具有单个隐藏层（考虑输入和输出层则为三层网络）且激活函数为非恒定、有界、单调递增连续的前馈 `ANN` 可以以任意期望误差逼近任意非线性函数。[图 17.18](#c17.xhtml#c17-fig-0018) 显示了主要激活函数的汇总。
+
+过去，一般而言，`FNN` 被认为具有静态和无记忆性，因为输入的响应与之前的网络状态无关，而由于反馈连接，`RNN` 被认为是一种动态系统。如今，鉴于 `RNN` 与 `FNN` 相比复杂度更高，`RNN` 架构经常以展开的方式重新绘制和重新表述，使其类似于 `FNN`，以简化处理复杂度。此外，过去几十年来，在多个应用中，对考虑记忆效应的非线性系统动力学建模的需求不断增长。例如，每一代无线通信标准中信号带宽的不断增加，使得当该组件被更高带宽信号激励时更为明显的 `PA` 记忆效应建模，成为提升物理层性能的相关课题。
+
+为了解决时间序列预测问题，从而实现动态非线性系统辨识，提出了包含抽头延迟线以生成输入变量延迟样本的聚焦时延 `NN`（`FTDNN`）。`FTDNN` 可被视为将线性时不变（`LTI`）系统（如有限脉冲响应（`FIR`）滤波器）与非线性无记忆 `MLP` 网络相结合，后者可根据过去的输入值执行动态映射，而前者可使用静态反向传播算法进行训练。被建模系统的记忆深度将反映在所需带宽精度所施加的抽头长度上。`FTDNN` 结构可被视为 Wiener 模型的一种特殊情况（即线性时不变系统后接无记忆非线性系统）。[图 17.19](#c17.xhtml#c17-fig-0019) 显示了全连接 `FTDNN` 的四层架构（具有两层隐藏层），其输入-输出关系根据上述 `SLP` 概念的记号在 `Eq. (17.42)` 中定义。
+
+![图 17.18 激活或传递函数。](images/c17f018.jpg)
+
+[图 17.18](#c17.xhtml#R_c17-fig-0018) 激活或传递函数。
+
