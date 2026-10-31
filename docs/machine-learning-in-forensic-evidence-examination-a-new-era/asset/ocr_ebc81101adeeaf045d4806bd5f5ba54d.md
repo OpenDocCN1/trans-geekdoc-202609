@@ -1,0 +1,16 @@
++   9. Rigano, C. (2019). Using artificial intelligence to address criminal justice needs. National Institute of Justice, 280, 1–10. Retrieved from https://nij.ojp.gov/topics/articles/using-artificial-intelligence-address-criminal-justice-needs
++   10. Yogesh Kumar, A. K. (2023). Artificial intelligence in disease diagnosis: A systematic literature review, synthesizing framework, and future research agenda. Journal of Ambient Intelligence and Humanized Computing, 14(7), 8459–8486. https://doi.org/10.1007/s12652-021-03612-z
++   11. Tucci, L. (2023, September). Machine learning (ML). Retrieved from https://www.techtarget.com/searchenterprisesai/definition/machine-learning-ML
++   12. Soni, V. (2017). Forensic medicine: A source and pathway of recognition in disaster victim identification. International Journal of Forensic Medicine and Toxicological Sciences, 2(1), 2–7. https://doi.org/10.18231/J.IJFMTS.2017.002
++   13. Britannica, The Editors of Encyclopaedia. (2023, October 13). Forensic medicine. Encyclopædia Britannica. Retrieved from https://www.britannica.com/topic/forensic-medicine
++   14. Eriksson, A. (2016). Forensic pathology. In M. D. Zeegers (Ed.), Forensic epidemiology principles and practice (pp. 151–177). San Diego, CA: Academic Press.
++   15. M, N. (1989). Problems regarding the examination in forensic medicine. The Japanese Journal of Legal Medicine, 43(5), 364–376.
++   16. Pinheiro, J. C. (2006). Forensic investigation of corpses in various states of decomposition: A multidisciplinary approach. In A. C. Schmitt (Ed.), Forensic anthropology and medicine (pp. 159–195). Totowa, NJ: Humana Press. https://doi.org/10.1007/978-1-59745-099-7_7
++   17. Baldino, G. M. (2023). Multidisciplinary forensic approach in “complex” bodies: Systematic review and procedural proposal. Diagnostics, 13(2), 310. https://doi.org/10.3390/diagnostics13020310
++   18. Jumbelic, M. I. (2005). Mass disasters. In Encyclopedia of forensic and legal medicine (pp. 197–207). Amsterdam, Netherlands: Elsevier. https://doi.org/10.1016/B0-12-369399-3/00232-9
++   19. Williams, D. J. (1998). Forensic pathology: Colour guide. Edinburgh, Scotland: Churchill Livingstone.
++   20. Thurzo, A., & Stanojevic, H. (2021). Use of advanced artificial intelligence in forensic medicine, forensic anthropology and clinical anatomy. Healthcare (Basel), 9(11), 1545.
++   21. Utilities One. (2023, November 10). Forensic engineering and chemical analysis techniques. Retrieved from https://utilitiesone.com/forensic-engineering-and-chemical-analysis-techniques
++   22. Brown, S. (2021, April 21). Machine learning, explained. MIT Sloan School of Management. Retrieved from https://mitsloan.mit.edu/ideas-made-to-matter/machine-learning-explained
++   23. Cui, M., & Zhang, D. Y. (2021, April 1). Artificial intelligence and computational pathology. Retrieved from https://www.nature.com/articles/s41374-020-00514-0.pdf
++   24. Bhat, M., Rabindranath, M., Chara, B. S., & Simonetto, D. A. (2023). Artificial intelligence, machine learning, and deep learning in liver transplantation. Journal of Hepatology, 78(6), 1216–1233. https://doi.org/10.1016/j.jhep.2023.01.006

@@ -1,0 +1,13 @@
+adaptive procedures, known as idea drift, such as online learning, concept drift detection and adaptive learning rates, should be used [47].
+
+Online learning offers real-time learning opportunities for training the model. It is also referred to as incremental learning or streaming learning. This learning mode continuously updates the model due to a constant inflow of new. The online learning method trains the model’s parameters as per new input data on an incremental basis to accordingly improve the output. This incremental learning allows the model to stay updated as it keeps on training itself on the most recent patterns and progressively most recent data sets.
+
+The phenomenon of change in the data distribution owing to changes in statistical features of the data over time is known as ‘concept drift’. Changes in user preferences, seasonal variations or environmental changes, etc., can lead to concept drift in big data analytics. Taking this into account, it is imperative that concept drift detection is essentially applied to ensure that the model remains accurate and the output trustworthy. The concept drift detection methods use a wide range of techniques. Some of the popular ones include: sliding window methods, ensemble methods, online change detection algorithms and statistical tests such as the Kolmogorov–Smirnov test and the CUSUM test.
+
+The data stream may have different properties at different times and thus the learning parameter needs to be adjusted accordingly. Thus, adaptive learning rates are very important from a model training perspective. It shall ensure that the learning rate is modified dynamically as a function of data streaming and the model is updated appropriately. The AdaGrad algorithm is one such algorithm which allows for adjustment of the learning rate for each parameter depending on the previous gradient information.
+
+# Multi-Dimensional Data
+
+Multi-dimensional data exhibiting a lot of variables and features can be challenging to analyze. The challenges can be in the form of increased computational complexity, overfitting and poor interpretability. Any of these can substantially impact the efficiency or outcome of the ML model. However, these can be tackled by certain methods such as feature selection, reducing dimensionality and regularisation.[47].
+
++   - **Feature Selection:** Through the feature selection method, features of relevance or interest are only selected and the rest are eliminated out of a multi-dimensional dataset. This is achieved through three approaches: filter methods, wrapper methods and embedded methods. In the filter method, features are chosen based on their

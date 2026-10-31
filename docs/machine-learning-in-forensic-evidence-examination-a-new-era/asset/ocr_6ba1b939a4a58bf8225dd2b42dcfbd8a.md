@@ -1,0 +1,9 @@
+the learned rules on unseen data. It is a subfield of artificial intelligence (AI) dealing with the implementation of computational algorithms and patterns to improve the overall performance of human labour. Over the years, the application of machine-learning algorithms has significantly advanced and attained wider practical approaches. It has become the most popular choice for creating useful software for speech recognition, language processing, computer vision and other related fields.
+
+Different knowledge acquisition methods used under the umbrella of varied ML tools are supervised and unsupervised learning methods, semi-supervised learning and reinforcement learning methods as shown in Figure 5.2. Supervised machine-learning algorithm refers to when input data is matched with corresponding output labels, thereby producing precise predictions on unseen data [5]. Supervised learning includes the following approaches: decision tree-based learning, linear modelling and deep learning. Unsupervised learning includes ordination, clustering and anomaly detection [6]. In unsupervised learning, patterns are to be recognized by the learning system without any prior labels or specifications. On the other hand, in a reinforcement learning system, a machine-learning algorithm learns to achieve the goal or provide a list of actions based on the current system on its own by maximising a reward through trial and error via interaction with the given environment [7, 8].
+
+Large-scale data is becoming more prevalent across all spheres of human endeavour, which has led to a surge in new requirements for the underlying machine-learning algorithms. Multivariate data analysis techniques can be classified into two main groups: (i) regression or calibration models and (ii) pattern recognition techniques. Further, the pattern recognition techniques
+
+![](bbox=[0.12, 0.78, 0.88, 0.9])
+
+Figure 5.2 Classification of Machine-learning algorithms.

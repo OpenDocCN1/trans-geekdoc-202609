@@ -1,0 +1,5 @@
++   33. Vodanovic M, Subasic M, Milošević D, Galic I, Brkić H. Artificial intelligence in forensic medicine and forensic dentistry. *J Forensic Odonto-Stomatol.* 2023;41:30–41.
++   34. Khanagar SB, Vishwanathaiah S, Naik S, Al-Kheraif AA, Divakar DD, Sarode SC, et al. Application and performance of artificial intelligence technology in forensic odontology - A systematic review. *Leg Med (Tokyo).* 2021;48:101826.
++   35. Sandoval TCN, Sonia Victoria GP, Gonzalez FA, Robinson AJ, Contreras CI. Use of artificial neural networks for mandibular morphology prediction through craniomaxillar variables. *Univ Odontol Bogotá.* 2016;35:1–6.
++   36. Katne T, Kanaparthi A, Srikanth Gotoor S, Muppirala S, Devaraju R, Gantala R. Artificial intelligence: demystifying dentistry–the future and beyond. *Int J Contemp Med Surg Radiol.* 2019;4(4):D6–9.
++   37. Vila-Blanco N, Carreira M J, Varas-Quintana P, Balsa-Castro C, Tomás I. Deep neural networks for chronological age estimation from OPG images. In *IEEE Transactions on Medical Imaging*, 2020;39:2374–2384.

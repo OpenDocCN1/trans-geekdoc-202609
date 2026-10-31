@@ -1,0 +1,38 @@
+level_changes:
+- line: 787
+  before: 1
+  after: 3
+- line: 793
+  before: 1
+  after: 3
+- line: 794
+  before: 1
+  after: 3
+- line: 798
+  before: 1
+  after: 3
+- line: 801
+  before: 1
+  after: 3
+- line: 803
+  before: 1
+  after: 3
+- line: 2497
+  before: 2
+  after: 1
+- line: 2858
+  before: 2
+  after: 1
+- line: 2991
+  before: 2
+  after: 1
+text_changes:
+- line: 2497
+  before: 法医人类学中机器学习的潜在应用 10
+  after: 法医人类学中机器学习的潜在应用
+- line: 2858
+  before: '11'
+  after: 11 法医弹道学中机器学习的应用潜力
+- line: 2991
+  before: '12'
+  after: 12 大数据分析中机器学习的应用

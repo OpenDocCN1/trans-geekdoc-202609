@@ -1,0 +1,17 @@
++   11. Lee, K. M. (2014). Grid-based single pass classification for mixed big data. *International Journal of Applied Engineering Research*, 9(21), 8737–8746.
++   12. Zafarani, R., Abbasi, M. A., & Liu, H. (2014). *Social media mining: An introduction*. Cambridge University Press.
++   13. Wang, J., Tang, Y., Nguyen, M., & Altintas, I. (2014, December). A scalable data science workflow approach for big data bayesian network learning. In *2014 IEEE/ACM international symposium on big data computing* (pp. 16–25). IEEE.
++   14. Li, L., Wu, Y., & Ye, M. (2015). Experimental comparisons of multi-class classifiers. *Informatica*, 39(1), 71–85.
++   15. Kotsiantis, S. B., Zaharakis, I., & Pintelas, P. (2007). Supervised machine learning: A review of classification techniques. *Emerging Artificial Intelligence Applications in Computer Engineering*, 160(1), 3–24.
++   16. Karacapilidis, N., Tzagarakis, M., & Christodoulou, S. (2013). On a meaningful exploitation of machine and human reasoning to tackle data-intensive decision making. *Intelligent Decision Technologies*, 7(3), 225–236.
++   17. Qian, H. (2014). PivotalR: A package for machine learning on big data. *R Journal*, 6(1), 57–67.
++   18. Nasridinov, A., & Park, Y. H. (2014). Combining unsupervised and supervised machine learning to analyze crime data. *International Journal of Applied Engineering Research*, 9(23), 18663–18669.
++   19. Wang, L., & Alexander, C. A. (2016). Machine learning in big data. *International Journal of Mathematical, Engineering and Management Sciences*, 1(2), 52–61.
++   20. Tiwari, S. (2022, October). *Approaches involving big data analytics (BDA) using machine learning, described*. 2022 IEEE 3rd Global Conference for Advancement in Technology (GCAT). IEEE, pp. 1–7.
++   21. Sukumaran, S. R. (2014, August). *Machine learning in the big data era: Are we there yet*. Proceedings of the 20th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, Workshop on Data Science for Social Good (KDD), pp. 1–5.
++   22. Bu, Y., Borkar, V., Carey, M. J., Rosen, J., Polyzotis, N., Condie, T., ... Ramakrishnan, R. (2012). *Scaling datalog for machine learning on big data*. arXiv preprint arXiv:1203.0160.
++   23. Suthaharan, S. (2014). Big data classification: Problems and challenges in network intrusion prediction with machine learning. *ACM Sigmetrics Performance Evaluation Review*, 41(4), 70–73.
++   24. Hido, S., Tokui, S., & Oda, S. (2013, December). *Jubatus: An open source platform for distributed online machine learning*. NIPS 2013 Workshop on Big Learning, Lake Tahoe.
++   25. Low, Y., Gonzalez, J., Kyrola, A., Bickson, D., Guestrin, C., & Hellerstein, J. M. (2012). *Distributed graphlab: A framework for machine learning in the cloud*. arXiv preprint arXiv:1204.6078.
++   26. Baldominos, A., Albacete, E., Saez, Y., & Isasi, P. (2014, December). *A scalable machine learning online service for big data real-time analysis*. 2014 IEEE Symposium on Computational Intelligence in Big Data (CIBD). IEEE, pp. 1–8.
++   27. Vu, A. T., Morales, G. D. F., Gama, J., & Bifet, A. (2014, October). *Distributed adaptive model rules for mining big data streams*. 2014 IEEE International Conference on Big Data (Big Data). IEEE, pp. 345–353.

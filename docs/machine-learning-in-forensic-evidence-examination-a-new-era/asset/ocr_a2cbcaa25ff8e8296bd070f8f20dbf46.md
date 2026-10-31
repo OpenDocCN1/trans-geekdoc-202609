@@ -1,0 +1,13 @@
+textual content analysis. These models excel in analyzing the sequential nature of language and allowing them to identify patterns and anomalies that may indicate document tampering or forgery and as highlighted by the work of [10]. Their ability to capture dependencies in sequential data makes them valuable tools in forensic applications for uncovering linguistic patterns that may suggest alterations or inconsistencies in documents.
+
+**Ink and Paper Analysis:** Several cases in questioned documents call for analysis of ink as well as writing surface. ML algorithms can be trained to tackle and examine problems pertaining to ink and paper such as their physical properties, age of documents, type of material used, etc. Answers to these questions would be crucial in determining forgery, tampering, ageing, etc. [11].
+
+# Forgery Detection Leveraging Deep-Learning Models
+
+Deep-learning models are capable of learning and processing complex and difficult patterns, which can be crucial in detecting forgeries in documents encompassing handwriting characteristics, personal styles, ink properties or other document-related specificities which can be instrumental in reaching the conclusion of whether a particular document has been forged or tampered or not. Their ability to discern subtle details and patterns enhances the accuracy and efficiency of identifying fraudulent documents and making them valuable tools in forensic document examination.
+
+# Machine Learning Techniques for Signature Validation
+
+One of the most frequent tasks in forensic document analysis is signature verification. Its goal is to ascertain whether a signature under suspicion corresponds with known signature samples. One way to look at the process from the perspective of automating it is as a machine-learning problem based on a population of signatures [12, 13].
+
+**Machine Learning tasks fall into two categories:** Person-dependent (also known as special) learning and person-independent (also known as general) learning. A population of authentic and counterfeit signatures belonging to several persons provides general learning about the distinctions between authentic and counterfeit signatures for all individuals. Comparing a questioned signature to one authentic signature is possible using the general-learning model. Through several samples of just that person’s signature, special learning is able to identify within-person similarities in a person’s signature [14].

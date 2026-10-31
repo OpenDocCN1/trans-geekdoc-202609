@@ -1,0 +1,9 @@
+# Potential Applications of Machine Learning in Forensic Questioned Document Examination
+
+SURBHI MATHUR, SUMIT KUMAR CHOUDHARY, PARVESH SHARMA, KRITIKA SOOD AND VINAY ASERI
+
+# Introduction
+
+While writing started as a medium of communication, handwriting also evolved as an important biometric tool for individualization with the passage of time. And thus the concepts of forgery and document fraud were understood and defined in due course. Detection of forgery became a prevalent practice in most countries across the world from very early times. Handwriting identification and forgery detection dates back to 539 AD and as such it predates several other forms of forensic science disciplines by centuries. With more people practising and doing research, the discipline became more formalized and treatises were published for examination and identification parameters, protocols and benchmarks. In 1910, Albert S Osborn mentioned how the examination of handwriting had become more scientific and had slowly done away with empiricism. However, the science and practice of document examination still largely rested on the knowledge, skill and experience of the handwriting experts or forensic document examiners (FDE) [1].
+
+Technology-led disruptive innovation has brought about significant transformation in all walks of life. The tale of technology has left humans speechless and coveting more technological innovations to achieve effortless operation of complicated tasks. The remarkable contribution of technology can be envisaged with the technological progress that we have made during the past century, which has led to substantial development for mankind. The introduction of 3D printers, robotic machinery to automate manual operations at factories and self-driven cars are some of the revolutionary examples of technologies developed by man which has enhanced the quality of human life and the processes they undertake.

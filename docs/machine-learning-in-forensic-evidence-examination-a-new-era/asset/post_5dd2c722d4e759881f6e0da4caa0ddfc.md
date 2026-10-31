@@ -1,0 +1,48 @@
+
+identifying unique patterns and matching recovered bullets to specific firearms. This technology simplifies the task of determining the potential impact area of a projectile, and can also be used to assist military decision-makers in identifying threats and prioritizing targets. Applications of ML in forensic ballistics include firearm identification, acoustic analysis and determining the sequence of shots fired by various shooters. In the future, AI systems will provide analysis and recommendations based on massive datasets.
+
+## References
+- 1. Barash, M., McNevin, D., Fedorenko, V., & Giverts, P. (2024). Machine learning applications in forensic DNA profiling: A critical review. Forensic Science International: Genetics, 69(102994), 102994. https://doi.org/10.1016/j.fsigen.2023.102994
+- 2. Mahesh, B. (2020). Machine learning algorithms-a review. International Journal of Science and Research (IJSR) [Internet], 9(1), 381–386.
+- 3. Scaruffi, P. (2018). Intelligence is not artificial - expanded edition: A history of artificial intelligence and why the singularity is not coming any time soon. Createspace Independent Publishing Platform.
+- 4. Qadir, A. M., & Varol, A. (2020). The role of machine learning in digital forensics. 8th International Symposium on Digital Forensics and Security (ISDFS).
+- 5. Tageldin, L., & Venter, H. (2023). Machine-learning forensics: State of the art in the use of machine-learning techniques for digital forensic investigations within smart environments. Applied Sciences (Basel, Switzerland), 13(18), 10169. https://doi.org/10.3390/app131810169
+- 6. Scientific Working Group on DNA Analysis Methods (SWGDAM): Validation Guidelines for DNA Analysis Methods. (n.d.).
+- 7. Kudonu, M., AlShamsi, M. A., Philip, S., Khokhar, G., Hari, P. B., & Singh, N. (2022). Artificial intelligence: Future of firearm examination. 2022 Advances in Science and Engineering Technology International Conferences (ASET). https://doi.org/10.1109/aset53988.2022.9735105
+- 8. Khan, S., Divakaran, A., & Sawhney, H. S. (2010). Weapon identification using acoustic signatures across varying capture conditions. US Patent Application US20100271905A1.
+- 9. Magic bullets: The future of artificial intelligence in weapons systems. www.army.mil. (n.d.). Retrieved August 21, 2022, from https://www.army.mil/article/223026/magic_bullets_the_future_of_artificial_intelligence_in_weapons_systems
+- 10. Li, S.-T., Kuo, S.-C., & Tsai, F.-C. (2010). An intelligent decision-support model using FSOM and rule extraction for crime prevention. Expert Systems with Applications, 37(10), 7108–7119.
+- 11. Giverts, P., Sofer, S., Solewicz, Y., & Varer, B. (2020). Firearms identification by the acoustic signals of their mechanisms. Forensic Science International, 306(110099), 110099. https://doi.org/10.1016/j.forsciint.2019.110099
+- 12. Haag, L. C. (1979). A preliminary inquiry into the application of sound spectrography to the characterizations of gunshots. AFTE Journal, 11, 61–63.
+- 13. Hollien, H., & Hollien, K. A. (1994). Acoustic patterning of small-arms gunfire. AFTE Journal, 26, 41–49.
+- 14. Haag, L. C. (2003). Light and sound as physical evidence in shooting incidents. AFTE Journal, 35, 317–321.
+- 15. Paredes, D. M., & Apolinario, J. A. (2014). Shooter localization using microphone arrays on elevated platforms. 2014 IEEE Central America and Panama Convention (CONCAPAN XXXIV). IEEE, pp. 1–6. https://doi.org/10.1109/CONCAPAN.2014.7000419
+- 16. McCombs, N. D., & Vargas, E. (2014). The sound of shots. AFTE Journal, 46, 33–42.
+- 17. Haag, L. C. (2016). The exterior and terminal ballistics of the model 1780 Girardoni air rifle carried by Meriwether Lewis during the voyage of discovery 1803–1806. AFTE Journal, 48, 131–137.
+- 18. Haag, L. C. (2002). The sound of bullets. AFTE Journal, 34, 255–263.
+- 19. Maher, R. C. (2016). Gunshot recordings from a criminal incident: Who shot first? The Journal of the Acoustical Society of America, 139, 2024. https://doi.org/10.1121/1.4949969
+- 20. Inman, K., & Rudin, N. (2001). Principles and practices of criminalistics. CRC Press.
+- 21. Haag, M. G., & Haag, L. C. (2011). Shooting incident reconstruction (2nd ed.). Academic Press.
+- 22. Heard, B. J. (2008). Handbook of firearms and ballistics (2nd ed.). John Wiley & Sons.
+- 23. Gallidabino, M. D., Barron, L. P., Weyermann, C., & Romolo, F. S. (2019). Quantitative profile–profile relationship (QPPR) modelling: A novel machine learning approach to predict and associate chemical characteristics of unspent ammunition from gunshot residue (GSR). The Analyst, 144(4), 1128–1139. https://doi.org/10.1039/c8an01841c
+- 24. Rakhmibekova, A., Madzhidov, T. I., Nugmanov, R. I., Gimadiev, T. R., Baskin, I. I., & Varnek, A. (2020). Comprehensive analysis of applicability domains of QSPR models for chemical reactions. International Journal of Molecular Sciences, 21(15), 5542. https://doi.org/10.3390/ijms21155542
+- 25. Aalbers, S. E. (2013). The evidential value of gunshot residue composition comparisons. Delft University of Technology.
+- 26. Roth, J., Carriveau, A., Liu, X., & Jain, A. K. (2015). Learning-based ballistic breech face impression image matching. 2015 IEEE 7th International Conference on Biometrics Theory, Applications and Systems (BTAS).
+- 27. Freund, Y., & Schapire, R. E. (1997). A decision-theoretic generalization of online learning and an application to boosting. Journal of Computer and System Sciences, 55(1), 119–139. https://doi.org/10.1006/jcss.1997.1504
+- 28. Biedermann, A., & Taroni, F. (2006). A probabilistic approach to the joint evaluation of firearm evidence and gunshot residues. Forensic Science International, 163(1–2), 18–33. https://doi.org/10.1016/j.forsciint.2005.11.001
+- 29. Daugman, J. G. (1993). High confidence visual recognition of persons by a test of statistical independence. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 15(11), 1148–1161. https://doi.org/10.1109/34.244676
+- 30. Weller, T. J., Zheng, A., Thompson, R., & Tulleners, F. (2012). Confocal microscopy analysis of breech face marks on fired cartridge cases from 10 consecutively manufactured pistol slides. *Journal of Forensic Sciences*, 57(4), 912–917. https://doi.org/10.1111/j.1556-4029.2012.02072.x
+- 31. Vorburger, T., Yen, J., Bachrach, B., Renegar, T., Filliben, J., & Ma, L. (2007). *Surface topography analysis for a feasibility assessment of a national ballistics imaging database*. NIST Interagency/Internal Report (NISTIR), National Institute of Standards and Technology, Gaithersburg, MD, [online].
+- 32. Song, J.-F., & Vorburger, T. V. (2000). *Proposed bullet signature comparisons using autocorrelation functions*. Proceedings of National Conference of Standards Laboratories.
+- 33. Oura, P., Junno, A., & Junno, J.-A. (2021). Deep learning in forensic shotgun pattern interpretation-A proof-of-concept study. *Legal Medicine*, 53, Artikeli 101960. https://doi.org/10.1016/j.legalmed.2021.101960
+- 34. Alfonsi, A., Calatri, S., Cerioni, E., & Luchi, P. (1984). Shooting distance estimation for shots fired by a shotgun loaded with buckshot cartridges. *Forensic Science International*, 25(2), 83–91. https://doi.org/10.1016/0379-0738(84)90017-3
+- 35. Tangirala S. (2020). Evaluating the impact of GINI index and information gain on classification using decision tree classifier algorithm. *International Journal of Advanced Computer Science and Applications(IJACSA)*, 11(2), 612–619. http://dx.doi.org/10.14569/IJACSA.2020.0110277
+
+## Application of Machine Learning in Big Data Analysis
+## 12
+SUMIT KUMAR CHOUDHARY, SURBHI MATHUR, PRAVESH SHARMA AND ANUBHAV SINGH
+
+## Introduction
+Almost all human enterprises across diverse professional, cultural, geographical or social congregations have become data-centric and data-driven. The tendency and dependency on data usage is increasing and so is the data itself. The precipitation of more and more data has been created, which we now call ‘big data’. Big data is an asset as well as a challenge for all modern-day enterprises. Big data is a great enabler if put to use in a meaningful manner. A careful review can present a wonderful correlation between your past actions and past outcomes. The mistakes are retrieved and opportunities for course correction for a better outcome in future are promulgated. An insight into what better work has been done in the past is also evidenced and gives a clue about how it can be further improved. Thus, several procedural steps can be amended, resurrected or augmented based on big data analysis. Figure 12.1 shows various techniques utilized for data mining. Resource management and its optimal applications can be ensured for enhanced efficiency. Reasons for failures can be determined and expunged. Trends and specific patterns can be intelligently discerned, which can give a glance into future trajectories. Risk–benefit balance can be reworked in the favour of the benefit. Red flags and green flags can be better understood for well-informed actions regarding what is to be dropped and what is to be pursued. In essence, predictive analytics and smart decisions can be made out of big data analytics.
+
+It is essential that big data as a concept is well understood before we move on to applying machine-learning algorithms to conceive its utility and challenges. Figure 12.2 shows the three Vs of big data, variety, volume and velocity. These describe the essence of the task at hand and also give a glimpse of the complexity pertaining to data that needs to be handled. Managing and analyzing big data poses serious challenges. The challenge of big data lies in the speed with which it is expanding (velocity), the exponential amount

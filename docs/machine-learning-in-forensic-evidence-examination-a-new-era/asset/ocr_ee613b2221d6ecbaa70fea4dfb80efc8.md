@@ -1,0 +1,12 @@
+and deciphering intricate patterns are very important for the system to work for optimal and legitimate output by forging this human-machine collaborative decision-making system.
+
+Big data analysis using machine learning offers numerous advantages and prospects for use in a variety of industries. However, it is crucial to address the problems and ethical issues that come with this integration. Organizations may utilize the power of machine learning while minimizing risks by giving data protection, fairness, interpretability and accountability a top priority. Machine learning for big data analysis will be used ethically and for the benefit of society if there is constant monitoring and evaluation of algorithms and their effects on society.
+
+# Analysis of Big Data Using Machine Learning
+
+Machine learning is fundamental and indispensable for big data analysis owing to its capability of fast and accurate outputs helping users to gain insights on critical matters of their interest. ML can help in the following ways in big data analysis:
+
++   - **Pattern Recognition:** A vast amount of data can most of the time present complex patterns and intra-linkages which can be difficult to understand manually or with simple statistical tools. Machine learning offers the capability to decipher such relationships and patterns between the data even if the data is unstructured or with multiple variables [13].
++   - **Predictive Analytics:** Machine learning has this distinctive capability of making data-based predictions by analyzing the data patterns and relationships. This is the biggest strength of ML models for their wide acceptance as their forecasts are extremely valuable for decision-making in almost all human enterprises [13, 14].
++   - **Classification and Clustering:** Machine learning can very effectively and meaningfully classify and cluster voluminous data into smaller categories. These clusters can then be evaluated for trend forecasting to aid in decision-making [14].
++   - **Anomaly Detection:** A large amount of information can be utilized by ML algorithms to track down peculiarities or anomalies. These oddities could be indications of a red flag, fraud, irregular behaviour or information issues which should assist the user in making an informed decision in real-time [15].
