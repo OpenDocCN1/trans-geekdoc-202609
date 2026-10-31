@@ -1,0 +1,9 @@
+# FIGURE 4.2
+
+General scheme of the applied method.
+
+![](bbox=[0.15, 0.13, 0.9, 0.7])
+
+1970s, two researchers working at a significant laboratory in the United States named Gabus and Fontela were the ones who first offered the idea (Hasheminezhad, Hadadi, and Shirmohammadi, 2021). The DEMATEL analysis is based on graph theory and matrix theory, which enables complicated issues to be analyzed and solved via the use of visualization techniques (Li and Xu, 2021). This methodology begins by constructing the initial direct-relation matrix by utilizing the logical relations that exist between the components of the system. Next, it determines the degrees of effect that each component has on the other components, and finally, it establishes the centrality and causality of the components. A readily digestible structural model of the system may be derived from a DEMATEL analysis, which maps the link between the identified elements in a straightforward manner. The link between the many different components may be broken down into the groupings of causes and effects, and an understandable visual representation of this can be obtained from a causal diagram. In addition, DEMATEL is a technique that is both extremely suited and effective for determining the interdependence of a number of different components in a complex system (Hosseini, Paydar, and Hajiaghaei-Keshteli, 2021). The study’s findings may assist enhance management and decision-making issues present in process industries, and it can also help prioritize the aspects that have been found.
+
+Analyzing the causes of accidents in complex systems using the DEMATEL technique, which distinguishes the components’ characteristics,

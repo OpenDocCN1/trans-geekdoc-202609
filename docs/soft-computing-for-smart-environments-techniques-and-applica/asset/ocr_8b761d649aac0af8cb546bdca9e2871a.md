@@ -1,0 +1,13 @@
+MCDM techniques to assess, prioritize, and select the best possible smart environment among many of its competitors.
+
+The competitiveness of our proposed book lies in multiple facets. For example, our book is not only limited to a specific smart environment topic. It also has contents from waste management and disaster response systems to traditional supply chain management. In addition to conventional artificial intelligence-based approaches, this proposed book highlights the contributions of different optimization techniques, decision analytics (predictive and descriptive), and data science. This book will be the first in the literature to bridge the industrial engineering perspectives and computational intelligence for different digitalized (aka, smart) environments.
+
+# Contents
+
+This book is for undergraduate students, graduate students, researchers, and practitioners interested in the theory of multi-criteria analysis and its applications in management and engineering. This book develops intelligent machines to provide solutions to real-world problems that are not modeled or too difficult to model mathematically in smart applications. This book would be a reference for students seeking to attain a thorough knowledge in this field. Fresh researchers can take this book as a beginning point. In recent years, multi-criteria analysis has been widely used for decision-making purposes by institutions and enterprises.
+
+This book consists of eight chapters. A brief description of those chapters is as follows.
+
+# Chapter 1: An Innovative Framework to Evaluate Smart and Sustainable Cities Using Fuzzy MCDM Method
+
+This chapter aims to define the priorities of the dimensions of smart and sustainable cities and provide an idea of the areas in which smart and sustainable city planning should be invested and expanded. Furthermore, city or nation managers must draw comparisons among themselves using smart city characteristics’ priorities (weights), allowing them to identify benchmark possibilities. Furthermore, by using the city comparison data, officials in these cities should be able to identify areas that need development. This chapter proposes a multi-stage approach to assessing smart and sustainable city criteria. The proposed approach is based on applying the Analytical Network Process method and the Technique for Order of Preference by Similarity to Ideal Solution method (ANP-TOPSIS). In general, this chapter provides some recommendations for cities to understand

@@ -1,0 +1,47 @@
+level_changes:
+- line: 82
+  before: 3
+  after: 4
+- line: 95
+  before: 2
+  after: 4
+- line: 132
+  before: 2
+  after: 3
+- line: 135
+  before: 2
+  after: 4
+- line: 156
+  before: 2
+  after: 4
+- line: 276
+  before: 2
+  after: 3
+- line: 1085
+  before: 2
+  after: 3
+- line: 1385
+  before: 2
+  after: 3
+text_changes:
+- line: 66
+  before: 1 利用模糊MCDM方法评估智能和可持续城市的创新框架
+  after: 1 使用模糊MCDM方法评估智能可持续城市的创新框架
+- line: 1415
+  before: 评估智能健康技术的概念设计与评价框架
+  after: 评估智能健康技术的概念设计与评估框架
+- line: 2132
+  before: 评估智能灾害响应系统的一种智能方法
+  after: 评估智能灾害响应系统的智能方法
+- line: 3115
+  before: 用于分析物联网障碍（IoTBs）对智慧城市废物管理适应性的促进范式
+  after: 分析物联网障碍（IoTBs）适应智能城市废物管理的促进范式
+- line: 4442
+  before: 智能校园可持续性指标绩效优先排序的评估方法
+  after: 智能校园可持续性指标性能优先排序的评估方法
+- line: 5021
+  before: 7 智能供应链的可持续供应商选择
+  after: 第7章：智能供应链的可持续供应商选择
+- line: 5808
+  before: 分析和评估公共交通智能卡系统
+  after: 第8章：分析和评估公共交通智能卡系统

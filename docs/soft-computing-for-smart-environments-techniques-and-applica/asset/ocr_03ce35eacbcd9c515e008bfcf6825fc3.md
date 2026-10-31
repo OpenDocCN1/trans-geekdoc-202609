@@ -1,0 +1,8 @@
+the capacity to prioritize groups or clusters of components, as well as the fact that it considers independence in addition to dependency; i.e., it handles independence better than other methods like AHP (Ghosh, Das Chatterjee, and Dinda 2021). The ANP technique assesses the consistency of judgments and simplifies the process of assigning weights by breaking the issue down into smaller components that can be analyzed more thoroughly. On the contrary, ANP has several drawbacks. Because the approach needs a pair of comparisons of items, it is not feasible to examine one element in isolation and find its faults and strengths. The complexity of the issue grows exponentially with the number of components and their interdependencies for the same reason. Figure 1.3 shows the differences between the structure of ANP and AHP methods.
+
+The TOPSIS technique was created by Hwang and Yoon in 1981 (Yoon and Hwang 1985). The goal of this strategy is to find the positive and negative gaps between appropriate and inappropriate solutions. The TOPSIS approach is an important MCDM method that has been utilized by many researchers, policymakers, stakeholders, and academics across a wide range of disciplines. However, since it fails to offer succinct information on the topic and contains ambiguous and undefined difficulties, this strategy has significant limitations in real-world interpretation.
+
+![](bbox=[0.1, 0.62, 0.92, 0.9])
+
+FIGURE 1.3
+Details of AHP and ANP methods.

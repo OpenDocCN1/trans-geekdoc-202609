@@ -1,0 +1,7 @@
+# Authors
+
+**Mohamed Abdel-Basset** is an Associate Professor in the Faculty of Computers and Informatics, Zagazig University, Egypt. His work focuses on the application of multi-objective and robust metaheuristic optimization techniques. His current research interests include optimization, operations research, data mining, computational intelligence, applied statistics, decision support systems, robust optimization, engineering optimization, multi-objective optimization, swarm intelligence, evolutionary algorithms, and artificial neural networks.
+
+**Ripon K. Chakrabortty** is Program Coordinator for the Master of Decision Analytics and the Masters of Engineering Science Programs, and team leader of the Decision Support and Analytics Group at the School of Engineering and Information Technology, UNSW Canberra. His research interests cover a range of topics in operations research, project management, supply chain management, artificial intelligence, and information system management. Many organizations have funded his research programs.
+
+**Abduallah Gamal** is a Senior Researcher in the Faculty of Computers and Informatics in the Department of Operations Research at Zagazig University, Egypt. His research interests include computational intelligence, optimization, swarm intelligence, evolutionary algorithms, and neutrosophic sets and logic. He currently works on applying multi-criteria decision-making.
