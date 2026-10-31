@@ -1,0 +1,20 @@
+level_changes:
+- line: 19
+  before: 3
+  after: 2
+- line: 201
+  before: 1
+  after: 2
+- line: 4495
+  before: 2
+  after: 1
+text_changes:
+- line: 9
+  before: Write the traditional greeting.
+  after: 前言
+- line: 3254
+  before: '6'
+  after: 6 操作字符串
+- line: 5075
+  before: 生成表单
+  after: 9 生成表单
