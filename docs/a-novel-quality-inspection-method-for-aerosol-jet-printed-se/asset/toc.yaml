@@ -1,0 +1,14 @@
+level_changes: []
+text_changes:
+- line: 0
+  before: 基于红外成像和机器学习的气溶胶喷射印刷传感器新型质量检测方法
+  after: 基于红外成像和机器学习的气溶胶喷射印刷传感器的新型质量检测方法
+- line: 17
+  before: 2. 方法与特征
+  after: 2. 方法与材料
+- line: 59
+  before: 3. 实验程序
+  after: 3. 实验方法
+- line: 115
+  before: 竞争利益声明
+  after: 竞争性利益声明
