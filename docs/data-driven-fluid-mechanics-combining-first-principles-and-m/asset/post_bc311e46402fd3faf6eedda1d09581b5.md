@@ -1,0 +1,54 @@
+
+![](img/ddadb1d3eaa6f9576eea68f95d453bca_369_0.png)
+
+![](img/ddadb1d3eaa6f9576eea68f95d453bca_369_1.png)
+
+Figure 16.15 Comparison of gust response behavior of the CRM for the full-order model (FOM), unsteady nonlinear ROM and linear frequency domain (LFD) solver. Lift and pitching moment coefficient (left), surface pressure differences at maximum lift coefficient (right).
+
+## 16.4.7 Unsteady Physics-Based Nonlinear Reduced-Order Modeling
+
+The investigation of unsteady, gust induced air loads is a crucial part of aircraft design, and time-marching CFD simulations are infeasible due to their high computational cost. However, nonlinear aerodynamic effects should not be neglected as is the case for lower fidelity methods. Thus, based on previous work on steady transonic flows using a combination of POD and nonlinear least-squares-based residual minimization techniques (Zimmermann & Görtz 2010, 2012), an unsteady nonlinear reduced-order model (LSQ-ROM) was developed to predict dynamically nonlinear maneuver and gust response behavior in the transonic flow regime (Bekemeyer et al. 2019). The schematics of the unsteady physics-based nonlinear reduced-order modeling procedure are sketched in Figure 16.14.
+
+## 16.5 Conclusions
+
+Parametric ROMs based on both POD, cluster POD, and Isomap were developed and successfully applied to a variety of two- and three-dimensional test cases, including two industrial aircraft configurations, to predict aerodynamic loads over a range of flow or operating conditions as well as for changing geometry parameters. Isomap is a dimensionality reduction technique, which is based on a nonlinear “manifold learning” method. In this method, it is assumed that the CFD solutions form a nonlinear manifold, which in turn constitutes a sub-manifold of lower intrinsic dimensionality. Isomap yields better predictions than a POD-based ROM method, in particular for the location and magnitude of the shock wave at transonic flow conditions. This is due to the fact that Isomap makes predictions based on a local subspace, similar to cluster POD, while POD-based predictions make use of a global subspace.
+
+## 17 Machine Learning for Turbulence Control
+
+B. R. Noack, G. Y. Cornejo Maceda, and F. Lusseyran
+
+Closed-loop turbulence control has current and future engineering applications of truly epic proportions, including cars, trains, airplanes, jet noise, air-conditioning, medical applications, wind turbines, combustors, and energy systems. A key feature, opportunity and technical challenge, is the inherent nonlinearity of the actuation response.
+
+This chapter outlines model-based and model-free control taming the nonlinear dynamics. Model-based control employs the POD Galerkin method (see Chapter 14: Noack et al.: Machine learning for Reduced-Order Modeling). Many flow control results will be explained with a set of few different sparse human-interpretable models. Artificial intelligence (AI)/machine learning (ML) has opened another game-changing new avenue: the automated model-free discovery and exploitation of unknown nonlinear actuation mechanisms directly in the plant. Variants of this machine learning control (MLC) will be discussed. The chapter concludes with a tutorial of MLC on a simple dynamical system with a freely available MATLAB/Octave code.
+
+### 17.1 Introduction
+
+Controlling turbulence for engineering goals is one of the oldest and most fruitful academic and technological challenges. Engineering applications have epic proportion. The infrastructure of any industrial nation requires flawless pipe systems with turbulent flows of drinking water, gas, oil, and sewage. Drag reduction in these pipe flows spells energy saving for operation. Transport-related examples include drag reduction of road vehicles, airborne transport, ships, and submarines, lift increase of airfoils, and associated noise reduction. Energy and production-related examples include efficiency increase of harnessing wind and water energy, heat transfer, chemical, and combustion processes.
+
+Closed-loop active control is increasingly investigated for performance improvements in industrial applications. Several trends support this development. First, aerodynamic shapes and passive control have been optimized for over 100 years. Thus, further optimization efforts may yield diminishing returns. Second, in many cases the engineering challenge is not the cruise or normal operating condition but short-term and rare events. For wind turbines, the effect of gusts needs to be mitigated. Aeroengines need to be safe during 60 to 90 seconds of takeoff, where they can produce six times the thrust required during cruise. The large nacelle is only required for this takeoff and may be replaced by a smaller version with active control. Third, actuators and sensors become increasingly cheaper, more powerful, more reliable, and thus more economical. Finally, modern control methods can harness increasingly more complex dynamics, last but not least through the powerful augmentations by ML. Goals, tools, and principles of turbulence control are reviewed in Section 17.2.
+
+This chapter focuses on the control logic. The classical paradigm is from understanding to dynamic modeling to model-based control design to controller tuning in the full plant. Key applications are first (relaxational) and second-order (oscillatory) dynamics. The nonlinear dynamics need to be linearized or at least sufficiently understood. In Section 17.3, we present simple human-interpretable POD-based models showing the spectrum from linear to strongly nonlinear dynamics explaining a large range of current experiments.
+
+Building a control-oriented model is a challenge for shear turbulence with a large range of temporal and spatial scales and their nonlinear interactions. The challenge becomes even larger for spatially distributed control with many actuators and many sensors. Here, powerful methods of ML may fully invert the classical control paradigm. First, the near-optimal control law is automatically learned in the full plant without any model. Then, simpler control laws with similar performance are identified. The performance-winning mechanism is then dynamically modeled, leading to a deeper understanding of the flow. In Section 17.4, different realizations of this MLC are described. The chapter concludes with a MLC tutorial for the control of nonlinearly coupled oscillators (Section 17.5). For more information, we refer to our recent reviews (Brunton & Noack 2015, Brunton et al. 2020) and our textbooks on model-based control (Noack et al. 2011) and MLC (Duriez et al. 2017) and the literature cited therein.
+
+### 17.2 Goals, Tools, and Principles
+
+This section provides a high-level perspective on turbulence control, reviewing typical goals (Section 17.2.1), hardware tools (Section 17.2.2), and control principles (Section 17.2.3). Subsequent sections assume that the configuration with goals, actuators, and sensors is given and the control logic needs to be developed.
+
+### 17.2.1 Goals
+
+Turbulent flows around cars, trucks, trains, airplanes, helicopters, ships, and submarines affect their performance. An important engineering goal is *drag reduction* or, more precisely, the reduction of net propulsion power and thus energy saving. Airplanes during takeoff and landing require high lift at low velocities. Here, a goal is to achieve *lift increase* with minimal means, for example, low extra weight
+
+and small material fatigue. During cruise, the increase of lift-to-drag ratio leads to reduced fuel consumption, and hence reduced environmental impact and increased profitability. Ground and airborne traffic produce undesirable noise. Here, *noise reduction* is another important goal. Chemical production, combustion processes, and heat exchangers profit from *mixing increase*. Another important goal is the *stabilization of flow oscillations*. Examples include flutter and buffeting of airfoils, cavity noise (Rossiter modes) associated with landing gears of airplanes and detrimental vortex shedding around buildings, chimneys, bridges, the pillars of oil-producing platforms, underwater pipelines, and heat-exchanging pipes in nuclear plants.
+
+The goals of drag reduction, lift increase, mixing increase, noise reduction, and oscillation mitigation may be served by separation prevention, skin-friction reduction, and manipulation of free shear flows. As a rule of thumb, in most flow control strategies the transverse mixing of free and wall-bounded shear flows is increased (drag reduction, mixing increase) or decreased (skin friction reduction, noise reduction, oscillation prevention). We refer to the excellent discussion of underlying flow physics by Gad-el Hak (2007).
+
+### 17.2.2 Tools
+
+Flow control performance during cruise or standard operating conditions is well served by shape optimization under given constraints. An ubiquitous example is cars, which have become increasingly more aerodynamic over the past hundred years.
+
+The performance may be further improved by *passive devices*, that is, small changes that require no energy input. Feathers at the end of arrows stabilize the flight and increase the range – perhaps the first example of man-made passive control. Another example is vortex generators on the wing of a Boeing 737 to prevent early separation with associated lift decrease and drag increase. The efficiency of wind turbines may also profit by up to 7% from SmartBlade vortex generators. Riblets reduce skin-friction drag by up to 11%. The chevron-shaped engine nozzles reduce jet noise by 1–3 dB. Spoilers at the trailing edge of a car stabilize aerodynamic forces and reduce drag. Vanes in ducts and at airplanes redirect the flows in a performance increasing way.
+
+Passive devices may come with parasitic drag during cruise or standard operating conditions. In many cases, passive devices, like vortex generators, may be emulated by active (energy-consuming) devices, like fluidic jets. Active control has the advantage that it can be turned on or off and even operate at a large range of amplitudes and frequencies. This dynamic range often yields performance benefits in contrast to steady operation. Active control may be operated open-loop, that is, be blind to the flow state. Yet there may be significant potential in combining unsteady active control with sensor-based flow monitoring. In the sequel, we will focus on this closed-loop control.
+
+The choice of the actuators, their kind, amplitude, frequency range, and placement has a large effect on control efficiency. Actuators are often placed at high-receptivity locations, for example, at the trailing edge of a bluff body, where the separating shear layer can be easily manipulated. The coherent structures associated with boundary-layer transition and skin friction can be directly opposed with wall motion or wall

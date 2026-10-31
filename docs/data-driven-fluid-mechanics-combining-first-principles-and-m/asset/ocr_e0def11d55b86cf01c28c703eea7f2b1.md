@@ -1,0 +1,11 @@
+# 14 Machine Learning for Reduced-Order Modeling
+
+B. R. Noack, D. Fernex, and R. Semaan
+
+We describe data-driven reduced-order modeling (ROM) approaches using powerful methods of machine learning. The focus is gray-box models (GBMs) distilling coherent structure dynamics from snapshot data. We highlight two generally applicable methods: the proper orthogonal decomposition (POD) Galerkin method and cluster-based models. The Galerkin method has deep roots in the mathematical investigation of the Navier–Stokes equations and comes with illuminating physical insights. Yet, the accurate data-driven variant requires a rich set of tuning tools and tends to have a narrow range of validity. As an alternative, the recently developed cluster-based network model is inherently robust, can easily integrate numerous operating conditions, and its construction can fully be automated. However, we lose connection to first principles. Of course, there are many different shades of gray, which will briefly be reviewed. The chapter concludes with a tutorial of xROM, a freely available software for POD and cluster modeling for different type grids and a large volume of data.
+
+# 14.1 Introduction
+
+ROM has a long tradition in fluid mechanics. The focus of this chapter is gray-box modeling,¹ which resolves the coherent structure flow dynamics. Over 500 years ago, Leonardo da Vinci made the first paintings of wake vortices. von Helmholtz (1858) laid the foundation of their dynamic modeling with his famous vortex laws. In the years that followed, many vortex models were proposed. Examples are a pair of two equal vortices rotating about their axis, a pair of two equal but opposite vortices moving uniformly, leapfrogging ring vortices, the Föppl (1913) vortex model of the near wake, the von Kármán (1911) vortex model for vortex shedding, a shear-layer vortex model (Hama 1962), the recirculation zone model (Suh 1993), the vortex-model-based feedback control (Noack et al. 2004, Protas 2004), just to name a few. The reduced-order vortex models inspired high-dimensional simulations with vortex blobs (Leonard 1980), and vortex filaments (Ashurst & Meiburg 1988). Vortex models are closely tied to first principles and robustly model coherent structures and their convection.
+
+¹ The term is adopted from Wiener (1948).

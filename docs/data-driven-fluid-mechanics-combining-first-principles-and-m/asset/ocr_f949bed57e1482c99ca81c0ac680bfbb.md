@@ -1,0 +1,17 @@
+different flow features highlighted by the modal analysis. Assuming that the ith POD mode is harmonically related and phase shifted with respect to the first mode, it is possible to write that
+
+$\sqrt{n_s/2}\,\psi_i(\vartheta) = \sin(\alpha_i \vartheta + \delta_i),\qquad (9.12)$
+
+where $\alpha_i$ is a positive integer and $\delta_i$ is the phase shift of the $i$th mode with respect to the first mode.
+
+In order to ascertain these frequency relations, the scatter plot of the POD temporal modes $\psi_1$ and $\psi_i$ should be observed in search of Lissajous curves. A Lissajous curve is the graph of a system of parametric equations of the type $x = A \sin(\alpha t + \delta)$ and $y = B \sin(\beta t)$, which can describe even very complex harmonic motions. Visually, the ratio $\alpha / \beta$ determines the number of "lobes" of the figure. The procedure to identify the harmonic relation and the phase shift for higher order modes relies on the simplifying assumption that the first two modes are at the same frequency with a $\pi/2$ phase shift. It is possible to extract the period phase from the time coefficients of the first two modes, that is, for any snapshot $\tan(\vartheta) = \psi_1 / \psi_2$. Subsequently, the positive integer $\alpha_i$ and the phase shift $\delta_i$, which characterize the harmonic relation, can be extracted from the solution of the optimization problem
+
+$\operatorname{argmin}_{\substack{\alpha_i \in \mathbb{N}\\ \delta_i \in \mathbb{R}}} \left( \sqrt{n_s/2}\,\psi_i - \sin(\alpha_i \vartheta + \delta_i) \right),\qquad (9.13)$
+
+where $\alpha_i$ and the phase shift $\delta_i$ are the free parameters to identify. An example of this procedure is given in the following, where it is applied to the analysis of the flow features in the wake of two tandem cylinders located near a wall.
+
+# 9.3.1 An Example: The Wake of Two Cylinders in Ground Effect
+
+The work by Raiola et al. (2016) reports a PIV wind tunnel study in the wake of cylinders near a wall. The experimental arrangement is sketched in Figure 9.3. The cylinders had a diameter of 32 mm. The acquisition was performed with a 2Mpixels camera ($1600 \times 1200$ pixels array) with a spatial resolution of about 7.2 pixels/mm while the sampling frequency of the PIV measurements was 10 Hz and the Reynolds number was equal to $4.9 \times 10^3$, thus the sampling frequency was not sufficient to sample the characteristic frequencies involved in the problem. An ensemble of 2 000 image couples was acquired for each experiment, obtaining a total of 2 000 flow fields. The interrogation strategy was an iterative multistep image deformation algorithm, with final interrogation windows of $16 \times 16$ pixels with 50% overlap (i.e., final vector spacing of 8 pixels, corresponding to $0.035D$). The ensemble size both in term of snapshots and number of points enables a sufficient convergence of the statistics (errors well below 1% of the variance both in time and space).
+
+The results of the modal analysis are reported herein for the case of two cylinders with a relative distance $L = 1.5D$ and a gap from the wall $G = 1D$. Under these conditions the vortex shedding for the upstream cylinder is completely suppressed, and the two cylinders act as a single bluff body (Zdravkovich 1987). At the same time, the ground affects the pressure distributions, as well as the flow development.

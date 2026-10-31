@@ -1,0 +1,44 @@
+
+instabilities in the inlet of a jet engine lead to non-smooth operation, while acoustic instabilities lead to premature material fatigue; and strong magnetic instabilities are one of the key reasons why nuclear fusion has not yet matured into a reliable technology. In natural settings, instabilities in the atmospheric boundary layer are responsible for weather abnormalities, and in lakes, rivers, and oceans they influence nutrient transport.
+
+The underlying mechanisms for instabilities can be rather multifaceted. Yet, it is common to classify instabilities by their principal physical mechanism responsible for the growth (or decay) of disturbances: buoyancy-driven, shock-induced, rotational, magnetic, shear-driven, morphological, vortical, interfacial, thermal, reactive, acoustical, chemical, and so on. Instabilities have been studied intensively over the past decades. Along with this categorization, each effect is characterized and parameterized by a nondimensional number, such as the Reynolds number, Rayleigh number, Rossby number, Weber number, Mach number, Damkoehler number, and so on. These numbers quantify the relative importance of the involved processes and act as bifurcation parameters that, after passing a critical value, establish the presence of an instability.
+
+Besides the key physical processes and their nondimensional number, the size of the disturbance background or of an initial condition, necessary to induce an instability, is important. Infinitesimal disturbances describe the early departure from an established equilibrium state. They have the added mathematical advantage that linearization is easily justified. The same is not true for finite-amplitude disturbances whose analysis requires more sophisticated mathematical techniques. In what follows, we will outline techniques for a general stability analysis, but will focus on common techniques for a linear analysis.
+
+## Hydrodynamic Stability Theory: A Brief Look Back
+
+Owing to its central position within the broad field of fluid mechanics, hydrodynamic stability theory has a long history that is worth recalling.
+
+While it is difficult to name a precise scientific event or discovery that acts as the defining moment of hydrodynamic stability theory, it is commonly acknowledged that the experiments of Osborne Reynolds in the 1880s have, for the first time, solely focused on stability issues of shear flows and proposed a criterion (the Reynolds number) for the distinction of laminar, turbulent, and transitional flow regimes (Reynolds 1883). At the same time, Lord Rayleigh has given a formal mathematical framework for the evolution of infinitesimal perturbations in an inviscid fluid (Rayleigh 1887). Around the same time, the definition of stability has been influenced by the mathematical work of A. Lyapunov, who gave a precise meaning to the asymptotic fate of perturbations from an equilibrium point (Lyapunov 1892).
+
+At the beginning of the twentieth century, the stability formulation by Orr and Sommerfeld, a viscous extension of the Rayleigh equation, has moved stability issues into the focus of fluid dynamicists and mathematicians and is still in widespread use today (Orr 1907a, Sommerfeld 1908). Many subsequent investigations focused on the associated Orr–Sommerfeld eigenvalue problem, and determined instability modes for a wide range of fluid configurations, but in particular for wall-bounded unidirectional shear flows. The incorporation of nonlinear saturation effects has further extended the range of applicability of stability results to finite-amplitude perturbations.
+
+The advent of the computers and numerical algorithms has also greatly influenced hydrodynamic stability theory, and it did not take long before the central equations of stability theory have been solved numerically to high precision and for increasingly complex flows, such as high-speed, compressible flows.
+
+At the same time, transition to turbulence and hydrodynamic stability have been linked in an effort to predict the onset of turbulent fluid motion using stability calculations. Secondary instability theory, a two-stage stability concept, has been introduced and proposed as the route of many flows to a highly disordered state (Orszag & Patera 1983, Herbert 1988, Koch et al. 2000).
+
+A new development emerged in the 1990s whereby the original Lyapunov stability concept has been called into question, as it does not contain any notion of a time horizon. In this vein, eigenvalues have been increasingly superseded by more abstract operator concepts (Butler & Farrell 1992, Reddy & Henningson 1993, Trefethen et al. 1993, Schmid & Henningson 2001, Schmid 2007). This non-eigenvalue-based stability theory has succeeded in uncovering and explaining a great deal of experimentally observed phenomena and is often a key component of instability and amplification processes.
+
+The past decade has continued to produce a great many tools related to stability theory: direct numerical simulations produce high-fidelity fluid solutions and give unprecedented insight into all aspects of transport processes and instabilities; the parabolized stability equations (PSE) provide a powerful and efficient tool for the calculation of stability characteristics in configurations that go far beyond the early simple geometries (Bertolotti et al. 1992). The stability of flow can also be determined globally using high-performance computers and iterative eigenvalue algorithms (Theofilis 2011). Following these techniques, stability properties have been computed for such complex flows as airfoil sections, turbomachinery stages, or wing-tip vortices. Moreover, variational techniques (Hill 1995), which recast stability concepts into the form of an optimization problem, have resulted in novel and powerful tools that extract stability information (even in the nonlinear case) directly from simulation software. It is these latter optimization techniques – in a rudimentary form – that will be the focus of this chapter.
+
+## A Broader Viewpoint on Instabilities
+
+Besides the rise of sophisticated tools to address stability issues for complex flows, the definition of stability has also changed over the years. Starting from a rather binary definition (stable or unstable equilibrium), based on the existence of eigenvalues in a specific half-plane (Drazin & Reid 1981), we have brought back a timescale into the definition of stability, thus dismissing the asymptotic definition of Lyapunov, and reformulated stability-related issues under a more general sensitivity concept (sensitivity to initial conditions, to forcing, to internal changes, etc.). Section 13.2 gives a brief summary of stability notion, starting with the mathematical definition
+
+![](img/ddadb1d3eaa6f9576eea68f95d453bca_279_0.png)
+
+Figure 13.2 Stability concepts, illustrating (a) Lyapunov stability, (b) asymptotic stability, and (c) exponential stability.
+
+of Lyapunov stability and progressing to more adapted concepts for hydrodynamic stability calculations (Schmid & Henningson 2001).
+
+### 13.2 Definitions of Stability
+
+The stability of a dynamical system has been formalized mathematically by Lyapunov in his landmark paper at the end of the nineteenth century (Lyapunov 1892). This definition has stood the test of time and is still principally applied in a wide range of situations from fluid dynamics to other dynamical systems in the engineering or life sciences.
+
+The first definition of Lyapunov stability states that, given a general autonomous dynamical system q = N(q) for the state vector q with q(0) = q0, an equilibrium point qe satisfying N(qe) = 0 is Lyapunov stable, if for every ε > 0, there exists a δ > 0 such that, if ||q0 − qe|| < δ, then for every t > 0 we have ||q(t) − qe|| < ε.
+
+Lyapunov stability thus relates an initial condition to the long-term fate of the state vector following the governing equations. If the initial condition q0 is δ-close to the equilibrium point qe, a Lyapunov-stable system will remain in a neighborhood of size ε of this equilibrium for all times. This condition has to hold true for any ε one may choose. The previous definition ensures boundedness of the solution as long as the initial condition is sufficiently close to the equilibrium state.
+
+A more stringent definition of stability, extensively used in fluid dynamics application, is asymptotic stability. It adds to the definition of Lyapunov stability the supplementary condition that, for an infinite time horizon, the equilibrium state qe is approached. In other words, the solution to the dynamical system does not only stay bounded in a neighborhood of the equilibrium point qe, it approaches the equilibrium point as time tends to infinity.
+
+A third definition of stability adds yet more restrictions to asymptotic stability by specifying the manner in which the equilibrium point is approached. For initial

@@ -1,0 +1,12 @@
+![](bbox=[0.32, 0.17, 0.68, 0.32])
+
+Figure 2.1 The scientific method.
+
+Moreover, the concept of causality is not without problems, and it has been argued that it is indistinguishable from initial conditions in systems described by differential equations, such as fluid mechanics (Russell 1912). While this is true, and we could formulate science as a quest to classify initial conditions in terms of their outcome, the result may not be very informative, especially in turbulence and other chaotic systems, which lose memory of their previous evolution after a while. We will restrict ourselves here to a prescribed-time definition of cause, of the type of: “The falling tree causes the crashing noise,” even if we know that the fall of the tree has its own reasons for happening, and that intermediate causes depend on the time horizon that we impose on them. Such investigations require something beyond correlations, and imply an active intervention of the observer in the generation of data. This is particularly true when we are interested in the possibility of controlling our system, instead of simply describing it. Consider the difference between formulating sub-grid models for large-eddy simulations, and devising strategies to decrease drag in a pipe.
+
+Simplifying a lot, the difference between the two points of view, which mostly affects how and when step S1 in Figure 2.1 is undertaken, can be summarized as follows:
+
++   - *Observational science.* Searches for correlations between different observations, and generalizes them into models. It can be described as the science of prediction.
++   - *Interventional science.* Relies on the results of experiments in which some condition is changed by the observer, generally in the hope of uncovering “causal” (i.e., if this, then that), or “counterfactual” relations (if not this, then not that). Interventional science is the science of control.
+
+The present chapter is oriented toward predictions, and therefore toward establishing correlations among observations, without being especially interested in causality. Chapter 19 is oriented toward causality and control, and looks very different from the present one. In the aforementioned example, Chapter 19 will want to know about the falling tree because it might be interested in doing something to prevent it from falling. The present chapter will center (although not completely) on establishing correlations between tree health and noise levels.

@@ -1,0 +1,13 @@
+![](bbox=[0.25, 0.16, 0.85, 0.34])
+
+Figure 18.2 Generic reinforcement learning setup. Iteratively, an agent reacts to the observed environment state with an action, which in turn influences how the environment state evolves. Moreover, the agent receives a reward signal, which it aims to optimize over the course of multiple training episodes, that is, rollouts of agent–environment interactions.
+
+# 18.2.2 Q-Learning
+
+Q-learning comprises a range of RL algorithms, dating back to at least the work of Watkins (1989), though it mainly relies on the Bellman equation, which was formulated much much earlier (Bellman 1957). A method belonging to this category, Deep Q-Network (DQN) (Mnih et al. 2015), was among the early breakthroughs of DRL. DQN combines DNNs and Q-learning, and its success in learning to play Atari games solely from vision and game score feedback triggered a renewal of interest in DRL. This success is made possible by the combination of RL for learning through trial and error, with DNNs for their ability to extract features and identify patterns in data.
+
+Q-learning is a value-based method, meaning that the algorithm focuses on learning a (state-action) value function, Q(s,a), which represents the overall reward obtained by taking action a in state s. Given this Q-function, Q-learning defines the resulting policy as π(s) = argmax_a Q(s,a). Note that this definition crucially relies on the fact that the action space is finite, as otherwise the computation of argmax is not straightforwardly possible. The Q-value function is optimized via temporal difference (TD) learning in which its own estimates are used as optimization targets. More precisely, the TD target corresponding to an experience time step s_t, a_t, r_t, s_{t+1} can be recursively estimated as Q^{target} = r_t + γ · max_{a'} Q(s_{t+1}, a'). Note that the value of the next state is max_{a'} Q(s_{t+1}, a') since the policy always picks the max action. The Q-function is then updated by incrementally shifting its predictions in the direction of the TD residual Q^{target} − Q, with the update step size being controlled by a learning rate η > 0 (n indicates the current optimization step):
+
+Q_{n+1}(s_t, a_t) := Q_n(s_t, a_t) + η · [ (r_t + γ · max_{a'} Q_n(s_{t+1}, a')) − Q_n(s_t, a_t) ]. (18.1)
+
+In the context of deep RL, the value function Q is parametrized by an artificial neural network Q_θ with learned weights θ, which is optimized via gradient descent. By minimizing the quadratic loss function L(Q^{target}, Q_θ) = 0.5 · (Q^{target} − Q_θ(s,a))^2

@@ -1,0 +1,11 @@
+![](bbox=[0.2, 0.13, 0.88, 0.33])
+
+Figure 3.13 Comparison of standard neural network architecture (a) with modified neural network architecture for identifying Galilean invariant Reynold stress models (b), reproduced with permission from Ling, Kurzawski and Templeton (2016).
+
+performance. One particular interesting application of machine learning for turbulence modeling was developed by Ling, Kurzawski and Templeton (2016), which involved the first deep neural network architecture (i.e., with 8–10 hidden layers) trained to model the anisotropic Reynolds stress tensor, as shown in Figure 3.13. What was so interesting about this work is that they developed a novel architecture that incorporates a multiplicative layer to embed Galilean invariance into the tensor predictions. This provides an innovative and simple approach to embed known physical symmetries and invariances into the learning architecture (Ling, Jones & Templeton 2016). For LES closures, Maulik et al. (2019) employ artificial neural networks to predict the turbulence source term from coarsely resolved quantities.
+
+# 3.5 Control and Optimization
+
+Fluid flow control is one of the grand challenge problems of the modern era, with nearly limitless potential to enable advanced technologies. Indeed, working fluids are central to many trillion dollar industries (transportation, health, energy, defense), and even modest improvements to flow control could have transformative impact through lift increase, drag reduction, mixing enhancement, and noise reduction. However, flow control is generally a highly non-convex and high-dimensional optimization problem, which has remained challenging despite many concerted efforts (Brunton & Noack 2015). Fortunately, machine learning may be considered as a growing body of data-driven optimization procedures that are well suited to highly nonlinear and non-convex problems. Thus, there are renewed efforts to solve traditionally intractable flow control problems with emerging techniques in machine learning.
+
+There is a considerable effort applying reinforcement learning (Sutton & Barto 2018) to fluid flow control problems (Beintema et al. 2020, Rabault & Kuhnl e 2020), as will be discussed more in Chapter 18. In particular, controlling the motion of

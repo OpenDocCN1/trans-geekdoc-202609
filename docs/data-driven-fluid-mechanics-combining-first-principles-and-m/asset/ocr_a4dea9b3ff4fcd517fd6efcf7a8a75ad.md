@@ -1,0 +1,12 @@
+∂u/∂t + (u·∇)u = −∇p + 1/Re ∇²u
+∇·u = 0
+
+![](bbox=[0.15, 0.12, 0.9, 0.38])
+
+Figure 3.1 Fluid dynamics are often characterized by complex, multiscale dynamics in space and time. For example, by increasing the Reynolds number, the flow past a circular cylinder becomes unsteady and turbulent. Figure adapted from Feynman et al. (2013), reprinted by permission of Basic Books, an imprint of Hachette Book Group, Inc.
+
+become available for more complicated fluid systems, the data associated with these investigations will only become increasingly large and unwieldy. Data-driven methods are central to managing and analyzing this data, and generally, we consider data methods to include techniques that apply equally well to data from numerical or experimental systems. In fact, data-driven methods in machine learning provide a common framework for both experimental and numerical data.
+
+In this chapter, we will provide an overview of the established and emerging applications of machine learning in fluid dynamics, emphasizing the potentially transformative impact in modeling, optimization, and control; for more details and references, see Brenner et al. (2019) and Brunton et al. (2020). We take the perspective that machine learning is a collection of applied optimization techniques that build models based on available data, which is abundant in fluid systems. Because of the data-intensive nature of fluid dynamics, machine learning complements efforts in both experiments and simulations, which generate incredible amounts of data. In machine learning, it is just as important to understand when methods fail as when they succeed, and we will attempt to convey the limitations of current methods, exploring what is easy and difficult in machine learning. We will also emphasize the need to incorporate physics into machine learning to promote interpretable and generalizable models. Finally, we cannot overstate the importance of cross-validation to prevent overfitting.
+
+Fluid flow fields may be naturally viewed as images, as in Figure 3.2. Thus, there is considerable low-hanging fruit in applying standard techniques from machine learning for image analysis to flow fields, for example for occlusion inference (Scherl et al. 2020) and super-resolution (Fukami et al. 2018, Erichson et al. 2020). However, fluid dynamics departs from many of the typical application domains of machine learning, such as image recognition, in that it is fundamentally governed by physics. Many of the

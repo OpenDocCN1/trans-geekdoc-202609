@@ -1,0 +1,7 @@
+![](bbox=[0.36, 0.13, 0.72, 0.6])
+
+Figure 16.12 Schematics of an autoencoder network.
+
+and time-consuming to train a deep network. Training times can be significantly reduced on GPUs when compared with CPUs.
+
+The potential of autoencoder networks for nonlinear dimensional reduction was evaluated using a two-dimensional test case from the “virtual aircraft” application area. Thirty steady flow solutions were computed for the NACA 64A010 airfoil at transonic flow conditions with the DLR flow solver TAU by varying the angle of attack and the Mach number as shown by the black symbols in Figure 16.13. Predictions were made for three different flow conditions (red crosses in Figure 16.13) and compared with TAU reference solutions in terms of the surface pressure distribution. The autoencoder predictions were also compared with ROM predictions based on Isomap, POD and cluster POD (C-POD). K-means clustering was used to cluster a given set of parameter-dependent flow solutions in k clusters. The clustering was performed based on either the flow parameters or the reduced representation of the solutions given by Isomap. On each cluster, a local POD-based reduced-order model was built, which is similar to local principal component analysis (LPCA) described in

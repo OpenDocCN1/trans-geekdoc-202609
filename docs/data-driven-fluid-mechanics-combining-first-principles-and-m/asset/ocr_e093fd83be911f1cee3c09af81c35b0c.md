@@ -1,0 +1,15 @@
+Another branch of reduced-order models can be traced back to stability analysis of Orr (1907) and Sommerfeld (1908) and the Galerkin (1915) method. These foundations corroborated the idea that fluid dynamics can be understood as a superposition of global physical modes. Landau (1944) and Hopf (1948) even considered turbulence as originating from a sequence of many Hopf bifurcations. The mean-field theory of Stuart (1958) beautifully explained the nonlinear saturation of instability modes. Subsequently, the Galerkin method was not only applied to instability modes but also to mathematical modes from Hilbert space considerations (Busse 1991, Noack & Eckelmann 1994). As with vortex models, the Galerkin method was increasingly generalized and became a foundation of computational fluid mechanics.
+
+Data-driven reduced-order models have arguably originated from Galerkin methods with a POD expansion (Lorenz 1956, Lumley 1967). The POD of a given snapshot ensemble yields a Galerkin expansion with minimal representation error for given number of modes. The pioneering wall turbulence model of Aubry et al. (1988) demonstrated their use in explaining complicated dynamics. In the last three decades, a myriad of POD models have been proposed. The initial excitement of POD was mitigated by the increasing realization of the fragility of the resulting Galerkin models (Rempfer 2000) and their limited range of validity. Galerkin methods are detailed in Section 14.2.
+
+A recent development of cluster-based reduced-order models (CROM) was pioneered by Burkardt et al. (2006) and Hof et al. (2004). Here, the dynamics are modeled as a stochastic transition between a small number of representative flow states. The k-means clustering of snapshots yields centroids as representative flow states with a minimal representation error. The dynamics can be framed in a Markov (Kaiser et al. 2014) and network model (Li et al. 2021). In Section 14.3, this branch of ROM is discussed including the latest innovations (Fernex et al. 2019, 2021).
+
+Of course, there are different shades of gray with GBMs, which are outlined in Section 14.4. The chapter concludes with a tutorial of POD modeling (Section 14.5) with freely available software by the authors.
+
+# 14.2 Proper Orthogonal Decomposition Galerkin Model
+
+This section gives recipes and suggestions for the construction of POD Galerkin models. First, the considered configurations are specified in Section 14.2.1. Then, Sections 14.2.2 and 14.2.3 describe the kinematical and dynamical steps to a POD model. Sections 14.2.4 and 14.2.5 provide closures for an existing POD model and identification methods for experiment. Section 14.2.6 reviews common applications.
+
+# 14.2.1 Flow Configuration
+
+We assume an incompressible viscous flow in a steady domain Ω. A location in this domain is denoted by x = (x, y, z) = (x1, x2, x3). The time is represented by t. The velocity and pressure fields read u = (u, v, w) = (u1, u2, u3) and p, respectively. The Newtonian fluid is described by the density ρ and dynamic viscosity μ.
