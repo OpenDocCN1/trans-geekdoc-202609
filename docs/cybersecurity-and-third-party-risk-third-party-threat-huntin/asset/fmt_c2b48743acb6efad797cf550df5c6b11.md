@@ -1,0 +1,38 @@
+
+# Pandemic-Era Cyber Events and Post-Pandemic Trends
+
+* **April 30, 2020: Dozens of pandemic‐themed phishing and ransomware attacks are discovered in late April. Many leveraged the unknown and panic with emails concerning the Family and Medical Leave Act (FMLA), Paycheck Protection funds, and the delivery of parcels to the home.**
+* **May 6, 2020: U.S. and U.K. cybersecurity agencies announce that APT state actors are attempting to hack into healthcare and medical research facilities that are fighting the virus or developing vaccines.**
+* **July 15, 2020: Twitter accounts for Elon Musk, Bill Gates, Barack Obama, and others are hacked into using a social engineering technique.**
+* **August 5, 2020: Interpol joins the chorus of global law enforcement declaring the increase in cybercrime is likely as a vaccine creation approaches.**
+* **August 20, 2020: Cybercriminals posing as contact tracers for COVID‐19 scam credit card and bank account information from thousands of victims.**
+* **October 21, 2020: The Canadian government warns of a new COVID‐19 scam incorporating phishing emails supposedly from the government that are intended to steal personal information from the recipients.**
+* November 9, 2020: The first effective COVID‐19 vaccine is announced.
+* **December 3, 2020: IBM warns it has seen evidence that companies and governments are being targeted by unknown attackers, prompting a rare warning by the Department of Homeland Security.**
+* **December 8, 2020: FireEye's internal testing team is targeted by a sophisticated APT that is thought to be a state actor.**
+* **December 13, 2020: FireEye makes public the details of the SolarWinds attack.**
+* December 14, 2020: The first COVID‐19 vaccines are administered to the U.S. public.
+
+This list mentions just some of the notable cyber events; to list them all would take numerous pages. Thousands of other cyberattacks and schemes occurred from December 2019 and are still ongoing. The preceding timeline merely illustrates how quickly the cybercriminals and APTs adapted and pivoted to exploit new vulnerabilities and weaknesses caused by the pandemic.
+
+In many cases the cybersecurity industry is still evolving and trying to catch up. However, it's much easier for the cybercriminals to simply alter their targets and tactics. Corporate and government information security personnel, processes, and systems are usually slower to evolve, which presents a unique challenge to post‐pandemic trends and changes.
+
+## Post‐Pandemic Changes and Trends
+
+Will this level of cyber activity continue, or will it return to pre‐pandemic levels later in 2021 as more people are vaccinated and herd immunity occurs, enabling life to return to normal? It's likely there will be a new “normal,” and that life will not return to the pre‐pandemic normal. While cyber activity might not be at the level it was when full‐blown lockdowns were in force, many companies, consumers, and employees have altered their behaviors and won't return to the former. Many companies have shifted their workforces to all or a larger portion working remotely than before. Consumers have changed their habits permanently, opting more and more for online shopping than from traditional brick‐and‐mortars. All these habits, which before were performed in person, are now going to be performed virtually, enabling cyberattacks to continue as the attack surface increases.
+
+As this increased cybercrime and hacking continues into the foreseeable future, combined with the damning statistics of how few companies perform proper due diligence and due care for their data and connectivity to vendors, we will continue to see the breaches and security incidents growing at the current pace. This necessitates the need to adopt a more aggressive and cybersecurity‐focused approach to third‐party risk.
+
+Once the lockdowns end, our new normal will begin, creating new changes in many areas. The following descriptions are not predictions, but ideas built on the trends seen building toward the end of the pandemic. While these trends are not going to continue to grow at the same pace, the changes from COVID‐19 are widely thought to have moved much of life to where it would have been 10 years or more from now, had it not been for the pandemic. For example, prior to the pandemic, only 17 percent of the U.S. workforce was remote. During the pandemic, it was as high as 47 percent. This percentage will increase past the pre‐pandemic 17 percent. Changes to how lives are conducted post‐pandemic will shift from an in‐person lifestyle to less interaction and a more online, connected work and life presence. This increased amount of web and network traffic increases attack surface for the cybercriminals and APTs.
+
+### Work-Life Changes
+
+When the pandemic hit, millions of workers were sent home. Adobe, Aetna, Amazon, [Ancestry.com](http://ancestry.com), Capital One, Coinbase, Facebook, Gartner, Infosys, Mastercard, Microsoft, Nationwide Insurance, Nielsen, PayPal, Raytheon, Salesforce, Shopify, Siemens, Slack, Smartsheet, Square, Twitter, Upwork, and Zillow have all changed to work‐from‐home permanently, or for at least much of 2020 and into 2021. Working from home will continue as employees realize its benefits and some employers decide that the risks of the once popular open floor plan are not ideal for the future.
+
+Gaining popularity in the 1980s, these large open commercial spaces were believed to foster teamwork and better communication. The layout flexibility gave companies the ability to modify as their company size changed. Lastly, these were very cost‐effective solutions for businesses as long tables took up less space and housed more workers, and cubicles cost thousands of dollars each. By 2017, 70 percent of offices had adopted this open design.
+
+However, this open office plan adoption had its downsides—noise levels grew and privacy was nonexistent. Now the problem is the inadequacy of the ventilation systems against disease. For example, on February 25, 2021, in a Korean call center, one of its 216 employees had flu symptoms. The Korean CDC performed a trace contact for the center's workers and found that nearly half the employees had become infected. The contact tracing further indicated that the virus jumped across the office to cause 94 of the 216 workers to become COVID‐19 positive.
+
+Companies are most likely to adapt such open spaces not with a major remodel, but by making tweaks. The first goal will be to reduce density, reducing the work area from 10 workers to a table to 5 or less, as increased space between employees is the social‐distancing goal. Clients will not be placed into a conference room deep in the office space but nearer to the entrance or in another space away from staff. All‐hands meetings will not occur in person but using a combination of remote and in‐person attendance. Elevators that once held 15 people will be counted full at 5 people. This reduced occupancy can result in more employees working from home or a reduced occupancy rate that will require companies to not have all employees returning to work.
+
+Long before the pandemic, many high‐tech companies, like Yahoo, had embraced working from home, and had pushed for some employees to work remotely. (Prior to the pandemic, 17 percent of the tech workforce was remote, rising to 40 percent during it.) However, in 2013, Yahoo CEO Marissa Mayer banned working from home, going so far as to tell those who wouldn't make the adjustment that they should find other work. There was an impression among many, outside Yahoo as well, that remote working is not conducive to collaboration or good management.
