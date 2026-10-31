@@ -1,0 +1,65 @@
+level_changes:
+- line: 13
+  before: 2
+  after: 1
+- line: 32
+  before: 2
+  after: 1
+- line: 34
+  before: 3
+  after: 2
+- line: 60
+  before: 3
+  after: 4
+- line: 188
+  before: 2
+  after: 1
+- line: 190
+  before: 3
+  after: 2
+- line: 202
+  before: 3
+  after: 2
+- line: 221
+  before: 3
+  after: 2
+- line: 264
+  before: 2
+  after: 3
+- line: 302
+  before: 2
+  after: 3
+- line: 338
+  before: 2
+  after: 1
+text_changes:
+- line: 171
+  before: 2.4.5 Er₂O₃.
+  after: 2.4.5 Er₂O₃。
+- line: 174
+  before: 2.4.6 Nd₂O₃.
+  after: 2.4.6 Nd₂O₃。
+- line: 177
+  before: 2.5 Characterization
+  after: 2.5 表征
+- line: 180
+  before: 2.6 Cell experiments
+  after: 2.6 细胞实验
+- line: 182
+  before: 2.6.1 Cell culture.
+  after: 2.6.1 细胞培养。
+- line: 185
+  before: 2.6.2 In vitro cytotoxicity experiments.
+  after: 2.6.2 体外细胞毒性实验。
+- line: 188
+  before: 3 Results and discussion
+  after: 3 结果与讨论
+- line: 190
+  before: 3.1 Data retrieval and mining
+  after: 3.1 数据检索与挖掘
+- line: 202
+  before: 3.2 Quantum chemistry calculations
+  after: 3.2 量子化学计算
+- line: 221
+  before: 3.3 Data supplementation
+  after: 3.3 数据补充
