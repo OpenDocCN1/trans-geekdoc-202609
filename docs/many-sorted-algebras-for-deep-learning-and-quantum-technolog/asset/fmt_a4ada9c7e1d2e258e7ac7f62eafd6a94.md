@@ -1,0 +1,36 @@
+
+## 10.3 Charts, atlases and topological properties
+
+Two charts `Ua` and `Ub`, with nonempty intersection, are in the manifold `M`. They are within a fixed atlas and are compared using a transition function `T`. See [Fig. 10.5](#Ch010_171-188_B9780443136979000047.xhtml#f0030). For an atlas to be usable, the overlapping regions must not differ too much. The transition functions such that if `fa`: `Ua`→`R`^(`n`)![Equation](Images/F000047si2.png) and likewise `fb`: `Ub`→`R`^(`n`), then `Tab`=`fb` `fa`^(−1), that is, `Tab`: `fa` (`Ua` intersect `Ub`)→`fb` (`Ua` intersect `Ub`). Note that `T` is also a homeomorphism since both `fa` and `fb` are homeomorphisms. There can be several atlases for a manifold. A maximal atlas is one which is not a proper subset of another atlas. For every smooth atlas `A` on `M`, there exists a unique maximal atlas on `M`. A differential structure, which is a globally defined differential structure, on a manifold is a maximal atlas ([Lee, 2006](#Ch010_171-188_B9780443136979000047.xhtml#bib5)).
+
+![Figure 10.5 Manifold with two charts and transition mapping.](Images/F000047f10-05-9780443136979.jpg)
+
+[Figure 10.5](#Ch010_171-188_B9780443136979000047.xhtml#Bf0030) Manifold with two charts and transition mapping.
+
+A connected topological space `T` cannot be the disjoint union of two or more nonempty open sets. When a space is not connected, in these cases, there are subsets within the space that are connected. These are called connected components. Connected components are maximally connected subsets of a topological space `T`. A different concept of connectivity is path connection. A path-connected space `T` means that there is a continuous function `f`: \[0, 1|→`T`, such that for `x`, `y` in `T`, `f(0)`=`x`, `f(1)`=`y`. The path connected implies connected.
+
+A topological space is compact whenever every open cover has a finite subcover. A maximal compact subgroup is a compact subgroup that is the largest. In `R`^(`n`), compactness can be stated more easily: Here, every closed and bounded subset is compact; this is the Heine-Borel theorem. Also, compact manifolds are of special importance since there exist atlases with only finitely many charts. This is because in a compact group, every open cover has a finite subcover and charts are open sets.
+
+## 10.4 Fiber bundles from manifolds
+
+Fiber bundles are frequently comprised of manifolds held together by continuous functions. The manifolds always include the base `B`, and the fiber `F`, which is intuitively like strands or sticks of arbitrary length. Together, they create the total space `E`. For instance, if `B` is the circle `S¹`, place match sticks or line segments of intervals (0,1), perpendicular to and upright surrounding the circle. This represents the fiber `F`, and accordingly, a cylinder `E` is produced. It appears like a cylinder or a can with walls constituting the fiber and the bottom being the base. Here, the total space `E`=`B` x `F`. A different structure results, called the Möbius band by using a similar technique. Begin with the same base `B`, the circle. Again use sticks or intervals (0,1) surrounding the base circle to create the fiber `F`. However, now employ a gradual twist of 180 degrees while placing the line segments or sticks on the base. This is illustrated in [Fig. 10.6](#Ch010_171-188_B9780443136979000047.xhtml#f0035). The twist is not performed at a single point of the circle; rather, it is uniformly distributed throughout the circle. However, the diagram provided does not illustrate this very well. The twisting can be viewed as a twisting of the local charts. The two structures, the cylinder, and Möbius strip are similar. They utilize the same base and about the same amount of fiber for construction. But the end results are quite different due to parameterization.
+
+![Figure 10.6 Möbius stick figure.](Images/F000047f10-06-9780443136979.jpg)
+
+[Figure 10.6](#Ch010_171-188_B9780443136979000047.xhtml#Bf0035) Möbius stick figure.
+
+The Möbius structure is locally a product space, but it is not globally a product space as is the cylinder. Intuitively, the complexity of parameterization of the Möbius bundle can be seen using horizontal transport. The illustration provided in [Fig. 10.7](#Ch010_171-188_B9780443136979000047.xhtml#f0040) is helpful in describing this phenomenon. Assume that the base is the horizontal unit circle, and initially a point `u` on a vertical fiber is located at height 1/3, as measured from the base. Here it is assumed the fibers are 1 unit long, and horizontal angles are measured in degrees counterclockwise. The coordinates of `u` initially are (0, 1/3). Although the fibers are of the same length, they no longer stay vertical due to the flip as the angle changes. However, all measurements are made along the fiber from the base. If point `u` is transported by a change of angle of 360 degrees, point `u` is now at height 2/3 and located at point `w`. The trace for the movement of point `u` is illustrated in the figure.
+
+![Figure 10.7 Möbius strip.](Images/F000047f10-07-9780443136979.jpg)
+
+Figure 10.7 Möbius strip.
+
+A solid line with arrows is used when the sides of the Möbius strip can be observed in the front view. Broken lines with arrows are used for portraying hidden views. By rotating another 360 degrees, the point `u` does return to its original position. Equivalently, let `w` have initial coordinates (0, 2/3), and restrict the angle to stay between zero and 360 degrees. The trace is given again as `w` is transported. This is depicted in the diagram this time using solid dots for observable traces and nonsolid circles for hidden traces. See [Fig. 10.7](#Ch010_171-188_B9780443136979000047.xhtml#f0040). Note that the traces of the points `u` and `w` must intersect at some point. It follows that the parameterization is not global. The point where the paths cross the parameterization is not well defined.
+
+Among the largest differences between the cylinder and the Möbius fiber bundles are the structure groups that are employed for construction. Transition functions within these groups are smooth and determine how the fibers are held together. These functions are used to smoothly change the parameterization when needed. For the Möbius strip, the transition functions are used to separate two possible parameterizations. Intuitively, a change in parameters occurs at the point where the paths intersect. All in all, these algebraic groups characterize the fiber bundle and are described further in the subsequent sections.
+
+In more detail, a fiber bundle is comprised of three sets: the total space `E`, the base space `B`, and the fiber `F`. As previously seen in simple cases, `E`=`B` x `F`, that is, `E` is just the product space. In this case, `B` is called the trivial bundle. Generally, there is a local continuous, onto projection `p`: `E`→`B`. This map `p` is also an open map because projections of products are open maps. Moreover, this map is also known as the submersion of the bundle ([Phillips, 1967](#Ch010_171-188_B9780443136979000047.xhtml#bib9)). In more complex spaces, the map is involved; however, locally, it still acts like a projection, but it usually is not 1–1. Similar to short exact sequences, fiber bundles are described by:
+
+`F`→`E`–^(`p`)→`B`
+
+![Equation](Images/F000047si3.png)

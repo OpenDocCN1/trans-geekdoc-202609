@@ -1,0 +1,68 @@
+level_changes:
+- line: 133
+  before: 3
+  after: 2
+- line: 137
+  before: 4
+  after: 3
+- line: 233
+  before: 2
+  after: 3
+- line: 381
+  before: 2
+  after: 3
+- line: 388
+  before: 2
+  after: 3
+- line: 419
+  before: 2
+  after: 3
+- line: 436
+  before: 2
+  after: 3
+- line: 553
+  before: 3
+  after: 2
+- line: 1038
+  before: 3
+  after: 2
+- line: 2796
+  before: 3
+  after: 2
+- line: 3520
+  before: 3
+  after: 2
+- line: 3593
+  before: 3
+  after: 2
+- line: 3905
+  before: 3
+  after: 2
+- line: 3908
+  before: 3
+  after: 2
+- line: 6754
+  before: 3
+  after: 2
+text_changes:
+- line: 2
+  before: 致献
+  after: 献词
+- line: 123
+  before: 量子多类代数的介绍
+  after: 量子多排序代数的介绍
+- line: 133
+  before: 1.1 量子多类代数的介绍
+  after: 1.1 量子多排序代数的介绍
+- line: 545
+  before: 深度学习的基礎
+  after: 深度学习的基础
+- line: 1206
+  before: 3.6 Banach 空间的多类代数描述
+  after: 3.6 Banach 空间的多排序代数描述
+- line: 1672
+  before: 4.7 张量向量空间的多类代数
+  after: 4.7 张量向量空间的多排序代数
+- line: 1797
+  before: 4.10 希尔伯特空间张量积的多类代数
+  after: 4.10 希尔伯特空间张量积的多排序代数
