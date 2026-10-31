@@ -1,0 +1,6 @@
++   19. Guangshun Li, et al. “Methods of resource scheduling based on optimized fuzzy clustering in fog computing.” Sensors 19(9) (2019): 2122.
++   20. Sambit Kumar Mishra, et al. “Sustainable service allocation using a meta-heuristic technique in a fog server for industrial applications.” IEEE Transactions on Industrial Informatics 14(10) (2018): 4497–4506.
++   21. Mostafa Ghobaei-Arani, et al. “An efficient task scheduling approach using moth-flame optimization algorithm for cyber-physical system applications in fog computing.” Transactions on Emerging Telecommunications Technologies 31(2) (2020): e3770.
++   22. Ruilong Deng, et al. “Optimal workload allocation in fog-cloud computing toward balanced delay and power consumption.” IEEE Internet of Things Journal 3(6) (2016): 1171–1181.
++   23. Xuan-Qui Pham, et al. “A cost-and performance-effective approach for task scheduling based on collaboration between cloud and fog computing.” International Journal of Distributed Sensor Networks 13(11) (2017): 1550147717742073.
++   24. Rajkumar Buyya, Rajiv Ranjan, and Rodrigo N. Calheiros. “Modeling and simulation of scalable cloud computing environments and the CloudSim toolkit: challenges and opportunities.” 2009 International Conference on High Performance Computing & Simulation. IEEE (2009). Leipzig, Germany

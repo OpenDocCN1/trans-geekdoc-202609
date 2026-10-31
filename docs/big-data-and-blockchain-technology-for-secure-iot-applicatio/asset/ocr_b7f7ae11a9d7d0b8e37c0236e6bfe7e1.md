@@ -1,0 +1,2 @@
++   24. P. R. Kumar and B. Shilpa, “An IoT-based smart healthcare system with edge intelligence computing,” In S. Satpathy, S. N. Mohanty, and S. Potluri (eds.), *Reconnoitering the Landscape of Edge Intelligence in Healthcare*. CRC Press, Boca Raton, FL, pp. 31–46, 2024.
++   25. R. Ganiga, R. M. Pai, M. M. Manohara Pai, and R. K. Sinha, “Security framework for cloud based electronic health record (EHR) system,” *International Journal of Electrical and Computer Engineering (IJECE)*, vol. 10, no. 1, pp. 455–466, 2020, doi: 10.11591/ijece.v10i1.pp455-466.

@@ -1,0 +1,13 @@
+sustainability by helping businesses monitor and lessen their environmental effect. It also allows consumers to confirm the provenance and quality of products.
+
+# 10.8 BLOCKCHAIN ANALYTICS AND VISUALIZATION
+
+# 10.8.1 Exploratory data analysis of blockchain networks
+
+The examination and comprehension of the structure, behavior, and characteristics of blockchain data to gain insights and inform decision-making is an integral part of the Exploratory Data Analysis (EDA) of blockchain networks.
+
+Investigative graph analysis of the Ethereum blockchain’s network data was the main focus of Yap et al.’s study. To analyze transaction data, this research makes use of mathematical and statistical modeling in addition to network visualization. For EDA of blockchain networks, the special characteristics of blockchain technology—such as its immutability, transparency, and decentralization—present both potential and obstacles. We shall examine the essential elements and methods of EDA of blockchain networks in this paper [12].
+
+The first step in the EDA of blockchain networks is the collection and preparation of data for analysis. Blockchain data is typically obtained from transaction records, block information, and network statistics obtained from blockchain explorers, APIs, or direct access to the blockchain network. Data preprocessing tasks may involve cleaning, filtering, and transforming the raw data to eliminate noise, handle missing values, and ensure consistency and integrity.
+
+Descriptive Statistics: Descriptive statistics provide an overview of the basic characteristics and distribution of blockchain data. Key descriptive statistics include transaction counts, block sizes, transaction fees, transaction volumes, and time series analysis of network activity over time. Descriptive statistics help identify trends, patterns, and anomalies in blockchain data and provide insights into network dynamics and behavior. Transaction Analysis: Transaction analysis focuses on understanding the flow and behavior of transactions within the blockchain network. This involves examining transaction attributes such as sender and receiver addresses, transaction amounts, transaction types, and timestamps. Transaction analysis techniques include visualizations such as histograms, pie charts, and scatter plots to explore transaction patterns, identify outliers, and detect suspicious activities. Network Topology Analysis: Network topology analysis involves studying the structure and connectivity of the blockchain network. This

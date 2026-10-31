@@ -1,0 +1,11 @@
+# Machine learning unleashed
+
+# A paradigm shift in
+blockchain intelligence
+
+Marepalli Radha, MD Asma, Ashlesha Kolarkar,
+and Kuncham Sreenivasa Rao
+
+# 6.1 INTRODUCTION
+
+Innovative applications, including connected health care, smart cities, and connected industries, have been developed as a result of the rapid development of emerging technologies, smartphones, sensors, and 5G communication. This has contributed to the production of enormous quantities of data. There are legitimate security issues regarding the estimated 50.1% increase in the number of Internet of Things (IoT) devices linked to the Internet by 2020, according to a study conducted by the National Cable & Telecommunications Association (NCTA) [1]. Cyberattacks and data breaches, particularly targeting IoT devices, have surged, with McAfee reporting a barrage of incidents across various industries since January 2018. The vulnerability of IoT devices is exacerbated by their increasing interconnectivity, as highlighted by VDC Research Group Inc., which identifies security requirements as a significant obstacle in developing connected devices [2]. Kaspersky Lab’s data reveals a substantial rise in malware samples for IoT devices from 2016 to 2018, underscoring the substantial vulnerabilities in these devices. Monitoring network-based risks presents substantial issues for a variety of industries, including the government, energy, healthcare, banking, and research centres, among others. The enormous amount, speed, variety, and authenticity of data makes current methods and technologies insufficient to identify novel cyberattacks on IoT devices [3]. If you are dealing with massive amounts of data, weekly or monthly security analytics reports won’t cut it. The research acknowledges the shortcomings and suggests combining deep learning with big data to strengthen the security of IoT devices. Deep learning is well-suited for networks with limited resources because of its compression characteristics, ability to train without supervision, and lack of human intervention in feature building. This study intends to thoroughly investigate the practicability of integrating these technologies, despite the fact that deep learning, big data, and IoT security have all received independent attention in the current literature. By evaluating data flow to discover intrusions and attack
