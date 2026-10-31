@@ -1,0 +1,44 @@
+level_changes:
+- line: 56
+  before: 3
+  after: 2
+- line: 62
+  before: 3
+  after: 2
+- line: 66
+  before: 3
+  after: 2
+- line: 611
+  before: 2
+  after: 1
+- line: 893
+  before: 2
+  after: 1
+- line: 1310
+  before: 2
+  after: 1
+- line: 1763
+  before: 2
+  after: 1
+- line: 2246
+  before: 2
+  after: 1
+- line: 2707
+  before: 2
+  after: 1
+- line: 3096
+  before: 2
+  after: 1
+- line: 3274
+  before: 2
+  after: 1
+text_changes:
+- line: 2
+  before: 致
+  after: 致读者
+- line: 3267
+  before: Questions
+  after: 问题
+- line: 3273
+  before: CHAPTER 9
+  after: 第 9 章

@@ -1,0 +1,12 @@
+# 16.3 Cryptography and S boxes
+
+**Basic concepts:** The nature of cryptography. Block ciphers. Strength and minimum distance providing confusion and diffusion. The McEliece system.
+
+In the original historically first application of error-correcting codes, a transmitter wishes to send a message via a noisy channel to a remote receiver. In cryptography the situation is similar insofar as again we wish to guarantee the integrity of a message sent via a channel to a distant receiver. The important difference is that the obstacle is not the technical quality of the channel but an opponent, who may use his access to the channel to obtain information about the message or to alter the message. A rough subdivision of cryptography according to its aims may be described as follows:
+
++   - **secrecy** (also called **privacy** or **confidentiality**): the message should be encrypted in such a way that only the legitimate receiver is able to decipher.
++   - **authentication** (in a broad sense:) we wish to enable the legitimate receiver to convince himself that the message received is identical to what was sent (**data integrity**) and to identify the correct source of the message.
+
+Cryptography is an ancient art. D. Kahn's *The Codebreakers* [122] is centered around the use of ciphers in the two world wars. In the modern world dominated by electronic communication, the subject has been revitalized and is probably more important than ever before in history. Stinson's book *Cryptography-Theory and Practice* [200] is a self-contained introduction to modern cryptography. The *Handbook of Applied Cryptography* [107] provides technical descriptions and background material.
+
+Gustavus J. Simmons describes in [191] coding theory and authentication theory as dual theories in the sense that they are diametrically opposed. This is based on the following observation: when we use an error-correcting code for the transmission of messages via a noisy channel, then the code is chosen in such a way that the most probable alterations (caused by noise) form clusters around the codewords. In contrast to this, if we wish to enable the receiver to detect alterations of the message caused by interference by an opponent, we want to guarantee that such alterations will spread uniformly

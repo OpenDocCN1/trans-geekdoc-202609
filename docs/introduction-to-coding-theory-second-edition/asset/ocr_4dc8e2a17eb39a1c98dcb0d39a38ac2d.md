@@ -1,0 +1,11 @@
+# AG codes and concatenation
+
+The mechanism of algebraic-geometry codes has been slightly generalized in [224, 71], using not only rational points but also points of degree > 1. We illustrate with some examples based on the Klein quartic. As we consider $\mathbb{F}_8$ as ground field and want to make use of points of degree 2, the field with 64 elements will be needed.
+
+# The field $\mathbb{F}_{64}$
+
+We construct it as a quadratic extension of $\mathbb{F}_8$ using the primitive polynomial $X^2 + X + \epsilon$, where $\epsilon^3 + \epsilon^2 + 1 = 0$. Therefore, let $\mathbb{F}_{64} = \mathbb{F}_8(\rho)$ where $\rho^2 = \rho + \epsilon$. Then $\rho^9 = \epsilon$, which confirms that $\rho$ is a primitive element. Let $\omega = \rho^{21} = \rho + \epsilon^3 = \omega \in \mathbb{F}_4$.
+
+# Back to the Klein quartic over $\mathbb{F}_8$,
+
+its 24 rational points and its large group of automorphisms. We know a place $(\omega : \omega : 1) = Q_0$ of degree 2. Application of our automorphism of order 7 yields an orbit of seven points of degree 2. These are $Q_i = (\omega/\epsilon^i, \epsilon^{2i}\omega : 1)$ where the subscript $i$ is taken mod 7. We wish to evaluate at all 24 rational points and also at 2 of the points $Q_i$ of degree 2. We therefore choose $G = (k + 2)(A - B)$ where $A$ is a point of degree $m + 1$, and $B$ is a point of degree $m$ where $m \ge 2$. Then $deg(G) = k + 2$. Consider $L(G)$. Riemann-Roch shows that $dim(G) = k$ if $k > 4$. We can evaluate $f \in L(G)$ at all rational points. Let us also evaluate at $Q_0$ and $Q_1$ (we choose $B$ different from $Q_0, Q_1$). Those values are in $\mathbb{F}_{64}$, which we concatenate with an inner code $[3, 2, 2]_8$. The values of the modified evaluation are in $\mathbb{F}_8^{24+2\times3} = \mathbb{F}_8^{30}$. Let us do this for $7 \le k \le 9$. Our basic mechanism shows that the resulting codes have parameters $[30, 7, 19]_8$, $[30, 8, 18]_8$ and $[30, 9, 17]_8$, respectively. If we choose $G = mQ_2$ instead (of degree $2m$), we obtain, for example, $[30, 8, 18]_8$ and $[30, 10, 16]_8$. Those codes form a chain, as $G$ is an effective divisor. We can apply construction X and obtain $[33, 10, 18]_8$.

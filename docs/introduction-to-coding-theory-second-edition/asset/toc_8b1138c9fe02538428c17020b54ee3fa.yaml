@@ -1,0 +1,14 @@
+level_changes:
+- line: 258
+  before: 2
+  after: 1
+- line: 2924
+  before: 2
+  after: 1
+- line: 8916
+  before: 2
+  after: 1
+text_changes:
+- line: 108
+  before: 泰勒与弗朗西斯
+  after: Taylor & Francis

@@ -1,0 +1,106 @@
+
+## 7.3 Definition.
+
+Let V be a set of v objects and ℬ a family of subsets of V, where each such subset (a block) has k elements. We say that ℬ is a t-design with replication number λ if the following holds: Each set T ⊂ V of t elements is in precisely λ blocks. The parameters of such a t-design are written t − (v, k, λ). In the case of λ = 1 one speaks of a Steiner system and writes S(t, k, v) instead of t − (v, k, 1).
+
+We can derive a 5-design from our code 𝒢₂₄, as follows: As underlying set, use the 24 coordinates. Identify each word of weight i with a subset of cardinality i : those coordinates where the entry is 1. Take as blocks the 759 subsets (called octads) corresponding to the words of weight 8. This defines a Steiner system S(5, 8, 24) (see Exercise 7.5).
+
+## 7.4 Theorem.
+
+The 759 octads of the extended binary Golay code [24, 12, 8]₂ are the blocks of a design S(5, 8, 24). It is known as the large Witt design.
+
+We have seen that the cyclic code 𝒢₂₃ and its lengthening 𝒢₂₄ are highly interesting codes. In fact cyclic codes are one of the most widely used families of codes. The traditional theory of cyclic codes uses notation and results from ring theory (rings are an important type of algebraic structure). A different approach uses deeper knowledge of finite fields. The theory of cyclic codes is a core topic of Part II, in particular Chapters 12 and 13.
+
+A particularly important family of designs is the projective geometries. In Part II we are going to make heavy use of these structures. The geometric description of linear codes, another core topic of Part II, is based on projective geometries (see in particular Chapter 17).
+
+We start by describing the projective planes PG(2, q): start from an arbitrary finite field 𝔽_q. Consider the space V = 𝔽_q³, a three-dimensional space. Define
+
+- **points:** the one-dimensional subspaces of V,
+- **lines:** the two-dimensional subspaces of V.
+
+As V has q³ − 1 nonzero vectors, and each one-dimensional space has q − 1 nonzero vectors, the total number of points is (q³ − 1)/(q − 1) = q² + q + 1. The same counting method shows that each line has (q² − 1)/(q − 1) = q + 1 points. The most important property of this geometry is the following: any two different points are on precisely one common line. This fact is clear, as any two one-dimensional spaces generate a two-dimensional space. We conclude that PG(2, q), the classical projective plane of order q, is a design S(2, q + 1, q² + q + 1). Design theory is an important branch of modern combinatorial theory. The basic axiom is a uniformity property reminiscent of the definition of orthogonal arrays. In fact, one of the origins of combinatorial design theory is in statistics and in particular in the design of experiments.
+
+## Exercises 7
+
+7.1. Show that the all-1 word belongs to the extended binary Golay code [24,12,8]₂.
+
+7.2. Let C be a binary linear code, C ⊆ C⊥. Assume there is a basis of C all of whose elements have weights divisible by 4 (in other words, a generator matrix all of whose rows have weight divisible by 4). Show that all weights of codewords are multiples of 4.
+
+7.3. Find a generator matrix of the form M = (I|P) for G₂₄.
+
+7.4. Determine the weight distribution of G₂₄.
+
+7.5. Use the value A₈ = 759 to show the following: for each set of 5 of the 24 coordinates of G₂₄ there is exactly one codeword of weight 8 (a so-called octad) with entries 1 in those 5 coordinates.
+
+7.6. Find a picture of the Fano plane PG(2,2).
+
+7.7. For every prime-power q, there is a design S(2,q,q²) (the affine plane of order q). Determine the number of blocks.
+
+7.8. The SETS from Section 3.6 form a 2-design. Find its parameters.
+
+7.9. The extended binary Golay code [24,12,8]₂ has A₁₂ = 2576 (2576 codewords have weight 12). The corresponding subsets are called dodecads. The 2576 dodecads form the blocks of a design 2 − (24,12,λ). What is λ? In fact, this is a 5-design. What is λ now?
+
+## Chapter 8
+
+### Shannon entropy and the basics of information theory
+
+**Basic concepts:** Idea, definition, basic properties and characterization of Shannon entropy. Link with binomials.
+
+Recall the definition of a sample space from Section 3.5. Such a (finite) sample space is defined by a probability distribution, nonnegative numbers $p_i$ such that $\sum_i p_i = 1$. The entropy is a function which measures the amount of information contained in a sample space.
+
+### 8.1 Definition. Let $p_i$, $i=1,\dots,n$ be a probability distribution. The **Shannon entropy** $H$ is defined by
+
+$H(p_1,p_2,\dots,p_n) = - \sum_{i=1}^{n} p_i \cdot \log(p_i).$
+
+Here, as always in information theory, the logarithm is taken base 2. We put $0 \cdot \log(0) = 0$. Imagine a source which at every unit of time emits one of $n$ symbols, called letters, according to the given probability distribution. That is, the probability for letter $i$ to be chosen is $p_i$. We claim that the entropy function is a measure for the average amount of information per letter generated by this source. The unit of information is the **bit**, the amount of information in the choice between two equiprobable events: $H(\tfrac12,\tfrac12)=1$.
+
+### 8.2 Theorem. Let $H_n : \mathbb{R}_+^n \longrightarrow \mathbb{R}_+$, $n=2,3,\dots$ be a family of functions satisfying the following properties:
+
+- Each $H_n$ is continuous.
+- $H_2(1/2,1/2)=1$ (one bit).
+- There is a continuous monotonically increasing function A(x) : ℝ₊ ⟶ ℝ₊ such that A(n) = Hₙ(1/n, ..., 1/n).
+- Hₙ(p₁,p₂,...,pₙ) = H₂(p₁,1−p₁) + (1−p₁)·Hₙ₋₁(p₂/(1−p₁),...,pₙ/(1−p₁)). Here the numbers pᵢ describe a probability distribution.
+
+Then Hₙ(p₁,...,pₙ) is the entropy function.
+
+This theorem justifies why we consider the entropy function from Definition 8.1 as the measure of information we were looking for. The proof is not hard. It constitutes Exercises 8.6 through 8.8.
+
+The whole idea behind the definition of entropy is in the last property of Theorem 8.2. It says that the average amount of information contained in the choice between certain symbols according to a given probability distribution is not changed when the information is revealed in various steps.
+
+For example, consider H(½,¼,¼). Combine the second and third event into one event. The information contained in the choice between the first and the block of the remaining events is H(½,½)=1. There is a probability of 1/2 that the result is the second or third event. The choice between events two and three has an entropy of 1 bit again. In order to obtain H(½,¼,¼), we have to add 1 (the contribution of the first stage) and ½·1, the entropy contained in the choice of the second stage multiplied by the probability 1/2 that this situation really arises. The result H(½,¼,¼)=1.5 is in accordance with our formula. As another example consider
+
+H(½,¼,⅛,⅛)=½+¼·2+⅛·3+⅛·3=1.75.
+
+It is clear that this entropy should be larger than H(½,½)=1. Also, it should be expected that the maximum entropy given by a sample space of n points is obtained by the uniform distribution, and hence is H(1/n,1/n,...)=log(n). In the case n=4 this yields a maximum entropy of log(4)=2. Our entropy in the above example is indeed 1.75<2.
+
+Consider the case of four equiprobable events. The corresponding entropy is H(¼,¼,¼,¼)=log(4)=2. Now divide these four events into two blocks, one single event and a group of the remaining three. By the basic property, the entropy is H(¼,¾)+¼·0+¾log(3). We can solve for H(¼,¾) and obtain H(¼,¾)=2−¾log(3). This is in accordance with the general formula, which reads
+
+H(¼,¾)=¼log(4)+¾log(4/3).
+
+The case of a sample space of just 2 points plays a particular role in coding theory.
+
+### 8.3 Definition. The binary entropy function is defined by
+
+h(x)=−x log(x)−(1−x)log(1−x) (for 0 ≤ x ≤ 1).
+
+![](img/2fa0633d317c0872f05788febf717c11_128_0.png)
+
+FIGURE 8.1: Binary entropy function
+
+Observe that $h(x)=H(x,1-x)$ is indeed a special case of the Shannon entropy. We have $h(0)=0$, $h(1/2)=1$, and $h$ is increasing on the interval $[0,1/2]$.
+
+There is a close relationship between the binary entropy function and binomials. As a tool we use the Stirling formula, which is frequently used in calculus and statistics.
+
+### 8.4 Lemma. The Stirling formula for factorials states that
+
+$n! \sim \sqrt{2\pi n}(n/e)^n$,
+
+*meaning that the quotient of left side and right side approaches 1 for $n \to \infty$.*
+
+A proof is in Feller [84]. Now let $n,m \to \infty$ such that $m/n \to p$. We want to check how the binomial coefficient $\binom{n}{m}=\frac{n!}{m!(n-m)!}$ behaves. By the Stirling formula we have
+
+$\displaystyle \lim\left(\frac{1}{n}\log\binom{n}{m}\right)=\lim\left(\log(n)-\frac{m}{n}\log(m)-\frac{n-m}{n}\log(n-m)\right)=$
+
+$\displaystyle \lim\left(-\frac{m}{n}\log\left(\frac{m}{n}\right)-\frac{n-m}{n}\log\left(\frac{n-m}{n}\right)\right)=h(p).$
+
+We have seen the following:

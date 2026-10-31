@@ -1,0 +1,15 @@
+every $k$. The algorithm **MC-CHOICE** is defined as follows:
+
++   - Compute in parallel the valencies $d_i$ for the vertices $i \in V$.
++   - Define $|V|$ statistically independent random variables $f_i : V \longrightarrow \{0,1\}$, as follows: If $d_i = 0$, then $f_i = 1$. If $d_i \neq 0$, then $f_i = 1$ with probability $1/(2d_i)$. In this way $V$ and its power set become probability spaces. The higher the valency of vertex $i$ the smaller the probability that we include it in a large independent set. Compute in parallel for each $i \in V$ a value $f_i \in \{0,1\}$, according to these probabilities. This defines the set $X = \{i \mid i \in V, f_i = 1\}$.
++   - Compute in parallel for each edge $\{i,j\} \in E$:
++     if $\{i,j\} \in X$, then remove $i$ from $X$ such that $d_i \le d_j$.
++   - The resulting set $X$ of vertices is the output of the algorithm, unless $X$ is empty. In that case, choose as $X$ a set with just one vertex.
+
+Now consider the algorithm which uses **MC-CHOICE** in each step. We want to bound the number of steps needed. This is the value of $k$ for which $G_k$ becomes empty. Because of the random element in the algorithm, this number is not a function of the input data but a random variable. We are interested in its expected value. In order to do this, one has to study how the number $e_k$ of edges in $E_k$ decreases with $k$. The details are in [137]. The result is as follows: the expected value of the $e_k$ satisfies $E(e_{k+1}) \le \frac{7}{8}E(e_k)$. The expected number of steps $k$ needed to obtain an empty graph $G_k$, and hence to terminate the algorithm, is therefore $O(\log|E|) = O(\log|V|)$.
+
+# Derandomization of the Monte Carlo algorithm
+
+The aim is to reduce or ideally to eliminate the stochastic element from the **CHOICE** step without changing the expected behavior of the resulting algorithm. Let us look back at what we did in the preceding subsection: let $k$ be fixed and $H = (V,E) = (V_k, E_k)$ the given graph. We gave $\mathbb{F}_2^V$ the structure of a probability space as a direct product of the spaces $\Omega_i = \mathbb{F}_2$, with probabilities $p_i(1)=p_i=\frac{1}{2d_i}$, $p_i(0)=1-p_i$. The algorithm is based on a random choice of an $n$-tuple from this space $\mathbb{F}_2^n$, where $n = |V|$. The corresponding random variables $f_i$ where $f_i(x_1,x_2,\ldots,x_n)=x_i$ are statistically independent.
+
+We want to change the $f_i$ just a little bit and represent the new random variables on a much smaller probability space. The new algorithm will be based on a random choice from this small sample space. This will yield a drastic reduction of the stochastic element. Alternatively we can test each element of the probability space in parallel. This then yields a deterministic algorithm. One speaks of **complete derandomization** in that case. The
