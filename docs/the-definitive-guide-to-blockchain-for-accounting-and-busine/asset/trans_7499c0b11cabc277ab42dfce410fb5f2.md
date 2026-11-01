@@ -1,0 +1,39 @@
+
+There are many blockchain platforms that have been implemented for different purposes. Blockchain platforms provide an ecosystem of different technologies that solves a specific problem. Bitcoin is one such platform and was implemented to facilitate exchange of currency between participants. Many more platforms have emerged since Bitcoin. Some of the common platforms are shown in [图 3.5](#CH003.html#fig5) and a brief description of some are discussed in this section.
+
+### 图 3.5：区块链平台。
+![image](images/C03-FIG5.jpg)
+
+At the age of 19, a Russian-Canadian teenager Vitalik Buterin published the white paper, which went on to create Ethereum in 2015 as an open-source blockchain platform. It was the second public network and is an open and adaptable platform that allows anyone to build decentralized applications and network. The concept of smart contracts, though around for two decades, was popularized through the Ethereum platform and has become a building block for blockchain concept. Since its introduction, Ethereum has become the largest blockchain network with over 300,000 developers and over 2,000 decentralized applications (dApp).[^(10)](#CH003.html#fn10) There are many new solutions, networks and currencies that are built on the Ethereum platform.
+
+Hyperledger is a collaborative effort between different companies in various industries including, banking, e-commerce, Internet of Things (IoT), supply chains, manufacturing and technology. One of the successful projects is the Hyperledger-Fabric developed by IBM enabling business to business transactions. Hyperledger-Fabric provides the infrastructure that allows businesses to quickly and easily create their own private networks and data-ledger.
+
+Other common platforms are shown in [图 3.5](#CH003.html#fig5), and a brief description and their websites for a subset of those are as follows:
+* NEM (nem.io) is a platform to develop permissioned, private blockchain and uses a novel consensus mechanism: proof of importance.
+* EOS (eos.io) was launched in June 2018 as an open-source software and supports both private and public blockchain.
+* Corda ([corda.net](http://corda.net)) is another open-source blockchain provider launched in November 2016 and was developed by R3 in collaboration with over 200 technology and industry partners. It enables private transactions and immediate finality.
+* IPFS (ipfs.io) is a peer-to-peer hypermedia protocol designed to make the web faster, safer and more open through incorporation of blockchain technology.
+* Quorum ([goquororum.com](http://goquororum.com)) is an open-source blockchain platform that is based on Ehtereum. It provides full-service support to its customers.
+* IOTA ([www.iota.org](http://www.iota.org)) is an open-source distributed ledger designed to power the IoT with feeless transactions and a scalable network.
+* Open Chain ([openchain.org](http://openchain.org)) is a distributed ledger system that caters to organizations wishing to manage digital assets. It uses partitioned consensus to validate transactions in its platform.
+* NEO ([neo.org](http://neo.org)), according to their website, is a “non-profit community-based blockchain project that … digitize assets, to automate the management of digital assets using smart contracts, and to realize a ‘smart economy’ with a distributed network.”
+* Mongo DB ([mongodb.com](http://mongodb.com)) is a document-based distributed database built for the cloud era.
+
+### 3.8. 区块链上的大富翁
+To better understand the application and power of blockchain technology, consider the following thought experiment. Imagine playing the popular Monopoly game, but without cash transactions. Imagine the game is played as usual, but each and every player keeps detailed records of their transactions throughout the game, only to be settled at the end of the game. Each player maintains their personal ledger, and only has access to their ledger and not that of any other player until the end of the game. From an accounting perspective, each player prepares journal entries, books those entries into a ledger, through the traditional method of debits and credits, and prepares an income statement and a balance sheet. Suppose six accountants are playing the game, what are the chances that all the six balance sheets will balance and that the “Universal” balance sheet of the game will balance as well. There are bound to be disputes and arguments at the end of the game on one or more previous transactions.
+
+In a blockchain enabled Monopoly game the recording of data is digital, and the data-ledger is shared with all players. The first block, or the genesis block, records the start of the game, that of each player joining, receiving cash and some properties at the start of the game. As the game proceeds, each roll of the dice and each move of each player is recorded as data. Once other players agree to the transaction, based on a built-in consensus mechanism, the data gets transcribed to a block. After a series of transactions, say each round, the block gets appended to the previous block, forming the blockchain. Thus, in this simplification, rather than maintaining six separate ledgers only one data-ledger needs to be maintained. Each player is still expected to keep track of their own transactions and aggregate those. However, the unified data-ledger ensures that no player can change any of the previous agreed outcomes, and thereby cannot cheat. Moreover, disputes caused by manual errors or difference in interpretation could easily be resolved by referring back to the transaction recorded on the immutable blockchain.
+
+Recently, some investors invested a combined $2 million in Uplandme to develop the digital Monopoly on the EOS blockchain.[^(11)](#CH003.html#fn11) Based on the key aspects of Monopoly, the game will enable players to buy, sell, trade imaginary properties based on real world address. However, instead of paper cards, the game uses non-fungible tokens to confer ownership of an asset. The game is currently in the Beta version, where players are able to trade properties in virtual San Francisco.
+
+Hasbro, the corporate owners of Monopoly, are not far behind. It too is committed to build a decentralized and community autonomous game platform.[^(12)](#CH003.html#fn12) It is attempting to solve some existing problems with online games through its integration of blockchain and through forming a community ecosystem. They too are looking at developing “Monopoly Classic” that will be available for playing online. They are incorporating many aspects of blockchain technology, such as the consensus mechanism and digitally shared ledger.
+
+### 3.9. 摘要
+### 图 3.6：关键术语和定义。
+![image](images/C03-FIG6.jpg)
+
+In this chapter, we presented non-technical definitions of basic blockchain terminology. Some commonly used words have been adopted in blockchain nomenclature with vastly different meaning. These differences in nuances are important in fully comprehending the scope and functionality of blockchain. Additionally some terms, with established meaning and usage, have been misused in the context of blockchain. We attempted to clarify those confusions, prior to discussing the blockchain concept in greater technical detail.
+
+This chapter also discussed the various types of blockchain, their properties and advantages. It also presented a brief description of many current blockchain platforms. The adaptation of the popular board game Monopoly to harness the capability of blockchain technology has the potential of increasing the general public’s comfort level with this new technology. Finally, [图 3.6](#CH003.html#fig6) provides a pictorial summary of the key concepts of blockchain and their definitions.
+
+### 注释

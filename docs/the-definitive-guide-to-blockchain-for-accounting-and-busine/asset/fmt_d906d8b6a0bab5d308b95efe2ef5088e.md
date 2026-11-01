@@ -1,0 +1,39 @@
+
+### Fig. 12.6: The Overall IT Controls Approach.
+
+![image](images/C12-FIG6.jpg)
+
+These IT controls are broken down into the two broad categories we discussed above for all controls, the “Corporate” or Entity Level controls and the “Application” or Transaction Level controls. The core IT control categories are the IT general and application controls which form the basis for most System Audits of IT applications, System and Organization Controls (SOC) reporting under the SSAE-18 performed by CPA firms, ISO 27001 a prominent security standard for IT and other respected IT control standards. Section 404 of Sarbanes–Oxley Act signed by President G. W. Bush in 2002 deals with the effective assessment of ICFR and specifically emphasis the importance of sound IT controls – which if not designed properly or not operating effectively can result in a significant deficiency or even a material weakness for the entity being audited. Germane to the importance of sound IT controls at all levels is the underlying principle that if the information or application of any type is processed on is not secure, accurate and complete then there is no basis for reliance on any information emanating from that system.
+
+The IT internal control categories and the common auditing methodologies for providing assurance on IT processes and systems are universal and can be effectively adapted for blockchains – albeit the risks and controls will be different. What must change is the often manual legacy audit practice/programs used by external audit firms and internal audit staffs that fail to leverage automated analytics and population-based continuous monitoring. Blockchains and distributed ledgers, by their very nature, are automated information systems secured by automated cryptology. As outlined earlier in this chapter, the concept of using periodic sample-based auditing procedures on large central or distributed databases is “woefully inadequate” in delivering an appropriate level of control assurance to mitigate the risks of fraud and abuse.
+
+## 12.4. AUDITING BLOCKCHAINS/DISTRIBUTED NETWORKS
+
+The traditional methodology and approach for developing risk-based internal controls and auditing outlined above is applicable to providing assurance on blockchains and distributed ledgers. An objective centric, risk-based and top-down approach to identify and review the internal controls on distributed ledgers is certainly appropriate, however, the methods and practice of providing assurance on distributed ledgers needs to leverage a very different approach and toolset. Blockchains represent a very different architecture from traditional central database structures, with a new set of capabilities and risks which result in a very different internal controls environment.
+
+The pros and cons of auditing a blockchain versus a traditional central database system are as follows:
+
+*Pros*:
+* Much higher level of control precision and formalization.
+* Security and sustainability via distributed ledgers – no single point of failure.
+* Fully automated and integrated ecosystem secured by cryptography.
+* Consensus helps prevent simple collusion – instead of “4 eyes” – 8, 100 and 1,000 eyes!
+
+*Cons*:
+* BC/DLT is new and still suspect.
+* Objectives, risks and controls are very different from central database processes.
+* Limited technical expertise/experience in audit and IT around blockchains.
+
+The automated nature of a blockchain facilitates the use of analytics and formalized automated controls. Consider that the protocol code in a blockchain network is a set of automated preventive analytics which review/approve every block of transaction before any information is even submitted to the ledger. A blockchain ledger is much more secure than a central database due to cryptography, decentralization and the consensus mechanism which assures more than a common “4-eyes” review of every transaction. For example, most public or private blockchain have 8, 100, 1,000 or more eyes reviewing every transaction. A blockchain or distributed computer generally has no data center, central computer or single point of system failure.
+
+The challenges of auditing blockchains and distributive ledgers mostly revolve around this being a new emerging technology. Auditors have limited experience and traction performing to scale in enterprise applications. As we will discuss later, objectives, risks, controls and assertions are very different for blockchains as compared to central database applications. There is also a limited pool of knowledgeable technical experts who understand distributed ledgers and the control assurance processes which need to be in place to monitor them. None of these constraints on the adoption and development of blockchains are insurmountable, but it will take time to work out the kinks and develop sustainable internal control and audit processes for blockchains and distributed ledgers.
+
+### 12.4.1. Securing a Blockchain
+
+As discussed above, BC/DLT, by design, are much different than traditional central databases. Blockchains are significantly more secure than traditional central databases as a result of protocol analytics, consensus mechanism, cryptology and the distributed nature of the ledger. However, there are new risks, assertions and controls that must be applied to auditing blockchain networks. BC/DLT networks are often open source with no clear owner or central authority (i.e., public blockchains) or the participants/nodes are cross organizational representing more than one sovereign organization (i.e., private blockchains). This section will distinguish between the control implications of public and private blockchains. We will focus primarily on the optimal approach to the system audit with the implication that if the blockchain cannot be trusted, then neither can the information emanating from it.
+
+Public or non-permissioned blockchains represent the most prevalent application of distributed ledgers. Bitcoin, Ethereum, Litecoin, etc., are examples of public or non-permissioned BC/DLT networks. Almost anyone can join and participate in a public network. Many public blockchains such as Bitcoin are large international networks with millions of participants transacting with cryptocurrency primarily for investing or other financial services applications. Auditing a large, public, worldwide distributed network is a daunting task for any auditor or audit firm – it is a bit like “auditing the internet”! However, when material transactions by an individual or entity are being performed on a public blockchain that network needs to be reviewed and accredited to rely on the information transacting and used for financial reporting off that network.
+
+Private or permissioned blockchains are a newer entrant into the BC/DLT network world. These generally represent smaller earlier stage applications with use-cases and some large projects being developed in the areas of supply chain management, insurance, food safety as well as financial services. Private blockchains are generally much smaller than the large public chains. In private blockchains the participants must be invited or permissioned onto the chain and private chains may even be dedicated to transacting just within one company. For example, private blockchains can be used in a large multinational company for consolidation of division reporting. Performing a system audit on a private BC/DLT network may be more efficient on a large public network. This is because a private or permissioned blockchain has only invited and trusted participants. Complexities may exist if the private chain is comprised of multiple entities and jurisdictions or of competitive participants. In those instances, there could be additional issues such as which party is responsible for maintaining the blockchain and who will bear the costs of auditing the network, etc.
+
+### 12.4.2. Risks and Limitations

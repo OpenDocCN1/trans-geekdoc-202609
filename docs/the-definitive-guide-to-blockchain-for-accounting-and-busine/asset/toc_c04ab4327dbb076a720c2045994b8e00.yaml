@@ -1,0 +1,134 @@
+level_changes:
+- line: 204
+  before: 2
+  after: 1
+- line: 206
+  before: 3
+  after: 2
+- line: 242
+  before: 3
+  after: 2
+- line: 652
+  before: 3
+  after: 2
+- line: 666
+  before: 3
+  after: 2
+- line: 731
+  before: 3
+  after: 2
+- line: 741
+  before: 3
+  after: 2
+- line: 786
+  before: 3
+  after: 2
+- line: 800
+  before: 3
+  after: 2
+- line: 822
+  before: 2
+  after: 1
+- line: 824
+  before: 3
+  after: 2
+- line: 1020
+  before: 2
+  after: 1
+- line: 1022
+  before: 3
+  after: 2
+- line: 1032
+  before: 3
+  after: 2
+- line: 1149
+  before: 3
+  after: 2
+- line: 1169
+  before: 3
+  after: 2
+- line: 1313
+  before: 3
+  after: 2
+- line: 1319
+  before: 3
+  after: 2
+- line: 1444
+  before: 3
+  after: 2
+- line: 1448
+  before: 4
+  after: 3
+- line: 1467
+  before: 4
+  after: 3
+- line: 1485
+  before: 3
+  after: 2
+- line: 1835
+  before: 3
+  after: 2
+- line: 2233
+  before: 2
+  after: 1
+- line: 2237
+  before: 3
+  after: 2
+- line: 2544
+  before: 3
+  after: 2
+- line: 2598
+  before: 2
+  after: 1
+- line: 2600
+  before: 3
+  after: 2
+- line: 2757
+  before: 3
+  after: 2
+- line: 2823
+  before: 3
+  after: 2
+- line: 2839
+  before: 4
+  after: 3
+- line: 3021
+  before: 3
+  after: 2
+- line: 3024
+  before: 4
+  after: 3
+- line: 3033
+  before: 4
+  after: 3
+- line: 3159
+  before: 3
+  after: 2
+- line: 3169
+  before: 3
+  after: 2
+text_changes:
+- line: 84
+  before: 9 一个透明的新世界：道德来源的矿物供应链 贡献者：*Nathan Williams and David Lee Williams*
+  after: 9 一个透明的新世界：道德采购的矿产供应链 贡献者：*Nathan Williams and David Lee Williams*
+- line: 204
+  before: '1'
+  after: 1 引言
+- line: 648
+  before: '4'
+  after: 4 共识机制
+- line: 1020
+  before: 6 TOKENIZATION
+  after: 6 代币化
+- line: 1022
+  before: 6.1 INTRODUCTION
+  after: 6.1. 引言
+- line: 1032
+  before: 6.2 UNTAPPED POTENTIAL OF TOKENIZATION
+  after: 6.2. 代币化的未开发潜力
+- line: 1074
+  before: 2. 现金流方法
+  after: 6.4.2. 现金流方法
+- line: 1307
+  before: '7'
+  after: 7 评估区块链用例的框架
