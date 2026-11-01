@@ -1,0 +1,39 @@
+
+The simplification in the last line follows because `w0,5` and `w4,5 a4` do not depend on `w3,5`, nor does the coefficient of `w3,5`, `a3`.
+
+The slightly more difficult case involves a weight such as `w1,3` that is not directly connected to the output unit. Here, we have to apply the chain rule one more time. The first few steps are identical, so we omit them:
+
+```
+$\\begin{array}{l} {\\frac{\\partial}{\\partial w\_{1,3}}Loss\\text{(}h\_{\\mathbf{w}}\\text{)} = - 2(y - \\overset{\\land}{y})g\_{5}^{'}(in\_{5})\\frac{\\partial}{\\partial w\_{1,3}}(w\_{0,5} + w\_{3,5}\\ a\_{3} + w\_{4,5}\\ a\_{4})} \\\\ {\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, = - 2(y - \\overset{\\land}{y})g\_{5}^{'}(in\_{5})w\_{3,5}\\frac{\\partial}{\\partial w\_{1,3}}a\_{3}} \\\\ {\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, = - 2(y - \\overset{\\land}{y})g\_{5}^{'}(in\_{5})w\_{3,5}\\frac{\\partial}{\\partial w\_{1,3}}g\_{3}(in\_{3})} \\\\ {\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, = - 2(y - \\overset{\\land}{y})g\_{5}^{'}(in\_{5})w\_{3,5}g\_{3}^{'}(in\_{3})\\frac{\\partial}{\\partial w\_{1,3}}(in\_{3})} \\\\ {\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, = - 2(y - \\overset{\\land}{y})g\_{5}^{'}(in\_{5})w\_{3,5}g\_{3}^{'}(in\_{3})\\frac{\\partial}{\\partial w\_{1,3}}(w\_{0,3} + w\_{1,3}\\ x\_{1} + w\_{2,3}\\ x\_{2})} \\\\ {\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, = - 2(y - \\overset{\\land}{y})g\_{5}^{'}(in\_{5})w\_{3,5}g\_{3}^{'}(in\_{3})x\_{1}.\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,(22.5)} \\\\ \\end{array}$
+```
+
+So, we have fairly simple expressions for the gradient of the loss with respect to the weights `w3,5` and `w1,3`.
+
+If we define `Δ5 = 2(ŷ – y)g'5(in5)` as a sort of “perceived error” at the point where unit 5 receives its input, then the gradient with respect to `w3,5` is just `Δ5 a3`. This makes perfect sense: if `Δ5` is positive, that means `ŷ` is too big (recall that `g'` is always nonnegative); if `a3` is also positive, then increasing `w3,5` will only make things worse, whereas if `a3` is negative, then increasing `w3,5` will reduce the error. The magnitude of `a3` also matters: if `a3` is small for this training example, then `w3,5` didn’t play a major role in producing the error and doesn’t need to be changed much.
+
+If we also define `Δ3 = Δ5 w3,5 g'3(in3)`, then the gradient for `w1,3` becomes just `Δ3 x1`. Thus, the perceived error at the input to unit 3 is the perceived error at the input to unit 5, multiplied by information along the path from 5 back to 3. This phenomenon is completely general, and gives rise to the term back-propagation for the way that the error at the output is passed back through the network.
+
+**Back-propagation**
+
+Another important characteristic of these gradient expressions is that they have as factors the local derivatives `g'j(inj)`. As noted earlier, these derivatives are always nonnegative, but they can be very close to zero (in the case of the `sigmoid`, `softplus`, and `tanh` functions) or exactly zero (in the case of `ReLUs`), if the inputs from the training example in question happen to put unit `j` in the flat operating region. If the derivative `g'j` is small or zero, that means that changing the weights leading into unit `j` will have a negligible effect on its output. As a result, deep networks with many layers may suffer from a vanishing gradient—the error signals are extinguished altogether as they are propagated back through the network. [第22.3.3节](#Chapter22-03.xhtml#sec22-3-3) provides one solution to this problem.
+
+**Vanishing gradient**
+
+We have shown that gradients in our tiny example network are simple expressions that can be computed by passing information back through the network from the output units. It turns out that this property holds more generally. In fact, as we show in [第22.4.1节](#Chapter22-04.xhtml#sec22-4-1), the gradient computations for any feedforward computation graph have the same structure as the underlying computation graph. This property follows straightforwardly from the rules of differentiation.
+
+We have shown the gory details of a gradient calculation, but worry not: there is no need to redo the derivations in [方程 (22.4)](#Chapter22-01.xhtml#eq22-4) and [(22.5)](#Chapter22-01.xhtml#eq22-5) for each new network structure! All such gradients can be computed by the method of `automatic differentiation`, which applies the rules of calculus in a systematic way to calculate gradients for any numeric program.[1](#Chapter22-10.xhtml#sup22-1) In fact, the method of back-propagation in deep learning is simply an application of `reverse mode differentiation`, which applies the chain rule “from the outside in” and gains the efficiency advantages of `dynamic programming` when the network in question has many inputs and relatively few outputs.
+
+**Automatic differentiation**
+**Reverse mode**
+
+All of the major packages for deep learning provide `automatic differentiation`, so that users can experiment freely with different network structures, activation functions, loss functions, and forms of composition without having to do lots of calculus to derive a new learning algorithm for each experiment. This has encouraged an approach called `end-to-end learning`, in which a complex computational system for a task such as machine translation can be composed from several trainable subsystems; the entire system is then trained in an end-to-end fashion from input/output pairs. With this approach, the designer need have only a vague idea about how the overall system should be structured; there is no need to know in advance exactly what each subsystem should do or how to label its inputs and outputs.
+
+**End-to-end learning**
+
+## 22.2 Computation Graphs for Deep Learning
+
+We have established the basic ideas of deep learning: represent hypotheses as computation graphs with tunable weights and compute the gradient of the loss function with respect to those weights in order to fit the training data. Now we look at how to put together computation graphs. We begin with the input layer, which is where the training or test example `x` is encoded as values of the input nodes. Then we consider the output layer, where the outputs `ŷ` are compared with the true values `y` to derive a learning signal for tuning the weights. Finally, we look at the hidden layers of the network.
+
+### 22.2.1 Input encoding
+
+The input and output nodes of a computational graph are the ones that connect directly to the input data `x` and the output data `y`. The encoding of input data is usually straightforward, at least for the case of factored data where each training example contains values for `n` input attributes. If the attributes are Boolean, we have `n` input nodes; usually false is mapped to an input of 0 and true is mapped to 1, although sometimes –1 and +1 are used. Numeric attributes, whether integer or real-valued, are typically used as is, although they may be scaled to fit within a fixed range; if the magnitudes for different examples vary enormously, the values can be mapped onto a log scale.

@@ -1,0 +1,128 @@
+
+# 索引
+
+## 概念
+
+累积学习过程, [748](#Chapter20-02.xhtml#page_748)
+
+诊断, [418](#Chapter12-05.xhtml#page_418)
+
+工程, [289](#Chapter08-03.xhtml#page_289), [289](#Chapter08-03.xhtml#page_289)–[295](#Chapter08-04.xhtml#page_295), [433](#Chapter13-02.xhtml#page_433)
+
+蕴涵约束, [747](#Chapter20-01.xhtml#page_747)
+
+基于解释的学习, [749](#Chapter20-02.xhtml#page_749)
+
+归纳逻辑编程, [750](#Chapter20-02.xhtml#page_750)
+
+推理行为, [748](#Chapter20-02.xhtml#page_748)–[749](#Chapter20-02.xhtml#page_749)
+
+基于知识的归纳学习, [750](#Chapter20-02.xhtml#page_750)
+
+层级, [228](#Chapter07-01.xhtml#page_228), [265](#Chapter07-08.xhtml#page_265)
+
+基于模型, [418](#Chapter12-05.xhtml#page_418)
+
+先验, [58](#Chapter02-02.xhtml#page_58), [59](#Chapter02-02.xhtml#page_59), [670](#Chapter19-01.xhtml#page_670)
+
+基于相关性的学习, [749](#Chapter20-02.xhtml#page_749), [750](#Chapter20-02.xhtml#page_750)
+
+基于知识的智能体, [226](#Chapter07-00.xhtml#page_226)
+
+基于知识的归纳学习 (KBIL), [750](#Chapter20-02.xhtml#page_750), [767](#Chapter20-05.xhtml#page_767)
+
+基于知识的系统, [40](#Chapter01-03.xhtml#page_40)–[42](#Chapter01-03.xhtml#page_42), [870](#Chapter23-08.xhtml#page_870)
+
+知识编译, [768](#Chapter20-07.xhtml#page_768)
+
+知识表示, [20](#Chapter01-01.xhtml#page_20), [35](#Chapter01-02.xhtml#page_35), [37](#Chapter01-03.xhtml#page_37), [41](#Chapter01-03.xhtml#page_41), [226](#Chapter07-00.xhtml#page_226), [269](#Chapter08-00.xhtml#page_269)–[274](#Chapter08-01.xhtml#page_274), [332](#Chapter10-00.xhtml#page_332)–[361](#Chapter10-08.xhtml#page_361)
+
+对一切, [332](#Chapter10-00.xhtml#page_332)
+
+语言, [227](#Chapter07-00.xhtml#page_227), [264](#Chapter07-07.xhtml#page_264), [269](#Chapter08-00.xhtml#page_269)
+
+不确定, [430](#Chapter13-00.xhtml#page_430)–[432](#Chapter13-01.xhtml#page_432)
+
+知识状态, [405](#Chapter12-01.xhtml#page_405)
+
+## 作者
+
+Knuth, D. E., [86](#Chapter03-02.xhtml#page_86), [221](#Chapter06-08.xhtml#page_221), [267](#Chapter07-09.xhtml#page_267), [330](#Chapter09-07.xhtml#page_330), [985](#Chapter26-12.xhtml#page_985),
+
+Ko, J., [48](#Chapter01-04.xhtml#page_48), [1094](#Bibliography.xhtml#page_1094)
+
+Kober, J., [986](#Chapter26-12.xhtml#page_986), [1101](#Bibliography.xhtml#page_1101)
+
+Kobilarov, G., [334](#Chapter10-01.xhtml#page_334), [357](#Chapter10-08.xhtml#page_357), [1088](#Bibliography.xhtml#page_1088)
+
+Koch, C., [1058](#Chapter28-05.xhtml#page_1058), [1091](#Bibliography.xhtml#page_1091), [1101](#Bibliography.xhtml#page_1101)
+
+Kochenderfer, M. J., [588](#Chapter16-07.xhtml#page_588), [873](#Chapter23-09.xhtml#page_873), [1100](#Bibliography.xhtml#page_1100), [1102](#Bibliography.xhtml#page_1102)
+
+Kociemba, H., [124](#Chapter03-07.xhtml#page_124), [1110](#Bibliography.xhtml#page_1110)
+
+Kocsis, L., [222](#Chapter06-09.xhtml#page_222), [587](#Chapter16-07.xhtml#page_587), [1102](#Bibliography.xhtml#page_1102)
+
+Koditschek, D., [986](#Chapter26-12.xhtml#page_986), [1102](#Bibliography.xhtml#page_1102)
+
+Koehn, P., [931](#Chapter25-08.xhtml#page_931), [1102](#Bibliography.xhtml#page_1102)
+
+Koelsch, S., [1027](#Chapter27-09.xhtml#page_1027), [1102](#Bibliography.xhtml#page_1102)
+
+Koenderink, J. J., [1030](#Chapter27-09.xhtml#page_1030), [1102](#Bibliography.xhtml#page_1102)
+
+Koenig, S., [163](#Chapter04-07.xhtml#page_163), [399](#Chapter11-09.xhtml#page_399), [401](#Chapter11-09.xhtml#page_401), [586](#Chapter16-06.xhtml#page_586), [984](#Chapter26-12.xhtml#page_984), [1098](#Bibliography.xhtml#page_1098), [1102](#Bibliography.xhtml#page_1102), [1113](#Bibliography.xhtml#page_1113)
+
+Kohlberger, T., [48](#Chapter01-04.xhtml#page_48), [1104](#Bibliography.xhtml#page_1104)
+
+Kohli, P., [668](#Chapter18-06.xhtml#page_668), [1102](#Bibliography.xhtml#page_1102)
+
+Kolesky, D. B., [1064](#Chapter29-01.xhtml#page_1064), [1102](#Bibliography.xhtml#page_1102), [1107](#Bibliography.xhtml#page_1107)
+
+Kollar, T., [986](#Chapter26-12.xhtml#page_986), [1114](#Bibliography.xhtml#page_1114)
+
+Koller, D., [222](#Chapter06-09.xhtml#page_222), [428](#Chapter12-09.xhtml#page_428), [473](#Chapter13-07.xhtml#page_473), [478](#Chapter13-07.xhtml#page_478), [516](#Chapter14-07.xhtml#page_516), [517](#Chapter14-07.xhtml#page_517), [551](#Chapter15-09.xhtml#page_551), [587](#Chapter16-07.xhtml#page_587), [611](#Chapter17-02.xhtml#page_611), [637](#Chapter17-06.xhtml#page_637), [666](#Chapter18-06.xhtml#page_666)–[668](#Chapter18-06.xhtml#page_668), [798](#Chapter21-04.xhtml#page_798), [799](#Chapter21-05.xhtml#page_799), [903](#Chapter24-08.xhtml#page_903), [984](#Chapter26-12.xhtml#page_984), [1086](#Bibliography.xhtml#page_1086)–[1088](#Bibliography.xhtml#page_1088), [1090](#Bibliography.xhtml#page_1090), [1095](#Bibliography.xhtml#page_1095), [1097](#Bibliography.xhtml#page_1097), [1099](#Bibliography.xhtml#page_1099), [1101](#Bibliography.xhtml#page_1101), [1102](#Bibliography.xhtml#page_1102), [1106](#Bibliography.xhtml#page_1106), [1108](#Bibliography.xhtml#page_1108),, [1109](#Bibliography.xhtml#page_1109), [1111](#Bibliography.xhtml#page_1111), [1114](#Bibliography.xhtml#page_1114)
+
+Kolmogorov 公理, [411](#Chapter12-02.xhtml#page_411)
+
+Kolmogorov, A. N., [427](#Chapter12-09.xhtml#page_427), [428](#Chapter12-09.xhtml#page_428), [515](#Chapter14-06.xhtml#page_515), [734](#Chapter19-11.xhtml#page_734), [1102](#Bibliography.xhtml#page_1102)
+
+Kolmogorov 复杂度, [734](#Chapter19-11.xhtml#page_734)
+
+Kolobov, A., [588](#Chapter16-07.xhtml#page_588), [667](#Chapter18-06.xhtml#page_667), [1105](#Bibliography.xhtml#page_1105), [1106](#Bibliography.xhtml#page_1106)
+
+Kolter, J. Z., [868](#Chapter23-07.xhtml#page_868), [1102](#Bibliography.xhtml#page_1102)
+
+Koltun, V., [873](#Chapter23-09.xhtml#page_873), [1111](#Bibliography.xhtml#page_1111)
+
+KOMODO (国际象棋程序), [222](#Chapter06-09.xhtml#page_222)
+
+Kondrak, G., [189](#Chapter05-07.xhtml#page_189)–[191](#Chapter05-07.xhtml#page_191), [1102](#Bibliography.xhtml#page_1102)
+
+Konenčý, J., [1043](#Chapter28-03.xhtml#page_1043), [1102](#Bibliography.xhtml#page_1102)
+
+Konolige, K., [190](#Chapter05-07.xhtml#page_190), [360](#Chapter10-08.xhtml#page_360), [636](#Chapter17-06.xhtml#page_636), [984](#Chapter26-12.xhtml#page_984), [985](#Chapter26-12.xhtml#page_985), [987](#Chapter26-12.xhtml#page_987), [1088](#Bibliography.xhtml#page_1088), [1089](#Bibliography.xhtml#page_1089), [1102](#Bibliography.xhtml#page_1102)
+
+Kononova, O., [923](#Chapter25-05.xhtml#page_923), [1115](#Bibliography.xhtml#page_1115)
+
+Kontokostas, D., [357](#Chapter10-08.xhtml#page_357), [1103](#Bibliography.xhtml#page_1103)
+
+Koopmans, T. C., [586](#Chapter16-06.xhtml#page_586), [1102](#Bibliography.xhtml#page_1102)
+
+Korb, K. B., [478](#Chapter13-07.xhtml#page_478), [1102](#Bibliography.xhtml#page_1102)
+
+Koren, S., [735](#Chapter19-11.xhtml#page_735), [1087](#Bibliography.xhtml#page_1087)
+
+Koren., Y., [985](#Chapter26-12.xhtml#page_985), [1088](#Bibliography.xhtml#page_1088)
+
+Korf, R. E., [116](#Chapter03-06.xhtml#page_116), [124](#Chapter03-07.xhtml#page_124)–[127](#Chapter03-08.xhtml#page_127), [163](#Chapter04-07.xhtml#page_163), [221](#Chapter06-08.xhtml#page_221), [399](#Chapter11-09.xhtml#page_399), [1094](#Bibliography.xhtml#page_1094), [1102](#Bibliography.xhtml#page_1102), [1109](#Bibliography.xhtml#page_1109)
+
+Kortenkamp, D., [983](#Chapter26-12.xhtml#page_983), [1091](#Bibliography.xhtml#page_1091)
+
+Koss, E, [983](#Chapter26-12.xhtml#page_983), [1091](#Bibliography.xhtml#page_1091)
+
+Kotthoff, L., [737](#Chapter19-11.xhtml#page_737), [1099](#Bibliography.xhtml#page_1099)
+
+Koutsoupias, E., [160](#Chapter04-06.xhtml#page_160), [266](#Chapter07-09.xhtml#page_266), [1102](#Bibliography.xhtml#page_1102)
+
+Kovacs, D. L., [398](#Chapter11-08.xhtml#page_398), [1102](#Bibliography.xhtml#page_1102)

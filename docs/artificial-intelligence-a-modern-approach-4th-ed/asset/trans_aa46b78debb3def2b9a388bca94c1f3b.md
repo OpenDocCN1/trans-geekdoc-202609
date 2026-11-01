@@ -1,0 +1,227 @@
+
+# 索引
+
+### 累积
+[531](#Chapter15-04.xhtml#page_531), [1078](#Appendix-A-03.xhtml#page_1078)
+
+### 重尾
+[160](#Chapter04-06.xhtml#page_160)
+
+### 混合
+[790](#Chapter21-03.xhtml#page_790)
+
+### Dittmer, S.
+[550](#Chapter15-09.xhtml#page_550), [1093](#Bibliography.xhtml#page_1093)
+
+### 分饼
+[631](#Chapter17-04.xhtml#page_631)
+
+### Dix, J.
+[360](#Chapter10-08.xhtml#page_360), [1089](#Bibliography.xhtml#page_1089)
+
+### `DLV` (逻辑编程系统)
+[360](#Chapter10-08.xhtml#page_360)
+
+### `DNA`
+[134](#Chapter04-01.xhtml#page_134)
+
+### Do, M.
+[47](#Chapter01-04.xhtml#page_47), [399](#Chapter11-09.xhtml#page_399), [1086](#Bibliography.xhtml#page_1086), [1093](#Bibliography.xhtml#page_1093)
+
+### Do, M. B.
+[401](#Chapter11-09.xhtml#page_401), [1093](#Bibliography.xhtml#page_1093)
+
+### `do-calculus`
+[470](#Chapter13-05.xhtml#page_470)
+
+### Doctorow, C.
+[30](#Chapter01-02.xhtml#page_30), [358](#Chapter10-08.xhtml#page_358), [1093](#Bibliography.xhtml#page_1093)
+
+### Dodd, L.
+[891](#Chapter24-03.xhtml#page_891), [1093](#Bibliography.xhtml#page_1093)
+
+## 域
+### 连续
+[167](#Chapter05-01.xhtml#page_167)
+### 元素
+[274](#Chapter08-01.xhtml#page_274)
+### 无限
+[167](#Chapter05-01.xhtml#page_167)
+### 在一阶逻辑中
+[274](#Chapter08-01.xhtml#page_274)
+### 在知识表示中
+[283](#Chapter08-02.xhtml#page_283)
+
+### 域闭包
+[282](#Chapter08-02.xhtml#page_282), [643](#Chapter18-01.xhtml#page_643)
+
+### 域随机化
+[967](#Chapter26-07.xhtml#page_967)
+
+## 支配
+### 随机
+[531](#Chapter15-04.xhtml#page_531), [547](#Chapter15-08.xhtml#page_547)
+### 严格
+[530](#Chapter15-04.xhtml#page_530)
+
+### 占优策略
+[597](#Chapter17-02.xhtml#page_597), [625](#Chapter17-04.xhtml#page_625)
+
+### 占优策略均衡
+[597](#Chapter17-02.xhtml#page_597)
+
+### 被支配的计划 (在 POMDP 中)
+[582](#Chapter16-05.xhtml#page_582)
+
+### 支配 (启发式)
+[117](#Chapter03-06.xhtml#page_117)
+
+### Domingos, P.
+[53](#Chapter01-06.xhtml#page_53), [428](#Chapter12-09.xhtml#page_428), [474](#Chapter13-07.xhtml#page_474), [666](#Chapter18-06.xhtml#page_666), [726](#Chapter19-09.xhtml#page_726), [736](#Chapter19-11.xhtml#page_736), [738](#Chapter19-11.xhtml#page_738), [798](#Chapter21-04.xhtml#page_798), [1093](#Bibliography.xhtml#page_1093), [1096](#Bibliography.xhtml#page_1096), [1110](#Bibliography.xhtml#page_1110)
+
+### Domshlak, C.
+[399](#Chapter11-09.xhtml#page_399), [549](#Chapter15-09.xhtml#page_549), [636](#Chapter17-06.xhtml#page_636), [1088](#Bibliography.xhtml#page_1088), [1099](#Bibliography.xhtml#page_1099)
+
+### Donahue, J.
+[838](#Chapter22-10.xhtml#page_838), [1030](#Chapter27-09.xhtml#page_1030), [1096](#Bibliography.xhtml#page_1096), [1100](#Bibliography.xhtml#page_1100)
+
+### Dong, W.
+[44](#Chapter01-03.xhtml#page_44), [1093](#Bibliography.xhtml#page_1093)
+
+### Dong, X.
+[334](#Chapter10-01.xhtml#page_334), [1093](#Bibliography.xhtml#page_1093)
+
+### Donti, P. L.
+[48](#Chapter01-04.xhtml#page_48), [1110](#Bibliography.xhtml#page_1110)
+
+### Doorenbos, R.
+[329](#Chapter09-07.xhtml#page_329), [1093](#Bibliography.xhtml#page_1093)
+
+### Doran, J.
+[125](#Chapter03-08.xhtml#page_125), [126](#Chapter03-08.xhtml#page_126), [1093](#Bibliography.xhtml#page_1093)
+
+### Dorf, R. C.
+[79](#Chapter02-06.xhtml#page_79), [1093](#Bibliography.xhtml#page_1093)
+
+### Dorigo, M.
+[160](#Chapter04-06.xhtml#page_160), [1093](#Bibliography.xhtml#page_1093)
+
+### Doron, Y.
+[873](#Chapter23-09.xhtml#page_873), [1114](#Bibliography.xhtml#page_1114)
+
+### Doshi, T.
+[1060](#Chapter28-05.xhtml#page_1060), [1087](#Bibliography.xhtml#page_1087)
+
+### Doshi-Velez, R
+[737](#Chapter19-11.xhtml#page_737), [1093](#Bibliography.xhtml#page_1093)
+
+### Dota
+[2](#Publisher.xhtml#page_2), [46](#Chapter01-04.xhtml#page_46), [48](#Chapter01-04.xhtml#page_48)
+
+### 做正确的事
+[175](#Chapter05-02.xhtml#page_175), [22](#Chapter01-01.xhtml#page_22), [26](#Chapter01-02.xhtml#page_26), [57](#Chapter02-01.xhtml#page_57), [519](#Chapter15-01.xhtml#page_519)
+
+### Doucet, A.
+[516](#Chapter14-07.xhtml#page_516), [517](#Chapter14-07.xhtml#page_517), [1085](#Bibliography.xhtml#page_1085), [1091](#Bibliography.xhtml#page_1091), [1093](#Bibliography.xhtml#page_1093), [1108](#Bibliography.xhtml#page_1108)
+
+### Downey, D.
+[906](#Chapter24-08.xhtml#page_906), [1094](#Bibliography.xhtml#page_1094)
+
+### Downs, L.
+[985](#Chapter26-12.xhtml#page_985), [1088](#Bibliography.xhtml#page_1088)
+
+### 下采样
+[813](#Chapter22-03.xhtml#page_813)
+
+### 向下细化性质
+[378](#Chapter11-04.xhtml#page_378)
+
+### Dowty, D.
+[904](#Chapter24-08.xhtml#page_904), [1093](#Bibliography.xhtml#page_1093)
+
+### Doyle, J.
+[79](#Chapter02-06.xhtml#page_79), [190](#Chapter05-07.xhtml#page_190), [359](#Chapter10-08.xhtml#page_359), [360](#Chapter10-08.xhtml#page_360), [549](#Chapter15-09.xhtml#page_549), [550](#Chapter15-09.xhtml#page_550), [1093](#Bibliography.xhtml#page_1093), [1106](#Bibliography.xhtml#page_1106), [1116](#Bibliography.xhtml#page_1116), [1118](#Bibliography.xhtml#page_1118)
+
+### `DPLL`
+[252](#Chapter07-06.xhtml#page_252), [266](#Chapter07-09.xhtml#page_266), [415](#Chapter12-03.xhtml#page_415)
+
+### `DPLL-SATISFIABLE?`
+[252](#Chapter07-06.xhtml#page_252)
+
+### `DQN` (深度 Q 网络)
+[835](#Chapter22-08.xhtml#page_835), [867](#Chapter23-07.xhtml#page_867), [873](#Chapter23-09.xhtml#page_873)
+
+### Drabble, B.
+[402](#Chapter11-09.xhtml#page_402), [1093](#Bibliography.xhtml#page_1093)
+
+### Dragan, A. D.
+[80](#Chapter02-06.xhtml#page_80), [551](#Chapter15-09.xhtml#page_551), [638](#Chapter17-06.xhtml#page_638), [872](#Chapter23-09.xhtml#page_872), [971](#Chapter26-08.xhtml#page_971), [974](#Chapter26-08.xhtml#page_974), [986](#Chapter26-12.xhtml#page_986), [1086](#Bibliography.xhtml#page_1086), [1093](#Bibliography.xhtml#page_1093), [1097](#Bibliography.xhtml#page_1097), [1105](#Bibliography.xhtml#page_1105), [1111](#Bibliography.xhtml#page_1111)
+
+### `DRAGON` (语音识别系统)
+[905](#Chapter24-08.xhtml#page_905)
+
+### Drake, J. R
+[735](#Chapter19-11.xhtml#page_735), [1087](#Bibliography.xhtml#page_1087)
+
+### Draper, D.
+[401](#Chapter11-09.xhtml#page_401), [1094](#Bibliography.xhtml#page_1094)
+
+### Drebbel, C.
+[34](#Chapter01-02.xhtml#page_34)
+
+### Drechsler, R.
+[126](#Chapter03-08.xhtml#page_126), [1094](#Bibliography.xhtml#page_1094)
+
+### Dredze, M.
+[736](#Chapter19-11.xhtml#page_736), [1093](#Bibliography.xhtml#page_1093)
+
+### Dressel, J.
+[1044](#Chapter28-03.xhtml#page_1044), [1060](#Chapter28-05.xhtml#page_1060), [1093](#Bibliography.xhtml#page_1093)
+
+### Dreyfus, H. L.
+[267](#Chapter07-09.xhtml#page_267), [1032](#Chapter28-00.xhtml#page_1032), [1033](#Chapter28-01.xhtml#page_1033), [1093](#Bibliography.xhtml#page_1093)
+
+### Dreyfus, S. E.
+[125](#Chapter03-08.xhtml#page_125), [586](#Chapter16-06.xhtml#page_586), [836](#Chapter22-10.xhtml#page_836), [1033](#Chapter28-01.xhtml#page_1033), [1087](#Bibliography.xhtml#page_1087), [1093](#Bibliography.xhtml#page_1093)
+
+### Driessens, K.
+[871](#Chapter23-09.xhtml#page_871), [1114](#Bibliography.xhtml#page_1114)
+
+### 钻探权
+[537](#Chapter15-05.xhtml#page_537)
+
+### 驾驶辅助
+[980](#Chapter26-10.xhtml#page_980)
+
+### 丢弃 (在神经网络中)
+[823](#Chapter22-05.xhtml#page_823), [838](#Chapter22-10.xhtml#page_838)
+
+### Droppo, J.
+[47](#Chapter01-04.xhtml#page_47), [1117](#Bibliography.xhtml#page_1117)
+
+### Drucker, H.
+[44](#Chapter01-03.xhtml#page_44), [837](#Chapter22-10.xhtml#page_837), [1029](#Chapter27-09.xhtml#page_1029), [1103](#Bibliography.xhtml#page_1103)
+
+### Druzdzel, M. J.
+[475](#Chapter13-07.xhtml#page_475), [1090](#Bibliography.xhtml#page_1090)
+
+### `DT-AGENT`
+[406](#Chapter12-01.xhtml#page_406)
+
+### Du, J.
+[927](#Chapter25-06.xhtml#page_927), [930](#Chapter25-08.xhtml#page_930), [1104](#Bibliography.xhtml#page_1104)
+
+### Du, S. S.
+[837](#Chapter22-10.xhtml#page_837), [1093](#Bibliography.xhtml#page_1093)
+
+### 对偶图
+[168](#Chapter05-01.xhtml#page_168)
+
+### 二元论
+[24](#Chapter01-02.xhtml#page_24)
+
+### 双重用途
+[1041](#Chapter28-03.xhtml#page_1041)
+
+### Dubois, D.
+[478](#Chapter13-07.xhtml#page_478), [1093](#Bibliography.xhtml#page_1093)

@@ -1,0 +1,40 @@
+
+where `RecCPT` is a separately defined conditional probability table with 2 × 5 × 5 = 50 rows, each with 5 entries. For the purposes of illustration, we’ll assume that an honest recommendation for a book of quality `q` from a person of kindness `k` is uniformly distributed in the range $\\left\\lbrack ⎿\\frac{q + k}{2}⏌,⎾\\frac{q + k}{2}⏋ \\right\\rbrack$.
+
+The semantics of the `RPM` can be obtained by instantiating these dependencies for all known constants, giving a Bayesian network (as in [Figure 18.2(b)](#Chapter18-01.xhtml#fig18-2)) that defines a joint distribution over the `RPM`’s random variables.[3](#Chapter18-06.xhtml#sup18-3)
+
+The set of possible worlds is the Cartesian product of the ranges of all the basic random variables, and, as with Bayesian networks, the probability for each possible world is the product of the relevant conditional probabilities from the model. With `C` customers and `B` books, there are `C` `Honest` variables, `C` `Kindness` variables, `B` `Quality` variables, and `BC` `Recommendation` variables, leading to 2C5C+B+BC possible worlds. With ten million books and a billion customers, that’s about 107 × 10 worlds. Thanks to the expressive power of `RPMs`, the complete probability model still has only fewer than 300 parameters—most of them in the `RecCPT` table.
+
+We can refine the model by asserting a context-specific independence (see [page 438](#Chapter13-02.xhtml#page_438)) to reflect the fact that dishonest customers ignore quality when giving a recommendation; moreover, kindness plays no role in their decisions. Thus, `Recommendation(c, b)` is independent of `Kindness(c)` and `Quality(b)` when `Honest(c)` = false:
+
+$\\begin{array}{l} {Recommendation\\text{(}c,b\\text{)~} \\sim} \\\\ \\\\ \\\\ \\end{array}\\,\\,\\,\\,\\begin{array}{l} {\\mathbf{if}\\ Honest\\text{(}c\\text{)~}\\mathbf{then}} \\\\ {\\,\\,\\,\\,\\,\\, HonestRecCPT\\text{(}Kindness\\text{(}c\\text{),~}Quality\\text{(}b\\text{))}} \\\\ {\\mathbf{else}\\ \\left\\langle \\text{0}\\text{.4,0}\\text{.1,0}\\text{.0,0}\\text{.1,0}\\text{.4} \\right\\rangle\\ \\text{.}} \\\\ \\end{array}$
+
+This kind of dependency may look like an ordinary if-then-else statement in a programming language, but there is a key difference: the inference engine doesn’t necessarily know the value of the conditional test because `Honest(c)` is a random variable.
+
+We can elaborate this model in endless ways to make it more realistic. For example, suppose that an honest customer who is a fan of a book’s author always gives the book a 5, regardless of quality:
+
+$\\begin{array}{l} {Recommendation\\text{(}c,b\\text{)~} \\sim} \\\\ \\\\ \\\\ \\\\ \\end{array}\\,\\,\\,\\,\\,\\,\\begin{array}{l} {\\mathbf{if}\\ Honest\\text{(}c\\text{)~}\\mathbf{then}} \\\\ {\\,\\,\\,\\,\\,\\,\\mathbf{if}\\ Fan\\text{(}c\\text{,}\\, Author\\text{(}b\\text{))~}\\mathbf{then}\\ Exactly\\text{(5)}} \\\\ {\\,\\,\\,\\,\\,\\mathbf{else}\\ HonestRecCPT\\text{(}Kindness\\text{(}c\\text{),~}Quality\\text{(}b\\text{))}} \\\\ {\\mathbf{else}\\ \\left\\langle \\text{0}\\text{.4,0}\\text{.1,0}\\text{.0,0}\\text{.1,0}\\text{.4} \\right\\rangle} \\\\ \\end{array}$
+
+Again, the conditional test `Fan(c, Author(b))` is unknown, but if a customer gives only 5s to a particular author’s books and is not otherwise especially kind, then the posterior probability that the customer is a fan of that author will be high. Furthermore, the posterior distribution will tend to discount the customer’s 5s in evaluating the quality of that author’s books.
+
+In this example, we implicitly assumed that the value of `Author(b)` is known for every `b`, but this may not be the case. How can the system reason about whether, say, `C1` is a fan of `Author(B2)` when `Author(B2)` is unknown? The answer is that the system may have to reason about all possible authors. Suppose (to keep things simple) that there are just two authors, `A1` and `A2`.. Then `Author(B2)` is a random variable with two possible values, `A1` and `A2`, and it is a parent of `Recommendation(C1, B2)`. The variables `Fan(C1, A1)` and `Fan(C1, A2)` are parents too. The conditional distribution for `Recommendation(C1, B2)` is then essentially a multiplexer in which the `Author(B2)` parent acts as a selector to choose which of `Fan(C1, A1)` and `Fan(C1, A2)` actually gets to influence the recommendation. A fragment of the equivalent Bayes net is shown in [Figure 18.3](#Chapter18-01.xhtml#fig18-3). Uncertainty in the value of `Author(B2)`, which affects the dependency structure of the network, is an instance of relational uncertainty.
+
+<p class="sidebar">Multiplexer</p> <p class="sidebar">Relational uncertainty</p>
+
+ Description 
+
+Five state diagrams are shown. HAWK: The state is labeled testify. Two self-loops labeled refuse and testify point back to the state. An arrow from the left points to the state. DOVE: The state is labeled refuse. Two self-loops labeled refuse and testify point back to the state. An arrow from the left points to the state. GRIM: Two states labeled refuse and testify are shown. A self-loop labeled refuse points back to the refuse state. An arrow from the left points to the refuse state. An arrow from the refuse state points to the state labeled testify. Two self-loops labeled refuse and testify point back to the testify state. TIT-FOR-TAT: Two states labeled refuse and testify are shown. A self-loop labeled refuse points back to the refuse state. An arrow from the left points to the refuse state. An arrow labeled testify from the refuse state points to the state labeled testify. Another arrow labeled refuse from the testify state points back to the refuse state. A self-loop labeled testify points back to the testify state. TAT-FOR-TIT: Two states labeled refuse and testify are shown. A self-loop labeled refuse is points back to the refuse state. An arrow from the left points to the refuse state. An arrow labeled testify from the refuse state points to the state labeled testify. Another arrow labeled refuse from the testify state points back to the refuse state. A self-loop labeled refuse points back to the testify state.
+
+×![](images/Fig-250.jpg)
+
+Figure 18.3Fragment of the equivalent Bayes net for the book recommendation RPM when Author(B2) is unknown.
+
+In case you are wondering how the system can possibly work out who the author of `B2` is: consider the possibility that three other customers are fans of `A1` (and have no other favorite authors in common) and all three have given `B2` a 5, even though most other customers find it quite dismal. In that case, it is extremely likely that `A1` is the author of `B2`. The emergence of sophisticated reasoning like this from an `RPM` model of just a few lines is an intriguing example of how probabilistic influences spread through the web of interconnections among objects in the model. As more dependencies and more objects are added, the picture conveyed by the posterior distribution often becomes clearer and clearer.
+
+## 18.1.2 Example: Rating player skill levels
+
+Many competitive games have a numerical measure of players’ skill levels, sometimes called a rating. Perhaps the best-known is the Elo rating for chess players, which rates a typical beginner at around 800 and the world champion usually somewhere above 2800. Although Elo ratings have a statistical basis, they have some ad hoc elements. We can develop a Bayesian rating scheme as follows: each player `i` has an underlying skill level `Skill(i)`; in each game `g`, `i`’s actual performance is `Performance(i, g)`, which may vary from the underlying skill level; and the winner of `g` is the player whose performance in `g` is better. As an `RPM`, the model looks like this:
+
+<p class="sidebar">Rating</p>
+
+$\\begin{array}{l} {Skill(i)\\ \\sim \\ N(\\mu,\\sigma^{2})} \\\\ {Performance\\text{(}i,g\\text{)~} \\sim \\ N\\text{(}Skill\\text{(}i\\text{),}\\,\\beta^{\\text{2}}\\text{)}} \\\\ {Win(i,\\ j,g)\\ = \\ \\mathbf{if}\\ Game(g,\\ i,\\ j)\\ \\mathbf{then}\\ (Performance(i,g)\\ > \\ Performance(\\ j,g))} \\\\ \\end{array}$

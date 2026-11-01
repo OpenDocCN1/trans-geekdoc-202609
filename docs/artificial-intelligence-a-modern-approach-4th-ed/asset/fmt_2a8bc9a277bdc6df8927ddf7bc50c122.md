@@ -1,0 +1,136 @@
+
+# Index
+
+Shamdas, M., [48](#Chapter01-04.xhtml#page_48), [1104](#Bibliography.xhtml#page_1104)
+
+Shanahan, M., [341](#Chapter10-03.xhtml#page_341), [358](#Chapter10-08.xhtml#page_358), [1061](#Chapter28-05.xhtml#page_1061), [1112](#Bibliography.xhtml#page_1112)
+
+Shani, G., [588](#Chapter16-07.xhtml#page_588), [1112](#Bibliography.xhtml#page_1112)
+
+Shankar, N., [331](#Chapter09-07.xhtml#page_331), [1112](#Bibliography.xhtml#page_1112)
+
+Shannon, C. E., [36](#Chapter01-03.xhtml#page_36), [201](#Chapter06-02.xhtml#page_201), [221](#Chapter06-08.xhtml#page_221), [679](#Chapter19-03.xhtml#page_679), [733](#Chapter19-10.xhtml#page_733), [738](#Chapter19-11.xhtml#page_738), [902](#Chapter24-07.xhtml#page_902), [1112](#Bibliography.xhtml#page_1112)
+
+SHAP (explainable machine learning system), [737](#Chapter19-11.xhtml#page_737)
+
+shape from shading, [1030](#Chapter27-09.xhtml#page_1030)
+
+shaping theorem, [559](#Chapter16-01.xhtml#page_559)
+
+Shapley, L. S., [638](#Chapter17-06.xhtml#page_638), [1112](#Bibliography.xhtml#page_1112)
+
+Shapley, S., [586](#Chapter16-06.xhtml#page_586), [638](#Chapter17-06.xhtml#page_638), [1112](#Bibliography.xhtml#page_1112)
+
+Shapley value, [618](#Chapter17-03.xhtml#page_618), [619](#Chapter17-03.xhtml#page_619), [635](#Chapter17-04.xhtml#page_635)
+
+Sharan, R. V., [1027](#Chapter27-09.xhtml#page_1027), [1112](#Bibliography.xhtml#page_1112)
+
+shared model, [1068](#Chapter29-01.xhtml#page_1068)
+
+Sharir, M., [985](#Chapter26-12.xhtml#page_985), [1097](#Bibliography.xhtml#page_1097)
+
+Sharon, G., [126](#Chapter03-08.xhtml#page_126), [1099](#Bibliography.xhtml#page_1099)
+
+Sharp, D. H., [836](#Chapter22-10.xhtml#page_836), [1091](#Bibliography.xhtml#page_1091)
+
+Shatkay, H., [984](#Chapter26-12.xhtml#page_984), [1112](#Bibliography.xhtml#page_1112)
+
+Shaw, J. C., [124](#Chapter03-07.xhtml#page_124), [266](#Chapter07-09.xhtml#page_266), [1107](#Bibliography.xhtml#page_1107)
+
+Shawe-Taylor, J., [736](#Chapter19-11.xhtml#page_736), [1091](#Bibliography.xhtml#page_1091)
+
+Shazeer, N., [736](#Chapter19-11.xhtml#page_736), [901](#Chapter24-06.xhtml#page_901), [919](#Chapter25-03.xhtml#page_919), [929](#Chapter25-06.xhtml#page_929)–[931](#Chapter25-08.xhtml#page_931), [1072](#Chapter29-02.xhtml#page_1072), [1100](#Bibliography.xhtml#page_1100), [1110](#Bibliography.xhtml#page_1110), [1112](#Bibliography.xhtml#page_1112), [1115](#Bibliography.xhtml#page_1115)
+
+Shehory, O., [638](#Chapter17-06.xhtml#page_638), [1111](#Bibliography.xhtml#page_1111)
+
+Shelley, M., [1052](#Chapter28-03.xhtml#page_1052), [1112](#Bibliography.xhtml#page_1112)
+
+Shelton, C., [516](#Chapter14-07.xhtml#page_516), [1108](#Bibliography.xhtml#page_1108)
+
+Shen, Q., [799](#Chapter21-05.xhtml#page_799), [1092](#Bibliography.xhtml#page_1092)
+
+Shepard, D., [549](#Chapter15-09.xhtml#page_549), [1117](#Bibliography.xhtml#page_1117)
+
+Sheppard, B., [225](#Chapter06-09.xhtml#page_225), [1112](#Bibliography.xhtml#page_1112)
+
+Shet, V., [820](#Chapter22-05.xhtml#page_820), [1097](#Bibliography.xhtml#page_1097)
+
+Shi, E., [1060](#Chapter28-05.xhtml#page_1060), [1107](#Bibliography.xhtml#page_1107)
+
+Shi, J., [1001](#Chapter27-03.xhtml#page_1001), [1028](#Chapter27-09.xhtml#page_1028), [1112](#Bibliography.xhtml#page_1112)
+
+Shieber, S., [1057](#Chapter28-04.xhtml#page_1057), [1112](#Bibliography.xhtml#page_1112)
+
+shift-reduce parsing, [889](#Chapter24-03.xhtml#page_889)
+
+Shimelevich, L. I., [516](#Chapter14-07.xhtml#page_516), [1117](#Bibliography.xhtml#page_1117)
+
+Shimony, S. E., [475](#Chapter13-07.xhtml#page_475), [587](#Chapter16-07.xhtml#page_587), [1070](#Chapter29-02.xhtml#page_1070), [1098](#Bibliography.xhtml#page_1098), [1112](#Bibliography.xhtml#page_1112)
+
+Shin, M.C., [586](#Chapter16-06.xhtml#page_586), [1109](#Bibliography.xhtml#page_1109)
+
+Shinkareva, S. V., [271](#Chapter08-01.xhtml#page_271), [1106](#Bibliography.xhtml#page_1106)
+
+Shmakov, A., [124](#Chapter03-07.xhtml#page_124), [1085](#Bibliography.xhtml#page_1085)
+
+Shmatikov, V., [1042](#Chapter28-03.xhtml#page_1042), [1060](#Chapter28-05.xhtml#page_1060), [1086](#Bibliography.xhtml#page_1086), [1107](#Bibliography.xhtml#page_1107)
+
+Shmoys, D. B., [125](#Chapter03-08.xhtml#page_125), [395](#Chapter11-06.xhtml#page_395), [402](#Chapter11-09.xhtml#page_402), [1103](#Bibliography.xhtml#page_1103)
+
+Shoar, S., [161](#Chapter04-07.xhtml#page_161), [1096](#Bibliography.xhtml#page_1096)
+
+Shoham, Y., [79](#Chapter02-06.xhtml#page_79), [225](#Chapter06-09.xhtml#page_225), [330](#Chapter09-07.xhtml#page_330), [549](#Chapter15-09.xhtml#page_549), [638](#Chapter17-06.xhtml#page_638)–[640](#Chapter17-06.xhtml#page_640), [1085](#Bibliography.xhtml#page_1085), [1091](#Bibliography.xhtml#page_1091), [1100](#Bibliography.xhtml#page_1100), [1103](#Bibliography.xhtml#page_1103), [1112](#Bibliography.xhtml#page_1112)
+
+short-term memory, [310](#Chapter09-03.xhtml#page_310)
+
+shortcut, [121](#Chapter03-06.xhtml#page_121)
+
+Shortliffe, E. H., [477](#Chapter13-07.xhtml#page_477), [1089](#Bibliography.xhtml#page_1089), [1112](#Bibliography.xhtml#page_1112)
+
+shoulder (in state space), [131](#Chapter04-01.xhtml#page_131)
+
+Shpitser, I., [653](#Chapter18-02.xhtml#page_653), [666](#Chapter18-06.xhtml#page_666), [1108](#Bibliography.xhtml#page_1108)
+
+SHRDLU (natural language system), [38](#Chapter01-03.xhtml#page_38), [41](#Chapter01-03.xhtml#page_41), [364](#Chapter11-01.xhtml#page_364), [905](#Chapter24-08.xhtml#page_905)
+
+Shreve, S. E., [79](#Chapter02-06.xhtml#page_79), [1087](#Bibliography.xhtml#page_1087)
+
+Shroff, G., [1041](#Chapter28-03.xhtml#page_1041), [1105](#Bibliography.xhtml#page_1105)
+
+Shtark, O., [474](#Chapter13-07.xhtml#page_474), [1112](#Bibliography.xhtml#page_1112)
+
+Siciliano, B., [987](#Chapter26-12.xhtml#page_987), [1112](#Bibliography.xhtml#page_1112)
+
+Siddiqui, N., [1023](#Chapter27-07.xhtml#page_1023), [1093](#Bibliography.xhtml#page_1093)
+
+sideways move (in state space), [131](#Chapter04-01.xhtml#page_131)
+
+Siebel, W. A., [1027](#Chapter27-09.xhtml#page_1027), [1102](#Bibliography.xhtml#page_1102)
+
+Sievers, S., [399](#Chapter11-09.xhtml#page_399), [1112](#Bibliography.xhtml#page_1112)
+
+Sifre, L., [45](#Chapter01-03.xhtml#page_45), [48](#Chapter01-04.xhtml#page_48), [201](#Chapter06-02.xhtml#page_201), [220](#Chapter06-07.xhtml#page_220), [223](#Chapter06-09.xhtml#page_223), [224](#Chapter06-09.xhtml#page_224), [871](#Chapter23-09.xhtml#page_871), [1112](#Bibliography.xhtml#page_1112)
+
+SIGAI, [53](#Chapter01-06.xhtml#page_53)
+
+SIGART, [53](#Chapter01-06.xhtml#page_53)
+
+Sigaud, O., [588](#Chapter16-07.xhtml#page_588), [1112](#Bibliography.xhtml#page_1112)
+
+sigmoid, [703](#Chapter19-06.xhtml#page_703), [803](#Chapter22-01.xhtml#page_803)
+
+Sigmund, K., [25](#Chapter01-02.xhtml#page_25), [1112](#Bibliography.xhtml#page_1112)
+
+signed distance field, [956](#Chapter26-05.xhtml#page_956)
+
+significance test, [681](#Chapter19-03.xhtml#page_681)
+
+Silberstein, M., [474](#Chapter13-07.xhtml#page_474), [1112](#Bibliography.xhtml#page_1112)
+
+Silva, R., [225](#Chapter06-09.xhtml#page_225), [1112](#Bibliography.xhtml#page_1112)
+
+Silver, D., [37](#Chapter01-03.xhtml#page_37), [45](#Chapter01-03.xhtml#page_45), [48](#Chapter01-04.xhtml#page_48), [201](#Chapter06-02.xhtml#page_201), [220](#Chapter06-07.xhtml#page_220), [222](#Chapter06-09.xhtml#page_222)–[225](#Chapter06-09.xhtml#page_225), [588](#Chapter16-07.xhtml#page_588), [835](#Chapter22-08.xhtml#page_835), [841](#Chapter23-01.xhtml#page_841), [871](#Chapter23-09.xhtml#page_871), [873](#Chapter23-09.xhtml#page_873), [986](#Chapter26-12.xhtml#page_986), [1104](#Bibliography.xhtml#page_1104), [1106](#Bibliography.xhtml#page_1106), [1112](#Bibliography.xhtml#page_1112), [1115](#Bibliography.xhtml#page_1115)
+
+Silverman, B. W., [838](#Chapter22-10.xhtml#page_838), [1112](#Bibliography.xhtml#page_1112)
+
+Silverstein, C., [905](#Chapter24-08.xhtml#page_905), [1113](#Bibliography.xhtml#page_1113)

@@ -1,0 +1,66 @@
+
+It is also possible for `ILP` algorithms to create new predicates in order to facilitate the expression of explanatory hypotheses. Given the example data shown earlier, it is entirely reasonable for the `ILP` program to propose an additional predicate, which we would call "`Parent`," in order to simplify the definitions of the target predicates. Algorithms that can generate new predicates are called constructive induction algorithms. Clearly, constructive induction is a necessary part of the picture of cumulative learning. It has been one of the hardest problems in machine learning, but some `ILP` techniques provide effective mechanisms for achieving it.
+
+### 构造性归纳
+
+In the rest of this chapter, we will study the two principal approaches to `ILP`. The first uses a generalization of decision tree methods, and the second uses techniques based on inverting a resolution proof.
+
+## 20.5.2 自顶向下归纳学习方法
+
+The first approach to `ILP` works by starting with a very general rule and gradually specializing it so that it fits the data. This is essentially what happens in decision-tree learning, where a decision tree is gradually grown until it is consistent with the observations. To do `ILP` we use first-order literals instead of attributes, and the hypothesis is a set of clauses instead of a decision tree. This section describes `FOIL` (`Quinlan`, 1990), one of the first `ILP` programs.
+
+Suppose we are trying to learn a definition of the `Grandfather(x, y)` predicate, using the same family data as before. As with decision-tree learning, we can divide the examples into positive and negative examples. Positive examples are
+
+⟨*G**e**o**r**g**e*,*A**n**n**e*⟩, ⟨*P**h**i**l**i**p*,*P**e**t**e**r*⟩, ⟨*S**p**e**n**c**e**r*,*H**a**r**r**y*⟩, …
+
+and negative examples are
+
+⟨*G**e**o**r**g**e*, *E**l**i**z**a**b**e**t**h*⟩, ⟨*H**a**r**r**y*,*Z**a**r**a*⟩, ⟨*C**h**a**r**l**e**s*, *P**h**i**l**i**p*⟩, …
+
+Notice that each example is a pair of objects, because `Grandfather` is a binary predicate. In all, there are 12 positive examples in the family tree and 388 negative examples (all the other pairs of people).
+
+`FOIL` constructs a set of clauses, each with `Grandfather(x, y)` as the head. The clauses must classify the 12 positive examples as instances of the `Grandfather(x, y)` relationship, while ruling out the 388 negative examples. The clauses are Horn clauses, with the extension that negated literals are allowed in the body of a clause and are interpreted using negation as failure, as in `Prolog`. The initial clause has an empty body:
+
+⇒   *G**r**a**n**d**f**a**t**h**e**r*(*x*,*y*).
+
+This clause classifies every example as positive, so it needs to be specialized. We do this by adding literals one at a time to the left-hand side. Here are three potential additions:
+
+$\\begin{array}{l} \\left. Father(x,y)\\ \\Rightarrow\\ Grandfather(x,y). \\right. \\\\ \\left. Parent(x,\\ z)\\ \\Rightarrow\\ Grandfather(x,y). \\right. \\\\ \\left. Father(x,\\ z)\\ \\Rightarrow\\ Grandfather(x,y). \\right. \\\\ \\end{array}$
+
+Notice that we are assuming that a clause defining `Parent` is already part of the background knowledge. The first of these three clauses incorrectly classifies all of the 12 positive examples as negative and can thus be ignored. The second and third agree with all of the positive examples, but the second is incorrect on a larger fraction of the negative examples—twice as many, because it allows mothers as well as fathers. Hence, we prefer the third clause.
+
+Now we need to specialize this clause further, to rule out the cases in which x is the father of some z, but z is not a parent of y. Adding the single literal `Parent(z, y)` gives
+
+*F**a**t**h**e**r*(*x*,*z*)∧*P**a**r**e**n**t*(*z*,*y*)⇒*G**r**a**n**d**f**a**t**h**e**r*(*x*,*y*),
+
+which correctly classifies all the examples. `FOIL` will find and choose this literal, thereby solving the learning task. In general, the solution is a set of Horn clauses, each of which implies the target predicate. For example, if we didn’t have the `Parent` predicate in our vocabulary, then the solution might be
+
+$\\begin{array}{l} \\left. Father(x,z)Father(z,y)\\Rightarrow Grandfather(x,y) \\right. \\\\ \\left. Father(x,z)Mother(z,y)\\Rightarrow Grandfather(x,y). \\right. \\\\ \\end{array}$
+
+Note that each of these clauses covers some of the positive examples, that together they cover all the positive examples, and that `NEW-CLAUSE` is designed in such a way that no clause will incorrectly cover a negative example. In general `FOIL` will have to search through many unsuccessful clauses before finding a correct solution.
+
+This example is a very simple illustration of how `FOIL` operates. A sketch of the complete algorithm is shown in [图 20.12](#Chapter20-05.xhtml#fig20-12). Essentially, the algorithm repeatedly constructs a clause, literal by literal, until it agrees with some subset of the positive examples and none of the negative examples. Then the positive examples covered by the clause are removed from the training set, and the process continues until no positive examples remain. The two main subroutines to be explained are `NEW-LITERALS`, which constructs all possible new literals to add to the clause, and `CHOOSE-LITERAL`, which selects a literal to add.
+
+×![](images/Fig-302.jpg)
+
+图 20.12 Sketch of the `FOIL` algorithm for learning sets of first-order Horn clauses from examples. `NEW-LITERALS` and `CHOOSE-LITERAL` are explained in the text.
+
+### NEW-LITERALS
+
+`NEW-LITERALS` takes a clause and constructs all possible “useful” literals that could be added to the clause. Let us use as an example the clause
+
+*F**a**t**h**e**r*(*x*, *z*) ⇒ *G**r**a**n**d**f**a**t**h**e**r*(*x*,*y*).
+
+There are three kinds of literals that can be added:
+
+1. Literals using predicates: the literal can be negated or unnegated, any existing predicate (including the goal predicate) can be used, and the arguments must all be variables. Any variable can be used for any argument of the predicate, with one restriction: each literal must include at least one variable from an earlier literal or from the head of the clause. Literals such as `Mother(z, u)`, `Married(z, z)`, `¬Male(y)`, and `Grandfather(v, x)` are allowed, whereas `Married(u, v)` is not. Notice that the use of the predicate from the head of the clause allows `FOIL` to learn recursive definitions.
+
+2. Equality and inequality literals: these relate variables already appearing in the clause. For example, we might add `z ≠ x`. These literals can also include user-specified constants. For learning arithmetic we might use `0` and `1`, and for learning list functions we might use the empty list `[]`.
+
+3. Arithmetic comparisons: when dealing with functions of continuous variables, literals such as `x > y` and `y ≤ z` can be added. As in decision-tree learning, a constant threshold value can be chosen to maximize the discriminatory power of the test.
+
+The resulting branching factor in this search space is very large (see Exercise 20.6), but `FOIL` can also use type information to reduce it. For example, if the domain included numbers as well as people, type restrictions would prevent `NEW-LITERALS` from generating literals such as `Parent(x, n)`, where `x` is a person and `n` is a number.
+
+### CHOOSE-LITERAL
+
+`CHOOSE-LITERAL` uses a heuristic somewhat similar to information gain (see [第 680 页](#Chapter19-03.xhtml#page_680)) to decide which literal to add. The exact details are not important here, and a number of different variations have been tried. One interesting additional feature of `FOIL` is the use of Ockham’s razor to eliminate some hypotheses. If a clause becomes longer (according to some metric) than the total length of the positive examples that the clause explains, that clause is not considered as a potential hypothesis. This technique provides a way to avoid overcomplex clauses that fit noise in the data.

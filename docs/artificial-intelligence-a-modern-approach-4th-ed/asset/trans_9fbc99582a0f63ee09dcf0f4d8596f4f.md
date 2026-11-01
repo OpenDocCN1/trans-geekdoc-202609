@@ -1,0 +1,146 @@
+
+
+## K
+Kowalski, R., [296](#Chapter08-05.xhtml#page_296), [312](#Chapter09-04.xhtml#page_312), [317](#Chapter09-05.xhtml#page_317), [329](#Chapter09-07.xhtml#page_329), [358](#Chapter10-08.xhtml#page_358), [1102](#Bibliography.xhtml#page_1102), [1111](#Bibliography.xhtml#page_1111)
+
+Kowalski 形式, [317](#Chapter09-05.xhtml#page_317)
+
+Koyama, M., [837](#Chapter22-10.xhtml#page_837), [1106](#Bibliography.xhtml#page_1106)
+
+Koyejo, O. O., [737](#Chapter19-11.xhtml#page_737), [1101](#Bibliography.xhtml#page_1101)
+
+Koyejo, S., [1023](#Chapter27-07.xhtml#page_1023), [1093](#Bibliography.xhtml#page_1093)
+
+Koza, J.R., [161](#Chapter04-07.xhtml#page_161), [1102](#Bibliography.xhtml#page_1102)
+
+Krakovna, V., [873](#Chapter23-09.xhtml#page_873), [1054](#Chapter28-03.xhtml#page_1054), [1102](#Bibliography.xhtml#page_1102), [1103](#Bibliography.xhtml#page_1103)
+
+Kramer, S., [666](#Chapter18-06.xhtml#page_666), [1101](#Bibliography.xhtml#page_1101)
+
+Kraska, T., [329](#Chapter09-07.xhtml#page_329), [1102](#Bibliography.xhtml#page_1102)
+
+Kraus, S., [45](#Chapter01-03.xhtml#page_45), [639](#Chapter17-06.xhtml#page_639), [640](#Chapter17-06.xhtml#page_640), [1102](#Bibliography.xhtml#page_1102), [1114](#Bibliography.xhtml#page_1114)
+
+Kraus, W. E, [161](#Chapter04-07.xhtml#page_161), [1104](#Bibliography.xhtml#page_1104)
+
+Krause, A., [551](#Chapter15-09.xhtml#page_551), [1102](#Bibliography.xhtml#page_1102)
+
+Krause, J., [837](#Chapter22-10.xhtml#page_837), [1111](#Bibliography.xhtml#page_1111)
+
+Krauss, R, [665](#Chapter18-05.xhtml#page_665), [1112](#Bibliography.xhtml#page_1112)
+
+Krawiec, K., [161](#Chapter04-07.xhtml#page_161), [1113](#Bibliography.xhtml#page_1113)
+
+Kreitmann, R, [1060](#Chapter28-05.xhtml#page_1060), [1087](#Bibliography.xhtml#page_1087)
+
+Kretch, K. S., [852](#Chapter23-03.xhtml#page_852), [1085](#Bibliography.xhtml#page_1085)
+
+Kreuter, B., [1043](#Chapter28-03.xhtml#page_1043), [1088](#Bibliography.xhtml#page_1088)
+
+Kriegspiel, [214](#Chapter06-05.xhtml#page_214)
+
+Krikun, M., [47](#Chapter01-04.xhtml#page_47), [834](#Chapter22-08.xhtml#page_834), [901](#Chapter24-06.xhtml#page_901), [916](#Chapter25-03.xhtml#page_916), [1117](#Bibliography.xhtml#page_1117)
+
+Kripke, S. A., [358](#Chapter10-08.xhtml#page_358), [1102](#Bibliography.xhtml#page_1102)
+
+Krishna, V., [639](#Chapter17-06.xhtml#page_639), [1102](#Bibliography.xhtml#page_1102)
+
+Krishnamurthy, V., [588](#Chapter16-07.xhtml#page_588), [1102](#Bibliography.xhtml#page_1102)
+
+Krishnan, A., [516](#Chapter14-07.xhtml#page_516), [1104](#Bibliography.xhtml#page_1104)
+
+Krishnan, T., [799](#Chapter21-05.xhtml#page_799), [1106](#Bibliography.xhtml#page_1106)
+
+Krishnanand, K., [160](#Chapter04-06.xhtml#page_160), [1102](#Bibliography.xhtml#page_1102)
+
+Krizhevsky, A., [44](#Chapter01-03.xhtml#page_44), [837](#Chapter22-10.xhtml#page_837), [838](#Chapter22-10.xhtml#page_838), [986](#Chapter26-12.xhtml#page_986), [1029](#Chapter27-09.xhtml#page_1029),[1102](#Bibliography.xhtml#page_1102), [1103](#Bibliography.xhtml#page_1103), [1113](#Bibliography.xhtml#page_1113)
+
+Krogh, A., [516](#Chapter14-07.xhtml#page_516), [838](#Chapter22-10.xhtml#page_838), [1102](#Bibliography.xhtml#page_1102)
+
+Krueger, D., [734](#Chapter19-11.xhtml#page_734), [1086](#Bibliography.xhtml#page_1086)
+
+Kruppa, E., [1028](#Chapter27-09.xhtml#page_1028), [1102](#Bibliography.xhtml#page_1102)
+
+亚历山大的克特西比奥斯, [33](#Chapter01-02.xhtml#page_33)
+
+Kübler, S., [904](#Chapter24-08.xhtml#page_904), [1102](#Bibliography.xhtml#page_1102)
+
+Kuffner, J. J., [985](#Chapter26-12.xhtml#page_985), [1102](#Bibliography.xhtml#page_1102)
+
+Kuhlmann, G., [873](#Chapter23-09.xhtml#page_873), [1114](#Bibliography.xhtml#page_1114)
+
+Kuhn, H. W., [658](#Chapter18-03.xhtml#page_658), [667](#Chapter18-06.xhtml#page_667), [637](#Chapter17-06.xhtml#page_637), [1102](#Bibliography.xhtml#page_1102)
+
+Kuipers, B. J., [360](#Chapter10-08.xhtml#page_360), [984](#Chapter26-12.xhtml#page_984), [1102](#Bibliography.xhtml#page_1102)
+
+Kulkami, T., [668](#Chapter18-06.xhtml#page_668), [1102](#Bibliography.xhtml#page_1102)
+
+库尔贝克-莱布勒散度, [809](#Chapter22-02.xhtml#page_809)
+
+Kumar, M. R, [734](#Chapter19-11.xhtml#page_734), [1087](#Bibliography.xhtml#page_1087)
+
+Kumar, P. R., [79](#Chapter02-06.xhtml#page_79), [1102](#Bibliography.xhtml#page_1102)
+
+Kumar, S., [33](#Chapter01-02.xhtml#page_33), [901](#Chapter24-06.xhtml#page_901), [1069](#Chapter29-01.xhtml#page_1069), [1102](#Bibliography.xhtml#page_1102), [1117](#Bibliography.xhtml#page_1117)
+
+Kumar, V., [126](#Chapter03-08.xhtml#page_126), [738](#Chapter19-11.xhtml#page_738), [1041](#Chapter28-03.xhtml#page_1041), [1090](#Bibliography.xhtml#page_1090), [1102](#Bibliography.xhtml#page_1102), [1114](#Bibliography.xhtml#page_1114)
+
+Kumaran, D., [45](#Chapter01-03.xhtml#page_45), [48](#Chapter01-04.xhtml#page_48), [201](#Chapter06-02.xhtml#page_201), [220](#Chapter06-07.xhtml#page_220), [223](#Chapter06-09.xhtml#page_223), [871](#Chapter23-09.xhtml#page_871), [1106](#Bibliography.xhtml#page_1106), [1112](#Bibliography.xhtml#page_1112)
+
+Kuniyoshi, Y., [983](#Chapter26-12.xhtml#page_983), [1101](#Bibliography.xhtml#page_1101)
+
+Kuo, W.-C., [1015](#Chapter27-07.xhtml#page_1015), [1095](#Bibliography.xhtml#page_1095)
+
+Kuppuswamy, N., [1033](#Chapter28-01.xhtml#page_1033), [1101](#Bibliography.xhtml#page_1101)
+
+Kuprel, B., [48](#Chapter01-04.xhtml#page_48), [1094](#Bibliography.xhtml#page_1094)
+
+Kurakin, A., [838](#Chapter22-10.xhtml#page_838), [1090](#Bibliography.xhtml#page_1090)
+
+Kurien, J., [162](#Chapter04-07.xhtml#page_162), [1102](#Bibliography.xhtml#page_1102)
+
+Kurth, T., [48](#Chapter01-04.xhtml#page_48), [1103](#Bibliography.xhtml#page_1103)
+
+Kurzweil, R., [30](#Chapter01-02.xhtml#page_30), [1055](#Chapter28-03.xhtml#page_1055), [1056](#Chapter28-03.xhtml#page_1056), [1061](#Chapter28-05.xhtml#page_1061), [1103](#Bibliography.xhtml#page_1103)
+
+Küttler, H.,
+
+Kwok, C., [905](#Chapter24-08.xhtml#page_905), [1103](#Bibliography.xhtml#page_1103)
+
+## L
+L-BFGS（优化算法）, [735](#Chapter19-11.xhtml#page_735)
+
+标签（在机器学习中）, [671](#Chapter19-01.xhtml#page_671)
+
+标签（在计划中）, [143](#Chapter04-03.xhtml#page_143)
+
+Laborie, R, [402](#Chapter11-09.xhtml#page_402), [1103](#Bibliography.xhtml#page_1103)
+
+Lacoste-Julien, S., [734](#Chapter19-11.xhtml#page_734), [1086](#Bibliography.xhtml#page_1086)
+
+Ladkin, R, [358](#Chapter10-08.xhtml#page_358), [1103](#Bibliography.xhtml#page_1103)
+
+Lafferty, J., [906](#Chapter24-08.xhtml#page_906), [1103](#Bibliography.xhtml#page_1103)
+
+Lagoudakis, M. G., [637](#Chapter17-06.xhtml#page_637), [1097](#Bibliography.xhtml#page_1097)
+
+Laguna, M., [160](#Chapter04-06.xhtml#page_160), [1096](#Bibliography.xhtml#page_1096)
+
+Lahiri, S., [838](#Chapter22-10.xhtml#page_838), [1109](#Bibliography.xhtml#page_1109)
+
+Lai, J. C., [929](#Chapter25-06.xhtml#page_929), [1089](#Bibliography.xhtml#page_1089)
+
+Lai, M., [45](#Chapter01-03.xhtml#page_45), [48](#Chapter01-04.xhtml#page_48), [201](#Chapter06-02.xhtml#page_201), [220](#Chapter06-07.xhtml#page_220), [223](#Chapter06-09.xhtml#page_223), [871](#Chapter23-09.xhtml#page_871), [1112](#Bibliography.xhtml#page_1112)
+
+Lai, T. L., [575](#Chapter16-03.xhtml#page_575), [587](#Chapter16-07.xhtml#page_587), [1103](#Bibliography.xhtml#page_1103)
+
+Laine, S., [831](#Chapter22-07.xhtml#page_831), [1101](#Bibliography.xhtml#page_1101)
+
+Laird, J., [310](#Chapter09-03.xhtml#page_310), [329](#Chapter09-07.xhtml#page_329), [400](#Chapter11-09.xhtml#page_400), [1100](#Bibliography.xhtml#page_1100), [1103](#Bibliography.xhtml#page_1103), [1117](#Bibliography.xhtml#page_1117)
+
+Laird, N., [515](#Chapter14-06.xhtml#page_515), [799](#Chapter21-05.xhtml#page_799), [1093](#Bibliography.xhtml#page_1093)
+
+Laird, R, [160](#Chapter04-06.xhtml#page_160), [190](#Chapter05-07.xhtml#page_190), [1106](#Bibliography.xhtml#page_1106)
+
+Lake, B., [667](#Chapter18-06.xhtml#page_667), [1103](#Bibliography.xhtml#page_1103)
+

@@ -1,0 +1,56 @@
+level_changes:
+- line: 165
+  before: 2
+  after: 3
+- line: 181
+  before: 2
+  after: 3
+- line: 189
+  before: 2
+  after: 3
+- line: 210
+  before: 2
+  after: 3
+- line: 294
+  before: 2
+  after: 3
+- line: 334
+  before: 2
+  after: 3
+- line: 360
+  before: 2
+  after: 3
+- line: 388
+  before: 2
+  after: 3
+- line: 416
+  before: 2
+  after: 3
+- line: 451
+  before: 2
+  after: 3
+- line: 541
+  before: 2
+  after: 3
+- line: 581
+  before: 2
+  after: 3
+- line: 589
+  before: 2
+  after: 3
+- line: 613
+  before: 2
+  after: 3
+- line: 625
+  before: 2
+  after: 3
+- line: 743
+  before: 1
+  after: 3
+text_changes:
+- line: 451
+  before: 1.2.8 语言学
+  after: 1.2.7 语言学
+- line: 149
+  before: 图灵测试
+  after: 1.1.1.1 图灵测试
