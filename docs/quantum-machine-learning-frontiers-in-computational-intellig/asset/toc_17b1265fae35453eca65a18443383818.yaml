@@ -1,0 +1,95 @@
+level_changes:
+- line: 296
+  before: 3
+  after: 2
+- line: 582
+  before: 2
+  after: 3
+- line: 724
+  before: 2
+  after: 3
+- line: 902
+  before: 2
+  after: 3
+- line: 1060
+  before: 3
+  after: 2
+- line: 1749
+  before: 2
+  after: 3
+- line: 1761
+  before: 2
+  after: 3
+- line: 1765
+  before: 2
+  after: 3
+- line: 1769
+  before: 1
+  after: 2
+- line: 1773
+  before: 2
+  after: 3
+- line: 1791
+  before: 2
+  after: 3
+- line: 1799
+  before: 2
+  after: 3
+- line: 1843
+  before: 2
+  after: 3
+- line: 1846
+  before: 2
+  after: 3
+- line: 2151
+  before: 1
+  after: 2
+- line: 2493
+  before: 2
+  after: 3
+- line: 2503
+  before: 2
+  after: 3
+- line: 978
+  before: 2
+  after: 3
+- line: 1449
+  before: 2
+  after: 3
+text_changes:
+- line: 528
+  before: 2.3 地形基映射
+  after: 2.3 地形基映射
+- line: 542
+  before: 2.3.1 双射
+  after: 2.3.1 双射
+- line: 789
+  before: Proposition 4
+  after: 命题 4
+- line: 797
+  before: Proof
+  after: 证明：
+- line: 978
+  before: 2.4 算符构造与垃圾分析
+  after: 2.4.4 算符构造与垃圾分析
+- line: 1189
+  before: 3.3.1 预言机
+  after: 3.3.1 预言机
+- line: 1201
+  before: 3.4 Grover 自适应搜索
+  after: 3.4 Grover 自适应搜索
+- line: 1449
+  before: 3.8 用于无约束全局优化的绝热量子优化算法
+  after: 3.8.1 用于无约束全局优化的绝热量子优化算法
+- line: 1825
+  before: 4.3.4 The HHL algorithm
+  after: 4.3.4 The HHL algorithm
+- line: 1831
+  before: 4.3.5 Quantum principal component analysis
+  after: 4.3.5 Quantum principal component analysis
+- line: 1835
+  before: 4.4 Quantum machine learning approaches
+  after: 4.4 Quantum machine learning approaches
+- line: 1837
+  before: 4.4.1 HHL or quantum amplitude based approaches
+  after: 4.4.1 HHL or quantum amplitude based approaches
