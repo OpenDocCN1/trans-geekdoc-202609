@@ -1,0 +1,29 @@
+level_changes:
+- line: 7
+  before: 3
+  after: 2
+- line: 10
+  before: 3
+  after: 2
+- line: 1310
+  before: 2
+  after: 3
+- line: 3091
+  before: 3
+  after: 2
+text_changes:
+- line: 217
+  before: System of Linear Equation
+  after: System of Linear Equations
+- line: 331
+  before: Z 分数
+  after: Z分数
+- line: 1351
+  before: A.3. 图利-费舍尔关系
+  after: A.3. 费舍尔关系
+- line: 1578
+  before: 朴素数学家
+  after: 朴素贝叶斯
+- line: 1310
+  before: 2. 估计径向速度与其对应的径向距离并验证哈勃定律，通过考虑测量值和理论值，使用多个观测来获取各种星系的径向速度和径向距离（表 **2**）。
+  after: 估计径向速度与其对应的径向距离并验证哈勃定律，通过考虑测量值和理论值，使用多个观测来获取各种星系的径向速度和径向距离（表2）。
