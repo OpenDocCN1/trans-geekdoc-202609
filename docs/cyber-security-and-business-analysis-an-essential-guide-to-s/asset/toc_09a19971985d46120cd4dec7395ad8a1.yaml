@@ -1,0 +1,65 @@
+level_changes:
+- line: 1062
+  before: 2
+  after: 1
+- line: 1830
+  before: 2
+  after: 1
+- line: 2539
+  before: 2
+  after: 1
+- line: 2569
+  before: 2
+  after: 1
+- line: 2599
+  before: 2
+  after: 1
+- line: 2629
+  before: 2
+  after: 1
+- line: 2659
+  before: 2
+  after: 1
+- line: 2690
+  before: 2
+  after: 1
+- line: 2720
+  before: 2
+  after: 1
+- line: 2750
+  before: 2
+  after: 1
+- line: 3007
+  before: 2
+  after: 1
+- line: 867
+  before: 1
+  after: 3
+text_changes:
+- line: 3137
+  before: 'EFFECTIVE BUSINESS CASES -> ## 有效的业务案例'
+  after: 有效的业务案例
+- line: 3138
+  before: 'CHALLENGES WITH CYBER SECURITY BUSINESS CASES -> ## 网络安全业务案例的挑战'
+  after: 网络安全业务案例的挑战
+- line: 3139
+  before: 'Business outcomes -> ### 业务成果'
+  after: 业务成果
+- line: 1215
+  before: 商务分析师能做什么？
+  after: 业务分析师能做什么？
+- line: 1276
+  before: 商务分析和网络安全框架
+  after: 业务分析和网络安全框架
+- line: 1670
+  before: 商务分析师支持
+  after: 业务分析师支持
+- line: 1676
+  before: 商务分析师支持
+  after: 业务分析师支持
+- line: 867
+  before: 图 1.1 商业分析的核心理解 (版权所有：I-Perceptions Consulting Ltd)
+  after: 图 1.1 业务分析的核心理解 (版权所有：I-Perceptions Consulting Ltd)
+- line: 1365
+  before: Parkerian 六元组^1
+  after: Parkerian 六元组
