@@ -1,0 +1,125 @@
+level_changes:
+- line: 49
+  before: 2
+  after: 1
+- line: 51
+  before: 3
+  after: 2
+- line: 60
+  before: 1
+  after: 2
+- line: 109
+  before: 1
+  after: 2
+- line: 198
+  before: 1
+  after: 2
+- line: 234
+  before: 1
+  after: 2
+- line: 304
+  before: 1
+  after: 2
+- line: 340
+  before: 1
+  after: 2
+- line: 353
+  before: 1
+  after: 2
+- line: 389
+  before: 1
+  after: 2
+- line: 401
+  before: 1
+  after: 2
+- line: 435
+  before: 1
+  after: 2
+- line: 455
+  before: 1
+  after: 2
+- line: 521
+  before: 1
+  after: 2
+- line: 573
+  before: 1
+  after: 2
+- line: 601
+  before: 1
+  after: 2
+- line: 623
+  before: 1
+  after: 2
+- line: 649
+  before: 1
+  after: 2
+- line: 667
+  before: 1
+  after: 2
+- line: 695
+  before: 1
+  after: 2
+- line: 707
+  before: 1
+  after: 3
+- line: 717
+  before: 2
+  after: 3
+- line: 729
+  before: 2
+  after: 3
+- line: 741
+  before: 2
+  after: 3
+- line: 749
+  before: 1
+  after: 2
+- line: 790
+  before: 1
+  after: 2
+- line: 1012
+  before: 1
+  after: 2
+- line: 1038
+  before: 1
+  after: 2
+- line: 1070
+  before: 1
+  after: 2
+- line: 1100
+  before: 1
+  after: 2
+- line: 1128
+  before: 1
+  after: 2
+- line: 1162
+  before: 1
+  after: 2
+- line: 1174
+  before: 1
+  after: 2
+- line: 1218
+  before: 1
+  after: 2
+text_changes:
+- line: 1218
+  before: 17 让加密货币更具环境可持续性
+  after: 17. 让加密货币更具环境可持续性
+- line: 1174
+  before: 16. 区块链将帮助我们在数字世界证明我们的身份
+  after: 16. 区块链将帮助我们在数字世界中证明我们的身份
+- line: 1000
+  before: 'Section 3: The Future of Blockchain'
+  after: 第 3 部分：区块链的未来
+- line: 1002
+  before: 13. Does Your Idea Actually Require Blockchain?
+  after: 13. 你的想法真的需要区块链吗？
+- line: 1772
+  before: 99 索引
+  after: 索引
+- line: 547
+  before: 随着加密货币的兴起，谁还需要银行？
+  after: 8. 随着加密货币的兴起，谁还需要银行？
+- line: 601
+  before: 9. 得益于区块链，全球供应链即将变得更好
+  after: 9. 全球供应链即将因区块链而变得更好
