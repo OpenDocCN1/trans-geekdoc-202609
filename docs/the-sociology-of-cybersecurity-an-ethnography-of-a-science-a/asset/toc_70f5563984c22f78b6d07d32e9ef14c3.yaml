@@ -1,0 +1,23 @@
+level_changes:
+- line: 41
+  before: 1
+  after: 2
+- line: 357
+  before: 1
+  after: 2
+- line: 972
+  before: 2
+  after: 3
+text_changes:
+- line: 291
+  before: 表 2.1 理解网络安全的三个社会学概念 返回正文。⏎
+  after: 表 2.1 理解网络安全的三个社会学概念
+- line: 770
+  before: 访谈片段 4.1. 随着网络安全成为金融证券化的重要组成部分^()
+  after: 访谈片段 4.1. 随着网络安全成为金融证券化的重要组成部分
+- line: 1010
+  before: 代替后记
+  after: 附后记
+- line: 1652
+  before: 105. 欧洲议会 (EP)，10
+  after: 欧洲议会 (EP)，10
