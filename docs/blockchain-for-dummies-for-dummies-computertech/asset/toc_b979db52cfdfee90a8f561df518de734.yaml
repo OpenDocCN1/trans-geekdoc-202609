@@ -1,0 +1,17 @@
+level_changes:
+- line: 1814
+  before: 2
+  after: 1
+- line: 3133
+  before: 3
+  after: 1
+- line: 3184
+  before: 3
+  after: 1
+text_changes:
+- line: 802
+  before: 准备您的计算机
+  after: 准备您的 Docker 环境
+- line: 3010
+  before: 智慧国家
+  after: 智慧国家项目
