@@ -1,0 +1,38 @@
+level_changes:
+- line: 3
+  before: 1
+  after: 2
+- line: 197
+  before: 1
+  after: 2
+- line: 1864
+  before: 1
+  after: 2
+- line: 1947
+  before: 1
+  after: 2
+- line: 2280
+  before: 1
+  after: 2
+- line: 2305
+  before: 1
+  after: 2
+- line: 2319
+  before: 1
+  after: 2
+- line: 2354
+  before: 1
+  after: 2
+- line: 2709
+  before: 1
+  after: 2
+- line: 3438
+  before: 1
+  after: 2
+text_changes:
+- line: 197
+  before: 第 12 章
+  after: 业务连续性风险管理
+- line: 3774
+  before: 风险不好吗？
+  after: 风险是坏事吗？
