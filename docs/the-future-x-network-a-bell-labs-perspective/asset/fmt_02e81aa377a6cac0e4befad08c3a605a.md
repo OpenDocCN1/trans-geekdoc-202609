@@ -1,0 +1,37 @@
+
+# The evolution of written word systems
+The earliest form of electronic mail emerged in the 1960s when the compatible time sharing systems (CTSS) team at MIT created a way for their members to send messages to each other’s terminals and/ or electronic mail boxes. Other electronic mail systems were also developed in that time period but none of them were interoperable. It was in the 1970s that ARPANET introduced a standardized email system and IETF specifications for electronic mail were first proposed. In the 1980s, today’s specification for SMTP was adopted worldwide, allowing for interoperability between email providers around the globe. This adoption modernized written word electronic communications from the early interoperable telex networks and telefax services to interoperable email.
+
+The transition to the cloud also provides the opportunity for the use of cognitive technologies, such as machine learning, which may be based on support vector machines or neural networks.
+
+Also in the 1980s, work began on a new form of written word electronic communications — text messaging. Led by Friedhelm Hillebrand, the GSM standards body worked on defining specifications for short message service (SMS) that culminated in 1992 with the first SMS text message delivery to a mobile device. Using the SS7 signaling infrastructure to relay these messages limited the maximum message length to 160 characters (Milian 2009). In the 1990s, SMS on mobile devices along with PC-based IP messaging apps such as ICQ, AOL Instant Messenger, Yahoo Messenger and MSN Messenger were the start of the genre of messaging services with which everyone is familiar today.
+
+It is interesting to consider why such an apparently constrained communication type has become so essential to modern human existence. Perhaps the most obvious characteristics are the asynchronous nature of the communication, combined with near-real-time response that is available but not required (at the human level) in the exchange. In combination, these attributes allow:
+
+• **Multi-tasking** — the ability to send a (short) message while participating in another spoken conversation and/or several simultaneous SMS-based conversations
+• **Non-intrusiveness** — the ability to choose when and where to respond
+• **Instantaneousness** — the ability to respond immediately when necessary
+• **Unobtrusiveness** — the ability to have a private exchange in a public setting
+• **Persistence** — the ability to have a continuous or persistent exchange over a prolonged period.
+
+This combination of attributes has proven so attractive to modern existence that messaging has arguably become the dominant form of communications today. Indeed, North American usage data supports this assertion. In 1995, the average American user sent 0.4 texts per month. In 1999, interoperability allowed users of any telephony provider to send text messages to users of any other telephony provider so that by 2000, the average American user sent 35 texts per month. Usage continued to rise and by 2007, Americans sent more text messages than made phone calls (Erickson 2012).
+
+With the near ubiquitous deployment of wireless communications, and the relatively high costs of messaging services by network operators, the emergence of new third-party messaging applications followed. Because these applications were not tied to the underlying transport network but were delivered over the top of telecom broadband data networks from a cloud, they were often “free” and spread rapidly across the globe. Moreover, the users of these platforms began using messaging apps to not only avoid SMS limits and usage charges, but also because they preferred the asynchronous and less scheduled nature of messaging over live, spoken communication in the form of voice calls. Thus, while messaging grew dramatically, voice calls in general were flat to declining, as shown in fi gure 2. Also key in the rapid growth of messaging was the innovation in messaging platforms, which the app-developer ecosystem has driven.
+
+It is interesting to consider the associated economics. WeChat with over 650 monthly average users (MAUs) is not the largest new messaging platform but it brought in the most revenue at $1.1 billion in 2014 (Millward 2015, Paypers 2015). Although not insignificant, this is small compared with the revenues of the largest telecom service providers who make in excess of $100 billion annually (AT&T 2015). According to Pyramid Research, telecom service providers still make roughly half of their revenue from voice and SMS services. This is the classic innovation scenario, with the incumbent provider focusing on sustaining innovation and revenue streams, and new entrants disrupting the market by entering at the low end, with lower revenue expectations (and needs), and serving an unmet user demand. In the following we will argue that these worlds can and will further coalesce around the concept of a new global unified communications paradigm.
+
+A portent of this future is provided by the recent evolution of these new messaging applications to become genuine communications platforms — adding voice calling, voice messaging, video calling, video messaging, fi le sharing and collaboration — including the use of the emerging set of WebRTC-type capabilities, in addition to proprietary extensions. And they have started experimenting and branching out beyond traditional communications to offer the following (Meeker 2015):
+
+• Connecting to mobile commerce by creating a conversational or “social commerce” platform
+• Offering peer-to-peer payment schemes
+
+![](images/fig9_2.jpg)
+
+• Partnering with content providers (for example, offering integrated streaming video)
+• Partnering with gaming companies (for example, giving users access to games within their apps)
+• Building applications within the messaging application in order for users to further multi-task.
+
+## Media communications
+Storytelling has been an important and changing part of human communication and social behavior since the beginning of time — examples include prehistoric paintings of tribes shown gathering around campfires listening to the elders, the Greek oral tradition of epic poems, of which Homer’s **Odyssey** and **Illiad** are the written record, all the way to the last 100 years, with the first silent movies in the early 20th century, to today’s major motion picture movies and TV series. How this tradition is changing, and will continue to change, is largely driven by new technologies; thus it is important to understand storytelling in the context of the new digital era.
+
+As storytelling evolved from oral, face-to-face communication, to print (books and periodicals), to images and moving images, it became more expensive and complex. It evolved from something anyone could do to something reserved for professionals and large corporations. In the early days of the printing press, it was much less expensive and was used widely, playing a major role in the Reformation with the printing of the Bible, and in both the French and American revolutions through the printing of pamphlets. But as it was industrialized in the 19th century, large publishing companies came to dominate the production of newspapers, magazines and books. From the early days of movie production using nitrate-based film and movie theaters for playback, movie-making was an activity that was reserved for movie studios with big budgets or a few committed and well-funded amateurs.

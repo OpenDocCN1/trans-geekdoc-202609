@@ -1,0 +1,39 @@
+
+It is instructive to come back to the nature of the question “why?” in the context of cognition. “Why?” is distinct from “who, what, when and where?” because forming an answer to “why?” begins at the second level of Bloom’s taxonomy. It requires some understanding of the situation rather than simply a response with a remembered fact. Such questions are relatively straightforward to answer for well-defined quantitative systems, but require real contextual understanding to answer for less well-defined, subjective systems, which suggests that the answer lies in augmenting human intelligence, rather than attempting to replicate or replace it. We explore this further in the next section.
+
+## Augmented not artificial
+
+Most humans have experienced having seemingly all-knowing intelligent assistants that planned our schedules, attended to our needs, provided relevant context for decision making and salient guidance at key moments. This is the vaunted role of parents, who provide this function during the early years of our lives. Their goal is to teach us to think for ourselves and become independent so that we can expand beyond our familial — and familiar — environment and knowledge base.
+
+![](images/fig10_9.jpg)
+
+When we look at the history of humankind, we have developed many tools that provide mechanical, sensory, communications, memory or computational advantages ([figure 9](#16-9781315365756_chapter-chap10.xhtml#fig10_9)), but we have created very few tools that enable us to think better — just language, mathematics, logic, scientific and engineering concepts and written language.
+
+In fact, many would say that the current thinking tool of choice is old-fashioned paper and pencil, which is still preferable to any electronic medium for quick exploration of ideas with mathematical, textual and/or visual elements. In a time period where it is possible to mechanically move things that are thousands of times larger, travel thousands of times faster and further, and see things millions of times smaller, we still use the same writing and drawing we have used since nearly the beginning of existence to improve our ability to think.
+
+However, we believe that this is about to change with the advent of a new set of **augmented intelligence** (AugI) tools that enhance the thought process. The intent of these tools will be to present potential answers or possible paths for exploration, not to simply suggest an ordered list of answers. They will function as a personalized partner in the thinking process presenting relevant suggestions guided by access to external information and data, but more importantly guided by the user who will dynamically assess the relevance through interaction with the tool.
+
+Such tools will use deterministic algorithms to compute and visualize the probability associated with different potential answers and help explain why an answer was suggested (as discussed above, answering the “why?”). This could be considered “meta-cognition”, insofar as it supports the understanding of both an answer selected by the user and the thought process that results in that answer, which is a unique element of the augmented cognition approach. In addition, the supervised learning will enable an AugI tool to become more valuable with use, which is the ideal behavior of any such system.
+
+These tools will draw on private and publicly available data — data about people, objects and the environment. [Figure 10](#16-9781315365756_chapter-chap10.xhtml#fig10_10) is a representation of a data structure that encodes this information as a large-scale interconnected graph. Given the amount of data to represent (potentially trillions of nodes) the creation of such a “life graph” provides several advantages in terms of representation, computation and distribution of data.
+
+Such a graph encodes information not only in the nodes of the graph, but also in the relationships between nodes as expressed by the edges of the graph, making it an ideal structure for encoding qualitative relationships that are difficult to express in other ways. Adding a new piece of information only requires an understanding of the relationship of that new information with a single other node on the graph; this single connection then provides adequate information to infer other potential (inferred) relationships on the graph.
+
+A graph also provides ready access to a number of highly scalable graph algorithms for computing both local and global functions of the graph structure and contents. The approximation techniques developed over the last two decades provide high speed computation (Kennedy 2013, Saniee 2015). But perhaps more important than the speed and efficiency of computation, these algorithms provide a visual intuition that maps local and global results directly onto human-understandable associations. The Google PageRank algorithm is probably the most famous large-scale graph algorithm. The page rank of a node is a mathematical operation on the graph (of web pages), and maps well to the user’s intuitive view of most important or most relevant nodes (web page), so that the user is “impressed” by the relevance of the search results presented.
+
+Last, graphs can be readily subdivided without impacting the scaling of the underlying graph algorithms. This allows information relevant to a specific person or context to be managed and processed locally. A combined “life graph” for everyone can be constructed and stored in the cloud, but for the vast majority of questions access to only a small fraction of that total graph is required, so hierarchical graph algorithms can be constructed that allow:
+1. A first answer to be obtained from a local graph (stored on a smart device)
+2. An improved answer based on connections to a larger graph (stored in a local edge cloud node)
+3. A further improved answer using connections to the full graph (stored in a national data center).
+
+…the methods for fully personalized search results require order `N` operations or order `N` storage where `N` is the number of objects in the database. This results in massive scale, which is cost-prohibitive when we anticipate having billions of such objects in the database.
+
+Such progressive processing techniques allow fast, responsive tools to be created that leverage the power of enormous volumes of data and the future distributed cloud architecture.
+
+## Personalization
+
+It should be apparent that when creating new critical thinking or augmented intelligence tools, personalization is a key goal. Most current websites, such as Wikipedia, provide essentially the same information to all users. Google’s search and mail applications employ rudimentary personalization by way of targeted advertising — based on a personal history of terms searched or content of personal email messages — but the actual results are still generic. The current generic search model places the effort to find the most relevant results in the hands of the user. With augmented intelligence, the tool will determine the relevant content for the specific user, not merely advertising. In other words, one individual’s search results will be different from the search results of an individual with a different background or searching in a different context.
+
+![](images/fig10_10.jpg)
+
+Google’s inability to do more in the way of personalization is related to scale; the methods for fully personalized search results require order `N` operations or order `N` storage where `N` is the number of objects in the database. This results in massive scale, which is cost prohibitive when we anticipate having billions of such objects in the database. However, using a large-scale graph representation of the entire data set and novel algorithms, it will be possible to use inferred similarity to provide personalized search results with sub-linear complexity ([figure 10](#16-9781315365756_chapter-chap10.xhtml#fig10_10)).

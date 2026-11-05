@@ -1,0 +1,77 @@
+level_changes:
+- line: 2
+  before: 1
+  after: 2
+- line: 17
+  before: 1
+  after: 2
+- line: 69
+  before: 3
+  after: 2
+- line: 661
+  before: 1
+  after: 2
+- line: 895
+  before: 1
+  after: 2
+- line: 988
+  before: 1
+  after: 2
+- line: 1429
+  before: 1
+  after: 2
+- line: 1870
+  before: 1
+  after: 2
+- line: 1940
+  before: 1
+  after: 2
+- line: 2101
+  before: 1
+  after: 2
+- line: 3272
+  before: 1
+  after: 2
+- line: 3300
+  before: 1
+  after: 2
+- line: 3339
+  before: 1
+  after: 2
+- line: 3723
+  before: 1
+  after: 2
+- line: 3778
+  before: 1
+  after: 2
+- line: 3833
+  before: 1
+  after: 2
+- line: 3922
+  before: 1
+  after: 2
+- line: 4606
+  before: 1
+  after: 2
+- line: 5098
+  before: 1
+  after: 2
+- line: 5889
+  before: 1
+  after: 2
+text_changes:
+- line: 855
+  before: 第 3 章 **安全的未来**
+  after: 第 3 章 安全的未来
+- line: 1401
+  before: '第四章  '
+  after: 第 4 章 网络自动化
+- line: 3226
+  before: 第九章 通信的未来
+  after: 第 9 章 通信的未来
+- line: 4021
+  before: '第 10 章  '
+  after: 第 10 章 数据的未来
+- line: 5542
+  before: '第十四章  '
+  after: 第 14 章 能源的未来
