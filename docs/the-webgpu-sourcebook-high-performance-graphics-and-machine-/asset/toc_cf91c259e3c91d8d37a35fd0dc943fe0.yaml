@@ -1,0 +1,71 @@
+level_changes:
+- line: 214
+  before: 1
+  after: 2
+- line: 446
+  before: 1
+  after: 2
+- line: 1630
+  before: 1
+  after: 3
+- line: 2194
+  before: 2
+  after: 3
+- line: 2308
+  before: 2
+  after: 3
+- line: 2439
+  before: 1
+  after: 3
+- line: 2926
+  before: 2
+  after: 3
+- line: 3397
+  before: 1
+  after: 3
+- line: 4984
+  before: 2
+  after: 3
+- line: 5526
+  before: 1
+  after: 2
+- line: 6805
+  before: 1
+  after: 2
+- line: 7548
+  before: 1
+  after: 3
+- line: 8418
+  before: 1
+  after: 3
+- line: 8810
+  before: 1
+  after: 3
+- line: 9038
+  before: 1
+  after: 3
+- line: 9673
+  before: 1
+  after: 2
+- line: 10306
+  before: 2
+  after: 3
+- line: 10341
+  before: 1
+  after: 3
+text_changes:
+- line: 0
+  before: WebGPU 源书：浏览器中的高性能图形与机器学习
+  after: WebGPU 原书：浏览器中的高性能图形与机器学习
+- line: 1303
+  before: WebGPU 着色语言 (WGSL)4
+  after: WebGPU 着色语言 (WGSL) 4
+- line: 3368
+  before: Lighting, Textures, and Depth6
+  after: 光照、纹理和深度 6
+- line: 4003
+  before: 步骤 4：创建采样器
+  after: 第 4 步：创建采样器
+- line: 10341
+  before: Build the WebAssembly module
+  after: 构建 WebAssembly 模块
