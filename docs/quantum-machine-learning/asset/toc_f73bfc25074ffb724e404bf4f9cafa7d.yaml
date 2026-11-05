@@ -1,0 +1,152 @@
+level_changes:
+- line: 230
+  before: 3
+  after: 4
+- line: 263
+  before: 2
+  after: 4
+- line: 273
+  before: 2
+  after: 4
+- line: 280
+  before: 3
+  after: 5
+- line: 346
+  before: 4
+  after: 5
+- line: 363
+  before: 3
+  after: 4
+- line: 371
+  before: 4
+  after: 5
+- line: 387
+  before: 3
+  after: 5
+- line: 413
+  before: 3
+  after: 5
+- line: 428
+  before: 3
+  after: 5
+- line: 452
+  before: 2
+  after: 3
+- line: 461
+  before: 2
+  after: 3
+- line: 469
+  before: 2
+  after: 3
+- line: 486
+  before: 2
+  after: 3
+- line: 495
+  before: 3
+  after: 4
+- line: 508
+  before: 3
+  after: 4
+- line: 516
+  before: 2
+  after: 3
+- line: 520
+  before: 2
+  after: 3
+- line: 534
+  before: 3
+  after: 4
+- line: 568
+  before: 2
+  after: 3
+- line: 574
+  before: 3
+  after: 4
+- line: 586
+  before: 2
+  after: 3
+- line: 604
+  before: 2
+  after: 3
+- line: 618
+  before: 2
+  after: 3
+- line: 635
+  before: 2
+  after: 3
+- line: 655
+  before: 2
+  after: 3
+- line: 685
+  before: 2
+  after: 3
+- line: 709
+  before: 2
+  after: 3
+- line: 742
+  before: 1
+  after: 2
+- line: 753
+  before: 2
+  after: 3
+- line: 758
+  before: 3
+  after: 4
+- line: 767
+  before: 1
+  after: 3
+- line: 820
+  before: 2
+  after: 4
+- line: 870
+  before: 2
+  after: 3
+- line: 874
+  before: 3
+  after: 4
+- line: 878
+  before: 3
+  after: 4
+- line: 892
+  before: 3
+  after: 4
+- line: 902
+  before: 3
+  after: 4
+- line: 924
+  before: 2
+  after: 3
+- line: 926
+  before: 3
+  after: 4
+text_changes:
+- line: 230
+  before: 1.1.2 Importance of Statistics
+  after: 1.1.2 统计的重要性
+- line: 878
+  before: 2.3.2 Superposition
+  after: 2.3.2 叠加
+- line: 892
+  before: 2.3.3 Entanglement
+  after: 2.3.3 纠缠
+- line: 590
+  before: Gaussian distribution
+  after: 高斯分布
+- line: 594
+  before: Exponential distribution
+  after: 指数分布
+- line: 598
+  before: Uniform distribution
+  after: 均匀分布
+- line: 1404
+  before: 2.5.21 The Algorithm Execution
+  after: 2.5.21 算法执行
+- line: 3170
+  before: Apply Hadamard gate to create a superposition state
+  after: 应用 Hadamard 门创建叠加态
+- line: 3172
+  before: Evaluate qubit and store the result in a classical bit
+  after: 评估量子比特并将结果存储在经典比特中
+- line: 3174
+  before: Implement the circuit and get the result
+  after: 实现电路并获取结果

@@ -1,0 +1,65 @@
+
+The quantum approach in Shor’s algorithm consists of several key steps. It begins with the initialization of quantum registers to store the input number and an auxiliary register. The input register is prepared in a superposition of all possible inputs, allowing for simultaneous exploration of solutions. Modular exponentiation is then performed using a unitary operator, followed by the application of the quantum Fourier transform (`QFT`) to the input register. Measurement is performed, and the measurement outcome is subjected to the continued fraction algorithm, revealing the factors of the input number. The significance of the quantum approach in Shor’s algorithm lies in its potential to break classical cryptographic systems that rely on the difficulty of factoring large numbers. If successfully implemented, it could compromise widely used encryption methods and have far-reaching implications for data security. However, there are significant challenges in practical implementation, including the requirement for error-corrected qubits and fault-tolerant quantum operations, as well as the scalability of the algorithm to factor significantly larger numbers.
+
+This approach in Shor’s algorithm consists of several key components that work together to factor large numbers. The algorithm begins by initializing two quantum registers: the input register and an auxiliary register. The input register represents the number to be factored and is prepared in a superposition of all possible inputs, allowing for simultaneous exploration of multiple solutions \[[26](#ch2.xhtml#ref2_26)\].
+
+The next step involves modular exponentiation, where a unitary operator performs exponentiation on the input register in a modular arithmetic framework. This step extracts periodicity information from the quantum state, crucial for finding the factors efficiently. Following modular exponentiation, the `QFT` is applied to the input register. The `QFT` is a quantum analog of the classical Fourier transform and enables the transformation of the quantum state into a representation that reveals the periodic structure of the input number. After the `QFT`, a measurement is performed on the quantum state, collapsing it into a classical state and providing a specific outcome. This outcome is essential for determining the factors of the input number. The final step involves subjecting the measurement outcome to the continued fraction algorithm. This algorithm analyzes the measurement result using mathematical techniques, such as continued fraction expansions, to efficiently extract the factors of the input number.
+
+### 2.5.21 The Algorithm Execution
+
+#### 2.5.21.1 Initialization
+
+To begin the algorithm, we prepare two quantum registers: the input register and the auxiliary register. The input register contains the number to be factored, denoted as `N`. The auxiliary register is initialized to the state ∣ 0〉. We can represent the initial state of the input register as ∣`ψ`〉 = ∣1〉.
+
+#### 2.5.21.2 Superposition
+
+In this step, we create a superposition of all possible inputs in the input register. We achieve this by applying a series of Hadamard gates to the input register. The Hadamard gate, denoted as `H`, transforms the basis states as follows: $\\left. H\\mspace{2mu} \\mid 0 \\right\\rangle = \\frac{1}{\\sqrt{2}}\\left( \\mid 0 \\right\\rangle\\left. + \\mid 1 \\right\\rangle)$ and $\\left. H\\mspace{2mu} \\mid 1 \\right\\rangle = \\frac{1}{\\sqrt{2}}\\left( \\mid 0 \\right\\rangle\\left. - \\mid 1 \\right\\rangle).$ Applying the Hadamard gate to the input register, we obtain the superposition state:
+
+$$\\left. \\mid \\psi \\right\\rangle\\left. = \\frac{1}{\\sqrt{M}}\\sum\\limits\_{x = 0}^{M - 1} \\mid x \\right\\rangle,$$
+
+where `x` ranges from 0 to `M` − 1 and `M` = 2^(`n`), with `n` being the number of qubits in the input register.
+
+#### 2.5.21.3 Modular Exponentiation
+
+Modular exponentiation is a crucial step in Shor’s algorithm that involves raising a base, denoted as “`a`,” to the power of an exponent, denoted as “`x`,” and then computing the result modulo `N`. The goal is to efficiently calculate the value of (`a`^(`x`)) mod `N`.
+
+The modular exponentiation step is implemented using a unitary operator called `U`[*f*], which performs the mapping ∣`x`〉∣`y`〉 → ∣`x`〉∣`a`^(`y`) mod `N`〉. Here, ∣`x`〉 represents the state of the input register, ∣ `y`〉 represents the state of the auxiliary register, and “`a`[`y`] mod `N`” represents the modular exponentiation of “`a`” raised to the power of “`y`” modulo `N`.
+
+To understand the implementation of modular exponentiation, we can consider a simple example. Let’s assume we want to calculate (3⁷) mod 10. Here, the base “`a`” is 3, the exponent “`x`” is 7, and `N` is 10.
+
+#### 2.5.21.4 Applying the Unitary Operator `U`[*f*]
+
+To perform modular exponentiation, we apply the unitary operator `U`[*f*] to the state ∣`x`〉 ∣ `y`〉. In this case, `Uf` maps ∣`x`〉 ∣ `y`〉 to ∣`x`〉 ∣ `a`^(`y`) mod `N`〉.
+
+For our example, let’s consider the value of “a” as 3. Applying `U`[*f*], we get:
+
+`U`[*f*]:  ∣`x`⟩ ∣`y`⟩→ ∣`x`⟩ ∣ (3^(`y`))  mod10⟩.
+
+The auxiliary register gets updated based on the modular exponentiation of “`a`” raised to the power of “`y`” modulo `N`.
+
+Visualization of the Shor’s algorithm using a circuit diagram is shown in [Figure 2.4](#ch2.xhtml#fig2_4), representing the quantum circuit for factoring large composite numbers.
+
+![Figure 2.4 Circuit diagram of Shor’s algorithm.](images/fig2_4_B.jpg)
+
+[Figure 2.4 Circuit diagram of Shor’s algorithm.](#ch2.xhtml#R_fig2_4)
+
+#### 2.5.21.5 Quantum Fourier Transform (`QFT`)
+
+The quantum Fourier transform (`QFT`) is a fundamental component of Shor’s algorithm. It is a quantum analogue of the classical discrete Fourier transform (`DFT`) and plays a crucial role in identifying the periodicity of the modular exponentiation function.
+
+The `QFT` operates on an input register of `n` qubits, where the qubits are in a superposition state ∣`x`〉. The goal of the `QFT` is to transform the input register from the computational basis to the Fourier basis, allowing for efficient analysis of the periodicity introduced by the modular exponentiation step \[[27](#ch2.xhtml#ref2_27)\].
+
+The `QFT` can be defined mathematically as follows:
+
+(2.47)
+
+$$\\left. \\left. {QFT}:\\mspace{6mu}\\ \\mid x \\right\\rangle\\rightarrow\\frac{1}{\\sqrt{2^{n}}}\\sum\\limits\_{y = 0}^{2^{n} - 1}\\exp\\left( \\frac{2\\textit{πixy}}{2^{n}} \\right)\\left. \\mspace{12mu} \\mid y \\right\\rangle. \\right.$$
+
+Let’s break down the mathematical expression and understand its significance:
+
+∣`x`〉 represents the input state of the qubits in the computational basis. It is a superposition of all possible values of `x`, where `x` ranges from 0 to 2^(`n`) −1. ∣ `y`〉 represents the transformed state of the qubits in the Fourier basis. It is a superposition of all possible values of `y`, where `y` ranges from 0 to 2^(`n`) − 1. The term $\\frac{1}{\\sqrt{2^{n}}}$ normalizes the state to ensure that the total probability of all possible outcomes sums to 1.
+
+The term $\\exp\\mspace{6mu}\\ \\left( \\frac{2\\textit{πixy}}{2^{n}} \\right)$ is the phase factor applied to each basis state. It introduces the phase shift necessary to perform the Fourier transformation. The summation symbol ∑[`y`] indicates that the transformation is applied to all possible values of `y`.
+
+In practical terms, the `QFT` is implemented using a series of controlled rotations. Each qubit in the input register is subjected to a series of controlled rotations, where the angle of rotation depends on the position of the qubit and the desired output state. The `QFT` provides a powerful tool for identifying the periodicity introduced by the modular exponentiation step. By transforming the input register to the Fourier basis, the `QFT` allows for the extraction of information about the period of the function, which is crucial in determining the factors of the number being factored.
+
