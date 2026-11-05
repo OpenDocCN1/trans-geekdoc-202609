@@ -1,0 +1,53 @@
+level_changes:
+- line: 378
+  before: 1
+  after: 2
+- line: 493
+  before: 1
+  after: 3
+- line: 1199
+  before: 1
+  after: 2
+- line: 1598
+  before: 1
+  after: 2
+- line: 2198
+  before: 1
+  after: 2
+- line: 3840
+  before: 1
+  after: 2
+- line: 3892
+  before: 1
+  after: 2
+- line: 3982
+  before: 1
+  after: 2
+- line: 3996
+  before: 1
+  after: 2
+- line: 4014
+  before: 1
+  after: 2
+text_changes:
+- line: 370
+  before: 1 安全通过模糊性
+  after: 1 通过混淆实现的安全
+- line: 3
+  before: 表列表
+  after: 表目录
+- line: 6
+  before: 插图列表
+  after: 图目录
+- line: 65
+  before: 图
+  after: 图目录
+- line: 99
+  before: 列表
+  after: 表目录
+- line: 107
+  before: 指南
+  after: 前言
+- line: 115
+  before: 页码
+  after: 版权页
