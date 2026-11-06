@@ -1,0 +1,41 @@
+level_changes:
+- line: 258
+  before: 1
+  after: 2
+- line: 519
+  before: 1
+  after: 2
+- line: 694
+  before: 1
+  after: 3
+- line: 707
+  before: 1
+  after: 3
+- line: 724
+  before: 1
+  after: 2
+- line: 750
+  before: 1
+  after: 2
+- line: 844
+  before: 1
+  after: 2
+- line: 1516
+  before: 1
+  after: 2
+- line: 1754
+  before: 1
+  after: 2
+- line: 2061
+  before: 1
+  after: 2
+text_changes:
+- line: 5025
+  before: 6. 打开节点的結果
+  after: 6. 打开节点的结果
+- line: 5055
+  before: 12. 打开节点的結果
+  after: 12. 打开节点的结果
+- line: 1370
+  before: 类输入
+  after: 类别输入
