@@ -1,0 +1,39 @@
+
+# Passport Authentication
+
+## Single sign-in
+Allows your users to sign on to the Passport site once to access information from any participating Web site. This alleviates the frustration of registering at dozens of different sites and maintaining any number of different sets of logon credentials. The Passport service allows more than 200 million Passport users quick and easy access to your site.
+
+## The Kids Passport service
+Provides tools that help your business comply with the legal provisions of the U.S. Children’s Online Privacy Protection Act (COPPA). Your company can use the Passport service to conform to the legal aspects of collecting and using children’s personal information and to customize your Web site to provide age-appropriate content.
+
+## Maintain control of your data
+Since the Passport service is simply an authentication service, your customer information and data will still be controlled in-house and is not shared with the Passport servers unless you configure your Web site to do so.
+
+At the time of this writing, there are two fees for the use of Passport authentication: a US$10,000 fee paid by your company on an annual basis, and a periodic testing fee of US$1,500 per URL. The $10,000 fee is not URL specific and covers all URLs controlled by a single company. Payment of these fees entitles your company to unlimited use of the Passport authentication service for as many URLs as you have registered for periodic testing.
+
+## Understanding Passport Authentication Security
+Microsoft has created several key features within Passport authentication to ensure that the security and privacy of your customers and users can be maintained at the highest possible level. Some of the security features employed by Passport authentication are:
+- The Web pages used to control the sign-in, sign-out, and registration functions are centrally hosted, rather than relying on the security mechanisms of each individual member site.
+- All centrally hosted pages that are used to exchange usernames, passwords, or other credential information always use SSL encryption.
+- Passport authentication-enabled sites use encrypted cookies to allow customers to access several different sites without retyping their logon information. However, a company can still opt to require users to return to the Passport sign-in screen when accessing their site for the first time.
+- All cookie files related to Passport authentication use strong encryption. When you set up your site to use Passport, you receive a unique encryption key to ensure the privacy of your users’ personal information.
+- The central Passport servers transmit sign-in and profile information to your site in an encrypted fashion. You can then use this information to create cookies, avoiding any further client redirection to the Passport servers.
+- A Web site that participates in Passport authentication will never actually receive a member’s password. Authentication information is transmitted via a cookie that contains encrypted timestamps that are created when the member first signs on to Passport. The Microsoft Passport sign-out function allows users to delete any Passport-related cookies that were created on their local machines during the time that they were logged on to Microsoft Passport.
+- A participating Web site only communicates directly with the central Passport server to retrieve configuration files, which are then cached locally by the individual member server. All information that is exchanged between clients and the Passport servers takes places using HTTP redirects, cookies, and encrypted queries.
+
+## Educating Users
+The more highly publicized network security incidents always seem to center on a technical flaw: an overlooked patch that led to a global denial-of-service (DoS) attack, a flaw that led to the worldwide propagation of an e-mail virus, or something similar. However, many network intrusions are caused by a lack of knowledge among corporate employees. For this reason, user education is a critical component of any security plan. Make sure that your users understand the potential dangers of sharing their logon credentials with anyone else or leaving that information in a location where others could take note of it. Your users will be far more likely to cooperate and comply with corporate security standards if they understand the reasons behind the policies and the damage that they can cause by ignoring security measures.
+Security education should be both thorough and repetitive. It is not enough to simply provide security information at a new-employee orientation and never mention it again. As a network administrator, you should take steps to make sure that security awareness remains a part of your users’ daily lives. You can promote this awareness through the simplest of measures, including adding a paragraph to the employee newsletter, and sending bulletins to all users when a new virus is becoming a threat. At the same time, you should avoid sending out so much information that your users become overwhelmed by it. A security bulletin that no one reads is no more useful than one that you didn’t send at all. By combining user education with technical measures, such as password policies and strong network authentication, you will be well on your way to creating multiple layers of protection for your network and the data it contains.
+
+# Planning a Smart Card Authentication Strategy
+Smart cards provide a portable method of providing security on a network for tasks like client authentication and securing user data. In this section, we provide an overview of smart card technology and the steps involved in using smart cards in your Windows Server 2003 network. Smart card implementations rely in part on Certificate Services, so we’ll spend some time discussing the use of certificates within Windows Server 2003 as well.
+Support for smart cards is a key feature within the Windows Server 2003 family. Smart cards provide tamper-resistant, safe storage for protecting your users’ certificates. Certificates typically contain encryption keys that are used to encrypt and decrypt data, and can also be used in the authentication process in lieu of a standard username/password combo. Smart cards are also beneficial to use because they isolate a portion of the authentication security processes from the rest of the computer. This provides heightened security because authentication operations are performed on the smart card, which is carried by the user and not always present, rather than being carried out by processes or components that are always available within the computer or network.
+
+## Configuring & Implementing…
+
+## Smart Cards in Action
+The use of smart cards for authentication and data encryption is a new but growing trend within enterprise networks. Some cards that appear to be smart cards aren’t. A good illustration of this type of card is the RSA SecurID Card from [www.rsasecurity.com](http://www.rsasecurity.com), shown in [Figure 3.11](#B978193183694450009X.xhtml#f0060). The RSA devices use an internal clock to generate a new synchronized number every 60 seconds. This creates a highly secure authentication method that is as portable and convenient as a common credit card or automated teller machine (ATM) card.
+![Figure 3.11 RSASecurID Card](images/B978193183694450009X/f03-11-9781931836944.jpg)
+Figure 3.11 RSASecurID Card
+The number is used in the authentication process and must be verified by the server. Even if a user has the correct username and password, if this number is incorrect the user will not be able to log on. Note that this type of card does not contain a user’s certificate or key. This is not the type of card-based technology Microsoft will be referring to when asking you about smart cards on the exam.
