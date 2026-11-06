@@ -1,0 +1,32 @@
+level_changes:
+- line: 584
+  before: 2
+  after: 1
+- line: 587
+  before: 2
+  after: 1
+- line: 1139
+  before: 3
+  after: 4
+- line: 1568
+  before: 3
+  after: 1
+- line: 1571
+  before: 3
+  after: 1
+text_changes:
+- line: 523
+  before: 2 物联网隐私、安全与治理^()
+  after: 2 物联网隐私、安全与治理
+- line: 548
+  before: 2.2 活动链 05 概述 – 治理、隐私和安全问题
+  after: 2.2 活动链 0.5 概述 – 治理、隐私和安全问题
+- line: 1778
+  before: 6.3.3 第二阶段：关联规则的计算 1
+  after: 6.3.3 第二阶段：关联规则的计算
+- line: 1568
+  before: 6. 更快的交易
+  after: 5.5.1 更快的交易
+- line: 1571
+  before: 7. 更低的交易成本
+  after: 5.5.2 更低的交易成本

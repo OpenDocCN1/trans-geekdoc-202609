@@ -1,0 +1,39 @@
+
+## 2. Capability revocation
+Capabilities can be revoked by properly authorized subjects, therefore solving one of the issues of capability-based approaches in distributed environments.
+
+## 3. Information granularity
+The service provider can refine its behavior and the data it has to provide according to what is stated in the capability token. [Figure 2.3](#Ch02.xhtml#fig2_3) exemplifies the usage of a capability-based access control approach to manage a simple situation: Bob has to go on holidays and his house needs some housekeeping while he is away. Dave offered to take care of Bob’s house for his holiday’s period. Bob provides to Dave an access token that: (a) identifies that Dave has the only subject entitled to use the token, (b) states what Dave can actually perform, and (c) states for how many days Dave can do these actions.
+
+![Figure 2.3 An example of ACL vs. capability-based authorization models.](Images/fig2_3.jpg)
+
+[Figure 2.3](#Ch02.xhtml#bck_fig2_3) An example of ACL vs. capability-based authorization models.
+
+Bob and Dave do not need to establish trust relationships among their authentication and authorization systems. Bob’s house appliance recognizes the access token created by Bob and Dave has only to prove that he is the subject (grantee) identified by the capability token as entitled to do specific housekeeping activities for the holidays’ period. The above mechanism is very intuitive, easy to understand, and easy to use. `CapBAC` is well suited to manufacturing contexts where there are many subjects, internal (e.g., workers and production supervisors) and external (e.g., suppliers and maintainers), that need access both directly (e.g., via mobile or desktop computing sets) or indirectly (e.g., via application services) to devices, data, and services in the manufacturing plant. Most of, if not all, these elements require enforcement of strictly access control policies and finer-graded access control, and, at the same time, a management effort that has to be decoupled from the number of managed resources or subjects, especially when many subjects are external ones.
+
+The `CapBAC` architectural elements can be shortly characterized as follows ([Figure 2.4](#Ch02.xhtml#fig2_4)):
+* The resource object of the capability (`Service A` in Figure 2.4); it can be a specific data or device, a service, or any accessible element that can be univocally identified and/or actable on (like resource);
+* The authorization capability that details the granted rights (and which ones can be delegated and, in case, their delegation depths), the resource on which those rights can be exercised, the grantee’s identity, as well as additional information (e.g., capability validity period, `XACML` conditions, etc.). An authorization capability is valid as specified within the capability itself or until it is explicitly revoked;
+* The capability revocation is used to revoke one or more capabilities. Like a capability, a capability revocation is a communicable object a subject, having specific rights (e.g., the revoker must be an ancestor in the delegation path of the revoked capability), creates to inform the service in charge of managing the resource that specific capabilities have to be considered no more valid;
+* The service/operation request is the service request as envisaged by the provided service with the only additional characteristics to refer or include, in an unforgeable way, a capability. For example, for a `RESTful` service, an `HTTP GET` request on one of the exposed REST resources has to simply include the capability and its proof of ownership to use our access control mechanism;
+* The `PDP` (policy decision point) is a resource-agnostic service in charge of managing resource access request validation and decision. In the `CapBAC` environment, it deals with the validation of the access rights granted in the capability against local policies and checking the revocation status of the capabilities in the delegation chain;
+* The resource manager is the service that manages service/access requests for/to the identified resource. The resource manager checks the acceptability of the capability token shipped with the service request as well as the validity and congruence of the requested service/operation against the presented capability. It acts as an `XACML` Policy Enforcement Point (`PEP`) which considers the validation result of the `PDP`;
+* The revocation service is in charge of managing capability revocations.
+
+![Figure 2.4 Capability-based authorization architectural components and their interactions.](Images/fig2_4.jpg)
+
+[Figure 2.4](#Ch02.xhtml#bck_fig2_4) Capability-based authorization architectural components and their interactions.
+
+### 2.3.3 GAMBAS Adaptive Middleware (GAMBAS Contribution)
+The `GAMBAS` project develops an innovative and adaptive middleware to enable the privacy-preserving and automated utilization of behavior-driven services that adapt autonomously to the context of users. In contrast to today’s mobile information access, which is primarily realized by on-demand searches via mobile browsers or via mobile apps, the middleware envisioned by `GAMBAS` will enable proactive access to the right information at the right point in time. As a result, the context-aware automation enabled by the `GAMBAS` middleware will create a seamless and less distractive experience for its users while reducing the complexity of application development.
+
+As indicated in [Figure 2.5](#Ch02.xhtml#fig2_5), the core innovations realized by `GAMBAS` are the development of models and infrastructures to support the interoperable representation and scalable processing of context, the development of a generic, yet resource-efficient framework to enable the multimodal recognition of the user’s context, protocols, and mechanisms to enforce the user’s privacy as well as user interface concepts to optimize the interaction with behavior-driven services.
+
+![Figure 2.5 GAMBAS middleware.](Images/fig2_5.jpg)
+
+[Figure 2.5](#Ch02.xhtml#bck_fig2_5) GAMBAS middleware.
+
+From a security and privacy perspective, the developments in `GAMBAS` are centered on a secure distributed architecture in which data acquisition, data storage, and data processing are tightly controlled by the user. Thereby, security and privacy are based on the following elements.
+* Personal acquisition and local storage: The primary means of data acquisition in `GAMBAS` are personal Internet-connected objects that are owned by a particular user such as a user’s mobile phone, tablet, laptop, etc. The data acquired through the built-in sensors of these devices are stored locally such that the user remains in full control. Thereby, it is noteworthy that the middleware provides mechanisms to disable particular subsets of sensors in order to prevent the accumulation of data that a user may not want to collect and store at all.
+* Anonymized data discovery: In order to enable the sharing of data among the devices of a single user or a group of users, the data storages on the local device can be connected to form a distributed data processing system. To enable this, the `GAMBAS` middleware introduces a data discovery system that makes use of pseudonyms to avoid revealing the user’s identity. The pseudonyms can be synchronized in an automated fashion with a user-defined group of legitimate persons such that it is possible to dynamically change them.
+* Policy-based access control: To limit the access to the user’s data, the networked data storages perform access control based on a policy that can be defined by a user. In order to reduce the configuration effort, the `GAMBAS` middleware encompasses a policy generator tool that can be used to derive the initial settings based on the user’s sharing behavior that he exhibits when using social services.
