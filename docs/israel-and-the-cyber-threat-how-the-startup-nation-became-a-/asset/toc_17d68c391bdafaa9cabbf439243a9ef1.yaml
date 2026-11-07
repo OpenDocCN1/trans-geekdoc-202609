@@ -1,0 +1,83 @@
+level_changes:
+- line: 345
+  before: 2
+  after: 1
+- line: 426
+  before: 1
+  after: 2
+- line: 1121
+  before: 3
+  after: 2
+- line: 1318
+  before: 1
+  after: 2
+- line: 1707
+  before: 1
+  after: 2
+- line: 1745
+  before: 1
+  after: 2
+- line: 1779
+  before: 1
+  after: 2
+- line: 1902
+  before: 1
+  after: 2
+- line: 2457
+  before: 1
+  after: 2
+- line: 3021
+  before: 2
+  after: 1
+- line: 3371
+  before: 1
+  after: 2
+text_changes:
+- line: 666
+  before: '`CNI attacks—`'
+  after: CNI attacks—
+- line: 680
+  before: '`CNA attacks—`'
+  after: CNA attacks—
+- line: 1238
+  before: '`CNI attacks`'
+  after: CNI attacks
+- line: 1241
+  before: '`Hezbollah`'
+  after: Hezbollah
+- line: 1248
+  before: '`CNA attacks`'
+  after: CNA attacks
+- line: 1251
+  before: '`CNE attacks`'
+  after: CNE attacks
+- line: 1262
+  before: '`CNI attacks`'
+  after: CNI attacks
+- line: 1265
+  before: '`Palestinian Islamic Jihad` (PIJ)'
+  after: Palestinian Islamic Jihad (PIJ)
+- line: 1942
+  before: '内阁 `Decision 3611`: 促进网络空间的国家能力'
+  after: '内阁 Decision 3611: 促进网络空间的国家能力'
+- line: 1946
+  before: '`INCB`的成立与`NISA`的转移'
+  after: INCB的成立与NISA的转移
+- line: 1950
+  before: 官僚地盘之争与`ISA`的反对
+  after: 官僚地盘之争与ISA的反对
+- line: 1956
+  before: 内阁 `Decision 2443` 和 `Decision 2444`（2015）
+  after: 内阁 Decision 2443 和 Decision 2444（2015）
+- line: 1960
+  before: '`Decision 2443`：国家监管与政府领导'
+  after: Decision 2443：国家监管与政府领导
+- line: 1966
+  before: '`Decision 2444`：国家准备'
+  after: Decision 2444：国家准备
+- line: 756
+  before: 难题 2：网络威慑是否可行？
+  after: 困境 2：网络威慑是否可行？
+- line: 924
+  before: 难题 7：是否应允许反击入侵？
+  after: 困境 7：是否应允许反击入侵？
