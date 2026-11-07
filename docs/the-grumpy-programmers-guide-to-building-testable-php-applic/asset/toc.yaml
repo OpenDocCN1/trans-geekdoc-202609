@@ -1,0 +1,56 @@
+level_changes:
+- line: 8
+  before: 3
+  after: 1
+- line: 28
+  before: 3
+  after: 1
+- line: 103
+  before: 2
+  after: 1
+- line: 143
+  before: 2
+  after: 1
+- line: 446
+  before: 2
+  after: 1
+- line: 465
+  before: 1
+  after: 2
+- line: 713
+  before: 1
+  after: 2
+- line: 886
+  before: 2
+  after: 1
+- line: 1322
+  before: 2
+  after: 1
+- line: 1346
+  before: 2
+  after: 1
+- line: 1384
+  before: 2
+  after: 1
+- line: 1430
+  before: 2
+  after: 1
+- line: 1480
+  before: 2
+  after: 1
+- line: 2113
+  before: 2
+  after: 1
+- line: 2407
+  before: 2
+  after: 1
+text_changes:
+- line: 465
+  before: 迪米特法则 与 依赖注入
+  after: 迪米特法则与依赖注入
+- line: 1322
+  before: 9 Shells 与 沙盒
+  after: 9 Shells 与沙盒
+- line: 2407
+  before: 来自一位暴躁程序员的 16 条建议
+  after: 16 来自一位暴躁程序员的建议
