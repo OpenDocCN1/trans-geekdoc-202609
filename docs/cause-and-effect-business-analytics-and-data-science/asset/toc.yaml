@@ -1,0 +1,98 @@
+level_changes:
+- line: 76
+  before: 2
+  after: 3
+- line: 82
+  before: 2
+  after: 3
+- line: 85
+  before: 3
+  after: 4
+- line: 88
+  before: 3
+  after: 4
+- line: 91
+  before: 3
+  after: 4
+- line: 435
+  before: 3
+  after: 4
+- line: 439
+  before: 3
+  after: 4
+- line: 445
+  before: 3
+  after: 4
+- line: 1262
+  before: 3
+  after: 4
+- line: 1284
+  before: 3
+  after: 4
+- line: 2726
+  before: 2
+  after: 3
+- line: 2729
+  before: 3
+  after: 4
+- line: 2768
+  before: 3
+  after: 4
+- line: 3133
+  before: 3
+  after: 4
+- line: 3153
+  before: 4
+  after: 5
+- line: 3198
+  before: 3
+  after: 6
+- line: 3218
+  before: 3
+  after: 5
+- line: 3741
+  before: 2
+  after: 4
+text_changes:
+- line: 2120
+  before: 表 6.1 模型有效性活动度量：示例 ⏎
+  after: 表 6.1 模型有效性活动度量：示例
+- line: 2144
+  before: 图 6.3 四种目标类型。（Radcliffe 2007b、Siegel 2011 和 Kane et al. 2014。）⏎
+  after: 图 6.3 四种目标类型。（Radcliffe 2007b、Siegel 2011 和 Kane et al. 2014。）
+- line: 2823
+  before: 表 7.2a 样本量确定示例：治疗响应率较对照提高 20% ⏎
+  after: 表 7.2a 样本量确定示例：治疗响应率较对照提高 20%
+- line: 2845
+  before: 表 7.2b 样本量确定示例：治疗响应率较对照提高 50% ⏎
+  after: 表 7.2b 样本量确定示例：治疗响应率较对照提高 50%
+- line: 2867
+  before: 表 7.2c 样本量确定示例：根据样本量确定功效 ⏎
+  after: 表 7.2c 样本量确定示例：根据样本量确定功效
+- line: 2996
+  before: 表 7.5 零售商优惠券活动设计：属性与属性水平 ⏎
+  after: 表 7.5 零售商优惠券活动设计：属性与属性水平
+- line: 3004
+  before: 表 7.6 零售商优惠券活动的全因子设计 ⏎
+  after: 表 7.6 零售商优惠券活动的全因子设计
+- line: 3023
+  before: 表 7.7 信用卡活动设计：属性与属性水平 ⏎
+  after: 表 7.7 信用卡活动设计：属性与属性水平
+- line: 3269
+  before: 表 7.15a 正交部分因子设计示例的混杂结构，截断 ⏎
+  after: 表 7.15a 正交部分因子设计示例的混杂结构，截断
+- line: 3295
+  before: 表 7.15b 正交部分因子设计示例，截断 ⏎
+  after: 表 7.15b 正交部分因子设计示例，截断
+- line: 3373
+  before: 表 7.16a 最优设计示例的统计输出，截断 ⏎
+  after: 表 7.16a 最优设计示例的统计输出，截断
+- line: 5645
+  before: 表 10.1 汽油需求建模数据 ⏎
+  after: 表 10.1 汽油需求建模数据
+- line: 5674
+  before: 图 10.1 汽油需求示例中关键时间序列的可视化表示。⏎
+  after: 图 10.1 汽油需求示例中关键时间序列的可视化表示。
+- line: 5684
+  before: 表 10.2 汽油需求模型估计结果 ⏎
+  after: 表 10.2 汽油需求模型估计结果
