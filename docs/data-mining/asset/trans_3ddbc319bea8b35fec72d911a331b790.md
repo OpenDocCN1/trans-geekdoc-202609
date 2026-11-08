@@ -1,0 +1,76 @@
+
+These rules are meant to be interpreted in order: the first one; then, if it doesn’t apply, the second; and so on. A set of rules that is intended to be interpreted in sequence is called a *decision list*. Interpreted as a decision list, the rules correctly classify all of the examples in the table, whereas taken individually, out of context, some of the rules are incorrect. For example, the rule `if humidity = normal then play = yes` gets one of the examples wrong (check which one). The meaning of a set of rules depends on how it is interpreted—not surprisingly!
+
+In the slightly more complex form shown in [表 1.3](#Ch001_3-42_B9780443158889000029.xhtml#t0020), two of the attributes—`temperature` and `humidity`—have numeric values. This means that any learning scheme must create inequalities involving these attributes, rather than simple equality tests as in the former case. This is called a *numeric-attribute problem*—in this case, a *mixed-attribute problem* because not all attributes are numeric.
+
+表 1.3
+
+包含部分数值属性的天气数据
+
+| `Outlook` || `Temperature` || `Humidity` || `Windy` || `Play` |
+| --- | --- | --- | --- | --- |
+| Sunny || 85 || 85 || False || No |
+| --- | --- | --- | --- | --- |
+| Sunny || 80 || 90 || True || No |
+| Overcast || 83 || 86 || False || Yes |
+| Rainy || 70 || 96 || False || Yes |
+| Rainy || 68 || 80 || False || Yes |
+| Rainy || 65 || 70 || True || No |
+| Overcast || 64 || 65 || True || Yes |
+| Sunny || 72 || 95 || False || No |
+| Sunny || 69 || 70 || False || Yes |
+| Rainy || 75 || 80 || False || Yes |
+| Sunny || 75 || 70 || True || Yes |
+| Overcast || 72 || 90 || True || Yes |
+| Overcast || 81 || 75 || False || Yes |
+| Rainy || 71 || 91 || True || No |
+
+![图像](images/T000029tabt0020.png)
+
+Now the first rule given earlier might take the form:
+
+```
+If outlook = sunny and humidity > 83 then play = no
+```
+
+A slightly more complex process is required to come up with rules that involve numeric tests.
+
+The rules we have seen so far are *classification rules*—they predict the classification of the example in terms of whether to play or not. It is equally possible to disregard the classification and just look for any rules that strongly associate different attribute values. These are called *association rules*. Many association rules can be derived from the weather data in [表 1.2](#Ch001_3-42_B9780443158889000029.xhtml#t0015). Some good ones are:
+
+```
+If temperature = coolthen humidity = normal
+```
+
+```
+If humidity = normal and windy = falsethen play = yes
+```
+
+```
+If outlook = sunny and play = nothen humidity = high
+```
+
+`If windy = false and play = nothen outlook = sunnyand humidity = high`
+
+All these rules are 100% correct on the given data; they make no false predictions. The first two apply to four examples in the dataset, the next to three examples, and the fourth to two examples. And there are many other rules. In fact, nearly 60 association rules can be found that apply to two or more examples of the weather data and are completely correct on this data. And if you look for rules that are less than 100% correct, then you will find many more. There are so many because unlike classification rules, association rules can “predict” any of the attributes, not just a specified class, and can even predict more than one thing. For example, the fourth rule predicts both that `outlook` will be *sunny* and that `humidity` will be *high*.
+
+### 隐形眼镜：一个理想化问题
+
+The contact lens data introduced earlier tells you the kind of contact lens to prescribe, given certain information about a patient. Note that this example is intended for illustration only: it grossly oversimplifies the problem and should certainly not be used for diagnostic purposes!
+
+The first column of [表 1.1](#Ch001_3-42_B9780443158889000029.xhtml#t0010) gives the `age` of the patient. In case you’re wondering, *presbyopia* is a form of long-sightedness that accompanies the onset of middle age. The second gives the spectacle prescription: *myope* means shortsighted and *hypermetrope* means longsighted. The third shows whether the patient is `astigmatic`, while the fourth relates to the rate of tear production, which is important in this context because tears lubricate contact lenses. The final column shows which kind of lenses to prescribe, whether *hard*, *soft*, or *none*. All possible combinations of the attribute values are represented in [表 1.1](#Ch001_3-42_B9780443158889000029.xhtml#t0010).
+
+A sample set of rules learned from this information is shown in [图 1.1](#Ch001_3-42_B9780443158889000029.xhtml#f0010). This is a rather large set of rules, but they do correctly classify all the examples. These rules are complete and deterministic. They give a unique prescription for every conceivable example. Generally this is not the case. Sometimes there are situations in which no rule applies; other times more than one rule may apply, resulting in conflicting recommendations. Sometimes probabilities or weights may be associated with the rules themselves to indicate that some are more important, or more reliable, than others.
+
+![图 1.1 隐形眼镜数据的规则。](images/F000029f01-01-9780443158889.jpg)
+
+图 1.1 隐形眼镜数据的规则。
+
+You might be wondering whether there is a smaller rule set that performs as well. If so, would you be better off using the smaller rule set, and, if so, why? These are exactly the kinds of questions that will occupy us in this book. Because the examples form a complete set for the problem space, the rules do no more than summarize all the information that is given, expressing it in a different and more concise way. Even though it involves no generalization, this is often a very useful thing to do! People frequently use machine learning techniques to gain insight into the structure of their data rather than to make predictions for new cases. In fact, a prominent and successful line of research in machine learning began as an attempt to compress a huge database of possible chess endgames and their outcomes into a data structure of reasonable size. The data structure chosen for this enterprise was not a set of rules but a decision tree.
+
+[图 1.2](#Ch001_3-42_B9780443158889000029.xhtml#f0015) shows a structural description for the contact lens data in the form of a decision tree, which for many purposes is a more concise and perspicuous representation of the rules and has the advantage that it can be visualized more easily. (However, this decision tree—in contrast to the rule set given in [图 1.1](#Ch001_3-42_B9780443158889000029.xhtml#f0010)—classifies two examples incorrectly.) The tree calls first for a test on `tear production rate`, and the first two branches correspond to the two possible outcomes. If `tear production rate` is *reduced* (the left branch), the outcome is *none*. If it is *normal* (the right branch), a second test is made, this time on `astigmatism`. Eventually, whatever the outcome of the tests, a leaf of the tree is reached that dictates the contact lens recommendation for that case. The question of what is the most natural and easily understood format for the output from a machine learning scheme is one that we will return to in [第 3 章](#Ch003_67-89_B9780443158889000042.xhtml#Ch003_67-89_B9780443158889000042), “Output: knowledge representation.”
+
+![图 1.2 隐形眼镜数据的决策树。](images/F000029f01-02-9780443158889.jpg)
+
+[图 1.2](#Ch001_3-42_B9780443158889000029.xhtml#Bf0015) 隐形眼镜数据的决策树。
+
+### 鸢尾花：一个经典的数值数据集

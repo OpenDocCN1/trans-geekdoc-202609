@@ -1,0 +1,38 @@
+
+∑[*i*]∑[*j*]*y*(*j*)*a*′(*j*)[*i*]*a*[*i*].<mml:math><mml:msub><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:msub><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mi>y</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>j</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mi>a</mml:mi><mml:mo accent="false">&#8242;</mml:mo><mml:msub><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mi>j</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mrow><mml:mo>.</mml:mo></mml:math>
+
+![Equation](images/F000108si25.png)
+
+Here, `a′(j)` is the `j`th misclassified training instance, `a′(j)[i]` its `i`th attribute value, and `y(j)` its class value (either +1 or −1). To implement this we no longer keep track of an explicit weight vector; we simply store the instances that have been misclassified so far and use the previous expression to make a prediction.
+
+It looks like we have gained nothing—in fact, the algorithm is much slower because it iterates through all misclassified training instances every time a prediction is made. However, closer inspection of this formula reveals that it can be expressed in terms of dot products between instances. First, swap the summation signs to yield
+
+∑[*j*]*y*(*j*)∑[*i*]*a*′(*j*)[*i*]*a*[*i*].<mml:math><mml:msub><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mi>y</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>j</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:msub><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mi>a</mml:mi><mml:mo accent="false">&#8242;</mml:mo><mml:msub><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mi>j</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mrow><mml:mo>.</mml:mo></mml:math>
+
+![Equation](images/F000108si26.png)
+
+The second sum is simply a dot product between two instances and can be written
+
+∑[*j*]*y*(*j*)**a**′(**j**) ⋅ **a**.<mml:math><mml:msub><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mi>y</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>j</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mi mathvariant="bold-italic">a</mml:mi><mml:mo mathvariant="bold" accent="false">&#8242;</mml:mo><mml:mo stretchy="false">(</mml:mo><mml:mi mathvariant="bold-italic">j</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>&#8901;</mml:mo><mml:mi mathvariant="bold-italic">a</mml:mi></mml:mrow><mml:mo>.</mml:mo></mml:math>
+
+![Equation](images/F000108si27.png)
+
+This rings a bell! A similar expression for support vector machines enabled the use of kernels. Indeed, we can apply the same trick here and use a kernel function instead of the dot product. Writing this function as `K(...)` gives
+
+∑[*j*]*y*(*j*)*K*(**a**′(**j**), **a**).<mml:math><mml:msub><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mi>y</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>j</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mi>K</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi mathvariant="bold-italic">a</mml:mi><mml:mo mathvariant="bold" accent="false">&#8242;</mml:mo><mml:mo stretchy="false">(</mml:mo><mml:mi mathvariant="bold-italic">j</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>,</mml:mo><mml:mi mathvariant="bold-italic">a</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:mrow><mml:mo>.</mml:mo></mml:math>
+
+![Equation](images/F000108si28.png)
+
+In this way the perceptron algorithm can learn a nonlinear classifier simply by keeping track of the instances that have been misclassified during the training process and using this expression to form each prediction.
+
+If a separating hyperplane exists in the high-dimensional space implicitly created by the kernel function, this algorithm will learn one. However, it won’t learn the maximum-margin hyperplane found by a support vector machine classifier. This means that classification performance is usually worse. On the plus side, the algorithm is easy to implement and supports incremental learning.
+
+This classifier is called the `kernel perceptron`. It turns out that all sorts of algorithms for learning linear models can be upgraded by applying the kernel trick in a similar fashion. For example, logistic regression can be turned into `kernel logistic regression`. As we saw earlier, the same applies to regression problems; linear regression can also be upgraded using kernels. Again, a drawback of these advanced methods for linear and logistic regression (if they are done in a straightforward manner) is that the solution is not “sparse”—every training instance contributes to the solution vector. In support vector machines and the kernel perceptron only some of the training instances affect the solution, and this can make a big difference to computational efficiency.
+
+The solution vector found by the perceptron algorithm depends greatly on the order in which the instances are encountered. One way to make the algorithm more stable is to use all the weight vectors encountered during learning, not just the final one, letting them vote on a prediction. Each weight vector contributes a certain number of votes. Intuitively, the “correctness” of a weight vector can be measured roughly as the number of successive trials after its inception in which it correctly classified subsequent instances and thus didn’t have to be changed. This measure can be used as the number of votes given to the weight vector, giving an algorithm known as the `voted perceptron` that performs almost as well as a support vector machine. (Note that, as mentioned earlier, the various weight vectors in the voted perceptron don’t need to be stored explicitly, and the kernel trick can be applied here as well.)
+
+### Multilayer Perceptrons
+
+Using a kernel is not the only way to create a nonlinear classifier based on the perceptron. In fact, kernel functions are a fairly recent development in machine learning. Previously, neural network proponents used a different approach for nonlinear classification—they connected many simple perceptron-like models in a hierarchical structure. This approach has seen a dramatic resurgence in the form of deep learning, which we cover in [Chapter 10](#Ch011_391-432_B978044315888900011X.xhtml#Ch011_391-432_B978044315888900011X), “Deep learning: fundamentals” and [Chapter 11](#Ch012_433-471_B9780443158889000121.xhtml#Ch012_433-471_B9780443158889000121), “Advanced deep learning methods.”
+
+[Section 4.6](#Ch004_91-164_B9780443158889000054_a.xhtml#s0095) explained that a perceptron represents a hyperplane in instance space. We mentioned there that it is sometimes described as an artificial “neuron.” Of course, human and animal brains successfully undertake very complex classification tasks such as image recognition. The functionality of each individual neuron in a brain is certainly not sufficient to perform these feats. How can they be solved by brain-like structures? The answer must lie in the fact that the neurons in the brain are massively interconnected, allowing a problem to be decomposed into subproblems that can be solved at the neuron level. This observation inspired the development of artificial networks of neurons—neural nets.

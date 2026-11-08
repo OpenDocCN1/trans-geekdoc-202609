@@ -1,0 +1,151 @@
+
+### Identity recurrent neural network (IRNN)
+[422–423](#Ch011_391-432_B978044315888900011X.xhtml#p0855)
+
+### Image recognition
+[589–590](#Ch016_571-615_B9780443158889000169.xhtml#s0065)
+
+### Image screening
+[23](#Ch001_3-42_B9780443158889000029.xhtml#s0080)
+- hazard detection system, [23](#Ch001_3-42_B9780443158889000029.xhtml#p0720)
+- input, [23](#Ch001_3-42_B9780443158889000029.xhtml#p0725)
+- problems, [23](#Ch001_3-42_B9780443158889000029.xhtml#p0730)
+
+### ImageNet
+[590](#Ch016_571-615_B9780443158889000169.xhtml#p0535), [613](#Ch016_571-615_B9780443158889000169.xhtml#p1030)
+- evaluation, [411–412](#Ch011_391-432_B978044315888900011X.xhtml#p0655), [412*t*](#Ch011_391-432_B978044315888900011X.xhtml#t0025)
+
+### ImageNet Large Scale Visual Recognition Challenge (ILSVRC)
+[411–412](#Ch011_391-432_B978044315888900011X.xhtml#p0655)
+
+### Imitation learning
+[308](#Ch007_261-315_B978044315888900008X.xhtml#p1235)
+
+### IMPACT tool
+[287](#Ch007_261-315_B978044315888900008X.xhtml#p0730)
+
+### Inaccurate values
+[63–64](#Ch002_43-66_B9780443158889000030.xhtml#s0065)
+
+### Incremental clustering
+[150–155](#Ch004_91-164_B9780443158889000054_a.xhtml#s0170)
+- acuity parameter, [153](#Ch004_91-164_B9780443158889000054_a.xhtml#p1735)
+- category utility, [150–151](#Ch004_91-164_B9780443158889000054_a.xhtml#p1695)
+- cutoff parameter, [153](#Ch004_91-164_B9780443158889000054_a.xhtml#p1745)
+- example illustrations, [151*f*](#Ch004_91-164_B9780443158889000054_a.xhtml#f0105), [154*f*](#Ch004_91-164_B9780443158889000054_a.xhtml#f0110)
+- merging, [152](#Ch004_91-164_B9780443158889000054_a.xhtml#p1710)
+- splitting, [152](#Ch004_91-164_B9780443158889000054_a.xhtml#p1720)
+
+### Incremental learning
+[650–651](#AppendixB_637-654_B9780443158889000224.xhtml#s0115)
+
+### Incremental reduced-error pruning
+[671*f*](#FigC1_655-685_B9780443158889000236.xhtml#f0020), [670](#FigC1_655-685_B9780443158889000236.xhtml#p0405)
+
+### `IncrementalClassifierEvaluator`
+[650](#AppendixB_637-654_B9780443158889000224.xhtml#p0430)
+
+### Independent and identically distributed (i.i.d.)
+[487](#Ch014_485-514_B9780443158889000145.xhtml#p0160)
+
+### Independent component analysis
+[233](#Ch006_209-259_B9780443158889000078.xhtml#s0080)
+
+### Individual fairness
+[298–299](#Ch007_261-315_B978044315888900008X.xhtml#p0975)
+
+### Inductive logic programming
+[84](#Ch003_67-89_B9780443158889000042.xhtml#p0465)
+
+### Information
+[37](#Ch001_3-42_B9780443158889000029.xhtml#p1075), [106](#Ch004_91-164_B9780443158889000054.xhtml#p0595)
+- calculating, [108–111](#Ch004_91-164_B9780443158889000054.xhtml#s0045)
+- extraction, [612–613](#Ch016_571-615_B9780443158889000169.xhtml#p1010), [584–585](#Ch016_571-615_B9780443158889000169.xhtml#s0040)
+- measure, [108–111](#Ch004_91-164_B9780443158889000054.xhtml#s0045)
+- value, [110](#Ch004_91-164_B9780443158889000054.xhtml#p0705)
+
+### Informational loss function
+[181–182](#Ch005_165-207_B9780443158889000066.xhtml#s0060)
+
+### Infra-marginality
+[302–303](#Ch007_261-315_B978044315888900008X.xhtml#u0295)
+
+### Inner product
+[617](#TableA1_617-636_B9780443158889000212.xhtml#p0045)
+
+### Input
+[43](#Ch002_43-66_B9780443158889000030.xhtml#p0095)
+- aggregating, [157–158](#Ch004_91-164_B9780443158889000054_a.xhtml#s0190)
+- ARFF format, [57*f*](#Ch002_43-66_B9780443158889000030.xhtml#f0015), [59*f*](#Ch002_43-66_B9780443158889000030.xhtml#f0020), [57–60](#Ch002_43-66_B9780443158889000030.xhtml#s0045)
+- attribute types, [60–62](#Ch002_43-66_B9780443158889000030.xhtml#s0055)
+- attributes, [53–55](#Ch002_43-66_B9780443158889000030.xhtml#s0030)
+- concepts, [44–46](#Ch002_43-66_B9780443158889000030.xhtml#s0010)
+- data assembly, [56](#Ch002_43-66_B9780443158889000030.xhtml#p0380)
+- data transformations and, [227](#Ch006_209-259_B9780443158889000078.xhtml#p0565)
+- examples, [46–53](#Ch002_43-66_B9780443158889000030.xhtml#s0015)
+- flat files, [46](#Ch002_43-66_B9780443158889000030.xhtml#p0150)
+- forms, [43](#Ch002_43-66_B9780443158889000030.xhtml#p0095)
+- inaccurate values, [63–64](#Ch002_43-66_B9780443158889000030.xhtml#s0065)
+- instances, [46](#Ch002_43-66_B9780443158889000030.xhtml#p0150), [47–48](#Ch002_43-66_B9780443158889000030.xhtml#p0170), [50](#Ch002_43-66_B9780443158889000030.xhtml#p0205), [51](#Ch002_43-66_B9780443158889000030.xhtml#p0250)
+- missing values, [62–63](#Ch002_43-66_B9780443158889000030.xhtml#s0060)
+- preparing, [56–65](#Ch002_43-66_B9780443158889000030.xhtml#s0035)
+- sparse data, [60](#Ch002_43-66_B9780443158889000030.xhtml#s0050)
+- tabular format, [128](#Ch004_91-164_B9780443158889000054_a.xhtml#p1170)
+
+### Input embeddings
+[458–459](#Ch012_433-471_B9780443158889000121.xhtml#p0585)
+
+### Input layer, multilayer perceptrons
+[362–363](#Ch010_347-389_B9780443158889000108.xhtml#p0660)
+
+### `Instance` connections
+[649–650](#AppendixB_637-654_B9780443158889000224.xhtml#p0415)
+
+### Instance filters
+[646](#AppendixB_637-654_B9780443158889000224.xhtml#p0340)
+
+### Instance space
+- in covering algorithm operation, [116*f*](#Ch004_91-164_B9780443158889000054_a.xhtml#f0040)
+- partitioning methods, [131*f*](#Ch004_91-164_B9780443158889000054_a.xhtml#f0055)
+- rectangular generalizations in, [86](#Ch003_67-89_B9780443158889000042.xhtml#p0515)
+
+### Instance-Based Learner version 3 (IB3)
+[346](#Ch010_347-389_B9780443158889000108.xhtml#p0220)
+
+### Instance-based learning
+[84](#Ch003_67-89_B9780443158889000042.xhtml#p0470), [136–142](#Ch004_91-164_B9780443158889000054_a.xhtml#s0120)
+- in attribute selection, [215](#Ch006_209-259_B9780443158889000078.xhtml#p0305)
+- characteristics, [84](#Ch003_67-89_B9780443158889000042.xhtml#p0475)
+- distance functions, [136–137](#Ch004_91-164_B9780443158889000054_a.xhtml#s0125)
+  - generalized, [350](#Ch010_347-389_B9780443158889000108.xhtml#s0040)
+  - for generalized exemplars, [348–350](#Ch010_347-389_B9780443158889000108.xhtml#s0035)
+- explicit knowledge representation and, [351](#Ch010_347-389_B9780443158889000108.xhtml#p0330)
+- generalization and, [344–352](#Ch010_347-389_B9780443158889000108.xhtml#s0010)
+- generalizing exemplars, [347–348](#Ch010_347-389_B9780443158889000108.xhtml#s0030)
+- nearest-neighbor, [137–142](#Ch004_91-164_B9780443158889000054_a.xhtml#s0130)
+- performance, [345–346](#Ch010_347-389_B9780443158889000108.xhtml#p0205)
+- pruning noise exemplars, [345–346](#Ch010_347-389_B9780443158889000108.xhtml#s0020)
+- reducing number of exemplars, [345](#Ch010_347-389_B9780443158889000108.xhtml#s0015)
+- visualizing, [86–87](#Ch003_67-89_B9780443158889000042.xhtml#p0525)
+- weighting attributes, [346–347](#Ch010_347-389_B9780443158889000108.xhtml#s0025)
+
+### Instance-based representation
+[84–87](#Ch003_67-89_B9780443158889000042.xhtml#s0050)
+
+### Instances
+[43](#Ch002_43-66_B9780443158889000030.xhtml#p0095), [46](#Ch002_43-66_B9780443158889000030.xhtml#p0150)
+- centroid, [143](#Ch004_91-164_B9780443158889000054_a.xhtml#p1555)
+- misclassified, [133–134](#Ch004_91-164_B9780443158889000054_a.xhtml#p1340), [134](#Ch004_91-164_B9780443158889000054_a.xhtml#p1355)
+- multilabeled, [45](#Ch002_43-66_B9780443158889000030.xhtml#p0125)
+- order, [59–60](#Ch002_43-66_B9780443158889000030.xhtml#p0490)
+- sparse, [60](#Ch002_43-66_B9780443158889000030.xhtml#p0530)
+- training, [202](#Ch005_165-207_B9780443158889000066.xhtml#p0875)
+
+### Instrumental convergence
+[309](#Ch007_261-315_B978044315888900008X.xhtml#p1255)
+
+### Intelligent agent
+[465–466](#Ch012_433-471_B9780443158889000121.xhtml#p0695)
+
+### International Committee for Robot Arms Control (ICRAC)
+[605](#Ch016_571-615_B9780443158889000169.xhtml#p0885)

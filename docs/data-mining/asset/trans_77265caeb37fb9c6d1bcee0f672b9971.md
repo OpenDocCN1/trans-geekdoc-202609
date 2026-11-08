@@ -1,0 +1,20 @@
+
+
+![方程](images/F000121si54.png)
+
+## 扩散模型
+
+去噪自编码器通常是 transformer 模型或 `U-Net` 模型（一种专门的基于卷积神经网络 [`CNN`] 的架构，最初设计用于图像分割）。模型可以通过随机梯度下降优化变分下界进行训练。最后，在掌握逆过程后，我们可以通过从初始噪声分布中抽取一个 `x[T]`<mml:math><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>T</mml:mi></mml:mrow></mml:msub></mml:math>![方程](images/F000121si55.png) 并通过应用连续的转移对其进行去噪以采样中间点，直到在最后一步获得一个新的数据点 `$\widehat{x_0}$`<mml:math><mml:mover accent="true"><mml:mrow><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub></mml:mrow><mml:mo>&#710;</mml:mo></mml:mover></mml:math>![方程](images/F000121si56.png)。请参阅 [图 11.2](#Ch012_433-471_B9780443158889000121.xhtml#f0015) 以了解扩散模型的说明。
+
+![图 11.2 扩散模型的说明。署名：James Foulds](images/F000121f11-02-9780443158889.jpg)
+
+[图 11.2](#Ch012_433-471_B9780443158889000121.xhtml#Bf0015) 扩散模型的插图。署名：James Foulds
+
+扩散模型最初被应用于直接在像素级别生成图像；然而，这极其昂贵，目前训练需要数百个图形处理单元 (`GPU`) 天。一个重大的进展是将它们应用于自编码器模型的潜在空间中的点，而不是像素空间。这种方法本质上压缩了图像，减少了模型必须处理的数据大小，进而减小了模型的大小。这种 `latent diffusion models (LDMs)` 需要大幅减少的计算资源来生成高分辨率图像。它们还提供了一种便捷的机制，根据文本提示生成图像，使用户能够指导 AI 艺术系统创建他们想要的图像。这是通过修改去噪自编码器模型 `ϵ[θ](x[t],t)`<mml:math><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#1013;</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">&#952;</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mfenced open="(" close=")"><mml:mrow><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:mi>t</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:math>![方程](images/F000121si57.png) 该模型实现每一步 `t`<mml:math><mml:mi>t</mml:mi></mml:math>![方程](images/F000121si58.png) 的逆过程，使其成为 `conditional denoising autoencoders` `ϵ[θ](x[t],t,τ[θ](y))`<mml:math><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#1013;</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">&#952;</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mfenced open="(" close=")"><mml:mrow><mml:msub><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:mi>t</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#964;</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">&#952;</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mfenced open="(" close=")"><mml:mrow><mml:mi>y</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:mrow></mml:mfenced></mml:mrow></mml:math>![方程](images/F000121si59.png) 来完成的，这些模型包含通过 `BERT`（来自 Transformers 的双向编码器表示）模型创建的提示 `y`<mml:math><mml:mi>y</mml:mi></mml:math>![方程](images/F000121si61.png) 的学习嵌入 `τ[θ](y)`<mml:math><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#964;</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">&#952;</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mfenced open="(" close=")"><mml:mrow><mml:mi>y</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:math>![方程](images/F000121si60.png) 作为输入。
+
+## 11.2 自然语言处理和大型语言模型的介绍
+
+`NLP` 是一个历史悠久的研究领域，是深度学习的一个活跃应用领域。顾名思义，`NLP` 研究 `natural language` 的处理，即人类自然书写或口语的语言。由于文本是人类在线交流的主要媒介，而且人类擅长理解文本但雇用他们执行此类任务成本高昂，因此 `NLP` 技术在帮助企业快速、廉价、自动地以及大规模地理解和与他们的（潜在）客户沟通方面具有明确的财务动机。术语 "`text mining`"（[第 15.5 节](#Ch016_571-615_B9780443158889000169.xhtml#s0030)）和 "`computational linguistics`" 分别源自数据挖掘和语言学社区，基本上是 `NLP` 的同义词，主要区别在于与这些社区所优先考虑的价值观相关的含义，而不在于所使用的技术方法。文本挖掘强调 `NLP` 的实际方面以及在文本数据中寻找可为行业应用提供信息的模式的目标，而计算语言学则强调对语言的研究以及与语言理论和原则的一致性。
+
+深度学习方法目前是大多数 `NLP` 任务的主导方法，但并非一直如此。概率 ML 技术（参见 [第 13 章](#Ch014_485-514_B9780443158889000145.xhtml#Ch014_485-514_B9780443158889000145)，"`Probabilistic methods: fundamentals,`" 和 [第 14 章](#Ch015_516-570_B9780443158889000157.xhtml#Ch015_516-570_B9780443158889000157)，"`Advanced probabilistic methods`") 是执行 `NLP` 任务的一种强大方法，在数十年中很受欢迎，取代了早期的符号规则方法和传统的监督 ML 方法，直到深度学习方法在 2017 年以后，特别是随着基于 transformer 的语言模型的兴起而占据主导地位。正如我们在 [第 14 章](#Ch015_516-570_B9780443158889000157.xhtml#Ch015_516-570_B9780443158889000157)，"`Advanced probabilistic methods,`" 中将看到的那样，潜在语义分析 (`LSA`) 和潜在狄利克雷分配 (`LDA^b`) 允许对文档集合进行探索性主题分析。更近期的观察表明，神经语言建模技术在保留词语之间的关系方面可以比 `LSA` 表现显著更好；此外，`LDA^b` 在扩展到真正庞大的数据时也存在困难。诸如 `word2vec` 和 `GloVe` 之类的词嵌入模型，它们学习用编码其语义含义的向量来表示字典单词，于 2013 年左右成为神经 `NLP` 方法的重大进步。我们稍后讨论的这些简单模型使用浅层神经网络架构，但构成了更复杂、更强大的 `NLP` 深度学习方法的基础，例如基于 transformer 的语言模型。
+

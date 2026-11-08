@@ -1,0 +1,18 @@
+
+如果使用完整的包含 150 个样本的鸢尾花数据集，也会得到类似的聚类结果。然而，结果取决于示例的顺序——[图 4.21](#Ch004_91-164_B9780443158889000054_a.xhtml#f0110) 是在输入文件中交替三种鸢尾花品种得到的。如果先呈现所有 `I. setosas`，然后是所有 `I. versicolors`，最后是所有 `I. virginicas`，得到的聚类结果相当不令人满意。
+
+### 类别效用
+
+现在我们来看类别效用的计算方法，它衡量实例划分为簇的整体质量。在 [第 5.10 节](#Ch005_165-207_B9780443158889000066.xhtml#s0115) 中，我们将看到 `MDL` 测度原则上如何用于评估聚类质量。类别效用不是基于 MDL 的，而更类似于定义在条件概率上的某种二次损失函数。
+
+类别效用的定义相当复杂：
+
+$\\mathit{CU}(C\_{1},C\_{2},\\ldots,C\_{k}) = \\frac{\\sum\_{\\mathcal{l}}{P(C\_{\\mathcal{l}})\\sum\_{i}{\\sum\_{j}{(P{(a\_{i} = v\_{\\mathit{ij}}\\text{∣}C\_{\\mathcal{l}})}^{2} - P\\left( a\_{i} = v\_{\\mathit{ij}} \\right)^{2})}}}}{k},$<mml:math><mml:mi mathvariant="italic">CU</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:msub><mml:mrow><mml:mi>C</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>C</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:mo>&#8230;</mml:mo><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>C</mml:mi></mml:mrow><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msub><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi mathvariant="script">l</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mi>P</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:msub><mml:mrow><mml:mi>C</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="script">l</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">)</mml:mo><mml:msub><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:msub><mml:mo>&#8721;</mml:mo><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mi>P</mml:mi><mml:msup><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">ij</mml:mi></mml:mrow></mml:msub><mml:mtext mathvariant="normal">&#8739;</mml:mtext><mml:msub><mml:mrow><mml:mi>C</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="script">l</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">)</mml:mo></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mo>&#8722;</mml:mo><mml:mi>P</mml:mi><mml:msup><mml:mrow><mml:mo>(</mml:mo><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="italic">ij</mml:mi></mml:mrow></mml:msub><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mrow></mml:mrow><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:mfrac><mml:mo>,</mml:mo></mml:math>
+
+![Equation](images/F000054si102.png)
+
+其中 `C`[1]、`C`[2]、…、`C[k]` 是 `k` 个簇；外层求和是对这些簇进行的；下一个内层求和是对属性求和的；`a[i]` 是第 `i` 个属性；它取值为 `v[i]`[1]、`v[i2]`、…，这些由对 `j` 的求和处理。注意概率本身是通过对所有实例求和得到的：因此还有一个进一步的隐含求和层级。
+
+如果你花时间仔细研究，这个表达式很有意义。设立簇的意义在于它在预测该簇中实例的属性值时会有一些优势——也就是说，`P`(`a[i]` = `v[ij]`∣`C[l]`) 是属性 `a[i]` 对簇 `C[l]` 中的实例具有值 `v[ij]` 的概率的更好估计，比 `P`(`a[i]` = `v[ij]`) 更好，因为它考虑了实例所在的簇。如果该信息没有帮助，簇就没什么用处！因此，该测度在多重求和内部计算的是该信息在概率平方的差异方面 `does` 有帮助的程度。这并不是完全标准的平方差度量，因为后者是对差值的平方求和（产生对称结果），而当前测度是对平方的差求和（恰当地，不产生对称结果）。概率平方的差异在内层双重求和中对所有属性及其所有可能取值求和。然后在外层求和中对所有簇按其概率加权求和。
+
+总体上除以 `k` 有点难以解释，因为平方差已经在类别上求和了。它本质上为类别效用提供了一个“per cluster”数值，从而遏制过拟合。否则，由于概率是通过对相应实例求和得到的，将每个实例单独放入一个簇就能获得最佳的类别效用。然后，`P`(`a[i]` = `v[ij]`∣`C[l]`) 对于类别 `C[l]` 中单个实例的属性 `a[i]` 实际具有的值将为 1，对于所有其他值则为 0，而类别效用公式的分子最终会变成
