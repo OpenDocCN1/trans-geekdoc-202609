@@ -1,0 +1,50 @@
+level_changes:
+- line: 228
+  before: 1
+  after: 2
+- line: 2506
+  before: 2
+  after: 3
+- line: 2986
+  before: 2
+  after: 3
+- line: 2996
+  before: 2
+  after: 3
+- line: 3019
+  before: 2
+  after: 3
+- line: 3027
+  before: 2
+  after: 3
+- line: 3057
+  before: 2
+  after: 3
+- line: 3240
+  before: 3
+  after: 2
+- line: 3243
+  before: 3
+  after: 2
+- line: 3246
+  before: 3
+  after: 2
+- line: 836
+  before: 1
+  after: 2
+text_changes:
+- line: 228
+  before: OneAPI Base Toolkit 安装指南
+  after: 2.2 oneAPI Base Toolkit 安装指南
+- line: 836
+  before: '4'
+  after: 4.9 资源
+- line: 1179
+  before: Resources
+  after: 资源
+- line: 1188
+  before: 5.5 Key Points to Remember
+  after: 5.5 需要记住的关键点
+- line: 1743
+  before: Resources
+  after: 资源
