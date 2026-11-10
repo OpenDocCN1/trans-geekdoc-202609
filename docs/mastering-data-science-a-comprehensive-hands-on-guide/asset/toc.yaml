@@ -1,0 +1,41 @@
+level_changes:
+- line: 184
+  before: 1
+  after: 2
+- line: 211
+  before: 1
+  after: 2
+- line: 277
+  before: 1
+  after: 2
+- line: 371
+  before: 1
+  after: 2
+- line: 397
+  before: 1
+  after: 2
+- line: 519
+  before: 1
+  after: 2
+- line: 798
+  before: 1
+  after: 2
+- line: 826
+  before: 1
+  after: 2
+- line: 934
+  before: 1
+  after: 2
+- line: 992
+  before: 1
+  after: 2
+text_changes:
+- line: 17
+  before: 第 5 章：`NumPy` 在数据科学中的应用
+  after: 第 5 章：NumPy 在数据科学中的应用
+- line: 20
+  before: 第 6 章：`pandas` 在数据科学中的应用
+  after: 第 6 章：pandas 在数据科学中的应用
+- line: 23
+  before: 第 7 章：`Matplotlib` 和 `Seaborn` 在数据科学中的应用
+  after: 第 7 章：Matplotlib 和 Seaborn 在数据科学中的应用
