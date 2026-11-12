@@ -1,0 +1,342 @@
+
+## D
+
+- daemons
+- definition, 12
+- MySQL startup, 492
+- xinetd, 12
+- daily notes on Web site, 603
+- data entry, forms, 558
+- data modification, Web page
+  - users, 557–566
+- data structures, Tcl
+  - queue, 286, 287–288
+  - record, 286, 289–290
+  - stack, 286, 288–289
+- data types
+  - MySQL
+    - blob, 529
+    - date, 529
+    - datetime, 529
+    - double, 529
+    - float, 529
+    - int, 529
+    - int unsigned, 529
+    - integer, 529
+    - longblob, 529
+    - longtext, 529
+    - mediumblob, 529
+    - mediumtext, 529
+    - smallint, 529
+    - smallint unsigned, 529
+    - text, 529
+    - time, 529
+    - tinyint, 528
+    - tinyint unsigned, 528
+  - Perl
+    - overview, 107
+    - scalar variables and, 109
+  - PHP
+    - Boolean, 369
+    - conversion, 443–447
+    - float, 370
+    - integer, 369
+    - mixing, 375–377
+    - string, 370
+- data validation
+  - JavaScript, 544–547
+  - PHP, 547–549
+- database access functions
+  - (PHP), 348
+- databases
+  - distributed databases, 603–604
+  - MySQL
+    - adding data with PHP, 540–549
+    - backups, 508–509
+    - columns, 505
+    - connecting to with Perl, 569–570
+    - copying, 511
+    - creating, 507, 530–535
+    - data entry with PHP, 541–544
+    - definition, 505
+    - deleting, 507–508
+    - directories, 508
+    - existence, determining, 506
+    - keyed columns, 516
+    - listing tables, 516–517
+    - locking for backups, 508
+    - modifying with Perl, 573–575
+    - moving to another computer, 511
+    - querying using Perl, 570–573
+    - reading from using PHP, 491
+    - result sets, 540
+    - storage, 506
+    - table creation, 512–513
+    - user privileges, 509–510
+  - PHP
+    - adding data to MySQL tables, 540–549
+    - designing, 352–353
+    - queries, 600
+    - relationships
+      - many to many, 520
+      - one to many, 520
+    - rows, 505
+    - searches, 525–527
+    - sorting, 525–527
+    - tables, 505
+    - transactions, 601–602
+- date data type (MySQL), 529
+- date functions (Perl)
+  - current time, obtaining, 184–186
+  - formatting, 186–189
+  - overview, 183–184
+- datetime data type (MySQL), 529
+- decimal numbers, converting from hexadecimal, Perl, 212–213
+- declaring variables, PHP, 414–415
+- default directory (Apache)
+  - configuring, 80
+  - security considerations, 94
+- default path, Apache, 58
+- default variable (Perl), 99, 104
+- delete command, Tcl, 278–280
+- delete privilege (MySQL), 502
+- denial of service attacks
+  - firewalls and, 31–32
+- Deny directive (Apache)
+  - defined, 82
+- deriving classes (PHP), 470–472
+- designing tables, creation, 519–520
+- Destroy() function (PHP), 468
+- destructors, Perl, 176–177
+- developer tools (Tcl)
+  - FastBase MySQL + Tcl Interface, 343
+  - [incr Widgets], 343
+  - mysqlctl, 343
+  - Tcl Dev Kit, 343
+  - Tcl Developer Exchange, 343
+- dialog boxes
+  - introduction, 333
+  - message boxes, input, 333–335
+  - Tk
+    - color grabber, 338–339
+    - custom, 339–340
+    - directory selection, 335–336
+    - file name to save, 337–338
+    - File Open, 336–337
+- die statement, Perl, 102–103
+- directives (Apache)
+  - AccessNameFile, 68, 70
+  - AddType, 79
+  - AllowOverride, 68
+  - AuthConfig, 68
+  - CustomLog, 75
+  - defined, 49
+  - directory access, 81–82
+  - DirectoryIndex, 70–71
+  - DocumentRoot, 71
+  - ErrorLog, 73–75
+  - FileInfo, 68
+  - Files, 82–84
+  - implementing, 69–70
+  - Indexes, 69
+  - Limit, 69
+  - Listen, 71–72
+  - LoadModule, 88
+  - LogFormat, 76
+  - NameVirtualHost, 84–85
+  - Option, 69
+  - PidFile, 72
+  - ScriptAlias, 77
+  - ServerName, 72–73
+  - ServerRoot, 73
+  - User, 73
+- directories
+  - Apache
+    - configuring default, 80
+    - directory access directives, 81–82
+    - enabling features, 82–83
+    - identifying, 80–81
+    - security considerations, 93
+  - databases (MySQL), 508
+  - listings
+    - obtaining, 158–160
+    - recursively obtaining, 160–161
+  - selection dialog boxes (Tk), 335–336
+  - Tcl, managing, 278–280
+- DirectoryIndex directive (Apache configuration files), 70–71
+- distributed databases, 603–604
+- division
+  - (/) operator, PHP, 372
+  - expressions, Tcl, 228
+- DMZ (demilitarized zones), security and, 9
+- *.doc notation, 610
+- documentation
+  - CVS, 697
+  - Perl, ActiveState, 105
+- DocumentRoot directive (Apache configuration files), 71
+- DOCUMENTROOT value (Apache configuration file), 47
+- dollar sign ($), Perl variables, 109
+- DOS filenames, 8.3 filename, definition of, 611
+- double data type (MySQL), 529
+- double() function, Tcl, 229
+- double-bracket notation, multidimensional arrays (PHP), 410
+- do-until loops, Perl, 145
+- downloading
+  - Apache binary files, 56
+  - Apache source files, 54
+- drawing, canvas widget (Tk), 317–324
+- drivers
+  - Perl DBI database connections, 570
+  - updates, Windows, 30
+- dropping tables, 516
+- dynamic binding (PHP), 469–470
+- dynamic content, PHP, adding, 349
+- dynamically generating style sheets (PHP), 477–478
+
+## E
+
+- else block
+  - if statement, Tcl, 250–251
+  - testing conditions (Perl), 126
+- else statements, if blocks, 256
+- elseif statement, Perl, 130–131
+- e-mail
+  - cookies, 590
+  - users, Web page modification, 558–559
+- embedding HTML, in PHP scripts, 362–363
+- list variables in strings, 117–118
+- text widgets (Tk), 328–329
+- variables in strings (Perl), 114–115
+- variables, PHP strings, 383
+- encryption, troubleshooting, 591
+- end of line expression defined, 637
+- multiline mode and, 668
+- engineering applications (PHP), 351
+- environment variables, Apache, installing, 60–61
+- eq keyword, testing conditions (Perl), 126
+- equal command (Tcl), 238–239
+- equal signs, double (==), testing conditions (Perl), 127
+- equality, testing (Perl), 133–135
+- error checking, Perl DBI, 575
+- error handling
+  - Perl, die statement, 102–103
+  - PHP code, 365
+- error log file (Apache), overview, 49
+- error reporting configuration (Apache), 73–74
+- ErrorLog directive (Apache), log file configuration, 73–75
+- errors, CGI scripts, 204–206
+- escape characters
+  - Perl, 112
+  - PHP strings, 378
+- escape sequences, PHP strings, 382–383
+- existence of databases (MySQL), 506
+- existence of variables (PHP), 371
+- exp() function, Tcl, 229
+- Experimental directives, defined, 69
+- explode string function (PHP), 450
+- expr command (Tcl), 227–228
+  - mathematical functions, 229–230
+  - overview, 227–228
+  - procedure values, 268
+- expressions
+  - cryptic expressions, 614
+  - end of line expression, 637
+  - multiline mode and, 668
+  - newline expressions, modifying multiple newlines, 672–675
+  - regular expressions
+    - accidentally ignoring backslashes, 689
+    - avoiding capturing alternatives, 688
+    - avoiding capturing too much, 688
+    - building forms from strings, 677–679
+    - capturing, definition of, 649
+    - capturing while splitting strings, 663–664
+    - creating size information for IMG tags, 679–682
+    - default (absence of the singleline modifier), 691
+    - definition of, 609
+    - example of, 612–615
+    - extracting HTML text, 682–684
+    - global option and, 690
+    - grep program, 671–672
+    - grouping and capturing, 649–657
+    - grouping, definition of, 649
+    - including delimiters, 690
+    - keeping them simple, 687–688
+    - manipulating and replacing, 645–648
+    - matching a range of characters, 635–636
+    - matching character sets, 631–636
+    - matching characters, 617–619
+    - matching delimiters, 631
+    - matching digits and numbers, 630
+    - matching multiple characters, 619–621, 624–626
+    - matching special characters, 626–636
+    - matching whitespace, characters, 628–630
+    - multiline modifier and, 691
+    - pattern matching, 610
+    - patterns, 610
+    - Perl, support for, 615
+    - PHP and, 622
+    - PHP, support for, 615
+    - practice options, 616
+    - preventing extra characters in a match, 637–640
+    - processing multiline strings, 668–671
+    - regex engine, customizing while matching, 640–642
+    - regex term, 612
+    - replacing with straight text, 643–645
+    - Scintilla (Windows editor) and, 613–614
+    - searching and replacing, 643–647
+    - searching vs. replacing, 688–689
+    - singleline modifier and, 691
+    - special characters, list of, 627, 628
+    - splitting strings, 659–664
+    - splitting strings (PHP), 660–662
+    - splitting strings (Tcl), 662
+    - splitting strings into individual characters, 663
+    - Tcl and, 622
+    - Tcl, support for, 615
+    - typical uses, 624
+    - uppercase vs. lowercase in matching, 689–690
+    - using features that are not there, 689
+    - vi editor (Unix) and, 614–615
+    - wildcard characters, 610
+  - start of line expression, 637
+  - multiline mode and, 668
+  - Tcl braces, 231–232
+  - mathematical, 228–230
+  - numerical, 227–228
+  - word boundary expression, 637–639
+- Extension directives, defined, 69
+- extension modules (Apache)
+  - defined, 87
+  - installing, 88
+- extensions, Apache architecture overview, 49
+- external modules (Apache)
+  - architecture overview, 49
+  - defined, 87
+
+## F
+
+- facilities, logs, 20
+- FastBase MySQL + Tcl Interface developer tool, 343
+- fetches, Perl, result set data, 571–573
+- fields in data bases. See columns
+- file access, Web, Tcl, 283–284
+- file and database functions (PHP), 348
+- file command, Tcl, 277–278
+- file handles (Perl), 162–164
+- file locking (CVS), 704
+- File Open dialog box, Tk, 336–337
+- FileInfo directives (Apache configuration file), 68
+- filenames
+  - 8.3 filename, definition of, 611
+  - alternate filenames, 611
+  - dialog boxes (Tk), 337–338
+  - PHP, extensions, 358–359
+- files
+  - appending to, 166
+  - checking for/obtaining information, 166–167
+  - chomping (Perl), 162–164
+  - creating and writing to, Perl, 162–164
+  - deleting, 166
+  - determining number of lines in file, 669
+  - opening and reading from, 165
+  - opening from command line (Perl), 161–162

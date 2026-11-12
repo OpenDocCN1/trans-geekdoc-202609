@@ -1,0 +1,11 @@
+# Designing database applications
+
+One powerful aspect of PHP is its ability to interface with various databases. Most people who use PHP use the MySQL database, which is the database I focus on throughout this book.
+
+Using a database, you can store large volumes of information, and using PHP, you can give your Web site users access to this data. For example, you may have a database containing user preferences for the Web site, such as content layout or font colors. You store this information in the database. Then when a user connects to your Web site and logs in with a username, PHP looks up the user's preferences in the database.
+
+PHP dynamically generates Web pages, so if you want to provide customized font colors, for example, you would include PHP code that writes out a FONT tag in HTML, containing the colors chosen in the user preferences. Then when the client computer receives the Web page, it contains the color information already hardcoded into it.
+
+Similarly, you can retrieve more complex information from a database. For example, suppose a university wants to include an office directory on its Web site. It wants users to be able to type a last name into the online directory and then see a Web page displaying a list of professors with that last name, along with e-mail addresses and office locations. You can easily do this with PHP: You take the requested last name, perform a database search, and retrieve all the rows in the table (a row is the preferred term for a record) where the last name column contains the requested value.
+
+Then the dynamic content begins. In your PHP code, you display an HTML line containing the professor's name, e-mail address, and office location that the program found in the database. You might use an HTML table to carefully format the data. And you might even include an anchor tag <A that contains mailto: HREF around the e-mail address so the user can click the link to send an e-mail to that address. All this dynamic HTML is up to your PHP code, which displays the formatted HTML; the data in the database doesn't contain any HTML code -- just data. Again, that's what dynamic content is all about.
