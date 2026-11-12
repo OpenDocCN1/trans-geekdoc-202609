@@ -1,0 +1,11 @@
+# 6.3.7.1 NAIVE BAYES
+
+The Naive Bayes calculation deals with the Bayes hypothesis and adopts a probabilistic strategy. In contrast to other classification algorithms, this algorithm uses a set of prior probabilities for each class. When new data is introduced, it updates these probabilities to calculate what is known as the posterior probability. This comes helpful when you need to anticipate whether the information has a place with a given rundown of classes or not.
+
+# 6.3.7.2 ARTIFICIAL NEURAL NETWORKS
+
+It is a type of deep learning algorithm inspired by the neural connections in animal brains, capable of receiving signals from one layer and transmitting them to the next. These artificial neural networks can learn by analyzing patterns, often without human intervention. Their applications are diverse—ranging from aiding pathologists in diagnosis to conducting biochemical analysis. Artificial neural networks have become powerful tools across various domains in healthcare and biomedical research. Artificial neural networks are broadly categorized into two types: convolutional neural networks (CNNs) and recurrent neural networks (RNNs). Imaging plays a vital role in medical science, as it allows physicians to detect diseases even before symptoms appear. To support early diagnosis, several screening techniques—such as Pap smears, mammograms, and colonoscopies—are widely used. CNNs have proven especially valuable in this area, as they are well-suited for both binary and multiclass classification tasks in medical image analysis. In contrast, RNNs are particularly effective for pattern recognition in clinical time-series data, making them essential tools for analyzing sequences such as patient vitals or ECG readings.
+
+# 6.3.7.3 RANDOM FOREST
+
+Random Forest is used to construct multiple decision trees during training for classification and regression tasks, effectively addressing the overfitting problem often associated with single decision trees. In healthcare, it is commonly applied to predict disease risk based on a patient's medical history and is also used in the analysis of ECG and MRI data.

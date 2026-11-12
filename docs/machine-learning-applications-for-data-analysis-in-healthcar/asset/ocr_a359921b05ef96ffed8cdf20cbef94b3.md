@@ -1,0 +1,10 @@
+| Dextrocardia | Inverted P wave |
+|---|---|
+| Hyperkalemia | Tall T-wave without a P wave |
+| Sudden cardiac death | Asymmetrical ECG |
+| Sinoatrial block | Total interruption of a cardiac cycle |
+| Myocardial ischemia | Inverted T wave |
+
+# 10.2 LITERATURE REVIEW
+
+DeepSleepNet is a deep learning model for automatic sleep stage rating based on raw single-channel EEG [17]. The majority of the currently used techniques rely on hand-engineered components, which necessitate prior sleep analysis expertise. Few of them incorporate within the retrieved features the temporal information necessary for determining the upcoming stages of sleep, such as transition rules. In this new model, convolutional neural networks extract time-invariant characteristics and bidirectional long short-term memory learns sleep-stage transition rules from EEG epochs. In this study [18], a method for choosing mother wavelet basis functions is presented. It is used to denoise the ECG signal in the wavelet domain while preserving peak signal amplitudes that are close to their full values. The wavelet-based denoised ECG readings maintain the original diagnostic information [19]. Graph-based attention model uses an attention technique to describe a medical idea as a composite of its ontology ancestors based on the data volume and ontology structure. The classification of ECG beats using a mixed neural network model is demonstrated in this research [20]. ECG signals were dissected using discrete wavelet transform (DWT) and statistical characteristics were derived to describe distribution. In Ref. [21], authors used both the original and noise-reduced sets of ECG signals from a public database for our experiment. The number of instances of each of the five kinds of heartbeats in this set was artificially increased, and high-frequency noise was removed by filtering. CNN was trained utilizing enhanced data and obtained 94.03% and 93.47% accuracy in diagnosing heartbeats in original and noise-free ECGs.
