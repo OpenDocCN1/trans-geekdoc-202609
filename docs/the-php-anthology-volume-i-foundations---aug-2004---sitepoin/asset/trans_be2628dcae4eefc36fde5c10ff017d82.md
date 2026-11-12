@@ -1,0 +1,301 @@
+
+- error_log, 331
+- error_reporting, 321, II-102, II-171
+- eval, II-153
+- explode, 150
+- fclose, 123
+- feof, 117
+- fgets, 117
+- fgetss, 118
+- file, 112, 117, II-87
+- file_exists, 121
+- file_get_contents, 113, 116, 117, 284
+- fileatime, 122
+- filemtime, 122
+- filesize, 117, 121, 129
+- flush, II-227
+- fopen, 116, 119, 123, 130
+- fread, 116, 117, 123
+- fscanf, 118
+- fsockopen, 130, II-87
+- ftp_chdir, 133
+- ftp_connect, 132
+- ftp_login, 132
+- ftp_nlist, 133
+- ftp_pwd, 133
+- get_magic_quotes_gpc, 19, 85
+- getallheaders, II-262, II-266
+- gethostbyaddr, II-223
+- getimagesize, 212, 213, 233
+- gmdate, II-264
+- header, 211, 288, II-7, II-243, II-246
+- highlight_file, 125
+- highlight_string, 125
+- htmlspecialchars, 145, 156, 269
+- imagecolorallocate, 224
+- imagecopy, 224
+- imagecopyresampled, 213
+- imagecopyresized, 213
+- imagecreatefromjpeg, 212
+- imagecreatetruecolor, 212, 213
+- imagefontload, 224
+- imagejpeg, 213, II-43
+- imageloadfont, II-41
+- imagestring, 224, II-41
+- implode, 151
+- ini_set, 16, II-72
+- is_dir, 122
+- is_file, 122
+- is_readable, 122
+- is_string, II-304
+- is_uploaded_file, 283
+- is_writable, 122
+- mail, 237, 238, II-287
+- md5, II-16, II-51, II-258
+- microtime, 204
+- mktime, 176, 176
+- mysql_affected_rows, 93
+- mysql_close, 68
+- mysql_connect, 24, 68, 323
+- mysql_error, 78
+- mysql_escape_string, 85, II-17
+- mysql_fetch_array, 24, 73, 74, 75
+- mysql_fetch_object, 75
+- mysql_insert_id, 94
+- mysql_num_rows, 89, 93
+- 与未缓冲查询一起, 75
+- mysql_query, 24, 73, 74, 80, 86
+- mysql_real_escape_string, 85
+- mysql_result, 75
+- mysql_select_db, 24, 68
+- mysql_unbuffered_query, 75
+- nl2br, 146
+- ob_clean, II-250
+- ob_end_clean, II-246, II-254
+- ob_end_flush, II-246, II-248, II-254
+- ob_get_contents, II-246, II-250
+- ob_start, II-246, II-254
+- opendir, 123
+- parse_ini_file, 17, 107, 128
+- preg_quote, 158
+- print_r, 249, 281
+- printf, 118, 152
+- pspell_suggest, II-54
+- putenv, 203
+- 与 IIS 一起, 203
+- rawurldecode, 144
+- rawurlencode, 144
+- readfile, 123
+- readfile, 115, 117, II-227
+- session_register, II-11
+- session_start, II-7, II-9, II-11, II-246
+- session_unregister, II-11
+- setcookie, II-246
+- set_error_handler, 326, 328
+- set_time_limit, 132, 207, 247
+- sleep, 247, II-24
+- sprintf, 152
+- str_replace, 150
+- strip_tags, 118, 147, 153, 156, 163, 167, II-210
+- stripslashes, 19, 84
+- strpos, 5, 149
+- strtotime, II-266
+- substr, 149
+- system, 98, 138
+- time, 176, 202, 203
+- trigger_error, 79, 320, 324, 325, II-97
+- trim, 151
+- urldecode, 144
+- urlencode, 144
+- 警告, 324
+- wordwrap, 149
+- xml_parse_into_struct, II-87, II-88
+- xml_parser_create, II-87
+- xml_parser_free, II-88
+- xml_parser_set_option, II-87
+- xml_set_character_data_handler, II-93
+- xml_set_element_handler, II-93
+- xml_set_object, II-97, II-101
+- xslt_create, II-137
+- xslt_errno, II-137
+- xslt_error, II-137
+- xslt_process, II-137
+- PHP 许可证, 154
+- PHP 手册, 2
+- 搜索, 4
+- 捷径, 5
+- PHP 源代码
+- 在线显示, 125
+- 安全问题, 125
+- php.ini, 3, 11, 16, 18, 20, 47, 84, 105, 125,128,203,204,205,226,237,280,321,322, II-72, II-81, II-82, II-260, II-270
+- PHPDoc, II-284
+- PHPDocumentor, 159
+- phpDocumentor, II-293
+- PHPMailer, 238, 243, 245, II-26, II-48, II-287
+- phpOpenTracker, II-221, II-227, II-234, II-238
+- API, II-231
+- 安装, II-228
+- 搜索引擎插件, II-236
+- PHPSESSID 变量, II-214
+- phpSniff, II-222
+- PhpUnit, II-300
+- 饼图 (参见 graphs, pie charts)
+- PNG (参见 Portable Network Graphics (PNG))
+- 点, II-172
+- 多态, 35, 60, 63
+- 可移植文档格式 (PDF), II-169
+- 来自 HTML, II-177
+- 生成, II-176, II-196
+- 页面原点, II-173
+- 渲染, II-169
+- 可移植网络图形 (PNG), 210
+- 可移植 PHP 代码, 16
+- POST (参见 HTTP 请求方法)
+- post_max_size 指令, 280
+- PostgreSQL, 66, 78, II-343
+- 打印语句, II-245
+- 私有方法, 39
+- 过程式编程, 23
+- 处理指令 (参见 XML 处理指令)
+- 代理服务器, II-224
+- 伪 cron, 205
+- (另见 cron)
+- 公有方法, 39
+
+## Q
+
+- QuickForm (参见 PEAR, PEAR::HTML_QuickForm)
+- 引号 (参见 代码优化, 引号)
+- SQL 语句中的引号, 83, 84
+
+## R
+
+- R&OS PDF, II-170
+- 原始数据, II-226
+- RDF (参见 RSS)
+- 领域, II-6
+- 重定向, II-20
+- (另见 HTTP 标头, location)
+- 重构, 28
+- 引用计数, 48
+- 引用, 20, 39, 45, II-276
+- (另见 调用时按引用传递)
+- (另见 按引用传递)
+- 使用它提高性能, 47
+- 在 PHP 5 中, 48
+- 从函数/方法返回, 46
+- 到新对象, 46
+- register_globals 指令, 18, II-11, II-18
+- 注册用户 (参见 用户注册系统)
+- 正则表达式, 153, 158, II-44, II-340
+- REPAIR TABLE 查询, 103
+- 修复损坏的 MySQL 数据库, 103
+- require, 12
+- (另见 include)
+- require_once, 12, 14, 17, II-276, II-283
+- (另见 include_once)
+- 保留字符, 144
+- 资源标识符, 74
+- RESTORE TABLE 查询, 101
+- 结果分页器 (参见 分页结果)
+- 返回命令
+- 在构造函数中, 31
+- 返回值, 5
+- 对于构造函数, 31
+- 重用代码, 20, 23
+- 富客户端, II-215
+- RLIKE 运算符, 96
+- 机器人 (参见 访问者统计, 排除搜索引擎)
+- RSS, II-79, II-85, II-102
+- 聚合, II-122
+- 生成, II-114
+- 验证, II-122
+- RTFM, 2
+- (另见 PHP 手册)
+
+## S
+
+- SAX (参见 简单 XML API (SAX))
+- 可缩放矢量图形 (SVG), II-169, II-200
+- 使用 PHP 渲染, II-205
+- 作用域, 34
+- 脚本执行时间 (参见 计时 PHP 脚本)
+- 搜索引擎友好的 URL, 307
+- 搜索引擎查询, II-236
+- 在字符串中查找和替换文本, 149
+- 搜索 MySQL 数据库, 95
+- (另见 全文搜索)
+- 安全套接层 (SSL), II-1
+- 安全, 3
+- SELECT 查询, 80
+- 别名, 91, II-62
+- 计算返回的行数, 89, 92
+- 与 MySQL 一起, 90
+- 与 PHP 一起, 89
+- 优化, II-275
+- 使用它搜索, 95
+- 排序结果, 256
+- 语义错误, 10, 319
+- sendmail, 237
+- 会话变量, II-45
+- session.save_path 指令, II-10, II-72
+- 会话, 231, II-8, II-11, II-12, II-55, II-154, II-214
+- (另见 自定义会话处理程序)
+- (另见 跟踪在线用户)
+- 在多台服务器上, II-280
+- 安全问题, II-9, II-57
+- 存储在 MySQL 中, II-71, II-73
+- 与 cookies 相比, II-232
+- 短标签 (<? ?>)
+- short_open_tag 指令, 18, 205, II-81
+- SHOW TABLES 查询, 101
+- 简单 XML API (SAX), 163, II-80, II-82, II-87, II-88, II-110, II-177
+- 简单邮件传输协议 (SMTP), 237
+- 简单对象访问协议 (参见 SOAP)
+- SimpleTest, II-301
+- 滑动页码, 263
+- SMTP (参见 简单邮件传输协议 (SMTP))
+- SOAP, II-iii, II-141, II-150, II-226
+- (另见 WSDL)
+- (另见 XML-RPC)
+- 构建客户端, II-152, II-164
+- 构建服务器, II-157
+- 与 XML-RPC 相比, II-142
+- 源代码 (参见 PHP 源代码)
+- 特殊字符, 145, 145, 156
+- (另见 保留字符)
+- (另见 不安全字符)
+- 爬虫 (参见 访问者统计, 排除搜索引擎)
+- SQL 注入攻击, 275
+- SQL 注入攻击, 19, 20, 81, 86, II-144
+- 独立 PHP 脚本, 249
+- 标准输入, 249
+- 静态方法, 29, 159
+- 统计 (参见 访问者统计)
+- stdClass, II-100
+- 字符串函数, 149
+- (另见 PHP 函数)
+- 字符串
+- 转换为数组, 150
+- 从数组创建, 151
+- 视为数组, 152
+- 修剪空白, 151
+- 将格式化值写入, 152
+- 结构化查询语言 (SQL), 73, II-134
+- (另见 DELETE 查询)
+- (另见 INSERT 查询)
+- (另见 SQL 语句中的引号)
+- (另见 SELECT 查询)
+- (另见 UPDATE 查询)
+- (另见 变量, 在 SQL 查询中)
+- 自动生成, 104
+- 从 XML 生成, II-138
+- 使用它解决问题, 78
+- 子类 (参见 子类)
+- 父类 (参见 父类)
+- 超全局变量, 18
+- SVG (参见 可缩放矢量图形 (SVG))
+- switch 语句, 88, 256, 327, II-58, II-60, II-89, II-130, II-322, II-334
+- 语法错误, 9, 319
+- 语法高亮 (参见 PHP 源代码, 在线显示)
+- 系统集成测试, II-298

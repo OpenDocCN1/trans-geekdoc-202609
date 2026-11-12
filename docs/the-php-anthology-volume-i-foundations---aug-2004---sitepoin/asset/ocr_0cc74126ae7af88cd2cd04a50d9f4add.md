@@ -1,0 +1,11 @@
+There’s no perfect solution. What if people decide to make copies of the images they bought from you and redistribute those copies without your knowing? It’s almost impossible to prevent them doing so unless you provide files that have been modified especially for the purpose of distribution (for example, image files protected by watermarks).
+
+Some of the different strategies for distribution are as follows:
+
++   - [ ] Send the file via email. This is good for small files as it practically guarantees delivery, but many email systems place a limit on the size of files a user can receive (typically one or two megabytes).
+
++   - [ ] Provide customers with a unique link that they can use to download the file for a limited time period, such as a week. If an attempted download fails (for example, the customers lose their Internet connection during the download) this strategy allows them to try again. A unique, random number can be generated and used in the URL for the download. This number corresponds with an entry in a database, which expires after a specified time period. This will at least limit the number of times the file is downloaded, and should help prevent redistribution of the file via the same URL. This approach is used by PayPal Antifraud[8], among others.
+
++   - [ ] Provide customers with user name and password combinations that they can use to log into the site and download their own files. This approach has proven particularly effective for the PHP Architect[9] site, where it’s used to distribute the PHP Architect magazine in Adobe Acrobat format. The Acrobat files are generated “on the fly”, and secured with the same password the customer used to log in to the site. This obviously discourages customers from redistributing the magazine, as they’d have to give away their password to do so.
+
+As I said, there’s no perfect solution to this problem. However, greater protection can be achieved if some form of security is built into the file that’s being downloaded, such as a license key in the case of software.
