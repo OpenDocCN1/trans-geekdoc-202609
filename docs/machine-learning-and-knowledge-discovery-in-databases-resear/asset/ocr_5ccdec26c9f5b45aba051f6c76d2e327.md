@@ -1,0 +1,15 @@
+evolutionary algorithms to find $H$ as elucidated in Sect. 3. In contrast, our proposed approach only needs a refinement operator to generate its training data and does not make use of the mapping process.
+
+# # 3 Related Work
+
+DL-Learner [21] is regarded as the most mature and recent system for class expression learning [6,9]. DL-Learner comprises several state-of-the-art approaches, including OCEL and CELOE [22]. Both consider the OWL class expression learning problem as a search problem in a quasi-ordered space of OWL class expressions in DLs. To traverse the search space, OCEL and CELOE apply a downward refinement operator while relying on different statistical heuristic functions. During the search, CELOE prioritizes syntactically shorter expressions. CELOE and OCEL apply the redundancy elimination and the expression simplification rules to decrease their runtimes. Although applying such fixed rules may reduce the number of explored expressions, long runtimes and extensive memory requirements still prohibit large-scale applications of such refinement-operators-based approaches [9,11,14]. Rizzo et al. [31] follow the general idea of a refinement-operator-based approach but focus on a small number of class expressions, which are used to create several decision trees that are combined similar to a random forest. Recent works often focus on accelerating the learning process. DRILL [9] uses a deep Q-network instead of a fixed heuristic function to steer the search more efficiently towards accurate OWL class expressions. CLIP [18] prunes the search space by introducing an upper bound on the length of the OWL class expressions. NCES [19,20] uses deep neural networks to learn mappings between sets of examples and class expressions without a search process. EvoLearner [13] is based on evolutionary algorithms and initializes its population (i.e., class expressions) by random walks on the input RDF KG.
+
+Compared to the state-of-the-art models, tDL uses multi-hop information about $E^+$ and $E^-$ to detect relevant OWL class expressions. Such expressions are then used as binary features for a supervised binary classification problem. tDL builds a decision tree algorithm (e.g. CART) to tackle this supervised binary classification problem, where a node corresponds to OWL class expression. Therefore, tDL learns Boolean rules to distinguish positive and negative examples. Instead of using a fixed handcrafted heuristic, tDL can use the Shannon information gain to recursively partition the feature space (i.e., the extracted class expression space) such that the positive examples are grouped together.
+
+# # 4 Methodology
+
+**Supervised Binary Classification.** Given two ordered sets $E^+, E^- \subset N_I$ with $E^+ \cap E^- = \emptyset$ and a knowledge base $\mathcal{K}$, we firstly extract the first hop information as
+
+```
+$\mathcal{F} = \bigcup_{x \in E} \{(x, p, o) \mid (x, p, o) \in \mathcal{K}\}, \qquad (3)$
+```

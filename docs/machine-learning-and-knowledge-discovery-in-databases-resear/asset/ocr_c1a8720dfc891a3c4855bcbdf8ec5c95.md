@@ -1,0 +1,15 @@
+where we specifically focus on 2D image classification tasks. Like SAM, but in contrast to SNN-Grad2D and SNN-IG2D, we present a method that is capable of producing explanation heatmaps without the need for computing gradients. However, our method uses the predictions of the model to steer the generation of the explanations. In contrast to SAM but similar to SNN-Grad2D and SNN-IG2D, our method produces a single heatmap for all timesteps together based on the class predicted by the model, which ensures that the highlighted region is relevant to the predicted class.
+
+# ## 3 Background
+
+In this section, we first introduce key concepts essential for understanding the contributions made by this work (Sect. 3.1). This is followed by background information on the post-hoc interpretation method proposed in [25] since our work can be seen as an extension to the SNN domain of that method (Sect. 3.2).
+
+# ### 3.1 Spiking Neural Networks
+
+Artificial Neural Networks (ANNs) were originally inspired by the biological neural networks present in the brain [20, 30]. However, significant differences exist between traditional ANNs and biological neural networks in terms of structure, neural computations, learning rules, and the way information propagates between neurons [37]. These differences result in traditional ANNs consuming significantly more energy, which motivates the development of designs that align more closely with the biological counterpart. One of the most prominent examples of this are Spiking Neural Networks (SNNs), which use spikes (discrete events) to propagate information over time, emulating the spiking nature of biological neurons. A spike can be represented as a 1, and the absence of a spike as a 0. In SNNs, time is defined by timesteps \(T\) over which a single input is fed to the network. In this work, feeding a single input to an SNN means recurrently presenting the input to the network at each timestep. In our case, the input can be regarded as an image as we focus on image classification. These concepts are implemented through a spiking neuron model. Various spiking neuron models exist, but in this work the Leaky Integrate-and-Fire (LIF) model is used [18].
+
+**Leaky Integrate-and-Fire Neuron:** Similar to neurons in non-spiking ANNs, LIF neurons operate by summing weighted inputs. However, instead of pushing it through an activation function, the weighted sum is added to an internal state called the membrane potential \(U[t]\). When this potential reaches a threshold \(\theta\), an output spike is generated. This behaviour can be described by the Heaviside step function, where the input is the membrane potential minus the threshold value (\(U[t] - \theta\)). Considering that \(S_{out}[t]\) denotes the output spike value at timestep \(t\), this function can be reformulated regarding the spiking neuron as:
+
+```
+\(\displaystyle S_{out}[t] = \begin{cases} 1, & \text{if } U[t] > \theta \\ 0, & \text{otherwise} \end{cases}\)
+```

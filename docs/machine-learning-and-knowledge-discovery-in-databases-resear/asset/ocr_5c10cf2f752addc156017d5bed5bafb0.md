@@ -1,0 +1,13 @@
+![](bbox=[0.09, 0.08, 0.85, 0.22])
+
+Fig. 3. (a,b) Classification results for shallow SNN and SVGG19 over different $\mu$ values, respectively. This includes the accuracy when all filters in the model are considered (green), when the output of relevant filters are ablated (blue) and when the output of random filters is ablated (orange). (c) Layer-wise distribution of the identified relevant filters over the 16 convolutional layers of the SVGG19. (Color figure online)
+
+this experiment can be found in Figs. 3 (a,b). We observe for both models that for all $\mu$, the accuracy when ablating relevant filters is always substantially lower than when ablating randomly selected filters. This suggests that our method is capable of identifying filters that have a greater impact on the decision-making process of the model than just any filter. The sparsity constraint $\mu$ can be considered a tunable hyperparameter, for which we use $\mu = 2$ for the shallow SNN and $\mu = 20$ for the SVGG19 in all subsequent experiments.
+
+# 5.3 Layer-Wise Distribution of Identified Relevant Filters
+
+We assess the distribution of the identified relevant filters over the layers of the model. For the shallow SNN, relevant filters are found in the first convolutional layer for classes 0, 1, 4 and 6 and are present in the second convolutional layer for all classes. Figure 3 (c) shows that the identified relevant filters for the SVGG19 exhibit a skewed distribution, with a high concentration in the later layers of the model, while there are fewer relevant filters in the earlier and middle layers. This is in line with observations in the literature that state that earlier layers learn more generic features (edges, textures, and basic shapes), and that later layers focus on more complex class-specific features.
+
+# 5.4 Qualitative Interpretation Feedback
+
+Following the previous experiment, we perform a qualitative analysis in which we aim to determine what features the identified relevant filters have learned. In this way, we develop an understanding of what the model has actually learned, i.e. interpretation of the model. This qualitative analysis is performed by generating interpretation feedback in the form of average visualizations for multiple relevant filters which are resized to the input image size (Sect. 3.2). This experiment is conducted only for the SVGG19 model on the AwA2 dataset, as the low resolution of MNIST results in overly coarse visualizations that do not yield

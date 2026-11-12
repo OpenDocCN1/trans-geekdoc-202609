@@ -1,0 +1,15 @@
+3. We conduct extensive experiments based on real-world social bot detection datasets, and the results demonstrate that BotTrans achieves state-of-the-art performance in unlabeled detection tasks.
+
+# 2 Related Works
+
+GNN-Based Social Bot Detection. Recently, researchers have resorted to GNN-based models to detect social bots [1,6,7,20,36,39]. Firstly, as social relationships are more complicated to camouflage, exploring complex social relationships could reveal more discriminative patterns of bots [10,21]. Secondly, bots tend to act in groups to pursue malicious goals and implicitly form bot communities [2]. Many studies focus solely on addressing label scarcity or network heterophily problems within the task graph, ignoring the potential benefits of exploring auxiliary knowledge from related social platforms with richer annotations, which indicates the importance of developing BotTrans.
+
+Graph Domain Adaptation. To overcome the label scarcity problem on graphs, researchers have developed graph domain adaptation (GDA) as an effective transfer learning paradigm on graphs [24]. It typically involves integrating GNNs with domain adaptation techniques to learn network-invariant and label-related node embeddings for graph-related tasks [3,23,25,26,31,32,37,38]. GDA has been extended to cross-domain anomaly detection tasks by designing additional topology reconstruction module (Commander [4]) or anomaly-specific objectives for learning social bot-related knowledge on source domains (ACT [30]). However, they may not be optimal solutions for detecting social bots, as they consider neither the network heterophily problem nor knowledge from multiple sources. Currently, very few works have attempted to resolve the challenging multi-source graph domain adaptation tasks. Representative works include NESTL [12], MSDS [16], and GDN [5]. However, they either over-simplifies source-target relevance or relies on target labels. Consequently, we develop BotTrans to effectively transfer knowledge from multiple source graphs for detecting social bots in the challenging unlabeled scenario.
+
+# 3 Problem Formulation
+
+In this work, we formulate the unlabeled social bot detection task as a cross-graph node classification problem. Specifically, given source graphs $(G^{S_1}, \cdots, G^{S_m})$ with abundant labels as source domains, the objective is to learn a detection model transferring labeling knowledge from multiple source domains to predict whether the nodes in the target graph $G^T$ is a bot or not. Each source graph includes a node feature matrix, an adjacency matrix, and node-level labels indicating whether a node represents a bot or not. In contrast, $G^T$ is entirely unlabeled. All graphs share the same feature space.
+
+# 4 Methodology
+
+The framework of BotTrans is illustrated in Fig. 2. Initially, the CSD-MP module generates discriminative source node embeddings by integrating in-domain and cross-source-domain information. Subsequently, the SMST module trains a shared classifier across

@@ -1,0 +1,19 @@
+than previous approaches (see Sect. 5). That is, STEP scales to large datasets, where previous approaches become impractical (see results in Sect. 4).
+
+**Unbiasedness.** We prove that STEP computes _unbiased estimates_ \(c_i\) of the counts \(|\mathcal{T}_i|\), for \(i \in [8]\), independently of the quality of the predictions of \(\mathcal{Q}(\cdot)\).
+
+**Lemma 1.** Given a stream \(\tau\) of a temporal graph \(G = (V, E)\), a time-duration \(\delta\), and a predictor \(\mathcal{Q}(\cdot)\), each estimate \(c_i, i \in [8]\) reported by **STEP** is an _unbiased estimate_ of the count \(|\mathcal{T}_i|\), that is \(\mathbb{E}[c_i] = |\mathcal{T}_i|\).
+
+**Embedding Predictions.** We now analyze the impact of the predictor \(\mathcal{Q}(\cdot)\) for our algorithm STEP. We first propose a practical model for a predictor, formalizing a _ranking predictor_. Our model is motivated by the fact that most machine learning models are highly optimized for ranking metrics, e.g., Kendall's tau or Spearman's correlation [11, 43]. More in detail, a ranking predictor ranks edges \(e \in \tau\) according to their importance for counts \(|\mathcal{T}_i|\). We show analytically that both a _perfect ranking predictor_ and a _noisy_ one yield accurate estimates and _sublinear space complexity_ for STEP.
+
+*Perfect predictor.* Let \(\omega(e, \mathcal{T}_i) = |\{\Delta : e \in \Delta, \Delta \in \mathcal{T}_i\}|\) be the number of triangles in \(\mathcal{T}_i, i \in [8]\) containing edge \(e \in E\), and \(W(e) = \sum_{i \in [8]} \omega(e, \mathcal{T}_i)\) be the total edge weight of \(e\). Let \(\mathbf{W} \doteq \langle e_1^W, ..., e_m^W \rangle\) be the edges in \(E\) ordered by _non-increasing_ values of their weights \(W(e)\), ties broken arbitrarily. Given two distinct edges \(e, e' \in E\), we use \(e \prec e'\) to denote that \(e\) comes before \(e'\) in the ordering \(\mathbf{W}\). With a slight abuse of notation, we denote with \(e_{\prec j}\) the edge in the \(j\)-th position in \(\mathbf{W}\), and with \(\mathbf{W}(e, \prec)\) the position of edge \(e \in E\) in \(\mathbf{W}\).
+
+(**RANKING PREDICTOR**) Given an integer value \(K > 0\), a _ranking predictor_ \(\mathcal{Q}(\cdot)_K\) is such that \(\mathcal{Q}(e)_K = 1\) iff \(\mathbf{W}(e, \prec) \le K\).
+
+A ranking predictor requires as unique input a parameter \(K\), i.e., the number of edges to classify as heavy. Clearly, \(K\) corresponds to the maximum number of edges to be retained deterministically by STEP.\(^4\) A ranking predictor does not require the knowledge of a threshold over edge weights \(W(e), e \in E\) to classify heavy edges, in contrast with previous literature [7]. That is our predictor model is required to output the ranking \(\mathbf{W}\) without having explicit access to the weights \(W(e), e \in E\), as this would not be practical.
+
+We next introduce a more practical _noisy_ ranking predictor.
+
+*Noisy predictor.* Given two parameters \(\alpha\) and \(K\), we let \(\Pi(\{1, ..., m\})_{(\alpha, K)}\) be the set of permutations of \(m\) elements where three blocks of elements are fixed, i.e., blocks \([1, ..., K - \alpha - 1]\), \([K - \alpha, ..., K + \alpha]\) and \([K + \alpha + 1, ..., m]\). That is, elements from one block can only be permuted inside the same block.
+
+(**NOISY RANKING PREDICTOR**) Given a parameter \(K > 0\) and \(0 \le \alpha \le \min\{m - K + 1, K - 1\}\), an \(\alpha\)_-noisy_ \(K\)_-ranking predictor_ outputs \(\mathbf{W}_\pi = \langle e_{\pi_1}^W, ..., e_{\pi_{|E|}}^W \rangle\), that is the vector \(\mathbf{W}\) permuted according to \(\pi \sim \mathfrak{U}(\Pi(\{1, ..., m\})_{(\alpha, K)})\), where \(\mathfrak{U}(\cdot)\) denotes the uniform distribution over the elements of a set.

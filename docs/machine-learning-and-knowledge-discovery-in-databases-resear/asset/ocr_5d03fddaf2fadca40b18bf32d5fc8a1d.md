@@ -1,0 +1,15 @@
+# 2 Related Work
+
+Hypergraph mining has many applications in different settings. Lee et al. [14] survey the area in depth, so here we focus on the works most related to ours.
+
+Many null models are available for dyadic (i.e., non-hyper) graphs, preserving different properties of the observed network, either exactly (microcanonical models) or in expectation (canonical models), together with algorithms, usually MCMC, to sample from these graph ensembles [7,10, and references therein]. The null model over bipartite graphs with fixed degree sequences (a.k.a. the configuration model) has been deeply studied [10,11]. We use pairs of bipartite graphs to define an equivalent representation of dihypergraphs, and build on a result by Kannan et al. [11] about the irreducibility of a Markov chain on bipartite graphs to show the irreducibility of our Markov chain on dihypergraphs.
+
+Proving irreducibility is usually the key theoretical challenge in developing MCMC algorithms. For directed graphs, irreducibility is not guaranteed, because edge swaps cannot directly flip a directed triangle. Lamar [13] gives tight conditions on the degree sequence that imply irreducibility for digraphs. Similar issues arise on dihypergraphs, but a novel approach, and conditions on the observed degree and edge-dimension sequences, are required to prove irreducibility.
+
+(Di-)hypergraphs have received relatively little attention, despite their practical importance [2,3]. Many contributions study the configuration model for undirected hypergraphs [5,6,8,24], or define maximum entropy models [23] or models that preserve higher order constraints [18,19]. These approaches cannot be adapted to dihypergraphs.
+
+Kim et al. [12] extend the preferential attachment model on hypergraphs [8] to dihypergraphs, preserving, *in expectation*, the node degrees and the hyperedge head- and tail- dimension sequences. As observed by Preti et al. [20], the generated networks do not resemble real ones, despite the adopted mechanism.
+
+Preti et al. [20] introduce two microcanonical null models for (possibly degenerate) dihypergraphs, and MCMC methods to sample from them. Both null models allow degeneracy; the first null model maintains the same properties as ours otherwise, and the other preserves additional constraints based on the joint degree distribution. Many DGPs would not create degenerate dihypergraphs (see Sect. 3.1), thus these null models would be unrealistic for such scenarios (see Sect. 6.2), potentially leading to invalid conclusions from statistical hypothesis tests (see Sect. 6.1).
+
+We distinguish between edge-ordered dihypergraphs and edge-unordered dihypergraphs (see Sect. 3.1 for formal definitions). These concepts are not the same as those of vertex- and stub-labeled hypergraphs [5], which relate to the labeling of nodes. Rather, our distinction is related to the concepts of row-order-agnostic and row-order-aware null models introduced by Abiusa et al. [1] for transactional datasets (i.e., for binary matrices), but not immediately extendable to dihypergraphs (see Sect. 5).

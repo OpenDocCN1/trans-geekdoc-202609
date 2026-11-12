@@ -1,0 +1,7 @@
+34. Wu, Z., et al.: Connecting the dots: multivariate time series forecasting with graph neural networks. In: SIGKDD, pp. 753–763 (2020)
+35. Xia, Y., et al.: Deciphering spatio-temporal graph forecasting: a causal lens and treatment. NeurIPS 36 (2024)
+36. Yu, B., Yin, H., Zhu, Z.: Spatio-temporal graph convolutional networks: a deep learning framework for traffic forecasting. IJCAI (2018)
+37. Zhang, J., Zheng, Y., Qi, D.: Deep spatio-temporal residual networks for citywide crowd flows prediction. In: AAAI, vol. 31 (2017)
+38. Zhang, Z., et al.: Dynamic graph neural networks under spatio-temporal distribution shift. NeurIPS 35, 6074–6089 (2022)
+39. Zheng, C., Fan, X., Wang, C., Qi, J.: GMAN: a graph multi-attention network for traffic prediction. In: AAAI, vol. 34, pp. 1234–1241 (2020)
+40. Zhou, Z., et al.: Maintaining the status quo: Capturing invariant relations for OOD spatiotemporal learning. In: SIGKDD, pp. 3603–3614 (2023)

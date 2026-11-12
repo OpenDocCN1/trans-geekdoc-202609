@@ -1,0 +1,17 @@
+that rewards are not required to be convex, as was the focus for Zhou et al. [26]. Our contributions include the following:
+
++   - We completely settle the complexity of SWAMP for all reward functions, significantly strengthening prior hardness results. Concretely, when applying the same reward function $r$ to every edge, SWAMP is either poly-time solvable because $r$ is convex, trivially optimized by a single node if $r$ is non-convex but satisfies a certain extremal condition, or is otherwise **NP**-hard.
+
++   - We design peeling algorithms for the non-convex case that come with a $1/k$-approximation. Somewhat surprisingly, this approximation is not obtained by the standard greedy peeling method (which gives a $1/k$ approximation for the convex case), but rather with a peeling method that makes locally suboptimal choices about which node to remove in each step.
+
++   - We design approximation algorithms based on projecting non-convex rewards to convex rewards and then solving the latter problem. In the worst case, these come with a $1/k$-approximation.
+
++   - We introduce a new integer linear programming formulation for finding optimal solutions to SWAMP, that works even for (small-scale) **NP**-hard cases.
+
++   - We implement these algorithms and demonstrate their performance on real-world datasets, showing they exceed their theoretical guarantees in practice.
+
++   - We show that as a consequence of having approximation guarantees for SWAMP, we obtain approximations for constrained variants of our objective.
+
+**Other Related Work.** We refer to Lanciano et al. [19] for an extensive recent survey on variants of the densest subgraph problem. We briefly cover several results that are particularly relevant to our paper. Several variants of DSG include constraints on the number of nodes in the output set $S$, including two variants introduced by Andersen and Chellapilla [2] called the densest at-most-$k$ ($|S| \le k$), and the densest at-least-$k$ ($|S| \ge k$) problems. In other problem variants, the goal is to find a dense subgraph that ensures nodes with different node labels are included in the output. In some cases, node labels represent "skills" and the goal is to form a (dense) team of individuals to cover certain skill sets [12, 22]. In other cases, node labels represent disjoint protected classes and the goal is to form a dense subgraph that is "diverse" or "fair" [1, 17, 21]. Approximation algorithms for several of these variants build upon earlier approximation algorithms for the densest at-least-$k$ variant [12, 21].
+
+Recently, Chekuri et al. [8] introduced the densest supermodular subset problem (DSS) where the goal is to maximize $F(S)/|S|$ where $F: 2^V \rightarrow \mathbb{R}^+$ is a non-negative monotone supermodular function defined over a ground set $V$. Their results for this objective include a fast flow-based approximation algorithm, faster greedy peeling methods, and extensions to cardinality-constrained variants (e.g., the constraint $|S| \ge k$). The greedy peeling method starts with the entire node set $V$, finds a node $v = \text{argmin} F(V) - F(V - v)$, and then removes it. At the next step, the same strategy is applied to the remaining node set. At the end, the method chooses the subset of nodes considered along the way with the best objective. This strategy is greedy in the sense that it removes the node that leads to the smallest decrease in the numerator of the objective at each

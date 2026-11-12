@@ -1,0 +1,7 @@
++   37. Seshadhri, C., Tirthapura, S.: Scalable subgraph counting: The methods behind the madness. WWW (2019)
++   38. Tang, J., Musolesi, M., Mascolo, C., Latora, V.: Temporal distance metrics for social network analysis. SIGCOMM (2009)
++   39. Tu, K., Li, J., Towsley, D., Braines, D., Turner, L.D.: gl2vec: learning feature representation using graphlets for directed networks. ASONAM (2019)
++   40. Venturin, G., Sarpe, I., Vandin, F.: Efficient Approximate Temporal Triangle Counting in Streaming with Predictions (extended version). arXiv (2025)
++   41. Wang, J., Wang, Y., Jiang, W., Li, Y., Tan, K.L.: Efficient sampling algorithms for approximate motif counting in temporal graph streams. arXiv (2022)
++   42. Wang, P., Qi, Y., Sun, Y., Zhang, X., Tao, J., Guan, X.: Approximately counting triangles in large graph streams including edge duplicates with a fixed memory usage. PVLDB (2017)
++   43. Zhang, T., Fang, J., Yang, Z., Cao, B., Fan, J.: TATKC: A temporal graph neural network for fast approximate temporal Katz centrality ranking. WWW (2024)

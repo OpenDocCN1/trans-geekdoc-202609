@@ -1,0 +1,13 @@
+# # GraphJCL: A Dual-Perspective Graph-Based Framework for Urban Region Representation via Joint Contrastive Learning
+
+Yaya Zhao\(^1\), Kaiqi Zhao\(^2\), Zixuan Tang\(^1\), Xiaoling Lu\(^1\)(\unknown), Yuanyuan Zhang\(^3\), and Yelei Du\(^3\)
+
+\(^1\) Center for Applied Statistics, School of Statistics, Renmin University of China, Beijing, China `{zhaoyaya,2021201741,xiaolinglu}@ruc.edu.cn` \\ \(^2\) The University of Auckland, Auckland, New Zealand `kaiqi.zhao@auckland.ac.nz` \\ \(^3\) Beijing Baixingkefu Network Technology Co., Ltd., Beijing, China
+
+**Abstract.** Graph learning for urban region modeling has gained significant attention for leveraging multi-modal data to generate region representations for downstream task prediction. However, existing models face two key limitations: (1) they primarily adopt a global perspective, overlooking the joint modeling of both local and global aspects, and (2) they rely on redundant, low-information nodes, leading to suboptimal region representations. To address these challenges, we propose GraphJCL, a dual-perspective framework that models both local and global perspectives. Specifically, GraphJCL first constructs local graphs for individual regions and a global graph encompassing all regions, integrating POI, taxi flow, remote sensing, street view, and road network data. Additionally, GraphJCL employs specialized message-passing mechanisms to efficiently capture both local and global graph node representations. Furthermore, GraphJCL incorporates entropy-optimized graph node pruning, retaining only the most informative nodes to enhance final region representations. To ensure the effectiveness of the designed dual-perspective graph framework, GraphJCL introduces a joint contrastive learning approach, optimizing region representations through geography-driven, entropy-optimized, and mutual information-based optimization techniques. Extensive experiments on two real-world datasets across five modalities demonstrate that GraphJCL consistently outperforms state-of-the-art methods on three tasks, validating its flexibility and effectiveness.
+
+**Keywords:** Urban region representation · Graph neural networks · Joint contrastive learning
+
+# ## 1 Introduction
+
+Graph learning [7,18,32] for urban region representation leverages multi-modal data, including Points of Interest (POI), taxi flow, remote sensing imagery, street view imagery, road network data, and socioeconomic indicators, to generate embeddings that effectively capture cross-modal relationships and semantic structures. These embeddings facilitate various downstream tasks, such as check-in prediction [9], crime forecasting [19], and traffic crash prediction [5], thereby supporting smart urban optimization.

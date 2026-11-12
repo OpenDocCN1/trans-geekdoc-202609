@@ -1,0 +1,2 @@
++   [机器学习与数据库知识发现。研究专题：欧洲会议，ECML PKDD 2025，波尔图，葡萄牙，2025年9月15–19日，论文集，第III部分](README.md)
++   [机器学习与数据库知识发现。研究专题：欧洲会议，ECML PKDD 2025，波尔图，葡萄牙，2025年9月15–19日，论文集，第III部分](machine-learning-and-knowledge-discovery-in-databases-resear.md)
