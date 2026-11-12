@@ -1,0 +1,13 @@
+![](bbox=[0.13, 0.11, 0.86, 0.28])
+
+FIGURE 5.6 Estimation of the knee location. (a) Concentration of elements of each group ($e_1,...,e_c$) and (b) the clusters divided into representative (A) and irrelevant (B).
+
+One important property of $d_w^y$ is that it maintains only one global optimum $p_{min}$. This minimal value represents the knee location that is expressed in Equation 5.17 (see Figure 5.5):
+
+```
+$$ p_{min} = \arg\min_{0 \le \alpha \le c} d_w^y $$ (5.19)
+```
+
+It is important to observe that there is a correction between the rank and the number of elements formulated in $e_w^x$ and $e_w^y$. This correlation can also be seen in the objective function of the elements $d_w^x$ and $d_w^y$. This fact is because in such formulations, the idea is to associate how an increment in rank is related in terms of the number of elements. With this association, it can be detected that the point $p_{min}$ represents the location where an increment in the cluster rank is greater than the variation in the number of elements. $p_{min}$ separates all groups produced by MS into two sets: (A) relevant and (B) irrelevant groups (see Figure 5.6b). Significant groups involve the clusters that contain the greatest number of pixel characteristics. For this reason, they maintain the representative visual information of the segmented image. Irrelevant groups must be merged with other nearby clusters since their elements are too few so that they cannot be considered as meaningful. Under such conditions, the groups $C_a,...,C_d$ are representative, only if they are part of Group A. ($C_a,...,C_d \in$ Group A). Likewise, the clusters $C_q,...,C_t$ are irrelevant, in case of they are identified as a part of Group B ($C_q,...,C_t \in$ Group B). Representative clusters are kept while irrelevant clusters are merged.
+
+The idea of the merging process is to integrate a cluster $C_v$ that is visually irrelevant (it contains so few elements) with a cluster $C_z$ that is representative according to their number of elements. This integration is only possible when both clusters $C_v$ and $C_z$ maintain similar characteristics. The similarity of two clusters depends on the distance between their respective cluster centers $\mathbf{x}_w^* - \mathbf{z}_*$. Under this merging process, the elements of every irrelevant cluster $C_v$ ($v \in$ Group B) are combined with the elements of the representative cluster $C_z$ ($z \in$ Group A), so that the length of their respective centers $\mathbf{x}_w^* - \mathbf{z}_*$

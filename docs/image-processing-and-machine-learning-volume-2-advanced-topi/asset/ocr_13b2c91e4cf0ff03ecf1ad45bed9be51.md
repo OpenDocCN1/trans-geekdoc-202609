@@ -1,0 +1,14 @@
+information from complex data distributions. Under such conditions, it is possible to group difficult pixel data, such as texturized regions or areas of noise. The third factor is the operation of blending clusters with a minimal number of elements. Under this operation, noise pixels can be joined to the object to which they actually belong. Therefore, the segmentation results have a better capacity to include imprecise information corresponding to pixels contaminated by common noise. In spite of its interesting results, the MULTI-SEGM scheme maintains a limitation. Such a disadvantage represents the complexity of its processes. In comparison with other schemes that consider simple histogram computations, the operations involved in the MULTI-SEGM are difficult to understand. This fact can limit its use to practitioners and application engineers. However, its segmentation results justify the use of these mechanisms, mainly when the method is used in segmentation images that demand complex clustering scenarios.
+
+# References
+
++   [1] Shi, J., & Malik, J. (2002). Normalized cuts and image segmentation. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 22, 888–905.
++   [2] Tian, Y., Li, J., Yu, S., & Huang, T. (2015). Learning complementary saliency priors for foreground object segmentation in complex scenes. *International Journal of Computer Vision*, 111, 153–170.
++   [3] Felzenszwalb, P. F., & Huttenlocher, D. P. (2004). Efficient graph-based image segmentation. *International Journal of Computer Vision*, 59, 167–181.
++   [4] Tan, K. S., & Isa, N. A. M. (2011). Color image segmentation using histogram thresholding-fuzzy c-means hybrid approach. *Pattern Recognition*, 44, 1–15.
++   [5] Cheng, H.-D., Jiang, X., & Wang, J. (2002). Color image segmentation based on histogram thresholding and region merging. *Pattern Recognition*, 35, 373–393.
++   [6] Arbelaez, P., Maire, M., Fowlkes, C., & Malik, J. (2011). Contour detection and hierarchical image segmentation. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 33, 898–916.
++   [7] Mignotte, M. (2010). A label field fusion bayesian model and its penalized maximum rand estimator for image segmentation. *IEEE Transactions on Image Processing*, 19, 1610–1624.
++   [8] Lei, T., Jia, X., Zhang, Y., He, L., Meng, H., & Nandi, A.K. (2018). Significantly fast and robust fuzzy C-means clustering algorithm based on morphological reconstruction and membership filtering, *IEEE Transactions on Fuzzy Systems*, 26(5), 3027–3041.
++   [9] Sezgin, M., & Sankur, B. (2004). Survey over image thresholding techniques and quantitative performance evaluation. *Journal of Electronic Imaging*, 13, 146–168.
++   [10] Zhang, X., Xu, C., Li, M., & Sun, X. (2015). Sparse and low-rank coupling image segmentation model via nonconvex regularization. *International Journal of Pattern Recognition and Artificial Intelligence*, 29, 1–22.
