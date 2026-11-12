@@ -1,0 +1,1058 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # MLIDS: A Machine Learning Approach for Intrusion Detection for Real Time Network
+    Dataset
+
+
+    Monika D.Rokade
+
+    Research Scholar, Department of Computer Science
+
+    and Engineering
+
+    Shri J.J.T. University,
+
+    Rajasthan., India
+
+    monikarokade4@gmail.com
+
+
+    Yogesh Kumar Sharma
+
+    Associate Professor (HOD/Research-Coordinator),
+
+    Department of Computer Science and Engineering ,
+
+    India
+
+    dr.sharmayogeshkumar@gmail.com
+
+
+    Abstract- Computer network and virtual machine security is very essential in today''s
+    era. Various architectures have been proposed for network security or prevent
+    malicious access of internal or external users. Various existing systems have
+    already developed to detect malicious activity on victim machines; sometimes any
+    external user creates some malicious behavior and gets unauthorized access of
+    victim machines to such a behavior system considered as malicious activities or
+    Intruder. Numerous machine learning and soft computing techniques design to detect
+    the activities in real-time network log audit data. KKDDCUP99 and NLSKDD most
+    utilized data set to detect the Intruder on benchmark data set. In this paper,
+    we proposed the identification of intruders using machine learning algorithms.
+    Two different techniques have been proposed like a signature with detection and
+    anomaly-based detection. In the experimental analysis, demonstrates SVM, Naive
+    Bayes and ANN algorithm with various data sets and demonstrate system performance
+    on the real-time network environment.
+
+
+    Keywords- Intrusion Detection System, Network security, Naïve Bayes, SVM, Artificial
+    Neural Network, KDDCUP99.
+
+
+    # ## I. INTRODUCTION
+
+
+    The IDS is exclusively for detecting one type of attack, e.g. Sample or known
+    attack, DoS attack or U2R attack or R2L attack. It then sequentially deploys a
+    number of such subsystems, one by one. This serves a two-fold purpose: first,
+    only a limited number of features that detect a particular type of attack can
+    be trained in each sub-phase. Second, the sub-size device remains tiny and therefore
+    functional. Similar to our scheme, a common downside is that it raises overhead
+    communication between modules. However by having every sub-phase completely independent
+    of each other layer, this can be easily avoided in our method. As a consequence,
+    in more than one sub-phase, such characteristics may happen. Any sub-phase will
+    simply block an attack if detected without a central decision maker, depending
+    on the security policy of the network. As long as they are established during
+    a certain layer, various sub phases primarily serve as filters blocking abnormal
+    association, thus providing rapid reaction to the intrusion as well as reducing
+    the analysis in subsequent stages.
+
+
+    The method defines the system for creating SVM rules in this research work, based
+    on its role selection procedure, which works on both HIDS and NIDS. A genetic
+    algorithm is an optimization algorithm used to find the best solution. For all
+    types of master class sub-attacks, the ensemble approach with different classification
+    algorithms may provide the best detection of NIDS. Our aim of the proposed
+
+
+    study is to create clear rules and increase the detection rates of DOS, PROBE,
+    U2R and R2L for NIDS and HIDS.
+
+
+    # ## II. LITERATURE SURVEY
+
+
+    Bhosale, Karuna S. et al. [1] deep neural network (DNN), Creating scalable and
+    efficient IDSs to recognize and recognize unintentional and unexpected cyber-attacks
+    is studied as a form of the deep learning system. The constant change in network
+    operation and the rapid creation of attacks involve reviewing frequent occurrences
+    that are generated over the years through dynamic and static techniques. Such
+    a study facilitates the identification of the correct algorithm that can work
+    effectively to forecast future cyber-attacks. A thorough evaluation of the DNN
+    experiments and other powerful machine learning classifiers is shown on numerous
+    public information test malware databases. The optimized network parameters and
+    modulation schemes for DNNs are selected using KDDCup 99 dataset number of hidden
+    layers use around by the system.
+
+
+    Chamou et al. [2]. It is because of that explanation that the science community
+    has grown accustomed to the complexity and enhancement of the efficiency of intrusion
+    detection systems that a large number of companies all over the world are being
+    targeted and threatened by the constant emergence of new and emerging threats.
+    This is a groundbreaking tool for evaluating suspicious activity in DDoS and malware
+    cyber threats using deep learning models. According to most Internet users, cybersecurity
+    efficiency, data protection, and safe communication are considered important due
+    to the rapid growth of web applications and their use. Simultaneously, increased
+    exposure to more sophisticated security threats has been ascertained over the
+    computers and internet networks, in the digital world of academia and industry,
+    especially in small and medium-sized enterprises ( SMEs), with economic implications.
+
+
+    According to [3], a system has been developed to accurately detect potential attacks
+    by using various decision-free, random forest, and KNN. A new technique is suggested
+    to fix the shortcomings of the previous approach that could not detect IPV6 attacks.
+    In detecting IPV4-based attacks, the established framework produces an impressive
+    and efficient result, considering the possible reach—the efficiency of the different
+    algorithms that have been measured. Detection consistency, accuracy, and recall
+    percentage were measured.
+
+
+    According to[4], identifying a novel phenomenon called NEC, clustering, and KDD
+    can be used effectively. An unsupervised anomaly is used to produce high detection
+    rates'
+  - '[PAGE 1]
+
+
+    and fewer false passive rates. It is an effective way to solve the issue and find
+    an anomaly that does not involve collecting labeled data. Use the 2009 NSL-KDD
+    dataset to test the system. The preprocessing model converts all characteristics
+    into the actual number, and the standardized dataset will compare the predicate
+    outcome with an accurate result at the end of the evaluation section.
+
+
+    A data mining and machine learning survey for cybersecurity intrusion detection
+    is conducted to ensure cybersecurity concerning the CSID Data Mining and Machine
+    Learning Survey[5]. To access packet header and net flow packet header are used
+    to networks and kernel-level data for the intrusion detection process, the potential
+    issue is that data mining and artificial intelligence cannot be achieved without
+    actual databases, therefore, very time-consuming. The presence of various statistics
+    and machine learning algorithms is discussed. The research paper contains a set
+    of comparative criteria for the anomaly of methodologies for machine learning
+    data mining — dependent intrusion detection helps discover, evaluate and recognize
+    the unauthorized use, replication, alteration, and destruction of the information
+    system.
+
+
+    Based on the [6] detection and monitoring of the intruder using machine learning,
+    ranking, and Voronoi, security has improved. That is the size of the given dataset
+    and the high precision of the detection. A series of data called ISOT was used
+    with the processing delay in mind. The paper also uses network flow characteristics
+    to predict botnet infiltration, provided the packet compliance feature, which
+    helps in packet encryption.
+
+
+    According to ADS-B IDS[7], automated based surveillance-broadcast IDS techniques
+    are proposed using ADS-B techniques. To enhance air traffic control performance,
+    the HMAC data set is used. The approaches operate with minimum overhead. The future
+    scope specifies that its distance from the corresponding one-time position is
+    within the safe zone for the ADS-B location to be valid. GPS uses the cyber-physical
+    environment validated by attack detection to determine radar specifications in
+    aircraft signaling superior location precision, as ADS-B has emerged as an alternative
+    to current radio. A protocol is suggested to swap the keys used for the HMAC algorithm
+    safely. The ATC Centre initiates firm handshakes with ATCs that monitor another
+    zone on the flight route to transfer the private key over public key infrastructure
+    (PK1) networks.
+
+
+    According to [8], for a power device that supports data logs, the report stated
+    that a combination IDS using data mining is created using safe process mining.
+    The method is an integrated approach to designing the IDS prototype. Detection
+    precision, which is up to 73%, has been one of the key advantages. But this approach
+    is not adequate for collecting major issues such as data logs, although it is
+    tricky. The framework leverages characteristic and specification-based IDS functionality.
+    The data analysis methodology that consolidates audit logs to learn the typical
+    route from different machine devices. In the automated system, and no need to
+    manually analyse and code the sequence manually.
+
+
+    According to Al, Dr. Yogesh Kumar Sharma et.[10] defines a 6G Network Access system
+    and Edge-Assisted Congestion Rule Mechanism using Software-Defined Networking
+    To avoid buffering of traffic flow, the
+
+
+    framework must take up large frequency data. The evaluation results of this proposed
+    approach indicate that it may maximize the efficacy of the network. Another issue
+    is the network''s safety, as a centralized security framework is important for
+    maintaining data reliability across the network. Protection is necessary as users
+    transmit and connect so that the possibility of data malignancy or piracy is greater.
+    Another form of slicing network virtualization to avoid sluggish wireless broadband
+    is network optimization, and the broadband speed may not hinder individuals. The
+    software suggests the System Slicing Edge Admission System, model.
+
+
+    # III. PROPOSED SYSTEM
+
+
+    The proposed research methodology carried out intrusion detection and prevention
+    using machine learning techniques. Training, including packet choice for anomaly
+    and remote monitoring, will be done by the packet environments characterized block.
+    Then it will submit a function collection for a specific packet activity. If all
+    is well, send it forward together. To detect individual attacks, misbehavior samples
+    will be tested for feature selection for various qualities. There are two-phase
+    in the proposed system; we have taken the network dataset for system training
+    and testing purposes—components of the framework. Below, figure 1 demonstrates
+    the entire execution of the system using defined algorithms. Various machine learning
+    has been used to generate train modules as well as testing, respectively.
+
+
+    ![](img/866070d599944fed461bda3836bbd5c7_1_0.png)
+
+
+    Fig. 1. System architecture
+
+
+    The NSL KDD CUP 1999 dataset is used for the experiments (KDD data set, 1999).
+    The KDD CUP 1999 dataset is a version of the MIT Lincoln Laboratory''s original
+    1998 DARPA intrusion detection assessment software, which is ready and controlled.
+    Sampled awareness is stratified. It includes about 5 million association records
+    as coaching knowledge and nearly 2 million association records as knowledge. In
+    addition, the dataset contains a list of forty-one options extracted from each
+    association and a mark defining the status of records of associations as a typical
+    or particular form of attack. All kinds of continuous, discrete,'
+  md: '
+
+    ## MLIDS: A Machine Learning Approach for Intrusion Detection for Real Time Network
+    Dataset
+
+
+    Monika D. Rokade
+
+    Research Scholar, Department of Computer Science and Engineering
+
+    Shri J.J.T. University,
+
+    Rajasthan, India
+
+    monikarokade4@gmail.com
+
+
+    Yogesh Kumar Sharma
+
+    Associate Professor (HOD/Research-Coordinator),
+
+    Department of Computer Science and Engineering,
+
+    India
+
+    dr.sharmayogeshkumar@gmail.com
+
+
+    Abstract: Computer network and virtual machine security is very essential in today''s
+    era. Various architectures have been proposed for network security or prevent
+    malicious access of internal or external users. Various existing systems have
+    already developed to detect malicious activity on victim machines; sometimes any
+    external user creates some malicious behavior and gets unauthorized access of
+    victim machines to such a behavior system considered as malicious activities or
+    Intruder. Numerous machine learning and soft computing techniques design to detect
+    the activities in real-time network log audit data. KDDCUP99 and NSL-KDD most
+    utilized data set to detect the Intruder on benchmark data set. In this paper,
+    we proposed the identification of intruders using machine learning algorithms.
+    Two different techniques have been proposed like a signature with detection and
+    anomaly-based detection. In the experimental analysis, demonstrates SVM, Naive
+    Bayes and ANN algorithm with various data sets and demonstrate system performance
+    on the real-time network environment.
+
+
+    Keywords: Intrusion Detection System, Network security, Naïve Bayes, SVM, Artificial
+    Neural Network, KDDCUP99.
+
+
+    ### I. INTRODUCTION
+
+
+    The IDS is exclusively for detecting one type of attack, e.g. Sample or known
+    attack, DoS attack or U2R attack or R2L attack. It then sequentially deploys a
+    number of such subsystems, one by one. This serves a two-fold purpose: first,
+    only a limited number of features that detect a particular type of attack can
+    be trained in each sub-phase. Second, the sub-size device remains tiny and therefore
+    functional. Similar to our scheme, a common downside is that it raises overhead
+    communication between modules. However by having every sub-phase completely independent
+    of each other layer, this can be easily avoided in our method. As a consequence,
+    in more than one sub-phase, such characteristics may happen. Any sub-phase will
+    simply block an attack if detected without a central decision maker, depending
+    on the security policy of the network. As long as they are established during
+    a certain layer, various sub phases primarily serve as filters blocking abnormal
+    association, thus providing rapid reaction to the intrusion as well as reducing
+    the analysis in subsequent stages.
+
+
+    The method defines the system for creating SVM rules in this research work, based
+    on its role selection procedure, which works on both HIDS and NIDS. A genetic
+    algorithm is an optimization algorithm used to find the best solution. For all
+    types of master class sub-attacks, the ensemble approach with different classification
+    algorithms may provide the best detection of NIDS. Our aim of the proposed study
+    is to create clear rules and increase the detection rates of DOS, PROBE, U2R and
+    R2L for NIDS and HIDS.
+
+
+    ### II. LITERATURE SURVEY
+
+
+    Bhosale, Karuna S. et al. [1] deep neural network (DNN), Creating scalable and
+    efficient IDSs to recognize and recognize unintentional and unexpected cyber-attacks
+    is studied as a form of the deep learning system. The constant change in network
+    operation and the rapid creation of attacks involve reviewing frequent occurrences
+    that are generated over the years through dynamic and static techniques. Such
+    a study facilitates the identification of the correct algorithm that can work
+    effectively to forecast future cyber-attacks. A thorough evaluation of the DNN
+    experiments and other powerful machine learning classifiers is shown on numerous
+    public information test malware databases. The optimized network parameters and
+    modulation schemes for DNNs are selected using KDDCup 99 dataset number of hidden
+    layers use around by the system.
+
+
+    Chamou et al. [2]. It is because of that explanation that the science community
+    has grown accustomed to the complexity and enhancement of the efficiency of intrusion
+    detection systems that a large number of companies all over the world are being
+    targeted and threatened by the constant emergence of new and emerging threats.
+    This is a groundbreaking tool for evaluating suspicious activity in DDoS and malware
+    cyber threats using deep learning models. According to most Internet users, cybersecurity
+    efficiency, data protection, and safe communication are considered important due
+    to the rapid growth of web applications and their use. Simultaneously, increased
+    exposure to more sophisticated security threats has been ascertained over the
+    computers and internet networks, in the digital world of academia and industry,
+    especially in small and medium-sized enterprises (SMEs), with economic implications.
+
+
+    According to [3], a system has been developed to accurately detect potential attacks
+    by using various decision-free, random forest, and KNN. A new technique is suggested
+    to fix the shortcomings of the previous approach that could not detect IPV6 attacks.
+    In detecting IPV4-based attacks, the established framework produces an impressive
+    and efficient result, considering the possible reach—the efficiency of the different
+    algorithms that have been measured. Detection consistency, accuracy, and recall
+    percentage were measured.
+
+
+    According to [4], identifying a novel phenomenon called NEC, clustering, and KDD
+    can be used effectively. An unsupervised anomaly is used to produce high detection
+    rates and fewer false passive rates. It is an effective way to solve the issue
+    and find an anomaly that does not involve collecting labeled data. Use the 2009
+    NSL-KDD dataset to test the system. The preprocessing model converts all characteristics
+    into the actual number, and the standardized dataset will compare the predicate
+    outcome with an accurate result at the end of the evaluation section.
+
+
+    A data mining and machine learning survey for cybersecurity intrusion detection
+    is conducted to ensure cybersecurity concerning the CSID Data Mining and Machine
+    Learning Survey [5]. To access packet header and net flow packet header are used
+    to networks and kernel-level data for the intrusion detection process, the potential
+    issue is that data mining and artificial intelligence cannot be achieved without
+    actual databases, therefore, very time-consuming. The presence of various statistics
+    and machine learning algorithms is discussed. The research paper contains a set
+    of comparative criteria for the anomaly of methodologies for machine learning
+    data mining — dependent intrusion detection helps discover, evaluate and recognize
+    the unauthorized use, replication, alteration, and destruction of the information
+    system.
+
+
+    Based on [6], detection and monitoring of the intruder using machine learning,
+    ranking, and Voronoi, security has improved. That is the size of the given dataset
+    and the high precision of the detection. A series of data called ISOT was used
+    with the processing delay in mind. The paper also uses network flow characteristics
+    to predict botnet infiltration, provided the packet compliance feature, which
+    helps in packet encryption.
+
+
+    According to ADS-B IDS [7], automated based surveillance-broadcast IDS techniques
+    are proposed using ADS-B techniques. To enhance air traffic control performance,
+    the HMAC data set is used. The approaches operate with minimum overhead. The future
+    scope specifies that its distance from the corresponding one-time position is
+    within the safe zone for the ADS-B location to be valid. GPS uses the cyber-physical
+    environment validated by attack detection to determine radar specifications in
+    aircraft signaling superior location precision, as ADS-B has emerged as an alternative
+    to current radio. A protocol is suggested to swap the keys used for the HMAC algorithm
+    safely. The ATC Centre initiates firm handshakes with ATCs that monitor another
+    zone on the flight route to transfer the private key over public key infrastructure
+    (PKI) networks.
+
+
+    According to [8], for a power device that supports data logs, the report stated
+    that a combination IDS using data mining is created using safe process mining.
+    The method is an integrated approach to designing the IDS prototype. Detection
+    precision, which is up to 73%, has been one of the key advantages. But this approach
+    is not adequate for collecting major issues such as data logs, although it is
+    tricky. The framework leverages characteristic and specification-based IDS functionality.
+    The data analysis methodology that consolidates audit logs to learn the typical
+    route from different machine devices. In the automated system, and no need to
+    manually analyse and code the sequence manually.
+
+
+    According to Al, Dr. Yogesh Kumar Sharma et al. [10] defines a 6G Network Access
+    system and Edge-Assisted Congestion Rule Mechanism using Software-Defined Networking.
+    To avoid buffering of traffic flow, the framework must take up large frequency
+    data. The evaluation results of this proposed approach indicate that it may maximize
+    the efficacy of the network. Another issue is the network''s safety, as a centralized
+    security framework is important for maintaining data reliability across the network.
+    Protection is necessary as users transmit and connect so that the possibility
+    of data malignancy or piracy is greater. Another form of slicing network virtualization
+    to avoid sluggish wireless broadband is network optimization, and the broadband
+    speed may not hinder individuals. The software suggests the System Slicing Edge
+    Admission System, model.
+
+
+    ### III. PROPOSED SYSTEM
+
+
+    The proposed research methodology carried out intrusion detection and prevention
+    using machine learning techniques. Training, including packet choice for anomaly
+    and remote monitoring, will be done by the packet environments characterized block.
+    Then it will submit a function collection for a specific packet activity. If all
+    is well, send it forward together. To detect individual attacks, misbehavior samples
+    will be tested for feature selection for various qualities. There are two-phase
+    in the proposed system; we have taken the network dataset for system training
+    and testing purposes—components of the framework. Below, figure 1 demonstrates
+    the entire execution of the system using defined algorithms. Various machine learning
+    has been used to generate train modules as well as testing, respectively.
+
+
+    ![](img/866070d599944fed461bda3836bbd5c7_1_0.png)
+
+
+    Fig. 1. System architecture
+
+
+    The NSL KDD CUP 1999 dataset is used for the experiments (KDD data set, 1999).
+    The KDD CUP 1999 dataset is a version of the MIT Lincoln Laboratory''s original
+    1998 DARPA intrusion detection assessment software, which is ready and controlled.
+    Sampled awareness is stratified. It includes about 5 million association records
+    as coaching knowledge and nearly 2 million association records as knowledge. In
+    addition, the dataset contains a list of forty-one options extracted from each
+    association and a mark defining the status of records of associations as a typical
+    or particular form of attack. All kinds of continuous, discrete,
+
+    '
+  mdcn: '
+
+    # MLIDS: 用于实时网络数据集入侵检测的机器学习方法
+
+
+    Monika D. Rokade
+
+    研究员，计算机科学与工程系
+
+    施里·J.J.T.大学，
+
+    拉贾斯坦邦，印度
+
+    monikarokade4@gmail.com
+
+
+    Yogesh Kumar Sharma
+
+    副教授（系主任/研究协调员），
+
+    计算机科学与工程系，
+
+    印度
+
+    dr.sharmayogeshkumar@gmail.com
+
+
+    摘要: 计算机网络和虚拟机安全在当今时代至关重要。已提出各种用于网络安全或防止内部或外部用户恶意访问的架构。各种现有系统已开发用于检测受害机器上的恶意活动；有时，任何外部用户都会创造某种恶意行为，并未经授权访问受害机器，此类行为被系统视为恶意活动或入侵者。众多机器学习和软计算技术旨在检测实时网络日志审计数据中的活动。KDDCUP99
+    和 NSL-KDD 是用于在基准数据集上检测入侵者最常用的数据集。在本文中，我们提出了使用机器学习算法识别入侵者的方法。已提出两种不同的技术，即基于签名的检测和基于异常的检测。在实验分析中，展示了
+    SVM、朴素贝叶斯和 ANN 算法，并结合各种数据集，证明了系统在实时网络环境中的性能。
+
+
+    关键词: 入侵检测系统、网络安全、朴素贝叶斯、SVM、人工神经网络、KDDCUP99。
+
+
+    ### I. 引言
+
+
+    IDS 专用于检测一种攻击，例如样本或已知攻击、DoS 攻击、U2R 攻击或 R2L 攻击。然后它依次部署多个此类子系统，逐个部署。这起到了双重作用：首先，在每个子阶段中，只能训练有限数量的用于检测特定类型攻击的特征。其次，子尺寸设备保持微小，因此功能正常。与我们的方案类似，常见的缺点是它增加了模块之间的通信开销。然而，通过让每个子阶段与其他各层完全独立，在我们的方法中可以轻松避免这一问题。因此，在多个子阶段中，可能会出现此类特征。任何子阶段都会在检测到攻击时直接拦截，无需中央决策者，具体取决于网络的安全策略。只要它们在特定层中建立，各种子阶段主要充当过滤器，阻止异常关联，从而对入侵提供快速响应，并减少后续阶段的分析量。
+
+
+    本研究工作中的方法定义了用于创建 SVM 规则的系统，该系统基于角色选择过程，并同时适用于 HIDS 和 NIDS。遗传算法是一种用于寻找最优解的优化算法。对于所有类型的主类子攻击，采用不同分类算法的集成方法可能为
+    NIDS 提供最佳检测效果。本拟议研究的目标是制定清晰规则，并提高 NIDS 和 HIDS 对 DOS、PROBE、U2R 和 R2L 的检测率。
+
+
+    ### II. 文献综述
+
+
+    Bhosale, Karuna S. et al. [1] 研究了深度神经网络 (DNN)，将创建可扩展且高效的 IDS 以识别意外和非预期网络攻击作为一种深度学习系统。网络操作的不断变化和攻击的快速创建涉及通过动态和静态技术，审查多年来生成的频繁发生的情况。此类研究有助于识别能够有效预测未来网络攻击的正确算法。对
+    DNN 实验和其他强大的机器学习分类器的全面评估显示在众多公共信息测试恶意软件数据库中。DNN 的优化网络参数和调制方案是使用 KDDCup 99 数据集选择的，系统使用的隐藏层数量大约由系统决定。
+
+
+    Chamou et al. [2]。正是由于这一原因，科学界已习惯于入侵检测系统的复杂性和效率提升，全球大量公司正在不断面临新出现和新兴威胁的针对性攻击和威胁。这是一种使用深度学习模型评估
+    DDoS 和恶意软件网络威胁中可疑活动的突破性工具。根据大多数互联网用户的观点，由于 Web 应用程序及其使用的快速增长，网络安全效率、数据保护和安全通信被视为重要。同时，在学术界和工业界的数字世界中，尤其是中小型企业
+    (SMEs)，计算机和互联网网络面临更复杂安全威胁的暴露程度有所增加，产生了经济影响。
+
+
+    根据 [3]，已经开发出一种系统，通过使用各种无决策、随机森林和 KNN 来准确检测潜在攻击。建议采用一种新技术来解决先前方法无法检测 IPV6 攻击的不足。在检测基于
+    IPV4 的攻击时，既定框架在可能的范围内产生了令人印象深刻且高效的结果，已测量了不同算法的效率。测量了检测一致性、准确率和召回率百分比。
+
+
+    根据 [4]，可以有效地使用一种称为 NEC 的新现象、聚类和 KDD。使用无监督异常来产生高检测率和更低的假阴性率。这是解决该问题并发现不涉及收集标记数据的异常的有效方法。使用
+    2009 年 NSL-KDD 数据集来测试系统。预处理模型将所有特征转换为实际数值，标准化后的数据集将在评估部分末尾将预测结果与准确结果进行比较。
+
+
+    为确保针对 CSID 数据挖掘和机器学习调查 [5] 的网络安全，开展了一项关于网络安全入侵检测的数据挖掘和机器学习调查。访问数据包头和净流数据包头用于网络和内核级数据的入侵检测过程，潜在问题是，如果没有实际数据库，就无法实现数据挖掘和人工智能，因此非常耗时。讨论了各种统计和机器学习算法的存在。该研究论文包含一组用于机器学习数据挖掘方法异常的比较标准——依赖式入侵检测有助于发现、评估和识别信息系统的未授权使用、复制、篡改和破坏。
+
+
+    根据 [6]，使用机器学习、排名和 Voronoi 对入侵者进行检测和监控，安全性得到了提高。即给定数据集的大小和检测的高精度。在考虑处理延迟的情况下，使用了一系列称为
+    ISOT 的数据。该论文还使用网络流特性来预测僵尸网络渗透，前提是具备数据包合规性特征，这有助于数据包加密。
+
+
+    根据 ADS-B IDS [7]，提出了使用 ADS-B 技术的基于自动相关监视广播的 IDS 技术。为了增强航空交通管制性能，使用了 HMAC 数据集。这些方法的开销最小。未来范围规定，其与相应一次位置的距离在安全区域内，以便
+    ADS-B 位置有效。GPS 使用经过攻击检测验证的网络物理环境，以确定飞机信号的雷达规格，实现卓越的位置精度，因为 ADS-B 已成为当前无线电的替代方案。建议了一种安全交换
+    HMAC 算法使用的密钥的协议。ATC 中心与监测航线另一区域的 ATC 进行牢固握手，通过公钥基础设施 (PKI) 网络传输私钥。
+
+
+    根据 [8]，报告指出，对于支持数据日志的电源设备，使用安全进程挖掘创建了结合数据挖掘的组合 IDS。该方法是设计 IDS 原型的一种集成方法。检测精度高达
+    73%，是其关键优势之一。但是，该方法不足以收集数据日志等主要问题，尽管这很棘手。该框架利用特征和基于规范的 IDS 功能。数据分析方法整合审计日志，以了解不同机器设备的典型路径。在自动化系统中，无需手动分析和编码序列。
+
+
+    根据 Al, Dr. Yogesh Kumar Sharma et al. [10]，定义了一种基于软件定义网络的 6G 网络接入系统和边缘辅助拥塞规则机制。为了避免流量流缓冲，该框架必须处理大频率数据。该拟议方法的评估结果表明，它可能最大限度地提高网络效率。另一个问题是网络安全，因为集中式安全框架对于在整个网络中保持数据可靠性至关重要。用户在传输和连接时需要保护，因为数据恶意或盗版的可能性更大。另一种网络虚拟化切片形式是网络优化，用于避免缓慢的无线宽带，且宽带速度不得阻碍个人。该软件建议使用系统切片边缘接入系统模型。
+
+
+    ### III. 拟议系统
+
+
+    所提议的研究方法采用了机器学习技术进行入侵检测和预防。包括异常数据包选择和远程监控在内的训练，将由数据包环境特征块完成。然后它将为特定数据包活动提交一个功能集合。如果一切正常，将其一起转发。为了检测单个攻击，将对不当行为样本进行各种属性的特征选择测试。拟议系统有两个阶段；我们为系统培训和测试目的采用了网络数据集——框架的组件。如下图
+    1 所示，使用定义的算法演示了整个系统执行过程。分别使用了各种机器学习来生成训练模块以及测试。
+
+
+    ![](img/866070d599944fed461bda3836bbd5c7_1_0.png)
+
+
+    Fig. 1. 系统架构
+
+
+    NSL KDD CUP 1999 数据集用于实验 (KDD 数据集, 1999)。KDD CUP 1999 数据集是 MIT 林肯实验室原始 1998 年
+    DARPA 入侵检测评估软件的一个版本，现已就绪并受控。采样意识是分层的。它包括约 500 万条关联记录作为训练知识和近 200 万条关联记录作为知识。此外，该数据集包含从每个关联中提取的四十一项选项列表，以及定义关联记录状态（为典型或特定形式攻击）的标记。所有连续、离散、
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    and symbolic variables have these options, with wildly varying ranges falling
+    into four categories: (1) the primary class consists of an association''s intrinsic
+    options, including the critical options for linking individual transmission control
+    protocols. A variety of choices include the length of the affiliation, the type
+    of protocol (TCP, UDP, etc.), and network access (HTTP, telnet, etc.) area unit.
+    (2) Content choices within an association noticed by the Domain Data Area Unit,
+    such as the sum of failed login attempts, will not determine the first transmission
+    control protocol packets'' payload. (3) Constant host options analyze defined
+    connections that have a continuous destination host within the last 2 seconds
+    because of the current relationship and measure statistics related to protocol
+    behavior, operation, etc. (4) Similar service options examine connections that
+    have the same service as the present link within the last two seconds.
+
+
+    In the pre-processing point, the second block of Figure 1 shows that we use a
+    packet sniffer designed with the winpcap library to extract network packet information
+    from each packet, including the IP header, TCP header, UDP header, and ICMP header.
+    After that, by considering links between each combination of science addresses
+    (source science and destination IP), the packet data is partitioned and shaped
+    into a record by aggregating each information. Every record consists of thought-about
+    options details since musical notation options reflect the most features of network
+    data and activities. In order to identify critical opportunities that outline
+    the signatures of conventional vs. attack network traffic, we prefer to conduct
+    extensive experiments. We like to use data acquisition to select thirty-five essential
+    choices for our IDS strategy, according to the data type, the options, and the
+    price of data benefit. The cost of each feature''s data benefit reflects the relation
+    of the component to the output group. Knowledge parameters obtain square measure
+    X and Y, where X specifies individual choices such as the range of protocol packets
+    for transmission control, the content of supply ports for transmission control
+    protocol, and Y defines category teams that squarely measure conventional knowledge,
+    probe attack, and DoS attack. Nevertheless, every aspect of the gift is essential
+    to the DoS attack and the Probe attack. The data gain results show that we need
+    to consider all 35 network data features for intrusion detection and classification.
+
+
+    # IV. RESULTS AND DISCUSSION
+
+
+    After the successful implementation of the system, we calculate the confusion
+    matrix for the system. Table 1 and Table 2 show the classification with SVM algorithms.
+    Figure 2 demonstrates the classification performance of data collection by KDDCUP
+    using the density-based approach of the machine learning algorithm program Figure
+    3 used to classify and predict the precision of the system using different methods
+    like the RNN algorithm.
+
+
+    TABLE I. CONFUSION MATRIX CALCULATION USING SVM FOR CLASSIFICATION
+
+
+    | Class | Normal | Attack |
+
+    |---|---|---|
+
+    | Normal | 1760 | 19 |
+
+    | Attack | 9 | 1640 |
+
+    | | 1769 | 1659 |
+
+
+    TABLE II. CONFUSION MATRIX CALCULATION USING NB FOR CLASSIFICATION
+
+
+    | Class | Normal | Attack |
+
+    |---|---|---|
+
+    | Normal | 1830 | 227 |
+
+    | Attack | 169 | 1202 |
+
+    | | 1999 | 1429 |
+
+
+    TABLE III. PERFORMANCE EVALUATION WITH NB AND SVM
+
+
+    | | NB | SVM |
+
+    |---|---|---|
+
+    | Accuracy | 0.9892 | 0.9525 |
+
+    | Precision | 0.9867 | 0.9797 |
+
+    | Recall | 0.9933 | 0.9463 |
+
+    | F-Score | 0.9899 | 0.9529 |
+
+
+    According to both experiment analyses, SVM shows better classification accuracy
+    than the NB algorithm, shown in figure 3. Conferring to the above experiment analysis,
+    we can conclude the system produces better accuracy for truth computation in IoT
+    in-service environment. The entire research follows some simulation environmental
+    parameters as well as a combination of machine learning algorithms. Various computation
+    parameters have been used cluster differentiation and id.mi.com using respect
+    to machine learning algorithms.
+
+
+    ![](img/866070d599944fed461bda3836bbd5c7_2_0.png)
+
+
+    The above figure 2 Shows accuracy of kddCup 99 results classification, with five
+    different classes. Average software output is around the algorithm for the machine
+    learning 88.50% for all classes.
+
+
+    # A. Proposed Result
+
+
+    ![](img/866070d599944fed461bda3836bbd5c7_2_1.png)'
+  - '[PAGE 3]
+
+
+    The above figure 3 Shows average efficiency of identification in various databases,
+    of (n) different classes. The system''s mean performance with the machine learning
+    algorithm is around 95% for all (n) classes
+
+
+    # V. CONCLUSION
+
+
+    This study proposed an SVM-IDS approach based on deep learning to suggest an efficient
+    system of IDs. To test anomaly detection accuracy, we used the synthetic-based
+    intrusion dataset - NSL-KDD. We plan to implement IDS into the cloud environment
+    in the future using the deep learning technique. We also analyze and compare various
+    methods of deep learning, namely. To detect intrusions in the network, NB ANN,
+    RF, and SVM on the NSL-KDD dataset; The program essentially acts as artificial
+    intelligence and conditioning algorithm to determine the unknown instances during
+    the data check. The efficient rule structure makes for improved classification
+    and high-class detection. Various experiments used experimental analysis to assess
+    the algorithm''s efficiency using several tests and conclude that we are achieving
+    satisfactory results.
+
+
+    # REFERENCES
+
+
+    +   [1] Bhosale, Karuna S., Maria Nenova, and Georgi Iliev. "Modified Naive Bayes
+    Intrusion Detection System (MNBIDS)." 2018 International Conference on Computational
+    Techniques, Electronics and Mechanical Systems (CTEMS). IEEE, 2018.
+
+
+    +   [2] Chamou, Dimitra, et al. "Intrusion Detection System Based on Network Traffic
+    Using Deep Neural Networks," 2019 IEEE 24th
+
+
+    +   International Workshop on Computer Aided Modeling and Design of Communication
+    Links and Networks (CAMAD). IEEE, 2019.
+
+
+    +   [3] Mohan Anbar, Rosni Abdullah, Izaan H. Hasbullah, Yung- Wey Chong; Omar
+    E. Elejla, "Comparative Performance Analysis of classification algorithm for Internal
+    Intrusion Detection ", 2016 14th Annual Conference on Privacy Security and Trust
+    (PCT), Dec 12-14,2016, Penang, Malaysia.
+
+
+    +   [4] Weiwei Chen, Fangang Kong, Feng Mei, GuiguiYuan, Bo Li, "a novel unsupervised
+    Anomaly detection Approach for Intrusion Detection System", 2017 IEEE 3rd International
+    Conference on big data security on cloud, May 16-18,2017, Zhejiang, China.
+
+
+    +   [5] Anna L. Buczak, Erhan n Guven, "A Survey of Data Mining and Machine Learning
+    methods for cybersecurity intrusion detection", IEEE communication surveys and
+    tutorials, vol. 18, Issue 2,2016.
+
+
+    +   [6] Manoj s. Koli, Manik K. Chavan, "An Advanced method for detection of botnet
+    traffic using Internal Intrusion Detection", 2017 International Conference on
+    (ICICCT), March 10-11, 2017, Sangli, India.
+
+
+    +   [7] Thabet Kacem, Duminda Wijesekera, Paulo Costa, Alexander Barreto, "An
+    ADS-B Intrusion Detection System", 2016 IEEE on ISPA, 2016, Fairfax, Virginia.
+
+
+    +   [8] Shengyi Pan, Thomas Morris, Uttam Adhikari, "Developing a Hybrid Intrusion
+    Detection System using Data Mining for power system", IEEE Transactions on, vol.
+    6, issues. 6, Nov. 2015.
+
+
+    +   [9] Mehdi Ezzariri, Hamid Elghazi, Hassan El Ghazi, Tayeb Sadiki, "Epigenetic
+    Algorithm for performing Intrusion Detection System", 2016 International Conference
+    on ACOSIS, Oct17- 19,2016, Rabat, Morocco.
+
+
+    +   [10] BOROLE, Prajakta; SHARMA, Yogesh Kumar; NEMADE, Santosh. 6G Network Access
+    and Edge-Assisted Congestion Rule Mechanism using Software-Defined Networking.
+    International Journal of Future Generation Communication and Networking, 2020,
+    13.1s: 107-112.'
+  md: '
+
+    and symbolic variables have these options, with wildly varying ranges falling
+    into four categories: (1) the primary class consists of an association''s intrinsic
+    options, including the critical options for linking individual transmission control
+    protocols. A variety of choices include the length of the affiliation, the type
+    of protocol (TCP, UDP, etc.), and network access (HTTP, telnet, etc.) area unit.
+    (2) Content choices within an association noticed by the Domain Data Area Unit,
+    such as the sum of failed login attempts, will not determine the first transmission
+    control protocol packets'' payload. (3) Constant host options analyze defined
+    connections that have a continuous destination host within the last 2 seconds
+    because of the current relationship and measure statistics related to protocol
+    behavior, operation, etc. (4) Similar service options examine connections that
+    have the same service as the present link within the last two seconds.
+
+
+    In the pre-processing point, the second block of Figure 1 shows that we use a
+    packet sniffer designed with the winpcap library to extract network packet information
+    from each packet, including the IP header, TCP header, UDP header, and ICMP header.
+    After that, by considering links between each combination of source addresses
+    (source IP and destination IP), the packet data is partitioned and shaped into
+    a record by aggregating each information. Every record consists of thought-about
+    options details since musical notation options reflect the most features of network
+    data and activities. In order to identify critical opportunities that outline
+    the signatures of conventional vs. attack network traffic, we prefer to conduct
+    extensive experiments. We like to use data acquisition to select thirty-five essential
+    choices for our IDS strategy, according to the data type, the options, and the
+    price of data benefit. The cost of each feature''s data benefit reflects the relation
+    of the component to the output group. Knowledge parameters obtained are X and
+    Y, where X specifies individual choices such as the range of protocol packets
+    for transmission control, the content of supply ports for transmission control
+    protocol, and Y defines category teams that squarely measure conventional knowledge,
+    probe attack, and DoS attack. Nevertheless, every aspect of the gift is essential
+    to the DoS attack and the Probe attack. The data gain results show that we need
+    to consider all 35 network data features for intrusion detection and classification.
+
+
+    ## IV. RESULTS AND DISCUSSION
+
+
+    After the successful implementation of the system, we calculate the confusion
+    matrix for the system. Table 1 and Table 2 show the classification with SVM algorithms.
+    Figure 2 demonstrates the classification performance of data collection by KDDCUP
+    using the density-based approach of the machine learning algorithm program Figure
+    3 used to classify and predict the precision of the system using different methods
+    like the RNN algorithm.
+
+
+    TABLE I. CONFUSION MATRIX CALCULATION USING SVM FOR CLASSIFICATION
+
+
+    | Class | Normal | Attack |
+
+    |---|---|---|
+
+    | Normal | 1760 | 19 |
+
+    | Attack | 9 | 1640 |
+
+    | | 1769 | 1659 |
+
+
+    TABLE II. CONFUSION MATRIX CALCULATION USING NB FOR CLASSIFICATION
+
+
+    | Class | Normal | Attack |
+
+    |---|---|---|
+
+    | Normal | 1830 | 227 |
+
+    | Attack | 169 | 1202 |
+
+    | | 1999 | 1429 |
+
+
+    TABLE III. PERFORMANCE EVALUATION WITH NB AND SVM
+
+
+    | | NB | SVM |
+
+    |---|---|---|
+
+    | Accuracy | 0.9892 | 0.9525 |
+
+    | Precision | 0.9867 | 0.9797 |
+
+    | Recall | 0.9933 | 0.9463 |
+
+    | F-Score | 0.9899 | 0.9529 |
+
+
+    According to both experiment analyses, SVM shows better classification accuracy
+    than the NB algorithm, shown in figure 3. Conferring to the above experiment analysis,
+    we can conclude the system produces better accuracy for truth computation in IoT
+    in-service environment. The entire research follows some simulation environmental
+    parameters as well as a combination of machine learning algorithms. Various computation
+    parameters have been used cluster differentiation and id.mi.com using respect
+    to machine learning algorithms.
+
+
+    ![](img/866070d599944fed461bda3836bbd5c7_2_0.png)
+
+
+    The above figure 2 Shows accuracy of KDDCUP 99 results classification, with five
+    different classes. Average software output is around the algorithm for the machine
+    learning 88.50% for all classes.
+
+
+    ### A. Proposed Result
+
+
+    ![](img/866070d599944fed461bda3836bbd5c7_2_1.png)
+
+
+    The above figure 3 Shows average efficiency of identification in various databases,
+    of (n) different classes. The system''s mean performance with the machine learning
+    algorithm is around 95% for all (n) classes
+
+
+    ## V. CONCLUSION
+
+
+    This study proposed an SVM-IDS approach based on deep learning to suggest an efficient
+    system of IDs. To test anomaly detection accuracy, we used the synthetic-based
+    intrusion dataset - NSL-KDD. We plan to implement IDS into the cloud environment
+    in the future using the deep learning technique. We also analyze and compare various
+    methods of deep learning, namely. To detect intrusions in the network, NB ANN,
+    RF, and SVM on the NSL-KDD dataset; The program essentially acts as artificial
+    intelligence and conditioning algorithm to determine the unknown instances during
+    the data check. The efficient rule structure makes for improved classification
+    and high-class detection. Various experiments used experimental analysis to assess
+    the algorithm''s efficiency using several tests and conclude that we are achieving
+    satisfactory results.
+
+
+    ## REFERENCES
+
+
+    - [1] Bhosale, Karuna S., Maria Nenova, and Georgi Iliev. "Modified Naive Bayes
+    Intrusion Detection System (MNBIDS)." 2018 International Conference on Computational
+    Techniques, Electronics and Mechanical Systems (CTEMS). IEEE, 2018.
+
+
+    - [2] Chamou, Dimitra, et al. "Intrusion Detection System Based on Network Traffic
+    Using Deep Neural Networks," 2019 IEEE 24th International Workshop on Computer
+    Aided Modeling and Design of Communication Links and Networks (CAMAD). IEEE, 2019.
+
+
+    - [3] Mohan Anbar, Rosni Abdullah, Izaan H. Hasbullah, Yung-Wey Chong; Omar E.
+    Elejla, "Comparative Performance Analysis of classification algorithm for Internal
+    Intrusion Detection ", 2016 14th Annual Conference on Privacy Security and Trust
+    (PCT), Dec 12-14,2016, Penang, Malaysia.
+
+
+    - [4] Weiwei Chen, Fangang Kong, Feng Mei, GuiguiYuan, Bo Li, "a novel unsupervised
+    Anomaly detection Approach for Intrusion Detection System", 2017 IEEE 3rd International
+    Conference on big data security on cloud, May 16-18,2017, Zhejiang, China.
+
+
+    - [5] Anna L. Buczak, Erhan n Guven, "A Survey of Data Mining and Machine Learning
+    methods for cybersecurity intrusion detection", IEEE communication surveys and
+    tutorials, vol. 18, Issue 2,2016.
+
+
+    - [6] Manoj s. Koli, Manik K. Chavan, "An Advanced method for detection of botnet
+    traffic using Internal Intrusion Detection", 2017 International Conference on
+    (ICICCT), March 10-11, 2017, Sangli, India.
+
+
+    - [7] Thabet Kacem, Duminda Wijesekera, Paulo Costa, Alexander Barreto, "An ADS-B
+    Intrusion Detection System", 2016 IEEE on ISPA, 2016, Fairfax, Virginia.
+
+
+    - [8] Shengyi Pan, Thomas Morris, Uttam Adhikari, "Developing a Hybrid Intrusion
+    Detection System using Data Mining for power system", IEEE Transactions on, vol.
+    6, issues. 6, Nov. 2015.
+
+
+    - [9] Mehdi Ezzariri, Hamid Elghazi, Hassan El Ghazi, Tayeb Sadiki, "Epigenetic
+    Algorithm for performing Intrusion Detection System", 2016 International Conference
+    on ACOSIS, Oct 17-19, 2016, Rabat, Morocco.
+
+
+    - [10] BOROLE, Prajakta; SHARMA, Yogesh Kumar; NEMADE, Santosh. 6G Network Access
+    and Edge-Assisted Congestion Rule Mechanism using Software-Defined Networking.
+    International Journal of Future Generation Communication and Networking, 2020,
+    13.1s: 107-112.
+
+    '
+  mdcn: '
+
+
+    并且符号变量具有这些选项，范围差异巨大，分为四类：(1) 主要类别包含关联的内在选项，包括链接单个传输控制协议的关键选项。多种选择包括关联长度、协议类型（TCP、UDP
+    等）以及网络访问（HTTP、telnet 等）区域单位。(2) 域数据区域单位注意到的关联内的内容选择，例如失败登录尝试的总数，不会确定第一个传输控制协议数据包的有效载荷。(3)
+    常量主机选项分析在过去 2 秒内具有连续目标主机的定义连接，因为当前关系并衡量与协议行为、操作等相关的统计数据。(4) 相似服务选项检查在过去两秒内具有与当前链接相同服务的连接。
+
+
+    在预处理阶段，图 1 的第二个块显示，我们使用一个基于 winpcap 库设计的数据包嗅探器来从每个数据包中提取网络数据包信息，包括 IP 头、TCP 头、UDP
+    头和 ICMP 头。之后，通过考虑每个源地址组合（源 IP 和目标 IP）之间的链接，数据包数据被分区并通过聚合每项信息塑造成一条记录。每条记录由所考虑的选项详情组成，因为音乐记号选项反映了网络数据和活动的最主要特征。为了识别勾勒出常规与攻击网络流量签名的关键机会，我们倾向于进行广泛的实验。我们倾向于使用数据采集为我们的
+    IDS 策略选择三十五个基本选项，依据是数据类型、选项以及数据收益的代价。每个特征的数据收益代价反映了组件与输出组之间的关系。获得的知识参数是 X 和 Y，其中
+    X 指定单个选项，例如传输控制的协议数据包范围、传输控制协议的供应端口内容，而 Y 定义类别团队，这些团队直接衡量常规知识、探测攻击和 DoS 攻击。尽管如此，礼物的每个方面对于
+    DoS 攻击和探测攻击都至关重要。数据收益结果表明，我们需要考虑所有 35 个网络数据特征用于入侵检测和分类。
+
+
+    ## IV. 结果与讨论
+
+
+    系统成功实施后，我们计算了系统的混淆矩阵。表 1 和表 2 显示了使用 SVM 算法的分类。图 2 演示了基于 KDDCUP 的数据收集使用机器学习算法程序的密度方法的分类性能，图
+    3 用于使用不同方法（如 RNN 算法）分类和预测系统的精度。
+
+
+    表 I. 用于分类的 SVM 混淆矩阵计算
+
+
+    | 类别 | 正常 | 攻击 |
+
+    |---|---|---|
+
+    | 正常 | 1760 | 19 |
+
+    | 攻击 | 9 | 1640 |
+
+    | | 1769 | 1659 |
+
+
+    表 II. 用于分类的 NB 混淆矩阵计算
+
+
+    | 类别 | 正常 | 攻击 |
+
+    |---|---|---|
+
+    | 正常 | 1830 | 227 |
+
+    | 攻击 | 169 | 1202 |
+
+    | | 1999 | 1429 |
+
+
+    表 III. 使用 NB 和 SVM 的性能评估
+
+
+    | | NB | SVM |
+
+    |---|---|---|
+
+    | 准确率 | 0.9892 | 0.9525 |
+
+    | 精确率 | 0.9867 | 0.9797 |
+
+    | 召回率 | 0.9933 | 0.9463 |
+
+    | F-Score | 0.9899 | 0.9529 |
+
+
+    根据两项实验分析，SVM 显示出比 NB 算法更好的分类准确率，如图 3 所示。根据上述实验分析，我们可以得出结论，系统在物联网在线环境中为真值计算产生了更好的准确率。整个研究遵循一些模拟环境参数以及机器学习算法的组合。各种计算参数已被用于集群分化和
+    id.mi.com，相对于机器学习算法。
+
+
+    ![](img/866070d599944fed461bda3836bbd5c7_2_0.png)
+
+
+    上述图 2 显示了 KDDCUP 99 结果分类的准确率，包含五个不同类别。平均软件输出在机器学习算法中对于所有类别约为 88.50%。
+
+
+    ### A. 提出的结果
+
+
+    ![](img/866070d599944fed461bda3836bbd5c7_2_1.png)
+
+
+    上述图 3 显示了各种数据库中不同（n）个类别的识别平均效率。该系统使用机器学习算法的平均性能对所有（n）个类别均约为 95%。
+
+
+    ## V. 结论
+
+
+    本研究提出了一种基于深度学习的 SVM-IDS 方法，以建议一个高效的入侵检测系统。为了测试异常检测准确率，我们使用了基于合成的入侵数据集 - NSL-KDD。我们计划在未来使用深度学习技术将
+    IDS 实现到云环境中。我们还分析并比较了各种深度学习方法，即。为了检测网络中的入侵，NB、ANN、RF 和 SVM 在 NSL-KDD 数据集上；该程序本质上充当人工智能和条件算法，以在数据检查期间确定未知实例。高效的规则结构使分类改进和高级检测成为可能。各种实验使用实验分析来评估算法的效率，通过多次测试并得出结论，我们正在取得满意的结果。
+
+
+    ## 参考文献
+
+
+    - [1] Bhosale, Karuna S., Maria Nenova, and Georgi Iliev. "修正的朴素贝叶斯入侵检测系统 (MNBIDS)。"
+    2018 计算技术、电子和机械系统国际会议 (CTEMS)。IEEE, 2018.
+
+
+    - [2] Chamou, Dimitra, et al. "基于深度神经网络的网络流量入侵检测系统，" 2019 IEEE 第 24 届计算机辅助通信链路和网络建模与设计国际研讨会
+    (CAMAD)。IEEE, 2019.
+
+
+    - [3] Mohan Anbar, Rosni Abdullah, Izaan H. Hasbullah, Yung-Wey Chong; Omar E.
+    Elejla, "内部入侵检测分类算法的比较性能分析，" 2016 年第 14 届隐私安全与信任年度会议 (PCT), 2016 年 12 月 12-14
+    日, 马来西亚槟城.
+
+
+    - [4] Weiwei Chen, Fangang Kong, Feng Mei, GuiguiYuan, Bo Li, "一种用于入侵检测系统的新型无监督异常检测方法，"
+    2017 IEEE 第 3 届云端大数据安全国际会议, 2017 年 5 月 16-18 日, 浙江, 中国.
+
+
+    - [5] Anna L. Buczak, Erhan n Guven, "网络安全入侵检测的数据挖掘和机器学习方法综述", IEEE 通信调查与教程, vol.
+    18, Issue 2, 2016.
+
+
+    - [6] Manoj s. Koli, Manik K. Chavan, "使用内部入侵检测检测僵尸网络流量的先进方法，" 2017 (ICICCT) 国际会议,
+    2017 年 3 月 10-11 日, 桑格利, 印度.
+
+
+    - [7] Thabet Kacem, Duminda Wijesekera, Paulo Costa, Alexander Barreto, "一种 ADS-B
+    入侵检测系统", 2016 IEEE ISPA, 2016, 弗吉尼亚州费尔法克斯.
+
+
+    - [8] Shengyi Pan, Thomas Morris, Uttam Adhikari, "使用数据挖掘为电力系统开发混合入侵检测系统", IEEE
+    交易, vol. 6, issues. 6, 2015 年 11 月.
+
+
+    - [9] Mehdi Ezzariri, Hamid Elghazi, Hassan El Ghazi, Tayeb Sadiki, "用于执行入侵检测系统的表观遗传算法",
+    2016 ACOSIS 国际会议, 2016 年 10 月 17-19 日, 摩洛哥拉巴特.
+
+
+    - [10] BOROLE, Prajakta; SHARMA, Yogesh Kumar; NEMADE, Santosh. 使用软件定义网络的 6G 网络接入和边缘辅助拥塞规则机制。未来一代通信与网络国际期刊,
+    2020, 13.1s: 107-112.
+
+
+    '
+  merge: 1

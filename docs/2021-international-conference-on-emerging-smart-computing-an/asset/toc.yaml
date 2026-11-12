@@ -1,0 +1,15 @@
+level_changes:
+- line: 12
+  before: 3
+  after: 2
+- line: 18
+  before: 3
+  after: 2
+- line: 38
+  before: 3
+  after: 2
+text_changes:
+- line: 0
+  before: '[2021 新兴智能计算与信息学国际会议 (ESCI)(印度 浦那 2021.3.5-2021.3.7)] 2021 新兴智能计算与信息学国际会议
+    (ESCI) ｜｜ 机器学习'
+  after: 2021 新兴智能计算与信息学国际会议 (ESCI)(印度 浦那 2021.3.5-2021.3.7) | 机器学习
