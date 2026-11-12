@@ -1,0 +1,9 @@
+that is said to be known as the true values. Meanwhile, Kinect sensors also promote feature points of the 3-D coordinates in the IR camera’s coordinate system. The values of α and β are determined by minimizing the distance among the two set points thereby promoting a rigid transformation among IR and RGB cameras. A human body is represented with the number of joints from the neck, head, shoulders and arms in the skeletal tracking. The joints are represented in the form of 3D coordinates. The main aim of this system is to determine the 3D coordinates of a body with effective usage of resources and permits fluent interactivity. As an intermediate process, per-pixel body part recognition has been proposed (Thevenot, Toth, Durs and Wilson, 1999). This process could avoid combinatorial search in various joints of the human body. Over fitting could be avoided by using deep randomized decision forest classifier while classifying numerous images. The classifier could also run separately on each pixel with the Graphics Processing Unit (GPU) that could speed up the entire process. Finally, by computing spatial modes of the inferred per-pixel distributions with the mean shift could result in the 3D joint proposals. The schematic representation of Kinect sensor with the skeletal tracking of various body parts and per-pixel body part recognition has been shown in figure 3-5.
+
+# Figure 3. Schematic representation of Kinect sensors (Thevenot, 2011) Source (Thevenot, 2011)
+
+![](bbox=[0.146, 0.435, 0.814, 0.783])
+
+# Biosensor and Its Application
+
+According to IUPAC, “A biosensor is an integrated self-sufficient device that is capable of promoting quantitative or semi-quantitative analytical information with the transducer element, which is directly

@@ -1,0 +1,10 @@
+# Figure 9. Microsoft Machine Learning Server for predictive service which can be used for Healthcare
+
+![](bbox=[0.142, 0.156, 0.879, 0.471])
+
+reason is that Cognitive Service containers offers greater agility, since they load the right amount of kernel resources and run-time code to execute an application in the container, thus leading to flexibility among the operating environments. Cognitive Service containers are widely employed in public cloud, for example in Red hat's OpenShift PaaS. The Cognitive Service containers are still evolving technology and it still needs major development in the field of security, load balancing as well as trusted connections.
+
+The evolution of virtualization is going to continue for several years since it has found its application in almost every field of technology and most important field is cloud computing and mobile devices, its evolution has led to the new use-cases for smart phones. As mentioned by Gartner, virtualization in smart phones will increase by 60% in upcoming years. Since virtualization can only solve the need for higher storage space in smart phones. Most advance operating systems contains high level of functionality, thus leading to poor security mess and virtualization solves this challenge, for instance, the virtualization provides better security by partitions. There are several challenges encountered in cloud computing and distributed applications, few common risks involve virus and malware attacks, intentional attacks, man in the middle attack. The most important challenges would be:
+
++   - Data Breach: Since large amount of medical data is stored in the cloud, hackers will try to make the most of confidential data. This could be resolved by implementing security controls and deploy encryption to secure confidential data.
++   - Network security: Sometime the leakage of confidential medical data may occur during inter-connection of devices in a network, to avoid this, reliable transmission protocol such as TCP (Transmission Control Protocol) and effective network encryption for secure traffic network.

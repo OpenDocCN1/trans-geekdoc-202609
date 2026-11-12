@@ -1,0 +1,17 @@
+Next, training an end-to-end FCNs includes two steps (1) pixel-wise prediction and (2) supervised pre-training. Prediction of dense outputs is carried for fully conv of existing networks from arbitrary-sized inputs. The pixel-wise prediction is carried out by up-sampling layers and subsampled pooling for learning nets.
+
+The model is trained on the ImageNet prior for classification. Dense prediction is implemented by the VGG and its last fully connected layer is replaced with conv layer with addition of 1x1 conv with channel dimension 21. For predicting scores for each of the PASCAL classes includes background at each of the coarse result locations; followed by a transpose conv layer with the stride 16 for bilinear up-sampling the coarse results to pixel-dense outputs.
+
+# Low Level Layers Merged With the Features of Higher Ones
+
+The blend of layers in the hierarchy features by the new processing FCN for segmentation refines the spatial precision of the outcome. The final prediction layer is pooled with lower layer of the finest strides by adding skips connections; a direct acyclic graph with edges is curved with a line topology that skip ahead from lower layers to higher ones. The finest scale prediction associates fine and coarse layers that allow the model from local prediction.
+
+The output stride is split into two halves by predicting from a 16 pixel stride layer. Then 1x1 conv is added on the top of pool 4 to yield surplus class predictions. The predictions output compute on the top of conv 7 (conv fc7) at stride 32 by adding a 2 x up-sampling layer and summing both the predictions. Lastly, the stride 16 predictions are up-sampled back to the image; this net is known as FCN-16s (Shelhamer, 2016).
+
+# Post Processing
+
+Predicting labels are performed by CRF, and a discriminative model is used for predicting labels. It uses contextual information from previous labels that increases the amount of information to make a good prediction that corresponds to inputs. The post processing phase refines the segmentation outcome and enhances the ability to capture fine-grained details to use for CRF. Merging the image information at low level between pixels with the outcome of multi-class inference systems generates per pixel class scores. When CNN fails to capture the long range dependencies, the merging method supports and fine local details are also taken into account (Garcia, 2017).
+
+While predicting FCN uses labels for each pixel independently including its surrounding labels, this may result in coarse segmentation. Two inputs considered by CRF are one for the original image and the second is for the predicted probabilities for each pixel. Highly efficient inference algorithm uses CRF for fully connected CRF models in which the pair wise edge potentials are defined through a linear combination of Gaussian kernels in an arbitrary feature space. The trained parameter outputs uses both FCN, given by the number of conv layers where as deconv size is 528 for FCN-16 given image size is 512 X 512 and deconv size is 2 for FCN-8 for the same image size (Prisilla, Iyyanki & Aruna, 2018).
+
+During training fully conv, patch-wise training is carried out and it lacks efficiency. Implementing sampling corrects the imbalance class and mitigates the spatial correlation of dense patches. In this training, class balance can be achieved by the weight loss, and spatial correlation is addressed by loss sampling (Shelhamer, 2016).

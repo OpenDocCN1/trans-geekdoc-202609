@@ -1,0 +1,17 @@
+# # About the Contributors
+
+Masters Degree from Anna University Coimbatore. He is a member of various professional bodies and organized various funded workshops ,seminars from DST,DBT.AICTE. He has wide publications in the highly impact journals in the area of Data Analytics, Networking and Security issues and published 04 book chapters. He has hosted two special session for IEEE sponsored conference in Osaka, Japan and Thailand. He has acted as Session chair,organizing committee member, advisory committee and outreach committee member in various international conferences supported by IEEE. His areas of interest include Game Modelling, Artificial Intelligence, Cognitive radio networks, Network security, Machine Learning and Big data Analytics. He is a Senior member in IEEE and holds membership in various professional bodies. He has served as Guest Editor, reviewer for IEEE,Springer, Elsevier and Wiley journals.
+
+**Reyana A.** is currently working as an Assistant Professor in the Department of Computer Science and Engineering at Nehru Institute of Engineering and Technology, Coimbatore, Tamilnadu, India. She is pursuing her doctoral degree in the field of Information and Communication Engineering at Anna University, Chennai. Has done her Masters in Computer Science & Engineering and research interests include Multi-sensor fusion, Internet of Things, Wireless Sensor Networks and Automata Theory. Has a decade of experience in academia with publications in Scopus indexed international, reviewer for Scopus international journals and a Member of IEEE and IAENG.
+
+**Sivakami A.** is working as an Assistant Professor in Department of Physics, Bharat Institute of Engineering & Technology, India for the past two years. Her research interests include Nanotechnology, IoT and Deep learning.
+
+**M. S. Irfan Ahamed** is currently working as Associate Professor, Department of Computer & Information Sciences, College of Science and Arts, Al Ula Branch, Taibah University, Saudi Arabia.
+
+**Hmidi Alaeddine** received his Master's degree in embedded electronic systems from the University of Sousse, Tunisia, in 2017. He is currently pursuing a Ph.D. degree at the Faculty of Sciences, Monastir University, Monastir, Tunisia. His research interests are related to, deep neural network, Classification, reconfigurable architectures, network on chip, and image processing.
+
+**Ahmed Alenezi** is currently working as Assistant Professor, Department of Computer & Information Sciences, College of Science and Arts, Al Ula Branch, Taibah University, Saudi Arabia.
+
+**Balamurugan** is the professor and Head of Department of Computer Science and Engineering at Bharathidasan University. He has completed his PhD and guided 10 research scholars. His area of research includes cognitive science and data science. He has completed UGC funded research project and has a patent and published 30 papers in reputed journals. He is the board of member in different autonomous colleges.
+
+**Gopinath Ganapathy** pursued Bachelor of Science and Master of computer applications from St. Joseph’s College, Trichy and completed Ph.D from Madurai Kamaraj University. Currently working as a Registrar, Bhararidasan University, Trichy. He has 30 years of total experience in academia, Industry,

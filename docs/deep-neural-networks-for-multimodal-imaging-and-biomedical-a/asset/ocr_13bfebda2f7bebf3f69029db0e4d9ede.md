@@ -1,0 +1,11 @@
+# Figure 3. UNET architecture
+
+![](bbox=[0.27, 0.16, 0.73, 0.4])
+
+is used in the data augmentation process. In this method of testing, images are divided into patches, patches are predicted with the learned models, and therefore the segmentation result is often reconstructed through overlapping-patches sequential reconstruction approach. This retinal segmentation method was tested using datasets DRIVE and STARE available in the public domain. The obtained results were more accurate than other recent state of art techniques. Sensitivity, Specificity, accuracy and region below each curve had been used as evaluation metrics to verify the effectiveness of this technique. Compared with cutting-edge techniques including the unsupervised, supervised, and convolution neural network (CNN) methods, the obtained result using this Dense UNET confirmed that this system is competitive in those assessment metrics.
+
+# ULTRA SOUND IMAGE SEGMENTATION
+
+Ultra sound (US) is one of the imaging modality used in the screening for early prognosis of Breast cancers. Segmentation of ultra sound modality Breast image is very challenging and complex due to huge quantity of shadows, complex and poorly visible boundaries and poor contrast. Additionally US images are inherently corrupted by speckle noise and Rayleigh scattering because of tissue micro systems. Speckle artifacts are tissue dependant and can not be modeled correctly. Many speckle noise elimination and aspect retaining strategies were proposed. Many semi automatic and Interactive techniques were proposed for the segmentation of Breast Ultrasound snap shots. A Dilated fully Convolutional community (DFCN) blended with phase based lively contour approach became proposed by Hu etal., (2018).
+
+The structure of the DFCN is described within the following segment and shown in Fig: 4 (a) & (b). It includes a Convolution layer, Batch Normalization Layer and a Rectified Linear Unit (ReLU). To maintain the dimensions of the function map regular after the convolution operation zero padding turned into executed. ReLU introduces non linearity. M x M x H within the block denotes the kernel size (M) and variety of feature maps (H).Max Pooling layer has a kernel size of 2x2 and a stride of 2. In this DFCN the number characteristic maps successively boom from decrease to better layers. The range

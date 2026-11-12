@@ -1,0 +1,9 @@
+# Figure 2. Applications of Internet of Things
+
+![](bbox=[0.25, 0.16, 0.75, 0.55])
+
+Once the data is transformed into actionable and valuable information, then big data comes into the part. This is not possible with the paper and pen records maintained manually.
+
+AI plays a main role at this stage where the data is collected, and the meaningful extracts are obtained by data analytics. The similar patterns are revealed by AI once the data is fed and produces more informed decisions that could be done either with the help of humans or machines. Recently, business organization are trying to collaborate IoT with AI that tends to decrease the cost with the better user experience and also opens up a new pathway to these organizations(Chopra and White, 2011). In this process, the observer will promote the specific input data regarding the trigger element leading to the AEMs on the daily basis. This information will be reviewed by the doctors at a particular period of time.
+
+Machine learning is necessary to manage certain situations occurring in IoT applications. When an error occurs in a device at an unusual situation then it is required to know whether it needs s human assistance or to respond automatically. Obviously, it needs intelligent learning with the decision-making capacity in order to make the proper decision in that particular situation. This is used as a process by Google with the RankBrain algorithm. Deep learning is used to detect the type of error and once the solution is obtained then this could function at a real-time without the need for human intervention (Chen. L et al. 2018). Smart meters for healthcare building are specially designed with sensors integrated into the IoT environment and banded in the smart grid system to upload and record the data related to electricity.

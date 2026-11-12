@@ -1,0 +1,85 @@
+# H
+
++   Healthcare 1-2, 4-10, 27, 31, 33, 70-72, 75-77, 80-85, 87, 119-120, 124, 156-157, 163, 165-169, 172-173, 186-190, 197-200, 205, 207-210, 213-216, 219-227, 229-230, 236
++   Healthcare Applications 166, 172, 205, 208, 215, 236
++   heterogeneous frameworks 47
++   Hyper Dense Net 12, 27
+
+# I
+
++   Image Classification 35, 41, 90-91, 94-95, 119-120, 124, 132, 152, 177
++   Image Processing 32, 105-106, 115-116, 147, 152, 155, 161, 172, 215, 223-224, 228, 236
++   Image Segmentation 12-13, 17, 22, 26-29, 32-33, 41-42, 105, 114, 120, 132, 142, 144, 146, 152, 159, 162
++   ImageNET 28, 62, 89-91, 94-96, 99, 101, 147-148
++   Information Technology 1, 6-8
++   Intelligent Information System 185, 213, 218
++   Internet of things 10, 81-84, 155, 186, 197, 205-207, 209, 214, 216, 218-220, 236
++   Internet of Things (IoT) 10, 81-84, 155, 186, 197, 205-207, 209, 214, 216, 218-220, 236
++   IoT Edge Gateway 222, 236
++   IoT-Driven Sensor 80-81
+
+# M
+
++   Machine Learning 8, 25, 28, 31-32, 35, 37, 42-43, 47-48, 71-72, 81-83, 89, 118, 163-165, 172-174, 177-179, 181-182, 185, 188, 192, 206-207, 218-220, 222-225, 230, 236
++   Magnetic Resonance Imaging (MRI) 34, 178-179
++   Medical Imaging 12-13, 28, 31-32, 34, 38, 41-42, 104-107, 119, 155, 163, 172-173, 178-182
++   Micro Electro Mechanical System (MEMS) 188
++   Multimodal Image Analysis 237, 248, 254
++   Multi-modality Medical Imaging 155
+
+# N
+
++   Neural Network 12, 15, 17, 20-21, 25-28, 31, 35, 37-38, 43, 47, 59, 63-64, 90, 118, 136, 152, 159-160, 163, 177, 238, 244
++   Neuro-Fuzzy Controller 238
++   Neurons 12, 90-91, 93, 96, 121, 123-124, 128, 136, 142, 152, 163
++   Neuroradiology 172
+
+# O
+
++   Object Detection 28, 90-91, 120, 141-142, 147, 152
++   Organ Attention Net 12, 27
+
+# P
+
++   Perceptron 90, 120-123, 152
+
+# Q
+
++   Quantization 105, 107, 176
+
+# R
+
++   Radiation Absorption 256
++   Rational Decision Making 185, 214, 218
++   Residual Learning 98
+
+# S
+
++   Segmentation 12-29, 32-33, 41-42, 105-108, 114-116, 118-120, 132, 142, 144-149, 152, 159-160, 162-163, 174, 177-179
++   Semantic Segmentation 13, 22, 29, 118, 147, 149
++   Sensor-Cloud Infrastructure 85, 218
++   Sustainable Development 256-258
++   Synchronization 67, 241
+
+# T
+
++   Telehealth Service 236
++   Tensor Flow 47-51, 53, 56-65, 67
++   Thresholding 135, 142, 144-146, 152
++   Transfer Learning 12, 27, 41, 43, 149, 161
+
+# U
+
++   Ubiquitous Computing (UbiComp) 81, 218
++   UNet 12, 16-17, 27
+
+# V
+
++   VNet 12, 27
+
+# W
+
++   Waste Utilization 257
++   wearable sensors 186, 221
++   Weights 15, 21, 41, 91, 95, 121, 124, 126, 130, 133, 135, 147, 152
++   World Health Organization (WHO) 187

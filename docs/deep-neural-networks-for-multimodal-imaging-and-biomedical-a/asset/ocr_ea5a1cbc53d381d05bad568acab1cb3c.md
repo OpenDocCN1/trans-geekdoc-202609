@@ -1,0 +1,8 @@
+# Figure 4. IoT Communications in multi-domains
+
+![](bbox=[0.106, 0.164, 0.826, 0.563])
+
+so that it will be easier to sort out disagreements since many healthcare sustainable building experts mention that t is much easier to change a building in its starting phase and create effective solutions. The following computer networks can be employed for implementing a sustainable hospital management:
+
++   * Unshielded twisted pair:(UTP): UTP is a widely employed cable and it is well suited for this purpose. It uses a high-speed cable and the cable contains four pairs of wires inside the jacket in which each pair is twisted such a way that the number of twists per inch varies so that it can preclude interference from adjacent pairs as well as other electrical devices. Higher the twisting, greater the supported transmission rate as well as cost per foot. The standards for the Unshielded twisted pair (UTP) can be found at EIA/TIA (Electronic Industry Association/Telecommunication Industry Association) which contains six groups of wire.
++   * Network Diameter: A hierarchical network topology is recommended for the given problem and it is important to consider the network diameter, therefore diameter is a measure of distance, however, in our case, we will measure the number of devices in which a packet has to cross to arrive at its destination. It is recommended to lower the network diameter low for predictable latency between devices. Degree of latency would be produced by each switch as well as each switch should compute destination MAC address of the frame, check its MAC address table, and forward
