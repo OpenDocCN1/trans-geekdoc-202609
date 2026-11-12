@@ -1,0 +1,15 @@
+Label encoding is very straightforward, indicating a one-to-one correspondence between entities, i.e., word form and hardware processing units (neurons). However, the numeric values can be misinterpreted by algorithms that are embedded with a hierarchy or order in them. This ordering issue is addressed in another common alternative approach called “one-hot encoding” (Harris & Harris, 2012; Chollet, 2017). This method is a binary representation of each word in a corpus, by which we use a vector of 9 bits to represent the unique words in our vocabulary, by simply making the 1st bit represent the word “He”, the second bit the word “is”, etc. (see column 3 in Table 1.1).
+
+However, this method has some disadvantages in terms of using computer elements to represent words:
+
++   1 One-hot encoding is a vector, that is, a list of numbers, and the size of the vector can be extremely large as the size of vocabulary increases. For example, if the vocabulary size of a corpus is 10,000, each word’s numerical representation will be 10,000 digits.
+
++   2 Data are very sparse as vectors containing mostly 0s and only one 1 (thus the name *one-hot*).
+
++   3 These vectors do not have information on the relationships between words or meanings derived from these relationships. For example, we would not know how the word *he* (100000000) is related to *learner* (000010000) just by reading the one-hot coding.
+
+One-hot encoding treats words as discrete, atomic units, rather than continuous. This is easy to understand when we consider a type of language in which one word form – the signifier – corresponds to one computer element or neuron. Yet, when considering the meaning of each word – the signified – this method is limited in expressing complex connotations. Neither label nor one-hot encoding changes the data type by simply assigning a number, decimal, or binary. They are still categorical, as adding or subtracting these numbers makes no sense. They are not real numbers as shown in a vector space.
+
+Localist models are very inefficient whenever the correspondence between concepts – the signified, or meaning of a sign – and neurons is not one-to-one. In this case, the data have a componential structure. In our domain – language and translation – almost all data have componential structure: a word contains multiple sense components, like the word *father* includes the meaning of *parent* and *male*.
+
+Componentional analysis, also known as feature analysis or contrast analysis, is one of the cornerstones of semantics – the study of meaning (Leech, 1981; Love, 1983). Lyons (1995, pp. 106–108) points out that componential analysis is one approach to lexical semantics. It involves the analysis of the component parts of a lexeme. It has a long history of philosophical discussion and has been employed extensively by linguists. An alternative term for componential analysis is lexical decomposition. Here is an often used example: The words *man*, *woman*, *boy*, and *girl* all denote human beings. We can therefore extract from the sense of each of

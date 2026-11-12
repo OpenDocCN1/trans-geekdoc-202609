@@ -1,0 +1,13 @@
+data, a more accurate classifier may be built under certain circumstances (Xing et al., 2010, p. 5). In this type of NLP task, a translator usually needs to annotate the language data, which means that there is a secondary layer of data interaction on top of the corpora directly generated in a translation process.
+
+# 6.3 Purposes of NLP tasks at each step of a continuous translation process
+
+# 6.3.1 Continuous translation process
+
+In Section 4.5 of Chapter 4, we discussed the translation process in a broad sense, from source content extraction to pre-processing, memory/database check, translation – both human translation (HT) and machine translation (MT) – and publishing. In a continuous translation workflow, there is an extra post-processing step, which accumulates and updates a database (human and/or machine memory) so that it can be leveraged in the next translation task.
+
+In Figure 6.1, we describe some relevant NLP tasks that the translator can conduct at each step of a continuous translation process. For example, NLP technologies such as OCR and document parsing can be used to automatically extract translatable strings from the original content (spoken signals and written text) to produce source text/speech to be further processed. Sequence segmentation from source text/speech to input, and other analytical tasks such as domain detection and quality estimation, can be automated. From input to memory check, functionalities such as terminology extraction and named entity recognition can be used to highlight specific memory. During post-processing, multiple NLP technologies can be used to collect and compile parallel corpora for machine training, including data cleaning using NLP packages, automatic labeling, and automatic alignment. Finally, when the translated content is ready to be published, NLP tasks such as text-to-speech and subtitle synchronization can automate relevant publishing activities.
+
+# 6.3.2 User purposes at each step of a continuous translation process
+
+As mentioned in Section 6.1, NLP tasks in a continuous translation process are driven by the users’ needs, which can be difficult to categorize. The user can always select a particular set of tools, design NLP tasks, and customize these tools according to their purposes, including productivity gains, quality assurance, human value maximization, and continuous machine learning. While human intentions are very individual and difficult to categorize, we can classify them based on shared purposes at each step of a continuous translation process, as shown in the list of examples in Table 6.1.
