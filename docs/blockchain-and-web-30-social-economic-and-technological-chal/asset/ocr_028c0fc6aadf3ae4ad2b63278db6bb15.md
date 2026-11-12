@@ -1,0 +1,15 @@
+However, as expected, the average upload time was bigger for encrypted files. As for medium ones, the average total transaction cost is again slightly larger for unencrypted files, and the average upload time is larger in encrypted files.
+
+In addition to this, if one compares the last recorded values for encrypted and unencrypted values from all categories (small, medium, large and extra large) in Appendices A and B, it clearly demonstrates that the last two file encryption times for files up to 800 MB are less than the upload elapsed time for encrypted files up to 14.2 MB.
+
+The conclusion is that encrypting files to comply with the right to erasure is a valuable option for small to medium files up to 14.2 MB. From there, without considering hardware encryption limitations, upload times tend to grow exponentially. For this reason, encrypting medium to extra-large files is not feasible as of late 2018.
+
+However, note that encrypting all files in DFiles could have not been necessary, as some would only contain data that cannot be tied to a specific individual – therefore not being considered personal data. The user could have selected an option whether or not to encrypt his files, whether or not they contain personal data. The problem with this is that users are not always truthful, and in this way they might upload sensitive files – files containing personal data about someone – which would be available out in the open and inside the scope of the GDPR. They could also resort to extortion – as data in DFiles is immutable – by uploading on purpose personal data about someone and then demanding money in exchange for their silence in telling the authorities responsible for applying fines for GDPR noncompliance. Therefore, file encryption, although time consuming and limited in the IPFS and Ethereum, is necessary to prevent these cases and to avoid communicating possible data breaches to the appropriate GDPR authorities.
+
+Blockchain technology in general, as already discussed, has a very distinct and important characteristic: immutability. This ensures it is attractive to several major companies to combat fraud and have an unmodifiable record of transactions.
+
+Therefore, Ethereum and the IPFS must advance to allow better privacy techniques unless the European Union drafts and passes laws that exempt DApps from parts of the GDPR that are highly difficult to comply with, such as the right to erasure.
+
+# Limitations and future work
+
+Ethereum is clearly an exciting and evolving technology. However, there are several limitations that had a major impact on the authors’ work. For instance, the severe gas cost of having smart contracts with loops discouraged its adoption in the DFiles core smart contract. Moreover, the lack of support for JSON objects is also a major aspect to take into consideration, as smart contracts in Solidity could potentially be more efficient if, instead of using a structure, a

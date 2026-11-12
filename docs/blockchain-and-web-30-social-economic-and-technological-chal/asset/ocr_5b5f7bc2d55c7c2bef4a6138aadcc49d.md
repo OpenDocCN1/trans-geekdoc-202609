@@ -1,0 +1,15 @@
+# Campaign transparency
+
+**Information transparency about the startup:** There exist a couple of studies that highlight the importance of financial projections in equity crowdfunding (Ahlers et al., 2015; Lukkarinen et al., 2016; Polzin et al., 2018). Ahlers et al., 2015 find that projects that disclose no financial projections or forecasts collect smaller amounts during their campaigns and that the provision of more details about the risks is positively related to crowdfunding success. Lukkarinen et al. (2016) focus on the importance of the provision of sales growth, EBITDA margin and valuation multiples. The availability of financials seems to be positively, albeit not very strongly, associated with the number of investors but not significantly related to the amount raised. The study by Polzin et al., 2018 used data collected by a survey conducted in the Netherlands with 1,278 respondents. The study finds that the provision of financial information is important in financial crowdfunding (e.g., equity or debt) and less important in nonfinancial financing (e.g., donation and reward). A study by Gutsche and Sylla (2017) highlights the importance of having a strong value proposition and communicating it clearly. A study by Kim et al. (2017) states that the elaboration of project details is a statistically significant indicator of reward crowdfunding success ratio. A study by Mamonov et al. (2017) analyzed 17 US-based equity crowdfunding websites. The study concluded that process standardization and due diligence performed by crowdfunding platforms can effectively reduce information asymmetry and lead to better crowdfunding performance. Vismara et al. (2016) find a positive effect of longer pitch durations on equity crowdfunding success.
+
+**Code source is available:** A study by Adhami et al. (2018) states that the success of an ICO is strongly and positively affected by the presence of a set of codes for the blockchain project. The code source could be seen as a transparent proof of concept. Nevertheless, probably only a few investors are able to read it.
+
+To sum up, it can be seen clearly from the reviewed crowdfunding literature that various factors can influence the success of a blockchain-based crowdfunding campaign. However, our current understanding on these factors and their effects is not consistent and unanimous. Even less clear is how these factors are interrelated to affect jointly the eventual crowdfunding success.
+
+# **Research approach**
+
+The research process was divided in two steps based on the posed research question: (1) extending the success factors and (2) establishing the relationships among the success factors.
+
+# **Extending the success factors**
+
+A particularity of blockchain-based crowdfunding is that investors rely on evaluations provided by rating platforms to make investment decisions. Different

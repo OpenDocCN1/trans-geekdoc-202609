@@ -1,0 +1,15 @@
+case study where a bug discovered in a smart contract library, and perhaps “unsafe” programming, allowed an attack on Parity, a wallet application, causing the freezing of about 500,000 Ethers (about $150 million USD) in November 2017.
+
+In Bragagnolo, Rocha, Denker and Ducasse (2018), an application, SmartInspect, allows the inspection of known contracts based on its source code, focusing on the debugging properties of interactiveness and distribution. This reflective approach allows a user to see the contents of any contract instance of the given source code, without needing to redeploy or develop any ad-hoc code to decode the memory representation.
+
+In Sousa, Bessani and Vukolic (2018), a Byzantine fault-tolerant (BFT) ordering service is implemented for Hyperledger on top of the BFT-SMART state machine replication/consensus library, with optimizations for wide-area deployment. The results show that the ordering service can process up to ten thousand transactions per second and write a transaction irrevocably in the blockchain in half a second, even with peers spread across different continents.
+
+In Hulea, Rosu, Miron and Astilean (2018), is presented a solution for pharmaceutical cold chain management using distributed ledger technologies. An application framework based on the Hyperledger Sawtooth distributed ledger framework is proposed for shipment tracking that will deliver information to all stakeholders during the distribution phase of pharmaceutical products. The solution includes a custom transactions family and a sensors gateway for automatically collecting data from temperature tracking devices.
+
+In Kinkelin, Hauner, Niedermayer and Carle (2018), is presented a Byzantine fault-tolerant configuration management system (CMS) that provides control over administrators, restrains their rights and enforces separation of concerns. The configuration management process required multiparty authorization for critical configurations to prevent individual malicious administrators from performing undesired actions and is supported on Hyperledger Fabric.
+
+In this chapter we focus our attention on the applications of the blockchain technology to CRM (customer relationship management) systems that involve business and research together. We discuss a model for the realization of a management infrastructure that is secure by design and able to support, by proper configuration, requirements and procedures of a business organization. The model adopts a decentralization of the software product at the application level by means of blockchain technology. The back end is based on the open-source platform Hyperledger to support business-to-business and business-to-customer transactions, and a front end where the business information is natively protected by cryptographic techniques provided by the blockchain protocols in order to reduce the attack surface.
+
+# Customer relationship management systems
+
+Customer relationship management is the answer to the need of business and enterprises to acquire and use a huge amount of data with an analytic approach in order to improve their performance (Barton, 2012). It has been

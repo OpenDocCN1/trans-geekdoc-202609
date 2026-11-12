@@ -1,0 +1,11 @@
+# # A hierarchical structure model of success factors for (blockchain-based) crowdfunding
+
+Felix Hartmann, Xiaofeng Wang, and Maria Ilaria Lunesu
+
+# ## Introduction
+
+Crowdfunding is an important fundraising mechanism for new ventures and innovative projects. It is the practice of raising funds from a large number of people, typically using online platforms such as Kickstarter or Republic. Blockchain-based crowdfunding, represented by the surge of initial coin offerings (ICOs) and security token offerings (STOs), becomes a new and alternative form of crowdfunding and today can be considered one of the few functioning applications based on the blockchain technology.
+
+Blockchain-based crowdfunding is an emerging economic phenomenon and a state-of-the-art strategy to finance ventures. Compared to traditional funding models like initial public offerings (IPOs), venture capitals (VCs) and first generation crowdfunding, blockchain-based crowdfunding is still highly unregulated. Projects launching blockchain-based crowdfunding offer to the public a fraction of ownership (stake) in a new digital platform or network and/or its product or services in the form of tokens/coins on a blockchain. The stake (tokens/coins) could represent a utility, security, asset, commodity, currency or collectible. Another main distinction from other forms of early stage venture investments is the fast liquidity that cryptoassets can gain on online secondary markets (centralized/decentralized exchanges).
+
+The number of blockchain-based crowdfunding campaigns has increased drastically in the last few years. At the beginning of 2018, more established companies were also starting to explore the new funding opportunity. However, there is a lack of understanding of how to design a successful blockchain-based crowdfunding campaign and how to validate potential projects as an investor, partially due to the nascent nature of the phenomenon. A good understanding of the success factors of such campaigns would enable new ventures or entrepreneurs to design their blockchain-based fundraising initiatives properly, which in turn will help potential investors to seek main signals and drivers of outstanding projects. Based on this observation, we asked the following research question in our study:
