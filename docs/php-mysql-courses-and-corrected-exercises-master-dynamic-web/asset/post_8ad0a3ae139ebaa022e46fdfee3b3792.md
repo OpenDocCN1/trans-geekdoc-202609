@@ -1,0 +1,101 @@
+
+```php
+// Get the file extension
+$fileExtension = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
+```
+
+```php
+// Check file MIME type
+$fileMimeType = mime_content_type($_FILES["file"]["tmp_name"]);
+$allowedMimeTypes = array('image/jpeg', 'image/png', 'application/pdf');
+if (!in_array($fileMimeType, $allowedMimeTypes)) {
+    echo "Error: File type not allowed.";
+    return;
+}
+```
+
+```php
+// Check file extension
+$allowedExtensions = array('jpg', 'jpeg', 'png', 'pdf');
+if (!in_array($fileExtension, $allowedExtensions)) {
+    echo "Error: File extension not allowed.";
+    return;
+}
+```
+
+```php
+// Move uploaded file to destination directory
+if (move_uploaded_file($_FILES["file"]["tmp_name"], $filePath)) {
+    echo "File uploaded successfully.";
+} else {
+    echo "Error uploading file.";
+}
+} else {
+    echo "Error: " . $_FILES["file"]["error"];
+}
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure File Upload</title>
+</head>
+<body>
+    <h2>Secure File Upload</h2>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
+        <label for="file">Select a file:</label>
+        <input type="file" id="file" name="file" accept="image/jpeg, image/png, application/pdf">
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
+```
+
+This PHP code ensures security when uploading files to a server. Here's how it works in detail:
+
+- 1. The code first checks whether the form has been submitted, using $_SERVER["REQUEST_METHOD"] == "POST" to ensure that processing only takes place when the form is submitted.
+- 2. Next, it checks that no problems have occurred during file upload using $_FILES["file"]["error"] == UPLOAD_ERR_OK. This ensures that the file has been uploaded successfully, before proceeding with further checks.
+- 3. It determines the file's destination path using a predefined directory and the name of the uploaded file using basename($_FILES["file"]["name"]).
+- 4. Next, it checks the MIME type of the uploaded file using mime_content_type($_FILES["file"]["tmp_name"]) and compares it with a list of authorized MIME types ($allowedMimeTypes). This ensures that only specified file types are allowed to be uploaded.
+
+Note that the MIME (Multipurpose Internet Mail Extensions) type is a standardized identifier used to specify the type of content in a file. It tells the server how to process the file's contents according to its type. For example, the MIME type "text/html" indicates that the file is an HTML document, while "image/jpeg" indicates that it is an image in JPEG format. MIME types are used by Web servers to determine how to serve the contents of a file to Web browsers or other applications.
+
+- 5. The code also checks the file extension using pathinfo($filePath, PATHINFO_EXTENSION) and compares it with a list of permitted extensions ($allowedExtensions). This adds an extra layer of security by ensuring that the uploaded file has the correct extension.
+- 6. If the MIME type and file extension are valid, the file is moved to the destination directory using move_uploaded_file(). Otherwise, appropriate error messages are displayed to inform the user of any problems encountered when uploading the file.
+- 7. Finally, an HTML form is displayed to allow the user to select and upload a file. The form sends data to the current PHP script ($_SERVER["PHP_SELF"]) via the POST method with enctype="multipart/form-data", enabling files to be uploaded.
+
+This code ensures enhanced security when uploading files by checking both the MIME type and extension of the file being uploaded, thus considerably reducing the risk of malicious or dangerous files being uploaded to the server.
+
+## Conclusion
+
+This chapter on PHP security has highlighted the crucial importance of securing web applications against a variety of malicious threats and attacks. We've explored the various aspects of security in depth, starting with SQL injection attacks, which represent one of the most common and potentially devastating threats to web applications. By understanding how attackers exploit security holes to manipulate SQL queries and compromise database data, developers can implement preventative measures such as the use of prepared queries and bound parameters to guard against these attacks.
+
+We also looked at Cross-Site Scripting (XSS), another major threat that allows attackers to inject malicious JavaScript code into web pages, thereby compromising end-user security. By using techniques such as special character escaping and user input validation, developers can reduce the risk of XSS exploitation and protect users from attack.
+
+Cross-Site Request Forgery (CSRF) was also discussed, highlighting the potential dangers of forged requests that exploit user trust to perform unauthorized actions on websites. By using anti-CSRF tokens and validating server-side requests, developers can mitigate this risk and guarantee the integrity of user actions.
+
+Finally, we examined the risks associated with file downloads, highlighting potential vulnerabilities that can be exploited by attackers to execute malicious code on the server. By imposing strict restrictions on permitted file types, checking MIME signatures and limiting download permissions, developers can reduce the risk of these vulnerabilities being exploited and protect system integrity.
+
+In conclusion, PHP security is an essential aspect of modern web development. By understanding the various threats and implementing robust security practices throughout the development process, developers can create secure and reliable web applications that protect their users' sensitive data and guarantee a safe and secure user experience.
+
+## OBJECT-ORIENTED PROGRAMMING IN PHP
+
+Object-oriented programming (OOP) is a fundamental programming paradigm based on the creation and manipulation of objects. In PHP, OOP offers a powerful means of structuring and organizing code, enabling greater reusability, modularity and more efficient management of data and functionality.
+
+The distinction between procedural programming and object-oriented programming (OOP) lies in their fundamentally different approach to code structuring. In procedural programming, programs are built around functions, where data is generally directly accessible and manipulable. In object-oriented programming, on the other hand, code is organized around entities called objects. These objects encapsulate both the data (called properties or attributes) and the functionalities (called methods) that act on this data.
+
+It's important to note that OOP is not a new programming language per se, but rather a programming paradigm widely used in modern application development. This approach offers a more organized structure for designing and managing code, dividing it into reusable objects with specific characteristics and behaviors.
+
+As for PHP, a popular and flexible programming language, it offers native support for OOP. This enables developers to create more robust and scalable applications using OOP concepts.
+
+In short, OOP offers an alternative and efficient way of organizing code, in which everything is considered an object. Each object has attributes for storing data and methods for performing operations on that data. This approach promotes code reusability, modularity and maintainability, making it an attractive choice for many software development projects.
+
+In this section, we'll explore in detail the fundamental principles of OOP in PHP, as well as good development practices. Here's an overview of the topics we'll cover:
+
+- Chapter 1: Classes and objects: This chapter lays the foundations of OOP in PHP by introducing the concepts of classes and objects. Readers learn how to define classes, create object instances and access their properties and methods.
+- Chapter 2: Encapsulation and data modeling: This chapter explores the notion of encapsulation in PHP and shows how to model data using classes.
+- Chapter 3: Inheritance in PHP: This chapter explores inheritance in PHP, allowing you to create class hierarchies to reuse and extend code.
+- Chapter 4: Interfaces and abstract classes: This chapter introduces interfaces and abstract classes in PHP. You'll learn how to define contracts with interfaces and how to create abstract classes to define methods common to several classes.
+- Chapter 5: Exception handling: This chapter covers exception handling in PHP, enabling you to handle errors and exceptional situations cleanly and efficiently in your applications.

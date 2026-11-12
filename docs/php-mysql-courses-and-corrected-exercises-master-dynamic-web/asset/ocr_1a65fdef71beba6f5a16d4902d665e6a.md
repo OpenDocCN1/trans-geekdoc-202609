@@ -1,0 +1,1 @@
+By judiciously exploiting these magic methods, PHP developers can make their code more flexible, more robust and easier to maintain, while benefiting from greater expressiveness in the design of their applications.
