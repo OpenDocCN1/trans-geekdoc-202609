@@ -1,0 +1,16 @@
+was used to construct this dataset (KOI) [8]. Exoplanets that have been confirmed together with a few key factors that characterise their kind are retrieved from KOI and downloaded as a csv file. A new column is then added to this dataset that indicates the type of a certain exoplanet, which is gathered from NASA's exoplanet archive. Various models like Logistic regression and tree-based algorithms are used to predict the type of the exoplanets in the dataset and model comparison was made with the used models.
+
+The main objectives of this paper are to:
+
++   1. Explore the use of machine learning algorithms for predicting the existence of exoplanets from a dataset obtained from Kaggle.
++   2. Use machine learning algorithms to predict the type of exoplanets (gas giant, Neptune-like, terrestrial, or super earth) from a dataset obtained from NASA's KOI and updated by adding an additional column specifying the type of exoplanet.
++   3. Identify patterns and trends in the data using machine learning algorithms that might not be apparent using other methods.
++   4. Make accurate predictions about the existence of exoplanets and the type of exoplanets using machine learning algorithms.
++   5. Evaluate the performance of different machine learning algorithms and to identify the most effective approaches.
++   6. Compare the performances of the various machine learning algorithms for exoplanet type prediction and to identify any differences in accuracy, precision, and recall.
+
+The application of machine learning techniques for exoplanet prediction and other earlier works will be discussed in detail in the next chapter. Frameworks are suggested for both datasets below sections along with light curves of stars, confusion matrices, and comparison tables of alternative models for both datasets. Finally, a feature selection plot and correlation matrix for dataset 2 and a quick summary and the paper's future scope are provided.
+
+# 9.2 Background
+
+Astronomy has been actively researching exoplanets, or worlds outside of our solar system, for many years. Technology advancements in recent years have improved our ability to identify exoplanets, enabling us to find thousands of new exoplanets. The transit method, which includes analyzing a star's brightness over time and looking for periodic dips in brightness that might point to the presence of a planet transiting in front of the star, is one of the primary techniques used to find exoplanets. However, it might take a long time and be prone to human errors to manually analyze a lot of data to find these dips. This is where machine learning comes in. One can automate data analysis and discover potential exoplanets more quickly and accurately by employing machine learning techniques. This can aid in the search for undiscovered exoplanets and improve our knowledge of the properties of these distant planets. With the use of machine learning, vast volumes of data can be evaluated rapidly and correctly. Machine learning techniques may be used to examine data from telescopes and other sensors in the context of exoplanet research to find prospective

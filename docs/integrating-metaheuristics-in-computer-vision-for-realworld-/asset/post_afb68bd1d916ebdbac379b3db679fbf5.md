@@ -1,0 +1,252 @@
+
+- 15. Qin, P., Wu, K., Hu, Y., Zeng, J., Chai, X., Diagnosis of benign and malignant thyroid nodules using combined conventional ultrasound and ultrasound elasticity imaging. IEEE J. Biomed. Health Inf., 24, 4, 1028–1036, April 2020, doi: 10.1109/JBHI.2019.2950994.
+
+- 16. Zhao, X. et al., Automatic thyroid ultrasound image classification using feature fusion network. IEEE Access, 10, 27917–27924, 2022, doi: 10.1109/ACCESS.2022.3156096.
+
+- 17. Jun, H., Shuai, L., Jinming, S., Yue, L., Jingwei, W., Peng, J., Facial expression recognition based on VGGNet convolutional neural network, in: Proc. Chin. Autom. Congr. (CAC), pp. 4146–4151, Dec. 2018.
+
+- 18. Guo, H., Zhou, J., Wu, C., Fan, M., K-nearest neighbor classification method for class-imbalanced problem. J. Comput. Appl., 38, 4, 955–959, Apr. 2018.
+
+- 19. Sun, W., Xie, S., Yu, J., Niu, L., Sun, W., Classification of thyroid nodules in ultrasound images using deep model-based transfer learning and hybrid features, in: Proc. IEEE Int. Conf. Acoust., Speech Signal Process. (ICASSP), pp. 919–923, Mar. 2017.
+
+- 20. Mahajan, S. and Pandit, A.K., Hybrid method to supervise feature selection using signal processing and complex algebra techniques. Multimed. Tools Appl., 82, 8213–8234, 2023, https://doi.org/10.1007/s11042-021-11474-y.
+
+- 21. Mahajan, S., Abualigah, L., Pandit, A.K. et al., Hybrid aquila optimizer with arithmetic optimization algorithm for global optimization tasks. Soft Comput., 26, 4863–4881, 2022, https://doi.org/10.1007/s00500-022-06873-8.
+
+- 22. Pathak, N. et al., A deep learning-based framework for retinal disease classification. Healthcare, 11, 212, 2023, https://doi.org/10.3390/healthcare11020212.
+
+- 23. Pathak, N. and Siddiqui, S.T., COVID-19 pandemic prediction and forecasting using machine learning classifiers. Intell. Autom. Soft Comput., 32, 2, 1007–1024, 2021. DOI:10.32604/iasc.2022.021507.
+
+## Index
+
+- 3D object tracking and detection, 49
+- AA, 233
+- Accuracy, 299, 303, 316, 319
+- Accuracy score, 75
+- ACO, GWO, 231
+- Activation functions,
+- Adaptive histogram equalization, 299, 303, 312
+- AH ESTBTCS, 310, 311, 314, 317, 319, 320
+- AI and ML in drug repositioning, 86–89
+- Algorithmic attributes, 236
+- Algorithms, 40
+- Algorithms used in object detection, 43
+- Angiogenesis, 274–278
+- Anisotropic growth, 209
+- AO, 233
+- Applications of computer vision, 32
+- Architecture, 195, 198, 200, 201, 204, 205
+- Articular cartilage, 201–202
+- Artificial intelligence, 7
+- Automated trading, 152, 154
+- Backtesting, 159, 160
+- Back-testing, 151, 156
+- Backward selection algorithm, 107
+- Basic fibroblast growth factor (bFGF), 273, 274, 276
+- Bidirectional approach, 244
+- Big data in drug repositioning, 91
+- Binance exchange, 156, 159, 160
+- Binarization, 288
+- Biosensors, 3
+- BLOB, 206
+- Blood brain barrier, 3
+- Bollinger bands, 157, 158
+- BRICK, 312, 314, 317, 318
+- Brodatz, 311, 315, 316
+- Buffer, 197, 200, 204
+- Cancer, 273–277
+- Canny, 193, 194, 200, 201, 202, 203, 204, 205
+- Carbon nanotubes, 11
+- Carcinogenesis, 275, 278
+- Cardiac grafts, 208–209
+- Cardiomyocytes, 208–210, 218
+- Chemokines, 274
+- Chi-squared tests, 101, 103
+- Chondrocytes, 201–203
+- Classical algorithms, 237
+- Classification models, 74
+- Cloud computing in drug repositioning, 91
+- Cluster, 283–285, 288–289, 293–295
+- Collagen, 198, 201–202, 204, 206, 208, 210–212, 215–217, 221
+- Computational, 205, 208
+- Computational strategies for drug repositioning, 85
+- Computed tomography, 56
+- Computed tomography scan, 4
+- Computer vision, 31, 99
+- Confusion matrices, 175, 176, 177, 178, 181, 182
+- Confusion matrix, 76, 77, 249
+- Contingent, 195
+- Contingency table, 103
+- Contrast enhanced MRA, 5
+- Convolutional neural networks, 27
+- Correlation, 101
+- Correlation matrix, 76, 179
+- Crypto mining, 152
+- Cryptocurrency, 151, 152, 154
+- Cryptocurrency market, 152
+- Cryptocurrency trading, 151, 154
+- Data exploration, 73
+- Data normalization, 73, 74
+- Data preprocessing, 73, 101
+- Data science, 153
+- Data visualization, 247
+- Datasets, 299, 311
+- Decision tree classifier, 177, 181
+- Deep learning, 119, 277, 287
+- DeepFace algorithm, 29
+- Dendrimers, 12
+- Dental pulp stem cells (DPSC) (DPSCs), 211–212
+- Dermal wounds, 207
+- Diffusion weighted imaging, 5
+- Digital banking privacy, 72
+- Digital fraud detection, 71
+- Digital twin in drug repositioning, 90–91
+- Dimensionality, 100
+- Dimensionality reduction, 74
+- Distance reciprocal distortion metric, 292
+- Distortion, 205
+- Drug delivery systems, 9
+- Drug repositioning, 82–85
+- Dynamical system, 238
+- ECG, 245
+- Edge detection, 302
+- Efficiency, 195, 205
+- Eigen face algorithm, 29
+- Eigenvalue sorting, 111
+- Electroencephalography, 6
+- Electromyography, 6
+- Electrospinning
+  - collector, 199–201
+  - spinneret, 199
+  - syringe pump, 199–200
+  - Taylor cone, 200
+- Endothelial damage, 8
+- Entity, 195
+- Exaggeration, 195
+- Exoplanet classification, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184
+- Exoplanet detection, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184
+- Exoplanet prediction model, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184
+- Exoplanet types (gas giant, terrestrial, etc.), 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184
+- Exoplanets, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184
+- Experiment, 195, 205, 206
+- Exploratory data analysis (EDA), 74
+- Extreme gradient boosting (XGB), 177
+- Extrusion printing, 57
+- Face, 39
+- Face detection, 34, 44
+- Face detection and identification in practical situations, 44
+- Face detection and identification in real-world situations, 45
+- Facial expression, 38
+- Facial recognition, 38
+- Failure rate, 185–187, 189
+- Failure distribution types
+  - binomial, 188
+  - exponential, 188
+  - lognormal, 188
+  - normal, 188
+  - poisson, 188
+  - Weibull, 188
+- Fault tree analysis, 185, 189
+- Fault tree symbols logic entrance
+  - AND-Gate, 190
+  - OR-Gate, 190
+- Feature extraction, 100, 307, 310, 311
+- Feature importance, 179, 180
+- Feature learning, 115
+- Feature selection, 100
+- Fibroblasts, 206–207, 212
+- Filter, 193, 194, 195, 196, 197, 199, 201, 202, 203, 204
+- Filter bank, 307
+- Filter methods, 101
+- Filtration, 205
+- Finite state, 200
+- Fisherface, 29
+- Forward selection algorithm, 106
+- Fraudulent transactions, 75
+- Freqtrade, 153, 155, 156
+- Fulminant hepatic failure (FHF), 210
+- Fused deposition modeling, 57
+- Fusion beats, 246
+- Future direction in object detection and tracking, 47
+- Future plans for object tracking and detection, 47
+- Fuzzy entropy, 305, 321
+- Fuzzy logic, 295
+- GA, PSO, ACO, GWO, 226
+- Gaussian edge, 194
+- Gaussian-based, 193
+- Genome wide association study, 92–93
+- Genomics and proteomics, 92
+- Gradient-based, 193, 194, 228
+- Grayscale, 302, 304
+- Haar Cascade classifier, 27
+- Heart arrhythmia, 243, 244
+- Heat map, 76
+- Heikin-Ashi, 157
+- Hemorrhagic, 2
+- Hepatocytes, 210
+- Hidden layers, 119
+- Histogram equalization, 303, 310–312
+- Histogram of oriented gradient, 29
+- Hough transform, 129, 131, 132
+- Human ligament fibroblasts (HLF), 212–213
+- Hybrid pyramid fusion, 327, 330
+- Hydroxyapatite, 204–205, 212
+- Image processing, 99, 283, 284, 286
+- Image processing techniques, 100
+- Indicators, 157
+- Inkjet printing, 57, 58, 62, 63
+- Intensity, 199, 201, 203, 204
+- Intracerebral Hemorrhage, 9
+- IOT applications in SHS, 217
+- IoT in drug repositioning, 85–86
+- Ischemic stroke, 1
+- Isotropic growth, 209
+- Kepler object of interest (KOI), 166, 180, 181, 182
+- Keratinocytes, 206
+- Kernel, 197, 199, 201, 203
+- K-mean clustering, 295
+- K-nearest neighbors (KNN), 178, 181
+- KTH, 311, 319, 320
+- KYC data enrichment, 72
+- L1-IDNN, 324, 326–327, 332–337
+- Laplacian, 196
+- Large vessel occlusion, 5
+- Laser beam melting, 57
+- LASSO (Least Absolute Shrinkage and Selection Operator), 107–108
+- Ligand mediated active targeting, 9
+- Light curves, 172, 173, 174, 175
+- Limbal stem cell, 214
+- Linear discriminant analysis, 113
+- Liposomal hemoglobin, 10
+- Local thresholding, 283, 287–288, 294
+- Logistic regression, 178, 181
+- LPG detecting system, 210–212
+- LSTM, 243
+- Machine learning, 151, 156, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 277
+- Machine learning algorithms, 71
+- Machine learning models, 100
+- Machine vision, 99
+- Magnetic resonance imaging, 5, 56
+- Magnitude, 196, 197, 200, 201, 203
+- Mask, 197, 199, 200
+- MATLAB, 195, 205, 206
+- Mean square error, 290–291
+- Mean time between failure (MTBF), 185, 187, 189
+- Mean time to failure (MTTF), 185, 187, 189, 191
+- Mesenchymal stem cells (MSCs), 202, 205, 210, 213
+- Metal nanoparticles, 13
+- Microextrusion, 57, 58, 64
+- Middle cerebral artery, 4
+- Minimum distance classifiers, 299
+- MIT-BIH arrhythmia dataset, 245
+- ML, DM, AI, 227
+- Model evaluation metrics (accuracy, precision, recall), 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184
+- Molecular mechanism, 274
+- MSE, 193, 203, 204
+- Multiplexers, 196
+- Murine myoblast cell line, 219
+- Mutual information, 101, 103
+- Myocardium, 210
+- Naive Bayes classifier, 181
+- Nanomedicines, 10
+- NASA Kepler mission, 166

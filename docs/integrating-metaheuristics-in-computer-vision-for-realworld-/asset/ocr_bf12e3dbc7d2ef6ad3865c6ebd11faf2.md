@@ -1,0 +1,18 @@
+much higher than any other network. Also, precision and specificity are 100% with proposed L1-1DNN model with efficient deep features and inception v3 network.
+
+# References
+
++   1. Prochazka, A., Gulati, S., Holinka, S., Smutek, D., Classification of thyroid nodules in ultrasound images using direction independent features extracted by two-threshold binary decomposition. *Technol. Cancer Res. Treat.*, 18, 1533033819830748, 2019.
++   2. Nugroho, H.A., Frannita, E.L., Ardiyanto, I., Choridah, L., Computer aided diagnosis for thyroid cancer system based on internal and external characteristics. *J. King Saud Univ. Comput. Inf. Sci.*, 33, 329–339, 2021.
++   3. Wang, Y., Mao, L., Yu, M.-A., Wei, Y., Hao, C., Dong, D., Automatic recognition of parathyroid nodules in ultrasound images based on fused prior pathological knowledge features. *IEEE Access*, 9, 69626–69634, 2021.
++   4. Wang, Y., Ge, X., Ma, H., Qi, S., Zhang, G., Yao, Y., Deep learning in medical ultrasound image analysis: A review. *IEEE Access*, 9, 54310–54324, 2021.
++   5. Yang, X., Jiang, X., Zhou, L., Wang, Y., Zhang, Y., Active contours driven by local and global region-based information for image segmentation. *IEEE Access*, 8, 6460–6470, 2020.
++   6. Fang, J., Liu, H., Zhang, L., Liu, J., Liu, H., Region-edge-based active contours driven by hybrid and local fuzzy region-based energy for image segmentation. *Inf. Sci.*, 546, 397–419, Feb. 2021.
++   7. Zhou, H., Wang, K., Tian, J., Online transfer learning for differential diagnosis of benign and malignant thyroid nodules with ultrasound images. *IEEE Trans. Biomed. Eng.*, 67, 10, 2773–2780, Oct. 2020, doi: 10.1109/TBME.2020.2971065.
++   8. Zhao, X. *et al.*, Automatic thyroid ultrasound image classification using feature fusion network. *IEEE Access*, 10, 27917–27924, 2022, doi: 10.1109/ACCESS.2022.3156096.
++   9. Shahroudnejad, A. *et al.*, Thyroid nodule segmentation and classification using deep convolutional neural network and rule-based classifiers. *2021 43rd Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC)*, pp. 3118–3121, 2021, doi: 10.1109/EMBC46164.2021.9629557.
++   10. Zheng, Z., Chen, J., Weng, Z., Zhang, Y., Comparison and analysis of ultrasound diagnosis networks for thyroid nodules based on different computer vision task types. *2022 3rd International Conference on Electronic Communication and Artificial Intelligence (IWECAI)*, pp. 409–413, 2022, doi: 10.1109/IWECAI55315.2022.00086.
++   11. Chen, D., Zhang, J., Li, W., Thyroid nodule classification using two levels attention-based Bi-directional LSTM with ultrasound reports. *2018 9th International Conference on Information Technology in Medicine and Education (ITME)*, pp. 309–312, 2018, doi: 10.1109/ITME.2018.00076.
++   12. Avola, D., Cinque, L., Fagioli, A., Filetti, S., Grani, G., Rodolà, E., Multimodal feature fusion and knowledge-driven learning via experts consult for thyroid nodule classification. *IEEE Trans. Circuits Syst. Video Technol.*, 32, 5, 2527–2534, May 2022, doi: 10.1109/TCSVT.2021.3074414.
++   13. Song, R., Zhang, L., Zhu, C., Liu, J., Yang, J., Zhang, T., Thyroid nodule ultrasound image classification through hybrid feature cropping network. *IEEE Access*, 8, 64064–64074, 2020, doi: 10.1109/ACCESS.2020.2982767.
++   14. Chang, L., Fu, C., Wu, Z., Liu, W., Yang, S., Data-driven analysis of radiologists’ behavior for diagnosing thyroid nodules. *IEEE J. Biomed. Health Inf.*, 24, 11, 3111–3123, Nov. 2020, doi: 10.1109/JBHI.2020.2969322.
