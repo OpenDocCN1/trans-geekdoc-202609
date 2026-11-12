@@ -1,0 +1,2562 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # External validation of a model for selecting day 3 embryos for transfer based
+    upon deep learning and time-lapse imaging
+
+
+    ![](img/82ad054bb53b906240826eecb039e07b_0_0.png)
+
+
+    **BIOGRAPHY**
+
+    Jiahong Zhu graduated from Chongqing Medical University, Chongqing, China. She
+    has been engaged in reproductive medicine for more than 8 years at Chongqing Health
+    Centre for Women and Children, mainly responsible for embryo selection, and embryo
+    freezing and thawing procedures. Her current research interests include artificial
+    intelligence in reproductive medicine and embryo evaluation.
+
+
+    Jiahong Zhu$^{1,2}$, Lihong Wu$^{1,2}$, Junxia Liu$^{1,2}$, Yanfeng Liang$^{1,2}$,
+    Jiayi Zou$^{1,2}$, Xiangwei Hao$^{1,2}$, Guoning Huang$^{1,2,*}$, Wei Han$^{1,2,*}$
+
+
+    **KEY MESSAGE**
+
+    Day 3 embryo selection using iDAScore Version 2.0 is more predictive of implantation
+    compared with conventional morphological assessment. A fully automated evaluation
+    system may reduce the time taken for embryo selection, eliminate subjectivity,
+    and serve as a decision support system to assist embryologists in embryo selection.
+
+
+    **ABSTRACT**
+
+    **Research question:** Could objective embryo assessment using iDAScore Version
+    2.0 perform as well as conventional morphological assessment?
+
+
+    **Design:** A retrospective cohort study of fresh day 3 embryo transfer cycles
+    was conducted at a large reproductive medicine centre. In total, 7786 embryos
+    from 4328 cycles with known implantation data were cultured in a time-lapse incubator
+    and included in the study. Fetal heartbeat (FHB) rate was analysed retrospectively
+    using iDAScore Version 2.0 and conventional morphological assessment associated
+    with the transferred embryos. The pregnancy-prediction performance of the two
+    assessment methods was compared using area under the curve (AUC) values for predicting
+    FHB.
+
+
+    **Results:** AUC values were significantly higher for iDAScore compared with morphological
+    assessment for all cycles (0.62 versus 0.60; $P = 0.005$), single-embryo transfer
+    cycles (0.63 versus 0.60; $P = 0.043$) and double-embryo transfer cycles (0.61
+    versus 0.59; $P = 0.012$). For the age subgroups, AUC values were significantly
+    higher for iDAScore compared with morphological assessment in the <35 years subgroup
+    (0.62 versus 0.60; $P = 0.009$); however, no significant difference was found
+    in the $\ge$35 years subgroup. In terms of the number of blastomeres, AUC values
+    were significantly higher for iDAScore compared with morphological assessment
+    for both the <8c subgroup (0.67 versus 0.56; $P < 0.001$) and the $\ge$8c subgroup
+    (0.58 versus 0.55; $P = 0.012$).
+
+
+    **Conclusions:** iDAScore Version 2.0 performed as well as, or better than, conventional
+    morphological assessment in fresh day 3 embryo transfer cycles. iDAScore Version
+    2.0 may therefore constitute a promising tool for selecting embryos with the highest
+    likelihood of implantation.
+
+
+    +   - Conventional morphological assessment
+
+    +   - Day 3 embryos
+
+    +   - Deep learning
+
+    +   - Objective embryo assessment
+
+    +   - Pregnancy prediction
+
+
+    $^{1}$ Chongqing Clinical Research Centre for Reproductive Medicine, Chongqing
+    Health Centre for Women and Children, Chongqing, China
+
+    $^{2}$ Chongqing Key Laboratory of Human Embryo Engineering, Centre for Reproductive
+    Medicine, Women and Children’s Hospital of Chongqing Medical University, Chongqing,
+    China
+
+
+    © 2023 Published by Elsevier Ltd on behalf of Reproductive Healthcare Ltd.
+
+    *Corresponding authors. E-mail addresses: gnhuang217@sina.com (G. Huang), hw2012ivf@sina.com
+    (W. Han). https://doi.org/10.1016/j.rbmo.2023.05.014 1472-6483/© 2023 Published
+    by Elsevier Ltd on behalf of Reproductive Healthcare Ltd.
+
+    Declaration: The authors report no financial or commercial conflicts of interest.'
+  - '[PAGE 1]
+
+
+    # INTRODUCTION
+
+
+    t remains a challenge to optimize assisted reproductive technology (ART) to ensure
+    the selection of embryos with the highest implantation potential. At present,
+    the most commonly used embryo selection method is based upon conventional morphological
+    assessment. For day 3 transfer, embryonic evaluation is based on the Istanbul
+    consensus report (ALPHA Scientists In Reproductive Medicine, ESHRE Special Interest
+    Group Embryology, 2011); this includes the number of blastomeres, degree of fragmentation,
+    blastomere evenness and multinucleation. However, the principal limitation of
+    this method is the subjective influence of assessments made by different observers
+    (Adamson et al., 2016).
+
+
+    Compared with conventional IVF technology, time-lapse technology (TLT) can record
+    total embryonic development continuously, including division timepoints from fertilization
+    and cleavage stages to blastocyst formation. The latter technique provides an
+    improved basis with which to evaluate cleavage patterns, prokaryotic movement
+    and other details that cannot be identified using conventional embryo assessment.
+    It thus generates more information that can be applied to embryo selection (Basile
+    et al., 2015; Liu et al., 2020). Although some authors have postulated that the
+    combination of TLT and conventional morphological assessment will improve embryo
+    selection (Coticchio et al., 2018), its clinical value remains controversial (Goodman
+    et al., 2016; Liu et al., 2016).
+
+
+    With the recent development of TLT, attempts have been made to analyse large image
+    datasets using a more powerful computer to identify parameters that may be related
+    to embryonic developmental ability. However, the major differences in culture
+    conditions among individual IVF laboratories hinder construction and wide use
+    of the powerful algorithms involved (Kallas et al., 2022).
+
+
+    Advances in machine learning have increased the availability of electronic medical
+    data and computational processing power, thus facilitating the development of
+    novel artificial intelligence (AI)-assisted methodologies. Such methods involve
+    deep learning, and employ artificial neural networks to analyse the images captured
+    by time-lapse
+
+
+    methods to search for patterns related to pregnancy outcomes, potentially providing
+    a more accurate, consistent and objective method to select the most viable embryos
+    (Lundin et al., 2020; Tran et al., 2019). iDAScore AI software is integrated directly
+    into the EmbryoScope+ system (Vitrolife, Göteborg, Sweden), but iDAScore Version
+    1.0 was trained solely on day 5 or day 6 blastocyst transfer. The original dataset
+    consisted of 115,832 embryos, of which 14,644 were blastocysts transferred with
+    known implantation data (KID) (Bernsen et al., 2022). iDAScore Version 2.0 includes
+    data from day 2 and day 3 transfers (Lassen et al., 2022). This more recent dataset
+    consisted of 181,428 embryos, of which 33,687 were embryos with KID. The network
+    architecture of iDAScore Version 2.0 is identical to Version 1.0 but with a slightly
+    modified training procedure (Lassen et al., 2022). The pregnancy-prediction performance
+    of iDAScore Version 1.0 was confirmed in a large cohort study comprising vitrified-warmed
+    blastocyst transfers (Ueno et al., 2021), and the validation results showed that
+    the program performed as well as, or better than, conventional morphological assessment.
+    Since the performance of iDAScore Version 2.0 has not been validated by independent
+    external datasets, its use with cleavage-stage embryo transfers needs to be externally
+    validated against conventional morphological assessments, such as the morphological
+    grading system based on the Istanbul consensus report (ALPHA Scientists In Reproductive
+    Medicine, ESHRE Special Interest Group Embryology, 2011).
+
+
+    This study compared pregnancy-prediction performance after fresh day 3 embryo
+    transfer using the area under the curve (AUC) from receiver operating characteristic
+    (ROC) curve analysis of the two embryo assessment methods: iDAScore Version 2.0
+    and conventional morphological assessment according to the Istanbul consensus
+    report (ALPHA Scientists In Reproductive Medicine, ESHRE Special Interest Group
+    Embryology, 2011). Additionally, pregnancy-prediction performance of the two embryo
+    assessment methods was compared using AUC values for predicting fetal heartbeat
+    (FHB) rate for all cycle groups and each subgroup (single-embryo transfer (SET),
+    double-embryo transfer (DET), age <35 years, age ≥35 years, and number of blastomeres
+    <8c and ≥8c). To the best of the authors’ knowledge, this is the first external
+    validation of an embryo
+
+
+    selection model based on deep learning with respect to cleavage-stage transfer.
+
+
+    # MATERIALS AND METHODS
+
+
+    # Study population and design
+
+
+    This retrospective cohort study was performed at the IVF clinic of Chongqing Health
+    Centre for Women and Children from January 2020 to June 2022. This study was approved
+    by the Institutional Review Board of Chongqing Health Centre for Women and Children
+    (Approval No. 2022-RGI-11, date of approval 10 September 2022).
+
+
+    The inclusion criteria for patients were: (i) fresh autologous oocyte retrieval
+    with day 3 embryo transfer; and (ii) embryos cultured in a time-lapse system (EmbryoScope+).
+    The exclusion criteria were: (i) embryos with blurred or missing photomicrographs
+    during incubation; and (ii) cycles with one FHB in DET cycles. In total, 7786
+    embryos were included, of which 870 were SET and 6916 were DET. The selection
+    of embryos for transfer was based on conventional morphological assessment. The
+    transferred embryos were divided into six groups based on their morphological
+    grade and number of blastomeres: A+, A, B+, B, C+ and C. The iDAScore values of
+    the transferred embryos were evaluated retrospectively using iDAScore Version
+    2.0 (Lassen et al., 2022). The iDAScore model outputs numerical scores ranging
+    from 1.0 to 9.9, which are correlated with the likelihood of an FHB. The score
+    ranges from 1.0 to 9.9 for blastocyst transfer and from 2.0 to 8.0 for day 3 transfer.
+    For this study, the iDAScore values of the embryos were grouped into score intervals
+    of 1 (2.0–2.9, 3.0–3.9, 4.0–4.9, 5.0–5.9, 6.0–6.9 and 7.0–8.0) or 2 (2.0–3.9,
+    4.0–5.9 and 6.0–8.0). Implantation was defined as an intrauterine gestational
+    sac with an FHB noted on transvaginal ultrasonography. AUC values were generated
+    for ranking FHB rates with the use of two embryo assessment methods: iDAScore
+    as an automated AI model, and day 3 embryo morphological assessment established
+    by the Istanbul consensus report (ALPHA Scientists In Reproductive Medicine, ESHRE
+    Special Interest Group Embryology, 2011) as a conventional morphological grading
+    method.
+
+
+    The principal outcome of this study comprised the FHb rates of the iDAScore groups
+    with different morphological'
+  md: '
+
+    ## External validation of a model for selecting day 3 embryos for transfer based
+    upon deep learning and time-lapse imaging
+
+
+    ![](img/82ad054bb53b906240826eecb039e07b_0_0.png)
+
+
+    ### BIOGRAPHY
+
+    Jiahong Zhu graduated from Chongqing Medical University, Chongqing, China. She
+    has been engaged in reproductive medicine for more than 8 years at Chongqing Health
+    Centre for Women and Children, mainly responsible for embryo selection, and embryo
+    freezing and thawing procedures. Her current research interests include artificial
+    intelligence in reproductive medicine and embryo evaluation.
+
+
+    Jiahong Zhu$^{1,2}$, Lihong Wu$^{1,2}$, Junxia Liu$^{1,2}$, Yanfeng Liang$^{1,2}$,
+    Jiayi Zou$^{1,2}$, Xiangwei Hao$^{1,2}$, Guoning Huang$^{1,2,*}$, Wei Han$^{1,2,*}$
+
+
+    ### KEY MESSAGE
+
+    Day 3 embryo selection using iDAScore Version 2.0 is more predictive of implantation
+    compared with conventional morphological assessment. A fully automated evaluation
+    system may reduce the time taken for embryo selection, eliminate subjectivity,
+    and serve as a decision support system to assist embryologists in embryo selection.
+
+
+    ### ABSTRACT
+
+    **Research question:** Could objective embryo assessment using iDAScore Version
+    2.0 perform as well as conventional morphological assessment?
+
+
+    **Design:** A retrospective cohort study of fresh day 3 embryo transfer cycles
+    was conducted at a large reproductive medicine centre. In total, 7786 embryos
+    from 4328 cycles with known implantation data were cultured in a time-lapse incubator
+    and included in the study. Fetal heartbeat (FHB) rate was analysed retrospectively
+    using iDAScore Version 2.0 and conventional morphological assessment associated
+    with the transferred embryos. The pregnancy-prediction performance of the two
+    assessment methods was compared using area under the curve (AUC) values for predicting
+    FHB.
+
+
+    **Results:** AUC values were significantly higher for iDAScore compared with morphological
+    assessment for all cycles (0.62 versus 0.60; $P = 0.005$), single-embryo transfer
+    cycles (0.63 versus 0.60; $P = 0.043$) and double-embryo transfer cycles (0.61
+    versus 0.59; $P = 0.012$). For the age subgroups, AUC values were significantly
+    higher for iDAScore compared with morphological assessment in the <35 years subgroup
+    (0.62 versus 0.60; $P = 0.009$); however, no significant difference was found
+    in the $\ge$35 years subgroup. In terms of the number of blastomeres, AUC values
+    were significantly higher for iDAScore compared with morphological assessment
+    for both the <8c subgroup (0.67 versus 0.56; $P < 0.001$) and the $\ge$8c subgroup
+    (0.58 versus 0.55; $P = 0.012$).
+
+
+    **Conclusions:** iDAScore Version 2.0 performed as well as, or better than, conventional
+    morphological assessment in fresh day 3 embryo transfer cycles. iDAScore Version
+    2.0 may therefore constitute a promising tool for selecting embryos with the highest
+    likelihood of implantation.
+
+
+    - Conventional morphological assessment
+
+    - Day 3 embryos
+
+    - Deep learning
+
+    - Objective embryo assessment
+
+    - Pregnancy prediction
+
+
+    $^{1}$ Chongqing Clinical Research Centre for Reproductive Medicine, Chongqing
+    Health Centre for Women and Children, Chongqing, China
+
+    $^{2}$ Chongqing Key Laboratory of Human Embryo Engineering, Centre for Reproductive
+    Medicine, Women and Children’s Hospital of Chongqing Medical University, Chongqing,
+    China
+
+
+    © 2023 Published by Elsevier Ltd on behalf of Reproductive Healthcare Ltd.
+
+    *Corresponding authors. E-mail addresses: gnhuang217@sina.com (G. Huang), hw2012ivf@sina.com
+    (W. Han). https://doi.org/10.1016/j.rbmo.2023.05.014 1472-6483/© 2023 Published
+    by Elsevier Ltd on behalf of Reproductive Healthcare Ltd.
+
+    Declaration: The authors report no financial or commercial conflicts of interest.
+
+
+    ### INTRODUCTION
+
+    It remains a challenge to optimize assisted reproductive technology (ART) to ensure
+    the selection of embryos with the highest implantation potential. At present,
+    the most commonly used embryo selection method is based upon conventional morphological
+    assessment. For day 3 transfer, embryonic evaluation is based on the Istanbul
+    consensus report (ALPHA Scientists In Reproductive Medicine, ESHRE Special Interest
+    Group Embryology, 2011); this includes the number of blastomeres, degree of fragmentation,
+    blastomere evenness and multinucleation. However, the principal limitation of
+    this method is the subjective influence of assessments made by different observers
+    (Adamson et al., 2016).
+
+
+    Compared with conventional IVF technology, time-lapse technology (TLT) can record
+    total embryonic development continuously, including division timepoints from fertilization
+    and cleavage stages to blastocyst formation. The latter technique provides an
+    improved basis with which to evaluate cleavage patterns, pronuclear movement and
+    other details that cannot be identified using conventional embryo assessment.
+    It thus generates more information that can be applied to embryo selection (Basile
+    et al., 2015; Liu et al., 2020). Although some authors have postulated that the
+    combination of TLT and conventional morphological assessment will improve embryo
+    selection (Coticchio et al., 2018), its clinical value remains controversial (Goodman
+    et al., 2016; Liu et al., 2016).
+
+
+    With the recent development of TLT, attempts have been made to analyse large image
+    datasets using a more powerful computer to identify parameters that may be related
+    to embryonic developmental ability. However, the major differences in culture
+    conditions among individual IVF laboratories hinder construction and wide use
+    of the powerful algorithms involved (Kallas et al., 2022).
+
+
+    Advances in machine learning have increased the availability of electronic medical
+    data and computational processing power, thus facilitating the development of
+    novel artificial intelligence (AI)-assisted methodologies. Such methods involve
+    deep learning, and employ artificial neural networks to analyse the images captured
+    by time-lapse methods to search for patterns related to pregnancy outcomes, potentially
+    providing a more accurate, consistent and objective method to select the most
+    viable embryos (Lundin et al., 2020; Tran et al., 2019). iDAScore AI software
+    is integrated directly into the EmbryoScope+ system (Vitrolife, Göteborg, Sweden),
+    but iDAScore Version 1.0 was trained solely on day 5 or day 6 blastocyst transfer.
+    The original dataset consisted of 115,832 embryos, of which 14,644 were blastocysts
+    transferred with known implantation data (KID) (Bernsen et al., 2022). iDAScore
+    Version 2.0 includes data from day 2 and day 3 transfers (Lassen et al., 2022).
+    This more recent dataset consisted of 181,428 embryos, of which 33,687 were embryos
+    with KID. The network architecture of iDAScore Version 2.0 is identical to Version
+    1.0 but with a slightly modified training procedure (Lassen et al., 2022). The
+    pregnancy-prediction performance of iDAScore Version 1.0 was confirmed in a large
+    cohort study comprising vitrified-warmed blastocyst transfers (Ueno et al., 2021),
+    and the validation results showed that the program performed as well as, or better
+    than, conventional morphological assessment. Since the performance of iDAScore
+    Version 2.0 has not been validated by independent external datasets, its use with
+    cleavage-stage embryo transfers needs to be externally validated against conventional
+    morphological assessments, such as the morphological grading system based on the
+    Istanbul consensus report (ALPHA Scientists In Reproductive Medicine, ESHRE Special
+    Interest Group Embryology, 2011).
+
+
+    This study compared pregnancy-prediction performance after fresh day 3 embryo
+    transfer using the area under the curve (AUC) from receiver operating characteristic
+    (ROC) curve analysis of the two embryo assessment methods: iDAScore Version 2.0
+    and conventional morphological assessment according to the Istanbul consensus
+    report (ALPHA Scientists In Reproductive Medicine, ESHRE Special Interest Group
+    Embryology, 2011). Additionally, pregnancy-prediction performance of the two embryo
+    assessment methods was compared using AUC values for predicting fetal heartbeat
+    (FHB) rate for all cycle groups and each subgroup (single-embryo transfer (SET),
+    double-embryo transfer (DET), age <35 years, age ≥35 years, and number of blastomeres
+    <8c and ≥8c). To the best of the authors’ knowledge, this is the first external
+    validation of an embryo selection model based on deep learning with respect to
+    cleavage-stage transfer.
+
+
+    ### MATERIALS AND METHODS
+
+
+    ### Study population and design
+
+    This retrospective cohort study was performed at the IVF clinic of Chongqing Health
+    Centre for Women and Children from January 2020 to June 2022. This study was approved
+    by the Institutional Review Board of Chongqing Health Centre for Women and Children
+    (Approval No. 2022-RGI-11, date of approval 10 September 2022).
+
+
+    The inclusion criteria for patients were: (i) fresh autologous oocyte retrieval
+    with day 3 embryo transfer; and (ii) embryos cultured in a time-lapse system (EmbryoScope+).
+    The exclusion criteria were: (i) embryos with blurred or missing photomicrographs
+    during incubation; and (ii) cycles with one FHB in DET cycles. In total, 7786
+    embryos were included, of which 870 were SET and 6916 were DET. The selection
+    of embryos for transfer was based on conventional morphological assessment. The
+    transferred embryos were divided into six groups based on their morphological
+    grade and number of blastomeres: A+, A, B+, B, C+ and C. The iDAScore values of
+    the transferred embryos were evaluated retrospectively using iDAScore Version
+    2.0 (Lassen et al., 2022). The iDAScore model outputs numerical scores ranging
+    from 1.0 to 9.9, which are correlated with the likelihood of an FHB. The score
+    ranges from 1.0 to 9.9 for blastocyst transfer and from 2.0 to 8.0 for day 3 transfer.
+    For this study, the iDAScore values of the embryos were grouped into score intervals
+    of 1 (2.0–2.9, 3.0–3.9, 4.0–4.9, 5.0–5.9, 6.0–6.9 and 7.0–8.0) or 2 (2.0–3.9,
+    4.0–5.9 and 6.0–8.0). Implantation was defined as an intrauterine gestational
+    sac with an FHB noted on transvaginal ultrasonography. AUC values were generated
+    for ranking FHB rates with the use of two embryo assessment methods: iDAScore
+    as an automated AI model, and day 3 embryo morphological assessment established
+    by the Istanbul consensus report (ALPHA Scientists In Reproductive Medicine, ESHRE
+    Special Interest Group Embryology, 2011) as a conventional morphological grading
+    method.
+
+
+    The principal outcome of this study comprised the FHB rates of the iDAScore groups
+    with different morphological
+
+    '
+  mdcn: '
+
+
+    ## 基于深度学习和延时成像选择第3天胚胎移植模型的外部验证
+
+
+    ![](img/82ad054bb53b906240826eecb039e07b_0_0.png)
+
+
+    ### 个人简介
+
+    Jiahong Zhu graduated from Chongqing Medical University, Chongqing, China. She
+    has been engaged in reproductive medicine for more than 8 years at Chongqing Health
+    Centre for Women and Children, mainly responsible for embryo selection, and embryo
+    freezing and thawing procedures. Her current research interests include artificial
+    intelligence in reproductive medicine and embryo evaluation.
+
+
+    Jiahong Zhu$^{1,2}$, Lihong Wu$^{1,2}$, Junxia Liu$^{1,2}$, Yanfeng Liang$^{1,2}$,
+    Jiayi Zou$^{1,2}$, Xiangwei Hao$^{1,2}$, Guoning Huang$^{1,2,*}$, Wei Han$^{1,2,*}$
+
+
+    ### 关键信息
+
+    与传统形态学评估相比，使用 iDAScore 2.0 版进行第3天胚胎筛选对着床的预测价值更高。完全自动化的评估系统可能缩短胚胎筛选时间，消除主观性，并可作为决策支持系统，协助胚胎学家进行胚胎筛选。
+
+
+    ### 摘要
+
+    **研究问题：** 使用 iDAScore 2.0 版进行客观胚胎评估是否能与传统形态学评估一样有效？
+
+
+    **设计：** 在一家大型生殖医学中心对新鲜第3天胚胎移植周期进行了回顾性队列研究。共纳入4328个周期、具有已知着床数据的7786个胚胎，这些胚胎在延时培养箱中培养并纳入研究。使用
+    iDAScore 2.0 版和与移植胚胎相关的传统形态学评估，对胎心搏动（FHB）率进行了回顾性分析。使用用于预测FHB的曲线下面积（AUC）值比较了两种评估方法的妊娠预测性能。
+
+
+    **结果：** 对于所有周期，iDAScore 的 AUC 值显著高于形态学评估（0.62 对比 0.60；$P = 0.005$）；单胚胎移植周期（0.63
+    对比 0.60；$P = 0.043$）和双胚胎移植周期（0.61 对比 0.59；$P = 0.012$）亦同。在年龄亚组中，<35 岁亚组 iDAScore
+    的 AUC 值显著高于形态学评估（0.62 对比 0.60；$P = 0.009$）；然而，$\ge$35 岁亚组未发现显著差异。就胚胎解割球数而言，<8c
+    亚组（0.67 对比 0.56；$P < 0.001$）和 $\ge$8c 亚组（0.58 对比 0.55；$P = 0.012$）的 iDAScore AUC
+    值均显著高于形态学评估。
+
+
+    **结论：** iDAScore 2.0 版在新鲜第3天胚胎移植周期中的表现不逊于或优于传统形态学评估。因此，iDAScore 2.0 版可能成为一种有前途的工具，用于筛选着床可能性最高的胚胎。
+
+
+    - 传统形态学评估
+
+    - 第3天胚胎
+
+    - 深度学习
+
+    - 客观胚胎评估
+
+    - 妊娠预测
+
+
+    $^{1}$ Chongqing Clinical Research Centre for Reproductive Medicine, Chongqing
+    Health Centre for Women and Children, Chongqing, China
+
+    $^{2}$ Chongqing Key Laboratory of Human Embryo Engineering, Centre for Reproductive
+    Medicine, Women and Children’s Hospital of Chongqing Medical University, Chongqing,
+    China
+
+
+    © 2023 由 Elsevier Ltd 代表 Reproductive Healthcare Ltd. 出版
+
+    *通讯作者。* 电子邮件地址：gnhuang217@sina.com (G. Huang)，hw2012ivf@sina.com (W. Han)。https://doi.org/10.1016/j.rbmo.2023.05.014
+    1472-6483/© 2023 由 Elsevier Ltd 代表 Reproductive Healthcare Ltd. 出版
+
+    声明：作者声明不存在任何财务或商业利益冲突。
+
+
+    ### 引言
+
+    优化辅助生殖技术（ART）以确保筛选出着床潜力最高的胚胎仍然是一项挑战。目前，最常用的胚胎筛选方法基于传统形态学评估。对于第3天移植，胚胎评估基于伊斯坦布尔共识报告（ALPHA
+    Scientists In Reproductive Medicine, ESHRE Special Interest Group Embryology,
+    2011）；这包括解割球数、碎片程度、解割球均匀性和多核现象。然而，该方法的主要局限性在于不同观察者评估的主观影响（Adamson et al., 2016）。
+
+
+    与传统体外受精（IVF）技术相比，延时技术（TLT）可以持续记录胚胎的整个发育过程，包括从受精和卵裂期到囊胚形成的分裂时间点。后一种技术为评估卵裂模式、原核移动及其他无法通过常规胚胎评估识别的细节提供了更好的基础。因此，它产生了更多可应用于胚胎筛选的信息（Basile
+    et al., 2015; Liu et al., 2020）。尽管一些作者推测，TLT 与传统形态学评估的结合将改善胚胎筛选（Coticchio et al.,
+    2018），但其临床价值仍然存在争议（Goodman et al., 2016; Liu et al., 2016）。
+
+
+    随着 TLT 的近期发展，人们尝试使用更强大的计算机分析大型图像数据集，以识别可能与胚胎发育潜能相关的参数。然而，各个 IVF 实验室之间培养条件的主要差异阻碍了相关强大算法的构建和广泛应用（Kallas
+    et al., 2022）。
+
+
+    机器学习的进步增加了电子病历数据和计算处理能力的可用性，从而促进了新型人工智能（AI）辅助方法的开发。此类方法涉及深度学习，并利用人工神经网络分析延时方法捕获的图像，以搜索与妊娠结局相关的模式，从而可能提供一种更准确、一致和客观的方法来筛选最具活力的胚胎（Lundin
+    et al., 2020; Tran et al., 2019）。iDAScore AI 软件直接集成到 EmbryoScope+ 系统（Vitrolife,
+    瑞典哥德堡）中，但 iDAScore 1.0 版仅基于第5天或第6天囊胚移植进行训练。原始数据集包含 115,832 个胚胎，其中 14,644 个是具有已知着床数据（KID）的囊胚移植（Bernsen
+    et al., 2022）。iDAScore 2.0 版包含第2天和第3天移植的数据（Lassen et al., 2022）。这个更新的数据集包含 181,428
+    个胚胎，其中 33,687 个是具有 KID 的胚胎。iDAScore 2.0 版的网络架构与 1.0 版相同，但训练程序略有修改（Lassen et al.,
+    2022）。iDAScore 1.0 版的妊娠预测性能在一项包含玻璃化冷冻-复苏囊胚移植的大型队列研究中得到证实（Ueno et al., 2021），验证结果表明该程序的表现不逊于或优于传统形态学评估。由于
+    iDAScore 2.0 版的性能尚未经过独立外部数据集验证，因此其在卵裂期胚胎移植中的应用需要与传统形态学评估（例如基于伊斯坦布尔共识报告（ALPHA Scientists
+    In Reproductive Medicine, ESHRE Special Interest Group Embryology, 2011）的形态学分级系统）进行外部验证。
+
+
+    本研究采用受试者工作特征（ROC）曲线分析的曲线下面积（AUC），比较了两种胚胎评估方法（iDAScore 2.0 版和根据伊斯坦布尔共识报告（ALPHA
+    Scientists In Reproductive Medicine, ESHRE Special Interest Group Embryology,
+    2011）的传统形态学评估）在新鲜第3天胚胎移植后的妊娠预测性能。此外，还使用用于预测胎心搏动（FHB）率的 AUC 值，对所有周期组及每个亚组（单胚胎移植（SET）、双胚胎移植（DET）、年龄
+    <35 岁、年龄 ≥35 岁、解割球数 <8c 和 ≥8c）的两种胚胎评估方法的妊娠预测性能进行了比较。就作者所知，这是首次针对卵裂期移植对基于深度学习的胚胎筛选模型进行的外部验证。
+
+
+    ### 材料与方法
+
+
+    ### 研究人群与设计
+
+    这项回顾性队列研究于2020年1月至2022年6月在中国重庆妇幼保健院的 IVF 诊所进行。本研究已获得中国重庆妇幼保健院机构审查委员会的批准（批准号：2022-RGI-11，批准日期：2022年9月10日）。
+
+
+    患者纳入标准为：（i）新鲜自体卵母细胞获取并伴第3天胚胎移植；（ii）在延时系统（EmbryoScope+）中培养的胚胎。排除标准为：（i）培养过程中模糊或缺失光学显微图像的胚胎；（ii）DET
+    周期中只有一个 FHB 的周期。共纳入 7786 个胚胎，其中 870 个为 SET，6916 个为 DET。移植胚胎的筛选基于传统形态学评估。根据形态学等级和解割球数，移植胚胎分为六组：A+、A、B+、B、C+
+    和 C。使用 iDAScore 2.0 版（Lassen et al., 2022）回顾性评估了移植胚胎的 iDAScore 值。iDAScore 模型输出的数值分数范围为
+    1.0 至 9.9，与 FHB 的可能性相关。囊胚移植的分数范围为 1.0 至 9.9，第3天移植的分数范围为 2.0 至 8.0。在本研究中，胚胎的 iDAScore
+    值分为间隔为 1 的分数组（2.0–2.9、3.0–3.9、4.0–4.9、5.0–5.9、6.0–6.9 和 7.0–8.0）或间隔为 2 的分数组（2.0–3.9、4.0–5.9
+    和 6.0–8.0）。着床定义为经阴道超声检查观察到宫内妊娠囊并伴有 FHB。使用两种胚胎评估方法生成了用于对 FHB 率进行排序的 AUC 值：作为自动化
+    AI 模型的 iDAScore，以及由伊斯坦布尔共识报告（ALPHA Scientists In Reproductive Medicine, ESHRE
+    Special Interest Group Embryology, 2011）确立的第3天胚胎形态学评估作为传统形态学分级方法。
+
+
+    本研究的主要结局包括不同形态学
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    grades, analysed by stratification. The pregnancy ranking performances of iDAScore
+    Version 2 and conventional morphological assessment were compared using AUC values
+    for all cycle groups and for each subgroup (SET, DET, age <35 years, age ≥35 years,
+    and number of blastomeres <8 and ≥8c).
+
+
+    # Controlled ovarian stimulation, fertilization and embryo culture
+
+
+    The patients underwent controlled ovarian stimulation with a long gonadotropin-releasing
+    hormone (GnRH) agonist protocol or a GnRH antagonist protocol according to each
+    patient''s ovarian response and medical history of ART treatment. Human chorionic
+    gonadotropin (HCG; Ovidrel, Merck Serono, Rome, Italy) was administered when at
+    least three dominant preovulatory follicles with mean diameter >18 mm were measured
+    ultrasonographically. Oocyte retrieval was performed via the vagina under ultrasonographic
+    guidance at 36 h after HCG administration.
+
+
+    IVF or intracytoplasmic sperm injection (ICSI) insemination was performed according
+    to the patient''s condition. IVF was performed 38–39 h after HCG administration
+    at a concentration of approximately 10,000 spermatozoa/50-μl droplet. Oocytes
+    were denuded of cumulus cells 4–6 h after IVF insemination to evaluate extrusion
+    of the second polar body, and the oocytes showing a second polar body were transferred
+    to EmbryoScope+ for culture. Alternatively, oocyte denudation was performed 38–39
+    h after HCG administration, and ICSI was performed 2 h later. After microinjection,
+    all oocytes were cultured individually in the EmbryoScope+ time-lapse incubator
+    under 6% CO2 and 5% O2 at 37°C. Embryo culture was conducted using pre-equilibrated
+    G-1 culture medium (Vitrolife, Gothenburg, Sweden) until 66–68 h after fertilization.
+
+
+    Conventional morphological assessment was implemented with a static observation
+    on day 3 (68 h) after insemination using the images recorded by the EmbryoViewer
+    software (Vitrolife). Conventional morphological assessments of embryos were primarily
+    conducted according to the Istanbul consensus report (ALPHA Scientists In Reproductive
+    Medicine, ESHRE Special Interest Group Embryology, 2011), and the chief indicators
+    included blastomere number, degree of fragmentation, blastomere evenness and
+
+
+    multinucleation. Morphological assessment was conducted by a team of two embryologists
+    with internal quality assurance schemes to confirm consensus in grading. Embryos
+    were assigned the following grades: A (embryos with even blastomeres, <10% cytoplasmic
+    fragmentation and no multinucleation); B (embryos with even or uneven blastomeres,
+    and cytoplasmic fragmentation <25%); C (embryos with even or uneven blastomeres,
+    and cytoplasmic fragmentation between 25% and 50%); and D (embryos with even or
+    uneven blastomeres, and cytoplasmic fragmentation >50%) (ALPHA Scientists In Reproductive
+    Medicine, 2011). Grade D embryos were not transferred during the study period.
+    Grade A embryos reflected the highest priority for transfer, followed by Grade
+    B and Grade C. For embryos with the same grade, those with eight or more blastomeres
+    had highest priority for transfer compared with those with fewer than eight blastomeres.
+    Transferred embryos were divided into six groups based on their morphological
+    grade and number of blastomeres: A+ (grade A and eight blastomeres or more), A
+    (grade A and fewer than eight blastomeres), B+ (grade B and eight blastomeres
+    or more), B (grade B and fewer than eight blastomeres), C+ (grade C and eight
+    blastomeres or more) and C (grade C and fewer than eight blastomeres).
+
+
+    The iDAScore AI model was developed using deep learning and a neural network that
+    was trained to analyse sequences of time-lapse images (Bernsten et al., 2022).
+    The only inputs to the model were the images from the time-lapse sequences, and
+    the outputs were numerical scores from 1.0 to 9.9 that correlated with the likelihood
+    of an FHB. Therefore, iDAScore did not encompass any human-annotated data for
+    training. The images of transferred embryos with KID were thus scored retrospectively
+    using iDAScore Version 2.0.
+
+
+    # Fresh embryo transfer
+
+
+    During this study, patients received two embryos on day 3 of a fresh cycle, unless
+    there was only one transferable embryo or the patient met the indications for
+    SET. SET indications were: scarred uterus; history of cervical conization; cervical
+    incompetence; history of surgery for severe intrauterine adhesion; uterine malformation;
+    history of twin pregnancy; history of obstetric complications; history of chronic
+    disease; or women of short stature, underweight or overweight. After
+
+
+    embryo transfer, the luteal phase was supported by a combination of oestrogen
+    and progesterone daily until 12 weeks of pregnancy. The maternal serum β-HCG level
+    was measured 14 days after embryo transfer as an indicator of pregnancy. Implantation
+    was defined as an intrauterine gestational sac with a FHB noted on transvaginal
+    ultrasound 4 weeks after embryo transfer.
+
+
+    # Statistical analysis
+
+
+    Continuous quantitative variables are expressed as mean ± SD, and categorical
+    data are expressed as percentages. Kolmogorov–Smirnov test was used to assess
+    the distribution of data. Student''s t-test was used for continuous data and χ²-test
+    was used for categorical data. The ranking performances of iDAScore and conventional
+    morphological assessment for predicting FHB were calculated by applying an ROC
+    analysis of cluster data (multipredictor comparisons) (Obuchowski, 1997); the
+    calculation of AUC values using iDAScore was based on the continuous value. Tests
+    for significant differences between AUC values were conducted using the paired
+    DeLong''s two-tailed test (DeLong et al., 1988). P < 0.05 was considered to indicate
+    significance for all statistical tests, and all analyses were executed using R
+    (http://www.r-project.org) and EmpowerStats (www.empowerstats.com), X&Y Solutions,
+    Inc., Boston, MA, USA).
+
+
+    # RESULTS
+
+
+    # Participant characteristics
+
+
+    In total, 7786 embryo transfers were analysed in 4328 cycles, comprising 870 SET
+    cycles and 3458 DET cycles (TABLE 1). Mean maternal age and the number of previous
+    oocyte pick-up stages were significantly lower in DET cycles than SET cycles (P
+    < 0.001 and P = 0.019, respectively). Furthermore, the ratio of tubal factor was
+    significantly higher in DET cycles than in SET cycles (P < 0.001), whereas combination
+    factor and ovulation disorder ratios were significantly lower in DET cycles than
+    in SET cycles (P < 0.001 and P < 0.001, respectively). There was no significant
+    difference in the mean number of previous embryo transfer cycles and the mean
+    number of previous miscarriages between SET and DET cycles.
+
+
+    # Characteristics of transferred embryos
+
+
+    As shown in TABLE 2, there was a significant difference in the mean number of'
+  - '[PAGE 3]
+
+
+    # TABLE 1 PATIENT CHARACTERISTICS IN ALL CYCLES AND IN THE SINGLE-EMBRYO TRANSFER
+    AND DOUBLE-EMBRYO TRANSFER SUBGROUPS
+
+
+    | Characteristic | All | SET | DET | P-value |
+
+    |---|---|---|---|---|
+
+    | No. of cycles | 4328 | 870 (20.1) | 3458 (79.9) | - |
+
+    | Patient age, years | 31.92 ± 4.42 | 32.78 ± 4.51 | 31.71 ± 4.37 | <0.00ᵃ |
+
+    | No. of previous OPU cycles | 0.33 ± 0.81 | 0.40 ± 0.80 | 0.31 ± 0.81 | 0.019ᵃ
+    |
+
+    | No. of previous miscarriages | 0.13 ± 0.40 | 0.13 ± 0.38 | 0.13 ± 0.41 | 0.988ᵃ
+    |
+
+    | No. of previous embryo transfers | 0.21 ± 0.57 | 0.24 ± 0.59 | 0.20 ± 0.56 |
+    0.220ᵃ |
+
+    | Aetiology of infertility | | | | <0.001ᵇ |
+
+    | Tubal factor | 2490 (57.5) | 365 (42.0) | 2125 (61.5) | 0.000ᵇ |
+
+    | Male factor | 353 (8.2) | 67 (7.7) | 286 (8.3) | 0.583ᵇ |
+
+    | Endometriosis | 82 (1.9) | 13 (1.5) | 69 (2.0) | 0.333ᵇ |
+
+    | Ovulation disorders | 327 (7.6) | 151 (17.4) | 176 (5.1) | 0.000ᵇ |
+
+    | Combination | 817 (18.9) | 227 (26.1) | 590 (17.1) | 0.000ᵇ |
+
+    | Unknown | 183 (4.2) | 28 (3.2) | 155 (4.5) | 0.098ᵇ |
+
+    | Others | 76 (1.8%) | 19 (2.2%) | 57 (1.6%) | 0.282ᵇ |
+
+
+    Data presented as mean ± SD or n (%).
+
+    ᵃ Student''s t-test.
+
+    ᵇ χ²-test.
+
+    OPU, oocyte pick-up; SET, single-embryo transfer; DET, double-embryo transfer.
+
+
+    blastomeres, the ratio of the number of blastomeres (≥8c), the average iDAScore,
+    and the ratio of embryo grades (A+, A, B+, B, C+ and C) for conventional morphological
+    assessment among all cycles and SET and DET cycles (all P < 0.001).
+
+
+    # Distribution of embryos and FHB rate according to iDAScore
+
+
+    FHB rates were calculated based solely on embryos with KID, and thus did not include
+    DET embryos with only one FHB. The iDAScore values of the embryos were grouped
+    into score intervals of 1 (2.0–2.9, 3.0–3.9, 4.0–4.9, 5.0–5.9, 6.0–6.9 and 7.0–8.0).
+    The distribution of embryos according to the iDAScore groups showed typically
+    increasing numbers within the higher scoring groups for all cycles and DET cycles
+    (FIGURE 1A). However, there were fewer transferred embryos with the highest iDAScore.
+    As many patients only had one embryo available for transfer due to poor embryonic
+    quality in their SET cycles, the ratio of transferred embryos decreased with an
+    increase of iDAScore in this dataset (FIGURE 1A). Rates of FHB increased with
+    increasing iDAScore in all groups, and thus additional analyses were conducted
+    on all cycles, as the FHB rates in the SET and DET cycles were comparable (FIGURE
+    1B).
+
+
+    # TABLE 2 TRANSFERRED EMBRYO CHARACTERISTICS FOR ALL EMBRYOS AND IN THE SINGLE-EMBRYO
+    TRANSFER AND DOUBLE-EMBRYO TRANSFER SUBGROUPS
+
+
+    | Characteristic | All | SET | DET | P-value |
+
+    |---|---|---|---|---|
+
+    | No. of embryos | 7786 | 870 | 6916 | - |
+
+    | Grade | | | | <0.001ᵇ |
+
+    | A+ | 3212 (41.3) | 229 (26.3) | 2983 (43.1) | |
+
+    | A | 145 (1.9) | 17 (2.0) | 128 (1.9) | |
+
+    | B+ | 1958 (25.1) | 176 (20.2) | 1782 (25.8) | |
+
+    | B | 399 (5.1) | 59 (6.8) | 340 (4.9) | |
+
+    | C+ | 1277 (16.0) | 206 (23.7) | 1071 (15.5) | |
+
+    | C | 795 (10.2) | 183 (21.0) | 612 (8.8) | |
+
+    | Average no. of blastomeres | 8.38 ± 1.80 | 7.94 ± 1.86 | 8.43 ± 1.78 | <0.001ᵃ
+    |
+
+    | No. of blastomeres | | | | <0.001ᵇ |
+
+    | <8 | 1339 (17.2) | 259 (29.8) | 1080 (15.6) | |
+
+    | ≥8 | 6447 (82.8) | 611 (70.2) | 5836 (84.4) | |
+
+    | Average iDAScore | 5.02 ± 1.59 | 4.38 ± 1.59 | 5.10 ± 1.57 | <0.001ᵃ |
+
+    | iDAScore | | | | - |
+
+    | Min | 2.0 | 2.0 | 2.0 | |
+
+    | 25th centile | 3.7 | 2.9 | 3.8 | |
+
+    | 50th centile | 5.2 | 4.2 | 5.3 | |
+
+    | 75th centile | 6.4 | 5.6 | 6.4 | |
+
+    | Max | 8.0 | 8.0 | 8.0 | |
+
+
+    Data presented as mean ± SD or n (%).
+
+    ᵃ Student''s t-test.
+
+    ᵇ χ²-test.
+
+    SET, single-embryo transfer; DET, double-embryo transfer.
+
+
+    # FHB rate of iDAScore groups stratified by morphological grade
+
+
+    The overall FHB rate was 40.1% for all morphological grade groups, which rose
+    with the increase of iDAScore to 25.91% in the 2.0–3.9 group, 43.88% in the 4.0–5.9
+    group, and 48.34% in the 6.0–8.0 group (TABLE 3). Furthermore, for subgroups of
+    morphological grades A+, B+, B, C+ and C, the FHB rates with an iDAScore of 2.0–3.9
+    were lower than the rates in the higher iDAScore groups (TABLE 3) (A+ iDAScore
+    0.0–5.9 P = 0.015, all others P < 0.001, see Table S1, online supplementary material).
+    Additionally, for the A+, B+, B and C groups, the FHB rates in the groups with
+    an iDAScore of 6.0–8.0 were higher than those in all other iDAScore groups. All
+    + groups (i.e. embryos with eight blastomeres or more at time of observation)
+    showed a higher FHB rate than the non-+ groups (i.e. embryos with fewer than eight
+    blastomeres at time of observation.
+
+
+    # Ranking performance of the two embryo assessment methods
+
+
+    As shown in TABLE 4, the AUC values for all groups with respect to FHB prediction'
+  md: '
+
+    grades, analysed by stratification. The pregnancy ranking performances of iDAScore
+    Version 2 and conventional morphological assessment were compared using AUC values
+    for all cycle groups and for each subgroup (SET, DET, age <35 years, age ≥35 years,
+    and number of blastomeres <8 and ≥8c).
+
+
+    ## Controlled ovarian stimulation, fertilization and embryo culture
+
+
+    The patients underwent controlled ovarian stimulation with a long gonadotropin-releasing
+    hormone (GnRH) agonist protocol or a GnRH antagonist protocol according to each
+    patient''s ovarian response and medical history of ART treatment. Human chorionic
+    gonadotropin (HCG; Ovidrel, Merck Serono, Rome, Italy) was administered when at
+    least three dominant preovulatory follicles with mean diameter >18 mm were measured
+    ultrasonographically. Oocyte retrieval was performed via the vagina under ultrasonographic
+    guidance at 36 h after HCG administration.
+
+
+    IVF or intracytoplasmic sperm injection (ICSI) insemination was performed according
+    to the patient''s condition. IVF was performed 38–39 h after HCG administration
+    at a concentration of approximately 10,000 spermatozoa/50-μl droplet. Oocytes
+    were denuded of cumulus cells 4–6 h after IVF insemination to evaluate extrusion
+    of the second polar body, and the oocytes showing a second polar body were transferred
+    to EmbryoScope+ for culture. Alternatively, oocyte denudation was performed 38–39
+    h after HCG administration, and ICSI was performed 2 h later. After microinjection,
+    all oocytes were cultured individually in the EmbryoScope+ time-lapse incubator
+    under 6% CO2 and 5% O2 at 37°C. Embryo culture was conducted using pre-equilibrated
+    G-1 culture medium (Vitrolife, Gothenburg, Sweden) until 66–68 h after fertilization.
+
+
+    Conventional morphological assessment was implemented with a static observation
+    on day 3 (68 h) after insemination using the images recorded by the EmbryoViewer
+    software (Vitrolife). Conventional morphological assessments of embryos were primarily
+    conducted according to the Istanbul consensus report (ALPHA Scientists In Reproductive
+    Medicine, ESHRE Special Interest Group Embryology, 2011), and the chief indicators
+    included blastomere number, degree of fragmentation, blastomere evenness and multinucleation.
+    Morphological assessment was conducted by a team of two embryologists with internal
+    quality assurance schemes to confirm consensus in grading. Embryos were assigned
+    the following grades: A (embryos with even blastomeres, <10% cytoplasmic fragmentation
+    and no multinucleation); B (embryos with even or uneven blastomeres, and cytoplasmic
+    fragmentation <25%); C (embryos with even or uneven blastomeres, and cytoplasmic
+    fragmentation between 25% and 50%); and D (embryos with even or uneven blastomeres,
+    and cytoplasmic fragmentation >50%) (ALPHA Scientists In Reproductive Medicine,
+    2011). Grade D embryos were not transferred during the study period. Grade A embryos
+    reflected the highest priority for transfer, followed by Grade B and Grade C.
+    For embryos with the same grade, those with eight or more blastomeres had highest
+    priority for transfer compared with those with fewer than eight blastomeres. Transferred
+    embryos were divided into six groups based on their morphological grade and number
+    of blastomeres: A+ (grade A and eight blastomeres or more), A (grade A and fewer
+    than eight blastomeres), B+ (grade B and eight blastomeres or more), B (grade
+    B and fewer than eight blastomeres), C+ (grade C and eight blastomeres or more)
+    and C (grade C and fewer than eight blastomeres).
+
+
+    The iDAScore AI model was developed using deep learning and a neural network that
+    was trained to analyse sequences of time-lapse images (Bernsten et al., 2022).
+    The only inputs to the model were the images from the time-lapse sequences, and
+    the outputs were numerical scores from 1.0 to 9.9 that correlated with the likelihood
+    of an FHB. Therefore, iDAScore did not encompass any human-annotated data for
+    training. The images of transferred embryos with KID were thus scored retrospectively
+    using iDAScore Version 2.0.
+
+
+    ## Fresh embryo transfer
+
+
+    During this study, patients received two embryos on day 3 of a fresh cycle, unless
+    there was only one transferable embryo or the patient met the indications for
+    SET. SET indications were: scarred uterus; history of cervical conization; cervical
+    incompetence; history of surgery for severe intrauterine adhesion; uterine malformation;
+    history of twin pregnancy; history of obstetric complications; history of chronic
+    disease; or women of short stature, underweight or overweight. After embryo transfer,
+    the luteal phase was supported by a combination of oestrogen and progesterone
+    daily until 12 weeks of pregnancy. The maternal serum β-HCG level was measured
+    14 days after embryo transfer as an indicator of pregnancy. Implantation was defined
+    as an intrauterine gestational sac with a FHB noted on transvaginal ultrasound
+    4 weeks after embryo transfer.
+
+
+    ## Statistical analysis
+
+
+    Continuous quantitative variables are expressed as mean ± SD, and categorical
+    data are expressed as percentages. Kolmogorov–Smirnov test was used to assess
+    the distribution of data. Student''s t-test was used for continuous data and χ²-test
+    was used for categorical data. The ranking performances of iDAScore and conventional
+    morphological assessment for predicting FHB were calculated by applying an ROC
+    analysis of cluster data (multipredictor comparisons) (Obuchowski, 1997); the
+    calculation of AUC values using iDAScore was based on the continuous value. Tests
+    for significant differences between AUC values were conducted using the paired
+    DeLong''s two-tailed test (DeLong et al., 1988). P < 0.05 was considered to indicate
+    significance for all statistical tests, and all analyses were executed using R
+    (http://www.r-project.org) and EmpowerStats (www.empowerstats.com), X&Y Solutions,
+    Inc., Boston, MA, USA).
+
+
+    ## RESULTS
+
+
+    ### Participant characteristics
+
+
+    In total, 7786 embryo transfers were analysed in 4328 cycles, comprising 870 SET
+    cycles and 3458 DET cycles (TABLE 1). Mean maternal age and the number of previous
+    oocyte pick-up stages were significantly lower in DET cycles than SET cycles (P
+    < 0.001 and P = 0.019, respectively). Furthermore, the ratio of tubal factor was
+    significantly higher in DET cycles than in SET cycles (P < 0.001), whereas combination
+    factor and ovulation disorder ratios were significantly lower in DET cycles than
+    in SET cycles (P < 0.001 and P < 0.001, respectively). There was no significant
+    difference in the mean number of previous embryo transfer cycles and the mean
+    number of previous miscarriages between SET and DET cycles.
+
+
+    ### Characteristics of transferred embryos
+
+
+    As shown in TABLE 2, there was a significant difference in the mean number of
+
+
+    ### TABLE 1 PATIENT CHARACTERISTICS IN ALL CYCLES AND IN THE SINGLE-EMBRYO TRANSFER
+    AND DOUBLE-EMBRYO TRANSFER SUBGROUPS
+
+
+    | Characteristic | All | SET | DET | P-value |
+
+    |---|---|---|---|---|
+
+    | No. of cycles | 4328 | 870 (20.1) | 3458 (79.9) | - |
+
+    | Patient age, years | 31.92 ± 4.42 | 32.78 ± 4.51 | 31.71 ± 4.37 | <0.001ᵃ |
+
+    | No. of previous OPU cycles | 0.33 ± 0.81 | 0.40 ± 0.80 | 0.31 ± 0.81 | 0.019ᵃ
+    |
+
+    | No. of previous miscarriages | 0.13 ± 0.40 | 0.13 ± 0.38 | 0.13 ± 0.41 | 0.988ᵃ
+    |
+
+    | No. of previous embryo transfers | 0.21 ± 0.57 | 0.24 ± 0.59 | 0.20 ± 0.56 |
+    0.220ᵃ |
+
+    | Aetiology of infertility | | | | <0.001ᵇ |
+
+    | Tubal factor | 2490 (57.5) | 365 (42.0) | 2125 (61.5) | 0.000ᵇ |
+
+    | Male factor | 353 (8.2) | 67 (7.7) | 286 (8.3) | 0.583ᵇ |
+
+    | Endometriosis | 82 (1.9) | 13 (1.5) | 69 (2.0) | 0.333ᵇ |
+
+    | Ovulation disorders | 327 (7.6) | 151 (17.4) | 176 (5.1) | 0.000ᵇ |
+
+    | Combination | 817 (18.9) | 227 (26.1) | 590 (17.1) | 0.000ᵇ |
+
+    | Unknown | 183 (4.2) | 28 (3.2) | 155 (4.5) | 0.098ᵇ |
+
+    | Others | 76 (1.8%) | 19 (2.2%) | 57 (1.6%) | 0.282ᵇ |
+
+
+    Data presented as mean ± SD or n (%).
+
+    ᵃ Student''s t-test.
+
+    ᵇ χ²-test.
+
+    OPU, oocyte pick-up; SET, single-embryo transfer; DET, double-embryo transfer.
+
+
+    blastomeres, the ratio of the number of blastomeres (≥8c), the average iDAScore,
+    and the ratio of embryo grades (A+, A, B+, B, C+ and C) for conventional morphological
+    assessment among all cycles and SET and DET cycles (all P < 0.001).
+
+
+    ### Distribution of embryos and FHB rate according to iDAScore
+
+
+    FHB rates were calculated based solely on embryos with KID, and thus did not include
+    DET embryos with only one FHB. The iDAScore values of the embryos were grouped
+    into score intervals of 1 (2.0–2.9, 3.0–3.9, 4.0–4.9, 5.0–5.9, 6.0–6.9 and 7.0–8.0).
+    The distribution of embryos according to the iDAScore groups showed typically
+    increasing numbers within the higher scoring groups for all cycles and DET cycles
+    (FIGURE 1A). However, there were fewer transferred embryos with the highest iDAScore.
+    As many patients only had one embryo available for transfer due to poor embryonic
+    quality in their SET cycles, the ratio of transferred embryos decreased with an
+    increase of iDAScore in this dataset (FIGURE 1A). Rates of FHB increased with
+    increasing iDAScore in all groups, and thus additional analyses were conducted
+    on all cycles, as the FHB rates in the SET and DET cycles were comparable (FIGURE
+    1B).
+
+
+    ### TABLE 2 TRANSFERRED EMBRYO CHARACTERISTICS FOR ALL EMBRYOS AND IN THE SINGLE-EMBRYO
+    TRANSFER AND DOUBLE-EMBRYO TRANSFER SUBGROUPS
+
+
+    | Characteristic | All | SET | DET | P-value |
+
+    |---|---|---|---|---|
+
+    | No. of embryos | 7786 | 870 | 6916 | - |
+
+    | Grade | | | | <0.001ᵇ |
+
+    | A+ | 3212 (41.3) | 229 (26.3) | 2983 (43.1) | |
+
+    | A | 145 (1.9) | 17 (2.0) | 128 (1.9) | |
+
+    | B+ | 1958 (25.1) | 176 (20.2) | 1782 (25.8) | |
+
+    | B | 399 (5.1) | 59 (6.8) | 340 (4.9) | |
+
+    | C+ | 1277 (16.0) | 206 (23.7) | 1071 (15.5) | |
+
+    | C | 795 (10.2) | 183 (21.0) | 612 (8.8) | |
+
+    | Average no. of blastomeres | 8.38 ± 1.80 | 7.94 ± 1.86 | 8.43 ± 1.78 | <0.001ᵃ
+    |
+
+    | No. of blastomeres | | | | <0.001ᵇ |
+
+    | <8 | 1339 (17.2) | 259 (29.8) | 1080 (15.6) | |
+
+    | ≥8 | 6447 (82.8) | 611 (70.2) | 5836 (84.4) | |
+
+    | Average iDAScore | 5.02 ± 1.59 | 4.38 ± 1.59 | 5.10 ± 1.57 | <0.001ᵃ |
+
+    | iDAScore | | | | - |
+
+    | Min | 2.0 | 2.0 | 2.0 | |
+
+    | 25th centile | 3.7 | 2.9 | 3.8 | |
+
+    | 50th centile | 5.2 | 4.2 | 5.3 | |
+
+    | 75th centile | 6.4 | 5.6 | 6.4 | |
+
+    | Max | 8.0 | 8.0 | 8.0 | |
+
+
+    Data presented as mean ± SD or n (%).
+
+    ᵃ Student''s t-test.
+
+    ᵇ χ²-test.
+
+    SET, single-embryo transfer; DET, double-embryo transfer.
+
+
+    ### FHB rate of iDAScore groups stratified by morphological grade
+
+
+    The overall FHB rate was 40.1% for all morphological grade groups, which rose
+    with the increase of iDAScore to 25.91% in the 2.0–3.9 group, 43.88% in the 4.0–5.9
+    group, and 48.34% in the 6.0–8.0 group (TABLE 3). Furthermore, for subgroups of
+    morphological grades A+, B+, B, C+ and C, the FHB rates with an iDAScore of 2.0–3.9
+    were lower than the rates in the higher iDAScore groups (TABLE 3) (A+ iDAScore
+    0.0–5.9 P = 0.015, all others P < 0.001, see Table S1, online supplementary material).
+    Additionally, for the A+, B+, B and C groups, the FHB rates in the groups with
+    an iDAScore of 6.0–8.0 were higher than those in all other iDAScore groups. All
+    + groups (i.e. embryos with eight blastomeres or more at time of observation)
+    showed a higher FHB rate than the non-+ groups (i.e. embryos with fewer than eight
+    blastomeres at time of observation).
+
+
+    ### Ranking performance of the two embryo assessment methods
+
+
+    As shown in TABLE 4, the AUC values for all groups with respect to FHB prediction
+
+    '
+  mdcn: '
+
+    按分层分析了分级。iDAScore 版本 2 和常规形态学评估在妊娠排序性能上的比较，采用 AUC 值对所有周期组及每个子组（SET、DET、年龄 <35
+    岁、年龄 ≥35 岁、卵裂球数 <8 个和 ≥8 个）进行了。
+
+
+    ## 控制性卵巢刺激、受精和胚胎培养
+
+
+    患者根据卵巢反应和辅助生殖技术（ART）治疗病史，接受长效促性腺激素释放激素（GnRH）激动剂方案或 GnRH 拮抗剂方案的控制性卵巢刺激。
+
+
+    当超声测量到至少三个平均直径 >18 mm 的优势排卵前卵泡时，给予绒毛膜促性腺激素（HCG；Ovidrel，Merck Serono，意大利罗马）。
+
+
+    HCG 给药后 36 小时，在超声引导下通过阴道进行卵母细胞取出。
+
+
+    根据患者情况，进行体外受精（IVF）或卵浆内单精子注射（ICSI）受精。
+
+
+    HCG 给药后 38–39 小时进行 IVF，精子浓度约为 10,000 个精子/50-μl 滴。
+
+
+    IVF 受精后 4–6 小时，去除卵母细胞的颗粒细胞以评估第二极体挤出，并将显示出第二极体的卵母细胞转移至 EmbryoScope+ 进行培养。
+
+
+    或者，HCG 给药后 38–39 小时进行卵母细胞去巢，2 小时后执行 ICSI。
+
+
+    显微注射后，所有卵母细胞分别在 EmbryoScope+ 时间成像培养箱中于 37°C、6% CO2 和 5% O2 下单独培养。
+
+
+    胚胎培养使用预平衡的 G-1 培养基（Vitrolife，瑞典哥德堡）进行，直至受精后 66–68 小时。
+
+
+    常规形态学评估采用 EmbryoViewer 软件（Vitrolife）记录的图像，在受精后第 3 天（68 小时）进行静态观察。
+
+
+    胚胎的常规形态学评估主要依据伊斯坦布尔共识报告（ALPHA Scientists In Reproductive Medicine, ESHRE Special
+    Interest Group Embryology, 2011）进行，主要指标包括卵裂球数、碎片程度、卵裂球均匀性和多核现象。
+
+
+    形态学评估由两名胚胎学家组成的团队进行，采用内部质量保证方案以确认分级的一致性。
+
+
+    胚胎被分配以下等级：A（卵裂球均匀、胞质碎片化 <10% 且无多核的胚胎）；B（卵裂球均匀或不均匀、胞质碎片化 <25% 的胚胎）；C（卵裂球均匀或不均匀、胞质碎片化
+    25%–50% 的胚胎）；D（卵裂球均匀或不均匀、胞质碎片化 >50% 的胚胎）（ALPHA Scientists In Reproductive Medicine,
+    2011）。
+
+
+    研究期间未移植 D 级胚胎。
+
+
+    A 级胚胎移植优先级最高，其次为 B 级和 C 级。
+
+
+    对于同等级的胚胎，卵裂球数 ≥8 个的胚胎移植优先级高于卵裂球数 <8 个的胚胎。
+
+
+    根据形态学等级和卵裂球数，移植的胚胎分为六组：A+（A 级且卵裂球数 ≥8 个）、A（A 级且卵裂球数 <8 个）、B+（B 级且卵裂球数 ≥8 个）、B（B
+    级且卵裂球数 <8 个）、C+（C 级且卵裂球数 ≥8 个）和 C（C 级且卵裂球数 <8 个）。
+
+
+    iDAScore AI 模型采用深度学习和神经网络开发，该网络经过训练可分析时间成像序列（Bernsten et al., 2022）。
+
+
+    模型的唯一输入是时间成像序列的图像，输出为 1.0 至 9.9 的数值评分，与胎儿心搏（FHB）的可能性相关。
+
+
+    因此，iDAScore 训练未包含任何人工标注数据。
+
+
+    因此，使用 iDAScore 版本 2.0 对带有 KID 的移植胚胎图像进行了回顾性评分。
+
+
+    ## 鲜胚移植
+
+
+    本研究期间，除只有一个可移植胚胎或患者符合单胚胎移植（SET）适应症外，患者在鲜周期第 3 天接受两个胚胎移植。
+
+
+    SET 适应症包括：疤痕子宫；宫颈锥切术史；宫颈内口松弛；严重宫腔粘连手术史；子宫畸形；双胎妊娠史；产科并发症史；慢性疾病史；或身材矮小、体重过轻或过重的女性。
+
+
+    胚胎移植后，每日联合雌激素和孕激素支持黄体期，直至妊娠 12 周。
+
+
+    胚胎移植后 14 天测量母体血清 β-HCG 水平作为妊娠指标。
+
+
+    移植后 4 周阴道超声观察到宫内孕囊并伴有胎儿心搏（FHB）定义为着床。
+
+
+    ## 统计分析
+
+
+    连续定量变量以均值 ± 标准差表示，分类数据以百分比表示。
+
+
+    采用 Kolmogorov–Smirnov 检验评估数据分布。
+
+
+    连续数据采用 Student''s t 检验，分类数据采用 χ² 检验。
+
+
+    通过聚类数据 ROC 分析（多预测因子比较）（Obuchowski, 1997）计算了 iDAScore 和常规形态学评估预测 FHB 的排序性能；使用 iDAScore
+    计算 AUC 值基于连续数值。
+
+
+    采用配对 DeLong 双侧检验（DeLong et al., 1988）检验 AUC 值之间的显著差异。
+
+
+    所有统计检验中 P < 0.05 视为显著差异，所有分析均使用 R（http://www.r-project.org）和 EmpowerStats（www.empowerstats.com），X&Y
+    Solutions, Inc.，美国波士顿，MA 执行。
+
+
+    ## 结果
+
+
+    ### 受试者特征
+
+
+    共分析了 4328 个周期中的 7786 次胚胎移植，包括 870 个 SET 周期和 3458 个 DET 周期（TABLE 1）。
+
+
+    与 SET 周期相比，DET 周期的母体平均年龄和之前取卵周期数显著较低（P < 0.001 和 P = 0.019，分别）。
+
+
+    此外，DET 周期中输卵管因素的比例显著高于 SET 周期（P < 0.001），而组合因素和排卵障碍比例在 DET 周期中显著低于 SET 周期（P <
+    0.001 和 P < 0.001，分别）。
+
+
+    SET 和 DET 周期在之前胚胎移植周期平均数和之前流产平均数方面无显著差异。
+
+
+    ### 移植胚胎特征
+
+
+    如 TABLE 2 所示，平均
+
+
+    ### TABLE 1 所有周期及单胚胎移植和双胚胎移植子组中的患者特征
+
+
+    | 特征 | 所有 | SET | DET | P 值 |
+
+    |---|---|---|---|---|
+
+    | 周期数 | 4328 | 870 (20.1) | 3458 (79.9) | - |
+
+    | 患者年龄，岁 | 31.92 ± 4.42 | 32.78 ± 4.51 | 31.71 ± 4.37 | <0.001ᵃ |
+
+    | 之前 OPU 周期数 | 0.33 ± 0.81 | 0.40 ± 0.80 | 0.31 ± 0.81 | 0.019ᵃ |
+
+    | 之前流产次数 | 0.13 ± 0.40 | 0.13 ± 0.38 | 0.13 ± 0.41 | 0.988ᵃ |
+
+    | 之前胚胎移植次数 | 0.21 ± 0.57 | 0.24 ± 0.59 | 0.20 ± 0.56 | 0.220ᵃ |
+
+    | 不孕症病因 | | | | <0.001ᵇ |
+
+    | 输卵管因素 | 2490 (57.5) | 365 (42.0) | 2125 (61.5) | 0.000ᵇ |
+
+    | 男性因素 | 353 (8.2) | 67 (7.7) | 286 (8.3) | 0.583ᵇ |
+
+    | 子宫内膜异位症 | 82 (1.9) | 13 (1.5) | 69 (2.0) | 0.333ᵇ |
+
+    | 排卵障碍 | 327 (7.6) | 151 (17.4) | 176 (5.1) | 0.000ᵇ |
+
+    | 组合因素 | 817 (18.9) | 227 (26.1) | 590 (17.1) | 0.000ᵇ |
+
+    | 不明原因 | 183 (4.2) | 28 (3.2) | 155 (4.5) | 0.098ᵇ |
+
+    | 其他 | 76 (1.8%) | 19 (2.2%) | 57 (1.6%) | 0.282ᵇ |
+
+
+    数据以均值 ± 标准差或 n (%) 表示。
+
+    ᵃ Student''s t 检验。
+
+    ᵇ χ² 检验。
+
+    OPU，卵母细胞获取；SET，单胚胎移植；DET，双胚胎移植。
+
+
+    卵裂球数、卵裂球数 (≥8c) 的比例、平均 iDAScore 以及常规形态学评估的胚胎等级（A+、A、B+、B、C+ 和 C）的比例在所有周期及 SET
+    和 DET 周期中均存在显著差异（所有 P < 0.001）。
+
+
+    ### 按 iDAScore 分布的胚胎及 FHB 率
+
+
+    FHB 率仅基于带有 KID 的胚胎计算，因此未包含仅有一个 FHB 的 DET 胚胎。
+
+
+    胚胎的 iDAScore 值被分为 1 个分数区间（2.0–2.9、3.0–3.9、4.0–4.9、5.0–5.9、6.0–6.9 和 7.0–8.0）。
+
+
+    所有周期和 DET 周期中，按 iDAScore 组分布的胚胎通常显示高分组内数量增加（FIGURE 1A）。
+
+
+    然而，最高 iDAScore 的移植胚胎较少。
+
+
+    由于许多患者在其 SET 周期中因胚胎质量差而只有一个可用于移植的胚胎，因此在本数据集中，随 iDAScore 增加，移植胚胎的比例降低（FIGURE 1A）。
+
+
+    所有组中，FHB 率随 iDAScore 增加而增加，因此对所有周期进行了进一步分析，因为 SET 和 DET 周期的 FHB 率可比（FIGURE 1B）。
+
+
+    ### TABLE 2 所有胚胎及单胚胎移植和双胚胎移植子组中的移植胚胎特征
+
+
+    | 特征 | 所有 | SET | DET | P 值 |
+
+    |---|---|---|---|---|
+
+    | 胚胎数 | 7786 | 870 | 6916 | - |
+
+    | 等级 | | | | <0.001ᵇ |
+
+    | A+ | 3212 (41.3) | 229 (26.3) | 2983 (43.1) | |
+
+    | A | 145 (1.9) | 17 (2.0) | 128 (1.9) | |
+
+    | B+ | 1958 (25.1) | 176 (20.2) | 1782 (25.8) | |
+
+    | B | 399 (5.1) | 59 (6.8) | 340 (4.9) | |
+
+    | C+ | 1277 (16.0) | 206 (23.7) | 1071 (15.5) | |
+
+    | C | 795 (10.2) | 183 (21.0) | 612 (8.8) | |
+
+    | 平均卵裂球数 | 8.38 ± 1.80 | 7.94 ± 1.86 | 8.43 ± 1.78 | <0.001ᵃ |
+
+    | 卵裂球数 | | | | <0.001ᵇ |
+
+    | <8 | 1339 (17.2) | 259 (29.8) | 1080 (15.6) | |
+
+    | ≥8 | 6447 (82.8) | 611 (70.2) | 5836 (84.4) | |
+
+    | 平均 iDAScore | 5.02 ± 1.59 | 4.38 ± 1.59 | 5.10 ± 1.57 | <0.001ᵃ |
+
+    | iDAScore | | | | - |
+
+    | 最小值 | 2.0 | 2.0 | 2.0 | |
+
+    | 第 25 百分位数 | 3.7 | 2.9 | 3.8 | |
+
+    | 第 50 百分位数 | 5.2 | 4.2 | 5.3 | |
+
+    | 第 75 百分位数 | 6.4 | 5.6 | 6.4 | |
+
+    | 最大值 | 8.0 | 8.0 | 8.0 | |
+
+
+    数据以均值 ± 标准差或 n (%) 表示。
+
+    ᵃ Student''s t 检验。
+
+    ᵇ χ² 检验。
+
+    SET，单胚胎移植；DET，双胚胎移植。
+
+
+    ### 按形态学等级分层的 iDAScore 组 FHB 率
+
+
+    所有形态学等级组的总体 FHB 率为 40.1%，随 iDAScore 增加升至 2.0–3.9 组的 25.91%、4.0–5.9 组的 43.88% 和
+    6.0–8.0 组的 48.34%（TABLE 3）。
+
+
+    此外，对于形态学等级 A+、B+、B、C+ 和 C 的子组，iDAScore 为 2.0–3.9 时的 FHB 率低于较高 iDAScore 组的比率（TABLE
+    3）（A+ iDAScore 0.0–5.9，P = 0.015，其余均 P < 0.001，见表 S1，网络补充材料）。
+
+
+    此外，对于 A+、B+、B 和 C 组，iDAScore 为 6.0–8.0 的组的 FHB 率高于所有其他 iDAScore 组。
+
+
+    所有 + 组（即观察时卵裂球数 ≥8 个的胚胎）的 FHB 均高于非 + 组（即观察时卵裂球数 <8 个的胚胎）。
+
+
+    ### 两种胚胎评估方法的排序性能
+
+
+    如 TABLE 4 所示，所有组预测 FHB 的 AUC 值
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 4]
+
+
+    ![](img/82ad054bb53b906240826eecb039e07b_4_0.png)
+
+
+    ![](img/82ad054bb53b906240826eecb039e07b_4_1.png)
+
+
+    FIGURE 1 Distribution of embryos and fetal heartbeat (FHB) rate according to iDAScore.
+    (a) Data presented as % of total embryos [all n = 7786, single-embryo transfer
+    (SET) n = 870; double-embryo transfer (DET) n = 6916]. (b) Data presented as %
+    of embryos within scoring group.
+
+
+    were 0.62 for iDAScore and 0.60 for conventional morphological assessment, with
+    a significant difference between the two methods (P = 0.005). For the subgroups
+    of SET and DET, AUC values for iDAScore were significantly greater than those
+    for
+
+
+    conventional morphological assessment (SET 0.63 versus 0.60, P = 0.043; DET 0.61
+    versus 0.59, P = 0.012). To better compare the performance of the two embryo assessment
+    methods, age-
+
+
+    related differences were taken into account. For women aged <35 years, the AUC
+    value for iDAScore was significantly higher compared with conventional morphological
+    assessment (0.62 versus 0.60; P = 0.009). For women aged ≥35 years, AUC values
+    were 0.60 for iDAScore and 0.59 for conventional morphological assessment; these
+    values were not significantly different.
+
+
+    To investigate the influence of the number of blastomeres, the AUC values were
+    compared between the subgroups <8c and ≥8c for iDAScore and conventional morphological
+    assessment. AUC values of 0.67 for iDAScore and 0.56 for conventional morphological
+    assessment were found for the <8c group. For the ≥8c group, AUC values were 0.58
+    for iDAScore and 0.55 for conventional morphological assessment. AUC values for
+    iDAScore were thus significantly greater than those for conventional morphological
+    assessment in both the <8c (P < 0.001) and ≥8c groups (P = 0.012).
+
+
+    # DISCUSSION
+
+
+    This retrospective study showed that iDAScore Version 2.0 is able to predict FHB
+    as well as, or better than, conventional morphological assessment. For transferred
+    embryos with the same morphological grade, the FHB rate increased with the increase
+    in iDAScore. This suggests that day 3 embryo selection based on iDAScore may achieve
+    a higher FHB rate, and is safe and robust compared with conventional morphological
+    assessment.
+
+
+    A significant difference in the quality of transferred embryos was found between
+    SET and DET cycles. The majority of transferred embryos in SET cycles were of
+    lower morphological quality compared with DET cycles. This may be related to the
+    in-house procedure for SET allocation in the study clinic. Although there were
+    no differences overall between SET and DET cycles in the observed FHB rate for
+    embryos with KID within different iDAScore groups, it should be noted that the
+    above analysis was based on embryos with KID, and the actual FHB rates were lower
+    when DET cycles with only one FHB were included. However, the model performance
+    for embryos with KID did not depend upon whether one or two embryos were selected
+    for transfer. Hence, the model could also be used for patient
+
+
+    | Morphological grade | All iDAScore (2.0–8.0) | iDAScore (2.0–3.9) | iDAScore
+    (4.0–5.9) | iDAScore (6.0–8.0) |
+
+    |---|---|---|---|---|
+
+    | All | 40.10 | 25.91 | 43.88 | 48.34 |
+
+    | A* (n = 3212) | 48.38 | 40.00 | 46.98 | 51.64 |
+
+    | A (n = 145) | 28.28 | 23.08 | 30.65 | 29.55 |
+
+    | B* (n = 1958) | 43.67 | 34.73 | 45.35 | 47.04 |
+
+    | B (n = 399) | 23.56 | 14.00 | 30.37 | 39.06 |
+
+    | C* (n = 1277) | 34.61 | 26.81 | 44.53 | 39.38 |
+
+    | C (n = 795) | 17.11 | 13.34 | 27.04 | 31.82 |
+
+
+    Data presented as % of embryos within scoring group.
+
+    For statistical comparisons, see Table S1 (online supplementary material).'
+  - '[PAGE 5]
+
+
+    # TABLE 4 COMPARISON OF AREA UNDER THE CURVE VALUES BETWEEN THE IDASCORE MODEL
+    AND MORPHOLOGICAL GRADE
+
+
+    | AUC value | iDAScore | Morphological grade | P-value |
+
+    |---|---|---|---|
+
+    | All | 0.62 | 0.60 | 0.005^a |
+
+    | Subgroup analysis | | | |
+
+    | SET | 0.63 | 0.60 | 0.043^a |
+
+    | DET | 0.61 | 0.59 | 0.012^a |
+
+    | Age <35 years | 0.62 | 0.60 | 0.009^a |
+
+    | Age ≥35 years | 0.60 | 0.59 | 0.609^a |
+
+    | No. of blastomeres <8c | 0.67 | 0.56 | <0.001^a |
+
+    | No. of blastomeres ≥8c | 0.58 | 0.55 | 0.012^a |
+
+
+    AUC values were calculated for all transferred embryos as well as subgroups based
+    on number of embryos transferred, patient age and number of blastomeres at transfer.
+
+    ^a DeLong''s two-tailed test.
+
+    AUC, area under the curve; SET, single-embryo transfer; DET, double-embryo transfer.
+
+
+    cleaved embryos with the worst morphological grade was 20.4% in patients aged
+    ≥35 years and 12% in patients aged ≥41 years (Munné et al., 2007). However, for
+    elderly patients, the number of embryos available for transfer is usually limited,
+    and embryos with higher developmental potential can be selected more easily based
+    on morphological assessment. In addition, day 3 embryo morphological grade was
+    associated with euploidy in elderly patients (Moayeri et al., 2008). Therefore,
+    there is a possibility that there was no significant difference in FHB prediction
+    performance between iDAScore and conventional morphological assessment in patients
+    aged ≥35 years. Furthermore, although cleavage-stage embryo morphological grade
+    was associated with a higher blastocyst formation rate (Liu et al., 2022), the
+    pregnancy rate derived from high-quality blastocysts was independent of their
+    morphological grade at cleavage stage (Herbemont et al., 2017; Zilberberg et al.,
+    2021). Therefore, the predictive value of conventional morphological assessment
+    for identifying cleavage-stage embryos with higher implantation potential remains
+    limited.
+
+
+    counselling to determine how many embryos should be transferred.
+
+
+    Previous studies on day 5+ transfers have shown that iDAScore Version 1.0 performed
+    as well as, or better than, blastocyst morphological assessment after a single
+    vitrified blastocyst transfer (Ueno et al., 2021), and that iDAScore Version 1.0
+    was positively correlated with the live birth rate and negatively correlated with
+    the abortion rate (Ueno et al., 2022).
+
+
+    Although the authors in the aforementioned studies used iDAScore Version 1.0,
+    which was independently validated in the vitrified blastocyst transfer cycles,
+    the results were concordant with the current findings, showing that iDAScore performed
+    better than conventional morphological assessment in pregnancy prediction in fresh
+    day 3 embryo transfer cycles (as also observed with iDAScore Version 2.0). However,
+    the AUC value of 0.62 for fresh day 3 embryo transfer found in this study could
+    not be compared directly with previous studies for iDAScore; for example, the
+    AUC value of 0.70 reported for Kato Ladies Clinic (Ueno et al., 2021) was based
+    on day 5 and day 6 blastocyst transfers. Nevertheless, the lower AUC value should
+    not be considered a decline in predictive performance for iDAScore Versions 1.0
+    and 2.0, but rather as the result of differences in the specific populations used
+    for validation (Kragh et al., 2021). In addition, a lower AUC value for cleavage-stage
+    transfer compared with blastocyst transfer was expected due to the availability
+    of less information for day 3 embryos compared with embryos after extended incubation.
+    In addition, it should
+
+
+    be noted that, regarding internal validation data, iDAScore Version 2.0 exhibited
+    an AUC value of 0.62 for fresh day 3 transfers (Lassen et al., 2022).
+
+
+    The subgroup analysis by maternal age revealed that FHB prediction performance
+    using iDAScore was significantly higher than that using conventional morphological
+    assessment in women aged <35 years, but did not differ in women aged ≥35 years.
+    This suggests that the selection of embryos using iDAScore Version 2.0 was likely
+    to be more beneficial in younger patients. A previous study showed that the best
+    embryos morphologically had a 44% euploidy rate, while the worst embryos morphologically
+    had a 30% euploidy rate in patients aged <35 years (Munné et al., 2007). In addition,
+    day 3 embryo morphology predicted euploidy in women of advanced maternal age but
+    not in younger patients, who may have other factors responsible for embryo dysmorphism
+    (Moayeri et al., 2008). Thus, morphological assessment has reduced ability to
+    select euploid embryos in younger patients, and several good-quality embryos are
+    usually obtained in a single oocyte retrieval cycle for these younger patients.
+    The present study also showed that embryos with higher iDAScores had higher implantation
+    potential among embryos with similar morphological grades. This result suggests
+    that performance of iDAScore for the prediction of FHB may be less dependent on
+    embryo morphology than conventional morphological assessment in younger patients.
+    On the other hand, it is well known that aneuploidy increases with maternal age.
+    For example, a previous study showed that the euploidy rate of
+
+
+    The subgroup analysis based on the number of blastomeres revealed that FHB prediction
+    performance of iDAScore was significantly higher compared with that of conventional
+    morphological assessment in the <8c and ≥8c groups. The only exception was for
+    subgroup A; however, it is postulated that the small sample size may have contributed
+    to this difference for morphological subgroup A, with only 39 cases in the iDAScore
+    2.0–3.9 group, 62 cases in the 4.0–5.9 group, and 44 cases in the 6.0–8.0 group.
+    Previous studies have shown that the number of blastomeres is an effective predictor
+    of blastocyst formation rate and IVF success rate after transfer of cleavage-stage
+    embryos (Kong et al., 2016; Tian et al., 2022). In the present study, conventional
+    morphological assessment comprised a static evaluation on day 3 (68 h) after insemination.
+    Previous studies showed that an increased blastomere number on day 3 was correlated
+    with a higher blastocyst formation rate (Yu et al., 2018) and associated with
+    a higher live birth rate (Tian et al., 2022; Wu et al., 2020). For embryos of
+    the same morphological grade, usable embryos with eight blastomeres or more were
+    selected preferentially. The difference in AUC values between the <8c and ≥8c
+    groups using iDAScore was'
+  md: '
+
+    ![](img/82ad054bb53b906240826eecb039e07b_4_0.png)
+
+
+    ![](img/82ad054bb53b906240826eecb039e07b_4_1.png)
+
+
+    ### FIGURE 1 Distribution of embryos and fetal heartbeat (FHB) rate according
+    to iDAScore. (a) Data presented as % of total embryos [all n = 7786, single-embryo
+    transfer (SET) n = 870; double-embryo transfer (DET) n = 6916]. (b) Data presented
+    as % of embryos within scoring group.
+
+
+    were 0.62 for iDAScore and 0.60 for conventional morphological assessment, with
+    a significant difference between the two methods (P = 0.005). For the subgroups
+    of SET and DET, AUC values for iDAScore were significantly greater than those
+    for conventional morphological assessment (SET 0.63 versus 0.60, P = 0.043; DET
+    0.61 versus 0.59, P = 0.012). To better compare the performance of the two embryo
+    assessment methods, age-related differences were taken into account. For women
+    aged <35 years, the AUC value for iDAScore was significantly higher compared with
+    conventional morphological assessment (0.62 versus 0.60; P = 0.009). For women
+    aged ≥35 years, AUC values were 0.60 for iDAScore and 0.59 for conventional morphological
+    assessment; these values were not significantly different.
+
+
+    To investigate the influence of the number of blastomeres, the AUC values were
+    compared between the subgroups <8c and ≥8c for iDAScore and conventional morphological
+    assessment. AUC values of 0.67 for iDAScore and 0.56 for conventional morphological
+    assessment were found for the <8c group. For the ≥8c group, AUC values were 0.58
+    for iDAScore and 0.55 for conventional morphological assessment. AUC values for
+    iDAScore were thus significantly greater than those for conventional morphological
+    assessment in both the <8c (P < 0.001) and ≥8c groups (P = 0.012).
+
+
+    ## DISCUSSION
+
+
+    This retrospective study showed that iDAScore Version 2.0 is able to predict FHB
+    as well as, or better than, conventional morphological assessment. For transferred
+    embryos with the same morphological grade, the FHB rate increased with the increase
+    in iDAScore. This suggests that day 3 embryo selection based on iDAScore may achieve
+    a higher FHB rate, and is safe and robust compared with conventional morphological
+    assessment.
+
+
+    A significant difference in the quality of transferred embryos was found between
+    SET and DET cycles. The majority of transferred embryos in SET cycles were of
+    lower morphological quality compared with DET cycles. This may be related to the
+    in-house procedure for SET allocation in the study clinic. Although there were
+    no differences overall between SET and DET cycles in the observed FHB rate for
+    embryos with KID within different iDAScore groups, it should be noted that the
+    above analysis was based on embryos with KID, and the actual FHB rates were lower
+    when DET cycles with only one FHB were included. However, the model performance
+    for embryos with KID did not depend upon whether one or two embryos were selected
+    for transfer. Hence, the model could also be used for patient counselling to determine
+    how many embryos should be transferred.
+
+
+    | Morphological grade | All iDAScore (2.0–8.0) | iDAScore (2.0–3.9) | iDAScore
+    (4.0–5.9) | iDAScore (6.0–8.0) |
+
+    | --- | --- | --- | --- | --- |
+
+    | All | 40.10 | 25.91 | 43.88 | 48.34 |
+
+    | A* (n = 3212) | 48.38 | 40.00 | 46.98 | 51.64 |
+
+    | A (n = 145) | 28.28 | 23.08 | 30.65 | 29.55 |
+
+    | B* (n = 1958) | 43.67 | 34.73 | 45.35 | 47.04 |
+
+    | B (n = 399) | 23.56 | 14.00 | 30.37 | 39.06 |
+
+    | C* (n = 1277) | 34.61 | 26.81 | 44.53 | 39.38 |
+
+    | C (n = 795) | 17.11 | 13.34 | 27.04 | 31.82 |
+
+
+    Data presented as % of embryos within scoring group.
+
+    For statistical comparisons, see Table S1 (online supplementary material).
+
+
+    ### TABLE 4 COMPARISON OF AREA UNDER THE CURVE VALUES BETWEEN THE IDASCORE MODEL
+    AND MORPHOLOGICAL GRADE
+
+
+    | AUC value | iDAScore | Morphological grade | P-value |
+
+    | --- | --- | --- | --- |
+
+    | All | 0.62 | 0.60 | 0.005^a |
+
+    | Subgroup analysis | | | |
+
+    | SET | 0.63 | 0.60 | 0.043^a |
+
+    | DET | 0.61 | 0.59 | 0.012^a |
+
+    | Age <35 years | 0.62 | 0.60 | 0.009^a |
+
+    | Age ≥35 years | 0.60 | 0.59 | 0.609^a |
+
+    | No. of blastomeres <8c | 0.67 | 0.56 | <0.001^a |
+
+    | No. of blastomeres ≥8c | 0.58 | 0.55 | 0.012^a |
+
+
+    AUC values were calculated for all transferred embryos as well as subgroups based
+    on number of embryos transferred, patient age and number of blastomeres at transfer.
+
+    ^a DeLong''s two-tailed test.
+
+    AUC, area under the curve; SET, single-embryo transfer; DET, double-embryo transfer.
+
+
+    cleaved embryos with the worst morphological grade was 20.4% in patients aged
+    ≥35 years and 12% in patients aged ≥41 years (Munné et al., 2007). However, for
+    elderly patients, the number of embryos available for transfer is usually limited,
+    and embryos with higher developmental potential can be selected more easily based
+    on morphological assessment. In addition, day 3 embryo morphological grade was
+    associated with euploidy in elderly patients (Moayeri et al., 2008). Therefore,
+    there is a possibility that there was no significant difference in FHB prediction
+    performance between iDAScore and conventional morphological assessment in patients
+    aged ≥35 years. Furthermore, although cleavage-stage embryo morphological grade
+    was associated with a higher blastocyst formation rate (Liu et al., 2022), the
+    pregnancy rate derived from high-quality blastocysts was independent of their
+    morphological grade at cleavage stage (Herbemont et al., 2017; Zilberberg et al.,
+    2021). Therefore, the predictive value of conventional morphological assessment
+    for identifying cleavage-stage embryos with higher implantation potential remains
+    limited.
+
+
+    Previous studies on day 5+ transfers have shown that iDAScore Version 1.0 performed
+    as well as, or better than, blastocyst morphological assessment after a single
+    vitrified blastocyst transfer (Ueno et al., 2021), and that iDAScore Version 1.0
+    was positively correlated with the live birth rate and negatively correlated with
+    the abortion rate (Ueno et al., 2022).
+
+
+    Although the authors in the aforementioned studies used iDAScore Version 1.0,
+    which was independently validated in the vitrified blastocyst transfer cycles,
+    the results were concordant with the current findings, showing that iDAScore performed
+    better than conventional morphological assessment in pregnancy prediction in fresh
+    day 3 embryo transfer cycles (as also observed with iDAScore Version 2.0). However,
+    the AUC value of 0.62 for fresh day 3 embryo transfer found in this study could
+    not be compared directly with previous studies for iDAScore; for example, the
+    AUC value of 0.70 reported for Kato Ladies Clinic (Ueno et al., 2021) was based
+    on day 5 and day 6 blastocyst transfers. Nevertheless, the lower AUC value should
+    not be considered a decline in predictive performance for iDAScore Versions 1.0
+    and 2.0, but rather as the result of differences in the specific populations used
+    for validation (Kragh et al., 2021). In addition, a lower AUC value for cleavage-stage
+    transfer compared with blastocyst transfer was expected due to the availability
+    of less information for day 3 embryos compared with embryos after extended incubation.
+    In addition, it should be noted that, regarding internal validation data, iDAScore
+    Version 2.0 exhibited an AUC value of 0.62 for fresh day 3 transfers (Lassen et
+    al., 2022).
+
+
+    The subgroup analysis by maternal age revealed that FHB prediction performance
+    using iDAScore was significantly higher than that using conventional morphological
+    assessment in women aged <35 years, but did not differ in women aged ≥35 years.
+    This suggests that the selection of embryos using iDAScore Version 2.0 was likely
+    to be more beneficial in younger patients. A previous study showed that the best
+    embryos morphologically had a 44% euploidy rate, while the worst embryos morphologically
+    had a 30% euploidy rate in patients aged <35 years (Munné et al., 2007). In addition,
+    day 3 embryo morphology predicted euploidy in women of advanced maternal age but
+    not in younger patients, who may have other factors responsible for embryo dysmorphism
+    (Moayeri et al., 2008). Thus, morphological assessment has reduced ability to
+    select euploid embryos in younger patients, and several good-quality embryos are
+    usually obtained in a single oocyte retrieval cycle for these younger patients.
+    The present study also showed that embryos with higher iDAScores had higher implantation
+    potential among embryos with similar morphological grades. This result suggests
+    that performance of iDAScore for the prediction of FHB may be less dependent on
+    embryo morphology than conventional morphological assessment in younger patients.
+    On the other hand, it is well known that aneuploidy increases with maternal age.
+    For example, a previous study showed that the euploidy rate of
+
+
+    The subgroup analysis based on the number of blastomeres revealed that FHB prediction
+    performance of iDAScore was significantly higher compared with that of conventional
+    morphological assessment in the <8c and ≥8c groups. The only exception was for
+    subgroup A; however, it is postulated that the small sample size may have contributed
+    to this difference for morphological subgroup A, with only 39 cases in the iDAScore
+    2.0–3.9 group, 62 cases in the 4.0–5.9 group, and 44 cases in the 6.0–8.0 group.
+    Previous studies have shown that the number of blastomeres is an effective predictor
+    of blastocyst formation rate and IVF success rate after transfer of cleavage-stage
+    embryos (Kong et al., 2016; Tian et al., 2022). In the present study, conventional
+    morphological assessment comprised a static evaluation on day 3 (68 h) after insemination.
+    Previous studies showed that an increased blastomere number on day 3 was correlated
+    with a higher blastocyst formation rate (Yu et al., 2018) and associated with
+    a higher live birth rate (Tian et al., 2022; Wu et al., 2020). For embryos of
+    the same morphological grade, usable embryos with eight blastomeres or more were
+    selected preferentially. The difference in AUC values between the <8c and ≥8c
+    groups using iDAScore was
+
+    '
+  mdcn: '
+
+    ![](img/82ad054bb53b906240826eecb039e07b_4_0.png)
+
+
+    ![](img/82ad054bb53b906240826eecb039e07b_4_1.png)
+
+
+    ### 图 1 根据 iDAScore 的胚胎和胎儿心跳（FHB）率分布。(a) 数据以总胚胎数的百分比呈现 [所有 n = 7786，单胚胎移植（SET）n
+    = 870；双胚胎移植（DET）n = 6916]。(b) 数据以评分组内胚胎的百分比呈现。
+
+
+    iDAScore 为 0.62，常规形态学评估为 0.60，两种方法之间存在显著差异（P = 0.005）。对于 SET 和 DET 亚组，iDAScore
+    的 AUC 值显著高于常规形态学评估（SET 0.63 对比 0.60，P = 0.043；DET 0.61 对比 0.59，P = 0.012）。为了更好地比较两种胚胎评估方法的性能，已考虑年龄相关差异。对于年龄
+    <35 岁的女性，iDAScore 的 AUC 值显著高于常规形态学评估（0.62 对比 0.60；P = 0.009）。对于年龄 ≥35 岁的女性，iDAScore
+    的 AUC 值为 0.60，常规形态学评估为 0.59；这两个值没有显著差异。
+
+
+    为了探讨胚胎球数的影响，比较了 iDAScore 和常规形态学评估在 <8c 和 ≥8c 亚组之间的 AUC 值。<8c 组的 iDAScore AUC 值为
+    0.67，常规形态学评估为 0.56。≥8c 组的 iDAScore AUC 值为 0.58，常规形态学评估为 0.55。因此，iDAScore 的 AUC
+    值在 <8c（P < 0.001）和 ≥8c（P = 0.012）两组中均显著高于常规形态学评估。
+
+
+    ## 讨论
+
+
+    这项回顾性研究表明，iDAScore 版本 2.0 可预测 FHB，其效果与常规形态学评估相当，甚至更好。对于形态学等级相同的移植胚胎，FHB 率随 iDAScore
+    的增加而增加。这表明，基于 iDAScore 的第 3 天胚胎选择可能达到更高的 FHB 率，并且与常规形态学评估相比是安全且可靠的。
+
+
+    SET 和 DET 周期中移植胚胎的质量存在显著差异。与 DET 周期相比，SET 周期中大多数移植胚胎的形态学质量较低。这可能与研究诊所中 SET 分配的内部流程有关。尽管在不同
+    iDAScore 组中，具有 KID 的胚胎的观察 FHB 率在 SET 和 DET 周期之间总体上没有差异，但应注意，上述分析基于具有 KID 的胚胎，并且当仅有一个
+    FHB 的 DET 周期被纳入时，实际的 FHB 率较低。然而，具有 KID 的胚胎的模型性能并不取决于选择移植一个还是两个胚胎。因此，该模型也可用于患者咨询，以确定应移植多少个胚胎。
+
+
+    | 形态学等级 | 所有 iDAScore (2.0–8.0) | iDAScore (2.0–3.9) | iDAScore (4.0–5.9) | iDAScore
+    (6.0–8.0) |
+
+    | --- | --- | --- | --- | --- |
+
+    | 所有 | 40.10 | 25.91 | 43.88 | 48.34 |
+
+    | A* (n = 3212) | 48.38 | 40.00 | 46.98 | 51.64 |
+
+    | A (n = 145) | 28.28 | 23.08 | 30.65 | 29.55 |
+
+    | B* (n = 1958) | 43.67 | 34.73 | 45.35 | 47.04 |
+
+    | B (n = 399) | 23.56 | 14.00 | 30.37 | 39.06 |
+
+    | C* (n = 1277) | 34.61 | 26.81 | 44.53 | 39.38 |
+
+    | C (n = 795) | 17.11 | 13.34 | 27.04 | 31.82 |
+
+
+    数据以评分组内胚胎的百分比呈现。
+
+    统计比较见表 S1（在线补充材料）。
+
+
+    ### 表 4 iDAScore 模型与形态学等级之间曲线下面积值的比较
+
+
+    | AUC 值 | iDAScore | 形态学等级 | P 值 |
+
+    | --- | --- | --- | --- |
+
+    | 所有 | 0.62 | 0.60 | 0.005^a |
+
+    | 亚组分析 | | | |
+
+    | SET | 0.63 | 0.60 | 0.043^a |
+
+    | DET | 0.61 | 0.59 | 0.012^a |
+
+    | 年龄 <35 岁 | 0.62 | 0.60 | 0.009^a |
+
+    | 年龄 ≥35 岁 | 0.60 | 0.59 | 0.609^a |
+
+    | 胚胎球数 <8c | 0.67 | 0.56 | <0.001^a |
+
+    | 胚胎球数 ≥8c | 0.58 | 0.55 | 0.012^a |
+
+
+    AUC 值已针对所有移植胚胎以及基于移植胚胎数量、患者年龄和移植时胚胎球数的亚组进行计算。
+
+    ^a DeLong 的双侧检验。
+
+    AUC，曲线下面积；SET，单胚胎移植；DET，双胚胎移植。
+
+
+    年龄 ≥35 岁患者中形态学等级最差的裂割胚胎比例为 20.4%，年龄 ≥41 岁患者中为 12%（Munné et al., 2007）。然而，对于高龄患者，可用于移植的胚胎数量通常有限，且基于形态学评估更容易选择具有更高发育潜能的胚胎。此外，第
+    3 天胚胎的形态学等级与高龄患者的正倍体相关（Moayeri et al., 2008）。因此，在年龄 ≥35 岁的患者中，iDAScore 与常规形态学评估在
+    FHB 预测性能上可能不存在显著差异。此外，尽管裂割期胚胎的形态学等级与更高的囊胚形成率相关（Liu et al., 2022），但来自高质量囊胚的妊娠率与其在裂割期的形态学等级无关（Herbemont
+    et al., 2017; Zilberberg et al., 2021）。因此，常规形态学评估用于识别具有更高着床潜能的裂割期胚胎的预测价值仍然有限。
+
+
+    关于第 5 天及以后移植的先前研究表明，iDAScore 版本 1.0 在单次玻璃化囊胚移植后的表现与囊胚形态学评估相当或更好（Ueno et al., 2021），并且
+    iDAScore 版本 1.0 与活产率呈正相关，与流产率呈负相关（Ueno et al., 2022）。
+
+
+    尽管上述研究的作者使用了 iDAScore 版本 1.0（该版本在玻璃化囊胚移植周期中经过独立验证），但结果与本研究发现一致，表明 iDAScore 在新鲜第
+    3 天胚胎移植周期的妊娠预测中优于常规形态学评估（iDAScore 版本 2.0 也观察到了同样的情况）。然而，本研究中新鲜第 3 天胚胎移植的 AUC 值
+    0.62 不能直接与之前关于 iDAScore 的研究相比较；例如，Kato Ladies Clinic（Ueno et al., 2021）报告的 0.70
+    AUC 值基于第 5 天和第 6 天囊胚移植。尽管如此，较低的 AUC 值不应被视为 iDAScore 版本 1.0 和 2.0 预测性能的下降，而应视为用于验证的特定人群存在差异的结果（Kragh
+    et al., 2021）。此外，由于与经过延长培养的胚胎相比，第 3 天胚胎可用的信息较少，因此裂割期移植相比囊胚移植出现较低 AUC 值是可以预期的。此外，应注意，关于内部验证数据，iDAScore
+    版本 2.0 对新鲜第 3 天移植表现出 0.62 的 AUC 值（Lassen et al., 2022）。
+
+
+    按母亲年龄进行的亚组分析表明，在年龄 <35 岁的女性中，使用 iDAScore 进行的 FHB 预测性能显著高于常规形态学评估，但在年龄 ≥35 岁的女性中没有差异。这表明，使用
+    iDAScore 版本 2.0 选择胚胎可能对年轻患者更有益。一项先前的研究表明，在年龄 <35 岁的患者中，形态学最好的胚胎具有 44% 的正倍体率，而形态学最差的胚胎具有
+    30% 的正倍体率（Munné et al., 2007）。此外，第 3 天胚胎形态学预测了高龄孕妇的正倍体，但不预测年轻患者的正倍体，年轻患者可能有其他导致胚胎畸形的因素（Moayeri
+    et al., 2008）。因此，形态学评估在年轻患者中选择正倍体胚胎的能力降低，这些年轻患者在单个取卵周期中通常会获得几个高质量胚胎。本研究还表明，在形态学等级相似的胚胎中，iDAScore
+    较高的胚胎具有更高的着床潜能。这一结果表明，在年轻患者中，iDAScore 预测 FHB 的性能可能比常规形态学评估更少依赖于胚胎形态学。另一方面，众所周知，非整倍体随母亲年龄增加而增加。例如，一项先前的研究表明，正倍体率的
+
+
+    基于胚胎球数的亚组分析表明，在 <8c 和 ≥8c 组中，iDAScore 的 FHB 预测性能显著高于常规形态学评估。唯一例外是亚组 A；然而，推测小样本量可能导致了形态学亚组
+    A 中的这种差异，其中 iDAScore 2.0–3.9 组仅有 39 例，4.0–5.9 组有 62 例，6.0–8.0 组有 44 例。先前的研究表明，胚胎球数是裂割期胚胎移植后囊胚形成率和
+    IVF 成功率的有效预测因子（Kong et al., 2016; Tian et al., 2022）。在本研究中，常规形态学评估包括受精后第 3 天（68
+    小时）的静态评估。先前的研究表明，第 3 天胚胎球数增加与更高的囊胚形成率相关（Yu et al., 2018），并与更高的活产率相关（Tian et al.,
+    2022; Wu et al., 2020）。对于形态学等级相同的胚胎，优先选择具有八个或以上胚胎球的可用胚胎。使用 iDAScore 时，<8c 和 ≥8c
+    组之间的 AUC 值差异为
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 6]
+
+
+    greater than that for conventional morphological assessment. The number of blastomeres
+    may have a greater impact on iDAScore than morphological assessment, which is
+    one possible explanation for this result. A higher iDAScore was a better predictor
+    of FHB than morphological grade for embryos with fewer blastomeres, but it may
+    be challenging for iDAScore to distinguish between embryos with higher development
+    potential among embryos with more blastomeres. Thus, it is postulated that the
+    number of blastomeres may constitute an important predictor in the iDAScore model.
+    iDAScore has been trained to score embryos automatically based on images of embryos
+    with KID, and the score is correlated with the likelihood of successful implantation.
+    A previous study showed that although iDAScore was not trained to assess embryonic
+    development and morphology directly, the model may have learned indirectly that
+    the number of blastomeres is important for implantation (Berntsen et al., 2022).
+    Thus, iDAScore may use both temporal developmental patterns and static morphological
+    information from each image in the time-lapse sequence.
+
+
+    Extending embryo culture to the blastocyst stage may be a simple way to select
+    embryos with higher development potential (Li et al., 2021; Wang et al., 2021).
+    However, blastocyst culture may not be necessary or suitable for every patient,
+    particularly for patients who may not have blastocysts available for transfer
+    on day 5 or day 6. A randomized controlled study conducted by Levi-Setti et al.
+    supported a SET policy – even at cleavage stage – for patients aged <39 years
+    who produced at least four zygotes (Levi-Setti et al., 2018). Furthermore, elective
+    SET has been adopted routinely to minimize the high risk of multiple pregnancy
+    in patients with a good prognosis (Practice Committee of the American Society
+    for Reproductive Medicine, 2018). For conventional morphological assessment, the
+    retrospective FHB rate for day 3 embryo transfer was still acceptable, while the
+    FHB rate may have been elevated after introduction of iDAScore Version 2.0. There
+    is a need to conduct a well-designed, large, randomized controlled trial comparing
+    iDAScore Version 2.0 with conventional morphological assessment for day 3 embryo
+    selection in order to confirm the performance of the AI assessment model.
+
+
+    Strengths of this study include its novelty and the relatively large sample size.
+    To the
+
+
+    best of the authors’ knowledge, this is the first external validation study to
+    assess the pregnancy-prediction performance of AI-based day 3 embryo assessment
+    compared with conventional morphological assessment. The present analysis included
+    a large dataset for external validation of iDAScore Version 2.0, involving 4328
+    embryo transfer cycles with a total of 7786 embryos transferred. In addition,
+    the embryos transferred in this study were all autologous fresh day 3 embryos
+    and not frozen embryos.
+
+
+    However, the findings are limited by potential confounding due to the retrospective
+    nature of the study. Firstly, all analysed embryos were selected based on morphological
+    assessment. Although conventional morphological assessment is a widely used grading
+    system, it is a subjective method that is susceptible to interobserver variation.
+    Secondly, among embryos with the same morphological grade, those with eight blastomeres
+    or more were selected for transfer in this study, which could have led to a higher
+    AUC value for conventional morphological assessment. Therefore, further external
+    validation with larger SET datasets from other centres is needed.
+
+
+    # CONCLUSIONS
+
+
+    Objective embryonic assessment employing a completely automatic and annotation-free
+    program based on deep learning and time-lapse imaging (i.e. iDAScore Version 2.0)
+    performed as well as, or better than, conventional morphological assessment of
+    fresh day 3 embryo transfer cycles. iDAScore Version 2.0 may therefore constitute
+    a promising tool for selecting day 3 embryos with the highest likelihood of implantation.
+    The time required for embryo selection may be reduced considerably by fully automated
+    evaluation systems, which can also eliminate subjectivity. Therefore, iDAScore
+    can be used as a decision support system to assist embryologists in embryo selection.
+
+
+    # DATA AVAILABILITY
+
+
+    Data will be made available on request.
+
+
+    # ACKNOWLEDGEMENTS
+
+
+    The authors wish to thank Jørgen Berntsen, Vitrolife for valuable
+
+
+    suggestions and discussions on the manuscript. In addition, the authors would
+    like to thank their colleagues who helped with the study and data collection.
+
+
+    # FUNDING
+
+
+    This work was supported by Chongqing Health Centre for Women and Children (Grant
+    No. 2020YJQN09), Basic Research and Frontier Exploration Project of Yuzhong District,
+    Chongqing (Grant No. 20190143) and Chongqing Health Committee (Grant No. 2021MSXM108)
+
+
+    # SUPPLEMENTARY MATERIALS
+
+
+    Supplementary material associated with this article can be found in the online
+    version at doi:10.1016/j.rbmo.2023.05.014.'
+  - '[PAGE 7]
+
+
+    # REFERENCES
+
+
+    Adamson, G.D., Abusief, M.E., Palao, L., Witmer, J., Palao, L.M., Gvakharia, M.,
+    2016. Improved implantation rates of day 3 embryo transfers with the use of an
+    automated time-lapse-enabled test to aid in embryo selection. Fertil. Steril.
+    105, 369–375. https://doi.org/10.1016/j.fertnstert.2015.10.030. e6.
+
+    ALPHA Scientists in Reproductive Medicine, ESHRE Special Interest Group Embryology,
+    2011. Istanbul consensus workshop on embryo assessment: proceedings of an expert
+    meeting Reprod. Biomed. Online. 22, 632–646. https://doi.org/10.1016/j.rbmo.2011.02.001.
+
+    Basile, N., Vime, P., Florensa, M., Aparicio Ruiz, B., García Velasco, J.A., Remohi,
+    J., Meseguer, M., 2015. The use of morphokinetics as a predictor of implantation:
+    a multicentric study to define and validate an algorithm for embryo selection.
+    Hum. Reprod. 30, 276–283. https://doi.org/10.1093/humrep/deu331.
+
+    Bernmt, J., Remstji, J., Lassen, J.T., Tran, D., Krahg, M.F., 2022. Robust and
+    generalizable embryo selection based on artificial intelligence and time-lapse
+    image sequences. PLoS One. 17, e0262661. https://doi.org/10.1371/journal.pone.0262661.
+
+    Coticchio, G., Magnini Renzi, M., Novara, P.V., Lain, M., De Ponti, E., Turchi,
+    D., Fadini, R., Canto, Dal, 2018. M. Focused time-lapse analysis reveals novel
+    aspects of human fertilization and suggests new parameters of embryo viability.
+    Hum. Reprod. 33, 23–31. https://doi.org/10.1093/humrep/dex344.
+
+    Delong, E.R., DeLong, D.M., Clarke-Pearson, D.L., 1988. Comparing the areas under
+    two or more correlated receiver operating characteristic curves: a nonparametric
+    approach. Biometrics 44, 837–845. PMID: 3203132.
+
+    Goodman, L.R., Goldberg, J., Falcone, T., Austin, C., Desai, N., 2016. Does the
+    addition of time-lapse morphokinetics in the selection of embryos for transfer
+    improve pregnancy rates? A randomized controlled trial. Fertil. Steril. 105, 275–285.
+    https://doi.org/10.1016/j.fertnstert.2015.10.013. e10.
+
+    Herbemont, C., Sarandi, S., Boujenah, J., Cedrin-Durnerin, I., Sermentonde, N.,
+    Vivot, A., Poculet, C., Grynberg, M., Sifer, C., 2017. Should we consider day-2
+    and day-3 embryo morphology before day-5 transfer when blastocysts reach a similar
+    good quality? Reprod. Biomed. Online 35, 521–528. https://doi.org/10.1016/j.rbmo.2017.07.014.
+
+    Kalleas, D., McEvoy, K., Horne, G., Roberts, S.A., Brison, D.R., 2022. Live birth
+    rate following undisturbed embryo culture at low oxygen in a time-lapse incubator
+    compared to a high-quality benchtop incubator. Hum. Fertil. 25, 147–153. https://doi.org/10.1080/14647273.2020.1729423.
+
+    Kong, X., Yang, S., Gong, F., Lu, C., Zhang, S., Lu, G., Lin, G., 2016. The Relationship
+    between Cell Number, Division Behavior and
+
+
+    Developmental Potential of Cleavage Stage Human Embryos: A Time-Lapse Study. PLoS
+    One. 11, e0153697. https://doi.org/10.1371/journal.pone.0153697.
+
+    Krahg, M.F., Karlströft, H., 2021. Embryo selection with artificial intelligence:
+    how to evaluate and compare methods? J. Assist. Reprod. Genet. 38, 1675–1689.
+    https://doi.org/10.1007/s10815-021-02254-6.
+
+    Lassen, J.T., Krahg, M.F., Rimstad, J., Johansen, M., Bertsen, J. Development
+    and validation of deep learning based embryo selection across multiple days of
+    transfer. https://arxiv.org/abs...
+
+    Levi-Setti, P.E., Cirillo, F., Smeraldi, A., Morenghi, E., Mulazzani, G., Albani,
+    E., 2018. No advantage of fresh blastocyst versus cleavage stage embryo transfer
+    in women under the age of 39: a randomized controlled study. J. Assist. Reprod.
+    Genet. 35, 467–465. https://doi.org/10.1007/s10815-017-1092-2.
+
+    Li, Y., Liu, S., Lv, Q., 2021. Single blastocyst stage versus single cleavage
+    stage embryo transfer following fresh transfer: A systematic review and meta-analysis.
+    Eur. J. Obstet. Gynecol. Reprod. Biol. 267, 11–17. https://doi.org/10.1016/j.ejogrb.2021.10.004.
+
+    Liu, J., Zhou, Y., Tong, L., Wang, X., Li, Y., Wang, H., 2022. Developmental potential
+    of different embryos on day 3: a retrospective study. J. Obstet. Gynaecol. 42,
+    3322–3327. https://doi.org/10.1080/01443615.2022.2125291.
+
+    Liu, Y., Chappie, V., Feenan, K., Roberts, P., Matson, P., 2016. Time-lapse deselection
+    model for human day 3 in vitro fertilization embryos: the combination of qualitative
+    and quantitative measures of embryo growth. Fertil. Steril. 105, 656–662.e1. https://doi.org/10.1016/j.fertnstert.2015.11.003.
+
+    Liu, Y., Qi, F., Matson, P., Morbeck, D.E., Mol, B.W., Zhao, S., Afnan, M., 2020.
+    Between-laboratory reproducibility of time-lapse embryo selection using qualitative
+    and quantitative parameters: a systematic review and meta-analysis. J. Assist.
+    Reprod. Genet. 37, 1295–1302. https://doi.org/10.1007/s10815-020-01789-4.
+
+    Lundin, K., Park, H., 2020. Time-lapse technology for embryo culture and selection.
+    Ups. J. Med Sci. 125, 77–84. https://doi.org/10.1080/03009734.2020.1728444.
+
+    Moyeren, S.E., Allen, R.B., Brewster, W.R., Kim, M.H., Porto, M., Werlin, L.B.,
+    2008. Day-3 embryo morphology predicts euploidy among older subjects. Fertil.
+    Steril. 89, 118–123. https://doi.org/10.1016/j.fertnstert.2007.01.169.
+
+    Munné, S., Chen, S., Colls, P., Garrisi, J., Zheng, X., Cekleniak, N., Lenzi,
+    M., Hughes, P., Fischer, J., Garbis, M., Tomkin, G., Cohen, J., 2007. Maternal
+    age, morphology, development and chromosome abnormalities in over 6000 cleavage-stage
+    embryos. Reprod. Biomed. Online. 14, 62–68. https://doi.org/10.1016/s1472-6483(10)61057-7.
+
+    Obuchowski, N.A., 1997. Nonparametric analysis of clustered ROC curve data. Biometrics
+    53, 567–578. PMID: 9192452.
+
+
+    Practice Committee of the American Society for Reproductive Medicine, 2018. Practice
+    Committee of the Society for Assisted Reproductive Technology. Electronic address:
+    asrm@asrm.org. Blastocyst culture and transfer in clinically assisted reproduction:
+    a committee opinion. Fertil. Steril. 110, 1246–1252. https://doi.org/10.1016/j.fertnstert.2018.09.011.
+
+    Tian, L., Xia, L., Liu, J., Kuo, Y., Huang, Z., Wu, X., Fan, L., Huang, J., Wu,
+    Q., 2022. Increased blastomere number is associated with higher live birth rate
+    in day 3 embryo transfer. BMC Pregnancy Childbirth 22, 198. https://doi.org/10.1186/s12884-022-04521-5.
+
+    Tran, D., Cooke, S., Illingworth, P.J., Gardner, D.K., 2019. Deep learning as
+    a predictive tool for fetal heart pregnancy following time-lapse incubation and
+    blastocyst transfer. Hum. Reprod. 34, 1011–1018. https://doi.org/10.1093/humrep/dez064.
+
+    Ueno, S., Berntsen, J., Ito, M., Okiura, T., Kato, K., 2022. Correlation between
+    an annotation-free embryo scoring system based on deep learning and live birth/neonatal
+    outcomes after single vitrified-warmed blastocyst transfer: a single-centre, large
+    cohort retrospective study. J. Assist. Reprod. Genet. 39, 2089–2099. https://doi.org/10.1007/s10815-022-02562-5.
+
+    Ueno, S., Berntsen, J., Ito, M., Uchiyama, K., Okiura, T., Yabuchi, A., Kato,
+    K., 2021. Pregnancy prediction performance of an annotation-free embryo scoring
+    system on the basis of deep learning after single vitrified-warmed blastocyst
+    transfer: a single-center large cohort retrospective study. Fertil. Steril. 116,
+    1172–1180. https://doi.org/10.1016/j.fertnstert.2021.06.001.
+
+    Wang, N., Zhao, X., Ma, M., Zhu, Q., Wang, Y., 2021. Effect of Day 3 and Day 5/6
+    Embryo Quality on the Reproductive Outcomes in the Single Vitrified Embryo Transfer
+    Cycles. Front. Endocrinol. 12, 641623. https://doi.org/10.3389/fendo.2021.641623.
+
+    Wu, J., Zhang, J., Kuang, Y., Chen, Q., Wang, Y., 2020. The effect of Day 3 cell
+    number on pregnancy outcomes in vitrified-thawed single blastocyst transfer cycles.
+    Hum. Reprod. 35, 2478–2487. https://doi.org/10.1093/humrep/deaa209.
+
+    Yu, C.H., Zhang, R.P., Li, J., A, Z.C., 2018. A predictive model for high-quality
+    blastocyst based on blastomere number, fragmentation, and symmetry. J. Assist.
+    Reprod. Genet. 35, 809–816. https://doi.org/10.1007/s10815-018-1132-6.
+
+    Zilberberg, E., Casper, R., Meriano, J., Barzilay, E., Aizer, A., Kirshenbaum,
+    M., Orvieto, R., Haas, J., 2021. Cleavage vs blastocyst stage embryos: how are
+    they interrelating? Arch. Gynecol. Obstet. 304, 1083–1088. https://doi.org/10.1007/s00404-021-06003-z.'
+  md: '
+
+    greater than that for conventional morphological assessment. The number of blastomeres
+    may have a greater impact on iDAScore than morphological assessment, which is
+    one possible explanation for this result. A higher iDAScore was a better predictor
+    of FHB than morphological grade for embryos with fewer blastomeres, but it may
+    be challenging for iDAScore to distinguish between embryos with higher development
+    potential among embryos with more blastomeres. Thus, it is postulated that the
+    number of blastomeres may constitute an important predictor in the iDAScore model.
+    iDAScore has been trained to score embryos automatically based on images of embryos
+    with KID, and the score is correlated with the likelihood of successful implantation.
+    A previous study showed that although iDAScore was not trained to assess embryonic
+    development and morphology directly, the model may have learned indirectly that
+    the number of blastomeres is important for implantation (Berntsen et al., 2022).
+    Thus, iDAScore may use both temporal developmental patterns and static morphological
+    information from each image in the time-lapse sequence.
+
+
+    Extending embryo culture to the blastocyst stage may be a simple way to select
+    embryos with higher development potential (Li et al., 2021; Wang et al., 2021).
+    However, blastocyst culture may not be necessary or suitable for every patient,
+    particularly for patients who may not have blastocysts available for transfer
+    on day 5 or day 6. A randomized controlled study conducted by Levi-Setti et al.
+    supported a SET policy – even at cleavage stage – for patients aged <39 years
+    who produced at least four zygotes (Levi-Setti et al., 2018). Furthermore, elective
+    SET has been adopted routinely to minimize the high risk of multiple pregnancy
+    in patients with a good prognosis (Practice Committee of the American Society
+    for Reproductive Medicine, 2018). For conventional morphological assessment, the
+    retrospective FHB rate for day 3 embryo transfer was still acceptable, while the
+    FHB rate may have been elevated after introduction of iDAScore Version 2.0. There
+    is a need to conduct a well-designed, large, randomized controlled trial comparing
+    iDAScore Version 2.0 with conventional morphological assessment for day 3 embryo
+    selection in order to confirm the performance of the AI assessment model.
+
+
+    Strengths of this study include its novelty and the relatively large sample size.
+    To the best of the authors’ knowledge, this is the first external validation study
+    to assess the pregnancy-prediction performance of AI-based day 3 embryo assessment
+    compared with conventional morphological assessment. The present analysis included
+    a large dataset for external validation of iDAScore Version 2.0, involving 4328
+    embryo transfer cycles with a total of 7786 embryos transferred. In addition,
+    the embryos transferred in this study were all autologous fresh day 3 embryos
+    and not frozen embryos.
+
+
+    However, the findings are limited by potential confounding due to the retrospective
+    nature of the study. Firstly, all analysed embryos were selected based on morphological
+    assessment. Although conventional morphological assessment is a widely used grading
+    system, it is a subjective method that is susceptible to interobserver variation.
+    Secondly, among embryos with the same morphological grade, those with eight blastomeres
+    or more were selected for transfer in this study, which could have led to a higher
+    AUC value for conventional morphological assessment. Therefore, further external
+    validation with larger SET datasets from other centres is needed.
+
+
+    ## CONCLUSIONS
+
+
+    Objective embryonic assessment employing a completely automatic and annotation-free
+    program based on deep learning and time-lapse imaging (i.e. iDAScore Version 2.0)
+    performed as well as, or better than, conventional morphological assessment of
+    fresh day 3 embryo transfer cycles. iDAScore Version 2.0 may therefore constitute
+    a promising tool for selecting day 3 embryos with the highest likelihood of implantation.
+    The time required for embryo selection may be reduced considerably by fully automated
+    evaluation systems, which can also eliminate subjectivity. Therefore, iDAScore
+    can be used as a decision support system to assist embryologists in embryo selection.
+
+
+    ## DATA AVAILABILITY
+
+
+    Data will be made available on request.
+
+
+    ## ACKNOWLEDGEMENTS
+
+
+    The authors wish to thank Jørgen Berntsen, Vitrolife for valuable suggestions
+    and discussions on the manuscript. In addition, the authors would like to thank
+    their colleagues who helped with the study and data collection.
+
+
+    ## FUNDING
+
+
+    This work was supported by Chongqing Health Centre for Women and Children (Grant
+    No. 2020YJQN09), Basic Research and Frontier Exploration Project of Yuzhong District,
+    Chongqing (Grant No. 20190143) and Chongqing Health Committee (Grant No. 2021MSXM108)
+
+
+    ## SUPPLEMENTARY MATERIALS
+
+
+    Supplementary material associated with this article can be found in the online
+    version at doi:10.1016/j.rbmo.2023.05.014.
+
+
+    ## REFERENCES
+
+
+    Adamson, G.D., Abusief, M.E., Palao, L., Witmer, J., Palao, L.M., Gvakharia, M.,
+    2016. Improved implantation rates of day 3 embryo transfers with the use of an
+    automated time-lapse-enabled test to aid in embryo selection. Fertil. Steril.
+    105, 369–375. https://doi.org/10.1016/j.fertnstert.2015.10.030. e6.
+
+    ALPHA Scientists in Reproductive Medicine, ESHRE Special Interest Group Embryology,
+    2011. Istanbul consensus workshop on embryo assessment: proceedings of an expert
+    meeting Reprod. Biomed. Online. 22, 632–646. https://doi.org/10.1016/j.rbmo.2011.02.001.
+
+    Basile, N., Vime, P., Florensa, M., Aparicio Ruiz, B., García Velasco, J.A., Remohi,
+    J., Meseguer, M., 2015. The use of morphokinetics as a predictor of implantation:
+    a multicentric study to define and validate an algorithm for embryo selection.
+    Hum. Reprod. 30, 276–283. https://doi.org/10.1093/humrep/deu331.
+
+    Berntsen, J., Rimstad, J., Lassen, J.T., Tran, D., Kragh, M.F., 2022. Robust and
+    generalizable embryo selection based on artificial intelligence and time-lapse
+    image sequences. PLoS One. 17, e0262661. https://doi.org/10.1371/journal.pone.0262661.
+
+    Coticchio, G., Magnini Renzi, M., Novara, P.V., Lain, M., De Ponti, E., Turchi,
+    D., Fadini, R., Canto, Dal, 2018. M. Focused time-lapse analysis reveals novel
+    aspects of human fertilization and suggests new parameters of embryo viability.
+    Hum. Reprod. 33, 23–31. https://doi.org/10.1093/humrep/dex344.
+
+    Delong, E.R., DeLong, D.M., Clarke-Pearson, D.L., 1988. Comparing the areas under
+    two or more correlated receiver operating characteristic curves: a nonparametric
+    approach. Biometrics 44, 837–845. PMID: 3203132.
+
+    Goodman, L.R., Goldberg, J., Falcone, T., Austin, C., Desai, N., 2016. Does the
+    addition of time-lapse morphokinetics in the selection of embryos for transfer
+    improve pregnancy rates? A randomized controlled trial. Fertil. Steril. 105, 275–285.
+    https://doi.org/10.1016/j.fertnstert.2015.10.013. e10.
+
+    Herbemont, C., Sarandi, S., Boujenah, J., Cedrin-Durnerin, I., Sermentonde, N.,
+    Vivot, A., Poculet, C., Grynberg, M., Sifer, C., 2017. Should we consider day-2
+    and day-3 embryo morphology before day-5 transfer when blastocysts reach a similar
+    good quality? Reprod. Biomed. Online 35, 521–528. https://doi.org/10.1016/j.rbmo.2017.07.014.
+
+    Kalleas, D., McEvoy, K., Horne, G., Roberts, S.A., Brison, D.R., 2022. Live birth
+    rate following undisturbed embryo culture at low oxygen in a time-lapse incubator
+    compared to a high-quality benchtop incubator. Hum. Fertil. 25, 147–153. https://doi.org/10.1080/14647273.2020.1729423.
+
+    Kong, X., Yang, S., Gong, F., Lu, C., Zhang, S., Lu, G., Lin, G., 2016. The Relationship
+    between Cell Number, Division Behavior and Developmental Potential of Cleavage
+    Stage Human Embryos: A Time-Lapse Study. PLoS One. 11, e0153697. https://doi.org/10.1371/journal.pone.0153697.
+
+    Kragh, M.F., Karlströft, H., 2021. Embryo selection with artificial intelligence:
+    how to evaluate and compare methods? J. Assist. Reprod. Genet. 38, 1675–1689.
+    https://doi.org/10.1007/s10815-021-02254-6.
+
+    Lassen, J.T., Kragh, M.F., Rimstad, J., Johansen, M., Berntsen, J. Development
+    and validation of deep learning based embryo selection across multiple days of
+    transfer. https://arxiv.org/abs...
+
+    Levi-Setti, P.E., Cirillo, F., Smeraldi, A., Morenghi, E., Mulazzani, G., Albani,
+    E., 2018. No advantage of fresh blastocyst versus cleavage stage embryo transfer
+    in women under the age of 39: a randomized controlled study. J. Assist. Reprod.
+    Genet. 35, 467–465. https://doi.org/10.1007/s10815-017-1092-2.
+
+    Li, Y., Liu, S., Lv, Q., 2021. Single blastocyst stage versus single cleavage
+    stage embryo transfer following fresh transfer: A systematic review and meta-analysis.
+    Eur. J. Obstet. Gynecol. Reprod. Biol. 267, 11–17. https://doi.org/10.1016/j.ejogrb.2021.10.004.
+
+    Liu, J., Zhou, Y., Tong, L., Wang, X., Li, Y., Wang, H., 2022. Developmental potential
+    of different embryos on day 3: a retrospective study. J. Obstet. Gynaecol. 42,
+    3322–3327. https://doi.org/10.1080/01443615.2022.2125291.
+
+    Liu, Y., Chappie, V., Feenan, K., Roberts, P., Matson, P., 2016. Time-lapse deselection
+    model for human day 3 in vitro fertilization embryos: the combination of qualitative
+    and quantitative measures of embryo growth. Fertil. Steril. 105, 656–662.e1. https://doi.org/10.1016/j.fertnstert.2015.11.003.
+
+    Liu, Y., Qi, F., Matson, P., Morbeck, D.E., Mol, B.W., Zhao, S., Afnan, M., 2020.
+    Between-laboratory reproducibility of time-lapse embryo selection using qualitative
+    and quantitative parameters: a systematic review and meta-analysis. J. Assist.
+    Reprod. Genet. 37, 1295–1302. https://doi.org/10.1007/s10815-020-01789-4.
+
+    Lundin, K., Park, H., 2020. Time-lapse technology for embryo culture and selection.
+    Ups. J. Med Sci. 125, 77–84. https://doi.org/10.1080/03009734.2020.1728444.
+
+    Moyeren, S.E., Allen, R.B., Brewster, W.R., Kim, M.H., Porto, M., Werlin, L.B.,
+    2008. Day-3 embryo morphology predicts euploidy among older subjects. Fertil.
+    Steril. 89, 118–123. https://doi.org/10.1016/j.fertnstert.2007.01.169.
+
+    Munné, S., Chen, S., Colls, P., Garrisi, J., Zheng, X., Cekleniak, N., Lenzi,
+    M., Hughes, P., Fischer, J., Garbis, M., Tomkin, G., Cohen, J., 2007. Maternal
+    age, morphology, development and chromosome abnormalities in over 6000 cleavage-stage
+    embryos. Reprod. Biomed. Online. 14, 62–68. https://doi.org/10.1016/s1472-6483(10)61057-7.
+
+    Obuchowski, N.A., 1997. Nonparametric analysis of clustered ROC curve data. Biometrics
+    53, 567–578. PMID: 9192452.
+
+    Practice Committee of the American Society for Reproductive Medicine, 2018. Practice
+    Committee of the Society for Assisted Reproductive Technology. Electronic address:
+    asrm@asrm.org. Blastocyst culture and transfer in clinically assisted reproduction:
+    a committee opinion. Fertil. Steril. 110, 1246–1252. https://doi.org/10.1016/j.fertnstert.2018.09.011.
+
+    Tian, L., Xia, L., Liu, J., Kuo, Y., Huang, Z., Wu, X., Fan, L., Huang, J., Wu,
+    Q., 2022. Increased blastomere number is associated with higher live birth rate
+    in day 3 embryo transfer. BMC Pregnancy Childbirth 22, 198. https://doi.org/10.1186/s12884-022-04521-5.
+
+    Tran, D., Cooke, S., Illingworth, P.J., Gardner, D.K., 2019. Deep learning as
+    a predictive tool for fetal heart pregnancy following time-lapse incubation and
+    blastocyst transfer. Hum. Reprod. 34, 1011–1018. https://doi.org/10.1093/humrep/dez064.
+
+    Ueno, S., Berntsen, J., Ito, M., Okiura, T., Kato, K., 2022. Correlation between
+    an annotation-free embryo scoring system based on deep learning and live birth/neonatal
+    outcomes after single vitrified-warmed blastocyst transfer: a single-centre, large
+    cohort retrospective study. J. Assist. Reprod. Genet. 39, 2089–2099. https://doi.org/10.1007/s10815-022-02562-5.
+
+    Ueno, S., Berntsen, J., Ito, M., Uchiyama, K., Okiura, T., Yabuchi, A., Kato,
+    K., 2021. Pregnancy prediction performance of an annotation-free embryo scoring
+    system on the basis of deep learning after single vitrified-warmed blastocyst
+    transfer: a single-center large cohort retrospective study. Fertil. Steril. 116,
+    1172–1180. https://doi.org/10.1016/j.fertnstert.2021.06.001.
+
+    Wang, N., Zhao, X., Ma, M., Zhu, Q., Wang, Y., 2021. Effect of Day 3 and Day 5/6
+    Embryo Quality on the Reproductive Outcomes in the Single Vitrified Embryo Transfer
+    Cycles. Front. Endocrinol. 12, 641623. https://doi.org/10.3389/fendo.2021.641623.
+
+    Wu, J., Zhang, J., Kuang, Y., Chen, Q., Wang, Y., 2020. The effect of Day 3 cell
+    number on pregnancy outcomes in vitrified-thawed single blastocyst transfer cycles.
+    Hum. Reprod. 35, 2478–2487. https://doi.org/10.1093/humrep/deaa209.
+
+    Yu, C.H., Zhang, R.P., Li, J., A, Z.C., 2018. A predictive model for high-quality
+    blastocyst based on blastomere number, fragmentation, and symmetry. J. Assist.
+    Reprod. Genet. 35, 809–816. https://doi.org/10.1007/s10815-018-1132-6.
+
+    Zilberberg, E., Casper, R., Meriano, J., Barzilay, E., Aizer, A., Kirshenbaum,
+    M., Orvieto, R., Haas, J., 2021. Cleavage vs blastocyst stage embryos: how are
+    they interrelating? Arch. Gynecol. Obstet. 304, 1083–1088. https://doi.org/10.1007/s00404-021-06003-z.
+
+    '
+  mdcn: '
+
+
+    高于常规形态学评估。卵裂球数量可能对 iDAScore 的影响大于形态学评估，这是解释此结果的一种可能原因。对于卵裂球较少的胚胎，较高的 iDAScore
+    比形态学分级更能预测胎心搏，但对于卵裂球较多的胚胎，iDAScore 可能难以区分具有更高发育潜力的胚胎。因此，推测卵裂球数量可能是 iDAScore 模型中的一个重要预测因子。iDAScore
+    已根据带有 KID 的胚胎图像接受训练，以自动为胚胎打分，且该分数与成功植入的可能性相关。先前的一项研究表明，虽然 iDAScore 未经过直接评估胚胎发育和形态的训练，但该模型可能已间接学习到卵裂球数量对植入的重要性（Berntsen
+    et al., 2022）。因此，iDAScore 可能同时利用时序延时成像序列中每张图像的时序发育模式和静态形态学信息。
+
+
+    将胚胎培养延长至囊胚期可能是选择发育潜力更高胚胎的一种简单方法（Li et al., 2021; Wang et al., 2021）。然而，囊胚培养并非对每位患者都必要或合适，特别是对于第
+    5 天或第 6 天可能没有可用于移植的囊胚的患者。Levi-Setti 等人进行的一项随机对照研究支持采用单胚胎移植（SET）政策——即使是在卵裂期——用于年龄<39
+    岁且产生至少四个合子的患者（Levi-Setti et al., 2018）。此外，选择性 SET 已常规采用，以最大限度地降低预后良好患者的多胎妊娠高风险（美国生殖医学学会实践委员会，2018）。对于常规形态学评估，第
+    3 天胚胎移植的回顾性胎心搏率仍可接受，而引入 iDAScore 2.0 版本后胎心搏率可能有所提高。有必要开展一项设计良好、样本量大的随机对照试验，将 iDAScore
+    2.0 版本与常规形态学评估用于第 3 天胚胎选择进行比较，以证实 AI 评估模型的性能。
+
+
+    本研究的优势包括其创新性和相对较大的样本量。据作者所知，这是首个评估基于 AI 的第 3 天胚胎评估与常规形态学评估相比的妊娠预测性能的外部验证研究。本分析纳入了大量数据集，用于对
+    iDAScore 2.0 版本进行外部验证，涉及 4328 个胚胎移植周期，共移植 7786 个胚胎。此外，本研究中移植的胚胎均为自体新鲜第 3 天胚胎，而非冻胚胎。
+
+
+    然而，研究结果受限于回顾性研究的性质可能带来的潜在混杂因素。首先，所有分析的胚胎均基于形态学评估筛选。尽管常规形态学评估是广泛使用的分级系统，但它是一种易受观察者间差异影响的主观方法。其次，在形态学分级相同的胚胎中，本研究选择了卵裂球数量为
+    8 个或以上的胚胎进行移植，这可能导致常规形态学评估的 AUC 值偏高。因此，需要来自其他中心的更大规模 SET 数据集进行进一步的外部验证。
+
+
+    ## 结论
+
+
+    基于深度学习和延时成像的完全自动化、无需标注的程序（即 iDAScore 2.0 版本）的客观胚胎评估，在新鲜第 3 天胚胎移植周期中的表现与常规形态学评估相当或更优。因此，iDAScore
+    2.0 版本可能成为一种有前途的工具，用于选择植入可能性最高的第 3 天胚胎。完全自动化的评估系统可大幅缩短胚胎选择所需时间，并可消除主观性。因此，iDAScore
+    可用作决策支持系统，协助胚胎学家进行胚胎选择。
+
+
+    ## 数据可用性
+
+
+    数据可应要求提供。
+
+
+    ## 致谢
+
+
+    作者谨感谢 Jørgen Berntsen 和 Vitrolife 对手稿提出的宝贵建议和讨论。此外，作者还要感谢在研究和数据收集方面提供帮助的同事。
+
+
+    ## 资助
+
+
+    本工作得到重庆市妇幼保健院（编号：2020YJQN09）、重庆市渝中区基础研究与前沿探索项目（编号：20190143）和重庆市卫生健康委员会（编号：2021MSXM108）的支持。
+
+
+    ## 补充材料
+
+
+    与本文相关的补充材料可在在线版本中找到，DOI: 10.1016/j.rbmo.2023.05.014。
+
+
+    ## 参考文献
+
+
+    Adamson, G.D., Abusief, M.E., Palao, L., Witmer, J., Palao, L.M., Gvakharia, M.,
+    2016. 利用自动延时成像辅助测试助力胚胎选择可改善第 3 天胚胎移植的植入率。Fertil. Steril. 105, 369–375. https://doi.org/10.1016/j.fertnstert.2015.10.030.
+    e6.
+
+
+    ALPHA Scientists in Reproductive Medicine, ESHRE Special Interest Group Embryology,
+    2011. 胚胎评估伊斯坦布尔共识研讨会：专家会议论文集。Reprod. Biomed. Online. 22, 632–646. https://doi.org/10.1016/j.rbmo.2011.02.001.
+
+
+    Basile, N., Vime, P., Florensa, M., Aparicio Ruiz, B., García Velasco, J.A., Remohi,
+    J., Meseguer, M., 2015. 利用形态动力学作为植入预测因子：一项多中心研究以定义和验证胚胎选择算法。Hum. Reprod. 30, 276–283.
+    https://doi.org/10.1093/humrep/deu331.
+
+
+    Berntsen, J., Rimstad, J., Lassen, J.T., Tran, D., Kragh, M.F., 2022. 基于人工智能和延时图像序列的稳健且可推广的胚胎选择。PLoS
+    One. 17, e0262661. https://doi.org/10.1371/journal.pone.0262661.
+
+
+    Coticchio, G., Magnini Renzi, M., Novara, P.V., Lain, M., De Ponti, E., Turchi,
+    D., Fadini, R., Canto, Dal, 2018. M. 聚焦延时分析揭示人类受精的新方面，并提出胚胎活力的新参数。Hum. Reprod.
+    33, 23–31. https://doi.org/10.1093/humrep/dex344.
+
+
+    Delong, E.R., DeLong, D.M., Clarke-Pearson, D.L., 1988. 比较两个或多个相关受试者工作特征曲线下面积：一种非参数方法。Biometrics
+    44, 837–845. PMID: 3203132.
+
+
+    Goodman, L.R., Goldberg, J., Falcone, T., Austin, C., Desai, N., 2016. 在胚胎移植选择中添加延时形态动力学是否能改善妊娠率？一项随机对照试验。Fertil.
+    Steril. 105, 275–285. https://doi.org/10.1016/j.fertnstert.2015.10.013. e10.
+
+
+    Herbemont, C., Sarandi, S., Boujenah, J., Cedrin-Durnerin, I., Sermentonde, N.,
+    Vivot, A., Poculet, C., Grynberg, M., Sifer, C., 2017. 当囊胚达到相似良好质量时，在第 5 天移植前是否应考虑第
+    2 天和第 3 天胚胎形态？Reprod. Biomed. Online 35, 521–528. https://doi.org/10.1016/j.rbmo.2017.07.014.
+
+
+    Kalleas, D., McEvoy, K., Horne, G., Roberts, S.A., Brison, D.R., 2022. 与高品质台式培养箱相比，低氧延时培养箱中不受干扰的胚胎培养后的活产率。Hum.
+    Fertil. 25, 147–153. https://doi.org/10.1080/14647273.2020.1729423.
+
+
+    Kong, X., Yang, S., Gong, F., Lu, C., Zhang, S., Lu, G., Lin, G., 2016. 卵裂期人类胚胎的细胞数量、分裂行为与发育潜力之间的关系：一项延时研究。PLoS
+    One. 11, e0153697. https://doi.org/10.1371/journal.pone.0153697.
+
+
+    Kragh, M.F., Karlströft, H., 2021. 基于人工智能的胚胎选择：如何评估和比较方法？J. Assist. Reprod. Genet.
+    38, 1675–1689. https://doi.org/10.1007/s10815-021-02254-6.
+
+
+    Lassen, J.T., Kragh, M.F., Rimstad, J., Johansen, M., Berntsen, J. 基于深度学习的多天移植胚胎选择的开发与验证。https://arxiv.org/abs...
+
+
+    Levi-Setti, P.E., Cirillo, F., Smeraldi, A., Morenghi, E., Mulazzani, G., Albani,
+    E., 2018. 39 岁以下女性新鲜囊胚移植与卵裂期胚胎移植无优势之分：一项随机对照研究。J. Assist. Reprod. Genet. 35, 467–465.
+    https://doi.org/10.1007/s10815-017-1092-2.
+
+
+    Li, Y., Liu, S., Lv, Q., 2021. 新鲜移植后单囊胚期与单卵裂期胚胎移植：系统评价与 Meta 分析。Eur. J. Obstet.
+    Gynecol. Reprod. Biol. 267, 11–17. https://doi.org/10.1016/j.ejogrb.2021.10.004.
+
+
+    Liu, J., Zhou, Y., Tong, L., Wang, X., Li, Y., Wang, H., 2022. 第 3 天不同胚胎的发育潜力：一项回顾性研究。J.
+    Obstet. Gynaecol. 42, 3322–3327. https://doi.org/10.1080/01443615.2022.2125291.
+
+
+    Liu, Y., Chappie, V., Feenan, K., Roberts, P., Matson, P., 2016. 人类第 3 天体外受精胚胎的延时淘汰模型：胚胎生长定性与定量措施的结合。Fertil.
+    Steril. 105, 656–662.e1. https://doi.org/10.1016/j.fertnstert.2015.11.003.
+
+
+    Liu, Y., Qi, F., Matson, P., Morbeck, D.E., Mol, B.W., Zhao, S., Afnan, M., 2020.
+    使用定性和定量参数进行延时胚胎选择的实验室间可重复性：系统评价与 Meta 分析。J. Assist. Reprod. Genet. 37, 1295–1302.
+    https://doi.org/10.1007/s10815-020-01789-4.
+
+
+    Lundin, K., Park, H., 2020. 用于胚胎培养和选择的延时技术。Ups. J. Med Sci. 125, 77–84. https://doi.org/10.1080/03009734.2020.1728444.
+
+
+    Moyeren, S.E., Allen, R.B., Brewster, W.R., Kim, M.H., Porto, M., Werlin, L.B.,
+    2008. 第 3 天胚胎形态可预测年长受试者的倍性。Fertil. Steril. 89, 118–123. https://doi.org/10.1016/j.fertnstert.2007.01.169.
+
+
+    Munné, S., Chen, S., Colls, P., Garrisi, J., Zheng, X., Cekleniak, N., Lenzi,
+    M., Hughes, P., Fischer, J., Garbis, M., Tomkin, G., Cohen, J., 2007. 超过 6000
+    个卵裂期胚胎中的母体年龄、形态、发育和染色体异常。Reprod. Biomed. Online. 14, 62–68. https://doi.org/10.1016/s1472-6483(10)61057-7.
+
+
+    Obuchowski, N.A., 1997. 聚类 ROC 曲线数据的非参数分析。Biometrics 53, 567–578. PMID: 9192452.
+
+
+    Practice Committee of the American Society for Reproductive Medicine, 2018. Practice
+    Committee of the Society for Assisted Reproductive Technology. Electronic address:
+    asrm@asrm.org. 临床辅助生殖中的囊胚培养与移植：委员会意见。Fertil. Steril. 110, 1246–1252. https://doi.org/10.1016/j.fertnstert.2018.09.011.
+
+
+    Tian, L., Xia, L., Liu, J., Kuo, Y., Huang, Z., Wu, X., Fan, L., Huang, J., Wu,
+    Q., 2022. 卵裂球数量增加与第 3 天胚胎移植中更高的活产率相关。BMC Pregnancy Childbirth 22, 198. https://doi.org/10.1186/s12884-022-04521-5.
+
+
+    Tran, D., Cooke, S., Illingworth, P.J., Gardner, D.K., 2019. 深度学习作为延时培养和囊胚移植后胎儿心脏妊娠的预测工具。Hum.
+    Reprod. 34, 1011–1018. https://doi.org/10.1093/humrep/dez064.
+
+
+    Ueno, S., Berntsen, J., Ito, M., Okiura, T., Kato, K., 2022. 基于深度学习的无需标注的胚胎评分系统与单次玻璃化囊胚解冻移植后活产/新生儿结局的相关性：一项单中心大队列回顾性研究。J.
+    Assist. Reprod. Genet. 39, 2089–2099. https://doi.org/10.1007/s10815-022-02562-5.
+
+
+    Ueno, S., Berntsen, J., Ito, M., Uchiyama, K., Okiura, T., Yabuchi, A., Kato,
+    K., 2021. 基于深度学习的无需标注胚胎评分系统在单次玻璃化囊胚解冻移植后的妊娠预测性能：一项单中心大队列回顾性研究。Fertil. Steril.
+    116, 1172–1180. https://doi.org/10.1016/j.fertnstert.2021.06.001.
+
+
+    Wang, N., Zhao, X., Ma, M., Zhu, Q., Wang, Y., 2021. 第 3 天和第 5/6 天胚胎质量对单次玻璃化胚胎移植周期生殖结局的影响。Front.
+    Endocrinol. 12, 641623. https://doi.org/10.3389/fendo.2021.641623.
+
+
+    Wu, J., Zhang, J., Kuang, Y., Chen, Q., Wang, Y., 2020. 第 3 天细胞数量对玻璃化解冻单囊胚移植周期妊娠结局的影响。Hum.
+    Reprod. 35, 2478–2487. https://doi.org/10.1093/humrep/deaa209.
+
+
+    Yu, C.H., Zhang, R.P., Li, J., A, Z.C., 2018. 基于卵裂球数量、碎片和对称性的高质量囊胚预测模型。J. Assist.
+    Reprod. Genet. 35, 809–816. https://doi.org/10.1007/s10815-018-1132-6.
+
+
+    Zilberberg, E., Casper, R., Meriano, J., Barzilay, E., Aizer, A., Kirshenbaum,
+    M., Orvieto, R., Haas, J., 2021. 卵裂期胚胎与囊胚期胚胎：它们之间如何相互关系？Arch. Gynecol. Obstet.
+    304, 1083–1088. https://doi.org/10.1007/s00404-021-06003-z.
+
+
+    '
+  merge: 1
