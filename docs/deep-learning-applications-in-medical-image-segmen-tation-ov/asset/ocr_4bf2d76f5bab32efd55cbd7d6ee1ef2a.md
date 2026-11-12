@@ -1,0 +1,10 @@
+# 8
+Generative Adversarial Networks in the Field of Medical Image Segmentation
+Bisma Sultan, Aasia Rehman, and Lubna Riyaz
+Department of Computer Science, University of Kashmir, Srinagar, Jammu and Kashmir, India
+
+# 8.1 Introduction
+
+Recently, a lot of people in the medical imaging field have become interested in using deep learning (DL) to separate out normal or abnormal structures. It has been found to work amazingly well in a wide range of imaging methods and clinical settings to help doctors with computer-assisted diagnosis, therapy, or planning for surgeries. The growing amount of medical data that doctors need to look at for diagnosis, treatment, or surgical planning has led to the creation of computer-aided image analysis tools that can use the accurate, quick, repeatable, and objective measurements that computers can make. Medical image segmentation, which aims to identify the boundaries of anatomical or pathological entities from medical images, is still one of the most important analysis jobs now in use. Image segmentation, a fundamental component of many computer-aided detection and diagnosis techniques, is used to analyze various imaging modalities, such as computed tomography (CT), magnetic resonance imaging (MRI), positron emission tomography (PET), or ultrasound (US).
+
+Traditionally, medical images are manually delineated for anatomical or pathological structures. To obtain clinically useful outlines, this task is time-consuming and requires appropriate clinical knowledge. This does not apply to significant amounts of data usually generated in clinical or research projects. Manual segmentation is vulnerable to significant intra- and inter-expert variability because of the possible weariness of human specialists and the large variances in expertise. Prior to the development of learning approaches, segmentation was achieved by the widespread use of mathematical models and low-level image

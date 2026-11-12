@@ -1,0 +1,5 @@
+to related techniques. Quantitative results of the proposed approach are presented in two tables (Tables 9.1 and 9.2), and their comparative analysis is conducted against state-of-the-art methods. Our adopted approach demonstrates superior performance metrics, as evidenced by the highest and second-highest values achieved across various performance metrics, surpassing those of related techniques.
+
+![](bbox=[0.145, 0.26, 0.925, 0.775])
+
+Figure 9.9 Qualitative comparison of different cell image segmentation methods on some cell images collected from different datasets, which include CellaVision, JTSC and BloodSeg. Column (1)represents the expert segmentation, column (2) represents the results of the proposed method, column (3) is the segmentation of Source: Abdeldain et al. 2018, column (4) is the segmentation by Source: Vincent et al. 2015, column (5) by Source: Makem and Tiedeau 2020, column (6) is segmented by Source: Vogado et al. 2016, and column (7) by Source: Abdul Nasir et al. 2011.

@@ -1,0 +1,13 @@
+Today from the deep learning technique, convolutional neural networks (CNNs) have transformative approaches in medical image segmentation and possess the exceptional capabilities like:
+
++   - Extracting features: These help in learning complex patterns and relationships within medical images, hence eliminating the need for manual feature engineering.
++   - Achieving high accuracy: Exhibiting the demonstrated state-of-the-art performance in various segmentation tasks, surpassing traditional methods in demanding scenarios.
+
+# 11.2 Significance of Medical Image Segmentation
+
+Medical data involves electronic health records and the medical imaging that has evolved complex tomographic (i.e. cross-sectional) images, such as ultrasound, CT, tomosynthesis, PET, and MRI. The images generated are usually three- or four-dimensional in nature. Medical Image segmentation focuses on two categories in consideration, the first is identifying and isolating specific structures or abnormalities within the medical images including their clinical significance, and the second that discusses how precise segmentation contributes to personalized treatment plans and interventions (Luo et al. 2021).
+
++   - Clinical significance: Medical image segmentation plays a crucial role in identifying and isolating specific structures or abnormalities within medical images, providing useful insights for diagnosis, involving treatment planning, and keeping track of various medical conditions. Outlining the distinct anatomical structures or pathological regions within the images enables healthcare professionals to better recognize and understand the extent and location of abnormalities, facilitating a more precise diagnosis. Hence, medical image segmentation enables (Said et al. 2023):
++     - Early detection and diagnosis of diseases: For instance, in radiology, segmenting tumors or lesions from surrounding tissues in CT or MRI scans allows for a precise assessment of their size, shape, and characteristics and is also vital for oncologists to determine the stage of cancer and plan appropriate treatment strategies.
++     - Treatment planning: By providing a detailed map of the patient's anatomy and suggesting surgeons to use segmented images to plan the optimal approach for surgeries. For instance, in neurosurgery, segmenting brain structures helps surgeons navigate critical areas and avoid damage to healthy tissues.
++     - Monitoring disease progression: For tracking the changes in the affected areas over time, aiding in the evaluation of treatment effectiveness and the adjustment of therapeutic strategies.
