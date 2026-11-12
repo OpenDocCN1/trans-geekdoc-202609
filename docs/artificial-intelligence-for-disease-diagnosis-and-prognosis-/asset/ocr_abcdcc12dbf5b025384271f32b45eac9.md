@@ -1,0 +1,17 @@
+However, the application of AI in the healthcare field requires special attention, given the direct implications for human life and well-being. Rapid progress in AI leads to the possibility of exploiting healthcare data for designing practical tools for the automated diagnosis of chronic diseases such as dementia and diabetes. Data is the fuel for any AI application. On the other hand, in the medical domain, data can be challenging to obtain, mainly for privacy concerns. That makes the combination of both AI and healthcare a significant research challenge. The role of this book is to explore the advances, opportunities, and challenges of AI in healthcare solutions. We highlight the current research trends in applying AI models to various disease diagnoses and prognoses to make healthcare more effective and efficient.
+
+# 1.4 ORGANISATION OF THIS BOOK
+
+In Chapter 2, we provide a comprehensive overview of ML approaches for human disease assessment along with their benefits and shortcomings. In addition, the chapter explains the challenges associated with healthcare applications in real-world settings.
+
+Chapter 3 provides an overview of the potential applications of precision medicine. It explains the interplay between data science, AI, and ML in the context of precision medicine realization. Moreover, the chapter suggests a useful road map for the developers to apply precision medicine to futuristic healthcare solutions.
+
+Chapter 4 presents the recent developments in drug response prediction methods using ML algorithms. It discusses both the monotherapy and drug combination prediction methods. The chapter also provides an overview of pharmacogenomic data selection methods and relevant ML algorithms.
+
+Chapter 5 presents a thorough tutorial on AI-based skin disease diagnosis. It first introduces the skin diseases and then subsequently describes the image acquisition methods, available datasets and required pre-processing techniques. The chapter then explains the feature extraction and classification of skin diseases in detail. At each tutorial step, this chapter provides some sample Python codes.
+
+Chapter 6 provides a comprehensive survey of DL approaches to COVID-19 identification and lung segmentation. It reviews the X-ray and computed tomography (CT) images for feature extraction and classification based on the COVIDx dataset. Finally, the chapter identifies the hurdles in detecting DL approaches for COVID-19 and offers some avenues to address the challenges.
+
+Chapter 7 discusses an AI-assisted whole slide imaging (WSI) system to grade invasive breast cancer patients, enabling therapeutic decisions automatically. In addition, the chapter demonstrates how the proposed framework overcomes the weaknesses of current practices in the selection of patients with breast cancer for therapeutic purposes.
+
+Chapter 8 reviews the significance of CALD1 (Caldesmon 1) gene expression in brain cancer using multiomics analysis. The chapter investigates the expression patterns, functions and prognostic values of CALD1 in brain cancer by analyzing gene expression data via a set of online bioinformatics tools. It provides some important insights into whether CALD1 expression has any prognostic significance in the context of brain cancer.

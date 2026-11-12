@@ -1,0 +1,3 @@
+37. C. L. Rohlfing, H.-M. Wiedmeyer, R. R. Little, J. D. England, A. Tennill, and D. E. Goldstein, “Defining the relationship between plasma glucose and hba1c: analysis of glucose profiles and HbA1c in the Diabetes Control and Complications Trial,” Diabetes care, vol. 25, no. 2, pp. 275–278, 2002.
+
+38. D. M. Nathan, J. Kuenen, R. Borg, H. Zheng, D. Schoenfeld, and R. J. Heine, “Translating the A1c assay into estimated average glucose values,” Diabetes care, vol. 31, no. 8, pp. 1473–1478, 2008.

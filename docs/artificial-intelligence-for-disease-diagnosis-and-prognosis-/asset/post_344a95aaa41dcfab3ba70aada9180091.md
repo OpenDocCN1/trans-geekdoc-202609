@@ -1,0 +1,198 @@
+
+## 17.7 SECURITY AND PRIVACY CHALLENGES
+
+While AI techniques have shown promising improvement in disease diagnosis and prognosis, security remains a major challenge. As identified in Chapters 15 and 16, there are significant vulnerabilities that need addressing. Particularly, many algorithms have been found to have loopholes that could be compromised to adversarial attacks. This can be life-threatening for some cases. For example, images of benign moles can be misdiagnosed as malignant by deliberately adding adversarial noise or even just by introducing a simple rotation [5]. Appropriate steps need to be taken to ensure such attacks can be detected and remedied.
+
+## Bibliography
+
+- 1. Julia Amann, Alessandro Blasimme, Effy Vayena, Dietmar Frey, and Vince I Madai. Explainability for artificial intelligence in healthcare: A multidisciplinary perspective. BMC Medical Informatics and Decision Making, 20(1):1–9, 2020.
+- 2. Edward Choi, Mohammad Taha Bahadori, Andy Schuetz, Walter F Stewart, and Jimeng Sun. Doctor AI: Predicting clinical events via recurrent neural networks. In Machine Learning for Healthcare Conference, pages 301–318. PMLR, 2016.
+- 3. Shaker El-Sappagh, Jose M Alonso, S. M. Riazul Islam, Ahmad M Sultan, and Kyung Sup Kwak. A multilayer multimodal detection and prediction model based on explainable artificial intelligence for Alzheimer’s disease. Scientific Reports, 11(1):1–26, 2021.
+- 4. Andre Esteva, Brett Kuprel, Roberto A Novoa, Justin Ko, Susan M Swetter, Helen M Blau, and Sebastian Thrun. Dermatologist-level classification of skin cancer with deep neural networks. Nature, 542(7639):115–118, 2017.
+- 5. Samuel G Finlayson, John D Bowers, Joichi Ito, Jonathan L Zittrain, Andrew L Beam, and Isaac S Kohane. Adversarial attacks on medical machine learning. Science, 363(6433):1287–1289, 2019.
+- 6. Sijia Huang, Kumardeep Chaudhary, and Lana X Garmire. More is better: recent progress in multi-omics data integration methods. Frontiers in Genetics, 8:84, 2017.
+- 7. Christopher J Kelly, Alan Karthikesalingam, Mustafa Suleyman, Greg Corrado, and Dominic King. Key challenges for delivering clinical impact with artificial intelligence. BMC Medicine, 17(1):1–9, 2019.
+- 8. Faisal Tariq, Muhammad RA Khandaker, Kai-Kit Wong, Muhammad A Imran, Mehdi Bennis, and Merouane Debbah. A speculative study on 6g. IEEE Wireless Communications, 27(4):118–125, 2020.
+- 9. Cao Xiao, Edward Choi, and Jimeng Sun. Opportunities and challenges in developing deep learning models using electronic health records data: A systematic review. Journal of the American Medical Informatics Association, 25(10):1419–1428, 2018.
+
+![](img/bffdb4a72252285ac92f0fad78a7f104_324_0.png)
+
+## Taylor & Francis
+
+Taylor & Francis Group
+http://taylorandfrancis.com
+
+## Index
+
+- L\*a\*b\* color space, 79
+- 7-point criteria evaluation dataset, 76
+- clinical images, 75
+- ABCD rules, 74
+- accuracy, 74, 79, 82, 86, 88, 89, 98, 99, 101
+- ACNE04, 76
+- activation function, 89–91, 93
+- anisotropic diffusion filters, 80
+- ANTERA 3D11, 74
+- area under the curve (AUC), 99
+- Asan dataset, 76
+- AtlasDerm, 76
+- augmentation, 72, 74, 75, 86–88, 102
+- average method, 79
+- average pooling, 93
+- basal cell carcinoma, 73
+- batch normalization, 93
+- binary classification, 97
+- blurring method, 80, 81
+- Canfield, 74
+- clinical images, 76
+- CMYK color, 79
+- CNN-based models, 75, 87, 101
+- color space conversion, 78, 79, 101
+- computer vision, 79, 81, 83
+- confusion matrix, 97–102
+- contrast enhancement, 80
+- CONV layer, 91
+- Convolutional Neural Networks, 87
+- convolutional neural networks (CNNs), 75
+- Danderm, 76
+- datasets, 72, 74, 76, 77, 88, 100
+- deblurring, 81
+- deep learning, 72, 74, 75, 77, 78, 82, 86–90, 100
+- denoising, 80, 81, 101
+- Derm101, 76
+- dermatologists, 73, 74
+- dermis, 72, 76
+- Dermnet, 76
+- Dermofit Image Library, 76
+- dermoscope, 75, 76, 78
+- diagnosis, 72–74, 76, 82
+- Dice similarity coefficient, 98, 99
+- digital camera, 75, 76, 78
+- dropout layer, 94, 95
+- eczema classification, 74
+- end-to-end network, 75
+- epidermis, 72
+- equipment, 74, 79
+- Euclidean distance, 81
+- evaluation metrics, 98–102
+- exponential linear units (ELUs), 91
+- F1-Score, 99, 101
+- False Negative, 97
+- False Positive, 97, 99
+- feature extraction, 72, 75, 82–84, 88
+- feature maps, 75, 93, 96
+- feedforward neural networks, 91
+- fully connected layers, 95, 102
+- Fuzzy C-means method, 81
+- Gaussian filter, 81
+- GLCM approach, 82
+- global features, 82
+- gradient descent, 90
+- Grayscale, 79, 83
+- grayscale, 78, 101
+- Hallym, 76
+- HAM10000, 76
+- hidden layers, 88
+- hierarchical learning, 88
+- higher level layers, 88
+- highly optimized GPUs, 88
+- histogram, 80, 81, 83
+- Histogram of Oriented Gradients (HOG), 83
+- hyperbolic tangent (tanh), 90
+- hyperplane, 86
+- hypodermis, 72
+- illumination, 75, 76
+- image acquisition, 72, 74, 76, 81, 100
+- image noise, 81
+- image quality, 77
+- image-based applications, 80
+- intensity, 78, 80–84
+- intermediate features, 88
+- Intersection-over-Union (IoU), 98
+- inverse filter, 81
+- ISIC, 76
+- Jaccard index, 98
+- Jaccard similarity coefficient, 98
+- K-means clustering, 81
+- Keras, 72
+- kernel, 86, 91, 92, 97, 101, 102
+- KNN classifier, 84, 85, 102
+- LBP, 89
+- Leaky ReLUs, 91
+- Lee filters, 80
+- lighting condition, 76, 78
+- local features, 82
+- lower level layers, 88
+- Lucy-Richardson algorithm, 81
+- luminance transformation, 78
+- machine learning, 72, 74, 75, 77, 82, 86–89, 96, 97, 99–101
+- Matthews Correlation Coefficient (MCC) Score, 99
+- max pooling, 93, 94, 96, 102
+- mean filters, 80
+- median filters, 80
+- melanoma, 73
+- Menzies method, 74
+- Miravex, 74
+- MoleMap, 76
+- morphological, 78
+- multi-class classification, 85, 97, 101
+- nearest neighbor classifier, 84
+- neural network, 81
+- neuron, 89, 90, 94, 95
+- non-invasive imaging technique, 75
+- non-parametric classifier, 85
+- normalization, 78
+- OpenCV, 72, 75, 78, 101
+- overfitting, 75, 86, 93, 94, 102
+- Perceptron algorithm, 89
+- PH2, 76
+- pooling layer, 93
+- pre-processing, 72, 74, 77, 78, 81, 100, 102
+- precision, 99, 101
+- Python, 72, 75, 76, 78–81, 83–88, 95, 99–102
+- Python, 72
+- ramp function, 91
+- RBF classifiers, 85
+- Recall, 98, 99
+- receiver operating characteristic (ROC), 99
+- rectified linear unit (ReLU), 90
+- remote screening tool, 74, 76
+- resizing, 78
+- RGB images, 78, 79, 92
+- Scale-Invariant Feature Transformation, 83
+- Scikit-learn, 72, 75, 101
+- SD-198, 76
+- segmentation, 72, 74, 78, 81, 98–101
+- sensitivity, 98, 99, 101
+- severity grading, 74, 76, 77
+- Sigmoid, 90, 91
+- skin cancer, 72–74
+- skin disease recognition, 72, 74–77, 97, 100, 101
+- skin lesions, 74, 78
+- skin tones, 74, 78
+- softmax classifier, 95, 96, 102
+- spatial filtering, 80
+- specificity, 98, 99, 101
+- squamous cell carcinoma, 73
+- step function, 89, 90
+- stride, 92
+- subcutaneous tissues, 72
+- supervised learning, 85
+- support vector machine (SVM), 85
+- Tensorflow, 72
+- textural data, 82
+- threshold function, 89
+- thresholding, 78
+- total variation filters, 80
+- training data, 75, 84–86, 88, 89
+- transepidermal, 72
+- transform domain filtering, 80
+- True Negative, 97
+- True Positive, 97–99
+- VGG16 network, 96
+- VISIA10, 74
+- visual inspection, 73
+- weighted method, 79, 101
+- well-experienced experts, 74
+- Wiener filter, 80, 81
+- zero-padding, 92

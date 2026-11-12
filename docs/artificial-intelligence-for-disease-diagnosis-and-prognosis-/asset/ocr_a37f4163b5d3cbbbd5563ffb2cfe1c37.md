@@ -1,0 +1,1 @@
+9. Cao Xiao, Edward Choi, and Jimeng Sun. Opportunities and challenges in developing deep learning models using electronic health records data: A systematic review. Journal of the American Medical Informatics Association, 25(10):1419–1428, 2018.

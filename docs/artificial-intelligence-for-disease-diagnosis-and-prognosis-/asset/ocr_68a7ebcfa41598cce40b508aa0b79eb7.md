@@ -1,0 +1,11 @@
+![](bbox=[0.18, 0.065, 0.8, 0.35])
+
+Figure 11.1 Traditional pathology for microscope-based subjective analysis.
+
+manually by the pathologist which is time prohibitive and vulnerable to fatigue. For a reproducible automated analysis and diagnosis system, a more practical approach is required. Therefore, the need for an automated quality evaluation system that can estimate the usability of a WSI and locate the artifacts to eliminate them during analysis is indisputable.
+
+This chapter portrays the WSI system as the basis of automated analysis and diagnosis for smart healthcare. Then, the chapter presents the major artifacts which trouble the automatic analysis using WSI. Finally, existing artifact detection methods are reviewed and their application for the automatic analysis is assessed to design a practical system.
+
+# 11.2 AUTOMATED ANALYSIS AND DIAGNOSIS IN DIGITAL PATHOLOGY
+
+Digital pathology is an image-based environment where pathological operations such as sharing, managing, analysis, and diagnosis are performed using information technology and a digital version of pathological specimen called WSI. WSI scanner transforms the entire pathological specimen into a digital image. The concept of the digital pathological specimen was first introduced for remote pathological works, also called telepathology. The digital specimen was shared over the network for analysis or consultation by a pathologist of a remote location. The technology of producing digital specimens significantly improved over the years with the technology of telepathology which includes store-forward, robotic microscopy, and WSI. A robotic microscope produces a digital image for a selected area of the glass slide specimen adaptively where the WSI scanner converts the entire specimen into a digital image. The WSI system has two major components: A scanner that produces the digital image and a viewer that is used for observing the image on a computer screen. For many years, the WSI system was considered impractical and discouraged for clinical-pathological
