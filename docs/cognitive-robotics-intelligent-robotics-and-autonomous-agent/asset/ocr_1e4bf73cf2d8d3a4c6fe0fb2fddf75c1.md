@@ -1,0 +1,25 @@
+ATR-Creative. 2010. “Main Specifications of Robovie-R Ver.3.” Accessed January 16, 2020. http://atr-c.jp/robot/r3/robo-r3spec.html.
+Autodesk Inc. 2020. “3DS Max.” Accessed June 4, 2020. https://www.autodesk.it/products/3ds-max/overview.
+Baraglia, Jimm y, Yukie Nagai, and Minoru Asada. 2016. “Emergence of Altruistic Behavior through the Minimization of Prediction Error.” IEEE Transactions on Cognitive and Developmental Systems 8 (3): 141–151.
+Benli, Emrah, Yuichi Motai, and John Rogers. 2017. “Human Behavior-Based Target Tracking with an Omnidirectional Thermal Camera.” IEEE Transactions on Cognitive and Developmental Systems 11 (1): 36–50.
+Blender Foundation. 2020. “About.” https://www.blender.org/.
+Boccignone, Giuseppe, Donatello Conte, Vittorio Cuculo, Alessandro D’Amelio, Giuliano Grossi, and Raffaella Lanzarotti. 2018. “Deep Construction of an Affective Latent Space via Multimodal Enactment.” IEEE Transactions on Cognitive and Developmental Systems 10 (4): 865–880.
+Bullet (website). 2020. “Bullet Real-Time Physics Simulation.” Accessed February 13, 2020. https://pybullet.org.
+Busch, Baptiste, Jonathan Grizou, Manuel Lopes, and Freerk Stulp. 2017. “Learning Legible Motion from Human-Robot Interactions.” International Journal of Social Robotics 9 (5): 765–779.
+Caccavale, Riccardo, and Alberto Finzi. 2017. “Flexible Task Execution and Attentional Regulations in Human-Robot Interaction.” IEEE Transactions on Cognitive and Developmental Systems 9 (1): 68–79.
+Cao, Hoang-Long, Greet Van de Perre, James Kennedy, Emmanuel Senft, Pablo Gómez Esteban, Alberto De Beir, Ramona Simut, Tony Belpaeme, Dirk Lefeber, and Bram Vanderborght. 2019. “A Personalized and Platform-Independent Behavior Control System for Social Robots in Therapy: Development and Applications.” IEEE Transactions on Cognitive and Developmental Systems 11 (3): 334–346.
+Cao, Zhe, Tomas Simon, Shih-En Wei, and Yaser Sheikh. 2017. “Realtime Multi-person 2D Pose Estimation Using Part Affinity Fields.” In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 7291–7299. New York: IEEE.
+Caré, Xavier. 2015. “Innorobo 2015—Kuka Robotics.” July 2. Accessed May 21, 2020. https://commons.wikimedia.org/wiki/File:Innorobo_2015_-_Kuka_Robotics.JPG.
+Carpin, Stefano, Mike Lewis, Jijun Wang, Stephen Balakirsky, and Chris Scrapper. 2007. “USARSIM: A Robot Simulator for Research and Education.” In Proceedings of the 2007 IEEE International Conference on Robotics and Automation, 1400–1405. New York: IEEE.
+Çelikkanat, Hande, Giner Orhan, Nicolas Pugeault, Frank Guerin, Erol Sahin, and Sinan Kalkan. 2016. “Learning Context on a Humanoid Robot Using Incremental Latent Dirichlet Allocation.” IEEE Transactions on Cognitive and Developmental Systems 8 (1): 42–59.
+Chan, S. F. R. H Weston, and K. Case. 1988. “Robot Simulation and Off-Line Programming.” Computer-Aided Engineering Journal 5 (4): 157–162.
+Chandra, Shruti, Pierre Dillenbourg, and Ana Paiva. 2020. “Children Teach Handwriting to a Social Robot with Different Learning Competencies.” International Journal of Social Robotics 12 (3):721–748.
+Chebotar, Yevgen, Ankur Handa, Viktor Makoviychuk, Miles Macklin, Jan Issac, Nathan Ratliff, and Dieter Fox. 2019. “Closing the Sim-to-Real Loop: Adapting Simulation Randomization with Real World Experience.” In 2019 International Conference on Robotics and Automation, 8973–8979. New York: IEEE.
+Chen, Guang, Zhenshan Bing, Florian Röhrbein, Jörg Conradt, Kai Huang, Long Cheng, Zhuangyi Jiang, and Alois Knoll. 2019. “Toward Brain-Inspired Learning with the Neuromorphic Snake-Like Robot and the Neurorobotic Platform.” IEEE Transactions on Cognitive and Developmental Systems 11 (1): 1–12.
+Claret, Josep-Arau, Gentiane Venture, and Luis Bañáez. 2017. “Exploiting the Robot Kinematic Redundancy for Emotion Conveyance to Humans as a Lower Priority Task.” International journal of social robotics 9 (2): 277–292.
+Coppelia Robotics GmbH. 2020. “CoppeliaSim.” https://www.coppeliarobotics.com/.
+Cruz, Francisco, Sven Magg, Cornelius Weber, and Stefan Wermter. 2016. “Training Agents with Interactive Reinforcement Learning and Contextual Affordances.” IEEE Transactions on Cognitive and Developmental Systems 8 (4): 271–284.
+Cyberbotics Ltd. 2020. “Webots Open Source Robot Simulator.” Accessed February 13, 2020. https://cyberbotics.com/.
+DART (website). 2020. “Dynamic Animation and Robotics Toolkit.” Accessed February 13, 2020. https://dartsim.github.io/.
+David, Daniel O., Cristina A. Costescu, Silviu Matu, Aurora Szentagotai, and Anca Dobrean. 2018. “Developing Joint Attention for Children with Autism in Robot-Enhanced Therapy.” International Journal of Social Robotics 10 (5): 595–605.
+Defense Advanced Research Projects Agency. 2013. “DARPA Robotics Challenge.” https://www.darpa.mil/program/darpa-robotics-challenge.

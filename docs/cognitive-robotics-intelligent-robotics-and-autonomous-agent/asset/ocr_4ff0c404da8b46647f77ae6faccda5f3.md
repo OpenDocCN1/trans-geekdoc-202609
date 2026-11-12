@@ -1,0 +1,7 @@
+![](bbox=[0.11, 0.09, 0.89, 0.56])
+
+# Figure 15.3 Neural activities of place cells with different learning algorithms. Source: Hu et al. 2016.
+
+senses and transforms external sensory inputs into an internal cognitive map (Burak and Fiete 2009). The cognitive map theory has continuously inspired important advances in robotic mapping and navigation. The multimodal integration of visual place cells and grid cells has been proposed to enhance robot localization (Cuperlier, Quoy, and Gaussier 2007; Jauffret et al. 2012).
+
+Milford et al. made significant progress in emulating the spatial navigation ability of the hippocampal system by building a semimetric topological map in a very large area (Milford and Wyeth 2008, 2010). In their work, the core model, RatSLAM, has been demonstrated to build maps simultaneously in large and complex environments. It emulates the rat's spatial-encoding behavior using three key components: the pose cells that are analogous to the rodent's conjunctive grid cells, the local view cells that provide the interface to the robot's sensors in place of the rodent's perceptual system, and the experience map that functionally replaces place cells. Each local view cell is associated with a distinct visual scene of the environment and activated when the robot sees that scene. A CAN is built for pose cells to encode the estimate of the robot's pose. Each pose cell is connected to proximal cells by excitatory and inhibitory connections with wrapping across

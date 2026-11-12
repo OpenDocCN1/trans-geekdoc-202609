@@ -1,0 +1,12 @@
+![](bbox=[0.14, 0.09, 0.76, 0.36])
+
+Figure 15.2
+One-dimensional CAN modeling head direction cell. Source: Skaggs et al. 1994.
+
+cells. When the animal turns its head, sensory inputs (mainly from the vestibular region) can detect the change that activates rotation cells and cause activity bumps to move in the appropriate direction around the ring, keeping the representation concordant with the real head direction (Calton et al. 2008; Knierim and Zhang 2012).
+
+# Path integration
+
+Currently, some proposed computational models of grid cells include oscillatory interference (OI) models (Burgess 2008; Zilli and Hasselmo 2010) and CAN models (Fuhs and Touretzky 2006; Burak and Fiete 2009). In OI models, the grid pattern arises from several oscillators with slightly different frequencies around the theta frequency (Blair, Weldy, and Zhang 2007; Burgess, Barry, and O’Keefe 2007). The key requirement is that the frequency is modulated by the animal’s velocity. Under appropriate conditions, the beat frequencies of the interference patterns cause a cell to reach its firing threshold whenever the rat is at the grid vortex. The key assumptions of oscillatory models have been experimentally challenged because theta oscillations have not been observed in fruit bats (Yartsev, Witter, and Ulanovsky 2011) and macaque monkeys (Killian, Jutras, and Buffalo 2012), despite robust grid cell activity having been recorded in both species.
+
+A grid cell model with a single grid scale based on CAN models was proposed (Burak and Fiete 2009) to perform path integration with noise-free velocity inputs. Based on different spacing in grid cells, a grid cell model with multiple grid scales is required for the path integration. In this case, neurons are often arranged in a two-dimensional neural sheet. Recurrent connectivity among neurons with global inhibition leads to random patterns of population activity that spontaneously merge into organized “bumps” of grid cell population activity. A response from the grid cell can be obtained by accumulating the firing activity of a single neuron over a full trajectory. The most remarkable progress in the field (Burak and Fiete 2009) has been to accurately integrate velocity inputs into grid cell models.

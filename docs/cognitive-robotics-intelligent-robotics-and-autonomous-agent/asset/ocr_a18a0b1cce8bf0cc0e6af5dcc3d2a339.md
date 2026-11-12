@@ -1,0 +1,9 @@
+GWT approach to texture recognition is superior to the traditional STFT method. The STFT-based approach has an accuracy of 95.3 percent, while the GWT-based approach offers 99.45 percent accuracy for the same window of time (figure 8.5e). In conclusion, the output of the sensory stack under a closed-loop system was able to classify textures with a maximum accuracy of 99.45 percent, which also demonstrated the possibility that a single sensory stack may be sufficient for texture classification.
+
+# ## 8.5 Integrated Sensing and Actuation Technology
+
+This section examines the research focused on integrating sensors and actuators for an advanced eSkin. To utilize the full potential of robots, it is important to enable them to interact with dexterity and cognitive capabilities, as well as learn from their resulting interaction with the environment. The purposeful employment of a robot's environment is proposed in the context of developmental robotics in section 6.3. Future robots should be able to deal with the uncertainty of the natural environment by continually learning, reasoning, and sharing their knowledge. As previously discussed in section 8.2, eskin is one of the effective approaches that researchers have used to achieve this. However, existing robots are mostly equipped with eskin having only sensing capabilities. As mentioned in
+
+![](bbox=[0.136, 0.456, 0.861, 0.836])
+
+Figure 8.5 (a) A typical recorded signal from the dynamic scan. (b) Gabor wavelet scalogram. (c, d) Output from the tempotron classifier neuron corresponding to the (c) hook and (d) loop. (e) Training error versus number of epochs comparing STFT and GWT-based features. (f) Plot of the wirelessly transmitted live data acquired via the rqt plot of the ROS package.

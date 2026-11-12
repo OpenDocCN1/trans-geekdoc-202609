@@ -1,0 +1,44 @@
+
+| Month—behavior | Learning targets |
+| :--- | :--- |
+| 5 hand regard | Forward and inverse models of the hand |
+| 6 finger another's face | Integration of visuotactile sensation of the face |
+| 7 drop objects and observe the result | Causality and permanency of objects |
+| 8 hit objects | Dynamic modeling of objects |
+| 9 drum or bring a cup to mouth | Tool use |
+| 10 imitate movements | Imitation of unseen movements |
+| 10 rudimentary sympathy | Feel pain and empathy |
+| 11 grasp and carry objects to others | Action recognition and generation, cooperation |
+| 12 pretend | Mental simulation |
+
+*Source: Adapted from Asada et al. 2009.*
+
+Kuniyoshi and colleagues within the Japan Science and Technology Agency Exploratory Research for Advanced Technology (JST ERATO) Asada project. The first model (Kuniyoshi and Sangawa 2006) provided the initial, minimally simple body model of fetal and neonatal development. The subsequent fetus model (Mori and Kuniyoshi 2010) produced a more realistic rendering of the fetus’s sensorimotor apparatus and a stronger focus on learning experiments. These models offer a useful research tool to investigate prebirth sensorimotor development by providing a realistic representation of the fetus’s sensors and the reaction of the body to gravity and the womb border and environment. The first model, for instance, was used to study the role of general embodied developmental principles in early sensorimotor learning. In particular, it aimed at exploring the hypothesis that partially ordered embodiment dynamical patterns emerge from the chaotic exploration of body-brain-environment interactions during gestation. These patterns lead, later in development, to the emergence of meaningful motor behavior such as rolling over and crawling motions in neonates.
+
+## 3.4 Six Principles of Developmental Robotics
+
+Figure 3.3 shows the six principles of developmental robotics, centering two key concepts, embodiment and social interaction. Embodiment, or physical embodiment, is a fundamental constraint for infants (humans and robots) to learn sensorimotor mapping through interaction with the environment. Related research topics are motor babbling and body representation (body schema or body image) through crossmodal association (e.g., Mannella et al. 2018). These topics lead to the emergence of the early concept of the self, often called the “ecological self” (Neisser 1994) through embodied, situated, and enactive development. The ecological self is also called the temporary self or, according to Gallagher (2000), the minimal self, involving a sense of agency or a sense of ownership of motion.
+
+The early stage of social interaction can be observed as infant-caregiver interaction. Intrinsic motivation and social-learning instinct (Baldassarre and Mirolli 2013; Ishihara et al. 2011) inside the agents play important roles in developing various behavioral and cognitive functions, such as imitation (e.g., gesture, vocalization, and joint attention), turn taking, and so on.
+
+![](img/3dbcfad67b8516752e436bc9e574de5a_58_0.png)
+
+Figure 3.3 Principles of developmental robotics.
+
+Both phylogenetic and ontogenetic interactions occur during the above developmental processes. Innate functions are regarded as assumptions, and learning targets are set at each stage of development. The learning results become the assumptions for the next stage of learning, and vice versa—that is, the assumptions at the current stage might be the results of learning during the previous stage. Thus, nonlinear stage-like learning develops (Lee et al. 2007).
+
+Developmental pathways are diverse, from typical development to atypical, and this also holds true for developmental robots. These pathways are expected to share several key points that enable social interactions from different pathways, and learning continues beyond different stages in terms of a lifelong scale as a whole. It is an online, open-ended, cumulative learning process.
+
+Thelen and Smith (1994) proposed the dynamical systems approach as a developmental psychology theory, and several computational-modeling methods attempt to reproduce nonlinear, dynamic developmental processes of coupled interactions involving the classical nature-nurture issue.
+
+In the following sections, we will describe in detail the six key defining principles of developmental robotics, as proposed in Cangelosi and Schlesinger (2015). The presentation of each principle will refer to certain seminal developmental psychology studies and related developmental robotics models.
+
+### 3.4.1 Dynamical Systems Development
+
+In mathematics, a dynamical system is characterized by complex changes, over time, in the phase state that result from the self-organization of multifaceted interactions between the system's variables. The complex interaction of nonlinear phenomena results in the production of unpredictable states of the system, often referred to as emergent states. In child psychology this concept has been borrowed by Thelen and Smith (1994) to explain child development as the emergent product of the intricate and dynamic interaction of many decentralized and local interactions related to the child's growing body and brain and the environment. Thus, Thelen and Smith have proposed that the development of a child should be viewed as change within a complex dynamic system, where the growing child can generate novel behavior through interaction with the environment, and these behavioral states vary in their stability within the complex system.
+
+One key concept in this theory is that of multicausality—for example, in the case when one behavior, such as crawling and walking, is determined by the simultaneous and dynamic consequences of various phenomena at the level of the brain, body, and environment. Thelen and Smith analyzed the dynamic changes in crawling and walking as an example of multicausality changes in the child's adaptation to the environment, in response to body growth. When the child's body configuration produces sufficient strength and coordination to support them through the hands and knees posture but is not strong enough for upright walking, the child settles for a crawling strategy to locomote in the environment. But when the infant's body growth results in stronger and more stable legs, the standing and walking behavior emerges as the stable developmental state, which as a consequence destabilizes, and gradually stops, the pattern of crawling. This demonstrates that the locomotion behavior is the result of self-organizing dynamics of decentralized factors such as the child's changing body (stronger legs and better balance) and its adaptation to the environment.
+
+Another key concept in the dynamical systems view of development is that of nested timescales. That is, neural and embodiment phenomena act at different timescales and affect development in an intricate, dynamical way. For example, the dynamics of the very fast timescale of neural activity (milliseconds) is nested within the dynamics of the other slower timescales, such as action-reaction time (seconds or hundreds of milliseconds), learning (after hours or days), and physical body growth (months). One of the best-known developmental psychology examples used by Thelen and Smith to demonstrate the combined effects of the concepts of multicausality and nested timescales is that of the A-not-B error. This example is inspired by Piaget's object permanence experiment, when one toy is repeatedly hidden under a lid at a location A (right) during the first part of the experiment and then, toward the end of the task, is hidden in a location B (left) for a single trial, and the child is asked to reach for the object. While infants older than twelve months have no problem in reaching for the toy in its correct location B, unexpectedly, most eight-to-ten-month-old children err in looking for the object in location A. Although psychologists such as Piaget have used explanations based on age (stage) differences linked to qualitative changes in the ability to represent objects and space, a computational simulation of the dynamical system model (Thelen et al. 2002) has demonstrated that many decentralized factors (multicausality) and timing manipulations (nested timing) affect such a situation. These, for example, depend on the time delay between hiding and reaching, the properties of the lids on the table, the saliency of the hiding event, and the past activity of the infant and their body posture.
+
+The use of a dynamical system approach as a theory of development has had significant influence in developmental robotics research, as well as in other cognitive robotics areas (Beer 2000; Nolfi and Floreano 2000). This theory has been applied, for example, to developmental robotics models of early motor development, as in Mori and Kuniyoshi's

@@ -1,0 +1,9 @@
+would allow short-term adaptive behavior through mechanical or sensory feedback. Within the soft robotics framework, much like biological organisms, the short time adaptation is just a consequence of the soft, instantaneous deformation of the soft body itself. When we delicately slide our finger through a ridged surface, for example, the need for complex and precise control is voided by the ability of our dermis to deform and conform to the surface under our touch. Much like the illustrated example, the compliance and softness of materials, in soft robots, can achieve short-term adaptation. The mechanical feedback becomes only a physical consequence of contact, and compliance can naturally suppress the need for complex controllers. Figure 6.3 illustrates the main idea behind the developmental soft robotics framework.
+
+# 6.3.2 Functional Morphology and Morphological Computation
+
+When designing robotics systems, if shape was initially the most salient of morphological features, with the advent of soft robotics this may no longer be the case. Materials at different levels of elasticity have demonstrated the ability to perform “computation” (Scimeca et al. 2018; Eder, Hirsch, and Hauser 2018). Recent work in Scimeca et al. (2018), for example, has shown how complex haptic information can be used to classify objects based on different properties, solely based on clustering analysis. The simplicity of the inference is possible due to a “soft filter” or elastic layer between the tactile sensor and the object. When changing the properties of the elastic layer, the tactile information is appropriately influenced (spatially filtered) in order to induce object similarities with respect to different object properties, like edges or elongation. The “intelligence” is here in the body, since
+
+![](bbox=[0.141, 0.515, 0.752, 0.792])
+
+Figure 6.3 Developmental soft robots.
