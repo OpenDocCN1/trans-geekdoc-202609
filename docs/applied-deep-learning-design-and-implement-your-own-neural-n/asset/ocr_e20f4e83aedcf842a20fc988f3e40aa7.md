@@ -1,0 +1,13 @@
+```
+Generator(main):
+Sequential(
+(0): ConvTranspose2d(100, 512, kernel size=(4, 4), stride=(1, 1), bias=False) (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True,track running stats=T (2): ReLU(inplace=True)
+(3): ConvTranspose2d(512, 256, kernel size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+(4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track running stats = (5): ReLU(inplace=True)
+(6): ConvTranspose2d(256, 128, kernel size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+(7): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track running stats = (8): ReLU(inplace=True)
+(9): ConvTranspose2d(128, 64, kernel size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+(10): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track running stats = (11): ReLU(inplace=True)
+(12): ConvTranspose2d(64, 3, kernel size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+(13): Tanh() ))
+```

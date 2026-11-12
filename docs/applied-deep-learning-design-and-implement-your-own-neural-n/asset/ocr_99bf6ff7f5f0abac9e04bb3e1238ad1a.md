@@ -1,0 +1,7 @@
+![](bbox=[0.38, 0.1, 0.62, 0.33])
+
+# Figure 6.32: RNN flow graph for the example
+
+As per the matrix shown in figure 6.32, we can visualize the neural network shown in figure 6.32, if the input is read as a column \(\begin{bmatrix} i_1 \\ 0 \\ 1 \\ 0 \end{bmatrix}\) then output is visualized in a row as \([o_1 0 0 1]\). If input is read as a column \(\begin{bmatrix} i_2 \\ 0 \\ 0 \\ 1 \end{bmatrix}\) then output is returned as row \([o_2 1 0 0]\) and if input is read as column \(\begin{bmatrix} i_3 \\ 1 \\ 0 \\ 0 \end{bmatrix}\) then output in row is visualized as \([o_3 0 1 0]\). This is kind of cyclic permutation that is attained using a permutation matrix.
+
+Now, let us look at a more complex example of the same scenario. Now, suppose if the boy drinks Lemon Water on a Sunny day, that is, on Monday, then on the next day, he changes the drink only if the day is rainy, that is, again if Tuesday is Sunny day, then he drinks Lemon water again. And if it is rainy on Tuesday, then he drinks Hot Coffee the next day, and again if Wednesday is a rainy day, he drinks lemon juice, whereas if Wednesday is again Sunny day, then he does not change his drink; that is, he drinks Hot Coffee again, and this process continues as shown in figure 6.33:

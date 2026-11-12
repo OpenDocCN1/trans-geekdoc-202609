@@ -1,0 +1,7 @@
+![](bbox=[0.13, 0.1, 0.87, 0.57])
+
+Figure 4.137: Abstract representation of figure 4.135 with respective activation maps
+
+# Pooling in CNN
+
+Pooling is used for shrinking the image stack. It is used to reduce the size of features. It is independent of the parameters; that is, pooling does not require any parameters. It is noted that if we want to reduce the size of the image, then we have to use image processing methods such as bilinear interpolation. But, if we want to reduce the size of our feature or activation map, then pooling is used in CNN. In the case of big images, say 1024*1024, there are too many responses. So, to aggregate this information, pooling is used. Generally, max pooling is used to get a robust set of features. Max pooling gives the maximum value. It is a non-democratic approach; that is, no voting is considered, we just pick the maximum value. What is the advantage of pooling? It can be understood with a real-life example as follows. Consider we have a class of 80 students, and we have assigned a project to each one of them. So, if we assign that every student in the class has to submit an individual project, then we get 80 projects. Furthermore, we do not want to evaluate all of these
