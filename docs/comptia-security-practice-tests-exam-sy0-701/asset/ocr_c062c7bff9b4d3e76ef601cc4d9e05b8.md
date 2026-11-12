@@ -1,0 +1,17 @@
+involves preventing the risk from occurring. Mitigation works to limit the impact of a risk, such as by taking action to prevent further malware spread.
+
+61. C. Regulatory compliance typically requires risk assessment on a regular basis, often once a year. Ad hoc, one-time, and continuous risk assessments are used for other purposes to serve the organization but are not as common for regulatory compliance.
+
+62. A. Partially known environment tests provide some, but not all information about the environment for testers. In this case, knowledge of the systems, IPs, and services is an example of partial knowledge. Known environment tests provide full information to testers, allowing them to use information about the environment without having to discover it. Unknown environment tests simulate what an attacker would encounter and do not provide information; instead, the testers have to discover it themselves. Third-party tests are conducted by external groups or individuals and may be known, unknown, or partial knowledge tests.
+
+63. B. An organization willing to accept significant risk has adopted an expansionary risk appetite. Neutral risk appetites balance risk and other factors, conservative appetites seek to limit risk rather than prioritize other goals or objectives, and limited is not a term used on the Security+ exam objectives in this area.
+
+64. A. Information gathering and scanning together are common elements of reconnaissance. Since this involves both scanning and OSINT gathering, this is reconnaissance instead of passive information gathering via OSINT. Known environment tests provide full information to testers, allowing them to use information about the environment without having to discover it. Unknown environment tests simulate what an attacker would encounter and do not provide information; instead, the testers have to discover it themselves.
+
+65. A. Individuals who use the GDPR’s right to be forgotten are data subjects, a person who can be identified by their personally identifiable information. Data controllers determine how data will be used, and processors do the actual data processing. Data owners are responsible for protection, usage, and quality of datasets.
+
+66. C. Exposure factors are the percentage of value of an asset that would be lost due to an incident. ALE is the annual loss expectancy, and the ARO is the annual rate of occurrence. SLE is the single loss expectancy. Calculating these gives the cost of an incident, but EF is the impact of the risk and is not calculated using these, nor does it involve the likelihood of the risk.
+
+67. C. Physical security testing involves testing an organization’s physical security defenses and practices, including guards, locks and doors, and other physical security components. Offensive penetration testing involves acting like attackers, while defensive penetration testing seeks to learn as defenders. Integrated penetration testing combines both.
+
+68. D. Integrated penetration testing combines both offensive and defensive penetration testing, and testing guards as well as attempting to make it through access controls is an example of an integrated test. Physical security testing involves testing an organization’s physical security defenses and practices, including guards, locks and doors, and other physical security components like access control vestibules. Offensive penetration testing involves acting like attackers, while defensive penetration testing seeks to learn as defenders.

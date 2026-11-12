@@ -1,0 +1,17 @@
+107. C. Generators are typically sized to the datacenter they support, so capacity is rarely a primary concern. Fuel availability, maintenance and maintenance cycles for extended runs, and ensuring physical redundancy so that a secondary generator can take over during maintenance cycles for long outages are all common concerns.
+
+108. B. Geographic restrictions are rarely helpful for insider threats because insiders are likely to already be in the same location as authorized users in most organizations. Encryption, tokenization, and permission restrictions can all be used to ensure that only authorized users gain access to the data.
+
+109. C. Use of encryption through secure enclaves and restricted processing environments, controlling access to the data, and limiting where data is processed are all useful controls. Hashing the data does not leave it in a usable form since hashes transform the data, and thus is not a useful solution.
+
+110. B. UPS systems are perfectly suited to handling short power outages and temporary undervoltage events. They sit between systems and grid power, ensuring clean, reliable power is available. Generators take time to start, meaning that a UPS + generator solution is used for longer outages. PDUs (power distribution units) are used to distribute and manage power in datacenters. Solar power is increasingly used by datacenters to help offset their power consumption but is not a solution during nighttime hours.
+
+111. A. Containers do not include an operating system, but do contain applications, libraries, and configuration files.
+
+112. C. SD-WAN, or software-defined wide area network, is a virtual wide area network architecture that relies on a software-based controller to manage multiple connections and connection types. MPLS, LTE, and broadband are commonly managed using SD-WAN technology. SASE, or Secure Access Service Edge, is used to provide end-to-end security in modern environments with systems and users spread throughout many locations and networks. SDN, or software-defined networking, is a code-based network management scheme. However, SD-WAN is the correct answer for wide area networks that rely on things like MPLS and broadband rather than on-premises networks. VSAN, or virtual SAN, is a virtual storage area network.
+
+113. C. An IPS, or intrusion prevention system, can stop attacks based on behaviors and threat feed data. An IDS can detect attacks using the same information but cannot stop them. Proxy servers are used to filter content but do not meet this requirement, and jump servers are used for secure access into higher trust environments.
+
+114. A. Contracts, nondisclosure agreements (NDAs), and statements of work (SOWs) are all examples of legal information. They may include trade secrets or financial information but do not have to. Regulated data is regulated by law and is not the same as legal information.
+
+115. A. Using threat feeds allows administrators to have rules that automatically block new threats using IP reputation and other services. Those detections may rely on application awareness or deep packet inspection, but without the feed information new rules will have to be crafted to address specific new threats. High throughput allows NGFW devices to deal with significant load as well as the demands of deep packet inspection and application awareness.

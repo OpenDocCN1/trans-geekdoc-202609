@@ -1,0 +1,17 @@
+28. B. Systems and software that no longer have vendor support can be a significant security risk, and ensuring that a vendor will continue to exist and provide support is an important part of many procurement processes. Selah’s questions are intended to assess the longevity and viability of the company and whether buying from them will result in her organization having a usable product for the long term.
+
+29. B. His machines are part of a distributed denial-of-service (DDoS) attack. This scenario describes a generic DDoS, not a specific one like SYN flood, which would involve many SYN packets being sent without a full three-way TCP handshake. These machines could be part of a botnet or they may just have a trigger that causes them to launch the attack at a specific time. The real key in this scenario is the DDoS attack. Finally, a backdoor gives an attacker access to the target system.
+
+30. B. A Trojan attaches a malicious program to a legitimate program. When the user downloads and installs the legitimate program, they get the malware. A logic bomb is malware that does its misdeeds when some condition is met. A rootkit is malware that gets administrative, or root, access. A macro virus is a virus that is embedded in a document as a macro.
+
+31. A. Hacktivists are defined by their political motivation. Organized crime is most frequently associated with financial gain as a motivation. While unskilled attackers and insider threats may have political motivations, hacktivists remain the most likely of this list.
+
+32. D. Organized crime may produce, sell, and support malware tools, or may deploy them themselves. Crypto malware and other packages are examples of tools often created and used by criminal syndicates. State actors are more likely to be associated with advanced persistent threats (APTs) aimed at accomplishing goals of the nation-state that supports them. Hacktivists typically have political motivations, whereas unskilled attackers (script kiddies) may simply be in it for recognition or fun.
+
+33. A. Bluejacking involves sending unsolicited messages to Bluetooth devices when they are in range. Bluesnarfing involves getting data from the Bluetooth device. An evil twin attack uses a rogue access point whose name is similar or identical to that of a legitimate access point.
+
+34. A. An on-path attack redirects all traffic through an attacker’s system that would normally pass through a network gateway. Dennis will be able to see all traffic bound for remote systems, but some of it may be encrypted.
+
+35. B. When malicious actors claim to represent a company or organization to accomplish their goals, it is an example of a brand impersonation attack. Here, this is a combination of a vishing attack and a brand impersonation attack. Smishing occurs via SMS, watering hole attacks target sites that their intended victims commonly visit, and business email compromise attempts to gain access to or leverages email accounts.
+
+36. A. Cryptographic downgrade attacks like POODLE, FREAK, and Logjam all rely on flaws that cause software to use weaker encryption options. This could allow attackers to capture traffic encrypted with weaker encryption, potentially allowing them to decrypt the traffic and read it. They do not allow hashing changes to recover passwords, reversion to old versions of software, or encryption to be entirely turned off.

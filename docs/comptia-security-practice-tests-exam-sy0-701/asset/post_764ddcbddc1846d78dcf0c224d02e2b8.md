@@ -1,0 +1,50 @@
+
+167. D. Attackers are increasingly relying on keyloggers that can capture information entered at a keyboard and send it to them, allowing them to quickly use the information to log in before the user can use an MFA code. Viruses, worms, and logic bombs are not designed to provide this functionality.
+
+168. A. Organized crime actors are typically external rather than internal actors. They are often well resourced and sophisticated.
+
+169. D. Package managers like Cydia and Sileo are used to add applications and other functionality to jailbroken iPhones. If the phone is an organizationally owned phone or contains organizational data, Valerie may need to take action based on organizational policies. Cydia and other package managers do not open up remote management tools by default and are not malware, although they may not be permitted software for many organizational devices.
+
+170. B. Simple SQL injection attacks often rely on the single quote or Boolean conditions like OR 1=1 as part of their attack. While these are simple examples and more complex options exist, Isaac’s organization is wise to prevent simple attacks. Buffer overflow attacks target memory locations or variables, replay attacks re-send legitimate traffic, and directory traversal attacks attempt to access other file structures.
+
+171. C. Sending email from a user’s personal email account to them is not a common BEC exploit, but using compromised accounts, spoofing email with slightly modified email addresses, and using malware to gain access to accounts and send email are all common techniques.
+
+172. B. An application allow list provides the greatest control over what applications are installed on devices. Application deny lists are useful for preventing specific software from being installed but cannot handle the breadth of possible applications that users may find and use. Access control lists (ACLs) are used like firewall rules to apply rules to network traffic, and segmentation is used to separate systems based on various factors like data sensitivity or trust levels.
+
+173. B. Ron wants to deny any source port to systems on the 10.10.20.0/24 network with a service port of TCP 22 for SSH.
+
+174. A. Sam is using blocked content logging to determine what systems may be compromised and attempting to connect to malicious domains and if users are trying to access those IP addresses or domains. This can help Sam intervene with individual users and can also help identify infected systems. Resource inaccessibility is typically an unintentional indicator rather than a result of a security measure as described here. No logs are missing, and there is not a specific indicator of compromise that was described or published listed in the question.
+
+175. D. While resource consumption alone may not indicate a compromise, unexpected consumption of resources may indicate unexpected or unwanted activity. Christina should look for other indicators of compromise to determine if she needs to declare a security incident. Resource inaccessibility would require the resource to not be available or working, and at 80% full a Linux filesystem will still work. There is no description of the content, and no content access was prevented, so this is not blocked content. Impossible travel occurs when logins or other resource usage occur in two locations at times that do not allow for travel between the locations.
+
+176. B. Bloatware is a general term used to describe the unnecessary and unwanted programs that are installed on many PCs by manufacturers. Spyware is more harmful, sending information about the user, their browsing habits, or the computer back to the software’s vendor or other organizations. Logic bombs are malware that take action under specific circumstances like a time, date, or other trigger, and firmware is the software that runs on top of hardware to provide basic underlying functionality.
+
+177. C. The ability to run a program as a privileged user like an administrator from an unexpected or uncommon location is a common indicator of a privilege escalation attack. A buffer overflow would push data into a variable to attempt to cause it to take a desired action, a Trojan would look like a wanted or desirable file but would be malware, and a replay attack would send successful authentication or other information again to gain access to a system.
+
+178. D. This is a directory traversal attack. The characteristic /../.. / is the first indicator you should pay attention to. The %00 is a null byte, meaning that many applications will stop reading when they encounter it. You might not know that detail as you take the exam, but you should know that attackers would look for the passwd file, not a PNG of a password!
+
+179. B. VLANs are commonly used to provide segmentation for networks by placing them in separate logical networks. Encryption doesn’t require or use VLANs, impossible travel describes logins and other activities from disparate physical locations in a time frame that would be impossible for travel to occur during, and a HIPS is a host intrusion prevention system.
+
+180. C. Horizontal privilege escalation occurs when users at a similar level are able to use privileges or accounts belonging to peer users. Here, Mark’s coworker is able to act as another similar user. Vertical privilege escalation focuses on greater privileges like administrative rights. Replay attacks re-send traffic to authenticate or otherwise repeat a transaction. Forgery attacks like cross-site request forgery (XSRF) leverage trusted sessions to allow malicious apps to take action due to the trust between a browser and a web application.
+
+181. C. This is most likely a distributed denial-of-service (DDoS) attack since it is coming from many different IP addresses. Using small requests to generate large responses is an example of a resource exhaustion attack. Since this is coming from many addresses rather than one or a small number, it is more properly called a DDoS than a simple denial-of-service (DoS) attack. There is no indication that the service is vulnerable, the requests are small and no mention is made of a specific payload other than a HTTP GET for a file, and there is no traffic redirection as you would expect in an on-path attack.
+
+182. C. Allowing all TCP 80 traffic to any internal system is a common misconfiguration for firewalls when troubleshooting. Placing an overly broad rule in a firewall ruleset, particularly when it is processed early (at the top) of a ruleset is dangerous, even though it happens more than security practitioners want to think about! Jailbreaks are done on iOS-based mobile devices to bypass security; race conditions occur when the time-of-check (TOC) and time-of-use (TOU) of a variable, memory location, or other resource allows for changes when it shouldn’t; and injection attacks are typically conducted against memory, code, or other resources, not firewall rules.
+
+183. B. File-level encryption will allow Brian’s organization to encrypt individual files rather than entire disks or volumes and will protect files even when they are not in transit, unlike transport encryption using TLS.
+
+184. B. Intune, formerly known as Microsoft Endpoint Manager and SCCM, provides configuration management, mobile app management, and other central system, software, and device management capabilities. It does not detect and respond to malware, but it can deploy configurations for Defender. It is not a code repository and versioning tool like git, and it does not provide web application firewalling.
+
+185. A. Data exposure is typically a more significant risk than downtime, particularly when the downtime is limited to hours. SaaS vendors do not typically sell or deliver hardware, as they provide services. Software vulnerabilities may exist, but without a known impact, compromise leading to data loss remains the most significant issue.
+
+186. D. In a DLL injection, the malware attempts to inject code into the running process of a library in memory. This is a rather advanced attack. A logic bomb executes its misdeed when some condition is met. Session hijacking is taking over an authenticated session. Buffer overflows are done by sending more data to a variable than it can hold.
+
+187. D. Locking the resource until the action is completed is a common method of preventing TOC/TOU issues. Deleting the resource after each use doesn’t allow resources to be persistent, preventing applications from using them on an ongoing basis. Running a single instance of the process will heavily limit the ability for Annie’s business to scale the service. Making multiple copies doesn’t allow for a shared resource.
+
+## Chapter 3: Domain 3.0: Security Architecture
+
+1. A. Organizations set recovery point objectives (RPOs) which describe how much data is acceptable to lose in a data loss event, and recovery time objectives (RTOs), which describe the maximum amount of time that it should take to recover data. Together these two objectives help guide backup strategy and infrastructure design and implementation. MTBF (mean time before failure) describes the mean time before a device like a hard drive, power supply, or network switch will fail, typically described in hours of powered-on operation. RFBT was made up for this question.
+
+2. A. When an intrusion detection system (IDS) or antivirus/antimalware mistakes legitimate traffic for an attack, this is called a false positive. A false negative is when the IDS mistakes an attack for legitimate traffic. It is the opposite of a false positive. Options C and D are both incorrect. Although these may be grammatically correct, these are not the terms used in the industry. In military operations, false flag operations attempt to transfer blame to another organization or adversary, thus a “false flag.”
+
+3. B. Air gapping refers to the server not being on a network. This means literally that there is “air” between the server and the network. This prevents malware from infecting the backup server. A separate virtual local area network (VLAN) or physical network segment can

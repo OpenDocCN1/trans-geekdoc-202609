@@ -1,0 +1,17 @@
+154. A. Leveraging automation and scripting to increase employee happiness and retention as well as improving efficiency and realizing time savings is a common strategy in situations like this. Deploying fewer devices only works if the organization needs fewer devices, baselines are most useful when paired with automation and scripting for deployment, and a physical endpoint device typically can’t be moved to the cloud.
+
+155. B. Authenticated scans can identify vulnerabilities that are not visible to unauthenticated scans. Penetration testers may not be able to obtain access equivalent to authenticated scans, so an authenticated scan is more likely to provide detailed data. Port scans do not provide deep vulnerability data.
+
+156. C. Quarantine and isolation are both commonly used in the containment phase of an incident to ensure that impacted systems are unable to impact other systems or parts of the organization. Files may also be quarantined to prevent further impact from malware. Detection and analysis typically do not involve quarantine and isolation, but quarantine and isolation may carry through into the eradication phase before systems are returned to normal operation.
+
+157. C. Linux permissions are read left to right for user, group, and other. With r’s at each location, this means everyone can read the contents of the directory. Only the user can write and execute files in the directory.
+
+158. A. A set of rules that defines who can access the data has determined if Beena is granted access. Here, rules assess her role, the time of day, and the workstation’s status. This is not accomplished using a classification or clearance system like MAC uses, and it does not rely on just an attribute like Beena’s location or other information about her.
+
+159. A. Trend analysis is commonly used as part of behavior-based detections, which can help identify new attacks. Signatures require knowledge of existing attacks to match signatures. IP- and port-based detection is useful for known attacks but not typically useful for unknown attacks.
+
+160. D. Heatmaps are used to show signal strength and coverage, allowing organizations to identify areas where there may be poor coverage or where multiple signals may conflict. War walking (and war driving) are techniques used to map wireless access points to geographic locations. Spectrum analysis and SSID plots are not terms used for this type of activity.
+
+161. C. The concept of least privilege is that only the minimum rights or privileges required to accomplish a role or task are provided. Zero trust requires continuous authentication and authorization, and least privilege is part of a zero trust environment, but zero trust goes beyond least privilege. Provisioning and deprovisioning are part of the account life cycle, and provisioning should respect the concept of least privilege.
+
+162. D. Automation provides many advantages for the provisioning process, including improving consistency, decreasing the potential for mistakes, and providing faster provisioning. It does not specifically address auditability in ways that manual processes cannot. Regardless of how provisioning is done, audit logs and trails should be created for all events, not just automated ones.

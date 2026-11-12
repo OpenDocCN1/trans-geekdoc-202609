@@ -1,0 +1,17 @@
+47. B. A host-based firewall is an excellent first line of defense for systems that will be deployed to untrusted networks. EDR and XDR are useful for preventing malicious software installs like ransomware, but they do not directly protect against network-based attacks, and disk encryption is a confidentiality control, not a useful tool to prevent network-based attacks.
+
+48. C. The marketing team has created a shadow IT solution—a solution put in place without central or formal IT support, typically done without IT's assistance or awareness. This creates a risk to the organization due to lack of support and may bring additional risks like licensing and compliance risks. The team did not intend to create an issue and is not actively working against the organization, meaning that they are not unskilled attackers, insider threats, or hacktivists.
+
+49. A. Resource inaccessibility is a common symptom of a denial-of-service attack. Impossible travel is typically found in log events through correlation. Missing logs are frequently indicators of compromised accounts deleting logs, and blocked content is most likely due to reputation service usage.
+
+50. B. Since the drives stored sensitive data and no mention of encryption was made, the drives should be physically destroyed to ensure that no data leakage can occur. It is not necessary to destroy the entire system to ensure this. Reformatting drives does not wipe data, and simply removing the system from inventory is typically part of the process but does not protect organizational data.
+
+51. B. A security information and event management tool (SIEM) is designed to ingest and analyze large volumes of logs and then alert on issues and events. Centralized logging is useful but needs additional tools to alert on issues. An IPS is used to detect and potentially respond to network-based attacks, not to gather and analyze logs, and EDR tools are useful for monitoring endpoints, not for large-scale log ingestion and analysis.
+
+52. C. Patrick knows that the first thing he should do is change the administrator password. Any further security changes, including updating firmware and disabling unnecessary services, can be made once the administrative account has been properly secured. Changing the default IP address does not necessarily improve security for the device.
+
+53. B. Paul knows that SSH typically uses port 22, HTTP uses port 80, and HTTPS uses port 443. HTTP is the only unencrypted protocol from that list, and thus he should disable port 80.
+
+54. C. An on-path attack redirects traffic to allow an attacker to see and potentially modify the traffic as shown in the graphic. SQL injection is accomplished by inserting SQL into web queries or application traffic, denial-of-service will target a service and no indication of that is shown, and a directory traversal attack will typically show directory manipulation like . . / . / .
+
+55. B. While dated, NTLM was historically one of the most common targets of credential relay attacks. RDP, SQL, and TLS are less commonly associated with credential relay attacks. Modern protocols implement encryption, session, IDs, and one-time passwords to prevent this type of attack.

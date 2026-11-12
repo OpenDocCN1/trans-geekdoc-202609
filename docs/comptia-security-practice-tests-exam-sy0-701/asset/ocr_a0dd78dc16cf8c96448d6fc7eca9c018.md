@@ -1,0 +1,17 @@
+133. B. A TLS-based VPN (often called an SSL-based VPN, despite SSL being outmoded) provides the easiest way for users to use VPN since it does not require a client. SSL VPNs also work only for specific applications rather than making a system appear as though it is fully on a remote network. HTML5 is not a VPN technology, but some VPN portals may be built using HTML5. Security Assertion Markup Language (SAML) is not a VPN technology. IPSec VPNs require a client or configuration and are thus harder for end users to use in most cases.
+
+134. C. Device placement can matter due to physical risks or because of concerns about latency, access to services, or other considerations. Connectivity concerns focus on whether an organization can obtain a network connection and whether it meets the organization’s needs, including throughput and reliability. Geographic dispersion refers to the distance between locations that helps to ensure that a single disaster does not take an organization offline. Attack surface is the set of services, ports, and physical access that an attacker could leverage.
+
+135. B. Decentralized approaches can provide increased resilience since a failure or compromise of the management plane or services in a single location will not disrupt other locations. Unfortunately, this normally comes with increased cost and complexity. Increased complexity is not an advantage.
+
+136. C. In an infrastructure as code (IaC) environment, updating the code that defines what a fully patched server is, then replacing servers in a cluster one at a time will be the least disruptive option while also ensuring that future instances will have the patches installed. Rebuilding a base image each time a patch comes out is not efficient, and manually patching is not a best practice in IaC environments and may lead to human error.
+
+137. A. The data should not be released or exposed and could cause harm. This means that confidential best describes this data from the list of available terms. Restricted data is typically limited to a subset of staff, but that is not reflected in the question. The data is also not described as being critical to the operations of the organization; instead the emphasis is on confidentiality. Since this data must remain confidential, it is not public data.
+
+138. A. Legacy devices typically cannot be purchased, so their cost becomes irrelevant. Whether they can be recovered, if patches are available, and the issues that lack of patching may cause are all common issues for legacy devices.
+
+139. B. UTM devices commonly provide firewall, IPS, antivirus/antimalware, and a variety of other services. They are also commonly part of SD-WAN architectures, but do not themselves provide the SD-WAN service.
+
+140. A. TLS VPNs are typically easier to set up and don’t require clients to be installed, unlike an IPSec VPN. SD-WAN is used to manage external connectivity, and software-defined networking (SDN) is used to manage networks and their performance, not to allow remote access by users.
+
+141. B. Moving devices to an isolated network segment that has appropriate controls in place to protect devices that may not be able to be secured or that may not receive regular patches is the best option available. Baselines, patching, and even scanning and remediation only help

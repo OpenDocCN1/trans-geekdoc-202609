@@ -1,0 +1,17 @@
+125. A. Rootkits are designed to help retain control of and access to a system without users noticing. That means that obtrusive behaviors like network scanning, displaying ransom notices, or deletion of files are unusual for rootkits to perform. Other malware components beyond the rootkit may perform these as part of a malicious actor's toolkit.
+
+126. A. A HIPS may block legitimate traffic if the traffic matches an existing rule or if a threat feed is used and has a detection that matches that traffic. That means that organizations that deploy HIPS in datacenters where disruptions could cause significant outages are careful about what rules they put in place and how threat feed data is used. A HIPS doesn't prevent least privilege and typically doesn't interact with application allow lists, and segmentation should not impact a HIPS.
+
+127. B. Nation-state actors are typically the most sophistical adversaries organizations will face. Organized crime is the second most sophisticated actor in general, with hacktivists, then shadow IT following.
+
+128. C. Malware is the most common threat vector involving files. Business email and phishing-related compromises that occur through files are typically due to malware. Cross-site scripting relies on embedding code in web pages that users will run when they view them, taking action as their logged-in account.
+
+129. C. The first step for most organizations when addressing a known vulnerability is to check whether a patch is available. Organizations will also assess the potential risks associated with the patch: has it been widely deployed and tested, are there known issues, and is there a likelihood of disruption due to patching? If there are known issues, other solutions like isolation or deploying additional security controls such as a host-based firewall or firewall rule, or even disabling the service if possible, may be employed.
+
+130. B. Systems are typically removed from management when they are shut down and before disks are wiped. Once they're off and will not return to service, they are wiped and then removed from inventory. Memory wipes and removal are not typical steps in decommissioning processes.
+
+131. D. TCP 1433 is the default service port for Microsoft SQL. Joe will want to take appropriate actions to protect his SQL server, including patching, properly configuration, firewall rules, and network segmentation.
+
+132. D. Encryption prevents resource reuse attacks from occurring because the data will not be accessible to attackers after resources are released and reallocated to third parties. VM escape attacks target the underlying VM infrastructure and could still occur if it was vulnerable. Pass-the-hash attacks are used against authentication systems when a hash can be captured and sent to validate a session, and birthday attacks leverage the likelihood of finding a valid collision more quickly by guessing than by moving linearly through a solution set for a hash.
+
+133. D. Tyler has encountered spyware, software that gathers information to send back to a third party. While spyware is less outright malicious than other types of malware and may even have asked users to agree to release information as part of a click-through during installation, it is still considered malware because it sends information about users, systems,

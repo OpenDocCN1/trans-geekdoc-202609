@@ -1,0 +1,17 @@
+11. A. Since Valerie is investigating an incident, she should immediately consider the potential that the logs were wiped. That likely means that the intruder has gained privileged access to the system, which should worry her even more! Reboots do not wipe audit.log, and Valerie should have permissions appropriate to perform her function. System errors could explain an empty audit.log, but are unlikely, and an empty log found during an investigation is a cause for concern.
+
+12. B. Jack has attempted a watering hole attack that leverages a frequently visited site to target a specific group of people. In this case, he is targeting his penetration testing target's users. Misinformation and disinformation are used to change opinions or to provide false information, and while business email compromise attacks are part of the Security+ exam outline, business website compromise attacks are not.
+
+13. C. While malware, modified firmware, and lack of availability are common concerns with the hardware supply chain, hardware modifications remain relatively uncommon.
+
+14. B. On-path attacks are used to capture, then replay valid credentials for attackers to use. Session tokens are used to counter this type of attack in some cases. Phishing email and brute-force password attacks can help obtain credentials but do not involve credential replay. Injection attacks are typically conducted against database servers.
+
+15. B. Common motivations for internal threat actors include blackmail, financial gain, and ethical reasons. Nation-state threats are more likely to be interested in espionage and war, and hacktivists in political beliefs.
+
+16. B. These are all common examples of bloatware, unwanted but typically not harmful software installed by manufacturers and as part of the installation processes for desired applications. MSPs are managed service providers, ransomware is malware that attempts to hold files for ransom, and rootware was made up for this question.
+
+17. C. Impossible travel describes scenarios where logins or other actions occur from separate physical locations that are too far apart to travel between before the action occurs. Here it is impossible to travel from China to the UK in an hour, and Ilya may need to check in with the employee since no VPN usage was described. It is possible the employee's account is compromised or some other questionable activity is occurring.
+
+18. D. Radio frequency identification (RFID) badges can be cloned, but adding an additional factor like a PIN means the badge alone is not sufficient to gain access. Piggybacking involves following an authorized user through a security door or gate. On-path attacks inject an attacker into the middle of a transaction or network connection, allowing them to view and potentially modify traffic. Concurrent session usage or access is an indicator of compromise (IoC) that focuses on multiple systems or users using the same credentials.
+
+19. B. Business email compromise (BEC) scams appear to come from legitimate sources and make requests that may seem reasonable like a payment change to a different wire transfer method. Vishing is done via voice, smishing via SMS, and pretexting uses excuses or reasons that the requested action must be taken.

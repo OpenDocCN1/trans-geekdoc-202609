@@ -1,0 +1,17 @@
+189. B. Successful authentications will not be logged based on these settings. Having access to both successes and failures can be useful when investigating incidents, particularly if attackers have stolen credentials. Text-based log files take up minimal space on most workstations and servers and should not be a significant concern. While the message notes that the policy may be overridden, Nick’s primary concern should be missing log data.
+
+190. B. CVSS scores range from 0 to 10.0, with 10.0 being the most critical. A score of .1–3.9 is considered a low rating, meaning that Brian can take his time to review and remediate the risk. Scores of 4.0–6.9 are medium, 7.0–8.9 are high, and 9.0–10.0 are critical.
+
+191. A. DKIM (DomainKeys Identified Mail) validates a domain’s identity using a public key pair, validating the authenticity of the sender. DMARC (Domain-based Message Authentication, Reporting, and Conformity) controls how unauthenticated messages are handled by mailbox providers, including quarantining, rejecting, or rejecting messages. The Sender Policy Framework (SPF) lists IP addresses of systems allowed to send email in DNS TXT records for a domain. STP is not an email security framework. The Simple Mail Transfer Protocol (SMTP) is the default email protocol.
+
+192. C. SELinux is a Linux kernel module that provides a variety of security capabilities and access control methods, including support for MAC (mandatory access control) for Linux systems. Group Policy is a Windows tool, the CIS benchmarks provide security configuration recommendations for systems but do not directly provide mandatory access control, and containerization is used to make application installations portable.
+
+193. B. Package monitoring tools review the dependencies and packages that make up open source tools to identify vulnerable components. Static analysis is manual review of code. Fagan testing is a formal code analysis process. Port scanning is not used to monitor for dependency security.
+
+194. B. SaaS environments allow customers to manage information, data, devices, accounts, and identities. That means that ensuring least privilege is used is possible through use of accounts and identities. Host-based firewalls, OS configurations, and physical security are all the responsibility of the SaaS provider.
+
+195. A. Unlike the other controls listed, insurance simply transfers the risk to another organization at a cost. It does not take any action to prevent the risk from occurring. Patching, segmentation, and firewalling are all technical controls.
+
+196. D. Sanitization is part of decommissioning and disposal processes, not asset management. Tracking data classification used on systems, identifying owners, and documenting acquisition dates for warranty and life-cycle tracking are all common parts of this process.
+
+197. C. Enterprise password managers provide functionality just like this, allowing passwords to be stored securely and tracked on use. EAP is an authentication protocol; multifactor authentication adds one or more factors, increasing security, but doesn’t provide the functionality described; and passwordless isn’t designed for a checkout and reset function.

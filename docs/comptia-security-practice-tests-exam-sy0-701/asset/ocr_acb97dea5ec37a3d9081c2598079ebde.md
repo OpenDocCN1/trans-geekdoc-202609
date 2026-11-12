@@ -1,0 +1,17 @@
+77. C. A quarantine process or setting will preserve malicious or dangerous files and programs without allowing them to run. This allows defenders to retrieve them for further analysis as well as to return them to use if they are determined not to be malicious, or if the malicious components can be removed from needed files. Purging, deep-freezing, and retention are not terms used to describe this behavior or setting.
+
+78. C. Chuck should recommend a mobile device management (MDM) system to ensure that organizational devices can be managed and protected in the future. Data loss prevention (DLP) will not stop a lost phone from being a potential leak of data, isolating the phones is not a realistic scenario for devices that will actually be used, nor is containment because the phone is out of the organization’s control once lost.
+
+79. B. The most important action Charles can take while working with his forensic artifacts to provide nonrepudiation is to digitally sign the artifacts and information that he is creating in his evidence records. Encrypting the output will ensure its confidentiality but will not provide nonrepudiation by itself. MD5 checksums for images are commonly gathered but must then be signed so that they can be validated to ensure they have not been modified.
+
+80. A. The best way to capture a virtual machine from a running hypervisor is usually to use the built-in tools to obtain a snapshot of the system. Imaging tools are not typically capable of capturing machine state, and dd is not designed to capture VMs. Removing a server’s drives can be challenging due to possible RAID and other specific server configuration items, and doing so might impact all other running VMs and services on the system.
+
+81. A. Law enforcement is not typically part of organizational incident response teams, but incident response teams often maintain a relationship with local law enforcement officers. Security analysts, management, and communication staff as well as technical experts are all commonly part of a core incident response team.
+
+82. A. Even if you’re not familiar with iptables, you can read through these rules and guess which rule includes the right details. DROP makes sense for a block, and you should know that SSH will be a TCP service on port 22.
+
+83. A. A packet capture will show attempts to connect to the service and will help Maria determine if there is unexpected traffic to the system. A network firewall could stop the traffic, but analyzing the actual traffic itself is best done with a packet capture. Logs may be useful as part of the analysis, but again, packet captures will provide more information. A forensic disk image is not useful for reviewing network traffic.
+
+84. A. Incident response plans don’t stop incidents from occurring, but they do help responders react appropriately and prepare the organization for incidents, and may be required for legal or compliance reasons.
+
+85. D. Degaussing a drive uses strong magnetic fields to wipe it and is the least likely to result in recoverable data. Deleted files can often be recovered because only the file index information will be removed until that space is needed and is overwritten. Quick formats work in a similar way and will leave remnant data, and files that are overwritten by smaller files will also leave fragments of data that can be recovered and analyzed.
