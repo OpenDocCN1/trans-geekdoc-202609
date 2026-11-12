@@ -1,0 +1,56 @@
+level_changes:
+- line: 197
+  before: 3
+  after: 4
+- line: 207
+  before: 3
+  after: 4
+- line: 213
+  before: 3
+  after: 4
+- line: 231
+  before: 3
+  after: 4
+- line: 235
+  before: 3
+  after: 4
+- line: 267
+  before: 3
+  after: 4
+- line: 271
+  before: 3
+  after: 4
+- line: 291
+  before: 3
+  after: 4
+- line: 320
+  before: 3
+  after: 4
+- line: 324
+  before: 3
+  after: 4
+- line: 525
+  before: 4
+  after: 3
+- line: 537
+  before: 4
+  after: 3
+text_changes:
+- line: 171
+  before: 5.2.1 意图操作提取。
+  after: 5.2.1 意图操作提取
+- line: 175
+  before: 5.2.2 包装插件的 Intent。
+  after: 5.2.2 包装插件的 Intent
+- line: 179
+  before: 5.2.3 意图状态转换。
+  after: 5.2.3 意图状态转换
+- line: 291
+  before: 官方标记的基于应用虚拟化的样本。
+  after: 官方标记的基于应用虚拟化的样本
+- line: 320
+  before: 双实例应用。
+  after: 双实例应用
+- line: 324
+  before: 无应用虚拟化的应用。
+  after: 无应用虚拟化的应用
