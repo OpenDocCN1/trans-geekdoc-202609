@@ -1,0 +1,9 @@
+In this example, a fake Netflix email is trying to get the potential victim’s Netflix login credentials or credit card number. You can see that the originating email address is not from netflix.com as it would be if the email was legitimate. If a victim were to click on the Update Profile button, they would be taken to a fake Netflix website where they would be asked to input their password and possibly credit card information.
+
+# Well-Known Brands
+
+Phishing messages will often fraudulently appear to come from a well-known brand (e.g., Microsoft, Facebook, Netflix, DocuSign, Amazon, DHL, USPS, etc.). Usually, some part of the email address will have the brand’s name in it, even though a phishing email is rarely truly from the brand or the brand’s Internet domain. We will cover how to tell the difference in later chapters, especially in Chapter 7, “DMARC, SPF, and DKIM,” when we cover DMARC, and Chapter 13, “Recognizing Rogue URLs.”
+
+Phishing emails will typically include the brand’s recognizable trademarked logo and may contain text, objects, and other links from or pointing to the brand’s real website. It’s not unusual for a phishing email to contain all valid brand links, wording, and objects with the only completely fraudulent item being the single button or link the phishing message is trying to get the potential victim to click on. Phishing emails often include statements that the email is legitimate or virus-free. It costs the phisher nothing to add those statements.
+
+Many different anti-phishing companies publish monthly or quarterly reports detailing the most popular simulated brands. Here is an example report: https://blog.checkpoint.com/security/dhl-replaces-microsoft-as-most-imitated-brand-in-phishing-attempts-in-q4-2021.

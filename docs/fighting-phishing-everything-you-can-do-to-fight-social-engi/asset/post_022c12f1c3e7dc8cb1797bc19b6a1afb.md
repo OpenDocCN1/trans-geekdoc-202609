@@ -1,0 +1,81 @@
+
+## PART II
+
+Policies
+
+Organizational policies are a starting point of any cyber defense. Part II covers four major policies: Acceptable Use Policy (Chapter 4), General Cybersecurity Policies (Chapter 4), specific Anti-Phishing Policies (Chapter 5), and Corporate SAT Policy (Chapter 6). Every organization should employ all these policies to best prevent social engineering and phishing.
+
+### Acceptable Use and General Cybersecurity Policies
+
+Chapter 4 will cover acceptable use and general cybersecurity policies. It is the first of three chapters dedicated to the policies every organization should have as part of their cybersecurity defense. Many general best practice security recommendations will be covered.
+
+> Any additions/deletions/changes to any policies need to be reviewed by your management and legal teams before implementing them.
+
+### Acceptable Use Policy (AUP)
+
+Every organization should have an acceptable use policy (AUP) that should be reviewed, acknowledged, and signed by every employee when they are hired and annually thereafter. An AUP is a general IT policy document that educates users and other third parties (e.g., contractors, vendors, etc.), who may use the organization’s IT resources or handle its protected data, about what is and is not allowed regarding the organization’s IT devices, networks, services, and data, including personal responsibilities. It restricts the allowed actions that can be performed on the organization’s devices and networks and defines many disallowed actions.
+
+For example, an AUP will usually explain that the organization’s electronic resources, including its computers, phones, and network, are provided for business purposes. An AUP may state that some personal use of work assets is allowed but should be minimal. An AUP often states that the assets cannot be used to personally enrich the covered person beyond the scope of their employment contract and that any new content created on the company’s assets automatically becomes the property of the company.
+
+Many companies get every employee to review and sign an AUP but most forget to include contractors, vendors, and other stakeholders who have access to their systems or data.
+
+AUPs often state that offensive, obscene, and pornographic documents and images are not allowed on company assets. It may prohibit off-color jokes or jokes that cause anxiety in others. It will often prevent the selling of personal items, inappropriate contact, and racist or sexist content. An AUP may state that the company reserves the right to monitor any electronic content without further notice, including communications of a personal nature conducted across the network. It will usually state that the use of electronic assets and networks is a privilege and not a right.
+
+An AUP can be used as a legal document, so it’s important that what it contains is thorough, reviewed, and approved by the legal department. Problematic employees fired for doing malicious things with their work computers have successfully argued in court that because their AUP didn’t specifically forbid the behavior they were fired for, they did not know they couldn’t do the malicious activity, and they have successfully regained their job and even won damages.
+
+An AUP should include language that dissuades social engineering, phishing, and spam. It’s needed to make sure employees know both that they should not initiate those actions on company resources and that the company doesn’t want these threats on their computers or networks from internal or external sources. Language against social engineering and phishing should be included in every AUP because it may be the only cybersecurity document an employee reviews and signs before they have access to an organization’s systems.
+
+But an AUP covers far more than anti-social engineering policies. It should cover overall general IT “do’s and don’ts” in a holistic manner. An AUP often includes a scope, a statement of general overarching governance philosophy, a code of conduct, examples of what is allowed, what explicitly isn’t allowed, and consequences of failing to meet acceptable use policies. As examples, common general policies included in most AUPs include “Don’t give your password to others” and “Lock your desktop when you are away from your desk.”
+
+AUPs vary greatly depending on the organization being covered, the business conducted, and the participant’s relationship and appropriate expectations. For example, AUPs for educational facilities tend to focus on students and teachers, whereas most organizational AUPs focus on employees and vendors.
+
+An AUP should state what the possible consequences are for a stakeholder violating the agreement, such as being formally written up, penalties, and separation of employment. Most AUPs end with blanket notices and disclaimers such as a statement that the AUP is in compliance with state and national laws, telecommunication rules and regulations, privacy laws, and Fair Use Laws.
+
+But what you include in your AUP is up to you. They vary greatly across organizations and industries.
+
+There are many AUP examples on the Internet, including these:
+
+- https://catalog.upenn.edu/pennbook/policy-acceptable-use-electronic-resources
+- www.earthlink.net/acceptable-use-policy
+- https://frsecure.com/acceptable-use-policy-template
+- www.business.com/articles/acceptable-use-policy
+
+Figure 4-1 shows a partial excerpt from the University of Pennsylvania's Acceptable Use Policy.
+
+![](img/49fb1c0c9ac2e62e5db4a36fa9f8b591_101_0.png)
+
+FIGURE 4-1 A partial excerpt from the University of Pennsylvania's Acceptable Use Policy located at https://catalog.upenn.edu/pennbook/policy-acceptable-use-electronic-resources.
+
+Every organization should have an AUP that is reviewed and signed by every stakeholder when hired and annually thereafter. If not, create one and have it reviewed and signed by all stakeholders.
+
+### General Cybersecurity Policy
+
+Every organization should have a cybersecurity policy, also known by many other similar names such as information security policy, InfoSec policy, or IT security policy. An organization's cybersecurity policy is a written and communicated document detailing how an organization will protect its information and systems from cybersecurity threats. It contains procedures, processes, and requirements to protect the organization's information system assets from physical and logical threats. Every employee should be required to review the organization's cybersecurity policies when hired and at least annually thereafter. It should be reviewed and signed again when significant changes are made. The policy should protect the confidentiality, integrity, and availability (known as the CIA triad) of information and systems. It defines the expectations of stakeholders and the consequences of not following the requirements. Figure 4-2 shows a partial excerpt of the University of Pennsylvania's Security Policy (www.isc.upenn.edu/ITPC/security-policy).
+
+### Recommended Best Security Practices
+
+Cybersecurity policies often include the organization's required security practices. These can vary greatly across organizations and industries. The rest of this chapter will cover many common security policy best practices, although it is not an inclusive list and may not be appropriate for all organizations.
+
+I include them here just to highlight many common recommended best security practices to consider when making your organization’s cybersecurity policy.
+
+| Section | |
+| --- | --- |
+| Custodian: Penn Office of Information Security | |
+| 1. INTRODUCTION | + |
+| 2. PURPOSE | + |
+| 3. DEFINITIONS | + |
+| 4. SCOPE | + |
+| 5. RISKS TO NON-COMPLIANCE | - |
+| 5.1 Non-compliance with this policy poses a great risk to Penn and to individuals whose data Penn maintains... | |
+| 5.2 Non-compliance with incident response policy may delay corrective action... | |
+| 6. REQUIREMENTS | + |
+| IT SECURITY STANDARDS | + |
+
+FIGURE 4-2 A partial excerpt from the University of Pennsylvania’s Security Policy.
+
+### Physical Protections
+
+- Code-approved fire suppression systems must be deployed to protect computer rooms.
+- In multi-floor buildings, computer rooms should not be located below the second floor.
+- Computer rooms should not be located in areas directly exposed to external-facing windows or doors.
+- Do not leave company devices in unmonitored locations without securing them against unauthorized use or theft.

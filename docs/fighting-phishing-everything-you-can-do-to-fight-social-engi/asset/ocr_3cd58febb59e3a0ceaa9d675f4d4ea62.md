@@ -1,0 +1,9 @@
+communicate how big of a problem it is (i.e., it represents 70% to 90% of all successful cyberattacks), and what the possible damage from a successful attack can be. Readers must understand that a single failure to detect a social engineering or phishing attack can lead to devastating consequences, including devastating operational interruption and a reduction in customer goodwill and faith in the organization. Readers need to understand the importance of preventing successful hacking attacks. A good introduction might begin with a friendly letter from the CEO indicating their support and the entire organization’s support for the anti-phishing policy.
+
+# Definitions
+
+Make sure you define social engineering, phishing, ransomware, spear phishing, SMS, smishing, vishing, and patching. If you use an instant messaging app like Slack, Microsoft Teams, or Jabber, define those. Never assume that readers understand any technical terms. As an example, I frequently mention how important it is for users to patch their software and firmware in the presentations I do. In about one out of four in-person presentations I do, someone will come up to me after the presentation and quietly ask what I meant by “patching.” You can see they are aware it’s something they should know and don’t. They are embarrassed.
+
+The first time someone asked me what patching was (it was a senior member of the FBI), I chuckled and laughed because I thought it was a joke. Then I realized it wasn’t. Since then, I’ve had people of all ages and positions ask me what I meant by patching or updating. Sometimes you don’t realize that not everyone knows the very simple terms you know because you are in or exposed to the IT industry.
+
+By the way, if you haven’t tried to explain what patching is to someone not in the IT industry, it can be difficult to define it

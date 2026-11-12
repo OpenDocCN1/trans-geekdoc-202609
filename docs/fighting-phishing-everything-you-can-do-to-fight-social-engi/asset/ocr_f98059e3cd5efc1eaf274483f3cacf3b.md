@@ -1,0 +1,9 @@
+see here with a grain of salt. If Microsoft could very reliably detect what was or wasn’t malicious, less of it would reach your inbox. But it’s all useful information and should be used to help determine if the email is malicious or not.
+
+# Clicking on Links and Running Malware
+
+You can also choose to click on suspicious URL links and directly run suspected malware. You should never do this on your production computer. Doing so can compromise it and result in the leaking of confidential information, data loss, and operational loss of the device. Yes, one click can cause this type of damage. If you decide to click on a potentially malicious URL link or run/ open a potentially dangerous file attachment, it should always be done on a separate, safe, isolated, forensics computer or safe, isolated, virtual machine. The latter is far more commonly used by forensic investigators today.
+
+Consider setting up a forensics virtual machine. There are over a dozen virtual machine vendors/products, including Vmware, Microsoft Hyper-V, Oracle Virtual Box, Windows 10 Sandbox, and Amazon Workspaces. If you set up a forensics virtual machine, make sure that it is isolated from your production network. It should be configured with a virtual network connection that only allows any network traffic from it to get out to the Internet only and not your local network. It should not have any production software installed and should not share any logons with any of your production assets.
+
+Make sure the account you use to log on to the virtual machine is unique and is not shared outside of the virtual machine. I set up “fake” disposal, “throwaway,” email accounts, using Hotmail and Gmail, and I send phishing emails and suspected malware to them. Then I open those emails on my safe

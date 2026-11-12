@@ -1,0 +1,9 @@
+# Behaviors
+
+Behavior is what we do. It’s our actions. If something happens, this is how we respond to it. In programming vernacular, it’s an IF-THEN statement. The person involved perceives an event, is motivated to respond in a particular way, and can perform the desired action. A person’s attitude often shapes their behaviors.
+
+We want behaviors to decrease cybersecurity risk. The behavior can be directly taught and reinforced (e.g., a formal training class), indirectly learned (i.e., watching others), or instinctual. For example, a parent of a young child holds the child’s hand as they cross a street. The parent teaches the child to look right, left, and right again to make sure the path is clear, before proceeding. If reinforced enough, looking both ways before you cross a street becomes automatic. The child doesn’t think much about it, if at all, before performing the desired behavior before crossing the street. Not only that, but the child is going to teach their child the same behavior when they have children. No one has to tell the original child that they should teach their child how to appropriately cross a street. It’s just assumed and expected.
+
+In some scenarios, some humans are resistant to being told what to do. One common body of thought is we want to “nudge” people towards good behaviors. As Perry Carpenter stated, “The strongest nudge possible is to make the action your employees to take the easiest or the most obvious choice available.” This is one reason why KnowBe4 gives away their Phish Alert Button (www .knowbe4 .com/free-phish-alert) for free. If a PAB user sees a suspected phishing email, it’s very easy to simply click on a button.
+
+> Here’s a whole book dedicated to nudging, Nudge: The Final Edition (www.amazon.com/Nudge-Final-Richard-H-Thaler/dp/014313700X).

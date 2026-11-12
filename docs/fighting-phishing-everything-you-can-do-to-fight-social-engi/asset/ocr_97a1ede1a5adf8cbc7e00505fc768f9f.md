@@ -1,0 +1,9 @@
++   - Chapter 13: “Recognizing Rogue URLs.” One of the best skills you can give anyone is how to recognize a phishing URL. Chapter 13 covers, in detail, how anyone can tell the difference between legitimate and rogue URLs. It includes dozens of examples of rogue URLs and how anyone can detect the fraudulent aspects.
+
++   - Chapter 14: “Fighting Spear Phishing.” Spear phishing is responsible for more successful data breaches than any other single threat and takes specific training to defeat. Chapter 14 discusses how you need to modify your “regular” security awareness training program to address the very real risk of spear phishing.
+
++   - Chapter 15: “Forensically Examining Emails.” Chapter 15 covers how to forensically examine any email to better determine if what you are looking at is a phishing email or not. It covers dozens of methods, including DMARC, reverse DNS lookups, domain name investigating, blacklisting, and physical address locating. If you have ever been stumped on whether an email you are looking at is a phishing email or not, this chapter is for you.
+
++   - Chapter 16: “Miscellaneous Hints and Tricks.” Chapter 16 covers suggestions and hints that didn’t fit in other chapters, like strict anti-phishing policies, text-only emails, SAT counseling, and more.
+
++   - Chapter 17: “Improving Your Security Culture.” The Holy Grail in the computer security defense community is to create a lasting culture of pervasive cybersecurity in the organization so that everyone practices excellent cyber hygiene resulting in a significant reduction in organizational cybersecurity risk. Chapter 17 will define the components of a security culture and discuss how you can get your organization there.

@@ -1,0 +1,9 @@
+How do you focus on the right controls, out of the hundreds of controls you need to implement, to have an effective cybersecurity defense that puts down the most risk? The answer is risk management.
+
+# Risk Management
+
+The question and answer to which controls to focus on is a very critical dilemma, and most organizations do it wrong. It's easy to focus on the wrong things too intently and not enough on the most effective controls. Many times, it’s a side effect of our compliance documents.
+
+Consider PCI-DSS again. The very first main requirement is *Requirement 1: Install and Maintain Network Security Controls*. It has a lot to do with installing and maintaining firewalls and other network-level security isolations. It has nineteen sub-recommendations, thousands of words, and over twenty pages. That’s great. It’s important to have good network boundary isolation.
+
+The problem is that giving good security awareness training, which is a single requirement (as shown in Figure 3-1), is just forty-two words. It can easily be argued that if social engineering and phishing are involved in 70% to 90% of successful attacks, there is likely no better control that can be implemented than good security awareness training. Today’s biggest threats (e.g., phishers and unpatched software) are little affected by network security isolation. Nearly every organization and person today have one or more firewalls enabled and have for decades, and it hasn’t stopped malware or hackers. Most threats are *user-based* threats where the user accidentally performs or is tricked into performing an action that leads to a successful compromise, and firewalls and network isolation don’t help. The threat is on the end-user’s workstation already past the network defenses.

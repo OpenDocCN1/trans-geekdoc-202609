@@ -1,0 +1,9 @@
+# Voice-Call Tests
+
+Until the telephone companies figure out how to block fraudulent calls, all employees need to be trained on vishing attacks, and if possible, simulated vishing attacks should be conducted at least annually, as part of training and assessment. Unfortunately, there are not a lot of ways to do this in an automated fashion. Many of the telcos have even forbidden anti-phishing companies to make simulated vishing calls. Legally, the telcos apparently see no difference between actual real-world vishing calls and simulated vishing calls made to help mitigate the risk. The telcos paint both types of calls as unsolicited phone calls, which are illegal by default. Despite these challenges, every organization should test their employee’s handling of simulated vishing calls, if possible, along with phishing via SMS and USB keys.
+
+# Credential Searches
+
+The Internet and the “dark web” have tens of millions of login credentials that have been previously compromised. Everyone should do periodic searches for login credentials, their own or their companies’, to see what is or isn’t out there. There are many sites, such as the popular, www.haveibeenpwned.com, which allow single, one-at-a-time searches, or allow multiple queries at once (usually using APIs). The sites are free and commercial.
+
+I recommend you create at least one “red herring” or decoy fake email account in your company’s email server and then periodically search for that account existing on the Internet or dark web. It’s a fake email account on an internal server. It shouldn’t be out on the Internet or dark web, but if it ends up being there, this likely indicates that a malicious breach of some kind occurred.

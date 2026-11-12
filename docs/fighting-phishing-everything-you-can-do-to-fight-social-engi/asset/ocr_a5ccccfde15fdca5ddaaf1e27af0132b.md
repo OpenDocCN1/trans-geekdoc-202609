@@ -1,0 +1,9 @@
+lies-exposed) that over 70,000 people lost over $1.3B to romance scams in 2022. And these are just the people who reported it to the FTC, which has to be a tiny percentage of the total victims.
+
+I think if any single source aggregated all types of initial root hacking methods across both personal and industry interests, the total percentage of people who have experienced social engineering and phishing attempts would be up in the high 90s. When nearly 100% of us have been potential victims of attempted scams each year, how could there be any other result?
+
+Social engineering scams cost victims more than other types of hacking. According to IBM's 18th annual Cost of the Data Breach 2023 report(www.ibm.com/reports/data-breach), the average data breach cost from all causes is $4.45M, but is $4.76M for social engineering. Only malicious insider attacks were higher at $4.9M. The same report says that it takes an average of 234 days to detect a breach and 80 days to contain it.
+
+Ransomware and BEC In most recent years, ransomware and business email compromise (BEC) scams have been the top threat to most organizations. Ransomware is an attack where the perpetrators encrypt the victim's computers or data and ask for an extortion payment to decrypt. Ransomware gangs also often steal logon credentials (of businesses, employees, and customers), exfiltrate data, and publicly embarrass their victims (the combination of which is known in the media as double extortion).
+
+Since at least 2018, ransomware has been a (or often the) top worry of business professionals. And businesses do have a reason to fear ransomware. Many different reports show that over 60% of all businesses suffer a ransomware attack each year. Ransomware usually causes significant operational disruption and a high financial damage. Coveware states that the average ransom payment made in the first quarter of 2023 was $740,144 (the median
