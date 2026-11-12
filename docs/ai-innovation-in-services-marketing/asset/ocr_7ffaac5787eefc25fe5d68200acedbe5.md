@@ -1,0 +1,13 @@
+The research ensures the confidentiality of each interviewee by coding them and not disclosing their personal information in the thesis. The data collection process took approximately one and a half weeks starting on October 11, 2023, and ending on October 20, 2023. All interviews were conducted in English at the agreed time via Microsoft Teams and Google Meet platforms.
+
+# # Data Analysis Method
+
+Qualitative content analysis was used to systematically identify recurrent patterns in respondents’ answers. Respondents are coded as numbers from 1 to 10 (R1, R2, etc.) and their answers are provided in a question-respondent matrix. After organizing the data into a question-respondent matrix, segments that share similar thoughts were analyzed and the main ideas were summarized under the related topics. To get meaningful aspects from the answers provided, main concepts, patterns, and recurrent trends gained from the data were compared and systematically examined.
+
+# ## Data Analysis and Research Results
+
+# ### Respondent Criteria Questions
+
+Respondent criteria questions aim to analyze if the interviewees are selected appropriately and that their qualities fit the research. The inclusion of a demographic table serves as a reference point, offering a visual representation of respondents’ diversity and providing a comprehensive overview of their characteristics (Table 2). Respondents were examined demographically and contacted before the interview to confirm if they belong to one of the age groups (A20-30 & A40-50). The division of age groups allows to compare the perspectives and behaviors of distinct generations. To get a bigger picture of the divergence of the respondents, their gender, residence, and occupation were also collected.
+
+During the interview, their behavior with digital ads was also analyzed. The data collected showed that all of the respondents often engage with digital marketing campaigns, except for the R7 who engages only sometimes. Regarding the recent action made with the ad online, five of the respondents (R1, R2, R4, R8, R9) clicked on the ad while the other five (R3, R5, R6, R7, R10) bought something from the ad. Four of the respondents (R1, R2, R6, R10) completed an action after seeing an ad online within a week before the interview, three respondents (R3, R7, R9) a week before the interview, two respondents (R4, R8) more than one week before, and one respondent (R5) within two months period.
