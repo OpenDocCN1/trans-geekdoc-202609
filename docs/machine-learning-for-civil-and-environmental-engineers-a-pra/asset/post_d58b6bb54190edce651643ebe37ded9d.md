@@ -1,0 +1,113 @@
+
+## Table 5.6 (Continued)
+
+| No. Metric | Python code/package | R code/package |
+| :--- | :--- | :--- |
+| Clustering | | |
+| 1 The Elbow method [55, 56] | ```
+#K-means using Euclidean distance/distortion.
+distortions = []
+
+#Total number of clusters.
+K = range(1,10)
+
+#Calculate distortion per cluster.
+for k in K:
+    kmeanModel = KMeans(n_clusters=k).fit(X)
+    kmeanModel.fit(X)
+    distortions.append(sum(np.min(cdist(X, kmeanModel.cluster_centers_, 'euclidean'), axis=1)) / X.shape[0])
+
+#Plotting.
+plt.plot(K, distortions, 'bx-')
+plt.xlabel('k-clusters')
+plt.ylabel('Distortion')
+plt.xlim([0, 10])
+``` | ```
+#Package for Plotting Number of Cluster calculation:
+> install.packages("NbClust")
+> library("NbClust")
+> set.seed(1234)
+c <- NbClust(df, min.nc=2, max.nc=15, method="kmeans")
+``` |
+| 2 The Silhouette Coefficient | ```
+from sklearn.metrics import silhouette_samples, silhouette_score
+
+#Compute the silhouette scores for each sample.
+sample_silhouette_values = silhouette_samples(X, cluster_labels)
+
+#The silhouette_score gives the average value for all the samples.
+silhouette_avg = silhouette_score(X, cluster_labels)
+``` | ```
+#Package for Plotting clustering quality in Dataframe:
+> install.packages("cluster")
+> install.packages("vegan")
+> library("cluster")
+> library("vegan")
+dis = vegdist(data)
+res = pam(dis, 5) # or whatever your choice of clustering algorithm is
+sil = silhouette(res$clustering, dis) # or use your cluster vector of yours
+plot(sil)
+``` |
+
+- Compiled from open sources such as SciKitLearn.org, cran.r-project.org, rdocumentation.org, and https://github.com/mfrasc60/Metrics/blob/master/R/regression.R. To apply metrics in Python, insert (actual, predicted) right after the metric. For example, metric (actual, predicted). You could also. print ("Root Mean Square Error:", RMSE) to print the value of the metric.
+
+## References
+
+- 1 Kodur, V.K.R., Garlock, M., and Iwankiw, N. (2011). Structures in fire: state-of-the-art, research and training needs. Fire Technol. 48: 825–839. doi: 10.1007/s10694-011-0247-4.
+- 2 Naser, M.Z. (2019). Fire resistance evaluation through artificial intelligence – a case for timber structures. Fire Saf. J. 105: 1–18. doi: 10.1016/j.firesaf.2019.02.002.
+- 3 Domingos, P. (2012). A few useful things to know about machine learning. Commun. ACM. doi: 10.1145/2347736.2347755.
+- 4 Schmidt, M.D. and Lipson, H. (2010). Age-fitness pareto optimization. doi: 10.1145/1830483.1830584.
+- 5 Cremonesi, P., Koren, Y., and Turrin, R. (2010). Performance of recommender algorithms on top-n recommendation tasks categories and subject descriptors. RecSys '10: Proceedings of the Fourth ACM Conference on Recommender Systems.
+- 6 Laszczyk, M. and Myszkowski, P.B. (2019). Survey of quality measures for multi-objective optimization: construction of complementary set of multi-objective quality measures. Swarm Evol. Comput. 48: 109–133. doi: 10.1016/j.swevo.2019.04.001.
+- 7 Willmott, C.J. and Matsuura, K. (2005). Advantages of the mean absolute error (MAE) over the root mean square error (RMSE) in assessing average model performance. Clim. Res. 30. doi: 10.3354/cr030079.
+- 8 Makridakis, S. (1993). Accuracy measures: theoretical and practical concerns. Int. J. Forecast. 9. doi: 10.1016/0169-2070(93)90079-3.
+- 9 Ferreira, C. (2001). Gene expression programming: a new adaptive algorithm for solving problems. Gene Expr. Program. a New Adapt. Algorithm Solving Probl. Complex Syst. 13. https://www.semanticscholar.org/paper/Gene-Expression-Programming-%3A-a-New-Adaptive-for-Ferreira/323b2a24c2584ca8e81c5b5bf655ae3f40fae (accessed 16 March 2019).
+- 10 D. Pollock (1999). Handbook of Time Series Analysis, Signal Processing, and Dynamics. Geology, Computer Science. https://www.elsevier.com/books/handbook-of-time-series-analysis-signal-processing-and-dynamics/pollock/978-0-12-560990-6. doi: 10.1016/b978-0-12-560990-6.x5000-3.
+- 11 Hyndman, R.J. and Koehler, A.B. (2006). Another look at measures of forecast accuracy. Int. J. Forecast. 22. doi: 10.1016/j.ijforecast.2006.03.001.
+- 12 Shcherbakov, M.V., Brebels, A., Shcherbakova, N.L. et al. (2013). A survey of forecast error measures. World Appl. Sci. J. 24.
+- 13 Poli, A.A. and Cirillo, M.C. (1993). On the use of the normalized mean square error in evaluating dispersion model performance. Atmos. Environ. A-Gen. Top. 27. doi: 10.1016/0960-1686(93)90410-Z.
+- 14 Armstrong, J.S. and Collopy, F. (1992). Error measures for generalizing about forecasting methods: empirical comparisons. Int. J. Forecast. 8. doi: 10.1016/0169-2070(92)90008-W.
+- 15 Sadat Hosseini, A., Hajikarimi, P., Gandomi, M. et al. (2021). Genetic programming to formulate viscoelastic behavior of modified asphalt binder. Constr. Build. Mater. 286. doi: 10.1016/j.conbuildmat.2021.122954.
+- 16 Bain, L.J. (1967). Applied regression analysis. Technometrics 9. doi: 10.1080/00401706.1967.10490452.
+- 17 Smith, G. (1986). Probability and Statistics in Civil Engineering. London: Collins.
+- 18 Golbraikh, A., Shen, M., Xiao, Z. et al. (2003). Rational selection of training and test sets for the development of validated QSAR models. J. Comput. Aided. Mol. Des. 17: 241–253. doi: 10.1023/A:1025386326946.
+- 19 Roy, P.P. and Roy, K. (2008). On some aspects of variable selection for partial least squares regression models. QSAR Comb. Sci. 27: 302–313. doi: 10.1002/qsar.200710043.
+- 20 Frank, I. and Todeschini, R. (1994). The Data Analysis Handbook. Elsevier. https://books.google.com/books?hl=en&lr=&id=SXEpB0H6L3YC&oi=fnd&pg=PP1&ots=zfmIRO_XO5&sig=dSX6KJdkuav5zRnXaUdcftGSn2k (accessed 21 June 2019).
+- 21 Gandomi, A.H., Yun, G.J., and Alavi, A.H. (2013). An evolutionary approach for modeling of shear strength of RC deep beams. Mater. Struct. Constr. 46. doi: 10.1617/s11527-013-0039-z.
+- 22 Cheng, M.Y., Firdausi, P.M., and Prayogo, D. (2014). High-performance concrete compressive strength prediction using Genetic Weighted Pyramid Operation Tree (GWPOT). Eng. Appl. Artif. Intell. 29. doi: 10.1016/j.engappai.2013.11.014.
+- 23 Alwanas, A.A.H., Al-Musawi, A.A., Salih, S.Q. et al. (2019). Load-carrying capacity and mode failure simulation of beam-column joint connection: application of self-tuning machine learning model. Eng. Struct. 194. 10.1016/j.engstruct.2019.05.048.
+- 24 Chou, J.S., Tsai, C.F., Pham, A.D., and Lu, Y.H. (2014). Machine learning in concrete strength simulations: multi-nation data analytics. Constr. Build. Mater. 73. doi: 10.1016/j.conbuildmat.2014.09.054.
+- 25 Nguyen, T.T., Pham Duy, H., Pham Thanh, T., and Vu, H.H. (2020). Compressive strength evaluation of fiber-reinforced high-strength self-compacting concrete with artificial intelligence. Adv. Civ. Eng. 2020. doi: 10.1155/2020/3012139.
+- 26 Sultana, N., Zakir Hossain, S.M., Alam, M.S. et al. (2020). Soft computing approaches for comparative prediction of the mechanical properties of jute fiber reinforced concrete. Adv. Eng. Softw. 149. doi: 10.1016/j.advengsoft.2020.102887.
+- 27 Willmott, C.J. (1981). On the validation of models. Phys. Geogr. 2. doi: 10.1080/02723646.1981.10642213.
+- 28 Nash, J.E. and Sutcliffe, J.V. (1970). River flow forecasting through conceptual models part I – a discussion of principles. J. Hydrol. 10. doi: 10.1016/0022-1694(70)90255-6.
+- 29 Gupta, H.V., Kling, H., Yilmaz, K.K., and Martinez, G.F. (2009). Decomposition of the mean squared error and NSE performance criteria: implications for improving hydrological modelling. J. Hydrol. 377. doi: 10.1016/j.jhydrol.2009.08.003.
+- 30 Knoben, W.J.M., Freer, J.E., and Woods, R.A. (2019). Technical note: inherent benchmark or not? comparing Nash-Sutcliffe and Kling-Gupta efficiency scores. Hydrol. Earth Syst. Sci. 23. doi: 10.5194/hess-23-4323-2019.
+- 31 Huang, H. and Burton, H.V. (2019). Classification of in-plane failure modes for reinforced concrete frames with infills using machine learning. J. Build. Eng. 25. doi: 10.1016/j.jobe.2019.100767.
+- 32 Bhowan, U., Johnston, M., and Zhang, M. (2011). Developing new fitness functions in genetic programming for classification with unbalanced data. IEEE Trans. Syst. Man Cybern B: Cybern. 42. doi: 10.1109/TSMCB.2011.2167144.
+- 33 Boughorbel, S., Jarray, F., and El-Anbari, M. (2017). Optimal classifier for imbalanced data using Matthews correlation coefficient metric. PLoS One 12. doi: 10.1371/journal.pone.0177678.
+- 34 Tharwat, A. (2020). Classification assessment methods. Appl. Comput. Inform. 17. doi: 10.1016/j.aci.2018.08.003.
+- 35 Caruana, R. and Niculescu-Mizil, A. (2004). Data mining in metric space: an empirical analysis of supervised learning performance criteria. KDD ’04: Proceedings of the Tenth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. doi: 10.1145/1014052.1014063.
+- 36 Jurman, G., Riccadonna, S., and Furlanello, C. (2012). A comparison of MCC and CEN error measures in multi-class prediction. PLoS One 7. doi: 10.1371/journal.pone.0041882.
+- 37 Powers, D.M.W. (2011). Evaluation: from precision, recall and F-measure to ROC, informedness, markedness and correlation. J. Mach. Learn. Technol. doi: 10.48550/arXiv.2010.16061.
+- 38 Bradley, A.P. (1997). The use of the area under the ROC curve in the evaluation of machine learning algorithms. Pattern Recognit. 30. doi: 10.1016/S0031-3203(96)00142-2.
+- 39 Hanley, J.A. and McNeil, B.J. (1982). The meaning and use of the area under a receiver operating characteristic (ROC) curve. Radiology 143. doi: 10.1148/radiology.143.1.7063747.
+- 40 Zhang, Y., Burton, H.V., Sun, H., and Shokrabadi, M. (2018). A machine learning framework for assessing post-earthquake structural safety. Struct. Saf. 72. doi: 10.1016/j.strunsafe.2017.12.001.
+- 41 Davis, J. and Goadrich, M. (2006). The relationship between Precision-Recall and ROC curves. ICML '06: Proceedings of the 23rd International Conference on Machine Learning. doi: 10.1145/1143844.1143874.
+- 42 Bi, J. and Bennett, K. (2003). Regression error characteristic curves. 20th International Conference on Machine Learning, 2003.
+- 43 Zhang, M. and Smart, W. (2006). Using Gaussian distribution to construct fitness functions in genetic programming for multiclass object classification. Pattern Recognit. Lett. 27. doi: 10.1016/j.patrec.2005.07.024.
+- 44 Kocher, M. and Savoy, J. (2017). Distance measures in author profiling. Inf. Process. Manag. 53. doi: 10.1016/j.ipm.2017.04.004.
+- 45 Patel, B.V. and Meshram, B.B. (2012). Content based video retrieval systems. Int. J. UbiComp. 3. doi: 10.5121/iju.2012.3202.
+- 46 Giusti, R. and Batista, G.E.A.P.A. (2013). An empirical comparison of dissimilarity measures for time series classification. 2013 Brazilian Conference on Intelligent Systems. doi: 10.1109/BRACIS.2013.22.
+- 47 Vuk, M. and Curk, T. (2006). ROC curve, lift chart and calibration plot. Metod. Zv.
+- 48 Brodersen, K.H., Ong, C.S., Stephan, K.E., and Buhmann, J.M. (2010). The balanced accuracy and its posterior distribution. 2010 20th International Conference on Pattern Recognition. doi: 10.1109/ICPR.2010.764.
+- 49 Cohen, J. (1960). A coefficient of agreement for nominal scales. Educ. Psychol. Meas. 20. doi: 10.1177/001316446002000104.
+- 50 Artstein, R. and Poesio, M. (2008). Inter-coder agreement for computational linguistics. Comput. Linguist. 34. doi: 10.1162/coli.07-034-R2.
+- 51 Destercke, S. (2014). Multilabel prediction with probability sets: the hamming loss case. IPMU 2014: Information Processing and Management of Uncertainty in Knowledge-Based Systems. doi: 10.1007/978-3-319-08855-6_50.
+- 52 Cząjkowski, M. and Kretowski, M. (2019). Decision tree underfitting in mining of gene expression data. An evolutionary multi-test tree approach. Expert Syst. Appl. 137. doi: 10.1016/J.ESWA.2019.07.019.
+- 53 Devarriya, D., Gulati, C., Mansharmani, V. et al. (2020). Unbalanced breast cancer data classification using novel fitness functions in genetic programming. Expert Syst. Appl. 140: 112866. doi: 10.1016/J.ESWA.2019.112866.
+- 54 Rousseeuw, P.J. (1987). Silhouettes: a graphical aid to the interpretation and validation of cluster analysis. J. Comput. Appl. Math. 20. doi: 10.1016/0377-0427(87)90125-7.
+- 55 Thorndike, R.L. (1953). Who belongs in the family? Psychometrika 18. doi: 10.1007/BF02289263.
+- 56 Nainggolan, R., Perangin-angin, R., Simarmata, E., and Tarigan, A.F. (2018). Improved the performance of the K-means cluster using the Sum of Squared Error (SSE) optimized by using the elbow method. J. Phys. Conf. Ser. 1361: 12015. doi: 10.1088/1742-6596/1361/1/012015.
+- 57 Arbelaitz, O., Gurrutxaga, I., Muguerza, J. et al. (2013). An extensive comparative study of cluster validity indices. Pattern Recognit. 46: 243–256. doi: 10.1016/j.patcog.2012.07.021.
+- 58 Naser, M.Z. (2023, January 1). Do we need exotic models? Engineering metrics to enable green machine learning from tackling accuracy-energy trade-offs. J. Clean. Prod. 382: 135334. doi: 10.1016/j.jclepro.2022.135334.

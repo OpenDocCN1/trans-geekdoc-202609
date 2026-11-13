@@ -1,0 +1,13 @@
+The first rung builds upon the observations42 we see and hence stems from pure *statistical associations*. For example, uncoated metallic beams experience some level of corrosion during their service. In this example, our observations of how metallic beams are likely to corrode are from a sense of association. This association can answer the following question: *What is the expected corrosion level an uncoated metallic beam could experience in five years?*
+
+The above question can be mathematically represented by the conditional probability, P, of the occurrence of corrosion (y), given that we observed (|) an uncoated metallic beam (x), or P(y | x). An experienced engineer would be able to provide us with a possibly accurate estimation of the expected level of corrosion if we are to provide this engineer with a list of information about the grade and type of metal, surrounding environmental conditions, etc. As you can see, *statistical inference*, empirical analysis, and ML can help us build predictive models to predict the expected degree of corrosion solely from data.43
+
+The second rung of causality extends further than the observations we see to include *interventions*.44 Interventions are tasks that we *do* to answer a separate set of questions that may not be answered by our observation. For example, what will happen to the metallic beam *if we change one or more of its parameters* (say, from being uncoated to being painted with an anti-corrosion coating)? To answer this question, we will need to devise an experiment where we actually intervene on this beam and paint it with an anti-corrosion coating.
+
+Mathematically, this interventional question resembles the use of *do-calculus*45 P(y|do(x)), which can be translated as the probability of event y (occurrence of corrosion) given that we intervene and set the value of x (addition of a layer of anti-corrosion coating) and observe the same event (five years of service).46 As one can see, an accurate answer to the above question cannot be answered from data alone.47
+
+The third and final rung goes beyond the first two rungs to build counterfactuals.48 Here is one counterfactual example, what would have happened to the expected level of corrosion of our metallic beam after ten years of exposure had this *particular* girder been fabricated from a different metal B?
+
+![](bbox=[0.096, 0.473, 0.656, 0.623])
+
+Figure 8.5 Difference between a traditional ML model (left) and a causal model (right).
