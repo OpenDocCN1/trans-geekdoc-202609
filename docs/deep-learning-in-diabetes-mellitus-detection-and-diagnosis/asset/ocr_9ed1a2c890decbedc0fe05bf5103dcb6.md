@@ -1,0 +1,3 @@
++   9. T. Subha, N. Susila, R. Ranjana, V. Priya and V. Nithyashree, “Analysis of Diabetic Retinopathy and Its Causes Using Fuzzy C-Means Model,” 2021 4th International Conference on Computing and Communications Technologies (ICCCT), Chennai, India, 2021, pp. 527–532, doi: 10.1109/ICCCT53315.2021.9711840.
+
++   10. B. Sazdov et al., “Prediction of Hospital Readmission Using Federated Learning,” 2023 30th International Conference on Systems, Signals and Image Processing (IWSSIP), Ohrid, North Macedonia, 2023, pp. 1–5, doi: 10.1109/IWSSIP58668.2023.10180282.

@@ -1,0 +1,8 @@
+# TABLE 12.2 Literature Survey of Papers
+
+| S. No. | Author | Technique | Dataset | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Varun Gulshan et al. [25] | Identification of referable diabetics (DR) using deep learning. | Messidor-2 and EyePACS-1 datasets | The algorithm’s area under the ROC (Receiver operating characteristic) curve for detecting referable diabetic retinopathy (RDR) was 0.990 (95% CI, 0.986–0.995) for Messidor-2 and 0.991 (0.988–0.993, 95% CI) for EyePACS-1. |
+| 2 | Kele Xu et al. [26] | Five different transformation types: rotation, flipping, shearing, rescaling, and translation | Color fundus image of the Kaggle dataset | With a 94.5% accuracy rate, they examined the application of the deep CNN approach for diabetic retinopathy. |
+| 3 | Sheikh Muhammad et al. [27] | A new deep CNN with two fully connected layers and one output layer. | Kaggle EyePACS dataset | The design produced 0.844 AUC and 0.851 QWK scores. It demonstrated 98% sensitivity and 94% specificity in the preliminary stage recognition. |
+| 4 | Carson Lam et al. [28] | Present the application of CNNs to diabetic retinopathy recognition. Develop a model of multinomial classification. | Color fundus images from the Messidor-1 dataset and Kaggle dataset | The peak test set accuracy for two-ary, three-ary, and four-ary classification models was raised to 74.5%, 68.8%, and 57.2%, respectively, by transfer learning on models AlexNet and GoogLeNet from ImageNet. |

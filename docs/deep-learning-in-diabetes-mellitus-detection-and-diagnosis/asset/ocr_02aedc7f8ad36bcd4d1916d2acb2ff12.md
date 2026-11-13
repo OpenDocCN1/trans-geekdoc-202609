@@ -1,0 +1,13 @@
+RMSE values exceed this benchmark (refer to Table 3.2). Conversely, “GRU glucose level” consistently exhibits the poorest performance across all scenarios. Specifically, the average RMSE for “GRU glucose level” is 20.17 mg/dL (W=6; see Table 3.2). Consequently, we infer that each of the six attributes positively contributes to the performance of RMTS-BGLP, and their collective integration yields significant improvements. Concerning additional attributes, as depicted in Tables 3.4 and 3.5, it becomes apparent that including new attributes generally does not lead to performance enhancements in most cases.
+
+# 3.3.2 Impact of Hyperparameters
+
+We choose two significant hyperparameters to assess their impact, namely H (the hidden size) of the GRU-based memory and the L (number of layers) of GAT. Then, H determines GAM’s memory capacity, with a larger H enhancing its memory capabilities up to a certain threshold. In this experiment, we evaluate five different hidden sizes, specifically H ∈ {64, 128, 256, 512, 1024}.
+
+Likewise, varying L in GAT influences GAM’s capacity to represent data differently. Increasing L enhances GAM’s processing capability. For instance, when L=1, the node representing “glucose level” can solely receive messages, and the message senders are its adjacent nodes. However, if we set L to 2, while the message exchange remains similar to L=1 in the first layer, the received messages are not the original graph embeddings in the subsequent layer. Instead, they are amalgamated before aggregation. Consequently, deeper layers enable the merging of graph messages in a more intricate manner, akin to extending the number of layers in convolutional neural networks (CNNs). In this experiment, we explore five different numbers of layers.
+
+The influence of H is illustrated in Figure 3.3. It is evident that GAM achieves optimal performance with H=256 and W=6. Larger values of H, such as H>512, do not yield improved prediction. However, when increasing L, the mean RMSE improves from 19.02 mg/dL (L=1) to 18.85 mg/dL (L=4), as shown in Figure 3.4a. Therefore, it is inferred that, in this scenario, enhancing the capability of GAT by increasing L does not result in significant improvements compared to varying H.
+
+# 3.3.3 Impact of FL
+
+This experiment aims to evaluate the impact of incorporating FL on predictive capability during training. We compare the prediction capability

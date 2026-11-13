@@ -1,0 +1,13 @@
+nephropathy, cardiovascular disease, and retinopathy, which can be very costly for both people and healthcare systems [3].
+
+Early detection and management of diabetes are essential for preventing complications and improving patient results. While blood tests and clinical evaluations are commonly used in traditional techniques of diagnosing DM, they may not always be able to identify subtle early-stage signs or risk factors. As a result, increasing attention is being paid to utilizing cutting-edge computational methods, including deep learning, to improve the prognostic potential of DM detection models.
+
+This research uses the Behavioural Risk Factor Surveillance System (BRFSS) dataset to investigate the application of deep learning techniques for preprocessing DM data and enhancing DM prognosis [4]. One of the world’s largest health-related phone survey systems, the BRFSS, provides a plethora of information about different health behaviours, chronic illnesses, and the use of preventative services by a wide range of American demographics. This research builds upon existing research by investigating the efficacy of a deep learning approach using the Keras library with a TensorFlow backend for detecting DM. The dataset comprising 25 features selected from 303 unique variables, with the diabetes column serving as the target variable, is cleaned, balanced, and pre-processed to ensure data quality and balance.
+
+By adopting feature selection and missing value imputation methods that can leverage the combination of large-scale health data and state-of-the-art deep learning algorithms, we want to make a positive impact on the rapidly developing field of computational healthcare through this research.
+
+# 2.2 PROPOSED METHOD
+
+The proposed methodology involves several steps as shown in Figure 2.1, starting with data preprocessing to clean and balance the dataset. A sequential deep learning model with validation for binary classification is constructed using the Keras library with a TensorFlow backend. The model architecture consists of fully connected layers with appropriate activation functions. The dataset is split into training and testing sets, with an additional validation split applied during model training to monitor for overfitting. It is trained on the training set and evaluated using various performance metrics.
+
+The steps involved in the implementation are as follows:
