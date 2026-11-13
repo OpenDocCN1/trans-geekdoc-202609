@@ -1,0 +1,1421 @@
+- pgno: 0
+  md: '# ORIGINAL ARTICLE
+
+
+    # Machine Learning Model for Atherosclerosis Evaluation and Cardiovascular Risk
+    Prediction Based on Coronary CT Angiography-Analysis From the CREATION Registry
+
+
+    Ying Song, MD*; Na Xu, MD*; Jianan Zheng, MD; Sida Jia, MD; Cheng Cui, MD; Yin
+    Zhang, MD; Lijian Gao, MD; Zhan Gao, MD; Jue Chen, MD; Lei Song, MD; Jinqing Yuan,
+    MD; Bin Lu, MD*; Hou Zhi-hui, MD†
+
+
+    BACKGROUND: Current ASCVD risk prediction tools based on traditional risk factors
+    and the coronary artery calcium score have limitations.
+
+
+    METHODS: The CREATION study includes suspected coronary artery disease patients
+    who underwent coronary computed tomography angiography (CCTA) at Fuwai Hospital
+    between 2016 and 2019. The primary outcome was major adverse cardiac events defined
+    as a composite end point of all-cause death, acute myocardial infarction, coronary
+    revascularization, or stroke. Six machine learning survival models were used to
+    create an ASCVD prediction model.
+
+
+    RESULTS: Overall, 8431 participants with analyzable CCTA data were included with
+    a median follow-up of 3.68 years, and 319 major adverse cardiac events (3.8%)
+    occurred (mean age, 54.73±10.21 years, 48.2% were male, 50.9% with symptomatic
+    chest pain). Among 6 machine learning models trained with 48 CCTA parameters,
+    XGBoost showed the best performance and was selected for model development In
+    the training cohort (n=5901, 70%), the XGBoost model significantly outperformed
+    the clinical risk factors and coronary artery calcium score model (area under
+    the curve, 0.903 versus 0.830; P<0.001). Testing cohort showed similar performance
+    (area under the curve, 0.899 versus 0.753; P<0.001). The CCTA model demonstrates
+    consistent predictive performance across gender (female or male), onset-age (early
+    onset or late-onset), and symptom (asymptomatic or symptomatic) subgroup analysis.
+    The final CCTA model included diameter stenosis, lipid plaque burden and volume,
+    total plaque volume, high-risk plaque, and vessel volume as the most important
+    features. Lipid plaque burden was most strongly associated with major adverse
+    cardiac event (adjusted hazard ratio per 5% increase: 2.524 [95% CI, 2.157–2.996];
+    P<0.001). The incremental value of machine learning CCTA features was consistent
+    across different time points throughout the 1- to 5-year follow-up period. The
+    findings remained unchanged when restricted to a secondary composite end point
+    (death, myocardial infarction, or stroke).
+
+
+    CONCLUSIONS: The machine learning model incorporating CCTA plaque quantification,
+    characterization, and stenosis assessment significantly enhanced the predictive
+    capacity for major adverse cardiac events. It provides direct visualization of
+    coronary atherosclerosis and outperforms the traditional risk factors and the
+    coronary artery calcium score model recommended in clinical practice.
+
+
+    GRAPHICAL ABSTRACT: A graphical abstract is available for this article.
+
+
+    Key Words: chest pain ■ coronary artery disease ■ lipid ■ machine learning ■ myocardial
+    infarction'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# CLINICAL PERSPECTIVE
+
+
+    Among 6 machine learning survival models trained with 48 coronary computed tomography
+    angiography parameters, XGBoost showed the best performance and was selected for
+    model development. Based on the XGBoost algorithm, a coronary computed tomography
+    angiography machine learning model integrating 6 key imaging features—including
+    diameter stenosis, lipid plaque burden and volume, total plaque volume, high-risk
+    plaque and vessel volume—demonstrated superior predictive performance for major
+    adverse cardiovascular events compared with models incorporating traditional clinical
+    risk factors and coronary artery calcium score across multiple time points during
+    1- to 5-year follow-up. This multidimensional model offers individualized, precise,
+    and interpretable risk assessment, enabling early identification of patients with
+    high-risk and guiding personalized prevention and intervention strategies.
+
+
+    # Nonstandard Abbreviations and Acronyms
+
+
+    | Acronym | Meaning |
+
+    | --- | --- |
+
+    | AMI | acute myocardial infarction |
+
+    | AUC | area under the curve |
+
+    | CACS | coronary artery calcium score |
+
+    | CAD | coronary artery disease |
+
+    | CCTA | coronary computed tomography angiography |
+
+    | GLP1 | glucagon-like peptide-1 |
+
+    | HU | Hounsfield unit |
+
+    | MACE | major adverse cardiac event |
+
+    | MACE | major adverse cardiovascular event |
+
+    | ML | machine learning |
+
+    | NRI | net reclassification improvement |
+
+    | PV | plaque volume |
+
+    | ROC | receiver operating characteristic curve |
+
+
+    Recent studies indicate that various novel drug therapies, such as PCSK9 monoclonal
+    antibody inhibitor,<sup>1,2</sup> inclisiran,<sup>3</sup> icosapent ethyl,<sup>4,5</sup>
+    GLP1 (glucagon-like peptide-1) receptor agonists,<sup>6</sup> and colchicine,<sup>78</sup>
+    effectively reduce ASCVD risk by altering coronary plaque phenotype and composition.
+    Nevertheless, these treatments are relatively costly. Therefore, accurately identifying
+    high-risk populations, optimizing clinical decision-making, maximizing cardiovascular
+    benefits, and improving health care economic efficiency are critical issues to
+    be solved.
+
+
+    Current ASCVD prediction guidelines mainly rely on clinical risk scores and the
+    coronary artery calcium score (CACS).<sup>9</sup> Risk algorithms including Systemic
+    Coronary Risk Evaluation 2 system<sup>10</sup> and the Second Manifestations of
+    Arterial disease 2,<sup>11</sup> Pooled Cohort Equations,<sup>12</sup>
+
+
+    and the Framingham Risk Score<sup>13</sup> are based on traditional cardiovascular
+    risk factors, have limited value in predicting ASCVD risk due to population-level
+    differences, especially for Pooled Cohort Equation often overestimate risk in
+    high-risk individuals and European populations even after recalibration, and cannot
+    predict the complex pathophysiological processes of coronary atherosclerosis at
+    individual-level.<sup>14-16</sup> The CACS is a noninvasive CT scan used to measure
+    calcium deposits within coronary artery plaques. However, CACS does not provide
+    information regarding noncalcified plaques or the extent of coronary stenosis.<sup>17</sup>
+    Given the considerable heterogeneity in the prevalence and management of ASCVD,
+    there is an urgent need for additional biomarkers or imaging indicators to enhance
+    the prediction of future cardiovascular events.
+
+
+    Despite practical barriers to the widespread clinical adoption of coronary computed
+    tomography angiography (CCTA), such as relatively high cost, radiation exposure,
+    and the risk of contrast-induced nephropathy, it remains a widely recognized noninvasive
+    imaging modality. Beyond assessing the severity and extent of coronary artery
+    stenosis, CCTA enables whole-heart visualization of adverse plaque characteristics,
+    plaque distribution, and precise plaque quantification.<sup>18</sup> Recent studies
+    have shown that plaque morphology and plaque quantification metrics are important
+    risk predictors for cardiovascular events and hold great potential in improving
+    ASCVD risk stratification.<sup>19,20</sup>
+
+
+    Deep learning, a subset of artificial intelligence, has experienced substantial
+    advancements with sophisticated algorithms emerging, including the DeepHit neural
+    network. Additionally, XGBoost, an optimized implementation of gradient-boosted
+    decision trees, has also made significant contributions to artificial intelligence
+    applications. These advanced machine learning (ML) algorithms enable the integration
+    of complex, multidimensional, and interactive data sets derived from CTA, which
+    are challenging to analyze using traditional statistical methods. In particular,
+    models like DeepHit are designed to capture time-to-event dynamics, while tree-based
+    methods like XGBoost can flexibly incorporate engineered temporal features. At
+    present, a CCTA-derived risk ML model that integrates coronary stenosis, plaque
+    qualitative, and quantitative analysis across multiple dimensions has not yet
+    been established. Integrating CCTA with advanced ML techniques to develop an interpretable,
+    more accurate, personalized, and dynamic cardiovascular risk prediction model
+    will help achieve better cardiovascular risk stratification and prediction, thereby
+    promoting the clinical application and translational value of CTA imaging.
+
+
+    The objective of this study is to create an ASCVD prediction model using a large-scale
+    prospective registry based on CTA imaging. This model will be constructed using
+    6 advanced ML survival techniques. Its'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'performance will be evaluated in comparison to existing clinical models and
+    CACS, and internally validated.
+
+
+    # METHODS
+
+
+    # Data Availability
+
+
+    Due to ethical restrictions related to the consent given by subjects at the time
+    of study commencement, our data sets are available from the corresponding author
+    on reasonable request after permission from the institutional review board of
+    Fuwai Hospital.
+
+
+    # Study Cohorts
+
+
+    This study is derived from the Coronary Atherosclerosis Progression and Prognosis
+    Evaluation by Coronary CT Angiography multicenter prospective cohort (CREATION,
+    URL: https://www.clinicaltrials.gov; Unique Identifier: NCT03518437). Currently,
+    complete and standardized coronary CT imaging data are available only from the
+    Fuwai Hospital center, while imaging data from other participating centers remain
+    under collection. This analysis includes 8873 patients with suspected coronary
+    artery disease (CAD) who underwent CCTA at Fuwai Hospital between January 2016
+    and August 2019. Initially, all patients were referred for CCTA by their cardiologists.
+    For the present study, we excluded subjects who have incomplete clinical information
+    (n=33), nondiagnostic coronary images because of motion artifacts or inadequate
+    contrast concentration on CCTA images (n=12), or have other heart diseases (eg,
+    cardiomyopathy, n=25; valvular heart disease, n=12; congenital heart disease,
+    n=39), and lost to follow-up patients (301 patients could not be contacted, 20
+    patients could not provide accurate outcome information). Eventually, 8431 patients
+    were enrolled for final analysis (Figure S1). The study complied with the Declaration
+    of Helsinki, all patients provided informed consent for inclusion in the registry,
+    and institutional review board approval was obtained at each center.
+
+
+    # CCTA Scanning Protocols and Image Analysis
+
+
+    The detailed information regarding the computed tomography scanners used for the
+    study population is available in the Supplemental Methods. The coronary CTA images
+    were audited by the core laboratory for image analysis.
+
+
+    For plaque measurement, we adjusted the plaque threshold slider to separate the
+    Hounsfield unit (HU) values that separate different plaque characteristics into
+    lipid (<30 HU), fibrous (30–150 HU), calcified plaque (>350 HU), and lumen (350–350
+    HU). A color map overlay was displayed between the start and end of a plaque,
+    highlighting lumen, calcified plaque, and noncalcified plaque in different colors
+    determined by HU values. Adverse plaque characteristics include low attenuation
+    plaque (pixel density ≤30 HU), positive remodeling (remodeling index ≥1.1), spotty
+    calcification (average density >330 HU, with a diameter <3 mm in any direction),
+    and the napkin-ring sign (a ring-like attenuation pattern with peripheral high
+    attenuation and central low attenuation; legends detailed in Figure S2). High-risk
+    plaque is defined as a lesion with ≥2 adverse plaque characteristics. Quantitative
+    plaque characteristics include plaque volume (PV) and subtypes (in cubic millimeters),
+    including total PV, noncalcified PV, calcified PV, fibrous
+
+
+    PV, and lipid PV. Plaque burden (expressed as a percentage) is defined as the
+    corresponding PV divided by the vessel volume, then multiplied by 100, including
+    percent total PV, percent noncalcified PV, percent calcified PV, percent fibrous
+    PV, and percent lipid PV. Total PV is calculated by summing the volumes of the
+    3 components, while noncalcified PV is calculated by summing the volumes of the
+    fibrous and lipid components. For patients with normal coronary arteries, PV and
+    burden are set to 0. The volumes of various plaque components were quantified
+    using validated automated plaque software (Deep Blue, ADW4.6, GE Healthcare, Milwaukee,
+    WI). Two radiologists worked together to determine the location and extent of
+    the plaques and reached a consensus to derive the final results. There was high
+    interobserver and intraobserver agreement in evaluating CCTA (k statistic: 0.97,
+    0.98, respectively).
+
+
+    # Clinical Data
+
+
+    A structured interview was conducted before CCTA to collect information on symptoms,
+    demographic characteristics, and the presence of cardiovascular risk factors.
+    Hypertension was defined as a previously established diagnosis, systolic blood
+    pressure >140 mmHg, diastolic blood pressure >90 mmHg, or antihypertensive medication
+    use. Hypercholesterolemia was defined according to the National Cholesterol Education
+    Panel guidelines or by the current use of lipid-lowering medication. Diabetes
+    was defined as a previously established diagnosis, insulin, or oral hypoglycemic
+    therapy. Family history of CAD was defined as myocardial infarction, coronary
+    revascularization, or sudden cardiac death for father <55 years old or mother
+    <65 years old. Smoking was defined as any cigarette smoking within 1 year before
+    the CCTA exam. Diabetes was defined as a fasting plasma glucose level of ≥126
+    mg/dL, glycated hemoglobin of ≥6.5%, or treatment with any antidiabetic drugs.
+    Hyperlipidemia was defined as triglycerides of ≥200 mg/dL, total cholesterol of
+    >240 mg/dL, low-density lipoprotein cholesterol of ≥160 mg/dL, high-density lipoprotein
+    cholesterol <40 mg/dL, or treatment with any lipid-lowering medications.
+
+
+    # Outcome
+
+
+    The primary end point was major adverse cardiac events (MACE) obtained from patient
+    telephone interviews, contact with the patients'' physicians, and hospital records.
+    A standard questionnaire was used during the telephone interview. MACE included
+    any of the following: (1) all-cause death, (2) acute myocardial infarction (AMI),
+    (3) coronary revascularization (percutaneous coronary intervention and coronary
+    artery bypass graft), and (4) stroke. AMI was defined based on the criteria of
+    typical chest pain, elevated cardiac enzyme levels, and typical alterations of
+    the ECG. The decision to submit patients to revascularization was made by referring
+    physicians, taking into account all available information and patient preferences.
+    Revascularization procedures within 60 days after CCTA were considered to be triggered
+    by the scan and were not considered events (physicians were likely to include
+    CCTA findings in management decisions). When a patient experienced >1 MACE, the
+    first event was chosen. When 2 MACE occurred simultaneously, the worst event was
+    chosen (death>AMI>stroke>revascularization). An adjudication outcome panel of
+    2 physicians reviewed the patient data forms and verified by 2 review of medical
+    records to determine whether a patient had MACE during the follow-up period.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'The outcome panel was blinded to the findings of the CCTA. Disagreement was
+    resolved by consensus, which included an additional senior cardiologist. If the
+    telephone numbers were invalid and the patient could not be contacted, the patients
+    were considered lost to follow-up. Three attempts were made using the patient''s
+    direct phone number in 1 week. If we were unsuccessful or the patient could not
+    provide accurate information, the patients were considered lost to follow-up.
+    The secondary end point was defined as the occurrence of death, AMI, and stroke,
+    excluding all revascularization events.
+
+
+    The outcome of all prediction models is the time to MACE. Time zero is defined
+    as the time point when the patient undergoes CCTA. All subsequent survival predictions
+    are based on this time point.
+
+
+    # Feature Selection and Extraction
+
+
+    Potential variables were selected based on clinical experience, previous studies,
+    and data availability. The final structured database containing 48 CCTA candidate
+    predictive variables encompasses the presence, extent of coronary stenosis, plaque
+    distribution across vessels, qualitative and quantitative plaque characteristics,
+    including PV/burden and subtypes (calcified, noncalcified, fibrous, and lipid
+    plaques; Table S1 for variable abbreviations and definitions). Multiclass nominal
+    variables were processed using 1-hot encoding.
+
+
+    # Model Training and Optimization
+
+
+    The study outline of ML model creation and validation is shown in Figure S3. The
+    database was randomly partitioned into a training set (70%) and a testing set
+    (30%). An enhanced stratified data splitting strategy was implemented to maintain
+    comparable distributions of event rates and other variables, such as time, across
+    both data sets. Predictive models were built using the training set (70%, n=5901),
+    and optimal features were selected. The models were internally validated with
+    5-fold cross-validation (Figure S4). The test set (30%, n=2530) was not used for
+    model development but was used to evaluate the model''s performance. The hyperparameters
+    of the model were optimized using an R package called caret, combined with 5-fold
+    cross-validation to maximize C-index (see the parameter space in Table S2).
+
+
+    This study employed 6 survival analysis methodologies: XGBoost, deep learning
+    neural net, Cox Proportional Hazard, Random Survival Forests, Support Vector Machine
+    for Survival Analysis, and Gradient Boosting Survival Analysis.23,24 The XGBoost
+    survival prediction model is distinguished by its high computational efficiency
+    and excellent predictive performance, as well as its robust regularization techniques
+    and extensive hyperparameter tuning capabilities. The deep learning neural network
+    is an advanced deep learning framework adept at processing time-series data and
+    forecasting future events, making it particularly suitable for survival analysis.
+    Model performance was evaluated using the Harrell concordance index (C-index).
+    The final model is selected based on the C-index and time-dependent area under
+    the curve (AUC), and its performance is evaluated in the testing set.
+
+
+    # Model Interpretation
+
+
+    Shapley additive explanation values were used to analyze feature importance and
+    interrelationships, thereby optimizing
+
+
+    feature selection. These values reflect the average contribution of each variable
+    to the MACE risk (positive values indicate that the variable increases MACE risk).
+    Recursive feature elimination was used to simplify the model until a reduction
+    in model performance was observed.
+
+
+    In the training set, features with the highest mean absolute impact on model predictions
+    were ranked and validated in the testing set. Additionally, the study provided
+    2 case examples from the test data set where MACE events were accurately predicted,
+    offering a detailed explanation of each feature''s individual contribution to
+    the final prediction outcomes.
+
+
+    # Model Performance
+
+
+    We constructed 5 classification models: First, to evaluate the CCTA model against
+    current clinical practice, we built a clinical risk model (model 1) using the
+    same ML techniques as the CCTA model. Model 1 enrolled variables from well-established
+    risk assessment scores, including sex, age, diabetes, hypertension, hyperlipidemia,
+    smoking, obesity, family history of CAD, and non-high-density lipoprotein cholesterol
+    levels. Model 2 was a hybrid model that combined clinical risk factors and CACS.
+    Model 3 was the CCTA model formulated using the 6 parameters with the highest
+    predictive value. Model 4 was a hybrid model that combined clinical risk factors,
+    CACS, and CCTA parameters. Model 5 combined clinical risk factors, CACS, and CCTA
+    parameters.
+
+
+    The model performance was evaluated in the testing cohort based on discrimination,
+    calibration, and reclassification capabilities. Discrimination was assessed using
+    the time-dependent receiver operating characteristic (ROC) curve, AUC, and C-index,
+    reflecting the model''s capacity to distinguish between different categories (events
+    and nonevents) over time. Calibration was quantitatively evaluated using the Brier
+    score to measure the consistency between predicted probabilities and actual event
+    outcomes. Reclassification capability was assessed using the net reclassification
+    improvement (NRI >0), focusing on the improvement of individual risk classification.
+    Specifically, we used time-dependent AUC to calculate the area under the ROC curve
+    for prediction models annually over a 1- to 5-year period.
+
+
+    # Statistical Analysis
+
+
+    In the descriptive analysis, continuous variables with a normal distribution are
+    presented as mean±SD, continuous variables with a skewed distribution are presented
+    as median (interquartile range), and categorical variables are presented as number
+    (percentage). The comparison of continuous variables with a normal distribution
+    was conducted using the independent t test, continuous variables with skewed distribution
+    were performed using the Mann-Whitney U test, and categorical variables were analyzed
+    using the χ² test. The statistical significance between areas under the curve
+    was determined using the DeLong method.
+
+
+    Exploratory subgroup analyses were performed for the primary outcome: first, by
+    dividing the overall population into different gender groups (male and female);
+    second, by analyzing groups with or without symptomatic chest pain. Typical angina
+    was defined as having all of the following criteria: (1) substernal chest pain
+    or discomfort that was (2) provoked by exertion or emotional stress and (3) relieved
+    by rest and nitroglycerine. Symptoms were classified as atypical angina when only
+    2 of'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'these criteria were present, and as nonanginal chest pain if 1 or none of these
+    characteristics were reported25; third, by analyzing groups in early onset and
+    late-onset CAD. Early-onset CAD is defined as younger individuals (age <55 in
+    men and <65 in women), while late-onset CAD is defined as older individuals (age
+    ≥55 in men and ≥65 in women).26 These analyses aimed to explore potential differences
+    between subgroups, and the performance of the different classification models
+    was compared across different subgroups. Sensitivity analysis was performed by
+    excluding the population with normal coronary arteries and including only patients
+    with coronary plaques, or by excluding CACS of zero and including only those with
+    a CACS greater than zero. All analyses and calculations were performed with R
+    (version 4.4.2). The detailed libraries and packages are listed in the Supplemental
+    Appendix. A 2-tailed P value of ≤0.05 was considered statistically significant.
+
+
+    # # RESULTS
+
+
+    # ## Comparison of Baseline Characteristics
+
+
+    Table 1 summarizes the baseline characteristics of the entire cohort. A total
+    of 8431 patients were included (mean age, 54.73±10.21 years; 48.2% were male;
+    50.9% with symptomatic chest pain, with 319 MACE5 (3.8%) were recorded, including
+    34 deaths, 8 cases of AMI, 244 coronary revascularizations (202 percutaneous coronary
+    interventions and 42 coronary artery bypass grafting), and 54 strokes, during
+    a median follow-up of 3.68 years (interquartile range, 2.65–4.27 years). The most
+    common cardiac symptom was atypical angina (44.6%), followed by typical chest
+    pain (6.3%). In the CCTA examination, 76.4% of patients had normal coronary arteries,
+    11.1% had nonobstructive plaques, 7.7% had obstructive CAD (stenosis ≥50%) in
+    1 vessel, 3.0% had obstructive CAD in 2 vessels, and 1.7% had obstructive CAD
+    in 3 vessels or the left main artery. The average total plaque burden for all
+    patients was 6.08% (SD ±12.74%), with a noncalcified plaque burden of 5.78% (SD
+    ±12.02%), a fibrous plaque burden of 5.04% (SD±10.56%), a lipid plaque burden
+    of 0.73% (SD ±1.90%), and a calcified plaque burden of 0.30% (SD ±1.63%; Table
+    2).
+
+
+    The baseline characteristics and outcomes of the training set (n=5901, 70%) and
+    testing set (n=2530, 30%) are also detailed in Table 1. The median 10-year risk
+    of CAD calculated by the pooled cohort equation risk score was 10.0% (interquartile
+    range, 4.9–19.6). The cardiovascular risk factors, pooled cohort equation risk
+    score, and MACE events in both groups were very similar, with no significant differences.
+    The distribution of plaque burden was generally similar between the 2 cohorts
+    (Table S3).
+
+
+    # ## Comparison of Baseline and Coronary Features Between the Mace and Nonmace
+    Groups
+
+
+    In the training set, the MACE group was significantly older than the non-MACE
+    group (60.66±9.49 versus
+
+
+    54.65±10.08 years; P<0.001). The MACE group had a higher proportion of males (66.8%)
+    and had a higher prevalence of traditional cardiovascular risk factors, except
+    for family history of CAD, body mass index, and non-high-density lipoprotein cholesterol,
+    compared with the non-MACE group (Table S4). The MACE group also had a higher
+    incidence of obstructive CAD, greater stenosis rates, and a higher prevalence
+    of high-risk plaques. In coronary artery quantitative analysis, the MACE group
+    displayed significant differences in PVs and plaque burden across different plaque
+    subtypes (all P<0.001). These results were similar in the testing cohort (Table
+    2).
+
+
+    # ## Feature Selection and Modeling Training
+
+
+    Using all 48 CCTA candidate variables without feature elimination, the XGBoost
+    model exhibited superior predictive performance on both training and testing sets,
+    achieving a C-index of 0.918 to 0.925 and an AUC of 0.905 to 0.925, thereby outperforming
+    5 other ML survival analysis algorithms. The comparison of different ML performance
+    is summarized in Table 3; Table S5. The global interpretability of the XGBoost
+    model and its top 20 most impactful features is illustrated using Shapley additive
+    explanation value plots (Figure 1A and 1B). These key features were confirmed
+    by clinical and imaging experts to be consistent with clinical relevance and underlying
+    pathophysiology. A recursive feature elimination process identified 6 most important
+    variables; the performance of the simplified final model is also detailed in Table
+    3; Table S5, also with XGBoost chosen as the best model. In both the training
+    and testing cohorts, all 6 CCTA features were independently associated with a
+    higher MACE risk, independent of traditional cardiovascular risk factors and CACS
+    (Table S6).
+
+
+    # ## Model Performance Comparison
+
+
+    In the training cohort, the simplified final model using 6 CCTA features (model
+    3) predicted MACE with an ROC and AUC of 0.903 (95% CI, 0.872–0.933). In contrast,
+    the clinical risk factors model (model 1) had an ROC AUC of 0.788 (95% CI, 0.740–0.837),
+    and the combined clinical risk factors+CACS model (model 2) showed an ROC AUC
+    of 0.830 (95% CI, 0.787–0.873). Thus, the clinical+CACS was only slightly superior
+    to the clinical model (ΔAUC, 0.042 for model 2 versus model 1; P=0.100), the CCTA
+    model performed significantly better than the clinical model and the combined
+    clinical+CACS model (ΔAUC, 0.115 for model 3 versus model 1; ΔAUC, 0.073 for model
+    3 versus model 2; P<0.001 for both). When CCTA features were added to the clinical
+    model (model 4) and the clinical+CACS model (model 5), the ROC AUC improved to
+    0.915(95% CI, 0.885–0.944) and 0.924 (95% CI, 0.897–0.950; P<0.001 for both; Figure
+    2A; Table S7).'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Table 1. Baseline Patients Characteristics
+
+
+    | | Total patients (N=8431) | Training cohort (n=5901, 70%) | Testing cohort (n=2530,
+    30%) | P value* |
+
+    |---|---|---|---|---|
+
+    | Demographics | | | | |
+
+    | Age, y | 54.73±10.21 | 54.87±10.12 | 54.40±10.41 | 0.052 |
+
+    | Sex, male (%) | 4065 (48.2) | 2827 (47.9) | 1238 (48.9) | 0.401 |
+
+    | Risk factors | | | | |
+
+    | Hypertension | 3658 (43.4) | 2582 (43.8) | 1076 (42.5) | 0.309 |
+
+    | Hyperlipidemia | 3172 (37.6) | 2221 (37.6) | 951 (37.6) | 0.986 |
+
+    | Diabetes | 1006 (11.9) | 716 (12.1) | 290 (11.5) | 0.404 |
+
+    | Current smoker | 2346 (27.8) | 1625 (27.5) | 721 (28.5) | 0.381 |
+
+    | Family history of CAD | 3397 (40.3) | 2376 (40.3) | 1021 (40.4) | 0.957 |
+
+    | Obesity | 675 (8.0) | 469 (8.0) | 206 (8.1) | 0.797 |
+
+    | BMI, kg/m² | 25.30±3.31 | 25.33±3.29 | 25.22±3.36 | 0.182 |
+
+    | Non-HDL-C,mmol/L | 3.48±1.04 | 3.49±1.08 | 3.48±1.10 | 0.916 |
+
+    | Chest pain, n (%) | | | | 0.016 |
+
+    | Noncardiac | 4143 (49.1) | 2853 (48.3) | 1290 (51.0) | |
+
+    | Atypical angina | 3759 (44.6) | 2690 (45.6) | 1069 (42.3) | |
+
+    | Typical angina | 529 (6.3) | 358 (6.1) | 171 (6.8) | |
+
+    | CAC score group | | | | 0.085 |
+
+    | 0 | 6776 (80.4) | 4720 (80.0) | 2056 (81.3) | |
+
+    | 1~100 | 875 (10.4) | 616 (10.4) | 259 (10.2) | |
+
+    | 101~400 | 481 (5.7) | 336 (5.7) | 145 (5.7) | |
+
+    | >400 | 299 (3.5) | 229 (3.9) | 70 (2.8) | |
+
+    | Medications | | | | |
+
+    | Aspirin | 2418 (28.7) | 1703 (28.9) | 715 (28.3) | 0.596 |
+
+    | Statins | 1285 (15.2) | 899 (15.2) | 386 (15.3) | |
+
+    | MACE | | | | |
+
+    | Death | 34 (0.4) | 23 (0.3) | 11 (0.4) | |
+
+    | AMI | 8 (0.09) | 7 (0.1) | 1 (0.04) | |
+
+    | PCI | 202 (2.3) | 140 (2.3) | 62 (2.4) | |
+
+    | CABG | 42 (0.4) | 33 (0.5) | 9 (0.3) | |
+
+    | Stroke | 54 (0.6) | 38 (0.6) | 16 (0.6) | |
+
+    | PCE risk score | 10.0 (4.9–19.6) | 10.0 (4.9–19.6) | 9.6 (4.9–19.3) | 0.285
+    |
+
+
+    Continuous values are summarized as mean±SD, median (Q1–Q3), and categorical variables
+    as n (percentage). AMI indicates acute myocardial infarction; BMI, body mass index;
+    CABG, coronary artery bypass graft; CAC, coronary artery calcium; CAD, coronary
+    artery disease; HDL-C, high-density lipoprotein cholesterol; and PCI, percutaneous
+    coronary intervention.
+
+    *P values were derived from an independent t test (continuous variables with normal
+    distribution), a Mann–Whitney U test (continuous variables with skewed distribution),
+    and a χ² test (categorical variables). A 2-tailed P value of ≤0.05 was considered
+    statistically significant.
+
+
+    After recalibrating all models, we tested their discrimination performance in
+    the testing cohort. The simplified final model using CCTA features (model 3) predicted
+    MACE events with an ROC and AUC of 0.899 (0.839–0.959). In contrast, the clinical
+    risk factors model (model 1) had an ROC AUC of 0.708 (95% CI, 0.610–0.806), and
+    the combined clinical risk factors+CACS model (model 2) showed an ROC AUC of 0.753
+    (95% CI, 0.662–0.844). Thus, the clinical+CACS was only slightly superior to the
+    clinical model (ΔAUC, 0.045 for model 2 versus model 1; P=0.308). The CCTA model
+    performed significantly better than the clinical model and the combined clinical+CACS
+    model (ΔAUC, 0.191 for model 3 versus model 1; ΔAUC, 0.146 for model 3
+
+
+    versus model 2; P<0.001 for both). When CCTA features were added to the clinical
+    model (model 4) and the clinical+CACS model (model 5), the ROC AUC improved to
+    0.895(95% CI, 0.842–0.947) and 0.905 (95% CI, 0.844–0.966; P<0.001 for both; Figure
+    2B; Table 4).
+
+
+    The trend observed in the C-index parallels that of the time-dependent AUC. These
+    findings indicate that the CCTA model exhibits a superior discriminative ability
+    in predicting cardiovascular events, with its performance validated in the testing
+    cohort. Although the clinical and CACS models also displayed some predictive capability,
+    the CCTA model outperformed them. Furthermore, integration of these models further
+    enhanced the discriminative'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '| | Total patients (N=8431) | \multicolumn{3}{c}{Training cohort (n=5901, 70%)}
+    | \multicolumn{3}{c}{Testing cohort (n=2530, 30%)} |
+
+    |---|---|---|---|---|---|---|---|
+
+    | | | MACE (n=223) | Without MACE (n=5678) | P value | MACE (n=96) | Without MACE
+    (n=2434) | P value |
+
+    | \multicolumn{8}{c}{Degree of stenosis} |
+
+    | Any stenosis ≥70% | 597 (7.1) | 69 (30.9) | 377 (6.6) | <0.001 | 27 (28.1) |
+    124 (5.1) | <0.001 |
+
+    | Nov with CAD stenosis ≥70% | | | | <0.001 | | | <0.001 |
+
+    | 0 VD | 7834 (92.9) | 154 (69.1) | 5301 (93.4) | | 69 (71.9) | 2310 (94.9) |
+    |
+
+    | 1 VD | 404 (4.8) | 42 (18.8) | 258 (4.5) | | 19 (19.8) | 85 (3.5) | |
+
+    | 2 VD | 155 (1.8) | 17 (7.6) | 97 (1.7) | | 7 (7.29) | 34 (1.4) | |
+
+    | 3 VD/LMD | 38 (0.5) | 10 (4.5) | 22 (0.4) | | 1 (1.0) | 5 (0.2) | |
+
+    | Any stenosis ≥50% | 1056 (12.5) | 117 (52.5) | 650 (11.4) | <0.001 | 54 (56.2)
+    | 235 (9.7) | <0.001 |
+
+    | Nov stenosis ≥50% | | | | <0.001 | | | <0.001 |
+
+    | 0 VD | 7375 (87.5) | 106 (47.5) | 5028 (88.6) | | 42 (43.8) | 2199 (90.3) |
+    |
+
+    | 1 VD | 653 (7.7) | 60 (26.9) | 406 (7.2) | | 30 (31.2) | 157 (6.5) | |
+
+    | 2 VD | 256 (3.0) | 31 (13.9) | 162 (2.9) | | 20 (20.8) | 43 (1.8) | |
+
+    | 3 VD/LMD | 147 (1.7) | 26 (11.7) | 82 (1.4) | | 4 (4.2) | 35 (1.4) | |
+
+    | \multicolumn{8}{c}{Vessel} |
+
+    | LM 50% | 97 (1.2) | 12 (5.4) | 63 (1.1) | <0.001 | 3 (3.1) | 19 (0.8%) | <0.001
+    |
+
+    | LAD 50% | 788 (9.3) | 96 (43.0) | 476 (8.4) | | 40 (41.7) | 176 (7.2%) | |
+
+    | LCX 50% | 272 (3.2) | 38 (17.0) | 160 (2.8) | | 14 (14.6) | 60 (2.5%) | |
+
+    | RCA 50% | 416 (4.9) | 54 (24.2) | 248 (4.4) | | 25 (26.0) | 89 (3.7%) | |
+
+    | \multicolumn{8}{c}{APCs} |
+
+    | Low-attenuation | 96 (1.1) | 10 (4.5) | 50 (0.9) | <0.001 | 12 (12.5) | 24 (1.0)
+    | <0.001 |
+
+    | Positive remodeling | 1646 (19.5) | 166 (74.4) | 996 (17.5) | | 83 (86.5) |
+    401 (16.5) | |
+
+    | Spotty calcification | 459 (5.4) | 40 (17.9) | 277 (4.9) | | 24 (25.0) | 118
+    (4.9) | |
+
+    | Napkin ring | 59 (0.7) | 6 (2.7) | 29 (0.5) | | 3 (3.1) | 21 (0.9) | |
+
+    | HRP (≥2 APCs) | 373 (4.4) | 57 (25.6) | 197 (3.5) | | 37 (38.5) | 82 (3.4) |
+    |
+
+    | \multicolumn{8}{c}{Quantitative plaque analysis*} |
+
+    | TPV, mm3 | 250.00 (116.75–485.75) | 375.00 (170.50–666.50) | 233.00 (105.50–449.00)
+    | <0.001 | 383.00 (214.00–670.25) | 236.50 (120.00–464.00) | <0.001 |
+
+    | CPV, mm3 | 1.00 (0.00–18.00) | 1.00 (0.00–29.50) | 1.00 (0.00–16.00) | | 2.00
+    (0.00–34.75) | 0.00 (0.00–14.75) | |
+
+    | NCPV, mm3 | 240.00 (114.00–458.25) | 373.00 (167.00–616.50) | 220.00 (102.50–428.50)
+    | | 366.50 (207.50–638.25) | 227.50 (119.00–443.00) | |
+
+    | Fibrous PV, mm3 | 208.00 (98.00–399.00) | 303.00 (137.50–539.00) | 192.00 (91.00–372.50)
+    | | 294.50 (177.00–534.00) | 196.50 (104.00–373.75) | |
+
+    | Lipid PV, mm3 | 25.00 (10.00–55.00) | 41.00 (16.00–70.00) | 22.00 (8.50–50.00)
+    | | 52.50 (19.50–104.50) | 24.00 (10.00–52.75) | |
+
+    | Percent TPV | 24.08 (16.43–33.04) | 28.43 (19.16–36.91) | 23.43 (15.69–32.13)
+    | | 27.93 (19.71–35.00) | 23.73 (16.28–32.83) | |
+
+    | Percent CPV | 0.06 (0.00–1.26) | 0.09 (0.00–1.72) | 0.06 (0.00–1.23) | | 0.13
+    (0.00–1.84) | 0.02 (0.00–1.05) | |
+
+    | Percent NCPV | 23.34 (15.75–31.50) | 27.11 (18.89–35.48) | 22.54 (15.31–30.41)
+    | | 26.82 (19.35–34.71) | 22.84 (15.46–31.29) | |
+
+    | Percent fibrous PV | 20.06 (13.91–27.17) | 23.50 (16.65–30.42) | 19.57 (13.23–26.22)
+    | | 23.00 (16.03–28.17) | 19.71 (13.78–27.59) | |
+
+    | Percent lipid PV | 2.27 (1.17–4.14) | 2.93 (1.44–4.92) | 2.17 (1.05–3.86) |
+    | 3.67 (1.86–6.22) | 2.18 (1.09–4.17) | |
+
+    | No plaque | 6441(76.3) | 30(0.5) | 4461(75.6) | < 0.001 | 4(0.2) | 1946(76.9)
+    | < 0.001 |'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'Table 3. Comparing the Predictive Performance of Different Machine Learning
+    Survival Algorithms
+
+
+    | C-index | XGBoost | DeepHit | CoxPH | RSF | GBSA | SSVM |
+
+    |---|---|---|---|---|---|---|
+
+    | Models trained with all variables | | | | | | |
+
+    | Train set | 0.925 | 0.804 | 0.857 | 0.899 | 0.900 | 0.856 |
+
+    | Test set | 0.918 | 0.800 | 0.832 | 0.901 | 0.899 | 0.834 |
+
+    | Models trained with the top 6 variables | | | | | | |
+
+    | Train set | 0.909 | 0.845 | 0.860 | 0.893 | 0.889 | 0.865 |
+
+    | Test set | 0.911 | 0.834 | 0.834 | 0.885 | 0.888 | 0.831 |
+
+
+    C-index indicates concordance index; CoxPH, cox proportional hazard; DeepHit,
+    deep learning neural net; GBSA, gradient-bootstrap survival analysis; RSF, random
+    survival forest; SSVM, survival support vector machine; and XGBoost, extreme gradient
+    boosting.
+
+
+    ability, suggesting that CCTA features offer additional predictive value beyond
+    the clinical and CACS models. The results presented in Table 4 and Table S7 illustrate
+    the calibration of the clinical model, clinical+CACS, CCTA, and combined models
+    within both the training and testing cohorts, as assessed quantitatively using
+    the Brier score. All 5 models demonstrated good calibration, with the calibration
+    improving progressively in combined models. We calculated the NRI by comparing
+    the CCTA model with the clinical+CACS model. In the training cohort, the NRI was
+    0.241(95% CI, 0.153–0.330),
+
+
+    while in the testing cohort, the NRI was 0.420 (95% CI, 0.247–0.593). The findings
+    indicate that the CCTA model offers superior predictive accuracy for MACE compared
+    with the clinical + CACS model and significantly enhances risk reclassification.
+    The observed NRI increase underscores that the CCTA model has a notable advantage
+    in identifying patients with high risk, who were not sufficiently predicted by
+    the clinical + CACS model. Overall, the CCTA model remains excellent in calibration,
+    making it reliable and practical for clinical applications.
+
+
+    ![](img/2c742bd2457d5ae0fac24d154467ac60_7_0.png)
+
+
+    Figure 1. Feature importance ranking of the extreme gradient boosting (XGBoost)
+    machine learning model for major adverse cardiovascular event (MACE). A, The location
+    of each feature on the y-axis ranks its importance according to the model prediction
+    in descending order. For each feature, 1 dot represents a single patient, and
+    the dot''s color is an indicator that that feature value, where blue represents
+    the lower value while red denotes the higher value. A dot''s position along the
+    x-axis (ie, the actual Shapley additive explanations [SHAP] value) illustrates
+    the impact that the feature had on the model''s output (positively or negatively)
+    for that specific patient. Mathematically, this corresponds to the (logarithm
+    of the) likelihood of MACE across patients (ie, a patient with a higher SHAP value
+    has a higher likelihood of MACE relative to a patient with a lower SHAP value).
+    B, Similarly, the SHAP summary plot illustrates the top 20 features contributing
+    to the initial XGB model''s prediction of MACE. Features are positioned along
+    the y-axis based on importance. The best features with the highest information
+    gain were percent lipid plaque volume (PV), vessel volume, lip PV, presence of
+    high-risk plaque (HRP), stenosis, and total plaque volume (TPV). CPV indicates
+    calcified plaque volume; LAD, left anterior descending coronary artery; LM, left
+    main coronary artery; NCPV, noncalcified plaque volume; and RCA, right coronary
+    artery.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/2c742bd2457d5ae0fac24d154467ac60_8_0.png)
+
+
+    Figure 2. Incremental prognostic value of major adverse cardiovascular event (MACE)
+    across 5 different models. Discriminatory value for MACE (CREATION registry primary
+    end point: all-cause death, myocardial infarction, coronary revascularization,
+    and stroke). Across five different models in the training cohort (A) and the testing
+    cohort (B). Receiver operating characteristic curves of a model with clinical
+    characteristics included sex, age, diabetes, hypertension, hyperlipidemia, smoking,
+    obesity, family history of coronary artery disease (CAD), and nonhigh density
+    lipoprotein (HDL) cholesterol levels (model 1), a model with clinical and coronary
+    artery calcium score (CACS; model 2), a model of coronary computed tomography
+    angiography (CCTA; 6-features included percent lipid plaque volume (PV), vessel
+    volume, lipid PV, presence of high-risk plaque (HRP), stenosis and total plaque
+    volume (TPV; model 3), a model with clinical and CCTA features (model 4), and
+    a model combined clinical, CACS, and CCTA features (model 5). AUC indicates area
+    under the curve.
+
+
+    # Table 4. Performance of Different Risk Models for MACE During Follow-Up in Testing
+    Cohort
+
+
+    | | Reference | AUC (95% CI) | AUC, P value | C-index | NRI (95% CI) | NRI (events),
+    (95% CI) | NRI (nonevents), (95% CI) | Brier score |
+
+    |---|---|---|---|---|---|---|---|---|
+
+    | Clinical | ... | 0.708 (0.610–0.806) | Ref. | 0.746 | Ref. | Ref. | Ref. | 0.057
+    |
+
+    | Clinical+CACS | Clinical | 0.753 (0.662–0.844) | 0.308 | 0.801 | 0.097 (-0.008–0.201)
+    | -0.014 (-0.119–0.090) | 0.111 (0.099–0.123) | 0.036 |
+
+    | CCTA | Clinical | 0.899 (0.839–0.959) | < 0.001 | 0.911 | 0.703 (0.513–0.894)
+    | 0.354 (0.167–0.541) | 0.349 (0.312–0.386) | 0.032 |
+
+    | | Clinical+CACS | | < 0.001 | | 0.420 (0.247–0.593) | 0.342 (0.174–0.510) |
+    0.078 (0.039–0.118) | |
+
+    | Clinical+CCTA | Clinical | 0.895 (0.842–0.947) | < 0.001 | 0.897 | 0.505 (0.322–0.687)
+    | 0.083 (-0.099–0.265) | 0.421 (0.406–0.437) | 0.030 |
+
+    | Clinical+CACS+CCTA | Clinical+CACS | 0.905 (0.844–0.966) | < 0.001 | 0.919 |
+    0.485 (0.389–0.581) | 0.396 (0.307–0.485) | 0.089 (0.053–0.125) | 0.028 |
+
+
+    Shown is the discriminatory value of different risk models for the primary outcome
+    during follow-up. AUC indicates area under the curve; CACS, coronary artery calcium
+    score; CCTA, coronary computed tomography angiography; C-index, concordance index;
+    MACE, major adverse cardiovascular event; and NRI, net reclassification improvement.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '![](img/2c742bd2457d5ae0fac24d154467ac60_9_0.png)
+
+
+    Figure 3. Area under the curve (AUC) comparison according to the time to major
+    adverse cardiovascular event (MACE) across 5 different models. The AUCs for MACE
+    were compared across five different models at different time intervals (1–5 years
+    per year) of follow-up. The error bars indicate 95% CIs. The definitions of different
+    models are the same as in Figure 4. CACS indicates the coronary artery calcium
+    score; and CCTA, coronary computed tomography angiography.
+
+
+    Even after excluding all revascularization events and defining death, myocardial
+    infarction, and stroke as the secondary composite end point, the overall incidence
+    remained 1.1% (94/8431). The discriminative performance of the 5 models showed
+    no significant change in this analysis (Online Appendix; Table S8; Figure S5).
+    Figure 3 presents the time-dependent ROC curve analysis conducted at 1-year intervals.
+    When evaluating the predictability of the 5 prediction models at different time
+    points, the CCTA prediction model consistently demonstrated higher predictability
+    than the clinical + CACS model, regardless of the timing of event occurrence.
+    Additionally, the integrated model of clinical+CACS and CCTA exhibited enhanced
+    predictive value. However, it is noteworthy that the overall predictability of
+    these models tended to decrease when predicting long-term cardiovascular events.
+    The individualized interpretation of the risk model was evaluated using the Shapley
+    additive explanation waterfall plot to assess the contribution of each component
+    within the CCTA prediction model to the overall discrimination ability. Figure
+    4 depicts 2 representative cases in the testing cohort, illustrating how each
+    component contributes to the classifier''s output in predicting MACE versus non-MACE
+    events. In the illustrated MACE event case, lipid plaque burden provided the highest
+    incremental contribution to the classifier''s output when predicting the future
+    occurrence of MACE. Moreover, Figure S6 shows false-positive and false-negative
+    examples in MACE prediction.
+
+
+    # Subgroup Analysis
+
+
+    The ML model was subsequently evaluated within selected subgroups stratified by
+    gender (female versus male), chest pain (symptomatic versus asymptomatic), and
+    CAD onset ages (early onset versus late-onset). The CCTA model similarly exhibited
+    consistently improved discrimination ability for predicting MACE compared with
+    traditional clinical risk factors and CACS across these 3 subgroups (Online Appendix;
+    Tables S9 through S11, and Figures S7 through S9).
+
+
+    # Sensitivity Analysis
+
+
+    In this study, the proportion of individuals with normal coronary arteries was
+    relatively high. Therefore, a sensitivity analysis was performed, excluding the
+    normal coronary arteries, only focusing on individuals with coronary atherosclerosis
+    and CACS >0. The discriminatory performance of the 5 models did not show significant
+    changes (Online Appendix; Tables S12 and S13; Figures S10 and S11). The MACE prediction
+    remained consistent when compared with the entire suspected CAD population.
+
+
+    # DISCUSSION
+
+
+    In a large prospective registry study, we applied various advanced ML techniques
+    to establish a new predictive model based on CCTA. This model integrates multiple
+    dimensions of coronary plaque, qualitative and'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '![](img/2c742bd2457d5ae0fac24d154467ac60_10_0.png)
+
+
+    Figure 4. Individual risk prediction with the best coronary computed tomography
+    angiography (CCTA) features with major adverse cardiovascular event (MACE) and
+    without MACE case example. Personalized explanations by the extreme gradient boosting
+    (XGBoost) machine learning model of the 2 examples of accurate predictions, with
+    individual contributions of each feature to the probability of MACE occurrence.
+    Features are arranged in decreasing by impact, with red arrows for increasing
+    risk and blue arrows for decreasing risk of MACE. CCTA view of a 63-year-old male
+    with MACE (A) and a 65-year-old male without MACE (B), respectively.
+
+
+    quantitative features, plaque location, and stenosis. The main findings are as
+    follows: first, we demonstrated that the model including 6 optimal CCTA features
+    significantly outperforms the clinical plus CACS model in predicting MACE. In
+    both the training and testing cohorts, the CCTA model exhibited better discrimination,
+    good calibration, and provided a significant NRI. Second, regardless of the time
+    to events, the new CCTA model outperformed clinical and CACS risk models. Combining
+    these models further improved discrimination, suggesting that CCTA features offer
+    incremental predictive value over clinical and CACS. Third, the interpretable
+    CCTA-ML model identified lipid plaque burden as the most influential feature in
+    the risk prediction; Lastly, the predictive value of CTA was consistent across
+    different subgroups, including genders, age (early onset or late-onset), and symptomatic
+    subgroups, underscoring consistent value in clinical risk stratification. The
+    findings of this study confirm that the CCTA model significantly improves the
+    predictive accuracy for MACE events, offering substantial potential for risk stratification
+    in high-risk populations. Moreover,
+
+
+    the results enrich the application of ML technology integrated with CCTA imaging
+    in precisely predicting ASCVD events.
+
+
+    # Advantages of ML Algorithms
+
+
+    Coronary CTA generates extensive, complex, multidimensional, nonlinear, and interactive
+    data sets that can be processed quickly using ML techniques. With ongoing renewal
+    in ML algorithms, survival prediction models, such as deep learning neural nets
+    and XGBoost, have shown the capability to predict time-to-event outcomes. This
+    study illustrates that the XGBoost algorithm integrated with CTA parameters provides
+    superior prognostic value, surpassing other conventional ML algorithms. Its low
+    deployment barriers, high operational efficiency, and strong integrability make
+    it more suitable for real-world clinical applications and enable increasingly
+    feasible individualized risk prediction, highlighting the great potential of developing
+    and applying deep learning algorithms in CTA analysis.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Risk Assessment for Cardiovascular Events Based on Conventional Risk Factors
+    and CACS
+
+
+    ASCVD risk assessment tools used in clinical practice predominantly focus on identifying
+    population-level traditional risk factors, which pose challenges in reflecting
+    the dynamic prevalence of disease and associated risk factors.27 CACS has substantial
+    predictive value for cardiac events in both asymptomatic and symptomatic chest
+    pain.28,29 Nevertheless, CACS is limited to quantifying calcified plaques within
+    the coronary arteries and does not provide information regarding noncalcified
+    plaques. A CAC score of zero does not equate to zero cardiovascular risk or the
+    complete absence of atherosclerosis. Previous studies indicate that 5% to 16%
+    of individuals with a CAC score of zero still have coronary plaques.30,31 The
+    present study found that ≈5.9% of patients with a CAC score of zero similarly
+    have coronary plaques. The CONFIRM study, involving 35 281 individuals with suspected
+    CAD, demonstrated that an ML model incorporating clinical variables and CACS can
+    improve the preoperative likelihood of detecting obstructive CAD.32
+
+
+    A meta-analysis that included 6 cohort studies from different countries revealed
+    that CACS provides incremental discriminatory ability beyond traditional cardiovascular
+    disease risk assessment equations in predicting future cardiovascular event risk,
+    yielding an incremental C-statistic of 0.036. This increment was relatively consistent
+    across studies.33 Consistent with previous studies, our study found that the clinical
+    prediction model incorporating 9 well-validated traditional cardiovascular risk
+    factors showed an AUC ranging from 0.650 to 0.788 across different subgroups.
+    Adding CACS to the clinical model resulted in an incremental C-statistic to 0.033
+    to 0.085, without yielding a significant additional benefit. These findings further
+    confirm the limitations of traditional cardiovascular risk factors in predicting
+    cardiovascular events and highlight the modest incremental value of CACS over
+    clinical risk factors.
+
+
+    # Additional Discriminatory Value of ML-CCTA During Follow-Up
+
+
+    Although previous literature has reported the predictive value of various CCTA
+    variables, including anatomic stenosis severity, plaque phenotype, and plaque
+    quantification analysis,34 however, the CONFIRM study primarily evaluated the
+    feasibility of traditional ML models to combine clinical data with coronary stenosis
+    severity.35 The subsequent CONFIRM2 study demonstrated artificial intelligence-derived
+    quantitative plaque features were associated with a higher risk of MACE in women,
+    suggesting the potential underestimation of cardiovascular risk in female patients
+    and underscoring the need for more individualized interventions.36 In this study,
+    we developed and validated a simplified novel model based on 6 key CCTA
+
+
+    features through deep learning methods, with clinical risk factors and CACS serving
+    as reference models, demonstrating significantly enhanced performance in predicting
+    cardiac events. The 6 features represent distinct dimensions, including absolute
+    atherosclerotic total plaque burden, relative and absolute lipid-rich plaque burden,
+    coronary stenosis severity, and plaque phenotype. These imaging-derived risk factors
+    are consistent with previous studies. Analysis of the ICONIC study found that
+    the presence of severe stenosis (≥70%), the volume of low-density noncalcified
+    plaque, and the presence of high-risk plaque was higher in ACS cases.37 In analysis
+    from the multicenter PROMISE trial in 4451 patients, high-risk plaque was associated
+    with a 70% increased risk of MACE, independent of other risk factors or the presence
+    of obstructive disease.38 Also using external validation, validated deep learning
+    system SCOT-HEART, Lin et al99 found that diameter stenosis ≥50% and total PV
+    above 238.5 mm3, were associated with a >3 to 5-fold increased risk of future
+    myocardial infarction. But did not incorporate multiple ML survival models. It
+    is noteworthy that the incremental predictability of the 6 CCTA features remains
+    consistent across different time points throughout the 5-year follow-up period.
+    Therefore, the CREATION study emphasizes the importance of incorporating a broader
+    range of multidimensional CCTA variables that reflect the pathophysiology of coronary
+    atherosclerosis into cardiovascular risk assessment in a real-world Asian population.
+
+
+    This study further identified the key predictors of ASCVD events and found that
+    lipid plaque burden serves as the best imaging marker for assessing cardiovascular
+    risk. Williams et al40 demonstrated that low-attenuation plaque burden >4% was
+    nearly 5× more likely to have subsequent myocardial infarction in 1769 patients
+    with stable chest pain undergoing CCTA in the SCOT-HEART trial, which is consistent
+    with our findings. This highlights the critical role of plaque burden and phenotype
+    in the pathogenesis of ASCVD events. Plaque rupture is associated with inflammatory
+    plaques characterized by a thin fibrous cap and a large necrotic core.
+
+
+    In this study, most MACE events were revascularizations occurring after 60 days,
+    which may be influenced by CCTA findings rather than spontaneous events, which
+    could lead to overestimation of the model''s predictive performance. To mitigate
+    this intervention bias, we conducted a sensitivity analysis excluding all revascularizations.
+    The findings remained unchanged when restricted to a secondary composite end point
+    (death, myocardial infarction, and stroke), demonstrating strong robustness and
+    applicability.
+
+
+    We did not observe a significant impact of gender, age, or the presence of chest
+    pain symptoms on the association between CCTA features and MACE risk. These results
+    highlight the sustained prognostic significance of the ML-CCTA model for assessing
+    MACE risk across'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'different subgroups, suggesting that the ML model''s predictive ability may
+    primarily derive from the atherosclerotic burden and plaque phenotype itself.
+    However, due to the limited events, further validation in larger studies is needed.
+
+
+    Our study also demonstrated the practical application of the integrated ML model
+    in clinical practice, emphasizing each feature''s contribution to the final prediction
+    score, thereby providing clear interpretability of the predicted outcomes. It
+    enables direct visualization of coronary atherosclerosis and luminal stenosis,
+    facilitating a deeper understanding of the pathophysiological mechanisms underlying
+    coronary atherosclerosis. Moreover, the model can be incorporated into PACS systems
+    to automatically generate individualized risk scores based on structured imaging
+    parameters. When the predicted risk exceeds a predefined threshold, automated
+    alerts can be triggered to assist clinicians in early intervention and treatment
+    decision-making. Its application will transform the cardiovascular disease prevention
+    strategies, shifting from population-level risk assessments to individual-level
+    evaluation and intervention, aiding in identifying high-risk individuals for future
+    cardiovascular events. Despite its strong prognostic value, CCTA has several limitations,
+    including the need for iodinated contrast agents, exposure to ionizing radiation,
+    reduced diagnostic accuracy in the presence of heavy coronary calcification, heart
+    rate dependence, and limited availability in some settings.
+
+
+    # Strengths and Limitations
+
+
+    Our study has several notable strengths. It is a nationally representative, prospective
+    registry cohort study with a large sample size and medium to long-term follow-up.
+    Various advanced ML survival techniques were applied to establish a new multidimensional
+    CCTA imaging prediction model. However, our study has several limitations: First,
+    all data were derived from a single specialized tertiary medical center, which
+    may result in selection bias. Although the model performed well in internal validation,
+    its applicability needs to be confirmed through external validation, considering
+    variations across regions, countries, and racial/ethnic. Second, this study did
+    not capture detailed information on atypical ischemic symptoms or specific indications
+    for CCTA, which may have introduced a degree of referral bias. Further validation
+    in a clearly symptomatic population is warranted. Third, the types and dosages
+    of lipid-lowering medications were not recorded during the follow-up period, which
+    may affect the progression of adverse patient outcomes. Fourth, future studies
+    could consider incorporating new CCTA parameters, such as coronary functional
+    flow assessment and perivascular fat attenuation index, to provide additional
+    information about cardiovascular risk and further improve modeling accuracy.
+
+
+    # Conclusions
+
+
+    This study combines CCTA with ML to develop and validate a more interpretable,
+    accurate, individualized, and dynamic model for cardiovascular risk prediction.
+    This model enhances risk stratification, thereby potentially advancing the clinical
+    application and translation of CCTA imaging.
+
+
+    # ARTICLE INFORMATION
+
+
+    Received April 18, 2025; accepted October 29, 2025.
+
+
+    # Affiliations
+
+
+    Department of Cardiology (Y.S., N.X., C.C., Y.Z., L.G., Z.G., J.C., L.S., J.Y.)
+    and Department of Radiology (J.Z., S.J., B.L., H.Z.-H.), Fuwai Hospital, National
+    Clinical Research Center for Cardiovascular Diseases, National Center for Cardiovascular
+    Diseases, Chinese Academy of Medical Sciences and Peking Union Medical College,
+    Beijing, China.
+
+
+    # Acknowledgments
+
+
+    Ethics approval and consent to participate. The Ethical Review Board of Fuwai
+    Hospital approved the study protocol in accordance with the Declaration of Helsinki,
+    and written informed consent was obtained from all participants.
+
+
+    # Author Contributions
+
+
+    All authors contributed to the study conception and design. Drs Xu, Song, Zheng,
+    Jia, Cui, Zhang, L. Gao, Z. Gao, and Chen contributed to data collection and analysis.
+    Drs. Zhi-hui, Lu, Yuan, and L. Song critically revised the article. All authors
+    read and approved the final article. The first 2 authors contributed equally:
+    Dr Xu oversaw the algorithm development part of this work, while Dr Song was in
+    charge of the medical part of this work, and both of the first authors equally
+    contributed to the writing of the article.
+
+
+    # Sources of Funding
+
+
+    This work was supported by the CAMS Innovation Fund for Medical Sciences (2023-I2M-C&T-B-061);
+    CAMS Innovation Fund for Medical Sciences (2021-I2M-1-008); the National High-Level
+    Hospital Clinical Research Funding (2024-GSP-TJ-8); CAMS Innovation Fund for Medical
+    Sciences (2023-I2M-1-002).
+
+
+    # Disclosures
+
+
+    None.
+
+
+    # Supplemental Material
+
+
+    +   Supplemental Methods
+
+    +   Tables S1–S13
+
+    +   Figures S1–S11
+
+
+    # REFERENCES
+
+
+    +   1. O''Donoghue ML, Giugliano RP, Wiviott SD, Atar D, Keech A, Kuder JF, Im
+    K, Murphy SA, Flores-Arredondo JH, López-JAG, et al. Long-term evolocumab in patients
+    with established atherosclerotic cardiovascular disease. *Circulation*. 2022;146:1109–1119.
+    doi: 10.1161/CIRCULATIONAHA.122.061620.
+
+    +   2. Nicholls SJ, Katoka Y, Nissen SE, Prati F, Windecker S, Puri R, Hucko T,
+    Aradi D, Hermen JPR, Hernandes RS, et al. Effect of evolocumab on coronary plaque
+    phenotype and burden in statin-treated patients following myocardial infarction.
+    *JACC Cardiovasc Imaging*. 2022;15:1308–1321. doi: 10.1016/j.jcmg.2022.03.002.
+
+    +   3. Ray KK, Troquay RPT, Visseren FLJ, Leiter LA, Scott Wright R, Vikarunnessa
+    S, Tallozy Z, Zang X, Maheux P, Lesogor A, et al. Long-term efficacy and safety
+    of inclisiran in patients with high cardiovascular risk and elevated LDL cholesterol
+    (ORION-3): results from the 4-year open-label extension of the ORION-1 trial.
+    *Lancet Diabetes Endocrinol*. 2023;11:109–119. doi: 10.1016/S2213-8587(22)00353-9.
+
+    +   4. Budoff MJ, Bhatt DL, Kinnerger A, Lakshmanan S, Muhlestein JB, Le VT, May
+    HT, Shaliik K, Shekar C, Roy SK, et al. Effect of icosapent ethyl on progression
+    of coronary atherosclerosis in patients with elevated triglycerides on statin
+    therapy: final results of the EVAPORATE trial. *Eur Heart J*. 2020;41:3925–3932.
+    doi: 10.1093/eurheartj/ehaa652.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '+   5. Bhatt DL, Steg PG, Miller M, Brinton EA, Jacobson TA, Ketchum SB, Doyle
+    RT, Julio RA, Jiao L, Granowitz C, et al. Effects of icosapent ethyl on total
+    ischemic events. J Am Coll Cardiol. 2019;73:2791–2802. doi: 10.1016/j.jacc.2019.02.032
+
+
+    +   6. Bethel MA, Patel RA, Merrill P, Lokhnygina Y, Buse JB, Mentz RJ, Pagliaripo
+    NJ, Chan JC, Gustavson SM, Iqbal N, et al; EXSCEL Study Group. Cardiovascular
+    outcomes with glucagon-like peptide-1 receptor agonists in patients with type
+    2 diabetes: a meta-analysis. Lancet Diabetes Endocrinol. 2018;6:105–113. doi:
+    10.1016/S2213-8587(17)30412-6
+
+
+    +   7. Nidorf SM, Fiolet ATL, Mosterd A, Eikelboom JW, Schut A, Opstal TSJ, The
+    SHK, Xu XF, Ireland MA, Lenderink T, et al; LoDoCo2 Trial Investigators. Colchicine
+    in patients with chronic coronary disease. N Engl J Med. 2020;383:1838–1847. doi:
+    10.1056/NEJMoa2021372
+
+
+    +   8. Yu M, Yang Y, Dong L, Zhao C, Yang F, Yuan YF, Liao YH, He SL, Liu K, Wei
+    F, et al. Effect of colchicine on coronary plaque stability in acute coronary
+    syndrome as assessed by optical coherence tomography: the COLOCT randomized clinical
+    trial. Circulation. 2024;150:981–993. doi: 10.1161/CIRCULATIONAHA.124.069808
+
+
+    +   9. Nasir K, Cánzoles-Achirica M. Role of coronary artery calcium score in
+    the primary prevention of cardiovascular disease. BMJ. 2021;373:n776. doi: 10.1136/bmj.n776
+
+
+    +   10. Hageman S, Pennells L, Ojeda F, Kaptooge S, Kuulasmaa K, De Vries T, Xu
+    Z, Kee F, Chung R, et al; SCORE2 working group and ESC Cardiovascular risk collaboration.
+    SCORE2 risk prediction algorithms: new models to estimate 10-year risk of cardiovascular
+    disease in Europe. Eur Heart J. 2021;42:2439–2454. doi: 10.1093/eurheartj/ehab309
+
+
+    +   11. Hageman SM, McCay AJ, Ueda P, Gunn LH, Jennerud H, Tagström E, Bhatt DL,
+    Steg PG, Lill M, Magi R, et al. Estimation of recurrent atherosclerotic cardiovascular
+    event risk in patients with established cardiovascular disease: the updated SMART2
+    algorithm. Eur Heart J. 2022;43:1715–1727. doi: 10.1093/eurheartj/ehac056
+
+
+    +   12. Arnett DK, Blumenthal RS, Albert MA, Buroker AB, Goldberger ZD, Hahn EJ,
+    Himelfarb CD, Khera A, Lloyd-Jones D, McEvoy JW, et al. 2019 ACC/AHA guideline
+    on the primary prevention of cardiovascular disease: a report of the American
+    College of Cardiology/American Heart Association Task Force on Clinical Practice
+    Guidelines. Circulation. 2019;140:e596–e646. doi: 10.1161/CIR.0000000000000678
+
+
+    +   13. D’Agostino RB, Vasan RS, Pencina MJ, Wolf PA, Cobain M, Massaro JM, Kannel
+    WB. General cardiovascular risk profile for use in primary care: the Framingham
+    Heart Study. Circulation. 2008;117:743–753. doi: 10.1161/CIRCULATIONAHA.107.699579
+
+
+    +   14. Sud M, Sivaswamy A, Chu A, Austin PC, Anderson TJ, Naimark DMJ, Farkouh
+    ME, Lee DS, Roifman I, Thanassoulis G, et al. Population-based recalibration of
+    the Framingham risk score and pooled cohort equations. J Am Coll Cardiol. 2022;80:1330–1342.
+    doi: 10.1016/j.jacc.2022.07.026
+
+
+    +   15. Damen JA, Pajooyeshin A, Heus P, Moons KGM, Reitsma JB, Scholten RJPM,
+    Hooft L, Debray TPA. Performance of the Framingham risk models and pooled cohort
+    equations for predicting 10-year risk of cardiovascular disease: a systematic
+    review and meta-analysis. BMC Med. 2019;17:109. doi: 10.1186/s12916-019-1340-7
+
+
+    +   16. Nurmohamed NS, Van Rosendael AR, Danad I, Ngo-Metzger Q, Taub PR, Ray
+    KK, Fichtner G, Bonaca MP, Hisa J, Rodriguez F, et al. Atherosclerosis evaluation
+    and cardiovascular risk estimation using coronary computed tomography angiography.
+    Eur Heart J. 2024;45:1783–1800. doi: 10.1093/eurheartj/ehae190
+
+
+    +   17. Osborne-Grinter M, Kwicinski J, Doris M, McElhinney P, Cadet S, Adamson
+    PD, Moss AJ, Alam S, Hunter A, Shah ASV, et al. Association of coronary artery
+    calcium score with qualitatively and quantitatively assessed adverse plaque on
+    coronary CT angiography in the SCOT-HEART trial. Eur Heart J Cardiovasc Imaging.
+    2022;23:1210–1221. doi: 10.1093/ehjci/jeab135
+
+
+    +   18. Manubolu VS, Ichikawa K, Budoff MJ. Innovations in cardiac computed tomography:
+    Imaging in coronary artery disease. Prog Cardiovasc Dis. 2024;84:51–59. doi: 10.1016/j.pcad.2024.05.005
+
+
+    +   19. Sato Y, Motoyama S, Miyagi K, Kawai H, Sarai M, Muramatsu T, Takashi H,
+    Naruse H, Ahmadi A, Ozaki Y, et al. Clinical outcomes based on coronary computed
+    tomography-derived fractional flow reserve and plaque characterization. JACC Cardiovasc
+    Imaging. 2024;17:284–297. doi: 10.1016/j.jcmg.2023.07.013
+
+
+    +   20. Williams MC, Moss AJ, Dweck M, Adamson PD, Alam S, Hunter A, Shah ASV,
+    Pawade T, Weir-McCall JR, Roditi G, et al. Coronary artery plaque characteristics
+    associated with adverse outcomes in the SCOT-HEART study. J Am Coll Cardiol. 2019;73:291–301.
+    doi: 10.1016/j.jacc.2018.10.066
+
+
+    +   21. Nurlu J, Chandrashekar Y, Ahmadi A, Abbra C, Barman DS, Blankstein R,
+    Leipisj C, Newby D, Nicol ED, Nieman K, et al. SCCT 2021 expert consensus
+
+
+    document on coronary computed tomographic angiography: a report of the Society
+    of Cardiovascular Computed Tomography. J Cardiovasc Comput Tomogr. 2021;15:192–217.
+    doi: 10.1016/j.jcct.2020.11.001
+
+
+    +   22. Expert Panel on Detection, Evaluation, and Treatment of High Blood Cholesterol
+    in Adults. Executive summary of the third report of the National Cholesterol Education
+    Program (NCEP) expert panel on detection, evaluation, and treatment of high blood
+    cholesterol in adults (Adult Treatment Panel III). JAMA. 2001;285:2486–2497. doi:
+    10.1001/jama.285.19.2486
+
+
+    +   23. Yesilay A, Kumar AK, Agrawal A, Furqan MM, Verma BR, Syed AB, Majid M,
+    Akyuz K, Rayes DL, Chen D, et al. Predicting long-term clinical outcomes of patients
+    with recurrent pericarditis. J Am Coll Cardiol. 2024;84:1193–1204. doi: 10.1016/j.jacc.2024.05.072
+
+
+    +   24. Unterhuber M, Krescjp K, Rommel KC, Besler C, Baragetti A, Klöting N,
+    Ceglarek U, Blüher M, Scholz M, Katapana AL, et al. Proteomics-enabled deep learning
+    machine algorithms can enhance prediction of mortality. J Am Coll Cardiol. 2021;78:1621–1631.
+    doi: 10.1016/j.jacc.2021.08.018
+
+
+    +   25. Diamond GAA. Clinically relevant classification of chest discomfort. J
+    Am Coll Cardiol. 1983;1:574–575. doi: 10.1016/S0735-1097(83)80099-X
+
+
+    +   26. Mousavi I, Suffredini J, Virani SS, Ballantyne CM, Michos ED, Misa A,
+    Saeed A, Jia X. Early onset atherosclerotic cardiovascular disease. Eur J Prev
+    Cardiol. 2024;32:100–112. doi: 10.1093/eurjpc/zwad240
+
+
+    +   27. Shah ASV, Lee KK, Pérez JAR, Campbell D, Astengo F, Logue J, Gallacher
+    PJ, Katikireddi SV, Bing R, Alam SR, et al. Clinical burden, risk factor impact
+    and outcomes following myocardial infarction and stroke: a 25-year individual
+    patient level linkage study. Lancet Reg Health Eur. 2021;7:100141. doi: 10.1016/j.lanepe.2021.100141
+
+
+    +   28. Biavati F, Saba L, Bousseliou M, Kofoed KF, Benetek T, Donnelly P, Rodriguez-Palomares
+    J, Erglis A, Štěsković S, Sakalagà G, et al; DISCHARGE Trial Group. Coronary artery
+    calcium score predicts major adverse cardiovascular events in stable chest pain.
+    Radiology. 2024;310:e231557. doi: 10.1148/radiol.231557
+
+
+    +   29. Houlberg EJ, Lin F, Bla MJ, Budoff MJ, Van Den Hoogen IJ, Gianni U, Lu
+    Y, Bax AM, Van Rosendael AR, Tantawy SW, et al. Relationship between coronary
+    artery calcium and atherosclerosis progression among patients with suspected coronary
+    artery disease. JACC Cardiovasc Imaging. 2022;15:1063–1074. doi: 10.1016/j.jcmg.2021.12.015
+
+
+    +   30. Bergström G, Persson M, Adiels M, Björnson E, Bonander C, Ahlström H,
+    Alfreidsson J, Angerås O, Bergland G, Blomberg A, et al. Prevalence of subclinical
+    coronary artery atherosclerosis in the general population. Circulation. 2021;144:916–929.
+    doi: 10.1161/CIRCULATIONAHA.121.055340
+
+
+    +   31. Han D, Klein E, Friedman J, Gransar H, Achenbach S, Al-Mallah MH, Budoff
+    MJ, Cademartiri F, Maffei E, Callister TQ, et al. Prognostic significance of subtle
+    coronary calcification in patients with zero coronary artery calcium score: from
+    the CONFIRM registry. Atherosclerosis. 2020;309:33–38. doi: 10.1016/j.atherosclerosis.2020.07.011
+
+
+    +   32. Al’Refai SJ, Malikia G, Singh G, Van Rosendael AR, Ma X, Xu Z, Alawamlh
+    OAH, Lee B, Pandey M, Achenbach S, et al. Machine learning of clinical variables
+    and coronary artery calcium scoring for the prediction of obstructive coronary
+    artery disease on coronary computed tomography angiography: analysis from the
+    CONFIRM registry. Eur Heart J. 2020;41:359–367. doi: 10.1093/eurheartj/ehz565
+
+
+    +   33. Bell JKL, White S, Hassan O, Zhu L, Scott AM, Clark J, Glaziou P. Evaluation
+    of the incremental value of a coronary artery calcium score beyond traditional
+    cardiovascular risk assessment: a systematic review and meta-analysis. JAMA Intern
+    Med. 2022;182:634–642. doi: 10.1001/jamainternmed.2022.1262
+
+
+    +   34. Nakazato R, Arsanjani R, Achenbach S, Gransar H, Cheng VY, Dunning A,
+    Lin FY, Al-Mallah M, Budoff MJ, Callister TQ, et al. Age-related risk of major
+    adverse cardiac event risk and coronary artery disease extent and severity by
+    coronary CT angiography: results from 15 187 patients from the international multicentre
+    CONFIRM study. Eur Heart J Cardiovasc Imaging. 2014;15:586–594. doi: 10.1093/ehjci/jet132
+
+
+    +   35. Motwani M, Dey D, Berman DS, Germano G, Achenbach S, Al-Mallah MH, Andreini
+    D, Budoff MJ, Cademartiri F, Callister TQ, et al. Machine learning for prediction
+    of all-cause mortality in patients with suspected coronary artery disease: a 5-year
+    multicentre prospective registry analysis. Eur Heart J. 2017;38:500–507. doi:
+    10.1093/eurheartj/ehw188
+
+
+    +   36. Feuchtner GM, Lacaita PG, Bax JJ, Rodriguez F, Nakanishi R, Pontone G,
+    Mushtaq S, Buchell RR, Gränic C, Patel AR, et al. AI-quantitative CT coronary
+    plaque features associate with a higher relative risk in women: CONFIRM2 registry.
+    Circ Cardiovasc Imaging. 2025;18:e018235. doi: 10.1161/CIRCIMAGING.125.018235
+
+
+    +   37. Chang HJ, Lin FY, Lee SE, Andreini D, Bax J, Cademartiri F, Chinnaiyan
+    K, Chow BJW, Conte E, Cury RC, et al. Coronary atherosclerotic precursors of acute
+    coronary syndromes. J Am Coll Cardiol. 2018;71:2511–2522. doi: 10.1016/j.jacc.2018.02.079'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '+   38. Ferencik M, Mayrhofer T, Bittner DO, Emami H, Puchner SB, Lu MT, Meyersohn
+    NM, Ivanov AV, Adami EC, Patel MR, et al. Use of high-risk coronary atherosclerotic
+    plaque detection for risk stratification of patients with stable chest pain: a
+    secondary analysis of the PROMISE randomized clinical trial. JAMA Cardiol. 2018;3:144–152.
+    doi: 10.1001/jamacardio.2017.4973
+
+    +   39. Lin A, Manrai N, McEllinney P, Killikear A, Matsumoto H, Kwicinski J,
+    Pieszczko K, Razipour A, Grodetcki K, Park C, et al. Deep learning-enabled coronary
+    CT angiography for plaque and stenosis quantification and cardiac risk prediction:
+    an international multicentre study. Lancet Digit Health. 2022;4:e256–e265. doi:
+    10.1016/S2589-7500(22)00022-X
+
+    +   40. Williams MC, Kwicinski J, Doris M, McElhinney P, D''Souza MS, Cadet S,
+    Adamson PD, Moss AJ, Alam S, Hunter A, et al. Low-attenuation noncalcified plaque
+    on coronary computed tomography angiography predicts myocardial infarction: results
+    from the multicenter SCOT-HEART trial (Scottish Computed Tomography of the HEART).
+    Circulation. 2020;141:1452–1462. doi: 10.1161/CIRCULATIONAHA.119.044720'
+  merge: -1
+  img_proc: true
