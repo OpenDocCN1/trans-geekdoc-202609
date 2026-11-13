@@ -1,0 +1,16 @@
+Equation (6.51) approximates the time series of periodic phenomena as a weighted sum of those basis functions. X(k) is the weight for the basis function e^(j 2πkn/N). For detailed discussions on the discrete Fourier transform, refer to Briggs and Henson (1995).
+
+Discrete Fourier transforms reveal periodicities in time series data as well as the relative strengths of any periodic components. The dissimilarity between two time series is calculated by summing the squared differences between the weights of the associated basis functions of each time series. This means that two time series that have similar dominant oscillating signals will be considered similar. Time series with similarity in periodic pattern can be clustered using k-means based on the weights X(k) of each basis function. Figure 6.27 shows the result of clustering the 2010 global monthly total precipitation time series data using the time series clustering tool with the Profile (Fourier) option in ArcGIS Pro based on the space-time cube shown in Figure 6.23. Two clusters are identified: the peak season of precipitation in Cluster 1 (in blue colour) is around July and August, while the peak season in Cluster 2 (in red colour) is around December and January. The chart in Figure 6.27 clearly shows the opposite oscillating seasonal patterns of precipitation in the two clusters.
+
+# 6.7.3.2 Local Outlier Analysis
+
+Local outlier analysis is to identify significant clusters and outliers in space-time data. Basically, it compares the value of each location (bin in a space-time cube) with
+
+the values of its neighbouring locations to search for locations in the study area that are significantly different from their neighbours in both space and time. For example, it can be used to determine whether there was a time period with unexpectedly high rates of disease outbreak in a region, or to detect any locations in a region with significant increases in the number of insurance claims filed over a certain period of time.
+
+Local outlier analysis applies the local Moran's I statistic introduced in Section 6.5.2 in the space-time context, in which a neighbourhood is defined in terms of distance (for spatial neighbours) and time-step interval (for temporal neighbours). In other words, the local Moran's I statistic is calculated for each bin within the context of its neighbouring bins in a 3D space-time cube. A positive local Moran's I statistic value indicates that a bin has neighbouring bins with similarly high or low attribute values, and this bin is part of a cluster. A negative local Moran's I statistic value suggests that a bin has neighbouring bins with dissimilar values; thus, it is an outlier. The results of local outlier analysis distinguish six types of locations:
+
++   1 A location that has never been part of a statistically significant cluster or outlier.
++   2 A location that has been part of a High-High cluster (of high values) throughout time.
++   3 A location that has been part of a Low-Low cluster (of low values) throughout time.
++   4 A location that has been a High-Low outlier (a high value surrounded mainly by low values) throughout time.

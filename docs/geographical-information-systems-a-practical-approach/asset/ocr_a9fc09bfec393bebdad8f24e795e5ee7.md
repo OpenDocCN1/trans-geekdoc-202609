@@ -1,0 +1,16 @@
++   3 Acquiring and preparing data
++   4 Designing a solution process
++   5 Implementing the solution process
++   6 Communicating the results
+
+# 1.4.1 Defining the Problem
+
+Defining and understanding the problem to be studied using GIS is a crucial step. A clear understanding of the problem can lead to success in finding an acceptable solution or reaching a conclusion. When a group of people are involved in the problem-solving, consensus needs to be reached on the problem definition. Defining the problem involves developing a problem statement, stating the goals and establishing study boundaries. A problem statement summarises the problem in a clear and concise manner. A goal focuses on what the successful end of the problem-solving process should be.
+
+Analysis with GIS also needs to establish a set of spatial and temporal boundaries. The spatial boundary defines the area within which the study is to be carried out and what areal unit is to be used for analysis (for example, at farm level, at shire or county level or at catchment level). Different areal units may result in different measured characteristics of the geographical features of interest. For example, when timber is managed on a forest-wide basis, rather than by stands, yields are higher and more consistent. The temporal boundary defines the period over which the analysis is to be performed, and whether it is to reconstruct the past, to look at the present, to predict the future or to examine temporal changes and trends.
+
+For example, the Woori Yallock catchment is one of the catchments in Yarra
+
+Valley, located to the north-east of Melbourne, Australia. It covers an area of 362 km². The key management issues for this catchment include the loss of native vegetation, bed and bank erosion, water quality deterioration, weeds, fish barriers and maintaining stream flows. In particular, agricultural activities, settlements and septic tanks on rural properties are major point and non-point sources of pollution of the aquatic environments and have significant impacts on the water quality of the rivers and streams in the catchment. Riparian vegetation can act as a filter to trap sediment, nutrients and other contaminants, reducing their movement into streams. It also protects riverbanks from surface erosion by rain, water flow or stock, helps dry and reinforce bank soils to prevent cracking and slumping and maintains natural levels of light intensity and water temperature for healthy in-stream ecosystems. However, many parts of the river system in the catchment are not protected by natural vegetation buffers, and the water quality standards mean the river ranks rather low on the river health scale. Identifying the critical areas of riparian zones that are susceptible to the threat of pollution is the first step in addressing those environmental issues and developing the water resource management and biodiversity conservation strategies for the catchment. A problem statement could be drawn up as follows:
+
+> > Many parts of the river system in the Woori Yallock catchment are susceptible to the threat of pollution from adjacent land uses and septic tanks, and they need to be identified for riparian vegetation plantation or restoration. The environmental goal is to

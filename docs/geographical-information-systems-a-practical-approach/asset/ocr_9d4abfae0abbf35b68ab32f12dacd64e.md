@@ -1,0 +1,11 @@
+associations among the features need to be built, with which boundaries and nodes/vertices shared by multiple features can be edited, moved or reshaped simultaneously. In other words, when a node is moved, all the edges (which are line segments that define lines or polygons) that connect to it are stretched to remain connected to the node. For example, as shown in Figure 3.16, by moving a corner vertex shared by three land lots, the boundaries of the three lots are all updated at the same time. Similarly, when an edge is moved, all the adjacent edges are stretched to stay connected.
+
+In GIS, editing features with shared geometry require first building a map topology, then defining a cluster tolerance. A map topology is a set of topological relationships between coincident parts of features in a data layer or several data layers. For example, a map topology can be constructed between a stream (line) layer and a forest (polygon) layer to ensure that forest boundaries are coincident with streams. With the map topology, coincidental features in all participating data layers can be identified according to a
+
+specified cluster tolerance (defined later). When edited with the map topology, features that are coincident are updated simultaneously so that they continue to share geometry. Coincident edges are called topology edges. The points where edges are connected are referred to as topology nodes. In topological editing, they are collectively called topology elements. A cluster tolerance is the distance within which lines (edges) and vertices are close enough to be considered coincident. Lines or vertices that fall within the specified cluster tolerance will be snapped together. Increasing the cluster tolerance may cause more features to be snapped together unintentionally, leading to poor data accuracy and feature distortion. A typical cluster tolerance is at least an order of magnitude smaller than the accuracy of the data. For example, if the features are accurate to 1 m, the cluster tolerance should be no more than 0.1 m. If the data accuracy is unknown, a good strategy is to use the default cluster tolerance and increase it only to handle more severe but localised errors (Chang 2014).
+
+![](bbox=[0.156, 0.646, 0.469, 0.853])
+
+![](bbox=[0.556, 0.646, 0.903, 0.853])
+
+Figure 3.16 Editing features with shared geometry.

@@ -1,0 +1,11 @@
+functions for analysis of remote sensing data. Only the basic concepts of remote sensing are described in this section. For comprehensive and detailed discussions on the theories, techniques and applications of remote sensing, please refer to remote sensing textbooks, such as Jensen (2007) and Lillesand et al. (2015).
+
+**Remote sensing** refers to a group of techniques for collecting spatial data from a distance without coming into direct contact with the object or geographical phenomena of interest. Remote sensing data can take many forms, including variations in electromagnetic energy distributions, acoustic wave distributions or force distributions. This chapter is only concerned with remote sensing data recording the magnitude of electromagnetic energy flux that is reflected or emitted from objects on the Earth's surface or within the atmosphere. Such remote sensing data are normally in some form of imagery, which is further processed, interpreted or analysed to produce useful data and information about the Earth's resources and environment. They are mainly captured
+
+by imaging sensors deployed on airborne and spaceborne platforms (aircraft, satellites or other spacecraft).
+
+# 7.1.1 Characteristics of Electromagnetic Radiation
+
+**Electromagnetic radiation** is the only form of energy transfer that can occur in a vacuum such as the space between the sun and the Earth. It has both wave and particle properties (Jensen 2007). According to its wave properties, electromagnetic radiation propagates through space at the speed of light. This electromagnetic wave consists of an electric and a magnetic field, which are perpendicular to one another, and to the direction of the travel (Figure 7.1). The distance from one wave peak to the next is the **wavelength** (\(\lambda\)), normally measured in micrometres (\(\mu\)m). The number of wave peaks passing a fixed point in space per unit time is the wave frequency (\(\nu\)). A wave that sends one peak by every second is said to have a frequency of one cycle per second, or 1 hertz (Hz). The wavelength and frequency are
+
+![](bbox=[0.2, 0.62, 0.85, 0.89])

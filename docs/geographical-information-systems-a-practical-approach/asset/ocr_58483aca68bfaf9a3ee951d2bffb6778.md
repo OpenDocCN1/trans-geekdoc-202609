@@ -1,0 +1,13 @@
+increase in CN values and runoff volume in 2000 compared with those in 1980 and 1990, attributed to the increase in water- and wetland-covered areas. This suggested that the lost wetlands and floodplains in the S-65A sub-basin were recovered as the result of the restoration work.
+
+different sources. Different approaches can be used to study and model non-point source pollution. Basically, non-point source pollution models represent the hydrological rainfall–runoff transformation processes with attached quality components (Notovny and Chesters 1981). As the dispersion of non-point source pollutants is related to hydrological processes and land use patterns, non-point source pollution is often modelled by integrating hydrological and pollutant transport models with GIS. Mishra et al. (2010) provided such an example. They applied the SWAT model combined with ArcGIS to estimate non-point source N and P loads in a small catchment in India.
+
+# Case Study 2: Non-Point Source Pollution Assessment
+
+Surface waters can be contaminated by either point source pollution or non-point source pollution or both. Point source pollution may come from any discernible, confined and discrete conveyances, such as pipes, ditches, channels, tunnels, conduits, wells, containers, rolling stocks and concentrated animal feeding operations. Non-point source pollution is derived from dispersive sources, including urban runoff, agriculture, industry, hydrological modification, solid waste disposal, atmospheric deposition, stream bank erosion and individual sewage disposal. It is mainly caused by rainfall or snowmelt moving over and through the ground and carrying away natural and human-made pollutants, finally washing them into different water bodies. Non-point source pollutants include nitrogen (N), phosphorous (P), heavy metals and other chemicals from
+
+SWAT (Soil and Water Assessment Tool) is a catchment-scale model jointly developed by USDA Agricultural Research Service and Texas A&M AgriLife Research to simulate the quality and quantity of surface and groundwater and predict the impact of land management practices and climate change on water, sediment and agricultural chemical yields in complex catchments with varying soils, land use and management conditions over long periods (Arnold et al. 2012). The model is physically based and has been widely used in assessing soil erosion, non-point source pollution and regional management in
+
+# Practical 10.1 See the Support Material
+
+*In this practical, you are going to learn how to perform rainfall–runoff modelling in ArcGIS Pro or QGIS.*
