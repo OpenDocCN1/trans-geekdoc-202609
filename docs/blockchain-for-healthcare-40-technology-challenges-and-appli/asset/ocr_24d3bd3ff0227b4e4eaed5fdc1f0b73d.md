@@ -1,0 +1,20 @@
+DoS attack, Sybil attack, impersonation attack, and so on. In this chapter, our proposed model ensures the reception of actual messages about road conditions in order to support life supporting vehicles like ambulances in a timely manner, saving one’s life by taking the exact route. In addition, privacy and data integrity are also ensured by setting time stamps to the message sent by each node. The proposed model is simulated using SUMO by setting parameters, as shown in Table 15.1. The results show that the blockchain-based one-way hash model outperformed other existing models considered for comparison, namely, bSPECs, Xiaoyan, BLS, and ECPP. The message delivery ratio is high, which in turn reduced the end-to-end delay of the model. The model resulted in standardized energy consumption; hence, the overall efficiency of the model is enhanced.
+
+# References
+
++   1. S.S. Tangade and S.S. Manvi, “A Survey on Attacks, Security and Trust Management Solutions in VANETs.” In 4th IEEE international Conference on Computing, Communications and Networking Technologies; 2013, pp. 1–6. https://doi.org/10.1109/ICCCNT.2013.6726668
++   2. B. Parno and A. Perrig, “Challenges in Securing Vehicular Networks.” In Workshop on Hot Topics in Networking; 2005. https://efaidnbmnnnibpcajpcglclefindmkaj/https://netsec.ethz.ch/publications/papers/cars.pdf
++   3. R.G. Engoulou, M. Bellaiche, S. Pierre and A. Quintero, “VANET Security Surveys.” Computer Communications. 2014; 44: 1–13.
++   4. M. Raya, P. Papadimitratos and J. Hubaux, “Securing Vehicular Communications.” IEEE Wireless Communication. 2006; 13(1): 8–15.
++   5. X. Hou, Y. Li, M. Chen, D. Wu, D. Jin and S. Chen, “Vehicular Fog Computing: A View Point of Vehicles as Infrastructures.” IEEE Transactions on Vehicular Technology, 2016; 65(6): 3860–73.
++   6. Y. Zhang, X. Lin and C. Xu, “Blockchain Based Secure Data Provenance for Cloud Storage.” In International Conference on Information and Communications Security; 2018. Springer, pp. 3–19.
++   7. F. Tschorsch and B. Scheuermann, “Bitcoin and Beyond: A Technical Survey on Decentralied Digital Currencies.” IEEE Communication Surveys & Tutorials. 2016; 3(18): 2084–123.
++   8. L. Zhu, et al., “Traffic Monitoring in Self Organizing VANETs: A Privacy Preserving Mechanism for Speed Collection and Analysis.” IEEE Wireless Communications. 2019; 6(26): 18–23.
++   9. J. Cui, et al., “Secure Mutual Authentication with Privacy Preservation in Vehicular Adhoc Networks.” Vehicular Communications. 2020; 21: 100–200.
++   10. M. Crosby, P. Pattanayak, S. Verma and V. Kalyanaraman, “Block Chain Technology: Beyound Bitcoin.” Applied Innovation. 2016; 2: 6–10.
++   11. S.A. Shah, et al., “A Dynamic Privacy Preserving Authentication Protocols in VANET Using Social Network.” In International Conference on Software Engineering, Artificial Intelligence, Networking and Parallel Distributed Computing; 2019. Springer.
++   12. S. Wang and N. Yao, “A RSU Aided Distributed Trust Framework for Pseudonym Enabled Privacy Preservation in VANET.” Wireless Networks. 2019; 25(3): 1099–115.
++   13. Q. Huang, et al., “Secure and Privacy Preserving Warning Message Dissemination in Cloudassisted Internet of Vehicles.” In IEEE Conference on Communications and Network Security; 2019, pp. 1–8. https://doi.org/10.1109/CNS.2019.8802649
++   14. H. Zhong, et al., “Privacy Preserving Authentication Scheme with Full Aggregation in VANET.” Information Sciences. 2019; 47(6): 211–21.
++   15. F. Tahir, S. Nasir and Z. Khalid, “Privacy Preserving Authentication Protocol Based on Hybrid Cryptography for VANET.” In International Conference on Applied and Engineering Mathematics; 2019, pp. 80–85. https://doi.org/10.1109/ICAEM.2019.8853808
++   16. I. Ali and F. Li, “An Efficient Conditional Privacy Preserving Authentication Scheme for Emergency Vehicles to Infrastructure Communication in VANET.” Vehicular Communication. 2019:100–228.

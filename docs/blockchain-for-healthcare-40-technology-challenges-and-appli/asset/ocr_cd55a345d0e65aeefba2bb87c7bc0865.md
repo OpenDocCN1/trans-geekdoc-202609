@@ -1,0 +1,17 @@
+it fully secured. After data is stored on the Ganache private blockchain and PostgreSQL, the smart contract next invokes the trained *heart attack machine learning model*. We have initially used the basic version of random forest classifier to predict heart attacks. In order to develop our model, we first divided the data into the training and test set. The dependent variables were then trained to anticipate the outcomes. The accuracy of the outcome predicted by the random forest classifier was roughly at 71.4%. Since we required higher accuracy, we then used the enhancement technique to increase the prediction accuracy. A *random forest* is a set of multiple decision trees which has different accuracy rate for each decision tree. We selected the decision tree model which had the highest prediction rate, and then hyperparameter tuning was applied. While splitting a node, a hyperparameter can either choose multiple decision trees in the random forest or can choose multiple features in each tree. In our model, we have proposed the use of automated data visualization to find discrepancies in data, and then the best tree features were selected using feature selection. After this process, the model was used for classification. We finally achieved the best random state *heart attack machine learning model*, increasing the accuracy of predictions from 71.4% to 97.1%.
+
+For each patient, the *heart attack machine learning model* is invoked, and results are sent to the digital twin utility, which in turn sends an email to the registered doctor’s email ID if the machine learning model determines a heart attack risk.
+
+# 16.4 Experimental Evaluation
+
+# 16.4.1 Systems Setup
+
+We have used Linux server which uses x86-based Elastic Compute Cloud instance with Mac instances hosted on Amazon Web Services. The server is based on Intel's eighth generation with 3.2 gigahertz core i7 processors using 32 gigabytes of memory.
+ReactJS version 18, NodeJS version 18, and Python 3.10 were used to develop the application, and PostgreSQL version 12 was used as the relational database.
+
+The *heart attack machine learning model* that we created to detect heart attack uses Optimized XGBoost, which is tuned to predict heart diseases. Categorical features were encoded using the one-hot encoding technique during the data pre-processing stage, followed by Bayesian optimization technique which further improved the prediction results.
+XGBoost is a package that is owned by the distributed machine learning community [34]). The *heart attack machine learning model* was trained using the Heart Failure Prediction Dataset Kaggle [35]. This is one of the largest datasets available for research purposes, created by combining five heart datasets with 11 shared features [35].
+
+Ganache private blockchain has been used to guarantee data security. Ganache is simpler to configure and is lightweight, hence can be run on laptops or desktops.
+
+We used Solidity object-oriented programming language for implementing the smart contract. Clique proof-of-authority [36] has been used as the consensus algorithm. Clique is an Ethereum implementation of the proof-of-authority which is based on the Go language. Proof-of-authority is one of the most popular consensus algorithms that is widely used across permissioned blockchain environments to safeguard the network. The algorithm is well-known to accelerate the consensus process, and hence, we were able to achieve faster data storage in our case, which is an essential requirement of our application, since

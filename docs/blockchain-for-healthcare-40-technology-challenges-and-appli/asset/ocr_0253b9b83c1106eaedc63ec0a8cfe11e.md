@@ -1,0 +1,14 @@
++   - **Increased availability.** Because the system is built on thousands of nodes in a peer-to-peer network and the data is duplicated and updated on each node, it is incredibly dependable.
++   - The network continues to function even if certain nodes depart or become unavailable, making it highly available. There is a high level of availability due to the redundancy.
++   - **Ironclad security.** On a blockchain, all transactions are cryptographically encrypted, ensuring network integrity.
++   - **Simplification of existing paradigms.** Many businesses, including banking and health, are now using a disorderly blockchain paradigm. Multiple entities maintain their own databases under this approach, and owing to the different structures of the systems, data exchange might be problematic [30]. However, because a blockchain may act as a single shared ledger for many parties, it can simplify the paradigm by decreasing the burden of administering the several systems that each business maintains.
++   - **Faster dealings.** The current blockchain approach is unstructured in several areas, including banking and healthcare. In this design, many entities maintain their own databases, and data transfer may be difficult due to the disparate nature of the systems. However, because a blockchain may serve as a single shared ledger for several parties, it has the potential to streamline the process by reducing the administrative burden of each institution's distinct systems [31].
++   - **Cost saving.** Because the blockchain idea does not necessitate the use of a trusted third party or clearinghouse, it can drastically cut overhead costs associated with fees paid to such institutions.
+
+# ## 13.3 A Smart Contracts–Based Blockchain-Based Electronic Medical Health Record
+
+Any healthcare system's most asset is each patient's protected health information. The use of blockchain technology to maintain track of references to distributed patient data is amazing and inventive [32]. An extensive framework that keeps up with individual patient data and well-being records electronically in an advanced configuration is known as an EHR. A patient's personal and medical history is stored in an EHR. The EHR framework attempts to provide a more comprehensive perspective of patient outcomes by going beyond typical clinical data collecting [33].
+
+# ### 13.3.1 Smart Contracts for Phases of Clinical Trials
+
+Clinical trials have several phases that can be chained together in blockchain such that every phase is dependent on its predecessor. This ability of blockchain technology to slice and chain different phases is through a process of smart contracts. Smart contracts use cryptographic hash chains to verify and enforce a contract [34]. Smart contracts will only validate a step if the preceding step has been completely validated and verified. Smart contracts can include patients in the database (frozen after data entry) who have consented

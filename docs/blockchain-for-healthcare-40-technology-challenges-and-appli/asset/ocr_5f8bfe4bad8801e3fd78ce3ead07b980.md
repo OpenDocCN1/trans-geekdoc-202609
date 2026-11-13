@@ -1,0 +1,15 @@
+# TABLE 1.2
+Comparison between the Papers Reviewed for Studying the Application of Blockchain in Genomics
+
+| Paper Title | ‘Opportunities for solving real-world problems in healthcare and Biomedical Sciences’ [32] | ‘Accelerating genomic data generation and facilitating genomic data access using decentralization, privacy-preserving technologies and equitable compensation’ [33] | ‘Realizing the potential of blockchain technologies in Genomics’ [34] |
+|---|---|---|---|
+| ‘Opportunities for solving real-world problems in healthcare and Biomedical Sciences’ [32] | In this research, we explore numerous scenarios where distributed ledger technology might improve medical care delivery. It also includes clinical trials and the administration of the medication supply chain. We investigate how blockchain technology might improve supply chain efficiency, protect patient privacy, and facilitate data sharing. | Investigation of how distributed systems enhance the accessibility and exchange of genetic data without jeopardizing individual privacy. It proposes using blockchain technology to create a financially motivated, decentralized environment where genetic data may be exchanged and studied. | This study examines the benefits and drawbacks of applying blockchain technology in genomics, including data security, patient confidentiality, and researchers’ fair compensation. This article discusses a number of blockchain applications, including data provenance, data sharing, and data privacy. |
+| ‘Blockchain technology in healthcare: A comprehensive review and directions for future research’ [35] | The administration of electronic health record (EHR) systems, the management of the medical supply chain, and clinical trials are a few of the areas where blockchain may be beneficial, according to this paper. Interoperability, scalability, and regulatory compliance are all discussed as obstacles to blockchain’s use in the healthcare industry. | The article proposes a blockchain-based system for transferring genetic data using smart contracts to manage data access and compensation. There is speculation that blockchain technology might encourage data providers and facilitate data sharing, hence accelerating the development of genetic data. | In this work, the viability of using blockchain technology to promote the secure, transparent, and decentralized exchange of genomics data is investigated. It proposes using blockchain technology to create a platform for data interchange and analysis that offers granular data access control and privacy protection. |
+
+Source: [32], [33], [34], [35].
+
+transparency and auditability of prior transactions. It is more effective than other systems in preventing dishonest transactions and unlawful acts. Any verification system must conform to stringent public accessibility and auditability criteria [37,38].
+
+# 1.2.8 Dental Industry
+
+Dental care has a great chance to influence the development of the standards and technology it will rely on in the future, as well as the ways in which these resources are going to be utilized. There are a number of words that have been used to represent the idea of
