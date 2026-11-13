@@ -1,0 +1,7 @@
+If you count the number of characters in Kraków, it’ll come out to 6. So why 7? The reason is... history.
+
+In the beginning, computers were developed in English speaking countries - the UK and the US. When early developers wanted to encode text in computers that only understand bits, they came out with the following scheme. Use a byte (8 bits) [3] to represent a character. For example a is 97 (01100001), b is 98, etc. One byte is enough for the English alphabet that contains 26 lower case letters, 26 upper case letters, and 10 digits. There even some space left for other special characters (e.g. 9 for tab). This is known as ASCII encoding.
+
+After a while, other countries started to use computers and they wanted to write using their native language. ASCII wasn’t good enough, a single byte isn’t big enough to hold all the numbers we need to represent letters in different languages. This lead to several different encoding schemes, the most common one is UTF-8. Rob Pike, one of the designers of Go, is also one of the designers of UTF-8.
+
+Go strings are UTF-8 encoded, this means that a character (called rune) can be from one to four bytes long. When you ask the length of a string in Go, you’ll get the size in bytes. In this example the rune ó is taking 2 bytes, hence the total length of the string is 7.

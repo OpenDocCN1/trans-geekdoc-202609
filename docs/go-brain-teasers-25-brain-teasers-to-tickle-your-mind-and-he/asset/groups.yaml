@@ -1,0 +1,2924 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # GO BRAIN TEASERS
+
+    EXERCISE YOUR MIND
+
+
+    ![](img/07a7b391d92ba53dcfe8da4b75a4aed7_0_0.png)
+
+
+    ```
+
+    1 package main
+
+
+    2
+
+    3 import (
+
+    4  "fmt"
+
+    5 )
+
+
+    6
+
+    7 func main() {
+
+    8  var π = 22 / 7.0
+
+    9  fmt.Println(π)
+
+    10 }
+
+    ```
+
+
+    WILL THIS CODE COMPILE? WHAT WILL IT PRINT?
+
+
+    25 MIND BENDING TEASERS & SOLUTIONS
+
+    MIKI TEBEKA'
+  - '[PAGE 1]
+
+
+    # # WHY GO BRAIN TEASERS?
+
+
+    The Go programming language is a simple one, but like all other languages it has
+    its quirks. This book uses these quirks as a teaching opportunity. By understanding
+    the gaps in your knowledge - you’ll become better at what you do.
+
+
+    There’s a lot of research showing that people who make mistakes during the learning
+    process learn better than people who don’t. If you use this approach at work when
+    fixing bugs - you’ll find you enjoy bug hunting more and become a better developer
+    after each bug you fix.
+
+
+    These teasers will help you avoid mistakes. Some of the teasers are from my own
+    experience shipping bugs to production, and some from others doing the same.
+
+
+    Teasers are fun! We geeks love puzzles and solving them. You can also use these
+    teasers to impress your co-workers, have knowledge competitions and become better
+    together.
+
+
+    Many of these brain teasers are from quizzes I gave at conferences and meetups.
+    I’ve found out that people highly enjoy them and they tend to liven the room.'
+  - '[PAGE 2]
+
+
+    At the beginning of each chapter I''ll show you a short Go program and will ask
+    you to guess the output. The possible answers can be:
+
+
+    +   - Won''t compile
+
+    +   - Panic
+
+    +   - Deadlock
+
+    +   - Some output (e.g. [1 2 3])
+
+
+    > I''m using Go version 1.14.1 to run the code, the output *might* change in future
+    versions.
+
+
+    Before moving on to the answer and the explanation, go ahead and guess the output.
+    After guessing the output I encourage you to run the code and see the output yourself,
+    only then proceed to read the solution and the explantation. I''ve been teaching
+    programming for many years and found this course of action to be highly effective.'
+  - '[PAGE 3]
+
+
+    # # About the Author
+
+
+    Miki has a B.Sc. in computer science from Ben Gurion University. He has also studied
+    there toward an M.Sc. in computational linguistics.
+
+
+    Miki has a passion for teaching and mentoring. He teaches many workshops on various
+    technical subjects all over the world and also mentored many young developers
+    on their way to success. Miki is involved in open source, has several projects
+    of his own, and contributed to several more - including the Go project. He has
+    been using Go for more than 10 years.
+
+
+    Miki wrote Forging Python, is an author in LinkedIn Learning, an organizer of
+    Go Israel Meetup, GopherCon Israel, and PyData Israel Conference.'
+  - '[PAGE 4]
+
+
+    # About the Code
+
+
+    You can find the brain teasers code at https://github.com/tebeka/go-brain-teasers.
+    The code is copyrighted under Apache License, Version 2.0, please respect it.
+
+
+    I''ve tried to keep the code as short as possible and to remove anything that
+    is not related to the teaser. This is not how you''ll normally write code.'
+  - '[PAGE 5]
+
+
+    # About You
+
+
+    I assume you know Go at some level and have experience programming with it. This
+    book is not for learning how to program in Go. If you don’t know Go, I’m afraid
+    these brain teasers are not for you.
+
+
+    I recommend learning Go first (it’s also fun), there are many resources online
+    [1].
+
+
+    Of course we at 353solutions have a wide offering of "hands-on" Go workshops.
+    We’d love to hear from you about your needs.'
+  - '[PAGE 6]
+
+
+    +   1 Google is your friend.'
+  - '[PAGE 7]
+
+
+    # FORWARD BY DAVID CHENEY
+
+
+    As a fan of trivia, in the salad days of my education as a software engineer,
+    one of my favourite books was Josh Bloch and Neal Gafter’s Java Puzzlers. I liked
+    that the authors didn’t simply set out to stump readers with the obscure language
+    factoids. Instead, each question was treated as an opportunity to educate the
+    reader on the history and deeper meaning of a less travelled aspect of the language.
+
+
+    When I discovered, far too many years into my Go experience than I care to mention,
+    that copy returned the number of elements copied, my first thought was wow, how
+    had I missed that. My second thought was I wonder how many people I can trick
+    with this. Thus was born my #golang pop quiz series of tweets.
+
+
+    With tweet sizes being what they are the requirement to fit an entire Go program
+    into a single tweet proved a challenge. Divining the correct answer to a #golang
+    pop quiz and the opportunity to follow Bloch and Gafter’s example to educate,
+    rather than frustrate, was left as an exercise to the reader.
+
+
+    In Go Brain Teasers, Miki has prepared a set of tests that seek not to simply
+    baffle, but to enlighten. Go Brain Teasers’ provides the reader with the opportunity
+    to learn the why behind that what!?!.'
+  - '[PAGE 8]
+
+
+    David Cheney
+
+
+    Sydney, April 2020'
+  - '[PAGE 9]
+
+
+    # DEDICATION
+
+
+    To Sharon, who suffered me in quarantine - and the 20 years before that.'
+  - '[PAGE 10]
+
+
+    # THE BRAIN TEASERS
+
+
+    > Eduction is not the learning of facts, but the training
+
+    > of the mind to think.
+
+
+    ~ Albert Einstein'
+  - "[PAGE 11]\n\n# 1. A NUMBER Π\n\nListing 1. pi.go\n\n```\npackage main\n\nimport\
+    \ (\n \"fmt\"\n)\n\nfunc main() {\n var pi = 22 / 7.0\n fmt.Println(pi)\n}\n```\n\
+    \nTry to guess what the output is before moving to the next page."
+  - '[PAGE 12]
+
+
+    This code will print: 3.142857142857143
+
+
+    There are two surprising things here: one is that π is a valid identifier and
+    the second is that 22 / 7.0 actually compiles.
+
+
+    Let’s start with π.[2]. The Go language specification on identifiers says:
+
+
+    > Identifiers name program entities such as variables and types. An identifier
+    is a sequence of one or more letters and digits. The first character in an identifier
+    must be a letter.
+
+
+    Letters can be Unicode letters, including π. This can be fun to write, but in
+    practice it’ll make your coworkers’ life harder. I can easily type π using the
+    editor I’m using - Vim, however most editors and IDE’s will require more effort.
+
+
+    The only place I’ve found out that Unicode identifiers are helpful, is when translating
+    mathematical formulas to code. Apart from that, stick to plain old ASCII.
+
+
+    Now to 22 / 7.0. The Go type system will not allow dividing (or any other mathematical
+    operation) between an integer (22) and a float (7.0). But what you have on the
+    right side of the = are constants, not variables. The type of a constant is defined
+    when it is being used, in this example, the compiler will convert 22 to a float
+    to complete the operation.'
+  - "[PAGE 13]\n\nIf you'll first assign 22 & 7.0 to variables and try the same code,\
+    \ it will fail.\nThe following won't compile:\n\nListing 2. pi_var.go\n\n```\n\
+    package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\ta, b := 22, 7.0\n\t\
+    var π = a / b\n\tfmt.Println(π)\n}\n```"
+  - '[PAGE 14]
+
+
+    # 1.1. Further Reading
+
+
+    +   - Constants in the Go Specification
+
+    +   - Constants in the Go blog
+
+    +   - Introduction To Numeric Constants In Go by ArdanLabs'
+  - '[PAGE 15]
+
+
+    # 2 The Greek letter Pi.'
+  - "[PAGE 16]\n\n# 2. EMPTY-HANDED\n\nListing 3. empty_map.go\n\n```\npackage main\n\
+    \nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar m map[string]int\n\tfmt.Println(m[\"\
+    errors\"])\n}\n```\n\n> Try to guess what the output is before moving to the next\
+    \ page."
+  - '[PAGE 17]
+
+
+    The zero value for an uninitialized map is nil. Some operations on Go’s map type
+    are "nil safe" - meaning they will work with a nil map without panicking.
+
+
+    Both len and accessing a value (e.g m["errors"]) will work on a nil map. len returns
+    0 and accessing a value by a key will do the following:
+
+
+    +   - If the key is in the map, return the value associated with it
+
+    +   - If the key is not in the map, return the zero value for the value type
+
+
+    In this example, the key "errors" is not found in the map and you’ll get back
+    the zero value for int, which is 0.
+
+
+    This behavior is handy. If you want to count items (say word frequency in a document),
+    you can do m[word]++ without worrying if word is in the map m or not.
+
+
+    This leads to the question: How can you know if a value you got from a map is
+    because it’s there or because it’s the zero value for the value type? The answer
+    is to use the comma, ok paradigm.
+
+
+    When you type val, ok := m[key]. ok will be true if we got the value from the
+    map and false if key is not in the map.'
+  md: "\n## GO BRAIN TEASERS\nEXERCISE YOUR MIND\n\n![](img/07a7b391d92ba53dcfe8da4b75a4aed7_0_0.png)\n\
+    \n```go\npackage main\n\nimport (\n \"fmt\"\n)\n\nfunc main() {\n var π = 22 /\
+    \ 7.0\n fmt.Println(π)\n}\n```\n\nWILL THIS CODE COMPILE? WHAT WILL IT PRINT?\n\
+    \n25 MIND BENDING TEASERS & SOLUTIONS\nMIKI TEBEKA\n\n## WHY GO BRAIN TEASERS?\n\
+    \nThe Go programming language is a simple one, but like all other languages it\
+    \ has its quirks. This book uses these quirks as a teaching opportunity. By understanding\
+    \ the gaps in your knowledge - you’ll become better at what you do.\n\nThere’s\
+    \ a lot of research showing that people who make mistakes during the learning\
+    \ process learn better than people who don’t. If you use this approach at work\
+    \ when fixing bugs - you’ll find you enjoy bug hunting more and become a better\
+    \ developer after each bug you fix.\n\nThese teasers will help you avoid mistakes.\
+    \ Some of the teasers are from my own experience shipping bugs to production,\
+    \ and some from others doing the same.\n\nTeasers are fun! We geeks love puzzles\
+    \ and solving them. You can also use these teasers to impress your co-workers,\
+    \ have knowledge competitions and become better together.\n\nMany of these brain\
+    \ teasers are from quizzes I gave at conferences and meetups. I’ve found out that\
+    \ people highly enjoy them and they tend to liven the room.\n\nAt the beginning\
+    \ of each chapter I'll show you a short Go program and will ask you to guess the\
+    \ output. The possible answers can be:\n\n- Won't compile\n- Panic\n- Deadlock\n\
+    - Some output (e.g. [1 2 3])\n\n> I'm using Go version 1.14.1 to run the code,\
+    \ the output *might* change in future versions.\n\nBefore moving on to the answer\
+    \ and the explanation, go ahead and guess the output. After guessing the output\
+    \ I encourage you to run the code and see the output yourself, only then proceed\
+    \ to read the solution and the explanation. I've been teaching programming for\
+    \ many years and found this course of action to be highly effective.\n\n## About\
+    \ the Author\n\nMiki has a B.Sc. in computer science from Ben Gurion University.\
+    \ He has also studied there toward an M.Sc. in computational linguistics.\n\n\
+    Miki has a passion for teaching and mentoring. He teaches many workshops on various\
+    \ technical subjects all over the world and also mentored many young developers\
+    \ on their way to success. Miki is involved in open source, has several projects\
+    \ of his own, and contributed to several more - including the Go project. He has\
+    \ been using Go for more than 10 years.\n\nMiki wrote Forging Python, is an author\
+    \ in LinkedIn Learning, an organizer of Go Israel Meetup, GopherCon Israel, and\
+    \ PyData Israel Conference.\n\n## About the Code\n\nYou can find the brain teasers\
+    \ code at https://github.com/tebeka/go-brain-teasers. The code is copyrighted\
+    \ under Apache License, Version 2.0, please respect it.\n\nI've tried to keep\
+    \ the code as short as possible and to remove anything that is not related to\
+    \ the teaser. This is not how you'll normally write code.\n\n## About You\n\n\
+    I assume you know Go at some level and have experience programming with it. This\
+    \ book is not for learning how to program in Go. If you don’t know Go, I’m afraid\
+    \ these brain teasers are not for you.\n\nI recommend learning Go first (it’s\
+    \ also fun), there are many resources online [1].\n\nOf course we at 353solutions\
+    \ have a wide offering of \"hands-on\" Go workshops. We’d love to hear from you\
+    \ about your needs.\n\n- 1 Google is your friend.\n\n## FORWARD BY DAVID CHENEY\n\
+    \nAs a fan of trivia, in the salad days of my education as a software engineer,\
+    \ one of my favourite books was Josh Bloch and Neal Gafter’s Java Puzzlers. I\
+    \ liked that the authors didn’t simply set out to stump readers with the obscure\
+    \ language factoids. Instead, each question was treated as an opportunity to educate\
+    \ the reader on the history and deeper meaning of a less travelled aspect of the\
+    \ language.\n\nWhen I discovered, far too many years into my Go experience than\
+    \ I care to mention, that copy returned the number of elements copied, my first\
+    \ thought was wow, how had I missed that. My second thought was I wonder how many\
+    \ people I can trick with this. Thus was born my #golang pop quiz series of tweets.\n\
+    \nWith tweet sizes being what they are the requirement to fit an entire Go program\
+    \ into a single tweet proved a challenge. Divining the correct answer to a #golang\
+    \ pop quiz and the opportunity to follow Bloch and Gafter’s example to educate,\
+    \ rather than frustrate, was left as an exercise to the reader.\n\nIn Go Brain\
+    \ Teasers, Miki has prepared a set of tests that seek not to simply baffle, but\
+    \ to enlighten. Go Brain Teasers’ provides the reader with the opportunity to\
+    \ learn the why behind that what!?!.\n\nDavid Cheney\n\nSydney, April 2020\n\n\
+    ## DEDICATION\n\nTo Sharon, who suffered me in quarantine - and the 20 years before\
+    \ that.\n\n## THE BRAIN TEASERS\n\n> Education is not the learning of facts, but\
+    \ the training\n> of the mind to think.\n\n~ Albert Einstein\n\n## 1. A NUMBER\
+    \ Π\n\nListing 1. pi.go\n\n```go\npackage main\n\nimport (\n \"fmt\"\n)\n\nfunc\
+    \ main() {\n var pi = 22 / 7.0\n fmt.Println(pi)\n}\n```\n\nTry to guess what\
+    \ the output is before moving to the next page.\n\nThis code will print: 3.142857142857143\n\
+    \nThere are two surprising things here: one is that π is a valid identifier and\
+    \ the second is that 22 / 7.0 actually compiles.\n\nLet’s start with π.[2]. The\
+    \ Go language specification on identifiers says:\n\n> Identifiers name program\
+    \ entities such as variables and types. An identifier is a sequence of one or\
+    \ more letters and digits. The first character in an identifier must be a letter.\n\
+    \nLetters can be Unicode letters, including π. This can be fun to write, but in\
+    \ practice it’ll make your coworkers’ life harder. I can easily type π using the\
+    \ editor I’m using - Vim, however most editors and IDE’s will require more effort.\n\
+    \nThe only place I’ve found out that Unicode identifiers are helpful, is when\
+    \ translating mathematical formulas to code. Apart from that, stick to plain old\
+    \ ASCII.\n\nNow to 22 / 7.0. The Go type system will not allow dividing (or any\
+    \ other mathematical operation) between an integer (22) and a float (7.0). But\
+    \ what you have on the right side of the = are constants, not variables. The type\
+    \ of a constant is defined when it is being used, in this example, the compiler\
+    \ will convert 22 to a float to complete the operation.\n\nIf you'll first assign\
+    \ 22 and 7.0 to variables and try the same code, it will fail.\nThe following\
+    \ won't compile:\n\nListing 2. pi_var.go\n\n```go\npackage main\n\nimport (\n\t\
+    \"fmt\"\n)\n\nfunc main() {\n\ta, b := 22, 7.0\n\tvar π = a / b\n\tfmt.Println(π)\n\
+    }\n```\n\n## 1.1. Further Reading\n\n- Constants in the Go Specification\n- Constants\
+    \ in the Go blog\n- Introduction To Numeric Constants In Go by ArdanLabs\n\n##\
+    \ 2. The Greek letter Pi.\n\n## 2. EMPTY-HANDED\n\nListing 3. empty_map.go\n\n\
+    ```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar m map[string]int\n\
+    \tfmt.Println(m[\"errors\"])\n}\n```\n\n> Try to guess what the output is before\
+    \ moving to the next page.\n\nThe zero value for an uninitialized map is nil.\
+    \ Some operations on Go’s map type are \"nil safe\" - meaning they will work with\
+    \ a nil map without panicking.\n\nBoth len and accessing a value (e.g m[\"errors\"\
+    ]) will work on a nil map. len returns 0 and accessing a value by a key will do\
+    \ the following:\n\n- If the key is in the map, return the value associated with\
+    \ it\n- If the key is not in the map, return the zero value for the value type\n\
+    \nIn this example, the key \"errors\" is not found in the map and you’ll get back\
+    \ the zero value for int, which is 0.\n\nThis behavior is handy. If you want to\
+    \ count items (say word frequency in a document), you can do m[word]++ without\
+    \ worrying if word is in the map m or not.\n\nThis leads to the question: How\
+    \ can you know if a value you got from a map is because it’s there or because\
+    \ it’s the zero value for the value type? The answer is to use the comma, ok paradigm.\n\
+    \nWhen you type val, ok := m[key]. ok will be true if we got the value from the\
+    \ map and false if key is not in the map.\n"
+  mdcn: "\n\n## GO 脑筋急转弯\n锻炼你的大脑\n\n![](img/07a7b391d92ba53dcfe8da4b75a4aed7_0_0.png)\n\
+    \n```go\npackage main\n\nimport (\n \"fmt\"\n)\n\nfunc main() {\n var π = 22 /\
+    \ 7.0\n fmt.Println(π)\n}\n```\n\n这段代码能编译吗？它会打印什么？\n\n25 个令人困惑的脑筋急转弯及解答\n米基·特贝卡\n\
+    \n## 为什么是 Go 脑筋急转弯？\n\nGo 编程语言是一种简单的语言，但和其他所有语言一样，它也有自己的怪癖。本书将这些怪癖作为教学机会。通过了解你知识中的空白\
+    \ - 你会在所做的事情上变得更好。\n\n大量研究表明，在学习过程中犯错的人比不犯错的人学得更好。如果你在修复 bug 时在工作中采用这种方法 - 你会发现你更享受调试过程，并在修复每个\
+    \ bug 后成为更好的开发者。\n\n这些脑筋急转弯将帮助你避免错误。有些来自我将 bug 发布到生产环境的亲身经历，有些来自其他人同样的经历。\n\n\
+    脑筋急转弯很有趣！我们极客喜欢谜题和解决它们。你也可以使用这些脑筋急转弯来给同事留下深刻印象，举办知识竞赛，共同进步。\n\n其中许多脑筋急转弯来自我在会议和聚会中出的测验。我发现人们非常喜欢它们，而且它们往往能活跃气氛。\n\
+    \n在每章开始时，我会展示一个简短的 Go 程序，并要求你猜测输出。可能的答案可以是：\n\n- 不会编译\n- 恐慌\n- 死锁\n- 某些输出（例如 [1\
+    \ 2 3]）\n\n> 我使用 Go 版本 1.14.1 来运行代码，输出在未来版本中*可能*会发生变化。\n\n在进入答案和解释之前，请先猜测输出。猜测输出后，我鼓励你自己运行代码并查看输出，然后再阅读解决方案和解释。我教授编程多年，发现这种做法非常有效。\n\
+    \n## 关于作者\n\nMiki 拥有本古里安大学的计算机科学学士学位。他还在那里学习计算语言学硕士学位。\n\nMiki 热衷于教学和指导。他在世界各地教授各种技术主题的研讨会，并指导了许多年轻开发者走上成功之路。Miki\
+    \ 参与开源，拥有自己的多个项目，并为多个项目做出了贡献 - 包括 Go 项目。他使用 Go 超过 10 年。\n\nMiki 撰写了《锻造 Python》，是\
+    \ LinkedIn Learning 的作者，也是 Go Israel Meetup、GopherCon Israel 和 PyData Israel Conference\
+    \ 的组织者。\n\n## 关于代码\n\n你可以在 https://github.com/tebeka/go-brain-teasers 上找到脑筋急转弯的代码。该代码根据\
+    \ Apache License 2.0 版权所有，请尊重它。\n\n我尽量保持代码简短，并移除与脑筋急转弯无关的任何内容。这不是你通常编写代码的方式。\n\
+    \n## 关于你\n\n我假设你在某种程度上了解 Go 并有使用它进行编程的经验。本书不是用来学习如何用 Go 编程的。如果你不了解 Go，恐怕这些脑筋急转弯不适合你。\n\
+    \n我建议先学习 Go（这也很有趣），网上有很多资源 [1]。\n\n当然，我们 353solutions 提供广泛的“实操”Go 研讨会。我们很乐意听取您的需求。\n\
+    \n- 1 Google 是你的朋友。\n\n## 大卫·钱尼的前言\n\n作为趣闻爱好者，在我作为软件工程师的求学青春时代，我最喜欢的书之一是 Josh\
+    \ Bloch 和 Neal Gafter 的《Java Puzzlers》。我喜欢作者们不只是为了用晦涩的语言冷知识来难倒读者。相反，每个问题都被视为教育读者了解语言不常见方面的历史和深层含义的机会。\n\
+    \n当我发现，在 Go 经验中远超我愿意提及的许多年之后，copy 返回已复制元素的数量时，我的第一想法是 wow，我怎么会错过这个。我的第二个想法是我想知道我能用这个骗过多少人。于是，我的\
+    \ #golang 流行测验系列推文诞生了。\n\n考虑到推文的长度限制，要将一个完整的 Go 程序装进单条推文是个挑战。推断 #golang 流行测验的正确答案，以及遵循\
+    \ Bloch 和 Gafter 的示例来教育而非让读者沮丧的机会，留给读者作为练习。\n\n在《Go 脑筋急转弯》中，Miki 准备了一组测试，其目的不是简单地令人困惑，而是启发读者。《Go\
+    \ 脑筋急转弯》为读者提供了解究其原因的机会。\n\nDavid Cheney\n悉尼，2020 年 4 月\n\n## 献词\n\n献给 Sharon，她忍受了我在隔离期间的行为\
+    \ - 以及之前 20 年的行为。\n\n## 脑筋急转弯\n\n> 教育不是学习事实，而是训练\n> 头脑思考。\n\n~ 阿尔伯特·爱因斯坦\n\n##\
+    \ 1. 一个数字 π\n\n清单 1. pi.go\n\n```go\npackage main\n\nimport (\n \"fmt\"\n)\n\n\
+    func main() {\n var pi = 22 / 7.0\n fmt.Println(pi)\n}\n```\n\n在翻到下一页之前，请先猜测输出是什么。\n\
+    \n这段代码将打印：3.142857142857143\n\n这里有两个令人惊讶的地方：一个是 π 是有效的标识符，第二是 22 / 7.0 实际上可以编译。\n\
+    \n让我们从 π 开始。[2]。Go 语言规范关于标识符的说明：\n\n> 标识符命名程序实体，如变量和类型。标识符是一个或多个字母和数字的序列。标识符的第一个字符必须是字母。\n\
+    \n字母可以是 Unicode 字母，包括 π。写起来很有趣，但在实际中会让你的同事生活更困难。我可以使用我正在使用的编辑器 - Vim 轻松输入 π，但大多数编辑器和\
+    \ IDE 都需要更多努力。\n\n我发现 Unicode 标识符有帮助的唯一场景是将数学公式转换为代码。除此之外，请使用纯正的老式 ASCII。\n\n\
+    现在来看 22 / 7.0。Go 类型系统不允许在整数（22）和浮点数（7.0）之间进行除法（或任何其他数学运算）。但等号右边的是常量，而不是变量。常量的类型在使用时定义，在这个例子中，编译器会将\
+    \ 22 转换为浮点数以完成运算。\n\n如果你先将 22 和 7.0 赋值给变量，然后尝试相同的代码，它会失败。\n以下代码无法编译：\n\n清单 2.\
+    \ pi_var.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\
+    \ta, b := 22, 7.0\n\tvar π = a / b\n\tfmt.Println(π)\n}\n```\n\n## 1.1. 延伸阅读\n\
+    \n- Go 规范中的常量\n- Go 博客中的常量\n- ArdanLabs 撰写的 Go 数值常量简介\n\n## 2. 希腊字母 Pi。\n\n##\
+    \ 2. 空手而来\n\n清单 3. empty_map.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n\
+    )\n\nfunc main() {\n\tvar m map[string]int\n\tfmt.Println(m[\"errors\"])\n}\n\
+    ```\n\n> 在翻到下一页之前，请先猜测输出是什么。\n\n未初始化映射的零值是 nil。Go 的 map 类型的一些操作是“nil 安全”的 - 意味着它们可以使用\
+    \ nil map 而不会 panic。\n\nlen 和访问值（例如 m[\"errors\"]）在 nil map 上都可以工作。len 返回 0，而按键访问值将做以下操作：\n\
+    \n- 如果键在 map 中，返回与之关联的值\n- 如果键不在 map 中，返回值类型的零值\n\n在这个例子中，键 \"errors\" 在 map 中未找到，你将得到\
+    \ int 类型的零值，即 0。\n\n这种行为很方便。如果你想计算项目（例如文档中的单词频率），你可以执行 m[word]++ 而无需担心单词是否在 map\
+    \ m 中。\n\n这引出了一个问题：你如何知道从 map 中得到的值是因为它存在，还是因为它是值类型的零值？答案是使用逗号，ok 模式。\n\n当你输入\
+    \ val, ok := m[key] 时，如果我们从 map 中得到了值，ok 将为 true，如果键不在 map 中，则为 false。\n\n"
+  merge: -1
+- raw:
+  - '[PAGE 18]
+
+
+    There are other "nil safe" types in Go. For example you can ask the length of
+    a nil slice, receive a value from an empty channel (though you''ll be blocked
+    forever) and more.'
+  - '[PAGE 19]
+
+
+    # 2.1. Further Reading
+
+
+    +   * Go maps in action on the Go blog
+
+    +   * Maps section of "Effective Go"'
+  - "[PAGE 20]\n\n# 3. WHEN IN KRAKÓW\n\nListing 4. city.go\n\n```\npackage main\n\
+    \nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tcity := \"Kraków\"\n\tfmt.Println(len(city))\n\
+    }\n```\n\nTry to guess what the output is before moving to the next page."
+  - '[PAGE 21]
+
+
+    If you count the number of characters in Kraków, it’ll come out to 6. So why 7?
+    The reason is... history.
+
+
+    In the beginning, computers were developed in English speaking countries - the
+    UK and the US. When early developers wanted to encode text in computers that only
+    understand bits, they came out with the following scheme. Use a byte (8 bits)
+    [3] to represent a character. For example a is 97 (01100001), b is 98, etc. One
+    byte is enough for the English alphabet that contains 26 lower case letters, 26
+    upper case letters, and 10 digits. There even some space left for other special
+    characters (e.g. 9 for tab). This is known as ASCII encoding.
+
+
+    After a while, other countries started to use computers and they wanted to write
+    using their native language. ASCII wasn’t good enough, a single byte isn’t big
+    enough to hold all the numbers we need to represent letters in different languages.
+    This lead to several different encoding schemes, the most common one is UTF-8.
+    Rob Pike, one of the designers of Go, is also one of the designers of UTF-8.
+
+
+    Go strings are UTF-8 encoded, this means that a character (called rune) can be
+    from one to four bytes long. When you ask the length of a string in Go, you’ll
+    get the size in bytes. In this example the rune ó is taking 2 bytes, hence the
+    total length of the string is 7.'
+  - "[PAGE 22]\n\nIf you want to know the number of runes in a string, you'll need\
+    \ to use the unicode/utf8 package.\n\n# Listing 5. cityu.go\n\n```\npackage main\n\
+    \nimport (\n\t\"fmt\"\n\t\"unicode/utf8\"\n)\n\nfunc main() {\n\tcity := \"Kraków\"\
+    \n\tfmt.Println(utf8.RuneCountInString(city))\n}\n```"
+  - '[PAGE 23]
+
+
+    # 3.1. Further Reading
+
+
+    +   - Strings, bytes, runes and characters in Go from the Go blog
+
+    +   - Unicode and You
+
+    +   - Unicode entry in Wikipedia'
+  - '[PAGE 24]
+
+
+    3 To be precise, ASCII uses only 7 bits, and LATIN-1 extends it to 8 bits.'
+  - "[PAGE 25]\n\n# 4. I'VE GOT NOTHING\n\nListing 6. city.go\n\n```\npackage main\n\
+    \nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tn := nil\n\tfmt.Println(n)\n}\n```\n\
+    \nTry to guess what the output is before moving to the next page."
+  - '[PAGE 26]
+
+
+    This code will not compile.
+
+
+    nil is not a type but a reserved word. A variable initialized to nil must have
+    a type. If, for example, you’ll change the assignment to var n *int = nil, the
+    code will compile since now n has a type.
+
+
+    Here are some places where nil is used:
+
+
+    +   The zero value for map, slice and chan is nil.
+
+
+    +   You can’t compare slices or maps using ==, you can only compare them to nil
+    [4].
+
+
+    +   Sending to or receiving from a nil channel will block forever. You can use
+    this to avoid a busy wait.'
+  - '[PAGE 27]
+
+
+    # 4.1. Further Reading
+
+
+    +   - Understanding nil from Practical Go by Dave Cheney
+
+    +   - Why are there nil channels in Go? from justforfunc
+
+    +   - Channel Axioms by Dave Cheney'
+  - '[PAGE 28]
+
+
+    4 You can use reflect.DeepEqual to compare maps and slices.'
+  - "[PAGE 29]\n\n# 5. A RAW DIET\n\nListing 7. raw.go\n\n```\npackage main\n\nimport\
+    \ (\n\t\"fmt\"\n)\n\nfunc main() {\n\ts := `\\a\\tb`\n\tfmt.Println(s)\n}\n```\n\
+    \nTry to guess what the output is before moving to the next page."
+  - '[PAGE 30]
+
+
+    This code will print: a\tb
+
+
+    The Go spec says:
+
+
+    There are two forms: raw string literals and interpreted string literals.
+
+
+    Raw strings are enclosed in backticks (e.g. `hello`), interpreted strings are
+    enclosed in quotes (e.g. "hello"). In raw strings, \ has no special meaning, so
+    the `\t` is two characters - backslash and the letter t. If it was an interpreted
+    string, then \t would be interpreted as the tab character.
+
+
+    Apart from the usual \t (tab), \n (newline) and friends, you can also use Unicode
+    code points in interpreted strings. fmt.Println("\u2122") will print ™.
+
+
+    One of the most common uses for raw strings is to create multi-line strings.
+
+
+    ```
+
+    // An HTTP request
+
+    request := `GET / HTTP/1.1
+
+    Host: www.353solutions.com
+
+    Connection: Close
+
+    `
+
+    ```'
+  - '[PAGE 31]
+
+
+    # 5.1. Further Reading
+
+
+    +   - Strings, bytes, runes and characters in Go from the Go blog
+
+
+    +   - The string spec
+
+
+    +   - ASCII control characters on Wikipedia'
+  - "[PAGE 32]\n\n# 6. ARE WE THERE YET?\n\nListing 8. time.go\n\n```\npackage main\n\
+    \nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\ttimeout := 3\n\tfmt.Printf(\"\
+    before \")\n\ttime.Sleep(timeout * time.Millisecond)\n\tfmt.Println(\"after\"\
+    )\n}\n```\n\nTry to guess what the output is before moving to the next page."
+  - "[PAGE 33]\n\nThis code will not compile.\n\nWhen you write `timeout := 3` the\
+    \ Go compiler will do a type inference. \nIn this case it will infer that `timeout`\
+    \ is an `int`. Then in line 11 you multiply `timeout` (int type) with `time.Millisecond`\
+    \ (`time.Duration` type) - which is not allowed.\n\nYou have several options to\
+    \ fix this.\n\nChange the type of `timeout` to `time.Duration` (line 9):\n\n```\n\
+    var timeout time.Duration = 3\n```\n\nMake `timeout` a const, and then its type\
+    \ will be resolved in the context of usage (line 9):\n\n```\nconst timeout = 3\n\
+    ```\n\nUse a type conversion to convert `timeout` to `time.Duration` (line 11):\n\
+    \n```\ntime.Sleep(time.Duration(timeout) * time.Millisecond)\n```"
+  - '[PAGE 34]
+
+
+    # 6.1. Further Reading
+
+
+    +   - Type inference in the Go tour
+
+
+    +   - go/types: The Go Type Checker in golang/example
+
+
+    +   - time.Duration type
+
+
+    +   - Type conversions in the Go specification'
+  - '[PAGE 35]
+
+
+    # 7. CAN NUMBERS LIE?
+
+
+    Listing 9. float.go
+
+
+    ```
+
+    package main
+
+    import (
+
+    "fmt"
+
+    )
+
+    func main() {
+
+    n := 1.1
+
+    fmt.Println(n * n)
+
+    }
+
+    ```
+
+
+    Try to guess what the output is before moving to the next page.'
+  - '[PAGE 36]
+
+
+    This code will print: 1.2100000000000002
+
+
+    You might have expected 1.21 which is the right mathematical answer.
+
+
+    Some new developers, when seeing this or similar output, comes to the message
+    boards and say "We found a bug in Go!". The usual answer is RTFM.[5].
+
+
+    > Floating point is sort of like quantum physics: the closer you look, the messier
+    it gets.
+
+    > ~ Grant Edwards
+
+
+    The basic idea behind this issue, is that in floating points we sacrifice accuracy
+    for speed (i.e. cheat). Don’t be shocked, it’s a trade-off we do a lot in computer
+    science.
+
+
+    The result you see conforms with the floating point specification. If you’ll run
+    the same code in Python, Java, C ... you will see the same output.
+
+
+    See the links below if you’re interested in understanding more about how floating
+    points work. The main point you need to remember is that they are not accurate,
+    and accuracy worsens as the number gets bigger.
+
+
+    One implication is that when testing with floating points, you need to check for
+    "roughly equal" and decide what is an acceptable threshold. Testing libraries
+    such as testify have ready-made functions (such as InDelta) to check that two
+    floating numbers are approximately equal.'
+  - '[PAGE 37]
+
+
+    Floating points have several other oddities. For example there''s a special NaN
+    value (short for "not a number"). NaN does not equal any number, including itself.
+    The following code will print false.
+
+
+    ```
+
+    fmt.Println(math.NaN() == math.NaN())
+
+    ```
+
+
+    To check that you got NaN, you need to use a special function such as math.IsNaN.
+
+
+    If you need better accuracy, look into math/big or external packages such as shopspring/decimal.'
+  - '[PAGE 38]
+
+
+    # 7.1. Further Reading
+
+
+    +   - floating point zine by Julia Evans
+
+    +   - What Every Computer Scientist Should Know About Floating-Point Arithmetic'
+  - '[PAGE 39]
+
+
+    5 Read the fine manual.'
+  - "[PAGE 40]\n\n# 8. SLEEP SORT\n\nListing 10. sleep_sort.go\n\n```\npackage main\n\
+    \nimport (\n\t\"fmt\"\n\t\"sync\"\n\t\"time\"\n)\n\nfunc main() {\n\tvar wg sync.WaitGroup\n\
+    \tfor _, n := range []int{3, 1, 2} {\n\t\twg.Add(1)\n\t\tgo func() {\n\t\t\tdefer\
+    \ wg.Done()\n\t\t\ttime.Sleep(time.Duration(n) * time.Millisecond)\n\t\t\tfmt.Printf(\"\
+    %d \", n)\n\t\t}()\n\t}\n\twg.Wait()\n\tfmt.Println()\n}\n```\n\n> Try to guess\
+    \ what the output is before moving to the next page."
+  md: "\nThere are other \"nil safe\" types in Go. For example you can ask the length\
+    \ of a nil slice, receive a value from an empty channel (though you'll be blocked\
+    \ forever) and more.\n\n### 2.1. Further Reading\n\n- Go maps in action on the\
+    \ Go blog\n- Maps section of \"Effective Go\"\n\n## 3. WHEN IN KRAKÓW\n\nListing\
+    \ 4. city.go\n\n```\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\
+    \tcity := \"Kraków\"\n\tfmt.Println(len(city))\n}\n```\n\nTry to guess what the\
+    \ output is before moving to the next page.\n\nIf you count the number of characters\
+    \ in Kraków, it’ll come out to 6. So why 7? The reason is... history.\n\nIn the\
+    \ beginning, computers were developed in English speaking countries - the UK and\
+    \ the US. When early developers wanted to encode text in computers that only understand\
+    \ bits, they came out with the following scheme. Use a byte (8 bits) [3] to represent\
+    \ a character. For example a is 97 (01100001), b is 98, etc. One byte is enough\
+    \ for the English alphabet that contains 26 lower case letters, 26 upper case\
+    \ letters, and 10 digits. There even some space left for other special characters\
+    \ (e.g. 9 for tab). This is known as ASCII encoding.\n\nAfter a while, other countries\
+    \ started to use computers and they wanted to write using their native language.\
+    \ ASCII wasn’t good enough, a single byte isn’t big enough to hold all the numbers\
+    \ we need to represent letters in different languages. This lead to several different\
+    \ encoding schemes, the most common one is UTF-8. Rob Pike, one of the designers\
+    \ of Go, is also one of the designers of UTF-8.\n\nGo strings are UTF-8 encoded,\
+    \ this means that a character (called rune) can be from one to four bytes long.\
+    \ When you ask the length of a string in Go, you’ll get the size in bytes. In\
+    \ this example the rune ó is taking 2 bytes, hence the total length of the string\
+    \ is 7.\n\nIf you want to know the number of runes in a string, you'll need to\
+    \ use the unicode/utf8 package.\n\nListing 5. cityu.go\n\n```\npackage main\n\n\
+    import (\n\t\"fmt\"\n\t\"unicode/utf8\"\n)\n\nfunc main() {\n\tcity := \"Kraków\"\
+    \n\tfmt.Println(utf8.RuneCountInString(city))\n}\n```\n\n### 3.1. Further Reading\n\
+    \n- Strings, bytes, runes and characters in Go from the Go blog\n- Unicode and\
+    \ You\n- Unicode entry in Wikipedia\n\n3 To be precise, ASCII uses only 7 bits,\
+    \ and LATIN-1 extends it to 8 bits.\n\n## 4. I'VE GOT NOTHING\n\nListing 6. city.go\n\
+    \n```\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tn := nil\n\t\
+    fmt.Println(n)\n}\n```\n\nTry to guess what the output is before moving to the\
+    \ next page.\n\nThis code will not compile.\n\nnil is not a type but a reserved\
+    \ word. A variable initialized to nil must have a type. If, for example, you’ll\
+    \ change the assignment to var n *int = nil, the code will compile since now n\
+    \ has a type.\n\nHere are some places where nil is used:\n\n- The zero value for\
+    \ map, slice and chan is nil.\n- You can't compare slices or maps using ==, you\
+    \ can only compare them to nil [4].\n- Sending to or receiving from a nil channel\
+    \ will block forever. You can use this to avoid a busy wait.\n\n### 4.1. Further\
+    \ Reading\n\n- Understanding nil from Practical Go by Dave Cheney\n- Why are there\
+    \ nil channels in Go? from justforfunc\n- Channel Axioms by Dave Cheney\n\n4 You\
+    \ can use reflect.DeepEqual to compare maps and slices.\n\n## 5. A RAW DIET\n\n\
+    Listing 7. raw.go\n\n```\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main()\
+    \ {\n\ts := `\\a\\tb`\n\tfmt.Println(s)\n}\n```\n\nTry to guess what the output\
+    \ is before moving to the next page.\n\nThis code will print: a\\tb\n\nThe Go\
+    \ spec says:\n\nThere are two forms: raw string literals and interpreted string\
+    \ literals.\n\nRaw strings are enclosed in backticks (e.g. `hello`), interpreted\
+    \ strings are enclosed in quotes (e.g. \"hello\"). In raw strings, \\ has no special\
+    \ meaning, so the `\\t` is two characters - backslash and the letter t. If it\
+    \ was an interpreted string, then \\t would be interpreted as the tab character.\n\
+    \nApart from the usual \\t (tab), \\n (newline) and friends, you can also use\
+    \ Unicode code points in interpreted strings. fmt.Println(\"\\u2122\") will print\
+    \ ™.\n\nOne of the most common uses for raw strings is to create multi-line strings.\n\
+    \n```\n// An HTTP request\nrequest := `GET / HTTP/1.1\nHost: www.353solutions.com\n\
+    Connection: Close\n`\n```\n\n### 5.1. Further Reading\n\n- Strings, bytes, runes\
+    \ and characters in Go from the Go blog\n- The string spec\n- ASCII control characters\
+    \ on Wikipedia\n\n## 6. ARE WE THERE YET?\n\nListing 8. time.go\n\n```\npackage\
+    \ main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\ttimeout := 3\n\
+    \tfmt.Printf(\"before \")\n\ttime.Sleep(timeout * time.Millisecond)\n\tfmt.Println(\"\
+    after\")\n}\n```\n\nTry to guess what the output is before moving to the next\
+    \ page.\n\nThis code will not compile.\n\nWhen you write `timeout := 3` the Go\
+    \ compiler will do a type inference. \nIn this case it will infer that `timeout`\
+    \ is an `int`. Then in line 11 you multiply `timeout` (int type) with `time.Millisecond`\
+    \ (`time.Duration` type) - which is not allowed.\n\nYou have several options to\
+    \ fix this.\n\nChange the type of `timeout` to `time.Duration` (line 9):\n\n```\n\
+    var timeout time.Duration = 3\n```\n\nMake `timeout` a const, and then its type\
+    \ will be resolved in the context of usage (line 9):\n\n```\nconst timeout = 3\n\
+    ```\n\nUse a type conversion to convert `timeout` to `time.Duration` (line 11):\n\
+    \n```\ntime.Sleep(time.Duration(timeout) * time.Millisecond)\n```\n\n### 6.1.\
+    \ Further Reading\n\n- Type inference in the Go tour\n- go/types: The Go Type\
+    \ Checker in golang/example\n- time.Duration type\n- Type conversions in the Go\
+    \ specification\n\n## 7. CAN NUMBERS LIE?\n\nListing 9. float.go\n\n```\npackage\
+    \ main\nimport (\n\"fmt\"\n)\nfunc main() {\nn := 1.1\nfmt.Println(n * n)\n}\n\
+    ```\n\nTry to guess what the output is before moving to the next page.\n\nThis\
+    \ code will print: 1.2100000000000002\n\nYou might have expected 1.21 which is\
+    \ the right mathematical answer.\n\nSome new developers, when seeing this or similar\
+    \ output, comes to the message boards and say \"We found a bug in Go!\". The usual\
+    \ answer is RTFM.[5].\n\n> Floating point is sort of like quantum physics: the\
+    \ closer you look, the messier it gets.\n> ~ Grant Edwards\n\nThe basic idea behind\
+    \ this issue, is that in floating points we sacrifice accuracy for speed (i.e.\
+    \ cheat). Don’t be shocked, it’s a trade-off we do a lot in computer science.\n\
+    \nThe result you see conforms with the floating point specification. If you’ll\
+    \ run the same code in Python, Java, C ... you will see the same output.\n\nSee\
+    \ the links below if you’re interested in understanding more about how floating\
+    \ points work. The main point you need to remember is that they are not accurate,\
+    \ and accuracy worsens as the number gets bigger.\n\nOne implication is that when\
+    \ testing with floating points, you need to check for \"roughly equal\" and decide\
+    \ what is an acceptable threshold. Testing libraries such as testify have ready-made\
+    \ functions (such as InDelta) to check that two floating numbers are approximately\
+    \ equal.\n\nFloating points have several other oddities. For example there's a\
+    \ special NaN value (short for \"not a number\"). NaN does not equal any number,\
+    \ including itself. The following code will print false.\n\n```\nfmt.Println(math.NaN()\
+    \ == math.NaN())\n```\n\nTo check that you got NaN, you need to use a special\
+    \ function such as math.IsNaN.\n\nIf you need better accuracy, look into math/big\
+    \ or external packages such as shopspring/decimal.\n\n### 7.1. Further Reading\n\
+    \n- floating point zine by Julia Evans\n- What Every Computer Scientist Should\
+    \ Know About Floating-Point Arithmetic\n\n5 Read the fine manual.\n\n## 8. SLEEP\
+    \ SORT\n\nListing 10. sleep_sort.go\n\n```\npackage main\n\nimport (\n\t\"fmt\"\
+    \n\t\"sync\"\n\t\"time\"\n)\n\nfunc main() {\n\tvar wg sync.WaitGroup\n\tfor _,\
+    \ n := range []int{3, 1, 2} {\n\t\twg.Add(1)\n\t\tgo func() {\n\t\t\tdefer wg.Done()\n\
+    \t\t\ttime.Sleep(time.Duration(n) * time.Millisecond)\n\t\t\tfmt.Printf(\"%d \"\
+    , n)\n\t\t}()\n\t}\n\twg.Wait()\n\tfmt.Println()\n}\n```\n\n> Try to guess what\
+    \ the output is before moving to the next page.\n"
+  mdcn: "\n\nGo 中还有其他“nil 安全”类型。例如，你可以查询 nil 切片的长度，从空 channel 接收一个值（不过你会永远阻塞），等等。\n\
+    \n### 2.1. 延伸阅读\n\n- Go 博客上的“Go maps in action”\n- 《Effective Go》中的 Maps 章节\n\n\
+    ## 3. WHEN IN KRAKÓW\n\nListing 4. city.go\n\n```\npackage main\n\nimport (\n\t\
+    \"fmt\"\n)\n\nfunc main() {\n\tcity := \"Kraków\"\n\tfmt.Println(len(city))\n\
+    }\n```\n\n在翻到下一页之前，试着猜猜输出会是什么。\n\n如果你数一下 Kraków 中的字符数，结果是 6。那为什么是 7？原因是……历史。\n\
+    \n起初，计算机是在英语国家（英国和美国）开发的。当早期开发者想要在只懂比特的计算机中对文本进行编码时，他们提出了以下方案：使用一个字节（8 位）[3] 来表示一个字符。例如，a\
+    \ 是 97（01100001），b 是 98，以此类推。一个字节足以表示包含 26 个小写字母、26 个大写字母和 10 个数字的英文字母表。甚至还有剩余空间用于其他特殊字符（例如，9\
+    \ 表示制表符）。这就是 ASCII 编码。\n\n过了一段时间，其他国家开始使用计算机，并希望使用本国语言书写。ASCII 已不够用，一个字节不足以容纳表示不同语言字母所需的所有数字。这导致出现了多种不同的编码方案，最常见的是\
+    \ UTF-8。Rob Pike 是 Go 的设计者之一，同时也是 UTF-8 的设计者之一。\n\nGo 字符串采用 UTF-8 编码，这意味着一个字符（称为\
+    \ rune）的长度可以是 1 到 4 个字节。当你在 Go 中查询字符串长度时，得到的是字节大小。在这个例子中，rune ó 占用 2 个字节，因此字符串的总长度是\
+    \ 7。\n\n如果你想知道字符串中 rune 的数量，需要使用 unicode/utf8 包。\n\nListing 5. cityu.go\n\n```\n\
+    package main\n\nimport (\n\t\"fmt\"\n\t\"unicode/utf8\"\n)\n\nfunc main() {\n\t\
+    city := \"Kraków\"\n\tfmt.Println(utf8.RuneCountInString(city))\n}\n```\n\n###\
+    \ 3.1. 延伸阅读\n\n- Go 博客上的“Strings, bytes, runes and characters in Go”\n- Unicode\
+    \ and You\n- 维基百科上的 Unicode 条目\n\n3 精确来说，ASCII 只使用 7 位，而 LATIN-1 将其扩展到 8 位。\n\n\
+    ## 4. I'VE GOT NOTHING\n\nListing 6. city.go\n\n```\npackage main\n\nimport (\n\
+    \t\"fmt\"\n)\n\nfunc main() {\n\tn := nil\n\tfmt.Println(n)\n}\n```\n\n在翻到下一页之前，试着猜猜输出会是什么。\n\
+    \n这段代码无法编译。\n\nnil 不是类型，而是一个保留字。初始化为 nil 的变量必须有一个类型。例如，如果你将赋值改为 var n *int = nil，代码将能够编译，因为现在\
+    \ n 有了类型。\n\nnil 的一些用法如下：\n\n- map、slice 和 chan 的零值是 nil。\n- 你不能使用 == 比较切片或映射，只能将它们与\
+    \ nil 进行比较 [4]。\n- 向 nil channel 发送或从中接收会永远阻塞。你可以利用这一点来避免忙等待。\n\n### 4.1. 延伸阅读\n\
+    \n- Dave Cheney 的 Practical Go 中的“理解 nil”\n- justforfunc 的“为什么 Go 中有 nil channel？”\n\
+    - Dave Cheney 的“Channel Axioms”\n\n4 你可以使用 reflect.DeepEqual 来比较映射和切片。\n\n## 5.\
+    \ A RAW DIET\n\nListing 7. raw.go\n\n```\npackage main\n\nimport (\n\t\"fmt\"\n\
+    )\n\nfunc main() {\n\ts := `\\a\\tb`\n\tfmt.Println(s)\n}\n```\n\n在翻到下一页之前，试着猜猜输出会是什么。\n\
+    \n这段代码将输出：a\\tb\n\nGo 规范说明：\n\n有两种形式：原始字符串字面量和解释字符串字面量。\n\n原始字符串用反引号括起来（例如 `hello`），解释字符串用引号括起来（例如\
+    \ \"hello\"）。在原始字符串中，\\ 没有特殊含义，所以 `\\t` 是两个字符——反斜杠和字母 t。如果是解释字符串，则 \\t 会被解释为制表符字符。\n\
+    \n除了常见的 \\t（制表符）、\\n（换行符）等之外，你还可以在解释字符串中使用 Unicode 码点。fmt.Println(\"\\u2122\"\
+    ) 将输出 ™。\n\n原始字符串最常见的用途之一是创建多行字符串。\n\n```\n// An HTTP request\nrequest := `GET\
+    \ / HTTP/1.1\nHost: www.353solutions.com\nConnection: Close\n`\n```\n\n### 5.1.\
+    \ 延伸阅读\n\n- Go 博客上的“Strings, bytes, runes and characters in Go”\n- 字符串规范\n- 维基百科上的\
+    \ ASCII 控制字符\n\n## 6. ARE WE THERE YET?\n\nListing 8. time.go\n\n```\npackage\
+    \ main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc main() {\n\ttimeout := 3\n\
+    \tfmt.Printf(\"before \")\n\ttime.Sleep(timeout * time.Millisecond)\n\tfmt.Println(\"\
+    after\")\n}\n```\n\n在翻到下一页之前，试着猜猜输出会是什么。\n\n这段代码无法编译。\n\n当你写 `timeout := 3` 时，Go\
+    \ 编译器会进行类型推断。\n在这种情况下，它会推断 `timeout` 是 `int` 类型。然后在第 11 行，你将 `timeout`（int 类型）与\
+    \ `time.Millisecond`（`time.Duration` 类型）相乘——这是不允许的。\n\n你有几种方法来修复这个问题。\n\n将 `timeout`\
+    \ 的类型更改为 `time.Duration`（第 9 行）：\n\n```\nvar timeout time.Duration = 3\n```\n\n\
+    将 `timeout` 设为 const，那么它的类型将在使用上下文中解析（第 9 行）：\n\n```\nconst timeout = 3\n```\n\
+    \n使用类型转换将 `timeout` 转换为 `time.Duration`（第 11 行）：\n\n```\ntime.Sleep(time.Duration(timeout)\
+    \ * time.Millisecond)\n```\n\n### 6.1. 延伸阅读\n\n- Go 之旅中的类型推断\n- golang/example\
+    \ 中的 go/types：Go 类型检查器\n- time.Duration 类型\n- Go 规范中的类型转换\n\n## 7. CAN NUMBERS\
+    \ LIE?\n\nListing 9. float.go\n\n```\npackage main\nimport (\n\"fmt\"\n)\nfunc\
+    \ main() {\nn := 1.1\nfmt.Println(n * n)\n}\n```\n\n在翻到下一页之前，试着猜猜输出会是什么。\n\n这段代码将输出：1.2100000000000002\n\
+    \n你可能期望是 1.21，这是正确的数学答案。\n\n一些新开发者在看到这种或类似输出时，会到论坛上说“我们在 Go 中发现了一个 Bug！”。通常的回答是\
+    \ RTFM。[5]。\n\n> 浮点数有点像量子物理：你越仔细看，它就越混乱。\n> ~ Grant Edwards\n\n这个问题背后的基本思想是，在浮点数中我们牺牲精度来换取速度（也就是说，作弊）。不要震惊，这在计算机科学中是我们经常进行的一种权衡。\n\
+    \n你看到的结果符合浮点数规范。如果你在 Python、Java、C 等语言中运行相同的代码，会看到相同的输出。\n\n如果你想了解浮点数的工作原理，请参阅下面的链接。你需要记住的主要观点是：它们不精确，而且数字越大，精度越差。\n\
+    \n这意味着，在使用浮点数进行测试时，你需要检查“大约相等”，并决定什么是可接受的阈值。诸如 testify 之类的测试库提供了现成的函数（例如 InDelta）来检查两个浮点数是否近似相等。\n\
+    \n浮点数还有几个其他古怪之处。例如，有一个特殊的 NaN 值（“not a number”的缩写）。NaN 不等于任何数字，包括它自身。下面的代码将输出\
+    \ false。\n\n```\nfmt.Println(math.NaN() == math.NaN())\n```\n\n要检查是否得到了 NaN，你需要使用像\
+    \ math.IsNaN 这样的特殊函数。\n\n如果你需要更好的精度，可以查看 math/big 或 shopspring/decimal 之类的外部包。\n\
+    \n### 7.1. 延伸阅读\n\n- Julia Evans 的《浮点数小册子》\n- 《每个计算机科学家都应该知道的关于浮点数算术的知识》\n\n5\
+    \ 阅读精妙手册。\n\n## 8. SLEEP SORT\n\nListing 10. sleep_sort.go\n\n```\npackage main\n\
+    \nimport (\n\t\"fmt\"\n\t\"sync\"\n\t\"time\"\n)\n\nfunc main() {\n\tvar wg sync.WaitGroup\n\
+    \tfor _, n := range []int{3, 1, 2} {\n\t\twg.Add(1)\n\t\tgo func() {\n\t\t\tdefer\
+    \ wg.Done()\n\t\t\ttime.Sleep(time.Duration(n) * time.Millisecond)\n\t\t\tfmt.Printf(\"\
+    %d \", n)\n\t\t}()\n\t}\n\twg.Wait()\n\tfmt.Println()\n}\n```\n\n> 在翻到下一页之前，试着猜猜输出会是什么。\n\
+    \n"
+  merge: 0
+- raw:
+  - '[PAGE 41]
+
+
+    This code will print: 2 2 2
+
+
+    You probably expected 1 2 3. Each goroutine sleeps n milliseconds and then prints
+    n. wg.Wait() will wait until all goroutines are done and then the program will
+    print a newline.
+
+
+    However, the n that each goroutine uses is the same n defined in line 11. This
+    is known as a closure.[6]
+
+
+    This is the reason that by design goroutines (and deferred) are written as function
+    invocation with parameters.
+
+
+    You have two options to solve this bug. The first, and my preference, is to pass
+    n as a parameter to the goroutine.
+
+
+    # Listing 11. sleep_sort_param.go
+
+
+    ```
+
+    package main
+
+
+    import (
+
+    "fmt"
+
+    "sync"
+
+    "time"
+
+    )
+
+
+    func main() {
+
+    var wg sync.WaitGroup
+
+    for _, n := range []int{3, 1, 2} {
+
+    wg.Add(1)
+
+    go func(i int) {
+
+    defer wg.Done()
+
+    time.Sleep(time.Duration(n) * time.Millisecond)
+
+    fmt.Printf("%d ", i)
+
+    ```'
+  - '[PAGE 42]
+
+
+    ```
+
+    17   } (n)
+
+    18   }
+
+    19   wg.Wait()
+
+    20   fmt.Println()
+
+    21   }
+
+    ```
+
+
+    The second solution, is to use the fact that every time you write an { in Go,
+    you open a new variable scope.
+
+
+    Listing 12. sleep_sort_scope.go
+
+
+    ```
+
+    1   package main
+
+    2
+
+    3   import (
+
+    4   "fmt"
+
+    5   "sync"
+
+    6   "time"
+
+    7   )
+
+    8
+
+    9   func main() {
+
+    10   var wg sync.WaitGroup
+
+    11   for _, n := range []int{3, 1, 2} {
+
+    12   n := n ①
+
+    13   wg.Add(1)
+
+    14   go func() {
+
+    15   defer wg.Done()
+
+    16   time.Sleep(time.Duration(n) * time.Millisecond)
+
+    17   fmt.Printf("%d ", n)
+
+    18   }()
+
+    19   }
+
+    20   wg.Wait()
+
+    21   fmt.Println()
+
+    22   }
+
+    ```
+
+
+    ① n now is a new variable that lives only in the for loop scope and more importantly
+    in the goroutine closure. It "shadows" the outer n in line 11.'
+  - '[PAGE 43]
+
+
+    # 8.1. Further Reading
+
+
+    +   - Function closures in the Go tour
+
+
+    +   - Closure in Wikipedia'
+  - '[PAGE 44]
+
+
+    6 Not to be confused with the Clojure programming language.'
+  - "[PAGE 45]\n\n# 9. JUST IN TIME\n\nListing 13. time_eq.go\n\n```\npackage main\n\
+    \nimport (\n\t\"encoding/json\"\n\t\"fmt\"\n\t\"log\"\n\t\"time\"\n)\n\nfunc main()\
+    \ {\n\tt1 := time.Now()\n\tdata, err := json.Marshal(t1)\n\tif err != nil {\n\t\
+    \tlog.Fatal(err)\n\t}\n\n\tvar t2 time.Time\n\tif err := json.Unmarshal(data,\
+    \ &t2); err != nil {\n\t\tlog.Fatal(err)\n\t}\n\n\tfmt.Println(t1 == t2)\n}\n\
+    ```\n\nTry to guess what the output is before moving to the next page."
+  - "[PAGE 46]\n\nThis code will print: false\n\nYou might expect this code to fail\
+    \ since there’s no time type in the JSON format, or you might expect the comparison\
+    \ to succeed.\n\nGo’s encoding/json lets you define custom JSON serialization\
+    \ for types that are not supported by JSON. You do that by implementing json.Marshaler\
+    \ and json.Unmarshaler interfaces. Go’s time.Time implements these interfaces\
+    \ by marshaling itself to an RFC 3339 formatted string and back.\n\nJSON has a\
+    \ very limited set of types. For example it only has floating-point numbers. Which\
+    \ can lead to surprising results if you use the empty interface when unmarshaling.\n\
+    \nListing 14. json_float.go\n\n```\npackage main\n\nimport (\n\t\"encoding/json\"\
+    \n\t\"fmt\"\n\t\"log\"\n)\n\nfunc main() {\n\tn1 := 1\n\tdata, err := json.Marshal(n1)\n\
+    \tif err != nil {\n\t\tlog.Fatal(err)\n\t}\n\n\tvar n2 interface{}\n\tif err :=\
+    \ json.Unmarshal(data, &n2); err != nil {\n```"
+  - '[PAGE 47]
+
+
+    ```
+
+    18     log.Fatal(err)
+
+    19     }
+
+    20
+
+    21     fmt.Printf("n1 is %T, n2 is %T\\n", n1, n2)
+
+    22     }
+
+    ```
+
+
+    The above will print n1 is int, n2 is float64
+
+
+    Once you passed JSON serialization, you’d expect the times to be equal. The time
+    package documentation says (my emphasis):
+
+
+    > Operating systems provide both a "wall clock," which is subject to changes for
+    clock synchronization, and a "monotonic clock," which is not. The general rule
+    is that the wall clock is for telling time and the monotonic clock is for measuring
+    time. Rather than split the API, in this package the Time returned by time.Now
+    contains both a wall clock reading and a monotonic clock reading;
+
+
+    Monotonic clocks are used for measuring durations. They exist to avoid problems
+    such as your computer switching to daylight saving time during measurement. The
+    value of a monotonic clock by itself does not mean anything, only the difference
+    between two monotonic clock readings is useful.
+
+
+    When you use == to compare time.Time, Go will compare the time.Time struct fields,
+    including the monotonic reading. However when'
+  - '[PAGE 48]
+
+
+    Go serializes a `time.Time` to JSON, it doesn''t include the monotonic clock in
+    the output. When we read back the time to t2, it doesn''t contain the monotonic
+    reading and the comparison fails.
+
+
+    The solution to the problem is written in time.Time''s documentation
+
+
+    *In general, prefer t.Equal(u) to t == u, since t.Equal uses the most accurate
+    comparison available and correctly handles the case when only one of its arguments
+    has a monotonic clock reading.*'
+  - '[PAGE 49]
+
+
+    # 9.1. Further Reading
+
+
+    +   - Falsehoods programmers believe about time
+
+    +   - Time package documentation
+
+    +   - RFC 3999 & ISO 8601 time formats. Please, don''t invent your own.'
+  - "[PAGE 50]\n\n# 10. A SIMPLE APPEND\n\n# Listing 15. append.go\n\n```\npackage\
+    \ main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\ta := []int{1, 2, 3}\n\tb\
+    \ := append(a[:1], 10)\n\tfmt.Printf(\"a=%v, b=%v\\n\", a, b)\n}\n```\n\nTry to\
+    \ guess what the output is before moving to the next page."
+  - "[PAGE 51]\n\nThis code will print: a=[1 10 3], b=[1 10]\n\nYou'll need to dig\
+    \ a bit into how slices are implemented and how append works to understand why\
+    \ you see this output.\n\nIf you look at src/runtime/slice.go in the Go source\
+    \ code, you will see\n\n```\ntype slice struct {\n\tarray unsafe.Pointer\n\tlen\
+    \   int\n\tcap   int\n}\n```\n\nA slice is a struct with three fields - array\
+    \ is a pointer to the underlying array that holds the data - len is the length\
+    \ of the slice - cap is the capacity of the underlying array\n\nHere's an illustrated\
+    \ example:\n\n![](img/07a7b391d92ba53dcfe8da4b75a4aed7_51_0.png)"
+  - "[PAGE 52]\n\nSlice notation (e.g. s1[3:7]) is \"half-open\".[7], meaning from\
+    \ the first index up to, but not including the last index. In s2 case you'll get\
+    \ indices 3, 4, 5 & 6. Which means the length (len) is 4.\n\nThe capacity is how\
+    \ many items there are from the start of the slice to the end of the underlying\
+    \ array. In s2 we start at 3 and can go up to 10, meaning the capacity is 7.\n\
+    \nYou can check length and capacity with the built-in len and cap functions. len(s2)\
+    \ is 4 and cap(s2) is 7.\n\nThe next piece you might be missing is how append\
+    \ works. When you call append it will check the capacity, if there is enough space\
+    \ append will change the underlying array with the appended item and return a\
+    \ slice pointing to the same array with bigger length. If there's no more space\
+    \ in the underlying array, append will create a new and bigger array, copy over\
+    \ the old array, update the new array with the new item and return a slice pointing\
+    \ to the new array.\n\nHere's a possible implementation of append\n\n```\nfunc\
+    \ Append(items []int, i int) []int {\n\tif len(items) == cap(items) { // No more\
+    \ space in\nunderlying array\n\t\t// Go has a better growth heuristic than adding\
+    \ 1\nevery append\n\t\tnewItems := make([]int, len(items)+1)\n\t\tcopy(newItems,\
+    \ items)\n\t\titems = newItems\n\t} else {\n\t\titems = items[:len(items)+1]\n\
+    ```"
+  - '[PAGE 53]
+
+
+    ```
+
+    }
+
+    items[len(items)-1] = i
+
+    return items
+
+    }
+
+    ```
+
+
+    Now you can figure out output. The interesting line is b := append(a[:1], 10)
+    - a[:1] creates a slice of length 1 and capacity of 3 - append will find there''s
+    enough space and change the underlying array, placing 10 at index 1
+
+
+    Both a and b point to the same underlying array. a has a length of 3 and b has
+    a length of 2. That''s why the output is a=[1 10 3], b=[1 10].'
+  - '[PAGE 54]
+
+
+    # 10.1. Further Reading
+
+
+    +   - Slices and Go Slices: usage and internals in the Go blog
+
+
+    +   - Slices in Effective Go
+
+
+    +   - Slice Tricks in the Go wiki'
+  - '[PAGE 55]
+
+
+    7 [ ] in math.'
+  - "[PAGE 56]\n\n# # 11. WHAT'S IN A LOG?\n\nListing 16. struct.go\n\n```\n```go\n\
+    package main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\n// Log is a log message\n\
+    type Log struct {\n\tMessage string\n\ttime.Time\n}\n\nfunc main() {\n\tts :=\
+    \ time.Date(2009, 11, 10, 0, 0, 0, 0, time.UTC)\n\tlog := Log{\"Hello\", ts}\n\
+    \tfmt.Printf(\"%v\\\\n\", log)\n}\n```\n```\n\nTry to guess what the output is\
+    \ before moving to the next page."
+  - "[PAGE 57]\n\nThis code will print: 2009-11-10 00:00:00 +0000 UTC\n\nThe %v verb\
+    \ will print all the struct fields. For example:\n\n# Listing 17. struct_pt.go\n\
+    \n```\npackage main\n\nimport (\n\t\"fmt\"\n)\n\n// Point is a 2D point\ntype\
+    \ Point struct {\n\tX int\n\tY int\n}\n\nfunc main() {\n\tp := Point{1, 2}\n\t\
+    fmt.Printf(\"%v\\\\n\", p) // {1 2}\n}\n```\n\nYou'd expect the teaser code to\
+    \ print {Hello 2009-11-10 00:00:00 +0000 UTC}. The reason it doesn't is due to\
+    \ the way the Log struct is defined. In line 11 we have a field with no name,\
+    \ just a type. This is called embedding and it means that the Log type has all\
+    \ the methods and fields that time.Time has.\n\ntime.Time defines a String() string\
+    \ method, which means it implements the fmt.Stringer interface. And since Log\
+    \ embeds time.Time it also has String() string method. If a parameter passed to\
+    \ fmt.Printf"
+  md: "\n\nThis code will print: 2 2 2\n\nYou probably expected 1 2 3. Each goroutine\
+    \ sleeps n milliseconds and then prints n. wg.Wait() will wait until all goroutines\
+    \ are done and then the program will print a newline.\n\nHowever, the n that each\
+    \ goroutine uses is the same n defined in line 11. This is known as a closure.[6]\n\
+    \nThis is the reason that by design goroutines (and deferred) are written as function\
+    \ invocation with parameters.\n\nYou have two options to solve this bug. The first,\
+    \ and my preference, is to pass n as a parameter to the goroutine.\n\n### Listing\
+    \ 11. sleep_sort_param.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"\
+    sync\"\n\t\"time\"\n)\n\nfunc main() {\n\tvar wg sync.WaitGroup\n\tfor _, n :=\
+    \ range []int{3, 1, 2} {\n\t\twg.Add(1)\n\t\tgo func(i int) {\n\t\t\tdefer wg.Done()\n\
+    \t\t\ttime.Sleep(time.Duration(n) * time.Millisecond)\n\t\t\tfmt.Printf(\"%d \"\
+    , i)\n\t\t}(n)\n\t}\n\twg.Wait()\n\tfmt.Println()\n}\n```\n\nThe second solution,\
+    \ is to use the fact that every time you write an { in Go, you open a new variable\
+    \ scope.\n\n### Listing 12. sleep_sort_scope.go\n\n```go\n1   package main\n2\n\
+    3   import (\n4   \"fmt\"\n5   \"sync\"\n6   \"time\"\n7   )\n8\n9   func main()\
+    \ {\n10   var wg sync.WaitGroup\n11   for _, n := range []int{3, 1, 2} {\n12 \
+    \  n := n ①\n13   wg.Add(1)\n14   go func() {\n15   defer wg.Done()\n16   time.Sleep(time.Duration(n)\
+    \ * time.Millisecond)\n17   fmt.Printf(\"%d \", n)\n18   }()\n19   }\n20   wg.Wait()\n\
+    21   fmt.Println()\n22   }\n```\n\n① n now is a new variable that lives only in\
+    \ the for loop scope and more importantly in the goroutine closure. It \"shadows\"\
+    \ the outer n in line 11.\n\n### 8.1. Further Reading\n\n- Function closures in\
+    \ the Go tour\n\n- Closure in Wikipedia\n\n6 Not to be confused with the Clojure\
+    \ programming language.\n\n## 9. JUST IN TIME\n\n### Listing 13. time_eq.go\n\n\
+    ```go\npackage main\n\nimport (\n\t\"encoding/json\"\n\t\"fmt\"\n\t\"log\"\n\t\
+    \"time\"\n)\n\nfunc main() {\n\tt1 := time.Now()\n\tdata, err := json.Marshal(t1)\n\
+    \tif err != nil {\n\t\tlog.Fatal(err)\n\t}\n\n\tvar t2 time.Time\n\tif err :=\
+    \ json.Unmarshal(data, &t2); err != nil {\n\t\tlog.Fatal(err)\n\t}\n\n\tfmt.Println(t1\
+    \ == t2)\n}\n```\n\nTry to guess what the output is before moving to the next\
+    \ page.\n\nThis code will print: false\n\nYou might expect this code to fail since\
+    \ there’s no time type in the JSON format, or you might expect the comparison\
+    \ to succeed.\n\nGo’s encoding/json lets you define custom JSON serialization\
+    \ for types that are not supported by JSON. You do that by implementing json.Marshaler\
+    \ and json.Unmarshaler interfaces. Go’s time.Time implements these interfaces\
+    \ by marshaling itself to an RFC 3339 formatted string and back.\n\nJSON has a\
+    \ very limited set of types. For example it only has floating-point numbers. Which\
+    \ can lead to surprising results if you use the empty interface when unmarshaling.\n\
+    \n### Listing 14. json_float.go\n\n```go\npackage main\n\nimport (\n\t\"encoding/json\"\
+    \n\t\"fmt\"\n\t\"log\"\n)\n\nfunc main() {\n\tn1 := 1\n\tdata, err := json.Marshal(n1)\n\
+    \tif err != nil {\n\t\tlog.Fatal(err)\n\t}\n\n\tvar n2 interface{}\n\tif err :=\
+    \ json.Unmarshal(data, &n2); err != nil {\n\t\tlog.Fatal(err)\n\t}\n\n\tfmt.Printf(\"\
+    n1 is %T, n2 is %T\\n\", n1, n2)\n}\n```\n\nThe above will print n1 is int, n2\
+    \ is float64\n\nOnce you passed JSON serialization, you’d expect the times to\
+    \ be equal. The time package documentation says (my emphasis):\n\n> Operating\
+    \ systems provide both a \"wall clock,\" which is subject to changes for clock\
+    \ synchronization, and a \"monotonic clock,\" which is not. The general rule is\
+    \ that the wall clock is for telling time and the monotonic clock is for measuring\
+    \ time. Rather than split the API, in this package the Time returned by time.Now\
+    \ contains both a wall clock reading and a monotonic clock reading;\n\nMonotonic\
+    \ clocks are used for measuring durations. They exist to avoid problems such as\
+    \ your computer switching to daylight saving time during measurement. The value\
+    \ of a monotonic clock by itself does not mean anything, only the difference between\
+    \ two monotonic clock readings is useful.\n\nWhen you use == to compare time.Time,\
+    \ Go will compare the time.Time struct fields, including the monotonic reading.\
+    \ However when\n\nGo serializes a `time.Time` to JSON, it doesn't include the\
+    \ monotonic clock in the output. When we read back the time to t2, it doesn't\
+    \ contain the monotonic reading and the comparison fails.\n\nThe solution to the\
+    \ problem is written in time.Time's documentation\n\n*In general, prefer t.Equal(u)\
+    \ to t == u, since t.Equal uses the most accurate comparison available and correctly\
+    \ handles the case when only one of its arguments has a monotonic clock reading.*\n\
+    \n### 9.1. Further Reading\n\n- Falsehoods programmers believe about time\n\n\
+    - Time package documentation\n\n- RFC 3999 & ISO 8601 time formats. Please, don't\
+    \ invent your own.\n\n## 10. A SIMPLE APPEND\n\n### Listing 15. append.go\n\n\
+    ```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\ta := []int{1,\
+    \ 2, 3}\n\tb := append(a[:1], 10)\n\tfmt.Printf(\"a=%v, b=%v\\n\", a, b)\n}\n\
+    ```\n\nTry to guess what the output is before moving to the next page.\n\nThis\
+    \ code will print: a=[1 10 3], b=[1 10]\n\nYou'll need to dig a bit into how slices\
+    \ are implemented and how append works to understand why you see this output.\n\
+    \nIf you look at src/runtime/slice.go in the Go source code, you will see\n\n\
+    ```go\ntype slice struct {\n\tarray unsafe.Pointer\n\tlen   int\n\tcap   int\n\
+    }\n```\n\nA slice is a struct with three fields - array is a pointer to the underlying\
+    \ array that holds the data - len is the length of the slice - cap is the capacity\
+    \ of the underlying array\n\nHere's an illustrated example:\n\n![](img/07a7b391d92ba53dcfe8da4b75a4aed7_51_0.png)\n\
+    \nSlice notation (e.g. s1[3:7]) is \"half-open\".[7], meaning from the first index\
+    \ up to, but not including the last index. In s2 case you'll get indices 3, 4,\
+    \ 5 & 6. Which means the length (len) is 4.\n\nThe capacity is how many items\
+    \ there are from the start of the slice to the end of the underlying array. In\
+    \ s2 we start at 3 and can go up to 10, meaning the capacity is 7.\n\nYou can\
+    \ check length and capacity with the built-in len and cap functions. len(s2) is\
+    \ 4 and cap(s2) is 7.\n\nThe next piece you might be missing is how append works.\
+    \ When you call append it will check the capacity, if there is enough space append\
+    \ will change the underlying array with the appended item and return a slice pointing\
+    \ to the same array with bigger length. If there's no more space in the underlying\
+    \ array, append will create a new and bigger array, copy over the old array, update\
+    \ the new array with the new item and return a slice pointing to the new array.\n\
+    \nHere's a possible implementation of append\n\n```go\nfunc Append(items []int,\
+    \ i int) []int {\n\tif len(items) == cap(items) { // No more space in underlying\
+    \ array\n\t\t// Go has a better growth heuristic than adding 1 every append\n\t\
+    \tnewItems := make([]int, len(items)+1)\n\t\tcopy(newItems, items)\n\t\titems\
+    \ = newItems\n\t} else {\n\t\titems = items[:len(items)+1]\n\t}\n\titems[len(items)-1]\
+    \ = i\n\treturn items\n}\n```\n\nNow you can figure out output. The interesting\
+    \ line is b := append(a[:1], 10) - a[:1] creates a slice of length 1 and capacity\
+    \ of 3 - append will find there's enough space and change the underlying array,\
+    \ placing 10 at index 1\n\nBoth a and b point to the same underlying array. a\
+    \ has a length of 3 and b has a length of 2. That's why the output is a=[1 10\
+    \ 3], b=[1 10].\n\n### 10.1. Further Reading\n\n- Slices and Go Slices: usage\
+    \ and internals in the Go blog\n\n- Slices in Effective Go\n\n- Slice Tricks in\
+    \ the Go wiki\n\n7 [ ] in math.\n\n## 11. WHAT'S IN A LOG?\n\n### Listing 16.\
+    \ struct.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\n//\
+    \ Log is a log message\ntype Log struct {\n\tMessage string\n\ttime.Time\n}\n\n\
+    func main() {\n\tts := time.Date(2009, 11, 10, 0, 0, 0, 0, time.UTC)\n\tlog :=\
+    \ Log{\"Hello\", ts}\n\tfmt.Printf(\"%v\\n\", log)\n}\n```\n\nTry to guess what\
+    \ the output is before moving to the next page.\n\nThis code will print: 2009-11-10\
+    \ 00:00:00 +0000 UTC\n\nThe %v verb will print all the struct fields. For example:\n\
+    \n### Listing 17. struct_pt.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n\
+    )\n\n// Point is a 2D point\ntype Point struct {\n\tX int\n\tY int\n}\n\nfunc\
+    \ main() {\n\tp := Point{1, 2}\n\tfmt.Printf(\"%v\\n\", p) // {1 2}\n}\n```\n\n\
+    You'd expect the teaser code to print {Hello 2009-11-10 00:00:00 +0000 UTC}. The\
+    \ reason it doesn't is due to the way the Log struct is defined. In line 11 we\
+    \ have a field with no name, just a type. This is called embedding and it means\
+    \ that the Log type has all the methods and fields that time.Time has.\n\ntime.Time\
+    \ defines a String() string method, which means it implements the fmt.Stringer\
+    \ interface. And since Log embeds time.Time it also has String() string method.\
+    \ If a parameter passed to fmt.Printf\n"
+  mdcn: "\n\n这段代码将打印：2 2 2\n\n你可能期望得到 1 2 3。每个 goroutine 休眠 n 毫秒，然后打印 n。wg.Wait()\
+    \ 会等待所有 goroutine 完成，然后程序会打印一个换行符。\n\n然而，每个 goroutine 使用的 n 都是第 11 行中定义的同一个 n。这被称为闭包。[6]\n\
+    \n这就是为什么从设计上讲，goroutine（以及 defer）被编写为带有参数的函数调用。\n\n你有两种方法可以修复这个 Bug。第一种，也是我个人的偏好，是将\
+    \ n 作为参数传递给 goroutine。\n\n### 清单 11. sleep_sort_param.go\n\n```go\npackage main\n\
+    \nimport (\n\t\"fmt\"\n\t\"sync\"\n\t\"time\"\n)\n\nfunc main() {\n\tvar wg sync.WaitGroup\n\
+    \tfor _, n := range []int{3, 1, 2} {\n\t\twg.Add(1)\n\t\tgo func(i int) {\n\t\t\
+    \tdefer wg.Done()\n\t\t\ttime.Sleep(time.Duration(n) * time.Millisecond)\n\t\t\
+    \tfmt.Printf(\"%d \", i)\n\t\t}(n)\n\t}\n\twg.Wait()\n\tfmt.Println()\n}\n```\n\
+    \n第二种解决方案是利用这样一个事实：每次在 Go 中编写 { 时，都会打开一个新的变量作用域。\n\n### 清单 12. sleep_sort_scope.go\n\
+    \n```go\n1   package main\n2\n3   import (\n4   \"fmt\"\n5   \"sync\"\n6   \"\
+    time\"\n7   )\n8\n9   func main() {\n10   var wg sync.WaitGroup\n11   for _, n\
+    \ := range []int{3, 1, 2} {\n12   n := n ①\n13   wg.Add(1)\n14   go func() {\n\
+    15   defer wg.Done()\n16   time.Sleep(time.Duration(n) * time.Millisecond)\n17\
+    \   fmt.Printf(\"%d \", n)\n18   }()\n19   }\n20   wg.Wait()\n21   fmt.Println()\n\
+    22   }\n```\n\n① n 现在是一个只在 for 循环作用域中生存的新变量，更重要的是，它只在 goroutine 闭包中生存。它会“遮蔽”第\
+    \ 11 行中的外部 n。\n\n### 8.1. 延伸阅读\n\n- Go 之旅中的函数闭包\n\n- 维基百科上的闭包\n\n6 不要与 Clojure\
+    \ 编程语言混淆。\n\n## 9. 即时\n\n### 清单 13. time_eq.go\n\n```go\npackage main\n\nimport\
+    \ (\n\t\"encoding/json\"\n\t\"fmt\"\n\t\"log\"\n\t\"time\"\n)\n\nfunc main() {\n\
+    \tt1 := time.Now()\n\tdata, err := json.Marshal(t1)\n\tif err != nil {\n\t\tlog.Fatal(err)\n\
+    \t}\n\n\tvar t2 time.Time\n\tif err := json.Unmarshal(data, &t2); err != nil {\n\
+    \t\tlog.Fatal(err)\n\t}\n\n\tfmt.Println(t1 == t2)\n}\n```\n\n在翻到下一页之前，先尝试猜猜输出是什么。\n\
+    \n这段代码将打印：false\n\n你可能会认为这段代码会失败，因为 JSON 格式中没有 time 类型；或者你可能会认为比较会成功。\n\nGo 的\
+    \ encoding/json 允许你为 JSON 不支持的类型定义自定义 JSON 序列化。你可以通过实现 json.Marshaler 和 json.Unmarshaler\
+    \ 接口来做到这一点。Go 的 time.Time 通过将自身序列化为 RFC 3339 格式的字符串，再反序列化回来，实现了这些接口。\n\nJSON 只有非常有限的一组类型。例如，它只有浮点数。如果你在反序列化时使用空接口，可能会导致令人惊讶的结果。\n\
+    \n### 清单 14. json_float.go\n\n```go\npackage main\n\nimport (\n\t\"encoding/json\"\
+    \n\t\"fmt\"\n\t\"log\"\n)\n\nfunc main() {\n\tn1 := 1\n\tdata, err := json.Marshal(n1)\n\
+    \tif err != nil {\n\t\tlog.Fatal(err)\n\t}\n\n\tvar n2 interface{}\n\tif err :=\
+    \ json.Unmarshal(data, &n2); err != nil {\n\t\tlog.Fatal(err)\n\t}\n\n\tfmt.Printf(\"\
+    n1 is %T, n2 is %T\\n\", n1, n2)\n}\n```\n\n上述代码将打印：n1 is int, n2 is float64\n\
+    \n在通过 JSON 序列化后，你会期望两个时间相等。time 包的文档说（我加了强调）：\n\n> 操作系统同时提供“墙上时钟”（会因时钟同步而发生变化）和“单调时钟”（不会变化）。一般规则是，墙上时钟用于显示时间，而单调时钟用于测量时间。与其拆分\
+    \ API，在此包中，time.Now 返回的 Time 同时包含墙上时钟读数和单调时钟读数；\n\n单调时钟用于测量持续时间。它们的存在是为了避免诸如计算机在测量过程中切换到夏令时之类的问题。单调时钟的值本身没有意义，只有两个单调时钟读数之间的差值才有用。\n\
+    \n当你使用 == 比较 time.Time 时，Go 会比较 time.Time 结构体字段，包括单调读数。然而当\n\nGo 将 `time.Time`\
+    \ 序列化为 JSON 时，输出中不包含单调时钟。当我们将时间读回 t2 时，它不包含单调读数，因此比较失败。\n\n问题的解决方案写在 time.Time\
+    \ 的文档中\n\n*一般来说，优先使用 t.Equal(u) 而不是 t == u，因为 t.Equal 使用可用的最准确比较，并能正确处理仅其中一个参数带有单调时钟读数的情况。*\n\
+    \n### 9.1. 延伸阅读\n\n- 程序员关于时间的错误观念\n\n- time 包文档\n\n- RFC 3999 & ISO 8601 时间格式。请不要自行发明。\n\
+    \n## 10. 简单的 append\n\n### 清单 15. append.go\n\n```go\npackage main\n\nimport (\n\
+    \t\"fmt\"\n)\n\nfunc main() {\n\ta := []int{1, 2, 3}\n\tb := append(a[:1], 10)\n\
+    \tfmt.Printf(\"a=%v, b=%v\\n\", a, b)\n}\n```\n\n在翻到下一页之前，先尝试猜猜输出是什么。\n\n这段代码将打印：a=[1\
+    \ 10 3], b=[1 10]\n\n你需要深入了解切片的实现原理以及 append 的工作原理，才能明白为何会看到这样的输出。\n\n如果你查看 Go\
+    \ 源代码中的 src/runtime/slice.go，你会看到\n\n```go\ntype slice struct {\n\tarray unsafe.Pointer\n\
+    \tlen   int\n\tcap   int\n}\n```\n\n切片是一个包含三个字段的结构体 - array 是指向保存数据的底层数组的指针 -\
+    \ len 是切片的长度 - cap 是底层数组的容量\n\n下面是一个示意图：\n\n![](img/07a7b391d92ba53dcfe8da4b75a4aed7_51_0.png)\n\
+    \n切片表示法（例如 s1[3:7]）是“半开区间”。[7]，意味着从第一个索引开始，一直到但不包括最后一个索引。在 s2 的例子中，你将得到索引 3、4、5\
+    \ 和 6。这意味着长度（len）是 4。\n\n容量是指从切片起始位置到底层数组末尾的元素数量。在 s2 中，我们从索引 3 开始，可以一直到索引 10，这意味着容量是\
+    \ 7。\n\n你可以使用内置的 len 和 cap 函数来检查长度和容量。len(s2) 是 4，cap(s2) 是 7。\n\n你可能还缺少的部分是 append\
+    \ 的工作原理。当你调用 append 时，它会检查容量。如果有足够空间，append 会修改底层数组并附加该项，然后返回一个指向同一数组、长度更大的切片。如果底层数组中没有更多空间，append\
+    \ 会创建一个新的、更大的数组，复制旧数组的内容，用新项更新新数组，然后返回一个指向新数组的切片。\n\n下面是 append 的一个可能实现\n\n```go\n\
+    func Append(items []int, i int) []int {\n\tif len(items) == cap(items) { // No\
+    \ more space in underlying array\n\t\t// Go has a better growth heuristic than\
+    \ adding 1 every append\n\t\tnewItems := make([]int, len(items)+1)\n\t\tcopy(newItems,\
+    \ items)\n\t\titems = newItems\n\t} else {\n\t\titems = items[:len(items)+1]\n\
+    \t}\n\titems[len(items)-1] = i\n\treturn items\n}\n```\n\n现在你可以推断出输出了。关键行是 b :=\
+    \ append(a[:1], 10) - a[:1] 创建一个长度为 1、容量为 3 的切片 - append 会发现有足够空间，并修改底层数组，将 10\
+    \ 放置在索引 1 处\n\na 和 b 都指向同一个底层数组。a 的长度为 3，b 的长度为 2。这就是为什么输出是 a=[1 10 3], b=[1 10]。\n\
+    \n### 10.1. 延伸阅读\n\n- Go 博客中的 Slices 与 Go Slices：用法及内部原理\n\n- 《Effective Go》中的\
+    \ Slices\n\n- Go wiki 中的 Slice Tricks\n\n7 [] 在数学中。\n\n## 11. 日志里有什么？\n\n### 清单\
+    \ 16. struct.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\
+    \n// Log is a log message\ntype Log struct {\n\tMessage string\n\ttime.Time\n\
+    }\n\nfunc main() {\n\tts := time.Date(2009, 11, 10, 0, 0, 0, 0, time.UTC)\n\t\
+    log := Log{\"Hello\", ts}\n\tfmt.Printf(\"%v\\n\", log)\n}\n```\n\n在翻到下一页之前，先尝试猜猜输出是什么。\n\
+    \n这段代码将打印：2009-11-10 00:00:00 +0000 UTC\n\n%v 动词会打印结构体的所有字段。例如：\n\n### 清单 17.\
+    \ struct_pt.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\n// Point is\
+    \ a 2D point\ntype Point struct {\n\tX int\n\tY int\n}\n\nfunc main() {\n\tp :=\
+    \ Point{1, 2}\n\tfmt.Printf(\"%v\\n\", p) // {1 2}\n}\n```\n\n你会期望预告代码打印 {Hello\
+    \ 2009-11-10 00:00:00 +0000 UTC}。之所以没有打印出来，是由于 Log 结构体的定义方式。在第 11 行，我们有一个没有名称、只有类型的字段。这称为嵌入，这意味着\
+    \ Log 类型拥有 time.Time 具有的所有方法和字段。\n\ntime.Time 定义了 String() string 方法，这意味着它实现了\
+    \ fmt.Stringer 接口。由于 Log 嵌入了 time.Time，它也具有 String() string 方法。如果将一个参数传递给 fmt.Printf\n\
+    \n"
+  merge: 0
+- raw:
+  - '[PAGE 58]
+
+
+    implements `fmt.Stringer`, `fmt.Printf` will use it instead of the default output.
+
+
+    If you change the definition in line 11 to `Time time.Time`, you will see the
+    expected output of `{Hello 2009-11-10 00:00:00 +0000 UTC}`.
+
+
+    You can also embed interfaces in Go, see the definition of `io.ReadWriter` for
+    example.'
+  - '[PAGE 59]
+
+
+    # 11.1. Further Reading
+
+
+    +   - Fun With Flags on the Gopher Academy Blog
+
+    +   - Embedding in Effective Go
+
+    +   - Methods, Interfaces and Embedded Types in Go on ArdanLabs blog'
+  - "[PAGE 60]\n\n# 12. A FUNKY NUMBER?\n\nListing 18. num.go\n\n```\npackage main\n\
+    import (\n\t\"fmt\"\n)\nfunc main() {\n\tfmt.Println(0x1p-2)\n}\n```\n\n> Try\
+    \ to guess what the output is before moving to the next page."
+  - "[PAGE 61]\n\nGo has several number types, the two main ones are:\n\n# *Integers*\n\
+    \nThese are whole numbers. Go has `int8`, `int16`, `int32`, `int64` and `int`.[8].\
+    \ There are also all the unsigned ones `uint8`...\n\n# *Floats*\n\nThese are real\
+    \ numbers. Go has `float32` and `float64`.\n\nThere are other types such as complex,\
+    \ and the various types defined in math/big.\n\nWhen you write a number literal,\
+    \ such as `3.14`, the Go compiler needs to parse it to a specific type (`float64`\
+    \ in this case). The Go spec defines how you can write numbers. Let's have a look\
+    \ at some examples:\n\n*Listing 19. num_lit.go*\n\n```\npackage main\n\nimport\
+    \ (\n\t\"fmt\"\n)\n\nfunc main() {\n\t// Integer\n\tprintNum(10) // 10 of type\
+    \ int\n\tprintNum(010) // 8 of type int\n\tprintNum(0x10) // 16 of type int\n\
+    ```"
+  - '[PAGE 62]
+
+
+    ```
+
+    12 | printNum(0b10) // 2 of type int
+
+    13 | printNum(1_000) // 1000 of type int ①
+
+    14 |
+
+    15 | // Float
+
+    16 | printNum(3.14) // 3.14 of type float64
+
+    17 | printNum(.2) // 0.2 of type float64
+
+    18 | printNum(1e3) // 1000 of type float64 ②
+
+    19 | printNum(0x1p-2) // 0.25 of type float64 ③
+
+    20 |
+
+    21 | // Complex
+
+    22 | printNum(1i) // (0+1i) of type complex128
+
+    23 | printNum(3 + 7i) // (3+7i) of type complex128
+
+    24 | printNum(1 + 0i) // (1+0i) of type complex128
+
+    25 | }
+
+    26 |
+
+    27 | func printNum(n interface{}) {
+
+    28 | fmt.Printf("%v of type %T\n", n, n)
+
+    29 | }
+
+    ```
+
+
+    +   ① _ serves as the thousands separator. It makes big numbers much more readable
+    for us humans.
+
+
+    +   ② This is known as scientific notation
+
+
+    +   ③ The current brain teaser
+
+
+    0x1p-2 is called "a hexadecimal floating-point literal" in the Go specification
+    and is following the IEEE 754 2008 specification. To calculate the value:
+
+
+    +   Compute the value before the p as a hexadecimal number. In this example it''s:
+    0x1 [9] = 1
+
+
+    +   Compute the value after the p as "2 to the power of that value". In this example
+    it''s: 2^-2 = 0.25 [10]
+
+
+    +   Finally multiply the two numbers. In this example: 1 * 0.25 = 0.25'
+  - '[PAGE 63]
+
+
+    # 12.1. Further Reading
+
+
+    +   - IEEE 754 specification
+
+    +   - Integer literals
+
+    +   - Floating point literals
+
+    +   - Imaginary literals'
+  - '[PAGE 64]
+
+
+    +   8 int is an alias to your system integer size, 64 on my machine.
+
+
+    +   9 One in hexadecimal.
+
+
+    +   10 Remember your high school math: 2-2 = 1/22.'
+  - "[PAGE 65]\n\n# 13. FREE RANGE INTEGERS\n\nListing 20. range.go\n\n```\n```go\n\
+    package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc fibs(n int) chan int {\n\tch :=\
+    \ make(chan int)\n\n\tgo func() {\n\t\ta, b := 1, 1\n\t\tfor i := 0; i < n; i++\
+    \ {\n\t\t\tch <- a\n\t\t\ta, b = b, a+b\n\t\t}\n\t}()\n\n\treturn ch\n}\n\nfunc\
+    \ main() {\n\tfor i := range fibs(5) {\n\t\tfmt.Printf(\"%d \", i)\n\t}\n\tfmt.Println()\n\
+    }\n```\n```"
+  - '[PAGE 66]
+
+
+    Try to guess what the output is before moving to the next page.'
+  - "[PAGE 67]\n\nThis code will deadlock.\n\nTo get a value from a channel, you can\
+    \ either use the receive operator (←ch) or do a for loop with a range on the channel\
+    \ - consuming everything from it.\n\nHow does range know when there are no more\
+    \ values in the channel? It waits for the channel to be closed. The problem in\
+    \ the above script is that the goroutine does not close the channel.\n\n# Listing\
+    \ 21. range_close.go\n\n```\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc fibs(n\
+    \ int) chan int {\n\tch := make(chan int)\n\n\tgo func() {\n\t\tdefer close(ch)\
+    \ ①\n\t\ta, b := 1, 1\n\t\tfor i := 0; i < n; i++ {\n\t\t\tch <- a\n\t\t\ta, b\
+    \ = b, a+b\n\t\t}\n\t}()\n\n\treturn ch\n}\n\nfunc main() {\n```"
+  - "[PAGE 68]\n\n```\n```go\n23    for i := range fibs(5) {\n24    fmt.Printf(\"\
+    %d \", i)\n25    }\n26    fmt.Println()\n27    }\n```\n```\n\n① The fix - close\
+    \ the channel when the goroutine exits\n\nWhat range does when iterating over\
+    \ a channel is something like:\n\nListing 22. range_rcv.go\n\n```\n```go\nfunc\
+    \ main() {\n\tch := fibs(5)\n\tfor {\n\t\ti, ok := <-ch\n\t\tif !ok {\n\t\t\t\
+    break\n\t\t}\n\t}\n\tfmt.Printf(\"%d \", i)\n}\n```\n```\n\nWhen you use this\
+    \ method to create iterators, you need to beware of goroutine leaks. If you create\
+    \ ch := fibs(3) and then consume only one or two values from it, the goroutine\
+    \ inside fibs will be blocked on sending to the channel. Since there’s a reference\
+    \ to the channel, the garbage collector won’t reclaim it. As Dave Cheney says:\
+    \ \"Never start a goroutine without knowing how it will finish.\"\n\nThe common\
+    \ practice is to pass a done channel or a context. This will complicate the code\
+    \ a bit but you’ll have control over stopping goroutines will avoid goroutine\
+    \ leaks.\n\nListing 23. range_ctx.go"
+  - "[PAGE 69]\n\n```\n```go\npackage main\n\nimport (\n\t\"context\"\n\t\"fmt\"\n\
+    )\n\nfunc fibs(ctx context.Context, n int) chan int {\n\tch := make(chan int)\n\
+    \tgo func() {\n\t\tdefer close(ch)\n\t\ta, b := 1, 1\n\t\tfor i := 0; i < n; i++\
+    \ {\n\t\t\tselect {\n\t\t\tcase ch <- a:\n\t\t\t\ta, b = b, a+b\n\t\t\tcase <-ctx.Done():\n\
+    \t\t\t\tfmt.Println(\"cancelled\")\n\t\t\t}\n\t\t}\n\t}()\n\n\treturn ch\n}\n\n\
+    func main() {\n\tctx, cancel := context.WithCancel(context.Background())\n\tch\
+    \ := fibs(ctx, 5)\n\tfor i := 0; i < 3; i++ {\n\t\tval := <-ch\n\t\tfmt.Printf(\"\
+    %d \", val)\n\t}\n\tfmt.Println()\n\tcancel()\n}\n```\n```"
+  - '[PAGE 70]
+
+
+    # 13.1. Further Reading
+
+
+    +   - Go Concurrency Patterns: Context on the Go blog
+
+
+    +   - Go Concurrency Patterns: Pipelines and cancellation on the Go blog
+
+
+    +   - The context package
+
+
+    +   - Concurrency chapter in Practical Go by Dave Cheney'
+  - "[PAGE 71]\n\n# # 14. MULTIPLE PERSONALITIES\n\nListing 24. multi_assign.go\n\n\
+    ```\npackage main\nimport (\n\t\"fmt\"\n)\nfunc main() {\n\ta, b := 1, 2\n\tb,\
+    \ c := 3, 4\n\tfmt.Println(a, b, c)\n}\n```\n\nTry to guess what the output is\
+    \ before moving to the next page."
+  - '[PAGE 72]
+
+
+    This code will print: 1 3 4
+
+
+    Go’s short variable declaration (: =) can be used in a "multi values" context
+    - where there is more than one variable on the left side.
+
+
+    If all variables on the left are new - you’re good.
+
+
+    ```
+
+    a, b := 1, 2
+
+    ```
+
+
+    If you have no new variables, you’ll get a compilation error.
+
+
+    ```
+
+    a, b := 1, 2
+
+    a, b := 2, 3 // error: no new variables on left side of :=
+
+    ```
+
+
+    When there’s a mix, like in this teaser - you’re still good as long as the types
+    match. In this case, when you do:
+
+
+    ```
+
+    b, c := 3, 4
+
+    ```
+
+
+    b is an existing variable, and the type of 3 which is int matches the current
+    type of b - OK here. c is a new variable, making this statement OK.'
+  - '[PAGE 73]
+
+
+    # 14.1. Further Reading
+
+
+    +   - Short variable declaration in the Go tour
+
+    +   - Constant declarations in the Go specification.'
+  - "[PAGE 74]\n\n# 15. A TALE OF TWO CITIES\n\nListing 25. two_cities.go\n\n```\n\
+    1  package main\n2\n3  import (\n4  \t\"fmt\"\n5  )\n6\n7  func main() {\n8  \t\
+    city1\n```\n\nTry to guess what the output is before moving to the next page."
+  - "[PAGE 75]\n\nThis code will print: false\n\nYour eyesight is OK, these two strings\
+    \ *look* the same. However if you'll print the length of each variable, the length\
+    \ of `city1` will be 7 and the length of `city2` will be 8.\n\nIn When in Kraków\
+    \ we talked about the fact that Go's strings are UTF-8 encoded byte slices. UTF-8\
+    \ has many features, and some \"characters\" (runes) are not for display but for\
+    \ control. For example, text direction - sometimes called bidi.\n\n`city1` has\
+    \ a one-byte rune at position 4 (ó), while `city2` has the `o` rune in position\
+    \ 4 and a control character saying \"add an umlaut to the previous character\"\
+    . These ways of encoding are called NFC & NFD.\n\nWhen you compare strings, they\
+    \ are compared at the byte level, this is why you'll see *false* as the output.\
+    \ To fix this you'll need to use an external library called golang.org/x/text/unicode/norm.\n\
+    \n# Listing 26. two_cities_nfc.go\n\n```\npackage main\n\nimport (\n\t\"fmt\"\n\
+    \n\t\"golang.org/x/text/unicode/norm\"\n)\n\nfunc main() {\n\tcity1, city2 :=\
+    \ \"Kraków\", \"Kraków\"\n```"
+  md: "\nimplements `fmt.Stringer`, `fmt.Printf` will use it instead of the default\
+    \ output.\n\nIf you change the definition in line 11 to `Time time.Time`, you\
+    \ will see the expected output of `{Hello 2009-11-10 00:00:00 +0000 UTC}`.\n\n\
+    You can also embed interfaces in Go, see the definition of `io.ReadWriter` for\
+    \ example.\n\n## 11.1. Further Reading\n\n- Fun With Flags on the Gopher Academy\
+    \ Blog\n- Embedding in Effective Go\n- Methods, Interfaces and Embedded Types\
+    \ in Go on ArdanLabs blog\n\n## 12. A FUNKY NUMBER?\n\n### Listing 18. num.go\n\
+    \n```go\npackage main\nimport (\n\t\"fmt\"\n)\nfunc main() {\n\tfmt.Println(0x1p-2)\n\
+    }\n```\n\n> Try to guess what the output is before moving to the next page.\n\n\
+    Go has several number types, the two main ones are:\n\n### Integers\n\nThese are\
+    \ whole numbers. Go has `int8`, `int16`, `int32`, `int64` and `int`.[8]. There\
+    \ are also all the unsigned ones `uint8`...\n\n### Floats\n\nThese are real numbers.\
+    \ Go has `float32` and `float64`.\n\nThere are other types such as complex, and\
+    \ the various types defined in math/big.\n\nWhen you write a number literal, such\
+    \ as `3.14`, the Go compiler needs to parse it to a specific type (`float64` in\
+    \ this case). The Go spec defines how you can write numbers. Let's have a look\
+    \ at some examples:\n\n### Listing 19. num_lit.go\n\n```go\npackage main\n\nimport\
+    \ (\n\t\"fmt\"\n)\n\nfunc main() {\n\t// Integer\n\tprintNum(10) // 10 of type\
+    \ int\n\tprintNum(010) // 8 of type int\n\tprintNum(0x10) // 16 of type int\n\t\
+    printNum(0b10) // 2 of type int\n\tprintNum(1_000) // 1000 of type int ①\n\n\t\
+    // Float\n\tprintNum(3.14) // 3.14 of type float64\n\tprintNum(.2) // 0.2 of type\
+    \ float64\n\tprintNum(1e3) // 1000 of type float64 ②\n\tprintNum(0x1p-2) // 0.25\
+    \ of type float64 ③\n\n\t// Complex\n\tprintNum(1i) // (0+1i) of type complex128\n\
+    \tprintNum(3 + 7i) // (3+7i) of type complex128\n\tprintNum(1 + 0i) // (1+0i)\
+    \ of type complex128\n}\n\nfunc printNum(n interface{}) {\n\tfmt.Printf(\"%v of\
+    \ type %T\\n\", n, n)\n}\n```\n\n- ① _ serves as the thousands separator. It makes\
+    \ big numbers much more readable for us humans.\n- ② This is known as scientific\
+    \ notation\n- ③ The current brain teaser\n\n0x1p-2 is called \"a hexadecimal floating-point\
+    \ literal\" in the Go specification and is following the IEEE 754 2008 specification.\
+    \ To calculate the value:\n\n- Compute the value before the p as a hexadecimal\
+    \ number. In this example it's: 0x1 [9] = 1\n- Compute the value after the p as\
+    \ \"2 to the power of that value\". In this example it's: 2^-2 = 0.25 [10]\n-\
+    \ Finally multiply the two numbers. In this example: 1 * 0.25 = 0.25\n\n## 12.1.\
+    \ Further Reading\n\n- IEEE 754 specification\n- Integer literals\n- Floating\
+    \ point literals\n- Imaginary literals\n\n- 8 int is an alias to your system integer\
+    \ size, 64 on my machine.\n- 9 One in hexadecimal.\n- 10 Remember your high school\
+    \ math: 2^-2 = 1/2^2.\n\n## 13. FREE RANGE INTEGERS\n\n### Listing 20. range.go\n\
+    \n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc fibs(n int) chan int {\n\
+    \tch := make(chan int)\n\n\tgo func() {\n\t\ta, b := 1, 1\n\t\tfor i := 0; i <\
+    \ n; i++ {\n\t\t\tch <- a\n\t\t\ta, b = b, a+b\n\t\t}\n\t}()\n\n\treturn ch\n\
+    }\n\nfunc main() {\n\tfor i := range fibs(5) {\n\t\tfmt.Printf(\"%d \", i)\n\t\
+    }\n\tfmt.Println()\n}\n```\n\nTry to guess what the output is before moving to\
+    \ the next page.\n\nThis code will deadlock.\n\nTo get a value from a channel,\
+    \ you can either use the receive operator (<-ch) or do a for loop with a range\
+    \ on the channel - consuming everything from it.\n\nHow does range know when there\
+    \ are no more values in the channel? It waits for the channel to be closed. The\
+    \ problem in the above script is that the goroutine does not close the channel.\n\
+    \n### Listing 21. range_close.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\
+    \n)\n\nfunc fibs(n int) chan int {\n\tch := make(chan int)\n\n\tgo func() {\n\t\
+    \tdefer close(ch) ①\n\t\ta, b := 1, 1\n\t\tfor i := 0; i < n; i++ {\n\t\t\tch\
+    \ <- a\n\t\t\ta, b = b, a+b\n\t\t}\n\t}()\n\n\treturn ch\n}\n\nfunc main() {\n\
+    \tfor i := range fibs(5) {\n\t\tfmt.Printf(\"%d \", i)\n\t}\n\tfmt.Println()\n\
+    }\n```\n\n① The fix - close the channel when the goroutine exits\n\nWhat range\
+    \ does when iterating over a channel is something like:\n\n### Listing 22. range_rcv.go\n\
+    \n```go\nfunc main() {\n\tch := fibs(5)\n\tfor {\n\t\ti, ok := <-ch\n\t\tif !ok\
+    \ {\n\t\t\tbreak\n\t\t}\n\t}\n\tfmt.Printf(\"%d \", i)\n}\n```\n\nWhen you use\
+    \ this method to create iterators, you need to beware of goroutine leaks. If you\
+    \ create ch := fibs(3) and then consume only one or two values from it, the goroutine\
+    \ inside fibs will be blocked on sending to the channel. Since there’s a reference\
+    \ to the channel, the garbage collector won’t reclaim it. As Dave Cheney says:\
+    \ \"Never start a goroutine without knowing how it will finish.\"\n\nThe common\
+    \ practice is to pass a done channel or a context. This will complicate the code\
+    \ a bit but you’ll have control over stopping goroutines will avoid goroutine\
+    \ leaks.\n\n### Listing 23. range_ctx.go\n\n```go\npackage main\n\nimport (\n\t\
+    \"context\"\n\t\"fmt\"\n)\n\nfunc fibs(ctx context.Context, n int) chan int {\n\
+    \tch := make(chan int)\n\tgo func() {\n\t\tdefer close(ch)\n\t\ta, b := 1, 1\n\
+    \t\tfor i := 0; i < n; i++ {\n\t\t\tselect {\n\t\t\tcase ch <- a:\n\t\t\t\ta,\
+    \ b = b, a+b\n\t\t\tcase <-ctx.Done():\n\t\t\t\tfmt.Println(\"cancelled\")\n\t\
+    \t\t}\n\t\t}\n\t}()\n\n\treturn ch\n}\n\nfunc main() {\n\tctx, cancel := context.WithCancel(context.Background())\n\
+    \tch := fibs(ctx, 5)\n\tfor i := 0; i < 3; i++ {\n\t\tval := <-ch\n\t\tfmt.Printf(\"\
+    %d \", val)\n\t}\n\tfmt.Println()\n\tcancel()\n}\n```\n\n## 13.1. Further Reading\n\
+    \n- Go Concurrency Patterns: Context on the Go blog\n- Go Concurrency Patterns:\
+    \ Pipelines and cancellation on the Go blog\n- The context package\n- Concurrency\
+    \ chapter in Practical Go by Dave Cheney\n\n## 14. MULTIPLE PERSONALITIES\n\n\
+    ### Listing 24. multi_assign.go\n\n```go\npackage main\nimport (\n\t\"fmt\"\n\
+    )\nfunc main() {\n\ta, b := 1, 2\n\tb, c := 3, 4\n\tfmt.Println(a, b, c)\n}\n\
+    ```\n\nTry to guess what the output is before moving to the next page.\n\nThis\
+    \ code will print: 1 3 4\n\nGo’s short variable declaration (:=) can be used in\
+    \ a \"multi values\" context - where there is more than one variable on the left\
+    \ side.\n\nIf all variables on the left are new - you’re good.\n\n```go\na, b\
+    \ := 1, 2\n```\n\nIf you have no new variables, you’ll get a compilation error.\n\
+    \n```go\na, b := 1, 2\na, b := 2, 3 // error: no new variables on left side of\
+    \ :=\n```\n\nWhen there’s a mix, like in this teaser - you’re still good as long\
+    \ as the types match. In this case, when you do:\n\n```go\nb, c := 3, 4\n```\n\
+    \nb is an existing variable, and the type of 3 which is int matches the current\
+    \ type of b - OK here. c is a new variable, making this statement OK.\n\n## 14.1.\
+    \ Further Reading\n\n- Short variable declaration in the Go tour\n- Constant declarations\
+    \ in the Go specification.\n\n## 15. A TALE OF TWO CITIES\n\n### Listing 25. two_cities.go\n\
+    \n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tcity1\n```\n\
+    \nThis code will print: false\n\nYour eyesight is OK, these two strings *look*\
+    \ the same. However if you'll print the length of each variable, the length of\
+    \ `city1` will be 7 and the length of `city2` will be 8.\n\nIn When in Kraków\
+    \ we talked about the fact that Go's strings are UTF-8 encoded byte slices. UTF-8\
+    \ has many features, and some \"characters\" (runes) are not for display but for\
+    \ control. For example, text direction - sometimes called bidi.\n\n`city1` has\
+    \ a one-byte rune at position 4 (ó), while `city2` has the `o` rune in position\
+    \ 4 and a control character saying \"add an umlaut to the previous character\"\
+    . These ways of encoding are called NFC & NFD.\n\nWhen you compare strings, they\
+    \ are compared at the byte level, this is why you'll see *false* as the output.\
+    \ To fix this you'll need to use an external library called golang.org/x/text/unicode/norm.\n\
+    \n### Listing 26. two_cities_nfc.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\
+    \n\n\t\"golang.org/x/text/unicode/norm\"\n)\n\nfunc main() {\n\tcity1, city2 :=\
+    \ \"Kraków\", \"Kraków\"\n```\n"
+  mdcn: "\n\nimplements `fmt.Stringer`, `fmt.Printf` will use it instead of the default\
+    \ output.\n\nIf you change the definition in line 11 to `Time time.Time`, you\
+    \ will see the expected output of `{Hello 2009-11-10 00:00:00 +0000 UTC}`.\n\n\
+    You can also embed interfaces in Go, see the definition of `io.ReadWriter` for\
+    \ example.\n\n## 11.1. Further Reading\n\n- Fun With Flags on the Gopher Academy\
+    \ Blog\n- Embedding in Effective Go\n- Methods, Interfaces and Embedded Types\
+    \ in Go on ArdanLabs blog\n\n## 12. A FUNKY NUMBER?\n\n### Listing 18. num.go\n\
+    \n```go\npackage main\nimport (\n\t\"fmt\"\n)\nfunc main() {\n\tfmt.Println(0x1p-2)\n\
+    }\n```\n\n> Try to guess what the output is before moving to the next page.\n\n\
+    Go has several number types, the two main ones are:\n\n### Integers\n\nThese are\
+    \ whole numbers. Go has `int8`, `int16`, `int32`, `int64` and `int`.[8]. There\
+    \ are also all the unsigned ones `uint8`...\n\n### Floats\n\nThese are real numbers.\
+    \ Go has `float32` and `float64`.\n\nThere are other types such as complex, and\
+    \ the various types defined in math/big.\n\nWhen you write a number literal, such\
+    \ as `3.14`, the Go compiler needs to parse it to a specific type (`float64` in\
+    \ this case). The Go spec defines how you can write numbers. Let's have a look\
+    \ at some examples:\n\n### Listing 19. num_lit.go\n\n```go\npackage main\n\nimport\
+    \ (\n\t\"fmt\"\n)\n\nfunc main() {\n\t// Integer\n\tprintNum(10) // 10 of type\
+    \ int\n\tprintNum(010) // 8 of type int\n\tprintNum(0x10) // 16 of type int\n\t\
+    printNum(0b10) // 2 of type int\n\tprintNum(1_000) // 1000 of type int ①\n\n\t\
+    // Float\n\tprintNum(3.14) // 3.14 of type float64\n\tprintNum(.2) // 0.2 of type\
+    \ float64\n\tprintNum(1e3) // 1000 of type float64 ②\n\tprintNum(0x1p-2) // 0.25\
+    \ of type float64 ③\n\n\t// Complex\n\tprintNum(1i) // (0+1i) of type complex128\n\
+    \tprintNum(3 + 7i) // (3+7i) of type complex128\n\tprintNum(1 + 0i) // (1+0i)\
+    \ of type complex128\n}\n\nfunc printNum(n interface{}) {\n\tfmt.Printf(\"%v of\
+    \ type %T\\n\", n, n)\n}\n```\n\n- ① _ serves as the thousands separator. It makes\
+    \ big numbers much more readable for us humans.\n- ② This is known as scientific\
+    \ notation\n- ③ The current brain teaser\n\n0x1p-2 is called \"a hexadecimal floating-point\
+    \ literal\" in the Go specification and is following the IEEE 754 2008 specification.\
+    \ To calculate the value:\n\n- Compute the value before the p as a hexadecimal\
+    \ number. In this example it's: 0x1 [9] = 1\n- Compute the value after the p as\
+    \ \"2 to the power of that value\". In this example it's: 2^-2 = 0.25 [10]\n-\
+    \ Finally multiply the two numbers. In this example: 1 * 0.25 = 0.25\n\n## 12.1.\
+    \ Further Reading\n\n- IEEE 754 specification\n- Integer literals\n- Floating\
+    \ point literals\n- Imaginary literals\n\n- 8 int is an alias to your system integer\
+    \ size, 64 on my machine.\n- 9 One in hexadecimal.\n- 10 Remember your high school\
+    \ math: 2^-2 = 1/2^2.\n\n## 13. FREE RANGE INTEGERS\n\n### Listing 20. range.go\n\
+    \n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc fibs(n int) chan int {\n\
+    \tch := make(chan int)\n\n\tgo func() {\n\t\ta, b := 1, 1\n\t\tfor i := 0; i <\
+    \ n; i++ {\n\t\t\tch <- a\n\t\t\ta, b = b, a+b\n\t\t}\n\t}()\n\n\treturn ch\n\
+    }\n\nfunc main() {\n\tfor i := range fibs(5) {\n\t\tfmt.Printf(\"%d \", i)\n\t\
+    }\n\tfmt.Println()\n}\n```\n\nTry to guess what the output is before moving to\
+    \ the next page.\n\nThis code will deadlock.\n\nTo get a value from a channel,\
+    \ you can either use the receive operator (<-ch) or do a for loop with a range\
+    \ on the channel - consuming everything from it.\n\nHow does range know when there\
+    \ are no more values in the channel? It waits for the channel to be closed. The\
+    \ problem in the above script is that the goroutine does not close the channel.\n\
+    \n### Listing 21. range_close.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\
+    \n)\n\nfunc fibs(n int) chan int {\n\tch := make(chan int)\n\n\tgo func() {\n\t\
+    \tdefer close(ch) ①\n\t\ta, b := 1, 1\n\t\tfor i := 0; i < n; i++ {\n\t\t\tch\
+    \ <- a\n\t\t\ta, b = b, a+b\n\t\t}\n\t}()\n\n\treturn ch\n}\n\nfunc main() {\n\
+    \tfor i := range fibs(5) {\n\t\tfmt.Printf(\"%d \", i)\n\t}\n\tfmt.Println()\n\
+    }\n```\n\n① The fix - close the channel when the goroutine exits\n\nWhat range\
+    \ does when iterating over a channel is something like:\n\n### Listing 22. range_rcv.go\n\
+    \n```go\nfunc main() {\n\tch := fibs(5)\n\tfor {\n\t\ti, ok := <-ch\n\t\tif !ok\
+    \ {\n\t\t\tbreak\n\t\t}\n\t}\n\tfmt.Printf(\"%d \", i)\n}\n```\n\nWhen you use\
+    \ this method to create iterators, you need to beware of goroutine leaks. If you\
+    \ create ch := fibs(3) and then consume only one or two values from it, the goroutine\
+    \ inside fibs will be blocked on sending to the channel. Since there’s a reference\
+    \ to the channel, the garbage collector won’t reclaim it. As Dave Cheney says:\
+    \ \"Never start a goroutine without knowing how it will finish.\"\n\nThe common\
+    \ practice is to pass a done channel or a context. This will complicate the code\
+    \ a bit but you’ll have control over stopping goroutines will avoid goroutine\
+    \ leaks.\n\n### Listing 23. range_ctx.go\n\n```go\npackage main\n\nimport (\n\t\
+    \"context\"\n\t\"fmt\"\n)\n\nfunc fibs(ctx context.Context, n int) chan int {\n\
+    \tch := make(chan int)\n\tgo func() {\n\t\tdefer close(ch)\n\t\ta, b := 1, 1\n\
+    \t\tfor i := 0; i < n; i++ {\n\t\t\tselect {\n\t\t\tcase ch <- a:\n\t\t\t\ta,\
+    \ b = b, a+b\n\t\t\tcase <-ctx.Done():\n\t\t\t\tfmt.Println(\"cancelled\")\n\t\
+    \t\t}\n\t\t}\n\t}()\n\n\treturn ch\n}\n\nfunc main() {\n\tctx, cancel := context.WithCancel(context.Background())\n\
+    \tch := fibs(ctx, 5)\n\tfor i := 0; i < 3; i++ {\n\t\tval := <-ch\n\t\tfmt.Printf(\"\
+    %d \", val)\n\t}\n\tfmt.Println()\n\tcancel()\n}\n```\n\n## 13.1. Further Reading\n\
+    \n- Go Concurrency Patterns: Context on the Go blog\n- Go Concurrency Patterns:\
+    \ Pipelines and cancellation on the Go blog\n- The context package\n- Concurrency\
+    \ chapter in Practical Go by Dave Cheney\n\n## 14. MULTIPLE PERSONALITIES\n\n\
+    ### Listing 24. multi_assign.go\n\n```go\npackage main\nimport (\n\t\"fmt\"\n\
+    )\nfunc main() {\n\ta, b := 1, 2\n\tb, c := 3, 4\n\tfmt.Println(a, b, c)\n}\n\
+    ```\n\nTry to guess what the output is before moving to the next page.\n\nThis\
+    \ code will print: 1 3 4\n\nGo’s short variable declaration (:=) can be used in\
+    \ a \"multi values\" context - where there is more than one variable on the left\
+    \ side.\n\nIf all variables on the left are new - you’re good.\n\n```go\na, b\
+    \ := 1, 2\n```\n\nIf you have no new variables, you’ll get a compilation error.\n\
+    \n```go\na, b := 1, 2\na, b := 2, 3 // error: no new variables on left side of\
+    \ :=\n```\n\nWhen there’s a mix, like in this teaser - you’re still good as long\
+    \ as the types match. In this case, when you do:\n\n```go\nb, c := 3, 4\n```\n\
+    \nb is an existing variable, and the type of 3 which is int matches the current\
+    \ type of b - OK here. c is a new variable, making this statement OK.\n\n## 14.1.\
+    \ Further Reading\n\n- Short variable declaration in the Go tour\n- Constant declarations\
+    \ in the Go specification.\n\n## 15. A TALE OF TWO CITIES\n\n### Listing 25. two_cities.go\n\
+    \n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tcity1\n```\n\
+    \nThis code will print: false\n\nYour eyesight is OK, these two strings *look*\
+    \ the same. However if you'll print the length of each variable, the length of\
+    \ `city1` will be 7 and the length of `city2` will be 8.\n\nIn When in Kraków\
+    \ we talked about the fact that Go's strings are UTF-8 encoded byte slices. UTF-8\
+    \ has many features, and some \"characters\" (runes) are not for display but for\
+    \ control. For example, text direction - sometimes called bidi.\n\n`city1` has\
+    \ a one-byte rune at position 4 (ó), while `city2` has the `o` rune in position\
+    \ 4 and a control character saying \"add an umlaut to the previous character\"\
+    . These ways of encoding are called NFC & NFD.\n\nWhen you compare strings, they\
+    \ are compared at the byte level, this is why you'll see *false* as the output.\
+    \ To fix this you'll need to use an external library called golang.org/x/text/unicode/norm.\n\
+    \n### Listing 26. two_cities_nfc.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\
+    \n\n\t\"golang.org/x/text/unicode/norm\"\n)\n\nfunc main() {\n\tcity1, city2 :=\
+    \ \"Kraków\", \"Kraków\"\n```\n\n"
+  merge: 1
+- raw:
+  - '[PAGE 76]
+
+
+    ```
+
+    11      city1, city2 = norm.NFC.String(city1),
+
+    12      norm.NFC.String(city2)
+
+    13      fmt.Println(city1 == city2)
+
+    }
+
+    ```
+
+
+    Make sure to normalize all text you''re working with it to a single form (e.g.
+
+    NFC).
+
+
+    The golang.org/x packages are not in the standard library but maintained
+
+    by the Go core developers (and friends). There are many useful libraries
+
+    under golang.org/x, I recommend investing some time getting to know
+
+    them.
+
+
+    For example, golang.org/x/text/transform has a NewReader
+
+    function that returns an io.Reader that will convert everything it reads to a
+
+    normal form.'
+  - '[PAGE 77]
+
+
+    # 15.1. Further Reading
+
+
+    +   - Unicode equivalence on Wikipedia
+
+
+    +   - Strings, bytes, runes and characters in Go at the Go blog
+
+
+    +   - UTF-8 on Wikipedia'
+  - "[PAGE 78]\n\n# 16. WHAT'S IN A CHANNEL?\n\nListing 27. chan.go\n\n```\npackage\
+    \ main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tch := make(chan int, 2)\n\
+    \tch <- 1\n\tch <- 2\n\t<-ch\n\tclose(ch)\n\ta := <-ch\n\tb := <-ch\n\tfmt.Println(a,\
+    \ b)\n}\n```\n\nTry to guess what the output is before moving to the next page."
+  - "[PAGE 79]\n\nThis code will print: 2 0\n\nch is a buffered channel with a capacity\
+    \ of 2 (you can check this with cap(ch)). You send two values to ch - 1 & 2. If\
+    \ you try to send another one - you'll get a deadlock.\n\nYou then receive a value\
+    \ from ch, close it and receive two more values from it. The question is - what\
+    \ happens when you receive from a closed channel?\n\nThe answer is that if there\
+    \ are values in the buffer - you will get them, otherwise, you will get the zero\
+    \ value for the channel type. This is why a gets the value of 2 which was in the\
+    \ buffer, and b gets 0 which is the zero value for int.\n\nHow can you know if\
+    \ a value you got from a channel is a value that was actually there or a zero\
+    \ value since the channel was closed? With the usual \"comma, ok\" paradigm.\n\
+    \nListing 28. chan_empty.go\n\n```\n```go\npackage main\n\nimport (\n\t\"fmt\"\
+    \n)\n\nfunc main() {\n\tch := make(chan int, 1)\n\tch <- 1\n\ta, ok := <-ch\n\t\
+    fmt.Println(a, ok) // 1 true\n}\n```\n```"
+  - '[PAGE 80]
+
+
+    ```
+
+    12 close(ch)
+
+    13 b, ok := <-ch
+
+    14 fmt.Println(b, ok) // 0 false
+
+    15 }
+
+    ```'
+  - '[PAGE 81]
+
+
+    # 16.1. Further Reading
+
+
+    +   - Buffered Channels in the Go tour
+
+
+    +   - Channels in Effective Go
+
+
+    +   - Why are there nil channels in Go? in justforfunc'
+  - "[PAGE 82]\n\n# # 17. AN INTERSTING STRING\n\nListing 29. strint.go\n\n```\npackage\
+    \ main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\ti := 169\n\ts := string(i)\n\
+    \tfmt.Println(s)\n}\n```\n\nTry to guess what the output is before moving to the\
+    \ next page."
+  - "[PAGE 83]\n\nThe string type supports type conversion from int, it’ll treat this\
+    \ integer as a rune. The rune 169 is the copyright sign (©). People who make this\
+    \ mistake usually comes from languages such as Python where str(169) → \"169\"\
+    .\n\nIf you want to convert a number to a string (or a string to a number), use\
+    \ the strconv package:\n\nListing 30. strint_conv.go\n\n```\npackage main\n\n\
+    import (\n\t\"fmt\"\n\t\"strconv\"\n)\n\nfunc main() {\n\ti := 169\n\ts := strconv.Itoa(i)\n\
+    \tfmt.Println(s)\n}\n```\n\nStrings also support type conversion from a byte slice:\n\
+    \nListing 31. strint_byte.go\n\n```\npackage main\n\nimport (\n\n```"
+  - '[PAGE 84]
+
+
+    ```
+
+    4 | "fmt"
+
+    5 | )
+
+    6 |
+
+    7 | func main() {
+
+    8 | data := []byte{''1'', ''2'', ''9''}
+
+    9 | s := string(data)
+
+    10 | fmt.Println(s) // 129
+
+    11 | }
+
+    ```
+
+
+    When you convert from byte slice to string, Go will copy the byte slice - which
+    does a memory allocation. In maps, where you can’t use a []byte as a key, there
+    is a compiler optimization:
+
+
+    # Listing 32. strint_map.go
+
+
+    ```
+
+    1 | package main
+
+    2 |
+
+    3 | import (
+
+    4 | "fmt"
+
+    5 | )
+
+    6 |
+
+    7 | func main() {
+
+    8 | m := map[string]int{
+
+    9 | "hello": 3,
+
+    10 | }
+
+    11 | key := []byte{''h'', ''e'', ''l'', ''l'', ''o''}
+
+    12 | val := m[string(key)] // no memory allocation
+
+    13 | fmt.Println(val) // 3
+
+    14 | }
+
+    ```'
+  - '[PAGE 85]
+
+
+    # 17.1. Further Reading
+
+
+    +   - stronv package
+
+    +   - runenames in golang.org/x
+
+    +   - Using [byte as map key^] from Dave Cheney''s "High Performance Go Workshop"'
+  - "[PAGE 86]\n\n# 18. A JOB TO DO\n\nListing 33. job.go\n\n```\npackage main\n\n\
+    import (\n\t\"fmt\"\n)\n\ntype Job struct {\n\tState string\n\tdone chan struct{}\n\
+    }\n\nfunc (j *Job) Wait() {\n\t<-j.done\n}\n\nfunc (j *Job) Done() {\n\tj.State\
+    \ = \"done\"\n\tclose(j.done)\n}\n\nfunc main() {\n\tch := make(chan Job)\n\t\
+    go func() {\n\t\tj := <-ch\n\t\tj.Done()\n\t}()\n\n\tjob := Job{\"ready\", make(chan\
+    \ struct{})}\n```"
+  - '[PAGE 87]
+
+
+    ```
+
+    29 | ch <- job
+
+    30 | job.Wait()
+
+    31 | fmt.Println(job.State)
+
+    32 | }
+
+    ```
+
+
+    Try to guess what the output is before moving to the next page.'
+  - "[PAGE 88]\n\nThis code will print: ready\n\nAt first glance, it looks like the\
+    \ code is OK. You’re using a pointer receiver in the **Job** struct methods. The\
+    \ fact that the call to **Wait** returned tells you that the channel was closed.\n\
+    \nThe problem is with the definition of **ch**. It is a channel of **Job**, not\
+    \ **\\*Job**, which means that when you send the variable **job** over the channel,\
+    \ you actually send a copy of it. A channel in Go is a \"pointer like\" type,\
+    \ so even though there is a copy of **job** inside the goroutine, **j.done** points\
+    \ to the same channel **job.done** is pointing to.\n\nStrings in Go are not \"\
+    pointer like\". When you call **j.Done()** inside the goroutine, you change the\
+    \ value of the **State** field in the goroutine copy of **job**. This change is\
+    \ not reflected in the **job** variable declared in line 28.\n\nThe solution is\
+    \ to make ch type **\\*Job**\n\n_Listing 34. job_ptr.go_\n\n```\npackage main\n\
+    \nimport (\n\t\"fmt\"\n)\n\ntype Job struct {\n\tState string\n\tdone chan struct{}\n\
+    }\n```"
+  - "[PAGE 89]\n\n```\nfunc (j *Job) Wait() {\n\t<-j.done\n}\n\nfunc (j *Job) Done()\
+    \ {\n\tj.State = \"done\"\n\tclose(j.done)\n}\n\nfunc main() {\n\tch := make(chan\
+    \ *Job)\n\tgo func() {\n\t\tj := <-ch\n\t\tj.Done()\n\t}()\n\n\tjob := Job{\"\
+    ready\", make(chan struct{})}\n\tch <- &job\n\tjob.Wait()\n\tfmt.Println(job.State)\n\
+    }\n```"
+  - '[PAGE 90]
+
+
+    # 18.1. Further Reading
+
+
+    +   - There is no pass-by-reference in Go
+
+    +   - Channel types in the Go specification
+
+    +   - Go Concurrency Patterns: Pipelines and cancellation
+
+    +   - Channels in the Go tour'
+  - "[PAGE 91]\n\n# 19. TO ERR OR NOT TO ERR\n\n+   Listing 35. error.go\n\n```\n\
+    package main\n\nimport (\n\t\"fmt\"\n)\n\ntype OSError int\n\nfunc (e *OSError)\
+    \ Error() string {\n\treturn fmt.Sprintf(\"error #%d\", *e)\n}\n\nfunc FileExists(path\
+    \ string) (bool, error) {\n\tvar err *OSError\n\treturn false, err // TODO\n}\n\
+    \nfunc main() {\n\tif _, err := FileExists(\"/no/such/file\"); err != nil {\n\t\
+    \tfmt.Printf(\"error: %s\\n\", err)\n\t} else {\n\t\tfmt.Println(\"OK\")\n\t}\n\
+    }\n```"
+  - '[PAGE 92]
+
+
+    Try to guess what the output is before moving to the next page.'
+  - "[PAGE 93]\n\nThis code will print: error: <nil>\n\nThe if statement in line 19\
+    \ says that err != nil, but err prints out as <nil>. Further more err in line\
+    \ 14 is not initialized, meaning it has the zero value for a pointer - which is\
+    \ nil.\n\nIf you'll look at src/runtime/runtime2.go you'll see the following definition:\n\
+    \n```\ntype iface struct {\n    tab    *itab\n    data   unsafe.Pointer\n}\n```\n\
+    \n+   - itab describes the interface\n\n+   - data is a pointer to the value that\
+    \ implements the interface\n\nAn interface is considered nil only if both itab\
+    \ and data are nil, which is not the case here.\n\nThe solution is **always**\
+    \ to use variables of type error when returning errors.\nIn this case change line\
+    \ 14 to `var err error`."
+  - '[PAGE 94]
+
+
+    # 19.1. Further Reading
+
+
+    +   - Interfaces in go-internals book
+
+
+    +   - Go Data Structures: Interfaces by Russ Cox'
+  - "[PAGE 95]\n\n# 20. WHAT'S IN A STRING?\n\nListing 36. runes.go\n\n```\npackage\
+    \ main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tmsg := \"π = 3.14159265358...\"\
+    \n\tfmt.Printf(\"%T \", msg[0])\n\tfor _, c := range msg {\n\t\tfmt.Printf(\"\
+    %T\\n\", c)\n\t\tbreak\n\t}\n}\n```\n\n> Try to guess what the output is before\
+    \ moving to the next page."
+  - '[PAGE 96]
+
+
+    This code will print: uint8 int32 footnote:[The %T verb prints the type of
+
+
+    the parameter.]
+
+
+    Go strings are UTF-8 encoded. When you access a string with [] or with len, Go
+    will access the underlying []byte. byte is a type in Go that''s aliased to uint8.
+
+
+    When you iterate over a string in Go, you will get the Unicode character - called
+    rune which is an alias to int32. This is due to the fact the characters in UTF-8
+    can be up to 4 bytes.
+
+
+    If you print a rune using the %v verb, you''ll see the numeric value. Use the
+    %c verb to display the character. If you see ? or other characters instead of
+    the rune you''re trying to print, it means the current font does not support it.
+    There''s no single font that can display all fonts in the Unicode specification.
+
+
+    There are several ways to write rune literal, let''s have a look:'
+  md: "\ncity1, city2 = norm.NFC.String(city1),\nnorm.NFC.String(city2)\nfmt.Println(city1\
+    \ == city2)\n}\n\nMake sure to normalize all text you're working with it to a\
+    \ single form (e.g. NFC).\n\nThe golang.org/x packages are not in the standard\
+    \ library but maintained by the Go core developers (and friends). There are many\
+    \ useful libraries under golang.org/x, I recommend investing some time getting\
+    \ to know them.\n\nFor example, golang.org/x/text/transform has a NewReader function\
+    \ that returns an io.Reader that will convert everything it reads to a normal\
+    \ form.\n\n### 15.1. Further Reading\n\n- Unicode equivalence on Wikipedia\n-\
+    \ Strings, bytes, runes and characters in Go at the Go blog\n- UTF-8 on Wikipedia\n\
+    \n## 16. WHAT'S IN A CHANNEL?\n\nListing 27. chan.go\n\n```go\npackage main\n\n\
+    import (\n\t\"fmt\"\n)\n\nfunc main() {\n\tch := make(chan int, 2)\n\tch <- 1\n\
+    \tch <- 2\n\t<-ch\n\tclose(ch)\n\ta := <-ch\n\tb := <-ch\n\tfmt.Println(a, b)\n\
+    }\n```\n\nTry to guess what the output is before moving to the next page.\n\n\
+    This code will print: 2 0\n\nch is a buffered channel with a capacity of 2 (you\
+    \ can check this with cap(ch)). You send two values to ch - 1 & 2. If you try\
+    \ to send another one - you'll get a deadlock.\n\nYou then receive a value from\
+    \ ch, close it and receive two more values from it. The question is - what happens\
+    \ when you receive from a closed channel?\n\nThe answer is that if there are values\
+    \ in the buffer - you will get them, otherwise, you will get the zero value for\
+    \ the channel type. This is why a gets the value of 2 which was in the buffer,\
+    \ and b gets 0 which is the zero value for int.\n\nHow can you know if a value\
+    \ you got from a channel is a value that was actually there or a zero value since\
+    \ the channel was closed? With the usual \"comma, ok\" paradigm.\n\nListing 28.\
+    \ chan_empty.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main()\
+    \ {\n\tch := make(chan int, 1)\n\tch <- 1\n\ta, ok := <-ch\n\tfmt.Println(a, ok)\
+    \ // 1 true\n\tclose(ch)\n\tb, ok := <-ch\n\tfmt.Println(b, ok) // 0 false\n}\n\
+    ```\n\n### 16.1. Further Reading\n\n- Buffered Channels in the Go tour\n- Channels\
+    \ in Effective Go\n- Why are there nil channels in Go? in justforfunc\n\n## 17.\
+    \ AN INTERESTING STRING\n\nListing 29. strint.go\n\n```go\npackage main\n\nimport\
+    \ (\n\t\"fmt\"\n)\n\nfunc main() {\n\ti := 169\n\ts := string(i)\n\tfmt.Println(s)\n\
+    }\n```\n\nTry to guess what the output is before moving to the next page.\n\n\
+    The string type supports type conversion from int, it’ll treat this integer as\
+    \ a rune. The rune 169 is the copyright sign (©). People who make this mistake\
+    \ usually comes from languages such as Python where str(169) → \"169\".\n\nIf\
+    \ you want to convert a number to a string (or a string to a number), use the\
+    \ strconv package:\n\nListing 30. strint_conv.go\n\n```go\npackage main\n\nimport\
+    \ (\n\t\"fmt\"\n\t\"strconv\"\n)\n\nfunc main() {\n\ti := 169\n\ts := strconv.Itoa(i)\n\
+    \tfmt.Println(s)\n}\n```\n\nStrings also support type conversion from a byte slice:\n\
+    \nListing 31. strint_byte.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\
+    \nfunc main() {\n\tdata := []byte{'1', '2', '9'}\n\ts := string(data)\n\tfmt.Println(s)\
+    \ // 129\n}\n```\n\nWhen you convert from byte slice to string, Go will copy the\
+    \ byte slice - which does a memory allocation. In maps, where you can’t use a\
+    \ []byte as a key, there is a compiler optimization:\n\nListing 32. strint_map.go\n\
+    \n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tm := map[string]int{\n\
+    \t\t\"hello\": 3,\n\t}\n\tkey := []byte{'h', 'e', 'l', 'l', 'o'}\n\tval := m[string(key)]\
+    \ // no memory allocation\n\tfmt.Println(val) // 3\n}\n```\n\n### 17.1. Further\
+    \ Reading\n\n- strconv package\n- runenames in golang.org/x\n- Using [byte as\
+    \ map key] from Dave Cheney's \"High Performance Go Workshop\"\n\n## 18. A JOB\
+    \ TO DO\n\nListing 33. job.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n\
+    )\n\ntype Job struct {\n\tState string\n\tdone chan struct{}\n}\n\nfunc (j *Job)\
+    \ Wait() {\n\t<-j.done\n}\n\nfunc (j *Job) Done() {\n\tj.State = \"done\"\n\t\
+    close(j.done)\n}\n\nfunc main() {\n\tch := make(chan Job)\n\tgo func() {\n\t\t\
+    j := <-ch\n\t\tj.Done()\n\t}()\n\n\tjob := Job{\"ready\", make(chan struct{})}\n\
+    \tch <- job\n\tjob.Wait()\n\tfmt.Println(job.State)\n}\n```\n\nTry to guess what\
+    \ the output is before moving to the next page.\n\nThis code will print: ready\n\
+    \nAt first glance, it looks like the code is OK. You’re using a pointer receiver\
+    \ in the **Job** struct methods. The fact that the call to **Wait** returned tells\
+    \ you that the channel was closed.\n\nThe problem is with the definition of **ch**.\
+    \ It is a channel of **Job**, not **\\*Job**, which means that when you send the\
+    \ variable **job** over the channel, you actually send a copy of it. A channel\
+    \ in Go is a \"pointer like\" type, so even though there is a copy of **job**\
+    \ inside the goroutine, **j.done** points to the same channel **job.done** is\
+    \ pointing to.\n\nStrings in Go are not \"pointer like\". When you call **j.Done()**\
+    \ inside the goroutine, you change the value of the **State** field in the goroutine\
+    \ copy of **job**. This change is not reflected in the **job** variable declared\
+    \ in line 28.\n\nThe solution is to make ch type **\\*Job**\n\nListing 34. job_ptr.go\n\
+    \n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\ntype Job struct {\n\tState\
+    \ string\n\tdone chan struct{}\n}\n\nfunc (j *Job) Wait() {\n\t<-j.done\n}\n\n\
+    func (j *Job) Done() {\n\tj.State = \"done\"\n\tclose(j.done)\n}\n\nfunc main()\
+    \ {\n\tch := make(chan *Job)\n\tgo func() {\n\t\tj := <-ch\n\t\tj.Done()\n\t}()\n\
+    \n\tjob := Job{\"ready\", make(chan struct{})}\n\tch <- &job\n\tjob.Wait()\n\t\
+    fmt.Println(job.State)\n}\n```\n\n### 18.1. Further Reading\n\n- There is no pass-by-reference\
+    \ in Go\n- Channel types in the Go specification\n- Go Concurrency Patterns: Pipelines\
+    \ and cancellation\n- Channels in the Go tour\n\n## 19. TO ERR OR NOT TO ERR\n\
+    \nListing 35. error.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\ntype\
+    \ OSError int\n\nfunc (e *OSError) Error() string {\n\treturn fmt.Sprintf(\"error\
+    \ #%d\", *e)\n}\n\nfunc FileExists(path string) (bool, error) {\n\tvar err *OSError\n\
+    \treturn false, err // TODO\n}\n\nfunc main() {\n\tif _, err := FileExists(\"\
+    /no/such/file\"); err != nil {\n\t\tfmt.Printf(\"error: %s\\n\", err)\n\t} else\
+    \ {\n\t\tfmt.Println(\"OK\")\n\t}\n}\n```\n\nTry to guess what the output is before\
+    \ moving to the next page.\n\nThis code will print: error: <nil>\n\nThe if statement\
+    \ in line 19 says that err != nil, but err prints out as <nil>. Further more err\
+    \ in line 14 is not initialized, meaning it has the zero value for a pointer -\
+    \ which is nil.\n\nIf you'll look at src/runtime/runtime2.go you'll see the following\
+    \ definition:\n\n```go\ntype iface struct {\n    tab    *itab\n    data   unsafe.Pointer\n\
+    }\n```\n\n- itab describes the interface\n- data is a pointer to the value that\
+    \ implements the interface\n\nAn interface is considered nil only if both itab\
+    \ and data are nil, which is not the case here.\n\nThe solution is **always**\
+    \ to use variables of type error when returning errors.\nIn this case change line\
+    \ 14 to `var err error`.\n\n### 19.1. Further Reading\n\n- Interfaces in go-internals\
+    \ book\n- Go Data Structures: Interfaces by Russ Cox\n\n## 20. WHAT'S IN A STRING?\n\
+    \nListing 36. runes.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc\
+    \ main() {\n\tmsg := \"π = 3.14159265358...\"\n\tfmt.Printf(\"%T \", msg[0])\n\
+    \tfor _, c := range msg {\n\t\tfmt.Printf(\"%T\\n\", c)\n\t\tbreak\n\t}\n}\n```\n\
+    \nTry to guess what the output is before moving to the next page.\n\nThis code\
+    \ will print: uint8 int32. The %T verb prints the type of the parameter.\n\nGo\
+    \ strings are UTF-8 encoded. When you access a string with [] or with len, Go\
+    \ will access the underlying []byte. byte is a type in Go that's aliased to uint8.\n\
+    \nWhen you iterate over a string in Go, you will get the Unicode character - called\
+    \ rune which is an alias to int32. This is due to the fact the characters in UTF-8\
+    \ can be up to 4 bytes.\n\nIf you print a rune using the %v verb, you'll see the\
+    \ numeric value. Use the %c verb to display the character. If you see ? or other\
+    \ characters instead of the rune you're trying to print, it means the current\
+    \ font does not support it. There's no single font that can display all fonts\
+    \ in the Unicode specification.\n\nThere are several ways to write rune literal,\
+    \ let's have a look:\n"
+  mdcn: "\n\ncity1, city2 = norm.NFC.String(city1),\nnorm.NFC.String(city2)\nfmt.Println(city1\
+    \ == city2)\n}\n\n确保将你正在处理的所有文本都归一化为单一形式（例如 NFC）。\n\ngolang.org/x 包不在标准库中，而是由\
+    \ Go 核心开发者（及其朋友）维护。golang.org/x 下有许多有用的库，我建议花一些时间了解它们。\n\n例如，golang.org/x/text/transform\
+    \ 有一个 NewReader 函数，它返回一个 io.Reader，会将读取的所有内容转换为标准形式。\n\n### 15.1. 延伸阅读\n\n- 维基百科上的\
+    \ Unicode 等价性\n- Go 博客中的字符串、字节、字符码点与字符\n- 维基百科上的 UTF-8\n\n## 16. 通道里有什么？\n\n清单\
+    \ 27. chan.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main()\
+    \ {\n\tch := make(chan int, 2)\n\tch <- 1\n\tch <- 2\n\t<-ch\n\tclose(ch)\n\t\
+    a := <-ch\n\tb := <-ch\n\tfmt.Println(a, b)\n}\n```\n\n在进入下一页之前，试着猜猜输出是什么。\n\n\
+    这段代码将打印：2 0\n\nch 是一个容量为 2 的带缓冲通道（可以用 cap(ch) 检查）。你向 ch 发送两个值 - 1 和 2。如果尝试再发送一个\
+    \ - 会发生死锁。\n\n然后你从 ch 接收一个值，关闭它，再从中接收两个值。问题是 - 从已关闭的通道接收时会发生什么？\n\n答案是：如果缓冲区中有值\
+    \ - 你会得到它们，否则，你会得到通道类型的零值。这就是为什么 a 得到缓冲区中的值 2，而 b 得到 int 类型的零值 0。\n\n你怎么知道从通道中得到的值是实际存在的值，还是因为通道已关闭而得到的零值？使用常见的“逗号,\
+    \ ok”模式。\n\n清单 28. chan_empty.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\
+    \n)\n\nfunc main() {\n\tch := make(chan int, 1)\n\tch <- 1\n\ta, ok := <-ch\n\t\
+    fmt.Println(a, ok) // 1 true\n\tclose(ch)\n\tb, ok := <-ch\n\tfmt.Println(b, ok)\
+    \ // 0 false\n}\n```\n\n### 16.1. 延伸阅读\n\n- Go 之旅中的带缓冲通道\n- 《Effective Go》中的通道\n\
+    - justforfunc 中的“为什么 Go 中有 nil 通道？”\n\n## 17. 一个有趣的字符串\n\n清单 29. strint.go\n\n\
+    ```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\ti := 169\n\t\
+    s := string(i)\n\tfmt.Println(s)\n}\n```\n\n在进入下一页之前，试着猜猜输出是什么。\n\nstring 类型支持从\
+    \ int 进行类型转换，它会将此整数视为一个 rune。字符码点 169 是版权符号（©）。通常犯此错误的人来自 Python 等语言，在 Python\
+    \ 中 str(169) → \"169\"。\n\n如果要将数字转换为字符串（或将字符串转换为数字），请使用 strconv 包：\n\n清单 30. strint_conv.go\n\
+    \n```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strconv\"\n)\n\nfunc main()\
+    \ {\n\ti := 169\n\ts := strconv.Itoa(i)\n\tfmt.Println(s)\n}\n```\n\n字符串也支持从字节切片进行类型转换：\n\
+    \n清单 31. strint_byte.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc\
+    \ main() {\n\tdata := []byte{'1', '2', '9'}\n\ts := string(data)\n\tfmt.Println(s)\
+    \ // 129\n}\n```\n\n当从字节切片转换为字符串时，Go 会复制字节切片 - 这会进行内存分配。在映射中，你不能使用 []byte 作为键，存在一个编译器优化：\n\
+    \n清单 32. strint_map.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc\
+    \ main() {\n\tm := map[string]int{\n\t\t\"hello\": 3,\n\t}\n\tkey := []byte{'h',\
+    \ 'e', 'l', 'l', 'o'}\n\tval := m[string(key)] // no memory allocation\n\tfmt.Println(val)\
+    \ // 3\n}\n```\n\n### 17.1. 延伸阅读\n\n- strconv 包\n- golang.org/x 中的 runenames\n\
+    - 使用[byte 作为映射键]，来自 Dave Cheney 的《高性能 Go 工作坊》\n\n## 18. 一份工作要做\n\n清单 33. job.go\n\
+    \n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\ntype Job struct {\n\tState\
+    \ string\n\tdone chan struct{}\n}\n\nfunc (j *Job) Wait() {\n\t<-j.done\n}\n\n\
+    func (j *Job) Done() {\n\tj.State = \"done\"\n\tclose(j.done)\n}\n\nfunc main()\
+    \ {\n\tch := make(chan Job)\n\tgo func() {\n\t\tj := <-ch\n\t\tj.Done()\n\t}()\n\
+    \n\tjob := Job{\"ready\", make(chan struct{})}\n\tch <- job\n\tjob.Wait()\n\t\
+    fmt.Println(job.State)\n}\n```\n\n在进入下一页之前，试着猜猜输出是什么。\n\n这段代码将打印：ready\n\n乍一看，代码似乎没问题。你在\
+    \ **工作** 结构体的方法中使用了指针接收器。**等待** 调用返回这一事实表明通道已关闭。\n\n问题出在 **ch** 的定义上。它是 **工作**\
+    \ 类型的通道，而不是 **\\*工作**，这意味着当你将变量 **job** 发送过通道时，你实际发送的是它的副本。在 Go 中，通道是一种“指针类”类型，因此即使\
+    \ goroutine 内部有一份 **job** 的副本，**j.done** 指向的通道与 **job.done** 指向的通道是同一个。\n\nGo\
+    \ 中的字符串不是“指针类”。当你在 goroutine 内部调用 **j.Done()** 时，你会修改 goroutine 中 **job** 副本的\
+    \ **状态** 字段的值。此更改不会反映在第 28 行声明的 **job** 变量中。\n\n解决方法是将 ch 的类型设为 **\\*工作**\n\n\
+    清单 34. job_ptr.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\ntype Job\
+    \ struct {\n\tState string\n\tdone chan struct{}\n}\n\nfunc (j *Job) Wait() {\n\
+    \t<-j.done\n}\n\nfunc (j *Job) Done() {\n\tj.State = \"done\"\n\tclose(j.done)\n\
+    }\n\nfunc main() {\n\tch := make(chan *Job)\n\tgo func() {\n\t\tj := <-ch\n\t\t\
+    j.Done()\n\t}()\n\n\tjob := Job{\"ready\", make(chan struct{})}\n\tch <- &job\n\
+    \tjob.Wait()\n\tfmt.Println(job.State)\n}\n```\n\n### 18.1. 延伸阅读\n\n- Go 中不存在按引用传递\n\
+    - Go 规范中的通道类型\n- Go 并发模式：管道和取消\n- Go 之旅中的通道\n\n## 19. 报错与否\n\n清单 35. error.go\n\
+    \n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\ntype OSError int\n\nfunc (e\
+    \ *OSError) Error() string {\n\treturn fmt.Sprintf(\"error #%d\", *e)\n}\n\nfunc\
+    \ FileExists(path string) (bool, error) {\n\tvar err *OSError\n\treturn false,\
+    \ err // TODO\n}\n\nfunc main() {\n\tif _, err := FileExists(\"/no/such/file\"\
+    ); err != nil {\n\t\tfmt.Printf(\"error: %s\\n\", err)\n\t} else {\n\t\tfmt.Println(\"\
+    OK\")\n\t}\n}\n```\n\n在进入下一页之前，试着猜猜输出是什么。\n\n这段代码将打印：error: <nil>\n\n第 19 行的 if\
+    \ 语句表示 err != nil，但 err 打印出来却是 <nil>。此外，第 14 行的 err 未初始化，这意味着它的值为指针的零值——即 nil。\n\
+    \n如果你查看 src/runtime/runtime2.go，会看到以下定义：\n\n```go\ntype iface struct {\n    tab\
+    \    *itab\n    data   unsafe.Pointer\n}\n```\n\n- itab 描述接口\n- data 是指向实现该接口的值的指针\n\
+    \n仅当 itab 和 data 都为 nil 时，接口才被视为 nil，而此处并非这种情况。\n\n解决方法是**始终**在返回错误时使用 error 类型的变量。\n\
+    \n在此情形下，将第 14 行更改为 `var err error`。\n\n### 19.1. 延伸阅读\n\n- go-internals 书中的接口\n\
+    - Russ Cox 所著《Go 数据结构：接口》\n\n## 20. 字符串里有什么？\n\n清单 36. runes.go\n\n```go\npackage\
+    \ main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tmsg := \"π = 3.14159265358...\"\
+    \n\tfmt.Printf(\"%T \", msg[0])\n\tfor _, c := range msg {\n\t\tfmt.Printf(\"\
+    %T\\n\", c)\n\t\tbreak\n\t}\n}\n```\n\n在进入下一页之前，试着猜猜输出是什么。\n\n这段代码将打印：uint8 int32。%T\
+    \ 动词打印参数的类型。\n\nGo 字符串采用 UTF-8 编码。当你使用 [] 或 len 访问字符串时，Go 会访问底层的 []byte。byte 是\
+    \ Go 中的一个类型，是 uint8 的别名。\n\n在 Go 中遍历字符串时，你会得到 Unicode 字符 - 称为 rune，它是 int32 的别名。这是因为\
+    \ UTF-8 中的字符最多可占 4 个字节。\n\n如果使用 %v 动词打印 rune，你会看到其数值。使用 %c 动词显示字符。如果你看到 ? 或其他字符，而非你想打印的\
+    \ rune，这意味着当前字体不支持它。没有一种字体能显示 Unicode 规范中的所有字符。\n\n编写 rune 字面量有多种方法，让我们看一下：\n\n"
+  merge: 1
+- raw:
+  - "[PAGE 97]\n\n# 20.1. Further Reading\n\nListing 37. runes_lit.go\n\n```\npackage\
+    \ main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tr1 := '™'\n\tfmt.Println(r1)\
+    \ // 8482\n\tfmt.Printf(\"%c\\n\", r1) // ™\n\n\tr2 := '\\x61' // \\x - 2 digits\n\
+    \tfmt.Printf(\"%c\\n\", r2) // a\n\n\tr3 := '\\u2122' // \\u - 4 digits (8482\
+    \ in hex)\n\tfmt.Printf(\"%c\\n\", r3) // ™\n\n\tr4 := '\\U00002122' // \\U -\
+    \ 8 digits\n\tfmt.Printf(\"%c\\n\", r4) // ™\n}\n```\n\n+   - Strings, bytes,\
+    \ runes and characters in Go from the Go blog\n+   - Unicode and You\n+   - Unicode\
+    \ entry in Wikipedia\n+   - Rune literals in the Go specification\n+   - Unicode®\
+    \ Character Table"
+  - "[PAGE 98]\n\n# 21. A DOUBLE TAKE\n\nListing 38. init.go\n\n```\n```go\npackage\
+    \ main\n\nimport (\n \"fmt\"\n)\n\nfunc init() {\n fmt.Printf(\"A \")\n}\n\nfunc\
+    \ init() {\n fmt.Print(\"B \")\n}\n\nfunc main() {\n fmt.Println()\n}\n```\n```\n\
+    \nTry to guess what the output is before moving to the next page."
+  - '[PAGE 99]
+
+
+    ```
+
+    This code will print: A B
+
+    ```
+
+
+    Normally, the Go compiler will not let you define two functions with the same
+    name in the same package. However init is special. Here''s what the documentation
+    says:
+
+
+    > Multiple such functions may be defined per package, even within a single source
+    file. In the package block, the init identifier can be used only to declare init
+    functions, yet the identifier itself is not declared. Thus init functions cannot
+    be referred to from anywhere in a program.
+
+
+    init is the final stage in package initialization after imported modules are initialized
+    and package-level variables are initialized.
+
+
+    Since you can initialize package-level variables with function calls, save init
+    for special cases. Also try to avoid package level variables as much as you can.
+    I seldom write init functions and prefer to do initialization in main where I
+    have better control on order of initialization, error handling and logging.
+
+
+    One of the problems with package-level variables or init is that you can’t return
+    error values. If you have an error in init, the best course of action is to panic
+    and not to continue execution in a bad state. To support that, some of'
+  - '[PAGE 100]
+
+
+    the Go packages provide a Must version of their New functions. For example, the
+    regexp package has MustCompile.
+
+
+    *MustCompile is like Compile but panics if the expression cannot be parsed. It
+    simplifies safe initialization of global variables holding compiled regular expressions.*
+
+
+    Try to think about your types and if you should provide a Must function for them
+    as well.'
+  - '[PAGE 101]
+
+
+    # 21.1. Further Reading
+
+
+    +   - The init function in Effective Go
+
+    +   - Package Initialization in the Go Specification
+
+    +   - Removing package scoped variables, in practice by Dave Cheney
+
+    +   - Writing Deployable Code (part two) by Ran Tavory'
+  - "[PAGE 102]\n\n# 22. COUNT ME A MILLION\n\nListing 39. count.go\n\n```\npackage\
+    \ main\n\nimport (\n\t\"fmt\"\n\t\"sync\"\n)\n\nfunc main() {\n\tvar count int\n\
+    \tvar wg sync.WaitGroup\n\n\tfor i := 0; i < 1_000_000; i++ {\n\t\twg.Add(1)\n\
+    \t\tgo func() {\n\t\t\tdefer wg.Done()\n\t\t\tcount++\n\t\t}()\n\t}\n\n\twg.Wait()\n\
+    \tfmt.Println(count)\n}\n```\n\nTry to guess what the output is before moving\
+    \ to the next page."
+  - "[PAGE 103]\n\nThis code will print: 891239 [11]\n\nWhat you have here is a race\
+    \ condition. The operation to increment an integer is not atomic, meaning the\
+    \ code can get interrupted mid-operation. On top of that there is the memory barrier\
+    \ - to speed things up, modern computers have a CPU cache where they try to fetch\
+    \ values from before going the long way to main memory.\n\nIf you look at the\
+    \ assembly output of count.go.[12] you'll see the code generated for count++ on\
+    \ line 16.\n\n```\n0x0045 00069 (count.go:16)    PCDATA  $0, $1\n0x0045 00069\
+    \ (count.go:16)    PCDATA  $1, $4\n0x0045 00069 (count.go:16)    MOVQ    \"\"\
+    .&count+56(SP), AX\n0x004a 00074 (count.go:16)    PCDATA  $0, $0\n0x004a 00074\
+    \ (count.go:16)    INCQ    (AX)\n```\n\nMOVQ will fetch the current value of the\
+    \ counter to the AX register. This might come from the memory or from the cache.\n\
+    \nThe Go toolchain can help you detect such race conditions. Both go run and go\
+    \ test have a -race flag to detect race conditions. You can try it out:\n\n```\n\
+    $ go run -race count.go\n===================================\nWARNING: DATA RACE\n\
+    Read at 0x00c00011a010 by goroutine 8:\n  main.main.func1()\n      /home/miki/Projects/go-brain-teasers/code/count.go:16\
+    \ +0x6c\n```"
+  - "[PAGE 104]\n\n```\nPrevious write at 0x00c00011a010 by goroutine 7:\nmain.main.func1()\n\
+    /home/miki/Projects/go-brain-teasers/code/count.go:16 +0x82\n\nGoroutine 8 (running)\
+    \ created at:\nmain.main()\n/home/miki/Projects/go-brain-teasers/code/count.go:14\
+    \ +0xe4\n\nGoroutine 7 (finished) created at:\nmain.main()\n/home/miki/Projects/go-brain-teasers/code/count.go:14\
+    \ +0xe4\n=====================================\n```\n\nTo solve this problem you\
+    \ can use a sync/Mutex to ensure only one goroutine updates count at time.\n\n\
+    # Listing 40. count_mu.go\n\n```\npackage main\n\nimport (\n\t\"fmt\"\n\t\"sync\"\
+    \n)\n\nfunc main() {\n\tvar count int\n\tvar wg sync.WaitGroup\n\tvar m sync.Mutex\n\
+    \n\tfor i := 0; i < 1_000_000; i++ {\n\t\twg.Add(1)\n\t\tgo func() {\n\t\t\tm.Lock()\n\
+    \t\t\tdefer m.Unlock()\n\t\t\tdefer wg.Done()\n\t\t\tcount++\n\t\t}()\n\t}\n}\n\
+    ```"
+  - "[PAGE 105]\n\n```\n}\nwg.Wait()\nfmt.Println(count)\n}\n```\n\nAnother option\
+    \ is to use the sync/atomic package. sync/atomic, as the name suggests, it provides\
+    \ atomic operations. These atomic operations are faster than using a mutex but\
+    \ are harder to use.[13].\n\nListing 41. count_atomic.go\n\n```\npackage main\n\
+    \nimport (\n\t\"fmt\"\n\t\"sync\"\n\t\"sync/atomic\"\n)\n\nfunc main() {\n\tvar\
+    \ count int64 // Atomic works with int64, not int\n\tvar wg sync.WaitGroup\n\n\
+    \tfor i := 0; i < 1_000_000; i++ {\n\t\twg.Add(1)\n\t\tgo func() {\n\t\t\tdefer\
+    \ wg.Done()\n\t\t\tatomic.AddInt64(&count, 1)\n\t\t}()\n\t}\n\n\twg.Wait()\n\t\
+    fmt.Println(count)\n}\n```"
+  - '[PAGE 106]
+
+
+    Even though Go tries to abstract the hardware away, you still need to learn and
+    understand it.'
+  - '[PAGE 107]
+
+
+    # 22.1. Further Reading
+
+
+    +   - Race condition on Wikipedia
+
+    +   - Atomic vs. Non-Atomic Operations at Preshing on Programming
+
+    +   - Introducing the Go Race Detector on the Go blog
+
+    +   - Memory Barriers/Fences on Mechanical Sympathy
+
+    +   - Memory barrier on Wikipedia
+
+    +   - Scheduling In Go : Part I - OS Scheduler on ArdanLabs blog
+
+    +   - Computer Latency at a Human Scale'
+  - '[PAGE 108]
+
+
+    +   11 Or any number that’s below 1,000,000.
+
+
+    +   12 go tool compile -S count.go
+
+
+    +   13 You can implement all synchronization primitives (such as Mutex) using
+    compare & swap.'
+  - "[PAGE 109]\n\n# 23. WHO'S NEXT?\n\n+   Listing 42. next_id.go\n\n```\n1 | package\
+    \ main\n2 |\n3 | import (\n4 | \t\"fmt\"\n5 | )\n6 |\n7 | var (\n8 | \tid = nextID()\n\
+    9 | )\n10|\n11| func nextID() int {\n12| \tid++\n13| \treturn id\n14| }\n15|\n\
+    16| func main() {\n17| \tfmt.Println(id)\n18| }\n```\n\nTry to guess what the\
+    \ output is before moving to the next page."
+  - "[PAGE 110]\n\nThis code will not compile.\n\n# Building the code shows the problem:\n\
+    \n```\n$ go build next_id.go\n# command-line-arguments\n./next_id.go:8:2: initialization\
+    \ loop:\n        /home/miki/Projects/go-brain-teasers/code/next_id.go:8:2:\nid\
+    \ refers to\n        /home/miki/Projects/go-brain-teasers/code/next_id.go:11:6:\n\
+    nextID refers to\n        /home/miki/Projects/go-brain-teasers/code/next_id.go:8:2:\n\
+    id\n```\n\nThere is an \"initialization loop\" in the code. The value of *id*\
+    \ depends on *nextID* which uses the value of *id* which ...\n\nThe Go compiler\
+    \ tries to find these loops, but there are cases in which it cannot detect (called\
+    \ \"hidden dependencies\"). See the documentation for an example.\n\nMake sure\
+    \ your package initialization is simple and easy to understand, try to avoid package-level\
+    \ variables and defer initialization to **main** as much as possible."
+  - '[PAGE 111]
+
+
+    # 23.1. Further Reading
+
+
+    +   Package Initialization in the Go Specification
+
+
+    +   Removing package scoped variables, in practice by Dave Cheney'
+  - "[PAGE 112]\n\n# 24. FUN WITH FLAGS\n\nListing 43. flag.go\n\n```\npackage main\n\
+    \nimport (\n    \"fmt\"\n)\n\ntype Flag int\n\nfunc main() {\n    var i interface{}\
+    \ = 3\n    f := i.(Flag)\n    fmt.Println(f)\n}\n```\n\nTry to guess what the\
+    \ output is before moving to the next page."
+  - "[PAGE 113]\n\nThis code will panic.\n\nEven though `Flag` is basically an `int`,\
+    \ the Go compiler sees it as a distinct type and the type assertion (`i.(Flag)`)\
+    \ will panic.\n\nThis is another case where you can use the \"comma, ok\" paradigm.\n\
+    \nListing 44. flag_ok.go\n\n```\npackage main\n\nimport (\n\t\"fmt\"\n)\n\ntype\
+    \ Flag int\n\nfunc main() {\n\tvar i interface{} = 3\n\tf, ok := i.(Flag)\n\t\
+    if !ok {\n\t\tfmt.Println(\"not a Flag\")\n\t\treturn\n\t}\n\tfmt.Println(f)\n\
+    }\n```\n\nYou can also change line 7 to `type Flag = int`, now `Flag` is a type\
+    \ alias and the code will work. However now you can use an `int` whenever you\
+    \ need a `Flag` and the type system won’t protect you."
+  md: "\n## 20.1. Further Reading\n\nListing 37. runes_lit.go\n\n```go\npackage main\n\
+    \nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tr1 := '™'\n\tfmt.Println(r1) // 8482\n\
+    \tfmt.Printf(\"%c\\n\", r1) // ™\n\n\tr2 := '\\x61' // \\x - 2 digits\n\tfmt.Printf(\"\
+    %c\\n\", r2) // a\n\n\tr3 := '\\u2122' // \\u - 4 digits (8482 in hex)\n\tfmt.Printf(\"\
+    %c\\n\", r3) // ™\n\n\tr4 := '\\U00002122' // \\U - 8 digits\n\tfmt.Printf(\"\
+    %c\\n\", r4) // ™\n}\n```\n\n- Strings, bytes, runes and characters in Go from\
+    \ the Go blog\n- Unicode and You\n- Unicode entry in Wikipedia\n- Rune literals\
+    \ in the Go specification\n- Unicode® Character Table\n\n## 21. A DOUBLE TAKE\n\
+    \nListing 38. init.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc\
+    \ init() {\n\tfmt.Printf(\"A \")\n}\n\nfunc init() {\n\tfmt.Print(\"B \")\n}\n\
+    \nfunc main() {\n\tfmt.Println()\n}\n```\n\nTry to guess what the output is before\
+    \ moving to the next page.\n\nThis code will print: A B\n\nNormally, the Go compiler\
+    \ will not let you define two functions with the same name in the same package.\
+    \ However init is special. Here's what the documentation says:\n\n> Multiple such\
+    \ functions may be defined per package, even within a single source file. In the\
+    \ package block, the init identifier can be used only to declare init functions,\
+    \ yet the identifier itself is not declared. Thus init functions cannot be referred\
+    \ to from anywhere in a program.\n\ninit is the final stage in package initialization\
+    \ after imported modules are initialized and package-level variables are initialized.\n\
+    \nSince you can initialize package-level variables with function calls, save init\
+    \ for special cases. Also try to avoid package level variables as much as you\
+    \ can. I seldom write init functions and prefer to do initialization in main where\
+    \ I have better control on order of initialization, error handling and logging.\n\
+    \nOne of the problems with package-level variables or init is that you can’t return\
+    \ error values. If you have an error in init, the best course of action is to\
+    \ panic and not to continue execution in a bad state. To support that, some of\
+    \ the Go packages provide a Must version of their New functions. For example,\
+    \ the regexp package has MustCompile.\n\n*MustCompile is like Compile but panics\
+    \ if the expression cannot be parsed. It simplifies safe initialization of global\
+    \ variables holding compiled regular expressions.*\n\nTry to think about your\
+    \ types and if you should provide a Must function for them as well.\n\n## 21.1.\
+    \ Further Reading\n\n- The init function in Effective Go\n- Package Initialization\
+    \ in the Go Specification\n- Removing package scoped variables, in practice by\
+    \ Dave Cheney\n- Writing Deployable Code (part two) by Ran Tavory\n\n## 22. COUNT\
+    \ ME A MILLION\n\nListing 39. count.go\n\n```go\npackage main\n\nimport (\n\t\"\
+    fmt\"\n\t\"sync\"\n)\n\nfunc main() {\n\tvar count int\n\tvar wg sync.WaitGroup\n\
+    \n\tfor i := 0; i < 1_000_000; i++ {\n\t\twg.Add(1)\n\t\tgo func() {\n\t\t\tdefer\
+    \ wg.Done()\n\t\t\tcount++\n\t\t}()\n\t}\n\n\twg.Wait()\n\tfmt.Println(count)\n\
+    }\n```\n\nTry to guess what the output is before moving to the next page.\n\n\
+    This code will print: 891239 [11]\n\nWhat you have here is a race condition. The\
+    \ operation to increment an integer is not atomic, meaning the code can get interrupted\
+    \ mid-operation. On top of that there is the memory barrier - to speed things\
+    \ up, modern computers have a CPU cache where they try to fetch values from before\
+    \ going the long way to main memory.\n\nIf you look at the assembly output of\
+    \ count.go.[12] you'll see the code generated for count++ on line 16.\n\n```\n\
+    0x0045 00069 (count.go:16)    PCDATA  $0, $1\n0x0045 00069 (count.go:16)    PCDATA\
+    \  $1, $4\n0x0045 00069 (count.go:16)    MOVQ    \"\".&count+56(SP), AX\n0x004a\
+    \ 00074 (count.go:16)    PCDATA  $0, $0\n0x004a 00074 (count.go:16)    PCDATA\
+    \  $1, $4\n0x004a 00074 (count.go:16)    INCQ    (AX)\n```\n\nMOVQ will fetch\
+    \ the current value of the counter to the AX register. This might come from the\
+    \ memory or from the cache.\n\nThe Go toolchain can help you detect such race\
+    \ conditions. Both go run and go test have a -race flag to detect race conditions.\
+    \ You can try it out:\n\n```\n$ go run -race count.go\n===================================\n\
+    WARNING: DATA RACE\nRead at 0x00c00011a010 by goroutine 8:\n  main.main.func1()\n\
+    \      /home/miki/Projects/go-brain-teasers/code/count.go:16 +0x6c\n```\n\nPrevious\
+    \ write at 0x00c00011a010 by goroutine 7:\nmain.main.func1()\n/home/miki/Projects/go-brain-teasers/code/count.go:16\
+    \ +0x82\n\nGoroutine 8 (running) created at:\nmain.main()\n/home/miki/Projects/go-brain-teasers/code/count.go:14\
+    \ +0xe4\n\nGoroutine 7 (finished) created at:\nmain.main()\n/home/miki/Projects/go-brain-teasers/code/count.go:14\
+    \ +0xe4\n=====================================\n```\n\nTo solve this problem you\
+    \ can use a sync.Mutex to ensure only one goroutine updates count at time.\n\n\
+    Listing 40. count_mu.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"sync\"\
+    \n)\n\nfunc main() {\n\tvar count int\n\tvar wg sync.WaitGroup\n\tvar m sync.Mutex\n\
+    \n\tfor i := 0; i < 1_000_000; i++ {\n\t\twg.Add(1)\n\t\tgo func() {\n\t\t\tm.Lock()\n\
+    \t\t\tdefer m.Unlock()\n\t\t\tdefer wg.Done()\n\t\t\tcount++\n\t\t}()\n\t}\n\n\
+    \twg.Wait()\n\tfmt.Println(count)\n}\n```\n\nAnother option is to use the sync/atomic\
+    \ package. sync/atomic, as the name suggests, it provides atomic operations. These\
+    \ atomic operations are faster than using a mutex but are harder to use.[13].\n\
+    \nListing 41. count_atomic.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\
+    \"sync\"\n\t\"sync/atomic\"\n)\n\nfunc main() {\n\tvar count int64 // Atomic works\
+    \ with int64, not int\n\tvar wg sync.WaitGroup\n\n\tfor i := 0; i < 1_000_000;\
+    \ i++ {\n\t\twg.Add(1)\n\t\tgo func() {\n\t\t\tdefer wg.Done()\n\t\t\tatomic.AddInt64(&count,\
+    \ 1)\n\t\t}()\n\t}\n\n\twg.Wait()\n\tfmt.Println(count)\n}\n```\n\nEven though\
+    \ Go tries to abstract the hardware away, you still need to learn and understand\
+    \ it.\n\n## 22.1. Further Reading\n\n- Race condition on Wikipedia\n- Atomic vs.\
+    \ Non-Atomic Operations at Preshing on Programming\n- Introducing the Go Race\
+    \ Detector on the Go blog\n- Memory Barriers/Fences on Mechanical Sympathy\n-\
+    \ Memory barrier on Wikipedia\n- Scheduling In Go : Part I - OS Scheduler on ArdanLabs\
+    \ blog\n- Computer Latency at a Human Scale\n\n11 Or any number that’s below 1,000,000.\n\
+    \n12 go tool compile -S count.go\n\n13 You can implement all synchronization primitives\
+    \ (such as Mutex) using compare & swap.\n\n## 23. WHO'S NEXT?\n\nListing 42. next_id.go\n\
+    \n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nvar (\n\tid = nextID()\n)\n\
+    \nfunc nextID() int {\n\tid++\n\treturn id\n}\n\nfunc main() {\n\tfmt.Println(id)\n\
+    }\n```\n\nTry to guess what the output is before moving to the next page.\n\n\
+    This code will not compile.\n\n### Building the code shows the problem:\n\n```\n\
+    $ go build next_id.go\n# command-line-arguments\n./next_id.go:8:2: initialization\
+    \ loop:\n        /home/miki/Projects/go-brain-teasers/code/next_id.go:8:2:\nid\
+    \ refers to\n        /home/miki/Projects/go-brain-teasers/code/next_id.go:11:6:\n\
+    nextID refers to\n        /home/miki/Projects/go-brain-teasers/code/next_id.go:8:2:\n\
+    id\n```\n\nThere is an \"initialization loop\" in the code. The value of *id*\
+    \ depends on *nextID* which uses the value of *id* which ...\n\nThe Go compiler\
+    \ tries to find these loops, but there are cases in which it cannot detect (called\
+    \ \"hidden dependencies\"). See the documentation for an example.\n\nMake sure\
+    \ your package initialization is simple and easy to understand, try to avoid package-level\
+    \ variables and defer initialization to **main** as much as possible.\n\n## 23.1.\
+    \ Further Reading\n\n- Package Initialization in the Go Specification\n\n- Removing\
+    \ package scoped variables, in practice by Dave Cheney\n\n## 24. FUN WITH FLAGS\n\
+    \nListing 43. flag.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\ntype\
+    \ Flag int\n\nfunc main() {\n\tvar i interface{} = 3\n\tf := i.(Flag)\n\tfmt.Println(f)\n\
+    }\n```\n\nTry to guess what the output is before moving to the next page.\n\n\
+    This code will panic.\n\nEven though `Flag` is basically an `int`, the Go compiler\
+    \ sees it as a distinct type and the type assertion (`i.(Flag)`) will panic.\n\
+    \nThis is another case where you can use the \"comma, ok\" paradigm.\n\nListing\
+    \ 44. flag_ok.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\ntype Flag\
+    \ int\n\nfunc main() {\n\tvar i interface{} = 3\n\tf, ok := i.(Flag)\n\tif !ok\
+    \ {\n\t\tfmt.Println(\"not a Flag\")\n\t\treturn\n\t}\n\tfmt.Println(f)\n}\n```\n\
+    \nYou can also change line 7 to `type Flag = int`, now `Flag` is a type alias\
+    \ and the code will work. However now you can use an `int` whenever you need a\
+    \ `Flag` and the type system won’t protect you.\n"
+  mdcn: "\n## 20.1. 延伸阅读\n\n清单 37. runes_lit.go\n\n```go\npackage main\n\nimport (\n\
+    \t\"fmt\"\n)\n\nfunc main() {\n\tr1 := '™'\n\tfmt.Println(r1) // 8482\n\tfmt.Printf(\"\
+    %c\\n\", r1) // ™\n\n\tr2 := '\\x61' // \\x - 2 digits\n\tfmt.Printf(\"%c\\n\"\
+    , r2) // a\n\n\tr3 := '\\u2122' // \\u - 4 digits (8482 in hex)\n\tfmt.Printf(\"\
+    %c\\n\", r3) // ™\n\n\tr4 := '\\U00002122' // \\U - 8 digits\n\tfmt.Printf(\"\
+    %c\\n\", r4) // ™\n}\n```\n\n- Go 博客中的字符串、字节、rune 和字符\n- Unicode 与你\n- 维基百科中的\
+    \ Unicode 条目\n- Go 语言规范中的 Rune 字面量\n- Unicode® 字符表\n\n## 21. 再来一遍\n\n清单 38. init.go\n\
+    \n```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc init() {\n\tfmt.Printf(\"\
+    A \")\n}\n\nfunc init() {\n\tfmt.Print(\"B \")\n}\n\nfunc main() {\n\tfmt.Println()\n\
+    }\n```\n\n在翻到下一页之前，先尝试猜猜输出是什么。\n\n这段代码将打印：A B\n\n通常，Go 编译器不允许在同一个包中定义两个同名函数。但是\
+    \ init 是特殊的。文档中是这样说明的：\n\n> 每个包中可以定义多个此类函数，即使在单个源文件中也是如此。在包块中，init 标识符仅可用于声明 init\
+    \ 函数，但该标识符本身并未被声明。因此，无法从程序中的任何地方引用 init 函数。\n\ninit 是包初始化的最后阶段，在导入的模块和包级变量初始化之后执行。\n\
+    \n由于你可以使用函数调用来初始化包级变量，因此请将 init 留给特殊情况。同时，尽量避免使用包级变量。我很少编写 init 函数，更倾向于在 main\
+    \ 中进行初始化，因为在那里我可以更好地控制初始化顺序、错误处理和日志记录。\n\n包级变量或 init 的一个问题是无法返回错误值。如果 init 中出错，最佳做法是\
+    \ panic 而不要在错误状态下继续执行。为了支持这一点，一些 Go 包为其 New 函数提供了 Must 版本。例如，regexp 包提供了 MustCompile。\n\
+    \n*MustCompile 类似于 Compile，但如果表达式无法解析，则会 panic。它简化了保存已编译正则表达式的全局变量的安全初始化。*\n\n\
+    试着思考一下你的类型，以及是否也应该为它们提供 Must 函数。\n\n## 21.1. 延伸阅读\n\n- 《Effective Go》中的 init 函数\n\
+    - Go 语言规范中的包初始化\n- Dave Cheney 撰写的《在实践中移除包作用域变量》\n- Ran Tavory 撰写的《可部署代码编写（第二部分）》\n\
+    \n## 22. 让我数到一百万\n\n清单 39. count.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\
+    \n\t\"sync\"\n)\n\nfunc main() {\n\tvar count int\n\tvar wg sync.WaitGroup\n\n\
+    \tfor i := 0; i < 1_000_000; i++ {\n\t\twg.Add(1)\n\t\tgo func() {\n\t\t\tdefer\
+    \ wg.Done()\n\t\t\tcount++\n\t\t}()\n\t}\n\n\twg.Wait()\n\tfmt.Println(count)\n\
+    }\n```\n\n在翻到下一页之前，先尝试猜猜输出是什么。\n\n这段代码将打印：891239 [11]\n\n这里存在一个竞态条件。递增整数的操作不是原子的，这意味着代码可能在操作中途被中断。除此之外，还有内存屏障——为了加速，现代计算机拥有\
+    \ CPU 缓存，会尝试先从缓存获取值，而不必走漫长的主内存路径。\n\n如果你查看 count.go 的汇编输出[12]，你会看到第 16 行 count++\
+    \ 生成的代码。\n\n```\n0x0045 00069 (count.go:16)    PCDATA  $0, $1\n0x0045 00069 (count.go:16)\
+    \    PCDATA  $1, $4\n0x0045 00069 (count.go:16)    MOVQ    \"\".&count+56(SP),\
+    \ AX\n0x004a 00074 (count.go:16)    PCDATA  $0, $0\n0x004a 00074 (count.go:16)\
+    \    PCDATA  $1, $4\n0x004a 00074 (count.go:16)    INCQ    (AX)\n```\n\nMOVQ 会将计数器的当前值加载到\
+    \ AX 寄存器中。这个值可能来自内存，也可能来自缓存。\n\nGo 工具链可以帮助你检测此类竞态条件。go run 和 go test 都带有 -race\
+    \ 标志来检测竞态条件。你可以试一下：\n\n```\n$ go run -race count.go\n===================================\n\
+    WARNING: DATA RACE\nRead at 0x00c00011a010 by goroutine 8:\n  main.main.func1()\n\
+    \      /home/miki/Projects/go-brain-teasers/code/count.go:16 +0x6c\n```\n\nPrevious\
+    \ write at 0x00c00011a010 by goroutine 7:\nmain.main.func1()\n/home/miki/Projects/go-brain-teasers/code/count.go:16\
+    \ +0x82\n\nGoroutine 8 (running) created at:\nmain.main()\n/home/miki/Projects/go-brain-teasers/code/count.go:14\
+    \ +0xe4\n\nGoroutine 7 (finished) created at:\nmain.main()\n/home/miki/Projects/go-brain-teasers/code/count.go:14\
+    \ +0xe4\n=====================================\n```\n\n要解决这个问题，你可以使用 sync.Mutex\
+    \ 来确保同一时间只有一个 goroutine 更新 count。\n\n清单 40. count_mu.go\n\n```go\npackage main\n\
+    \nimport (\n\t\"fmt\"\n\t\"sync\"\n)\n\nfunc main() {\n\tvar count int\n\tvar\
+    \ wg sync.WaitGroup\n\tvar m sync.Mutex\n\n\tfor i := 0; i < 1_000_000; i++ {\n\
+    \t\twg.Add(1)\n\t\tgo func() {\n\t\t\tm.Lock()\n\t\t\tdefer m.Unlock()\n\t\t\t\
+    defer wg.Done()\n\t\t\tcount++\n\t\t}()\n\t}\n\n\twg.Wait()\n\tfmt.Println(count)\n\
+    }\n```\n\n另一个选择是使用 sync/atomic 包。正如其名称所示，sync/atomic 提供原子操作。这些原子操作比使用互斥锁更快，但更难使用[13]。\n\
+    \n清单 41. count_atomic.go\n\n```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"sync\"\
+    \n\t\"sync/atomic\"\n)\n\nfunc main() {\n\tvar count int64 // Atomic works with\
+    \ int64, not int\n\tvar wg sync.WaitGroup\n\n\tfor i := 0; i < 1_000_000; i++\
+    \ {\n\t\twg.Add(1)\n\t\tgo func() {\n\t\t\tdefer wg.Done()\n\t\t\tatomic.AddInt64(&count,\
+    \ 1)\n\t\t}()\n\t}\n\n\twg.Wait()\n\tfmt.Println(count)\n}\n```\n\n尽管 Go 试图抽象掉硬件，但你仍然需要学习和理解硬件。\n\
+    \n## 22.1. 延伸阅读\n\n- 维基百科上的竞态条件\n- Preshing on Programming 上的《原子操作与非原子操作》\n- Go\
+    \ 博客上的《介绍 Go 竞态检测器》\n- Mechanical Sympathy 上的《内存屏障/栅栏》\n- 维基百科上的内存屏障\n- ArdanLabs\
+    \ 博客上的《Go 中的调度：第一部分 - OS 调度器》\n- 《人类尺度下的计算机延迟》\n\n11 或者任何低于 1,000,000 的数字。\n\n\
+    12 go tool compile -S count.go\n\n13 你可以使用 compare & swap 来实现所有同步原语（例如 Mutex）。\n\
+    \n## 23. 下一个是谁？\n\n清单 42. next_id.go\n\n```go\npackage main\n\nimport (\n\t\"\
+    fmt\"\n)\n\nvar (\n\tid = nextID()\n)\n\nfunc nextID() int {\n\tid++\n\treturn\
+    \ id\n}\n\nfunc main() {\n\tfmt.Println(id)\n}\n```\n\n在翻到下一页之前，先尝试猜猜输出是什么。\n\n\
+    这段代码无法编译。\n\n### 构建代码时会显示问题：\n\n```\n$ go build next_id.go\n# command-line-arguments\n\
+    ./next_id.go:8:2: initialization loop:\n        /home/miki/Projects/go-brain-teasers/code/next_id.go:8:2:\n\
+    id refers to\n        /home/miki/Projects/go-brain-teasers/code/next_id.go:11:6:\n\
+    nextID refers to\n        /home/miki/Projects/go-brain-teasers/code/next_id.go:8:2:\n\
+    id\n```\n\n代码中存在“初始化循环”。*id* 的值依赖于 *nextID*，而 *nextID* 又使用 *id* 的值……\n\nGo 编译器会尝试查找这些循环，但有些情况无法检测（称为“隐藏依赖”）。请参阅文档中的示例。\n\
+    \n确保你的包初始化简单且易于理解，尽量避免使用包级变量，并尽可能将初始化推迟到 **main**。\n\n## 23.1. 延伸阅读\n\n- Go 语言规范中的包初始化\n\
+    - Dave Cheney 撰写的《在实践中移除包作用域变量》\n\n## 24. 玩转标志\n\n清单 43. flag.go\n\n```go\npackage\
+    \ main\n\nimport (\n\t\"fmt\"\n)\n\ntype Flag int\n\nfunc main() {\n\tvar i interface{}\
+    \ = 3\n\tf := i.(Flag)\n\tfmt.Println(f)\n}\n```\n\n在翻到下一页之前，先尝试猜猜输出是什么。\n\n这段代码会\
+    \ panic。\n\n尽管 `Flag` 本质上是 `int`，但 Go 编译器将其视为一种不同的类型，因此类型断言（`i.(Flag)`）会 panic。\n\
+    \n这是另一个可以使用“逗号 ok”范式的情况。\n\n清单 44. flag_ok.go\n\n```go\npackage main\n\nimport\
+    \ (\n\t\"fmt\"\n)\n\ntype Flag int\n\nfunc main() {\n\tvar i interface{} = 3\n\
+    \tf, ok := i.(Flag)\n\tif !ok {\n\t\tfmt.Println(\"not a Flag\")\n\t\treturn\n\
+    \t}\n\tfmt.Println(f)\n}\n```\n\n你也可以将第 7 行改为 `type Flag = int`，现在 `Flag` 是一个类型别名，代码可以正常工作。不过现在你可以在需要\
+    \ `Flag` 的地方使用 `int`，而类型系统将无法保护你。\n"
+  merge: 0
+- raw:
+  - '[PAGE 114]
+
+
+    # 24.1. Further Reading
+
+
+    +   * Codebase Refactoring (with help from Go) by Russ Cox explains the rationale
+    for type aliases
+
+    +   * Type declarations in the Go specification
+
+    +   * Type assertions in the Go specification
+
+    +   * Type switch & Interface conversions and type assertions in Effective Go'
+  - "[PAGE 115]\n\n# # 25. YOU HAVE MY PERMISSION\n\n```\npackage main\n\nimport (\n\
+    \t\"fmt\"\n)\n\nconst (\n\tRead = 1 << iota\n\tWrite\n\tExecute\n)\n\nfunc main()\
+    \ {\n\tfmt.Println(Execute)\n}\n```\n\nTry to guess what the output is before\
+    \ moving to the next page."
+  - "[PAGE 116]\n\n*iota* is Go's version of an enumerated type. It can be used inside\
+    \ a *const* declaration. *iota* grows by one for each constant in the same group.\
+    \ If you specify an operation on *iota* (e.g. addition), it'll carry on.\n\n`<<`\
+    \ is the left shift operator, it'll move the bits in a number n places to the\
+    \ left.\n\n+   - 1 in binary (8 bit) is 00000001\n+   - 1<<<3 is 00001000, which\
+    \ is 8\n\nIn our case, we start with *Read* = 1<<*iota* which translates to 1<<0\
+    \ -> 0001, which is 1. Then there's an implicit 1<<1 -> 0010 for *Write* which\
+    \ is 2 and finally an implicit 1<<2 -> 0100 for *Execute* which is 4.\n\nYou'll\
+    \ mostly use these bit operations for flags. You can pack 8 flags in one byte\
+    \ using | [14] (called \"bitmask\") and efficiently check if a flag is set with\
+    \ & [15].\n\n# *Listing 46. iota_check.go*\n\n```\nmask := Read | Execute\n\n\
+    if mask&Execute == 0 {\n    fmt.Println(\"can't execute\")\n} else {\n    fmt.Println(\"\
+    can execute\") // will be printed\n}\n\nif mask&Write == 0 {\n```"
+  - "[PAGE 117]\n\n```\nfmt.Println(\"can't write\") // will be printed\n} else {\n\
+    \    fmt.Println(\"can write\")\n}\n```\n\niota values are numbers, in some cases\
+    \ you’d like your constants to have a human-readable representation. This is done\
+    \ by giving these constants a type and implementing fmt.Stringer interface for\
+    \ this type.\n\nListing 47. iota_str.go\n\n```\npackage main\n\nimport (\n\t\"\
+    fmt\"\n)\n\ntype FilePerm uint16 // 16 flags are enough\n\nconst (\n\tRead FilePerm\
+    \ = 1 << iota\n\tWrite\n\tExecute\n)\n\n// String implements fmt.Stringer interface\n\
+    func (p FilePerm) String() string {\n\tswitch p {\n\tcase Read:\n\t\treturn \"\
+    read\"\n\tcase Write:\n\t\treturn \"write\"\n\tcase Execute:\n\t\treturn \"execute\"\
+    \n\t}\n\n\treturn fmt.Sprintf(\"unknown FilePerm: %d\", p) // don't\n\tuse %s\
+    \ here :)\n}\n```"
+  - "[PAGE 118]\n\n```\n28 }\n29 \n30 func main() {\n31 fmt.Println(Execute) // execute\n\
+    32 fmt.Printf(\"%d\\n\", Execute) // 4\n}\n```\n\nI'll leave it as an exercise\
+    \ for you to implement a String() string method that supports bit masks ."
+  - '[PAGE 119]
+
+
+    # 25.1. Further Reader
+
+
+    +   - iota on the Go Wiki
+
+    +   - Constants on Effective Go
+
+    +   - Bitwise operation on Wikipedia'
+  - '[PAGE 120]
+
+
+    # 14 Bitwise OR.
+
+
+    # 15 Bitwise AND.'
+  - '[PAGE 121]
+
+
+    # # THANKS
+
+
+    I’m grateful for every contribution, from finding bugs to fixing grammar to letting
+    me work in peace.
+
+
+    Here is this list of people who helped, my apologies to anyone whom I forgot.
+
+
+    +   - Adi Tebeka for her proofreading & comments
+
+    +   - Dan Allen for his help in the asciidocotor forums. I’m using the wonderful
+    asciidoctor to write this book
+
+    +   - Dave Cheney for the forward
+
+    +   - David Bordeynik for his comments
+
+    +   - Egon Elbre who drew all these wonderful gophers (one of them used in the
+    cover) and placed them in CC0 license
+
+    +   - Eliran Bivas for proofreading & comments
+
+    +   - Ran Tavory for his comments
+
+    +   - Yoni Davidson for his comments
+
+
+    I’m also grateful to Brad Fitzpatrick and others who post Go "pop quizzes" and
+    gave me many ideas for these brain teasers.'
+  - '[PAGE 122]
+
+
+    # # EPILOGUE
+
+
+    I hope you had fun guessing the teasers and that you have learned something along
+    the way.
+
+
+    > > Debugging is like being a detective in a crime movie where you''re also the
+    murderer.
+
+    > >
+
+    > > ~ Filipe Fortes
+
+
+    I found out that having this mindset of looking at things that go wrong as a puzzle
+    to solve helps me understand things better. It also makes my work more enjoyable.
+    You can always picture yourself as Nancy Drew, Sherlock Holmes or any other of
+    your childhood detectives as you try to solve the current murder you''ve committed.
+
+
+    If you''d like to learn more, feel free to email us at info@353solutions.com and
+    we will tailor a hands-on workshop to your needs.
+
+
+    ![](img/07a7b391d92ba53dcfe8da4b75a4aed7_122_0.png)
+
+
+    Stay curious, keep hacking,
+
+    Miki Tebeka, March 2020'
+  - '[PAGE 123]
+
+
+    # # INDEX'
+  md: "\n### 24.1. Further Reading\n\n- Codebase Refactoring (with help from Go) by\
+    \ Russ Cox explains the rationale for type aliases\n- Type declarations in the\
+    \ Go specification\n- Type assertions in the Go specification\n- Type switch &\
+    \ Interface conversions and type assertions in Effective Go\n\n## 25. YOU HAVE\
+    \ MY PERMISSION\n\n```\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nconst (\n\t\
+    Read = 1 << iota\n\tWrite\n\tExecute\n)\n\nfunc main() {\n\tfmt.Println(Execute)\n\
+    }\n```\n\nTry to guess what the output is before moving to the next page.\n\n\
+    *iota* is Go's version of an enumerated type. It can be used inside a *const*\
+    \ declaration. *iota* grows by one for each constant in the same group. If you\
+    \ specify an operation on *iota* (e.g. addition), it'll carry on.\n\n`<<` is the\
+    \ left shift operator, it'll move the bits in a number n places to the left.\n\
+    \n- 1 in binary (8 bit) is 00000001\n- 1<<3 is 00001000, which is 8\n\nIn our\
+    \ case, we start with *Read* = 1<<*iota* which translates to 1<<0 -> 0001, which\
+    \ is 1. Then there's an implicit 1<<1 -> 0010 for *Write* which is 2 and finally\
+    \ an implicit 1<<2 -> 0100 for *Execute* which is 4.\n\nYou'll mostly use these\
+    \ bit operations for flags. You can pack 8 flags in one byte using | [14] (called\
+    \ \"bitmask\") and efficiently check if a flag is set with & [15].\n\n*Listing\
+    \ 46. iota_check.go*\n\n```\nmask := Read | Execute\n\nif mask&Execute == 0 {\n\
+    \    fmt.Println(\"can't execute\")\n} else {\n    fmt.Println(\"can execute\"\
+    ) // will be printed\n}\n\nif mask&Write == 0 {\n    fmt.Println(\"can't write\"\
+    ) // will be printed\n} else {\n    fmt.Println(\"can write\")\n}\n```\n\niota\
+    \ values are numbers, in some cases you’d like your constants to have a human-readable\
+    \ representation. This is done by giving these constants a type and implementing\
+    \ fmt.Stringer interface for this type.\n\nListing 47. iota_str.go\n\n```\npackage\
+    \ main\n\nimport (\n\t\"fmt\"\n)\n\ntype FilePerm uint16 // 16 flags are enough\n\
+    \nconst (\n\tRead FilePerm = 1 << iota\n\tWrite\n\tExecute\n)\n\n// String implements\
+    \ fmt.Stringer interface\nfunc (p FilePerm) String() string {\n\tswitch p {\n\t\
+    case Read:\n\t\treturn \"read\"\n\tcase Write:\n\t\treturn \"write\"\n\tcase Execute:\n\
+    \t\treturn \"execute\"\n\t}\n\n\treturn fmt.Sprintf(\"unknown FilePerm: %d\",\
+    \ p) // don't\n\tuse %s here :)\n}\n\nfunc main() {\n\tfmt.Println(Execute) //\
+    \ execute\n\tfmt.Printf(\"%d\\n\", Execute) // 4\n}\n```\n\nI'll leave it as an\
+    \ exercise for you to implement a String() string method that supports bit masks.\n\
+    \n### 25.1. Further Reading\n\n- iota on the Go Wiki\n- Constants on Effective\
+    \ Go\n- Bitwise operation on Wikipedia\n\n- 14. Bitwise OR.\n- 15. Bitwise AND.\n\
+    \n## THANKS\n\nI'm grateful for every contribution, from finding bugs to fixing\
+    \ grammar to letting me work in peace.\n\nHere is this list of people who helped,\
+    \ my apologies to anyone whom I forgot.\n\n- Adi Tebeka for her proofreading &\
+    \ comments\n- Dan Allen for his help in the asciidoctor forums. I'm using the\
+    \ wonderful asciidoctor to write this book\n- Dave Cheney for the forward\n- David\
+    \ Bordeynik for his comments\n- Egon Elbre who drew all these wonderful gophers\
+    \ (one of them used in the cover) and placed them in CC0 license\n- Eliran Bivas\
+    \ for proofreading & comments\n- Ran Tavory for his comments\n- Yoni Davidson\
+    \ for his comments\n\nI'm also grateful to Brad Fitzpatrick and others who post\
+    \ Go \"pop quizzes\" and gave me many ideas for these brain teasers.\n\n## EPILOGUE\n\
+    \nI hope you had fun guessing the teasers and that you have learned something\
+    \ along the way.\n\n> Debugging is like being a detective in a crime movie where\
+    \ you're also the murderer.\n>\n> ~ Filipe Fortes\n\nI found out that having this\
+    \ mindset of looking at things that go wrong as a puzzle to solve helps me understand\
+    \ things better. It also makes my work more enjoyable. You can always picture\
+    \ yourself as Nancy Drew, Sherlock Holmes or any other of your childhood detectives\
+    \ as you try to solve the current murder you've committed.\n\nIf you'd like to\
+    \ learn more, feel free to email us at info@353solutions.com and we will tailor\
+    \ a hands-on workshop to your needs.\n\n![](img/07a7b391d92ba53dcfe8da4b75a4aed7_122_0.png)\n\
+    \nStay curious, keep hacking,\nMiki Tebeka, March 2020\n\n## INDEX\n"
+  mdcn: "\n### 24.1. 延伸阅读\n\n- 《基于 Go 的代码库重构》（由 Russ Cox 撰写）解释了类型别名的原理\n- Go 语言规范中的类型声明\n\
+    - Go 语言规范中的类型断言\n- 《Effective Go》中的类型开关与接口转换及类型断言\n\n## 25. 你有我的许可\n\n```\npackage\
+    \ main\n\nimport (\n\t\"fmt\"\n)\n\nconst (\n\tRead = 1 << iota\n\tWrite\n\tExecute\n\
+    )\n\nfunc main() {\n\tfmt.Println(Execute)\n}\n```\n\n在进入下一页之前，先试着猜猜输出是什么。\n\n\
+    *iota* 是 Go 语言版本的枚举类型。它可以用在 *const* 声明中。*iota* 在同一组中的每个常量上都会加 1。如果你对 *iota* 指定某个运算（例如加法），它会继续递增。\n\
+    \n`<<` 是左移运算符，它会将数字中的位向左移动 n 位。\n\n- 1 的二进制（8 位）是 00000001\n- 1<<3 是 00001000，即\
+    \ 8\n\n在本例中，我们从 *Read* = 1<<*iota* 开始，相当于 1<<0 -> 0001，即 1。接着隐式地有 1<<1 -> 0010\
+    \ 对应 *Write*，即 2；最后隐式地有 1<<2 -> 0100 对应 *Execute*，即 4。\n\n你主要会用这些位运算来处理标志位。你可以使用\
+    \ | [14]（称为\"位掩码\"）将 8 个标志打包进一个字节，并使用 & [15] 高效地检查某个标志是否被设置。\n\n*清单 46. iota_check.go*\n\
+    \n```\nmask := Read | Execute\n\nif mask&Execute == 0 {\n    fmt.Println(\"can't\
+    \ execute\")\n} else {\n    fmt.Println(\"can execute\") // will be printed\n\
+    }\n\nif mask&Write == 0 {\n    fmt.Println(\"can't write\") // will be printed\n\
+    } else {\n    fmt.Println(\"can write\")\n}\n```\n\niota 的值是数字，在某些情况下，你希望常量具有可读的表示形式。这可以通过给这些常量指定类型并为该类型实现\
+    \ fmt.Stringer 接口来完成。\n\n清单 47. iota_str.go\n\n```\npackage main\n\nimport (\n\
+    \t\"fmt\"\n)\n\ntype FilePerm uint16 // 16 flags are enough\n\nconst (\n\tRead\
+    \ FilePerm = 1 << iota\n\tWrite\n\tExecute\n)\n\n// String implements fmt.Stringer\
+    \ interface\nfunc (p FilePerm) String() string {\n\tswitch p {\n\tcase Read:\n\
+    \t\treturn \"read\"\n\tcase Write:\n\t\treturn \"write\"\n\tcase Execute:\n\t\t\
+    return \"execute\"\n\t}\n\n\treturn fmt.Sprintf(\"unknown FilePerm: %d\", p) //\
+    \ don't\n\tuse %s here :)\n}\n\nfunc main() {\n\tfmt.Println(Execute) // execute\n\
+    \tfmt.Printf(\"%d\\n\", Execute) // 4\n}\n```\n\n我将此作为练习留给你，实现一个支持位掩码的 String()\
+    \ string 方法。\n\n### 25.1. 延伸阅读\n\n- Go Wiki 上的 iota\n- 《Effective Go》中的常量\n- 维基百科上的位运算\n\
+    \n- 14. 按位或。\n- 15. 按位与。\n\n## 致谢\n\n我对每一份贡献都心存感激，无论是发现 Bug、修正语法，还是让我能安静地工作。\n\
+    \n以下是提供帮助的人员名单，我向任何被我遗忘的人道歉。\n\n- Adi Tebeka 负责校对和评论\n- Dan Allen 在 asciidoctor\
+    \ 论坛提供了帮助。我正在使用出色的 asciidoctor 编写此书\n- Dave Cheney 撰写了序言\n- David Bordeynik 提供了评论\n\
+    - Egon Elbre 绘制了所有这些可爱的地鼠（其中一幅用于封面），并将其置于 CC0 许可下\n- Eliran Bivas 负责校对和评论\n- Ran\
+    \ Tavory 提供了评论\n- Yoni Davidson 提供了评论\n\n我也感谢 Brad Fitzpatrick 及其他发布 Go\"即时测验\"\
+    的人，为这些脑筋急转弯提供了许多灵感。\n\n## 尾声\n\n希望你在猜谜的过程中感到有趣，并且在途中学到了一些东西。\n\n> 调试就像在犯罪电影中扮演侦探，而你也是凶手。\n\
+    > >\n> > ~ 菲利普·福特斯\n\n我发现，将出问题的事情视为待解决的谜题这种思维方式，能帮助我更好地理解事物。这也让我的工作更加愉快。当你试图解决自己犯下的当前\"\
+    谋杀案\"时，你可以随时把自己想象成南希·德鲁、福尔摩斯或其他任何你童年时期的侦探。\n\n如果您想了解更多，欢迎发送电子邮件至 info@353solutions.com，我们将根据您的需求定制实操研讨会。\n\
+    \n![](img/07a7b391d92ba53dcfe8da4b75a4aed7_122_0.png)\n\n保持好奇，继续 hacking，\nMiki\
+    \ Tebeka，2020 年 3 月\n\n## 索引\n"
+  merge: 0

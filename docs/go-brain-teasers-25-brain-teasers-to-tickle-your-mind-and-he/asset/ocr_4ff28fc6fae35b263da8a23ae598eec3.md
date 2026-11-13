@@ -1,0 +1,1 @@
+3 To be precise, ASCII uses only 7 bits, and LATIN-1 extends it to 8 bits.

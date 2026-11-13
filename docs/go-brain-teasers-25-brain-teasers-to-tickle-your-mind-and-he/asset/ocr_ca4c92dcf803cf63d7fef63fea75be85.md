@@ -1,0 +1,1 @@
+4 You can use reflect.DeepEqual to compare maps and slices.

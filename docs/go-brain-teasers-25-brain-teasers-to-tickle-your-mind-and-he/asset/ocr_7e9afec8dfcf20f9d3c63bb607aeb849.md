@@ -1,0 +1,1 @@
+Even though Go tries to abstract the hardware away, you still need to learn and understand it.

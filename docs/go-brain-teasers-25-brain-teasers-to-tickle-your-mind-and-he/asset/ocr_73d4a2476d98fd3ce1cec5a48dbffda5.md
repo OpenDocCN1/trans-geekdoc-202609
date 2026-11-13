@@ -1,0 +1,1 @@
+There are other "nil safe" types in Go. For example you can ask the length of a nil slice, receive a value from an empty channel (though you'll be blocked forever) and more.
