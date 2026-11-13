@@ -1,0 +1,7 @@
+Today, the ground-floor of a completely new sort of financial technology is being built. Your first encounter with a cryptocurrency might be in the lobby of your local bank, across the counter of a neighbourhood coffee shop, in the back of a cab, or within the digital deeds of your new house. And you might not even notice.
+
+# What can you buy?
+
+One of the most common criticisms of cryptocurrencies is that they will never replace traditional currencies because they are useless as an everyday means of payment (see box ‘A day of bitcoin’, below). This was certainly true back in the days when the most common market for cryptocurrencies was an illegal drugs website on the dark web. But what about today? The use of cryptocurrency has expanded into the realm of legitimate business, but is it enough to allow cryptocurrency to replace the daily use of pounds, dollars, euros, and yuan?
+
+When companies first began experimenting with accepting cryptocurrencies for products and services, they largely had to invent their own integration with the cryptocurrency on the fly. Today, many companies are offering different forms of cryptocurrency integration as a service, expanding the options and offering easy access for companies. However, there are many different ways to go about integrating cryptocurrency with a business, and no standard method has yet emerged. Confusion continues about what the best way to use cryptocurrency is, from the standpoint of both businesses and consumers.

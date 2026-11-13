@@ -1,0 +1,9 @@
+# The beginning of dealing drugs digitally
+
+In January 2011, a post appeared on a ‘magic mushroom’ website called shroomery.org. Written by a user named ‘altoid’, it posted a link to a site called Silk Road and asked if anyone had any experience using it. Days later, a user by the same name posted on bitcointalk.org, with a similar message.
+
+Two years later, in 2013, FBI agents would discover that these two posts were the earliest references to Silk Road on the internet – meaning they were likely to have been written by the site’s creator. At this point, the FBI didn’t have a name for the Silk Road’s founder, but the posts would end up being some of the first footprints that investigators found leading to Ross Ulbricht.
+
+Despite the many steps that Ulbricht had taken to keep his identity secret, extraordinary government resources were put into exposing him. He wanted to be an anonymous, online, libertarian hero, and often used the alias ‘Dread Pirate Roberts’ (DPR), in homage to the character in The Princess Bride, to keep his name away from Silk Road. But in the end, a series of simple missteps lead to his unmasking and arrest.
+
+A strong tool in DPR’s arsenal was the web-traffic anonymizing software Tor, which is used by hackers and spies alike to hide their traffic online. By operating Silk Road as a ‘hidden service’ on the dark web, there was no way that investigators could find the servers hosting the site and shut them down. By using Tor connections for email, chat, and all connections to the administration tasks of Silk Road, DPR and its administrators would remain faceless, nameless, and location-less – as they believed the internet was meant to be. And bitcoin was the cryptocurrency that provided the motivation for their efforts.

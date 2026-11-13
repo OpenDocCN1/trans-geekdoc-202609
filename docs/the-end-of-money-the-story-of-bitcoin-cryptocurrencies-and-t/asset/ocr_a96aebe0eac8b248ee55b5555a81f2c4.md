@@ -1,0 +1,9 @@
+The task, in this case, is an attempt to generate the correct hash as if for a signature, but without using a private key – instead by trying lots of different possible hashes, simply by guessing, until it finds the right one.
+
+In effect, the proof-of-work problem is like brute-forcing a low-level cryptographic signature, for which a secret key never existed. The cryptography is scaled down a great deal from commonly used cryptography, so that the computer network can actually solve the problem in ten minutes. A computer can make thousands of guesses per second. The network can make quadrillions of guesses per second. As more computers connect into the network, they each begin working on the same proof-of-work problem, which would ordinarily shorten the time until the solution is reached. But the ‘difficulty’ of the proof-of-work is adjusted automatically so that each solution always takes ten minutes, regardless of how many computers are generating hash guesses.
+
+Once a computer thinks it has the right hash for the cryptographic mathematical problem, another computer in the network can verify this quickly. Verification is a snap, compared to guessing over and over again. But because no secret key exists, guessing and verifying is the only way to come up with this correct hash. That is why it is called ‘proof-of-work’. There is no solution other than proving you did the brute-force work.
+
+Cryptocurrencies that rely on proof-of-work use this sort of time limit to determine the length of time that the block is ‘open’ for transactions, before it is written to the blockchain. When the proof-of-work is complete, the block is closed. Bitcoin is designed so that each block takes about ten minutes to solve, but the time varies with other cryptocurrencies.
+
+Proof-of-work might sound like a very roundabout way of making the block close every ten minutes, but there is an

@@ -1,0 +1,7 @@
+in extremis, capable of transforming not just how money works but many other things too, from the law to democracy.
+
+After cryptocurrencies were released into the world, we began to consider money as a technology. And that technology is sweeping out widely into the future, catching millions upon its bleeding edge. On the way to those possible futures we'll encounter some near-future innovations, such as internet-aware appliances, decentralized banks, and even autonomous corporations.
+
+This Instant Expert guide will introduce this new concept of money as a digital technology. It will paint the broad strokes of what a cryptocurrency is, how it came to be, and where the blockchain might be going next. Along the way, we’ll travel from the dark alleys of the internet to the penthouses of global finance. We’ll get into the details of cryptographic mathematics, and explore the often strange bitcoin subculture. We’ll talk about what makes the money in our pockets, what makes the economies of nations, and about what night change these notions for good.
+
+Predicting the future of money is like trying to get rich gambling on horse races. But by the end of this book, you’ll be in as good a position as anyone to visualize what’s coming over the horizon.

@@ -1,0 +1,9 @@
+# Working by consensus
+
+Dash’s consensus-based approach has triggered huge interest among those developing the next wave of blockchain systems. With it has come the realization that the fundamental role of a blockchain is to agree on something, and to reach this agreement as quickly as possible (see ‘Proof-of-work’, Chapter 4). Once someone has unlocked their wallet and created a transaction, the primary task of the blockchain is to record that transaction, and to do this as quickly as possible so the transaction cannot be reversed, and so new transactions can be added.
+
+A company called Ripple has developed perhaps the largest, most evolved sort of consensus blockchain yet. Its software, also named Ripple, is based on a new form of blockchain designed to handle inter-bank transfers across national borders, and even across different national currencies.
+
+By using a maths and computer science experiment known as the ‘Byzantine Generals problem’, the Ripple engineers believe they have shown that both proof-of-work and proof-of-stake are unnecessary (See box ‘How does Ripple work?’, below). Ripple’s blockchain ledger is designed not only to facilitate transfers of the blockchain’s own native currency, called XRP, but transactions in any currency. In a sense, the Ripple blockchain forms its own secure correspondent account system (see box ‘How to transfer money around the world’, Chapter 12), allowing any bank to create transactions between any other.
+
+After being set up with the hardware by Ripple, a bank becomes a node in the Ripple network. Rather than communicating using a conventional currency exchange system to debit or credit accounts, two banks can exchange transaction information in the ledger, using any currency they prefer. The changes are shown on the ledger in real time. And, if a currency

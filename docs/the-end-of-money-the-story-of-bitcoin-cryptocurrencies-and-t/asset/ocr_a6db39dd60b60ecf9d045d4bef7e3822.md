@@ -1,0 +1,9 @@
+As long as the blockchain is ensured to be consistent and identical across all versions, the bitcoins can be trusted as currency even though they are entirely virtual. All duplicate and erroneous transactions are weeded out, and each bitcoin can only be held by one owner at one time – eliminating the double-spending problem.
+
+A proof-of-work task is based on the same mathematics used in public-key cryptography – though its process is separate from the cryptography used in transactions. The idea was suggested in 1997 by programmer Adam Back for a system called hashcash. Back’s idea was a computer having to complete a difficult task that took, for example, ten minutes, before it could send an email. For a person sending 50 emails a day the prerequisite would be trivial, limiting them to one email every ten minutes. But for a spammer who wanted to send thousands and thousands of emails a day, it would make widespread spamming impossible.
+
+A timer could be circumvented perhaps, but for a computer a task is a more firm limit. Computers are designed to solve long series of tasks quickly. However, a scalable series of tasks, such as those involving cryptography, can easily be scaled up to take exponentially longer on more powerful machines. A task of variable difficulty can be scaled on the fly to make sure that no matter what computer was working on it, from a cellphone to a supercomputer, the task would take roughly the same amount of time. It is like moving the finish line of a race so that a car finishes exactly at a specific time, no matter how fast or slow the car drives.
+
+# No shortcut
+
+If the task involves cryptography, then there is no shortcut. A proof-of-work task can only be completed by ‘brute force’.
