@@ -1,0 +1,5 @@
+management systems) provide support for the representation of different types of relationships between entities. From your meager understanding of one-to-one relationships, you should now have expanded your knowledge to include many-to-one, one-to-many, and many-to-many relationships.
+
+And in the process, you learned a few new features of common SQL commands. In particular, you learned how to use a `SELECT` to join data spread between multiple tables into a single set of results.
+
+In Chapter 6, you'll use all the knowledge you have gained so far, plus a few new tricks, to build a basic content management system in PHP. The aim of such a system is to provide a customized, secure, Web-based interface that manages the contents of the database, instead of requiring you to type everything in by hand on the MySQL command line.
