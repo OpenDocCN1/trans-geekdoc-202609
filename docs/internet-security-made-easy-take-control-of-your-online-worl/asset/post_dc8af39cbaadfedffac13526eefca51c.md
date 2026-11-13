@@ -1,0 +1,553 @@
+
+## I
+
+- identifiers 37
+- identity authentication 36
+  - authentication overload 38
+  - online identification 37-38, 39-40
+- identity theft 8, 33, 35, 67, 83
+  - consequences of identity theft 69
+  - garbage theft 68
+  - hacking 72
+  - help, my identity has been stolen! 75
+  - identifying identity fraud 72-73
+  - malware 72
+  - online activity 68
+  - online privacy 71-72
+  - phishing 71
+  - protection better than cure 74
+  - proxy software 70-71
+- illegal material 122
+- infection 35
+- instant messaging 20
+- Internet 16-19
+  - business 22
+  - commerce 21-22
+  - communication 20-21
+  - entertainment 22
+  - malware 22
+  - news and information 21
+  - text-based communication 16
+  - World Wide Web 16-19
+- Internet browsers 50-51
+- Internet dependency 29
+  - protecting yourself 29
+- Internet Explorer 9, 94, 95, 96
+- Internet security 8-13
+  - access problems 35
+  - children and poor internet security 35
+  - cyber crime 28
+  - defences 27
+  - importance of protection 8
+  - mobile access 9, 19, 193-94
+  - online threats 9, 26
+- iOS 202
+  - apps 203
+  - passcodes 182
+  - passwords 187
+  - setting iOS password/passcode 183
+- IP (Internet Protocol) address 39, 93
+  - static IP address 49
+- iShield 133
+
+- Jargon 11, 248-51
+- Java 171
+  - disabling Java on a Mac 172
+  - disabling Java on a PC 172-73
+
+## K
+
+- Kaspersky 149
+  - costs 149
+  - features 149
+  - reviews 149
+- KujuPiA webfilter 133
+
+## L
+
+- laptops 180-81, 190
+  - back ups 181
+  - encryption 192
+  - OS X passwords 191
+  - theft risk 181
+  - Windows passwords 190-91
+  - wireless access 194
+- legislation 20
+- Libel 72, 106
+- limiting abusive behaviour 114
+- links 72, 93, 104, 112, 116
+- Love Bug virus 66
+
+## M
+
+- Mac viruses 60
+- macro 140
+- disabling Java on a Mac 172
+- Disk Utility 225-26
+- Mac safe boot 226
+- non-booting install 231
+- OS X Recovery 227
+- parental controls 131-2
+- reformatting a Mac 234
+- reinstalling OS X 230-31
+- Time Machine 227
+- using a proxy server on OS X 99
+- malware 67, 13-25, 57, 83, 100, 173
+  - adware 31, 62
+  - botnets 31, 64
+  - bots 31, 64
+  - computer viruses 25-26, 29, 30, 59-60
+    - famous examples 66
+    - how they get in 58
+    - identity theft 72
+    - keylogging tools 174-75
+    - pharming 31
+    - protecting yourself 65
+    - ransomware 31, 62
+    - rootkit 31, 63
+    - scareware 31, 63
+    - spam 31
+    - spyware 30, 62
+    - Trojan Horse 30, 63
+    - warning others 65
+    - what is malware and why? 57-58
+    - worms 30, 61
+- Malwarebytes 174
+- marketing 22
+- McAfee 146
+  - antivirus apps 206
+  - costs 147
+  - features 147
+  - Macs 147
+- Media Access Control (MAC) 196
+- memorable information 39
+- Microsoft Safety Scanner 175
+- Microsoft Security Essentials 154
+  - costs 154
+  - features 154
+  - reviews 154-55
+- Mobile Defence 192
+- mobile phone hacking 207
+  - setting PIN 208
+  - viewing VoIP 207
+- mobile security 180-81
+  - apps and programs 192
+  - protecting your data 182-86
+  - Remote Wipe 186-89
+  - securing a laptop 190-92
+  - theft risk 181
+- Mobile Spy 207
+- music streaming 22
+
+## N
+
+- network hacking 76, 77
+- Norton/Symantec 148
+  - antivirus apps 205
+  - cost 148
+  - features 148
+  - reviews 148
+
+## O
+
+- offensive content 34
+- OFTE 177
+- online accounts 76
+  - account security 84
+  - hacked online accounts 83
+  - how hackers gain access 84
+- Online banking 27
+- online gaming 29
+- online harassment 33, 113
+  - reporting abusive behaviour 114-15
+  - trolling 113-14
+- online identification 37
+  - Captcha codes 40
+  - email validation 37
+  - IP address 39
+  - memorable information 39
+  - passwords lock 40
+  - passwords 38
+  - PIN 40
+  - username 37
+- operating systems 50
+  - reinstalling operating system 229, 230-31
+- out-of-date software 55
+- Outlook 103
+
+## P
+
+- Palm Cloud 156
+- parental controls 129
+  - OS X 131-32
+  - smartphones 207
+  - third-party software 133
+  - Windows Family Safety 130-31
+- passwords 98
+  - passwords for accounts 44
+  - Changing your password 44
+  - combating bad practices 55
+  - educating children 126
+  - email accounts 85
+  - laptops 190-91
+  - looking after your password 43
+  - online accounts 84
+  - password check list 45
+  - password lock 45
+  - replacing letters with numbers 45
+  - strong passwords 41
+  - smartphones and tablets 182-83
+  - social media 115
+  - song lyrics 42
+  - strong passwords 41-42
+  - web browsing 104
+- PC health checks 65
+- PC Mag 148, 149, 150, 152, 153, 154, 155
+- PC security 133
+- PC reformatting 233
+- PC security 177
+  - OFTE 177
+  - Windows BitLocker 177
+- PC World 148, 149
+- personal computer hacking 76, 77
+- personal details 55, 56, 74, 84, 104
+  - children 125, 126
+  - social media 87, 107
+- phishing 31
+- phishing 33, 71, 83, 100
+  - phone calls 73
+- PhoneSheriff 207
+- phreaking 24
+- pictures 87, 110, 116, 213
+  - Koumarai worm 66
+  - Pipl 82
+  - scams 87, 117
+  - selfies 113-14
+  - Snapchat 124
+- PIN 40
+- Pinterest 106
+  - reporting abusive behaviour 115
+- plug-ins 100
+  - Flash 171-72
+  - Java 171
+  - Shockwave 171-72
+- polymorphic viruses 60, 138
+- pornography 122
+  - iShield 133
+- ports 168
+  - changing port numbers 169
+  - opening ports 170
+  - port forwarding 170
+- Prey 192
+- privacy 151, 155
+  - defending children 126
+  - online privacy 71-72
+  - trolling 114
+- privacy and security settings 87, 99-100, 104
+  - Facebook 108-10
+- Twitter 111–12
+- program viruses 60
+- protecting yourself 65
+- proxy servers 97
+  - using a proxy server on OS X 99
+  - using a proxy server on Windows 98
+  - Windows 98
+- public computers 38, 43
+
+## Q
+
+- quarantining files 139, 162–63, 213
+  - recovering quarantined files 214
+- Quick Heal 151
+  - costs 151
+  - features 151
+  - reviews 151
+
+## R
+
+- ransomware 31, 62
+- recovery software tools 219
+  - how computers erase files 219
+  - recovering erased files 219–20
+- Recuva 220
+- reformatting 232
+  - backing up 232
+  - partitions 232
+  - reformatting a Mac 234
+  - reinstalling a Windows PC 233
+  - Windows reformatting 232
+- registry cleaners 176–77, 229, 241
+- Remote Wipe 186–89
+  - Android devices 188–89
+  - iOS devices 187
+- reputation 69
+  - damaged reputations 123–24
+- resetting your router
+- rogue programs and security tools 241
+  - processes 241
+- rootkit 31, 63
+- routers 52
+  - accessing your router 243
+  - administrator password 244
+  - firmware 244–45
+  - granting device access 245
+  - hardware firewalls 243
+  - router firewall 244
+  - understanding routers 243
+  - wired routers 242
+  - wireless routers 52, 194, 242
+- RUBotted 175
+
+## S
+
+- Safe Eyes 133
+- Safe Mode 223–24
+- Safe Search UK 129
+- scams 26, 87, 117
+- Scandisk 223
+- scanning 137, 142, 159, 160–61
+  - email scanning 103, 142, 161
+- scareware 31, 63
+- search engine security 102
+  - malicious content warnings 102
+  - safe searching 102
+  - safe searching for children 128–29
+- search engine development 18
+- signing in 102
+- security threats 23
+  - browser threats 235–9
+  - hacking 24–25
+  - identifying threats 235
+  - malware 25–26
+  - online con artists 26
+  - security threats 239–40
+- selfies 123–24
+- sensitivity 107, 115
+  - identification 108
+  - location 108
+  - schedules 108
+  - security 108
+- sexual predators 124
+  - grooming 125
+  - stranger danger 124, 126
+- Shockwave 171–72
+- shopping 211
+- smartphones 54, 98, 140, 180–81, 201
+  - back ups 181
+  - face unlock 185
+  - forgotten swipe pattern 184–85
+  - IMEI number 181
+  - keylock on Windows phones and tablets 186
+  - mobile architecture 201
+  - mobile OS 202
+  - older operating systems 186
+  - passcodes on iOS devices 182
+  - password protection 182
+  - passwords and PIN 185
+  - remote wipe 186–89
+  - security checklist 209
+  - setting an Android swipe pattern 184
+  - setting iOS passwords/passcodes 183
+  - settings 185
+  - SIM card PIN 185
+  - smartphone compatibility with tablet 202
+  - swipe security on Android devices 184
+  - theft risk 181
+- SMS 71, 85, 205
+- Snapchat 124
+- social media 20, 105
+  - access to information 107
+  - comments 117
+  - identity theft 70–71
+  - online harassment 113–15
+  - ownership of information 107
+  - privacy settings 108–12
+  - securing your social media accounts 86–87
+  - sensible social media use 115–16
+  - sensitive information 107–08
+  - social media platforms 106
+  - symptoms your social media accounts has been hacked 87
+- spam 31, 83
+- spam filters 27
+- autosave and temporary files 217
+- finding temporary files 217
+- hidden files 218
+- opening temporary and autosave files 218-19
+- Spybot: Search and Destroy 174
+- Spyera 207
+- spyware 30, 62, 84
+  - anti-spyware 143, 173
+- SSID (Service Set Identifier) 246, 247
+- state-sponsored cyber attacks 28, 58
+- statements 73, 74, 88
+- stealth viruses 60
+- stranger danger 124, 126
+- Stricker Norton 174
+- system failure 35
+- system information 93
+- system registry 176–77
+- system repair 222
+  - OS X troubleshooting 225–27
+  - reformatting 232–34
+  - reinstalling operating systems 229, 230–31
+  - system stability 222
+  - system tools 222
+  - Windows registry repair 227–29
+  - Windows tools 223–24
+  - System Restore 224
+- system threats 239–40
+  - removing start-up viruses 240
+- system vulnerability 50
+  - Internet browsers 50–51
+  - operating systems 50
+  - software 51
+
+## T
+
+- tablets 54, 98, 140, 180–81, 201
+  - back ups 181
+  - face unlock 185
+  - forgotten swipe pattern 184–85
+  - IMEI number 181
+  - keylock on Windows phones and tablets 186
+  - tablets 186
+  - mobile architecture 201
+  - mobile OS 202
+  - other operating systems 186
+  - passcodes on iOS devices 182
+  - password protection 182
+  - passwords and PIN 185
+  - remote wipe 186–89
+  - security checklist 209
+  - setting an Android swipe pattern 184
+  - setting iOS passwords/passcodes 183
+  - settings 185
+  - SIM card PIN 185
+  - smartphone compatibility with tablet 202
+  - swipe security on Android devices 184
+  - theft risk 181
+- SMS 71, 85, 205
+- Snapchat 124
+- social media 20, 105
+  - access to information 107
+  - comments 117
+  - identity theft 70–71
+  - online harassment 113–15
+  - ownership of information 107
+  - privacy settings 108–12
+  - securing your social media accounts 86–87
+  - sensible social media use 115–16
+  - sensitive information 107–08
+  - social media platforms 106
+  - symptoms your social media accounts has been hacked 87
+- spam 31, 83
+- spam filters 27
+- Time Machine 227
+- tracking 99
+- Trend Micro 150
+  - costs 150
+  - features 150
+  - reviews 150
+- Trojan Horse 30, 63
+- trolling 33, 113–15
+- Tumblr 106
+- Twitter abusive behaviour 115
+  - blocking 20, 70, 71, 83, 87, 105, 106
+  - privacy and security settings 111–12
+  - reporting abusive behaviour 114
+  - third-party access 107
+
+## U
+
+- updates 56, 82, 104
+  - antivirus software 138, 142, 145, 159, 162
+- URL (Uniform Resource Identifier) 17
+
+## V
+
+- video streaming 22
+- virtual private networks (VPNs) 196–97
+- Vultralab 220
+- virus scans 137, 160–61
+- virus shields 137, 142, 160
+- virus variants 162–63
+- viruses 8, 12–13, 23, 25–26, 29, 30, 59–60
+  - data loss 213
+  - Love Bug virus 66
+  - removing start-up viruses 240
+  - types of computer virus 60
+- VoIP (Voice-over-Internet Protocol) 21
+
+## W
+
+- WAP (Wireless Application Protocol) 193
+- web browsers 18, 50–51, 92
+  - anonymous browsing 97–99
+  - browser interaction 93
+  - browser security settings 99–100
+  - browser threats 235–9
+  - checking children's browsing history 127
+  - clearing browser data in Chrome 95
+  - clearing browser data in Internet Explorer 96
+  - Firefox 95
+  - clearing browser data in Internet Explorer 94–95
+  - cookies 96–97, 99
+  - HTML 92
+  - phishing and malware protection 100, 161
+  - storing information 94–96
+  - web navigation 92
+  - safer surfing tips 104
+  - website security 13, 101
+  - HTTPS 102, 104
+- SSL (Secure Sockets Layer) 101
+  - SSL (Secure Sockets Layer) Certificates 101–102
+- timing out 36
+- website development 17
+- welfare benefits 69
+- WEP (Wired Equivalency Privacy) 196, 247
+- Wi-Fi 52, 56, 180, 193
+  - device access 195
+  - enabling Wi-Fi access 195
+  - hacking 195
+  - home wi-fi security 198
+  - virtual private networks (VPNs) 196–97
+  - Wi-Fi connection security 196
+  - Wi-Fi hotspots 195–96, 197
+  - Wi-Fi privacy tools 197–98
+  - Wi-Fi Protected Access (WPA and WPA2) 196
+  - wireless routers 194
+- Wikipedia 21
+- Windows apps 203
+  - phones and tablets 186
+- reformatting a Windows PC 233
+- temporary files 217
+- Windows BitLocker 177
+- Windows Family Safety 130
+  - restricting Internet use 131
+- Windows Mobile/Phone 202
+- Windows registry repair 227
+  - operating system reinstallation 230
+  - operating system repair 229
+  - registry tools 228–29
+  - Windows Registry Checker 227–28
+- Windows Task Manager 80, 81
+- Windows tools 223
+  - Safe Mode 223–24
+  - Scandisk 223
+  - System Restore 224
+- wireless piggybacking 34
+- Wistz Registry Cleaner 229, 241
+- World Wide Web 16, 23
+  - access for all 18
+  - Berners-Lee, Tim 17–18
+  - growth of the Web 18
+  - mobile access 19, 193–94
+  - Web today 18–19
+- worms 30, 61
+  - Anna Kournikova worm 66
+- WPA (Wi-Fi Protected Access) 56, 196, 247
+
+## Z
+
+- zombie computers 78
+- ZoneAlarm 166

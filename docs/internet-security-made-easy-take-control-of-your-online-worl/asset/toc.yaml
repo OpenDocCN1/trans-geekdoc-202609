@@ -1,0 +1,11 @@
+level_changes:
+- line: 1869
+  before: 2
+  after: 3
+text_changes:
+- line: 445
+  before: 药剂攻击
+  after: 药房攻击
+- line: 4886
+  before: 分布式拒绝服务（DoS）攻击
+  after: 分布式拒绝服务（DDoS）攻击
