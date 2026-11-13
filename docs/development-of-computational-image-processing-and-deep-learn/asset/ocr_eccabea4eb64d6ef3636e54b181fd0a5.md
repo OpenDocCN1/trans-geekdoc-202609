@@ -1,0 +1,11 @@
+It shall be noted that \( r_1 = r_{1,i} \) in the case of non-constant learning rates [197]. It is sometimes also referred to as batch gradient descent as it is an optimization method performed on the entire training set, which requires high computational effort [197, 198]. In contrast there are stochastic optimization methods, of which SGD, first described by Robbins and Monro [199] and in a form closer to today’s SGD in DL by Kiefer and Wolfowitz [200], is the most prominent representative [197]. SGD performs a weight update on every training example \( x_i, y_i \):
+
+```
+\( w_{i+1} \rightarrow w_i - r_1 \nabla E(w_i, x_i, y_i) \quad [198], \quad (2.109) \)
+```
+
+which can be regarded as a stochastic estimate of the actual entire gradient. SGD typically achieves fast iterations due to its reduced computational demand in exchange for a lower convergence rate [197]. However, in practice nowadays, often neither purely stochastic nor purely batch optimization methods are used, as the SGD can be used on randomly chosen subsets of the data, or so-called *mini-batches* without constraints [197]. It is mostly still referred to as SGD [198] or sometimes as mini-batch gradient descent.
+
+**The ADAM optimizer** One of the most used optimizing methods in DL is the Adaptive Moment Estimation (ADAM) presented by Kingma et al. in 2014 [201, 202]. It is an algorithm for first-order gradient-based optimization based on adaptive estimates of lower-order moments [201]. While there are many different definitions of the ADAM optimizer [202], the original algorithm as in [201] is introduced in the pseudocode (Algorithm 1) below.
+
+Empirical results show that the ADAM optimizer outperforms many other known optimizers like "AdaGrad" or SGD both in logistic regression as well as in multilayer fully connected neural networks and deep convolutional neural networks [201] concerning its training cost. Its local convergence has been proven [202]. For further information, the reader is referred to the original paper [201].

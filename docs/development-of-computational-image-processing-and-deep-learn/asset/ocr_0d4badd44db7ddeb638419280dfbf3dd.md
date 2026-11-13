@@ -1,0 +1,9 @@
+# # 6 Final remarks
+
+# ## 6.1 Summary
+
+In this work, investigations into the plastificates were first presented. It was shown that both the rotational speed during extrusion and the lofting of the plastificates have an influence on their porosity. As expected, the orientation results show double circular structures in the cross-section due to the twin-screw extruder and almost perpendicular orientation to the extrusion direction.
+
+To determine fiber volume contents from the scans, a slightly adapted thresholding method and a convolutional neural network were developed and validated using experimentally obtained data. While the network performed well, the AOA thresholding was sample-wise better. Further development and inclusion of samples with more variable fiber volume contents would be useful. The second research question formulated in the introduction aimed at how quantities such as fiber volume content can be reliably extracted from CFRP scans, which are more difficult to process. This work shows that adaptation of known methods, but above all AI-based methods, can certainly provide a remedy for low-contrast or noisy images. However, eliminating the cause and generating better images in the first place would of course be an even better measure, but this was not possible within the scope of this dissertation.
+
+With regard to the interpolation of second-order fiber orientation tensors, three different methods were tested, whereby the decomposition method based on spectral decomposition was the most convincing. It was then applied in simplified form to fourth-order fiber orientation tensors. The resulting averaged

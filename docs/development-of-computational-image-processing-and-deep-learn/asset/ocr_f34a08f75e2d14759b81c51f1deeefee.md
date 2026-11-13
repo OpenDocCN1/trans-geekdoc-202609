@@ -1,0 +1,3 @@
+Figure 4.42: Plot of the smallest ED value between one chosen generated image (cf. Figure 4.38) and the training data set over the duration of training. Extracted from Blarr et al. [275].
+
+Figure 4.43: Plot of the highest SSIM value between one chosen generated image (cf. Figure 4.38) and the training data set over the duration of training (higher value corresponds to higher similarity). Extracted from Blarr et al. [275].

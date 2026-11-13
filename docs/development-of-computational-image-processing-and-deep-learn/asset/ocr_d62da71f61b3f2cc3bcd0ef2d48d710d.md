@@ -1,0 +1,9 @@
+as an explicit approach with $x$ denoting an arbitrary point that shall be interpolated, $x_i$ being a known interpolating point and $d$ being the given distance from the known point $x_i$ to the unknown point $x$. $p$ is a positive real number, called the "power parameter". Weight decreases as distance increases from the interpolated points. Greater values of $p$ assign greater influence to values closest to the interpolated point, which results in nearly constant interpolated values for large values of $p$.
+
+# 3.7.2 Component averaging 9
+
+Recalling the definition of second-order orientation tensors as described by Kanatani [89] as well as Advani and Tucker [43],
+
+$A = \int_{\mathcal{S}} \Psi(p) p \otimes p \, dp, \quad (3.10)$
+
+with $\mathcal{S}$ being the unit sphere and $dp$ the surface element on it, as well as $p$ being the unit vector for the direction of the fibers, it appears that $A$ is linear in $\Psi(p)$. Assuming the surface can be divided into two equally sized areas $\mathcal{S}_1$ and $\mathcal{S}_2$ with two distribution functions $\Psi_1(p)$ and $\Psi_2(p)$ and $\Psi_i(n) = \frac{1}{2}(\Psi_1(n) + \Psi_2(n))$ holds, this means that $A_i = \frac{1}{2}(A_1 + A_2)$ is exact, as integration is a linear functional and as an integral domain can always be divided into sub-intervals. This further implies that a direct averaging of the orientation function is equivalent to an averaging of the components of the orientation tensors. Thus, the algorithm multiplies the components of each measured FOT by a weight that depends on its distance from the tensor being calculated. As mentioned before, Shepard’s inverse distance weighting method [297] is used as weight function in all three methods with $p = 2$:
