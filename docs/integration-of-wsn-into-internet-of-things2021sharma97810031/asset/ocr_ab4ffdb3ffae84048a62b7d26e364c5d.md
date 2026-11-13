@@ -1,0 +1,15 @@
+# 11.9.1.3 Compatibility in Technologies
+
+Compatibility issues among the different technologies will be the main area of research for future IoT because IoT is not a single structure or combination of similar technologies; instead, it is a heterogeneous kind of technological combinational structure, which provides heterogeneous services to its users and businesses. When one talks about the present IoT and its enabling technology, they can never consider it for future businesses and applications. The future of IoT demands heavy changes in the underlying hardware and software technology with a new definition of protocols to be used for communication. Therefore, such a system demands high financial investment and cost to upgrade and maintain the old version of IoT accordingly.
+
+# 11.9.1.4 Protocols
+
+Protocols are the set of rules and regulations for integrating multiple technologies and multi-vendor devices for managing information and process controlled and circulated through many sensors. The key responsibility of communication protocols is to carry the quality of communication services among multiple sensors to IoT users. Protocols are the lifeline for any communication system; therefore, protocol integration and management could be a big challenge in the future because technological convention and incorporation among multiple technologies is a very complex task for any IoT network [20].
+
+# 11.9.1.5 Data Analytics
+
+Data analytics is a very useful procedure for any IoT network. Sensors are continuously producing data and processing them for further operation. Such a huge amount of data is very difficult to manage and store for longer time. In this case, the data need to be mined for making it useful enough for the present and future of IoT operations, many applications of IoT perform intelligent decisions and actions against any process, based on the efficiency and accuracy of data analytics, data analytics tools helping sensors for making decision and accordingly perform further action to get result. It is a big challenge in front of all IoT designers and developers to invent such an efficient data analytics tool that can deal with a higher number of users who are using multidisciplinary IoT smart applications and a huge amount of data for producing accurate results. To do this, the IoT needs to integrate advanced data analytics tools with new technological concepts such as machine learning, deep learning, and data science techniques to ensure various operations based on data analysis.
+
+# 11.9.2 Businesses and Application Challenges
+
+Today, IoT is involved in maximum business applications as a prime service provider; therefore, we can say IoT is the lifeline of the present and future business class. Accordingly, IoT may cover the needs of billions of users through connected devices in the near future. Such involvement may lead to the following challenges in the business world:

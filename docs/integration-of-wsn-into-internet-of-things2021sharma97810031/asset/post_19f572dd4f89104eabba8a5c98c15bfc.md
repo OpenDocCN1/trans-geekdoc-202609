@@ -1,0 +1,43 @@
+
+number of characteristic features, they possess certain limitations too. Some of the constraints include energy management, security, and topology changes. As the nodes are mobile, topology changes very rapidly. Routing defines the path to communicate with the routers [17]. Routers use the shortest path to transfer data packets within the networks. Different routing algorithms are used in MANETs such as ad hoc on-demand distance vector (AODV), destination-sequenced distance vector (DSDV), and dynamic source routing (DSR) [18]. Also, two optimization techniques—ant colony optimization (ACO) and swarm intelligence-based optimization— have been discussed. In this chapter, the objective is to evaluate the performance of two reactive protocols—AODV and DSR with one proactive routing protocol DSDV. Simulations are being carried over ns2 simulator.
+
+The various topologies that a mobile network can take are mesh, tree/cluster, or star as shown in Figure 6.1. The end nodes are the sensing nodes that are supposed to sense data and send it to the cluster head/coordinator node [19], directly or through routing nodes or through peer-to-peer routing with other sensor nodes. This leads to alternate topologies that can be taken up by the various nodes in the WSN, depending on their placement and the character played. The router nodes are capable of deploying the collected data received from sensor end nodes to the coordinators, which store or process the data, and may act as a gateway for routing the data to an external network [20].
+
+This work delves into the study of MANETs and different types of routing algorithms needed in this network. As the nodes are movable, it results in frequent topology changes, due to which routing is the main issue. Different protocols were simulated over the network simulator to study the performance based on different parameter metrics. The routing protocols suffer from a number of limitations: the network’s complexity increases on increasing the number of nodes, link failures, etc. Therefore, different optimization techniques were used to find the shortest path between the sources and their destination. The two optimization techniques discussed are ACO and swarm intelligence-based optimization.
+
+![](img/0b5412a09266b61a5c216084aa99aac2_119_0.png)
+
+FIGURE 6.1 Topologies of MANETs.
+
+## 6.1.1 CHALLENGES OF MANETs
+
+- Some of the challenges [21] are as follows:
+- Security: It is an issue of main concern in wireless networks as these types of networks are vulnerable to a number of attacks.
+- Quality of Service: This is a salient challenge for various kinds of network nodes. It is difficult to fulfill different priority demands related to quality.
+- Routing: As the topology changes dynamically, routing is the main issue to find out the minimal path between the sender and the receiver.
+- Battery Constraints: As nodes have restricted battery sources, energy must be conserved in order to have efficient communication.
+- Packet Loss: Loss of packets in the network is due to changes in bits resulting in errors in infrastructure-less channel.
+
+## 6.1.2 APPLICATIONS OF MANETs
+
+- This network is deployed in a number of real-time environments [22]:
+- Search and Rescue Operations: For transferring information without the involvement of wireless connectivity.
+- Military Operations: On demand, a temporary network is set up for fast, easy functioning of information sharing.
+- Commercial Use: For communication in conferences, exhibitions, law enforcement, etc.
+- Disaster Relief Operations: For exchanging information where existing infrastructure gets demolished.
+
+The later section of this chapter is standardized as follows: Section 6.2 focuses on the key features of related work; Section 6.3 explains the routing protocols in MANETs; the optimization techniques of MANETs is illustrated in Section 6.4; Section 6.5 elaborates the effectiveness of different routing protocols; and Section 6.6 deals with the result analysis followed by the conclusion of the chapter in Section 6.7.
+
+## 6.2 RELATED WORK
+
+Yang and Sun [23] suggested an “AODV multipath routing protocol with path selection entropy” (AODVMPSE) that assigns various routes to the destination-enhanced execution of data packets. Ahn et al. [24] suggested another multipath routing algorithm that focuses on high mobility. Merkel et al. [25] demonstrated an active transition of data items among the entire system. This approach corresponds to an overhaul of a more resource-productive operation.
+
+Scalable multipath on-demand routing (SMORT) [26] is an alternative variation of AODV. It mainly focuses on minimizing the routing overhead. The destination also transmitted multiple replies to the initiator node. SMORT employed the routing table for storing packets for reply. There is restriction on the number of packets for reply. When the source node receives its first reply, it sends the data. During the route maintenance phase, two tasks are performed. Firstly, re-establishment of communication between the initial and final end point if the route is destroyed in between the process. Secondly, removal of expired routes from the table. Multipath nodes separate with a backup list that uses AODV characteristics. Two separate node routes are considered between the initial and final end point. Because of this reason, routing table is changed. A new packet called flag is inserted in the process, that is, in the main route and backup route. When the request packet is found, the node updates the routing table and broadcasts the request. When the request packet is received, destination sends a reply packet. Now the flag is set as one.
+
+Ravinder Ahuja et al. [27] proposed performance evaluation of DSR and AODV under a wormhole attack. This attack is executed with two or more number of nodes. Some nodes select these malicious nodes, where data that are to be sent are being altered. The malicious nodes in the attack fake a route that is shorter in length than the original one, and this causes confusion to routing mechanisms that rely on distance between nodes. The malicious node keeps the packet from one location and transmits it at some other location. Without having complete knowledge about the attack, it can be easily performed over the network. There are two types of attacking modes in wormhole attack: the hidden mode and participation mode. Hidden mode uses encapsulation of packets and relay of packets whereas participation mode uses a range of high-power and out-of-band transmission [28]. In high-power transmission, there is only one attacker node that attracts the packet. Out-of-band transmission is two-ended wormholes where high channel bandwidth is placed between the end points to build a wormhole link. The attack results in the disruption of route, packet drop, monitoring of traffic for accessing useful information, etc. Certain security measures can be used in the network, such as protocol-specific solutions [29], cryptography-based techniques, statistical analysis of multipath, and topology-based information approaches [30].
+
+Intrusion detection techniques like an intrusion detection system [31] (IDS) generally detect uninterrupted changes to the system. In IDS, basically, two types of models are implemented: the anomaly detection and misuse detection. It works in three basic steps: controls the collection of data (monitor), decides whether the data collected indicate an intrusion or not (analyze), and manages the response action to the intrusion (response). Intrusion detection may work in a distributive or cooperative environment for MANETs. Each mobile node in a MANET has an individual IDS agent running independently to monitor local activities and identify possible intrusions. Various solutions are proposed to address intrusion detection in MANETs.
+
+Das et al. [32] compared AODV to DSR protocol. Broch et al. [33] and Boukerche [34] have some additional protocols for the analysis. B. Dahill et al. [35] defined some requirements to protect the network from attacks. Some of the rules given by them are as follows: validated nodes should execute computation and discovery of route, detection of malicious messages, avoidance of routing loops, etc. Then, the secure routing protocols such as a cryptographic tool for protection against vulnerabilities in different routing protocols came into existence.
+
+Wankhade and Ali [36] proposed measures regarding quality of service and fault management. Routing protocols prove less efficient when the nodes increase in a network. In this scenario, ACO techniques prove to be less efficient. On comparing with AODV, this protocol possesses higher packet delivery ratio and minimum delay.

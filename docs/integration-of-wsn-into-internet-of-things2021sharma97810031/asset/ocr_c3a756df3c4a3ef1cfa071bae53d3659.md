@@ -1,0 +1,15 @@
+for us to access later. Now, you can access that information in real time from anywhere in the world.
+
++   - Things that receive information and then act on it:
++     We have all used objects that work by giving them a signal to do something that they act on. For example, when we send our printers a document, they print it. The automatic locks on our cars work at the press of a button. These commands can be as simple as an on/off one or as complex as Beethoven's melodies playing on your Bluetooth speaker.
+
++   - Things that can do both:
++     The most powerful of all things connected to the IoT are those that can collect information, send it, receive information, and act on it. This is when the real potential of IoT is seen.
+
+Let us take an example to understand the first two points and then merge them to show how powerful IoT systems can be:
+
+Suppose a farmer has installed moisture sensors on his farm which directly send information to the computers or mobile devices at his home to tell him the timely moisture percentage. This is an example of a very basic wireless sensory network (WSN). Using this information, the farmer can easily irrigate his crops when it is needed, thus preventing over-irrigation or under-irrigation and subsequent crop failure, saving him a fortune. Now, suppose he has installed an automatic irrigation system that irrigates the crops. What if that system is automated and connected to the Internet? In that case, the sensors in the soil, when they get signals that the moisture percentage is low and that the crop needs irrigation, can process them and directly send them to the automated irrigation system. The system will irrigate the crops automatically, reducing the workload of the farmer. As everything is connected to the Internet, we can put in algorithms for the system to check weather updates. Depending on the weather predictions, irrigations can be planned in advance. For example, if the weather shows that it is going to rain in the next hour, then the automatic irrigation can be canceled. This lowers the farmer's costs further.
+
+# 13.4.3 SCOPE OF IOT: APPLICATIONS AND EXAMPLES
+
+The IoT brings to the table a possibility that can benefit every organization, irrespective of its field of work, to add value to their work and expand it in previously unimaginable ways. If we continue to add devices, things, people, and the environment, we will be able to achieve results that would seem like magic. Consider the things we encounter in our daily life that are examples of IoT in action. We have used or know people who use smart watches, smart LED bulbs, or even ceiling fans. Nowadays, many devices that are connected to the Internet and are a part of an IoT system of our own are considered 'smart.' Those watches or other smart wearables collect physical data and give us insights about our health and daily activities. You can also control many smart appliances through your mobile devices from anywhere as long as you are connected to the Internet. For example, you can use them to turn on the air conditioner 5–10 minutes before reaching home and switch on the geyser

@@ -1,0 +1,15 @@
+In an industrial application, because of its sensitive nature, security has become a main concern for IIoT systems [5]. Lack of security affects the communication protocols and compromises the safety, reliability, and availability of such systems [6]. Therefore, to achieve a secure IoT system, machine learning (ML) techniques like supervised and unsupervised learning methods are used as a promising resort [7]. ML is a subset of artificial intelligence, and it does not need to have exhaustive programming [8]. Also, it can easily surpass the dynamic networks. Moreover, ML techniques can also help in training the machine for the purpose of identifying different attacks that can be identified in earlier stages, so as to come up with a corresponding defense policy. Hence, ML techniques handle the attacks intelligently using various learning skills. Therefore, ML algorithms can produce potential security protocols for the system to make it more reliable [9]. IIoT and ML are indivisible entities for providing the ideal solutions as long as the security aspect of the industrial system is considered [10]. However, ML models require testing and training of datasets before using them in an actual system.
+
+In this chapter, a vivid understanding of IIoT is presented with the major challenges that are faced by the IIoT system. Different types of attacks that can be present in IoT systems are explored along with their ML-based countermeasures, and the enabling technologies that have a crucial role in an IIoT ecosystem are highlighted. The major contribution of this chapter is as follows.
+
++   * Provides the background knowledge of architecture, framework, and communication protocols of IoT and IIoT.
++   * Highlights the enabling technologies such as IoT, blockchain, cloud computing, and ML that enable the foundation of IIoT.
++   * Presents a comprehensive discussion on the various types of attacks that are prevalent in the IoT scenario.
++   * Comprehensively surveys the role of ML-based techniques in securing IoT and IIoT systems.
++   * Outlines the most prominent challenges that are faced by IoT and IIoT systems.
+
+The remainder of the chapter is organized as follows. Section 12.2 presents the framework and architecture of IoT and throws light on IoT’s enabling technologies and communication protocols. Section 12.3 explores the types of attacks (active and passive) that take place in IIoT systems. Section 12.4 comprehensively surveys the role of ML-based techniques in securing IoT and IIoT systems. Finally, Section 12.5 highlights the most prominent challenges faced by IoT systems, followed by conclusion in Section 12.6.
+
+# 12.2 BACKGROUND OF IIoT
+
+This section mainly focuses on the framework and architecture, and communication protocol and enabling technologies of IIoT.

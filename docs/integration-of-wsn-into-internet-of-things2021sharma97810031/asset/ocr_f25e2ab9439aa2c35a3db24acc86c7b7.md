@@ -1,0 +1,15 @@
+the value of network resources can be utilize in most efficient way and to make them available for more services, IoT brings the technological environment which help them network users in an easier manner and provide quality of network services smartly, as in Ref. [2], now all the traditional architecture of wireless sensor network (WSN) is in the process on upgrading network services by integrating the IoT-based network architecture and protocols, when one talk about the sensor-based network services, one needs to think about the security considerations and challenges also for the development of network and its services with more reliability, security and trustworthy qualities of entire communication, its fact and we have been seen from the last few decades that it is very sensitive matter of information sharing, exchanging, transmitting through various network sources from one place to another and to perform data operation on moving data objects is not an easy task for information research scientists; therefore, in this chapter we considering and presenting all the basic concepts of IoT and its fundamentals at one place for better understanding with security perception. To express the actual concept of IoT, various definitions have been released from time to time. A few of them are discussed here for understanding IoT.
+
+# 11.1.1 DEFINITION OF IOT
+
+# 11.1.2 ACCORDING TO IEEE
+
+We know that the Institute of Electrical and Electronics Engineers (IEEE) is a globally standardized dedicated organization for inventing, designing, and establishing standards and protocols for communication, and one of the IEEE reports on the Internet of things released in March 2014 [3] described “Internet of things” as follows: IoT is a kind of network having multiple network objectives that all are programmed and embedded with network sensors connected through Internet services for establishing connection and providing real-time virtual application services.
+
+# 11.1.3 ACCORDING TO ETSI
+
+The European Telecommunications Standards Institute (ETSI) is another fully dedicated not-for-profit independent standards organization that is responsible for inventing, designing, and establishing standards for telecommunication industries, and in 2010, it defined a similar concept of IoT as follows: “Machine-to-machine (M2M) communication is a concept of interaction between one machine and another without involving human interruption during the course of communication with the intention of automating the communication process without direct involvement of human efforts” [4].
+
+# 11.1.4 ACCORDING TO ITU
+
+The International Telecommunication Union (ITU) is a standards organization dedicated for inventing, designing, and allocating the signaling services for different radio frequency channels and establishing communication through satellite orbiting system. The ITU defined IoT in its report released in 2005 as follows: IoT is a collective environment of network elements and devices through which network services can be

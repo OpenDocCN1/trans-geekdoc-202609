@@ -1,0 +1,15 @@
+# 12.2.2 IIoT COMMUNICATION PROTOCOLS
+
+In this section, we originate a taxonomy presenting the different communication protocols in IIoT. This section also introduces all the communication protocols and their vulnerabilities.
+
+# 12.2.2.1 Modbus
+
+It is one of the most frequently used protocols in SCADA systems. In this protocol, the communication is established on master–slave configuration and is serial. Master is the device that is seeking the information, while slave is the one that is providing the information. Data can also be written by the master on the memory register of slave. In standard Modbus network, a master can have 247 slaves, each of them having a unique identification code. Slave device has four tables to store data: two for the numerical analog data and two for storing digital data. Modbus traffic is conveyed in unencrypted text; therefore, it lacks confidentiality. Any private or public key management is not provided by it, thus no authentication is present. Also, the lack of sufficient security mechanism makes it easier for the attacker to manage the probity of the data.
+
+# 12.2.2.2 BACnet
+
+It was initially designed for control systems and building automation. This standard is a part of ASHRAE Standing Standard Project Committee 135. Like most of the industrial communication protocols, it was not built with a security perspective. This standard delivers many communication options, for example, master–slave, token-passing, Ethernet, and point-to-point. This protocol does not have authentication policy and also lacks proper mechanisms for confidentiality of data, which makes reconnaissance attack feasible. Some cryptography mechanisms like advanced encryption standard and data encryption standard are included in the new versions in BACnet standard. In general, encryption adds large overheads and communication delays in the system; therefore, they are almost never used in industrial systems. The scan cycle times of human machine interface (HMI) and programmable logic controller (PLC) are normally in the order of milliseconds, and since decryption and encryption of data take longer time, it is not feasible yet. Also denial of service (DoS) attacks could be used to halt the service and also target system availability.
+
+# 12.2.2.3 DNP3
+
+It is a further standard protocol that is applied in systems of SCADA. It does not provide any sufficient security mechanism; therefore, most of the devices of DNP3 lack encryption, authentication, and access control. There are four OSI (open systems interconnections) layers in DNP3: physical layer, application layer, data link layer, and network layer. Communication occurs in master–slave configuration with multiple masters and multiple slaves; it can also occur in a point-to-point mode. The message authentication is not established in this protocol, and thus it puts the integrity of data at risk. Spoofing and eavesdropping are easy since there is no encryption in data. DoS attacks affect the system’s operation easily. A new version of this protocol was produced in 2012 by IEEE, which allows secure authentication
