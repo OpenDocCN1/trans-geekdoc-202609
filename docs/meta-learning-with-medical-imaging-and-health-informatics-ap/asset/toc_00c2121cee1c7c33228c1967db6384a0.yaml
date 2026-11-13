@@ -1,0 +1,20 @@
+level_changes:
+- line: 5
+  before: 2
+  after: 1
+- line: 7
+  before: 3
+  after: 2
+- line: 66
+  before: 3
+  after: 2
+- line: 118
+  before: 3
+  after: 2
+- line: 265
+  before: 3
+  after: 2
+text_changes:
+- line: 1362
+  before: 真实标签, 28, 28, 43
+  after: 真实标签, 28, 43

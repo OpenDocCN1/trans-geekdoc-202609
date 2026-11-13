@@ -1,0 +1,2753 @@
+- pgno: 0
+  md: '# Index
+
+
+    +   **A**
+
+    +   Ablation study, 109, 123, 130, 294, 342, 363
+
+    +   Acceleration factor (AF), 354, 357
+
+    +   Acne classes, 244, 247
+
+    +   Activation layer, 95
+
+    +   Adam optimizer, 94, 97, 122, 130, 151, 153, 199, 227, 290, 339, 357
+
+    +   Adaptation learning rate, 337
+
+    +   Adaptive classifier, 153, 216
+
+    +   Adversarial
+
+    +    losses, 356
+
+    +    training, 335
+
+    +   AGILE
+
+    +    classifier, 214
+
+    +    framework, 214, 217, 222, 231
+
+    +    method, 227–231
+
+    +    model, 230
+
+    +   Agnostic Federated Learning (AFL), 353
+
+    +   Alexnet
+
+    +    architecture, 84
+
+    +    model, 84
+
+    +   Annotated
+
+    +    slices, 12, 13, 92, 163, 169, 177
+
+    +    training images, 186
+
+    +    training sets, 89
+
+    +   Anomalous fundus photographs, 320, 324
+
+    +   Anomaly characterization algorithm, 302–305, 321, 323–325
+
+    +   Anomaly detection, 16, 17, 91, 302, 305, 319, 324
+
+    +    algorithm, 302–305, 317–321, 323, 325
+
+    +    methods, 16
+
+    +    performance, 303
+
+    +   Architecture
+
+    +    autoencoder, 94
+
+    +    designs, 5, 391
+
+    +    learning, 45
+
+    +    LSTM, 147
+
+    +   MEMCAP, 153
+
+    +    model, 37, 38, 42, 44, 47, 54, 55, 65, 256, 391
+
+    +    network, 39, 82, 93, 117, 118, 144, 162, 165, 268, 275, 279, 340, 342, 354,
+    369, 371, 374, 380
+
+    +    neural, 380
+
+    +    parameters, 376
+
+    +   Artier Domain Generalization, 84
+
+    +   Artificially neuron network (ANN), 379, 380
+
+    +   Associative learning, 154, 156
+
+    +   Attentive MAML (A-MAML), 18
+
+
+    +   AUC performance, 340
+
+    +   Augmented
+
+    +    layer, 72, 73
+
+    +    layer input, 72
+
+    +   Autoencoder, 95
+
+    +    architecture, 94
+
+    +    ensemble, 109
+
+    +    objective function, 95
+
+    +    vanilla, 94, 95, 102, 103
+
+    +    weights, 108, 109
+
+    +   Automated machine learning (AutoML), 369, 380
+
+    +   Automatic performance, 325
+
+    +   Average Surface Distance (ASD), 122, 123
+
+    +   **B**
+
+    +   Backbone
+
+    +    architecture, 339
+
+    +    network, 268
+
+    +   Background class, 165
+
+    +   Base
+
+    +    classes, 68, 69, 89, 91, 94, 101, 215, 220, 237, 238, 241–243, 246, 389–391
+
+    +    classification, 68
+
+    +    classifier, 72, 163, 164
+
+    +    learner, 9, 14, 71–74, 102, 254, 256, 258
+
+    +    model updates, 81
+
+    +   Baseline
+
+    +    classifier, 389
+
+    +    method, 102, 201, 230
+
+    +    model, 123
+
+    +    performance, 102
+
+    +    setting, 131
+
+    +    transfer learning methods, 199
+
+    +   Batch All (BA) strategy, 276, 277, 282, 286
+
+    +   Batch Hard (BH) strategy, 276, 277, 282, 286
+
+    +   Bayesian
+
+    +    meta learning, 221, 222
+
+    +    network, 214
+
+    +    optimization, 372
+
+    +    prediction, 220, 221
+
+    +   Bayesian neural network (BNN), 220–222, 228
+
+    +   Benchmark dataset, 83, 237, 334
+
+    +   Bidirectional LSTMs, 41, 50
+
+    +   Bilevel
+
+    +    learning framework, 255
+
+    +    optimization problem, 31'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '+   Binary
+
+    +    classification, 198, 227
+
+    +    classification problem, 223, 230
+
+    +    classification tasks, 186, 192, 195, 203, 215, 216, 218, 337
+
+    +    classifiers, 37, 223
+
+    +    label, 165, 218
+
+    +    segmentation, 165, 196
+
+
+    +   target, 164, 169, 172, 180, 258, 265, 266, 269
+
+    +   unseen, 6, 71, 89, 293, 331, 333
+
+    +   validation, 258
+
+
+    +   Binary cross-entropy (BCE) loss, 196, 197, 203
+
+
+    +   Bottleneck layer, 166
+
+
+    +   Brain
+
+    +    cell dataset, 216
+
+    +    cell type classification, 214
+
+    +    segmentation, 19
+
+    +    tumor segmentation, 343
+
+
+    +   Broad Bioimage Benchmark Collection (BBBC), 195, 198
+
+
+    +   Buffered prototypes, 269
+
+
+    # C
+
+
+    +   Cancer
+
+    +    prediction, 254, 256
+
+    +    type dataset, 261
+
+
+    +   Canonical Correlation Analysis (CCA), 59, 60
+
+
+    +   Capsule
+
+    +    layers, 145, 154
+
+    +    layers convolutional, 145
+
+    +    maps, 145
+
+
+    +   Capsule Network (CapsNet), 144
+
+
+    +   Categorical features, 258
+
+
+    +   Cell
+
+    +    architectures, 378
+
+    +    dataset, 223
+
+    +    segmentation, 14, 188, 189
+
+    +    segmentation results, 189
+
+    +    type classification, 218
+
+
+    +   Centralized dataset, 351
+
+
+    +   Challenge datasets, 333
+
+
+    +   Child network accuracy, 374
+
+
+    +   Classes
+
+    +    base, 68, 69, 89, 91, 94, 101, 215, 220, 237, 238, 241–243, 246, 389–391
+
+    +    disease, 101, 103, 342
+
+    +    distribution, 10, 241
+
+    +    imbalance, 242
+
+    +    instances, 67
+
+    +    label, 67, 71, 90, 92, 94–99, 148, 153, 188, 192, 238, 247, 267
+
+    +    label predictions, 50
+
+    +    names, 14
+
+    +    prototype, 10, 14, 42, 238, 243, 255, 266, 267
+
+    +    relatedness, 266, 267
+
+    +    representations, 238, 263
+
+    +    segmentation, 15
+
+    +    skin, 342
+
+
+    +   Classification
+
+    +    accuracy, 40, 67, 96, 142, 153, 227, 228, 231, 246, 380
+
+    +    base, 68
+
+    +    binary, 198, 227
+
+    +    boundary, 14
+
+    +    datasets, 214, 340, 343
+
+    +    disease, 90, 91, 94, 112, 269, 334, 341
+
+    +    layer, 49, 199
+
+    +    loss, 154, 389
+
+    +    method, 222
+
+    +    models, 89, 254, 256, 389
+
+    +    performance, 312, 318, 323
+
+    +    prediction, 72
+
+    +    problems, 9, 57, 185, 189, 205, 230
+
+    +    process, 267
+
+    +    rare disease, 332, 336, 340–343
+
+    +    results, 154, 201
+
+    +    scores, 67, 68
+
+    +    shot, 243, 269
+
+    +    supervised, 57
+
+    +    task, 9, 77, 78, 117, 188, 194, 195, 205, 213–215, 218, 220, 223, 231, 257,
+    324, 334, 341, 356, 391
+
+    +    weights, 68
+
+
+    +   Classifier
+
+    +    base, 72, 163, 164
+
+    +    baseline, 389
+
+    +    block, 168, 177
+
+    +    deep learning, 302
+
+    +    for multiclass classification, 92
+
+    +    linear, 32, 44, 58, 194
+
+    +    multiclass, 215, 223
+
+    +    neural network, 8
+
+    +    parameter, 29, 194
+
+    +    regression, 180
+
+    +    regularization, 123
+
+    +    weight, 177
+
+
+    +   Clinical Classifications Software (CCS), 264
+
+
+    +   Clinical features, 259
+
+
+    +   Cluster prototypes, 239, 247
+
+
+    +   Coarse classes, 265
+
+
+    +   Combination Network (CN), 317–319
+
+
+    +   Compressed sensing (CS), 351, 353
+
+
+    +   Computed Tomography (CT)
+
+    +    data, 142
+
+    +    datasets, 151
+
+    +    images, 141, 149
+
+    +    scan, 142, 143, 150, 151, 155, 156
+
+    +    scan datasets, 154
+
+    +    scanners, 142, 148, 155
+
+    +    volumetry, 151'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '+   Computer vision, 89, 141, 162, 164, 178, 254, 261, 340, 374,
+
+    +   375
+
+    +   applications, 161, 164, 175
+
+    +   architectures, 153
+
+    +   benchmark, 164
+
+    +   classification problems, 185
+
+    +   community, 90, 91
+
+    +   problems, 188
+
+    +   tasks, 369
+
+    +   techniques, 189
+
+
+    +   Computer-aided diagnosis (CAD)
+
+    +   model, 155
+
+    +   performance, 155
+
+    +   systems, 141
+
+
+    +   Concatenated features, 45
+
+
+    +   Conditioner
+
+    +   arm, 13, 162, 163, 165, 166, 168, 171, 173–175
+
+    +   block, 13
+
+    +   complexity, 174
+
+    +   convolution kernels, 174
+
+    +   feature map, 167
+
+
+    +   Constant learning rate, 358
+
+
+    +   Continuous frequency space interpolation (CFSI), 133, 134
+
+
+    +   Contrast-enhanced CT (ceCT) scans, 170
+
+
+    +   Contrastive
+
+    +   learning, 5
+
+    +   loss, 6, 8, 17, 121, 336
+
+    +   pretraining, 336
+
+
+    +   Conventional
+
+    +   classification methods, 261
+
+    +   classification neural networks, 68
+
+    +   training methods, 237
+
+
+    +   Convolutional layers, 145, 376
+
+
+    +   Convolutional
+
+    +   capsule layers, 145
+
+    +   layer, 37, 60, 154, 166, 168, 174, 221, 223, 378
+
+    +   networks, 59, 69, 333
+
+
+    +   Convolutional neural network (CNN), 45, 49, 67, 68, 70, 89,
+
+    +   141, 144, 151, 237, 242, 257, 278, 307, 312, 315,
+
+    +   317, 323, 324, 374
+
+    +   architectural hyperparameters, 374
+
+    +   architecture, 242, 312, 315
+
+    +   feature space, 324
+
+    +   multiple, 323
+
+    +   performance, 167
+
+    +   structure, 323
+
+    +   trained, 323
+
+
+    +   Convolved feature maps, 378
+
+
+    +   Cosine similarity, 7, 32, 65, 74, 129, 334, 336, 390
+
+    +   function, 69
+
+    +   measure, 65
+
+
+    +   Cross
+
+    +   entropy loss, 94, 120, 338
+
+    +   validation, 242, 245
+
+
+    +   Cup segmentation, 130, 131
+
+
+    +   CURE
+
+    +   dataset, 289, 290, 292–295
+
+    +   pill database, 287
+
+    +   pill dataset, 277, 287
+
+
+    +   Curriculum learning (CL), 91, 191, 194, 199, 205
+
+    +   strategy, 199
+
+    +   task sampling methods, 200
+
+
+    +   Customized
+
+    +   network, 317
+
+    +   target prediction, 263
+
+
+    # D
+
+
+    +   Data augmentation, 89, 130, 213, 218, 289, 340, 342
+
+    +   heavy, 342
+
+    +   methods, 38
+
+    +   techniques, 117, 118, 340
+
+
+    +   Dataset
+
+    +   bias problem, 213
+
+    +   cell, 223
+
+    +   CURE, 296
+
+    +   description, 170, 267
+
+    +   metatest, 335–337
+
+    +   metatrain, 331, 335, 337, 339, 341
+
+    +   microscopy image, 200
+
+    +   pill, 277
+
+    +   preprocessing, 258
+
+    +   rare disease, 335
+
+    +   split, 198
+
+    +   target, 77, 261
+
+    +   unseen, 15, 200
+
+    +   validation, 28, 29, 333
+
+
+    +   Decent
+
+    +   performance, 172, 180
+
+    +   segmentation, 180
+
+
+    +   Decentralized
+
+    +   datasets, 118, 126
+
+    +   federated learning, 136
+
+    +   learning framework, 353
+
+    +   training, 351
+
+
+    +   Decoder
+
+    +   blocks, 13, 163, 166, 168, 172, 173, 177, 180
+
+    +   feature maps, 180
+
+    +   interactions, 172
+
+    +   layers, 95, 97–99
+
+    +   network, 145
+
+    +   path, 370, 376, 377
+
+    +   reconstructs, 95
+
+
+    +   Deconvolutional layers, 121, 130'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '+   Deep
+
+    +   architectures, 80
+
+    +   belief network, 141
+
+    +   convolutional networks, 39, 343
+
+    +   convolutional neural networks, 89, 331
+
+    +   generator network, 10
+
+    +   learning, 28, 90, 164, 304, 305, 307, 335, 375
+
+    +   advances, 3
+
+    +   algorithms, 302, 303, 318, 325, 333, 335
+
+    +   architectures, 91, 317
+
+    +   classification algorithm, 302
+
+    +   classifier, 302
+
+    +   literature, 28
+
+    +   methods, 117
+
+    +   model, 27, 92, 276, 301, 317, 333
+
+    +   networks, 303, 369
+
+    +   solution, 302, 303
+
+    +   systems, 214, 270
+
+    +   technology, 141
+
+    +   networks, 16, 27, 28, 31, 91, 118, 141, 143, 145, 216, 278,
+
+    +   351, 369
+
+    +   Deep clustering (DC), 186, 187, 194, 199, 203, 205
+
+    +   Deep Info Max (DIM) method, 17
+
+    +   Deep neural network (DNN), 12, 14, 45, 75, 76, 92, 141, 155,
+
+    +   164, 213, 215, 216, 255
+
+    +   architecture, 156, 372
+
+    +   performance, 153
+
+    +   DeepAll
+
+    +   baseline, 123
+
+    +   method, 118, 125
+
+    +   model, 123, 124
+
+    +   training, 118
+
+    +   Dense Convolutional Network (DenseNet), 93
+
+    +   Dermatological
+
+    +   classification, 237
+
+    +   image classification, 250
+
+    +   Dermnet dataset, 237, 238, 246
+
+    +   Dermoscopic datasets, 333
+
+    +   Detection performance, 312, 324
+
+    +   Detector performance, 317
+
+    +   Diabetic retinopathy (DR), 301, 302
+
+    +   Dice
+
+    +   loss, 120, 168
+
+    +   loss segmentation, 128
+
+    +   segmentation loss, 120
+
+    +   Differentiable metalearner, 13
+
+    +   Difficulty-aware meta learning (DAML) method, 332
+
+    +   Directed acyclic graph (DAG), 370
+
+    +   Discrete hyperparameters, 370
+
+    +   Discriminative
+
+    +   autoencoder, 90, 93-99, 102, 103, 107, 110, 112
+
+    +   autoencoder ensemble, 90, 96
+
+    +   classifiers, 89
+
+    +   feature space, 94
+
+    +   Diseases
+
+    +   category, 107, 111, 112
+
+    +   classes, 101, 103, 342
+
+    +   classification, 90, 91, 94, 112, 269, 334, 341
+
+    +   classification problem, 255
+
+    +   codes, 268
+
+    +   cohorts, 268
+
+    +   labels, 92
+
+    +   location, 91
+
+    +   ontology, 255, 264, 265, 269
+
+    +   prediction, 253, 268
+
+    +   prediction task, 268
+
+    +   rare, 89, 90, 111, 331, 332, 335, 337
+
+    +   severity level, 91
+
+    +   skin, 337
+
+    +   Disentangled embeddings, 6
+
+    +   Disjoint
+
+    +   classes, 265
+
+    +   metatrain, 148
+
+    +   Distillation loss, 14, 197, 201
+
+    +   Distinctive classes, 9
+
+    +   Domain
+
+    +   generalization, 75–77, 80, 82–85, 117–119, 123, 124, 130,
+
+    +   135, 335, 336
+
+    +   shift, 77, 80, 117, 120, 128, 143, 154, 351, 354, 356
+
+    +   target, 14, 16, 117, 119, 123, 124, 130, 142–144, 146, 148,
+
+    +   154, 156, 254, 260, 334, 335, 353, 356
+
+    +   Domain adaptation (DA), 75, 84, 117, 119, 143, 154, 156, 216,
+
+    +   385
+
+    +   algorithms, 143
+
+    +   methods, 142, 156
+
+    +   techniques, 143
+
+    +   Domain Separation Network (DSN), 84
+
+    +   Dominating features, 130
+
+    +   Dual discrimination (DD), 333
+
+    +   Dynamic contrast-enhanced magnetic resonance imaging
+
+    +   (DCE-MRI), 186, 188, 189
+
+    +   E
+
+    +   Effectiveness
+
+    +   learning, 269
+
+    +   meta learning, 256
+
+    +   Elastic Weight Consolidation (EWC), 16
+
+    +   Electron Microscopy (EM), 187, 196, 198, 206
+
+    +   Electronic Health Record (EHR), 335, 343
+
+    +   Embedding
+
+    +   function, 6, 7, 39, 40, 42, 44, 46, 72, 73, 239, 243
+
+    +   loss, 8
+
+    +   module, 7, 45
+
+    +   network, 7, 13, 32, 122, 267
+
+    +   parameter, 68, 267'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '+   query, 267
+
+    +   space, 6, 10, 42, 91, 121, 237, 239
+
+    +   Encoder
+
+    +    block, 166, 173
+
+    +    feature, 390
+
+    +    layers, 97–99
+
+    +    maps, 95
+
+    +    path, 145, 370, 376, 377
+
+    +   Enriched dataset, 260
+
+    +   Ensemble learning, 94, 95
+
+    +   Ensembling CNN architectures, 333
+
+    +   Entropy regularization (ER), 196, 203
+
+    +   Episode
+
+    +    creation, 82
+
+    +    metalearning, 20, 199
+
+    +    training, 334
+
+    +   Episodic
+
+    +    learning, 118, 128
+
+    +    meta learning, 128
+
+    +    training, 38, 41, 148, 153, 239, 243
+
+    +    training paradigm, 144
+
+    +    training procedure, 41, 43, 80, 82
+
+    +   Episodic Learning in Continuous Frequency Space (ELCFS), 125
+
+    +   Evidence lower bound (ELBO), 220
+
+    +   Evolution strategy (ES), 380
+
+    +   Evolutionary strategy (ES), 371, 372
+
+    +    algorithm, 372
+
+    +    NAS, 372
+
+    +   Expert labeling, 213
+
+    +   Exploding gradients, 156
+
+
+    +   **F**
+
+    +   FC layer, 389, 390
+
+    +   Feature
+
+    +    background, 14
+
+    +    concatenation, 49
+
+    +    embeddings, 7, 10, 14
+
+    +    encoder, 390
+
+    +    extractor, 13, 14, 32, 67, 69, 70, 130, 190, 194, 199, 255, 266, 340, 343
+
+    +    extractor module, 14
+
+    +    extractor network, 144, 149
+
+    +    input support, 12
+
+    +    learning, 50, 335
+
+    +    learning approach, 55
+
+    +    maps, 12, 14, 18, 19, 45, 94, 145, 162, 163, 166–168, 173, 177, 180, 223,
+    342, 374, 378
+
+    +    network, 80, 81, 84
+
+    +    node, 48, 49
+
+    +    representation, 17
+
+    +    sample, 135
+
+    +    segmenter, 163, 167
+
+
+    +   space, 40, 73, 91, 92, 95, 97, 110, 112, 194, 302, 303, 308–310, 312, 323
+
+    +    definition, 308
+
+    +    dimension reduction, 309
+
+    +    vectors, 37, 68–70, 94, 96, 99, 100, 102, 103, 107, 109, 121
+
+    +   Federated averaging algorithm (FedAvg), 126, 131, 135
+
+    +   Federated domain generalization, 124, 125
+
+    +   Federated learning (FL), 3, 19, 20, 118, 124, 125, 135, 326, 343, 353, 358
+
+    +    decentralized, 136
+
+    +    for medical imaging, 19
+
+    +    framework, 351
+
+    +    paradigm, 125
+
+    +    process, 130
+
+    +    systems, 343
+
+    +   Few-shot classification (FSC), 215
+
+    +    experiments, 227, 231
+
+    +    human brain cell, 231
+
+    +    problem, 215
+
+    +    rat brain cell, 227
+
+    +   First-order MAML (FOMAML), 8
+
+    +   fMRI signal classification, 374
+
+    +   Foreground feature embeddings, 14
+
+    +   Freezing layer representations, 59
+
+    +   Fully convolutional neural network (FCN), 189
+
+    +   Fully convolutional regression network (FCRN), 14, 189, 199
+
+    +   Functional proteomics features, 259
+
+    +   Fundus
+
+    +    image, 132
+
+    +    image segmentation, 130, 131, 133
+
+    +    photographs, 301, 302, 304, 305, 317–319, 321
+
+    +    segmentation retinal, 131
+
+    +   Fusion network, 276, 286
+
+
+    +   **G**
+
+    +   Generalizable
+
+    +    embedding function, 255
+
+    +    features, 44
+
+    +    model parameters, 128
+
+    +   Generalization performance, 124, 133, 135, 256
+
+    +   Generative adversarial network (GAN), 11, 16, 91, 333, 335
+
+    +    architecture, 91
+
+    +    method, 92
+
+    +   Gradient
+
+    +    descent, 27, 33, 44, 82, 190, 191, 215, 255, 309, 336, 337, 376, 379
+
+    +    algorithms, 53
+
+    +    method, 43
+
+    +    procedure, 54
+
+    +    steps, 199, 256
+
+    +    stochastic, 57, 68, 169, 255, 291, 337
+
+    +    updates, 56, 336
+
+    +    information, 72'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'loss, 72, 73, 390
+
+    steps, 55, 56, 82, 230, 257, 269, 334
+
+    updates, 55, 56, 61, 214, 227, 230, 231, 255, 257, 374, 387
+
+    Graph Neural Network (GNN), 32, 46–50
+
+    configuration, 49
+
+    layers, 48
+
+    model, 49
+
+    settings, 50
+
+    Ground truth
+
+    labels, 151, 153, 242
+
+    segmentation, 168
+
+    GRU network, 18
+
+
+    H
+
+    Hausdorff distance (HD), 130, 131
+
+    Hidden layer, 67, 69, 94, 97–99
+
+    Histology image segmentation task, 196
+
+    Hounsfield Unit (HU)
+
+    threshold, 150
+
+    values, 142, 151, 155
+
+    Human
+
+    brain cell FSC, 231
+
+    learning, 148, 214
+
+    performance, 321
+
+    Hyperparameters, 28, 53, 84, 171, 176, 189, 197, 198, 205, 243,
+
+    270, 295, 374, 380
+
+    discrete, 370
+
+    optimization, 369, 385
+
+    optimization search methods, 371
+
+    role, 246
+
+
+    I
+
+    Idiopathic pulmonary fibrosis (IPF), 335
+
+    ImageNet, 14, 84, 94, 238, 261, 264, 303, 334, 387, 388
+
+    pretraining, 242
+
+    Imbalanced datasets, 89
+
+    Implicit MAML (iMAML), 14, 15
+
+    Imprinted text, 276, 278, 282, 286, 288, 290, 291, 294, 297
+
+    detection, 290
+
+    information, 276, 277, 284
+
+    recognition, 290, 291
+
+    stream, 284, 286
+
+    Improper training, 174
+
+    Incidental lung nodules, 151, 156, 157
+
+    Incorrect disease labels, 101
+
+    Inferior
+
+    autoencoders, 95
+
+    performance, 104, 151, 172
+
+    training, 110
+
+    Inferred classification weight vectors, 70
+
+    Inflammatory bowel disease (IBD), 335
+
+    Interclass disease similarity, 90
+
+
+    Interdataset transfer learning, 18
+
+    International Classification of Diseases (ICD), 235, 264
+
+    Intersection Over Union (IOU), 290, 291
+
+    IXI validation dataset, 358
+
+
+    K
+
+    K-nearest neighbor (KNN), 258, 259
+
+    Knowledge distillation (KD), 18, 19
+
+    Kullback-Leibler (KL) divergence, 220
+
+
+    L
+
+    Label
+
+    binary, 165
+
+    budget, 219
+
+    field, 50
+
+    generator, 18, 19
+
+    generator network, 18
+
+    ground truth, 151, 153, 242
+
+    information, 47
+
+    map, 165, 168
+
+    mapping, 238
+
+    mask, 170
+
+    prediction, 50
+
+    semantic, 128
+
+    shuffling, 67
+
+    similarities, 50
+
+    space, 77, 119, 125, 144
+
+    transformation, 218
+
+    Labeling effort, 213
+
+    Latent features, 353, 356
+
+    Layer
+
+    augmentation, 72
+
+    classification, 49, 199
+
+    convolutional, 37, 60, 154, 166, 168, 174, 221, 223, 378
+
+    linear, 95, 96
+
+    Learned
+
+    conditioner feature map, 163
+
+    embeddings, 6, 239, 244
+
+    features, 302, 323
+
+    intermediate latent features, 353
+
+    metaarchitecture, 370
+
+    model parameters, 261
+
+    prototypes, 247, 248
+
+    Learner gradient coordinates, 54
+
+    Learning
+
+    ability, 219
+
+    algorithm, 3, 5, 28, 72, 188
+
+    approaches, 37, 341
+
+    architecture, 45
+
+    batch strategy, 294
+
+    bias issue, 353
+
+    capability, 3'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: "+   contrastive, 5\n+   data representations, 265\n+   deep, 28, 90, 164, 304,\
+    \ 305, 307, 335, 375\n+   discriminative feature representations, 243\n+   effectiveness,\
+    \ 269\n+   episodic, 118, 128\n+   feature, 50, 335\n+   framework, 263\n+   generalizable\
+    \ parameters, 126\n+   local, 131\n+   model, 28, 31, 124, 130, 261\n+   modules,\
+    \ 71\n+   objective, 129\n+   parameters, 190\n+   performance, 213\n+   procedure,\
+    \ 148\n+   process, 30, 55, 125, 130, 266, 269, 270\n+   progress, 194\n+   prototype,\
+    \ 13, 269\n+   rate, 8, 54, 82, 84, 94, 172, 128, 130, 151, 154, 156, 177,\n+\
+    \   191, 198, 199, 217, 223, 227, 243, 255, 290-292,\n+   380, 387, 391\n+   rules,\
+    \ 5, 27, 55\n+   scheme, 119, 128\n+   setting, 47\n+   stages, 91\n+   strategy,\
+    \ 31, 189, 214, 292\n+   structure, 268\n+   subset, 312\n+   supervised, 3, 28,\
+    \ 31, 91, 188, 388, 392\n+   task, 10, 27, 218, 332, 334, 337\n+   task embeddings,\
+    \ 254\n+   unsupervised, 3, 11, 19, 92, 194, 214\n+   update functions, 5\n+ \
+    \  Least Recently Used Access (LRUA), 66\n+   Lifelong learning, 10, 27\n+   Linear\n\
+    +   classifier, 32, 44, 58, 194\n+   layer, 95, 96\n+   Local\n+   feature, 303\n\
+    +   feature map, 13\n+   learning, 131\n+   Localization Performance, 91\n+  \
+    \ Long Short Term Memory (LSTM), 7, 8, 40, 54, 65, 146-148,\n+   374\n+   architecture,\
+    \ 147\n+   bidirectional, 41, 50\n+   controller, 147, 153\n+   implementation,\
+    \ 40\n+   model, 54\n+   network, 8\n+   recurrent network, 40, 73\n+   \n+  \
+    \ unrollings, 40\n+   update rule, 54\n+   Loss\n+   classification, 154, 389\n\
+    +   contrastive, 6, 8, 17, 121, 336\n+   dimensions, 55\n+   embedding, 8\n+ \
+    \  function, 28, 30, 31, 37-39, 53-58, 72, 74, 78, 80, 89, 102,\n+   120, 154,\
+    \ 189, 190, 192, 196, 197, 201, 217, 239,\n+   255, 261, 279, 337, 356, 380\n\
+    +   gradient, 72, 73, 390\n+   gradient information, 72\n+   metaoptimization,\
+    \ 340, 342\n+   metatest, 77-79\n+   metatrain, 78\n+   metatraining, 78\n+  \
+    \ prediction, 256\n+   reconstruction, 94\n+   task, 9, 55, 57\n+   terms, 14,\
+    \ 120, 201, 203\n+   training, 340\n+   validation, 94\n+   value, 54\n+   walker,\
+    \ 10\n+   LUNA dataset, 154, 155\n+   M\n+   Machine learning (ML), 89, 258\n\
+    +   algorithm, 75, 253, 254, 258, 385\n+   automated, 20\n+   community, 141\n\
+    +   environment, 380\n+   frameworks, 302, 315\n+   methods, 89, 256, 258\n+ \
+    \  model, 27, 89, 142, 186, 353\n+   performance, 356\n+   systems, 235, 250\n\
+    +   technique, 161\n+   Magnetic resonance imaging (MRI), 351\n+   classification,\
+    \ 353\n+   reconstruction, 354, 356\n+   sampling process, 351\n+   scanners,\
+    \ 358\n+   Mainstream transfer learning methods, 213\n+   Manual labeling, 161\n\
+    +   Margin loss, 151\n+   Maximum likelihood estimation (MLE), 220\n+   Mean Average\
+    \ Precision (MAP), 292\n+   Mean square error (MSE), 7, 45\n+   Medical\n+   classification\
+    \ tasks, 336\n+   datasets, 16"
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '+   image
+
+    +   classification, 374
+
+    +   segmentation, 14, 117, 118, 125, 126, 128, 136, 164, 353, 375
+
+    +   segmentation tasks, 118
+
+    +   imaging, 3, 16, 89, 92, 142, 148, 153, 156, 164, 296, 331, 332, 335, 373,
+    374
+
+    +   segmentation, 13, 375
+
+    +   Melanoma
+
+    +   classification performance, 333
+
+    +   detection dataset, 337
+
+    +   Memory networks, 147, 278
+
+    +   Memory-augmented capsule network (MEMCAP), 143, 144, 148, 154-157
+
+    +   architecture, 153
+
+    +   classifier, 146
+
+    +   framework, 156
+
+    +   model, 148, 153, 154, 156
+
+    +   Memory-Augmented Neural Network (MANN), 8
+
+    +   Meta learning, 28, 186, 189, 261, 335
+
+    +   algorithms, 32, 62, 185, 186, 188, 205, 213, 215, 219
+
+    +   analysis, 256
+
+    +   applications, 12
+
+    +   approaches, 11, 16, 31, 75, 85, 144, 188, 213-216, 254, 255, 336, 341, 388
+
+    +   Bayesian, 221, 222
+
+    +   class, 8
+
+    +   effectiveness, 256
+
+    +   episodic, 128
+
+    +   family methods, 256, 258, 259
+
+    +   field, 215
+
+    +   formulation, 30
+
+    +   framework, 11, 14, 15, 20, 215, 221, 256, 336
+
+    +   history, 27
+
+    +   literature, 188
+
+    +   methods, 19, 20, 55, 123, 124, 143, 185, 186, 188, 191, 203, 219, 254, 258,
+    332, 334, 342, 391
+
+    +   model, 31, 49, 186, 191, 196, 219, 258
+
+    +   objective, 77, 389, 390
+
+    +   optimization, 332
+
+    +   paradigm, 61
+
+    +   performance, 263
+
+    +   problem, 32, 214, 216, 275
+
+    +   problem formulation, 189
+
+    +   procedure, 82, 83
+
+    +   process, 188, 256, 258, 264, 332, 336, 337
+
+    +   rate, 339
+
+    +   regime, 293
+
+    +   scheme, 128, 136, 255
+
+    +   setting, 10, 47, 68, 217, 230, 256
+
+    +   solutions, 254
+
+    +   stage, 390, 391
+
+    +   step, 120
+
+
+    +   strategy, 117
+
+    +   structure, 216
+
+    +   systems, 27
+
+    +   tasks, 47, 188, 205
+
+    +   taxonomy, 32
+
+    +   techniques, 254, 256, 332, 385-387
+
+    +   technologies, 28, 143
+
+    +   training paradigm, 217
+
+    +   training process, 219
+
+    +   unsupervised, 11, 20, 186, 191
+
+    +   updates, 332
+
+    +   Meta learning Domain Generalization (MLDG), 77-80
+
+    +   algorithm, 79, 84
+
+    +   objective, 79
+
+    +   training algorithm, 78
+
+    +   Metaarchitecture, 370, 380
+
+    +   Metabased learning scheme, 136
+
+    +   Metabase, 388, 390, 391
+
+    +   approach, 388, 390, 391
+
+    +   Metadatasets, 215, 218, 231, 256
+
+    +   Metagradients, 55
+
+    +   Metainformation, 8, 19, 71-73
+
+    +   Metalearner
+
+    +   parameters, 54
+
+    +   updates, 227
+
+    +   Metaloss, 61
+
+    +   MetaNet
+
+    +   model convergence, 72
+
+    +   training, 71
+
+    +   Metanetworks, 71
+
+    +   Metaobjective, 32, 56, 120, 128, 129, 188, 332
+
+    +   Metaoptimization, 56
+
+    +   function, 337
+
+    +   loss, 340, 342
+
+    +   procedure, 342
+
+    +   process, 32
+
+    +   scheme, 338
+
+    +   stage, 338
+
+    +   Metaoptimiter, 32
+
+    +   Metaoverfitting, 31
+
+    +   Metaparameters, 11, 29, 30, 214, 221
+
+    +   learner, 55
+
+    +   optimization, 57
+
+    +   pretrained, 214
+
+    +   Metapseudo labels, 385, 387, 388, 391
+
+    +   approach, 387
+
+    +   training phase, 387
+
+    +   Metareinforcement learning, 214
+
+    +   Metatasks, 148, 215, 217, 218, 223, 227
+
+    +   Metatest, 117, 120, 122, 148, 293, 336
+
+    +   data for rare diseases, 336
+
+    +   dataset, 335-337
+
+    +   gradients, 79'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '+   labels, 100
+
+    +   loss, 77–78
+
+    +   loss term, 78
+
+    +   metatrain, 79
+
+    +   set, 75, 77–79, 82, 92, 94, 98–101
+
+    +   splits, 79, 85
+
+    +   stage, 337
+
+    +   unseen, 75, 120
+
+    +   Metatesting
+
+    +   optimization, 201
+
+    +   phases, 92, 99, 101, 103, 150, 153, 293
+
+    +   Metatrain
+
+    +   data, 336
+
+    +   dataset, 331, 335, 337, 339, 341
+
+    +   loss, 78
+
+    +   metatest, 79
+
+    +   metatest samplings, 79
+
+    +   set, 82, 92, 94, 99–101
+
+    +   update, 78
+
+    +   virtual, 117
+
+    +   Metatrained
+
+    +   model, 188
+
+    +   network, 15
+
+    +   parameter, 197
+
+    +   Metatrainer network, 19
+
+    +   Metatraining
+
+    +   datasets, 30
+
+    +   details, 339
+
+    +   domains, 77
+
+    +   episode, 20, 199
+
+    +   loss, 78
+
+    +   metatest samplings, 79
+
+    +   phase, 103, 148, 256, 293
+
+    +   procedure, 337
+
+    +   process, 214, 221, 257
+
+    +   set, 29, 75, 77, 92
+
+    +   space, 227
+
+    +   stage, 29, 337
+
+    +   step, 4, 11, 15, 31
+
+    +   tasks, 148, 203
+
+    +   Metaunderfitting, 31
+
+    +   Metric learning, 5, 32, 39, 62, 91, 121, 164, 237, 255, 278
+
+    +   Microscopy image
+
+    +   datasets, 200
+
+    +   segmentation, 186
+
+    +   MIMIC
+
+    +   dataset, 268, 270
+
+    +   disease classification problem, 269
+
+    +   miniImageNet, 293, 391
+
+    +   Mitochondria segmentation task, 196
+
+    +   Model
+
+    +   architecture, 37, 38, 42, 44, 47, 54, 55, 65, 256, 391
+
+    +   baseline, 123
+
+
+    +   learning, 28, 31, 124, 130, 261
+
+    +   LSTM, 54
+
+    +   MAML, 156, 262
+
+    +   MEMCAP, 148, 153, 156
+
+    +   meta learning, 186, 191
+
+    +   metatrained, 188
+
+    +   multimodal classes, 238
+
+    +   network, 336
+
+    +   optimization, 58
+
+    +   parameters, 56, 120, 124, 128, 195, 218, 222, 226, 256, 261, 263, 265, 267,
+    269, 337, 351
+
+    +   performance, 133, 135
+
+    +   prediction, 256, 267, 314
+
+    +   prediction performance, 142
+
+    +   predictive, 28, 32, 256
+
+    +   pretrained, 12, 16, 92, 161–164, 166, 171, 175, 177, 180, 219, 226, 227, 230,
+    232, 261
+
+    +   segmenter, 13
+
+    +   trained, 28, 41, 78, 177, 186, 358, 360, 363
+
+    +   training, 239
+
+    +   updates, 227
+
+    +   Model agnostic meta learning (MAML), 8, 10, 11, 32, 55, 60, 77, 78, 80, 103,
+    143, 154, 156, 186, 191, 215, 217, 226–228, 254–256, 258, 259, 334, 336
+
+    +   algorithm, 58, 61, 85
+
+    +   approach, 227, 231, 232
+
+    +   framework, 156
+
+    +   metagradient computation, 57
+
+    +   method, 58, 61
+
+    +   model, 58, 156, 262
+
+    +   performance, 259, 262
+
+    +   prototypical, 58
+
+    +   training, 59
+
+    +   Modular architecture, 111
+
+    +   MultiAgent RL (MARL) framework, 379
+
+    +   Multiclass
+
+    +   brain cell classifier, 215
+
+    +   classification task, 223
+
+    +   classifier, 215, 223
+
+    +   segmentation, 164
+
+    +   Multilabel
+
+    +   datasets, 101
+
+    +   thoracic disease classification, 91
+
+    +   Multilayer
+
+    +   adjacency learning, 50
+
+    +   neural network, 48
+
+    +   Multilayer perceptron (MLP), 257, 268, 317
+
+    +   Multiorgan segmentation problem, 14
+
+    +   Multiple
+
+    +   CNNs, 323
+
+    +   convolutional layers, 37
+
+    +   datasets, 144
+
+    +   decentralized source domains, 118, 125'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '+   learning episodes, 213
+
+    +   prototypes, 239, 243
+
+    +   source domains, 75 117, 356
+
+    +   trained models, 360
+
+    +   Multiple instance learning (MIL), 199, 203, 205
+
+    +   Multisite brain tumor segmentation, 118
+
+    +   MultiStream (MS), 276, 282, 292, 294
+
+    +   Multitask
+
+    +   classification problem, 227
+
+    +   learning, 203, 205, 302, 303, 307, 315, 324
+
+    +   Multitask Autoencoder (MTAE), 84
+
+    +   Multiview convolutional network, 141
+
+
+    # N
+
+
+    +   Naive
+
+    +   baseline, 389
+
+    +   classifier baseline, 389, 390
+
+    +   National Institute of Health (NIH) dataset, 101–104, 106, 107, 111, 277, 288
+
+    +   National Lung Screening Trial (NLST), 141, 151
+
+    +   Natural language processing (NLP) techniques, 89, 91
+
+    +   Neighborhood Component Analysis (NCA), 39
+
+    +   Neighboring
+
+    +   classes, 254
+
+    +   features, 48
+
+    +   Network
+
+    +   architecture, 39, 82, 93, 117, 118, 144, 162, 165, 268, 275, 279, 340, 342,
+    354, 369, 371, 374, 380
+
+    +   backbone, 378
+
+    +   Bayesian, 214
+
+    +   capable, 147
+
+    +   decoder, 145
+
+    +   designs, 94, 117, 118, 376
+
+    +   dynamics, 172
+
+    +   embedding, 7, 13, 32, 121, 122, 267
+
+    +   feature, 59, 80, 81, 84
+
+    +   input, 130
+
+    +   LSTM, 8
+
+    +   metatrained, 15
+
+    +   model, 336
+
+    +   neural, 7, 10, 18, 28, 39, 40, 42, 53, 54, 56, 71–73, 77, 80, 81, 89, 92,
+    118, 146, 147, 161, 220, 227, 258, 261, 302, 323, 336, 343, 369, 370, 374
+
+    +   parameters, 81, 294
+
+    +   performance, 380
+
+    +   prediction, 19, 255
+
+    +   pretrained, 53, 166, 283, 331
+
+    +   probabilistic predictions, 318
+
+    +   recurrent, 33, 53, 144, 148, 156
+
+    +   representation, 370
+
+    +   sharing, 6
+
+    +   structure, 223
+
+    +   topology, 370, 374, 377
+
+
+    +   training, 166, 331
+
+    +   weights, 220
+
+    +   Neural
+
+    +   architecture, 380
+
+    +   design, 380
+
+    +   performance, 370
+
+    +   network, 7, 10, 18, 28, 39, 40, 42, 53, 54, 56, 71–73, 77, 80, 81, 89, 92,
+    118, 146, 147, 161, 220, 227, 258, 261, 302, 323, 336, 343, 369, 370, 374
+
+    +   architectures, 81, 370
+
+    +   classifier, 8
+
+    +   Neural Architecture Search (NAS), 3, 28, 369, 372, 373, 379, 380
+
+    +   algorithm, 370, 372
+
+    +   applications, 369
+
+    +   approach, 374
+
+    +   architectures, 369, 374, 375
+
+    +   evaluation methods, 373
+
+    +   evaluation strategy, 372
+
+    +   search tasks, 370
+
+    +   technique, 369
+
+    +   Neural Turing Machine (NTM), 8, 65, 147
+
+    +   Node features, 48, 49
+
+    +   Noisy
+
+    +   features, 94, 97, 109
+
+    +   labels, 101
+
+    +   Noncomputer vision applications, 180
+
+    +   Nonconvex optimization, 31
+
+    +   Nonmedical image datasets, 185
+
+
+    # O
+
+
+    +   Ocular anomaly detection, 317
+
+    +   OPHDIAT
+
+    +   dataset, 302, 304, 311, 317, 318, 324
+
+    +   network, 304, 311
+
+    +   screening network, 301, 302, 304
+
+    +   telemedical network, 303
+
+    +   OphtalMaine dataset, 305, 318
+
+    +   Optical coherence tomography (OCT), 335
+
+    +   Optimization
+
+    +   algorithm, 27, 76, 380
+
+    +   Bayesian, 372
+
+    +   function, 257
+
+    +   knowledge, 53
+
+    +   library, 31
+
+    +   metaparameters, 57
+
+    +   metatesting, 201
+
+    +   methods, 8, 32
+
+    +   model, 58
+
+    +   path, 15, 77
+
+    +   performance, 32
+
+    +   problem, 8, 32, 53, 371
+
+    +   procedure, 387'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'process, 9, 188, 386
+
+    searches, 369
+
+    steps, 8
+
+    strategy, 31, 54
+
+    Optimizer, 8, 28, 205, 380
+
+    Organ
+
+    class, 166
+
+    segmentation, 13, 170
+
+    Orphanet dataset, 335
+
+    Overfitting, 31, 45, 53, 89, 96, 145, 163, 164, 261
+
+
+    P
+
+    PACS dataset, 83, 84
+
+    Particle swarm optimization, 372
+
+    Peak-signal-to-noise ratio (PSNR), 360, 362
+
+    Performance
+
+    analysis, 103
+
+    anomaly detection, 303
+
+    assessment, 325
+
+    baseline, 102
+
+    classification, 312, 318, 323
+
+    CNNs, 167
+
+    comparison, 259, 269, 318
+
+    degradation, 117, 334
+
+    differences, 259
+
+    enhancement, 142
+
+    gain, 378
+
+    gains, 243, 381, 392
+
+    improvements, 117, 118, 124, 363
+
+    inferior, 104, 151, 172
+
+    learning, 213
+
+    machine learning, 356
+
+    MAML, 259
+
+    measures, 30, 102
+
+    meta learning, 263
+
+    model, 133, 135
+
+    network, 380
+
+    optimization, 32
+
+    prediction, 145
+
+    robustness, 154
+
+    segmentation, 124, 170, 172, 175, 177, 178, 189
+
+    superior, 118, 292, 351, 353
+
+    Pill
+
+    dataset, 277
+
+    image dataset, 277
+
+    recognition, 275-279, 281, 282, 288, 292, 296
+
+    segmentation, 279, 289, 290, 297
+
+    Pooling layers, 370
+
+    Prediction
+
+    accuracy, 28, 270
+
+    Bayesian, 220, 221
+
+    classification, 72
+
+    diseases, 253, 268
+
+
+    errors, 41
+
+    label, 50
+
+    loss, 256
+
+    map, 169
+
+    model, 256, 267
+
+    network, 19, 255
+
+    performance, 145
+
+    problems, 254, 270
+
+    task, 14
+
+    Predictive
+
+    distribution, 67
+
+    information, 253
+
+    model, 28, 32, 256
+
+    Predictor network, 19
+
+    Pretrained
+
+    convolutional neural networks, 323
+
+    deep convolutional neural network, 237
+
+    DenseNet, 340
+
+    embedding network, 215
+
+    metaparameters, 214
+
+    model, 12, 16, 92, 161-164, 166, 171, 175, 177, 180, 219, 226, 227, 230, 232,
+    261
+
+    network, 53, 166, 283, 331
+
+    teacher, 18
+
+    Pretraining
+
+    contrastive, 336
+
+    methods, 185
+
+    process, 218
+
+    source, 185
+
+    stage, 334
+
+    step, 11
+
+    unsupervised, 199
+
+    Primary care practitioner (PCP), 235
+
+    Principal component analysis (PCA), 309, 312
+
+    Probabilistic
+
+    classification approach, 10
+
+    prediction, 42
+
+    Probability prediction, 390
+
+    Progressive network, 143
+
+    Propagated prototypes, 269
+
+    Prostate MRI segmentation, 130, 131, 135, 336
+
+    Proteomics
+
+    datasets, 262
+
+    features, 259
+
+    Prototype
+
+    computation, 14
+
+    embeddings, 266
+
+    feature vector, 7
+
+    learner, 13
+
+    learning, 13, 269
+
+    representation, 42
+
+    update, 269
+
+    vector, 7'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '+   Prototypical Clustering Network (PCN), 237, 238, 240, 241,
+
+    +   243, 250
+
+    +   performance, 246
+
+    +   prototypes, 244
+
+    +   Prototypical MAML, 58
+
+    +   Prototypical Network (PN), 10, 32, 42–44, 58, 215, 237–239,
+
+    +   241, 242, 258–260, 334, 336
+
+    +   Prototypical random-walk semisupervised loss (PRW), 10
+
+    +   Pseudo label (PL), 385, 386
+
+    +   Public
+
+    +   datasets, 130, 215
+
+    +   ImageNet dataset, 312, 317
+
+    +   Pyramid volumetric pooling (PVP), 377
+
+    +   Python Imaging Library (PIL), 153
+
+
+    +   Q
+
+    +   Query
+
+    +   data point, 7, 267
+
+    +   embedding, 267
+
+    +   examples, 32, 256, 267
+
+    +   features, 12
+
+    +   image, 12, 13, 32, 90, 162, 164–168, 173–175, 247, 278,
+
+    +   292
+
+    +   image feature map, 45
+
+    +   input, 45, 162, 178
+
+    +   point, 42, 255, 269
+
+    +   sample, 7, 39, 334, 390
+
+    +   segmentation, 172
+
+    +   segmentation masks, 173
+
+    +   set, 3, 6, 9, 13, 14, 20, 29, 32, 43, 45, 168, 179, 181, 256,
+
+    +   258, 334
+
+    +   slices, 164, 170, 178, 180
+
+    +   vector, 69
+
+    +   volume, 13, 163, 164, 169, 170, 174, 178, 180
+
+
+    +   R
+
+    +   Random forest (RF), 258–260
+
+    +   Random under-sampled convolutional neural network
+
+    +   (RUS-CNN), 335
+
+    +   Rare disease, 89, 90, 111, 331, 332, 335, 337
+
+    +   classification, 332, 333, 336, 340–343
+
+    +   dataset, 335
+
+    +   detection, 335
+
+    +   diagnosis, 332, 333, 335, 343
+
+    +   patients, 331
+
+    +   prediction problem, 334
+
+    +   Rat brain cell, 223, 227
+
+    +   active learning experiment, 232
+
+    +   classification experiments, 228
+
+    +   dataset, 223
+
+    +   experiment, 226
+
+    +   FSC, 227
+
+
+    +   Raw classification scores, 68, 69
+
+    +   Recognition performance, 294
+
+    +   Reconstruction
+
+    +   error, 95
+
+    +   loss, 94
+
+    +   Recurrent
+
+    +   network, 33, 53, 144, 148, 156
+
+    +   task network, 151
+
+    +   Recurrent Neural Network (RNN), 8, 18, 45, 56, 372, 374
+
+    +   Generalized
+
+    +   loss, 82
+
+    +   loss function, 82
+
+    +   Regularizer updates, 82, 83
+
+    +   Reinforcement learning, 8, 9, 27, 28
+
+    +   Relation Network (RN), 44, 45
+
+    +   architecture, 45
+
+    +   design philosophy, 44
+
+    +   Relational network, 44
+
+    +   Relational network module (RN), 44
+
+    +   Representation learning, 265
+
+    +   Resnet architectures, 84, 85
+
+    +   Retinal
+
+    +   diseases, 331
+
+    +   fundus segmentation, 131
+
+    +   Retrained
+
+    +   DTS, 277, 286
+
+    +   imprinted text, 282
+
+
+    +   S
+
+    +   Salient features, 90, 92–95
+
+    +   Sample features, 135
+
+    +   Score inference network (SIN), 17
+
+    +   Segmentation
+
+    +   arm, 162, 168
+
+    +   backbone, 122
+
+    +   binary, 165, 196
+
+    +   brain, 19
+
+    +   cell, 14, 188, 189
+
+    +   classes, 15
+
+    +   decoder network, 12
+
+    +   Dice loss, 128, 129
+
+    +   feature maps, 167
+
+    +   labels, 12, 13
+
+    +   maps, 12, 13, 120, 166, 168
+
+    +   masks, 12, 14, 162, 290, 336
+
+    +   medical, 13, 375
+
+    +   models, 119, 294
+
+    +   multiclass, 164
+
+    +   networks, 122
+
+    +   performance, 124, 170, 172, 175, 177, 178, 189
+
+    +   pill, 279, 289, 290, 297
+
+    +   problems, 13, 120, 186, 189, 195
+
+    +   query, 172'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '+   results, 12, 14, 123, 130, 131, 174, 177, 178, 201, 279, 290
+
+    +   results performance drop, 128
+
+    +   scores, 164
+
+    +   semantic, 12, 13
+
+    +   shape, 120, 121
+
+    +   task, 14, 119, 120, 186, 188, 189, 195, 196
+
+    +   unsupervised, 15
+
+    +   Segmenter
+
+    +   arm, 13, 163, 165, 168, 171, 173, 174, 177
+
+    +   complexity, 174
+
+    +   feature, 163, 167
+
+    +   feature maps, 13, 163, 167, 177, 180
+
+    +   model, 13
+
+    +   Self-supervised learning (SSL), 12
+
+    +   Self-supervised module (SSM), 12
+
+    +   Semantic
+
+    +   class, 13, 161, 165, 166, 169–171
+
+    +   features, 130
+
+    +   label, 128, 168
+
+    +   segmentation, 12, 13
+
+    +   Semisupervised learning, 197, 385
+
+    +   algorithms, 387
+
+    +   for domain generalization, 336
+
+    +   Sequential metatraining loss, 79
+
+    +   Serial Section Transmission Electron Microscopy (ssTEM), 196, 198
+
+    +   Shallow networks, 278
+
+    +   Shot
+
+    +   classification, 243, 269
+
+    +   setting, 243, 259, 260, 269, 391
+
+    +   sizes, 245
+
+    +   Siamese
+
+    +   architectures, 6, 164
+
+    +   convolutional neural network, 37
+
+    +   network, 6, 37, 49, 50, 303, 315, 324
+
+    +   neural networks, 32, 47
+
+    +   Signal-to-noise ratio (SNR), 351
+
+    +   Simple Neural AttentIve Learner (SNAIL), 9
+
+    +   Skin
+
+    +   cancer classification, 89
+
+    +   classes, 342
+
+    +   disease, 337
+
+    +   disease classification, 236
+
+    +   lesion classification, 333, 334, 343, 374
+
+    +   lesion segmentation, 333
+
+    +   Skip connections, 156, 166, 173
+
+    +   Source
+
+    +   datasets, 77
+
+    +   domains, 77, 80–84, 117–121, 123, 356
+
+    +   domains multiple, 75, 117, 356
+
+    +   Standard plan (SP), 379
+
+    +   Stochastic gradient descent (SGD), 57, 68, 169, 255, 291, 337
+
+    +   optimizer, 84, 391
+
+
+    +   path, 83
+
+    +   updates, 81
+
+    +   Structural similarity index measure (SSIM), 360, 362, 363
+
+    +   Student network, 386, 387
+
+    +   Superior
+
+    +   performance, 118, 292, 351, 353
+
+    +   segmentation performance, 173
+
+    +   Supervised
+
+    +   classification, 57
+
+    +   classification loss, 81
+
+    +   learning, 3, 28, 31, 91, 188, 388, 392
+
+    +   learning paradigms, 385
+
+    +   training, 226
+
+    +   Support vector machine (SVM), 76, 332, 340
+
+    +   T
+
+    +   t-distributed Stochastic Neighbor Embedding (t-SNE), 302, 353
+
+    +   Target
+
+    +   class prediction, 267
+
+    +   classes, 164, 169, 172, 180, 258, 265, 266, 269
+
+    +   dataset, 77, 261
+
+    +   domain, 14, 16, 117, 119, 123, 124, 130, 142–144, 146, 148, 154, 156, 254,
+    260, 333, 335, 353, 356
+
+    +   image dataset, 261
+
+    +   segmentation datasets, 189
+
+    +   task, 30–32, 80, 90, 190, 196, 197, 254, 261, 263, 303, 324
+
+    +   Task
+
+    +   loss, 9, 55, 57
+
+    +   network updates, 83
+
+    +   representation, 166
+
+    +   Task-augmentation weakly-supervised meta learning method (TAWSML), 198–200,
+    202, 205
+
+    +   tAsk-auGmented actIve meta LEarning (AGILE), 214
+
+    +   Teacher
+
+    +   network, 387
+
+    +   network trainable, 19
+
+    +   predictions, 387
+
+    +   Temporal convolution layers, 9
+
+    +   Text detection network, 286
+
+    +   The Cancer Genome Atlas (TCGA), 258, 262
+
+    +   data, 256, 270
+
+    +   dataset, 256
+
+    +   pan-cancer dataset, 254
+
+    +   pan-cancer prediction, 256
+
+    +   Thoracic disease, 90, 91
+
+    +   Thoracic diseases, 101
+
+    +   Trainable
+
+    +   parameters, 48, 145, 147
+
+    +   selector, 336
+
+    +   similarity function, 46
+
+    +   teacher network, 19
+
+    +   weight parameters, 161'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'Trained
+
+    autoencoders, 97
+
+    CNNs, 323
+
+    metamodel, 197
+
+    model, 28, 41, 78, 177, 186, 358, 360, 363
+
+    networks, 60, 353
+
+    StyleGAN, 15
+
+    system, 142
+
+    teacher, 386
+
+    Training
+
+    data, 91, 92, 94–96
+
+    dataset, 96
+
+    loss, 340
+
+    phase, 68
+
+    Transfer learning, 261
+
+    Transposed convolution layers, 14, 145
+
+    Transposed convolution unit (TCU), 145
+
+    Triplet Negative Breast Cancer (TNBC), 187, 196, 198
+
+    Triplet
+
+    constraint, 276, 292
+
+    loss, 6, 39, 276, 281, 286
+
+    True labels, 28, 28, 43
+
+    U
+
+    Unbalanced datasets, 16
+
+    Unfolded network, 156
+
+    Unified network, 91
+
+    Unlabeled
+
+    data, 10, 11, 19, 92, 186, 191, 194, 334, 336, 385–387
+
+    data samples, 47
+
+    examples, 238
+
+    images, 47, 220
+
+    node, 49
+
+    points, 10
+
+    query image, 47
+
+    samples, 155, 222
+
+    target dataset, 75
+
+    Unpooling layer, 166
+
+    Unregularized loss, 82
+
+    Unrolled gradient steps, 82
+
+    Unseen
+
+    classes, 6, 71, 89, 293, 331, 333
+
+    dataset, 15, 200
+
+    domains, 77, 78, 118, 119, 121, 125, 128, 131, 135, 143,
+
+    144, 336
+
+    metatest, 75, 120
+
+    target domains, 117–119, 136
+
+    Unsupervised
+
+    classification problems, 185
+
+    classification tasks, 195
+
+
+    learning, 3, 11, 19, 92, 194, 214
+
+    meta learning, 11, 20, 186, 191
+
+    neural architecture, 380
+
+    pretraining, 199
+
+    segmentation, 15
+
+    Unsupervised task-formation meta learning (UTFML), 199,
+
+    200, 202, 203, 205
+
+    Updates
+
+    gradient, 55, 56, 61, 214, 227, 230, 231, 255, 257, 374, 387
+
+    inner loop, 61
+
+    meta learning, 332
+
+    metalearner, 227
+
+    model, 227
+
+    task network, 83
+
+    User Interface (UI), 296
+
+    V
+
+    Validation
+
+    classes, 258
+
+    data, 33, 92
+
+    dataset, 28, 29, 333
+
+    images, 315
+
+    loss, 94
+
+    query set, 181
+
+    set, 28, 29, 31, 32, 71–73, 99, 170, 175, 178, 198, 201, 242,
+
+    372, 388, 391
+
+    split, 31
+
+    subset, 190, 191, 194, 199, 304, 305, 312, 318, 319
+
+    volumes, 199
+
+    Vanilla
+
+    autoencoder, 94, 95, 102, 103
+
+    baselines, 230
+
+    classification approach, 217
+
+    MAML, 58
+
+    recurrent networks, 146
+
+    Variational autoencoder (VAE), 10, 11, 199, 203, 205
+
+    Varicella class, 248
+
+    Video segmentation, 164
+
+    Virtual
+
+    metatrain, 117
+
+    source domains, 120
+
+    target domains, 120
+
+    Visceral dataset, 13, 170, 180, 181
+
+    Visually distinguishable features, 108
+
+    Volumetric segmentation strategy, 163, 169, 180
+
+    W
+
+    Walker loss, 10
+
+    Word embeddings, 39
+
+    World Health Organization (WHO), 301'
+  merge: -1
+  img_proc: true
