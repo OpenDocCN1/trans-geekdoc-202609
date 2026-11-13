@@ -1,0 +1,8 @@
+level_changes:
+- line: 8
+  before: 2
+  after: 1
+text_changes:
+- line: 365
+  before: 局限性与与人类智能的比较
+  after: 局限性与人类智能的比较
