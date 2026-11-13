@@ -1,0 +1,17 @@
+Because autoencoders do not belong to the large family of supervised algorithms, we postpone their presentation to Section 15.2.3.
+
+The article Gu et al. (2020a) resorts to the idea of AEs while at the same time augmenting the complexity of their asset pricing model. From the simple specification \( r_t = \beta_{t-1}\mathbf{f}_t + e_t \) (we omit asset dependence for notational simplicity), they add the assumptions that the betas depend on firm characteristics, while the factors are possibly nonlinear functions of the returns themselves. The model takes the following form:
+
+\( r_{t,i} = \mathbf{NN}_{\mathbf{beta}}(\mathbf{x}_{t-1,i}) + \mathbf{NN}_{\mathbf{factor}}(\mathbf{r}_t) + e_{t,i},\) (7.14)
+
+where \(\mathbf{NN}_{\mathbf{beta}}\) and \(\mathbf{NN}_{\mathbf{factor}}\) are two neural networks. The above equation looks like an autoencoder because the returns are both inputs and outputs. However, the additional complexity comes from the second neural network \(\mathbf{NN}_{\mathbf{beta}}\). Modern neural network libraries such as Keras allow for customized models like the one above. The coding of this structure is left as exercise (see below).
+
+# 7.6.3 A word on convolutional networks
+
+Neural networks gained popularity during the 2010 decade thanks to a series of successes in computer vision competitions. The algorithms behind these advances are convolutional neural networks (CNNs). While they may seem a surprising choice for financial predictions, several teams of researchers in the Computer Science field have proposed approaches that rely on this variation of neural networks (Chen et al. (2016), Loreggia et al. (2016), Dingli and Fournier (2017), Tsantekidis et al. (2017), Hoseinzade and Haratizadeh (2019)). Hence, we briefly present the principle in this final section on neural networks. We lay out the presentation for CNNs of dimension two, but they can also be used in dimension one or three.
+
+The reason why CNNs are useful is because they allow to progressively reduce the dimension of a large dataset by keeping local information. An image is a rectangle of pixels. Each pixel is usually coded via three layers, one for each color: red, blue and green. But to keep things simple, let's just consider one layer of, say 1,000 by 1,000 pixels, with one value for each pixel. In order to analyze the content of this image, a convolutional layer will reduce the dimension of inputs by resorting to some convolution. Visually, this simplification is performed by scanning and altering the values using rectangles with arbitrary weights.
+
+Figure 7.11 sketches this process (it is strongly inspired by Hoseinzade and Haratizadeh (2019)). The original data is a matrix (\( I \times K \)) \( x_{i,k} \) and the weights are also a matrix \( w_{j,l} \) of size (\( J \times L \)) with \( J < I \) and \( L < K \). The scanning transforms each rectangle of size (\( J \times L \)) into one real number. Hence, the output has a smaller size: \( (I - J + 1) \times (K - L + 1) \). If \( I = K = 1,000 \) and \( J = L = 201 \), then the output has dimension \( (800 \times 800) \) which is already much smaller. The output values are given by
+
+\( o_{i,k} = \sum_{j=1}^J \sum_{l=1}^L w_{j,l} x_{i+j-1, k+l-1}.\)
