@@ -1,0 +1,1432 @@
+- pgno: 0
+  md: '# Privacy-preserving blockchain-based federated learning for brain tumor segmentation
+
+
+    Rajesh Kumar ^{a}, Cobbinah M. Bernard ^{a,*}, Aman Ullah ^{a}, Riaz Ullah Khan
+    ^{a}, Jay Kumar ^{b}, Delanyo K.B. Kulevome ^{c}, Rao Yunbo ^{a}, Shaoning Zeng
+    ^{a}
+
+
+    ^{a} Yangtze Delta Region Institute (Huzhou), University of Electronic Science
+    and Technology of China, Huzhou 313001, China
+
+    ^{b} Institute for Big Data Analytics, Dalhousie University, Halifax, NS, Canada
+
+    ^{c} Department of Intelligent Manufacturing and Control Engineering, Qilu Institute
+    of Technology, Jinan, Shangdong, 250200, China
+
+
+    # ARTICLE INFO
+
+
+    +   - Brain tumor
+
+    +   - Privacy-preserved
+
+    +   - Federated-learning
+
+    +   - Blockchain
+
+    +   - Segmentation
+
+
+    # ABSTRACT
+
+
+    Improved data sharing between healthcare providers can lead to a higher probability
+    of accurate diagnosis, more effective treatments, and enhanced capabilities of
+    healthcare organizations. One critical area of focus is brain tumor segmentation,
+    a complex task due to the heterogeneous appearance, irregular shape, and variable
+    location of tumors. Accurate segmentation is essential for proper diagnosis and
+    effective treatment planning, yet current techniques often fall short due to these
+    complexities. However, the sensitive nature of health data often prohibits its
+    sharing. Moreover, the healthcare industry faces significant issues, including
+    preserving the privacy of the model and instilling trust in the model. This paper
+    proposes a framework to address these privacy and trust issues by introducing
+    a mechanism for training the global model using federated learning and sharing
+    the encrypted learned parameters via a permissioned blockchain. The blockchain-federated
+    learning algorithm we designed aggregates gradients in the permissioned blockchain
+    to decentralize the global model, while the introduced masking approach retains
+    the privacy of the model parameters. Unlike traditional raw data sharing, this
+    approach enables hospitals or medical research centers to contribute to a globally
+    learned model, thereby enhancing the performance of the central model for all
+    participating medical entities. As a result, the global model can learn about
+    several specific diseases and benefit each contributor with new disease diagnosis
+    tasks, leading to improved treatment options. The proposed algorithm ensures the
+    quality of model data when aggregating the local model, using an asynchronous
+    federated learning procedure to evaluate the shared model’s quality. The experimental
+    results demonstrate the efficacy of the proposed scheme for the critical and challenging
+    task of brain tumor segmentation. Specifically, our method achieved a 1.99% improvement
+    in Dice similarity coefficient for enhancing tumors and a 19.08% reduction in
+    Hausdorff distance for whole tumors compared to the baseline methods, highlighting
+    the significant advancement in segmentation performance and reliability.
+
+
+    # 1. Introduction
+
+
+    The massive growth of Internet of Medical Things (IoMT) technologies, coupled
+    with recent rapid developments in machine learning, has revolutionized the field
+    of medical sciences [1–4]. The design of new surgical equipment for the partial
+    diagnosis of diseases has opened up many possibilities for patient treatment.
+    Over the last decade, AI approaches have been widely adopted to solve critical
+    problems, with a significant percentage of researchers working on various issues
+    such as brain MRI analysis [5], lung CT scan analysis [6,7], clinical prescription
+    analysis [8,9], and many more [10,11]. Moreover, advancements in AI
+
+
+    technologies have facilitated diagnostic accuracy improvements, exemplified by
+    enhanced epileptic seizure recognition [10] and innovative approaches for classifying
+    complex conditions like monkeyox using convolutional neural networks [12]. These
+    methods underscore the potential of AI in revolutionizing diagnostics and patient
+    treatment strategies, especially when integrated with IoMT devices. Unlike research
+    problems in other domains, such as vehicle re-identification [13] and sensor data
+    analysis [14], health data is highly confidential [15]. Consequently, limited
+    AI approaches have been utilized, where only a'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'small amount of data is used to build models. The privacy of health data is
+    a primary concern for healthcare organizations, such as hospitals and pathological
+    laboratories. However, the robustness of AI models often requires vast amounts
+    of data. The dynamic nature of different patients’ cases and problems demands
+    new technologies and tools to link and collaboratively combine data from various
+    hospitals effectively. For this reason, an increasing number of hospitals are
+    seeking secure methods to share data to predict and diagnose new types of viruses
+    and disease symptoms.
+
+
+    To address the privacy challenges faced by healthcare organizations in the IoMT
+    industry 4.0 [16–18], numerous efforts have been made to refine and optimize the
+    protection of individual privacy [19, 20]. Currently, approaches based on federated
+    learning have shown promise in resolving privacy concerns by preserving edge intelligence
+    in distributed scenarios [21, 22].
+
+
+    Effectively handling data privacy also significantly reduces the cost of data
+    transmission. This reduction occurs because each node in the centralized network
+    optimizes a local model using its own data and only transmits the learned model
+    parameters [20]. Generally, in most cases, the optimization of the local model
+    employs the gradient descent algorithm. Through this process, each node (for instance,
+    a hospital, pathology laboratory, or another healthcare organization) retains
+    its local data. The shared learned parameters are then aggregated by a central
+    curator to collaboratively develop a global model [23–27]. However, the collaboration
+    scheme in federated learning still faces significant risks and challenges, particularly
+    concerning the trustworthiness of participant nodes and the quality of their local
+    models. For instance, while [28] proposed a distributed model for sharing gradients,
+    their methods have shown vulnerabilities to passive attackers [29, 30].
+
+
+    # 1.1. Motivation
+
+
+    In the last few years, blockchain and federated learning have become emerging
+    approaches that facilitate a distributed and secure solution to share the data
+    of each node [27]. Features of blockchain, such as traceability, anonymity, and
+    tamper-proof properties, have been given a significant amount of attention by
+    researchers to enhance node and data security in many areas such as smart grids,
+    vehicular networks, and healthcare data networks [3]. This transition aligns with
+    the need for secure platforms to manage sensitive health data, as highlighted
+    by various studies, including the use of blockchain to optimize data privacy and
+    system security [9, 11, 31]. On the other hand, Shen et al. [1] designed a multi-collaborative
+    system based on federated learning in the medical domain. The incentive of existing
+    works only considers the server-based aggregation of the model [23–27, 32], while
+    our work considers blockchain-based aggregation in the medical domain. Moreover,
+    Kumar et al. [3] combined the blockchain and federated learning approach to create
+    a decentralized model, but the drawback of [3] does not consider the trust mechanism
+    between the new local models.
+
+
+    Bonawitz et al. [33] designed a privacy protection framework to safely aggregate
+    gradients using a federated learning global model, whereas [34] proposed a homomorphic
+    encryption (HE) scheme and threshold secret sharing to protect the gradient. However,
+    each aggregation in these schemes requires multiple rounds, which are unsuitable
+    for blockchain distributed networks. Additionally, their approaches were restricted
+    to learning predefined categories (diseases in this case) and cannot learn from
+    new categories. Overall, some important research issues must be addressed with
+    appropriate answers. Some of these important research questions (RQ) are covered
+    more below.
+
+
+    +   * **RQ1:** How can a collaborative processing system that integrates multiple
+    parties be developed?
+
+    +   * **RQ2:** How can trust in new local models be built while maintaining the
+    quality of the local models?
+
+    +   * **RQ3:** How can a mechanism be developed to ensure the privacy of hospitals?
+
+
+    # 1.2. Research approach and contributions
+
+
+    To enhance user privacy and trust, we integrate blockchain with federated learning
+    techniques. The blockchain provides a reliable scheme for training a global model
+    among untrusted participants, facilitating efficient data sharing [35]. This proposed
+    scheme compares the accuracy of the new model with that of existing models to
+    establish trust. In this way, blockchain fosters trust among parties and ensures
+    accurate model training. We have also designed a blockchain-based distributed
+    architecture for secure data sharing, minimizing the risk of privacy leaks. This
+    is achieved by using an encryption scheme that secures model parameters, while
+    the blockchain ensures accurate model training. The aim of this paper is to design
+    a medical data-sharing framework based on AI federated learning and blockchain.
+    This framework is beneficial for predicting new cases and securely sharing medical
+    data. It provides a robust trust mechanism and guarantees privacy. The main contributions
+    of this paper are summarized as follows:
+
+
+    +   1. We propose a quality-aware, blockchain-based federated learning approach
+    to ensure the quality of the model, thereby ensuring end-to-end trust in a decentralized
+    network.
+
+    +   2. This paper designs a keychain-based federated learning algorithm with a
+    secure key-sharing mechanism to protect local model parameters and ensure data
+    security, aiming to improve the security of federated learning in the healthcare
+    sector.
+
+    +   3. We propose a blockchain-based method for collaboratively collecting locally
+    trained model weights from different sources to train a global model.
+
+    +   4. We demonstrate the adaptability and scalability of our block-chain-based
+    federated learning framework, showcasing its efficacy and its potential applicability
+    in diverse healthcare scenarios beyond brain tumor segmentation.
+
+
+    # 1.3. Organization of the article
+
+
+    The rest of the paper is organized as follows. We discuss the foundation of our
+    work in Section 2. In Sections Section 3 and 4, we discuss the system model, local
+    model, and federated learning model. Then, we discuss the performance analysis
+    and security analysis in Section 5. In Section 6, we discuss the limitations of
+    the study. Finally, we conclude this work in Section 7.
+
+
+    # 2. Preliminaries
+
+
+    # 2.1. Background of federated learning
+
+
+    Federated learning is a decentralized and privacy-preserving approach to deep
+    learning, allowing the development of a collective global model while ensuring
+    the confidentiality of the data from all contributing clients. Furthermore, federated
+    learning introduces a mechanism to collect data from various parties or hospitals
+    without breaching their privacy [24, 36–38]. An advantage of the federated learning
+    model is its ability to lower resource usage, such as memory and power, for each
+    participant while simultaneously improving the quality of the trained model. In
+    other words, federated learning learns the model collaboratively and shares the
+    trained model with the participating local clients/machines. To be more specific,
+    each user \(u \in U\) has his or her own private dataset \(D_u \subset D\). The
+    equation for the mini-batch dataset \(D'' = \bigcup_{u \in U} D''_u\) with SGD
+    at iteration \(t\) is shown below.
+
+
+    ```
+
+    \(w^{t+1} \leftarrow w^t - \eta \frac{\sum_{u \in U} \nabla_w L(D''_u, w^t)}{|U|}\)
+    (1)
+
+    ```
+
+
+    Users contribute their local model parameters to the blockchain''s distributed
+    ledger for training the shared global model. Afterward, users or hospitals upload
+    new data, including gradients or weights, to update and enhance the global model.
+    Additionally, for optimization in'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "federated learning, each user \\( u \\in U \\) possesses their own private\
+    \ dataset samples.\n\n```\n\\( F_l(w) = \\frac{1}{|D_i|} \\sum_{j \\in D_i} f_j(w;\
+    \ x_i, y_i) \\) (2)\n```\n\nA global loss function \\( f_j(w; x_i, y_i) \\) minimizes\
+    \ the weights for multiple hospitals in a dataset \\( D \\). In order to handle\
+    \ the statistical heterogeneity among participating clients, a proximal term is\
+    \ added as a local subproblem to the each client optimization so as to effectively\
+    \ limit the impact of divergent variable local updates as:\n\n```\n\\( F_i(w;\
+    \ w^t) = \\frac{1}{|D_i|} \\sum_{j \\in D_i} f_j(w; x_i, y_i) + \\frac{\\mu}{2}\
+    \ \\|w - w^t\\|^2, \\) (3)\n```\n\nwhere \\( w^t \\) is the latest global parameter\
+    \ update and \\( \\mu \\) is a scaled parameter for the proximal term.\n\nThe\
+    \ global model function \\( F(w) \\) is defined as the difference between the\
+    \ estimated and actual values for each hospital, represented as \\( f_j(w; x_i,\
+    \ y_i) \\).\n\n```\n\\( F(w) = \\frac{1}{|M_I|} \\sum_{l \\in I} u_l \\cdot F_l(w)\
+    \ \\)\n\\( = \\frac{1}{|M_I|} \\sum_{l \\in I} \\sum_{j \\in D_i} u_l \\cdot \\\
+    frac{f_j(w; x_i, y_i)}{|D_i|} \\) (4)\n```\n\nwhere \\( i \\) represents a sample\
+    \ \\( (x_i, y_i) \\) from the gallery \\( I = 1, 2, \\dots, n \\), and \\( n_i\
+    \ \\) denotes the number of individual dataset models of hospitals. In our proposed\
+    \ training method, we improved the model's accuracy through an iterative process\
+    \ of minimizing the loss function associated with the global model.\n\n# 2.2.\
+    \ Background of blockchain\n\nTraining an effective AI model for Industry 4.0\
+    \ requires collecting data from multiple sources without compromising privacy.\
+    \ For authenticating users, a blockchain network is essential. Several challenges\
+    \ persist in federated learning on a central server, such as insufficient incentives\
+    \ and the risk of poisoning attacks. To address these, some authors, such as Lu\
+    \ et al. [39] and Qu et al. [40], have utilized blockchain to secure federated\
+    \ learning data. Choi and Pokhrel [41] designed a technique to safeguard the privacy\
+    \ of federated learning using blockchain. However, a major issue with previous\
+    \ studies is their failure to include encryption and masking techniques for securing\
+    \ model parameters. Therefore, we combine federated learning with a blockchain\
+    \ distributed ledger for secure data sharing and to update the global AI model\
+    \ with data from various hospitals. The primary advantage of blockchain technology\
+    \ is its ability to collect data models from different nodes and aggregate local\
+    \ and global models. Smart contracts are used to upload the weights and update\
+    \ the models. The architcture we propose seamlessly combines the strengths of\
+    \ blockchain technology with the capabilities of federated learning, resulting\
+    \ in a fully decentralized system with enhanced security measures. This decentralized\
+    \ approach not only improves the precision of the model but also cultivates a\
+    \ higher level of trust among the participating entities.\n\n# 3. Secure data\
+    \ sharing for blockchain and federated learning\n\nIn this section, we introduce\
+    \ the high-level architecture of the system and its technical details.\n\n# 3.1.\
+    \ System model\n\nOur proposed scheme involves multiple users securely training\
+    \ a global model using federated learning combined with blockchain technology.\
+    \ This proposed architecture consists of several phases (see Fig. 1).\n\n| Notation\
+    \ | Description |\n|---|---|\n| L | Loss |\n| \\( D_i \\) | Dataset |\n| \\( w_i\
+    \ \\) | Weight vector |\n| \\( w_i \\) | Masked weight vector |\n| \\( \\Delta\
+    \ L \\) | Partial derivative function. |\n| H | The hospital |\n| M | The global\
+    \ model |\n| s | Secret key |\n| \\( g_i \\) | Gradient vector |\n\nLocal Model:\
+    \ Each hospital uses its own private dataset to train the local model. Hospitals\
+    \ train and evaluate their local models separately. The following steps should\
+    \ be followed to secure and learn the local model:\n\n+   1. Send local model\
+    \ for training local dataset.\n+   2. Train the local model and compute the local\
+    \ gradients.\n+   3. Add the mask to parameters for secure model sharing.\n\n\
+    Send the Weights to the Blockchain Network for the Aggregation Model: The global\
+    \ model parameters are updated based on the local model parameters of each hospital.\
+    \ Subsequently, the blockchain employs a federated learning averaging technique\
+    \ to aggregate these model parameters. The global model is trained using the local\
+    \ datasets. One advantage of blockchain is its ability to verify the quality of\
+    \ the model, which helps in rejecting false models.\n\n```\n\\( AggregateW_l(\\\
+    beta) \\leftarrow \\frac{1}{\\sum_{i \\in S_i} |D_i|} \\sum_{i \\in S_i} |D_i|\
+    \ W_l(\\beta). \\) (5)\n```\n\nwhere \\( S_t \\) denotes a set of participants\
+    \ at time \\( t \\) and \\( \\beta \\) represents the random share of participants\
+    \ masked with the learned model parameter \\( W \\).\n\nBroadcast the Weights:\
+    \ Finally, the trained global model updates the local hospital models by sharing\
+    \ the latest information for more accurate diagnoses, as shown in Algorithm 3.\n\
+    \n+   1. Update the federated or global model based on local model weights.\n\
+    +   2. Send the latest or updated weights to the local model.\n\n```\nAlgorithm\
+    \ 1: Local Training of the Hospital Datasets\nInput:\n\\( D_i \\): Local hospital\
+    \ dataset,\n\\( E \\): Number of local hospital iterations;\n\\( w \\): Local\
+    \ model parameters,\n\\( \\eta \\): Learning rate\nOutput:\n\\( \\theta_l \\):\
+    \ Trained model parameters\nInitialize model parameters \\( w \\);\nwhile Hospital\
+    \ Participating in Federated Learning do\n  if globalBroadcastReceived then\n\
+    \    Initialize local model parameters \\( w_i \\) with global model parameters\
+    \ \\( w_l^t \\) ;\n    \\( w_i \\leftarrow w_l^t \\) ;\n  end\n  for local epoch\
+    \ \\( e \\leftarrow 1 \\) to \\( E \\) do\n    for \\( b = (x, y) \\in \\) random\
+    \ batch from \\( D_i \\) do\n\\( w_i \\leftarrow w_i - \\eta(\\nabla(\\mathcal{L}(w_l;\
+    \ b))) \\) ;\n    end\n  end\nend\nreturn \\( w_i \\);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/d4c581239fa91a9df419238aaf133f2b_3_0.png)
+
+
+    **Fig. 1.** An illustration of our proposed permissioned blockchain-based federated
+    learning framework is provided. The federated algorithm, FedProx, aggregates the
+    fixed weights from each hospital''s model within the blockchain framework. Each
+    model is trained on the hospital''s private data and dynamically adjusted throughout
+    the training process while interacting with the blockchain''s shared trust mechanism.
+
+
+    # ### 3.2. Federated learning for model broadcasting
+
+
+    First, we present the algorithm for training both local and global models. Algorithm
+    1 displays the pseudocode for training the \(i_{th}\) local model using its dataset,
+    which operates independently on the local client''s machine. The definitions of
+    basic notations are presented in Table 1.
+
+
+    The federated learning algorithm is used to train our model for the distributed
+    hospital dataset. The _H_ hospitals is collaborating to train a global model by
+    using each hospital''s private data without data leakage. Each hospital _H<sub>i</sub>_|
+    \(i \in \{1, ..., n\}\), where _n_ represents the number of hospitals, has a local
+    dataset _D<sub>i</sub>_ with _X<sub>i</sub>_ scheduled training sample per-trained
+    model. The loss weight of the local model of each hospital, constrained on the
+    model weights _w<sub>i</sub>_ calculated as
+
+
+    ```
+
+    L(w, D) = \frac{\sum_{i=1}^n L_i (w_i, D_i)}{n}, \tag{6}
+
+    ```
+
+
+    Multiple hospitals send blockchain ledger requests for the global trained model,
+    and the blockchain nodes automatically adjust the number of hospitals that receive
+    feedback at different times. The function that controls the _n_ requests is represented
+    as follows:
+
+
+    ```
+
+    n = \gamma C, \tag{7}
+
+    ```
+
+
+    where _C_ shows the coefficient, and \(\gamma\) is the coefficient threshold.
+    To this end, _n_ represents multiple hospitals that control the blockchain network
+    (see Fig. 1).
+
+
+    Using the following formulae, this paper optimize the objective function by decreasing
+    the value of the loss function for faster model convergence:
+
+
+    ```
+
+    w^* = \min L(w) \tag{8}
+
+    ```
+
+
+    To share the weight vectors among _H_ hospitals, we employ the secret _s_ sharing
+    technique. In the first phase, it generates a _m_-1 polynomial degree, where \(\beta(0)\)
+    is secret key to be shared. This ensures that
+
+
+    each hospital do not generate its own random number \(B_1, B_2, ..., B_{m-1}\).
+    The hospitals only need to send \(s_1 = \beta(1), s_2 = \beta(2), s_3 = \beta(n)\)
+    to \(H_1, H_2, ..., H_n\). The _m_ and \(\beta(1), \beta(2)...\beta(n)\) can be
+    solved together, _m_-1 is not a correct solution of _s_. Homophobic encryption
+    is introduce by Shamir to share the secret key [42]. Where \(\beta(d)\) is calculated
+    as
+
+
+    ```
+
+    \beta(d) = s + \beta_1 d + \beta_2 d^2 + \cdots + \beta_{m-1} d^{m-1} \mod p \tag{9}
+
+    ```
+
+
+    To prevent access to each hospital''s private dataset, we implement a dynamic
+    secret key sharing scheme. The time component of the secret key is divided into
+    multiple parts, with each fragmented part being updated at the outset. The instance
+    at time _t_ of each hospital''s snapshot of the distributed global model is recorded
+    in the blockchain ledger \(s''_i\).
+
+
+    Federated learning aggregates the local model parameters trained by each hospital.
+    In addition to aggregating the local model weights _w_, we employ both the stochastic
+    gradient descent and batch gradient descent algorithms to optimize the loss function,
+    ensuring the convergence of the global model. To prevent data leakage and enhance
+    data security, a secret key sharing technique is implemented to mask the model
+    parameters.
+
+
+    # ## 4. Blockchain based collaborative learning with effective latency
+
+
+    # ### 4.1. Collaborative learning
+
+
+    A deep learning model is used for the tumor segmentation task. Specifically, we
+    utilized a convolutional neural network model to build the global model for collaborative
+    learning on datasets from different clients. Since the medical data contains multiple
+    class instances, we use the categorical cross-entropy loss function, which is
+    calculated as follows:
+
+
+    ```
+
+    L = - \sum_{r=1}^{class} z_r \log (T_r) , \tag{10}
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "where class defined the number of categories of the data, $z_i$ represents\
+    \ an instance, and $T_{l_i}$ is the predicted probability. However, $l$ indicates\
+    \ an observation of classes. $z_i$ could be 0 or 1 depending on the classes of\
+    \ data. If the same class, then 0 otherwise 1.\n\nEach hospital requests the global\
+    \ model from the blockchain network and then uses its associated local data and\
+    \ local model instance. The deep learning model uses the stochastic gradient descent\
+    \ where the gradient of the model is $g_i$ and the weight is $w_i$ under the specified\
+    \ data. The federated learning model aggregates the weights of each local hospital\
+    \ model and updates the local model without leaking the privacy of data.\n\nThe\
+    \ proposed model is categorized into three parts (i) model training, (ii) model\
+    \ data sharing and, (iii) model masking and uploading.\n\n+   1. **Model training**:\
+    \ Every hospital uses the same model to train a global model employing the CNN\
+    \ neural network. However, to save time and memory resources, we do not train\
+    \ the neural network model from scratch. To reduce communication overhead, gradients\
+    \ are not uploaded directly to the blockchain. Instead, hospitals share their\
+    \ gradients, which are then aggregated to further train the latest model weights\
+    \ $w_i$. Moreover, the training process is divided into two parts. In the first\
+    \ part, each hospital shares its model information. The blockchain then verifies\
+    \ the hospital's model based on data quality. In the second stage, the federated\
+    \ learning averaging algorithm aggregates the weights, and the updated weights\
+    \ are subsequently sent to the local models.\n\n+   2. **Model sharing**: To improve\
+    \ the quality of the model for every single hospital, multiple hospitals share\
+    \ their models in the blockchain network to enhance the model quality. However,\
+    \ hospitals share the model with differential privacy to achieve a secure way\
+    \ of sharing the models among hospitals. Assuming that two similar datasets D\
+    \ and $\\hat{D}$ are used, which differs by one single data instances, the mapping\
+    \ function $f : f(D) = (z_1, z_2, ..., z_d)^T$, where $D \\rightarrow R^d$ is\
+    \ used to show the relationship between vector-space and dataset. Adding noise\
+    \ to secure the dataset, we use Laplace function $Laplace(\\frac{\\Delta f}{\\\
+    epsilon})$, where the output function $f$ defined as $A(D)$ below: $A(D) = f(D+)\
+    \ \\left( Laplace_1(\\frac{\\Delta f}{\\epsilon}) \\cdot Laplace_2(\\frac{\\Delta\
+    \ f}{\\epsilon}) \\right)$ (11) where $\\Delta f$ is defined as follows $\\Delta\
+    \ f = \\max_{D,D'} \\| f(D) - f(D') \\|_c,$ (12) where $\\Delta f$ confirm the\
+    \ both parties and $c$ is taken as 1 $P_r[A(D) = O] \\le e^\\epsilon * P_r [ A\
+    \ ( D' ) = O ]$ (13)\n\nAlgorithm 1 shows the privacy preserved model, where the\
+    \ hospital add the mask in the dataset; then blockchain nodes update the hospital\
+    \ model based on its weights. The blockchain network adds the mask noise to the\
+    \ model where $t$ represents time slot, and the mask defined as $\\{\\vec{g^i_1},\
+    \ \\vec{g^i_2}, ..., \\vec{g^i_n}\\}$. For each hospital, the convergence function\
+    \ for the updated weights is to map $\\{\\vec{g^i_1}, \\vec{g^i_2}, ..., \\vec{g^i_n}\\\
+    }$ to $\\{w^i_1, w^i_2, ..., w^i_j, ..., w^i_n\\}$. However, each dataset and\
+    \ other weights received from other hospitals are represented below:\n\n$$\\vec{g^i_r}\
+    \ \\leftarrow \\frac{1}{n} \\sum_{j=1}^n \\left( \\vec{g^i_j}(d_i) + Laplace\\\
+    left( \\frac{\\Delta f}{\\epsilon} \\right) \\right)$$ (14) Based on the local\
+    \ model accuracy, the blockchain network can deny the uploading weights from local\
+    \ models with low accuracy. In this way, the global model aggregates weights of\
+    \ models with the best accuracies for a better model. The global model will not\
+    \ accept low accuracy models or malicious models, which affect the performance\
+    \ of the global model.\n\n```\n**Algorithm 2: Asynchronous Privacy Preserved Federated\
+    \ Learning**\nInput: local dataset $d_i$, hospitals $H$ ;\nOutput: Global Model\
+    \ $M$\nfor each hospital $h_i \\in [H]$ do\n  for $t \\in [timeslot]$ do\n   \
+    \ if t=1 then\n      Train a new model based on local models dataset $d_i \\subset\
+    \ D$;\n      Calculate the noise using the $\\vec{g^i_r} \\leftarrow \\frac{1}{n}\
+    \ \\sum_{j=1}^n \\left( \\vec{g^i_j} (d_i) + Laplace \\left( \\frac{\\Delta f}{\\\
+    epsilon} \\right) \\right)$ ;\n      Broadcast the masked model to the network;\n\
+    \    else\n      Collect all uploaded model from other hospitals ;\n      Aggregate\
+    \ the local models and train the final model using Eqn. 5 and Eqn. 17 ;\n    \
+    \  $m_i(t) = m_i(t-1) + \\frac{1}{N} \\sum_1^N \\gamma \\cdot S ( v_i ) \\cdot\
+    \ w_i(t)$;\n      Add the mask using the Gaussian mechanism $\\vec{w^i_t} = w^i_t\
+    \ + s^i$ ;\n      Broadcast the global model $M$\n    end\n  end\nend\nreturn\
+    \ M\n```\n\n+   3. **Model parameters masking and uploading**: Each hospital shares\
+    \ its model weights $\\vec{w_i}$ with the secret mask. The privacy preservation\
+    \ scheme is shown in Algorithm 2. Hospitals $H_i$ updates the shards $s$ with\
+    \ respect to time $t$. Firstly, we select the random number $m-1$ with $\\beta_{i1},\
+    \ \\beta_{i2}, ..., \\beta_{i(m-1)} \\in_R Z_p$. The polynomial function is represented\
+    \ as follows: $\\beta_i(d) = \\beta_{i1}d + \\beta_{i2}d^2 + ... + \\beta_{i(m-1)}d^{m-1},$\
+    \ (15) where $H_i$ calculate the $q_{ij} = \\beta_j$ and then send to other model\
+    \ $q_{ij}$. $q_{ij}$ is updated according to $s_i^{(t)} = s_i^{(t-1)} + (q_{i1}\
+    \ + q_{i2} + ... + q_{in}) j \\in [1, ..., n] \\& j \\neq i$ (16)\n\n+   4. **Store\
+    \ and aggregate the shared model in blockchain network**: After receiving the\
+    \ local model $m$, the gradients are aggregated together. Then, the final results\
+    \ of the updated model will be stored in the blockchain network. For efficient\
+    \ use of resources and reducing communication overhead of the blockchain network,\
+    \ we use IPFS to store the local model and hashes stored in the blockchain network.\
+    \ Furthermore, the unmapping of the mask of the final model is calculated as:\
+    \ $M = \\sum_{q \\in Q} \\vec{w_i} + \\sum_{q \\in Q} \\lambda_q s_q^{(t)} - s\
+    \ = \\sum_{q \\in Q} \\vec{w_{iq}} + \\sum_{q \\in Q} \\lambda_q \\left( s_q^{(t-1)}\
+    \ + \\sum_{h \\in Q \\setminus \\{q\\}} \\beta_v(q) \\right) - s = \\sum_{q \\\
+    in Q} \\vec{w_i} + \\sum_{q \\in Q} \\lambda_q s_q^{(t-1)} + \\sum_{h \\in Q \\\
+    setminus \\{q\\}} \\lambda_u \\beta_v(q) - s = \\sum_{q \\in Q} \\vec{w_{iq}}\
+    \ + s + \\sum_{q \\in Q} \\beta_h(0) - s = \\sum_{q \\in Q} \\vec{w_{iq}}.$ (17)\
+    \ The model averaging and aggregation process is described in algorithm 2."
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "```\nAlgorithm 3: Model Aggregation Process\nvar Accu=0;\nfor each hospital\
+    \ h ∈ H do\n  Calculate model information of hospital ;\n  Aggregate model w =\
+    \ ∑h∈H w h ;\n  Train Model(w,Train-dataset);\n  Compute Accu_h ;\n  Accu = Accu\
+    \ + Accu_h ;\nend\nreturn M_h, Accu_h\n```\n\n# 4.2. Committee blockchain consensus\
+    \ mechanism for trust\n\nEach hospital broadcast the local model to the blockchain\
+    \ ledger and requested the global model. All local model are aggregation in the\
+    \ blockchain network. The following are the steps to calculate the trust on model:\n\
+    \n+   1. It verifies the training of the local hospital model based on the other\
+    \ collected model.\n+   2. Calculate the accuracy between the local model and\
+    \ other model set.\n+   3. The accuracy of model is calculated as\n+      \\(\\\
+    rho_b^t = \\left( 1 + \\frac{\\sum_{R \\in R} (A_b - A_j)}{|B| - 1} \\right)\\\
+    )\n+   4. The current or local hospital model can calculate the trust. It updates\
+    \ the model based on the historical trust value: It computed as \\(S_{R_b}^t =\
+    \ \\frac{1}{1 + e^{-\\alpha(S_{R_b}^{t-1} - \\rho_b^t)}}\\)\n+   5. After calculating\
+    \ trust, a reward will be given based on the accuracy of the model.\n\nThe calculation\
+    \ process of reward is as follows:\n\n+   1. The blockchain verify the trust value\
+    \ according to training models with higher accuracy, If the value verifies a certain\
+    \ threshold, the model is published; otherwise rejected.\n+   2. The reward is\
+    \ 0 to 1, rewarding higher deviation rate models with increased trust while punishing\
+    \ lower deviation rate models with less trust.\n+   3. The calculation process\
+    \ is calculated as :\n+      \\(S'_{R_k^i} = \\begin{cases} S'_{R_k^i} - \\frac{\\\
+    eta_i e^{A_i}}{\\sum_{i=1}^n \\eta_i e^{A_i}}, & 0 < \\beta < 1 \\\\ S'_{R_k^i}\
+    \ + \\frac{\\eta_i e^{A_i}}{\\sum_{i=1}^n \\eta_i e^{A_i}}, & 1 \\le \\beta \\\
+    end{cases}\\)\n+   4. Finally, we calculate the trust value evaluation as follows:\
+    \ max \\(\\left( S_{R_b} = [\\max_{b \\in B} S_{R_b}^k (\\alpha, \\rho_b^t)] \\\
+    right)\\)\n\nThe trustworthiness model ensures that messages are delivered on\
+    \ time and without error, facilitating effective communication between parties.\
+    \ Reliability is determined by comparing the number of transmitted packets with\
+    \ the number of packets confirmed as received. Additionally, we take into account\
+    \ the node selection process to enhance the model's reliability. The steps are\
+    \ as follows:\n\n+   1. The initial position of a node is (x0, y0) with k = 1\n\
+    +   2. Choose a speed sk from [smin, smax] for the destination position (xk, yk)\
+    \ within the network area; the node then moves at a constant speed sk between\
+    \ (x0, y0) and (xk, yk).\n+   3. The node halt for a time (tRP) if the pause function\
+    \ is enabled, with the pausing time taken from a distribution with the density\
+    \ function (f p(t)).\n+   4. Increase k+1 and go to step 2\n\n# 5. Security analysis\
+    \ and performance analysis\n\n# 5.1. Security analysis\n\nBy leveraging a permissioned\
+    \ blockchain architecture, a decentralized and secure framework is established\
+    \ for collaboration among various healthcare institutions. The integration of\
+    \ the blockchain consensus mechanism with federated learning techniques effectively\
+    \ mitigates concerns pertaining to trust, potential security vulnerabilities,\
+    \ and the confidentiality of sensitive patient information.\n\n+   1. Ensuring\
+    \ Differential Privacy: To safeguard user privacy, our proposed protocol guarantees\
+    \ that the generated values are indistinguishable from randomly generated ones.\
+    \ A random vector is chosen to create the ciphertext wii, where K acts as a security\
+    \ parameter that ensures indistinguishability from random values. The polynomial\
+    \ \\(\\widetilde{w}_i\\) is then used to compute Hi based on these random values.\n\
+    +   2. Data Access: The proposed technique utilizes federated learning in conjunction\
+    \ with blockchain technology, with the primary goal of safeguarding data privacy.\
+    \ This model ensures data privacy by combining encryption techniques with blockchain,\
+    \ thereby guaranteeing the protection of the data.\n+   3. Secure Aggregation\
+    \ of Model Weights: The blockchain and local model client collaborate to ensure\
+    \ the security of the weight aggregation process through the following steps:\n\
+    +      (a) Initialization: To begin, the security algorithm is established to\
+    \ generate the necessary public parameters for the model.\n+      (b) Encryption:\
+    \ Clients define the parameter pair (i, m), where i represents the entity's index\
+    \ and m denotes the plaintext message. The encrypted value Enc(i, m) is then returned\
+    \ to the model.\n+      (c) Iterative Compromise: The model incorporates an i\
+    \ entity, and the aggregated model releases the secret keys SKc. This phase is\
+    \ iterated several times.\n+      (d) Single Challenge: This step is permitted\
+    \ only once throughout the entire process. For each i ∈ K, two plaintext messages,\
+    \ m1 and m2, are generated and sent. If the bit equals 0, ci = Enc(mi) is computed.\
+    \ Otherwise, the encryption is performed in the same manner, and ci is sent.\n\
+    +      (e) Final Prediction: The output of the process is either 1 or 0.\n+  \
+    \ 4. Eliminating the Need for Centralized Trust: By leveraging the decentralized\
+    \ nature of blockchain technology, hospitals can engage in collaborative efforts\
+    \ without relying on intermediaries or third-party trust.\n+   5. Secure Data\
+    \ Management: Only a trusted data provider uploads data to the network to ensure\
+    \ the model's reliability. Moreover, the cryptography algorithm guarantees the\
+    \ security of the data.\n+   6. Ensuring the Integrity of the Shared Model: The\
+    \ consensus mechanism employed by the system serves to validate the quality and\
+    \ reliability of the data used in the learning process, thereby safeguarding the\
+    \ integrity of the resulting model.\n\n# 5.2. Dataset and experimental setting\n\
+    \nData Preparation: The BraTS 2020 dataset [43] includes multi-parametric MRI\
+    \ scans of subjects with brain tumors. Each subject underwent four different imaging\
+    \ modalities: (1) T1-weighted, (2) T1-weighted with contrast enhancement, (3)\
+    \ T2-weighted, and (4) T2 fluid-attenuated inversion recovery (T2-FLAIR). The\
+    \ scans for each subject are annotated at the voxel level with the following tumor\
+    \ labels:"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '''whole tumor (WT)'', ''tumor core (TC)'', and ''enhancing tumor (ET)''. The
+    training dataset comprises multi-parametric MRI (mpMRI) scans from 369 patients
+    with diffuse glioma. Each set of mpMRI scans includes four distinct sequences:
+    native T1-weighted (T1), T2-weighted (T2), post-contrast T1-weighted (T1ce), and
+    T2 Fluid-Attenuated Inversion Recovery (FLAIR). All MRI volumes have been processed
+    to remove the skull, co-registered to a standard anatomical atlas, and resampled
+    to a voxel size of 1 mm³. Expert annotators provided ground truth tumor labels,
+    which are categorized into three previously defined classes.
+
+
+    Further details on the imaging and annotation protocols can be found in [44].
+    This dataset includes cohorts from BraTS 2017, BraTS 2018, BraTS 2019, as well
+    as new subjects, and is popularly used to benchmark machine learning algorithms
+    in tumor segmentation. It is publicly available, consisting of 369 scans for training
+    and 95 scans for testing. We use this dataset to evaluate our proposed blockchain-based
+    FL method and the baseline algorithms for the multi-modal and multi-class segmentation
+    task. For training the local clients in the framework, we adapt the state-of-the-art
+    training pipeline, originally designed for centralized training scenarios.
+
+
+    FL model and data setup: The proposed FL framework has ten (10) participating
+    clients. First of all, we split the 369 BraTS 2020 training dataset into training
+    and validation group where 300 samples and 69 samples are for the model training
+    and validation, respectively. For the 300 training samples, we randomly distributed
+    them among the 10 participating clients in the FL framework, with each client
+    receiving 30 cases. Each case consists of four different MRI sequences: T1, T1ce,
+    T2, and FLAIR. The validation set of 69 samples was used to fine-tune the FL model
+    during the model validation process. The evaluation on the 95 testing samples
+    was performed by the BraTS team using their test evaluation submission platform.
+    Each case includes four MRI sequences that have undergone a preprocessing pipeline,
+    which involves aligning the sequences to a standardized anatomical template, resampling
+    the images to achieve a uniform 1 mm isotropic voxel resolution, and eliminating
+    non-brain tissues through skull stripping. The performance assessment of the model
+    on the test dataset is conducted using the online evaluation platform provided
+    by the BraTS challenge.
+
+
+    Concerning the model design of the FL framework, we utilize a modified 3D-UNet
+    convolutional network [45] as our underlying FL model segmentation backbone and
+    use the following training hyperparameters for all experiments: the input shape
+    of the network was 155 voxels, and the learning rate for the model was 5 × e^-4.
+    As in previous segmentation works [46], we minimize a soft Dice loss using the
+    Adam optimizer with a learning rate of 5 × e^-4, batch size of 1, β1 of 0.9, β2
+    of 0.999, and the reduce on plateau learning rate decay function. Also, we apply
+    a patience of 2 for the training of the FL model. In our experimental setup, we
+    configure the federated learning process to execute for a total of 200 rounds,
+    with each round comprising two local epochs. A local epoch is characterized as
+    the point at which each client has processed its local training samples precisely
+    once. To ensure randomization, the data is shuffled locally for every client at
+    the commencement of each epoch. To facilitate a comparative analysis of model
+    convergence, we additionally train a centralized baseline model for 200 epochs
+    using the aggregated data. The hyperparameters employed in the training of the
+    federated learning model are detailed in Table 2.
+
+
+    Model Architecture: The proposed federated learning (FL) model utilizes a 3D U-Net
+    as its base, specifically designed for volumetric medical image segmentation.
+    The model features an encoder–decoder structure complemented by skip connections,
+    which effectively combine low-level spatial information with high-level semantic
+    insights. The architecture is configured with 4 input channels, 3 output classes,
+    and a factor of 24 output channels for convolutions.
+
+
+    Encoder Block: The encoder block contains DoubleConv layers and Down layers. Each
+    DoubleConv layer consists of two 3D convolutional layers followed by Group Normalization
+    and ReLU activation. There
+
+
+    | Parameter | Value |
+
+    |---|---|
+
+    | Learning rate | 5 x 10^-4 |
+
+    | Batch size | 1 |
+
+    | Optimizer | Adam |
+
+    | β1 (Adam) | 0.9 |
+
+    | β2 (Adam) | 0.999 |
+
+    | Input shape | 155 × 240 × 240 voxels |
+
+    | Number of local epochs per federated round | 2 |
+
+    | Number of federated rounds | 200 |
+
+    | Validation set size | 69 samples |
+
+    | Test set size | 95 samples |
+
+    | Training set size (per client) | 30 cases (per client) |
+
+    | Total training set size | 300 cases |
+
+    | Blockchain configuration | α = 0.1, Hash function: SHA-256, Secret key length:
+    256 bits, γ = 0.8 |
+
+
+    are four Down layers, each including a max-pooling operation for down-sampling,
+    followed by a DoubleConv layer.
+
+
+    Decoder Block: The decoder block contains four Up layers. Each Up layer includes
+    an up-sampling operation using either trilinear interpolation or a transpose convolution,
+    followed by a concatenation with the corresponding encoder feature map and a DoubleConv
+    layer.
+
+
+    Output Layer: A final convolutional layer maps the features to the desired number
+    of classes.
+
+
+    The model architecture is summarized in Table 3.
+
+
+    Blockchain configuration: We use blockchain federated learning to train the model
+    in parallel and updating the model with averaged parameters from each participant.
+    However, for blockchain privacy the following are parameters: (i) α = 0.1 (ii).
+    Hash function = SHA-256, (iii) The length of secret key = 256 bits, and (iv) γ
+    = 0.8. Syft and Pytorch [32,47] Python libraries are used for the implementation
+    of our proposed blockchain federated learning framework. We used a machine with
+    a Quad-Core Intel Core i7 performance, 64 bits, 3.2 GHz PC with NVIDIA GEFORCE
+    RTX 3080 GPU PC.
+
+
+    Baseline methods: In evaluating the performance of the proposed blockchain-based
+    federated learning method, we selected two federated learning algorithms and the
+    centralized baseline method for the FL brain tumor segmentation task. We fine-tuned
+    the baseline models with the same hyper-parameters settings as the proposed approach.
+    The brief description of the FL algorithms are provided below:
+
+
+    +   1. FedBN [48,49]: An effective FL algorithm that uses local batch normalization
+    to alleviate the feature shift before averaging the local models of participating
+    clients.
+
+    +   2. FedAvg [50]: The defacto FL algorithm upon which all other federated learning
+    algorithms are re-parameterized. It most widely used and effective FL algorithm
+    in use today and provides comprehensive study of its convergence rate.
+
+    +   3. Centralized training : A centralized training which uses the same model
+    architecture on the whole training set.
+
+
+    # 5.3. Performance analysis
+
+
+    We evaluate the performance of our proposed method and the baseline methods by
+    reporting both qualitative and quantitative results on the BraTS 20 dataset. For
+    the qualitative results, we analyze the segmentation results on the whole tumor
+    (WT), tumor core (TC), and enhancing tumor (ET) for the different competing methods.
+    The quantitative results include the Dice score and the 95% Hausdorff distance
+    evaluated on the test dataset.
+
+
+    In blockchain federated learning, each institute trains the model in parallel
+    and updates the averaged model parameters. We analyze the medical perspective
+    segmentation performance of all baseline methods as shown in Fig. 2.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Table 3
+
+    Core components of the 3D U-Net model architecture.
+
+
+    | Layer | Input size | Output size | Kernel size | Stride | Padding |
+
+    |---|---|---|---|---|---|
+
+    | Input | – | 4 x 155 x 240 x 240 | – | – | – |
+
+    | DoubleConv | 4 x 155 x 240 x 240 | 24 x 155 x 240 x 240 | 3 x 3 x 3 | 1 | 1
+    |
+
+    | Down (MaxPool3D + DoubleConv) | 24 x 155 x 240 x 240 | 48 x 77 x 120 x 120 |
+    3 x 3 x 3 | 1 | 1 |
+
+    | Down (MaxPool3D + DoubleConv) | 48 x 77 x 120 x 120 | 96 x 38 x 60 x 60 | 3
+    x 3 x 3 | 1 | 1 |
+
+    | Down (MaxPool3D + DoubleConv) | 96 x 38 x 60 x 60 | 192 x 19 x 30 x 30 | 3 x
+    3 x 3 | 1 | 1 |
+
+    | Down (MaxPool3D + DoubleConv) | 192 x 19 x 30 x 30 | 192 x 9 x 15 x 15 | 3 x
+    3 x 3 | 1 | 1 |
+
+    | Up (Upsample + DoubleConv) | 192 x 9 x 15 x 15 | 96 x 19 x 30 x 30 | 3 x 3 x
+    3 | 1 | 1 |
+
+    | Up (Upsample + DoubleConv) | 192 x 19 x 30 x 30 | 48 x 38 x 60 x 60 | 3 x 3
+    x 3 | 1 | 1 |
+
+    | Up (Upsample + DoubleConv) | 96 x 38 x 60 x 60 | 24 x 77 x 120 x 120 | 3 x 3
+    x 3 | 1 | 1 |
+
+    | Up (Upsample + DoubleConv) | 48 x 77 x 120 x 120 | 24 x 155 x 240 x 240 | 3
+    x 3 x 3 | 1 | 1 |
+
+    | Output (Conv3D) | 24 x 155 x 240 x 240 | 3 x 155 x 240 x 240 | 1 x 1 x 1 | 1
+    | 0 |
+
+
+    ![](img/d4c581239fa91a9df419238aaf133f2b_7_0.png)
+
+
+    Fig. 2. Brain tumor segmentation results of all competing methods.
+
+
+    # Table 4
+
+    Dice and Hausdorff of different methods on the validation set of BraTS2020. ET
+    = enhancing tumor; WT = whole tumor; TC = tumor core.
+
+
+    | | Dice | | | Hausdorff (mm) | | |
+
+    |---|---|---|---|---|---|---|
+
+    | | ET | WT | TC | ET | WT | TC |
+
+    | FedBN | 0.834 | 0.905 | 0.90 | 22.07 | 5.71 | 5.98 |
+
+    | FedAvg | 0.812 | 0.901 | 0.882 | 21.45 | 5.26 | 6.10 |
+
+    | Centralized | 0.797 | 0.889 | 0.840 | 23.12 | 6.57 | 7.24 |
+
+    | Proposed | 0.854 | 0.908 | 0.892 | 20.87 | 4.36 | 5.90 |
+
+
+    # Table 5
+
+    Dice and Hausdorff of different methods on the test set of BraTS2020. ET = enhancing
+    tumor; WT = whole tumor; TC = tumor core.
+
+
+    | | Dice | | | Hausdorff (mm) | | |
+
+    |---|---|---|---|---|---|---|
+
+    | | ET | WT | TC | ET | WT | TC |
+
+    | FedBN | 0.802 | 0.881 | 0.841 | 11.73 | 7.42 | 7.04 |
+
+    | FedAvg | 0.797 | 0.883 | 0.847 | 11.37 | 6.29 | 6.51 |
+
+    | Centralized | 0.778 | 0.874 | 0.801 | 11.35 | 7.94 | 6.34 |
+
+    | Proposed | 0.818 | 0.886 | 0.857 | 10.48 | 5.09 | 6.98 |
+
+
+    ![](img/d4c581239fa91a9df419238aaf133f2b_7_1.png)
+
+
+    Fig. 3. Averaged train and validation dice scores for the different methods.
+
+
+    In Fig. 2, the bottom row represents the predicted tumors, while the upper row
+    represents the ground truth. It can be seen that almost all methods performed
+    convincingly in segmenting/detecting the three classes of tumors (WT, TC, and
+    ET) compared to the ground truth. Although it is difficult to spot the subtle
+    differences between the segmentation results among the competing methods, Tables
+    4 and 5 show the superiority of our proposed approach in terms of the segmentation
+    dice score and Hausdorff distance.
+
+
+    Figs. 3 and 6 show the accuracy and the convergence with a different number of
+    training iterations. Here, the number of iterations indicates a completed update
+    of parameters.
+
+
+    For all training, we assume the condition that no user dropped out of the network
+    during the federated rounds. It can be clearly seen in Fig. 6 that the baselines,
+    FedBN and FedAvg, need more training iterations before convergence is reached.
+    This is likely due to statistical heterogeneity among the local clients. Our proposed
+    approach introduces robustness into the model, as seen in the convergence graph
+    for both training and validation.
+
+
+    The time required to train the local model also depends on the size of the dataset.
+    The cost of blockchain increases with the data size as illustrated in Fig. 4b.
+    It also shows that the cumulative time cost is likely to increase when the number
+    of users is increased for the global model training. As observed previously, increasing
+    the number of iterations results in higher computation costs, as shown in Fig.
+    7. It could also be observed that the proposed approach has the worst computational
+    time as compared to other competing methods. This is due to the fact that the
+    blockchain based systems needs additional time for consensus building besides
+    the typical federated learning algorithm.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '| Study | Backbone method | Task | Avg. accuracy | Sharing | Privacy |
+
+    |---|---|---|---|---|---|
+
+    | sheller et. al [51] | Unet | Federated learning brain tumor detection | 85.1%
+    | No | No |
+
+    | Abiwinanda et. al [52] | 2DCNN | Brain tumor classification using convolutional
+    neural network | 84.19% | No | No |
+
+    | Sharif et. al [53] | DR LBP features + k-NN | Recognition of brain tumor | 87.4%
+    | No | No |
+
+    | Tedeschi et. al [54] | Unet | Recognition of brain tumor | 87.40% | No | No
+    |
+
+    | Isensee et. al [55] | Unet | Brain tumor segmentation and survival prediction
+    | 54.60% | No | No |
+
+    | Li et. al [32] | Unet | Brain tumor classification with federated learning |
+    84.12% | No | Yes |
+
+    | Gong et. al [56] | Attention Gen | Brain tumor segmentation | 82.48% | No |
+    Yes |
+
+    | Pati et. al [23] | Unet | Federated tumor segmentation | 84.21% | No | No |
+
+    | Yi Liping et. al [57] | Unet | Segmentation of brain tumor | 78.5% | No | No
+    |
+
+    | Our | Unet | Detecting brain tumor with a federated blockchain framework longer
+    text | 88.60% | Yes | Yes |
+
+
+    ![](img/d4c581239fa91a9df419238aaf133f2b_8_0.png)
+
+
+    ![](img/d4c581239fa91a9df419238aaf133f2b_8_1.png)
+
+
+    ![](img/d4c581239fa91a9df419238aaf133f2b_8_2.png)
+
+
+    ![](img/d4c581239fa91a9df419238aaf133f2b_8_3.png)
+
+
+    The proposed approach balances the time trade-off with enhanced privacy, trust,
+    and robustness in the segmentation task.
+
+
+    We also examine the latency of the blockchain. Fig. 5 shows the convex shape of
+    the Signal-to-noise ratio (SNR), and \(\lambda\) is decreased when SNR is increased.
+    The block generation rate depends on the average latency rate of blockchain federated
+    learning. Our proposed
+
+
+    model calculates the latency of the blockchain to generate the blocks in federated
+    learning.
+
+
+    The trustworthiness of the proposed blockchain-based approach was rigorously analyzed.
+    Fig. 4a illustrates that setting \(\alpha\) to 0.05 led to an initial decrease
+    and subsequent gradual increase in trust values. Conversely, with \(\alpha\) set
+    to 0.2, hospital trust values fluctuated dramatically, obscuring the relationship
+    between trust values and the model''s accuracy. To mitigate rapid fluctuations
+    in trust values within a short timeframe, \(\alpha\) was adjusted to 0.1. This
+    adjustment facilitated a more stable observation of the impact of model accuracy
+    on trust values over an extended period. Specifically, it depicts the influence
+    of model accuracy on the trust value over a longer period.
+
+
+    Additionally, we evaluated the computational efficiency of our proposed model
+    in comparison to the baseline methods. The average training runtime of the proposed
+    blockchain federated framework is 32 h. In contrast, the runtimes for FedBN, FedAvg,
+    and centralized methods are 29.5, 30, and 29 h, respectively. Although our model
+    exhibited the longest runtime, this was a trade-off for enhanced segmentation
+    performance and robust privacy within the federated learning framework. This evaluation
+    highlights the balance between computational efficiency and privacy preservation
+    inherent in our approach.
+
+
+    # 5.4. Comparison with other methods
+
+
+    Many studies have been conducted to detect brain tumors, including [44,52,53,55,58–60].
+    These studies, however, often overlook the importance of data sharing in enhancing
+    global model performance, particularly in medical imaging where data scarcity,
+    due to privacy concerns, is a significant hurdle. Our proposed framework addresses
+    this gap by incorporating a privacy-preserving mechanism that enables collaborative
+    training while maintaining data confidentiality. Unlike traditional methods, our
+    approach ensures robust performance even in data-limited scenarios. We provide
+    a detailed comparison of our federated permissioned blockchain algorithm with
+    both contemporary deep learning models and classical approaches in brain tumor
+    detection (refer to Table 6). Our results demonstrate that our method maintains
+    high accuracy, comparable to scenarios where the entire dataset is used,'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'by effectively distributing data across multiple entities and securely aggregating
+    model weights through our innovative blockchain-based federated learning system.
+    The proposed method outperforms these methods across all metrics, which includes
+    the Dice score and Hausdorff distance for enhancing tumor (ET), whole tumor (WT),
+    and tumor core (TC) on both validation and test datasets of BraTS 2020.
+
+
+    These findings can be attributed to the effective aggregation of local model updates
+    within the blockchain-based federated learning (FL) framework, which appears to
+    enhance the model’s generalization capabilities across diverse data distributions
+    from various institutions. The consistent performance across different tumor regions
+    indicates that the proposed method can adeptly handle the variability and complexity
+    inherent in brain tumor segmentation tasks.
+
+
+    By examining the convergence graphs, it is clear that the proposed method achieves
+    robustness and generalization more rapidly than baseline methods. This is likely
+    due to its proficiency in managing statistical heterogeneity among the data from
+    different clients. This underscores the potential of blockchain-based FL not only
+    to preserve privacy but also to bolster collaborative learning in a decentralized
+    and secure environment.
+
+
+    Additionally, these outcomes not only underscore the feasibility of our approach
+    in real-world medical applications but also highlight its potential to transform
+    collaborative medical data analytics.
+
+
+    # 7. Conclusion
+
+
+    In this article, we focused on the problem of secure data sharing and trained
+    a federated learning model in a decentralized network. The proposed framework,
+    composed of federated learning and blockchain, provides secure data sharing and
+    protects the data. Moreover, the blockchain-based algorithm aggregates local model
+    updates while ensuring data privacy. Furthermore, we integrate the blockchain-based
+    federated learning technique to develop an intelligent model that preserves the
+    privacy of data providers and fosters trust in the data training process. The
+    experimental results showed that our proposed method achieved a 1.99% improvement
+    in the Dice similarity coefficient for enhancing tumors and a 19.08% reduction
+    in Hausdorff distance for whole tumors compared to the baseline methods. These
+    improvements are significant as they demonstrate enhanced accuracy and robustness
+    in brain tumor segmentation, leading to better diagnostic capabilities and treatment
+    planning. By addressing privacy concerns and improving segmentation performance,
+    our framework represents a substantial step forward in the application of federated
+    learning in medical image analysis. Future research will focus on optimizing the
+    computational efficiency and latency of blockchain operations, exploring more
+    efficient consensus algorithms, implementing parallel processing strategies, and
+    addressing data heterogeneity challenges. These efforts aim to develop more robust,
+    scalable, and practical solutions for secure data sharing and collaborative learning
+    in the healthcare domain.
+
+
+    # 6. Limitation and future works
+
+
+    The blockchain-based federated learning framework we propose shows promise in
+    enhancing privacy and security for collaborative brain tumor segmentation. However,
+    it is important to recognize the limitations of our study and suggest potential
+    areas for future research.
+
+
+    A significant limitation of the current framework is the increased computational
+    overhead and latency caused by the blockchain process. Unlike traditional federated
+    learning methods, our approach requires additional computations to maintain the
+    blockchain and achieve consensus among nodes, resulting in longer training times
+    and decreased efficiency. To address this issue and improve practically for real-world
+    applications, further optimizations are necessary. Future research should investigate
+    more efficient consensus algorithms and parallel processing strategies to streamline
+    blockchain operations and reduce computational demands.
+
+
+    Another limitation lies in the framework’s ability to handle extreme data heterogeneity
+    among participating clients. In practical scenarios, data distributions and characteristics
+    can differ significantly across various hospitals or medical institutions. The
+    performance and robustness of our framework under these heterogeneous conditions
+    necessitate extensive evaluation. Future research should broaden the scope of
+    experiments to include a larger number of clients with diverse data distributions,
+    simulating varying levels of heterogeneity to assess the framework’s generalizability
+    and identify areas for improvement. Moreover, exploring techniques such as transfer
+    learning, domain adaptation, or personalized federated learning could help tackle
+    the challenges posed by non-IID data distributions.
+
+
+    Ultimately, while the proposed blockchain-based federated learning framework represents
+    a significant step towards enabling secure and privacy-preserving collaborative
+    medical image analysis, there is still room for improvement and further investigation.
+    By addressing the limitations related to computational efficiency and data heterogeneity,
+    future research can build upon the foundation laid by this study and contribute
+    to developing more robust, scalable, and practical solutions for secure data sharing
+    and collaborative learning in the healthcare domain.
+
+
+    # Funding
+
+
+    This work was supported by the National Natural Science Foundation of China under
+    Grant U2033212, the Zhejiang Provincial Natural Science Foundation of China under
+    Grant LY23F020025, and the Science and Technology Program of Huzhou and Huzhou
+    Central Hospital under grant 2023GZ42 and U0723003.
+
+
+    # CRediT authorship contribution statement
+
+
+    Rajesh Kumar: Writing – review & editing, Writing – original draft, Software,
+    Resources, Methodology, Investigation, Funding acquisition, Data curation, Conceptualization.
+    CobbinaM. M. Bernard: Writing – review & editing, Writing – original draft, Software,
+    Methodology, Formal analysis, Data curation, Conceptualization. Aman Ullah: Writing
+    – review & editing, Writing – original draft, Software, Project administration,
+    Formal analysis, Data curation. Riaz Ullah Khan: Writing – review & editing, Writing
+    – original draft, Visualization, Methodology, Formal analysis, Data curation.
+    Jay Kumar: Writing – review & editing, Writing – original draft, Validation, Software,
+    Project administration, Data curation. Delanyo K.B. Kulevome: Writing – review
+    & editing, Writing – original draft, Visualization, Validation, Software, Project
+    administration, Data curation. Rao Yunbo: Writing – review & editing, Visualization,
+    Supervision, Project administration, Investigation. Shaoning Zeng: Writing – review
+    & editing, Visualization, Supervision, Resources, Project administration, Formal
+    analysis.
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have influenced the work reported in this paper.
+
+
+    # References
+
+
+    +   [1] C. Shen, P. Wang, H.R. Roth, D. Yang, D. Xu, M. Oda, W. Wang, C.-S. Fuh,
+    P.-T. Chen, K.-L. Liu, et al., Multi-task federated learning for heterogeneous
+    pancreas segmentation, in: Clinical Image-Based Procedures, Distributed and Collaborative
+    Learning, Artificial Intelligence for Combating COVID-19 and Secure and Privacy-Preserving
+    Machine Learning, Springer, 2021, pp. 101–110.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '[2] M. Flores, I. Dayan, H. Roth, A. Zhong, A. Harouni, A. Gentili, A. Abidin,
+    A. Liu, A. Costa, B. Wood, et al., Federated learning used for predicting outcomes
+    in sars-cov-2 patients, Res. Sq. (2021).
+
+
+    [3] R. Kumar, A.A. Khan, J. Kumar, Zakhria, N.A. Golliars, S. Zhang, Y. Ting,
+    C. Zheng, W. Wang, Blockchain-federated-learning and deep learning models for
+    covid-19 detection using ct imaging, IEEE Sens. J. 21 (2021) 16301–16314.
+
+
+    [4] W. Chorney, H. Wang, Towards federated transfer learning in electrocardiogram
+    signal analysis, Comput. Biol. Med. 170 (2024) 107984.
+
+
+    [5] H.R. Roth, D. Yang, W. Li, A. Myronenko, W. Zhu, Z. Xu, X. Wang, D. Xu, Federated
+    whole prostate segmentation in mri with personalized neural architectures, in:
+    International Conference on Medical Image Computing and Computer-Assisted Intervention,
+    Springer, pp. 357–366.
+
+
+    [6] D. Yang, Z. Xu, W. Li, A. Myronenko, H.R. Roth, S. Harmon, S. Xu, B. Turkbey,
+    E. Turkbey, X. Wang, et al., Federated semi-supervised learning for covid region
+    segmentation in chest ct using multi-national data from china, italy, japan, Med.
+    Image Anal. 70 (2021) 101992.
+
+
+    [7] S.A. Harmon, T.H. Sanford, S. Xu, E.B. Turkbey, H. Roth, Z. Xu, D. Yang, A.
+    Myronenko, V. Anderson, A. Amalou, et al., Artificial intelligence for the detection
+    of covid-19 pneumonia on chest ct using multinational datasets, Nat. Commun. 11
+    (2020) 1–7.
+
+
+    [8] I. Dayan, H.R. Roth, A. Zhong, A. Harouni, A. Gentili, A.Z. Abidin, A. Liu,
+    A.B. Costa, B.J. Wood, C.-S. Tsai, et al., Federated learning for predicting clinical
+    outcomes in patients with covid-19, Nat. Med. 27 (2021) 1735–1743.
+
+
+    [9] O.A.S. Ibrahim, B.A. Hamed, T.A. El-Hafez, A new fast technique for pattern
+    matching in biological sequences, J. Supercomput. 79 (2023) 367–388.
+
+
+    [10] E.H.I. Eliwa, A.M. El Koshiry, T. Abd El-Hafeez, H.M. Farghaly, Utilizing
+    convolutional neural networks to classify monkeypox skin lesions, Sci. Rep. 13
+    (2023) 14495.
+
+
+    [11] T. Abd El-Hafeez, M.Y. Shams, Y.A. Elshazier, H.M. Farghaly, A.E. Hassanien,
+    Harnessing machine learning to find synergistic combinations for fda-approved
+    cancer drugs, Sci. Rep. 14 (2024) 2428.
+
+
+    [12] A. Omar, T. Abd El-Hafeez, Optimizing epileptic seizure recognition performance
+    with feature scaling and dropout layers, Neural Comput. Appl. 36 (2024) 2835–2852.
+
+
+    [13] Z. Jamali, J. Deng, J. Cai, M.U. Aftab, K. Hussain, Minimizing vehicle re-identification
+    dataset bias using effective data augmentation method, in: International Conference
+    on Semantics, Knowledge and Grids, IEEE, 2019, pp. 127–130.
+
+
+    [14] C. Kalloniatis, C. Lambrinoudakis, M. Musahl, A.G. Kanatas, S. Gritzalis,
+    Incorporating privacy by design in body sensor networks for medical applications:
+    A privacy and data protection framework, Comput. Sci. Inf. Syst. 18 (2021) 323–347.
+
+
+    [15] E. Hassan, T. Abd El-Hafeez, M.Y. Shams, Optimizing classification of diseases
+    through language model analysis of symptoms, Sci. Rep. 14 (2024) 1507.
+
+
+    [16] V. Shah, A. Khang, Internet of medical things (iomt) driving the digital
+    transformation of the healthcare sector, in: Data-Centric AI Solutions and Emerging
+    Technologies in the Healthcare Ecosystem, CRC Press, 2023, pp. 15–26.
+
+
+    [17] S. Messinis, N. Temenos, N.E. Protonotarios, I. Rallis, D. Kalogerias, N.
+    Doulamis, Enhancing internet of medical things security with artificial intelligence:
+    A comprehensive review, Comput. Biol. Med. (2024) 108036.
+
+
+    [18] A. Almogren, I. Mohiuddin, I.U. Din, H. Alnajed, N. Guizani, Ftm-iomt: Fuzzy-based
+    trust management for preventing sybil attacks in internet of medical things, IEEE
+    Internet Things J. 8 (2021) 4485–4497.
+
+
+    [19] A. Rehman, S. Abbas, M. Khan, T.M. Ghazal, K.M. Adnan, A. Mosavi, A secure
+    healthcare 5.0 system based on blockchain technology entangled with federated
+    learning technique, Comput. Biol. Med. 150 (2022) 106019.
+
+
+    [20] Y. Dai, D. Xu, S. Maharjan, Z. Chen, Q. He, Y. Zhang, Blockchain and deep
+    reinforcement learning empowered intelligent 5 g beyond, IEEE Netw. 33 (2019)
+    10–17.
+
+
+    [21] Y. Xia, D. Yang, W. Li, A. Myronenko, D. Xu, H. Obinata, H. Mori, P. An,
+    S. Harmon, E. Turkbey, et al., Auto-fedavg: Learnable federated averaging for
+    multi-institutional medical image segmentation, 2021, arXiv preprint arXiv:2104.10195.
+
+
+    [22] W. Moulahi, I. Jdey, T. Moulahi, M. Alawida, A. Alabdulatif, A blockchain-based
+    federated learning mechanism for privacy preservation of healthcare iot data,
+    Comput. Biol. Med. 167 (2023) 107630.
+
+
+    [23] S. Pati, U. Baid, M. Zenk, B. Edwards, M. Sheller, G.A. Reina, P. Foley,
+    A. Gruzdev, J. Martin, S. Albarqouni, et al., The federated tumor segmentation
+    (feats) challenge, 2021, arXiv preprint arXiv:2105.05874.
+
+
+    [24] H.R. Roth, K. Chang, P. Singh, N. Neumann, W. Li, V. Gupta, S. Gupta, L.
+    Qu, A. Ihsani, B.C. Bizzo, et al., Federated learning for breast density classification:
+    A real-world implementation, in: Domain Adaptation and Representation Transfer
+    and Distributed and Collaborative Learning, Springer, 2020, pp. 181–191.
+
+
+    [25] C.I. Bercea, B. Wiestler, D. Rueckert, S. Albarqouni, Feddis: Disentangled
+    federated learning for unsupervised brain pathology segmentation, 2021, arXiv
+    preprint arXiv:2103.03705.
+
+
+    [26] C. Bercea, B. Wiestler, D. Rueckert, S. Albarqouni, Federated disentangled
+    representation learning for unsupervised brain anomaly detection, 2021.
+
+
+    [27] Y. Lu, X. Huang, Y. Dai, S. Maharjan, Y. Zhang, Blockchain and federated
+    learning for privacy-preserved data sharing in industrial iot, IEEE Trans. Ind.
+    Inform. 16 (2019) 4177–4186.
+
+
+    [28] Q. Abbas, K.M. Malik, A.K.J. Saudagar, M.B. Khan, Context-aggregator: An
+    approach of loss-and class imbalance-aware aggregation in federated learning,
+    Comput. Biol. Med. 163 (2023) 107167.
+
+
+    [29] A.G. Bermúdez, D. Carrañamino, A.M. Bernardos, L. Bergesio, J.A. Besada,
+    A fusion architecture to deliver multipurpose mobile health services, Comput.
+    Biol. Med. 173 (2024) 108344.
+
+
+    [30] H.-N. Dai, Z. Zheng, Y. Zhang, Blockchain for internet of things: A survey,
+    IEEE Internet Things J. 6 (2019) 8076–8094.
+
+
+    [31] B.A. Hamed, O.A.S. Ibrahim, T. Abd El-Hafeez, Optimizing classification efficiency
+    with machine learning techniques for pattern matching, J. Big Data 10 (2023) 124.
+
+
+    [32] W. Li, F. Milletari, D. Xu, N. Rieke, J. Hancox, W. Zhu, M. Baust, Y. Cheng,
+    S. Ourselin, M.J. Cardoso, et al., Privacy-preserving federated brain tumour segmentation,
+    in: International Workshop on Machine Learning in Medical Imaging, Springer, pp.
+    133–141.
+
+
+    [33] K. Bonawitz, V. Ivanov, B. Kreuter, A. Marcedone, H.B. McMahan, S. Patel,
+    D. Ramage, A. Segal, K. Seth, Practical secure aggregation for privacy-preserving
+    machine learning, in: Proceedings of the 2017 ACM SIGSAC Conference on Computer
+    and Communications Security, pp. 1175–1191.
+
+
+    [34] X. Zhang, S. Ji, H. Wang, T. Wang, Private yet practical, multiparty deep
+    learning, in: 2017 IEEE 37th International Conference on Distributed Computing
+    Systems, ICDCS, IEEE, pp. 1442–1452.
+
+
+    [35] A. El Koshiry, E. Eliwa, T. Abd El-Hafeez, M.Y. Shams, Unlocking the power
+    of blockchain in education: An overview of innovations and outcomes, Blockchain:
+    Res. Appl. (2023) 100165.
+
+
+    [36] N. Rieke, J. Hancox, W. Li, F. Milletari, H.R. Roth, S. Albarqouni, S. Bakas,
+    M.N. Galtier, B.A. Landman, K. Maier-Hein, et al., The future of digital health
+    with federated learning, NPJ Digit. Med. 3 (2020) 1–7.
+
+
+    [37] K.V. Sarma, S. Harmon, T. Sanford, H.R. Roth, Z. Xu, J. Tetreault, D. Xu,
+    M.G. Flores, A.G. Raman, R. Kulkarni, et al., Federated learning improves site
+    performance in multicenter deep learning without data sharing, J. Am. Med. Inform.
+    Assoc. 28 (2021) 1259–1264.
+
+
+    [38] A. Hatamizadeh, H. Yin, P. Molchonov, A. Myronenko, W. Li, P. Doga, A. Feng,
+    M. Flores, J. Kautz, D. Xu, et al., Towards understanding the risks of gradient
+    inversion in federated learning, 2021.
+
+
+    [39] Y. Lu, X. Huang, K. Zhang, S. Maharjan, Y. Zhang, Blockchain empowered asynchronous
+    federated learning for secure data sharing in internet of vehicles, IEEE Trans.
+    Veh. Technol. 69 (2020) 4298–4311.
+
+
+    [40] Y. Qu, L. Gao, T.H. Luan, Y. Xiang, S. Yu, B. Li, G. Zheng, Decentralized
+    privacy using blockchain-enabled federated learning in fog computing, IEEE Internet
+    Things J. (2020).
+
+
+    [41] S.R. Pokhrel, J. Choi, Federated learning with blockchain for autonomous
+    vehicles: Analysis and design challenges, IEEE Trans. Commun. (2020).
+
+
+    [42] F. Alghayadh, Y. Alagrash, D. Debnath, Privacy and trust in cloud computing,
+    Int. J. Adv. Res. Ideas Innov. Technol. 4 (2018).
+
+
+    [43] T. Henry, A. Carré, M. Lerousseau, T. Estienne, C. Robert, N. Paragios, E.
+    Deutsch, Brain tumor segmentation with self-ensembled, deeply-supervised 3 d u-net
+    neural networks: a brats 2020 challenge solution, in: International MICCAI Brainlesion
+    Workshop, Springer, pp. 327–339.
+
+
+    [44] P. Dequidt, P. Bourdon, B. Tremblais, C. Guillevin, B. Gianelli, C. Boutet,
+    J.-P. Cottier, J.-N. Vallée, C. Fernandez-Maligne, R. Guillevin, Exploring radiologic
+    criteria for glioma grade classification on the brats dataset, IRBM 42 (2021)
+    407–414.
+
+
+    [45] Ö. Ççek, A. Abdulkadir, S.S. Lienkamp, T. Brox, O. Ronneberger, 3D u-net:
+    learning dense volumetric segmentation from sparse annotation, in: International
+    Conference on Medical Image Computing and Computer-Assisted Intervention, Springer,
+    pp. 424–432.
+
+
+    [46] S. Pereira, A. Pinto, V. Alves, C.A. Silva, Brain tumor segmentation using
+    convolutional neural networks in mri images, IEEE Trans. Med. Imaging 35 (2016)
+    1240–1251.
+
+
+    [47] T. Ryffel, A. Trask, M. Dahl, B. Wagner, J. Mancuso, D. Rueckert, J. Passerat-Palmbach,
+    A generic framework for privacy preserving deep learning, 2018, arXiv preprint
+    arXiv:1811.04017.
+
+
+    [48] X. Li, M. Jiang, X. Zhang, M. Kamp, Q. Dou, Fedbn: Federated learning on
+    non-iid features via local batch normalization, 2021, arXiv preprint arXiv:2102.07623.
+
+
+    [49] Z. Chen, M. Zhu, C. Yang, Y. Yuan, Personalized retrogress-resilient framework
+    for real-world medical federated learning, in: International Conference on Medical
+    Image Computing and Computer-Assisted Intervention, Springer, pp. 347–356.
+
+
+    [50] K. Bonawitz, H. Eichner, W. Grieskamp, D. Huba, A. Ingerman, V. Ivanov, C.
+    Kiddon, J. Konecny, S. Mazzocchi, B. McMahan, et al., Towards federated learning
+    at scale: System design, Proc. Mach. Learn. Syst. 1 (2019) 374–388.
+
+
+    [51] M.J. Sheller, G.A. Reina, B. Edwards, J. Martin, S. Bakas, Multi-institutional
+    deep learning modeling without sharing patient data: A feasibility study on brain
+    tumor segmentation, in: International MICCAI Brainlesion Workshop, Springer, pp.
+    92–104.
+
+
+    [52] N. Abivinanda, M. Hanif, S.T. Hesaputra, A. Handayani, T.R. Mengko, Brain
+    tumor classification using convolutional neural network, in: World Congress on
+    Medical Physics and Biomedical Engineering, Springer, 2018, pp. 183–189.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '+   [53] M.I. Sharif, J.P. Li, M.A. Khan, M.A. Saleem, Active deep neural network
+    features selection for segmentation and recognition of brain tumors using mri
+    images, Pattern Recognit. Lett. 129 (2020) 181–189.
+
+
+    +   [54] B.C. Iesedichi, S. Savazzi, R. Stoklasa, L. Barbieri, I. Stathopoulou,
+    M. Nicoli, L. Serio, Decentralized federated learning for healthcare networks:
+    A case study on tumor segmentation, IEEE Access (2022).
+
+
+    +   [55] F. Isensee, P. Kickingereder, W. Wick, M. Bendszus, K.H. Maier-Hein,
+    Brain tumor segmentation and radiomics survival prediction: Contribution to the
+    brats 2017 challenge, in: International MICCAI Brainlesion Workshop, Springer,
+    pp. 287–297.
+
+
+    +   [56] X. Gong, A. Sharma, S. Karanam, Z. Wu, T. Chen, D. Doermann, A. Innanje,
+    Ensemble attention distillation for privacy-preserving federated learning, in:
+    Proceedings of the IEEE/CVF International Conference on Computer Vision, pp. 15076–15086.
+
+
+    +   [57] L. Yi, J. Zhang, R. Zhang, J. Shi, G. Wang, X. Liu, Su-net: an efficient
+    encoder-decoder model of federated learning for brain tumor segmentation, in:
+    International Conference on Artificial Neural Networks, Springer, pp. 761–773.
+
+
+    +   [58] T. Gupta, T.K. Gandhi, R. Gupta, B.K. Panigrahi, Classification of patients
+    with tumor using mr flair images, Pattern Recognit. Lett. 139 (2020) 112–117.
+
+
+    +   [59] R. Singh, A. Goel, D. Raghuwanshi, Computer-aided diagnostic network
+    for brain tumor classification employing modulated gabor filter banks, Vis. Comput.
+    (2020) 1–15.
+
+
+    +   [60] A.K. Sharma, A. Nandal, A. Dhaka, L. Zhou, A. Alhudhaif, F. Alenezi,
+    K. Polat, Brain tumor classification using the modified resnet50 model based on
+    transfer learning, Biomed. Signal Process. Control 86 (2023) 105299.'
+  merge: -1
+  img_proc: true
