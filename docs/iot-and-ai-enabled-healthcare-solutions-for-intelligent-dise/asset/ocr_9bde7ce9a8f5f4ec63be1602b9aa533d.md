@@ -1,0 +1,9 @@
+![](bbox=[0.11, 0.11, 0.88, 0.4])
+
+Fig. 1. Diabetes classified into Type-1 Diabetes, Type-2 Diabetes, Gestational Diabetes and Pregestational Diabetes [25].
+
+Cardiovascular outcome causes mortality increase with younger age after diagnosis. Omics, especially proteomics, metabolomics, and lipidomics technologies, can potentially reveal new early candidate biomarkers [8]. Also, the global prevalence of diabetes is predicted to rise dramatically, and most cases will remain undiagnosed, in particular in low- and middle-income countries. Increased screenings and medical access are recommended, particularly for high-risk individuals [9]. Detection and prevention strategies are indicated as an example of hybrid deep learning models, currently tested for diabetes management with complications [10].
+
+# 1.2 Imaging Modalities in Diabetes Prediction
+
+Recent studies on imaging modalities in diabetes prediction highlight the possibilities that artificial intelligence (AI) and machine learning techniques can offer. Different studies have explored the use of ML in 3D imaging for diabetic foot disease risk prediction [12]. Thermal imaging of the tongue surface has shown valuable improvement as a non-invasive screening method for type 2 diabetes [13]. AI-based retinal image analysis has confirmed the potential for identifying diabetes complications and predicting circulatory risks [14]. A deep learning system called DeepDR Plus has been developed to predict diabetic retinopathy development using fundus images [15]. Other studies have focused on hybrid models merging K-means clustering and principal component analysis for diabetes prediction [16] and explainable decision tree models leveraging cloud computing [17]. However, we still face challenges in creating multimodal models and addressing biases like interpretability and entropy in various ML Techniques [18]. Several imaging

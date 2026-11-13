@@ -1,0 +1,15 @@
+modalities have been explored for their potential in diabetes prediction, each offering unique advantages and insights into the disease's progression.
+
++   * **Retinal Fundus Photography:** The purpose of retinal fundus photography is to detect diabetic retinopathy, a prevalent complication of diabetes, by capturing images of ocular tissue. The technology has been employed for an extended period to detect retinal diseases. The majority of cases are identified at advanced stages; however, we may be able to detect even subtle changes that indicate early diabetic retinopathy with CAD due to recent developments and advancements in cameras that have resulted in enhanced resolution [11].
+
++   * **Optical Coherence Tomography (OCT):** In the early 1990s, OCT was introduced as a non-invasive imaging modality that could produce high-resolution cross-sectional images of the retina [4]. It is beneficial in the identification of diabetic macular oedema (DME), a severe complication of diabetes that can impair vision. Pathologic retinal fluid accumulation that impedes the accurate identification of superficial retinal layers can be promptly identified using OCT, and the efficacy of DME management outcomes can be monitored [12].
+
++   * **Thermal Imaging:** The use of thermal imaging to detect the temperature difference in the epidermis can suggest changes in the underlying metabolic environment that are associated with diabetes. It was noteworthy because this method is non-invasive and enables the identification of diabetic foot ulceration, as well as associated complications, through an analysis of thermal asymmetry. Thermal gradients in relation to skin temperature is suitable for a quick, uncomplicated thermo-graphic diagnosis, Particularly for diabetic evaluation [13].
+
++   * **Magnetic Resonance Imaging (MRI) & Computed Tomography (CT):** MRI and CT scans are more commonly used in general medicine, but they can also be be used to study diabetes. MRI checks how abdominal fat and liver fat are distributed in relation to insulin resistance. Because CT scans are very good at separating things in space, they can easily give us information about how the pancreas looks and how well beta cells are working and making insulin. Even though these methods aren't usually used to diagnose diabetes, they give us more information about how diabetes starts [14].
+
+# ## 1.3 Machine Learning in Medical Imaging
+
+Using Machine Learning in medical imaging has changed the way diabetes is predicted in a big way. Machine learning algorithms and intense learning models have shown that they are very good at looking at complicated medical pictures, pulling out the important parts, and correctly predicting how diseases will progress.
+
++   * **Convolutional Neural Networks (CNNs):** Convolutional neural networks (CNNs) are trained to analyse images. Finding patterns and abnormalities (like tumors) in medical pictures is made easier by convolutional neural networks, which can automatically learn hierarchies of characteristics from raw image data. Using retinal fundus, optical coherence tomography (OCT), and thermal

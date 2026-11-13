@@ -1,0 +1,11 @@
+genomic applications represent some of the major areas where deep learning has been a success due to its capabilities in analyzing huge volumes of data as well as complicated information such as images. NLP is where AI has also been employed to evaluate unstructured data like clinical notes and reach other conclusions that the healthcare providers would otherwise not be able to identify.
+
+This brief includes some of the healthcare advantages that have now been made possible due to the use of artificial intelligence; perhaps one of the most beneficial of these is forecasting, where artificial intelligence uses prior data to anticipate a health-related event. These include using predictive models for such things as determining likely disease outbreaks, the rates of readmissions of patients to the hospitals, and the overall likelihood of a patient's response to certain forms of treatment. This makes for a more preventive healthcare system which puts less pressure on healthcare facilities and offers better results in terms of the health of patients.
+
+# 2.3 Convergence of IoT and AI
+
+Although each of these technologies has disrupted the health care industry their impact is most profound when integrated together. IoT gives a constant feed of the real time data from different sensors and other devices while AI uses this data and churns out meaningful information as illustrated in Fig. 3. Collectively, they support smart surveillance systems that would allow for the early identification, early warning, and timely intervention on health events.
+
+From a heart rate point of view, smart wearables and other IoT devices capture 'heart rate variability,' which is an indication of some conditions like stress, sleep problems, or other heart complications. Nonetheless, the amount of data yielded by IoT devices poses a challenge in the sense that the data generated is huge. This is where AI comes in. To put it simply, AI can take out the middleman. By the use of machine learning algorithms, AI can analyze data from IoT devices and identify existing health risks, as shown in Fig. 4.
+
+![](bbox=[0.12, 0.655, 0.885, 0.915])

@@ -1,0 +1,17 @@
+# 5.2.5 R&D and Clinical Trials
+
+Development never stops and if it’s the question of technology, then it happens exponentially. Once it is found out that a certain discovery has a large scope and can be applied on a large scale in the real world, then the research and development in that field is moved forward and efforts never stop. Before any research is applied on a large scale, a number of clinical trials take place. A lot of subjects are used on whom the trials would be carried out. Then according to the results, the best method for a particular situation is decided upon and applied [32–35].
+
+# 6. Conclusion
+
+The current era is characterized by big data and machine intelligence, owing to the advancements in technology, particularly artificial intelligence. People are heavily dependent on the Internet and Internet-enabled devices, producing vast amounts of data every day. However, without effective processing and analysis, the data generated are not put to their full use. The development of AI has made it possible to effectively and promptly analyze large amounts of data, increasing efficiency. The IoT is greatly influenced by globalization and the technological revolution, and its development is closely tied to the advancement of intelligent technology. To keep pace with the rapidly evolving technological landscape, it is important to harness the power of science and technology and stay updated with the latest developments. In conclusion, AIoT is an emerging technology that has the potential to bring significant benefits to various fields, including elderly care. By integrating AI and the Internet of Things, AIoT can help to provide intelligent, data-driven, and automated solutions for elderly care. Despite the potential benefits, some challenges need to be addressed, such as improper examination of data, data scarcity, and the correct integration of various technologies. Nevertheless, these challenges can be overcome by continued research and innovation in the field. The development of AIoT is deeply interconnected with the advancement of the Internet of Things and AI technology. As such, it is important for developers to continuously explore new possibilities and solutions in this field and to remain aware of their responsibility to serve the people and society through the application of AIoT.
+
+# References
+
++   [1] Panayides, A. S., Amini, A., Filipovic, N. D., Sharma, A., Tsaftaris, S. A., Young, A. et al. (2020). AI in medical imaging informatics: current challenges and future directions. IEEE Journal of Biomedical and Health Informatics, 24(7): 1837–1857.
+
++   [2] Tiwari, D., Kumar, A., Akash, A., Agarwal, K., Sharma, A. and Singh, N. (2024, February). Diagnosis of brain’s health condition through smart ML algorithm through brain waves. pp. 117–123. In 2024 IEEE International Conference on Computing, Power and Communication Technologies (IC2PCT) (Vol. 5). IEEE.
+
++   [3] Angehrn, Z., Haldna, L., Zandvliet, A. S., Gil Berglund, E., Zeeuw, J., Amzal, B. et al. (2020). Artificial intelligence and machine learning applied at the point of care. Frontiers in Pharmacology, 11: 759.
+
++   [4] Malik, A., Parihar, V., Bhavna, Bhushan, B. and Karim, L. (2023). Empowering artificial intelligence of things (AIoT) toward smart healthcare systems. In: Bhushan, B., Sangaihah, A. K. and Nguyen, T. N. (eds.). AI Models for Blockchain-Based Intelligent Networks in IoT
