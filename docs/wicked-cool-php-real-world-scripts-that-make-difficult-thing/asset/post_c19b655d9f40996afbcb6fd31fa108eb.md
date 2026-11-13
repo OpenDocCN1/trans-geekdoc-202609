@@ -1,0 +1,322 @@
+
+- security, continued
+  - encryption. See encryption
+  - forms and, 33–34, 45–46, 51
+  - GET/POST parameters and, 25–26
+  - global variables and, 34–35
+  - include files and, 3–4, 35
+  - Mcrypt application, 41–43
+  - one-way hash, 40–41
+  - passphrase, 41–43, 130–136
+  - passwords. See passwords
+  - SQL injection attacks, 26, 35–36
+  - users and, 34
+  - XSS attacks, 37–38
+  - security images. See CAPTCHA images
+- seed, 42
+- semicolon (;), 20, 26, 121
+- send() method, 122, 123
+- sendmail, 120–121, 123
+- serialize() function, 12
+- servers. See also webservers
+  - predefined variables, 47
+  - proxy, 112
+  - SMTP, 120, 121, 123
+  - spam, 123
+- $_SESSION array, 107, 108
+- session ID, 104–105, 109
+- sessions
+  - vs. cookies, 105
+  - described, 104–105
+  - management, 107
+  - pros/cons, 104–105
+  - temporary data storage with, 107–109
+  - timeouts, 115–116
+  - tracking user data with, 104–105
+- session_start() function, 107–108, 109, 116
+- setcookie() function, 106
+- shell_exec() function, 35
+- Simple Mail Transfer Protocol. See SMTP (Simple Mail Transfer Protocol)
+- Simple Object Access Protocol. See SOAP (Simple Object Access Protocol)
+- SimpleXML, 145–152
+- SimpleXMLElement object, 145
+- simplexml_load_file() function, 145
+- single quote (')
+  - errors and, 23
+  - escaping, 26
+  - strings and, 70
+- slash (/), 70
+- Smarty system
+  - blogging systems, 171–181
+  - errors, 16–17
+  - installing, 14–15
+  - templates, 14–17
+  - tutorial, 15–16
+- SMTP (Simple Mail Transfer Protocol), 120
+  - server, 120, 121, 123
+  - SMTPAuth setting, 123
+- SOAP (Simple Object Access Protocol), 28, 149–151
+  - classes, 149
+  - SoapClient class, 149
+- sorting arrays, 13–14
+- source code, viewing, 11
+- spaces, blank, 3
+- spam, 120, 124, 129–130
+- spam server, 123
+- special character sequences, 70–71
+- SQL injection attacks, 26, 35–36
+- square brackets [ ], 48, 71
+- SSL (Secure Sockets Layer), 111
+- SSL-encrypted pages, 111
+- $start_number() variable, 9
+- strcasecmp() function, 63
+- strings. See also substrings; text
+  - converting arrays to, 12
+  - converting case, 62–63
+  - creating timestamps from, 83–84
+  - excess whitespace in, 48
+  - extracting portions of, 59–61
+  - finding characters in, 70
+  - finding substrings in, 63–64
+  - literal, 87
+  - quote marks and, 70
+  - removing characters in, 60
+  - replacing characters in, 60
+  - stripping HTML tags from, 80
+  - writing to files, 96
+- strip_tags() function, 80
+- strlen() function, 60
+- strpos() function, 63–64
+- str_replace() function, 62–65
+- strrpos() function, 63–64
+- strstr() function, 63–64
+- strtolower() function, 62–63
+- strtotime() function, 83–84, 85
+- strtoupper() function, 62
+- strval() function, 46
+- style sheets, 4–6
+- submit buttons, 52, 108
+- substr() function, 60–61, 63
+- substrings
+  - deleting, 64
+  - finding, 61, 63–64
+  - replacing, 64–65
+  - replacing characters in, 60
+  - replacing with regular expressions, 74
+  - troubleshooting, 64, 65
+- syslog, 24
+- system() function, 35
+
+## T
+
+- table_row_format() function, 5
+- tables. See also databases
+  - color in, 4–6
+  - columns, 6
+  - rearranging, 75
+  - rows. See rows
+- tar archive, 30
+- $target_dirs variable, 98
+- .tar.gz files, 30
+- telephone number validation, 57
+- templates, Smarty, 14–17
+- text. See also strings
+  - converting to HTML, 77–79
+  - fonts, 130–132
+  - hyperlinked, 80
+  - misspelled words in, 65–69
+- thumbnail images, 136–139
+- time. See also dates; timestamps
+  - common increments, 82
+  - elapsed, 88–90
+  - Unix time, 81–82
+- TIME field type, 90
+- time() function, 82–83
+- time zones, 83, 85
+- timeouts, session, 115–116
+- TIMESTAMP field type, 90
+- timestamp() function, 82
+- timestamps
+  - common time increments, 82
+  - comparing, 82
+  - creating from date values, 84–85
+  - creating from strings, 83–84
+  - current, 82–83
+  - MySQL, 90
+  - past/future, 83–85
+  - storing, 88
+  - Unix time, 81–82
+- transactions, credit card, 52–55
+- transform_HTML() function, 38
+- trim() function, 47–48
+- troubleshooting. See also errors
+  - arrays, 12–13
+  - case sensitivity issues, 62
+  - cookie problems, 106–107, 109
+  - email issues, 123
+  - file access, 27
+  - FTP programs, 93
+  - image uploads, 101
+  - including files, 3–4
+  - injection attacks, 26, 35–36
+  - Magic Quotes, 26
+  - permission issues, 95
+  - pspell issues, 69
+  - run-time execution, 25
+  - SafeHTML, 39
+  - Smarty templates, 16–17
+  - substrings, 64, 65
+  - variables, 12–13
+  - verifying data, 95
+  - XSS attacks, 37–39
+
+## U
+
+- ucwords() function, 62–63
+- Undefined constant error, 23
+- Undefined index error, 23
+- Undefined variable error, 23
+- Uniform Resource Locators. See URLs
+- Unix-based systems
+  - library installation and, 30
+  - make utility, 31
+  - multiple directories and, 26
+  - newlines and, 79
+  - password security, 40
+  - permissions, 91–92, 93
+  - php.ini location, 20
+  - timestamps and, 90
+  - Unix time, 81–82
+  - UNIX_TIMESTAMP() function, 90
+- unlink() function, 97
+- uploading images, 96–101
+- $urlroot variable, 98
+- URLs. See also cURL; hyperlinks
+  - connections to, 142–144
+  - converting local links to, 77
+  - converting to hyperlinks, 80
+  - reading data from, 95
+  - redirection, 110–111
+  - redirects, 110–111
+  - user agent information, 112–115
+- user polls, 156–162
+- user privileges, MySQL, 36
+- users
+  - authentication, 116–118
+  - enforcing SSL-encrypted pages, 111
+  - security issues, 34
+  - session timeouts, 115–116
+  - storing user data, 107–109
+  - tracking user data, 104–105
+  - verifying via email, 124–127
+  - "Welcome back" message, 105–106
+- usort() function, 13
+- UTC (Coordinated Universal Time), 83
+- UTF-8–encoded data, 38
+
+## V
+
+- validate_cc_number() function, 54–55
+- validation. See also authentication
+  - credit card, 52–55
+  - data, 99
+  - email addresses, 56–57, 124
+  - form responses, 45–46, 51–52
+  - phone numbers, 57
+- values
+  - automatically adding to database, 48–50
+  - button, 52
+  - checkbox, 48–50
+  - verifying in responses, 51–52
+- variables. See also specific variables
+  - converting arrays to, 12–13
+  - errors, 23
+  - form, 47, 48–50
+  - global. See global variables
+  - importing into arrays, 48–50
+  - placing file contents in, 93–95
+  - predefined server variables, 47
+  - storing in files, 2
+  - troubleshooting, 12–13
+  - unchecked, 4
+  - undefined, 23
+- Verisign Payment Pro, 28
+- voice software, 130
+- voting systems, 156–162
+
+## W
+
+- web browsers
+  - cookies. See cookies
+  - extracting information about, 112–115
+  - Firefox, 113–114
+  - Internet Explorer, 112–114
+  - Mozilla, 112–115
+  - Netscape Navigator, 113, 114
+  - Opera, 112–114
+  - Safari, 114
+  - user agent strings, 112–115
+  - webmaster tasks via, 29
+- web hosting company, 20, 29
+- web pages
+  - connections to, 142–144
+  - redirection, 110–111
+  - SSL-encrypted, 111
+- web services. See also Internet
+  - Amazon.com, 149–151
+  - Associates Web Service, 149–151
+  - building, 151–153
+  - mapping, 146–149
+  - REST, 142, 146, 151
+  - SOAP, 28, 149–151
+  - WSDL, 149–151
+  - XML-based, 142
+- Web Services Description Language (WSDL), 149–151
+  - files, 150
+- web sessions. See sessions
+- web-based control panel, 29–32
+- webserver host, 20, 29
+- webservers. See also servers
+  - connections between, 141, 142–144
+  - extracting client information, 111–115
+  - uploading images to, 97–101
+- websites
+  - blogging systems, 171–181
+  - comments, 129, 171–181
+  - connecting to, 142–144
+  - login systems, 116–118
+  - selling goods from, 149–151
+  - "Welcome back" message, 105–106
+- whitelisting
+  - described, 46
+  - integers, 46
+  - SafeHTML, 38–39
+- whitespace, trimming, 47–48
+- wildcard characters, 71
+- Windows-based systems, 20, 26, 96, 112
+- WordPress, 78
+- world permission, 91
+- World Wide Web, 103
+- worms, 95
+- write permission, 92
+- WSDL (Web Services Description Language), 149–151
+  - files, 150
+
+## X
+
+- XLS (Excel) format, 101–102
+- XML (eXtensible Markup Language), 144–152
+  - data, 144–146
+  - datastream, 52
+  - library, 142
+  - parsers, 79, 142, 144–146, 150
+  - XML-based web service, 142
+- XSS (cross-site scripting), 37–38
+  - attacks, 37–38
+  - tutorial, 39
+
+## Y
+
+- Yahoo!
+  - geocoding service, 146–148
+  - searches, 144
