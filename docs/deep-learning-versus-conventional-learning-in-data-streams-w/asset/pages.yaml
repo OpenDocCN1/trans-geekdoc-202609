@@ -1,0 +1,1135 @@
+- pgno: 0
+  md: '# # A Novel Fuzzy Identification Method Based on Ant Colony Optimization Algorithm
+
+
+    SHUN-HUNG TSAI AND YU-WEN CHEN
+
+    Graduate Institute of Automation Technology, National Taipei University of Technology,
+    Taipei 10608, Taiwan
+
+    Corresponding author: S.-H. Tsai (shtsai@ntut.edu.tw, shtsai@mail.ntut.edu.tw)
+
+    This work was supported by the Ministry of Science and Technology, Taiwan, under
+    Grants MOST-104-2221-E-027-066 and MOST-105-2221-E-027-068.
+
+
+    **ABSTRACT** In this paper, an identification problem for nonlinear models is
+    explored and a novel fuzzy identification method based on the ant colony optimization
+    algorithm is proposed. First, a modified cluster validity criterion with a fuzzy
+    c-regression model is adopted to find appropriate rule numbers of the Takagi-Sugeno
+    fuzzy model. Then, the ant colony optimization algorithm is adopted and the sifted
+    initial membership function and the consequent parameters of the fuzzy model are
+    obtained. Through an improved fuzzy c-regression model and the orthogonal least-squares
+    method, the premise structure and the consequent parameters can be obtained to
+    establish the Takagi-Sugeno fuzzy model. Some examples are illustrated to show
+    that the proposed method provides better approximation results and robustness
+    than those obtained using some of the existing methods.
+
+
+    **INDEX TERMS** Fuzzy system identification, Takagi-Sugeno fuzzy model, ant colony
+    optimization algorithm (ACO), fuzzy c-regression model.
+
+
+    ## I. INTRODUCTION
+
+    Fuzzy logic has been applied to the analysis of physical and engineering problems
+    [1]–[4]. In addition, fuzzy models have been widely applied to the identification
+    of nonlinear systems in the past few decades. Among the various types of fuzzy
+    model, the Takagi-Sugeno (T-S) fuzzy model [5]–[7] is regarded as being effective
+    and powerful for identifying nonlinear models. The T-S fuzzy model is described
+    by a family of fuzzy IF-THEN rules that represent the local linear input-output
+    relations of the model. The overall T-S fuzzy model can be obtained by blending
+    these linear models via fuzzy membership functions to represent the nonlinear
+    model. In addition, the T-S fuzzy model has been shown to be a universal function
+    approximator as it can approximate any smooth nonlinear function to any degree
+    of accuracy in any convex compact region [8]. Therefore, based on the T-S fuzzy
+    model, many approaches have been developed for the identification of nonlinear
+    models [9]–[11]. Identification approaches based on the T-S fuzzy model can be
+    roughly classified into two types: One type is independent of the input-output
+    data, with the T-S fuzzy model established from the nonlinear model via some known
+    system parameters and analytic methods, such as the sector nonlinearities method
+    [8] and the equilibrium point modeling methods [2]. However, the disadvantages
+    are that the nonlinear system parameters must be known in advance. The other type
+    of identification approach involves establishing the T-S fuzzy model based on
+    the input-output data. The advantage is that the T-S fuzzy model can be established
+    from the original model when the system parameters are not known. Therefore, it
+    is recognized that the latter approach is more suitable for real-world applications
+    than the former, and so many fuzzy identification methods based on input-output
+    data have been developed.
+
+
+    For the identification problem with the T-S fuzzy model, a major procedure is
+    to determine the number of fuzzy rules. However, most approaches do not set the
+    number of fuzzy rules automatically. So hierarchical sparse fuzzy inference systems
+    have been proposed for finding the minimum rule numbers of the T-S fuzzy model
+    [10]; however, for some models, the established T-S fuzzy model with minimum rule
+    number cannot precisely represent the original model. In one study [11], the rule
+    base and the number of rules were obtained during the evolutionary process in
+    which the mutation process played a key role. In another study [12], an index
+    was proposed to determine the appropriate rule number for a hyper-spherical-shaped
+    clustering algorithm, but it was not suitable for hyper-planes. Therefore, in
+    this study, a modified cluster validity criterion with the fuzzy c-regression
+    model is adopted to obtain the appropriate rule numbers.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'In addition to the number of rules, the choice of initial values for the system
+    parameters also affects the final results. Moreover, an inappropriate premise
+    structure may be obtained, resulting in unreasonable modeling distortion. Therefore,
+    many metaheuristic algorithms have been developed to find the appropriate parameters.
+    In recent years, many nature-inspired heuristic algorithms have been developed
+    and applied in various areas, including those for optimization problems [13]–[15],
+    classification problems [16]–[19], and identification problems [20]. Most swarm
+    intelligence concepts originate from the study of colonies or swarms of social
+    organisms [21]–[23]. Among the various algorithms based on swarm intelligence,
+    the ant colony optimization (ACO) algorithm, a popular metaheuristic algorithm,
+    has shown a promising performance. The ACO algorithm, usually applied to combinatorial
+    optimization problems, has been inspired by observations of the seeking behavior
+    of ants [24]. The ACO algorithm shows the advantages of solving the optimization
+    problem; however, for the fuzzy identification problem, many unknown parameters
+    need to be found and the interval for each parameter is unknown. In addition,
+    it takes a lot of time to find a solution; therefore, few studies have explored
+    the fuzzy identification problem using the ACO algorithm. For this reason, an
+    improved ACO based fuzzy identification method is proposed in this study to find
+    the silted initial consequent parameters and the initial membership function matrix.
+
+
+    # II. PRELIMINARIES
+
+
+    Before discussing the proposed identification method, the T-S fuzzy model and
+    some algorithms which are used to search the appropriate parameters for the T-S
+    fuzzy model are reviewed in this section.
+
+
+    # A. T-S FUZZY MODEL
+
+
+    The T-S fuzzy dynamic model is described by fuzzy IF-THEN rules, which locally
+    represent input-output relations of a nonlinear model. First, consider data set
+    **X** = {**x**<sub>1</sub>, **x**<sub>2</sub>, ..., **x**<sub>N</sub>}, where
+    _N_ is the number of data inputs, and for each input vector **x**<sub>k</sub>
+    = {x<sub>1</sub>(k), x<sub>2</sub>(k), ..., x<sub>n</sub>(k)}, _n_ is the dimension
+    of **x**<sub>k</sub> and _k_ is the _k<sup>th</sup>_ data set. The _i<sup>th</sup>_
+    rule of the T-S fuzzy model is presented as:
+
+
+    ```
+
+    Rule i:
+
+    IF $x_1(k)$ is $A_1^i$ AND $\cdots$ AND $x_n(k)$ is $A_n^i$
+
+    THEN $y^i(k) = a_0^i + a_1^i x_1(k) + \cdots + a_n^i x_n(k)$ (1)
+
+    ```
+
+
+    where _i_ = 1, ..., _c_ is the _i<sup>th</sup>_ fuzzy rule, _c_ is the number
+    of fuzzy rules, _x<sub>q</sub>_(_k_) is the input variable, _q_ = 1, 2, ..., _n_,
+    $A_q^i$ is the fuzzy set, _y<sup>i</sup>_(_k_) is the output of the _i<sup>th</sup>_
+    fuzzy rule, and $a_q^i$ is the consequent parameters of the _i<sup>th</sup>_ output.
+
+
+    By using the product of inference, singleton fuzzifier, and center average defuzzifier,
+    the defuzzified output of the overall T-S fuzzy model can be represented as:
+
+
+    Related to the above discussion, a novel identification method based on an improved
+    ACO algorithm is developed in this study. First, a cluster validity criterion
+    index for the fuzzy c-regression model (FCRM) is used to determine the appropriate
+    rule number of the T-S fuzzy model. Second, based on the improved ACO algorithm,
+    the sifted initial membership function matrix and the consequent parameter matrix
+    are obtained. Through an improved FCRM algorithm and the orthogonal least-squares
+    (OLS) method, the premise and consequent parameters are obtained. Finally, some
+    examples are provided to show the validity and effectiveness of the proposed identification
+    method. The main contributions of this paper are as follows: i) with a cluster
+    validity criterion index, the appropriate number of rules is obtained; ii) based
+    on the improved ACO algorithm, a sifted initial consequent parameter matrix $\Theta_i(k)$
+    is obtained; and iii) according to the obtained $\Theta_i(k)$ from the ACO algorithm
+    and the improved FCRM, the membership function matrix **U** is obtained with fewer
+    iterations. The rest of the paper is organized as follows. In Section II, the
+    T-S fuzzy model and some algorithms that are used in the design procedure are
+    introduced. In Section III, based on the FCRM algorithm, cluster validity criterion
+    index, and ACO algorithm, a novel identification method based on the T-S fuzzy
+    model is proposed. In Section IV, some examples are given to demonstrate that
+    the proposed identification method provides better approximation and robustness
+    than can be obtained using some existing methods. Last, conclusions are given
+    in Section V.
+
+
+    ```
+
+    \(\hat{y}(k) = \frac{\sum_{i=1}^c w_i(k)y^i(k)}{\sum_{i=1}^c w_i(k)}\) (2)
+
+    ```
+
+
+    where $\hat{y}(k)$ is the output of the fuzzy system, the weight $w_i(k) = \prod_{q=1}^n
+    A_q^i(x_q(k))$ and $\sum_{i=1}^c w_i(k) = 1$. $A_q^i(x_q(k))$ is the grade of
+    the membership function, expressed as:
+
+
+    ```
+
+    \(A_q^i(x_q) = exp \left\{ - \left( \frac{x_q - \alpha_q^i}{\beta_q^i} \right)^2
+    \right\}, q = 1, \cdots, n\) (3)
+
+    ```
+
+
+    where _i_ = 1, ..., _c_ is the _i<sup>th</sup>_ fuzzy rule, $\alpha_q^i$ and $\beta_q^i$
+    represent the center bell-shaped membership function and the standard deviation
+    of the bell-shaped membership function respectively.
+
+
+    # B. FUZZY C-REGRESSION MODEL
+
+
+    The fuzzy c-means (FCM) algorithm is regarded as a simple and effective clustering
+    algorithm. However, the FCM algorithm is a hyper-spherical-shaped cluster algorithm;
+    therefore, it is not suitable for hyper-plane-shaped clustering. Therefore, the
+    FCRM clustering algorithm was proposed [25]–[28] to partition the input-output
+    data pairs into hyper-plane-shaped clusters for the fuzzy modeling.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'Consider the \(k^{th}\) input vector \(\mathbf{x}_k\) and output vector \(\hat{y}(k)\).
+    The hyper-plane function is:
+
+
+    \(\begin{aligned} y^i(k) &= f_i(\mathbf{x}_k, \Theta_i) \\ &= a_0^i + a_1^i x_1(k)
+    + \cdots + a_n^i x_n(k) \\ &= \begin{bmatrix} 1 & \mathbf{x}_k \end{bmatrix} \Theta_i^T,
+    \quad i=1, \cdots, c \end{aligned} \tag{4}\)
+
+
+    where \(\Theta_i\) is the row vector of parameters for the \(i^{th}\) fuzzy rule
+    consequent part.
+
+
+    The fitness function of the FCRM clustering algorithm is defined as:
+
+
+    \(J_m = f(\Theta_i) = \sum_{i=1}^c \sum_{k=1}^N (u_{ik})^m E_{ik}^2(\Theta_i)
+    \tag{5}\)
+
+
+    where, \(E_{ik}(\Theta_i) = |f_i(\mathbf{x}_k, \Theta_i) - y(k)| = |\begin{bmatrix}
+    1 & \mathbf{x}_k \end{bmatrix} [\Theta_i]^T - y(k)|\) is the distance (measure
+    of error) between \(f_i(\mathbf{x}_k, \Theta_i)\), and the modeling output \(y(k)\).
+    The membership function \(u_{ik}\) and consequent parameters \(a_j^i\), shown
+    in (6) and (7), cannot be trained toward the direction that minimizes the fitness
+    function; therefore, an improved FCRM algorithm [29] is adopted in this paper.
+    Based on the modified FCRM algorithm, the membership function \(u_{ik}\) and the
+    consequent parameters \(a_j^i\) can refresh and vary towards the direction that
+    minimizes the fitness function.
+
+
+    \(u_{ik} = \left( \sum_{s=1}^c \left( \frac{E_{ik}(\Theta_i)}{E_{sk}(\Theta_s)}
+    \right)^{\frac{-2}{m-1}} \right)^{-1}, \quad 1 \le i \le c, \quad 1 \le k \le
+    N \tag{6}\)
+
+
+    \(a_j^i = \frac{\sum_{k=1}^n (u_{ik})^m (y^i(k) - \sum_{p \ne j} a_p^i \hat{x}_p(k))
+    \hat{x}_p(k)}{\sum_{k=1}^n (u_{ik})^m}, \quad 0 \le j \le n \tag{7}\)
+
+
+    where \([\hat{x}_0(k), \hat{x}_1(k), \dots, \hat{x}_n(k)] = \begin{bmatrix} 1
+    & \mathbf{x}_k \end{bmatrix} = [1, x_1(k), \dots, x_n(k)]\).
+
+
+    # C. A MODIFIED CLUSTER VALIDITY CRITERION
+
+
+    In the process of system identification, the number of clusters is always decided
+    by the user. The number of rules will affect the number of parameters and the
+    effectiveness of the cluster. Therefore, different approaches [12], [30], [31]
+    have been proposed for searching for an appropriate cluster number. However, most
+    of the methods are more suitable for hyper-spherical-shaped clustering algorithms.
+    Since the FCRM is a hyper-plane-shaped algorithm, a modified cluster validity
+    criterion [32] is adopted in this paper to search for the appropriate rule number.
+    The cluster validity criterion is defined by the compactness-to-separation ratio,
+    the numerator reflects the compactness of the hyperplane-shaped clusters, and
+    the denominator indicates the separation of the hyperplane-shaped clusters. The
+    optimal rule number \(c\) is obtained when \(F_{NEW}\) reaches its minimum.
+
+
+    \(F_{NEW} \equiv \frac{\sum_{i=1}^c \sum_{k=1}^N (u_{ik})^m E_{ik}^2(\Theta_i)}{N
+    \min_{\substack{i=1, \dots, c \\ j=1, \dots, c \\ i \ne j}} \frac{a_{ij} + k_2}{<|\mathbf{u}_i,
+    \mathbf{u}_j>| + k_1}} \tag{8}\)
+
+
+    where \(a_{ij} = \frac{|a_0^j - c_0^i|}{\Delta a_{max}}\), for \(i, j = 1, \dots,
+    c, i \ne j\), \(\Delta a_{max} = \max_{i=1, \dots, c \\ j=1, \dots, c} |a_0^i
+    - d_0^j|\), \(a_{ij} \in [0, 1]\) is normalized, \(\mathbf{u}_i = \mathbf{n}_i
+    / \|\mathbf{n}_i\|\), \(<,>\) represents the inner product, \(\mathbf{n}_i = [a_1^i
+    \cdots a_n^i - 1]^T\), \(k_1, k_2\) are small real positive constants to avoid
+    the function from being zero or infinity.
+
+
+    # D. IMPROVED ANT COLONY OPTIMIZATION ALGORITHM
+
+
+    Ant colony optimization (ACO) [33]-[35] is a metaheuristic approach that is widely
+    utilized to find an approximation solution for optimization problems. The ACO
+    was inspired by observations of the foraging behavior of real ants. Similar to
+    the behavior of ants seeking a path between their colony and a source of food,
+    the ACO algorithm was first aimed at searching for an optimal path in a graph.
+    Based on the ACO algorithm, the optimization problem can be transformed into the
+    problem of finding the best path on a weighted graph. The ants (hereafter, ants)
+    incrementally build solutions by moving on the graph. The solution construction
+    process is stochastic and depends on the pheromone model, whose values are modified
+    at runtime by the ants. The combination of fuzzy logic and ACO have been widely
+    applied to solving the combinatorial optimization problem, such as the traveling
+    salesman problem (TSP) [36], vehicle routing problem [37], railroad-blocking problem
+    [38], optimal reconfiguration for distribution systems [39], fuzzy controller
+    design [40], and so on. The ACO algorithm shows the advantage of solving the optimization
+    problem; however, for continuous cases, the solution for the optimization problem
+    is not as clear and straightforward. Some studies have adopted the concept of
+    the ACO to find a solution to the optimization problem for continuous domain,
+    but they often do not follow its steps exactly. From an examination of the fuzzy
+    identification problem, many unknown parameters need to be found and the interval
+    for each parameter is unknown. In addition, a lot of iterations are needed to
+    obtain the optimal solution; therefore, few studies have explored the fuzzy identification
+    problem using the combination of fuzzy logic and the ACO algorithm. Therefore,
+    in this study, an improved ACO [41] is adopted to obtain the sifted initial membership
+    function and consequent parameter matrices to establish a T-S fuzzy model with
+    fewer iterations. The improved ACO algorithm is briefly described as follows.
+
+
+    +   1) Initialize the solutions in the pheromone table, shown in Fig. 1, and substitute
+    the solutions into the fitness function (5).
+
+
+    +   2) Sort the solutions by fitness function and calculate the weight of each
+    solution by (9).
+
+
+    \(\bar{\omega}_v = \frac{1}{\zeta T \sqrt{2\pi}} e^{-\frac{(v-1)^2}{2\zeta^2 T^2}}
+    \tag{9}\)
+
+
+    where \(v\) is \(v^{th}\) solution, \(\zeta T\) is standard deviation, \(T\) is
+    population size, and \(\zeta\) is a parameter of ACO. When \(\zeta\) is small,
+    the best-ranked solutions are strongly preferred; otherwise, the probability becomes
+    more uniform.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "![](img/7a2a4261fbc1474308250e4dcaab8af5_3_0.png)\n\n+   3) The probability\
+    \ \\(P_v\\) is calculated by (10) and select the solution by probability formula\
+    \ (10) with the roulette method.\n\n\\(\\begin{array}{ c }\nP_v = \\frac{\\bar{\\\
+    omega}_v}{\\sum_{t=1}^T \\bar{\\omega}_t} \\\\\n(10)\n\\end{array}\\)\n\n+   4)\
+    \ Set the selected solution in Step 3 as mean \\(\\mu^i\\), and calculate the\
+    \ standard deviation \\(\\sigma_v^i\\) by the following equation.\n\n\\(\\begin{array}{\
+    \ c }\n\\sigma_v^i = \\xi \\sum_{\\epsilon=1}^T \\frac{|S_\\epsilon^i - S_v^i|}{T\
+    \ - 1} \\\\\n(11)\n\\end{array}\\)\n\nwhere \\(\\xi\\) is the evaporation rate\
+    \ of pheromone, \\(\\sigma_v^i = \\zeta T\\), \\(S_\\epsilon^i\\) is the \\(i^{th}\\\
+    ) variable of \\(\\epsilon^{th}\\) solution in Fig. 1, and \\(S_v^i\\) is the\
+    \ \\(i^{th}\\) variable of \\(v^{th}\\) solution in Fig. 1.\n\n+   5) If the condition\
+    \ \\(|f^{(l+1)}(\\mu^i) - f^{(l+1)}(S_i)| < 0\\) is satisfied, then set \\(S_i\
+    \ = \\mu^i\\); otherwise, keep the original \\(S_i\\).\n\n+   6) If the terminal\
+    \ condition \\(|f^{(l+1)}(S_i) - f^{(l)}(S_i)| < \\delta\\) with \\(\\delta >\
+    \ 0\\) is satisfied, then stop the algorithm; otherwise, go back to Step 2.\n\n\
+    # III. PROPOSED IDENTIFICATION METHOD\n\nThe proposed identification method, which\
+    \ combines a modified cluster validity criterion index and ACO and OLS algorithms,\
+    \ is introduced in this section. The purpose of the proposed fuzzy identification\
+    \ is to establish the T-S fuzzy model with the minimal error variance between\
+    \ the established model and the original nonlinear model. The following steps\
+    \ are followed:\n\n# **Identification of the premise parameters**\n\n+   1) Determination\
+    \ of the number of fuzzy rules.\n+   2) Identification of the membership function\
+    \ parameters.\n\n# **Identification of the consequent parameters**\n\n+   1) Establishment\
+    \ of the consequent structure for each local model.\n+   2) Optimization of the\
+    \ initial consequent parameters.\n+   3) Identification of the consequent parameters.\n\
+    \n# A. PROPOSED IDENTIFICATION ALGORITHM\n\nIn general, the initial value and\
+    \ the number of rules are set randomly before the cluster algorithm is applied\
+    \ to identify the parameters of the established model. However, since the initial\
+    \ premise structure, consequent parameters, and number\n\nof rules might lead\
+    \ to an inappropriate premise structure and identification results, this study\
+    \ develops an algorithm that utilizes the ACO algorithm to find a better initial\
+    \ value and adopts a modified cluster validity criterion index to determine the\
+    \ appropriate rule number. In addition, by utilizing improved FCRM and OLS algorithms,\
+    \ the final premise structure and consequent parameters are obtained. The proposed\
+    \ identification algorithm is described below in detail.\n\n+   Step 1: Set the\
+    \ number of clusters \\(c = 2\\) and \\(c_{max}\\), and find the appropriate number\
+    \ of clusters using (8). Set the parameters in the ACO algorithm and initialize\
+    \ the solution \\(S_i, i = 1, ..., T\\) and substitute \\(S_i\\) into fitness\
+    \ function (5) with \\(\\Theta_i = S_i\\).\n\n+   Step 2: Sort the solution by\
+    \ fitness function, and then arrange these solutions in ascending order. According\
+    \ to (9) and (10), we can obtain the probability value for renewing solutions\
+    \ as \\(S_i (i = 1, ..., T)\\).\n\n+   Step 3: Calculate the mean \\(\\mu^i\\\
+    ) using the probability value obtained by Step 2 and the roulette method, and\
+    \ set standard deviation \\(\\sigma_v^i\\) using (11). If the condition \\(|f^{(l+1)}(\\\
+    mu^i) - f^{(l+1)}(S_i)| < 0\\) is satisfied, then set \\(S_i = \\mu^i\\); otherwise,\
+    \ keep the original \\(S_i\\).\n\n+   Step 4: If the condition \\(|f^{(l+1)}(S_i)\
+    \ - f^{(l)}(S_i)| < \\delta\\) is satisfied, then define \\(S_i \\equiv \\Theta_i\\\
+    ); otherwise set \\(l = l + 1\\) and return to Step 2.\n\n+   Step 5: Search for\
+    \ the minimum fitness value using (5) until the condition \\(\\|\\mathbf{U}^{(l+1)}\
+    \ - \\mathbf{U}^{(l)}\\| < \\varepsilon\\) is satisfied, where \n+   \\(\\mathbf{U}^{(l)}\
+    \ = \\begin{bmatrix} u_{11}^{(l)} & \\cdots & u_{1N}^{(l)} \\\\ \\vdots & \\ddots\
+    \ & \\vdots \\\\ u_{c1}^{(l)} & \\cdots & u_{cN}^{(l)} \\end{bmatrix}\\) .\n\n\
+    The center of the bell-shaped membership function \\(\\alpha_q^i\\) and the standard\
+    \ deviation of the bell-shaped membership function \\(\\beta_q^i\\) can be obtained\
+    \ by the following formulas:\n\n\\(\\begin{array}{ c }\n\\alpha_q^i = \\frac{\\\
+    sum_{k=1}^n u_{ik}x_q}{\\sum_{k=1}^n u_{ik}} \\\\\n(12)\n\\end{array}\\)\n\n\\\
+    (\\begin{array}{ c }\n\\beta_q^i = \\sqrt{\\frac{2 \\sum_{k=1}^n u_{ik} \\left(\
+    \ x_q - \\alpha_q^i \\right)^2}{\\sum_{k=1}^n u_{ik}}} \\\\\n(13)\n\\end{array}\\\
+    )\n\nThe grade of the membership function \\(A_q^i(x_q(k))\\) can be obtained\
+    \ by (3), and weight \\(w_i(k)\\) and output \\(\\hat{y}\\) can be obtained as\
+    \ \\(w_i(k) = \\prod_{q=1}^n A_q^i(x_q(k))\\), and \\(\\hat{y}(k) = \\frac{\\\
+    sum_{i=1}^c w_i(k)\\hat{y}^i}{\\sum_{i=1}^c w_i(k)}\\) .\n\n+   Step 6: Substitute\
+    \ the input-output data and \\(\\hat{y}(k)\\) obtained from Step 5 into (14).\n\
+    \n\\(\\begin{array}{ c }\n\\mathbf{y} = \\bar{\\Phi}\\hat{\\Theta}^T + \\mathbf{e}\
+    \ \\\\\n(14)\n\\end{array}\\)\n\nwhere \\(\\mathbf{e} = \\mathbf{y} - \\hat{\\\
+    mathbf{y}}\\), real model \\(\\mathbf{y} = [y(1) \\ ... \\ y(N)]^T\\), the established\
+    \ model \\(\\hat{\\mathbf{y}} = [\\hat{y}(1) \\ ... \\ \\hat{y}(N)]^T\\), \\(\\\
+    bar{\\Phi}\\) is shown in the"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '\(\bar{\Phi} = \begin{bmatrix} \Phi(1) \\ \vdots \\ \Phi(N) \end{bmatrix} =
+    \begin{bmatrix} \chi_1^T \\ \vdots \\ \chi_r^T \end{bmatrix}^T = \begin{bmatrix}
+    \Phi_1 & \Phi_1 x_1(1) & \cdots & \Phi_1 x_N(1) & \cdots & \Phi_c & \Phi_c x_1(1)
+    & \cdots & \Phi_c x_N(1) \\ \Phi_1 & \Phi_1 x_1(2) & \cdots & \Phi_1 x_N(2) &
+    \cdots & \Phi_c & \Phi_c x_1(2) & \cdots & \Phi_c x_N(2) \\ \vdots & \vdots &
+    \ddots & \vdots & \cdots & \vdots & \vdots & \ddots & \vdots \\ \Phi_1 & \Phi_1
+    x_N(N) & \cdots & \Phi_1 x_N(N) & \cdots & \Phi_c & \Phi_c x_1(N) & \cdots & \Phi_c
+    x_N(N) \end{bmatrix}, \quad r = c \times (n+1)\)
+
+
+    top of this page, \(\Phi_i = w_i / \sum_{i=1}^c w_i\), \(\hat{\Theta} = [\Theta_1
+    \cdots \Theta_c] = [a_0^1 \cdots a_n^1 \cdots a_0^c \cdots a_n^c]\). Step 7: Transform
+    the set \(\chi_i\), where \(i = 1, \dots, r\), obtained from Step 6 as orthogonal
+    basis vectors, using the following procedure:
+
+
+    +   1) Set \(\tilde{m} = 1\)
+
+    +   \(\Gamma_1 = \chi_1\) and \(q_1 = \frac{<\Gamma_1, \mathbf{y}>}{<\Gamma_1,
+    \Gamma_1>}\).
+
+    +   2) For \(\tilde{m} = 2\) to \(r\)
+
+    +   \(\gamma_{\tilde{m}} = \frac{<\Gamma_i, \gamma_{\tilde{m}}>}{<\Gamma_i, \Gamma_i>}\),
+    \(1 \le i < \tilde{m}\)
+
+    +   \(\Gamma_{\tilde{m}} = \chi_{\tilde{m}} - \sum_{i=1}^{\tilde{m}-1} \gamma_{\tilde{m}}
+    \Gamma_i\)
+
+    +   \(q_i = \frac{<\Gamma_i, \mathbf{y}>}{<\Gamma_i, \Gamma_i>}\)
+
+    +   3) Figure out \(\hat{\Theta}\) by the following equation: \(\mathbf{A} \hat{\Theta}^T
+    = \mathbf{q} \quad (15)\)
+
+
+    where
+
+    \(\mathbf{A} = \begin{bmatrix} 1 & \gamma_{12} & \gamma_{13} & \cdots & \cdots
+    & \gamma_{1r} \\ 0 & 1 & \gamma_{23} & \cdots & \cdots & \gamma_{2r} \\ 0 & 0
+    & 1 & \cdots & \cdots & \gamma_{3r} \\ \vdots & \vdots & \vdots & \cdots & \vdots
+    & \vdots \\ 0 & 0 & 0 & \cdots & 1 & \gamma_{(r-1)r} \\ 0 & 0 & 0 & \cdots & 0
+    & 1 \end{bmatrix}\)
+
+    \(\mathbf{q} = [q_1 \quad q_2 \quad \cdots \quad q_r]\).
+
+
+    +   4) Establish the T-S fuzzy model based on the consequent parameters \(\hat{\Theta}\).
+
+
+    # IV. EXAMPLES
+
+
+    In this section, three examples are provided to demonstrate that the proposed
+    identification method outperforms some existing methods. In order to show the
+    error between the original model and the proposed T-S fuzzy model, the mean square
+    error (MSE) and average percentage error (APE) are used as performance indices,
+    defined as:
+
+
+    \(MSE = \frac{1}{N} \sum_{k=1}^N \left( y(k) - \hat{y}(k) \right)^2 \quad (16)\)
+
+    \(APE = \frac{1}{N} \sum_{k=1}^N \frac{|y(k) - \hat{y}(k)|}{|y(k)|} \times 100\%
+    \quad (17)\)
+
+
+    where \(k\) is the \(k^{th}\) data set, \(N\) is the total number of data points,
+    \(y(k)\) is the \(k^{th}\) original model output and \(\hat{y}(k)\) is the \(k^{th}\)
+    data point of the model output.
+
+
+    # A. EXAMPLE 1: STATIC NONLINEAR FUNCTION
+
+
+    Consider the following stationary nonlinear function [27], [29], [32], [42]-[46]:
+
+
+    \(y = \left( 1 + x_1^{-2} + x_2^{-1.5} \right)^2, \quad 1 \le x_1 \text{ and }
+    x_2 \le 5. \quad (18)\)
+
+
+    Fifty input-output data points of (18) from [44] are adopted in this experiment
+    to establish the T-S fuzzy model, where the input variables of the T-S fuzzy model
+    are \(x_1\) and \(x_2\). By applying the cluster validity criterion index \(F_{NEW}\),
+    the appropriate cluster \(c=4\) is obtained. Therefore, the optimal rule number
+    is set as 4. Utilizing the proposed identification method, the parameters of the
+    antecedent and the consequent parts are obtained, as shown in Table 1.
+
+
+    | Rule | \(A_1^1\) | ... | \(A_2^2\) | ... | \(\Theta_s\) | ... |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | i = 1 | 3.800 | ... | 4.063 | ... | 2.360 | ... |
+
+    | i = 2 | 1.546 | ... | 3.371 | ... | -0.097 | ... |
+
+    | i = 3 | 1.695 | ... | 1.661 | ... | -0.129 | ... |
+
+    | i = 4 | 3.187 | ... | 1.735 | ... | 6.848 | ... |
+
+
+    Based on the parameters provided in [32], [42], and [43], the data set and output
+    which are expressed as a 3-dimensional model for the original model, [42], [32],
+    [43], as well as the proposed model, are shown in Fig. 2, respectively. From Fig.
+    2, it is readily seen that the proposed fuzzy identification method can provide
+    a the better approximation model for the original nonlinear model than [32], [42],
+    and [43]. A comparison of the established model with the nonlinear model and the
+    approximation error between them are shown in Fig. 3. From Table 2, it can be
+    readily seen that [32] and [42] adopt few rules to establish T-S fuzzy models
+    and that the MSE value of the proposed method (0.0024) is superior to those reported
+    in these two studies.
+
+
+    # B. EXAMPLE 2: STATIONARY NONLINEAR FUNCTION
+
+
+    Consider the following stationary nonlinear function [47]-[50]
+
+
+    \(output = \left( 1 + x^{0.5} + y^{-1} + z^{-1.5} \right)^2. \quad (19)\)
+
+
+    In this experiment, 40 data points from [50] are used to establish the T-S fuzzy
+    model. The first 20 data points are training data, and the remaining 20 data points
+    are testing data. Similarly, by utilizing the cluster validity criterion index,
+    an appropriate rule number (\(c = 6\)) is found.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/7a2a4261fbc1474308250e4dcaab8af5_5_0.png)
+
+
+    **FIGURE 2.** The output and data of Example 1 with different methods. (a) The
+    output and data of the original model. (b) The output and data of the proposed
+    method. (c) The output and data of [42]. (d) The output and data of [32]. (e)
+    The output and data of [43].
+
+
+    ![](img/7a2a4261fbc1474308250e4dcaab8af5_5_1.png)
+
+
+    **TABLE 3. The established antecedent parameters for Example 2.**
+
+
+    | Rule | \(\alpha_1^i\) | \(\beta_1^i\) | \(\alpha_2^i\) | \(\beta_2^i\) | \(\alpha_3^i\)
+    | \(\beta_3^i\) |
+
+    |---|---|---|---|---|---|---|
+
+    | \(i=1\) | 4.1372 | 0.4092 | 3.9946 | 0.7690 | 2.4056 | 0.4474 |
+
+    | \(i=2\) | 5.0585 | 4.5511 | 1.2503 | 5.3355 | 1.6406 | 5.6395 |
+
+    | \(i=3\) | 3.4422 | 1.0316 | 4.0015 | 0.9167 | 3.6998 | 0.8752 |
+
+    | \(i=4\) | 5.1032 | 5.9777 | 1.2204 | 12.5761 | 1.4007 | 11.6194 |
+
+    | \(i=5\) | 2.9370 | 0.6385 | 4.0283 | 0.5985 | 4.8454 | 0.4265 |
+
+    | \(i=6\) | 5.1186 | 4.4907 | 1.1563 | 8.9973 | 1.2933 | 20.2431 |
+
+
+    **FIGURE 3.** Comparison of the established model and real model for Example 1.
+
+
+    **TABLE 4. The established consequent parameters for Example 2.**
+
+
+    | Rule | \(a_0^i\) | \(a_1^i\) | \(a_2^i\) | \(a_3^i\) |
+
+    |---|---|---|---|---|
+
+    | \(i=1\) | -5.6699 | \(-7.8293 \times 10^{-5}\) | -0.0034 | -0.4234 |
+
+    | \(i=2\) | 1.1535 | 0.0002 | -0.0014 | -0.0204 |
+
+    | \(i=3\) | 0.1225 | 0.0193 | 0.0002 | 0.0109 |
+
+    | \(i=4\) | 0.0086 | 0.0260 | -0.0003 | 0 |
+
+    | \(i=5\) | -0.0069 | 0.0262 | 4.5172 | 0 |
+
+    | \(i=6\) | 0.0013 | -0.0445 | -1.0352 | 0 |
+
+
+    **TABLE 2. Comparison among various identification methods for Example 1.**
+
+
+    | Model | Number of rules | MSE |
+
+    |---|---|---|
+
+    | Liu et al. [46] | 10 | 0.1030 |
+
+    | Sugeno and Yasukawa [44] | 6 | 0.079 |
+
+    | Zarandi et al. [27] | 6 | 0.0715 |
+
+    | Kim [42] | 3 | 0.0197 |
+
+    | Kung and Su [32] | 3 | 0.0196 |
+
+    | Lee and Ouyang [45] | 10 | 0.0148 |
+
+    | Li et al. (2009) [29] | 6 | 0.0085 |
+
+    | Li et al. (2012) [43] | 6 | 0.0043 |
+
+    | Proposed method | 4 | 0.0024 |
+
+
+    Table 3 and Table 4 list the parameters of the antecedent and consequent for the
+    T-S fuzzy model, respectively. The established fuzzy model contains 6 rules with
+    18 antecedent variables. Each antecedent variable is described by
+
+
+    bell-shaped membership functions with two parameters, namely the center and the
+    standard deviation.
+
+
+    The comparison results of the established model and the real model for the training
+    data and testing data are shown in Fig. 4 and Fig. 5, respectively. From these
+    figures, one can observe that the approximation error between the established
+    fuzzy model and the real model is very small. The performance index APE is adopted
+    to examine the approximation error between the established model and other fuzzy
+    models. Table 5 lists the comparison results between the results of the proposed
+    method and those obtained using other methods. It can be seen that the proposed
+    identification method'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/7a2a4261fbc1474308250e4dcaab8af5_6_0.png)
+
+
+    FIGURE 4. Comparison of established model and real system for Example 2 using
+    training data.
+
+
+    the last 148 pairs are taken as test data to use in evaluating the fuzzy models.
+
+
+    ![](img/7a2a4261fbc1474308250e4dcaab8af5_6_1.png)
+
+
+    FIGURE 6. Comparison of the established model and the real model for the Box-Jenkins
+    example using training data.
+
+
+    ![](img/7a2a4261fbc1474308250e4dcaab8af5_6_2.png)
+
+
+    FIGURE 5. Comparison of established model and real system for Example 2 using
+    testing data.
+
+
+    TABLE 5. Comparison among various identification methods for Example 2.
+
+
+    | Model | Number of rules | Training APE | Testing APE |
+
+    |---|---|---|---|
+
+    | Sugeno and Kang(1) [48] | 3 | 1.5% | 2.1% |
+
+    | Sugeno and Kang(2) [49] | 4 | 0.59% | 3.4% |
+
+    | ANFIS [47] | 8 | 0.043% | 1.066% |
+
+    | Proposed method | 6 | 0.0031% | 0.3892% |
+
+
+    provides the best APE value (0.0031%) for the training data and the testing data
+    (0.3892%). The proposed identification approach is thus more effective in approximating
+    the non-linear model, with significantly high accuracy, than the other approaches.
+
+
+    # C. EXAMPLE 3: BOX-JENKINS GAS FURNACE SYSTEM
+
+
+    Consider a multiple-input single-output gas furnace system [10], [13], [23], [26],
+    [43], [51]–[59] with 296 input and output measurements. In this model, u represents
+    the flow of gas into the gas stove, and y represents the carbon dioxide concentration
+    flowing out of the stove. In order to compare the identification results with
+    those in the literature, u(k), u(k – 1), u(k – 2), y(k – 1), y(k – 2), and y(k
+    – 3) are chosen as the input data in this example. By executing the modified cluster
+    validity criteria, the rule number (r = 2) is found. Similar to previous studies
+    [10], [13], [23], [26], [43], the first 148 data pairs are taken as training data
+    and
+
+
+    ![](img/7a2a4261fbc1474308250e4dcaab8af5_6_3.png)
+
+
+    FIGURE 7. Comparison of the established model and the real model for the Box-Jenkins
+    example using testing data.
+
+
+    The antecedent part and the consequent parameters of the T-S model obtained using
+    the proposed method are listed in Table 6. The performance result and the approximation
+    error of the established fuzzy model approximating the real system for the training
+    data and testing data are depicted in Fig. 6 and Fig. 7, respectively. It can
+    be seen that the established T-S fuzzy model output is in good agreement with
+    the actual model output. Table 7 shows a detailed comparison of the results obtained
+    with the proposed identification method as well as other methods. From Table 7,
+    it can be readily seen that the established T-S fuzzy model has a high accuracy,
+    with a training MSE value of 0.0080 and a testing MSE value of 0.0846, which are
+    better than those reported in previous studies [10], [13], [23], [26], [43], [51]–[59].
+    Furthermore, the established T-S fuzzy model with two fuzzy rules has a training
+    MSE value of 0.0080 and a testing MSE value of 0.0846. Although some studies also
+    established T-S fuzzy models with two fuzzy rules, their training and testing
+    MSE values were larger. In contrast, with the same fuzzy rules, better MSE values
+    for training and testing are achieved by our model.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# TABLE 6. Parameters of antecedent and consequent parts for the Box-Jenkins
+    Example.
+
+
+    | | \(\alpha_1^1\) | \(\alpha_2^1\) | \(\alpha_3^1\) | \(\alpha_4^1\) | \(\alpha_5^1\)
+    | \(\alpha_6^1\) |
+
+    |---|---|---|---|---|---|---|
+
+    | \(R^1\) | 0.1621 | 0.1668 | 0.1795 | 52.3466 | 52.2271 | 52.0767 |
+
+    | | \(\beta_1^1\) | \(\beta_2^1\) | \(\beta_3^1\) | \(\beta_4^1\) | \(\beta_5^1\)
+    | \(\beta_6^1\) |
+
+    | | 1.6385 | 1.6476 | 1.6769 | 4.8027 | 4.7237 | 4.6464 |
+
+    | | \(a_0^1\) | \(a_1^1\) | \(a_2^1\) | \(a_3^1\) | \(a_4^1\) | \(a_5^1\) | \(a_6^1\)
+    |
+
+    | | -0.5996 | -2.0643 | 2.6598 | -3.4301 | -0.0874 | -1.4580 | -2.1073 |
+
+    | \(R^2\) | \(\alpha_1^2\) | \(\alpha_2^2\) | \(\alpha_3^2\) | \(\alpha_4^2\)
+    | \(\alpha_5^2\) | \(\alpha_6^2\) |
+
+    | | 0.3226 | 0.3286 | 0.3239 | 52.5167 | 52.6783 | 52.8699 |
+
+    | | \(\beta_1^2\) | \(\beta_2^2\) | \(\beta_3^2\) | \(\beta_4^2\) | \(\beta_5^2\)
+    | \(\beta_6^2\) |
+
+    | | 1.6563 | 1.6415 | 1.6094 | 4.6839 | 4.7322 | 4.7548 |
+
+    | | \(a_0^2\) | \(a_1^2\) | \(a_2^2\) | \(a_3^2\) | \(a_4^2\) | \(a_5^2\) | \(a_6^2\)
+    |
+
+    | | 1.9760 | -8.5184 | -0.4331 | 1.7210 | 1.5620 | -2.9860 | 6.0107 |
+
+
+    # TABLE 7. Comparison among various methods for the Box-Jenkins Example.
+
+
+    | Model | Rules | Training MSE | Testing MSE |
+
+    |---|---|---|---|
+
+    | Lin and Cunningham III [51] | 4 | 0.071 | 0.261 |
+
+    | Kim et al. [52] | 2 | 0.034 | 0.244 |
+
+    | Tsekours [53] | 7 | 0.022 | 0.236 |
+
+    | Ou [54] | 6 | 0.021 | 0.344 |
+
+    | Test et al. [55] | 2 | 0.0164 | 0.145 |
+
+    | Rezaee et al. [56] | 2 | 0.0162 | 0.1318 |
+
+    | Rezaee et al. [56] | 7 | 0.0082 | 0.1652 |
+
+    | Choi et al.(fmonf) [57] | 5 | 0.0156 | 0.2662 |
+
+    | Choi et al.(fmfm) [57] | 6 | 0.0155 | 0.2258 |
+
+    | Huang et al. [58] | 6 | 0.015 | 0.260 |
+
+    | Li et al. (2012) [43] | 3 | 0.0150 | 0.147 |
+
+    | Luo et al. [10] | 2 | 0.0254 | 0.1243 |
+
+    | Sun et al. (2009) [23] | 2 | 0.0148 | 0.1238 |
+
+    | Li et al. (2009) [29] | 2 | 0.0153 | 0.1107 |
+
+    | Li et al. (2010) [59] | 2 | 0.0151 | 0.0955 |
+
+    | Soltani et al. [26] | 2 | 0.0148 | 0.0937 |
+
+    | Soltani and Chari [13] | 2 | 0.0149 | 0.0990 |
+
+    | Our method | 2 | 0.0080 | 0.0846 |
+
+
+    ![](img/7a2a4261fbc1474308250e4dcaab8af5_7_0.png)
+
+
+    # FIGURE 9. The comparison of MSE (Testing) for [29], [59], [26] and the proposed
+    method under different SNR. (o: [29]; o: [59]; [ ]: [26]; *: Our method).
+
+
+    ![](img/7a2a4261fbc1474308250e4dcaab8af5_7_1.png)
+
+
+    # TABLE 8. Comparison among the various methods for the Box-Jenkins example under
+    the different noises.
+
+
+    | Model | Rules | Training MSE | Testing MSE |
+
+    |---|---|---|---|
+
+    | Li et al. (2009) [29] with SNR=30dB | 2 | 0.0159 | 0.1218 |
+
+    | Li et al. (2009) [29] with SNR=20dB | 2 | 0.0171 | 0.2157 |
+
+    | Li et al. (2009) [29] with SNR=10dB | 2 | 0.0180 | 0.3816 |
+
+    | Li et al. (2009) [29] with SNR=1dB | 2 | 0.0193 | 0.4414 |
+
+    | Li et al. (2010) [59] with SNR=30dB | 2 | 0.0153 | 0.0961 |
+
+    | Li et al. (2010) [59] with SNR=20dB | 2 | 0.0165 | 0.1630 |
+
+    | Li et al. (2010) [59] with SNR=10dB | 2 | 0.0172 | 0.1990 |
+
+    | Li et al. (2010) [59] with SNR=1dB | 2 | 0.0189 | 0.2208 |
+
+    | Soltani et al. [26] with SNR=30dB | 2 | 0.0151 | 0.0952 |
+
+    | Soltani et al. [26] with SNR=20dB | 2 | 0.0155 | 0.1546 |
+
+    | Soltani et al. [26] with SNR=10dB | 2 | 0.0161 | 0.1987 |
+
+    | Soltani et al. [26] with SNR=1dB | 2 | 0.0183 | 0.2084 |
+
+    | Our method with SNR=30dB | 2 | 0.0119 | 0.0847 |
+
+    | Our method with SNR=20dB | 2 | 0.0133 | 0.0999 |
+
+    | Our method with SNR=10dB | 2 | 0.0136 | 0.0912 |
+
+    | Our method with SNR=1dB | 2 | 0.0145 | 0.0924 |
+
+
+    # FIGURE 8. The comparison of MSE (Training) for [29], [59], [26] and the proposed
+    method under different SNR. (o: [29]; o: [59]; [ ]: [26]; *: Our method).
+
+
+    In order to show the robustness of the proposed fuzzy identification method, we
+    compare the established model output with the other approaches under the different
+    noises. Figs. 8 and 9 show the MSE values of the training and testing data under
+    the signal-to-noise ratio (SNR), respectively. From Figs. 8 and 9, it can be observed
+    that when the noise variance increase, the MSE values of the proposed method increases
+    slightly more than in the other methods. Table 8 lists the comparison results
+    of the proposed approach along with the other approaches under a different SNR
+    level. From Table 8, it is evident that the proposed fuzzy identification method
+
+
+    in this paper can provide a better robustness than the other three studies.
+
+
+    # V. CONCLUSION
+
+
+    In this paper, a novel fuzzy identification method that combines a modified cluster
+    validity criterion index and ACO and OLS algorithms is proposed. In general, the
+    initial premise structure and consequent parameters might affect the final identification
+    result. Therefore, in this paper, the ACO algorithm is adopted to sift better
+    initial premises and the consequent parameters. In addition, an insufficient number
+    of rules will lead to an inappropriate premise structure and'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'unreasonable modeling results. A modified cluster validity criterion index
+    is thus adopted to determine the appropriate rule number. In addition, instead
+    of the conventional FCRM algorithm, an improved FCRM algorithm is utilized, and
+    the fuzzy membership matrix U and consequent parameters Θ can be refreshed and
+    varied towards the direction that minimizes the fitness function gradually. Furthermore,
+    the antecedent parameters can be obtained from U and the final consequent parameters
+    can be obtained via the OLS algorithm. Last, three examples are given to show
+    that the proposed identification method provides better approximation results
+    and robustness than those obtained using other methods.
+
+
+    +   [19] L. Wang, M. Rege, M. Dong, and Y. Ding, “Low-rank kernel matrix factorization
+    for large-scale evolutionary clustering,” IEEE Trans. Knowl. Data Eng., vol. 24,
+    no. 6, pp. 1036–1050, Jun. 2012.
+
+    +   [20] J. Hullman, S. Drucker, N. H. Riche, B. Lee, D. Fisher, and E. Adar,
+    “A deeper understanding of sequence in narrative visualization,” IEEE Trans. Vis.
+    Comput. Graph., vol. 19, no. 12, pp. 2406–2415, Dec. 2013.
+
+    +   [21] D. Karaboga and C. Ozturk, “A novel clustering approach: Artificial bee
+    colony (ABC) algorithm,” Appl. Soft Comput., vol. 11, no. 1, pp. 652–657, 2011.
+
+    +   [22] R. G. Yaghin, S. M. T. F. Ghomi, and S. A. Torabi, “A possibilistic multiple
+    objective pricing and lot-sizing model with multiple demand classes,” Fuzzy Sets
+    Syst., vol. 231, no. 16, pp. 26–44, Nov. 2013.
+
+    +   [23] M. Soltani and A. Chari, “A PSO-based fuzzy c-regression model applied
+    to nonlinear data modeling,” Int. J. Uncertainty, Fuzziness Knowl.-Based Syst.,
+    vol. 23, no. 6, pp. 881–891, Jan. 2015.
+
+    +   [24] Z. Wu and M. Kolonko, “Asymptotic properties of a generalized cross-entropy
+    optimization algorithm,” IEEE Trans. Evol. Comput., vol. 18, no. 5, pp. 658–673,
+    Oct. 2014.
+
+    +   [25] J. C. Bezdek, Pattern Recognition With Fuzzy Objective Function Algorithms.
+    New York, NY, USA: Plenum, 1981.
+
+    +   [26] M. Soltani, A. Chari, and F. B. Himida, “A novel fuzzy c-regression model
+    algorithm using a new error measure and particle swarm optimization,” Int. J.
+    Appl. Math. Comput. Sci., vol. 22, no. 3, pp. 617–628, 2012.
+
+    +   [27] M. F. Zarandi, R. Gamasaee, and I. Turksen, “A type-2 fuzzy c-regression
+    clustering algorithm for Takagi–Sugeno system identification and its application
+    in the steel industry,” Inf. Sci., vol. 187, no. 15, pp. 179–203, Mar. 2012.
+
+    +   [28] M. H. F. Zarandi and R. Gamasaee, “A type-2 fuzzy system model for reducing
+    bullwhip effects in supply chains and its application in steel manufacturing,”
+    Sci. Iranica, vol. 20, no. 3, pp. 879–899, Jun. 2013.
+
+    +   [29] C. Li, J. Zhou, X. Xiang, Q. Li, and X. An, “T–S fuzzy model identification
+    based on a novel fuzzy c-regression model clustering algorithm,” J. Eng. Appl.
+    Artif. Intell., vol. 22, nos. 4–5, pp. 646–653, Jun. 2009.
+
+    +   [30] N. R. Pal and J. C. Bezdek, “On cluster validity for the fuzzy c-means
+    model,” IEEE Trans. Fuzzy Syst., vol. 3, no. 3, pp. 370–379, Aug. 1995.
+
+    +   [31] A. Devillez, P. Billaudel, and G. V. Leclolier, “A fuzzy hybrid hierarchical
+    clustering method with a new criterion able to find the optimal partition,” Fuzzy
+    Sets Syst., vol. 128, no. 3, pp. 323–338, 2002.
+
+    +   [32] C. C. Kung and J. Y. Su, “Affine Takagi–Sugeno fuzzy modelling algorithm
+    by fuzzy c-regression models clustering with a novel cluster validity criterion,”
+    IET Control Theory Appl., vol. 1, no. 5, pp. 1255–1265, Sep. 2007.
+
+    +   [33] M. Dorigo and L. M. Gambardella, “Ant colony system: A cooperative learning
+    approach to the traveling salesman problem,” IEEE Trans. Evol. Comput., vol. 1,
+    no. 1, pp. 53–66, Apr. 1997.
+
+    +   [34] J. M. Czerwiak, L. Apiecionek, and H. Zarzycki, “Application of ordered
+    fuzzy numbers in a new OFNAnt algorithm based on ant colony optimization,” in
+    Beyond Databases, Architectures, and Structures. Ustroń, Poland: Springer, 2014,
+    pp. 259–270.
+
+    +   [35] D. Alanis, P. Botsinis, S. X. Ng, and L. Hanzo, “Quantum-assisted routing
+    optimization for self-organizing networks,” IEEE Access, vol. 2, pp. 614–632,
+    2014.
+
+    +   [36] A. Uğur and D. Aydin, “An interactive simulation and analysis software
+    for solving TSP using ant colony optimization algorithms,” Adv. Eng. Softw., vol.
+    40, no. 5, pp. 341–349, May 2009.
+
+    +   [37] B. Yu and Z. Z. Yang, “An ant colony optimization model: The period vehicle
+    routing problem with time windows,” Transp. Res. E, Logistics Transp. Rev., vol.
+    47, no. 2, pp. 166–181, Mar. 2011.
+
+    +   [38] M. Yaghini, A. Foroughi, and B. Nadjari, “Solving railroad blocking problem
+    using ant colony optimization algorithm,” Appl. Math. Model., vol. 35, no. 12,
+    pp. 5579–5591, Dec. 2011.
+
+    +   [39] H. B. Tolabi, M. H. Ali, and M. Rizwan, “Simultaneous reconfiguration,
+    optimal placement of DSTATCOM, and photovoltaic array in a distribution system
+    based on fuzzy-ACO approach,” IEEE Trans. Sustain. Energy, vol. 6, no. 1, pp.
+    210–218, Jan. 2015.
+
+    +   [40] C.-F. Juang and C.-M. Lu, “Ant colony optimization incorporated with
+    fuzzy Q-learning for reinforcement fuzzy control,” IEEE Trans. Syst., Man, Cybern.
+    A, Syst. Humans, vol. 39, no. 3, pp. 597–608, May 2009.
+
+    +   [41] K. Socha and M. Dorigo, “Ant colony optimization for continuous domains,”
+    Eur. J. Oper. Res., vol. 185, no. 3, pp. 1155–1173, Mar. 2008.
+
+    +   [42] E. Kim, M. Park, S. Ji, and M. Park, “A new approach to fuzzy modeling,”
+    IEEE Trans. Fuzzy Syst., vol. 5, no. 3, pp. 328–337, Aug. 1997.
+
+    +   [43] C. Li, J. Zhou, B. F. Kou, and J. Xiao, “T–S fuzzy model identification
+    with a gravitational search-based hyperplane clustering algorithm,” IEEE Trans.
+    Fuzzy Syst., vol. 20, no. 2, pp. 305–317, Apr. 2012.
+
+
+    # REFERENCES
+
+
+    +   [1] C. Wu et al., “Packet size-aware broadcasting in VANETs with fuzzy logic
+    and RL-based parameter adaptation,” IEEE Access, vol. 3, pp. 2481–2491, Dec. 2015.
+
+    +   [2] S.-H. Tsai, “An improved fuzzy modeling method for a class of multi-input
+    non-affine nonlinear systems,” J. Optim. Theory Appl., vol. 157, no. 1, pp. 287–296,
+    Apr. 2013.
+
+    +   [3] S.-L. Chen, “A power-efficient adaptive fuzzy resolution control system
+    for wireless body sensor networks,” IEEE Access, vol. 3, pp. 743–751, Jun. 2015.
+
+    +   [4] X. Luo, Y. Lv, R. Li, and Y. Chen, “Web service QoS prediction based on
+    adaptive dynamic programming using fuzzy neural networks for cloud services,”
+    IEEE Access, vol. 3, pp. 2260–2269, Nov. 2015.
+
+    +   [5] J.-T. Tsai, J.-H. Chou, and C.-F. Lin, “Designing micro-structure parameters
+    for backlight modules by using improved adaptive neuro-fuzzy inference system,”
+    IEEE Access, vol. 3, pp. 2626–2636, Dec. 2015.
+
+    +   [6] J.-T. Tsai, K.-Y. Chiu, and J.-H. Chou, “Optimal design of SAW gas sensing
+    device by using improved adaptive neuro-fuzzy inference system,” IEEE Access,
+    vol. 3, pp. 420–429, Sep. 2015.
+
+    +   [7] J.-T. Tsai, K.-Y. Chiu, and J.-H. Chou, “Performance prediction and sensitivity
+    analysis of SAW gas sensors,” IEEE Access, vol. 3, pp. 1614–1619, Sep. 2015.
+
+    +   [8] K. Tanaka and H. O. Wang, Fuzzy Control Systems Design and Analysis: A
+    Linear Matrix Inequality Approach. New York, NY, USA: Wiley, 2001.
+
+    +   [9] J. Qiao and T. Chi, “Modeling and parameter identification of raw meal
+    calcination process,” IEEE/ASME Trans. Mechatronics, vol. 20, no. 3, pp. 1204–1217,
+    Jun. 2015.
+
+    +   [10] M. Luo, F. Sun, and H. Liu, “Hierarchical structured sparse representation
+    for T–S fuzzy systems identification,” IEEE Trans. Fuzzy Syst., vol. 21, no. 6,
+    pp. 1032–1043, Dec. 2013.
+
+    +   [11] S.-J. Kang, C.-H. Woo, H.-S. Hwang, and K. B. Woo, “Evolutionary design
+    of fuzzy rule base for nonlinear system modeling and control,” IEEE Trans. Fuzzy
+    Syst., vol. 8, no. 1, pp. 37–45, Feb. 2000.
+
+    +   [12] J. C. Bezdek, “Cluster validity with fuzzy set,” J. Cybern., vol. 3,
+    no. 3, pp. 58–72, 1974.
+
+    +   [13] M. Soltani and A. Chari, “A novel weighted recursive least squares based
+    on Euclidean cluster swarm optimization,” Kybernetes, vol. 42, no. 2, pp. 268–281,
+    2013.
+
+    +   [14] P.-Y. Chou, I.-T. Tsai, and J.-H. Chou, “Modeling and optimizing tensile
+    strength and yield point on a steel bar using an artificial neural network with
+    Taguchi particle swarm optimizer,” IEEE Access, vol. 4, pp. 585–593, Mar. 2016.
+
+    +   [15] P.-H. Kuo, T.-H. S. Li, Y.-F. Ho, and C.-J. Lin, “Development of an automatic
+    emotional music accompaniment system by fuzzy logic and adaptive partition evolutionary
+    genetic algorithm,” IEEE Access, vol. 3, pp. 815–824, Jun. 2015.
+
+    +   [16] D. Lam, M. Wei, and D. Wunsche, “Clustering data of mixed categorical
+    and numerical type with unsupervised feature learning,” IEEE Access, vol. 3, pp.
+    1605–1613, Sep. 2015.
+
+    +   [17] Y. Yoon and G. G. Lee, “Subcellular localization prediction through boosting
+    association rules,” IEEE/ACM Trans. Comput. Biol. Bioinf., vol. 9, no. 2, pp.
+    609–618, Mar. 2012.
+
+    +   [18] Z. Ruan, G. Wang, J.-H. Xue, and X. Lin, “Subcategory clustering with
+    latent feature alignment and filtering for object detection,” IEEE Signal Process.
+    Lett., vol. 22, no. 2, pp. 244–248, Feb. 2015.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '+   [44] M. Sugeno and T. Yasukawa, “A fuzzy-logic-based approach to qualitative
+    modeling,” IEEE Trans. Fuzzy Syst., vol. 1, no. 1, pp. 7–25, Feb. 1993.
+
+    +   [45] S.-J. Lee and C.-S. Ouyang, “A neuro-fuzzy system modeling with self-constructing
+    rule generation and hybrid SVD-based learning,” IEEE Trans. Fuzzy Syst., vol.
+    11, no. 3, pp. 341–353, Jun. 2003.
+
+    +   [46] X. Liu, H. Fang, and Z. Chen, “A novel cost function based on decomposing
+    least-square support vector machine for Takagi–Sugeno fuzzy system identification,”
+    IET Control Theory Appl., vol. 8, no. 5, pp. 338–347, Mar. 2014.
+
+    +   [47] J.-S. R. Jang, “ANFIS: Adaptive-network-based fuzzy inference system,”
+    IEEE Trans. Syst., Man, Cybern., vol. 23, no. 3, pp. 665–685, May 1993.
+
+    +   [48] M. Sugeno and G. T. Kang, “Fuzzy modelling and control of multilayer
+    incinerator,” Fuzzy Sets Syst., vol. 18, no. 3, pp. 329–345, Apr. 1986.
+
+    +   [49] M. Sugeno and G. T. Kang, “Structure identification of fuzzy model,”
+    Fuzzy Sets Syst., vol. 28, no. 1, pp. 15–33, Oct. 1988.
+
+    +   [50] J. S. R. Jang, C. T. Sun, and E. Mizutani, Neuro-Fuzzy and Soft Computing:
+    A Computational Approach to Learning and Machine Intelligence. Upper Saddle River,
+    NJ, USA: Prentice-Hall, 1997.
+
+    +   [51] Y. Lin and G. A. Cunningham, III, “A new approach to fuzzy-neural system
+    modeling,” IEEE Trans. Fuzzy Syst., vol. 3, no. 2, pp. 190–198, May 1995.
+
+    +   [52] E. Kim, H. Lee, and M. Park, “A simply identified sugeno-type fuzzy model
+    via double clustering,” Inf. Sci., vol. 110, nos. 1–2, pp. 25–39, 1998.
+
+    +   [53] G. E. Tsekouras, “On the use of the weighted fuzzy c-means in fuzzy modeling,”
+    Adv. Eng. Softw., vol. 36, no. 5, pp. 287–300, May 2005.
+
+    +   [54] S. Oh and W. Pedrycz, “Identification of fuzzy systems by means of an
+    auto-tuning algorithm and its application to nonlinear systems,” Fuzzy Sets Syst.,
+    vol. 155, no. 2, pp. 205–230, 2000.
+
+    +   [55] G. Tsekouras, H. Sarimveis, E. Kavakli, and G. Bafas, “A hierarchical
+    fuzzy-clustering approach to fuzzy modeling,” Fuzzy Sets Syst., vol. 150, no.
+    2, pp. 245–266, 2005.
+
+    +   [56] B. Rezaee and M. H. F. Zarandi, “Data-driven fuzzy modeling for Takagi–Sugeno–Kang
+    fuzzy system,” Inf. Sci., vol. 180, no. 2, pp. 241–255, 2010.
+
+    +   [57] J.-N. Choi, S.-K. Oh, and W. Pedrycz, “Identification of fuzzy models
+    using a successive tuning method with a variant identification ratio,” Fuzzy Sets
+    Syst., vol. 159, no. 21, pp. 2873–2889, 2008.
+
+    +   [58] W. Huang, S. K. Oh, L. Ding, H. K. Kim, and S. C. Joo, “Identification
+    of fuzzy inference systems using a multi-objective space search algorithm and
+    information granulation,” J. Elect. Eng. Technol., vol. 6, no. 6, pp. 853–866,
+    2011.
+
+    +   [59] C. Li, J. Zhou, Q. Li, X. An, and X. Xiang, “A new T-S fuzzy-modeling
+    approach to identify a boiler-turbine system,” Expert Syst. Appl., vol. 37, no.
+    3, pp. 2214–2221, Mar. 2010.
+
+
+    ![](img/7a2a4261fbc1474308250e4dcaab8af5_9_0.png)
+
+
+    **SHUN-HUNG TSAI** received the B.S. degree from the Department of Industrial
+    Education, National Taiwan Normal University, Taipei, Taiwan, in 1999, and the
+    M.S. and Ph.D. degrees from National Cheng Kung University, Tainan, Taiwan, in
+    2001 and 2007, respectively, all in electrical engineering. He was an Electrical
+    Engineer with Philips Building Semiconductor from 2003 to 2005. From 2005 to 2006,
+    he was a Control Engineer of China Steel Corporation. From 2006 to 2007, he was
+    a Process Integration Engineer with United Microelectronics Corporation. In 2008,
+    he was an Associate Researcher with the Energy and AIge System Development Metal
+    Industrial Research and Develop Centre, Kaohsiung, Taiwan. He was an Assistant
+    Professor with the Department of Electrical Engineering, Chang Gung University
+    of Taiwan in 2008. From 2009 to 2012, he was an Assistant Professor with the Graduate
+    Institute of Automation Technology, National Taipei University of Technology.
+    He is currently an Associate Professor with the Graduate Institute of Automation
+    Technology, National Taipei University of Technology. His major research interests
+    include nonlinear control, intelligent control, system identification, robots,
+    and quadrotor design.
+
+
+    ![](img/7a2a4261fbc1474308250e4dcaab8af5_9_1.png)
+
+
+    **YU-WEN CHEN** received the B.S. degree from Tatung University, Taipei, Taiwan,
+    in 2013. She is currently pursuing the Ph.D. degree with the Advanced Intelligence
+    Control Laboratory, Graduate Institute of Automation Technology of the National
+    Taipei University of Technology. Her main research interests include machine vision,
+    system identification, autonomous mobile robot, and clustering algorithm.'
+  merge: -1
+  img_proc: true
