@@ -1,0 +1,859 @@
+- pgno: 0
+  md: '# Determining factors contributing to the psychological impact of the COVID-19
+    Pandemic using machine learning
+
+
+    Carlos Alfonso V. Palattao¹, Geoffrey A. Solano¹, Cherica A. Tee², and Michael
+    L. Tee³
+
+
+    ¹Department of Physical Sciences and Mathematics, University of the Philippines
+    Manila
+
+
+    ²National Institute of Health, University of the Philippines Manila
+
+
+    ³College of Medicine, University of the Philippines Manila
+
+
+    {cvpalattao,gasolano,catee,mltee}@up.edu.ph
+
+
+    **Abstract**—The COVID-19 pandemic has created a massive impact in the economy,
+    healthcare, education and other aspects of society in each and every respect.
+    Also greatly affected is the mental health of individuals. This study aims to
+    determine the possible contributing factors to stress, anxiety, depression, and
+    adverse psychological impact on the general population of the Philippines using
+    machine learning approaches. The data gathered from 2119 participants who answered
+    an online survey were analyzed using feature selection methods and machine learning
+    classifiers to determine contributing factors to the aforementioned mental health
+    issues. The results show that longer hours at home, on social media, age, how
+    people rate their own health, pre-existence of a neuropsychiatric condition; wanting
+    information on availability and effectiveness of a medicine or vaccine, being
+    concerned for their family, feeling discriminated; and symptoms of body pain,
+    difficulty breathing, and cough were good predictors of individuals being adversely
+    impacted psychologically by the pandemic and others having elevated levels of
+    stress, anxiety, depression.
+
+
+    **Index Terms**—Mental Health, Stress, Anxiety, Depression, Impact of Event, Machine
+    Learning, Feature Selection
+
+
+    # I. INTRODUCTION
+
+
+    On December 31st 2019, cases of pneumonia of unknown etiology were detected in
+    Wuhan City, Hubei Province of China, and authorities identified a new type of
+    coronavirus (2019-nCoV) shortly after [1]. The World Health Organization (WHO)
+    named the virus COVID-19, and it was declared a pandemic on March 11th 2020 [2],
+    [3]. As of February 5 2021, there are over 102 million confirmed cases and over
+    2.2 million deaths worldwide spanning 222 countries and territories [4], with
+    the Philippines having a total of 531 thousand confirmed cases and over 10 thousand
+    deaths [5].
+
+
+    Just like any pandemic, it has created a massive impact in various aspects of
+    society, from economy to healthcare, even to education. Psychological impact is
+    also a matter of concern, since the spread of the virus plays a critical role
+    in the occurrence of emotional distress and social disorder among the population
+    affected [6], [7]. In a recent study performed in Italy of 18147 respondents,
+    among several other outcomes, 17.3% reported severe depressive symptoms, 20.8%
+    reported severe anxiety symptoms, and 7.3% reported severe
+
+
+    insomnia symptoms. The study also states that conditions caused by the pandemic
+    that were associated with the results were independent from other considerations
+    such as previous mental illnesses or childhood traumas [8]. In dealing with mental
+    health issues among members of the population, contributing factors must be determined
+    for immediate intervention and to prevent further damage. Recent years have seen
+    advances in research in the field of machine learning for mental health, and it
+    is clear that it can significantly aide in the detection and diagnosis of mental
+    health conditions. [9].
+
+
+    This study aims to determine the possible contributing factors to stress, anxiety,
+    depression, and adverse psychological impact on the general population of the
+    Philippines resulting from the pandemic using machine learning approaches.
+
+
+    # II. RELATED WORK
+
+
+    To date, a few studies have been done on the psychological impact the COVID-19
+    pandemic has caused worldwide. As shown in these studies, finding the possible
+    contributing factors is a key step in mitigation and prevention of further damage
+
+
+    A recent study [10] examined the psychological impact of COVID-19 and the restrictions
+    set by their government on the perceived stress of Italian adults. Their research
+    also targeted to verify some contributing factors to the impact as stated in another
+    recent study. Data from a total of 2053 participants was used and statistical
+    analysis was performed on it through the JASP software. Further analysis through
+    feature selection and machine learning models was done using the WEKA 3.9 software.
+    From the questions answered by the participants, 18 were considered as predictors
+    of perceived stress. Of those 18, 7 were chosen by the correlation-based feature
+    selection algorithm as the best predictors for perceived stress, while the rest
+    were considered redundant and irrelevant. To measure the predictive performance
+    of these 7 predictors, machine learning models were generated using the classifiers
+    Logistic Regression, Support Vector Machines, Naive Bayes,'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'and Random Forest. Their results show considerable ROC area values ranging
+    from 0.70 to 0.78, however the Random Forest classifier having low recall compared
+    to the others makes it weak in terms of predictive purposes in their case.
+
+
+    Another research conducted by [11] assessed the psychological distress among Korean
+    Immigrants in the United States using artificial neural networks (ANN). Their
+    data was gathered through a distributed online survey among Korean immigrants
+    above the age of 18, collecting 790 total participants as a result. Their predictors
+    consisted of discrimination-related variables, coping mechanisms, and socio-demographic
+    factors. Among the factors associated with these predictors, the most connected
+    to the participants’ psychological distress were their own resilience, experiences
+    of discrimination, and the mindset of racial discrimination towards Asians has
+    increased in the country.
+
+
+    In a study done by [12], they did research on the psychological impact of COVID-19
+    on the general population of the Philippines by looking into the psychiatric symptoms
+    present and determined the factors contributing effects. Online surveys were distributed
+    from March 28, 2020 to April 20, 2020 and gathered data including socio-demographics,
+    health status, contact history, COVID-19 knowledge and concerns, precautionary
+    measures, and information needs. In addition, ratings for the Depression, Anxiety,
+    and Stress scale (DASS-21) and the Impact of event scale-Revised (IES-R) were
+    taken as well. The researchers used SPSS statistic 24.0 to perform statistical
+    analysis on the data. Results from their research showed that factors such as
+    Female gender; youth age; single status; students; specific symptoms; recent imposed
+    quarantine; prolonged home-stay; and reports of poor health status, unnecessary
+    worry, concerns for family members, and discrimination were connected with substantial
+    psychological impact and elevated levels of depression, anxiety, and stress. In
+    contrast, a sufficient amount of health information, having grown-up children,
+    perception of good health status and confidence in doctors’ abilities were linked
+    to less adverse impact and decreased levels of depression, anxiety and stress.
+    Further investigation of their data could be done using machine learning models
+    and feature selection algorithms to verify or discover more possible predictor
+    variables to the mental health issues found among the participants.
+
+
+    # III. METHODOLOGY
+
+
+    # A. Data set
+
+
+    Data gathering was done through online means, as the government of the Philippines
+    recommended to minimize face-to-face interactions. The online survey platform
+    Survey Monkey was used, and the created questionnaire was distributed first to
+    students and alumni of the University of the Philippines. Afterwards, they passed
+    it on to others after they accomplished the questionnaire. This snowball strategy
+    that was implemented helped to reach a total of 2652 respondents.
+
+
+    1) Predictor Variables: The survey was divided into 7 parts: (A) Demographics;
+    (B) Symptoms and physical health status; (C) Contact history; (D) Knowledge and
+    belief about COVID-19; (E) Pre-cautionary measures in past 14 days; (F) Additional
+    information for COVID-19; (G) Pre-existing condition.
+
+
+    The demographics collected from the respondents were gender, age, education, country
+    of residence, marital status, employment status, if the he was a health care professional,
+    parental status, household size, and if the he traveled outside of the country
+    of residence in the past 14 days.
+
+
+    Presence of the following symptoms in the past 14 days included fever, chills,
+    headaches, myalgia, cough, difficulty breathing, dizziness, coryza, sore throat,
+    nausea, vomiting, and diarrhea. In addition to, if they saw a doctor in the past
+    14 days, admitted to the hospital in the past 14 days, gotten tested for COVID-19
+    in the past 14 days, quarantined in the past 14 days, if they have medical insurance,
+    if they suffer from a chronic illness, and how they self-rated their physical
+    health status.
+
+
+    The extent of the contact history with COVID-19 patients was taken as well, namely
+    close contact, indirect contact, and contact with suspected cases and infected
+    materials.
+
+
+    To get the respondents’ knowledge of COVID-19, the variables included known transmission
+    routes, satisfaction on health information available and how they obtain it, heard
+    numbers on the different types of cases, hours spent on social media to obtain
+    COVID-19 information, confidence in their own doctor on the virus, self-rated
+    likelihood of contracting and surviving the virus, concerns about their family,
+    and whether or not the feel discriminated.
+
+
+    The variables on precautionary measures included covering of mouth, sharing of
+    utensils, hand washing, and wearing masks. The respondents were also asked if
+    they feel that COVID-19 has resulted to unnecessary worry, and how many extra
+    hours per day did they stay at home because of the virus.
+
+
+    The respondents’ desire for different types of additional information on COVID-19
+    was taken note of as well. These types included: details on symptoms, advice on
+    prevention and treatment, regular updates, advice for people who need tailored
+    information, availability and effectiveness of a vaccine, number of people affected,
+    travel advice, how the virus is spread, and how other countries are doing.
+
+
+    The respondents were also asked if they had a pre-existing neuropsychiatric condition
+    and if they were taking medications for it.
+
+
+    Furthermore, Anxiety, and Stress Scale (DASS-21) survey to measure their negative
+    emotional states of Stress, Anxiety, and Depression [13]. The depression subscale
+    had different severity scores of normal (0-9), mild (10-12), moderate (13-20),
+    severe (21-27) and extremely severe (28-42). Anxiety scores were divided as normal
+    (0-6), mild (7-9), moderate (10-14), severe (15-19) and extremely severe (20-42).
+    The stress scores were divided to normal (0 – 10), mild (11 – 18), moderate (19
+    – 26), severe (27 – 34) and extremely severe (35'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '- 42). To get the scores of the repsondents, each subscale is assigned to a
+    unique subset of the 21 questions.
+
+
+    Lastly, to assess the participants'' distress caused by the apparent traumatic
+    event [14], they were asked to answer the Impact of Event Scale - Revised (IES-R).
+    The questionnaire is composed of three subscales and aims to measure the mean
+    avoidance, intrusion and hyperarousal. The total IES-R score will be divided as
+    normal (0-23), mild (24-32), moderate (33-36), and severe (37).
+
+
+    +   2) Target Variables: The presence of the aforementioned measurements of Stress
+    (S), Anxiety (A), Depression (D), and Impact of event (P) are the target variables
+    in this research. They have a common initial set of predictor variables, which
+    is the data collected under the 8 parts of the created survey. The additional
+    predictors for each target variable are the measurements for their fellow target
+    variables. This means that measurements for A, D, P are also predictors for S.
+    Measurements for S, D, P are also predictors for A. Measurements for S, A, P are
+    also predictors for D, and measurements for S, A, D are also predictors for P.
+
+
+    +   3) Data preparation: Data preparation is an essential step in the machine
+    learning (ML) process. Raw data is not enough for ML models to analyze, they must
+    be restructed and cleaned to be able to give the models a representation of the
+    data that best reveals the prediction problems [15].
+
+
+    There were a total of 2652 participants who accomplished the survey, but only
+    2119 were considered in the research. The other 533( 20%) participants were disregarded
+    due to their incomplete or total lack of answers for the DASS-21 or the IES-R
+    surveys.
+
+
+    Data imputation was performed on the dataset when encountering missing values
+    for numerical and categorical variables. Only ExtraHoursHome had missing values
+    among the numerical variables, and these missing were replaced with the mean [16]
+    of the present values. The categorical variables that had missing values are as
+    follows:
+
+
+    The mode [16] of the answers for each categorical variable was computed and it
+    replaced the missing values that were found in the dataset.
+
+
+    For the dependent variables Stress, Anxiety, and Depression, participants were
+    initially classified based on severity, namely: normal, mild, moderate, severe,
+    and extremely severe. Instead of this, this research represented mild, moderate,
+    severe, and extremely severe as "Possible", while Normal remained unchanged. Similarly,
+    for the dependent variable Impact of Event, participants were initially classified
+    as normal, mild psychological impact, moderate psychological impact, and severe
+    psychological impact. The category Normal remained unchanged, while the rest was
+    represented as "Possible".
+
+
+    # B. Flow of the Study
+
+
+    After gathering all of the answers to the questions from the questionnaire and
+    the survey, they were used as the independent variables in the research and used
+    as the initial feature set with each question considered as one feature.
+
+
+    # TABLE I: Categorical variables with missing values
+
+
+    | Categorical predictor variables | |
+
+    | :--- | :--- |
+
+    | SelfRateHealthStatus | ConcernsChild |
+
+    | MedicalInsurance | FeelingDiscriminated |
+
+    | ChronicIllness | CoverMouth |
+
+    | ContactedPatients | AvoidSharingUtensils |
+
+    | CloseContact | WashingHandsSoapWater |
+
+    | IndirectContact | WashingHandsCoughNoseSneeze |
+
+    | ContactSuspected | WearingMask |
+
+    | ContactInfectedMaterials | WashingHandsContaminatedObjects |
+
+    | DropletsKnowledge | UnnecessaryWorry |
+
+    | ContactViaContaminatedObjectsKnowledge | ReceiveAdditionalInformation |
+
+    | AirborneKnowledge | DetailsOnSymptoms |
+
+    | HealthInformationSatisfaction | AdviceOnPrevention |
+
+    | HeardNumberOfInfected | AdviceOnTreatment |
+
+    | HeardNumberOfDeaths | RegularUpdatesLatestInformation |
+
+    | HeardNumberOfRecovered | RegularUpdatesOutbreaks |
+
+    | HowObtainHealthInformation | AdviceForPeople |
+
+    | PreXNeuropsychiatricCondition | AvailabilityEffectivenessMedicine |
+
+    | ConfidenceInDoctorDiagnosis | HowManyPeopleAffected |
+
+    | ContractingCovidLikelihood | TravelAdvice |
+
+    | SurvivingCovidInfected | HowCovidSpread |
+
+    | ConcernsOtherFamily | OtherCountryDoing |
+
+
+    Next, these variables underwent feature selection, which is the process of picking
+    certain features from the initial set while disregarding the rest to be able to
+    predict the dependent variables better. To do this, feature selection algorithms
+    were applied.
+
+
+    These algorithms are divided into two parts, the Attribute Evaluator and the Search
+    Method. The attribute evaluators used were CfsSubsetEval and InformationGain.
+    The search methods used were BestFirst and Ranker. In this particular case, CfsSubsetEval
+    and BestFirst were paired with each other, while InformationGain and Ranker were
+    paired since the latter is a requirement.
+
+
+    Afterwards, the features were run through machine learning classifiers to build
+    models for the predictions. The classifiers Random Forest, Naive Bayes, Support
+    Vector Machines, and Logistic Regression were used. The vectors'' performances
+    were assessed using three obtained metrics: accuracy, precision, and recall. Accuracy
+    is the percentage of correct predictions the models have made. Precision is the
+    metric where it shows how many of the positive identifications were truly correct.
+    Lastly, recall is the proportion of actual positives that were identified correctly.
+    The application WEKA was used to execute the aforementioned process.
+
+
+    There were three approaches taken in the research, A, B, and C. They were similar
+    in nature, but used different combinations of feature selection algorithms and
+    independent variables to find the best results
+
+
+    +   1) Feature selection: Feature selection is an important part in the process
+    of machine learning because it removes irrelevant and redundant variables from
+    the initial set of predictors [17]. There are several methods that can be used,
+    but there is no one way that is suited for all applications [18]. The feature
+    selection algorithms used for each approach are seen in Table II.
+
+
+    The data gathered had a large amount, initially having 2652 rows of participants.
+    However, due to a significant amount of'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/cab12abe182cb091cac3834fc2deefbb_3_0.png)
+
+
+    | | A | B | C |
+
+    |---|---|---|---|
+
+    | Initial feature set | - Demographics - Symptoms and physical health status -
+    Contact History - Knowledge and belief about COVID-19 - Pre-cautionary measures
+    in past 14 days - Additional information about COVID-19 - Pre-existing condition
+    | - Demographics - Symptoms and physical health status - Contact History - Knowledge
+    and belief about COVID-19 - Pre-cautionary measures in past 14 days - Additional
+    information about COVID-19 - Pre-existing condition - DASS-21 Survey - IES-R Survey
+    | - Demographics - Symptoms and physical health status - Contact History - Knowledge
+    and belief about COVID-19 - Pre-cautionary measures in past 14 days - Additional
+    information about COVID-19 - Pre-existing condition - DASS-21 Survey - IES-R Survey
+    |
+
+
+    | | Approach A | Approach B | Approach C |
+
+    |---|---|---|---|
+
+    | Attribute Evaluator | Correlation-based Feature Subset Selection | Information
+    Gain | Correlation-based Feature Subset Selection |
+
+    | Search Method | Best First | Ranker | Best First |
+
+
+    data missing in several responses that data imputing could not solve, the number
+    of rows used was reduced to 2119. The number of predictors (columns) in the initial
+    feature set for the target variables Stress, Anxiety, and Depression was 106,
+    and 91 for Impact of event. These numbers reduced after feature selection algorithms
+    were applied.
+
+
+    2) Machine learning classifiers: There were 4 machine learning classifiers used
+    in this research: Random Forest, Naive Bayes, Support Vector Machine, and Logistic
+    Regression.
+
+
+    # IV. RESULTS
+
+
+    The study was done on a total of 2119 participants who come from the Philippines.
+    To identify possible cases and their possible causes, the 3 different approaches
+    that were taken are briefly explained in this section.
+
+
+    # A. Approach A
+
+
+    The first approach, approach A, only considered the data collected from the created
+    survey, disregarding the DASS-21 and IES-R answers. Feature selection resulted
+    in reduced number of features as expected. Anxiety used 9 features while stress,
+    depression, and impact of event used 10.
+
+
+    The Naive Bayes classifier achieved the best accuracy overall with an average
+    of 69.65%. An average precision of 63.08% and recall of 54.23%. Random Forest
+    was the worst predictor with an average accuracy of 63.63%, average precision
+    and recall of 53.93% and 46.18% respectively (See Tables IV, V and VI).
+
+
+    | | Stress | Anxiety | Depression | Impact of Event |
+
+    |---|---|---|---|---|
+
+    | Random Forest | 61.21% | 61.68% | 66.54% | 65.08% |
+
+    | Naive Bayes | 68.1% | 70.51% | 70.03% | 69.94% |
+
+    | Support Vector Machines | 65.36% | 67.82% | 68.1% | 70.46% |
+
+    | Logistic Regression | 66.97% | 69.37% | 69.99% | 70.55% |
+
+
+    | | Stress | Anxiety | Depression | Impact of Event |
+
+    |---|---|---|---|---|
+
+    | Random Forest | 54% | 52.8% | 60.7% | 48.2% |
+
+    | Naive Bayes | 64.6% | 67.7% | 62.9% | 57.1% |
+
+    | Support Vector Machines | 66% | 71.5% | 62.9% | 74.4% |
+
+    | Logistic Regression | 62.9% | 65.8% | 65.5% | 60% |
+
+
+    | | Stress | Anxiety | Depression | Impact of Event |
+
+    |---|---|---|---|---|
+
+    | Random Forest | 48.6% | 46.8% | 53.7% | 35.6% |
+
+    | Naive Bayes | 52.4% | 51.3% | 66.7% | 46.7% |
+
+    | Support Vector Machines | 35.4% | 33.5% | 54.9% | 20.1% |
+
+    | Logistic Regression | 51.1% | 50% | 57.7% | 40.5% |'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# TABLE VII: Accuracy results of Stress, Anxiety, Depression, and Impact of
+    Event using approach B
+
+
+    | Random | Stress | Anxiety | Depression | Impact of Event |
+
+    |---|---|---|---|---|
+
+    | Random Forest | 85.32% | 81.21% | 83.24% | 81.02% |
+
+    | Naive Bayes | 81.26% | 79.32% | 80.98% | 80.79% |
+
+    | Support Vector Machines | 84.94% | 80.13% | 82.96% | 80.79% |
+
+    | Logistic Regression | 82.39% | 78.43% | 80.74% | 78.95% |
+
+
+    # TABLE X: Accuracy results of Stress, Anxiety, Depression, and Impact of Event
+    using approach C
+
+
+    | Random | Stress | Anxiety | Depression | Impact of Event |
+
+    |---|---|---|---|---|
+
+    | Random Forest | 84.61% | 81.5% | 83.19% | 81.64% |
+
+    | Naive Bayes | 82.91% | 79.56% | 82.35% | 80.93% |
+
+    | Support Vector Machines | 85.08% | 80.74% | 81.97% | 81.68% |
+
+    | Logistic Regression | 84.80% | 81.97% | 83.86% | 82.35% |
+
+
+    # TABLE VIII: Precision results of Stress, Anxiety, Depression, and Impact of
+    Event using approach B
+
+
+    | Random | Stress | Anxiety | Depression | Impact of Event |
+
+    |---|---|---|---|---|
+
+    | Random Forest | 85.9% | 81.7% | 83.1% | 80.0% |
+
+    | Naive Bayes | 81.5% | 77.2% | 80.9% | 73.9% |
+
+    | Support Vector Machines | 85.8% | 81.8% | 82.8% | 81.3% |
+
+    | Logistic Regression | 80.1% | 75.1% | 77.9% | 71.2% |
+
+
+    # TABLE XI: Precision results of Stress, Anxiety, Depression, and Impact of Event
+    using approach C
+
+
+    | Random | Stress | Anxiety | Depression | Impact of Event |
+
+    |---|---|---|---|---|
+
+    | Random Forest | 83.7% | 79.5% | 80.6% | 76.9% |
+
+    | Naive Bayes | 85% | 79.2% | 83.8% | 75.5% |
+
+    | Support Vector Machines | 85.3% | 80.1% | 80.8% | 79.7% |
+
+    | Logistic Regression | 83.7% | 80.9% | 83.1% | 78.5% |
+
+
+    # B. Approach B
+
+
+    The second approach, approach B, considered all of the independent variables as
+    the initial feature set. Feature selection resulted in the reduced amount of features
+    for Stress as 80, anxiety used 85, depression used 76, while impact of event used
+    72.
+
+
+    The Random Forest classifier achieved the best accuracy overall with an average
+    of 82.70%. Along with it, an average precision of 82.68% and recall as 70.00%.
+    Logistic Regression was the worst predictor with an average accuracy of 80.13%,
+    average precision of 76.08% and recall of 71.33% (See Tables VII, VIII and IX).
+
+
+    # C. Approach C
+
+
+    The third and final approach, approach C, considered all of the features as the
+    initial feature set, similar to approach B. Feature selection resulted in the
+    following final number of features for each dependent variable: stress used 21
+    features, anxiety used 25, depression used 18, while impact of event used 23.
+
+
+    The Logistic Regression classifier achieved the best accuracy overall with an
+    average of 83.25%. An average precision 81.55% and recall 73.53%. Naive Bayes
+    was the worst predictor with an average accuracy of 81.44%, average
+
+
+    # TABLE IX: Recall results of Stress, Anxiety, Depression, and Impact of Event
+    using approach B
+
+
+    | Random | Stress | Anxiety | Depression | Impact of Event |
+
+    |---|---|---|---|---|
+
+    | Random Forest | 77.7% | 68.9% | 74.5% | 58.9% |
+
+    | Naive Bayes | 71.3% | 68.7% | 70.6% | 67.3% |
+
+    | Support Vector Machines | 76.6% | 65.2% | 74.0% | 56.6% |
+
+    | Logistic Regression | 77.1% | 69.6% | 74.5% | 64.1% |
+
+
+    precision 80.88% and recall of 68.65% (See Tables X, XI and XII).
+
+
+    # V. DISCUSSION
+
+
+    Machine learning techniques were used in this research to generate predictive
+    models to help identify possible cases and predictors of mental health conditions
+    among the general population in the Philippines. There were 3 approaches executed
+    in this study in order to experiment multiple test cases of the data.
+
+
+    Approach A did not use the DASS-21 and IES-R survey answers as possible features
+    (see Table III), unlike approach B and C. All the results were low, with an overall
+    average accuracy of 67.61%. The data gathered from the 8 parts of the created
+    survey were not good stand alone predictors. Considering this, approaches B and
+    C included the other target variables as predictors as well.
+
+
+    Compared to A, approaches B and C had its results increase, having accuracies
+    of 81.40% and 82.45% respectively. This was due to the fact that the DASS-21 and
+    IES-R survey results were taken into account in these approaches. This suggests
+    that when predicting for the presence of a mental illness, say Stress, the other
+    target variable results for the other mental illnesses (In this case Anxiety,
+    Depression, Impact of Event)
+
+
+    # TABLE XII: Recall results of Stress, Anxiety, Depression, and Impact of Event
+    using approach C
+
+
+    | Random | Stress | Anxiety | Depression | Impact of Event |
+
+    |---|---|---|---|---|
+
+    | Random Forest | 78.6% | 72.8% | 78.0% | 65.9% |
+
+    | Naive Bayes | 71.8% | 66.9% | 70.9% | 65.0% |
+
+    | Support Vector Machines | 77.8% | 69.6% | 73.8% | 62.0% |
+
+    | Logistic Regression | 79.0% | 72.4% | 76.4% | 66.3% |'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# TABLE XIII: Final features used for predicting Stress and Anxiety
+
+
+    | | Stress | Anxiety |
+
+    |---|---|---|
+
+    | Final features | *SelfRateHealthSt D2_5 | *BodyPain D1_3 |
+
+    | | atus D3_10 | *Difficulty- D4_13 |
+
+    | | *PreExNeuropsy c D4_13 | Breathing D5_16 |
+
+    | | hiatricCondition D5_16 | *ExtraHours D7_21 |
+
+    | | A2_4 D6_17 | *Home P_1_I |
+
+    | | A3_7 P_1_I | *DetailsOn- P_2_I |
+
+    | | A4_9 P_4_H | Symptoms P_4_H |
+
+    | | A5_15 P_10_H | S1_1 P_6_I |
+
+    | | A6_19 P_15_H | S2_6 P_10_H |
+
+    | | A7_20 P_16_I | S3_8 P_12_A |
+
+    | | D1_3 P_18_H | S4_11 P_14_I |
+
+    | | P_20_I | S5_12 P_18_H |
+
+    | | | S6_14 P_19_H |
+
+    | | | S7_18 P_20_I |
+
+
+    # TABLE XIV: Final features used for predicting Depression and Impact of Event
+
+
+    | | Depression | Impact of Event |
+
+    |---|---|---|
+
+    | Final features | *Age S7_18 | *Cough S5_12 |
+
+    | | *SelfRateHealthSt A3_7 | *HoursOnSocial- S6_14 |
+
+    | | Status A4_9 | Media S7_18 |
+
+    | | *PreExNeuropsy c A5_15 | *ConcernsOther- A2_4 |
+
+    | | hiatricCondition A7_20 | Family A3_7 |
+
+    | | S1_1 P_4_H | *FeelingDiscrimin A4_9 |
+
+    | | S3_8 P_13_A | ated A5_15 |
+
+    | | S4_11 P_15_H | *AvailabilityEff- A6_19 |
+
+    | | S5_12 P_16_I | ectivenessMedicine A7_20 |
+
+    | | S6_14 P_18_H | S1_1 D1_3 |
+
+    | | | S2_6 D3_10 |
+
+    | | | S3_8 D4_13 |
+
+    | | | S4_11 D5_16 |
+
+    | | | D7_21 |
+
+
+    were significant additions as predictors. The status of the presence of the mental
+    illnesses in the respondent are good predictors for each other. That being said,
+    other independent variables that came from the created survey (*) still had good
+    enough correlation to the dependent variable being predicted at that time to be
+    counted as a significant predictor.
+
+
+    Results show that how an individual rates their own health, and presence of a
+    pre-existing neuropsychiatric condition were good predictors for stress. Depression
+    had similar predictors as stress, but an addition was that age was a good predictor
+    as well. Individuals actively seeking information on the symptoms of the virus,
+    being at home longer, and experiencing symptoms such as body pain and difficulty
+    breathing, contribute to anxiety levels. The study also found that respondents
+    who actively seek information on the pandemic on social media, want to know about
+    an effective medicine against the virus, have concern for their family, have feelings
+    of being discriminated, and experience cough are connected to adverse psychological
+    impact from the pandemic (Impact of event).
+
+
+    # ## VI. CONCLUSION AND FUTURE WORK
+
+
+    This research aimed to help identify the possible cases for Stress, Anxiety, Depression,
+    and assess the impact of event of the general population in the Philippines using
+    machine learning techniques. Manual efforts can be time consuming and it might
+    not show all possible results at first glance, especially considering the large
+    amount of data present. The results from this research help support the growing
+    popularity
+
+
+    of machine learning in the field of detection and diagnostics of mental health
+    conditions. With COVID-19 spreading all over the world, techniques like the one
+    used in this research can contribute significantly to find the possible contributing
+    factors to mental health issues caused by the pandemic with high accuracy. Psychologists
+    and researchers can pursue further studies to validate and describe the effect
+    of these identified factors. Once established, improved policies and guidelines
+    can be created by stakeholders to help society avoid further mental harm.
+
+
+    # # REFERENCES
+
+
+    +   [1] "Novel coronavirus (2019-ncov) situation report - 1," Accessed: 2020-
+
+    +   12-9.
+
+    +   [2] "Novel coronavirus(2019-ncov) situation report – 22," Accessed: 2020-
+
+    +   12-9.
+
+    +   [3] "Coronavirus disease 2019 (covid-19) situation report – 51," Accessed:
+
+    +   2020-12-10.
+
+    +   [4] "Covid-19 weekly epidemiological update," Accessed: 2021-2-5.
+
+    +   [5] "Covid-19 tracker." https://doh.gov.ph/covid19tracker. Accessed: 2021-
+
+    +   2-5.
+
+    +   [6] W. Cullen, G. Gulati, and B. Kelly, "Mental health in the covid-19
+
+    +   pandemic," QJM: An International Journal of Medicine, 2020, 311–312,
+
+    +   2020, https://doi.org/10.1093/qjmed/hcaa110.
+
+    +   [7] N. Salari, A. Hosseinian-Far, R. Jalali, A. Vaisi-Raygani,
+
+    +   S. Rasoulpoor, M. Mohammadi, S. Rasoulpoor, and B. Khaledi-
+
+    +   Paveh, "Prevalence of stress, anxiety, depression among the general
+
+    +   population during the covid-19 pandemic: a systematic review and
+
+    +   meta-analysis," Globalization and Health 16, 57 (2020), 2020,
+
+    +   https://doi.org/10.1186/s12992-020-00589-w.
+
+    +   [8] R. Rossi, V. Socci, D. Talevi, S. Mensi, C. Niolu1, F. Pacitti, A. D.
+
+    +   Marco, A. Rossi, A. Siracusano, and G. Di Lorenzo, "Covid-19
+
+    +   pandemic and lockdown measures impact on mental health among
+
+    +   the general population in italy," Front. Psychiatry 11:790, 2020,
+
+    +   https://doi.org/10.3389/fpsyt.2020.00790.
+
+    +   [9] A. B. R. Shatte, D. M. Hutchinson, and S. J. Teague,
+
+    +   "Machine learning in mental health: a scoping review of
+
+    +   methods and applications," Psychological Medicine 1–23, 2019,
+
+    +   https://doi.org/10.1017/S0033291719000151.
+
+    +   [10] L. Flesia, M. M. 2, C. Mazza, V. Fiietta, E. Colicino, B. Segatto, and
+
+    +   P. Roma, "Predicting perceived stress related to the covid-19 outbreak
+
+    +   through stable psychological traits and machine learning models," J.
+
+    +   Clin. Med. 2020, 9, 3350, 2020, https://doi.org/10.3390/jcm9103350.
+
+    +   [11] S. Choi, J. Y. Hong, Y. J. Kim, and H. Park, "Predicting
+
+    +   psychological distress amid the covid-19 pandemic by machine learning:
+
+    +   Discrimination and coping mechanisms of korean immigrants in the
+
+    +   u.s.," Int. J. Environ. Res. Public Health 2020, 17, 6057, 2020.
+
+    +   https://doi.org/10.3390/ijerph17176057.
+
+    +   [12] M. L. Tee, C. A. Tee, J. P. Alucan, K. J. G. Algam, P. W. C.
+
+    +   Reyes, V. Kuruchittham, and R. C. Ho, "Psychological impact of covid-
+
+    +   19 pandemic in the philippines," J Affect Disord. 2020 Dec 1; 277:
+
+    +   379–391., 2020, https://doi.org/10.1016/j.jad.2020.08.043.
+
+    +   [13] "Overview of the data and its uses."
+
+    +   http://www2.psy.uNSW.edu.au/dass/over.htm. Accessed: 2020-12-11.
+
+    +   [14] Weiss and Marmar, "Impact of event scale - revised (ies-
+
+    +   r) for dsm-iv," https://www.ptsd.va.gov/professional/assessment/adult-
+
+    +   sries-asp, 1996. Accessed: 2020-12-11.
+
+    +   [15] J. Brownlee, "Why data preparation is so important in machine
+
+    +   learning," https://machinelearningmastery.com/data-preparation-is-
+
+    +   important/. Accessed: 2021-2-3.
+
+    +   [16] S. Chopra, "How to handle missing data in machine learning: 5
+
+    +   techniques," https://dev.acquia.com/blog/how-to-handle-missing-data-in-
+
+    +   machine-learning-5-techniques/09/07/2018/19651. Accessed: 2021-2-3.
+
+    +   [17] A. Sau and I. Bhakta, "Screening of anxiety and depression
+
+    +   among seafarers using machine learning technology," Informatics in Medicine
+    Unlocked 16 (2019) 100228, 2019,
+
+    +   https://doi.org/10.1016/j.imu.2019.100228.
+
+    +   [18] M. Dash and H. Liu, "Feature selection for classification," Intelligent
+    Data Analysis 1 (1997) 131-156, 1997. https://doi.org/10.1016/S1088-
+
+    +   467X(97)00008-5.'
+  merge: -1
+  img_proc: true
