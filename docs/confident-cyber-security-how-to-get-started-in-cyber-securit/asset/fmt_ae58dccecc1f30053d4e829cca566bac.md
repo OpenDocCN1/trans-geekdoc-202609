@@ -1,0 +1,36 @@
+
+# Part Five
+
+## 11
+
+When you first hear the term ‘cyber security’ you would be forgiven for thinking that it’s only something that governments, banks and big corporations need to consider. And, of course, those industries absolutely do need to embrace cyber security – but they’re not the only ones. Cyber security considerations apply to all sorts of different organizations and industries, including ones that you might not expect.
+
+### Celebrity, entertainment and pop culture
+
+#### Taylor Swift
+
+Have you ever wondered how someone like Taylor Swift manages cyber security? Success in the music industry relies on many things, and one of those is music being released at the time and in the way intended. If songs or albums are leaked before their release date, it could cost the artist and their record label a good deal of money and, potentially, damage the career of the artist. According to news reports, Taylor Swift (or, certainly, her team) is very aware of this and takes a number of steps to manage her most valuable data: her upcoming music.
+
+It is reported that when backing dancers are performing in the filming of Taylor Swift’s music videos, they are not performing to the actual track that will be the subject of the video. To ensure that her music is only heard by those who absolutely need to hear it, and apparently limit the possibility of someone secretly recording and releasing the music before the official release date, Swift’s backing dancers perform to ‘click tracks’ which play the correct beat of the relevant track rather than the track itself.^([1](#22_chapter11.xhtml#ch11_en1)) That way, the dancers are performing to the correct rhythm but without being exposed to the music.
+
+Reports suggest that this is not an isolated example with regards to keeping Swift’s music secure, but rather part of an overall approach. Ed Sheeran has commented on the measures that Swift’s team took to protect her music, when they collaborated on the song *Everything Has Changed* on her album *Red*. According to Sheeran, he listened to the song once, when a member of Swift’s team met him. The track was apparently the only song on an iPad, which was stored in a locked briefcase; Sheeran listened to it once before acknowledging that he was happy with it, and the iPad was then locked up and taken back.^([2](#22_chapter11.xhtml#ch11_en2)) This shows a considered approach to the cyber security of Swift’s intellectual property. Swift’s team are keeping a careful chain of custody of the music, not sending it via email, which can be vulnerable to hacking, and from what Sheeran has said, possibly even keeping the song on a so-called ‘clean’ device, one that has not been used to access the internet or store other data.
+
+It is not just Swift’s digital security that her team take so seriously, but also her physical security as well. In 2018, it was reported that kiosks showing rehearsal clips of Taylor Swift, set up outside her concert venue, were more than they first appeared. When concertgoers watched the clips of Swift being played at the kiosks, their images were taken, and facial recognition scans were performed to determine if any of the attendees were known stalkers of Swift.^([3](#22_chapter11.xhtml#ch11_en3)) This may seem extreme, and it certainly raises questions regarding the balance of personal security for one individual compared to the personal privacy of others, but it represents how celebrities can (and do) embrace the latest digital technologies as part of their approach to security.
+
+#### Kim Kardashian
+
+Physical security is, of course, an issue that people in the public eye have long been aware of. However, these issues have been brought more to the fore with the advent of greater connectivity over the internet and social media technology, meaning people with a high profile are more accessible to the rest of us compared to even a few decades ago. In 2016, the Kardashians re-evaluated their use of social media after Kim Kardashian was attacked while staying in Paris. Kardashian was robbed at gunpoint, with the criminals stealing $10 million worth of jewellery. The alleged leader of the criminal group told French police that he and his team were able to pull off the attack by using information she had shared on social media.^([4](#22_chapter11.xhtml#ch11_en4)) Kardashian had shown pictures of expensive jewels on social media, commenting that they were not fake, and her posts also revealed information about her whereabouts and movements whilst in Paris. This is, of course, not to blame Kardashian for the attack: she was a victim of criminal action and suffered what, by all accounts, must have been a very traumatizing experience. The case does highlight, however, the fact that criminals use social media as a tool in their activities. This is something for us all to be aware of, but particularly people with a high profile. It means that cyber security is of central importance to celebrities, to protect not just their data security and finances, but also their physical security.
+
+#### Caitlyn Jenner
+
+And there are plenty of examples from the Kardashian empire. When Caitlyn Jenner transitioned gender this was of course a huge news story – which means cyber security was central to it (as we first covered in [Chapter 8](#18_chapter08.xhtml#ch08_sec_001)). *Vanity Fair* had the very exclusive first public interview and photoshoot with Jenner after her transition, which involved a great deal of security to maintain the exclusivity and prevent details, such as photographs, from leaking. Extra security was reportedly hired for the photoshoot, with everyone on site forced to be without mobile phones to prevent them from taking photographs. The article and the photographs were contained on only one computer, which was never connected to the internet, with all of the data put on a flash drive every night and deleted from the machine itself. The story was hand-delivered to the printers, rather than risked over the internet.^([5](#22_chapter11.xhtml#ch11_en5))
+
+---
+
+[12](#20_chapter10.xhtml#ch10_enx12) Sanger, D (2012) Obama order sped up wave of cyberattacks against Iran, *New York Times*, 1 June, [www.nytimes.com/2012/06/01/world/middleeast/obama-ordered-wave-of-cyberattacks-against-iran.html](http://www.nytimes.com/2012/06/01/world/middleeast/obama-ordered-wave-of-cyberattacks-against-iran.html) (archived at [https://perma.cc/LG72-29MS](https://perma.cc/LG72-29MS))
+
+[13](#20_chapter10.xhtml#ch10_enx13) FC (2020) The first official NSA exploit (CVE-2020-0601) (blog), Cygenta, 15 January, [https://blog.cygenta.co.uk/first-nsa-exploit/](https://blog.cygenta.co.uk/first-nsa-exploit/) (archived at [https://perma.cc/2LRK-8BZY](https://perma.cc/2LRK-8BZY))
+
+[14](#20_chapter10.xhtml#ch10_enx14) Greenberg, A (2019) Sandworm: A new era of cyberwar and the hunt for the Kremlin’s most dangerous hackers, Doubleday, New York
+
+[15](#20_chapter10.xhtml#ch10_enx15) Greenberg, A (2018) The White House blames Russia for NotPetya, the ‘most costly cyberattack In history’, Wired, 15 February, [www.wired.com/story/white-house-russia-notpetya-attribution](http://www.wired.com/story/white-house-russia-notpetya-attribution) (archived at [https://perma.cc/7276-WX5M](https://perma.cc/7276-WX5M))

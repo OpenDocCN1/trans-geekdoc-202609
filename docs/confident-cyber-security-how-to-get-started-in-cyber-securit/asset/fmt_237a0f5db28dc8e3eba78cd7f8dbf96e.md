@@ -1,0 +1,38 @@
+
+# Hackers
+
+The pen testers we referred to earlier are hackers, often called ethical hackers. If they should be called anything beyond 'hacker', it would probably be more precise to call them legal hackers (because saying they are ethical does not necessarily confirm that they are also operating legally). I'm going to generally call them hackers, and when they are not legal/ethical hackers, I will call them criminals or cyber criminals.
+
+Hackers use the same tools and techniques as cyber criminals, but there is an important fundamental difference: hackers do so within the boundaries of the law. Hackers operate within a scope and contract, hacking an organization with that organization's permission, to identify vulnerabilities and suggest mitigations to enable the organization to fix them (or at least, to be aware of them), and to prevent the criminals from exploiting them. Hackers often work as penetration testers (see below) and can be employed by the company directly, particularly if the company is large, or work for specialist cyber security companies or operate freelance. Hackers are in incredibly trusted roles and good intentions are not enough: you may want to test the defences of an organization, website or application for the right reasons, but without an agreement from the organization itself, you are in uncertain territory, at the least. If you carry out such a hack without permission, you will probably find that you are no longer a hacker, you are a criminal.
+
+# Criminals
+
+Criminal hackers are at the opposite end of the scale to ethical or legal hackers; these are people who carry out illegal hacking activity to circumvent the access controls of organizations. We'll look in more detail at cybercrime, and cyber criminals, later in this chapter (and, indeed, throughout the book).
+
+# Grey Hat Hackers
+
+It should be simple, shouldn't it? You're either a hacker or a criminal. But, of course, little in security is simple. Let's say someone hacks a website for the right reasons (to identify vulnerabilities before criminals get to them) but without the agreement of the website owner: then this fits into the category of grey hat hacking. Grey hat hackers, as the name suggests, sit in a murky area of the law. Grey hat hackers may have good intentions, as in the example above, but without the legal permission to carry out those intentions, they end up actually breaking the law. Another way hacking might be defined as grey is to be hired as a legitimate hacker but go out-of-scope, beyond what has been agreed – again, this may be with good intentions (to ultimately make the organization more secure, not to profit from a vulnerability themselves), but by straying out of the scope of the legal agreement, they stray into grey hat territory.
+
+The term grey hat comes from a tradition of using black hat to refer to criminal hackers and white hat to refer to legal / ethical hackers (with grey hats somewhere in the middle). This itself came from black and white cowboy films in which the hero would often wear a white hat, and the villain a black hat, as a visual cue for viewers. However, it is increasingly recognized as inappropriate to use terminology which implies that black equals bad and white equals good, so I have not used the term white hat and black hat, especially as the words *hacker* and *criminal* bring more clarity anyway. However, I have used grey hat, because I believe it works as a standalone term (alluding to a grey area of the law) and a replacement term has not (yet) emerged.
+
+# Hacking and the Law
+
+Despite the apparently stark boundaries implied by the labels criminal hacker, legal hacker and grey hat hacker, in real life it's often not that simple. Legislation of cyber security, and cyber *in*security, is a challenge.
+
+The field moves quickly, but legislation moves slowly – and those in charge of the law are not always best informed of the latest intricacies of cyber security. On top of this, legislation is very geographically defined, with different countries taking very different approaches to legislating cybercrime and security research. Of course, cyberspace doesn't have physical boundaries in the same sense as countries and legislation: someone can be in one country hacking someone in another and routing their activity through countless more. What one country recognizes as legitimate hacking, another may see as criminal activity. Where one country will penalize cybercrime very heavily, regardless of the intention of the hacker, others will consider whether the individual actually meant to cause harm. Because of this, legal, criminal and grey hat hacking could be better understood as activities rather than roles. It's more than possible for someone to start as a legal hacker; step outside the boundaries of their legal agreement with an organization and move into grey hat hacking; before deciding that they actually want to take advantage of their insider information and, for example, sell the vulnerabilities they have discovered on the dark web, thus becoming criminal.
+
+# Cybercrime
+
+Criminal hackers can be split into different groups according to their motivations and methods. This is important to understand, as different groups will target different people and companies. Organizations have the best chance of defending themselves when they understand which group or groups are likely to attack them and why, as that means they can target their defences.
+
+## Financially Motivated Cybercrime
+
+A large bulk of cybercrime on the internet is financially motivated. Organized criminal gangs – people who have always operated in crime – now understand that carrying out criminal activity online is easier, faster, cheaper, less risky and more likely to be successful than crime in the 'real world'. Financially motivated cyber criminals want money and they will attempt to get it by coercing it out of companies or people; for example, by getting access to their bank accounts or pretending to be a supplier needing a transfer of money to a new bank account. Cybercrime as a service facilitates this: on the dark web, criminal hackers can be hired to perform an attack on a company and malware can be purchased with instructions on how to deploy it. Other financially motivated criminal operations will run like other big, legitimate companies, hiring people to work in-house on attacking targets, even with different departments such as 'customer support'.
+
+Financially motivated cyber criminals target all organizations, not just large corporations – and, in fact, not all financially motivated cybercrime is targeted. The rise in ransomware, for example, has seen a huge number of smaller companies and sole traders fall victim to financially motived cybercrime, as well as non-commercial organizations such as charities, universities and hospitals.
+
+## Script Kiddies
+
+Many of the people that financially motivated criminal gangs have working for them would not be classed as hackers, but as *script kiddies*. Script kiddies are individuals who do not have a great deal of hacking knowledge or skill, but are able to use other people's code and pre-built tools to perform attacks on organizations. There are many tools freely available, many of which have been built for pen testing purposes, that are used by script kiddies. There are also videos on platforms such as YouTube that will show people, step by step, how to hack without them needing to understand what they are doing. So, financially motivated criminal operators will hire script kiddies to work for them – but script kiddies also carry out attacks on organizations under their own steam.
+
+## Hacktivists
