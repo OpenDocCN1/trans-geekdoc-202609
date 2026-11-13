@@ -1,0 +1,30 @@
+level_changes:
+- line: 24
+  before: 2
+  after: 1
+- line: 40
+  before: 2
+  after: 3
+- line: 44
+  before: 2
+  after: 3
+- line: 74
+  before: 2
+  after: 3
+- line: 78
+  before: 2
+  after: 3
+- line: 82
+  before: 2
+  after: 3
+- line: 99
+  before: 2
+  after: 3
+- line: 103
+  before: 2
+  after: 3
+text_changes:
+- line: 0
+  before: '[2021 IEEE 固态电路国际会议（ISSCC）（美国旧金山，2021年2月13日-2021年2月22日）] 2021 IEEE 固态电路国际会议（ISSCC）｜｜
+    25.4 20纳米6GB功能'
+  after: 2021 IEEE 固态电路国际会议（ISSCC）（美国旧金山，2021年2月13日-2021年2月22日）
