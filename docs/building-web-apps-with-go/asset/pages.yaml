@@ -1,0 +1,916 @@
+- pgno: 0
+  md: '# BUILDING WEB
+
+    APPS WITH GO
+
+
+    ![](img/b13e88ce67ae8c7bdcd6ffa38905ffce_0_0.png)
+
+
+    # Jeremy Saenz'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Table of Contents
+
+
+    +   Introduction 0
+
+
+    +   Go Makes Things Simple 1
+
+
+    +   The net/http package 2
+
+
+    +   Creating a Basic Web App 3
+
+
+    +   Deployment 4
+
+
+    +   URL Routing 5
+
+
+    +   Middleware 6
+
+
+    +   Rendering 7
+
+
+    +   JSON 7.1
+
+
+    +   HTML Templates 7.2
+
+
+    +   Using The render package 7.3
+
+
+    +   Testing 8
+
+
+    +   Unit Testing 8.1
+
+
+    +   End to End Testing 8.2
+
+
+    +   Controllers 9
+
+
+    +   Databases 10
+
+
+    +   Tips and Tricks 11
+
+
+    +   Moving Forward 12'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Introduction
+
+
+    Welcome to **Building Web Apps with Go**! If you are reading this then you have
+    just started your journey from noob to pro. No seriously, web programming in Go
+    is so fun and easy that you won''t even notice how much information you are learning
+    along the way!
+
+
+    Keep in mind that there are still portions of this book that are incomplete and
+    need some love. The beauty of open source publishing is that I can give you an
+    incomplete book and it is still of value to you.
+
+
+    Before we get into all the nitty gritty details, let''s start with some ground
+    rules:
+
+
+    # Prerequisites
+
+
+    To keep this tutorial small and focused, I''m assuming that you are prepared in
+    the following ways:
+
+
+    +   1. You have installed the Go Programming Language.
+
+    +   2. You have setup a `GOPATH` by following the [How to Write Go Code](https://golang.org/doc/code.html)
+    tutorial.
+
+    +   3. You are somewhat familiar with the basics of Go. (The [Go Tour](https://tour.golang.org/)
+    is a pretty good place to start)
+
+    +   4. You have installed all the [required packages](#required-packages)
+
+    +   5. You have installed the [Heroku Toolbelt](https://toolbelt.heroku.com/)
+
+    +   6. You have a [Heroku account](https://www.heroku.com/)
+
+
+    # Required Packages
+
+
+    For the most part we will be using the built in packages from the standard library
+    to build out our web apps. Certain lessons such as Databases, Middleware and URL
+    Routing will require a third party package. Here is a list of all the go packages
+    you will need to install before starting:'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '| Name | Import Path | Description |
+
+    |---|---|---|
+
+    | httprouter | github.com/julienschmidt/httprouter | A high performance HTTP request
+    router that scales well |
+
+    | Negroni | github.com/codegangsta/negroni | Idiomatic HTTP Middleware |
+
+    | Black Friday | github.com/russross/blackfriday | a markdown processor |
+
+    | Render | gopkg.in/unrolled/render.v1 | Easy rendering for JSON, XML, and HTML
+    |
+
+    | SQLite3 | github.com/mattn/go-sqlite3 | sqlite3 driver for go |
+
+
+    You can install (or update) these packages by running the following command in
+    your console
+
+
+    ```
+
+    go get -u <import_path>
+
+    ```
+
+
+    For instance, if you wish to install Negroni, the following command would be:
+
+
+    ```
+
+    go get -u github.com/codegangsta/negroni
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# # Go Makes Things Simple
+
+
+    If you have built a web application before, you surely know that there are quite
+    a lot of concepts to keep in your head. HTTP, HTML, CSS, JSON, databases, sessions,
+    cookies, forms, middleware, routing and controllers are just a few among the many
+    things your web app *may* need to interact with.
+
+
+    While each one of these things *can be important* in the building of your web
+    applications, not every one of them *is important* for any given app. For instance,
+    a web API may just use JSON as its serialization format, thus making concepts
+    like HTML not relevant for that particular web app.
+
+
+    # # The Go Way
+
+
+    The Go community understands this dilemma. Rather than rely on large, heavyweight
+    frameworks that try to cover all the bases, Go programmers pull in the bare necessities
+    to get the job done. This minimalist approach to web programming may be off-putting
+    at first, but the result of this effort is a much simpler program in the end.
+
+
+    **Go makes things simple**, it''s as easy as that. If we train ourselves to align
+    with the “Go way” of programming for the web, we will end up with more **simple**,
+    **flexible**, and **maintainable** web applications.
+
+
+    # # Power in Simplicity
+
+
+    As we go through the exercises in this book, I think you will be surprised by
+    how simple some of these programs can be whilst still affording a bunch of functionality.
+
+
+    When sitting down to craft your own web applications in Go, think hard about the
+    components and concepts that your app will be focused on, and use just those pieces.
+    This book will be covering a wide array of web topics, but do not feel obligated
+    to use them all. In the words of our friend Lonestar, “Take only what you need
+    to survive”.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/b13e88ce67ae8c7bdcd6ffa38905ffce_5_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# # The net/http Package
+
+
+    You have probably heard that Go is fantastic for building web applications of
+    all shapes and sizes. This is partly due to the fantastic work that has been put
+    into making the standard library clean, consistent, and easy to use.
+
+
+    Perhaps one of the most important packages for any budding Go web developer is
+    the net/http package. This package allows you to build HTTP servers in Go with
+    its powerful compositional constructs. Before we start coding, let''s do an extremely
+    quick overview of HTTP.
+
+
+    # # HTTP Basics
+
+
+    When we talk about building web applications, we usually mean that we are building
+    HTTP servers. HTTP is a protocol that was originally designed to transport HTML
+    documents from a server to a client web browser. Today, HTTP is used to transport
+    a whole lot more than HTML.
+
+
+    ![](img/b13e88ce67ae8c7bdcd6ffa38905ffce_6_0.png)
+
+
+    The important thing to notice in this diagram is the two points of interaction
+    between the Server and the Browser. The Browser makes an HTTP request with some
+    information, the Server then processes that request and returns a Response.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: "This pattern of request-response is one of the key focal points in building\
+    \ web applications in Go. In fact, the net/http package's most important piece\
+    \ is the http.Handler Interface.\n\n# # The http.Handler Interface\n\nAs you become\
+    \ more familiar with Go, you will notice how much of an impact interfaces make\
+    \ in the design of your programs. The net/http interface encapsulates the request-response\
+    \ pattern in one method:\n\n```\ntype Handler interface {\n\tServeHTTP(ResponseWriter,\
+    \ *Request)\n}\n```\n\nImplementors of this interface are expected to inspect\
+    \ and process data coming from the http.Request object and write out a response\
+    \ to the http.ResponseWriter object.\n\nThe http.ResponseWriter interface looks\
+    \ like this:\n\n```\ntype ResponseWriter interface {\n\tHeader() Header\n\tWrite([]byte)\
+    \ (int, error)\n\tWriteHeader(int)\n}\n```\n\n# # Composing Web Services\n\nBecause\
+    \ much of the net/http package is built off of well defined interface types, we\
+    \ can (and are expected to) build our web applications with composition in mind.\
+    \ Each http.Handler implementation can be thought of as its own web server.\n\n\
+    Many patterns can be found in that simple but powerful assumption. Throughout\
+    \ this book we will cover some of these patterns and how we can use them to solve\
+    \ real world problems.\n\n# # Exercise: 1 Line File Server\n\nLet's solve a real\
+    \ world problem in 1 line of code."
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: "Most of the time people just need to serve static files. Maybe you have a static\
+    \ HTML landing page and just want to serve up some HTML, images, and CSS and call\
+    \ it a day. Sure, you could pull in Apache or Python's SimpleHTTPServer , but\
+    \ Apache is too much for this little site and SimpleHTTPServer is, well, too slow.\n\
+    \nWe will begin by creating a new project in our GOPATH .\n\n```\ncd GOPATH/src\n\
+    mkdir fileserver && cd fileserver\n```\n\nCreate a **main.go** with our typical\
+    \ go boilerplate.\n\n```\npackage main\n\nimport \"net/http\"\n\nfunc main() {\n\
+    }\n```\n\nAll we need to import is the **net/http** package for this to work.\
+    \ Remember that this is all part of the standard library in Go.\n\nLet's write\
+    \ our fileserver code:\n\n```\nhttp.ListenAndServe(\":8080\", http.FileServer(http.Dir(\"\
+    .\")))\n```\n\nThe **http.ListenAndServe** function is used to start the server,\
+    \ it will bind to the address we gave it ( `:8080` ) and when it receives an HTTP\
+    \ request, it will hand it off to the **http.Handler** that we supply as the second\
+    \ argument. In our case it is the built-in **http.FileServer** .\n\nThe **http.FileServer**\
+    \ function builds an **http.Handler** that will serve an entire directory of files\
+    \ and figure out which file to serve based on the request path. We told the FileServer\
+    \ to serve the current working directory with **http.Dir(\".\")** .\n\nThe entire\
+    \ program looks like this:\n\n```\npackage main\n\nimport \"net/http\"\n\nfunc\
+    \ main() {\n\thttp.ListenAndServe(\":8080\", http.FileServer(http.Dir(\".\")))\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Let''s build and run our fileserver program:
+
+
+    ```
+
+    go build
+
+    ./fileserver
+
+    ```
+
+
+    If we visit `localhost:8080/main.go` we should see the contents of our **main.go**
+    file in our web browser. We can run this program from any directory and serve
+    the tree as a static file server. All in 1 line of Go code.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Creating a Basic Web App
+
+
+    Now that we are done going over the basics of HTTP, let''s create a simple but
+    useful web application in Go.
+
+
+    Pulling from our fileserver program that we implemented last chapter, we will
+    implement a Markdown generator using the github.com/russross/blackfriday package.
+
+
+    # HTML Form
+
+
+    For starters, we will need a basic HTML form for the markdown input:
+
+
+    ```
+
+    <html>
+
+    <head>
+
+    <link href="//css/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+    <div class="container">
+
+    <div class="page-title">
+
+    <h1>Markdown Generator</h1>
+
+    <p class="lead">Generate your markdown with Go</p>
+
+    <hr />
+
+    </div>
+
+
+    <form action="/markdown" method="POST">
+
+    <div class="form-group">
+
+    <textarea class="form-control" name="body" cols="30" rows="10"></textarea>
+
+    </div>
+
+
+    <div class="form-group">
+
+    <input type="submit" class="btn btn-primary pull-right" />
+
+    </div>
+
+    </form>
+
+    </div>
+
+    <script src="//js/bootstrap.min.js"></script>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    Put this HTML into a file named index.html in the "public" folder of our application
+    and the bootstrap.min.css from http://getbootstrap.com/ in the "public/css" folder.
+    Notice that the form makes an HTTP POST to the "/markdown" endpoint of our application.
+    We don''t actually handle that route right now, so let''s add it.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "# # The \"/markdown\" route\n\nThe program to handle the '/markdown' route\
+    \ and serve the public `index.html` file looks like this:\n\n```\n```go\npackage\
+    \ main\n\nimport (\n\t\"net/http\"\n\n\t\"github.com/russross/blackfriday\"\n\
+    )\n\nfunc main() {\n\thttp.HandleFunc(\"/markdown\", GenerateMarkdown)\n\thttp.Handle(\"\
+    /\", http.FileServer(http.Dir(\"public\")))\n\thttp.ListenAndServe(\":8080\",\
+    \ nil)\n}\n\nfunc GenerateMarkdown(rw http.ResponseWriter, r *http.Request) {\n\
+    \tmarkdown := blackfriday.MarkdownCommon([]byte(r.FormValue(\"body\")))\n\trw.Write(markdown)\n\
+    }\n```\n```\n\nLet's break it down into smaller pieces to get a better idea of\
+    \ what is going on.\n\n```\n```go\nhttp.HandleFunc(\"/markdown\", GenerateMarkdown)\n\
+    http.Handle(\"/\", http.FileServer(http.Dir(\"public\")))\n```\n```\n\nWe are\
+    \ using the `http.HandleFunc` and `http.Handle` methods to define some simple\
+    \ routing for our application. It is important to note that calling `http.Handle`\
+    \ on the \"/\" pattern will act as a catch-all route, so we define that route\
+    \ last. `http.FileServer` returns an `http.Handler` so we use `http.Handle` to\
+    \ map a pattern string to a handler. The alternative method, `http.HandleFunc`,\
+    \ uses an `http.HandlerFunc` instead of an `http.Handler`. This may be more convenient,\
+    \ to think of handling routes via a function instead of an object.\n\n```\n```go\n\
+    func GenerateMarkdown(rw http.ResponseWriter, r *http.Request) {\n\tmarkdown :=\
+    \ blackfriday.MarkdownCommon([]byte(r.FormValue(\"body\")))\n\trw.Write(markdown)\n\
+    }\n```\n```\n\nOur GenerateMarkdown function implements the standard `http.HandlerFunc`\
+    \ interface and renders HTML from a form field containing markdown-formatted text.\
+    \ In this case, the content is retrieved with `r.FormValue(\"body\")`. It is very\
+    \ common to get input from the"
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '`http.Request` object that the `http.HandlerFunc` receives as an argument.
+    Some other examples of input are the `r.Header`, `r.Body`, and `r.URL` members.
+
+
+    We finalize the request by writing it out to our `http.ResponseWriter`. Notice
+    that we didn''t explicitly send a response code. If we write out to the response
+    without a code, the `net/http` package will assume that the response is a `200
+    OK`. This means that if something did happen to go wrong, we should set the response
+    code via the `rw.WriteHeader()` method.
+
+
+    ```
+
+    http.ListenAndSet(":8080", nil)
+
+    ```
+
+
+    The last bit of this program starts the server, we pass `nil` as our handler,
+    which assumes that the HTTP requests will be handled by the `net/http` packages
+    default `http.ServeMux`, which is configured using `http.Handle` and `http.HandleFunc`,
+    respectively.
+
+
+    And that is all you need to be able to generate markdown as a service in Go. It
+    is a surprisingly small amount of code for the amount of heavy lifting it does.
+    In the next chapter we will learn how to deploy this application to the web using
+    Heroku.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "# # Deployment\n\nHeroku makes deploying applications easy. It is a perfect\
+    \ platform for small to medium size web applications that are willing to sacrifice\
+    \ a little bit of flexibility in infrastructure to gain a fairly pain-free environment\
+    \ for deploying and maintaining web applications.\n\nI am choosing to deploy our\
+    \ web application to Heroku for the sake of this tutorial because in my experience\
+    \ it has been the fastest way to get a web application up and running in no time.\
+    \ Remember that the focus of this tutorial is how to build web applications in\
+    \ Go and not getting caught up in all of the distraction of provisioning, configuring,\
+    \ deploying, and maintaining the machines that our Go code will be run on.\n\n\
+    # # Getting setup\n\nIf you don't already have a Heroku account, sign up at id.heroku.com/signup.\
+    \ It's quick, easy and free.\n\nApplication management and configuration is done\
+    \ through the Heroku toolbelt, which is a free command line tool maintained by\
+    \ Heroku. We will be using it to create our application on Heroku. You can get\
+    \ it from toolbelt.heroku.com.\n\n# # Changing the Code\n\nTo make sure the application\
+    \ from our last chapter will work on Heroku, we will need to make a few changes.\
+    \ Heroku gives us a `PORT` environment variable and expects our web application\
+    \ to bind to it. Let's start by importing the \"os\" package so we can grab that\
+    \ `PORT` environment variable:\n\n```\nimport (\n\t\"net/http\"\n\t\"os\"\n\n\t\
+    \"github.com/russross/blackfriday\"\n)\n```\n\nNext, we need to grab the `PORT`\
+    \ environment variable, check if it is set, and if it is we should bind to that\
+    \ instead of our hardcoded port (8080)."
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "```\nport := os.Getenv(\"PORT\")\nif port == \"\" {\n    port = \"8080\"\n\
+    }\n```\n\nLastly, we want to bind to that port in our `http.ListenAndServe` call:\n\
+    \n```\nhttp.ListenAndServe(\":\"+port, nil)\n```\n\nThe final code should look\
+    \ like this:\n\n```\npackage main\n\nimport (\n    \"net/http\"\n    \"os\"\n\n\
+    \    \"github.com/russross/blackfriday\"\n)\n\nfunc main() {\n    port := os.Getenv(\"\
+    PORT\")\n    if port == \"\" {\n        port = \"8080\"\n    }\n\n    http.HandleFunc(\"\
+    /markdown\", GenerateMarkdown)\n    http.Handle(\"/\", http.FileServer(http.Dir(\"\
+    public\")))\n    http.ListenAndServe(\":\"+port, nil)\n}\n\nfunc GenerateMarkdown(rw\
+    \ http.ResponseWriter, r *http.Request) {\n    markdown := blackfriday.MarkdownCommon([]byte(r.FormValue(\"\
+    body\")))\n    rw.Write(markdown)\n}\n```\n\n# # Configuration\n\nWe need a couple\
+    \ small configuration files to tell Heroku how it should run our application.\
+    \ The first one is the `Procfile`, which allows us to define which processes should\
+    \ be run for our application. By default, Go will name the executable after the\
+    \ containing directory of your main package. For instance, if my web application\
+    \ lived in `GOPATH/github.com/codegangsta/bwag/deployment`, my `Procfile` will\
+    \ look like this:"
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '```
+
+    web: deployment
+
+    ```
+
+
+    Specifically to run Go applications, we need to also specify a .godir file to
+    tell Heroku which dir is in fact our package directory.
+
+
+    ```
+
+    deployment
+
+    ```
+
+
+    # # Deployment
+
+
+    Once all these things in place, Heroku makes it easy to deploy.
+
+
+    Initialize the project as a Git repository:
+
+
+    ```
+
+    git init
+
+    git add -A
+
+    git commit -m "Initial Commit"
+
+    ```
+
+
+    Create your Heroku application (specifying the Go buildpack):
+
+
+    ```
+
+    heroku create -b https://github.com/kr/heroku-buildpack-go.git
+
+    ```
+
+
+    Push it to Heroku and watch your application be deployed!
+
+
+    ```
+
+    git push heroku master
+
+    ```
+
+
+    View your application in your browser:
+
+
+    ```
+
+    heroku open
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "# # URL Routing\n\nFor some simple applications, the default http.ServeMux\
+    \ can take you pretty far. If you need more power in how you parse URL endpoints\
+    \ and route them to the proper handler, you may need to pull in a third party\
+    \ routing framework. For this tutorial, we will use the popular github.com/julienschmidt/httprouter\
+    \ library as our router.\n\ngithub.com/julienschmidt/httprouter is a great choice\
+    \ for a router as it is a very simple implementation with one of the best performance\
+    \ benchmarks out of all the third party Go routers.\n\nIn this example, we will\
+    \ create some routing for a RESTful resource called \"posts\". Below we define\
+    \ mechanisms to view index, show, create, update, destroy, and edit posts.\n\n\
+    ```\n```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"net/http\"\n\n\t\"github.com/julienschmidt/httprouter\"\
+    \n)\n\nfunc main() {\n\tr := httprouter.New()\n\tr.GET(\"/\", HomeHandler)\n\n\
+    \t// Posts collection\n\tr.GET(\"/posts\", PostsIndexHandler)\n\tr.POST(\"/posts\"\
+    , PostsCreateHandler)\n\n\t// Posts singular\n\tr.GET(\"/posts/:id\", PostShowHandler)\n\
+    \tr.PUT(\"/posts/:id\", PostUpdateHandler)\n\tr.GET(\"/posts/:id/edit\", PostEditHandler)\n\
+    \n\tfmt.Println(\"Starting server on :8080\")\n\thttp.ListenAndServe(\":8080\"\
+    , r)\n}\n\nfunc HomeHandler(rw http.ResponseWriter, r *http.Request, p httprouter.Params)\
+    \ {\n\tfmt.Fprintln(rw, \"Home\")\n}\n\nfunc PostsIndexHandler(rw http.ResponseWriter,\
+    \ r *http.Request, p httprouter.Params) {\n\tfmt.Fprintln(rw, \"posts index\"\
+    )\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "```\n```go\nfunc PostsCreateHandler(rw http.ResponseWriter, r *http.Request,\
+    \ p httprouter.Params) {\n\tfmt.Fprintln(rw, \"posts create\")\n}\n\nfunc PostShowHandler(rw\
+    \ http.ResponseWriter, r *http.Request, p httprouter.Params) {\n\tid := p.ByName(\"\
+    id\")\n\tfmt.Fprintln(rw, \"showing post\", id)\n}\n\nfunc PostUpdateHandler(rw\
+    \ http.ResponseWriter, r *http.Request, p httprouter.Params) {\n\tfmt.Fprintln(rw,\
+    \ \"post update\")\n}\n\nfunc PostDeleteHandler(rw http.ResponseWriter, r *http.Request,\
+    \ p httprouter.Params) {\n\tfmt.Fprintln(rw, \"post delete\")\n}\n\nfunc PostEditHandler(rw\
+    \ http.ResponseWriter, r *http.Request, p httprouter.Params) {\n\tfmt.Fprintln(rw,\
+    \ \"post edit\")\n}\n```\n```\n\n# Exercises\n\n+   1. Explore the documentation\
+    \ for `github.com/julienschmidt/httprouter`.\n+   2. Find out how well `github.com/julienschmidt/httprouter`\
+    \ plays nicely with existing `http.Handler s` like `http.FileServer`\n+   3. `httprouter`\
+    \ has a very simple interface. Explore what kind of abstractions can be built\
+    \ on top of this fast router to make building things like RESTful routing easier."
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# # Middleware
+
+
+    If you have some code that needs to be run for every request, regardless of the
+    route that it will eventually end up invoking, you need some way to stack `http.Handlers`
+    on top of each other and run them in sequence. This problem is solved elegantly
+    through middleware packages. Negroni is a popular middleware package that makes
+    building and stacking middleware very easy while keeping the composable nature
+    of the Go web ecosystem intact.
+
+
+    Negroni comes with some default middleware such as Logging, Error Recovery, and
+    Static file serving. So out of the box Negroni will provide you with a lot of
+    value without a lot of overhead.
+
+
+    The example below shows how to use a Negroni stack with the built in middleware
+    and how to create your own custom middleware.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "```\n```go\npackage main\n\nimport (\n\t\"log\"\n\t\"net/http\"\n\n\t\"github.com/codegangsta/negroni\"\
+    \n)\n\nfunc main() {\n\t// Middleware stack\n\tn := negroni.New(\n\t\tnegroni.NewRecovery(),\n\
+    \t\tnegroni.HandlerFunc(MyMiddleware),\n\t\tnegroni.NewLogger(),\n\t\tnegroni.NewStatic(http.Dir(\"\
+    public\")),\n\t)\n\n\tn.Run(\":8080\")\n}\n\nfunc MyMiddleware(rw http.ResponseWriter,\
+    \ r *http.Request, next http.HandlerFunc) {\n\tlog.Println(\"Logging on the way\
+    \ there...\")\n\n\tif r.URL.Query().Get(\"password\") == \"secret123\" {\n\t\t\
+    next(rw, r)\n\t} else {\n\t\thttp.Error(rw, \"Not Authorized\", 401)\n\t}\n\n\t\
+    log.Println(\"Logging on the way back...\")\n}\n```\n```\n\n# Exercises\n\n+ \
+    \  1. Think of some cool middleware ideas and try to implement them using Negroni.\n\
+    +   2. Explore how Negroni can be composed with github.com/gorilla/mux using the\
+    \ http.Handler interface.\n+   3. Play with creating Negroni stacks for certain\
+    \ groups of routes instead of the entire application."
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# # Rendering
+
+
+    Rendering is the process of taking data from your application or database and
+    presenting it
+
+    for the client. The client can be a browser that renders HTML, or it can be another
+
+    application that consumes JSON as its serialization format. In this chapter we
+    will learn how
+
+    to render both of these formats using the methods that Go provides for us in the
+    standard
+
+    library.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "# # JSON\n\nJSON is quickly becoming the ubiquitous serialization format for\
+    \ web APIs, so it may be the most relevant when learning how to build web apps\
+    \ using Go. Fortunately, Go makes it simple to work with JSON -- it is extremely\
+    \ easy to turn existing Go structs into JSON using the `encoding/json` package\
+    \ from the standard library.\n\n```\n```go\npackage main\n\nimport (\n\t\"encoding/json\"\
+    \n\t\"net/http\"\n)\n\ntype Book struct {\n\tTitle string `json:\"title\"`\n\t\
+    Author string `json:\"author\"`\n}\n\nfunc main() {\n\thttp.HandleFunc(\"/\",\
+    \ ShowBooks)\n\thttp.ListenAndServe(\":8080\", nil)\n}\n\nfunc ShowBooks(w http.ResponseWriter,\
+    \ r *http.Request) {\n\tbook := Book{\"Building Web Apps with Go\", \"Jeremy Saenz\"\
+    }\n\n\tjs, err := json.Marshal(book)\n\tif err != nil {\n\t\thttp.Error(w, err.Error(),\
+    \ http.StatusInternalServerError)\n\t\treturn\n\t}\n\n\tw.Header().Set(\"Content-Type\"\
+    , \"application/json\")\n\tw.Write(js)\n}\n```\n```\n\n# ## Exercises\n\n+   1.\
+    \ Read through the JSON API docs and find out how to rename and ignore fields\
+    \ for JSON serialization.\n+   2. Instead of using the `json.Marshal` method,\
+    \ try using the `json.Encoder` API.\n+   3. Figure our how to pretty print JSON\
+    \ with the `encoding/json` package."
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "# # HTML Templates\n\nServing HTML is an important job for some web applications.\
+    \ Go has one of my favorite templating languages to date. Not for its features,\
+    \ but for its simplicity and out of the box security. Rendering HTML templates\
+    \ is almost as easy as rendering JSON using the 'html/template' package from the\
+    \ standard library. Here is what the source code for rendering HTML templates\
+    \ looks like:\n\n```\npackage main\n\nimport (\n\t\"html/template\"\n\t\"net/http\"\
+    \n\t\"path\"\n)\n\ntype Book struct {\n\tTitle string\n\tAuthor string\n}\n\n\
+    func main() {\n\thttp.HandleFunc(\"/\", ShowBooks)\n\thttp.ListenAndServe(\":8080\"\
+    , nil)\n}\n\nfunc ShowBooks(w http.ResponseWriter, r *http.Request) {\n\tbook\
+    \ := Book{\"Building Web Apps with Go\", \"Jeremy Saenz\"}\n\n\tfp := path.Join(\"\
+    templates\", \"index.html\")\n\ttmpl, err := template.ParseFiles(fp)\n\tif err\
+    \ != nil {\n\t\thttp.Error(w, err.Error(), http.StatusInternalServerError)\n\t\
+    \treturn\n\t}\n\n\tif err := tmpl.Execute(w, book); err != nil {\n\t\thttp.Error(w,\
+    \ err.Error(), http.StatusInternalServerError)\n\t}\n}\n```\n\nThis is the following\
+    \ template we will be using. It should be placed in a `templates/index.html` file\
+    \ in the directory your program is run from:"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '```
+
+    ```html
+
+    <html>
+
+    <h1>{{ .Title }}</h1>
+
+    <h3>by {{ .Author }}</h3>
+
+    </html>
+
+    ```
+
+    ```
+
+
+    # # Exercises
+
+
+    +   1. Look through the docs for `text/template` and `html/template` package.
+    Play with the templating language a bit to get a feel for its goals, strengths,
+    and weaknesses.
+
+
+    +   2. In the example we parse the files on every request, which can be a lot
+    of performance overhead. Experiment with parsing the files at the beginning of
+    your program and executing them in your `http.Handler` (hint: make use of the
+    `Copy()` method on `html.Template` ).
+
+
+    +   3. Experiment with parsing and using multiple templates.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "# Using the render package\n\nIf you want rendering JSON and HTML to be even\
+    \ simpler, there is the github.com/unrolled/render package. This package was inspired\
+    \ by the martini-contrib/render package and is my goto when it comes to rendering\
+    \ data for presentation in my web applications.\n\n```\npackage main\n\nimport\
+    \ (\n\t\"net/http\"\n\n\t\"gopkg.in/unrolled/render.v1\"\n)\n\nfunc main() {\n\
+    \tr := render.New(render.Options{})\n\tmux := http.NewServeMux()\n\n\tmux.HandleFunc(\"\
+    /\", func(w http.ResponseWriter, req *http.Request) {\n\t\tw.Write([]byte(\"Welcome,\
+    \ visit sub pages now.\"))\n\t})\n\n\tmux.HandleFunc(\"/data\", func(w http.ResponseWriter,\
+    \ req *http.Request) {\n\t\tr.Data(w, http.StatusOK, []byte(\"Some binary data\
+    \ here.\"))\n\t})\n\n\tmux.HandleFunc(\"/json\", func(w http.ResponseWriter, req\
+    \ *http.Request) {\n\t\tr.JSON(w, http.StatusOK, map[string]string{\"hello\":\
+    \ \"json\"})\n\t})\n\n\tmux.HandleFunc(\"/html\", func(w http.ResponseWriter,\
+    \ req *http.Request) {\n\t\t// Assumes you have a template in .templates called\
+    \ \"example.tmpl\"\n\t\t// $ mkdir -p templates & echo \"<h1>Hello {{.}}</h1>\"\
+    \ > templates/example.tmpl\n\t\tr.HTML(w, http.StatusOK, \"example\", nil)\n\t\
+    })\n\n\thttp.ListenAndServer(\":8080\", mux)\n}\n```\n\n# Exercises\n\n+   1.\
+    \ Have fun playing with all of the options available when calling `render.New()`\n\
+    +   2. Try using the `.yield` helper function (with the curly braces) and a layout\
+    \ with HTML"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: templates.
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# # Testing
+
+
+    Testing is an important part of any application. There are two approaches we can
+    take to testing Go web applications. The first approach is a unit-test style approach.
+    The other is more of an end-to-end approach. In this chapter we''ll cover both
+    approaches.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "# Unit Testing\n\nUnit testing allows us to test a `http.HandlerFunc` directly\
+    \ without running any middleware, routers, or any other type of code that might\
+    \ otherwise wrap the function.\n\n```\npackage main\n\nimport (\n\t\"fmt\"\n\t\
+    \"net/http\"\n)\n\nfunc HelloWorld(res http.ResponseWriter, req *http.Request)\
+    \ {\n\tfmt.Fprint(res, \"Hello World\")\n}\n\nfunc main() {\n\thttp.HandleFunc(\"\
+    /\", HelloWorld)\n\thttp.ListenAndServe(\":3000\", nil)\n}\n\n```\n\nThis is the\
+    \ test file. It should be placed in the same directory as your application and\
+    \ name `main_test.go` ."
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "```\npackage main\n\nimport (\n\t\"net/http\"\n\t\"net/http/httptest\"\n\t\"\
+    testing\"\n)\n\nfunc Test_HelloWorld(t *testing.T) {\n\treq, err := http.NewRequest(\"\
+    GET\", \"http://example.com/foo\", nil)\n\tif err != nil {\n\t\tt.Fatal(err)\n\
+    \t}\n\n\tres := httptest.NewRecorder()\n\tHelloWorld(res, req)\n\n\texp := \"\
+    Hello World\"\n\tact := res.Body.String()\n\tif exp != act {\n\t\tt.Fatalf(\"\
+    Expected %s gog %s\", exp, act)\n\t}\n}\n```\n\n# Exercises\n\n+   1. Change the\
+    \ output of `HelloWorld` to print a parameter and then test that the parameter\
+    \ is rendered.\n+   2. Create a POST request and test that the request is properly\
+    \ handled."
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "# # End To End Testing\n\nEnd to end allows us to test applications through\
+    \ the whole request cycle. Where unit testing is meant to just test a particular\
+    \ function, end to end tests will run the middleware, router, and other that a\
+    \ request my pass through.\n\n```\n```go\npackage main\n\nimport (\n\t\"fmt\"\n\
+    \t\"net/http\"\n\n\t\"github.com/codegangsta/negroni\"\n\t\"github.com/julienschmidt/httprouter\"\
+    \n)\n\nfunc HelloWorld(res http.ResponseWriter, req *http.Request, p httprouter.Params)\
+    \ {\n\tfmt.Fprint(res, \"Hello World\")\n}\n\nfunc App() http.Handler {\n\tn :=\
+    \ negroni.Classic()\n\n\tm := func(res http.ResponseWriter, req *http.Request,\
+    \ next http.HandlerFunc) {\n\t\tfmt.Fprint(res, \"Before...\")\n\t\tnext(res,\
+    \ req)\n\t\tfmt.Fprint(res, \"...After\")\n\t}\n\n\tn.Use(negroni.HandlerFunc(m))\n\
+    \n\tr := httprouter.New()\n\tr.GET(\"/\", HelloWorld)\n\tn.UseHandler(r)\n\treturn\
+    \ n\n}\n\nfunc main() {\n\thttp.ListenAndServ(\":3000\", App())\n}\n```\n```\n\
+    \nThis is the test file. It should be placed in the same directory as your application\
+    \ and name main_test.go ."
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "```\npackage main\n\nimport (\n\t\"io/ioutil\"\n\t\"net/http\"\n\t\"net/http/httptest\"\
+    \n\t\"testing\"\n)\n\nfunc Test_App(t *testing.T) {\n\ts := httptest.NewServer(App())\n\
+    \tdefer s.Close()\n\n\tres, err := http.Get(s.URL)\n\tif err != nil {\n\t\tt.Fatal(err)\n\
+    \t}\n\n\tbody, err := ioutil.ReadAll(res.Body)\n\tres.Body.Close()\n\n\tif err\
+    \ != nil {\n\t\tt.Fatal(err)\n\t}\n\n\texp := \"Before...Hello World...After\"\
+    \n\n\tif exp != string(body) {\n\t\tt.Fatalf(\"Expected %s got %s\", exp, body)\n\
+    \t}\n}\n```\n\n# Exercises\n\n+   1. Create another piece of middleware that mutates\
+    \ the status of the request.\n+   2. Create a POST request and test that the request\
+    \ is properly handled."
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "# Controllers\n\nControllers are a fairly familiar topic in other web development\
+    \ communities. Since most web developers rally around the mighty net/http interface,\
+    \ not many controller implementations have caught on strongly. However, there\
+    \ is great benefit in using a controller model. It allows for clean, well defined\
+    \ abstractions above and beyond what the net/http handler interface can alone\
+    \ provide.\n\n# Handler Dependencies\n\nIn this example we will experiment with\
+    \ building our own controller implementation using some standard features in Go.\
+    \ But first, lets start with the problems we are trying to solve. Say we are using\
+    \ the `render` library that we talked about in previous chapters:\n\n```\nvar\
+    \ Render = render.New(render.Options{})\n```\n\nIf we want our `http.Handler`s\
+    \ to be able access our `render.Render` instance, we have a couple options.\n\n\
+    +   1. Use a global variable: This isn't too bad for small programs, but when\
+    \ the program gets larger it quickly becomes a maintenance nightmare.\n\n+   2.\
+    \ Pass the variable through a closure to the `http.Handler`: This is a great idea,\
+    \ and we should be using it most of the time. The implementation ends up looking\
+    \ like this:\n\n```\nfunc MyHandler(r *render.Render) http.Handler {\n\treturn\
+    \ http.HandlerFunc(func(rw http.ResponseWriter, r *http.Request) {\n\t\t// now\
+    \ we can access r\n\t})\n}\n```\n\n# Case for Controllers\n\nWhen your program\
+    \ grows in size, you will start to notice that many of your `http.Handler`s will\
+    \ share the same dependencies and you will have a lot of these closurized `http.Handler`s\
+    \ with the same arguments. The way I like to clean this up is to write a little\
+    \ base controller implementation that affords me a few wins:\n\n+   1. Allows\
+    \ me to share the dependencies across `http.Handler`s that have similar goals\
+    \ or"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "concepts.\n\n+   2. Avoids global variables and functions for easy testing/mocking.\n\
+    +   3. Gives me a more centralized and Go-like mechanism for handling errors.\n\
+    \nThe great part about controllers is that it gives us all these things without\
+    \ importing an external package! Most of this functionality comes from clever\
+    \ use of the Go feature set, namely Go structs and embedding. Let's take a look\
+    \ at the implementation.\n\n```\npackage main\n\nimport \"net/http\"\n\n// Action\
+    \ defines a standard function signature for us to use when creating\n// controller\
+    \ actions. A controller action is basically just a method attached to\n// a controller.\n\
+    type Action func(rw http.ResponseWriter, r *http.Request) error\n\n// This is\
+    \ our Base Controller\ntype AppController struct{}\n\n// The action function helps\
+    \ with error handling in a controller\nfunc (c *AppController) Action(a Action)\
+    \ http.Handler {\n\treturn http.HandlerFunc(func(rw http.ResponseWriter, r *http.Request)\
+    \ {\n\t\tif err := a(rw, r); err != nil {\n\t\t\thttp.Error(rw, err.Error(), 500)\n\
+    \t\t}\n\t})\n}\n}\n```\n\nThats it! That is all the implementation that we need\
+    \ to have the power of controllers at our fingertips. All we have left to do is\
+    \ implement an example controller:"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "```\npackage main\n\nimport (\n    \"net/http\"\n\n    \"gopkg.in/unrolled/render.v1\"\
+    \n)\n\ntype MyController struct {\n    AppController\n    *render.Render\n}\n\n\
+    func (c *MyController) Index(rw http.ResponseWriter, r *http.Request) error {\n\
+    \    c.JSON(rw, 200, map[string]string{\"Hello\": \"JSON\"})\n    return nil\n\
+    }\n\nfunc main() {\n    c := &MyController{Render: render.New(render.Options{})}\n\
+    \    http.ListenAndServe(\":8080\", c.Action(c.Index))\n}\n```\n\n# Exercises\n\
+    \n+   1. Extend MyController to have multiple actions for different routes in\
+    \ your application.\n+   2. Play with more controller implementations, get creative.\n\
+    +   3. Override the Action method on MyController to render a error HTML page."
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# # Databases
+
+
+    One of the most asked questions I get about web development in Go is how to connect
+    to a SQL database. Thankfully, Go has a fantastic SQL package in the standard
+    library that allows us to use a whole slew of drivers for different SQL databases.
+    In this example we will connect to a SQLite database, but the syntax (minus some
+    small SQL semantics) is the same for a MySQL or PostgreSQL database.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "```\npackage main\n\nimport (\n\t\"database/sql\"\n\t\"fmt\"\n\t\"log\"\n\t\
+    \"net/http\"\n\n\t_ \"github.com/mattn/go-sqlite3\"\n)\n\nfunc main() {\n\tdb\
+    \ := NewDB()\n\tlog.Println(\"Listening on :8080\")\n\thttp.ListenAndServe(\"\
+    :8080\", ShowBooks(db))\n}\n\nfunc ShowBooks(db *sql.DB) http.Handler {\n\treturn\
+    \ http.HandlerFunc(func(rw http.ResponseWriter, r *http.Request) {\n\t\tvar title,\
+    \ author string\n\t\terr := db.QueryRow(\"select title, author from books\").Scan(&title,\
+    \ &author)\n\t\tif err != nil {\n\t\t\tpanic(err)\n\t\t}\n\n\t\tfmt.Fprintf(rw,\
+    \ \"The first book is '%s' by '%s'\", title, author)\n\t})\n}\n\nfunc NewDB()\
+    \ *sql.DB {\n\tdb, err := sql.Open(\"sqlite3\", \"example.sqlite\")\n\tif err\
+    \ != nil {\n\t\tpanic(err)\n\t}\n\n\t_, err = db.Exec(\"create table if not exists\
+    \ books(title text, author text)\")\n\tif err != nil {\n\t\tpanic(err)\n\t}\n\n\
+    \treturn db\n}\n```\n\n# # Exercises\n\n+   1. Make use of the `query` function\
+    \ on our `sql.DB` instance to extract a collection of rows and map them to structs.\n\
+    +   \n+   2. Add the ability to insert new records into our database by using\
+    \ an HTML form."
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: +   3. go get github.com/jmoiron/sqlx and observe the improvements made over
+    the existing database/sql package in the standard library.
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "# Tips and Tricks\n\n# Wrap a http.HandlerFunc closure\n\nSometimes you want\
+    \ to pass data to a http.HandlerFunc on initialization. This can easily be done\
+    \ by creating a closure of the `http.HandlerFunc` :\n\n```\n```go\nfunc MyHandler(database\
+    \ *sql.DB) http.Handler {\n\treturn http.HandlerFunc(func(rw http.ResponseWriter,\
+    \ r *http.Request) {\n\t\t// you now have access to the *sql.DB here\n\t})\n}\n\
+    ```\n```\n\n# Using gorilla/context for request-specific data\n\nIt is pretty\
+    \ often that we need to store and retrieve data that is specific to the current\
+    \ HTTP request. Use `gorilla/context` to map values and retrieve them later. It\
+    \ contains a global mutex on a map of request objects.\n\n```\n```go\nfunc MyHandler(w\
+    \ http.ResponseWriter, r *http.Request) {\n\tval := context.Get(r, \"myKey\")\n\
+    \n\t// returns (\"bar\", true)\n\tval, ok := context.GetOk(r, \"myKey\")\n\n\t\
+    // ...\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# # Moving Forward
+
+
+    You''ve done it! You have gotten a taste of Go web development tools and libraries.
+    At the time of this writing, this book is still in flux. This section is reserved
+    for more Go web resources to continue your learning.'
+  merge: -1
+  img_proc: true
