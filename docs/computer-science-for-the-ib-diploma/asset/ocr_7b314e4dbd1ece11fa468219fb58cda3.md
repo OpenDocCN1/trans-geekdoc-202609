@@ -1,0 +1,16 @@
+**Feedback:** The chief examiner, summarizing the quality of responses to this question, stated: The majority of candidates wrote an adequate response. While many referenced NextStar, often their analysis was on a generic movie-recommender system. The better responses honed in on the challenges and built their essay around them, offering ways to address them. These candidates understood that the type of recommender system might start off simple and evolve over time. There were few proficient responses. Most candidates failed to structure their essays to focus on the challenges while explaining the computer science relating to recommender systems. Very few candidates referenced journals or other sources, and although some included real-world recommender systems, it was rarely as a comparative analysis. The broadness of the question troubled some students who tried to include all three areas and ended up with no depth whatsoever. Their responses were usually descriptive and lacked any analysis or evaluation.
+IBDP Computer science subject report, May 2023 T22
+
+**Question:** A recommender system that uses a supervised learning K-nearest neighbour (k-NN) algorithm is selected. Supervised learning algorithms require several decisions to be made, including setting any hyperparameters, choosing data sets, training and testing procedures, and evaluation strategies. Discuss whether the selection and implementation of a k-NN algorithm in the development of a recommender system will give precise and accurate recommendations. (November 2023)
+
+**Feedback:** The chief examiner, summarizing the quality of responses to this question, stated: Many students had not researched this topic and wrote basic responses, often copying several lines from the case study. Even those students who wrote adequate responses often failed to explore the algorithm beyond describing its operation. Technical terminology tended to be used appropriately but not expanded upon. The better responses explored supervised learning, analysed the k-NN algorithms, and discussed how the recommender system could be evaluated. Weaknesses such as the cold start problem, popularity bias, and overfitting were considered. Very few responses considered strategies for overcoming these problems. There were few proficient responses. However, those were analytical and considered the question from a broad perspective, even considering data sets and preprocessing strategies. One or two students referenced journals or other sources.
+IBDP Computer science subject report, November 2023
+
+# # Rescue robots (May & November 2024)
+
+**Scenario:** Based around rescue robots, which are designed to help with the search and rescue of humans after a disaster, such as an earthquake or tsunami. These robots may assist the efforts of rescue teams by searching and mapping areas, assessing damage, removing debris, delivering supplies and evacuating casualties.
+
++   **Technologies:** Technologies referred to include:
++   - computer vision
++   - visual simultaneous localization and mapping (vSLAM)
++   - pose estimation.
