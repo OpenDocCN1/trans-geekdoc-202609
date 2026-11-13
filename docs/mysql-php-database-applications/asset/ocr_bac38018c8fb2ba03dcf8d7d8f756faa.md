@@ -1,0 +1,43 @@
+# select_to_table()
+
+This function takes a query and lays it out in a simple HTML table. It assumes that a database connection has already been made.
+
+```
+function select_to_table($query)
+{
+	$result=mysql_query($query);
+	$number_cols = mysql_num_fields($result);
+	echo "<b>query: $query</b>";
+	//layout table header
+	echo "<table border = 1>\n";
+	echo "<tr align=center>\n";
+	for ($i=0; $i<$number_cols; $i++)
+	{
+		echo "<th>" . mysql_field_name($result, $i). "</th>\n";
+	}
+	echo "</tr>\n";//end table header
+	//layout table body
+	while ($row = mysql_fetch_row($result))
+	{
+		echo "<tr align=left>\n";
+		for ($i=0; $i<$number_cols; $i++)
+		{
+			echo "<td>";
+			if (!isset($row[$i])) //test for null value
+			{
+				echo "NULL";
+			}
+			else
+			{
+				echo $row[$i];
+			}
+			echo "</td>\n";
+		} echo "</tr>\n";
+	}
+	echo "</table>";
+}
+```
+
+# enum_to_array()
+
+This function returns the values defined in an enum field into an array.

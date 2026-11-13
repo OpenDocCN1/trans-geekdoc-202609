@@ -1,0 +1,19 @@
+# # Preface
+
+Welcome. If you are thumbing through these pages, you’re probably considering writing Web-based applications with PHP and MySQL. If you decide to go with these tools, you’ll be in excellent company. Thousands of developers – from total newbies to programmers with years of experience – are turning to PHP and MySQL for their Web-based projects, and for good reason.
+
+Both PHP and MySQL are easy to use, fast, free, and powerful. If you want to get a dynamic Web site up quickly, there are no better choices. The PHP scripting language was built for the Web. All the tasks common to Web development can be performed in PHP with an absolute minimum of effort. Similarly, MySQL excels at tasks common to dynamic Web sites. Whether you’re creating a content-management system or an e-commerce application, MySQL is a great choice for your data storage.
+
+# # Is This Book for You?
+
+Quite a few books deal with PHP, and a few cover MySQL. We’ve read some of these and found a few to be quite helpful. If you’re looking for a book that deals with the gory details of either of these packages, you should probably look elsewhere.
+
+The focus of this book is applications development. We are concerned with what it takes to get data-driven Web sites up and running in an organized and efficient way. The book does not go into arcane detail of every aspect of either of these tools. For example, in this book you will not find a discussion of PHP’s LDAP functions or MySQL’s C application program interface (API). Instead, we focus on the pieces of both packages that affect one another. We hope that by the time you’re done with this book you’ll know what it takes to get an application up and running using PHP and MySQL.
+
+# # How This Book Is Organized
+
+We have organized the book into five parts.
+
+# ## Part I: Working with MySQL
+
+Before you code any PHP scripts you need to know how to design a database, create tables in your database, and get the information you want from the database. Part I of this book shows you just about everything you need to know to work with MySQL.

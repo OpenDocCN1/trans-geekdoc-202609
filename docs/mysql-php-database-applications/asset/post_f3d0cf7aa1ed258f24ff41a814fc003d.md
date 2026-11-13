@@ -1,0 +1,240 @@
+
+## C
+
+- threaded discussion, main functions, 320–321
+- user-defined functions, 200–208
+- code class. See class
+- column
+  - date and time, 35–37
+  - definitions, changing, 43–44
+  - dependencies, 11
+  - dropping, 43
+  - excessive use of, 19
+  - indexes, creating, 37–38
+  - numeric, 33–35
+  - sum of given, returning (sum() function), 77–78
+  - table, adding, 42
+  - text strings, 29–33
+  - viewing, 46
+- command, terminating (g), 176
+- command-line interface (mysql), 583–586
+- commands, bundle. See transaction
+- comments, code, organized and readable, 221–224
+- COMMIT(), catalog classes, 422
+- common elements, array functions (ARRAY_INTERSECT()), 159
+- comparison operators, 69, 122
+- complex data types, SOAP (Simple Object Access Protocol), 523–524
+- complex if statement, 123–124
+- concatenating
+  - arguments (CONCAT), 711–712
+  - array elements in a string (JOIN()), 154
+  - arrays (ARRAY_MERGE()), 156
+  - string input (STR_REPEAT()), 139–140
+- conditions, checking, 125–127
+- configuration
+  - option (ini_get()), 189
+  - PHP, 580–581
+  - value, assigning (ini_set()), 189
+- connection
+  - database, 670
+  - persistent, 365–368
+  - string, 362–365
+- constant
+  - defining to use in bitmask (get_constant()), 345–347
+  - Guestbook 2003 (FROM /GUESTBOOK2K/GLOBALS.PHP), 241–242
+  - value of defined, 149
+- constructor, 213–214, 422–423
+
+- content-management system
+  - administrator functions (content/admin/user.php), 389–392
+  - application scope and goals, 350–353
+  - author, finding all stories by (function fetch_author()), 378
+  - authors table, creating or updating records (write_author()), 381–382
+  - code overview, 361–362
+  - connection string, 362–365
+  - customization, need for, 349–350
+  - database design, 355–361
+  - editorial review (content/story.php), 392–394
+  - error handling (db_error_handler()), 368–369
+  - NULL value, checking for (nullop()), 373–374
+  - persistent connection, creating (db_connect()), 365–368
+  - query, shorthand (db_values_array()), 372–373
+  - records, getting (db_fetch_record()), 369–372
+  - security, 353–355
+  - stages, looking up (stage(), stage_id(), stages()), 379–380
+  - stories table, creating or updating records (write_story()), 382–387
+  - story record, getting (fetch_story()), 375–376
+  - table, building for workflow stages (stage_table_name()), 380–381
+  - user and password validation (connect_validate_login()), 374–375
+  - user authentication (content/authenticate.php), 387–389
+  - user postings, finding all (fetch_user()), 378–379
+  - version of story, getting (fetch_story_version()), 376–378
+- continue loop, 131–132
+- control characters, 186
+- converting
+  - array elements into variables (COMPACT()), 153
+  - current time to seconds (SEC_TO_TIME), 730
+  - floating-point numbers to formatted string (NUMBER_FORMAT()), 154
+  - type when comparing variables, 92–93
+- cookie
+  - browser-passed variables, accessing, 104–106
+  - HTTP header, setting (setcookie()), 180
+- copy, joining tables to itself (self), 85–86
+- copying
+  - files (COPY()), 173–174
+  - part of image (IMAGECOPYRESIZED()), 181–182
+- cosine (COS), 706
+- cotangent (COT), 707
+- counting
+  - array functions (ARRAY_COUNT()), 157–158
+  - characters in string (STRLEN()), 140
+  - number of rows in each group (count() function), 74–77
+  - repeating string certain number of times (REPEAT), 717
+- credit-card processor, shopping cart, 486
+- C-style pattern string, formatting (SPRINTF()), 166
+- CURL function, 641
+- current date and time (NOW), 729
+- current date (CURDATE), 729
+- current time, 169, 729, 730
+- cursor array, resetting (RESET()), 162
+- customer
+  - ID, finding by (fetch_customer()), 454–455
+  - identifying by phone number or email address (find_customer()), 457–459
+  - response in (write_customer.php), 466–473
+  - sending email (notify_customer()), 461–462
+- CyberCash function, 643
+
+## D
+
+- daemon, MySQL, checking for alive and running, 588
+- data
+  - catalog, 403–407
+  - complex types, SOAP, 523–524
+  - deleting from tables, 59–61
+  - eliminating duplicate from tables (distinct clause), 70
+  - inserting into tables, 53–55
+  - replacing in tables, 61–64
+  - retrieving from tables (select), 64–67
+  - shopping cart, 479–480
+  - simple table, 6
+  - threaded discussion, 316–320
+  - tracking updates (history_entry()), 459–461
+  - updating tables, 55–59
+- Data Definition Language. See DDL
+- data stream, thumbnails, retrieving as (EXIF_THUMBNAIL()), 183
+- database
+  - call, putting together (SELECT_ENTRIES()), 253–254
+  - defining default working (use command), 27
+  - design
+    - anomalies, 5–10
+    - content-management system, 355–361
+    - Guestbook 2003, 234–235
+    - normalization, 10–14
+    - problem-tracking system, 444–452
+    - project management, 541–544
+    - referential integrity, 19–20
+    - relational databases, benefits of, 3–5
+    - relationships, 15–19
+    - stored procedures, 21–22
+    - survey, 266–270
+    - transactions, 20–21
+  - examining (show command), 44–48
+  - form data, inserting for threaded discussion (create_topic()), 329–332
+  - functions, user-defined, 670–671
+  - GUI tools, 48–52
+  - name, current, 730
+  - record tree structure, 488–490
+  - table
+    - creating, 26–27
+    - user administration, 600–601
+    - username and password, verifying against (authenticate()), 669
+  - variable format (SESSION_ENCODE()), 485
+- date and time
+  - calculations
+    - arithmetic (DATE_ADD), 723–725
+    - day from specified year (FROM_DAYS), 726
+    - difference of months in period (PERIOD_DIFF), 723
+    - months, adding to period (PERIOD_ADD), 722–723
+    - valid dates (MKTIME()), 168–169
+  - changes, recording most recent (timestamp), 36
+  - current, 169, 729
+  - date, current (CURDATE), 729
+  - day number (TO_DAYS), 726
+  - day of the month, 720
+  - day of year, 720
+  - described, 620
+  - format
+    - current time as seconds (TIME_TO_SEC), 730
+    - full name of month, 721
+    - full name of weekday (DAYNAME), 721
+    - hour, 722
+    - hour, minute, second (time), 37
+    - setting (DATE_FORMAT), 726–728
+    - two-digit year (year[[2|4]]), 37
+    - week beginning with Monday index (WEEKDAY), 720
+    - week beginning with Sunday index (DAYOFWEEK), 719–720
+    - week of year (YEARWEEK), 722
+    - year, 722
+    - year, month, day, 36
+    - year, month, day, time, 36
+  - insert statements, 35
+  - interpretation, 35
+  - location in manual, 170
+  - minute, 722
+  - month, 720
+  - PHP scripts, 166–170
+  - quarter of year, 721
+  - returning (DATE()), 166–168
+  - second, 722
+  - seconds, converting to (SEC_TO_TIME), 730
+  - seconds since Unix Epoch (MICROTIME()), 169–170
+  - since UNIX time, 730
+  - UNIX timestamp, 729–730
+  - week, 721
+- DDL (Data Definition Language), 23
+- debugging
+  - constant, defining to use in bitmask (get_constant()), 345–347
+  - described, 332–333
+  - function, calling when error occurs (error_handler()), 337–345
+  - level displayed and logged, 333
+  - simplifying (push_handler() and pop_handler()), 337
+  - tracking responses to types, 333–336
+- decimals
+  - rounding to integer with specified number (ROUND), 704
+  - storing as characters (decimal), 35
+  - truncating to D (TRUNCATE), 704
+- declaring variables, PHP scripts, 91–93
+- decomposition, 5
+- decrypting password, 732
+- default path, adding to directory (ADD_TO_INCLUDE_PATH()), 292–293
+- defined constants, 149
+- defining, variable with specified name and value (define()), 149
+- definitions, column, changing, 43–44
+- degrees
+  - radians, converting segment to (RADIANS), 709
+  - segment, converting from radian (DEGREES), 708
+- delete anomaly, 8, 9
+- deleting
+  - all path elements but base (BASENAME()), 175
+  - from arrays
+    - first element (ARRAY_SHIFT()), 160
+    - last element from array (ARRAY_POP()), 160
+  - catalog records (DELETE_FROM_DB()), 417
+  - control characters from URL functions (base64_encode()), 186
+  - Guestbook 2003 entries, 257–258
+  - highest value (max() function), 78
+  - HTML and PHP tags (cleanup_text()), 669
+  - leading and trailing spaces (TRIM), 715–716
+  - lowest value (min() function), 78
+  - slashes from insert and update queries (STRIPSLASHES()), 138–139
+  - specific elements (ARRAY_SPLICE()), 156–157
+  - from strings
+    - HTML and PHP tags (STRIP_TAGS()), 137–138
+    - leading spaces (LTRIM), 715
+    - trailing-space characters (RTRIM), 715
+  - survey questions (admin/questions.php), 298–303
+  - from tables
+    - data, 59–61
+    - duplicate data (distinct clause), 70
+    - in SQL (delete_row()), 678
+- dependencies, 11, 13–14

@@ -1,0 +1,338 @@
+
+```php
+$o->total_quantity = $total_quantity;
+
+// print out totals
+print table_row('<hr>','<hr>','<hr>','<hr>');
+print table_row(
+    table_header_cell(array('align'=>'right', 'value'=>'Grand Total'))
+    . table_header_cell(array('align'=>'right', 'value'=>$total_quantity))
+    . '&nbsp;'
+    . table_header_cell(array('align'=>'right', 'value'=>money($total_price)))
+);
+
+print table_row(
+    table_cell(array(
+        'colspan' => 4,
+        'value' => submit_field('Recalculate Order')
+    ))
+);
+
+$url = 'display.php';
+if (isset($p))
+{
+    $url .= '?product_id='.$p->product_id;
+}
+print table_row(
+    table_cell(array(
+        'align' => 'right',
+        'colspan' => 4,
+        'value' => '<b>' . anchor_tag(regular_url($url), 'Continue Shopping') . '</b>'
+    ))
+);
+
+print end_table();
+print end_form();
+save_session_order($o);
+?>
+```
+
+## CHECKOUT.PHP
+
+现在，终于到了结账的时候。请注意，这确实是唯一需要放在安全服务器上的文件。目录部分甚至购物车页面都不需要放在安全服务器上，因为它们不包含需要保护的信息。但是，在这个页面上，您将要接受信用卡信息。
+
+脚本中包含了大量注释，以帮助您理解页面的逻辑。
+
+```php
+<?php
+require_once('header.php');
+
+// get the session variables for the shopping cart, the current
+// order,
+// and the user's email address
+// order = get_session_order();
+
+// if a value for 'email' was posted to the script from a form, use
+// that in preference to the session variable
+$_SESSION['email'] = array_key_value(
+    $_POST,
+    'email',
+    array_key_value($_SESSION, 'email')
+);
+$order->email = $_SESSION['email'];
+
+// set up variables defining the values of the buttons of the form
+// (defining the values once helps avoid errors caused by spelling problems.)
+$order_button = 'ORDER NOW!';
+
+// load data from form into order
+$order->build($_POST);
+
+$submit = array_key_value($_POST, 'submit');
+if ($submit == $order_button)
+{
+    // the user hit the big ORDER button. validate their credit
+    // card and charge it, using the ValidateCard() and ChargeCard()
+    // functions of the Order class.
+
+    if (!$order->charge_card())
+    {
+        print "could not charge card\n";
+    }
+    else
+    {
+        // the charge went through - write the order to the
+        // database using the SaveOrder() method of the Order class.
+        $order->write_to_db();
+
+        // redirect the user to the receipt page for a receipt
+        // they can print or save to a file, and exit the script.
+        // pass on the ID value of the new order record and
+        // the session ID that was passed in to this script.
+
+        $url = 'receipt.php?order_id='
+            . $order->order_id
+            . '&sessid='
+            . session_id()
+            ;
+
+        // header('Location: $url');
+        print paragraph(anchor_tag($url, $url));
+        // exit;
+    }
+}
+
+print start_page(
+    anchor_tag('index.php', "Bag O'Stuff")
+    . '<br>&nbsp;<br>Check Out'
+);
+
+print paragraph(
+    start_form()
+    , submit_field(array('name'=>'reset_order','value'=>'Reset Order Object'))
+    , end_form()
+);
+
+// include the shopping cart form
+print print_cart($order);
+
+// begin the order form.
+print start_form();
+
+print hidden_field('sessid', session_id());
+
+print subtitle('User Info');
+// store the IDs of the user and address (if any)
+print hidden_field('user_id', $order->user_id);
+
+print hidden_field('address_id', $order->address_id);
+
+start_table(array('_defaults'=>array('cellspacing'=>4)));
+
+print start_table();
+
+// display the user's email address, along with the button they
+// can use to ask to check the database for address information.
+print labeled_row(
+    'Email:',
+    text_field(array(
+        'name' => 'email',
+        'value' => $order->email,
+        'size' => 20
+    ))
+    . '&nbsp;',
+    submit_field('Get My Info')
+);
+
+print labeled_row(
+    'First Name:',
+    text_field(array(
+        'name' => 'firstname',
+        'value' => $order->firstname,
+        'size' => 42,
+        'maxlength' => 40
+    ))
+);
+
+print labeled_row(
+    'Last Name:',
+    text_field(array(
+        'name' => 'lastname',
+        'value' => $order->lastname,
+        'size' => 42,
+        'maxlength' => 40
+    ))
+);
+
+print table_row(table_cell(array('colspan'=>2, 'value'=>'&nbsp;')));
+
+// these fields contain any address information that might have been
+// directly entered by the user before the database was searched, or
+// the information from an address from the database that has been
+// selected by the user. in any case, *these* fields are what will
+// be used in the order.
+print labeled_row(
+    'Address:',
+    text_field(array(
+        'name' => 'address1',
+        'value' => $order->address1,
+        'size' => 42,
+        'maxlength' => 40
+    ))
+);
+print labeled_row(
+    '&nbsp;',
+    text_field(array(
+        'name' => 'address2',
+        'value' => $order->address2,
+        'size' => 42,
+        'maxlength' => 40
+    ))
+);
+print labeled_row(
+    'City:',
+    text_field(array(
+        'name' => 'city',
+        'value' => $order->city,
+        'size' => 42,
+        'maxlength' => 40
+    ))
+);
+print labeled_row(
+    'State:',
+    select_field(array(
+        'name' => 'state',
+        'values' => states(),
+        'match' => $order->state
+    ))
+);
+print labeled_row(
+    'Zip:',
+    text_field(array(
+        'name' => 'zip',
+        'value' => $order->zip,
+        'size' => 12,
+        'maxlength' => 10
+    ))
+);
+
+print labeled_row(
+    'Phone:',
+    text_field(array(
+        'name' => 'phone',
+        'value' => $order->phone,
+        'size' => 22,
+        'maxlength' => 20
+    ))
+);
+if ($order->address_id)
+{
+    // allow the user to create a new address
+    print table_row(
+        '&nbsp;',
+        checkbox_field(array(
+            'name' => 'save_as_new',
+            'value' => 'yes',
+            'label' => 'Save this as a new address'
+        ))
+    );
+}
+print end_table();
+// display the available shipping methods
+print subtitle('Shipping Info');
+print start_table(array('cellspacing'=>4));
+print table_row(
+    table_header_cell('Shipping Method')
+    . table_header_cell(array('value'=>'Per Order', 'align'=>'right'))
+    . table_header_cell(array('value'=>'Per Item', 'align'=>'right'))
+    . table_header_cell(array('value'=>'Total for Order', 'align'=>'right'))
+);
+// set up shipping methods
+foreach ($order->shipping_methods() as $shipping_id => $r)
+{
+    // calculate the cost of using this method. we use a simplistic
+    // system: a fixed cost per order, and a per item charge.
+    $shiptotal = $r['per_order'] + ($order->total_quantity * $r['per_item']);
+
+    // display the shipping method with a radio field allowing the
+    // user to choose it
+    print table_row(
+        radio_field(array(
+            'name' => 'shipping_id',
+            'value' => $shipping_id,
+            'label' => $r['shipping'],
+            'match' => $order->shipping_id
+        ))
+        . table_cell(array('value'=>money($r['per_order']), 'align'=>'right'))
+        . table_cell(array('value'=>money($r['per_item']), 'align'=>'right'))
+        . table_cell(array('value'=>money($shiptotal), 'align'=>'right'))
+    );
+}
+print end_table();
+
+// display payment information
+print subtitle('Credit Card Info');
+
+print start_table();
+
+if ($order->error)
+{
+    // if the user tried to place an order and there was an error
+    // when validating or charging the card, display it here.
+    print table_row(
+        table_cell(array(
+            'style' => 'color:red',
+            'value' => $order->error,
+            'colspan'=>2
+        ))
+    );
+    $order->error = '';
+}
+
+// display a test card number in the form for this example by default.
+
+// it has a valid format, and since we're not really trying
+// to charge any cards here, AuthorizeNet will accept it.
+if (empty($order->cc_number))
+{
+    $order->cc_number = '4912-7398-07156';
+}
+
+// pick Visa as the default type, to match the default test card number
+if (empty($order->cc_type_code))
+{
+    $order->cc_type_code = 'vis';
+}
+
+// display the accepted credit card types as radio button fields
+$cc_types = $order->dbh()->getAssoc('select cc_type_code, cc_type from cc_types');
+
+print labeled_row(
+    'Credit Card:',
+    select_field(array(
+        'name' => 'cc_type_code',
+        'match' => $order->cc_type_code,
+        'values' => $cc_types
+    ))
+);
+
+print labeled_row(
+    'Number:',
+    text_field(array(
+        'name' => 'cc_number',
+        'value' => $order->cc_number,
+        'size' => 22
+    ))
+);
+
+// set the variables used to enter the credit card expiration date
+
+// set the $months array to a list of possible months
+$months = array(
+    1 => 1,
+    2 => 2,
+    3 => 3,
+    4 => 4,
+    5 => 5
+);
+```
