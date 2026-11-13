@@ -1,0 +1,3963 @@
+- pgno: 0
+  md: '# # CISSP Exam Guide
+
+
+    by _ </:Walter A. Roberts>
+
+
+    # # CISSP Certified Information System Security Professional Official Practice
+    Tests With Exam Strategies
+
+
+    ![](img/c822e318f96719664f5c364a5a3871ff_0_0.png)
+
+
+    Mc Graw Hill Education'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# # CISSP Exam Guide
+
+
+    CISSP Certified Information System Security Professional
+
+    Official Practice Tests With Exam Strategies
+
+
+    Walter A. Roberts'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '© Copyright 2021 Walter A. Roberts All Rights Reserved
+
+
+    No part of this publication may be reproduced, stored in a retrieval system, or
+    transmitted in any form or by any means, electronic, mechanical, photocopying,
+    recording, scanning, or otherwise, except as permitted under Section 107 or 108
+    of the 1976 United States Copyright Act, without the prior written permission
+    of the Publisher.
+
+
+    Limit of Liability/Disclaimer of Warranty: The publisher and the author make no
+    representations or warranties with respect to the accuracy or completeness of
+    the contents of this work and specially disclaim all warranties, including without
+    limitation warranties of fitness for a particular purpose. No warranty may be
+    created or extended by sales or promotional materials. The advice and strategies
+    contained herein may not be suitable for every situation. This work is sold with
+    the understanding that the Publisher is not engaged in rendering medical, legal,
+    or other professional assistance is required, the service of a competent professional
+    person should be sought. Neither the Publisher nor the Author shall be liable
+    for damages arising herefrom. The fact that an individual, organization, or web
+    site is referred to in this work as a citation and/or potential source of further
+    information does not mean that the Author or the Publisher endorses the information
+    the individual, organization, or website may provide or recommendations they/it
+    may make. Further, readers should be aware that websites listed in this work may
+    have changed or disappeared between when this work was written and when it is
+    read.
+
+
+    Cover Designer: Mark Buster
+
+
+    Editor: Walter A. Roberts'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# # TABLE OF CONTENTS
+
+
+    Introduction
+
+
+    Chapter 1: Exam And Fee Structure
+
+
+    Chapter 2: Test Pattern And Rules
+
+
+    Chapter 3: Course Contents
+
+
+    Chapter 4: Understanding The Need Of Cybersecurity
+
+
+    Chapter 5: Effective Study Schedule And Study Groups
+
+
+    Chapter 6: Exam Strategies And How To Utilize Exam Resources
+
+
+    Chapter 7: Preparation Before Exam
+
+
+    Chapter 8: The Day Of Your Examination
+
+
+    Chapter 9: After The Examination Is Conducted
+
+
+    Chapter 10: Time Management Tips And Tricks
+
+
+    Chapter 11. Confidence Is The Key
+
+
+    Chapter 12: Perks Of A CISSP Certified Professional
+
+
+    Conclusion'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Introduction
+
+
+    CISSP is a cybersecurity certification. The CISSP certification is provided by
+    the (ISC)2 and helps you unlock a diverse field for you. This certification makes
+    you become a professional cybersecurity expert where you are able to design a
+    security program, not just that but it also helps with effectively implementing
+    it and then managing it as well. This certification makes you able to design effective
+    world-class security systems. Security is very important nowdays. It is the need
+    of time, every organization has loads of data to manage and look after. Cyber
+    attackers and intruders are waiting to find that perfect opportunity to breach
+    the security systems so they can use it for their gains. No system and network
+    are secure at the hands of these attackers and intruders. Thus it is very important
+    to have the best cybersecurity programs to keep these malicious attackers at bay
+    and help protect the data of the organization. Not just the data but the computer
+    systems and the network as well. It is very essential to protect the network as
+    well. If your network is not properly secured it can pave way for the attackers
+    to launch attacks'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'on the computer systems by corrupting and compromising the network.
+
+
+    The companies also understand the importance of having good and secure cybersecurity
+    programs in order to keep their data safe and protected. There are several active
+    certified CISSP professionals but the companies are searching for more people
+    because of the industry requirement. They have started to invest a great deal
+    of money to make sure their data and the systems are safe from malicious attackers.
+    Connection of the devices to the internet is also a great reason for the contamination
+    of these systems and data by malicious software launched by the attacker. Internet
+    is a wide and diverse environment where you are exposed to all kinds of malicious
+    softwares and activities. You need to be very watchful when you are connected
+    to the internet and maintain a distance from all those practices that could lead
+    to potential data and security breaches.
+
+
+    Learning cybersecurity with the help of the CISSP certification is going to lead
+    your way into becoming a great and expert cybersecurity analyst and designer.
+    You will be able to design world-class security programs for the companies that
+    want to protect their data and systems from security breaches by these attackers
+    and intruders. Just because of the huge increase in the data and the number of
+    organizations that there are nowadays, the need for cybersecurity experts has
+    greatly increased. You can start with the certification and later on, you can
+    start developing and designing programs for maintaining cybersecurity in different
+    national and international organizations. By becoming a part of this CISSP certification,
+    you not only provide yourself with the tools and resources that are required to
+    become a successful cybersecurity expert but also make you a member of the (ISC)2
+    member. Becoming an (ISC)2 member means you have secured your future. It is going
+    to help you achieve a number of networking opportunities. Networking opportunities
+    can help you with polishing your socializing skills. It is going to help you develop
+    contacts with high-profile and distinguished people. CISSP is a very good choice
+    for you if you are looking for programs that not only provide you with information
+    and knowledge but also help you with gaining full expertise in the cybersecurity
+    domain. This domain is one of those which has a lot of scopes nowadays and shall
+    always have because the protection of data has to ensure not just today but in
+    the future as well. This course would provide you with relevant knowledge, strategies
+    to ensure safety and security as well as also help to give you hands-on experience.
+
+
+    # CISSP CRITERIA:
+
+
+    CISSP examination has some criteria that are needed to be met. They are essential
+    and important. After you meet the preset criteria you would be able to qualify
+    for the CISSP examination. In order to qualify for the examination, you should
+    be able to pass the examination, as well as you need to have relevant paid job
+    experience. The job experience has to be in any of the eight domains of the (ISC)2
+    CISSP common body knowledge. (CBK). If you are unable to have the experience that
+    is required, you can become an associate of the (ISC)2. You can only be eligible
+    to become an associate if you are able to pass the exam successfully. This would
+    give the associate of the (ISC)2 to have six years in which they can gain the
+    experience that is needed for the certification.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# **JOBS THAT REQUIRE CISSP:**
+
+
+    CISSP is used in all those jobs that have the aspects of maintaining the cyber
+    security. Following is the list of jobs that use the CISSP or require the CISSP.
+
+
+    +   * Chief Information Officer
+
+    +   * IT Director
+
+    +   * Director of Security
+
+    +   * IT Manager
+
+    +   * Security Architect
+
+    +   * Security Analyst
+
+    +   * Security Auditor
+
+    +   * Network Analyst
+
+    +   * Network Architect
+
+    +   * Chief Information Security Officer
+
+    +   * Security Consultant
+
+    +   * Security Manager
+
+    +   * Security Systems Engineer
+
+
+    # **YOUR PATH TO CERTIFICATION:**
+
+
+    Your path to become a professional and certified cybersecurity expert has a few
+    steps that you need to take, following is the path to certification that you need
+    to follow:
+
+
+    # **1. MAKE SURE YOU WANT THIS:**
+
+
+    Before you start your journey to CISSP certification you need to make sure this
+    is what you want. That is because CISSP is not for every cybersecurity professional.
+    You should have thorough knowledge about everything before you start. You should
+    pay a close look at all the features and see for yourself if this is something
+    that you are passionate about and are interested in. You need to be fully committed
+    to take this exam only then go for it. If you are not committed, you will only
+    waste your time and money. If you feel like you are then you can continue your
+    journey along this path and move towards the next step.
+
+
+    # **2. REGISTRATION FOR THE CISSP EXAM:**
+
+
+    The second step along the way to become a certified cybersecurity professional
+    is registration for the examination. You need to register for the exam after you
+    have evaluated yourself and see if you want this. Make sure there is enough time
+    between your registration and the date your test has been scheduled. Take care
+    of this and make sure you have enough time for preparation. It is very important
+    because if there isn’t enough time then your test will suffer and would not go
+    as planned.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'Registration process is comparatively easy; it can be done by following the
+    steps given below:
+
+
+    +   - You can start with creating your account with the Pearson VUE. Pearson UVE
+    is an administrator for all the exams that are conducted by (ISC)2. The administer
+    is responsible for all the registered candidates globally.
+
+
+    +   - After thorough research of what is the certification that is right for you
+    and you want to pursue, you will select the option of whatever certification you
+    want to pursue.
+
+
+    +   - After you choose your certification you would schedule test timings and
+    then choose the location where you want your test to be conducted with the Pearson
+    UVE.
+
+
+    Special accommodations at reasonable prices are also provided. If you are interested
+    in that you can request for them your examination through the (ISC)².
+
+
+    # 3. PREPARATION FOR EXAM:
+
+
+    After your registration process for the examination, you need to start preparing
+    for the exam. You need to look up all the past papers and the relevant resource
+    material in order to prepare for the exam effectively. It is a tough exam that
+    spans over 6 hours so you need to make preparations accordingly. You should have
+    a great understanding and enough knowledge about all the eight domains from which
+    the examination will be conducted.
+
+
+    # 4. CERTIFICATION:
+
+
+    This is the fourth step along your journey to becoming a certified CISSP professional.
+    This is the step where you wanted to reach. This is what you wanted all along
+    and now finally you have reached that point. This is the step where you get certified.
+    After you pass your CISSP examination, you need to start working for your certification.
+    Certification can be achieved after you gain a 5 year paid job experience in at
+    least two or more domains of the (ISC)2. This is essential for your certification.
+    After you complete this job experience you will become a certified cybersecurity
+    CISSP professional.
+
+
+    # 5. MEMBERSHIP OF (ISC)²:
+
+
+    Once you become a certified CISSP professional you would be welcomed to the (ISC)2
+    community. The (ISC)2 community has several other high-profile and certified professionals
+    who are constantly working to ensure better cybersecurity measures, programs,
+    and policies. This would help you in growing your network a lot. You would be
+    in contact with influential and inspiring people who have vast knowledge regarding
+    the cybersecurity domain. Not just that it would give you'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: access to other resources and help you gain skills to become a more expert in
+    what you are doing. You would be informed of all the latest technologies and trends
+    that have been introduced and help you ensure that your expertise is still relevant
+    throughout your career. In short, by becoming a part of this community which is
+    led by globally recognized and appreciated people you would never stop learning
+    and growing. You would always be learning and becoming more and more expert in
+    your field.
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Chapter 1: Exam And Fee Structure
+
+
+    # CISSP EXAMINATION:
+
+
+    CISSP examination is carried out for CISSP certification. It leads you to become
+    a certified professional in cybersecurity. The CISSP examination would make you
+    judge your skills and abilities and how much more is it that you can add further
+    to it. The first step towards the examination is to register for it. You can register
+    yourself for the examination as follows:
+
+
+    You need to register for the exam after you have evaluated yourself and see if
+    you want this. The registration process is comparatively easy; it can be done
+    by following the steps given below:
+
+
+    +   - You can start with creating your account with the Pearson VUE. Pearson UVE
+    is an administrator for all the exams that are conducted by (ISC)2. The administer
+    is responsible for all the registered candidates globally.
+
+    +   - After thorough research of what is the certification that is right for you
+    and you'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'want to pursue, you will select the option of whatsoever certification you
+    want to pursue.
+
+
+    +   - After you choose your certification you would schedule test timings and
+    choose the location where you want your test to be conducted with the Pearson
+    UVE.
+
+
+    Special accommodations at reasonable prices are also provided. If you are interested
+    in that you can request for them for your examination through the (ISC)².
+
+
+    # EXAM PATTERN:
+
+
+    CISSP examination is a 6-hour long exam which is one of the first prerequisites
+    to complete in order to become a certified cybersecurity professional.
+
+
+    # TIME DURATION OF THE EXAMINATION:
+
+
+    The 6-hour long paper has around 250 questions that are conducted from the 8 domains
+    of the (ISC) 2-course curriculum. The questions are multiple-choice question types.
+    6 hours are given to solve these 250 multiple-choice questions. The course contents
+    are the 8 domains of cybersecurity which are needed to be thoroughly revised and
+    well prepared for the examination.
+
+
+    # CRETREIA FOR PASSING THE TEST:
+
+
+    The examination is worth 1000 points. Out of these 1000 points you need to score
+    at least 700 to pass the examination. Passing score for the examination is 70
+    percent.
+
+
+    # OTHER LAUNGAUGES IN WHICH THE TEST IS CONDUCTED:
+
+
+    The test is conducted in a few languages. You can choose any language for your
+    test to be conducted in as per your convenience. The other languages in which
+    the test is conducted are listed below:
+
+
+    +   - French
+
+    +   - German
+
+    +   - Brazilian Portuguese
+
+    +   - Spanish
+
+    +   - Simplified Chinese
+
+    +   - Korean
+
+
+    # TEST CENTERS:
+
+
+    When you register yourself with the Pearson UVE you are allowed to choose the
+    test center and the time availability as per your own convenience. You can choose
+    whatever test center and the available time is suitable for you. You can also
+    give your test in (ISC)² authorized PPC.
+
+
+    # REQUIREMENTS FOR EXAMINATION:
+
+
+    The examination has a few requirements that have to be met before you appear for
+    it. You should be aware of all the requirements that are necessary for you to
+    follow. This is very essential. This would make you able to know if you are eligible
+    for the test or not?
+
+
+    The requirements that need to be met are listed below:'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '+   - You need to have a 4-year college degree
+
+    +   - You also need to have a paid job experience for at least 5 years in any
+    2 of the 8 domains of cybersecurity
+
+    +   - Educational credit satisfies one year of experience
+
+    +   - If you are unable to qualify for the CISSP, you can instead become an associate
+    of (ISC)² that would give you approximately 6 years to acquire the relevant job
+    experience.
+
+
+    # RECERTIFICATION:
+
+
+    You can always recertify after you achieve your certification once. You are required
+    to recertify every three years. Recertification can be done by earning the continuing
+    professional education (CPE) credits. Along with the CPE credits you also need
+    to pay the annual fee. After doing these two things you will be able to certify
+    after every 3 years.
+
+
+    # TRAINING FOR THE EXAMINATION:
+
+
+    In order to have a better understanding of the examination and its course contents,
+    it is advised to enroll in training sessions. These sessions would provide you
+    with in-depth knowledge regarding the examination, its modules, prerequisites,
+    and other relevant details regarding the examination. Before you attempt the examination
+    you need to have better and in-depth knowledge about everything. It would also
+    prove helpful in examination because you would already have all the knowledge
+    regarding everything.
+
+
+    These pieces of training would prove really helpful, you would be able to revise
+    all the course comprehensively and not just that you would also be able to pass
+    your exam successfully. This would also help you reduce the mental pressure you
+    are feeling regarding the examination. You would be trained and guided about everything
+    by a certified instructor. The instructor would also help you acquire the knowledge
+    you need for the certification. You would be very well guided regarding all the
+    CISSP examination details in these training sessions. Thus, make sure you attend
+    them and don’t skip them.
+
+
+    # PEARSON VUE ACCOUNTS:
+
+
+    You need to generate a Pearson VUE account. This would be a great help for you
+    regarding your knowledge of the CISSP examination and certification. After you
+    generate your own Pearson VUE account you would be able to evaluate yourself with
+    all the knowledge that you have gained regarding the CISSP examination and certification
+    up till now. The Pearson VUE accounts would also help you with all the details
+    regarding the location, accommodation, testing, policies, and other relevant details.
+    These details are important for you to know this you need to make sure you generate
+    your own Pearson VUE accounts and better understand everything and would also
+    help you with your own evaluation.
+
+
+    # MAKE SURE TO GET YOURSELF ENDORSED:
+
+
+    Once you pass your examination successfully, the next step is to endorse your
+    application. The'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'application endorsement has to be done within 9 months. The 9 months’ times
+    period starts after you pass your examination. This is to verify your professional
+    experience. You need to issue an endorsement form which needs to be filled and
+    signed by an (ISC)2 certified CISSP professional for cloud security. The professional
+    who is to sign the form also needs to be an active member of the (ISC)2 community.
+
+
+    # CODE AND ETHICS SUBSCRIPTION:
+
+
+    Another important thing which you need to do after successfully passing your exam
+    is to subscribe to the code and ethics of the (ISC)² community. Doing so would
+    help you avail your certification for the CISSP.
+
+
+    # THE FEE STRUCTURE FOR THE EXAMINATION:
+
+
+    The CISSP examination has a fee of 699 US dollars. This fee is included in the
+    training fee.
+
+
+    Although for the international students due to the change in currency, the fee
+    may vary a little. These details are going to be provided by the Pearson VUE at
+    the time of registration for the exam. Taxes are to be added to the fee as well.
+
+
+    The training fee for the international students and those who are training online
+    is 500 US dollars and 1875 AED.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# # Chapter 2: Test Pattern And Rules
+
+
+    # ## TEST PATTERN:
+
+
+    The test has around 250 Multiple choice questions. These multiple choice questions
+    are from all 8 domains of the CISSP examination. In order to pass the exam, you
+    need to make sure that you have all the relevant knowledge regarding all 8 domains
+    of cybersecurity. The passing marks for the exam are 700 out of 1000. The total
+    worth of the exam is 1000 points. That makes 70 percent of the total for passing
+    the exam.
+
+
+    The test has a portion of all 8 domains. Below is the percentage of all the domains
+    which make up the examination questions.
+
+
+    +   - Risk and safety management comprises about 15 percent of the CISSP'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'examination. It is a diverse topic that lets you know about all the topics
+    that are relevant to risk and safety management and gives you insights into what
+    you need to know.
+
+
+    +   \- Asset security comprises about 10 percent of the examination. All the topics
+    that deal with the physical essentials of security are dealt with in this section.
+
+    +   \- Safety engineering comprises 13 percent of the examination and covers all
+    the data security theories.
+
+    +   \- Network security comprises 14 percent of the examination and covers different
+    approaches to handle network security.
+
+    +   \- Identify and access management or IAM comprises 13 percent of the CISSP
+    examination. It covers topics relevant to identification and authorization.
+
+    +   \- Protection and security operations consist of 13 percent of the examination.
+    This deals with the safety and security operations and gives you solutions on
+    how to deal with such situations.
+
+    +   \- Security of software development is also a part of the syllabus for the
+    CISSP exam and it helps you have knowledge on how to deal with the applications
+    and ensure their security.
+
+
+    # RULES AND REGULATIONS FOR EXAM:
+
+
+    There are a number of rules and regulations that are needed to be followed in
+    order to conduct the exam peacefully. You need to pay close attention to them
+    and know them so you don’t face any issue before and during the examination. The
+    rules that are needed to be followed are listed below:
+
+
+    +   \- Do not take any electronic device with you to the examination room.
+
+    +   \- You do not need to take your watch along instead you will be provided with
+    a countdown timer which would be placed on the top of your software. It would
+    keep you updated about the time that elapsed and the time that is still left.
+    This would help you manage your time well during the exam.
+
+    +   \- You do not need to take your earplugs along with you, you will be provided
+    with the earplugs in your test center.
+
+    +   \- You cannot take any food or water with you to the room in which your test
+    is conducted. You can on the other hand take your food and beverages to be stored
+    in another room. If you feel like taking a sip of water or eat something, you
+    can take a break and have some.
+
+    +   \- You will have to keep your belongings and other stuff in a separate room.
+
+    +   \- You will not be allowed to carry any personal stuff into the test area.
+
+    +   \- You are also required to have your ID with you.
+
+    +   \- The clock would be ticking. You will not be given a specially designated
+    time for the breaks. So make sure you do not spend a lot of time while you are
+    on break.
+
+    +   \- You would not be permitted to access any electronic device like a watch
+    or cellphone etc. in the other room as well. You can use them once the test is
+    over.
+
+    +   \- You cannot leave the test room alone. You will have to raise a hand and
+    let someone from the people working there escort you to the restroom in case you'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '+   - want to use it.
+
+    +   - You should behave well with the people who are working in the test center.
+    Don''t misbehave with them and put yourself in a negative light.
+
+    +   - You need to complete your paper within the required time. No extra time
+    will be given to you for completion.
+
+    +   - As it is a computer-based test with a countdown timer all the time on your
+    screen. Do not expect any extra time to be given to you.
+
+
+    It is very important to go through all the rules and regulations before you appear
+    for the exam. This would be for your own benefit. You would know about all the
+    rules and you would have a smooth experience. If you have all the knowledge you
+    would not waste your time and concentrate on your own test.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Chapter 3: Course Contents
+
+
+    # COURSE CONTENTS FOR THE CISSP EXAMINATION:
+
+
+    The CISSP exam is conducted from 8 major domains of cybersecurity. These domains
+    cover most part of cybersecurity. Once you have a grip over all the relevant material
+    that would be a part of your examination you are good to go. It would not only
+    benefit you for the examination but even if you don’t pass the examination you
+    would still have acquired knowledge regarding the cybersecurity.
+
+
+    The CISSP examination is 6-hour long. In order to become a certified CISSP professional
+    you not only need to clear the examination with flying colors but also acquire
+    relevant paid job experience in at least two or more domains of the (ISC)² curriculum.
+    You will become a certified professional after getting done with these two prerequisites.
+
+
+    In April 2018, the syllabus for the CISSP examination was updated as follows:
+
+
+    Risk and safety management comprises about 15 percent of the CISSP examination.
+    It is a diverse topic that lets you know about all the topics that are relevant
+    to risk and safety management and gives you insights into what you need to know.
+
+
+    Asset security comprises about 10 percent of the examination. All the topics that
+    deal with the physical essentials of security are dealt with in this section.
+
+
+    Safety engineering comprises 13 percent of the examination and covers all the
+    data security theories.
+
+
+    Network security comprises 14 percent of the examination and covers different
+    approaches to handle network security.
+
+
+    Identify and access management or IAM comprises 13 percent of the CISSP examination.
+    It covers topics relevant to identification and authorization.
+
+
+    Protection and security operations consist of 13 percent of the examination. This
+    deals with the safety and security operations and gives you solutions on how to
+    deal with such situations.
+
+
+    Security of software development is also a part of the syllabus for the CISSP
+    exam and it helps you have knowledge on how to deal with the applications and
+    ensure their security.
+
+
+    The people who are planning to give the exam will be judged and marked in these
+    important domains. The exam has 250 MCQ’s that need to be completed in a six-hour
+    time period. The passing score is 70 percent.
+
+
+    # INTRODUCTION TO CYBERSECURITY:
+
+
+    Before we move on to the course contents, let’s discuss the basic introduction
+    that you should know about cybersecurity. If you would have ample knowledge regarding
+    cybersecurity, only then you would be able to understand the domains from which
+    the exam will be conducted.
+
+
+    # CYBER THREATS:
+
+
+    A cyber threat can be any malicious attack that is intended towards an individual
+    or an organization by some other individual or organization. The attacker breaches
+    the privacy for'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'personal gains or benefits. It is also known as information theft.
+
+
+    # CYBERSECURITY:
+
+
+    In order to stop and avoid such attacks, you need to have strong cybersecurity.
+    This would make you able to protect your valuable information from such attackers.
+    Cybersecurity is the protection of an individual or organization’s data from unauthorized
+    access. Protection against the malicious threats can be handled by making security
+    efficient systems that ensure the security of the data.
+
+
+    # IMPORTANCE OF CYBERSECURITY:
+
+
+    Securing large and voluminous data is the need of today’s world. Data is increasing
+    day by day and the protection of this data from being misused is something that
+    needs immediate attention. There may be sensitive data that you need to protect
+    from the attackers highlights the importance of cybersecurity in a world where
+    everyone is connected through the internet. With the use of the internet and devices
+    that are connected through the internet the security of personal information is
+    highly compromised. Thus it is very important to make the systems secure enough
+    to stop any potential attack.
+
+
+    # BASIC ELEMENTS OF CYBERSECURITY:
+
+
+    Cybersecurity can be broken down into several elements. In order to maintain and
+    ensure cybersecurity in any organization, all the elements need to coordinate
+    with each other. Some of which are application security, data security, network
+    security, end-user protection, etc. In order to maintain security and safety of
+    the data you need to pay special attention to any loopholes that you may find
+    in your system. Its these loopholes that the attackers exploit for their selfish
+    purposes. A lot of research has been done on cybersecurity and how can you make
+    sure that you are not leaving any loopholes behind but considering the facts it
+    is a tricky business.
+
+
+    # EVOLUTION OF CYBERSECURITY WITH TECHNOLOGY:
+
+
+    Technology is evolving with every passing day, in order to make sure that as the
+    technology evolves so does the cybersecurity. The storage devices such as laptops
+    and cell phones have data that needs to be protected. Such a huge amount of data
+    makes it very easy for the attacker to find an entry point and attack the data.
+    Multiple entry points can make your system vulnerable and the attackers would
+    not hold back to launch malicious attacks. You need to make sure that your cybersecurity
+    is strong enough to handle the situation. Nowadays you find every person carrying
+    a cell phone in their hand. This cell phone or whatever device they are using
+    is connected to an internet access point. That internet access point is what the
+    attackers and the hackers are targeting. Most of the security breaches occur due
+    to these internet access points. To avoid being targeted by the attackers you
+    should try not to connect your device to public access points. Cybercrimes can
+    very negatively impact your organizations and their reputation, thus it is the
+    job of the cybersecurity professional to design such programs so as to avoid such
+    situations.
+
+
+    # DOMAINS OF CYBERSECURITY FOR THE CISSP EXAMINATION:
+
+
+    The list of domains of cybersecurity from which the exam is conducted is as follows:
+
+
+    +   1. Cyber threats and System Security
+
+    +   2. Cloud Security
+
+    +   3. Network and Communicational Security'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '+   4. Assets and IoT Security
+
+    +   5. Architecture of Cyber Security
+
+    +   6. Protection and Safety Operations
+
+    +   7. Identity and Access Management
+
+    +   8. Software Development Security
+
+
+    # 1. CYBER THREATS AND SYSTEM SECURITY:
+
+
+    # CYBER THREATS:
+
+
+    Cyber threats are very common nowadays. In today’s world, all the devices are
+    connected to the internet which has made it very easy for attackers to launch
+    an attack and pose threats to the user’s data.
+
+    There are a number of cybersecurity threats that have been briefly explained below:
+
+
+    +   - Malware is the most common type of cybersecurity threat. Malware is actually
+    malicious software. It is malicious software that the attacker has created to
+    damage the computer system of the potential user.
+
+    +   - A virus is software that has malicious code embedded inside of it. This
+    software is self-replicating and replicates itself when the user clicks on it.
+    With each click of the user, the file keeps on replicating itself which ends up
+    damaging and infecting the legitimate files on the host computer.
+
+    +   - Trojan horses are a type of malware that is similar to legitimate software.
+
+    +   - Spyware gains access to your computer system which is used to steal information
+    from your system. It damages the system a lot without the user even noticing it.
+
+    +   - Adware is malicious software that displays ads. It is used for advertising.
+    Along with advertising it also spread malware.
+
+    +   - The attacker disguises the malicious software as a real and legitimate one
+    and once it enters the host computer the software starts doing its work. Attacker
+    hold the data and demands a ransom for release.
+
+    +   - The botnet is an abbreviation of robot networks. It is a network of computers
+    that are connected. Botnets are controlled by attackers remotely with the main
+    agenda of getting financial gains or launching websites and applications that
+    the attackers tend to launch or work for.
+
+    +   - Emotet is thought to be the most dangerous virus. It works on the brute
+    force method. Emotet is an advanced Trojan that is spread through email attachments
+    and once the user clicks on it, it releases the payload and starts to infect the
+    files and other data that is stored on the computer.
+
+    +   - Denial of service attack is a cyber-attack in which the service is made
+    unavailable to the intended users by sending spoof'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '+   - messages and packets through the communication network.
+
+    +   - Phishing is a fraudulent attempt that the attackers use to lure the users
+    to provide them sensitive personal information.
+
+    +   - Man in the middle attack is when two parties are communicating and the attacker
+    eavesdrops on their conversations. Can also modify the information without the
+    notice of the users.
+
+    +   - Social engineering is a term that is used commonly for the malicious activities
+    that happen by human interaction with each other.
+
+    +   - Password attacks are also used to gain access to personal data. It is a
+    very common and very easy way to break into someone’s personal information and
+    private space.
+
+    +   - A structured query language (SQL) injection is a cyber-attack that happens
+    when a malicious code is released into a server that uses SQL.
+
+
+    # SYSTEM SECURITY:
+
+
+    System security is a risky business. It comes with a lot of risks that one takes
+    while ensuring system security. Keeping their business and sensitive information
+    safe from intruders is one of the main challenges that business owners have to
+    face nowadays. In order to know how to ensure safety they need to know about all
+    the basics and information regarding its safety and protection.
+
+
+    You need to have strong backup plans in case the security breaches happen, you
+    need them to make sure you control the situation before things go down the drain.
+
+
+    # CYBERSECURITY RISK MANAGEMENT:
+
+
+    Cybersecurity risk management is a process in which you identify, assess, analyze,
+    evaluate and then come up with solutions to solve the problems that you may face
+    while managing cybersecurity. Your cyber risk management program needs to be efficient
+    enough so you can tackle any issue that comes your way. It should not compromise
+    on those things which are highly sensitive. You need to constantly make changes
+    to your system, the protocols change, the technologies change and evolve.
+
+
+    # 2. CLOUD SECURITY:
+
+
+    Technologies that are based on the cloud infrastructure is one of the most commonly
+    used technology nowadays. Cloud security is the collection of protocols, procedures,
+    and policies that are put together to protect and ensure the safety and security
+    of the systems that are based on cloud technology. Cloud security can be configured
+    according to the needs of individual users or businesses. Cloud computing infrastructure
+    has greatly helped businesses by reducing the overhead costs and administration
+    overheads.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# CLOUD COMPUTING AND CYBER SECURITY:
+
+
+    Cloud computing and cybersecurity may seem the complete opposite but they do have
+    a connection between them. In cloud computing, you basically store your data off
+    site and cybersecurity means protecting the data at all costs. Cloud computing
+    is fundamentally outsourcing of your data, you trust these services by sharing
+    your data and to store it for you. In cybersecurity, you trust the procedures
+    and protocols that are made for the protection of your data that is stored on
+    these remote servers.
+
+
+    # IMPORTANCE OF CLOUD SECURITY:
+
+
+    Many businesses are now transitioning to the cloud; they are more inclined towards
+    storing their data on the cloud platform. The attackers have become more sophisticated
+    and clever and the attacks that they launch are very difficult to identify. Thus,
+    as much as the on-premises servers are at risk so is cloud computing service.
+    Importance of cloud security is given below:
+
+
+    +   - Cloud services follow the rule of centralization. All the applications and
+    the devices that use the cloud services are centralized. So is the security centralized,
+    all the security procedures that they use to ensure the security are centralized.
+    It becomes very difficult for them to manage security protocols when there are
+    numerous devices and endpoints like if a company has the bring your own device
+    policy.
+
+
+    +   - If you trust the cloud services with your data, you actually save yourself
+    a great deal of money. It saves you from investing in dedicated hardware. It also
+    helps in reducing administrative overheads.
+
+
+    +   - Manual configuration becomes the talk of the past when you trust a cloud
+    service provider that is reliable and trustworthy.
+
+
+    +   - Your data is safe on the cloud and you can access it at any time on whatever
+    device you want and wherever it is stored on the cloud.
+
+
+    # RISKS OF CLOUD COMPUTING:
+
+
+    Cloud computing comes with its own share of risks and challenges.
+
+
+    +   - The first risk that the business owners could face is the challenge of multi
+    cloud environment. There is not only one cloud present but multiple of them. The
+    user needs to choose what cloud would they prefer to store their data on.
+
+
+    +   - As there is a shared responsibility of the security between the business
+    owners and the cloud service providers, it often ends up creating confusion.
+
+
+    +   - One of the major challenges that could be faced in the cloud computing environment
+    is the lack of visibility.
+
+
+    +   - If the visibility features are not so strong you would never know how much
+    of the data is affected and which of the client''s data is affected.
+
+
+    +   - The data that is stored on the cloud needs an active internet connection.
+    That means any person who is connected to the internet is susceptible to the risks
+    of potential cyber threats.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '+   - The loss of data at the hands of the attackers or intruders is always
+    a fear that is lurking around.
+
+    +   - The data that is stored on the cloud is not completely safe.
+
+
+    # ## HANDLING CLOUD SECURITY RISKS:
+
+
+    Below are some of the methods that would help you handle the cloud security risks:
+
+
+    +   - Divide the responsibilities between the CSP and user.
+
+    +   - Strong user access control can help define who could access the data and
+    who could not. Not just that but it would also show what data were they given
+    access to.
+
+    +   - Both the user and the cloud service provider need to work in close relation
+    and develop the best plan in order to keep their data secure from any breaches.
+
+    +   - Proper training needs to be given to these employees so they do not affect
+    the organization in such negative ways. They need to be constantly monitored and
+    strict checks should be maintained.
+
+    +   - All the users who are using the cloud services and have access to it should
+    require to have strong passwords.
+
+    +   - You should use auditing tools to secure your data.
+
+    +   - It comes with its fair shares of benefits and risks. Both the parties that
+    are involved in the data process, i.e. the organization and the cloud service
+    provider need to make sure that they fulfill their responsibilities at their respective
+    ends and make sure everything runs along smoothly.
+
+
+    # ## 3. NETWORK AND COMMUNICATIONAL SECURITY:
+
+
+    Network security is a collection of policies, protocols, and practices that are
+    used to prevent the network from malicious attackers. It is a very diverse and
+    vast term that covers different technologies and maintains the privacy of the
+    network. Network security basically deals with the authorization of access to
+    the data on a network, it is the job of the network administrator to control and
+    look over the network. To gain access to the network, the users are assigned an
+    ID and password for their identification. After they log in to their accounts,
+    they can access the information that is within their authority.
+
+
+    +   - The user should enable three step authentication to maintain security of
+    their accounts.
+
+    +   - In order to make the system more secure and to ensure that the communication
+    between two hosts is safe from any malicious activities, it is important to encrypt
+    the data.
+
+    +   - Firewall makes sure to implement the policies of network security and monitor
+    what data can be accessed by the network user.
+
+    +   - Decoy resources like honeypots are a good practice that is placed in a network
+    at such a point where the attacker thinks that they are not monitored and sees
+    them as a vulnerability. These honey nets are'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'made vulnerable on purpose so the attackers find it easy to attack them and
+    waste their time and resources.
+
+
+    +   - The users should install the anti-malicious or anti-virus software onto
+    their devices. This would provide them with an extra layer of security.
+
+    +   - Data access controls are used to monitor who is accessing what data. In
+    order to make the system secure, you need to provide access to those users who
+    are authorized.
+
+    +   - If malware enters the computer system, it becomes very easy for it to corrupt
+    the data, and once the data gets corrupted it is of no good. Loss of data also
+    occurs.
+
+    +   - Different software technologies have been introduced in order to keep the
+    data secure on the websites. If the employees access them they would welcome those
+    malicious threats to their own devices and networking environment as well.
+
+    +   - Network segmentation is a common practice that is used to make sure that
+    the network is safe from cybersecurity threats.
+
+    +   - Email security software makes sure that they filter all the incoming and
+    outgoing emails so they can maintain the security of the system and the network
+    as well.
+
+    +   - If your system starts acting abnormally your cybersecurity and IT team need
+    to figure out the root cause and provide solutions.
+
+
+    # CIA TRIAD:
+
+
+    We can only label a network as secure when it has all the three elements of the
+    CIA triad in working. The CIA triad actually represents the initials of the three
+    basic principles of the network security, which are confidentiality, integrity,
+    and availability.
+
+
+    # 4. ASSETS AND IoT SECURITY:
+
+
+    # ASSETS SECURITY:
+
+
+    Asset in information technology is any data, devices, and all such things that
+    are of importance to the user. Assets include the hardware, software, and other
+    information or data that is of importance to the user. These assets need to be
+    protected from unauthorized access, from being used and exploited. In order to
+    ensure asset security, it is important to classify the data and then ensure its
+    protection according to their priorities.
+
+
+    +   - Public data is that data that can be viewed by the general public. Such
+    data does not need protection
+
+    +   - Private data is that data that needs to be protected from viewing by other
+    people. This could be your personal information, credit card numbers, bank statements,
+    health records, etc. Leaking of this data could result in serious problems.
+
+    +   - That data that needs serious protection at every cost is called'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '+   - sensitive data.
+
+    +   - Confidential data is that data that could only be viewed by the relevant
+    people.
+
+    +   - The data that is not too important can be left unclassified. It is not sensitive
+    data.
+
+    +   - Secret information revealed can put national security at stake.
+
+    +   - The information that is extremely important to protect. If revealed can
+    result in massive destruction.
+
+
+    # DATA MANAGEMENT:
+
+
+    Organizations have to manage large quantities of data, information, and computer
+    resources. In order to do so effectively a good and efficient data management
+    plan is required. An efficient plan should be made consisting of the policies,
+    procedures, and practices to make sure that the data is managed properly.
+
+
+    +   - In order to create an efficient and stringent data management plan, one
+    needs to work on data policies. The data policy document is an official document
+    that is made by senior management and which contains all the long-term goals that
+    the organization is striving for.
+
+    +   - It is very important to assign ownership to the data that flows through
+    the organization. The owner of the information is going to be responsible for
+    that data. Data owner also has the job of data classification. The data owner
+    has to determine the cost that would be required to change or replace some information,
+    he needs to be able to determine how will be the goals of an organization be influenced
+    with the information, not just that he is also responsible for destroying the
+    information when it has completed its lifecycle. The data owners need to make
+    sure that they create documents regarding the rights to ownership of data.
+
+    +   - The main responsibility of the data custodians is that they need to monitor
+    the data and make sure they are creating the recent backups for the data.
+
+    +   - The people who use the data to get their jobs done are the users.
+
+    +   - The person who manages the data is called a data manager.
+
+
+    # IoT SECURITY:
+
+
+    IoT security mainly covers both device security and network security as well.
+    Ensuring IoT security is of great importance because these devices and products
+    make our everyday lives much easier. They keep providing important insights throughout
+    our day to make sure we go through our day without all the hassle.
+
+
+    # USE OF IoT DEVICES IN DAY TO DAY LIFE:'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '+   - CCTV cameras
+
+    +   - Smart locks
+
+    +   - Smart appliances
+
+    +   - Voice control features
+
+    +   - Automatic Sensors that control appliances when movement is sensed
+
+
+    # TIPS TO KEEP YOUR IOT DEVICES SECURE:
+
+
+    +   - Install an anti-virus software
+
+    +   - Choose strong passwords when you are trying to log in
+
+    +   - End-to-end encryption is highly important.
+
+    +   - Don’t just settle for any cybersecurity provider, search for reliable and
+    reputable ones.
+
+    +   - To ensure complete security you should keep these devices shut down if not
+    in use.
+
+    +   - You should be well aware of the disasters these IOT devices can bring upon
+    you thus you should very careful with these.
+
+
+    # 5. ARCHITECTURE O CYBERSECURITY:
+
+
+    Cybersecurity architecture is a framework whose basic job is to make sure that
+    it specifies the basic structure of an organization, what policies and standards
+    it is using to keep its computer systems and the network secure, and keep the
+    cyber threats at bay. Cybersecurity architecture can also be defined as how various
+    elements of your computer system are organized and structured. Cybersecurity tools
+    like anti-virus software and the integrated firewalls are important elements that
+    help you with maintaining security. These elements play a huge role in avoiding
+    potential threats. They also provide you with preventive measures from threats
+    and malware. They also work in close correspondence with the already implemented
+    policies and security standards of the organization to ensure security. The cybersecurity
+    of the organization shall be such that it incorporates all these elements together
+    to maximize security. Every person has some rules to follow, if everyone is working
+    according to their responsibilities and the data flows through the organization
+    free of threats is when we say that the cybersecurity architecture of an organization
+    is a success.
+
+
+    # NEED OF CYBERSECURITY ARCHITECTURE:
+
+
+    Cyber security architecture provides a level of security that provides defense
+    against the threats and to make sure that the al the components that are involved
+    in an IT infrastructure. Following elements are protected by a cyber security
+    architecture.
+
+
+    +   - Cloud
+
+    +   - End Points
+
+    +   - IoT
+
+    +   - Mobile
+
+    +   - Networks
+
+
+    The cybersecurity architecture proves to be a protective layer against all malicious'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'threats.
+
+
+    # EXAMPLES OF CYBERSECURITY ARCHHI TECTURES:
+
+
+    +   • Open Group Architecture Framework
+
+    +   • Sherwood Applied Business Security Architecture
+
+    +   • Open Security Architecture
+
+
+    # IMPORTANCE OF SECURITY ARCHITECTURES:
+
+
+    +   • A strong security system means getting rid of all the loopholes and vulnerabilities
+    that could compromise your data. Every organization has unique requirements for
+    the security of their security. Translating those security requirements into executable
+    strategies is one of the most important benefits of cybersecurity architecture.
+
+    +   • Make sure the cybersecurity system you are working for is efficient in handling
+    the situation in case of a data breach. You should invest in a strong security
+    system so you don’t have to keep spending money later on. You should be better
+    safe than sorry.
+
+    +   • A strong security system would significantly reduce the frequency of data
+    breaches.
+
+
+    # TIME FRAME OF A SECURITY ARCHITECTURE:
+
+
+    The security architecture would take some time to be designed and then implemented.
+    It depends upon the budget and the level that organization is working on. If it
+    is a large organization, it would it longer for the experts to make a system whereas
+    developing the security architecture for a small scale organization would require
+    less time.
+
+
+    # TIPS TO IMPROVE CYBERSECURITY ARCHITECTURE:
+
+
+    +   • Create awareness
+
+    +   • Analyze your business vulnerabilities
+
+    +   • Risk management is imminent
+
+    +   • Risk calculation
+
+    +   • Have better plans regarding the handling of a situation after a data breach
+
+
+    # 6. IDENTITY AND ACCESS MANAGEMENT:
+
+
+    Identity and access management is a framework of policies that the right people
+    in an organization need to have access to the right technologies in an organization.
+    Identity and access management is related to data management and the IT policies
+    in an organization.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# PURPOSE OF IDENTITY AND ACCESS MANAGEMENT:
+
+
+    Below are the purposes of an identity and access management in an organization:
+
+
+    +   - Helps increase the productivity of the employees
+
+    +   - An important feature of identity and access management is that it becomes
+    easy for the employees to go back and see the mistakes they have done while logging
+    into the systems, they can evaluate everything and not repeat the mistakes they
+    have done now.
+
+
+    # IMPORTANCE OF IDENTITY AND ACCESS MANAGEMENT:
+
+
+    Data is very important to organizations and this protection and security of data
+    make organizations so trustworthy and reputable. Tracking of the user privileges
+    to the data and the system has been automated by identity and access management.
+    It has narrowed down the chances of risks and vulnerabilities. Biometric systems
+    have been introduced, AI techniques are also used to make sure that the right
+    people are accessing the right data.
+
+
+    # FEATURES OF IAM:
+
+
+    +   - Fast response to threats
+
+    +   - Identity authentication
+
+    +   - Ensures compatibility with the software and the latest trends of technology
+
+    +   - Flexibility in assigning roles
+
+    +   - Provision of training to the employees
+
+    +   - Access controls for the IoT devices
+
+    +   - Access security
+
+
+    # IDENTITY AND ACCESS MANAGEMENT RISKS:
+
+
+    Such techniques are adopted which makes it easy for you to detect the attacks
+    at an early stage, this decreases the chances of damage. Identity and access management
+    also come with its risks.
+
+
+    +   - Identification of responsibilities, due to this reason a lot of companies
+    refrain from getting identity and access management solutions.
+
+    +   - If there is a lack of involvement from the business side the projects of
+    the identity and access management are often jeopardized. Several issues arise
+    due to the lack of involvement of the business.
+
+    +   - One of the major risks when it comes to identity and access management is
+    that it is difficult to implement. The whole process is extremely complex and
+    difficult.
+
+    +   - Understanding regarding the topic becomes unclear and they have different
+    opinions about their defined roles. They often compare the'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'identity and access management solutions to the previous technologies. Everyone
+    perceives it differently.
+
+
+    # FUTURE OF IDENTITY AND ACCESS MANAGEMENT:
+
+
+    The identity and access management solutions and technologies are constantly evolving
+    as technology is evolving and new products and ideas are implemented. These technologies
+    are easy to adapt to the size of the organization and their budget allocated.
+    They help in keeping the data safe from the unauthorized and unauthenticated accesses.
+    The data is only accessible to authorized people who have to deal with that data.
+
+
+    # 7. PROTECTION AND SAFETY OPERATIONS:
+
+
+    Malware is malicious software that is used to disrupt the working of your computer
+    systems. This software is made by hackers and intruders for their gains. This
+    intrusion by the viruses can be found to be very destructible.
+
+
+    # PROTECTION AGAINST MALWARE:
+
+
+    Protection against these malicious viruses can be ensured by following these steps:
+
+
+    +   - Install anti-virus software
+
+    +   - Create backups for your data in advance
+
+    +   - In order to ensure strong protection against these viruses make sure to
+    have strong passwords
+
+    +   - Keep your computer software and other tools up to date
+
+    +   - Don’t fall prey to the suspicious softwares
+
+    +   - Be careful and watchful when downloading from the internet
+
+    +   - Do not click on ads that may seem suspicious
+
+    +   - Remove all the outdated tools and programs that you may have on your computer
+
+    +   - Enforce strict policies
+
+    +   - Make sure your system window is configured for maximum security
+
+    +   - Use standard accounts
+
+    +   - Disable all the guest accounts that you may have on your computer
+
+
+    # OPERATIONAL SECURITY:
+
+
+    Operational security is also known as procedural security. Procedural security
+    or operational security is a risk management technique that is used by organizations
+    to have a look and view their operations from the eyes of opponents and nemesis.
+    Doing so gives them ideas of how they can protect their sensitive data more'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: 'efficiently and effectively.
+
+
+    # IMPORTANCE OF THE OPERATIONAL SECURITY:
+
+
+    Operational security risk management is of great importance to organizations so
+    they can protect their systems more adequately. If you are successful in implementing
+    a proper and secure operational security risk management plan that would greatly
+    help you to protect your data from the nemesis or the attackers who are in constant
+    search for you to make any mistakes and then they use those mistakes and exploit
+    them for their gains. This helps you to better protect your sensitive and classified
+    information that is in relevance to your organization’s activities and strategies.
+
+
+    # PURPOSE OF THE OPERATIONAL SECURIT Y RISK MANAGEMENT:
+
+
+    +   * Operational security is used to keep the little bits and pieces of data
+    secure.
+
+    +   * The operation security makes you able to develop preventive measures and
+    safety procedures so you are able to handle different types of risks and potential
+    threats that can end up corrupting and misusing your data.
+
+    +   * The little bits and pieces that the operational security is making sure
+    that they remain protected because they get together and form bigger pieces of
+    data.
+
+    +   * The employees should be very careful with the data of their organization.
+
+    +   * Operational security technical methods to protection and security of data
+    are to make sure that the systems are protected from all sorts of malware.
+
+
+    # STEPS TO ENSURE OPERATIONAL SECURITY:
+
+
+    The operational security plan is a risk management plan which is used by organizations.
+    This risk management plan is used to see which data needs to be protected and
+    what ways could that data be protected. The operational security risk management
+    steps have five steps which are stated as under:
+
+
+    +   * Identification of information
+
+    +   * Identification of vulnerabilities
+
+    +   * Identification of the potential attacker
+
+    +   * Identification of potential threat level
+
+    +   * Mitigation of threats
+
+
+    # TIPS TO ENSURE OPERATIONAL SECURITY:
+
+
+    Operational security is crucial for every organization which is serious about
+    protecting their data and sensitive information from any unwanted data breaches
+    and'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: 'data leaks.
+
+
+    +   \- Implementation of change management process
+
+    +   \- Protection against threats
+
+    +   \- Refrain from discussing about your organization on social media
+
+    +   \- Use automation
+
+
+    # 8. SOFTWARE DEVELOPMENT SECURITY:
+
+
+    It is often found to have security issues when it comes to the development of
+    software applications. You need to be vigilant when it comes to the security issues
+    in a software application. Most software development companies seem to ignore
+    this issue but it is of great importance and should not be disregarded at any
+    cost. Software development lifecycle is a step by step process of developing software
+    applications. When the developers overlook the security issues in the very early
+    steps of development, the risk of vulnerabilities in every subsequent step increases.
+    When the final product is developed using this step by step approach of developing
+    software applications it is flawed with no aspect of security. It results in a
+    number of security breaches. You may have developed the software applications
+    with efficient coding and writing good algorithms but if you have ignored the
+    concept of security you haven''t done your job right. Your competitors are constantly
+    looking for any vulnerabilities to exploit and they won''t let any of these go.
+    They would make sure that they take advantage of all the blunders your organization
+    has made while developing the software applications with no security element.
+
+
+    # BEST PRACTICES FOR ENSURING SOFTWARE SECURITY:
+
+
+    Below are some of the best practices that can be followed to make sure that the
+    software security is properly practiced:
+
+
+    +   \- Many attackers and hackers get to your computer systems just because the
+    software and other applications on your computer systems are not up to date. These
+    outdated softwares make your system more vulnerable. Make sure the softwares are
+    updated plans.
+
+    +   \- It is important for you to create vigorous and strong IT plans. The purpose
+    of these strong security IT plans is to make sure the system is safe and secure.
+    The system has no loopholes and vulnerabilities for the attackers to exploit.
+
+    +   \- You can enhance the security of your software applications by making sure
+    they are in compliance to the security policies of the organization.
+
+    +   \- You can ensure the security of your software applications by incorporating
+    the security element into our system development lifecycle. Doing so would protect
+    your software from unwanted intrusions. Provide you not with just the software
+    application security but also make sure the entire system is secure and safe from'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'malicious factors.
+
+
+    # ADVANTAGES OF THE SDL:
+
+
+    +   - The secure development lifecycle helps you continuously monitor your application
+    and data that means the security component gets enhanced with the use of SDL.
+
+    +   - If any security breach occurs after the product or application has been
+    launched, fixing those vulnerabilities and preventing any cybersecurity breach
+    during that time is going to cost you a lot of money as compared to identifying
+    any probable security threats during its design and implementation phase. Security
+    costs during this phase are much less than that of post launching.
+
+    +   - The clients start to trust you more when you use the SDL practices, that
+    is because they can see the efforts you are putting in order to ensure security.
+    This makes you trustworthy.
+
+    +   - When you work more on the security element of your software application
+    and focus on that more you also end up making your system security better.
+
+    +   - The employees need to be made aware of the security breaches because they
+    also have the right to know and it would make them careful for the next time.
+
+
+    These are the basic 8 domains from which the test is conducted. You need to have
+    a proper grip over these topics so you are able to pass the test in first attempt.
+    They have all the basics which can help you a lot with your test preparation.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# Chapter 4: Understanding The Need Of Cybersecurity
+
+
+    # WHAT IS CYBERSECURITY:
+
+
+    Before moving ahead and talking about the fact that why is cybersecurity in today’s
+    world important and why is there a need for cybersecurity, we will first talk
+    about cybersecurity. So basically, cybersecurity is a process or a state that
+    helps you with the provision of methods and techniques on how to make your computers
+    safe and secure from any malicious attack. It also provides you on how to preventive
+    measures on how you can avoid any potential breach, not just that it helps you
+    in recovering the lost data due to the attacks of intruders. Hackers launch their
+    viruses onto your computer system and when they gain access to your data, they
+    use it for their personal gains.
+
+
+    Sometimes they hold the data back or encrypt it so you cannot access it, then
+    they demand a ransom and after you pay them you are given access back to your
+    data. There are a number of ways on how do these attackers attack your computers,
+    invade your privacy and compromise'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: 'your data. To avoid these unwanted situations, you need to make sure that you
+    have a strong cybersecurity plan so you can stop these attacks and intruders to
+    exploit your personal data. If you are the owner of an organization, you need
+    to take extra care in order to maintain the protection of your data because you
+    have a huge amount of data stored on your servers and computer systems. You have
+    data of your customers and clients stored as well. If any malicious attacker gains
+    access to that and makes that data public that is supposed to remain confidential
+    and private, you will find yourself in hot waters. Your reputation will be very
+    negatively impacted.
+
+
+    # UNDERSTSTNDING THE NEED OF CYBERSECURITY:
+
+
+    The world nowadays relies on technology and the internet. As technology evolves,
+    we see the internet taking over everything. Smartphones and devices are used by
+    almost every other person and when you get connected to the internet you are exposed
+    to a variety of malicious agents. They are constantly there lurking around in
+    search of an opportunity to compromise your devices and gain access to your data
+    by invading your privacy.
+
+
+    Cybersecurity is very important nowadays because of the increasing number of threats.
+    There is a lot of security risk that is needed to be addressed. You need to keep
+    this fact in mind that the attackers can launch their attack on any level. It’s
+    not necessary that they are going to launch an attack on a higher level of your
+    organization. They can also target the lower levels, thus it is very important
+    to educate your employees working on a lower level, make them aware of all the
+    risks that they are facing regarding cybersecurity. They should be capable of
+    handling any situation where a breach of security occurs. They should know how
+    to counterattack in such situations. They need to know all these ways so they
+    can play an important role in your organization and try to limit the damage that
+    the attackers have done. The first thing that you need to make sure of is that
+    your cybersecurity plan is strong enough to avoid any security breaches but then
+    again security is not always guaranteed. There may be cases when your privacy
+    is invaded. Where the attackers attack your systems and compromise your data.
+    In such a situation you should have a plan on how to minimize the damage. You
+    need to have strong plans for damage control. It is very essential if you want
+    to remain reputable in the business community. If your organization always has
+    these security problems, your customers, clients, and the stakeholders would no
+    longer put their trust in you and you would lose your position among the business
+    community.
+
+
+    Reliance on technology nowadays is more than ever. Personal information is now
+    stored on the cloud services and can be accessed at any time remotely. Cloud services
+    can also have security problems and their security layers can be breached by attackers
+    too. That way your personal information like your social security numbers, your
+    bank details, credit card numbers, etc. can become public. This can cause you
+    huge problems. IoT devices are also very popular. The reason for their popularity
+    is their connection to the internet. These IoT devices were designed by keeping
+    the security aspect in mind. But they have become a huge cause of the increasing
+    data breaches. Attackers can very easily bypass the security protocols and gain
+    access to the device. They not only gain access to the device and the data stored
+    in them but they also end up affecting the network. They infect the network with
+    which the IoT devices are connected. This could lead to even more damage, all
+    the other systems or devices that are connected to the same network their security
+    is also compromised. The damage that these IoT devices can cause is huge but then
+    again they have multiple benefits. The most important of them all is that it gives
+    you all-time connectivity to the internet. They also make you able to work remotely.
+    You can work from anywhere using your IoT devices. This doesn’t require you to
+    come to the office and work from'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: 'there. These IoT devices may have made your life convenient and comfortable
+    but they have put the security of your information and data at stake. You need
+    to know that cyberattacks can affect all people. Be it any person who owns a device
+    or computer system or a huge organization. These attacks have made the lives of
+    people difficult. The organizations are working day and night on their security
+    plans and policies and finding ways on how to make them more secure and less prone
+    to security breaches. Just because the cyberattacks are increasing day by day
+    very soon you will see an increased number of rules and regulations that would
+    be made to ensure protection against these threats. Very soon you will see a world
+    where the legislations and regulations will be more than ever. Very strict penalties
+    can be applied even if a little mistake is made by anyone. The citizens would
+    also be required to make themselves aware of these laws and regulations so they
+    can see for themselves if their businesses comply with these laws and regulations.
+
+
+    Identity theft has also become very common due to the increased number of cybersecurity
+    breaches. Situations where the attackers take hold of the personal identities
+    of the individuals and then demand a ransom to get them back. The attackers would
+    demand a huge sum of money. These cases are more common in high-profile people
+    who have a lot of net worth. You need to make sure that you keep yourself protected
+    and safe from these identity thefts. Cybersecurity threats are also seen often
+    when the softwares and other tools installed on your computer are not up to date.
+    These attackers find it easy to bypass the tools and softwares that are not updated.
+    You may have anti-virus software installed but if it is not updated with the latest
+    features as well, it is good for nothing. It cannot provide you with any safety
+    and protection. Thus make sure the softwares and other tools installed on your
+    computer are updated timely.
+
+
+    Every organization faces cybersecurity breaches every now and then. In order to
+    tackle these issues, a strong team of IT and cybersecurity officials is needed
+    so they can help the organizations make their systems and data more secure. these
+    professionals are the saviors against these malicious attacks and invasion of
+    privacy.
+
+
+    # GROWING NEED OF CYBERSECURITY PROFESSIONALS:
+
+
+    There are a number of cybersecurity professionals but still, there is a need for
+    more because of the growing number of cybersecurity risks and the continuous threats.
+    The traditional informational technology specialists find it hard to deal with
+    the ever-increasing and evolving cybersecurity threats because of the gap between
+    the technology and their knowledge. The information that they had is now of no
+    to little use because the technology has evolved and the methods of the cyber
+    attackers have become more advanced and difficult for them to handle. Thus the
+    need for cybersecurity professionals with advanced knowledge has increased as
+    well.
+
+
+    Every organization needs a security specialist to solve their problems related
+    to security. They need cybersecurity professionals to design and plan a program
+    to ensure the cybersecurity of their data and the information they are working
+    on. This is important because the data is all an organization has and the protection
+    of that data is the foremost requirement and need of the organization. Organizations
+    also need cybersecurity professionals to provide them with solutions for security
+    breaches and potential threats to their organization from malicious attackers.
+    Cybersecurity professionals need to make sure that they are providing the awareness
+    and knowledge that is required by the employees working in those organizations.
+    That is because these employees have to deal with the potential security breaches,
+    they are the first in line. They need to know everything about these potential
+    security breaches. They also need to educate the'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'common public as well because they are also exposed to these potential security
+    threats and they also need to ensure firm from such attacks. In order to recruit
+    an efficient cybersecurity professional, you need to invest a lot of money. You
+    have to pay the cybersecurity professional a huge sum of money because the work
+    he is doing for you is demanding and tiresome. Also, you need to invest enough
+    money so you have a strong and efficient cybersecurity plan. Two plans would be
+    required to deal with unwanted situations. You need plan A and plan B.
+
+
+    +   • **PLAN A:**
+
+
+    Plan A should be developed for avoiding situations that could lead to security
+    breaches. This would have all the preventive measures that you can take so you
+    protect your computer systems from unwanted and malicious attackers. This plan
+    needs to be stringent and help you avoid malware and security breaches to the
+    maximum.
+
+
+    +   • **PLAN B:**
+
+
+    Plan B should be your backup plan. In case you find yourself in a worrisome situation
+    where your computer systems have been breached and compromised. You need a strong
+    and stringent backup plan to help reduce the damage as much as possible. This
+    plan needs to be extremely efficient because the breach has already happened and
+    the damage is done so you have to make sure that the damage is reduced and do
+    not further put your security systems to be questioned.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# Chapter 5: Effective Study Schedule And Study Groups
+
+
+    The CISSP is a difficult exam. The course contents are much and in order to pass
+    the exam on the first attempt, you need to make sure you are studying extensively
+    for the examination. Extensive study is one of the most important things that
+    is going to make you capable enough to pass the examination. In order to cover
+    the entire syllabus properly and with full concentration you need to have an extensive
+    and effective study schedule. You can also take your preparation for exam to a
+    next level you can buddy up with peers who are also appearing for the exam. You
+    can form study groups and work in those. It has a lot of benefits and greatly
+    helps you with your study. The details of the group study and having a proper
+    and effective study schedule are all given below. These tips and details would
+    greatly help you in preparation for the exam so you are able to pass the test
+    on your first go. Even if you are unable to pass the exam you can still put these
+    details and tips to use for the next time you are planning to appear for the exam.
+    Having an effective study schedule is very important because there are a lot of
+    theories of cybersecurity that you need to cover in less time. There are 8 domains
+    and a lot of subtopics. That is why if you'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: 'can’t master all the 8 domains, at least make sure you are well versed in 2
+    domains of cybersecurity. There is going to a lot of information that you need
+    to store in your mind. So if you attend just a 5-day training session and think
+    you will be able to pass the test by not studying for it all, you are wrong you
+    can’t pass your exam by just attending the training. There is a lot of knowledge
+    and you might at some point feel that your head is exploding with all the knowledge
+    and information. First of all, you should have knowledge about the course, what
+    will be included in the exam and whatnot. After that collect all the study resources
+    and start learning and then finally start practice tests and test yourself. Evaluate
+    yourself based on those tests. That would help you determine how much you know
+    and how much you need to learn more.
+
+
+    # EFFECTIVE STUDY SCHEDULE:
+
+
+    # 1. FORMING A STUDY SCHEDULE:
+
+
+    The first thing you have to do is to form a schedule for studying that you would
+    follow. Study schedules greatly help you manage your time and the course that
+    will be included in the test effectively. You don’t end up studying till the last
+    day of your exam but you divide all the courses and study on an everyday basis.
+    You can start with one hour of study every day whenever you get free time. If
+    you are full-time committed to the CISSP examination and have nothing much to
+    do besides it, you can spend a major chunk of your day while studying. Make 45
+    minutes’ study periods in which you will study seriously. You would not allow
+    any distraction to distract you from your course during that study period. Your
+    mind cannot concentrate on something for more than 45 minutes so make sure you
+    do take breaks in between your study period. Breaks can make you feel refreshed.
+    Your study plan shall be such that it lets no other activity come in its way so
+    you can study in peace. CISSP has a lot of material that is needed to be covered.
+    So a better approach can be to divide the whole course into small chunks and then
+    study every chunk one day. This would make it easier for you to study and concentrate
+    more on what you are studying. You don’t have to go through all the material each
+    day and end up mixing the concepts you have learned.
+
+
+    Below is a sample 30-day plan for the CISSP exam preparation:
+
+
+    # 30-DAY PLAN:
+
+
+    +   • DAY 0-2:
+
+
+    During the first two days of your 30-day study plan you need to plan out what
+    and how will you do everything. This is called the planning phase and here you
+    will plan your schedule. This is the most important step which a lot of people
+    miss and then later regret. In this step, you create a plan which includes all
+    the course contents of the CISSP examination. Most of the people are confused
+    regarding the fact that what would be on the test, its simple everything is available
+    but you need to compile it and then make a study plan that would be beneficial
+    for your preparation for the exam. Compile all the study resources and store them
+    in one place so you can easily access them. There will be practice tests, books,
+    notebooks, study guides, etc. that are in relevance to the CISSP'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "examination. You need 9 weeks to get done with all the courses, one week for\
+    \ each domain, and then one week for review. You can schedule your exam any time\
+    \ after these 9 weeks. You can set aside 90 minutes every day in which you will\
+    \ prepare for the CISSP examination, so by the end of the 30th day, you will have\
+    \ studied for 45 hours and covered all the course material for the exam.\n\n+\
+    \   • DAY 2-10:\n+   \n+   This is the review phase. During this phase, you would\
+    \ go through all the course that is going to be the part of your CISSP exam. This\
+    \ phase is to have an overview of what is going to be on the exam. You can start\
+    \ gathering the important study resources and start reading them afterward. You\
+    \ do not need to dive into too much detail at this point. All you have to do is\
+    \ just read the front and back pages of the book, table of contents to give you\
+    \ a better understanding of what is going to be on the book. Pay special attention\
+    \ to any bold or italicized terms, tables, diagrams, etc. You can highlight the\
+    \ words that are familiar to you. Just read the chapter summaries and try to understand\
+    \ them. If there are no summaries, try to summarize the chapters in your own words\
+    \ so you know what is in a specific chapter. You can skim through the rest of\
+    \ the book and don’t really dive into a lot of detail at this phase.\n\n+   •\
+    \ DAY 10-25:\n+   \n+   This phase is your learning phase. Major learning for\
+    \ the exam takes place in this phase. It would take you a little longer to get\
+    \ to the end of this phase. CISSP examination is a knowledge-based test. A simpler\
+    \ and better way to learn is to pretend like you are teaching it to someone else.\
+    \ You should pick out a topic every day and then write as much information as\
+    \ you can about it in the most simpler terms. If you find that you are stuck at\
+    \ some point you can always go back to your books and other resource material\
+    \ and learn it again. Come back to your topic and continue writing again in the\
+    \ most simpler terms.\n\n+   • DAY 25-30:\n+   \n+   This is your testing phase.\
+    \ During this phase, you will have to put all the knowledge that you have gained\
+    \ in the past weeks to test. You should try to take practice exams in an environment\
+    \ that will be similar to that of the actual test environment. After you get done\
+    \ with your tests, you should evaluate yourself based on your marks. If you feel\
+    \ like you are not well informed about some specific topic, go back to it and\
+    \ study it again. Learn from your mistakes. See what mistakes you have committed\
+    \ in your practice exam and try not to repeat them, in the actual test. These\
+    \ practice tests are a great way to prepare for the exam. The practice tests would\
+    \ make you aware of any gaps that you feel your"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'study has.
+
+
+    # 2. REVIEW YOUR COURSE MATERIAL:
+
+
+    You can use different tools that you resonate with. You can make colorful flashcards,
+    timelines or anything similar, etc. You can use anything that you feel is similar
+    to your studying style. If you are a visual learner, you can resort to making
+    diagrams and pictures to help you prepare well for the examination. You should
+    write down important points from every topic on a piece of paper, which would
+    really help you revise all the points and information relevant to the exam that
+    is important. This is a great way to review your course material. You can keep
+    on revising the concepts without having to carry the books and relevant course
+    material wherever you go.
+
+
+    # 3. PREPARE CONSIDERING THE TYPE OF EXAM:
+
+
+    Learning for the multiple-choice questions is different than that of the comprehensive
+    exams. In order to prepare well, you should take some practice tests to better
+    understand and have knowledge about the test. Try to recall all the important
+    terms and familiarize yourself with them. You have to very careful with the timing
+    of the exam. Make sure you do not waste your time on simple and easy questions.
+    You can get done with the easy questions first and then you can focus on the lengthy
+    and the complex ones. You would need an ample amount of time to solve them so
+    make sure you have enough time to solve those questions.
+
+
+    # 4. GATHER YOUR SUPPLIES:
+
+
+    A night before your test make sure you have all the supplies that you need to
+    take to the test center with you. Gather them in one place and keep them safe
+    so you don''t end up forgetting to take them along. This would help you avoid
+    the test nervousness and anxiety. If you have to take any snacks or drinks with
+    you make sure you have them all ready and packed. It is a long test so you would
+    need these things. Don''t forget to take a bottle of water with you. It won''t
+    be allowed inside the room where the test would be conducted but you can store
+    your belongings in a storage room.
+
+
+    # IMPORTANT TIPS FOR THE CISSP EXAMINATION:
+
+
+    In order to pass the CISSP examination exam on the first attempt, you need to
+    make sure you have practiced enough. The CISSP exam is 50% study and 50% practice.
+    Your practice should be a lot, the CISSP exam is different from all the other
+    exams and if you want to get it passed on the first attempt you need to make sure
+    your practice game is strong. Time management is also a problem that you might
+    face during the exam. Thus during these practice exams, you should try to solve
+    as many questions as you can in less time.
+
+
+    Another important tip to pass the examination is to make sure you are fully committed
+    to it. You can never succeed if you are not passionate about it and not fully
+    committed to it. Along with a proper study plan you need full commitment to take
+    the examination.
+
+
+    You should try to allocate time for study every day. Study for at least 2 to 3
+    hours daily. You can'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: 'skip the weekends; you can do whatever you like during those days but on the
+    weekdays you have to make sure that you study for the time that you have allocated
+    for your preparation. If you don’t feel like studying every day you can keep reminding
+    yourself how is this examination going to help you elevate your career and what
+    difference would it make to it. Then you will find yourself motivated enough to
+    get back to study.
+
+
+    Another important thing is to not lose your motivation. The practice test exams
+    are for your practice. If you find yourself not scoring well in those tests you
+    should not feel demotivated and lose hope but instead, try to learn from your
+    mistakes. You should see where you have issues and then go back to your course
+    books and relearn all those topics again. This would help you identify your weak
+    areas and how you can turn your weaknesses into your strengths.
+
+
+    # STUDY GROUPS:
+
+
+    Study groups are one of the most important and supportive ways to learn. You should
+    try to consider studying in different study groups. You can look for the people
+    who are about to take the same exam as yours and then collaborate with them. If
+    you study on your own that is your own perspective of everything but in a study
+    group, it’s a number of other people as well. Every mind would come up with different
+    questions and perspectives on one topic. You can also study better if you are
+    a part of a study group, if you study alone you would find yourself distracted
+    and not focused on your preparation. In study groups, you can study better.
+
+
+    # BENEFITS OF A STUDY GROUP:
+
+
+    Here are a few benefits of the group study sessions for the preparation
+
+
+    # 1. ASKING QUESTIONS IN A STUDY GROUP:
+
+
+    The benefit that asking questions in a study group can have on your preparation
+    for the exam, nothing else can do that. You may study all the books that are relevant
+    to the exam but the most effective way to learn is by asking questions. You can
+    start by asking questions from your teachers or other fellow students. You might
+    get to learn something which you haven’t by asking questions related to the course.
+    If you find yourself in trouble with some topic, you can always reach out to your
+    comrades who are also going to appear for the test and let them guide you and
+    help you understand the topic better. Always make sure you ask questions, there
+    is nothing wrong with asking questions and getting answers to those questions
+    from reliable sources.
+
+
+    # 2. SUPPORTING EACH OTHER:
+
+
+    If you are a part of a study group, it’s actually a group of people who are striving
+    for and moving towards a common goal. This would help you encourage each other
+    if any one of the members of the study group is feeling down or low. Sometimes
+    you can get a little demotivated and these members can really help you by encouraging
+    you. They bring back your motivation.
+
+
+    # 3. COMPARING YOUR NOTES:
+
+
+    A study group has multiple people who are trying to achieve one similar goal.
+    You'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: 'can compare your notes with each other and that can help you learn some new
+    topics. If you have missed something important and somebody else has noted that
+    down, you can learn from there. It is a really good approach to learning new things
+    and concepts.
+
+
+    # 4. GROUP STUDIES ARE FUN:
+
+
+    Group studies can be fun as well. A number of people get together and prepare
+    for an upcoming exam. You do need breaks in between your study schedules and if
+    you have multiple people with you, your breaks can become entertaining. The whole
+    learning experience in a study group can become very enjoyable. Group studies
+    are fun and fulfilling as compared to studying alone on your own. That can drain
+    you out, so in order to not feel drained and exhausted while you study these group
+    members can really liven up the study group sessions.
+
+
+    # 5. DISCOVER NEW STUDY TIPS AND TRICKS:
+
+
+    You need to enhance and make your study routine better. If you are a part of a
+    study group, you would observe a variety of people following different study routines
+    and you would end up learning new study tips and tricks. You can then see how
+    you can incorporate those study tips and hacks into your own schedule and how
+    it helps you enhance your study timetable and methods. Organization skills and
+    note-taking skills are greatly improved in a study group environment.
+
+
+    # 6. YOU TEND TO LEARN FASTER IN A STUDY GROUP:
+
+
+    It is observed that people tend to learn faster when they are in a study group
+    environment rather than studying alone. If you are studying alone and you find
+    yourself stuck over a problem, it takes you longer to figure out a way to solve
+    it but if you are in a study group there would be a number of other people that
+    would try to help you with the problem. There is a lot of room for learning in
+    a study group environment, you can learn a lot from each other. You can exchange
+    ideas. Agree and disagree on stuff and with this group discussion and the group
+    study becomes very fulfilling and fruitful. If you find it hard to deal with something
+    in a study group, you would find solutions from your peers that you would never
+    have thought of. There are multiple heads in a study group and that way you can
+    learn and cover more study material as compared to when you are studying alone.
+
+
+    # 7. IMPROVES YOUR COMMUNICATION SKILLS:
+
+
+    The members of the study group are mostly from different backgrounds. When you
+    communicate with each other it really helps you in improving your communication
+    skills. It becomes easy for you to be able to talk to anyone. You become more
+    confident in talking to people you don’t know and it really helps you in building'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: 'your personality.
+
+
+    # 8. YOU LEARN TO RESPECT EACH OTHER’S OPINION:
+
+
+    Every person who is part of the group has different opinions and perspectives.
+    You may agree with something but one of your peers would not and disagree to that
+    point. This way you would learn how you can respect each other’s opinions because
+    no two people can think the same. Everyone has a different mindset and different
+    approach towards things. It is a great way to help you with understanding and
+    accepting each other’s perspectives even if you don’t agree with them. It is important
+    that you know how to respect another person’s opinion because if you don’t know
+    how to do that, it would result in chaos and disorganization.
+
+
+    # TIPS FOR EFFECTIVE GROUP STUDY:
+
+
+    Here are a few tips that you can follow in order to make your group study effective
+    and fruitful:
+
+
+    # 1. FORM AN EFFECTIVE STUDY GROUP:
+
+
+    In order to have a better experience of studying in study groups, you need to
+    form a study group that is effective. Your study group should comprise at least
+    3 to 5 members who are striving for a similar goal. You also have to be careful
+    with choosing people for the study group. Make sure all the members of the study
+    group are committed and do their best to achieve better grades. Also, fix a time
+    period of at least 3 hours for your study group. If your study sessions are an
+    hour or less than an hour they are most likely to be rushed and you can lose focus
+    that way. This would not make your group study session productive and fulfilling.
+    You can take short breaks after every 45 minutes during your study sessions.
+
+
+    # 2. GET YOUR HOMEWORK DONE:
+
+
+    You should not show up unprepared for the group study sessions. Make sure that
+    you have done all your homework and are fully prepared for your studies. You should
+    know what are you good at and what is that you find difficulty with. Try to identify
+    your weak areas and try to work on those with your group members.
+
+
+    # 3. STAY FOCUSED ON YOUR GOAL DURING THE SESSION:
+
+
+    You should always try to remain organized and focused in your group study sessions.
+    Do not sway away from the goal that has brought you and your group members together.
+    There may happen some disorganization in the group. You can avoid that from happening
+    by making a group leader. The group leader will have to make sure that the group
+    members remain organized and focused.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: 'You can choose the group leader among yourselves.
+
+
+    # 4. STUDY PLAN FOR THE GROUP SESSION:
+
+
+    You should have a study plan for the group study session. This is essential because
+    that way you would know what course material will you cover on a specific day.
+    Everything would remain organized because of the study plan that you have come
+    up with. You should plan ahead of time to make your group study sessions effective
+    and productive. You know that the CISSP examination course has a lot of topics
+    that you have to cover, you can ease that by assigning a topic to each of the
+    group members, and that way you can help each other with the topic that you have
+    prepared. You should always help and seek help from others as well. Never shy
+    away from either giving help to others or seeking it from them. This would do
+    you a lot of good and your group study sessions will be more effective, fulfilling,
+    and organized.
+
+
+    # 5. MEETING PLACES SHALL BE APPROPRIATE:
+
+
+    Don’t meet your peers for group study sessions at cafes and restaurants. Meet
+    at quiet places so you can focus and concentrate on your course material and your
+    preparation. You can meet in study rooms or libraries, these places are usually
+    quiet and you can study well. Also, the meeting place shall lie somewhere midway
+    so that all the members of the group can come there without any problem.
+
+
+    Another important thing that you can do to make your study sessions effective
+    and productive is to do an overview of the course material at the start of a study
+    session and then a wrap-up towards an end. That shouldn’t be detailed but just
+    a summary of what was done in the session before and the session today. To maintain
+    peace and order of the group try to not distract your team members by leaving
+    the study session again and again. Try to not eat while you study. You can eat
+    during your breaks. Do not take very long breaks but try to make them as short
+    as possible so you don’t waste your time.'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "# Chapter 6: Exam Strategies And How To Utilize Exam Resources\n\n# EXAM STRATEGY:\n\
+    \nBefore you appear for your examination, make sure you have a strategy prepared\
+    \ well for the examination. It is very important to approach the exam with a proper\
+    \ strategy. It helps you with the whole exam. It helps you manage your time properly\
+    \ so that you can solve every question without wasting much of your time. The\
+    \ exam strategy for the CISSP is simple yet effective. You can start over by solving\
+    \ the questions you are 100 percent sure about. First, solve those and then move\
+    \ on to the others. This way you would not waste a lot of your time. You have\
+    \ already prepared for the exam so obviously, you would know the questions you\
+    \ are solving. The questions which you are sure about and are easy and simple\
+    \ would not take long to solve so naturally you would be left with ample time\
+    \ so you could attempt the complex and lengthy ones. As it is multiple choice\
+    \ questions you wouldn't take long to complete them. If you feel like you are\
+    \ familiar with some questions but don't know the exact answer, you can start\
+    \ by eliminating the obvious wrong options and then try to find out the right\
+    \ one. By eliminating the wrong ones would make it easier for you to choose among\
+    \ the ones that are left. Try not to answer any questions from the engineer’s\
+    \ point of view. This exam is mostly for the managers. So try to answer the questions\
+    \ with the point of view that a manager would have about something. A common mistake\
+    \ that people make is that they don't pay attention to the questions and forget\
+    \ that the exam has questions that are supposed to be answered from the point\
+    \ of view and perspective of a manager. Try to collect as many questions as you\
+    \ can. This would also give you an insight into how the test would be. Try searching\
+    \ for the questions on different online resources and then after you are done\
+    \ with your preparation you can start with the practice tests. Practice tests\
+    \ are key to passing the test on the first attempt.\n\n# EXAM STRATEGIES:\n\n\
+    Here are a few other strategies that you could try to use to approach the examination:\n\
+    \n+   1. REVISE YOUR COURSE:\n+   \n+   If you are appearing for a test the most\
+    \ important thing you have to do is to prepare for it. You cannot expect that\
+    \ your paper would go well if you haven't prepared for it. So the first and foremost\
+    \ thing is to prepare well for the exam you are about to take. No matter how many\
+    \ strategies for taking exams you may come up with but if you are not prepared\
+    \ with the course, nothing in the world could save your day. So make sure you\
+    \ are completely prepared. You have revised your course before you appear for\
+    \ your examination.\n\n+   2. DON'T FOCUS ON THE PREVIOUS ANSWER:\n+   \n+   After\
+    \ you attempt a question, forget that and move on to the next one. If you would\
+    \ keep on concentrating on the previous one you would end up getting confused\
+    \ and your mind would not be focused on the one you are attempting next. Thus\
+    \ it is"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'advised to just let the previous one go after you have attempted it and focus
+    your mind on the next one.
+
+
+    # **3. TRY TO REMEMBER BY EASY NAMES:**
+
+
+    If there are concepts that you might hard in remembering during the exam, you
+    could instead use simple words for it or use mnemonics. Mnemonics are a great
+    alternative to recall a list of sections in a topic. Like you can remember the
+    OSI reference model layers by, “Please Do Not Throw Sausage Pizza Away”.
+
+
+    # **4. SET A GOAL:**
+
+
+    You should try to set a goal of answering as many questions as you can in the
+    given time with proper deliberation. This would really be helpful for you because
+    if you would be answering and solving questions according to the division of time
+    for each section you would feel confident and motivated.
+
+
+    # **5. PAY ATTENTION TO THE LAST MINUTE INSTRUCTIONS:**
+
+
+    You need to pay special attention to the instructions given at the very last moments
+    by the test administrator. The administrator may be explaining the test a little,
+    or maybe explaining rules and regulations that you do not want to miss. So make
+    sure you are paying attention to those instructions. These instructions that are
+    given at the last minute before the examination if are not listened to by you
+    carefully, might increase your test anxiety.
+
+
+    # **6. MEMORY DUMP:**
+
+
+    Just as you are about to start your test, write down all those things which you
+    might forget. Pen them down and then whenever you would need them you can get
+    back to it. Write down all the important dates, equations and formulas, etc. with
+    you before you start to attempt your exam.
+
+
+    # **7. ARRIVE EARLY:**
+
+
+    Try to arrive at the test center early, it is a good practice. You won’t be rushing
+    everything in the morning. You would have enough time to do everything with patience.
+    You will be better focused on the test that you are about to take, thus make sure
+    to arrive early and have some time to relax your mind.
+
+
+    # **8. MANAGE YOUR TIME WELL:**
+
+
+    Time management is essential during the exam. You need to manage your time well
+    so you don’t have to rush your paper during the final minutes of your exam. You
+    will'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'do everything with proper attention if you manage your time properly. So try
+    to be efficient with your time management. Solve the easy and simple questions
+    first and then go for the complex ones. Don''t spend too much time attempting
+    the easy ones. You would be left with less time by the time you are about to attempt
+    the complex questions.
+
+
+    # 9. FIRST ANSWERS ARE USUALLY CORRECT:
+
+
+    Usually when the first answer that pops into your mind is the right one. Trust
+    your gut instinct and choose the answer which came into your mind. You can use
+    this strategy if you are confused about some questions. First, you should try
+    to appear in the exam well prepared but if in case you are stuck in some question.
+    This way you would not waste time on one question and can quickly move to the
+    next one saving you some time.
+
+
+    # 10. STAY RELEVANT:
+
+
+    Always answer the questions according to what you are asked. Don''t go for irrelevant
+    details. Stick closely to the topic and don''t go over the board with irrelevant
+    details.
+
+
+    # 11. DON''T LEAVE THE TEST ROOM EARLY:
+
+
+    Even if you think you are done with the exam, still do not leave the room. Keep
+    sitting and revise your paper again and again. You may end up finding some mistakes
+    that you can fix. You can keep thinking and remember some answers. So do not leave
+    your room so early. Check your exam for any possible mistakes and errors.
+
+
+    # 12. TRY TO STAY HYDRATED:
+
+
+    You should take water breaks. Try to remain hydrated, this may seem unimportant
+    but it is actually not. It is important for you to try to keep your water bottle
+    close to you. It will stop you from being dizzy and sleepy, you will stay fresh
+    and awake.
+
+
+    # 13. MAKE YOURSELF NOTES:
+
+
+    You should keep making notes. Write all the important points on a paper and you
+    can revise them whenever you want. It would help you remember all the important
+    things that are important and should not forget.
+
+
+    # 14. REMAIN CONFIDENT:
+
+
+    Try not to lose your confidence and become nervous before the test. Also, try
+    not to become over-confident. Keep your confidence in check. If you become over-confident
+    and you think you know a lot about the cybersecurity domains that are part of
+    your syllabus. There is still a lot you don''t know. Prepare well and go through
+    each domain in detail and master at least 2 to 3 completely if not all of them.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# EXAM RESOURCES:
+
+
+    There are a lot of exam resources available online. You just need to know what
+    they are and how can they help you prepare well for the exam. The most common
+    exam resources that are available on the internet to help you prepare for your
+    exam are:
+
+
+    The Sybex book “CISSP Certified Information Systems Security Professional Official
+    Study Guide” and the CISSP Official (ISC)2 Practice Tests book are the two books
+    that can help you a lot for preparing for your exam. These books have been recommended
+    by those who have passed the CISSP examination in the first attempt. This first
+    book is the official guide which has over 1000 pages and 21 chapters. These 21
+    chapters cover all the important and relevant topics that will be a part of the
+    exam. It has details of all the 8 domains of cybersecurity. The second book is
+    a practice book. It has around 400 pages and 12 chapters. These chapters have
+    practice test questions. These practice test questions are included from all the
+    eight domains of cybersecurity. These books are really helpful and prepare you
+    a great deal for the examination. But if you see you will find out that the CISSP
+    course content and study material gets updates every once in a while. Thus before
+    you buy the books for test preparation make sure they are according to the updated
+    course material. You will face issues if you do not buy the books that are according
+    to the updated course material. These books are easily available on amazon. You
+    can purchase these books for yourself from Amazon.
+
+
+    Practice books are as important as the main study book. The practice books help
+    you prepare for the test in a way that nothing else can. You study the questions
+    and you become well prepared for the exam. You then know what type of questions
+    can come in the exam. While solving the practice papers you can also practice
+    your time management skills for exams. You can try to solve as many questions
+    as you can and also try to follow your exam strategy. This way you will be comfortable
+    with all these things on the day of the exam.
+
+
+    # HOW CAN YOU UTILIZE THESE RESOURCES?
+
+
+    You know now what books can help you. Now the important question is how can you
+    utilize these resources and take the maximum benefit out of them. You can start
+    with properly studying the books. Look for every detail that may deem important.
+    Don’t leave out anything because everything is important. Skipping can decrease
+    your chances of solving more questions. You can also look for online resources
+    and watch some YouTube videos regarding whatever topic you want. You can find
+    very good quality videos on YouTube about cybersecurity. There are also other
+    guides that are really helpful in making you gain a better understanding of the
+    course and other things that you should know. From this, you will learn that if
+    you find any option to a question that speaks of human safety, you know that would
+    be the correct one. 99 percent of the time such answers are the correct option
+    for you to choose because the CISSP exam is conducted from the manager’s point
+    of view. And the managers are concerned about safety more. You also have to see
+    if you are answering the questions from the point of view of a manager.
+
+
+    Try to have a better understanding of the course material and other things that
+    are relevant to the exam as well. Another thing that you can do is to get in touch
+    with someone who has appeared for this examination and knows their way through
+    everything. You can also get in touch with alumni who have scored great marks
+    when they attempted the CISSP examination. Your study groups would also make it
+    easier for you to utilize the study resources efficiently and effectively. Study
+    groups are a great way to prepare for the exam. You get to meet people with different
+    perspectives and backgrounds. Everyone has a different approach towards things,
+    this way you will be able to discover new learning skills and methodologies. Incorporating
+    those skills and'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: methodologies into your study regimen can really help you with preparing for
+    the exam and constructively utilizing the available course material. This would
+    give you in-depth and detailed knowledge. Thus, try utilizing the resources that
+    are available to the best of your potential. If you can go the extra mile, you
+    should that would increase your chances to score better in the examination.
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# Chapter 7: Preparation Before Exam
+
+
+    CISSP examination is conducted for certification as a professional in cybersecurity.
+    Cybersecurity is the need of the day. The amount of data that the organizations
+    have has increased multiple folds. You need to make sure that the data remains
+    protected and secure from any malicious attack that can attempt to comprise it.
+    The CISSP exam is a 6-hour long exam that covers the 8 domains of cybersecurity.
+
+
+    Before you appear for your examination, you need to keep a few things in mind.
+    You need to have a proper understanding of what the test is going to be about.
+    You need to have enough knowledge about everything. You should be well informed
+    about all the rules and regulations and make sure you follow them. You should
+    be well prepared as long as the course for the examination is concerned.
+
+
+    # CISSP COMPUTERIZED ADAPTIVE TEST:'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: 'You need to familiarize yourself with everything beforehand. You should be
+    familiar with the computerized adaptive test. The computerized adaptive tests
+    are common for English language candidates. These exams are conducted by the CISSP
+    worldwide. The computerized adaptive test is somewhat similar to the linear CISSP
+    examinations. The course contents for both the examinations are the same. The
+    percentages of courses that are included in both the CISSP linear examination
+    and the computerized adaptive test are similar. The only difference between the
+    two is that the computerized adaptive test is a little precise and efficiently
+    evaluates your competency and knowledge. Before you appear for the examination
+    you should know the difference between the two and also know which one better
+    suits you to attempt. Accordingly, make a decision if you want to opt for the
+    linear CISSP examination or the computerized adaptive test.
+
+
+    # RESCEDULING AND CANCELLING OF THE EXAMINATION:
+
+
+    You should be well aware of all the CISSP policies for rescheduling or canceling
+    the exam as a whole. Having better knowledge of all these things would make you
+    able to decide what is best for you. You would end up doing everything efficiently
+    and won''t waste your time.
+
+
+    Firstly, you should be very mindful of choosing when to schedule your test at
+    the time of registration for your examination. At the registration time, you are
+    given the liberty to choose when and where you would like to give your examination.
+    But just in case you want to reschedule you should know about the process or rescheduling.
+    After you register for your examination with the Pearson VUE you are given a time
+    of 365 days in which you can reschedule for your exam. If you wish to reschedule
+    or cancel your examination you need to make an appointment with the Pearson VUE.
+    You need to contact the Pearson VUE at least 48 hours before your examination
+    and let him know that you want to cancel or reschedule. 48 hours are required
+    in case you are rescheduling or canceling your examination online, if you are
+    rescheduling or canceling on the phone you need to contact the Pearson VUE at
+    least 24 hours before the examination. The reschedule fee is $50 and the cancellation
+    fee is $100. If you reschedule the Pearson VUE would deduct $50 from your examination
+    fee and if you wish to cancel, then the Pearson VUE would deduct a 100 bucks.
+    In case a time frame of 365 days has passed from your initial scheduling of the
+    test and you did not appear, you would not be refunded any admission fee. Thus,
+    you should appear within the given time of 365 days for the examination. You need
+    to know all these things before the test. It is a part of your exam preparation.
+    Along with your course contents you also need to know about all these things.
+    They are as important as your course for the examination.
+
+
+    # KEEP AN EYE ON THE UPDATES REGARDING EXAMINATION:
+
+
+    There would be multiple updates that you need to keep an eye on before your examination.
+    You should be aware of them, they are important. Keep checking the website for
+    any latest updates regarding the examination. Turn on your mobile updates so you
+    get updated on time. Multiple times updates regarding the examination are announced
+    so make sure you remain updated.
+
+
+    # REVISE YOUR COURSE:
+
+
+    Another important, in fact, the most important thing to do is to prepare well
+    for your examination. You should have knowledge about all the course contents.
+    Keep searching for the relevant material online, read books, and study thoroughly
+    for the exam. You should revise all the important concepts and topics before you
+    appear for the examination. The test is divided into different sections each based
+    on the 8 domains of cybersecurity. You should prepare for all the'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: 'sections. If you miss out on any of the 8, you would end up losing marks. You
+    cannot afford losing marks thus you need to make sure you are well prepared for
+    the examination.
+
+
+    Cybersecurity is a vast topic. It keeps on evolving as technology evolves. Not
+    just the books but you also need to carry out your own research regarding all
+    the latest technologies and trends that have been introduced with the everyday
+    evolving technology. You should look up for them and know all the trends and technologies
+    that are in relevance to the cybersecurity domains. The exam also has 25 pre-test
+    items. Those pre-test items are from the course contents. Thus you need to make
+    sure that you have researched the pre-tests because they are for research purposes.
+    These pre-test items are not identified. Thus, you must answer all the items to
+    the best of your abilities. This is all to check your competency and your abilities,
+    thus try to have knowledge of them and then make sure you do your best. If you
+    work hard and do your best, there would be nothing that would stop you from passing
+    the CISSP examination of cybersecurity in the first attempt.
+
+
+    You should get ready for the assessment of your knowledge and abilities in your
+    examination. If you go through the course outline and understand it, it would
+    be able to make you decide on what cybersecurity skills and domains you need to
+    work on and master them finally. Another important thing you need to do is to
+    make sure that you are familiarized with all the scoring and testing of the examination.
+    You should know details of how is the scoring and testing done in the examination.
+    You also need to see and review what language you want your test to be taken in.
+    For that purpose, review the candidate information bulletin by the (ISC)2. All
+    the additional information that you wish to know would be stated in that candidate
+    information bulletin. (ISC)2 provides with all the information that is necessary
+    for the candidates but you have to learn how to access that information.
+
+
+    # REQUEST FOR SPECIAL ACCOMMODATIONS:
+
+
+    If you need you can apply for the (ISC)2 special accommodations. These special
+    accommodations provided by the (ISC)2 are reasonable and appropriate, these are
+    provided when the candidate requests for it. If you want to request the special
+    accommodations for your test you need to fill out an application form for accommodation
+    and then return it back to the (ISC)2. The form is needed to be returned prior
+    to the examination. The information that is required to be added in the form is
+    mentioned below:
+
+
+    +   - You need to mention your exam location as per your convenience.
+
+    +   - You would be required to have the documents that are needed and support
+    your request for accommodation.
+
+    +   - You would also need to fill out the details of the accommodation that you
+    are requesting for.
+
+    +   - Also you have to mention about the exam that you are about to take.
+
+
+    The special accommodations for the test are individualized. They are dealt with
+    case by case. After the case for special accommodations is dealt with and reviewed
+    by the team it is forwarded to the Pearson VUE accommodations. The information
+    from the (ISC)2 to the Pearson VUE regarding the special accommodations for the
+    candidates would take at least 2 to 3 business days. You need to make a call to
+    the Pearson VUE after a few days and schedule your exam accordingly. Before you
+    contact the Pearson VUE, it is advised you first call the (ISC)2. Refrain from
+    scheduling the test with the Pearson VUE website or through the main phone line
+    that has'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: 'been registered. These special accommodations for the candidates are with the
+    purpose of having them get full access to the test. These special accommodations
+    do not help you with scoring well and improved scores or give you the guarantee
+    of your test completion.
+
+
+    Carry out your research on this topic as well, you should be aware of all the
+    things that are in relevance to your examination. Having knowledge of all the
+    details before you appear for your examination is going to allow you to not waste
+    any time on the test day. All these things are supposed to be done before the
+    test day. You need to come with a fresh and relaxed mind on your test day so you
+    can give your exam well. Thus make sure you are fully prepared course content-wise
+    and also have knowledge about other relevant details to the test before your examination
+    is conducted.'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# Chapter 8: The Day Of Your Examination
+
+
+    The first thing that you should do on the day of the exam is to relax. You need
+    not panic but be calm and hope for the best. Do not panic and start getting anxious
+    because that would make you forget all that you have prepared. You should be well
+    prepared for your exam. Make sure you have gone through all the syllabus that
+    is included in the examination. Along with your syllabus, you need to have knowledge
+    about all the relevant details about the examination.
+
+
+    There are a few things that you should do before the day of your examination.
+
+
+    +   1. PREPARE YOUR SYLLABUS WELL:
+
+
+    It is very important that you are well prepared with all the courses from which
+    the exam will be conducted. You should properly prepare your course. Revise all
+    the topics which are a part of the exam. Go in detail through all the 8 domains
+    of cybersecurity which the examination comprises of. Your preparation for the
+    exam is'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: 'very important. You should do that very well.
+
+
+    # 2. DO NOT PANIC DURING THE EXAM:
+
+
+    Another important thing you should do is not panic. Panic can cause you great
+    damage. You would lose grip on your understanding and knowledge regarding the
+    exam thus make sure to stay calm and relaxed. The relaxed state of mind is going
+    to guide you to the road to success.
+
+
+    # 3. MAKE SURE YOU HAVE AN UNDERSTANDING OF ALL THE RELEVANT INFORMATION:
+
+
+    Before you sit to attempt your test you should make sure that you have an understanding
+    of all the relevant details regarding the examination. You have an understanding
+    of all the rules and regulations regarding your examination. It is very important
+    because otherwise, you would be in a constantly confused state. This confused
+    state would waste your time that you should instead be spending on your test.
+    Thus make all the preparations beforehand so you don''t have to keep running after
+    everything at the very last moment.
+
+
+    # 4. HAVE A GOOD NIGHT SLEEP A NIGHT BEFORE:
+
+
+    You need to be fresh on the day of your examination. You need to be as fresh as
+    possible. You should try to sleep early one night before the exam so you have
+    8 hours of sleep. If your sleep cycle is not right you would feel dizzy and clumsy
+    while doing the test. You would keep on yawning and not be able to concentrate
+    on your test. Thus you should make sure that your sleep cycle is fixed. You should
+    try to get at least 8 to 1 0hours of sleep a night before. A good night''s sleep
+    is something that would drive you through your exam day. Your brain needs rest
+    and due to your constant study schedules, it would be craving the rest that is
+    needed for it to function well. So to have a better grip over your exam you should
+    make sure you sleep for 8 to 10 hours a night before the examination. Avoid any
+    study during that time.
+
+
+    # EXAM DAY PREPARATIONS:
+
+
+    You should know about everything in advance. You should know the whole procedure
+    of the test. Try to limit the exam day surprises. Be prepared for everything that
+    is going to happen. Let''s start with when you wake up on the day of your exam.
+
+
+    # TAKE A WALK:
+
+
+    It is the day of the test. You have been preparing for this for a long now. After
+    weeks and months of extensive and exhaustive study, it is finally the day when
+    you would give the exam. You should start the day on a happy note. Wake up early
+    and go out for a nice walk. The effect this'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: 'walk would have on your mind would be amazing and fresh. A walk in the fresh
+    air outside would make you feel fresh like a daisy. It would make your mind feel
+    at peace. So you should go out and have a little walk.
+
+
+    # EXERCISE:
+
+
+    If you cannot go out for a walk, try to do some light exercises to feel fresh.
+    A few moves of exercise aren''t hurting anybody. You should do some physical activity
+    on the morning of your examination.
+
+
+    # MAKE YOURSELF THE BREAKFAST YOU ENJOY:
+
+
+    You should have breakfast on the day of your examination.
+
+
+    It is highly not advised for you to skip breakfast on the day when you need it
+    the most. You can have something that you enjoy eating. The examination hours
+    would be long and extensive thus you should make sure you eat from your home.
+    This way you would not waste your time and take breaks from the exam to eat food.
+
+
+    # THE TEST CENTER:
+
+
+    You should leave for your test center on time. Wake up early and then leave for
+    the center early so you can reach on time. Keep all the relevant documents in
+    check. Make sure you have all the important documents that you might be needed
+    for the examination. When you reach the test center, do not forget to take pieces
+    that confirm your ID. You can prove your ID by either providing a signature or
+    provide a palm vein scan. A palm vein scan can only be provided if it is approved
+    by the laws. After proving your ID, you need to have a photo taken. You should
+    not wear any hat or coat while you are taking a photo. Also, you are not allowed
+    to carry any of your personal belongings to the room where your test would be
+    conducted. You need to take off your coats, hats, scarves, etc. outside the test
+    room because they are not allowed to be worn inside. The Pearson VUE doesn''t
+    guarantee the safety of your personal belongings. Although you will be given access
+    to secure storage spaces. These storage places are small and tiny so you should
+    make sure that you do not carry any huge items with you.
+
+
+    Afterward, you will be directed to the test room. The Test Administrator would
+    first give you a brief introduction and carry out an orientation process. After
+    the orientation by the Test Administrator, you will be taken to the computer terminal
+    where you would give your test. Before you start your examination, you will be
+    given 5 minutes to review and accept the non-disclosure agreement. If you do not
+    accept the non-disclosure agreement (NDA) you would not be allowed to take the
+    test. If you want to take the test you should sign the non-disclosure agreement
+    before you start. By not signing the non-disclosure agreement you would not be
+    allowed to claim for the fee refund. The examination fee will not be refunded
+    back to you.
+
+
+    # DOCUMENTS YOU NEED TO BRING ALONG:
+
+
+    You need to bring some documents alongside you when you come for the test to the
+    testing facility. The first and the most important thing that you have to bring
+    along is an ID. You need to have a primary ID and a secondary ID. These IDs are
+    necessary. You would also be asked for a palm vein scan before you enter the testing
+    facility. If you do not prove your identity you would'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: 'not be allowed to take your cybersecurity examination.
+
+
+    The ID''s that you will have to bring alongside need not to be expired. They should
+    be valid and legitimate IDs. The documents that you would bring with you need
+    to original and authentic. As far as the IDs are concerned you need to have a
+    photo of you on your primary ID. The photo on your primary ID should be fixed
+    in the document. It should also have your signature. The secondary ID on the other
+    hand needs to have a signature whereas the primary ID needs to have both the picture
+    and signature.
+
+
+    The accepted primary IDs could be your identification card, birth certificate,
+    driver’s license, passport, military ID, employee ID, school ID, credit card,
+    military ID for spouse and dependents, etc.
+
+
+    The accepted secondary ID could be your credit card, ATM card, debit card, U.S
+    social security card, etc.
+
+
+    A credit card could be used as your primary ID and secondary ID both, primary
+    ID is anything that has your photo and signature and is valid. So if your credit
+    card has both the picture and credit card it could be used as your primary ID.
+    In fact, any card or piece of document which has both your picture and photo can
+    be used as your primary ID. Both the primary and the secondary IDs are supposed
+    to valid and not expired, they would not be accepted if they are expired.
+
+
+    # BREAKS DURING EXAM:
+
+
+    You should keep remaining in your seat. If the Team Administrator says that it’s
+    okay to leave your seat and get up, only then you should leave your seat else
+    be seated. If you want to go to the restroom you would be escorted by the team
+    administrator. You will not be allowed to leave alone. You will have someone to
+    come with you. You will not be allowed to change your terminal because that is
+    also something that is not allowed. If there is some issue with the computer terminal
+    you are using to give your test you can change it then, only as per the direction
+    of the Test Administrator (TA).
+
+
+    # ASSISTANCE DURING THE EXAMINATION:
+
+
+    You should behave well with the staff that is working in the test center where
+    you are giving your examination. You should not misbehave or create any unnecessary
+    scenes in the test center. You should follow the rules. Make sure you know all
+    the rules that are supposed to be followed at the examination center. If just
+    in case you need something or want to leave your seat, raise your hand. Leave
+    your seat only when the Test Administrator allows you to do so. Remain silently
+    seated if he doesn’t allow. You can raise your hand and let your administrator
+    know if there is an issue with your computer terminal if you need something, need
+    the Team Administrator’s assistance, want to have a break.
+
+
+    # BREAKS DURING EXAMINATION:
+
+
+    The number of breaks that you can take during your test is as per your choice.
+    There is no hard and fast rule regarding the number of breaks that you can take
+    during your test. But you have to keep one thing in mind and that is that no matter
+    how many times you take breaks, all those breaks would count against your time.
+    The time required for you to complete the examination is 6 hours and you have
+    to get done with it in 6 hours. So when you take a break absolutely clock doesn’t
+    stop but keeps on ticking. You should try not to take too many breaks until absolutely
+    do necessary. When you take a break you end up wasting your time and that is something
+    you do not afford.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: 'You have to leave the room in which the test is being conducted. You cannot
+    stay there if you want to go on a break. You would be required a palm vein scan
+    before and after each break of yours. You will be allowed to leave the test room
+    only not the test center. You have to remain on the premises on which the test
+    is conducted. During your break, you would not be allowed to touch or use your
+    personal belongings. You can only access your personal belongings if you want
+    to take any medication etc. else you do not have to access them. You would also
+    not be given any permission to access your mobile phone and other electronic devices.
+
+
+    # ENVIRONMENT IN WHICH YOU WOULD BE TAKING EXAM:
+
+
+    The test center would have many tests conducting at the same time. Not all people
+    will be doing the same test as yours. The Pearson VUE administrator would be conducting
+    multiple tests at the same center. The people in the same room as you may be giving
+    some comprehensive exam. Some may be responding to the questions. Such as essays
+    would be responsive. Thus there would be noise in the room. You cannot control
+    the environment of the room in which you would be giving the test. Noises would
+    also be generated from the typing of people on the keyboards. You should get used
+    to it because those are the noises that are made in every test center.
+
+
+    Though you can request the noise-canceling hands-free or earplugs. That way the
+    noises would not be heard by you and you can carry on with your test in peace.
+
+
+    # POST EXAM:
+
+
+    After you finish your test you would not just abruptly stand and start shouting
+    that you are done because there would be other people who would be giving theirs
+    in the same room and you should avoid disturbing them. You should not go to the
+    Team Administrator directly, instead, you should raise your hand to notify the
+    Team Administrator to come to you. After the Team Administrator comes you should
+    let him know that you are done with your exam. You should leave the premises after
+    you get done with your examination. But if you think there had been some irregularity
+    with your exam or you felt like the testing conditions and environment has negatively
+    affected your exam you should talk to the Team Administrator immediately. Do not
+    leave the premises before you talk to them. No queries would be entertained if
+    you leave and then come to discuss about the irregularities with your exam. You
+    can leave after you sort everything regarding your paper.
+
+
+    # RARE TECHNICAL PROBLEMS:
+
+
+    Very rarely, but there could arise some technical problems in your test center.
+    If any problem, comes up at your testing facility you can always reschedule your
+    examination. In normal circumstances, if you want to reschedule your examination
+    you have to notify the Pearson VUE at least 48 hours prior to the test on the
+    online website and 24 hours prior to a telephone call. But if there comes a problem
+    then you would be given the option of a reschedule. If the problem that has come
+    up takes longer than 30 minutes of your appointed time for the examination you
+    can reschedule. If during the exam any technical issue arises and it takes longer
+    than 30 minutes to resolve you would be given the option to wait and continue
+    or reschedule it for some other time. In these circumstances, no additional fee
+    for rescheduling would be demanded from you. If you choose to continue your exam
+    with the delay, then your results for that exam will be counted and there would
+    be no recourse. But If you choose to cancel your test you would be allowed to
+    reschedule with no extra fee.'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: 'If any problem comes up before the appointed time of your examination which
+    would acquire some time to fix, the team would contact you beforehand and let
+    you know. Because your time is valuable and can’t just be wasted like this.
+
+
+    # THINGS THAT ARE NOT ALLOWED INSIDE THE TESTING FACILITY:
+
+
+    The things that you are supposed to bring with you have been discussed earlier,
+    now we shall discuss those things which are prohibited inside the testing facility.
+    You should not bring any weapon with you to the testing facility. In case you
+    do do you have a weapon or something which resembles a weapon you would be asked
+    to store it in your car. If you did not drive to the testing facility, then you
+    would be asked to store it with your other belongings. Weapons are only allowed
+    for those people who are there to ensure security. That is because they are performing
+    their duties. You are still not allowed to bring a weapon if you are some security
+    personnel yourself who has an exam scheduled.
+
+
+    # ANOTHER IMPORTANT UPDATE:
+
+
+    You need to make sure that you are writing your name correctly. You have to register
+    that first and last name with the Pearson VUE that is written on your ID card.
+    If your names on the ID card and the one that is registered with the Pearson VUE
+    do not match you would not be allowed to take the exam.
+
+
+    If your name has been changed legally, you need to present the official papers
+    to prove it to the Test Administrator. Not all sorts of documents shall be accepted
+    by the Pearson VUE but only divorce decrees, marriage licenses, and the court
+    documents for the name change. If your names on the ID card and that registered
+    with the Pearson VUE are different you need to change them before the test day.
+    Such matters shall not be addressed on the test day and you will be asked to leave.
+
+
+    # LATE ARRIVAL AND ABSENTEE POLICIES:
+
+
+    Firstly, you should try your best to arrive on time. You should leave your house
+    early to arrive on time. If just in case, you arrive late or do not appear at
+    all you have to face its consequences.
+
+
+    If you come 15 minutes later than your appointed time for the examination, you
+    will be considered late. It would then be up to the Pearson VUE to allow you to
+    take the test or not, that decision will be made in the wake if not affecting
+    other people who are taking tests. The Pearson VUE will try to accommodate you
+    on your late arrival but if there are no seats available they will have to send
+    you away.
+
+
+    In case you get late or do not appear at all you would appear to be a no-show
+    candidate in the system and you would be in a position to demand your examination
+    fee. Thus in order to avoid such a situation, you need to arrive approximately
+    30 minutes before the start time of your test. It would also help you relax so
+    you can perform better on your test. You may feel nervous or terrified if you
+    get late and rush everything in the morning. Feeling like everything is being
+    rushed can increase your test anxiety as well.
+
+
+    # CHEATING DURING EXAM:
+
+
+    If you are found cheating during your exam, strict actions shall be taken and
+    if you caught'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: anybody else cheating strict action shall be taken for them as well. You should
+    feel this as your responsibility that if you find or catch someone cheating during
+    the exam report immediately.
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# Chapter 9: After The Examination Is Conducted
+
+
+    Just as there are important steps to keep in mind before the examination and during
+    your examination, there are a few things s which you need to take care of after
+    your exam is conducted. At the checkout time, your Pearson VUE would provide you
+    with the unofficial results of the examination, afterwards official results would
+    be emailed to you. If you have passed your examination you would be further guided
+    on how you could complete your certification process.
+
+
+    # RESULT POLICY:
+
+
+    (ISC)2 has strict result policies. Before the pass or fail score is established,
+    detailed and thorough statistics are done on the score data. The statistical analysis
+    would need a minimum number of candidates. It’s considered to be a very exhaustive
+    and critical process, if the number of people who took the test is more, more
+    time would be needed to compile the result. The result could take at least 6 to
+    8 weeks. The result that would be provided to you during your checkout time is
+    going to be an unofficial result. The official result would not be provided right
+    away instead it would be emailed to you after the statistical analysis on the
+    score data. The unofficial result at the checkout time will be given to you by
+    the Pearson VUE. The official results would take a long to be compiled because
+    of the number of people who appeared for the test. If during the statistical evaluation
+    your score is being affected, you will be notified by (ISC)2. Be very careful
+    and mindful when you are taking your examination. If any irregularity is found
+    before, during, or after your exam you would have to face serious consequences
+    that could affect your overall result. If any irregularity is suspected, the (ISC)2
+    will have to look over the situation and then take action accordingly. This could
+    possibly result in either not grading the compromised paper or canceling the complete
+    result. Whatever may deem appropriate to the higher authorities, such would be
+    the actions taken.
+
+
+    It can also affect all the previous certifications that you have done, (ISC)2
+    can revoke all your previous certifications. Nor would they just revoke your previous
+    certifications but also ban you from appearing into other certifications in the
+    future.
+
+
+    # THE POLICY FOR RETAKE:
+
+
+    The retake policy for the examination would allow you some liberty. You would
+    be given test-free days between the test and the retake test. You can further
+    strengthen your concepts and make sure to prepare well for the examination during
+    those days which you would get for the retake. It is a golden chance to work on
+    your shortcomings in the previously conducted test and use them to your advantage.
+
+
+    You can have multiple attempts to pass the examination. After the first take on
+    the exam, you could retake the exam after thirty days. Those thirty days would
+    be test free-days. If you fail the exam the second time and do not qualify for
+    the certification you can retest after 60 days from the previous attempt. If you
+    don’t pass the exam for the third time you would be given 90 days'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: 'from the previous attempt to reappear for the exam again. After the third attempt,
+    you can always reappear for the exams 90 days after the most recent attempt.
+
+
+    # CERTIFICATION PROCESS:
+
+
+    After you are emailed your official results and you pass the exam, you could move
+    on to the next step and that is your certification. You can begin with the endorsement
+    process. This endorsement would show if you are eligible for the certification
+    or not. It would have information about your test results and the relevant job
+    experience to show if you qualify for the certification process. The application
+    for the endorsement has to be signed digitally by an (ISC)2 certified professional.
+    If you have no (ISC)2 certified professionals as your acquaintance, the (ISC)2
+    itself would be your endorser. You would become a member of the (ISC)2 club after
+    your endorsement application is submitted and confirmed. You would be notified
+    through an email and then you can start your membership cycle by paying your annual
+    maintenance fee or AMF. This annual maintenance fee is important for you to pay
+    so you can be a member of the community.
+
+
+    # YOU CAN APPLY FOR RECERTIFICATION:
+
+
+    If your certification or designation is suspended, you can reinstate it back by
+    paying all the outstanding dues that are important for you to pay. You need to
+    pay all your annual maintenance fees and CPE credits as well. The maintenance
+    fee has to be paid annually. If you haven’t been paying it for the past years
+    your certification and designation shall be suspended and the only way to get
+    it back or reinstate is to pay all the outstanding fee for all those years when
+    you did not pay. After your certification or designation gets suspended, a 90-day
+    period would start in which you have to pay your CPE credits and the Annual maintenance
+    fee or AMF. The 90-day time period is called the grace period. The time for which
+    you can remain suspended can go up to 2 years. If the members are suspended for
+    two consecutive years they have to recertify themselves. Yes, they are not asked
+    to get retested as a recognition of their expert skills but they are asked to
+    pay the reinstatement fee of U.S $600. They just have to pay the money for recertification
+    rather than investing their time and energies for getting tested again.
+
+
+    If the outstanding dues are not cleared even after two years of suspension, all
+    the membership rights will be revoked and they will be terminated. If any of the
+    terminated members want to be reinstated, he has to appear for the test again
+    and has to pass as well, has to take the test and also pay a reinstatement of
+    U.S $600.'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# Chapter 10: Time Management Tips And Tricks
+
+
+    # TIME:
+
+
+    Time is very precious and it shall not be wasted, there is nothing as precious
+    as time. You need to value time, if you will learn how to value the time you will
+    succeed in whatever that is you are striving for. Whatever you are striving for
+    is the basic force that drives your passion.
+
+
+    # TIME MANAGEMENT:
+
+
+    In order to become a person who does not waste their time and who can effectively
+    get done with all their chores on time, you need to start practicing and then
+    slowly and gradually master the art of time management. It all comes down to you
+    and how well you are at managing your time.
+
+
+    # TIPS AND TRICKS FOR TIME MANAGEMENT:
+
+
+    Valuing time is the sign of success, if a person values time he is considered
+    to be a successful'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: 'person. Time waits for no one, it keeps on passing. Here are some tips and
+    tricks that would help you with the time management in before and during the examination.
+
+
+    # 1. SET GOALS:
+
+
+    You need to set your goals first. If your goal is to become a certified CISSP
+    professional, you need to work hard to achieve it. If you would not have goals,
+    you would not be able to value time. You can only learn the importance and value
+    of time when you have to achieve a lot when you have to strive for something you
+    are passionate about. The goals that you would set for yourself to achieve shall
+    be smart. You should try to set those goals for yourself that are attainable and
+    measurable. You should set goals that are specific, measurable, attainable, relevant,
+    and timely. You can compare your goals with these attributes. Your goals in the
+    case of CISSP examination of cybersecurity are smart. Your goal to become a CISSP
+    certified professional should be specific, you should know what you are trying
+    to do. It is measurable because you can measure your success if you pass, you
+    succeed and if you fail you don’t, it is clear. Your goal is also attainable;
+    it means that you can achieve it. Your goal of being a certified cybersecurity
+    expert is relevant nowadays and in the future. You should set the time limit in
+    which you wish to achieve your goal. Once you do that it would become easy for
+    you to attain it.
+
+
+    # 2. PRIORITIZE YOUR TASKS:
+
+
+    You should prioritize your tasks based on urgency and importance. Divide your
+    tasks and then try to attempt those tasks that are of importance and relevance.
+    Do not attempt to do the tasks that are of less or no importance because you would
+    be wasting your time. And that is not how you manage your time. You can manage
+    your time by prioritizing your tasks. Divide your daily tasks and then determine
+    which ones are to be prioritized and which ones could be done later. You should
+    divide the tasks into the following four categories:
+
+
+    +   - IMPORTANT AND URGENT:
+
+
+    The tasks which you think are urgent and the most important ones should be done
+    on first priority basis. You should not delay these tasks and get them done as
+    soon as possible.
+
+
+    +   - IMPORTANT BUT NOT URGENT:
+
+
+    These are those tasks which are important but not so urgent. You can decide as
+    per your own convenience to get them done.
+
+
+    +   - URGENT BUT NOT IMPORTANT:
+
+
+    If there is any task that is urgent but not important so you can ask someone else
+    to do them for you. You can do something else while you hand over that task to
+    someone else.'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '+   • NOT URGENT AND NOT IMPORTANT:
+
+
+    There may be tasks that are both not important nor are they expected to be done
+    any time soon. You can set these tasks aside and do them later on. You do not
+    have to leave your other important tasks to get these ones done. You can do them
+    later some time.
+
+
+    # 3. COMPLETE TASKS WITH IN A SPECI IC TIME:
+
+
+    You can try to do your tasks within a specific time limit. You should not be spending
+    the whole day doing one task only. Try to specify or set some time limit in which
+    you would do that task. This would greatly help you in managing time and getting
+    most of your tasks on your to-do list as soon as possible. Look at the tasks that
+    you need to get done with and then allocate time to each task for the day. Every
+    task would have allocated time in which it would get done. You wouldn’t be sitting
+    and laying around the hold day doing just one task and leaving all the rest behind.
+    You also need to allocate some time for the potential problems that could arise.
+    You have to deal with those potential problems thus you have to set some time
+    aside for it so you can deal with them and get those problems solved.
+
+
+    # 4. POMODORO TECHNIQUE FOR TIME MANAGEMENT:
+
+
+    Pomodoro technique is a great technique that would help you in time management.
+    It is one of the most effective time management techniques. The Pomodoro technique
+    helps you with procrastination. In the Pomodoro technique, you have to pick up
+    a task that you have to do. Then you can set a timer and start doing that work.
+    Set the timer for 25 minutes. In those 25 minutes do as much work as you can.
+    When the timer ends, it’s time for you to take a break of 5 minutes. Don’t take
+    long breaks. After the break ends you can start over the whole process again,
+    continue to work on the same task that is still left to be done, or pick another
+    one if that one has finished. Then again set a timer for 25 minutes and start
+    working on the task. When the timer ends, take a short break of 5 minutes. Keep
+    on repeating the process and get done with your tasks as much as possible. After
+    4 continuous pomodoros, you can take a long break of 25 to 30 minutes. When you
+    have set the timer for the task make sure you do not keep on pausing it, if once
+    it starts it has to be completed. During those 25 minutes, you will not be allowed
+    to respond to texts, pick up your phone, attend a call or check your emails. Concentrate
+    on the task that you are working on. Don’t let these distractions lose your focus.
+    You can do all these things in your break time. If you have a larger task to get
+    done with and can’t be completed in 25 minutes. You should divide them into small
+    tasks and then do each small task in a Pomodoro. This way you would be able to
+    complete your tasks without any distractions in less time. This is a great tip
+    that you can follow to manage your time. You can also use the Pomodoro technique
+    to help you prepare for your CISSP examination. The course contents are extensive
+    and it would take you long to complete it. You can divide each domain into small
+    chunks and then get each chunk completed in the 25 minutes of the Pomodoro. If
+    you notice that any task of your that you decided on to do in those 25 minutes’
+    finish early that doesn’t mean you can waste the remaining time,'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: 'what you can do in the remaining time is to overlearn. You should keep on learning
+    more if your task gets finished before the timer goes off.
+
+
+    # **5. TAKE BREAKS:**
+
+
+    In order to enhance your productivity, you should try to take breaks after you
+    do a task. If you keep on doing work and take no breaks you would get bored and
+    then won''t feel like doing anything. So take breaks in between and help you refresh
+    your mind. You can read a book in between or try going out for a walk.
+
+
+    # **6. TRY TO BE ORGANIZED:**
+
+
+    You should make a to-do list every day so you are more organized and know when
+    is any important task coming up. It would make it easy for you to know about all
+    the tasks and then you can prioritize them in a proper way as well. The organization
+    would also help you not waste your time and you would know where your stuff is.
+    You won''t go searching for it everywhere. Write down all the deadlines, all the
+    work that is required of you so you do not waste your time. Organizing your daily
+    tasks and your stuff really helps you manage your time well. The benefit of writing
+    down the tasks and making to-do lists would make it easier for you to manage your
+    tasks, you would know what time you have to do what, and according to that you
+    will get the things done.
+
+
+    # **7. LEAVE THE UNIMPORTANT TASKS FOR LATER:**
+
+
+    Make your to-do lists and then evaluate and see what are the important tasks and
+    what are the ones that are not important. When you evaluate that you can leave
+    the tasks that are not important for later. You need to focus on the ones that
+    are important and get done with them. If you see any extra and unimportant ones
+    you can ask someone to get them done on your behalf or do them yourself in your
+    free time. If you will get rid of the unimportant tasks and activities, you would
+    get time for the ones that are genuine and important.
+
+
+    # **8. PLAN AHEAD:**
+
+
+    Planning ahead would greatly help you with time management. You would be able
+    to manage your time well. Every morning you should make lists that would let you
+    know if you have anything important for the day, sometimes you can get so busy
+    and forget to do the important work. Planning a day ahead would help you with
+    this as well.
+
+
+    # **RESULTS OF POOR TIME MANAGEMENT:**
+
+
+    If you are unable to manage your time effectively you will have to face a lot
+    of issues. Better time management would really make your life easy. If your time
+    management is poor, you would face serious consequences. The consequences that
+    you would end up facing because of your poor time management are discussed below:'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# 1. POOR EFFICIENCY:
+
+
+    Your work efficiency would become very poor if you are struggling with managing
+    your time. A lot of important things would be left behind incomplete and affect
+    your work in a negative way. If you are unable to manage your time properly while
+    you are preparing for your examination. It would affect your preparation very
+    negatively. You would not be able to cover the topics that are important from
+    the examination point of view. You should be mindful of the fact that all the
+    domains have a percentage of the course included in the examination and just because
+    of your lack of better time management you would see the negative impact it would
+    have on your results. All the domains of the cybersecurity examination course
+    contents are equally important and you cannot just leave some of the course behind.
+    You have to take out ample amount of time to learn and prepare for all the domains.
+    All the course contents are needed to be prepared for well.
+
+
+    # 2. YOUR PRECIOUS TIME GETS WASTED:
+
+
+    Time is precious and you should not waste it and realize its importance. But if
+    you are not good at time management you would end up finding yourself wasting
+    your time. You would indulge in the distractions. While working if you cannot
+    fight distractions that would make you waste your time a lot and you would not
+    have enough time to get the other things done.
+
+
+    # 3. POOR TIME MANAGEMENT CAN CAUSE ANXIETY:
+
+
+    If you are unable to manage your time properly you can face anxiety. If you plan
+    ahead and make your to-do lists for the day you can avoid this because you would
+    know what to do next but if you are unable to manage your time properly there
+    would be constant confusion on what you would be doing next. You would not be
+    prepared for whatever is to come next. Poor time management can make you feel
+    anxious and confused at all times.
+
+
+    # 4. QUALITY OF WORK WOULD SUFFER:
+
+
+    Poor time management can make you compromise on the quality of your work. You
+    would not be prepared for whatever comes next, a constant feeling of anxiety and
+    confusion would take over you and that would reflect on your work. It would bring
+    the quality of your work down. Suppose you have scheduled your CISSP examination
+    but get so busy with other stuff that you end up forgetting about it. You are
+    not prepared well for it. On the 11th hour, you realize that you have an examination
+    to take and you would end up rushing all the tasks that you are required to do
+    before your examination, which would reflect on your results and decrease your
+    exam score. On the other hand, if you have planned out everything, you would be
+    prepared for it. That way you would know when is your exam scheduled. You would
+    go to the test center at the appointed time and take your exam with full preparation.
+    So to avoid such situations you should always try to plan and know when you have
+    to do what. This way you wouldn’t have to face these confusing'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: 'situations and the quality of your work would not be compromised and affected
+    wither. Everything would go smoothly.
+
+
+    # 5. POOR TIME MANAGEMENT REFLECTS NEGATIVELY:
+
+
+    Your reputation can be greatly affected if you are unable to manage your time
+    properly. It would reflect very negatively on your work. A client would trust
+    you with their work and just because you cannot manage your time well, you would
+    get late on delivering their work back late. Your work will be greatly affected
+    because of this. Your reputation in a community would be greatly affected. It
+    would bring you nothing but loss. When you are unable to deliver the work that
+    the client has trusted you with, they would definitely take their business elsewhere
+    because everyone wants their work to be delivered on time and you are causing
+    delays just because you are unable to manage your time effectively. If you are
+    able to manage your time well and don’t let any distractions distract you would
+    notice a great difference in your schedule. You would end up completing your work
+    on the assigned time. Not just that but you would also find some free time for
+    yourself and you can do all the pending work in that time. You would be successful
+    in managing your professional and personal work properly.
+
+
+    # TIME MANAGEMENT BEFORE THE CISSP EXAMINATION:
+
+
+    Here are a few tips that can help you with time management before your CISSP examination.
+    You need to start with making a timetable for your preparation. It would greatly
+    help you manage time between the different domains from which the test be conducted.
+    At least a week before your examination you should have covered the entire course
+    that is to be included in the test. Not just that but make sure you have solved
+    at least 1500 Multiple Choice Questions as a practice for the test. If you have
+    done both these things, then you have managed your time well and are prepared
+    for the examination. If you haven’t done any of these or both of these, you would
+    have a problem and consider postponing your test until the time you are completely
+    prepared for the test. Before your examination when you are done preparing your
+    course you should get back to the practice questions, instead of solving new ones
+    try to correct those which you did wrong previously. This would help you prepare
+    well for the day of the test.
+
+
+    # TIME MANAGEMENT ON THE DAY OF EXAM:
+
+
+    You need to wake up early on the day of your examination. You need to manage your
+    time effectively so you don’t get late for your exam. (ISC)2 has very strict policies
+    regarding late arrival for the examination. Late arrival can also result in the
+    cancellation of your exam with no fee refund.
+
+
+    During your exam, you need to have a strategy so you can solve those questions
+    well. Do those which you are sure about, which may have short statements and which
+    may seem easy to you. Do them with proper consideration. This is important because
+    if you waste a lot of time on these easy ones or the ones with short statements
+    you would be left with very little time for the MCQs with long statements or which
+    may seem complex. If you spend too much time on every question you would not be
+    able to complete your exam within the given time limit. You know you only have
+    six hours to complete your exam and if you take breaks in between that can decrease
+    your test time even more. Thus you need to divide your time among the questions
+    and try your best to'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: not exceed that time. Assign the simple questions in less time and the complex
+    ones a little more. You should have a fast approach towards the first 50 to 60
+    questions, try to do them quickly so you have time for the other ones. The first
+    50 to 60 questions are not that difficult they are comparatively easy so try not
+    to spend a lot of time on them. You should manage your time in a way so you have
+    enough time left for the difficult ones, you need to do some thinking for those
+    difficult ones so make sure you manage your time in a way to do that.
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# Chapter 11. Confidence Is The Key
+
+
+    # CONFIDENCE:
+
+
+    Before and during your exam all you need is confidence. You should not get terrified
+    because of your exam but instead, you should be confident enough about whatever
+    you have learned for your exam. You need to trust yourself and your preparation.
+    Getting nervous or terrified is going to do you no good, instead, it is going
+    to affect your preparation and it may seem as if you have forgotten everything
+    you learned. If you come across a question and you do not know the answer or have
+    difficulty in solving it, if you are nervous you will freeze up and that will
+    also affect the rest of your paper. You may know the rest of the entire paper
+    but just because you let the nervousness and horror of the test day take its toll
+    on you, you have very negatively impact your test results. Nervousness shall be
+    avoided before you sit for your exam. You should not lose your confidence and
+    also not let anyone else pull your morale down. Be confident about yourself and
+    you will ace the exam. You should try that no negative thoughts come into your
+    mind and interfere with your exam and its preparation.
+
+
+    # TIPS ON REDUCING THE EXAM ANXIETY:
+
+
+    Here are a few tips that can help you overcome the test anxiety. Test day horror
+    can really adversely impact on your preparation and then the results.
+
+
+    +   1. THINK POSITIVELY:
+
+
+    Positivity is the key to success. You should try to do some mental exercises that
+    boost up your mind to have positive thoughts. Your thoughts matter. If you have
+    continuous bad and negative thoughts you will see how bad is that going to affect
+    you, on the other hand, if you think positively you would see the difference which
+    positivity would make. Thus make sure you are not letting any negative thoughts
+    bring you down. Our expectations can greatly affect our performance. If we expect
+    a positive outcome so the outcome will be positive but if we expect a negative
+    outcome, then no matter what the outcome will be negative. So have better expectations
+    regarding your paper. You can boost your mind into thinking positive thoughts
+    is by affirmations. Keep on reminding yourself that you can do and you are enough
+    and everything will turn out to be good. You can watch some funny movie or show
+    that would take all the negative thoughts out of your mind and you will start
+    to think positively. You should challenge yourself, if you find it hard to think
+    positively and you feel like the negative thoughts are taking all over you, make
+    sure you challenge those negative thoughts. Find ways and let them out of your
+    mind and start giving space to the positive ones. Positivity is the key and without
+    positivity, you cannot achieve anything good. Your first and foremost thing to
+    do in order to develop your confidence for the exam is to let positivity inside
+    your mind.
+
+
+    +   2. YOUR PERCEPTION MATTERS:'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: 'Your perception greatly matters. You should keep reminding yourself that no
+    matter what you can always retake the exam. Any grade on the test would not define
+    you but your hard work and perseverance would do. Your increased anxiety levels
+    can greatly alter your results. If you are feeling confident about yourself and
+    your preparation you would be able to attempt the test with no negative or bad
+    thoughts crossing your mind. If you would think this way you would help yourself
+    in reducing your anxiety levels and boost your confidence.
+
+
+    Also when you are given the test for the first time by the test administrator
+    you should go through the entire test for the first time. If your preparation
+    is complete you would be able to recognize the easy questions. Start with the
+    easy questions first, which would also help you feel confident. That would make
+    you realize that you know the material and then slowly and gradually you can move
+    to solve the difficult ones.
+
+
+    # 3. CALM YOURSELF DOWN:
+
+
+    When you feel scared or nervous, adrenaline is released in your body which may
+    have some physical reactions as well, like you may feel dizzy, sweaty, shaky,
+    etc. If you are in such a physical condition that would not allow your brain to
+    think properly and you may end up feeling low and not confident about yourself.
+    You will feel like you have forgotten everything you prepared and now you know
+    nothing. If you find yourself in such a situation you need to make yourself calm
+    down, you can do so by taking deep breaths. When you start taking deep breaths
+    you would bring your heartbeat down to normal. Your breathing would get equalized
+    and the time you are taking for inhaling will become equal to the exhaling. Another
+    thing that you can do to make yourself feel calm is to walk a little. This would
+    help you clear your mind, pay attention to your surroundings and think positively.
+    Don’t just worry about your exam for some time. Stretching and relaxing your muscles
+    can also help your body and mind feel calmed down. Your body is in constant tension,
+    in order to see you should try on doing a full-body scan by focusing and concentrating
+    on your body parts for a few seconds. You can start from your toes and move up
+    along progressively. You can also stretch your hands up and behind your back so
+    you end up releasing some tension out of your body. You will feel much relaxed
+    after these practices.
+
+
+    # 4. HAVE SOMETHING TO EAT BEFORE YOUR EXAM:
+
+
+    You should try not to skip your breakfast on the day of the exam. Try to have
+    something healthy, don’t eat junk or have energy drinks because they mind end
+    up increasing your anxiety levels even more. Try to have a snack that is rich
+    in protein. Even if you don’t feel like eating something, still try to eat before
+    you appear for the examination.
+
+
+    # 5. HAVE A GOOD NIGHT SLEEP A NIGHT BEFORE:
+
+
+    You should try to have a good night’s sleep before the test. Make sure you are
+    well-rested and not sleepy. A good night’s sleep can do wonders for you, it will
+    make your'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: 'mind fresh and relaxed. If you are running on low sleep that could cloud your
+    mind and you may end up doing damage to yourself. Thus, you should have at least
+    8 to 10 hours of sleep a night before your examination.
+
+
+    # 6. TRUST YOUR PREPARATION:
+
+
+    Avoid talking about the test or the preparation that you have done for it to anyone
+    before you take your exam. Sometimes what you can do to relieve stress off your
+    mind is to just not think about it or talk about it. Instead what you can do is
+    to not think about it for some time and let your mind relax. You should trust
+    your preparation and should keep on reminding yourself that you have done what
+    was supposed to get done. Your preparation for the exam is complete. You should
+    avoid going through the course and pages a few minutes before the start time of
+    the exam. You should shut your books and other relevant study material at least
+    an hour before your exam starts, give some time to your mind and body to relax
+    because that is a well-deserved time out of the stressful environment you have
+    been in for the past few days.
+
+
+    # 7. INCLUDE BREAKS:
+
+
+    You should try to include breaks in your study schedule because you need some
+    time where you can relax. That is important for your mind. Give yourself the time
+    that you need to relax. Do something light-hearted and fun activities in your
+    break time. That would really help you take the stress out of your mind and you
+    will feel refreshed.
+
+
+    # 8. DO YOGA AND MEDITATION:
+
+
+    Yoga and meditation can have amazing effects on your mind and body. The yoga exercises
+    are designed in a way to help you relax and feel fresh by the end. You should
+    regularly do yoga and meditate as well. It can help in reducing the mental stress
+    and strain that you may be feeling. This can also increase your focus and concentration
+    because the yoga exercises are designed for these purposes. Make sure that you
+    do not leave yoga and meditation out of your study schedule.
+
+
+    # 9. COUNSELLING:
+
+
+    Counseling sessions with a therapist can also help you in boosting your confidence
+    levels and decreasing your anxiety levels. There is no shame in getting professional
+    help. If you feel like nothing else can help you cope up with the anxiety and
+    nervousness issue, you can always go to a therapist and seek help professionally.
+    Therapists really go out of their way to help the patients so they are help which
+    no one should say no to. These counseling sessions can bring about a major change
+    in you.
+
+
+    # 10. SURROUND YOURSELF WIT HPOSITIVE'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# PEOPLE:
+
+
+    You should try to hang out with those people who do not bring you down, instead
+    they boost your morale up so you can face anything that life throws at you. Surround
+    yourself with people who are confident and have higher self-esteem. They know
+    how to help others and don’t shy away from providing them with any help. Try spending
+    more time with the people who care about you, who appreciate you more. There might
+    be a few friends of yours that try to bring you down or do not support you in
+    anything that you are passionate about. They would leave no such situation out
+    where they would boast and talk highly of themselves and degrade you. Their constant
+    degradation can decrease your motivation levels and increase your anxiety levels.
+    After hanging out with such people you would notice a negative change within you.
+    But if you hang out with people who are appreciative and positive you will notice
+    a positive and a good change in you. You should try to stay away from the negative
+    and toxic people and strengthen your relationship with the strong, positive, and
+    good people. These people can bring about a change in your mindset and your thought
+    process. You would become more confident about yourself, your self-esteem would
+    increase. If your self-esteem rises you would love yourself for who you are and
+    stop criticizing yourself something which is not in your control.
+
+
+    # 11. WATCH THE CLOCK:
+
+
+    Sometimes if you look at the watch during the final moments of your exam and you
+    realize that you have little time left behind and a lot of questions to solve.
+    Realizing this you would become nervous about the fact that you still have questions
+    left. You would be left to do nothing good in those final moments because you
+    would start to feel anxious. In order to avoid such a situation, you should allocate
+    time to each question before the paper even starts. Count the questions and then
+    divide the allocated time for each question. What can really help you is if you
+    allocate more time to the complex and long questions and less time to the simpler
+    and short ones.
+
+
+    # 12. DO YOUR OWN EXAM:
+
+
+    You should focus and concentrate on your own paper. Don’t look at what other people
+    are doing. You have done your own preparation and only you know how you can put
+    all that information to use. Every person has a different approach towards a test
+    or exam so don’t stress yourself out on what some other person is doing. Try not
+    to lose focus on your own paper by looking at what others are doing. Pay attention
+    to your questions and the pace at which you are solving them, it is better that
+    you forget you have other students in the class as well. Don’t let yourself get
+    confused by concentrating more on their exam and less on yours.
+
+
+    # 13. REACH THE TEST CENTER EARLY:
+
+
+    Another great tip that can help you reduce anxiety and boost up your confidence'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: 'levels is to try to come to the test center earlier than the appointed time.
+    If you come early than the appointed time you would get some time to get familiarized
+    with the environment, this would help you reduce your anxiety levels up to some
+    extent. Try to reach the test center at least 30 minutes before your exam. If
+    you get late and don''t reach the test center on time you would start to rush
+    with everything and that would be a reason for your anxiety and nervousness.
+
+
+    # 14. LISTENING TO SOME CALMING MUSIC:
+
+
+    Listening to some calming and relaxing music can help bring down your increased
+    anxiety levels. You can listen to the music that you enjoy the most before you
+    start doing your exam. Music can really be a great help in calming your mind down.
+    Your mind would automatically feel refreshed and calm after the music you listen
+    to. You can also listen to some podcasts to help you boost your confidence and
+    reduce stress and anxiety. Motivating podcasts are great to listen to before exams.
+    They promote a healthy and positive mindset and lifestyle.
+
+
+    # 15. NEVER UNDERESTIMATE YOUR POWER:
+
+
+    You are capable and you are powerful. You should not underestimate your power.
+    By doing so you would help yourself to boost up your confidence and don''t start
+    to feel terrified and scared before your exam.
+
+
+    # 16. DO NOT GET OVER CONFIDENT:
+
+
+    Confidence is good but overconfidence is bad. Overconfidence can really be an
+    alarming situation. If you feel too confident you would not prepare well for your
+    exam. Your preparation would be greatly affected by your overconfidence. Try to
+    keep it in check and don''t let it do any damage to you. You should try to remain
+    confident about yourself and your abilities, you know what you have prepared for
+    and how so confidence is something you require but overconfidence is unnecessary.
+    Overconfidence can make you sound boastful and bragging about your own self and
+    abilities. Try not to become overconfident because it would not do you any good
+    in fact you would let others bring you down and that is not a good thing to do.
+    You should try to remain humble and down to earth. These qualities are your key
+    to your success.
+
+
+    # 17. BELIEVE IN YOURSELF:
+
+
+    You should believe in yourself and your abilities, you know what capable of. Don''t
+    let others dictate you but follow all that you think is right. Have confidence
+    in yourself and your abilities. You are you and there is absolutely no one like
+    you. You are enough and you are worth it. Keep repeating the positive affirmations
+    in your head to help you deal with the situation. So instead of doubting your
+    abilities learn how to use them to your best potential. Go to the test center
+    in a confident way and do your best. Don''t freak out or get anxious. This would
+    do you no good instead affect your paper and then the results.'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# # Chapter 12: Perks Of A CISSP Certified Professional
+
+
+    # ## CISSP CERTIFIED PROFESSIONALS:
+
+
+    CISSP examination by the (ISC)2 is an exam that you can take and become a certified
+    security professional. It is one of the most esteemed and well-recognized exams
+    that can really help your career a boost. CISSP examination for the security professional
+    was introduced in 1994. This certification is approved by the DoD. This exam can
+    be given by anyone that may be living in different countries of the world. This
+    examination is available at 882 locations in 114 countries. This exam is conducted
+    in 8 languages; you can choose the language you want to take the test in at your
+    convenience. CISSP certification is considered to be one of the most important
+    certifications on LinkedIn. CISSP professionals after getting their certifications
+    put their skills to use, they are currently working in almost 170 countries all
+    over the world. Approximately 142, 000 professionals are certified and are helping
+    different organizations with their expertise. They are putting all that information
+    that they have learned while preparing for the examination to use. It is also
+    one of the prerequisites for the certification that you have worked a paid job
+    for almost 5 years in any of the 8 domains of CISSP cybersecurity. This gives
+    them the professional experience and grooms them even more so they are able to
+    do full-time jobs later on. Along with the full-time job they can also give their
+    advice regarding security issues faced by different organizations. Cybersecurity
+    is a huge problem that is faced by organizations nowadays and these cybersecurity
+    professionals help deal with those problems. They create state-of-the-art plans
+    and programs for the organizations to fight these cybersecurity breaches initiated
+    by the attackers and hackers. CISSP Computerized adaptive test has also been introduced
+    which is short and precise as compared to the linear cybersecurity exam. It has
+    almost 150 multiple choice questions. These questions are required to be solved
+    in 3 hours. The linear exam has 250 multiple choice questions and is 6-hour long.
+    Course contents and syllabus for both the tests are similar, but the percentage,
+    of course, that is included from each domain is a little different. The computerized
+    adaptive test for CISSP by the (ISC)2 was introduced on December 18th, 2017.
+
+
+    # ## PERKS AND BENEFITS OF A CISSP CERTIFIED PROFESSIONAL:
+
+
+    After the candidates score enough marks to pass the test and also get the relevant
+    job experience they qualify for certification. After they are officially certified,
+    they become a part of the (ISC)2 community. This community has other cybersecurity
+    professionals as well who are certified for the CISSP examination. They are very
+    learned people and have years of experience in the field of cybersecurity. When
+    the fresh candidates become a part of this community they are exposed to a lot
+    of knowledge. These experts give them very great advice because they are more
+    experienced whereas they are freshly certified who may have information but do
+    not have experience. Apart from this, the certified cybersecurity professionals
+    have a lot of other perks and benefits as well.'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# PERKS AND BENEFITS OF CYBERSECURITY PROFESSIONALS:
+
+
+    Some of the perks and benefits that these certified cybersecurity professional
+    get after getting associated with the (ISC)² as members of their community are
+    mentioned below:
+
+
+    # 1. BETTER JOB OPPORTUNITIES:
+
+
+    These cybersecurity professionals after getting certified and spending some time
+    in the company of such learned and knowledgeable people in the (ISC)2 have a raise
+    in their credibility and visibility. This improves their job security and they
+    are offered great jobs. This becomes associated with well reputed and famous organizations
+    and this proves to be a major step in there which helps with their career advancement.
+    Opportunities like these really help them get that career boost they had been
+    craving for and were so passionate about.
+
+
+    # 2. THEY ARE HIGHLY RESPECTED:
+
+
+    After becoming associated with well-known and reputable companies, people start
+    to respect them a lot. They have worked really hard to achieve all this that they
+    are getting now. They are also well respected in the business communities.
+
+
+    # 3. WORLDWIDE RECOGNINTION:
+
+
+    After passing their exams and getting certified they become a part of a global
+    community of (ISC)2. The people in that community are very highly respected and
+    recognized for the work they do to ensure cybersecurity. After these newly certified
+    members join the club slowly and gradually people start to get them to know as
+    well. And just like that in a matter of time, they get their well-deserved recognition.
+    People from all over the world start to recognize them. The industries also have
+    strong recognition for the CISSP professionals and constantly in search of CISSP
+    professionals so they can hire them. Big companies like IBM, Google, etc. look
+    for CISSP professionals. They about their commitment, resilience, and skills so
+    they make sure they recognize them and give them what they deserve because these
+    professionals after becoming a part of their organizations do very important work
+    for them.
+
+
+    # 4. FREE WEBINARS AND TRAININGS:
+
+
+    The CISSP professionals are lucky enough to be provided free webinars and seminars.
+    They are given free training to keep up with the latest security trends. As we
+    know that the technology is evolving every day and so do the attacks of hackers
+    evolve. So in order to tackle them, these professionals have enough information
+    regarding the latest security trends that they could use to keep these hackers
+    at bay and ensure protection and security. Thus they are given these pieces of
+    training by the (ISC)2 for free. If any common individual wants to take these
+    webinars and training would have to pay loads of money but for the CISSP professionals,
+    all these are covered by the (ISC)2. It is one of the many perks that the (ISC)2
+    is providing its'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: 'CISSP professionals with.
+
+
+    # 5. MOST STABLE PROFESSION:
+
+
+    In a recent survey, it has been found out that information security is one of
+    the most stable IT professions. No cybersecurity professional wants to change
+    their job or they are not satisfied with it. They want no change in the status
+    of their employment. This makes information security one of the most stable IT
+    professions.
+
+
+    # 6. HIGHER SKILLSET:
+
+
+    The CISSP professionals tend to have a very strong skillset. They know when and
+    how to put their skills to use. Their skills develop when they apply all the theoretical
+    information that they have learned while they prepared for the CISSP examination
+    in practice. These practical practices polish their skills and help them come
+    out of their comfort zones. When they come out of their comfort zone they start
+    to challenge themselves and this way they expand their skill set as a result.
+
+
+    # 7. HIGHER SALARIES:
+
+
+    These CISSP professionals are recruited by high-profile and giant tech industries.
+    Based on their knowledge and expanded skill set they are offered very good salary
+    packages. Their salaries are much higher than the other staff members because
+    of the kind of work they do. Their working hours are long and extensive. They
+    also have a frequent rise in their salary. The (ISC)2 members are reported to
+    have salaries 35% higher than that of the non-members.
+
+
+    # 8. INCREASED KNOWLEDGE:
+
+
+    The CISSP certified professionals possess a lot of knowledge. They are extremely
+    knowledgeable because of the extensive study they did while they were preparing
+    for their examination. They go through books and books related to cybersecurity.
+    They also study from other online resources and relevant material to cybersecurity.
+    All this study helps them have expanded knowledge. They know what they are doing
+    because they have learned a lot. Not just that but once they become members of
+    the (ISC)2 community for the certified CISSP professionals they start to spend
+    time in the company of very knowledgeable people, who also have a lot of experience
+    in their field. It also helps them with attaining knowledge regarding cybersecurity.
+    They get to attend the webinars and training to keep them updated about the latest
+    security trends and solutions. All these prove to be different sources of acquiring
+    knowledge.
+
+
+    # 9. DIGITAL BADGES:
+
+
+    The CISSP certified cybersecurity professionals are given a badge that shows their
+    credentials online. It is one of the most secure ways of displaying their credentials
+    online. This badge can be added to websites, LinkedIn, resume or social network,'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: 'etc. to show your credentials. This badge with one click can also allow your
+    colleagues and employers to verify your credentials.
+
+
+    # **OTHER BENEFITS OF (ISC)²MEMBERSHIP:**
+
+
+    (ISC)² membership gives you other great benefits apart from the ones stated above
+    as well. You are a part of an environment where you are constantly learning and
+    growing and it doesn’t stop because you are surrounded by people who have treasures
+    of knowledge and you always grow professionally in such a company.
+
+
+    +   - Due to this membership you can gain free access and subscription to the
+    InfoSecurity Professional Magazine.
+
+    +   - You can attain up to 50 percent discount on all the (ISC)² books.
+
+    +   - You will become a part of a secure online program.
+
+    +   - You will be given many opportunities to volunteer
+
+    +   - You will also be allowed to join a local (ISC)² chapter and if font want
+    to join one but have a vision to start another one, you can do that.
+
+    +   - The conferences that are held in the IT industries would be at discounted
+    prices for the members.
+
+    +   - Professional recognition can be attained by award programs and ceremonies
+
+    +   - You can also attend the free online courses for professional development.
+
+    +   - Apart from these the members would also get their other membership perks
+    from the (ISC)².'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# # Conclusion
+
+
+    The CISSP certified professional exam is not like any other exam. It is difficult
+    as compared to any other exam that you might have taken up till now. You are required
+    to have an extensive study schedule in order to pass the test on the first attempt.
+    Only a handful of people around the world have passed the CISSP examination and
+    also are done with fulfilling other requirements to have become certified professionals
+    at (ISC)2. Security specialists are very much required nowadays because this is
+    the world of the internet. More reliance on the internet has made the devices
+    and the data stored on them more vulnerable and prone to malicious attacks by
+    hackers. Cybersecurity professionals are required to design and plan the cybersecurity
+    programs for the organizations and individuals so they can help secure and protect
+    their data and if any data is compromised they are able to recover it and have
+    backup plans to minimize the damage as much as possible.
+
+
+    The CISSP cybersecurity professional exam is a 6-hour long exam with around 250
+    multiple'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: 'choice questions. In order to help yourself prepare well, you need to follow
+    a proper schedule. All the important things that you need to know and which will
+    be of help to you in order to qualify for the exam are all explained in great
+    detail in this book. This book will guide you through the entire exam process
+    of test registration, exam preparation, exam conduction, and then a guide through
+    your certification process. The CISSP exam is conducted by keeping the point of
+    view of a manager. So you have to make sure you are answering the questions accordingly.
+
+
+    Make sure that you arrive on time for your examination. You should try to reach
+    as soon as possible so you can get familiarized with the environment and you can
+    relax your mind. This would also help you to reduce your test anxiety. A lot of
+    people just because get nervous and terrified before the test and end up affecting
+    their results. You can follow the tips and tricks that are mentioned here so you
+    don’t end up affecting your examination results and help reduce your anxiety.
+    You should also try to have a good night’s sleep before your test. You should
+    sleep at least 8 to 10 hours a night before so you wake up fresh and not feel
+    dizzy during your exam. These are little things that can help you a lot with the
+    preparation and conducting of your exam. We often forget to do them and then it
+    shows on the test results.
+
+
+    Practice past papers are really helpful for your exam preparation. In order to
+    prepare well, you need to go through as many practice papers as you can. Try to
+    gather as many multiple choice questions as you can so you have an idea of how
+    the test would look like. This is going to give you two benefits. It will help
+    you in the preparation as well as it would make you lower your anxiety levels
+    on the test day. That’s because you would know what type of questions can be expected
+    and how will the test format be. It will also be really helpful in the time management
+    aspect. By solving these past papers, you will be able to manage your time well
+    during examinations. Managing time during your paper is very crucial. You should
+    try to practice all the strategies that you plan to use during your exam.
+
+
+    In short, we can say that this cybersecurity examination is going to light up
+    your future and give your career the boost that you are striving for. It’s difficult
+    with a lot of course material to cover but it is not impossible. All you need
+    is the full commitment towards it. If you are not fully committed to it, you would
+    not be able to concentrate on it and unable to qualify for it. Only appear for
+    the exam when you know you are fully committed to it.
+
+
+    # GOOD LUCK AND DO YOUR BEST!'
+  merge: -1
+  img_proc: true

@@ -1,0 +1,13 @@
+examination. You need 9 weeks to get done with all the courses, one week for each domain, and then one week for review. You can schedule your exam any time after these 9 weeks. You can set aside 90 minutes every day in which you will prepare for the CISSP examination, so by the end of the 30th day, you will have studied for 45 hours and covered all the course material for the exam.
+
++   • DAY 2-10:
++   
++   This is the review phase. During this phase, you would go through all the course that is going to be the part of your CISSP exam. This phase is to have an overview of what is going to be on the exam. You can start gathering the important study resources and start reading them afterward. You do not need to dive into too much detail at this point. All you have to do is just read the front and back pages of the book, table of contents to give you a better understanding of what is going to be on the book. Pay special attention to any bold or italicized terms, tables, diagrams, etc. You can highlight the words that are familiar to you. Just read the chapter summaries and try to understand them. If there are no summaries, try to summarize the chapters in your own words so you know what is in a specific chapter. You can skim through the rest of the book and don’t really dive into a lot of detail at this phase.
+
++   • DAY 10-25:
++   
++   This phase is your learning phase. Major learning for the exam takes place in this phase. It would take you a little longer to get to the end of this phase. CISSP examination is a knowledge-based test. A simpler and better way to learn is to pretend like you are teaching it to someone else. You should pick out a topic every day and then write as much information as you can about it in the most simpler terms. If you find that you are stuck at some point you can always go back to your books and other resource material and learn it again. Come back to your topic and continue writing again in the most simpler terms.
+
++   • DAY 25-30:
++   
++   This is your testing phase. During this phase, you will have to put all the knowledge that you have gained in the past weeks to test. You should try to take practice exams in an environment that will be similar to that of the actual test environment. After you get done with your tests, you should evaluate yourself based on your marks. If you feel like you are not well informed about some specific topic, go back to it and study it again. Learn from your mistakes. See what mistakes you have committed in your practice exam and try not to repeat them, in the actual test. These practice tests are a great way to prepare for the exam. The practice tests would make you aware of any gaps that you feel your
