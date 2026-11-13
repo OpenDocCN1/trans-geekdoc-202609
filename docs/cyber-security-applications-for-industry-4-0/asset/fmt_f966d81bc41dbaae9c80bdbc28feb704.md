@@ -1,0 +1,38 @@
+
+Here, products and machines will be active participants in the IoT and regularly communicate with each other. Such an open environment is highly insecure and highly prone to both active as well as passive attacks and with Industry 4.0, the range of attacks is much higher whereas the possibility of detection is lower.
+
+The biggest problem lies in the idea that cybersecurity is seen as a characteristic and not considered in the design phase; there is a misconception that cybersecurity can be purchased as a product or a service later on, and the existing threats are not well realized and often ignored as there are not too many reports from the industry, so there is a major misconception that hackers must not be advanced enough.
+
+One key factor that separates, in particular, the smart manufacturing systems from the traditional IT systems is that the manufacturing systems are set up for the long haul and often have a lifespan of up to 20 years, most of the devices are legacy systems, and to keep these systems up to date, regular patching must be done, and herein lies a big problem.
+
+For the systems to patch, the production must come to a halt, which leads to production downtime that incurs a loss, and demands additional costs; this is why the system owners are reluctant to patch frequently and it so happens, as with the Wannacry attack, that unpatched systems become vulnerable, and can be exploited \[[11](#ch1.xhtml#ref1_11),[12](#ch1.xhtml#ref1_12)\].
+
+Historically, we have seen that there are situations when systems are already exploited by the time a patch is released for an exposed vulnerability, and another issue is that expert skills are required to carry out the patching process.
+
+The systems were designed for optimal performance but system security was not integrated with that optimization but rather was ignored and was planned to be incorporated as a service through vendors and thus a majority of the systems have only very little security like default passwords, no access control, and undocumented backdoors.
+
+Potteiger et al. (2017) \[[44](#ch1.xhtml#ref1_44)\] have conducted tests on a platform that closely mimics the CPS and shown that the existing vulnerabilities in the railway transport network can cause a substantial amount of train delays whose effects propagate into the physical world and affect the various passengers involved. The researchers have performed a packet delay attack using a Man in the Middle attack and a combination of DoS with a Man in the Middle attack. For the first scenario where only the Man in the Middle attack was employed, the attackers were able to delay packets by 20 minutes causing delay to targeted trains, and on the other hand, when both Man in the Middle attacks as well as DoS attack was leveraged, the attackers were able to disrupt the entire functioning of the schedule of multiple trains (six in their example).
+
+Humayed et al. (2017) \[[45](#ch1.xhtml#ref1_45)\] have identified the basic requirements of CPS security as data confidentiality, information integrity, availability, authentication, non-repudiation, and privacy protection. The researchers have outlined various threats to the network information layer, infrastructure security threats such as equipment damage or failure, and physical damage, and also laid out various information security threats spread across three aspects, namely physical layer threats, information layer threats, and application control layer threats.
+
+Singh and Jain (2018) \[[46](#ch1.xhtml#ref1_46)\] have highlighted security and privacy as the concerning issues of CPS and also pointed out that managing big data produced by the interconnected devices in a secure manner is also a challenging task. Other challenges acknowledged by the authors were the security of devices and data transmission. The researchers have identified several vulnerabilities in CPS including vulnerabilities relating to network, platform, hardware, as well as software. Several technical as well as management vulnerabilities were also laid out. The several threats recognized by the authors were Malicious Software, Cryptographic Attacks, and Network Attacks, among others.
+
+Nair et al. (2019) \[[47](#ch1.xhtml#ref1_47)\] have identified privacy, security, interoperability of systems, context awareness, and the design of the system as the challenges in Medical Cyber Physical Systems (MCPSs). The researchers have identified Data Breaches, Ransomware attacks, Social Engineering attacks, and insider attacks as the prominent threats in the field of MCPSs. They have also pointed out the difficulty in installing an IDS in MCPS actuator systems.
+
+Systems are traditionally designed without incorporating security or by assuming that the system is isolated, hence safe. Secure software development process is not considered.
+
+Poor security practices and policies are also a reason why vulnerabilities are introduced; the Industrial Control Systems make use of insecure communication protocols and they do not even have the capability to support authentication. The obvious and widely known good practices are not followed as one would normally expect.
+
+There are generally two motives for attacks on these systems: exfiltration (i.e., breaching personal and/or sensitive data from compromised systems by sabotaging the normal operations of the systems) by collecting money and the other being political motive.
+
+## 1.5 Security Measures
+
+There are two types of security solutions existing at the moment, namely static and active defense.
+
+To ensure static defense, proper and updated security regulations, standards, policies, and guidelines must be in place, and in order to ensure active defense, cryptographic techniques must be employed as devices in the CPSs are continually communicating with each other.
+
+An Intrusion Detection and Prevention System must be in place which is able to effectively detect known attacks and at the same time possess the capability to perform intelligent analysis on suspicious traffic, and accurately detect malicious attacks and prevent them.
+
+Eigner et al. (2016) \[[48](#ch1.xhtml#ref1_48)\] have devised an anomaly-based detection of attack approach which utilizes the normal system behavior in the ideal state as the training data and collates it with the ongoing system activity. This approach worked well in detecting Man in the Middle attacks as the system behavior was continually logged and when an attack took place, the operation was captured in the logging client, and the required features were extracted and analyzed. Finally, the unlabeled data were classified as an anomaly by detecting outliers. The model was able to classify the attack as an anomaly as there was extra transmission time incurred when the attacker intercepted the message and relayed the modified message, creating a pattern different from normal scenarios.
+
+Gokarn et al. (2017) \[[49](#ch1.xhtml#ref1_49)\] have proposed an anomaly detection system to intensify the security of power grids by utilizing the Kalman filter. In their approach, they have used Power System Analysis Toolbox (PSAT) as the training data, which is fed to a SCADA parser and then given to the Kalman filter which produced estimated data which is then stored into a knowledge base, and in this way, a knowledge base is developed. For real-time scenarios, any incoming data is sent to the parser which passes it on to the Kalman filter, and the output of the filter is compared with the knowledge base to classify it as an anomaly, if an anomaly is found then an alarm is triggered. The real-time data also make their way into the knowledge base which leads to continual improvement of the classification model.
