@@ -1,0 +1,7 @@
+# 9.3.1.2. Iterative model
+
+The iterative model is approximately similar to the traditional waterfall model, as shown in Figure 9.5. The traditional model follows the step-by-step process for developing a project, but the iterative model follow the cyclic process. The iterative model provides a feedback path in the preceding phase. After completing the project, developers can easily go back to the particular phase where an error has occurred. The feedback paths allow the reworking of the phase where the error was detected. This model contains various phases, such as requirement analysis, system design, implementation, testing, deployment and maintenance (Despa et al. 2014). The process of developing a project starts from a requirement phase. After collecting the product requirements from the client, the developer starts to design the project and finally implements the software product code on the basis of collecting requirements. After completing the coding, the developer applies some test methods to find an error. Once an error is detected, the developer goes back to that particular phase where the error occurred and corrects that error. At the end, it deploys the product in the client working environment. After deploying the product, if any bugs or errors are presented in the software, the developer updates the product with the help of a debugging process. This model is useful for small software applications.
+
+![](bbox=[0.15, 0.46, 0.9, 0.825])
+
+Figure 9.5. Iterative model for software development

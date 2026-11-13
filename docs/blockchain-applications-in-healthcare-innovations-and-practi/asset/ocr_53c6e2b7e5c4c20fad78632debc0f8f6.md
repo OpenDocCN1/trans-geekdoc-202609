@@ -1,0 +1,13 @@
+# 2.2.2.4. Energy
+
+Blockchain could power a decentralized energy system and implement smart contracts for power generation and trade in order to develop decentralized energy trading markets, and improve energy and consumption efficiency. Exergy (Exergy n.d.) is a Blockchain consortium platform that offers suitable energy markets for power trades via the existing power grid. Sun Exchange (Sun Exchange n.d.) is a marketplace based on Blockchain that allows customers to buy solar cells and then rent them out to organizations and communities in the sunniest regions in the world (mainly Africa). The income of its members is based on electricity generated through its solar cells. Sun Exchange will be responsible for the collection and distribution of monthly rent. Knirsch et al. (2018) provided a selection of trustworthy, autonomous and anonymity charging points affordability and range to electric vehicles.
+
+# 2.2.3. Programming languages and platforms
+
+Smart contracts may be created and deployed on a variety of Blockchain platforms. Platforms differ in their features. In this section, two common platforms, Ethereum and Hyperledger Fabric, are discussed.
+
++   - Ethereum: on the Ethereum platform, applications execute precisely as designed, with no downtime, censorship or other issues such as fraud or intervention from a third party. The Ethereum Virtual Computer (EVM) is a Turing-complete VM, which is used to implement bytecode (as previously stated, Solidity compiles bytecode). Ethereum apps are powered by Ether, the platform’s proprietary cryptographic asset token. Ether is used in the following ways: it is exchanged as an electronic asset similar to Bitcoin, and it is also used to reward nodes for completed calculations (ConsenSys 2016).
+
++   - Hyperledger Fabric: this is a distributed ledger technology. The Linux Foundation hosts Hyperledger Fabric. It offers high levels of discretion, robustness, customization and sustainability. It was created to allow for configurable solutions of specific parts, while also addressing the economic ecosystem’s intricacy and complexities. Container technology is used by Hyperledger Fabric to store smart contracts called “chaincode”.
+
+Ethereum smart contract scripts, as previously indicated in section 2.1, are created in a bytecode language, which is based on stack and implemented in EVM. Ethereum smart contracts may be created in a number of high-level programming languages. Following that, the programs will be compiled into EVM bytecodes,

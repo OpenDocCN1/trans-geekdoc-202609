@@ -1,0 +1,9 @@
+- Decentralization: with the help of digital signature, it is clear that if there is any alteration with the block, then the digital signature will become illegal and the peers in the network will be informed that manipulation has occurred. This whole process becomes more efficient with decentralization as there will be no single authority in Blockchain during decentralization and the system becomes fairer.
+
+The beauty of decentralization is that no node can manipulate ledger but have a duplicate copy of ledger with them, hence, to make any changes in any transaction in the ledger a consensus is required from all of the nodes. This makes Blockchain a P2P DLT (Peer-to-Peer, Distributed Ledger Technology). Figure 7.6 provides a visual representation of P2P DLT.
+
+![](bbox=[0.22, 0.32, 0.82, 0.57])
+
+Figure 7.6. Blockchain – a P2P DLT
+
+- Consensus algorithm: consensus algorithms have already been discussed in previous chapters in detail. The purpose here is not to again go through all different types of consensus algorithms like proof of work, proof of state, smart contracts, etc. but to understand how consensus algorithms help in preserving privacy in Blockchain. During our discussion in section 7.3, it was clear that privacy is also about protection of rights (privacy rights) and consensus algorithms, thus this helps in that part. The purpose of consensus algorithms is to ensure data in the ledger is same for all the nodes, and every node agrees to a process of achieving the correct state of the data which means there is an agreement between all of the nodes. This agreement varies based on the functionality and purpose of the Blockchain.
