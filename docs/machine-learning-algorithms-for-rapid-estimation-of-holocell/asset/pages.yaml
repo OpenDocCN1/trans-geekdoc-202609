@@ -1,0 +1,991 @@
+- pgno: 0
+  md: '# Machine learning algorithms for rapid estimation of holocellulose content
+    of poplar clones based on Raman spectroscopy
+
+
+    Wenli Gao a,b,1 , Liang Zhou a,b,*,1 , Shengquan Liu a,b , Ying Guan a,b , Hui
+    Gao a,b , Jianjun Hu c
+
+
+    a School of Forestry and Landscape Architecture, Anhui Agricultural University,
+    Hefei, Anhui 230036, PR China b Key Lab of State Forest and Grassland Administration
+    on Wood Quality Improvement & High Efficient Utilization, Hefei, Anhui 230036,
+    PR China c State Key Laboratory of Tree Genetics and Breeding, Key Laboratory
+    of Tree Breeding and Cultivation of National Forestry and Grassland Administration,
+    Research Institute of Forestry, Chinese Academy of Forestry, Beijing, PR China
+
+
+    # ARTICLE INFO
+
+
+    +   - Holocellulose content
+
+    +   - Machine learning algorithms
+
+    +   - Raman spectroscopy
+
+    +   - CatBoost
+
+    +   - XGBoost
+
+
+    # ABSTRACT
+
+
+    In this study, regularization algorithms (RR, LR, and ENR), classical ML algorithms
+    (SVR, DT, and RF), and advanced GBM algorithms (LightGBM, CatBoost, and XGBoost)
+    were applied to build the holocellulose content predictive models of poplar based
+    on features extracted from Raman spectra. Evaluation results of models indicate
+    that classical ML algorithms show higher predictive accuracy than regularization
+    algorithms, and the advanced GBM algorithms better than the classical ML algorithms.
+    Furthermore, models built by CatBoost and XGBoost can estimate holocellulose content
+    with high predictive accuracy of test R² above 0.93 and test RMSE less than 0.29%.
+    It provides the heretofore best precision of holocellulose content predictive
+    model based on Raman spectroscopy so far for our knowledge. Therefore, it is suggested
+    that Raman spectroscopy coupled with ML algorithms is a promising tool for predicting
+    the holocellulose content in poplar which can be applied in large-scale tree genetic
+    and breeding programs.
+
+
+    # 1. Introduction
+
+
+    Holocellulose, the sum of cellulose and hemicellulose, is a water-insoluble carbohydrate
+    fraction which can be extracted from wood materials through the chlorination method
+    by removing the lignin (Basu, 2018). It is an important fraction because its hydrolyzed
+    products were composed by various monomeric sugars, which are able to convert
+    into useful compounds or to ethanol via fermentation (Isikgor & Becer, 2015; Ma
+    et al., 2012). Due to the large differences in holocellulose content among different
+    types of lignocellulosic biomass, species, or even genetic resources, the selection
+    of resources with expected holocellulose content becomes an essential task. Meanwhile,
+    the variation also provides a good opportunity to scheme a large-scale genetic
+    breeding program for selecting and finding the suitable germplasm with the expected
+    holocellulose content. However, for doing so, intensive labor and tedious testing
+    are required when the traditional wet chemical methods (WCM) are used since there
+    are plenty of samples that need to be measured. Besides that, because each genetic
+    sample is prepared from small seedling or growth cone of living tree, the spendable
+    quantity of the sample sometimes fails to meet the required replica when using
+
+
+    WCMs. Moreover, the WCMs are also criticized for the huge usage of toxic reagants
+    during the determination. Therefore, a rapid, accurate, eco-friendly, and low
+    sample quantities requirement method is needed.
+
+
+    Several spectroscopic methods, such as near-infrared (NIR) spectroscopy, middle-infrared
+    (MIR) spectroscopy (Tucker et al., 2001) and Raman spectroscopy, combined with
+    suitable algorithms have been successfully predicted the content of chemical components
+    of lignocellulosic materials instead of traditional WCMs. NIR has been used to
+    predict the lignin content in wood (Liang et al., 2020; Yang et al., 2019), lignin
+    content in pears (Wu et al., 2021) and holocellulose content in wood (Liang et
+    al., 2020; Yang et al., 2019). However, it is reported that both the position
+    and intensity of water-related peaks of NIR spectra will be changed by the sample
+    moisture and testing ambient humidity (Gordobil et al., 2021). So, it possibly
+    results a disturbance on the quantitative results if the sample moisture and testing
+    atmosphere is out of rigid control. Conversely, Raman spectroscopy, which is insensitive
+    to the sample moisture, provides a great deal of spectral information with high
+    chemical information content, which is characterized by a series of peaks related
+    to specific chemical bonds (Jermyn et al., 2016). These valuable information brings
+    high sensitivity and specificity, such as, to'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "analysis the differences in the amounts of major chemical components (Agarwal\
+    \ & Ralph, 2012; Gao, Shu, et al., 2022; Gao, Zhou, et al., 2022; Gao, Zhou, Liu,\
+    \ et al., 2022), and crystallinity of cellulose (Agarwal et al., 2010, 2018).\
+    \ In addition, since only 2 mg samples are needed for each collecting of spectra,\
+    \ less requirement of quantity of sample is possibly a typical superiority of\
+    \ Raman techniques in the specialized application of large-scale tree genetics\
+    \ and breeding programs. Raman spectroscopy combined with regularization algorithms\
+    \ have been successfully applied to the task of predicting holocellulose content\
+    \ and lignin content of poplar clones (Gao et al., 2021; Gao, Shu, et al., 2022).\
+    \ Even predicting results of these models are acceptable yet, it is still wondering\
+    \ whether the predicting accuracy and efficiency of the models can be improved\
+    \ further or not.\n\nVarious classification and prediction works related to lignocellulosic\
+    \ materials and its chemical components were successful accomplished owing to\
+    \ the application of classical machine learning (ML) algorithms which include\
+    \ support vector machine regression (SVR), decision tree (DT), and random forest\
+    \ (RF) (Daassi-Gnaba et al., 2018; Ehrhart et al., 2021; Gao, Zhou, Liu, et al.,\
+    \ 2022; Gu & Henrik Andersson, 2010; Souza et al., 2020; Xing et al., 2019). Meanwhile,\
+    \ it was reported that advanced gradient boosting machine (GBM) algorithms, such\
+    \ as Light Gradient Boosting Machine (LightGBM), Categorical Boosting (CatBoost),\
+    \ and eXtreme Gradient Boosting (XGBoost), are able to handle complex mathematical\
+    \ problems, such as classification, regression, and others (Chen & Guestrin, 2016;\
+    \ Ke et al., 2017; Prokhorenkova et al., 2018). Based on these meaningful works,\
+    \ lignin content predictive models by ML algorithms based on Raman features have\
+    \ been recently established (Gao, Zhou, Liu, et al., 2022). The result indicated\
+    \ that ML algorithms achieved a more accurate and efficient prediction of lignin\
+    \ content than regularization algorithms (Gao, Zhou, Liu, et al., 2022). Therefore,\
+    \ the significant improvement in predictive accuracy of holocellulose content\
+    \ is expected if the machine learning (ML) algorithms is going to be implemented\
+    \ instead of the regularization algorithms. However, it should be noticed that\
+    \ the position and intensity of lignin-related peaks are quite different from\
+    \ that of the holocellulose-related ones, and then the useful features extracted\
+    \ from Raman spectra in establishing holocellulose content predictive model (HCP-Model)\
+    \ will be another data matrix. It will certainly bring question to how transferred\
+    \ the methodology of predicting lignin content by the ML algorithms to the new\
+    \ target, namely holocellulose. Furthermore, it also needs to be verified that\
+    \ the comparative result among different ML algorithms is consistent or not between\
+    \ HCP-Model and lignin content predictive model.\n\nTherefore, the objective of\
+    \ the present work is to apply the ML algorithms to develop the HCP-Models. the\
+    \ holocellulose-related Raman features extracted from Raman spectra were applied\
+    \ as the input variables and the measured holocellulose content was applied as\
+    \ the output variable. Meanwhile, the regularization algorithms (RR, LR, and ENR)\
+    \ were also adopted to make a comparison with those ML algorithms. The accuracy\
+    \ of each predictive model is going to be examined and compared, and then the\
+    \ optimal model will be selected. Furthermore, after progressively tuning hyper-parameters,\
+    \ the HCP-Models with high predictive accuracy will be anticipated. It is hoped\
+    \ that the optimal predictive model is favorable of quick and efficient estimating\
+    \ holocellulose content in large-scale tree genetics and breeding programs.\n\n\
+    # 2. Materials and methods\n\n# 2.1. Materials\n\n125 groups of poplar samples\
+    \ were harvested from ten poplar clones. The information of these ten poplar clones\
+    \ is depicted elaborately in the published study (Gao, Shu, et al., 2022; Gao,\
+    \ Zhou, Liu, et al., 2022). All the samples were processed into 40–60 mesh and\
+    \ 100–120 mesh wood powder, for measuring the holocellulose content by WCM s and\
+    \ collecting the Fourier-transform Raman (FT-Raman) spectra, respectively. 80%\
+    \ of the samples were randomly divided into training set, and the\n\nremaining\
+    \ 20% of the samples were used as the test set.\n\n# 2.2. Determination of holocellulose\n\
+    \nThe sodium chlorite method was applied to measure the holocellulose content,\
+    \ referring to the China national standard of GB/T 2677.10–1995. First, introduce\
+    \ a distilled water, glacial acetic acid, and sodium chloride into a container\
+    \ with the extracts-free sample and soak in water at 75 °C for one hour. Then,\
+    \ 0.5 mL of acetic acid and 0.6 g of sodium chlorite were added to the solution,\
+    \ and the water bath was continued for one hour. Repeat the above operation of\
+    \ adding sodium chlorite and acetic acid for sufficient and successive cycles\
+    \ of chlorination (four times in this study). After the adequate chlorination,\
+    \ the solution was filtered and washed. The residue was measured by gravimetrically,\
+    \ namely the measured holocellulose content (Liang et al., 2020; Rabemanolontsoa\
+    \ & Saka, 2012).\n\n# 2.3. Collection of Raman spectra\n\nPoplar samples used\
+    \ to collect FT-Raman spectra were processed into pellets from ~2 mg of 100–120\
+    \ mesh sample, in triplicate. Then, all the FT-Raman spectra were collected from\
+    \ 64 scans with a 4 cm−1 spectral resolution by using a FT-Raman spectroscopy\
+    \ from Bruker (Vertex 70RAMII). The fluorescence was exited at 1064 nm and the\
+    \ Raman shift ranged from 200 to 3600 cm−1 was collected with the laser power\
+    \ of 500 mW. And the range of 800 to 3600 cm−1 was applied for analysis.\n\n#\
+    \ 2.4. Spectral processes and Raman features extracted from Raman spectra\n\n\
+    The extraction of Raman features is challenging because of the spectral noise,\
+    \ baseline drift, and signal overlap, which can be alleviated by spectral processes\
+    \ of denoise, baseline correction, and the calculation of deconvolution. Refer\
+    \ to the previous works (Gao et al., 2021; Gao, Shu, et al., 2022; Gao, Zhou,\
+    \ et al., 2022), Savitzky-Golay and adaptive iteratively reweighted penalized\
+    \ least squares (airPLS) can be carried out to smooth the spectra and correct\
+    \ the spectral baseline, respectively. Then, Gaussian and Lorentzian deconvolution\
+    \ was carried out to overcome the signal overlap for calculating the single signal\
+    \ intensity of each specific peak. Therefore, information of peaks located at\
+    \ 1095, 1122, 1149, 1331, 1378, 1462, and 2895 cm−1 was extracted successfully,\
+    \ which were all related to holocellulose (Agarwal, 2009; Agarwal & Ralph, 1997;\
+    \ Wiley & Atalla, 1987). Refer to the previous work, the peak intensity of 2945\
+    \ cm−1 was qualified to normalize the intensities of holocellulose-related peaks\
+    \ (1095, 1122, 1149, 1331, 1378, 1462, and 2895 cm−3) (Gao, Shu, et al., 2022).\
+    \ Therefore, the normalized peak intensities of holocellulose-related peaks (I1095,\
+    \ I1122, I1149, I1331, I1378, I1462, and I2895), which were called Raman features\
+    \ in this study, were obtained and applied as the predictor variables of the HCP-Models.\n\
+    \n# 2.5. Modeling algorithms\n\nThe training data was used to tune and optimize\
+    \ the hyper-parameters of ML algorithms, and then the HCP-Models were developed\
+    \ with the optimum hyper-parameters. The data of the test set, which was always\
+    \ independent from the training process, was used to estimate predictive accuracy\
+    \ of the models. Before building the HCP-Models, all the input variables were\
+    \ standardized by StandardScaler from Scikit-learn library in Python. The standardized\
+    \ data was calculated as follow: Eq. (1):\n\n```\nx' = \\frac{x - \\bar{x}}{\\\
+    sigma} \n (1)\n```\n\nwhere x'was the standardized value, x was the primary value,\
+    \ x̄ was the mean value, and σ was the standard deviation of the whole range of\
+    \ the"
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'predictor variables.
+
+    Regularization algorithms, classical ML algorithms, and advanced GBM algorithms
+    were applied to build the HCP-Models. Therefore, a total of nine algorithms were
+    applied to establish models. In regularization algorithms, the penalty items were
+    added for depressing the multi-collinearity of data, namely l1-norm, l2-norm in
+    LR and RR models, respectively. And the regularization item was the combination
+    of l1-norm and l2-norm in ENR models.
+
+
+    ```
+
+    R^2(y, \hat{y}) = 1 - \frac{\sum_{i=1}^n (y_i - \hat{y}_i)^2}{\sum_{i=1}^n (y_i
+    - \bar{y})^2}
+
+    (1)
+
+    RMSE(y, \hat{y}) = \sqrt{\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2}
+
+    (2)
+
+    NRMSE = \frac{RMSE}{\bar{y}}
+
+    (3)
+
+    MAE = \frac{1}{n} \sum_{i=1}^n |P_i - M_i|
+
+    (4)
+
+    MAPE = \frac{1}{n} \sum_{i=1}^n \left| \frac{\hat{y}_i - y_i}{y_i} \right| \times
+    100\%
+
+    (5)
+
+    ```
+
+
+    SVR, DT, and RF were all the commonly used classical ML algorithms. SVR is derived
+    from support vector machine (SVM), which originally defines hyperplane for solving
+    classification tasks, and then extended to solve more complex problems such as
+    regression (Awad & Khanna, 2015). DT and RF are tree-based algorithms. But DT
+    has only one tree, whereas RFs many decision trees on many sub-samples of dataset.
+    The predictive value of RF model was based on the majority vote of the results
+    received from each decision tree.
+
+
+    LightGBM, CatBoost, and XGBoost are all advanced GBM algorithms which are famous
+    for their efficiency, accuracy and interpretability in many complex tasks (Dorogush
+    et al., 2018; Hong, 2020; Jabeur et al., 2021; Ke et al., 2017). XGBoost is a
+    modified frame from GBM proposed by Chen, which is adept at dealing with tasks
+    of classification and regression (Chen & Guestrin, 2016). The tree nodes in XGBoost
+    were split layer by layer, and the residuals of the previous model-tree are fitted
+    through the newly generated tree (Pan et al., 2022). LightGBM is a distributed
+    and efficient gradient boosting framework which is histogram-based and places
+    continuous values into discrete bins, leading to a faster training and more efficient
+    memory usage (Ke et al., 2017). CatBoost is an advanced gradient boosting decision
+    tree algorithm proposed in 2018. It is advantaged at its efficient and rational
+    function in processing features. And the greedy strategies were considered to
+    improve the prediction accuracy when CatBoost model constructing new split points
+    for the current tree (Jabeur et al., 2021; Prokhorenkova et al., 2018). All the
+    models were built with Jupyter Notebook in Python environment.
+
+
+    where yi means the measured value, means the predicted value, the means the average
+    value of measured values, and means the quantity of sample.
+
+
+    To obtain ML models with higher predictive accuracy, hyper-parameters of algorithms
+    were tuned with the help of grid search and 5-fold cross-validation. The process
+    of parameter tuning was performed by using the GridSearchCV from scikit-learn
+    function in Python (Pedregosa et al., 2011).
+
+
+    # 3. Results and discussion
+
+
+    # 2.6. Model evaluations
+
+
+    # 3.1. Analysis of FT-Raman spectra
+
+
+    Raman spectra provides a great deal of spectral information with high chemical
+    information content, which is characterized by a series of peaks related to specific
+    chemical bonds (Jermyn et al., 2016). As shown in Fig. 1, both the signals at
+    1095 and 1122 cm–1 were attributed to the C—O and C—O stretching, symmetric and
+    asymmetric stretching of COC, glycosidic, and ring breathing (Schenzel & Fischer,
+    2001; Wiley & Atalla, 1987). The peak located at 1149 cm–1 appeared to be related
+    to HCC and HCO bending (Schenzel & Fischer, 2001; Wiley & Atalla, 1987), and 1462
+    cm–1 was assigned to the CH2 scissoring of carbohydrates (Agarwal & Atalla, 2010).
+    At the signal of 1331 cm–1 and 1378 cm–1, HCC and HCO bending coordinates were
+    most significant (Wiley & Atalla, 1987). The C—H stretching region from 2780 cm–1
+    to 3060 cm–1 includes contributions from lignin and carbohydrates (Wiley & Atalla,
+    1987). In detail, the peak at 2895 cm–1 was assigned to CH and CH2 stretching
+    of the cellulose dominates (Wiley & Atalla, 1987), and the peak at 2945 cm–1 from
+    the CH stretching of the methoxyl groups of the lignin was more pronounced (Gierlinger
+    & Schwanninger, 2006; Wiley & Atalla, 1987), which have been proved to be a qualified
+    internal standard in the task of predicting holocellulose content based on Raman
+    spectroscopy (Gao, Shu, et al., 2022). After the spectral processes of smoothing,
+    baseline correction, and deconvolution calculation, the input variables of HCP-Models
+    were obtained, which were expressed as I1095, I1122, I1149, I1331, I1378, I1462,
+    and I2895.
+
+
+    The predictive accuracy of all the quantitative models, namely, RR model, LR model,
+    ENR model, SVR model, DT model, RF model, LightGBM model, CatBoost model, and
+    XGBoost model, were estimated by the coefficient of determination (R2), root mean
+    square error (RMSE), normalized root mean square error (NRMSE), mean absolute
+    error (MAE), and mean absolute percentage error (MAPE). R2 is an index of goodness
+    of fit, indicating the proportion of variance of output variable explained by
+    the input variables. Theoretically, the larger the R2, the higher the model accuracy
+    (Hosseinzadeh et al., 2022; Schubert & Kläusler, 2020). The RMSE is frequently
+    used metric of errors between measured and predicted values, which serves to aggregate
+    the magnitudes of the errors in predictions for various data points into a single
+    measure of predictive power. The RMSE is a measure of accuracy, to compare forecasting
+    errors of different models developed by RR, LR, ENR, SVR, DT, RF, LightGBM, CatBoost,
+    and XGBoost. The NRMSE refers to the root mean square of RMSE normalized by the
+    average of measured values. The lower the value of RMSE and NRMSE, the higher
+    the predictive accuracy of quantitative model. The MAE is the average difference
+    between the observations (measured values) and model output (predictions), which
+    is a metric to measure the accuracy of a given model. MAPE is a simple average
+    of absolute percentage errors, which used to define the accuracy of predictive
+    model. The lower the value of MAE, the better a model is able to forecast values.
+    The calculation of R2, RMSE, NRMSE, MAE, and MAPE is as follows:
+
+
+    # 3.2. Analysis of dataset
+
+
+    The holocellulose contents of poplar samples in this work ranged from 78.60% to
+    84.57% with the average value of 81.84%, which was consistent with the other published
+    literatures (Liang et al., 2020). All the 125 samples were divided into two groups.
+    In the training set, the holocellulose content ranged from 78.60% to 84.57% with
+    the average value of 81.84%. In the test set, the data range was from 79.72% to
+    84.21% with the average value of 81.86%, and the detailed distribution was similar
+    to that of the training set (Fig. 2).
+
+
+    In HCP-Models, the data of holocellulose content was set as the output variable,
+    while the input variables were Raman features extracted from Raman spectra, namely
+    I1095, I1122, I1149, I1331, I1378, I1462, and I2895. Theoretically, all these
+    features were related to holocellulose (Agarwal, 2019; Wiley & Atalla, 1987).
+    To estimate whether the selected predictor variables can provide useful information
+    for building HCP-Models, the Pearson correlation analysis was applied to analysis
+    the correlations between input variables and output variable roughly. The'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/e15c3a13b491ae6ef05b67702b1cf3da_3_0.png)
+
+
+    Fig. 1. The original Raman spectrum and processed spectrum.
+
+
+    ![](img/e15c3a13b491ae6ef05b67702b1cf3da_3_1.png)
+
+
+    Fig. 2. The frequency distribution map of holocellulose content.
+
+
+    higher Pearson correlation coefficient (Pearson''s r) means a higher correlation
+    between the two types of variables (Adler & Parmryd, 2010). According to Fig.
+    3, the holocellulose content had a stronger correlation with the $I_{1149}$ (Pearson''s
+    r: 0.51, p < 0.001), $I_{1095}$ (Pearson''s r: 0.43, p < 0.001), and $I_{2895}$
+    (Pearson''s r: -0.47, p < 0.001) than other variables. And all the predictor variables
+    were more or less related to the output variable, indicating the significant relationships
+    between the Raman features and the measured holocellulose content. Hence, these
+    selected input features were promising to provide enough variation of digital
+    information for the model building (Adler & Parmryd, 2010).
+
+
+    # 3.3. Tuning of hyper-parameter
+
+
+    Before executing model building process, various hyper-parameters need to be tuned
+    to depress the possible mathematical problems and optimize quality of models.
+    In the RR model, the value of ''alpha''
+
+
+    ![](img/e15c3a13b491ae6ef05b67702b1cf3da_3_2.png)
+
+
+    Fig. 3. The Pearson correlation analysis between the Raman features and the measured
+    holocellulose content.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'represents the regularization strength. The larger value specifies stronger
+    regularization, which was skilled in dealing with the problem of multi-collinearity
+    and reduces the variance of the estimates (Ikeuchi, 2021). While in LR and ENR
+    models, ‘alpha’ represents the constant that multiplies the penalty terms. When
+    ‘alpha’ equal to 0, the modeling algorithm was equivalent to an ordinary least
+    square (Januaviani et al., 2019; Meier et al., 2008). In SVR models, the kernel
+    function and the regularization parameter (‘C’) were the important hyper-parameters
+    usually need to be tuned (Pan et al., 2022). In this paper, ‘linear’, ‘poly’,
+    ‘rbf’ were selected as the candidates of kernel function. The parameter of ‘C’
+    was inversely proportional to regularization strength. In addition, the algorithms
+    of DT and the three advanced GBM were all tree-based ML techniques. And the parameters
+    were related to the ‘model tree’ which were listed in Table 1 (Hong, 2020; Hosseinzadeh
+    et al., 2022; Ke et al., 2017). The hyper-parameters and the tuned optimal value
+    were summarized in Fig. 4 and Table 1.
+
+
+    # 3.4. Prediction performance of regularization algorithms
+
+
+    All the HCP-Models were established with the optimum hyper-parameters (Table 1),
+    and the statistical results of the nine models were shown in Tables 2 and 3. RR,
+    LR, and ENR models were approximately equal to each other with the test R² of
+    ~0.80 and RMSE of ~0.48%, which were nearly consistent with our previous study
+    (Gao, Shu, et al., 2022). The predicted values from the regularization algorithms
+    vs. measured values in datasets were plotted in Fig. 5. It should be mentioned
+    that the previous models built by regularization algorithms lacks the step of
+    tuning hyper-parameters. It was expected that the models should present higher
+    predictive accuracy than the previous ones with the help of the additional tuning
+    step. Nevertheless, it only displays marginally better results of RMSE in test
+    set since the tuning process was monitored based on the value of RMSE. Therefore,
+    it suggests that the tuning step is slightly helpful to improve the quality of
+    models built by regularization algorithms in this study. It still leaves room
+    for improvement for better algorithms.
+
+
+    # 3.5. Prediction performance of classical machine learning algorithms
+
+
+    In order to obtain models with higher precision, three types of classical ML algorithms
+    were adopted to execute the task, and the results were listed in Tables 2 and
+    3. The predictive performance was listed in Fig. 6. In HCP-Models built by SVR,
+    DR, and RF, the statistical results of
+
+
+    # Table 1
+
+    The optimized hyper-parameters of algorithms.
+
+
+    | Algorithm | Hyper-parameter | Ranges | Optimized value |
+
+    |---|---|---|---|
+
+    | RR | alpha | 0~7 | 0.46 |
+
+    | LR | alpha | 0~2 | 0.005 |
+
+    | ENR | alpha | 0~2 | 0.007 |
+
+    | SVR | kernel | linear, rbf, poly | Linear |
+
+    | | C | 0~6 | 0.4 |
+
+    | DT | max_depth | 1~10 | 9 |
+
+    | | min_samples_leaf | 1~6 | 3 |
+
+    | | min_samples_split | 1~9 | 7 |
+
+    | RF | n_estimators | 100~480 | 280 |
+
+    | | max_depth | 1~9 | 6 |
+
+    | LightGBM | learning_rate | 0~1 | 0.09 |
+
+    | | max_depth | 2~11 | 3 |
+
+    | | num_leaves | 3~20 | 9 |
+
+    | | min_data_in_leaf | 1~10 | 1 |
+
+    | CatBoost | learning_rate | 0~1 | 0.64 |
+
+    | iterations:100 | l2_leaf_reg | 2~16 | 13 |
+
+    | | depth | 2~10 | 3 |
+
+    | XGBoost | learning_rate | 0~1 | 0.15 |
+
+    | | n_estimators | 20~180 | 120 |
+
+    | | gamma | 0~0.1 | 0.03 |
+
+    | | max_depth | 2~11 | 2 |
+
+
+    Note: other unlisted hyperparameters were kept at default values.
+
+
+    test R² were ≥0.81, the test RMSE were ≤0.47%, the test MAE were ≤0.40%, and the
+    test MAPE were ≤0.49%. Those three classical ML algorithms were proved to be qualified
+    to build HCP-Model. Among the three classical ML algorithms, RF performed best
+    predictive accuracy with a test R² of 0.85, an RMSE of 0.40%, an MAE of 0.31%,
+    and an MAPE of 0.38%, showing a competitive advantage. And the predictive accuracy
+    of HCP-Models developed by classical ML algorithms was higher than those built
+    by regularization algorithms because of the higher R², lower RMSE, MAE, and MAPE.
+
+
+    It is generally accepted that the classical ML algorithms are capable of dealing
+    with complicated features of the input data, such as multiple-dimensions and multi-collinearity.
+    The input variables of HCP-Models were the features extracted from Raman spectra,
+    which were all related to holocellulose, which may lead to the correlation among
+    predictor variables. For verify the multi-collinearity, the variance inflation
+    factor (VIF) was calculated. The value of VIF was 17.22, greater than 10, indicating
+    that the data were suffered from multi-collinearity. The characteristic of multi-collinearity
+    brings greater challenge for model development, which may partially unsolved by
+    introducing the penalty item in regularization models. SVR is a widely used algorithm
+    in regression and classification tasks. In SVM system, the result was determined
+    by a few support vectors. The key information was utilized efficiently and the
+    redundant information was eliminated, which is helpful to improve the robustness
+    of SVR model. Both DT and RF are tree-based models. In DT model, the number of
+    splitting nodes are adjusted to cater to the complexity of input values. By doing
+    so, the essential information of input values can be extracted as much as possible
+    when the redundant ones were hindered from intervening the models. Meanwhile,
+    the deeper the model tree, the higher accuracy the training set, but the more
+    possibility of overfitting. So, the tree-depth of the DT is controlled in model
+    development, which can effectively avoid overfitting. Even DT and RF are both
+    tree-based models, it may be difficult to train a reliable model with high predictive
+    accuracy from multitudinous or complicated data because of the restrictions of
+    memory, time complexity and data complexity (Mu et al., 2018). These deficiencies
+    of DT can be partially compensated by RF which was an ensemble of many decision
+    trees. In RF models, each decision tree was used as parallel estimators and the
+    result of the model was based on majority vote of the results received from each
+    decision tree. Consequently, the predictive accuracy of RF model was higher than
+    that of DT. Comparing the classical ML models with the regularization models,
+    it can be found that the prediction accuracy of the classical ML models was higher
+    than that of the regularization model. It may demonstrate that the classical ML
+    algorithms are more suitable than the regularization algorithms in dealing with
+    the multiple-dimensions and multi-collinearity input values in this study. Furthermore,
+    the RF model was superior to others five models. It is also coherent to the findings
+    in building the lignin predictive models (Gao, Zhou, Liu, et al., 2022). Consequently,
+    comparing with the result in this study with the findings of lignin predictive
+    models in our previous work, it is suggested that the selection of optimum model
+    from different classical ML algorithms did not change with the different data
+    matrix of extracted features from Raman spectra.
+
+
+    # 3.6. Prediction performance of advanced GBM algorithms
+
+
+    As shown in Tables 2 and 3, models developed by LightGBM, CatBoost, and XGBoost
+    all performed well in predicting holocellulose content. In these three models,
+    all the test R² were ≥ 0.90, the test RMSE were ≤ 0.34%, the test MAE were ≤ 0.25%,
+    and the test MAPE were ≤ 0.30%, indicating the high predictive accuracy in the
+    task of predicting holocellulose content based on Raman features. Significantly,
+    in HCP-Models built by CatBoost and XGBoost, the test R² was 0.93, and the RMSE
+    were 0.28% and 0.27%, respectively. By comparing with related published literature
+    (Gao, Shu, et al., 2022), the result could be the heretofore best precision of
+    predictive model of holocellulose based on'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/e15c3a13b491ae6ef05b67702b1cf3da_5_0.png)
+
+
+    Fig. 4. The optimum hyper-parameters tuned by GridSearchCV.
+
+
+    **Table 2**
+
+    The statistical results of the nine models in training set.
+
+
+    | Modeling algorithms | R² | RMSE(%) | NRMSE | MAE(%) | MAPE(%) |
+
+    |---|---|---|---|---|---|
+
+    | RR | 0.85 | 0.46 | 0.0057 | 0.39 | 0.48 |
+
+    | LR | 0.85 | 0.46 | 0.0057 | 0.39 | 0.48 |
+
+    | ENR | 0.85 | 0.46 | 0.0057 | 0.39 | 0.48 |
+
+    | SVR | 0.84 | 0.47 | 0.0057 | 0.39 | 0.48 |
+
+    | DT | 0.88 | 0.41 | 0.0050 | 0.29 | 0.36 |
+
+    | RF | 0.91 | 0.35 | 0.0043 | 0.28 | 0.34 |
+
+    | LightGBM | 0.98 | 0.17 | 0.0021 | 0.13 | 0.16 |
+
+    | CatBoost | 0.99 | 0.13 | 0.0016 | 0.10 | 0.13 |
+
+    | XGBoost | 0.97 | 0.20 | 0.0025 | 0.16 | 0.19 |
+
+
+    **Table 3**
+
+    The statistical results of the nine models in test set.
+
+
+    | Modeling algorithms | R² | RMSE(%) | NRMSE | MAE(%) | MAPE(%) |
+
+    |---|---|---|---|---|---|
+
+    | RR | 0.80 | 0.47 | 0.0058 | 0.42 | 0.51 |
+
+    | LR | 0.80 | 0.48 | 0.0058 | 0.42 | 0.52 |
+
+    | ENR | 0.80 | 0.47 | 0.0058 | 0.42 | 0.51 |
+
+    | SVR | 0.82 | 0.45 | 0.0055 | 0.40 | 0.49 |
+
+    | DT | 0.81 | 0.47 | 0.0057 | 0.34 | 0.42 |
+
+    | RF | 0.85 | 0.40 | 0.0049 | 0.31 | 0.38 |
+
+    | LightGBM | 0.90 | 0.33 | 0.0041 | 0.25 | 0.30 |
+
+    | CatBoost | 0.93 | 0.28 | 0.0035 | 0.20 | 0.24 |
+
+    | XGBoost | 0.93 | 0.27 | 0.0033 | 0.24 | 0.29 |
+
+
+    Raman spectroscopy so far for our knowledge. The predicted values vs. measured
+    values from the advanced GBM models were plotted in Fig. 7. It is gratifying to
+    find that almost all the predicted and measured values were centered around the
+    y = x straight line, indicating the satisfactory predictive accuracy (Zhang et
+    al., 2021).
+
+
+    After comparing the results of advanced GBM algorithms with those classical ML
+    algorithms, it is obviously found that the HCP-Models built by the advanced GBM
+    algorithms performed higher predictive accuracy than those built by the classical
+    ones. RF model bagging many decision trees by using the bootstrapping method.
+    Different with RF, advanced GBM using gradient boosting to create a model in a
+    stepwise manner by optimizing an objective function, and the residual of each
+    tree constructed was smaller than that of the previous predictor, which bring
+    a gradient descent of residuals of predictors in GBM (Dorogush et al., 2018; Hong,
+    2020; Ke et al., 2017). So HCP-Models built by advanced GBM algorithms may bring
+    higher predictive accuracy than RF in the task of regression. Furthermore, CatBoost,
+    and XGBoost models obtained higher predictive accuracy than LightGBM, with the
+    higher test R², lower test RMSE, MAE and MAPE. But, marginally higher predictive
+    accuracy of XGBoost than CatBoot and LightGBM was found in prediction of lignin
+    content (Gao, Zhou, Liu, et al., 2022). It means the comparative result of advanced
+    GBM algorithms is discrepant between the prediction of lignin and holocellulose.
+
+
+    XGBoost models consistently performed higher predictive performance and the lightGBM
+    displayed relative poor result both in prediction of lignin and holocellulose
+    content. In the XGBoost system, greedy algorithm for single machine setting and
+    approximate algorithm with both local and global proposal methods were settled
+    down in order to find the optimal split node. Simultaneously, in the LightGBM
+    system, the histogram-based algorithm was applied to build feature histograms
+    for'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/e15c3a13b491ae6ef05b67702b1cf3da_6_0.png)
+
+
+    Fig. 5. The measured values and predicted values in regularization HCP-Models.
+
+
+    ![](img/e15c3a13b491ae6ef05b67702b1cf3da_6_1.png)
+
+
+    Fig. 6. The measured values and predicted values in classical ML HCP-Models.
+
+
+    ![](img/e15c3a13b491ae6ef05b67702b1cf3da_6_2.png)
+
+
+    Fig. 7. The measured values and predicted values in advanced GBM HCP-Models.
+
+
+    finding the split points during the growth of tree, which bring the significant
+    improvement in modeling efficiency. But the popular increase in efficiency was
+    accompanied by reducing the number of features and randomly dropping some instances
+    with small gradients, which may marginally decline the prediction accuracy when
+    the LightGBM model was developed (Ke et al., 2017). Because the number of datasets
+    in this study is not very large compared with those were commonly used in ML tasks,
+    the modeling efficiency is less important than prediction accuracy. Therefore,
+    in this study, the algorithm of XGBoost, which obtained the higher prediction
+    accuracy, holds the first priority due to the aforementioned advantages. Moreover,
+    the predictive accuracy of HCP-Model built by CatBoost was close to that of XGBoost,
+    while it is marginally lower than that of XGBoost in lignin content predictive
+    model. It is possibly due to the different mathematical characteristics of the
+    extracted features from the Raman spectra. Because the position and
+
+
+    intensity of holocellulose-related peaks are quite different from that of lignin-related
+    ones, the extracted features related to the holocellulose were found to have larger
+    number of the denoted input variables than that related to lignin. CatBoost algorithm
+    is characteristic of the introduction of ordered boosting, which is skilled in
+    avoiding overfitting caused by target leakage and then it will enhance the predictive
+    accuracy of model consequently (Prokhorenkova et al., 2018). So, higher predictive
+    accuracy of quantitative models would be contributed by this advantageous characteristic
+    of CatBoost. Hence, it is concluded that XGBoost and CatBoost were superior to
+    all other models in estimating holocellulose content based on Raman features.
+    The selection of optimal algorithm in the groups of classical ML algorithms for
+    building the corresponding predictive model didn''t affected by the difference
+    between two datasets, namely extracted Raman features related to lignin or related
+    to holocellulose. However,'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'the selection result of optimal algorithm among advanced GBM algorithms was
+    inconsistent in predicting holocellulose content and lignin content, due to the
+    diverse characteristics of data for modeling. Therefore, it is suggested that
+    the differences between data matrix cannot be ignored when selection of optimal
+    algorithms in the group of GBM algorithms is executed.
+
+
+    Thus, it shows that more robust and precise models can be developed by Raman features
+    combined with advanced GBM algorithms, which can be used to predict the holocellulose
+    content of poplar wood. However, other lignocellulosic resources, including other
+    angiosperm and gymnosperms, such as bamboos, rattans, and agricultural residuals
+    with different chemical structure of holocellulose and different holocellulose
+    content, are likely to be encountered, which have not been studied yet. But the
+    general methodology was depicted in this study and the model need to be adjusted
+    and modified when faced with different types of materials to adapt the different
+    lignocellulosic resources, respectively.
+
+
+    # 4. Conclusion
+
+
+    All nine models built by regularization algorithms, classical ML algorithms, and
+    advanced GBM algorithms have successfully predicted the holocellulose content.
+    The advanced GBM algorithms outperformed all the models both in training and test
+    process. In particular, the predictive accuracy of the CatBoost and XGBoost models
+    was 0.93 for test R<sup>2</sup> and around 0.28% for test RMSE, which hold the
+    first priority among all the nine algorithms. Therefore, it is evident that FT-Raman
+    spectroscopy combined with ML algorithms is a promising way for predicting holocellulose
+    content accurately and environmentally friendly without complex and tedious chemical
+    experiments.
+
+
+    # CRediT authorship contribution statement
+
+
+    Wenli Gao: Writing-Original draft and Reviewing, Formal analysis, Methodology,
+    Software; Liang Zhou: Writing-Reviewing and Editing, Conceptualization, Methodology,
+    Supervision; Shengquan Liu: Supervision, Funding acquisition; Ying Guan: Conceptualization,
+    Methodology; Hui Gao: Conceptualization, Methodology; Jianjun Hu: Writing-Reviewing
+    and Editing.
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    # Acknowledgement
+
+
+    This work was supported by National Key Research and Development Program (2017YFD0600201);
+    the National Natural Science Foundation of China (No. 31770596); the State Key
+    Laboratory of Bio-Fibers and Eco-Textiles (grant no. K2019-13).
+
+
+    # References
+
+
+    +   Adler, J., & Parmryd, I. (2010). Quantifying colocalization by correlation:
+    The Pearson correlation coefficient is superior to the Mander''s overlap coefficient.
+    Cytometry Part A, 77(8), 733–742. https://doi.org/10.1002/CYTO.A.20896
+
+
+    +   Agarwal, U. P. (2009). Raman spectroscopic characterization of wood and pulp
+    fibers. Characterization of Lignocellulosic Materials, 17–35. https://doi.org/10.1002/9781444305425.ch2
+
+
+    +   Agarwal, U. P. (2019). Analysis of cellulose and lignin content by raman spectroscopy:
+    A review of the current status. Molecules, 24(9). https://doi.org/10.3390/MOLECULES24091659
+
+
+    +   Agarwal, U. P., & Atalla, R. H. (2010). Vibrational spectroscopy online. Vibrational
+    Spectroscopy, 1(1), 103–136. https://doi.org/10.1016/0924-2031(90)80020-5
+
+
+    +   Agarwal, U. P., & Ralph, S. A. (1997). FT-raman spectroscopy of wood: Identifying
+    contributions of lignin and carbohydrate polymers in the spectrum of black spruce
+    (Picea mariana). Applied Spectroscopy, 51(11), 1648–1655. https://doi.org/10.1366/000370297779399316
+
+
+    +   Agarwal, U. P., & Ralph, S. A. (2012). Quantitation of lignin in grasses by
+    near-IR FT-Raman spectroscopy. In Analysis of papers of the American chemical
+    society (p. 243).
+
+
+    +   Agarwal, U. P., Ralph, S. A., Reiner, R. S., & Baez, C. (2018). New cellulose
+    crystallinity estimation method that differentiates between organized and crystalline
+    phases. Carbohydrate Polymers, 190(February), 262–270. https://doi.org/10.1016/j.carbpol.2018.03.003
+
+
+    +   Agarwal, U. P., Reiner, R. S., & Ralph, S. A. (2010). Cellulose I crystallinity
+    determination using FT-raman spectroscopy: Univariate and multivariate methods.
+    Cellulose, 17(4), 721–733. https://doi.org/10.1007/s10570-010-9420-2
+
+
+    +   Awad, M., & Khanna, R. (2015). Support vector regression. In M. Awad, & R.
+    Khanna (Eds.), Efficient learning machines: Theories, concepts, and applications
+    for engineers and system designers (pp. 67–80). Apress. https://doi.org/10.1007/978-1-4302-5990-9_4
+
+
+    +   Basu, P. (2018). Chapter 14 - analytical techniques. In P. Basu (Ed.), Biomass
+    gasification, pyrolysis and torrefaction (3rd ed., pp. 479–495). Academic Press.
+    https://doi.org/10.1016/B978-0-12-811992-0.00023-6.
+
+
+    +   Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system.
+    Knowledge Discovery and Data Mining, 785–794. https://doi.org/10.1145/2939672.2939785
+
+
+    +   Dassi-Gnaba, H., Oussar, Y., Merlan, M., Ditchi, T., Géron, E., & Holé, S.
+    (2018). Moisture content recognition for wood chips in pile using supervised classification.
+    Wood Science and Technology, 52(5), 1195–1211. https://doi.org/10.1007/s00226-018-1020-3
+
+
+    +   Dorogush, A. V., Ershov, V., & Gulin, A. (2018). CatBoost: gradient boosting
+    with categorical features support. https://arxiv.org/pdf/1810.11363.pdf. LK -
+    https://academic.microsoft.com/paper/2898227265.
+
+
+    +   Ehrhart, T., Palma, P., Schubert, M., Steiger, R., & Frangi, A. (2021). Predicting
+    the strength of European beech (Fagus sylvatica L.) boards using image-based local
+    fibre direction data. Wood Science and Technology. https://doi.org/10.1007/s00226-021-01347-w
+
+
+    +   Gao, W., Shu, T., Guan, Y., Ling, S., Liu, S., Zhou, L., Shu, T., & Guan,
+    Y. (2022). Novel strategy for establishment of an FT-raman spectroscopy based
+    quantitative model for poplar holocellulose content determination. Carbohydrate
+    Polymers, 277, Article 118793, 118793. /j.carbpol.2021.118793.
+
+
+    +   Gao, W., Shu, T., Liu, Q., Ling, S., Guan, Y., Liu, S., & Zhou, L. (2021).
+    Predictive modeling of lignin content for the screening of suitable poplar genotypes
+    based on fourier transform-raman spectrometry. ACS Omega, 6(12), 8578–8587. https://doi.org/10.1021/acsomega.1c00400
+
+
+    +   Gao, W., Zhou, L., Guan, Y., Gao, H., & Liu, S. (2022). Monitoring the kappa
+    number of bleached pulps based on FT-raman spectroscopy. Cellulose, 29, 1069–1080.
+    https://doi.org/10.1007/s10570-021-04333-4
+
+
+    +   Gao, W., Zhou, L., Liu, S., Guan, Y., Gao, H., & Hui, B. (2022). Machine learning
+    prediction of lignin content in poplar with ramian spectroscopy. Bioresource Technology,
+    348(January), Article 126812. https://doi.org/10.1016/j.biortech.2022.126812
+
+
+    +   Gierlinger, N., & Schwanninger, M. (2006). Chemical imaging of poplar wood
+    cell walls by confocal raman microscopy. Plant Physiology, 140(4), 1246–1254.
+    https://doi.org/10.1104/pp.105.066993
+
+
+    +   Gordobil, O., Herrera, R., Ooshnaaji, F., Sandak, J., & Sandak, A. (2021).
+    Impact of drying process on Kraft lignin: Lignin-water interaction mechanism study
+    by 2D NIR correlation spectroscopy. Journal of Materials Research and Technology,
+    12, 159–169. https://doi.org/10.1016/j.jmrt.2021.02.080
+
+
+    +   Gu, I. Y.-H., & Henrik Andersson, R. V. (2010). Wood defect classification
+    based on image analysis and support vector machines. Wood Science and Technology,
+    44(4), 693–704. https://doi.org/10.1007/s00226-009-0287-9
+
+
+    +   Hong, J. (2020). An application of XGBoost, LightGBM, CatBoost algorithms
+    on house price appraisal system. Housing Finance Research, 4, 33–64. https://doi.org/10.52534/hfr.2021.4.0.33
+
+
+    +   Hosseinzadeh, A., Zhou, J. L., Altaee, A., & Li, D. (2022). Machine learning
+    modeling and analysis of biohydrogen production from wastewater by dark fermentation
+    process. Bioresource Technology, 343(September 2021). https://doi.org/10.1016/j.biortech.2021.126111
+
+
+    +   Ikeuchi, K. (2021). In Ridge regression BT - computer vision: A reference
+    guide (p. 1081). Springer International Publishing. https://doi.org/10.1007/978-3-030-63416-2_300335.
+
+
+    +   Iskigof, G. H., & Beccr, C. R. (2015). Lignocellulosic biomass: A sustainable
+    platform for the production of bio-based chemicals and polymers. Polymer Chemistry,
+    6(25), 4497–4559. https://doi.org/10.1039/C5PY00263J
+
+
+    +   Jabeur, S. B., Gharbi, C., Methef-Wall, S., & Arfi, W. B. (2021). CatBoost
+    model and artificial intelligence techniques for corporate failure prediction.
+    Technological Forecasting and Social Change, 166, Article 120658. https://doi.org/10.1016/j.techfore.2021.120658
+
+
+    +   Juanuaviani, T. M. A., Gusriani, N., Joebaeli, K., Supian, S., & Subiyanto,
+    S. (2019). In Vol. 116. The best model of LASSO with the LARS (Least Angle Regression
+    and Shrinkage algorithm using Mallow''s Cp (pp. 245–252).
+
+
+    +   Jermyn, M., Desroches, J., Aubertin, K., St-Arnaud, K., Madore, W.-J., De
+    Montigny, E., Guiot, M.-C., Trudel, D., Wilson, B. C., Petrecca, K., & Leblond,
+    F. (2016). A review of ramian spectroscopy advances with an emphasis on clinical
+    translation challenges in oncology. Physics in Medicine and Biology, 61(23), R370–R400.
+    https://doi.org/10.1088/0031-9155/61/23/R370
+
+
+    +   Ke, G., Meng, Q., Finley, T., Wang, T., Chen, W., Ma, W., Ye, Q., & Liu, T.-Y.
+    (2017). LightGBM: A highly efficient gradient boosting decision tree (NIP 2017)
+    Advances in Neural Information Processing Systems, 30, 3149–3157. https://www.microsoft.com/en-us/research/publication/lightgbm-a-highly-efficient-gradient-boosting-decision-tree/.
+
+
+    +   Liang, L., Wei, L., Fang, G., Xu, F., Deng, Y., Shen, K., Tian, Q., Wu, T.,
+    & Zhu, B. (2020). Prediction of holocellulose and lignin content of pulp wood
+    feedstock using near infrared spectroscopy and variable selection. Spectrochimica
+    Acta - Part A: Molecular'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'and Biomechanical Spectroscopy, 225, Article 117515. https://doi.org/10.1016/j.
+    saaa.2019.117515
+
+
+    Ma, L., Wang, T., Liu, Q., Zhang, X., Ma, W., & Zhang, Q. (2012). A review of
+    thermal-chemical conversion of lignocellulosic biomass in China. Biotechnology
+    Advances, 30(4), 859–873. https://doi.org/10.1016/j.biotechadv.2012.01.016
+
+
+    Meier, L., Geer, S. V. D., & Buhlmann, P. (2008). The group lasso for logistic
+    regression. Journal of the Royal Statistical Society Series B Statistical Methodology,
+    70(1), 53–71. https://doi.org/10.1111/j.1467-9868.2007.00627.X
+
+
+    Mu, Y., Liu, X., & Wang, L. (2018). A Pearson’s correlation coefficient based
+    decision tree and its parallel implementation. Information Sciences, 435, 40–58.
+    https://doi.org/ 10.1016/j.ins.2017.10.059
+
+
+    Pan, S., Zheng, Z., Guo, Z., & Luo, H. (2022). An optimized XGBoost method for
+    predicting reservoir porosity using petrophysical logs. Journal of Petroleum Science
+    and Engineering, 208, Article 109520. https://doi.org/10.1016/j.petrol.2021.109520
+
+
+    Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O.,
+    Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos,
+    A., Cournapeau, D., Brucher, M., Perrot, M., & Duchesnay, E. (2011). Scikit-learn:
+    Machine learning in python. Journal of Machine Learning Research, 12(85), 2825–2830.
+    http://jmlr.org/papers/v12/pedregosa11a.html.
+
+
+    Prokhorenkova, L., Gusev, G., Vorobev, A., Dorogush, A. V., & Gulin, A. (2018).
+    CatBoost: Unbiased boosting with categorical features. Neural Information Processing
+    Systems, 31, 6639–6649. LK - https://academic.microsoft.com/paper/2964022491 https://proceedings.neurips.cc/paper/2018/file/14491b756b3a51daac41c24
+    863285549-Paper.pdf.
+
+
+    Rabenanoltsoa, H., & Saka, S. (2012). Holocellulose determination in biomass.
+    In T. Yao (Ed.), Zero-Carbon Energy Kyoto 2011 (pp. 135–140). Springer Japan.
+
+
+    Schenzel, K., & Fischer, S. (2001). NIR FT Raman spectroscopy - A rapid analytical
+    tool for detecting the transformation of cellulose polymorphs. Cellulose, 8(1),
+    49–57. https://doi.org/10.1023/A:1016616920539
+
+
+    Schubert, M., & Kläuser, O. (2020). Applying machine learning to predict the tensile
+    shear strength of bonded beech wood as a function of the composition of polyurethane
+    prepolymers and various pretreatments. Wood Science and Technology, 54(1), 19–29.
+    https://doi.org/10.1007/s00106-019-1144-6
+
+
+    Souza, D. V., Santos, J. X., Vieira, H. C., Naide, T. L., Nisgoski, S., & Oliveira,
+    L. E. S. (2020). An automatic recognition system of brazilian flora species based
+    on textural features of macroscopic images of wood. Wood Science and Technology,
+    54(4), 1065–1090. https://doi.org/10.1007/s00226-020-01196-z
+
+
+    Tucker, M. P., Nguyen, Q. A., Eddy, F. P., Kadam, K. L., Gedvilas, L. M., & Webb,
+    J. D. (2001). Fourier transform infrared quantitative analysis of sugars and lignin
+    in pretreated softwood solid residues. Applied Biochemistry and Biotechnology
+    - Part A Enzyme Engineering and Biotechnology, 91–93, 51–61. https://doi.org/10.1385/
+    ABAB:91-93-1-951
+
+
+    Wiley, J. H., & Atalla, R. H. (1987). Band assignments in the raman spectra of
+    celluloses. Carbohydrate Research, 160, 113–129. https://doi.org/10.1016/0008-6215(87)
+    80306-3
+
+
+    Wu, X., Li, G., Liu, X., & He, F. (2021). Rapid non-destructive analysis of lignin
+    using NIR spectroscopy and chemo-metrics. Food and Energy Security, 10(3), 1–15.
+    https://doi. org/10.1002/fes3.289
+
+
+    Xing, J., Luo, K., Wang, H., & Fan, J. (2019). Estimating biomass major chemical
+    constituents from ultimate analysis using a random forest model. Bioresource Technology,
+    288, Article 121541. https://doi.org/10.1016/j.biortech.2019.121541
+
+
+    Yang, H., Liu, Y., Xiong, Z., & Liang, L. (2019). Rapid determination of holocellulose
+    and lignin in wood by near infrared spectroscopy and kernel extreme learning machine.
+    Analytical Letters, 53, 1–15. https://doi.org/10.1080/00032719.2019.1700267
+
+
+    Zhang, W., Li, J., Liu, T., Leng, S., Yang, L., Peng, H., Jiang, S., Zhou, W.,
+    Leng, L., & Li, H. (2021). Machine learning prediction and optimization of bio-oil
+    production from hydrothermal liquefaction of algae. Bioresource Technology, 342(September),
+    Article 126011. https://doi.org/10.1016/j.biortech.2021.126011'
+  merge: -1
+  img_proc: true

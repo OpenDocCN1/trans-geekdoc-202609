@@ -1,0 +1,34 @@
+
+and Biomechanical Spectroscopy, 225, Article 117515. https://doi.org/10.1016/j.saaa.2019.117515
+
+Ma, L., Wang, T., Liu, Q., Zhang, X., Ma, W., & Zhang, Q. (2012). A review of thermal-chemical conversion of lignocellulosic biomass in China. Biotechnology Advances, 30(4), 859–873. https://doi.org/10.1016/j.biotechadv.2012.01.016
+
+Meier, L., Geer, S. V. D., & Buhlmann, P. (2008). The group lasso for logistic regression. Journal of the Royal Statistical Society Series B Statistical Methodology, 70(1), 53–71. https://doi.org/10.1111/j.1467-9868.2007.00627.X
+
+Mu, Y., Liu, X., & Wang, L. (2018). A Pearson’s correlation coefficient based decision tree and its parallel implementation. Information Sciences, 435, 40–58. https://doi.org/10.1016/j.ins.2017.10.059
+
+Pan, S., Zheng, Z., Guo, Z., & Luo, H. (2022). An optimized XGBoost method for predicting reservoir porosity using petrophysical logs. Journal of Petroleum Science and Engineering, 208, Article 109520. https://doi.org/10.1016/j.petrol.2021.109520
+
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., & Duchesnay, E. (2011). Scikit-learn: Machine learning in python. Journal of Machine Learning Research, 12(85), 2825–2830. http://jmlr.org/papers/v12/pedregosa11a.html.
+
+Prokhorenkova, L., Gusev, G., Vorobev, A., Dorogush, A. V., & Gulin, A. (2018). CatBoost: Unbiased boosting with categorical features. Neural Information Processing Systems, 31, 6639–6649. LK - https://academic.microsoft.com/paper/2964022491 https://proceedings.neurips.cc/paper/2018/file/14491b756b3a51daac41c24863285549-Paper.pdf.
+
+Rabenanoltsoa, H., & Saka, S. (2012). Holocellulose determination in biomass. In T. Yao (Ed.), Zero-Carbon Energy Kyoto 2011 (pp. 135–140). Springer Japan.
+
+Schenzel, K., & Fischer, S. (2001). NIR FT Raman spectroscopy - A rapid analytical tool for detecting the transformation of cellulose polymorphs. Cellulose, 8(1), 49–57. https://doi.org/10.1023/A:1016616920539
+
+Schubert, M., & Kläuser, O. (2020). Applying machine learning to predict the tensile shear strength of bonded beech wood as a function of the composition of polyurethane prepolymers and various pretreatments. Wood Science and Technology, 54(1), 19–29. https://doi.org/10.1007/s00106-019-1144-6
+
+Souza, D. V., Santos, J. X., Vieira, H. C., Naide, T. L., Nisgoski, S., & Oliveira, L. E. S. (2020). An automatic recognition system of brazilian flora species based on textural features of macroscopic images of wood. Wood Science and Technology, 54(4), 1065–1090. https://doi.org/10.1007/s00226-020-01196-z
+
+Tucker, M. P., Nguyen, Q. A., Eddy, F. P., Kadam, K. L., Gedvilas, L. M., & Webb, J. D. (2001). Fourier transform infrared quantitative analysis of sugars and lignin in pretreated softwood solid residues. Applied Biochemistry and Biotechnology - Part A Enzyme Engineering and Biotechnology, 91–93, 51–61. https://doi.org/10.1385/ABAB:91-93-1-951
+
+Wiley, J. H., & Atalla, R. H. (1987). Band assignments in the raman spectra of celluloses. Carbohydrate Research, 160, 113–129. https://doi.org/10.1016/0008-6215(87)80306-3
+
+Wu, X., Li, G., Liu, X., & He, F. (2021). Rapid non-destructive analysis of lignin using NIR spectroscopy and chemo-metrics. Food and Energy Security, 10(3), 1–15. https://doi.org/10.1002/fes3.289
+
+Xing, J., Luo, K., Wang, H., & Fan, J. (2019). Estimating biomass major chemical constituents from ultimate analysis using a random forest model. Bioresource Technology, 288, Article 121541. https://doi.org/10.1016/j.biortech.2019.121541
+
+Yang, H., Liu, Y., Xiong, Z., & Liang, L. (2019). Rapid determination of holocellulose and lignin in wood by near infrared spectroscopy and kernel extreme learning machine. Analytical Letters, 53, 1–15. https://doi.org/10.1080/00032719.2019.1700267
+
+Zhang, W., Li, J., Liu, T., Leng, S., Yang, L., Peng, H., Jiang, S., Zhou, W., Leng, L., & Li, H. (2021). Machine learning prediction and optimization of bio-oil production from hydrothermal liquefaction of algae. Bioresource Technology, 342(September), Article 126011. https://doi.org/10.1016/j.biortech.2021.126011
