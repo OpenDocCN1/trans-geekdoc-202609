@@ -1,0 +1,714 @@
+- pgno: 0
+  md: '# LUA COMPUTER SCIENCE
+
+
+    # by Christopher Andrew Topalian
+
+
+    All Rights Reserved
+
+    Copyright 2000-2024'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Dedicated to God the Father'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Download Lua
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_2_0.png)
+
+
+    We Download Lua from:
+
+    https://luabinaries.sourceforge.net/download.html
+
+
+    On Windows: Download the file named:
+
+    lua-5.4.2_Win64_bin.zip
+
+    Windows x64 Executables
+
+
+    On Mac: Download the File named:
+
+    lua-5.4.2_MacOS1011_bin.tar.gz
+
+    MacOS X Intel Executables
+
+
+    On Linux: Download the File named:
+
+    lua-5.4.2_Linux54_64_bin.tar.gz
+
+    Linux x64 Executables'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Extract the LUA zip file
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_3_0.png)
+
+
+    Right Click on the Downloaded Zip Folder
+
+    Choose Extract All...
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_3_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Extract Compressed (Zipped) Folders
+
+
+    # Select a Destination and Extract Files
+
+
+    Files will be extracted to this folder:
+
+
+    C:\Users\energy\Downloads\lua\lua-5.4.2_Win64_bin
+
+
+    # Left Click Extract Button
+
+
+    This PC > Downloads > lua
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_4_0.png)
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_4_1.png)
+
+
+    Here is our Lua Folder. Now that it is extracted we can use the .exe files in
+    the Lua Folder.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/01c86b2ad179591527c53d35745207c8_5_0.png)
+
+
+    Above, we see our Lua Folder. This Lua Folder contains the Lua .exe files. Currently,
+    they are named with a version number, such as, Lua54.exe
+
+
+    But, since we don''t want to have to write the version number everytime that we
+    cmd, we can change the name of these files to say lua without the version number
+    of 54.
+
+
+    Thus, as shown on the next page, let us change the names of these files to say
+    only lua lua54.exe will be renamed to lua.exe'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'We change the names of the Lua .exe files, to make it easier for us to use
+    cmd later
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_6_0.png)
+
+
+    As we can see above, the Lua .exe files are now named without a version number.
+
+
+    We have changed the name of the exe files to make it easier for us to later cmd
+    our folder and thus to activate our scripts we now only have to write in command
+    prompt:
+
+
+    ```
+
+    lua nameOfScript.lua
+
+    ```
+
+
+    instead of
+
+
+    ```
+
+    lua54 nameOfScript.lua
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# We Copy the Path of our Lua Folder to later use it for our Lua Environment
+    Variable
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_7_0.png)
+
+
+    We have copied the Path of our Lua folder. It looks like this:
+
+
+    ```
+
+    C:\Users\energy\Downloads\lua\lua-5.4.2_Win64_bin
+
+    ```
+
+
+    We will later use this path, to add a Lua Environment Variable on Windows, so
+    that we can cmd our scripts and have them open in Command Prompt.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# # We Add an Environment Variable for Lua for cmd Ability
+
+
+    In the Windows Start Menu SEARCH for: environment
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_8_0.png)
+
+
+    We Left Click on:
+
+
+    Edit the system environment variables'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# System Properties Opens and we Left Click on Environment Variables Button
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_9_0.png)
+
+
+    # We Left Click on: Environment Variables... Button'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# In System Variables, at the bottom, we Left Click on Path, and then Left
+    Click Edit Button
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_10_0.png)
+
+
+    We Left Click on: Path
+
+
+    We Left Click on: Edit Button'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# We make a New Environment Variable and paste the address of our Lua Folder
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_11_0.png)
+
+
+    We Left Click on:
+
+    New Button
+
+
+    We Paste the Lua Folder Address:
+
+    Control + V or Right Click Paste
+
+
+    ```
+
+    C:\Users\energy\Downloads\lua\lua-5.4.2_Win64_bin
+
+    ```
+
+
+    We Left Click on:
+
+    OK Button'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# We Left Click the OK Button of the Environment Variables to Confirm the Changes
+    that we have made
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_12_0.png)
+
+
+    We Left Click on: OK Button'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# We Left Click the OK Button of the System Properties to Confirm the Changes
+    that we have made
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_13_0.png)
+
+
+    Now we can use Lua Scripts on our Computer.
+
+
+    Happy Scripting :-)'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# In VSCode Editor we Make a New File and Type the our First Lua Script and
+    Save it as print.lua
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_14_0.png)
+
+
+    VSCode will color the code what we type in Lua.
+
+
+    SEE NEXT PAGE for CODE: print.lua'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '```
+
+    -- print.lua
+
+
+    print("Hi Everyone")
+
+
+    io.write("Press Enter to Exit")
+
+
+    io.read()
+
+
+    ----
+
+
+    -- Hi Everyone
+
+    -- Press Enter to Exit
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# # We Save our Lua Script as print.lua
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_16_0.png)
+
+
+    We Left Click:
+
+    Save As...
+
+
+    We Make a New Folder Named:
+
+    ourFirstProject
+
+
+    Next page shows our first lua script that we saved in ourFirstProject folder.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# We Left Click the Save Button to Save our Lua script in ourFirstProject Folder
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_17_0.png)
+
+
+    On the next page, we show a very easy way to locate the script that we have Saved
+    in VSCode, so that we can run it.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# In VSCode, We Right Click on the Tab for print.lua file and Choose Reveal
+    in File Explorer
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_18_0.png)
+
+
+    # We Right Click:
+
+    print.lua Tab
+
+
+    # We Left Click:
+
+    Reveal in File Explorer'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# We see our Lua script, named print.lua, which we placed in a folder that
+    we named ourFirstProject
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_19_0.png)
+
+
+    # We Left Click: Address Bar of ourFirstProject folder'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# From Left Clicking in the Address Bar of ourFirstProject folder, we see that
+    it is now highlighted
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_20_0.png)
+
+
+    Now that we have the Address Bar Highlighted, meaning, selected, we can type what
+    is shown on the next page in this address bar and then hit the Enter button on
+    the keyboard.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# # Typing cmd in Address Bar of Folder
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_21_0.png)
+
+
+    We Type:
+
+
+    cmd
+
+
+    press Enter'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# # We See the Command Prompt has opened in ourFirstProject folder
+
+
+    ```
+
+    C:\Windows\System32\cmd.exe
+
+    Microsoft Windows [Version 10.0.19045.4894]
+
+    (c) Microsoft Corporation. All rights reserved.
+
+
+    D:\_1Code\Lua\ourFirstProject>lua print.lua_
+
+    ```
+
+
+    # ## We Type:
+
+
+    ```
+
+    lua print.lua
+
+    ```
+
+
+    press Enter
+
+
+    ```
+
+    C:\Windows\System32\cmd.exe
+
+    Microsoft Windows [Version 10.0.19045.4894]
+
+    (c) Microsoft Corporation. All rights reserved.
+
+
+    D:\_1Code\Lua\ourFirstProject>lua print.lua
+
+    Hi Everyone
+
+    ```
+
+
+    # ## Result of activating our Code:
+
+
+    # # Hi Everyone'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '```
+
+    -- print_comments.lua
+
+    ```
+
+
+    ```
+
+    print("Hi Everyone")
+
+    io.write("Press Enter to Exit")
+
+    io.read()
+
+    ```
+
+
+    ```
+
+    -- This is a single line comment in Lua
+
+    ```
+
+
+    ```
+
+    --[[
+
+    This is a multi line comment in Lua
+
+    We write our comments freely here
+
+    ]]--
+
+    ```
+
+
+    ```
+
+    ----
+
+    ```
+
+
+    ```
+
+    -- Hi Everyone
+
+    -- Press Enter to Exit
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '```
+
+    -- print_with_multiple_line_breaks.lua
+
+
+    print("Hi Everyone\n\nHappy Scripting")
+
+    io.write("Press Enter to Exit")
+
+    io.read()
+
+    ```
+
+
+    ```
+
+    --[[
+
+    Hi Everyone
+
+    Happy Scripting
+
+    Press Enter to Exit
+
+    --]]
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '```
+
+    -- print_variable_integer.lua
+
+
+    local ourInteger = 25
+
+
+    print(ourInteger)
+
+
+    io.write("Press Enter to Exit")
+
+    io.read()
+
+
+    -- 25
+
+
+    -- Press Enter to Exit
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "# -- print_variable_string.lua\n\n```\nnumberOfPeople = \"Twenty\"\nprint(numberOfPeople)\n\
+    io.write(\"Press Enter to Exit\")\nio.read()\n```\n\n```\n----\n--[[ \nTwenty\
+    \ \nPress Enter to Exit \n--]]\n```"
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# -- open_browser.lua
+
+
+    ```
+
+    local url = "https://www.x.com"
+
+
+    io.popen(''start "" "" .. url .. ""'')
+
+
+    print(url .. " is opened")
+
+
+    io.write("Press Enter to Exit")
+
+    io.read()
+
+    ```
+
+
+    ----
+
+
+    ```
+
+    --[[
+
+    https://www.google.com is opened
+
+    Press Enter to Exit
+
+    ]]--
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '```
+
+    -- open_a_file_in_write_mode.lua
+
+
+    local file = io.open("001.txt",
+
+    "w")
+
+
+    -- write content to the file
+
+    file:write("Hi Everyone\n")
+
+    file:write("Here is more text")
+
+
+    -- close file to save changes
+
+    file:close()
+
+
+    io.write("Press Enter to Exit")
+
+    io.read()
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "```\n```lua\n-- read_text_file.lua\nlocal file = io.open(\"001.txt\", \"r\"\
+    )\n-- check if file was opened\nif file then\n    -- read each line of file\n\
+    \    for line in file:lines() do\n        print(line)\n    end\n    -- close file\
+    \ after reading\n    file:close()\nelse\n    print(\"File did not open\")\nend\n\
+    io.write(\"Press Enter to Exit\")\nio.read()\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "```\n-- tables_key_value_pairs.lua\n\nlocal people = {\n    {\n        name\
+    \ = \"jane\",\n        score = 98\n    },\n    {\n        name = \"tabitha\",\n\
+    \        score = 98\n    }\n}\n\nfor i = 1, #people do\n    print(\"Name: \" ..\n\
+    \    people[i].name .. \" , Score: \" ..\n    people[i].score)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "# end\n\n```\nio.write(\"Press Enter to Exit\")\nio.read()\n```\n\n--[[ \n\
+    Name: jane, Score: 98 \nName: tabitha, Score: 98 \nPress Enter to Exit \n]]--"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "```\n-- isNumberEvenOrOdd.lua\n```\n\n```\n-- checks if a number is even or\
+    \ odd\nfunction checkEvenOdd(number)\n    if number % 2 == 0 then\n        print(number\
+    \ .. \" is even.\")\n    else\n        print(number .. \" is odd.\")\n    end\n\
+    end\n```\n\n```\n-- ask user to input a number\nprint(\"Enter a number to check\
+    \ if it's\neven or odd:\")\n```\n\n```\n-- read user input (string) and\nconvert\
+    \ it to a number\nlocal input = io.read(\"*n\")\n```\n\n```\n-- check if input\
+    \ is a valid number\n```"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "```\nif input then\n  checkEvenOdd(input)\nelse\n  print(\"Use a valid number\"\
+    )\nend\n```\n\n```\nprint(\"Press Enter to exit.\")\nio.read()\n```\n\n```\n----\n\
+    --[[\nEnter a number to check if it's even\nor odd:\n25\n25 is odd.\nPress Enter\
+    \ to exit.\n]]--\n```"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# # True Artificial Intelligence System
+
+
+    16-Gon
+
+
+    ![](img/01c86b2ad179591527c53d35745207c8_34_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# For More Tutorials:
+
+
+    +   - GitHub.com/ChristopherTopalian
+
+    +   - GitHub.com/ChristopherAndrewTopalian
+
+    +   - Sites.google.com/view/CollegeOfScripting
+
+    +   - CollegeOfScripting.weebly.com
+
+    +   - CollegeOfScripting.wordpress.com
+
+    +   - Youtube.com/ScriptingCollege
+
+    +   - Twitter.com/CollegeOfScript
+
+    +   - Rumble.com/user/CollegeOfScripting'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# # Dedicated to God the Father
+
+
+    This book is created by the College of Scripting Music & Science. Always remember,
+    that each time you write a script with a pencil and paper, it becomes imprinted
+    so deeply in memory that the material and methods are learned extremely well.
+
+
+    When you Type the scripts, the same is true. The more you type and write out the
+    scripts by keyboard or pencil and paper, the more you will learn programming!
+
+
+    Write and Type every example that you find. Keep all of your scripts organized.
+    Every script that you create increases your programming abilities. SEEING CODE,
+    is one thing, but WRITING CODE is another. Write it, Type it, Speak it, See it,
+    Dream it.
+
+
+    CollegeOfScripting.weebly.com'
+  merge: -1
+  img_proc: true
