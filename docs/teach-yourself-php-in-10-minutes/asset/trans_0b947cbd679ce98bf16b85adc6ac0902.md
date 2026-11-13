@@ -1,0 +1,330 @@
+
+
+## 索引
+
+- 开关设置 2nd
+- PHP 开关 2nd
+- 配置
+- PHP
+- .htaccess 文件 2nd
+- php.ini 文件 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th 13th 14th 15th 16th 17th 18th 19th 20th
+- PHP 开关
+- configure 命令 2nd
+- 连接
+- MySQL 数据库 2nd 3rd
+- DB 类 (PEAR)
+- 错误 2nd
+- 常量
+- 错误报告 2nd 3rd 4th
+- 构造函数
+- 类方法
+- 转换
+- 日期格式
+- 转换为时间戳 2nd
+- 隐式数据类型
+- 通过类型转换 2nd
+- Cookie
+- 访问
+- 组件
+- 域路径
+- 过期日期
+- 过期时间
+- 函数 2nd
+- 覆盖
+- 密码
+- setcookie 函数
+- 创建 2nd
+- 存储的值 2nd
+- 子域
+- 传输
+- unsetcookie 函数
+- 删除 2nd
+- 与会话相比
+- 查看
+- copy 函数
+- 文件
+- 复制 2nd
+- count 函数
+- 数组操作
+- 创建
+- 数组 2nd 3rd
+- 时间戳
+- mktime 函数 2nd 3rd 4th
+- 自定义错误处理程序
+- 声明 2nd 3rd 4th
+
+Team LiB
+
+## 索引
+
+| [SYMBOL] | A | B | C | D | E | F | G | H | I | K | L | M | N | O | P | Q | R | S | T | U | V | W | Z |
+- 数据文件
+- 逗号分隔值 (CSV)
+- 读取
+- 通过 fgetcsv 函数检索 2nd
+- 通过 fputcsv 函数写入
+- 数据操纵语言 (DML)
+- DELETE 语句 2nd
+- INSERT 语句 2nd
+- UPDATE 语句 2nd
+- 数据规则
+- 表单
+- 验证要求 2nd
+- 数据源名称 (DSN)
+- 组件 2nd
+- 完整语法定义
+- MySQL 数据库
+- 连接 2nd
+- 数据类型
+- 布尔型 2nd 3rd
+- double 2nd 3rd
+- gettype 函数
+- 整型 2nd 3rd
+- 类型转换 2nd
+- NULL 值 2nd
+- 数值型 2nd
+- 查询
+- settype 函数
+- 字符串 2nd 3rd
+- 转换为整数
+- 数据库抽象 [另见 数据库]
+- PEAR DB 类
+- 安装 2nd
+- 支持的扩展
+- 数据库 [另见 数据库抽象]
+- 数据源名称 (DSN)
+- 组件 2nd
+- 连接 2nd
+- 完整语法定义
+- DB 类 (PEAR)
+- 可移植性模式 2nd 3rd 4th
+- MySQL
+- 更改 2nd
+- 关闭连接
+- 连接 2nd 3rd
+- 连接错误 2nd
+- 获取完整数据行 2nd
+- 主机名
+- 链接标识符
+- mysql 扩展与 mysqli 扩展
+- 获取查询数据 2nd 3rd 4th
+- 选择
+- SQL 语句执行 2nd 3rd 4th 5th 6th 7th 8th 9th 10th
+- 查询
+- 限制 (DB 类) 2nd
+- 安全
+- escapeshellcmd 函数 2nd
+- SQL 注入 2nd 3rd 4th
+- 序列
+- 创建 (DB 类) 2nd
+- 删除 (DB 类)
+- SQL 错误
+- 调试 2nd 3rd
+- date 命令
+- 日期格式
+- 转换为时间戳 2nd
+- 列表
+- 存储概述 2nd
+- Unix 时间戳
+- 最佳用途
+- 缺点
+- 易用性
+- 最大值
+- 起始值
+- date 函数 2nd 3rd
+- 格式代码 2nd
+- DB 类 (PEAR)
+- connect 方法 2nd 3rd 4th 5th
+- createSequence 方法
+- 数据源名称 (DSN) 2nd
+- 组件 2nd
+- 完整语法定义
+- dropSequence 方法
+- 读取模式
+- getMessage 方法 2nd
+- 安装 2nd
+- isError 方法 2nd
+- limitQuery 方法 2nd
+- 在线文档
+- 可移植性模式 2nd 3rd 4th
+- 查询
+- 限制 2nd
+- 引号
+- 用于字符串值 2nd
+- 选定的数据
+- 检索 2nd
+- 序列
+- 创建
+- 删除
+- SQL 查询
+- 执行 2nd
+- 快捷方法
+- 支持的数据库扩展
+- 在脚本中使用
+- DB_PORTABILITY_ALL 常量
+- DB_PORTABILITY_DELETE_COUNT 常量
+- DB_PORTABILITY_ERRORS 常量
+- DB_PORTABILITY_LOWERCASE 常量
+- DB_PORTABILITY_NONE 常量
+- DB_PORTABILITY_NULL_TO_EMPTY 常量
+- DB_PORTABILITY_NUMROWS 常量
+- DB_PORTABILITY_RTRIM 常量
+- DB_Result 对象
+    - fetchRow 方法 2nd
+    - getAll 方法
+    - getOne 方法
+    - getRow 方法
+    - numCols 方法 2nd
+    - numRows 方法 2nd
+- 调试
+    - 数据库中的 SQL 错误 2nd 3rd
+- 十进制数
+    - 字符串
+- 声明
+    - 数组 2nd 3rd
+    - 自定义错误处理程序 2nd 3rd 4th
+    - 变量
+- 减递减 (--) 运算符 2nd
+- 自减运算符 (--) 2nd
+- 默认参数值
+    - 函数 2nd 3rd
+- 默认输入值
+    - 表单
+        - 设置 (动态 HTML) 2nd
+- 定义
+    - 函数
+        - 简单示例 2nd 3rd
+- DELETE 语句 (DML) 2nd
+- 桌面应用程序
+    - 创建 (PHP-GTK 扩展)
+- 检测
+    - 主机平台 2nd
+- 数字类
+    - 正则表达式中的字符
+- 目录
+    - 文件
+        - 更改
+        - 查看内容
+- disable_classes 指令
+- disable_functions 指令
+- 禁用
+    - 类
+    - 函数
+- display_errors 指令
+- 显示
+    - HTTP 头 2nd
+    - 表单的验证警告 2nd 3rd 4th
+- 显示系统日期和时间 (清单 1.1) 2nd
+- 拆分
+    - 字符串
+- sublen 函数
+- subpos 函数 2nd 3rd
+- substr 函数 2nd
+- 除算 (/) 运算符
+- do 循环 2nd
+- 美元符号前缀 ($)
+- 变量
+- double 数据类型 2nd 3rd
+- 双引号
+- 字符串 2nd
+- 双引号字符串
+- 变量 2nd
+- 下载
+- Apache 源代码
+- PHP
+- 最新版本 2nd
+- 动态 HTML
+    - 表单
+        - 复选框，选中 2nd
+        - 默认输入值，设置 2nd
+        - 菜单，创建 2nd
+        - 菜单，默认选择 2nd
+        - 菜单，选择多个项目 2nd 3rd 4th
+        - 单选按钮，创建 2nd 3rd
+        - 单选按钮，选择 2nd
+- 动态共享对象 (DSO)
+    - Apache Web 服务器支持 2nd 3rd
+
+## 索引
+
+[SYMBOL] [A] [B] [C] [D] [E] [F] [G] [H] [I] [K] [L] [M] [N] [O] [P] [Q] [R] [S] [T] [U] [V] [W] [Z]
+
+- E_ALL 常量
+- E_COMPILE_ERROR 常量
+- E_COMPILE_WARNING 常量
+- E_CORE_ERROR 常量
+- E_CORE_WARNING 常量
+- E_ERROR 常量
+- E_NOTICE 常量
+- E_PARSE 常量
+- E_STRICT 常量
+- E_USER_ERROR 常量
+- E_USER_NOTICE 常量
+- E_USER_WARNING 常量
+- E_WARNING 常量
+- echo 命令
+- 清单
+    - 格式糟糕的显示日期和时间的脚本 (1.3)
+    - 使用 echo 将输出发送到浏览器 (1.2) 2nd 3rd
+- 向浏览器输出 2nd 3rd 4th
+- else 子句
+- 多条件分支 2nd
+- elseif 关键字
+- 多条件分支 2nd
+- 电子邮件
+- 返回值
+- mail 函数示例 2nd
+- 脚本
+    - 为表单中的用户评论创建 2nd 3rd 4th
+- 电子邮件地址验证示例
+- 正则表达式 2nd 3rd
+- email_validation_class (第三方) 2nd
+- 方法
+- 属性 2nd
+- 嵌入
+- PHP 代码
+- 在命令脚本中
+- enable_dl 函数
+- 按需加载扩展 2nd
+- 启用
+- 安全模式 2nd 3rd
+- 环境变量
+- 代码清单
+    - 使用 TZ 环境变量更改时间 (18.1) 2nd 3rd
+- PATH 2nd
+- putenv 函数
+- TZ 2nd 3rd
+- Web 服务器
+- $_SERVER 超级全局数组 2nd 3rd 4th 5th 6th 7th
+- 相等运算符
+- 字符串比较
+- ereg_replace 函数 2nd
+- 字符集
+- 测试 2nd
+- 错误处理程序
+- 自定义
+- 声明 2nd 3rd 4th
+- 编写自定义错误处理程序 (清单 22.1) 2nd 3rd
+- error_log 函数
+- message_type 参数 2nd
+- 错误
+- 报告
+- 常量 2nd 3rd 4th 5th
+- 自定义错误处理程序 2nd 3rd 4th
+- 日志 2nd 3rd
+- php.ini 文件配置指令 2nd
+- 防止显示
+- 引发用户错误 2nd
+- 抑制 2nd 3rd 4th
+- 转义字符
+- 反斜杠 (
+- 字符串 2nd 3rd
+- escapeshellcmd 函数
+- 数据库安全 2nd
+- 转义
+- Shell 命令
+- 主机程序执行 2nd
+- 通过反引号 () 2nd
+- 通过命令字符串 2nd
+- 通过 passthru 函数 2nd
+

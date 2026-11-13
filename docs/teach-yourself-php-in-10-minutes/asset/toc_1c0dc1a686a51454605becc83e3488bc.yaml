@@ -1,0 +1,86 @@
+level_changes:
+- line: 4082
+  before: 1
+  after: 4
+- line: 5155
+  before: 1
+  after: 2
+- line: 6186
+  before: 1
+  after: 4
+- line: 6194
+  before: 1
+  after: 4
+- line: 6202
+  before: 1
+  after: 4
+- line: 6208
+  before: 1
+  after: 4
+- line: 6219
+  before: 1
+  after: 4
+- line: 6232
+  before: 1
+  after: 4
+- line: 6276
+  before: 1
+  after: 4
+- line: 6282
+  before: 1
+  after: 4
+- line: 6288
+  before: 1
+  after: 4
+- line: 6299
+  before: 1
+  after: 4
+- line: 6307
+  before: 1
+  after: 4
+- line: 6319
+  before: 1
+  after: 4
+- line: 6325
+  before: 1
+  after: 4
+- line: 6333
+  before: 1
+  after: 4
+- line: 6341
+  before: 1
+  after: 4
+- line: 6347
+  before: 1
+  after: 4
+- line: 6355
+  before: 1
+  after: 4
+- line: 6359
+  before: 1
+  after: 4
+- line: 6367
+  before: 1
+  after: 4
+- line: 6378
+  before: 1
+  after: 4
+text_changes:
+- line: 1276
+  before: 课程 6. 使用字符串
+  after: 第 6 课。使用字符串
+- line: 2588
+  before: Summary
+  after: 总结
+- line: 2592
+  before: Lesson 11. Processing HTML Forms
+  after: 第 11 课。处理 HTML 表单
+- line: 2660
+  before: The `<TEXTAREA>` Tag
+  after: '`<TEXTAREA>` 标签'
+- line: 2674
+  before: The `<SELECT>` Tag
+  after: '`<SELECT>` 标签'
+- line: 5219
+  before: 哈希奔（Shebang）
+  after: 哈希邦（Shebang）
