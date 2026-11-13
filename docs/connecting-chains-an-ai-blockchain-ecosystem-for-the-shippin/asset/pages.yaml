@@ -1,0 +1,510 @@
+- pgno: 0
+  md: 'Ronnie Ninan is enrolled in the Young India Fellowship from Ashoka University,
+    Sonipat, India. His areas of interests are science and technology policy, defence
+    policy, and supply chain management. He holds a Master''s degree in International
+    Studies from the Symbiosis School of International Studies, which is an institute
+    under the Symbiosis International University, Pune, India. He has graduated with
+    a Bachelors in Physics from St. Xavier''s College (Autonomous), Mumbai, India.
+
+
+    Aniket Bhavthankar joined SSIS in August 2016. His areas of interest include Indian
+    strategic thought, maritime domain, South Asia, the geopolitics of the Arctic
+    region. Before joining SSIS he was a Senior Research Associate at the Society
+    for Policy Studies (SPS), New Delhi. He has done his Masters in the International
+    Relations from the South Asian University, New Delhi.
+
+
+    In a world where various technological advancements have influenced the way humans
+    interact on a global scale, a few disruptive technologies have cleared the path
+    for a new chapter in global affairs. Among these technologies is the blockchain
+    technology which is a distributed ledger technology (DLT) and artificial intelligence.
+    Global logistics, which remains to be the backbone of the entire global supply
+    chain, describes the importance of ensuring the optimization of the shipping industry
+    challenges. However, the shipping industry is going through some challenges that
+    force the industry to reconsider their business model. The shipping industry has
+    a lack of visibility due to the opaqueness created by the complex structure of
+    the industry, with numerous agents and intermediaries, filing heaps of paperwork
+    , which continues to plague the smooth and efficient functioning of the shipping
+    industry. Through this book, we are focusing on these aspects of the evolved technologies
+    and their applications in the global shipping industry. Emerging and disruptive
+    technologies such as blockchain and AI , has been implemented in parts, within
+    the shipping industry, however, due to certain challenges, a fully-functional
+    implementation has not taken place. This book would be exploring how the integration
+    of blockchain technology and artificial intelligence would impact the shipping
+    sector and examines the benefits of an integrated ecosystem for the industry.
+
+
+    # Connecting Chains
+
+
+    # An AI-Blockchain Ecosystem for the Shipping Industry
+
+
+    Ronnie Ninan Aniket Bhavthankar
+
+
+    www.elivapress.com
+
+
+    ELIVA PRESS'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# # Connecting Chains
+
+
+    # ## An AI-Blockchain Ecosystem for the Shipping Industry
+
+
+    Ronnie Ninan
+
+    Aniket Bhavthankar
+
+
+    ELIVA PRESS'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'Published by Eliva Press
+
+    Email: info@elivapress.com
+
+    Website: www.elivapress.com
+
+
+    ISBN: 978-1-63648-294-1
+
+
+    © Eliva Press, 2021
+
+    © Ronnie Ninan, Aniket Bhavthankar
+
+    Cover Design: Eliva Press
+
+    Cover Image: Freepik Premium
+
+    Printed at: see last page
+
+
+    No part of this book may be reproduced or utilized in any form or by any means,
+    electronic or mechanical, including photocopying, recording, or by any information
+    storage and retrieval system, without permission in writing from Eliva Press.
+
+
+    Any brand and product names mentioned in this book are subject to the trademark,
+    brand, or patent protection and are trademarks of their respective owners. The
+    use of brand names, trade names, product names, product descriptions, is in no
+    way implies that such names may be regarded as unrestricted by trademark and brand
+    protection laws and thus may be used by anyone.
+
+
+    All rights reserved.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Connecting Chains
+
+
+    # An AI-Blockchain Ecosystem for the Shipping Industry
+
+
+    Ronnie Ninan
+
+
+    Young India Fellowship, Ashoka University
+
+
+    Aniket Bhavthankar
+
+
+    Assistant Professor, Symbiosis School of International Studies, Pune'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '*This page is intentionally left blank.*'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# About the Authors
+
+
+    Ronnie Ninan is enrolled in the Young India Fellowship from Ashoka University,
+    Sonipat, India. His areas of interests are science and technology policy, defence
+    policy, and supply chain management. He has been an active contributor to various
+    online platforms. He has worked as a research intern in the Centre on Strategic
+    Technologies at Manohar Parrikar Institute for Defence Studies and Analyses (MP-IDSA),
+    New Delhi. Prior to this he worked as a management intern at the French container
+    transportation and shipping company, CMA-CGM, at their Mumbai head office. He
+    holds a Master''s degree in International Studies from the Symbiosis School of
+    International Studies, which is an institute under the Symbiosis International
+    University, Pune, India. He has graduated with a Bachelors in Physics from St.
+    Xavier''s College (Autonomous), Mumbai, India.
+
+
+    Aniket Bhavthankar joined SSIS in August 2016. His areas of interest include Indian
+    strategic thought, maritime domain, South Asia, the geopolitics of the Arctic
+    region. He has written articles on diverse subjects ranging from the strategic
+    interests of India in South Asia to the emerging flux in maritime affairs in the
+    Indian Ocean and the Arctic. He is an active contributor to on-line platforms,
+    South Asia Monitor and The Indian Diaspora, on issues'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: related to the Indian diaspora, maritime affairs and issues pertaining to the
+    Indian foreign policy in South Asia and Africa. Before joining SSIS he was a Senior
+    Research Associate at the Society for Policy Studies (SPS), New Delhi from June
+    2013 to July 2016. At the SPS, he has demonstrated his ability to organize conferences
+    and roundtables in concert with diplomatic missions and other stakeholders. Prior
+    to joining the SPS, he was a Research Analyst with Socio-Political Analysis and
+    Research Kendra (SPARK), Mumbai. At SPARK, he provided research inputs to members
+    of the Maharashtra legislature for the preparation of private member bills. He
+    has done his Masters in the International Relations from the South Asian University,
+    New Delhi, established by South Asian Association for Regional Cooperation. In
+    2004, he graduated with a Bachelors of Computer Applications from Tilak Maharashtra
+    Vidyapeeth.
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# # Index
+
+
+    +   - List of Figures ... 9
+
+    +   - List of Abbreviations ... 12
+
+    +   - Acknowledgments ... 14
+
+    +   - Forword ... 15
+
+    +   - Introduction ... 20
+
+
+    # ## Part I: Blockchain
+
+
+    +   1. Distributed Ledger ... 26
+
+    +   2. History ... 26
+
+    +   3. Constituents of Blockchain ... 28
+
+    +   4. Types of Blockchain ... 35
+
+    +   5. Characteristics of Blockchain ... 40
+
+    +   6. Smart Contracts ... 41
+
+    +   7. Benefits of Smart Contracts ... 43
+
+    +   8. Challeneges faced by Blockchain ... 44'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Part II: Artificial Intelligence (AI)
+
+
+    +   9 Introduction of Artificial Intelligence 47
+
+
+    +   10 Past and Present of AI 49
+
+
+    +   11 Types of AI 53
+
+
+    +   12 Machine Learning and Deep Learning 57
+
+
+    +   13 Challenges faced by AI 61
+
+
+    # Part III: Industry 4.0
+
+
+    +   14 What is Industry 4.0? 64
+
+
+    +   15 Applications of IR 4.0 66
+
+
+    # Part IV: Supply Chain and Logistics
+
+
+    +   16 Understanding the Supply Chain 68
+
+
+    +   17 Historical Perspective 70
+
+
+    +   18 Scope of International Logistics 72
+
+
+    +   19 Maritime Logistcs 73
+
+
+    +   20 Looking at Container Shipping 74
+
+
+    +   21 Problems facing the shipping industry 76'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Part V: Adoption of Blockchain and AI in the shipping industry
+
+
+    +   22 Blockchain adoption in the logistics and maritime industry 81
+
+
+    +   23 Blockchain applications in logistics 83
+
+
+    +   24 AI adoption in the shipping industry 91
+
+
+    # Part VI: Possibility of Integration
+
+
+    +   25 Case Study 1: IBM-Maersk 97
+
+
+    +   26 Case Study 2: Haven and One Network 101
+
+
+    +   27 Case Study 3: Shone- CMA-CGM 103
+
+
+    +   28 Adoption of an integrated AI-Blockchain ecosystem for the shipping industry
+    105
+
+
+    +   29 Possible outcomes of an integrated AI-Blockchain ecosystem 106
+
+
+    +   30 Case Study 4: AHA-OpenHealthNetwork 117
+
+
+    +   31 Areas of Implementation and Analysis 118
+
+
+    +   32 Challenges of implementing the integrated AI-Blockchain ecosystem 138
+
+
+    +   Conclusion 143
+
+
+    +   Notes 145'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '*This page is intentionally left blank.*'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Figures and Tables
+
+
+    # Figures
+
+
+    +   1. Five computing paradigms 28
+
+    +   2. Example of a blockchain consisting of continuous sequence of blocks 30
+
+    +   3. Block structure 30
+
+    +   4. Digital signature used in online verification 32
+
+    +   5. Types of blockchains 38
+
+    +   6. Range of blockchain from centralized to decentralized 39
+
+    +   7. Four definitions of AI 48
+
+    +   8. Types of AI 57
+
+    +   9. Timeline of AI, ML, and DL 61
+
+    +   10. Flow between the supplier and consumer stage 69
+
+    +   11. Cumulative waste for voyages sailed 80
+
+    +   12. Shipping operations before blockchain integration (IBM-Maersk) 100
+
+    +   13. Shipping operations after blockchain integration (IBM-Maersk) 100
+
+    +   14. Block size 108
+
+    +   15. Packing List 121'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '+   16 Certificate of Origin 124
+
+
+    +   17 Phytosanitary certificate 124
+
+
+    +   18 Cargo Manifest 127
+
+
+    +   19 Bill of Lading 132
+
+
+    +   20 Possible removal of middle-men using AI-Blockchain integration 135
+
+
+    +   21 Supply-chain visibility with IoT data for AI-Blockchain ecosystem 135
+
+
+    +   22 AI-Blockchain integration for efficient port operations 137
+
+
+    +   23 Gartner-Hype Cycle for Blockchain business 2019 139'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '+   1 Proof-of-Stake versus Proof-of-Work 34
+
+    +   2 Types of AI based on Functionality 54
+
+    +   3 Types of AI based on Ability 56
+
+    +   4 Attributes of innovation framework (Blockchain) 82
+
+    +   5 Potential Blockchain applications in the shipping industry 87
+
+    +   6 Attributes of innovation framework (Artificial Intelligence) 91
+
+    +   7 Potential AI applications in the shipping industry 93
+
+    +   8 Features and possible benefits of an AI-Blockchain integration 116'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Foreword
+
+
+    Expressly owing to the COVID-19 crisis, various states in the world have understood
+    the importance of living together for their survival and future progress. At the
+    same time, the crisis, as worst as the COVID-19 pandemic, that can destroy the
+    entire human race, if the appropriate cure is not found in time, has not stopped
+    humanity from playing dirty power politics. However, broadly, humans have understood
+    that for their safe existence, they need to ensure to retain and enhance their
+    ability to innovate and experiment. This process of experimentation would only
+    allow them to find solutions for various difficulties, including major crises
+    like the pandemics.
+
+
+    One of the influential technologies which have been dominating the global technology
+    spectrum since the second half of the 20th century is the Information Technologies
+    (IT). The COVID-19 pandemic and resultant interruptions have conclusively changed
+    the approach towards technology adaption in general and digital technology adoption
+    in particular, both for consumers as well as corporates. More importantly, several
+    governments have also understood that various offshoots of IT, as well as IT-based
+    applications, can play a significant role in governance alike, and technology
+    is likely to play a vital role in recovery, as well. Broadly, it could be argued
+    that the COVID-19 crisis is reclaiming the importance of IT as the ‘mover and
+    shaker technology’ for the'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'world. At the same time, it is also necessary to avoid the temptation to look
+    at the range of technologies only from the prism of the COVID-19 crisis. For centuries
+    the world has witnessed technology as a fundamental agent for social change. They
+    offer numerous possibilities to innovate, design, and develop new scientific and
+    technological ideas to bring in a change in civilian, commercial, and strategic
+    domains.
+
+
+    Renowned Harvard Business School professor, Clayton Christensen, debated about
+    disruptive technology and innovation during the 1990s. During the last few decades,
+    the world has witnessed the rise of novel technologies such as artificial intelligence,
+    blockchain, the Internet of Things (IoT), robotics, 3D printing, and many more
+    that have trodden a new path of innovation, although still in its nascent stages.
+    These technologies have showcased the potential applicability it has in many sectors.
+    It has been predicted that technologies like these have the potential and capability
+    to disrupt the existing technology setup bringing in a sea change in human activities
+    for the future. They could bring in lifestyle changes, improve various existing
+    commercial practices, and scientifically impact the security apparatus. Disruptive
+    technologies tend to be new and aren’t incremental improvements in existing technologies.
+    Hence, it is critical to study the possible impact of such technologies on the
+    existing industrial setup. It is necessary to undertake such a study for every
+    major sector of the industry. Through this book, the authors have attempted to
+    focus'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: 'on the shipping industry, which plays an instrumental role in the global economy.
+    Therefore, the shipping industry is a very relevant domain that needs attention,
+    especially when a new wave of technological advancements that can ease and dissipate
+    the inherent troubles facing the industry looms on the horizon. This book and
+    the subject the authors are trying to tackle focuses on understanding the impact
+    of specific technologies that are disruptive in nature on the shipping industry,
+    including related issues of global supply chain management.
+
+
+    A force majeure, such as pandemics, natural calamities, and geopolitical instabilities,
+    could affect the global supply chain, especially in the future. With an opaque
+    supply chain, overpowered by middlemen, and covered with heaps of paperwork, acts
+    as a hindrance to the efficient functioning of the global shipping industry. This
+    can be addressed by employing innovation afforded by novel technologies, such
+    as blockchain and artificial intelligence. The authors, through the book, have
+    focussed on two technologies, namely blockchain and artificial intelligence. Analyzing
+    the numerous technical aspects, its importance, and applications, the authors
+    have furthered this thought, to study an ecosystem, that has integrated the two
+    technologies. Furthermore, by exploring this possibility of an integrated ecosystem,
+    the shipping industry is brought into focus, eyeballing at the possible applications
+    it has on the industry. Through this book, the authors'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'have tried to bring out the crux of the issue faced by the shipping industry,
+    eventually finding a plausible answer to the problem.
+
+
+    It is but self-evident that tomorrow’s social and economic issues would be different
+    from those of the present day. Hence, priority setting becomes extremely important.
+    Various technologies discussed in this book would allow the policymakers to significantly
+    improve on their existing structures. For both the near and distant future, the
+    shipping industry is expected to remain as a lifeline for the global supply chain.
+    With the investor sentiments likely to remain subdued in the near term owing to
+    the COVID-19 crisis, the demand for an integrated ecosystem of blockchain and
+    artificial intelligence suggested in this book, therefore, necessitates immediate
+    attention from the policymakers. They provide opportunities that could prove beneficial
+    for the global shipping industry.
+
+
+    # **Group Captain (Retd.) Dr. Ajey Lele**
+
+
+    Senior Fellow, Centre on Strategic Technologies
+
+
+    Manohar Parrikar Institute for Defence Studies and Analyses (MP-IDSA)
+
+
+    New Delhi, India'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: This page is intentionally left blank.
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# Notes:'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'Publisher: Eliva Press SRL
+
+
+    Email: info@elivapress.com
+
+
+    All rights reserved'
+  merge: -1
+  img_proc: true
