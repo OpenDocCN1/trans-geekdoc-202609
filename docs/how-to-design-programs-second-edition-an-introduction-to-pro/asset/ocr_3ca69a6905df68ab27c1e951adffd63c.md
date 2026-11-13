@@ -1,0 +1,3 @@
+# 31 The Loss of Knowledge
+
+Both functions designed according to structural recipes and the generative one suffer from the loss of knowledge, though in different ways. This chapter explains with two examples—one from each category—how the lack of contextual knowledge affects the performance of functions. While the first section is about structural recursion, the second one addresses concerns in the generative realm.

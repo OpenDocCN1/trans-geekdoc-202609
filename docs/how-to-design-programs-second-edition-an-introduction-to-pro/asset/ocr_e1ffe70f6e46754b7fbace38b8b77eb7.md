@@ -1,0 +1,7 @@
+# IV
+
+# INTERWINED DATA
+
+You might think that the data definitions for lists and natural numbers are quite unusual. These data definitions refer to themselves, and in all likelihood they are the first such definitions you have ever encountered. As it turns out, many classes of data require even more complex data definitions than these two. Common generalizations involve many self-references in one data definition or a bunch of data definitions that refer to each other. These forms of data have become ubiquitous, and it is therefore critical for a programmer to learn to cope with **any** collection of data definitions. And that’s what the design recipe is all about.
+
+This part starts with a generalization of the design recipe so that it works for all forms of structural data definitions. Next, it introduces the concept of iterative refinement from chapter 12 on a rigorous basis because complex data definitions are not developed in one fell swoop but in several stages. Indeed, the use of iterative refinement is one of the reasons why all programmers are little scientists and why our discipline uses the word “science” in its American name. Two last chapters illustrate these ideas: one explains how to design an interpreter for BSL and another is about processing XML, a data exchange language for the web. The last chapter expands the design recipe one more time, reworking it for functions that process two complex arguments at the same time.

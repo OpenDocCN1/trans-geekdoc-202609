@@ -1,0 +1,3 @@
+key=? and mouse=?, two equality predicates that we briefly mentioned at the end of the last subsection. Naturally, key=? is an operation for comparing two KeyEvents; similarly, mouse=? compares two MouseEvts. While both kinds of events are represented as strings, it is important to realize that not all strings represent key events or mouse events.
+
+We recommend using key=? in key-event handlers and mouse=? in mouse-event handlers from now on. The use of key=? in a key-event handler ensures that the function really compares strings that represent key events and not arbitrary strings. As soon as, say, the function is accidentally applied to "hello\n world", key=? signals an error and thus informs us that something is wrong.

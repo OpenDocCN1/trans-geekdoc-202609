@@ -1,0 +1,3 @@
+iTunes library employs for its tracks. Do they make sense? ‣
+
+Note A list-based representation is a bit less organized than a structure-based one. The word semi-structured is occasionally used in this context. Such list- representations accommodate properties that show up rarely and thus don’t fit the structure type. People often use such representations to explore unknown information and later introduce structures when the format is well-known. Design a function track-as-struct, which converts an LAssoc to a Track when possible. End

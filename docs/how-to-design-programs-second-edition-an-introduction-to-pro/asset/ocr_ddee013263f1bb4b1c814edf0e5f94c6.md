@@ -1,0 +1,1 @@
+for any natural number n and function f. �
