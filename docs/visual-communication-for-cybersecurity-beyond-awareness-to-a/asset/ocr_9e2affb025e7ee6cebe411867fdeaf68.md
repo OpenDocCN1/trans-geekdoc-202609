@@ -1,0 +1,11 @@
+# # 12. Introduction
+
+A Chief Information Security Officer (CISO) and her team have 1001 tasks to do. Visual communication can help to work more effectively and to engage stakeholders. This part of the book suggests some common visualizations for the different concepts that the CISO team may be explaining to different audiences. Remember that the examples in this section are only the tip of the metaphorical iceberg. Our community has only just begun to realise the power of visualization and this part of the book is only the beginning of a long and creative journey. Other fields such as legal design, information design, and data science are important innovators that cybersecurity experts should collaborate with. Much work is already coming together at events such as the IEEE Symposium on Visualization for Cyber Security (VizSec), running since 2004^119, and the annual International Workshop on Graphical Models for Security (GraMSec) since 2014^120. Raffael Marty stated in his book Applied Security Visualization (2008):
+
+> 'A picture is worth a thousand log records'^121(Page xiii).
+
+In his vision, visualization is the process of generating graphs based on data. In the examples above there is a strong focus on data visualization and tools rather than communicating complex concepts to non-experts.
+
+Other work creates security from visual information. For instance by taking pictures of a moving freeway, clouds, or lava lamps to create randomness for cryptography^122.
+
+In this book, visualization is primarily about communicating information in the clearest way possible, considering the target audience and the context. The examples in the next chapters demonstrate how to use visualization in different contexts of cybersecurity. Our eyes cannot see cybersecurity risks, threats or organizational structures, but when presented in visual form, these concepts are easier to understand. The examples all show different styles, techniques, and messages. Some originate from commercial sources, others come from public sector and academic publications. Hopefully, further editions of this book and a supporting website will allow our community to build up a library of examples that can inspire future visual communicators.
