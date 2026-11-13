@@ -1,0 +1,13 @@
+extreme precipitation (Fig. 4.1). The extremes expressed in terms of return levels varied slightly between seasonal covariate combinations, particularly noticeable along equatorial and mid-latitude regions. The high magnitude of extremes associated with MJJAS-LSCOs was mainly observed in South America, East Asia, and Australia, while along equatorial and mid-latitude regions of the southern hemisphere in NDJFM-LSCOs.
+
+# ## 4.3 Precipitation Extremes and AR
+
+The precipitation extremes were concentrated around the equator or in specific mid-latitude zones. As ARs play a significant role in transporting moisture poleward and contribute substantially to the total annual water supply in mid-latitudes, we analyzed the variability in spatial extent of these precipitation extremes with the significant availability of ARs.
+
+# ### 4.3.1 Precipitation Extremes and AR Duration
+
+The analysis delved into the interplay between extreme precipitation occurrences and ARs, focusing on how AR frequency and duration relate to significant extreme events. By setting thresholds for extreme precipitation levels (Rx1day > 20 mm, Rx5day > 30 mm, R95pTOT > 200 mm), study explored where and when ARs played a pivotal role in generating extreme precipitation. The findings highlighted that longer AR durations tended to align with extreme precipitation events, particularly in certain mid-latitude regions globally. However, it was noted that extreme precipitation along the equator did not exhibit a strong correlation with ARs due to the characteristic elongation of ARs from equatorial regions toward mid-latitudes.
+
+The geographical distribution of longer AR durations and concurrent extreme precipitation clustered notably along North America, South America, Europe, Central East Asia, and Australia. Moreover, grids with AR durations exceeding 12 h emerged as key contributors to precipitation extremes, showcasing importance of prolonged AR activity in generating extreme weather conditions (Fig. 4.2).
+
+Further analysis revealed that areas experiencing longer AR durations and elevated extreme precipitation levels often exhibited a similar pattern with IVT magnitudes. This parallel distribution pattern indicated a close relationship between AR intensity, duration, and the resulting extreme precipitation, underscoring the complex interplay between atmospheric moisture transport by ARs and the occurrence of extreme weather events.

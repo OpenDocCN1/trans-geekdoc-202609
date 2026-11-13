@@ -1,0 +1,70 @@
+
+- 6. J. Das, S. Jha, M.K. Goyal, On the relationship of climatic and monsoon teleconnections with monthly precipitation over meteorologically homogenous regions in India: wavelet & global coherence approaches. Atmos. Res. **238**, 104889 (2020). https://doi.org/10.1016/j.atmosres.2020.104889
+
+- 7. J. Das, S. Jha, M.K. Goyal, Non-stationary and copula-based approach to assess the drought characteristics encompassing climate indices over the Himalayan states in India. J. Hydrol. **580**, 124356 (2020). https://doi.org/10.1016/j.jhydrol.2019.124356
+
+- 8. C. Deser, On the teleconnectivity of the “Arctic circulation”. 779–782 (2000)
+
+- 9. A. Gershunov, T. Shulgina, R.E.S. Clemesha, K. Guirguis, D.W. Pierce, M.D. Dettinger, D.A. Lavers, D.R. Cayan, S.D. Polade, J. Kalansky, F.M. Ralph, Precipitation regime change in Western North America: the role of atmospheric rivers. Sci. Rep. **9**(1), 9944 (2019). https://doi.org/10.1038/s41598-019-46169-w
+
+- 10. B. Guan, N.P. Molotch, D.E. Waliser, E.J. Fetzer, P.J. Neiman, The 2010/2011 snow season in California’s Sierra Nevada: role of atmospheric rivers and modes of large-scale variability. Water Resour. Res. **49**(10), 6731–6743 (2013). https://doi.org/10.1002/wrcr.20537
+
+- 11. B. Guan, D.E. Waliser, Detection of atmospheric rivers: Evaluation and application of an algorithm for global studies. J. Geophys. Res. Atmos. **120**(24), 12514–12535 (2015). https://doi.org/10.1002/2015JD024257
+
+- 12. K. Guirguis, A. Gershunov, R.E.S. Clemesha, T. Shulgina, A.C. Subramanian, F.M. Ralph, Circulation drivers of atmospheric rivers at the North American West Coast. Geophys. Res. Lett. **45**, 12576–12584 (2018). https://doi.org/10.1029/2018GL079249
+
+- 13. X. Guo, N. Zhao, K. Kikuchi, T. Nasuno, M. Nakano, H. Annamalai, Atmospheric rivers over the indo-pacific and its associations with the boreal summer intraseasonal oscillation. J. Clim. **34**(24), 9711–9728 (2021). https://doi.org/10.1175/JCLI-D-21-0290.1
+
+- 14. S. Jha, J. Das, M.K. Goyal, Low frequency global-scale modes and its influence on rainfall extremes over India: nonstationary and uncertainty analysis. Int. J. Climatol. **41**(3), 1873–1888 (2021). https://doi.org/10.1002/joc.6935
+
+- 15. S. Jha, M.K. Goyal, B.B. Gupta, C. Hsu, E. Gilleland, J. Das, A methodological framework for extreme climate risk assessment integrating satellite and location based data sets in intelligent systems. Int. J. Intell. Syst. **37**(12), 10268–10288 (2022). https://doi.org/10.1002/int.22475
+
+- 16. R.W. Katz, Statistical methods for nonstationary extremes. Extremes Changing Clim. 15–37 (2013)
+
+- 17. H. Kim, S. Kim, H. Shin, J.-H. Heo, Appropriate model selection methods for nonstationary generalized extreme value models. J. Hydrol. **547**, 557–574 (2017). https://doi.org/10.1016/j.jhydrol.2017.02.005
+
+- 18. N. Kumar, P. Patel, S. Singh, M.K. Goyal, Understanding non-stationarity of hydroclimatic extremes and resilience in Peninsular catchments, India. Sci. Rep. **13**(1), 12524 (2023). https://doi.org/10.1038/s41598-023-38771-w
+
+- 19. D.A. Lavers, G. Villarini, The nexus between atmospheric rivers and extreme precipitation across Europe. Geophys. Res. Lett. **40**(12), 3259–3264 (2013). https://doi.org/10.1002/grl.50636
+
+- 20. M. Ma, M. Ren, H. Zang, H. Cui, S. Jiang, Y. Sun, Nonstationary quantity-duration-frequency (QDF) relationships of lowflow in the source area of the Yellow River basin, China. J. Hydrol. Reg. Stud. **48**, 101450 (2023). https://doi.org/10.1016/j.ejrh.2023.101450
+
+- 21. S. Meghani, S. Singh, N. Kumar, M.K. Goyal, Predicting the spatiotemporal characteristics of atmospheric rivers: a novel data-driven approach. Global Planet. Change **231**, 104295 (2023). https://doi.org/10.1016/j.gloplacha.2023.104295
+
+- 22. A. Mondal, P.P. Mujumdar, Modeling non-stationarity in intensity, duration and frequency of extreme rainfall over India. J. Hydrol. **521**, 217–231 (2015). https://doi.org/10.1016/j.jhydrol.2014.11.071
+
+- 23. P.J. Neiman, L.J. Schick, F.M. Ralph, M. Hughes, G.A. Wick, Flooding in Western Washington: the connection to atmospheric rivers. J. Hydrometeorol. **12**(6), 1337–1358 (2011). https://doi.org/10.1175/2011JHM1358.1
+
+- 24. T.B.M.J. Ouarda, C. Charron, Changes in the distribution of hydro-climatic extremes in a non-stationary framework. Sci. Rep. **9**(1), 8104 (2019). https://doi.org/10.1038/s41598-019-446-03-7
+
+- 25. H. Paltan, D. Waliser, W.H. Lim, B. Guan, D. Yamazaki, R. Pant, S. Dadson, Global floods and water availability driven by atmospheric rivers. Geophys. Res. Lett. **44**(20), 10387–10395 (2017). https://doi.org/10.1002/2017GL074882
+
+- 26. S.D. Polade, A. Gershunov, D.R. Cayan, M.D. Dettinger, D.W. Pierce, Natural climate variability and teleconnections to precipitation over the Pacific-North American region in CMIP3 and CMIP5 models. Geophys. Res. Lett. **40**(10), 2296–2301 (2013). https://doi.org/10.1002/grl.50491
+
+- 27. K.S. Rautela, S. Singh, M.K. Goyal, Characterizing the spatio-temporal distribution, detection, and prediction of aerosol atmospheric rivers on a global scale. J. Environ. Manage. **351**, 119675 (2024). https://doi.org/10.1016/j.jenvman.2023.119675
+
+- 28. P. Shi, T. Yang, C.-Y. Xu, Y. Yong, Q. Shao, Z. Li, X. Wang, X. Zhou, S. Li, How do the multiple large-scale climate oscillations trigger extreme precipitation? Global Planet. Change **157**, 48–58 (2017). https://doi.org/10.1016/j.gloplacha.2017.08.014
+
+- 29. S. Singh, M.K. Goyal, Enhancing climate resilience in businesses: the role of artificial intelligence. J. Cleaner Prod. 138228 (2023)
+
+- 30. S. Singh, M.K. Goyal, An innovative approach to predict atmospheric rivers: Exploring convolutional autoencoder. Atmos. Res. **289**, 106754 (2023)
+
+- 31. S. Singh, M.K. Goyal, S. Jha, Role of large-scale climate oscillations in precipitation extremes associated with atmospheric rivers: nonstationary framework. Hydrol. Sci. J. **68**(3), 395–411 (2023)
+
+- 32. S. Singh, N. Kumar, M.K. Goyal, S. Jha, Relative influence of ENSO, IOD, and AMO over spatiotemporal variability of hydroclimatic extremes in Narmada basin, India. AQUA—Water Infrastruct. Ecosyst. Soc.**72**(4), 520–539. https://doi.org/10.2166/aqua.2023.219
+
+- 33. S. Singh, A. Yadav, G.M. Kumar, Univariate and bivariate spatiotemporal characteristics of heat waves and relative influence of large-scale climate oscillations over India. J. Hydrol. **628**, 130596 (2024). https://doi.org/10.1016/j.jhydrol.2023.130596
+
+- 34. Z. Song, J. Xia, D. She, L. Zhang, C. Hu, L. Zhao, The development of a nonstationary standardized precipitation index using climate covariates: a case study in the middle and lower reaches of Yangtze River Basin, China. J. Hydrol. **588**, 125115 (2020). https://doi.org/10.1016/j.jhydrol.2020.125115
+
+- 35. S. Sugahara, R.P. da Rocha, R. Silveira, Non-stationary frequency analysis of extreme daily rainfall in Sao Paulo, Brazil. Int. J. Climatol. **29**(9), 1339–1349 (2009). https://doi.org/10.1002/joc.1760
+
+- 36. P.J. Ward, S. Eisner, M. Flörke, M.D. Dettinger, M. Kummu, Annual flood sensitivities to El Niño–Southern Oscillation at the global scale. Hydrol. Earth Syst. Sci. **18**(1), 47–66 (2014). https://doi.org/10.5194/hess-18-47-2014
+
+- 37. S. Wi, J. Valdes, S. Steinschneider, T.-W. Kim, Non-stationary frequency analysis of extreme precipitation in South Korea using peaks-over-threshold and annual maxima. Stoch. Environ. Res. Risk Assess. **30** (2016). https://doi.org/10.1007/s00477-015-1180-8
+
+- 38. P. Xu, Y. Wang, X. Fu, V.P. Singh, J. Qiu, Detection and attribution of urbanization impact on summer extreme heat based on nonstationary models in the Yangtze River Delta, China. Urban Clim. **47**, 101376 (2023). https://doi.org/10.1016/j.uclim.2022.101376
+
+- 39. R. Yao, S. Zhang, P. Sun, Q. Dai, Q. Yang, Estimating the impact of urbanization on non-stationary models of extreme precipitation events in the Yangtze River Delta metropolitan region. Weather Clim. Extremes **36**, 100445 (2022). https://doi.org/10.1016/j.wace.2022.100445
+
+- 40. A.G. Yilmaz, B.J.C. Perera, Extreme rainfall nonstationarity investigation and intensity–frequency–duration relationship. J. Hydrol. Eng. **19**(6), 1160–1172 (2014). https://doi.org/10.1061/(ASCE)HE.1943-5584.0000878

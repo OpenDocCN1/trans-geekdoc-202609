@@ -1,0 +1,13 @@
+# 1.3.2 Mechanism Behind Formation and Intensification of ARs
+
+Research on extreme winter precipitation events in mid-latitude regions over land consistently reveals a strong association with extratropical cyclones [26]. These episodes of heavy precipitation frequently happen when warm, humid air from a cyclone’s warm zone comes into contact with elevated terrain, as is the case along the western coasts of the United States [55]. This interaction results in a substantial increase in precipitation depending on the size and shape of AR and the angle of interaction [20]. According to Bader and Roach (1977), these episodes can be described by the interaction of mesoscale and large-scale synoptic processes within a particular orographic precipitation enhancement mechanism called as the “seeder-feeder” mechanism. This feeder cloud typically caps a hill or a small mountain. This phenomenon results in more significant precipitation occurring on the elevated terrain beneath the cap cloud compared to nearby flatlands. Importantly, this mechanism does not significantly alter the overall precipitation associated with the cyclone but serves to redistribute it, concentrating it over regions with elevated terrain [27,53]. The efficacy of this process is contingent upon the presence of a sufficiently strong, low-level moist airflow to preserve the cloud water content within the orographic feeder cloud and ensure a continuous provision of precipitation from the seeder cloud.
+
+# 1.3.3 Understanding the Impact of ARs
+
+The study has been carried out to identify the significant impacts of landfalling ARs. The contributions of precipitation driven by ARs can also provide insights in recognizing vulnerable regions for AR associated with floodings. Some case studies with extreme flooding resulted from heavy precipitation have been analyzed in connection with ARs. The case studies were also analyzed to validate the algorithm used for the characterization of ARs. We have found that the heavy precipitation in Mumbai City of India on July 2005, Quebec Province of Canada on May 2017, and Kerala State of India on August 2018 were concurrent with consistent presence of AR with high intensity over the region during that time.
+
+# 1.4 Case Studies
+
+# (a) Kerala Flood (August 2018)
+
+The Kerala floods in August 2018 were a devastating natural disaster that occurred in the southern Kerala, India. The state experienced unusually extreme precipitation during the monsoon season, leading to severe flooding and landslides in many parts of
