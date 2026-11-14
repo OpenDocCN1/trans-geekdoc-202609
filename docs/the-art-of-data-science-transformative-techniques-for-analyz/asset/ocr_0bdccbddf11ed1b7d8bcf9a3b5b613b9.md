@@ -1,0 +1,1 @@
+lifelong learning, and a strategic understanding of industry trends. People who develop a broad and flexible skill set are positioned to succeed in a constantly evolving, connected, and innovative industry.

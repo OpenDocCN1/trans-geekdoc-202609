@@ -1,0 +1,44 @@
+level_changes:
+- line: 52
+  before: 2
+  after: 3
+- line: 86
+  before: 2
+  after: 3
+- line: 165
+  before: 2
+  after: 3
+- line: 204
+  before: 2
+  after: 3
+- line: 297
+  before: 2
+  after: 3
+- line: 368
+  before: 2
+  after: 3
+- line: 400
+  before: 2
+  after: 3
+- line: 452
+  before: 2
+  after: 3
+- line: 488
+  before: 2
+  after: 3
+- line: 545
+  before: 2
+  after: 3
+- line: 566
+  before: 2
+  after: 3
+- line: 632
+  before: 2
+  after: 3
+- line: 666
+  before: 2
+  after: 3
+text_changes:
+- line: 242
+  before: 第 III 章：大数据技术
+  after: 第三章：大数据技术
