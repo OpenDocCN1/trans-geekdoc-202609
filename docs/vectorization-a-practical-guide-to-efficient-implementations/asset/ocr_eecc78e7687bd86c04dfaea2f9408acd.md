@@ -1,0 +1,13 @@
+# # 1.3 Vectorization vs. Other Parallel Computing Paradigms
+
+Knowing that vectorization is a type of parallel computing paradigm, it is natural to ask the question: how does vectorization compare to other parallel computing paradigms such as multithreading, multiprocessing, or multiworker distributed computing?
+
+# ## 1.3.1 Multithreading
+
+Like vectorization, multithreading operates on a single processing unit, with shared memory. This can be a single core of a CPU or GPU. Vectorization processes multiple data inputs within the register in parallel, given a single instruction. In contrast, multithreading can only process one stream of data at a time, instead of processing data in parallel. It can switch between different threads of the same program (or sometimes different threads of different programs), with each thread representing a different part of the process. This is referred to as “concurrency.” Of course, multithreading can be used in combination with vectorization. In fact, modern GPUs operate by combining vectorization, multithreading, and multiprocessing to increase their processing powers [NVIDIA, 2012].
+
+The multithreading paradigm is quite advantageous in tasks like reading data from remote servers. For example, a database has 10 parts. If we have only a single thread, then for each part of the data to be read, we need to wait for one minute until the data is downloaded before reading the next part. Then, it will take 10 minutes in total to download the entire database. However, if we have 10 threads, each making a request to read one part of the data. Since the time to make a request to read the data is negligible compared to the time to download the data, each thread takes one minute to download the data. However, since the downloading process is in parallel with each other, it will take only one minute in total to download the entire database. See Figure 1.4 for an illustration.
+
+# ## 1.3.2 Multiprocessing
+
+Multiprocessing, on the other hand, operates on multiple processing units, e.g. multi-core CPUs or GPUs. Each core of the processing unit can access data through a shared memory (the RAM). Unlike vectorization and multithreading, multiprocessing does not share the same data between the processes. Therefore, to process the same data in parallel using different instructions, multiprocessing needs to duplicate the data across the cores. Unlike multithreading, multiprocessing will not be efficient if the process is bounded by I/O (i.e. data reading and writing). Conversely, multiprocessing is a great choice if the process is bounded

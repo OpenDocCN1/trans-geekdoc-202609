@@ -1,0 +1,20 @@
+# Table 5.1 List of masking and mask indices construction operations.
+
+| Operation | NumPy | Tensorflow | PyTorch |
+|---|---|---|---|
+| Identity matrix^a) | np.eye | tf.eye | torch.eye |
+| Diagonal matrix^a) | np.diag | tf.linalg.diag | torch.diag |
+| One hot/binary^b) | N/A | tf.one_hot | torch.nn.functional.one_hot |
+| Lower triangular matrix^c) | np.tril | tf.experimental.numpy.tril | torch.tril |
+| Upper triangular matrix^c) | np.triu | tf.experimental.numpy.triu | torch.triu |
+| Lower triangular mask^c) | np.tri | tf.experimental.numpy.tri | N/A |
+| Diagonal band^d) | N/A | tf.linalg.band_part | N/A |
+
+Notes:
+a) tf.eye and torch.eye can only return the identity matrix along the main diagonal, while np.eye can also return off-diagonal matrices by setting k to a non-zero value. tf.linalg.diag and torch.diag can create off-diagonal matrices whose diagonal values do not have to be 1.
+
+b) One hot encoding is typically used to encode categorical features. A single categorical value is mapped to an index (0, 1, ..., N - 1), then a vector of size N composed of 0s and a single 1 is created, where the position of the single 1 is at the index of the categorical value. When the feature is a set of categorical features (i.e. a multivalued categorical feature), it is typical to construct a binary vector where multiple 0s and 1s are present in the vector. There are several ways to construct this binary or multi-hot vector. One way is to convert each categorical value in the feature into a single one-hot vector, then reduce-sum them together. However, this will not be memory efficient as it creates extra 0 entries in the intermediate step. In Section 51.6, we will use the put operation introduced in Chapter 3 to create the binary/multi-hot mask. Furthermore, even though NumPy does not implement a one-hot encoding function, Scikit-learn's sklearn.preprocessing.OneHotEncoder is more commonly used for encoding categorical values. On the other hand, one can also use np.eye(num_values)[index] to create a batch of one-hot encoded categorical features, where num_values is the size of the categorical variable, and index is the indices of the categorical value.
+
+c) Both tril and triu can be used for the purpose of constructing the lower and upper triangular mask, or performing the masking operation on the existing matrix. See Figure 51.1 for illustrations of several examples. Beyond square matrices, both operations can also handle non-square matrices as well; the main diagonal (k=0) of non-square matrices still starts at the upper left corner of the matrix. When handling multidimensional tensors, it treats the last two dimensions as the matrix dimensions to extract/create triangular matrices from, while treating all the other leading dimensions as batch dimensions. To construct a lower triangular mask on the input matrix X, we can do np.tril(np.ones_like(X), k=...), to construct an upper triangular mask on the input matrix, we can do np.triu(np.ones_like(X), k=...). Notice that tril and triu are complementary to each other, i.e. np.tril(X, k=-1) + np.triu(X, k=0) == np.tril(X, k=0) + np.triu(X, k=1) == np.tril(X, k=...) == np.triu(X, k=...) == ... == X.
+
+d) This line can create a dedicated band. At the time of writing, only Tensorflow implements this diagonal band operation. See Figure 5.2 for an illustration of its usage. Notice that this is not an operation that fully replaces triu and tril (though some operations such as tril ..., k=0) can also be expressed using band_part(..., -1, 0), since the results always need to include the main diagonal entries. Although NumPy does not implement this generalized operation, the same can be achieved via Scipy.sparse.dia_matrix (an even more flexible operation) which we will introduce in Chapter 7. Since such masks are usually static in data type and shapes, in practice, we can use Scipy to create the diagonal band mask when initializing the model and apply it during training and inference on PyTorch models as well.
