@@ -1,0 +1,41 @@
+level_changes:
+- line: 47
+  before: 3
+  after: 4
+- line: 50
+  before: 3
+  after: 4
+- line: 53
+  before: 3
+  after: 4
+- line: 58
+  before: 3
+  after: 4
+- line: 61
+  before: 3
+  after: 4
+- line: 64
+  before: 3
+  after: 4
+- line: 69
+  before: 3
+  after: 4
+- line: 72
+  before: 3
+  after: 4
+- line: 75
+  before: 3
+  after: 4
+- line: 78
+  before: 3
+  after: 4
+- line: 81
+  before: 3
+  after: 4
+text_changes:
+- line: 1127
+  before: Mydpl
+  after: MyDLP
+- line: 2212
+  before: OpenVas 漏洞扫描完整指南
+  after: OpenVAS 漏洞扫描完整指南
