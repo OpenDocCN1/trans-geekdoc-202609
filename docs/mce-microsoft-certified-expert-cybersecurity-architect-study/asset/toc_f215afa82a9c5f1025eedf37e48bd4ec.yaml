@@ -1,0 +1,53 @@
+level_changes:
+- line: 297
+  before: 2
+  after: 3
+- line: 1620
+  before: 3
+  after: 2
+- line: 7395
+  before: 3
+  after: 2
+- line: 8462
+  before: 3
+  after: 2
+- line: 10737
+  before: 2
+  after: 3
+- line: 10783
+  before: 2
+  after: 3
+- line: 10825
+  before: 2
+  after: 3
+- line: 10871
+  before: 2
+  after: 3
+- line: 10913
+  before: 2
+  after: 3
+- line: 10961
+  before: 2
+  after: 3
+- line: 11007
+  before: 2
+  after: 3
+- line: 11049
+  before: 2
+  after: 3
+- line: 11094
+  before: 2
+  after: 3
+text_changes:
+- line: 542
+  before: 定义和实施整体安全策略和架构
+  after: 定义并实施整体安全策略和架构
+- line: 544
+  before: 本章涵盖的 Microsoft AZ-700 考试目标包括：
+  after: 本章涵盖的 Microsoft SC-100 考试目标包括：
+- line: 4171
+  before: 识别法规遵从性策略
+  after: 识别法规遵从策略
+- line: 9377
+  before: Chapter 9
+  after: 第 9 章

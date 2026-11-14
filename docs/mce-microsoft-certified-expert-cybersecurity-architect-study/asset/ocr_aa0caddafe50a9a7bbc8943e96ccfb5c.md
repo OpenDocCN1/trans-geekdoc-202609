@@ -1,0 +1,13 @@
+To use proactive and reactive detection tactics to manage threats, you should have a central console that allows SOC administrators to detect, investigate, remediate, and hunt threats; use threat intelligence; understand known vulnerabilities; rely on threat experts; and block threats across any of the six pillars. A seamless experience that increases the effectiveness of the SOC analyst is achieved when the tools required to support these phases are converted into a single workflow.
+
+**Know the method to evaluate security workflows.** Microsoft recommends that security practitioners automate as many steps of those procedures as possible. These processes can include notifying relevant stakeholders, launching a change management process, and applying specific remediation steps. By automating the processes, you reduce overhead and improve your security by ensuring the steps are done in a timely, consistent manner and according to your predefined requirements.
+
+**Review security strategies for incident management.** An incident of security occurs when customer data or personal information is destroyed, lost, altered, or accessed unauthorized due to a security breach. Security incidents include, for example, unauthorized access to infrastructure and exfiltration of customer data. Compliance events that do not affect confidentiality, integrity, or availability of customer data aren't considered security incidents.
+
+A security incident should be investigated, and lessons learned implemented in conjunction with the security response team to prevent future incidents. Continuous improvement is essential for effective and efficient incident response programs.
+
+**Know the method to evaluate security operations for technical threat intelligence.** Threat intelligence teams support all other functions such as security analysts in large organizations (for example, through threat intelligence platforms).
+
+It takes a large, diverse set of data and the ability to apply it to your processes and tools to succeed at threat intelligence, and Microsoft does both. Microsoft collects data from various sources to ensure that our customers’ data is used only in ways they have agreed to. It passes through a strict privacy/compliance boundary.
+
+**Know to monitor sources for insights on threats and mitigations.** As a result of accessing various signals across the Microsoft network, organizations use cyberthreat intelligence to gather information. It can be gathered from many different sources. It includes open-source data feeds, threat intelligence–sharing communities, commercial intelligence feeds, and local intelligence from security investigations. The Microsoft Intelligent Security Graph receives hundreds of gigabytes of data every second.

@@ -1,0 +1,3 @@
+transition between an on-premises and cloud environment. Hybrid deployments can also be an intermediate step before moving entirely to the cloud.
+
+**Design technical and governance strategies for traffic filtering and segmentation.** To protect networks against breaches, networks need to evolve from traditional defenses. A single end-point within a trusted boundary can be compromised by an attacker and then rapidly spread throughout the entire network. Instead of relying on network location within a perimeter to establish trust, Zero Trust architectures use user trust claims to access organizational resources and data. Zero Trust approaches should be adopted for new initiatives that validate trust at the point of access.

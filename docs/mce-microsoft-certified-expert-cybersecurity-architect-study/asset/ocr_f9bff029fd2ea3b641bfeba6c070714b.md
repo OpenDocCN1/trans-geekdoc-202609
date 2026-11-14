@@ -1,0 +1,16 @@
+| Azure Control | Responsibility | Benchmark Recommendation |
+|---|---|---|
+| Logging and Monitoring | Customer | Enable audit logging for Azure resources. |
+| Logging and Monitoring | Not applicable | Collect security logs from operating systems. |
+| Logging and Monitoring | Customer | Configure security log storage retention. |
+| Logging and Monitoring | Customer | Monitor and review logs. |
+| Logging and Monitoring | Customer | Enable alerts for anomalous activities. |
+| Logging and Monitoring | Not applicable | Centralize antimalware logging. |
+| Logging and Monitoring | Not applicable | Enable DNS query logging. |
+| Logging and Monitoring | Not applicable | Enable command-line audit logging. |
+| Identity and Access Control | Customer | Maintain an inventory of administrative accounts. |
+| Identity and Access Control | Customer | Change default passwords where applicable. |
+| Identity and Access Control | Customer | Use dedicated administrative accounts. |
+| Identity and Access Control | Customer | Use Azure Active Directory SSO. |
+| Identity and Access Control | Customer | Use multifactor authentication for all Azure Active Directory–based access. |
+| Identity and Access Control | Customer | Use secure, Azure-managed workstations for administrative tasks. |

@@ -1,0 +1,15 @@
++   The following tools are available in Azure to assist you in achieving your privacy goals:
++   * For the GDPR portal, azure data subject requests provide step-by-step guidance on finding and acting on personal data stored in Azure by GDPR requirements. In addition to the Microsoft Azure Portal on public and sovereign clouds, Microsoft offers pre-existing APIs and UIs across Microsoft online services that allow users to execute data subject requests.
++   * As a deep integration of Azure Resource Manager, Azure Policy makes it easier for your organization to enforce policies across resources. Using Azure Policy, you can manage resources at an organizational level and prevent developers from allocating resources that violate those policies by accident. Using Azure Policy, GDPR compliance can be ensured by encrypting or storing data in a specific location.
++   * Your regulatory compliance can be managed within the shared responsibility model of the cloud with Compliance Manager, a workflow-based risk assessment tool. In addition to Microsoft control implementation details, test results, and customer-managed controls, it provides a dashboard view of standards, regulations, and assessments. You can track, assign, and verify regulatory compliance activities within your organization.
++   * Microsoft Purview Information Protection identifies sensitive data on on-premises servers; labels, classifies, and protects it; enabling better data governance.
++   * With Azure Security Center, you can manage and protect your hybrid cloud workloads with unified security policies. Integrating Azure Policy with hybrid cloud workloads enables encryption, limiting organizational exposure to threats and responding to attacks.
++   * You can build and launch GDPR-compliant cloud applications using Azure Security and Compliance GDPR Blueprint. By leveraging Microsoft common reference architectures, deployment guidance, implementation mappings of GDPR articles, customer responsibility matrixes, and threat models, you will be able to simplify the adoption of Azure in support of your GDPR compliance efforts.
+
+# # Leverage Azure Policy
+
+Azure Policy, deeply integrated into Azure Resource Manager, allows your organization to enforce privacy policies across all resources. Azure Policy allows you to manage resources at the organizational level and prevent developers from allocating resources that violate those policies. With Azure Policy, you can encrypt your data or keep it in a specific region to comply with specific security regulations.
+
+# # Azure's Secure Foundation
+
+By enabling privacy-sensitive cloud scenarios, such as financial and health services, you can accelerate your move to the cloud by achieving compliance more efficiently, allowing you to enable the cloud confidently. A company's privacy requirements will vary depending on its industry and compliance standards. In addition to providing robust data security on its own infrastructure, Azure provides customers with customer-enabled services.

@@ -1,0 +1,3 @@
+Know to identify security requirements for container orchestration. The container orchestration system Kubernetes has become a significant part of many organizations’ compute stacks. Kubernetes clusters can be deployed and managed easily on Azure using three services. Kubernetes is a popular solution and has a strong developer community. Azure Kubernetes Service (AKS), Azure Container Service Engine (ACS-Engine), and Azure Container Instance are available.
+
+Defender for Cloud collects audit log data that is agentless and frictionless when it protects clusters hosted in Azure Kubernetes Service.

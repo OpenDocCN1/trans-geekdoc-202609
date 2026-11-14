@@ -1,0 +1,9 @@
+| Design and Deployment Consideration | Pass-Through Authentication and Seamless SSO | Password Hash Synchronization and Seamless SSO | Federation with AD FS |
+| :--- | :--- | :--- | :--- |
+| Does Azure AD Connect require any additional on-premises servers? | For every additional authentication agent, there should be one server. | None | Two or more AD FS servers. Two or more WAP servers in the perimeter/DMZ network. |
+| What are the health monitoring solutions available? | Admin center for Azure Active Directory provides agent status. | Not required | Azure AD Connect Health. |
+| Can domain-joined devices within the company network access cloud resources with a single sign-on? | Yes with Seamless SSO. | Yes with Seamless SSO | Yes. |
+| Which sign-in types are supported? | UserPrincipalName + password. Windows-Integrated Authentication by using Seamless SSO. Alternate login ID. | UserPrincipalName + password Windows-Integrated Authentication by using Seamless SSO Alternate login ID | UserPrincipalName + password. SAMAccountName + password. Windows-Integrated Authentication. Certificate and smart card authentication. Alternate login ID. |
+| Does Windows Hello for Business support it? | Key trust model. Hybrid Cloud Trust. Both require Windows Server 2016 Domain functional level. | Key trust model Hybrid Cloud Trust | Key trust model. Hybrid Cloud Trust. Certificate trust model. |
+| Which multifactor authentications are supported? | Azure AD MFA. Custom Controls with conditional access. | Azure AD MFA Custom Controls with conditional access | Azure AD MFA. Azure MFA server. Third-party MFA. Custom Controls with conditional access. |
+| What are the supported states for user accounts? | Disabled accounts. Account locked out. Account expired. Password expired. Sign-in hours. | Disabled accounts (up to 30-minute delay) | Disabled accounts. Account locked out. Account expired. Password expired. Sign-in hours. |
