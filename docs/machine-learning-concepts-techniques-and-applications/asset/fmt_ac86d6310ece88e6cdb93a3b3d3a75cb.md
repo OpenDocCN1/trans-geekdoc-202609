@@ -1,0 +1,28 @@
+
+## U
+
+*   unique taste, [310–311](#ch12.xhtml#p310)
+*   unlabelled data, [26](#ch2.xhtml#p26), [95](#ch4.xhtml#p95), [211](#ch9.xhtml#p211), [213](#ch9.xhtml#p213), [413](#ch16.xhtml#p413)
+*   unsupervised Learning, [34](#ch2.xhtml#p34), [90](#ch4.xhtml#p90), [93–96](#ch4.xhtml#p93), [121–122](#ch5.xhtml#p121), [211–213](#ch9.xhtml#p211), [244](#ch9.xhtml#p244), [324](#ch13.xhtml#p324)
+*   unsupervised learning model, [26](#ch2.xhtml#p26)
+*   user preference, [23](#ch2.xhtml#p23), [305](#ch12.xhtml#p305), [312](#ch12.xhtml#p312)
+*   user profiling, [348](#ch14.xhtml#p348)
+*   utility function, [303](#ch12.xhtml#p303), [304](#ch12.xhtml#p304)
+*   utility matrix, [304](#ch12.xhtml#p304)
+
+## V
+
+*   validation, [26](#ch2.xhtml#p26), [85](#ch4.xhtml#p85), [132–133](#ch6.xhtml#p132), [199](#ch8.xhtml#p199)
+*   vanishing gradient, [368](#ch15.xhtml#p368), [371](#ch15.xhtml#p371), [374](#ch15.xhtml#p374), [392](#ch15.xhtml#p392)
+*   variance, [84–86](#ch4.xhtml#p84), [97](#ch4.xhtml#p97), [99](#ch4.xhtml#p99), [101](#ch4.xhtml#p101), [136](#ch6.xhtml#p136), [175–177](#ch7.xhtml#p175), [200–206](#ch8.xhtml#p200), [233–235](#ch9.xhtml#p233), [297](#ch12.xhtml#p297), [315](#ch12.xhtml#p315), [414](#ch16.xhtml#p414)
+*   vector projection, [52–53](#ch3.xhtml#p52)
+*   vector space, [31](#ch2.xhtml#p31), [47](#ch3.xhtml#p47), [52](#ch3.xhtml#p52), [77](#ch4.xhtml#p77), [78](#ch4.xhtml#fig4_2), [131](#ch6.xhtml#p131), [150](#ch6.xhtml#p150), [183](#ch7.xhtml#p183), [300](#ch12.xhtml#p300)
+*   visualization, [31](#ch2.xhtml#p31), [35](#ch2.xhtml#p35), [47](#ch3.xhtml#p47), [95](#ch4.xhtml#p95), [103](#ch5.xhtml#p103), [105](#ch5.xhtml#p105), [106](#ch5.xhtml#p106), [110](#ch5.xhtml#fig5_9), [113](#ch5.xhtml#p113), [119–120](#ch5.xhtml#p119), [123](#ch5.xhtml#p123), [125](#ch5.xhtml#p125)
+
+## W
+
+*   weather prediction, [14](#ch1.xhtml#p14), [20](#ch1.xhtml#p20), [42](#ch2.xhtml#p42)
+*   weights, [38](#ch2.xhtml#p38), [40](#ch2.xhtml#p40), [62](#ch3.xhtml#p62), [96](#ch4.xhtml#p96), [104](#ch5.xhtml#p104), [174](#ch7.xhtml#p174), [203](#ch8.xhtml#p203), [216](#ch9.xhtml#p216), [273](#ch11.xhtml#p273), [285](#ch11.xhtml#p285), [287](#ch11.xhtml#p287), [294](#ch11.xhtml#p294)
+*   weka, [103–112](#ch5.xhtml#p103), [123–125](#ch5.xhtml#p123), [180](#ch7.xhtml#p180)
+*   weka explorer, [106–107](#ch5.xhtml#p106), [123](#ch5.xhtml#p123), [124](#ch5.xhtml#p124)
+*   WSS, [229](#ch9.xhtml#p229)
