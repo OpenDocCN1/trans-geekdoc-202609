@@ -1,0 +1,11 @@
+Power Platform, AI Builder doesn't need coding experience to create custom AI solutions. It helps you to create the AI model, which can be used to keep track of all your products by using object detection. It also helps you to predict future outcomes from the data already available in your business apps so that you can make intelligent decisions to drive the growth of your business.
+
+# Dynamics 365 Customer Voice
+
+Successful businesses understand that the customer's feedback is a crucial point for the growth of the business. Every business website has a feedback form where you can ask your queries or write your product experience. But Dynamics 365 Customer Voice is providing something more. It provides your organization with some additional capabilities, such as the ability to create a survey and share it with your customers for valuable feedback. Once the responses are received, Power BI analyzes feedback about your products and services to evaluate the information and take actions to transform products and employee experiences.
+
+Unlike the past, people are now connected through social media and communication solutions. Therefore, businesses are beginning to realize the potential of data-driven decisions, large-scale coordination, and the efficiency of online tools. Thus, Power Platform tools play an important role in improving productivity and automating business processes. To unlock the true potential of Dynamics 365 and Power Platform tools, this book will show you how you can do wonders in your business by using machine learning with these two technologies. It is an important topic because it will help you to make proactive decisions for your business by using predictive data analytics. It also allows businesses to utilize future predictions to perform operations more efficiently. Now let's look at how adding a layer of intelligence to Dynamics 365 and Power platform using machine learning would benefit the businesses.
+
+Whether it's sending follow-up emails, similar record creation, or scheduling and managing appointments, isn't it frustrating to do the same task at your workplace every day?
+
+Just imagine that your employee takes 5 minutes for a repetitive task of sending follow-up emails to all the possible prospects every day.

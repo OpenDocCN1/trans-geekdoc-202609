@@ -1,0 +1,9 @@
+required resources, and helping them make the right connections within your company. Dynamics 365 Human Resources delivers a complete view of employees and their experience by centralizing your HR programs from benefits to conversation and absence reporting.
+
++   Optimization of your HR process. Dynamics 365 Human Resources drives excellence in your HR operations to reduce costs and create a more connected environment for employees.
+
++   Create flexible compensation plans. Add all available benefits in the benefits management tool; define eligibility rules according to the benefit. You can set an enrollment period for each benefit. This would enable employees to self-enroll, saving time and effort of HR employees. The data analytics generated in benefits management transforms complex benefits data into easy-to-understand insights, helping managers plan. Interactive visualizations allow managers to instantly filter and see the benefits of the most popular employee plans, which helps to inform strategy.
+
++   Leave and expense management. HR employees can use this tool to easily customize employee time off guidelines like flexible dates and approval rates. Using Dynamics 365 Human Resources, you can define leave and absence terms to ensure accurate data entry and tracking.
+
++   Compensation management. It is used to set fixed and variable compensation plans and create more tailored plans that better fit your needs like the band, grade, step, and regional plans. You can easily see the number of employees assigned to a particular plan along with the compensation structure. HR employees are empowered by the process engine that automates compensation changes to specific employees. It can also perform bulk changes for a full team or for the entire organization. Embedded analytics help HR employees with a clear picture of their compensation data, enabling them to track and nurture demographic equality across the organization.
