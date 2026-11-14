@@ -1,0 +1,116 @@
+level_changes:
+- line: 146
+  before: 2
+  after: 3
+- line: 186
+  before: 2
+  after: 3
+- line: 223
+  before: 2
+  after: 3
+- line: 310
+  before: 2
+  after: 3
+- line: 314
+  before: 2
+  after: 3
+- line: 650
+  before: 2
+  after: 3
+- line: 652
+  before: 2
+  after: 3
+- line: 895
+  before: 2
+  after: 3
+- line: 897
+  before: 2
+  after: 3
+- line: 1158
+  before: 2
+  after: 3
+- line: 1402
+  before: 2
+  after: 3
+- line: 1847
+  before: 2
+  after: 3
+- line: 2031
+  before: 2
+  after: 3
+- line: 2789
+  before: 2
+  after: 3
+- line: 4581
+  before: 2
+  after: 3
+- line: 4802
+  before: 2
+  after: 3
+- line: 5664
+  before: 2
+  after: 3
+- line: 5956
+  before: 2
+  after: 3
+- line: 9245
+  before: 2
+  after: 3
+- line: 9788
+  before: 2
+  after: 3
+- line: 10421
+  before: 2
+  after: 3
+text_changes:
+- line: 2492
+  before: Conclusion
+  after: 结论
+- line: 2547
+  before: Conclusion
+  after: 结论
+- line: 2551
+  before: Chapter Twelve
+  after: 第十二章
+- line: 3764
+  before: Leveraging In-Memory Data Storage and Caching
+  after: 利用内存数据存储和缓存
+- line: 3776
+  before: Compressing Data for Efficiency
+  after: 为提高效率而压缩数据
+- line: 3788
+  before: Conclusion
+  after: 结论
+- line: 3796
+  before: Optimizing MySQL queries for performance
+  after: 为优化性能而优化 MySQL 查询
+- line: 3804
+  before: Delving into Query Execution Insights
+  after: 深入了解查询执行见解
+- line: 3812
+  before: Strategic Application of Indexing
+  after: 索引的战略应用
+- line: 3827
+  before: Crafting Queries for Peak Efficiency
+  after: 构建高效查询
+- line: 3842
+  before: Harnessing MySQL's Advanced Features
+  after: 利用 MySQL 的高级功能
+- line: 3857
+  before: Continuous Monitoring and Maintenance
+  after: 持续监控与维护
+- line: 3870
+  before: Conclusion
+  after: 结论
+- line: 3878
+  before: Understanding and implementing transactions and locks
+  after: 理解并实现事务与锁
+- line: 3886
+  before: Upholding the ACID Paradigm Through Transactions
+  after: 通过事务维护 ACID 范式
+- line: 7536
+  before: Synopsis
+  after: 概要
+- line: 7597
+  before: Chapter Two
+  after: 第二章
