@@ -1,0 +1,11 @@
+Potter or Star War series, are redundant. This problem is exacerbated if closely related items—such as those of the same series—are displayed in another tab adjacent to the recommended items section. If users become accustomed to seeing the same popular and obvious recommendations in their sidebar, they will gradually lose interest. An element of serendipity is a major advantage of recommender systems. Therefore, a slightly lower correlation between items might provide more effective recommendations and a higher conversion rate.
+
+The effectiveness of recommendations also varies by use case and how recommendations are displayed. Highly correlated item recommendations may perform poorly on the home page but enjoy a higher conversion rate when placed deeper into the website. A key goal of recommender systems is item discovery, and it may take several instances of exposure before the user is ready to purchase or complete a target conversion action. This is why some Internet companies follow a policy of cycling recommendations to users three or more times before determining whether the suggested item is a poor match.
+
+Thus, while the training and test data split is convenient for evaluating a user’s rating patterns, it does little to assess how users will react to a recommendation in the real world and does not consider factors outside the model’s testing space.
+
+The interpretation of the results can also differ by organization. Monetized blogs that generate revenue based on page views and ad impressions may not be affected by a high exit rate from recommended content. Alternatively, businesses that focus on content marketing to build rapport with customers and improve their search engine rankings might not be satisfied with a recommender system that leads to a shallow level of user engagement.
+
+Most exponents of recommender systems, therefore, evaluate model performance based on customized user actions rather than split validation. One method is user studies, which involves observing how users interact with recommender systems via online screen recordings or experimental trials. Meanwhile, more large-scale evaluation can be performed with the aid of A/B testing.
+
+# A/B Testing

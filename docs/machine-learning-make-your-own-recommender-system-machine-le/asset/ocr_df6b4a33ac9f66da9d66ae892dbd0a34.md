@@ -1,0 +1,5 @@
+# FOREWORD
+
+From relevant friend suggestions on Facebook to product recommendations on Amazon, there’s no missing the presence of recommender systems. Take a look at what you’ve recently viewed and consumed online because many of your online activities, including finding this book, probably originated from algorithm-backed recommendations. These data-driven systems are eroding the dominance of traditional search engines while aiding the discoverability of niche and esoteric items. As a breakaway branch of machine learning, it’s more important than ever to understand how these models work, and in this book, we go a step further by coding three basic recommender systems.
+
+This book is designed for beginners with partial background knowledge of data science and machine learning, including statistics and computing programming using Python. If this is your first foray into data science, you may want to spend a few hours reading my first book Machine Learning,for Absolute Beginners before you get started here.
