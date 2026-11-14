@@ -1,0 +1,550 @@
+- pgno: 0
+  md: '# Research on Technical Architecture and Overall Scheme of Railway Block Chain
+    Service Platform
+
+
+    ZHANG XIAODONG*
+
+    China Academy of Railway Sciences,
+
+    Institute of Computing Technology,
+
+    CHINA
+
+
+    LI PING
+
+    China Academy of Railway Sciences,
+
+    CHINA
+
+
+    MA XIAONING
+
+    China Academy of Railway Sciences,
+
+    Institute of Computing Technology,
+
+    CHINA
+
+
+    # ABSTRACT
+
+
+    The block chain has many unique characteristics, like decentralization, stability,
+    openness and transparency. We can apply block chain in many fields of railway
+    to improve the comprehensive efficiency and benefit, such as railway passenger
+    and freight service, engineering construction, big data sharing and so on. With
+    the gradual completion of data service platform, big data lake and cloud computing
+    in China Railway, these foundations can support the railway block chain application.
+    The paper analyzed the development status and existing problems of block chain
+    at home and abroad. Through the multidimensional analysis for the mainstream block
+    chain platform architecture, the thesis gets the architecture selection of the
+    railway block chain platform. Based on the hyperledger fabric, we propose the
+    technical architecture and overall scheme for the railway block chain service
+    platform respectively. The paper also designs the implementation path for the
+    platform application construction. This research plays an important role and significance
+    in promoting the block chain technology applying and developing in the railway
+    field.
+
+
+    # CCS CONCEPTS
+
+
+    +   • Information systems; • Information systems applications;
+
+    +   • Enterprise information systems;
+
+
+    # KEYWORDS
+
+
+    Blockchain Platform, Railway Information Planning, Technical Architecture, Hyperledger
+    Fabric, Interconnection
+
+
+    # ACM Reference Format:
+
+
+    ZHANG XIAODONG, LI PING, and MA XIAONING. 2020. Research on Technical Architecture
+    and Overall Scheme of Railway Block Chain Service Platform. In _2020 the 3rd International
+    Conference on Blockchain Technology and Applications (ICBTA 2020), December 14-16,
+    2020, Xi’an, China._ ACM, New York, NY, USA, 6 pages. https://doi.org/10.1145/3446983.3446990
+
+
+    * Address: No.2 Daluishu Road, Haidian District, Beijing, China
+
+
+    Permission to make digital or hard copies of all or part of this work for personal
+    or classroom use is granted without fee provided that copies are not made or distributed
+    for profit or commercial advantage and that copies bear this notice and the full
+    citation on the first page. Copyrights for components of this work owned by others
+    than ACM must be honored. Abstracting with credit is permitted. To copy otherwise,
+    or republish, to post on servers or to redistribute to lists, requires prior specific
+    permission and /or a fee. Request permissions from permissions@acm.org.
+
+    ICBTA 2020, December 14-16, 2020, Xi’an, China
+
+    © 2020 Association for Computing Machinery.
+
+    ACM ISBN 978-1-4503-8896-2/20/12... $15.00
+
+    https://doi.org/10.1145/3446983.3446990
+
+
+    # 1 INTRODUCTION
+
+
+    With the new round of scientific revolution and industrial reform sweeping the
+    world now, new technologies such as big data, cloud computing, internet of things,
+    artificial intelligence, block chain are emerging and penetrating rapidly. Digital
+    economy has deeply changed the way of human life and industrial production. As
+    one disruptive technology, block chain is promoting the global transition from
+    Information Internet to Value Internet. The block chain applications have the
+    capacities to reduce costs and improve efficiency for the real economy. They can
+    also boost the traditional industries to development well and hasten the transformation
+    and upgrading.
+
+
+    In general, we divide the development process of block chain into 6 stages from
+    2009 to 2025: technology test, geek niche, market brewing, mainstream acceptance,
+    industrial lending and industrial maturity. Block chain develops from block chain
+    1.0 to block chain 4.0, as shown in Figure 1. The rapid developments of related
+    technologies and single application promote the wide application of block chain
+    in industrial world.
+
+
+    As the artery of the national economy and the popular means of transportation,
+    the railway transportation has made remarkable achievements after the informatization
+    construction during more than 30 years. China Railway has built up the integrated
+    information integration platform and multiple business information systems, which
+    cover the passenger and freight services, business management, dispatching command,
+    safety supervision and other fields. Recent years, China Railway has also carried
+    out some innovative applications using the big data and artificial intelligence
+    based on the massive data assets. These efforts can provide the enough support
+    for the block chain application. At the same time, China Railway is also facing
+    the challenges under new situations and circumstances, like reducing costs and
+    increasing efficiency. The railway system has complex features, such as the large
+    scale, the long business chain and many involved fields. The block chain technology
+    can reduce the supervision and management costs under the certain circumstance
+    of railway [1]. Integrated application of block chain can be beneficial to reduce
+    the overall cost of railway passenger and freight transportation and even the
+    whole society. That will promote the high-quality development for the railway
+    in the new period.
+
+
+    The thesis comprehensively analyzed the application and development status of
+    block chain technology at home and abroad. We summarized the problems existing
+    in the stage of block chain industrial application. After studying the architecture
+    and application of mainstream block chain platform, the paper selected the technical
+    architecture for the railway block chain service platform. Based on the hyperledger
+    fabric, we designed the railway block chain service'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/1bf1d1f97f64b0a3a3e500074ec773e3_1_0.png)
+
+
+    Figure 1: Block Chain Development Roadmap.
+
+
+    ![](img/1bf1d1f97f64b0a3a3e500074ec773e3_1_1.png)
+
+
+    Figure 2: The Overall Development Strategy of Block Chain from the Countries around
+    the World.
+
+
+    platform from infrastructure, architecture scheme and integrated development.
+    The functional architecture of the railway block chain service platform was proposed,
+    which contains the block chain core technology, security, operation and maintenance.
+    Referring to the strategic planning ideas, we also proposed the construction and
+    application implementation path of of the railway block chain service platform.
+
+
+    # 2 BLOCK CHAIN APPLICATION STATUS AND RAILWAY FIELD EXPLORATION
+
+
+    # 2.1 Global Block Chain Application Status Analysis
+
+
+    Most countries have positive attitudes towards the block chain technology, while
+    the industrial development stages are different. Australia, South Korea, Germany,
+    Netherlands, Cyprus, the United Arab Emirates and Maltese have actively developed
+    the block chain industry and set up the overall development strategy nationally.
+    The United States, China, South Korea, the United Kingdom, Australia and the European
+    Union attach great importance
+
+
+    to the research and application of block chain. At the same time, China, Australia,
+    France, Switzerland and Finland have successively developed industry laws and
+    rules on block chain supervision [2], as shown in Figure 2 [3].
+
+
+    In application, block chain, which is derived from encrypted digital currency,
+    is extending to many fields. Developed countries have carried out many practices
+    on block chain [4]. The United States, Estonia and Dubai have promoted the digital
+    transformation of government actively. Japan, Australia and Germany have used
+    block chain to explore financial cost reduction and efficiency improvement. Switzerland
+    and the United States have tried to use block chain to promote property registration
+    and transaction distribution. Singapore and Switzerland have used block chain
+    in the trade and logistics to provide customers the more convenient delivery paradigm.
+    The United Kingdom and the United States have applied block chain to engage in
+    social and livelihood undertakings to enlarge the benefits of public funds.
+
+
+    Up to March 2019, the number of block chain enterprises in China is second only
+    to the United States, reaching to 499 and 553 respectively. These enterprises
+    mainly concentrate in Beijing, Shanghai,'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'Guangdong, Zhejiang and other eastern developed regions. Now, the industrial
+    application scenarios of block chain continue to expand. China enterprises explore
+    actively in financial services, supply chain coordination, intellectual property
+    rights, social livelihood and others, to help concentrate business flow, information
+    flow and capital flow.
+
+
+    node of the alliance chain usually has corresponding entity organization, which
+    can join and exit the network only after authorization. In the alliance chain,
+    each organization forms a stakeholder alliance to jointly maintain the healthy
+    operation of the block chain. The consensus process of alliance chain is controlled
+    by pre-selected nodes. Alliance chain is suitable for distributed inter agency
+    application scenarios, such as inter agency transaction, settlement and clearing.
+    The write permission of each node in the private chain is controlled internally,
+    while the read permission is selectively opened to the public according to the
+    demand. Private chain has the general structure of multi node operation of block
+    chain, which is suitable for scenarios with high privacy requirements, such as
+    internal data management and audit of specific institutions.
+
+
+    # 2.2 Exploration on Block Chain Application in Railway Field
+
+
+    In the railway field, some countries have also actively explored the block chain
+    application. DB, a German railway, cooperated with the block chain integration
+    platform Unibright to develop a tagging ecosystem based on the block chain. The
+    ecosystem has connected the different areas of the passengers'' whole journey.
+    Every part of the journey would be marked, such as mileage, service, catering,
+    hotel reservation, local transportation, etc. Aiming to reduce the operation cost
+    through block chain application, the ecosystem has realized the cooperation with
+    other tourism company interaction. RZD, a Russian railway transport company, has
+    launched a crypto currency ticketing based on block chain and a railway freight
+    digital trading platform based on block chain. In August 2017, more than 200 well-known
+    freight and logistics enterprises, such as BNSF railway company, UPS, FedEx and
+    Schneider cargo, joined the BITA alliance. BITA became the world largest block
+    chain business alliance. In addition, railway companies in Switzerland, the Netherlands,
+    Canada and other countries have also begun to introduce block chain and crypto
+    currency into the railway transportation industry.
+
+
+    # 2.3 Problems in Block Chain Application
+
+
+    With block chain becoming more and more mature, there are still some problems.
+    (1) block chain may cause financial institutions or enterprises to face complex
+    legal and compliance issues. (2) the current distributed ledger technology is
+    still immature, which needs more industry applications to prove [5]. (3) There
+    are many technical routes of block chain. Different types of block chains are
+    easy to form information isolated chains. (4) Decentralization has a great impact
+    on the existing operation pattern. There is no internal driving force for active
+    change in related fields. (5) The sustainability of basic technology maintenance
+    of open-source block chain is poor. (6) Abuse and widespread use are obvious.
+
+
+    # 3 COMPARATIVE ANALYSIS AND TECHNOLOGY SELECTION FOR MAINSTREAM BLOCK CHAIN PLATFORM
+
+
+    Block chain technology is developing rapidly. The block chain platforms are becoming
+    more and more diverse. The mainstream block chain platforms in the market include
+    Ethereum, Fabric, Corda, BCOS and DNA.
+
+
+    Block chain includes public chain, alliance chain and private chain. Each node
+    in the public chain can join and exit the network freely. All nodes can participate
+    in reading and writing the data on the chain. When reading and writing, the network
+    is interconnected with a flat topology. There is no centralized server node in
+    the network, which is suitable for the decentralized opening scenario. Each
+
+
+    Ethereum represents the public chain technology, while Fabric, Corda, BCOS and
+    DNA represent the alliance chain. This paper analyzes the platform architecture
+    from architecture capability, core components, application function, technical
+    level, security mechanism, platform applicability, development and tools, maintenance
+    and support.
+
+
+    In the business operation, especially the railway big data sharing and international
+    intermodal transportation business, the State Railway Group involves logistics
+    enterprises at home and abroad, buyers and sellers, financial institutions, foreign
+    trade merchants, customs, government supervision and other institutions. In the
+    actual business operation, there is a mutually exclusive relationship of interests
+    under the "weak trust relationship". By using block chain technology, many participants
+    will establish a collaborative "strong trust relationship" to jointly store certificates,
+    and build a data circulation network of participants'' business data from "self-certification"
+    to "other certificates, multiple certificates, security and credibility". In the
+    process of building a block chain platform, China Railway Group needs to consider
+    such factors as node authorization, data access rights on the chain, smart contract
+    security, data security on the chain, convenience of consensus mechanism upgrade,
+    stable transaction cost, reliability and government supervision. There is no authorization
+    control for the nodes and data on the public chain, and most of them are linked
+    with the attached cryptocurrency. The transaction fees fluctuate greatly under
+    the influence of currency, which makes it very difficult for enterprises and governments
+    to use and expand. The nodes of the alliance chain are preselected, which can
+    effectively exclude the bad and untrusted nodes, and protect the block chain from
+    attacks such as 51% nodes. Moreover, the consensus mode of the alliance chain
+    is controlled by the alliance, and the transaction cost is stable, which provides
+    convenience for the upgrading and expansion of the consensus mechanism in the
+    future, and is also conducive to the improvement of the block chain platform by
+    the leading institutions and regulators. Control. To sum up, the alliance chain
+    is more suitable for the needs of block chain application of National Railway
+    Group.
+
+
+    The paper chose architecture capability, core components, application function,
+    technical level, security mechanism, platform applicability, development and tools,
+    maintenance and support as the factors to comparatively analyze the 5 mainstream
+    block chain platform architecture. The thesis found that Hyperledger Fabric has
+    obvious advantages in application, as shown in Table 1. We suggested that China
+    Railway should adopt the thought of Hyperledger Fabric to build up the railway
+    block chain platform.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Table 1: Comparative Analysis of Mainstream Block Chain Platforms
+
+
+    | Dimension | Ethereum | Hyperledger Fabric | R3 Corda | BCOS | DNA |
+
+    |---|---|---|---|---|---|
+
+    | Digital assets | Smart Contract | Smart Contract | Bottom Support | Bottom Support
+    | Bottom Support |
+
+    | Identity Authentication | None | Digital Certificate | Digital Certificate |
+    Digital Certificate | Digital Certificate |
+
+    | Consensus Mechanism | POW/DPOS | PBFT/POS/DPOS | None | None | DPOS/ Fast BFT
+    |
+
+    | Out-of-Block Speed | ≈12S | <1S | None | None | <1S |
+
+    | Performance | 10+TPS | 1000+TPS | 10000+TPS | 10000+TPS | 10000+TPS |
+
+    | Smart Contract | Not Rollback | Rollback/Cancel | Rollback/Cancel | Rollback/Cancel
+    | Rollback/Cancel |
+
+    | Operating Environment | EVM | Docker | JVM | JVM | AVM |
+
+    | Space Recycle | State Snapshot | State Snapshot | None | None | State Snapshot
+    |
+
+    | Authority Control | None | Fabric CA/Third Party | Third Party | Third Party
+    | Third Party |
+
+    | Maintenance | Hard | Easy | Medium | Medium | Medium |
+
+    | Chain Type | Public Chain | Alliance Chain | Alliance/Private | Alliance/Private
+    | Alliance Chain |
+
+    | Applicable Field | Finance | Multiple Field | Finance | Finance | Small Business
+    |
+
+    | Railway Block Chain | Inapplicable | Applicable | Inapplicable | Inapplicable
+    | Inapplicable |
+
+
+    ![](img/1bf1d1f97f64b0a3a3e500074ec773e3_3_0.png)
+
+
+    Figure 3: Railway Block Chain Service Platform Technical Architecture.
+
+
+    # 4 TECHNICAL ARCHITECTURE FOR RAILWAY BLOCK CHAIN SERVICE PLATFORM
+
+
+    The technical architecture of railway block chain service platform contains storage
+    layer, network layer, block chain service core layer, business processor, interface
+    layer and block chain management layer, as shown in Figure 3
+
+
+    # 4.1 Storage Layer
+
+
+    The storage layer applies virtualization technology to set up docker clusters
+    with high scalability and reliability on the cloud. That is suitable for different
+    types of block chain platform layer nodes. Distributed ledger status data applies
+    Rocks DB, CouchDB, Level DB and MySQL. Distributed ledger transaction data applies
+    HDFS, GFS and TFS.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/1bf1d1f97f64b0a3a3e500074ec773e3_4_0.png)
+
+
+    # ## 4.2 Network Layer
+
+
+    The network layer realizes P2P network. This provides the basic ability to build
+    up block chain network at the bottom, including node, sequencer, client, CA and
+    gossip.
+
+
+    # ## 4.3 Block Cain Service Core Layer
+
+
+    Kubernetes and Fabric compose the core layer of railway block chain. Kubernetes
+    framework is adopted to realize members joining dynamically, elastic contraction
+    and flexible deployment. The core layer of block chain provides the bottom infrastructure,
+    including member services, security and privacy protection, block chain services,
+    smart contract services and cross chain services.
+
+
+    # ## 4.4 Business Processor
+
+
+    The service processor includes gRPC, data encryption, message sending and interface
+    adaptation. The gRPC refers to establish a link with the block chain to complete
+    user authentication, data security verification and data integrity verification.
+    That supports the data transaction and query of the block chain. Data encryption
+    refers to calling encrypt service (optional) or software to realize encryption
+    and decryption function. Message sending and receiving uses message interface
+    protocol to encapsulate the written message by HTTP. This function ensures the
+    message visible between the receiver and the receiver. Interface adaptation provides
+    Rest WebService interface adaptation service.
+
+
+    # ## 4.5 Interface Layer
+
+
+    The railway block chain service platform provides users various interfaces, like
+    SDK, API and CLI.
+
+
+    # ## 4.6 Block Chain Management Layer
+
+
+    The management layer adopts the micro-service framework Spring Cloud / Spring
+    Boot for development. The management layer mainly includes node management, member
+    management, block chain service management, block chain status monitoring management,
+    account book browsing, warning management, contract management, user management,
+    log management, role management and audit management.
+
+
+    # ## 5 OVERALL SCHEME FOR RAILWAY BLOCK CHAIN SERVICE PLATFORM
+
+
+    The railway block chain service platform relies on the main data center of China
+    Railway. The platform provides users with one-stop, high security, simple and
+    easy-to-use block chain services. The railway block chain service platform integrates
+    development, management, operation and maintenance, which supports users to quickly
+    deploy alliance block chain network environment on the cloud. Based on the railway
+    block chain service platform, users can reduce the acquisition cost of the bottom
+    technology. That makes them more focused on the development and operation of block
+    chain business model innovation and business application.
+
+
+    In design, the railway block chain service platform meets the security and compliance
+    requirements of financial level. The platform can adjust the business resource
+    dynamically. Users can quickly build block chain services on an elastic and open
+    cloud platform. The railway block chain service platform can be quickly compatible
+    with many bottom block chain technologies, including Hyperledger Fabric, Ethereum,
+    BCOS, etc. The platform will provide users with many optional bottom technology
+    frameworks.
+
+
+    The railway block chain service platform consists application support layer, service
+    layer, bottom technology layer, operation infrastructure layer, security service
+    management layer, operation and maintenance monitoring management layer, standard
+    specification system, operation management system and security assurance system,
+    as shown in Figure 4
+
+
+    # ## 6 APPLICATION AND IMPLEMENTATION PATH FOR RAILWAY BLOCK CHAIN SERVICE PLATFORM
+
+
+    The application and implementation of the railway block chain service platform
+    should be set up by three stages. The unified path will promote the railway block
+    chain service platform to the implement orderly.
+
+
+    # ## 6.1 Experiment Stage (2020~2022)
+
+
+    According to China Railway Information Planning, we should plan the railway block
+    chain service platform uniformly, including the'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'overall architecture, application architecture and technical standards. The
+    application pilot of block chain is carried out from the trusted data exchange
+    & sharing and China-EU train logistics tracking and financial services based on
+    the block chain.
+
+
+    # 6.2 Promotion Stage (2023~2024)
+
+
+    In the application and promotion stage of block chain, multi fields and business
+    will integrated the block chain deeply. The converged application of block chain
+    will promote the application implementation, such as multimodal transport, railway
+    credit investigation and freight logistics. China Railway will open up the collaborative
+    chain with upstream and downstream enterprises to create an ecological chain of
+    railway industry.
+
+
+    # 6.3 Deepening Stage (2025~2030)
+
+
+    Considering the continuous development of block chain in the future, railway block
+    chain will break through the key problems, like compatibility, performance, security
+    and legal supervision. The railway block chain service platform aims to prosper
+    the railway ecosystem. The block chain application will develop from single application
+    to upstream application of industrial chain, from peer application to application
+    of different industry alliance, to further prosper the industry ecosystem.
+
+
+    # 7 CONCLUSION
+
+
+    Combining block chain and railway business can effectively solve the problems
+    of sharing railway big data and the common problems
+
+
+    of railway freight transportation business in The Belt and Road. The railway block
+    chain service platform can improve the connotation of railway integrated information
+    integration platform. At the same time, that can provide the bottom technical
+    support and quick service response for railway block chain application. The RBaaS
+    will benefit the multi chain integration from different fields, different industries
+    and different subjects and improve the China Railway technology level.
+
+
+    # ACKNOWLEDGMENTS
+
+
+    This research was financially supported by China Academy of Railway Sciences,
+    studied by Research on the Overall Scheme and Key Technologies of Railway Block
+    Chain Service Platform (RBaas). The project number is 2019YJ110.
+
+
+    # REFERENCES
+
+
+    +   [1] WANG CHENG, SHI TIANYUN. Technical Review of Black Chain and Prospects
+    of Its Application on Railway [J]. China Railway. 2017(09):91-98. DOI=10.19549/j.issn.1001-683X.2017.09.091
+
+    +   [2] China Institute of Information and Communication White Paper on Block
+    Chain in 2019 [R]. 2019.
+
+    +   [3] LI PING, ZHANG XIAODONG, GUO YUE, XIE PENG. Blockchain technology and
+    its typical application in railway industry [J]. Railway Computer Application,
+    2020,29(01):9-15.
+
+    +   [4] WANG WENJING, LIANG ZHANGHUA. Block Chain Development and Application
+    Status [J]. Communications Management and Technology, 2018(06)12-15.
+
+    +   [5] SHEN XIN, PEI QINGQI, LIU XUEFENG. Survey of Block Chain [J]. Chinese
+    Journal of Network and Information Security, 2016,2(11):11-20. DOI=10.11959/j.issn.2096-109x.2016.00107'
+  merge: -1
+  img_proc: true
