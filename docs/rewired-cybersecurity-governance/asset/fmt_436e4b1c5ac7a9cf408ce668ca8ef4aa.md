@@ -1,0 +1,120 @@
+
+- bug bounty program  [68](#c04.xhtml#Page_68), [259](#c12.xhtml#Page_259)
+- AVIATION 2013 conference  [64](#c04.xhtml#Page_64)
+- Aviation Information Sharing and Analysis Center (A‐ISAC)  [66](#c04.xhtml#Page_66), [69](#c04.xhtml#Page_69), [70](#c04.xhtml#Page_70), [71](#c04.xhtml#Page_71)
+- Aviation Security World Conference (2015)  [68](#c04.xhtml#Page_68)–69
+
+## B
+- BAE systems  [27](#c02.xhtml#Page_27)
+- Bahrain  [19](#c02.xhtml#Page_19)
+  - electronic financial transactions  [25](#c02.xhtml#Page_25)
+  - internet security proposal  [22](#c02.xhtml#Page_22)
+  - Netsweeper  [25](#c02.xhtml#Page_25)
+  - surveillance software  [24](#c02.xhtml#Page_24)
+  - Twitter  [24](#c02.xhtml#Page_24)
+- BankMuscat  [22](#c02.xhtml#Page_22)
+- BKA. *see* [German Bundeskriminalamt (BKA)](#b02.xhtml#ind330)
+- BlueHat Prize  [178](#c10.xhtml#Page_178)
+- botnets
+  - command and control  [121](#c07.xhtml#Page_121)
+  - disruptions  [123](#c07.xhtml#Page_123)–124
+  - existing, mitigating  [122](#c07.xhtml#Page_122)–123
+  - governance theory  [124](#c07.xhtml#Page_124)–127
+  - ISP participation  [131](#c07.xhtml#Page_131)
+  - levels of cybersecurity  [130](#c07.xhtml#Page_130)
+  - minimizing criminal profit  [123](#c07.xhtml#Page_123)–124
+  - mitigation  [127](#c07.xhtml#Page_127)–132
+  - multiple‐stakeholder (polycentric) approach  [118](#c07.xhtml#Page_118)–119
+  - P2P  [121](#c07.xhtml#Page_121)
+  - regulation  [117](#c07.xhtml#Page_117)–133, [157](#c09.xhtml#Page_157)–159, [164](#c09.xhtml#Page_164), [170](#c09.xhtml#Page_170), [175](#c10.xhtml#Page_175), [202](#c11.xhtml#Page_202)
+- “bounty agreement”  [241](#c12.xhtml#Page_241)
+- Bowden, Mark  [161](#c09.xhtml#Page_161)
+- British Airways  [57](#c04.xhtml#Page_57), [60](#c04.xhtml#Page_60)
+- bug bounty programs
+  - CFAA  [234](#c12.xhtml#Page_234)–235
+  - DMCA  [235](#c12.xhtml#Page_235)
+  - DOJ framework  [235](#c12.xhtml#Page_235)–236
+  - Facebook  [183](#c10.xhtml#Page_183)–185
+  - Google  [180](#c10.xhtml#Page_180)–183
+  - legal terms  [236](#c12.xhtml#Page_236)–238
+  - Microsoft  [178](#c10.xhtml#Page_178)–179
+  - “safe harbors”  [233](#c12.xhtml#Page_233)–234
+- Bugcrowd  [186](#c10.xhtml#Page_186), [187](#c10.xhtml#Page_187), [233](#c12.xhtml#Page_233)
+- building management systems  [61](#c04.xhtml#Page_61)
+- bureaucratization of risk [xix](#f05.xhtml#Page_xix)
+- “Business Club”  [128](#c07.xhtml#Page_128)
+
+## C
+- Canadian law  [205](#c11.xhtml#Page_205)
+- CANSO. *see* [Civil Air Navigation Services Organisation (CANSO)](#b02.xhtml#ind135)
+- CAT. *see* [Cybersecurity Assessment Tool (CAT)](#b02.xhtml#ind195)
+- CBPR. *see* [APEC Cross Border Privacy Rules (CBPR) arrangement](#b02.xhtml#ind41)
+- CCTV cameras  [118](#c07.xhtml#Page_118)
+- CDC. *see* [Center for Disease Control and Prevention (CDC)](#b02.xhtml#ind120)
+- Center for Disease Control and Prevention (CDC)  [101](#c06.xhtml#Page_101)
+- Centre for the Protection of National Infrastructure (CPNI)  [44](#c03.xhtml#Page_44)
+- CERTs. *see* [computer emergency response teams (CERTs)](#b02.xhtml#ind148)
+- CFAA. *see* [Computer Fraud and Abuse Act (CFAA)](#b02.xhtml#ind149)
+- Chicago Convention  [62](#c04.xhtml#Page_62)
+- Chief Information Security Officer (CISO)  [146](#c08.xhtml#Page_146)
+- child pornography  [203](#c11.xhtml#Page_203)
+- Chinese law‐enforcement practice  [202](#c11.xhtml#Page_202)
+- CIIP. *see* [Critical Information Infrastructure Protection (CIIP)](#b02.xhtml#ind171)
+- CIM. *see* [Contextual Integrity Model (CIM)](#b02.xhtml#ind162)
+- CIP. *see* [critical infrastructure protection (CIP)](#b02.xhtml#ind173)
+- CISA. *see* [Cybersecurity Information Sharing Act (CISA)](#b02.xhtml#ind196)
+- CISCP. *see* [Cyber Information Sharing and Collaboration Program (CISCP)](#b02.xhtml#ind185)
+- CISO. *see* [Chief Information Security Officer (CISO)](#b02.xhtml#ind125)
+- Civil Aeronautics Act  [59](#c04.xhtml#Page_59)
+- Civil Air Navigation Services Organisation (CANSO)  [62](#c04.xhtml#Page_62), [66](#c04.xhtml#Page_66)
+- Civil Aviation Cybersecurity Action Plan (December 2014)  [66](#c04.xhtml#Page_66)–67
+- Clinton, Bill  [99](#c06.xhtml#Page_99), [144](#c08.xhtml#Page_144)
+  - creation of ISACs  [8](#c01.xhtml#Page_8)
+- Clipper Chip  [161](#c09.xhtml#Page_161)
+- CLOUD Act  [215](#c11.xhtml#Page_215)
+- COBiT. *see* [ISACA’s Control Objectives for Information and Related Technology (COBiT)](#b02.xhtml#ind417)
+- code‐based (circumventing technical barriers)  [234](#c12.xhtml#Page_234)
+- Coggon, John  [164](#c09.xhtml#Page_164)
+- collective third‐party risk management  [71](#c04.xhtml#Page_71)–72
+- command‐and‐control or C&C botnets  [121](#c07.xhtml#Page_121)
+- Community Cyber Threat Center  [70](#c04.xhtml#Page_70)
+- Community Institution and Associations (CIA) membership  [101](#c06.xhtml#Page_101)
+- computer emergency response teams (CERTs)  [23](#c02.xhtml#Page_23), [102](#c06.xhtml#Page_102), [129](#c07.xhtml#Page_129)
+- Computer Fraud and Abuse Act (CFAA)  [234](#c12.xhtml#Page_234)–235, [236](#c12.xhtml#Page_236)
+- computer‐related crime [xvii](#f05.xhtml#Page_xvii)
+- computer security  [120](#c07.xhtml#Page_120)
+- computer security incident response teams (CSIRTs)  [102](#c06.xhtml#Page_102)
+- Conferences and Organizations Mature (2015 and Beyond)  [69](#c04.xhtml#Page_69)
+- Conficker worm  [2](#c01.xhtml#Page_2)
+  - infection  [158](#c09.xhtml#Page_158)–162
+  - general  [86](#c05.xhtml#Page_86)–89
+  - public health alternative  [162](#c09.xhtml#Page_162)–169
+  - public health approach  [169](#c09.xhtml#Page_169)–171
+- Conficker Working Group (CWG)  [86](#c05.xhtml#Page_86), [88](#c05.xhtml#Page_88)–89, [157](#c09.xhtml#Page_157)
+  - failures of  [161](#c09.xhtml#Page_161)
+  - private‐sector collaboration  [160](#c09.xhtml#Page_160)
+- Contextual Integrity Model (CIM)  [196](#c11.xhtml#Page_196)
+- control points analysis (CPA)  [196](#c11.xhtml#Page_196), [208](#c11.xhtml#Page_208)–209
+- conventional policymaking mechanisms  [41](#c03.xhtml#Page_41)
+- CoreCLR  [178](#c10.xhtml#Page_178)
+- Council of Europe Cybercrime Convention  [118](#c07.xhtml#Page_118)
+- CPA. *see* [control points analysis (CPA)](#b02.xhtml#ind163)
+- CPNI. *see* [Centre for the Protection of National Infrastructure (CPNI)](#b02.xhtml#ind121)
+- Creative Commons  [244](#c12.xhtml#Page_244)
+- credit rating agencies  [148](#c08.xhtml#Page_148)–149, [152](#c08.xhtml#Page_152)
+- critical information infrastructure protection (CIIP)  [82](#c05.xhtml#Page_82), [120](#c07.xhtml#Page_120)
+- critical infrastructure (CI)  [161](#c09.xhtml#Page_161)–162
+- critical infrastructure protection (CIP)  [98](#c06.xhtml#Page_98), [99](#c06.xhtml#Page_99)–100, [144](#c08.xhtml#Page_144)
+- critical infrastructures (or vital infrastructures)  [120](#c07.xhtml#Page_120)
+- Crowdstrike  [128](#c07.xhtml#Page_128)
+- cryptographic backdoors, [161](#c09.xhtml#Page_161). *see also* [Clipper Chip](#b02.xhtml#ind139)
+- Cryptolocker  [128](#c07.xhtml#Page_128)
+- CSIRTs. *see* [computer security incident response teams (CSIRTs)](#b02.xhtml#ind152)
+- CTA. *see* [Cyber Threat Alliance (CTA)](#b02.xhtml#ind202)
+- “Cyber CDC”  [169](#c09.xhtml#Page_169)–170
+- Cybercrime Convention  [129](#c07.xhtml#Page_129), [130](#c07.xhtml#Page_130)
+- Cyber Essentials Scheme  [45](#c03.xhtml#Page_45)
+- Cyber Guard  [70](#c04.xhtml#Page_70)
+- cyberhealth, definition  [163](#c09.xhtml#Page_163)
+- Cyber Information Sharing and Collaboration Program (CISCP)  [6](#c01.xhtml#Page_6), [15](#c01.xhtml#Page_15)
+- cyber insurance  [139](#c08.xhtml#Page_139)–143, [149](#c08.xhtml#Page_149)–151

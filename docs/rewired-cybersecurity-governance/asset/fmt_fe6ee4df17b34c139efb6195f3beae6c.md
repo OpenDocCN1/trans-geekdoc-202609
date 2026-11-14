@@ -1,0 +1,68 @@
+
+614. Sidel, Robin. “Big Banks Team Up to Fight Cyber Crime.” *Wall Street Journal*, August 9, 2016. [https://www.wsj.com/articles/big-banks-team-up-to-fight-cyber-crime-1470758719](https://www.wsj.com/articles/big-banks-team-up-to-fight-cyber-crime-1470758719).
+
+615. Sidley Austin LLP. “Essentially Equivalent: A Comparison of the Legal Orders for Privacy and Data Protection in the European Union and United States.” January 25, 2016. [https://www.sidley.com/en/insights/publications/2016/01/essentially-equivalent](https://www.sidley.com/en/insights/publications/2016/01/essentially-equivalent).
+
+616. Sinclair, Timothy J. “Guarding the Gates of Capital: Credit Rating Processes and The Global Political Economy.” PhD Dissertation, York University, 1995.
+
+617. Sinclair, Timothy J. “Bond Rating Agencies and Coordination in the Global Political Economy.” In *Private Authority and International Affairs*, edited by A. Claire Cutler, Virginia Haufler, and Tony Porter. Albany, NY: SUNY Press, 1999.
+
+618. Singer, Peter W., and Allan Friedman. *Cybersecurity and Cyberwar: What Everyone Needs to Know*. Oxford: Oxford University Press, 2014.
+
+619. SITA. “Aviation Cybersecurity Symposium 2017.” 2017. [https://www.sita.aero/events/events-listing/2017-aviation-cybersecurity-symposium](https://www.sita.aero/events/events-listing/2017-aviation-cybersecurity-symposium).
+
+620. SITA. “Community Cyber Threat Center.” n.d.–a. [https://www.sita.aero/about-us/working-for-the-community/industry-initiatives/cyber-threat-center](https://www.sita.aero/about-us/working-for-the-community/industry-initiatives/cyber-threat-center).
+
+621. SITA. “Solutions & Services.” n.d.–b. [https://www.sita.aero/solutions-and-services](https://www.sita.aero/solutions-and-services).
+
+622. Slaughter, Anne-Marie. “Everyday Global Governance.” *Daedalus* 132, no. 1 (2003): 83–90.
+
+623. Smith, Brad. “Protecting Consumer Data from Government Snooping.” December 4, 2013. [http://blogs.microsoft.com/blog/2013/12/04/protecting-customer-data-from-government-snooping/](http://blogs.microsoft.com/blog/2013/12/04/protecting-customer-data-from-government-snooping/).
+
+624. Smith, Brad. “A Legislative Path to Create New Laws is Better than Arguing Over Old Laws.” *Microsoft Blog*, June 23, 2017. [https://blogs.microsoft.com/on-the-issues/2017/06/23/legislative-path-create-new-laws-better-arguing-old-laws/](https://blogs.microsoft.com/on-the-issues/2017/06/23/legislative-path-create-new-laws-better-arguing-old-laws/).
+
+625. Snell, Jim, and Christian Lee. “The Internet of Things Changes Everything, or Does It? –Your Handy Guide to Legal Issue-Spotting in a World Where Everything Is Connected.” *The Computer and Internet Lawyer* 32, no. 11 (2015): 1–8.
+
+626. Solomon, Steven Davidoff. “How Yahoo’s Data Breach Could Affect Its Deal With Verizon.” *The New York Times*, September 23, 2016. [https://www.nytimes.com/2016/09/24/business/dealbook/how-yahoos-data-breach-could-affect-its-deal-with-verizon.html](https://www.nytimes.com/2016/09/24/business/dealbook/how-yahoos-data-breach-could-affect-its-deal-with-verizon.html).
+
+627. Solove, Daniel J., and Paul M. Schwartz. *Information Privacy Law*. 5th ed. Blue Springs: Aspen Publishing Co., 2015.
+
+628. Soltra. “The Soltra Story.” n.d. [https://www.soltra.com/en/about/](https://www.soltra.com/en/about/).
+
+629. Souaiaia, A. *Anatomy of Dissent in Islamic Societies: Ibadism, Rebellion, and Legitimacy*. London: Palgrave Macmillan, 2013.
+
+630. Spar, Deborah. “The Public Face of Cyberspace.” In *Global Public Goods*, edited by Inge Kaul, Isabelle Grunberg, and Marc Stern, 344–363. New York: Oxford University Press, 1999.
+
+631. Sparrow, Andrew. “WhatsApp Must Be Accessible to Authorities, Says Amber Rudd.” *The Guardian*, March 26, 2017. [https://www.theguardian.com/technology/2017/mar/26/intelligence-services-access-whatsapp-amber-rudd-westminster-attack-encrypted-messaging](https://www.theguardian.com/technology/2017/mar/26/intelligence-services-access-whatsapp-amber-rudd-westminster-attack-encrypted-messaging).
+
+632. Spiegel Staff. “Inside TAO: Documents Reveal Top NSA Hacking Unit.” *Der Spiegel*, December 29, 2013.
+
+633. SSRN. “Georgia Tech Scheller College of Business Research Paper No. WP 38.” SSRN. July 2017. [https://ssrn.com/abstract=2728478](https://ssrn.com/abstract=2728478) or [http://dx.doi.org/10.2139/ssrn.2728478](http://dx.doi.org/10.2139/ssrn.2728478).
+
+634. Statement of David Bitkower. Principal Deputy Assistant Attorney General, Criminal Division, U.S. Department of Justice, before the Committee on the Judiciary, United States House of Representatives. February 25, 2016. [https://www.justice.gov/opa/file/828686/download](https://www.justice.gov/opa/file/828686/download).
+
+635. Stoker, Gerry. “Governance as Theory: Five Propositions.” *International Social Science Journal* 155 (1998): 17–28.
+
+636. Stone, Jeff, and Kate Fazzini. “U.S. Financial Sector Begins ‘Sheltered Harbor’ Rollout.” *Wall Street Journal*, March 9, 2017. [https://www.linkedin.com/pulse/us-financial-sector-begins-sheltered-harbor-rollout-jeff-stone](https://www.linkedin.com/pulse/us-financial-sector-begins-sheltered-harbor-rollout-jeff-stone).
+
+637. Streeck, Wolfgang, and Philippe Schmitter. “Community, Market, State and Associations? The Prospective Contribution of Interest Governance to Social Order.” *European Sociological Review* 1 (1985): 119–138.
+
+638. Strobl, Günter, and Han Xia. “The Issuer-Pays Rating Model and Ratings Inflation: Evidence from Corporate Credit Ratings.” Mimeo, University of North Carolina, 2011. [https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2002186](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2002186).
+
+639. Summers, Judith. *Soho: A History of London's Most Colourful Neighborhood*. London: Bloomsbury, 1989.
+
+640. Swanson, Darren, Stephan Barg, Stephen Tyler, Henry Venema, Sanjay Tomar, Suruchi Bhadwal, Sreeja Nair, Dimple Roy, and John Drexhage. “Seven Tools for Creating Adaptive Policies.” *Technological Forecasting and Social Change, Two Special Sections: Risk and Technology Addressing Deep Uncertainty Using Adaptive Policies*, 77, no. 6 (July 1, 2010): 924–939. [https://doi.org/10.1016/j.techfore.2010.04.005](https://doi.org/10.1016/j.techfore.2010.04.005).
+
+641. Swire, Peter, and Justin D. Hemmings. “Mutual Legal Assistance in an Era of Globalized Communications: The Analogy to the Visa Waiver Program.” January 11, 2016. *71 NYU Annual Survey of American Law* 687 (2017).
+
+642. swissinfo.ch, S. W. I. “Hackers Target Swiss Defence Ministry.” May 4, 2016. [https://www.swissinfo.ch/eng/politics/industrial-espionage_hackers-target-swiss-defence-ministry/42131890](https://www.swissinfo.ch/eng/politics/industrial-espionage_hackers-target-swiss-defence-ministry/42131890).
+
+643. Symantec. “W32.Duqu: The Precursor to the next Stuxnet.” Symantec, November 23, 2011.
+
+644. Symantec. “Simple NjRAT Fuels Nascent Middle East Cybercrime Scene.” Symantec Security Response. March 30, 2014. [https://perma.cc/3CVF-QKGP](https://perma.cc/3CVF-QKGP).
+
+645. Symantec. “Corporate Fact Sheet.” 2016a. [https://www.symantec.com/content/dam/symantec/docs/other-resources/symantec-corporate-fact-sheet-060517-en.pdf](https://www.symantec.com/content/dam/symantec/docs/other-resources/symantec-corporate-fact-sheet-060517-en.pdf).
+
+646. Symantec. *Dridex: Tidal Waves of Spam Pushing Dangerous Financial Trojan. Whitepaper*. Mountain View: Symantec, 2016b. [http://www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/dridex-financial-trojan.pdf](http://www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/dridex-financial-trojan.pdf).
+
+647. Symantec. “Internet Security Threat Report.” April 2017a. [https://www.symantec.com/content/dam/symantec/docs/reports/istr-22-2017-en.pdf](https://www.symantec.com/content/dam/symantec/docs/reports/istr-22-2017-en.pdf).
