@@ -1,0 +1,831 @@
+- pgno: 0
+  md: 'Full length article
+
+
+    # An optimized training approach for meteor detection with an attention mechanism
+    to improve robustness on limited data
+
+
+    V.Y. Shirasuna, A.L.S. Gradvohl *
+
+
+    Faculdade de Tecnologia, Universidade Estadual de Campinas, R. Paschoal Marmo,
+    1888, Limeira, 13484-332, SP, Brazil
+
+
+    # ARTICLE INFO
+
+
+    +   Article history:
+
+    +   Received 27 June 2023
+
+    +   Accepted 21 August 2023
+
+    +   Available online 26 August 2023
+
+
+    +   Dataset link: Image dataset for the creation of an automatic system for meteor
+    fall detecion (Original data)
+
+
+    +   Keywords:
+
+    +   Meteor detection
+
+    +   Optical observations
+
+    +   Deep learning
+
+    +   Optimization
+
+
+    # ABSTRACT
+
+
+    Researchers have extensively used convolutional neural networks to detect meteor
+    falls on Earth. However, when dealing with limited available data, these networks
+    may need more robustness to classify new real-world images correctly. This study
+    proposes an optimized training approach of a pre-trained model with an attention
+    mechanism to achieve better generalization results in such a scenario. We compare
+    two architectures, an optimized base model and another version with an attention
+    mechanism. Furthermore, we present a new and publicly available optical meteor
+    dataset that merges several public data sources. We used the merged dataset to
+    train classification models combined with a stratified five-fold cross-validation
+    strategy to determine the reliability of the prediction. The experimental results
+    from both architectures showed good and similar performance. To further determine
+    the best architecture, we performed an additional analysis with visual explanations
+    in new observations. The architecture with an attention mechanism was the best
+    model achieving a false alarm ratio of 2.6% and an accuracy of 97%.
+
+
+    # 1. Introduction
+
+
+    When meteoroids in space enter Earth''s upper atmosphere and begin to glow, they
+    become meteors. When a meteor falls, the excitation of air molecules produces
+    the light and color of its trail. Meteors travel in different orbits around the
+    Sun and can strike Earth from any angle. Unlike other pursuits of observation
+    in astronomy, meteor observers do not need expensive equipment to spot them (Lunsford,
+    2009).
+
+
+    Detecting meteor falls plays a critical role in understanding the formation of
+    the Solar System, because we can obtain much relevant information from meteor
+    observations, such as direction, speeds, and masses (Koschny et al., 2019).
+
+
+    There are geographically distributed meteor network observation communities worldwide
+    with the help of citizen scientists. The Brazilian Meteor Observation Network
+    (BRAMON) is one of the largest meteor monitoring networks in the world, considering
+    the number of stations and the covered area, (Betzel, 2022). However, cameras
+    inevitably capture events similar to meteors, such as aircraft, satellites, clouds,
+    flashing lights, and atmospheric events, which challenge the detection by humans
+    or systems. Therefore, it is essential to establish a robust classifier to discriminate
+    meteors from other sorts of objects correctly.
+
+
+    * Corresponding author.
+
+    E-mail addresses: victor.shirasuna@gmail.com (V.Y. Shirasuna), gradvohl@unicamp.br
+    (A.L.S. Gradvohl).
+
+
+    Convolutional Neural Networks (CNN) have achieved remarkable results in computer
+    vision, surpassing humans in applications such as object recognition (He et al.,
+    2015). Therefore, we can attach attention mechanisms to CNNs to select relevant
+    features. Previous studies have adopted CNN classification models to predict the
+    “meteor” or “non-meteor” class of optical observations. Although this approach
+    leads to compelling results, it is much more data-hungry due to the number of
+    parameters to include in the estimation process (Yamashita et al., 2018). This
+    situation can lead to a lack of robustness when dealing with limited training
+    data due to overfitting.
+
+
+    In this study, we investigate the use of attention mechanisms with optimized CNN
+    architecture training to achieve better generalization results when detecting
+    meteors in sky images. We show that this approach has the potential to overcome
+    the need for large volumes of data and improves the prediction robustness in the
+    application of meteor detection. Furthermore, we present a new and publicly available
+    optical observation of 7000 balanced meteors and non-meteors images by merging
+    three public data sources to aid future work. We also performed a visual explanation
+    analysis with the Grad-CAM algorithm on new images to determine the best architecture
+    by analyzing the features to which the classifiers pay more attention.
+
+
+    We organize the rest of this paper as follows. Section 2 presents the related
+    work. Then, Section 3 describes the methodology adopted in the study. Section
+    4 shows and discusses the results of the experiments we conducted in this research.
+    Section 5 presents the final remarks on this work.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# ## 2. Related work
+
+
+    **Table 1** Summary of data sources used to compose the meteor dataset.
+
+
+    | Class | Source | Images | Total |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Meteor | BRAMON | 2520 | |
+
+    | Meteor | UKMON | 665 | 3850 |
+
+    | Meteor | BOAM | 665 | |
+
+    | Non-meteor | BRAMON | 2750 | |
+
+    | Non-meteor | UKMON | 400 | 3150 |
+
+
+    Automatic meteor detection has received more attention as astronomers employ machine
+    learning methods. Researchers have proposed several approaches with different
+    data sizes and sources, with successful results. For instance, Cicco et al. (2017)
+    explored the application of machine learning deep learning algorithms by applying
+    random forest (RF), long short-term memory (LSTM), and CNNs for the Cameras for
+    All-Sky Meteor Surveillance (CAMS) datasets. Their work claims the capacity of
+    deep learning techniques to achieve state-of-the-art results without performing
+    a manual feature selection as in machine learning.
+
+
+    However, the same amount of labeled data is only sometimes readily available.
+    Therefore, this section discusses the methodologies used in our study to implement
+    the optimization of a VGG16 model attached to CBAM attention mechanisms to improve
+    generalization with a dataset of 7000 image data.
+
+
+    In turn, Gural (2019) performed a recurrent neural network (RNN) and a CNN named
+    MeteorNet to automate the post-detection screening of potential meteor tracks
+    in the CAMS pipeline. He obtained 100,000 meteors and 100,000 non-meteors from
+    video imaging, with no data augmentation, to train and evaluate the algorithms.
+    Since CNNs are suitable for handling spatial information, MeteorNet leveraged
+    this feature to capture 99.94% of meteor falls. In contrast, RNNs processing temporal
+    or sequential data achieved 98.1% positive images of meteors. Because our study’s
+    available training data is much smaller, we focus on achieving comparable results
+    by optimizing the CNN architecture and its training.
+
+
+    # ### 3.1. Computing environment
+
+
+    In addition, Cecil and Campbell-Brown (2020) proposed a custom meteor detection
+    pipeline with a filtering stage of the best 18 CNNs. Their best model could filter
+    5485 unseen samples with 99.8% accuracy. Therefore, to accomplish the results,
+    they extracted 22,444 images of meteors and 33,786 images of non-meteors manually
+    labeled from the Canadian Automated Meteor Observatory by video imaging.
+
+
+    We performed all implementations and experiments using Python version 3.8.10 and
+    the following libraries: Tensorflow version 2.11, Scikit-learn version 1.2.2,
+    Numpy version 1.23.4, Pandas version 2.0.0, and Matplotlib version 3.6.2. The
+    High Performance Intelligent Decision Systems research group supported this work.
+    It provided a 2.9 GHz Intel Core i7 16 core processor, with 16 GB RAM, and NVIDIA
+    TITAN Xp running on a Rocky Linux 8.6 operating system.
+
+
+    # ### 3.2. Meteor image dataset
+
+
+    More recently, Al-Owais et al. (2023) introduced object detection using YOLO algorithms
+    of meteor and non-meteor objects by reaching 98.5% recall. They achieved this
+    result by employing 16,965 imbalanced images from the U.A.E. Meteor Monitoring
+    Network. Although one can easily integrate both works to operate as a detection
+    system, the current research focuses on improving the meteor detection stage in
+    the scenario of limited labeled data.
+
+
+    The meteor image dataset we used contains 7000 unique sky photos of the occurrence
+    or non-occurrence of falling meteors. Different instruments recorded the images
+    in the period from 2014 to 2023. Therefore, we balanced the dataset with a 55:45
+    ratio of meteors to non-meteors to prevent the model from becoming biased towards
+    one class. Table 1 presents the summary statistics of the dataset.
+
+
+    In close connection to our work, Galindo and Lorena (2018) introduce the application
+    of a pre-trained model and exploit different approaches. They performed their
+    experiments in a dataset of 1000 images of meteors and 660 images of non-meteors.
+    They merged this dataset with data from the Universidade do Vale do Paraíba and
+    the EXOSS website. Marsola and Lorena (2019) also applied transfer learning with
+    a smaller dataset using the same data sources. Both works showed that fine-tuning
+    was an essential technique to improve performance accuracy. However, Galindo and
+    Lorena (2018) demonstrated how data augmentation worsens performance accuracy
+    in their results, even when using small augmentation data.
+
+
+    Three different data sources provided a diverse set of sky scenes, as Fig. 1 exemplifies.
+    The instruments captured the images mainly at night with the presence of other
+    events, such as aircraft lights, satellites, clouds, flashing lights, image errors,
+    and atmospheric events.
+
+
+    In our work, we performed fine-tuning and did not use data augmentation as an
+    essential element to leverage the model performance. Although other works mentioned
+    here achieved successful accuracy results, it is unclear whether the robustness
+    capacity is suitable to correctly distinguish meteors from other events, such
+    as aircraft lights or other atmospheric occurrences. In our work, we concentrate
+    on attaining the same results concerning the robustness of focusing on the relevant
+    features with attention mechanisms.
+
+
+    In our experiments, we resized all the images in the dataset to 224 × 224 pixels
+    in the RGB color space, and then we rescaled each image by a factor of 1:255 using
+    a data generator. We did not perform any data augmentation as it can decrease
+    performance accuracy (Galindo and Lorena, 2018). We also cropped 24 pixels from
+    the lower part of each image to remove the captions, which can potentially be
+    used as a feature in the prediction task.
+
+
+    # ### 3.2.1. Data sources
+
+
+    # ## 3. Methodology
+
+
+    The meteor dataset we used in this work derives from three primary data sources:
+    the Brazilian Meteor Observation Network (BRAMON, 2023), the UK Meteor Network
+    (UKMON, 2023), and the Base des Observateurs Amateurs de Météores (BOAM, 2023)
+    repositories. Since observers can spot meteors from different angles depending
+    on locations, they are encouraged to contribute by mounting their stations, which
+    provide valuable scientific data on meteor falls.
+
+
+    There are successful attempts to use deep neural networks by leveraging substantial
+    amounts of data, as many meteor monitoring stations produce vast amounts of video
+    data of the skies daily.
+
+
+    BRAMON has approximately 130 stations and a covered area of 1.3 × 10^6 km^2 on
+    Brazil’s territory. BRAMON is considered one of the largest meteor monitoring
+    networks in the world according to the factors described (Betzler, 2022). Therefore,
+    the images from BRAMON in our dataset are responsible for approximately 66% of
+    meteors and 87% of non-meteors. Moreover, most raw images have diverse characteristics,
+    such as resolutions, aspect ratios, brightness, and colors.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/c918e11e8729a389b37a1fc798735c61_2_0.png)
+
+
+    ![](img/c918e11e8729a389b37a1fc798735c61_2_1.png)
+
+
+    ![](img/c918e11e8729a389b37a1fc798735c61_2_2.png)
+
+
+    Meteor (BRAMON)
+
+
+    Meteor (UKMON)
+
+
+    Meteor (BOAM)
+
+
+    ![](img/c918e11e8729a389b37a1fc798735c61_2_3.png)
+
+
+    ![](img/c918e11e8729a389b37a1fc798735c61_2_4.png)
+
+
+    Non-meteor (BRAMON)
+
+
+    Non-meteor (UKMON)
+
+
+    Fig. 1. Examples of meteor and non-meteor images from different data sources.
+
+
+    Similarly, UKMON has an extensive network with 195 operating cameras in the United
+    Kingdom. A standard detection kit, including an IMX291 POE camera, a 4 mm camera
+    lens, and other accessories, is sold to connect to its system. Therefore, many
+    of the raw images from UKMON are in grayscale with similar resolutions and aspect
+    ratios. To take advantage of these characteristics, we collected approximately
+    17% of images of meteors and 13% of images of non-meteors from this source.
+
+
+    # 3.3.1. Model architectures
+
+
+    In turn, BOAM has 12 active operating stations that cover almost all of France’s
+    territory. Researchers can collect various data from the BOAM repository, such
+    as images, videos, and metadata. Here, we only extracted the image files containing
+    meteor occurrences since only meteors are registered, representing approximately
+    17% of the meteor class in the dataset.
+
+
+    In our implementation, we used the learned weights trained on the ImageNet dataset
+    from a VGG16 model (Simonyan and Zisserman, 2015). The VGG family outperformed
+    other CNN architectures, such as DenseNet, Inception-V3, and ResNet, for a dataset
+    of 7000 images (Dawson et al., 2023).
+
+
+    # 3.2.2. Dataset splits
+
+
+    From that network, we built two modified versions of the VGG16 architecture, as
+    Fig. 2 depicts. First, we customized the VGG16 using Batch Normalization (BN)
+    (Ioffe and Szegedy, 2015) and Dropout layers (Srivastava et al., 2014). We are
+    aware that combining them may lead to worse performance in many modern neural
+    networks, including CNNs, due to variance shifts (Li et al., 2019). However, these
+    were essential techniques to reduce the computation time and prevent the model
+    from overfitting.
+
+
+    In our study, we considered the split approach of the dataset performed by Dawson
+    et al. (2023). Their work also applied a CNN architecture to classify images with
+    the same dimensions as the meteor dataset but for the carbonate rock problem.
+    Therefore, we split the dataset into 80% training and 20% test data. Finally,
+    we used the training data with stratified cross-validation to create five folds
+    of the 80% training data and the 20% validation data to evaluate the reliability
+    of the prediction. The training and validation sets represent 64% and 16% of the
+    total dataset.
+
+
+    Therefore, we added only one dropout layer before the softmax layer and set the
+    drop ratio at 0.2, as suggested by Li et al. (2019). Next, we placed a BN layer
+    before each max pooling layer and a second Dropout layer with a drop ratio of
+    0.2 before a single dense layer of 16 units. We also substituted the flattening
+    layer with a Global AveragePooling 2D layer to reduce the feature maps towards
+    easily understood by the single classification layer.
+
+
+    # 3.3. Implementation details
+
+
+    The basic idea of attention mechanisms is to exploit the concept of human attention
+    by focusing on essential features and suppressing unnecessary ones. Therefore,
+    attention also improves the representation of interests (Woo et al., 2018). In
+    this sense, it can improve the model generalization by correctly selecting the
+    key features to discriminate meteors from other events on limited data.
+
+
+    In this section, we present the implementation details of the proposed approach.
+    We describe two comparative model architectures from the VGG16 network and the
+    optimized training settings.
+
+
+    The second architecture uses the previous model to investigate that strategy but
+    with the addition of Convolutional Block Attention Module (CBAM) attention mechanisms
+    (Woo et al., 2018). We nominate this architecture as VGG16+CBAM. Woo et al. (2018)
+    specifically designed the CBAM attention mechanism to boost the representation
+    power of CNNs, consisting'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/c918e11e8729a389b37a1fc798735c61_3_0.png)
+
+
+    ![](img/c918e11e8729a389b37a1fc798735c61_3_1.png)
+
+
+    # Fig. 2. The architectures from the used VGG16 and VGG16+CBAM models.
+
+
+    | Training strategy | # of epochs | Batch size | Learning rate | Weight decay
+    |
+
+    |---|---|---|---|---|
+
+    | Training | 10 | 8 | 10^-5 | 5 x 10^-4 |
+
+    | Fine-tuning | 50 | 32 | 10^-4 | 5 x 10^-4 |
+
+
+    of two modules in sequence. The first module, channel attention, focuses on “what”
+    is meaningful given an input image. The second module, spatial attention, focuses
+    on “where” there is an informative part complementary to channel attention. We
+    then attached the CBAM attention mechanism before each BN layer, as Fig. 2 shows.
+    At the end of this process, both architectures have 14,728,818 learning parameters
+    since the channel and spatial attention modules do not produce extra parameters.
+
+
+    # 3.3.2. Model training
+
+
+    Subsequently, we performed an optimized training approach to leverage all the
+    adding architecture techniques. We used two strategies for training. First, a
+    training phase keeps all layers frozen except for the classification layer and
+    trains both models for ten epochs. Finally, we unfreeze all layers and then train
+    all models for 50 epochs using different batch sizes and learning rate values
+    for fine-tuning.
+
+
+    We considered the AdamW algorithm for the optimizer with a 5 x 10^-4 decoupled
+    weight decay for both training strategies. AdamW stands out as a better generalization
+    method than the common implementation of Adam with L2 regularization (Loshchilov
+    and Hutter, 2019).
+
+
+    Finally, we used optimal batch size and learning rate values for training and
+    fine-tuning. In this sense, increasing the batch size rather than decaying the
+    learning rate usually obtains the same results enabling the efficient use of large
+    batch sizes by significantly reducing the number of parameter updates (Smith et
+    al., 2018). In addition, higher learning rates also require larger batch sizes
+    (Kandel and Castelli, 2020).
+
+
+    We then started with small values of batch size and learning rate. Next, we employed
+    higher values of both for fine-tuning. Masters and Luschi (2018) showed that small
+    batch sizes between 2 and 32 improve generalization performance. Therefore, we
+    arbitrarily used a batch size of 8 and a learning rate of 10^-5 for the training.
+    Next, for fine-tuning a batch size of 32 and a learning rate of 10^-4, as Table
+    2 shows.
+
+
+    # 3.4. Evaluation
+
+
+    Our work evaluated the performance of the proposed methodology through five statistical
+    measures. From the confusion
+
+
+    matrix, we used the accuracy (Acc), sensitivity (Sn), specificity (Sp), true skill
+    statistic (TSS), and false alarm ratio (FAR) to evaluate each training, validation,
+    and test fold for the meteor dataset. We applied Eqs. (1), (2), (3), (4), and
+    (5) for classification evaluation:
+
+
+    ```
+
+    Acc = \frac{TP + TN}{TP + FP + FN + TN} (1)
+
+    Sn = \frac{TP}{TP + FN} (2)
+
+    Sp = \frac{TN}{TN + FP} (3)
+
+    TSS = \frac{TP}{TP + FN} - \frac{FP}{FP + TN} (4)
+
+    FAR = \frac{FP}{FP + TP} (5)
+
+    ```
+
+
+    where TP and TN are the numbers of true positives and true negatives, respectively;
+    FP and FN are the numbers of false positives and false negatives, respectively.
+
+
+    We evaluated the overall performance of the classifiers with Acc, a common metric
+    used in classification tasks to summarize the performance of a classification
+    model. Since the Acc metric does not distinguish between classes, we cannot assess
+    the classifier''s performance to correctly discriminate meteors from other sorts
+    of objects. Therefore, we employed four other metrics (Sn, Sp, TSS, and FAR) to
+    measure the models'' robustness further.
+
+
+    We highlight that the term robustness has a range of interpretations in computer
+    vision (Drenkow et al., 2022). In our case, the robustness performance is the
+    ability of the classification model to generalize within the meteor detection
+    domain.
+
+
+    In this case, the Sn and Sp metrics are inversely proportional and indicate the
+    true positive and true negative rates, respectively (Parikh et al., 2008). Furthermore,
+    we also employed TSS as an appropriate metric for assessing robustness because
+    it can measure whether the model correctly discriminates the presence and absence
+    of data (Costa et al., 2023). Additionally, FAR measures the number of false alarms
+    divided by the number of forecasted events, indicating the fraction of meteor
+    forecasts that did not occur (Barnes et al., 2009).
+
+
+    To determine the best robustness of the architecture, we analyzed visual explanations
+    of the predictions using the Gradient-weighted Class Activation Mapping (Grad-CAM)
+    algorithm (Selvaraju et al., 2017). Grad-CAM uses gradients that flow into the
+    final convolutional layer to produce a coarse localization map, highlighting the
+    critical regions in the image to forecast concept. This method was crucial to
+    understanding features'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '| Model | Dataset | ACC | Sn | Sp | TSS | FAR |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | VGG16 | Training | 0.9949 (±0.0028) | 0.9959 (±0.0033) | 0.9937 (±0.0047) |
+    0.9896 (±0.0058) | 0.0051 (±0.0038) |
+
+    | | Validation | 0.9607 (±0.0065) | 0.9675 (±0.0117) | 0.9524 (±0.0122) | 0.9199
+    (±0.0130) | 0.0386 (±0.0093) |
+
+    | | Test | 0.9647 (±0.0054) | 0.9683 (±0.0062) | 0.9603 (±0.0104) | 0.9286 (±0.0114)
+    | 0.0324 (±0.0081) |
+
+    | VGG16 + CBAM | Training | 0.9967 (±0.0018) | 0.9966 (±0.0030) | 0.9967 (±0.0023)
+    | 0.9933 (±0.0035) | 0.0027 (±0.0019) |
+
+    | | Validation | 0.9632 (±0.0028) | 0.9653 (±0.0063) | 0.9607 (±0.0048) | 0.9260
+    (±0.0052) | 0.0322 (±0.0037) |
+
+    | | Test | 0.9626 (±0.0052) | 0.9639 (±0.0081) | 0.9610 (±0.0076) | 0.9248 (±0.0102)
+    | 0.0320 (±0.0059) |
+
+
+    ![](img/c918e11e8729a389b37a1fc798735c61_4_0.png)
+
+
+    to which the classifiers pay more attention and verifying their consistency with
+    the meteor or non-meteor occurrence in the optical observation.
+
+
+    | Model | Acc | Sn | Sp | TSS | FAR |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | VGG16 | 0.9736 | 0.9766 | 0.9698 | 0.9465 | 0.0246 |
+
+    | VGG16 + CBAM | 0.9700 | 0.9714 | 0.9683 | 0.9397 | 0.0260 |
+
+
+    # 4. Results and discussion
+
+
+    We present a comparative analysis of the results obtained from VGG16 and VGG16
+    with the CBAM attention mechanism models. Table 3 shows the training, validation,
+    and test results. We highlight that the difference in the metrics between the
+    two models was only in the third decimal place. This result demonstrates that
+    the performance of both classifiers was remarkably similar. However, we observed
+    a considerable variation in the metrics from the VGG16 model. This variation could
+    indicate that the model without the CBAM attention mechanism tends to have more
+    instability to generalize in the different folds.
+
+
+    Subsequently, we selected the final models from the cross-validation process by
+    comparing the metrics values. Therefore, we consider the higher values of Acc,
+    Sn, Sp, TSS, and the lower value of FAR. Table 4 shows the evaluation metrics
+    of the best classifiers from the VGG16 and VGG16+CBAM architectures. The results
+    obtained from the final models were also close, with an Acc of 0.9736 and 0.97,
+    respectively. Nonetheless, the TSS and FAR metrics may suggest that the final
+    VGG16 model correctly discriminates meteors from other events slightly more than
+    the final VGG16 with the CBAM attention mechanism model.
+
+
+    On the other hand, the difference between the Sn and Sp values from the VGG16+CBAM
+    model was lower than in the VGG16 network. Since these metrics are inversely proportional,
+    a minor difference between them may indicate an improvement in robustness. Overall,
+    we did not observe any significant statistics to determine whether the performance
+    is better between the two models.
+
+
+    Indeed, the results from the confusion matrices of the final models were similar,
+    as Fig. 3 shows. Although the VGG16
+
+
+    model performed slightly better in the evaluation metrics, the VGG16+CBAM network
+    achieved a lower value of FP than FN. This result is a desirable behavior since
+    meteors are events that occasionally occur. Thus, we must mitigate more non-meteor
+    images wrongly classified as meteors rather than the opposite.
+
+
+    To further verify the performance of the models, we performed a visual explanation
+    analysis with 100 new real-world images. This new set of images consists of 50
+    non-meteor and 50 meteor optical observations from BRAMON, UKMON, and BOAM. We
+    then fed the images into the best-selected classifiers and used them to generate
+    the predictions and the heat maps. Therefore, Fig. 4 shows the most pertinent
+    visualization results with the corresponding predicted class and the prediction
+    probability of belonging to that class (P).
+
+
+    In these results, the VGG16 model made 39 out of 50 hits in forecasting the non-meteor
+    class. In comparison, the VGG16+CBAM model corrected predicted 45 out of 50 non-meteor
+    images. Interestingly, the visual explanation from the model with CBAM captured
+    the most relevant features that characterize the predicted class. On the other
+    hand, the VGG16 model sometimes focused on more specific regions at the bottom-right
+    and top-left of the images, indicating overfitting by learning the noise from
+    the data.
+
+
+    For the meteor images, the VGG16 model correctly classified 46 out of 50 images.
+    In contrast, the VGG16+CBAM model wrongly predicted only one out of 50 meteor
+    images. In the'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/c918e11e8729a389b37a1fc798735c61_5_0.png)
+
+
+    Fig. 4. Results from the extra analysis performed with Grad-CAM visualization.
+
+
+    subset shown in Fig. 4, the VGG16 model was confident in all its predictions (P
+    = 1.0) by focusing on irrelevant regions of the observations that do not characterize
+    a meteor. The addition of the CBAM attention mechanism brought uncertainty among
+    some images that are unclear whether there is an occurrence of a meteor or not.
+    Moreover, the CBAM improved the representation of interest from the VGG16 network
+    in most cases, as seen in the visual results.
+
+
+    We highlight that the proposed approach using image classification models has
+    limitations. In our computation setup, the VGG16 and VGG16+CBAM models achieved
+    51 ms and 52 ms of inference time on average per image, respectively. Therefore,
+    a system may not be able to run real-time inferences. This approach
+
+
+    and the addition of the described techniques increased the model complexity, which
+    demands a high computational cost.
+
+
+    For example, BRAMON has a large amount of data that the monitoring stations have
+    not analyzed. Then, manual analysis cannot process the data with the same velocity
+    as collected. Hence, our approach can be used as a filtering stage, assisting
+    experts to quickly review the model''s suggestions and reduce the time spent in
+    human analysis.
+
+
+    Regarding the deployability of the resulting models, it is easy to incorporate
+    them into a meteor detection system. Each model generates a single file with the
+    network weights, which can be stored and loaded to run new inferences. The generated
+    files are lightweight, with approximately 173 MB each. Additionally, we'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'recommend using the nearest-neighbor interpolation method for the image scaling
+    algorithm to achieve the same results.
+
+
+    # 5. Conclusion
+
+
+    In this study, we attempt to improve the robustness in the scenario of limited
+    labeled data in the application of meteor detection. Based on the assumption that
+    the attention mechanism may be significant for this. We investigated a generalization
+    improvement using the CBAM attention mechanism combined with an optimized training
+    approach from a VGG16 architecture. Using this approach, one can expect a significant
+    data reduction of 91% based on our experiments. Therefore, we can employ an automated
+    reduction process using the generated models by filtering a list of suspect meteors
+    from the previous nights, as Al-Owais et al. (2022) propose. This approach will
+    save the time spent on human analysis and the required storage.
+
+
+    Our optimized training approach reached state-of-the-art results close to those
+    of previous studies. Provided that the VGG16 network correctly predicted 46 out
+    of 50 meteor images while making 11 out of 50 mistakes in forecasting the non-meteor
+    class. This model was more unstable in its predictions, suffering overfitting
+    by learning the noise from the meteor class of images. Although the VGG16+CBAM
+    model was worsening in evaluation metrics, the CBAM improved the representation
+    power from the VGG16 network. This method focused on more critical and suppressed
+    unnecessary features, as seen in the visual explanations.
+
+
+    Although further investigation is needed to verify the proposed approach in a
+    more extensive set of new real-world images, our findings offer a promising direction
+    for dealing with limited available labeled data in the meteor detection domain.
+    In the same way, other work can use different batch sizes and learning rates to
+    verify improvements. Finally, our implementation is easy to integrate with other
+    types of attention mechanisms for testing. The dataset and the main source code
+    used in this study are available on Zenodo (Shirasuna and Gradvohl, 2023). Future
+    research can use the presented 7000 balanced meteor dataset for other findings
+    in the meteor detection application.
+
+
+    # CRediT authorship contribution statement
+
+
+    **V.Y. Shirasunia:** Conceptualization, Methodology, Software, Validation, Formal
+    analysis. Investigation, Data curation, Writing – original draft, Visualization.
+    **A.L.S. Gradvohl:** Conceptualization, Methodology, Validation, Formal analysis,
+    Investigation, Resources, Data curation, Writing – original draft, Writing – review
+    & editing, Visualization, Supervision, Project administration.
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    # Data availability
+
+
+    Data will be made available on request.
+
+
+    Image dataset for the creation of an automatic system for meteor fall detection
+    (Original data) (Mendeley Data)
+
+
+    # References
+
+
+    +   Al-Owais, A., Darya, A.M., Sharif, M.E., Suhail, S., Fernini, I., 2022. Automation
+    of meteor reduction using convolutional neural networks. In: Proceedings of 2022
+    International Meteor Conference. International Meteor Conference, pp. 16–21.
+
+    +   Al-Owais, A., Sharif, M.E., Ghali, S., Abu Serdaneh, M., Belal, O., Fernini,
+    I., 2023. Meteor detection and localization using YOLOV3 and YOLOV4. Neural Comput.
+    Appl. doi:10.1007/s00521-023-08575-0.
+
+    +   Barnes, L.R., Schultz, D.M., Gruntfest, E.C., Hayden, M.H., Benight, C.C.,
+    2009. CORRIGENDUM: False alarm rate or false alarm ratio? Weather Forecast. 24
+    (5), 1452–1454. doi:10.1175/2009waf2222300.1.
+
+    +   Betzler, A.S. 2022. Comet-asteroidal classification among orbits of sporadic
+    meteoroids observed by BRAMON between 2014 and 2021. Res. Not. AAS 6 (2), 34.
+    doi:10.3847/2515-5172/ac545c.
+
+    +   BOAM. 2023. Base des observateurs amateurs de météores. URL http://boam.fr.
+
+    +   BRAMON. 2023. Brazilian meteor observation network. URL http://www.bramonmeteor.org.
+
+    +   Cecili, D., Campbell-Brown, M., 2020. The application of convolutional neural
+    networks to the automation of a meteor detection pipeline. Planet. Space Sci.
+    186, 104920. doi:10.1016/j.pss.2020.104920.
+
+    +   Cicco, M.D., Žoghib, S., Stapper, A.P., Ordenez, A.J., Collison, J., Gural,
+    P.S., Ganju, S., Galache, J.L., Jenniskens, P., 2017. Artificial intelligence
+    techniques for automating the CAMS processing pipeline to direct the search for
+    long-period comets. In: Proceedings of the International Meteor Conference. International
+    Meteor Organization, Petnica, pp. 65–70.
+
+    +   Costa, E.F.S., Encarnação, J., Teodósio, M.A., Morais, P., 2023. Aquatic species
+    shows asymmetrical distribution range shifts in native and non-native areas. Front.
+    Mar. Sci. 10, 1158206. doi:10.3389/fmars.2023.1158206.
+
+    +   Dawson, H.L., Dubrule, O., John, C.M., 2023. Impact of dataset size and convolutional
+    neural network architecture on transfer learning for carbonate rock classification.
+    Comput. Geosci. 171, 105284. doi:10.1016/j.cageo.2022.105284.
+
+    +   Drenkow, N., Sani, N., Shpitser, I., Unberath, M., 2022. A systematic review
+    of robustness in deep learning for computer vision: Mind the gap? doi:10.48550/ARXIV.2112.00639.
+
+    +   Galindo, Y., Lorena, A.C., 2018. Deep transfer learning for meteor detection.
+    In: Anais Do XV Encontro Nacional de Inteligência Artificial e Computacional (ENIAC
+    2018). Sociedade Brasileira de Computação - SBC, São Paulo, pp. 528–537. doi:10.5753/enicb.2018.4445.
+
+    +   Gural, P.S., 2019. Deep learning algorithms applied to the classification
+    of video meteor detections. Mon. Not. R. Astron. Soc. doi:10.1093/mnras/stz2456.
+
+    +   He, K., Zhang, X., Ren, S., Sun, J., 2015. Delving deep into rectifiers: Surpassing
+    human-level performance on ImageNet classification. In: 2015 IEEE International
+    Conference on Computer Vision (ICCV). IEEE, Santiago, Chile, pp. 1026–1034. doi:10.1109/iccv.2015.123.
+
+    +   Ioffe, S., Szegedy, C., 2015. Batch normalization: Accelerating deep network
+    training by reducing internal covariate shift. doi:10.48550/ARXIV.1502.03167.
+
+    +   Kandel, I., Castelli, M., 2020. The effect of batch size on the generalizability
+    of the convolutional neural networks on a histopathology dataset. ICT Express
+    6 (4), 312–315. doi:10.1016/j.icte.2020.04.010.
+
+    +   Koschny, D., Soja, R.H., Engrand, C., Flynn, G.J., Lasue, J., Levasseur-Regourd,
+    A.-C., Malaspina, D., Nakamura, T., Poppe, A.R., Sterken, V.J., Trigo-Rodríguez,
+    J.M., 2019. Interplanetary dust, meteoroids, meteors and meteorites. Space Sci.
+    Rev. 215 (4), 34. doi:10.1007/s11214-019-0597-7.
+
+    +   Li, X., Chen, S., Hu, X., Yang, J., 2019. Understanding the disharmony between
+    dropout and batch normalization by variance shift. In: 2019 IEEE/CVF Conference
+    on Computer Vision and Pattern Recognition (CVPR). IEEE, Long Beach, CA, USA,
+    pp. 2677–2685. doi:10.1109/cvpr.2019.00279.
+
+    +   Loshchilov, I., Hutter, F., 2019. Decoupled weight decay regularization. doi:10.48550/ARXIV.1711.05101.
+
+    +   Lunsford, R. (Ed.), 2009. Meteors and How to Observe Them. In: Astronomers''
+    Observing Guides. Springer New York, doi:10.1007/978-0-387-09461-8.
+
+    +   Marolda, T.C., Lorena, A.C., 2019. Meteor detection using deep convolutional
+    neural networks. In: Proceedings of 14th Simpósio Brasileiro de Automação Inteligente.
+    Goa, pp. 19–24. doi:10.17648/sbai-2019-112456.
+
+    +   Masters, D., Luschi, C., 2018. Revisiting small batch training for deep neural
+    networks. doi:10.48550/ARXIV.1804.07612.
+
+    +   Parikh, R., Mathai, A., Parikh, S., Sekhar, G.C., Thomas, R., 2008. Understanding
+    and using sensitivity, specificity and predictive values. Indian J. Ophthalm.
+    56 (1), 45. doi:10.4103/0301-4738.37595.
+
+    +   Selvaraju, R.R., Cogswell, M., Das, A., Vedantam, R., Parikh, D., Batra, D.,
+    2017. Grad-CAM: Visual explanations from deep networks via gradient-based localization.
+    In: 2017 IEEE International Conference on Computer Vision (ICCV). IEEE, Venice,
+    pp. 618–626. doi:10.1109/iccv.2017.74.
+
+    +   Shirasuna, V.Y., Gradvohl, A.L.S., 2023. Image dataset for the creation of
+    an automatic system for meteor fall detection. doi:10.5281/zenodo.7830132.
+
+    +   Simonyan, K., Zisserman, A., 2015. Very deep convolutional networks for large-scale
+    image recognition. doi:10.48550/ARXIV.1409.1556.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'Smith, S.L., Kindermans, P.-J., Ying, C., Le, Q.V., 2018. Don’t decay the learning
+    rate, increase the batch size. doi:10.48550/ARXIV.1711.00489.
+
+    Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., Salakhutdinov, R.,
+    2014. Dropout: A simple way to prevent neural networks from overfitting. J. Mach.
+    Learn. Res. 15 (56), 1929–1958. doi:10.5555/2627435.2670313.
+
+    UKMON, 2023. UK Meteor Network. URL https://ukmeteornetwork.co.uk.
+
+
+    Woo, S., Park, J., Lee, J.-Y., Kweon, I.S., 2018. CBAM: Convolutional block attention
+    module. In: Ferrari, V., Hebert, M., Sminchisescu, C., Weiss, Y. (Eds.), Computer
+    Vision - ECCV 2018, Vol. 11211. Springer International Publishing, Cham. pp. 3–19.
+    doi:10.1007/978-3-030-01234-2{}_1.
+
+    Yamashita, R., Nishio, M., Do, R.K.G., Togashi, K., 2018. Convolutional neural
+    networks: an overview and application in radiology. Insights Imaging 9 (4), 611–629.
+    doi:10.1007/s13244-018-0639-9.'
+  merge: -1
+  img_proc: true

@@ -1,0 +1,6 @@
+Smith, S.L., Kindermans, P.-J., Ying, C., Le, Q.V., 2018. Don’t decay the learning rate, increase the batch size. doi:10.48550/ARXIV.1711.00489.
+Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., Salakhutdinov, R., 2014. Dropout: A simple way to prevent neural networks from overfitting. J. Mach. Learn. Res. 15 (56), 1929–1958. doi:10.5555/2627435.2670313.
+UKMON, 2023. UK Meteor Network. URL https://ukmeteornetwork.co.uk.
+
+Woo, S., Park, J., Lee, J.-Y., Kweon, I.S., 2018. CBAM: Convolutional block attention module. In: Ferrari, V., Hebert, M., Sminchisescu, C., Weiss, Y. (Eds.), Computer Vision - ECCV 2018, Vol. 11211. Springer International Publishing, Cham. pp. 3–19. doi:10.1007/978-3-030-01234-2{}_1.
+Yamashita, R., Nishio, M., Do, R.K.G., Togashi, K., 2018. Convolutional neural networks: an overview and application in radiology. Insights Imaging 9 (4), 611–629. doi:10.1007/s13244-018-0639-9.
