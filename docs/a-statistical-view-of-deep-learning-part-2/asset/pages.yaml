@@ -1,0 +1,1479 @@
+- pgno: 0
+  md: '# # A Statistical View of Deep Learning Part 2
+
+
+    Jennifer Hoeting, Colorado State University'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# # A Statistical View of Deep Learning in Ecology
+
+
+    # ## Part 1: Introduction
+
+
+    +   - Introduction to machine learning
+
+    +   - Introduction to deep learning
+
+
+    # ## Part 2: Going deeper
+
+
+    +   - Neural networks from 3 viewpoints
+
+    +   - Mathematics of deep learning
+
+    +   - Model fitting
+
+    +   - Types of deep learning models
+
+
+    # ## Part 3: Deep learning in practice
+
+
+    +   - Ethics in deep learning
+
+    +   - Deep learning in ecology'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Neural networks from three viewpoints
+
+
+    **Neural network:** algorithm which allows a computer to learn from data
+
+
+    **Deep learning:** multi-layer neural network'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# # Neural networks: An Introduction from multiple viewpoints
+
+
+    # ## A neural network
+
+
+    +   - as a Black Box
+
+    +   - as a Statistical Model
+
+    +   - in Deep Learning'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Neural Network as a black box algorithm
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_4_0.png)
+
+
+    Image source: www.learnopencv.com'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Neural Network as a statistical model
+
+
+    Goal: extract linear combinations of the inputs as derived features, and then
+    model the target as a nonlinear function of these features
+
+
+    # Translated to statistics:
+
+
+    +   fit a nonlinear model to the response and predictors
+
+
+    +   predictors are transformed using multivariate techniques
+
+
+    # A neural network is a nonlinear model'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# # Neural Network as a statistical model
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_6_0.png)
+
+
+    Error: 0.089235, Steps: 146'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Statistics versus neural network terminology
+
+
+    | Statistics | Neural Networks |
+
+    |---|---|
+
+    | model | network, graph |
+
+    | fitting | learning, training |
+
+    | coefficient, parameter | weight |
+
+    | predictor, variable | input, feature |
+
+    | predicted response | output |
+
+    | observation | exemplar |
+
+    | parameter estimation | training or learning |
+
+    | steepest descent | back-propagation |
+
+    | intercept | bias term |
+
+    | derived predictor | hidden node |
+
+    | penalty function | weight decay |'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Neural networks in deep learning
+
+
+    # Simple Neural Network
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_8_0.png)
+
+
+    # Deep Learning Neural Network
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_8_1.png)
+
+
+    🔴 Input Layer
+
+
+    🟡 Hidden Layer
+
+
+    🔵 Output Layer'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Some mathematics of neural networks'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Opening the black box of deep learning
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_10_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# # Overview
+
+
+    Key idea: Neural networks are merely regression models with transformed predictors
+
+
+    Consider the following progression of models:
+
+
+    +   - Regression model
+
+    +   - Nonparametric regression model
+
+    +   - Neural network model
+
+    +   - Deep learning model'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Regression model
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_12_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Regression model
+
+
+    # Model
+
+
+    $$y = \beta_0 + \beta_1 x + \epsilon \text{ where } \epsilon \sim N(0, \sigma^2)$$
+
+    $$= f(x)$$
+
+
+    # Fitted model
+
+
+    $$\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x$$
+
+    $$= \hat{f}(x)$$
+
+
+    # Loss function
+
+
+    $$\sum_{i=1}^n (y_i - \hat{y}_i)^2$$'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Regression model
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_14_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# # Nonparametric regression
+
+
+    \(\widehat{y} = \widehat{f}(x) = \widehat{\beta}_0 + \sum_{k=1}^K \widehat{\beta}_k
+    \overbrace{\sigma_k(x)}^{\text{function of } x}\)
+
+
+    # ## Examples
+
+
+    +   1. Polynomial regression
+
+
+    \(\sigma_k(x) = x^k \text{ so } \widehat{f}(x) = \widehat{\beta}_0 + \widehat{\beta}_1
+    x + \widehat{\beta}_2 x^2 + \cdots + \widehat{\beta}_K x^K\)
+
+
+    +   2. Regression splines
+
+
+    +   > A spline is a function that is constructed piece-wise from polynomial functions.
+
+
+    +   > Apply a family of transformations to \(x, \sigma_1(x), \sigma_2(x), \dots,
+    \sigma_K(x)\)'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Nonparametric regression
+
+
+    A spline of degree $K$ is a function formed by connecting polynomial segments
+    of degree $K$ so that:
+
+
+    +   - the function is continuous,
+
+    +   - the function has $K - 1$ continuous derivatives, and
+
+    +   - the $K$th derivative is constant between knots.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Nonparametric regression
+
+
+    # Simple spline regression
+
+
+    Moving window: \(\hat{y}\) is the average of the \(y\)’s for nearby \(x\) values
+    or a weighted average (kernel smoothing)
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_17_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# # Nonparametric regression
+
+
+    Basis functions: every continuous function can be represented as a linear combination
+    of basis functions.
+
+
+    More advanced spline functions: basis splines
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_18_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# Nonparametric regression
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_19_0.png)
+
+
+    key   df = 100   df = 3'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# # Nonparametric regression
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_20_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Nonparametric regression
+
+
+    The weaknesses of this approach are:
+
+
+    +   - The basis is fixed and independent of the data
+
+
+    +   - If there are many predictors, this approach doesn''t work well
+
+
+    +   - If the basis doesn''t ‘agree’ with true f, then K will have to be large
+    to capture the structure
+
+
+    +   - What if parts of f have substantially different structure?
+
+
+    Alternative approach: the data **tell** us what kind of basis to use'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# Neural network model
+
+
+    Key idea: think of a neural network as a multiple regression model with transformed
+    predictors
+
+
+    Example: One-layer neural network model with \( K \) hidden nodes \( \sigma_1(x),
+    \sigma_2(x), \dots, \sigma_K(x) \) and 3 predictors \( (x_1, x_2, x_3) \)
+
+
+    ```
+
+    y = \beta_0 + \beta_1 \sigma_1(\alpha_{10} + \alpha_{11}x_1 + \alpha_{12}x_2 +
+    \alpha_{13}x_3)
+
+    + \beta_2 \sigma_2(\alpha_{20} + \alpha_{21}x_1 + \alpha_{22}x_2 + \alpha_{23}x_3)
+
+    + \quad \dots
+
+    + \beta_K \sigma_K(\alpha_{K0} + \alpha_{K1}x_1 + \alpha_{K2}x_2 + \alpha_{K3}x_3)
+    \quad \text{function of } x
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# Deep Learning Model
+
+
+    # Neural network model
+
+
+    \( y = \beta_0 + \sum_{k=1}^K \beta_k \sigma_k(\alpha_{k0} + \alpha_{k1}x_1 +
+    \alpha_{k2}x_2 + \alpha_{k3}x_3) \)
+
+
+    # Two-layer "deep" learning model
+
+
+    \(\hat{y} = \hat{f}(x) = \hat{\beta}_0 + \sum_{k=1}^K \hat{\beta}_k \sigma_k(\alpha_{k0}+\alpha_{k1}x_1
+    + \alpha_{k2}x_2 + \alpha_{k3}x_3))\)
+
+
+    Replace each of these predictors with another neural network model'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# Illustration of a deep learning model
+
+
+    Image: Deep Learning, Fig 1.2
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_24_0.png)
+
+
+    CAR
+
+
+    PERSON
+
+
+    ANIMAL
+
+
+    Output (object identity)
+
+
+    3rd hidden layer (object parts)
+
+
+    2nd hidden layer (corners and contours)
+
+
+    1st hidden layer (edges)
+
+
+    Visible layer (input pixels)'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# # A Statistical View of Deep Learning in Ecology
+
+
+    # ## Part 1: Introduction
+
+
+    +   - Introduction to machine learning
+
+    +   - Introduction to deep learning
+
+
+    # ## Part 2: Going deeper
+
+
+    +   - Neural networks from 3 viewpoints
+
+    +   - Mathematics of deep learning
+
+    +   - Model fitting
+
+    +   - Types of deep learning models
+
+
+    # ## Part 3: Deep learning in practice
+
+
+    +   - Ethics in deep learning
+
+    +   - Deep learning in ecology'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# Deep Learning: Model fitting'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Deep Learning Software
+
+
+    +   - Python
+
+    +     - Most popular language for deep learning
+
+    +     - Object-oriented, high-level programming language
+
+    +     - Main packages: TensorFlow, PyTorch, Keras, ...
+
+    +     - Do you need to learn Python? Maybe
+
+
+    +   - Keras
+
+    +     - Open-source neural-network library written in Python.
+
+    +     - Keras package is an API.
+
+    +     - API (application programming interface) allows multiple software packages
+    to interact.
+
+    +     - Keras can interact with:
+
+    +       TensorFlow, Microsoft Cognitive Toolkit, R, Theano, PlaidML'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Neural network models in the Caret package
+
+
+    +   1. Neural network models: nnet, mxnet, mxnetAdam, neuralnet, and more
+
+
+    +   2. Stacked AutoEncoder Deep Neural Network
+
+
+    +   3. Many other options
+
+
+    # R packages: keras and kerasR
+
+
+    +   Interface to the Python deep learning package Keras
+
+
+    +   Rstudio’s keras pages
+
+
+    +   Can be buggy when any of the packages it accesses are updated'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# Deep Learning: Model fitting
+
+
+    +   Steps in model fitting
+
+    +   1. Define network structure
+
+    +   2. Select loss function
+
+    +   3. Select optimizer
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_29_0.png)
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_29_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# Network structure
+
+
+    +   - A layer consists of a set of nodes
+
+    +   - In a fully-connected model, each node on one layer connects to all nodes
+    in the next layer
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_30_0.png)
+
+
+    Image source: towardsdatascience'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "# Defining the network model in the R interface to Keras\n\n```\nmodel <- keras_model_sequential()\n\
+    model %>%\n  layer_dense(units = 256, activation = 'relu') %>%\n  layer_dense(units\
+    \ = 128, activation = 'relu') %>%\n  layer_dense(units = 10, activation = 'softmax')\n\
+    ```\n\nkeras.rstudio.com"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# Network structure
+
+
+    Recall the basic neural network model (one layer, p predictors)
+
+
+    y = \beta_0 + \sum_{k=1}^K \beta_k \sigma_k(\alpha_{0k} + \alpha_{1k}x_1 + \alpha_{2k}x_2
+    + \cdots + \alpha_{3p}x_p)
+
+
+    Activation Function
+
+
+    Activation functions are
+
+
+    +   Computationally cheap
+
+
+    +   One key to the success of deep learning'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "# # Activation Functions\n\n+   **Sigmoid**\n+   \n+   \\(\\sigma(x) = \\frac{1}{1+e^{-x}}\\\
+    )\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_0.png)\n\n+   **Leaky ReLU**\n\
+    +   \n+   \\(max(0.1x, x)\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_1.png)\n\
+    \n+   **tanh**\n+   \n+   \\(\\tanh(x)\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_2.png)\n\
+    \n+   **Maxout**\n+   \n+   \\(max(w_1^T x + b_1, w_2^T x + b_2)\\)\n\n+   **ReLU**\n\
+    +   \n+   \\(max(0, x)\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_3.png)\n\
+    \n+   **ELU**\n+   \n+   \\(\\begin{cases} x & x \\ge 0 \\\\ \\alpha(e^x - 1)\
+    \ & x < 0 \\end{cases}\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_4.png)\n\
+    \nImage source: medium.com"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# Network structure
+
+
+    # ReLU (Recticulated Linear Unit) activation function
+
+
+    \(\sigma(x) = \max(0, x) = \left\{ \begin{array}{ll} 0 & \text{for } x < 0 \\
+    x & \text{for } x \ge 0 \end{array} \right.\)
+
+
+    # Softmax activation function
+
+
+    +   - Used for classification problems on the output layer
+
+    +   - Input: \( x \in \Re \), output: \( 0 \le \sigma(x_i) \le 1 \)
+
+
+    \(\sigma(x_i) = \frac{\exp(x_i)}{\sum_{j=1}^J \exp(x_j)} \quad \text{for } i =
+    1, \dots, J\)'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# Network structure
+
+
+    # Defining the network model in the R interface to Keras
+
+
+    ```
+
+    model <- keras_model_sequential()
+
+    model %>%
+
+    layer_dense(units = 256, activation = ''relu'') %>%
+
+    layer_dense(units = 128, activation = ''relu'') %>%
+
+    layer_dense(units = 10, activation = ''softmax'')
+
+    ```
+
+
+    +   - sequential model: linear stack of neural network layers
+
+    +   - layer_dense: densely connected layer
+
+    +   - units: number of nodes in the layer
+
+    +   - activation function
+
+
+    keras.rstudio.com'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# Deep Learning: Model fitting
+
+
+    # Recall maximum likelihood estimation
+
+
+    +   Steps in model fitting
+
+    +   1. Define network structure
+
+    +   2. Select loss function
+
+    +   3. Select optimizer
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_36_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# Loss Function
+
+
+    A loss function
+
+
+    +   - Measures predictive performance of the network
+
+    +   - Measures how close the output from the last layer is to the observed value
+
+    +   - Must be a one-number summary
+
+
+    Goal in model fitting:
+
+
+    Find the parameter values (weights) that minimize the loss'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# Loss Function
+
+
+    Mean Square Error: used for continuous response data
+
+
+    \(\frac{1}{n} \sum_{i=1}^n(y_i - \hat{y}_i)^2\)
+
+
+    Cross-entropy (deviance): used for categorical response data
+
+
+    \(- \sum_{i=1}^n \sum_{g=1}^G y_{ig} \log(\widehat{\pi}_{ig})\)
+
+
+    For a problem with
+
+
+    +   - g = 1, ..., G categories
+
+    +   - \(\widehat{\pi}_{ig} = \) predicted probability that observation i is in
+    the gth category'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# Loss Function
+
+
+    Select a loss function that is compatible with the activation function of the
+    final layer (output)
+
+
+    | Task | Loss function | Last layer activation func. |
+
+    | :--- | :--- | :--- |
+
+    | Binary classification | Binary cross-entropy | Sigmoid |
+
+    | Multiclass, single-label classification | Categorical cross-entropy | Softmax
+    |
+
+    | Multiclass, multi-label classification | Binary cross-entropy | Sigmoid |
+
+    | Regression to arbitrary values | Mean square error (MSE) | None |
+
+    | Regression to values between 0 and 1 | MSE or binary cross-entropy | Sigmoid
+    |'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "# Loss Function\n\nIn R Keras,\n\n+   1. Set up the model (see above).\n+ \
+    \  2. Compile the model with appropriate loss function, optimizer, and metrics.\n\
+    \n```\nmodel %>%\n  compile(\n    loss = 'categorical_crossentropy',\n    optimizer\
+    \ = optimizer_rmsprop(),\n    metrics = c('accuracy')\n  )\n```\n\nLoss functions\
+    \ in R keras"
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# Model fitting
+
+
+    # Steps in model fitting
+
+
+    +   1. Define network structure
+
+    +   2. Select loss function
+
+    +   3. Select Optimizer'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# # Model fitting
+
+
+    # ## Goal:
+
+
+    +   - find the parameter values (weights) that minimize the loss
+
+    +   - estimate the parameter values $\beta, \alpha, ...$
+
+
+    # ## Model fitting is called
+
+
+    +   - Computer science: train the model
+
+    +   - Statistics: estimate the parameters
+
+    +   - Mathematics: optimize the loss function'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# Model fitting
+
+
+    Neural networks have **many** unknown parameters (weights).
+
+
+    # Counting parameters
+
+
+    +   - p + 1 parameters in one node
+
+    +     - p covariates plus intercept (bias)
+
+    +     - parameters: $(\alpha_{k0}, \alpha_{k1}, ..., \alpha_{kp})$
+
+    +   - k = 1, ..., K nodes per layer plus intercept: $(\beta_{g0}, ..., \beta_{gK})$
+
+    +   - g = 1, ..., G layers
+
+
+    Total of $K(p + 1) + G(K + 1)$ parameters'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# Model fitting
+
+
+    Example:
+
+
+    +   - p = 100 covariates
+
+    +   - K = 128 nodes per layer
+
+    +   - G = 5 layers
+
+    +   - 128(100 + 1) + 5(128 + 1) = 13,573 parameters
+
+
+    Implications:
+
+
+    +   - Many parameters and
+
+    +   - All the parameters are highly related.
+
+    +   - Thus you need a lot of data and a special approach to estimate parameters.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# Optimization
+
+
+    +   - General approach to minimize loss is to use stochastic gradient descent
+
+    +     - Assign starting values to the weights
+
+    +     - Evaluate the partial derivative of the loss function with respect to each
+    weight
+
+    +     - Take a step in the downhill direction (opposite the gradient)
+
+    +     - Repeat until weights converge
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_45_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# Optimization
+
+
+    # Optimization for deep learning
+
+
+    +   - This was a brief overview of optimization.
+
+    +   - The book Deep Learning by Goodfellow et al. has a good overview
+
+    +   - Optimizers in Keras: SGD, RMSprop, Adagrad, Adadelta, Adam, Adamax, Nadam
+
+    +   - Overview of the optimizers'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# Optimization: Putting it all together (2 layer network)
+
+
+    Input X
+
+
+    Weights
+
+
+    Layer
+
+    data transformation
+
+
+    Weights
+
+
+    Layer
+
+    data transformation
+
+
+    Weight
+
+    update
+
+
+    Predictions
+
+    Y''
+
+
+    True targets
+
+    Y
+
+
+    Optimizer
+
+
+    Loss function
+
+
+    Loss score'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# Deep Learning:
+
+    Model fitting in practice'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# Model fitting in practice
+
+
+    Training deep learning models requires many decisions
+
+
+    You select:
+
+
+    +   - Model architecture
+
+    +   - Loss function
+
+    +   - Optimization method
+
+    +   - Details on how all of these work'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# # Model fitting in practice
+
+
+    # ## Some deep learning parameters to adjust
+
+
+    +   - Number of hidden layers and units
+
+    +   - Regularization
+
+    +   - Epochs and Batch Size
+
+    +   - General practical advice'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# Numer of hidden layers and units
+
+
+    Width
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_51_0.png)
+
+
+    Depth'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# # Numer of hidden layers and units
+
+
+    # ## How many layers?
+
+
+    +   - Old strategy: one is enough
+
+    +     - Universal approximator theorem: One hidden layer is enough to represent
+    an approximation of any function to an arbitrary degree of accuracy
+
+    +     - Theory vs practice!
+
+    +   - Current advice
+
+    +     - Start with one or two hidden layers with many units
+
+    +     - If performance is poor and you have debugged, try deep learning'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# # Over and underfitting
+
+
+    # ## Simple Example
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_53_0.png)
+
+
+    Underfitted
+
+
+    Good Fit/Robust
+
+
+    Overfitted
+
+
+    Image source: medium.com'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# # Over and underfitting
+
+
+    # ## Overfitting:
+
+
+    +   - Results won''t generalize beyond the training set
+
+    +   - Solution: get more training data or use regularization
+
+
+    # ## Underfitting:
+
+
+    +   - Results aren''t useful
+
+    +   - Solution: adjust model structure or model fitting setup'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# Regularization
+
+
+    <- Underfitting
+
+
+    Overfitting ->
+
+
+    Best Fit
+
+
+    Test Error
+
+
+    Training Error
+
+
+    Error
+
+
+    Model "complexity"
+
+
+    Image source: www.analyticsvidhya.com'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# # Regularization vis Dropout
+
+
+    # ## Dropout
+
+
+    +   - Randomly set to 0 a proportion of weights in the model
+
+    +   - Prevents overfitting via sparser networks
+
+    +   - Dropout rate = fraction of weights set to 0'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# Regularization vis Dropout
+
+
+    ```
+
+    model <- keras_model_sequential()
+
+    model %>%
+
+    layer_dense(units = 256, activation = ''relu'', input_shap
+
+    layer_dropout(rate = 0.4) %>%
+
+    layer_dense(units = 128, activation = ''relu'') %>%
+
+    layer_dropout(rate = 0.3) %>%
+
+    layer_dense(units = 10, activation = ''softmax'')
+
+    ```
+
+
+    Rstudio''s keras pages'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# Regularization vs Dropout
+
+
+    Source: Srivastiva et al. Dropout: A Simple Way to Prevent Neural Networks from
+    Overfitting
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_58_0.png)
+
+
+    Figure 4: Test error for different architectures'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# # Regularization
+
+
+    You can also acheive regularization by adding a LASSO-like penalty to the loss
+    function (Tibshirani, 1996)
+
+
+    # ## Regularization
+
+
+    Loss + Regularization penalty
+
+
+    # ## L1 Regularization
+
+
+    $Loss + \lambda \sum_{i=1}^{M} |w_i|$
+
+
+    where
+
+
+    +   - $w_1, \dots, w_M$ represent all model weights (parameters)
+
+    +   - $\lambda$ is a tuning parameter'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# Epochs and Batch Size
+
+
+    To deal with large data sets, deep learning optimization algorithms break up the
+    data into subsets.
+
+
+    # Model fitting options:
+
+
+    +   * Batch size: # of training samples to work through before updating the model
+
+    +   * Epoch: number of complete passes through the data set
+
+    +   * Validation split: Fraction of the training data to be used as validation
+    data per epoch.'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# Epochs and Batch Size
+
+
+    Small example: Use the fit() function to train the model for 30 epochs using batches
+    of 128 images:
+
+
+    ```
+
+    history <- model %>% fit(
+
+    x_train, y_train,
+
+    epochs = 30, batch_size = 128,
+
+    validation_split = 0.2
+
+    )
+
+    ```
+
+
+    Useful reference: machinelearningmastery.com'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# Epoch plot
+
+
+    accuracy
+
+    epoch
+
+    training accuracy
+
+    validation accuracy: little overfitting
+
+    validation accuracy: strong overfitting
+
+
+    Image source: towardsdatascience.com'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# THIS IS YOUR MACHINE LEARNING SYSTEM?
+
+
+    YUP! YOU POUR THE DATA INTO THIS BIG PILE OF LINEAR ALGEBRA, THEN COLLECT THE
+    ANSWERS ON THE OTHER SIDE.
+
+
+    WHAT IF THE ANSWERS ARE WRONG?
+
+
+    JUST STIR THE PILE UNTIL THEY START LOOKING RIGHT.
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_63_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# Architecture
+
+
+    Network architecture: the overall structure of the network
+
+
+    General advice
+
+
+    +   - Fit the largest network you can afford
+
+    +   - Keep the # nodes per layer the same
+
+    +   - Try different layer sizes
+
+    +   - Use ReLU units for hidden layers
+
+    +   - Choose an appropriate loss function for your data
+
+    +   - Make sure the activation function for your output layer matches the loss
+    function'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# Types of Deep Learning Models'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# Types of Deep Learning Models
+
+
+    # Architecture families:
+
+
+    +   1. Deep feedforward networks: what we''ve covered so far
+
+    +   2. Convolutional networks
+
+    +   3. Recurrent and Recursive Nets
+
+    +   4. Generative adversarial network
+
+    +   5. Bayesian networks
+
+    +   6. Always new methods on the horizon'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# Types of Deep Learning Models
+
+
+    # Convolutional networks
+
+
+    +   For grid-like data like images
+
+
+    +   Data need to be correlated in some way (I think)
+
+
+    +   Each layer detects small, meaningful features like edges using kernels instead
+    of the entire image
+
+
+    +   Sparse connectivity'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# # Types of Deep Learning Models
+
+
+    # # Edge Detection by Convolution
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_68_0.png)
+
+
+    Input
+
+
+    | 1 | -1 |
+
+    |---|---|
+
+
+    Kernel
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_68_1.png)
+
+
+    Output'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# # Convolution network
+
+
+    Image: Deep Learning, Fig 1.2
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_69_0.png)
+
+
+    Output (object identity)
+
+
+    CAR
+
+
+    PERSON
+
+
+    ANIMAL
+
+
+    3rd hidden layer (object parts)
+
+
+    2nd hidden layer (corners and contours)
+
+
+    1st hidden layer (edges)
+
+
+    Visible layer (input pixels)'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '# Types of Deep Learning Models
+
+
+    # Recurrent and Recursive Nets
+
+
+    +   - For processing sequential data
+
+    +   - Examples: time series, financial data, text, speech
+
+
+    # Generative adversarial network
+
+
+    +   - Two neural networks compete to generate new data to be similar to old data
+
+    +   - Used for image generation, video generation and voice generation'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# Types of Deep Learning Models
+
+
+    # Bayesian networks
+
+
+    +   - Can be any of the above (e.g., Bayesian convolutional network)
+
+    +   - Pros: estimate uncertainty
+
+    +   - Cons: slow to compute
+
+    +   - Variational Bayes is a current approach for inference
+
+    +   - Current approaches are pretty crude'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# # A Statistical View of Deep Learning in Ecology
+
+
+    # ## Part 1: Introduction
+
+
+    +   - Introduction to machine learning
+
+    +   - Introduction to deep learning
+
+
+    # ## Part 2: Going deeper
+
+
+    +   - Neural networks from 3 viewpoints
+
+    +   - Mathematics of deep learning
+
+    +   - Model fitting
+
+    +   - Types of deep learning models
+
+
+    # ## Part 3: Deep learning in practice
+
+
+    +   - Ethics in deep learning
+
+    +   - Deep learning in ecology'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# Some useful references on deep learning
+
+
+    +   - Deep Learning by I. Goodfellow, Y. Bengio and A. Courville (2016) MIT Press
+
+
+    +   - Deep Learning with R F. Chollet and J.J. Allaire (2018) Manning Publications
+
+
+    +   - Chapters 1-3 available online
+
+
+    +   - Focus is on Keras'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# Additional references that I used to develop this presentation
+
+
+    # Books:
+
+
+    +   - *Computational Statistics*
+
+    +     by Givens and Hoeting (2nd edition, Wiley)
+
+    +   - *The Elements of Statistical Learning*
+
+    +     by Hastie, Tibshirani, and Friedman
+
+    +   - *Introduction to Statistical Learning*
+
+    +     by James, Witten, Hastie, Tibshirani
+
+
+    Course materials by:
+
+    Ian Goodfellow, Darren Homrighausen, Ander Wilson, Asa Ben-Hur'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '# Thank you to
+
+
+    +   - ISEC2020 organizers especially David Warton and Gordana Popovic
+
+    +   - Course assistants: Tess Hamzeh, Winston Hilton, Rachael Krawczyk
+
+    +   - Alison Ketz and Dan Walsh
+
+
+    # Acknowledgment of funding support
+
+
+    This material is based upon work supported by the National Science Foundation
+    (NSF) under Grant No. AGS-1419558, the US Geological Survey (USGS) (G17AC00409),
+    and Colorado State University (CSU). Any opinions, findings, and conclusions or
+    recommendations expressed in this material are those of the author and do not
+    necessarily reflect the views of the NSF, USGS or CSU.'
+  merge: -1
+  img_proc: true

@@ -1,0 +1,1903 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # A Statistical View of Deep Learning Part 2
+
+
+    Jennifer Hoeting, Colorado State University'
+  - '[PAGE 1]
+
+
+    # # A Statistical View of Deep Learning in Ecology
+
+
+    # ## Part 1: Introduction
+
+
+    +   - Introduction to machine learning
+
+    +   - Introduction to deep learning
+
+
+    # ## Part 2: Going deeper
+
+
+    +   - Neural networks from 3 viewpoints
+
+    +   - Mathematics of deep learning
+
+    +   - Model fitting
+
+    +   - Types of deep learning models
+
+
+    # ## Part 3: Deep learning in practice
+
+
+    +   - Ethics in deep learning
+
+    +   - Deep learning in ecology'
+  - '[PAGE 2]
+
+
+    # Neural networks from three viewpoints
+
+
+    **Neural network:** algorithm which allows a computer to learn from data
+
+
+    **Deep learning:** multi-layer neural network'
+  - '[PAGE 3]
+
+
+    # # Neural networks: An Introduction from multiple viewpoints
+
+
+    # ## A neural network
+
+
+    +   - as a Black Box
+
+    +   - as a Statistical Model
+
+    +   - in Deep Learning'
+  - '[PAGE 4]
+
+
+    # Neural Network as a black box algorithm
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_4_0.png)
+
+
+    Image source: www.learnopencv.com'
+  - '[PAGE 5]
+
+
+    # Neural Network as a statistical model
+
+
+    Goal: extract linear combinations of the inputs as derived features, and then
+    model the target as a nonlinear function of these features
+
+
+    # Translated to statistics:
+
+
+    +   fit a nonlinear model to the response and predictors
+
+
+    +   predictors are transformed using multivariate techniques
+
+
+    # A neural network is a nonlinear model'
+  - '[PAGE 6]
+
+
+    # # Neural Network as a statistical model
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_6_0.png)
+
+
+    Error: 0.089235, Steps: 146'
+  - '[PAGE 7]
+
+
+    # Statistics versus neural network terminology
+
+
+    | Statistics | Neural Networks |
+
+    |---|---|
+
+    | model | network, graph |
+
+    | fitting | learning, training |
+
+    | coefficient, parameter | weight |
+
+    | predictor, variable | input, feature |
+
+    | predicted response | output |
+
+    | observation | exemplar |
+
+    | parameter estimation | training or learning |
+
+    | steepest descent | back-propagation |
+
+    | intercept | bias term |
+
+    | derived predictor | hidden node |
+
+    | penalty function | weight decay |'
+  - '[PAGE 8]
+
+
+    # Neural networks in deep learning
+
+
+    # Simple Neural Network
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_8_0.png)
+
+
+    # Deep Learning Neural Network
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_8_1.png)
+
+
+    🔴 Input Layer
+
+
+    🟡 Hidden Layer
+
+
+    🔵 Output Layer'
+  - '[PAGE 9]
+
+
+    # Some mathematics of neural networks'
+  - '[PAGE 10]
+
+
+    # Opening the black box of deep learning
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_10_0.png)'
+  - '[PAGE 11]
+
+
+    # # Overview
+
+
+    Key idea: Neural networks are merely regression models with transformed predictors
+
+
+    Consider the following progression of models:
+
+
+    +   - Regression model
+
+    +   - Nonparametric regression model
+
+    +   - Neural network model
+
+    +   - Deep learning model'
+  - '[PAGE 12]
+
+
+    # Regression model
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_12_0.png)'
+  - '[PAGE 13]
+
+
+    # Regression model
+
+
+    # Model
+
+
+    $$y = \beta_0 + \beta_1 x + \epsilon \text{ where } \epsilon \sim N(0, \sigma^2)$$
+
+    $$= f(x)$$
+
+
+    # Fitted model
+
+
+    $$\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x$$
+
+    $$= \hat{f}(x)$$
+
+
+    # Loss function
+
+
+    $$\sum_{i=1}^n (y_i - \hat{y}_i)^2$$'
+  - '[PAGE 14]
+
+
+    # Regression model
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_14_0.png)'
+  - '[PAGE 15]
+
+
+    # # Nonparametric regression
+
+
+    \(\widehat{y} = \widehat{f}(x) = \widehat{\beta}_0 + \sum_{k=1}^K \widehat{\beta}_k
+    \overbrace{\sigma_k(x)}^{\text{function of } x}\)
+
+
+    # ## Examples
+
+
+    +   1. Polynomial regression
+
+
+    \(\sigma_k(x) = x^k \text{ so } \widehat{f}(x) = \widehat{\beta}_0 + \widehat{\beta}_1
+    x + \widehat{\beta}_2 x^2 + \cdots + \widehat{\beta}_K x^K\)
+
+
+    +   2. Regression splines
+
+
+    +   > A spline is a function that is constructed piece-wise from polynomial functions.
+
+
+    +   > Apply a family of transformations to \(x, \sigma_1(x), \sigma_2(x), \dots,
+    \sigma_K(x)\)'
+  - '[PAGE 16]
+
+
+    # Nonparametric regression
+
+
+    A spline of degree $K$ is a function formed by connecting polynomial segments
+    of degree $K$ so that:
+
+
+    +   - the function is continuous,
+
+    +   - the function has $K - 1$ continuous derivatives, and
+
+    +   - the $K$th derivative is constant between knots.'
+  - '[PAGE 17]
+
+
+    # Nonparametric regression
+
+
+    # Simple spline regression
+
+
+    Moving window: \(\hat{y}\) is the average of the \(y\)’s for nearby \(x\) values
+    or a weighted average (kernel smoothing)
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_17_0.png)'
+  - '[PAGE 18]
+
+
+    # # Nonparametric regression
+
+
+    Basis functions: every continuous function can be represented as a linear combination
+    of basis functions.
+
+
+    More advanced spline functions: basis splines
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_18_0.png)'
+  - '[PAGE 19]
+
+
+    # Nonparametric regression
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_19_0.png)
+
+
+    key   df = 100   df = 3'
+  - '[PAGE 20]
+
+
+    # # Nonparametric regression
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_20_0.png)'
+  - '[PAGE 21]
+
+
+    # Nonparametric regression
+
+
+    The weaknesses of this approach are:
+
+
+    +   - The basis is fixed and independent of the data
+
+
+    +   - If there are many predictors, this approach doesn''t work well
+
+
+    +   - If the basis doesn''t ‘agree’ with true f, then K will have to be large
+    to capture the structure
+
+
+    +   - What if parts of f have substantially different structure?
+
+
+    Alternative approach: the data **tell** us what kind of basis to use'
+  - '[PAGE 22]
+
+
+    # Neural network model
+
+
+    Key idea: think of a neural network as a multiple regression model with transformed
+    predictors
+
+
+    Example: One-layer neural network model with \( K \) hidden nodes \( \sigma_1(x),
+    \sigma_2(x), \dots, \sigma_K(x) \) and 3 predictors \( (x_1, x_2, x_3) \)
+
+
+    ```
+
+    y = \beta_0 + \beta_1 \sigma_1(\alpha_{10} + \alpha_{11}x_1 + \alpha_{12}x_2 +
+    \alpha_{13}x_3)
+
+    + \beta_2 \sigma_2(\alpha_{20} + \alpha_{21}x_1 + \alpha_{22}x_2 + \alpha_{23}x_3)
+
+    + \quad \dots
+
+    + \beta_K \sigma_K(\alpha_{K0} + \alpha_{K1}x_1 + \alpha_{K2}x_2 + \alpha_{K3}x_3)
+    \quad \text{function of } x
+
+    ```'
+  - '[PAGE 23]
+
+
+    # Deep Learning Model
+
+
+    # Neural network model
+
+
+    \( y = \beta_0 + \sum_{k=1}^K \beta_k \sigma_k(\alpha_{k0} + \alpha_{k1}x_1 +
+    \alpha_{k2}x_2 + \alpha_{k3}x_3) \)
+
+
+    # Two-layer "deep" learning model
+
+
+    \(\hat{y} = \hat{f}(x) = \hat{\beta}_0 + \sum_{k=1}^K \hat{\beta}_k \sigma_k(\alpha_{k0}+\alpha_{k1}x_1
+    + \alpha_{k2}x_2 + \alpha_{k3}x_3))\)
+
+
+    Replace each of these predictors with another neural network model'
+  - '[PAGE 24]
+
+
+    # Illustration of a deep learning model
+
+
+    Image: Deep Learning, Fig 1.2
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_24_0.png)
+
+
+    CAR
+
+
+    PERSON
+
+
+    ANIMAL
+
+
+    Output (object identity)
+
+
+    3rd hidden layer (object parts)
+
+
+    2nd hidden layer (corners and contours)
+
+
+    1st hidden layer (edges)
+
+
+    Visible layer (input pixels)'
+  - '[PAGE 25]
+
+
+    # # A Statistical View of Deep Learning in Ecology
+
+
+    # ## Part 1: Introduction
+
+
+    +   - Introduction to machine learning
+
+    +   - Introduction to deep learning
+
+
+    # ## Part 2: Going deeper
+
+
+    +   - Neural networks from 3 viewpoints
+
+    +   - Mathematics of deep learning
+
+    +   - Model fitting
+
+    +   - Types of deep learning models
+
+
+    # ## Part 3: Deep learning in practice
+
+
+    +   - Ethics in deep learning
+
+    +   - Deep learning in ecology'
+  - '[PAGE 26]
+
+
+    # Deep Learning: Model fitting'
+  - '[PAGE 27]
+
+
+    # Deep Learning Software
+
+
+    +   - Python
+
+    +     - Most popular language for deep learning
+
+    +     - Object-oriented, high-level programming language
+
+    +     - Main packages: TensorFlow, PyTorch, Keras, ...
+
+    +     - Do you need to learn Python? Maybe
+
+
+    +   - Keras
+
+    +     - Open-source neural-network library written in Python.
+
+    +     - Keras package is an API.
+
+    +     - API (application programming interface) allows multiple software packages
+    to interact.
+
+    +     - Keras can interact with:
+
+    +       TensorFlow, Microsoft Cognitive Toolkit, R, Theano, PlaidML'
+  - '[PAGE 28]
+
+
+    # Neural network models in the Caret package
+
+
+    +   1. Neural network models: nnet, mxnet, mxnetAdam, neuralnet, and more
+
+
+    +   2. Stacked AutoEncoder Deep Neural Network
+
+
+    +   3. Many other options
+
+
+    # R packages: keras and kerasR
+
+
+    +   Interface to the Python deep learning package Keras
+
+
+    +   Rstudio’s keras pages
+
+
+    +   Can be buggy when any of the packages it accesses are updated'
+  - '[PAGE 29]
+
+
+    # Deep Learning: Model fitting
+
+
+    +   Steps in model fitting
+
+    +   1. Define network structure
+
+    +   2. Select loss function
+
+    +   3. Select optimizer
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_29_0.png)
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_29_1.png)'
+  md: "\n## A Statistical View of Deep Learning Part 2\n\nJennifer Hoeting, Colorado\
+    \ State University\n\n## A Statistical View of Deep Learning in Ecology\n\n###\
+    \ Part 1: Introduction\n\n- Introduction to machine learning\n- Introduction to\
+    \ deep learning\n\n### Part 2: Going deeper\n\n- Neural networks from 3 viewpoints\n\
+    - Mathematics of deep learning\n- Model fitting\n- Types of deep learning models\n\
+    \n### Part 3: Deep learning in practice\n\n- Ethics in deep learning\n- Deep learning\
+    \ in ecology\n\n## Neural networks from three viewpoints\n\n**Neural network:**\
+    \ algorithm which allows a computer to learn from data\n\n**Deep learning:** multi-layer\
+    \ neural network\n\n## Neural networks: An Introduction from multiple viewpoints\n\
+    \n### A neural network\n\n- as a Black Box\n- as a Statistical Model\n- in Deep\
+    \ Learning\n\n## Neural Network as a black box algorithm\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_4_0.png)\n\
+    \nImage source: www.learnopencv.com\n\n## Neural Network as a statistical model\n\
+    \nGoal: extract linear combinations of the inputs as derived features, and then\
+    \ model the target as a nonlinear function of these features\n\n### Translated\
+    \ to statistics:\n\n- fit a nonlinear model to the response and predictors\n-\
+    \ predictors are transformed using multivariate techniques\n\n### A neural network\
+    \ is a nonlinear model\n\n## Neural Network as a statistical model\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_6_0.png)\n\
+    \nError: 0.089235, Steps: 146\n\n## Statistics versus neural network terminology\n\
+    \n| Statistics | Neural Networks |\n|---|---|\n| model | network, graph |\n| fitting\
+    \ | learning, training |\n| coefficient, parameter | weight |\n| predictor, variable\
+    \ | input, feature |\n| predicted response | output |\n| observation | exemplar\
+    \ |\n| parameter estimation | training or learning |\n| steepest descent | back-propagation\
+    \ |\n| intercept | bias term |\n| derived predictor | hidden node |\n| penalty\
+    \ function | weight decay |\n\n## Neural networks in deep learning\n\n### Simple\
+    \ Neural Network\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_8_0.png)\n\n### Deep\
+    \ Learning Neural Network\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_8_1.png)\n\
+    \n\U0001F534 Input Layer\n\n\U0001F7E1 Hidden Layer\n\n\U0001F535 Output Layer\n\
+    \n## Some mathematics of neural networks\n\n## Opening the black box of deep learning\n\
+    \n![](img/357c1568568ec7942f9e3cf49122ebd5_10_0.png)\n\n## Overview\n\nKey idea:\
+    \ Neural networks are merely regression models with transformed predictors\n\n\
+    Consider the following progression of models:\n\n- Regression model\n- Nonparametric\
+    \ regression model\n- Neural network model\n- Deep learning model\n\n## Regression\
+    \ model\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_12_0.png)\n\n## Regression\
+    \ model\n\n### Model\n\n$$y = \\beta_0 + \\beta_1 x + \\epsilon \\text{ where\
+    \ } \\epsilon \\sim N(0, \\sigma^2)$$\n$$= f(x)$$\n\n### Fitted model\n\n$$\\\
+    hat{y} = \\hat{\\beta}_0 + \\hat{\\beta}_1 x$$\n$$= \\hat{f}(x)$$\n\n### Loss\
+    \ function\n\n$$\\sum_{i=1}^n (y_i - \\hat{y}_i)^2$$\n\n## Regression model\n\n\
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_14_0.png)\n\n## Nonparametric regression\n\
+    \n\\(\\widehat{y} = \\widehat{f}(x) = \\widehat{\\beta}_0 + \\sum_{k=1}^K \\widehat{\\\
+    beta}_k \\overbrace{\\sigma_k(x)}^{\\text{function of } x}\\)\n\n### Examples\n\
+    \n- 1. Polynomial regression\n\n\\(\\sigma_k(x) = x^k \\text{ so } \\widehat{f}(x)\
+    \ = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 x + \\widehat{\\beta}_2 x^2 + \\\
+    cdots + \\widehat{\\beta}_K x^K\\)\n\n- 2. Regression splines\n\n> A spline is\
+    \ a function that is constructed piece-wise from polynomial functions.\n\n> Apply\
+    \ a family of transformations to \\(x, \\sigma_1(x), \\sigma_2(x), \\dots, \\\
+    sigma_K(x)\\)\n\n## Nonparametric regression\n\nA spline of degree $K$ is a function\
+    \ formed by connecting polynomial segments of degree $K$ so that:\n\n- the function\
+    \ is continuous,\n- the function has $K - 1$ continuous derivatives, and\n- the\
+    \ $K$th derivative is constant between knots.\n\n## Nonparametric regression\n\
+    \n### Simple spline regression\n\nMoving window: \\(\\hat{y}\\) is the average\
+    \ of the \\(y\\)’s for nearby \\(x\\) values or a weighted average (kernel smoothing)\n\
+    \n![](img/357c1568568ec7942f9e3cf49122ebd5_17_0.png)\n\n## Nonparametric regression\n\
+    \nBasis functions: every continuous function can be represented as a linear combination\
+    \ of basis functions.\n\nMore advanced spline functions: basis splines\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_18_0.png)\n\
+    \n## Nonparametric regression\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_19_0.png)\n\
+    \nkey   df = 100   df = 3\n\n## Nonparametric regression\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_20_0.png)\n\
+    \n## Nonparametric regression\n\nThe weaknesses of this approach are:\n\n- The\
+    \ basis is fixed and independent of the data\n- If there are many predictors,\
+    \ this approach doesn't work well\n- If the basis doesn't ‘agree’ with true f,\
+    \ then K will have to be large to capture the structure\n- What if parts of f\
+    \ have substantially different structure?\n\nAlternative approach: the data **tell**\
+    \ us what kind of basis to use\n\n## Neural network model\n\nKey idea: think of\
+    \ a neural network as a multiple regression model with transformed predictors\n\
+    \nExample: One-layer neural network model with \\( K \\) hidden nodes \\( \\sigma_1(x),\
+    \ \\sigma_2(x), \\dots, \\sigma_K(x) \\) and 3 predictors \\( (x_1, x_2, x_3)\
+    \ \\)\n\n```\ny = \\beta_0 + \\beta_1 \\sigma_1(\\alpha_{10} + \\alpha_{11}x_1\
+    \ + \\alpha_{12}x_2 + \\alpha_{13}x_3)\n+ \\beta_2 \\sigma_2(\\alpha_{20} + \\\
+    alpha_{21}x_1 + \\alpha_{22}x_2 + \\alpha_{23}x_3)\n+ \\quad \\dots\n+ \\beta_K\
+    \ \\sigma_K(\\alpha_{K0} + \\alpha_{K1}x_1 + \\alpha_{K2}x_2 + \\alpha_{K3}x_3)\
+    \ \\quad \\text{function of } x\n```\n\n## Deep Learning Model\n\n### Neural network\
+    \ model\n\n\\( y = \\beta_0 + \\sum_{k=1}^K \\beta_k \\sigma_k(\\alpha_{k0} +\
+    \ \\alpha_{k1}x_1 + \\alpha_{k2}x_2 + \\alpha_{k3}x_3) \\)\n\n### Two-layer \"\
+    deep\" learning model\n\n\\(\\hat{y} = \\hat{f}(x) = \\hat{\\beta}_0 + \\sum_{k=1}^K\
+    \ \\hat{\\beta}_k \\sigma_k(\\alpha_{k0}+\\alpha_{k1}x_1 + \\alpha_{k2}x_2 + \\\
+    alpha_{k3}x_3))\\)\n\nReplace each of these predictors with another neural network\
+    \ model\n\n## Illustration of a deep learning model\n\nImage: Deep Learning, Fig\
+    \ 1.2\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_24_0.png)\n\nCAR\n\nPERSON\n\
+    \nANIMAL\n\nOutput (object identity)\n\n3rd hidden layer (object parts)\n\n2nd\
+    \ hidden layer (corners and contours)\n\n1st hidden layer (edges)\n\nVisible layer\
+    \ (input pixels)\n\n## A Statistical View of Deep Learning in Ecology\n\n### Part\
+    \ 1: Introduction\n\n- Introduction to machine learning\n- Introduction to deep\
+    \ learning\n\n### Part 2: Going deeper\n\n- Neural networks from 3 viewpoints\n\
+    - Mathematics of deep learning\n- Model fitting\n- Types of deep learning models\n\
+    \n### Part 3: Deep learning in practice\n\n- Ethics in deep learning\n- Deep learning\
+    \ in ecology\n\n## Deep Learning: Model fitting\n\n## Deep Learning Software\n\
+    \n- Python\n  - Most popular language for deep learning\n  - Object-oriented,\
+    \ high-level programming language\n  - Main packages: TensorFlow, PyTorch, Keras,\
+    \ ...\n  - Do you need to learn Python? Maybe\n\n- Keras\n  - Open-source neural-network\
+    \ library written in Python.\n  - Keras package is an API.\n  - API (application\
+    \ programming interface) allows multiple software packages to interact.\n  - Keras\
+    \ can interact with:\n    TensorFlow, Microsoft Cognitive Toolkit, R, Theano,\
+    \ PlaidML\n\n## Neural network models in the Caret package\n\n- 1. Neural network\
+    \ models: nnet, mxnet, mxnetAdam, neuralnet, and more\n\n- 2. Stacked AutoEncoder\
+    \ Deep Neural Network\n\n- 3. Many other options\n\n### R packages: keras and\
+    \ kerasR\n\n- Interface to the Python deep learning package Keras\n\n- Rstudio’s\
+    \ keras pages\n\n- Can be buggy when any of the packages it accesses are updated\n\
+    \n## Deep Learning: Model fitting\n\n- Steps in model fitting\n- 1. Define network\
+    \ structure\n- 2. Select loss function\n- 3. Select optimizer\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_29_0.png)\n\
+    \n![](img/357c1568568ec7942f9e3cf49122ebd5_29_1.png)\n"
+  mdcn: "\n\n## 深度学习统计视角 第 2 部分\n\nJennifer Hoeting, 科罗拉多州立大学\n\n## 生态学中的深度学习统计视角\n\
+    \n### 第 1 部分：简介\n\n- 机器学习简介\n- 深度学习简介\n\n### 第 2 部分：深入探讨\n\n- 从三个视角看神经网络\n- 深度学习的数学\n\
+    - 模型拟合\n- 深度学习模型的类型\n\n### 第 3 部分：深度学习实践\n\n- 深度学习中的伦理\n- 生态学中的深度学习\n\n## 从三个视角看神经网络\n\
+    \n**神经网络：** 允许计算机从数据中学习的算法\n\n**深度学习：** 多层神经网络\n\n## 从多个视角介绍神经网络\n\n### 神经网络\n\
+    \n- 作为黑箱\n- 作为统计模型\n- 在深度学习中\n\n## 作为黑箱算法的神经网络\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_4_0.png)\n\
+    \n图片来源：www.learnopencv.com\n\n## 作为统计模型的神经网络\n\n目标：提取输入的线性组合作为派生特征，然后将目标建模为这些特征的非线性函数\n\
+    \n### 翻译为统计学：\n\n- 对响应变量和预测变量拟合非线性模型\n- 预测变量使用多变量技术进行转换\n\n### 神经网络是一个非线性模型\n\n\
+    ## 作为统计模型的神经网络\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_6_0.png)\n\n错误：0.089235，步骤：146\n\
+    \n## 统计术语与神经网络术语对比\n\n| 统计学 | 神经网络 |\n|---|---|\n| 模型 | 网络，图 |\n| 拟合 | 学习，训练 |\n\
+    | 系数，参数 | 权重 |\n| 预测变量，变量 | 输入，特征 |\n| 预测响应 | 输出 |\n| 观测值 | 样例 |\n| 参数估计 | 训练或学习\
+    \ |\n| 最陡下降 | 反向传播 |\n| 截距 | 偏置项 |\n| 派生预测变量 | 隐藏节点 |\n| 惩罚函数 | 权重衰减 |\n\n## 深度学习中的神经网络\n\
+    \n### 简单神经网络\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_8_0.png)\n\n### 深度学习神经网络\n\
+    \n![](img/357c1568568ec7942f9e3cf49122ebd5_8_1.png)\n\n\U0001F534 输入层\n\n\U0001F7E1\
+    \ 隐藏层\n\n\U0001F535 输出层\n\n## 神经网络的一些数学\n\n## 揭开深度学习黑箱的面纱\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_10_0.png)\n\
+    \n## 概述\n\n核心思想：神经网络只是带有转换预测变量的回归模型\n\n考虑以下模型的演进：\n\n- 回归模型\n- 非参数回归模型\n- 神经网络模型\n\
+    - 深度学习模型\n\n## 回归模型\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_12_0.png)\n\n\
+    ## 回归模型\n\n### 模型\n\n$$y = \\beta_0 + \\beta_1 x + \\epsilon \\text{ where } \\\
+    epsilon \\sim N(0, \\sigma^2)$$\n$$= f(x)$$\n\n### 拟合模型\n\n$$\\hat{y} = \\hat{\\\
+    beta}_0 + \\hat{\\beta}_1 x$$\n$$= \\hat{f}(x)$$\n\n### 损失函数\n\n$$\\sum_{i=1}^n\
+    \ (y_i - \\hat{y}_i)^2$$\n\n## 回归模型\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_14_0.png)\n\
+    \n## 非参数回归\n\n\\(\\widehat{y} = \\widehat{f}(x) = \\widehat{\\beta}_0 + \\sum_{k=1}^K\
+    \ \\widehat{\\beta}_k \\overbrace{\\sigma_k(x)}^{\\text{function of } x}\\)\n\n\
+    ### 示例\n\n- 1. 多项式回归\n\n\\(\\sigma_k(x) = x^k \\text{ so } \\widehat{f}(x) = \\\
+    widehat{\\beta}_0 + \\widehat{\\beta}_1 x + \\widehat{\\beta}_2 x^2 + \\cdots\
+    \ + \\widehat{\\beta}_K x^K\\)\n\n- 2. 回归样条\n\n> 样条是由多项式函数分段构建的函数。\n\n> 对 \\(x,\
+    \ \\sigma_1(x), \\sigma_2(x), \\dots, \\sigma_K(x)\\) 应用一组转换\n\n## 非参数回归\n\n次数为\
+    \ $K$ 的样条是通过连接次数为 $K$ 的多项式片段形成的函数，使得：\n\n- 该函数是连续的，\n- 该函数有 $K - 1$ 个连续导数，并且\n\
+    - $K$ 阶导数在节点之间是常数。\n\n## 非参数回归\n\n### 简单样条回归\n\n移动窗口：\\(\\hat{y}\\) 是附近 \\(x\\\
+    ) 值的 \\(y\\) 的平均值或加权平均值（核平滑）\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_17_0.png)\n\
+    \n## 非参数回归\n\n基函数：每个连续函数都可以表示为基函数的线性组合。\n\n更高级的样条函数：基样条\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_18_0.png)\n\
+    \n## 非参数回归\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_19_0.png)\n\n关键   df =\
+    \ 100   df = 3\n\n## 非参数回归\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_20_0.png)\n\
+    \n## 非参数回归\n\n这种方法的弱点在于：\n\n- 基函数是固定的，与数据无关\n- 如果预测变量很多，这种方法效果不好\n- 如果基函数与真实 f\
+    \ 不“匹配”，那么 K 必须足够大才能捕捉结构\n- 如果 f 的部分具有显著不同的结构怎么办？\n\n替代方法：数据 **告诉** 我们该使用什么样的基函数\n\
+    \n## 神经网络模型\n\n核心思想：将神经网络视为带有转换预测变量的多元回归模型\n\n示例：带有 \\( K \\) 个隐藏节点 \\( \\sigma_1(x),\
+    \ \\sigma_2(x), \\dots, \\sigma_K(x) \\) 和 3 个预测变量 \\( (x_1, x_2, x_3) \\) 的单层神经网络模型\n\
+    \n```\ny = \\beta_0 + \\beta_1 \\sigma_1(\\alpha_{10} + \\alpha_{11}x_1 + \\alpha_{12}x_2\
+    \ + \\alpha_{13}x_3)\n+ \\beta_2 \\sigma_2(\\alpha_{20} + \\alpha_{21}x_1 + \\\
+    alpha_{22}x_2 + \\alpha_{23}x_3)\n+ \\quad \\dots\n+ \\beta_K \\sigma_K(\\alpha_{K0}\
+    \ + \\alpha_{K1}x_1 + \\alpha_{K2}x_2 + \\alpha_{K3}x_3) \\quad \\text{function\
+    \ of } x\n```\n\n## 深度学习模型\n\n### 神经网络模型\n\n\\( y = \\beta_0 + \\sum_{k=1}^K \\\
+    beta_k \\sigma_k(\\alpha_{k0} + \\alpha_{k1}x_1 + \\alpha_{k2}x_2 + \\alpha_{k3}x_3)\
+    \ \\)\n\n### 两层“深度”学习模型\n\n\\(\\hat{y} = \\hat{f}(x) = \\hat{\\beta}_0 + \\sum_{k=1}^K\
+    \ \\hat{\\beta}_k \\sigma_k(\\alpha_{k0}+\\alpha_{k1}x_1 + \\alpha_{k2}x_2 + \\\
+    alpha_{k3}x_3))\\)\n\n将每个预测变量替换为另一个神经网络模型\n\n## 深度学习模型示意图\n\n图片：深度学习，图 1.2\n\n\
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_24_0.png)\n\n汽车\n\n人\n\n动物\n\n输出（对象身份）\n\
+    \n第三隐藏层（对象部分）\n\n第二隐藏层（角点和轮廓）\n\n第一隐藏层（边缘）\n\n可见层（输入像素）\n\n## 生态学中的深度学习统计视角\n\n\
+    ### 第 1 部分：简介\n\n- 机器学习简介\n- 深度学习简介\n\n### 第 2 部分：深入探讨\n\n- 从三个视角看神经网络\n- 深度学习的数学\n\
+    - 模型拟合\n- 深度学习模型的类型\n\n### 第 3 部分：深度学习实践\n\n- 深度学习中的伦理\n- 生态学中的深度学习\n\n## 深度学习：模型拟合\n\
+    \n## 深度学习软件\n\n- Python\n  - 深度学习最流行的语言\n  - 面向对象的高级编程语言\n  - 主要包：TensorFlow,\
+    \ PyTorch, Keras，...\n  - 你需要学习 Python 吗？也许\n\n- Keras\n  - 用 Python 编写的开源神经网络库。\n\
+    \  - Keras 包是一个 API。\n  - API（应用程序编程接口）允许多个软件包进行交互。\n  - Keras 可以与以下软件交互：\n  \
+    \  TensorFlow, Microsoft Cognitive Toolkit, R, Theano, PlaidML\n\n## Caret 包中的神经网络模型\n\
+    \n- 1. 神经网络模型：nnet, mxnet, mxnetAdam, neuralnet 等\n\n- 2. 堆叠自动编码器深度神经网络\n\n- 3.\
+    \ 许多其他选项\n\n### R 包：keras 和 kerasR\n\n- Python 深度学习包 Keras 的接口\n\n- Rstudio 的\
+    \ keras 页面\n\n- 当它访问的任何包更新时，可能会出现 bug\n\n## 深度学习：模型拟合\n\n- 模型拟合的步骤\n- 1. 定义网络结构\n\
+    - 2. 选择损失函数\n- 3. 选择优化器\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_29_0.png)\n\
+    \n![](img/357c1568568ec7942f9e3cf49122ebd5_29_1.png)\n\n"
+  merge: -1
+- raw:
+  - '[PAGE 30]
+
+
+    # Network structure
+
+
+    +   - A layer consists of a set of nodes
+
+    +   - In a fully-connected model, each node on one layer connects to all nodes
+    in the next layer
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_30_0.png)
+
+
+    Image source: towardsdatascience'
+  - "[PAGE 31]\n\n# Defining the network model in the R interface to Keras\n\n```\n\
+    model <- keras_model_sequential()\nmodel %>%\n  layer_dense(units = 256, activation\
+    \ = 'relu') %>%\n  layer_dense(units = 128, activation = 'relu') %>%\n  layer_dense(units\
+    \ = 10, activation = 'softmax')\n```\n\nkeras.rstudio.com"
+  - '[PAGE 32]
+
+
+    # Network structure
+
+
+    Recall the basic neural network model (one layer, p predictors)
+
+
+    y = \beta_0 + \sum_{k=1}^K \beta_k \sigma_k(\alpha_{0k} + \alpha_{1k}x_1 + \alpha_{2k}x_2
+    + \cdots + \alpha_{3p}x_p)
+
+
+    Activation Function
+
+
+    Activation functions are
+
+
+    +   Computationally cheap
+
+
+    +   One key to the success of deep learning'
+  - "[PAGE 33]\n\n# # Activation Functions\n\n+   **Sigmoid**\n+   \n+   \\(\\sigma(x)\
+    \ = \\frac{1}{1+e^{-x}}\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_0.png)\n\
+    \n+   **Leaky ReLU**\n+   \n+   \\(max(0.1x, x)\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_1.png)\n\
+    \n+   **tanh**\n+   \n+   \\(\\tanh(x)\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_2.png)\n\
+    \n+   **Maxout**\n+   \n+   \\(max(w_1^T x + b_1, w_2^T x + b_2)\\)\n\n+   **ReLU**\n\
+    +   \n+   \\(max(0, x)\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_3.png)\n\
+    \n+   **ELU**\n+   \n+   \\(\\begin{cases} x & x \\ge 0 \\\\ \\alpha(e^x - 1)\
+    \ & x < 0 \\end{cases}\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_4.png)\n\
+    \nImage source: medium.com"
+  - '[PAGE 34]
+
+
+    # Network structure
+
+
+    # ReLU (Recticulated Linear Unit) activation function
+
+
+    \(\sigma(x) = \max(0, x) = \left\{ \begin{array}{ll} 0 & \text{for } x < 0 \\
+    x & \text{for } x \ge 0 \end{array} \right.\)
+
+
+    # Softmax activation function
+
+
+    +   - Used for classification problems on the output layer
+
+    +   - Input: \( x \in \Re \), output: \( 0 \le \sigma(x_i) \le 1 \)
+
+
+    \(\sigma(x_i) = \frac{\exp(x_i)}{\sum_{j=1}^J \exp(x_j)} \quad \text{for } i =
+    1, \dots, J\)'
+  - '[PAGE 35]
+
+
+    # Network structure
+
+
+    # Defining the network model in the R interface to Keras
+
+
+    ```
+
+    model <- keras_model_sequential()
+
+    model %>%
+
+    layer_dense(units = 256, activation = ''relu'') %>%
+
+    layer_dense(units = 128, activation = ''relu'') %>%
+
+    layer_dense(units = 10, activation = ''softmax'')
+
+    ```
+
+
+    +   - sequential model: linear stack of neural network layers
+
+    +   - layer_dense: densely connected layer
+
+    +   - units: number of nodes in the layer
+
+    +   - activation function
+
+
+    keras.rstudio.com'
+  - '[PAGE 36]
+
+
+    # Deep Learning: Model fitting
+
+
+    # Recall maximum likelihood estimation
+
+
+    +   Steps in model fitting
+
+    +   1. Define network structure
+
+    +   2. Select loss function
+
+    +   3. Select optimizer
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_36_0.png)'
+  - '[PAGE 37]
+
+
+    # Loss Function
+
+
+    A loss function
+
+
+    +   - Measures predictive performance of the network
+
+    +   - Measures how close the output from the last layer is to the observed value
+
+    +   - Must be a one-number summary
+
+
+    Goal in model fitting:
+
+
+    Find the parameter values (weights) that minimize the loss'
+  - '[PAGE 38]
+
+
+    # Loss Function
+
+
+    Mean Square Error: used for continuous response data
+
+
+    \(\frac{1}{n} \sum_{i=1}^n(y_i - \hat{y}_i)^2\)
+
+
+    Cross-entropy (deviance): used for categorical response data
+
+
+    \(- \sum_{i=1}^n \sum_{g=1}^G y_{ig} \log(\widehat{\pi}_{ig})\)
+
+
+    For a problem with
+
+
+    +   - g = 1, ..., G categories
+
+    +   - \(\widehat{\pi}_{ig} = \) predicted probability that observation i is in
+    the gth category'
+  - '[PAGE 39]
+
+
+    # Loss Function
+
+
+    Select a loss function that is compatible with the activation function of the
+    final layer (output)
+
+
+    | Task | Loss function | Last layer activation func. |
+
+    | :--- | :--- | :--- |
+
+    | Binary classification | Binary cross-entropy | Sigmoid |
+
+    | Multiclass, single-label classification | Categorical cross-entropy | Softmax
+    |
+
+    | Multiclass, multi-label classification | Binary cross-entropy | Sigmoid |
+
+    | Regression to arbitrary values | Mean square error (MSE) | None |
+
+    | Regression to values between 0 and 1 | MSE or binary cross-entropy | Sigmoid
+    |'
+  - "[PAGE 40]\n\n# Loss Function\n\nIn R Keras,\n\n+   1. Set up the model (see above).\n\
+    +   2. Compile the model with appropriate loss function, optimizer, and metrics.\n\
+    \n```\nmodel %>%\n  compile(\n    loss = 'categorical_crossentropy',\n    optimizer\
+    \ = optimizer_rmsprop(),\n    metrics = c('accuracy')\n  )\n```\n\nLoss functions\
+    \ in R keras"
+  - '[PAGE 41]
+
+
+    # Model fitting
+
+
+    # Steps in model fitting
+
+
+    +   1. Define network structure
+
+    +   2. Select loss function
+
+    +   3. Select Optimizer'
+  - '[PAGE 42]
+
+
+    # # Model fitting
+
+
+    # ## Goal:
+
+
+    +   - find the parameter values (weights) that minimize the loss
+
+    +   - estimate the parameter values $\beta, \alpha, ...$
+
+
+    # ## Model fitting is called
+
+
+    +   - Computer science: train the model
+
+    +   - Statistics: estimate the parameters
+
+    +   - Mathematics: optimize the loss function'
+  - '[PAGE 43]
+
+
+    # Model fitting
+
+
+    Neural networks have **many** unknown parameters (weights).
+
+
+    # Counting parameters
+
+
+    +   - p + 1 parameters in one node
+
+    +     - p covariates plus intercept (bias)
+
+    +     - parameters: $(\alpha_{k0}, \alpha_{k1}, ..., \alpha_{kp})$
+
+    +   - k = 1, ..., K nodes per layer plus intercept: $(\beta_{g0}, ..., \beta_{gK})$
+
+    +   - g = 1, ..., G layers
+
+
+    Total of $K(p + 1) + G(K + 1)$ parameters'
+  - '[PAGE 44]
+
+
+    # Model fitting
+
+
+    Example:
+
+
+    +   - p = 100 covariates
+
+    +   - K = 128 nodes per layer
+
+    +   - G = 5 layers
+
+    +   - 128(100 + 1) + 5(128 + 1) = 13,573 parameters
+
+
+    Implications:
+
+
+    +   - Many parameters and
+
+    +   - All the parameters are highly related.
+
+    +   - Thus you need a lot of data and a special approach to estimate parameters.'
+  - '[PAGE 45]
+
+
+    # Optimization
+
+
+    +   - General approach to minimize loss is to use stochastic gradient descent
+
+    +     - Assign starting values to the weights
+
+    +     - Evaluate the partial derivative of the loss function with respect to each
+    weight
+
+    +     - Take a step in the downhill direction (opposite the gradient)
+
+    +     - Repeat until weights converge
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_45_0.png)'
+  - '[PAGE 46]
+
+
+    # Optimization
+
+
+    # Optimization for deep learning
+
+
+    +   - This was a brief overview of optimization.
+
+    +   - The book Deep Learning by Goodfellow et al. has a good overview
+
+    +   - Optimizers in Keras: SGD, RMSprop, Adagrad, Adadelta, Adam, Adamax, Nadam
+
+    +   - Overview of the optimizers'
+  - '[PAGE 47]
+
+
+    # Optimization: Putting it all together (2 layer network)
+
+
+    Input X
+
+
+    Weights
+
+
+    Layer
+
+    data transformation
+
+
+    Weights
+
+
+    Layer
+
+    data transformation
+
+
+    Weight
+
+    update
+
+
+    Predictions
+
+    Y''
+
+
+    True targets
+
+    Y
+
+
+    Optimizer
+
+
+    Loss function
+
+
+    Loss score'
+  - '[PAGE 48]
+
+
+    # Deep Learning:
+
+    Model fitting in practice'
+  - '[PAGE 49]
+
+
+    # Model fitting in practice
+
+
+    Training deep learning models requires many decisions
+
+
+    You select:
+
+
+    +   - Model architecture
+
+    +   - Loss function
+
+    +   - Optimization method
+
+    +   - Details on how all of these work'
+  - '[PAGE 50]
+
+
+    # # Model fitting in practice
+
+
+    # ## Some deep learning parameters to adjust
+
+
+    +   - Number of hidden layers and units
+
+    +   - Regularization
+
+    +   - Epochs and Batch Size
+
+    +   - General practical advice'
+  - '[PAGE 51]
+
+
+    # Numer of hidden layers and units
+
+
+    Width
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_51_0.png)
+
+
+    Depth'
+  - '[PAGE 52]
+
+
+    # # Numer of hidden layers and units
+
+
+    # ## How many layers?
+
+
+    +   - Old strategy: one is enough
+
+    +     - Universal approximator theorem: One hidden layer is enough to represent
+    an approximation of any function to an arbitrary degree of accuracy
+
+    +     - Theory vs practice!
+
+    +   - Current advice
+
+    +     - Start with one or two hidden layers with many units
+
+    +     - If performance is poor and you have debugged, try deep learning'
+  - '[PAGE 53]
+
+
+    # # Over and underfitting
+
+
+    # ## Simple Example
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_53_0.png)
+
+
+    Underfitted
+
+
+    Good Fit/Robust
+
+
+    Overfitted
+
+
+    Image source: medium.com'
+  - '[PAGE 54]
+
+
+    # # Over and underfitting
+
+
+    # ## Overfitting:
+
+
+    +   - Results won''t generalize beyond the training set
+
+    +   - Solution: get more training data or use regularization
+
+
+    # ## Underfitting:
+
+
+    +   - Results aren''t useful
+
+    +   - Solution: adjust model structure or model fitting setup'
+  - '[PAGE 55]
+
+
+    # Regularization
+
+
+    <- Underfitting
+
+
+    Overfitting ->
+
+
+    Best Fit
+
+
+    Test Error
+
+
+    Training Error
+
+
+    Error
+
+
+    Model "complexity"
+
+
+    Image source: www.analyticsvidhya.com'
+  md: "\n## Network structure\n\n- A layer consists of a set of nodes\n- In a fully-connected\
+    \ model, each node on one layer connects to all nodes in the next layer\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_30_0.png)\n\
+    \nImage source: towardsdatascience\n\n## Defining the network model in the R interface\
+    \ to Keras\n\n```\nmodel <- keras_model_sequential()\nmodel %>%\n  layer_dense(units\
+    \ = 256, activation = 'relu') %>%\n  layer_dense(units = 128, activation = 'relu')\
+    \ %>%\n  layer_dense(units = 10, activation = 'softmax')\n```\n\nkeras.rstudio.com\n\
+    \n## Network structure\n\nRecall the basic neural network model (one layer, p\
+    \ predictors)\n\ny = \\beta_0 + \\sum_{k=1}^K \\beta_k \\sigma_k(\\alpha_{0k}\
+    \ + \\alpha_{1k}x_1 + \\alpha_{2k}x_2 + \\cdots + \\alpha_{3p}x_p)\n\nActivation\
+    \ Function\n\nActivation functions are\n\n- Computationally cheap\n- One key to\
+    \ the success of deep learning\n\n## Activation Functions\n\n- **Sigmoid**\n\n\
+    \  \\(\\sigma(x) = \\frac{1}{1+e^{-x}}\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_0.png)\n\
+    \n- **Leaky ReLU**\n\n  \\(max(0.1x, x)\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_1.png)\n\
+    \n- **tanh**\n\n  \\(\\tanh(x)\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_2.png)\n\
+    \n- **Maxout**\n\n  \\(max(w_1^T x + b_1, w_2^T x + b_2)\\)\n\n- **ReLU**\n\n\
+    \  \\(max(0, x)\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_3.png)\n\n-\
+    \ **ELU**\n\n  \\(\\begin{cases} x & x \\ge 0 \\\\ \\alpha(e^x - 1) & x < 0 \\\
+    end{cases}\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_4.png)\n\nImage source:\
+    \ medium.com\n\n## Network structure\n\n### ReLU (Rectified Linear Unit) activation\
+    \ function\n\n\\(\\sigma(x) = \\max(0, x) = \\left\\{ \\begin{array}{ll} 0 & \\\
+    text{for } x < 0 \\\\ x & \\text{for } x \\ge 0 \\end{array} \\right.\\)\n\n###\
+    \ Softmax activation function\n\n- Used for classification problems on the output\
+    \ layer\n- Input: \\( x \\in \\Re \\), output: \\( 0 \\le \\sigma(x_i) \\le 1\
+    \ \\)\n\n\\(\\sigma(x_i) = \\frac{\\exp(x_i)}{\\sum_{j=1}^J \\exp(x_j)} \\quad\
+    \ \\text{for } i = 1, \\dots, J\\)\n\n## Network structure\n\n### Defining the\
+    \ network model in the R interface to Keras\n\n```\nmodel <- keras_model_sequential()\n\
+    model %>%\n  layer_dense(units = 256, activation = 'relu') %>%\n  layer_dense(units\
+    \ = 128, activation = 'relu') %>%\n  layer_dense(units = 10, activation = 'softmax')\n\
+    ```\n\n- sequential model: linear stack of neural network layers\n- layer_dense:\
+    \ densely connected layer\n- units: number of nodes in the layer\n- activation\
+    \ function\n\nkeras.rstudio.com\n\n## Deep Learning: Model fitting\n\n### Recall\
+    \ maximum likelihood estimation\n\n- Steps in model fitting\n  1. Define network\
+    \ structure\n  2. Select loss function\n  3. Select optimizer\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_36_0.png)\n\
+    \n## Loss Function\n\nA loss function\n\n- Measures predictive performance of\
+    \ the network\n- Measures how close the output from the last layer is to the observed\
+    \ value\n- Must be a one-number summary\n\nGoal in model fitting:\n\nFind the\
+    \ parameter values (weights) that minimize the loss\n\n## Loss Function\n\nMean\
+    \ Square Error: used for continuous response data\n\n\\(\\frac{1}{n} \\sum_{i=1}^n(y_i\
+    \ - \\hat{y}_i)^2\\)\n\nCross-entropy (deviance): used for categorical response\
+    \ data\n\n\\(- \\sum_{i=1}^n \\sum_{g=1}^G y_{ig} \\log(\\widehat{\\pi}_{ig})\\\
+    )\n\nFor a problem with\n\n- g = 1, ..., G categories\n- \\(\\widehat{\\pi}_{ig}\
+    \ = \\) predicted probability that observation i is in the gth category\n\n##\
+    \ Loss Function\n\nSelect a loss function that is compatible with the activation\
+    \ function of the final layer (output)\n\n| Task | Loss function | Last layer\
+    \ activation func. |\n| :--- | :--- | :--- |\n| Binary classification | Binary\
+    \ cross-entropy | Sigmoid |\n| Multiclass, single-label classification | Categorical\
+    \ cross-entropy | Softmax |\n| Multiclass, multi-label classification | Binary\
+    \ cross-entropy | Sigmoid |\n| Regression to arbitrary values | Mean square error\
+    \ (MSE) | None |\n| Regression to values between 0 and 1 | MSE or binary cross-entropy\
+    \ | Sigmoid |\n\n## Loss Function\n\nIn R Keras,\n\n1. Set up the model (see above).\n\
+    2. Compile the model with appropriate loss function, optimizer, and metrics.\n\
+    \n```\nmodel %>%\n  compile(\n    loss = 'categorical_crossentropy',\n    optimizer\
+    \ = optimizer_rmsprop(),\n    metrics = c('accuracy')\n  )\n```\n\nLoss functions\
+    \ in R keras\n\n## Model fitting\n\n### Steps in model fitting\n\n1. Define network\
+    \ structure\n2. Select loss function\n3. Select Optimizer\n\n## Model fitting\n\
+    \n### Goal:\n\n- find the parameter values (weights) that minimize the loss\n\
+    - estimate the parameter values $\\beta, \\alpha, ...$\n\n### Model fitting is\
+    \ called\n\n- Computer science: train the model\n- Statistics: estimate the parameters\n\
+    - Mathematics: optimize the loss function\n\n## Model fitting\n\nNeural networks\
+    \ have **many** unknown parameters (weights).\n\n### Counting parameters\n\n-\
+    \ p + 1 parameters in one node\n  - p covariates plus intercept (bias)\n  - parameters:\
+    \ $(\\alpha_{k0}, \\alpha_{k1}, ..., \\alpha_{kp})$\n- k = 1, ..., K nodes per\
+    \ layer plus intercept: $(\\beta_{g0}, ..., \\beta_{gK})$\n- g = 1, ..., G layers\n\
+    \nTotal of $K(p + 1) + G(K + 1)$ parameters\n\n## Model fitting\n\nExample:\n\n\
+    - p = 100 covariates\n- K = 128 nodes per layer\n- G = 5 layers\n- 128(100 + 1)\
+    \ + 5(128 + 1) = 13,573 parameters\n\nImplications:\n\n- Many parameters and\n\
+    - All the parameters are highly related.\n- Thus you need a lot of data and a\
+    \ special approach to estimate parameters.\n\n## Optimization\n\n- General approach\
+    \ to minimize loss is to use stochastic gradient descent\n  - Assign starting\
+    \ values to the weights\n  - Evaluate the partial derivative of the loss function\
+    \ with respect to each weight\n  - Take a step in the downhill direction (opposite\
+    \ the gradient)\n  - Repeat until weights converge\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_45_0.png)\n\
+    \n## Optimization\n\n### Optimization for deep learning\n\n- This was a brief\
+    \ overview of optimization.\n- The book Deep Learning by Goodfellow et al. has\
+    \ a good overview\n- Optimizers in Keras: SGD, RMSprop, Adagrad, Adadelta, Adam,\
+    \ Adamax, Nadam\n- Overview of the optimizers\n\n## Optimization: Putting it all\
+    \ together (2 layer network)\n\n- Input X\n- Weights\n- Layer data transformation\n\
+    - Weights\n- Layer data transformation\n- Weight update\n- Predictions Y'\n- True\
+    \ targets Y\n- Optimizer\n- Loss function\n- Loss score\n\n## Deep Learning: Model\
+    \ fitting in practice\n\n## Model fitting in practice\n\nTraining deep learning\
+    \ models requires many decisions\n\nYou select:\n\n- Model architecture\n- Loss\
+    \ function\n- Optimization method\n- Details on how all of these work\n\n## Model\
+    \ fitting in practice\n\n### Some deep learning parameters to adjust\n\n- Number\
+    \ of hidden layers and units\n- Regularization\n- Epochs and Batch Size\n- General\
+    \ practical advice\n\n## Number of hidden layers and units\n\nWidth\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_51_0.png)\n\
+    \nDepth\n\n## Number of hidden layers and units\n\n### How many layers?\n\n- Old\
+    \ strategy: one is enough\n  - Universal approximator theorem: One hidden layer\
+    \ is enough to represent an approximation of any function to an arbitrary degree\
+    \ of accuracy\n  - Theory vs practice!\n- Current advice\n  - Start with one or\
+    \ two hidden layers with many units\n  - If performance is poor and you have debugged,\
+    \ try deep learning\n\n## Over and underfitting\n\n### Simple Example\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_53_0.png)\n\
+    \nUnderfitted\n\nGood Fit/Robust\n\nOverfitted\n\nImage source: medium.com\n\n\
+    ## Over and underfitting\n\n### Overfitting:\n\n- Results won't generalize beyond\
+    \ the training set\n- Solution: get more training data or use regularization\n\
+    \n### Underfitting:\n\n- Results aren't useful\n- Solution: adjust model structure\
+    \ or model fitting setup\n\n## Regularization\n\n<- Underfitting\n\nOverfitting\
+    \ ->\n\nBest Fit\n\nTest Error\n\nTraining Error\n\nError\n\nModel \"complexity\"\
+    \n\nImage source: www.analyticsvidhya.com\n"
+  mdcn: "\n\n## 网络结构\n\n- 一个层由一组节点组成\n- 在全连接模型中，一层中的每个节点都连接到下一层的所有节点\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_30_0.png)\n\
+    \n图片来源：towardsdatascience\n\n## 在 Keras 的 R 接口中定义网络模型\n\n```\nmodel <- keras_model_sequential()\n\
+    model %>%\n  layer_dense(units = 256, activation = 'relu') %>%\n  layer_dense(units\
+    \ = 128, activation = 'relu') %>%\n  layer_dense(units = 10, activation = 'softmax')\n\
+    ```\n\nkeras.rstudio.com\n\n## 网络结构\n\n回顾基本神经网络模型（一层，p 个预测变量）\n\ny = \\beta_0\
+    \ + \\sum_{k=1}^K \\beta_k \\sigma_k(\\alpha_{0k} + \\alpha_{1k}x_1 + \\alpha_{2k}x_2\
+    \ + \\cdots + \\alpha_{3p}x_p)\n\n激活函数\n\n激活函数\n\n- 计算开销低\n- 深度学习成功的关键之一\n\n##\
+    \ 激活函数\n\n- **Sigmoid**\n\n  \\(\\sigma(x) = \\frac{1}{1+e^{-x}}\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_0.png)\n\
+    \n- **Leaky ReLU**\n\n  \\(max(0.1x, x)\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_1.png)\n\
+    \n- **tanh**\n\n  \\(\\tanh(x)\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_2.png)\n\
+    \n- **Maxout**\n\n  \\(max(w_1^T x + b_1, w_2^T x + b_2)\\)\n\n- **ReLU**\n\n\
+    \  \\(max(0, x)\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_3.png)\n\n-\
+    \ **ELU**\n\n  \\(\\begin{cases} x & x \\ge 0 \\\\ \\alpha(e^x - 1) & x < 0 \\\
+    end{cases}\\)\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_33_4.png)\n\n图片来源：medium.com\n\
+    \n## 网络结构\n\n### ReLU（修正线性单元）激活函数\n\n\\(\\sigma(x) = \\max(0, x) = \\left\\{ \\\
+    begin{array}{ll} 0 & \\text{for } x < 0 \\\\ x & \\text{for } x \\ge 0 \\end{array}\
+    \ \\right.\\)\n\n### Softmax 激活函数\n\n- 用于输出层的分类问题\n- 输入：\\( x \\in \\Re \\)，输出：\\\
+    ( 0 \\le \\sigma(x_i) \\le 1 \\)\n\n\\(\\sigma(x_i) = \\frac{\\exp(x_i)}{\\sum_{j=1}^J\
+    \ \\exp(x_j)} \\quad \\text{for } i = 1, \\dots, J\\)\n\n## 网络结构\n\n### 在 Keras\
+    \ 的 R 接口中定义网络模型\n\n```\nmodel <- keras_model_sequential()\nmodel %>%\n  layer_dense(units\
+    \ = 256, activation = 'relu') %>%\n  layer_dense(units = 128, activation = 'relu')\
+    \ %>%\n  layer_dense(units = 10, activation = 'softmax')\n```\n\n- 序列模型：神经网络层的线性堆叠\n\
+    - layer_dense：全连接层\n- units：层中的节点数\n- 激活函数\n\nkeras.rstudio.com\n\n## 深度学习：模型拟合\n\
+    \n### 回顾极大似然估计\n\n- 模型拟合的步骤\n  1. 定义网络结构\n  2. 选择损失函数\n  3. 选择优化器\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_36_0.png)\n\
+    \n## 损失函数\n\n损失函数\n\n- 衡量网络的预测性能\n- 衡量最后一层的输出与观测值的接近程度\n- 必须是一个数值摘要\n\n模型拟合的目标：\n\
+    \n找到使损失最小化的参数值（权重）\n\n## 损失函数\n\n均方误差：用于连续响应数据\n\n\\(\\frac{1}{n} \\sum_{i=1}^n(y_i\
+    \ - \\hat{y}_i)^2\\)\n\n交叉熵（偏差）：用于分类响应数据\n\n\\(- \\sum_{i=1}^n \\sum_{g=1}^G y_{ig}\
+    \ \\log(\\widehat{\\pi}_{ig})\\)\n\n对于具有以下特征的问题：\n\n- g = 1, ..., G 个类别\n- \\\
+    (\\widehat{\\pi}_{ig} = \\) 观测值 i 属于第 g 个类别的预测概率\n\n## 损失函数\n\n选择与最终层（输出层）激活函数兼容的损失函数\n\
+    \n| 任务 | 损失函数 | 最后一层激活函数 |\n| :--- | :--- | :--- |\n| 二分类 | 二元交叉熵 | Sigmoid |\n\
+    | 多类，单标签分类 | 类别交叉熵 | Softmax |\n| 多类，多标签分类 | 二元交叉熵 | Sigmoid |\n| 回归到任意值 | 均方误差\
+    \ (MSE) | 无 |\n| 回归到 0 到 1 之间的值 | MSE 或二元交叉熵 | Sigmoid |\n\n## 损失函数\n\n在 R Keras\
+    \ 中，\n\n1. 设置模型（参见上文）。\n2. 使用合适的损失函数、优化器和指标编译模型。\n\n```\nmodel %>%\n  compile(\n\
+    \    loss = 'categorical_crossentropy',\n    optimizer = optimizer_rmsprop(),\n\
+    \    metrics = c('accuracy')\n  )\n```\n\nR keras 中的损失函数\n\n## 模型拟合\n\n### 模型拟合的步骤\n\
+    \n1. 定义网络结构\n2. 选择损失函数\n3. 选择优化器\n\n## 模型拟合\n\n### 目标：\n\n- 找到使损失最小化的参数值（权重）\n\
+    - 估计参数值 $\\beta, \\alpha, ...$\n\n### 模型拟合也称为\n\n- 计算机科学：训练模型\n- 统计学：估计参数\n- 数学：优化损失函数\n\
+    \n## 模型拟合\n\n神经网络有**许多**未知参数（权重）。\n\n### 参数计数\n\n- 一个节点中有 p + 1 个参数\n  - p 个协变量加上截距（偏置）\n\
+    \  - 参数：$(\\alpha_{k0}, \\alpha_{k1}, ..., \\alpha_{kp})$\n- 每层 k = 1, ..., K\
+    \ 个节点加上截距：$(\\beta_{g0}, ..., \\beta_{gK})$\n- g = 1, ..., G 层\n\n总计 $K(p + 1)\
+    \ + G(K + 1)$ 个参数\n\n## 模型拟合\n\n示例：\n\n- p = 100 个协变量\n- K = 128 个节点/层\n- G =\
+    \ 5 层\n- 128(100 + 1) + 5(128 + 1) = 13,573 个参数\n\n含义：\n\n- 参数众多，且\n- 所有参数高度相关。\n\
+    - 因此，你需要大量数据和一种特殊的方法来估计参数。\n\n## 优化\n\n- 最小化损失的一般方法是使用随机梯度下降\n  - 为权重分配初始值\n \
+    \ - 计算损失函数对每个权重的偏导数\n  - 沿下降方向（梯度的反方向）迈出一步\n  - 重复直到权重收敛\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_45_0.png)\n\
+    \n## 优化\n\n### 深度学习优化\n\n- 这是对优化的简要概述。\n- Goodfellow 等人编写的《Deep Learning》一书中有很好的概述\n\
+    - Keras 中的优化器：SGD, RMSprop, Adagrad, Adadelta, Adam, Adamax, Nadam\n- 优化器概述\n\n\
+    ## 优化：综合所有内容（2 层网络）\n\n- 输入 X\n- 权重\n- 层数据变换\n- 权重\n- 层数据变换\n- 权重更新\n- 预测值 Y'\n\
+    - 真实目标 Y\n- 优化器\n- 损失函数\n- 损失分数\n\n## 深度学习：实践中的模型拟合\n\n## 实践中的模型拟合\n\n训练深度学习模型需要做出许多决策\n\
+    \n你选择：\n\n- 模型架构\n- 损失函数\n- 优化方法\n- 所有这些工作原理的细节\n\n## 实践中的模型拟合\n\n### 需要调整的一些深度学习参数\n\
+    \n- 隐藏层数量和单元数\n- 正则化\n- 迭代次数和批量大小\n- 一般实践建议\n\n## 隐藏层数量和单元数\n\n宽度\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_51_0.png)\n\
+    \n深度\n\n## 隐藏层数量和单元数\n\n### 多少层？\n\n- 旧策略：一层足够\n  - 通用逼近定理：一个隐藏层足以以任意精度表示任何函数的近似\n\
+    \  - 理论与实践！\n- 当前建议\n  - 从具有一个或两个隐藏层且包含大量单元的网络开始\n  - 如果性能不佳且已调试，请尝试深度学习\n\n##\
+    \ 欠拟合和过拟合\n\n### 简单示例\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_53_0.png)\n\n\
+    欠拟合\n\n良好拟合/鲁棒\n\n过拟合\n\n图片来源：medium.com\n\n## 欠拟合和过拟合\n\n### 过拟合：\n\n- 结果无法推广到训练集之外\n\
+    - 解决方案：获取更多训练数据或使用正则化\n\n### 欠拟合：\n\n- 结果无用\n- 解决方案：调整模型结构或模型拟合设置\n\n## 正则化\n\n\
+    <- 欠拟合\n\n过拟合 ->\n\n最佳拟合\n\n测试误差\n\n训练误差\n\n误差\n\n模型\"复杂度\"\n\n图片来源：www.analyticsvidhya.com\n\
+    \n"
+  merge: 0
+- raw:
+  - '[PAGE 56]
+
+
+    # # Regularization vis Dropout
+
+
+    # ## Dropout
+
+
+    +   - Randomly set to 0 a proportion of weights in the model
+
+    +   - Prevents overfitting via sparser networks
+
+    +   - Dropout rate = fraction of weights set to 0'
+  - '[PAGE 57]
+
+
+    # Regularization vis Dropout
+
+
+    ```
+
+    model <- keras_model_sequential()
+
+    model %>%
+
+    layer_dense(units = 256, activation = ''relu'', input_shap
+
+    layer_dropout(rate = 0.4) %>%
+
+    layer_dense(units = 128, activation = ''relu'') %>%
+
+    layer_dropout(rate = 0.3) %>%
+
+    layer_dense(units = 10, activation = ''softmax'')
+
+    ```
+
+
+    Rstudio''s keras pages'
+  - '[PAGE 58]
+
+
+    # Regularization vs Dropout
+
+
+    Source: Srivastiva et al. Dropout: A Simple Way to Prevent Neural Networks from
+    Overfitting
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_58_0.png)
+
+
+    Figure 4: Test error for different architectures'
+  - '[PAGE 59]
+
+
+    # # Regularization
+
+
+    You can also acheive regularization by adding a LASSO-like penalty to the loss
+    function (Tibshirani, 1996)
+
+
+    # ## Regularization
+
+
+    Loss + Regularization penalty
+
+
+    # ## L1 Regularization
+
+
+    $Loss + \lambda \sum_{i=1}^{M} |w_i|$
+
+
+    where
+
+
+    +   - $w_1, \dots, w_M$ represent all model weights (parameters)
+
+    +   - $\lambda$ is a tuning parameter'
+  - '[PAGE 60]
+
+
+    # Epochs and Batch Size
+
+
+    To deal with large data sets, deep learning optimization algorithms break up the
+    data into subsets.
+
+
+    # Model fitting options:
+
+
+    +   * Batch size: # of training samples to work through before updating the model
+
+    +   * Epoch: number of complete passes through the data set
+
+    +   * Validation split: Fraction of the training data to be used as validation
+    data per epoch.'
+  - '[PAGE 61]
+
+
+    # Epochs and Batch Size
+
+
+    Small example: Use the fit() function to train the model for 30 epochs using batches
+    of 128 images:
+
+
+    ```
+
+    history <- model %>% fit(
+
+    x_train, y_train,
+
+    epochs = 30, batch_size = 128,
+
+    validation_split = 0.2
+
+    )
+
+    ```
+
+
+    Useful reference: machinelearningmastery.com'
+  - '[PAGE 62]
+
+
+    # Epoch plot
+
+
+    accuracy
+
+    epoch
+
+    training accuracy
+
+    validation accuracy: little overfitting
+
+    validation accuracy: strong overfitting
+
+
+    Image source: towardsdatascience.com'
+  - '[PAGE 63]
+
+
+    # THIS IS YOUR MACHINE LEARNING SYSTEM?
+
+
+    YUP! YOU POUR THE DATA INTO THIS BIG PILE OF LINEAR ALGEBRA, THEN COLLECT THE
+    ANSWERS ON THE OTHER SIDE.
+
+
+    WHAT IF THE ANSWERS ARE WRONG?
+
+
+    JUST STIR THE PILE UNTIL THEY START LOOKING RIGHT.
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_63_0.png)'
+  - '[PAGE 64]
+
+
+    # Architecture
+
+
+    Network architecture: the overall structure of the network
+
+
+    General advice
+
+
+    +   - Fit the largest network you can afford
+
+    +   - Keep the # nodes per layer the same
+
+    +   - Try different layer sizes
+
+    +   - Use ReLU units for hidden layers
+
+    +   - Choose an appropriate loss function for your data
+
+    +   - Make sure the activation function for your output layer matches the loss
+    function'
+  - '[PAGE 65]
+
+
+    # Types of Deep Learning Models'
+  - '[PAGE 66]
+
+
+    # Types of Deep Learning Models
+
+
+    # Architecture families:
+
+
+    +   1. Deep feedforward networks: what we''ve covered so far
+
+    +   2. Convolutional networks
+
+    +   3. Recurrent and Recursive Nets
+
+    +   4. Generative adversarial network
+
+    +   5. Bayesian networks
+
+    +   6. Always new methods on the horizon'
+  - '[PAGE 67]
+
+
+    # Types of Deep Learning Models
+
+
+    # Convolutional networks
+
+
+    +   For grid-like data like images
+
+
+    +   Data need to be correlated in some way (I think)
+
+
+    +   Each layer detects small, meaningful features like edges using kernels instead
+    of the entire image
+
+
+    +   Sparse connectivity'
+  - '[PAGE 68]
+
+
+    # # Types of Deep Learning Models
+
+
+    # # Edge Detection by Convolution
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_68_0.png)
+
+
+    Input
+
+
+    | 1 | -1 |
+
+    |---|---|
+
+
+    Kernel
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_68_1.png)
+
+
+    Output'
+  - '[PAGE 69]
+
+
+    # # Convolution network
+
+
+    Image: Deep Learning, Fig 1.2
+
+
+    ![](img/357c1568568ec7942f9e3cf49122ebd5_69_0.png)
+
+
+    Output (object identity)
+
+
+    CAR
+
+
+    PERSON
+
+
+    ANIMAL
+
+
+    3rd hidden layer (object parts)
+
+
+    2nd hidden layer (corners and contours)
+
+
+    1st hidden layer (edges)
+
+
+    Visible layer (input pixels)'
+  - '[PAGE 70]
+
+
+    # Types of Deep Learning Models
+
+
+    # Recurrent and Recursive Nets
+
+
+    +   - For processing sequential data
+
+    +   - Examples: time series, financial data, text, speech
+
+
+    # Generative adversarial network
+
+
+    +   - Two neural networks compete to generate new data to be similar to old data
+
+    +   - Used for image generation, video generation and voice generation'
+  - '[PAGE 71]
+
+
+    # Types of Deep Learning Models
+
+
+    # Bayesian networks
+
+
+    +   - Can be any of the above (e.g., Bayesian convolutional network)
+
+    +   - Pros: estimate uncertainty
+
+    +   - Cons: slow to compute
+
+    +   - Variational Bayes is a current approach for inference
+
+    +   - Current approaches are pretty crude'
+  - '[PAGE 72]
+
+
+    # # A Statistical View of Deep Learning in Ecology
+
+
+    # ## Part 1: Introduction
+
+
+    +   - Introduction to machine learning
+
+    +   - Introduction to deep learning
+
+
+    # ## Part 2: Going deeper
+
+
+    +   - Neural networks from 3 viewpoints
+
+    +   - Mathematics of deep learning
+
+    +   - Model fitting
+
+    +   - Types of deep learning models
+
+
+    # ## Part 3: Deep learning in practice
+
+
+    +   - Ethics in deep learning
+
+    +   - Deep learning in ecology'
+  - '[PAGE 73]
+
+
+    # Some useful references on deep learning
+
+
+    +   - Deep Learning by I. Goodfellow, Y. Bengio and A. Courville (2016) MIT Press
+
+
+    +   - Deep Learning with R F. Chollet and J.J. Allaire (2018) Manning Publications
+
+
+    +   - Chapters 1-3 available online
+
+
+    +   - Focus is on Keras'
+  - '[PAGE 74]
+
+
+    # Additional references that I used to develop this presentation
+
+
+    # Books:
+
+
+    +   - *Computational Statistics*
+
+    +     by Givens and Hoeting (2nd edition, Wiley)
+
+    +   - *The Elements of Statistical Learning*
+
+    +     by Hastie, Tibshirani, and Friedman
+
+    +   - *Introduction to Statistical Learning*
+
+    +     by James, Witten, Hastie, Tibshirani
+
+
+    Course materials by:
+
+    Ian Goodfellow, Darren Homrighausen, Ander Wilson, Asa Ben-Hur'
+  - '[PAGE 75]
+
+
+    # Thank you to
+
+
+    +   - ISEC2020 organizers especially David Warton and Gordana Popovic
+
+    +   - Course assistants: Tess Hamzeh, Winston Hilton, Rachael Krawczyk
+
+    +   - Alison Ketz and Dan Walsh
+
+
+    # Acknowledgment of funding support
+
+
+    This material is based upon work supported by the National Science Foundation
+    (NSF) under Grant No. AGS-1419558, the US Geological Survey (USGS) (G17AC00409),
+    and Colorado State University (CSU). Any opinions, findings, and conclusions or
+    recommendations expressed in this material are those of the author and do not
+    necessarily reflect the views of the NSF, USGS or CSU.'
+  md: "\n## Regularization vs Dropout\n\n### Dropout\n\n- Randomly set to 0 a proportion\
+    \ of weights in the model\n- Prevents overfitting via sparser networks\n- Dropout\
+    \ rate = fraction of weights set to 0\n\n## Regularization vs Dropout\n\n```\n\
+    model <- keras_model_sequential()\nmodel %>%\nlayer_dense(units = 256, activation\
+    \ = 'relu', input_shape\nlayer_dropout(rate = 0.4) %>%\nlayer_dense(units = 128,\
+    \ activation = 'relu') %>%\nlayer_dropout(rate = 0.3) %>%\nlayer_dense(units =\
+    \ 10, activation = 'softmax')\n```\n\nRstudio's keras pages\n\n## Regularization\
+    \ vs Dropout\n\nSource: Srivastava et al. Dropout: A Simple Way to Prevent Neural\
+    \ Networks from Overfitting\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_58_0.png)\n\
+    \nFigure 4: Test error for different architectures\n\n## Regularization\n\nYou\
+    \ can also achieve regularization by adding a LASSO-like penalty to the loss function\
+    \ (Tibshirani, 1996)\n\n### Regularization\n\nLoss + Regularization penalty\n\n\
+    ### L1 Regularization\n\n$Loss + \\lambda \\sum_{i=1}^{M} |w_i|$\n\nwhere\n\n\
+    - $w_1, \\dots, w_M$ represent all model weights (parameters)\n- $\\lambda$ is\
+    \ a tuning parameter\n\n## Epochs and Batch Size\n\nTo deal with large data sets,\
+    \ deep learning optimization algorithms break up the data into subsets.\n\n###\
+    \ Model fitting options:\n\n- Batch size: # of training samples to work through\
+    \ before updating the model\n- Epoch: number of complete passes through the data\
+    \ set\n- Validation split: Fraction of the training data to be used as validation\
+    \ data per epoch.\n\n## Epochs and Batch Size\n\nSmall example: Use the fit()\
+    \ function to train the model for 30 epochs using batches of 128 images:\n\n```\n\
+    history <- model %>% fit(\nx_train, y_train,\nepochs = 30, batch_size = 128,\n\
+    validation_split = 0.2\n)\n```\n\nUseful reference: machinelearningmastery.com\n\
+    \n## Epoch plot\n\naccuracy\nepoch\ntraining accuracy\nvalidation accuracy: little\
+    \ overfitting\nvalidation accuracy: strong overfitting\n\nImage source: towardsdatascience.com\n\
+    \n## THIS IS YOUR MACHINE LEARNING SYSTEM?\n\nYUP! YOU POUR THE DATA INTO THIS\
+    \ BIG PILE OF LINEAR ALGEBRA, THEN COLLECT THE ANSWERS ON THE OTHER SIDE.\n\n\
+    WHAT IF THE ANSWERS ARE WRONG?\n\nJUST STIR THE PILE UNTIL THEY START LOOKING\
+    \ RIGHT.\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_63_0.png)\n\n## Architecture\n\
+    \nNetwork architecture: the overall structure of the network\n\n### General advice\n\
+    \n- Fit the largest network you can afford\n- Keep the # nodes per layer the same\n\
+    - Try different layer sizes\n- Use ReLU units for hidden layers\n- Choose an appropriate\
+    \ loss function for your data\n- Make sure the activation function for your output\
+    \ layer matches the loss function\n\n## Types of Deep Learning Models\n\n## Types\
+    \ of Deep Learning Models\n\n### Architecture families:\n\n- 1. Deep feedforward\
+    \ networks: what we've covered so far\n- 2. Convolutional networks\n- 3. Recurrent\
+    \ and Recursive Nets\n- 4. Generative adversarial network\n- 5. Bayesian networks\n\
+    - 6. Always new methods on the horizon\n\n## Types of Deep Learning Models\n\n\
+    ### Convolutional networks\n\n- For grid-like data like images\n- Data need to\
+    \ be correlated in some way (I think)\n- Each layer detects small, meaningful\
+    \ features like edges using kernels instead of the entire image\n- Sparse connectivity\n\
+    \n## Types of Deep Learning Models\n\n### Edge Detection by Convolution\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_68_0.png)\n\
+    \nInput\n\n| 1 | -1 |\n|---|---|\n\nKernel\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_68_1.png)\n\
+    \nOutput\n\n## Convolution network\n\nImage: Deep Learning, Fig 1.2\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_69_0.png)\n\
+    \nOutput (object identity)\n\nCAR\n\nPERSON\n\nANIMAL\n\n3rd hidden layer (object\
+    \ parts)\n\n2nd hidden layer (corners and contours)\n\n1st hidden layer (edges)\n\
+    \nVisible layer (input pixels)\n\n## Types of Deep Learning Models\n\n### Recurrent\
+    \ and Recursive Nets\n\n- For processing sequential data\n- Examples: time series,\
+    \ financial data, text, speech\n\n### Generative adversarial network\n\n- Two\
+    \ neural networks compete to generate new data to be similar to old data\n- Used\
+    \ for image generation, video generation and voice generation\n\n## Types of Deep\
+    \ Learning Models\n\n### Bayesian networks\n\n- Can be any of the above (e.g.,\
+    \ Bayesian convolutional network)\n- Pros: estimate uncertainty\n- Cons: slow\
+    \ to compute\n- Variational Bayes is a current approach for inference\n- Current\
+    \ approaches are pretty crude\n\n## A Statistical View of Deep Learning in Ecology\n\
+    \n### Part 1: Introduction\n\n- Introduction to machine learning\n- Introduction\
+    \ to deep learning\n\n### Part 2: Going deeper\n\n- Neural networks from 3 viewpoints\n\
+    - Mathematics of deep learning\n- Model fitting\n- Types of deep learning models\n\
+    \n### Part 3: Deep learning in practice\n\n- Ethics in deep learning\n- Deep learning\
+    \ in ecology\n\n## Some useful references on deep learning\n\n- Deep Learning\
+    \ by I. Goodfellow, Y. Bengio and A. Courville (2016) MIT Press\n- Deep Learning\
+    \ with R F. Chollet and J.J. Allaire (2018) Manning Publications\n- Chapters 1-3\
+    \ available online\n- Focus is on Keras\n\n## Additional references that I used\
+    \ to develop this presentation\n\n### Books:\n\n- *Computational Statistics*\n\
+    \  by Givens and Hoeting (2nd edition, Wiley)\n- *The Elements of Statistical\
+    \ Learning*\n  by Hastie, Tibshirani, and Friedman\n- *Introduction to Statistical\
+    \ Learning*\n  by James, Witten, Hastie, Tibshirani\n\nCourse materials by:\n\
+    Ian Goodfellow, Darren Homrighausen, Ander Wilson, Asa Ben-Hur\n\n## Thank you\
+    \ to\n\n- ISEC2020 organizers especially David Warton and Gordana Popovic\n- Course\
+    \ assistants: Tess Hamzeh, Winston Hilton, Rachael Krawczyk\n- Alison Ketz and\
+    \ Dan Walsh\n\n## Acknowledgment of funding support\n\nThis material is based\
+    \ upon work supported by the National Science Foundation (NSF) under Grant No.\
+    \ AGS-1419558, the US Geological Survey (USGS) (G17AC00409), and Colorado State\
+    \ University (CSU). Any opinions, findings, and conclusions or recommendations\
+    \ expressed in this material are those of the author and do not necessarily reflect\
+    \ the views of the NSF, USGS or CSU.\n"
+  mdcn: "\n\n## 正则化与 Dropout\n\n### Dropout\n\n- 将模型中比例的权重随机设置为 0\n- 通过更稀疏的网络防止过拟合\n\
+    - Dropout rate = 设置为 0 的权重比例\n\n## 正则化与 Dropout\n\n```\nmodel <- keras_model_sequential()\n\
+    model %>%\nlayer_dense(units = 256, activation = 'relu', input_shape\nlayer_dropout(rate\
+    \ = 0.4) %>%\nlayer_dense(units = 128, activation = 'relu') %>%\nlayer_dropout(rate\
+    \ = 0.3) %>%\nlayer_dense(units = 10, activation = 'softmax')\n```\n\nRstudio\
+    \ 的 keras 页面\n\n## 正则化与 Dropout\n\n来源：Srivastava 等人. 放弃法：防止神经网络过拟合的简单方法\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_58_0.png)\n\
+    \n图 4：不同架构的测试误差\n\n## 正则化\n\n你也可以通过在损失函数中添加类似 LASSO 的惩罚来实现正则化（Tibshirani, 1996）\n\
+    \n### 正则化\n\n损失 + 正则化惩罚\n\n### L1 正则化\n\n$Loss + \\lambda \\sum_{i=1}^{M} |w_i|$\n\
+    \n其中\n\n- $w_1, \\dots, w_M$ 表示所有模型权重（参数）\n- $\\lambda$ 是调参参数\n\n## Epochs and\
+    \ Batch Size\n\n面对大型数据集时，深度学习优化算法将数据分成子集。\n\n### 模型拟合选项：\n\n- 批量大小：在更新模型前处理的训练样本数量\n\
+    - 时代：完整遍历数据集的次数\n- 验证分割：用作每个时代验证数据的训练数据比例。\n\n## Epochs and Batch Size\n\n小示例：使用\
+    \ `fit()` 函数训练模型 30 个时代，每批 128 张图片：\n\n```\nhistory <- model %>% fit(\nx_train,\
+    \ y_train,\nepochs = 30, batch_size = 128,\nvalidation_split = 0.2\n)\n```\n\n\
+    有用参考：machinelearningmastery.com\n\n## Epoch 图\n\n准确率\n时代\n训练准确率\n验证准确率：轻微过拟合\n\
+    验证准确率：严重过拟合\n\n图片来源：towardsdatascience.com\n\n## 这是你的机器学习系统？\n\n是啊！你把数据倒进这个巨大的线性代数堆里，然后在另一边收集答案。\n\
+    \n如果答案错了呢？\n\n搅动这个堆，直到它们看起来正确为止。\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_63_0.png)\n\
+    \n## 架构\n\n网络架构：网络的整体结构\n\n### 一般建议\n\n- 使用你能负担得起的最大网络\n- 保持每层节点数相同\n- 尝试不同的层大小\n\
+    - 隐藏层使用 ReLU 单元\n- 为你的数据选择合适的损失函数\n- 确保输出层的激活函数与损失函数匹配\n\n## 深度学习模型类型\n\n## 深度学习模型类型\n\
+    \n### 架构家族：\n\n- 1. 深度前馈网络：我们迄今所涵盖的内容\n- 2. 卷积网络\n- 3. 循环和递归网络\n- 4. 生成对抗网络\n\
+    - 5. 贝叶斯网络\n- 6. 总有新方法涌现\n\n## 深度学习模型类型\n\n### 卷积网络\n\n- 用于图像等网格状数据\n- 数据需要以某种方式相关（我认为）\n\
+    - 每一层使用内核而不是整个图像来检测边缘等小型、有意义的特征\n- 稀疏连接\n\n## 深度学习模型类型\n\n### 卷积边缘检测\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_68_0.png)\n\
+    \n输入\n\n| 1 | -1 |\n|---|---|\n\n内核\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_68_1.png)\n\
+    \n输出\n\n## 卷积网络\n\n图像：Deep Learning，图 1.2\n\n![](img/357c1568568ec7942f9e3cf49122ebd5_69_0.png)\n\
+    \n输出（对象身份）\n\n汽车\n\n人\n\n动物\n\n第 3 个隐藏层（对象部分）\n\n第 2 个隐藏层（角和轮廓）\n\n第 1 个隐藏层（边缘）\n\
+    \n可见层（输入像素）\n\n## 深度学习模型类型\n\n### 循环和递归网络\n\n- 用于处理序列数据\n- 示例：时间序列、金融数据、文本、语音\n\
+    \n### 生成对抗网络\n\n- 两个神经网络竞争生成与旧数据相似的新数据\n- 用于图像生成、视频生成和语音生成\n\n## 深度学习模型类型\n\n\
+    ### 贝叶斯网络\n\n- 可以是上述任何一种（例如，贝叶斯卷积网络）\n- 优点：估计不确定性\n- 缺点：计算速度慢\n- 变分贝叶斯是当前的推断方法\n\
+    - 当前方法相当粗糙\n\n## 生态学中深度学习的统计视角\n\n### 第 1 部分：简介\n\n- 机器学习简介\n- 深度学习简介\n\n### 第\
+    \ 2 部分：深入探讨\n\n- 从 3 个视角看神经网络\n- 深度学习的数学\n- 模型拟合\n- 深度学习模型类型\n\n### 第 3 部分：深度学习实践\n\
+    \n- 深度学习伦理\n- 生态学中的深度学习\n\n## 深度学习的一些有用参考\n\n- I. Goodfellow, Y. Bengio 和 A. Courville\
+    \ 著《深度学习》（2016）MIT Press\n- F. Chollet 和 J.J. Allaire 著《使用 R 进行深度学习》（2018）Manning\
+    \ Publications\n- 第 1-3 章可在线阅读\n- 重点是 Keras\n\n## 用于开发此演示文稿的其他参考资料\n\n### 书籍：\n\
+    \n- *计算统计学*\n  Givens 和 Hoeting 著（第 2 版，Wiley）\n- *统计学习方法*\n  Hastie, Tibshirani,\
+    \ 和 Friedman 著\n- *统计学习导论*\n  James, Witten, Hastie, Tibshirani 著\n\n课程材料由：\n\
+    Ian Goodfellow, Darren Homrighausen, Ander Wilson, Asa Ben-Hur 提供\n\n## 感谢\n\n\
+    - ISEC2020 组织者，尤其是 David Warton 和 Gordana Popovic\n- 课程助教：Tess Hamzeh, Winston\
+    \ Hilton, Rachael Krawczyk\n- Alison Ketz 和 Dan Walsh\n\n## 资助支持致谢\n\n本材料基于国家科学基金会（NSF）在拨款编号\
+    \ AGS-1419558 下、美国地质调查局（USGS）（G17AC00409）以及科罗拉多州立大学（CSU）支持的工作而编写。本材料中表达的任何意见、发现、结论或建议均为作者的观点，不一定反映\
+    \ NSF、USGS 或 CSU 的观点。\n\n"
+  merge: 0
