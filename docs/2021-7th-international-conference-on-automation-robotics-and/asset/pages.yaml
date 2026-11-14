@@ -1,0 +1,470 @@
+- pgno: 0
+  md: '# Accurate Gridless Indoor Localization Based on Multiple Bluetooth Beacons
+    and Machine Learning
+
+
+    Konstantinos Kotrosios
+
+    School of Science and Technology
+
+    Hellenic Open University
+
+    Patras, Greece
+
+    kkotrosios@gmail.com
+
+
+    Theofanis Orphanoudakis
+
+    School of Science and Technology
+
+    Hellenic Open University
+
+    Patras, Greece
+
+    fanis@eap.gr
+
+
+    *Abstract*—In this work we present an indoor location method using smartphones
+    as a source of location information. The proposed method uses the Received Signal
+    Strength Indicator (RSSI) value from Bluetooth Low Energy Beacons scattered around
+    interior spaces. We present the results of our model using machine learning, which
+    was developed based on measurements of RSSI values from Beacons inside a lab environment
+    occupying a space of 31m². Measurements were fed to the open-source TensorFlow
+    framework to develop an estimator of the distance between the mobile phone and
+    the beacon. Next, based on the cross-sections of peripheral lines having as a
+    center the location of the Beacons and radius the predicted distances we compute
+    the intersection points from all circles and base our position estimation on the
+    Geometric median of intersection points. Through experiments, we show that our
+    system has an average accuracy of 69.58cm and can predict position with an accuracy
+    of less than a meter in 80% of the cases.
+
+
+    *Keywords-Indoor Localization, Bluetooth, Beacons, Machine Learning*
+
+
+    # I. INTRODUCTION
+
+
+    Indoor positioning systems are becoming a vital part of the so called Internet
+    of Things (IoT) [1] and applications used to estimate the location of a subject
+    in areas like malls, airports, libraries, hospitals, etc., which are enablers
+    for services such as context-based advertising, indoor navigation, robotics applications,
+    emergency response, assisted living, etc.
+
+
+    There are many systems available for outdoor positioning GPS, A-GPS, Galileo,
+    etc. However, they are available only outdoors and cannot provide the necessary
+    accuracy for an indoor positioning application. For example, GPS can provide maximum
+    accuracy of 5 meters. An accuracy not suitable for interior areas.
+
+
+    Many techniques have been developed to estimate the location in interior environments
+    based on deferent techniques, such as, UWB signals [2], ultrasounds [3], RFID
+    [4], Channel State Information (CSI) in WiFi networks [5], [6], etc. But all these
+    methods require specialized hardware and therefore cannot be used on smartphones
+    in our case, where we want to develop a system with no use of any special hardware.
+
+
+    Indoor localization approaches based on RSSI measurement of wireless signals such
+    as WiFi and Bluetooth [7] are the most popular due to their low infrastructure
+    cost, their use in all smartphones and potential high accuracy. The majority of
+    approaches used today are based on Wi-Fi signals
+
+
+    to estimate indoor locations. Additionally, most usually they are using algorithms
+    to estimate the distance from a known position.
+
+
+    The remainder of the paper is organized as follows. In section II we review the
+    related recent work in the literature. In section III we summarize the basics
+    of our positioning model approach. Section IV describes the data collection process
+    for the development and training of our machine learning model. In section V we
+    provide a detailed description of our model. Finally, the paper concludes with
+    presenting the results in Section VI and a discussion and conclusions in Section
+    VII.
+
+
+    # II. RELATED WORK
+
+
+    Indoor positioning and accurate location tracking are open research problems that
+    have attracted the interest of many researchers in recent years [7], [8], which
+    have used different approaches based on different technologies and exploiting
+    different methods to address them. Methods of indoor localization are usually
+    based on monitoring the radio signal strength, the so-called Received Signal Strength
+    Indicator (RSSI) value from wireless signals such as WiFi and Bluetooth [9]. The
+    RSSI from wireless signals and specifically from Bacons (low-cost transmitters
+    based on Bluetooth low energy that broadcast their identifier to nearby mobile
+    devices) is the most popular method with many researchers using this method as
+    a solution in recent years.
+
+
+    Authors in [10] proposed an Iterative Weighted K Nearest Neighbors (IW – KNN)
+    method based on RSSI of the BLE. They propose three principal improvements. First,
+    Euclidean distance and Cosine similarity are combined to measure the similarity
+    of two RSSI vectors, which can take both length and direction of the vector into
+    consideration. Second, unlike traditional k-NN which estimates a position by a
+    majority vote of its neighbors, a weighting factor is applied to neighbors for
+    localization. Third, IW-KNN selects different iBeacons to obtain RSSI at each
+    iteration and calculates the mean position as the final result after several iterations.
+    They can estimate positions effectively and reduce the mean error by 1.5 to 2.7
+    meters in an experimental environment dividing the interior space in a dense grid
+    with a size of 60cm. In [11] a k-NN algorithm is proposed based on the Bluetooth
+    fingerprint library location method also dividing the interior space selecting
+    a grid with a size of 1m. The k-NN algorithm processes the matching of measured
+    RSSI value and the closest value in the fingerprint library. The positioning accuracy
+    is'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'controlled within 1 meter and basically controlled within the designed grid,
+    thus realizing the positioning requirements.
+
+
+    # III. OUR MODEL
+
+
+    Our positioning model introduces a system for finding indoor locations with high
+    precision in real-time by making use of the Bluetooth RSSI values obtained from
+    smartphones. We chose to make use of Bluetooth Beacons because they have several
+    advantages against other indoor localization technologies. The main advantage
+    of this approach is that the cost for the required infrastructure is low, since
+    it only requires a number of Bluetooth Beacons (we experimented with a ratio of
+    1 Beacon per about 6m² of internal space to achieve best coverage with no blind
+    spots) scattered around the interior space in predefined and known positions (e.g.
+    walls, ceiling etc.) [10], [11], [14], [15]. Additionally, smartphones are considered
+    ubiquitous and can be the optimal device that can enable internal location tracking
+    of humans (else any other embedded Bluetooth device for tracking “things” equipped
+    with such sensors).
+
+
+    The proposed Trilateration algorithm in [12] is an easily implemented solution
+    due to its low complexity and operates independently of any predefined grid. On
+    average this system has an error of about 1 meter. In [13] authors experimented
+    with mathematical filtering functions to smooth RSSI and improve accuracy. They
+    use functions like median, mode, single direction outlier removal, shifting and
+    feedback filtering. For position calculation, they use a trilateration algorithm
+    and achieve an accuracy of about 1-2 meters.
+
+
+    We can divide our internal location estimation approach into three phases.
+
+
+    +   • In the first phase, our system makes use of a set of machine learning models
+    (one for each Beacon deployed in the interior space). These models are used to
+    predict the distance from the smartphone and a specific Beacon based on the current
+    RSSI level measurement and its comparison against past measurements collected
+    and used during the training phase.
+
+
+    In recent years, many efforts have been made to make use of machine learning algorithms
+    for indoor location systems. In [14], a machine learning approach to indoor positioning
+    for mobile targets based on BLE signals is proposed. The authors in [14] design
+    a feature vector for the position prediction and perform machine learning with
+    well-known decision-tree based algorithms, which is shown to achieve a predictive
+    accuracy less than one meter. In [15] a BLE based machine learning location and
+    tracking system for indoor positioning with experimental results is proposed showing
+    that this method has an average estimation error of 50 cm.
+
+
+    +   • In phase two our system takes as input the distances from the Beacons from
+    the first phase and calculates the peripheries of circles that have as a center
+    the Beacons’ location and as a radius the distances found in phase one. After
+    that, we find the intersection points of all circles.
+
+
+    Following the advances described above we have been investigating methods that
+    can exploit the latest powerful machine learning technologies to solve the problem
+    of indoor location with an accuracy much closer than 1m based on low cost solutions.
+    Machine learning is becoming ubiquitous, with the cost of hardware reducing fast
+    and new methods and tools providing efficient solutions to a large number of problems
+    related to the processing of signals from sensor and IoT networks in order to
+    enable smart applications and lead to actual Artificial Intelligence. Therefore,
+    in [16] we presented a system where we use a smartphone to find the location by
+    using the measured RSSI value from Bluetooth Beacons combined with measurements
+    from other smartphone sensors and feeding a machine learning model. The approach
+    of our past work in [16] was based on the selection of a grid layout of the interior
+    space, against which the user positioning was attempted based on the signals received
+    from the Beacons installed in fixed locations, i.e. similar to the approach followed
+    in [10] and [11], however with improved accuracy i.e. accurate user positioning
+    within less than a meter.
+
+
+    +   • In the third and last phase, our system gets as input the intersection points
+    from phase two and finds the geometric median from the intersection points. This
+    geometric median point is defined as the estimated location.
+
+
+    In this work we present an improved method, which can exploit powerful machine
+    learning as in [14], [15] and [16] but can also achieve improved performance,
+    while operating in real-time and independent of any interior grid layout. In this
+    work, we develop a machine learning model to solve a regression problem. This
+    way we overcome the need to select a predefined grid as was done in [15] and [16],
+    which also simplifies the model training process and leads to improved accuracy.
+    Additionally, we demonstrate an average accuracy of 69.58cm and we can predict
+    position with an accuracy of less than a meter in 80% of all cases. It is important
+    to stress that our method can operate in real-time, while the grid-based method
+    presented in [15] can achieve comparable results at the cost of repeated RSSI
+    measurements at each location, which can be applicable only for semi-static and
+    not actual mobile users.
+
+
+    # IV. DATA COLLECTION
+
+
+    The first step in developing our system was to set up a data collection procedure
+    to train and evaluate our neural network models for phase one of predicting the
+    distance from Beacons.
+
+
+    To create the data collection, we used five iBKs105 Bluetooth Beacons from Accent
+    Systems that we placed in different locations around a 31m² apartment “Fig. 1”.
+    The locations of the Beacons are fixed and we know the distances (x and y) from
+    the lower left corner of the apartment for each Beacon.
+
+
+    Then by using an application that we have developed on Android for a commercial
+    smartphone we started to move around the space of the apartment and take measurements.
+    For each measurement, we record the current position of the mobile (distance for
+    upper and left walls x and y), the RSSI values for all five Beacons, the distance
+    from each Beacon, and the timestamp of the moment we took the measurement. The
+    mobile phone we used to collect the data is a Xiaomi Mi A1.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "In total, we have gathered 11110 measurements to train and validate our model.\n\
+    \n![](img/b77bbad6649946f384d2ca57e2480824_2_0.png)\n\nFig. 1. Apartment map with\
+    \ Beacon locations.\n\n# V. DEVELOPMENT AND TRAINING OF OUR MACHINE LEARNING MODEL\n\
+    \n# A. Phase One\n\nFor the first phase of our system, we develop a machine learning\
+    \ system using the TensorFlow framework to predict the distance between the location\
+    \ of the mobile phone and a specific Beacon. In total, we have developed five\
+    \ different models. For each one, we get as input the RSSI values from all Bluetooth\
+    \ Beacons and as a target, we have the prediction of the distance from a specific\
+    \ Beacon.\n\nWe divide our 11110 measurements into two groups, one for training\
+    \ and one for validation. For the training of our models, we use 80% of our measurements,\
+    \ 8888 out of the 11110 in total, and for the validation the remaining 2222. The\
+    \ division of the measurements into two groups was random.\n\nOur neural network\
+    \ models are sequential models with two densely connected hidden layers, and an\
+    \ output layer that returns a single, continuous value “Fig. 2”.\n\n```\ndef build_model():\n\
+    \    model = keras.Sequential([\n        layers.Dense(64, activation='relu',\n\
+    \        input_shape=[len(train_dataset.keys())]),\n        layers.Dense(64, activation='relu'),\n\
+    \        layers.Dense(1)\n    ])\n\n    optimizer = tf.keras.optimizers.RMSprop(0.001)\n\
+    \n    model.compile(loss='mse', optimizer=optimizer,\n                  metrics=['mae',\
+    \ 'mse'])\n    return model\n```\n\nFig. 2. Our neural network model in TensorFlow\
+    \ framework\n\nThen we trained our models using the 8880 measurements we retained\
+    \ for training and set the training to progress through 1000 epochs. In “Fig.\
+    \ 3” we can see how our model reduces the Mean Square Error (MSE) in calculating\
+    \ the distance between the actual user position and each Beacon in total (during\
+    \ the training and validation phases vs. the training epochs).\n\n![](img/b77bbad6649946f384d2ca57e2480824_2_1.png)\n\
+    \nFig. 3. Mean square error reduction vs. epoch evolution (overall).\n\n![](img/b77bbad6649946f384d2ca57e2480824_2_2.png)\n\
+    \nFig. 4. Mean average distance error reduction for each Beacon.\n\nIn “Fig. 4”\
+    \ respectively we show how the Mean Average Error in distance estimation reduces\
+    \ for each Beacon.\n\n![](img/b77bbad6649946f384d2ca57e2480824_2_3.png)\n\nFig.\
+    \ 5. Plot of predicted distance from our model against the actual distance of\
+    \ the user from Beacon A for the set of 2222 measurements"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'To evaluate our model, we used the group of the collection (2222 measurements)
+    that we retained for testing. In “Fig. 5” we draw for each measurement the points
+    in a X-Y plot. The coordinates of each point represent the actual distance of
+    the user from Beacon A in X-axis and our model prediction in Y-axis.
+
+
+    In “Fig. 6” we show the distribution of the prediction error (\(\epsilon\)) for
+    our model for each testing measurement.
+
+
+    ![](img/b77bbad6649946f384d2ca57e2480824_3_0.png)
+
+
+    Fig. 6. Distribution of the prediction error (\(\epsilon\))
+
+
+    # B. Phase Two
+
+
+    In phase two we get the predicted distances from each Beacon as estimated using
+    the corresponding model from phase one. With these predicted distances we create
+    circles having as a center the known position of the Beacon and a radius equal
+    to the predicted distance from the model. After that, we find the intersection
+    points of all circles “Fig. 7” With blue color in “Fig. 7” we show the circles
+    having as a center the five Beacons and radius the predicted distance from phase
+    one, while the red dots are the intersection points.
+
+
+    ![](img/b77bbad6649946f384d2ca57e2480824_3_1.png)
+
+
+    Fig. 7. Phase two and three point calculation
+
+
+    # C. Phase Three
+
+
+    In the last phase, we get as input the intersection points from phase two and
+    finds the Geometric median from the intersection points. The geometric media point
+    is defined as the predicted location.
+
+
+    In “Fig. 7” we indicate with the green cross the calculated geometric median point,
+    which represents our location estimation and the cyan cross the real location.
+
+
+    # VI. RESULTS
+
+
+    From the results we present in this section, we can conclude that our system has
+    been able to achieve good accuracy in predicting the real position of the user.
+    In “Fig. 8”, we present the histogram of the distribution of the distance error
+    (denoted with \(\epsilon\), in “Fig. 7”) between the actual and predicted positions.
+    In “Table I” that follows we show the values of the error distribution. The error
+    calculation is based on the set of 2222 measurements that was used for testing
+    of the model estimation against the actual user position.
+
+
+    We observed that our system has an average accuracy of 69.58cm and can predict
+    the location with less than a meter accuracy in 80,55% of all cases and with an
+    accuracy of fewer than 1.5 meters in 93.92% of the cases.
+
+
+    ![](img/b77bbad6649946f384d2ca57e2480824_3_2.png)
+
+
+    Fig. 8. Distance error (\(\epsilon\)) distribution
+
+
+    TABLE I. DISTANCE ERROR (E) DISTRIBUTION
+
+
+    | | 0-25 | 25-50 | 50-75 | 75-100 | 100-125 | 125-150 | >150 |
+
+    |---|---|---|---|---|---|---|---|
+
+    | Count | 324 | 570 | 488 | 408 | 200 | 97 | 135 |
+
+    | Percentage | 14.58 | 25.65 | 21.96 | 18.36 | 9.01 | 4.37 | 6.08 |
+
+
+    # VII. CONCLUSION
+
+
+    It is essential to develop a localization system that can achieve high levels
+    of accuracy in building-scale real-world environments using low cost and ubiquitous
+    technologies like those available in smartphones and Bluetooth devices. In this
+    paper, we considered the challenges of developing a system by using RSSI from
+    Bluetooth Beacons following a machine learning approach. We create a dataset with
+    values from Bluetooth RSSI and train the neural network model to predict the distance
+    from a specific Beacon. After that we use the'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'predicted distances to find the intersection points and used the Geometric
+    median of these points as the final location estimation. Our system does not require
+    any kind of grid in the indoor space layout and it is shown to achieve an average
+    error of 69.58cm. Overall the user position was estimated with a localization
+    error below 1m in 80,55% of all cases.
+
+
+    # VIII. FUTURE WORK
+
+
+    Our next steps will be to test our model in a larger area with a more complex
+    environment and with more Bluetooth beacons. A potential approach to increase
+    scalability would be to extend our system by adding a phase before phase one.
+    In this new phase (phase zero) the system will read the RSSI values from all Bluetooth
+    Beacons and will decide which Beacons to use in phase one.
+
+
+    # ACKNOWLEDGMENT
+
+
+    The present work was undertaken in the context of the "Multiservice cApable iNtelligent
+    Transportation Systems (MANTIS) project" co - financed by the European Union and
+    Greek national funds through the Operational Program Competitiveness, Entrepreneurship
+    and Innovation, under the call RESEARCH – CREATE - INNOVATE (project code: T1EDK-04612).
+
+
+    # REFERENCES
+
+
+    +   [1] R. Want, W. Wang, and S. Chesnutt, “Accurate Indoor Location for the IoT,”
+    Computer (Long. Beach. Calif.), vol. 51, no. 8, pp. 66–70, 2018.
+
+
+    +   [2] S. Gezici, S. Member, Z. Tian, G. B. Giannakis, H. V. Poor, and Z. Sahinoglu,
+    “Localization via Ultra-Wideband Radios,” IEEE Signal Process. Mag., pp. 70–84,
+    2005.
+
+
+    +   [3] P. Lazik, N. Rajagopal, O. Shih, B. Sinopoli, and A. Rowe, “Alps: A Bluetooth
+    and Ultrasound Platform for Mapping and Localization,” Proc. 13th ACM Conf. Embed.
+    Networked Sens. Syst. - SenSys ’15, pp. 73–84, 2015.
+
+
+    +   [4] J. Wang and D. Katabi, “Dude, where’s my card? RFID Positioning That Works
+    with Multipath and Non-Line of Sight,” ACM SIGCOMM Comput. Commun. Rev., vol.
+    43, no. 4, pp. 51–62, 2013.
+
+
+    +   [5] Z. Yang, Z. Zhou, and Y. Liu, “From RSSI to CSI: Indoor Localization via
+    Channel Response,” ACM Comput. Surv., vol. 46, no. 2, pp. 1–32, 2013.
+
+
+    +   [6] D. Vasisht, S. Kumar, and D. Katabi, “Decimeter-Level Localization with
+    a Single WiFi Access Point,” in 13th USENIX Symposium on Networked Systems Design
+    and Implementation, 2016, pp. 165–178.
+
+
+    +   [7] P. Davidson and R. Piché, “A Survey of Selected Indoor Positioning Methods
+    for Smartphones,” IEEE Commun. Surv. Tutorials, vol. 19, no. 2, pp. 1347–1370,
+    2017.
+
+
+    +   [8] H. M. Hussien, Y. N. Shiferaw, and N. B. Teshalle, “Survey on indoor positioning
+    techniques and systems,” Lect. Notes Inst. Comput. Sci. Soc. Telecommun. Eng.
+    LNICST, vol. 244, no. 6, pp. 46–55, 2018.
+
+
+    +   [9] P. Kriz, F. Maly, and T. Kozel, “Improving Indoor Localization Using Bluetooth
+    Low Energy Beacons,” Mob. Inf. Syst., vol. 2016, 2016.
+
+
+    +   [10] Y. Peng, W. Fan, X. Dong, and X. Zhang, “An Iterative Weighted KNN (IW-KNN)
+    Based Indoor Localization Method in Bluetooth Low Energy (BLE) Environment,” Proc.
+    - 13th IEEE Int. Conf. Ubiquitous Intell. Comput. 13th IEEE Int. Conf. Adv. Trust.
+    Comput. 16th IEEE Int. Conf. Scalable Comput. Commun. IEEE Int., pp. 794–800,
+    2017.
+
+
+    +   [11] S. Wang, R. Ma, Y. Li, and Q. Wang, “A bluetooth location method based
+    on kNN algorithm,” ICENCO 2019 - 2019 15th Int. Comput. Eng. Conf. Util. Mach.
+    Intell. a Better World, pp. 83–86, 2019.
+
+
+    +   [12] M. Er Rida, F. Liu, Y. Jadi, A. A. Alghawari, and A. Askourih, “Indoor
+    location positioning based on bluetooth signal strength,” Proc. - 2015 2nd Int.
+    Conf. Inf. Sci. Control Eng. ICISCE 2015, pp. 769–773, 2015.
+
+
+    +   [13] A. Mussina and S. Aubakirov, “RSSI Based Bluetooth Low Energy Indoor
+    Positioning,” IEEE 12th Int. Conf. Appl. Inf. Commun. Technol. AICT 2018 - Proc.,
+    pp. 1–4, 2018.
+
+
+    +   [14] A. Sashida, Di. P. Moussa, M. Nakamura, and H. Kinjo, “A Machine Learning
+    Approach to Indoor Positioning for Mobile Targets using BLE Signals,” 34th Int.
+    Tech. Conf. Circuits/Systems, Comput. Commun. ITC-CSCC 2019, pp. 2–5, 2019.
+
+
+    +   [15] P. Stapił, H. S. Gang, and J. Y. Pyurr, “Bluetooth Based Indoor Positioning
+    Using Machine Learning Algorithms,” 2018 IEEE Int. Conf. Consum. Electron. - Asia,
+    ICCE-Asia 2018, pp. 3–6, 2018.
+
+
+    +   [16] K. Konstantinos and T. Orphanoudakis, “Bluetooth beacon based accurate
+    indoor positioning using machine learning,” 2019 4th South-East Eur. Des. Autom.
+    Comput. Eng. Comput. Networks Soc. Media Conf. SEEDA-CECNSM 2019, 2019.'
+  merge: -1
+  img_proc: true
