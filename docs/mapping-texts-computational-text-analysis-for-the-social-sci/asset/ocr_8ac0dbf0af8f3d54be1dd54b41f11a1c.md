@@ -1,0 +1,17 @@
+static but change with context—and, indeed, meaning does not stop at the boundary of what can be said.¹
+
+Second, **language is not meaning**. Influenced by Malinowski (Rose 1980; Gellner 1998:149), the philosopher Ludwig Wittgenstein ([1953] 2009:80, 109) suggested that in a “large class of cases ... the meaning of a word is its use in the language.”² We modify this slightly: a word’s meaning is its use _by_ the language _community_ (Bloomfield 1933:29, 37). Words are not their meanings nor do individuals decide their meanings in isolation; rather, their meanings are determined and modified by how people use them to do things with other people.³ True, language is intimately connected to many meaning-making processes (Fauconnier 1997). Yet, without people to interpret words—spoken, gestured, written, or otherwise—there is no meaning. This entails a cautionary stance toward distinctions between _signs_, _sounds_, or _syntax_, on the one hand, and _semantics_, on the other (Goldberg 1995).
+
+Third, **language is habitual**. This means “language is embodied” and human bodies are linguistic (Di Paolo et al. 2018:5; Johnson [1987] 2015). What we say, and how we say it, are the accrual of all our prior experiences, stored in our bodies as habits (Bloomfield 1933:30–34; Bourdieu 1991; Croft and Cruse 2004). We are shaped by our language (Ong 2013; Dennett 2017) and what language can be is constrained by us—by our physiology and biography. As everybody has similarities and differences, so too does every language-user become a locus of stability and change within a language community. The regularities of language are, in part, human conventions grounded in the flesh-and-blood, dirt-and-stone.
+
+Fourth, **language is relational**. The linguist John Firth—again influenced by Malinowski (Firth 1935:68–9; Young 2011)—argued we “know a word” by the “company it keeps.” But what is a word’s company? Researchers can specify a word’s meaning when they know the words occurring with it (see also Harris 1954). When we say relational, though, we suggest a more general proposition (Mohr 1998; Mohr et al. 2020:94–127; Robins 2013). People infer a word’s meaning from its relation to other words, but also to the people, objects, organizations, and other texts that form the contexts of their use.
+
+Fifth, **language is unfinished**. The notion of crisp lines around _a_ language is, in the final analysis, a red herring (Davidson 2005:89–108).⁴ Contrary to the desires of various classist, racist, and nationalist projects (Fishman 2011; Bourdieu 1991; Rosa and Flores 2017), there is no pure specimen of _a language_. There is no right and wrong way to
+
+¹ “One great part of every human existence is passed in a state which cannot be rendered sensible by the use of wideawake language, cutanddry grammar, and go-ahead plot.”—James Joyce
+
+² “Social science is still burdened with the superstition that words contain their meanings” (Malinowski [1947] 2015:86).
+
+³ Except, of course, for Humpty Dumpty: “When I use a word...it means just what I choose it to mean—neither more nor less” (Carroll 1925:246).
+
+⁴ Generally, two people are said to speak _different_ languages if there is low **intelligibility** between those people. Even this is a fuzzy criterion. Intelligibility is graded and may not even be symmetrical. For example, “speakers of Portuguese can understand Spanish but this applies less well the other way around” (Dixon 1997:7–8).

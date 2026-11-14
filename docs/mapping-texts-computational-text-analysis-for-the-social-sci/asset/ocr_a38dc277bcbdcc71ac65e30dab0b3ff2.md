@@ -1,0 +1,17 @@
+# TEXTS ARE NOT PEOPLE
+
+The growing interest in the analysis of newspapers and radio broadcasts in the early 20th century consolidated around the work of Lazarsfeld, Katz, Merton, Cantril, and Stanton.7 Very often in this work—but certainly not always—newspapers were treated as surveys of representative samples from a well-defined population of people. Quantitative content analysis often follows suit and argues that there is probability and nonprobability sampling of texts, where the former is always preferred (e.g., Weber 1990; Neuendorf 2017:83–88; Riffe et al. 2019:95–112). We should be cautious with this framing because texts are not people. We mean this in three senses.
+
+Beginning with the Radio Research project in the late 1930s, this eventually became the study of communications.
+
+First, even if we could collect all a population’s texts, there is no reason a random sample is representative of the people in that population. Not everyone produces texts, and among those who do, they do not produce it in similar volumes.8 When it comes to ready-made text, there is likely a long-tail distribution whereby a minority produces far more than the rest of the population.9
+
+Furthermore, we must consider the contexts of production where bans on writing or discriminatory publishing practices may erase certain voices (e.g., Brown et al. 2016)
+
+For example, a study of Pew Research found that of all tweets produced by adult US users between June 2 and September 12 of 2021, the top 25% of users (by tweet volume) produced about 97% of all tweets (McClain et al. 2021).
+
+Second, the absence or presence of a text does not mirror human demographic processes. When selecting texts via the Internet, for example, Riffe and colleagues caution that traditional sampling frames – and therefore probability samples—are (probably) not applicable. They note, “the Internet is like a city without a telephone book or map to guide people. New houses are being built all the time, and old houses are being deserted with no listing of the changes. Sampling requires creative solutions” (Riffe et al. 2019:118). We want to stress: this applies to most texts. We encounter selection bias that is largely outside of our control. Furthermore, these selection pressures are bound up with what authors and audiences are trying to do with their words. For example, if we collected every electronically available New York Times article, we could get most, but not all, articles. Those missing are unlikely to be missing at random.10 Articles may be misplaced, deleted, and destroyed for all sorts of organizational, custodial, ideological, and technological reasons.
+
+Archaeology is a disciplinary kith: a “discipline with the theory and practice for the recovery of unobservable hominid behavior patterns from indirect traces in bad samples” (Clarke 1973:17).
+
+Finally, what constitutes a “unit” in text analysis—computational or otherwise—is a notoriously tricky question. Traditionally, a “unit” is a single survey respondent or interviewee. What is so tricky about defining a unit in text analysis? In short, we may select units that are not our units of analysis—and we may not even settle on a unit of analysis before we begin selecting. A single document in our analysis need not be a document as commonly understood—for example a single bound book,

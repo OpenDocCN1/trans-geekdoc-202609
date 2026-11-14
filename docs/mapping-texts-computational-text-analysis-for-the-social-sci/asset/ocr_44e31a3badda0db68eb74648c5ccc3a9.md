@@ -1,0 +1,11 @@
+# Advance praise for Mapping Texts
+
+“Stoltz and Taylor have managed to create a work that confidently takes even a beginner to a position of sophistication and technical virtuosity, leading to not only a practical mastery of cutting edge techniques, nor just plus a clear understanding of the mathematical bases, but also gives the reader an intuitive feel for the larger social contexts that produce the text data analyzed, and all this without dropping a single equation in the reader’s lap! A true gem.”—John Levi Martin, Florence Borchert Bartling Professor of Sociology at The University of Chicago and author of Thinking Through Methods
+
+“Language is pragmatic, language is habitual, language is relational. I have been waiting for a book like this. One that seamlessly integrates philosophy and theory with tools and reproducible examples and does so in a deeply sociological way. If you read this book, if you teach with this book, you and your students will have everything needed to successfully do computational text analysis in the social sciences. An extraordinary contribution.”—Laura K. Nelson, Assistant Professor of Sociology at The University of British Columbia
+
+“Packed with interesting examples, Mapping Texts reveals the exciting possibilities of computational text analysis for social science. It’s one of those rare books that offers useful advice about both what to do and how to do it. I think many readers will love Stoltz and Taylor’s decision to use no equations and illustrate key ideas with code in R. Mapping Texts will be helpful to anyone hoping to learn more about this dynamic and important area of research.”—Matthew J. Salganik, Professor of Sociology at Princeton University and author of Bit by Bit: Social Research in the Digital Age
+
+“This book is an excellent entry-point to modern ideas and tools for the quantitative analysis of textual data. Well-organized, approachable, and pragmatic, the book does a terrific job of showing why researchers find the ideas so interesting while also teaching the reader how to use the tools for themselves.”—Kieran Healy, Professor of Sociology at Duke University and author of Data Visualization: A Practical Introduction
+
+“Mapping Texts provides a timely and accessible foray into the evolving domain of computational text analysis, enriched with fascinating
