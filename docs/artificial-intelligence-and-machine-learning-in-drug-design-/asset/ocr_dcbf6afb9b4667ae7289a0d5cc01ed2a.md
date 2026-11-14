@@ -1,0 +1,15 @@
+# 17.5.4 Accountability
+
+AI is bringing unprecedented efficiency and accuracy to the DDS and DVPT process. However, this new technology has also brought a range of ethical considerations, including accountability. As AI is increasingly used in drug DVPT, it is essential to consider how accountability can be maintained and to ensure that the use of AI is ethically responsible. Accountability is an ethical consideration related to the use of AI in DDS and DVPT, including its definition, importance, challenges, and potential solutions. Accountability refers to the responsibility of individuals or organizations for their actions and the consequences that follow. In the context of AI in DDS and DVPT, accountability means ensuring that the use of AI is transparent, responsible, and ethically sound. The process involves fixing of accountability and responsibility during the process [61, 62].
+
+# 17.5.4.1 Importance of Accountability
+
+Accountability is crucial for the responsible use of AI in DDS and DVPT. Without accountability, the use of AI could result in negative consequences that are difficult to trace or remedy. If an AI system makes a mistake in the identification of potential drug candidates, it could result in significant financial losses for the drug DVPT company. In terms of decisions taken through the AI system about patient care, the consequences of incorrect decisions could be severe. Accountability is also important for building trust in the use of AI in DDS and DVPT. If people do not trust that AI is being used responsibly, they may be reluctant to participate in clinical trials or to use drugs that have been developed using AI. Ensuring accountability can help to build trust and confidence in the use of AI in drug DVPT [63, 64].
+
+# 17.5.4.2 Challenges in Maintaining Accountability
+
+Maintaining accountability in the use of AI in DDS and DVPT is not without its challenges. One of the biggest challenges in maintaining accountability is the lack of transparency in the use of AI. AI systems are often complex and difficult to understand, making it challenging to identify who is responsible for their actions. AI systems can be biased, which can result in unfair or discriminatory outcomes. This bias can be challenging to detect, making it difficult to ensure that the use of AI is ethically sound and accountable. The use of AI in DDS and DVPT is still relatively new, and there is a lack of regulation in this area. This lack of regulation can make it challenging to ensure that AI is being used ethically and responsibly. AI technology is rapidly evolving, making it challenging to keep up with new DVPTs and to ensure the ethical and responsible use of AI [65, 66]
+
+# 17.5.5 Safety–Efficacy
+
+AI is useful to identify new drug targets, the optimization of drug compounds, and the prediction of drug toxicity. However, as with any new technology, there are ethical considerations that must be taken into account when using AI in DDS and DVPT. One of these considerations is the balance between safety and efficacy of AI-generated drugs [67].

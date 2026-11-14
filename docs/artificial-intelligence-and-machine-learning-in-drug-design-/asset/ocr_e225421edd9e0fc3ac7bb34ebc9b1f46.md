@@ -1,0 +1,17 @@
+GPCR ligands have diverse structures, and they can interact with the receptor in multiple ways. Some GPCR ligands, such as catecholamines, bind to a site on the receptor that is located in the transmembrane domain. Other GPCR ligands, the extracellular domain of the receptor has a place where ligands, including peptides, can bind.
+
+GPCR ligands are used to treat a variety of illnesses, such as pain, schizophrenia, asthma, and hypertension. One class of GPCR antagonists, beta-blockers, for instance, works by inhibiting the action of beta-adrenergic receptors to treat hypertension. By engaging the opioid receptors in the central nervous system, opioid receptor agonists like morphine are used to relieve pain.
+
+Due to the complexity of their structures and numerous binding sites, GPCRs present a difficult problem for the production of ligands. The creation and improvement of GPCR ligands have been made significantly easier through the use of structure-based drug design (SBDD) approaches. Based on the three-dimensional structure of GPCRs, SBDD uses computational techniques to forecast the binding mechanism of ligands to these receptors. This method can be used to find ligands that have better potency, selectivity, and pharmacokinetic characteristics.
+
+# 11.4.4 Antibodies and Vaccines
+
+Antibodies and vaccines are both important tools for preventing and treating infectious diseases. The immune system makes antibodies, which are proteins, in reaction to an infection or a vaccination. Vaccines are biological preparations that contain either weakened or killed pathogens, or parts of the pathogen, which stimulate the immune system to produce antibodies without causing disease.
+
+Antigens, which are chemicals on the surface of pathogens, are recognized and bound to by antibodies, which are highly specialized proteins. By neutralizing or eliminating pathogens from the body, antibodies either prevent them from infecting cells or flag them for eradication by other immune cells. By activating the complement system, a collection of proteins that aid in the eradication of diseases, antibodies can also improve the clearance of pathogens.
+
+The immune system is stimulated by vaccines to create antibodies in response to a particular infection. Pathogens that are alive, wounded, or dead, as well as pathogen components like proteins or carbohydrates, are all included in vaccines. After receiving an injection of a vaccine, the immune system recognizes the pathogen or any of its components as foreign and develops an immunological response, creating antibodies that can neutralize the pathogen if it is subsequently encountered. To sustain protection over time, some vaccines necessitate booster injections.
+
+Both antibodies and vaccines can be used to prevent and treat infectious diseases. Antibodies can be produced in the laboratory and administered to individuals who have been exposed to a pathogen, to help clear the infection or prevent the disease from becoming severe. This approach is known as passive immunization. Vaccines, on the other hand, are a preventive measure that can be used to protect individuals from future infections. Vaccines are administered to healthy individuals to stimulate their immune system to produce antibodies before they are exposed to a pathogen.
+
+The development of antibodies and vaccines requires a deep understanding of the pathogen and the immune response. Modern approaches to vaccine development use a

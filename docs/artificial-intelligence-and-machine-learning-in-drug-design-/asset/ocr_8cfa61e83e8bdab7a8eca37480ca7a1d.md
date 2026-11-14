@@ -1,0 +1,17 @@
+increased dramatically thanks to the developments in “omics” technology, high throughput screening (HTS), and chemical synthesis during the past few decades [3, 4]. Therefore, it has become a critical issue for CNS drug discovery to figure out how to effectively aggregate, correlate, and analyze the current large-scale data.
+
+ML, a type of artificial intelligence (AI), has the potential to hasten pharmaceutical research by gleaning previously unknown insights from the mountain of complex data produced by the search for a cure. Recent years have seen widespread implementation of AI/ML-based methodologies across a variety of therapeutic domains, with state-of-the-art performance attained in tackling a wide range of drug development challenges. The most difficult area of drug discovery, central nervous system treatments, has also showed promise from such AI/ML algorithm applications. The potential of these technologies to uncover new therapies and repurpose established ones for CNS illnesses has only just begun to be explored. The chapter therefore examines the ways in which AI and ML have been applied to this exciting new field of drug research, enlightens how these technologies have been used to address challenges unique to the study of CNS illnesses. The process of creating drugs to treat conditions of the central nervous system (CNS) is difficult and complex, with lengthy timeframes and high attrition rates. Traditional drug discovery techniques have found it challenging to keep up with the volume and complexity of biomedical data that are being produced by contemporary experimental technology. The fusion of machine learning (ML) and artificial intelligence (AI) has emerged as a transformational force in pharmaceutical research as a reaction to these difficulties. With an emphasis on their uses, potential, and future possibilities, we intend to give an in-depth analysis of the function of AI/ML-driven approaches in CNS medicine discovery in this article.
+
+# 8.1.1 Background Information
+
+Biomedical research has experienced an exponential rise in the production of data from a variety of sources over the past few decades, including genomes, proteomics, metabolomics, and imaging investigations. Due to the difficulty of processing and gaining useful insights from such huge datasets using conventional approaches, the quantity of data for drug discovery brings both potential and challenges.
+
+Application of AI/ML in drug development: AI/ML technologies have shown their ability to effectively analyze and understand massive amounts of biomedical data. They are capable of finding intricate patterns, making precise forecasts, and facilitating decision-making procedures that support the creation of new drugs.
+
+Problem definition: Predicting the permeability of substances across the blood–brain barrier (BBB), a significant element impacting the success or failure of proposed CNS treatments, is the main difficulty in the development of CNS drugs. Traditional techniques for predicting BBB permeability take a lot of time and resources, which adds to the long development times for CNS drugs.
+
+# Objectives of the Chapter
+
+The objectives of the chapter are as follows:
+
++   1. To present the underlying ideas behind AI algorithms and how they might be used to generate new drugs:

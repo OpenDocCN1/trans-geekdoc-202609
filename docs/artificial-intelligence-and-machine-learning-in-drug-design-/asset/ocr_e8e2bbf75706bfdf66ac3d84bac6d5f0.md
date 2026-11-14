@@ -1,0 +1,14 @@
+# Table 17.1 Types of ML [12].
+
+| Type of ML | Description |
+|---|---|
+| Supervised learning | The model/algorithm is trained on labeled data, with correct answers, and learns to make predictions based on this data. Commonly used for the predictive analysis of diseases, treatment methods, and patient care. |
+| Unsupervised learning | The model is trained on data without any historical labels. The model must learn on the fly by itself, and the user can execute more complex tasks. Commonly used for clustering, anomaly detection, and neural networks. It may be used in DDS, patient health monitoring and medical diagnosis. |
+| Semi-supervised learning | A type of ML that falls between supervised and unsupervised learning using labeled and nonlabeled dataset. The inputs are from the labeled dataset and apply to the nonlabeled dataset. It can make wonders by uncovering hidden patterns in DDS and for improving personalized treatment by early disease intervention. |
+| Reinforcement learning | It uses a system of reward and penalty to train its algorithm. The model receives plunders for performing correctly and punishment for performing incorrect outputs and learns to maximize rewards and minimize penalties. Commonly used for personalized medicine, patient monitoring and care. |
+
+# 17.3.2 Deep Learning (DL)
+
+Artificial neural networks are trained as part of DL to recognize patterns in data. DL is a type of ML. It involves ANN with multilayers, enabling the analysis of large and complex data sets. For tasks like predicting drug–target interactions and determining the likelihood that a compound will be toxic, DL has demonstrated promise in the field of DDS. DL has the ability to perform biological activity prediction, addressing issues in DDS and DVPT. DL-dependent tools, prediction models, and algorithms have been developed to aid the DDS and DVPT process, including tools for prediction drug receptor binding and its affinity, hit identification using virtual screening, pharmacokinetic property prediction, and drug activity prediction [17]. DL is helpful in improving the bioimaging quality by using convolution methods and kernel values [18].
+
+BriefCase is an AI-based medical application developed by the Israeli company Aidoc Medical Ltd. It is intended to help radiologists in the diagnosis of biomedical imaging. Using DL algorithms, BriefCase analyzes medical images and flags potential abnormalities or areas of concern that require further attention from a radiologist. It can prioritize urgent cases and provide real-time notifications to radiologists, enabling them to quickly identify critical cases and make informed decisions. BriefCase has been trained on a vast dataset of medical images, allowing it to learn and adapt to new cases over time. This means that it can continue to improve its accuracy and effectiveness with continued use [19].

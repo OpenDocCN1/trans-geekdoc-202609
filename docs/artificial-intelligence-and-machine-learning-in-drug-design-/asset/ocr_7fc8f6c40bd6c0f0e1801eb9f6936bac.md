@@ -1,0 +1,15 @@
+representation of the G protein associated with the intracellular side of the GPCR, illustrating the interaction between the receptor and the G protein.
+
++   8) Signaling pathways: GPCR signaling pathways involve the activation of downstream signaling cascades.
+
+These elements in the diagram provide an overview of the structural components and functional aspects of GPCRs, highlighting their role in cellular signaling and their interactions with ligands and G proteins [46, 47].
+
+GPCR modeling involves the use of computational methods to predict the interactions between potential drug candidates and GPCRs. By accurately predicting the binding properties of compounds to GPCRs, researchers can identify potential drug candidates with high binding affinity, selectivity, and efficacy, as well as reduce the cost and time associated with traditional drug discovery methods. GPCR modeling can also help researchers better understand the mechanisms of GPCR activation and signal transduction, which can inform the development of new therapeutic strategies—for example, researchers at the University of California, San Francisco, developed a deep learning model that accurately predicted the binding affinities of compounds to GPCRs (https://mccammon.ucsd.edu/).
+
+# 13.3.3.2 Protein-Ligand Binding
+
+Protein-ligand binding modeling plays a crucial role in biopharmaceutical prediction, as it enables researchers to comprehend how potential drug compounds interact with their target proteins at a molecular level. This modeling helps researchers simulate and predict the binding properties of potential drug compounds to target proteins, which offers insights into the structure-activity relationships (SARs) of compounds and allows for the optimization of their properties for better drug efficacy and safety. Moreover, the modeling technique can aid in predicting the pharmacokinetics and pharmacodynamics of drug candidates, such as their absorption, distribution, metabolism, and elimination (ADME) properties. This information is indispensable for drug development because it facilitates the selection of the most promising compounds for further testing and enables the optimization of their properties for better therapeutic outcomes—for example, researchers at Pfizer developed an ML model that predicted the binding affinity of compounds to a protein target with high accuracy.
+
+# 13.3.3.3 Pharmacokinetics Modeling
+
+Pharmacokinetics (PK) modeling is an essential component of biopharmaceutical prediction because it helps researchers understand how drugs are absorbed, distributed, metabolized, and eliminated in the body. Pharmacokinetics models can predict how different factors, such as the route of administration, dosing frequency, and drug formulation, affect drug concentration over time in the blood and other tissues. This information is critical for determining optimal dosing regimens and ensuring that drugs reach their intended targets in the body while minimizing the risk of toxicity—for example, researchers at the University of Manchester developed an ML model that accurately predicted the PK properties of compounds in different species.

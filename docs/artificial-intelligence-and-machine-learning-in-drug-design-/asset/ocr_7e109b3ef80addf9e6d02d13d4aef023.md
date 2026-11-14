@@ -1,0 +1,17 @@
+11. Repurposing existing drugs: Repurposing existing drugs involves identifying new uses for drugs that are already approved for other indications. This approach can be faster and less expensive than traditional drug discovery methods, as the safety and pharmacokinetic properties of the drug are already established. However, repurposed drugs may have limited efficacy or may cause unexpected side effects, and it can be challenging to identify new uses for drugs that were not originally designed to target a particular disease pathway.
+
+# 11.7 Case Studies and Examples
+
+# 11.7.1 Discovery of HIV Protease Inhibitors
+
+Structure-based drug design (SBDD) has the potential to result in the creation of life-saving medications, as demonstrated by the discovery of HIV protease inhibitors [25]. HIV protease is a viral enzyme that is important for the virus’ reproduction, making it a prime candidate for treatment development. However, early attempts to design inhibitors of HIV protease using traditional methods were largely unsuccessful.
+
+In the late 1980s, researchers at Merck Sharp & Dohme (MSD) recognized the potential of SBDD in drug discovery and began a project to develop HIV protease inhibitors using this approach. The first step was to obtain the crystal structure of HIV protease, which was a challenging task given the large size and high flexibility of the protein. However, using a combination of X-ray crystallography and computational methods, the three-dimensional structure of the HIV protease was discovered by the researchers, who used this knowledge to create possible inhibitors.
+
+The initial inhibitors identified using SBDD were relatively weak, with low potency and poor pharmacokinetic properties. However, the researchers at MSD continued to refine their approach, enhancing the inhibitors’ potency and selectivity through iterative rounds of structural discovery, inhibitor creation, and biological testing [26]. The result was a series of compounds that were highly effective at inhibiting HIV protease and had good pharmacokinetic properties.
+
+The first HIV protease inhibitor to be approved by the US FDA was saquinavir, developed by Roche in 1995. However, saquinavir had limited bioavailability and required frequent dosing, making it less than ideal for long-term treatment. In contrast, the HIV protease inhibitors developed by MSD as shown in Figure 11.13, including indinavir, ritonavir, and nelfinavir, had superior pharmacokinetic properties and were effective at suppressing viral replication in clinical trials.
+
+One of the key advantages of SBDD in the discovery of HIV protease inhibitors was its ability to identify compounds that selectively targeted the viral protease without affecting human proteases. In order to minimize adverse effects and lower the possibility of drug interactions, selectivity was essential. In order to increase the inhibitors’ binding affinity for the target protein, researchers were also able to modify the inhibitors’ shape and electrostatic characteristics using SBDD.
+
+A significant advancement in the field of drug development, the finding of HIV protease inhibitors utilizing SBDD has helped save countless lives. HIV protease inhibitors are now

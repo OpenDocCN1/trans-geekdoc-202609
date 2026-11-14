@@ -1,0 +1,20 @@
++   31. Monteiro, N. R., Ribeiro, B., Arrais, J. P., Drug-target interaction prediction: end-to-end deep learning approach. IEEE/ACM Trans. Comput. Biol. Bioinf., 18, 6, 2364–2374, 2020.
++   32. Nascimento, A.C., Prudêncio, R.B., Costa, I.G., A multiple kernel learning algorithm for drug-target interaction prediction. BMC Bioinf., 17, 1–16, 2016.
++   33. Lionta, E., Spyrou, G., Vassilatis, D.K., Cournia, Z., Structure-based virtual screening for drug discovery: Principles, applications, and recent advances. Curr. Topics Med. Chem., 14, 16, 1923–1938, 2014.
++   34. Ghosh, S., Nie, A., An, J., Huang, Z., Structure-based virtual screening of chemical libraries for drug discovery. Curr. Opin. Chem. Biol., 10, 3, 194–202, 2006.
++   35. Acharya, C., Coop, A., Polli, J.E., Mackerell, A.D., Jr, Recent advances in ligand-based drug design: Relevance and utility of the conformationally sampled pharmacophore approach. Curr. Comput.-Aided Drug Des., 7, 1, 10–22, 2011.
++   36. Maldonado, A.G., Doucet, J.P., Petitjean, M., Fan, B.-T., Molecular similarity and diversity in chemoinformatics: From theory to applications. Mol. Diversity, 10, 1, 39–79, 2006.
++   37. Johnson, M.A. and Maggiora, G.M., Concepts and Applications of Molecular Similarity, Wiley, United States, 1990.
++   38. Wang, T., Wu, M.B., Lin, J.P., Yang, L.R., Quantitative structure-activity relationship: Promising advances in drug discovery platforms. Expert Opin. Drug Discov., 10, 12, 1283–1300, 2015.
++   39. Kumar, R., Chaudhary, K., Singh Chauhan, J. et al., An in-silico platform for predicting, screening and designing of antihypertensive peptides. Sci. Rep., 5, 12512, 2015.
++   40. Briard, J.G., Fernandez, M., de Luna, P., Woo, T.K., Ben, R.N., QSAR Accelerated discovery of potent ice recrystallization inhibitors. Sci. Rep., 6, 26403, 2016.
++   41. Zakharov, A.V., Varlamova, E.V., Lagunin, A.A. et al., QSAR modelling and prediction of drug-drug interactions. Mol. Pharmaceuticals, 13, 2, 545–556, 2016.
++   42. Fang, X., Bagui, S., Bagui, S., Improving virtual screening predictive accuracy of Human kallikrein 5 inhibitors using machine learning models. Comput. Biol. Chem., 69, 110–119, 2017.
++   43. Chen, J.J.F. and Visco, D.P., Jr, Developing an in-silico pipeline for faster drug candidate discovery: Virtual high throughput screening with the signature molecular descriptor using support vector machine models. Chem. Eng. Sci., 159, 31–42, 2017.
++   44. Chen, J.J.F. and Visco, D.P., Jr, Identifying novel factor XIIa inhibitors with PCA-GA- SVM developed vHTS models. Eur. J. Med. Chem., 140, 31–41, 2017.
++   45. Xia, X., Maliski, E.G., Gallant, P., Rogers, D., Classification of kinase inhibitors using a Bayesian model. J. Med. Chem., 47, 18, 4463–4470, 2004.
++   46. Bender, A., Mussa, H.Y., Glen, R.C., Screening for dihydrofolate reductase inhibitors using MOLPRINT 2D, a fast fragment-based method employing the Naive Bayesian classifier: Limitations of the descriptor and the importance of balanced chemistry in training and test sets. J. Biomol. Screen., 10, 7, 658–666, 2005.
++   47. Prathipati, P., Ma, N.L., Keller, T.H., Global Bayesian models for the prioritization of antitubercular agents. J. Chem. Inf. Model., 48, 12, 2362–2370, 2008.
++   48. Ekins, S., Reynolds, R.C., Kim, H. et al., Bayesian models leveraging bioactivity and cytotoxic-ity information for drug discovery. Chem. Biol., 20, 3, 370–378, 2013.
++   49. Vijayan, R.S., Bera, I., Prabhu, M., Saha, S., Ghoshal, N., Combinatorial library enumeration and lead hopping using comparative interaction fingerprint analysis and classical 2D QSAR methods for seeking novel GABA(A) alpha (3) modulators. J. Chem. Inf. Model., 49, 11, 2498–2511, 2009.
++   50. Liu, L., Lu, J., Lu, Y. et al., Novel Bayesian classification models for predicting compounds blocking hERG potassium channels. Acta Pharmacol. Sin., 35, 8, 1093–1102, 2014.

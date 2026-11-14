@@ -1,0 +1,17 @@
+51. Singh, N., Chaudhury, S., Liu, R., Abdul Hameed, M.D.M., Tawa, G., Wallqvist, A., QSAR classification model for antibacterial compounds and its use in virtual screening. J. Chem. Inf. Model., 52, 10, 2559–2569, 2012.
+52. Renault, N., Laurent, X., Farce, A. et al., Virtual screening of CB (2) receptor agonists from Bayesian network and high-throughput docking: Structural insights into agonist-modulated GPCR features. Chem. Biol. Drug Design, 81, 4, 442–454, 2013.
+53. Abdul Hameed, M.D., Ippolito, D.L., Wallqvist, A., Predicting rat and human pregnane X receptor activators using Bayesian classification models. Chem. Res. Toxicol., 29, 10, 1729–1740, 2016.
+54. Shi, H., Tian, S., Li, Y. et al., Absorption, distribution, metabolism, excretion, and toxicity evaluation in drug discovery. Prediction of human pregnane X receptor activators by using naive Bayesian classification technique. Chem. Res. Toxicol., 28, 1, 116–125, 2015.
+55. Murcia-Soler, M., Pérez-Giménez, F., García-March, F.J. et al., Artificial neural networks and linear discriminant analysis: A valuable combination in the selection of new antibacterial compounds. J. Chem. Inf. Comput. Sci., 44, 3, 1031–1041, 2004.
+56. Douali, L., Villemin, D., Cherqaoui, D., Neural networks: Accurate nonlinear QSAR model for HEPT derivatives. J. Chem. Inf. Comput. Sci., 43, 4, 1200–1207, 2003.
+57. Sabet, R., Fassihi, A., Hemmateenejad, B., Saghaei, L., Miri, R., Gholami, M., Computer-aided design of novel antibacterial 3-hydroxypridine-4-ones: Application of QSAR methods based on the MOLMAP approach. J. Comput.-Aided Mol. Design, 26, 3, 349–361, 2012.
+58. Fjell, C.D., Jenssen, H., Hilpert, K. et al., Identification of novel antibacterial peptides by chemoinformatics and machine learning. J. Med. Chem., 52, 7, 2006–2015, 2009.
+59. Torrent, M., Andreu, D., Nogues, V.M., Boix, E., Connecting peptide physicochemical and antimicrobial properties by a rational prediction model. PloS One, 6, 2, 16968, 2011.
+60. Sardari, S., Kohanzad, H., Ghavami, G., Artificial neural network modeling of antimycobacterial chemical space to introduce efficient descriptors employed for drug design. Chemom. Intell. Lab. Syst., 130, 151–158, 2014.
+61. Khatri, N., Lather, V., Madan, A., Diverse classification models for anti-hepatitis C virus activity of thiourea derivatives. Chemom. Intell. Lab. Syst., 140, 13–21, 2015.
+62. Hu, L., Chen, G., Chau, R.M., A neural networks-based drug discovery approach and its application for designing aldose reductase inhibitors. J. Mol. Graph. Model., 24, 4, 244–253, 2006.
+63. Patra, J.C. and Chua, B.H., Artificial neural network-based drug design for diabetes mellitus using flavonoids. J. Comput. Chem., 32, 4, 555–567, 2011.
+64. Mytelka, K.Z., Wang, L., Tong, Q., Xie, X.Q., Molecular fingerprint-based artificial neural networks QSAR for ligand biological activity predictions. Mol. Pharm., 9, 10, 2912–2923, 2012.
+65. Geanes, A.R., Cho, H.P., Nance, K.D. et al., Ligand-based virtual screen for the discovery of novel M5 inhibitor chemotypes. Bioorganic & Med. Chem. Lett., 26, 18, 4487–4491, 2016.
+66. Ma, J., Sheridan, R.P., Liaw, A., Dahl, G.E., Svetnik, V., Deep neural nets as a method for quantitative structure-activity relationships. J. Chem. Inf. Model., 55, 2, 263–274, 2015.
+67. Martin, E.J., Polyakov, V.R., Tian, L., Perez, R.C., Profile-QSAR 2.0: Kinase virtual screening accuracy comparable to four-concentration IC50s for realistically novel compounds. J. Chem. Inf. Model., 57, 8, 2077–2088, 2017.

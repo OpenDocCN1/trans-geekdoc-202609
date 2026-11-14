@@ -1,0 +1,17 @@
+using RNA sequencing (RNA-seq) generate transcript abundance data for thousands of genes across multiple samples, resulting in large expression matrices [30].
+
+Proteomics: Mass spectrometry-based proteomics generates large-scale protein identification and quantification data. The identification of proteins from complex samples, post-translational modifications, and protein–protein interactions contribute to the complexity of proteomics data. Metagenomics studies microbes. Microorganism metagenomics sequencing requires bioinformatics. Bioinformatics uses medical, spatial transcriptomic, and microscopy images. Complex algorithms examine big photos [31].
+
+Bioinformatics links genomes, transcriptomics, proteomics, and clinical data. Modern computers analyze enormous multidimensional datasets for integrative research. Multiple-sample bioinformatics assesses genes and proteins. Multi-hypothesis testing, dimensionality reduction, and high-dimensional datasets require statistical and machine learning methodologies. Bioinformatics examines longitudinal data. Analyzing temporal dynamics, patterns, and changes requires specific methods [32].
+
+Bioinformatics stores genomic and health data. Bioinformatics faces privacy, security, sharing, and analysis. Complex bioinformatics data requires scalable computational tools, efficient storage and retrieval, and advanced analytical methods. Cloud, parallel, and distributed computing handle massive datasets and expensive analysis. Data integration, visualization, and machine learning examine huge bioinformatics datasets.
+
+# 3.5.2 Data Integration and Standardization
+
+Bioinformatics organizes biological data. Public databases, assays, healthcare records, and publications provide bioinformatics data. Integrating data reveals biology. Ontologies and controlled vocabularies standardize biological entity and concept annotation and classification. GO and MeSH standardize gene, protein, illness, and other biological item categorization, simplifying data integration. Linking gene identifiers across databases unifies gene expression, functional annotation, and genetic variation [33].
+
+Standardizing metadata includes experimental settings, sample properties, and data processing. Simplified exchange, repeatability, and interpretation. Bioinformatics uses FASTA, FASTQ, BED, and BAM. Community-driven data exchange standards like CDISC clinical data standards enable data integration across platforms and applications. Bioinformatics standardizes data quality. MIAME and FGE share functional genomics and microarray data. Standards and submission requirements ensure quality and interoperability in public data repositories and databases. Standardizing data and metadata in these repositories improve data integration. Bioinformatics standardization and integration enable data exchange, cross-study comparisons, and strong analytical methods. Bioinformatics research is repeatable, reliable, and useful, enabling collaboration to understand biological systems and improve patient care [34].
+
+# 3.5.3 Reproducibility of Bioinformatics Analysis
+
+Bioinformatics needs reproducibility copying a study’s data, techniques, and computational environment. Science needs reproducibility. Sharing data, code, and analysis methods makes researchers accountable.
