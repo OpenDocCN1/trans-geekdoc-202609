@@ -1,0 +1,83 @@
+level_changes:
+- line: 1056
+  before: 3
+  after: 2
+- line: 183
+  before: 2
+  after: 3
+- line: 209
+  before: 2
+  after: 3
+- line: 261
+  before: 2
+  after: 3
+- line: 285
+  before: 2
+  after: 3
+- line: 315
+  before: 2
+  after: 3
+- line: 322
+  before: 2
+  after: 3
+- line: 365
+  before: 2
+  after: 3
+- line: 457
+  before: 2
+  after: 3
+- line: 461
+  before: 2
+  after: 3
+- line: 500
+  before: 2
+  after: 3
+- line: 506
+  before: 2
+  after: 3
+- line: 515
+  before: 2
+  after: 3
+- line: 545
+  before: 2
+  after: 3
+- line: 601
+  before: 2
+  after: 3
+- line: 607
+  before: 2
+  after: 3
+- line: 657
+  before: 2
+  after: 3
+- line: 665
+  before: 2
+  after: 3
+- line: 2403
+  before: 2
+  after: 3
+- line: 2428
+  before: 2
+  after: 3
+- line: 2446
+  before: 2
+  after: 3
+- line: 2460
+  before: 2
+  after: 3
+- line: 2479
+  before: 2
+  after: 3
+- line: 2494
+  before: 2
+  after: 3
+text_changes:
+- line: 2135
+  before: 5-G 技术的重要性
+  after: 5G 技术的重要性
+- line: 2526
+  before: Node JS v12.16.0-x64
+  after: Node.js v12.16.0-x64
+- line: 2494
+  before: 客户
+  after: 6. 客户
