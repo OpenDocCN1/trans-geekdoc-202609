@@ -1,0 +1,15 @@
++   2. Distributed: Every node has a copy of the blockchain. So, if someone tries to tamper with the data, he/she will have to modify data in all the copies of blockchain stored at every node in the blockchain network. This prevents all of the information from being tampered with at the same time. Unless hackers can tamper with the transaction records on millions of nodes, they will not be able to successfully falsify the blockchain data.
+
++   3. Immutable: Any transaction data, once added to the blockchain cannot be modified. Data can only be added to the blockchain in a time-sequential order. It is considered practically impossible to change any data.
+
++   4. Consensus: This is the attribute which gives blockchain the power of decentralization. The ledger is updated by consensus. No central authority is in charge of making changes to the ledger. Any updates made to the blockchain are verified against strict conditions and added to the blockchain only after a consensus has been reached among the nodes in the network.
+
++   5. Security and reliability: There is no single point of failure in the blockchain system due to decentralization. There is no part of the system that has the ability to cease functioning of the entire system, if it fails. Also, there are no weak points in the network from where information can be tampered with. This avoids malicious attacks, thus improving overall reliability of the blockchain. Furthermore, transactions are digitally signed and encrypted, which ensures high security.
+
+# 6.1.2 HISTORY OF BLOCKCHAIN
+
+For a better understanding of blockchain, we must trace blockchain's origin. We should try to understand the context in which it was developed to perceive it better. Since the 'big 4' are investing in it, blockchain has gained even more importance. Optimists claim that blockchain is going to be of more prominence in the future. So, let us see what journey blockchain had before it became a matter of interest to numerous people around the world.
+
+In 1991, Stuart Haber and W. Scott Stornetta devised a method to cryptographically secure a chain of blocks with to develop a system where time-stamped documents cannot be tampered with. In 1992, they tried to incorporate Merkle trees into this system to make it more efficient so that multiple documents could be stored in one block. However, it was in 2008 that blockchain finally began to gain importance [3].
+
+In 2008, blockchain and bitcoin were conceptualized by a person (or a group of persons) named Satoshi Nakamoto. Satoshi Nakamoto has chosen to remain anonymous till now. In Nakamoto's paper 'Bitcoin: A Peer-to-Peer Electronic Cash System', he introduced bitcoin to the world and explained its underlying principles and how it works. In this paper, he incorporated many concepts such as cryptography, networks, calculus, etc. He tried to devise an electronic cash system based on cryptographic proof. In the following years, bitcoin became popular and the underlying concept i.e.,
