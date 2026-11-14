@@ -1,0 +1,17 @@
+level_changes:
+- line: 7
+  before: 3
+  after: 2
+text_changes:
+- line: 77
+  before: 一般方法。
+  after: 一般方法
+- line: 80
+  before: 1-(1-甲基-1H-咪唑-5-基)乙酮的合成。
+  after: 1-(1-甲基-1H-咪唑-5-基)乙酮的合成
+- line: 83
+  before: 2-氨基苯甲醛的合成。
+  after: 2-氨基苯甲醛的合成
+- line: 86
+  before: 异大烯内酯（1）的合成。
+  after: 异大烯内酯（1）的合成
