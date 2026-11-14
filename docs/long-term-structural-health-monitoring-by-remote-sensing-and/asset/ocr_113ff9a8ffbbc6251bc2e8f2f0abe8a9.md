@@ -1,0 +1,17 @@
+The basic structure of an AE is based on a feedforward neural network. This structure can be designed in shallow or deep configurations. A shallow AE consists of three layers of input, encoding, and output. It is the simplest form of the AE model due to using one hidden layer. In most cases, it is preferable to modeling a DAE by exploiting more than one hidden layer. On the other hand, both shallow and deep AEs can be modeled in undercomplete and overcomplete configurations. More precisely, if the hidden layer(s) of the AE is smaller than the input and output layers in terms of the neuron sizes, this strategy forms an undercomplete network. In contrast, if the hidden layer(s) is larger than the input and output layers, the AE is overcomplete (Charte et al. 2018). For simplicity, Fig. 2.5 shows the different forms of the AEs. Figure 2.5a,b indicates the shallow AEs with one hidden layer (i.e., encoding layer) in the undercomplete and overcomplete configurations. In contrast, the DAEs of these configurations are presented in Fig. 2.5c, d, both of which have (2L + 1) hidden layers including L mapping layers, one encoding layer, and L de-mapping layers.
+
+One of the well-known DAEs is comprised of three hidden layers of mapping, encoding or encoding, and de-mapping as shown in Fig. 2.6. In some literature, this type of DAE is known as auto-associative neural network (Charte et al. 2018; Larochelle et al. 2009). Once the best AE configuration has been selected, it is necessary to optimize or select the neuron sizes of the hidden layers and then train the AE. For the second task, one needs to use the unlabeled training data points (i.e., the augmented displacement samples of the undamaged condition of the structure), which are applied to the input layer of the AE of interest. A neuron located in any hidden layer receives several inputs from the preceding layer. This neuron computes the weighted sum of these inputs and finally utilizes a certain operation called activation function to product or predict the outputs. Linear, binary, rectified linear unit (ReLU), logistic, hyperbolic tangent (Tanh), and scaled exponential linear units (SELU) are commonly-used activation functions for learning the AEs. Among them, sigmoid functions based on logistic and Tanh are undoubtedly the most popular activations in AEs (Charte et al. 2018). It is worth remarking that the DAEs can be taken different activation functions at different hidden layers.
+
+Having considered the simplest AE configuration with one hidden layer, the learning process begins by encoding the hidden representation of the inputs (i.e., the vector x = [x1, ..., xp]T ) using the following coding function:
+
+```
+h = s_1(W^{(1)}x + b^{(1)})\qquad (2.29)
+```
+
+where h denotes the code or representation of x at the coding layer; W^(1) and b^(1) refers to the coder weight matrix and bias vector. Moreover, s1 is the activation function of the encoder. In the following, the reconstruction of the input is carried out by a decoding function as follows:
+
+```
+x̂ = s_2(W^{(2)}h + b^{(2)})\qquad (2.30)
+```
+
+where x̂ stands for the reconstructed data at the output layer of the AE; W^(2) and b^(2) are the decoder weight matrix and bias vector; and s2 denotes the activation function

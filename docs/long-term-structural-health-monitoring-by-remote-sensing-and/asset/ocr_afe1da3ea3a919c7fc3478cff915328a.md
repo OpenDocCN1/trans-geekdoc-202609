@@ -1,0 +1,13 @@
+online hybrid learning methods. Regarding the offline hybrid learning methods, all of them have demonstrated that the process of data normalization is mandatory for long-term SHM applications. In relation to the online hybrid learning methods, these could correctly alarm the occurrence of the abnormal change in the structure. More precise conclusions will be mentioned in the next chapter.
+
+# References
+
++   - Deraemaeker A, Worden K (2018) A comparison of linear approaches to filter out environmental effects in structural health monitoring. Mech Syst Sig Process 105:1–15. https://doi.org/10.1016/j.ymssp.2017.11.045
++   - Entezami A, Sarmadi H, Salar M, De Michele C, Nadir Arslan A (2021) A novel data-driven method for structural health monitoring under ambient vibration and high dimensional features by robust multidimensional scaling. Struct Health Monit 20(5):2758–2777. https://doi.org/10.1177/1475921720973953
++   - Rébillat M, Hmad O, Kadri F, Mechbal N (2018) Peaks over threshold–based detector design for structural health monitoring: application to aerospace structures. Struct Health Monit 17(1):91–107. https://doi.org/10.1177/1475921716685039
++   - Sarmadi H, Karamodin A (2020) A novel anomaly detection method based on adaptive Mahalanobis-squared distance and one-class kNN rule for structural health monitoring under environmental effects. Mech Syst Sig Process 140:106495. https://doi.org/10.1016/j.ymssp.2019.106495
++   - Sarmadi H, Yuen K-V (2021) Early damage detection by an innovative unsupervised learning method based on kernel null space and peak-over-threshold. Comput Aided Civ Inf 36(9):1150–1167. https://doi.org/10.1111/mice.12635
++   - Sarmadi H, Yuen K-V (2022) Structural health monitoring by a novel probabilistic machine learning method based on extreme value theory and mixture quantile modeling. Mech Syst Sig Process 173:109049. https://doi.org/10.1016/j.ymssp.2022.109049
++   - Sarmadi H, Entezami A, Salar M, De Michele C (2021) Bridge health monitoring in environmental variability by new clustering and threshold estimation methods. J Civ Struct Health Monit 11(3):629–644. https://doi.org/10.1007/s13349-021-00472-1
++   - Sarmadi H, Entezami A, De Michele C (2023) Probabilistic data self-clustering based on semi-parametric extreme value theory for structural health monitoring. Mech Syst Sig Process 187:109976. https://doi.org/10.1016/j.ymssp.2022.109976
++   - Selvakumaran S, Plank S, Geiß C, Rossi C, Middleton C (2018) Remote monitoring to predict bridge scour failure using Interferometric Synthetic Aperture Radar (InSAR) stacking techniques. Int J Appl Earth Obs Geoinf 73:463–470. https://doi.org/10.1016/j.jag.2018.07.004

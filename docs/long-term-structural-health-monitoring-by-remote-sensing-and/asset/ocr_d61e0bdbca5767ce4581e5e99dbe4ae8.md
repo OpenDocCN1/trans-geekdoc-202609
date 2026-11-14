@@ -1,0 +1,13 @@
+# 5.3 Future Research Opportunities
+
+Although this research has proposed various machine learning methods to develop the classical SAR-aided SHM under the presence of small displacement data and unpredictable EOCs and these methods could present reliable and correct results, we suggest also some ideas for further research studies.
+
+# 5.3.1 Data Augmentation by Generative Adversarial Networks
+
+In this book, the probabilistic algorithms based on the concept of Markov Chain Monte Carlo have been utilized to expand the small displacement points. Due to the recent revolution in deep learning by proposing Generative Adversarial Networks (GANs) by Goodfellow et al. (2014), it is recommended to extend the process of data augmentation via various GANs (Creswell et al. 2018).
+
+# 5.3.2 Data Normalization Under Novel Machine Learning Algorithms
+
+It has been verified in this book that the EOCs are inevitable in real-world long-term SHM projects regardless of the types of data and structure. On this basis, it is critical to implement data normalization to mitigate or remove all influences of the EOCs on the SHM-based features. In this work, it has been attempted to develop various kinds of DNN-based data normalization algorithms with the aid of the deep and shallow DAEs. Although some machine learning algorithms such as unsupervised teacher–student learning, transfer learning, and online learning have been incorporated to propose these algorithms, it is possible to exploit further novel machine learning concepts. Therefore, it is recommended to extend the procedure of data normalization by taking advantage of some advanced machine learning algorithms such as ensemble learning (Dietterich 2000), partially-supervised learning (Schwenker and Trentin 2014), active learning (Settles 2012), dictionary learning (Daneshvar et al. 2023), meta learning (Entezami et al. 2023a), multi-task learning (Entezami et al. 2023b), hybrid learning (Sarmadi et al. 2023), empirical learning (Entezami et al. 2022), and new DAEs based on sparse, denoising, stacking, and variational configurations (Charte et al. 2018; Dong et al. 2018).
+
+On the other hand, the proposed data normalization techniques in this book have required some hyperparameters, which made them parametric algorithms for data normalization. To avoid encountering difficulties and challenges regarding the problem of hyperparameter optimization, it is suggested to develop non-parametric data normalization methods by using some new machine learning concepts such as
