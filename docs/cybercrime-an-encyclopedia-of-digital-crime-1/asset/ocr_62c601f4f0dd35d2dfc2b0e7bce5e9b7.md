@@ -1,0 +1,15 @@
+Applied Psychology in 1997. The analysts gathered over 80,000 images of children in sexual situations that were readily available on the internet. After reviewing the images for the severity of abuse in the images, they created a typology of 10 levels of severity. One of the findings was that the age of the children involved in child pornography was become younger over time. This raised the concern that, because the children are so young, they are not able to express to others what is happening to them or even understand that what they are experiencing is wrong. The researchers also found an increase in pictures that seemed to be created in a family setting, such as in a family room located in a home or even where the offender is a family member. They termed this “domestic” pornography.
+
+Another finding from COPINE “was that over half of the victims in the pornographic images depicted young women, but there was a trend toward more young men in the images. Finally, they noted changes over time in the racial makeup of the pictures. Specifically, white children were more likely to be the subject of pictures that depict violent acts, whereas Asian children were more likely to be in posed pictures. Overall, there were few children of African-American descent in any of the images (Jewkes and Andrews, 2007).
+
+In 2005, research about child pornography through this organization was transferred to INTERPOL, the International Police Organization, which represents 194 countries. This allows for a more extensive collection of information about child pornography.
+
+# Law Enforcement’s Battle against Child Pornography
+
+Most law enforcement agencies on the state and local levels have specialized units or task forces that are responsible for investigating allegations surrounding the use of technology to harm children. In order to locate offenders, police officers often go to online chat rooms or social media sites and pretend to be minors in sting operations. They may agree to meet the offender in a real location, where the offender is arrested or taken into custody. This technique requires police officers to have a certain level of competence with technology:
+
+Law enforcement officials face other obstacles when investigating online child pornography. One is the question of jurisdiction. While the materials are available online, the sites may be hosted in another country where the officers are not permitted to act. Because of jurisdictional limitations, law enforcement may be aware of offenders but unable to act. In some areas, there may be a limited number of laws that give law enforcement the authority to arrest an offender. In some places, social and cultural norms may be more permissive of child pornography, and the legal definitions of offenses may not encourage law enforcement to crack down.
+
+Beyond this, some departments may not have financial resources to fight child pornography to the extent they may want. Because such a huge volume of pornography is available online, it becomes an almost impossible task to eliminate it or even limit its availability.
+
+See also: Dark Web

@@ -1,0 +1,15 @@
+governments, including France, Germany, and Australia, warned residents to consider using a browser other than Internet Explorer as a way to keep their data safe.
+
+See also: China; Hacker and Hacking; Zero-Day Attacks
+
+# Further Reading
+
++   Nakashima, Ellen. 2013. “Chinese hackers who breached Google gained access to sensitive data, U.S. officials say.” Washington Post, May 20, 2013. https://www.washingtonpost.com/world/national-security/chinese-hackers-who-breached-google-gained-access-to -sensitive-data-us-officials-say
++   Nakashima, Ellen, and Soltani Ashkan. 2014. “FBI warns industry of Chinese cyber campaign.” Washington Post, October 15, 2014. https://www.washingtonpost.com/world/fbi-warns-industry-of-chinese-cyber-campaign/2014/10/15/0349a00a-54b0-11e4 -ba4b
++   Schwartz, Matthew J. 2013. “Google Aurora hack was Chinese counterespionage operation.” Dark Reading, May 21, 2013. https://www.darkreading.com/attacks-and-breaches /google-aurora-hack-was-chinese-counterespionage-operation/d/d-id/1110060
++   Yadron, Danny, James T. Areddy, and Paul Mozur. 2014. “China hacking is deep and diverse, experts say.” Wall Street Journal, May 29, 2014. https://www.wsj.com/articles /china-hacking-is-deep-and-diverse-experts-say-1401408979
++   Zetter, Kim. 2010. “Google hack attack was ultra sophisticated, new details show.” Security, January 14, 2010. https://www.wired.com/2010/01/opration-aurora
+
+# OPERATION INNOCENT IMAGES
+
+Operation Innocent Images was an investigation into online child sexual exploitation undertaken by the FBI in 1994. It was during a separate investigation into a missing child in Maryland in 1993 that this operation was founded. In that case, 10-year-old George Burdynski went missing on May 24, 1993. In the course of the investigation, it was discovered that George and his friends had visited the homes of several men in town: James Kowalski, Stephen Leak, and Joseph Lynch. Kowalski and Leak had sexually abused two of Burdynski’s friends the weekend before he went missing. Kowalski invited the two boys to play video games and eat pizza. Once the boys were there, Kowalski sexually assaulted one of the boys while the other boy recorded the incident with a video camera. Leak was present and watched the incident (Johansson, 1995; McCabe, 2013). In a separate incident, Lynch sexually assaulted a friend of Burdynski’s. Lynch was convicted of that crime in 1994. Kowalski and Leak were also convicted of sexual assault in 1993. In addition, Kowalski and Leak were also convicted of child pornography charges (Washington Times, 2002). It had been discovered that Kowalski and Leak had been using the internet not only to disseminate child pornography but also to make contact and communicate with boys and set up meetings with them (Federal Bureau of Investigation, 2018). Kowalski was at one point the prime suspect in Burdynski’s disappearance, but there was not enough information to charge him for that crime (Federal Bureau of Investigation, 2018; Washington Times, 2002).

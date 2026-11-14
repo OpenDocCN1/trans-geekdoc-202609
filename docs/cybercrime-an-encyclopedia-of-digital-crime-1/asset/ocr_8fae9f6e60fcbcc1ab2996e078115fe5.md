@@ -1,0 +1,16 @@
+in their terms of service (HBO, 2019; Netflix, 2019). Violating the terms of service can give rise to a civil cause of action against the violator. However, it is possible that the violator could also face criminal charges. As noted in HBO's terms of service: “If you choose to access [material] from other locations you do so on your own initiative and at your own risk. You are responsible for complying with local laws, if and to the extent local laws are applicable” (HBO, 2019). In other words, if a user illegally accesses copyrighted material, and the laws of the country in which the user resides treats that illegal access as a crime, that user may face criminal charges in addition to a civil cause of action from the entertainment company.
+
+GPS spoofing is similar to location spoofing. Instead of changing one's location through a VPN, however, GPS spoofing changes the actual GPS coordinates of an electronic device capable of being traced via GPS. GPS spoofing can be used to circumvent services that are GPS-dependent. For example, some games playable on cell phones are dependent on GPS, such as Pokémon Go. The location of items in the game is tied to the GPS location of the phone. By using GPS spoofing, a player can trick the game into thinking the phone is at a specific GPS location, and the player can collect the item tied to that location (Malwarebytes, 2019). Use of GPS spoofing in Pokémon Go is considered a violation of the terms of service (Niantic, 2019). Where the game offers the in-game purchase of items, if GPS spoofing were used to obtain items in a manner that would alleviate the player's need to purchase those items, it could be considered theft. GPS spoofing can potentially be used for other purposes as well. In 2011, the Iranian military was able to spoof the GPS coordinates of a U.S. drone. By doing so, the drone landed at a location it thought was its home base in Afghanistan but was actually in Iran. This permitted the Iranian military to study the technology of the drone once it was intercepted (Peterson and Faramarzi, 2011).
+
+See also: China; Copyright Infringement; Domain Name System Cache Poisoning; Malware; Personally Identifying Information; Phishing; Spoofing; Virtual Private Network
+
+# Further Reading
+
++   Banjo, Shelly, and Lulu Yilun Chen. 2019. “Digital dissidents are fighting China’s censorship machine.” Bloomberg Businessweek, June 3, 2019. https://www.bloomberg.com/news/articles/2019-06-03/digital-dissidents-are-fighting-china-s-censorship-machine.
++   ExpressVPN. 2019. “How to change your location in Google Chrome.” ExpressVPN. https://www.expressvpn.com/support/troubleshooting/spoof-location-google-chrome/
++   Federal Communications Commission. 2019. “Caller ID spoofing.” https://www.fcc.gov/consumers/guides/spoofing-and-caller-id
++   HBO. 2019. “HBO terms of use.” https://www.hbo.com/terms-of-use
++   Kaspersky. 2019. “What is IP spoofing?” https://usa.kaspersky.com/resource-center/threats/ip-spoofing
++   Malwarebytes. 2019. “Spoofing.” https://www.malwarebytes.com/spoofing/
++   Netflix. 2019. “Netflix terms of use.” https://help.netflix.com/en/legal/termsofuse
++   Niantic. 2019. “Niantic Terms of Service.” https://nianticlabs.com/terms/en/

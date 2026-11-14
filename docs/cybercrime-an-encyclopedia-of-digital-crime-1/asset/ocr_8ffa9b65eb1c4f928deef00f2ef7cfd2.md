@@ -1,0 +1,15 @@
+Computer experts who studied the Duqu virus realized that it is much like the Stuxnet virus used against Iranian nuclear facilities. For that reason, Duqu is sometimes referred to as Stuxnet Jr. The Duqu virus has software rules that are virtually the same as those in Stuxnet, as well as the source codes and encryption keys. The only difference is the Duqu is more advanced. For those reasons, most people agree that Duqu and Stuxnet were written by the same people.
+
+# Flame Malware
+
+Flame was the name of malware that was discovered in 2012. It was used to attack approximately 1,000 computers owned by governments, educational agencies, and private computers located in mostly in Iran, but the malware infected computers in Israel, Palestine, and other Middle Eastern countries as well as in Russia, Hong Kong, and Austria. The infected computers were running on Microsoft Windows operating system.
+
+The Flame virus was used to collect sensitive information on the user. It allowed the developers to listen to Skype conversations, record audio, take screenshots, record keyboard strokes (to collect user names and passwords), and track internet searches. Once the information was collected, it sent it back to the person who was responsible.
+
+It was alleged that the malware was a cyberweapon that was developed by the U.S. National Security Agency (NSA), the CIA, and military experts located in Israel. It was thought to be part of Operation Olympic Games, an effort to attack Iran's nuclear plants and gather information on their nuclear program. As such, it was very similar to the Stuxnet malware that was used in that operation. Investigators are unsure how the malware was originally put into machines, but once it was uploaded onto one computer, the virus would spread to others. It was also thought to infect a USB stick that was placed into a machine, and then upload from that device onto another computer.
+
+The malware was difficult for victims to detect. It included a “suicide” command that would initiate after a period of time, or upon the command of the originator, and would remove the program from the computer, leaving no indication that it had been placed there. For that reason, many of the victims were unaware that their computers had been affected. The virus was discovered by experts at Kaspersky labs after the United Nations International Telecommunications Union asked experts at the lab to investigate allegations that computers in the Iranian National Oil company had been attacked with malware. Upon its discovery, Iran’s National Computer Emergency Response Team distributed a removal tool to agencies whose computers were infected.
+
+# Gauss Malware
+
+Gauss was a cybersurveillance operation that was launched in September 2011 and discovered in June 2012 by the International Telecommunication Union (ITU), a group that works to promote online peace. They were investigating the Flame

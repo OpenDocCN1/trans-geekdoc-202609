@@ -1,0 +1,48 @@
+
+pornography. If the images can be categorized as artwork, it may be protected by the U.S. Constitution's First Amendment provisions regarding freedom of expression. However, images of child pornography are not protected by the First Amendment.
+
+By most laws, both the production and consumption of child pornography is illegal. If a person is found to be in possession of child pornography, that person may be labeled as a sex offender by legal authorities and may be forced to register as a sex offender even if there was no physical contact with the victim. An adult who takes a sexually explicit photo of a minor and uploads it to social media may have committed a federal crime banning child pornography, depending on the circumstances.
+
+There are many federal laws that have provisions to protect children from being sexually exploited and to deter offenders. Some of those include the Protection of Children Against Sexual Exploitation Act (1977), the Child Sexual Abuse and Pornography Act (1986), the Child Protection and Obscenity Enforcement Act (1988), the Child Protection Restoration and Penalties Enforcement Act (1990), and the Child Protection Act (1993).
+
+More recently, two laws have been passed by the U.S. Congress to protect children. The first of these, the Child Pornography Protection Act (1996), banned “virtual” pornography that is created through digital technology and appears to be of a minor, or “conveys the impression that material contains the picture of a child engaged in sexual activities.” However, in 2002, the United States Supreme Court struck down the law by ruling in the case Ashcroft v. Free Speech Coalition that the provisions of the law were too broad and violated the First Amendment.
+
+Second, Congress passed the Child Obscenity and Pornography Prevention Act (2002). The provisions of this law tries to sidestep the constitutionally treacherous question of virtual child pornography by focusing on the intent of the participants. It outlaws any solicitation to buy or sell child pornography (or anything represented as child pornography).
+
+The Prosecutorial Remedies and Tools against the Exploitation of Children Today Act (PROTECT Act), passed in 2003, was another attempt to deal with virtual child pornography. It would make it illegal to use pornographic images that appear to be indistinguishable from actual children. However, pornographers would be able to defend themselves in court by proving that no actual children were used in making the images, but the burden of proof is essentially shifted from the prosecution to the defense. Another provision would make it illegal to use internet domain names that mislead children into visiting pornographic sites.
+
+## Child Pornography on the Internet
+
+Child pornography is big business. Images are publicly available on the internet and often traded and acquired on the dark web. There are thousands of websites that offer images of child pornography. The child pornography industry generates an estimated $3 billion each year (Rogers and Seigfried-Spellar, 2011).
+
+The internet makes the distribution of child pornography easier than in the past. It makes the solicitation of young children by pedophiles almost effortless. The internet allows an offender to have contact with a larger pool of potential victims and does not limit them to a particular geographic area. The victim can be located anywhere around the world. An offender who uses the internet to meet a child is not forced to approach the child in person. Through the internet, the offender is provided with previously nonexistent anonymity that allows them to approach a potential victim more easily and also access images more readily.
+
+An offender may seek to make contact with a young child, which they can do through a chat room or social media site. Once an offender makes contact, they will go through a process of making the victim feel comfortable with the offender in a process called “grooming.” An offender will groom a young person for just days or for many months, depending on the child. They may create fake identities and pose as teenagers to befriend a child, usually a vulnerable child who is unhappy or needy. The offender can establish a connection with the child with the long-term intention of sexual abuse or creating a sexual relationship.
+
+Offenders may ask the child to pose for pictures or make pornographic materials and then send the images through the internet. They can also arrange to meet the child to participate in sexual behavior with them. Some offenders are not interested in meeting the children in face-to-face meetings but prefer to remain anonymous and trade images.
+
+The internet also provides offenders with a place to communicate with others who have an interest in child pornography. They are able to “talk” to others and share pictures and tips. When pedophiles find others who are like them, they are likely to view their behaviors as “normal.” This may lower inhibitions to act on their impulses (Rogers and Seigfried-Spellar, 2011).
+
+Many experts are also concerned about the availability of online pornographic material to young people. It is estimated that about 90 percent of minors aged 8–16 have viewed pornography online, with the average age of first exposure being around 11 years old (Rogers and Seigfried-Spellar, 2011).
+
+In some states in the United States, officials have started to charge minors with committing criminal offenses if they send or post nude photos of themselves (selfies) on the internet, even if they do so willingly. Some have been prosecuted under child pornography statutes. This means that a high school student who decides to send a selfie that is sexual in nature to their significant other could be charged with violating laws related to child pornography.
+
+Additionally, the person who received the picture may also be charged. If the photo is shared with other people, those who receive it could also be charged. Many states are bringing these charges for many reasons, one of which is to protect the child from those images having a permanent presence on the internet. On a broader scale, deterring the posting of nude pictures is also an attempt to reduce the amount of child pornography available on the internet for others to view or even manipulate.
+
+## Combating Pedophile Information Networks in Europe
+
+The University College Cork in Cork, Ireland, founded the Combating Pedophile Information Networks in Europe (COPINE), housed within the Department of Applied Psychology in 1997. The analysts gathered over 80,000 images of children in sexual situations that were readily available on the internet. After reviewing the images for the severity of abuse in the images, they created a typology of 10 levels of severity. One of the findings was that the age of the children involved in child pornography became younger over time. This raised the concern that, because the children are so young, they are not able to express to others what is happening to them or even understand that what they are experiencing is wrong. The researchers also found an increase in pictures that seemed to be created in a family setting, such as in a family room located in a home or even where the offender is a family member. They termed this “domestic” pornography.
+
+Another finding from COPINE “was that over half of the victims in the pornographic images depicted young women, but there was a trend toward more young men in the images. Finally, they noted changes over time in the racial makeup of the pictures. Specifically, white children were more likely to be the subject of pictures that depict violent acts, whereas Asian children were more likely to be in posed pictures. Overall, there were few children of African-American descent in any of the images (Jewkes and Andrews, 2007).
+
+In 2005, research about child pornography through this organization was transferred to INTERPOL, the International Police Organization, which represents 194 countries. This allows for a more extensive collection of information about child pornography.
+
+## Law Enforcement’s Battle against Child Pornography
+
+Most law enforcement agencies on the state and local levels have specialized units or task forces that are responsible for investigating allegations surrounding the use of technology to harm children. In order to locate offenders, police officers often go to online chat rooms or social media sites and pretend to be minors in sting operations. They may agree to meet the offender in a real location, where the offender is arrested or taken into custody. This technique requires police officers to have a certain level of competence with technology:
+
+Law enforcement officials face other obstacles when investigating online child pornography. One is the question of jurisdiction. While the materials are available online, the sites may be hosted in another country where the officers are not permitted to act. Because of jurisdictional limitations, law enforcement may be aware of offenders but unable to act. In some areas, there may be a limited number of laws that give law enforcement the authority to arrest an offender. In some places, social and cultural norms may be more permissive of child pornography, and the legal definitions of offenses may not encourage law enforcement to crack down.
+
+Beyond this, some departments may not have financial resources to fight child pornography to the extent they may want. Because such a huge volume of pornography is available online, it becomes an almost impossible task to eliminate it or even limit its availability.
+
+See also: Dark Web

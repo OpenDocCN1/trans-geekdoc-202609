@@ -1,0 +1,47 @@
+
+that information being used to steal money from them, but in many instances, they must also worry about cleaning up fake accounts made by cybercriminals to defraud victims as well. This can take years for some victims to do (Hsu, 2017).
+
+See also: Bitcoin; Cryptocurrency; Fraud; Hacker and Hacking; Identity Theft; Money Laundering; Phishing; Tor (The Onion Router)
+
+## Further Reading
+
+- Federal Bureau of Investigation. 2018. “2017 internet crime report.” https://pdf.ic3.gov/2017_IC3Report.pdf
+- Hackett, Robert. 2016. “How hackers plan attacks and hide their tracks.” Fortune, August 12, 2016. http://fortune.com/2016/08/12/how-hackers-hide-tracks-cyberattacks/
+- Hsu, Tiffany. 2017. “Data breach victims talk of initial terror, then vigilance.” New York Times, September 9, 2017. https://www.nytimes.com/2017/09/09/business/equifax-data-breach-identity-theft-victims.html
+- Jung, Jeyong, and Julak Lee. 2017. “Contemporary financial crime.” Journal of Public Administration and Governance 7, 2: 88–97.
+- Kaspersky Lab. 2015. Carbanak APT: The Great Bank Robbery. Kaspersky Lab. https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/08064518/Carbanak_APT_eng.pdf
+- Matsakis, Louise. 2018. “To identify a hacker, treat them like a burglar.” Wired, August 12, 2018. https://www.wired.com/story/case-linkage-hacker-attribution-cybersecurity/
+- Mirchandani, Bhakti. 2018. “Laughing all the way to the bank: Cybercriminals targeting U.S. financial institutions.” Forbes, August 28, 2018. https://www.forbes.com/sites/bhaktimirchandani/2018/08/28/laughing-all-the-way-to-the-bank-cybercriminals-targeting-us-financial-institutions/#2f14ac5b66e9
+- Pickett, K., H. Spencer, and Jennifer M. Pickett. 2002. Financial crime investigation and control. New York: John Wiley & Sons, Inc.
+- Snider, Mike, and Kaja Whitehouse. 2015. “Banking hack heist yields up to $1 billion.” USA Today, February 15, 2015. https://www.usatoday.com/story/tech/2015/02/15/hackers-steal-billion-in-banking-breach/23464913/
+
+## FIREWALL
+
+A firewall is an item used for computer security. It is designed to monitor traffic to and from a computer or computer network and to block traffic that does not comply with the security parameters in place (Cisco, 2019). A firewall can be used to protect a computer or computer network against cyberattacks.
+
+Firewalls work by monitoring information coming through it, to and from the internet. Basic firewalls will gather information on the packets—broken-down bundles of data—being sent to and from the internet, such as the internet protocol (IP) address of where the data is coming from. The firewall is then designed to block any packets whose information does not comply with the parameters programmed in the firewall, such as data that comes from an unauthorized IP address. More advanced firewalls will gather more information that can be used to determine whether data should be blocked or allowed, such as the riskiness of an application (Cisco, 2019; Norton, 2019). These are sometimes referred to as intrusion prevention systems (IPSs). An IPS functions like an intrusion detection system (IDS), gauging network traffic patterns and blocking traffic that is abnormal for that network. While firewalls, IPSs, and IDSs are separate cybersecurity tools, the distinction between these tools has faded as technology has advanced and these tools incorporate aspects of the others (Bradley, 2019).
+
+Firewalls can be either hardware or software. While both hardware and software firewalls carry out the same basic function, there are advantages and disadvantages to both. Hardware firewalls are generally easier to set up. A hardware firewall will generally be external to a computer. These may be built into another network device, such as a router. The design generally permits multiple computers to be run through it, providing protection to all those computers with no additional setup. While setup is easier, hardware firewalls only monitor incoming traffic, not outgoing. While this protects against many cyberattacks, it does not protect against all of them. Software firewalls, on the other hand, are able to monitor both incoming and outgoing traffic. The security parameters of software firewalls are also generally more customizable than hardware firewalls (Norton, 2019).
+
+As alluded to above, although firewalls can help prevent many cyberattacks, there are ways to circumvent the security provided by them. Where firewalls block data based on information the firewall collects about that data, if a cybercriminal can find a way to falsify that information, they may be able to get data—such as malware—past the firewall. One way of doing this is spoofing. Spoofing is the process of making something appear that it is something it is not. For firewall circumvention, a criminal would attempt to make a data packet appear to come from an IP address other than the one it is actually coming from in order to fool the firewall into letting it through. In this way, the spoofed data packets are working as a Trojan horse (Norton, 2019). Once the Trojan horse makes it through, the malware included inside can be downloaded to the targeted computer. Another similar method that can be used is the use of a virtual private network (VPN). A VPN can be used to hide the IP address of an internet user. While these can be used for privacy reasons, where the actual IP address of a user is hidden, a firewall would not block data sent or received from that user, even if their actual IP address was blocked. One type of cyberattack that may not be detected by a hardware firewall is the use of a bot. A bot is a computer that has been hijacked by a cybercriminal, allowing them to surreptitiously control that computer. As noted above, a hardware firewall is generally unable to monitor outgoing traffic from a computer. Thus, if a computer has been infected with malware and become a bot, a hardware firewall will be unable to monitor the outgoing activities a cybercriminal is initiating from that computer (Norton, 2019).
+
+Installing malware is not the only reason that someone might want to circumvent a firewall. Firewalls are used by some countries to censor the material its citizens can access on the internet. This can be seen with the censorship apparatus in place in China, known as the “Great Firewall of China.” Citizens in those countries can use the circumvention methods mentioned above to circumvent these firewalls and access censored material. In these countries, circumventing these firewalls or providing the means to circumvent these firewalls can be a crime.
+
+See also: Bots and Botnets; China; Malware; Spoofing; Trojan Horse; Virtual Private Network
+
+## Further Reading
+
+- Bradley, Tony. 2019. “Introduction to intrusion detection systems.” Lifewire, June 1, 2019. https://www.lifewire.com/introduction-to-intrusion-detection-systems-ids-2486799
+- Cisco. 2019. “What is a firewall?” https://www.cisco.com/c/en/us/products/security/firewalls-what-is-a-firewall.html
+- Griffiths, James. 2018. “A software developer just became the latest victim of China’s VPN crackdown.” CNN, October 10, 2018. https://www.cnn.com/2018/10/10/asia/china-vpn-censorship-intl/index.html
+- Norton. 2019. “How does a firewall work?” https://www.nortonsecurityonline.com/security-center/how-does-firewall-work.html
+
+## FLORIDA COMPUTER CRIME ACT OF 1978
+
+In response to a dog-racing betting scam, the Florida legislature passed the Florida Computer Crime Act in 1978, one of the first laws to create laws defining computer crimes. The law was in response not only to the scam at the race track but also to increasing computer crimes in both the public and private sectors—and the increase in costs that resulted from these crimes. Officials recognized that the opportunities that existed for computer-related crimes were very high, and there was a need for new, preventive action.
+
+On August 30, 1977, Leon Rodriguez placed a bet at the dog track in Flagler, Florida. When the race ended, Rodriguez and four other people had won a jackpot of $15,000. Rodriguez had won legally, but the four other betters, who were “electronic partners,” had won the money illegally through a computer scam. Under the scam, criminals made the losing tickets into winning bets by manipulating the computers that reported race results. Fraudulent winning tickets were then printed, and the winners cashed in their tickets the following day. The scam continued for many years, until the scam was discovered and the offenders arrested in 1977 (Hochman, 1986).
+
+The content of the Florida Computer Crime Act includes regulations prohibiting the intentional modification or deletion of data or programs found on a computer. The law also makes it illegal to destroy or damage the hardware on a computer. A third provision makes it illegal to knowingly take or disclose data or documentation that is a trade secret or confidential. These offenses are all defined as offenses against intellectual property. These offenses are defined as a felony of the second or third degree, depending on the provision.
+
+Another portion of the Florida law makes it illegal for an offender to willfully modify computer equipment or commit an offense against computer equipment. This can include acts such as destroying or damaging a computer system or network or destroying, damaging, or taking equipment or supplies. This is also defined as a third- or fourth-degree felony, depending on the damage caused by the destruction.

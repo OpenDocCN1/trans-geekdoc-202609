@@ -1,0 +1,15 @@
+the Democratic primaries (Cadwalladr, 2018; Fritz, 2018). In early 2019, Manning landed in custody again for refusing to testify before a federal grand jury about WikiLeaks and Julian Assange. Manning was ordered to remain in custody until she changed her mind and agreed to testify, or until the grand jury concluded its investigation (Bach, 2019). The time that grand jury was required to serve expired, and Manning was released from custody. However, a new grand jury was impaneled shortly thereafter and resumed the investigation against WikiLeaks and Assange. Manning was again summoned to testify before the new grand jury, and she again refused. In May 2019, she was again incarcerated for her failure to comply with the request of the grand jury (Ingber, 2019). She remained in custody even though an indictment against Assange was issued while she was still in custody for failing to testify to the grand jury in their investigation against him (United States Department of Justice, 2019).
+
+The public's view of Manning is polarized. Some view Manning as a traitor. This claim was the underpinning of Manning's court martial, and some—such as President Trump—have outright called her a traitor. Others view Manning as a hero. The city of Berkeley, California was scheduled to vote on a resolution recognizing Manning as a hero back in December 2010 before the matter was ultimately tabled (Valencia, 2010). Manning herself denies she is a traitor. However, she does not refer to herself as a hero, either (Selk, 2017).
+
+See also: Assange, Julian; Snowden, Edward; WikiLeaks
+
+# Further Reading
+
++   Bach, Natasha. 2019. “Chelsea Manning is back in jail after she refuses to testify on Wikileaks.” Fortune, March 8, 2019. http://fortune.com/2019/03/08/chelsea-manning-jail-refuses-to-testify/
++   BBC News. 2013. “WikiLeaks source Manning convicted on most charges.” July 30, 2013. https://www.bbc.com/news/world-us-canada-23506213
++   Cadwalladr, Carole. 2018. “‘I spent seven years fighting to survive’: Chelsea Manning on whistleblowing and WikiLeaks.” The Guardian, October 7, 2018. https://www.theguardian.com/us-news/2018/oct/07/chelsea-manning-wikileaks-whistleblowing-interview-carole-cadwalladr
++   Fritz, John. 2018. “8 years after leaking thousands of classified documents, Chelsea Manning is running for U.S. Senate in Maryland.” Baltimore Sun, February 20, 2018. http://www.baltimoresun.com/news/maryland/politics/bs-md-chelsea-manning-senate-20180213-story.html
++   Hansen, Evan. 2011. “Manning-Lamo chat logs revealed.” Wired, July 13, 2011. https://www.wired.com/2011/07/manning-lamo-logs/
++   Heller, Nathan. 2017. “Chelsea Manning changed the course of history. Now she’s focusing on herself.” Vogue, August 10, 2017. https://www.vogue.com/article/chelsea-manning-vogue-interview-september-issue-2017
++   Ingber, Sasha. 2019. “Chelsea Manning Sent back to jail for refusing to testify before grand jury.” National Public Radio, May 17, 2019. https://www.npr.org/2019/05/17/724133556/chelsea-manning-sent-back-to-jail-for-refusing-to-testify-before-grand-jury

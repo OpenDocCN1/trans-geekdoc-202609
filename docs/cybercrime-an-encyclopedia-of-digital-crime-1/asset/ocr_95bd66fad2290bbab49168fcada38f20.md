@@ -1,0 +1,16 @@
+of suspected criminals, and law enforcement may also use devices to surreptitiously intercept the cell phone communications (see McCullagh, 2007; Siegel, 2017). The collection of such information in the United States by law enforcement would have to comply with the search and seizure requirements of the Fourth Amendment of the U.S. Constitution as well as other applicable laws. A concern law enforcement may have when authorized to use spyware by a court is whether the suspect's antimalware software will catch the spyware and delete it. Some private antimalware companies have indicated that, if they were ordered by a court, they would not tell a customer of the presence of government-installed spyware. However, antimalware companies that were asked if they have ever received such an order either denied they had, indicated they did not know if they had, or did not answer the question. Nonetheless, there is some indication that one such company (McAfee) contacted the FBI in 2001 to make sure its antimalware software would not interfere with the FBI's spyware (McCullagh, 2007).
+
+See also: Digital Rights Management; End User License Agreement; Malware; Rootkit
+
+# Further Reading
+
++   Associated Press. 2005. “Sony BMG tentatively settles suits on spyware.” New York Times, December 30, 2005. https://www.nytimes.com/2005/12/30/technology/sony-bmg-tentatively-settles-suits-on-spyware.html
++   Cox, Joseph. 2017. “I tracked myself with $170 smartphone spyware that anyone can buy.” Motherboard, February 22, 2017. https://motherboard.vice.com/en_us/article/ayeea8/i-tracked-myself-with-dollar170-smartphone-spyware-that-anyone-can-buy
++   Electronic Frontier Foundation. 2019. “Sony BMG litigation info.” https://www.eff.org/cases/sony-bmg-litigation-info
++   Evers, Joris. 2006. “Microsoft's antipiracy tool phones home daily.” CNet, June 8, 2006. https://www.cnet.com/news/microsofts-antipiracy-tool-phones-home-daily/
++   Federal Trade Commission. 2005. Monitoring software on your PC: Spyware, adware, and other software. https://www.ftc.gov/sites/default/files/documents/reports/spyware-workshop-monitoring-software-your-personal-computer-spyware-adware-and-other-software-report/050307spywareprpt.pdf
++   McCullagh, Declan. 2007. “Will security firms detect police spyware?” CNet, July 17, 2007. https://www.cnet.com/news/will-security-firms-detect-police-spyware/
++   McMillan, Robert. 2006. “Sony rootkit settlement reaches $5.75M.” PCWorld, December 22, 2006. https://www.pcworld.com/article/128310/article.html
++   Reuters. 2014. “Suspected Russian spyware in Europe, US attacks.” CNBC, March 7, 2014. https://www.cnbc.com/2014/03/07/suspected-russian-spyware-in-europe-us-attacks.html
++   Robertson, Jordan, and Michael Riley. 2018. “The big hack: How China used a tiny chip to infiltrate U.S. companies.” Bloomberg Businessweek, October 4, 2018. https://www.bloomberg.com/news/features/2018-10-04/the-big-hack-how-china-used-a-tiny-chip-to-infiltrate-america-s-top-companies
++   Russinovich, Mark. 2005. “Sony, rootkits and digital rights management gone too far.” Microsoft TechNet (blog), October 31, 2005. https://blogs.technet.microsoft.com/markrussinovich/2005/10/31/sony-rootkits-and-digital-rights-management-gone-too-far/

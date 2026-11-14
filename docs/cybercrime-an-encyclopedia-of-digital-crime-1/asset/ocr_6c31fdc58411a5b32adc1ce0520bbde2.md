@@ -1,0 +1,15 @@
+As expected, there were many calls for backing up systems and installing updated virus protection software after the virus was detected. When the virus was launched, many personal computer users did not have virus protection, and many businesses were also lacking antivirus software. The virus made both people and organizations aware of the need for additional and updated virus protection.
+
+See also: Federal Bureau of Investigation; Malware; Melissa Worm; President and Cybercrime
+
+# Further Reading
+
++   Goldenberg, Stuart. 2000. “Back up to beat the bug.” New York Times, May 11, 2000. https://www.nytimes.com/2000/05/11/technology/back-up-to-beat-the-bug.html
++   Hill, Joshua B. and Nancy E. Marion. 2016. Introduction to cybercrime: Computer crimes, laws, and policing in the 21st century. Santa Barbara, CA: ABC-CLIO.
++   Kleinbard, David and Richard Richtmyer. 2000. “Quickly spreading virus disables multimedia files, spawns copycats.” CNN Money, May 5, 2000. https://money.cnn.com/2000/05/05/technology/loveyou/
++   Schwartz, John, and David A. Vise. 2000. “Love’ virus assaults world computers.” Washington Post, May 5, 2000. https://www.washingtonpost.com/archive/politics/2000/05/05/love-virus-assaults-world-computers/3079f34d-f8d9-4004-b858-7015a4e22896/
++   Ward, Mark. 2010. “A decade on from the ILOVEYOU bug.” BBC News, May 4, 2010. https://www.bbc.com/news/10095957
+
+# IMMIGRATION AND CUSTOMS ENFORCEMENT
+
+The Bureau of Immigration and Customs Enforcement (ICE) is a federal agency in the United States. It was created March 1, 2003, as part of a large federal government restructuring. Following the terrorist attacks of September 11, 2001, the United States formed the DHS to help protect the United States from future terrorist attacks and to help assure the safety of the country in general (Department of Homeland Security, 2015b). As part of this restructuring, the DHS absorbed all or part of 22 federal agencies and programs. Two of those were the Immigration and Naturalization Service and the Customs Service. These responsibilities of these two agencies were parsed out to three separate agencies under the Department of Homeland Security: the Bureau of Customs and Border Protection, the Bureau of Citizenship and Immigration Services, and the Bureau of Immigration and Customs Enforcement (Bureau of Immigration and Customs Enforcement, 2019). The mission of ICE is to “protect America from the cross-border crime and illegal immigration that threaten national security and public safety” (Bureau of Immigration and Customs Enforcement, 2018). Cybercrimes that take place in a cross-border fashion are investigated by the bureau’s Cyber Crime Center. The Center was created in 1997 under the control of the U.S. Customs Service, but it was placed under the authority of ICE following the absorption of the U.S. Customs Service into the Department of Homeland Security (Department of Homeland Security, 2015b).

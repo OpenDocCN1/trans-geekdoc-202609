@@ -1,0 +1,16 @@
+The framework is voluntary and applies to all organizations regardless of their size, complexity, or purpose. The intent of the report is not to replace an organization's existing cybersecurity plan, but rather to enhance it or even rearrange a plan to make it more efficient. The general concepts in the plan should be modified, if needed, to fit the individual agency's needs, threats and vulnerabilities. The goal is to increase the security of the nation's cybersecurity and enable organizations to be resilient to possible attacks and recover quickly from them. NIST points out that the framework is not just intended for use by organizations in the United States; it can be used by organizations around the world, which would also permit greater communication and an even more secure cyber system. The department and stake-holders continue to review the report and update it as needed to keep it current.
+
+See also: Cybersecurity; Data Sovereignty; President and Cybercrime
+
+# Further Reading
+
++   - National Institute of Standards and Technology. 2014. “Framework for Improving Critical Infrastructure Cybersecurity.” February 12, 2014. https://www.nist.gov/sites/default/files/documents/cyberframework/cybersecurity-framework-021214.pdf
++   - Obama, Barack. 2013. “Executive Order 13636: Improving critical infrastructure cybersecurity.” Federal Register 78, 33: 11739—11744. https://www.govinfo.gov/content/pkg/FR-2013-02-19/pdf/2013-03915.pdf
++   - Shackelford, Scott J., Andrew A. Proia, Brenton Marell, and Amanda N. Craig. 2015. “Toward a global cybersecurity standard of care?: Exploring the implications of the 2014 NIST Cybersecurity Framework on shaping reasonable national and international cybersecurity practices.” Texas International Law Journal 50, 2: 303—353.
++   - Stone, Jeff. 2018. “Amid national security warnings, NIST adds supply-chain security to cyber framework.” Wall Street Journal, April 19, 2018. https://www.wsj.com/articles/amid-national-security-warnings-nist-adds-supply-chain-security-to-cyber-framework-1524175900
+
+# NEWS CORP HACKING
+
+News Corp is a large corporation that oversees several different businesses. This includes several news organizations. From 2000 to 2006, some of the British news organizations overseen by News Corp—News of the World and The Sun, specifically—were involved in phone hacking (Childress and Gavett, 2012). Those whose phones were hacked include celebrities, politicians, soldiers, and crime victims.
+
+The hacking conducted by News Corp consisted of employees or contractors accessing the voice mails of people targeted for media coverage by the news outlets overseen by News Corp. This was done to give journalists an edge in their reporting, possibly uncovering new stories or new angles to stories by virtue of the hacked information (BBC, 2014). Evidence of possible phone hacking first emerged in 2005. In November of that year, News of the World published a story about a knee injury sustained by Prince William. The information in the article was not public knowledge, and officials for the royal family insist the information

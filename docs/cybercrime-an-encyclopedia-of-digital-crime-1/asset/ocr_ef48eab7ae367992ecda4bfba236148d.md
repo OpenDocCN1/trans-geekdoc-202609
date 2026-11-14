@@ -1,0 +1,16 @@
++   Fisher, Janon. 2012. “Disgruntled Gucci computer whiz who crashed company’s email system sentenced to 2 to 6 years.” New York Daily News, September 10, 2012. www .nydailynews.com/new-york/disgruntled-gucci-computer-whiz-crashed-company -email-system-sentenced-2-6-years-article-1.1156062
++   Hiscox. 2017. “The Hiscox cyber readiness report.” https://www.hiscox.co.uk/cyber -readiness-report/
++   “How much is cyber crime costing U.S. businesses?” 2015. Security: Solutions for Enterprise Security Leaders, February 1, 2015, p. 12. https://www.securitymagazine.com/articles /86066-how-much-is-cyber-crime-costing-us-businesses
++   Italiano, Laura. 2012. “Ex-staffer sentenced to 2–6 years for hacking into Gucci’s system.” New York Post, September 10. https://nypost.com/2012/09/10/ex-staffer-sentenced-to -2-6-years-for-hacking-into-guccis-system/
++   Kondakci, Suleyman. 2009. “A concise cost analysis of internet malware.” Computers and Security, 28: 648–659.
++   Leyden, John. 2011. “Fired Gucci IT worker accused of tearing up network.” The Register, April 5, 2011. https://www.theregister.co.uk/2011/04/05/gucci_bofh_revenge_hack/
++   Morgan, Steve. 2016. “Cyber crime costs projected to reach $2 trillion by 2019.” Forbes, January 17, 2016. https://www.forbes.com/sites/stevenmorgan/2016/01/17/cyber -crime-costs -projected-to-reach-2-trillion-by-2019
++   Moscariolo, Angela. 2011. “Former Gucci insider charged with hacking network.” SC Media, April 5, 2011. https://www.scmagazine.com/former-gucci-insider-charged -with-hacking-network/article/558806/
++   Paganini, Pierluigi. 2016. “Global cost of cybercrime will grow from $3 trillion in 2015 to $6 trillion annually by 2021.” Security Affairs, August 28, 2016. http://securityaffair.co /wordpress/50680/cyber-crime/global-cost-of-cybercrime.html.
++   Ponemon Institute. 2016. “2016 cost of cyber crime study and the risk of business innovation.” https://www.ponemon.org/local/upload/file/2016%20HPE%20CCC%20GLO BAL%20REPORT%20FINAL%20203.pdf
++   Ponemon Institute and HP Enterprise Security. 2014. “2014 global report on the cost of cyber crime.” October 30, 2014. https://www.ponemon.org/library/2014-global -report-on-the-cost-of-cyber-crime
++   Sans Institute. n.d. “Continuous monitoring: What it is, why it is needed, and how to use it.” https://www.sans.org/.../analyst/continuous-monitoring-is-needed-35030
+
+# # COUNCIL OF EUROPE CYBERCRIME CONVENTION
+
+In response to concerns over the development and expansion of criminal offenses related to computers and the internet, the Council of Europe (CoE) created the Cybercrime Convention in November 2001, sometimes referred to as the Budapest Convention. The treaty is the first binding international agreement that focuses on investigating crimes committed through the internet and punishing offenders. The aim of the treaty is to have synchronized or harmonized international laws against cybercrime that will also improve investigative abilities of law enforcement agencies through increase international cooperation, with international investigations and prosecution of cyber criminals. In short, the main goal of the treaty’s creators was to establish a “common criminal policy” to attack computer-related crimes.

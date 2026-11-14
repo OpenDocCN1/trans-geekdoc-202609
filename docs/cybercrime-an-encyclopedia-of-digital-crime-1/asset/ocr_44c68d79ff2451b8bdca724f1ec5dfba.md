@@ -1,0 +1,17 @@
+after an attack, or they can be tricked into sending large sums of money to an offender. Professionally, people may have their reputations ruined by false postings of rumors. Victims can be adults, but they can also be children who are groomed to be involved in child pornography. Victims can be men or women, and they can be located anywhere around the globe.
+
+Many victims must spend large amounts of time and money to report a cybercrime. The average case takes 28 days to resolve and costs $334 (Norton, 2010). The victims of cybercrime are a very diverse group. They can be organizations, businesses, governments, or individuals. The effects of a cybercrime can be direct, such as when a particular person or business is directly targeted and feels the full force of an attack; or it can be indirect, which can occur through another person or company. An example of this is when a company is the victim of a cyberattack and an individual's credit card information is stolen. In this case, the victim was not the intended target of the attack, but was indirectly impacted nonetheless.
+
+It is difficult to know how many people become victims of cybercrimes. Many victims choose not to report the cybercrime. Many victims suffer only marginal harm, so they do not take the time to report the crime. Most people also know that the chance that an offender will be caught is slim, so it's not worth reporting. It's often the case that people may not know they have become victims. Also, sometimes, victims are blamed for what happens to them, which makes them even less likely to report an offense. Victims may be embarrassed that they were attacked. Whatever the reason, the crime is not reported to law enforcement.
+
+Victims of cybercrimes often feel angry (58%), annoyed (51%), or even cheated (40%). Three percent of victims believe that it will never happen to them; 80 percent feel that the offenders will not be punished for their crimes (Norton, 2010).
+
+Older people are often victims of cybercrimes, as they often lack technological skills. They are more likely to fall for scams that are sent through e-mail. Older people often do not report if they have been victimized because they are embarrassed or ashamed of what happened. Another vulnerable population is college students. One study on this population found that college students often are not careful when it comes to protecting their online activities because they fail to download the proper security software. Thus, they are more likely to become victims of cybercrime (Choi, 2011).
+
+People who use social media often and who spend time in chat rooms are more likely to be victims of cyberbullying or harassment crimes (Holt et al., 2015). Cyberbullying, if serious enough, may result in the victim's suicide. Victims of cyberstalking tend to be slightly younger, white, male, and have higher reported incomes and education (Nobles et al., 2014).
+
+See also: Cyberbullying; Cyberstalking; Women, Effects on
+
+# Further Reading
+
+Choi, Kyung-Shick. 2011. “Cyber-routine activities: Empirical examination of online lifestyle, digital guardians and computer-crime victimization.” In Cyber criminology, edited by K. Jaishankar. Boca Raton, FL: CRC Press, pp. 229–252.
