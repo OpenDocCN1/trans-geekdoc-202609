@@ -1,0 +1,1536 @@
+- pgno: 0
+  md: '# # Revisiting the out of Africa event with a deep-learning approach
+
+
+    Francesco Montinaro,1,2,6 Vasili Pankratov,1,6 Burak Yelmen,1,3,4 Luca Pagani,1,5
+    and Mayukh Mondal1,*
+
+
+    # ## Summary
+
+
+    Anatomically modern humans evolved around 300 thousand years ago in Africa. They
+    started to appear in the fossil record outside of Africa as early as 100 thousand
+    years ago, although other hominins existed throughout Eurasia much earlier. Recently,
+    several studies argued in favor of a single out of Africa event for modern humans
+    on the basis of whole-genome sequence analyses. However, the single out of Africa
+    model is in contrast with some of the findings from fossil records, which support
+    two out of Africa events, and uniparental data, which propose a back to Africa
+    movement. Here, we used a deep-learning approach coupled with approximate Bayesian
+    computation and sequential Monte Carlo to revisit these hypotheses from the whole-genome
+    sequence perspective. Our results support the back to Africa model over other
+    alternatives. We estimated that there are two sequential separations between Africa
+    and out of African populations happening around 60-90 thousand years ago and separated
+    by 13-15 thousand years. One of the populations resulting from the more recent
+    split has replaced the older West African population to a large extent, while
+    the other one has founded the out of Africa populations.
+
+
+    # ## Introduction
+
+
+    Recent fossil record analysis suggests that Homo sapiens appeared around 300 thousand
+    years ago (kya) in Africa.1 This hypothesis is corroborated by genetic data,2
+    which estimated the deepest split between modern human populations at a similar
+    time point. Although fossil records advocate at the occurrence of multiple out
+    of Africa (OOA) events for modern humans,3 recent genetic studies revealed that
+    all modern non-African populations tested so far fit a model with a single OOA
+    event that happened less than 100 kya.4–6 This conclusion indicates that earlier
+    OOA migrations, documented by archaeological records, might have not left a substantial
+    contribution to modern human populations, with a possible exception of this model
+    suggested in Papuan populations (two out of Africa model).7 While the single OOA
+    model is generally supported by both autosomal and uniparental data,8–10 some
+    observations may reflect a more complex scenario. For example, uniparental data
+    show that most of the haplogroups found in OOA populations have a younger time
+    to the most recent common ancestor (tMRCA) than those found in Africa, with the
+    notable exception of the sister Y haplogroups D and E. Haplogroup D can be found
+    in isolated populations in Asia (i.e., Andamanese, Tibetans, Japanese, etc.),
+    while haplogroup E is ubiquitous in sub-Saharan African populations. These two
+    haplogroups coalesce together before coalescing with any other haplogroup found
+    in OOA populations.10,11 This observation might be explained by a back to Africa
+    migration involving a population harboring the haplogroup E10 or a simple out
+
+
+    of Africa with haplogroup E remaining in Africa but haplogroup D and other OOA
+    haplogroups coming out of Africa together.12 Furthermore, some genetic analyses
+    suggest that the separation between Africa and OOA populations might not be a
+    single split event but rather that it was constituted by structure and admixture
+    between populations.13–16
+
+
+    Testing these hypotheses (single out of Africa, back to Africa, and two out of
+    Africa) is challenging because of the strong bottleneck of non-African populations,17–19
+    differential amount and source of archaic introgression,19,40,21 and several migrations
+    within Africa.2,16 The lack of ancient genomic data older than 15 kya22 from Africa
+    makes it difficult to address this issue from an ancient DNA perspective. However,
+    neural networks (NNs) have been shown to be extremely powerful to disentangle
+    such complex scenarios.20
+
+
+    In the last few decades, the development of efficient and powerful computing infrastructure
+    allowed us to gain substantial progress in the machine learning field, especially
+    for computationally demanding algorithms such as NN23,24 and Bayesian methods.25,26
+    NN has been demonstrated to be a useful tool for specific types of tasks, such
+    as classification or natural language processing.23–25,27 However, NN requires
+    a large amount of data as a training set. In some cases, this limitation can be
+    overcome via the use of simulated data. Given that the modern tools allow for
+    efficient simulation of large sets of synthetic genetic data,28,29 NN is already
+    adopted in population genomics for interpretation of the genomic data in terms
+    of underlying demography20,30,31 and positive selection.32,33
+
+
+    1Institute of Genomics, University of Tartu, Tartu 51010, Estonia; 2Department
+    of Biology-Genetics, University of Bari, Bari 70124, Italy; 3Institute of Molecular
+    and Cell Biology, University of Tartu, Tartu 51010, Estonia; 4Université Paris-Saclay,
+    CNRS UMR 9015, INRIA, Laboratoire Interdisciplinaire des Sciences du Numérique,
+    91400 Orsay, France; 5Department of Biology, University of Padova, Padova 35121,
+    Italy 6These authors contributed equally *Correspondence: mondal.mayukh@gmail.com
+    https://doi.org/10.1016/j.ajhg.2021.09.006. © 2021 American Society of Human Genetics.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'However, unlike classical approaches, it is still challenging to measure the
+    significance of a prediction performed by NN given that it is a black-box approach.
+    Approximate Bayesian computation (ABC) can be used to weigh the accuracy of a
+    NN-based prediction from the data itself without knowing the maximum likelihood
+    function.\(^{20,30,34}\) However, ABC may face the “curse of dimensionality” problem
+    when high dimensional input data or summary statistics are used.\(^{35}\) It performs
+    less efficiently when the harnessed summary statistics do not capture enough information.
+    Here, we used NN to reduce the dimensionality of the original summary statistics
+    and to produce highly informative secondary summary statistics, which is used
+    as input by ABC to perform statistical analysis. Sequential Monte Carlo (SMC,
+    also known as the particle filter method)\(^{36}\) is used to recursively predict
+    posterior distribution from a prior. In every step, likelihood weight is calculated
+    for each prior sample. Low likelihood samples are discarded, and new samples are
+    resampled from a continuous distribution. In classical SMC, higher probability
+    was given to newer samples, which have higher weights in resampling steps. The
+    likelihood weights are calculated for all these samples and the cycle repeats
+    until convergence is reached. SMC has a strong resemblance to genetic algorithms.\(^{37}\)
+    It has been shown that ABC estimation can be further improved by the use of SMC,\(^{38–40}\)
+    but to date they have not been used together with NN.
+
+
+    Here, we present an improved version of ABC-DL (approximate Bayesian computation
+    with deep learning)\(^{20}\) along with ABC-DLS (approximate Bayesian computation
+    with deep learning and sequential Monte Carlo method), which allows us to infer
+    the most likely scenario among different competing demographic models as well
+    as to estimate their parameter values with high precision. Our approach relies
+    on an NN trained on simulated genetic data under the models being tested. However,
+    it has three key improvements compared to other similar approaches. First, the
+    use of the hdf5\(^{41}\) data format and tensor flow\(^{42}\) allows for extremely
+    large training datasets. Second, the conventional NN approach is improved with
+    ABC, which helps to provide statistical support for the NN prediction and to obtain
+    posterior distribution for the model parameter values. Third, inspired by previous
+    works,\(^{38}\) we applied a modification of the SMC\(^{36}\) approach to iterate
+    the whole procedure. This algorithm improved the prediction accuracy substantially
+    compared to previously implemented methods.\(^{20,43}\) We apply this method to
+    test the three OOA models mentioned above.
+
+
+    # # Material and methods
+
+
+    # ## Real data
+
+
+    We have downloaded the high-coverage 1000 Genomes\(^{44}\) vcf files produced
+    by the Coriell Institute for Medical Research. We randomly selected five individuals
+    to represent Africa, Europe, and East Asia originating at Yoruba from Ibadan,
+    Nigeria (YRI), Utah residents with European origin (CEU), and Chinese Han from
+    Beijing (CHB)
+
+
+    populations (15 individuals in total). As an alternative dataset, we have also
+    downloaded the high-coverage human Genome Diversity Project (HGDP) vcf files\(^{45}\)
+    and randomly selected five Yoruba (YRI), five French (FRN), and five Han Chinese
+    (HAN) individuals representing Africa, Europe, and East Asia (Table S1). Unless
+    mentioned otherwise, the results presented here were obtained on the first data
+    set. In order to avoid introducing any bias by the including only a subset of
+    mixing archaic humans due to availability of such genomes and mixing ancient genome
+    with the modern humans, we decided not to use any ancient genome. Moreover, it
+    is suggested that both Neanderthal and Denisova sequences, which are available,
+    are distantly related with the introgressed populations,\(^{46,47}\) suggesting
+    an even more complicated model. As our primary objective is with the OOA event
+    and to give all archaic populations the same treatment (because African archaic
+    populations are not yet sequenced), they are treated as ghost populations in our
+    simulations. We treated each dataset independently and kept only bi-allelic single-nucleotide
+    polymorphisms (SNPs) with genotype calls present in every individual and lifted
+    the genomic positions to GRCh37 coordinates by using Picard tools. Next, we used
+    two alternative filtering approaches: (1) filtering out genes and CpG islands
+    (for more details, please see Mondal et al., 2019\(^{20}\)) and (2) applying a
+    mappability mask coming from SNPable\(^{43}\) for the 1000 Genomes dataset in
+    Table S2. Filtering strategy 1 will be preferable to 2 in the case that the information
+    of CpG islands and genes are available. In the absence of those information (for
+    example non-human genetic data), our method can still reproduce similar result
+    with filtering strategy 2. All the filtering was performed with vcftools and bcftools.\(^{48,49}\)
+    The vcf file was converted to joint unfolded site frequency spectrum (SFS) via
+    an in-house code with scikit allel.\(^{50}\) For unfolded SFS, we need to know
+    ancestral allele and derived allele for the real data (for simulation, it is already
+    known). We used 1000 Genome ancestral allele alignments of fasta files to polarize
+    the alleles to ancestral and derived. When ancestral allele information is not
+    present for a given SNP, we have removed that SNP from our analysis.
+
+
+    # ## Genotype to site frequency spectrum
+
+
+    The SFS from the three populations (Africa, Europe, and East Asia) was computed
+    as a tridimensional tensor from the sequenced or simulated data and further transformed
+    into an array to be used as input by the NN. SFS is the total number of segregating
+    sites for a given derived allele count present in each population.
+
+
+    \(\text{SFS}(i, j, k) = \sum_{m=1}^n \begin{cases} 1, & \text{if } s_1 = i \text{
+    and } s_2 = j \text{ and } s_3 = k. \\ 0, & \text{otherwise.} \end{cases}\)
+
+
+    Where i, j, and k are the numbers of derived alleles count per SNP in pop1, pop2,
+    and pop3, respectively, and n is the total number of segregating SNPs. The whole
+    SFS was represented as a row. We multiplied all the elements of the real SFS by
+    a constant (frac) to make it comparable with the length of simulated regions if
+    those do not match. For example, we multiplied the real SFS by 100/647 (or 0.1546)
+    if we simulate a 100 megabase pair (Mb) region per simulation and the real data
+    is coming from 647 Mb region (after filtering). In general, it is possible to
+    use any summary statistics for our approach. We used SFS for our choice of summary
+    statistics because it is straightforward to obtain and informative enough.\(^{17,51}\)
+
+
+    # ## Simulations
+
+
+    All the simulations were done in msprime.\(^{29}\) We simulated 100, 500, 1,500
+    or 3,000 1 Mb genomic regions per run (depending'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Table 1. Prior parameters range used for producing the site frequency spectrum
+    (SFS)
+
+
+    | Parameters | OOA_S | OOA_B | OOA_M |
+
+    |---|---|---|---|
+
+    | N_A | 5,000–25,000 | 5,000–25,000 | 5,000–25,000 |
+
+    | N_AF | 10,000–150,000 | 10,000–150,000 | 10,000–150,000 |
+
+    | N_EU | 10,000–150,000 | 10,000–150,000 | 10,000–150,000 |
+
+    | N_AS | 10,000–150,000 | 10,000–150,000 | 10,000–150,000 |
+
+    | N_EU0 | 500–5,000 | 500–5,000 | 500–5,000 |
+
+    | N_AS0 | 500–5,000 | 500–5,000 | 500–5,000 |
+
+    | N_B | 500–5,000 | 500–5,000 | 500–5,000 |
+
+    | N_BC | N/A | 500–40,000 | N/A |
+
+    | N_AF0 | N/A | 500–40,000 | N/A |
+
+    | N_MX | N/A | N/A | 500–40,000 |
+
+    | N_B0 | N/A | N/A | 500–40,000 |
+
+    | T_FM (ky) | 2–5 | 2–5 | 2–5 |
+
+    | T_FS (ky) | 0.1–10 | 0.1–10 | 0.1–10 |
+
+    | T_DM (ky) | 10–50 | 10–50 | 10–50 |
+
+    | T_EU_AS (ky) | 5–30 | 5–30 | 5–30 |
+
+    | T_NM (ky) | 5–50 | 5–50 | 5–50 |
+
+    | T_XM (ky) | 5–120 | 5–120 | 5–120 |
+
+    | T_Mix (ky) | N/A | 5–50 | 5–50 |
+
+    | T_Sep (ky) | N/A | 5–50 | 5–50 |
+
+    | T_B (ky) | 5–270 | 5–220 | 5–220 |
+
+    | T_AF (ky) | 5–700 | 5–700 | 5–700 |
+
+    | T_N_D (ky) | 330–450 | 330–450 | 330–450 |
+
+    | T_H_A (ky) | 120–250 | 120–250 | 120–250 |
+
+    | T_H_X (ky) | 450–700 | 450–700 | 450–700 |
+
+    | Mix (%) | N/A | 5–95 | 5–95 |
+
+    | NMix (%) | 1–3 | 1–3 | 1–3 |
+
+    | DMix (%) | 0–2 | 0–2 | 0–2 |
+
+    | XMix (%) | 0–10 | 0–10 | 0–10 |
+
+    | FMix (%) | 0–10 | 0–10 | 0–10 |
+
+
+    N/A means not applicable and ky means kilo or thousand years.
+
+
+    on the analysis step) for five individuals per population (African, European,
+    and East Asian). For each run, we used a uniform recombination rate of 10–8 per
+    bp per pair (bp) per generation (because SFS is not affected by the local recombination
+    rate52) and a mutation rate of 1.45 × 10–8 per bp per generation53 while sampling
+    demographic parameters from a uniform distribution within prior ranges shown in
+    Table 1. We also alternatively used a mutation rate of 1.25 × 10–8 bp per bp per
+    generation (only for Table S3),44,55 We assumed generation time of 29 years.56
+    Most of our simulations for SFS were done on multiple of 1 Mb regions, except
+    Table S4 (which was produced by multiple of 25 Kb regions) and when we created
+    mock SFS to test our DLS approach (simulation parameters coming from Tables 2,
+    S5, and S6). To make the mock SFS similar to real data (which has a length of
+    647 Mb region after filtering), we simulated three 200 Mb regions and one 47 Mb
+    region together to create a single SFS under a given model. We also
+
+
+    simulated on multiple of 25 Kb regions (Table S4) to check whether the length
+    of simulated regions can bias our result. 1 Mb regions were chosen for most of
+    the simulated regions'' length because it is faster to produce.
+
+
+    In msprime, admixtures were represented as MassMigration (the fraction of population
+    replaced by another population in a single generation). In contrast, constant
+    migrations under island models (where applicable) were represented as Migrationrate
+    (the fraction of recipient population replaced by migrants from another population
+    per generation).
+
+
+    The ABC-DLS analysis is efficient enough to be done on a single computer. The
+    main bottleneck of the whole approach is the production of the simulated data.
+    Msprime is fast, but the total amount of data, which needs to be simulated for
+    the NN, is sometimes difficult to produce on a single computer (especially for
+    parameter estimation). Thus, we have used a snakemake pipeline'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '| Parameters | Mean | CI | Events (kya) |
+
+    | :--- | :--- | :--- | :--- |
+
+    | N\_A | 14,526 | 14,404–14,595 | N/A |
+
+    | N\_AF | 26,436 | 25,535–28,595 | N/A |
+
+    | N\_EU | 94,437 | 88,320–104,955 | N/A |
+
+    | N\_AS | 127,071 | 112,953–138,256 | N/A |
+
+    | N\_EU0 | 1,838 | 1,794–1,922 | N/A |
+
+    | N\_AS0 | 760 | 739–776 | N/A |
+
+    | N\_BC | 16,744 | 11,108–26,850 | N/A |
+
+    | N\_B | 2,026 | 1,984–2,096 | N/A |
+
+    | N\_AF0 | 35,773 | 33,296–38,019 | N/A |
+
+    | T\_DM (ky) | 18 | 17.7–18.4 | 18 (17.7–18.4) |
+
+    | T\_EU\_AS (ky) | 15.1 | 14.7–15.6 | 33.1 (32.5–33.6) |
+
+    | T\_NM (ky) | 5.2 | 5–5.8 | 38.3 (37.6–39) |
+
+    | T\_XM (ky) | 15.7 | 14.5–16.3 | 48.7 (47.6–49.8) |
+
+    | T\_Mix (ky) | 15.1 | 14.1–16.5 | 48.2 (46.8–49.5) |
+
+    | T\_Sep (ky) | 9.8 | 8.6–11.3 | 57.9 (56.1–59.8) |
+
+    | T\_B (ky) | 13.4 | 12.7–13.7 | 71.3 (69.4–73.3) |
+
+    | T\_AF (ky) | 200.4 | 197.2–202.1 | 271.7 (268.6–274.8) |
+
+    | T\_N\_D (ky) | 448.1 | 442–450.9 | 448.1 (442–450.9) |
+
+    | T\_H\_A (ky) | 248.1 | 240.6–252.1 | 696.2 (688.9–703.4) |
+
+    | T\_H\_X (ky) | 675.9 | 648.5–700.9 | 675.9 (648.5–700.9) |
+
+    | Mix (%) | 91.14 | 90.28–91.57 | N/A |
+
+    | NMix (%) | 2.99 | 2.95–3 | N/A |
+
+    | DMix (%) | 0.67 | 0.61–0.72 | N/A |
+
+    | XMix (%) | 5.29 | 4.02–6.22 | N/A |
+
+
+    CI is the confidence interval of 2.5%–97.5% of respective parameters. ky means
+    kilo years and kya means kilo or thousand years ago from now. ky here represents
+    the time interval of the event and kya represents the estimated time that event
+    happened from now. The relation between events and time intervals can be found
+    in Table S10. N/A, not applicable.
+
+
+    to produce the SFS on the cluster.57 All the simulations with corresponding parameters
+    were saved in a comma-separated value (CSV) file, which was then used by different
+    approaches (approximate Bayesian computation via random forest [ABC-RF], ABC-DL,
+    and ABC-DLS).
+
+
+    # ABC-DL
+
+
+    We have implemented an improved version of ABC-DL20 (here onward, we call this
+    implementation DL, and the implementation that additionally uses SMC [called DL5]
+    is described below) by using state-of-the-art machine learning packages in python.
+    We used TensorFlow with Keras backend42 for building the NN and abc package for
+    implementing ABC.58 The use of hdf5 format41 enabled us to analyze the whole dataset
+    without loading into the memory. This allows us to train the NN on extremely large
+    simulated datasets.
+
+
+    # Parameter estimation with DL
+
+
+    Here, we describe parameter estimation by using NN and ABC. We ran a total of
+    60,000 different simulations, each producing 3,000 of 1 Mb regions (3 Gb [gigabase
+    pair] in total, roughly equal to
+
+
+    the length of the human genome). Every line of the NN input is one such simulation
+    performed under a given demographic model with the columns representing SFS elements
+    and the parameters used for that simulation are used as known output. We ran parameter
+    estimation by using this information and retrieve the parameters predicted on
+    observed data for a given model. We used the known parameters as output for training
+    the NN (y), and we used the SFS as input (x). Thus, we can think of the NN as
+    a non-linear model for predicting the parameters from the SFS. We kept out 10,000
+    random lines for the testing dataset and ABC analysis, and the rest were used
+    for training the NN. Both SFS and parameter values were normalized per column
+    with MinMax scaler (from scikit-learn)59 so that each data entry is within 0 and
+    1.
+
+
+    We used four hidden layers of a dense NN (Figure S1) with activation relu (from
+    Keras package). These are basic building blocks for NNs. We used the linear layer
+    (from Keras package) for the output layer with the same number of units as the
+    number of parameters. We used the masking layer (from Keras package) at the beginning
+    to remove cells with zero values from the learning algorithm. This was done so
+    that NNs do not learn the absence of data.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'Then we used Gaussian noise injection (from Keras package) of 0.05 to introduce
+    some noise (Figure S1) to reduce overfitting because this will force the NN to
+    learn the true parameters even though the SFS is slightly distorted (or noisy).
+    We used logcosh as a loss function and Nadam for the optimizer (both from Keras
+    package). Although we have used other more classical approaches (i.e., mean square
+    error, stochastic gradient descent, etc.), we found this combination to be better
+    suited for our approach.
+
+
+    We used two hidden layers of the dense NN with the activation relu (Figure S1).
+    We used the softmax layer (from Keras package) for the output layer with the same
+    number of units as the number of trained models. We added the masking layer and
+    a noise injection layer as above. We used a 1% dropout layer (from Keras package)
+    within every dense layer to make it more robust. We used categorical_crossentropy
+    for the loss function and adam for the optimizer (both from Keras package).
+
+
+    The NN ran through the training dataset several times (epochs) to increase accuracy.
+    We used EarlyStopping (from Keras package) on loss coming from validation dataset
+    with the patient of 100. This stopped the epoch cycle in case there was no improvement
+    for the last 100 epochs (meaning the NN reached a convergence for the current
+    data). We used the ModelCheckpoint (from Keras package) of the lowest loss result
+    on validation data, as the last epoch is not guaranteed to have the lowest loss
+    on validation data. We also used ReduceLROnPlateau (from Keras package) of factor
+    0.2 to reduce the learning rate if we reached minima for several epochs (ten by
+    default). Learning rate too low at the start makes the NN learn slow, but in the
+    later stage, high learning rate performs worse than lower learning rate.
+
+
+    After the training was done, we used the testing dataset to predict models from
+    the simulated SFS, which we then used to perform the cross-validation test by
+    using ABC with the tolerance of 0.033 (which converts to 100 samples) in case
+    of three models and 0.0066 (which converts to 100 samples) in case of 15 models
+    via rejection (from abc package). We applied the model selection by abc-postpr
+    (from abc package) to the real data. See a schematic representation in Figure
+    S2.
+
+
+    After training is done, we used the testing dataset to predict the parameter from
+    the SFS, which was then used for cross-validation tests and parameter prediction
+    via loclinear from ABC^58 with the tolerance of 0.01. The whole approach is presented
+    in a flowchart (Figure S2).
+
+
+    # **Model selection with DL**
+
+
+    # **ABC-DLS**
+
+
+    Our implementation of the ABC-DL method was further improved by using the SMC
+    approach,^36 which opens up a new way to make inferences for similar cases (here
+    onward, we call this implementation DLS). Although SMC has lots of different implementation
+    and can be quite complex, we used a simpler version of SMC here. In our implementation,
+    we only selected the top 5% of best samples coming from every cycle of ABC and
+    discarded the rest. The ranges of the parameter values were estimated from these
+    top samples and new samples were drawn from the uniform distributions for these
+    new posterior ranges. To introduce mutations in the algorithm, we increased the
+    posterior range by 1% in every cycle. As a result, the simulated SFS, which is
+    used as input for the NN, becomes more and more similar to real or observed SFS
+    with every iteration of the algorithm.
+
+
+    Here, we describe model selection by using NN and ABC. Unless stated otherwise,
+    we simulated 2,000 simulations for each of the three demographic models tested
+    (see full description of demographic models below). We simulated all the models
+    for 3 Gb regions to make it equal for different approaches and finally scale the
+    real data accordingly. This approach is preferable because we can train the NN
+    only once for different length of real data. To test whether our scaling approach
+    and the length of simulated region are not creating any biases, we also simulated
+    an only 647 Mb region (equal to our filtering strategy 1) with the multiple of
+    25 Kb regions without using scaling in Table S4. The resulting CSV files (one
+    per model) are used together as input for model selection. Model selection was
+    repeated ten times both for DL and DLS. We found that if the results have high
+    accuracy (posterior probability on observed data is >95% for the correct model),
+    all the ten runs are essentially equal (which is expected).
+
+
+    # **Parameter estimation with DLS**
+
+
+    This method uses the standard parameter estimation strategy of DL (described above)
+    together with the modified SMC algorithm used for recursion.
+
+
+    For parameter estimation, we used the rejection method in ABC with a tolerance
+    of 0.05 as the rejection method always generates posterior within the prior range.
+    We obtained the posterior range by taking the minimum and the maximum values from
+    the ABC output. This range was then used as a prior range for the next iteration.
+    This cycle is repeated until decrease for all parameters is more than 0.95, suggesting
+    it has reached convergence.
+
+
+    We used SFS as input (x) for the NN and the model category as output (y) and removed
+    the parameters values because they are not needed for this step. We used MinMax
+    scaler from sklearn^59 only on the SFS data as above, and the names of the models
+    are converted to one-hot encoding by pandas.Categorical (from pandas package)
+    and Keras.utils.to_categorical (from Keras package). After concatenating files
+    coming from all the competing models, we shuffled the rows by a custom code.^60
+    We left out around 1,000 random rows per model to test the power of NN (as a testing
+    dataset) and for ABC analysis and used the rest to train the NN (as a training
+    dataset). The rest of the approach is as described above (see parameter estimation
+    with DL). We also tested these models with a much higher number of simulations
+    (50,000 for training and 10,000 for testing and ABC analysis), but because we
+    did not find any substantial differences in the results, we used 2,000 simulations
+    (1,000 for training and 1,000 for testing and ABC analysis) per model throughout
+    this study.
+
+
+    ```
+
+    decrease = \frac{Posterior_{max} - Posterior_{min}}{Prior_{max} - Prior_{min}}
+
+    ```
+
+
+    If the decrease is more than 95% for a parameter, the new posterior estimation
+    is rejected for that parameter. Instead, we take the prior range of this step,
+    expand it by 1% of its width and use it as a prior again. We used this strategy
+    to prevent the posterior from shrinking or collapsing unless NN has found some
+    accurate prediction for the parameter (decrease < 95%) and reduces the probability
+    of missing the correct parameter value due to stochastic effect in a single cycle.
+
+
+    ```
+
+    Posterior_{min} = Prior_{min} - \frac{(Prior_{max} - Prior_{min}) \times 1\%}{2}
+
+    Posterior_{max} = Prior_{max} + \frac{(Prior_{max} - Prior_{min}) \times 1\%}{2}
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/d8139985bcfa7a5c6e5bde789c7d9fed_5_0.png)
+
+
+    Figure 1. The simplistic schema of the models (A–C) Simple out of Africa (model
+    S) (A), back to Africa (model B) (B), and out of Africa mixed (model M) (C). Please
+    consult Table 1 for more details of time parameters (in y axis) and Table S10
+    for the interdependencies of those parameters. AFR is African, EUR is European,
+    and ASN is East Asian. X is African archaic, N is Neanderthal, and D is Denisova.
+
+
+    Simulations from every step were stored and re-used in subsequent cycles if their
+    parameter values fell inside the new prior range. A flow chart of this strategy
+    can be found in Figure S2C.
+
+
+    We used 10,000 simulations as a training dataset and 10,000 simulations for testing.
+    The NN model is exactly as before (as used in DL, Figure S1). To make it more
+    efficient, we started with simulating a total length of 100 Mb (each simulated
+    region being 1 Mb long), and then we increased the total length stepwise (i.e.,
+    0.5, 1.5, and 3 Gb). The priors for 100 Mb regions are the same as presented in
+    Table 1. The final posterior (after convergence reached) of the run with 100 Mb
+    is used as a prior for 0.5 Gb simulation and so on. We multiplied the observed
+    SFS by frac accordingly to scale it to the simulated region length.
+
+
+    After the convergence was reached with 3 Gb in total, we finalized by running
+    50,000 training and 10,000 testing simulations with the DL method by using loclinear
+    (from abc package) with the tolerance of 0.01. The flowchart of the method is
+    represented in Figure S3.
+
+
+    # Model selection with DLS
+
+
+    Here, we describe model selection by using NN, ABC, and SMC together. In principle,
+    we can directly use the final output of the parameter estimation procedure by
+    DLS for every model and then use it for the ABC classification approach. However,
+    this approach would be inefficient given that only one model is true for our real
+    dataset, and thus spending considerable resources to optimize parameters for unlikely
+    scenarios does not make sense. Instead, we used the output of 100 Mb parameter
+    optimizations from the DLS approach as a prior to every model, and then we used
+    the model selection strategy of DL, as mentioned before. In
+
+
+    other words, we first optimized the parameters for each model class by using 100
+    Mb of simulated sequence and then compare the different models between each other.
+    We found out that we already have enough power to distinguish between models by
+    using 100 Mb of total simulated sequence for most of the cases, except Table S7
+    where we used 500 Mb regions for optimization.
+
+
+    # ABC-RF
+
+
+    We tested the real SFS against the three simulated models by using a similar ABC
+    approach but with random forest^61 (here onward, we call this implementation RF)
+    as an inferential tool implemented in the abcrf R package.^43,62 First, we trained
+    our model by using the bagging method applying the function abcrf, with no linear
+    discriminant analysis, and 2,000 decision trees by using 1,000 simulations for
+    each tested model. We then evaluated the performance of ABC-RF through a cross-validation
+    dataset composed of 1,000 simulations for each tested model by using the function
+    predict.abcrf. The same function and settings were used for inferring the best-supported
+    model with the SFS obtained from real data described above. We performed parameter
+    estimation for the most supported scenario applying regression as implemented
+    in the regAbcrf model by using 1,000 decision trees. Each parameter was inferred
+    separately. Similar to DL and DLS approaches, the whole procedure has been repeated
+    ten times for model selection.
+
+
+    # Demographic models
+
+
+    # Simple out of Africa (model S)
+
+
+    In this simulation model, we have modeled a simple OOA event (Figure 1A) closely
+    following Gravel et al.,^19 except the migration'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'rates are set to zero. All the main results were used without any migration
+    rates, but we also tested models with migrations sometimes. When we simulated
+    a model with constant migrations, we tried both a symmetrical migration matrix
+    as in Gravel et al.19 (Table S8) and a nonsymmetrical one (Tables S9 and S10).
+
+
+    # Back to Africa (model B)
+
+
+    In this model, the basic OOA model still holds and additional changes required
+    for the back to Africa migration (Figure 1B) are added. The basic idea was drawn
+    from Poznik et al.10 In this scenario, the basal out of Africa population splits
+    into back to Africa and OOA at T_Sep generations ago before the split between
+    European and Asian populations (so that T_Sep is between T_B [the time of separation
+    between Africa and OOA] and T_EU_AS [the time of separation between Europe and
+    Asia]). Next, the back to Africa population migrated to Africa having an effective
+    population size of N_BC and mixed with the ancestral African population at T_Mix
+    generations ago with a mixing proportion of mix (the proportion of ancestral African
+    ancestry replaced). After the admixture, the effective population size of the
+    African population is changed from N_AF0 to N_AF.
+
+
+    # Mixed out of Africa (model M)
+
+
+    This model (Figure 1C) is similar to model S and has an additional population
+    M separating from the African population T_Sep generations ago (again between
+    T_B and T_EU_AS) and having an effective population size of N_MX. M mixed with
+    OOA at T_Mix generations ago, and mix is the proportion of OOA ancestry being
+    replaced by M. After the admixture, the effective population size of OOA is changed
+    from N_B0 to N_B. The basic idea came from two OOA hypothesis.7
+
+
+    # Recent admixture in Africa (model R)
+
+
+    As an alternative hypothesis, we also simulated a recent admixture model for the
+    African population. After the OOA population had separated from the African population,
+    the latter splits into two sub-populations in AF1 and AF2 with effective population
+    size of N_AF1 and N_AF2 at T_Sep generations ago. At T_Mix generations ago, these
+    two populations admixed with each other so that a fraction of AF1 equal to mix
+    is replaced by AF2. After the admixture, the effective population size of the
+    African population becomes the modern effective population size of Africa. We
+    have not simulated Neolithic farmer migration from Europe for this scenario.
+
+
+    # Other migrations as prior
+
+
+    We also added some pulse migrations or admixtures proposed by different studies
+    on top of these basic models. We simulated OOA to have introgression from Neanderthal63
+    at T_NM generations ago with the proportion of NMix. After the separation between
+    Europeans and East Asians, the East Asian population has an introgression from
+    Denisova47,64 or an unknown archaic population20 at T_DM and the amount is DMix.
+    Neanderthal separated from Denisova or the unknown admixture around T_N_D generations
+    ago, and Neanderthal-Denisovan lineage separated from the modern human lineage
+    T_H_A generations ago.65,66 The African population also has introgression from
+    another unknown archaic population,16,67,68 which introgressed at T_XM generations
+    ago with the proportion of XMix. This unknown population separated from modern
+    human lineage around T_H_X generations ago. We observed that our method is incapable
+    of finding the effective population size for any archaic population (most likely
+    because we did not use any ancient genome in our real data). Thus, we assumed
+    them to be equal to N_A (ancestral effective population size). We also simulated
+    Neolithic farmers, which separated from Europeans around T_FS generations ago
+    with effective population size of N_A and admixed with the Afri-
+
+
+    can population around T_FM generations ago with the proportion of FMix.69
+
+
+    For some events, their order is fixed (for example, the separation of European
+    and Asian populations can only happen after the Neanderthal introgression on the
+    basis of our prior assumption) and is described in Table S11.
+
+
+    # Relate
+
+
+    We used Relate v.1.1.4,14 a method for inferring local trees, to validate our
+    parameter estimates. Relate uses branch length of the local trees to estimate
+    coalescent rate through time.14 Thus, we used it to compare effective population
+    size trajectories and inter-population coalescent rates for the African, European,
+    and East Asian populations between the real and simulated data. We applied Relate
+    to YRI, CEU, and CHB samples (108, 99, and 103 individuals, accordingly) from
+    the high-coverage version of the 1000 Genomes project as well as to genetic data
+    simulated under each of the three models with optimized parameters (Tables 2,
+    S5, and S6). For real data, chromosome 1 was used and a region of the same length
+    was simulated.
+
+
+    We started with 2,054 high-coverage genomes from the 1000 Genomes Project. We
+    kept positions that (1) are bi-allelic SNPs, (2) pass the 1000 Genomes filters
+    and have the value of the QD (quality by depth) parameter above two and (3) have
+    a missing rate below 10%. We phased and imputed the entire dataset by using Eagle
+    version 2.4.1.70 Next, we ran Relate on chromosome 1 for samples coming from the
+    three focal populations. We used the GRCh38 recombination map, 1000 Genomes strict
+    genomic mask, and a mutation rate of 1.45 x 10^-8 per bp per generation. Next,
+    we ran the effective population size estimation module of Relate for each population
+    individually to obtain the effective population size trajectories and for population
+    pairs to obtain the cross-coalescence rates.
+
+
+    For each model, we simulated a region of the same length as chromosome 1 with
+    uniform recombination together for 100 African, 100 European, and 100 East Asian
+    individuals by using msprime.29 We used the 1000 Genomes strict mask for consistency
+    between real and simulated data in terms of the length of the available sequence.
+    After that, the simulated data were treated as described above.
+
+
+    We estimated effective population size for both real and simulated data as 1/2C,
+    where C is the inferred intra-population coalescence rate. To estimate the relative
+    inter-population coalescence rate, we used the following formula:13
+
+
+    $C_{12} = \frac{2 \times C_{12}}{C_{11} + C_{22}}$
+
+
+    where C11 and C22 are intra-population coalescence rates and C12 is the inter-population
+    coalescence rate.
+
+
+    # Comparing mutation age distribution between the simulations and real data
+
+
+    Relate estimates branch length in generations for the inferred trees and thus
+    allows us to obtain tMRCA for any given mutation mapped to a specific tree branch.
+    This value for a given mutation may differ between populations, reflecting the
+    history of the spread of the mutation. A joined distribution of mutations'' tMRCA
+    in two populations may reflect the complex history and interactions between the
+    two populations through time. Thus, we compared such two-dimensional tMRCA distributions
+    obtained from the real genomes and from the genomes simulated under the'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'demographic models tested (Neanderthal, Denisova, and Africa archaic introgression
+    with the above three models [BNDX, MNDX, and SNDX] parameters coming from Tables
+    2, S5, and S6, respectively) for each of the three population pairs (CEU-YRI,
+    CHB-YRI, and CEU-CHB). We first did a log10 transformation of the tMRCA values
+    (Figure S4) and then did a kernel density estimation for each dataset (real, BNDX,
+    MNDX, and SNDX) and each pair of populations to obtain a matrix of a two-dimensional
+    distribution of allele ages. For the density estimation, we used the kde2d function
+    from the MASS R package setting n (number of grid points) to 100. Next, we subtracted
+    such a matrix obtained for the real data from each of the simulation matrices.
+    Together with the distribution of this difference, we report the root-mean-square
+    deviation between the two matrices.
+
+
+    $$RMSD = \sqrt{\frac{1}{N} \sum_{i=1}^{N} d_i^2}$$
+
+
+    where d<sub>i</sub> is the difference between the value in the i<sup>th</sup>
+    cells of the matrix for the simulated and real distribution and N is the number
+    of cells (100 x 100). Lower root-mean-square deviation (RMSD) value indicates
+    less deviations between the tMRCA distribution of real and simulated data (Figure
+    S5).
+
+
+    We also report the standard error of this value obtained by applying a jack-knife
+    method by iteratively masking out a 50 Mb long region of the sequence (between
+    1 and 246 Mb of the GRCh38 reference sequence for chromosome 1 to avoid telomere
+    regions with a high fraction of N bases) in a non-overlapping sliding window manner
+    and calculating RMSD on the remaining non-masked sequence, resulting in five values.
+
+
+    # Results
+
+
+    # ABC-DLS
+
+
+    The general workflow for ABC-DLS (both for model selection and parameters estimation)
+    includes the following steps. First, we simulated<sup>29</sup> multiple genetic
+    datasets for each tested model by using demographic parameters sampled from a
+    uniform distribution within prior ranges (Table 1). Next, we computed the SFS
+    from these data and split the data into a training and a testing subset. We then
+    trained the NN (implemented via TensorFlow with Keras backended<sup>42</sup>)
+    on the former dataset to either select between demographic models or to estimate
+    the demographic parameters. The resulting NN is applied to the testing dataset
+    as well as to the observed summary statistics data (see below as well as material
+    and methods for more details). Next, we applied ABC to estimate support for the
+    NN prediction on the observed data by comparing the NN prediction outcome between
+    the observed data and the testing dataset (see material and methods, Figure S2,
+    and also our previous paper<sup>20</sup>). Finally, in cases when SMC is used,
+    we essentially iterated the parameter estimation step by SMC. We kept the top
+    five percent (equal to the tolerance level) of simulations from the testing dataset
+    that best match the observed data. We then used the parameters of those simulations
+    to update our prior range and sent it for next iteration until convergence was
+    reached (Figures S3 and S4).
+
+
+    Before testing our primary hypothesis on real sequence data, we tested whether
+    our approach (DLS) can reproduce the known results. The predicted parameters for
+    real sequence data (see below for more details) are consistent with previous works
+    from the literature<sup>17,19,71</sup> (Table S7). We also tested our method on
+    simulated data with known parameters under various models (model S, B, and M,
+    see below for more information; simulation parameters coming from Tables 2, S5,
+    and S6; and found that our approach with SMC correctly predicted the model in
+    all the cases tested, suggesting it can find the correct model. Also, our method
+    can infer the parameter values with high accuracy when the correct parameter values
+    are known and coming from a mock observed SFS (Table S12).
+
+
+    # Model selection
+
+
+    To test our hypothesis, we simulated three OOA models, simple model (model S),
+    back to Africa model (model B), and mix model (model M), and all the models had
+    introgression from Neanderthal to all OOA populations,<sup>63</sup> Denisova or
+    unknown to Asia,<sup>20,47,64</sup> African archaic to Africa,<sup>16,67,68,72</sup>
+    and European Neolithic farmers to Africa<sup>69</sup> (NDXF) (see material and
+    methods for more details, Figure 1 and Table 1). We used the 1000 Genomes Project
+    high-coverage genomes<sup>44</sup> (see material and methods for more details)
+    of five Yoruba (African), five Utah residents with Northern and Western European
+    ancestry (European), and five Han Chinese (East Asian) individuals as our real
+    dataset. Next, we used three different methods to choose between the competing
+    models: (1) RF that combines random forests with ABC;<sup>43</sup> (2) NN and
+    ABC together (DL), which is an analogous but improved version of our previously
+    published method, ABC-DL;<sup>20</sup> and (3) the method introduced here, DLS,
+    which expands the DL method with SMC. Although all three methods identified the
+    back to Africa model as the most probable one, the prediction certainty varied
+    between methods (Tables 3 and 4). Both DL and DLS returned >95% probability for
+    model B although RF gave lower support.
+
+
+    The DLS results were reproduced under different data filtering strategies, different
+    datasets (Table S2), and different total length with different per block length
+    of simulated regions (Table S4). We also tested whether our assumption of pulse
+    migration events (three archaic introgression scenarios and recent migration of
+    Neolithic farmers) could affect our inference. We tested different models with
+    (1) no introgression and no farming migration (NI), (2) Neanderthal and Denisova
+    introgression (ND), (3) Neanderthal, Denisova, and Africa Archaic introgression
+    (NDX), and (4) Neanderthals and Denisova introgression with farming migration
+    (NDF) using only DLS. Except for the no introgression model (Table S13), we always
+    found the back to Africa model to be supported over simple and mix out of Africa
+    models. When we compared all these 15 models together ([B, M, S] x [NI, ND, NDX,
+    NDF, NDXF]) by using DLS, the back to Africa model with Neanderthal, Denisova,
+    and African archaic introgression (BNDX) is'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'Table 3. Cross-validation via different approaches on simulated data
+
+
+    | | OOA_B | OOA_M | OOA_S |
+
+    |---|---|---|---|
+
+    | **RF** | | | |
+
+    | OOA_B | 92.85% | 1.84% | 5.31% |
+
+    | OOA_M | 2.69% | 84.71% | 12.60% |
+
+    | OOA_S | 6.17% | 15.38% | 78.44% |
+
+    | **DL** | | | |
+
+    | OOA_B | 88.03% | 2.54% | 9.43% |
+
+    | OOA_M | 3.43% | 77.78% | 18.79% |
+
+    | OOA_S | 5.78% | 15.69% | 78.52% |
+
+    | **DLS** | | | |
+
+    | OOA_B | 99.09% | 0.00% | 0.91% |
+
+    | OOA_M | 0.00% | 99.98% | 0.02% |
+
+    | OOA_S | 1.25% | 0.30% | 98.45% |
+
+
+    Confusion matrix for misclassification is reported here via RF (random forest),
+    DL (only neural network), and DLS (neural network and sequential Monte Carlo together)
+    for random samples from the models with ABC.
+
+
+    Our inference suggests that first there was a separation between the ancient African
+    population and a population ancestral to both back to Africa and the actual out
+    of Africa populations (basal out of Africa) around 71.3 (CI 69.4–73.3) kya. This
+    event was followed by a split between back to Africa and OOA 57.9 (CI 56.1–59.8)
+    kya and an admixture between ancient African and back to Africa 48.2 (CI 46.8–49.5)
+    kya. The Neanderthal introgression to OOA happened much later, 38.3 (CI 37.6–39)
+    kya, suggesting that this back to Africa migration cannot explain the Neanderthal
+    ancestry found in modern African populations.69 Our method predicted the admixture
+    proportion from back to Africa to be as high as 91% (CI 90.28–91.57), suggesting
+    a massive replacement of the ancient African population.
+
+
+    supported over all other possibilities (P(BNDX|data) = 0.86) (Table S14). The
+    model with Neolithic farming migration has a lower support (P(BNDXF|data) = 0.14).
+    Both RF and DL were incapable of differentiating between these two models as precisely
+    as DLS (Tables S15 and S16). We further tested these two models (BNDX and BNDXF)
+    with more precise priors by using more simulated data (see material and methods
+    for more details via DLS and rejected European Neolithic migration to Africa (Table
+    S10). This result not only demonstrated the robustness of our inference for back
+    to Africa but also independently supported other assumptions (except Neolithic
+    migration) that were reported before, but not all of them were confirmed together.16,20,47,63,64,68,69
+    In addition to the 15 models described above, we also tested the recent admixture
+    model (model R), which adds a split and follows admixture within Africa, both
+    happening after the separation of the OOA population on top of the simple out
+    of Africa model. Thus, both our best back to Africa (BNDX) and recent admixture
+    models represent the modern African population as a result of admixture of two
+    components and the main difference is those separations happened before or after
+    OOA population separation. Based on our results model, back to Africa better fits
+    the data compared to recent admixture (Table S17).
+
+
+    To independently validate our results, we compared effective population size trajectories
+    and cross-coalescent rates obtained by applying Relate32 to real data as well
+    as to data simulated under each of the three models with the mean posterior parameters
+    (Tables 2, S5, and S6) predicted by DLS.14 We observe a close match between the
+    estimates for the real data and our best model (Figure 3), which suggests our
+    parameter estimation to be accurate. This similarity is particularly interesting
+    given that we have not used any linkage disequilibrium (LD)-based summary statistics
+    to optimize those parameters. On the other hand, neither the effective population
+    size trajectory nor the cross-coalescent rate over time is informative enough
+    to differentiate between these three models (data not shown). Specifically, the
+    gradual separation between African and OOA populations, which was shown before
+    with Relate and similar methods,13,14 cannot be directly explained by the back
+    to Africa or two out of Africa migration, as such gradual separation is also observed
+    in our model S (Figure S6). However, the two-dimensional tMRCA distributions of
+    mutations in population pairs (CEU-YRI and CHB-YRI) coming from Relate analysis
+    best matches the distribution of the back to Africa model with lower RMSD value
+    than other alternatives when comparing with real data (Figures S4 and S5).
+
+
+    # Parameter estimation
+
+
+    After demonstrating that back to Africa (BNDX) best explains the real data, we
+    used the three methods described above (RF, DL, and DLS) to estimate the model’s
+    parameters. The confidence intervals (CIs) returned by DLS are much narrower than
+    those of the alternative approaches (Tables 2, S18, and S19). Hence, all the results
+    discussed below are the ones obtained with DLS (Figure 2).
+
+
+    # Discussion
+
+
+    We here demonstrated that the ABC analysis can be substantially enhanced by using
+    NN coupled with the SMC approach. Our methodology is suitable to test many hypotheses
+    that can be simulated but cannot be extensively tested by other methods, especially
+    for scenarios of admixture from ghost populations where the ancient genomes are
+    unavailable and can accommodate any kind of summary statistics. Our model selection
+    shows it can easily reach close to 100% accuracy in cross-validation steps with
+    few simulations (2,000 samples), suggesting it can be used for testing much more
+    complicated scenarios. We also found that our parameter estimation has high precision
+    (most of the events have confidence interval width'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'Table 4. Model selection via different approaches on real data
+
+
+    | | OOA B | OOA M | OOA S |
+
+    |---|---|---|---|
+
+    | RF | 66.00% | 16.40% | 17.60% |
+
+    | DL | 100.00% | 0.00% | 0.00% |
+
+    | DLS | 100.00% | 0.00% | 0.00% |
+
+
+    Posterior of votes for RF (random forest) and posterior model probabilities for
+    DL (only neural network) and DLS (neural network and sequential Monte Carlo together)
+    are reported here via the real data.
+
+
+    others74 and/or that our approach is imprecise for estimating them.
+
+
+    below 5,000 years), which can directly complement with the radiocarbon dating.
+    In this study, we used SFS as summary statistics because it is effortless to calculate
+    and has sufficient information.17,51 Our results might be further improved by
+    use of some LD-based summary statistics,67,73 but we opted out because they are
+    computationally demanding to produce and the improvement in the result is minimal
+    (at least for the tested scenario). As we use SFS as our choice of summary statistics,
+    our method is not affected by local recombination rate52 Applying two different
+    filtering strategies (see material and methodsfor more details) gave similar results,
+    suggesting that our strategy is quite robust to the choice of the genomic regions
+    to be analyzed.
+
+
+    Our results also comply with Y chromosome phylogeny and support back to Africa
+    as proposed before.10 However, our estimated time of separation between populations
+    is much younger than what is reported for the Y chromosomes. One explanation might
+    be that we used a slightly higher mutation rate (1.45 x 10–8 per bp per generation)53
+    instead of a slightly slower alternative (1.25 x 10–8 per bp per generation).54,55
+    When we used the slower mutation rate, our estimation for most of the events time
+    increased (Table S3). Indeed, the separation time between back to Africa and OOA
+    populations corresponds to 72.8 (CI 72.4–73.3) kya, which is close to the estimate
+    of tMRCA between haplogroups D and E (72 kya10).
+
+
+    In our models, we have not adopted any constant migrations between populations,
+    although our approach can incorporate it. This is because we found out that our
+    approach (parameter estimation via DLS) predicted non-zero migration rates when
+    we used mock observed summary statistics data coming from a pulse migration model
+    with no constant migrations and a demographic parameters coming from mean values
+    of Table 2 (Tables S9 and S10). This suggests that models including constant migrations
+    may lead to equifinality as proposed by
+
+
+    Although back to Africa is preferred over other alternatives in most of the cases,
+    considering no introgression as an option (NI) supported mixed out of Africa over
+    other models (Table S13). This result might be a side effect of the Neanderthal
+    introgression in OOA. Under certain conditions (i.e., older separation time between
+    Africa and OOA [T_B]), mixed out of Africa model with no introgression and simple
+    out of Africa with Neanderthal introgression are comparable (Neanderthal population
+    behaves like the first OOA population in this scenario). However, this model was
+    rejected when compared with other more complex models (Table S14). This false
+    result suggests a possible drawback of our method as different demographic histories
+    can give similar SFS patterns, which can bias our interpretation if demographic
+    histories were not incorporated in the model correctly52 and also advocates for
+    the importance of parameter estimation because it can give insight for the choice
+    of selected model (especially if it does not match with the prior knowledge),
+
+
+    ![](img/d8139985bcfa7a5c6e5bde789c7d9fed_9_0.png)
+
+
+    Figure 2. Schematic of inferred demography Model B with only mean posterior. K
+    is kilo years ago, AFR is African, AA is Ancestral African, EUR is Europeans,
+    ASN is East Asian, and XAFR is African Archaic. Black boxes represent mean posterior
+    of separation time between populations. Thickness of the lines represent effective
+    population size of their respective population although they are not according
+    to scale.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '![](img/d8139985bcfa7a5c6e5bde789c7d9fed_10_0.png)
+
+
+    # Figure 3. Effective population size trajectories and coalescence rates over
+    time (A and B) Here, we compare effective population size (A) and relative cross-coalescence
+    rates (B) estimated by using Relate between the real and data simulated under
+    the model B. (A) x axis in kya (kilo years ago) and y axis is the effective population
+    size for corresponding populations presented in the inset. Both axes are in log
+    scale. (B) x axis is in kya and y axis shows the relative cross coalescent rate
+    for corresponding populations pairs presented in the insert. x axis is log scale.
+
+
+    the Neanderthal regions found in Yoruba should be explained by some other migration(s)
+    (for example from human to Neanderthal [65]). Alternatively, Neolithic farmers’
+    contribution might be so low on West African populations that our approach with
+    the current format (with SFS as summary statistics) fails to detect it.
+
+
+    which then can suggest more complicated scenarios to test.
+
+
+    We chose Yoruba, European, and East Asian population as a representative population
+    set to test the OOA model because they are quite well studied and show relatively
+    less recent admixture than other populations (for example, South Asian, East African,
+    or Central Asian, etc.), which makes our model relatively simpler than other alternatives.
+    Although back to Africa is better in explaining the real data, there might be
+    more complicated models characterized by additional migrations and admixture that
+    better explain the observed data. We have tested the two out of Africa model under
+    the mixed out of Africa model, but it is not thorough enough because we have not
+    used the populations that are assumed to have a contribution from the first OOA
+    population. [7] It will be interesting to revisit this hypothesis with Papuan
+    populations in the future.
+
+
+    The separation times between Homo sapiens and archaic populations are slightly
+    older (877 [CI 773.1–982.3] kya for human and Neanderthal lineage divergence and
+    1,073.7 [CI 1,032.7–1,117.5] kya for human and African archaic) than those previously
+    inferred [63,66–68] if we used a loose prior of 400–1,600 kya (Table S20). These
+    deviations were not reproduced when we used simulated summary statistics generated
+    under known parameters from Table 2. This may be specific to real sequence data
+    and might be a side effect of some of our assumptions (for example, some unknown
+    interactions between these populations that was not modeled here [65]) or systematic
+    biases due to the use of European reference genome [75] or recent changes of generation
+    time or mutation rate per generation [76,77]. These results were obtained without
+    using the ancient genome at all in our real SFS data to reduce any chances of
+    bias. It would be interesting to revisit these results after incorporating ancient
+    genome directly in our analysis.
+
+
+    Our back to Africa model can explain the reduction in effective population size
+    of all African populations coinciding with the OOA event. [78] We would like to
+    caution that although we are naming the model “back to Africa,” the OOA population
+    did not need to be geographically out of Africa. [21,79] Our estimates, particularly
+    the effective population size of back to Africa (N_BC) (which is more than 10,000),
+    and the time of Neanderthal introgression (T_NM) compared to separation back to
+    Africa population from OOA population (T_Sep) suggest that the split might have
+    happened within Africa itself before the actual out of Africa event. In such a
+    case, our results can be explained by the separation of West and East African
+    population 87.8 kya (T_B) and then later the primary separation of OOA and East
+    African population 72.8 kya (T_Sep) (assuming mutation rate of 1.25 x 10^-8 per
+    bp per generation [54,55] and generation time of 29 years [56]). In this regard,
+    our model is more akin to the Lipson et al., 2020 [16]
+
+
+    We did not find support for a model of European Neolithic migration to West Africa,
+    which was proposed recently [69]. We have to caution that our result is only true
+    for the Yoruba population. As sub-Saharan African populations have quite diverged
+    ancestry, this is not representative of the whole sub-Saharan African population.
+    Nonetheless, our back to Africa model also fails to explain Neanderthal sequence
+    identified in Yoruba. Even if we assume this migration has happened (model BNDXF),
+    our predicted amount of migration is as low as 2.4% (Table S21), which results
+    in the average total length of Neanderthal sequence in Yoruba to be less than
+    5 Mb as opposed to 17 Mb reported by Chen et al. [69] This suggests that most
+    of'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'model rather than what is suggested by Cole et al., 2020.15 If we assume the
+    model from Lipson et al. to be true, the most parsimonious explanation would be
+    that our back to Africa population represents the basal West African population
+    that separated from OOA populations 72.8 kya (T_Sep). Our ancient African represents
+    ghost modern,16 which contributed to modern West African population around 10%
+    through admixture around 61.9 kya from our prediction. On the other hand, if we
+    assume true the back to Africa event happened, then most likely the OOA event
+    took place less than 90 kya (T_B). This suggests that most of the older fossils
+    (>100 kya) found outside of Africa80–82 are unlikely to have contributed to OOA
+    populations (assuming the main lineage of modern humans has not left Africa before
+    that). Geographical location where back to Africa separated from OOA is immensely
+    important for this hypothesis but cannot be estimated from our approach. It will
+    be especially fascinating to test this hypothesis with ancient genomes originating
+    at those areas from that time point when they will be available.
+
+
+    +   - Ancestral allele alignments, http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase1/analysis_results/supporting/ancestral_alignments/
+
+    +   - HGDP, http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGDP/
+
+    +   - Keras Documentation, https://keras.io/
+
+
+    # Reference
+
+
+    +   1. Hublin, J.-J., Ben-Ncer, A., Bailey, S.E., Freidline, S.E., Neubauer, S.,
+    Skinner, M.M., Bergmann, I., Le Cabec, A., Benazzi, S., Harvati, K., and Gunz,
+    P. (2017). New fossils from Jebel Irhoud, Morocco and the pan-African origin of
+    Homo sapiens. Nature 546, 289–292.
+
+    +   2. Schlebusch, C.M., Malmström, H., Günther, T., Sjödin, P., Coutinho, A.,
+    Edlund, H., Munters, A.R., Vicente, M., Steyn, M., Soodyall, H., et al. (2017).
+    Southern African ancient genomes estimate modern human divergence to 350,000 to
+    260,000 years ago. Science 358, 652–655.
+
+    +   3. Grün, R., Stringer, C., McDermott, F., Nathan, R., Porat, N., Robertson,
+    S., Taylor, L., Mortimer, G., Eggins, S., and McCulloch, M. (2005). U-series and
+    ESR analyses of bones and teeth relating to the human burials from Skhul. J. Hum.
+    Evol. 49, 316–334.
+
+    +   4. Mondal, M., Casals, F., Xu, T., Dall''Olio, G.M., Pybus, M., Netea, M.G.,
+    Comas, D., Laayouni, H., Li, Q., Majumder, P.P., and Bertranpetit, J. (2016).
+    Genomic analysis of Andamanese provides insights into ancient human migration
+    into Asia and adaptation. Nat. Genet. 48, 1066–1070.
+
+    +   5. Malaspinas, A.S., Westaway, M.C., Muller, C., Sousa, V.C., Lao, O., Alves,
+    I., Bergström, A., Athanasiadis, G., Cheng, J.Y., Crawford, J.E., et al. (2016).
+    A genomic history of Aboriginal Australia. Nature 538, 207–214.
+
+    +   6. Mallick, S., Li, H., Lipson, M., Mathieson, I., Gymrek, M., Racimo, F.,
+    Zhao, M., Chennagiri, N., Nordenfelt, S., Tandon, A., et al. (2016). The Simons
+    Genome Diversity Project: 300 genomes from 142 diverse populations. Nature 538,
+    201–206.
+
+    +   7. Pagani, L., Lawson, D.J., Jagoda, E., Mörseburg, A., Eriksson, A., Mitt,
+    M., Clemente, F., Hudjashov, G., DeGiorgio, M., Saag, L., et al. (2016). Genomic
+    analyses inform on migration events during the peopling of Eurasia. Nature 538,
+    238–242.
+
+    +   8. Soares, P., Alshamali, F., Pereira, J.B., Fernandes, V., Silva, N.M., Afonso,
+    C., Costa, M.D., Musilová, E., Macaulay, V., Richards, M.B., et al. (2012). The
+    Expansion of mtDNA Haplogroup L3 within and out of Africa. Mol. Biol. Evol. 29,
+    915–927.
+
+    +   9. Karmin, M., Saag, L., Vicente, M., Wilson Sayres, M.A., Järve, M., Talas,
+    U.G., Rootsi, S., Ilumäe, A.M., Mägi, R., Mitt, M., et al. (2015). A recent bottleneck
+    of Y chromosome diversity coincides with a global change in culture. Genome Res.
+    25, 459–466.
+
+    +   10. Poznik, G.D., Xue, Y., Mendez, F.L., Willerms, T.F., Massaia, A., Wilson
+    Sayres, M.A., Ayub, Q., McCarthy, S.A., Narechania, A., Kashin, S., et al. (2016).
+    Punctuated bursts in human male demography inferred from 1,244 worldwide Y-chromosome
+    sequences. Nat. Genet. 48, 593–599.
+
+    +   11. Mondal, M., Bergström, A., Xue, Y., Calafell, F., Laayouni, H., Casals,
+    F., Majumder, P.P., Tyler-Smith, C., and Bertranpetit, J. (2017). Y-chromosomal
+    sequences of diverse Indian populations and the ancestry of the Andamanese. Hum.
+    Genet. 136, 499–510.
+
+
+    # Data and code availability
+
+
+    The code generated during this study are available at https://github.com/mayukhmondal/ABC-DLS.
+    Please contact the corresponding author for further information.
+
+
+    # Supplemental information
+
+
+    Supplemental information can be found online at https://doi.org/10.1016/j.ajhg.2021.09.006.
+
+
+    # Acknowledgments
+
+
+    We kindly thank Michael Zody of New York Genome Center for giving us access to
+    high-coverage 1000 Genome data. These data were generated at the New York Genome
+    Center with funds provided by NHGRI grant 3UM1HG008901-03S1. This research was
+    supported by the European Union through Horizon 2020 research and innovation program
+    under grant no. 810645, the European Regional Development Fund Project MOBEC008,
+    2014-2020.4.01.16-0030, and 2014-2020.4.01.16-0024. Data analyses were carried
+    out in part in the High-Performance Computing Center of the University of Tartu.
+
+
+    # Declaration of interests
+
+
+    The authors declare no competing interests.
+
+
+    +   - Received: March 29, 2021
+
+    +   - Accepted: September 9, 2021
+
+    +   - Published: October 8, 2021
+
+
+    # Web resources
+
+
+    +   - 1000 Genome High Coverage, https://www.internationalgenome.org/data-portal/data-collection/30x-grch38'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '+   12. Haber, M., Jones, A.L., Connell, B.A., Asan, Arciero, E., Yang, H.,
+    Thomas, M.G., Xue, Y., and Tyler-Smith, C. (2019). A rare deep-rooting D0 African
+    Y-chromosomal haplogroup and its implications for the expansion of modern humans
+    out of Africa. Genetics 212, 1421–1428.
+
+
+    +   13. Schiffels, S., and Durbin, R. (2014). Inferring human population size
+    and separation history from multiple genome sequences. Nat. Genet. 46, 919–925.
+
+
+    +   14. Speidel, L., Forest, M., Shi, S., and Myers, S.R. (2019). A method for
+    genome-wide genealogy estimation for thousands of samples. Nat. Genet. 51, 1321–1329.
+
+
+    +   15. Cole, C.B., Zhu, S.J., Mathieson, I., Prüfer, K., and Lunter, G. (2020).
+    Ancient Admixture into Africa from the ancestors of non-Africans. bioRxiv. https://doi.org/10.1101/2020.06.01.127555.
+
+
+    +   16. Lipson, M., Ribot, I., Mallick, S., Rohland, N., Olalde, I., Adamski,
+    N., Broomandkhoshbacht, N., Lawson, A.M., López, S., Oppenheimer, J., et al. (2020).
+    Ancient West African foragers in the context of African population history. Nature
+    577, 665–670.
+
+
+    +   17. Gutenkunst, R.N., Hernandez, R.D., Williamson, S.H., and Bustamante, C.D.
+    (2009). Inferring the joint demographic history of multiple populations from multidimensional
+    SNP frequency data. PLoS Genet. 5, e1000695.
+
+
+    +   18. Li, H., and Durbin, R. (2011). Inference of human population history from
+    individual whole-genome sequences. Nature 475, 493–496.
+
+
+    +   19. Gravel, S., Henn, B.M., Gutenkunst, R.N., Indap, A.R., Marth, G.T., Clark,
+    A.G., Yu, F., Gibbs, R.A., Bustamante, C.D.; and 1000 Genomes Project (2011).
+    Demographic history and rare allele sharing among human populations. Proc. Natl.
+    Acad. Sci. USA 108, 11983–11988.
+
+
+    +   20. Mondal, M., Bertranpetit, J., and Lao, O. (2019). Approximate Bayesian
+    computation with deep learning supports a third archaic introgression in Asia
+    and Oceania. Nat. Commun. 10, 246.
+
+
+    +   21. Bergström, A., Stringer, C., Hajdinjak, M., Scerri, E.M.L., and Skoglund,
+    P. (2021). Origins of modern human ancestry: Nature 590, 229–237.
+
+
+    +   22. van de Loosdrecht, M., Bouzouggar, A., Humphrey, L., Posth, C., Barton,
+    N., Aximu-Petri, A., Nickel, B., Nagel, S., Talbi, E.H., El Hajraoui, M.A., et
+    al. (2018). Pleistocene North African genomes link Near Eastern and sub-Saharan
+    African human populations. Science 360, 548–552.
+
+
+    +   23. Ciregan, D., Meier, U., and Schmidhuber, J. (2012). Multi-column deep
+    neural networks for image classification. In 2012 IEEE conference on computer
+    vision and pattern recognition (IEEE), pp. 3642–3649.
+
+
+    +   24. Graves, A., and Schmidhuber, J. (2009). Offline handwriting recognition
+    with multidimensional recurrent neural networks. In Advances in neural information
+    processing systems, pp. 545–552.
+
+
+    +   25. Hutter, M. (2007). On universal prediction and Bayesian confirmation.
+    Theor. Comput. Sci. 384, 33–48.
+
+
+    +   26. Kurtz, D.M., Esfahani, M.S., Scherer, F., Soo, J., Jin, M.C., Liu, C.L.,
+    Newman, A.M., Dührsen, U., Hüttmann, A., Casasnovas, O., et al. (2019). Dynamic
+    risk profiling using serial tumor biomarkers for personalized outcome prediction.
+    Cell 178, 699–713.e19.
+
+
+    +   27. Goldberg, Y. (2016). A primer on neural network models for natural language
+    processing. J. Artif. Intell. Res. 57, 345–420.
+
+
+    +   28. Hudson, R.R. (2002). Generating samples under a Wright-Fisher neutral
+    model of genetic variation. Bioinformatics 18, 337–338.
+
+
+    +   29. Kelleher, J., Etheridge, A.M., and McVean, G. (2016). Efficient Coalescent
+    Simulation and Genealogical Analysis for Large Sample Sizes. PLoS Comput. Biol.
+    12, e1004842.
+
+
+    +   30. Jay, F., Boitard, S., and Austerlitz, F. (2019). An ABC method for whole-genome
+    sequence data: Inferring Paleolithic and Neolithic human expansions. Mol. Biol.
+    Evol. 36, 1565–1579.
+
+
+    +   31. Villanea, F.A., and Schraiber, J.G. (2019). Multiple episodes of interbreeding
+    between Neanderthal and modern humans. Nat. Ecol. Evol. 3, 39–44.
+
+
+    +   32. Kern, A.D., and Schrider, D.R. (2018). diploS/HIC: an updated approach
+    to classifying selective sweeps. G3 8, 1959–1970.
+
+
+    +   33. Torada, L., Lorenzen, L., Beddis, A., Isildak, U., Pattini, L., Mathieson,
+    S., and Fumagalli, M. (2019). ImaGene: a convolutional neural network to quantify
+    natural selection from genomic data. BMC Bioinformatics 20 (Suppl 9), 337.
+
+
+    +   34. Sanchez, T., Cury, J., Charpiat, G., and Jay, F. (2020). Deep learning
+    for population size history inference: Design, comparison and combination with
+    approximate Bayesian computation. Mol. Ecol. Resour. Published online July 9,
+    2020. https://doi.org/10.1111/1755-0998.13224.
+
+
+    +   35. Beaumont, M.A. (2019). Approximate Bayesian Computation. Annu. Rev. Stat.
+    Appl. 6, 379–403.
+
+
+    +   36. Liu, J.S., and Chen, R. (1998). Sequential Monte Carlo methods for dynamic
+    systems. J. Am. Stat. Assoc. 93, 1032–1044.
+
+
+    +   37. Mitchell, M. (1998). An introduction to genetic algorithms (MIT press).
+
+
+    +   38. Sisson, S.A., Fan, Y., and Tanaka, M.M. (2007). Sequential Monte Carlo
+    without likelihoods. Proc. Natl. Acad. Sci. USA 104, 1760–1765.
+
+
+    +   39. Beaumont, M.A., Cornuet, J.-M., Marin, J.-M., and Robert, C.P. (2009).
+    Adaptive approximate Bayesian computation. Biometrika 96, 983–990.
+
+
+    +   40. Toni, T., Welch, D., Strelkowa, N., Ipsen, A., and Stumpf, M.P. (2009).
+    Approximate Bayesian computation scheme for parameter inference and model selection
+    in dynamical systems. J. R. Soc. Interface 6, 187–202.
+
+
+    +   41. Collette, A. (2013). Python and HDF5: unlocking scientific data (O''Reilly
+    Media, Inc.).
+
+
+    +   42. Abadi, M., Barham, P., Chen, J., Chen, Z., Davis, A., Dean, J., Devin,
+    M., Ghemawat, S., Irving, G., Isard, M., et al. (2016). TensorFlow: A system for
+    large-scale machine learning. In Proceedings of the 12th USENIX Symposium on Operating
+    Systems Design and Implementation, OSDI 2016.
+
+
+    +   43. Raynal, L., Marin, J.M., Pudlo, P., Ribatet, M., Robert, C.P., and Estoup,
+    A. (2019). ABC random forests for Bayesian parameter inference. Bioinformatics
+    35, 1720–1728.
+
+
+    +   44. Byrska-Bishop, M., Evani, U.S., Zhao, X., Basile, A.O., Abel, H.J., Regier,
+    A.A., Corvelo, A., Clarke, W.E., Musunuri, R., Nagalapalli, K., Fairley, S., et
+    al. (2021). High coverage whole genome sequencing of the expanded 1000 Genomes
+    Project cohort including 602 trios. bioRxiv. https://doi.org/10.1101/2021.02.06.430068.
+
+
+    +   45. Bergström, A., McCarthy, S.A., Hui, R., Almarri, M.A., Ayub, Q., Danecek,
+    P., Chen, Y., Felkel, S., Hallast, P., Kamm, J., et al. (2020). Insights into
+    human genetic variation and population history from 929 diverse genomes. Science
+    367, eaay5012.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "+   46. Prüfer, K., de Filippo, C., Grote, S., Mafessoni, F., Korlević, P.,\
+    \ Hajdinjak, M., Vernot, B., Skov, L., Hsieh, P., Peyrégne, S., et al. (2017).\
+    \ A high-coverage Neanderthal genome from Vindija Cave in Croatia. Science 358,\
+    \ 655–658.\n+   \n+   47. Jacobs, G.S., Hudjashov, G., Saag, L., Kusuma, P., Darusallam,\
+    \ C.C., Lawson, D.J., Mondal, M., Pagani, L., Ricaut, F.X., Stoneking, M., et\
+    \ al. (2019). Multiple Deeply Divergent Denisovan Ancestries in Papuans. Cell\
+    \ 177, 1010–1021.e32.\n+   \n+   48. Li, H. (2011). A statistical framework for\
+    \ SNP calling, mutation discovery, association mapping and population genetical\
+    \ parameter estimation from sequencing data. Bioinformatics 27, 2987–2993.\n+\
+    \   \n+   49. Danecek, P., Auton, A., Abecasis, G., Albers, C.A., Banks, E., DePristo,\
+    \ M.A., Handsaker, R.E., Lunter, G., Marth, G.T., Sherry, S.T., et al. (2011).\
+    \ The variant call format and VCFtools. Bioinformatics 27, 2156–2158.\n+   \n\
+    +   50. Miles, A., Murrillo, R., Ralph, P., Harding, N., Pisupati, R., Rae, S.,\
+    \ and Millar, T. (2020). cggh/scikit-allel: v1.3.2 (Zenodo). https://doi.org/10.5281/zenodo.3976233.\n\
+    +   \n+   51. Excoffier, L., Dupanloup, I., Huerta-Sánchez, E., Sousa, V.C., and\
+    \ Foll, M. (2013). Robust demographic inference from genomic and SNP data. PLoS\
+    \ Genet. 9, e1003905.\n+   \n+   52. Lapierre, M., Lambert, A., and Achaz, G.\
+    \ (2017). Accuracy of demographic inferences from the site frequency spectrum:\
+    \ The case of the yoruba population. Genetics 206, 439–449.\n+   \n+   53. Scally,\
+    \ A. (2016). The mutation rate in human evolution and demographic inference. Curr.\
+    \ Opin. Genet. Dev. 41, 36–43.\n+   \n+   54. Kong, A., Frigge, M.L., Masson,\
+    \ G., Besenbacher, S., Sulem, P., Magnusson, G., Gudjonsson, S.A., Sigurdsson,\
+    \ A., Jonasdottir, A., Jonasdottir, A., et al. (2012). Rate of de novo mutations\
+    \ and the importance of father’s age to disease risk. Nature 488, 471–475.\n+\
+    \   \n+   55. Tian, X., Browning, B.L., and Browning, S.R. (2019). Estimating\
+    \ the genome-wide mutation rate with three-way identity by descent. Am. J. Hum.\
+    \ Genet. 105, 883–893.\n+   \n+   56. Tremblay, M., and Vézina, H. (2000). New\
+    \ estimates of intergenerational time intervals for the calculation of age and\
+    \ origins of mutations. Am. J. Hum. Genet. 66, 651–658.\n+   \n+   57. Köster,\
+    \ J., and Rahmann, S. (2012). Snakemake—a scalable bioinformatics workflow engine.\
+    \ Bioinformatics 28, 2520–2522.\n+   \n+   58. Csilléry, K., François, O., and\
+    \ Blum, M. (2012). Approximate Bayesian Computation (ABC) in R: A Vignette. Methods\
+    \ in Ecology and Evolution 3, 475–479.\n+   \n+   59. Pedregosa, F., Varoquaux,\
+    \ G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer,\
+    \ P., Weiss, R., Dubourg, V., Vanderplas, V., et al. (2011). Scikit-learn: Machine\
+    \ learning in Python. J. Mach. Learn. Res. 12, 2825–2830.\n+   \n+   60. Salle,\
+    \ A., Villavicencio, A., and Id mart, M. (2016). Matrix Factorization using Window\
+    \ Sampling and Negative Sampling for Improved Word Representations. In Proceedings\
+    \ of the 54th Annual Meeting of the Association for Computational Linguistics\
+    \ (Volume 2: Short Papers) (Association for Computational Linguistics), pp. 419–424.\n\
+    +   \n+   61. Breiman, L. (2001). Random forests. Mach. Learn. 45, 5–32.\n+  \
+    \ \n+   62. Pudlo, P., Marin, J.M., Estoup, A., Cornuet, J.M., Gautier, M., and\
+    \ Robert, C.P. (2016). Reliable ABC model choice via random forests. Bioinformatics\
+    \ 32, 859–866.\n+   \n+   63. Green, R.E., Krause, J., Briggs, A.W., Maricic,\
+    \ T., Stenzel, U., Kircher, M., Patterson, N., Li, H., Zhai, W., Fritz, M.H.,\
+    \ et al. (2010). A draft sequence of the Neandertal genome. Science 328, 710–722.\n\
+    \n+   64. Browning, S.R., Browning, B.L., Zhou, Y., Tucci, S., and Akey, J.M.\
+    \ (2018). Analysis of Human Sequence Data Reveals Two Pulses of Archaic Denisovan\
+    \ Admixture. Cell 173, 53–61.e9.\n+   \n+   65. Kuhlwilm, M., Gronau, I., Hubisz,\
+    \ M.J., de Filippo, C., Prado-Martinez, J., Kircher, M., Fu, Q., Burbano, H.A.,\
+    \ Lalueza-Fox, C., de la Rasilla, M., et al. (2016). Ancient gene flow from early\
+    \ modern humans into Eastern Neanderthals. Nature 530, 429–433.\n+   \n+   66.\
+    \ Meyer, M., Kircher, M., Gansauge, M.T., Li, H., Racimo, F., Mallick, S., Schraiber,\
+    \ J.G., Jay, F., Prüfer, K., de Filippo, C., et al. (2012). A high-coverage genome\
+    \ sequence from an archaic Denisovan individual. Science 338, 222–226.\n+   \n\
+    +   67. Ragsdale, A.P., and Gravel, S. (2019). Models of archaic admixture and\
+    \ recent history from two-locus statistics. PLoS Genet. 15, e1008204.\n+   \n\
+    +   68. Lorente-Galdos, B., Lao, O., Serra-Vidal, G., Santerpe, G., Kuderna, L.F.K.,\
+    \ Arana, L.R., Fadhlaoui-Zid, K., Pimenoff, V.N., Soodyall, H., Zalloua, P., et\
+    \ al. (2019). Whole-genome sequence analysis of a Pan African set of samples reveals\
+    \ archaic gene flow from an extinct basal population of modern humans into sub-Saharan\
+    \ populations. Genome Biol. 20, 77.\n+   \n+   69. Chen, L., Wolf, A.B., Fu, W.,\
+    \ Li, L., and Akey, J.M. (2020). Identifying and Interpreting Apparent Neanderthal\
+    \ Ancestry in African Individuals. Cell 180, 677–687.e16.\n+   \n+   70. Loh,\
+    \ P.-R., Palamara, P.F., and Price, A.L. (2016). Fast and accurate long-range\
+    \ phasing in a UK Biobank cohort. Nat. Genet. 48, 811–816.\n+   \n+   71. Journougas,\
+    \ J., Long, W., Ragsdale, A.P., and Gravel, S. (2017). Inferring the Joint Demographic\
+    \ History of Multiple Populations: Beyond the Diffusion Approximation. Genetics\
+    \ 206, 1549–1567.\n+   \n+   72. Durvasula, A., and Sankararaman, S. (2020). Recovering\
+    \ signals of ghost archaic introgression in African populations. Sci. Adv. 6,\
+    \ eaax5097.\n+   \n+   73. Theunert, C., Tang, K., Lachmann, M., Hu, S., and Stoneking,\
+    \ M. (2012). Inferring the History of Population Size Change from Genome-Wide\
+    \ SNP Data. Mol. Biol. Evol. 29, 3653–3667.\n+   \n+   74. Wall, J.D. (2017).\
+    \ Inferring Human Demographic Histories of Non-African Populations from Patterns\
+    \ of Allele Sharing. Am. J. Hum. Genet. 100, 766–772.\n+   \n+   75. Mondal, M.,\
+    \ Casals, F., Majumder, P.P., and Bertranpetit, J. (2018). Reply to ‘No evidence\
+    \ for unknown archaic ancestry in South Asia’. Nat. Genet. 50, 1637–1639.\n+ \
+    \  \n+   76. Moorjani, P., Sankararaman, S., Fu, Q., Przeworski, M., Patterson,\
+    \ N., and Reich, D. (2016). Molecular clock helps estimate age of ancient genomes.\
+    \ Proc. Natl. Acad. Sci. USA 113, 5459–5460.\n+   \n+   77. Besenbacher, S., Hvilsom,\
+    \ C., Marques-Bonet, T., Mailund, T., and Schierup, M.H. (2019). Direct estimation\
+    \ of mutations in great apes reconciles phylogenetic dating. Nat. Ecol. Evol.\
+    \ 3, 286–292.\n+   \n+   78. Schlebusch, C.M., Sjödin, P., Breton, G., Günther,\
+    \ T., Naidoo, T., Hollfelder, N., Sjostrand, A.E., Xu, J., Gattepaille, L.M.,\
+    \ Vicente, M., et al. (2020). Khoe-San Genomes Reveal Unique Variation and Confirm\
+    \ the Deepest Population Divergence in Homo sapiens. Mol. Biol. Evol. 37, 2944–2954.\n\
+    +   \n+   79. Pagani, L., and Crevecoeur, I. (2018). What is Africa? A human perspective.\
+    \ https://doi.org/10.13140/RG.2.2.16605.10728.\n+   \n+   80. Trinkaus, E. (1993).\
+    \ Femoral neck-shaft angles of the Qafzeh- Skhul early modern humans, and activity\
+    \ levels among immature Near Eastern Middle Paleolithic hominids. J. Hum. Evol.\
+    \ 25, 393–416."
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '+   81. Liu, W., Martínón-Torres, M., Cai, Y.J., Xing, S., Tong, H.W., Pei,
+    S.W., Sier, M.J., Wu, X.H., Edwards, R.L., Cheng, H., et al. (2015). The earliest
+    unequivocally modern humans in southern China. Nature 526, 696–699.
+
+
+    +   82. Harvati, K., Rödling, C., Bosman, A.M., Karakostis, F.A., Grün, R., Stringer,
+    C., Karkanas, P., Thompson, N.C., Koutoulidis, V., Mouropoulos, L.A., et al. (2019).
+    Apidima Cave fossils provide earliest evidence of Homo sapiens in Eurasia. Nature
+    571, 500–504.'
+  merge: -1
+  img_proc: true

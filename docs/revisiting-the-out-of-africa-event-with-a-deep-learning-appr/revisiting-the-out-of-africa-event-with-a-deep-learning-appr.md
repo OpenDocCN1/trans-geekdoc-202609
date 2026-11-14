@@ -1,0 +1,491 @@
+# 深度学习方法重新审视走出非洲事件
+
+
+
+
+
+
+
+
+# Summary
+
+解剖学上现代人类大约在30万年前在非洲进化而来。他们最早在10万年前在非洲以外的化石记录中出现，尽管其他古人类在欧亚大陆早已存在得早得多。最近，几项研究基于全基因组序列分析，支持现代人类单一“走出非洲”事件。然而，单一“走出非洲”模型与某些化石记录的发现相悖，化石记录支持两次“走出非洲”事件，以及单亲遗传数据提出的“返回非洲”运动。在此，我们采用结合近似贝叶斯计算和序列蒙特卡洛的深度学习方法，从全基因组序列的角度重新审视这些假设。我们的结果支持“返回非洲”模型优于其他替代方案。我们估计，非洲与非洲外种群之间存在两次连续分离，发生在约6-9万年前，且相隔13-15千年。较晚分裂产生的一个种群在很大程度上取代了较古老的西非种群，而另一个种群则奠定了非洲外种群的基础。
+
+# Introduction
+
+最近的化石记录分析表明，智人大约在30万年前（kya）出现在非洲。1 这一假设得到遗传数据的印证，2 该数据估计现代人类种群之间最深的分叉发生在类似的时间点。尽管化石记录主张现代人类发生过多次走出非洲（OOA）事件，3 但最近的遗传研究揭示，迄今测试的所有现代非非洲种群都符合一个模型，即单次OOA事件发生在不到10万年前。4–6 这一结论表明，考古记录所记载的早期OOA迁徙可能对现代人类种群没有留下显著贡献，巴布亚人种群提出的模型（两次走出非洲模型）可能是个例外。7  单倍群E在撒哈拉以南非洲种群中普遍存在。这两个单倍群在与OOA种群中任何其他单倍群合并之前先一起合并。10,11 这一观察可能由涉及携带单倍群E的人群的返回非洲迁徙解释，10 或者简单的走出非洲，其中单倍群E留在非洲，而单倍群D和其他OOA单倍群一起走出非洲。12 此外，一些遗传分析表明，非洲与OOA种群之间的分离可能不是单一的分裂事件，而是由种群之间的结构和混合构成。13–16
+
+测试这些假设（单次走出非洲、返回非洲和两次走出非洲）具有挑战性，因为非非洲种群经历了严重的瓶颈效应，17–19 古代人类基因入侵的数量和来源存在差异，19,40,21 以及非洲内部的多次迁徙。2,16 缺乏来自非洲早于1.5万年前的古代基因组数据，22 使得从古代DNA的角度解决这一问题变得困难。然而，神经网络（NN）已被证明在解开此类复杂情景方面极其强大。20
+
+在过去几十年中，高效且强大的计算基础设施的发展使我们在机器学习领域取得了实质性进展，尤其是对于计算需求高的算法，如NN23,24 和贝叶斯方法。25,26 NN已被证明对于特定类型的任务（如分类或自然语言处理）是一个有用的工具。23–25,27 然而，NN需要大量数据作为训练集。在某些情况下，可以通过使用模拟数据来克服这一限制。鉴于现代工具允许高效模拟大规模合成遗传数据集，28,29 NN已经在人群基因组学中被采用，用于从潜在种群历史的角度解释基因组数据，20,30,31 以及正选择。32,33
+
+然而，与经典方法不同，由于NN是一种“黑盒”方法，衡量NN所做预测的显著性仍然具有挑战性。近似贝叶斯计算（ABC）可以根据数据本身来衡量基于NN的预测的准确性，而无需知道最大似然函数。20,30,34 然而，当使用高维输入数据或汇总统计量时，ABC可能面临“维度灾难”问题。35 当所利用的汇总统计量未能捕获足够信息时，其效率较低。在此，我们使用NN来降低原始汇总统计量的维度，并产生高度信息性的次级汇总统计量，这些统计量被ABC用作输入以进行统计分析。序列蒙特卡洛（SMC，也称为粒子滤波方法）36 用于从先验递归预测后验分布。在每个步骤中，为每个先验样本计算似然权重。低似然样本被丢弃，新样本从连续分布中重新采样。在经典SMC中，较新样本在重新采样步骤中具有更高的权重，从而被赋予更高概率。对所有这些样本计算似然权重，循环重复直到达到收敛。SMC与遗传算法有强烈的相似性。37 已证明，使用SMC可以进一步改进ABC估计，38–40 但迄今它们尚未与NN一起使用。
+
+在此，我们提出了一种改进的ABC-DL（结合深度学习的近似贝叶斯计算）20 版本，以及ABC-DLS（结合深度学习和序列蒙特卡洛方法的近似贝叶斯计算），这使我们能够在不同竞争的人口统计模型中推断最可能的情景，并以高精度估计其参数值。我们的方法依赖于在被测试模型下用模拟遗传数据训练的NN。然而，与其他类似方法相比，它有三个关键改进。首先，使用hdf541 数据格式和TensorFlow42 允许极大的训练数据集。其次，常规NN方法通过ABC得到改进，这有助于为NN预测提供统计支持并获得模型参数值的后验分布。第三，受先前工作的启发，38 我们应用了SMC36 方法的修改版本来迭代整个过程。与先前实现的方法相比，该算法显著提高了预测准确性。20,43 我们应用此方法来测试上述三种OOA模型。
+
+# Material and methods
+
+## Real data
+
+我们从Coriell医学研究所下载了由1000 Genomes44 生成的高覆盖度vcf文件。我们随机选择五名个体来代表非洲、欧洲和东亚，分别来自尼日利亚伊巴丹的约鲁巴人（YRI）、犹他州北欧血统居民（CEU）和北京汉族人（CHB）种群（共15名个体）。作为替代数据集，我们还下载了高覆盖度人类基因组多样性计划（HGDP）vcf文件45，并随机选择了五名约鲁巴人（YRI）、五名法国人（FRN）和五名汉族人（HAN）个体，分别代表非洲、欧洲和东亚（表S1）。除非另行说明，此处呈现的结果均基于第一个数据集获得。为避免因仅包括部分混合古代人类基因组的可用性以及将古代基因组与现代人类混合而引入任何偏差，我们决定不使用任何古代基因组。此外，有人建议，现有的尼安德特人和丹尼索瓦人序列与基因入侵人种群关系较远，46,47 暗示了一个更加复杂的模型。由于我们的主要目标是研究OOA事件，并对所有古代人种群给予同样的待遇（因为非洲古代人种群尚未测序），它们在模拟中被视为幽灵种群。我们独立处理每个数据集，仅保留每个个体中都存在基因型呼叫的双等位单核苷酸多态性（SNPs），并使用Picard工具将基因组位置提升至GRCh37坐标。接下来，我们采用了两种替代过滤方法：（1）过滤掉基因和CpG岛（更多详情，请参见Mondal等人，201920）和（2）对1000 Genomes数据集（表S2中）应用来自SNPable43 的可比对性掩模。当CpG岛和基因的信息可用时，过滤策略1优于策略2。在缺乏这些信息的情况下（例如非人类遗传数据），我们的方法仍可使用过滤策略2复制类似结果。所有过滤均使用vcftools和bcftools进行。48,49 vcf文件通过内部代码与scikit-allel50 转换为联合 unfolded 位点频谱（SFS）。对于unfolded SFS，我们需要知道真实数据的祖先等位基因和衍生等位基因（对于模拟，这些是已知的）。我们使用1000 Genomes祖先等位基因排列的fasta文件将等位基因极性化为祖先和衍生。对于给定SNP，如果不存在祖先等位基因信息，我们已将该SNP从分析中删除。
+
+## Genotype to site frequency spectrum
+
+来自三个种群（非洲、欧洲和东亚）的SFS被计算为一个三维张量，并进一步转换为数组，以供NN作为输入使用。SFS是每个种群中给定衍生等位基因计数存在的隔离位点的总数。
+
+\(\text{SFS}(i, j, k) = \sum_{m=1}^n \begin{cases} 1, & \text{if } s_1 = i \text{ and } s_2 = j \text{ and } s_3 = k. \\ 0, & \text{otherwise.} \end{cases}\)
+
+其中，i、j和k分别是pop1、pop2和pop3中每个SNP的衍生等位基因计数，n是隔离SNP的总数。整个SFS被表示为一行。我们将真实SFS的所有元素乘以一个常数（frac），以使其与模拟区域的长度可比（如果它们不匹配）。例如，如果我们每次模拟模拟一个100兆碱基对（Mb）区域，而真实数据来自647 Mb区域（过滤后），我们将真实SFS乘以100/647（或0.1546）。一般来说，对于我们的方法，可以使用任何汇总统计量。我们选择SFS作为汇总统计量，因为它易于获得且信息量足够。17,51
+
+## Simulations
+
+所有模拟均在msprime29 中进行。我们每次运行模拟100、500、1,500或3,000个1 Mb基因组区域（取决于
+
+
+
+
+
+## 表 1. 用于生成位点频率谱（SFS）的先验参数范围
+
+| Parameters | OOA_S | OOA_B | OOA_M |
+| --- | --- | --- | --- |
+| N_A | 5,000–25,000 | 5,000–25,000 | 5,000–25,000 |
+| N_AF | 10,000–150,000 | 10,000–150,000 | 10,000–150,000 |
+| N_EU | 10,000–150,000 | 10,000–150,000 | 10,000–150,000 |
+| N_AS | 10,000–150,000 | 10,000–150,000 | 10,000–150,000 |
+| N_EU0 | 500–5,000 | 500–5,000 | 500–5,000 |
+| N_AS0 | 500–5,000 | 500–5,000 | 500–5,000 |
+| N_B | 500–5,000 | 500–5,000 | 500–5,000 |
+| N_BC | N/A | 500–40,000 | N/A |
+| N_AF0 | N/A | 500–40,000 | N/A |
+| N_MX | N/A | N/A | 500–40,000 |
+| N_B0 | N/A | N/A | 500–40,000 |
+| T_FM (ky) | 2–5 | 2–5 | 2–5 |
+| T_FS (ky) | 0.1–10 | 0.1–10 | 0.1–10 |
+| T_DM (ky) | 10–50 | 10–50 | 10–50 |
+| T_EU_AS (ky) | 5–30 | 5–30 | 5–30 |
+| T_NM (ky) | 5–50 | 5–50 | 5–50 |
+| T_XM (ky) | 5–120 | 5–120 | 5–120 |
+| T_Mix (ky) | N/A | 5–50 | 5–50 |
+| T_Sep (ky) | N/A | 5–50 | 5–50 |
+| T_B (ky) | 5–270 | 5–220 | 5–220 |
+| T_AF (ky) | 5–700 | 5–700 | 5–700 |
+| T_N_D (ky) | 330–450 | 330–450 | 330–450 |
+| T_H_A (ky) | 120–250 | 120–250 | 120–250 |
+| T_H_X (ky) | 450–700 | 450–700 | 450–700 |
+| Mix (%) | N/A | 5–95 | 5–95 |
+| NMix (%) | 1–3 | 1–3 | 1–3 |
+| DMix (%) | 0–2 | 0–2 | 0–2 |
+| XMix (%) | 0–10 | 0–10 | 0–10 |
+| FMix (%) | 0–10 | 0–10 | 0–10 |
+
+N/A 表示不适用，ky 表示千年或千年。
+
+在分析步骤中，对每个种群（非洲人、欧洲人和东亚人）各取五个个体。每次运行中，我们使用每 bp 每代 10^-8 的均匀重组率（因为 SFS 不受局部重组率影响52）和每 bp 每代 1.45 × 10^-8 的突变率53，同时从表 1 所示的先验范围内以均匀分布抽取人口统计学参数。我们还分别使用了每 bp 每代 1.25 × 10^-8 的突变率（仅用于表 S3），44,55 我们假设代际时间为 29 年。56 我们大部分针对 SFS 的模拟是在多个 1 Mb 区域上进行的，表 S4 除外（该表由多个 25 Kb 区域生成），以及在创建模拟 SFS 以测试我们的 DLS 方法时（模拟参数来自表 2、S5 和 S6）。为了使模拟 SFS 类似于真实数据（过滤后区域长度为 647 Mb），我们在给定模型下一起模拟三个 200 Mb 区域和一个 47 Mb 区域以生成一个单一的 SFS。我们还
+
+在多个 25 Kb 区域（表 S4）上进行了模拟，以检查模拟区域的长度是否会偏差我们的结果。大多数模拟区域的长度选择了 1 Mb 区域，因为生成起来更快。
+
+在 msprime 中，混合被表示为 MassMigration（单代中被另一群体替换的群体比例）。相比之下，岛屿模型（在适用情况下）下的恒定迁移被表示为 Migrationrate（每代来自另一群体的移民替换的受体群体比例）。
+
+ABC-DLS 分析效率足以在单台计算机上完成。整个方法的主要瓶颈是模拟数据的生成。Msprime 很快，但为神经网络需要模拟的数据总量有时在单台计算机上难以生成（尤其是用于参数估计时）。因此，我们使用了一个 snakemake 流水线
+
+| Parameters | Mean | CI | Events (kya) |
+| :--- | :--- | :--- | :--- |
+| N_A | 14,526 | 14,404–14,595 | N/A |
+| N_AF | 26,436 | 25,535–28,595 | N/A |
+| N_EU | 94,437 | 88,320–104,955 | N/A |
+| N_AS | 127,071 | 112,953–138,256 | N/A |
+| N_EU0 | 1,838 | 1,794–1,922 | N/A |
+| N_AS0 | 760 | 739–776 | N/A |
+| N_BC | 16,744 | 11,108–26,850 | N/A |
+| N_B | 2,026 | 1,984–2,096 | N/A |
+| N_AF0 | 35,773 | 33,296–38,019 | N/A |
+| T_DM (ky) | 18 | 17.7–18.4 | 18 (17.7–18.4) |
+| T_EU_AS (ky) | 15.1 | 14.7–15.6 | 33.1 (32.5–33.6) |
+| T_NM (ky) | 5.2 | 5–5.8 | 38.3 (37.6–39) |
+| T_XM (ky) | 15.7 | 14.5–16.3 | 48.7 (47.6–49.8) |
+| T_Mix (ky) | 15.1 | 14.1–16.5 | 48.2 (46.8–49.5) |
+| T_Sep (ky) | 9.8 | 8.6–11.3 | 57.9 (56.1–59.8) |
+| T_B (ky) | 13.4 | 12.7–13.7 | 71.3 (69.4–73.3) |
+| T_AF (ky) | 200.4 | 197.2–202.1 | 271.7 (268.6–274.8) |
+| T_N_D (ky) | 448.1 | 442–450.9 | 448.1 (442–450.9) |
+| T_H_A (ky) | 248.1 | 240.6–252.1 | 696.2 (688.9–703.4) |
+| T_H_X (ky) | 675.9 | 648.5–700.9 | 675.9 (648.5–700.9) |
+| Mix (%) | 91.14 | 90.28–91.57 | N/A |
+| NMix (%) | 2.99 | 2.95–3 | N/A |
+| DMix (%) | 0.67 | 0.61–0.72 | N/A |
+| XMix (%) | 5.29 | 4.02–6.22 | N/A |
+
+CI 是相应参数 2.5%–97.5% 的置信区间。ky 表示千年，kya 表示从现在起的千年或千年前。这里 ky 表示事件的时间间隔，kya 表示从现在起估计事件发生的时间。事件与时间间隔的关系可见表 S10。N/A，不适用。
+
+在集群上生成 SFS。57 所有带有相应参数的模拟都保存在逗号分隔值（CSV）文件中，随后被不同方法使用（通过随机森林的近似贝叶斯计算 [ABC-RF]、ABC-DL 和 ABC-DLS）。
+
+## ABC-DL
+
+我们使用 Python 中的最先进的机器学习包实现了 ABC-DL20 的改进版本（此后，我们称此实现为 DL，而另外使用 SMC [称为 DL5] 的实现将在下文描述）。我们使用带有 Keras 后端的 TensorFlow42 来构建神经网络，并使用 abc 包来实现 ABC。58 使用 hdf5 格式41 使我们能够在不将数据加载到内存的情况下分析整个数据集。这使我们能够在极大的模拟数据集上训练神经网络。
+
+### 使用 DL 进行参数估计
+
+在这里，我们描述了使用神经网络和 ABC 进行参数估计。我们运行了总共 60,000 次不同的模拟，每次模拟生成 3,000 个 1 Mb 区域（总共 3 Gb [碱基对]，大约等于人类基因组的长度）。神经网络输入的每一行都是在给定人口统计学模型下进行的一次此类模拟，列代表 SFS 元素，而该模拟使用的参数用作已知输出。我们使用这些信息运行参数估计，并检索给定模型在观测数据上预测的参数。我们使用已知参数作为训练神经网络的输出（y），并将 SFS 用作输入（x）。因此，我们可以将神经网络视为一个非线性模型，用于从 SFS 预测参数。我们保留了 10,000 行随机数据作为测试数据集和 ABC 分析，其余用于训练神经网络。SFS 和参数值均按列使用 MinMax 标准化器（来自 scikit-learn）59 进行归一化，以便每个数据条目都在 0 和 1 之间。
+
+我们使用了带有 relu 激活函数（来自 Keras 包）的四个全连接神经网络隐藏层（图 S1）。这些是神经网络的基本构建块。我们使用线性层（来自 Keras 包）作为输出层，其单位数与参数数量相同。我们在开头使用了掩码层（来自 Keras 包）以从学习算法中移除零值单元。这样做是为了防止神经网络学习数据的缺失。然后我们使用了 0.05 的高斯噪声注入（来自 Keras 包）来引入一些噪声（图 S1）以减少过拟合，因为这将迫使神经网络在 SFS 稍有失真（或带噪）的情况下仍学习真实参数。我们使用 logcosh 作为损失函数，Nadam 作为优化器（两者均来自 Keras 包）。虽然我们使用过其他更经典的方法（例如，均方误差、随机梯度下降等），但我们发现这种组合更适合我们的方法。
+
+我们使用了带有 relu 激活函数的两个全连接神经网络隐藏层（图 S1）。我们使用了软最大化层（来自 Keras 包）作为输出层，其单位数与训练模型的数量相同。我们添加了掩码层和噪声注入层，如上所述。我们在每个全连接层中使用了 1% 的丢弃层（来自 Keras 包）以使其更加稳健。我们使用了 categorical_crossentropy 作为损失函数，adam 作为优化器（两者均来自 Keras 包）。
+
+神经网络多次遍历训练数据集（时代）以提高准确性。我们在验证数据集上的损失中使用了 EarlyStopping（来自 Keras 包），耐心值为 100。如果最后 100 个时代没有改进，这将停止时代循环（意味着神经网络对当前数据达到了收敛）。我们使用了验证数据上的最低损失结果的 ModelCheckpoint（来自 Keras 包），因为最后一个时代不一定在验证数据上具有最低损失。我们还使用了 ReduceLROnPlateau（来自 Keras 包），因子为 0.2，如果在多个时代（默认十个）后达到极小值，则降低学习率。起始时学习率过低会导致神经网络学习缓慢，但在后期，高学习率的表现不如低学习率。
+
+训练完成后，我们使用测试数据集从模拟 SFS 预测模型，然后使用 ABC 进行交叉验证测试，容忍度为 0.033（转换为 100 个样本）用于三种模型的情况，0.0066（转换为 100 个样本）用于 15 种模型的情况，通过拒绝法（来自 abc 包）实现。我们将 abc-postpr（来自 abc 包）的模型选择应用于真实数据。示意图见图 S2。
+
+训练完成后，我们使用测试数据集从 SFS 预测参数，然后将其用于交叉验证测试和通过 ABC 的 loclinear 进行参数预测，容忍度为 0.01。整个方法以流程图形式展示（图 S2）。
+
+### 使用 DL 进行模型选择
+
+## ABC-DLS
+
+我们对 ABC-DL 方法的实现通过使用 SMC 方法^36 进行了进一步改进，这为类似案例的推断开辟了新途径（此后，我们称此实现为 DLS）。尽管 SMC 有多种不同的实现并且可能相当复杂，但我们在此使用了一个更简单的 SMC 版本。在我们的实现中，我们只选择每次 ABC 循环中来自前 5% 的最佳样本并丢弃其余样本。参数值的范围从这些顶级样本中估计，新样本从这些新后验范围的均匀分布中抽取。为了在算法中引入突变，我们在每次循环中将后验范围增加 1%。结果，作为神经网络输入的模拟 SFS 随着算法每次迭代变得越来越类似于真实或观测 SFS。
+
+在这里，我们描述了使用神经网络和 ABC 进行模型选择。除非另有说明，我们为每个测试的三个人口统计学模型各模拟了 2,000 次（人口统计学模型的完整描述见下文）。我们为所有模型模拟了 3 Gb 区域，以使不同方法保持一致，并相应地最终缩放真实数据。这种方法更可取，因为我们只需为不同长度的真实数据训练一次神经网络。为了测试我们的缩放方法和模拟区域长度是否未产生任何偏差，我们还在表 S4 中未使用缩放的情况下，模拟了一个仅 647 Mb 区域（等于我们的过滤策略 1），由多个 25 Kb 区域组成。生成的 CSV 文件（每个模型一个）一起用作模型选择的输入。DL 和 DLS 的模型选择均重复了十次。我们发现，如果结果具有高准确性（观测数据上正确模型的后验概率 >95%），则所有十次运行基本相同（这是预期的）。
+
+### 使用 DLS 进行参数估计
+
+该方法使用 DL（上文描述）的标准参数估计策略，以及用于递归的修改后的 SMC 算法。
+
+对于参数估计，我们在 ABC 中使用了容忍度为 0.05 的拒绝方法，因为拒绝方法总是在先验范围内生成后验。我们通过从 ABC 输出中取最小值和最大值来获得后验范围。此范围随后用作下一次迭代的先验范围。此循环重复，直到所有参数的下降幅度都大于 0.95，表明已达到收敛。
+
+我们将 SFS 用作神经网络的输入（x），将模型类别用作输出（y），并删除了参数值，因为此步骤不需要它们。我们仅在 SFS 数据上使用来自 sklearn^59 的 MinMax 标准化器，如上所述，模型名称由 pandas.Categorical（来自 pandas 包）和 Keras.utils.to_categorical（来自 Keras 包）转换为 one-hot 编码。在将所有竞争模型的文件连接后，我们通过自定义代码^60 打乱了行。我们每个模型留出了大约 1,000 行随机数据来测试神经网络的能力（作为测试数据集）并用于 ABC 分析，其余用于训练神经网络（作为训练数据集）。方法的其余部分如上文所述（参见使用 DL 进行参数估计）。我们还用更大数量的模拟测试了这些模型（训练用 50,000 次，测试和 ABC 分析用 10,000 次），但由于我们未在结果中发现任何实质性差异，因此在整个研究中，我们每个模型使用了 2,000 次模拟（训练用 1,000 次，测试和 ABC 分析用 1,000 次）。
+
+```
+decrease = \frac{Posterior_{max} - Posterior_{min}}{Prior_{max} - Prior_{min}}
+```
+
+如果某个参数的下降幅度超过 95%，则该参数的新后验估计将被拒绝。相反，我们取本步骤的先验范围，按其宽度的 1% 进行扩展，并再次将其用作先验。我们使用此策略防止后验收缩或崩溃，除非神经网络为该参数找到了某些准确的预测（下降幅度 < 95%），并减少了由于单次循环中的随机效应而遗漏正确参数值的概率。
+
+```
+Posterior_{min} = Prior_{min} - \frac{(Prior_{max} - Prior_{min}) \times 1\%}{2}
+Posterior_{max} = Prior_{max} + \frac{(Prior_{max} - Prior_{min}) \times 1\%}{2}
+```
+
+
+
+![](img/d8139985bcfa7a5c6e5bde789c7d9fed_5_0.png)
+
+图 1. 模型的简化示意图（A–C）简单的非洲外出（模型 S）（A）、回非洲（模型 B）（B）和混合的非洲外出（模型 M）（C）。有关时间参数（y 轴）的更多详情，请参阅表 1，有关这些参数之间相互依赖关系的详情，请参阅表 S10。AFR 表示非洲人，EUR 表示欧洲人，ASN 表示东亚人。X 表示非洲古人，N 表示尼安德特人，D 表示丹尼索瓦人。
+
+每个步骤的模拟都被存储，如果其参数值落在新的先验范围内，则在后续循环中被重复使用。此策略的流程图可见于图 S2C。
+
+我们使用了 10,000 次模拟作为训练数据集和 10,000 次模拟用于测试。NN 模型与之前完全相同（如在 DL 中所用，图 S1）。为提高效率，我们先模拟总长度为 100 Mb（每个模拟区域长 1 Mb），然后逐步增加总长度（即 0.5、1.5 和 3 Gb）。100 Mb 区域的先验与表 1 中给出的相同。100 Mb 运行的最终后验（收敛后）被用作 0.5 Gb 模拟的先验，以此类推。我们相应地将观察到的 SFS 乘以 frac，以将其缩放至模拟区域长度。
+
+在总长度达到 3 Gb 并收敛后，我们使用 DL 方法运行了 50,000 次训练和 10,000 次测试模拟来最终确定，其中使用了来自 abc 包的 loclinear，容差为 0.01。该方法的流程图见图 S3。
+
+### 使用 DLS 进行模型选择
+
+在此，我们描述了结合使用 NN、ABC 和 SMC 进行模型选择的方法。原则上，我们可以直接对每个模型使用 DLS 参数估计程序的最终输出，然后将其用于 ABC 分类方法。但是，鉴于我们的真实数据集中只有一个模型是真实的，这种方法效率低下，因此为不太可能的场景投入大量资源来优化参数没有意义。相反，我们将 DLS 方法中 100 Mb 参数优化的输出作为每个模型的先验，然后使用了之前提到的 DL 模型选择策略。换句话说，我们首先使用 100 Mb 的模拟序列对每个模型类进行了参数优化，然后相互比较不同的模型。我们发现，在大多数情况下，使用 100 Mb 的总模拟序列已经足以区分模型，除了表 S7，其中我们使用了 500 Mb 区域进行优化。
+
+## ABC-RF
+
+我们使用类似的 ABC 方法测试了真实 SFS 与三个模拟模型，但采用随机森林^61（以下简称 RF）作为推断工具，该工具在 abcrf R 包中实现。^43,62 首先，我们使用 bagging 方法和 abcrf 函数训练了我们的模型，不进行线性判别分析，并使用每个待测试模型 1,000 次模拟构建了 2,000 棵决策树。然后，我们使用 predict.abcrf 函数，通过由每个待测试模型 1,000 次模拟组成的交叉验证数据集评估了 ABC-RF 的性能。使用相同的函数和设置，根据上述真实数据获得的 SFS 推断出最受支持的模型。我们对最受支持的情景使用 regAbcrf 模型中的 1,000 棵决策树应用回归进行了参数估计。每个参数均单独推断。与 DL 和 DLS 方法类似，整个程序对模型选择重复了十次。
+
+## 人口统计模型
+
+### 简单的非洲外出（模型 S）
+
+在此模拟模型中，我们紧密遵循 Gravel et al. 模拟了一个简单的非洲外出事件（图 1A），但迁移率设为零。^19 所有主要结果均在无任何迁移率的情况下使用，但我们有时也测试了带有迁移的模型。当我们模拟带有恒定迁移的模型时，我们既尝试了 Gravel et al. 中的对称迁移矩阵（表 S8），也尝试了非对称迁移矩阵（表 S9 和 S10）。
+
+### 回非洲（模型 B）
+
+在此模型中，基本非洲外出模型仍然成立，并添加了回非洲迁移所需的额外变化（图 1B）。基本思路源自 Poznik et al.。10 在此情景中，基础非洲外出人群在 T_Sep 代前分裂为回非洲人群和非洲外出人群，这发生在欧洲和亚洲人群分裂之前（因此 T_Sep 在 T_B [非洲与非洲外出人群之间的分离时间] 和 T_EU_AS [欧洲与亚洲人群之间的分离时间] 之间）。接下来，回非洲人群迁移到非洲，其有效种群大小为 N_BC，并在 T_Mix 代前以 mix 的比例（即被替换的祖先非洲血统比例）与祖先非洲人群混合。混合后，非洲人群的有效种群大小从 N_AF0 变为 N_AF。
+
+### 混合的非洲外出（模型 M）
+
+该模型（图 1C）与模型 S 类似，并有一个额外的人群 M，其在 T_Sep 代前（同样在 T_B 和 T_EU_AS 之间）从非洲人群分离出来，有效种群大小为 N_MX。M 在 T_Mix 代前与非洲外出人群混合，mix 是被 M 替换的非洲外出血统比例。混合后，非洲外出人群的有效种群大小从 N_B0 变为 N_B。基本思路源自两个非洲外出假设。7
+
+### 非洲内的近期混合（模型 R）
+
+作为一种替代假设，我们还模拟了非洲人群的近期混合模型。在非洲外出人群与非洲人群分离后，后者在 T_Sep 代前分裂为两个亚种群 AF1 和 AF2，其有效种群大小分别为 N_AF1 和 N_AF2。在 T_Mix 代前，这两个亚种群相互混合，使得 AF1 中等于 mix 的一部分被 AF2 替换。混合后，非洲人群的有效种群大小变为非洲现代的有效种群大小。我们在此情景中未模拟来自欧洲的新石器时代农民迁移。
+
+### 其他迁移作为先验
+
+我们还在上述基本模型基础上添加了不同研究提出的一些脉冲迁移或混合事件。我们模拟了非洲外出人群在 T_NM 代前来自尼安德特人的基因内渗，比例为 NMix。在欧洲人与东亚人分离后，东亚人群在 T_DM 代前来自丹尼索瓦人或未知古代人群的基因内渗，比例为 DMix。尼安德特人在 T_N_D 代前与丹尼索瓦人或未知混合人群分离，尼安德特人-丹尼索瓦人谱系在 T_H_A 代前与现代人类谱系分离。65,66 非洲人群也来自另一个未知古代人群的基因内渗，该事件发生在 T_XM 代前，比例为 XMix。16,67,68 这个未知人群在 T_H_X 代前与现代人类谱系分离。我们观察到，我们的方法无法找到任何古代人群的有效种群大小（很可能是因为我们在真实数据中未使用任何古基因组）。因此，我们假设它们等于 N_A（祖先有效种群大小）。我们还模拟了新石器时代农民，他们在 T_FS 代前与欧洲人群分离，有效种群大小为 N_A，并在 T_FM 代前与非洲人群混合，比例为 FMix。69
+
+对于某些事件，其顺序是固定的（例如，基于我们的先验假设，欧洲和亚洲人口的分离只能发生在尼安德特人基因内渗之后），并描述于表 S11。
+
+## Relate
+
+我们使用 Relate v.1.1.4，一种用于推断局部树的方法，来验证我们的参数估计。14 Relate 使用局部树的分支长度来估计随时间的变化共祖率。14 因此，我们使用它来比较非洲、欧洲和东亚人口在真实数据与模拟数据之间的有效种群大小轨迹和种群间共祖率。我们将 Relate 应用于来自 1000 基因组计划高覆盖版本的 YRI、CEU 和 CHB 样本（分别为 108、99 和 103 个体），以及应用于在优化参数下模拟的三种模型中的遗传数据（表 2、S5 和 S6）。对于真实数据，使用了第 1 号染色体并模拟了相同长度的区域。
+
+我们最初使用了来自 1000 基因组计划的 2,054 个高覆盖基因组。我们保留了满足以下条件的位点：(1) 是二等位 SNP，(2) 通过 1000 基因组过滤器且 QD（按深度计算的质量）参数值高于 2，以及 (3) 缺失率低于 10%。我们使用 Eagle 2.4.1 版对整个数据集进行了相位确定和填补。70 接下来，我们对来自三个目标人群的样本在第 1 号染色体上运行了 Relate。我们使用了 GRCh38 重组图谱、1000 基因组严格基因组掩码，以及每代每个碱基对的突变率为 1.45 x 10^-8。接着，我们为每个人群单独运行 Relate 的有效种群大小估计模块，以获取有效种群大小轨迹，并对人口对运行以获取交叉共祖率。
+
+对于每个模型，我们使用 msprime 模拟了一个与第 1 号染色体长度相同的区域，包含 100 个非洲个体、100 个欧洲个体和 100 个东亚个体，并具有均匀重组。29 我们使用了 1000 基因组严格掩码，以保证真实数据与模拟数据在可用序列长度方面的一致性。之后，模拟数据按上述方式处理。
+
+我们估计了真实数据和模拟数据的有效种群大小，公式为 1/2C，其中 C 是推断的种群内共祖率。为了估计相对的种群间共祖率，我们使用了以下公式：13
+
+$C_{12} = \frac{2 \times C_{12}}{C_{11} + C_{22}}$
+
+其中 C11 和 C22 是种群内共祖率，C12 是种群间共祖率。
+
+## 将模拟与真实数据中的突变年龄分布进行比较
+
+Relate 估计推断树的分支长度（单位：代），从而使我们能够获得映射到特定树枝上的任何给定突变的 tMRCA。对于给定突变，此值在不同人群之间可能不同，反映了突变传播的历史。两个人群中突变 tMRCA 的联合分布可能反映了两个人群随时间推移的复杂历史和相互作用。因此，我们比较了从真实基因组和从根据以下模型模拟的基因组中获得的二维 tMRCA 分布
+
+
+测试的人口统计学模型（尼安德特、丹尼索瓦和非洲古老人种基因内混入，上述三个模型 [BNDX、MNDX 和 SNDX] 的参数分别来自表 2、S5 和 S6）用于每组人口对（CEU-YRI、CHB-YRI 和 CEU-CHB）。我们首先对 tMRCA 值进行 log10 变换（图 S4），然后对每个数据集（真实、BNDX、MNDX 和 SNDX）及每组人口对进行核密度估计，以获得等位基因年龄的二维分布矩阵。对于密度估计，我们使用 MASS R 包中的 kde2d 函数，将 n（网格点数）设置为 100。接下来，我们从每个模拟矩阵中减去针对真实数据得到的该矩阵。连同该差异的分布，我们报告两个矩阵之间的均方根偏差。
+
+$$RMSD = \sqrt{\frac{1}{N} \sum_{i=1}^{N} d_i^2}$$
+
+其中 d<sub>i</sub> 是模拟分布矩阵中第 i<sup>th</sup> 个单元格的值与真实分布矩阵中对应单元格的值之差，N 是单元格数量（100 x 100）。较低的均方根偏差（RMSD）值表示真实数据和模拟数据的 tMRCA 分布之间的偏差较小（图 S5）。
+
+我们还报告了通过刀切法（jack-knife）迭代遮挡 50 Mb 长的序列区域（在染色体 1 的 GRCh38 参考序列中，1 到 246 Mb 之间，以避免含有高比例 N 碱基的端粒区域），以非重叠滑动窗口方式进行，并在剩余未遮挡序列上计算 RMSD，从而得到五个值。
+
+# 结果
+
+## ABC-DLS
+
+ABC-DLS（无论是模型选择还是参数估计）的一般工作流程包括以下步骤。首先，我们使用在先验范围内从均匀分布中采样的人口统计参数，为每个测试模型模拟了多个遗传数据集<sup>29</sup>（表 1）。接着，我们从这些数据中计算了 SFS，并将数据分为训练子集和测试子集。然后，我们在前者数据集上训练了神经网络（NN，通过 TensorFlow 和 Keras 后端实现<sup>42</sup>），以在人口统计模型之间进行选择或估计人口统计参数。所得神经网络应用于测试数据集以及观察到的汇总统计数据（更多细节见下文以及材料与方法部分）。接着，我们通过比较观察数据与测试数据集之间的神经网络预测结果，应用 ABC 来估计观察数据上神经网络预测的支持度（见材料与方法、图 S2 以及我们之前的论文<sup>20</sup>）。最后，在使用 SMC 的情况下，我们基本上通过 SMC 迭代参数估计步骤。我们保留了测试数据集中与观察数据最匹配的前 5%（等于容忍水平）的模拟结果。然后，我们使用这些模拟的参数更新先验范围，并将其送入下一次迭代，直到达到收敛（图 S3 和 S4）。
+
+在对真实序列数据测试我们的主要假设之前，我们测试了我们的方法（DLS）是否可以复现已知结果。真实序列数据的预测参数（更多细节见下文）与文献中的先前工作一致<sup>17,19,71</sup>（表 S7）。我们还在已知参数的模拟数据上测试了我们的方法，涵盖多种模型（模型 S、B 和 M，更多信息见下文；模拟参数来自表 2、S5 和 S6），并发现我们的方法与 SMC 一起在所有测试案例中都正确预测了模型，表明它可以找到正确的模型。此外，当正确的参数值已知且来自模拟观察 SFS 时，我们的方法可以以高精度推断参数值（表 S12）。
+
+### 模型选择
+
+为了检验我们的假设，我们模拟了三个非洲外（OOA）模型：简单模型（模型 S）、回非洲模型（模型 B）和混合模型（模型 M），且所有模型均包含尼安德特向所有非洲外人群的基因内混入，<sup>63</sup> 丹尼索瓦或未知来源向亚洲，<sup>20,47,64</sup> 非洲古老人种向非洲，<sup>16,67,68,72</sup> 以及欧洲新石器时代农民向非洲（NDXF）（更多细节见材料与方法、图 1 和表 1）。我们使用了五个约鲁巴人（非洲）、五个拥有北欧和西欧血统的犹他州居民（欧洲人）和五个汉族人（东亚人）的 1000 基因组计划高覆盖度基因组<sup>44</sup>（更多细节见材料与方法）作为我们的真实数据集。接下来，我们使用三种不同的方法在竞争模型之间进行选择：
+- RF，即结合随机森林与 ABC 的方法；<sup>43</sup>
+- NN 与 ABC 结合（DL），是我们先前发表的 ABC-DL 方法的类似但改进版本；<sup>20</sup>
+- 本文引入的方法 DLS，它通过 SMC 扩展了 DL 方法。
+
+虽然所有三种方法都将回非洲模型识别为最可能的模型，但不同方法之间的预测确定性各不相同（表 3 和 4）。DL 和 DLS 对模型 B 的预测概率均大于 95%，尽管 RF 给出的支持度较低。
+
+DLS 结果在不同的数据过滤策略、不同的数据集（表 S2）以及不同的模拟区域总长度和每个区块长度下均可重现（表 S4）。我们还测试了关于脉冲迁移事件（三种古老人种基因内混入场景和新石器时代农民近期迁移）的假设是否会影响我们的推断。我们仅使用 DLS 测试了以下不同模型：
+- 无基因内混入且无农业迁移（NI）
+- 尼安德特和丹尼索瓦基因内混入（ND）
+- 尼安德特、丹尼索瓦和非洲古老人种基因内混入（NDX）
+- 尼安德特和丹尼索瓦基因内混入伴随农业迁移（NDF）
+
+除了无基因内混入模型（表 S13）外，我们始终发现回非洲模型优于简单和混合非洲外模型。当我们使用 DLS 比较所有这些 15 个模型（[B, M, S] x [NI, ND, NDX, NDF, NDXF]）时，带有尼安德特、丹尼索瓦和非洲古老人种基因内混入的回非洲模型（BNDX）是
+
+表 3. 基于不同方法在模拟数据上的交叉验证
+
+| | OOA_B | OOA_M | OOA_S |
+|---|---|---|---|
+| **RF** | | | |
+| OOA_B | 92.85% | 1.84% | 5.31% |
+| OOA_M | 2.69% | 84.71% | 12.60% |
+| OOA_S | 6.17% | 15.38% | 78.44% |
+| **DL** | | | |
+| OOA_B | 88.03% | 2.54% | 9.43% |
+| OOA_M | 3.43% | 77.78% | 18.79% |
+| OOA_S | 5.78% | 15.69% | 78.52% |
+| **DLS** | | | |
+| OOA_B | 99.09% | 0.00% | 0.91% |
+| OOA_M | 0.00% | 99.98% | 0.02% |
+| OOA_S | 1.25% | 0.30% | 98.45% |
+
+此处通过 RF（随机森林）、DL（仅神经网络）和 DLS（神经网络与序列蒙特卡洛结合）对模型中随机样本的错误分类混淆矩阵进行了报告，采用了 ABC。
+
+我们的推断表明，首先在约 71.3 kya（置信区间 CI 69.4–73.3 kya）时，古非洲人群与既是回非洲人群又是真实非洲外人群的祖先群体（基底非洲外）之间发生了分离。随后在约 57.9 kya（CI 56.1–59.8 kya）时发生了回非洲与 OOA 之间的分裂，以及在约 48.2 kya（CI 46.8–49.5 kya）时发生了古非洲与回非洲之间的混合。尼安德特向 OOA 的基因内混入发生得晚得多，约为 38.3 kya（CI 37.6–39 kya），表明这次回非洲迁移无法解释现代非洲人群中发现的尼安德特血统。<sup>69</sup> 我们的方法预测来自回非洲的混合比例高达 91%（CI 90.28–91.57），表明古非洲人群发生了大规模替换。
+
+该模型获得了所有其他可能性的支持（P(BNDX|data) = 0.86）（表 S14）。带有新石器时代农业迁移的模型支持度较低（P(BNDXF|data) = 0.14）。RF 和 DL 均无法像 DLS 一样精确地区分这两个模型（表 S15 和 S16）。我们进一步使用更精确的先验和更多模拟数据测试了这两个模型（BNDX 和 BNDXF）（更多细节见材料与方法，通过 DLS 排除了欧洲新石器时代向非洲的迁移（表 S10）。这一结果不仅证明了我们对回非洲推断的稳健性，还独立支持了先前报告的其他假设（除新石器时代迁移外），但并非所有假设都被一起证实。<sup>16,20,47,63,64,68,69</sup> 除了上述描述的 15 个模型外，我们还测试了近期混合模型（模型 R），该模型在简单非洲外模型的基础上增加了非洲内部的分裂和随后的混合，两者均发生在 OOA 人群分离之后。因此，我们最佳的回非洲（BNDX）模型和近期混合模型都将现代非洲人群表示为两个组分混合的结果，主要区别在于这些分离发生在 OOA 人群分离之前还是之后。基于我们的结果，回非洲模型比近期混合模型更符合数据（表 S17）。
+
+为了独立验证我们的结果，我们比较了通过对真实数据以及在三个模型中用 DLS 预测的平均后验参数（表 2、S5 和 S6）模拟的数据应用 Relate<sup>32</sup> 所获得的有效人口数量轨迹和交叉汇合率。<sup>14</sup> 我们观察到真实数据估计值与我们最佳模型之间有很好的吻合（图 3），表明我们的参数估计是准确的。考虑到我们没有使用任何基于连锁不平衡（LD）的汇总统计数据来优化这些参数，这种相似性尤其有趣。另一方面，有效人口数量随时间的轨迹或交叉汇合率都不足以区分这三个模型（未显示数据）。具体来说，非洲与 OOA 人群之间的逐步分离——此前已通过 Relate 和类似方法显示<sup>13,14</sup>——不能直接由回非洲或两次非洲外迁移来解释，因为我们的模型 S 中也观察到了这种逐步分离（图 S6）。然而，来自 Relate 分析的人口对（CEU-YRI 和 CHB-YRI）中突变的二维 tMRCA 分布与回非洲模型的分布最吻合，与真实数据相比具有比其他替代方案更低的 RMSD 值（图 S4 和 S5）。
+
+### 参数估计
+
+在证明回非洲（BNDX）最能解释真实数据之后，我们使用上述三种方法（RF、DL 和 DLS）估计了模型的参数。DLS 返回的置信区间（CI）比替代方法要窄得多（表 2、S18 和 S19）。因此，下文讨论的所有结果均来自 DLS（图 2）。
+
+# 讨论
+
+我们在此证明，结合 SMC 方法使用神经网络可以大幅增强 ABC 分析。我们的方法适合检验许多可以模拟但无法通过其他方法广泛检验的假设，特别是适用于来自幽灵人群的混合场景，其中古代基因组不可用，并且可以容纳任何类型的汇总统计数据。我们的模型选择表明，它只需少量模拟（2,000 个样本）就可以在交叉验证步骤中轻松达到接近 100% 的准确性，表明它可以用于检验更加复杂的场景。我们还发现，我们的参数估计具有高精度（大多数事件的置信区间宽度
+
+## 表 4. 基于真实数据的不同方法的模型选择
+
+| | OOA B | OOA M | OOA S |
+|---|---|---|---|
+| RF | 66.00% | 16.40% | 17.60% |
+| DL | 100.00% | 0.00% | 0.00% |
+| DLS | 100.00% | 0.00% | 0.00% |
+
+这里通过真实数据报告了 RF（随机森林）的投票后验概率，以及 DL（仅神经网络）和 DLS（神经网络与序列蒙特卡洛结合）的后验模型概率。
+
+其他74 和/或我们的方法在估计它们时不精确。
+
+低于 5,000 年)，这可以直接补充碳14测定。在本研究中，我们使用 SFS 作为汇总统计量，因为它计算容易且包含足够信息。17,51 我们的结果可能通过使用一些基于 LD 的汇总统计量67,73 进一步改进，但我们放弃了，因为它们生成计算要求高且结果改进微乎其微（至少对于所测试的场景而言）。由于我们使用 SFS 作为汇总统计量的选择，我们的方法不受局部重组率52 影响。应用两种不同的过滤策略（有关更多详细信息，请参阅材料和方法）给出了类似结果，表明我们的策略对要分析的基因组区域的选择相当稳健。
+
+我们的结果也符合 Y 染色体系统发育，并支持先前提出的“回非洲”假说。10 但是，我们估计的人群间分离时间远比 Y 染色体报告的要年轻。一种解释可能是，我们使用了略高的突变率（每代每碱基对 1.45 x 10–8）53，而不是略慢的替代方案（每代每碱基对 1.25 x 10–8）。54,55 当我们使用较慢的突变率时，我们对大多数事件时间的估计增加了（表 S3）。的确，回非洲人群与 OOA 人群之间的分离时间对应于 72.8（CI 72.4–73.3）千年前，这与单倍群 D 和 E 之间 tMRCA 的估计（72 千年前 10）接近。
+
+在我们的模型中，我们没有采用人群间的任何恒定迁移，尽管我们的方法可以纳入它。这是因为我们发现，当我们使用来自无恒定迁移的脉冲迁移模型的模拟观察汇总统计数据以及来自表 2 均值的人口参数时，我们的方法（通过 DLS 进行参数估计）预测了非零迁移率（表 S9 和 S10）。这表明，包含恒定迁移的模型可能导致等同性，正如
+
+尽管在大多数情况下，回非洲优于其他替代方案，但将无基因混入（NI）作为一个选项支持混合走出非洲模型优于其他模型（表 S13）。这一结果可能是 OOA 中尼安德特人基因混入的副作用。在某些条件下（即，非洲和 OOA 之间较古老的分离时间 [T_B]），无基因混入的混合走出非洲模型与带有尼安德特人基因混入的简单走出非洲模型是可比的（在此场景中，尼安德特人种群表现得像第一个 OOA 种群）。但是，与其他更复杂的模型比较时，该模型被拒绝了（表 S14）。这一错误结果表明，我们的方法存在可能的缺点，因为不同的人口历史可以产生相似的 SFS 模式，如果人口历史未在模型中正确纳入，这可能会偏差我们的解释 52，并且也强调了参数估计的重要性，因为它可以为所选模型的选择提供洞察（特别是如果它与先验知识不匹配时），
+
+![](img/d8139985bcfa7a5c6e5bde789c7d9fed_9_0.png)
+
+## 图 2. 仅带有平均后验的推断人口统计模型 B 示意图。K 代表千年前，AFR 代表非洲，AA 代表祖先非洲，EUR 代表欧洲人，ASN 代表东亚人，XAFR 代表非洲古人。黑色方框代表人群间分离时间的平均后验。线条粗细代表各自人群的有效人口大小，尽管它们不按比例绘制。
+
+![](img/d8139985bcfa7a5c6e5bde789c7d9fed_10_0.png)
+
+## 图 3. 随时间变化的有效人口大小轨迹和并率（A 和 B）这里，我们比较了使用 Relate 在真实数据和模型 B 模拟数据之间估计的有效人口大小（A）和相对交叉并率（B）。（A）x 轴单位为 kya（千年前），y 轴是插图中显示的相应人群的有效人口大小。两个轴均为对数尺度。（B）x 轴单位为 kya，y 轴显示插入中显示的相应人群对的相对交叉并率。x 轴为对数尺度。
+
+在约鲁巴人中发现的尼安德特人区域应由其他一些迁移解释（例如，从人类到尼安德特人 [65]）。或者，新石器时代农民对西非人群的贡献可能太低，以至于我们当前格式的方法（以 SFS 作为汇总统计量）无法检测到它。
+
+这随后可以提出更复杂的场景进行测试。
+
+我们选择约鲁巴人、欧洲人和东亚人作为代表性人群集来测试 OOA 模型，因为它们研究得相当充分，并且比其他人群（例如，南亚人、东非人或中亚人等）表现出相对较少的近期混合，这使得我们的模型比其他替代方案相对更简单。尽管回非洲更好地解释了真实数据，但可能存在以额外迁移和混合为特征的更复杂模型，能更好地解释观察到的数据。我们在混合走出非洲模型下测试了两个走出非洲模型，但不够彻底，因为我们没有使用被认为来自第一个 OOA 人口贡献的人口。[7] 未来将巴布亚人群纳入其中重新审视这一假设将很有趣。
+
+智人与古人类种群之间的分离时间略为古老（人类与尼安德特人谱系分歧为 877 [CI 773.1–982.3] 千年前，人类与非洲古人类为 1,073.7 [CI 1,032.7–1,117.5] 千年前），比先前推断的 [63,66–68] 要古老，如果我们使用 400–1,600 千年前的宽松先验（表 S20）。当我们使用基于表 2 中已知参数生成的模拟汇总统计数据时，这些偏差未被重现。这可能特定于真实序列数据，并可能是我们某些假设的副作用（例如，此处未建模的这些人群之间的一些未知相互作用 [65]），或由于使用欧洲参考基因组 [75] 导致的系统偏差，或每代生成时间或每代突变率的近期变化 [76,77]。这些结果是在我们的真实 SFS 数据中完全未使用古代基因组的情况下获得的，以减少任何偏差的可能性。将古代基因组直接纳入我们的分析后重新审视这些结果将很有趣。
+
+我们的回非洲模型可以解释与 OOA 事件同时发生的所有非洲人群有效人口大小的减少。[78] 我们想提醒注意的是，尽管我们将模型命名为“回非洲”，但 OOA 人口不需要在地理上走出非洲。[21,79] 我们的估计，特别是回非洲的有效人口大小（N_BC）（超过 10,000），以及尼安德特人基因混入时间（T_NM）与回非洲人口与 OOA 人口分离时间（T_Sep）相比，表明分离可能发生在实际走出非洲事件之前的非洲内部。在这种情况下，我们的结果可以由西非和东非人口 87.8 千年前（T_B）的分离，随后是 OOA 与东非人口 72.8 千年前（T_Sep）的初级分离来解释（假设每代每碱基对突变率为 1.25 x 10^-8 [54,55]，生成时间为 29 年 [56]）。在这方面，我们的模型更类似于 Lipson et al., 2020 [16]。
+
+我们没有发现支持最近提出的欧洲新石器时代迁移到西非的模型 [69]。我们必须提醒，我们的结果仅适用于约鲁巴人群。由于撒哈拉以南非洲人群具有相当分化的祖先，这不代表整个撒哈拉以南非洲人群。尽管如此，我们的回非洲模型也未能解释在约鲁巴人中鉴定的尼安德特人序列。即使我们假设这一迁移已经发生（模型 BNDXF），我们预测的迁移量低至 2.4%（表 S21），这导致约鲁巴人中尼安德特人序列的平均总长度低于 5 Mb，而 Chen et al. [69] 报告为 17 Mb。这表明大部分
+
+与 Cole 等人（2020 年）[15] 所提出的模型不同。如果我们假设 Lipson 等人的模型为真，最简约的解释是，我们的回非洲人群代表了在 72.8 千年前（T_Sep）与 OOA 人群分离的基础西非人群。我们的古代非洲人代表幽灵现代人，[16] 根据我们的预测，通过约在 61.9 千年前发生的混合，向现代西非人群贡献了约 10%。另一方面，如果我们假设回非洲事件确实发生，那么 OOA 事件很可能发生在 90 千年前（T_B）之前。这表明，在非洲境外发现的大部分较古老的化石（>100 千年前）[80–82] 不太可能对 OOA 人群有所贡献（假设现代人类的主系在此之前并未离开非洲）。回非洲与 OOA 分离的地理位置对该假说至关重要，但无法通过我们的方法进行估计。一旦来自这些地区该时期的古代基因组可用，利用它们来检验这一假说将尤为令人着迷。
+
+- 祖先等位基因比对，http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase1/analysis_results/supporting/ancestral_alignments/
+- HGDP，http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGDP/
+- Keras 文档，https://keras.io/
+
+# 参考文献
+
+- 1. Hublin, J.-J., Ben-Ncer, A., Bailey, S.E., Freidline, S.E., Neubauer, S., Skinner, M.M., Bergmann, I., Le Cabec, A., Benazzi, S., Harvati, K., and Gunz, P. (2017). New fossils from Jebel Irhoud, Morocco and the pan-African origin of Homo sapiens. Nature 546, 289–292.
+- 2. Schlebusch, C.M., Malmström, H., Günther, T., Sjödin, P., Coutinho, A., Edlund, H., Munters, A.R., Vicente, M., Steyn, M., Soodyall, H., et al. (2017). Southern African ancient genomes estimate modern human divergence to 350,000 to 260,000 years ago. Science 358, 652–655.
+- 3. Grün, R., Stringer, C., McDermott, F., Nathan, R., Porat, N., Robertson, S., Taylor, L., Mortimer, G., Eggins, S., and McCulloch, M. (2005). U-series and ESR analyses of bones and teeth relating to the human burials from Skhul. J. Hum. Evol. 49, 316–334.
+- 4. Mondal, M., Casals, F., Xu, T., Dall'Olio, G.M., Pybus, M., Netea, M.G., Comas, D., Laayouni, H., Li, Q., Majumder, P.P., and Bertranpetit, J. (2016). Genomic analysis of Andamanese provides insights into ancient human migration into Asia and adaptation. Nat. Genet. 48, 1066–1070.
+- 5. Malaspinas, A.S., Westaway, M.C., Muller, C., Sousa, V.C., Lao, O., Alves, I., Bergström, A., Athanasiadis, G., Cheng, J.Y., Crawford, J.E., et al. (2016). A genomic history of Aboriginal Australia. Nature 538, 207–214.
+- 6. Mallick, S., Li, H., Lipson, M., Mathieson, I., Gymrek, M., Racimo, F., Zhao, M., Chennagiri, N., Nordenfelt, S., Tandon, A., et al. (2016). The Simons Genome Diversity Project: 300 genomes from 142 diverse populations. Nature 538, 201–206.
+- 7. Pagani, L., Lawson, D.J., Jagoda, E., Mörseburg, A., Eriksson, A., Mitt, M., Clemente, F., Hudjashov, G., DeGiorgio, M., Saag, L., et al. (2016). Genomic analyses inform on migration events during the peopling of Eurasia. Nature 538, 238–242.
+- 8. Soares, P., Alshamali, F., Pereira, J.B., Fernandes, V., Silva, N.M., Afonso, C., Costa, M.D., Musilová, E., Macaulay, V., Richards, M.B., et al. (2012). The Expansion of mtDNA Haplogroup L3 within and out of Africa. Mol. Biol. Evol. 29, 915–927.
+- 9. Karmin, M., Saag, L., Vicente, M., Wilson Sayres, M.A., Järve, M., Talas, U.G., Rootsi, S., Ilumäe, A.M., Mägi, R., Mitt, M., et al. (2015). A recent bottleneck of Y chromosome diversity coincides with a global change in culture. Genome Res. 25, 459–466.
+- 10. Poznik, G.D., Xue, Y., Mendez, F.L., Willerms, T.F., Massaia, A., Wilson Sayres, M.A., Ayub, Q., McCarthy, S.A., Narechania, A., Kashin, S., et al. (2016). Punctuated bursts in human male demography inferred from 1,244 worldwide Y-chromosome sequences. Nat. Genet. 48, 593–599.
+- 11. Mondal, M., Bergström, A., Xue, Y., Calafell, F., Laayouni, H., Casals, F., Majumder, P.P., Tyler-Smith, C., and Bertranpetit, J. (2017). Y-chromosomal sequences of diverse Indian populations and the ancestry of the Andamanese. Hum. Genet. 136, 499–510.
+- 12. Haber, M., Jones, A.L., Connell, B.A., Asan, Arciero, E., Yang, H., Thomas, M.G., Xue, Y., and Tyler-Smith, C. (2019). A rare deep-rooting D0 African Y-chromosomal haplogroup and its implications for the expansion of modern humans out of Africa. Genetics 212, 1421–1428.
+- 13. Schiffels, S., and Durbin, R. (2014). Inferring human population size and separation history from multiple genome sequences. Nat. Genet. 46, 919–925.
+- 14. Speidel, L., Forest, M., Shi, S., and Myers, S.R. (2019). A method for genome-wide genealogy estimation for thousands of samples. Nat. Genet. 51, 1321–1329.
+- 15. Cole, C.B., Zhu, S.J., Mathieson, I., Prüfer, K., and Lunter, G. (2020). Ancient Admixture into Africa from the ancestors of non-Africans. bioRxiv. https://doi.org/10.1101/2020.06.01.127555.
+- 16. Lipson, M., Ribot, I., Mallick, S., Rohland, N., Olalde, I., Adamski, N., Broomandkhoshbacht, N., Lawson, A.M., López, S., Oppenheimer, J., et al. (2020). Ancient West African foragers in the context of African population history. Nature 577, 665–670.
+- 17. Gutenkunst, R.N., Hernandez, R.D., Williamson, S.H., and Bustamante, C.D. (2009). Inferring the joint demographic history of multiple populations from multidimensional SNP frequency data. PLoS Genet. 5, e1000695.
+- 18. Li, H., and Durbin, R. (2011). Inference of human population history from individual whole-genome sequences. Nature 475, 493–496.
+- 19. Gravel, S., Henn, B.M., Gutenkunst, R.N., Indap, A.R., Marth, G.T., Clark, A.G., Yu, F., Gibbs, R.A., Bustamante, C.D.; and 1000 Genomes Project (2011). Demographic history and rare allele sharing among human populations. Proc. Natl. Acad. Sci. USA 108, 11983–11988.
+- 20. Mondal, M., Bertranpetit, J., and Lao, O. (2019). Approximate Bayesian computation with deep learning supports a third archaic introgression in Asia and Oceania. Nat. Commun. 10, 246.
+- 21. Bergström, A., Stringer, C., Hajdinjak, M., Scerri, E.M.L., and Skoglund, P. (2021). Origins of modern human ancestry: Nature 590, 229–237.
+- 22. van de Loosdrecht, M., Bouzouggar, A., Humphrey, L., Posth, C., Barton, N., Aximu-Petri, A., Nickel, B., Nagel, S., Talbi, E.H., El Hajraoui, M.A., et al. (2018). Pleistocene North African genomes link Near Eastern and sub-Saharan African human populations. Science 360, 548–552.
+- 23. Ciregan, D., Meier, U., and Schmidhuber, J. (2012). Multi-column deep neural networks for image classification. In 2012 IEEE conference on computer vision and pattern recognition (IEEE), pp. 3642–3649.
+- 24. Graves, A., and Schmidhuber, J. (2009). Offline handwriting recognition with multidimensional recurrent neural networks. In Advances in neural information processing systems, pp. 545–552.
+- 25. Hutter, M. (2007). On universal prediction and Bayesian confirmation. Theor. Comput. Sci. 384, 33–48.
+- 26. Kurtz, D.M., Esfahani, M.S., Scherer, F., Soo, J., Jin, M.C., Liu, C.L., Newman, A.M., Dührsen, U., Hüttmann, A., Casasnovas, O., et al. (2019). Dynamic risk profiling using serial tumor biomarkers for personalized outcome prediction. Cell 178, 699–713.e19.
+- 27. Goldberg, Y. (2016). A primer on neural network models for natural language processing. J. Artif. Intell. Res. 57, 345–420.
+- 28. Hudson, R.R. (2002). Generating samples under a Wright-Fisher neutral model of genetic variation. Bioinformatics 18, 337–338.
+- 29. Kelleher, J., Etheridge, A.M., and McVean, G. (2016). Efficient Coalescent Simulation and Genealogical Analysis for Large Sample Sizes. PLoS Comput. Biol. 12, e1004842.
+- 30. Jay, F., Boitard, S., and Austerlitz, F. (2019). An ABC method for whole-genome sequence data: Inferring Paleolithic and Neolithic human expansions. Mol. Biol. Evol. 36, 1565–1579.
+- 31. Villanea, F.A., and Schraiber, J.G. (2019). Multiple episodes of interbreeding between Neanderthal and modern humans. Nat. Ecol. Evol. 3, 39–44.
+- 32. Kern, A.D., and Schrider, D.R. (2018). diploS/HIC: an updated approach to classifying selective sweeps. G3 8, 1959–1970.
+- 33. Torada, L., Lorenzen, L., Beddis, A., Isildak, U., Pattini, L., Mathieson, S., and Fumagalli, M. (2019). ImaGene: a convolutional neural network to quantify natural selection from genomic data. BMC Bioinformatics 20 (Suppl 9), 337.
+- 34. Sanchez, T., Cury, J., Charpiat, G., and Jay, F. (2020). Deep learning for population size history inference: Design, comparison and combination with approximate Bayesian computation. Mol. Ecol. Resour. Published online July 9, 2020. https://doi.org/10.1111/1755-0998.13224.
+- 35. Beaumont, M.A. (2019). Approximate Bayesian Computation. Annu. Rev. Stat. Appl. 6, 379–403.
+- 36. Liu, J.S., and Chen, R. (1998). Sequential Monte Carlo methods for dynamic systems. J. Am. Stat. Assoc. 93, 1032–1044.
+- 37. Mitchell, M. (1998). An introduction to genetic algorithms (MIT press).
+- 38. Sisson, S.A., Fan, Y., and Tanaka, M.M. (2007). Sequential Monte Carlo without likelihoods. Proc. Natl. Acad. Sci. USA 104, 1760–1765.
+- 39. Beaumont, M.A., Cornuet, J.-M., Marin, J.-M., and Robert, C.P. (2009). Adaptive approximate Bayesian computation. Biometrika 96, 983–990.
+- 40. Toni, T., Welch, D., Strelkowa, N., Ipsen, A., and Stumpf, M.P. (2009). Approximate Bayesian computation scheme for parameter inference and model selection in dynamical systems. J. R. Soc. Interface 6, 187–202.
+- 41. Collette, A. (2013). Python and HDF5: unlocking scientific data (O'Reilly Media, Inc.).
+- 42. Abadi, M., Barham, P., Chen, J., Chen, Z., Davis, A., Dean, J., Devin, M., Ghemawat, S., Irving, G., Isard, M., et al. (2016). TensorFlow: A system for large-scale machine learning. In Proceedings of the 12th USENIX Symposium on Operating Systems Design and Implementation, OSDI 2016.
+- 43. Raynal, L., Marin, J.M., Pudlo, P., Ribatet, M., Robert, C.P., and Estoup, A. (2019). ABC random forests for Bayesian parameter inference. Bioinformatics 35, 1720–1728.
+- 44. Byrska-Bishop, M., Evani, U.S., Zhao, X., Basile, A.O., Abel, H.J., Regier, A.A., Corvelo, A., Clarke, W.E., Musunuri, R., Nagalapalli, K., Fairley, S., et al. (2021). High coverage whole genome sequencing of the expanded 1000 Genomes Project cohort including 602 trios. bioRxiv. https://doi.org/10.1101/2021.02.06.430068.
+- 45. Bergström, A., McCarthy, S.A., Hui, R., Almarri, M.A., Ayub, Q., Danecek, P., Chen, Y., Felkel, S., Hallast, P., Kamm, J., et al. (2020). Insights into human genetic variation and population history from 929 diverse genomes. Science 367, eaay5012.
+
+# 数据和代码可用性
+
+本研究期间生成的代码可在 https://github.com/mayukhmondal/ABC-DLS 获取。如需更多信息，请联系通讯作者。
+
+# 补充信息
+
+补充信息可在线查阅：https://doi.org/10.1016/j.ajhg.2021.09.006。
+
+# 致谢
+
+我们谨感谢纽约基因组中心的 Michael Zody 提供高覆盖度 1000 基因组数据的访问权限。这些数据在纽约基因组中心生成，由 NHGRI 资助 3UM1HG008901-03S1 号拨款。本研究获得欧盟通过“视野 2020”研究和创新计划（拨款编号 810645）、欧洲区域发展基金项目 MOBEC008、2014-2020.4.01.16-0030 和 2014-2020.4.01.16-0024 的支持。部分数据分析在塔尔图大学高性能计算中心进行。
+
+# 利益声明
+
+作者声明不存在竞争性利益。
+
+- 收稿日期：2021 年 3 月 29 日
+- 接受日期：2021 年 9 月 9 日
+- 发表日期：2021 年 10 月 8 日
+
+# 网络资源
+
+- 1000 基因组高覆盖，https://www.internationalgenome.org/data-portal/data-collection/30x-grch38
+
+
+
+
+- 46. Prüfer, K., de Filippo, C., Grote, S., Mafessoni, F., Korlević, P., Hajdinjak, M., Vernot, B., Skov, L., Hsieh, P., Peyrégne, S., 等人. (2017). 来自克罗地亚文丁贾洞穴的高覆盖度尼安德特人基因组. Science 358, 655–658.
+
+- 47. Jacobs, G.S., Hudjashov, G., Saag, L., Kusuma, P., Darusallam, C.C., Lawson, D.J., Mondal, M., Pagani, L., Ricaut, F.X., Stoneking, M., 等人. (2019). 巴布亚人中多个深度分歧的丹尼索瓦人血统. Cell 177, 1010–1021.e32.
+
+- 48. Li, H. (2011). 来自测序数据的SNP检测、突变发现、关联映射和种群遗传参数估计的统计框架. Bioinformatics 27, 2987–2993.
+
+- 49. Danecek, P., Auton, A., Abecasis, G., Albers, C.A., Banks, E., DePristo, M.A., Handsaker, R.E., Lunter, G., Marth, G.T., Sherry, S.T., 等人. (2011). 变异呼叫格式与VCFtools. Bioinformatics 27, 2156–2158.
+
+- 50. Miles, A., Murrillo, R., Ralph, P., Harding, N., Pisupati, R., Rae, S., and Millar, T. (2020). cggh/scikit-allel: v1.3.2 (Zenodo). https://doi.org/10.5281/zenodo.3976233.
+
+- 51. Excoffier, L., Dupanloup, I., Huerta-Sánchez, E., Sousa, V.C., and Foll, M. (2013). 来自基因组和SNP数据的稳健人口统计推断. PLoS Genet. 9, e1003905.
+
+- 52. Lapierre, M., Lambert, A., and Achaz, G. (2017). 来自位点频谱的人口统计推断准确性：约鲁巴人群的案例. Genetics 206, 439–449.
+
+- 53. Scally, A. (2016). 人类进化与人口统计推断中的突变率. Curr. Opin. Genet. Dev. 41, 36–43.
+
+- 54. Kong, A., Frigge, M.L., Masson, G., Besenbacher, S., Sulem, P., Magnusson, G., Gudjonsson, S.A., Sigurdsson, A., Jonasdottir, A., Jonasdottir, A., 等人. (2012). 新生突变率及父亲年龄对疾病风险的重要性. Nature 488, 471–475.
+
+- 55. Tian, X., Browning, B.L., and Browning, S.R. (2019). 基于三方血缘同源的全基因组突变率估计. Am. J. Hum. Genet. 105, 883–893.
+
+- 56. Tremblay, M., and Vézina, H. (2000). 用于计算突变年龄和起源的代间时间间隔新估计. Am. J. Hum. Genet. 66, 651–658.
+
+- 57. Köster, J., and Rahmann, S. (2012). Snakemake——一个可扩展的生物信息学工作流引擎. Bioinformatics 28, 2520–2522.
+
+- 58. Csilléry, K., François, O., and Blum, M. (2012). R中的近似贝叶斯计算（ABC）：一个短篇教程. Methods in Ecology and Evolution 3, 475–479.
+
+- 59. Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, V., 等人. (2011). Scikit-learn：Python中的机器学习. J. Mach. Learn. Res. 12, 2825–2830.
+
+- 60. Salle, A., Villavicencio, A., and Id mart, M. (2016). 使用窗口采样和负采样进行矩阵分解以改进词表示. 在《计算语言学协会第54届年会论文集（第2卷：短论文）》（计算语言学协会）中，第419–424页.
+
+- 61. Breiman, L. (2001). 随机森林. Mach. Learn. 45, 5–32.
+
+- 62. Pudlo, P., Marin, J.M., Estoup, A., Cornuet, J.M., Gautier, M., and Robert, C.P. (2016). 通过随机森林进行可靠的ABC模型选择. Bioinformatics 32, 859–866.
+
+- 63. Green, R.E., Krause, J., Briggs, A.W., Maricic, T., Stenzel, U., Kircher, M., Patterson, N., Li, H., Zhai, W., Fritz, M.H., 等人. (2010). 尼安德特人基因组草图序列. Science 328, 710–722.
+
+- 64. Browning, S.R., Browning, B.L., Zhou, Y., Tucci, S., and Akey, J.M. (2018). 人类序列数据分析揭示两次古丹尼索瓦人基因流入脉冲. Cell 173, 53–61.e9.
+
+- 65. Kuhlwilm, M., Gronau, I., Hubisz, M.J., de Filippo, C., Prado-Martinez, J., Kircher, M., Fu, Q., Burbano, H.A., Lalueza-Fox, C., de la Rasilla, M., 等人. (2016). 早期现代人类向东方尼安德特人的古代基因流. Nature 530, 429–433.
+
+- 66. Meyer, M., Kircher, M., Gansauge, M.T., Li, H., Racimo, F., Mallick, S., Schraiber, J.G., Jay, F., Prüfer, K., de Filippo, C., 等人. (2012). 来自一名古丹尼索瓦人的高覆盖度基因组序列. Science 338, 222–226.
+
+- 67. Ragsdale, A.P., and Gravel, S. (2019). 基于两位点统计的古代混合与最近历史模型. PLoS Genet. 15, e1008204.
+
+- 68. Lorente-Galdos, B., Lao, O., Serra-Vidal, G., Santerpe, G., Kuderna, L.F.K., Arana, L.R., Fadhlaoui-Zid, K., Pimenoff, V.N., Soodyall, H., Zalloua, P., 等人. (2019). 泛非样本集全基因组序列分析揭示来自灭绝的基础现代人群体向撒哈拉以南人群的古代基因流. Genome Biol. 20, 77.
+
+- 69. Chen, L., Wolf, A.B., Fu, W., Li, L., and Akey, J.M. (2020). 非洲个体中表观尼安德特人血统的鉴定与解释. Cell 180, 677–687.e16.
+
+- 70. Loh, P.-R., Palamara, P.F., and Price, A.L. (2016). 英国生物银行队列中快速准确的长程相位. Nat. Genet. 48, 811–816.
+
+- 71. Journougas, J., Long, W., Ragsdale, A.P., and Gravel, S. (2017). 多个人群联合人口统计历史的推断：超越扩散近似. Genetics 206, 1549–1567.
+
+- 72. Durvasula, A., and Sankararaman, S. (2020). 非洲人群中幽灵古代基因流入信号的恢复. Sci. Adv. 6, eaax5097.
+
+- 73. Theunert, C., Tang, K., Lachmann, M., Hu, S., and Stoneking, M. (2012). 从全基因组SNP数据推断人口规模变化历史. Mol. Biol. Evol. 29, 3653–3667.
+
+- 74. Wall, J.D. (2017). 从等位基因共享模式推断非非洲人群的人口统计学历史. Am. J. Hum. Genet. 100, 766–772.
+
+- 75. Mondal, M., Casals, F., Majumder, P.P., and Bertranpetit, J. (2018). 回应“南亚未知古代血统无证据”. Nat. Genet. 50, 1637–1639.
+
+- 76. Moorjani, P., Sankararaman, S., Fu, Q., Przeworski, M., Patterson, N., and Reich, D. (2016). 分子钟有助于估计古基因组的年代. Proc. Natl. Acad. Sci. USA 113, 5459–5460.
+
+- 77. Besenbacher, S., Hvilsom, C., Marques-Bonet, T., Mailund, T., and Schierup, M.H. (2019). 人猿中突变的直接估计使系统发育年代测定一致. Nat. Ecol. Evol. 3, 286–292.
+
+- 78. Schlebusch, C.M., Sjödin, P., Breton, G., Günther, T., Naidoo, T., Hollfelder, N., Sjostrand, A.E., Xu, J., Gattepaille, L.M., Vicente, M., 等人. (2020). Khoe-San基因组揭示独特变异并证实智人中最深的人口分化. Mol. Biol. Evol. 37, 2944–2954.
+
+- 79. Pagani, L., and Crevecoeur, I. (2018). 什么是非洲？一个人类视角. https://doi.org/10.13140/RG.2.2.16605.10728.
+
+- 80. Trinkaus, E. (1993). 卡夫泽-舒洞早期现代人的股骨颈干角及近东中石器时代未成熟古人类的活动水平. J. Hum. Evol. 25, 393–416.
+
+- 81. Liu, W., Martínón-Torres, M., Cai, Y.J., Xing, S., Tong, H.W., Pei, S.W., Sier, M.J., Wu, X.H., Edwards, R.L., Cheng, H., 等人. (2015). 中国南部最早的无可争议的现代人类. Nature 526, 696–699.
+
+- 82. Harvati, K., Rödling, C., Bosman, A.M., Karakostis, F.A., Grün, R., Stringer, C., Karkanas, P., Thompson, N.C., Koutoulidis, V., Mouropoulos, L.A., 等人. (2019). 阿皮迪马洞穴化石提供了欧亚大陆最早的智人证据. Nature 571, 500–504.
+
