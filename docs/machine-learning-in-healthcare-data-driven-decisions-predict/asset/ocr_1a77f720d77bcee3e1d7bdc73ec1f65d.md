@@ -1,0 +1,9 @@
+of estimators as 10. The AdaBoost and XGBoost are implemented with the number of estimators of 50. Bagging reached an accuracy of 75.00%, a precision of 62.89%, a recall of 59.80%, and an F1 score of 61.31%. AdaBoost achieved 75.32% accuracy, 62.50% precision, 63.73% recall, and an F1 score of 63.11%. XGBoost matched the top individual model accuracy at 76.62%, with a precision of 63.64%, a recall of 68.63%, and an F1 score of 66.04%. Figures 9–11 exhibit the SHAP values of bagging, AdaBoost, and XGBoost, respectively. The performance of bagging, AdaBoost, and XGBoost is shown in Figure 12.
+
+![](bbox=[0.15, 0.26, 0.85, 0.54])
+
+# Figure 9: Boosting – SHAP values.
+
+We have used four stacking ensemble models. The first model uses DT, RF, SVMs, and kNN classifiers as base estimators and LR as a final estimator. The second model uses DTs, SVMs, LR, kNNs as base estimators, and RF as a final estimator. The third ensemble is done between DT, SVMs, RF, LR as base estimator, and kNN as final estimator. The last stacking ensemble model uses using soft voting ensemble model, AdaBoost, and XGBoost as base estimators and RF as a final estimator. We name the ensemble models stacking 1, stacking 2, stacking 3, and stacking 4.
+
+The stacking model with RF as the final estimator gives better results because it corrects the errors of the base learners, and biases and variances are reduced. The performance of all the stacking models is shown in Figure 13, and the SHAP values of the stacking model 1 are shown in Figure 14. Table 1 shows the performance of all the models and all the ensemble methods used in the experiment.

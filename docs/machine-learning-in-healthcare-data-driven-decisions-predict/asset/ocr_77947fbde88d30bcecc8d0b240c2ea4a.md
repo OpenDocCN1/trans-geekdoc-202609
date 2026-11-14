@@ -1,0 +1,5 @@
+![](bbox=[0.18, 0.1, 0.88, 0.6])
+
+Figure 1: Different data generation sources in healthcare.
+
+Figure 1 shows different data generation sources in healthcare. like images, text, and time series [5]. Convolutional neural networks (CNNs) have achieved state-of-the-art performance in medical image analysis (e.g., detecting diabetic retinopathy in retinal scans, ident memory networks) are well-suited for analyzing sequential data such as EHR trajectories, physiological time series, or natural language processing of clinical notes. Deep learning models, while powerful, often require massive amounts of data for training and can be challenging to interpret, posing significant hurdles in regulated healthcare environments where understanding the basis for a prediction is critical. Hybrid approaches combining different ML paradigms are also increasingly being explored to leverage the strengths of each technique and address the multifaceted challenges of healthcare data analysis. The success of deep learning is primarily attributed to its ability to automatically learn hierarchical representations of data, ex-

@@ -1,0 +1,13 @@
+| Symbol | Description |
+| :--- | :--- |
+| $\sigma$ | Noise standard deviation for differential privacy |
+| $d_u$ | Decentralized identifier (user identity) |
+| SC(.) | Smart contract function |
+
+Table 1 shows system workflow and Table 2 depicts the notations. Decentralized model training with rigorous privacy assurances, secure aggregation of encrypted updates, and fine-grained access control governed by blockchain are all enabled by the method. The architecture reduces the risk of data breaches without compromising model accuracy and scalability by ensuring that sensitive patient data never leaves institutional walls. The system provides secure data exchange and accountability in multi-institutional health partnerships using consensus protocols and immutable audit trails. Overall, this approach represents a big step forward for useful, safe, and privacy-aware AI-based healthcare solutions.
+
+# 4 Experimental Results
+
+A virtual six-institutional healthcare environment with 200 patient records in each institution, totaling 1,200 records of the publicly available Pima Indians Diabetes Database (PIDD) was used to evaluate the proposed MediChain-FL system. Python 3.8 was used to set up the simulation environment on a PC with Ubuntu 20.04, equipped with an Intel Core i7 CPU and 32 GB of RAM. Permissioned blockchain was emulated with Hyperledger Fabric v2.3, whereas PySyft with homomorphic encryption capability was employed to create the FL framework. Centralized ML models that were trained on pooled data and centralized FL models that were not integrated with blockchain were instantiated to act as baselines for the system.
+
+The parameters of evaluation included model accuracy, precision, recall, F1score, reduction in data breach risk, blockchain consensus latency, and cost per data access. From Figure 2, the proposed MediChain-FL had 93.2% accuracy, which was better than the centralized models by 5.6%, achieving only 87.6%. With an F1score of 91.1%, precision and recall were at 91.8% and 90.5%, respectively, which was better than baseline FL approaches by about 4–6%. The blockchain layer provided fast and scalable access to data with a consensus latency of 1.28 seconds per transaction and an average of $0.004 transaction cost. Notably, the system reduced patient data breaches by 91.7% compared to conventional centralized data exchange, founded on the application of homomorphic encryption and decentralized data administration.

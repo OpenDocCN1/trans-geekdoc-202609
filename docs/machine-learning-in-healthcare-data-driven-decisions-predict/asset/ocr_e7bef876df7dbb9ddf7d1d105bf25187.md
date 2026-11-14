@@ -1,0 +1,15 @@
+moval from the network may have a substantial influence on the network’s connectedness. This centrality metric is often used with other centrality measures to get a thorough comprehension of node significance in intricate networks.
+
+# 5 Proposed Model
+
+An egocentric doctor network with $N$ nodes is created by activity-driven temporal network formation, where nodes alternate between active and inactive phases throughout time $T$. Let $A_t$ be the Active periods, which suggests that the doctor is staying at a location and makes different links in same place in a period of time (DLSPT) with other nodes. Just like active period inactive periods $I_t$, these time frames indicate when the doctor node does not establish connections with other nodes, but instead receives DLSPT linkages. The DLSPT link is directed from the host (doctor) nodes to other neighbor (family, friends, co-worker, patients, others) nodes. Just like in the above diagram, the doctor will stay at the hospital for a limited period of time, let’s say 10 p.m. to 5 p.m., and spends his time with his co-workers, his regular patients, and other patients in the hospital. After that, the doctor travels and goes home. He spends some time with his family and friends. While he is in hospital, nodes will be active and create links with other nodes or entities in the hospital. After the time period is over, that node is inactive in that place and active in some other place, but he can receive the DLSPT links from the hospital.
+
+The duration of active periods, $A_t$, is stochastically determined by a geometric distribution with parameter $\varepsilon$, i.e., $P_1(A_t) \sim geometric(\varepsilon)$, where $\varepsilon$ represents a constant scaling factor. Meanwhile, the lengths of inactive periods, denoted as $I_t$, are generated from a geometric distribution with parameter $\gamma$, i.e., $(I_t) \sim geometric(\gamma)$, where $\gamma$ is given heterogeneously to represent varying visitor frequency. The activation potentiality $\gamma$, which exhibits heterogeneity, may be described by a power law relationship $F_1(\gamma) \sim \gamma^{-\beta}$, where $\beta$ represents the scaling parameter.
+
+To represent the dynamics of disease transmission, an indirect transmission period, $\pi$, is included for each active phase. During a certain event $A_t$ and its related probability $\pi$, the doctor generates a predetermined quantity of DLSPT linkages, denoted by the variable $l$, as defined by the following equation:
+
+$Pr(l) = (1 - \sigma)\sigma^{l-1}$
+
+where $\sigma$ denotes the willingness to visit public locations. The value of $\sigma$ is sampled from a power law distribution $F_2(\sigma) \sim \sigma^{-a}$, where $a$ is the scaling parameter. The fluctuations in $l$ represent the spatial and temporal (spatio-temporal) patterns within the doctor’s social network.
+
+Every DLSPT connection has certain timing characteristics: $A_t$ denotes the length of the doctor’s presence at the site where interaction occurred, $d_t$ reflects the time

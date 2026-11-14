@@ -1,0 +1,11 @@
+![](bbox=[0.11, 0.08, 0.69, 0.28])
+
+Figure 7: Performance analysis – F1-score.
+
+Figure 6 indicates how well each model classifies actual diabetic cases, with higher being fewer false negatives. LR stands at 0.73 recall, followed very closely by decision tree at 0.70, both mid-rank in classifying positive cases correctly. RF is considerably better at 0.81, which translates to more sensitivity. SVM drops back to 0.78, but remains competitive. XGBoost demonstrates a significant increase in recall value 0.84, which shows how well it identifies positive cases with precision. Stacked ensemble model takes the top spot with a recall of 0.86, showing the highest precision in identifying diabetic patients. Overall, the graph displays an overall enhancement, and the ensemble models, particularly stacking, play a vital role in improving the model for the detection of diabetes with precision.
+
+Figure 7 illustrates the recall-precision trade-off of all the models, especially in clinical diagnosis where the false positive and false negative are worst. Decision tree has a comparatively poor F₁-score of 0.74, whereas LR lags behind with 0.71, which means the recall-precision trade-off of the classification is comparatively worse. RF takes this score to a significantly better F₁-score of 0.81, followed by SVM to 0.79 F₁-score. XGBoost further continues in the trend of improved performance to 0.84 F₁-score. The stacked ensemble model is the best among all the models taken separately with an F₁-score of 0.86, which shows its highest capability to provide precision and recall balance. This improvement over models confirms the efficiency of ensemble methods to overall strength gain of classification in diabetes prediction issues.
+
+# ## 4.1 Deployment
+
+When satisfactory model performance is achieved, deployment is the final step that makes real-world clinical application possible. One common practice is to build a web interface with Flask or Streamlit that allows clinicians to input patient details and receive real-time predictions for diabetes risk. For more integrated use, the model can be put into production in an EHR system within a hospital through a REST API so that

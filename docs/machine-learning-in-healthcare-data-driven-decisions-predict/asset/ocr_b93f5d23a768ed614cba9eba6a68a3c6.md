@@ -1,0 +1,13 @@
+Hybrid approaches mixing more than one algorithm have also appeared, trying to build on each building block's advantages. For instance, the SELF-CARE system utilizes context-aware selective sensor fusion together with low-power edge computing for boosting stress detection accuracy without compromising on energy efficiency. Also, federated learning methods have been introduced to deal with privacy issues in stress detection, supporting decentralized model training on the wearable devices without exposing raw data. These advances reflect an important trend toward advanced, precise, and privacy-conscientious stress detection systems made possible by the interplay of wearable technology and advanced ML algorithms.
+
+# ## 2.4 Monitoring and Detection of Psychological Stress with the Help of Machine Learning (ML)
+
+This has come a long way due to the widespread use of wearable sensors, mobile devices, and the demand for real-time, noninvasive mental health monitoring. From 2022 to 2025, many studies have shown the feasibility of using ML algorithms in the reliable prediction of stress levels from multimodal physiological and behavioral data.
+
+Vos et al. [9] performed a systematic review examining the generalizability of ML-stress models based on wearable data. They emphasized that while high accuracy is attained with ML methods such as RF, SVM, and k-nearest neighbors (KNN), most models have poor generalization as a result of inconsistencies in the datasets, label variability, and limited sample sizes. The authors stressed the importance of standardized benchmarking and reliable cross-validation methods to enhance deployment in real-world environments
+
+In a broad scoping review, Razavi et al. [10] surveyed more than 90 studies that used ML and DL in the detection of stress and mental disorders. They indicated that deep neural networks, particularly LSTM and CNN, are superior to conventional ML methods when ample time-series data is present. Their work also highlighted the value of data preprocessing operations (e.g., feature scaling, removal of artifacts) and multimodal input (heart rate, skin conductance, respiration, behavioral indicators) for improving the performance and interpretability of the model.
+
+# ## 2.5 Physiological Signal-Based Approaches
+
+Physiological signals like HR, HRV, EDA, respiration rate, and electroencephalography (EEG) have been extensively explored with regards to stress correlation. The authors investigated the detection of stress with HRV and EDA data acquired from wearable devices in a simulated laboratory environment [5,6]. They used various classifiers, such as SVM, RF, and logistic regression. The RF classifier performed better than the

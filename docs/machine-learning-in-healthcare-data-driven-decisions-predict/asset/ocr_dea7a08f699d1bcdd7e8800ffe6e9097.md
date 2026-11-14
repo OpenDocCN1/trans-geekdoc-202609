@@ -1,0 +1,13 @@
+S. Satheesh Kumar, Beena Suresh Gaikwad, Meram Munirathnam, and Antline Nisha B.
+
+# A Hierarchical Cross-Fusion Feature Extraction Network for Accurate Cervical Cancer Classification Using Cytology Images
+
+Abstract: Globally, cervical cancer is a cause of serious health concern, especially in less developed countries with a lack of frequent screening and specialized diagnosis. Although there has been advancement in the automated detection of cervical cancer due to the developments in deep learning over the recent past, many of the existing models suffer from poor feature representation, poor interpretability, and poor performance on class imbalance datasets. Particularly, these models tend to overlook inter-class similarity and high-resolution cellular differences and end up with low diagnostic reliability and generalizability. We introduce an innovative architecture named hierarchical cross-fusion feature extraction network (HCFEN) to address these issues. HCFEN is designed to improve contextual and morphological features in images of cervical cytology. HCFEN achieves powerful, multi-level features by combining cross-attention blocks, hierarchical fusion blocks, and a dual-branch convolutional neural network backbone. For minimizing dataset imbalance and improved minority class identification, a class-aware loss function is also utilized. Herlev dataset was used to evaluate the model proposed. For Herlev, HCFEN recorded F1-score: 98.5%, sensitivity: 98.2%, specificity: 99.0%, and accuracy: 98.7%. These facts establish that HCFEN provides an extremely accurate, robust, and interpretable model for computer-aided cervical cancer detection.
+
+Keywords: cervical cancer, deep learning, feature extraction, cytology images, cross-attention, medical image classification
+
+S. Satheesh Kumar, School of Information Science, Presidency University, Bengaluru 560064, Karnataka, India, e-mail: satheesh.sampath@gmail.com
+Beena Suresh Gaikwad, Research Scholar, CMR University, Department of Computer Science, Presidency College, Bengaluru, Karnataka, India, e-mail: beenau1@gmail.com
+Meram Munirathnam, Department of Mathematics, Rajiv Gandhi University of Knowledge Technologies, R.K. Valley, Kadapa, Idulpulapaya 516330, Andhra Pradesh, India, e-mail: munirathnam1986@gmail.com
+Antline Nisha B., Department of Mathematics, St. Joseph's Institute of Technology, Chennai, Tamil Nadu, India, e-mail: antilenisha@gmail.com
+https://doi.org/10.1515/9783111541235-019

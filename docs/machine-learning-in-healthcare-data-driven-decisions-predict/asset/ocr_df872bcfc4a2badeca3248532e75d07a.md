@@ -1,0 +1,14 @@
+S. Padmalal, P. Arumugam, M. Baby Anusha, Kalyan Devappa Bamane, Nagendar Yamsani, and Kireet Mupavaram
+
+# Machine Learning for Early Detection of Chronic Diseases: A Case Study in Diabetes Prediction
+
+**Abstract:** Early detection of chronic diseases like diabetes is very important for early treatment and effective management. This chapter describes a machine learning (ML) solution for predicting diabetes risk from clinical structured data and a case study is constructed on the PIMA Indian Diabetes dataset. The solution caters to the entire ML pipeline: problem formulation, preprocessing of data, feature selection (FS), model training, validation, and deployment issues. Different preprocessing techniques including missing value imputation, detection of outliers, and feature normalization were used for improving data quality. FS techniques like correlation analysis, recursive feature elimination, and selection based on domain knowledge were utilized to decrease the dimensionality of the data as well as model interpretability. Extensive comparison was conducted among widely used classification models like logistic regression (LR), random forest, support vector machine, and XGBoost. It was suggested to adopt a stacked ensemble model of LR, RF, SVM, and XGBoost that achieved better performance in terms of accuracy, precision, recall, and \( F_1 \)-score. The findings confirm the tremendous potential of ML to enable early diabetes diagnosis as an unobtrusive, data-driven, and scalable decision-making supporting system for physicians. This is the groundwork for the further development of clinically applicable artificial intelligence-based prediction models within real-world healthcare settings.
+
+**Keywords:** diabetic prediction, machine learning, stacked ensemble model, logistic regression, random forest, support vector machine, XGBoost
+
+**S. Padmalal**, Department of Computer Science and Engineering, Mangalam College of Engineering, Mangalam Hills, Ettumanoor, Kottayam, Kerala, India, e-mail: splaaj71@gmail.com
+**P. Arumugam**, Department of statistics, Manonmaniam Sundaranar University, Abishekapatti, Tirunelveli 627012, Tamil Nadu, India, e-mail: sixfacemsu@gmail.com
+**M. Baby Anusha**, Department Of CSE, Lakireddy Bali Reddy College of Engineering, L.B. Reddy Nagar, Mylavaram, Krishna 521230, Andhra Pradesh, India, e-mail: anusha.medisetty@lbrce.ac.in
+**Kalyan Devappa Bamane**, Department of Computer Engineering, D.Y. Patil College of Engineering, Akurdi, Pune, India, e-mail: kdbamane@dypcoeakurdi.ac.in
+**Nagendar Yamsani**, School of Computer Science and Artificial Intelligence, SR University, Warangal 506371, Telangana, India, e-mail: nagendar.yamsani@gmail.com
+**Kireet Mupavaram**, GITAM Deemed to be University, Hyderabad, India, e-mail: kireet04@gmail.com

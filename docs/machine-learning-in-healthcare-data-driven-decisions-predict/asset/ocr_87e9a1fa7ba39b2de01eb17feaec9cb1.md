@@ -1,0 +1,15 @@
+# 7 Future Works
+
+Although the new PEFL paradigm mitigates most of FL’s weaknesses, a few directions are still open for further development. As a preliminary consideration, privacy adaptive tuning techniques can be looked into to assist runtime privacy and model accuracy trade-offs, primarily in dynamic client data distributions and update sizes. This can include reinforcement learning procedures to learn, in real time, adjustments on privacy budget (ε) considering feedback from model accuracy or assigned user thresholds.
+
+The other promising area is federated transfer learning integration, where pre-trained models may be shared across low-labeled-data clients, which are prevalent in rare disease data. This will also enhance model convergence rate and effectiveness in low-resource environments. Moreover, future work must focus on minimizing the communication and computation overheads of secure aggregation protocols like SMPC and HE. New approaches, such as compression-aware FL or quantized encrypted updates, can minimize bandwidth usage without compromising security guarantees. From a deployment perspective, actual clinical trials in the field for cross-border data cooperation could be carried out to test legal and ethical feasibility under various regulatory systems. It includes verifying compliance with local legislation such as HIPAA (USA), GDPR (EU), and NDHM (India). Lastly, expanding the model’s scope to support multimodal data such as EHRs, imaging, and genomics under a single federated framework would significantly increase the utility of PEFL. Incorporating real-time federated analytics and decision support tools can also render this system clinically actionable and responsive to precision medicine initiatives.
+
+# References
+
++   [1] Nowrozy, R., Ahmed, K., Kayes, A. S. M., Wang, H. & McIntosh, T. R. (2024). Privacy preservation of electronic health records in the modern era: A systematic survey. ACM Computing Surveys, 56(8), 1–37.
++   [2] Sedghighadikolaei, K. & Yavuz, A. A. (2024). Privacy-preserving and trustworthy deep learning for medical imaging. arXiv preprint arXiv:2407.00538.
++   [3] Zhou, J., Chen, S., Wu, Y., Li, H., Zhang, B., Zhou, L., Hu, Y. et al. (2024). PPML-Omics: a privacy-preserving federated machine learning method protects patients’ privacy in omic data. Science Advances, 10(5), eadh8601.
++   [4] Deepak, G., Sharma, P., Jayachitra, S., Chepur, J., Srihari, T. & Judgi, T. (2024). Privacy-preserving deep learning approaches for effective utilization of wearable health data. Measurement: Sensors, 33, 101238.
++   [5] Kconnoth, C. (2024). AI and data protection law in health. Research Handbook on Health, AI and the Law, 111–129.
++   [6] Chen, J., Yan, H., Liu, Z., Zhang, M., Xiong, H. & Yu, S. (2024). When federated learning meets privacy-preserving computation. ACM Computing Surveys, 56(12), 1–36.
++   [7] Ahmed, S. T., Kaladevi, A. C., Shankar, A. & Alqahtani, F. “Privacy Enhanced Edge-AI Healthcare Devices Authentication: A Federated Learning Approach.” IEEE Transactions on Consumer Electronics (2025).

@@ -1,0 +1,13 @@
+tant to know and practice evidence-based medicine to make the most of healthcare data.
+
+# ## 3 Sources and Types of Healthcare Data
+
+Healthcare organizations depend on various kinds of data to support decisions, organize their work, and manage the health of the population. To make the most of data-driven methods, it is essential to know what these datasets involve and how they develop. In this section, we talk about the major sources of healthcare data, such as clinical, administrative, patient-generated, public health, and new data streams.
+
+# ### 3.1 Clinical Data from Electronic Health Records (EHRs)
+
+Information gathered from EHRs forms the main foundation of healthcare informatics in modern medical settings. Information saved in EHRs includes personal details, symptoms, healthcare plans, test results, drug charts, and pictures from scans. The data is arranged and predefined in such a way that different software can use and analyze it. The HITECH Act and similar policies strongly contributed to the development of EHR systems over the past 20 years [16]. EHR systems hold clinically useful information that can be used in CDSS, models for predicting outcomes, and programs for quality assessments. In spite of their usefulness, EHRs often include imperfections, including coding inconsistencies, missing data, and data entry errors, which need to be resolved [17]. With the help of NLP, health centers are now able to get useful information from EHRs such as clinical narratives and unstructured data from physician notes and radiology reports. The use of both structured and unstructured data makes it easier to identify and manage risks in patients [18].
+
+# ### 3.2 Administrative and Operational Data
+
+Administrative and operational data include information collected from the business and operational tasks in healthcare groups. The data involve details about billing systems, claims, planning staff schedules, keeping track of supplies, and using facilities. Although numerous people think of clinical information as primary, administrative data is crucial for looking at finances, resources, and compliance. Patient data, as a resource, offer a wide range of information that includes details from their care in different places. They are commonly utilized in health services research, cost analysis, and to check healthcare differences [19]. While claims often focus on payment purposes, their information is not always updated or detailed enough to support fast
