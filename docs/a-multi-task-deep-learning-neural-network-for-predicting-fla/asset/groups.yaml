@@ -1,0 +1,3697 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # A multi-task deep learning neural network for predicting flammability-related
+    properties from molecular structures†
+
+
+    Ao Yang, Yang Su, Zihao Wang, Saimeng Jin, Jingzheng Ren, Xiangping Zhang, Weifeng
+    Shen and James H. Clark
+
+
+    It is significant that hazardous properties of chemicals including replacements
+    for banned or restricted products are assessed at an early stage of product and
+    process design. This work proposes a new strategy of modeling quantitative structure–property
+    relationships based on multi-task deep learning for simultaneously predicting
+    four flammability-related properties including lower and upper flammable limits,
+    auto-ignition point temperature and flash point temperature. A multi-task deep
+    neural network (MDNN) has been developed to extract molecular features automatically
+    and correlate multiple properties integrating a Tree-LSTM neural network with
+    multiple feedforward neural networks. Molecular features are encoded in molecular
+    tree graphs, calculated and extracted without manual actions of the user or preliminary
+    molecular descriptor calculation. Two methods, joint training and alternative
+    training, were both employed to train the proposed MDNN, which could capture the
+    relevant information and commonality among multiple target properties. The outlier
+    detection and determination of applicability domain were also introduced into
+    the evaluation of deep learning models. Since the proposed MDNN utilized data
+    more efficiently, the finally obtained model performs better than the multi-task
+    partial least squares model on predicting the flammability-related properties.
+    The proposed framework of multi-task deep learning provides a promising tool to
+    predict multiple properties without calculating descriptors.
+
+
+    # 1. Introduction
+
+
+    In the last decades, with the growth of chemical production, the potential risks
+    associated with handling hazardous substances have always been of great concern
+    to industry, government and the public. While the production and treatment of
+    (hazardous) chemical substances are now strictly controlled in most regions, legislation
+    affecting the chemicals themselves is only now becoming critical. The advent of
+    Registration,
+
+
+    (REACH) in Europe and similar chemical-focused legislation in other regions including
+    China, Japan and Korea is forcing industry to assess the hazards of all industrial
+    chemicals. Chemicals that are not proven to be sufficiently safe are to be banned
+    or strictly controlled in use. Many widely used chemicals including some of the
+    most important process solvents have been classified in this way, and the list
+    of unacceptable chemicals is increasing rapidly. It is important that the hazardous
+    properties of chemicals involving replacements for banned or restricted products
+    are assessed at an early stage of product and process design.
+
+
+    In Globally Harmonized System (GHS) of classification and labelling of chemicals,
+    four properties including flash point temperature (FPT), auto-ignition temperature
+    (AIT), upper and lower flammability limits (UFL/LFL) are employed to classify
+    chemicals using similar categories.1 The property, FPT, is often used to evaluate
+    the flammable risk of organic liquid in REACH legislation. AIT is important for
+    the assignment of temperature classes in explosion protection (i.e., ATEX in Europe)
+    of plants and equipment, which can be used to assess situations in which a substance
+    can spontaneously catch fire. UFL and LFL are usually seen as the ease with which
+    a substance can burn or be ignited. The four properties are often
+
+
+    a School of Chemistry and Chemical Engineering, Chongqing University, Chongqing
+    400044, China. E-mail: shenweifeng@cqu.edu.cn
+
+    b Department of Industrial and Systems Engineering, The Hong Kong Polytechnic
+    University, Hong Kong SAR, China
+
+    c School of Intelligent Technology and Engineering, Chongqing University of Science
+    and Technology, Chongqing 401331, China
+
+    d Beijing Key Laboratory of Ionic Liquids Clean Process, CAS Key Laboratory of
+    Green Process and Engineering, Institute of Process Engineering, Chinese Academy
+    of Sciences, Beijing100190, China
+
+    e Green Chemistry Centre of Excellence, University of York, York YO105D, UK
+
+    † Electronic supplementary information (ESI) available. See DOI: 10.1039/d1gc00331c
+
+    ‡ These authors contributed equally to this work.'
+  - '[PAGE 1]
+
+
+    used to estimate possibilities of catching fire on substances in many standards
+    and codes.
+
+
+    It is however, very time-consuming to screen safer candidates of hazardous chemicals
+    from many possible compounds through experimental assessments of all the key risk
+    parameters in authorized laboratories. This is considered by many people to be
+    a major disincentive to companies developing new safer chemicals to replace those
+    hazardous compounds judged badly by REACH and related assessments. The GHS rule
+    also states that if experimental values of any properties are unavailable to assess
+    the hazardous level of a chemical, these properties of an individual molecule
+    can be predicted by mathematical models such as quantitative structure–activity/property
+    relationships (QSAR/QSPR). These predictive models could accelerate the process
+    development at least during initial assessments and thus enable early go/no-go
+    decisions in screening of alternatives with lower costs. Among these, the previous
+    QSPR models can estimate properties by using some information of molecular structures,
+    e.g., the occurrences of certain molecular groups, 2,3,66 molecular descriptors
+    and properties. 5–7 Most existing studies of physicochemical properties involving
+    AIT, FPT, UFL and LFL were reviewed by Nieto-Draghi et al. 8 and Jiao et al. 9
+    Herein, Table 1 exemplifies some existing models for predicting the four properties
+    with various features of molecular structures.
+
+
+    Many studies applied group contribution methods and multiple linear regression
+    (MLR) in predicting flammability-related properties, and other models were formulated
+    with various numerical descriptors of molecular structures. Except for linear
+    models, non-linear regression (NLR) was employed to correlate more flexible models.
+    The stochastic optimization was also used to build prediction models, for the
+    globally optimized correlations e.g., Garagheizi et al., 10,11 Pan et al. 12 and
+    Lazzús. 13 The existing studies based on both MLR and NLR suggested that outlier
+    detection, applicability domain (AD) and uncertainty analysis should be used to
+    evaluate the models. 14–17 Even though this provided a good accuracy for the flammability-related
+    properties, all the studies as listed in Table 1 focused on correlating one property
+    with molecular descriptors in a single task of model regression.
+
+
+    On the other hand, most previous QSPR studies employed manually-defined methods
+    based on chemistry or graph theory to depict molecular features as numerical descriptors.
+    For example, group contribution methods count occurrences of molecular fragments
+    but connectivity is frequently ignored among groups. When only one topological
+    index of connectivity is used in a QSPR model, differences among atoms are frequently
+    not recorded. If a new compound has an undefined group or other ambiguous features
+    which cannot be depicted in these manually-defined methods, these models based
+    on only a type of molecular descriptors could not provide a satisfactory estimation.
+    Hence, a variety of descriptors have been developed to enhance the resolution
+    and coverage of diverse molecular structures. 18 As an example, the group contribution
+    plus (GC+) proposed by Hukkerikar2 combined the multi-level group contribution
+    and atom con-
+
+
+    Table 1 The typical available QSPR-based models for predicting flammability-related
+    properties
+
+
+    | Property | Molecular features | Models | Reference |
+
+    | :--- | :--- | :--- | :--- |
+
+    | FPT | The occurrences of molecular groups | MLR | Hukkerikar et al.2 |
+
+    | | The occurrences of molecular groups | MLR | Frutiger et al.3 |
+
+    | | Atom connectivity indices, The occurrences of molecular groups | MLR | Suzuki21
+    |
+
+    | | Topological indices | MLR, ANN | Patel et al.5 |
+
+    | | The occurrences of molecular groups | MLR | Alibakhshi22 |
+
+    | | Molecular descriptors, boiling point | MLR | Katritzky6 |
+
+    | AIT | The occurrences of molecular groups | GA-MLR | Garagheizi et al.10 |
+
+    | | The occurrences of molecular groups | ANN | Garagheizi et al.66 |
+
+    | | The occurrences of molecular groups | SVM | Pan et al.4 |
+
+    | | The occurrences of molecular groups | MLR | Hukkerikar et al.2 |
+
+    | | The occurrences of molecular groups | MLR | Frutiger et al.3 |
+
+    | | The occurrences of molecular groups | ANN | Albahri23 |
+
+    | LFL/UFL | Atom connectivity indices | MLR | Suzuki24 |
+
+    | | The number of carbon atoms | NLR | Shimy25 |
+
+    | | The occurrences of molecular groups | MLR | Frutiger et al.3 |
+
+    | | The occurrences of molecular groups | NLR | Albahri26 |
+
+    | | The occurrences of molecular groups | ANN | Garagheizi27,28 |
+
+    | | Molecular descriptors | GA-MLR | Garagheizi11 |
+
+    | | Topological, charge and geometric descriptors | GA-MLR | Pan et al.12 |
+
+    | | The occurrences of molecular groups | ANN-PSO | Lazzús13 |
+
+    | | Molecular descriptors | ANFIS | Bagheri et al.29 |
+
+    | | The occurrences of molecular groups | NLR | High and Danner30 |
+
+    | | The occurrences of molecular groups | MLR | Rowley et al.31 |
+
+
+    Abbreviations: Genetic algorithm (GA), artificial neural networks (ANN), particle
+    swarm optimization (PSO), adaptive neuro fuzzy inference system (ANFIS), support
+    vector machine (SVM).
+
+
+    nectivity indices for wider correlation of more properties. However, it might
+    be time-consuming to select the best descriptors for a task of QSPR modeling.19,20
+
+
+    A data-driven technique, deep learning, has been recently employed to build QSPR/QSAR
+    models.32–35 One important reason is that deep learning techniques can extract
+    valuable features automatically and discover potential relationships among various
+    big data. For example, in the Tox21 Data Challenge launched by NIH, EPA and FDA,36
+    various deep learning neural networks (DNNs) were employed to automatically extract
+    the relevant molecular features from a huge number of descriptors and detect toxiphores.
+    This could help chemists to identify valuable candidates at early stage'
+  md: '
+
+    ## A multi-task deep learning neural network for predicting flammability-related
+    properties from molecular structures†
+
+
+    Ao Yang, Yang Su, Zihao Wang, Saimeng Jin, Jingzheng Ren, Xiangping Zhang, Weifeng
+    Shen and James H. Clark
+
+
+    - a School of Chemistry and Chemical Engineering, Chongqing University, Chongqing
+    400044, China. E-mail: shenweifeng@cqu.edu.cn
+
+    - b Department of Industrial and Systems Engineering, The Hong Kong Polytechnic
+    University, Hong Kong SAR, China
+
+    - c School of Intelligent Technology and Engineering, Chongqing University of
+    Science and Technology, Chongqing 401331, China
+
+    - d Beijing Key Laboratory of Ionic Liquids Clean Process, CAS Key Laboratory
+    of Green Process and Engineering, Institute of Process Engineering, Chinese Academy
+    of Sciences, Beijing 100190, China
+
+    - e Green Chemistry Centre of Excellence, University of York, York YO10 5D, UK
+
+    † Electronic supplementary information (ESI) available. See DOI: 10.1039/d1gc00331c
+
+    ‡ These authors contributed equally to this work.
+
+
+    It is significant that hazardous properties of chemicals including replacements
+    for banned or restricted products are assessed at an early stage of product and
+    process design. This work proposes a new strategy of modeling quantitative structure–property
+    relationships based on multi-task deep learning for simultaneously predicting
+    four flammability-related properties including lower and upper flammable limits,
+    auto-ignition point temperature and flash point temperature. A multi-task deep
+    neural network (MDNN) has been developed to extract molecular features automatically
+    and correlate multiple properties integrating a Tree-LSTM neural network with
+    multiple feedforward neural networks. Molecular features are encoded in molecular
+    tree graphs, calculated and extracted without manual actions of the user or preliminary
+    molecular descriptor calculation. Two methods, joint training and alternative
+    training, were both employed to train the proposed MDNN, which could capture the
+    relevant information and commonality among multiple target properties. The outlier
+    detection and determination of applicability domain were also introduced into
+    the evaluation of deep learning models. Since the proposed MDNN utilized data
+    more efficiently, the finally obtained model performs better than the multi-task
+    partial least squares model on predicting the flammability-related properties.
+    The proposed framework of multi-task deep learning provides a promising tool to
+    predict multiple properties without calculating descriptors.
+
+
+    ## 1. Introduction
+
+
+    In the last decades, with the growth of chemical production, the potential risks
+    associated with handling hazardous substances have always been of great concern
+    to industry, government and the public. While the production and treatment of
+    (hazardous) chemical substances are now strictly controlled in most regions, legislation
+    affecting the chemicals themselves is only now becoming critical. The advent of
+    Registration (REACH) in Europe and similar chemical-focused legislation in other
+    regions including China, Japan and Korea is forcing industry to assess the hazards
+    of all industrial chemicals. Chemicals that are not proven to be sufficiently
+    safe are to be banned or strictly controlled in use. Many widely used chemicals
+    including some of the most important process solvents have been classified in
+    this way, and the list of unacceptable chemicals is increasing rapidly. It is
+    important that the hazardous properties of chemicals involving replacements for
+    banned or restricted products are assessed at an early stage of product and process
+    design.
+
+
+    In Globally Harmonized System (GHS) of classification and labelling of chemicals,
+    four properties including flash point temperature (FPT), auto-ignition temperature
+    (AIT), upper and lower flammability limits (UFL/LFL) are employed to classify
+    chemicals using similar categories.1 The property, FPT, is often used to evaluate
+    the flammable risk of organic liquid in REACH legislation. AIT is important for
+    the assignment of temperature classes in explosion protection (i.e., ATEX in Europe)
+    of plants and equipment, which can be used to assess situations in which a substance
+    can spontaneously catch fire. UFL and LFL are usually seen as the ease with which
+    a substance can burn or be ignited. The four properties are often used to estimate
+    possibilities of catching fire on substances in many standards and codes.
+
+
+    It is, however, very time-consuming to screen safer candidates of hazardous chemicals
+    from many possible compounds through experimental assessments of all the key risk
+    parameters in authorized laboratories. This is considered by many people to be
+    a major disincentive to companies developing new safer chemicals to replace those
+    hazardous compounds judged badly by REACH and related assessments. The GHS rule
+    also states that if experimental values of any properties are unavailable to assess
+    the hazardous level of a chemical, these properties of an individual molecule
+    can be predicted by mathematical models such as quantitative structure–activity/property
+    relationships (QSAR/QSPR). These predictive models could accelerate the process
+    development at least during initial assessments and thus enable early go/no-go
+    decisions in screening of alternatives with lower costs. Among these, the previous
+    QSPR models can estimate properties by using some information of molecular structures,
+    e.g., the occurrences of certain molecular groups, 2, 3, 6 molecular descriptors
+    and properties. 5–7 Most existing studies of physicochemical properties involving
+    AIT, FPT, UFL and LFL were reviewed by Nieto-Draghi et al. 8 and Jiao et al. 9
+    Herein, Table 1 exemplifies some existing models for predicting the four properties
+    with various features of molecular structures.
+
+
+    Many studies applied group contribution methods and multiple linear regression
+    (MLR) in predicting flammability-related properties, and other models were formulated
+    with various numerical descriptors of molecular structures. Except for linear
+    models, non-linear regression (NLR) was employed to correlate more flexible models.
+    The stochastic optimization was also used to build prediction models, for the
+    globally optimized correlations e.g., Garagheizi et al., 10,11 Pan et al. 12 and
+    Lazzús 13. The existing studies based on both MLR and NLR suggested that outlier
+    detection, applicability domain (AD) and uncertainty analysis should be used to
+    evaluate the models. 14–17 Even though this provided a good accuracy for the flammability-related
+    properties, all the studies as listed in Table 1 focused on correlating one property
+    with molecular descriptors in a single task of model regression.
+
+
+    Table 1 The typical available QSPR-based models for predicting flammability-related
+    properties
+
+
+    | Property | Molecular features | Models | Reference |
+
+    | :--- | :--- | :--- | :--- |
+
+    | FPT | The occurrences of molecular groups | MLR | Hukkerikar et al. 2 |
+
+    | | The occurrences of molecular groups | MLR | Frutiger et al. 3 |
+
+    | | Atom connectivity indices, The occurrences of molecular groups | MLR | Suzuki
+    21 |
+
+    | | Topological indices | MLR, ANN | Patel et al. 5 |
+
+    | | The occurrences of molecular groups | MLR | Alibakhshi 22 |
+
+    | | Molecular descriptors, boiling point | MLR | Katritzky 6 |
+
+    | AIT | The occurrences of molecular groups | GA-MLR | Garagheizi et al. 10 |
+
+    | | The occurrences of molecular groups | ANN | Garagheizi et al. 66 |
+
+    | | The occurrences of molecular groups | SVM | Pan et al. 4 |
+
+    | | The occurrences of molecular groups | MLR | Hukkerikar et al. 2 |
+
+    | | The occurrences of molecular groups | MLR | Frutiger et al. 3 |
+
+    | | The occurrences of molecular groups | ANN | Albahri 23 |
+
+    | LFL/UFL | Atom connectivity indices | MLR | Suzuki 24 |
+
+    | | The number of carbon atoms | NLR | Shimy 25 |
+
+    | | The occurrences of molecular groups | MLR | Frutiger et al. 3 |
+
+    | | The occurrences of molecular groups | NLR | Albahri 26 |
+
+    | | The occurrences of molecular groups | ANN | Garagheizi 27,28 |
+
+    | | Molecular descriptors | GA-MLR | Garagheizi 11 |
+
+    | | Topological, charge and geometric descriptors | GA-MLR | Pan et al. 12 |
+
+    | | The occurrences of molecular groups | ANN-PSO | Lazzús 13 |
+
+    | | Molecular descriptors | ANFIS | Bagheri et al. 29 |
+
+    | | The occurrences of molecular groups | NLR | High and Danner 30 |
+
+    | | The occurrences of molecular groups | MLR | Rowley et al. 31 |
+
+
+    Abbreviations: Genetic algorithm (GA), artificial neural networks (ANN), particle
+    swarm optimization (PSO), adaptive neuro fuzzy inference system (ANFIS), support
+    vector machine (SVM).
+
+
+    On the other hand, most previous QSPR studies employed manually-defined methods
+    based on chemistry or graph theory to depict molecular features as numerical descriptors.
+    For example, group contribution methods count occurrences of molecular fragments
+    but connectivity is frequently ignored among groups. When only one topological
+    index of connectivity is used in a QSPR model, differences among atoms are frequently
+    not recorded. If a new compound has an undefined group or other ambiguous features
+    which cannot be depicted in these manually-defined methods, these models based
+    on only a type of molecular descriptors could not provide a satisfactory estimation.
+    Hence, a variety of descriptors have been developed to enhance the resolution
+    and coverage of diverse molecular structures. 18 As an example, the group contribution
+    plus (GC+) proposed by Hukkerikar 2 combined the multi-level group contribution
+    and atom connectivity indices for wider correlation of more properties. However,
+    it might be time-consuming to select the best descriptors for a task of QSPR modeling.
+    19,20
+
+
+    A data-driven technique, deep learning, has been recently employed to build QSPR/QSAR
+    models.32–35 One important reason is that deep learning techniques can extract
+    valuable features automatically and discover potential relationships among various
+    big data. For example, in the Tox21 Data Challenge launched by NIH, EPA and FDA,36
+    various deep learning neural networks (DNNs) were employed to automatically extract
+    the relevant molecular features from a huge number of descriptors and detect toxiphores.
+    This could help chemists to identify valuable candidates at early stage
+
+    '
+  mdcn: '
+
+
+    ## 从分子结构预测可燃性相关性质的多任务深度学习神经网络†
+
+
+    Ao Yang, Yang Su, Zihao Wang, Saimeng Jin, Jingzheng Ren, Xiangping Zhang, Weifeng
+    Shen and James H. Clark
+
+
+    - a 重庆大学化学化工学院，中国重庆 400044。电子邮箱: shenweifeng@cqu.edu.cn
+
+    - b 香港理工大学工业与系统工程系，中国香港特别行政区
+
+    - c 重庆科技大学智能技术与工程学院，中国重庆 401331
+
+    - d 中国科学院过程工程研究所，离子液体洁净工艺北京重点实验室，绿色过程与工程中科院重点实验室，中国北京 100190
+
+    - e 英国约克大学绿色化学卓越中心，约克 YO10 5D
+
+    † 提供电子补充信息 (ESI)。参见 DOI: 10.1039/d1gc00331c
+
+    ‡ 这些作者对该工作做出了同等贡献。
+
+
+    评估包括禁用或限制产品替代品在内的化学品危险特性，在产品和工艺设计的早期阶段具有重要意义。本工作提出了一种基于多任务深度学习的定量结构–性质关系建模新策略，用于同时预测四种可燃性相关性质，包括可燃极限下限和上限、自燃点温度和闪点温度。已开发了一种多任务深度神经网络
+    (MDNN)，用于自动提取分子特征，并通过将 Tree-LSTM 神经网络与多个前馈神经网络相结合来关联多种性质。分子特征编码在分子树图中，无需用户手动操作或预先计算分子描述符即可计算和提取。采用了两种方法（联合训练和交替训练）来训练所提出的
+    MDNN，该网络可以捕捉多个目标性质之间的相关信息和共性。异常值检测和适用域的确定也被引入深度学习模型的评估中。由于所提出的 MDNN 利用数据更高效，最终获得的模型在预测可燃性相关性质方面优于多任务偏最小二乘模型。所提出的多任务深度学习框架提供了一种无需计算描述符即可预测多种性质的有前景的工具。
+
+
+    ## 1. 引言
+
+
+    在过去几十年中，随着化学品产量的增长，处理危险物质所伴随的潜在风险一直受到工业界、政府和公众的高度关注。虽然大多数地区现在对（危险）化学物质的生产和处理进行严格控制，但影响化学品本身的立法才刚刚变得至关重要。欧洲化学品注册、评估、许可和限制
+    (REACH) 条例的出台，以及中国、日本和韩国等其他地区类似的化学品专项立法，正迫使工业界评估所有工业化学品的危害。未被证明足够安全的化学品将被禁止或严格控制使用。许多广泛使用的化学品（包括一些最重要的工艺溶剂）已以这种方式分类，不可接受化学品的清单正在迅速增加。评估涉及禁用或限制产品替代品的化学品的危险特性，在产品和工艺设计的早期阶段非常重要。
+
+
+    在《全球化学品分类和标签协调制度》(GHS) 中，使用闪点温度 (FPT)、自燃温度 (AIT)、上可燃极限和下可燃极限 (UFL/LFL) 四种性质采用类似类别对化学品进行分类。1
+    FPT 性质通常用于在 REACH 立法中评估有机液体的可燃风险。AIT 对于工厂和设备防爆（即欧洲 ATEX）中的温度类别划分非常重要，可用于评估物质可能自燃的情况。UFL
+    和 LFL 通常被视为物质燃烧或被点燃的难易程度。许多标准和规范中常使用这四种性质来估计物质起火的可能性。
+
+
+    然而，通过在授权实验室对所有关键风险参数进行实验评估，从许多可能的化合物中筛选出更安全的危险化学品候选物非常耗时。许多人认为，这对企业开发新的更安全化学品以替代被
+    REACH 及相关评估判定不佳的危险化合物是一种重大消极因素。GHS 规则还规定，如果无法使用任何性质的实验值来评估化学品的危害等级，则可以使用数学模型（如定量结构–活性/性质关系
+    (QSAR/QSPR)）来预测单个分子的这些性质。这些预测模型至少在初步评估阶段能加速工艺开发，从而使在筛选低成本替代品时能够早期做出 go/no-go 决策。在这之中，以前的
+    QSPR 模型可以通过利用分子结构的一些信息（例如，特定分子团的出现次数、2、3、6 种分子描述符和性质）来估计性质。5–7 涉及 AIT、FPT、UFL
+    和 LFL 的物理化学性质的大部分现有研究已由 Nieto-Draghi 等人 8 和 Jiao 等人 9 综述。本文中，表 1 举例说明了一些利用分子结构的各种特征预测这四种性质的现有模型。
+
+
+    许多研究应用基团贡献法和多元线性回归 (MLR) 来预测可燃性相关性质，其他模型则采用分子结构的各种数值描述符构建。除了线性模型外，还采用了非线性回归 (NLR)
+    来关联更灵活的模型。随机优化也被用于构建预测模型，例如 Garagheizi 等人 10,11、Pan 等人 12 和 Lazzús 13 进行全局优化关联。基于
+    MLR 和 NLR 的现有研究建议，应使用异常值检测、适用域 (AD) 和不确定性分析来评估模型。14–17 虽然这为可燃性相关性质提供了良好的准确性，但表
+    1 中列出的所有研究都集中在将单一性质与分子描述符在单任务模型回归中进行关联。
+
+
+    表 1 预测可燃性相关性质的典型可用 QSPR 模型
+
+
+    | 性质 | 分子特征 | 模型 | 参考文献 |
+
+    | :--- | :--- | :--- | :--- |
+
+    | FPT | 分子团的出现次数 | MLR | Hukkerikar 等人 2 |
+
+    | | 分子团的出现次数 | MLR | Frutiger 等人 3 |
+
+    | | 原子连通指数，分子团的出现次数 | MLR | Suzuki 21 |
+
+    | | 拓扑指数 | MLR, ANN | Patel 等人 5 |
+
+    | | 分子团的出现次数 | MLR | Alibakhshi 22 |
+
+    | | 分子描述符，沸点 | MLR | Katritzky 6 |
+
+    | AIT | 分子团的出现次数 | GA-MLR | Garagheizi 等人 10 |
+
+    | | 分子团的出现次数 | ANN | Garagheizi 等人 66 |
+
+    | | 分子团的出现次数 | SVM | Pan 等人 4 |
+
+    | | 分子团的出现次数 | MLR | Hukkerikar 等人 2 |
+
+    | | 分子团的出现次数 | MLR | Frutiger 等人 3 |
+
+    | | 分子团的出现次数 | ANN | Albahri 23 |
+
+    | LFL/UFL | 原子连通指数 | MLR | Suzuki 24 |
+
+    | | 碳原子数量 | NLR | Shimy 25 |
+
+    | | 分子团的出现次数 | MLR | Frutiger 等人 3 |
+
+    | | 分子团的出现次数 | NLR | Albahri 26 |
+
+    | | 分子团的出现次数 | ANN | Garagheizi 27,28 |
+
+    | | 分子描述符 | GA-MLR | Garagheizi 11 |
+
+    | | 拓扑、电荷和几何描述符 | GA-MLR | Pan 等人 12 |
+
+    | | 分子团的出现次数 | ANN-PSO | Lazzús 13 |
+
+    | | 分子描述符 | ANFIS | Bagheri 等人 29 |
+
+    | | 分子团的出现次数 | NLR | High 和 Danner 30 |
+
+    | | 分子团的出现次数 | MLR | Rowley 等人 31 |
+
+
+    缩写：遗传算法 (GA)、人工神经网络 (ANN)、粒子群优化 (PSO)、自适应神经模糊推理系统 (ANFIS)、支持向量机 (SVM)。
+
+
+    另一方面，大多数以前的 QSPR 研究采用基于化学或图论的手动定义方法，将分子特征描绘为数值描述符。例如，基团贡献法统计分子片段的出现次数，但组间连通性经常被忽略。当
+    QSPR 模型中仅使用一种连通拓扑指数时，原子间的差异经常不被记录。如果新化合物具有未定义基团或其他无法在这些手动定义方法中描绘的模糊特征，则仅基于一种分子描述符的模型可能无法提供令人满意的估计。因此，开发了各种描述符以增强多种分子结构的分辨率和覆盖率。18
+    例如，Hukkerikar 2 提出的基团贡献加 (GC+) 结合了多级基团贡献和原子连通指数，以更广泛地关联更多性质。但是，为 QSPR 建模任务选择最佳描述符可能很耗时。19,20
+
+
+    近年来，数据驱动技术深度学习已被用于构建 QSPR/QSAR 模型。32–35 一个重要原因是，深度学习技术可以自动提取有价值的特征，并发现各种大数据之间的潜在关系。例如，在
+    NIH、EPA 和 FDA 发起的 Tox21 数据挑战赛中，36 采用了各种深度学习神经网络 (DNN)，从大量描述符中自动提取相关分子特征并检测毒团。这可以帮助化学家在早期阶段识别有价值的候选物
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    and with less manual work. As the powerful capabilities of DNNs on extracting
+    features, deep learning techniques can formulate QSPRs/QSARs from visual representations
+    of molecular structures, e.g., images learned by convolutional neural network
+    (CNN),37 texts learned by recurrent neural network (RNN)38 and graphs learned
+    by graph neural networks (GAN).35,39,40 Even though deep learning provides a way
+    to reduce the dependency of QSPRs/QSARs on molecular descriptors,41 the powerful
+    ability could easily make DNNs over-fitted on small data sets. The reason is that
+    DNNs are often formed in the sophisticated architectures involving a very large
+    number of parameters.
+
+
+    Generally, the best way is to train a QSPR/QSAR model based on deep learning using
+    a larger number of samples. Although the prediction models10,27,28 of flammability-related
+    properties performed well, they were trained on more data points including estimated
+    values. In fact, the experimental data sets of four flammability-related properties
+    are available with small sizes in DIPPR801 database according to previous studies.3
+    We noticed that multi-task learning (MTL) is a type of transfer learning that
+    can gain relevant knowledge among multiple tasks for modelling on a small data
+    set, even though the relevant knowledge among these tasks may be tenuous and unnoticeable
+    to humans.42 Caruana43 studied many technical details in this field and summarized
+    the improvements over single task learning (STL) obtained by MTL: (a) amplification
+    of used data; (b) attention focusing; (c) representation bias and feature selection;
+    and (d) regularization against overfitting. Hence, MTL was used to tackle data
+    deficiencies or improve prediction performance for modelling QSARs/QSPRs based
+    on molecular descriptors, e.g., ANN with a multiple output layer44 and multi-task
+    partial least squares (PLS).45 It should be mentioned that the multi-task PLS
+    requires that every molecule in the training set have a complete set of properties.
+    If a particular row of employed data sets has a null value of a feature or a target
+    property, the row corresponding to a compound cannot be utilized in the training
+    of multi-task PLS models.
+
+
+    In this research, an architecture of multi-task deep learning neural networks
+    (MDNN) is proposed to establish the predictive model for flammability-related
+    properties. Molecular structures are transformed into directed acyclic graphs
+    (DAGs) by a program developed in this work, and the DAGs are vectorized by two
+    techniques, word embedding and a tree structured long short-term memory46 (Tree-LSTM)
+    network. Importantly, unlike previous models46, there is no need to extract corresponding
+    features of molecular structures through pre-defined descriptors. The proposed
+    MDNN can extract molecular features related to a unique property and may capture
+    some possible interactions among multiple properties using two training strategies,
+    i.e., joint training and alternative training. The procedures involving outlier
+    detection and AD analysis are also proposed to assess the predictive model based
+    on multi-task deep learning. All of these are aimed at developing an automatic
+    tool of multi-task QSPR modelling that can simultaneously correlate diverse target
+    properties in one deep learn-
+
+
+    ing model without descriptor selections, and fully utilize limited experimental
+    datasets. Another technique of multi-task learning, PLS regression, is taken as
+    a baseline of comparison to highlight better performance and scalable data-handling
+    capacity of the proposed MDNN.
+
+
+    # 2. Methodology
+
+
+    The entire architecture of MDNN is first introduced which involves two types of
+    modules (see Fig. 1): (1) an encoder based on the Tree-LSTM network46 that can
+    vectorize the molecular structures depicted in DAG, as well as capture all relevant
+    features and commonality for all tasks; (2) multiple feedforward neural networks
+    (FNNs) are assigned for extracting task-specific features (learning personality
+    of each task) and outputting each property respectively. Afterwards, the implementation
+    and modelling of MDNN are detailed. In the data preparation, SMILES expressions
+    were converted to DAGs using our program based on Faulon''s algorithm47 in advance.
+    Each vertex of a DAG was labelled in a string involving symbols of atoms and chemical
+    bonds, and the strings were mapped to vectors with the algorithm of word embedding.48
+    The procedure had been proposed to transform molecular structures in the previous
+    work.40 Herein, joint training and alternative training were both employed especially
+    for the multi-task deep learning. The obtained model was finally tested on an
+    external test set to validate the extrapolating ability. Empirical cumulative
+    distribution functions (ECDF) of prediction residuals were employed to detect
+    outliers. The ECDF is a step function that increases by 1/n in every data point.
+    An approach based on principal component analysis (PCA) was proposed to explore
+    applicability domains of the obtained model.
+
+
+    # 2.1 Network architecture
+
+
+    As mentioned above, the Tree-LSTM network is used as an auto-encoder to extract
+    the holistic features of a molecular structure for all properties. In contrast,
+    several FNNs work
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_2_0.png)'
+  - '[PAGE 3]
+
+
+    similarly to filters which only capture the relevant features for each property.
+    Herein, four FNNs were used to correlate/output the four flammability-related
+    properties and shared one Tree-LSTM network as the encoder of molecular structures.
+
+
+    # 2.1.1 The extraction block of molecular features.
+
+
+    Since Tree-LSTM networks can traverse all vertexes in a DAG and mimic the topological
+    graph of the DAG, the starting point is that molecular structures should be transformed
+    to DAG forms. Although DAGs can be canonized in a certain rule,47 the resulting
+    canonical orientation is still likely to be quite arbitrary among all possible
+    orientations.39 Hence, in this study, every DAG was generated from each orientation
+    (i.e., traversed from all possible root atoms) and was then vectorized by the
+    Tree-LSTM network respectively. The whole workflow is presented and exemplified
+    by the chemical 2,4,6-trichlorotoluene (Fig. 2).
+
+
+    In the original format of DAGs, each edge does not correspond to a chemical bond
+    of molecules and each vertex is only associated with each atom symbol. For example,
+    a double bond between two atoms cannot be recorded in an original DAG, which is
+    also contrary to the definition of DAGs. To record all bonds of a molecule, a
+    modification was implemented on the original style of DAG, i.e., bond types are
+    attached on adjacent atom symbols (see the third step in Fig. 2) in the children
+    vertexes of a DAG. As the Tree-LSTM network only accepts vectors as inputs of
+    each unit mapping to each vertex of a DAG. As such, the strings (i.e., “[c]”,
+    “[c]”, “[Cl]”, “[C]” and “[c0]” shown in the third step of Fig. 2) representing
+    the vertexes should be converted to vectors (i.e.,
+
+
+    v1–v5 shown in the fourth step of Fig. 2). A word embedding model, skip-gram,48
+    was employed to encode such strings as vectors.
+
+
+    Of note is that the Tree-LSTM network can be considered as a dynamic computational
+    graph which has a self-adaptive capability of various molecular structures. For
+    each DAG corresponding to a computation graph of the Tree-LSTM network (see the
+    fourth step in Fig. 2, there are five computation graphs), a recurrent algorithm
+    traverses from the root vertex to leaf vertexes of each DAG and calculate corresponding
+    units of the Tree-LSTM network according to the inputting vectors and neighbourhood
+    outputs. Afterwards, all the vectors representing the DAGs of all orientation
+    are summed into a vector which can represent a molecule (see the fifth and sixth
+    steps in Fig. 2). As space is limited, more details related to the transformation
+    of molecular structures, word embedding and Tree-LSTM are disclosed in the sections
+    S1 to S3 of ESI.†
+
+
+    # 2.1.2 The extraction block of task-specific features.
+
+
+    Each task-specific block was used to extract relevant features of a specific property
+    and output prediction values. Hence, the number of target properties will determine
+    the number of task-specific blocks, i.e., the number of tasks. Theoretically,
+    each task-specific block can be designed as a different FNN with the independent
+    structure and parameters, and it is also workable to train each block with different
+    optimizers respectively. In the task-specific block, an activation function, rectified
+    linear (ReLU),49 was applied to perform non-linear transformations and generate
+    activation values, since ReLU has lower computation consumptions and lower risks
+    of gradient
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_3_0.png)
+
+
+    Fig. 2 The molecular structure is transformed to a DAG and then simulated by a
+    Tree-LSTM network.'
+  md: '
+
+    and with less manual work. As the powerful capabilities of DNNs on extracting
+    features, deep learning techniques can formulate QSPRs/QSARs from visual representations
+    of molecular structures, e.g., images learned by convolutional neural network
+    (CNN),37 texts learned by recurrent neural network (RNN)38 and graphs learned
+    by graph neural networks (GNN).35,39,40 Even though deep learning provides a way
+    to reduce the dependency of QSPRs/QSARs on molecular descriptors,41 the powerful
+    ability could easily make DNNs over-fitted on small data sets. The reason is that
+    DNNs are often formed in the sophisticated architectures involving a very large
+    number of parameters.
+
+
+    Generally, the best way is to train a QSPR/QSAR model based on deep learning using
+    a larger number of samples. Although the prediction models10,27,28 of flammability-related
+    properties performed well, they were trained on more data points including estimated
+    values. In fact, the experimental data sets of four flammability-related properties
+    are available with small sizes in DIPPR801 database according to previous studies.3
+    We noticed that multi-task learning (MTL) is a type of transfer learning that
+    can gain relevant knowledge among multiple tasks for modelling on a small data
+    set, even though the relevant knowledge among these tasks may be tenuous and unnoticeable
+    to humans.42 Caruana43 studied many technical details in this field and summarized
+    the improvements over single task learning (STL) obtained by MTL: (a) amplification
+    of used data; (b) attention focusing; (c) representation bias and feature selection;
+    and (d) regularization against overfitting. Hence, MTL was used to tackle data
+    deficiencies or improve prediction performance for modelling QSARs/QSPRs based
+    on molecular descriptors, e.g., ANN with a multiple output layer44 and multi-task
+    partial least squares (PLS).45 It should be mentioned that the multi-task PLS
+    requires that every molecule in the training set have a complete set of properties.
+    If a particular row of employed data sets has a null value of a feature or a target
+    property, the row corresponding to a compound cannot be utilized in the training
+    of multi-task PLS models.
+
+
+    In this research, an architecture of multi-task deep learning neural networks
+    (MDNN) is proposed to establish the predictive model for flammability-related
+    properties. Molecular structures are transformed into directed acyclic graphs
+    (DAGs) by a program developed in this work, and the DAGs are vectorized by two
+    techniques, word embedding and a tree structured long short-term memory46 (Tree-LSTM)
+    network. Importantly, unlike previous models46, there is no need to extract corresponding
+    features of molecular structures through pre-defined descriptors. The proposed
+    MDNN can extract molecular features related to a unique property and may capture
+    some possible interactions among multiple properties using two training strategies,
+    i.e., joint training and alternative training. The procedures involving outlier
+    detection and AD analysis are also proposed to assess the predictive model based
+    on multi-task deep learning. All of these are aimed at developing an automatic
+    tool of multi-task QSPR modelling that can simultaneously correlate diverse target
+    properties in one deep learning model without descriptor selections, and fully
+    utilize limited experimental datasets. Another technique of multi-task learning,
+    PLS regression, is taken as a baseline of comparison to highlight better performance
+    and scalable data-handling capacity of the proposed MDNN.
+
+
+    ## 2. Methodology
+
+
+    The entire architecture of MDNN is first introduced which involves two types of
+    modules (see Fig. 1): (1) an encoder based on the Tree-LSTM network46 that can
+    vectorize the molecular structures depicted in DAG, as well as capture all relevant
+    features and commonality for all tasks; (2) multiple feedforward neural networks
+    (FNNs) are assigned for extracting task-specific features (learning personality
+    of each task) and outputting each property respectively. Afterwards, the implementation
+    and modelling of MDNN are detailed. In the data preparation, SMILES expressions
+    were converted to DAGs using our program based on Faulon''s algorithm47 in advance.
+    Each vertex of a DAG was labelled in a string involving symbols of atoms and chemical
+    bonds, and the strings were mapped to vectors with the algorithm of word embedding.48
+    The procedure had been proposed to transform molecular structures in the previous
+    work.40 Herein, joint training and alternative training were both employed especially
+    for the multi-task deep learning. The obtained model was finally tested on an
+    external test set to validate the extrapolating ability. Empirical cumulative
+    distribution functions (ECDF) of prediction residuals were employed to detect
+    outliers. The ECDF is a step function that increases by 1/n in every data point.
+    An approach based on principal component analysis (PCA) was proposed to explore
+    applicability domains of the obtained model.
+
+
+    ### 2.1 Network architecture
+
+
+    As mentioned above, the Tree-LSTM network is used as an auto-encoder to extract
+    the holistic features of a molecular structure for all properties. In contrast,
+    several FNNs work similarly to filters which only capture the relevant features
+    for each property. Herein, four FNNs were used to correlate/output the four flammability-related
+    properties and shared one Tree-LSTM network as the encoder of molecular structures.
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_2_0.png)
+
+
+    ### 2.1.1 The extraction block of molecular features.
+
+
+    Since Tree-LSTM networks can traverse all vertexes in a DAG and mimic the topological
+    graph of the DAG, the starting point is that molecular structures should be transformed
+    to DAG forms. Although DAGs can be canonized in a certain rule,47 the resulting
+    canonical orientation is still likely to be quite arbitrary among all possible
+    orientations.39 Hence, in this study, every DAG was generated from each orientation
+    (i.e., traversed from all possible root atoms) and was then vectorized by the
+    Tree-LSTM network respectively. The whole workflow is presented and exemplified
+    by the chemical 2,4,6-trichlorotoluene (Fig. 2).
+
+
+    In the original format of DAGs, each edge does not correspond to a chemical bond
+    of molecules and each vertex is only associated with each atom symbol. For example,
+    a double bond between two atoms cannot be recorded in an original DAG, which is
+    also contrary to the definition of DAGs. To record all bonds of a molecule, a
+    modification was implemented on the original style of DAG, i.e., bond types are
+    attached on adjacent atom symbols (see the third step in Fig. 2) in the children
+    vertexes of a DAG. As the Tree-LSTM network only accepts vectors as inputs of
+    each unit mapping to each vertex of a DAG. As such, the strings (i.e., “[c]”,
+    “[c]”, “[Cl]”, “[C]” and “[c0]” shown in the third step of Fig. 2) representing
+    the vertexes should be converted to vectors (i.e., v1–v5 shown in the fourth step
+    of Fig. 2). A word embedding model, skip-gram,48 was employed to encode such strings
+    as vectors.
+
+
+    Of note is that the Tree-LSTM network can be considered as a dynamic computational
+    graph which has a self-adaptive capability of various molecular structures. For
+    each DAG corresponding to a computation graph of the Tree-LSTM network (see the
+    fourth step in Fig. 2, there are five computation graphs), a recurrent algorithm
+    traverses from the root vertex to leaf vertexes of each DAG and calculate corresponding
+    units of the Tree-LSTM network according to the inputting vectors and neighbourhood
+    outputs. Afterwards, all the vectors representing the DAGs of all orientation
+    are summed into a vector which can represent a molecule (see the fifth and sixth
+    steps in Fig. 2). As space is limited, more details related to the transformation
+    of molecular structures, word embedding and Tree-LSTM are disclosed in the sections
+    S1 to S3 of ESI.†
+
+
+    ### 2.1.2 The extraction block of task-specific features.
+
+
+    Each task-specific block was used to extract relevant features of a specific property
+    and output prediction values. Hence, the number of target properties will determine
+    the number of task-specific blocks, i.e., the number of tasks. Theoretically,
+    each task-specific block can be designed as a different FNN with the independent
+    structure and parameters, and it is also workable to train each block with different
+    optimizers respectively. In the task-specific block, an activation function, rectified
+    linear (ReLU),49 was applied to perform non-linear transformations and generate
+    activation values, since ReLU has lower computation consumptions and lower risks
+    of gradient
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_3_0.png)
+
+
+    Fig. 2 The molecular structure is transformed to a DAG and then simulated by a
+    Tree-LSTM network.
+
+    '
+  mdcn: '
+
+
+    并且人工工作量更小。利用 DNNs 在特征提取方面的强大能力，深度学习技术可以从分子结构的视觉表示中制定 QSPRs/QSARs，例如，由卷积神经网络 (CNN)37
+    学习的图像，由循环神经网络 (RNN)38 学习的文本，以及由图神经网络 (GNN)35,39,40 学习的图。虽然深度学习提供了一种减少 QSPRs/QSARs
+    对分子描述符依赖的方法，41 这种强大的能力很容易导致 DNNs 在小数据集上过拟合。原因在于 DNNs 通常由涉及大量参数的复杂架构构成。
+
+
+    一般来说，最佳方法是基于深度学习使用更多样本训练 QSPR/QSAR 模型。虽然可燃性相关性质的预测模型10,27,28 表现良好，但它们是在包含估计值的更多数据点上训练的。事实上，根据先前的研究，3
+    四种可燃性相关性质的实验数据集在 DIPPR801 数据库中可用，且规模较小。我们注意到多任务学习 (MTL) 是一种迁移学习，可以在多个任务中获取相关知识以用于小数据集上的建模，虽然这些任务之间的相关知识可能微弱且人类难以察觉。42
+    Caruana43 研究了该领域的许多技术细节，并总结了 MTL 相对于单任务学习 (STL) 带来的改进：(a) 所用数据的放大；(b) 注意力集中；(c)
+    表示偏差和特征选择；以及 (d) 防止过拟合的正则化。因此，MTL 被用于解决基于分子描述符建模 QSARs/QSPRs 中的数据不足问题或提高预测性能，例如，带有多输出层的
+    ANN44 和多任务偏最小二乘法 (PLS)。45 应当指出，多任务 PLS 要求训练集中的每个分子都具有一组完整的性质。如果所用数据集的某一行在某个特征或目标性质上具有空值，则该行对应的化合物不能用于多任务
+    PLS 模型的训练。
+
+
+    在此研究中，提出了一种多任务深度学习神经网络 (MDNN) 架构，用于建立可燃性相关性质的预测模型。分子结构通过本工作开发的程序转换为有向无环图 (DAGs)，DAGs
+    通过两种技术向量化：词嵌入和树结构长短期记忆网络 (Tree-LSTM)46。重要的是，与先前的模型46 不同，无需通过预定义描述符提取分子结构的相应特征。提出的
+    MDNN 可以提取与唯一性质相关的分子特征，并可能使用两种训练策略（即联合训练和替代训练）捕获多个性质之间的一些可能相互作用。还提出了涉及异常值检测和 AD
+    分析的程序，以评估基于多任务深度学习的预测模型。所有这些旨在开发一种多任务 QSPR 建模的自动工具，该工具可以在一个深度学习模型中同时关联多种目标性质，无需特征选择，并充分利用有限的实验数据集。多任务学习的另一种技术
+    PLS 回归被用作比较基准，以突出所提 MDNN 的更好性能和可扩展的数据处理能力。
+
+
+    ## 2. Methodology
+
+
+    ## 2. 方法论
+
+
+    首先介绍 MDNN 的整体架构，它涉及两种类型的模块（见图 1）：(1) 基于 Tree-LSTM 网络46 的编码器，可以向量化 DAG 中描绘的分子结构，并捕获所有任务的所有相关特征和共性；(2)
+    分配多个前馈神经网络 (FNNs) 用于提取任务特定特征（每个任务的学习个性）并分别输出每个性质。接下来详细介绍 MDNN 的实现和建模。在数据准备中，SMILES
+    表达式预先使用基于 Faulon 算法47 的程序转换为 DAGs。DAG 的每个顶点都标记在一个涉及原子符号和化学键的字符串中，这些字符串通过词嵌入算法48
+    映射到向量。该程序在先前的工作中40 已被提出用于转换分子结构。在此，联合训练和替代训练都被采用，特别是针对多任务深度学习。得到的模型最终在外部测试集上进行了测试，以验证其外推能力。预测残差的经验累积分布函数
+    (ECDF) 被用于检测异常值。ECDF 是一个阶梯函数，在每个数据点处增加 1/n。提出了一种基于主成分分析 (PCA) 的方法，以探索所得模型的适用域。
+
+
+    ### 2.1 Network architecture
+
+
+    ### 2.1 网络架构
+
+
+    如上所述，Tree-LSTM 网络用作自编码器，以提取分子结构对所有性质的整体特征。相比之下，几个 FNNs 的工作方式类似于过滤器，仅捕获每个性质的相关特征。在此，使用了四个
+    FNNs 来关联/输出四种可燃性相关性质，并共享一个 Tree-LSTM 网络作为分子结构的编码器。
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_2_0.png)
+
+
+    ### 2.1.1 The extraction block of molecular features.
+
+
+    ### 2.1.1 分子特征提取模块。
+
+
+    由于 Tree-LSTM 网络可以遍历 DAG 中的所有顶点并模仿 DAG 的拓扑图，起点是分子结构应转换为 DAG 形式。虽然 DAGs 可以按照某些规则47
+    进行规范化，但得到的规范化方向在所有可能方向中仍可能相当任意。39 因此，在本研究中，每个 DAG 都是从每个方向生成的（即，从所有可能的根原子遍历）并然后分别由
+    Tree-LSTM 网络向量化。整个工作流程由化学物质 2,4,6-三氯甲苯 (Fig. 2) 展示和举例说明。
+
+
+    在 DAGs 的原始格式中，每条边都不对应分子的化学键，每个顶点仅与每个原子符号相关联。例如，两个原子之间的双键无法在原始 DAG 中记录，这也违背了 DAGs
+    的定义。为了记录分子的所有键，对原始 DAG 样式进行了修改，即，键类型附加在 DAG 子顶点的相邻原子符号上（见图 2 的第三步）。由于 Tree-LSTM
+    网络仅接受向量作为每个单元的输入，该单元映射到 DAG 的每个顶点。因此，表示顶点的字符串（即图 2 第三步中所示的 “[c]”、“[c]”、“[Cl]”、“[C]”
+    和 “[c0]”）应转换为向量（即图 2 第四步中所示的 v1–v5）。采用了词嵌入模型 skip-gram48 将这些字符串编码为向量。
+
+
+    值得注意的是，Tree-LSTM 网络可以被视为一种动态计算图，具有对各种分子结构的自适应能力。对于与 Tree-LSTM 网络计算图对应的每个 DAG（见图
+    2 的第四步，共有五个计算图），一个循环算法从每个 DAG 的根顶点遍历到叶顶点，并根据输入向量和邻域输出计算 Tree-LSTM 网络的相应单元。随后，代表所有方向
+    DAGs 的所有向量被求和为一个可以表示分子的向量（见图 2 的第五步和第六步）。由于篇幅有限，与分子结构转换、词嵌入和 Tree-LSTM 相关的更多详细信息披露在
+    ESI 的 S1 至 S3 节中。†
+
+
+    ### 2.1.2 The extraction block of task-specific features.
+
+
+    ### 2.1.2 任务特定特征提取模块。
+
+
+    每个任务特定块用于提取特定性质的相关特征并输出预测值。因此，目标性质的数量将决定任务特定块的数量，即任务的数量。理论上，每个任务特定块可以设计为具有独立结构和参数的不同
+    FNN，并且可以用不同的优化器分别训练每个块，这也是可行的。在任务特定块中，应用了激活函数整流线性单元 (ReLU)49 来执行非线性变换并生成激活值，因为
+    ReLU 具有较低的计算消耗和较低的梯度
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_3_0.png)
+
+
+    图 2 分子结构被转换为 DAG，然后由 Tree-LSTM 网络模拟。
+
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 4]
+
+
+    vanishing. Although the scalable architecture can provide flexible configurations
+    for multiple tasks of modelling QSPRs, it becomes more challenging to optimize
+    more hyper-parameters. Herein, four FNNs corresponding to the four flammability-related
+    properties (i.e., FPT, AIT, UFL, LFL) were configured with same structural parameters
+    for lower complexity of optimization.
+
+
+    # 2.2 MDNN implementation and training
+
+
+    As the proposed MDNN includes a dynamic neural network (i.e., Tree-LSTM network),
+    it was implemented on an open-source software platform supporting dynamic networks,
+    PyTorch.50 All tasks of training, validation and testing were finished on the
+    hardware platform with NVidia GTX1060 and Intel i5 8400. A parser based on RDKit51
+    was developed and Faulon’s algorithm40 was implemented in Python, to translate
+    SMILES expressions into DAGs in Python. Meanwhile, a simple implementation of
+    word embedding algorithm52 was utilized to train the embedding vectors in TensorFlow.53
+    After all programs were prepared, a multi-task prediction model of the four flammability-related
+    properties was obtained using the procedure illustrated in Fig. 3.
+
+
+    In the workflow of Fig. 3, a regression algorithm named Adam54 was employed as
+    optimizers to train the proposed MDNN. Eight optimizers were configured with different
+    hyper-parameters for each task in alternate training. Meanwhile, another optimizer
+    was employed to carry out the joint training on the entire MDNN. Additionally,
+    early stopping was used to avoid overfitting, i.e., once there was no improvement
+    on loss values of validation sets for a specified time (e.g., twenty epochs),
+    the training process would be terminated.
+
+
+    # 2.2.1 Data analysis and preparation.
+
+
+    The experimental data involving FPT, AIT, LFL and UFL were used to train the MDNN,
+
+
+    which were extracted from an authoritative database named DIPPR801.55 The database,
+    DIPPR801, provides the uncertainty and acceptance for each experimental data point
+    in which all data had been checked and reviewed by database maintainers. Hence,
+    it was employed in many QSPR studies as a reliable data source. A list of molecular
+    structures was gathered from PubChem56 representing isomeric SMILES, including
+    all the available compounds in DIPPR801 and other compounds. Some compounds involving
+    inorganic gas, salts, metal-organics and metallic elements were excluded from
+    the employed data set, as molecular structures of these unemployed compounds are
+    significantly different from most conventional organics and their flammability
+    property data are often unavailable. The employed datasets only including accepted
+    and experimental values were stored in (Comma-Separated Values) CSV format. The
+    lists of employed compounds are provided in the section S4 of ESI.†
+
+
+    As for different units and numerical levels among the four flammability-related
+    properties, it is necessary to standardize the raw data sets for easier training
+    models. The reason is that the different numerical metrics could result in big
+    gaps of gradient among each task. Note that the raw experimental data sets should
+    be standardized in a linear transformation to guarantee that distribution shapes
+    are not changed. The Z-score transformation as shown in eqn (1) was employed that
+    can always produce a distribution with a mean of 0 and a standard deviation of
+    1.
+
+
+    ```
+
+    \(\hat{x}_i^{\text{exp}} = \frac{x_i^{\text{exp}} - \bar{x}^{\text{exp}}}{\sigma}\)
+
+    ```
+
+
+    where \(\hat{x}_i^{\text{exp}}\) represents the transformed property values and
+    \(x_i^{\text{exp}}\) refers to the original values, \(\bar{x}^{\text{exp}}\) and
+    \(\sigma\) are the average value and standard deviation of a data set, respectively.
+    It
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_4_0.png)
+
+
+    Fig. 3 The overview of the methodology for formulating a multi-task QSPR model
+    based on deep learning.'
+  - '[PAGE 5]
+
+
+    should be noticed that the \(\tilde{x}^{\text{exp}}\) and \(\sigma\) must be calculated
+    on training sets, then two parameters are used to transform the validation and
+    test sets.
+
+
+    All available data were employed in the initial correlation, in which outliers
+    were not excluded. The final correlation based on the proposed MDNN was implemented
+    without outliers. Tables 2 and 3 list the used data points for the flammability-related
+    properties in the initial and final correlation, respectively. Table 4 shows information
+    related to the ranges of raw data collected from DIPPR801 database. For training
+    and optimizing the multi-task model, the data set was split into three sets including
+    a training set, a validation set and a test set. The transformation should be
+    only implemented on the training set of each property. The term "validation set"
+    refers to the dataset utilized to determine the hyper-parameters and observe trends
+    of loss for early stopping in training models. The test set was employed to test
+    model performance finally after a deep learning model was well trained with determined
+    hyper-parameters. All compounds both in the validation and test sets were sampled
+    randomly.
+
+
+    Before proceeding with the training, all molecular structures were converted into
+    DAGs attached embedding vectors as mentioned above. Since the generation of embedding
+    vectors does not need property data, many more compounds can be employed by the
+    word embedding algorithm. In this work, 23 709 compounds depicted in SMILES expressions
+    were employed to train the embedding vectors for each vertex of
+
+
+    Table 2 Data points of the flammability-related properties used in the initial
+    correlation
+
+
+    | Property | Whole dataset | Training set | Validation set | Test set |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | FPT | 1176 | 822 | 177 | 177 |
+
+    | AIT | 501 | 349 | 76 | 76 |
+
+    | LFL | 449 | 315 | 67 | 67 |
+
+    | UFL | 350 | 243 | 53 | 54 |
+
+
+    Table 3 Data points of the flammability-related properties used in the final correlation
+
+
+    | Property | Whole dataset | Training set | Validation set | Test set |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | FPT | 1176 | 822 | 177 | 177 |
+
+    | AIT | 480 | 334 | 70 | 76 |
+
+    | LFL | 443 | 309 | 67 | 67 |
+
+    | UFL | 329 | 226 | 49 | 54 |
+
+
+    Table 4 Ranges of used datasets on the flammability-related properties
+
+
+    | Property | Minimum | Maximum | Average | Standard deviation |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | FPT | 87.1 | 570 | 330 | 63.4 |
+
+    | AIT | 363 | 1283 | 651 | 120 |
+
+    | LFL | 0.0454 | 16.9 | 2.24 | 2.41 |
+
+    | UFL | 2.40 | 100 | 12.7 | 9.31 |
+
+
+    DAGs. At this stage, 170 symbols were extracted from all vertexes of the DAGs
+    and each one was represented by a 48-dimensional vector. The symbols are listed
+    in the section S2 of ESI.$^\dagger$
+
+
+    # 2.2.2 Training and evaluating a deep learning based QSPR model.
+
+
+    Unlike single-task DNNs, there are two strategies to train multi-task DNNs as
+    usual, _i.e._, alternate training and joint training.$^{57}$ With joint training
+    for property prediction, a distribution of vectors representing molecules in the
+    chemical latent space is simultaneously organized by the four properties and commonalities
+    among the four tasks which could be learned. There is a requirement on the training
+    data for joint training, _i.e._, the experimental values of four properties must
+    be available simultaneously in one data row. Therefore, all parameters of the
+    MDNN can be trained in each epoch of the joint training. After the joint training
+    had been conducted, alternate trainings were employed to train each FNN as well
+    as the Tree-LSTM network in one epoch. It is not necessary to fill all training
+    data matrices in the alternate training which could transfer some information
+    from rich data sets to sparse ones. In the alternate training, only the corresponding
+    FNN is updated for the current task during each iteration, while all parameters
+    of other task-specific FNNs are frozen. Two types of loss function were employed
+    in the two types of training methods. For the joint training, all parameters of
+    the whole network were updated to minimize a combined loss function eqn (2).$^{58}$
+
+
+    ```
+
+    \(L(W, \sigma_1, \sigma_2, \dots, \sigma_i) = \sum_l \left( \frac{1}{2\sigma_l^2}
+    L_i(W) + \log \sigma_i \right) \quad (2)\)
+
+    ```
+
+
+    ```
+
+    \(L(W, \sigma_i) = \frac{1}{2\sigma_i^2} L_i(W) + \log \sigma_i \quad (3)\)
+
+    ```
+
+
+    where \(W\) is used to represent model parameters and \(\sigma_i\) is the observation
+    noise variable (_i.e._, standard deviation) of each task. This loss function weighs
+    the losses of all tasks using the homoscedastic uncertainty of each task, which
+    allows each task corresponding to each property to be learned simultaneously.
+    \(L_i(W)\) representing the loss function for each task was calculated by mean
+    square error (MSE) between the estimated values and the experimental values. It
+    should be noted that the loss function \(L_i(W)\) was employed for each FNN and
+    the weighted loss function \(L_i \ (W, \sigma_i)\) was used to train the Tree-LSTM
+    encoder in the alternate training. The details related to model training are presented
+    in the section S5 of ESI.$^\dagger$
+
+
+    # 2.2.3 Determination of hyper-parameters.
+
+
+    It is significant to determine the optimal configuration of hyper-parameters for
+    a deep learning model. In general, two parts of hyper-parameters should be determined:
+    the structural parameters of deep neural network (_e.g._, number of hidden layers,
+    number of neurons, types and parameters of activation functions) and parameters
+    of training optimizers. Unfortunately, there is no such a universal configuration
+    that can work well for all models and data sets. It is necessary to optimize the
+    hyper-parameters for different models separately.'
+  md: '
+
+    vanishing. Although the scalable architecture can provide flexible configurations
+    for multiple tasks of modelling QSPRs, it becomes more challenging to optimize
+    more hyper-parameters. Herein, four FNNs corresponding to the four flammability-related
+    properties (i.e., FPT, AIT, UFL, LFL) were configured with same structural parameters
+    for lower complexity of optimization.
+
+
+    ## 2.2 MDNN implementation and training
+
+
+    As the proposed MDNN includes a dynamic neural network (i.e., Tree-LSTM network),
+    it was implemented on an open-source software platform supporting dynamic networks,
+    PyTorch.50 All tasks of training, validation and testing were finished on the
+    hardware platform with NVidia GTX1060 and Intel i5 8400. A parser based on RDKit51
+    was developed and Faulon’s algorithm40 was implemented in Python, to translate
+    SMILES expressions into DAGs in Python. Meanwhile, a simple implementation of
+    word embedding algorithm52 was utilized to train the embedding vectors in TensorFlow.53
+    After all programs were prepared, a multi-task prediction model of the four flammability-related
+    properties was obtained using the procedure illustrated in Fig. 3.
+
+
+    In the workflow of Fig. 3, a regression algorithm named Adam54 was employed as
+    optimizers to train the proposed MDNN. Eight optimizers were configured with different
+    hyper-parameters for each task in alternate training. Meanwhile, another optimizer
+    was employed to carry out the joint training on the entire MDNN. Additionally,
+    early stopping was used to avoid overfitting, i.e., once there was no improvement
+    on loss values of validation sets for a specified time (e.g., twenty epochs),
+    the training process would be terminated.
+
+
+    ### 2.2.1 Data analysis and preparation.
+
+
+    The experimental data involving FPT, AIT, LFL and UFL were used to train the MDNN,
+    which were extracted from an authoritative database named DIPPR801.55 The database,
+    DIPPR801, provides the uncertainty and acceptance for each experimental data point
+    in which all data had been checked and reviewed by database maintainers. Hence,
+    it was employed in many QSPR studies as a reliable data source. A list of molecular
+    structures was gathered from PubChem56 representing isomeric SMILES, including
+    all the available compounds in DIPPR801 and other compounds. Some compounds involving
+    inorganic gas, salts, metal-organics and metallic elements were excluded from
+    the employed data set, as molecular structures of these unemployed compounds are
+    significantly different from most conventional organics and their flammability
+    property data are often unavailable. The employed datasets only including accepted
+    and experimental values were stored in (Comma-Separated Values) CSV format. The
+    lists of employed compounds are provided in the section S4 of ESI.†
+
+
+    As for different units and numerical levels among the four flammability-related
+    properties, it is necessary to standardize the raw data sets for easier training
+    models. The reason is that the different numerical metrics could result in big
+    gaps of gradient among each task. Note that the raw experimental data sets should
+    be standardized in a linear transformation to guarantee that distribution shapes
+    are not changed. The Z-score transformation as shown in eqn (1) was employed that
+    can always produce a distribution with a mean of 0 and a standard deviation of
+    1.
+
+
+    ```
+
+    \(\hat{x}_i^{\text{exp}} = \frac{x_i^{\text{exp}} - \bar{x}^{\text{exp}}}{\sigma}\)
+
+    ```
+
+
+    where \(\hat{x}_i^{\text{exp}}\) represents the transformed property values and
+    \(x_i^{\text{exp}}\) refers to the original values, \(\bar{x}^{\text{exp}}\) and
+    \(\sigma\) are the average value and standard deviation of a data set, respectively.
+    It should be noticed that the \(\bar{x}^{\text{exp}}\) and \(\sigma\) must be
+    calculated on training sets, then two parameters are used to transform the validation
+    and test sets.
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_4_0.png)
+
+
+    Fig. 3 The overview of the methodology for formulating a multi-task QSPR model
+    based on deep learning.
+
+
+    All available data were employed in the initial correlation, in which outliers
+    were not excluded. The final correlation based on the proposed MDNN was implemented
+    without outliers. Tables 2 and 3 list the used data points for the flammability-related
+    properties in the initial and final correlation, respectively. Table 4 shows information
+    related to the ranges of raw data collected from DIPPR801 database. For training
+    and optimizing the multi-task model, the data set was split into three sets including
+    a training set, a validation set and a test set. The transformation should be
+    only implemented on the training set of each property. The term "validation set"
+    refers to the dataset utilized to determine the hyper-parameters and observe trends
+    of loss for early stopping in training models. The test set was employed to test
+    model performance finally after a deep learning model was well trained with determined
+    hyper-parameters. All compounds both in the validation and test sets were sampled
+    randomly.
+
+
+    Before proceeding with the training, all molecular structures were converted into
+    DAGs attached embedding vectors as mentioned above. Since the generation of embedding
+    vectors does not need property data, many more compounds can be employed by the
+    word embedding algorithm. In this work, 23 709 compounds depicted in SMILES expressions
+    were employed to train the embedding vectors for each vertex of
+
+
+    Table 2 Data points of the flammability-related properties used in the initial
+    correlation
+
+
+    | Property | Whole dataset | Training set | Validation set | Test set |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | FPT | 1176 | 822 | 177 | 177 |
+
+    | AIT | 501 | 349 | 76 | 76 |
+
+    | LFL | 449 | 315 | 67 | 67 |
+
+    | UFL | 350 | 243 | 53 | 54 |
+
+
+    Table 3 Data points of the flammability-related properties used in the final correlation
+
+
+    | Property | Whole dataset | Training set | Validation set | Test set |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | FPT | 1176 | 822 | 177 | 177 |
+
+    | AIT | 480 | 334 | 70 | 76 |
+
+    | LFL | 443 | 309 | 67 | 67 |
+
+    | UFL | 329 | 226 | 49 | 54 |
+
+
+    Table 4 Ranges of used datasets on the flammability-related properties
+
+
+    | Property | Minimum | Maximum | Average | Standard deviation |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | FPT | 87.1 | 570 | 330 | 63.4 |
+
+    | AIT | 363 | 1283 | 651 | 120 |
+
+    | LFL | 0.0454 | 16.9 | 2.24 | 2.41 |
+
+    | UFL | 2.40 | 100 | 12.7 | 9.31 |
+
+
+    DAGs. At this stage, 170 symbols were extracted from all vertexes of the DAGs
+    and each one was represented by a 48-dimensional vector. The symbols are listed
+    in the section S2 of ESI.$^\dagger$
+
+
+    ### 2.2.2 Training and evaluating a deep learning based QSPR model.
+
+
+    Unlike single-task DNNs, there are two strategies to train multi-task DNNs as
+    usual, _i.e._, alternate training and joint training.$^{57}$ With joint training
+    for property prediction, a distribution of vectors representing molecules in the
+    chemical latent space is simultaneously organized by the four properties and commonalities
+    among the four tasks which could be learned. There is a requirement on the training
+    data for joint training, _i.e._, the experimental values of four properties must
+    be available simultaneously in one data row. Therefore, all parameters of the
+    MDNN can be trained in each epoch of the joint training. After the joint training
+    had been conducted, alternate trainings were employed to train each FNN as well
+    as the Tree-LSTM network in one epoch. It is not necessary to fill all training
+    data matrices in the alternate training which could transfer some information
+    from rich data sets to sparse ones. In the alternate training, only the corresponding
+    FNN is updated for the current task during each iteration, while all parameters
+    of other task-specific FNNs are frozen. Two types of loss function were employed
+    in the two types of training methods. For the joint training, all parameters of
+    the whole network were updated to minimize a combined loss function eqn (2).$^{58}$
+
+
+    ```
+
+    \(L(W, \sigma_1, \sigma_2, \dots, \sigma_i) = \sum_l \left( \frac{1}{2\sigma_l^2}
+    L_i(W) + \log \sigma_i \right) \quad (2)\)
+
+    ```
+
+
+    ```
+
+    \(L(W, \sigma_i) = \frac{1}{2\sigma_i^2} L_i(W) + \log \sigma_i \quad (3)\)
+
+    ```
+
+
+    where \(W\) is used to represent model parameters and \(\sigma_i\) is the observation
+    noise variable (_i.e._, standard deviation) of each task. This loss function weighs
+    the losses of all tasks using the homoscedastic uncertainty of each task, which
+    allows each task corresponding to each property to be learned simultaneously.
+    \(L_i(W)\) representing the loss function for each task was calculated by mean
+    square error (MSE) between the estimated values and the experimental values. It
+    should be noted that the loss function \(L_i(W)\) was employed for each FNN and
+    the weighted loss function \(L_i \ (W, \sigma_i)\) was used to train the Tree-LSTM
+    encoder in the alternate training. The details related to model training are presented
+    in the section S5 of ESI.$^\dagger$
+
+
+    ### 2.2.3 Determination of hyper-parameters.
+
+
+    It is significant to determine the optimal configuration of hyper-parameters for
+    a deep learning model. In general, two parts of hyper-parameters should be determined:
+    the structural parameters of deep neural network (_e.g._, number of hidden layers,
+    number of neurons, types and parameters of activation functions) and parameters
+    of training optimizers. Unfortunately, there is no such a universal configuration
+    that can work well for all models and data sets. It is necessary to optimize the
+    hyper-parameters for different models separately.
+
+    '
+  mdcn: '
+
+
+    消失。尽管可扩展架构可以为建模QSPR的多项任务提供灵活配置，但优化更多超参数变得更加具有挑战性。在此，对应四种易燃性相关属性（即FPT、AIT、UFL、LFL）的四个FNN被配置为相同的结构参数，以降低优化的复杂度。
+
+
+    ## 2.2 MDNN实现与训练
+
+
+    由于所提出的MDNN包含动态神经网络（即Tree-LSTM网络），因此在支持动态网络的开源软件平台PyTorch上实现了它。50 训练、验证和测试的所有任务均在搭载NVidia
+    GTX1060和Intel i5 8400的硬件平台上完成。开发了基于RDKit的解析器，并用Python实现了Faulon算法，以将SMILES表达式翻译为Python中的DAG。同时，利用简单的词嵌入算法实现，在TensorFlow中训练了嵌入向量。53
+    在所有程序准备就绪后，使用图3所示的流程获得了四种易燃性相关属性的多任务预测模型。
+
+
+    在图3的工作流中，采用了一种名为Adam的回归算法作为优化器来训练所提出的MDNN。在交替训练中，为每个任务配置了八个具有不同超参数的优化器。同时，还使用了另一个优化器来对整个MDNN进行联合训练。此外，采用早停法以避免过拟合，即，一旦在指定时间内（例如，二十个epoch）验证集的损失值没有改善，则训练过程将终止。
+
+
+    ### 2.2.1 数据分析与准备。
+
+
+    用于训练MDNN的涉及FPT、AIT、LFL和UFL的实验数据是从名为DIPPR801的权威数据库中提取的。55 该数据库DIPPR801为每个实验数据点提供不确定度和接受度，其中所有数据均已由数据库维护人员检查和审查。因此，它被用作许多QSPR研究的可靠数据源。从PubChem收集了一份分子结构列表，表示异构SMILES，包括DIPPR801中所有可用化合物和其他化合物。56
+    从所使用的数据集中排除了涉及无机气体、盐类、金属有机物和金属元素的某些化合物，因为这些未使用化合物的分子结构与大多数传统有机物有显著差异，且其易燃性属性数据通常不可用。仅包含接受值和实验值的所用数据集以（逗号分隔值）CSV格式存储。所用化合物列表在ESI的S4节中提供。†
+
+
+    关于四种易燃性相关属性之间不同的单位和数值水平，有必要对原始数据集进行标准化，以便更轻松地训练模型。原因是不同的数值指标可能导致各任务之间梯度出现较大差距。请注意，原始实验数据集应采用线性变换进行标准化，以保证分布形状不变。采用了如等式（1）所示的Z-score变换，它始终可以生成均值为0、标准差为1的分布。
+
+
+    ```
+
+    \(\hat{x}_i^{\text{exp}} = \frac{x_i^{\text{exp}} - \bar{x}^{\text{exp}}}{\sigma}\)
+
+    ```
+
+
+    其中，\(\hat{x}_i^{\text{exp}}\)表示转换后的属性值，\(x_i^{\text{exp}}\)表示原始值，\(\bar{x}^{\text{exp}}\)和\(\sigma\)分别是数据集的平均值和标准差。应注意，\(\bar{x}^{\text{exp}}\)和\(\sigma\)必须在训练集上计算，然后使用这两个参数来转换验证集和测试集。
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_4_0.png)
+
+
+    图3 基于深度学习构建多任务QSPR模型的方法概览。
+
+
+    在初始关联中使用了所有可用数据，未排除异常值。基于所提出的MDNN的最终关联在未排除异常值的情况下实现。表2和表3分别列出了初始关联和最终关联中用于易燃性相关属性的数据点。表4显示了从DIPPR801数据库收集的原始数据范围的相关信息。为了训练和优化多任务模型，数据集被分为三个子集，包括训练集、验证集和测试集。变换应仅在每个属性的训练集上实现。“验证集”指的是用于确定超参数并在训练模型时观察早停损失趋势的数据集。在使用确定的超参数很好地训练深度学习模型后，测试集用于最终测试模型性能。验证集和测试集中的所有化合物均随机抽取。
+
+
+    在进行训练之前，所有分子结构均按上述方式转换为带有嵌入向量的DAG。由于生成嵌入向量不需要属性数据，词嵌入算法可以使用更多化合物。在本工作中，采用了用SMILES表达式描绘的23
+    709个化合物，为DAG的每个顶点训练嵌入向量。
+
+
+    表2 初始关联中使用的易燃性相关属性的数据点
+
+
+    | Property | Whole dataset | Training set | Validation set | Test set |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | FPT | 1176 | 822 | 177 | 177 |
+
+    | AIT | 501 | 349 | 76 | 76 |
+
+    | LFL | 449 | 315 | 67 | 67 |
+
+    | UFL | 350 | 243 | 53 | 54 |
+
+
+    表3 最终关联中使用的易燃性相关属性的数据点
+
+
+    | Property | Whole dataset | Training set | Validation set | Test set |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | FPT | 1176 | 822 | 177 | 177 |
+
+    | AIT | 480 | 334 | 70 | 76 |
+
+    | LFL | 443 | 309 | 67 | 67 |
+
+    | UFL | 329 | 226 | 49 | 54 |
+
+
+    表4 易燃性相关属性所用数据集的范围
+
+
+    | Property | Minimum | Maximum | Average | Standard deviation |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | FPT | 87.1 | 570 | 330 | 63.4 |
+
+    | AIT | 363 | 1283 | 651 | 120 |
+
+    | LFL | 0.0454 | 16.9 | 2.24 | 2.41 |
+
+    | UFL | 2.40 | 100 | 12.7 | 9.31 |
+
+
+    DAG。在此阶段，从DAG的所有顶点中提取了170个符号，每个符号由一个48维向量表示。符号在ESI的S2节中列出。$^\dagger$
+
+
+    ### 2.2.2 基于深度学习的QSPR模型的训练与评估。
+
+
+    与单任务DNN不同，通常有两种训练多任务DNN的策略，_即_，交替训练和联合训练。57 对于属性预测的联合训练，化学潜空间中表示分子的向量分布由四种属性和四项任务之间的共同特征同时组织，这些共同特征可以被学习。联合训练对训练数据有一个要求，_即_，四种属性的实验值必须同时在一个数据行中可用。因此，在联合训练的每个epoch中，可以训练MDNN的所有参数。在进行联合训练后，采用交替训练在一个epoch中训练每个FNN以及Tree-LSTM网络。在交替训练中，无需填充所有训练数据矩阵，这可以将一些信息从丰富的数据集转移到稀疏的数据集中。在交替训练中，在每次迭代中仅针对当前任务更新相应的FNN，而其他任务特定FNN的所有参数均被冻结。在两种训练方法中采用了两种损失函数。对于联合训练，更新整个网络的所有参数以最小化组合损失函数等式（2）。58
+
+
+    ```
+
+    \(L(W, \sigma_1, \sigma_2, \dots, \sigma_i) = \sum_l \left( \frac{1}{2\sigma_l^2}
+    L_i(W) + \log \sigma_i \right) \quad (2)\)
+
+    ```
+
+
+    ```
+
+    \(L(W, \sigma_i) = \frac{1}{2\sigma_i^2} L_i(W) + \log \sigma_i \quad (3)\)
+
+    ```
+
+
+    其中，\(W\)用于表示模型参数，\(\sigma_i\)是每个任务的观测噪声变量（_即_，标准差）。该损失函数使用每个任务的同方差不确定度对所有任务的损失进行加权，从而允许每个属性对应的任务同时学习。代表每个任务损失函数的\(L_i(W)\)是通过估计值与实验值之间的均方误差（MSE）计算得出的。应注意，损失函数\(L_i(W)\)用于每个FNN，加权损失函数\(L_i(W,
+    \sigma_i)\)用于在交替训练中训练Tree-LSTM编码器。与模型训练相关的详细信息在ESI的S5节中呈现。$^\dagger$
+
+
+    ### 2.2.3 超参数确定。
+
+
+    为深度学习模型确定最优超参数配置至关重要。一般来说，应确定两部分超参数：深度神经网络的结构参数（_例如_，隐藏层数量、神经元数量、激活函数类型及参数）和训练优化器的参数。不幸的是，没有一种通用配置可以对所有模型和数据集都有效。有必要分别为不同模型优化超参数。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 6]
+
+
+    In most cases, two approaches, grid search and random search, can provide an acceptable
+    configuration of hyper-parameters for a certain data set. Since there exist 19
+    hyper-parameters in the proposed MDNN, it is extremely time-consuming to assess
+    all possible combinations of hyper-parameters. In the training process of the
+    proposed MDNN, an initial guess of structural parameters is chosen to fix the
+    network architecture referred to the successful practices in previous studies.\(^\text{35,58,59}\)
+    To reduce the complexity of hyper-parameter optimization, the numbers of neurons
+    in the hidden layers were scanned while the layer number of each task-specific
+    FNN was fixed at four (three hidden layers and one output layer), since there
+    were no significant improvements for more layers. Afterwards, a grid search was
+    applied to find the optimal ranges of other hyper-parameters initially. The hyper-parameters
+    were also fine-tuned into the optimal range manually. Herein, one or two hyper-parameters
+    were tuned at a time manually, it should be observed whether the MDNN performance
+    was improved on the validation sets after manual tuning. The finally adopted configuration
+    of hyper-parameters are listed in Tables 5 and 6. After all the hyper-parameters
+    were determined and validated, the model was tested on an external test eventually.
+
+
+    # 2.2.4 Statistical evaluation.
+
+
+    The following statistical indicators were employed as the performance metrics
+    to evaluate the learned MDNN model.
+
+
+    Mean absolute error (MAE) is the measure of deviation between the predicted values
+    and the experimental values, and it is obtained *via* eqn (4).
+
+
+    \(\text{MAE} = \frac{\sum_{i=0}^N |x_i^{\text{exp}} - x_i^{\text{pre}}|}{N}\)
+    (4)
+
+
+    Table 5 The finally adopted structural hyper-parameters of the MDNN
+
+
+    | Hyper-parameters | Values |
+
+    |---|---|
+
+    | The dimension of embedding vectors | 48 |
+
+    | The memory dimension of the Tree-LSTM | 32 |
+
+    | The output dimension of the Tree-LSTM | 32 |
+
+    | The hidden layers of each task-specific FNN | 3 |
+
+    | The neuron number of each hidden layers in the FNNs | 32 |
+
+
+    Table 6 The finally adopted hyper-parameters of the training optimizers
+
+
+    | Hyper-parameters | Values | Tasks |
+
+    |---|---|---|
+
+    | The learning rate \(\eta_t\) | 0.020000 | Jointly, training the whole MDNN according
+    to all properties |
+
+    | The learning rate \(\eta_1\) | 0.00120 | Alternatively, training the Tree-LSTM
+    network according to FPT |
+
+    | The learning rate \(\eta_2\) | 0.00120 | Alternatively, training the Tree-LSTM
+    network according to AIT |
+
+    | The learning rate \(\eta_3\) | 0.0006 | Alternatively, training the Tree-LSTM
+    network according to LFL |
+
+    | The learning rate \(\eta_4\) | 0.00023 | Alternatively, training the Tree-LSTM
+    network according to UFL |
+
+    | The learning rate \(\eta_1\) | 0.00120 | Alternatively, training the task-specific
+    FNN according to FPT |
+
+    | The learning rate \(\eta_2\) | 0.00180 | Alternatively, training the task-specific
+    FNN according to AIT |
+
+    | The learning rate \(\eta_3\) | 0.00009 | Alternatively, training the task-specific
+    FNN according to LFL |
+
+    | The learning rate \(\eta_4\) | 0.00020 | Alternatively, training the task-specific
+    FNN according to UFL |
+
+    | The batch size \(b_t\) | 32 | Jointly, training the whole MDNN according to
+    all properties |
+
+    | The batch size \(b_1\) | 32 | Alternatively, for the Tree-LSTM and FNN corresponding
+    to FPT |
+
+    | The batch size \(b_2\) | 32 | Alternatively, for the Tree-LSTM and FNN corresponding
+    to AIT |
+
+    | The batch size \(b_3\) | 32 | Alternatively, for the Tree-LSTM and FNN corresponding
+    to LFL |
+
+    | The batch size \(b_4\) | 32 | Alternatively, for the Tree-LSTM and FNN corresponding
+    to UFL |
+
+
+    Mean percentage error (MPE) provides an average of percentage error by which the
+    predicted values differ from the experimental values, and it is expressed as eqn
+    (5).
+
+
+    \(\text{MPE} = \frac{1}{N} \sum_{i=0}^N \frac{|x_i^{\text{exp}} - x_i^{\text{pre}}|}{x_i^{\text{exp}}}
+    \times 100\%\) (5)
+
+
+    Since the correlation analysis reported in the published literatures\(^\text{21,22,24,32,33,60,61}\)
+    usually chose the correlation coefficients of \(r\) or \(R^2\) as the performance
+    indicator, both of them were employed to assess the proposed MDNN in this research.
+    The Pearson correlation coefficient,
+
+
+    \(r = \frac{\sum_{i=1}^n (x_i^{\text{exp}} - \overline{x^{\text{exp}}})(x_i^{\text{pre}}
+    - \overline{x^{\text{pre}}})}{\sqrt{\sum_{i=1}^n (x_i^{\text{exp}} - \overline{x^{\text{exp}}})^2}
+    \sqrt{\sum_{i=1}^n (x_i^{\text{pre}} - \overline{x^{\text{pre}}})^2}}\) (6)
+
+
+    The coefficient of determination,
+
+
+    \(R^2 = 1 - \frac{\sum_{i=1}^n (x_i^{\text{exp}} - x_i^{\text{pre}})^2}{\sum_{i=1}^n
+    (x_i^{\text{exp}} - \overline{x^{\text{exp}}})^2}\) (7)
+
+
+    # 2.3 The outlier detection and AD determination
+
+
+    The outlier detection was also studied for deep learning based QSPRs in this work.
+    The outliers of four tasks were detected with the empirical cumulative distribution
+    function (ECDF) of the residuals between experimental and predicted values. The
+    ECDF is a step function that increases by 1/n in every data point. Let \((X_1,
+    ..., X_n)\) be independent, identically distributed real random variables with
+    the common cumulative distribution function \(F(t)\), then the ECDF can be defined
+    as shown in eqn (8) for a realization \((x_1, ..., x_n)\).
+
+
+    \(\widehat{F}_n(t) = \frac{\text{number of element in the sample } \le t}{n} =
+    \frac{1}{n} \sum_{i=1}^n I_{X_i \le t}\) (8)
+
+
+    For a fixed \(t\), the indicator \(I_{X_i \le t}\) is a Bernoulli random variable
+    with parameter \(p = F(t)\). The value of the ECDF is the'
+  - '[PAGE 7]
+
+
+    number of samples whose sample value is less than or equal to t divided by the
+    total number of samples n. This methodology was suggested in the residual analysis
+    of group contribution models by Frutiger et al.,14 in which the distribution of
+    residuals could not be assumed as a normal distribution in advance. Frutiger et
+    al.14 applied the approach on an unsegmented data set and repeatedly regressed
+    a group contribution model after outliers were excluded. Finally, the model performance
+    was improved successfully thanks to the reduction of residual dispersion. However,
+    raw data sets are often divided into three subsets for training, validation, and
+    test respectively in the modelling of QSPRs based on deep learning. Although outliers
+    can be detected on all the three data sets, only the outliers in the training
+    and validation sets can be excluded. The test set is often utilized to evaluate
+    the generalization ability of a trained model of deep learning, which is independent
+    to the training and validation sets and should not be evaluated in the model training.
+    Moreover, there is a possibility that some compounds included in test sets could
+    drift out of the latent chemical space determined by training and validation sets.
+    To depict the latent chemical space learned by MDNN and check the changes of chemical
+    space after outliers are excluded, we
+
+
+    also investigated ADs of the final model from two aspects: structural domain and
+    property domain.16 Molecular features are depicted in a high-dimensional vector
+    output by the Tree-LSTM network. As the high-dimensional vector cannot be visualized
+    and analysed easily, it is suitable to apply a dimension-reduction algorithm,
+    principal components analysis (PCA), on the determination of ADs involving training
+    and validation sets.62 We decided to assess structural space and property space
+    together, i.e., all the high-dimensional vectors and target properties in a dataset
+    were combined into a matrix. PCA can reduce dimensionality and enable only a few
+    principal components (PCs) to retain the most of variance of all data. As such,
+    ADs could be analysed and visualized in a lower dimensional space. Another factor
+    is that the scope of an AD should be also determined, a strategy based on convex
+    hull was applied to explore the AD boundary. For this reason, it is easy to discover
+    whether some compounds in test sets exist outside the AD. Meanwhile, the outliers
+    identified by ECDF can also be marked in a visualized AD, to investigate relationships
+    between the outliers and ADs. The calculation method of convex hull is disclosed
+    in section S7 of the ESI.†
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_7_0.png)
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_7_1.png)
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_7_2.png)
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_7_3.png)
+
+
+    **Fig. 4** The experimental versus predicted values of four flammability-related
+    properties for the training, validation and test sets obtained by the model (I):
+    (a) FPT; (b) AIT; (c) LFL; (d) UFL.'
+  md: '
+
+    In most cases, two approaches, grid search and random search, can provide an acceptable
+    configuration of hyper-parameters for a certain data set. Since there exist 19
+    hyper-parameters in the proposed MDNN, it is extremely time-consuming to assess
+    all possible combinations of hyper-parameters. In the training process of the
+    proposed MDNN, an initial guess of structural parameters is chosen to fix the
+    network architecture referred to the successful practices in previous studies.\(^\text{35,58,59}\)
+    To reduce the complexity of hyper-parameter optimization, the numbers of neurons
+    in the hidden layers were scanned while the layer number of each task-specific
+    FNN was fixed at four (three hidden layers and one output layer), since there
+    were no significant improvements for more layers. Afterwards, a grid search was
+    applied to find the optimal ranges of other hyper-parameters initially. The hyper-parameters
+    were also fine-tuned into the optimal range manually. Herein, one or two hyper-parameters
+    were tuned at a time manually, it should be observed whether the MDNN performance
+    was improved on the validation sets after manual tuning. The finally adopted configuration
+    of hyper-parameters are listed in Tables 5 and 6. After all the hyper-parameters
+    were determined and validated, the model was tested on an external test eventually.
+
+
+    ### 2.2.4 Statistical evaluation.
+
+
+    The following statistical indicators were employed as the performance metrics
+    to evaluate the learned MDNN model.
+
+
+    Mean absolute error (MAE) is the measure of deviation between the predicted values
+    and the experimental values, and it is obtained *via* eqn (4).
+
+
+    \(\text{MAE} = \frac{\sum_{i=0}^N |x_i^{\text{exp}} - x_i^{\text{pre}}|}{N}\)
+    (4)
+
+
+    Table 5 The finally adopted structural hyper-parameters of the MDNN
+
+
+    | Hyper-parameters | Values |
+
+    |---|---|
+
+    | The dimension of embedding vectors | 48 |
+
+    | The memory dimension of the Tree-LSTM | 32 |
+
+    | The output dimension of the Tree-LSTM | 32 |
+
+    | The hidden layers of each task-specific FNN | 3 |
+
+    | The neuron number of each hidden layers in the FNNs | 32 |
+
+
+    Table 6 The finally adopted hyper-parameters of the training optimizers
+
+
+    | Hyper-parameters | Values | Tasks |
+
+    |---|---|---|
+
+    | The learning rate \(\eta_t\) | 0.020000 | Jointly, training the whole MDNN according
+    to all properties |
+
+    | The learning rate \(\eta_1\) | 0.00120 | Alternatively, training the Tree-LSTM
+    network according to FPT |
+
+    | The learning rate \(\eta_2\) | 0.00120 | Alternatively, training the Tree-LSTM
+    network according to AIT |
+
+    | The learning rate \(\eta_3\) | 0.0006 | Alternatively, training the Tree-LSTM
+    network according to LFL |
+
+    | The learning rate \(\eta_4\) | 0.00023 | Alternatively, training the Tree-LSTM
+    network according to UFL |
+
+    | The learning rate \(\eta_1\) | 0.00120 | Alternatively, training the task-specific
+    FNN according to FPT |
+
+    | The learning rate \(\eta_2\) | 0.00180 | Alternatively, training the task-specific
+    FNN according to AIT |
+
+    | The learning rate \(\eta_3\) | 0.00009 | Alternatively, training the task-specific
+    FNN according to LFL |
+
+    | The learning rate \(\eta_4\) | 0.00020 | Alternatively, training the task-specific
+    FNN according to UFL |
+
+    | The batch size \(b_t\) | 32 | Jointly, training the whole MDNN according to
+    all properties |
+
+    | The batch size \(b_1\) | 32 | Alternatively, for the Tree-LSTM and FNN corresponding
+    to FPT |
+
+    | The batch size \(b_2\) | 32 | Alternatively, for the Tree-LSTM and FNN corresponding
+    to AIT |
+
+    | The batch size \(b_3\) | 32 | Alternatively, for the Tree-LSTM and FNN corresponding
+    to LFL |
+
+    | The batch size \(b_4\) | 32 | Alternatively, for the Tree-LSTM and FNN corresponding
+    to UFL |
+
+
+    Mean percentage error (MPE) provides an average of percentage error by which the
+    predicted values differ from the experimental values, and it is expressed as eqn
+    (5).
+
+
+    \(\text{MPE} = \frac{1}{N} \sum_{i=0}^N \frac{|x_i^{\text{exp}} - x_i^{\text{pre}}|}{x_i^{\text{exp}}}
+    \times 100\%\) (5)
+
+
+    Since the correlation analysis reported in the published literatures\(^\text{21,22,24,32,33,60,61}\)
+    usually chose the correlation coefficients of \(r\) or \(R^2\) as the performance
+    indicator, both of them were employed to assess the proposed MDNN in this research.
+    The Pearson correlation coefficient,
+
+
+    \(r = \frac{\sum_{i=1}^n (x_i^{\text{exp}} - \overline{x^{\text{exp}}})(x_i^{\text{pre}}
+    - \overline{x^{\text{pre}}})}{\sqrt{\sum_{i=1}^n (x_i^{\text{exp}} - \overline{x^{\text{exp}}})^2}
+    \sqrt{\sum_{i=1}^n (x_i^{\text{pre}} - \overline{x^{\text{pre}}})^2}}\) (6)
+
+
+    The coefficient of determination,
+
+
+    \(R^2 = 1 - \frac{\sum_{i=1}^n (x_i^{\text{exp}} - x_i^{\text{pre}})^2}{\sum_{i=1}^n
+    (x_i^{\text{exp}} - \overline{x^{\text{exp}}})^2}\) (7)
+
+
+    ### 2.3 The outlier detection and AD determination
+
+
+    The outlier detection was also studied for deep learning based QSPRs in this work.
+    The outliers of four tasks were detected with the empirical cumulative distribution
+    function (ECDF) of the residuals between experimental and predicted values. The
+    ECDF is a step function that increases by 1/n in every data point. Let \((X_1,
+    ..., X_n)\) be independent, identically distributed real random variables with
+    the common cumulative distribution function \(F(t)\), then the ECDF can be defined
+    as shown in eqn (8) for a realization \((x_1, ..., x_n)\).
+
+
+    \(\widehat{F}_n(t) = \frac{\text{number of element in the sample } \le t}{n} =
+    \frac{1}{n} \sum_{i=1}^n I_{X_i \le t}\) (8)
+
+
+    For a fixed \(t\), the indicator \(I_{X_i \le t}\) is a Bernoulli random variable
+    with parameter \(p = F(t)\). The value of the ECDF is the number of samples whose
+    sample value is less than or equal to t divided by the total number of samples
+    n. This methodology was suggested in the residual analysis of group contribution
+    models by Frutiger et al., 14 in which the distribution of residuals could not
+    be assumed as a normal distribution in advance. Frutiger et al. 14 applied the
+    approach on an unsegmented data set and repeatedly regressed a group contribution
+    model after outliers were excluded. Finally, the model performance was improved
+    successfully thanks to the reduction of residual dispersion. However, raw data
+    sets are often divided into three subsets for training, validation, and test respectively
+    in the modelling of QSPRs based on deep learning. Although outliers can be detected
+    on all the three data sets, only the outliers in the training and validation sets
+    can be excluded. The test set is often utilized to evaluate the generalization
+    ability of a trained model of deep learning, which is independent to the training
+    and validation sets and should not be evaluated in the model training. Moreover,
+    there is a possibility that some compounds included in test sets could drift out
+    of the latent chemical space determined by training and validation sets. To depict
+    the latent chemical space learned by MDNN and check the changes of chemical space
+    after outliers are excluded, we also investigated ADs of the final model from
+    two aspects: structural domain and property domain. 16 Molecular features are
+    depicted in a high-dimensional vector output by the Tree-LSTM network. As the
+    high-dimensional vector cannot be visualized and analysed easily, it is suitable
+    to apply a dimension-reduction algorithm, principal components analysis (PCA),
+    on the determination of ADs involving training and validation sets. 62 We decided
+    to assess structural space and property space together, i.e., all the high-dimensional
+    vectors and target properties in a dataset were combined into a matrix. PCA can
+    reduce dimensionality and enable only a few principal components (PCs) to retain
+    the most of variance of all data. As such, ADs could be analysed and visualized
+    in a lower dimensional space. Another factor is that the scope of an AD should
+    be also determined, a strategy based on convex hull was applied to explore the
+    AD boundary. For this reason, it is easy to discover whether some compounds in
+    test sets exist outside the AD. Meanwhile, the outliers identified by ECDF can
+    also be marked in a visualized AD, to investigate relationships between the outliers
+    and ADs. The calculation method of convex hull is disclosed in section S7 of the
+    ESI.†
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_7_0.png)
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_7_1.png)
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_7_2.png)
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_7_3.png)
+
+
+    **Fig. 4** The experimental versus predicted values of four flammability-related
+    properties for the training, validation and test sets obtained by the model (I):
+    (a) FPT; (b) AIT; (c) LFL; (d) UFL.
+
+    '
+  mdcn: '
+
+
+    在大多数情况下，网格搜索和随机搜索两种方法可以为特定数据集提供可接受的超参数配置。由于拟议MDNN中存在19个超参数，评估所有可能的超参数组合极其耗时。在拟议MDNN的训练过程中，为了参考以往研究的成功经验，选择了结构参数的初始猜测来确定网络架构。\(^\text{35,58,59}\)
+    为了降低超参数优化的复杂性，扫描了隐藏层中的神经元数量，而每个任务特定FNN的层数固定为四层（三个隐藏层和一个输出层），因为增加更多层数并没有显著改进。随后，先使用网格搜索来确定其他超参数的初始最优范围。超参数也手动微调至最优范围内。在此过程中，每次手动调整一两个超参数，并应观察手动调整后MDNN在验证集上的性能是否得到改善。最终采用的超参数配置列于表5和表6中。在所有超参数确定并验证后，该模型最终在外部测试集上进行了测试。
+
+
+    ### 2.2.4 统计评价
+
+
+    以下统计指标被采用作为性能度量，以评价所学习的MDNN模型。
+
+
+    平均绝对误差(MAE)是预测值与实验值之间偏差的度量，它可*通过*公式(4)计算获得。
+
+
+    \(\text{MAE} = \frac{\sum_{i=0}^N |x_i^{\text{exp}} - x_i^{\text{pre}}|}{N}\)
+    (4)
+
+
+    表5 拟议MDNN最终采用的结构超参数
+
+
+    | 超参数 | 数值 |
+
+    |---|---|
+
+    | 嵌入向量的维度 | 48 |
+
+    | Tree-LSTM的记忆维度 | 32 |
+
+    | Tree-LSTM的输出维度 | 32 |
+
+    | 每个任务特定FNN的隐藏层数 | 3 |
+
+    | FNN中每个隐藏层的神经元数 | 32 |
+
+
+    表6 训练优化器最终采用的超参数
+
+
+    | 超参数 | 数值 | 任务 |
+
+    |---|---|---|
+
+    | 学习率 \(\eta_t\) | 0.020000 | 共同，根据所有属性训练整个MDNN |
+
+    | 学习率 \(\eta_1\) | 0.00120 | 交替，根据FPT训练Tree-LSTM网络 |
+
+    | 学习率 \(\eta_2\) | 0.00120 | 交替，根据AIT训练Tree-LSTM网络 |
+
+    | 学习率 \(\eta_3\) | 0.0006 | 交替，根据LFL训练Tree-LSTM网络 |
+
+    | 学习率 \(\eta_4\) | 0.00023 | 交替，根据UFL训练Tree-LSTM网络 |
+
+    | 学习率 \(\eta_1\) | 0.00120 | 交替，根据FPT训练任务特定FNN |
+
+    | 学习率 \(\eta_2\) | 0.00180 | 交替，根据AIT训练任务特定FNN |
+
+    | 学习率 \(\eta_3\) | 0.00009 | 交替，根据LFL训练任务特定FNN |
+
+    | 学习率 \(\eta_4\) | 0.00020 | 交替，根据UFL训练任务特定FNN |
+
+    | 批量大小 \(b_t\) | 32 | 共同，根据所有属性训练整个MDNN |
+
+    | 批量大小 \(b_1\) | 32 | 交替，对应于FPT的Tree-LSTM和FNN |
+
+    | 批量大小 \(b_2\) | 32 | 交替，对应于AIT的Tree-LSTM和FNN |
+
+    | 批量大小 \(b_3\) | 32 | 交替，对应于LFL的Tree-LSTM和FNN |
+
+    | 批量大小 \(b_4\) | 32 | 交替，对应于UFL的Tree-LSTM和FNN |
+
+
+    平均百分误差(MPE)提供预测值与实验值之间百分误差的平均值，可表示为公式(5)。
+
+
+    \(\text{MPE} = \frac{1}{N} \sum_{i=0}^N \frac{|x_i^{\text{exp}} - x_i^{\text{pre}}|}{x_i^{\text{exp}}}
+    \times 100\%\) (5)
+
+
+    由于已发表文献\(^\text{21,22,24,32,33,60,61}\)中报道的相关性分析通常将相关系数\(r\)或\(R^2\)作为性能指标，因此在本研究中两者均用于评估拟议的MDNN。皮尔逊相关系数，
+
+
+    \(r = \frac{\sum_{i=1}^n (x_i^{\text{exp}} - \overline{x^{\text{exp}}})(x_i^{\text{pre}}
+    - \overline{x^{\text{pre}}})}{\sqrt{\sum_{i=1}^n (x_i^{\text{exp}} - \overline{x^{\text{exp}}})^2}
+    \sqrt{\sum_{i=1}^n (x_i^{\text{pre}} - \overline{x^{\text{pre}}})^2}}\) (6)
+
+
+    决定系数，
+
+
+    \(R^2 = 1 - \frac{\sum_{i=1}^n (x_i^{\text{exp}} - x_i^{\text{pre}})^2}{\sum_{i=1}^n
+    (x_i^{\text{exp}} - \overline{x^{\text{exp}}})^2}\) (7)
+
+
+    ### 2.3 异常值检测与AD确定
+
+
+    在本工作中，还研究了基于深度学习的QSPR的异常值检测。四个任务的异常值是根据实验值与预测值之间残差的经验累积分布函数(ECDF)进行检测的。ECDF是一个阶梯函数，在每个数据点处增加1/n。设\((X_1,
+    ..., X_n)\)为具有共同累积分布函数\(F(t)\)的独立同分布实随机变量，那么对于实现值\((x_1, ..., x_n)\)，ECDF可如公式(8)所示定义。
+
+
+    \(\widehat{F}_n(t) = \frac{\text{number of element in the sample } \le t}{n} =
+    \frac{1}{n} \sum_{i=1}^n I_{X_i \le t}\) (8)
+
+
+    对于固定的\(t\)，指示变量\(I_{X_i \le t}\)是参数\(p = F(t)\)的伯努利随机变量。ECDF的值是样本值小于或等于t的样本数除以样本总数n。Frutiger
+    et al. [14]在群贡献模型的残差分析中提出了该方法，其中残差分布不能预先假设为正态分布。Frutiger et al. [14]在未分段数据集上应用了该方法，并在排除异常值后反复回归群贡献模型。最终，由于残差离散程度的降低，模型性能得到了成功改善。
+
+
+    然而，在基于深度学习的QSPR建模中，原始数据集通常分别分为训练集、验证集和测试集三个子集。尽管可以在三个数据集上检测异常值，但只能排除训练集和验证集中的异常值。测试集通常用于评估训练好的深度学习模型的泛化能力，它与训练集和验证集独立，不应在模型训练中进行评估。此外，测试集中包含的一些化合物可能会漂出由训练集和验证集确定的潜在化学空间。
+
+
+    为了描绘MDNN学习的潜在化学空间，并检查排除异常值后化学空间的变化，我们还从结构域和属性域两个方面研究了最终模型的AD。[16] 分子特征由Tree-LSTM网络输出的高维向量表示。由于高维向量不易直观显示和分析，因此适合对涉及训练集和验证集的AD确定应用降维算法主成分分析(PCA)。[62]
+    我们决定共同评估结构空间和属性空间，即将数据集中所有高维向量和目标属性组合成一个矩阵。PCA可以降低维度，并使仅少数几个主成分(PCs)保留所有数据的大部分方差。这样，ADs可以在较低维空间中进行分析和可视化。另一个因素是AD的范围也应确定，应用基于凸包的策略来探索AD边界。因此，可以轻松发现测试集中的某些化合物是否存在于AD之外。同时，通过ECDF识别的异常值也可以在可视化AD中标记，以研究异常值与AD之间的关系。凸包的计算方法在ESI的第S7节中公开。†
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_7_0.png)
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_7_1.png)
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_7_2.png)
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_7_3.png)
+
+
+    **图 4** 模型(I)对训练集、验证集和测试集中四种可燃性相关属性的实验值与预测值：(a) FPT；(b) AIT；(c) LFL；(d) UFL。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 8]
+
+
+    # ## 3. Results and discussion
+
+
+    After the time-consuming tuning of hyperparameters was finished in the MDNN training,
+    the obtained model was evaluated on the data sets. For each property, the model
+    performance was measured in four statistical indicators involving MAE, MPE, r
+    and R2. The identified outliers are provided in Table S10 of the ESI.† Another
+    multi-task learning algorithm with partial least square (PLS),45 were employed
+    to compare with the proposed MDNN. Comparisons with the existing predictive models
+    of flammability-related properties are provided in section S6 of the ESI.†
+
+
+    Two results were presented for two models obtained before and after outliers were
+    excluded, respectively. Fig. 4 shows prediction deviations obtained by the model
+    (I) trained with all data points. After the outliers were identified and excluded,
+    the proposed MDNN was re-trained without the outliers of training and validation
+    sets. Outliers were identified for the retrained model (II) again, Fig. 5 provides
+    predictions of the model (II). In Fig. 4 and 5, diagonal lines represent the equivalence
+    between experimental values and predicted values, while circles, rectangles, and
+    plus signs indicate the predicted values of compounds in training, validation,
+    and test sets, respectively. Tables 7 and 8 present the values of performance
+    metrics for the models (I) and (II) respectively. It suggested that the proposed
+    MDNN model can accurately predict the four flamm-
+
+
+    ability-related properties with small deviations for most compounds.
+
+
+    The relationships between compound families as well as the prediction errors have
+    also been investigated according to the model (I). Distributions of compounds
+    in various families were presented with MPE in Fig. S15–S18 of the ESI.† For each
+    property, the MPE of each family was calculated on a union set of training, validation
+    and test sets. Since a method of random sampling was used to divide data sets,
+    some families with much less compounds would be not selected into the validation
+    and test sets. As shown in Fig. S15–S18,† chemicals in training sets are more
+    diverse than validation and test sets. For example, several compound families
+    (e.g., 1-alkenes, alkynes, formates, etc.) were not sampled into the validation
+    and test sets for FPT, i.e., the diversity of training set is larger than that
+    of validation and test set. Among the four properties, compounds correlated with
+    FPT distribute in 79 families, the least number of families employed in the correlation
+    of UFL is 67. Molecules used to train MDNN on AIT distribute in 73 families, and
+    the compounds used in the correlation of LFL distribute in 72 families.
+
+
+    Although the MDNN model predicted FPT accurately on most compounds, the MDNN model
+    would produce a large prediction error on a small molecule, for example, methane
+    which only has one carbon atom. The model provided a good value of MPE within
+    10% on halogenated hydrocarbons only
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_8_0.png)
+
+
+    Fig. 5 The experimental and predicted values of four flammability-related properties
+    for the training, validation and test sets obtained by the model (II): (a) FPT;
+    (b) AIT; (c) LFL; (d) UFL.'
+  - '[PAGE 9]
+
+
+    # Table 7 The performance statistics of the initially learned MDNN model (I)
+
+
+    | | FPT (K) | AIT (K) | LFL (%) | UFL (%) |
+
+    |---|---|---|---|---|
+
+    | MAE Training set | 10.17/ 8.44<sup>a</sup> | 38.14/ 32.41<sup>a</sup> | 0.2918/
+    0.2867<sup>a</sup> | 2.032/ 1.472<sup>a</sup> |
+
+    | Validation set | 12.27/ 10.51<sup>a</sup> | 49.59/ 41.16<sup>a</sup> | 0.3564/
+    0.3449<sup>a</sup> | 2.055/ 1.686<sup>a</sup> |
+
+    | Test set | 10.96/ 10.45<sup>b</sup> | 45.34/ 44.76<sup>b</sup> | 0.3663/ 0.3445<sup>b</sup>
+    | 1.815/ 1.806<sup>b</sup> |
+
+    | MPE (%) Training set | 2.990/ 2.449<sup>a</sup> | 6.069/ 4.925<sup>a</sup> |
+    22.76/ 14.51<sup>a</sup> | 14.50/ 11.77<sup>a</sup> |
+
+    | Validation set | 3.575/ 3.046<sup>a</sup> | 8.143/ 6.409<sup>a</sup> | 48.28/
+    12.82<sup>a</sup> | 14.77/ 11.68<sup>a</sup> |
+
+    | Test set | 3.101/ 3.010<sup>b</sup> | 7.218/ 7.071<sup>b</sup> | 19.52/ 19.14<sup>b</sup>
+    | 15.39/ 15.40<sup>b</sup> |
+
+    | r Training set | 0.9712/ 0.9856<sup>a</sup> | 0.8757/ 0.9302<sup>a</sup> | 0.9728/
+    0.9736<sup>a</sup> | 0.8880/ 0.9699<sup>a</sup> |
+
+    | Validation set | 0.9561/ 0.9779<sup>a</sup> | 0.7911/ 0.8847<sup>a</sup> | 0.9608/
+    0.9617<sup>a</sup> | 0.7947/ 0.8920<sup>a</sup> |
+
+    | Test set | 0.9660/ 0.9698<sup>b</sup> | 0.8305/ 0.8237<sup>b</sup> | 0.9702/
+    0.9558<sup>b</sup> | 0.8582/ 0.8521<sup>b</sup> |
+
+    | R<sup>2</sup> Training set | 0.9394/ 0.9680<sup>a</sup> | 0.7632/ 0.8550<sup>a</sup>
+    | 0.9449/ 0.9464<sup>a</sup> | 0.7883/ 0.9404<sup>a</sup> |
+
+    | Validation set | 0.9060/ 0.9538<sup>a</sup> | 0.6256/ 0.7623<sup>a</sup> | 0.9164/
+    0.9171<sup>a</sup> | 0.6114/ 0.7602<sup>a</sup> |
+
+    | Test set | 0.9303/ 0.9387<sup>b</sup> | 0.6778/ 0.6780<sup>b</sup> | 0.9138/
+    0.8828<sup>b</sup> | 0.6134/ 0.5294<sup>b</sup> |
+
+
+    <sup>_a_</sup> This value was obtained on the data set without the outliers identified
+    by ECDF. <sup>_b_</sup>This value was obtained on the data points only involved
+    in the AD determined by training and validation sets.
+
+
+    including a single atom of halogen. However, a large prediction error output by
+    the MDNN model would show on the hydrocarbons halogenated with two different halogen
+    atoms. Furthermore, if C=C double bonds existed in a molecule with halogen atoms
+    together, the model would give a larger prediction error of FPT. The reason could
+    be due to substitution positions of halogen atoms in halogenated olefins, which
+    cause significant changes of chemical properties of these molecules. On the other
+    hand, only a small number of halogenated olefins were available in the DIPPR801
+    database, MDNN cannot learn enough information of this compound family. For other
+    compounds containing other heteroatoms, such as O, N, S, P, Si and other atoms,
+    the model can also predict FPT accurately on most of these compounds. It can be
+    found that the outliers are mainly concentrated in a few of compounds with multiple
+    functional groups, such as dinitrobenzene, ethylene glycol, dimethyl chlorosilane.
+    According to the AD analysis, 8 compounds were predicted outside the application
+    domain, but only one compound, hexachlorobenzene was identified as an outlier
+    because of its large relative error (19.8%). The reason could be only 1 to 3 chlorine
+    atoms exist in aromatic hydrocarbons of the training set.
+
+
+    # Table 8 The performance statistics of the finally re-trained MDNN model (II)
+
+
+    | | FPT (K) | AIT (K) | LFL (%) | UFL (%) |
+
+    |---|---|---|---|---|
+
+    | MAE Training set | 10.15/ 8.995<sup>a</sup> | 34.02/ 30.21<sup>a</sup> | 0.2398/
+    0.3207<sup>a</sup> | 2.366/ 1.759<sup>a</sup> |
+
+    | Validation set | 11.49/ 9.695<sup>a</sup> | 40.65/ 32.74<sup>a</sup> | 0.2772/
+    0.3066<sup>a</sup> | 3.026/ 2.430<sup>a</sup> |
+
+    | Test set | 13.56/ 12.59<sup>b</sup> | 56.12/ 54.34<sup>b</sup> | 0.3881/ 0.2617<sup>b</sup>
+    | 2.439/ 2.505<sup>b</sup> |
+
+    | MPE (%) Training set | 3.120/ 2.729<sup>a</sup> | 5.367/ 4.519<sup>a</sup> |
+    16.27/ 17.77<sup>a</sup> | 18.77/ 13.46<sup>a</sup> |
+
+    | Validation set | 3.401/ 2.937<sup>a</sup> | 6.443/ 5.490<sup>a</sup> | 19.87/
+    12.10<sup>a</sup> | 18.99/ 17.32<sup>a</sup> |
+
+    | Test set | 4.001/ 3.762<sup>b</sup> | 9.234/ 8.889<sup>b</sup> | 19.26/ 16.77<sup>b</sup>
+    | 24.15/ 24.45<sup>b</sup> |
+
+    | r Training set | 0.9808/ 0.9871<sup>a</sup> | 0.9421/ 0.9204<sup>a</sup> | 0.9754/
+    0.9880<sup>a</sup> | 0.9623/ 0.9633<sup>a</sup> |
+
+    | Validation set | 0.9643/ 0.9836<sup>a</sup> | 0.9135/ 0.9389<sup>a</sup> | 0.9809/
+    0.9812<sup>a</sup> | 0.7832/ 0.8608<sup>a</sup> |
+
+    | Test set | 0.9554/ 0.9595<sup>b</sup> | 0.8020/ 0.8015<sup>b</sup> | 0.8876/
+    0.9736<sup>b</sup> | 0.8752/ 0.8490<sup>b</sup> |
+
+    | R<sup>2</sup> Training set | 0.9541/ 0.9775<sup>a</sup> | 0.8845/ 0.9067<sup>a</sup>
+    | 0.9877/ 0.9586<sup>a</sup> | 0.9238/ 0.9693<sup>a</sup> |
+
+    | Validation set | 0.9214/ 0.9616<sup>a</sup> | 0.8173/ 0.8778<sup>a</sup> | 0.9619/
+    0.9625<sup>a</sup> | 0.5703/ 0.6254<sup>a</sup> |
+
+    | Test set | 0.9022/ 0.9105<sup>b</sup> | 0.5985/ 0.5920<sup>b</sup> | 0.7435/
+    0.9417<sup>b</sup> | 0.6868/ 0.6107<sup>b</sup> |
+
+
+    <sup>_a_</sup> This value was obtained on the data set without the outliers identified
+    by ECDF. <sup>_b_</sup>This value was obtained on the data points only involved
+    in the AD determined by training and validation sets.
+
+
+    The model can predict AIT as accurately as existing models. A large prediction
+    error was observed mainly on peroxides, since only two compounds can be learned
+    by MDNN in the peroxide family. In the other words, not enough samples involving
+    the molecular feature “–O–O–” could be learned by MDNN. The MDNN model mainly
+    predict LFL inaccurately on three compound families including nitriles, monoaromatics
+    and aromatic esters. Five compounds were identified as the samples outside the
+    AD of training set of LFL, i.e., isobutyl acrylate, benzonitrile, tetrafluoroethylene,
+    hydrazine, and trans-decahydronaphthalene. For example, the model can estimate
+    an acceptable value of LFL on tetrafluoroethylene, although MDNN did not learn
+    the molecule including C=C bonds and four fluorine atoms. Benzoyl chloride and
+    difluoromethane were determined as the samples outside AD of training set of UFL,
+    their relative errors were smaller than 20%. The highest prediction error of MDNN
+    appeared on the families including mercaptans and polyfunctional C, H, O, N for
+    UFL. Only two compounds of mercaptans can be used to train MDNN for predicting
+    UFL. Another two compounds involving N-methyl-2-pyrrolidone and morpholine in
+    the family of polyfunctional C, H, O, N were predicted with the high relative
+    errors for UFL. In short, the MDNN model could show more prediction errors in
+    polyfunctional molecules.
+
+
+    Among four flammability-related properties, the learned models (I) and (II) both
+    provide the highest accuracy on FPT. For AIT, the values of MPE are also acceptable
+    for the test set, however, the data points show more dispersion with smaller R<sup>2</sup>
+    and larger MPE than other properties. For LFL and UFL, these two models also provide
+    an acceptable accuracy for most compounds while a few compounds deviate from the
+    diagonal lines as shown in Fig. 4(c, d) and 5(c, d). It is worth noting that the
+    magnitudes of LFL and UFL are smaller than those of FPT and AIT. Since the smaller
+    absolute values tend to result'
+  md: '
+
+    ## 3. Results and discussion
+
+
+    After the time-consuming tuning of hyperparameters was finished in the MDNN training,
+    the obtained model was evaluated on the data sets. For each property, the model
+    performance was measured in four statistical indicators involving MAE, MPE, r
+    and R². The identified outliers are provided in Table S10 of the ESI.† Another
+    multi-task learning algorithm with partial least square (PLS) [45] were employed
+    to compare with the proposed MDNN. Comparisons with the existing predictive models
+    of flammability-related properties are provided in section S6 of the ESI.†
+
+
+    Two results were presented for two models obtained before and after outliers were
+    excluded, respectively. Fig. 4 shows prediction deviations obtained by the model
+    (I) trained with all data points. After the outliers were identified and excluded,
+    the proposed MDNN was re-trained without the outliers of training and validation
+    sets. Outliers were identified for the retrained model (II) again, Fig. 5 provides
+    predictions of the model (II). In Fig. 4 and 5, diagonal lines represent the equivalence
+    between experimental values and predicted values, while circles, rectangles, and
+    plus signs indicate the predicted values of compounds in training, validation,
+    and test sets, respectively. Tables 7 and 8 present the values of performance
+    metrics for the models (I) and (II) respectively. It suggested that the proposed
+    MDNN model can accurately predict the four flammability-related properties with
+    small deviations for most compounds.
+
+
+    The relationships between compound families as well as the prediction errors have
+    also been investigated according to the model (I). Distributions of compounds
+    in various families were presented with MPE in Fig. S15–S18 of the ESI.† For each
+    property, the MPE of each family was calculated on a union set of training, validation
+    and test sets. Since a method of random sampling was used to divide data sets,
+    some families with much less compounds would be not selected into the validation
+    and test sets. As shown in Fig. S15–S18,† chemicals in training sets are more
+    diverse than validation and test sets. For example, several compound families
+    (e.g., 1-alkenes, alkynes, formates, etc.) were not sampled into the validation
+    and test sets for FPT, i.e., the diversity of training set is larger than that
+    of validation and test set. Among the four properties, compounds correlated with
+    FPT distribute in 79 families, the least number of families employed in the correlation
+    of UFL is 67. Molecules used to train MDNN on AIT distribute in 73 families, and
+    the compounds used in the correlation of LFL distribute in 72 families.
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_8_0.png)
+
+
+    Fig. 5 The experimental and predicted values of four flammability-related properties
+    for the training, validation and test sets obtained by the model (II): (a) FPT;
+    (b) AIT; (c) LFL; (d) UFL.
+
+
+    ### Table 7 The performance statistics of the initially learned MDNN model (I)
+
+
+    | | FPT (K) | AIT (K) | LFL (%) | UFL (%) |
+
+    |---|---|---|---|---|
+
+    | MAE Training set | 10.17/8.44<sup>a</sup> | 38.14/32.41<sup>a</sup> | 0.2918/0.2867<sup>a</sup>
+    | 2.032/1.472<sup>a</sup> |
+
+    | Validation set | 12.27/10.51<sup>a</sup> | 49.59/41.16<sup>a</sup> | 0.3564/0.3449<sup>a</sup>
+    | 2.055/1.686<sup>a</sup> |
+
+    | Test set | 10.96/10.45<sup>b</sup> | 45.34/44.76<sup>b</sup> | 0.3663/0.3445<sup>b</sup>
+    | 1.815/1.806<sup>b</sup> |
+
+    | MPE (%) Training set | 2.990/2.449<sup>a</sup> | 6.069/4.925<sup>a</sup> | 22.76/14.51<sup>a</sup>
+    | 14.50/11.77<sup>a</sup> |
+
+    | Validation set | 3.575/3.046<sup>a</sup> | 8.143/6.409<sup>a</sup> | 48.28/12.82<sup>a</sup>
+    | 14.77/11.68<sup>a</sup> |
+
+    | Test set | 3.101/3.010<sup>b</sup> | 7.218/7.071<sup>b</sup> | 19.52/19.14<sup>b</sup>
+    | 15.39/15.40<sup>b</sup> |
+
+    | r Training set | 0.9712/0.9856<sup>a</sup> | 0.8757/0.9302<sup>a</sup> | 0.9728/0.9736<sup>a</sup>
+    | 0.8880/0.9699<sup>a</sup> |
+
+    | Validation set | 0.9561/0.9779<sup>a</sup> | 0.7911/0.8847<sup>a</sup> | 0.9608/0.9617<sup>a</sup>
+    | 0.7947/0.8920<sup>a</sup> |
+
+    | Test set | 0.9660/0.9698<sup>b</sup> | 0.8305/0.8237<sup>b</sup> | 0.9702/0.9558<sup>b</sup>
+    | 0.8582/0.8521<sup>b</sup> |
+
+    | R<sup>2</sup> Training set | 0.9394/0.9680<sup>a</sup> | 0.7632/0.8550<sup>a</sup>
+    | 0.9449/0.9464<sup>a</sup> | 0.7883/0.9404<sup>a</sup> |
+
+    | Validation set | 0.9060/0.9538<sup>a</sup> | 0.6256/0.7623<sup>a</sup> | 0.9164/0.9171<sup>a</sup>
+    | 0.6114/0.7602<sup>a</sup> |
+
+    | Test set | 0.9303/0.9387<sup>b</sup> | 0.6778/0.6780<sup>b</sup> | 0.9138/0.8828<sup>b</sup>
+    | 0.6134/0.5294<sup>b</sup> |
+
+
+    <sup>a</sup> This value was obtained on the data set without the outliers identified
+    by ECDF. <sup>b</sup> This value was obtained on the data points only involved
+    in the AD determined by training and validation sets.
+
+
+    ### Table 8 The performance statistics of the finally re-trained MDNN model (II)
+
+
+    | | FPT (K) | AIT (K) | LFL (%) | UFL (%) |
+
+    |---|---|---|---|---|
+
+    | MAE Training set | 10.15/8.995<sup>a</sup> | 34.02/30.21<sup>a</sup> | 0.2398/0.3207<sup>a</sup>
+    | 2.366/1.759<sup>a</sup> |
+
+    | Validation set | 11.49/9.695<sup>a</sup> | 40.65/32.74<sup>a</sup> | 0.2772/0.3066<sup>a</sup>
+    | 3.026/2.430<sup>a</sup> |
+
+    | Test set | 13.56/12.59<sup>b</sup> | 56.12/54.34<sup>b</sup> | 0.3881/0.2617<sup>b</sup>
+    | 2.439/2.505<sup>b</sup> |
+
+    | MPE (%) Training set | 3.120/2.729<sup>a</sup> | 5.367/4.519<sup>a</sup> | 16.27/17.77<sup>a</sup>
+    | 18.77/13.46<sup>a</sup> |
+
+    | Validation set | 3.401/2.937<sup>a</sup> | 6.443/5.490<sup>a</sup> | 19.87/12.10<sup>a</sup>
+    | 18.99/17.32<sup>a</sup> |
+
+    | Test set | 4.001/3.762<sup>b</sup> | 9.234/8.889<sup>b</sup> | 19.26/16.77<sup>b</sup>
+    | 24.15/24.45<sup>b</sup> |
+
+    | r Training set | 0.9808/0.9871<sup>a</sup> | 0.9421/0.9204<sup>a</sup> | 0.9754/0.9880<sup>a</sup>
+    | 0.9623/0.9633<sup>a</sup> |
+
+    | Validation set | 0.9643/0.9836<sup>a</sup> | 0.9135/0.9389<sup>a</sup> | 0.9809/0.9812<sup>a</sup>
+    | 0.7832/0.8608<sup>a</sup> |
+
+    | Test set | 0.9554/0.9595<sup>b</sup> | 0.8020/0.8015<sup>b</sup> | 0.8876/0.9736<sup>b</sup>
+    | 0.8752/0.8490<sup>b</sup> |
+
+    | R<sup>2</sup> Training set | 0.9541/0.9775<sup>a</sup> | 0.8845/0.9067<sup>a</sup>
+    | 0.9877/0.9586<sup>a</sup> | 0.9238/0.9693<sup>a</sup> |
+
+    | Validation set | 0.9214/0.9616<sup>a</sup> | 0.8173/0.8778<sup>a</sup> | 0.9619/0.9625<sup>a</sup>
+    | 0.5703/0.6254<sup>a</sup> |
+
+    | Test set | 0.9022/0.9105<sup>b</sup> | 0.5985/0.5920<sup>b</sup> | 0.7435/0.9417<sup>b</sup>
+    | 0.6868/0.6107<sup>b</sup> |
+
+
+    <sup>a</sup> This value was obtained on the data set without the outliers identified
+    by ECDF. <sup>b</sup> This value was obtained on the data points only involved
+    in the AD determined by training and validation sets.
+
+
+    Although the MDNN model predicted FPT accurately on most compounds, the MDNN model
+    would produce a large prediction error on a small molecule, for example, methane
+    which only has one carbon atom. The model provided a good value of MPE within
+    10% on halogenated hydrocarbons only including a single atom of halogen. However,
+    a large prediction error output by the MDNN model would show on the hydrocarbons
+    halogenated with two different halogen atoms. Furthermore, if C=C double bonds
+    existed in a molecule with halogen atoms together, the model would give a larger
+    prediction error of FPT. The reason could be due to substitution positions of
+    halogen atoms in halogenated olefins, which cause significant changes of chemical
+    properties of these molecules. On the other hand, only a small number of halogenated
+    olefins were available in the DIPPR801 database, MDNN cannot learn enough information
+    of this compound family. For other compounds containing other heteroatoms, such
+    as O, N, S, P, Si and other atoms, the model can also predict FPT accurately on
+    most of these compounds. It can be found that the outliers are mainly concentrated
+    in a few of compounds with multiple functional groups, such as dinitrobenzene,
+    ethylene glycol, dimethyl chlorosilane. According to the AD analysis, 8 compounds
+    were predicted outside the application domain, but only one compound, hexachlorobenzene
+    was identified as an outlier because of its large relative error (19.8%). The
+    reason could be only 1 to 3 chlorine atoms exist in aromatic hydrocarbons of the
+    training set.
+
+
+    The model can predict AIT as accurately as existing models. A large prediction
+    error was observed mainly on peroxides, since only two compounds can be learned
+    by MDNN in the peroxide family. In the other words, not enough samples involving
+    the molecular feature “–O–O–” could be learned by MDNN. The MDNN model mainly
+    predict LFL inaccurately on three compound families including nitriles, monoaromatics
+    and aromatic esters. Five compounds were identified as the samples outside the
+    AD of training set of LFL, i.e., isobutyl acrylate, benzonitrile, tetrafluoroethylene,
+    hydrazine, and trans-decahydronaphthalene. For example, the model can estimate
+    an acceptable value of LFL on tetrafluoroethylene, although MDNN did not learn
+    the molecule including C=C bonds and four fluorine atoms. Benzoyl chloride and
+    difluoromethane were determined as the samples outside AD of training set of UFL,
+    their relative errors were smaller than 20%. The highest prediction error of MDNN
+    appeared on the families including mercaptans and polyfunctional C, H, O, N for
+    UFL. Only two compounds of mercaptans can be used to train MDNN for predicting
+    UFL. Another two compounds involving N-methyl-2-pyrrolidone and morpholine in
+    the family of polyfunctional C, H, O, N were predicted with the high relative
+    errors for UFL. In short, the MDNN model could show more prediction errors in
+    polyfunctional molecules.
+
+
+    Among four flammability-related properties, the learned models (I) and (II) both
+    provide the highest accuracy on FPT. For AIT, the values of MPE are also acceptable
+    for the test set, however, the data points show more dispersion with smaller R²
+    and larger MPE than other properties. For LFL and UFL, these two models also provide
+    an acceptable accuracy for most compounds while a few compounds deviate from the
+    diagonal lines as shown in Fig. 4(c, d) and 5(c, d). It is worth noting that the
+    magnitudes of LFL and UFL are smaller than those of FPT and AIT. Since the smaller
+    absolute values tend to result
+
+    '
+  mdcn: '
+
+
+    ## 3. 结果与讨论
+
+
+    After the time-consuming tuning of hyperparameters was finished in the MDNN training,
+    the obtained model was evaluated on the data sets. For each property, the model
+    performance was measured in four statistical indicators involving MAE, MPE, r
+    and R². The identified outliers are provided in Table S10 of the ESI.† Another
+    multi-task learning algorithm with partial least square (PLS) [45] were employed
+    to compare with the proposed MDNN. Comparisons with the existing predictive models
+    of flammability-related properties are provided in section S6 of the ESI.†
+
+
+    在 MDNN 训练中完成耗时的超参数调优后，对所得模型在数据集上进行了评估。对于每个属性，模型性能通过 MAE、MPE、r 和 R² 四个统计指标进行了衡量。已识别的离群点列于
+    ESI 的表 S10 中。† 另一种采用偏最小二乘法 (PLS) [45] 的多任务学习算法被用于与所提 MDNN 进行比较。与现有可燃性相关属性预测模型的比较载于
+    ESI 的第 S6 节。†
+
+
+    Two results were presented for two models obtained before and after outliers were
+    excluded, respectively. Fig. 4 shows prediction deviations obtained by the model
+    (I) trained with all data points. After the outliers were identified and excluded,
+    the proposed MDNN was re-trained without the outliers of training and validation
+    sets. Outliers were identified for the retrained model (II) again, Fig. 5 provides
+    predictions of the model (II). In Fig. 4 and 5, diagonal lines represent the equivalence
+    between experimental values and predicted values, while circles, rectangles, and
+    plus signs indicate the predicted values of compounds in training, validation,
+    and test sets, respectively. Tables 7 and 8 present the values of performance
+    metrics for the models (I) and (II) respectively. It suggested that the proposed
+    MDNN model can accurately predict the four flammability-related properties with
+    small deviations for most compounds.
+
+
+    分别展示了剔除离群点前后所得两个模型的两组结果。图 4 显示了使用全部数据点训练的模型 (I) 得到的预测偏差。在识别并剔除离群点后，所提 MDNN 在未包含训练集和验证集离群点的条件下重新训练。对重新训练的模型
+    (II) 又再次识别了离群点，图 5 提供了模型 (II) 的预测结果。在图 4 和 5 中，对角线表示实验值与预测值之间的等价关系，而圆圈、矩形和加号分别表示训练集、验证集和测试集中化合物的预测值。表
+    7 和表 8 分别列出了模型 (I) 和模型 (II) 的性能指标值。这表明所提 MDNN 模型可以对大多数化合物的四个可燃性相关属性进行准确预测，偏差较小。
+
+
+    The relationships between compound families as well as the prediction errors have
+    also been investigated according to the model (I). Distributions of compounds
+    in various families were presented with MPE in Fig. S15–S18 of the ESI.† For each
+    property, the MPE of each family was calculated on a union set of training, validation
+    and test sets. Since a method of random sampling was used to divide data sets,
+    some families with much less compounds would be not selected into the validation
+    and test sets. As shown in Fig. S15–S18,† chemicals in training sets are more
+    diverse than validation and test sets. For example, several compound families
+    (e.g., 1-alkenes, alkynes, formates, etc.) were not sampled into the validation
+    and test sets for FPT, i.e., the diversity of training set is larger than that
+    of validation and test set. Among the four properties, compounds correlated with
+    FPT distribute in 79 families, the least number of families employed in the correlation
+    of UFL is 67. Molecules used to train MDNN on AIT distribute in 73 families, and
+    the compounds used in the correlation of LFL distribute in 72 families.
+
+
+    还根据模型 (I) 研究了化合物族与预测误差之间的关系。各个族中化合物的分布及其 MPE 显示于 ESI 的图 S15–S18 中。† 对于每个属性，各个族的
+    MPE 是在训练集、验证集和测试集的并集上计算的。由于划分数据集时采用了随机采样方法，某些化合物数量较少的族可能不会被选入验证集和测试集。如图 S15–S18
+    所示，† 训练集中的化学品比验证集和测试集更加多样。例如，几个化合物族（如 1-烯烃、炔烃、甲酸酯等）未被采样至 FPT 的验证集和测试集中，即训练集的多样性大于验证集和测试集。在四个属性中，与
+    FPT 相关的化合物分布于 79 个族，用于 UFL 相关性分析的最少族数为 67。用于训练 AIT 的 MDNN 分子分布于 73 个族，用于 LFL 相关性分析的化合物分布于
+    72 个族。
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_8_0.png)
+
+
+    Fig. 5 The experimental and predicted values of four flammability-related properties
+    for the training, validation and test sets obtained by the model (II): (a) FPT;
+    (b) AIT; (c) LFL; (d) UFL.
+
+
+    图 5 模型 (II) 得到的训练集、验证集和测试集中四个可燃性相关属性的实验值与预测值：(a) FPT；(b) AIT；(c) LFL；(d) UFL。
+
+
+    ### Table 7 The performance statistics of the initially learned MDNN model (I)
+
+
+    ### 表 7 最初学习的 MDNN 模型 (I) 的性能统计
+
+
+    | | FPT (K) | AIT (K) | LFL (%) | UFL (%) |
+
+    |---|---|---|---|---|
+
+    | MAE Training set | 10.17/8.44<sup>a</sup> | 38.14/32.41<sup>a</sup> | 0.2918/0.2867<sup>a</sup>
+    | 2.032/1.472<sup>a</sup> |
+
+    | Validation set | 12.27/10.51<sup>a</sup> | 49.59/41.16<sup>a</sup> | 0.3564/0.3449<sup>a</sup>
+    | 2.055/1.686<sup>a</sup> |
+
+    | Test set | 10.96/10.45<sup>b</sup> | 45.34/44.76<sup>b</sup> | 0.3663/0.3445<sup>b</sup>
+    | 1.815/1.806<sup>b</sup> |
+
+    | MPE (%) Training set | 2.990/2.449<sup>a</sup> | 6.069/4.925<sup>a</sup> | 22.76/14.51<sup>a</sup>
+    | 14.50/11.77<sup>a</sup> |
+
+    | Validation set | 3.575/3.046<sup>a</sup> | 8.143/6.409<sup>a</sup> | 48.28/12.82<sup>a</sup>
+    | 14.77/11.68<sup>a</sup> |
+
+    | Test set | 3.101/3.010<sup>b</sup> | 7.218/7.071<sup>b</sup> | 19.52/19.14<sup>b</sup>
+    | 15.39/15.40<sup>b</sup> |
+
+    | r Training set | 0.9712/0.9856<sup>a</sup> | 0.8757/0.9302<sup>a</sup> | 0.9728/0.9736<sup>a</sup>
+    | 0.8880/0.9699<sup>a</sup> |
+
+    | Validation set | 0.9561/0.9779<sup>a</sup> | 0.7911/0.8847<sup>a</sup> | 0.9608/0.9617<sup>a</sup>
+    | 0.7947/0.8920<sup>a</sup> |
+
+    | Test set | 0.9660/0.9698<sup>b</sup> | 0.8305/0.8237<sup>b</sup> | 0.9702/0.9558<sup>b</sup>
+    | 0.8582/0.8521<sup>b</sup> |
+
+    | R<sup>2</sup> Training set | 0.9394/0.9680<sup>a</sup> | 0.7632/0.8550<sup>a</sup>
+    | 0.9449/0.9464<sup>a</sup> | 0.7883/0.9404<sup>a</sup> |
+
+    | Validation set | 0.9060/0.9538<sup>a</sup> | 0.6256/0.7623<sup>a</sup> | 0.9164/0.9171<sup>a</sup>
+    | 0.6114/0.7602<sup>a</sup> |
+
+    | Test set | 0.9303/0.9387<sup>b</sup> | 0.6778/0.6780<sup>b</sup> | 0.9138/0.8828<sup>b</sup>
+    | 0.6134/0.5294<sup>b</sup> |
+
+
+    <sup>a</sup> This value was obtained on the data set without the outliers identified
+    by ECDF. <sup>b</sup> This value was obtained on the data points only involved
+    in the AD determined by training and validation sets.
+
+
+    <sup>a</sup> 该值在未包含由 ECDF 识别的离群点的数据集上获得。<sup>b</sup> 该值在仅涉及由训练集和验证集确定的适用域的数据点上获得。
+
+
+    ### Table 8 The performance statistics of the finally re-trained MDNN model (II)
+
+
+    ### 表 8 最终重新训练的 MDNN 模型 (II) 的性能统计
+
+
+    | | FPT (K) | AIT (K) | LFL (%) | UFL (%) |
+
+    |---|---|---|---|---|
+
+    | MAE Training set | 10.15/8.995<sup>a</sup> | 34.02/30.21<sup>a</sup> | 0.2398/0.3207<sup>a</sup>
+    | 2.366/1.759<sup>a</sup> |
+
+    | Validation set | 11.49/9.695<sup>a</sup> | 40.65/32.74<sup>a</sup> | 0.2772/0.3066<sup>a</sup>
+    | 3.026/2.430<sup>a</sup> |
+
+    | Test set | 13.56/12.59<sup>b</sup> | 56.12/54.34<sup>b</sup> | 0.3881/0.2617<sup>b</sup>
+    | 2.439/2.505<sup>b</sup> |
+
+    | MPE (%) Training set | 3.120/2.729<sup>a</sup> | 5.367/4.519<sup>a</sup> | 16.27/17.77<sup>a</sup>
+    | 18.77/13.46<sup>a</sup> |
+
+    | Validation set | 3.401/2.937<sup>a</sup> | 6.443/5.490<sup>a</sup> | 19.87/12.10<sup>a</sup>
+    | 18.99/17.32<sup>a</sup> |
+
+    | Test set | 4.001/3.762<sup>b</sup> | 9.234/8.889<sup>b</sup> | 19.26/16.77<sup>b</sup>
+    | 24.15/24.45<sup>b</sup> |
+
+    | r Training set | 0.9808/0.9871<sup>a</sup> | 0.9421/0.9204<sup>a</sup> | 0.9754/0.9880<sup>a</sup>
+    | 0.9623/0.9633<sup>a</sup> |
+
+    | Validation set | 0.9643/0.9836<sup>a</sup> | 0.9135/0.9389<sup>a</sup> | 0.9809/0.9812<sup>a</sup>
+    | 0.7832/0.8608<sup>a</sup> |
+
+    | Test set | 0.9554/0.9595<sup>b</sup> | 0.8020/0.8015<sup>b</sup> | 0.8876/0.9736<sup>b</sup>
+    | 0.8752/0.8490<sup>b</sup> |
+
+    | R<sup>2</sup> Training set | 0.9541/0.9775<sup>a</sup> | 0.8845/0.9067<sup>a</sup>
+    | 0.9877/0.9586<sup>a</sup> | 0.9238/0.9693<sup>a</sup> |
+
+    | Validation set | 0.9214/0.9616<sup>a</sup> | 0.8173/0.8778<sup>a</sup> | 0.9619/0.9625<sup>a</sup>
+    | 0.5703/0.6254<sup>a</sup> |
+
+    | Test set | 0.9022/0.9105<sup>b</sup> | 0.5985/0.5920<sup>b</sup> | 0.7435/0.9417<sup>b</sup>
+    | 0.6868/0.6107<sup>b</sup> |
+
+
+    <sup>a</sup> This value was obtained on the data set without the outliers identified
+    by ECDF. <sup>b</sup> This value was obtained on the data points only involved
+    in the AD determined by training and validation sets.
+
+
+    <sup>a</sup> 该值在未包含由 ECDF 识别的离群点的数据集上获得。<sup>b</sup> 该值在仅涉及由训练集和验证集确定的适用域的数据点上获得。
+
+
+    Although the MDNN model predicted FPT accurately on most compounds, the MDNN model
+    would produce a large prediction error on a small molecule, for example, methane
+    which only has one carbon atom. The model provided a good value of MPE within
+    10% on halogenated hydrocarbons only including a single atom of halogen. However,
+    a large prediction error output by the MDNN model would show on the hydrocarbons
+    halogenated with two different halogen atoms. Furthermore, if C=C double bonds
+    existed in a molecule with halogen atoms together, the model would give a larger
+    prediction error of FPT. The reason could be due to substitution positions of
+    halogen atoms in halogenated olefins, which cause significant changes of chemical
+    properties of these molecules. On the other hand, only a small number of halogenated
+    olefins were available in the DIPPR801 database, MDNN cannot learn enough information
+    of this compound family. For other compounds containing other heteroatoms, such
+    as O, N, S, P, Si and other atoms, the model can also predict FPT accurately on
+    most of these compounds. It can be found that the outliers are mainly concentrated
+    in a few of compounds with multiple functional groups, such as dinitrobenzene,
+    ethylene glycol, dimethyl chlorosilane. According to the AD analysis, 8 compounds
+    were predicted outside the application domain, but only one compound, hexachlorobenzene
+    was identified as an outlier because of its large relative error (19.8%). The
+    reason could be only 1 to 3 chlorine atoms exist in aromatic hydrocarbons of the
+    training set.
+
+
+    尽管 MDNN 模型对大多数化合物的 FPT 预测准确，但对于仅含一个碳原子的小分子（例如甲烷），该模型会产生较大的预测误差。模型在仅包含单个卤素原子的卤代烃上给出了
+    10% 以内的良好 MPE 值。然而，MDNN 模型对于由两种不同卤素原子卤代的烃类，会输出较大的预测误差。此外，如果分子中同时存在 C=C 双键和卤素原子，模型会给出较大的
+    FPT 预测误差。原因可能是由于卤代烯烃中卤素原子的取代位置，导致这些分子的化学性质发生显著变化。另一方面，DIPPR801 数据库中仅有少量卤代烯烃可用，MDNN
+    无法学习该化合物族的足够信息。对于含有其他杂原子（如 O、N、S、P、Si 等）的其他化合物，模型也可以对其中大多数化合物准确预测 FPT。可以发现，离群点主要集中在少数含有多个官能团的化合物中，如二硝基苯、乙二醇、二甲基氯硅烷。根据
+    AD 分析，有 8 个化合物被预测在应用域之外，但只有六氯苯一个化合物因相对误差较大（19.8%）被识别为离群点。原因可能是训练集中的芳香烃仅存在 1 至
+    3 个氯原子。
+
+
+    The model can predict AIT as accurately as existing models. A large prediction
+    error was observed mainly on peroxides, since only two compounds can be learned
+    by MDNN in the peroxide family. In the other words, not enough samples involving
+    the molecular feature “–O–O–” could be learned by MDNN. The MDNN model mainly
+    predict LFL inaccurately on three compound families including nitriles, monoaromatics
+    and aromatic esters. Five compounds were identified as the samples outside the
+    AD of training set of LFL, i.e., isobutyl acrylate, benzonitrile, tetrafluoroethylene,
+    hydrazine, and trans-decahydronaphthalene. For example, the model can estimate
+    an acceptable value of LFL on tetrafluoroethylene, although MDNN did not learn
+    the molecule including C=C bonds and four fluorine atoms. Benzoyl chloride and
+    difluoromethane were determined as the samples outside AD of training set of UFL,
+    their relative errors were smaller than 20%. The highest prediction error of MDNN
+    appeared on the families including mercaptans and polyfunctional C, H, O, N for
+    UFL. Only two compounds of mercaptans can be used to train MDNN for predicting
+    UFL. Another two compounds involving N-methyl-2-pyrrolidone and morpholine in
+    the family of polyfunctional C, H, O, N were predicted with the high relative
+    errors for UFL. In short, the MDNN model could show more prediction errors in
+    polyfunctional molecules.
+
+
+    模型对 AIT 的预测准确度可与现有模型媲美。较大的预测误差主要出现在过氧化物上，因为 MDNN 在过氧化物家族中只能学习两个化合物。换句话说，MDNN 无法学习足够多的涉及分子特征“–O–O–”的样本。MDNN
+    模型主要对三个化合物族（包括腈类、单芳香族化合物和芳香酯类）的 LFL 预测不准确。五个化合物被识别为 LFL 训练集适用域之外的样本，即：异丁基丙烯酸酯、苯甲腈、四氟乙烯、肼和反式十氢萘。例如，模型可以对四氟乙烯估算出可接受的
+    LFL 值，尽管 MDNN 未学习包含 C=C 键和四个氟原子的分子。苯甲酰氯和二氟甲烷被确定为 UFL 训练集适用域之外的样本，其相对误差均小于 20%。MDNN
+    对 UFL 出现最高预测误差的家族包括巯基类和多官能 C、H、O、N 类。仅有两个巯基类化合物可用于训练 MDNN 以预测 UFL。在多官能 C、H、O、N
+    族中，另两个涉及 N-甲基-2-吡咯烷酮和吗啉的化合物对 UFL 的预测具有较高的相对误差。简而言之，MDNN 模型在多官能分子中可能表现出更多的预测误差。
+
+
+    Among four flammability-related properties, the learned models (I) and (II) both
+    provide the highest accuracy on FPT. For AIT, the values of MPE are also acceptable
+    for the test set, however, the data points show more dispersion with smaller R²
+    and larger MPE than other properties. For LFL and UFL, these two models also provide
+    an acceptable accuracy for most compounds while a few compounds deviate from the
+    diagonal lines as shown in Fig. 4(c, d) and 5(c, d). It is worth noting that the
+    magnitudes of LFL and UFL are smaller than those of FPT and AIT. Since the smaller
+    absolute values tend to result
+
+
+    在四个可燃性相关属性中，学习得到的模型 (I) 和 (II) 均在 FPT 上提供最高的准确度。对于 AIT，测试集的 MPE 值也可接受，但与其他属性相比，数据点的离散程度更高，R²
+    较小且 MPE 较大。对于 LFL 和 UFL，这两个模型对大多数化合物也提供了可接受的准确度，而少数化合物偏离对角线，如图 4(c, d) 和 5(c,
+    d) 所示。值得注意的是，LFL 和 UFL 的量级小于 FPT 和 AIT。由于较小的绝对值往往会导致
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 10]
+
+
+    in larger deviation in MPE, outliers can result in the higher MPE and lower R^2
+    especially for LFL. As the distribution of raw data points of AIT are more disperse
+    than those of other properties, these two models perform unexpectedly on AIT.
+    However, the models can still predict properties precisely on the test sets. It
+    suggested that the correlations between properties and molecular structures were
+    learned by the proposed MDNN without calculating descriptors. Four empirical cumulative
+    distribution functions (ECDFs) of prediction residuals are described in Fig. 6
+    for the model (I). The two horizontal lines at the bottom and top of each subplot
+    of Fig. 6 represent the probabilities, 0.025 and 0.975, respectively. Data points
+    that are not reasonably likely expected to occur according to the empirical CDF
+    can be considered as outliers, i.e. data points can be considered as outliers
+    below the 0.025 or above the 0.975 probability levels. The list of outliers is
+    presented as Table S10 of the ESI.† As shown in Table 8, the model (II) performs
+    better on the training and validation sets for FPT, AIT, and LFL according to
+    MPE. The higher values of MPE is obtained by the model (II) on UFL, despite higher
+    values of r and R^2. Comparing Tables 7 and 8, we can see that the exclu-
+
+
+    sion of outliers does not always provide better results for the deep learning
+    model. Except for UFL, the model (II) provides worse performance on the test sets
+    of other properties.
+
+
+    In this research, our interest is particularly focused on the changes of ADs caused
+    by the exclusion of outliers. The matrix of an AD was reduced into a three-dimensional
+    (3D) space for visualization, consisting of the molecular feature vectors and
+    target properties of molecules. The three principal components (PCs) can explain
+    more than 85% of variances in the raw space of training sets (33 dimensions).
+    After the convex hull of AD was determined on training and validation sets, the
+    compounds which may appear outside the AD were identified from a test set. For
+    the model (I), Fig. 7 presents the scatters of three PCs for training sets, validation
+    sets, and test sets of the four properties, respectively. Meanwhile, the outliers
+    are also marked in Fig. 7, which was identified by ECDFs. The visualized ADs of
+    models (I) and (II) are shown as 3D convex hulls in Fig. S11–S14 of the ESI.†
+
+
+    A convex hull defines an interpolation region formulated by experimental data
+    and molecular feature vectors for a property. The boundary of a convex hull describes
+    the smallest convex
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_10_0.png)
+
+
+    Fig. 6 The residual ECDFs for the training, validation, and test sets of: (a)
+    FPT; (b) AIT; (c) LFL; (d) UFL, resulted by the model (I).'
+  - '[PAGE 11]
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_11_0.png)
+
+
+    area covering a training set and the corresponding validation set. When a compound
+    appears outside the convex hull, the compound will be extrapolated by the model
+    built on the training and validation sets. Notably, the model has abilities to
+    predict flammability properties on compounds outside ADs. For example, when the
+    proposed model predicted FPT on squalene, the model still provided an accurate
+    result (only 3.33% relative errors), but the model did not learn the complicated
+    molecular structure which included so many carbon atoms.
+
+
+    When the convex hulls and outliers are observed together (see Fig. S6–S9 of esi†),
+    more outliers appear near the boundaries of convex hulls or in the low-density
+    region of scatters. Once the outliers were excluded according to residual ECDFs
+    (see Fig. S10 in the esi†), the convex hulls would cover smaller ranges. The ADs
+    of LFL and FPT became significantly narrower, while the ADs of AIT and UFL changed
+    slightly. As discussed earlier, the exclusion of outliers did not result in better
+    performance of the retrained model on test sets. In other words, the generalization
+    ability of retrained models could be declined since less samples remains in the
+    downsized training sets. It can be also observed that the convex hulls representing
+    ADs also include some considerable empty space. If more outliers are blindly excluded,
+    the ADs will be narrower and the empty space will be reduced. Although not each
+    point in the convex hulls can correspond to a potentially feasible molecular structure,
+    the outlier exclusion still may reduce the inter
+
+
+    olation space of learned models and make predictive models meaningless. As the
+    empty space a learned model of interpolation covers, declines, so does the need
+    to include property-space in the assessment.
+
+
+    To the best of our knowledge, there is a lack of equivalent and available deep-learning
+    models on the flammability-related properties that makes it difficult to compare
+    the proposed MDNN with other existing models. Moreover, most existing models predict
+    a single flammability-related property according to the manually selected molecule
+    features. The proposed MDNN can correlate four flammability-related properties
+    in a single model with molecular structures but not using pre-defined descriptors.
+    Despite the large differences between the proposed model and existing single-task
+    models, the proposed MDNN was still compared with the existing classical models
+    (section S6 of esi†). The results show that the accuracy of the MDNN model is
+    competitive to that of other types of classical models. Unlike some other studies
+    those employ both experimental and prediction values, only the experimental values
+    were used in this work. For the deep learning model, the smaller data sets could
+    make the model performance less remarkable.
+
+
+    In addition, a multi-task model, although it is not a deep learning model, was
+    built based on PLS45 and Joback63 group-contribution method and used to compare
+    with the proposed MDNN. The multi-task PLS has been implemented in the pre-'
+  - '[PAGE 12]
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_12_0.png)
+
+
+    Fig. 8 The prediction versus the experimental values of the four flammability-related
+    properties (a) FPT, (b) AIT, (c) LFL, and (d) UFL by the PLS-based multi-task
+    model.
+
+
+    vious study,45 but it requires all values of molecular features and target properties
+    available for a compound at the same time; the finally employed data were less
+    in PLS than those data correlated in the training of proposed MDNN.
+
+
+    The multi-task PLS model can also correlate four properties in a single model
+    successfully, but its predictions are less accurate. Fig. 8 presents the deviations
+    between the predicted values and experimental values obtained by the multi-task
+    PLS. The PLS model provides lower values of Pearson correlation coefficient r
+    than those given by the MDNN model. The PLS model performs undesirably on AIT
+    and shows some lower errors on other three properties. This could be attributed
+    to the data dispersion of properties. In particular, the combustion reaction is
+    complicated and related to various factors, e.g., chemical equilibrium, mass transfer,
+    kinetics, etc. It is possible that uncertainty and inconsistent configurations
+    in experiments may cause different measured values, and the impact of the gas
+    composition is not frequently considered in experiments.64 All these factors are
+    not always available for each compound in the common-used databases, although
+    the used data were carefully reviewed in DIPPR801 database.
+
+
+    The proposed multi-task learning strategy could be an approach to employ a unified
+    molecular representation to correlate multiple properties in one model. We admit
+    that it might be easier to obtain acceptable results via the previous single-task
+    models specially designed for a unique property and with a particular representation
+    of a molecule structure.
+
+
+    However, these previous single-task models often describe molecular structures
+    by various descriptors and their used data sets of properties could also be far
+    different. As such, the ADs of various models are often different and there is
+    a potential risk that various models may output different values on same compounds.
+    The molecular representation can be unified in various models if the employed
+    set of descriptors contains all the information of a chemical structure, however,
+    this is practically impossible.65 In this work, the proposed approach learns the
+    molecular graphs directly, which aims to depict a molecule in 2D graphs as much
+    as possible and unify the molecular representations for correlating various properties
+    simultaneously, though all the precise information of molecules cannot be still
+    perfectly recorded. In other words, the selection and calculation of molecular
+    descriptors can be eliminated in the modelling of QSPRs through the proposed strategy.
+
+
+    # 4. Conclusions
+
+
+    To accelerate the process development at least during initial assessments and
+    thus enable early go/no-go decisions in screening of the banned or restricted
+    products based on the hazardous properties, a new methodology has been developed.
+    This involves building QSPR models based on multi-task deep learning, involving
+    data preparation, model training, outlier detection and AD determination. The
+    methodology was suc-'
+  md: '
+
+    in larger deviation in MPE, outliers can result in the higher MPE and lower R^2
+    especially for LFL. As the distribution of raw data points of AIT are more disperse
+    than those of other properties, these two models perform unexpectedly on AIT.
+    However, the models can still predict properties precisely on the test sets. It
+    suggested that the correlations between properties and molecular structures were
+    learned by the proposed MDNN without calculating descriptors. Four empirical cumulative
+    distribution functions (ECDFs) of prediction residuals are described in Fig. 6
+    for the model (I). The two horizontal lines at the bottom and top of each subplot
+    of Fig. 6 represent the probabilities, 0.025 and 0.975, respectively. Data points
+    that are not reasonably likely expected to occur according to the empirical CDF
+    can be considered as outliers, i.e. data points can be considered as outliers
+    below the 0.025 or above the 0.975 probability levels. The list of outliers is
+    presented as Table S10 of the ESI.† As shown in Table 8, the model (II) performs
+    better on the training and validation sets for FPT, AIT, and LFL according to
+    MPE. The higher values of MPE is obtained by the model (II) on UFL, despite higher
+    values of r and R^2. Comparing Tables 7 and 8, we can see that the exclusion of
+    outliers does not always provide better results for the deep learning model. Except
+    for UFL, the model (II) provides worse performance on the test sets of other properties.
+
+
+    In this research, our interest is particularly focused on the changes of ADs caused
+    by the exclusion of outliers. The matrix of an AD was reduced into a three-dimensional
+    (3D) space for visualization, consisting of the molecular feature vectors and
+    target properties of molecules. The three principal components (PCs) can explain
+    more than 85% of variances in the raw space of training sets (33 dimensions).
+    After the convex hull of AD was determined on training and validation sets, the
+    compounds which may appear outside the AD were identified from a test set. For
+    the model (I), Fig. 7 presents the scatters of three PCs for training sets, validation
+    sets, and test sets of the four properties, respectively. Meanwhile, the outliers
+    are also marked in Fig. 7, which was identified by ECDFs. The visualized ADs of
+    models (I) and (II) are shown as 3D convex hulls in Fig. S11–S14 of the ESI.†
+
+
+    A convex hull defines an interpolation region formulated by experimental data
+    and molecular feature vectors for a property. The boundary of a convex hull describes
+    the smallest convex area covering a training set and the corresponding validation
+    set. When a compound appears outside the convex hull, the compound will be extrapolated
+    by the model built on the training and validation sets. Notably, the model has
+    abilities to predict flammability properties on compounds outside ADs. For example,
+    when the proposed model predicted FPT on squalene, the model still provided an
+    accurate result (only 3.33% relative errors), but the model did not learn the
+    complicated molecular structure which included so many carbon atoms.
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_10_0.png)
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_11_0.png)
+
+
+    Fig. 6 The residual ECDFs for the training, validation, and test sets of: (a)
+    FPT; (b) AIT; (c) LFL; (d) UFL, resulted by the model (I).
+
+
+    When the convex hulls and outliers are observed together (see Fig. S6–S9 of the
+    ESI†), more outliers appear near the boundaries of convex hulls or in the low-density
+    region of scatters. Once the outliers were excluded according to residual ECDFs
+    (see Fig. S10 in the ESI†), the convex hulls would cover smaller ranges. The ADs
+    of LFL and FPT became significantly narrower, while the ADs of AIT and UFL changed
+    slightly. As discussed earlier, the exclusion of outliers did not result in better
+    performance of the retrained model on test sets. In other words, the generalization
+    ability of retrained models could be declined since less samples remains in the
+    downsized training sets. It can be also observed that the convex hulls representing
+    ADs also include some considerable empty space. If more outliers are blindly excluded,
+    the ADs will be narrower and the empty space will be reduced. Although not each
+    point in the convex hulls can correspond to a potentially feasible molecular structure,
+    the outlier exclusion still may reduce the interpolation space of learned models
+    and make predictive models meaningless. As the empty space a learned model of
+    interpolation covers, declines, so does the need to include property-space in
+    the assessment.
+
+
+    To the best of our knowledge, there is a lack of equivalent and available deep-learning
+    models on the flammability-related properties that makes it difficult to compare
+    the proposed MDNN with other existing models. Moreover, most existing models predict
+    a single flammability-related property according to the manually selected molecule
+    features. The proposed MDNN can correlate four flammability-related properties
+    in a single model with molecular structures but not using pre-defined descriptors.
+    Despite the large differences between the proposed model and existing single-task
+    models, the proposed MDNN was still compared with the existing classical models
+    (section S6 of the ESI†). The results show that the accuracy of the MDNN model
+    is competitive to that of other types of classical models. Unlike some other studies
+    those employ both experimental and prediction values, only the experimental values
+    were used in this work. For the deep learning model, the smaller data sets could
+    make the model performance less remarkable.
+
+
+    In addition, a multi-task model, although it is not a deep learning model, was
+    built based on PLS45 and Joback63 group-contribution method and used to compare
+    with the proposed MDNN. The multi-task PLS has been implemented in the previous
+    study,45, but it requires all values of molecular features and target properties
+    available for a compound at the same time; the finally employed data were less
+    in PLS than those data correlated in the training of proposed MDNN.
+
+
+    The multi-task PLS model can also correlate four properties in a single model
+    successfully, but its predictions are less accurate. Fig. 8 presents the deviations
+    between the predicted values and experimental values obtained by the multi-task
+    PLS. The PLS model provides lower values of Pearson correlation coefficient r
+    than those given by the MDNN model. The PLS model performs undesirably on AIT
+    and shows some lower errors on other three properties. This could be attributed
+    to the data dispersion of properties. In particular, the combustion reaction is
+    complicated and related to various factors, e.g., chemical equilibrium, mass transfer,
+    kinetics, etc. It is possible that uncertainty and inconsistent configurations
+    in experiments may cause different measured values, and the impact of the gas
+    composition is not frequently considered in experiments.64 All these factors are
+    not always available for each compound in the common-used databases, although
+    the used data were carefully reviewed in DIPPR801 database.
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_12_0.png)
+
+
+    Fig. 8 The prediction versus the experimental values of the four flammability-related
+    properties (a) FPT, (b) AIT, (c) LFL, and (d) UFL by the PLS-based multi-task
+    model.
+
+
+    The proposed multi-task learning strategy could be an approach to employ a unified
+    molecular representation to correlate multiple properties in one model. We admit
+    that it might be easier to obtain acceptable results via the previous single-task
+    models specially designed for a unique property and with a particular representation
+    of a molecule structure. However, these previous single-task models often describe
+    molecular structures by various descriptors and their used data sets of properties
+    could also be far different. As such, the ADs of various models are often different
+    and there is a potential risk that various models may output different values
+    on same compounds. The molecular representation can be unified in various models
+    if the employed set of descriptors contains all the information of a chemical
+    structure, however, this is practically impossible.65 In this work, the proposed
+    approach learns the molecular graphs directly, which aims to depict a molecule
+    in 2D graphs as much as possible and unify the molecular representations for correlating
+    various properties simultaneously, though all the precise information of molecules
+    cannot be still perfectly recorded. In other words, the selection and calculation
+    of molecular descriptors can be eliminated in the modelling of QSPRs through the
+    proposed strategy.
+
+
+    ## 4. Conclusions
+
+
+    To accelerate the process development at least during initial assessments and
+    thus enable early go/no-go decisions in screening of the banned or restricted
+    products based on the hazardous properties, a new methodology has been developed.
+    This involves building QSPR models based on multi-task deep learning, involving
+    data preparation, model training, outlier detection and AD determination. The
+    methodology was suc-
+
+    '
+  mdcn: '
+
+
+    MPE 的较大偏差中，异常值可能导致更高的 MPE 和更低的 R^2，尤其是对于 LFL。由于 AIT 的原始数据点分布比其他性质更分散，这两个模型在 AIT
+    上表现出乎意料。然而，模型仍能在测试集上精确预测性质。这表明，拟议的 MDNN 在不计算描述符的情况下，学习了性质与分子结构之间的相关性。图 6 描述了模型
+    (I) 的预测残差四个经验累积分布函数 (ECDF)。图 6 每个子图底部和顶部的两条水平线分别表示概率 0.025 和 0.975。根据经验累积分布函数，不太可能合理发生的数据点可以被视为异常值，即低于
+    0.025 或高于 0.975 概率水平的数据点可以被视为异常值。异常值列表载于 ESI.† 的表 S10 中。如表 8 所示，根据 MPE，模型 (II)
+    在 FPT、AIT 和 LFL 的训练集和验证集上表现更好。尽管 r 和 R^2 值更高，但模型 (II) 在 UFL 上获得了更高的 MPE 值。比较表
+    7 和表 8，我们可以看出，排除异常值并不总能为深度学习模型提供更好的结果。除 UFL 外，模型 (II) 在其他性质的测试集上表现更差。
+
+
+    在此次研究中，我们特别关注由异常值排除引起的 AD 变化。AD 的矩阵被降维为三维 (3D) 空间以进行可视化，包含分子特征向量和目标性质。三个主成分 (PC)
+    可以解释训练集原始空间 (33 维) 中超过 85% 的方差。在训练集和验证集上确定 AD 的凸包后，从测试集中识别出可能位于 AD 之外的化合物。对于模型
+    (I)，图 7 分别展示了四个性质的训练集、验证集和测试集三个主成分的散点图。同时，由 ECDFs 识别的异常值也在图 7 中标记。模型 (I) 和 (II)
+    的可视化 AD 在 ESI.† 的图 S11–S14 中显示为 3D 凸包。
+
+
+    凸包定义了由实验数据和特定性质的分子特征向量构建的插值区域。凸包的边界描述了覆盖训练集及其对应验证集的最小凸区域。当化合物出现在凸包之外时，该化合物将由基于训练集和验证集构建的模型进行外推。值得注意的是，该模型能够预测
+    AD 之外化合物的易燃性性质。例如，当拟议模型对 squalene 预测 FPT 时，模型仍提供了准确结果（仅 3.33% 的相对误差），但模型并未学习包含如此多碳原子的复杂分子结构。
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_10_0.png)
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_11_0.png)
+
+
+    图 6 模型 (I) 得到的训练集、验证集和测试集的残差 ECDF：(a) FPT；(b) AIT；(c) LFL；(d) UFL。
+
+
+    当凸包和异常值一起观察时（参见 ESI† 的图 S6–S9），更多异常值出现在凸包边界附近或散点的低密度区域。一旦根据残差 ECDFs 排除了异常值（参见
+    ESI† 的图 S10），凸包将覆盖更小的范围。LFL 和 FPT 的 AD 变得显著窄化，而 AIT 和 UFL 的 AD 变化较小。如前所述，异常值的排除并未使重新训练的模型在测试集上表现更好。换句话说，由于缩小的训练集中剩余样本较少，重新训练模型的泛化能力可能会下降。还可以观察到，代表
+    AD 的凸包也包含一些相当大的空白空间。如果盲目排除更多异常值，AD 将变得更窄，空白空间将减少。虽然凸包中的每个点并不都对应潜在可行的分子结构，但异常值排除仍可能减少学习模型的插值空间，使预测模型变得无意义。随着学习插值模型所覆盖的空白空间减少，将性质空间纳入评估的需求也随之下降。
+
+
+    据我们所知，缺乏等效且可用于易燃性相关性质的深度学习模型，这使得难以将拟议的 MDNN 与其他现有模型进行比较。此外，大多数现有模型根据手动选择的分子特征预测单一易燃性相关性质。拟议的
+    MDNN 可以在单个模型中使用分子结构（而非预定义描述符）来关联四种易燃性相关性质。尽管拟议模型与现有单任务模型存在较大差异，拟议的 MDNN 仍与现有经典模型进行了比较（ESI†
+    的章节 S6）。结果表明，MDNN 模型的准确性与其他类型的经典模型具有竞争力。与一些同时使用实验值和预测值的其他研究不同，本工作仅使用了实验值。对于深度学习模型，较小的数据集可能会使模型性能不那么突出。
+
+
+    此外，一个多任务模型（尽管不是深度学习模型）基于 PLS45 和 Joback63 群贡献法构建，并用于与拟议的 MDNN 进行比较。多任务 PLS 在先前的研究中已实现45，但它要求化合物的所有分子特征和目标性质值同时可用；最终在
+    PLS 中使用的数据少于在拟议 MDNN 训练中关联的数据。
+
+
+    多任务 PLS 模型也可以在单个模型中成功关联四种性质，但其预测精度较低。图 8 展示了多任务 PLS 得到的预测值与实验值之间的偏差。PLS 模型提供的皮尔逊相关系数
+    r 值低于 MDNN 模型给出的值。PLS 模型在 AIT 上表现不理想，在其他三种性质上显示出一些较低的误差。这可能归因于性质的数据分散。特别是，燃烧反应复杂且与多种因素相关，例如化学平衡、质量转移、动力学等。实验中的不确定性和不一致配置可能导致不同的测量值，且气体组成的影响在实验中并不经常被考虑。64
+    所有这些因素在常用数据库中并不总是对每种化合物都可用，尽管所使用的数据在 DIPPR801 数据库中经过了仔细审查。
+
+
+    ![](img/ad669faf9aa9b269abc88758f2d39753_12_0.png)
+
+
+    图 8 基于 PLS 的多任务模型对四种易燃性相关性质的预测值与实验值对比：(a) FPT，(b) AIT，(c) LFL，和 (d) UFL。
+
+
+    拟议的多任务学习策略可以是一种采用统一分子表示来在单个模型中关联多种性质的方法。我们承认，通过先前专门针对唯一性质并采用特定分子结构表示设计的单任务模型，可能更容易获得可接受的结果。然而，这些先前的单任务模型通常通过各种描述符来描述分子结构，且其使用的性质数据集也可能大相径庭。因此，各种模型的
+    AD 往往不同，存在不同模型在同一化合物上输出不同值的潜在风险。如果使用的描述符集合包含化学结构的所有信息，各种模型中的分子表示可以统一，但实际上这是不可能的。65
+    在此工作中，拟议的方法直接学习分子图，旨在尽可能以 2D 图描绘分子并统一分子表示以同时关联各种性质，尽管分子的所有精确信息仍无法完美记录。换句话说，通过拟议的策略，可以在
+    QSPR 建模中消除分子描述符的选择和计算。
+
+
+    ## 4. 结论
+
+
+    为至少在初始评估期间加速工艺开发进程，从而基于危害性性质对禁用或限制产品的筛选中实现早期 go/no-go 决策，已开发出一种新方法。这涉及构建基于多任务深度学习的
+    QSPR 模型，包括数据准备、模型训练、异常值检测和 AD 确定。该方法已 suc-
+
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 13]
+
+
+    cessfully employed to correlate a new multi-task model for the simultaneous prediction
+    of four flammability-related properties with a good accuracy. Compared with the
+    multi-task learning technique of PLS, the proposed MDNN does not require that
+    each molecule in the training set have a complete set of properties. Thus, the
+    proposed MDNN can be applied on more samples and provides more accurate prediction.
+    The proposed method can solve challenges in the descriptor-based QSPR modelling,
+    e.g., the development of a suitable descriptor for property correlation, the selection
+    of descriptor and correlation analysis. As MDNN employs 2D structures (SMILES)
+    rather than 3D, it is much easier to do massive screening of previously-unknown
+    compounds without having to do 3D structural determination or prediction before
+    property prediction. To avoid the risks of using the deep learning model, the
+    outlier identification and AD determination were introduced into the evaluation
+    of MDNN models. The residual ECDF was employed to identify these outliers. This
+    study illustrates that it is feasible to observe the position of outliers in the
+    latent chemical space with AD analysis based on PCA and the calculation of convex
+    hulls. The results suggest that the ADs became narrower after outliers were excluded
+    from training and validation sets. It can be also found that some compounds included
+    in test sets appear outside the ADs. The exclusion of outliers could not necessarily
+    improve the prediction ability of MDNN. The proposed method can identify whether
+    the properties of a compound are estimated inside or outside the ADs of a deep
+    learning model. Our strategy can open new avenues for modelling QSPRs with multiple-property
+    outputs using the multi-task deep learning. This can be used as a promising tool
+    for the data-driven virtual screening of green chemicals.
+
+
+    # Conflicts of interest
+
+
+    There are no conflicts to declare.
+
+
+    # Acknowledgements
+
+
+    We acknowledge the financial support provided by the National Natural Science
+    Foundation of China (No. 21878028); the Beijing Hundreds of Leading Talents Training
+    Project of Science and Technology (No. Z171100001117154); the Joint Supervision
+    Scheme with the Chinese Mainland, Taiwan and Macao Universities – Other Chinese
+    Mainland, Taiwan and Macao Universities (Grant No. SB2S).
+
+
+    # Notes and references
+
+
+    +   1 F. A. Quintero, S. J. Patel, F. Muñoz and M. S. Mannan, Ind. Eng. Chem.
+    Res., 2012, 51, 16101–16115. 2 A. S. Hukkerikar, B. Sarup, A. T. Kate, J. Abildskov,
+    G. Sin and R. Gani, Fluid Phase Equilib., 2012, 321, 25–43. 3 J. Frutiger, C.
+    Marcarie, J. Abildskov and G. Sin, J. Hazard. Mater., 2016, 318, 783–793.
+
+
+    +   4 Y. Pan, J. Jiang, R. Wang, H. Cao and J. Zhao, QSAR Comb. Sci., 2008, 27,
+    1013–1019. 5 S. J. Patel, D. Ng and M. S. Mannan, Ind. Eng. Chem. Res., 2009,
+    48, 7378–7387. 6 A. R. Katritzky, R. Petrukhin, R. Jain and M. Karelson, J. Chem.
+    Inf. Comput. Sci., 2001, 41, 1521–1530. 7 F. Gharagheizi, J. Hazard. Mater., 2009,
+    169, 217–220. 8 C. Nieto-Draghi, G. Fayet, B. Creton, X. Rozanska, P. Roteureau,
+    J. C. de Hemptinne, P. Ungerer, B. Rousseau and C. Adamo, Chem. Rev., 2015, 115,
+    13093–13164. 9 Z. Jiao, H. U. Escobar-Hernandez, T. Parker and Q. Wang, Process
+    Saf. Environ. Prot., 2019, 129, 280–290. 10 F. Gharagheizi, M. H. Keshavarz and
+    M. Sattari, J. Therm. Anal. Calorim., 2012, 110, 1005–1012. 11 F. Gharagheizi,
+    J. Hazard. Mater., 2009, 167, 507–510. 12 Y. Pan, J. Jiang, R. Wang, H. Cao and
+    Y. Cui, Ind. Eng. Chem. Res., 2009, 48, 5064–5069. 13 J. A. Lazús, Thermochim.
+    Acta, 2011, 512, 150–156. 14 J. Frutiger, C. Marcarie, J. Abildskov and G. Sin,
+    J. Chem. Eng. Data, 2015, 61, 602–613. 15 J. Frutiger, J. Abildskov and G. Sin,
+    in 12th International Symposium on Process Systems Engineering and 25th European
+    Symposium on Computer Aided Process Engineering, 2015, DOI: 10.1016/b978-0-444-63578-5.50079-7,
+    pp. 503–508. 16 J. Jaworska, N. Nikolova-Jeliazkova and T. Aldenberg, ATLA. Altern.
+    Lab. Anim., 2005, 33, 445–459. 17 A. S. Hukkerikar, S. Kalakul, B. Sarup, D. M.
+    Young, G. Sin and R. Gani, J. Chem. Inf. Model., 2012, 52, 2823–2839. 18 J. C.
+    Dearden, P. Roteureau and G. Fayet, SAR QSAR Environ. Res., 2013, 24, 279–318.
+    19 S. Kim and K. H. Cho, Bull. Korean Chem. Soc., 2018, 40, 39–44. 20 A. RacZ,
+    D. Bajusz and K. Heberger, Mol. Inf., 2019, 38, e1800154. 21 T. Suzuki, K. Ohtaguchi
+    and K. Koide, J. Chem. Eng. Jpn., 1991, 24, 258–261. 22 A. Alibakhshi, H. Mirshahvalad
+    and S. Alibakhshi, Process Saf. Environ. Prot., 2017, 105, 127–133. 23 T. A. Albahri
+    and R. S. George, Ind. Eng. Chem. Res., 2003, 42, 5708–5714. 24 T. Suzuki, Fire
+    Mater., 1994, 18, 81–88. 25 A. A. Shimy, Fire Technol., 1970, 6, 135–139. 26 T.
+    A. Albahri, Chem. Eng. Sci., 2003, 58, 3629–3641. 27 F. Gharagheizi, J. Hazard.
+    Mater., 2009, 170, 595–604. 28 F. Gharagheizi, Energy Fuels, 2008, 22, 3037–3039.
+    29 M. Bagheri, M. Rajabi, M. Mirbagheri and M. Amin, J. Loss Prev. Process Ind.,
+    2012, 25, 373–382. 30 M. S. High and R. P. Danner, Ind. Eng. Chem. Res., 1987,
+    26, 1395–1399. 31 J. R. Rowley, R. L. Rowley and W. V. Wilding, J. Hazard. Mater.,
+    2011, 186, 551–557. 32 G. B. Goh, N. O. Hodas and A. Vishnu, J. Comput. Chem.,
+    2017, 38, 1291–1307. 33 Z. Cang and G. W. Wei, PLoS Comput. Biol., 2017, 13, e1005690.'
+  - '[PAGE 14]
+
+
+    +   34 S. K. Chakravarti and S. R. M. Alla, Front. Artif. Intell., 2019, 2, 17.
+
+    +   35 Z. Wang, Y. Su, W. Shen, S. Jin, J. H. Clark, J. Ren and X. Zhang, Green
+    Chem., 2019, 21, 4555–4565.
+
+    +   36 A. Mayr, G. Klambauer, T. Unterthiner and S. Hochreiter, Front. Environ.
+    Sci., 2016, 3, 80.
+
+    +   37 G. B. Goh, C. Siegel, A. Vishnu, N. O. Hodas and N. Baker, 2017, ARXIV,
+    1706, 06689.
+
+    +   38 G. B. Goh, N. O. Hodas, C. Siegel and A. Vishnu, 2017, arXiv, 1712, 02034.
+
+    +   39 A. Lusci, G. Pollastri and P. Baldi, J. Chem. Inf. Model., 2013, 53, 1563–1575.
+
+    +   40 Y. Su, Z. Wang, S. Jin, W. Shen, J. Ren and M. R. Eden, AIChE J., 2019,
+    65, e16678.
+
+    +   41 R. Gomez-Bombarelli, J. N. Wei, D. Duvenaud, J. M. Hernandez-Lobato, B.
+    Sanchez-Lengeling, D. Sheberla, J. Aguilera-Iparraguirre, T. D. Hirzel, R. P.
+    Adams and A. Aspuru-Guzik, ACS Cent. Sci., 2018, 4, 268–276.
+
+    +   42 B. Saha, S. Gupta, D. Phung and S. Venkatesh, Knowledge and Information
+    Systems, 2015, vol. 46, pp. 315–342.
+
+    +   43 R. A. Caruana, in Machine Learning Proceedings 1993, Morgan Kaufmann, 1993,
+    pp. 41–48.
+
+    +   44 J. Wenzel, H. Matter and F. Schmidt, J. Chem. Inf. Model., 2019, 59, 1253–1268.
+
+    +   45 A. Varnek, C. Gaudin, G. Marcou, I. Baskin, A. K. Pandey and I. V. Tetko,
+    J. Chem. Inf. Model., 2009, 49, 133–144.
+
+    +   46 K. S. Tai, R. Socher and C. D. Manning, Proceedings of the 53rd Annual
+    Meeting of the Association for Computational Linguistics and the 7th International
+    Joint Conference on Natural Language Processing, 2015.
+
+    +   47 J.-L. Faulon, M. J. Collins and R. D. Carr, J. Chem. Inf. Model., 2004,
+    44, 427–436.
+
+    +   48 M. Tomas, S. Ilya, C. Kai, C. Greg and D. Jeffrey, presented in part at
+    the Proceedings of the 26th International Conference on Neural Information Processing
+    Systems - Volume 2, Lake Tahoe, Nevada, 2013.
+
+    +   49 X. Glorot, A. Bordes and Y. Bengio, J. Mach. Learn. Res., 2011, 15, 315–323.
+
+
+    +   50 V. Subramanian, Deep learning with PyTorch, Packt Publishing Ltd., Birmingham,
+    2018.
+
+    +   51 G. Landrum, Journal, 2019, www.rdkit.org/docs/.
+
+    +   52 T. Mikolov, I. Sutskever, K. Chen, G. Corrado and J. Dean, Computer Science,
+    2013, pp. 1–9.
+
+    +   53 M. Abadi, P. Barham, J. Chen, Z. Chen, A. Davis, J. Dean, M. Devin, S.
+    Ghemawat, G. Irving, M. Isard, M. Kudlur, J. Levenberg, R. Monga, S. Moore, D.
+    G. Murray, B. Steiner, P. Tucker, V. Vasudevan, P. Warden, M. Wicke, Y. Yu and
+    X. Zheng, Proceedings of the 12th USENIX Symposium on Operating Systems Design
+    and Implementation, Savannah, 2016.
+
+    +   54 D. Kingma and J. Ba, Computer Science, 2014, pp. 1–15.
+
+    +   55 S. b. A. Design Institute for Physical Properties, DIPPR Project 801 -
+    Full Version, Design Institute for Physical Property Research/AIChE, 2019.
+
+    +   56 S. Kim, J. Chen, T. Cheng, A. Gindulyte, J. He, S. He, Q. Li, B. A. Shoemaker,
+    P. A. Thiessen, B. Yu, L. Zaslavsky, J. Zhang and E. E. Bolton, Nucleic Acids
+    Res., 2019, 47, D1102–d1109.
+
+    +   57 J. Godwin, Multi-Task Learning in Tensorflow (Part 1), (accessed 16/05,
+    2020).
+
+    +   58 R. Cipolla, Y. Gal and A. Kendall, 2018 IEEE/CVF Conference on Computer
+    Vision and Pattern Recognition, 2018, pp. 7482–7491.
+
+    +   59 N. Reimers and I. Gurevych, Computer Science - Computation and Language,
+    2017.
+
+    +   60 T. A. Albrahri, Process Saf. Environ. Prot., 2015, 93, 182–191.
+
+    +   61 Y. Pan, J. Jiang, R. Wang, H. Cao and J. Zhao, J. Hazard. Mater., 2008,
+    157, 510–517.
+
+    +   62 G. Domenico, M. Giuseppe Felice, C. Marco, C. Angelo and N. Orazio, Int.
+    J. Quant. Struct.-Prop. Relat., 2016, 1, 45–63.
+
+    +   63 K. G. Joback and R. C. Reid, Chem. Eng. Commun., 1987, 57, 233–243.
+
+    +   64 A. Z. Mendiburu, J. A. de Carvalho and C. R. Coronado, Fuel, 2017, 188,
+    212–222.
+
+    +   65 N. Nikolova-Zeliaskova and J. Jaworska, ATLA, Altern. Lab. Anim., 2005,
+    33, 461–470.
+
+    +   66 F. Gharaheizi, R. F. Alamdari and M. T. Angaji, Energy Fuels, 2008, 22,
+    1628–1635.'
+  md: '
+
+    successfully employed to correlate a new multi-task model for the simultaneous
+    prediction of four flammability-related properties with a good accuracy. Compared
+    with the multi-task learning technique of PLS, the proposed MDNN does not require
+    that each molecule in the training set have a complete set of properties. Thus,
+    the proposed MDNN can be applied on more samples and provides more accurate prediction.
+    The proposed method can solve challenges in the descriptor-based QSPR modelling,
+    e.g., the development of a suitable descriptor for property correlation, the selection
+    of descriptor and correlation analysis. As MDNN employs 2D structures (SMILES)
+    rather than 3D, it is much easier to do massive screening of previously-unknown
+    compounds without having to do 3D structural determination or prediction before
+    property prediction. To avoid the risks of using the deep learning model, the
+    outlier identification and AD determination were introduced into the evaluation
+    of MDNN models. The residual ECDF was employed to identify these outliers. This
+    study illustrates that it is feasible to observe the position of outliers in the
+    latent chemical space with AD analysis based on PCA and the calculation of convex
+    hulls. The results suggest that the ADs became narrower after outliers were excluded
+    from training and validation sets. It can be also found that some compounds included
+    in test sets appear outside the ADs. The exclusion of outliers could not necessarily
+    improve the prediction ability of MDNN. The proposed method can identify whether
+    the properties of a compound are estimated inside or outside the ADs of a deep
+    learning model. Our strategy can open new avenues for modelling QSPRs with multiple-property
+    outputs using the multi-task deep learning. This can be used as a promising tool
+    for the data-driven virtual screening of green chemicals.
+
+
+    ## Conflicts of interest
+
+
+    There are no conflicts to declare.
+
+
+    ## Acknowledgements
+
+
+    We acknowledge the financial support provided by the National Natural Science
+    Foundation of China (No. 21878028); the Beijing Hundreds of Leading Talents Training
+    Project of Science and Technology (No. Z171100001117154); the Joint Supervision
+    Scheme with the Chinese Mainland, Taiwan and Macao Universities – Other Chinese
+    Mainland, Taiwan and Macao Universities (Grant No. SB2S).
+
+
+    ## Notes and references
+
+
+    - 1 F. A. Quintero, S. J. Patel, F. Muñoz and M. S. Mannan, Ind. Eng. Chem. Res.,
+    2012, 51, 16101–16115.
+
+    - 2 A. S. Hukkerikar, B. Sarup, A. T. Kate, J. Abildskov, G. Sin and R. Gani,
+    Fluid Phase Equilib., 2012, 321, 25–43.
+
+    - 3 J. Frutiger, C. Marcarie, J. Abildskov and G. Sin, J. Hazard. Mater., 2016,
+    318, 783–793.
+
+    - 4 Y. Pan, J. Jiang, R. Wang, H. Cao and J. Zhao, QSAR Comb. Sci., 2008, 27,
+    1013–1019.
+
+    - 5 S. J. Patel, D. Ng and M. S. Mannan, Ind. Eng. Chem. Res., 2009, 48, 7378–7387.
+
+    - 6 A. R. Katritzky, R. Petrukhin, R. Jain and M. Karelson, J. Chem. Inf. Comput.
+    Sci., 2001, 41, 1521–1530.
+
+    - 7 F. Gharagheizi, J. Hazard. Mater., 2009, 169, 217–220.
+
+    - 8 C. Nieto-Draghi, G. Fayet, B. Creton, X. Rozanska, P. Roteureau, J. C. de
+    Hemptinne, P. Ungerer, B. Rousseau and C. Adamo, Chem. Rev., 2015, 115, 13093–13164.
+
+    - 9 Z. Jiao, H. U. Escobar-Hernandez, T. Parker and Q. Wang, Process Saf. Environ.
+    Prot., 2019, 129, 280–290.
+
+    - 10 F. Gharagheizi, M. H. Keshavarz and M. Sattari, J. Therm. Anal. Calorim.,
+    2012, 110, 1005–1012.
+
+    - 11 F. Gharagheizi, J. Hazard. Mater., 2009, 167, 507–510.
+
+    - 12 Y. Pan, J. Jiang, R. Wang, H. Cao and Y. Cui, Ind. Eng. Chem. Res., 2009,
+    48, 5064–5069.
+
+    - 13 J. A. Lazús, Thermochim. Acta, 2011, 512, 150–156.
+
+    - 14 J. Frutiger, C. Marcarie, J. Abildskov and G. Sin, J. Chem. Eng. Data, 2015,
+    61, 602–613.
+
+    - 15 J. Frutiger, J. Abildskov and G. Sin, in 12th International Symposium on
+    Process Systems Engineering and 25th European Symposium on Computer Aided Process
+    Engineering, 2015, DOI: 10.1016/b978-0-444-63578-5.50079-7, pp. 503–508.
+
+    - 16 J. Jaworska, N. Nikolova-Jeliazkova and T. Aldenberg, ATLA. Altern. Lab.
+    Anim., 2005, 33, 445–459.
+
+    - 17 A. S. Hukkerikar, S. Kalakul, B. Sarup, D. M. Young, G. Sin and R. Gani,
+    J. Chem. Inf. Model., 2012, 52, 2823–2839.
+
+    - 18 J. C. Dearden, P. Roteureau and G. Fayet, SAR QSAR Environ. Res., 2013, 24,
+    279–318.
+
+    - 19 S. Kim and K. H. Cho, Bull. Korean Chem. Soc., 2018, 40, 39–44.
+
+    - 20 A. Racz, D. Bajusz and K. Heberger, Mol. Inf., 2019, 38, e1800154.
+
+    - 21 T. Suzuki, K. Ohtaguchi and K. Koide, J. Chem. Eng. Jpn., 1991, 24, 258–261.
+
+    - 22 A. Alibakhshi, H. Mirshahvalad and S. Alibakhshi, Process Saf. Environ. Prot.,
+    2017, 105, 127–133.
+
+    - 23 T. A. Albahri and R. S. George, Ind. Eng. Chem. Res., 2003, 42, 5708–5714.
+
+    - 24 T. Suzuki, Fire Mater., 1994, 18, 81–88.
+
+    - 25 A. A. Shimy, Fire Technol., 1970, 6, 135–139.
+
+    - 26 T. A. Albahri, Chem. Eng. Sci., 2003, 58, 3629–3641.
+
+    - 27 F. Gharagheizi, J. Hazard. Mater., 2009, 170, 595–604.
+
+    - 28 F. Gharagheizi, Energy Fuels, 2008, 22, 3037–3039.
+
+    - 29 M. Bagheri, M. Rajabi, M. Mirbagheri and M. Amin, J. Loss Prev. Process Ind.,
+    2012, 25, 373–382.
+
+    - 30 M. S. High and R. P. Danner, Ind. Eng. Chem. Res., 1987, 26, 1395–1399.
+
+    - 31 J. R. Rowley, R. L. Rowley and W. V. Wilding, J. Hazard. Mater., 2011, 186,
+    551–557.
+
+    - 32 G. B. Goh, N. O. Hodas and A. Vishnu, J. Comput. Chem., 2017, 38, 1291–1307.
+
+    - 33 Z. Cang and G. W. Wei, PLoS Comput. Biol., 2017, 13, e1005690.
+
+    - 34 S. K. Chakravarti and S. R. M. Alla, Front. Artif. Intell., 2019, 2, 17.
+
+    - 35 Z. Wang, Y. Su, W. Shen, S. Jin, J. H. Clark, J. Ren and X. Zhang, Green
+    Chem., 2019, 21, 4555–4565.
+
+    - 36 A. Mayr, G. Klambauer, T. Unterthiner and S. Hochreiter, Front. Environ.
+    Sci., 2016, 3, 80.
+
+    - 37 G. B. Goh, C. Siegel, A. Vishnu, N. O. Hodas and N. Baker, 2017, ARXIV, 1706,
+    06689.
+
+    - 38 G. B. Goh, N. O. Hodas, C. Siegel and A. Vishnu, 2017, arXiv, 1712, 02034.
+
+    - 39 A. Lusci, G. Pollastri and P. Baldi, J. Chem. Inf. Model., 2013, 53, 1563–1575.
+
+    - 40 Y. Su, Z. Wang, S. Jin, W. Shen, J. Ren and M. R. Eden, AIChE J., 2019, 65,
+    e16678.
+
+    - 41 R. Gomez-Bombarelli, J. N. Wei, D. Duvenaud, J. M. Hernandez-Lobato, B. Sanchez-Lengeling,
+    D. Sheberla, J. Aguilera-Iparraguirre, T. D. Hirzel, R. P. Adams and A. Aspuru-Guzik,
+    ACS Cent. Sci., 2018, 4, 268–276.
+
+    - 42 B. Saha, S. Gupta, D. Phung and S. Venkatesh, Knowledge and Information Systems,
+    2015, vol. 46, pp. 315–342.
+
+    - 43 R. A. Caruana, in Machine Learning Proceedings 1993, Morgan Kaufmann, 1993,
+    pp. 41–48.
+
+    - 44 J. Wenzel, H. Matter and F. Schmidt, J. Chem. Inf. Model., 2019, 59, 1253–1268.
+
+    - 45 A. Varnek, C. Gaudin, G. Marcou, I. Baskin, A. K. Pandey and I. V. Tetko,
+    J. Chem. Inf. Model., 2009, 49, 133–144.
+
+    - 46 K. S. Tai, R. Socher and C. D. Manning, Proceedings of the 53rd Annual Meeting
+    of the Association for Computational Linguistics and the 7th International Joint
+    Conference on Natural Language Processing, 2015.
+
+    - 47 J.-L. Faulon, M. J. Collins and R. D. Carr, J. Chem. Inf. Model., 2004, 44,
+    427–436.
+
+    - 48 M. Tomas, S. Ilya, C. Kai, C. Greg and D. Jeffrey, presented in part at the
+    Proceedings of the 26th International Conference on Neural Information Processing
+    Systems - Volume 2, Lake Tahoe, Nevada, 2013.
+
+    - 49 X. Glorot, A. Bordes and Y. Bengio, J. Mach. Learn. Res., 2011, 15, 315–323.
+
+    - 50 V. Subramanian, Deep learning with PyTorch, Packt Publishing Ltd., Birmingham,
+    2018.
+
+    - 51 G. Landrum, Journal, 2019, www.rdkit.org/docs/.
+
+    - 52 T. Mikolov, I. Sutskever, K. Chen, G. Corrado and J. Dean, Computer Science,
+    2013, pp. 1–9.
+
+    - 53 M. Abadi, P. Barham, J. Chen, Z. Chen, A. Davis, J. Dean, M. Devin, S. Ghemawat,
+    G. Irving, M. Isard, M. Kudlur, J. Levenberg, R. Monga, S. Moore, D. G. Murray,
+    B. Steiner, P. Tucker, V. Vasudevan, P. Warden, M. Wicke, Y. Yu and X. Zheng,
+    Proceedings of the 12th USENIX Symposium on Operating Systems Design and Implementation,
+    Savannah, 2016.
+
+    - 54 D. Kingma and J. Ba, Computer Science, 2014, pp. 1–15.
+
+    - 55 S. b. A. Design Institute for Physical Properties, DIPPR Project 801 - Full
+    Version, Design Institute for Physical Property Research/AIChE, 2019.
+
+    - 56 S. Kim, J. Chen, T. Cheng, A. Gindulyte, J. He, S. He, Q. Li, B. A. Shoemaker,
+    P. A. Thiessen, B. Yu, L. Zaslavsky, J. Zhang and E. E. Bolton, Nucleic Acids
+    Res., 2019, 47, D1102–d1109.
+
+    - 57 J. Godwin, Multi-Task Learning in Tensorflow (Part 1), (accessed 16/05, 2020).
+
+    - 58 R. Cipolla, Y. Gal and A. Kendall, 2018 IEEE/CVF Conference on Computer Vision
+    and Pattern Recognition, 2018, pp. 7482–7491.
+
+    - 59 N. Reimers and I. Gurevych, Computer Science - Computation and Language,
+    2017.
+
+    - 60 T. A. Albrahri, Process Saf. Environ. Prot., 2015, 93, 182–191.
+
+    - 61 Y. Pan, J. Jiang, R. Wang, H. Cao and J. Zhao, J. Hazard. Mater., 2008, 157,
+    510–517.
+
+    - 62 G. Domenico, M. Giuseppe Felice, C. Marco, C. Angelo and N. Orazio, Int.
+    J. Quant. Struct.-Prop. Relat., 2016, 1, 45–63.
+
+    - 63 K. G. Joback and R. C. Reid, Chem. Eng. Commun., 1987, 57, 233–243.
+
+    - 64 A. Z. Mendiburu, J. A. de Carvalho and C. R. Coronado, Fuel, 2017, 188, 212–222.
+
+    - 65 N. Nikolova-Zeliaskova and J. Jaworska, ATLA, Altern. Lab. Anim., 2005, 33,
+    461–470.
+
+    - 66 F. Gharagheizi, R. F. Alamdari and M. T. Angaji, Energy Fuels, 2008, 22,
+    1628–1635.
+
+    '
+  mdcn: '
+
+
+    成功地应用于构建一个新的多任务模型，用于同时预测四个与易燃性相关的性质，并具有良好的准确性。与偏最小二乘法（PLS）的多任务学习技术相比，所提出的MDNN不要求训练集中的每个分子都具有一整套性质。因此，所提出的MDNN可以应用于更多样本，并提供更准确的预测。所提方法可以解决基于描述符的QSPR建模中的挑战，例如，为性质相关性开发合适的描述符、描述符的选择以及相关性分析。由于MDNN使用2D结构（SMILES）而非3D结构，因此在属性预测之前无需进行3D结构测定或预测，就可以更轻松地对先前未知的化合物进行大规模筛选。为避免使用深度学习模型所带来的风险，将异常值识别和AD确定引入MDNN模型的评估中。采用残差ECDF来识别这些异常值。本研究表明，基于PCA的AD分析和凸包计算，可以在潜在化学空间中观察异常值的位置。结果表明，在从训练集和验证集中剔除异常值后，AD变窄了。还可以发现，测试集中包含的一些化合物出现在AD之外。剔除异常值不一定能提高MDNN的预测能力。所提方法可以识别化合物的性质是在深度学习模型的AD内部还是外部进行估计。我们的策略可以为使用多任务深度学习建模具有多个性质输出的QSPR开辟新途径。这可以作为绿色化学数据驱动虚拟筛选的有前途工具。
+
+
+    ## 利益冲突
+
+
+    无需声明任何利益冲突。
+
+
+    ## 致谢
+
+
+    我们谨感谢以下机构提供的经费支持：中国自然科学基金（编号：21878028）；北京市科学技术领军人才培养工程（编号：Z171100001117154）；中国大陆、台湾和澳门大学联合监督方案——其他中国大陆、台湾和澳门大学（编号：SB2S）。
+
+
+    ## 注释与参考文献
+
+
+    - 1 F. A. Quintero, S. J. Patel, F. Muñoz and M. S. Mannan, Ind. Eng. Chem. Res.,
+    2012, 51, 16101–16115.
+
+    - 2 A. S. Hukkerikar, B. Sarup, A. T. Kate, J. Abildskov, G. Sin and R. Gani,
+    Fluid Phase Equilib., 2012, 321, 25–43.
+
+    - 3 J. Frutiger, C. Marcarie, J. Abildskov and G. Sin, J. Hazard. Mater., 2016,
+    318, 783–793.
+
+    - 4 Y. Pan, J. Jiang, R. Wang, H. Cao and J. Zhao, QSAR Comb. Sci., 2008, 27,
+    1013–1019.
+
+    - 5 S. J. Patel, D. Ng and M. S. Mannan, Ind. Eng. Chem. Res., 2009, 48, 7378–7387.
+
+    - 6 A. R. Katritzky, R. Petrukhin, R. Jain and M. Karelson, J. Chem. Inf. Comput.
+    Sci., 2001, 41, 1521–1530.
+
+    - 7 F. Gharagheizi, J. Hazard. Mater., 2009, 169, 217–220.
+
+    - 8 C. Nieto-Draghi, G. Fayet, B. Creton, X. Rozanska, P. Roteureau, J. C. de
+    Hemptinne, P. Ungerer, B. Rousseau and C. Adamo, Chem. Rev., 2015, 115, 13093–13164.
+
+    - 9 Z. Jiao, H. U. Escobar-Hernandez, T. Parker and Q. Wang, Process Saf. Environ.
+    Prot., 2019, 129, 280–290.
+
+    - 10 F. Gharagheizi, M. H. Keshavarz and M. Sattari, J. Therm. Anal. Calorim.,
+    2012, 110, 1005–1012.
+
+    - 11 F. Gharagheizi, J. Hazard. Mater., 2009, 167, 507–510.
+
+    - 12 Y. Pan, J. Jiang, R. Wang, H. Cao and Y. Cui, Ind. Eng. Chem. Res., 2009,
+    48, 5064–5069.
+
+    - 13 J. A. Lazús, Thermochim. Acta, 2011, 512, 150–156.
+
+    - 14 J. Frutiger, C. Marcarie, J. Abildskov and G. Sin, J. Chem. Eng. Data, 2015,
+    61, 602–613.
+
+    - 15 J. Frutiger, J. Abildskov and G. Sin, 收录于第12届国际工艺系统工程研讨会和第25届欧洲计算机辅助工艺工程研讨会，2015年，DOI:
+    10.1016/b978-0-444-63578-5.50079-7，第503–508页。
+
+    - 16 J. Jaworska, N. Nikolova-Jeliazkova and T. Aldenberg, ATLA. Altern. Lab.
+    Anim., 2005, 33, 445–459.
+
+    - 17 A. S. Hukkerikar, S. Kalakul, B. Sarup, D. M. Young, G. Sin and R. Gani,
+    J. Chem. Inf. Model., 2012, 52, 2823–2839.
+
+    - 18 J. C. Dearden, P. Roteureau and G. Fayet, SAR QSAR Environ. Res., 2013, 24,
+    279–318.
+
+    - 19 S. Kim and K. H. Cho, Bull. Korean Chem. Soc., 2018, 40, 39–44.
+
+    - 20 A. Racz, D. Bajusz and K. Heberger, Mol. Inf., 2019, 38, e1800154.
+
+    - 21 T. Suzuki, K. Ohtaguchi and K. Koide, J. Chem. Eng. Jpn., 1991, 24, 258–261.
+
+    - 22 A. Alibakhshi, H. Mirshahvalad and S. Alibakhshi, Process Saf. Environ. Prot.,
+    2017, 105, 127–133.
+
+    - 23 T. A. Albahri and R. S. George, Ind. Eng. Chem. Res., 2003, 42, 5708–5714.
+
+    - 24 T. Suzuki, Fire Mater., 1994, 18, 81–88.
+
+    - 25 A. A. Shimy, Fire Technol., 1970, 6, 135–139.
+
+    - 26 T. A. Albahri, Chem. Eng. Sci., 2003, 58, 3629–3641.
+
+    - 27 F. Gharagheizi, J. Hazard. Mater., 2009, 170, 595–604.
+
+    - 28 F. Gharagheizi, Energy Fuels, 2008, 22, 3037–3039.
+
+    - 29 M. Bagheri, M. Rajabi, M. Mirbagheri and M. Amin, J. Loss Prev. Process Ind.,
+    2012, 25, 373–382.
+
+    - 30 M. S. High and R. P. Danner, Ind. Eng. Chem. Res., 1987, 26, 1395–1399.
+
+    - 31 J. R. Rowley, R. L. Rowley and W. V. Wilding, J. Hazard. Mater., 2011, 186,
+    551–557.
+
+    - 32 G. B. Goh, N. O. Hodas and A. Vishnu, J. Comput. Chem., 2017, 38, 1291–1307.
+
+    - 33 Z. Cang and G. W. Wei, PLoS Comput. Biol., 2017, 13, e1005690.
+
+    - 34 S. K. Chakravarti and S. R. M. Alla, Front. Artif. Intell., 2019, 2, 17.
+
+    - 35 Z. Wang, Y. Su, W. Shen, S. Jin, J. H. Clark, J. Ren and X. Zhang, Green
+    Chem., 2019, 21, 4555–4565.
+
+    - 36 A. Mayr, G. Klambauer, T. Unterthiner and S. Hochreiter, Front. Environ.
+    Sci., 2016, 3, 80.
+
+    - 37 G. B. Goh, C. Siegel, A. Vishnu, N. O. Hodas and N. Baker, 2017, ARXIV, 1706,
+    06689.
+
+    - 38 G. B. Goh, N. O. Hodas, C. Siegel and A. Vishnu, 2017, arXiv, 1712, 02034.
+
+    - 39 A. Lusci, G. Pollastri and P. Baldi, J. Chem. Inf. Model., 2013, 53, 1563–1575.
+
+    - 40 Y. Su, Z. Wang, S. Jin, W. Shen, J. Ren and M. R. Eden, AIChE J., 2019, 65,
+    e16678.
+
+    - 41 R. Gomez-Bombarelli, J. N. Wei, D. Duvenaud, J. M. Hernandez-Lobato, B. Sanchez-Lengeling,
+    D. Sheberla, J. Aguilera-Iparraguirre, T. D. Hirzel, R. P. Adams and A. Aspuru-Guzik,
+    ACS Cent. Sci., 2018, 4, 268–276.
+
+    - 42 B. Saha, S. Gupta, D. Phung and S. Venkatesh, 知识与信息系统，2015年，vol. 46，第315–342页。
+
+    - 43 R. A. Caruana, 收录于《机器学习论文集1993》，Morgan Kaufmann，1993年，第41–48页。
+
+    - 44 J. Wenzel, H. Matter and F. Schmidt, J. Chem. Inf. Model., 2019, 59, 1253–1268.
+
+    - 45 A. Varnek, C. Gaudin, G. Marcou, I. Baskin, A. K. Pandey and I. V. Tetko,
+    J. Chem. Inf. Model., 2009, 49, 133–144.
+
+    - 46 K. S. Tai, R. Socher and C. D. Manning, 第53届计算语言学协会年会和第7届国际自然语言处理联合会议论文集，2015年。
+
+    - 47 J.-L. Faulon, M. J. Collins and R. D. Carr, J. Chem. Inf. Model., 2004, 44,
+    427–436.
+
+    - 48 M. Tomas, S. Ilya, C. Kai, C. Greg and D. Jeffrey, 部分在第26届神经信息处理系统国际会议论文集（第2卷，内华达州湖塔霍，2013年）中发表。
+
+    - 49 X. Glorot, A. Bordes and Y. Bengio, J. Mach. Learn. Res., 2011, 15, 315–323.
+
+    - 50 V. Subramanian, 《使用PyTorch的深度学习》，Packt Publishing Ltd.，伯明翰，2018年。
+
+    - 51 G. Landrum, 期刊，2019年，www.rdkit.org/docs/.
+
+    - 52 T. Mikolov, I. Sutskever, K. Chen, G. Corrado and J. Dean, 计算机科学，2013年，第1–9页。
+
+    - 53 M. Abadi, P. Barham, J. Chen, Z. Chen, A. Davis, J. Dean, M. Devin, S. Ghemawat,
+    G. Irving, M. Isard, M. Kudlur, J. Levenberg, R. Monga, S. Moore, D. G. Murray,
+    B. Steiner, P. Tucker, V. Vasudevan, P. Warden, M. Wicke, Y. Yu and X. Zheng,
+    第12届USENIX操作系统设计与实现研讨会论文集，萨凡纳，2016年。
+
+    - 54 D. Kingma and J. Ba, 计算机科学，2014年，第1–15页。
+
+    - 55 S. b. A. 物理性质设计学院，DIPPR 801项目 - 完整版，物理性质研究设计学院/AIChE，2019年。
+
+    - 56 S. Kim, J. Chen, T. Cheng, A. Gindulyte, J. He, S. He, Q. Li, B. A. Shoemaker,
+    P. A. Thiessen, B. Yu, L. Zaslavsky, J. Zhang and E. E. Bolton, Nucleic Acids
+    Res., 2019, 47, D1102–d1109.
+
+    - 57 J. Godwin, 《TensorFlow中的多任务学习（第1部分）》（访问日期：2020年5月16日）。
+
+    - 58 R. Cipolla, Y. Gal and A. Kendall, 2018年IEEE/CVF计算机视觉与模式识别会议，2018年，第7482–7491页。
+
+    - 59 N. Reimers and I. Gurevych, 计算机科学 - 计算与语言，2017年。
+
+    - 60 T. A. Albrahri, Process Saf. Environ. Prot., 2015, 93, 182–191.
+
+    - 61 Y. Pan, J. Jiang, R. Wang, H. Cao and J. Zhao, J. Hazard. Mater., 2008, 157,
+    510–517.
+
+    - 62 G. Domenico, M. Giuseppe Felice, C. Marco, C. Angelo and N. Orazio, Int.
+    J. Quant. Struct.-Prop. Relat., 2016, 1, 45–63.
+
+    - 63 K. G. Joback and R. C. Reid, Chem. Eng. Commun., 1987, 57, 233–243.
+
+    - 64 A. Z. Mendiburu, J. A. de Carvalho and C. R. Coronado, Fuel, 2017, 188, 212–222.
+
+    - 65 N. Nikolova-Zeliaskova and J. Jaworska, ATLA, Altern. Lab. Anim., 2005, 33,
+    461–470.
+
+    - 66 F. Gharagheizi, R. F. Alamdari and M. T. Angaji, Energy Fuels, 2008, 22,
+    1628–1635.
+
+
+    '
+  merge: 1
