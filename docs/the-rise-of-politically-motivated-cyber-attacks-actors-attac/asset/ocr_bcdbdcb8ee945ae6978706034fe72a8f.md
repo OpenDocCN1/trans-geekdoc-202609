@@ -1,0 +1,13 @@
+# Table 7.2 International definitions
+
+| Organisation | Convention | Provisions |
+| :--- | :--- | :--- |
+| The CoE | The European Convention on Human Rights 1953 | Article 10, freedom of expression; Article 11, freedom of assembly and association |
+| The OAS | The American Convention on Human Rights 1978 | Article 13, freedom of thought and expression; Article 15, right of assembly; Article 16, freedom of association |
+| The OAU | The African Charter on Human and People's Rights 1981 | Article 9, the right to receive information and free expression; Article 10, the right to freedom of association; Article 11, the freedom of assembly |
+
+Sources: CoE (1950); Organisation of African Unity [OAU] (1981); Organisation of American States [OAS] (1969).
+
+The UN Human Rights Council (HRC) adopted in 2018 an essential resolution, HRC REC 38/11, on human rights and protests stating that human rights must be protected online to enable online protest, similar to the protests protected in the UN’s Human Rights Article 19 (Article 19, 2018; UN, 2018a). The new element is that online users also have the right to assembly solely through online conduct (Article 19, 2018). Significantly, the addition to the right comes in the light of state powers trying to control online protests. There has been an increase in states shutting down the Internet, limiting access to online media accounts, and blocking websites as anticipatory measures or responses. The anticipatory tactic limits online and offline users’ rights to participate, receive, and distribute information about protests (APC, 2019, p. 2; Article 19, 2018). In 2018, the HRC had also adopted REC 38/7 on the promotion, protection, and enjoyment of human rights on the Internet (UN, 2018b).
+
+Despite the UN resolution, the use of the online environment for public protests is contested. The entire Internet is private. Online use is incorporated in everyday lives to assemble public life. However, no public areas are designed for online protests in virtual spaces, similar to the offline environment where states have a negative obligation to protect the right to protest. This means that the rights are not directly transferrable to the Internet. Public rights regulate the relationship between the state and the citizens. Often the states do not have any interest in challenging this private ownership of the Internet, leaving online users to be subjected to the private services’ terms and conditions, such as access to the platforms and association (Baraniuk, 2014; Cruz & Plaisance, 2021, p. 1330; Fenwick, 2006, p. 397). However, the state can regulate some areas within the online environment by criminalising certain behaviours and activities.

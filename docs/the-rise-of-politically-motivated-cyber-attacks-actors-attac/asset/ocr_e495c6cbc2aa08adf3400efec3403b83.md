@@ -1,0 +1,11 @@
+# 5 Cyberwar and Warfare
+
+# State and State-sponsored Attacks
+
+# Introduction
+
+Although most states worldwide have developed cyber capacities and capacities for deterrence and defence, there are a growing number of incidents where states are directly attacking foreign public and private entities. However, these attacks are low-key events launched below the threshold of cyberwar, which makes them problematic to manage. States are increasingly relying on state-supported actors to conduct the attack. This use of proxies removes the state from the actions where these groups act independently but under the directions of the state. States claim that they adhere to international law. At the same time, they are using a tactic not covered by the international framework. There is a legislative lacuna regarding the protection of vital assets, online users, and behaviours that is exploited by states. Therefore, this chapter will online the essential parts of international law and apply them to the online actors and actions. The chapter focuses on a selection of states which are constantly engaged in online attacks, i.e. China, North Korea, Russia and the US. The main discussions are centred around motivations, the actors and the means and methods used. These three areas will be linked to the current cybersecurity framework and the lack of legislation to manage the area.
+
+# Conceptualising War and Warfare
+
+For years, cyberwarfare or information warfare has been considered an exaggerated threat unlikely to cause impact beyond the time-limited attack. However, this stance has changed substantially from an abstract idea to a core element of modern warfare. States and military units have adopted cyberwar and warfare as a core strategy for future wars and ongoing disputes where control, attack and defences are instrumental. Several attacks are linked to espionage or disrupting CIs using sophisticated techniques or zero-day exploits (Shaikh, 2014). Strategic targets in cyberwar and warfare are to attack privately owned and publicly operated platforms and services where the impact on the civil population is severe, i.e. businesses, corporations, groups, and individuals. These attacks can be part of espionage, an act of warfare,

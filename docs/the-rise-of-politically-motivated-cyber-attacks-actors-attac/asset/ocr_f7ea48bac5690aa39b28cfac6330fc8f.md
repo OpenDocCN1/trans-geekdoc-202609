@@ -1,0 +1,9 @@
+# Routledge Studies in Crime and Society
+
+# THE RISE OF POLITICALLY MOTIVATED CYBER ATTACKS
+
+# ACTORS, ATTACKS AND CYBERSECURITY
+
+Tine Munk
+
+![](bbox=[0.75, 0.83, 0.84, 0.91])

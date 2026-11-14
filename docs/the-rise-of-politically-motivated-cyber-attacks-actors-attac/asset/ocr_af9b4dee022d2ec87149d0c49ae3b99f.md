@@ -1,0 +1,1 @@
+University, the Criminology and Sociology Department. These students listened and engaged in my teaching about politically motivated cybercrime. I want to thank all the MSc Cybercrime and Digital Investigation students from 2016 to 2021. In particular, I would thank the group from 2019 to 2020 for their excitement and enthusiasm when I started the research.

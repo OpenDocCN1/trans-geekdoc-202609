@@ -1,0 +1,13 @@
+# Cybercrime Legislation
+
+Although the hacktivist groups are engaged in various types of actions, online and offline, criminal and non-criminal, they are primarily involved in clandestine activities to draw attention to a particular issue, gain attention, and promote their own type of ethics. These groups’ modus operandi is linked to illegally breaking into corporations and governmental targets to promote a political end – or prevent the operations of these entities by disturbing or damaging the online structures of services. However, the targets also include religious organisations, terrorists, drug dealers, and paedophiles depending on the groups’ cause and what they consider is right or wrong (Frankenfield, 2019; Sorell, 2015, p. 392). The hacktivist groups are far from being on the same level as state-sponsored/supported actors, but they have become proficient in their specialist areas. Although they operate on a lower scale, the groups have considerable capabilities and capacities for conducting attacks; the lack of sophistication is replaced with relentless and innovative actions.
+
+# CoE's Convention on Cybercrime 2001
+
+To define this area of cybercrime, the CoE's Convention on Cybercrime 2001 is instrumental. The Convention defines vital areas and improves the means to prevent and suppress computer-related crimes on the national and international levels. So far, there are 65 signatory states, whereas 3 states still miss ratifying the Convention (CoE 2021). The states having ratified the Convention have also introduced cybercrime legislation. The different legislative framework covers the hacktivist's main techniques, such as hacking and DDoS attacks.
+
+# HACKING
+
+Significantly, the Convention criminalises hacking without explicitly defining it (CoE, 2001a, 2001b, p. 7). The hacking typology encompasses ‘illegal access’ covering hacking, cracking, computer trespass of various types, and the definitions of the criminal offences are outlined in Articles 2–6 of the Convention. These are developed to protect the confidentiality, integrity, and availability of computer systems or data and separate the illegal activities from the legitimate and common use of computer systems and networks, processes, and practices (CoE, 2001b, pp. 8–9). See Table 7.3.
+
+The Convention aims to harmonise domestic criminal law provisions developed by the signatory States, and it creates a practical cooperative system in an international context (CoE, 2001b, p. 3). An example is the UK Computer Misuse Act 1990, amended by the UK Serious Crime Act of 2015 to update the offences. See Table 7.4.

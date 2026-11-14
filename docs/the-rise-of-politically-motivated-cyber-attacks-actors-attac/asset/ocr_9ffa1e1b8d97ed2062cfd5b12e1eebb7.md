@@ -1,0 +1,13 @@
+in their closed groups. They will resurface under new names and with new, improved ransomware variants and new innovative routes to laundering the money from the attacks (Afifi-Sabet, 2021).
+
+# REVIL
+
+The REvil group claimed on YouTube and the Telegram Channel, Russian OSINT, that the attack on JBS Food was intended for the Brazilian entity – not the US. Therefore, the group did not understand the US reaction and why they began to interfere with this matter. Additionally, to the US’ harsh reaction and proposed legislation prohibiting ransomware payments, REvil highlighted that potential ransom prohibition preventing victims from paying the ransom would not affect future ransom demands. Additionally, the group declared that they were not affected by being called terrorists (Spring, 2021; Rubins, 2021; Paganini, 2021). Despite the brazen statement, REvil changed its platform policy, instituting pre-moderation for its partner network. The group also claimed it would ban any attempt to attack governmental or public, educational, or healthcare organisations (Vaas, 2021).
+
+The RaaS group still managed to conduct a new ransomware attack in the aftermath of the JBS attack. Before the 4 July weekend holiday in the US, the group targeted organisations using the Kaseya VSA remote management software and requested a 70-million-dollar ransom. REvil conducted a supply-chain attack by leveraging a vulnerability in the software to target multiple managed service providers and their customers. (Lawler, 2021; Osborne, 2021b). Shortly after this attack, all known websites linked to the group went offline on the Dark Web. This raised speculation that authorities had targeted them, either Russia or the US. It might also be that the group decided to disappear for a while (BBC News, 2021b). The group’s public representative, Unknown, went silent too. It is not unusual that ransomware groups go offline for some time to return later or to regroup. It could be that the groups felt the pressure from the media coverage and the US threats to take action if the Russian authorities did not act or internal disagreements (Morris, 2021; Mehrotra, 2021). When the group went offline, they left some victims from the Kaseya attack without access to their system. Some victims had paid the ransom; others negotiated with the group. Kaseya announced later that they had obtained a universal decryptor tool (Mehrotra, 2021).
+
+# Strategies and the Game
+
+# The Game Payoff
+
+The ransomware groups continue attacking CIs despite the enhanced focus on cyber-security and the means and methods used. As long as these ransomware groups continue to operate from Russia with relative impunity, nothing will change. Yet, the US President Biden administration has

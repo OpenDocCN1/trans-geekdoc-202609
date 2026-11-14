@@ -1,0 +1,11 @@
+# # Acknowledgements
+
+This book would never have been written if I did not have support and help from several people. I want to thank my family and friends for their constant support: you know who you are. A special thank goes to my Danish friends in ‘Blå Gruppe’ for meeting up consistently on Zoom Friday evenings during the corona virus disease 2019 (COVID-19) pandemic and afterwards. These meetings and conversations allowed me to test book ideas and get instant feedback. Thank you, Mairbrt and Jan Falkesgaard, Inge and John Ankjar Bertz, and Laura and Jesper Munk, and generation 2.0: Emma, Emil, Jeppe, Marcus, and Sarah. Also thanks to Evald Munk and Ruth Rousing.
+
+Writing this book has been an interesting journey during the COVID-19 pandemic, where new personal and professional challenges sometimes felt overwhelming. Going back to my main research interest area and exploring a developing cybercrime field kept my mind occupied. Although the proposal was written before the pandemic, it soon became apparent during that time that politically motivated cybercrimes were escalating, and I was writing while key events unfolded.
+
+I am very grateful for the assistance and support I received from Dr Magali Peyrefitte, Dr Angus Nurse, and Professor Vincenzo Ruggiero in developing the proposal. I would also thank Dr Angus Nurse for his feedback on the chapters during the writing up period. A special thanks for the support I have received should go to the team at Routledge, Thomas Sutton, Jessica Phillips, Zoe Thomson, and the anonymous reviewers involved in the process.
+
+During this book research and writing process, several people have supported me. This helped me through the long hours in front of the computer screen. Therefore, I would like to express my gratitude to Tine Lee Senft, Lene Dam, Bettina Jacobsen, Georgia Mouskou, Dr Magali Peyrefitte, Sara Rodriguez, Dr Naomi Graham, Professor Karen Duke, Sue Mew, and Dr Graham Smith. Thank you for the patience, enthusiasm, and interest you have offered me.
+
+Finally, my academic network’s encouragement, discussions, and ideas have been instrumental for my development as an academic. I want to express my appreciation to all the people in this network. I would also like to thank the undergraduate and postgraduate cybercrime students from Middlesex
