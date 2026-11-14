@@ -1,0 +1,14 @@
+level_changes: []
+text_changes:
+- line: 33
+  before: 2.1. 基于 RGB 的 2D 人体姿态估计。
+  after: 2.1. 基于 RGB 的 2D 人体姿态估计
+- line: 37
+  before: 2.2. 非基于 RGB 的姿态估计。
+  after: 2.2. 非基于 RGB 的姿态估计
+- line: 51
+  before: 3. 演进注意力空间-频率网络
+  after: 3. 演进型注意空间-频率网络
+- line: 57
+  before: 3.2. Wifi 信号和 CSI
+  after: 3.2. WiFi 信号和 CSI
