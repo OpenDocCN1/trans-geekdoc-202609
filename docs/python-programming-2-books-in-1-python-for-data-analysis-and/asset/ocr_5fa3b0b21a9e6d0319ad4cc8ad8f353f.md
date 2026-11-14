@@ -1,0 +1,9 @@
+would like to focus our time and attention on. Using things like frequency counts and descriptive statistics can help us out with this.
+
+It is never a good idea to go through and analyze data that does not meet some of your own personal standards. You want to make sure that it will match up with what you want to do with some of your work on the analysis, that it is accurate, and it will get the job done for you, as well.
+
+When the quality analysis part is done, it is time to make sure that the measurement tools that we use here are going to be higher in quality as well. If you are not using the same measurements on each part of this, then your results will be skewed in the process. If you are using the right ones, though, you will find that this gives you some options that are more accurate and can help you really rely on the data analysis.
+
+Once the whole process of making sure you clean the data, and we have done the quality analysis and the measurement, it is time to dive into the analysis that we want to use. There are a ton of different analysis that we can do on the information, and it often will depend on what your goals are in this whole process. We can go through and do some graphical techniques that include scattering plots. We can work with some frequency counts to see what percentages and numbers are present. We can do some continuous variables or even the computation of new variables.
+
+There are tons of algorithms that are present when we work on this, and it will again depend on your goals. Some are better for helping you to see the best decision to make out of several options, such as the decision tree and

@@ -1,0 +1,7 @@
+# Chapter 12: Data Visualization
+
+Before we can finish off our own data analysis, we need to take some time to learn about data visualization and how we are able to utilize this for some of our needs. These visuals are amazing because they can take all of the data that we have collected and sorted through and analyzed from before and puts it into a format that we can read and understand. Visuals and graphs are a whole lot easier to look through and gain the main meaning from than reading through reports and spreadsheets, which is why these data visuals are going to be such an important part of this process. With this in mind, we are going to dive in and take a look at the data visualizations and what we are able to do with them.
+
+# The Background of Data Visualization
+
+To start with, we need to understand that data visualization is just going to be the presentation of data in a graphical or a pictorial format. It is going to enable some decision-makers to look through the analytics that we did with all of our data, but it is done in a visual manner. This will help everyone involved grasp difficult concepts or identify some new patterns that are important. Moreover, we even have the chance to work with visualizations that are a bit more interactive, which helps us to take this concept a bit further. This helps us to use a lot of our modern technology in order to drill down into the charts and graphs to find more details and can help us to change the data we see interactively, and process it to meet our needs.

@@ -1,0 +1,3 @@
+so that it is easier to tell how important each one is, and will tell us more about a category. The coding that we can use to make this one work includes:
+
+There are many graphs and more that we can utilize when it comes to using this library. It works well with the Python library and can be a great way to take all of the data that you are working within your data analysis and put it to good work. When you are ready to get started with the matplotlib library, take the time to look through this chapter and see some of the easy chartings and graphing that we are able to do to get it all done based on which chart and graph is the right for you.

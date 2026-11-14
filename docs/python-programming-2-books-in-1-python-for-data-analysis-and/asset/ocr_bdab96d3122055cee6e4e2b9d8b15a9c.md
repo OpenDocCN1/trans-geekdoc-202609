@@ -1,0 +1,7 @@
+# Chapter 8: All About Matplotlib
+
+It is now time for us to talk about a great library that you can work with when it is time to work on all of your visuals and more in this library. The best plotting library that we can use for all of our visuals and graphs and charts is known as matplotlib.
+
+Matplotlib is going to be known as one of the plotting libraries that is available for the Python programming language, and it is going to rely on the NumPy library to give it the necessary arrays. This library is able to rely on object-oriented API to embed plots in Python applications. No matter how you want to be able to visualize your data over time, you will find that this is the library to get it all done.
+
+Since Python is widely used in machine learning, resources like Matplotlib and NumPy are going to be useful to help us model out many of the technologies that we see with machine learning. The idea is that programmers would use both of these libraries to get some of the tasks down inside of a big environment of Python. Then, we can take those results and integrate them with all of the other features and elements that are inside of our machine learning program. It will also work with some advanced machines or even neural networks if we would like.

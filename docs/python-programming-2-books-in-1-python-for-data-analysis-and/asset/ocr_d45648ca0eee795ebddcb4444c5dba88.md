@@ -1,0 +1,7 @@
+# Stage I – Business Understanding
+
+The goal of this stage is to gather and drill down on the essential variables that will be used as targets for the model, and the metrics associated with these variables will ultimately determine the overall success of the project. Another significant objective of this stage is the identification of required data sources that the company already has or may need to procure. At this stage, the two primary tasks that are required to be accomplished are: “defining objects and identifying data sources.”
+
+# Defining objectives
+
+All projects must always start with the identification of the key business variables that the analytical tools are required to predict. These variables are called “model targets,” and the metrics associated with these model targets, such as sales forecast and prediction of fraudulent orders, are used as a measure of the success of the project. To define the project goals and objectives, it is imperative to work with the stakeholders and the end users and asking relevant questions that can be highly specific or even vague. To answer these questions, the data science approach employs names and numbers. The five types of questions that are primarily used for data science or machine learning are pertaining to: “regression (how much or how many?), classification (what categories?), clustering (which groups?), anomaly detection (is this unusual?), recommendation (which option should be taken?)”. It is important to determine the right questions for your project

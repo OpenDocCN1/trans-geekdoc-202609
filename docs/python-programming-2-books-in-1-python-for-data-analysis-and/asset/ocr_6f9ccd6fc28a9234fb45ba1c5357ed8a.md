@@ -1,0 +1,9 @@
+data and be fine. However, many times, filling it in with the mean or the average of the other columns with it can be a good way to still use that information without getting error messages from your algorithm.
+
+# Planning Out the Model Phase
+
+Now it is time for us to move on to some model planning. This is where you and your team are going to start creating the model or the algorithms that you want to use in order to move this process along and ensure that it is going to work the way that you want. Based on the work that you did in the other two steps, the model that you choose to use is going to vary, and this is the stage where we figure out the best steps to take.
+
+During this part, the team is going to spend some time determining which workflow, techniques, and methods are going to be needed to help us later when we build up our model. We figure out how we can best use the data that we have been collecting all this time, and work from there. The team will also need to explore some of the data they have to learn more about the relationship that is there between the variables, and then they can select the variables that are the most important here.
+
+The reason that we are going to do this is that it helps us to figure out the models that are the most suitable to work with. When we know more about the variables, and we can find the pattern of the ones that are the most important to our needs, the model will lend itself to us pretty well. This can save us a lot of time and effort and can make sure that we do not have to work on a bunch of different models in the hopes that we will get the right one.
