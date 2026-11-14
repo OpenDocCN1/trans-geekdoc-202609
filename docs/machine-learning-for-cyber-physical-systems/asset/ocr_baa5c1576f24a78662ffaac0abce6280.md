@@ -1,0 +1,15 @@
+Moreover, production control has to deal with a dynamic and non-deterministic system inside a volatile environment and thus has to handle uncertainty and unexpected incidents [2]. Currently, production planning and control systems such as mathematical programming, heuristics and rule-based approaches are highly centralized and monolithic and not able to meet these needs [3]. Therefore, the dynamic characteristics of production systems are poorly met.
+
+Through the integration of manufacturing components, enhanced process monitoring and data collection, Cyber Physical Production Systems (CPPS) provide real-time data such as order tracking, machine breaks and inventory levels. This makes it possible to apply data-driven techniques, such as Machine Learning (ML) algorithms. Additionally, these are able to adjust to the current system state by analyzing the available data in real-time. This paper shows the successful implementation of a decentral production control system that is based on ML algorithms. The system focuses on the following two use cases: order dispatching and maintenance management. As performance benchmark an existing rule-based heuristic is considered. The real-world use case is taken from a semiconductor manufacturing company that is regarded as a highly suitable example of a cyber physical and digitized production system.
+
+# 2 Fundamentals and literature review
+
+# 2.1 Requirements within the semiconductor industry
+
+The semiconductor manufacturing is classically divided into two parts: the front-end, before splitting the wafers, and the subsequent back-end. The front-end comprises all processing steps before cutting the silicon wafer. It consists of several thousand individual processes and lasts between 11 and 20 weeks. Generally, semiconductor manufacturing is considered as one of the most complex manufacturing processes in discrete manufacturing [4]. Between the actual manufacturing processes, control and cleaning processes are required repeatedly. Many of these processes are also performed several times on a wafer so that in general the entire process is not linear. Certain processes are recurrent to build up layers in and on the silicon wafer. Moreover, there are time restrictions between process steps as wafers contaminate quickly when not processed further [1].
+
+# 2.2 Order dispatching and maintenance management
+
+The assignment of orders to machines for processing is addressed in the so-called order dispatching. Dispatching is an optimization problem that aims to assign orders to resources and hence determines the sequence and schedule of orders. It directly influences the objectives utilization, throughput time (TPT) and work-in-process (WIP).
+
+Next to an optimal order assignment, the robustness of each resource of the system to failures is crucial and has a high influence on these objectives. Therefore, the goal of maintenance management is to maintain availability at minimal cost. Reactive maintenance, i.e. repairs, is balanced with inspection and preventive maintenance measures with the goal to achieve the highest possible uptime of the resources.
