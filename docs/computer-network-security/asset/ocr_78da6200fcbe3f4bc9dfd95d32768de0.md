@@ -1,0 +1,39 @@
+BOULANGER Jean-Louis
+Safety of Computer Architectures
+
+MONMARCHÉ Nicolas et al.
+Artificial Ants
+
+PANETTO Hervé, BOUDJLIDA Nacer
+Interoperability for Enterprise Software and Applications 2010
+
+SIGAUD Olivier et al.
+Markov Decision Processes in Artificial Intelligence
+
+SOLNON Christine
+Ant Colony Optimization and Constraint Programming
+
+AUBRUN Christophe, SIMON Daniel, SONG Ye-Qiong et al.
+Co-design Approaches for Dependable Networked Control Systems
+
+# 2009
+
+FOURNIER Jean-Claude
+Graph Theory and Applications
+
+GUÉDON Jeanpierre
+The Mojette Transform / Theory and Applications
+
+JARD Claude, ROUX Olivier
+Communicating Embedded Systems / Software and Design
+
+LECOUTRE Christophe
+Constraint Networks / Targeting Simplicity for Techniques and Algorithms
+
+# 2008
+
+BANATRÉ Michel, MARRÓN Pedro José, OLLERO Hannibal, WOLITZ Adam
+Cooperating Embedded Systems and Wireless Sensor Networks
+
+MERZ Stephan, NAVET Nicolas
+Modeling and Verification of Real-time Systems

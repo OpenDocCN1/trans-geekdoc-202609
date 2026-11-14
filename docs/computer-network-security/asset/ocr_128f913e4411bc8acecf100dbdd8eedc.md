@@ -1,0 +1,19 @@
+4. On R3, create and activate an extended ACL named “ACL_HTTP” which makes it possible to meet all the security requirements defined in Part 1.
+
+Write the command to be used:
+......................................................................................
+......................................................................................
+......................................................................................
+
+5. On R3, create an extended ACL called “ACL_FTP” which makes it possible to meet the security requirements defined in Part 1.
+......................................................................................
+......................................................................................
+......................................................................................
+
+6. Test the effect of the ACLs created.
+
+# EXERCISE 7.–
+
+# Topology
+
+![](bbox=[0.105, 0.52, 0.885, 0.85])
