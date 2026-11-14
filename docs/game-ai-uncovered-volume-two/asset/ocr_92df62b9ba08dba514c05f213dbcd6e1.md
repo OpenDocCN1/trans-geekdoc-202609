@@ -1,0 +1,11 @@
+two vehicles, a random point in the arena was assigned instead. This meant that you would see a car drive towards the centre and then just turn away from all the mayhem. Further to this, the vehicles would sometimes delay their start and join the fray a few seconds later. This may not have been the best way to score points, but it added variety and randomness to the race starts and ensured that each event was different.
+
+# 23.8 CONCLUSION
+
+This chapter has detailed the work that went into creating the arena-based demolition derby game modes on DiRT: Showdown. These systems were designed and built in less than five months by just two programmers (one of whom was a junior with only one year’s experience at the time!), but it was only achievable due to the existing tools and systems that could be leveraged. The tools that the level designers used were already familiar to them, even if they were now being used in a totally different way and the already existing code features could either be used directly (like the spline following system and statistics system) or copied and then updated (like the Overseer, which was based on the Race Choreographer from previous games). Given the time constraints that necessitated some of the decisions, the end result was remarkable. At the beginning of the project, the requirement was to deliver a single, empty arena with a single difficulty setting, but by the time it was completed five months later, there were multiple arenas (different shapes and with immovable obstacles inside) and three distinct game modes, with a fully working and tuneable difficulty system that featured precision driving and targeting.
+
+# REFERENCES
+
++   Bikker, J (2017) Practical SIMD Programming, available online: https://www.cs.uu.nl/docs/vakken/magr/2017-2018/files/SIMD%20Tutorial.pdf.
++   Bugbear Entertainment (2004) FlatOut. Bugbear Entertainment.
++   Dunlop, M. (2005) Introduction to Catmull-Rom Splines, available online: https://www.mvps.org/directx/articles/catmull/.

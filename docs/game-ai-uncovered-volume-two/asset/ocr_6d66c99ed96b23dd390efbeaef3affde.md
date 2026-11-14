@@ -1,0 +1,14 @@
+# 9 Crafting the Illusion
+Difficulty Scenarios
+
+# Paul Roberts
+
+# 9.1 INTRODUCTION
+
+Difficulty is an aspect of games development that often gets left until the end of development. At which time there is panic because the game is too difficult, and some way is needed to make the AI play in such a way that it offers a challenge to the player, but is not so good that the player struggles to win. This chapter describes the approach taken to incorporate difficulty into the AI systems from an early stage, which was then expanded upon to create flexible difficulty and difficulty scenarios.
+
+# 9.2 INCORPORATING DIFFICULTY
+
+Difficulty should not be about the dumbing down of AI. Each agent in the game should make the best decision they can, given the information they have. If you do not give them enough information, they look stupid. Give them too much information and the AI is deemed to be cheating. The key here is for the AI to make the correct decision, so they do not look stupid, but their ability to enact their response is thwarted. In other words, they look incompetent rather than dumb. Imagine a stealth game where an AI guard is patrolling. The guard’s field of view can simply be modified to allow the player to sneak past. The player will accept the agent not spotting them if the field of view is not too narrow, but what would be better is an agent that spots the player slightly late (narrowed field of view) and then responds by taking aim and firing, but the aim of the agent is not great, so they miss the target. Perhaps the agent also runs to trigger an alarm. The guard’s run speed can also be reduced. This allows the AI to spot the player, make the correct response, miss when firing and be slow to trigger the alarm. In this scenario, the player is given the chance to avoid the guard, but if they fail, they have the opportunity to take out the threat, creating a more engaging encounter for the player, and one in which the AI does not look stupid.
+
+One of the absolute worst ways of incorporating levels of difficulty into a game is to modify the AI on the player’s side. For example, in a sports title, it is never fun for the ability of the player’s team to be modified to make the opposition more difficult. The player will notice if their team is running slower or are now unable to make a catch that they were making in the previous match without any trouble. The player can see what is happening and the immersion is lost, along with it possibly the player. Instead, any modifications should be applied to the opposing AI. Even better, make any modifications to individual agents.

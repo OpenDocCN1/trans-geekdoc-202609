@@ -1,0 +1,15 @@
+# 6.2.8 NON-STATIC BEHAVIOUR PRIORITIES
+
+For some agents, the relative importance of performing an action compared to another one is dependent on the circumstances of its runtime environment. For example, imagine a bot in a classic first-person shooter arena deathmatch that has a behaviour for collecting health and one for ammo. If the bot’s health is critically low, getting health becomes much more important than if its health is nearly full. Similarly, getting more ammo becomes more important the less ammo the bot has. If the bot is close to dying, getting more health becomes more important than getting more ammo, even if it could do with more ammo, though if it does need more ammo, and if it is just a small detour to get some ammo when going to get health, making that detour might still be worth it. To properly solve this problem, the AI cannot rely on fixed priorities between behaviours and needs to be able to calculate relative priorities at runtime.
+
+# 6.2.9 ACTIVE BEHAVIOUR STICKINESS
+
+An important sub-problem of dynamic priorities is a desire to increase the priority of the currently active behaviour. Many times, the AI has several behaviours of similar, if not equal, priority, and under those circumstances, you may want to increase the priority of the active behaviour to prevent the AI from switching back and forth between behaviours. For instance, in the example above with the health and ammo pickup, if the need for both health and ammo is very similar, there is a risk that the AI will be ping-ponging between the two behaviours due to small changes to its perceived situation. Making the AI stick with a particular decision, even if that decision is not the optimal one, as long as it is good enough, generally leads to a better-behaving AI.
+
+# 6.3 IMPLEMENTATION-DEPENDENT CHARACTERISTICS
+
+In addition to the above characteristics of the different architectures, there are some characteristics of your implementation that are going to have a significant impact on how easy it is to work with it and how effective it is going to be at solving your problems. It is easy to ignore these, but there will be a cost down the line.
+
+# 6.3.1 OVERHEAD
+
+The quality of your AI will be highly dependent on your ability to create valid behaviours for most, if not all, scenarios an agent is likely to experience, closely followed by your ability to create behaviours that are observably distinct from each other. Consequently, as an AI developer, you are going to spend a large portion of your time adding and modifying AI behaviour. Minimising the amount of overhead that is required to add a new behaviour, a new behaviour building block or other capability for the AI is crucial. Any system that requires significant amounts of boilerplate work to create simple additions is going to result in a poorer product, as that time could have been spent on making better AI. If you start to notice that your behaviour

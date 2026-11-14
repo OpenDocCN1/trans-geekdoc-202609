@@ -1,0 +1,4173 @@
+# Game AI 揭秘：第二卷
+
+
+
+
+
+
+
+![](img/f4a4f6e4de5338a867590c30638990cf_0_0.png)
+
+
+
+
+
+
+
+
+
+
+## 前言
+
+当我们开始时，《游戏 AI 揭秘》原本只打算出版一卷，但很快就显而易见，游戏 AI 社区有很多人希望参与进来，把这件事做得更大。因此，为了确保这些令人惊叹的 AI 专业人士每个人都能分享这个平台，我们决定继续下去，创作第二卷。这一切都发生在第一卷开发期间，所以请相信我说的工作量显著增加了。而且这还没有结束。剧透一下，明年会有第三卷，可见兴趣之浓厚。
+
+对我来说，这表明游戏行业（尤其是游戏 AI 领域）是多么了不起。这个行业有太多极其有才华的人，他们不断推动知识共享，让他人能够在其思想基础上构建，并持续将该领域推向更好的方向，这令人惊叹。任何在游戏工作室工作过的人都知道这种事每天都在发生，但向外界分享新方法和进展令人敬畏。保密进展、不分享本可以很容易做到，但那不是我们的作风。
+
+**保罗·罗伯茨**
+
+
+
+
+
+## Acknowledgements
+
+Game AI Uncovered (Volume Two) was quite an undertaking to bring together. Starting from scratch and reaching out to the game AI community to see if there was even any interest in such a project was a monumental undertaking. As it turned out, there was a great deal of interest. And a huge thanks to all those people (some of whom did not end up contributing a chapter themselves) who suggested colleagues, or friends that would be interested in getting involved.
+
+A special thanks to my wife, the amazing Emma Roberts who proofread this entire volume and, as she did with volume one, pointed out a plethora of inconsistencies and mistakes.
+
+The artwork throughout this volume was once again done by the super talented Nicholas Dent. He took our programmer art and not only made them look professional but also added a lot of character as well. Thanks Nick.
+
+The amazing cover artwork for this volume was provided by Team17 Digital from the game The Survivalists. Four chapters covering techniques from this game appear in this book: Low Bandwidth, Synchronised Path Following in Team17's The Survivalists, Going Stateless: An Evolution of Behaviour Trees in Team17's The Survivalists and Beyond, Monkey Business: NPC Player Imitation in Team17's The Survivalists, and Dynamic Behaviour Trees: Building for Scalability.
+
+Thanks to the guys at CRC Press who have supported this project from the start. A special call out to Will Bateman, who supported the idea of a second volume right away (before volume one was published), such was his confidence in this series. And a huge thanks to Sathya Devi who spends hours turning my manuscripts into the amazing final product you see before you. I'd be remiss if I didn't call out the excellent work that Simran Kaur does in the background. Thanks Simran. And to Shamayita Dey who took over the reins from Simran for Volume Two. Thanks Shamayita.
+
+A huge thanks to all those studios who supported their staff and allowed for this information to be shared.
+
+Projects of this kind are a labour of love. And I think each and every contributor in this series has shown an undeniable passion for the field of game AI. Sharing expertise and knowledge takes time. This is time outside of our day-to-day jobs of game development, meaning weekends and evenings over many months were filled with the development of this volume. This includes the writing, editing, drawing, rewriting, organising permissions, and much more. So, a final huge thank you goes to all our families who have both supported us and allowed us to take the time to work on this project.
+
+## Editor
+
+**Paul Roberts** is the Technical Director of the independent game studio Grinning Cat. Prior to this, he worked in a variety of Principal / Lead AI Programmer roles for a range of studios in the UK including Sumo Digital, Team17, Traveller's Tales, Activision, and some smaller indie studios. For several years, Paul also led the Games Programming department at Staffordshire University, where he taught Game AI and programming principles. He has a Master's degree in Computer Science with Artificial Intelligence, which focused on pathfinding, the development of the DRS algorithm and ways to test the believability of generated paths. Paul has written a number of books, some fiction, others academic, the latest of which is _Artificial Intelligence in Games_ published by CRC Press in 2022 and is also the editor for this Game AI Uncovered series.
+
+## Contributors
+
+Dr Nuno Vicente Barreto works as a Principal AI Programmer at DR Studios, Ltd. He has a PhD in Information Sciences and Technologies, focusing on Video Game Creature Believability, from the University of Coimbra. While taking his PhD, he co-founded Titan Forged Games where he developed Slinki and Tanks Meet Zombies and worked as a freelance Gameplay Programmer for other companies. He really enjoys developing and studying Gameplay/AI systems and is very fond of A-Life, and Life-Sim games, ever since he played Creatures 3, back in 1999.
+
+Steve Bilton is currently a Principal Programmer at Firesprite and has been a game developer throughout his working life. Much of that time has been spent working on high-level AI behaviour for both friendly and enemy NPCs, in a variety of different genres and games of varying scope, but tends to dig his fingers in almost any player-facing pie given half a chance. He cares most about the psychology of game AI and how it is perceived by players, preferring to put the intended game experience above all other considerations. He holds an MEng in Computing with Artificial Intelligence from Imperial College London from a long time ago, which was the last time he did any actual AI that wasn't smoke and mirrors.
+
+Andy Brown began his career in 1997 at Gremlin Interactive where he worked on several sports titles, the last of which being a soccer game which was his first taste of AI programming in a commercial game. Following that he spent 5 years at Eurocom, where he was part of the core gameplay team on Spyro: A Hero's Tail along with Pirates of the Caribbean where he focused on player mechanics as well as core AI systems. In 2008, he moved to Sumo Digital where amongst other things he helped develop AI systems for several of the studios driving titles, in particular Sonic & All Stars Racing Transformed, as well as AI technology to support the development of Crackdown 3. His current role involves leading the gameplay team on an unannounced AAA title.
+
+Dr Allan Bruce holds a PhD from the University of Aberdeen, in the field of AI known as qualitative reasoning. He has a comprehensive background in the video games industry, beginning with Midway Games in 2006, moving to CCP Games in 2009, and joining Sumo Digital in 2018. Throughout this time, he has worked on AI and AI Systems for a number of games, including Wheelman, EVE: Valkyrie, Hood: Outlaws and Legends, and Call of Duty: Vanguard. He currently resides in County Durham, UK, with his wife, two sons, three cats, and dog, Bowser.
+
+**Richard Bull** has been a full-time professional programmer in the games industry since late 2000, following a short stint coding industrial software, after graduating a couple of years previous. He has specialised in architecting AI and gameplay systems, working as a lead AI programmer on Empire: Total War for The Creative Assembly, and on titles such as Grand Theft Auto: Chinatown Wars and L.A. Noire for Rockstar Games. Among his other previous employers he counts Software Creations, Acclaim, Kuju, and Activision, and is credited on numerous other titles including Dungeons & Dragons: Tactics, Call of Duty: Strike Team, Nom Nom Galaxy, and the Lego Harry Potter remasters. Since 2014, he has been working on various original and co-developed projects through his own company Gentlemen Of Science, with co-founder and fellow veteran games industry programmer Ash Henstock. They are currently assisting development on an unannounced cross platform title with Ice Beam Games, for Secret Mode.
+
+**Phil Carlisle** is a Senior Lecturer for Games and Computer Science at the University of Lincoln in the UK and runs a small consultancy firm called Generative Machines specialising in machine learning enabled procedural content generation tools for game developers. Phil has been a senior programmer in the games industry and has shipped multiple games for the likes of Team17, Hasbro, Microprose, Ubisoft, and others under varying programming roles including AI programmer. Phil has spoken widely about AI in games, including at GDC and other conferences. Phil's research uses computer vision to empower procedural content generation for AI behaviour and cinematography by learning from films.
+
+**Michele Condò** has been programming in the video games industry for 10 years. He started in the mobile gaming sector before moving across to AAA games, working for high-profile games companies Ubisoft and IO Interactive. Although he specialises in AI, he also has a wide range of games programming experience. His work on open world, stealth, and action games has gained him credits on the hugely popular games Ghost Recon Wildlands and Watch Dogs: Legion. When not programming, he enjoys spending quality time with his family and 2 cats and playing video games of course.
+
+**Sarah Cook** is currently a Lead Programmer at Sumo Digital Sheffield. She began programming at age 8, extending games such as Space Invaders in BBC Basic, and has gone on to have a career in the games industry spanning over 15 years, of which 7 have been spent as an AI programmer. Sarah has degrees in Electrical and Electronic Engineering (BEng/MEng), and Artificial Intelligence (MSc), and has a PhD focusing on computer-generated routes for pedestrian navigation. She has a range of published titles including Strange Brigade, Sniper Elite 4, Sonic & All-Stars Racing Transformed, Virtua Tennis 2009, and Sensible Soccer 2006.
+
+
+
+
+### Steven Dalton
+
+Steven Dalton 在过去 13 年中曾在多家英国工作室任职，包括担任 Team17 的 AI 专家多年、做过一段时间自由 AI 程序员，目前担任相对较新的工作室 Steel City Interactive 的 AI 团队负责人，参与他们的首个项目 Undisputed（一款竞技拳击游戏）。在泰赛德大学（Teesside University）计算机游戏编程学位最后一年对游戏 AI 产生兴趣后，Steven 在行业中担任过各种不同的编程角色，之后加入 Team17 并追求明确的 AI 职位。从那以后他就一往无前！
+
+### Nicholas Dent
+
+Nicholas Dent 是一位经验丰富的游戏设计师，在游戏行业拥有超过 30 年的经验，曾担任艺术家、动画师、制作人等各种创意职位，目前担任超过 18 年的游戏设计师（高级、主管、创意总监）。他与娱乐业的一些大牌合作过，如 Disney、EA、Bandai Namco、Konami、SEGA 和 Square Enix，还开发了许多原创体育 IP。
+
+### Rodolfo Fava
+
+Rodolfo Fava 是一名 AI 程序员，曾参与独立和 AAA 游戏开发，最著名的是 Returnal（PS5），从 Climax Studios 承包工作。目前，自 2021 年起在独立公司 Jaw Drop Games 担任快乐的 AI 程序员。他在尼美亨（Nijmegen）的 Mechanmania 完成了本科实习，并从荷兰布雷达应用科学大学（Breda University of Applied Sciences）获得了游戏编程学位。
+
+### Jonas Gillberg
+
+Jonas Gillberg 是 EA 的首席 AI 工程师，帮助游戏和研究团队利用游戏 AI 和机器学习推动游戏测试进一步发展。他于 2019 年在 GDC AI 峰会上展示了这项工作的早期成果（AI for Testing: The Development of Bots that Play Battlefield V）。在加入 EA 之前，他在育碧工作多年，并有幸从雪落引擎（Snowdrop engine）的早期阶段就参与其中。他担任《Tom Clancy’s The Division》的首席 AI 程序员并推出了该游戏，并在 2016 年 GDC AI 峰会上就其中一些内容发表了演讲（Tom Clancy’s The Division: AI Behavior Editing and Debugging）。他还是 Magic CardSpotter 的创建者，这是一个开源的 Chrome 扩展程序，用于检测《万智牌》直播中的卡牌，或许更值得注意的是它被 VirtualEDH 分叉并成为了 SpellTable（Wizards of the Coast）。
+
+### Dominik Gotojuch
+
+Dominik Gotojuch 是独立游戏工作室 Robot Gentleman 的创意与技术总监。他于 2009 年开始游戏开发之旅，为《Fable III》和《巫师 3：狂猎》（Witcher 3: The Wild Hunt）等 AAA 游戏编写 AI。为了追求创作自由，他联合创立了 Robot Gentleman，该工作室黑色幽默处女作《60 Seconds!》销量超过 400 万份。Dominik 监督了工作室从车库双人组转型为可持续团队的过程，同时继续编写代码、撰写内容和设计游戏。与此同时，他还在会议上发表演讲并在大学讲学，推动对其他独立工作室的投资，甚至经营一家艺术画廊。最近，他在 Robot Gentleman 建立了一个研发小组，并在格拉斯哥大学进行学习代理（learning agents）的研究。
+
+### Dale Green
+
+Dale Green 是一名软件工程师，曾在多个领域工作，最终在 AAA 视频游戏领域落脚。Dale 曾参与多个 PC 和主机平台的 AAA 大作开发，主要专注于 AI 系统。他自行发布过一款 PC 游戏，撰写了一本关于 C++ 游戏开发中程序化内容生成的书籍，并正在开发一个 x64 汇编语言游戏库。Dale 目前受雇于 Red Kite Games。
+
+### Tobias Karlsson
+
+Tobias Karlsson 是行业老兵，2000 年作为 AI 程序员开始其职业生涯。他曾为 EA、Disney、LucasArts、Microsoft 和 Sony 制作游戏 AI，参与了 *战地*、*星球大战*、*指环王*、*镜像边缘* 和 *危机四伏* 等系列作品，并在 Game Developer Conference 上就游戏 AI 发表过演讲。他目前在 Blizzard Entertainment 担任首席 AI 程序员。
+
+### Jonathan Keslake
+
+Jonathan Keslake 在 AA 游戏行业工作了四年。在此期间，他曾为 Team17 和 Sumo Digital 效力，参与了 *生存者*、*波莉亚时光* 和 *与朋友高尔夫* 等项目。
+
+### Dr Fernando Penousal Machado
+
+Fernando Penousal Machado 博士是葡萄牙科英布拉大学信息学系副教授。他是科英布拉大学信息学与系统中心（CISUC）的副主任、认知与媒体系统小组的协调员，以及 CISUC 计算机设计与可视化实验室的科学总监。他的研究兴趣包括进化计算、计算机创造力、人工智能和信息可视化。他在这些领域发表了 200 多篇经过同行评议的期刊和会议论文，其同行评议出版物多次获得最佳论文提名和奖项。他获得过多项科学奖项，包括享有盛誉的 EvoStar 奖（表彰其在欧洲进化计算领域的杰出贡献），以及葡萄牙人工智能协会颁发的人工智能卓越与功绩奖。他的作品曾在 *Leonardo* 期刊、《Wired》杂志上发表，并在葡萄牙当代艺术国家博物馆以及纽约现代艺术博物馆（MoMA）的“Talk to me”展览等场所展出。
+
+### Ivan Mateev
+
+Ivan Mateev 是一名 AI 软件工程师，专注于车辆 AI。Ivan 来自索非亚大学“圣克莱门特·奥赫里茨基”的理论计算机科学背景，并于 2014 年从阿伯特大学（University of Abertay）获得计算机游戏技术学士学位。在 Ivan 的职业生涯中，他曾参与 Electronic Arts 和 Codemasters 的各种赛车游戏作品，涉及 *网格赛车*、*泥泞越野* 和 *极品飞车* 系列。Ivan 的主要兴趣在于将计算机科学概念应用于视频游戏技术——这一事业他在游戏 AI 编程的多个环境中都享受其中，包括游戏性、工具和软件架构。
+
+### Dr Nic Melder
+
+Nic Melder 博士拥有超过 15 年开发车辆 AI 系统的经验。此前，他曾担任《看门狗：军团》（Watch Dogs: Legion）的首席车辆 AI 程序员，负责开发交通 AI 和重罪（追捕）系统，以及维护和增强用于创建道路网络的关卡设计和构建工具。他还参与了《看门狗 2》和《孤岛惊魂 6》的车辆 AI 系统开发。在此之前，他在 Codemasters 工作，参与了 DiRT、GRiD 和 F1 系列赛车游戏的开发，共发行了 10 款作品。在他之前的职业生涯中，他在学术界工作了 5 年，并获得了多指力触觉（Multi-Finger Haptics）博士学位。
+
+### Dr Bram Ridder
+
+Bram Ridder 博士在伦敦国王学院（King's College London）获得计算机科学博士学位，研究方向为 AI 规划。在博士后期间，他参与了各种机器人项目，利用 AI 规划创建自主机器人，包括欧盟 PANDORA 项目（创建可维护和检测水下基础设施的自主水下航行器）以及欧盟 SQUIRREL 项目（利用底层认知模型创建能与儿童互动并一起玩游戏的自主机器人）。此外，他还与多家工业合作伙伴合作，研究探测和清除海洋水雷的应用，以及如何在火星车上部署仪器以寻找水源。离开学术界后，他加入 Rebellion，担任《僵尸军团 4》（Zombie Army 4）的 AI 程序员。该游戏发行后，他专注于替换 Rebellion 内部使用的自动化测试套件，将其从记录/回放系统切换为自主系统。在业余时间，他使用自己的 3D 引擎创建游戏，并开发能够自主玩游戏的 AI 系统。
+
+### Paul Roberts
+
+Paul Roberts 是独立游戏工作室 Grinning Cat 的技术总监。此前，他曾在英国多家工作室担任各种首席/主管 AI 程序员职位，包括 Sumo Digital、Team17、Traveller's Tales、Activision 以及一些较小的独立工作室。多年来，Paul 还曾领导斯塔福德郡大学（Staffordshire University）的游戏编程系，教授游戏 AI 和编程原理。他拥有计算机科学与人工智能硕士学位，研究方向包括寻路、DRS 算法的开发以及测试生成路径可信度的方法。Paul 撰写过多本书籍，包括小说和学术著作，最新的一本是 2022 年由 CRC Press 出版的《人工智能与游戏》（Artificial Intelligence in Games），他也是本《Game AI Uncovered》系列丛书的编辑。
+
+
+
+Dr Licínio Roque 在科英布拉大学攻读“Context Engineering”（一种面向信息系统开发的社会技术方法）期间获得信息工程博士学位。他是科英布拉大学的助理教授，教授人机交互、游戏研究与开发、软件工程和信息系统开发等研究生课程。他是卡内基梅隆大学软件工程硕士项目的兼职教授。过去 10 年里，他在电子政务、决策支持系统、在线学习和多人在线游戏等多个应用领域，开展了各种参与式媒体的研究与开发。他目前指导信息系统研究、人机交互和数字游戏研究领域的博士生。他是 Tapestry Software 和葡萄牙电子游戏科学学会的联合创始人。
+
+Andrea Schiel 目前是育碧《刺客信条》系列的 AI 技术负责人。她曾是 Worlds Edge（微软，《帝国时代》）的首席 AI 架构师，在游戏 AI 领域工作超过 25 年。她参与过多种游戏，包括 EA Sports FIFA、荣誉勋章和质量效应。她的学术工作包括遗传学、考古学以及 AI 领域的部分顺序规划器。她有一个模糊的梦想，总有一天能以某种方式将这三个领域结合起来。
+
+## 1 Team17《The Survivalists》中的低带宽同步路径跟随
+
+Steven Dalton
+
+### 1.1 简介
+
+《The Survivalists》是一款生存沙盒游戏，背景设定在 Team17 的《Escapists》宇宙中，最多四名玩家可以在线合作探索一个充满朋友和敌人的广阔、程序生成的岛屿。快节奏且紧张刺激的游戏意味着，在线玩家之间快速、高效、精确地复制非玩家角色（NPC）是首要任务，以确保所有人无论连接质量如何都能获得丰富的体验。由于任何时候最多有 60 个 NPC 活跃并与玩家互动，复制它们的移动和行为始终是一个需要考虑的问题，涉及带宽消耗和连接速度，必须在整个开发过程中予以考虑。本章将详细讨论专门用于处理 NPC 复制的措施。
+
+### 1.2 网络模型
+
+《The Survivalists》采用的客户端-服务器网络通信模式中，主机（正在被探索其岛屿的玩家）充当最多三名其他玩家的服务器。在角色移动和交互方面，服务器是唯一的权威，因为它是唯一同时托管*逻辑世界*和*外观世界*的游戏实例，而每个客户端仅拥有一个*外观世界*的实例。该结构如图 1.1 所示。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_18_0.png)
+
+图 1.1 《The Survivalists》的双世界客户端-服务器架构。
+
+#### 1.2.1 逻辑世界
+
+逻辑世界是《The Survivalists》的单一运行权威，负责每一个逻辑操作。这包括碰撞检测和修正、授权角色与对象或其他角色之间的交互、生成对象、移动等。当游戏开始时，无论是单人游戏还是客户端加入的多人游戏，逻辑世界的数据都会复制到其外观世界的副本中。具体做法是获取每个实体的位置、朝向和类型，并将其流式传输到负责显示实体的相应外观世界。根据游戏类型，可以有两种方式完成。单人游戏只需将数据在同一游戏实例中本地发送到同级外观世界，而多人游戏则要求将服务器的逻辑世界通过网络复制到另一名玩家的外观世界中。在多人游戏中，只有服务器同时拥有逻辑世界和外观世界的实例。所有客户端都将拥有一个外观世界的实例，由服务器的逻辑世界进行控制。
+
+#### 1.2.2 外观世界
+
+如前所述，外观世界负责向玩家展示游戏的状态，或者更确切地说是相应逻辑世界的状态。随着逻辑世界中实体的更新，链接的外观世界（s）中的对应物或木偶也会相应更新。使用这种模式，要求世界中的每个实体都以逻辑形式和外观形式表示。一个简单的例子是角色可以摧毁的灌木或树实体。图 1.2 展示了在两个世界中表示单棵树所需的逻辑和外观组件的简化版本。
+
+| 逻辑世界 | 外观世界 |
+| :--- | :--- |
+| 实体类型 | 实体类型 |
+| 实体唯一 ID | 实体唯一 ID |
+| 位置 | 位置 |
+| 旋转 | 旋转 |
+| 碰撞形状（AABB 或圆形） | 碰撞形状 |
+| 生命值 | 精灵渲染器 |
+| | 动画器 |
+| | 阴影投射者 |
+| | 生命值 UI |
+
+图 1.2 表示在逻辑世界和外观世界中表示简单实体所需组件的简化表示。斜体组件表示各世界特有的组件。
+
+由于逻辑世界是移动和碰撞的唯一权威，因此质疑图 1.2 中概述的外观实体是否需要具备碰撞形状这一要求是可以理解的。当玩家移动到可能与之发生碰撞的障碍物方向时，要求他们在外观世界中自行执行碰撞检测。这是由于数据发送到服务器并从服务器接收的往返时间。依赖服务器的逻辑世界来检测然后纠正位置，会导致新位置发送到服务器、执行碰撞检测并将结果纠正发送回客户端之间存在多个帧的玩家处于碰撞状态的情况，这个过程并非瞬时完成。与其不断走进碰撞中再被纠正出来，不如在外观世界中执行碰撞检测更为稳健。这意味着仅需要的纠正将是边缘情况，例如外观世界在检测到与服务器上刚刚被销毁的对象发生碰撞并停止其玩家角色，但客户端尚未接收到反生成消息的情况。在这种情况下，服务器将发送带有更新位置和速度的纠正，大约在对错误碰撞对象接收到反生成消息的同时进行。对象交互也存在类似情况，交互的视觉效果（VFX）会立即生成，只有在对象无法再被交互时才会纠正。这些交互的例子包括但不限于：
+
+- **收集物品并将其添加到你的物品栏中。**
+  如果该物品随后被销毁或被其他玩家捡起，则纠正会将其从物品栏中移除。
+
+- **用武器击打对象。**
+  击打对象时，武器的耐久度会降低，持武器角色的耐力会降低，被击中对象在逻辑世界中的生命值会降低，并且在外观世界中生成 VFX。在《The Survivalists》中，最初决定任何因错误击中而生成的 VFX 在纠正时都应被剔除，但这看起来比让它们播放完更奇怪。
+
+### 1.3 非玩家角色复制
+
+虽然在《The Survivalists》中，玩家角色的移动是通过频繁复制其位置、朝向和速度来实现的，但对 NPC 这样做既没有必要也不高效。由于 NPC 会提前规划其移动和动作，以验证路径是否有效以及动作是否可执行，因此频繁发送表示其位置变化的数据包是浪费的，因为可以直接将其未来移动和动作的完整表示传输到所有外观世界。
+
+在决定执行一个动作（例如攻击玩家）时，NPC 会生成一条从发起攻击的位置出发的路径。由于必须生成此路径来确认动作可以完成并且将被遵循，因此可以通过将此路径数据发送到连接到该逻辑世界的每个外观世界来对其进行优化和利用。生成路径时，它会经过一个后处理过程，其中会删除任何直线点，如图 1.3 所示，以提供要复制到外观世界的最小数据量。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_20_0.png)
+
+图 1.3 左侧，原始生成的路径。右侧，删除了所有直线点的路径。
+
+
+
+
+一旦路径数据被精简到所需的最少点数，它将经过另一个过程，以提供视觉世界所需的所有信息。生成的数据称为路径块（Path Chunk）。
+
+#### 1.3.1 路径块
+
+路径块是NPC将遵循的路径的表示，包含多个路径点（Path Point）的列表。如代码清单 1.1 所示，路径点包含三个关键信息，使视觉NPC木偶能够完美地遵循路径，与其仅逻辑对应物完全一致。这些包括：
+
+- **位置**：该点在世界中的全局位置。
+- **到达时间**：路径跟随者到达该路径点的时间。
+- **速度**：角色到达该路径点时的移动速度。
+
+```
+Code Listing 1.1: The information required to represent both spatial and temporal points on a path allowing a cosmetic puppet to follow the path in unity with their logical counterpart.
+
+struct PathPoint
+{
+    Vector2 position;
+    float arrivalTime;
+    float speed;
+}
+```
+
+#### 1.3.2 创建路径块
+
+在生成并修剪路径之后，在将其打包发送到连接的视觉世界之前，必须完成进一步步骤，以设置每个路径点的到达时间和速度。
+
+首先，必须计算每个点的速度。每个角色都有预设的步行速度、跑步速度、加速度和减速度，用于开始和结束移动。转弯时，不应用减速和随后的加速。使用简单的线性加速，可以确定在遵循路径时加速到所需速度以及从所需速度减速所需的距离。这允许向路径添加两个额外的路径点：一个是加速完成并达到最高速度的点，另一个是开始减速的点，最终路径点则是速度达到0的点。图 1.4 显示了带有每个路径点所有这些代表性信息的路径，包括注入路径以显示加速结束（B）和减速开始（E）的点。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_22_0.png)
+
+图 1.4 一系列准备供视觉世界使用的路径点。
+
+#### 1.3.3 消费路径块
+
+接收到路径块后，视觉世界的实体会将其排队，直到到达第一个路径点的到达时间，然后开始沿路径进行插值。由于路径点包含在各路径点之间插值实体所需的所有数据，视觉实体所需的工作量很小。在两个速度不同的路径点之间进行插值时，可以使用线性加速公式的逆公式来确定点之间的位置；而在两个速度匹配的点之间，可以进行更简单的插值。相同的解决方案也应用于逻辑实体，这意味着逻辑实体和视觉实体都将完全同步。除了两个世界中沿路径插值之外，还会应用角平滑处理，使路径导航不那么生硬。在遵循路径接近转弯时，NPC（逻辑和视觉）将使用二次函数在实际路径点前后等距的两个点之间创建一条曲线。图 1.5 和 1.6 显示了NPC在逻辑世界和视觉世界中将精确遵循的路径。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_23_0.png)
+
+图 1.5 猴子在跟随玩家时遵循其平滑路径。路径点可以看作是沿路径排列的较大 X 和 O 的序列。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_23_1.png)
+
+图 1.6 逃离玩家的更加不规则兔子的路径。
+
+### 1.4 处理路径中断
+
+静止时接收新路径的NPC不需要额外工作，但如果在已遵循另一条路径时接收新路径，则需要进行一些修正。当客户端在沿另一条路径进行中途接收新路径时，会出现一定的偏差，因为在接收新路径的时间内，NPC会继续沿旧路径移动。这通过在最长五分之一秒内从旧路径混合到新路径来掩盖。这是客户端与服务器之间发生不同步的唯一时机。图 1.7 大致说明了在这种情况下路径可能偏差多少。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_24_0.png)
+
+图 1.7 从过期路径合并到新路径时采取的偏离路径。
+
+### 1.5 结论
+
+尽管远非完美的解决方案，但为每个NPC共享整个遵循路径的决定，证明比无休止地为许多NPC流式传输位置数据要节省带宽得多。它还保证了在大多数情况下，NPC位置在服务器和客户端之间是同步的。
+
+所采用的解决方案需要为每个路径、每个NPC构建和使用数据包，这需要一些额外工作，但该数据包完整地代表了其整个移动过程中的位置，从而节省了为NPC移动提供客户端预测所需的工作。这希望能避免玩家因试图与位置与服务器不完全同步的NPC交互而感到沮丧，从而导致误报玩家命中，仅在几帧后才更正为未命中。
+
+## 2 无状态化：Team17's The Survivalists 及其后的行为树演进
+
+Steven Dalton
+
+### 2.1 引言
+
+在Team17's The Survivalists开发后期，决定将移动设备作为与PC和主机并列的发布平台。这个宏伟目标带来的诸多挑战中，有一个是显著更严格的运行时内存限制，这些内存被各种AI系统占用，其中最占内存的莫过于行为树框架。
+
+### 2.2 修剪行为树
+
+经过大量性能分析和关于何处、为何以及如何节省内存的深思熟虑后，建议首先调查现有的每个非玩家角色（NPC）一个行为树实例的实现。其目的是允许多个NPC共享单个行为树实例，将运行时行为树状态移至其他位置，由单个行为树实例的每个执行者拥有。
+
+行为树成为最初关注点的原因在于它们在繁忙游戏场景中消耗了大量内存。《求生者》中典型的混乱场景会出现一名玩家、最多二十只同伴NPC猴子、最多四十个敌对NPC以及若干环境NPC（如岛屿野生动物），所有这些都在相互交互并与周围环境交互。这八十余个NPC的集合会导致仅行为树就占用的内存激增至接近300 MB的峰值，占用了某些受限目标设备总1.8 GB容量的很大一部分。
+
+选择行为树作为首先研究的领域之一的另一个原因源于所采用的共享数据方法，该方法在第4章“动态行为树：构建可扩展性”中有所描述。这是用于创建大多数NPC使用的许多小型行为树的方法。这意味着上述场景中会有许多相同行为树的八十个实例同时驻留在内存中。如果确实能证明将每个行为树从八十个实例减少到一个很容易，那么将立即实现数百兆字节的改进；这对运行时内存削减工作是巨大的贡献。
+
+经过一些原型开发后，得出了一种解决方案，它不仅优雅地将行为树状态的全部所有权转移给执行它的每个NPC，而且其简单性也相当令人惊讶。
+
+#### 2.2.1 行为树示例
+
+图 2.1 显示了《求生者》中所有近战NPC原型共享的根和战斗行为树的大幅简化近似图，并将用作示例，以便从中对无状态和有状态实现进行比较。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_26_0.png)
+
+图 2.1 一个简化的行为树，演示了《求生者》中所有近战NPC使用的基本根和战斗行为。
+
+### 2.3 为无状态化做准备
+
+转向无状态实现时的首要考虑是现有行为树中最常见节点的运行时可变和不可变状态。下面描述了这些节点类型，以及它们的不可变/可变状态。
+
+
+
+
+#### 2.3.1 序列
+
+序列节点具有一个或多个按顺序执行的子节点，直到所有子节点都返回 Success，在此时它返回 Success，或某个子节点返回 Failure，在此时它返回 Failure 为止。
+
+##### 不可变状态：
+
+- 对子节点的引用列表。在 *生存者* 中采用的实现中，这是一个索引列表，指向包含所含行为树拥有的每个节点的父列表，如图 2.2 所示。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_27_0.png)
+
+图 2.2 表示节点如何由其拥有的行为树及其兄弟节点引用。
+
+##### 可变状态：
+
+- 当前正在执行的子节点的索引。
+- 当前正在执行的子节点的执行状态（Running、Success 或 Failure）。
+
+#### 2.3.2 选择器
+
+选择器节点具有一个或多个按顺序执行的子节点，直到所有子节点都返回 Failure，在此时它返回 Failure，或某个子节点返回 Success，在此时它返回 Success 为止。选择器节点与序列节点的唯一区别在于终止状态；可变状态和不可变状态相同。
+
+#### 2.3.3 执行动作
+
+执行动作节点用于请求相关 NPC 使用游戏的角色和动作系统执行自定义动作。动作包括攻击、交互、拾取物品、丢弃物品等，并带有在节点上指定并传递给角色以驱动所请求动作的特定动作参数数据对象。执行动作节点可以请求任何类型的动作并承载任何类型的动作参数数据。
+
+##### 不可变状态：
+
+- 对动作类型对象的引用，一种用作标记的简单类。
+- 对相应动作参数对象的引用。
+
+##### 可变状态：
+
+- 无。
+
+#### 2.3.4 条件
+
+条件节点是根据节点引用的条件类立即返回 Success 或 Failure 的节点。条件可以查询角色的任何状态，例如剩余生命百分比、生成以来的时间、距离战斗目标的距离等。条件节点可以承载任何条件类实例。
+
+##### 不可变状态：
+
+- 对条件对象的引用，一种可共享的类的单个实例。
+
+##### 可变状态：
+
+- 无。
+
+##### 可变状态：
+
+- 一个浮点数，表示该节点处于活动状态时经过的时间。
+
+#### 2.3.6 冷却
+
+冷却节点用于修改子节点，在执行后直到指定时间过去之前阻塞子节点。例如，修改执行攻击节点的 10 秒冷却节点，在自上次执行动作节点成功完成以来的 10 秒内，每次尝试执行该节点时都会立即返回 Failure，这意味着它最多每 10 秒只能执行一次。
+
+冷却节点与延迟节点相似，因为它承载一个在运行时不可变的持续时间以及在节点活动时会变化的已过时间值。唯一的区别是，冷却节点在树的其他部分处于活动状态时会倒计时，而延迟节点仅在自身活动时才倒计时。因此，多个冷却节点同时倒计时的可能性，远大于多个延迟节点同时处于活动状态的可能性。
+
+应当注意的是，多个延迟节点同时处于活动状态的可能性只是较低，而非不可能。在引入并行节点（一种允许多个子节点同时执行的节点）后，多个延迟节点同时处于活动状态变得可能，每个父并行节点的每个子节点最多一个。在讨论延迟和冷却节点的可变状态应移至何处时，这成为一个主要因素，这一考虑将在本章后面部分详细讨论。
+
+#### 2.3.7 子树
+
+子树节点用于引用并将控制权传递给另一个行为树，通常用于促进较小的、封装的、具有单一用途的行为树的重用，这些行为树可以在多个地方重用，并使处理和编辑树更加易于管理。
+
+##### 不可变状态：
+
+- 要执行的行为树。
+
+##### 可变状态：
+
+- 无
+
+如上所述，一些最常用的节点被隐式处理，因为它们在运行时没有可修改的状态，这些节点就是执行动作、条件和子树节点。这作为起点并不糟糕，但也远非完胜，因为其他节点的可变状态应移至何处仍然存在疑问。
+
+### 2.4 移动可变状态
+
+由于行为树框架已经为每个 NPC 使用了一个黑板来存储行为树可访问的各种 NPC 和世界状态，最初认为所有状态都可以简单地推送到黑板。只有在意识到为了处理所有可变状态，需要生成多少自定义黑板键（无论是自动生成还是由使用行为树的人员生成）后，这才被证明是不可行的。例如，假设单个 NPC 总共会使用十个行为树，每个行为树平均包含十个复合节点（序列、选择器等）。则需要生成 100 个唯一黑板键来跟踪决定当前应执行哪个子节点的 100 个复合节点的可变状态。虽然这并非不可能，但这增加了一项额外任务：唯一黑板键必须自动生成，或者在手动创建后必须检查重复。手动创建和管理这么多唯一黑板键的行为，会为行为树的创建和编辑增加一层本可以避免的复杂性和顾虑。
+
+#### 2.4.1 移除可变状态
+
+与其自动生成大量黑板键并将大量额外数据推送到黑板，不如调查此步骤是否可以完全移除。相反，在执行行为树时，创建并维护一个单一结构，其中包含对当前执行的行为树的引用、当前执行节点的索引以及执行节点的执行状态（Running、Failed 或 Succeeded）。曾经依赖于维护其子节点列表中的索引的复合节点，现在可以在子节点终止时通过查询此执行状态元数据对象来推断下一步该做什么，如代码清单 2.1 所定义。
+
+```
+Code Listing 2.1: A very simple data structure containing
+all data required to represent the current state and
+infer how to progress a behaviour tree.
+
+public enum ExecutionStatus
+{
+    Running, Succeeded, Failed
+}
+
+public struct ExecutionState
+{
+    public BehaviourTree _tree;
+    public int _nodeIndex;
+    public ExecutionStatus _executionStatus;
+}
+```
+
+图 2.3–2.6 显示了表示行为树状态的简单数据结构在节点之间移动时如何变化。与其依赖复合节点内的可变状态，不如简单地推断下一步该做什么。如果序列节点的子节点成功完成，则应简单地移动到下一个子节点，其索引可以通过在子节点列表中找到失败节点的索引并选择下一个来确定。如果子节点失败，则父序列节点也会失败。
+
+选择器 A
+序列 A
+选择器 B
+子树 - 巡逻
+子树 - 空闲
+条件：生命值 <0
+执行动作：死亡
+序列 B
+执行动作：获取攻击目标
+条件：是否拥有攻击目标
+执行动作：移动到攻击位置
+冷却(2)
+子树 - 近战攻击
+执行状态
+.tree: 根
+.nodeIndex: 6
+.executionStatus: 运行
+
+图 2.3 表示正在进行的条件节点的行为树及其执行状态。
+
+选择器 A
+序列 A
+选择器 B
+子树 - 巡逻
+子树 - 空闲
+条件：生命值 <0
+执行动作：死亡
+序列 B
+执行动作：获取攻击目标
+条件：是否拥有攻击目标
+执行动作：移动到攻击位置
+冷却(2)
+子树 - 近战攻击
+执行状态
+.tree: 根 .nodeIndex: 6 .executionStatus: 运行
+.tree: 根 .nodeIndex: 6 .executionStatus: 失败
+.tree: 根 .nodeIndex: 5 .executionStatus: 运行
+
+图 2.4 显示了一个行为树及其代表执行状态，对应一个活动的序列节点和一个失败的子节点。
+
+
+
+
+
+![](img/f4a4f6e4de5338a867590c30638990cf_32_0.png)
+
+图 2.5 一个行为树以及活动选择器节点和失败子节点的代表执行状态。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_32_1.png)
+
+图 2.6 一个行为树以及活动选择器节点转向其下一子节点的代表执行状态。
+
+#### 2.4.2 问题节点
+
+##### 2.4.2.1 延迟和冷却
+
+如前所述，延迟节点和冷却节点需要经过一些考虑。
+
+由于多个冷却或延迟节点可能同时处于活动状态，因此无法在黑板的单个键下存储它们可变的剩余时间状态。
+
+多个活动节点会互相争抢，不断更新该值，并使其对除了最后一个发布更新值的节点之外的所有节点都无效。
+
+相反，要求每个此类节点都有一个用户指定且唯一的键，其状态会被推送到黑板上的该键下。
+
+这不仅给创建和编辑行为树的人增加了责任，要求他们注意重复的黑板键，同时也提供了一定的自由度。
+
+如果设计师能保证两个冷却或延迟节点不会同时处于活动状态，那么它们就可以共享黑板上的同一空间来存储其可变状态。
+
+虽然这在这里节省了几个字节的内存，但完全被这些特定节点相互覆盖数据所引入错误的潜在风险所掩盖。
+
+如果不是时间如此有限，仅是监控这一点的额外开销就足以成为自动化这些节点黑板键生成的动力。
+
+##### 2.4.2.2 子树
+
+子树节点的可变状态被证明是一个要解决的压力小得多的问题。
+
+每个 NPC 在任何时刻只有一个行为树处于活动状态，子树在执行开始时从其父行为树获取焦点，并在完成时归还焦点。
+
+对于每个正在执行的行为树，都需要一个 ExecutionState 对象来表示其状态，因此为了允许跟踪多个行为树状态，解决方案是用 ExecutionState 对象堆栈替换单个 ExecutionState 对象。
+
+当子树获取焦点时，会将一个代表此行为树的新 ExecutionState 压入堆栈。
+
+当此树完成执行时，其 ExecutionState 会从堆栈中弹出，当父树再次变为活动状态时，其 ExecutionState 位于堆栈顶部，处于控制权最初移交给子树时所处的确切状态。
+
+### 2.5 结论
+
+在 The Survivalists 开发后期决定调查如此具侵入性的更改起初引起了重大担忧，但当相对优雅的解决方案被提出并制作原型后，信心很快得以建立。
+
+大部分担忧源于需要移动的数据量巨大、如何存储这些数据，以及未检查或未注意到的黑板键冲突的可能性。
+
+不过，一旦解决方案实施后，就很快意识到，用于跟踪行为树状态的许多数据实际上是多余的。
+
+相反，相关数据是以多消耗几个时钟周期为代价推断出来的，而由于疯狂寻找更多内存的尝试，这些时钟周期变得更容易被合理化，也变得更加时间敏感。
+
+## 3 猴子生意：Team17 的《生存者》中 NPC 玩家模仿
+
+Steven Dalton
+
+### 3.1 简介
+
+《生存者》的一个关键游戏组件是制作机制，它允许玩家构建、加固和保护他们的定居点，锻造工具和武器以帮助探索，并调配和制作健康和增益属性的餐食食谱等许多其他物品。
+
+那些玩过强调资源采集和制作的游戏的人会明白，必须投入大量时间来农耕和收集这些资源，以及进行可能耗时的构建过程，尤其是在制作更有价值的物品时。
+
+在《生存者》中，玩家被鼓励更多地专注于探索，而不是制作物品和建造基地的繁琐工作。
+
+为了减少玩家必须投入到农耕和制作过程中的时间，游戏中存在支线任务，玩家在其中从游戏众多岛屿的邪恶居民手中救出并结交最多二十只猴子同伴。
+
+可以命令这些新朋友模仿玩家能执行的任何动作，自动化那些原本会占用玩家大量时间的任务，这些时间可以用来探索游戏世界，甚至用于进一步增加有用的猴子同伴的数量。
+
+### 3.2 聪明工作，而非努力工作
+
+添加同伴非玩家角色（NPC）的意图是让玩家能够卸下耗时的任务，以便将时间用于其他活动。
+
+为了实现这一点，玩家必须能够向他们的猴类助手发出命令，最好是无需在众多菜单中费力穿梭，毕竟目标是节省玩家时间。
+
+这通过赋予猴子观察玩家执行任务的能力来实现，以便将单个步骤解释为一系列定制动作，它们随后可以执行这些动作来重复该过程。
+
+为了实现这一点，会向要分配任务的猴子扔一根香蕉，使它们进入观察状态，在此状态下它们会记录被观察方所做的一切。
+
+它们会短暂地继续观察玩家执行的动作，直到它们要么失去兴趣（30秒计时器到期），要么完全观察到它们能够执行的一项任务。
+
+然后它们会执行此任务，直到由于资源耗尽、所需装备物品过期或玩家指示它们停止或观察新动作而不再可能为止。
+
+玩家和猴子可以执行的动作包括但不限于：
+
+- 砍伐树木和灌木（需要切割工具，例如斧头或剑）。
+
+- 破坏岩石（需要粉碎工具，例如锄头之类的工具）。
+
+- 从地面收集资源，例如砍倒树木的木材和破坏岩石的石头。
+
+- 将收集的资源送到指定位置，例如储物箱、放置的可构建蓝图或制作工作台。
+
+- 在制作工作台上根据玩家生成的蓝图制作物品。
+
+基于这份动作列表，可以将你原始的同伴带到资源丰富的区域（例如树木和岩石），建立一条生产线，从而创造从最基本物品到相当复杂物品，并在过程中制作大量所需的成分。
+
+假设有四只猴子同伴组成的小队，每只被指示执行不同的任务，并且拥有最基本的资源，该过程可能如下所示：
+
+- 猴子 #1，手持斧头，将砍伐树木，生产木材。
+
+- 猴子 #2，手持锄头，将破坏岩石，生产石碎片。
+
+- 猴子 #3，手持制作工具，将处理附近三个制作工作台上的任何玩家生成蓝图，并将制作：
+  - 来自倒下树木的木材的工具柄，
+  - 来自破坏岩石的石头的斧头刀片，以及
+  - 斧头，来自其他制作工作台制作的工具柄和斧头刀片。
+
+- 猴子 #4，将收集并交付三个制作工作台所需的任何资源。
+
+如图 3.1 所示，这是来自 *《生存者》* 的截图，展示了猴子同伴正在执行他们的任务。
+
+此过程可以扩展到在制作工作台上制作更复杂的工具和物品，创建静态结构，甚至建造额外的制作工作台。
+
+这最终形成了一个过程，它采用最简单的材料，并在拥有足够大的劳动力和充足资源的情况下，制作出最复杂、最耗时的可用物品。
+
+这一切都可以通过让一队猴子同伴各自只观看玩家执行一次不同的任务，然后无限地复制来实现。
+
+
+
+
+
+![](img/f4a4f6e4de5338a867590c30638990cf_36_0.png)
+
+图像 3.1 一小群猴子正在进行四种不同的模仿行为：砍树、采矿石、在工作台制作以及交付到工作台。
+
+### 3.3 解读玩家活动
+
+要模仿玩家的行为，同伴猴子拥有一个系统，可将一个动作或一系列动作解释为它们能够执行的内容。这是通过将动作标签绑定到它们能执行的任何原子动作，并将主体标签绑定到可执行动作的任何对象上来实现的。然后将这些标签组合以定义模仿签名，观察到的 NPC 使用它来查找并激活行为树，从而执行相同的任务。这些模仿签名可以包含一个或多个必须按顺序观察的动作与主体配对。以先前概述的简单斧头工厂为例，并结合一些相关行为，图像 3.2–3.4 描绘了所需签名的定义。
+
+| 签名：砍树 | 签名：采矿 |
+|---|---|
+| 动作：攻击 | 动作：攻击 |
+| 主体：树 | 主体：岩石 |
+
+图像 3.2 采集签名。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_37_0.png)
+
+图像 3.3 交付签名。
+
+| 签名：制作 | 签名：制作 | 签名：修复 |
+|---|---|---|
+| 动作：制作 | 动作：制作 | 动作：修复 |
+| 主体：工作台 | 主体：蓝图 | 主体：可修复对象 |
+
+图像 3.4 制作签名。
+
+关于对执行动作的主体为 None 的概念，根据任务不同可以有不同的解释。例如，修复 None 主体被解释为修复所有受损物品，而交付到 None 主体被解释为交付到地面上的特定单一位置。本章稍后在详细阐述行为定义方式时将进一步讨论此问题。
+
+### 3.4 行动
+
+《幸存者》(The Survivalists) 包含一个 Actor 和 Actions 框架，其中每个角色（无论是玩家控制还是 NPC）都拥有一个 actor 组件，用于提供请求动作的接口。动作定义了角色能执行的原子活动，例如捡起物品、丢弃物品、发起攻击、与物体交互或制作物品，每个动作都有关于是否可执行的先决条件。这些先决条件包括检查其他动作是否当前处于活动状态、特定物品类型是否已装备、是否靠近物体等等。在这种情况下，被请求的动作要么会被阻止，要么会中断活动中的动作。例如，中断其他动作的动作是死亡动作（Death Action）。这是最高优先级的动作，因为它会中断所有其他动作。可能被另一个动作阻止的动作示例是攻击动作（Attack Action），如果在另一个攻击动作仍然活动时请求它，就会被阻止。
+
+动作的实现方式使其不绑定到要使用的特定物品或要交互的对象，而是明确处理接口。例如，交互动作（Interact Action）可以在世界中任何实现了 Interactable 接口的对象上执行。交互动作的范围可以从点燃火把到打开储物箱或与 NPC 交谈。驱动交互的逻辑位于可交互对象本身。另一方面，攻击动作（Attack Action）可以使用任何装备的物品执行，只要该物品实现了 Attacker 接口。利用这种逻辑，任何物品都可以设置为武器，攻击逻辑由对象本身定义。
+
+角色能执行的动作会根据执行动作的角色及其装备的物品（如果有）产生不同的结果。这是通过将传递给 actor 的 PerformAction 方法的 ActionParameters 对象传送到每个动作实例来实现的。以攻击动作（Attack Action）为例，传递给动作的攻击动作参数对象（源自基础动作参数类）来自角色装备的物品。这样，每个物品就可以定义其使用效果，并且只需向物品添加托管此攻击数据的组件，即可让任何物品被用作武器。
+
+### 3.5 模仿行为
+
+模仿签名和猴子的动作通过行为树联系在一起。对于同伴能够解释的每个模仿签名，都有一个相应的行为树。这些树与动作一样，被保持为相对通用的目的，以允许重复使用。例如，许多收集和交付行为共享相同的行为树，带有处理不同收集位置和交付目的地的简单分支，例如地面与储物容器。要使用的物品、要使用的对象以及被模仿任务的局部区域在创建行为树时不需要知道，而是在每次新的模仿行为开始时传入。图像 3.5 显示了用于收集和交付任何物品到任何接收者或位置的行为树的简化版本。
+
+| 变量 | 描述 |
+|---|---|
+| bbItemSubject | - 要收集的物品类型。 |
+| bbItemInstance | - 要收集的物品实例。 |
+| bbDeliverySubject | - 要交付物品的对象类型。 |
+| bbDeliveryInstance | - 要交付的对象实例。 |
+| bbMimicAnchor | - 该行为锚定的位置。 |
+| bbMimicRange | - 该行为的搜索范围。 |
+
+![](img/f4a4f6e4de5338a867590c30638990cf_39_0.png)
+
+图像 3.5 负责所有收集和交付模仿行为变体的行为树简化版本。
+
+当 NPC 解释模仿签名时，任务周围的信息必须传送到将用于执行任务的行为树。为此，每个模仿签名都有一组要执行的指令，负责获取与已完成模仿签名相关的数据，并将其传送到行为树的黑板（Blackboard）。例如，当玩家指示伙伴砍伐树木时，任务的主体（树）和位置必须通过黑板传送到负责该任务的通用行为树，以将行为限制在玩家最初执行任务位置周围的特定对象类型。
+
+如前所述，模仿签名的主体是可选的，这使得模仿行为不必绑定到某个对象或特定类型的物品。在图像 3.5 所示的示例中，该行为以两种方式使用这一特性。首先，如果行为树第一阶段要收集的物品类型为 None，那么“查找物品”（Find Item）行为树节点将搜索地面上的所有物品；否则，它将只搜索指定类型的物品。允许其为 None 使得该行为可以无限制地运行；换句话说，即在给定模仿范围内地面上的每一个物品，从而提供了一种快速简便的方法，将收集区域或战后场景清理到储物箱中。其次，反之亦然，行为树的第二阶段允许签名指定 None 交付主体，这意味着仅是玩家丢弃物品的位置，从而在地面上形成一堆易于获取的物品。
+
+在开发这些行为的过程中，None 主体的概念导致了一些未预见但令人会心一笑的问题。创建了一个模仿签名及相应行为，以使你的灵长类伙伴能够修复部分受损的物品。其意图是让玩家和同伴在与岛上邪恶居民进行特别破坏性的袭击或战斗后，能够迅速将基地恢复原状。该签名包含单个步骤：在 None 主体（即任何主体）上执行修复动作（Repair Action），相应的行为树首先搜索任何未处于满血状态的物品，将 NPC 移动到该物品，然后对其执行修复动作。它运行良好，虽然也许好用得有点过头，因为很快就报告了一个涉及两只猴子的错误。第一只猴子按照指示，拿起斧头砍伐附近的树木。与此同时，他们一位好心的兄弟，在修复了整个基地部分受损的墙壁后，却通过修复树木来抵消砍伐树木的行为。意识到这一点后，决定需要一种限制来缓解这种有些徒劳的组合，方法是创建一个可修复主体标签（Repairable Subject tag），将其仅绑定到猴子及其修复工具应处理的物品，并将现有模仿签名更新为：动作 – 修复，主体 – 可修复。
+
+当所有模仿签名都已定义并实现了相关行为树时，有三十多个签名定义了定制任务，但仅有六个不同的行为树来定义所需步骤，这是由于向它们传送数据的方式，使得行为树能以通用方式实现。哪些工具可用于完成这些任务的决定也留给玩家自己决定。可以指示猴子打碎岩石，对装备的工具限制不多，而使用昂贵而精致的
+
+
+
+或者弓箭，且弹药有限，来完成工作，但如果这是玩家想要的，那么玩家就会得到！
+
+为了进一步奖励将耗时任务委派给其得力猴群的玩家，存在一个简单系统，用于奖励给猴子分配任务的玩家。猴子执行任务后，将为该类型任务获得经验，从而提升其在该任务上的熟练度等级。五个熟练度等级中的每一个都会让猴子执行任务的速度更快、效率更高。例如，一位擅长砍伐树木或岩石等资源的猴子，每次攻击造成的伤害会得到增强，攻击之间的延迟会减少，所使用物品的磨损也会降低。一位在物品递送方面经验丰富的猴子，将能在其个人背包中存放更多物品，并能更快地移动到物品和递送目标处。达到最高等级后，猴子执行任务的效率将比玩家高出多倍。
+
+### 3.6 高级拟态
+
+鉴于拟态系统的复杂性（或缺乏复杂性），人们经常讨论该系统还能进一步推进到什么程度。第一个也是最合乎逻辑的建议是，让猴子能够按顺序执行多个任务，而不是将其限制在单个任务上。例如，一只猴子砍倒一棵树，然后开采岩石，接着收集产出的木材和石头，并将其带到工作台制作一系列物品。遗憾的是，这并未进入最终交付的游戏中，但只需做一些小的更改就很容易实现。猴子不再是在观察到第一个可执行任务后退出观察状态，而是将保持观察模式，按顺序记录每个任务，直到玩家指示它们停止观察。之后，它们将尝试按照观察到的顺序执行每个记录的任务，构建一系列要执行的行为。
+
+另一个未能进入最终交付游戏的愿望清单功能是猴子教其他猴子。同样，这是一个容易实现的功能，只需允许玩家设置观察目标，而不是默认观察玩家即可。猴子执行的动作与玩家执行的动作相同，因此都会发出相同的动作标签，这意味着观察者无论观察哪个角色，都会观察到相同的动作和目标。鉴于这种通用实现，玩家完全可以指示一只猴子观察另一只猴子，以便它们执行相同的任务，而不需要玩家亲自执行任务。这甚至可以扩展到让猴子观察敌对 NPC 以学习和模仿战斗任务，或观察环境觅食 NPC 以学习和模仿采集行为。
+
+### 3.7 结论
+
+在 *The Survivalists* 拟态功能的设计阶段，人们担心学习逻辑会有多复杂，以及定义模仿任务所需的特定步骤会有多困难。在开始技术设计和原型制作工作后，很快就发现，本章讨论的非常简单的模式匹配方案不仅能让 NPC 执行所有要求的任务，还能让设计师快速轻松地尝试和测试原设计中未包含的新拟态行为。如果需要证据来支持“保持简单，傻瓜（KISS）”设计原则，这就是最好的证明。
+
+## 4 动态行为树
+构建可扩展性
+Jonathan Keslake
+
+### 4.1 简介
+
+行为树是自其在 *光环* 系列（Isla, 2005）中首次大放异彩以来，行业内 AI 最常用的行为架构之一（如果不是最常用的）。它们已成为一种常态，以至于转向使用任何其他系统（如目标导向动作规划器或分层任务网络）都可能难以证明其合理性。这种流行源于许多设计师对这些系统已经很熟悉。鉴于行为树固有的易用性，放弃使用行为树对游戏来说可能是个错误的决定。
+
+行为树在最佳状态下，其简单性让设计师只需看一眼树，就能弄清楚 AI 做什么以及按什么顺序执行。在最差状态下，它们是一大堆复杂的交互，需要沿着过大的图中一系列面条状的路径去追踪，才能找出 AI 为什么在战斗中突然决定去调查一个兔洞。它们容易出现小错误且这些错误会悄无声息地发生，并且由于其构建简单，通常缺乏在不同非玩家角色（NPC）之间轻松共享树的方法。这导致了它们最大的缺陷之一以及大量的重复，增加了小错误混入的可能性。
+
+本章探讨了在开发 *The Survivalists* 过程中使用的不同方法，以鼓励行为树复用，并介绍了*黑客*你的树以提高其可复用性的不同方式。本章倡导构建更小的可复用行为树，让构建者能够专注于树中重要的内容，而无需担心单个游戏中存在的众多系统。
+
+### 4.2 行为树
+
+行为树被认为很简单，但前提是将其视为一个黑盒。实际的底层系统可能会变得相当复杂。幸运的是，有许多关于如何以极大深度编写自己的实现的优秀资源（Champandard and Dunstan, 2013）。或者，你也可以直接使用现有的实现。商业引擎通常在其资产商店中提供良好的实现，而虚幻引擎本身就在核心引擎中内置了一个（Epic Games, 2022）。无论你是自己构建还是使用第三方实现，系统的整体布局都应该与下面简要介绍的内容一致：
+
+行为树的基本结构由根节点、复合节点和叶子节点组成，如图 4.1 所示。所描绘的元素如下：
+
+![](img/f4a4f6e4de5338a867590c30638990cf_44_0.png)
+
+IMAGE 4.1 行为树的基本布局。
+
+- 根节点是图的入口点，而叶子节点包含 AI 可以执行的所有操作。
+- 叶子节点在执行后，可以选择在自身中停留一定时间，或返回成功或失败，这仅与其父节点的操作相关，主要由复合节点处理。
+- 复合节点定义叶子节点应如何相互衔接。虽然存在其他类型（如并行节点），但复合节点的两种主要类型是选择器和序列器。选择器节点会按顺序运行其所有子节点（叶子节点或其他复合节点），直到第一个返回成功的节点促使选择器本身返回成功。如果它遍历了所有子节点却没有任何成功，则返回失败。序列节点会按顺序运行其所有子节点，直到某个节点返回失败，然后序列节点本身返回失败。如果它遍历了所有子节点却没有任何失败，则返回成功。
+
+行为树的基本内容就这些，一种具有基本流程控制的非常简单的树结构。树从根节点开始，从上到下、从左到右运行，根据复合节点的规则评估节点，直到到达树的末端。到达末端后，它只需重新启动树并重复整个过程。将此连接到 AI 角色上，你就可以观察它们在树中导航，做出决策并运行行为。
+
+#### 4.2.1 中断
+
+我们将讨论的行为树的另一个元素是*中断*的概念，也称为*监视器*（Champandard and Dunstan, 2013）。
+
+行为树从左到右运行时，有时原本被评估为假的高优先级节点可能会突然变为真。图 4.2 展示了一个简单示例。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_45_0.png)
+
+IMAGE 4.2 处理发现玩家的简单实现。
+
+问题在于，该分支上的选择器只有在树重新评估时才会重新评估。这会导致 NPC 完成当前行为后才做出反应，例如，一个 NPC 在回应玩家之前先完成整个巡逻。可以使用中断概念来解决这个问题。当发现玩家时，中断会从巡逻行为中夺取控制权并重新启动树。这使 NPC 能够立即响应。
+
+中断为行为树引入了一个新问题。我们不再能孤立地考虑树的一个分支。现在，所有其他分支都可能在等待从当前叶子行为中夺取控制权。为了让行为树仍能按描述的方式运行，中断节点在优先级上工作，只有优先级更高的中断节点会被检查，以确保一旦世界状态发生变化，NPC 就会知道需要重新评估其树。
+
+这是一个良好且合乎逻辑的权衡。行为控制在树内部维护，而不是依赖外部系统。最佳实践是视觉上突出显示中断节点，这样它们不需要被检查就能确定它们
+
+
+
+实际上是中断节点。为 *The Survivalists* 构建的行为树系统，这一点通过醒目的亮红色感叹号来实现。
+
+#### 4.2.2 动态行为树节点
+
+使用子图的能力在行为树中无处不在，并且在所有优秀的实现中都可用。子图允许行为树分支出来运行另一个独立的行为树。这通常表现为引用另一棵树的节点，并在执行时运行该树。就像将整棵树直接粘贴到父树中一样，这样树的那一部分就可以被不同的树重复使用。
+
+动态行为树节点在此基础上更进一步。子图节点明确指出要插入哪棵树，而动态行为树节点则更灵活。它允许在运行时替换不同的图。一个经典示例是使用智能对象。
+
+子图如何与特定动态行为树节点关联的实际*方式*是一个深入的问题。Unreal 的实现要求所有动态节点都带有自定义游戏标签；用户随后根据该标签将行为推入树中，它会被分配给正确的树 (Epic Games, 2022)。*The Survivalists* 支持一种更灵活的方法，其中也有自定义节点，每个节点都知道在开始执行时应轮询在哪里获取应运行的行为树。
+
+动态行为树最大的问题是树的简单性已被牺牲。你不再能查看一棵树并确切地了解 AI 正在做什么。它现在取决于 NPC 在运行时遇到的任何场景。调试工具可以在某种程度上缓解这一点，如果分析实时行为树，节点可以显示其当前正在运行或打算运行的树，就像它只是一个普通子图而不是动态节点一样。但是，在非运行时编辑树时，如果存在太多动态树节点，可能会非常混乱，不清楚谁在做什么，以及你的更改将如何影响所有可能被替换的不同树。
+
+当动态行为树由小块的自包含行为组成时，效果最佳。然后它们被替换到一个节点中，该节点本身会非常清楚地说明扩展数据预期要做什么。本质上，你应该能够将该动态行为树节点视为具体的子图，这样就不会发生太离谱或有争议的事情，但小的行为更改是可以接受的。
+
+#### 4.2.3 树良好变更的评估
+
+向行为树添加功能可能会使树的运行复杂化并产生新问题。因此，建立一些重要指标来确保你的变更顺利无阻是个好主意：
+
+- 可视化：始终确保你所做的更改在查看树时立即显而易见。例如，为中断绘制一个大红色感叹号有助于强调这不是普通节点。
+- 集成调试：优秀的行为树可以在运行时可视化，允许构建者跟随树的运行过程。出色的行为树允许节点呈现有关其内部运行情况的运行时信息，例如它们打算运行哪个动态树节点。
+- 保持优先级：行为树依赖于其从左到右的优先级，请勿更改它。
+- 将其保留在树中：依赖外部系统的更改只会给你的系统增加另一个故障点。将所有内容都保留在树中，允许构建者一眼看到与 AI 相关的所有内容。
+
+### 4.3 父子树
+
+你是否曾遇到过两棵树除了少数几个节点外几乎完全相同的情况？你试图重用序列和选择器的组织方式，并在共享行为树中包含数据，但这似乎是不可能的。基本上，当你为 NPC 创建新树时，你最终只是一遍又一遍地重新创建相同的结构。例如，请看图 4.3，它基于 *The Survivalists* 中的实际行为树。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_47_0.png)
+
+图 4.3 示例父行为树。
+
+在此示例中，树中高亮显示的节点是实际的变化点。当为新 NPC 创建新树时，你会复制树中的其他所有内容，然后仅将这些点更改为 NPC 特定的行为。在 *The Survivalists* 中，我们有一组攻击略有不同的 NPC，但我们仍然需要为每个单独的 NPC 创建整个图。
+
+这里的问题是组合与继承的问题。行为树很乐意使用组合来从子图构建其行为，但不存在等效的继承方法。如果这是一个类，你可以将高亮节点变为虚函数，每个随之而来的类在提示时会填入少量数据，但不需要知道父类的工作方式。
+
+与其复制每棵这样的树，不如为该类型的所有 NPC 创建一个新的共享树，称为父树。然后，将每个高亮节点更改为动态行为树节点。每个 NPC 都需要这个父树的一个子树，并有能力用其自己每个 NPC 的自定义逻辑填充这些节点。子树会自动继承父树的布局。
+
+此解决方案的真正魅力在于，在每个 NPC 的基础上，这证明是多么简单。在创建新 NPC 时，你可以选择一个父树，然后许多扩展点可以用通用子树填充。在 *The Survivalists* 的示例中，新 NPC 的行为已经为我们构建好了；所需的唯一新树是与管理其如何攻击相关的实际 NPC 特定树。
+
+但我们的子树长什么样？它们需要能够指定继承自哪棵树，但也要识别出需要覆盖的内容。如果你从一开始就在构建行为树系统，可以从头开始考虑这一点。只有没有父节点的图才会获得从根节点开始的传统行为树布局，所有其他图都会获得几个起始点，这些起始点从父树中列出的扩展点生成。在运行时，父树会直接运行，但扩展点将相当于虚函数，要运行的实际图由子树解析。你还需要确保子图中的所有扩展点也会在该子树中显示。*The Survivalists* 为每个敌对父树分配了一棵攻击控制树，该树执行一些共享攻击逻辑，然后委托给 NPC 的特定 Attack 行为。图 4.4 展示了此示例。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_48_0.png)
+
+图 4.4 示例子行为树，继承自图 4.3 中的示例父行为树。
+
+然而，这种方法需要大量工作和时间，而在开发 *The Survivalists* 时并没有这些时间。此外，大多数情况下，这些扩展点将指向一个子树，因为它们是共享行为。此外，如果你确实用自定义节点填充每个节点，布局会迅速变得一团糟。因此，更明智的做法是只要求每个节点是一个子图。
+
+对于 *The Survivalists* 中使用的实现，创建了一个单独的数据资产来封装这些信息。NPC 不再引用它使用的行为树，而是引用该资产，称为行为树数据 (BTData)。此数据包含要使用的父树以及 NPC 行为的所有相关数据。如图 4.5 所示。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_49_0.png)
+
+图 4.5 示例行为树数据 (BTData) 资产。
+
+每个 NPC 都保证拥有一个唯一的 BTData 资产，因此父树动态行为树节点被编写为查找其正在操作的 NPC 关联的资产，并为每个覆盖提取其应运行的图。在启动时，AI 不再运行所选的任何行为树，而是会查询 BTData 并启动设置的任何父树。
+
+行为树数据成为与 NPC 行为相关数据的中心枢纽，也是任何设计师试图弄清楚 NPC 在做什么的第一步。*The Survivalists* 的实现最终有四种不同的父树：一种用于敌对移动敌人，一种用于和平移动敌人，一种用于敌对植物，一种用于猴子。这意味着将 NPC 添加到游戏中更快，维护也容易得多。它还防止了由于到处复制行为树数据而不可避免地会出现的许多小错误。
+
+### 4.4 共享攻击树
+
+*The Survivalists* 中的 NPC 除了要执行哪个 *Attack* 行为之外，其他一切都共享。因此，每个 NPC 都需要自定义攻击图。由于大部分
+
+
+
+NPCs 有多种可能的攻击，小树更受青睐，因为通常需要为每个攻击制作一棵树。然后将小树合并到自定义攻击图中，由于这种约束的混合，它始终是相同的，即一个选择器和一系列子图。整个过程是自动化的。
+
+自定义攻击图以 BTData 资产上的优先级攻击数组形式呈现给设计器。然后创建了一个攻击行为树节点，它可以读取此内容，并使用该行为树数组作为其子节点，执行与选择器节点相同的行为。此节点随后被插入到通用攻击控制树中。设计器现在可以在该资产上按优先顺序列出要运行的攻击，不再需要中间树。
+
+NPCs 将执行的每个实际攻击动作都被创建为独立资产，因为它们都需要正确进行网络处理。此过程是 AI 系统的外部要求，但最终导致整个攻击图及其所有移动和条件都被复制，只是在相应资产中进行替换以运行。为避免这种情况，攻击动作资产被移除，并成为行为树数据的一部分。攻击数组的每个元素随后列出了一个行为树，指示如何控制攻击以及实际攻击的数据，包括伤害值和所有可修改的属性。攻击树节点被修改，以便在加载该攻击树时用攻击资产填充特定的黑板变量，这导致所有攻击行为树启动黑板节点中所包含的任何资产，而不是原来的资产。
+
+开发后期出现了进一步的复杂情况——攻击需要根据武器有所不同。游戏中只有一种 NPC 能够携带物品，即玩家结交的猴子。玩家可以给这些猴子武器，猴子会与玩家并肩作战。猴子的行为树需要根据当前武器适当选择要运行的攻击。为便于此更改，行为树数据中的相同攻击列表被添加到每个物品中，然后由一个节点读出并运行。这使猴子能够利用之前为每个敌方角色设置的所有攻击行为。此外，这还提供了物品特定的行为，例如，如何使用每种武器采矿或使用每种武器砍树，所有这些都使用行为树和一个节点，该节点知道从每个物品中获取所需内容。
+
+所有这些使添加新的类似攻击变得非常容易，只需打开 NPC 的行为树数据资产，选择父树，然后从可用的多个通用攻击树中选择要复制的攻击模式。每当需要新行为时，都会以相同的通用方式构建，使我们之后能同样轻松地重用该数据。
+
+通过对行为树采用灵活的方法，你可以做出加快开发并减少行为树自身维护量的更改。《生存者》最终让设计师创建了不同的攻击变体，例如仅在射程内攻击一次，或在攻击前检查冷却是否完成，或与敌人保持距离并攻击。然后，他们能够为新 NPC 选择最合适的攻击，或为该特定 NPC 创建新攻击。
+
+### 4.5 共享中断列表
+
+行为树方法中一个看起来应该自动化但证明最难以自动化的元素是全局中断系统。在《生存者》中，行为树开头的中断列表越来越长。这些用于执行快速动作，例如被击退，或完全阻止行为，例如角色死亡时。
+
+中断在行为树中一直是个问题。通常，为游戏添加功能会要求 NPC 做出自定义响应，这通常涉及中断当前行为来播放某些独特行为。这组独特的节点通常位于行为树开头，由针对各种场景的检查和响应列表组成。例如，“我快死了吗？”、“我被击中了吗？”、“刚才有手榴弹朝我扔过来吗？”或“玩家目前正在和我说话吗？”。
+
+使用合理的行为树逻辑，你可以创建一个子图来容纳所有这些中断。然后可以将该子图分配给游戏中每个 NPC 的行为树。每当需要新的中断时，可以将其添加到图中并传播到游戏中所有 NPC。
+
+这种方法工作良好，直到出现一个顽强的 NPC，它只想用一声咕哝来回应整个击倒中断。你可以将其拆分为一个全新的组，但在其他方面 NPC 都是一样的。为处理这种情况，建议将每个中断响应转换为动态行为树。现在每个 NPC 都可以为某个中断提供自定义覆盖，并且如果系统支持，还可以分配一个默认树，只需让 NPC 定义它们与常规的不同之处即可。
+
+这解决了你的问题，但后来，单个 NPC 需要一个全新的中断。《生存者》中的猴子经常遇到这种情况，玩家可以以多种不同方式与它们互动。最简单的解决方案是将中断添加到全局中断，并希望它只针对该一个 NPC 被激活。这种方法的问题在于，它不仅会使全局中断臃肿，还会导致所有其他 NPC 不断检查一个永远不会发生的中断，或者更糟的是，它发生了并中断了不应该中断的行为。为解决这个问题，你可以将中断图拆分为两部分：一个由所有 NPC 引用的全局中断子图，以及可以从 NPC 自身某处提取额外中断的 NPC 特定中断。这些中断本身也是树，因此可以轻松组合和共享。任何新中断都可以仅添加到关心它们的树中，且树可以拆分、添加或组合，以作为每种 NPC 类型所需的自定义中断。
+
+这种方法对《生存者》来说已足够；然而，更复杂的游戏可以采用类似攻击图的方法处理中断。中断本质上是响应的优先级列表，因此可以简化为条件、优先级和响应。这可以轻松表示为有序的条件和响应数组，或从多个数组生成，其中一个数组是所有 NPC 的全局数组。
+
+### 4.6 黑板
+
+灵活的行为树方法在涉及黑板时总是会遇到困难。黑板，对于不知情的人来说，是行为树可以读取和写入的数据映射。此映射允许行为树在树中维护数据，在某一部分写入并在另一部分使用，或者允许外部系统写入数据，这些数据随后将在处理树时被考虑。
+
+问题是，行为树期望黑板中包含某些条目。如果你知道启动时树中的确切内容，可以预先分配它，但这必须是按 NPC 类型而非按树来分配，因为每个 NPC 都会构建独特的树。如果我们在 *The Survivalists* 中采用这种方法，就需要确保游戏中所有武器上的每个行为树都包含在猴子的预分配中。
+
+采用的方法是让所有 NPC 使用相同的黑板结构。换句话说，它们各自拥有自己的实例，但黑板布局在所有 NPC 中都相同。这会导致某些使用它的 NPC 的黑板臃肿，但也允许轻松缓存黑板以供下一个生成的 NPC 使用，节省宝贵的构建时间。此外，数据始终以相同方式布局，允许极快的数据查找。这依赖于所有 NPC 共享足够相似的数据，这在 *The Survivalists* 中大多为真，除了猴子拥有几个特定条目。我们本可以花时间制作一个作为一般黑板子项的猴子黑板，并尝试以此节省一些内存，但我们成功在只有 2 GB 内存的手机上发布了最多 200 个同时存在的 NPC，而黑板的大小甚至未成为问题。
+
+如果这种方法不可能，你可以采用几种方法。第一种是创建一个通用黑板来封装所有树之间共享的任何变量，然后为每个行为树拥有一个唯一的黑板。不过，这可能仍会导致通用黑板封装 NPC 特定的行为，因此此通用树可以根据活动 NPC 进一步细分，然后需要确保它永远不会分配给黑板不支持其类型的 NPC。
+
+最后一个建议是质疑黑板最初为什么需要预先分配。只需将黑板设为一个空哈希映射，并配备一个检查条目是否存在并不存在时创建它的 getter。这通常性能不佳，因为所有数据查找都需要经过哈希映射，但如果过大的通用黑板是个问题，哈希映射是一个选择。
+
+### 4.7 结论
+
+采用不同的行为树复用方法不仅加快了开发，还使剩余的树更易于维护。为不同类型的 AI 使用共享父树，然后构建行为树来表示树中每个可扩展部分的每个独特响应，这构建了一个非常灵活的系统，同时忠实于行为树的理念。
+
+
+
+
+
+最后，将新机制构建到行为树中并不总能产生效果，或可能导致系统被视为过于混乱。应避免对标准行为树做出过于激进的改变。此外，对于任何共享树，还需要格外小心，因为为某个NPC对一棵树所做的任何更改都会影响所有用户。本章建议的行为资产确保为每个NPC独立生成，有助于缓解这一问题。
+
+## REFERENCES
+
+- Champandard, A. J., and Dunstan, P. (2013) 行为树入门套件. 在《游戏AI专业版》中. Steve Rabin编. CRC Press, Boca Raton, FL, 第73–91页。
+- Epic Games. (2022) 虚幻引擎. Epic Games.
+- Isla, D. (2005) 处理HALO 2 AI中的复杂性. 游戏开发者大会, Moscone Centre West, San Francisco, CA, 2005.
+
+## 5 建立伙伴
+
+### 选择正确的大脑
+
+Dale Green
+
+### 5.1 简介
+
+谈到电子游戏人工智能（AI），伙伴（buddies）或许拥有最大的复杂性空间。它们通常在设计上非常显眼，这意味着它们的行为常常会直接影响玩家的体验。这种影响带来了诸多挑战。无论游戏的故事、音乐或氛围多么出色，伙伴的一个错误决定都能瞬间将其破坏。想象一下，一个伙伴做出错误的定位决定，随意走进Boss遭遇战。然而，伙伴也带来了许多机会。从《生化奇兵：无限》中Elizabeth与Booker的关系，到《最后生还者》中Ellie的战斗支援，精心打造的伙伴AI让我们有机会开发出有意义且可靠的同伴，帮助定义一种体验。
+
+支撑此类AI的系统可能复杂而庞大。看似是独立的智能表达，实际上是多个系统协作上演的一出令人信服的傀儡戏。理解你的伙伴AI需要什么，以及可用的不同技术和工具，对于构建一个高效、有目的的系统至关重要，该系统能够按照你设想的方式让角色“活”起来。
+
+在本章中，我们将探讨伙伴AI的关键组件，突出伙伴AI与非伙伴AI之间的差异。我们还将强调伙伴带来的一些挑战和注意事项，以及对其期望智能的范围界定和合适技术的选择。
+
+### 5.2 定义伙伴AI
+
+#### 5.2.1 什么是伙伴AI？
+
+伙伴AI是产生特定类型AI代理（即伙伴）的系统的统称。伙伴，或称同伴，是一种其行为旨在帮助并陪伴玩家踏上旅程的AI代理。之前提到的Elizabeth和Ellie是非常称职的伙伴示例，但规模范围很大。龙蜓Sparx，即《斯派罗雄龙》长期陪伴的同伴，行为要简单得多，但仍然是一位宝贵的同伴。
+
+无论伙伴是陪伴玩家完成整个旅程，还是仅陪伴一次遭遇战，任何具有一定程度陪伴和/或协助玩家旅程行为的AI，都可以用此术语来描述。
+
+#### 5.2.2 伙伴AI vs 非伙伴AI
+
+任何AI代理的目标是在不断演变的游戏世界中敏锐地行动。从这个角度看，伙伴代理和非伙伴代理有很多重叠。两者的关键行为大致可以分解为图5.1所示的三个阶段。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_55_0.png)
+
+图5.1 AI处理的三个关键阶段。
+
+所有AI代理都必须能够查询世界状态并据此执行操作。虽然这些阶段之间确实存在一些差异，例如伙伴角色可能需要比标准代理查询更多信息，但关键差异在于计划阶段。伙伴是与玩家一起的积极参与者，这需要体现在他们所做的决定以及他们与世界的互动方式中。他们需要能够在不事先知道玩家可能做什么的情况下提供帮助。然而，这需要平衡，以免他们过于聪明或过于急切，在玩家有机会之前就解决谜题或杀死敌人。伙伴必须考虑他们的行为如何影响玩家的游戏体验，而这是非伙伴不需要的。
+
+创建一个称职的伙伴最大的挑战之一源于他们在焦点中的时间。这直接影响他们被感知的智能、决策范围以及他们的容错空间。想象一下，一个被召唤来参加枪战的标准敌人代理。这个代理的生命周期仅限于单次遭遇，这意味着他们不太可能长时间处于玩家的直接关注下，如果有的话。如果玩家确实关注了他们，只要他们要么掩体，要么移动，要么朝玩家开火，就会被认为是智能的；除非他们做出极其愚蠢的事情，否则根本没有足够的时间让他们不智能。然而，伙伴会在玩家整个旅程中陪伴，这意味着他们更频繁地处于关注之下。任何简单、重复或有缺陷的行为被玩家发现的机会更大。这意味着伙伴必须比非伙伴对照对象更努力、更可靠地工作，才能达到相同的被感知智能水平。
+
+伙伴与非伙伴之间的这种寿命差异也导致了对其各自行为考量程度的差异。继续以枪战为例，考虑两个代理都使用武器。如果他们只参加一场小规模战斗，非伙伴代理可能不需要考虑他们使用了多少弹药。他们可能作弊使用无限弹药！如果你无法为伙伴使用无限弹药，他们围绕射击的决策就需要更加周密。你不希望他们在战斗开始时就用完弹药，然后变得一无是处。同样的逻辑适用于任何可用资源，例如血量。伙伴的行为，为了避免显得近视，必须在某种程度上考虑未来，从而增加决策的复杂性。
+
+决策复杂性增加的另一个示例是定位。非伙伴代理通常是为特定任务而生成的。一个NPC走进城镇，一场敌方遭遇战等。他们会将自己定位在最佳位置以完成任务。伙伴也必须这样做，但需要额外的考虑。你可能不希望你的伙伴站在玩家脚趾头上——他们会挡路。你可能还希望你的伙伴出现在屏幕上某个位置，以便他们的行为可见，但不要在玩家的直接视线内，因为同样，他们可能会挡路。
+
+除了是称职的代理之外，伙伴还需要促进玩家的行动。为了做到这一点，他们需要一个适合支撑其决策的系统。
+
+#### 5.2.3 确定需求
+
+为选择正确的系统来赋予伙伴生命，首先概述期望的行为、期望的自主程度以及由此产生的挑战至关重要。应该回答以下类型的问题：
+
+- 他们会表现出什么样的行为？
+- 他们应该有多少自由意志？
+- 他们应该对游戏性做出多少贡献？
+- 他们是否拥有与玩家相同的能力？
+- 他们将如何在世界中导航？
+
+对这类问题的答案将确定你伙伴的能力范围。从那里，可以推断出你设计的挑战，进而确定哪些技术最合适。自然，伙伴的能力越受限，未知数就越少，因此潜在问题也越少。他们能做的越少，出错的可能性就越小。这种方法的缺点是他们的贡献潜力降低。然而，拥有许多能力和复杂决策的伙伴，有更大的空间产生影响，但也有更多需要克服的挑战。
+
+在确定期望的伙伴行为时，需要平衡他们对游戏的贡献和影响能力，以便仍能可靠地呈现期望的游戏体验。例如，如果你正在制作一个高度注重叙事、具有电影感的游戏，一个拥有大量自由意志的伙伴有可能破坏期望的体验。在这种情况下，一个更受限、控制更严格的伙伴可能更合适。尽早识别这一点很重要，以便能尽早确定最合适的技术。
+
+
+
+
+
+最合适的技术就是能高效、以最小技术债务提供你所需一切的技术。虽然目标导向动作规划（Goal-Oriented Action Planning，GOAP）是一种很棒的技术，但它几乎肯定不是小型、线性、轨道式游戏的正确选择。确定你游戏中伙伴的需求和范围将有助于确定其所需的智能水平和自主程度。尽早识别这些关键指标非常重要，因为它们将在很大程度上决定用于让你的伙伴“活”过来的最佳系统。
+
+### 5.3 选择大脑
+
+一旦伙伴的需求被明确概述，就可以选择合适的系统。我们将智能和期望的自主程度确定为选择技术的关键指标，因此本章中介绍的系统已大致按这些标准分组。以下每个系统在控制与创作 versus 产生的自主性之间都有不同的平衡。通常，自主性越低，其行为就越需要创作，反之亦然。虽然这些系统是单独介绍的，但它们并非互斥，你只需要在混合使用时注意性能预算即可。
+
+#### 5.3.1 低自主性：脚本控制
+
+脚本控制以几乎牺牲所有自主性为代价，对伙伴的行为拥有完全控制权。通过脚本驱动代理时，行为不是由某个行为系统决定，而是手动创作的。任何其他竞争性行为系统（如果存在）都会被暂停，代理取而代之运行固定的动作序列。
+
+脚本控制的主要优点是，你确切地知道代理会在哪里、何时到达以及会执行什么动作。直接创作每个动作时，你拥有完全控制权，并因此对代理的行为充满信心。然而，要做到这一点，你需要知道游戏状态会是什么，这样当你的伙伴执行动作序列时，世界处于创作时所针对的状态中。
+
+实际上，这将完全脚本控制主要限制在轨道章节或实时过场动画等场景中，因为在这些场景中可以保证游戏状态。还需要考虑创作开销。你希望伙伴执行的每个动作都需要针对特定的游戏状态或环境进行创作，如果其中任何一个发生变化，你的脚本也可能需要重新创作。
+
+出于这些原因，脚本控制通常与更高级的行为系统一起使用，只有在需要直接控制伙伴以确保向玩家呈现正确体验时，才会回退到脚本控制。
+
+#### 5.3.2 中等自主性：行为模型
+
+尽管脚本控制当然有其用武之地，但大多数代理行为将是更高级系统的结果，例如有限状态机（FSM）或行为树。这些系统通过拓扑模型呈现行为，将创作从整个固定动作序列减少到单个行为和转换。这些模型的执行方式随后在运行时确定，通常基于当前游戏状态等因素。
+
+#### 5.3.3 有限状态机
+
+有限状态机是建模行为最简单的方法之一。你只需定义离散状态及其之间的转换即可。所有节点都在同一层级连接，没有层次结构，因此执行在满足转换条件时在节点之间移动。图 5.2 显示了一个示例 FSM。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_58_0.png)
+
+图 5.2 FSM 示例。
+
+此处的状态间转换简单且明确，从而导致僵化的行为流程。这可能适用于行为简单的代理，但以这种方式建模更复杂、更微妙的行为可能会变得困难且麻烦。分层有限状态机为这个问题提供了潜在的解决方案，即状态本身可以是整个 FSM；然而，更常见的解决方案是行为树。
+
+#### 5.3.4 行为树
+
+与有限状态机类似，行为树是建模和执行行为的一种方法。然而，行为树是层次结构，包含更多元素，使得构建复杂的分支结构成为可能，而有限状态机的结构则更为僵化。这使得行为树更适合伙伴 AI 的复杂需求，因此它们也是最常见的 AI 系统之一。
+
+行为树中的基本元素是任务。这些是模型中的叶节点，封装了一些在调用时会导致执行动作的功能。每当执行此类节点时，相关逻辑将运行，并从节点向其调用的父节点传递一个返回值，指示节点是否成功。此处的“父”节点将是一个复合节点。这些节点具有一个或多个子节点，并决定单个任务的运行方式，例如按顺序运行，或逐个尝试以查看哪个首先通过。
+
+仅凭叶节点和复合节点，就可以像图 5.3 所示那样组合 AI 行为，其中伙伴代理会移动到物品处，尝试拾取它，然后使用它。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_59_0.png)
+
+行为树的其他关键元素是条件节点和装饰器，两者都位于叶节点之上。条件节点允许我们定义在执行叶节点之前必须满足的条件。装饰器是指令节点，允许我们完成两件事。首先，它们允许我们更改节点的返回值，例如强制其始终返回 true，这可能很有用。它们还允许我们更改节点本身的运行方式，例如确保其无限运行。这种类型的装饰器通常用于基础树元素，以保持树无限运行。
+
+为了在此示例的基础上进行扩展，合适的条件可能会检查是否有可拾取的物品以及是否可以使用它。合适的装饰器可能会确保整个序列无限运行，以便代理始终在评估是否有物品可拾取。更新后的行为树如图 5.4 所示。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_60_0.png)
+
+图 5.4 行为树示例（续）。
+
+行为树是构建 AI 的热门工具，因为它们允许你相对轻松地建模复杂行为。特别是对于伙伴 AI，有许多条件会影响它们在世界中的行为方式，而使用行为树，你可以通过条件和适当行为的建模来考虑这些因素。
+
+本章前面给出了一个选择站立位置的示例，以展示伙伴在执行看似简单的行为时必须考虑的问题。使用行为树，我们可以通过条件和不同的行为路径来考虑所指出的因素，这是更简单的实现可能无法提供的。这是一个简单但现实世界的示例，说明如何通过预先确定伙伴的需求来帮助确定哪些技术合适。
+
+然而，行为树也并非没有缺点。由于它们通常是固定的，其标准拓扑在运行时不会改变，这意味着它们只能执行事先创作好的路径。它们可以在不同层级上分支，产生一些变化，但每条潜在路径都必须手动创作。伙伴代理可能是游戏中最复杂的代理之一，因此表达其所有行为并非易事，而生成的行为树可能变得庞大，包含分布在多个子树中的成千上万个节点。这种规模难以管理，并且在众多分支中定位特定行为可能会很困难。调试行为树是完全可行的，但如果没有适当的工具可能会很困难。具备单步执行、在特定节点上添加断点等功能，将使错误行为更容易追踪，尽管如果你自己实现该系统，这会引入工具成本。
+
+行为树非常强大且易于创作，因此在游戏 AI 中很常见。其灵活性以及创作内容与自主性之间的平衡使其适合各种代理类型和能力。此处描述的
+
+
+
+简言之是一棵标准行为树，但可以做出许多变化，以根据您的特定需求对其进行定制。
+
+#### 5.3.5 高自主性：程序化行为
+
+另一种以层次结构方式建模行为的方法称为 GOAP。在有限状态机（FSM）和行为树中，我们定义状态或动作，然后在它们之间进行转换。然而在 GOAP 中，我们将状态和动作与人为编写的转换解耦，而是让规划系统确定最佳的一组动作，以便我们能够达到设定的目标。这产生了在运行时构建的程序化行为，使我们的代理有可能获得最大自主性。
+
+GOAP 中的目标定义了我们希望代理和/或世界所处的最终状态。例如，让伙伴复活玩家。如果玩家当前未被击倒，我们可能会认为此目标已完成。但是伙伴如何完成这个任务？通过动作。这与行为树中的叶节点类似，动作是对某些功能的封装。然而，GOAP 中的动作既包含决定其是否可执行的前置条件，也包含决定它们如何改变世界和/或代理状态的结果效果。它们还带有由其作者设置并在规划阶段使用的相关成本。
+
+在定义好目标，并且子动作能够将世界/代理置于满足这些条件的状态后，我们将控制权移交给规划器。这是为我们的代理生成行动计划的阶段。对于给定目标，规划器将在可用动作上执行搜索（例如 A*），以寻找从当前状态到目标状态的所有可能路径。图 5.5 展示了“进食”目标可能的样子。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_61_0.png)
+
+图 5.5 GOAP 示例。
+
+已确定两条可能的路径。总体而言，对代理来说，生火烹饪食材的成本较低；但是，如果他们没有可烹饪的食材，该分支就不可能，因此他们将回退到更昂贵的搜索食物的方法。由于动作的可用性基于当前游戏状态而有所不同，同一目标可以通过多种不同的方式实现，为决策带来了变化，这在完全人为编写的模型（如行为树）中很难复制。在运行时确定动作序列的过程使代理能够在其世界中动态反应。这也能为制作节省时间。使用 GOAP 时，无需将定义好的行为实现到复杂的行为树中。一旦实现新行为，它只需被添加到池中，规划器将在运行时施展其魔力。
+
+GOAP 的好处并非没有弊端。取决于您拥有多少个动作，规划阶段可能会占用大量处理器资源。对于每个待评估的目标，它会在设定的动作限制内搜索当时可用的所有动作，直到目标达成。还需要定期重新验证当前目标，以确保初始游戏状态未发生变化，从而使当前目标不再合理。
+
+另一个需要考虑的问题，特别是适用于伙伴，就是缺乏对结果行为的控制。鉴于它们将基于瞬时数据（即当前游戏状态）在运行时生成，在特定时间点复制给定的一组动作可能很困难。系统的程序化特性意味着，如果不严格控制游戏状态，就无法确定将执行哪些行为。这种变化还会增加对代理进行严格测试的需求，以确保所有行为都可以相互无缝衔接，且不会生成错误序列。
+
+GOAP 是一个极佳的系统，可以为代理带来大量自主性，使它们能够在运行时自行决定该做什么，而无需进行明确编写。但是，需要考虑性能问题；如果您的设计允许高度自主的代理，那么深入研究这一点是值得的。
+
+## 6 Making Up Your AI's Mind
+Decision-Making Architectures
+
+Tobias Karlsson
+
+### 6.1 简介
+
+在为游戏中的生物创建 AI 时，您必须做出的第一个也是最基本的决定之一，就是使用什么决策架构。决策架构是 AI 决定并执行应执行哪种行为的框架，适用于任何时刻。本章探讨了可用的更流行选项、各自的优缺点，以及在什么情况下会选择其中一种而非另一种。
+
+在本章中，行为被定义为 AI 可以采取以实现特定目标或应对特定情况的一组动作。每个行为的粒度由实现者决定；例如，您可以选择有一个战斗行为，或者为战斗的不同方面设置许多行为，例如重新加载 AI 武器的行为和投掷手榴弹的行为。您选择的粒度取决于什么对您游戏中的 AI 有意义。单个生物的 AI 是通过为其提供一组行为以及在运行时选择适当行为所需的信息来创建的。
+
+### 6.2 重要特征
+
+决策架构有许多不同的特征，在给定情况下哪些更重要取决于您试图解决的问题的确切性质；然而，对于大多数项目，以下许多特征都会具有一定相关性。
+
+#### 6.2.1 预测行为选择
+
+每个代理都会拥有一组行为。其中一些行为可能是对惊人事件的快速反应，而其他行为可能是仅在找不到其他合适行为时才会启用的后备行为。能够推理特定行为在何时以及在什么情况下会变得活跃，以及一种行为相对于另一种行为的优先级，这一点非常重要。
+
+这可能看起来是一个简单的要求，但随着 AI 复杂度的增加，跟踪行为何时可以或不可以激活以及它们如何交互的所有条件变得越来越困难。即使是最简单的代理，在接近发布时也往往会为行为选择积累一套印象深刻的测试和条件，以涵盖所有可能的边缘情况。一个良好的决策架构将使 AI 的作者以及后来需要维护它的任何人，都能通过查看数据，轻松了解代理的各种行为将被选中执行时的条件。
+
+#### 6.2.2 理解运行时的决策过程状态
+
+即使在最好的情况下，您在测试 AI 时也会发现它会选择错误的行为；因此，能够在运行时检查决策过程的状态，以便确定代理为何决定做某事，这一点至关重要。您需要能够理解代理正在运行什么行为，为何选择了特定行为，以及为何没有选择特定行为。理想情况下，您还应该能够访问不仅代理的当前状态，还有它是如何到达该状态的历史记录。
+
+取决于您的架构如何选择行为，描述特定决策的问题可能从微不足道到需要跟踪大量额外数据（这些数据也可能难以显示）不等。值得注意的是，能够连接到游戏实例并显示该代理状态的外部应用程序（最常见的是编辑器兼任此角色）正变得越来越流行。这是一个极佳的功能，您应该认真考虑，但即使有外部应用程序，您也希望能够在游戏中显示 AI 状态的至少一部分，以便快速调试。这将有利于更好的信息收集，您的 QA 合作伙伴（可能无法访问编辑器）可以使用这些信息。
+
+另一项相关且非常有用的功能是能够将 AI 的当前状态转储到文件中以供以后检查。这允许测试游戏的人轻松地向您提供关于表现出意外行为的代理的大量数据。
+
+#### 6.2.3 模块化
+
+能够从更简单、可重用的部分创建行为非常强大。即使您的游戏只有一个代理，您也会发现大多数行为中都有许多反复出现的函数和测试。能够重用构建块将节省您的开发时间，因为您只需要编写和测试一次。更重要的是，您可以为构建块添加元数据，以提高调试 AI 的能力。
+
+构建块经常用于在可视化编辑器中组装 AI 的行为，当然，还有其他可以产生相同效果的选项。使用构建块的另一个好处是，学习和理解 AI 系统变得更加容易。新开发人员只需了解构建块的工作原理，而不必了解每个行为的细节。
+
+
+
+
+
+#### 6.2.4 层级化决策
+
+将决策建模为决策层级可能非常有帮助。这与人类思考决策的方式非常吻合。你先做出整体决策，然后逐步添加越来越细致的决策，直到最终达到不再需要做出决策并可以采取行动的地步。层级化决策的额外优势在于它允许多个行为共享决策，这意味着你不需要进行两次相同的计算。例如，如果你有多个行为都依赖于存在一条通往目标敌人的有效路径，那么在层级中将它们全部归纳在一次该测试的实例下，就可以只进行一次测试，并在测试失败时一起拒绝所有这些行为。这也有助于更容易理解代理将如何表现，因为决策被拆分为多个更简单的决策，并且运行时调试也相应简化，因为可以轻松看出层级中哪个决策节点失败了。
+
+#### 6.2.5 添加新行为的难易程度
+
+每当你为角色添加新行为时，都必须确保它能与所有现有行为良好交互。这总是需要一些工作，但某些架构更容易本地化更改，而另一些架构天然存在更多需要显式处理的行为间依赖关系。
+
+#### 6.2.6 建模状态和状态转换的能力
+
+通常，AI 会有可以处于的不同状态，并有关于如何在它们之间转换的程序。游戏中常见状态的示例是代理处于 *空闲*、*警觉* 或 *战斗* 状态。每个状态都会附带特定的有效行为选择，这些状态之间的转换通常需要特定的过程，例如，从 *空闲* 直接过渡到 *战斗* 时播放惊讶反应。在游戏中，你最常会在 AI 的最高层级找到明确的状态实例，例如空闲-警觉-战斗场景，以及在最低层级，例如近战缠绕攻击的工作方式。
+
+#### 6.2.7 行为排序
+
+行为排序（即先做 A，再做 B，最后按顺序做 C）的能力在 AI 需要执行某些更复杂行为时通常非常有用。排序是状态和状态转换的一个子问题，但可以在没有状态的情况下实现。在单个行为构建块内部，排序通常相对容易，但在创建单独行为的序列时会变得更加困难，这通常是模块化所希望的。
+
+#### 6.2.8 非静态行为优先级
+
+对于某些代理，执行一个动作相对于另一个动作的相对重要性取决于其运行时环境的情况。例如，想象一个经典第一人称射击竞技场死亡竞赛中的机器人，它有一个收集健康值的行为和一个收集弹药的行为。如果机器人的健康值危险地低，获取健康值就比健康值几乎满时重要得多。同样，机器人拥有的弹药越少，获取更多弹药就越重要。如果机器人濒临死亡，获取更多健康值比获取更多弹药更重要，即使它可能需要更多弹药，不过如果它确实需要更多弹药，并且在去获取健康值时只是一个小绕道来获取一些弹药，那么走这个绕道可能仍然是值得的。为了妥善解决这个问题，AI 不能依赖行为之间的固定优先级，需要能够在运行时计算相对优先级。
+
+#### 6.2.9 活跃行为黏性
+
+动态优先级的一个重要子问题是希望提高当前活跃行为的优先级。很多时候，AI 拥有几个相似甚至相等优先级的行为，在这种情况下，你可能想要提高活跃行为的优先级，以防止 AI 在行为之间来回切换。例如，在上面健康值和弹药拾取的例子中，如果对健康值和弹药的需求非常相似，那么由于其感知到的情况发生微小变化，存在 AI 在两个行为之间乒乓切换的风险。让 AI 坚持某个特定决策，即使该决策不是最优的，只要足够好，通常会导致表现更好的 AI。
+
+### 6.3 依赖于实现的特性
+
+除了上述不同架构的特性之外，你的实现还有一些特性将对与其协作的难易程度以及它解决问题的有效性产生重大影响。很容易忽略这些，但后来会有代价。
+
+#### 6.3.1 开销
+
+你的 AI 质量在很大程度上取决于你为代理可能经历的大多数（如果不是全部）场景创建有效行为的能力，其次是你创建彼此可观察区分的行为的能力。因此，作为 AI 开发者，你将花费大量时间添加和修改 AI 行为。最大限度地减少为 AI 添加新行为、新行为构建块或其他功能所需的开销至关重要。任何需要大量样板工作来进行简单添加的系统都会导致产品质量下降，因为那些时间本可以用于制作更好的 AI。如果你开始注意到你的行为构建块变得越来越复杂，而构建块的数量基本保持不变，那么这是一个很好的迹象，表明添加新构建块过于复杂且需要太多工作。
+
+#### 6.3.2 数据流
+
+你的 AI 在执行有效性测试和执行行为时，将计算从特定任务的成功或失败到两点之间找到的路径等数据。这些数据通常也对决策过程的其他部分以及行为执行很有兴趣，而这些数据的通信方式非常重要。成功或失败通常作为直接返回值传达，使用黑板来传递更复杂的数据也很流行。虽然黑板提供了很多灵活性，但它们也像全局变量一样，有许多相同的缺点。这些包括数据全局可见且缺乏本地上下文，这意味着如果你的 AI 正在考虑潜在近战和远程攻击的不同目标，你将需要黑板中既有近战目标也有远程目标，尽管在本地上下文中，它们只是在处理一个目标。代码复用将变得复杂，因为你需要知道代码打算访问哪个目标，这可能使代码不那么通用。直接在行为构建块之间传递数据，或以其他方式将数据限定在本地上下文中，可以避免这个问题，并使将任务分解为生成数据和消耗数据的部分变得更加容易。
+
+### 6.4 比较不同架构
+
+不同的决策架构有不同的优缺点，为你的 AI 选择合适的一个会使你的开发体验容易得多。这些优缺点在下一节中描述，并在表 6.1 中总结。
+
+## 表 6.1 不同决策架构的优缺点
+
+| 架构 | 可预测性 | 可调试性 | 模块化 | 层级化 | 添加行为 | 排序 | 状态与转换 | 非静态优先级 | CPU |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 优先级列表 | ++ | ++ | - | - | + | - | - | - | ++ |
+| 层级化优先级列表 | ++ | + | = | + | + | - | - | - | ++ |
+| 行为树 | ++ | + | ++ | ++ | = | = | - | - | + |
+| 有限状态机 | ++ | ++ | = | = | - | ++ | ++ | - | + |
+| 层级化有限状态机 | ++ | + | + | + | - | ++ | ++ | - | + |
+| 基于效用 | - | - | + | = | - | - | - | ++ | = |
+| 层级化基于效用 | - | - | + | + | - | - | - | ++ | = |
+| 规划器 | - | - | + | = | ++ | ++ | = | = | - |
+| 层级化规划器 | - | - | + | + | ++ | ++ | = | = | - |
+
+++ 表示非常强，+ 表示强，= 表示既不强也不弱，- 表示弱，-- 表示非常弱
+
+#### 6.4.1 优先级行为列表
+
+优先级行为列表是可用的最简单的架构之一，但它对广泛的场景来说出乎意料地有效。它按优先级顺序列出代理的所有可用行为。当需要选择新行为时，AI 将从列表顶部开始，逐个测试每个行为的有效性，直到找到第一个有效行为并选择它进行执行。很容易理解哪个行为优先于其他行为，因为这只是列表中行为的顺序。添加新行为也很简单。你只需要决定它在列表中的位置。理解当前选择了哪个行为也很容易。然而，优先级列表不鼓励模块化，很容易被实现为单体有效性测试和行为执行。由于模块化有助于更详细的调试以及复用，因此两者缺失的风险。最后，优先级列表本质上是扁平的，这意味着没有层级化决策，并且它们也缺乏任何状态转换或排序机制。
+
+#### 6.4.2 层级化优先级行为列表
+
+如前所述，优先级行为列表不是层级化的，但没有理由不能使其成为层级化的。层级化版本与扁平版本的唯一区别在于，有效性测试可以指向另一个优先级列表或要执行的行为。
+
+
+
+
+
+分层优先行为列表以略微增加复杂度为代价获得了分层决策能力，但在其他方面与优先行为列表共享相同的优势和劣势。
+
+#### 6.4.3 Behaviour Trees
+
+Behaviour trees are the perfect embodiment of hierarchical decision-making. 行为树是分层决策的完美体现。
+
+They are also very strong when it comes to modularisation given that most implementations are built with a heavy emphasis on reusable building blocks, even though technically that is not a requirement. 在模块化方面也非常强大，因为大多数实现都大量强调可重用的构建块，尽管从技术上讲这并非要求。
+
+Behaviour trees allow the author good reasoning about which behaviour is going to execute, as their execution order is the depth-first search order of the tree until the first valid leaf is located. 行为树使作者能够很好地推理哪个行为即将执行，因为它们的执行顺序是树的深度优先搜索顺序，直到找到第一个有效叶节点。
+
+Understanding the current state of a behaviour tree and why a specific behaviour has been selected is straightforward. 理解行为树的当前状态以及为何选择了特定行为非常简单。
+
+Just looking at the current active branch will give you most of the information, and by saving a little more data, you can easily display exactly which tests failed and which succeeded. 只需查看当前活跃分支即可获取大部分信息，再保存一点更多数据，就可以轻松显示哪些测试失败了，哪些测试成功了。
+
+Displaying the current state of a behaviour tree in game can be a little tricky since fitting trees on a screen quickly becomes difficult as they scale, but many systems have solved this problem by connecting their tree editor to the run-time, which allows for good visualisation. 在游戏中显示行为树的当前状态可能有点棘手，因为随着树的规模扩大，在屏幕上容纳树会迅速变得困难，但许多系统通过将树编辑器连接到运行时来解决了这个问题，从而实现了良好的可视化。
+
+Where behaviour trees fall short is when you are dealing with states and state transitions. 行为树的不足之处在于处理状态和状态转换时。
+
+For instance, a node, like one playing an animation, that cannot be immediately exited requires some awkward compromises. 例如，像播放动画这样无法立即退出的节点需要一些笨拙的折中方案。
+
+#### 6.4.4 Finite-State Machines
+
+FSMs excel when it comes to describing states and transitions between them. 有限状态机在描述状态及其之间的转换方面表现出色。
+
+They make it easy to understand under what circumstances a behaviour is going to be active, and they are straightforward to visualise, yet FSMs' real weakness is in those same transitions. 它们使得在什么情况下某个行为会处于活跃状态变得容易理解，并且易于可视化，但有限状态机的真正弱点在于那些相同的转换。
+
+The problem is that each state needs to have one transition per state that it is possible to transition to from that state. 问题是，每个状态都需要为从该状态可能转换到的每个状态提供一个转换。
+
+Often, most states are available from a given state, which leads to n² transitions. 通常，从给定状态可以访问大多数状态，这会导致 n² 个转换。
+
+This results in a maintenance nightmare to keep track of all the transitions as the number of states grow. 这导致随着状态数量增长，跟踪所有转换变成了维护噩梦。
+
+This creates a lot of work to add all the needed connections when adding a new state and makes it difficult to visualise a large number of states and transitions. 这在添加新状态时需要大量工作来添加所有所需的连接，并且使可视化大量状态和转换变得困难。
+
+Another related issue is that in many cases, there is no need for states with elaborate transitions in the first place. 另一个相关问题是，在许多情况下，根本不需要带有复杂转换的状态。
+
+For instance, in combat, an agent may switch freely between most actions available to it assuming that they are valid. 例如，在战斗中，代理人可能会在大多数可用动作之间自由切换，假设它们有效。
+
+It might want to switch from attacking to moving closer to its target as soon as the target moves out of range, and back to attacking when it gets within range again. 它可能希望在目标移出攻击范围时立即从攻击切换到向目标移动，并在重新进入范围时切换回攻击。
+
+The AI does not need a complex transition from attacking to moving, it just needs to start moving, and when it is close enough, it will switch back to attacking again. AI不需要从攻击到移动的复杂转换，它只需要开始移动，当足够接近时，就会切换回攻击。
+
+Implementing this in an FSM just adds unnecessary overhead. 在有限状态机中实现这一点只会增加不必要的开销。
+
+#### 6.4.5 HIERARCHICAL FINITE-STATE MACHINES
+
+Hierarchical Finite-State Machines (hFSMs) are FSMs where each state can contain a nested state machine that forms a hierarchy. 分层有限状态机（hFSMs）是指每个状态可以包含嵌套状态机以形成层次结构的有限状态机。
+
+hFSMs are like FSMs in their strengths and weaknesses, with the difference that they gain the advantage of hierarchical decision-making. hFSMs在优势和劣势上与有限状态机类似，区别在于它们获得了分层决策的优势。
+
+#### 6.4.6 UTILITY-BASED DECISION-MAKING
+
+Sometimes, it is not possible to assign static priorities to behaviours, and instead, each behaviour’s relative priority needs to be decided at run time. 有时，无法为行为分配静态优先级，而是需要在运行时决定每个行为的相对优先级。
+
+Utility-based solutions were designed to solve this problem. 基于效用的解决方案旨在解决此问题。
+
+In utility-based solutions, a utility score, i.e., a measure of how useful a particular behaviour would be for the AI to execute, is calculated for each behaviour, every update. 在基于效用的解决方案中，每次更新都会为每个行为计算一个效用分数，即衡量特定行为对 AI 执行有多有用的指标。
+
+The behaviour with the highest score is then selected to be executed. 然后选择得分最高的行为进行执行。
+
+In many ways, utility-based decision-making is very similar to the prioritised behaviour list, except that instead of having static priorities, the behaviours are re-prioritised each update. 从很多方面看，基于效用的决策与优先行为列表非常相似，区别在于不采用静态优先级，而是在每次更新时重新对行为进行优先级排序。
+
+This flexibility to be able to reprioritise the behaviours for a given situation is utility-based decision-making’s biggest strength, but the complexity of making it work is also its biggest weakness. 这种能够针对给定情况重新排序行为的灵活性是基于效用决策最大的优势，但使其工作的复杂性也是其最大的弱点。
+
+Usually, when utility-based decision-making is described in literature, there will be a 2D graph showing how the utility of two different behaviours changes based on a single variable. 通常，在文献中描述基于效用的决策时，会有一个 2D 图表，显示两种不同行为的效用如何随单个变量的变化而变化。
+
+It is easy to look at the graph and see where one behaviour becomes more important than the other, and the AI’s behaviour can be both easily understood and modified using this graph. 查看图表并查看哪种行为比另一种更重要很容易，并且可以使用此图表轻松理解和修改 AI 的行为。
+
+Unfortunately, in order to create an interesting agent, your utility calculations will depend on a large number of variables, not just one, used to calculate the utility of a significant number of behaviours, often using non-linear functions. 不幸的是，为了创建有趣的代理人，你的效用计算将取决于大量变量，而不仅仅是一个，这些变量用于计算大量行为的效用，通常使用非线性函数。
+
+To illustrate how the different behaviours interact, you would need a graph with one additional dimension for each additional variable, something that quickly becomes impossible to illustrate. 为了说明不同行为如何交互，你需要为每个额外变量增加一个维度的图表，这很快就会变得无法说明。
+
+Keeping track of all these interactions is very challenging for any interesting AI system, which is why in practice you will see most utility systems divide their behaviours into classes that occupy distinct utility bands. 跟踪所有这些交互对任何有趣的 AI 系统来说都非常具有挑战性，这就是为什么在实践中你会看到大多数效用系统将其行为划分为占据不同效用带的类别。
+
+This results in sets of a few behaviours in each band (often as few as just two or three), needing to have their utility calculations tuned against each other as the utility scores of all other behaviours are guaranteed to be outside their band. 这导致每个带中只有少数几个行为（通常只有两三个），需要相互调整其效用计算，因为所有其他行为的效用分数保证在它们的带之外。
+
+#### 6.4.7 HIERARCHICAL UTILITY-BASED DECISION-MAKING
+
+As with most of the other solutions, it is easy to create a hierarchical version. Utility-based decision-making is no different and allows this approach to gain the strength of hierarchical decision-making. 与其他大多数解决方案一样，创建分层版本很容易。基于效用的决策也不例外，它允许这种方法获得分层决策的优势。
+
+#### 6.4.8 PLANNERS
+
+Planners allow the AI to construct plans at run time that match the current situation the AI finds itself in. 规划者允许 AI 在运行时构建与其当前所处情况相匹配的计划。
+
+These plans are constructed by assembling individual actions from a selection of actions that the AI has available to it. 这些计划是通过从 AI 可用的操作选择中组装单个操作来构建的。
+
+The actions come with pre- and post-conditions and the planner uses these conditions to create a string of actions that allows the AI to transform the world in such a way that by the end of the plan, the current world state is transformed into the goal state. 操作带有前置条件和后置条件，规划者使用这些条件创建一系列操作，使 AI 能够以这样的方式转换世界，以使在计划结束时，当前世界状态转换为目标状态。
+
+The most popular planner in games is Goal-Oriented Action Planning, but it should be noted that there are many other planners out there with different pros and cons. 游戏中最流行的规划者是目标导向动作规划，但应该注意的是，还有许多其他规划者，各有优缺点。
+
+The big strength of the planners is that they allow the AI to solve situations that its creator has not thought of in advance. 规划者的最大优势在于它们允许 AI 解决其创建者未事先考虑过的情况。
+
+Assuming that there is a way to solve a situation with the actions available, the AI will be able to generate a plan to do so. 假设有可用操作可以解决某个情况，AI 将能够生成一个计划来做到这一点。
+
+This allows the programmer to focus on what actions an agent can take, which is a smaller problem, than on all the ways in which those actions can be combined. 这使程序员能够专注于代理人可以采取什么操作，这是一个较小的问题，而不是专注于这些操作可以组合的所有方式。
+
+Another strength of planners is the ease of how they can be extended. 规划者的另一个优势是扩展非常容易。
+
+Adding an action to the list of available actions immediately allows the AI to use that action in all situations that apply. 将操作添加到可用操作列表中，会立即允许 AI 在所有适用情况下使用该操作。
+
+Planners also have significant weaknesses. 规划者也有显著的弱点。
+
+The most important one is that it is by far the most CPU-intensive way to come up with a plan. 最重要的是，这远远是制定计划最占用 CPU 的方式。
+
+The architectures discussed previously offload this work to the programmer who creates all the plans available to the AI offline, and at run time, the AI only needs to decide which plan is the best option at any given time. 之前讨论的架构将这项工作卸载给程序员，由程序员离线创建 AI 可用的所有计划，在运行时，AI 只需要决定在任何给定时间哪个计划是最佳选择。
+
+Of course, that puts the onus on the programmer to come up with a plan for all possible scenarios to ensure that an agent always has a reasonable response, and if there are scenarios that the programmer has not considered, then there might be exploits or just bad reactions of the AI in the shipped product. 当然，这让程序员必须为所有可能的场景制定计划，以确保代理人始终有合理的响应，如果程序员没有考虑到某些场景，那么在交付的产品中可能会出现漏洞或 AI 的糟糕反应。
+
+It might sound like a tall task, but as it turns out, for many games, it is not that difficult. 这听起来可能是一项艰巨的任务，但事实证明，对于许多游戏来说，并不那么困难。
+
+In most games, particularly action games, the AI's life expectancy is very short, and they are engaged in a very active constrained activity (usually combat). 在大多数游戏中，尤其是动作游戏，AI 的生命周期非常短，并且它们正在参与非常活跃的受限活动（通常是战斗）。
+
+Commonly, the majority of development time is spent on finding and fixing edge cases, something you would have to do when using a planner too. 通常，大部分开发时间都花在寻找和修复边缘案例上，使用规划者时也必须这样做。
+
+To compound the issue of the overhead for planning, plans in these kinds of environments usually do not last very long, often mere seconds, or even just fractions thereof, after which a new plan needs to be generated, exacerbating the performance problems. 为了加剧规划开销的问题，这类环境中的计划通常不会持续很久，通常只有几秒钟，甚至只有几秒的几分之一，之后需要生成新计划，加剧了性能问题。
+
+Where planners do shine is in situations where the AI can create long-term, complex, and stable plans where optimising its actions is important. 规划者确实发光的地方是 AI 可以创建长期、复杂且稳定的计划，并且优化其操作很重要的情况下。
+
+#### 6.4.9 HIERARCHICAL PLANNERS
+
+As with many of the other solutions, planners can be hierarchical. Hierarchical Task Networks is the most well-known version of a hierarchical planner. 与许多其他解决方案一样，规划者可以是分层的。分层任务网络是分层规划者最著名的版本。
+
+Such an approach has a significant benefit compared to non-hierarchical planners in that it is easy to create a system that is only creating a partial plan. 与非分层规划者相比，这种方法有一个显著的优势，即很容易创建一个只生成部分计划的系统。
+
+This gets filled in as needed and can result in significant CPU savings. 这会根据需要填充，并可能带来显著的 CPU 节省。
+
+### 6.5 CONCLUSION
+
+At this point, you might be wondering which architecture is the best as all of them seem to have strengths and weaknesses. 在这一点上，你可能会想知道哪种架构是最好的，因为它们似乎都有优势和劣势。
+
+The short answer is that none of them is the best. They are all good at different things. 简短的回答是，没有一种是最好的。它们各擅长不同的领域。
+
+Understanding these strengths and 理解这些优势和
+
+
+
+弱点使你能够正确分析特定解决方案如何满足你项目的需求。
+
+你可能也听说过某款成功游戏使用了一种架构，而本章认为该架构并不最适合那类游戏和 AI。例如，有几款知名动作游戏将规划器作为其 AI 的基础。这意味着本章是错的吗？不是。仅仅因为某种架构不够适合或对于特定问题来说大材小用，并不意味着它不能用于解决该问题。此外，选择使用何种架构并非凭空而定。一家公司可能已有现成代码、工具和专业知识，这会使使用某种类型的架构对他们来说更容易；不过，事情通常是这样，大多数决策架构仅占项目 AI 代码的一小部分，而在精心挑选的架构上进行的初始投入，能在很大程度上让开发过程更加愉快。
+
+另一个重要观点是，没有什么能阻止你混合搭配解决方案。如果你 AI 的顶层最好由有限状态机（FSM）描述，而行为树更适合其余部分，那么你可以同时使用两者；如果需要在医疗包和弹药拾取之间做出决策，你可以在行为树中加入一个基于效用的节点。当然，实现多种解决方案需要额外的大量工作，或许你只能选一个，这种情况下，选择最适合你要解决问题的那个即可。
+
+## 7 《飙车之王》中的高速车辆驾驶
+
+艾伦·布鲁斯博士
+
+### 7.1 简介
+
+《飙车之王》的核心玩法特色之一，就是让玩者在繁忙的巴塞罗那城市中与 AI 控制的敌方车辆进行高速追逐。游戏中有两类 AI 车辆。第一类是人口稠密的交通系统，由以缓慢且可预测方式在世界中移动的车辆 AI 组成。第二类是高速且不可预测的车辆 AI，其行为更类似于电影车追场景中见到的车辆。玩家和 AI 在相互进行高速追逐时，都需要在交通和其他障碍物之间导航。
+
+本章描述了用于确保高速 AI 控制车辆绕过这些障碍物并避免碰撞的方法，同时保持足以让玩家保持投入的高速行驶。
+
+本章详述的方法被称为“高速车辆驾驶”（HSVD）。这些方法包括：将可导航的 3D 世界转换为 AI 更容易推理的线性路径空间，其中所有障碍物都经过模拟和表示；用于让 AI 驾驶更具自然感且更像玩家的方法；计算导航路径空间的最优解；以及将其转换回可玩世界的方法。HSVD 使 AI 能够以快节奏、可信的方式在《飙车之王》的世界中驾驶。
+
+### 7.2 构建路径空间
+
+让 AI 在三维空间中进行推理是一项艰巨的任务。幸运的是，《飙车之王》的可玩世界基本上是平坦的，可以轻松表示为 2D 平面。寻路是通过传统的导航网格实现的，这些网格沿着街道用于高速追逐。为了进一步简化 AI 的问题空间，会从俯瞰的 2D 世界空间转换为线性路径空间。这种表示方式从问题空间中移除了所有转弯，理想情况下 AI 车辆只需沿着这个转换后的空间行驶，因此只需考虑它们相对于道路中心线的偏移。图 7.1 展示了从世界空间到路径空间转换的结果。
+
+执行此转换的方法是遍历道路的每个段落，并使用道路段中心线的长度来表示路径空间中该段落的长度。要转换世界空间中的一个点，需要计算该点到中心线的垂直距离，以及线段两端道路每侧到中心线的垂直距离。该点到中心线的距离与道路侧边距离之比，用作路径空间中的 y 坐标，其中道路中心值为 0，负数表示中心左侧的点，正数表示右侧的点。如果 y 坐标的值为 –1，则该点位于道路最左侧边缘；+1 则位于道路最右侧边缘。
+
+要计算路径空间的 x 坐标，执行类似上述的计算，但改为求沿着与道路中心平行的方向上段上的距离。该段上的比例在段起点为 0，在段终点为 1。每个段落也按顺序索引，0 代表 AI 当前所在的段落。负值也用于表示位于 AI 当前段落后方的段落。
+
+在图 7.1 中，两个示例点分别在世界空间和路径空间中显示。点 A 位于段落 2 上，大约处于段落中点，因此 x 坐标约为 0.5。该点略偏离中心线左侧，因此 y 坐标约为 –0.1。它将被表示为一个三参数向量 (2, 0.5, –0.1)。使用相同技术，可以轻松看出点 B 在路径空间中大约表示为 (5, 0.9, 0.8)。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_74_0.png)
+
+图 7.1 从世界空间转换到路径空间。
+
+值得注意的是，这些路径空间的 y 坐标并不限制在 –1 到 1 之间，因为导航网格通常比道路更宽。有时，如果玩家这样引导，追逐可能会驶离道路。AI 可以跟随驶离道路，但它会尽可能保持在道路上。然而，x 坐标受限于 0 到 1 之间，如果超出此范围，则该点位于前一个或下一个段落。
+
+### 7.3 障碍物
+
+为 AI 车辆提供简单的表示方式后，可以将障碍物添加到问题空间中供 AI 避开。最简单的障碍物类型是静态障碍物，分为两种：不可破坏和可破坏。由于静态障碍物不会移动，你只需获取障碍物的包围盒，并将每个角转换到路径空间中。由于被驾驶的车辆也有有限尺寸，需将障碍物每个转换后的点沿宽度和长度方向各扩展一半。这意味着你可以推理任何车辆可占据且不与障碍物重叠的障碍物外部点。图 7.2 展示了障碍物如何从世界空间转换到路径空间。左图中的道路段显示了标记为 A 的障碍物包围盒和标记为 B 的被驾驶车辆包围盒。右图中的道路段是同一段道路，但在路径空间中表示。这展示了障碍物包围盒如何转换为路径空间。虚线框是 AI 车辆的半径范围，已扩展到障碍物的最终边界。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_75_0.png)
+
+图 7.2 将障碍物从世界空间转换到路径空间。
+
+将这些障碍物添加到路径空间时，会包含一个权重，以阻止 AI 选择穿过它们。如果障碍物不可破坏，只需添加一个非常大的权重；如果障碍物可破坏，则应用与障碍物质量成比例的权重。例如，如果障碍物是交通锥，其权重会非常小；如果是公交站亭，其权重会高得多。这些权重将在后文详细讨论。
+
+### 7.4 将车辆模拟为障碍物
+
+为避开其他车辆，需要一种将车辆边界映射为路径空间中障碍物的方法。由于这些车辆是动态的，你需要模拟它们在路径空间每个位置相对于自身车辆的位置。将其分为两类：确定性和非确定性。顾名思义，确定性车辆是指其位置随时间可以准确预测的车辆。你可以将其用于游戏中的交通，因为你知道交通车辆的行驶速度及其在交通系统中选择的路线。为简化起见，《飙车之王》中的交通通常不会对附近的追逐做出反应，并仿佛没有追逐一样行驶。交通只有在迎头碰撞即将发生时才会反应，此时它们会选择避让。
+
+由于已知交通车辆的行驶速度，且你控制自身车辆的速度，因此可以预测与该车辆相撞所需的时间。你也可以计算完全超过该车辆所需的时间。为简化起见，这些计算将假设速度恒定来讨论；不过，在游戏中，你还需要考虑加速度。如果交通车辆的速度为 $v_t$，AI 车辆的速度为 $v_a$，那么只需求两者之差即可得到靠近速度 $v_c$：
+
+```
+$v_c = v_a - v_t$
+```
+
+知道靠近速度后，可以使用车辆间的距离（车辆中心之间的距离加上每个车辆的半长度），$d_{ta}$，来确定发生碰撞所需的时间 $t_{col}$，只需使用：
+
+```
+$t_{col} = d_{ta} / v_c$
+```
+
+如果取两辆车长度之和 $l_{ta}$，并使用靠近速度，则可以计算出超过该车辆所需的额外时间：
+
+```
+$t_{overtake} = l_{ta} / v_c;$
+```
+
+因此，接近并超过该车辆的总时间只是这些时间之和：
+
+```
+$t_{pass} = t_{col} + t_{overtake}$
+```
+
+
+
+
+
+如果你现在将这些时间转换为距离，你可以按如下方式将碰撞距离计算为你的速度与碰撞时间的乘积：
+
+\( d_{col} = t_{col} \cdot v_a, \)
+
+并按如下方式将完全超车距离计算为你的速度与完全超车时间的乘积：
+
+\( d_{pass} = t_{pass} \cdot v_a \)
+
+例如，考虑一辆以 35 m/s 行驶的 AI 车辆和一辆以 15 m/s 同向行驶、两车间相隔 50 m 的交通车辆。使用上述公式，你可以计算出在这种情况下的碰撞距离为 87.5 m（假设速度恒定）。如果两辆车的总长度为 4 m，你可以计算出完全超越该交通车辆的距离为 94.5 m。然而，如果是相同的场景但交通车辆现在是相向行驶（即迎面相遇），则其速度为 –15 m/s，导致碰撞距离为 35 m，完全超车距离为 37.8 m。图 7.3 显示了 AI 车辆和上述两辆示例交通车辆在世界空间中的当前位置以及转换到路径空间后的位置。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_77_0.png)
+
+图 7.3 HSVD AI 车辆和两辆交通车辆的当前位置及行驶方向。
+
+图 7.4 随后显示了交通车辆在路径空间中的模拟位置，包括用于保证不重叠的额外 AI 车辆边界。它还显示这些碰撞边界已转换回世界空间，但值得注意的是，这仅用于调试目的，不用于其他任何用途。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_78_0.png)
+
+图 7.4 AI 车辆超越两辆交通车辆时，以深灰色显示的两辆交通车辆的模拟边界框。原始位置和路径以浅灰色显示。
+
+### 7.5 启发式权重
+
+有了另一辆车辆相对于 AI 车辆行进进度的位置表示后，你还需要表示与该车辆碰撞会产生多大影响。为此，你需要考虑如果发生碰撞，对 AI 车辆速度会产生什么样的最终效果。假设碰撞是弹性碰撞，因为这最能代表 Wheelman 中使用的物理特性，因此可以使用以下弹性动量守恒公式：
+
+```
+m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2,
+(7.1)
+```
+
+其中 m_1 和 m_2 为两辆车辆的质量，u 和 v 分别表示初始速度和最终速度。使用弹性碰撞的动能公式，即：
+
+```
+m_1 u_1^2 / 2 + m_2 u_2^2 / 2 = m_1 v_1^2 / 2 + m_2 v_2^2 / 2
+(7.2)
+```
+
+你可以重排第一个公式，并按以下方式表示：
+
+\(m_1 (u_1 - v_1) = m_2 (v_2 - u_2)\) (7.3)
+
+如果你重排动能方程 (7.2)，你将得到：
+
+\(m_1 u_1^2 + m_2 u_2^2 = m_1 v_1^2 + m_2 v_2^2\) (7.4)
+
+\(m_1 (u_1^2 - v_1^2) = m_2 (v_2^2 - u_2^2)\) (7.5)
+
+\(m_1 (u_1 + v_1)(u_1 - v_1) = m_2 (v_2 + u_2)(v_2 - u_2)\) (7.6)
+
+用 (7.6) 除以 (7.3) 得到以下结果：
+
+\(u_1 + v_1 = v_2 + u_2\) (7.7)
+
+重排后得到：
+
+\(v_2 = u_1 + v_1 - u_2\) (7.8)
+
+如果你现在将此方程 (7.8) 代回到 (7.1) 中，你将得到：
+
+\(m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 (u_1 + v_1 - u_2)\) (7.9)
+
+最后，重排此方程，你可以得到计算 AI 车辆最终速度 \(v_1\) 的方程，只需知道初始速度和质量，如所示：
+
+\(m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 u_1 + m_2 v_1 - m_2 u_2\) (7.10)
+
+\(m_1 u_1 - m_2 u_1 + 2m_2 u_2 = v_1 (m_1 + m_2)\) (7.11)
+
+\(v_1 = (m_1 u_1 - m_2 u_1 + 2m_2 u_2) / (m_1 + m_2)\) (7.12)
+
+知道初始速度和最终速度后，你只需使用这种速度损失，并按如下所示乘以一个可调参数：
+
+\(w = k(u - v)/u,\)
+
+其中 \(w\) 是要为障碍物添加的权重，\(k\) 是可调参数，\(u\) 是 AI 车辆的初始速度，\(v\) 是最终速度。
+
+### 7.6 非确定性模拟
+
+上述步骤详细说明了如何以确定性方式模拟交通。玩家和其他 HSVD AI 是非确定性的，因此你必须采用略有不同的方法来模拟它们。由于这些车辆在发生碰撞所需的时间内可能会偏离，因此它们的模拟不需要那么精确。使用相同的碰撞权重计算，基于碰撞后的最终速度，但由于车辆行驶速度相似，权重通常要小得多。非确定性车辆的路径不太清楚；因此，简单假设它们以当前速度沿直线行驶。由于这种模拟精度较低，你不会像处理确定性障碍物那样将完整障碍物放入路径空间。相反，你添加一个排斥器，将在后面讨论。
+
+### 7.7 将障碍物细分为单元格
+
+一旦你将障碍物映射到路径空间，你就需要确定一种方法来分析问题空间并计算一个首选的驾驶目标位置。为此，你需要使用所有障碍物的边界将问题空间分解为四边形，并以当前 AI 车辆位置为源点，通过每个障碍物的每个顶点投射直线。你还需要通过在每个障碍物边上投射垂直线和水平线来分解空间。每个这样的四边形称为一个单元格。图 7.5 显示了围绕单个障碍物生成单元格的示例。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_81_0.png)
+
+图 7.5 基本问题空间，显示一个障碍物以及世界围绕障碍物如何细分为单元格。
+
+目标是在该 2D 路径空间中找到一个位置，以最小化一组启发式的代价。到目前为止讨论的唯一启发式是障碍物权重。用于实现平稳、有机驾驶的其他启发式将在后面讨论。
+
+AI 将要选择的路径近似为：在路径空间中从当前位置驾驶到一个给定的单点，然后从那里开始沿道路平行继续行驶。图 7.6 显示了这样一条目标路径，并展示了如何开始对单元格进行评分。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_82_0.png)
+
+图 7.6 AI 的一条示例目标路径以深灰色显示，启发式评分以不同深浅的灰色显示。
+
+中灰色单元格显示恒定的高代价，因为在这些单元格内选择目标点将保证与障碍物碰撞。浅灰色单元格的权重较低，因为驾驶到目标位置并不保证发生碰撞。后续的平行路径可能在接下来的几帧中找到更好的目标以避免碰撞。这些浅灰色单元格的权重取决于与障碍物的距离，最高权重位于障碍物边界处。
+
+### 7.8 单元格分解
+
+用于确定最佳目标位置的方法是：对所有单元格计算最小代价（所有启发式的总和）并将其添加到列表中。然后使用类似于 A* 的引导搜索来确定哪些单元格最相关以进行分解。代价最低的单元格会从集合中移除并细分为两个更小的单元格。然后分析这两个新单元格以找到它们的新最小代价，并将其放入所有单元格的集合中。这种细分将持续进行，直到最佳单元格的面积足够小，从而使其中心成为你选择的目标位置。
+
+单元格通过取其最长维度并将其分割来细分，以确保始终生成两个新的四边形单元格（或三角形）。如果你考虑图 7.6 中的浅灰色区域，然后在图 7.7 中，它展示了该单元格如何被细分两次。浅灰色单元格首先被细分为一个更小的浅灰色单元格和一个中灰色单元格。如果你再细分中灰色单元格，你将得到一个更小的中灰色单元格和一个深灰色单元格。当评估给定单元格的代价时，你分别找出该单元格中每个启发式的最小值并将其相加以获得总最小代价。当一个单元格被细分时，两个新单元格不一定与其父单元格具有相同的最小代价；但是，它们保证永远不会低于其父单元格的代价。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_83_0.png)
+
+图 7.7 细分单元格以生成更小的单元格。
+
+### 7.9 其他启发式
+
+避免碰撞是繁忙街道中可信驾驶的一部分。另一部分是让车辆平稳移动，像玩家一样驾驶。为了确保实现这种行为，你需要向路径空间添加一些权重启发式来引导车辆。有两个这样的重要启发式用于确保 AI 选择流畅的路径，而不是从一侧剧烈转向另一侧的路径。首先是确保 AI 尝试沿着路径更远处转向，而不是非常靠近当前位置。这是通过添加一个梯度来实现的，该梯度从 \( y = 0 \) 处的高权重开始，并在沿 y 轴的给定距离处衰减到零。此距离取决于速度，即较低速度时距离较短，而较高速度时距离较长。要应用的第二个启发式是偏好沿当前方向转向。沿当前速度方向的点权重为 0，但随着角度远离速度方向增加，点的权重会越来越高。这些综合启发式如图 7.8 所示，你可以看到一个“甜点位置”（最低代价，最浅灰色阴影），如果不考虑其他启发式，将选择该位置。
+
+
+
+
+
+![](img/f4a4f6e4de5338a867590c30638990cf_84_0.png)
+
+图 7.8 添加启发式，鼓励 AI 选择不太靠近其当前速度（箭头所示）前方且行进方向相同的位置。
+
+可以使用多种其他启发式来确保 AI 驾驶看起来自然流畅。这里不再详细讨论，但包括：
+
+- 一个启发式，旨在鼓励 AI 在同方向行驶的车流车道内行驶，并阻止使用对向车道。该启发式也带有权重，因此如果 AI 要在某条车道上行驶，它更倾向于车道中央。
+- 另一个启发式用于阻止 AI 选择在中间分隔带或人行道上行驶，并增加进一步权重以阻止驶出人行道。
+- 一个启发式，用于阻止 AI 驾驶得太靠近另一辆车辆。
+- 另一个偏好在短时间内选择目标位置的启发式。将前一帧选择的位置作为负权重添加进去，如果在权重衰减到零之前短时间内重新选择该位置，负权重会暂时变强。
+
+添加到路径空间中的最后一个启发式是用于辅助编队驾驶。在游戏过程中的某些时刻，你可能希望 AI 进行编队驾驶，并利用车辆撞击玩家车身侧面，或者保持相对于玩家的某个位置，以便玩家可以轻松预测其位置并反向撞击他们。为实现此目的，你对这些区域应用负权重，如果路径上没有障碍物，AI 会选择前往这些区域。这些区域被称为斥力点，如前面在非确定性模拟中讨论过。如果权重为正，斥力点用于劝阻 AI 选择某个位置；如果权重为负，则用于说服 AI 选择某个位置。这些斥力点大小非常小，约为 0.5 平方米，但如果确切点不合适，它们会在更远的距离上逐渐消失。
+
+将所有这些启发式结合起来，你就能得到一个过程，使 AI 车辆驾驶看起来自然逼真、避碰效果良好，并可用于鼓励编队位置。这个拼图的最后一部分是确定车辆的速度。这相对简单，因为你通常只需要匹配玩家的速度。因此，以玩家速度为基准，如果 AI 在前方，则设置目标速度略慢于玩家；如果 AI 在后方，则设置目标速度略快于玩家。在某些场景中，你可能希望 AI 尽可能快速行驶，因此可以将目标速度设置为车辆的最高速度。AI 应仅在选择的目标位置位于任何潜在碰撞单元内时（如图 7.6 中浅灰色单元所示），才会在路径空间中覆盖这些目标速度以减速。当出现这种情况时，只需将目标速度设置为与将要碰撞的车辆相同，一旦出现无碰撞目标，就可以再次提高其目标速度。
+
+### 7.10 转换回世界空间
+
+有了在路径空间中寻找无碰撞路径的方法后，你需要将其转换回世界空间，以便 AI 能在游戏世界中正确转向。为此，请查找路径空间中目标路径与各段边的每个交点，并将这些位置转换回世界空间。图 7.9 展示了 AI 在《Wheelman》中可能遇到的典型场景示例。图 7.10 随后展示了模拟结果以及转换回世界空间的所选目标路径。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_86_0.png)
+
+图 7.9 典型的游戏内场景，显示需要避开的几辆交通车辆。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_86_1.png)
+
+图 7.10 典型的游戏内场景模拟，并显示以虚线深灰色表示的穿过交通流的目标路径。此路径在路径空间中显示，并已转换回世界空间。
+
+现在你在世界空间中拥有一条可供 AI 沿行驶并避开任何碰撞的路径，但问题的最后一部分仍然存在。尚未考虑世界空间中目标路径的曲率。由于 AI 驾驶的是经过物理模拟的车辆而非作弊，你需要沿着这条世界空间路径查看，并根据其曲率限制所选速度。这样可以确保 AI 保持在路径上，不会转向不足并撞上你费尽周章避开的障碍物。为实现此目的，你需要在由一个巨大平坦平面组成的测试关卡中为车辆构建速度表。对于每种 AI 车辆类型，设置其以恒定速度以固定间隔行驶，例如 5、10、15 m/s 等。然后，在这些速度下分别将车辆完全向一个方向转向，并记录它们能达到的弧线半径。作为测试的一部分，还需记录车辆减速的速度，以便准确判断制动距离。一旦你了解世界空间中路径的曲率，就可以查找速度表并确定是否需要减速，以实现无转向不足的路径行驶。
+
+### 7.11 结论
+
+本章概述了在 Wheelman 的繁忙交通环境中高速行驶并避开任何碰撞所使用的方法。展示了如何将世界空间道路转换为线性路径空间，以及如何在该路径空间中表示障碍物。同时也展示了如何在此空间中模拟移动车辆，以及如何使用一组启发式来引导 AI 选择类似玩家驾驶方式的平滑流畅、自然有机的路径。详细说明了如何分解路径空间并找到要驶向的目标位置，以及如何将其转换回 3D 世界。
+
+该方法的效果非常好。AI 在行驶时碰撞非常少，并且看起来很自然。游戏过程中最多可同时有六辆 AI 车辆行驶，每辆车辆在 PC、Xbox 360 和 PlayStation 3 硬件上每帧都执行此单元分解方法，因此也非常高效。
+
+## 致谢与许可
+
+特别感谢 Ben Marsh，他提出了其中一些想法并参与了许多长时间的讨论，也感谢 Shaun Himmerick 允许我们在本书中分享这些想法和方法。
+
+## 8 体育游戏中的 AI 感知
+
+Paul Roberts
+
+### 8.1 引言
+
+在任何体育游戏中，非玩家角色（NPC）都需要评估大量内容。本章将重点介绍美式足球游戏。在进攻时，NPC 需要了解队友和对手，他们需要定位自己以便在不被拦截的情况下接球，并且需要评估威胁并做出相应反应。在防守时，分析对方球员构成的威胁是一项挑战。由于战术是秘密选择的，防守方无法知道对方球员会做什么以及会去哪里。这是游戏的核心组成部分，做出适当反应是阻止进攻方获得宝贵十码的关键。
+
+然而，人类玩家需要感觉是自己在发挥作用。如果 AI 阻断每一次进攻，或者反过来无法阻断任何进攻，人类玩家就会感到被欺骗，或者感觉游戏在自动进行。此时 AI 团队会陷入“进攻方太强，所以改进防守 AI”的循环；接着又是“防守方太强，因此做出额外改进以提升进攻方”。循环不断。简单修改属性（例如速度）来让某支队伍表现更好很容易，但这可能是一种粗暴的手段。
+
+本章详细介绍了采用的几种方法，这些方法允许拥有相同角色（例如两名角卫）且运行相同代码的不同球员表现出不同行为。这种方法让 AI 能够做出正确决策，但由于这些决策基于通过对对手的感知所认定的威胁，因此当时能够选择出不同且更具可信度的响应。
+
+### 8.2 位置感知
+
+以外接手的角色为例。他们的职责是跑到一个位置，使四分卫可以安全地将球传给他们。这可能意味着尽可能向前场跑动，并与负责盯防他们的角卫之间制造分离距离；也可能意味着向内切入或之字形跑动，诱导角卫跑错方向，从而制造该分离距离。如果所选方法仅仅是向前场跑动，那么外接手与角卫之间的速度差就是所需的全部条件。但这并不能体现外接手的智慧。那么，如果一名外接手与盯防他们的球员速度相同，或者更慢，该怎么办呢？这样的球员绝不应该被选入球队。
+
+
+
+
+
+并且永远是传球的糟糕选择。正是在这些情况下，AI 意识变得无价。
+
+对对手球员的意识是通过允许每个玩家保留关于对手的本地信息来实现的。这些本地信息是他们对对手的看法，而不是实际信息。通过定期刷新这些数据，可以确保玩家具有一定的意识，但也允许玩家对场上的情况做出较慢的反应。
+
+为实现此功能，每个玩家需要一个结构体列表，列表中的每个结构体引用一个对手。结构体包含以下详细信息：
+
+- 玩家 ID
+- 上一次已知位置
+- 预估位置
+- 方向
+- 速度
+- 当前刷新时间
+- 刷新持续时间
+
+其理念是每个玩家都会跟踪他们认为对手在场上的位置。因此，在游戏开始时，每个结构体都会填充有关对手的精确详细信息。随着比赛的进行，当玩家查看该对手或刷新时间已过期时，玩家将使用准确的位置数据刷新结构体。在所有其他时间，每个结构体中的数据都将根据玩家认为对手所在的位置进行猜测更新。这是通过获取对手的方向和速度，并计算如果他们继续沿该轨迹移动，将位于场上的什么位置来实现的。
+
+请查看图 8.1。穿黑色球衣的球员是角卫，正试图防守对方外接手后方的任何传球。角卫试图站在四分卫和外接手之间，通常距离外接手一码或两码。图片还显示了外接手计划跑动的路线。角卫没有这些信息，应随着比赛进程做出反应。在此阶段，角卫存储外接手的位置、他跑动的方向和速度，然后启动刷新计数器。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_90_0.png)
+
+图 8.1 基于比赛开始时精确数据的意识。
+
+比赛开始时，外接手开始跑动，角卫需要做出反应。如果他们的意识刷新率太长，他们认为外接手所在的位置可能是正确的，但也可能是错误。图 8.2 所示的示例中，对手在后方蛇形跑动，这意味着角卫现在防守的是错误的位置。外接手已经创造了所需的分离，以允许四分卫传球，这与两名球员的速度关系不大。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_91_0.png)
+
+图 8.2 意识导致球员防守错误位置。
+
+#### 8.2.1 刷新率
+
+刷新率对玩家被感知的智能程度有很大影响。刷新率意识有三种形式。第一种方法是根据计时器刷新每个对手的结构体。第二种方法是使用整体刷新率，在刷新发生时将所有对手数据重置为准确。两种方法都可以通过为特定玩家（观察玩家）加入意识属性来增强。意识属性是 0 到 1 之间的值，0 表示意识极强的玩家，1 表示意识持续时间较短的玩家。观察玩家的刷新时间随后设置为最大刷新时间乘以该属性。因此，意识属性为 0 的玩家将具有 0.0 秒的刷新率，意味着他们每一帧都能获得最新信息。属性为 1 的玩家将把刷新率设置为最大刷新时间。大约 0.6 秒对我们有效。
+
+刷新数据的第三种方法是视野法。如果玩家能看到对手，那么该对手的数据会立即刷新，并且他们对该对手拥有最新信息。其他不在视野内的对手只有在刷新时间过去后才会更新（方法一或二）。这种方法模拟了玩家环顾场地以确保知道对手在哪里的情形。添加一个执行此操作的动画也有助于营造这种假象。
+
+通过结合这些方法，你可以达到理想的效果：看到球员跑到身后或视线之外，偏离其预测路线并制造分离。球员看起来具有反应能力，并且似乎正在以正确的方式处理威胁，且没有球员会拥有一个过时到看起来很愚蠢的对手或队友。如果你将意识属性暴露给人类玩家，他们会完全明白为什么他们的团队对威胁的反应较慢。通过在游戏中加入训练来提高该属性，你就拥有一个现成的反馈循环，它能让玩家继续玩你的游戏，同样重要的是，让他们理解 AI 为什么以这种方式运行。
+
+#### 8.2.2 注意事项
+
+你可能会发现，当对手在观察玩家的视野内时使用自动刷新会终结这种位置意识方法。特别是，如果相关运动项目是双方球队位于场地两侧的项目，因此玩家可以看到大多数对手。如果是这种情况，你可能会发现移除视野方法而仅使用一种刷新率方法效果很好。这种方法也使加入难度设置变得更容易。
+
+在实现这种方法时，至关重要的是 AI 做出的任何决定都使用意识位置。通常，获取对手位置还有其他方法，但问题是这些方法会导致对手的实际位置。因此，当其他游戏玩法程序员实现机制时，他们应该查询相同的结构体；否则，看起来就像玩家突然确切知道对手在哪里一样。这看起来可能很奇怪，并且可能看起来像是 AI 在作弊。
+
+### 8.3 威胁意识
+
+影响 AI 运动员的玩家意识的另一个领域是如何确定哪些对手被视为威胁。无论是进攻还是防守，对方球员都对球队的目标构成威胁。如何评估这些威胁是场上每个球员意识的一个重要方面。
+
+在查看角卫的 AI 时，如果他们盯防的球员与另一名球员交叉跑动，由他们来决定盯防谁。是继续盯防他们一开始盯防但现在已跑向场地中部（队友可能在那里盯防）的外接手，还是停止盯防目标，转而追赶现在跑向场地边缘的对手。不同的玩家会根据场景做出不同的事情，但在电子游戏中，AI 看起来至少需要做出明智的决定。
+
+#### 8.3.1 威胁过滤器
+
+为确保代码可重用且模块化，开发了威胁过滤器的概念。不同的 AI 行为根据需要使用尽可能多或尽可能少的过滤器，这些将在下一节中详细说明。在评估威胁时，观察玩家存储一个值数组（场上每个对手球员一个值），用于指示威胁的权重。在每次更新时，在处理可用过滤器之前，权重会先设置为零。每个单独的过滤器都会根据威胁的标准修改此权重。每个威胁最多可返回值为一，但在大多数情况下，会为该过滤器返回一个权重。权重是一个可调整的值，可以由设计设置，但绝不能超过一。所有过滤器处理完毕后，累积权重除以过滤器数量，以得到 0 到 1 之间的威胁值。观察玩家现在将了解哪些对手球员对其球队构成最大威胁。
+
+可以应用多种不同的威胁过滤器，下面仅描述了使用的过滤器子集。重要的是，每个过滤器处理一种评估，而更复杂的评估则通过叠加过滤器来完成。
+
+##### 8.3.1.1 对手持球者距离过滤器
+
+如果观察玩家在进攻方，他们的工作是保护持球的队友。要识别对手是否对持球者构成威胁，将持球者与正在分析的对方球员之间的距离除以最大距离，以得到 0 到 1 的值。
+
+##### 8.3.1.2 对手观察者距离过滤器
+
+有时，对方球员到评估威胁的代理的距离是一个重要因素。距离较近的球员被认为比较远的球员构成更高的威胁。例如，观察玩家可能是持球者，希望在被擒抱前尽可能多地向前推进码数。如果此威胁可用于该行为，那么观察玩家与正在分析的对方球员之间的距离除以最大距离，以得到 0 到 1 的值。
+
+##### 8.3.1.3 对手端区距离过滤器
+
+如果对方球队持球，持球者到端区的距离是一个巨大的考量因素。他们离端区越近，威胁越大。将此过滤器纳入威胁分析时，持球者与端区之间的距离除以最大距离，以得到 0 到 1 的值。
+
+##### 8.3.1.4 相对于持球者的前场位置过滤器
+
+当观察玩家的球队不持球时，阻止持球者推进码数很重要。如果他们在持球者前面，应将持球者视为威胁，但如果他们已经落在持球者后面，且几乎没有追上的机会，则他们无能为力。对于此过滤器，将观察玩家的场上位置与持球者的位置进行比较。如果他们在持球者前场（他们位于持球者和端区之间），则威胁值设置为此威胁的权重，否则根据距离远近按比例缩减至零。
+
+##### 8.3.1.5 区域内对手位置过滤器
+
+对于需要保护区域的球员，该区域内的任何对方球员都被视为威胁。观察玩家控制的区域内的任何对方球员都返回此威胁的权重，而不在区域内的任何对方球员都返回零值。
+
+
+
+
+
+##### 8.3.1.6 对手持球者过滤器
+
+对方球队的持球者始终是一种威胁。因此，此过滤器很简单。如果对方球员持有球，则该过滤器返回值为1，否则返回值为0。
+
+##### 8.3.1.7 接球手定位外侧的对手定位过滤器
+
+当防守球员试图防守接球手时，将移向场地外侧边缘的对手球员视为威胁对他们很重要。这是因为接球手随后可以几乎不受阻碍地向前跑，而四分卫可以向前传球给他们。为了将此纳入AI中，此过滤器用于计算对手球员位置与场地半宽的比率，以得出0到1范围内的威胁值，1表示球员位于最外侧，0表示球员位于场地中心。
+
+##### 8.3.1.8 对手当前正在人盯人防守过滤器
+
+球员有时会盯防对方球员。为了确保队友不会都聚集在同一名对手周围，使用了被人盯人防守的概念。在内部，这是一个由球员存储的变量，包含盯防他们的球员ID。此过滤器检查是否已存储有效的球员ID，如果是，则返回值为零，否则返回此威胁的权重。
+
+多名球员将同一对手视为最高威胁是一种有效结果，有时应有多名球员试图处理此威胁。不过，此过滤器降低了这种情况的发生概率，并且在游戏中，任何时候最多只有两名球员（盯防者和观察者）会尝试处理已经有队友盯防的威胁。
+
+##### 8.3.1.9 对手是潜在接球手过滤器
+
+在防守时，AI理解哪些对手可能会接到传球至关重要。潜在接球手由其在球队中的角色决定。这些包括外接手、近端锋和跑卫。此过滤器检查对方球员的角色，如果是潜在接球手，则返回此威胁的权重，否则返回零。
+
+#### 8.3.2 行为中的威胁过滤器
+
+在美式足球中，威胁评估取决于球员当前的角色和比赛规则。采用的方法是按行为基础分析威胁。行为会按预期方式行动。有限状态机将是合适的，或者任何其他合适的方法。重要的一点是，威胁分析在行为之外进行。行为仅使用数据来确定哪些对方球员最值得关注，并相应地行动。例如，持球者总是试图向前推进，但需要避免来袭的威胁。随着威胁变化，持球者会调整以处理下一个最高威胁，并以避免被擒抱的方式进行机动。
+
+并非所有行为都需要威胁分析，因此为了节省CPU处理，不使用该信息的行为不会评估威胁。
+
+以下行为需要威胁，并且是整个游戏所需行为的一个子集。然而，它们展示了不同行为如何使用相同过滤器的不同组合，以适合玩家当前执行的行为的方式来评估威胁。
+
+##### 8.3.2.1 区域防守行为
+
+在区域防守中，球员位于场地防守方，必须跟踪试图找到好位置接球的对方球员。他们还应注意持球者进入其区域，这将导致此行为被替换为追逐持球者并擒抱的简单行为。
+
+为此行为评估的威胁过滤器有：
+
+- 对手是持球者过滤器。
+- 对手在区域内的位置过滤器。
+- 对手到达端区的距离过滤器。
+- 对手当前正在被人盯人防守过滤器。
+- 对手到观察者球员的距离过滤器。
+
+##### 8.3.2.2 引导阻挡者行为
+
+引导阻挡者是进攻方场上的一名球员，跑在持球者前方并阻挡任何来袭威胁。
+
+评估的威胁过滤器为：
+
+- 对手到持球者的距离过滤器。
+- 对手到观察者球员的距离过滤器。
+- 对手当前正在被人盯人防守过滤器。
+
+##### 8.3.2.3 持球者行为
+
+当场上任何球员得到球时，他们只有一项任务，那就是在对方球员将其擒抱之前，尽可能多地向前推进码数。
+
+为此行为评估威胁所需的过滤器是：
+
+- 对手到观察者球员的距离过滤器。
+
+### 8.4 结论
+
+意识是任何体育游戏中简单易加的特性，且效果显著。它并不消除对冲刺速度等其他属性的需求，只是增强了它们。当到了要在游戏中加入难度设置的时候（这似乎总是在开发后期），修改意识属性或威胁权重是一种微妙的调整游戏难度的方式，而不会让任何AI球员做出错误的行为。
+
+## 9 打造幻象
+
+难度场景
+
+Paul Roberts
+
+### 9.1 简介
+
+难度是游戏开发中一个常常被推迟到开发后期的方面。到那时，人们会因为游戏太难而陷入恐慌，需要找到一种方式让AI以既能给玩家带来挑战，又不会太强以至于玩家难以获胜的方式进行游戏。本章描述了从早期阶段就将难度纳入AI系统的方法，随后在此基础上扩展，创建了灵活的难度和难度场景。
+
+### 9.2 融入难度
+
+难度不应该是降低AI智能。游戏中的每个智能体都应该基于它们拥有的信息做出最佳决策。如果不给它们足够的信息，它们会显得愚蠢。给它们太多信息，AI会被认为是在作弊。关键在于AI做出正确的决策，这样它们就不会显得愚蠢，但执行反应的能力受到阻碍。换句话说，它们看起来无能，而非愚蠢。想象一款潜行游戏，其中AI守卫在巡逻。守卫的视野可以简单地修改，以便玩家可以悄悄溜过。如果视野不算太窄，玩家会接受智能体没有发现他们，但更好的做法是：智能体稍微晚一点发现玩家（视野缩小），然后采取瞄准和开火的反应，但智能体的瞄准不太准，所以他们错过了目标。也许智能体还会跑过去触发警报。守卫的奔跑速度也可以降低。这样，AI就能发现玩家，做出正确反应，开火时失手，并且触发警报的速度变慢。在这个场景中，玩家有机会避开守卫，但如果失败，他们就有机会消除威胁，为玩家创造更引人入胜的遭遇，同时AI也不会显得愚蠢。
+
+将难度引入游戏最糟糕的方法之一是修改玩家一方的AI。例如，在体育类游戏中，修改玩家球队的能力来增加对手难度从来都不是什么有趣的事。如果玩家球队跑得更慢，或者无法完成之前比赛中轻松完成的接球，玩家会注意到。玩家能看到正在发生的事情，沉浸感随之消失，玩家可能也随之流失。相反，任何修改都应该应用于对方AI。更好的做法是，对单个智能体进行修改。
+
+上述示例强调了尽早考虑AI难度的重要性。假设你设定了玩家奔跑的最高速度，并且玩家球队中的一个智能体被设为这个最高速度，那么让对方智能体跑得更快而又不让物理效果看起来失真就变得困难了。游戏在开发过程中一直在持续平衡，突然降低玩家智能体的速度会影响游戏性，并可能引发一系列意想不到的问题。相反，通过设置一个全局最高速度（该速度看起来和感觉上与游戏物理效果正确），并让智能体拥有一个与此最高速度相乘的缩放变量，就可以修改球队中所有AI球员的速度。还建议设置一个可应用的最高缩放值，仅允许AI超过这个值。例如，如果最高缩放设为90%，那么剩余的10%可用于为更难对手进行缩放。在体育类游戏示例中，更难的对手可以跑得更快，因为最高速度范围已被保留，而玩家球队不会感觉到自己被不公平地修改了。
+
+这种方法可用于速度以外的许多玩家属性，并且还可以将相同的思路融入AI信息收集的所有领域。例如AI意识或威胁分析等领域可以融入缩放因子，视野可以基于缩放值进行扩大或缩小，其他众多领域也是如此。AI仍然会基于拥有的信息做出最佳决策，并尽快做出反应，但你现在有能力降低其难度，而不会让它们显得愚蠢。AI的难度，进而游戏的难度，现在可以通过一系列变量来控制。如果将这些变量暴露给设计部门，通过屏幕UI或电子表格，他们可以调整这些数字，找到最适合游戏的平衡点。
+
+### 9.3 灵活难度
+
+大多数游戏至少会有三个难度等级——简单、中等和困难。这可以通过几种方式实现。第一种方法是为每个难度等级设置一个全局缩放值。在特定设置（简单、中等或困难）下游玩时，只需将最大值乘以该难度设置的缩放值。当单个智能体需要自己的设置时，它们会将自己的缩放值乘以新的（由难度缩放修改后的）最大值。或者，第二种方法是为每个AI领域（具有最大值）设置一个缩放因子。然后，逐个乘以每一个。
+
+第二种方法提供了最多的灵活性。与其让简单难度将所有领域的缩放值都降低50%，不如为每个领域设置不同的值。例如，将玩家速度修改50%看起来可能很荒谬，但将视野降低50%看起来没问题。表9.1给出了可应用于体育类游戏的AI领域和设置示例，以实现游戏平衡。
+
+
+
+
+### TABLE 9.1
+标准游戏的示例 AI 区域和数值
+
+| AI 可修改的方面 | 平衡游戏 |
+|---|---|
+| 属性 | 75% |
+| 位置感知刷新率（秒） | 0.6 |
+| 视野（度） | 90 |
+| 威胁感知权重 | 80% |
+| 传球准确度 | 75% |
+| 射门准确度 | 70% |
+| 时间管理 | 80% |
+
+表 9.1 中显示的示例值可由设计师进行微调，直到他们对游戏手感良好，且游戏难度处于中等水平。使用这些设置后，即可为每个难度设置设置缩放值，以修改标准游戏的这些数值。表 9.2 说明了如何为不同难度级别修改表 9.1 中的设置。
+
+### TABLE 9.2
+随难度可修改的示例设置
+
+| | 简单 | 中等 | 困难 |
+|---|---|---|---|
+| 属性 | -20% | - | +20% |
+| 位置感知 | +60% | - | +100% |
+| 视野 | -20% | - | +10% |
+| 威胁感知 | -10% | - | +10% |
+| 传球准确度 | -30% | - | +20% |
+| 射门准确度 | -40% | - | +30% |
+| 时间管理 | -20% | - | +10% |
+
+### 9.4 难度场景
+
+为球队（而非单个球员）增添一些个性是一个有趣的概念。在体育运动中，球队可能会连胜，其表现超出个人球员的预期；或者一支好球队可能陷入低迷，失去斗志；或者教练在中场休息时对球队进行严厉训斥，球队在下半场做出回应。通过扩展本章已介绍的想法，这一切都可以相当容易地实现。
+
+内部并没有理由只设三个难度等级。向玩家暴露这三个等级没问题，但在内部可以设置更多等级。七个内部难度等级与三个（简单、中等、困难）的暴露等级配合效果良好。这些内部等级可以称作：非常简单、简单、中等简单、中等、中等困难、困难、非常困难。这些内部设置应使主设定略微困难或略微简单。
+
+将前一节采用的方法推广到创建七个难度等级并不困难。
+
+创建更多难度等级的原因是允许在运行时切换等级，而玩家不知情。如果难度变化过大（例如，从中等到困难），玩家会察觉并感到被欺骗。而从中等变为中等困难则不是如此大的跨度。之后可以从中等困难切换到困难，玩家会接受这一变化。这只会让人感觉对方球队进入了状态。
+
+有了这七个难度等级，现在可以在游戏前和游戏中修改难度。以下场景在体育类游戏中效果都很好。
+
+#### 9.4.1 中场讲话
+
+中场休息时，如果对手落后或比分平局，教练可以对球队进行鼓舞人心的谈话，激发他们更好地发挥。无论外部难度设置为何，难度设置都会增加一个等级。例如，简单（外部）会移至中等简单（内部），或困难（外部）会变为非常困难（内部）。
+
+这不应保证对手获胜，但应使他们在下半场更难对付。人类玩家应该注意到这一变化，如果有某些游戏指示表明已发生此情况，会有所帮助。例如，用于告知玩家的 UI 或描述教练反应的音频。
+
+#### 9.4.2 危险时刻
+
+此场景是一种橡皮筋效应。每当人类玩家的球队领先时，对手球队的 AI 内部难度会增加。当比分再次平局时，难度会恢复到其原始（面向外部）难度设置。
+
+此场景能保持比赛竞争性，同时不会让对手突然变强变得太明显。
+
+#### 9.4.3 势头
+
+如果一支球队拥有势头，可能正在连胜，此场景会增加其难度。统计数据是体育游戏的重要组成部分，心理学也是，但游戏 AI 很少将其融入其中。此场景允许人类玩家查看对手的统计数据，但随后发现他们正在连胜，因此应预期一场苦战。
+
+#### 9.4.4 强防守
+
+有些球队擅长防守而非进攻，或者反之亦然。此场景允许在人类玩家的球队持球时更改内部难度等级。防守时只需增加难度，进攻时降低难度即可。
+
+修改球队防守球员的属性也能达到同样的效果，但采用这种方法更灵活，并能以一种直接的方式获得相同结果。修改多名球员的属性并进行平衡，所花时间远比为比赛设定一个场景要长。
+
+### 9.5 结论
+
+难度往往是项目后期才考虑的事情，之后便交由 AI 团队想办法让 AI 更容易对付。如果在项目早期就考虑这一点，您就可以以这种方式融入难度，从而创造有趣的游戏玩法场景，改善整体游戏体验并增加一些隐藏深度。尽管本章的大部分讨论都以体育游戏为例，但这些方法完全可以应用到其他类型游戏中。本章描述的方法均已实施，并按预期运行，当困难问题出现时，减轻了团队的压力。
+
+## 10 面向自动化视频游戏对战的学习智能体可控设计
+
+Dominik Gotojuch
+
+### 10.1 引言
+
+基于机器学习（ML）的游戏 AI 研究已取得多项显著成就，AI 在《星际争霸 II》（Blizzard Entertainment，2010）、《Gran Turismo Sport》（Polyphony Digital，2017）和《DOTA 2》（Valve Corporation，2013）（Wurman et al.，2022）等复杂视频游戏中战胜了冠军级人类玩家。然而，这些里程碑对商业视频游戏开发的迄今影响有限。学习模型已在部分精选作品的智能体 AI 中得到有效应用，包括《Creatures》（Millennium Interactive，1996）、《Black & White》（Lionhead Studios，2001）、《Forza Motorsport》（Turn 10 Studios，2005）和《Supreme Commander 2》（Gas Powered Games，2010），但这并非常见做法（Miyake，2017）。尽管该领域的游戏行业研究仍在进行中（Zhao et al.，2020；Sestini et al.，2022），但这些研究的报告稀少，其对已发布作品的影响尚未显现。现代视频游戏制作的复杂性和风险使得使用不可靠且昂贵的 ML 解决方案（Zhang et al.，2016；Zhao et al.，2020）难以得到合理化，而由 *专用* 行为创作方法生成的近似方案可提供令人满意的结果（Colledanchise & Ögren，2018）。先前将学习模型集成到智能体 AI 工作流中的努力，由于与工业工作流不兼容，未能为专业游戏开发提供最佳解决方案（Politowski et al.，2022）。需要一种可推广且非破坏性的方法来将学习集成到这些工作流中，以满足游戏开发的要求，并使其更易于应用于未来游戏。本章介绍了可能为实现这一目标做出贡献的上下文引导型智能体设计，以及其部署流程。
+
+### 10.2 背景
+
+由于具有模块化、响应性和可扩展性，行为树（BT）已成为视频游戏中实现智能体行为的事实标准（Yannakakis & Togelius，2018）。BT 的透明结构转化为有向树流，通过调用树节点中实现的逻辑，以固定时间间隔更新树中相关遍历路径的处理（Colledanchise & Ögren，2018）。为了弥补手动行为创作的局限性和风险（Sagredo-Olivenza et al.，2019），研究人员已探索了 BT 的动态重构与合成（Colledanchise et al.，2018；Lim et al.，2010）。这促成了基于示范学习的工作，即使用录制或实时示范来生成新的或改进的 BT 设计。尽管这些方案在一定程度上有效，但它们限制了领域专家的创作控制并掩盖了设计透明度（Politowski et al.，2022）。
+
+非行业研究中的学习驱动游戏 AI 主要集中在通用游戏 AI 上，它使用屏幕抓取而非游戏内部表示来学习游戏策略（Wurman et al.，2022）。这种方法培训成本高，且在合理时间内不太可能应用于商业游戏开发（Yannakakis & Togelius，2018；Zhao et al.，2020）。然而，任何黑盒学习模型都不适合迭代开发，因为对其设计的控制有限（Zhang et al.，2016；Politowski et al.，2022）。将学习模型集成到 BT 中（Colledanchise & Ögren，2018；Zhang et al.，2016）可以缓解这些限制，从而使 BT 的部分健壮性和模块化转移到其包含的学习模型上（Colledanchise & Ögren，2014）。这通过实现专用的 BT 学习节点来完成，该节点嵌入学习逻辑（Sagredo-Olivenza et al.，2017）。虽然直观，但该方案对学习节点执行的控制有限，且在节点执行失败时不提供可控的解决方案。执行失败可定义为产生无效输出，例如不想要的行为或违反执行安全性，可能会危及整个智能体行为逻辑的执行流程。Sprague 和 Ögren（2022）正式记录了一种安全的结构化方法来解决这两个问题，即通过在子树中嵌入学习逻辑，配合 *专用* 冗余与学习逻辑。
+
+### 10.3 上下文引导型智能体设计
+
+#### 10.3.1 概述
+
+为利用游戏行业中 BT 架构的普及，上下文引导型智能体设计涉及将带有安全性和性能保证的学习集成到智能体 AI 的 BT 开发工作流中。人类领域专家预计将继续处于设计过程的中心，并尽可能保留对智能体决策逻辑模型的控制（Sagredo-Olivenza et al.，2017；Politowski et al.，2022）。这有望降低在商业视频游戏运行时环境中使用学习的摩擦和风险。该设计的关键概念包括：
+
+- **上下文引导**：通过 *专用* 创作与分层方法来控制行为流程，以分离决策上下文和动作执行。
+
+
+
+
+
+- 安全学习集成：将学习逻辑直接作为子树集成到行为树（BT）中，具有专用的 BT 学习节点，以及临时安全控制逻辑。
+
+- 小规模学习：将每个学习模型实例的学习范围隔离到其相关的本地上下文中，以降低训练成本并提高输出质量。
+
+#### 10.3.2 上下文指导
+
+行为树（BT）的层次性、覆盖式架构有机地引导了行为逻辑的流动。通过将 BT 的这种固有属性与类似于层次增强学习（RL）的任务分解相结合，可以观察到 BT 中有三个上下文层：*宏观*、*代理* 和 *微观*（Justesen et al., 2020）。*宏层* 代表战略决策逻辑并位于树的顶部，而 *微层* 包含低级代理动作并位于树的底部（Colledanchise et al., 2018; Colledanchise & Ögren, 2018）。可选的 *代理层* 在需要时促进 *宏-* 和 *微层* 之间的连接。这种分层为学习子树的上下文相关定位和流程控制提供了有组织的结构。设计的上下文引导结构在图像 10.1 中可视化。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_103_0.png)
+
+图像 10.1 带有宏、微和代理层分离的上下文引导架构流。
+
+宏层和微层可以同时包含临时逻辑和学习逻辑，但如果存在代理层，则预计专用临时节点以保证专家流程管理。学习逻辑与临时逻辑的确切平衡留给设计者自行决定，所概述设计的模块化允许逐步增加学习子树的存在。它们的开发应从类似存根的临时实现开始。在预期的学习逻辑到位后，存根或其修订版本将成为最坏情况、安全回退执行路径。
+
+#### 10.3.3 安全学习集成
+
+执行学习逻辑可能是不安全且不可靠的。需要临时保障措施和回退逻辑来为集成学习创建性能和执行保证。在这种情况下，可通过将学习模型和临时安全控制逻辑封装在单个子树中来实现可靠性，如 Sprague 和 Ögren（2022）所讨论。在学习节点运行之前，执行安全控制器将执行一系列设计者定义的测试。如果失败，将中止整个学习子树的执行。否则，性能安全控制器将执行其自己的一组性能测试。性能测试失败将触发临时回退逻辑，随后结束子树执行。如果所有测试都成功，专用学习节点（包含实际学习逻辑）可以执行。之后，学习子树的执行将被完成。
+
+Sprague 和 Ögren（2022）的原始提案进行了修改，以解决其设计中的两个缺陷：缺乏临时回退逻辑执行保证以及性能安全控制范围有限。学习子树的修订组合流程如图像 10.2 所示，支持在学习逻辑失败后执行临时回退逻辑。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_104_0.png)
+
+性能测试的结构旨在支持多个稳定性和安全测试，基于安全（Chow et al., 2018）的 Lyapunov 设计方法概念，而不是将其限制为像原始提案中那样的单次响应控制测试。任何预期会触发临时回退的条件都可以纳入性能安全控制器逻辑中。
+
+#### 10.3.4 小规模学习
+
+每个学习子树可以独立运行，作为包含在其学习节点中的单个学习逻辑实例。由人类专家根据行为树（BT）的上下文引导结构，为每个子树分配所需的学习上下文。该程序受自动化任务分解研究（Justesen et al., 2020）的启发，应产生更小、更专业的学习模型，摆脱单体模型方法。优势包括提高模块化和设计控制，以及潜在的训练灵活性增加和成本降低。
+
+### 10.4 上下文引导代理部署
+
+#### 10.4.1 概述
+
+上下文引导代理模型实例的部署是一个迭代的开发-评估循环过程，采用以下步骤结构，其流程在图像 10.3 中描绘：
+
+![](img/f4a4f6e4de5338a867590c30638990cf_106_0.png)
+
+图像 10.3 上下文引导设计部署工作流。
+
+- 步骤 1：设计行为上下文
+- 步骤 2：建立学习子树
+- 步骤 3：实现上下文架构
+- 步骤 4：实现学习
+- 步骤 5：获取数据
+- 步骤 6：训练学习模型
+
+#### 10.4.2 步骤 1：设计行为上下文
+
+首先，必须识别预期行为流的上下文，以指导代理的 AI 设计。通过针对可用动作空间和代理目标对目标游戏环境进行需求分析，可以将行为目标映射到 *宏层*，将所选动作映射到 *微层*，并在必要时将它们的连接映射到 *代理层*。这些假设只有在初始模型部署后才能验证。在生产的早期阶段，这可能不可能，因为游戏环境的完整知识可能尚未可用。在这种情况下，知识更新应迭代地集成到设计中并扩展行为上下文的原始范围。
+
+#### 10.4.3 步骤 2：建立学习子树
+
+上下文的早期设计指导行为流的临时实现，但不提供设计中包含学习的信息。要将学习纳入代理的行为，设计者需要识别可以从建模为学习逻辑中受益的流段。可能的候选者包括满足以下任何条件的段落：
+
+- 需要高度自适应
+- 无法使用临时结构充分表示，无论是由于手工编写逻辑的限制，还是在尝试扩展它们时出现的高昂复杂性
+- 预计会基于演示数据产生模仿输出
+
+将行为流段与学习一起建模的决定应由对其学习策略生成方法的明智选择所支持。任何与上下文要求兼容的单独技术都是可接受的，但如果有效使用，集成方法已知能产生更高质量的输出（Yannakakis & Togelius, 2018）。技术选择与上下文信息相结合，确定了目标学习逻辑的数据要求以及所需的后续技术工作范围。
+
+#### 10.4.4 步骤 3：实现上下文架构
+
+建立行为上下文架构的技术基础涉及 BT 流结构化以及实施特定于游戏环境的解决方案，以促进行为上下文的流动。这些任务可能因所使用的游戏环境和工具而异，但工作流程保持不变：
+
+- 实现通过 BT 与游戏环境交互的功能
+- 实现临时 BT 流（宏层、代理层和微层）
+- 在临时 BT 流中实现学习子树的存根
+- 为每个学习子树存根实现临时回退逻辑
+
+一旦实现达到可以进行评估的阶段，就可以开始测试和微调的迭代循环。应在游戏环境中评估已实现的上下文架构，以参考已识别的行为目标和功能考虑。如果产生的行为有效且代表预期的行为上下文，则可以将临时代理模型声明为稳定。否则，需要通过重复一个或所有步骤 1–3 来修订架构，直到问题解决。
+
+此步骤的预期输出是基于 BT 的行为上下文实现，如步骤 1 和 2 所述，包括学习子树的存根版本。行为流的这种临时版本将构成性能和质量方面的最坏情况执行场景。
+
+
+
+
+
+#### 10.4.5 第 4 步：实现学习
+
+此时，稳定的临时代理模型已配备存根学习子树，这些子树仍缺乏实际的学习逻辑。学习逻辑表达于专用学习节点中，需要实现并插入到每个学习子树中。专用学习节点实现的具体细节将取决于一组本地技术因素，包括项目架构、所用工具以及游戏环境的实现。在某些情况下，单节点实现就足够了，例如，如果相同的学习技术将用于许多学习子树中。更复杂的场景可能需要一系列学习节点专业化，这些专业化可以解决本地训练和推理要求。
+
+#### 10.4.6 第 5 步：获取数据
+
+不同的学习方法有不同的数据要求。在某些情况下，例如使用 RL 技术时，数据将从代理的训练时观察中获取，因此已在第 4 步的学习实现中涵盖。如果是这种情况，可以跳过第 5 步。否则，需要适当的数据获取和转换程序来为目标学习模型准备有效的数据集。探索此过程超出了本工作流程的范围，但可以根据需要简单或复杂。输入数据集必须可在目标游戏环境中使用，并与相关学习子树的策略生成策略兼容。
+
+#### 10.4.7 第 6 步：训练学习模型
+
+工作流程的最后一步专注于迭代训练学习模型。每次训练迭代都会生成一个输出代理模型，以便在游戏环境的上下文中进行评估，以确定其行为是否有效，并且在概述的行为上下文方面质量是否满意。很可能需要多次训练，因为修订训练的参数化和时机将影响生成的策略。建议在目标游戏环境中进行代理模型推理评估。第 3 步的行为上下文验证应在第 6 步中重复。如果检测到任何底层上下文问题，可能需要重复步骤 1–3 以解决发现的任何问题。对行为质量的评估在许多方面是主观的，需要人类专家的评估。为了补充该评估，应使用数据驱动的措施来定量比较不同的代理输出模型修订版。这使得迭代训练-评估循环自动化，并可能使用进化算法驱动其修订，以程序化改进输出模型。定量比较可能仅关注输出适应度，但最终，基于游戏上下文得出的度量的整体视角可能与输出质量相关。质量问题可能导致重复步骤 4–6 的全部或部分，以改进学习实现、其输入数据集或策略训练。在训练的游戏策略达到所需质量水平后，上下文引导的代理行为模型即可在目标游戏环境中部署。
+
+### 10.5 结论
+
+本章所述设计展示了一种与游戏行业工作流程兼容的方法，用于将学习逻辑集成到基于行为树（BT）的代理 AI 行为创作中。所提出的概念需要在商业视频游戏环境中应用和测试，以提供真实且行业可行的学习集成场景。为此，作者目前正在尝试在游戏 60 Seconds!（Robot Gentleman, 2015）中部署所提议的设计，以训练基于技能和风格玩家人格的游戏玩家和自动化游戏测试代理。将学习成功集成到游戏代理 AI 并将其纳入行业工作流程，有潜力解决游戏游玩和游戏测试问题，在更简单或手动的解决方案不足的情况下尤其如此。然而，它不能替代临时创作，更重要的是，不能替代参与创建 AI 的人类专家。
+
+## REFERENCES
+
+- Chow, Y., Nachum, O., Duenez-Guzman, E., and Ghavamzadeh, M. (2018) 基于 Lyapunov 的安全强化学习方法. 第 32 届神经信息处理系统会议 (NeurIPS 2018), 蒙特利尔.
+- Colledanchise, M., and Ögren, P. (2014) 行为树如何模块化混合系统中的鲁棒性和安全性. IEEE/RSJ 智能机器人与系统国际会议论文集, 芝加哥, 伊利诺伊州, 2014 年 6 月, 第 1482–1488 页.
+- Colledanchise, M., and Ögren, P. (2018) 机器人与人工智能中的行为树：导论. CRC Press, 博卡拉顿, 佛罗里达州.
+- Colledanchise, M., Parasuraman, R., and Ögren, P. (2018) 自主代理的行为树学习. IEEE 计算智能与游戏人工智能交易, 第 11 卷, 第 2 期, 第 183–189 页.
+- Justesen, N., Bontrager, P., Togelius, J., and Risi, S. (2020) 视频游戏对战的深度学习. IEEE 游戏交易, 第 12 卷, 第 1 期, 第 1–20 页.
+- Lim, C., Baumgarten, R., and Colton, S. (2010) 商业游戏 DEFCOM 的行为树演化. 进化计算应用欧洲会议, 伊斯坦布尔理工大学, 伊斯坦布尔, 2010, 第 100–110 页.
+- Miyake, Y. (2017) 数字游戏中人工智能应用的现状. 附 Nakatsu, R., Rauterberg, M., and Ciancarini, P. (eds.) 数字游戏与娱乐技术手册. Springer, 新加坡, 第 253–347 页.
+- Politowski, C., Guéhéneuc, Y-G., and Petrillo, F. (2022) 迈向自动化视频游戏测试：任重道远. IEEE ACM 第 6 届游戏与软件工程国际研讨会, 匹兹堡, 宾夕法尼亚州, 2022 年 5 月.
+- Sagredo-Olivenza, I., Gómez-Martín, P.P., Gómez-Martín, M.A., and González-Calero, P.A. (2017) 游戏中非玩家角色控制的神经网络组合. 附 Rojas, I., Joya, G., Catala, A. (eds.) 计算智能进展. 计算机科学讲义, Springer, 第 695–705 页.
+- Sagredo-Olivenza, I., Gómez-Martín, P.P., Gómez-Martín, M.A., and González-Calero, P.A. (2019) 训练行为树：基于示例的编程以支持 AI 游戏设计师. IEEE 游戏交易, 第 11 卷, 第 5–14 页.
+- Sestini, A., Bergdahl, J., Tollmar, K., Bogdanov, A.D., and Gisslén, L. (2022) 基于模仿学习的计算机游戏明智设计与验证辅助. 神经信息处理系统会议 (NeurIPS), 新奥尔良会展中心, 新奥尔良, 路易斯安那州, 2022.
+- Sprague, I.S., and Ögren, P. (2022) 向行为树添加神经网络控制器而不破坏性能保证. IEEE 第 61 届决策与控制会议, 坎昆, 墨西哥, 2022.
+- Wurman, P.R., Barrett, S., Kawamoto, K., MacGlashan, J., Subramanian, K., Walsh, T.J., Capobianco, R., Devlic, A., Eckert, F., Fuchs, F., Gilpin, L., Khandelwal, P., Kompella, V., Lin, H., MacAlpine, P., Oller, D., Seno, T., Sherstan, C., Thomure, M.D., Aghabozorgi, H., Barret, L., Douglas, R., Whitehead, D., Dürr, P., Stone, P., Spranger, M., and Kitano, H. (2022) 利用深度强化学习超越冠军 Gran Turismo 车手. Nature, 第 602 卷, 第 223–228 页.
+- Yannakakis, G.N., and Togelius, J. (2018) 人工智能与游戏. Springer, 瑞士.
+- Zhang, Q., Quanjun, Y., and Xu, K. (2016) 面向自适应 CGF 行为建模的集成学习框架. IEEE 第 9 届计算智能与设计国际研讨会论文集, 杭州, 中国, 2016 年 12 月 10–11 日, 第 2 卷, 第 7–12 页.
+- Zhao, Y., Borovikov, I., Beirami, A., Rupert, J., Somers, C.S., Harder, J., de Mesentier Silva, F., Kolen, J., Pinto, J., Pourabolghasem, R., Chaput, H., Pestrak, J., Sardari, M., Lin, L., Aghdaie, N., and Zaman, K. (2020) 获胜并非一切：借助智能代理增强游戏开发. IEEE 游戏交易, 第 12 卷, 第 2 期, 2020 年 6 月, 第 199–212 页.
+
+
+
+
+
+## 11 用于高层群组管理的效用系统
+
+Steve Bilton
+
+### 11.1 简介
+
+在决策语境下，效用是指给定动作的*价值*。因此，效用系统通过对所有可用动作打分，然后执行效用最大的动作来做出决策，从而产生本质上可用的*最佳*选项。这是一种有用且文档齐全的技术，可用于确定个体层面应执行哪个动作，并常常能产生涌现的群体行为（Graham, 2013）。
+
+该方法的主要优势在于所需的创作工作量极少。添加新动作通常无需了解其他动作的相关知识，只需知道它们产生的相对分数，因为动作之间的控制流无需指定。这种权衡的代价是将工作从开发者卸载到系统后导致控制力的丧失，这使得强制执行动作顺序变得更加困难。
+
+与其依赖群体行为的涌现，本章将探讨使用效用系统直接管理角色群组。这将使我们能够确定群体中个体在任何给定时间点应表现出的行为，从而在凝聚力至关重要的场景中实现更明确定义的群体行为。这种高层次行为控制可应用于多种类型，并在管理模拟和潜行动作游戏中得到验证。
+
+### 11.2 用于群组管理的效用系统
+
+控制大型个体角色群组并使其协调一致行动的一个明确用例是在管理模拟类型游戏中。此类游戏通常涉及需要在世界中执行的许多任务以及可能执行这些任务的许多角色，系统必须高效地将角色分配给任务。
+
+在此场景中，玩家在将角色分配给任务时通常采取相对放手的方式，尽管他们可能希望影响决策。相反，他们会请求执行任务（或构建带有关联任务的对象，例如需要人员值守的主题公园商店），并雇佣拥有不同技能的角色来执行这些任务。除此之外，角色通常还有自己的愿望，例如充足的食物和休息——这些对玩家没有好处，但却是创造一个尽量减少这种时间浪费的环境这一挑战的一部分。
+
+这些问题非常适合采用效用系统来解决。你可以持续确定每个角色与任务配对之间的效用，然后在每个评估周期结束时按顺序分配这些配对。这提供了自动化的“蚁场”式行为，其中环境只需极少的玩家监督，从而让玩家得以在游戏中做出更多高层次决策，因为他们相对不受微观管理的负担。
+
+### 11.3 效用任务
+
+任务定义为一个由两部分组成的自包含逻辑构造：
+
+- 效用函数，它接受角色状态并产生一个值，该值是任务对当前世界状态的优先级与角色适用性的组合。
+- 分配给任务的任何角色的行为，它指定分配给该任务的角色必须如何完成它。行为的复杂性可能差异很大，因为它高度依赖上下文，但通常是一个需要执行的原子动作图或行为树。
+
+在确定效用函数时，你必须不仅考虑哪些任务比其他任务更可取，还要考虑哪些人最适合执行这些任务，以及两者之间的关系。
+
+这一点高度依赖上下文，但一个起点通常是角色与任务之间的距离。例如，在其他条件相同的情况下，你可能更倾向于完成任务 A 而非任务 B，但任务 B 可能离某个角色非常近，而任务 A 离得很远。
+
+同样，通过给条件更难满足的任务赋予更高的效用来鼓励它们通常是个好主意。这不仅有助于产生更均匀的已执行任务分布，还能确保罕见任务能够被执行。
+
+让我们考虑一个看似相对简单的例子：一场需要扑灭的火灾。这里有多个需要考虑的问题：你更倾向于靠近灭火器的角色，还是靠近火源的角色？如果是后者，你更倾向于靠近火源的灭火器，还是靠近角色的灭火器？如果代理人已经拿着灭火器怎么办？你是否应该为每场火灾创建一个任务并分配出去，即使它们很近，还是应该将它们分组为单个任务，或者如果附近的任务已经分配给角色，则降低优先级？这个问题的答案是否取决于角色和灭火器距离火源有多远、火灾是否可能蔓延，以及灭火器在耗尽前可以使用多久？
+
+如你所见，复杂性可能会迅速失控，因此从最简单的实现开始并看看效果如何通常是明智的，而不是试图创建最优结果——更多的复杂性会减慢评估速度，并使玩家和创作者都更难理解系统。在实践中，更简单的实现通常就足够了，甚至更受欢迎。
+
+还应注意，确保为行为创建任务是有意义的。虽然将尽可能多的逻辑放在同一系统下非常诱人，但使用它来添加一个单个角色必须立即执行的任务（其优先级高于效用系统中任何‘正常’任务）会导致反应变慢和不必要的额外评估时间。例如，‘远离手榴弹’或‘立即移动到玩家请求的点’这类任务通常应单独处理，或者至少系统应以不同方式处理它们以获得更快的响应时间。
+
+#### 11.3.1 多角色任务
+
+还可以进一步扩展任务，例如需要多个角色完成的任务，其中每个角色可用的角色可能是必需的，也可能是可选的。一个简单的例子是卸载卡车：必需角色可以是实际卸货，可选角色可以是与卸货者交谈。
+
+尽管由于组合增加而需要更昂贵的评估，但过程与单角色任务相同。你只是将每个角色与任务中的每个角色进行测试并相应地打分。分配算法的主要变化在于涉及具有多个必需角色的任务，因为你必须在分配任何单个角色之前确保所有角色都能填满。这是一项付出相对较少努力就非常值得添加的功能，因为任务是否有多个角色完全由任务编写者决定。
+
+这种额外的复杂性使我们能够将系统用于更多应用，例如射击游戏中的敌人战术行为。它既可用于高层次核心行为群组管理（例如群组中哪些成员应推进到玩家位置以及何时推进），也可用于短暂的游戏时刻，例如育碧多伦多为《潜行者：黑名单》创建的系统脚本（Walsh, 2014）。
+
+在系统中，创建涉及角色群组间沟通与凝聚力的任务得到了很好的封装，因为管理此类协调所需的所有信息都在任务内部。它允许在任务期间清晰地定义角色关系，因此群组成员可以彼此了解以及了解他们正在（或应该）做什么，根据需要分支以处理玩家交互，按需要引入新成员，并在成员变得不可持续时将其移除。
+
+创建这样的可见（且可听见）的群体行为是让角色看起来协调一致的非常有效的方法，因为看到凝聚力行为的玩家倾向于相信这种行为发生的频率比实际更高。当然，这并不是说在战术射击游戏中不能有只需要单个角色的任务，例如值守探照灯或修理收音机——但添加多个角色允许更多选项，并将各种用途保留在单一伞形系统下。
+
+
+
+
+#### 11.3.2 以玩家为中心的实用函数
+
+在考虑世界状态的同时，让实用函数将玩家纳入考量大有裨益。例如，沿用之前的场景，如果玩家观察到一个房间里起火，那么他们通常期望看到屏幕上的角色去拿灭火器，而不是屏幕外靠近灭火器的角色去做这件事，尽管在后一种情况下对玩家的结果更好。因此，优先考虑可见的响应性通常是最佳策略。
+
+同样，当任务用于创造有趣而非必须的行为（例如连续搜索）时，通常值得优先处理玩家可能看到的任务。这可以通过根据玩家当前或预期的位置，或者相关位置和涉及的角色是否当前可见，来调整实用函数（亦或动态创建和移除任务）来实现。对于玩家创建的任务，例如管理模拟游戏中的建造请求，你可以非常简单地调整实用函数，使其优先于后台任务，并且如果你认为玩家等得不耐烦了，还可以提高实用度。当然，困难之处在于仅通过观察玩家的行为就准确判断他们在想什么。
+
+#### 11.3.3 角色任务切换
+
+当实用函数为角色找到更合适的选项时，角色会自然地更换任务，另一个角色也可能随时抢走他们的任务，如果其实用函数得分更高的话。因此，为角色已分配的任务给其实用函数增加一些“黏性”通常是有价值的。
+
+考虑任务在角色之间如何切换可能有好处，因为角色前往任务通常涉及一些遍历。因此，为任务角色引入“待处理角色”的概念可能很有用，这样只有在新角色到达且在角色可以安全退出的任务节点时才会发生切换。这在操作设备时很有用，例如，如果警卫哨所之类的设备被不必要地无人看管，玩家会感到沮丧——更糟糕的是，如果其他任务依赖于它被填补，例如需要服务员的柜台和可选的服务对象。
+
+同样重要的是要注意避免任务之间的循环切换，如果多个竞争任务的实用函数随时间呈正负变化，这很容易发生；一个简单的错误案例是使用欧几里得距离计算到任务的距离，结果角色最终走上了一条使其远离任务位置的遍历路径。这种问题很难完全消除，因此保留之前执行过的任务和时间戳的临时历史是有价值的。
+
+通常最好尽可能至少部分执行完一个任务，因为开始一件事又立即停止看起来很愚蠢。在自愿退出前设置一个时间限制通常很有帮助。
+
+如果角色没有可执行的任务，他们将回到实用系统之外的默认行为。这可能是简单的漫游闲置，也可能是更复杂的行为集合，但除非每个角色无论状态如何周围始终有可用任务，否则需要处理角色没有分配到任务的情况。
+
+### 11.4 性能考量
+
+一个有效地将每个角色与每个任务中的每个角色进行测试的系统，其性能自然涉及访问大量数据并执行大量操作。鉴于需要及时分配，特别是当任务不再适用时，必须从早期阶段就考虑性能。将任务系统分解为三个不同的阶段很有用：数据缓存、评估和分配。
+
+数据缓存涉及进行可能需要多次的昂贵计算（例如基于世界状态的任务优先级，与分配给哪个角色无关），以及确定要评估哪些角色和任务。这一点很重要，因为任务或角色可能在评估过程中添加和移除，但你不想在评估过程中处理这些变化。通常，这可以在单帧内以多线程方式执行，但如果需要，可以进行时间分片。
+
+评估是代价最高的过程，但也可以多线程和时间分片。找到最有效的方法来拆分评估，使其均匀分布在多个线程和帧中可能很困难，但这样做可以确保单帧内耗时的一致性和总帧数。
+
+最后，分配阶段获取长长的任务-角色对列表并按顺序分配它们。这很容易进行时间分片，但不容易多线程。幸运的是，这通常不算太麻烦，因为对即使是大列表进行排序通常也相对快速，分配通常也很便宜。在每个阶段，都要尽量减少需要执行的测试数量。首先执行廉价测试，并尽可能从列表中移除任务或角色至关重要。这可能无法改善最坏情况，但对平均情况（更常见）会产生巨大影响。这包括每帧对缓存数据进行合理性检查以确保其仍可用于执行测试，在分配过程中从配对列表中移除已分配的任务，以及基于当前任务排除那些不可能胜任工作的角色（因为优先级永远不会足够高）。最终，由于情况变化而未能评估任务或角色，比试图处理变化更有益——无论如何，下一个周期都会重新评估。
+
+对系统中每个配对进行持续评估允许我们进行上下文切换，但如果不需要（例如任务非常“黏性”，角色可能在完成之前永远不会离开），那么如果任务对该角色仍然有效，就可以完全将角色排除在评估之外。
+
+同样，对于昂贵的操作，速度和质量之间存在权衡。即使推迟此类操作，大量的视线测试（或更糟的是，寻路查询）也会导致总帧数过大。因此，通常需要避免这些测试，不幸的是，有时这会被注意到（特别是当涉及采取一条长路线前往任务时，而另一个更近的任务本会更合适）。对此有缓解措施，例如从任务执行广度优先搜索以更准确地估算短距离角色，但与大多数 AI 评估一样，随着角色数量增加，你通常最终不得不选择次优但更快的操作。
+
+### 11.5 任务分配的沟通
+
+在任何处理周期中，能够传达为何将任务分配给角色很重要，因为这对于调试意外行为非常有用。这些信息也可以面向玩家，这在管理类游戏中尤其有用，因为它允许玩家更好地了解如何调整他们的设置以获得预期结果。
+
+困难在于记录处理的大量信息。显示当前周期计算出的实用函数结果并不困难，因为这作为处理的一部分无论如何都必须存储。但是，展示该实用度是如何计算出来的需要存储相当数量的数据，并且通常需要针对每个任务编写自定义代码。
+
+因此，有必要对所呈现的信息采取战略性方法。特别有用的是一些关于为什么角色无法被分配到任务的信息。一个常见的问题是观察者认为应该分配的任务未能被分配。显示这些信息，以及角色-任务对的计算实用度，通常足以以相对较低的成本调试许多问题。
+
+允许按角色和任务筛选这些信息很有用，最好是通过在世界中选择来实现，因为倾倒所有数据的可视化通常并不特别有价值，而且这会鼓励未参与系统的人员（尤其是 QA）更好地了解正在发生的事情，并发送相关信息。
+
+### 11.6 设计编写
+
+设计师不可避免地需要对输入到实用函数的值有一定控制，也需要对任务的创建和移除有一定控制。例如，战术射击游戏的关卡设计师可能希望根据玩家当前所处的位置创建或移除“巡逻”任务，以鼓励 NPC 在靠近玩家位置的地方巡逻。可以轻松地为这些需求提供功能，几乎没有理由不包含它们。
+
+同样，设计师希望直接将任务分配给角色（尤其是在加载关卡时）也不足为奇，这并不难实现。然而，更明智的做法通常是通过为任务和角色-任务对的实用函数添加可选的设计师权重，仅仅“鼓励”角色接受任务。通过不强制分配，你能够对设计师可能未考虑到的情况做出更多适应，例如当玩家进入建筑前门的触发体积时强制任务分配。例如，如果角色已经远离任务的触发体积，那么为他们分配任务并没有多大意义。在这种情况下，优先级的变化会鼓励他们接受任务，只要他们仍然相当近；但如果有更合适的任务可执行，则不会。
+
+另一个对设计师很有用的功能，尽管实现起来更难，就是能够创建半脚本化任务，例如一个通用的“巡逻”任务，它接收一个
+
+
+关卡设计师可指定的环境绕行路径。然而，它们往往是必要的，因为一定程度的手工制作通常比单纯的环境分析产生更好的结果，设计师希望精心编写仍由系统触发的游戏时刻也并不罕见。
+
+提供此功能的一种方法是引入任务模板的概念，任务模板用于构建带有可选自定义数据的任务。以巡逻示例为例，任务模板可以在任务中为每个执行者角色指定一条巡逻路线，从而在系统中创建多个功能相同但涉及使用不同巡逻路线的任务。
+
+将数据注入模板的过程也可以实时生成，而不是手工制作，这允许高度动态的行为。因此，再次以巡逻示例为例，你可以在玩家最后已知位置之间生成一条巡逻路线，以便在这些区域施加压力，鼓励玩家尝试从另一个方向前进。
+
+### 11.7 结论
+
+效用系统可以成为管理大量代理在拥有众多可执行活动的世界中的宝贵工具。本章通过详细说明此类系统如何用于管理和战术动作游戏中的群体行为，展示了该系统的灵活性，这两类游戏的行为需求截然不同，否则将需要复杂且不灵活的手工制作解决方案。
+
+可能从效用系统复杂性中受益的游戏之间的共同点在于它们的系统化程度——当高度手工制作时，群体控制相对简单，但随着问题空间的扩展，管理会变得更加困难。
+
+这是一个从能够暂时接管个体以执行有趣行为，然后在该行为执行完毕后释放控制权的系统中受益最大。虽然它可用于整体战术控制，但在从一组可能选项中执行相对短暂的行为时，它最能发挥优势，为玩家创造值得观察的视觉有趣时刻，并希望让他们认为 AI 协调的频率远高于实际情况。
+
+相反，在以下情况下，这可能过于臃肿：要么手工制作程度很高以至于系统结果不是必须的，要么不需要最优任务分配。在这些情况下，任务不一定需要协调者，几乎可以肯定的是，按个体基础（或对于群体，通过相互协议）进行更多临时分配会更简单。
+
+## REFERENCES
+
+Graham, D. (2013) 效用理论导论. In Game AI Pro. CRC Press, Edited by Steve Rabin, Boca Raton, FL, pp. 113–126.
+
+Walsh, M. (2014) Splinter Cell: Blacklist 中 AI 感知与意识建模. Game Developers Conference 2014, San Francisco, CA.
+
+## 12 基于机器学习的游戏自动电影制作
+
+Phil Carlisle
+
+### 12.1 简介
+
+游戏通常希望更具 *电影感*，而可用于游戏开发的工具在制作电影化场景方面功能越来越强大。然而，电影化过场画面内容的创建仍然在很大程度上是开发中手工制作且劳动密集的环节。这与对“电影感”实际含义定义的相对缺乏相结合，给小型开发者带来了重大负担。本章概述的方法依赖于机器学习（ML）模型集群，为虚幻引擎开发程序化内容生成工具，以在序列编辑器界面中使用。
+
+### 12.2 什么是过场画面？
+
+过场画面被定义为一系列经过剪辑的摄像机序列，剪接在一起以模拟传统电影摄像机剪辑的整体效果。通常，它涉及设置场景、演员、灯光和摄像机运动以实现特定外观。最常见的是，在场景播放期间禁用玩家输入，因此体验大多是传统电影，但在游戏引擎内播放。
+
+目标是用更类似于推荐系统的东西，取代使用虚幻引擎序列编辑器工具集创建电影化过场画面内容时目前需要的大量手动编辑。采用了 ML 方法，简要概述初始场景设置，然后自动生成场景的不同构图，并通过选择界面提供给用户。
+
+### 12.3 电影摄影
+
+电影多年来采用了一些惯例。本章的目的是概述在机器学习模型中对电影惯例进行编码的方法。该模型学习给定场景中相对于前一个镜头的镜头布局参数分布，从而导致类似推荐系统的方法。该模型根据前一个镜头，建议场景接下来 n 个最可能的镜头配置，用户可从中选择。在此之前，有必要声明电影摄影中使用的一些术语。
+
+#### 12.3.1 电影
+
+电影/视频被定义为有序场景序列，由镜头组成，而镜头本身由单独的图像（帧）组成。
+
+#### 12.3.2 场景
+
+场景是跨越故事特定方面的镜头概念集合。例如，两个角色在酒吧喝酒交谈的场景，该场景在不同镜头中表达多种不同视角，但场景本身涵盖构成故事这一阶段的所有镜头。
+
+#### 12.3.3 镜头
+
+镜头只是通过特定摄像机记录的若干帧图像序列。通常，这涉及摄像机镜头、灯光、场景构图和取景等选择。你可以将镜头视为编辑的主要单位，镜头长度（以帧计）以及镜头在场景中的时间和位置是重要属性。镜头的一个重要特征是，帧序列中表达的构图会随时间变化。出于讨论目的，所有内容都将被讨论为相对于摄像机。例如，角色可以从摄像机右侧进入镜头，并在镜头持续时间内从左侧退出。
+
+#### 12.3.4 PROSE 电影摄影语言
+
+一种名为 PROSE（Ronfard et al., 2015）的电影摄影领域特定语言用于定义给定场景和一组镜头转换。PROSE 定义了一个上下文无关文法（CFG），允许定义相对于给定摄像机的一组镜头序列。PROSE 不提供镜头规格和摄像机视野等具体细节，而是建议一组有限的镜头类型和转换。
+
+#### 12.3.5 Movie Net 数据集
+
+为了让 ML 模型学习某事物，通常必须为其提供大量其试图学习分布的事物示例。在此情况下，可以采用并扩展现有数据集，该数据集汇编了来自 1100 部电影的信息。Movie Net 数据集（Huang et al., 2020）及其相关代码库可通过 GitHub（https://movienet.github.io/）访问。该数据集本身由 IMDB 上评分很高的电影组成，包含场景和镜头开始–结束帧边界、单个演员的边界框检测、与镜头检测在时间上对齐的字幕和脚本信息等。
+
+### 12.4 作为时空图的电影时间轴
+
+之前已有从电影构建的基于图的结构示例。一个示例是 MovieGraphs 数据集（Vicol et al., 2018），其中构建了一个图来描述各种电影中的关键场景。此处采用了不同的方法，即将 MovieNet 数据集的现有数据转换为一系列时空图。MovieNet 数据集的一般方法是对每部电影执行一组单独的 ML 模型特征提取。例如，对每个镜头应用人体物体检测模型以提取演员的边界框。MovieNet 数据并非以图形式提供，因此必须从 MovieNet 标注数据构建为图形表示。还应用了其他 ML 模型来从数据集提供的帧中确定头部和身体姿态。边界框和身体姿态信息用于确定面向方向和距摄像机距离等 PROSE 值。
+
+理解电影的一个重要方面是它具有运动，包括摄像机视图内的运动（演员相对于摄像机移动）以及摄像机本身的运动。任何试图理解电影结构的系统都需要捕捉这种变化。
+
+此处的方法是推导一系列图，通过时间轴在时间上相连，以便变化存储在图特征中随时间变化。因此，随着图节点属性（帧中演员的位置）随时间变化，可以将其编码到代表演员的节点。节点的存在或不存在表明特定演员或对象在场景中不可见。
+
+这最终形成一系列图，描绘任何给定帧的场景，通过引入一系列“关键”图来构建，类似于动画中使用关键帧或视频压缩算法中包含关键帧。概念是在固定间隔存储一个完整图，然后将关键帧图之间的变化表示为时间轴上的简单变化。这样，你可以通过查看前一个关键帧图，然后逐步应用该帧以来的变化，并对图进行修改直到当前帧，从而重建每个帧的图。例如，添加和删除新节点和边、对现有节点进行属性更新等。这样，维持了相对稀疏的数据结构，同时也允许捕获被视为重要的每帧细节。
+
+图构建的关键帧间隔通过构建初始每帧完整图，然后自适应地移除未修改的图节点来确定，同时保持与关键帧图的最大距离。你可以控制每个编辑图距离完整关键帧图有多远，具体取决于整体时间轴中给定帧序列的图编辑量。目标是减少图中固有的重复，当存在不变元素时。例如，除非通过另一个对象获得冲击，否则静态对象不太可能改变。
+
+图帧以 OpenTimelineIO 格式（http://opentimeline.io/）存储，其中每个镜头存储为单独的剪辑，每个剪辑内的每帧均以 NetworkX 格式作为元数据存储到剪辑中，并作为 json 对象存储。每镜头一个剪辑是使用先前确定的镜头边界存储的，通过 the
+
+
+
+Movenet 管道工具。这依赖于 PyShotDetect 库来检测镜头边界，但本质上是使用多种算法来确定摄像机/灯光/场景构图的变化。构建了一个 OpenTimelineIO ‘otio’ 文件，使得时间轴中的每个剪辑都代表一个镜头检测边界，然后使用此剪辑来处理该镜头的内容。每个镜头的初始帧被确定为关键帧，并将 NetworkX 图存储为剪辑的元数据。此图作为 json 格式数据存储在 ‘.otio’ 文件的元数据中，并可以由 NetworkX python 图读取库解析。
+
+每帧，对该图结构的任何更改都存储在 NetworkX 兼容的 json “frames”中，直到达到关键帧限制，此时会存储另一个整图 NetworkX 结构。为了使一系列镜头的解析更加高效，所有帧都会被分析并存储为系列中出现的实体字典。以这种方式，我们能够在运行时缓存所有重要特征（如演员），并仅在它们出现在场景中时启用/禁用它们。
+
+因此，我们有一个包含 N 个剪辑的时间轴，每个镜头一个剪辑。每个镜头都以关键帧图作为其第一帧，随后的帧可以包含部分变更列表样式的图或整图，具体取决于它们是否被指定为关键帧。这些图本身可以是任意复杂度，这取决于电影摄影的复杂性和分析的目的。
+
+#### 12.4.1 图中包含什么？
+
+用于电影摄影的示例图可能包含以下元素：
+
+- 场景中有哪些演员可见？
+  - 它们在画面中的位置在哪里？
+  - 它们边界框的垂直中心线在哪里？
+  - 它们距离摄像机有多远？
+  - 它们面向哪个方向？
+  - 它们是朝向摄像机还是以角度观看？
+  - 它们在移动吗？如果是，朝哪个方向移动？
+- 场景中有道具吗？
+  - 如果有，它们在哪里？
+- 演员在看道具或与道具互动吗？
+- 道具在移动吗？
+
+这些值可以作为在 PROSE 语言中定义的 CFG 扩展所编码的图来表示。要生成图，你可以使用 ML 模型来学习给定节点在提供一组构建场景的条件时的图扩展概率。这类似于用于生成 Unreal Engine 驾驶场景的 Meta-Sim2 架构（Devaranjan et al., 2020）。
+
+任何 PROSE 语法规则为真的概率是上下文（关于场景的已知信息，例如需要多少演员，或场景的主题）和先前扩展的图结构的函数。本质上，你将生成视为一系列图扩展，每个扩展向图中添加更多信息，直到达到无法再扩展的终端。
+
+为进行实际演示，请考虑以下场景。两个人坐在酒吧前，摄像机是中景，同时拍摄两个角色，且两人在画面中所占比例相等。一名演员（女性）面对摄像机。另一名（男性，可能是恋人）正试图安抚女性，因为在之前的场景中，女性曾看到男性与另一个女人在一起。
+
+如果你拥有如图 12.1 所示的部分图，那么下一个节点扩展概率会考虑什么？
+
+![](img/f4a4f6e4de5338a867590c30638990cf_122_0.png)
+
+图 12.1 一个简单的场景图表示，其中一名女性坐在酒吧前面对摄像机，一名男性走近以进行对话交谈 – 短划线表示潜在的节点扩展。
+
+从场景上下文可知，场景中有两个角色，因此使用另一名演员扩展图的概率较高。假设图扩展的最大概率是应该向场景中添加另一名演员，随后的图扩展将与该演员的属性相关。在图 12.1 中，可以看出第二个演员的属性很可能有多个图扩展。例如，他们在场景中的位置、面向方向、年龄和性别等。
+
+现在有了构建概率图作为一系列图扩展概率的机制，讨论需要转向如何首先确定这些概率。
+
+为此使用了图神经网络（GNN）。GNN 是一种用于图表示间学习的灵活方法。在此实现中，使用了 [Pytorch Geometric API](https://github.com/pyg-team/pytorch_geometric) 来推导一个图注意力网络，该网络经过训练以学习图扩展的概率。
+
+在模型训练时，你可以简单加载给定电影的 OpenTimelineIO 时间轴并解析电影中每个镜头的信息。本质上，GNN 根据一组输入节点值（到目前为止的图结构）和一组掩码值学习一个概率矩阵。掩码允许你在扩展节点会破坏语法约束时使其失效。例如，确定演员的性别只有在先前已扩展放置了演员节点的上下文中才有意义。同样，在图中扩展道具应屏蔽返回性别属性的可能性。在图的顶层，使用此掩码上下文时，扩展概率受到的限制较少。随着图的扩展，上下文变得更清晰，需要考虑的可能性也更少。你可以将掩码过程视为一种门控机制，以维持用于构建图的语法结构。一旦概率被学习，你实际上就已经学会了给定输入场景的电影属性和结构的分布；因此，你可以从该分布中采样以重建一个新图。
+
+这种图扩展方法的一个重要特性是，你必须能够扩展多个备选图方案。这样做是为了向系统用户提供有效选项，而不是严格的输出。这意味着你需要以允许用户在它们之间进行选择的方式呈现不同的输出生成。尽管这仍是一个正在进行的研究领域，但我们的方法是生成多个匹配输出作为 top-K 条目（K = 3 是一个良好的默认值），并允许用户在决定编辑前快速在这些匹配项之间进行选择。为了便于此，你以选择覆盖材质颜色呈现潜在选定的输出，以便将其与现有场景内容区分开来。模型生成输出后的最后一步是用户接受其中一个 top-k 选择，最后将其实例化到场景和相应的序列中。这只是基于引擎中存在的一些 Python 代码扩展现有 Unreal Engine sequencer API 的简单问题。
+
+### 12.5 结论
+
+如前所述，将选择和采纳纳入创作场景中是一个研究领域，既涉及可用性，也涉及生成建模。在最简单的层面上，场景作者可以简单地“不喜欢就向左滑”场景，直到找到喜欢的一个为止。然而，这引发了一个关于设计意图以及此类模型如何适应用户偏好的更大问题。最终，由于 ML 模型可以采纳新知识，我们可能最终会允许根据用户选择某个特定生成输出的频率来对生成结果进行用户偏向。因此，如果他们正在创作一种特定的“风格”，模型可能会采纳更多该风格的生成。例如，选择生成更多威斯·安德森风格的生成作为场景的一部分。
+
+因此，过场场景的构建表现为一系列编辑、推荐和镜头选择，并重复此循环直到场景完成。从用户角度看，这可能被视为一种自动完成功能，尽管是针对相对复杂的场景构建数据。这种方法的挑战之一是，它仍然依赖系统使用者选择适当的完成内容来形成连贯的叙事。在传统电影制作中，单个镜头的选择非常复杂。通常涉及一个全新的团队来将素材剪辑成最终电影。最终，可能有可能完全取代这种方法中的人类创作，并简单推断出整个过场场景
+
+
+将时间线直接导入序列器。可能是通过向其提供某种脚本或其他构建信息来实现。鉴于语言模型正被用于一系列创意生成领域，人们设想仅需拥有场景的自然语言描述，最终就足以让模型构建整个时间线。目标是最终促成一个创作系统，其运作方式非常类似于《星际迷航》全息甲板概念，允许自然语言引导复杂的表示和行为，以实现身临其境的模拟。
+
+## REFERENCES
+
+- Devaranjan, J., Kar, A. and Fidler, S. (2020) Meta-Sim2: 用于合成数据生成的场景结构无监督学习。European Conference on Computer Vision, Glasgow, 2020.
+- Huang, Q., Xiong, Y., Rao, A., Wang, J., and Lin, D. (2020) MovieNet: 用于电影理解的综合数据集。ArXiv, abs/2007.10937.
+- Ronfard, R., Gandhi, V. and Boiron, L. (2015) 散文分镜语言：一种用于注释和导演电影的工具。WICED@Eurographics/EuroVis.
+- Vicol, P., Tapaswi, M., Castrejón, L., and Fidler, S. (2018) MovieGraphs: 迈向从视频中理解以人为中心的情境。IEEE Conference on Computer Vision and Pattern Recognition (CVPR).
+
+## 13 为了乐趣和利润的有向无环图
+
+Ivan Mateev
+
+### 13.1 简介
+
+有向无环图（DAGs）是计算机科学中一个研究较为深入的领域，也是多种需要解决调度、选项枚举甚至路径查找问题的人工智能系统的理论支柱的有力候选。DAGs 通常在研究生和高级本科生的图论课程中教授，有时由于图论更广泛研究的严峻外观，会被许多学生忽略。
+
+本章将总结 DAGs 的半非正式描述，并介绍标准图问题的算法解决方案，但将其重新框架并制定为 DAG 框架。它还将简要介绍一些运行在 DAG 类似框架之上的概念性人工智能系统。全书将使用一个假设的赛车游戏框架来激发设置和示例，但从概念上讲，这些技术可以用于任何其他概念环境。本章描述的技术可以从公开可用的来源中找到和推导，因此本文应被视为该主题的集中参考点。
+
+### 13.2 假设的赛车框架
+
+本章使用的框架是一个赛车游戏，具有以下设计要求：
+
+- 赛道可以有多个分叉，允许比赛流程按照关卡设计师的意愿分叉和汇合。一些路线可能比其他路线更长。
+- 赛道不能有回到自身的循环，比赛流程必须始终从起点指向终点。
+- AI 需要做出除最短路线之外的路线选择，以免比赛变成一辆接一辆的车队。
+- AI 需要做出路线选择，使得玩家始终感觉自己身处比赛之中。在车队后方或前方数英里独自驾驶并不有趣，因此设计师希望有能力在所有可能的选择中激励 AI 选择更长或更短的路线，以保持趣味性。
+
+图 13.1 提供了一条示例赛道，赛道分为三条并再次汇合为一条：
+
+工具部门已经构建了一个赛道构建工具，各个道路片段（在图中标记为 A、B、C、D 和 E）以及关于下一段道路的信息已在内部某处存储。工具部门非常勤勉，他们添加了功能，将每条道路的长度直接烘焙到其内部表示中——绝对传奇！
+
+工程要求是将上述设计要求转换为一种数据结构，该结构可以被修改和查询以回答问题，以及一个技术单元，用于在给定时间激励 AI 选择和/或偏好特定路线。
+
+### 13.3 架构
+
+对图 13.1 中设置建模的条件反射式方法将是跟踪（此处非有意双关，但深表赞赏）各个道路片段的交汇点和汇合点，并将每个交汇点表示为顶点，每条道路表示为边。起点和终点分别可称为 S 和 F，并建模为一个顶点，该顶点有一条道路离开或进入顶点：一种畸形的交汇点。比赛流程由游戏设计指定，每条道路都从起点流向终点，因此每条边都有方向。参见图 13.2。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_126_0.png)
+
+IMAGE 13.1 示例赛道。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_126_1.png)
+
+IMAGE 13.2 从起点到终点的道路片段方向。
+
+顶点集合和连接顶点的边集合称为无向图。由于每条道路的流动意味着可以从一个交汇点移动到另一个交汇点，但不能在该道路上反向移动，因此这现在是一个有向图（Cormen et al., 2009a）。从概念上讲，如果你正在建模城市街道网络，道路有可能回到自身并汇合到反方向的道路，或者形成循环，但由于赛道没有任何循环（或“环”），你不必担心这种情况。没有循环的有向图称为 DAG（Cormen et al., 2009b）。与其表亲无向图不同，缺乏循环和方向引入了宝贵的约束，这可以使对 DAG 上操作和移动的推理更便宜、更简单。
+
+上述初步构建是展示赛道更抽象表示并引入一些术语的良好开端，但在考虑实现细节时存在一些弱点。从概念上讲，交汇点不承载关于单个路线的信息，而是描述初步赛道拓扑的一个概念。例如，在图 13.1 中有三种遍历赛道的方式，因此如果你必须存储每条路径的信息，你将需要在 Junction 数据结构中实现跟踪每条路径的机制。这将增加代码复杂性，并且任何未来阅读代码的人都会面临高认知负荷。这转化为调试和维护的高工时，导致延迟以及随之而来的一切。遵循每个优秀算法设计师的箴言“我们能做得更好吗？”（Roughgarden, 2017）并使用发现方法（Madu, 2014），在一张纸上随手写下边缘情况时，可以采用另一种方法，该方法保留了 DAG 结构的一般概念。与其将交汇点作为我的顶点，不如专注于道路（或者更确切地说是道路末端）本身作为顶点。其背后的理由是，如果你有一个更简单的双向分叉情况，如图 13.3 所示，你可以为每个分支关联一条路径。
+
+从概念上讲，这也是三个分叉（三条路径）或不同位置多个分叉的情况。这里的一个有用观察是，由于结构具有方向且无循环，你可以论证总路径数的上界。如果图是完全连接的（即，从每个上游节点到每个下游节点都有连接且不引入循环），你将最多有 2^(n-1) 条路径（Liu, 1968），这意味着你可以使用此数字来预分配或预留内存，或在以后断言实现中的任何不一致。值得注意的是，如果图中有循环和/或不是有向的，最大路径数估计就不会那么稳健。当一个人陷入循环时，可能会有无限数量的路径。
+
+假设工具部门没有给我们各个道路，而是只给了我们交汇点数据，那么可以按以下方式构建道路末端 DAG：
+
+- 1. 取之前图中的每条边，并在每条边原来的位置创建一个顶点（“edgex”）。
+- 2. 取每条 edgex 原始边所指向的顶点，枚举从该顶点出来的 edgexes，并将之前的 edgex 连接到你正在枚举的出去的 edgexes。
+- 3. 得到的图就是前面描述的道路末端图。只不过你缺少起点，因此可以简单添加一个虚拟 edgex “s” 来表示起点的位置。
+
+参见图 13.4，了解使用上述步骤重新框架的原始赛道。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_128_0.png)
+
+IMAGE 13.4 带有 edgex’ (S, 0, 1, 2, 3, 4) 的赛道。
+
+在上述描述中，使用了术语“edgex”来描述此新创建图中的顶点，以将其与之前的源图区分开。今后，在提及此新创建图中的顶点时，将使用术语“顶点”。
+
+### 13.4 实现
+
+在构建了更稳健的赛道表示之后，下一步是预先生成关于它的信息。这将使我们能够构建启发式规则和元数据，供追赶/回退系统使用，以使 AI 更加有趣。现在是时候开始思考如何区分道路，以及如何将世界中的不同道路与图上的节点关联起来。如果工具部门的道路数据没有预先处理为独立的道路，你将应用上述
+
+
+分解过程。否则，预期工具部门的道路数据将是一个数组（或某个容器）中的道路列表，因为以这种方式存储会为每条道路分配一个唯一的“ID”。出于本章的目的，容器中每条道路的索引将分配给相应的顶点，并假设它们是索引，而不是某个哈希函数的输出。这很方便，因为道路连接可以存储为整数映射到整数的多重映射。换句话说，即 map<int, array<int>> 或 dictionary<int, array<int>>。这可以在表 13.1 中看到。
+
+### TABLE 13.1
+### 带有相邻道路列表的道路唯一 ID 示例
+
+| 顶点 ID/道路索引 | 相邻道路 |
+|---|---|
+| 0 | 1, 2, 3 |
+| 1 | 4 |
+| 2 | 4 |
+| 3 | 4 |
+| 4 | 无 |
+
+采用这种 DAG 方法的好处在于一种非常核心的属性，该属性特定于这种类型的图。与其他类型的图不同，在其他图中，搜索和路径查找涉及沉重的启发式和打破循环技术（A* 及其变体），同时查询复杂的、有时是多维的容器，DAG 中的节点具有具有顺序的数学属性。可以通过执行称为拓扑排序的操作并将排序后的信息存储在线性容器（即数组）中来利用这一强大属性（Cormen et al., 2009a）。
+
+执行拓扑排序有多种算法（Dasgupta et al., 2008; Cormen et al., 2009a），虽然每种算法相对于其他算法都有其内在优势，但一种相对直接的技术是依托于深度优先搜索（DFS）。DFS 的高级概念是，从一个顶点开始，对当前顶点执行操作，然后递归地在相邻顶点上重复此操作。依托于这一想法的做法在代码清单 13.1 中所示。
+
+```
+Code Listing 13.1: Recursive TOPO_SORT depth-first search.
+
+function TOPO_SORT(array<int> vertices, multimap<int, array<int>> adjacent):
+{
+    stack<int> sorted = { empty }
+    array<bool> visited = { all false };
+    lambda onTopoSort(int vertex):
+    {
+        foreach(int otherVertex : adjacent[vertex])
+        {
+            if(visited[otherVertex])
+            {
+                onTopoSort(otherVertex);
+            }
+        }
+        visited[vertex] = true;
+        sorted.push(vertex);
+    }
+    foreach(int vertex : vertices)
+    {
+        if(!visited[vertex])
+        {
+            onTopoSort(vertex);
+        }
+    }
+}
+```
+
+onTopoSort Lambda 用于驱动递归。通过在迭代后调用 onTopoSort，可以确保前向路径沿着图深度优先地进行，而回溯则标记其刚刚去过的地方。DAG 的拓扑顺序随后包含在排序后的栈中：{4, 2, 3, 1, 0, S}。虽然这种顺序起初看起来不自然，但如果你在 DAG 中选择一个顶点（“2”），并询问其右侧的任何顶点（“1”），"你是在所选顶点之前还是并行？"，答案始终是肯定的。规范地说，当排序完成后，将栈弹出到数组中是明智的，以便将其按正向顺序排列。得到的数组将是：{S, 0, 1, 3, 2, 4}。
+
+细心的读者会注意到，拓扑排序似乎取决于映射中相邻顶点的排序方式。例如，顶点“2”和“3”可能会被互换。这没问题，因为拓扑顺序属性（在前或并行）仍然会被保留。事实上，一个 DAG 可以有多个有效的拓扑排序。这是因为某些顶点可能具有相同的依赖项集，这意味着它们可以相互之间任意排序。
+
+### 13.5 最短路径和最长路径技术
+
+到目前为止，已定义了赛道的表示并生成了其中道路的线性顺序。本节将概述利用此线性顺序的一种技术。一个良好的初始示例与查找最长路径的长度有关，因为对于非 DAG 来说，这通常是一个困难的问题（Garey et al., 1976）。本示例将使用另一个赛道的虚构数据集，其中包含以下道路长度，该数据集由工具部门友好提供，如表 13.2 所示。
+
+### TABLE 13.2
+### 道路段长度
+
+| 道路 | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 长度 | 0.0 | 1.0 | 2.5 | 1.5 | 3.0 | 4.0 | 1.0 |
+
+S 现在被称为 0，因此长度为 0.0。
+
+因为道路 ID 不是哈希值，所以可以将它们用作数组中的索引，其中 lengths[x] 是所述道路的长度。例如，lengths[2] 是 2.5。将使用之前的邻接多重映射，它将被称为 adjacent。例如，adjacent[0] 是 {1,2,3}。并且将使用包含在数组中的拓扑顺序，并称其为 ordered。
+
+使用上述方法，可以按以下步骤进行：
+
+- 1. 创建一个长度为 ordered.size() 的名为 maxLengths 的数组，并用 -INF 填充它。
+- 2. 到第一个节点的最长路径为 0.0，因此将 maxLengths[ordered[0]] 设置为 0.0。
+- 3. 对于 ordered 中的每个顶点 V，对于 adjacent[V] 中的每个顶点 W，将 maxLengths[W] 设置为 max(maxLengths[W], maxLengths[V] + lengths[W])。
+
+步骤 3 完成后，maxLengths[ordered[ordered.size()-1]] 中的元素将是最长路径的长度。之所以这样做有效，是因为遍历 ordered 可确保从前驱向后继访问 DAG，并且 ordered 中的没有元素在 DAG 中位于任何连续元素之前。这意味着你始终在向终点线进行迭代，而 max() 调用确保如果你之前来自一条并行路径，则会记录更长的路径长度。
+
+你也可以通过轻微修改来找到最短路径的长度：
+
+- 1. 创建一个长度为 ordered.size() 的名为 minLengths 的数组，并用 +INF 填充它。
+- 2. 到第一个节点的最短路径为 0.0，因此将 minLengths[ordered[0]] 设置为 0.0。
+- 3. 对于 ordered 中的每个顶点 V，对于 adjacent[V] 中的每个顶点 W，将 minLengths[W] 设置为 min(minLengths[W], minLengths[V] + lengths[W])。
+
+步骤 3 完成后，minLengths[ordered[ordered.size()-1]] 中的元素将是最短路径的长度。
+
+概念上，要找到实际的最长/最短路径（即要走的道路），只需要一个从 int 到 int 的额外映射并对上述算法进行修改，但不是计算 min/max，而是会有一个分支来检查 {min/max}Lengths[V] + Lengths[W] 是否小于/大于 {min/max}Lengths[W] 中的现有值，如果是，则应更新映射和 {min/max}Lengths[W] 的值。
+
+当过程完成时，{min/max}Lengths 容器将包含与之前相同的相应长度值，但新映射将包含到达终点线所走的顶点/道路链，可以以类似于 Dijkstra 或 A* 的方式提取它（Cormen, et al., 2009b）。
+
+### 13.6 所有路径
+
+在生成最短路径和最长路径后，我们的 AI 可以根据玩家在游戏中的表现选择两条路径之一。虽然这是一个很好的第一步，但在具有多个路口的更复杂赛道中，这很快就会成为一个问题。AI 将选择两条路径之一，忽略其余路径。改进这一问题的一种方法是枚举所有可能的路径，并让设计师根据玩家是落后还是领先来改变选择。
+
+查找最短/最长路径中概述的技术极其通用，因为它可以应用于 DAG 上的其他类型问题，并且还将用于枚举问题。
+
+首先需要确定赛道中总共有多少条路径。将应用相同的技术，但进行一些修改。不是使用长度，而是将当前道路被访问的次数与迄今后继被访问的次数累加：
+
+- 1. 创建一个长度为 ordered.size() 的名为 numPaths 的数组，并用 0 填充它。
+- 2. 通过第一条道路的路径数为 1，因此将 numPaths[ordered[0]] 设置为 1。
+- 3. 对于 ordered 中的每个顶点 V，对于 adjacent[V] 中的每个顶点 W，设置 numPaths[W] = numPaths[W] + numPaths[V]。
+
+步骤 3 中的加法是关键组件。随着迭代推进 numPaths 数组，将当前顶点的值添加到相邻顶点意味着并行路径的计数将被传播，然后在分割后两条并行路径束汇合时被相加在一起。当过程完成时，numPaths[ordered[ordered.size()-1]] 将包含从起始顶点到最终顶点的路径总数以及整个 DAG 中的路径总数。
+
+找到路径总数（三条）使我们能够枚举所有路径。你可以预先分配一个包含三个空数组的数组，并使用拓扑排序来实现以下方案：
+
+- 1. 每条路径都从 ordered[0] 开始，因此将 ordered[0] 放入所有三个数组中；
+- 2. 对于 ordered 中的每个顶点 V：
+  - a. 将 adjacent[V] 中的每个顶点 W 依次添加到所有以 V 结尾的数组中。
+  - b. 按每个数组的最后一个元素对数组的数组进行拓扑排序。
+
+在该方案结束时，每个数组中将有一条线性路径。然后可以遍历数组的数组中的每个数组或路径，并使用之前的长度数据来计算每条路径的长度。作为收尾工作，可以按路径长度对数组的数组进行排序，这可能使查询稍微容易一些。
+
+### 13.7 结论
+
+本章介绍了 DAG 的一些关键概念，并最终得出了一种结合关键概念不同方面的可应用方法。尽管整体主题与赛道有关，但这些概念直接适用于其他领域，如
+
+
+更广泛的系统架构、带依赖项的数据解析、调度，以及诸如稀疏矩阵乘法等更晦涩的应用。
+
+## REFERENCES
+
+Cormen, T., Leiserson, C., Rivest, R. and Stein, C. (2009a) 基础图算法. In: 算法导论. Cambridge: MIT Press, 第 549–584 页.
+
+Cormen, T., Leiserson, C., Rivest, R. and Stein, C. (2009b) 单源最短路径. In: 算法导论. Cambridge: MIT Press, 第 604–645 页.
+
+Dasgupta, S., Papadimitriou, C.H. and Vazirani, U.V. (2008) 算法. Boston, MA: McGraw-Hill Higher Education.
+
+Garey, M.R., Johnson, D.S. and Stockmeyer, L. (1976) 简化的若干NP完全图问题. 理论计算机科学, 1(3), 第 237–267 页.
+
+Liu, C.L. (1968) 应用组合数学导论. New York: McGraw-Hill.
+
+Madu, T. (2014) 数学教学的有效方法论：前进之道. 才智与卓越期刊, 8(1). 可在线查阅: https://globalacademicgroup.com/journals/resourcefulness/Effective%20Methodology.pdf.
+
+Roughgarden, T. (2017) 算法大揭秘：第1部分：基础. New York: Soundlikeyourself Publishing.
+
+## 14 损坏数据的导航
+
+Jonas Gillberg
+
+### 14.1 简介
+
+我们都见过这种情况。非玩家角色（NPC）明明应该移动，却站在原地不动。有时，这会完全破坏它们的行为，使其无响应；而另一些时候，它们仍保留一些基本功能。例如，它们会继续向远处的目标开火。这可能是因为 NPC 站在没有导航网格的位置，或者它们想要前往的精确位置没有导航网格，或存在类似问题。在整个制作过程中，这是一个常见问题——内容会被更新，有时未被正确标记为可导航，更常见的是导航网格已过时，或某些功能直接缺失。这在一定程度上是可以预料到的。不得不等待数据修复会剥夺我们在整个制作过程中本可获得的额外试玩质量。可以通过让 NPC 导航更加健壮和容错来解决这个问题。本章将介绍几种实现方法：本地解决、放宽导航约束、高级目标，以及这些系统之间的反馈，以便在适当的层级做出正确决策。这些技术已成功应用于《战地 2042》、《植物大战僵尸：邻里之战》和《死空间》等作品的测试机器人。关于让系统带有内部回退机制以增强健壮性，一个常见的反驳观点是，如果 AI 没有完全崩溃，内容就永远不会被修复。然而，这取决于你的开发流程。检测到的错误和选择的回退机制可以被追踪。如果这些事件还追踪位置信息，则可用于生成潜在非常有用的热图，以指示某些时间点或游戏中某些区域的导航质量，而如果代理的唯一错误响应是无法正常运作，这些细微差别可能会丢失。
+
+### 14.2 本地解决
+
+#### 14.2.1 检测
+
+在游戏中导航没有导航网格的区域、导航网格已过时的区域，或者仅是包含导航网格未表示的动态障碍物的环境时，代理可能会卡住。这尤其适用于机器人测试领域，机器人会在开发的极早期阶段也尽力导航游戏。要处理此问题，首先必须检测到它。一种方法是跟踪到下一个路径点的距离，然后如果在一定时间内没有取得进展，就断定代理已卡住。被视为卡住的时间量，以及重置此计时器所需的最小移动距离，均取决于上下文。时间需要足够短，以便代理能快速解决问题，但又不能太短，以免在预期的缓慢移动（例如平滑动画的掉头）期间触发。在这种情况下，代理要么位于被认为是有效的导航网格路径上，要么位于导航网格之外，因此无法通过重新寻路来解决。
+
+#### 14.2.2 传送
+
+传送是解决代理卡住问题的一种潜在方案。这是一种非常强大且易于实现的方法，但可能会产生一些极其不理想的结果。值得记住的是，代理可能处于被困且没有合理脱身方式的境地。如果你决定传送，那么该代理应该传送到哪里？传送可以在路径跟随层级处理，即将代理移动到下一个路径点，甚至路径末端。另一个合理的传送目标位置是已知的良好位置。例如，友好代理所在的位置，或直接传送到目标敌人处。敌对 NPC 传送到玩家的确切位置会非常令人沮丧，因此如果可能，应尽量避免。传送的价值很大程度上取决于你有多大程度信任代理传送到的位置对于其试图完成的任务是有效的。如果代理卡住是因为下一个路径点被实体物体阻挡，而它现在将传送到该物体内部，该怎么办？或者如果传送到路径末端意味着它会传送到当前已加载的物理环境之外并掉出世界？传送还可能导致代理跳过世界中的重要触发器。传送应被视为最后手段。还有其他我们应该先尝试的方法。
+
+#### 14.2.3 线性插值
+
+在某些情况下，你可以将代理的位置线性插值（lerp）到目标。这种方法的一个重要优点是，它大大降低了代理错过重要世界触发器的风险。另一个优点是它较慢，能给其他系统（例如加载系统）足够的响应时间。一个主要缺点是，它比传送更有可能让代理处于与另一个物体内部或相交的状态，至少是暂时的，因为线性插值的可能原因是代理被即将穿过的物体阻挡。
+
+#### 14.2.4 代理重置
+
+最坏的情况和最后的手段是简单地取消生成或消灭代理。然而，这确实允许重新开始场景，或者生成另一个代理，或者如果被移除的代理微不足道，则什么都不做。
+
+#### 14.2.5 输入轰炸
+
+对于输入驱动的测试机器人，在众多游戏中，简单按下跳跃、冲刺、翻越、互动、开门或任何可用类似动作的某些组合，效果出奇地好。这使代理能够以非常类似于玩家的方式处理障碍物。值得尝试检测代理试图绕过的障碍物的具体类型，可以使用射线投射或其他类型的世界查询，并且这可能可以预先完成，以避免一开始就卡住。视情况而定，这种预先扫描可能成本过高，且仍可能无法及时检测到情况。如果代理在短时间内再次卡住，你可以根据其连续卡住的次数，在不同输入之间循环。考虑在触发可用动作的同时向后行走或侧身移动。有时，简单的输入轰炸不够，还需要应用更复杂或更强大的方法。
+
+#### 14.2.6 射线投射导航
+
+当导航网格不可靠时，或者作为某种形式局部障碍物避让的扩展，也可以构建基于射线或形状投射的替代方案，用于本地临时解决方案。这种方法在包含大量移动障碍物的开放世界中效果较好。在创建此类系统之前，首先考虑是否真的需要它。它很可能比在导航网格层级包含当前未知因素更不全面、更不可靠，并且 CPU 运行成本更高。
+
+### 14.3 放宽导航约束
+
+从一个精确位置寻路到另一个同样精确的目标位置是不必要的限制。起点或目标上的微小输入偏差都会导致寻路失败，代理无法前往。这也并非通常发生的情况。导航网格解决方案通常有某种方法，将输入的起点和目标位置调整到导航网格上最近的有效位置，这通常被称为吸附。常见原因可能是位置基于物理位置，而导航网格已被简化，不再很好地匹配物理世界。增加目标的吸附距离可能会避免一些寻路会失败的情况。有些导航解决方案直接允许将目标本身指定为一个半径。无论哪种情况，试图为吸附或目标容差定义全局常数都是困难的，因为代理需要多精确地到达某个位置很大程度上取决于上下文。例如，如果代理需要与特定物体交互，这对代理可去的地方施加了更大的约束，相比于它只需要到达某个区域去调查某物。在更动态的情况下，例如一个代理追逐另一个代理，当前目标很可能在到达路径末端之前很久就发生变化。类似的情况可能是代理追逐玩家，而玩家短暂地移出了导航网格。在这种情况下，尽可能接近玩家获取位置并继续追逐，比寻路失败并可能破坏整个追逐行为要好得多。缓解这一点的一种方法是允许中间目标。
+
+#### 14.3.1 中间目标
+
+中间目标可以用于允许更宽松的导航吸附，然后在代理到达该目标后进行更严格的路径查找。取决于你的设置，这可能类似于代理遵循高级别导航
+
+路径，或仅将其作为布尔值来跟踪，以指示中间状态。在NPC追击暂时脱离导航网格的玩家的情况下，这将允许NPC继续朝向该中间目标移动，并在玩家移动时重新寻路。即使玩家不移动，NPC也可能从该位置发起攻击，或者在此期间发生其他事情使问题变得无关紧要。这与仅在找到更好的路径之前保留最后一条成功路径不同，因为即使玩家在最初寻路时就脱离了导航网格，这种方法仍然有效。将中间目标与最终目标分开的想法在许多情况下都有好处，因为它可以根据上下文更轻松地修改或丢弃。
+
+#### 14.3.2 直接路径回退
+
+中间目标的作用之一，是为管理暂时或永久脱离导航网格的目标提供一致的方式。对于临时情况，最好的情况是等到达到中间目标时，问题能自行解决，后续的寻路也能成功。然而，如果目标从已知的导航网格上可到达的最佳位置仍不可达，那么就需要脱离导航网格才能到达它。为此，你可能需要像在14.2 局部分辨率中讨论的那样，将目标位置线性插值（lerp）过去；不过，如果这失败了，则应考虑传送。
+
+### 14.4 高层次目标
+
+在确定应使用上述哪种方法时，应理解驱动代理的高层次目标。如果代理的高层次目标是到达某个区域，则应允许为导航目标定义一个容许区域，而不是指定该区域内的某个位置，并依赖于其他已定义的常量来决定吸附应该有多宽松。另一方面，如果代理需要到达一个非常特定的位置，以便某个动画或特效能正确播放，传送有时可能是首选方案。高层次目标的另一个好处是，可以独立于代理当前的导航状态来跟踪进度。有些问题可能导致代理陷入某种形式的导航循环，例如反复摔倒再站起来。在这种情况下，高层次目标可以为导航或完成设置一个绝对最大允许时间；到那时，它可能会简单地将代理传送到目的地，或使用其他强制手段来解决情况。为了更好地说明这一点，让我们看看所有这些事物如何结合在一起。
+
+### 14.5 将所有内容结合起来
+
+虽然这些技术各自都有一定价值，但整体可能大于部分之和。如果寻路在导航目标容差范围内未能找到路径，将该失败向上传播到高层次目标，在处理路径失败时就能获得更多上下文。在到达目标很重要的上下文中，导航网格上最近的当前已知位置可能被用作中间目标。对于其他一些上下文，例如搜索区域，接受路径的结束位置，并将其设为当前导航目标和高层次目标位置可能更合理。这样，它可以在所有层级上得到适当跟踪，并据此采取行动。也许目标本身并不重要，如果寻路或路径跟随出现任何问题，则应直接中止。同样，如果代理反复沿路径卡住，这可能会升级响应以触发传送。你也可以允许局部分辨率失败一直传播到高层次目标，并在该层级决定采取什么措施。再次以区域目标为例，重新生成导航目标可能比采用其他形式的分辨率更有意义。将其视为不同层级，允许错误或问题向上传播层级结构，而将分辨率向下应用，这确实有助于在正确的层级上理清模糊问题。
+
+### 14.6 导航损坏数据的要求
+
+- 构建容错的导航目标。
+- 允许导航到中间目标，以便稍后进一步细化路径查询。
+- 允许脱离网格导航。
+- 如果可能，在本地处理小障碍和与已知导航的偏差。
+- 传送比依赖完美数据更好。
+- 传送并将其报告为错误，比允许代理卡住并希望被手动注意和报告要好。
+- 确保将需要解决的问题（如卡住事件）向上传播到控制流中，以便进行上下文相应的分辨率，例如在可能的情况下选择一个新的更好的目标。
+
+### 14.7 结论
+
+本章介绍了处理不完整、损坏或缺失导航数据的几种方法。在本地层面，通过使用能力和传送。在导航层面，使用区域目标、中间目标和脱离网格导航。在更高层面，通过上下文生成此类区域目标，并通过向上传播反馈来适当处理问题。其意图在于展示这些技术如何帮助提供更具容错性的AI实现，特别是在整个生产过程中，希望能提升游戏测试的质量，最终改善游戏。
+
+## 15 环境引导
+
+Rodolfo Fava
+
+### 15.1 引言
+
+在三维（3D）空间中实现自主代理移动可能具有挑战性，尤其是在需要同时处理多个目标时。游戏行业不断自我重塑，创新的尖端往往在于推动边界并寻找创造性解决方案以满足项目需求，同时不超出游戏允许的时间和财务预算。本章旨在建立一种直观、无状态且高效的算法，用于实现面向空中、太空和水下移动的上下文感知3D导航，该算法扩展了上下文引导（Context Steering, Fray, 2015）。Fray（2015，第183页）概述的算法在解决引导行为特定缺陷方面非常有效，能够以比其前身少得多的振荡处理多个冲突目标。
+
+尽管上下文引导（Context Steering, Fray, 2015）对著名的赛车游戏做出了贡献，但承认它在管理3D导航方面不足，这是可以理解的，因为该算法最初是为标准赛车游戏场景设计的，即没有垂直移动。这项工作提出了一种不同的方式，让自主代理在具有复杂形状的关卡中在三个轴上移动，同时考虑各种动态或静态的威胁和兴趣元素，并给人类玩家留下自然移动的印象。为此，将结合射线投射、兴趣图和线性代数来构建一个强大的框架。其结果是一种针对3D自主代理移动提供整体解决方案的算法，该算法具有上下文感知、轻量和可扩展性。
+
+### 15.2 理论
+
+解决3D移动问题的第一步是考虑3D空间。可以通过将这个复杂任务分为三个部分来找到解决方案。与代理相交的三个平面各自将计算其最优方向，随后这些方向应相加以产生一个结果向量，该向量将在每个更新周期指导代理。随着时间的推移，该算法将为代理在环境中穿行重现一条看起来自然的路径，同时保持上下文感知。
+
+首先，让我们确定代理的三个相交平面。第一个平面类似于上下文引导（Context Steering, Fray, 2015），定义为Alpha平面，见图15.1a。这也可以描述为z=0。同样，另外两个平面可以通过将其余各坐标设为零来推导。例如，将x=0，得到Beta平面，如图15.1b所示。最后，将y=0，得到Gamma平面，如图15.1c所示。每个平面都将有其上下文
+
+
+分别进行评估，然后将每个结果向量相加。每个平面的结果向量计算过程在第 15.3 节 应用中详细讨论。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_140_0.png)
+
+图像 15.1 (a) Alpha 平面, (b) Beta 平面, (c) Gamma 平面。
+
+每个平面的基本实现如下：为了让单位在避开路上障碍物（墙壁、其他玩家等）的同时到达目标，如图像 15.2a 所示，算法将首先基于单位的前向量生成 n 个方向。为便于说明，选择的方向数量为八个。此步骤将代表 *alpha* 平面，如图像 15.1a 所示。术语“径向”用于指代这八个方向的简称，如图像 15.2b 所示，请记住，如果需要更高的粒度且应用程序可以轻松承担计算资源，可以使用远更多的数量。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_140_1.png)
+
+图像 15.2 算法基础。(a) 情况，(b) n 个方向的径向，(c) 兴趣处理，(d) 危险处理。
+
+下一步是查询感兴趣的对象，在本示例中表示为图像 15.2c 中的圆形（“目标”）。然后将目标与 AI 单位之间的距离向量投影到每个点积大于零的方向上，以确定哪些方向与到达当前目标相关。
+
+在图像 15.2c 中，NE 返回最大长度，因为它比其他方向更有效地引导单位到达目标。实现此公式的代码如代码清单 15.1 所示。
+
+```
+Code Listing 15.1: The basic formula for increasing the size of each radial.
+float influence = DotProduct(Distance.Normal(), Radial[n]);
+if(influence > 0)
+{
+    Radial[n] += influence * Radial[n];
+}
+```
+
+相同的径向影响评分可以重复用于其他并发目标，各方向的得分将累加。
+
+在查询感兴趣对象之后是查询危险对象。威胁评估包括对标记为危险的对象执行射线投射，如图像 15.2d 所示，这对于几何障碍物效果良好，但也可以包括针对敌方单位的定制测试，这些测试可以缓存在池中以便轻松访问。
+
+兴趣处理和危险处理目前都只会影响 Alpha 平面径向中的相关方向。两项计算结束后，各径向槽位可以相加，如图像 15.3a 和 b 所示，其中 N 和 NE 虽然兴趣得分高，但在加上相应危险后被排除，请参见图像 15.3c。此步骤在更新周期结束时将 E 作为最有利方向，并应被视为 Alpha 平面 Rα 的结果向量，如图像 15.3d 所示。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_141_0.png)
+
+图像 15.3 计算移动到目标的上下文感知结果方向 Rα。(a) 各方向的兴趣和危险向量，(b) 累积向量，(c) 环境中的代理上叠加的累积向量，(d) 分配的结果向量。
+
+在 Alpha 平面上完成最优方向的计算后，相同过程可以应用于 Beta 平面。最初，评估兴趣得分后，N、NE 和 E 三个方向似乎很有希望。但是，如图像 15.4a 所示在 NE 方向检测到障碍物后，算法必须在剩余可行的径向 N 和 E 之间选择。后者由于点积计算而拥有最有希望的得分。因此，E 被指定为 Beta 平面的结果向量，如图像 15.4b 所示。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_142_0.png)
+
+图像 15.4 (a) Beta 平面兴趣和危险影响评分，(b) Beta 结果向量指定。
+
+然后算法继续进入 Gamma 平面，如图像 15.5a 和 b 所示，重复先前针对 Alpha 和 Beta 平面描述的影响评分过程。请注意，由于 AI 单位位于障碍物之前，如图像 15.3d 所示，Gamma 平面不会与障碍物相交，因为平面与障碍物直立且平行，如图像 15.1c 所示，因此射线投射不会命中任何威胁。由于算法概述感兴趣点将分别处理，无论是否与 Beta 相交，平面上的兴趣投影都会发生。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_142_1.png)
+
+图像 15.5 (a) Gamma 平面兴趣和危险影响评分，(b) Gamma 结果向量指定。
+
+计算出所有三个结果向量（Rα、Rβ、Rγ）后，现在可以将它们相加以确定最终结果向量 Rf（图像 15.6）。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_143_0.png)
+
+图像 15.6。(a) AI 单位的 3D 视图。将上下文结果向量 $R\alpha, R\beta, R\gamma$ 相加。(b) 在每个周期结束时，AI 代理插值其旋转，使前向量与最终结果向量 $Rf$ 相遇。
+
+对兴趣图的进一步步骤是考虑单位的当前速度来评分径向，这将通过奖励与当前移动对齐的径向来防止振荡。请参见代码清单 15.2。
+
+```
+Code Listing 15.2: Advanced interest map scoring. Adds the speed dot product to reward directions that are aligned with the unit's current movement.
+
+for (TPair<int32, FVector>& RadialDirection : EnvironmentPlane.InterestPlane)
+{
+    FVector Dist = NextCheckpoint - OwnerActor->GetActorLocation();
+    float GoalDotProduct = FVector::DotProduct(Dist.GetSafeNormal(),
+    RadialDirection.Value.GetSafeNormal());
+    float SpeedDotProduct = FVector::DotProduct(OwnerActor->GetVelocity().GetSafeNormal(),
+    RadialDirection.Value.GetSafeNormal());
+    if (GoalDotProduct > 0.0f)
+    {
+        RadialDirection.Value += InterestWeight * GoalDotProduct *
+        RadialDirection.Value + InterestWeight * SpeedDotProduct *
+        RadialDirection.Value;
+    }
+}
+```
+
+### 15.3 应用
+
+使用环境转向的场景可以从空战游戏中的飞行单位到遥远星系中的飞船移动。甚至可能是自主代理（例如 AI 鲨鱼或潜艇）的水下移动。例如，让我们考虑一个在大型封闭区域（如洞穴）中的自主无人机场景。环境转向的优势之一是它可以轻松与其他系统（例如路径跟随）耦合，其中下一个路径点被视为目标。除了向路径中的下一个点移动外，它还应合理地避开墙壁和玩家。因此，不同的代理可以做出不同反应。例如，类猎物单位比冒险类型更注重自我保护。
+
+回到大型洞穴中无人机的示例，无人机可以在避开墙壁的同时巡逻区域。如果无人机设计为闪避且类似猎物，则可以通过将其他类型的 AI 单位和玩家都视为威胁来实现不同的逃跑行为。多个相互追逐和躲避的飞行单位场景如图像 15.7 所示。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_144_0.png)
+
+图像 15.7 AI 场景。单位 A 和 B 追击 C 同时相互避开。单位 C 将 A 和 B 视为威胁，同时避开障碍物并朝其感兴趣点（“目标”）前进。
+
+描述的兴趣和危险处理在多个实体之间的无缝结合可以为玩家带来沉浸式体验。它力求在追求目标时呈现自然的运动模式，同时通过避免危险情况来自我保护。目标和危险情况的确定方式可以多种多样，这可用于不同游戏的自定义设置。
+
+目标也可以由多种实体表示。例如，巡逻或赛车时的路径点，战斗中的敌方实体，要拾取的物品，以及如果单位具有群体行为，则为友方实体。轻松识别参与者之间关系的方法是使用标签来识别实体类型。层级标签可以提供更精细的粒度。对于模拟空战的游戏，AI 系统可能希望将生命值物品与友方实体区别对待。尽管两者都是有趣的元素，但每个都可以有自己的可调权重，由环境转向算法处理。
+
+一个有趣的做法是同时考虑两个或多个目标，例如，飞行单位可能希望稍微偏离通往下一个路径点的最优路径，只要足够拾取像生命值或燃料这样的消耗品，然后再恢复路径跟随例程。此外，每个物品的权重也可以在运行时调整。例如，如果单位燃料不足，汽油桶的兴趣权重可能会增加。
+
+
+
+
+
+### 15.4 攻击性配置文件
+
+关于实现环境导向（Environment Steering）的 AI 单位的一般行为，可以做一些全局性的修改，以生成一个在寻找特定目标时更不懈怠、在危险物体旁冒更多风险，或无论兴趣对象如何都更倾向于防御的单位。
+
+#### 15.4.1 防御型
+
+防御型配置文件与图 15.3 所建议的中庸方法相比，是一种更保守的做法。在此情况下，当附近存在威胁时，单位的主要目标将是避开威胁。这意味着在威胁存在期间完全忽略兴趣点，这可以理解为对任何危险的容忍度非常低，或仅对特定类型的威胁容忍度低。此情形如图 15.8 所示。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_145_0.png)
+
+图 15.8 (a) 防御型单位同时面临目标和威胁。(b) 防御型配置文件会覆盖所有兴趣方向，并朝危险的相反方向移动。
+
+#### 15.4.2 冒险型
+
+作为高级策略的一部分，单位可以选择高风险策略。例如，为了甩掉追击它的另一个单位，它可能会故意选择一个潜在危险的方向，前往另一个不太倾向冒险的单位不会去的地方。这种冒险行为可以通过将碰撞时间保持得非常短，以便在最后一刻仍能避开物体来确保自我保存，从而得到缓解。另一种可能带来更高回报的冒险情况是，选择一个被危险行为者包围的狭窄地点，这可能会更快地通往其某个目标。例如，被敌人或障碍物包围的拾取型健康物品。这种冒险型配置文件如图 15.9 所示。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_146_0.png)
+
+图 15.9 攻击性配置文件的展示，AI 单位为更高回报而冒险。尽管下一个径向 N 存在危险，仍选择了 NE 方向。(a) 从上往下看显示合成矢量。(b) 每个方向中的兴趣和危险矢量。
+
+进一步地，应用于每个兴趣或危险方向的权重可能由碰撞时间而非距离决定，即使用速度公式：
+
+```
+v = d/t
+```
+
+AI 单位的速度（v）以及到兴趣或危险行为者的距离（d）均可在运行时轻松查询。基于此，通过变形上述公式可得出碰撞时间：
+
+```
+t = d/v
+```
+
+#### 15.4.3 中庸型
+
+上述两种配置文件之间的平衡方式是，为每个径向定义危险和兴趣分数的阈值。这可以提供有趣的组合和进一步的微调选项，以找到符合游戏需求的理想平衡。代码清单 15.3 说明了如何实现这一点。
+
+```
+Code Listing 15.3: Radials can be filtered out following score thresholds.
+
+FVector UAWEnvironmentSteeringComponent::GenerateEnvironmentPlaneMapResult(FAWEnvironmentPlane& EnvironmentPlane)
+{
+    FVector Result = EnvironmentPlane.SumPlane[0]; //Init Result as first radial, //override if needed.
+    for (TPair<int32, FVector>& RadialDirection : EnvironmentPlane.SumPlane)
+    {
+        int index = RadialDirection.Key;
+        if (EnvironmentPlane.DangerPlane[index].Size() > DangerThreshold ||
+            EnvironmentPlane.InterestPlane[index].Size() < InterestThreshold)
+        {
+            //Filter out radials according to
+            //the score thresholds.
+            RadialDirection.Value *= 0;
+        }
+        if (RadialDirection.Value.Size() > Result.Size())
+        {
+            Result = RadialDirection.Value;
+        }
+    }
+    // (...)
+    return Result;
+}
+```
+
+### 15.5 注意事项
+
+然而，如果每个环境平面的方向数量过多，射线投射可能会非常昂贵。不过，有许多解决方案可以减轻这种开销。其中之一是保持合理数量的平面方向，一个经验法则是采用 2°，因为在计算机中一切都以二进制存储。方向数量的一个大致范围是每个平面 32 到 128 个方向，这能呈现平滑的结果，并且根据可用硬件，每帧处理开销分别在 1 到 4 毫秒之间。
+
+此外，将射线投射降至最低的一个可行方案是，将重要实体（如敌方飞机和物品）缓存到游戏导演的池中。这需要在内存中预先存储它们，而不是在每个更新周期都查询某个类的所有对象。即便如此，缓存单位之间相互检查的复杂度将达到 O(n²)，但使用二叉空间划分树、四叉树和八叉树等空间划分技术，可将其大幅降低。因此，只有当缓存单位位于八叉树中相同或相邻的单元格时，才会相互检查。
+
+使用球体追踪而非线条追踪可以获得一些其他实际技巧以获得更好的结果，因为前者可以考虑 AI 单位的尺寸（由球体半径表示），并防止单位与径向之间的几何体发生不必要的碰撞。此外，另一个合乎逻辑的步骤是在将平面图合并为最终合成矢量之前，分别对每个平面图处理进行平衡。
+
+### 15.6 结论
+
+总的来说，环境导向（Environment Steering）为上下文感知的 3D 移动提供了一种创新方法，可以轻松地进行扩展和调整，以适应游戏的需求。即便如此，高质量的结果预计仍将依赖于多次迭代中的适当平衡。如果出现任何性能瓶颈，缓存和空间划分等做法是合适的方法，将改进本章详细介绍的方法的效率。
+
+## 参考文献
+
+Fray, A. (2015) 上下文导向。收录于 *游戏 AI 专业 2*，Steve Rabin 编。CRC Press，佛罗里达州博卡拉顿，第 183–193 页。
+
+## 16 使用体素作为环境提示
+
+*理查德·布尔*
+
+### 16.1 简介
+
+开发游戏 AI 时的一个常见需求是使非玩家角色（NPC）能够回答“我现在在哪里？”这个问题。在回答这个问题时，你可以实现诸如智能环境对话等功能——“嘿！我认出这个地方了，我小时候常在这里玩！”。你可以高效地检查他们是在室内还是室外，以查看他们是否免受窥视（或酸雨！）的威胁。你可以检查他们是否位于其阵营所属的安全街区、他们所在的空间是否过于狭窄而无法从轻盈机器人变形为巨型卡车，或者他们是否站在可能被用于埋伏的潜在咽喉要道危险附近。
+
+可能性与你可以解析的环境提示一样无穷无尽，这些提示可以直接让你获得更具动态性、反应性和沉浸感的 NPC 行为。
+
+### 16.2 简单方法
+
+使用触发体积，你可以非常轻松地实现所有这些功能。例如，假设你已在游戏世界中建模了一栋位于村庄的大型多房间建筑，而该村庄本身位于一个县的边界内。关卡设计师可以前来为建筑中的每个房间标记一个触发体积，并为房间添加其类型标签（厨房、卧室等）。接着，他们可以放置一个涵盖整个建筑的触发体积，将其标记为室内，并标注建筑类型——“ Manor house 宅邸”。最后，他们可以用一个巨大的触发体涵盖整个村庄，以村庄名称作为区域类型标记，并将其标记为室外。
+
+原则上，按最小体积大小分层优先处理标签覆盖。这意味着，在此示例中，如果你将化身移动到村庄区域体积内部，但尚未进入房屋——即它们仅占据单个最大体积——那么它们处于室外，并且位于村庄。如果随后进入房屋，但尚未进入专门标记的房间，那么它们现在同时占据宅邸体积和村庄体积。村庄是室外，宅邸是室内，因此代理被告知同时处于两种状态，但由于宅邸体积是它们所占据的两个重叠边界中较小的一个，因此它们肯定在室内。如果他们进入房屋中暴露于自然环境的房间，此示例的效果会更加稳健。例如，有一点小
+
+
+
+庄园宅邸整体边界内的庭院空间。如果这个空间有自己的房间体积，标记为室外，并且一个代理站在这里，他们将嵌套三个体积深，并且因为庭院"房间"是最小的，他们现在又是室外了。
+
+从示例中可以看出，这是一个非常简单但又巧妙的标记系统，NPC可以很好地利用它，如果你的游戏世界异常小，并且很少被修改，这可能足以满足你的游戏需求。然而，“异常小”和“很少被修改”并不适用于正在开发的绝大多数游戏！例如，你不可能指望关卡设计师去标记*侠盗猎车手5*规模开放世界中的每一个房间和每一栋建筑，然后还现实地指望他们在游戏世界不可避免地在开发过程中发生变化时，时刻掌握大量的触发体积。对于非常独特的情况，回退到这种手动标记系统固然不错，但理想情况下，你需要为设计团队提供一个系统，当环境被微调时，该系统能尽可能自我维护，甚至能在不需要插入虚拟路标的情况下，提供尽可能多的自动环境标记。
+
+### 16.3 使用体素分析环境
+
+你可以使用多种地形分析方法来帮助自动化手动标记，但一种强大且经典的方法是八叉树，用于将环境细分为体素。你的游戏引擎中可能甚至已经在进行此操作，供渲染或照明系统使用，这意味着你甚至可能能够为AI系统利用一些共享技术。
+
+无论如何，你需要从八叉树中得到的是细分空间，最终得到环境的一个体素化区域，其中包含一组覆盖碰撞的体素（封闭体素）和一组占据可导航空间的体素（开放体素）。一旦有了这个，你就可以使用NPC的当前位置来查询其当前占据的开放体素，并开始标记和询问这些体素以获取空间信息。
+
+### 16.4 生成阶段
+
+完整的环境标记过程可以离线进行，生成的数据可以保存并存储为二进制数据文件。但是，如果环境被修改，可能会出现需要在运行时重新生成部分或全部数据的情况。
+
+生成阶段如下所示，这些阶段将在后面详细探讨：
+
+- 1. 使用用户定义的种子边界生成八叉树，以及所有开放和封闭体素。
+- 2. 剔除生成后完全位于种子边界之外的任何体素。
+- 3. 对开放体素执行内部测试。
+- 4. 在体素空间中传播标记种子。
+- 5. 将任何标记边界的标记继承到体素空间中。
+
+#### 16.4.1 生成体素空间
+
+要开始生成过程，将一个定向包围盒放置到环境中，它定义了你想要生成体素标记空间的区域。在八叉树生成期间，该区域会被拉伸为三个维度上均匀（如果还不是均匀的话），然后任何完全超出原始包围区域的生成体素可以在最后被剔除。
+
+八叉树生成是一个递归函数，最初使用拉伸的种子包围区域调用，随后使用八叉限界调用，在简单的算法级别上，它看起来类似于代码清单16.1。
+
+**代码清单16.1：八叉树生成的递归函数。**
+
+```csharp
+private void GenerateOctree(Bounds boundingBox)
+{
+    bool containsCollision = CheckCollisionInside(boundingBox);
+
+    if (boundingBox.size.sqrMagnitude <= m_MinVoxelSizeSqr)
+    {
+        // Reached minimum voxel size
+        CreateVoxel(boundingBox, containsCollision);
+    }
+    else if (containsCollision)
+    {
+        // Break up octant into 8 pieces to isolate the collision further
+        var min = boundingBox.min;
+        var center = boundingBox.center;
+        var halfHeight = new Vector3(0.0f, 0.0f, boundingBox.size.z *
+        0.5f);
+        var octantSize = (boundingBox.size / 2.0f);
+        var octantHalfSize = octantSize * 0.5f;
+
+        // Bottom row 34
+        var octants = new Bounds[8];
+        octants[0] = new Bounds(min + octantHalfSize, octantSize);
+        octants[1] = new Bounds( new Vector3(center.x, min.y, min.z) +
+        octantHalfSize, octantSize);
+        octants[2] = new Bounds( new Vector3(min.x, center.y, min.z) +
+        octantHalfSize, octantSize);
+        octants[3] = new Bounds( new Vector3(center.x, center.y, min.z) +
+        octantHalfSize, octantSize);
+
+        // Top row 78
+        // 56
+        octants[4] = octants[0];
+        octants[4].center = (octants[4].center + halfHeight);
+
+        octants[5] = octants[1];
+        octants[5].center = (octants[5].center + halfHeight);
+
+        octants[6] = octants[2];
+        octants[6].center = (octants[6].center + halfHeight);
+
+        octants[7] = octants[3];
+        octants[7].center = (octants[7].center + halfHeight);
+
+        for (int iOctant = 0; iOctant < octants.Length; ++iOctant)
+            GenerateOctree(octants[iOctant]);
+    }
+    else
+    {
+        ////Fully open space voxel - potentially larger than the minimum
+        //// voxel size.
+        CreateVoxel(boundingBox, true);
+    }
+}
+```
+
+该函数中的第一个检查是确定所提供的八叉限界的包围区域是否包含任何碰撞。随后它会检查边界是否至少和我们定义的最小体素大小一样小，如果是，则在此位置创建一个开放或封闭体素，并从此处不再进行递归调用。否则，如果包围区域确实包含碰撞，它将细分接下来的八个八叉限界，并对每个递归调用。如果它不包含碰撞，你可以创建一个开放体素，其大小可能介于最小体素和原始种子八叉限界之间，这个特定分支即完成。
+
+此处所做的是标记原始边界内的所有空空间，尽可能使用最大的体素，同时以最小允许体素大小等效的密度标记碰撞。这是一种快速有效的方法，用于确定世界位置占据哪个体素、该体素在八叉树中有哪些连接，以及一个可用于将与体素相关的元数据应用到供NPC查询的地图。
+
+生成过程的下一阶段是剔除完全存在于原始种子边界区域之外的任何体素。如果必须将边界拉伸以适应均匀形状，就可能发生这种情况。任何与边界边缘重叠的体素都将被保留，因此体素空间可以超出原始边界，但只能延伸到与其相交为止。
+
+#### 16.4.2 内部测试
+
+在手动放置环境标记触发体积的方法中，关卡设计师将空间标记为室内或室外。现在可以使用体素方法轻松实现这一点，即从每个开放体素发送一系列简单的向上射线投射。
+
+一种相当有效且简单的测试方法是，对每个开放体素，从顶部中心和每个顶部角落向最高处发射一条射线。如果这五条射线中达到一定比例（例如50%）与多边形碰撞，则该体素为室内，或至少是被遮挡不受天空照射。图像16.1描绘了这一过程。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_153_0.png)
+
+图像16.1 测试体素是室内还是室外。
+
+你现在有一个八叉树，可以查询世界位置，并被告知该位置是室内还是室外。
+
+#### 16.4.3 标记种子和门户边界
+
+在用于标记房间和区域的简单基于触发的体积方法中，如果要将房间内部标记为厨房，你会拉伸一个触发体积来填充空间，并为该体积设置room:kitchen标签。如前所述，这在开发过程中艺术家修改房间之前没问题，之后设计师就必须跟进这些更改，重建触发体积以匹配。使用体素空间生成，你现在可以通过让设计师仅放置一个标记种子——仅仅是一个世界空间位置——而不是体积，来使这个过程更加健壮。
+
+在生成过程的“在体素空间中传播标记种子”（第四阶段）期间，你定位八叉树边界内放置的每个种子，找到它所在的八叉限界/体素，并用种子标记标记该体素。你可以假设，如果该种子被标记为 room:kitchen，它将放置在厨房内部空间内的开放体素中。现在你在所有连接的开放体素上执行泛洪填充算法，并将每个连接也标记为 room:kitchen。这种泛洪填充例程的明显问题是，它很可能也会从门口泄漏出去，即使由于碰撞层的排序方式而没有泄漏，你可能仍然希望划定厨房空间，以更受控的方式完全隔离标记标记所使用的体素。这就是门户派上用场的地方。
+
+门户边界只是一个体积，可以在关卡设计标记过程中放置，与放置种子同时进行，以封锁入口和出口至
+
+
+
+一个需要在隔离状态下进行 seeding 的空间。图 16.2 所示的厨房示例有一个入口门洞和一个窗户开口，体素空间会从中流过。如果你放置一个与这些洞重叠的薄型门户体积，八叉树生成会将这些体积视为碰撞，以生成开放和关闭的体素，本质上划分空间。这些门户不会持续到游戏的运行时，除了它们对体素空间产生的影响。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_154_0.png)
+
+##### 图 16.2 门户边界。
+
+#### 16.4.4 继承标记边界
+
+这是最后一个阶段，也是最简单的一个。你只需遍历设计师可能手动放置的所有标记边界，并将标签传播到其中包含的开放体素上。之前阶段自动生成的任何现有类型标签都应按层级和优先级存储，因为手动标记应优于自动化。例如，如果你已经为厨房完成了 seeding，并且设计师在房间内放置了一个手动边界来标记其中的储藏室，那么厨房房间标签会存储在开放体素上，但储藏室标签也会以更高优先级存储。占据该体素的一点，从房间占用角度来看，主要位于“储藏室内部，同时也在厨房内部”。这精确地模仿了前面描述的简单体积标记方法中规定的占用体积大小优先级规则。
+
+### 16.5 结论
+
+八叉树是游戏引擎中用于快速位置查找的强大工具，适用于从渲染到游戏逻辑的各种用途。利用并共享该技术进行 AI 环境查询，尤其是当大部分数据标记可以作为体素生成的一部分自动化时，这非常合理，并可以为 AI 行为和响应提供补充的丰富性。此标记可用于简单的“我在哪里”查询，为面包屑寻路提供基于体素的环境寻路，甚至可以根据区域类型遍历做出非常高级别的移动决策。而且，如果你能在项目开发中多次重用核心游戏引擎数据，这总是一个“易于推销”的主意。
+
+## 17 生物可信度量表
+
+努诺·维森特·巴雷托博士、
+费尔南多·佩诺萨尔·马查多博士、
+以及利西尼奥·罗克博士
+
+### 17.1 引言
+
+要体验世界驱动视频游戏，玩家必须相信，或者至少接受提供给他们的信息，即使这些信息可能挑战，甚至与他们对现实的概念相矛盾。使世界感觉可信成为开发者的目标——这是一个通过参与度改善玩家体验的重要组成部分概念（Warpefelt, Johansson, & Verhagen, 2013）。负责此事的元素之一是居住在这些世界中的行为体，或代理人。
+
+在研究内容制作时，评估的重要性变得清晰。要创建可信的生物，需要适当的工具来既评估生物的行为，又超越其视觉表现。首先，生物不仅仅是其各个单独元素的总和，评估应考虑到这一点。其次，它们存在于一个上下文中。后者定义了它们的角色，任何削弱都可能导致生物被负面感知。
+
+然而，在可信度的背景下，人类有一组预定义的标准，包括展示个性、情感、自我驱动力、变化和社交关系（Thomas & Johnston, 1995），但生物与人类的互动方式不同。例如，它们缺乏人类可理解的语言，因此相同的标准可能不再适用。
+
+本章提出了一种与架构无关的工具，能够衡量生物的可信度，以便在设计阶段（自动化或其他）开发者可以最大化生物的感知。可以从该工具推导出一套启发式方法，或规则，以指导和指导过程，并帮助设计那些支持通过视频游戏的虚构世界中介的暂停怀疑的生物。
+
+### 17.2 理解可信度
+
+在介绍评估工具之前，需要理解什么是“可信度”。在媒体中，它与“暂停怀疑”的概念紧密耦合。这最初由 Coleridge 和 Shawcross（2001）在其自传性反思中提出，他们指出可信度是人们必须愿意做的一件事（甚至在潜意识层面），其框架设定在媒介的有限真实性中（只需要一种“真实的表象”），发生在情境化的环境或“瞬间”中。简而言之，当体验媒体时，人类愿意为了情境而相信某些不可思议的事情。
+
+在心理学中，“存在感”涵盖了这一现象在基于技术的媒体中的表现形式。它被定义为“无中介的感知幻觉”（Lombard & Ditton, 2006），是一种导致人停止确认媒介存在、仿佛媒介不存在般做出反应的现象。例如，充当其内容的窗口。在游戏行业及其学术领域，认为“存在感”在改善玩家体验方面发挥着重要作用（Warpefelt, Johansson, & Verhagen, 2013）。因此，帮助创建和维持它成为开发团队的目标之一。
+
+这引出了一个问题：开发者如何为玩家提供一种“真实的表象”，以帮助他们“暂停怀疑”？可信度就派上用场了。Fogg 和 Tseng（1999）指出，在计算机软件中，信息对应于用户创建的心理模型。在视频游戏中也是如此，因为玩家在游玩时也会创建心理模型，这使他们接受游戏内代理人为“活着且在思考”（Rosenkind, Winstanley & Blake, 2012）。研究进一步支持了这一点，这些研究不仅表明可信代理人被认为比不可信代理人更具吸引力（Warpefelt, 2016），还说明了如何制作它们。
+
+然而，可能是由于人们倾向于将媒体内容人格化（Reeves & Nass, 2003），他们压倒性地关注人类（Reynaud, Donnat, & Corrible, 2014），尽管存在其他动物。即使是更多关注动物的视频游戏也遵循这一人格化趋势（Frank, Stern, & Resner, 1997）。尽管如此，它们作为自主代理人，也旨在支持这些虚拟世界的沉浸感。因此，提供创建它们的手段变得很重要。
+
+对于负责设计和开发生物的 AI 程序员来说，拥有一个能够以情境化方式帮助他们评估围绕可能像可信度这样模糊概念的内容的工具，变得极其宝贵。
+
+### 17.3 生物可信度量表
+
+生物可信度量表（CBS）是一种设计工具，帮助开发者评估并可能制作他们的作品。它依赖于旨在传达可信度的特征，采用五点评分量表的形式，包含四个类别中的二十三条陈述。参与者可以使用以下同意值之一进行回答：‘完全不’、‘轻微’、‘有些’、‘中等’和‘很大程度上’。陈述如下：
+
+**与环境的关系**：与环境互动相关的项目，范围从对环境线索和指导行为的反应到生物系统交换。
+
+- 1. 生物与周围环境互动。
+- 2. 生物具有运动协调能力。
+- 3. 生物将其运动朝向/远离目标。
+- 4. 生物可以在环境中找到对象。
+- 5. 生物可以排出有机废物。
+- 6. 存在先前排出的有机废物的迹象，例如粪便、尿液、胶质等。
+- 7. 生物的行为与其环境相符。
+
+**生物/社会合理性**：此类别涉及生物作为生物体的合理性；例如，展示自主性、对周围环境的反应性以及与其他生物互动的能力。
+
+- 8. 生物可以独立移动。
+- 9. 生物的敏捷度反映其体积。
+- 10. 生物对环境触发器做出反应。
+- 11. 生物可以通过与其他生物或人类协调来执行任务。
+- 12. 生物以音频-视觉方式与其他生物或人类交流。
+- 13. 生物进行生殖行为。
+- 14. 存在先前生殖行为的迹象，例如卵、幼崽、怀孕等。
+
+**适应**：此类别涉及生物的身体和心智如何适应环境和生物变化。例如，生长。
+
+- 15. 生物从过去的事件中学习。
+- 16. 生物利用过去的经验克服新情况。
+- 17. 生物随年龄改变其外观。
+- 18. 生物随年龄改变其声音。
+- 19. 生物随年龄改变其行为方式。
+- 20. 生物可以模仿他人以发展自己的行为。
+
+**表达**：此类别中的元素指生物如何使用其身体作为沟通、学习或生存的手段。
+
+- 21. 生物的肢体语言预示其行为。
+- 22. 生物对对象、事件和其他生物表现出情绪反应的迹象。
+- 23. 生物的身体似乎适应其栖息地。
+
+虽然该量表旨在弥补评估过程的空白，但它也可以在创建阶段纳入。这使开发者能够生成内容以最大化可信度，随后评估其对量表的解释是否与玩家一致。因此，可以推导出以下工作流程：
+
+- 在生物的创建阶段，量表的项目可以视为启发式方法。
+- 这些启发式方法可以纳入其设计和架构中。
+
+
+
+
+
+- 在评估阶段，可以使用游戏测试和专家评估，以CBS作为衡量工具，来验证先前制作的成果。
+- 此过程可以重复，直到开发者对其最终结果满意为止。
+
+有了这个量表，还可以推导出其他评估工具。其中一个工具就是CBS。
+
+#### 17.3.1 生物可信度光谱
+
+虽然CBS可以输出一个可信度指数来帮助评估单个生物，但这可以通过一个更具可视化的框架来补充——一个用于帮助比较电子游戏生物的参考列表。此类框架可以帮助设计师不仅了解如何改进现有设计以及如何解读每个维度和陈述如何影响其整体可信度感知，还可以将其自身设计与其他元素进行比较。
+
+因此，CBS包含一个从0（不可信）到10（可信）的轴，生物根据其感知到的可信度指数进行排序。
+
+指数可以通过应用CBS后获得的评分之和来计算（如果数据收集中使用了多名玩家，则为每个项目评分的中位数）。它们可以用于表示整体的“可信度”，在这种情况下会使用所有项目；或者用于表示特定类别，在这种情况下，只考虑该类别的项目。
+
+如前所述，从游戏设计角度来看，CBS可以提供额外的洞察。例如，来自类似电子游戏（或具有类似角色/屏幕时间）的生物可以通过光谱进行比较和分类，以便开发者为其自身生物的要求设定基准，无论是基于其整体感知的可信度还是特定类别。此外，它可以帮助我们理解开发和设计中不同方法可能被如何感知，并协助识别潜在陷阱。
+
+#### 17.3.2 使用生物可信度量表的示例
+
+为了说明量表如何帮助生物设计，请设想以下场景：一个团队正在开发一款科幻探索游戏，玩家扮演一名宇航员，任务是对未探索的星球进行生物调查。在研究过程中，他们发现了一种名为Loncey的伴生生物，最终它会在整个游戏过程中帮助他们。
+
+在这个实际示例中，开发团队想要评估玩家遇到的三种生物的可信度。它们如下：
+
+- **Blarma**: 这些类犰狳的生物在环境的某些区域游荡。它们单独出现，或呈直线队形出现，并通过在两侧交替跳跃来移动。玩家可以尝试与它们互动，但Blarma不会反应。它们的屏幕存在感可能较小。
+- **Loncey**: 一种宇航员在冒险早期遇到的温顺狮/郊狼杂交生物。在过场动画之外，它始终靠近玩家，尽管它只会四处游荡，并且可能被其他生物击晕。其屏幕存在感很大。
+- **Raptar**: 这些是弱小的爬行类生物，对玩家具有敌意。玩家被迫杀死Raptar才能继续进行调查。它们保持待机状态，但一看到玩家就会扑向玩家。它们会不断扑击直到被杀死。与前两种生物不同，这些生物的屏幕存在感中等。
+
+将生物部署在演示构建中后，可以按照前面描述的工作流程进行评估测试。
+
+- 1. 测试人员被提示游玩构建版本，并使用CBS评估这三种生物。
+- 2. 使用收集到的数据，每个项目的一致性值可以转换为0–4的量表，并可以计算该量表每个项目评分的中位数。这使我们能够计算可信度得分，首先是跨量表的所有类别，然后是单独计算。
+- 3. 随后可以分析数据，以比较每种生物，并让团队就其优势和劣势（在可信度方面）进行反思，进而理论化潜在的解决方案。
+
+对于本示例，假设测试的结果在表17.1和表17.2中描绘。可以观察到，表17.1显示Blarma、Loncey和Raptar的总分分别为2.39、4.35和5.65，远低于量表的最高分10（可信）。同样明显的是，Blarma被认为是该组中最不可信的。
+
+### 表17.1
+CBS结果，归一化至10点语义量表。
+
+| 量表 | Blarma | Loncey | Raptar |
+|---|---|---|---|
+| 1 | 0 | 2 | 4 |
+| 2 | 0 | 4 | 3 |
+| 3 | 3 | 4 | 4 |
+| 4 | 2 | 3 | 4 |
+| 5 | 0 | 0 | 0 |
+| 6 | 0 | 0 | 0 |
+| 7 | 0 | 1 | 4 |
+| 8 | 4 | 4 | 4 |
+| 9 | 2 | 2 | 4 |
+| 10 | 0 | 2 | 2 |
+| 11 | 0 | 1 | 0 |
+| 12 | 2 | 1 | 0 |
+| 13 | 0 | 0 | 0 |
+| 14 | 0 | 0 | 0 |
+| 15 | 0 | 1 | 1 |
+| 16 | 0 | 1 | 1 |
+| 17 | 3 | 2 | 4 |
+| 18 | 2 | 2 | 4 |
+| 19 | 1 | 2 | 4 |
+| 20 | 0 | 1 | 0 |
+| 21 | 1 | 2 | 4 |
+| 22 | 0 | 1 | 1 |
+| 23 | 2 | 4 | 4 |
+| 总计 | 2.39 | 4.35 | 5.65 |
+
+### 表17.2
+按量表类别划分的CBS结果，归一化至10点语义量表。
+
+| 类别 | Blarma | Loncey | Raptar |
+|---|---|---|---|
+| 与环境的关系 | 1.79 | 5 | 6.79 |
+| 生物/社会合理性 | 2.86 | 3.57 | 3.57 |
+| 适应性 | 2.5 | 3.75 | 5.83 |
+| 表达力 | 0.32 | 0.75 | 0.96 |
+
+有了这些数值，开发者可以尝试通过考虑预定义的目标得分（由开发者自己制定，或通过使用相同方法对类似游戏中的生物进行评分获得）来最大化任何/每种生物的可信度，或者使用第三种生物的得分作为基准来提升一两种生物的得分。
+
+在理想世界中，开发者会改进生物的每个方面，直到实现最大可信度；然而，由于资源有限，这并不总是可能的。在这个示例中，假设了这一点，并且仅使用测试过的生物的得分，开发者将集中精力改进Loncey，因为（a）它不如Raptar可信，（b）其屏幕存在感是所有生物中最大的。
+
+专注于Loncey，可以通过计算量表类别的归一化得分（如表17.2所示）来获取更深入的信息。这有助于识别Loncey落后于Raptar的领域。这些也可以通过考虑游戏的设计目标来确定优先级。例如，鉴于Loncey旨在陪伴和帮助玩家，提升其在环境关系和表达方面的可信度应该是第一步。
+
+从数据中还可以得出其他结论，我们将这些作为读者的练习留给读者。每个结论都将有助于识别迭代Loncey并改进该生物可信度的方法。最后，在迭代之后，开发者可以重新运行类似的测试和迭代过程，直到对整体结果满意为止。
+
+### 17.4 结论
+
+生物在世界驱动的电子游戏中可以发挥至关重要的作用。它们随时间提供玩家可以感知的视听反馈。这让玩家了解生物做什么以及如何做。当做得正确时，它可能会在玩家中促进“存在感”。
+
+CBS被介绍为一种帮助AI程序员在开发生物时的工具。它基于5点量表，并着重于通过可信度的视角来评估生物。
+
+由于内容创作是一个两阶段的迭代过程（创作后跟随评估），该量表旨在补充现有的架构和算法。特别是，它旨在帮助开发者转变思维方式，通过一套指南反思如何最大化生物的可信度，随后在情境化的环境中评估其结果。单靠CBS可以评估单个生物，提供哪些领域需要额外工作的想法。然而，可以将多次评估合并以生成一个CBS，使开发者能够比较生物并识别其优势和劣势。
+
+## 致谢
+
+该工作部分得到CISUC ICIS项目CENTRO-07-0224-FEDER002003和FCT博士补助SFRH/BD/100080/2014的支持。
+
+
+
+
+
+## REFERENCES
+
+- Coleridge, S., and Shawcross, J. (2001) 《生平文学评论》. 伦敦: Electric Book Co.
+- Fogg, B., and Tseng, H. (1999) 《计算机可信性要素》. SIGCHI 人机因素计算系统会议论文集，CHI 是极限 – CHI ’99，纽约。
+- Frank, A., Stern, A., and Resner, B. (1997) 《社会智能虚拟宠物》. 社会智能代理. AAAI 秋季研讨会, [在线] pp. 43–45. 可于: <http://alumni.media.mit.edu/~benres/verbiage/Socially%20Intelligent%20Virtual%20Petz.htm#:~:text=Socially%20Intelligent%20Virtual%20Petz&text=We%20have%20developed%20a%20series,layered%20D3D%20animation%20and%20sound.>; [2022 年 8 月 7 日访问].
+- Lombard, M., and Ditton, T. (2006) 《核心所在：在场的概念》. 计算机中介传播杂志, 3(2). 可于: https://academic.oup.com/jcmc/article/3/2/JJCMC321/4080403
+- Reeves, B., and Nass, C. (2003) 《媒体方程式：人们如何将计算机、电视和新媒体视为真实的人和地方》. 语言与信息研究中心出版, 剑桥大学出版社.
+- Reynaud, Q., Donnart, J., and Corrublo, V. (2014) 《评估具有预判能力的虚拟代理的可信性》. 2014 自主代理与多代理系统国际会议论文集, 巴黎, pp. 1533–1534.
+- Rosenskind, M., Winstanley, G., and Blake, A. (2012) 《为游戏中的基于角色的人工智能自适应底层涌现行为》. 智能系统研究与开发, XXIX, pp. 333–346.
+- Thomas, F., and Johnston, O. (1995) 《生命的幻觉》. 纽约: Hyperion.
+- Warpefelt, H., and Johnston, O. (2016) 《非玩家角色——探索 NPC 展示与行为的可信性》. 博士论文, 斯德哥尔摩大学.
+- Warpefelt, H., Johansson, M., and Verhagen, H. (2013) 《使用游戏代理矩阵分析游戏角色行为的可信性》. DiGRA 2013: 重塑游戏研究会议论文集, 亚特兰大, GA.
+
+## 18 使用 AI 规划进行自动化测试
+
+布拉姆·里德尔博士
+
+### 18.1 引言
+
+随着游戏规模日益庞大和复杂，测试的需求以及测试一款游戏所需的时间都在增加。有许多成熟的自动化测试类型，例如单元测试、功能测试和冒烟测试。这些测试会收集帧率、内存使用量、加载时间、带宽使用量等性能指标，以及更多指标。它们还执行代码覆盖率分析、检测崩溃、触发断言并创建错误日志，以及许多其他功能。这些数据对于开发团队优化和稳定其游戏来说弥足珍贵。
+
+本章将重点介绍自动化测试，即模拟键盘、鼠标和游戏控制器输入，以玩家身份游玩游戏的测试。大多数用于以此方式测试游戏的解决方案采用预生成脚本、行为树（BTs）、有限状态机（FSM）和强化学习代理的组合。它们加载一个关卡并测试一段时间，然后退出。更进一步，本文将描述一个 AI 框架，该框架能够持续地从头到尾完成整个游戏。这种系统的益处多种多样。它不仅能提供更广泛的代码覆盖率和更能反映游戏的指标，还能检测游戏和关卡设计问题。如果该框架无法完成游戏，通常是由于代码错误或关卡/游戏设计问题。本章描述的系统已被成功用于完成游戏诸如 _僵尸部队 4_、_邪恶天才 2_ 和 _精英狙击手 5_ 等。
+
+### 18.2 AI 规划
+
+规划的根源可以追溯到 STRIPS，这是一种规划语言，它将初始状态和目标定义为命题值以及一组动作。每个动作都有一个前置条件，规定了何时可以执行该动作，以及一个效果，详细说明应用动作后状态如何更新。此类规划问题的解决方案是一系列动作，当应用于初始状态时，会导致所有目标条件均为真的状态。AI 规划系统在游戏行业中最著名的应用是面向目标的动作规划（GOAP）。它最初由 _惊栗迷宫_ 推广，此后已用于 _古墓丽影_、《刺客信条》和 _中土世界：魔多阴影_ 等各种其他项目。与行为树（BTs）等反应式系统相比，此类深思熟虑系统的主要优点之一是，它允许更智能的 AI，能够推理其动作如何影响世界状态和未来动作。
+
+#### 18.2.1 简单数值规划
+
+简单数值规划问题是确定性的、完全可观测的，可以对数字进行推理，但不涉及时间。所描述的框架表达能力足够强，足以对《邪恶天才 2》、《精英狙击手 5》、《僵尸部队 4》以及许多其他游戏的所有战役进行建模并找到解决方案。
+
+##### 18.2.1.1 领域
+
+规划系统需要一个它需要游玩的游戏的抽象模型，即所谓的 Domain（领域）。这包括以下信息：
+
+- 游戏中可以存在的事物类型。例如，Player、Enemy、Location、Door、Key 等等。每种类型也可以是其他类型的超类型，例如，你可以定义一个 Actor 类型，它是 Player 或 Enemy 的超类型。
+- 这些类型之间的属性。这些属性使用一阶谓词逻辑表示它们的关系。每个谓词都有一个名称和一系列类型。例如：
+  - (at Actor Location)，一个 `Actor` 可以 **位于** `Location`；
+  - (#amount Item Actor)，一个 `Actor` 可以拥有 `Items` 的 **数量**。数值谓词以 # 开头。
+- 最后，玩家在游戏中可以执行的动作。每个动作都有一个名称、一系列命名类型，指定何时适用（其前置条件），以及它如何影响世界状态（其效果）。例如，要让玩家从位置 A 移动到位置 B，玩家必须位于位置 A，且必须存在从位置 A 到位置 B 的有效路径。此动作对世界的影响是玩家不再位于位置 A，而是现在位于位置 B，有关使用 PDDL 表示法的完整定义，请参见代码清单 18.1。
+
+```
+Code Listing 18.1: A Move action.
+
+(:action Move
+  :parameters (?p - Player ?from ?to - Location)
+  :precondition (and
+    (at ?p ?from)
+    (connected ?from ?to))
+  :effect (and
+    (not (at ?p ?from))
+    (at ?p ?to))
+)
+```
+
+##### 18.2.1.2 问题
+
+在运行时，会创建领域的一个 *实例*，它由初始状态、当前游戏世界的表示以及我们试图实现的目标组成。这是 AI 规划器需要解决的问题。
+
+###### 18.2.1.2.1 初始状态
+
+初始状态由世界中包含的所有 *对象* 组成。每个对象都有一个唯一名称，并且属于领域中定义的某种类型。例如：
+
+- p – 玩家，对象 *p* 的类型为 *玩家*。
+- blue_key – 钥匙，对象 *blue_key* 的类型为 *钥匙*。
+
+它还包含所有为真的 *事实*。一个 *事实* 是谓词的一个实例，其中每个 *类型* 都由正确类型或子类型的对象实例化。例如：
+
+- (at p player_loc)，*玩家* 对象 p 位于 *位置* 对象 *player_loc* 处，
+- (#amount blue_key p)=2，*玩家* 对象 p 拥有两个 *blue_key* 对象。
+
+对于布尔谓词，你只声明那些为真的 *事实*。这就是所谓的封闭世界原则，这意味着所有未声明的 *事实* 都被假设为假。对于数值事实，会声明其数值。
+
+###### 18.2.1.2.2 目标
+
+目标是 *事实* 必须具有的值的逻辑表达式。对于数值事实，允许以下表达式：等于、小于、大于、小于或等于、大于或等于。例如，一个目标可以是：
+
+- (and (at p finish_loc) #(amount reactor_cores p)>3)
+
+#### 18.2.2 寻找解决方案
+
+一旦定义了初始状态和目标，AI 规划器就会创建所有可能存在的事实和动作。在称为 *接地* 的过程中，通过枚举与领域中定义的谓词类型匹配的所有可能对象集，来构建所有可能存在的事实和 *已接地* 动作。
+
+例如，从以下对象开始：
+
+- p1, p2 – 玩家
+- loc1, loc2, loc3 – 位置
+
+将生成六个 Facts：
+
+- (at p1 loc1)
+- (at p1 loc2)
+- (at p1 loc3)
+
+
+
+
+
+- (at p2 loc1)
+- (at p2 loc2)
+- (at p2 loc3)
+
+然后将生成 18 个基础化的移动动作：
+
+- (move p1 loc1 loc1)
+- (move p1 loc1 loc2)
+- (move p1 loc1 loc3)
+- (move p1 loc2 loc1)
+- (move p1 loc2 loc2)
+
+AI 规划器的工作是找到一系列基础化动作，将状态从初始状态过渡到所有目标都满足的状态。AI 规划的主要问题之一是问题的复杂性；简单的数值问题是半可判定的，这意味着搜索空间可能太大，这些技术无法在合理的时间内找到解决方案。更糟糕的是，如果不存在解决方案，则无法证明这一点。即使是不涉及数字推理的经典规划问题，也是 PSpace-完全的。
+
+### 18.2.3 基于状态的规划
+
+解决规划问题所开发的搜索技术之一是显式地探索搜索空间。搜索可以从初始状态开始，通过从已生成的任何状态生成后继状态来探索搜索空间，直到找到目标状态。这种方法称为前向链式规划。
+
+你需要一个好的启发式来引导 AI 规划系统；给定一个状态，它应该首先探索哪个可能的后继状态？制定启发式的一般方法是对给定的规划问题进行抽象并求解简化后的问题。简化问题的解的计划长度被用作原问题的启发式。此框架中使用的方法是所谓的数值放宽规划图启发式（nRPG）。
+
+### 18.2.4 数值放宽规划图启发式
+
+你可以通过向后继状态添加负效果而非删除它们，并使用上下界来捕获数值事实的可能范围，从而放宽规划问题。nRPG 通过创建交替的事实层和动作层来构建，具体如下：
+
+1. 初始事实层是 AI 规划问题的初始状态。
+2. 将所有在上一层中满足前置条件的动作添加到下一动作层。
+
+4. 上一动作层中动作的效果应用如下：
+- 所有正负布尔效果都添加到下一事实层。
+- 所有数值效果相应地扩展上界或下界。
+- 为上一事实层中的每个事实添加一个特殊的 No-Op 动作，其前置条件和效果均为该事实。
+
+5. 当前事实层是否满足目标？
+- 如果是，则完成。
+- 否则，转到步骤 2。
+
+nRPG 的示例在图像 18.1 中有所描绘。为清晰起见，省略了之前事实层中为真的所有 No-Op 动作和事实。你可能永远不会到达目标有效的事实层。当你到达一个与前一事实层事实相同的事实层时，停止 nRPG 的构建。此时，你可以得出结论：原规划问题不存在解决方案。毕竟，如果放宽规划问题不存在解决方案，那么原问题也不存在解决方案。但逆命题不成立。如果你能构建一个 nRPG，则不能得出原规划问题存在解决方案的结论。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_168_0.png)
+
+图像 18.1 具有一个目标事实的 nRPG 示例。
+
+构建 nRPG 后，对该放宽问题求解的搜索过程如下：
+
+1. 在最后一个事实层中标记目标事实。
+2. 选择与标记事实处于同一动作层且能实现该事实的动作。取消标记已实现的事实，并标记该动作在上一事实层中的所有前置条件。
+3. 如果没有标记的事实，或所有标记的事实都属于初始状态：
+  - 则完成，所选动作的数量即为启发式值。
+  - 否则，转到步骤 2。
+
+不幸的是，寻找最优解是一个 NP-完全问题。为了确定为每个标记事实选择哪个动作，你使用一个启发式。每个动作的成本是其每个前置条件首次实现所在的事实层之和。No-Op 的成本为 0，因此只要可能，它们总是优先于其他动作被选择。
+
+图像 18.1 中 nRPG 的解在图像 18.2 中有所描绘。此 nRPG 的解需要三个动作，因此我们计算的启发式值为 3。请注意，最优解为 2，通过选择动作 1 和动作 4 得到。动作 5 优于动作 4，因为其启发式值为 2，而动作 4 的启发式值为 3。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_169_0.png)
+
+图像 18.2 图像 18.1 中描绘的 nRPG 的一个解。
+
+### 18.3 工作示例
+
+此示例将使用一个类似《狙击精英》的游戏领域，其中玩家需要获取特殊物品、消灭敌人，并最终到达一个位置以进行撤离。
+
+#### 18.3.1 类型
+
+此领域中的类型如下：
+
+- Locatable – 超类型，包含：
+  - Item – 可能需要收集或用于打开门的物品，以及
+  - Actor – 玩家和敌人的超类型。
+- Location – 世界中的一个位置。
+- Door – 一扇门障碍物，可能需要与之交互才能继续前进。
+
+#### 18.3.2 谓词
+
+首先，你定义谓词，它们告诉我们角色和物品的位置。可以通过利用超类型 Locatable 来简化此记法：
+
+- (at Locatable Location)
+
+要打开一扇门，你需要定义门需要哪些钥匙才能打开。此谓词中还包含一个位置，以编码角色需要站在何处才能用钥匙打开门。这样可以设置门，使得不同的钥匙可以在不同的位置使用：
+
+- (requires Door Key Location)
+
+其次，我们需要定义一扇门阻挡哪两个位置。门的每一侧都有一个位置：
+
+- (blocks Door Location Location)
+
+要编码角色身上携带多少物品，你使用一个数值谓词：
+
+- (amount Item Actor)
+
+最后，你需要编码哪些位置是相连的：
+
+- (connected Location Location)
+
+#### 18.3.3 动作
+
+##### 18.3.3.1 移动动作
+
+移动动作确定玩家所在的位置以及他们想要移动到的位置。如果该动作可行，它将返回修改后的世界状态。这在代码清单 18.1 中有所描绘。
+
+##### 18.3.3.2 拾取动作
+
+拾取动作在代码清单 18.2 中有所描绘。如果玩家和物品都在同一位置，玩家可以拾取该物品。拾取物品后，该物品不再位于该位置，并被添加到玩家的库存中。
+
+```
+Code Listing 18.2: A Pickup action.
+
+(:action Pickup
+  :parameters (?p - Player ?item - Item ?loc - Location)
+  :precondition (and
+    (:at ?p ?loc)
+    (:at ?item ?loc))
+  :effect (and
+    (not (:at ?item ?loc))
+    (increase (#amount ?item ?p) 1))
+)
+```
+
+##### 18.3.3.3 盗取动作
+
+盗取动作在代码清单 18.3 中有所描绘。使用此动作，玩家可以从敌人那里盗取一件物品。玩家需要与敌人位于同一位置，且敌人拥有至少一件你试图盗取类型的物品。
+
+```
+Code Listing 18.3: A Steal action.
+
+(:action Steal
+  :parameters (?p - Player ?enemy - Enemy ?steal_loc - Location ?item - Item)
+  :precondition (and
+    (at ?p ?steal_loc)
+    (at ?enemy ?steal_loc)
+    (> #(amount ?key ?enemy) 0))
+  :effect (and
+    (decrease #(amount ?key ?e) 1)
+    (increase #(amount ?key ?p) 1))
+)
+```
+
+##### 18.3.3.4 打开动作
+
+打开动作在代码清单 18.4 中有所描绘。使用此动作，玩家使用其库存中的物品来打开门。玩家需要位于可以与门交互的位置，即 (interaction_loc)。这个位置还告知他们需要使用哪把钥匙。它还确定门另一侧（other_side）的位置，打开门后可以移动到该位置。
+
+```
+Code Listing 18.4: An Open action.
+
+(:action Open
+  :parameters (?p - Player ?door - Door ?interact_loc ?other_side - Location ?key - Item)
+  :precondition (and
+    (at ?p ?interact_loc)
+    (blocks ?door ?interaction_loc ?other_side)
+    (requires ?door ?key ?interaction_loc)
+    (> #(amount ?key ?p) 0))
+  :effect (and
+    (not (blocks ?door ?interaction_loc ?other_side))
+    (not (blocks ?door ?other_side ?interaction_loc))
+    (connected ?other_side ?interaction_loc)
+    (connected ?interaction_loc ?other_side)
+    (decrease #(amount ?key ?p) 1))
+)
+```
+
+#### 18.3.4 示例问题
+
+此问题中包含的对象在图像 18.3 中有所描绘。位置之间的连接关系用实线描绘。虚线描绘了被门阻挡的位置。
+
+
+
+
+
+![](img/f4a4f6e4de5338a867590c30638990cf_172_0.png)
+
+图 18.3 示例问题，实线显示连通性，虚线显示被门阻挡的位置。
+
+初始状态中除了连通关系外的事实列表如下：
+
+- (at p player_loc)
+- (at officer officer_loc)
+- (at c4 c4_loc)
+- (at intel intel_loc)
+- (amount c4 p) = 0
+- (amount key p) = 0
+- (amount c4 officer) = 0
+- (amount key officer) = 1
+- (requires d2 key d2_loc1)
+- (blocks d1 d1_loc1 d1_loc2)
+- (blocks d1 d1_loc2 d1_loc1)
+- (blocks d2 d2_loc1 d2_loc2)
+- (blocks d2 d2_loc2 d2_loc1)
+- (requires d1 c4 d1_loc2)
+
+此问题的目标很简单：
+
+- (amount intel p) > 0
+
+换句话说，玩家希望获得该情报。
+
+#### 18.3.5 示例计划
+
+当你要求 AI 规划器求解此问题时，它将生成以下计划：
+
+- 1. (move p player_loc c4_loc)
+- 2. (pickup p c4 c4_loc)
+- 3. (move p c4_loc d1_loc2)
+- 4. (open p d1 d1_loc2 d1_loc1 c4)
+- 5. (move p d1_loc2 d1_loc1)
+- 6. (move p d1_loc1 officer_loc)
+- 7. (steal p officer officer_loc key)
+- 8. (move p officer_loc d1_loc1)
+- 9. (move p d1_loc1 d1_loc2)
+- 10. (move p d1_loc2 d2_loc1)
+- 11. (open p d2 d2_loc1 d2_loc2 key)
+- 12. (move p d2_loc1 d2_loc2)
+- 13. (move p d2_loc2 intel_loc)
+- 14. (pickup p intel intel_loc)
+
+AI 规划系统的一个重要特点是，你只需描述世界和目标即可。AI 规划系统将推理为达成目标需要做什么，无需为规划系统留下面包屑来引导它。
+
+#### 18.3.6 问题生成与剪枝
+
+需要小心，避免创建过大的规划问题。必须确保分支因子不过大。在大型世界中，我们不希望暴露所有物品、敌人、门等。应采用迭代方法，仅暴露寻找解决方案所必需的内容。为更详细地说明这一点，将使用前面的示例来展示如何实现。
+
+规划器从目标出发，创建一个可拾取情报的位置。接着，它从玩家位置到情报拾取位置寻找一条路径，并检查玩家是否需要穿过任何门才能到达。如果是，则为每扇门创建一个对象，生成门两侧的位置，并检查哪些物品可以打开这些门。接下来，它遍历所有这些物品，从玩家位置到这些物品寻找路径，执行相同的检查，并生成必要的对象。规划器发现玩家需要 C4 类型和 Key 类型的物品。C4 类型物品位于某个位置，而 Key 类型物品由一名军官持有，因此你也需要将此信息暴露给规划器。
+
+可通过移除以下所有已实例化动作来剪枝已实例化动作的数量：
+
+- 1. 没有任何相关效果。例如，已实例化动作 (move p loc1 loc1) 应用于状态时不会改变该状态。
+- 2. 永远不会有助于达成任何目标。此过程通过标记所有可以实现任何目标或任何已标记已实例化动作前置条件的已实例化动作来完成。任何未标记的已实例化动作都永远不会有助于达成目标，或启动可以达成目标的动作。
+
+减小规划问题规模并剪枝无用的已实例化动作可降低分支因子并缩短规划时间。这两种简单的剪枝策略可将已实例化动作数量减少超过 90%。
+
+### 18.4 执行
+
+现在，在了解如何创建域、规划问题以及 AI 规划工作原理的基础上，将解释用于 Zombie Army 4、Evil Genius 2 和 Sniper Elite 5 的自动化测试框架。整体框架如图 18.4 所示。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_174_0.png)
+
+图 18.4 执行框架。
+
+驱动组件是执行监视器。在游戏运行时，它会评估当前游戏状态，并使用预定义域来创建一个 AI 规划问题。这种处理方式因游戏而异，例如 Zombie Army 4 所需的问题生成算法与 Evil Genius 2 大不相同。问题生成后，就会调用 AI 规划系统。如果找到解决方案，执行监视器会逐一向玩家分发动作。玩家使用控制器调用 AI 系统来执行此动作。动作执行后，系统会返回动作执行成功还是失败。如果动作成功，则分发序列中的下一个动作。当所有动作均已执行，或某个动作执行失败时，执行监视器会重新评估当前游戏状态，并创建一个新的 AI 规划问题求解。
+
+此架构的一个优点是，AI 规划系统承担了大部分复杂性（因果推理、确保执行动作时有足够资源等），因此执行行为保持相对简单。
+
+《僵尸军团 4》、《邪恶天才 2》和《精英狙击手 5》中使用的行为树（BTs）从未超过三个节点。然而，执行动作的系统必须健壮。如果动作执行不够稳健，系统将花费大部分时间重新规划。例如，Zombie Army 4 和 Sniper Elite 5 中的移动行为具有战斗能力，可通过近战攻击摧毁挡路的敌人。
+
+### 18.5 结论
+
+本章介绍了一种新型自动化测试框架，该框架已成功用于完整通关 Zombie Army 4、Evil Genius 2 和 Sniper Elite 5。通过让执行行为设置键盘、鼠标和/或控制器输入，尽可能逼真地模拟真实玩家。对于这些游戏，使用的唯一作弊手段是无敌模式，这在自动化测试中很常见。凭借完整通关游戏的能力，该框架具有极高的代码覆盖率，并发现了大量错误。此外，它还帮助开发人员发现诸如越界问题和软锁等错误，也帮助设计人员发现游戏设计方面的问题。例如，在 Evil Genius 2 中，该系统被证明是微调教程章节并查找其中错误的绝佳工具，甚至促使设计人员修改了教程的某些方面。
+
+总体规划时间通常为几毫秒，在 Evil Genius 2 中大约占用 25MiB。最长的规划时间为 1.5 秒，出现在 Sniper Elite 5 中。最高内存使用量为 180MiB，出现在 Evil Genius 2 中针对无法在 1000 个探索节点内找到解决方案的问题（这是放弃规划前设定的限制）。
+
+该系统在 Zombie Army 4 和 Sniper Elite 5 中通关一个任务所需时间在 20 分钟到 1 小时之间。通关 Evil Genius 2 的战役需要 64 到 75 小时，具体取决于选择哪位天才。
+
+虽然该框架用于自动化测试并取得了巨大成功，但其作用并不局限于此。它还可用于创建更智能的非玩家角色（NPC），使其不仅仅是被动反应，而是能够深思熟虑地规划如何实现未来目标。这使设计人员能够创建更具可信度的环境，其中 NPC 不仅遵循脚本行为或仅对玩家的行为做出反应，而是拥有可以主动追求的目标。其他应用包括多智能体叙事，以及通过自主游玩部分内容或引导玩家完成游戏来提高游戏的可访问性。
+
+## 19 降智 AI
+
+让智能变愚蠢的艺术
+
+Sarah Cook
+
+### 19.1 简介
+
+每位程序员都希望自己的人工智能（AI）完美无缺，能够以我们期望人类的方式回应事件，但这通常会导致玩家永远无法获胜的游戏。那么，如何在不让 AI 显得不真实的情况下降低其智能呢？本章探讨了实际游戏中采用的一些方法，以及如何在你的游戏中成功使用它们。
+
+确定 AI 应该多么智能是这一过程中的重要步骤，本章简要讨论了确定所需水平的一些关键考量。接着，它提供了一些关于哪些领域可能适合降低 AI 技能的建议。随后，它探讨了降低非玩家角色（NPC）智能的常见方法，例如随机化、鼓励移动以及违背直觉的响应。最后，它举例说明了如何通过“烟雾与镜子”使这些措施更具可信度。
+
+### 19.2 确定 AI 应该多么智能
+
+降低 AI 智能的第一步是确定 AI 应该多么智能。这受多种因素影响，例如 AI 的角色、目标玩家以及你可以合理调整的内容。一般来说，你需要回答五个主要问题：
+
+#### 19.2.1 问题 1：你的游戏格式是什么？
+
+它是回合制、射击游戏还是模拟游戏？游戏越具沉浸感和真实感，AI 就需要越智能。
+
+#### 19.2.2 问题 2：AI 在你的游戏中的角色是什么？
+
+这很可能由你正在开发的游戏类型决定，尽管存在一些重叠。不同的 AI 角色可以暗示降低其智能的选项（这些将在本章后面详细讨论），同时也表明你可以让它们有多“愚蠢”。
+
+
+
+
+AI 代理会攻击玩家吗？这些攻击采取何种形式？它们是否拥有枪支和其他弹道武器等武器？它们仅限于近战攻击吗？不同代理之间的攻击是否有所差异？就像使用工具的动物被认为更聪明一样，携带武器的代理相较于未携带武器的代理也被认为更智能，但任何形式的 AI 攻击都可以通过改变其有效性来降低其技能水平。
+
+代理是否试图以其他方式击败玩家？它们是否仅限于与玩家进行简单交互，还是说它们仅仅是用来被杀的？旨在超越玩家的 AI，例如率先到达目标位置、阻挡玩家移动或从玩家处偷取物品，会被认为比仅限于逃跑等简单行为的 AI 更加智能。
+
+它们是支持角色吗？你的 AI 是朋友而非敌人，为玩家提供信息、目标和物品吗？在这种情况下，降低 AI 智能的需求和选项较少，变化可能取决于提供的信息范围或物品的实用性。
+
+或者，你的代理是否是模拟的 AI 队友版本，旨在模仿人类玩家的行为和反应？在这种情况下，你可以像对待 NPC 敌人一样对待它们，因为只有它们的目标不同。
+
+不同类型的 AI 是否有不同的角色？例如，你是否有预期会表现得愚蠢的炮灰代理，以及行为更精巧的 Boss？如果是，每种类型的代理都应单独考虑，并比较它们的技能水平以达到预期效果。
+
+#### 19.2.3 问题 3：你的游戏面向哪类玩家？
+
+了解你试图触达的玩家，对于确定 AI 究竟需要多么智能至关重要。一般来说，面向休闲玩家的 AI 可以比面向硬核玩家的 AI 愚蠢得多，因为休闲玩家通常比硬核玩家更宽容。对于休闲市场，你也会预期玩家技能水平较低，因此他们需要更多帮助才能击败 AI。
+
+此外，你需要考虑玩家的期望。更逼真的游戏环境会鼓励玩家期待更逼真的 AI 行为。类人 AI 通常被认为比非类人 AI 更智能，因此请考虑玩家会对你选择的 AI 类型抱有什么期望。
+
+进行调研，查看其他游戏的做法。选择要评测的游戏时，请记住要考虑游戏类型和目标受众。
+
+#### 19.2.4 问题 4：你可以更改哪些变量？
+
+哪些属性会影响代理的技能水平？这通常由你的 AI 角色决定，因此在选择希望变化的变量时请考虑这一点。考虑与所选游戏类型无关的选项没有意义，例如，对于仅有近战攻击的游戏，不应考虑弹道散射；对于只有一条可行路线的游戏，不应考虑路线变化。
+
+拥有大量可选属性听起来似乎有优势，但通常情况下，你会发现只有少数变量就能提供足够的灵活性。
+
+你是否可以完全禁用 AI 的一部分，而不是调整数值？理解和平衡 AI 数据需要时间，因此请尽可能保持变量独立，并且每次只更改一个变量。
+
+#### 19.2.5 AI 是否应根据难度设置拥有可变技能水平？
+
+如果你的游戏有多个难度设置，这是否应该影响 AI？如果是，你需要定义 AI 的最小和最大技能水平，以及可以变更哪些属性来实现这一点。不要被诱惑去更改所有级别的所有可能变量，如果只更改一两个变量同样有效。
+
+影响难度的方法不仅限于更改 AI 技能水平。例如，增加代理数量，或用更智能的对应物替换现有代理，或更改环境。
+
+你可以将 AI 降级到何种程度取决于其可信度。它们何时会停止令人信服？如果你的代理不可信，将会影响游戏的可玩性，但找到那个临界点可能很有用。这是一条非常微妙的界线，因此请准备好花些时间来确定什么是可信的，什么是不可信的。但是，请记住可信度是主观的，因此可能因玩家而异。有些玩家总会说 AI 很愚蠢，所以请确保收集多种意见，并尽量让他们解释自己的决定。
+
+### 19.3 降低 AI 技能的方法
+
+在确定了代理需要多么智能之后，下一阶段是考虑哪些方法最适合降低 AI 技能水平。同样，前五个问题的答案会让你了解可用选项，不同格式和 AI 角色影响最大。在大多数情况下，技能变化将取决于某种随机化，这与 AI 行为一般的情况相同。
+
+降低 AI 技能的方法大致分为四类：
+
+#### 19.3.1 类别 1：路线变化
+
+随机化目标位置或改变路线本身可用于改变 AI 到达目的地的速度。这里的目的是让玩家率先到达目标。此外，在驾驶游戏中，AI 可以偏离最佳路线，使代理进入攻击范围，或确定代理是否成功拦截玩家进行攻击。
+
+#### 19.3.2 类别 2：限制 AI 知识
+
+从本质上讲，游戏始终可以访问所有信息，从玩家位置到可用资源，甚至包括随机方程的结果。AI 应该访问所有这些信息吗？在极端的另一端，你可以让 AI 眼盲耳聋，无法访问玩家和世界信息来做出智能决策。
+
+显然，这两种方法都无法使 AI 可信，因此诀窍是在两者之间找到合理的平衡点。此外，AI 之间的知识传递（即传播）也可以控制。找到正确的平衡点可能很困难，但限制 AI 所了解的玩家和世界信息是必须的。
+
+#### 19.3.3 类别 3：反直觉行为
+
+反直觉行为是指 AI 所做的与人类玩家预期大相径庭的事情。这可以采取多种形式，从鼓励代理不顾威胁等级或位置移动、搜索玩家，到增加意图消息。例如，代理在受到攻击后短时间内移出掩体，或使用动画在攻击发生前预示代理的攻击。
+
+#### 19.3.4 类别 4：改变攻击有效性
+
+应阻止 AI 每次都以精准打击的方式发动攻击。从许多方面来说，这种方法与提供给 AI 的知识水平相关。即使玩家不可见也知道其位置，会导致超出可信程度的攻击精度，代理每次都能命中头部也是如此。与反直觉行为一样，降低攻击有效性的方法有很多，从弹道散射和故意失手，到限制玩家位置预测和目标锁定。
+
+上述每种方法都可以单独使用或组合使用，尽管具体应用方式取决于游戏格式和 AI 角色等因素。路线变化和限制 AI 知识在许多游戏类型和类型中都很常见，但即使这些方法也需要根据单独的 AI 类型和环境进行调整。
+
+回合制游戏，例如代理试图占领地图的游戏，通常拥有更基础的 AI。因此，在降低其智能时可用的选项较少，但路线变化和限制 AI 知识是两种可用的方法。这可能包括限制玩家位置信息，使用随机结果改变攻击效果，以及更改路线以确定地图的哪些区域随时间被发现。
+
+随着游戏环境变得更加逼真，AI 角色变得更加复杂，降低技能水平的选项也会增加。在驾驶游戏中，AI 可以带有内置减速和随机碰撞。同样，基于夺旗的游戏很大程度上依赖于路线变化，但也可以限制可用的玩家信息量，以有效掩盖玩家位置。
+
+
+
+
+需要高度复杂NPC的游戏，例如AI可以使用枪支攻击玩家的游戏，提供了最多的可能方法。建议可能包括限制有关玩家位置和库存的信息、弹道散布、鼓励移动以及地点之间路线的随机化。这些可能是适用的方法中仅占一小部分，还有许多其他可能的组合，其中一些将在本章后面部分中详细讨论。
+
+无论游戏的格式和风格如何，重要的是要记住尽可能保持简单。鉴于有大量的可能方法和组合，建议从最适用的一两个开始，从小处着手。你可以在过程中添加更多技能降低方法，但要明白为什么要添加它们，并移除任何不再使用的方法。
+
+### 19.4 降低攻击玩家NPC智能的常见方法
+
+由于有许多不同的选项可用，本节将详细探讨一个示例——在现实环境中使用枪支等武器攻击玩家的类人AI。选择此示例是因为它为我们提供了许多可讨论的方法，但概述的单个方法和组合仅是可用于降低AI技能水平的众多选项中的一小部分。尽管如此，此类场景中的智能体可能难以平衡，因为在玩家看来令人信服和看起来很愚蠢之间只有一线之隔。
+
+最明显的起点是限制提供给AI的玩家信息量，因为这也会影响路线变化和攻击效果等其他方面。游戏始终知道玩家的位置以及所有与库存等相关的信息，但你可以限制其中多少部分提供给AI。
+
+#### 19.4.1 AI感知
+
+首先，你需要确定一个合理的范围，NPC应能在该范围内看见或听到玩家。在现实中，绝大多数AI系统主要依赖声音来传递信息，因为使用视线测试的开销很高，因此大多数反应将仅由声音触发。这也可以用于我们的优势，因为与大方向相比，特定目的地变得不那么明显。
+
+另一个需要考虑的是此距离如何影响武器使用。例如，枪声的传播距离远大于脚步声，而使用爆炸物等远程声音可以用来向AI提供虚假信息。
+
+#### 19.4.2 AI记忆
+
+AI应多快忘记玩家信息？这通常由冷却计时器控制，这使其成为调整AI行为的简便方法。然而，这可能难以平衡，同时仍让NPC显得可信。通常使用与玩家等效的时间会被证明太长，导致AI掩体或搜索的时间比合适的时间长得多，但知识衰减太快会使它们显得愚蠢且不切实际。
+
+#### 19.4.3 世界知识
+
+另一个需要考虑的是应向AI提供多少游戏信息？是只告知他们玩家位置，还是传递他们所携带库存的知识也很重要？这会在游戏过程中改变，还是随着他们更频繁地遇到玩家而逐渐获得？在许多情况下，仅仅知道玩家在任何给定时间的位置，可能还包括他们的移动速度和方向，就足够了。
+
+#### 19.4.4 共享AI知识
+
+传播是将知识从一个AI传递给另一个AI，这可以是一个强大的工具。然而，应仔细考虑传播什么信息、在什么距离以及以多快的速度传播。传播太少，AI会显得反应迟钝；传播太多，整张地图会突然得知玩家的位置。这导致了降低AI技能的另一种方法。通过减少这种知识传递或限制其类型，AI所知的信息更少，它们无法对自己不知道的事情做出反应。
+
+#### 19.4.5 反直觉的响应
+
+鼓励移动，例如在玩家攻击后强制智能体离开掩体，是此类游戏中常见的一种反直觉行为。虽然NPC在被射击或其他攻击后至少一段时间不躲藏会显得奇怪，但躲在掩体后的AI几乎无法被射击，因此你需要让它们定期移动。这不一定涉及反复将智能体移动到完全不同的位置，而可能使用较小的移动，例如探头窥视，以给予玩家更多攻击机会。与其立即切换回之前的行为，不如先采取缓和措施，在掩体位置之间移动，这可能更令人信服。使用计时器和随机化来鼓励移动提供了一种平衡效果的方法。
+
+向威胁性声音移动而非远离声音，是这些情境中经常使用的另一种反直觉行为。一个很好的例子是搜索行为，可以看到智能体在搜索一个区域，试图确定听到的声音的确切位置。虽然这在某些情况下（例如玩家移动产生的偶然噪音）可能是预期的，但它可以广泛用于降低AI水平。搜索可以用来引诱AI进入陷阱，或将他们从玩家本身身上分散注意力，这使其成为许多情境中的强大工具，同时也用于降低AI技能水平。此外，允许从防御行为缓和到搜索，使NPC可以进入玩家射程内，而不显得它们是被故意派去被杀的。
+
+#### 19.4.6 路线变化
+
+路线变化在游戏中被广泛使用，以使AI移动更可信。通过扩展和夸张这种行为，它也可以用来使NPC看起来不那么聪明。
+
+通过变化路线，可以鼓励智能体通过更危险的区域，而不会被玩家认为不切实际。选择避开掩体、使用狭窄瓶颈或故意经过玩家射程内的路径，会使智能体更容易受到攻击。实现这一点可能很简单，即在生成路线时忽略玩家位置信息，或故意将没有掩体的区域权重设为更可取。
+
+目的地偏移或使用更长或更复杂的路线也可以用来减慢NPC，导致它们更晚达到目标或降低它们拦截玩家的可能性。反过来，这可以用来影响攻击的效果或限制沿途可以获得的知识量。
+
+此外，限制路线更新的频率可以用来使AI看起来不那么聪明。如果不定期调整路线以跟随移动的玩家，原始生成路径的精度会迅速变得无关紧要。但是，更新频率过高会让AI能够为每次攻击精确瞄准玩家。
+
+#### 19.4.7 攻击变化
+
+改变攻击效果为降低AI水平提供了广泛的选择。攻击的类型和多样性将影响哪些方法最可能适用，但有些方法无论攻击类型如何都是通用的。
+
+#### 19.4.8 泄露AI意图
+
+通过故意向玩家发送即将开始攻击的消息来泄露攻击意图，可以用来使攻击效果降低，给玩家留出反应或避免遭遇的时间。这可以很简单，例如智能体发出喊叫，告知玩家NPC正在逼近，或使用动画来嘲弄或宣布即将执行的攻击方向和类型。除了控制这些提示出现的频率之外，这是一种难以平衡的方法。提示要么触发，要么不触发，但一个简单的解决方案是改变它们发生的幅度。
+
+#### 19.4.9 故意失手
+
+了解玩家位置且视野清晰的AI应该能够每次都造成最大伤害的攻击。然而，允许这种情况发生会导致AI非常难以被击败，从而产生负面的玩家体验。故意失手是一种控制攻击效果的技术，通过允许AI完全未能命中攻击，或在命中玩家时减少造成的伤害。
+
+
+
+
+
+这只有几个可用选项之一，适用于仅拥有近战攻击的代理，但故意失手可以轻松应用于携带武器的代理。通常，它们是通过改变目标位置或延迟攻击来实现的，尽管这些变化本身可以采取多种形式。可能的选项包括对攻击方向进行微小调整，或延迟攻击直到玩家超出攻击范围，使代理过冲或完全失手，同时又不显得不可信。此外，限制位置预测的使用（在发起攻击时会考虑玩家的速度和方向）也可用于制造可信的失手。
+
+#### 19.4.10 投射物散射
+
+投射物散射是故意失手主题的一种微小变体，可应用于任何投射物，而不仅仅是子弹。这不仅是限制攻击效果的一种可信方式，在许多现实世界类似情况中也会发生。这是通过给投射物的目标位置或其行进路径施加轻微偏移来实现的。你应该将相应的偏移限制在足够小的程度以保持真实性。
+
+应用散射意味着并非所有射击都会命中玩家，且头部等高价值命中点的频率可被降低。散射的大小以及是否随时间变化，通常取决于用于发射的投射物和武器类型。通常考虑的常见因素包括武器后座力、随时间提高的精度、同时存在的投射物数量以及到目标的距离。
+
+无论你使用单一方法还是多种方法来削弱你的 AI，都有几种方法可以让它们的行为看起来比实际更智能。下一节将描述实现此目的的一些提示和技巧。
+
+### 19.5 利用烟雾与镜子让 AI 更可信
+
+在尝试使被削弱的 AI 更具说服力时，你通常有两个选择——试图转移对 AI 行为的注意力，或引起对此的关注。经验表明，在可能的情况下，两者结合通常效果最佳。以下是实现此目的的一些方式。
+
+#### 19.5.1 点出错误，而非试图掩盖
+
+虽然这似乎不合逻辑，但点出故意甚至无意的错误，反而会让 AI 显得更智能。一个很好的例子可能是使用动画或音频提示作为故意失手的反应。让代理人喊出诸如“哦不，我失手了！”、“这行不通，快跑！”或“他们去哪了？”之类的话，可能出奇地有效。同样，使用显示因失手而沮丧，或对攻击失败感到困惑的动画，也可能非常令人信服。
+
+#### 19.5.2 使用语言解释 AI 以某种方式行动的原因
+
+语言可以是一种非常好的方式，为反直觉的行为提供可信的理由。如果 AI 的意图对玩家不立即清晰，语言可以传达 AI 的意图，也可以用来表明代理人行为为何突然改变。一个明显的例子是使用语言宣布威胁降级，这可以用于转移对此发生速度的注意力。附近 AI 之间的喊叫也可以用来传播关于玩家位置的信息，这在鼓励队友在受到攻击时撤退，或搜索听到声音的区域时可能非常有效。
+
+#### 19.5.3 变化动画以让 AI 更可信
+
+使用动画变体是让 AI 行为更具可信性的常见方式，而不仅仅是在削弱 AI 时。即使是空闲动画的轻微变化，也能让 NPC 更具可信性，或增强不同 AI 角色之间的差异。在试图转移对 AI 技能降低的注意力时，动画可用于隐藏险些失手的情况，为攻击添加延迟，甚至仅仅是向玩家传达代理人的意图。更具体地说，代理人可以在攻击前嘲讽玩家，或轻微偏移旨在失手的近战攻击。使用一系列动画还可以更好地控制某些技能降低方法，或更容易地适应随机化。
+
+#### 19.5.4 暗示 AI 不知道玩家位置的行为
+
+调查和搜索行为经常被用来向玩家暗示其位置未知，无论 AI 能够获取何种信息。与其在首次看到玩家，甚至是偶然的噪音时就提醒代理人，不如让他们调查相关位置，这可以延迟获取玩家知识的时间，看起来更可信。另一方面，让 NPC 搜索玩家最后出现的区域，可以让他们看起来更快地“忘记”玩家的位置，而且更令人信服。
+
+#### 19.5.5 涌现行为
+
+虽然从技术上讲这并非该术语的正确用法，但这里的涌现行为指的是任何未经编程或脚本编写的、看似智能的行为。通常，通过不编写 AI 在给定情况下应做的确切操作，而是使用更通用的规则，可以让 AI 以不总是可预期的方式组合行为。这反过来可能导致原本不可信的幽默情境和反应。例如，NPC 可能会跳下桥梁以避开手榴弹，或在跳跃避开时踢开投射物。在脚本过场动画或类似情境之外编程这些场景几乎是不可能的，但当偶然遇到时，两者都显得真实。
+
+### 19.6 结论
+
+每个程序员都希望自己的 AI 完美无缺，能够以我们期望人类的方式回应事件，但这很少能带来良好的玩家体验。本章探讨了多种削弱 AI 的方式，使其更容易被攻击，或对玩家构成较少威胁。
+
+首先，它制定了一些指导方针，以根据游戏类型、AI 角色和其他一些考虑因素，确定 AI 应该有多智能。接下来，它探讨了可用于降低 AI 技能水平的几种方法，并将其应用于为带有武器攻击玩家的 NPC 的游戏提供具体示例。最后，它给出了一系列示例，说明如何利用烟雾与镜子使这些措施更具可信性。
+
+## 20 赛事总监
+
+Andy Brown
+
+### 20.1 简介
+
+赛车 AI 最关键的要素是让 AI 尽可能具有竞争力，同时不诉诸一些玩家会视为*作弊*的手段。有时，作弊甚至并不真正是作弊，而是 AI 看起来不像人类——例如，犯错或把任务做得太好都可能被视为如此。尽管 AI 在游戏中做了许多好事，但往往是它的弱点会在评测中被提及，因此重要的是关注玩家体验，并使游戏适合你的目标受众。
+
+*《索尼克与全明星赛车：变形》*（Sonic & All Stars Racing Transformed）汇集了一系列技术，以提供一种 AI 体验，使设计团队能够推出一款难度可渐进且为所有玩家提供满意体验的游戏。本章将介绍管理整场比赛的系统——即*赛事总监*（Race Director），其职责是从高层面管理比赛。
+
+### 20.2 卡丁车赛车
+
+任何 AI 赛车手最重要的元素，是在诉诸任何形式的额外辅助之前，先让 AI 尽可能具有竞争力。关键在于让 AI 以最快速度绕过每条赛道，最大化过弯速度并走出最佳赛车线。理想情况下，你希望拥有一个如此出色的 AI，以便随后可通过降低其表现来调低难度。《《索尼克与全明星赛车：变形》*（Sonic & All Stars Racing Transformed）中的每条赛道都由驾驶、划船或飞行区域组成，但基本前提相同——确保整个赛道的最高速度。要让 AI 达到这个水平，需要一个以赛车线修改和最大化过弯速度为主的过程，以使其能以极限速度通过每个弯道。这是一个手动过程，需要持续观察 AI 比赛，并逐个弯道进行微小调整。从最优秀的人类玩家那里获取指标，对于找出哪里可以缩短单圈时间也至关重要。这些指标可以通过实时观看 QA 部门玩游戏，或研究优秀单圈时间的录像来获得。这将是整个项目的持续过程，但一旦操控模型锁定，就会变得更容易。然而，通过微小的修改，总能找出百分之一秒的提升空间。
+
+大多数卡丁车游戏中的赛道都会有捷径，这不仅增加了赛道的多样性，也是用于修改 AI 难度的众多杠杆之一。难度更高的 AI 可以走较短的路线，而较简单的 AI 则会走较长的路线。为了稍微复杂化问题，在*《索尼克与全明星赛车：变形》*（Sonic & All Stars Racing Transformed）中，
+
+
+遵循赛车路线或走所有捷径，并不总能在赛道上跑出最快圈速，因为游戏中还设有加速垫，这些加速垫通常位于赛车路线之外，使用它们存在一定风险。AI 需要考虑这些因素，以确保其保持竞争力。
+
+卡丁车游戏中 AI 跟随逻辑的一部分是赛车路线可以半动态。换言之，它会持续扫视前方赛道，并为需要避开或拾取的物品增补额外的赛车路线段。这意味着如果需要，可以拾取加速垫。这为调整 AI 难度提供了另一个手段。
+
+有了竞争性赛车手后，接下来要考察的是道具和武器。自《Mario Kart》以来，这些一直是卡丁车游戏的标配。《Sonic & All Stars Racing Transformed》拥有各种道具，其中大多数都需要一定技巧才能使用。索尼克没有马里奥风格的蓝色龟壳。每种武器，AI 都被赋予了独特的行为，可以根据其技能水平进行缩放，并取决于难度设置。调整这些数值创造了引人入胜的玩家体验。游戏本身带有简单、中等和困难难度的标准赛事选项，但它还有一个世界巡回赛，你会在其中被介绍游戏内容，进程会变得越来越困难。设计师无疑需要能够脚本化赛事期望结果的能力。这就是 Race Director 的用武之地。
+
+### 20.3 赛事总监
+
+#### 20.3.1 武器配置文件
+
+武器配置文件包含 AI 使用武器或道具的所有可调参数。你可以拥有无限数量的此类配置文件，并将其应用于任何 AI 车辆。为简化起见，假设你只有简单、中等和困难三种。每个配置文件都会规定武器发射距离、未击中目标的概率以及冷却计时器。你甚至可以设置单独的数值来区分 AI 攻击其他 AI 和人类赛车手。所有这些细微差别都让你能够调整难度，而不会让玩家察觉。
+
+#### 20.3.2 操控配置文件
+
+每个赛车手都需要一个操控配置文件。这些文件不一定与难度挂钩，只是一种为 AI 赛车手和各种车辆类型规定各种驾驶参数的方式。《Sonic & All Stars Racing Transformed》有三种类型——陆地、海洋和空中。这些配置文件包括前视距离、漂移参数等内容，并包含二十四个不同的角色。操控配置文件在需要时可以调整单个车辆。对于使用相同操控模型的车辆类型，默认设置可能就足够了，但如果需要，选项仍然存在。系统中始终最好保有灵活性！
+
+#### 20.3.3 区域配置文件
+
+每个赛车手都被指定一个区域配置文件。区域是赛道上可以操控属性的一个区域。区域不一定需要是静态位置。它可以是另一个 AI 车辆周围的区域。
+
+此配置文件包含用于定义其纯驾驶技能的属性。归结为三个值。主要是一个技能百分比，它基本上让你能够缩放车辆可行驶的默认最高速度。剩余两个值是起始距离和结束距离，它们在区域启动时定义。距离本身是距离被追踪赛车手的距离。示例如表 20.1 所示。
+
+表 20.1
+区域配置文件示例
+
+| 区域名称 | AI 技能乘数 | 起始距离 | 结束距离 |
+|---|---|---|---|
+| IN FRONT OF RACER | 0.9 | 300 | 500 |
+| AROUND RACER | 0.9 | -300 | 300 |
+| BEHIND RACER | 1.0 | -600 | -300 |
+
+要简要浏览表 20.1 的详细信息，它指出如果 AI 能够领先被追踪车辆 300 米，则会激活“赛车手前方”区域；同样，如果 AI 落后于被追踪的玩家，则会触发“赛车手后方”区域。你可以看到，后方玩家区域会提高 AI 的技能，从而让 AI 有机会赶上。
+
+这些区域的一个一般规则是，如果人类玩家在近距离内，就不应该有作弊行为。其整体理念是掩盖 AI 正在根据人类玩家的表现进行动态调整这一事实。
+
+AI 技能乘数也可以大于 1！这从技术上讲会允许 AI 作弊，但它让设计团队在合理范围内提高最高速度拥有灵活性——当然，前提是人类玩家没有注意到！
+
+#### 20.3.4 分配配置文件
+
+拼图的最后一块是将这些配置文件分配给每个赛车手。为此，你需要一个为每个赛车手设置列的表格。在《Sonic & All Stars Racing Transformed》中，与其将配置文件分配给特定赛车手，不如决定将它们分配给比赛中的某些位置，这样既可以打乱起跑格位，也能提供更多变化。该系统也是动态的，即每个赛车手的配置文件可以根据其位置分配。如果当时最好的 AI 被击中并因此掉到最后一名，那么它们不会突然试图重新夺回第一名，而是可以继承最后一名的配置文件。
+
+一个简单比赛的典型比赛配置文件将类似于表 20.2。支撑逻辑的最重要行是“TargetPlayer”。这是每个 AI 将用作其区域配置文件参考的玩家。你可以看到，第一名的 AI 会追踪最佳人类玩家，其他 AI 会追踪最佳 AI 玩家，其想法是让最佳 AI 为其余 AI 设定节奏，以达到某种秩序。如果 AI 冲出赛道或被击中，它们会根据其位置插入相关配置文件。这让设计团队对比赛走势有相当大的控制力。
+
+表 20.2
+《Sonic & All Stars Racing Transformed》中典型的比赛配置文件
+
+| 属性 | AI 位置第 1 名 | AI 位置第 2 名 | AI 位置第 3 名 | AI 位置第 4 名 | AI 位置第 5 名 |
+|---|---|---|---|---|---|
+| 武器配置文件 | 简单 | 简单 | 简单 | 简单 | 简单 |
+| 默认车辆技能 | 0.8 | 0.7 | 0.6 | 0.5 | 0.4 |
+| 默认船只技能 | 0.8 | 0.7 | 0.6 | 0.5 | 0.4 |
+| 默认飞机技能 | 0.8 | 0.7 | 0.6 | 0.5 | 0.4 |
+| 汽车默认区域配置文件 | 简单 | 简单 | 简单 | 简单 | 简单 |
+| 船只默认区域配置文件 | 简单 | 简单 | 简单 | 简单 | 简单 |
+| 飞机默认区域配置文件 | 简单 | 简单 | 简单 | 简单 | 简单 |
+| 操控配置文件 | 默认 | 默认 | 默认 | 默认 | 默认 |
+| 目标玩家 | BestHuman | BestAI | BestAI | BestAI | BestAI |
+| 选择最短路线概率 | 0.2 | 0.1 | 0.1 | 0 | 0 |
+
+#### 20.3.5 比赛分段
+
+缺少几个重要事项——即比赛开始时的行为和比赛中的行为。在开发 *Sonic & All Stars Racing Transformed* 时，设计团队表示有兴趣使比赛难度动态化，以至于即使是简单的比赛，一开始 AI 可能更难对抗，但在最后一圈他们可以放水，让人类玩家在冲过终点线时勉强击败 AI 的满足感。为实现这一点，比赛配置文件中添加了一个简单概念。比赛本身可以分成几个段，这些段将定义总比赛距离的百分比，并允许修改区域配置文件和武器配置文件。没有两条赛道长度完全相同，因此使用百分比可以将比赛配置文件应用于任何赛道并减少所需的游戏数据。这些段配置文件可以根据需要应用于所有赛车手或特定赛车手。示例如表 20.3 所示。
+
+| 段名称 | 百分比 | 替换区域配置文件 |
+|---|---|---|
+| StartLine | 10 | StartLine |
+| MidRace | 50 | 默认 |
+| EndRace | 40 | EndRace |
+
+使用表 20.3 中给出的示例值，你可以看到比赛已被分成三个部分。第一个是 StartLine 段。这允许所有 AI 在比赛开始时全速冲刺，直到完成 10% 的比赛距离，此时将应用默认配置文件，随后是最后 40% 比赛距离的 EndRace 配置文件。段数没有限制。这是一个设计决策，但实际上，大多数场景只需要三个或四个段。
+
+### 20.4 结论
+
+如本章开头所述，《Sonic & All Stars Racing Transformed》中 AI 的关键目标是创造一个愉快且具有竞争性的体验，并在评测中尽量减少负面提及。Eurogamer、IGN 和 Gamespot 对该游戏的评测要么未提及 AI（这是一件好事！），要么在提及时会做出诸如“出人意料的称职 AI 对手”之类的评论。因此，可以得出结论，既定目标已实现。除此之外，它让设计团队能够从头到尾脚本化比赛的整体感觉，完全由数据驱动，并且高度可定制。由于其成功和灵活性，此代码的变体也用于后续作品。
+
+
+
+
+## 21 SB-GOAP
+
+自平衡目标导向行动规划器
+
+Michele Condò
+
+### 21.1 简介
+
+在游戏中，有多种方案可以为非玩家角色（NPC）实现行为。其中一种方法是使用自动化规划架构来解决决策问题，并执行最佳策略。最著名的自动化规划器是目标导向行动规划器（GOAP）（Orkin, 2003）。
+
+GOAP 是一种简化的类 STRIPS 规划架构（Fikes & Nilsson, 1971），可以解决游戏中许多与自主角色行为相关的问题。尽管 GOAP 功能强大，但它也有一些缺点，其中两个限制通常会导致 AI 程序员采用其他方案。这些限制是：与其他方案相比，GOAP 对计划的控制较少，并且存在重复计划的潜在可能性，这可能会打断玩家的沉浸感。通常，为了解决这两个问题，GOAP 会与其他系统并行使用。为了提高对计划的控制，可以使用有限状态机（FSM），而为了解决重复性问题，可以添加某种随机性。尽管 GOAP 可能使用 A* 等算法实现，但通常仅作为基于决策树的方法实现，这留给随机性的空间不大（Millington, 2019）。
+
+为了克服这些限制，您可以使用基于强路径搜索算法的方法，搭配自定义动作相关的成本/估算函数，并使用更详细的前置条件和效果。
+
+如果将所有这些整合在一起，您将获得一个自平衡目标导向行动规划架构。本章详细介绍了自平衡 GOAP 架构（SB-GOAP），它提供了更多的灵活性和计划变化，消除了重复性，提供了更多控制，并限制了对其他系统来支持规划器的需求。
+
+### 21.2 SB-GOAP 概述
+
+SB-GOAP 旨在解决简介中指出的一些问题。该架构带来的优势可概括如下：
+
+- 1. 它在规划时创建更多变化，打破重复性，并减少计划在一段时间内重复使用同一组动作的可能性，而无需创建具有不同或更多前置条件的不同或更多动作。这是因为它与搜索路径算法有深层连接。
+- 2. 它对计划给予了更多控制，通过显式地将前置条件标记为“false”，可以将其从 A* 搜索中排除。
+- 3. 它需要与游戏代码通信，以确定计划中的动作是否执行成功。
+
+SB-GOAP 实现了两个逻辑核心。第一个是在路径搜索算法内工作并利用它（因为它与该算法紧密结合），来驱动决策。动作需要计算成本、估算成本、获取邻居以及确定目标是否达成的函数。第二部分是处理规划器与游戏代码之间连接的逻辑。
+
+简而言之，第一部分利用路径搜索算法来驱动计划，不仅基于前置条件，还基于动作的成本；而第二部分旨在在代理人实际执行动作过程中被打断时调整该成本。
+
+事实上，即使计划可以在一帧内计算完成，代理人的实际执行可能持续秒、分钟甚至更久。例如，“创建斧头”这样的动作可能需要 5 到 30 秒。因此，如果代理人在执行此动作时发生意外，应将其标记为此目标的“非最优”选项。
+
+### 21.3 路径搜索利用
+
+本节将定义 SB-GOAP 中的动作是什么，它与 GOAP 版本略有不同。图 21.1 展示了带有前置条件和效果的经典 GOAP 动作实现。前置条件用于确定动作是否满足当前状态的要求，以便被考虑纳入计划。效果是指该动作将如何修改世界状态。效果和前置条件是布尔值，如果存在即表示被视为“真”，否则为“假”，尽管效果可以存在并被设置为“假”。
+
+此类动作适用于基于决策树的方法，或任何不需要路径搜索的方法。这是因为没有成本，规划器只能基于前置条件进行推理，从而导致重复性（Orkin, 2003）。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_192_0.png)
+
+图 21.1 经典 GOAP 中的动作。
+
+图 21.2 描绘了与图 21.1 中相同的动作，这次使用 GOAP 并带有成本。在此版本中，计划可以由路径搜索算法驱动。也可以为这类动作添加某种随机性，但可能会导致计划质量下降。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_193_0.png)
+
+图 21.2 带有成本的 GOAP 动作。
+
+图 21.3 描绘了相同的动作，但这次使用 SB-GOAP。可以看到，它有一个成本，即动作的“默认”成本。它被定义为默认成本，因为它不是实际将要使用的成本。SB-GOAP 在外部定义另外两个字段：一个是“阻碍”值，按用户基础定义；另一个是归一化乘数，按代理人或代理人类型基础定义。第一个可以看作是如果实际执行被打断时添加到动作上的“障碍”成本，这会增加遍历成本；乘数则调整“阻碍”成本（值在 0 到其最大值之间）。
+
+前置条件和效果也有值。这些值可以是布尔值或数值，因为路径搜索算法中使用的函数正是处理它们的函数。例如，如果前置条件和效果被实现为布尔值，您会得到类似这样的内容：
+
+- 效果 → 有斧头：真，有木头：假，有铁：假
+- 前置条件 → 有木头：真，有铁：真
+
+如果它们被实现为数值，您会得到类似这样的内容：
+
+- 效果 → 有斧头：+1，有木头：-2，有铁：-3
+- 前置条件 → 有木头：+2，有铁：+3
+
+![](img/f4a4f6e4de5338a867590c30638990cf_193_1.png)
+
+SB-GOAP 有以下类，路径搜索算法需要直接处理这些类：
+
+- **动作**：包含成本、效果和前置条件。
+- **世界状态**：包含一个标识符以及一个状态标识符和状态值的映射，在遍历过程中，这些将被创建、更新，并添加到新的计划节点中。
+- **计划节点**：为搜索目的封装世界状态。包含指向世界状态的指针和指向导致该节点的动作的指针。
+- **计划请求**：封装初始世界状态、目标世界状态以及所有考虑的动作。它可以包含所有可能的动作，也可以根据上下文只包含一个子集。后者显然出于性能原因更好。
+
+有必要讨论 SB-GOAP 如何修改 A*，但只会介绍所需的自定义函数。值得提及的是，无需深入细节，函数 FindInOpenList 和 IsInClosedList 会将一组计划节点与当前节点进行比较，比较依据是当前节点的世界状态是否等于计划节点的世界状态。
+
+代码清单 21.1 展示了 IsGoal 函数，用于检查当前节点是否为目标节点。该实现只需检查传入节点的每个状态（布尔值）是否与当前节点的值（布尔值）匹配，如果匹配，则为目标状态。
+
+```
+Code Listing 21.1: The IsGoal function within PlanNode, using Boolean type.
+
+function CurrentNode.IsGoal with CurrentNode is C has
+    input: PlanNode with OtherNode is O
+    output: Boolean with true if w of O is same of w of C
+    with: w is World State pair(state is s, value is v)
+    for each pair(s, v) in w of O do
+        if Ow(s, v) != Cw(s, v) return false
+    return true
+```
+
+代码清单 21.2 展示了相同的函数，但使用整数类型。需要注意的是，这是一个“潜在”的实现，因为它取决于预期的内容，计划节点可能实现不同类型。
+
+
+
+
+代码清单 21.2：PlanNode 中的 IsGoal 函数，使用整数类型。
+```
+function CurrentNode.IsGoal with CurrentNode is C has
+input: PlanNode with OtherNode is O
+output: Boolean with true if w of O is same as w of C and Cw(s, v) >= Ow(s, v)
+with: w is World State pair(state is s, value is v)
+for each pair(s, v) in w of O do
+if Ow(s) != Cw(s) return false
+else if Cw(s, v) < Ow(s, v) return false
+return true
+```
+
+GetNeighbours 函数是 SB-GOAP 的核心，因为动作在此确定其是否可以在世界状态上“工作”。如果是，它会创建带有前置条件和效果的新世界状态，作用于当前帧。代码清单 21.3 展示了针对布尔类型的检查算法。
+
+```
+Code Listing 21.3: The GetNeighbours function, using Boolean type.
+function CurrentNode.GetNeighbours with CurrentNode is C has
+input: PlanRequest with Request is R
+output: Array<PlanNode> with Neighbours is N
+where Niw := Cw and Niw(s, v) := Ve(s, v); e E Ai in A
+with: Niw = Cw World State pair(state is s, value is v) of NI, NI is new PlanNode
+where preconditions are p and effects are e of An | {Ai} is Action in R
+where p(s, v) = Cw(s, v), Cw is World State pair(state is s, value is v) of C
+where Nia is Ai in NI led to Cw
+N := Ø
+for each A in R do
+for each pair(s, v) in p of Ai do
+for each pair(s, v) in w of C do
+if p(s, v) = Cw(s, v) then
+new NI
+Niw := Ai
+NIw := Cw
+for each pair(s, v) in e of Ai do
+Niw(s, v) := e(s, v)
+return N
+```
+
+代码清单 21.3 还展示了如何创建包含 WorldState 的新 PlanNode，基于已处理的当前节点的世界状态（如果动作符合当前节点世界状态的前置条件）。任何新状态或现有状态都会使用 PlanRequest 中每个动作的效果进行更新。
+
+代码清单 21.4：ComputeCost 函数，使用布尔类型。
+
+```
+function CurrentNode.ComputeCost with CurrentNode is C has
+    input: PlanRequest with Request is R, PlanNode with OtherNode is O
+    output: Float with Cost is T
+    where T := (if (Ca != 0) -> TCa else 0) + sum(Ta)
+    with: TCa is cost of A led to Cw or 0 if no A led to Cw,
+          preconditions are p of An | {Ai} is action in R
+          where p(s, v) = Ow(s, v) and Ai = Oa
+          where TaI is cost of Ai
+          where Oa is Ai led to Ow, Ow is World State pair(state is s, value is v) of O
+          where Ca is Ai led to Cw, Cw is World State pair(state is s, value is v) of C
+          T := if (Ca()=0) -> TCa else 0
+      for each A in R do
+        for each pair(s, v) in p of Ai do
+          for each pair(s, v) in w of O do
+            if p(s, v) = Ow(s, v) and Oa = Ai
+              T := T + TaI
+return T
+```
+
+代码清单 21.4 中所示的 ComputeCost 函数在每个正在展开的邻近节点上发生。因为由 GetNeighbours 函数（代码清单 21.3）生成的节点同时包含世界状态和导致该状态的动作，ComputeCost 函数可以利用这些信息来确定成本。最后要探讨的函数是用于估算成本的函数。EstimateCost 在代码清单 21.5 中显示，用于估算从当前节点到目标节点的成本。对于两个节点之间任何不相同的世界状态，它都返回成本 1。
+
+```
+Code Listing 21.5: The EstimateCost function, using Boolean type.
+
+function CurrentNode.EstimateCost with CurrentNode is C has
+    input: PlanNode with OtherNode is O
+    output: Float with HeuristicCost is H
+    where H := (if (Cw with HeuristicCost is v) => 1 else 0
+          : w is World State pair(state is s, value is v)
+    H := 0
+    for each pair(s, v) in w of C do
+        for each pair(s, v) in w of O do
+            if Cw(s, v) != Ow(s, v)
+                H := H + 1
+return H
+```
+
+### 21.4 平衡计划
+
+SB-GOAP 的第二个核心概念是平衡，或者更准确地说，是动作的自平衡。由于 SB-GOAP 与 A* 有着深层联系，通过调整动作的成本，你可以影响规划过程的结果。但你为什么要这样做呢？你可能希望调整成本，因为“最优”计划并不总是“最优”，尤其是从游戏设计角度来看。如前所述，计划可以在单帧内计算出来，但实际执行（由代理人执行）每个动作可能需要几秒钟甚至几分钟才能完成，在这段时间里，代理人可能会遇到任何情况。
+
+这意味着，朝着某个目标的计划在纸面上可能是最优的，但在当前环境/上下文中可能不是最优的。此外，针对同一目标反复出现的“最优”计划可能会破坏玩家的沉浸感。
+
+当发布计划时，SB-GOAP 不会直接使用动作关联的成本。它将其添加到另一种称为“挂载”成本的成本中。“挂载”成本类似于导航网格的障碍物成本：打补丁时，新生成的导航网格的成本会因障碍物成本而改变。实现细节可能各异，但你得到的是一个被修改的、增加的成本，SB-GOAP 将“挂载”成本乘以乘数后，加到动作成本上。
+
+表 21.1 列出了一些可能的动作，以及代理人用来构建完成目标计划时使用的 ID、乘数和“挂载”成本。
+
+| 动作 | 代理/代理组/代理类型与成本乘数对 | “挂载”成本 |
+| :--- | :--- | :--- |
+| 砍伐树木 | {[ID:0, M:0], [ID:3, M:0.4], [ID:7, M:0.8], [ID…, M:…]} | 8 |
+| 采矿 | {[ID:1, M:0.4], [ID:3, M:0.2], [ID:7, M:1], [ID…, M:…]} | 8 |
+| 炼矿 | {[ID:1, M:0.7], [ID:2, M:0.6], [ID:3, M:0.5], [ID…, M:…]} | 5 |
+| 加工木材 | {[ID:0, M:0.1], [ID:1, M:0.9], [ID:9, M:0.1], [ID…, M:…]} | 5 |
+| 制造斧头 | {[ID:3, M:0.2], [ID:6, M:0.5], [ID:8, M:0.3], [ID…, M:…]} | 10 |
+| 出售斧头 | {[ID:1, M:0.5], [ID:3, M:0.2], [ID:5, M:0.2], [ID…, M:…]} | 10 |
+| 偷取黄金 | {[ID:0, M:0], [ID:3, M:0], [ID:7, M:0.1], [ID…, M:…]} | 20 |
+
+当代理人发布计划时，传递给 PlanRequest 的动作成本 (C) 是动作的默认成本 (c) 加上乘数 (m) 乘以“挂载” (h) 成本：C = m * h + c。以图 21.3 中的示例动作为例，ID 为 6 的代理人正在评估“制造斧头”，其默认成本为 3.0，乘数为 0.5，“挂载”成本为 10.0，因此此时的实际动作成本为：
+
+```
+C = m * h + c = 0.5 * 10 + 3.0 = 8.0
+```
+
+该代理人可以在表 21.1 的“制造斧头”行中找到，即配对列表中的第二对。
+
+表 21.1 的最后一行有一个名为“偷取黄金”的动作，它是积累黄金的有效动作，但如果此类动作的默认成本远高于计划中其他成本之和，则不太可能被触发，即使它没有前置条件且效果为“拥有黄金”（即目标状态）。
+
+之所以这样，是因为你不希望平民偷取黄金，因此该动作的成本被相应设置。但如果你希望平民开始偷窃怎么办？无需为平民制作新的自定义动作，也不需要配合 SB-GOAP 使用另一个系统，你只需调整成本即可。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_198_0.png)
+
+#### 图 21.4 动作、成本和可能的解决方案。
+
+图 21.4 描绘了一份代理人为获得黄金（目标）所考虑的动作列表。代理人要获得黄金，在这些动作中只有两种可能的解决方案，一种总成本为 10，另一种总成本为 15。“偷取黄金”动作明确要求所有前置条件均为 false（这并非强制性），否则代理人可能会在砍完树或采完矿后立刻偷取黄金。
+
+首先，查看图 21.4 中的第一个解决方案。动作顺序将严格基于前置条件和效果。这一点很重要，因为 SB-GOAP 不仅可以根据某些“负面”因素平衡动作，还可以根据某些谓词进行平衡。例如，在发布计划前，可以检查代理人是否在露天采矿（例如森林中的岩石上），这使得代理人先采矿后砍伐树木很合理。然后，进行木材加工和炼矿。检查玩家到木材和熔炉的距离将帮助 SB-GOAP 决定行动计划。假设 P0 是代理人位置，P1 是木材中心区域，P2 是熔炉，它们分别如下：
+
+```
+$P_0 = (5,5,10), P_1 = (7,7,11), P_2 = (9,9,8)$
+```
+
+
+
+
+检查这些之间的距离得到：
+
+$d_{01} = |P_0 \cdot P_1| = 3$ 是代理人到森林中最近树木的距离。
+$d_{02} = |P_0 \cdot P_2| = 6$ 是代理人到锻造厂的距离。
+
+然后你可以使用任何想要的算法来获取 0 到 1 之间的归一化值。在此示例中，使用 SoftMax 函数并传入 3 和 6，你得到：
+
+\(\sigma(d)_i = \{0.04742, 0.9525\}\)。
+
+你可以使用这两个值作为临时乘数，无需从内存传递任何内容，因为这是基于距离的“一次性更新”，给出如下结果：
+
+“加工木材”动作成本更新为 = 0.04742 * 5 + 1 = 1.2371
+“冶炼矿石”动作成本更新为 = 0.9525 * 5 + 1 = 5.7625
+
+如果使用更新成本的这两个动作运行相同的计划，你将得到以下结果：{开采矿石, 砍树, 加工木材, 冶炼矿石, 制造斧头, 出售斧头}，这是在不同空间上下文中处理计划的一种可信方式。
+
+刚才描述的逻辑与平衡之间没有区别。一切都取决于游戏类型、设计、实现以及许多其他因素。与 SB-GOAP 的第一个核心概念（可以是任何定义良好的路径搜索算法）相比，第二个核心概念（平衡）可以是任何有效的实现——没有严格的方法。唯一的要求是它遵循以下规则：
+
+- 1. 它需要按表 21.1 所示进行存储。严格来说，它不需要像图示那样的数据存储表，但需要一个可以存放它的地方。这是因为（在由于外部因素进行平衡、在执行计划动作期间的情况下），乘数必须随时间更新。
+- 2. 它需要一种随时间将乘数恢复到 0 的方法。可以在每个计划发布后执行此操作，如果乘数不等于零，只需按常量值减少或按衰减函数的结果在一段时间后重置为零。
+- 3. 乘数应介于 0 和 1 之间，以便更好地控制挂起成本，但实现也可以决定不将其限制。如果是这种情况，“挂起”成本将超过其最大值。
+
+### 21.5 中断
+
+沿用先前描述的相同示例，代理人正在制定制造黄金的计划。它有以下默认方案：{开采矿石, 冶炼矿石, 砍树, 加工木材, 制造斧头, 出售斧头}。
+
+想象一下，在“冶炼矿石”和“制造斧头”动作期间发生了一些事情——代理人在每个动作期间各被杀一次。
+
+为了使示例简洁明了，步骤期间动作的顺序不会改变，即使可能因为成本变化而改变。请记住，你不会在每个步骤都减少乘数，但所有乘数初始值均为 0.0。由于变化可能非常小，以下示例将使用 SoftMax 和 Sigmoid 函数来获得带有小变化的平均增量，以显示两个已发布计划中的变化。
+
+那么，会发生以下情况：
+
+- 1. Plan(P):{开采矿石, 冶炼矿石, 砍树, 加工木材, 制造斧头, 出售斧头} = 10
+
+  - a. 在“冶炼矿石”处被杀：(成本 (c) 1.0, 乘数 (m) 0.0, 挂起 (h) 5)
+
+    \(\sigma(x)_i = e^{z_i} / \sum_{n=1}^N e^{z_k}\) for i = 1,...,N where N = # P(0,0,0,0,0,0)
+
+    \(\sigma(x)_i = \{0.1667, 0.1667, 0.1667, 0.1667, 0.1667, 0.1667 \}\)
+
+  - b. \(m_2 = m_2 + \zeta_\alpha \left(\sigma(x)_2\right) = 0 + \zeta_\alpha \left(0.1667\right) = 0.5415\)
+
+  - c. 新的“冶炼矿石”成本为 C = 0.5415 x 5 + 1 = 3.707
+
+- 2. Plan(P):{开采矿石, 冶炼矿石, 砍树, 加工木材, 制造斧头, 出售斧头} = 12.707
+
+  - a. 在“制造斧头”处被杀：(成本 (c) 3.0, 乘数 (m) 0.0, 挂起 (h) 10)
+
+    \(\sigma(x)_i = e^{z_i} / \sum_{n=1}^N e^{z_k}\) for i = 1,...,N where N = # P(0,0.5415,0,0,0,0)
+
+    \(\sigma(x)_i = \{0.1488, 0.2558, 0.1488, 0.1488, 0.1488, 0.1488 \}\)
+
+  - b. \(m_5 = m_5 + \zeta_\alpha \left(\sigma(x)_5\right) = 0 + \zeta_\alpha \left(0.1488\right) = 0.5371\)
+
+  - c. “制造斧头”成本为 C = 0.5371 x 10 + 3.0 = 8.371
+
+- 3. Plan(P):{开采矿石, 冶炼矿石, 砍树, 加工木材, 制造斧头, 出售斧头} > 15
+
+因此，计划（计划 3）的成本现在超过 15（准确地说是 18.078），这意味着它不是制造黄金目标所考虑计划的好选择。事实上，成本仅为 15 时，“偷窃黄金”动作将是 SB-GOAP 计算并返回给代理人的新计划的结果。
+
+如在两个示例中所见，一个基于代理人在两个不同位置之间的距离（动作应在这些位置发生），另一个是代理人被杀两次的情况，SB-GOAP 能够在无需任何其他外部帮助的情况下改变行为并进行适应。你只需要记住，成本和挂起成本需要针对代理人类型和游戏类型进行良好设计。
+
+### 21.6 结论
+
+本章展示了 SB-GOAP 如何深受路径搜索算法的驱动。这使得它不仅能查看前置条件和效果，还可以主动使用成本来决定计划可以走“哪条路线”，具体取决于变化。这些变化可以在不需要额外系统的情况下实现，可以是无需任何内存存储的“一次性”操作，或者每当代理人在实际执行动作期间遇到外部事件时，乘数可以随时间累积。
+
+SB-GOAP 的平衡部分可以包含各种各样的大量算法，从最简单的方法到最复杂的方法。此外，随着时间的推移，还会出现涌现行为，这在设计师的控制范围内。
+
+使用 SB-GOAP 方法的主要收获是，通过对计划和单个动作拥有更多控制权，减少了动作的开销，从而提高其可重用性并移除支持系统。
+
+SB-GOAP 可以轻松扩展以使用神经网络。例如，强化学习可以直接调整成本的乘数，因为世界状态可以被视为神经网络的节点，动作作为连接（使用成本作为权重）。
+
+简而言之，SB-GOAP 的设计可以以多种方式扩展。
+
+## 参考文献
+
+- Fikes, R. E. 和 Nilsson, N. J. (1971) STRIPS：将定理证明应用于问题求解的新方法，《人工智能》，2(3–4)，第 189–208 页。
+- Millington, I. (2019) 《游戏人工智能》，Boca Raton, FL: CRC Press。
+- Orkin, J. (2003) 将面向目标的行动规划应用于游戏，《AI 游戏编程智慧》，2，第 217–228 页。
+
+## 22 通用 AI 规划器
+
+Andrea Schiel
+
+### 22.1 简介
+
+在游戏 AI 领域，规划最常用于解决 AI 代理导航问题——路径规划。除路径规划外，只有少数游戏将全序规划器作为代理决策的一部分来实现。规划的独特之处在于它可以处理涉及多个约束求解的高度复杂问题。规划器可以用于协调多个代理，或解决更抽象的问题，例如规划实时策略游戏中的构建顺序。即使在游戏中存在此类需求，规划器通常也不会被实现，部分原因是其实现成本高，运行时开销往往较高，并且为规划器编写数据既耗时又需要专业知识。
+
+因此，在游戏中，规划器已针对其设计用于求解的领域（特定领域）进行硬编码。2005 年发布的第一人称射击游戏（FPS）《F.E.A.R.》采用了一种称为面向目标的行动规划（GOAP）的方法进行其全序规划（Orkin, 2006）。此后，GOAP 已被用于包括《中土世界：魔多阴影》、《中土世界：战争之影》、《古墓丽影》和《刺客信条》系列在内的许多游戏（Conway et al., 2015）。即使是通常作为导航解决方案的 A*，在 2009 年也被专门用作《超级马里奥兄弟》中 AI 控制的规划器（Karakovskiy & Togelius, 2012）。多种分层任务网络（HTN）变体已用于《杀戮地带 2》和《杀戮地带 3》（Straatman et al., 2013）、《变形金刚：赛博坦之战》（Humphreys, 2013）、Left Alive (Hasegawa, 2019)、Blue Protocol (Yoshimoto, 2020) 以及许多其他作品中。HTN 倾向于特定领域，因为可以使用了解游戏玩法的任务和动作对其进行优化以进行规划。例如，《杀戮地带 3》拥有武器特定的方法，例如 use_missiles。《星际争霸》最初使用高度特定领域的脚本 AI，但后来配备了结合机器学习（ML）的专用 AI 规划器技术（Deneke et al., 2020）。Unity 现在提供了一种 GOAP 实现，允许用户为其游戏指定动作和目标。这使得规划器可以用于任何游戏，但如果没有动作和目标，它就毫无用处。一旦动作被编写并使用特定游戏的知识，规划器就不再是通用的了。
+
+### 22.2 通用规划器定义
+
+#### 22.2.1 特定领域规划器
+
+特定领域存在隐藏成本。此类规划器需要专家编写所有数据。编写数据需要多少专家知识
+
+
+
+给定规划器取决于规划器设计用于求解的领域（问题空间）以及规划器的类型。在游戏中解决非常特定问题的规划器，例如构建顺序问题，需要特定领域的数据，例如可用代理、资源成本、资源可用性等等。构成计划的任务或动作将包含各种游戏元素的专用动作，例如执行暗杀或执行构建顺序。规划器被构建为知道它正在解决什么问题，这正是使其特定于领域的原因。有些方法天生适合特定于领域，例如HTN。HTN是根据其用于构建计划的目标和/或任务来编写的。这些规划器需要在规划阶段期间或之后解决冲突和约束，这也往往需要领域知识。
+
+#### 22.2.2 与领域无关的规划器
+
+与领域无关的规划器更具普适性，因此更适合解决多种问题类型。这些规划器需要能够在更基础的层面上进行处理和行动。它们通常更具适应性，并且能够很好地应对新情况。对于涉及一定程度不可预测性且结构较少的游戏来说，拥有一个可适应的规划器将是理想的。其缺乏领域特异性从长远来看减少了开发时间，因为专家不需要花费大量时间来编码特定领域的任务、目标或动作。它们也不需要领域专家。虽然这可能看起来不是一个强项，但请考虑，这将使设计师能够投入到游戏平衡和更高级别的工作中。它还释放了开发设计师使用的编辑器所需的UI或工具程序员。在大型工作室中，通用规划系统可以用于多个游戏。
+
+与其专用的对等体形成鲜明对比，通用规划器也可以跨越游戏的不同区域进行规划。例如，在FPS游戏中，与其拥有一个用于路径规划的规划器和另一个用于计算给定代理目标的规划器，不妨想象一个规划器，它可以规划代理需要去哪里，沿途添加射击动作，甚至规划重新装弹，可能还会捡起那个医疗包。在大多数游戏中，这目前是使用影响图、加权路径查找或实用工具系统来模拟的。随着游戏系统变得更加强大，这种方法——曾经只为研究人员所享有且被认为太慢——可能会成为AI游戏程序员的一种强大方法。当然，难点在于构建一个可用于游戏的与领域无关的规划器。
+
+### 22.3 通用规划器的方法
+
+人们已经尝试通过引入抽象来表示规划器的问题（领域）的方式来通用化HTN（和其他规划器）。1998年，规划领域定义语言（PDDL）被提交给AI规划系统（AIPS）竞赛（Ghallab et al., 1998）。PDDL现在已经出现了第4个变体，但核心思想仍然是一种面向经典规划器的通用规划语法。希望是，如果语言足够富有表现力且足够通用，规划器就能解决任何类型的问题。换句话说，理想的与领域无关的规划器不会知道它正在解决什么类型的问题。在PDDL之前，问题必须以特定领域的方式来表达。规划器对PDDL的支持并不一定使其与领域无关，但它确实允许对问题空间进行抽象，这是一个良好的第一步。许多现成的规划系统，无论是与领域无关还是特定于领域，都在某种程度上支持PDDL。在游戏开发的背景下，拥有表达规划问题的与领域无关的方式将扩展规划器解决游戏不同区域的能力。例如，同一个规划器既可以解决资源构建树，也可以解决单元部署问题。有人认为PDDL在游戏中可能有用（Bartheye & Jacopin, 2019），但截至撰写本文时，行业内尚未广泛采用此类方法。
+
+另一种方法是放弃纯粹的与领域无关的规划器，而是在需要一定性能的区域使用领域知识或更专用的规划器。这被称为组合方法。这是一种利用多个规划器的策略。例如，游戏可以将基本路径规划交给基于A*的系统，但将其与一个更通用的规划器结合起来，以求解游戏的另一个区域。组合方法背后的想法是利用各种规划方法的优势，以在处理不同类型的规划问题时提高整体性能、鲁棒性和适应性。可以说，许多带有规划器的游戏在某种程度上已经在这样做。然而，组合方法更为复杂，因为系统需要选择应用哪个规划器（或哪些规划器），并实施如何合并不同计划的策略。组合中的规划器可以全部是与领域无关的，全部是特定于领域的，或者是混合的。这些规划器在规划方式上都会有所不同。组合方法的优化往往在于如何在计划之间进行选择，并且最近在将组合方法应用于通用规划器方面取得了一些进展（Rizzini et al., 2015）。请注意，所选的各种规划器的执行可以是并行的，这提供了另一个优化机会。虽然在游戏中使用组合方法并不新鲜（Churchill & Buro, 2017），但其与全序规划器结合以抵消与领域无关规划器成本的方法仍在活跃研究中。这里的弊端是，现在需要实现和维护多个规划器。然而，拥有一个组合也可以作为一种风险缓解策略，以应对大量的计划失败或性能波动。
+
+可能更务实的方法是目标和任务Pyhop或GTPyhop（Nau et al., 2021）所采取的方法。这是HTN的最新版本，已被尽可能地通用化。GTPyhop是一种面向目标的HTN变体——类似于GOAP或目标分解规划器（Shivashankar et al., 2012）。正如PDDL抽象了问题领域，从而使描述多种不同类型的规划问题成为可能一样，GTPyhop抽象了目标和动作空间。目标被分解为子目标，任务被分解为子任务。其通用性在于，GTPyhop提供了一组可以跨不同领域重复使用的原始方法。这些方法执行基本动作，可以以各种方式组合以实现更高级别的目标。任何当前使用HTN的游戏都可以这样做。它确实允许定义新的算子和方法，如果实现者不小心，这可能会引入一些领域知识。为了防止这种情况，GTPyhop将规划系统与其知识分离。这允许规划本身保持通用性，同时仍允许注入和优化特定知识。其他规划器，如Fast Downward，也利用这种模块化来实现与领域无关。有些变体使用组合方法，允许Fast Downward在特定时刻选择最佳的搜索方法。与GTPyhop不同，Fast Downward也支持PDDL。这两个系统都提供了可用于游戏的现成规划系统。
+
+### 22.4 选择与领域无关
+
+选择合适的规划器（无论是否通用）将高度取决于游戏AI面临的问题类型。假设问题是一个良好的规划问题，每种规划器都有其优缺点。空间问题，例如路径规划，通常适合使用A*搜索的变体，因为这些计划涉及较小的动作空间（行走）、较大的搜索空间（代理可以行走的区域）和简单的启发式（最低成本）。研究树与路径规划并无太大区别，因为它们也涉及成本优化。另一方面，涉及时间或协调的问题不太适合使用简单的图搜索。这类问题通常交由GOAP或HTN等规划器处理。在基于GOAP和基于HTN的规划器之间做出选择，可以根据是有几个目标可供选择（GOAP）还是有多种方法来解决同一目标（HTN）来决定。SPARK是一种处理概率的规划器，如果在评估结果时存在一些歧义，这很有用。如果问题空间涉及可能动作之间的大量冲突和约束，除了修剪或优化搜索空间之外，可能需要使用结合约束求解器的规划器。时间约束可能需要使用像SIADEX这样的HTN，它在表达时间方面更出色。表22.1概述了本章讨论的不同规划器。
+
+如果需要与领域无关的方法的灵活性或可重用性，但已有现成的规划器，那么可以选择将规划器转换为更通用的形式。这可能涉及集成PDDL、进一步抽象其任务或动作，以及分离（模块化）其数据和规划。表22.1中那些天生不是与领域无关的、或不支持PDDL的规划器，可以进行转换以实现这一点。如果存在需要优化的特定子问题，组合方法可能是解决方案。进一步的优化可以通过并行化规划以及使用修剪或启发式来加快搜索速度。
+
+
+
+
+
+TABLE 22.1 讨论的规划器对比
+
+| | GOAP | HTN | SIADEX | GTPyhop | Fast Down | FF Planner |
+|---|---|---|---|---|---|---|
+| 方法 | 搜索动作空间 | 任务分解 | 任务部分分解（以及 NLP） | 目标分解（以及任务） | 基于世界状态的启发式搜索 | 前向链式启发式状态空间规划器 |
+| 问题类型 | 在多个目标之间选择；简单动作 | 复杂动作 | 自然语言对话；任务；森林火灾作战 | 支持目标选择和任务分解 | 成本最优规划 | 成本最优规划 |
+| PDDL？ | 否 | 否 | 否 | 否 | 是 | 是 |
+| 有序计划？ | 是 | 是 | 部分 | 是 | 是 | 是 |
+| 问题复杂度 | 处理中等复杂度 | 处理高复杂度（带中等约束） | 处理高复杂度（带高约束；时间） | 处理高复杂度 | 目前应用于较简单问题 | 目前应用于较简单问题 |
+| 最优计划？ | 是 | 否 | 否 | 否 | 是 | 是 |
+| 领域无关？ | 否 | 否 | 否 | 是 | 是 | 是 |
+
+### 22.5 通用规划器的进展
+
+#### 22.5.1 机器学习与规划器
+
+机器学习（ML）的整合，或者说将 ML 与规划相结合，并非新事物。DeepMind 可以说是最著名的例子。虽然它展示了将规划与 ML 相结合所能取得的强大成果，但其目标更多是通过利用学习模型来预测动作结果、状态转移和值函数，从而提升规划器的效率、适应性和可扩展性。
+
+还有一个称为通用规划（Generalised Planning）的研究领域，它与通用规划器（generalised planner）的概念截然不同。需要注意的是，在通用规划中，ML 用于寻找通用计划，而非创建通用规划器（Rivlin et al., 2020）。
+
+ML 还被直接用作规划器，例如 TDDP-Net，这是一个使用深度神经网络（DNN）的 3D 路径规划器。尽管由于训练数据的特性，所得到的 DNN 模型可能具有领域特异性，但该方法展示了利用学习模型直接生成计划的潜力（Wu et al., 2019）。从最广义的意义上讲，使用 DNN 可被视为一种通用方法，因为由此产生的规划器可以适应不同环境，无需手动编码规则或启发式。
+
+其他人利用 DNN 和强化学习技术，通过改进基于 ML 预测特性的搜索启发式来优化经典规划器（Groshev et al., 2018）。创建一组通用的动作或任务以支持通用规划器，也可以通过强化学习来实现。
+
+#### 22.5.2 混合规划器
+
+关于无领域规划器，一种常见的混合方法是使用非规划方法来抽象规划问题。通用规划器需要通过 PDDL 或其他方式对问题进行抽象。如果问题领域没有以某种方式进行抽象，规划器将需要领域特定信息来理解它试图解决的问题。
+
+如前所述，ML 可以与规划相结合。特别是，对于通用规划器，使用 ML 优化搜索可以使通用规划器性能更佳。
+
+就其本质而言，组合策略（portfolio approach）是一种混合策略，因为它涉及结合多个规划器或算法来解决同一问题。这种混合策略旨在发挥不同方法的优势，提升整体规划性能。
+
+还有尝试自动化经典规划器的抽象，这需要将经典规划器与抽象启发式相结合（Srivastava et al., 2011）。
+
+在机器人领域，使用概率方法增强探索，然后将其输入通用规划器，已取得一定成功。这种混合方法将概率推理与规划相结合，以增强不确定环境下的探索和决策。
+
+将通用规划器与更具领域特定性的执行模块相结合，是兼顾两者优势的有效方式。这使规划器能够生成更通用、更高层级的计划，而更实际的执行模块则提供高效且具领域特定性的计划跟随。
+
+#### 22.5.3 多智能体规划
+
+多智能体规划是规划的一个子领域，专门处理规划器协调多个智能体的问题。最近，使用通用规划器使多智能体规划器能够减少智能体间的通信量，并增加计划复用（Borrajo & Fernández, 2019）。
+
+最近，对相关领域——多智能体路径规划——的关注度越来越高。这里的大部分重点在于优化，例如通过改进规划器使用的算法选择来提高运行时效率（Kaduri et al., 2021）。
+
+#### 22.5.4 概率规划
+
+使用概率（无论是以贝叶斯网络的形式，还是与规划结合的 DNN）并非新事物。这在机器人领域尤其适用，因为计划执行可能失败，且规划环境不稳定。存在特定的规划系统，如 HYPE 和 GOLOG，用于将概率概念引入规划。预测也已与时间推理规划器结合使用，并用于优化动作选择。
+
+### 22.6 结论
+
+随着规划器在路径寻找之外的游戏领域找到更广泛的应用，培育其向更高效率、更易实现、更可复用和更适应性的方向演变将变得越来越重要。利用现代游戏系统日益增强的能力，通用规划理应变得更加易于使用，降低其集成门槛。将通用规划器引入游戏尤其具有说服力，因为它们能够处理经典规划器几乎无法解决的问题。结合组合策略，通用规划器可以与更传统的方法一起引入，从而降低风险。值得注意的是，虚幻引擎（带 HTN）和 Unity（带 GOAP）等主要游戏引擎正在逐步将经典规划系统与常规工具相结合，反映了业界对规划器所带来价值的认可。尽管 PDDL 集成到 Unity（Pellegrin, 2020）目前仍非官方，但这一战略举动表明业界正朝着拥抱通用技术的趋势发展。凭借缩短开发时间、释放设计师、减少对专家的需求、适应不可预见的游戏场景以及促进复用的潜力，可以预见这些游戏引擎将采用更全面的通用策略。这些独特优势为在游戏开发领域考虑和整合通用规划器提供了充分理由。
+
+## REFERENCES
+
+Bartheye, O., 和 Jacopin, E. (2019) 面向视频游戏的实时基于 PDDL 的规划组件。第 5 届交互式数字娱乐人工智能会议论文集，可在线查阅: https://cdaa.aaai.org/ojs/12370/12370-52-15898-1-2-2020 1228.pdf.
+
+Borrajo, D., 和 Fernández, S. (2019) 多智能体规划的高效方法。知识与信息系统，58, 425–479. https://doi.org/10.1007/s10115-018-1202-1.
+
+Churchill, D., 和 Muro, M. (2017) 《星际争霸》中的分层组合搜索。载于《Game AI Pro 3》，Steve Rabin 编，CRC Press，博卡拉顿，佛罗里达州，第 361–368 页。
+
+Conway, C., Higley, P., 和 Jacopin, E. (2015) 面向目标的动作规划：十年的 AI 编程，[在线演讲] https://www.youtube.com/watch?v=gm7K68663rA，于 GDC 2015 上发表。
+
+Deneke, W., Barger, T., Carter, M., Lokken, C., 和 Peterson, D. (2020) VikingBot：朝着《星际争霸》混合人工智能的方向发展。西华盛顿大学，可在线查阅: https://american-cse.org/sites/csci2020/proc/wfsCSCI2020-6SccvdzjqC7bKupZxFmCoA/762400b521/762400b521.pdf.
+
+Ghallab, M., Howe, A., Knoblock, C., McDermott, D., Ram, A., Veloso, M., Weld, D., 和 Wilkins, D. (1998) PDDL - 规划领域定义语言。AIPS-98 规划竞赛委员会。
+
+Groshev, E., Tamir, A., Srivastava, S., 和 Abbeel, P. (2018) 使用深度神经网络学习通用反应策略。第 28 届自动化规划与调度国际会议，第 28 卷。代尔夫特。
+
+Hasegawa, M., (2019) 《Left Alive》中使用的基于 HTN 的游戏 AI 是什么？Game Business 文章，可在线查阅: https://www.gamebusiness.jp/article/2019/10/28/16360.html.
+
+Humphreys, T. (2013) 通过示例探索 HTN 规划器。载于《Game AI Pro》，Steve Rabin 编，CRC Press，博卡拉顿，佛罗里达州，第 149–167 页
+
+Kaduri, O., Boyarski, E., 和 Stern, R. (2021) 最优多智能体路径规划的算法选择。第 30 届自动化规划与调度国际会议论文集，广州，第 161–165 页。
+
+Karakovskiy, S., 和 Togelius, J. (2012) 马里奥 AI 基准与竞赛。IEEE 计算智能与游戏AI 事务，4(1), 55–67.
+
+Nau, D., Bansod, Y., Patra, S., Roberts, M., 和 Li, R. (2021) GTPyhop：在 Python 中实现的分层目标+任务规划器。ICAPS 分层规划研讨会 (HPLan)，马里兰大学，可在线查阅: https://www.cs.umd.edu/~nau/papers/nau2021gtpyhop.pdf.
+
+Orkin, J. (2006) 三种状态与一个计划：《F.E.A.R.》的人工智能。MIT 媒体实验室，可在线查阅: https://alumni.media.mit.edu/~jorkin/gdc2006_orkin_jeff_fear.pdf.
+
+Pellegrin, E. (2020) PDSim：使用 Unity 游戏引擎进行规划领域模拟。人工智能促进协会。
+
+Rivlin, O., Hazan, T., 和 Karpas, E. (2020) 带深度学习强化的通用规划。人工智能促进协会。
+
+Rizzini, M., Fawcett, C., Vallati, M., Gerevini, A., 和 Hoos, H. (2015) 最优规划的组合方法：一项实证分析。IEEE 第 27 届人工智能工具国际会议，可在线查阅: https://ada.liacs.nl/papers/RizEtAl15.pdf.
+
+Shivashankar, V., Kuter, U., 和 Nau, D. (2012) 单智能体规划的分层目标形式主义与算法。AAMAS '12：第 11 届自主代理与多智能体系统国际会议论文集，第 2 卷，瓦伦西亚，第 981–988 页，可在线查阅: https://www.ifaamas.org/Proceedings/aamas2012/papers/1F_3.pdf.
+
+
+
+
+
+Srivastava, S., Immerman, N., Zilberstein, S., and Zhang, T. (2011) 使用经典规划器进行通用计划的定向搜索. 第 21 届国际自动规划与调度会议论文集, pp. 226–233.
+
+Straatman, R., Verweij, T., Champandard, A., Morcus, R., Kleve, H. (2013) 《Killzone 3》中多人机器人的层次化 AI. 在 Steve Rabin (编), Game AI Pro, CRC Press, Boca Raton, FL, pp. 377–390.
+
+Wu, K., Esfahani, M., Yuan, S., and Wang, H. (2019) TDPP-Net: 基于深度神经网络架构实现三维路径规划. Neurocomputing, 357, 151–162.
+
+Yoshimoto, Y. (2020) Y Hase, Morikatron.ai 文章, 在线可用: https://morikatron.ai/2021/03/blue-protocol_aiphilosophy.
+
+## 23 释放混沌
+### 毁坏竞技场游戏
+### 《DiRT：Showdown》的模式
+
+Dr 尼克·梅尔德
+
+### 23.1 引言
+
+_DiRT Showdown_ 是由 Codemasters 开发和发行的赛车游戏，作为主打 _DiRT Off Road_ 系列的衍生作品。与主打 _DiRT_ 系列侧重模拟的特性相比，该游戏侧重于更具街机风格的体验，并包含竞速赛道和竞技场两种赛事，玩家需直接与 AI 对抗。此外还有多种单人赛事（Hoonigan 事件）以及仅限多人游戏的模式（Party 模式）。商业原因决定了发行日期，这使得 _Showdown_ 的设计目标是一款易于且快速开发的游戏（“复用”和“换皮”这个词被频繁提及）。从开始到最终提交，总共只有大约五个月！在这段时间内，有必要创建一个全新的基于竞技场的车辆 AI 系统，以支持三种新游戏模式：狂暴（Rampage，传统竞技场拆车比赛）、淘汰赛（Knockout，可想象成用汽车进行的相扑摔跤）和硬目标（Hard Target，所有人对抗玩家，生存时间最长者获胜）。
+
+本章描述了竞技场游戏模式的开发过程，以及短项目周期如何直接影响代码架构/决策。
+
+### 23.2 设计师约束
+
+#### 23.2.1 车辆操控
+
+对设计产生重大影响的首个决策是车辆操控应当如何。幸运的是，决定将 _Showdown_ 做成一款非常街机化的游戏，因此操控被设计得非常易于上手且易于访问。为实现这一点，车辆操控设计师和车辆物理程序员创建了一个相对简单的驾驶模型，基本上没有漂移，且最高速度低。实际上，最高速度非常低（约 50 英里/小时/80 千米/小时），以至于他们从游戏中移除了速度表来掩盖这一事实！
+
+还决定在竞技场模式中只让少数精选车辆参赛。AI 只需控制十种不同的汽车。此外，所有车辆类型的主要操控配置基本相同。尽管它们拥有不同的质量、转向锁止、加速度和最高速度，但相同的基本操控配置意味着相同的 AI 转向和踏板控制器可用于所有车辆。
+
+实际车辆模拟被分为两部分：车轮连接到一个“隐形滑板”上，而视觉车身则通过弹簧连接到“滑板”上。这样做意味着“滑板”（本质上是 AI 控制的对象）可以提前设置并批准，从而允许车身侧倾和损伤等其他元素在之后构建。这也意味着，在驾驶过程中对车辆外观的任何更改都可以在不影响底层操控的情况下进行调整，否则将需要重做 AI 控制器。这意味着，如果决定卡车需要更多车身侧倾，则不调整悬挂以允许侧倾（这会影响操控），而是调整“滑板”与车身之间的连接弹簧。操控与视觉之间的这种脱节使得 AI 可以在稳定的操控系统上开发，同时也允许设计师调整和个性化不同的车辆，而不会对车辆 AI 控制它们的能力产生巨大（或边际）影响。由于早期决定汽车会更具街机感，且竞技场汽车完全是虚构的，因此汽车不够现实的事实并不是问题。
+
+#### 23.2.2 竞技场设计
+
+在项目初期还需要制定竞技场设计规则。本质上，只制定了两条规则：
+
+- 1. 竞技场地板在整个区域内需要保持连续高度。连续高度并不意味着平坦，只是竞技场内任何地方都不能有不连续点。例如，你不能有一个被墙隔开的高起区域，但两侧有坡道。
+
+- 2. 竞技场内的任何固定/不可破坏障碍物都需要能够包含在圆形边界内。
+
+当然，这两条规则都被美术人员忽略了，但至少（非常出色）的关卡设计团队理解了这些要求的必要性，因此能够重新构建它们以符合设计规范。总共设计并发布了六个竞技场，不过通过用屏障封锁区域对其进行了进一步修改，以创建八个不同的竞技场。最终发布的主要竞技场如图 23.1 所示。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_213_0.png)
+
+图 23.1 六个主要竞技场设计图，显示外边界以及竞技场内的任何障碍物（标记为圆形）。车辆会在竞技场外的坡道上生成，并在游戏开始后驶入竞技场。图中未显示生成点和坡道。
+
+### 23.3 控制汽车
+
+在开发 Showdown 时，四款赛车游戏（三款 DiRT 游戏和一款 Grid 游戏）已经发布，因此引擎已经成熟且经过了充分测试，拥有许多可利用的有用功能。
+
+#### 23.3.1 基本样条生成
+
+AI 引擎擅长的一点是跟随样条。在之前的赛车游戏中，样条由关卡设计师设置，但由于这是一个没有固定“路线”的开放竞技场，因此需要另一种方法。相反，决定采用动态创建的样条。这分为两部分进行：
+
+- 1. 确定去向。
+- 2. 从当前位置和朝向创建指向目标的样条。
+
+确定去向是“毁坏竞技场监督者”（稍后描述）的工作，它会提供竞技场内的目标位置。当前位置即为车辆的起点。在这两点之间创建一条直线，然后指示车辆沿线行驶本可行（确实可行，因为这是首先尝试的方法），但这不一定是一个好的方案，因为它没有考虑车辆的转向半径或实际行驶路径上的任何障碍物。这就需要使用某种类型的样条。由于目标位置的朝向无关紧要，但活动车辆的朝向很重要，因此使用了三次贝塞尔曲线来生成车辆要跟随的样条。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_214_0.png)
+
+**图 23.2** 一个简单的三次贝塞尔样条。请注意，样条起始于汽车前部，而非中间。这是因为转向控制器在计算转向方向时会尽量减少车辆前部的误差。
+
+三次贝塞尔样条需要三个点，如图 23.2 所示。P0 是车辆的初始位置，P2 是目标位置。但是 P1 应该放在哪里？由于我们希望样条以车辆的朝向开始，P1 需要位于穿过 P0 且沿车辆朝向方向（V）的直线上某处。但是 P1 应该沿这条直线放置多远？通过实验发现，如果将 P1 放置在沿直线 V 的投影位置，且为 P0 与 P2 之间长度的 1/3（前提是 P2 不在 P0 后方），就可以创建出车辆可跟随的良好样条。此外，始终遵守从 P0 的最小距离，同样，该距离也是通过实验确定的。计算方法如下：
+
+```
+float Dist=(P2-P0).Length();
+float ProjectionDist=(Dist/3)<MinDist ? MinDist : (Dist/3);
+Vector3 P1=P0+V * ProjectionDist;
+```
+
+#### 23.3.2 样条跟随
+
+一旦生成了合适的路径，要让车辆跟随它，就需要将贝塞尔曲线转换为 Catmull-Rom 样条。虽然可以直接跟随贝塞尔曲线，但 AI 引擎中的所有系统都已经设置为跟随 Catmull-Rom 样条，因此将生成的曲线转换为这种格式意味着无需更改任何样条跟随代码（请记住，构建这些系统的开发时间不足五个月）。Catmull-Rom 样条的一个优点是它会经过每个点，因此转换为 Catmull-Rom 样条只需对曲线上的点进行采样并存储（Dunlop, 2005）。
+
+
+
+
+
+然后分析了样条数据的曲率，以确定曲率是否过紧，从而需要添加制动线和保持线。制动线用于在曲线上的某点设置速度，而保持线是指车辆可以再次全速行驶的点。当曲率超过阈值（同样由实验确定）时会放置制动线，保持线的放置方式相同，如图23.3所示。然而，不清楚应该为制动线设置什么速度？通常，这些速度会由关卡设计师手动设置，或者通过反复让车辆通过弯道并调整速度的工具来设置，但由于样条是自动生成的，关卡设计师无法确定速度。通过模拟工具（在当前帧更新期间）来生成速度既计算量大又难以实现。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_215_0.png)
+
+图23.3 显示将自动放置制动线和保持线的位置的样条。
+
+幸运的是，在Showdown中这很简单，因为之前发布的游戏（DiRT 3）的新功能之一是使用曲率统计来确定车辆通过弯道的速度。每辆车辆的曲率统计数据是通过让车辆绕着圆形赛道行驶并逐渐提高速度，直到无法再沿着样条行驶而生成的。这将确定给定半径的最大速度。随后遇到其他相同半径/曲率的弯道时，可以从表中读取该速度并应用。在实践中，在DiRT 3上，这种方法相当有效，能让汽车以目标速度的90%行驶，因此该方法被用于生成制动线的初始速度。随后，其他工具会遍历每条制动线，根据需要调整速度，以获得更好的过弯速度/更好的圈速。这一迭代步骤是为了考虑前一段弯道造成的重心转移。然而，对于Showdown，该系统运行良好，因为其操控本质上是一种没有重心转移的“雪橇”。因此，要确定通过制动线的速度，只需获取该点的样条曲率，然后在曲率数据中查找即可。
+
+不过，有时车辆会无法遵循路径并偏离样条。这可能是因为生成的样条对我们的车辆来说过于紧凑，无法实际驾驶，或者是因为其他车辆与其碰撞（或者甚至因为转向控制器调校得不是很好），所以如果车辆与样条的距离超过X米，就会触发样条重建请求（X在5到10米之间）。
+
+#### 23.3.3 高级样条生成
+
+竞技场的一个新颖特点是它们并非都是简单的“碗状”，而是形状各异，并且可能包含固定、不可破坏的结构。虽然当时的FlatOut游戏（Bugbear Entertainment，2004）竞技场中包含物体，但这些物体是完全可破坏的，因此不一定需要为AI汽车编写特殊的“结构避让”代码。Showdown竞技场不是圆形的。这两点意味着需要一种“竞技场表示”来存储竞技场边缘，以及其中障碍物的边界。边界存储为简单的Catmull-Rom样条，固定障碍物存储为具有中心和半径的圆。竞技场中并非所有障碍物都是圆形的，但它们始终被存储为简单圆形，以简化碰撞检测系统。还创建了一个额外的“内边界”，通常紧随外墙，但向内偏移约20米。AI竞技场标记如图23.4所示。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_216_0.png)
+
+图23.4 竞技场表示，显示外竞技场边界、内边界和障碍物的边界（标记为圆形）。
+
+如前所述，样条是在车辆和目标之间生成的。但是，如果生成的样条穿过这些固定障碍物之一，甚至超出竞技场范围怎么办？视情况而定，样条可能需要“微妙”地修改，或者完全重新生成。
+
+##### 23.3.3.1 穿越障碍物
+
+在带有障碍物的竞技场中，生成的样条可能会穿过障碍物。确定三次贝塞尔曲线的边界框既可行又计算成本低，因此首先进行了一次检查，以确定曲线的边界框是否与障碍物的边界圆相交。假设确实如此，则会进行更详细的检查，以确定样条是否与圆相交（图23.5）。查找样条（或贝塞尔曲线）上最近的点并不简单，需要迭代且涉及复杂的数学运算，因此，将生成的三次贝塞尔曲线转换为曲线上的一系列点，并对每个点与圆进行测试。计算这些点对于将贝塞尔曲线转换为Catmull-Rom样条是必需的，因此，如果未发现交点，则转换后的样条可用于路径跟随。
+
+然而，如果发现了交点怎么办？在这种情况下，您希望将样条推到圆外，因此需要找到入口和出口交点。使用从简单圆点测试中找到的圆内第一个和最后一个点，可以进行正确的线段-圆计算，以计算圆边缘上更准确的交点。找到两个交点后，可以计算您希望样条通过的新点。这个新点（M）是两个交点之间的中点。如图23.6所示，新点（P_new）沿着从圆中心（C）经过中点（M）的向量，与圆中心的距离为圆半径（r）加上缓冲距离（b）。
+
+![](img/f4a4f6e4de5338a867590c30638990cf_217_1.png)
+
+图23.6 创建了不再与障碍物相交的两条新曲线。M是两个交点之间的中点，b是您希望将新点移动到的缓冲距离（在障碍物外部）。
+
+有了新点后，我们现在可以创建两条新曲线：一条从初始车辆位置到这个新位置（P_car到P_new），另一条从新位置到目标（P_new到P_target）。然后应该对这两条曲线检查交点并根据需要进一步分割，但Showdown竞技场的布局意味着不需要这样做。虽然存在调整后的曲线随后会与另一个障碍物边界相交的情况，但这种情况发生的概率很小，不值得为此进行检查处理。
+
+通过将竞技场障碍物全部设为圆形，所使用的交点测试（先圆点，后线段-圆）足够简单，以至于暴力测试计算成本并不太高，即，我们将竞技场中的每个障碍物与每个新样条进行测试。如果必须处理非圆形障碍物，那么这些交点测试将变得计算难度大得多，并且还需要更复杂的算法来决定新点的位置。
+
+##### 23.3.3.2 驾驶出竞技场外
+
+如果车辆已经被推到外墙上，生成的样条会立即超出竞技场范围。在这种情况下，向前行驶无法创建有意义的曲线来跟随。检测到这种情况后，会生成一条曲线，但方向与车辆朝向相反。从车辆位置后方开始的这个生成样条，会自动触发车辆朝向错误时进行原地旋转的代码。这是免费的功能，因为自原版Colin McRae: DiRT游戏起，它就存在于车辆AI系统中。
+
+有时，生成的曲线会先稍微超出竞技场，然后再返回。在这种情况下，样条的重新定位方式与样条与障碍物相交类似。首先，找到样条与边界之间的初始交点，然后切割初始样条，重新定位点，再创建两条曲线来形成路径。然而，在测试中发现，仅对竞技场边界这样做并不总能创建出车辆能够跟随且不撞上边界墙壁的样条。这不算大问题（毕竟这是毁灭赛车），但发生次数足够多，需要一个更好的修复方法。这个修复方法需要使用内边界进行测试，而不是外边界。通过针对内边界进行测试并相应调整曲线，现在如果有些曲线过于紧凑，汽车就有足够大的“安全区”可以开出去而不会撞上墙壁。内边界距离实际边界约10米，如图23.4所示。
+
+检测与边界的交点是使用暴力方法完成的。将生成的样条切分成段，然后将生成样条中的每条线段与构成竞技场边界的每条线段进行测试。这种暴力方法效率极低，以一个200米长的样条（这是生成样条相当典型的长度）作为测试用例，要测试构成外边界的每条线段，耗时超过1毫秒。这是一个问题，因为所有八辆车的整个AI CPU预算只有0.8毫秒！而且，每次生成新样条时都需要运行此任务。本可以选择更好的算法，或者使用空间分区，但这些并不是现成可用的功能（任何一种方法
+
+
+
+就会耗费根本没有的时间——记住五个月了！）。当时的想法是优化暴力算法，并且只允许样条/边界交点测试每帧运行一次。在使用SIMD方法优化代码后（Bikker, 2017），相同测试的CPU开销下降了超过70倍，降至不到0.02 ms。此时，关于其性能的担忧被打消了，并且它被允许在需要时运行。
+
+### 23.4 控制乐趣：拆车比赛监督者
+
+有了生成样条并让车辆跟随它们的能力，构建拆车比赛游戏模式所需的所有基础都已具备。但实际游戏的基本要素仍然缺失！汽车应该开往何处，应该瞄准谁？这成了拆车比赛监督者的主要职责。顾名思义，监督者知道游戏中所有车辆的情况，主动为它们分配目标，并计算样条生成的目标点。对于每辆在场的车辆，监督者会分配要撞击的目标车辆，或要驶往的安全地点。哪辆车被瞄准取决于多个因素，包括：游戏模式、难度、车辆上次被瞄准的时间、瞄准该车辆的车辆数量、相对位置以及目标车辆的朝向。
+
+在瞄准车辆时，会生成一条通向目标车辆的样条。每隔几秒，样条就会被重建，以考虑目标的新位置，然后，如果撞击成功，或经过固定时间后，车辆就需要驶离，以便进行下一次尝试。驶离意味着要么找一个远处的地方驶往，要么攻击一辆距离合理的其他车辆。加入距离要求是因为碰撞/造成的损伤速度是评分系统的重要组成部分，而且高速碰撞总是比低速碰撞好看得多。由于被瞄准的车辆通常距离很远（经常超过100米），并且在移动，因此生成的样条需要定期更新。另外，瞄准车辆的中心效果从来都不好，因为通常会导致车辆最终出现在目标车辆后面并只是跟随它。相反，有必要预测车辆未来可能所在的位置。使用一个非常粗略的猜测，即车辆从当前位置开到目标车辆当前位置需要多长时间（仅使用直线距离和速度），这被用作预测算法中的时间组件。然后算法会将车辆当前的方向和速度考虑在内，预测车辆在未来那个时间点的位置。使用这个新位置作为目标位置，瞄准效果好得多，并且还产生了许多精彩的T型碰撞。尽管该系统非常简单，但因为路径更新很定期，因此可以非常精确地选择撞击位置。更重要的是，可以选择不撞击车辆，而是靠近它。这种能力被用作难度系统的一部分，在较低难度下让车辆冲向玩家，然后故意避开，但又不让玩家明显察觉（看起来它们确实在试图撞击玩家，但只是定位不太准确）。
+
+一旦所有拆车比赛模式都能运行且完全可测试，QA团队发现他们可以通过简单地开圆圈来轻松智胜AI！这很容易通过将汽车使用的转向角纳入预测算法来修复。在之前的赛车游戏中，这并不可取，因为AI现在可以访问玩家没有的信息，但由于这是一款街机游戏，真实感和模拟并非重点（与主要的DiRT游戏不同），这是一个可以接受的解决方案。“现实”的修复方法本可以使用目标车辆的旋转速度，但那比直接获取转向角要复杂得多。
+
+### 23.5 难度系统
+
+难度系统是监督者的一部分，因为正是这个系统决定了谁在何时瞄准谁。难度系统的一个方面是控制玩家被选为目标的频率。在较低难度下，始终只有一辆车辆瞄准玩家，并且会有某些时期没有任何车辆瞄准玩家。在较高难度下，最多可有三辆车辆同时瞄准玩家。调整难度的另一个要素是修改车辆的预测设置，使它们主动避开目标车辆。评分也进行了修改，以便在较低难度下，撞击玩家为AI车辆获得的分数比较高难度时更低。最后，AI使用的最大油门量也根据难度进行了调整。这将使玩家更容易避开碰撞尝试，并给他们多一点时间逃离追击车辆。此外，如果他们被成功撞击，较低的碰撞速度会导致玩家受到的伤害更小。
+
+这个系统并不完美。有时，一辆AI车辆可能正在瞄准一辆车，但随后被另一辆AI车辆截断，或者在追击一辆车时，另一辆车可能挡在中间并被撞击。但由于这是一场拆车比赛，一辆车没有撞到其想要的目标其实并不重要，因为它们正在造成破坏！还有时候，AI车辆可能最终只是开进竞技场墙壁或场地中央的某个固定障碍物。同样，这也不太重要，因为这种情况不常发生，但它们还在驾驶受损的汽车，所以转向可能本来也就不太好用。
+
+### 23.6 拆车比赛游戏模式
+
+Showdown拥有三种不同的拆车比赛游戏模式。它们分别是Rampage、Knockout和Hard Target。每种游戏模式都截然不同，但都使用本章所述的相同基本代码和技术。
+
+#### 23.6.1 RAMPAGE
+
+Rampage是传统的基于竞技场的毁灭 derby 赛事，目标是尽可能造成混乱。根据造成的损伤数量获得分数，得分最高者获胜。这是所有系统都设计为支持的基础拆车比赛游戏模式。
+
+#### 23.6.2 HARD TARGET
+
+Hard Target是一场限时赛事，所有人对抗玩家。玩家生存时间越长，得分越高。赛事开始时难度设置为50%，玩家面对四辆AI车辆。经过初始延迟后，每15秒会有额外的AI车辆加入竞技场。一旦所有八辆车都在竞技场内，难度就会每15秒增加5%。在整个测试过程中，没有人能生存超过10分钟。在一次测试中，发现了一个你会“出现在”竞技场外的地方（由于边界定义不良），如果你在竞技场外，AI就不会瞄准你。大约八分钟后（所有车都已在竞技场内，难度现已达到70%），我拿起控制器，开进竞技场，然后又只活了七秒！
+
+#### 23.6.3 KNOCKOUT
+
+Knockout游戏模式本质上是用汽车进行的相扑摔跤。赛事在一个高台上举行，目标是将汽车推出竞技场。当然，摧毁它们也能得分，但将它们撞出竞技场是获得高分最优的方式。与Rampage游戏模式不同，在这种情况下，必须确保汽车不会驶入边界，因为它们会掉下去而不是受到损伤，因此格外小心以确保不会发生这种情况。这些平台也始终没有障碍物，因此永远不需要担心撞到除其他车辆以外的东西。图23.7显示了Knockout游戏模式使用的两个竞技场。
+
+
+
+
+
+![](img/f4a4f6e4de5338a867590c30638990cf_222_0.png)
+
+**图 23.7** Knockout 竞技场。请注意，此处的外部边界是平台的实际边界。障碍圆圈是重新驶上平台的坡道原本所在的位置，而线条是“坡道样条线”，如果 AI 在掉下平台后幸存，样条线生成将连接到这些线条。
+
+这种游戏模式与 Rampage 之间的一大区别在于，在平台上时，系统没有生成可供跟随的曲线样条线，而是使用车辆与其目标之间的直线。这是因为两个人同时在开发两种游戏模式。当正确的样条线生成完成并正常工作时，Knockout 使用的直线系统已经足够好用，将游戏模式重新调整为使用样条线所需的时间，不如花在其他事情上（记住，开发时间不足五个月！）。Knockout 还有一个额外的问题：如何让被击下平台的汽车重新驶上平台。最初的计划是直接在坡道底部重新生成车辆，但加入了一些“坡道样条线”并对样条线生成/定位代码进行了一些微小更改后，就可以从车辆位置生成一条到最近坡道样条线的样条线了。此次的一个不同之处在于需要两个朝向：车辆的朝向和坡道样条线方向。因此，利用这两个方向和两个起点（车辆位置和坡道样条线起点），创建了一个贝塞尔样条线，而不是之前所做的贝塞尔曲线。这样，车辆就可以在充分加速并驶回平台之前，先在坡道底部附近行驶并定位自己。从图 23.7 中，你应该能看到竞技场的外边缘实际上也没有存储。这并非必要，因为我们只创建了通往坡道样条线的路径，因此只需确保竞技场有足够的空间，使车辆不会撞到竞技场的墙壁即可。
+
+### 23.7 赛车起步
+
+最后的一点说明是，在每个活动开始时以及灯光变化后，每辆车都会全速冲向竞技场中央，制造一场大规模碰撞。当然，明智的玩家会避开这场混乱，然后再发起攻击，因此也让几辆车这样做。在每次比赛开始时，每辆车都会被分配一个随机位置，大多位于中央。由于大多位于中央，这为活动前几秒钟的进程增加了一些变化。但对于一两辆车，则会分配竞技场内的一个随机点。这意味着你会看到一辆车向中央行驶，然后就转身远离所有混乱。除此之外，车辆有时会推迟起步，几秒钟后再加入战斗。这可能不是得分的最佳方式，但它为比赛起步增加了多样性和随机性，并确保每次活动都不同。
+
+### 23.8 结论
+
+本章详细介绍了在 DiRT: Showdown 中创建竞技场式毁灭赛游戏模式所涉及的工作。这些系统仅由两名程序员（其中一人当时只有不到一年经验的初级程序员！）在不到五个月的时间内设计和构建完成，但这之所以能够实现，是因为可以利用现有的工具和系统。关卡设计师使用的工具对他们来说已经很熟悉，即使现在这些工具被以完全不同的方式使用；而已经存在的代码功能要么可以直接使用（如样条线跟随系统和统计系统），要么可以复制后再进行更新（如 Overseer，它基于以前游戏中的 Race Choreographer）。考虑到迫使某些决策的时间限制，最终结果非常出色。项目开始时，需求是交付一个单一的空竞技场和一个单一难度设置，但五个月后项目完成时，出现了多个竞技场（形状不同且内部有不可移动的障碍物）和三种不同的游戏模式，配备了一个完全可工作且可调节的难度系统，具备精准驾驶和目标定位功能。
+
+## 参考文献
+
+- Bikker, J (2017) Practical SIMD Programming，可在线查阅: https://www.cs.uu.nl/docs/vakken/magr/2017-2018/files/SIMD%20Tutorial.pdf.
+- Bugbear Entertainment (2004) FlatOut. Bugbear Entertainment.
+- Dunlop, M. (2005) Introduction to Catmull-Rom Splines，可在线查阅: https://www.mvps.org/directx/articles/catmull/.
+
+Taylor & Francis
+Taylor & Francis Group
+http://taylorandfrancis.com
+
+## 索引
+
+- A* 45, 66, 113, 115, 175–176, 178, 180, 186, 188–189
+- 加速度 5–6, 60, 195
+- 动作(s) 4, 12–13, 19–25, 34, 41–46, 50, 55–56, 86, 95, 148–158, 176–185, 188–192
+- 美式足球 72, 78
+- 动画(s) 53, 75, 104, 121, 163, 166–168
+- 架构(s) 2, 47–48, 52, 55–56, 86–92, 110, 158, 175
+- 自主性 40–41, 44–46, 142
+- 意识 72–76, 81–82, 164
+- 平衡 87, 131–132, 180, 183, 185, 187
+- 行为模型 41
+- 行为树(s) 9–11, 13–17, 20, 22–24, 27–37, 41–46, 52–53, 56, 96
+- 可信度 140–146, 162
+- 可信的 57, 67, 72, 140–141, 143–144, 146, 159, 160–169, 183
+- 黑板(s) 14, 17, 24, 34, 36, 51
+- 制动 71
+- 广度优先搜索 99
+- 伙伴 24, 38–46
+- 缓存 105, 131
+- 缓存 36, 99, 132
+- 单元 64, 66–67
+- 单元分解 66
+- 作弊 40, 71, 76, 80, 170, 172
+- 电影摄影 102–108
+- 复合体 14, 28, 43, 88
+- 条件(s) 12–13, 15, 34–35, 43–45, 48, 55, 89, 91, 96, 112, 148
+- 条件语句(s) 34, 43
+- 上下文转向 123
+- 表象世界 1–6
+- 过场动画 102, 107
+- 危险 124–130
+- 决策制定 40, 45–46, 47–56, 86–87, 175, 191
+- 装饰器(s) 43
+- 深度神经网络 191
+- 防御 72, 76, 78, 83
+- 防御的 72, 78–79, 83–84, 129, 165
+- 深度优先搜索 53, 133
+- 检测 3, 202
+- 检测 2–3, 103, 105, 200
+- 确定性 60, 64, 149
+- 难度 76, 80–84, 100, 162, 170–171, 173, 203–205
+- 有向无环图(s) 109
+- 有向图 111
+- 动态 27, 30–33, 35, 50, 60, 86, 98, 101, 118, 120, 123, 133, 172–173
+- 涌现 95, 168, 185
+- 环境 41, 50, 71, 90–93, 96, 101, 109, 118, 123–132, 134–135, 141–146, 162–163, 181, 192
+- 环境的 101, 128, 133–136, 141–142
+- 有限状态机(s) 41, 54, 78, 148, 175
+- 泛洪填充 137
+- 帧(s) 3, 8, 66, 68, 71, 75, 86, 99, 103–106, 131, 148, 176, 179, 180, 199, 203
+- 面向动作的目标规划器 27, 175
+- 面向动作的目标规划 41, 55, 148, 175, 186
+- 图神经网络 106
+- 群组(s) 35, 95–101, 128
+- 启发式(s) 62, 65–68, 151–153, 189, 190–191
+- 分层有限状态机 54
+- 分层任务网络 27, 55, 186
+- 基于效用的分层决策制定 54
+- 层次结构 42, 44, 49, 54, 122
+- 沉浸感 80, 141, 175, 181
+- 不可变 10–13
+- 集成学习 88
+- 兴趣图 123, 127
+- 中断(s) 22, 29–30, 35
+- 中断的 176–177
+- 中断(s) 8, 183
+- 关键帧(s) 104–105
+- 叶节点 28–29, 43, 45, 53
+- 线性插值 (Lerp) 119
+- 逻辑世界 1–4
+- 机器学习 85, 102, 186
+- 标记 134–139, 200
+- 内存 9–10, 17, 36, 112, 131, 148, 159, 164, 183, 185
+- 模仿 18, 20, 22–26, 161
+- 模块化 49, 52–53, 189
+- 监视器 29, 158
+- 移动 1–5, 8, 104, 111, 119, 123, 127–128, 160–161, 164–166
+- 可变 10–14, 17
+- 导航 6, 118, 120–122, 123, 186
+- 导航网格 120
+- 导航网格 57–58, 118–121, 181
+- 神经网络 185
+- 非确定性 60
+- 障碍物(s) 3, 57, 59–71, 118–122, 124–129, 153, 177, 181, 196–205
+- 八叉树 131, 134–139
+- 路径块 5–6
+- 路径点(s) 5–6
+- 寻路 57, 99, 109, 113, 120, 122, 139, 187, 192
+- 路径空间 57–71
+- 性能 41, 46, 55, 86, 88–89, 91, 99, 115, 178, 188, 191, 203
+- 规划器(s) 45, 55, 150, 156–157, 175–176, 186–194
+- 前置条件(s) 148–149, 151–152, 157, 176–177, 182
+- 程序生成的 45–46, 102
+- 赛车 109, 123, 128, 170–171, 195, 197, 204
+- 射线投射(s) 120, 123, 125–126, 131, 136
+- 刷新率 74–76, 82
+- 强化学习 87, 148, 185, 191
+- 复制 1, 4
+- 根 10, 28, 32
+- 脚本化的 41, 159, 168, 186
+- 搜索 24, 45–46, 53, 66, 151–152, 165, 168, 175–178, 183, 189–191
+- 自平衡 GOAP 175–185
+- 生成(ing) 12, 119, 197
+- 样条线 197–207
+- 有状态 10
+- 无状态 9–17, 123
+- 转向 67, 71, 123–132, 195–196, 204
+- STRIPS 148, 175
+- 主题 20–21, 24, 105
+- 子树 13, 17, 32, 86, 88–89, 91–92
+- 预兆 166
+- 传送 119, 121–122
+- 测试 46, 48, 88–91, 97, 118, 137, 148, 158, 202, 205
+- 威胁(s) 72, 75–79, 80–82, 109, 123, 125–129, 163, 168
+- 过渡(s) 42, 45, 49, 52–53, 103, 151, 191
+- 效用 54, 95–101, 187
+- 基于效用的决策制定 54
+- 可视化 30, 53
+- 体素 134–138
+- 路点(s) 118–119, 127–128
+- 权重(s) 60–69, 76–82, 100, 127–128, 130, 166, 185, 187, 199
+- 世界空间 57–71
+

@@ -1,0 +1,15 @@
+# 6.4.5 HIERARCHICAL FINITE-STATE MACHINES
+
+Hierarchical Finite-State Machines (hFSMs) are FSMs where each state can contain a nested state machine that forms a hierarchy. hFSMs are like FSMs in their strengths and weaknesses, with the difference that they gain the advantage of hierarchical decision-making.
+
+# 6.4.6 UTILITY-BASED DECISION-MAKING
+
+Sometimes, it is not possible to assign static priorities to behaviours, and instead, each behaviour’s relative priority needs to be decided at run time. Utility-based solutions were designed to solve this problem. In utility-based solutions, a utility score, i.e., a measure of how useful a particular behaviour would be for the AI to execute, is calculated for each behaviour, every update. The behaviour with the highest score is then selected to be executed. In many ways, utility-based decision-making is very similar to the prioritised behaviour list, except that instead of having static priorities, the behaviours are re-prioritised each update. This flexibility to be able to reprioritise the behaviours for a given situation is utility-based decision-making’s biggest strength, but the complexity of making it work is also its biggest weakness. Usually, when utility-based decision-making is described in literature, there will be a 2D graph showing how the utility of two different behaviours changes based on a single variable. It is easy to look at the graph and see where one behaviour becomes more important than the other, and the AI’s behaviour can be both easily understood and modified using this graph. Unfortunately, in order to create an interesting agent, your utility calculations will depend on a large number of variables, not just one, used to calculate the utility of a significant number of behaviours, often using non-linear functions. To illustrate how the different behaviours interact, you would need a graph with one additional dimension for each additional variable, something that quickly becomes impossible to illustrate. Keeping track of all these interactions is very challenging for any interesting AI system, which is why in practice you will see most utility systems divide their behaviours into classes that occupy distinct utility bands. This results in sets of a few behaviours in each band (often as few as just two or three), needing to have their utility calculations tuned against each other as the utility scores of all other behaviours are guaranteed to be outside their band.
+
+# 6.4.7 HIERARCHICAL UTILITY-BASED DECISION-MAKING
+
+As with most of the other solutions, it is easy to create a hierarchical version. Utility-based decision-making is no different and allows this approach to gain the strength of hierarchical decision-making.
+
+# 6.4.8 PLANNERS
+
+Planners allow the AI to construct plans at run time that match the current situation the AI finds itself in. These plans are constructed by assembling individual actions from a selection of actions that the AI has available to it. The actions come with

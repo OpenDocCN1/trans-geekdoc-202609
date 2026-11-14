@@ -1,0 +1,11 @@
+![](bbox=[0.16, 0.09, 0.84, 0.38])
+
+# IMAGE 5.4 Behaviour tree example continued.
+
+Behaviour trees are a popular tool for building AI as they allow you to model complex behaviours with relative ease. Particularly with buddy AI, there are many conditions that can affect how they should behave in the world, and with behaviour trees, you can account for that via conditions and modelling of appropriate behaviours.
+
+Earlier in the chapter, an example of choosing a position to stand at was given to demonstrate the considerations that buddies must make when executing seemingly simple behaviours. Using behaviour trees, we could account for the factors that were called out via conditions and different behaviour paths, something a simpler implementation might not have given us. This is a simple, but real-world, example of how determining a buddy’s needs upfront helps to inform which technologies are suitable.
+
+Behaviour trees are not without their drawbacks, however. Since they are typically fixed, their topology as standard does not change at runtime, meaning they can only execute a path that has been authored ahead of time. They can branch at different levels of hierarchy, creating some variation, but every potential path must be manually authored. Buddy agents can be some of the most complex agents in a game, so expressing all their behaviours is not a light task, and the resulting behaviour trees can become vast, consisting of thousands of nodes spread through multiple sub-trees. This size becomes cumbersome to manage and can be difficult to pinpoint specific behaviours amongst the many branches. Debugging behaviour trees is entirely possible, though can be difficult without proper tooling. Having the ability to step through execution, add breakpoints to certain nodes, etc., will make erroneous behaviours much easier to track down, though it introduces tool costs if you are implementing the system yourself.
+
+Behaviour trees are very powerful and highly authorable and thus are common place in game AI. Their flexibility and balance of authored content versus autonomy make them suitable for a wide range of agent types and abilities. Described here

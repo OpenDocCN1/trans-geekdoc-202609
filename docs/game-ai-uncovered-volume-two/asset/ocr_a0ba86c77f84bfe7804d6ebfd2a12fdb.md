@@ -1,0 +1,11 @@
+The first check in this function is to determine if the bounding area of the supplied octant contains any collision. It then subsequently checks to see if the bounds are at least as small as our smallest defined voxel size, and if so, create an open or closed voxel at this position and make no more recursive calls from here. Otherwise, if the bounding area did contain collision, it subdivides the next eight octants and calls recursively on each one. If it did not contain collision, you can create an open voxel, which could potentially be any size between the minimum voxel and the original seed octant bounds, and this particular branch is complete.
+
+What is being done here is to mark up all of the empty space within the original bounds, using the largest possible voxels it can, and at the same time marking up the collision with a density equivalent to the smallest allowed voxel size. This is a fast and effective method of determining what voxel is occupied by a world position, what connections this voxel has within the octree and a map in which to apply metadata related to the voxel for the NPCs to query.
+
+The next phase of the generation process is to cull any voxels that exist completely outside of the original seed boundary area. This can happen if the boundary must be extruded to fit in a uniform shape. Any voxels that overlap the boundary edges will be maintained, so the voxel space can bleed outside of the original boundary but only so far that they intersect.
+
+# 16.4.2 INTERIOR TESTS
+
+In the manual approach to placing environmental markup trigger volumes, the level designer is tagging the space as being indoors or outdoors. This is something that can easily be automated now with the voxel approach, using a simple series of upward ray casts from each open voxel.
+
+A reasonably effective and simple test for this is to take each open voxel and cast a ray to an apex height position from the top centre and each top corner. If a threshold of these five rays (say 50%) collides with a polygon, this voxel is indoor or at the very least under cover from the sky. Image 16.1 depicts this process.

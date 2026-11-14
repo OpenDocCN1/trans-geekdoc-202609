@@ -1,0 +1,11 @@
+![](bbox=[0.163, 0.093, 0.835, 0.413])
+
+IMAGE 8.2 Awareness resulting in the player defending the wrong position.
+
+# ## 8.2.1 REFRESH RATE
+
+The refresh rate has a big impact on the perceived intelligence of a player. There are three forms of refresh rate awareness. The first approach is to refresh each opponent’s struct based on the timer. The second approach is to use an overall refresh rate, which resets all opponent data to be accurate when the refresh occurs. Both approaches can be enhanced by incorporating an awareness stat for that particular player (the observing player). An awareness stat is a value between 0 and -1, with 0 indicating a player with great awareness and a 1 indicating a player with a low awareness span. The refresh time for the observing player is then set as the maximum refresh time multiplied by this stat. Therefore, a player with an awareness stat of 0 will have a refresh rate of 0.0 seconds, meaning they get the most up-to-date information every frame. A player with a stat of 1 will have a refresh rate set to whatever the maximum refresh time is. Around 0.6 seconds worked for us.
+
+The third approach to refreshing the data is the field of view approach. If a player can see an opponent, then that opponent’s data gets refreshed immediately and they have the most up-to-date information on that opponent. Other opponents that are not within the field of view are only updated when the refresh time has passed (approach one or two). This approach emulates when a player would cast a glance around the field to ensure they know where an opponent is. Adding an animation to do this would also help to sell the illusion.
+
+By combining these approaches, you get the desired result of seeing players running behind or out of sight and getting away from their predicted route and creating separation. Players look reactive and as though they are attempting to handle the threat in the correct manner, and no player has an opponent or teammate that is so far out of date that they appear to be stupid. If you expose the awareness stat to the

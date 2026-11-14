@@ -1,0 +1,13 @@
+# 18 Automated Testing Using AI Planning
+
+Dr Bram Ridder
+
+# 18.1 INTRODUCTION
+
+As games are growing ever larger and more complex, the need for testing, and the time it takes to test a game, has increased. There are many well-established types of automated tests like unit tests, functional tests, and smoke tests. These tests gather performance metrics like frames per second, memory usage, loading times, bandwidth usage, and many more. They also perform code coverage, detect crashes, fire asserts, and create error logs, amongst a plethora of other functions. This data is invaluable for development teams to optimise and stabilise their games.
+
+This chapter will focus on automated testing i.e., tests that play the game as a player by simulating keyboard, mouse, and game controller inputs. Most solutions that are used to test games like this use a combination of pre-generated scripts, behaviour trees (BTs), finite-state machines (FSM), and reinforcement learning agents. They load a level and test it for a certain amount of time and then quit. Taking this a step further, an AI framework will be described that is capable of consistently completing entire games from start to finish. The benefits of such a system are manyfold. Not only does it provide more extensive code coverage and metrics that better reflect the game, but it can also detect game and level design issues. If the framework is unable to complete a game, then this is usually due to a coding bug or issue with the level or game design. The system described in this chapter has been successfully utilised to complete games such as _Zombie Army 4_, _Evil Genius 2_, and _Sniper Elite 5_, amongst others.
+
+# 18.2 AI PLANNING
+
+The roots of planning can be traced back to STRIPS, a planning language that defines an initial state and goal as propositional values and a set of actions. Each action has a precondition, which dictates when an action can be executed, and an effect which details how a state is updated after applying the action. A solution to such a planning problem is a sequence of actions that, when applied to the initial state, leads to a state where all the goal conditions are true. The most notable application of AI planning systems in the games industry is Goal-Oriented Action Planning (GOAP). This was first popularised by _FEAR_ and has since been used in various other projects like _Tomb Raider_, _Assassins Creed_, and _Middle-earth: Shadow of Mordor_ games. One of the main benefits of such deliberate systems, compared to reactive systems like BTs,
