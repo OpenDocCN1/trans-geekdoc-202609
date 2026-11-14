@@ -1,0 +1,13 @@
+in Pyrenean oaks with a height from 20 m to 25 m. The speed data is collected every hour at meteorological tower in central Montesinho park. Wind speed measurement is carried out using a set of cup anemometers placed at height of 10 m above the ground. Several other weather variables such as temperature (in °C), relative humidity (%), and area burnt (in ha) are also collected. The change in wind speed is calculated for the selected duration and is given as
+
+```
+Δu_for = u_for(t + Δt) − u_for(t), (7.5)
+```
+
+where u_for (in km/h) is the wind speed in the forest canopy. Since the forest fires are erratic throughout the year, the area burnt time series is transformed using logarithmic transformation and is plotted for its frequency distribution. Fig. 7.2 illustrates the frequency distribution for ramp speed and area burnt. The ramp wind speed follows a normal distribution indicated by red solid line, and random changes in its magnitude lead to increased risk of forest fires as indicated by an upward increasing trend with rapid changes in wind speed.
+
+# 7.1.3 Strawberry cultivation case study, Monterey, CA
+
+Strawberry is an essential fruit crop cultivated widely across the regions of California and Florida in United States and Spain, with California being the leader in production. Weather dependency of strawberry yields has led to forecast of important variables like ambient temperature, relative humidity, wind speed, and soil temperature. Climate forecasts help the strawberry farm operators to plan their harvest ahead of time. Water management practices also influence the yield of strawberries. Another important issue with strawberry cultivation is the presence of insects/pests that reduce the effective yield of strawberries with western tarnished plant bug and two-spotted spider mite being major culprits.
+
+We study the impact of wind speed variability along with soil temperature on the yield of strawberries for California state. The Monterey city of California is located on the central coast and accounts for 32.9% of California’s strawberry production. The wind speed (in m/s) data along with soil temperature (°C) and yield (in kg/ha) are obtained from California Irrigation Management Information System (CIMIS) for one week duration from September 5, 2018, to September 11, 2018. Correlations among wind speed, soil temperature, ramp wind speed (change in wind speed), and strawberry yield were calculated. Pearson’s correlation coefficient between
