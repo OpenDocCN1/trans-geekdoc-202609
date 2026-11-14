@@ -1,0 +1,5 @@
+Aomaly Detection: Anomaly detection involves training the model to identify unusual or atypical data points that deviate significantly from the majority of the dataset. It is commonly used in fraud detection, network security, and manufacturing to identify abnormalities or outliers that may signify a problem.
+
+Sequence Labeling: Sequence labeling is a type of supervised learning in which the model predicts labels or tags for each element in a sequence of data. Applications include part-of-speech tagging in natural language processing or named entity recognition, in which identifying entities such as names, locations, or organizations in text is essential.
+
+Understanding these different types of supervised learning is crucial for selecting the appropriate approach based on the nature of the problem and the available dataset. This ultimately leads to more accurate and effective machine learning models.

@@ -1,0 +1,5 @@
+ensure uniformity and consistency in the application of security measures. Automated security policies can be centrally managed and enforced across all edge devices, regardless of their heterogeneity. This not only streamlines the security management process but also minimizes the potential for human error. Furthermore, automation can enable rapid response to security incidents by triggering predefined incident response workflows, which can include isolating compromised devices, collecting forensics data, and alerting security personnel. In this way, automation in edge security not only enhances defense but also simplifies the security management process in complex and distributed computing environments.
+
+A full step-by-step code can be located at:
+
+https://github.com/ava-orange-education/Secure-Edge-Computing-for-IoT/tree/main/Chapter%20006

@@ -1,0 +1,7 @@
+# Introduction
+
+At the heart of our interconnected world lies the concept of the edge – an ethereal boundary that marks the intersection of local processing and global connectivity. Edge networking, as a frontier discipline, embodies the marriage of computation and communication, allowing data and applications to traverse the nebulous threshold between the local and the cloud.
+
+Hence, guiding data through the intricate labyrinth of the edge requires a symphony of protocols and strategies that harmonize to ensure efficient and secure communication. Enter the stage the edge routing protocols – the composers of this digital symphony. These protocols, akin to virtuoso conductors, navigate the complexities of edge networks, orchestrating the flow of information from classic performers such as Border Gateway Protocol (BGP) to the rising stars of protocols designed for ultra-low latency and high mobility such as Named Data Networking (NDN) and Mobile Ad hoc Network Routing Protocol (MANET). Each protocol adds a unique note to the composition.
+
+As with any unexplored frontier, challenges and enigmas abound. The odyssey that lies ahead in edge networking and routing protocols presents a captivating saga of optimizing bandwidth usage, safeguarding data privacy, and adapting to the dynamic ebb and flow of devices and users at the edge. How do we balance the gravitational pull of local processing against the allure of cloud-based resources? How do we safeguard the delicate balance between security and accessibility in this distributed universe?

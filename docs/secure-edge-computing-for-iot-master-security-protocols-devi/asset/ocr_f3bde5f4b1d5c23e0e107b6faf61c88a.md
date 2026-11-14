@@ -1,0 +1,7 @@
+# Emerging Threat Vectors
+
+One emerging threat vector in edge computing is that of physical tampering and unauthorized access. Edge devices, often deployed in remote or less secure locations, are susceptible to physical tampering or unauthorized access by malicious actors. These individuals might attempt to gain direct physical access to the edge devices to manipulate or compromise the data they process, leading to potential breaches in data integrity, confidentiality, or availability.
+
+Another significant emerging threat vector is edge device exploitation and compromise. Edge devices typically have limited computational resources, making them attractive targets for attackers aiming to compromise these devices and utilize them as entry points into larger networks. Once compromised, these devices can serve as launchpads for various cyber-attacks, such as distributed denial-of-service (DDoS) attacks, malware propagation, or unauthorized access to connected systems.
+
+Cyber-physical attacks and manipulation present as yet another concerning threat vector. Edge computing often involves integration with physical systems, such as industrial machinery or autonomous vehicles. Malicious actors may exploit vulnerabilities in the edge infrastructure to manipulate or disrupt these physical systems, leading to potentially catastrophic consequences. For instance, altering data or commands related to automated manufacturing processes could result in defective products, or endanger worker safety.

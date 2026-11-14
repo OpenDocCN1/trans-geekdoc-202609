@@ -1,0 +1,1 @@
+resources is granted on a need-to-know basis. Zero trust greatly enhances security in edge environments, in which the threat landscape is dynamic and constantly evolving, making it one of the most innovative and effective strategies for protecting edge networks.
