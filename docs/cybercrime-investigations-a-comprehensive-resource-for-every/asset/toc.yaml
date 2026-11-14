@@ -1,0 +1,359 @@
+level_changes:
+- line: 2
+  before: 2
+  after: 1
+- line: 16
+  before: 2
+  after: 1
+- line: 22
+  before: 3
+  after: 2
+- line: 26
+  before: 3
+  after: 2
+- line: 30
+  before: 3
+  after: 2
+- line: 86
+  before: 1
+  after: 2
+- line: 88
+  before: 2
+  after: 3
+- line: 102
+  before: 2
+  after: 3
+- line: 141
+  before: 2
+  after: 3
+- line: 145
+  before: 3
+  after: 4
+- line: 151
+  before: 3
+  after: 4
+- line: 155
+  before: 3
+  after: 4
+- line: 163
+  before: 2
+  after: 3
+- line: 176
+  before: 2
+  after: 4
+- line: 180
+  before: 2
+  after: 4
+- line: 184
+  before: 2
+  after: 4
+- line: 188
+  before: 2
+  after: 3
+- line: 206
+  before: 2
+  after: 3
+- line: 210
+  before: 1
+  after: 2
+- line: 217
+  before: 2
+  after: 3
+- line: 223
+  before: 2
+  after: 3
+- line: 249
+  before: 3
+  after: 4
+- line: 257
+  before: 2
+  after: 4
+- line: 265
+  before: 2
+  after: 4
+- line: 271
+  before: 2
+  after: 4
+- line: 277
+  before: 2
+  after: 4
+- line: 287
+  before: 2
+  after: 4
+- line: 293
+  before: 2
+  after: 4
+- line: 298
+  before: 3
+  after: 4
+- line: 306
+  before: 3
+  after: 4
+- line: 318
+  before: 4
+  after: 5
+- line: 326
+  before: 3
+  after: 4
+- line: 332
+  before: 3
+  after: 4
+- line: 341
+  before: 3
+  after: 4
+- line: 345
+  before: 3
+  after: 4
+- line: 351
+  before: 2
+  after: 3
+- line: 361
+  before: 3
+  after: 4
+- line: 369
+  before: 3
+  after: 4
+- line: 379
+  before: 3
+  after: 4
+- line: 387
+  before: 3
+  after: 4
+- line: 392
+  before: 2
+  after: 3
+- line: 408
+  before: 3
+  after: 4
+- line: 414
+  before: 3
+  after: 4
+- line: 420
+  before: 3
+  after: 4
+- line: 426
+  before: 3
+  after: 4
+- line: 432
+  before: 3
+  after: 4
+- line: 438
+  before: 3
+  after: 4
+- line: 444
+  before: 3
+  after: 4
+- line: 449
+  before: 1
+  after: 5
+- line: 455
+  before: 2
+  after: 3
+- line: 473
+  before: 3
+  after: 4
+- line: 485
+  before: 3
+  after: 4
+- line: 494
+  before: 1
+  after: 5
+- line: 496
+  before: 2
+  after: 3
+- line: 524
+  before: 2
+  after: 3
+- line: 538
+  before: 1
+  after: 2
+- line: 545
+  before: 2
+  after: 3
+- line: 557
+  before: 2
+  after: 3
+- line: 569
+  before: 2
+  after: 3
+- line: 579
+  before: 3
+  after: 4
+- line: 606
+  before: 3
+  after: 4
+- line: 625
+  before: 2
+  after: 3
+- line: 641
+  before: 3
+  after: 4
+- line: 651
+  before: 3
+  after: 4
+- line: 660
+  before: 3
+  after: 4
+- line: 666
+  before: 3
+  after: 4
+- line: 676
+  before: 3
+  after: 4
+- line: 688
+  before: 3
+  after: 4
+- line: 694
+  before: 3
+  after: 4
+- line: 700
+  before: 3
+  after: 4
+- line: 704
+  before: 3
+  after: 4
+- line: 712
+  before: 3
+  after: 4
+- line: 726
+  before: 2
+  after: 3
+- line: 736
+  before: 3
+  after: 4
+- line: 744
+  before: 3
+  after: 4
+- line: 763
+  before: 3
+  after: 4
+- line: 769
+  before: 2
+  after: 3
+- line: 775
+  before: 3
+  after: 4
+- line: 784
+  before: 4
+  after: 5
+- line: 788
+  before: 4
+  after: 5
+- line: 795
+  before: 2
+  after: 3
+- line: 797
+  before: 3
+  after: 4
+- line: 805
+  before: 4
+  after: 5
+- line: 809
+  before: 4
+  after: 5
+- line: 819
+  before: 3
+  after: 4
+- line: 868
+  before: 3
+  after: 4
+- line: 874
+  before: 3
+  after: 4
+- line: 882
+  before: 3
+  after: 4
+- line: 895
+  before: 2
+  after: 3
+text_changes:
+- line: 298
+  before: 2.2.7 勒索与敲诈
+  after: ''
+- line: 569
+  before: 3.2 二进制系统与数据存储
+  after: 3.3 二进制系统与数据存储
+- line: 625
+  before: 3.3 计算机的基本硬件部件
+  after: 3.4 计算机的基本硬件部件
+- line: 641
+  before: 3.3.1 机箱
+  after: 3.4.1 机箱
+- line: 651
+  before: 3.3.2 电源
+  after: 3.4.2 电源
+- line: 660
+  before: 3.3.3 处理器 (CPU)
+  after: 3.4.3 处理器 (CPU)
+- line: 666
+  before: 3.3.4 内存（易失性存储 – RAM）
+  after: 3.4.4 内存（易失性存储 – RAM）
+- line: 676
+  before: 3.3.5 持久存储 (HDD/SSD)
+  after: 3.4.5 持久存储 (HDD/SSD)
+- line: 688
+  before: 3.3.6 与用户通信：输入和输出接口
+  after: 3.4.6 与用户通信：输入和输出接口
+- line: 694
+  before: 3.3.7 与其他计算机通信 (NIC)
+  after: 3.4.7 与其他计算机通信 (NIC)
+- line: 700
+  before: 3.3.8 物理端口
+  after: 3.4.8 物理端口
+- line: 704
+  before: 3.3.9 组装各部件
+  after: 3.4.9 组装各部件
+- line: 712
+  before: 3.3.10 外部存储、服务器等
+  after: 3.4.10 外部存储、服务器等
+- line: 726
+  before: 3.4 基本计算机软件类别
+  after: 3.5 基本计算机软件类别
+- line: 736
+  before: 3.4.1 BIOS/UEFI
+  after: 3.5.1 BIOS/UEFI
+- line: 744
+  before: 3.4.2 操作系统
+  after: 3.5.2 操作系统
+- line: 763
+  before: 3.4.3 应用程序
+  after: 3.5.3 应用程序
+- line: 769
+  before: 3.5 基本网络和互联网使用
+  after: 3.6 基本网络和互联网使用
+- line: 775
+  before: 3.5.1 网络硬件
+  after: 3.6.1 网络硬件
+- line: 784
+  before: 3.5.1.1 NIC 和 MAC 地址
+  after: 3.6.1.1 NIC 和 MAC 地址
+- line: 788
+  before: 3.5.1.2 电缆、无线网络和网络交换机
+  after: 3.6.1.2 电缆、无线网络和网络交换机
+- line: 795
+  before: 3.5 网络硬件与通信
+  after: 3.7 网络硬件与通信
+- line: 797
+  before: 3.5.1 网络硬件
+  after: 3.7.1 网络硬件
+- line: 805
+  before: 3.5.1.3 调制解调器
+  after: 3.7.1.1 调制解调器
+- line: 809
+  before: 3.5.1.4 路由器
+  after: 3.7.1.2 路由器
+- line: 819
+  before: 3.5.2 网络通信与互联网协议 (IP) 地址
+  after: 3.7.2 网络通信与互联网协议 (IP) 地址
+- line: 868
+  before: 3.5.3 TCP 与 UDP
+  after: 3.7.3 TCP 与 UDP
+- line: 874
+  before: 3.5.4 域名系统 (DNS)
+  after: 3.7.4 域名系统 (DNS)
+- line: 882
+  before: 3.5.5 网站托管
+  after: 3.7.5 网站托管
+- line: 895
+  before: 3.6 代理、VPN 和 Tor
+  after: 3.8 代理、VPN 和 Tor
