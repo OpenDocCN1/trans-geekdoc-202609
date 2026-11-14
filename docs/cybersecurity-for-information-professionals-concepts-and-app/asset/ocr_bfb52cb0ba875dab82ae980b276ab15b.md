@@ -1,0 +1,14 @@
+The requirements define the scope of a project and must reflect the desires and needs of users and stakeholders and *not* developers. Unfortunately, requirements can and will change over the life cycle of a project, and this complicates the software development process.
+
+There are two types of requirements: functional and nonfunctional. The functional requirements describe what a software system will do, while nonfunctional requirements describe requirements not directly related to the services that the software will provide to its users. Examples of nonfunctional requirements include ease-of-use, user response time, software memory usage, reliability, and user interactions. Sometimes there is an overlap between functional and nonfunctional requirements. It should be noted that errors in requirements are among the most problematic and expensive in software development projects. This is because their effects cascade throughout the project, causing errors in later development phases. For example, an ambiguous or incomplete requirement might result in wasted design and development work, which in turn might lead to time spent testing software components that are not really needed. The deliverable of this phase is the system requirements document, which is also called the requirements specifications.
+
+The next phase is the system design phase in which the software components of the software product are created based on the requirements gathered in the previous phase. This effectively defines the technical design or architecture of the software, and this architecture describes *how* the system will solve the business problem. The deliverable of the design phase is the architecture that specifies
+
++   - system modules
++   - system inputs, outputs, and user interfaces
++   - software, hardware, databases, networking, personnel, and procedures
++   - module integration
+
+The deliverable for this phase is the system design specification, which should be presented to management and users for review and approval; this is required before proceeding to the next phase. The system design specification consists of a logical system design that states what the system will do, using abstract specifications, and a physical system design that states how the system will perform its functions with actual physical specifications. The system design specification will be used by programmers to transform the logical system design into program modules and code.
+
+During the implementation phase, programmers create the computer code for the new system based on the design specifications. Large systems development projects can require millions of lines of computer code, and many programmers organized into teams would be needed. These teams often include some key users to help programmers focus on the business problem at hand. The deliverable for this phase is software modules and associated documentation.

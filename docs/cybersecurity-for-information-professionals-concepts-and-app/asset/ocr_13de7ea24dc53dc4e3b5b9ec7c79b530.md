@@ -1,0 +1,13 @@
+teaching and research programs had the capacity to reach a broader audience and to prepare students for work beyond librarianship. The iSchools represent a shift in directions and philosophy from the traditional library and information science education.
+
+Since the inception of the consortium of iSchools, the number of universities that joined the iSchools movement had increased to more than 80 schools from around the world. Many iSchools modify their representation by changing their name of library and information science by dropping the word “library” to reflect a broader nature of the information profession. Despite the name change, most of the current iSchools still focus on preparing librarian, archivist, or curators for different organizations and institutions. Most of the graduate-level library science programs of the current iSchools in North America are accredited by the American Library Association.
+
+It is important to note that a number of institutions that joined the iSchools movement were not purely library science schools. Some of the institutions are engineering and computer science schools as part of the Computing Research Association and some are business schools. This shift in direction of broadening the information field is evident from the inclusion of computer and business schools as well as diversifying the iSchools degree program offering to include new and emerging areas such as data science, cybersecurity, and knowledge management. The iSchools organization vision as stated on iSchools.org (2014) is to expand internationally, recognized for creating innovative information solutions and systems to benefit individuals, organizations, and society at large.
+
+# iSchools Cybersecurity Education Program Status
+
+As of Spring 2019, there are 47 iSchools in North America from the United States and Canada with four types of memberships: iCaucus, Basic, Supporting, and Associate Member (Table 4.2). To further assess the existing cybersecurity training and education among the iSchools in North America, we evaluated the current cybersecurity program information at the undergraduate and graduate levels.
+
+# Undergraduate Level Programs
+
+At the undergraduate level, we could find program concentration or minor that relates to cybersecurity topics. There are two universities out of the North America iSchools that offer a bachelor-level program with cybersecurity as the degree title. One program is a Bachelor of Science degree in emergency, preparedness, homeland security, and cybersecurity. The other program is a Bachelor of Science in cybersecurity analytics and operations (CYAOP). These

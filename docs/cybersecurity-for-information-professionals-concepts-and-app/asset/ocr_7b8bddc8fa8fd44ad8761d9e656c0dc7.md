@@ -1,0 +1,13 @@
+PCI-DSS, HITECH, and GDPR. These techniques will make your organization more resilient and increase your chances of surviving a cybersecurity attack. These are the both the implementation of the mandatory regulatory requirements of the HIPAA Security Rule, and recommendations from PCI-DSS. The application of these basic controls and best practices will not only bring your health care organization into regulatory compliance, but also significantly reduce risk. The goals of these controls, based on HIPAA and PCI-DSS, are to provide organizations with the basic controls needed to maintain effective cybersecurity and demonstrable evidence of compliance.
+
+# Risk Assessments
+
+Conducting risk assessments at least annually will not only bring your organization into regulatory compliance with the HIPAA Security Rule, it will also allow you to identify key areas for improvement. Utilizing a quantitatively scored risk assessment that addresses the items of highest impact and likelihood first will allow you to prioritize what risks to address and how quickly you need to address them. If possible, use the CMS System Readiness Assessment tool in combination with numeric scoring to identify your top risks. PCI-DSS also requires at least an annual risk assessment.
+
+# Training/Communication Plan
+
+Your workforce needs to know what to do. The HIPAA Security Rule requires that you have comprehensive training on an ongoing basis that addresses Information Security (HHS n.d.d). This training should be updated at least yearly. There also needs to be at least monthly communication on emergent issues, and if there is an emergency, immediate communication. A good training program will discuss what actions team members need to take, why they need to take them, and what they can do to further assist. Constant communication on how team members can report vulnerabilities or issues to Privacy or Security is also highly recommended.
+
+# Asset Management
+
+Having a good asset management program allows you to quickly identify vulnerable assets and develop remediation plans. If you do not know what you own, how can you protect it? You need to be able to identify and locate your assets so you can address risks as they arise and ensure that all assets are reasonably and appropriately protected against high risks. It is also required by the Security Rule to protect physical and digital assets. Physical assets include physical computers, hardware, networks, backup tapes, smartphones, flash drives, and paper files and data. Digital assets include software, medical data, computer files, and images, including pictures and radiology images.

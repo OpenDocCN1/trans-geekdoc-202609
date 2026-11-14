@@ -1,0 +1,13 @@
+using informed resources so that the requests can be effectively processed. It is important to understand that Collectors and Processors cannot erase everything, nor should they, and that a cross-disciplinary approach is needed to effectively comply, not just blind erasure.
+
+The Right to Data Portability requires organizations to provide data that a Subject has provided to a Controller or Processor to another provider if feasible, or to the Subject in a usable format (Intersort n.d.h). The Right to Object to Profiling indicates that subjects have the right not to be subject to a decision solely based on automated processing (Intersort n.d.k). This has significant ramifications for Artificial Intelligence and Machine Learning as this requires affirmative consent for their data to be used in the AI/ML decision making process, and that there needs to be a nonautomated process alternative in case they do not consent to it.
+
+GDPR is a comprehensive framework that changes how companies operate. It empowers EU citizens to control their data. It has not been fully determined how much non-EU companies have to comply outside of the European Union, such as when EU patients are treated at facilities in the United States, but it is something that will be addressed fully in the future. However, it is a major change requiring companies to plan out how they store, process, and otherwise manage data.
+
+# **PCI-DSS and How They Apply to Healthcare Organizations**
+
+In healthcare, the main way to pay bills is through credit or debit cards. The industry standard that organizations are required to implement to protect credit card data and comply with requirements are the Payment Card Industry – Data Security Standards. These requirements have been developed and maintained by the Payment Card Industry Security Standards Council (PCI-SSC), which include many of the merchant banks in the United States (TechTarget n.d.). There are 12 major requirements and 5 best practices to review to make sure that organizations are in full compliance (PCI SSC 2018).
+
+PCI-DSS requires that organizations install and maintain firewalls configured to protect cardholder data. This does not mean that they just have a firewall. The devices that process credit cards have to be segmented away from the rest of the network. The vendor-supplied default passwords and security parameters need to be changed (TechTarget n.d.).
+
+Stored cardholder data needs to be protected. This doesn’t mean just putting it on a file share away from everything else. It needs to be segmented off from the rest of the network, encrypted, and protected with two-factor authentication, approved strong encryption, minimum access, and audit logging. Cardholder data

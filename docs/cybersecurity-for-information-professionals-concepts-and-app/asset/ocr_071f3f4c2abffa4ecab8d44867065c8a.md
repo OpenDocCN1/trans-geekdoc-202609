@@ -1,0 +1,13 @@
+(2006), and Verma (2018) agree that the new scholarly communication systems will inevitably be based on capabilities of interoperable network technology.
+
+As cultural heritage institutions embrace such digital environments, they are facing unprecedented pressures to ensure privacy and reduce the exposure of their institutions to all kinds of data-related risks. Escalating cyberattacks, together with the insider threats for data breaches, make balancing the open access aspirations of cultural heritage institutions without compromising privacy and data confidentiality challenging. In July 2018, the US National Academies of Sciences (NAS) released a consensus report titled _Open Science by Design: Realizing a Vision for 21st Century Research_, which lays out a vision for a fully open global science environment, and provides the following five specific recommendations for moving from vision to implementation:
+
++   1. Research institutions and funders to work to create a culture that actively supports open science by better rewarding and supporting researchers engaged in open science.
++   2. Research institutions and other entities to support the development of educational and training programs to support students and researchers in adopting open science practices.
++   3. Research funders and institutions to develop policies/procedures to identify research outputs for long-term preservation and public access, and funding to be made available to support these activities.
++   4. Funders and institutions to ensure that research archives are designed and implemented according to the FAIR (findable, accessible, interoperable, and reusable) principles.
++   5. The research community to work together to advance open science by design in order to advance science and help science better serve the needs of society.
+
+# The Promise and Security Challenges of Open Access Big Data
+
+The term “big data” increasingly refers to the use of advanced data analytics methods that extract value from data. According to the 2018 Thales Data Threat Report, compared to traditional relational databases, the data generated and stored within big data environments can be orders of magnitude larger, less homogeneous, and change rapidly. There are a number of concepts associated with big data, including the three top attributes what are often referred to as the “Three V’s: Volume, Variety and Velocity.” Some experts (including Jain 2019; Van Rijmenam 2018) go on to add two more Vs to the list, variability and value. It would be difficult to define what these 5Vs mean in ways that can work in various contexts. When it comes to handling big data, different disciplines or

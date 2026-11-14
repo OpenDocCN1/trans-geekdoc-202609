@@ -1,0 +1,6 @@
+| Step Number | Step | Input | Techniques | Participants | Output |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 6 | Elicit security requirements | Artifacts, risk assessment results, selected techniques | Joint Application Development (JAD), interviews, surveys, model-based analysis, checklists, lists of reusable requirements types, document reviews | Stakeholders facilitated by requirements engineer | Initial cut at security requirements |
+| 7 | Categorize requirements as to level (system, software, etc.) and whether they are requirements or other kinds of constraints | Initial requirements, architecture | Work session using a standard set of categories | Requirements engineer, other specialists as needed | Categorized requirements |
+| 8 | Prioritize requirements | Categorized requirements and risk assessment results | Prioritization methods such as Analytical Hierarchy Process (AHP), Triage, Win-Win | Stakeholders facilitated by requirements engineer | Prioritized requirements |
+| 9 | Inspect requirements | Prioritized requirements, candidate formal inspection technique | Inspection method such as Fagan, peer reviews | Inspection team | Initial selected requirements, documentation of decision-making process and rationale |

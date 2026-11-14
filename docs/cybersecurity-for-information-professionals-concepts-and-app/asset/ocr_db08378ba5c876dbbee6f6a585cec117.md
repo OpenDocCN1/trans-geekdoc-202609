@@ -1,0 +1,13 @@
+# Experiment Tasks
+
+In the first scenario, the participants performed regular office job activities such as browsing the Internet, using computer applications, or using the email account. This scenario observes the brain and heart reactions to the regular daily activities done by most of the employees in any organization. In the second and third scenarios, the participants were asked to perform malicious activities by trying to access to information they were not authorized to access. We used two realistic scenarios in which an employee uses remote access or network to access unauthorized information. We recorded the ECG signal and the EEG signals in reaction to these malicious activities during each experiment.
+
+# Main Study
+
+In this experiment, we extend our previous pilot experiment by conducting a human study that includes a larger number of participants and more complex activity tasks, and includes the eye movement dynamics, as well as the mouse movement and keystroke dynamics. In addition, we use more advanced EEG recording device that includes 256 channels to cover the entire skull and record the ECG signals from each part of the brain. We aim to deeply investigate the use of the EEG for the purpose of insider threat detection and mitigation. Also, we want to study each channel and identify which part of the brain can reflect the best knowledge and can provide better detection accuracy. We recruited a total of 30 participants, we used data of 25 participants in our approach evaluation; the record of 5 participants was incomplete, and we decided to remove it from our evaluation process. Out of 25 participants, 15 were male and 10 were female. The entire group of participants were between the age of 18 and 34 years and were graduate or undergraduate students at the University of North Texas. Figure 11.1b shows the experimental setup for our main study. We used the following guidelines in our recruiting process:
+
++   (1) Include participants with different levels of programming and cybersecurity knowledge. As insider skills range from script kiddie (an unskilled user who uses codes or programs developed by others) to highly skilled insider, our participants vary in the levels of programming and cybersecurity knowledge from novice to intermediate and advanced.
+
++   (2) Include participants with prescription eyeglasses to emulate real-world scenarios for a typical work environment where some employees may wear eye glasses (10 of our participants had eyeglasses and we made sure they wore their glasses during the experiments).
+
++   (3) Have a fair distribution of participants with respect to gender, race, and age.

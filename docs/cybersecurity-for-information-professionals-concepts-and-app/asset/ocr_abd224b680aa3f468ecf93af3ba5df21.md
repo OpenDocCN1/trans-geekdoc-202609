@@ -1,0 +1,14 @@
+dimensions of delivering on information value. To deal with this complexity, holistic systems are needed that manage a wide range of information considerations not least the human factor.
+
+Furthermore, as technology is driven globally, these systems must take account of information rights legislation at a global scale and regional difference in law and citizen expectations must be navigated. As such it is IG, which has emerged as a multidisciplinary field that provides for holistic thinking and frameworks to protect and enhance the management of information. The 2017 survey delivered by the Information Governance Initiative and published in 2018, which claimed to have reached 100,000 practitioners globally, stated that 48% of practitioners saw IG as essential for successful cybersecurity delivery even though cybersecurity is narrower in delivery as it cannot exist without broader underpinning. IG provides for a wider and more comprehensive approach.
+
+# The Human Factor
+
+As noted by Rubino et al. in 2017, key to good governance is to have leadership throughout an organization in order that others take on the significance of managing and protecting information ethically. This applies at government levels too. In addition, IG needs to be understood and engaged with by multiple parties if it is to be successfully implemented and maintained. The Information Governance Initiative’s (IGI) 2018 report further defines areas of information delivery and aligns these to a requirement for people with professional expertise to provide IG frameworks including analytics, audit, big data, business intelligence, business operations and management, compliance, data curation and stewardship, data governance, data science, data storage and archiving, e-discovery, enterprise architecture, finance, informatics, information security and protection, IT management, knowledge management, legal, master data management, privacy, records, and information management and risk management (IGI 2018, 17). The report (IGI 2018, 37) defines the roles of the:
+
++   - accountable (the boss)
++   - responsible (the doers) including professionals which encompass records and information management professionals, information security, legal and compliance business operations and management, risk management, data storage and archiving, and privacy;
++   - consulted (the advisors) including expertise from the above professions and in addition audit;
++   - informed (the dependents).
+
+In the latter context, this looks largely internally. However, in accordance with evolving governance principles, organizations must look outside their boundaries
