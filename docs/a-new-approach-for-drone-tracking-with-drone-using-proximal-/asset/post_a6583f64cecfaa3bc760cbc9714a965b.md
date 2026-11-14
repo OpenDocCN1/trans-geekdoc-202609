@@ -1,0 +1,72 @@
+
+## A new approach for drone tracking with drone using Proximal Policy Optimization based distributed deep reinforcement learning
+
+Ziya Tan a,*, Mehmet Karaköse b
+
+a Tokat Gaziosmanpaşa University Tokat, Turkey
+b Fırat University Elazığ, Turkey
+
+## ARTICLE INFO
+
+- Article history:
+- Received 15 March 2023
+- Received in revised form 29 July 2023
+- Accepted 6 August 2023
+
+- Keywords:
+- Distributed learning
+- Drone tracking
+- Reinforcement learning
+- Proximal Policy Optimization
+
+## ABSTRACT
+
+In this paper, a distributed deep reinforcement learning algorithm based on Proximal Policy Optimization (PPO) is proposed for an unmanned aerial vehicle (UAV) to autonomously track another UAV. Accordingly, this paper makes three important contributions to the literature. The first one is the development of an efficient UAV tracking algorithm, the second one is the presentation of a deep reinforcement learning approach that can be adapted to the problem, and the third one is the introduction of a generalized distributed deep reinforcement learning platform that can be used in various problems such as tracking, control and mission coordination of UAVs. In order to validate the developed approaches, the PPO algorithm is simulated with the deep reinforcement learning algorithm in a distributed and non-distributed manner, a follower UAV is trained in different scenarios and the distributed and non-distributed performances of the training using CPU are obtained, scenarios using general and adaptive learning algorithms are given, and finally, the performances of the algorithms developed in the paper are presented explicitly.
+
+© 2023 The Author(s). Published by Elsevier B.V. This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).
+
+## Code metadata
+
+| Current code version | V1.0 |
+|---|---|
+| Permanent link to code/repository used for this code version | https://github.com/ElsevierSoftwareX/SOFTX-D-23-00170 |
+| Permanent link to reproducible capsule | https://github.com/ziya44/take_off_drone.git |
+| Legal code licence | MIT Licence |
+| Code versioning system used | None |
+| Software coding languages, tools and services used | Python |
+| Compilation requirements, operating environments and dependencies | Ubuntu 20.04 |
+| If available, link to developer documentation/manual | |
+| Support email for questions | ziya.tan@gop.edu.tr |
+
+## 1. Motivation and significance
+
+Developed in the early 1980s, Reinforcement Learning (RL) [1] is one of the important areas of machine learning. RL is a subfield of Machine Learning in which an agent interacting with an environment learns the optimal action selection policy by receiving feedback from the environment. RL algorithms learn iteratively: at each iteration, the agent observes its state and chooses an action that leads to the state of the subsequent environment. Then, the agent receives a reward or penalty and updates the value function representing the goal to maximize. By exploring the environment and gathering this information, agents learn how to maximize long-term reward. Fig. 1 shows the agent-environment interaction for reinforcement learning approaches.
+
+The benefits of distributed systems in reinforcement learning are demonstrated through the RLlib [2] library. The use of distributed systems in solving such complex problems will enable more parameters to be trained in less time. Therefore, learning the environment will be easier. Especially for UAVs, the importance of distributed systems comes to the forefront when it is considered that more than one algorithm needs to be trained at the same time. This approach decentralizes the learning event, in
+
+* Corresponding author.
+E-mail addresses: ziya.tan@gop.edu.tr (Ziya Tan), mkarakose@firat.edu.tr (Mehmet Karaköse).
+
+![](img/8aad327ea3535dddb1bf08458dd09208_1_0.png)
+
+other words, it solves the same problem by using more workers instead of one worker. Thus, the learning event is optimized and information sharing is done faster.
+
+In [3], an in-depth literature survey was conducted to examine the techniques, datasets and hardware used to track multiple objects on busy roads. In the paper [4], where the problem of urban public transportation is considered, a Markov decision process (MDP) is used to solve the problem. In addition, a distributed reinforcement learning approach was used to overcome the high computational cost. In [5], where distributed deep reinforcement learning is used to optimize wireless network sensors, a wireless medium access control layer is learned to maximize the throughput of network nodes. Aklofi et al. [6] used deep reinforcement learning algorithms to optimize the actions of another drone during tracking, and as a second approach, they developed a search space proposal to determine the location of the drone to be tracked. In [7], a proposal for drone tracking using a millimetre radar system is presented for preliminary results of tracking a drone using a radar mounted on another drone are presented. In [8], a distributed reinforcement learning approach is presented to address the collaborative sensing and transmission problem for drones. A distributed sense and transmit protocol is proposed to coordinate multiple UAVs. A distributed deep reinforcement learning approach for autonomous aerial vehicles is presented in [9], where the modeled approach is proposed to optimize the take-off and passenger pick-up of an air taxi to pick up its customers from the optimal location. In the study [10], which proposes a parameter sharing and behavior-based method for swarm robots, the PPO algorithm is tested in different environments and the results are observed. In the study [11], a new deep reinforcement learning architecture for the control and optimization of UAV networks is presented and it is observed that the use of distributed architecture improves the performance up to 3.7 times. In Venturini’s master thesis [12], a distributed deep reinforcement learning approach was used for swarm drones. In this thesis, all the typical challenges of reinforcement learning framework were met. The work by Seejong Park et al. in [13] presents a comprehensive survey on systems against unmanned aerial vehicles. The simulator environment used includes many obstacles such as trees, cables, parked cars and houses. In [14], an analysis of recent DRL studies, the policies used are analyzed. In the study, the policies used are divided into three groups and the problem of moving agents to a common goal is discussed using Newton’s law of motion. In the study [15], which trained three different robots with DRL method in limited areas using the policy gradient algorithm, the performance of the robots was evaluated and successful results were obtained. An optimized version of the distributed PPO algorithm is used in the article [16], which is prepared to help an agent learn complex behaviors in an environment with different barriers. Trained by the distributed PPO algorithm tested in various obstacles and terrains, the agent improved movement skills thanks to simple reward functions. The agent has successfully learned tasks such as jumping, running, and crouching without any direction.
+
+Table 1 compares the methods and results of some similar studies. Although different methods are used in drone tracking, it is seen that YOLO deep learning algorithm is generally used in real-time drone detection algorithms.
+
+In this study, we compare the performance of DDRL and non-distributed deep Reinforcement learning algorithms to successfully overcome one of the biggest problems faced by quadcopters, namely, take-off and tracking. In the experiments with CPU, it is observed that the use of distributed architecture improves the training performance and reduces the training time. The main contributions of this paper can be summarized as follows.
+
+- To present the use of DRL in drone tracking and vertical take-off problems and the performance of distributed systems,
+- Comparison of PPO-based distributed and non-distributed approaches
+- Being a source literature for similar problems to be done in the future
+
+## 2. Software description
+
+In this section, algorithms and basic concepts of the software used in the article are explained. First of all, information about RL is given. Secondly, detailed information about deep reinforcement learning is given. Finally, the DDRL approach used in this study is examined. In this study, mainly python software language, torch framework and gym-pybullet simulation environment are used. In addition, the ray framework was used to distribute the existing architecture.
+
+## 2.1. Software architecture
+
+This study basically examines UAV navigation in 3D environment. This navigation process was basically compared using two different approaches. Distributed deep reinforcement learning and deep reinforcement learning approaches train an agent for one drone to follow another. As a result of the training, the following drone aims to successfully follow at a certain altitude by positioning itself according to the followed drone. For this purpose, reinforcement learning and PPO algorithm are used together. RAY framework was preferred as distributed architecture. The workers in the training environment perform the action evaluated by the deep neural network. The reward and status values received from the environment as a result of the action are evaluated by the PPO architecture. According to the rewards and punishments received as a result of these actions, the agent learns the environment and acts accordingly. In this study, training takes place with a maximum of 4 workers, depending on the processor. This number can increase even more when GPU is used. These workers learn the environment independently of each other and transmit the results to a common learner. Thus, a faster and more successful training is provided in a unit of time. In the non-distributed model, a single agent performs the actions in the environment.
+
+Fig. 2 shows the basic software architecture of drone tracking used in our study. Within the scope of the study, the training of which is carried out in the virtual environment, the following drone performs its action according to the followed drone. The
