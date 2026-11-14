@@ -1,0 +1,13 @@
+not regarded as assets that store value and provide utility as crude oil (−0.40) in an inflationary environment; nor are they regarded as safe-haven assets such as gold (0.49).
+
+The outlook of the relationships is different. As cryptocurrencies are more accepted in the circulation of goods and services market, and as central banks resume the trajectory of normalized monetary policies after the pandemic years, the stabilized value of cryptocurrencies may assist in enhancing their roles as store of value. The prices of cryptocurrencies may also be less affected by the money supply and be more independent from other risky assets, proving the investors with diversification benefit.
+
+# The Development of the Cryptocurrency Goods and Services Market and Factors Market
+
+As of the summer 2022, the use of cryptocurrencies in the goods and services market and factors market is still in the process of discussion by senior administrations and celebrities (such as Elon Musk) around the world. Such discussions often send mixed signals from different lenses and are received and interpreted with various motivations. One major consensus is to embrace cryptocurrencies with enhanced regulations and bold attempts; the other consensus focuses on condemning its nature as evil.
+
+As of this writing, Federal Reserve Chair Jerome Powell claimed that he had no intention to ban cryptocurrencies like Ethereum in the U.S., while Securities and Exchange Commission Chairman Gary Gensler advocated the SEC’s and Commodity Futures Trading Commission (CFTC)’s roles in regulating the industry. Gensler believed that investors were disadvantaged if stricter regulation was absent. Furthermore, the Internal Revenue Service (IRS) emphasized the tax filing requirements for cryptocurrency income. Some view the anticipated regulations as the removal of a significant roadblock for cryptocurrency; for example, according to Haar (2022), Jeffery Wang (Amber Group), Shehan Chandrasekera (CoinTracker.io), and Ben Weiss (CoinFlip”).
+
+Investing in cryptocurrencies and the use of cryptocurrencies in the goods and services market and the factor market are not overwhelmingly advocated. According to Prater (2022), leading investments legacy Warren Buffett had a renowned comment “...if you told me you own all of the Bitcoin in the world and you offered it to me for $25, I wouldn’t take it because what would I do with it?”
+
+Buffett’s question about what to do with Bitcoins reflects the fact of limited use of cryptocurrencies in the goods and services market and factors market.

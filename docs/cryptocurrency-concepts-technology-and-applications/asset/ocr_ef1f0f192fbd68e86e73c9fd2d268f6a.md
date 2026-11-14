@@ -1,0 +1,13 @@
+the world of centralized finance with options, futures, lending, and more but through decentralization.
+
+Many agencies can claim that cryptocurrency regulation falls within their domain. Currently, at the federal level, the Internal Revenue Service (IRS), Securities and Exchange Commission (SEC), and Commodity Futures Trading Commission (CFTC) oversee cryptocurrency regulations. It is expected that the Federal Trade Commission (FTC), Financial Crimes Enforcement Network (FinCEN), and Office of the Comptroller of Currency (OCC) may increase their engagement in regulating the industry.
+
+In addition to the federal regulation of the space, much of the current cryptocurrency regulation occurs at the state level. This regulation is both favorable and unfavorable. Levels of regulation are largely dependent on the political composition of the state legislature. For example, New York recently passed legislation targeting Bitcoin mining, citing environmental concerns. In contrast, Texas maintains highly favorable regulations and laws regarding Bitcoin mining. This is consistent with the party politics of each state: New York voters are progressive and less inclined to favor financial innovation over environmental concerns, while Texas voters are conservative and likely to think the opposite.
+
+The realities that emerge from the actual use of cryptocurrency and the underlying urge to regulate it provide another avenue for those working in public choice to address a regulatory system from its inception. This is of particular interest to those working in public choice because of the newness of the technology and the lack of previous regulatory models that readily apply. What is quickly emerging is an ongoing case study of how cryptocurrency has the potential to upend not just economic considerations but also regulatory models.
+
+# Conclusion
+
+The emergence of cryptocurrency and the technology that underlies it has been a source of nearly endless scholarly opportunities, and public choice is no different. Since the implementation of Bitcoin in 2009, blockchain technology has created new institutional possibilities for many of the problems traditionally studied by public choice scholars. While this chapter provides an overview of some of these problems, along with a consideration of possible ways in which they may be implemented, the topic remains an open and productive area for a research agenda.
+
+Further areas of study for public choice scholars include blockchain and environmental issues, corporate governance, healthcare, and public finance, and numerous other topics all have strong possibilities for being impacted by

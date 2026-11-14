@@ -1,0 +1,13 @@
+The global cryptocurrency market can be categorized by technology focus, market phase, coin type, and region. By technology focus, the market is classified as hardware and software. By market phase, the market is classified as mining (primary market) and transaction (secondary market). By coin type, the market includes the coins highlighted in Table 1.1 and many more. By region, the market is participated by three major hubs: North America, Europe, and the Asia-Pacific.
+
+Cryptocurrency is based on decentralization of transaction monitoring. Miners record and validate transactions performed by all users as part of the transaction monitoring process. To authenticate the transactions in this procedure, many computer resources are required when encrypting the transactions through producing of hash codes. As a result, the hardware segment has gained a significant portion of the cryptocurrency market (Cai and Gomaa 2019), though the software segment is believed to develop at the fastest rate, as it helps to handle the vast volume of data being generated, according to the Vantage Market Research (2022).
+
+The next topic focuses on the development of the market and provides details regarding the primary and secondary markets. Other chapters of this book focus on the technical nuances of the different cryptocurrencies and the regional progress.
+
+# Cryptocurrencies: Market Development
+
+This topic illustrates the players in the marketplace and explains the related financial instruments. The key elements are the primary market, the secondary market, the exchanges, and transaction service providers such as wallets. The related financial instruments are cryptocurrencies and their derivatives, including futures contracts, options, ETF, and cryptocurrency tokens. This topic regards cryptocurrencies as a financial asset rather than as money.
+
+The primary market emits cryptocurrencies. This chapter uses the most representative cryptocurrency, Bitcoin, as an example. Its issuance is highly decentralized through the execution of computer protocols. Anyone can participate in the Bitcoin network as a miner and be rewarded newly created Bitcoins by providing computing resources that help to secure the network, a mechanism called Proof-of-Work (PoW). Other cryptocurrencies use mining as their consensus mechanism to conduct money supply. In addition to mining, alternative consensus mechanisms include Proof-of-Stake (PoS), Proof-of-Authority (PoA), and Byzantine Fault Tolerance (BFT).
+
+In addition, cryptocurrencies have built-in policies to prevent oversupply of money and value dilution. For example, Bitcoins are created at a decreasing and

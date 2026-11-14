@@ -1,0 +1,13 @@
+The second category is about the operational processes of blockchain governance and captures the technical design choices and algorithms that affect the information exchanges, transactions, and collective actions between users (e.g., De Filippi and Loveluck 2016; Reijers et al. 2018; Van Pelt et al. 2021). Decision-making through on-chain and off-chain methods, initiative, and consensus mechanisms are at the foci of this category.
+
+In the third category, blockchain is treated as a governance technology that allows decentralized, algorithmic, and automated forms of governance to implement policy decisions (e.g., Allen et al. 2020; Yeung and Galindo 2019). In those studies, blockchain governance focuses on the regulation, organization, and control of the blockchain-based system in a particular institutional framework.
+
+Based on the systematic literature published in Tan et al. (2022), we have developed a conceptual framework that embeds these different approaches into a holistic approach. The framework identifies micro, meso, and macro levels and a total of nine types of governance decisions to address in blockchain-based systems. The presumption is that governance decisions at each level are connected, and decisions at one level may dictate the choices at another level. In the remainder of the chapter, this framework will be used to elucidate the complexity of blockchain governance at each level of governance.
+
+# Micro-Level Governance
+
+Micro-level governance is about the choices of system designers regarding the infrastructure of a blockchain-based system. The decisions concerning the infrastructure architecture of blockchain, modular applications of smart contracts and decentralized applications, and interoperability of the blockchain-based system with the existing IT infrastructure fall under this category.
+
+# Infrastructure Architecture
+
+Blockchains can have permissionless/permissioned and public/private forms (Hileman and Rauchs 2017). The difference between public and private blockchains is about who owns the data infrastructure. The difference between permissionless and permissioned systems is about the restrictions imposed on network participants in terms of read, write, and audit/commit functions. In the former, anyone can participate in the network and validate the transactions taking place on the platform; in the latter, only selected entities are authorized to validate the transactions.

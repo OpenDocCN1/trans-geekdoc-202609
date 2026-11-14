@@ -1,0 +1,13 @@
+returns to attention, whereas Dastgir et al. (2019) and Smales (2022a) note bi-direction causality, with the former noting this is concentrated in the tails of the distribution.
+
+Earlier, it was noted that cryptocurrency names are often similar. Launched in 2008. Bitcoin was the original cryptocurrency and still accounts for around 40% of market capitalisation. Cahill and Liu (2021) note a preponderance of “copycat” cryptocurrencies that have a name similar to Bitcoin (e.g., Wrapped Bitcoin, Bitcoin Cash, Bitcoin SV), and a search today would reveal at least 100 offerings. These copycats have high initial returns but low survival rates. Cahill and Liu (2021) suggest that investors pay attention to these cryptocurrencies because the names are less complex (more familiar) and so information is easier to process.
+
+Since cryptocurrency is a novel technology, valuation is more uncertain than in mature markets, and so the name may be a signalling tool for investors. This is not dissimilar to the “dotcom” effect documented by Cooper et al. (2001), which found a substantial stock price response around the announcement of corporate name changes. They argue that investors have a fear of missing out in new technologies and so buy shares in firms that may be only loosely connected the technology. In a case of “history rhyming,” Cahill et al. (2020) note positive abnormal returns for firms acknowledging interest in blockchain. As a pertinent side note, after observing frequent bubbles and crashes in cryptocurrencies, Harris (2003) suggests that bubbles often start when buyers become overly optimistic about the growth of new markets and the potential of new technologies.
+
+We now consider the influence of investor attention on specific aspects of cryptocurrency markets. Owing to the early launch and market dominance, many of the early studies focused on Bitcoin, but more recently it has become common to evaluate a wider range of cryptocurrencies.
+
+# Returns
+
+Much research is devoted to understanding the relationship between investor attention and cryptocurrency returns. This is not surprising given the potential opportunity for substantial returns should a profitable trading strategy be determined. Unfortunately, the empirical evidence is mixed so far, with estimated results dependent on the sample period chosen, methodology used, and set of cryptocurrencies considered.
+
+Focusing on Bitcoin, Urquhart (2018), Bleher and Dimpfl (2019a), and Smales (2022a) find that returns are not caused by investor attention, whereas Kristoufek (2013) and Philipas et al. (2019) find that investor attention has a strong causal relationship with prices, particularly during periods of higher uncertainty.

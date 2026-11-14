@@ -1,0 +1,13 @@
+at $60,000), he or she enters a cover call contract at the $60,000 level and is therefore obliged to pay the difference between the market value above $60,000 and the exercise price of $60,000 (S − X). In return, he or she will receive a premium of $1,530 up front, as shown in Figure 11.5 (on next page).
+
+If Bitcoin goes above $60,000, he or she will either sell it at the market price or deliver it to the buyer of the call option. If Bitcoin goes to $60,000 exactly (on the money), the option will not be exercised. The investor holding Bitcoin could sell it at $60,000 and record the gain in addition to the premium he or she received. The strategy is basically giving up a sudden upside of Bitcoin, but the investor has no need to complain if the price of Bitcoin jumps higher than $60,000. The alternative is that he or she would have to sell it at the $60,000 mark, being a limit order. Figure 11.5 shows that the profit is capped at $14,530 at any price of Bitcoin price above $60,000.
+
+# Collars
+
+A collar option strategy is one in which holders of cryptocurrency want to hedge their downside by giving up the upside. In previous sections that discussed protective puts, the investor obtained a protective put to hedge his or her investment in case the cryptocurrency declines, but it costs money to buy put options. The collar option strategy is customized to minimize or eliminate the premiums paid to buy puts by selling calls at a much higher level of cryptocurrency. Basically, collars are a combination of protective puts and covered calls.
+
+Figure 11.6 shows an example in which the investor holding one Bitcoin with a current price of $47,000 wants to set up a floor to cap his or her losses at $30,000 by buying the May puts. The June puts cost $900 per Bitcoin. The investor scans the pricing page and finds that the June $60,000 calls is $1,530. Given that the premiums match, he or she enters a collar option contract and buys the June $30,000 puts and sells the $60,000 calls, netting the premiums and receiving $630 ($1,530 – $900). Figure 11.6 shows the HPR of Bitcoin at various scenarios of the cryptocurrency (using a range of $10,000–$100,000).
+
+# Advanced Option Trading Strategies
+
+Advanced option strategies involve simultaneously buying and selling multiple options. The strategies that entail buying and selling at different exercise prices but keeping the same expiration dates are called vertical spreads or money spreads, and the buying and selling of options across different expiration dates with the same exercise price are called horizontal spreads or time spreads. Spread options

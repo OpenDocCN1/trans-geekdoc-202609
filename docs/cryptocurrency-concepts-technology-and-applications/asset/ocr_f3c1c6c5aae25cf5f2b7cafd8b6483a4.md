@@ -1,0 +1,13 @@
+But this is not a viable path for a private money. Gadgets like Bitcoin aim primarily to be neutral money without trusted authorities.* For any would-be monetary engineer, this is a real bind. You want to make something useful whose usefulness doesn't rely on _you_. Failure on this front risks creating a cult of personality or a legacy monetary institution of the kind we all know well, one that relies on trusted authorities.
+
+Satoshi did the one thing he could to resolve it: he left. Without pomp or ceremony, he removed his name from the Bitcoin website, handed over its keys to the community of developers, and quietly exited the spotlight. No one can say that Satoshi exerts undue influence over Bitcoin development, or monetary policy, or culture. Satoshi exerts no influence over those things, not under the Satoshi name, at any rate.
+
+In this way, Bitcoin became leaderless. It is not a sovereign currency—and yet despite being private in that sense, it is not a company money. It is private in the sense of being a non-state money and public in the sense of being non-corporate and open to participation by all. Bitcoin's leaderless status has made it more robust and resilient. Its central bankers can't fiddle with its supply. Its CEO cannot, in a drunken haze, accidentally tweet out something foolish, tanking market confidence. Bitcoin, Inc., cannot go bankrupt or have its assets frozen. There is no Bitcoin Federal Reserve, no Bitcoin CEO, no Bitcoin, Inc.
+
+Charismatic leaders are sometimes cited as being an advantage for other cryptocurrencies. Just as Elon Musk or Steve Jobs were great for their companies’ marketing, so also a magnetic or gifted founder can drive interest in a cryptocurrency. But here the Bitcoin network stands apart in its promise to host neutral money. This promise is credible to the extent that Bitcoin is leaderless. And Satoshi seems to have realized that Bitcoin's success required his departure.
+
+# From Founding to Now
+
+Our description of Bitcoin’s founding may sound lofty and idealistic. But does it have much to do with the real world, now? We think so, and we cite two examples. First, Bitcoin has been, for the entirety of its existence, the most valued, most studied, most used, and most widely known cryptocurrency. This is no accident. After all, there are plenty of alternatives—over 13,000, recall. And many of those alternatives have been around for over for a decade; their existence is no mystery, and market participants can easily access them. We suspect that Bitcoin’s top ranking among cryptocurrencies reveals a preference for a leaderless cryptocurrency with a fair initial mechanism of distribution.
+
+* See the whitepaper, Nakamoto (2008).

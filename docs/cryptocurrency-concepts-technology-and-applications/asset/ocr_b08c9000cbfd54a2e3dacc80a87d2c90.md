@@ -1,0 +1,15 @@
+that they extend the range of choices, even in recurring situations, and thus avoid repetitive behavior.
+
+The limitation of organizational learning is often characterized by a process wherein behavior remains stable but goals change over time. In such a case, smart contracts would need to be adapted or re-programmed. Another point where smart contracts can be helpful is the identification of a threshold when certain goals are not only not met, but also can’t be reached anymore, and thus might indicate a deviation toward a new goal which would need to be defined.
+
+Organizational routines in a new context pose uncertainty, which smart contracts can minimize by evaluating the ledgers of all nodes in the network, simulating potential outcomes, and choosing the action which meets the pre-determined goals as closely as possible. If governmental leaders intend to trigger several different organizations’ programs simultaneously, smart contracts would definitely perform more efficiently in parallel execution of these actions.
+
+# 12.2.3 The Governmental Model
+
+The governmental model assumes that the leaders at the top of organizations are players in a competitive game. According to Allison (1971), these leaders are bargaining along regularized circuits among players positioned hierarchically within the government. Therefore, in this model, government behavior is not assumed to be an organizational output but rather a result of bargaining games. The characteristics of the governmental model is that the players don’t focus only on single strategies but on many diverse intra-national problems. This implies that there is no consistent set of strategic objectives, but of national, governmental, and personal goals.
+
+In order to include intra-governmental agreements into smart contracts, all parties need to join the blockchain. The verification process could even promote trans-national cooperation if the participating servers are distributed across the different nation states, thus contributing to the joint effort of running a blockchain and all associated smart contracts and tokens on it.
+
+Allison (1971) suggests that decisions need to be decentralized because of the broad spectrum of foreign policy problems. The blockchain network would fulfill this requirement because any node on the network could perform a certain action through the execution of a smart contract made by the node and verified by the whole network.
+
+As we can see, blockchain technology both flattens hierarchies by taking out bargaining advantages through automatization and shifts negotiation skills to an earlier stage in the smart contract rule determination. The shift of the education and skill set of negotiators over time surrounding the negotiation of the rules performed by the smart contract will create a stable environment which will not be exposed to uncertainty or decision fluctuations arising out of evolving situations.

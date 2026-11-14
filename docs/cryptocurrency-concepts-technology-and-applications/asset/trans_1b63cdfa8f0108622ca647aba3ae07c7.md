@@ -1,0 +1,59 @@
+
+这表明。此外，九个时期中有三个时期的权重为 0%，表明该投资不具备足够的附加值以被纳入投资组合，这也体现在相对较低的夏普回报-变动性比率中。令人印象深刻的回报在很大程度上被高波动性所削弱，表明这是一种在很大程度上具有投机性的资产，尤其是考虑到非监管风险。因此，比特币仅适用于风险承受能力高的个人，而这一特质仅由少数投资者所具备。
+
+## 参考文献
+
+- Ashford, K., and Curry, B. (2022). 比特币可能在一年内达到100,000美元，加密货币公司首席执行官预测. https://www.cnbc.com/2022/04/14/Bitcoin-btc-price-could-hit-100000-within-a-year-crypto-ceo.html
+- Ballis, A., and Drakos, K. (2020). 检验加密货币市场中的跟随行为. 金融研究快讯, 33: 101210.
+- Barber, B. M., Odean, T., and Zhu, N. (2009). 系统性噪音. 金融市场杂志, 1(4): 547–569.
+- Bariviera, A. (2017). 再探比特币的低效性. 经济学快讯, 161 (12月): 1–4.
+- Benninga, S. (2008). 财务建模，第3版. Boston: MIT出版社.
+- Bessler, W., Opfer, H., and Wolff, D. (2014). 多资产投资组合优化和样本外绩效：对Black-Litterman、均值-方差和天真分散化的评价. 欧洲财务杂志, 23(1): 1–30.
+- Black, F., and Litterman, R. (1992). 全球投资组合优化. 金融分析师杂志, 48 (9–10月): 28–43.
+- Briere, M., Oosterlinck, K., and Szafarz, A. (2015). 虚拟货币，有形回报：比特币的投资组合分散化. 资产管理杂志, 16(6): 365–373.
+- Caporale, G. M., Gil-Alana, L., and Plastun, A. (2018). 加密货币市场中的持续性. 国际商务与金融研究, 46(C): 141–148.
+- Cederberg, S., and O'Doherty, M. S. (2015). 企业层面的资产定价异常. 计量经济学杂志, 186(1): 113–128.
+- Cheah, E.-T., Mishra, T., Parhi, M., and Zhang, Z. (2018). 比特币市场中的长记忆相关性和低效性. 经济快讯, 167 (6月): 18–25.
+- Day, M.-Y., Huang, P., Cheng, Y., Lin, Y.-T., and Ni, Y. (2022). 基于连续看涨（看跌）K线的比特币期货盈利日内交易. 应用经济学快讯, 29(10): 947–954.
+- DeMatteo, M. (2022). 专家称比特币可能在2022年达到100,000美元。投资者应该知道什么. https://time.com/nextadvisor/investing/cryptocurrency/Bitcoin-price-predictions/
+- Dorn, D., Huberman, G., and Sengmueller, P. (2008). 相关交易与回报. 金融杂志, 63(2): 885–920.
+- Elton, E. J. (1999). 预期回报、实现回报和资产定价检验. 金融杂志, 54(4): 1199–1220.
+- Frazzini, A., and Pedersen, L. H. (2014). 逆β值投资. 金融经济学杂志, 111(1): 1–25.
+- Gal, D., and Rucker, D. D. (2018). 损失厌恶的丧失：它是否会比其收益更具影响力？. 消费者心理学杂志, 28(3): 1–20.
+- Gandal, N., and Halaburda, H. (2014). 加密货币市场中的竞争. CESifo工作论文系列, 4980. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2506577
+- Gemayel, R., and Preda, A. (2022). 加密货币市场中的跟随行为：一项交易层面分析. 伦敦国王学院，伦敦. (于财务学会年会上发表，芝加哥，伊利诺伊州，3月23–25日.)
+- Glaser, F., Zimmermann, K., Haferkorn, M., Weber, C., and Siering, M. (2014). 比特币——资产还是货币？揭示用户的隐藏意图. 第22届欧洲信息系统会议论文集，特拉维夫，6月 2014.
+- Glumov, D. (2013). 大金融危机如何影响投资组合配置和风险态度？消费者财务调查的证据. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2293189
+- Guesmi, K., Saadi, S., Ilyes, A., and Ftiti, Z. (2019). 利用虚拟货币进行投资组合分散化：比特币的证据. 国际财务分析评论, 63(C): 431–437.
+- Hattori, T., and Ishida, R. (2020). 期货和现货市场中的套利与比特币价格波动之间的关系：比特币市场的证据. 期货市场杂志, 41(1): 105–114.
+- Hoadley, P. (2017). Hoadley交易和投资工具. https://www.hoadley.net/options/options.htm
+- Hong, K. (2017). 比特币作为替代性投资工具. 信息技术管理, 18(4): 265–275.
+- Holub, M., and Johnson, J. (2019). 比特币价格异常：LocalBitcoins上的点对点交易. 另类投资杂志, 22(1): 127–139.
+- Hu, B., Hwang, J. H., Jain, C., and Waham, J. (2020). 应用经济学快讯, 29(2): 140–144.
+- Hung, J.-C., Liu, H.-C., and Yang, J. (2021). 比特币期货市场中的价格发现. 实证金融杂志, 62 (6月): 107–120.
+- Idzorek, T. M. (2011). Black-Litterman模型逐步指南：纳入用户指定的置信水平. In: S. Satchell (Ed.). *金融市场预期收益预测*. New York: Elsevier, 17–37.
+- Jorion, P. (1991). 均值的Bayesian和CAPM估计器：对投资组合选择的影响. *银行与金融杂志*, 15(3): 717–727.
+- Junior, G., Palazzi, R. B., Tavares, R., and Klotzle, M. C. (2020). 市场压力和跟随行为：加密货币市场的新方法. *行为金融杂志*, 23(1): 43–57.
+- Kahneman, D., Knetsch, J. L., and Thaler, R. H. (1991). 异常：禀赋效应、损失厌恶和现状偏差. *经济学观点杂志*, 5(1): 193–206.
+- Kassar, N. (2022). 你的投资组合中应该包含多少加密货币？. Washington Post. https://www.washingtonpost.com/business/how-much-crypto-should-be-in-your-investment-portfolio/2022/02/18/4ce9b92a-90b7-11ec-8ddd-52136988d263_story.html
+- Kajtazi, A., and Moro, A. (2018). 比特币在良好分散投资组合中的作用：一项比较性全球研究. *国际财务分析评论*, 61 (1月): 143–157.
+- Kharpal, A. (2021). 比特币将达到100万美元？一些分析师看涨，但其他人警告前方风险. https://www.cnbc.com/2021/02/18/Bitcoin-btc-gets-1-million-price-call-but-there-are-risks-ahead.html
+- Krueger, P. (2022). 2022年投资比特币有正确的方法吗？是的. https://www.kiplinger.com/investing/cryptocurrency/604070/is-there-a-right-way-to-invest-in-Bitcoin-in-2022-yes
+- Kolari, J. W., Liu, W., and Huang, J. Z. (2021). *一种新的资本资产定价模型：理论与证据*. New York: Palgrave Macmillan.
+- Li, Y., Jiang, S., Wei, Y., and Wang, S. (2021). 将比特币纳入你的投资组合：面向广泛商品资产的新颖投资组合优化框架. *金融创新*, 7(1): 2–26.
+- Liu, W. (2019). 加密货币间的投资组合分散化. *金融研究快讯*, 29 (6月): 200–205.
+- Loviscek, A. (2021). 投资多少，如果有的话，贵金属？21世纪的视角. *投资杂志*, 20(4): 95–111.
+- Merkle, C. (2020). 财务损失厌恶错觉. *金融评论*, 24(2): 381–413.
+- Merli, M., and Roger, T. (2013). 什么驱动个体投资者的跟随行为？. *金融*, 34(3): 67–104.
+- Nazir, F., and Kumar, Z. D. (2019). 比特币的信息低效性：基于高频数据的研究. *国际商务与金融研究*, 47(C): 344–353.
+- Nepp, A., and Karpeko, F. (2022). 炒作作为全球市场的一个因素：比特币案例. *行为金融杂志*. DOI: 10.1080/15427560.2022.2073593
+- Nadarajah, S., and Chu, J. (2017). 论比特币的低效性. *经济学快讯*, 150(C): 6–9.
+- Pisani, B. (2021). 1月份卖空者亏损910亿美元，因为GameStop引发了他们押注下跌股票的短期挤压. https://www.cnbc.com/2021/01/26/short-sellers-are-down-91-billion-in-january-as-gamestop-leads-squeeze-in-stocks-they-bet-against.html
+- Sharma, G. D., Jain, M., Mahendru, M., Bansal, S., and Kumar, G. (2019). 比特币作为投资替代品的出现：系统性综述和研究议程. *商业与信息杂志*, 14(1): 47–84.
+- Sharpe, W. F. (1994). 夏普比率. *投资组合管理杂志*, 21(1): 49–58.
+- Stankiewicz, K. (2022). Kevin O'Leary称他已将20%的投资组合投入加密货币，包括代币和区块链公司. https://www.cnbc.com/2022/03/11/kevin-oleary-20percent-of-my-portfolio-is-in-crypto.html
+- Urquhart, A. (2016). 比特币的低效性. *经济学快讯*, 148 (11月): 80–82.
+- Vidal-Tomás, D. (2020). 比特币市场中的所有频率都重要：一项效率分析. *应用经济学快讯*, 29 (12月): 212–218.
+- Wu, C., and Pandy, V. K. (2014). 比特币的价值：提高投资者投资组合效率. *财务规划杂志*, 27(9): 44–52.
+- Yarovaya, L., Matkovskyy, R., and Jalan, A. (2019). “黑天鹅”事件（COVID-19）对加密货币市场跟随行为的影响. *金融研究快讯*, 29 (6月): 200–205.
+- Zweig, J. (2022). 你可以做对加密货币，但仍然可能操作失误. *华尔街日报*. https://www.wsj.com/articles/Bitcoin-you-can-get-crypto-investing-right-and-still-play-it-wrong-11643990277
