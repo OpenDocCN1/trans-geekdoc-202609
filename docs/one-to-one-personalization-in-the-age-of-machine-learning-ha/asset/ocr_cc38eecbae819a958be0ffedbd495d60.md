@@ -1,0 +1,12 @@
+# Second Edition
+
+# ONE-TO-ONE
+PERSONALIZATION
+IN THE AGE OF
+MACHINE LEARNING
+
+# Harnessing Data to Power
+Great Customer Experiences
+
+BY KARL WIRTH AND KATIE SWEET
+EVERGAGE, INC.

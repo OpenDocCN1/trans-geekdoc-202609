@@ -1,0 +1,9 @@
+There's a lot of potential in facial recognition technology that we'll see B2C companies explore more in the coming years.
+
+# NATURAL LANGUAGE PROCESSING
+
+Natural Language Processing (NLP) has been defined as “a way for computers to analyze, understand, and derive meaning from human language in a smart and useful way.”ⁱ It is not just about machines understanding language: it is about understanding how humans communicate in the real world so that machines can respond as a human would. Amazon’s Alexa and Apple’s Siri are two examples of NLP in action. We mentioned NLP in Chapter 2 as something that can be leveraged for personalization within one type of advanced algorithm. But more broadly, NLP has the potential to transform how marketers interact with consumers.
+
+In the future, NLP will be more widely used on websites and apps to provide the type of service that a consumer could previously only receive from a fellow human in a store, on the phone or via online chat. A shopper could ask a chatbot on the site a question about what products are right for him based on his specific circumstances.”ᶦᶦ The chatbot can then provide answers to his questions via NLP without the need to involve an actual human.”ᶦᶦᶦ With this approach, the shopper may feel more confident about his selection and be more likely to buy.
+
+Retailers have certainly already begun to experiment with this type of technology. You may have heard of outdoor apparel brand The North Face’s usage of IBM’s Watson technology on its website several years ago. The North Face website provided the ability for shoppers to enter details about what they were looking for and what conditions they were planning to face. Watson then asked follow-up questions, as a human would do, to ultimately recommend

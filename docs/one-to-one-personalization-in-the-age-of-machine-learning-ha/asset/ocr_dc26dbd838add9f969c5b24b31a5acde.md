@@ -1,0 +1,3 @@
+While we'll get into this in more depth later in the book, it's worth noting now that another big leap forward for one-to-one personalization is the ability to apply this kind of machine-learning personalization not just to products or articles, but to almost anything. Categories, keywords, navigation, promotions. logos. tools, resources, videos, eBooks, brands, calls-to-action, steps in a funnel, etc., can all be algorithmically personalized to show the most relevant, holistic experience to a person based on what he is interested in and who he is.
+
+Today, machine learning is typically being used by forward-thinking marketers and e-commerce professionals. Tomorrow, it will be used ubiquitously by business users across the enterprise.
