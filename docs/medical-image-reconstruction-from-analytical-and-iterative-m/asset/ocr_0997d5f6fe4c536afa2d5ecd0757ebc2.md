@@ -1,0 +1,15 @@
+\(\sigma \left( \sum_{i=1}^n X_i W_i + b \right),\)
+(9.26)
+
+where \(x_i\) is the \(i\)th scalar element of the input \(n\)-tuple, \(w_i\) is the \(i\)th scalar element of the \(n\)-tuple weights, and \(b\) is the bias scalar. Here, \(n\) is the number of neurons in the previous layer. In a CNN network, a generalize neuron is an image output, calculated as
+
+\(\sigma \left( \sum_{i=1}^n X_i ** W_i + b \right),\)
+(9.27)
+
+where \(x_i\) is the \(i\)th image of the input images, \(w_i\) is the \(i\)th 2D convolution kernel of the \(n\) kernels in this layer, and \(b\) is the bias scalar. Here, \(n\) is the number of channels. In a CNN, a common optional trick is to change the image size from one layer to the next layer.
+
+The universal approximation theory discussed in Section 9.2.2 only applies to dense networks; it does not apply to CNNs. Why do we believe that a CNN can give us better results than some conventional methods, for example, in denoising? At least, we know that the machine learned denoising filter should outperform the conventional filters. This is simply because the conventional filters are convolution-based and are the special cases of the machined learning models. A conventional filter can be considered as a one-layer, one-channel filter without a nonlinear activation function.
+
+Let us look at a simple two-layer denoising CNN in action. The input of the network is a sinogram. The first convolution layer has two channels, and the second convolution layer is the output layer that has only one channel. Each convolution kernel is 3 * 3 and the activation function is the ReLU. The outputs of the channels are shown in Figure 9.33. The first layer produces two filtered sinogram images. One image contains many bright dots and looks like a result from a high-pass filter, and the other image looks like a result from a low-pass filter. The second layer further filters the two images from the first layer and combines them in a nonlinear way to produce the final denoised result. The dot-like pattern is removed by the ReLU function. On the other hand, the conventional filter is linear. A linear combination of two linear filters is a third linear filter, which is not equivalent to a nonlinear filter. Nonlinear filters have better performance than linear filters in noise reduction while keeping the sharp edges.
+
+A machine learned filter may or may not be shift-invariant. A shift-invariant filter applies the same action in every region in the input image, regardless the location of the region. The convolution (or cross correlation) action is shift-invariant. The max pulling action makes the filter shift-variant. If you want a shift-invariant denoising filter, you need to choose a shift-invariant action to change the image dimension, for example, average pooling.

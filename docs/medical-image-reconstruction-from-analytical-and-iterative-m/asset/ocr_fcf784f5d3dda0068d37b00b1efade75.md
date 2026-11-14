@@ -1,0 +1,13 @@
+A dense layer is able to perform image processing in the sense of traditional convolution, which is essential in denoising and super-resolution tasks because convolution is a special case of inner product and every common neuron contains an inner product operation.
+
+Both of convolutional layers and dense layers require multiple kernels for a single input image. The fully connected architecture implements these multiple kernels by using multiple neurons in each layer. The CNN architecture implements these multiple convolution kernels by using multiple channels in each layer. The CNN architecture further assumes that the convolutional kernels are shift-invariant, while the kernels for the fully connected network generally do not have the shift-invariant property. Therefore, it is not proper to call the inner products in a fully connected network as convolutions.
+
+# 9.10 Summary
+
++   - The power of machine learning is in its ability of creating a general mapping between two numerical strings or two images. The key characteristic of the mapping is nonlinearity, which is more general and more powerful than the linear mapping. When given a group of n-tuple/m-tuple pairs, the network tries its best to fit those pairs if the network is large enough. A nonlinear m-dimensional “label” space is created.
++   - After the network is trained, when an unseen n-tuple is fed to the network, an m-tuple in the “label” space is selected as the output. This selected m-tuple has the common features of those training labels.
++   - From our own perspectives, the real power of machine learning in imaging is through the versatility of the inner product operation. It can be used for matched filtering, image backprojection, re-gridding, inverse Fourier transform, and so on.
++   - The training of a network is to determine the model parameters through optimizing an objective function, which is formed by the training pairs and the distance between the model outputs and the labels. The training algorithms are mostly gradient-based. The gradients are calculated by the chain rule, which is referred to as the backpropagation.
++   - The machine learning techniques can be applied to image reconstruction in many ways:
++     - End-to-end direct reconstruction: The network input is a sinogram (or k-space data in MRI). The network output is the reconstructed image.
++     - Analytic reconstruction: The network is used as nonlinear denoising filter, which can be applied in the measurement domain or in the image domain. The nonlinear network filter can also replace the ramp filter.
