@@ -1,0 +1,26 @@
+level_changes:
+- line: 21
+  before: 3
+  after: 2
+- line: 80
+  before: 2
+  after: 3
+- line: 100
+  before: 2
+  after: 3
+- line: 112
+  before: 2
+  after: 3
+- line: 116
+  before: 2
+  after: 3
+- line: 182
+  before: 2
+  after: 3
+- line: 246
+  before: 2
+  after: 3
+text_changes:
+- line: 345
+  before: 实现和训练细节。
+  after: 实现和训练细节

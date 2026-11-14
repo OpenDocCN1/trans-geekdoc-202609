@@ -1,0 +1,65 @@
+
+![](img/a84d20858937819e30199bb788aa4947_2_0.png)
+
+![](img/a84d20858937819e30199bb788aa4947_2_1.png)
+
+Fig. 1 Overview of HistoPlexer architecture. a. The HistoPlexer consists of a translator G that takes H&E and IMC images as input and predicts protein multiplexes from morphology information encoded in the H&E images, ultimately generating protein multiplex on the WSI level from H&E input. b. The objective functions of HistoPlexer contain the GAN adversarial loss (i), Gaussian pyramid loss with average L1 distance across scales (ii), and patch-wise contrastive loss with anchor from generated IMC and positive and negative from GT IMC (iii).
+
+scores of 41.8% (±0.3%) for lymphocyte markers and 42.8% (±0.6%) for tumour markers. The generated images achieved HYPE scores of 61.6% (±1.3%) and 72.8% (±1.1%), indicating that the majority (>50%) were perceived as real by domain experts. Next, we went beyond pixel-level evaluation by identifying relevant cell types. We used GT cell-type annotations from the GT IMC training set, following ref. 8, and trained a random forest classifier based on average marker expression per cell to classify them into five classes: tumour cells, B cells, CD8+ T cells, CD4+ T cells and others.
+
+This classifier was then applied to both GT and generated IMC images in the test set to obtain cell-type maps (Fig. 3a). We visualized ROIs from the tumour centre and the tumour front at the tumour–TME interface and examined spatial patterns based on immune subtype labels. We observed that immune 'hot' tumours, characterized by high immune cell infiltration, showed strong interactions between tumour and CD8+ T cells (Fig. 3a (i)), whereas immune 'cold' tumours, with low immune presence, displayed minimal immune cell interaction, especially in the tumour centre (Fig. 3a (ii)). Immune 'cold' ROIs
+
+| Group | Method | MS-SSIM ↑ | PSNR ↑ | RMSE-SW ↓ |
+|---|---|---|---|---|
+| MP | Pix2Pix | 0.276 ± 0.004 | 13.680 ± 0.043 | 0.202 ± 0.002 |
+| MP | PyramidP2P | 0.284 ± 0.005 | 13.894 ± 0.173 | 0.197 ± 0.004 |
+| MP | HistoPlexer | **0.301 ± 0.003** | **14.206 ± 0.029** | **0.194 ± 0.001** |
+| SP | Pix2Pix | 0.260 ± 0.001 | 13.015 ± 0.009 | 0.218 ± 0.001 |
+| SP | PyramidP2P | 0.264 ± 0.016 | 13.216 ± 0.483 | 0.214 ± 0.011 |
+| SP | HistoPlexer | 0.279 ± 0.002 | 13.354 ± 0.038 | 0.210 ± 0.002 |
+
+![](img/a84d20858937819e30199bb788aa4947_3_0.png)
+
+**Fig. 2** ROI-level assessment of HistoPlexer. a. Quantitative assessment and comparison against benchmarks using MS-SSIM, PSNR and RMSE-SW for MP and SP settings. The up arrow indicates higher values are better. The down arrow indicates lower values are better. The best results are highlighted in bold. b, Qualitative assessment of HistoPlexer for three ROIs ((i)–(iii)) with H&E as input to HistoPlexer, and expression profiles of individual markers: MelanA, CD3, CD8a, CD20, SOX10 and CD16. Top rows: GT expression profiles from IMC modality; bottom rows: predicted (Pred) expression profiles from HistoPlexer. Scale bars, 100 µm.
+
+at the tumour front likewise exhibited sparse or clustered immune cells with minimal interaction with tumour cells (Fig. 3a (iii)–(v)). The strong alignment between predicted and GT cell-type maps suggests that HistoPlexer effectively captures morphological features in H&E images that are relevant for predicting cell types.
+
+## HistoPlexer preserves spatial co-localization patterns
+
+Given the importance of spatial patterns, as highlighted by refs. 31,32, we assess spatial co-localization by quantifying the correlations between protein markers that are simultaneously expressed within a given region. For each protein pair, we compute the Spearman’s correlation coefficient (SCC) between the two proteins and average it across ROIs, considering only those pairs with strong positive (>0.15) or strong negative (<–0.15) correlation in GT IMC images. We then compare the SCC between GT and generated IMC multiplexes.
+
+The MP model's predictions match GT SCC better than the SP model, especially for sparse CD-based immune marker pairs like
+
+CD16:HLA-DR, CD3:HLA-ABC and CD16:CD8a, which are underrepresented in the training data (Fig. 3b (i)). We hypothesize that sparse markers lack sufficient tissue context for the SP model to generate accurate predictions. In contrast, the MP model benefits from learning intermarker correlations by predicting all markers simultaneously and leveraging auxiliary morphological information from abundant markers. However, for some protein pairs (for example, CD3:CD8a and CD20:CD3), the SCC in MP exceeds that of the GT. This likely stems from similar morphologies of CD8+ T cells, CD3 T cells and B cells (CD20) in H&E images 28, potentially leading to overprediction of these sparse markers and overestimated co-localization patterns. Additionally, we compute the mean square error (MSE) between SCC values of GT and generated IMC across test ROIs (Fig. 3b (ii)). The MP model achieves an MSE approximately an order of magnitude lower than that of the SP model, supporting our hypothesis. Comparisons with Pix2Pix 23 and PyramidP2P 12 are in Extended Data Fig. 3a. See Supplementary Information for biological implications of observed patterns.
+
+![](img/a84d20858937819e30199bb788aa4947_4_0.png)
+
+![](img/a84d20858937819e30199bb788aa4947_4_1.png)
+
+![](img/a84d20858937819e30199bb788aa4947_4_2.png)
+
+Fig. 3 | Assessing performance beyond pixel level using cell-type and spatial analyses. a, Cell-typing results: ROIs from the tumour centre ((i) and (ii)) and tumour front ((iii)–(v)), showing H&E, GT and predicted cell types in ROIs grouped by their location within the tissue: tumour centre and tumour front. Scale bars, 100 µm. b, Spearman’s correlation coefficients between tumour pairs comparing the GT with both SP and MP predictions of HistoPlexer (i). The pairs on the x axis are ordered by increasing Spearman’s correlation in the GT. MSE between the GT and predicted Spearman’s correlation coefficients, comparing the SP and MP predictions of HistoPlexer (ii). Bars represent mean values, and error bars indicate standard deviation (s.d.). c, Joint t-SNE visualization of protein co-localization patterns for selected markers: CD3, CD8a, CD31, gp100 and MelanA. The colour represents normalized protein expression.
+
+To explore spatial patterns beyond protein pairs, we visualized expression profiles using t-distributed stochastic neighbour embedding (t-SNE) of cells from both GT and generated IMC multiplexes, following ref. 33. We observed a strong correspondence between t-SNE embeddings from both GT and generated IMC multiplexes (Fig. 3c). For instance, cells that are positive for CD3 and CD8a are concurrently negative for CD31, gp100 and MelanA. This aligns with biological expectations, as CD3 and CD8a are expressed on T cells but not on endothelial (CD31) or tumour (gp100, MelanA) cells. Full t-SNE plots for all markers are provided in Extended Data Fig. 3b.
+
+In conclusion, our quantitative and qualitative results show that the spatial co-localization patterns in GT can be effectively replicated using the generated IMC images. These patterns can remain consistent across tissue sections, providing a robust evaluation metric that mitigates slice-to-slice variations.
+
+## HistoPlexer enables multiplexed proteomics profiling on the WSI level
+
+HistoPlexer enables the generation of IMC images from H&E WSIs of up to 100,000 × 100,000 pixels, allowing for the simultaneous
+
+![](img/a84d20858937819e30199bb788aa4947_5_0.png)
+
+Fig. 4 | Qualitative WSI-level assessment of HistoPlexer. a, b, H&E staining (first column; a and b) and expression profiles of individual markers (CD3, SOX10, CD8a and HLA-DR, from second to last column; a and b). Top rows: GT expression profiles from Ultivue images; bottom rows: Pred expression profiles at the WSI level for samples in a and b. Scale bars, 1 mm.
+
+visualization of multiple protein markers across entire tissue sections. This capability offers a comprehensive view of tumour and TME interactions at the WSI level. Because GT IMC data are available only for ROIs, we use Ultivue's InSituPlex technology to obtain multiplexed WSIs using the Immuno8o and MDSC FixVue panels. These panels include key markers, such as SOX10 for tumours, HLA-DR for antigen presentation and CD3/CD8a for T cell profiling, which are shared with the generated protein multiplex. Figure 4 provides a qualitative comparison between the generated IMC and Ultivue multiplex at the WSI level. In both cases, a high concordance in global structures and hotspot regions is observed across all markers. In Fig. 4b, whereas there is good alignment for CD3 and SOX10 markers, differences are observed for CD8a and HLA-DR, particularly at the tissue edges (for example, the bottom-left border). These differences are likely due to slice-to-slice variations between H&E and Ultivue images, which lead to slight shifts in tissue boundaries.
+
+regions using the HALO AI platform across 34 TuPro melanoma samples. Figure 5b (i) shows immune subtype stratification using iCD8 and sCD8 densities (measured per μm²). We observe that immune desert cases exhibit very low iCD8 and sCD8 density, including the presence of only rare or isolated CD8+ T cells. Immune excluded cases also show very low iCD8 density but slightly higher sCD8 density compared to immune desert cases, suggesting some CD8+ T cells have reached the stroma but not the intratumoral regions. Inflamed cases display high densities of both iCD8 and sCD8, indicating the presence of CD8+ T cells in the stromal compartment and, most importantly, their infiltration into intratumoral regions. These trends are consistent with prior findings 5, validating the utility of our approach. To assess the clinical relevance, we analysed the distribution of iCD8 and sCD8 densities across immune-hot (inflamed) versus immune-cold (excluded and desert) cases (Fig. 5b (ii)). As expected, immune-hot cases exhibit substantially higher densities of both iCD8 and sCD8 compared to immune-cold cases. Furthermore, a random forest classifier trained to distinguish between immune-hot and immune-cold cases achieves an F1-score of 0.873 (s.d. 0.006) and a macro-average area under the receiver operating characteristic curve of 0.845 (s.d. 0.047) under 5-fold cross-validation. In conclusion, we demonstrate that HistoPlexer can accurately support immune phenotyping directly from H&E images. This capability offers potential utility in treatment decision-making and patient stratification. For clinical implications of immune phenotyping, refer to Supplementary Information.
+
+## HistoPlexer facilitates immune phenotyping
+
+We demonstrated the utility of HistoPlexer for immune phenotyping by stratifying immune subtypes based on the spatial distribution of CD8+ T cells, using only H&E images from TuPro metastatic melanoma samples. As illustrated in Fig. 5a, we visualized predicted tumour cells and CD8+ T cells across H&E WSIs. In immune-hot cases, characterized by substantial CD8+ T cell infiltration and typically associated with better response to immunotherapy 34,35, we observed both tumour (attacker) cells and infiltrating CD8+ (defender) T cells within the tumour region, suggesting an active immune response. In contrast, immune-cold cases exhibit minimal or no CD8+ T cell infiltration in the tumour area, correlating with poor immunotherapy outcomes. Building on the immune subtype classification framework proposed in ref. 5, we further quantified intratumoral (iCD8) and stromal (sCD8) CD8+ T cell densities within the tumour centre compartment. To do this, we first localized CD8+ T cells using HistoPlexer and then annotated and segmented the tumour centre into intratumoral and stromal
+
+## HistoPlexer generalizes to an independent patient cohort
+
+We evaluated the generalizability of the HistoPlexer on independent test data from the TCGA-SKCM cohort 19. Figure 6a shows the generated protein multiplex at the WSI level, along with expression profiles for three markers: tumour-associated MelanA, T cell marker CD3 and B cell marker CD20. In the immune-high sample, we observe higher expression and tumour infiltration of CD3 and CD20 markers, contrasting

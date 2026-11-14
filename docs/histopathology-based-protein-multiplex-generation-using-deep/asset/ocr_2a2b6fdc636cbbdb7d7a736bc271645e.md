@@ -1,0 +1,9 @@
+![](bbox=[0.14, 0.065, 0.86, 0.26])
+
+![](bbox=[0.16, 0.27, 0.84, 0.72])
+
+Fig. 1 Overview of HistoPlexer architecture. a. The HistoPlexer consists of a translator G that takes H&E and IMC images as input and predicts protein multiplexes from morphology information encoded in the H&E images, ultimately generating protein multiplex on the WSI level from H&E input. b. The objective functions of HistoPlexer contain the GAN adversarial loss (i), Gaussian pyramid loss with average L1 distance across scales (ii), and patch-wise contrastive loss with anchor from generated IMC and positive and negative from GT IMC (iii).
+
+scores of 41.8% (±0.3%) for lymphocyte markers and 42.8% (±0.6%) for tumour markers. The generated images achieved HYPE scores of 61.6% (±1.3%) and 72.8% (±1.1%), indicating that the majority (>50%) were perceived as real by domain experts. Next, we went beyond pixel-level evaluation by identifying relevant cell types. We used GT cell-type annotations from the GT IMC training set, following ref. 8, and trained a random forest classifier based on average marker expression per cell to classify them into five classes: tumour cells, B cells, CD8+ T cells, CD4+ T cells and others.
+
+This classifier was then applied to both GT and generated IMC images in the test set to obtain cell-type maps (Fig. 3a). We visualized ROIs from the tumour centre and the tumour front at the tumour–TME interface and examined spatial patterns based on immune subtype labels. We observed that immune 'hot' tumours, characterized by high immune cell infiltration, showed strong interactions between tumour and CD8+ T cells (Fig. 3a (i)), whereas immune 'cold' tumours, with low immune presence, displayed minimal immune cell interaction, especially in the tumour centre (Fig. 3a (ii)). Immune 'cold' ROIs
