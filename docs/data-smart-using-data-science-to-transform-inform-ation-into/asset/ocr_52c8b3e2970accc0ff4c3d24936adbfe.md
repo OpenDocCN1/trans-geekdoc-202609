@@ -1,0 +1,3 @@
+# About the Author
+
+Jordan Goldmeier is one of the leading global minds on data visualization and data science. His books include Dashboards for Excel (Apress), Advanced Excel Essentials (Apress), Becoming a Data Head: How to Think, Speak, and Understand Data Science, Statistics, and Machine Learning (Wiley). Jordan has received the prestigious Microsoft Most Valuable Professional Award many times over the years. He has consulted and provided training for Fortune 500 companies, NATO, and taught analytics for Wake Forest University. He runs multiple businesses as a digital nomad living in Lisbon, Portugal. You connect with Jordan on LinkedIn and on Instagram (@jordangoldmeier).

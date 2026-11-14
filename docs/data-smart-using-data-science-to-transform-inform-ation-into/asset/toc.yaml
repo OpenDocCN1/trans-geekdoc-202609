@@ -1,0 +1,23 @@
+level_changes:
+- line: 3583
+  before: 1
+  after: 3
+- line: 4991
+  before: 1
+  after: 2
+- line: 8134
+  before: 1
+  after: 2
+- line: 8148
+  before: 1
+  after: 3
+- line: 8198
+  before: 1
+  after: 3
+- line: 10001
+  before: 3
+  after: 2
+text_changes:
+- line: 52
+  before: 索引 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 403
+  after: 索引

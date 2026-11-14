@@ -1,0 +1,365 @@
+
+
+bagged models, 220–223
+boosted model, 231–234
+goodness of fit, 173–175
+asymmetric distance metric, 100–102
+AUC (area under the curve), 192
+autocorrelations, 257–266
+`AVERAGE` function, 4, 270
+
+## B
+
+- backlink count, 117
+- bagging
+  - about, 204
+  - decision stump, 204–208
+  - evaluating bagged model, 220–223
+  - training, 208–220
+- Barresse, Zack (author)
+  《Excel 表：创建、使用和自动化列表及表格的完整指南》, 11
+- Bayes rule
+  - about, 42–43
+  - creating AI models using, 44–45
+- 《成为数据达人：如何思考、表达和理解数据科学、统计学与机器学习》(Gutman 和 Goldmeier), 202, 339, 364, 399
+- Big M constraint, 320–323
+- binary tree, 146
+- blending model, 305–307
+- Boehmke, Brad (author)
+  《使用 R 进行机器学习实战》, 396
+- boosting
+  - about, 223–224
+  - training, 224–231
+- `boxplot()` function, 394
+- Bruns, David, 3
+- buttons, in Solver, 24
+
+## C
+
+- #CALC! error, 243
+- calculated fields, 61
+- calculating
+  - alpha value for stumps, 228–229
+  - distance, 76–80
+  - performance, 232–234
+  - probabilities, 55–57
+- categorical data, 163
+- `cbind()` function, 370
+- CDF (cumulative distribution function), 332–333
+- cells, 2
+- centrality measures, 348
+- chain rule, 40–41
+- Change Chart Type dialog box, 288
+- class imbalance, resolving, 161–162
+- cleaning data, with Power Query, 48–50
+- Close & Load, in Power Query, 35–37
+- cluster analysis
+  - about, 65, 109
+  - adjacency lists, 115–117
+  - asymmetric distance measurements, 100–102
+  - clusters for, 75–76, 95
+  - creating
+    - cosine similarity matrix, 118–120
+    - graphs from data, 117–118
+    - R-neighborhood graphs, 121–123
+    - static adjacency matrix, 124
+  - dataset for, 71–72
+  - deals for clusters, 83–86, 96–98, 104–107
+  - determining what to measure, 72–75
+  - divisive clustering, 138–151
+  - encoding, 146–151
+  - Euclidean distance, 76–80
+  - example of K-means clustering, 65–70
+  - in Excel, 102–104
+  - Gephi, 123, 151–156
+  - igraph, 115–117
+  - graph data, 130–132
+  - hierarchical positioning, 138–151
+  - importing R-neighborhood adjacency matrix into Gephi, 124–128
+  - interpreting results, 82–83
+  - K-medians clustering, 100
+  - network graphs, 110
+  - node degree, 128–130
+  - points and penalties in graph modularity, 132–138
+  - setting up score sheet, 136–138
+  - silhouette, 86–95, 99
+  - solving for cluster centers, 80–82
+  - solving for five clusters, 96
+  - visualizing simple graphs, 110–114
+- cluster centers, solving for, 80–82
+- cluster centroid, 65
+- clusters and clustering
+  - deals for, 83–86, 96–98, 104–107
+  - five, 95
+  - four, 75–76
+- K-means clustering
+  - about, 65–71
+  - determining what to measure, 72–75
+  - four clusters, 75–76
+  - initial dataset for, 71–72
+  - K-medians, 100
+  - solving for five, 96
+- coefficient, 167
+- coefficient standard errors, 178
+- coefficient t-test, in linear regression, 177–182
+- columns
+  - about, 2–3
+  - adding in Excel tables, 10–11
+  - removing in Power Query, 33
+  - splitting, 50–55
+- communities
+  - analyzing, 146–151
+  - detecting, 109
+  - encoding, 146–151
+- complexity, 400
+- conditional probability, 40
+- consistency, in optimization modeling, 308–309
+- Copilot, 157
+- correlogram, 263
+- cosine distance, 101–102
+- cosine similarity, 101–102
+- cosine similarity matrix, creating, 118–120
+- COUNTIFS() function, 187, 215
+- counting tokens, 55–57
+- Crawley, Michael J. (author) 《R 图书》，第 3 版, 396
+- Create Forecast Worksheet dialog box, 291
+- Create Table dialog box, 4
+- creating
+  - AI models
+    - in R language, 381–389
+    - using Bayes rule, 44–45
+  - cosine similarity matrix, 118–120
+  - distance matrix, 89–91
+  - dummy variables, 163–165
+  - fan charts, 287–289
+  - graphs
+    - about, 350–351
+    - from data, 117–120
+    - k-nearest neighbors (kNN) graph, 351–352
+    - R-neighborhood graphs, 121–123
+  - scenarios from standard deviations, 334–335
+  - static adjacency matrix, 124
+  - training data for linear regression, 161–163
+  - your own linear regression, 165–173
+- critical values, 263
+- cumulative distribution function (CDF), 332–333
+- cumulative probability distribution, 331
+- cutoff values, setting up, 185–186
+
+## D
+
+- data
+  - building graphs from, 117–120
+  - categorical, 163
+  - cleaning with Power Query, 48–50
+  - graph, 130–132
+  - normal distribution of, 331–338
+  - preparing for graphing, 347–350
+  - quantitative, 163
+  - reading into R, 374–375
+  - sample, 2–3
+  - standardizing, 74
+  - time-series, 236–238
+- 《使用 R 进行数据挖掘》(Torgo), 202
+- data science
+  - about, 75, 294–295
+  - reading data into R, 374–375
+- data smart, 159
+- data storytelling, 399
+- data.frame() function, 370–371
+- dataframes, in R language, 370–371
+- datasets, for K-means clustering, 71–72
+- decision rule, 44
+- decision stumps, 204–208
+- decision variables, limits on, 143
+- degrees of nodes, 116
+- delta parameter, 268
+- delta value, 277–281
+- dependent situations, 41–42
+- dependent variables, 159
+- deseasonalize, 273
+- design matrix, 178
+- directed network graph, 111
+- distance, measuring, 76–80
+- distance matrix, creating, 89–91
+- divisive clustering, 138–151
+- dot product, 139
+- dummy coding, 163
+- dummy variables, creating, 163–165
+- Dykes, Brent (author)
+  《有效的数据叙事：如何利用数据、叙事和视觉推动变革》, 399
+
+## E
+
+- edges
+  - in network graphs, 110
+  - points and penalties in graph modularity, 132–138
+  - pruning from graphs, 121
+- 《有效的数据叙事：如何利用数据、叙事和视觉推动变革》(Dykes), 399
+- 《统计学习要素》(Hastie, Tibshirani, 和 Friedman), 202
+- empirical value, 246
+- encoding communities, 146–151
+- ensemble models
+  - about, 202, 203–204
+  - bagging, 204–223
+  - boosting, 223–234
+- error calculations, adding, 170–171
+- error shifts, 265
+- errors
+  - adding, 241–245
+  - in time-series data, 238
+- Euclidean distance, 76–80
+- evaluating
+  - bagged models, 220–223
+  - boosted model, 231–234
+  - goodness of fit, 173–175
+- evolutionary algorithm, 80, 82
+- Excel
+  - compared with R and Python, 364
+  - Forecast Sheets in, 289–291
+  - implementing silhouette in, 92–95
+  - moving on from, 363–396
+  - optimization modeling in, 300–305, 309–311
+  - spreadsheets
+    - about, 1
+    - accessing quick descriptive statistics, 3
+    - applying Tukey's fences in, 342–344
+    - array formulas, 19–20
+    - Excel tables, 3–11
+    - lookup formulas, 11–16
+    - moving on from, 363–396
+    - Pivot Charts, 16–19
+    - PivotTables, 16–19
+    - sample data, 2–3
+    - Solver, 20–26
+  - tables
+    - about, 4–5
+    - adding columns, 10–11
+    - filtering, 5–7
+    - formatting, 7
+    - sorting, 5–7
+    - structured references, 7–10
+- 《Excel 2019 圣经》(Alexander, Kusleika, 和 Walkenbach), 11
+- 《Excel 表：创建、使用和自动化列表及表格的完整指南》(Barresse 和 Jones), 11
+- exploratory data mining, 91
+- exponential function (exp()), 192–193
+- exponential smoothing
+  - Holt's trend-corrected, 250–257
+  - multiplicative Holt-Winters, 266–268
+  - triple, 267
+
+## F
+
+- factor() function, 371
+- factoring, 367–370
+- false negatives (Type II error), 185
+- false positives (Type I error), 162, 185, 188
+- fan charts, creating, 287–289
+- features
+  - about, 63
+  - splitting, 206–207
+- FILTER() function, 272
+- filtering
+  - in Excel tables, 5–7
+  - rows in Power Query, 32–33
+- Find & Replace, in Power Query, 34–35
+- floating-point underflow, 46
+- forecast() function, 390
+- Forecast Sheets, in Excel, 289–291
+- forecasting
+  - about, 235–236
+  - autocorrelations, 257–266
+  - creating fan charts, 287–289
+  - Excel sheets, 289–291
+  - future periods, 254–255
+  - getting started, 274–280
+  - Holt's trend-corrected exponential smoothing, 250–257
+  - multiplicative Holt-Winters smoothing, 266–268
+  - optimization, 280–282
+  - prediction intervals and, 283–287
+  - in R language, 389–392
+  - setting initial values for level, trend, and seasonality, 268–274
+  - simple exponential smoothing, 238–249
+  - time-series data, 236–238
+  - trends, 249–250
+- formatting Excel tables, 7
+- formula bar, in Power Query, 31
+- formulas
+  - array, 19–20, 79, 139
+  - lookup
+    - about, 11
+    - INDEX/MATCH, 13–15
+    - VLOOKUP, 11–13
+    - XLOOKUP, 15–16
+- Friedman, Jerome (author)
+  《统计学习要素》, 202
+- Frontline Systems, 25
+- F-test, in linear regression, 175–177
+- functions
+  - AND, 280
+  - aggregate(), 379
+  - AVERAGE, 4, 270
+  - boxplot(), 394
+  - cbind(), 370
+  - COUNTIFS(), 187, 215
+  - data.frame(), 370–371
+  - factor(), 371
+  - FILTER(), 272
+  - forecast(), 390
+  - glm(), 382–383
+  - IF, 255
+  - IFERROR(), 246
+  - IFS, 244
+  - INDEX/MATCH, 13–15
+  - LAMBDA, 243
+  - length(), 367
+  - LET, 15
+  - LINEST, 249–250
+  - lof(), 395
+  - MAX(), 318–319
+  - MMULT, 177, 178–179
+  - OFFSET, 229, 242
+  - PERCENTILE.EXE, 342
+  - PERCENTILE.INC, 342
+  - performance(), 386–387
+  - plot(), 387
+  - prediction(), 386
+  - print, 366
+  - QUARTILE.EXE, 342
+  - QUARTILE.INC, 342
+  - randomForest(), 382
+  - rbind(), 370
+  - replace, 377
+  - scale(), 395
+  - select(), 377, 379
+  - STANDARDIZE, 349
+  - str(), 371, 378, 381
+  - summary(), 368, 371, 381
+  - SUMPRODUCT, 20, 262–263, 304
+  - t(), 369, 377, 379
+  - T.DIST.2T, 249–250
+  - TRANSPOSE, 19, 20
+  - varImpPlot(), 384
+  - VLOOKUP, 11–13
+  - which(), 368, 393
+  - XLOOKUP, 15–16
+
+## G
+
+- gamma value, 251–252, 267, 277–281
+- generating
+  - AI models
+    - in R language, 381–389
+    - using Bayes rule, 44–45
+  - cosine similarity matrix, 118–120
+  - distance matrix, 89–91
+  - dummy variables, 163–165
+  - fan charts, 287–289
+  - graphs
+    - about, 350–351
+    - from data, 117–120
+  - k-nearest neighbors (kNN) graph, 351–352
+  - R-neighborhood graphs, 121–123
+  - scenarios from standard deviations, 334–335
+  - static adjacency matrix, 124
+
