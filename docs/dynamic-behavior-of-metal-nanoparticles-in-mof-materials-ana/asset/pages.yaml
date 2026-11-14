@@ -1,0 +1,993 @@
+- pgno: 0
+  md: '# Dynamic behavior of metal nanoparticles in MOF materials: analysis with electron
+    microscopy and deep learning
+
+
+    Kirill S. Erokhin, Evgeniy O. Pentsak, Vyacheslav R. Sorokin, Yury V. Agaev, Roman
+    G. Zaytsev, Vera I. Isaev and Valentine P. Ananikov
+
+
+    Electron microscopy is a key characterization technique for nanoscale systems,
+    and electron microscopy images are typically recorded and analyzed in terms of
+    the morphology of the objects under study in static mode. The emerging current
+    trend is to analyze the dynamic behavior at the nanoscale observed during electron
+    microscopy measurements. In this work, the study of the stability of MOF structures
+    with different compositions and topologies under conditions of an electron microscope
+    experiment revealed an unusual dynamic behavior of M NPs formed due to the electron-beam-induced
+    transformation of specific frameworks. The transition to the liquid phase led
+    to spatial movement, rapid sintering, and an increase in the M NPs size within
+    seconds. In the case of copper nanoparticles, instantaneous sublimation was observed.
+    The dynamic behavior of Co NPs was analyzed with a computational framework combining
+    deep learning and classic computer vision techniques. The present study for the
+    first time revealed unique information about the stability of a variety of MOFs
+    under an electron beam and the dynamic behavior of the formed M NPs. The formation
+    of Fe, Ni, Cu, and Co NPs was observed from a molecular framework with a specific
+    subsequent behavior – a stable form for Fe, excessive dynamics for Co, and sublimation/condensation
+    for Cu. Two important outcomes of the present study should be mentioned: (i) electron
+    microscopy investigations of MOF samples should be made with care, as decomposition
+    under an electron beam may lead to incorrect results and the appearance of “phantom”
+    nanoparticles; and (ii) MOFs represent an excellent model for fundamental studies
+    of molecular-to-nano transitions in situ in video mode, including a number of
+    dynamic transformations.
+
+
+    # Introduction
+
+
+    Metal nanoparticles (M NPs) of a small size are actively used in various fields
+    of science and technology.1–5 Importantly, they can be unstable even at room temperature.
+    Changes in the shape of M NPs can lead to critical changes in the characteristics
+    of nanoscale devices.6,7 Therefore, it is known that the efficiency of heterogeneous
+    nanocatalysis depends critically on their shape and size.8–10 The diffusion barrier
+    for single metal atoms in nanoparticles on a clean metal surface is extremely
+    low (1.0 eV).11 Consequently, even a small thermal activation is sufficient to
+    cause the diffusion of atoms. This
+
+
+    allows clean metal surfaces to flow like a liquid at temperatures far below the
+    melting point.12 The melting points of the M NPs are lower than those of the bulk
+    metal. Small M NPs are characterized by a quasi-molten phase at temperatures far
+    below the melting point. In this phase, the particles continuously oscillate between
+    different structures. In addition, particles of different shapes can have different
+    phase regions.13 For the first time, melting of nanoparticles under the action
+    of an electron beam in a microscope was observed in 1954 for low-melting metals,
+    such as Pb, Sn, and Bi.14 A significant decrease in melting temperature occurs
+    for particles smaller than 10 nm. A phenomenon of transition to a liquid state
+    is also described for larger particles. For example, liquid-like pseudoelasticity
+    of sub-10 nm crystalline silver particles was observed under pressure in a microscope
+    chamber.6 It was shown that Ag nanoparticles can be deformed like liquid drops.
+    Interestingly, at the same time, they remained crystalline inside. Regarding metals
+    with high melting points, the liquid-like
+
+
+    a Zelinsky Institute of Organic Chemistry, Russian Academy of Sciences, Leninsky
+    Prospect, 47, Moscow, 119991, Russia. E-mail: val@ioc.ac.ru b Plotov South-Russian
+    State Polytechnic University (NPI), Proveshchenia Str. 132, Novocherkassk 346428,
+    Russia † Electronic supplementary information (ESI) available. See DOI: https://doi.org/10.1039/d3cp02595k
+    ‡ Authors contributed equally.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'behavior of Pt particles in a CO flow in a TEM chamber has been described.15
+
+
+    One of the consequences of the easy diffusion of atoms in nanoparticles is their
+    tendency to sinter or coalesce.16,17 This phenomenon is also of great importance
+    in nanotechnology, catalysis, and the development of electronic nanosized devices.
+    The sintering of nanoparticles in a TEM chamber can be used as cold welding to
+    create nanoscale devices.12 Using in situ TEM, it was demonstrated that large
+    silver nanoparticles (20–50 nm) can be fused at 300 °C.18 Even more interesting
+    is that the fusion of Ag NPs and Au NPs (ca. 20 nm) could occur through diffusion
+    initiated by an electron beam at 200 °C for 30–60 minutes.19–24 For smaller Ag
+    and Au NPs (~3 and 7.5 nm), sintering was observed in the HR-TEM chamber under
+    the action of an electron beam, which was accompanied by rearrangement of its
+    crystal structure.25
+
+
+    The low phase stability of nanoparticles can lead not only to melting and sintering
+    but also to sublimation. The sublimation of nanoparticles in the electron microscope
+    is described for metals (mainly silver),26–28 GeSb2Te4,29 Bi2Te3, Bi2Se3,30 CdSe,31
+    GeTe,32 and MgO–Mg.33 In all cases, sublimation occurred with additional heating
+    (> 300 °C). In particular, the sublimation of silver nanoparticles occurred by
+    a direct transition without melting.34 The decrease in the size of Ag NPs with
+    a diameter of 9 nm started at a temperature of approx. 575 °C. Higher temperatures
+    (ca. 675 °C) are needed for the sublimation of larger Ag NPs (50 nm).28 The sublimation
+    of 4 nm copper particles deposited on graphite upon additional heating up to 800
+    °C has been described. The authors note that the behavior of copper nanoparticles
+    depended on the type of support. In the case of the CuO support, instead of sublimation,
+    melting of copper nanoparticles occurred at 700 °C.35
+
+
+    When studying nanoparticles by electron microscopy, one should take into account
+    the possible effect of an electron beam on a sample. The effect of the electron
+    beam is not limited to heating of the sample. For example, it has long been described
+    that an electron beam can induce chemical transformations and reduce certain compounds.21,36–39
+    Moreover, electron beam reduction has been proposed as a method for producing
+    M NPs and even chemical bonds.40–43
+
+
+    Metal–organic frameworks (MOFs) are an important class of porous coordination
+    polymers composed of metal ions connected by organic molecules – linkers.44,45
+    MOFs are prospective materials for application in gas storage,46–48 electrochemistry,49–51
+    photocatalysis,52,53 catalysis,54–56 as well as sensors57 and nanoreactors.58–60
+    They can also be used as precursors for the synthesis of atomically dispersed
+    catalysts and MOF-derived porous materials via pyrolysis.61–63 The instability
+    of MOF structures under electron beam exposure is a known problem that makes it
+    difficult to study these hybrid nanoporous materials using electron microscopy.64–68
+    It was shown that the stability of metal–organic frameworks under the action of
+    an electron beam in a transmission electron microscope is determined primarily
+    by the metal and not by the type of linker. For example, poor stability was shown
+    for Cu- and Ru-MOFs.69 MOF decomposition under these conditions can be
+
+
+    ![](img/277c1f92bfbf14a066f08b0c32f71acd_1_0.png)
+
+
+    Fig. 1 Dynamic phenomena during the transformation of MOFs based on Co2+ (ZIF-67,
+    BIF-66) and Cu2+ (HKUST-1) under the action of an electron beam in the TEM experiment.
+    Migration, fusion, shape change and separation of cobalt nanoparticles and sublimation
+    of copper nanoparticles are shown.
+
+
+    used as a methodology for the synthesis of ZnO, In and Cu nanoparticles and ordered
+    silver nanostructures.70
+
+
+    In the present study, we report the dynamic behavior of M NPs formed when MOF
+    materials are exposed to an electron beam. The M NPs behavior and stability of
+    various MOFs in an electron microscope chamber are analyzed in detail. In the
+    case of Co-MOFs (ZIF-67, BIF-66), the exposure of the electron beam resulted in
+    the formation of nanoparticles with unusually high mobility. In the case of Cu-MOFs
+    (HKUST-1), the electron beam initiated the instantaneous sublimation of the formed
+    nanoparticles (Fig. 1). The behavior of Co-containing nanoparticles was studied
+    using machine learning methods to digitally track the particle trajectories and
+    properties.
+
+
+    # Results and discussion
+
+
+    # Formation of nanoparticles upon decomposition of MOF
+
+
+    MOFs of different natures, i.e., composition, topology and pore structure, such
+    as MIL-53 (AlOHBDC, BDC = benzene-1,4-dicarboxylate), NH2-MIL-53 (AlOHABDC, ABDC
+    = 2-amino-benzene-1,4-dicarboxylate), MIL-101(Fe) (Fe3O(BDC)3), NH2-MIL-101(Fe)
+    (Fe3O(ABDC)3), NH2-MIL-101(Al) (Al3O(ABDC)3), BIF-66 (Co[B(Im)2]4, Im = imidazolate),
+    ZIF-67 (Co(MeIm)2, MeIm = 2-methylimidazole), ZIF-8 (Zn(MeIm)2), HKUST-1'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '| MOF | Metal ion | Synthetic procedure | Formation of M NPs | Liquid-like
+    behavior of M NPs | Sublimation of M NPs |
+
+    |---|---|---|---|---|---|
+
+    | MIL-53(Al) | Al3+ | 76 | — | — | — |
+
+    | NH2-MIL-101(Al) | Al3+ | 77 | — | — | — |
+
+    | NH2-MIL-53(Al) | Al3+ | 78 | — | — | — |
+
+    | ZIF-8 | Zn2+ | 78 | — | — | — |
+
+    | MIL-101(Fe) | Fe3+ | 79 | + | — | — |
+
+    | NH2-MIL-101(Fe) | Fe3+ | 79 | + | — | — |
+
+    | Ni(BDC) | Ni2+ | 80 | + | — | — |
+
+    | Ni(BTC) | Ni2+ | 80 | + | — | — |
+
+    | MOF-74(Ni) | Ni2+ | 80 | + | — | — |
+
+    | BIF-66 | Co2+ | 81 | + | + | — |
+
+    | ZIF-67 | Co2+ | 81 | + | + | — |
+
+    | HKUST-1 | Cu2+ | 82 | + | — | + |
+
+
+    (Cu3(BTC)2, BTC = benzene-1,3,5-tricarboxylate), Ni(BDC), Ni(BTC), and MOF-74(Ni)
+    (Ni2DOBDC, DOBDC = 2,5-dihydroxy-1,4-benzenedicarboxylate), were analyzed by transmission
+    electron microscopy (TEM). Some of them tended to transform with the formation
+    of particles with a diameter of several nanometers to tens of nanometers when
+    exposed to an electron beam with an accelerating voltage of 100 kV. The formation
+    of the particles depended mainly on the metal ion in the framework and was observed
+    for MOFs with Co2+ (BIF-66, ZIF-67), Fe3+ (MIL-101(Fe), NH2-MIL-101(Fe)), Cu2+
+    (HKUST-1), and Ni2+ (Ni(BDC), Ni(BTC), MOF-74(Ni)) (Table 1 and Fig. S1, S2, ESI†).
+    MOFs with Al3+ (NH2-MIL-101(Al), MIL-53(Al), NH2-MIL-53(Al)) and Zn2+ (ZIF-8)
+    were stable (Fig. S3, ESI†). An interesting observation is that this is consistent
+    with the standard reduction potentials Mn+/M0 of metals: metals of stable MOFs
+    have a lower value (−1.66 eV for Zn2+/Zn0, −0.76 eV for Al3+/Al0) compared to
+    those of MOFs prone to transformation (−0.28 eV for Co2+/Co0, −0.25 eV for Ni2+/Ni0,
+    −0.04 eV for Fe3+/Fe0, and 0.34 eV for Cu2+/Cu0)71. In addition, the formation
+    of the particles depended on the emission current.
+
+
+    for the formation of NPs. NPs appearance was observed at different times of exposure
+    to the electron beam for different particles of the same MOF. Interestingly, as
+    we observed, not all framework particles were transformed into nanoparticles under
+    the action of an electron beam even after a long exposure. Many MOF structures
+    began to transform only when the emission current increased to 17 μA. The use
+    of high magnifications initiated the formation of nanoparticles. A decrease in
+    the emission current to 8 μA made it possible to obtain an image of the surface
+    of the MOF particles without transformation. Thus, the transformation of MOFs
+    and the formation of nanoparticles strongly depended on the current density. It
+    should be noted that only partial formation of nanoparticles under the action
+    of an electron beam was observed, while some particles of the same MOF sample
+    remained unchanged.
+
+
+    We used the following parameters for the TEM studies: accelerating voltage of
+    100 kV, magnification range of 50–150 K, and detection with a CCD camera. The
+    screen density was on the order of 10−12 A cm−2. Our observations have shown that
+    the rate of transformation of the framework into NPs depends not only on the electron
+    dose but also on the MOF nature and particle size. In the case of BIF-66 and ZIF-67,
+    the transformation into NPs occurred almost instantly. For Ni MOFs, tens of seconds
+    or even whole minutes were required
+
+
+    Most likely, the transformation of MOF structures occurs due to the generation
+    of secondary electrons, which can lead to bond cleavage in the framework.72,73
+    The electron beam can reduce metal ions in the MOF structures, resulting in the
+    formation of M NP. The sample can be heated due to interaction with the electron
+    beam. However, previous studies have shown that heating the sample with an electron
+    beam is limited to several tens or a couple of hundreds of degrees.28,72 Therefore,
+    the transformation of the MOF material due to strong heating is unlikely.
+
+
+    To analyze the thermal stability of the Co-based MOF materials, BIF-66 and ZIF-67
+    samples were heated to 350 °C materials (2 h). The TEM study showed no change
+    in the morphology of the samples. According to TGA data, BIF-66 is thermally stable
+    up to 370 °C, after which oxidative degradation is observed in the range of 370–525
+    °C, which is accompanied by exothermic
+
+
+    ![](img/277c1f92bfbf14a066f08b0c32f71acd_2_0.png)
+
+
+    ![](img/277c1f92bfbf14a066f08b0c32f71acd_2_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'effects with maxima at 458 °C and 492 °C and a weight loss of 55.2% (Fig. S4
+    and S5, ESI†). In the temperature range of 525–650 °C, there is a loss of 12.1%
+    of the weight, which is accompanied by an exothermic effect with a maximum at
+    580 °C. The final degradation of the sample occurs in the range of 650–790 °C.
+
+
+    ![](img/277c1f92bfbf14a066f08b0c32f71acd_3_0.png)
+
+
+    Fig. 5 TEM images of an HKUST-1 particle after the formation of copper nanoparticles
+    (A) and after their sublimation (B). A lower magnification image with the particles
+    that appeared after sublimation on the lacy carbon film is shown in (C). The red
+    arrows point to the sublimated particles, and the green arrow points to the MOF
+    particle from which Cu NPs evaporated.
+
+
+    To determine the nature of the formed nanoparticles, EDS analysis of the ZIF-67
+    sample was performed. According to element distribution maps for the MOF particle,
+    on which nanoparticles were formed by the electron beam, regions with a high content
+    of cobalt correspond to the location of the studied nanoparticles (Fig. 2).
+
+
+    The observed nanoparticles are insoluble in organic solvents. The analysis of
+    one area of the sample before and after washing with acetone and chloroform showed
+    that no noticeable changes occurred with cobalt nanoparticles after exposure to
+    these solvents (Fig. 3). Thus, the resulting nanoparticles are stable. The presence
+    of molecular organic components in the composition of nanoparticles is unlikely.
+
+
+    # Dynamic behavior of formed nanoparticles
+
+
+    Further TEM observation of the formed nanoparticles made it possible to establish
+    their different behaviors under the action of an electron beam. The Fe nanoparticles
+    were static. In the case of nanoparticles formed during the transformation of
+    the MOF-74(Ni) structure, a gradual increase in particle size was observed (Fig.
+    4A and B). In addition, a particle “flicker” was observed under the action of
+    an electron beam, which is probably due to a change in their orientation under
+    the action of local heating and a magnetic field (Fig. 4C–F).74
+
+
+    Among the studied MOF materials, the dynamic behavior of cobalt nanoparticles
+    formed during the transformation of the BIF-66 and ZIF-67 structures under an
+    electron beam was the most interesting. In contrast, Fe NPs formed upon transformation
+    of the Fe-based MOF (MIL-101) were stable and static (Table 1). The video obtained
+    during the TEM study of the Co-MOFs clearly shows that the nanoparticles actively
+    moved over the surface of the MOF particle, changed their shape, and, in some
+    cases, merged with each other, increasing in size. In some cases, one nanoparticle
+    was divided into several separate
+
+
+    nanoparticles (Fig. 1). This indicates that Co NPs had a liquid-like nature. Notably,
+    the size of the observed liquid-like nanoparticles varied from a few nanometers
+    to several tens of nanometers.
+
+
+    ![](img/277c1f92bfbf14a066f08b0c32f71acd_3_1.png)
+
+
+    Fig. 4 TEM images of MOF-74(Ni) particles coated with Ni NPs before (A) and after
+    continuous exposure to an electron beam (B) and a series of images made at 15
+    s intervals (C–F). Scale bar corresponds to 50 nm.
+
+
+    The melting points of bulk Fe, Co, and Ni are 1812, 1768, and 1726 K, respectively.
+    Although the values are close, there is a distinct difference of > 40 K between
+    them. In this series, iron is the most refractory among the metals listed above.
+    This is probably one of the reasons for the static nature of Fe NPs. In contrast,
+    Co and Ni exhibit dynamic behavior. M NPs exhibit lower melting points compared
+    to bulk metal. The decrease in melting point can be predicted using the Gibbs–Thomson
+    equation. It is significant for particles smaller than 100 nm. For cobalt particles
+    with a size of 10 nm, the melting point significantly exceeds 1000 °C. In the
+    case of Co NPs with a size of ~ 1 nm, it approximates 500 °C. Thus, the size effect
+    of a decrease in the melting temperature should not be strong for the observed
+    nanoparticles. The transition to the liquid state requires temperatures well above
+    a few hundred degrees.
+
+
+    Important factors of the thermal stability of bulk and surface atoms are the Tammann
+    temperature (0.5Tmelt in K) and the Hüttig temperature (0.3Tmelt in K, respectively).
+    At temperatures above the corresponding values, the individual atoms of the particle
+    exhibit mobility. For bulk cobalt, the Tammann temperature is 877 °C, and the
+    Hüttig temperature is 526 °C. Cobalt nanoparticles with a size of 5–22 nm have
+    a Hüttig temperature in the range of 200–240 °C, while the Tammann temperature
+    is above 500 °C.73 Thus, heating initiated by an electron beam can cause mobility
+    of the surface atoms of cobalt nanoparticles. However, it is unlikely that this
+    can lead to the melting of M NPs.
+
+
+    An even more interesting behavior was observed in the case of a copper-containing
+    HKUST-1 (Table 1). The formation of spherical nanoparticles with diameters in
+    a wide range of approximately 10–100 nm occurred upon focusing an electron beam.
+    As the emission current increased, gradual sublimation of Cu NPs was observed.
+    In some cases, the complete disappearance of nanoparticles with a diameter of
+    approximately 50 nm was observed within a few seconds. In addition, the formation
+    of Cu NPs on the lacy carbon film of the TEM grid was observed within a radius
+    of several micrometers from the HKUST-1 particle that was exposed to the electron
+    beam. In this case, the MOF particle became porous, and the boundaries of the
+    cells in which the “evaporated” particles were located were'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/277c1f92bfbf14a066f08b0c32f71acd_4_0.png)
+
+
+    Fig. 6. (A) Graph of the change in time of the topological characteristic “solidity
+    of particle” (green color – maximum value, blue – average, orange – minimum in
+    the frame); (B) histogram of distributions of characteristic “solidity”; (C) graph
+    of the change in time of the topological characteristic “perimeter of particle”
+    (green color – maximum value, blue – average, orange – minimum in the frame);
+    (D) histogram of distributions of characteristic “perimeter”; (E) graph of the
+    change in time of the topological characteristic « area of particle » (green color
+    – maximum value, blue – average, orange – minimum in the frame); (F) histogram
+    of distributions of characteristic « area »; (G) graph of the average velocity;
+    (H) histogram of the path traveled by the particles.
+
+
+    clear (Fig. 5). It should be mentioned that bulk Cu has the lowest melting point
+    among the considered metals (1358 K).
+
+
+    # Analysis of Co NPs dynamic behavior with deep learning
+
+
+    To study the behavior of the resulting Co nanoparticles in the BiF-66 sample,
+    we analyzed videos obtained by TEM using deep learning. To analyze the topological
+    characteristics of the observed particles, we considered the metric Solidity (completeness),
+    which characterizes the ratio of contour area to its convex hull area, the perimeter,
+    and the area of the particle. The given graphs and histograms (Fig. 6) illustrate
+    the dynamics of change and the law of distribution of the topology of nanoparticles.
+
+
+    According to the data of the particle solidity analysis, the average and maximum
+    particle solidity remain constant during the experiment, i.e. close to a convex
+    shape (Fig. 6A). The most expressed solidity dynamics turned out to be in the
+    case of the change value. This indicates the instability and tendency to change
+    in the shape of particles with a solidity in the range of 0.6–0.7. The solidity
+    distribution of the particles showed during the analysis of the video that the
+    solidity of most particles is in the range of 0.920–0.930 (Fig. 6B).
+
+
+    An analysis of the dynamics of the particle perimeter showed that the minimum
+    and average values remain relatively stable and are approximately equal to 10
+    and 65 nm, respectively (Fig. 6C). This indicates that particles 2 and 10 nm in
+    size (in the case of their rounded shape) retain the stability of their geometric
+    parameters. At the same time, the maximum perimeter tends to change during the
+    experiment. This indicates that particles with a perimeter in the range of 150–200
+    nm (diameter 24–32 nm) are the most unstable and tend to divide and merge with
+    other particles. The distribution of particles along the perimeter showed that
+    the perimeter of the largest number of particles was in the range of 60–70 nm
+    (10–11 nm in
+
+
+    the case of their rounded shape) during the experiment (Fig. 6D).
+
+
+    By analogy here. The “perimeter” metric, a trend in area is also observed here.
+    The minimum and average values remain relatively stable at approximately 15 and
+    320 nm2 (2 and 10 nm for round particles) (Fig. 6E). The maximum area tends to
+    change, which indicates the instability of particles with an area in the range
+    of 1250–2250 nm2. The area distribution of particles showed that the area of most
+    particles was in the range of 310–370 nm2 (10–11 nm) during the experiment (Fig.
+    6F).
+
+
+    The average velocity of moving particles is in the range [0, 1.6] nm s−1 (Fig.
+    6G). The moving distance of the particles of the analyzed sample during the observation
+    time is in the range of [0, 295.22] nm with an average value of 27.75 nm (Fig.
+    6H).
+
+
+    It should be noted that the observed nanoparticles are individual and do not represent
+    an aggregate of subnanometer particles. Under the studied conditions, the Co NPs
+    moved as a whole and did not disintegrate. In the case of aggregates of subnanometer
+    particles, this would not be the case (uncorrected movement or disintegration
+    should be the case). The integrity of the NPs was also evidenced by HR-TEM (Fig.
+    S12 and S13, ESI†) and SAED (Fig. S14, ESI†) analysis.
+
+
+    # Conclusions
+
+
+    The relationship between the stability and decomposition of MOFs under an electron
+    beam is a well-known problem, which complicates investigations of this class of
+    nanoporous hybrid materials by electron microscopy, i.e., TEM. In summary, a systematic
+    study of the resistance of MOFs to the action of an electron beam was carried
+    out. Studied MOF structures with'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'various compositions, topologies and porous structures show different stabilities
+    under an electron beam, mainly depending on the type of metal coordination centers
+    in the framework. Al- and Zn-MOFs are less likely to transform to M NPs, while
+    Fe-, Co-, Ni- and Cu-MOFs degrade to form M NPs.
+
+
+    Subsequently, the behavior of M NPs under the action of an electron beam was studied.
+    Thus, the Fe NPs turned out to be stable and possessed static images. In contrast,
+    the formed Co NPs are liquid-like under an electron beam and show amazing dynamic
+    behavior. Despite their large size up to 100 nm and the absence of additional
+    heating, cobalt nanoparticles on the surface of a transformed MOF material change
+    their shape, move along the support surface, merge with each other, and break
+    down into several particles. The behavior of copper nanoparticles formed from
+    HKUST-1 under the action of an electron beam appeared to also be interesting.
+    Cu NPs sublimated in a few seconds and deposited on a carbon substrate a few micrometers
+    away from the particle under study.
+
+
+    For a deeper understanding of the ongoing processes, an analysis of the dynamics
+    of Co NPs was carried out using computer vision and deep learning. This made it
+    possible to analyze the video of Co NPs movements obtained in the TEM experiment
+    at high speed. It was found that particles with the lowest solidity and maximum
+    area and perimeter are prone to change. Thus, the most dynamic were large particles
+    with the least convex shape. Particles of a convex shape and smaller size turned
+    out to be more stable in terms of geometric parameters.
+
+
+    The observed phenomena indicate the ease of phase transitions even for large nanoparticles
+    under the conditions of studies using transmission electron microscopy. This indicates
+    the need to control the operating conditions of nanodevices based on metal nanoparticles.
+    At the same time, such phase transitions initiated by an electron beam can be
+    further used to develop nanosized devices or catalytic systems.
+
+
+    # Experimental part
+
+
+    # Synthesis of MOFs
+
+
+    MOFs were synthesized according to published procedures.<sup>76-82</sup> The MIL-101(Fe)
+    and NH<sub>2</sub>-MIL-101(Fe) samples were prepared by the MW technique under
+    atmospheric pressure according to a modified previously reported procedure.<sup>78</sup>
+    For the synthesis of MIL-101(Fe), benzene-1,4-dicarboxylic acid (H<sub>2</sub>BDC)
+    (0.230 g, 1.38 mmol) was dissolved in N, N-dimethylformamide (DMF) (60 mL). Then,
+    FeCl<sub>3</sub> × 6H<sub>2</sub>O (0.748 g, 2.77 mmol) was added. The resulting
+    mixture was stirred, transferred to a glass reactor, and heated in a domestic
+    MW oven (145–155 °C, 40 min). The crude product was separated with DMF (2 × 15
+    mL), soaked in a fresh DMF portion (15 mL) for 24 h, rinsed with EtOH (3 × 15
+    mL), and evacuated (160 °C, 4 h, 10<sup>–3</sup> torr).
+
+
+    For NH<sub>2</sub>-MIL-101(Fe) synthesis, 2-aminobenzene-1,4-dicarboxylic acid
+    (H<sub>2</sub>ABDC) (0.501 g, 2.77 mmol) was dissolved in DMF (60 mL). Then, FeCl<sub>3</sub>
+    × 6H<sub>2</sub>O (0.374 g, 1.38 mmol) was added. The resulting mixture was stirred,
+    transferred to a glass
+
+
+    reactor, and heated in a domestic MW oven (145–155 °C, 45 min). The crude product
+    was separated by centrifugation, rinsed with DMF (2 × 15 mL), soaked in a fresh
+    DMF portion (15 mL) for 24 h, rinsed with EtOH (3 × 15 mL), and evacuated (160
+    °C, 4 h, 10<sup>–3</sup> torr).
+
+
+    # TEM analysis
+
+
+    A target-oriented approach was utilized for the optimization of the analytic measurements.<sup>83</sup>
+    Before measurements, the samples were mounted on a 3 mm copper grid covered with
+    carbon film from an isopropanol suspension. Sample morphology was studied using
+    a Hitachi HT7700 transmission electron microscope. Images were acquired in bright-field
+    TEM mode at an accelerating voltage of 100 kV and an emission current of 8–17
+    mA.
+
+
+    # HR-TEM analysis
+
+
+    HR-TEM micrographs were obtained with a Themis-Z 3.1 instrument (TFS, USA) equipped
+    with an X-FEG monochromator and CS/S double corrector at an accelerating voltage
+    of 200 kV. Elemental analysis was performed with a Super-X EDS detector (energy
+    resolution of approximately 120 eV) in HAADF-STEM mode. The samples for the TEM
+    study were prepared by ultrasonic dispersion in ethanol and consequent deposition
+    of the suspension upon a “holey” carbon film supported on a copper grid.
+
+
+    # Analysis with computational framework combining deep learning and classic computer
+    vision techniques
+
+
+    To study the behavior of nanoparticles in BIF-66, an analysis of the video obtained
+    using TEM was performed. The proposed approach is based on machine calculation
+    models and consists of the sequential application of video frame stream processing
+    (Fig. 7).
+
+
+    Denoising is a preparatory step for cleaning a video image from noise in digital
+    data, which is necessary due to the high sensitivity of machine learning methods
+    (used in the next step – binarization)
+
+
+    ![](img/277c1f92bfbf14a066f08b0c32f71acd_5_0.png)
+
+
+    Fig. 7 Applying machine learning video processing to a TEM video frame: (A) initial
+    frame; (B) denoising; (C) binarization; (D) segmentation.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'to the quality of input data. Denoising is performed by applying a combination
+    of digital filters, which can significantly improve the quality of work at the
+    next stage of binarization.
+
+
+    For the best performance, individual filter settings are required for the particular
+    type of video being examined. However, heuristically, an effective combination
+    of parameters was established that satisfies the use of the U-Net convolutional
+    neural network at a subsequent stage. This makes it possible to increase the flexibility
+    of the approach and the developed software as a whole. In this case, the following
+    sequence of classical digital filters was used:
+
+
+    +   (1) non-local means filter;
+
+    +   (2) bilateral filter;
+
+    +   (3) median filter;
+
+    +   (4) Gaussian filter.
+
+
+    **Binarization** is used to increase the contrast of images on the frames of the
+    video stream with the creation of conditions for the successful solution of the
+    input data segmentation problem at the next stage. For binarization, a convolutional
+    neural network U-Net was used,84 a characteristic feature of which is the use
+    of a combination of a soft max function with a cross-entropy loss function
+
+
+    ![](img/277c1f92bfbf14a066f08b0c32f71acd_6_0.png)
+
+
+    In this case, to implement back propagation algorithm, we find
+
+
+    ![](img/277c1f92bfbf14a066f08b0c32f71acd_6_1.png)
+
+
+    A similar approach has been widely and effectively implemented to provide inference
+    for convolutional neural networks on CUDA devices.
+
+
+    The training sample of the used neural network is formed on the basis of the sample
+    under study and allows processing data from samples of the same type with fairly
+    good flexibility, which increases the stability of the system to changes in the
+    input data.
+
+
+    **Segmentation** allows dividing binarized data into a set of objects with differentiated
+    characteristics. The obtained binarized data are subjected to the contour detection
+    algorithm, which is based on the method of topological structural analysis of
+    images. This results in a list of objects containing a description of each contour
+    in the form of parameters (the coordinates of generating points, moments, hierarchical
+    position relative to other contours, etc.). The resulting list of objects is subjected
+    to additional a posteriori filtering. Thus, for the further operation of the algorithm,
+    only those objects are used, the parameters of which lie in the given ranges of
+    values. Permissible ranges of values are selected by a heuristic method, taking
+    into account the type of sample under study and the parameters of the video stream
+    generation system (frame rate, resolution).
+
+
+    Additional division into groups of parent and child objects was used to facilitate
+    the task of tracking. This allows
+
+
+    redundant calculations to be eliminated, which in turn improves system performance
+    by reducing the processing time of each frame.
+
+
+    Tracking is the final stage of processing, which allows the selection of specific
+    objects in the image and the calculation and tracking of changes in spatial and
+    temporal characteristics. The task of tracking is the identification of objects
+    and the calculation of specified metrics. The identification algorithm consists
+    of finding the similarity coefficient between the objects of adjacent frames.
+    The data processed by the tracking module were preprocessed and filtered. For
+    this reason, each processed object is either a new object that needs to be assigned
+    its own unique index or a previously identified object and requires data to be
+    updated based on the information received.
+
+
+    The similarity coefficient is calculated as a Euclidean distance based on a set
+    of given measures (center of gravity coordinates, area, perimeter, density, and
+    position in the hierarchy). For the calculation, data are taken only for those
+    objects whose parameters lie in the specified ranges of values. Objects with anomalous
+    data are cut off in this way. An example of this is a too high rate of change
+    of tracked parameters, which may mean the appearance of a new object, but with
+    a high similarity score, relative to the objects of the previous frame.
+
+
+    Taking into account the specified ranges of values and the selected data output
+    format, the tracking module generates a list of detected and identified objects,
+    as well as the corresponding calculated characteristics.
+
+
+    # Conflicts of interest
+
+
+    There are no conflicts to declare.
+
+
+    # Acknowledgements
+
+
+    The authors gratefully acknowledge Dr Sci. Vladimir V. Chernyshev (Lomonosov Moscow
+    State University, Faculty of Chemistry) and Dr Sci. Igor V. Mishin (Zelinsky Institute
+    of Organic Chemistry) for acquisition of PXRD patterns. The authors gratefully
+    acknowledge Dr Igor V. Chistyakov for characterization of the ZIF-67 sample with
+    SAED and for helpful advice. The study was supported by the Scientific Schools
+    grant NSh-5199.2022.1.3. The HAADF-STEM research was performed using equipment
+    from the Shared Knowledge Center “National Center of Catalyst Research”. The synthesis
+    of MIL-53, NH2-MIL-53, MIL-101(Fe), NH2-MIL-101(Fe), NH2-MIL-101(Al), BIF-66,
+    ZIF-67, ZIF-8, and HKUST-1 was funded by the Ministry of Science and Higher Education
+    of the Russian Federation, grant no. 075-15-2021-591.
+
+
+    # Notes and references
+
+
+    +   1 Y. Zhao, C. Ye, W. Liu, R. Chen and X. Jiang, *Angew. Chem., Int. Ed.*,
+    2014, 53, 8127–8131.
+
+
+    +   2 Y. Ni, C. Kan and J. Xu, *Phys. Chem. Chem. Phys.*, 2022, 24, 21522–21537.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '+   3 Y. Lu, Q. Hu, Y. Lin, D. B. Pacardo, C. Wang, W. Sun, F. S. Ligler, M.
+    D. Dickey and Z. Gu, Nat. Commun., 2015, 6, 10066.
+
+
+    +   4 H. L. Reddy, J. L. Arias, J. Nicolas and P. Couvreur, Chem. Rev., 2012,
+    112, 5818–5878.
+
+
+    +   5 R. R. Arvizo, S. Bhattacharyya, R. A. Kudgus, K. Giri, R. Bhattacharya and
+    P. Mukherjee, Chem. Soc. Rev., 2012, 41, 2943–2970.
+
+
+    +   6 J. Sun, L. He, Y.-C. Lo, T. Xu, H. Bi, L. Sun, Z. Zhang, S. X. Mao and J.
+    Li, Nat. Mater., 2014, 13, 1007–1012.
+
+
+    +   7 L. Zhong, F. Sansoz, Y. He, C. Wang, Z. Zhang and S. X. Mao, Nat. Mater.,
+    2017, 16, 439–445.
+
+
+    +   8 J. Wang, A. Ouvrard, W. Zheng, S. Carrez, A. Ghalgaoui and B. Bourguignon,
+    Phys. Chem. Chem. Phys., 2023, 25, 10845–10852.
+
+
+    +   9 S. Zhang, X. Tan, Y. Zhou, J. Liu, X. Liang, X. Ding, G. Lyu, Y. Wei, J.
+    Chen, Y. Mao, J. Wu, Y. Huang, Y. Huang, X. Tan and Z. Huang, Phys. Chem. Chem.
+    Phys., 2022, 24, 6193–6207.
+
+
+    +   10 S. Guo, S. Zhang and S. Sun, Angew. Chem., Int. Ed., 2013, 52, 8526–8544.
+
+
+    +   11 D. E. Sanders and A. E. DePristo, Surf. Sci., 1992, 260, 116–128.
+
+
+    +   12 D. V. Wagle and G. A. Baker, Mater. Horiz., 2015, 2, 157–167.
+
+
+    +   13 P. M. Ajayan and L. D. Marks, Phys. Rev. Lett., 1988, 60, 585–587.
+
+
+    +   14 M. Takagi, J. Phys. Soc. Jpn., 1954, 9, 359–363.
+
+
+    +   15 S. B. Vendelbo, C. F. Elkjaer, H. Falsig, I. Puspitasari, P. Dona, L. Mele,
+    B. Morana, B. J. Nelissen, R. van Rijn, J. F. Creemer, P. J. Kooyman and S. Helveg,
+    Nat. Mater., 2014, 13, 884–890.
+
+
+    +   16 P. Grammatikopoulos, M. Sowwan and J. Kioseoglou, Adv. Theory Simul., 2019,
+    2, 1900013.
+
+
+    +   17 J. Li, J. Chen, H. Wang, N. Chen, Z. Wang, L. Guo and F. L. Deepak, Adv.
+    Sci., 2018, 5, 1700992.
+
+
+    +   18 M. A. Asoro, D. Kovar and P. J. Ferreira, Chem. Commun., 2014, 50, 4835–4838.
+
+
+    +   19 Y. Liu and Y. Sun, Nanoscale, 2015, 7, 13687–13693.
+
+
+    +   20 J. M. Yuk, M. Jeong, S. Y. Kim, H. K. Seo, J. Kim and J. Y. Lee, Chem.
+    Commun., 2013, 49, 11479–11481.
+
+
+    +   21 E. Z. da Silva, G. M. Faccin, T. R. Machado, N. G. Macedo, M. de Assis,
+    S. Maya-Johnson, J. C. Sczancoski, J. Andrés, E. Longo and M. A. San-Miguel, J.
+    Phys. Chem. C, 2019, 123, 11310–11318.
+
+
+    +   22 J. C. Sczancoski, S. Maya-Johnson, W. da Silva Pereira, E. Longo and E.
+    R. Leite, Cryst. Growth Des., 2019, 19, 106–115.
+
+
+    +   23 H. Yasuda and H. Mori, Z. Phys. D, 1997, 40, 140–143.
+
+
+    +   24 P. S. Lemos, G. S. Silva, R. A. Roca, M. Assis, R. Torres-Mendieta, H.
+    Beltran-Mir, G. Mínguez-Vega, E. Cordoncillo, J. Andres and E. Longo, Phys. Chem.
+    Chem. Phys., 2019, 21, 6101–6111.
+
+
+    +   25 M. Jose-Yacaman, C. Gutierrez-Wing, M. Miki, D.-Q. Yang, K. N. Piyakis
+    and E. Sacher, J. Phys. Chem. B, 2005, 109, 9703–9711.
+
+
+    +   26 J. Li, Z. Wang, Y. Li and F. L. Deepak, Adv. Sci., 2019, 6, 1802131.
+
+
+    +   27 Y. Ding, F. Fan, Z. Tian and Z. L. Wang, Small, 2009, 5, 2812–2815.
+
+
+    +   28 M. A. Asoro, D. Kovar and P. J. Ferreira, ACS nano, 2013, 7, 7844–7852.
+
+
+    +   29 K. Berlin and A. Trampert, J. Phys. Chem. C, 2018, 122, 2968–2974.
+
+
+    +   30 J. Buha, R. Gaspari, A. E. Del Rio Castillo, F. Bonaccorso and L. Manna,
+    Nano Lett., 2016, 16, 4217–4223.
+
+
+    +   31 D. J. Hellebusch, K. Manthiram, B. J. Berberwyck and A. P. Alivisatos,
+    J. Phys. Chem. Lett., 2015, 6, 605–611.
+
+
+    +   32 J. W. L. Yim, B. Xiang and J. Wu, J. Am. Chem. Soc., 2009, 131, 14526–14530.
+
+
+    +   33 Q. Yu, M. M. Mao, Q. J. Li, X. Q. Fu, H. Tian, J. X. Li, S. X. Mao and
+    Z. Zhang, Nano Lett., 2016, 16, 1156–1160.
+
+
+    +   34 J.-G. Lee, J. Lee, T. Tanaka and H. Mori, Phys. Rev. Lett., 2006, 96, 075504.
+
+
+    +   35 C. Chen, Z. Hu, Y. Li, L. Liu, H. Mori and Z. Wang, Sci. Rep., 2016, 6,
+    19545.
+
+
+    +   36 A. S. Kashin and V. P. Ananikov, Nat. Rev. Chem., 2019, 3, 624–637.
+
+
+    +   37 Y. Zhang, D. Keller, M. D. Rossell and R. Erni, Chem. Mater., 2017, 29,
+    10518–10525.
+
+
+    +   38 S. R. Singh and L. D. Marks, Philos. Mag. Lett., 1989, 60, 31–36.
+
+
+    +   39 D. J. Smith, M. R. McCartney and L. A. Bursill, Ultramicroscopy, 1987,
+    23, 299–303.
+
+
+    +   40 T. Tsuda, T. Sakamoto, Y. Nishimura, S. Seino, A. Imanishi and S. Kuwabata,
+    Chem. Commun., 2012, 48, 1925–1927.
+
+
+    +   41 J. Li and F. Deepak, Chem. Commun., 2020, 56, 4765–4768.
+
+
+    +   42 A. Markevich, S. Kurasch, O. Lehtinen, O. Reimer, X. Feng, K. Müllen, A.
+    Turchanin, A. N. Khlobystov, U. Kaiser and E. Besley, Nanoscale, 2016, 8, 2711–2719.
+
+
+    +   43 K. L. Y. Fung, S. T. Skowron, R. Hayter, S. E. Mason, B. L. Ware, N. A.
+    Besley, Q. M. Ramasse, C. S. Allen and A. N. Khlobystov, Phys. Chem. Chem. Phys.,
+    2023, 25, 9092–9103.
+
+
+    +   44 H. Furukawa, K. E. Cordova, M. O’Keeffe and O. M. Yaghi, Science, 2013,
+    341, 1230444.
+
+
+    +   45 G. Cai, P. Yan, L. Zhang, H.-C. Zhou and H.-L. Jiang, Chem. Rev., 2021,
+    121, 12278–12326.
+
+
+    +   46 M. E. Zick, S. M. Pugh, J.-H. Lee, A. C. Forse and P. J. Milner, Angew.
+    Chem., Int. Ed., 2022, 61, e202206718.
+
+
+    +   47 F. Gandara, H. Furukawa, K. Lee and O. M. Yaghi, J. Am. Chem. Soc., 2014,
+    136, 5271–5274.
+
+
+    +   48 J. D. Martell, P. J. Milner, R. L. Siegelman and J. R. Long, Chem. Sci.,
+    2020, 11, 6457–6471.
+
+
+    +   49 L. Wen, K. Sun, X. Liu, W. Yang, L. Li and H.-L. Jiang, Adv. Mater., 2023,
+    35, 2210669.
+
+
+    +   50 R. Rajak, M. Saraf, P. Kumar, K. Natarajan and S. M. Mobin, Inorg. Chem.,
+    2021, 60, 16986–16995.
+
+
+    +   51 Y. Zhang, L. Jiao, W. Yang, C. Xie and H.-L. Jiang, Angew. Chem., Int.
+    Ed., 2021, 60, 7607–7611.
+
+
+    +   52 T. Zhang and W. Lin, Chem. Soc. Rev., 2014, 43, 5982–5993.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '53 K. Natarajan, A. K. Gupta, S. N. Ansari, M. Saraf and S. M. Mobin, ACS Appl.
+    Mater. Interfaces, 2019, 11, 13295–13303.
+
+
+    54 Y.-B. Huang, J. Liang, X.-S. Wang and R. Cao, Chem. Soc. Rev., 2017, 46, 126–157.
+
+
+    55 A. S. Rosen, J. M. Notestein and R. Q. Snurr, Phys. Chem. Chem. Phys., 2022,
+    24, 8129–8141.
+
+
+    56 Z. Wang, A. Bilegsaikhan, R. T. Jerozal, T. A. Pitt and P. J. Milner, ACS Appl.
+    Mater. Interfaces, 2021, 13, 17517–17531.
+
+
+    57 R. Rajak, M. Saraf, S. K. Verma, R. Kumar and S. M. Mobin, Inorg. Chem., 2019,
+    58, 16065–16074.
+
+
+    58 T. Kitao, T. Miura, R. Nakayama, Y. Tsutsui, Y. S. Chan, H. Hayashi, H. Yamada,
+    S. Seki, T. Hitosugi and T. Uemura, Nat. Synth., 2023, DOI: 10.1038/s44160-023-00310-w.
+
+
+    59 R. Haldar, B. Sen, S. Hurrle, T. Kitao, R. Sankhla, B. Kühl, A. Welle, S. Heissler,
+    G. Brenner-Weiß, P. Thissen, T. Uemura, H. Gliemann, C. Barner-Kowollik and C.
+    Wöll, Eur. Polym. J., 2018, 109, 162–168.
+
+
+    60 X. Zhang, T. Kitao, D. Piga, R. Hongu, S. Bracco, A. Comotti, P. Sozzani and
+    T. Uemura, Chem. Sci., 2020, 11, 10844–10849.
+
+
+    61 H. B. Aiyappara, P. Wilde, T. Quast, J. Masa, C. Andronescu, Y.-T. Chen, M.
+    Muhler, R. A. Fischer and W. Schuhmann, Angew. Chem., Int. Ed., 2019, 58, 8927–8931.
+
+
+    62 X. Lin, Q. Li, Y. Hu, Z. Jin, K. M. Reddy, K. Li, X. Lin, L. Ci and H.-J. Qiu,
+    Small, 2023, 2300612, DOI: 10.1002/smll.202300612.
+
+
+    63 Y.-Z. Chen, R. Zhang, L. Jiao and H.-L. Jiang, Coord. Chem. Rev., 2018, 362,
+    1–23.
+
+
+    64 Y. Zhu, J. Ciston, B. Zheng, X. Miao, C. Czarnik, Y. Pan, R. Sougrat, Z. Lai,
+    C.-E. Hsiung, K. Yao, I. Pinnau, M. Pan and Y. Han, Nat. Mater., 2017, 16, 532–536.
+
+
+    65 D. Esken, S. Turner, O. I. Lebedev, G. Van Tendeloo and R. A. Fischer, Chem.
+    Mater., 2010, 22, 6393–6401.
+
+
+    66 S. Turner, O. I. Lebedev, F. Schröder, D. Esken, R. A. Fischer and G. Van Tendeloo,
+    Chem. Mater., 2008, 20, 5622–5627.
+
+
+    67 O. I. Lebedev, F. Millange, C. Serre, G. Van Tendeloo and G. Férey, Chem. Mater.,
+    2005, 17, 6525–6527.
+
+
+    68 C. Wiktor, S. Turner, D. Zacher, R. A. Fischer and G. Van Tendeloo, Microporous
+    Mesoporous Mater., 2012, 162, 131–135.
+
+
+    69 C. Wiktor, M. Meledina, S. Turner, O. I. Lebedev and R. A. Fischer, J. Mater.
+    Chem. A, 2017, 5, 14969–14989.
+
+
+    70 B. W. Jacobs, R. J. T. Houk, M. R. Anstey, S. D. House, I. M. Robertson, A.
+    A. Talin and M. D. Allendorf, Chem. Sci., 2011, 2, 411–416.
+
+
+    71 C. E. Housecroft and A. G. Sharpe, Inorganic Chemistry, Pearson Education Limited,
+    Essex, 4th edn, 2012.
+
+
+    72 L. Reimer, Transmission Electron Microscopy: Physics of Image Formation and
+    Microanalysis, Springer, Berlin, 1989.
+
+
+    73 B. W. Jacobs, R. J. T. Houk, B. M. Wong, A. A. Talin and M. D. Allendorf, Nanotechnology,
+    2011, 22, 375601.
+
+
+    74 J. C. Azcárate, M. H. Fonticelli and E. Zelaya, J. Phys. Chem. C, 2017, 121,
+    26108–26116.
+
+
+    75 M. Wolf, H. Kotze, N. Fischer and M. Claeys, Faraday Discuss., 2017, 197, 243–268.
+
+
+    76 V. I. Isaeva, O. L. Eliseev, R. V. Kazantsev, V. V. Chernyshev, A. L. Tarasov,
+    P. E. Davydov, A. L. Lapidus and L. M. Kustov, Polyhedron, 2019, 157, 389–395.
+
+
+    77 V. I. Isaeva, M. N. Timofeeva, V. N. Panchenko, I. A. Lukoyanov, V. V. Chernyshev,
+    G. I. Kapustin, N. A. Davshan and L. M. Kustov, J. Catal., 2019, 369, 60–71.
+
+
+    78 V. I. Isaeva, O. L. Eliseev, V. V. Chernyshev, T. N. Bondarenko, V. V. Vergun,
+    G. I. Kapustin, A. L. Lapidus and L. M. Kustov, Polyhedron, 2019, 158, 55–64.
+
+
+    79 K. M. L. Taylor-Pashow, J. Della Rocca, Z. Xie, S. Tran and W. Lin, J. Am.
+    Chem. Soc., 2009, 131, 14261–14263.
+
+
+    80 E. S. Degtyareva, K. S. Erokhin and V. P. Ananikov, Catal. Commun., 2020, 146,
+    106119.
+
+
+    81 V. I. Isaeva, K. Papatthanasiu, V. V. Chernyshev, L. Glukhov, G. Deyko, K.
+    K. Bisht, O. P. Tkachenko, S. V. Savilov, N. A. Davshan and L. M. Kustov, ACS
+    Appl. Mater. Interfaces, 2021, 13, 59803–59819.
+
+
+    82 V. I. Isaeva, B. R. Saifutdinov, V. V. Chernyshev, V. V. Vergun, G. I. Kapustin,
+    Y. P. Kurnysheva, M. M. Ilyin and L. M. Kustov, Molecules, 2020, 25, 2648.
+
+
+    83 V. V. Kachala, L. L. Khemchyan, A. S. Kashin, N. V. Orlov, A. A. Graclev, S.
+    S. Zalesskiy and V. P. Ananikov, Russ. Chem. Rev., 2013, 82, 648–685.
+
+
+    84 O. Ronneberger, P. Fischer and T. Brox, arXiv, 2015, preprint, arXiv:1505.04597.'
+  merge: -1
+  img_proc: true
