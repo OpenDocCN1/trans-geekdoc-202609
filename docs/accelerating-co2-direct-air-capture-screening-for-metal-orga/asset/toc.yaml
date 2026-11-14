@@ -1,0 +1,26 @@
+level_changes:
+- line: 62
+  before: 2
+  after: 3
+- line: 84
+  before: 2
+  after: 3
+- line: 88
+  before: 2
+  after: 3
+- line: 112
+  before: 2
+  after: 3
+- line: 141
+  before: 2
+  after: 3
+- line: 158
+  before: 2
+  after: 3
+- line: 290
+  before: 2
+  after: 3
+text_changes:
+- line: 0
+  before: 可迁移机器学习力场加速金属有机框架CO2直接空气捕集筛选
+  after: 可迁移机器学习力场加速金属有机框架CO₂直接空气捕集筛选

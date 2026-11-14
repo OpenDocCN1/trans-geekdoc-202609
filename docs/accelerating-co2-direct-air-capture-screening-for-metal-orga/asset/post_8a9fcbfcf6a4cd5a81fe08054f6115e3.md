@@ -1,0 +1,98 @@
+
+47. McCloskey, M., and Cohen, N.J. (1989). Catastrophic interference in connectionist networks: The sequential learning problem. Psychol. Learn. Motiv. 24, 109–165.
+
+48. Luo, Y., Yang, Z., Meng, F., Li, Y., Zhou, J., and Zhang, Y. (2023). An empirical study of catastrophic forgetting in large language models during continual fine-tuning. Preprint at arXiv. https://arxiv.org/abs/2308.08747.
+
+49. Kudithipudi, D., Aguilar-Simon, M., Babb, J., Bazhenov, M., Blackiston, D., Bongard, J., Brna, A.P., Chakraborty Raja, S., Cheney, N., Clune, J., et al. (2022). Biological underpinnings for lifelong learning machines. Nat. Mach. Intell. 4, 196–210.
+
+50. Chen, Z., and Liu, B. (2018). Lifelong Machine Learning (Morgan & Claypool Publishers).
+
+51. Li, W., Rao, Z., Chung, Y.G., and Li, S. (2017). The Role of Partial Atomic Charge Assignment Methods on the Computational Screening of Metal-Organic Frameworks for CO2 Capture under Humid Conditions. ChemistrySelect 2, 9458–9465.
+
+52. Kancharapalli, S., Gopalan, A., Haranczyk, M., and Snurr, R.Q. (2021). Fast and accurate machine learning strategy for calculating partial atomic charges in metal–organic frameworks. J. Chem. Theory Comput. 17, 3052–3064.
+
+53. Dubbeldam, D., Calero, S., Ellis, D.E., and Snurr, R.Q. (2016). RASPA: molecular simulation software for adsorption and diffusion in flexible nanoporous materials. Mol. Simul. 42, 81–101.
+
+54. Zheng, B., Sant, M., Demontis, P., and Suffritti, G.B. (2012). Force field for molecular dynamics computations in flexible ZIF-8 framework. J. Phys. Chem. C 116, 933–938.
+
+55. Wang, J., Wolf, R.M., Caldwell, J.W., Kollman, P.A., and Case, D.A. (2004). Development and testing of a general amber force field. J. Comput. Chem. 25, 1157–1174.
+
+56. Bhatt, P.M., Belmabkhout, Y., Cadiou, A., Adil, K., Shekhah, O., Shkurenenko, A., Barbour, L.J., and Eddaoudi, M. (2016). A fine-tuned fluorinated MOF addresses the needs for trace CO2 removal and air capture using physisorption. J. Am. Chem. Soc. 138, 9301–9307.
+
+57. Mukherjee, S., Siddar, N., O’Nolan, D., Franz, D.M., Gascón, V., Kumar, A., Kumar, N., Scott, H.S., Madden, D.G., Kruger, P.E., et al. (2019). Trace CO2 capture by an ultramicroporous physisorbent with low water affinity. Sci. Adv. 5, eaax9171.
+
+58. Lin, J.-B., Nguyen, T.T.T., Vaidhyanathan, R., Burner, J., Taylor, J.M., Durekova, H., Akhtar, F., Mah, R.K., Ghaffari-Nik, O., Marx, S., et al. (2021). A scalable metal-organic framework as a durable physisorbent for carbon dioxide capture. Science 374, 1464–1469.
+
+59. Wang, X., Alazayer, M., Shih, A.J., Bose, S., Xie, H., Vornholt, S.M., Malliakas, C.D., Alhashem, H., Joodaki, F., Marzouk, S., et al. (2024). Tailoring Hydrophobicity and Pore Environment in Physisorbents for Improved Carbon Dioxide Capture under High Humidity. J. Am. Chem. Soc. 146, 3943–3954.
+
+60. Lu, W., Wei, Z., Gu, Z.-Y., Liu, T.-F., Park, J., Park, J., Tian, J., Zhang, M., Zhang, Q., Gentile, T., 3rd., et al. (2014). Tuning the structure and function of metal-organic frameworks via linker design. Chem. Soc. Rev. 43, 5561–5593.
+
+61. Demessence, A., D’Alessandro, D.M., Foo, M.L., and Long, J.R. (2009). Strong CO2 binding in a water-stable, triazole-bridged metal–organic framework functionalized with ethylenediamine. J. Am. Chem. Soc. 131, 8784–8786.
+
+62. McDonald, T.M., Lee, W.R., Mason, J.A., Wiers, B.M., Hong, C.S., and Long, J.R. (2012). Capture of carbon dioxide from air and flue gas in the alkylamine-appended metal–organic framework mmen-Mg2 (dobpdc). J. Am. Chem. Soc. 134, 7056–7065.
+
+63. McDonald, T.M., Mason, J.A., Kong, X., Bloch, E.D., Gygi, D., Dani, A., Crocella, V., Giordano, F., Odoh, S.O., Drisdell, W.S., et al. (2015). Cooperative insertion of CO2 in diamine-appended metal-organic frameworks. Nature 519, 303–308.
+
+64. Zhou, Z., Ma, T., Zhang, H., Chheda, S., Li, H., Wang, K., Ehrling, S., Giovane, R., and Li, C. (2024). Carbon dioxide capture from open air using co-valent organic frameworks. Nature 635, 96–101.
+
+65. Shekhah, O., Belmabkhout, Y., Chen, Z., Guillem, V., Cairns, A., Adil, K., and Eddaoudi, M. (2014). Made-to-order metal-organic frameworks for trace carbon dioxide removal and air capture. Nat. Commun. 5, 4228.
+
+66. Ullah, S., Tan, K., Sensharma, D., Kumar, N., Mukherjee, S., Bezrukov, A., Li, J., Zaworotko, M.J., and Thonhauser, T. (2022). CO2 Capture by Hybrid Ultramicroporous TIFSIX-3-Ni under Humid Conditions Using Non-Equilibrium Cycling. Angew. Chem. 61, e202206613.
+
+67. Low, M.-Y.A., Danaci, D., Azzan, H., Jiayi, A.L., Yong, G.W.S., Itsikou, I., and Petit, C. (2024). Physicochemical Properties, Equilibrium Adsorption Performance, Manufacturability, and Stability of TIFSIX-3-Ni for Direct Air Capture of CO2. Energy & Fuels 38, 11947–11965.
+
+68. Liu, X.-J., Wang, X., Ju, J.-L., Tian, D., Chen, R.-Y., Xu, J., and Bu, X.-H. (2017). Selective gas adsorption and fluorescence sensing response of a Zn(II) metal-organic framework constructed by a mixed-ligand strategy. Dalton Trans. 46, 4893–4897.
+
+69. Heymans, N., Bourrelly, S., Normand, P., Bloch, E., Mkhadder, H., Cooper, L., Gorman, M., Bouzidi, I., Guillou, N., De Weireld, G., and Devic, T. (2020). Small-Pore Gallates MOFs for Environmental Applications: Sorption Behaviors and Structural Elucidation of Their High Affinity for CO2. J. Phys. Chem. C 124, 3188–3195.
+
+70. Liao, P.-Q., Zhou, D.-D., Zhu, A.-X., Jiang, L., Lin, R.-B., Zhang, J.-P., and Chen, X.-M. (2012). Strong and dynamic CO2 sorption in a flexible porous framework possessing guest chelating claws. J. Am. Chem. Soc. 134, 17380–17383.
+
+71. Cadiou, A., Adil, K., Bhatt, P.M., Belmabkhout, Y., and Eddaoudi, M. (2016). A metal-organic framework-based splitter for separating propylene from propane. Science 353, 137–140.
+
+72. He, H., Sun, F., Su, H., Jia, J., Li, Q., and Zhu, G. (2014). Syntheses, structures and luminescence properties of three metal–organic frameworks based on 5-(4-(2 H-tetrazol-5-yl) phenoxy) isophthalic acid. CrystEngComm (Camb.) 16, 339–343.
+
+73. Liao, P.-Q., Zhu, A.-X., Zhang, W.-X., Zhang, J.-P., and Chen, X.-M. (2015). Self-catalyzed aerobic oxidation of organic linker in porous crystal for on-demand regulation of sorption behaviours. Nat. Commun. 6, 6350.
+
+74. Wei, Q., Yang, D., Larson, T.E., Kinnibrugh, T.L., Zou, R., Henson, N.J., Timofeeva, T., Xu, H., Zhao, Y., and Mattes, B.R. (2012). Kinetic hysteresis in gas adsorption behavior for a rigid MOF arising from zig-zag channel structures. J. Mater. Chem. 22, 10166–10171.
+
+75. Song, C., He, Y., Li, B., Ling, Y., Wang, H., Feng, Y., Krishna, R., and Chen, B. (2014). Enhanced CO2 sorption and selectivity by functionalization of a NbO-type metal–organic framework with polarized benzothiadiazole moieties. Chem. Commun. 50, 12105–12108.
+
+76. He, J., Duan, J., Shi, H., Huang, J., Huang, J., Yu, L., Zeller, M., Hunter, A. D., and Xu, Z. (2014). Immobilization of volatile and corrosive iodine monoxide (ICI) and I2 reagents in a stable metal-organic framework. Inorg. Chem. 53, 6837–6843.
+
+77. Zhao, P., Lampronti, G.I., Lloyd, G.O., Suard, E., and Redfern, S.A.T. (2014). Direct visualisation of carbon dioxide adsorption in gate-opening zeolitic imidazolate framework ZIF-7. J. Mater. Chem. A 2, 620–623.
+
+78. Park, K.S., Ni, Z., Côté, A.P., Choi, J.Y., Huang, R., Uribe-Romo, F.J., Chae, H.K., O’Keeffe, M., and Yaghi, O.M. (2006). Exceptional chemical and thermal stability of zeolitic imidazolate frameworks. Proc. Natl. Acad. Sci. USA 103, 10186–10191.
+
+79. Qin, J.S., Bao, S.J., Li, P., Xie, W., Du, D.Y., Zhao, L., Lan, Y.Q., and Su, Z. (2014). A stable porous anionic metal–organic framework for luminescence sensing of Ln3+ ions and detection of nitrobenzene. Chem. Asian J. 9, 749–753.
+
+80. Douvli, A., Papaefstathiou, G.S., Gullo, M.P., Barbieri, A., Tsiapis, A.C., Malliakas, C.D., Kanatzidis, M.G., Papadas, I., Armatas, G.S., Hadjimitsirou, A.G., et al. (2015). Alkaline earth metal ion/dihydroxy–terephthalate MOFs: structural diversity and unusual luminescent properties. Inorg. Chem. 54, 5813–5826.
+
+81. Liao, P.-Q., Zhang, W.-X., Zhang, J.-P., and Chen, X.-M. (2015). Efficient purification of ethane by an ethane-trapping metal-organic framework. Nat. Commun. 6, 8897.
+
+82. Bose, S., Sengupta, D., Rayder, T.M., Wang, X., Kirilkovai, K.O., Sekizkardes, A.K., Islamoglu, T., and Farha, O.K. (2024). Challenges and opportunities: Metal-organic frameworks for direct air capture. Adv. Funct. Mater. 34, 2307478.
+
+83. Kingma, D.P. (2014). Adam: A method for stochastic optimization. Preprint at arXiv. https://arxiv.org/abs/1412.6980.
+
+84. Hjort Larsen, A., Jørgen Mortensen, J., Blomqvist, J., Castelli, I.E., Christensen, R., Dułak, M., Friis, J., Groves, M.N., Hammer, B., Hargus, C., et al. (2017). The atomic simulation environment—a Python library for working with atoms. J. Phys. Condens. Matter 29, 273002.
+
+85. Kresse, G., and Hafner, J. (1993). Ab initio molecular dynamics for liquid metals. Physical review B 47, 558–561.
+
+86. Kresse, G., and Furthmüller, J. (1996). Efficiency of ab-initio total energy calculations for metals and semiconductors using a plane-wave basis set. Comput. Mater. Sci. 6, 15–50.
+
+87. Kresse, G., and Furthmüller, J. (1996). Efficient iterative schemes for ab initio total-energy calculations using a plane-wave basis set. Phys. Rev. B 54, 11169–11186.
+
+88. Perdew, J.P., Burke, K., and Ernzerhof, M. (1996). Generalized gradient approximation made simple. Phys. Rev. Lett. 77, 3865–3868.
+
+89. Rosen, A.S., Iyer, S.M., Ray, D., Yao, Z., Aspuru-Guzik, A., Gagliardi, L., Notestein, J.M., and Snurr, R.Q. (2021). Machine learning the quantum-chemical properties of metal-organic frameworks for accelerated materials discovery. Matter 4, 1578–1597.
+
+90. Grimme, S., Antony, J., Ehrlich, S., and Krieg, H. (2010). A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu. J. Chem. Phys. 132, 154104.
+
+91. Grimme, S., Ehrlich, S., and Goerigk, L. (2011). Effect of the damping function in dispersion corrected density functional theory. J. Comput. Chem. 32, 1456–1465.
+
+92. Plimpton, S. (1995). Fast parallel algorithms for short-range molecular dynamics. J. Comput. Phys. 117, 1–19.
+
+93. Eggimann, B.L., Sunnarborg, A.J., Stern, H.D., Bliss, A.P., and Siepmann, J.I. (2014). An online parameter and property database for the TraPPE force field. Mol. Simul. 40, 101–105.
+
+94. Berendsen, H.J.C., Grigera, J.-R., and Straatsma, T.P. (1987). The missing term in effective pair potentials. J. Phys. Chem. 91, 6269–6271.
+
+95. Willems, T.F., Rycroft, C.H., Kazi, M., Meza, J.C., and Haranczyk, M. (2012). Algorithms and tools for high-throughput geometry-based analysis of crystalline porous materials. Microporous Mesoporous Mater. 149, 134–141.
