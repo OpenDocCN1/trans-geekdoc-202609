@@ -1,0 +1,15 @@
+![](bbox=[0.25, 0.09, 0.75, 0.23])
+
+Figure 22.3: Illustration of causal 2d convolution in the PixelCNN model. The red histogram shows the empirical distribution over discretized values for a single pixel of a single RGB channel. The red and green \( 5 \times 5 \) array shows the binary mask, which selects the top left context, in order to ensure the convolution is causal. The diagrams on the right illustrate how we can avoid blind spots by using a vertical context stack, that contains all previous rows, and a horizontal context stack, that just contains values from the current row. From Figure 1 of [Oor+16]. Used with kind permission of Aaron van den Oord.
+
+Various extensions of this model have been proposed. The pixelCNN++ model of [Sal+17c] improved the quality by using a mixture of logistic distributions, to capture the multimodality of \( p(x_t | x_{1:t-1}) \). The pixelRNN of [OKK16] combined masked convolution with an RNN to get even longer range contextual dependencies. The Subscale Pixel Network of [MK19] proposed to generate the pixels such that the higher order bits are sampled before lower order bits, which allows high resolution details to be sampled conditioned on low resolution versions of the whole image, rather than just the top left corner.
+
+# 22.4 Transformers
+
+We introduced transformers in Section 16.3.5. They can be used for encoding sequences (as in BERT), or for decoding (generating) sequences. We can also combine the two, using an encoder-decoder combination, for conditional generation from \( p(y|c) \). Alternatively, we can define a joint sequence model \( p(c, y) \), where \( c \) is the conditioning or context prompt, and then just condition the joint model, by giving it as the initial context.
+
+The decoder (generator) works as follows. At each step \( t \), the model applies masked (causal) self attention (Section 16.2.7) to the first \( t \) inputs, \( y_{1:t} \), to compute a set of attention weights, \( a_{1:t} \). From this it computes an activation vector \( z_t = \sum_{\tau=1}^t a_\tau y_\tau \). This is then passed through a feed-forward layer to compute \( h_t = \text{MLP}(z_t) \). This process is repeated for each layer in the model. Finally the output is used to predict the next element in the sequence, \( y_{t+1} \sim \text{Cat}(\text{softmax}(W h_t)) \).
+
+At training time, all predictions can happen in parallel, since the target generated sequence is already available. That is, the \( t \)'th output \( y_t \) can be predicted given inputs \( y_{1:t-1} \), and this can be done for all \( t \) simultaneously. However, at test time, the model must be applied sequentially, so the output generated at \( t + 1 \) is fed back into the model to predict \( t + 2 \), etc. Note that the running time of transformers is \( O(T^2) \), although a variety of more efficient versions have been developed (see e.g., [Mur22, Sec 15.6] for details).
+
+Transformers are the basis of many popular (conditional) generative models for sequences. We give some examples below.

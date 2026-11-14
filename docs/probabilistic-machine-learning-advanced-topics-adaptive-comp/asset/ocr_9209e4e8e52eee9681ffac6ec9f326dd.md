@@ -1,0 +1,19 @@
+were generated according to the following assumption, known as Imbens’ Sensitivity Model:
+
+$$U_i \stackrel{\text{iid}}{\sim} \text{Bern}(1/2)$$ (36.96)
+
+$$A_i | X_i, U_i \stackrel{\text{iid}}{\sim} \text{Bern}(\text{sig}(\gamma X_i + \alpha U_i))$$ (36.97)
+
+$$Y_i | X_i, A_i, U_i \stackrel{\text{iid}}{\sim} \mathcal{N}(\tau A_i + \beta X_i + \delta U_i, \sigma^2).$$ (36.98)
+
+where sig is the sigmoid function.
+
+If we had observed \( U_i \), we could estimate \( (\hat{\tau}, \hat{\gamma}, \hat{\beta}, \hat{\alpha}, \hat{\delta}, \hat{\sigma}^2) \) from the data and report \( \hat{\tau} \) as the estimate of the average treatment effect. Since \( U_i \) is not observed, it is not possible to identify the parameters from the data. Instead, we make (subjective) judgements about plausible values of \( \alpha \) — how strongly \( U_i \) affects the treatment assignment — and \( \delta \) — how strongly \( U_i \) affects the outcome. Contingent on plausible \( \alpha = \alpha^* \) and \( \delta = \delta^* \), the other parameters can be estimated. This yields an estimate of the treatment effect \( \hat{\tau}(\alpha^*, \delta^*) \) under the presumed values of the sensitivity parameters.
+
+The approach just outlined has a major drawback: it relies on a parametric model for the full data generating process. The assumed model is equivalent to assuming that, had \( U \) been observed, it would have been appropriate to use logistic regression to model treatment assignment, and linear regression to model the outcome. This assumption also implies a simple, parametric model for the relationships governing the observed data. This restriction is out of step with modern practice, where we use flexible machine-learning methods to model these relationships. For example, the assumption forbids the use of neural networks or random forests, though such methods are often state-of-the-art for causal effect estimation.
+
+**Austen plots** We now turn to developing an alternative an adaptation of Imbens’ approach that fully decouples sensitivity analysis and modeling of the observed data. Namely, the **Austen plots** of [VZ20]. An example Austen plot is shown in Figure 36.7. The high-level idea is to posit a generative model that uses a simple, interpretable parametric form for the influence of the unobserved confounder, but that **puts no constraints on the model for the observed data**. We then use the parametric part of the model to formalize “confounding strength” and to compute the induced bias as a function of the confounding.
+
+Austen plots further adapt two strategies pioneered by Imbens [Imb03]. First, we find a parameterization of the model so that the sensitivity parameters, measuring strength of confounding, are on a standardized, unitless scale. This allows us to compare the strength of hypothetical unobserved confounding to the strength of observed covariates, measured from data. Second, we plot the curve of all values of the sensitivity parameter that would yield given level of bias. This moves the analyst judgment from “what are plausible values of the sensitivity parameters?” to “are sensitivity parameters this extreme plausible?”
+
+Figure 36.7, an Austen plot for an observational study of the effect of combination medications on diastolic blood pressure, illustrates the idea. A bias of 2 would suffice to undermine the qualitative conclusion that the blood-pressure treatment is effective. Examining the plot, an unobserved confounder as strong as age could induce this amount of confounding, but no other (group of) observed confounders has so much influence. Accordingly, if a domain expert thinks an unobserved confounder as strong as age is unlikely then they may conclude that the treatment is likely effective. Or, if such a confounder is plausible, they may conclude that the study fails to establish efficacy.

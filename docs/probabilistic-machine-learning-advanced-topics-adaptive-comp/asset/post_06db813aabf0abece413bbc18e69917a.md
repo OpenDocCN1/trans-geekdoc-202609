@@ -1,0 +1,73 @@
+
+- [UTR14] B. Ustun, S. Tracà, and C. Rudin. Supersparse Linear Integer Models for Interpretable Classification. 2014. arXiv: 1306.6677 [stat.ML].
+- [Uur+17] V. Uurtio, J. M. Monteiro, J. Kandola, J. Shawe-Taylor, D. Fernandez-Reyes, and J. Rousu. "A Tutorial on Canonical Correlation Methods". In: ACM Computing Surveys (2017).
+- [UVL16] D. Ulyanov, A. Vedaldi, and V. Lempitsky. "Instance Normalization: The Missing Ingredient for Fast Stylization". In: (2016). arXiv: 1607.08022 [cs.CV].
+- [Uvl18] D. Ulyanov, A. Vedaldi, and V. Lempitsky. "Deep Image Prior". In: CVPR. 2018.
+- [Vaa00] A. W. Van der Vaart. Asymptotic statistics. Vol. 3. Cambridge university press, 2000.
+- [Val00] H. Valpola. "Bayesian Ensemble Learning for Nonlinear Factor Analysis". PhD thesis. Helsinki University of Technology, 2000.
+- [Van10] J. Vanhatalo. "Speeding up the inference in Gaussian process models". PhD thesis. Helsinki University, 2010.
+- [Van14] J. VanderPlas. Frequentism and Bayesianism III: Confidence, Credibility, and why Frequentism and Science do not Mix. Blog post. 2014.
+- [van+18] H. van Hasselt, Y. Doron, F. Strub, M. Hessel, N. Sonnerat, and J. Modayil. Deep Reinforcement Learning and the Deadly Triad. arXiv:1812.02648. 2018.
+- [Vas+17a] A. B. Vasudevan, M. Gygli, A. Volokitin, and L. Van Gool. "Query-adaptive video summarization via quality-aware relevance estimation". In: Proceedings of the 25th ACM international conference on Multimedia. 2017, pp. 582–590.
+- [Vas+17b] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, L. Kaiser, and I. Polosukhin. "Attention is all you need". In: NIPS. 2017, pp. 5998–6008.
+- [Vas+17c] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, L. Kaiser, and I. Polosukhin. "Attention Is All You Need". In: NIPS. 2017.
+- [Vaz+22] S. Vaze, K. Han, A. Vedaldi, and A. Zisserman. "Open-Set Recognition: A Good Closed-Set Classifier is All You Need?". In: ICLR. 2022.
+- [VBW15] S. S. Villar, J. Bowden, and J. Wason. "Multi-armed Bandit Models for the Optimal Design of Clinical Trials: Benefits and Challenges". en. In: Stat. Sci. 30.2 (2015), pp. 199–215.
+- [VCB22] M. J. Vowels, N. C. Camgoz, and R. Bowden. "D'ya Like DAGs? A Survey on Structure Learning and Causal Discovery". In: ACM Comput. Surv. 55.4 (Nov. 2022), pp. 1–36.
+- [VDMW03] R. Van Der Merwe and E. Wan. "Sigma-Point Kalman Filters for probabilistic inference in dynamic state-space models". In: Workshop on Advances in ML. 2003.
+- [Ved+18] R. Vedantam, I. Fischer, J. Huang, and K. Murphy. "Generative Models of Visually Grounded Imagination". In: ICLR. 2018.
+- [Veh+15] A. Vehtari, D. Simpson, A. Gelman, Y. Yao, and J. Gabry. "Pareto Smoothed Importance Sampling". In: (July 2015). arXiv: 1507.02646 [stat.CO].
+- [Veh+19] A. Vehtari, A. Gelman, D. Simpson, B. Carpenter, and P.-C. Bürkner. "Rank-normalization, folding, and localization: An improved R^2 for assessing convergence of MCMC". In: (2019). arXiv: 1903.08008 [stat.CO].
+- [Vei+21] V. Veitch, A. D’Amour, S. Yadlowsky, and J. Eisenstein. "Counterfactual Invariance to Spurious Correlations: Why and How to Pass Stress Tests". In: Advances in Neural Information Processing Systems. 2021.
+- [Veli+17] P. Veličković, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio. "Graph attention networks". In: arXiv preprint arXiv:1710.10903 (2017).
+- [Ver18] R. Vershynin. High-Dimensional Probability: An Introduction with Applications in Data Science. en. 1 edition. Cambridge University Press, 2018.
+- [Ver+19] A. Vergari, A. Molina, R. Peharz, Z. Ghahramani, K. Kersting, and I. Valera. "Automatic Bayesian Density Analysis". In: AAAI. 2019.
+- [VF+80] B. C. Van Fraassen et al. The scientific image. Oxford University Press, 1980.
+- [VGG17] A. Vehtari, A. Gelman, and J. Gabry. "Practical Bayesian model evaluation using leave-one-out cross-validation and WAIC". In: Stat. Comput. 27.5 (2017), pp. 1413–1432.
+- [VGS05] V. Vovk, A. Gammerman, and G. Shafer. Algorithmic Learning in a Random World. en. Springer, 2005.
+- [VGS22] V. Vovk, A. Gammerman, and G. Shafer. Algorithmic Learning in a Random World. en. Second. Springer, 2022.
+- [Vid99] P. Vidoni. "Exponential Family State Space Models Based on a Conjugate Latent Process". In: J. R. Stat. Soc. Series B Stat. Methodol. 61.1 (1999), pp. 213–221.
+- [Vil08] C. Villani. Optimal Transport: Old and New. Grundlehren der mathematischen Wissenschaften. Springer Berlin Heidelberg, 2008.
+- [Vil+19] R. Villages, A. Pathak, H. Kannan, D. Erhan, Q. V. Le, and H. Lee. "High Fidelity Video Prediction with Large Stochastic Recurrent Neural Networks". In: NIPS. 2019.
+- [Vin+08] P. Vincent, H. Larochelle, Y. Bengio, and P.-A. Manzagol. "Extracting and composing robust features with denoising autoencoders". In: Proceedings of the 25th international conference on Machine learning. 2008, pp. 1096–1103.
+- [Vin+10a] P. Vincent, H. Larochelle, I. Lajoie, Y. Bengio, and P.-A. Manzagol. "Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion". In: Journal of machine learning research 11.Dec (2010), pp. 3371–3408.
+- [Vin+10b] M. Vinyls, J. Cerquides, J. Rodriguez-Aguilar, and A. Farinelli. "Worst-case bounds on the quality of max-product fixed-points". In: NIPS. 2010.
+- [Vin11] P. Vincent. "A connection between score matching and denoising autoencoders". In: Neural computation 23.7 (2011), pp. 1661–1674.
+- [Vir10] S. Virtanen. "Bayesian exponential family projections". MA thesis. Aalto University, 2010.
+- [Vis+06] S. V. N. Vishwanathan, N. N. Schraudolph, M. W. Schmidt, and K. P. Murphy. "Accelerated training of conditional random fields with stochastic gradient methods". In: ICML. ACM Press, 2006.
+- [Vis+10] S. V. N. Vishwanathan, N. N. Schraudolph, R. Kondor, and K. M. Borgwardt. "Graph Kernels". In: JMLR 11 (2010), pp. 1201–1242.
+- [Vit67] A. Viterbi. "Error bounds for convolutional codes and an asymptotically optimal decoding algorithm". In: IEEE Trans. on Information Theory 13.2 (1967), pp. 260–269.
+- [VJH09] J. Vanhatalo, P. Jylänki, and A. Vehtari. "Gaussian process regression with Student-t likelihood". In: NIPS. Vol. 22. 2009.
+- [VKA20a] A. Vahdat and J. Kautz. "NVAE: A Deep Hierarchical Variational Autoencoder". In: NIPS. 2020.
+- [VKB20b] A. Vahdat and J. Kautz. "Nvae: A deep hierarchical variational autoencoder". In: arXiv preprint arXiv:2007.03898 (2020).
+- [VKK21] A. Vahdat, K. Kreis, and J. Kautz. "Score-based Generative Modeling in Latent Space". In: NIPS. June 2021.
+- [VLT21] G. M. van de Ven, Z. Li, and A. S. Tolias. "Class-Incremental Learning with Generative Classifiers". In: CVPR workshop on Continual Learning in Computer Vision (CVVision). 2021.
+- [Vo+15] B.-N. Vo, M. Mallick, Y. Bar-Shalom, S. Coraluppi, R. Osborne, R. Mahler, B.-t Vo, and J. Webster. Multitarget tracking. John Wiley and Sons, 2015.
+- [Von13] P. Vontobel. "The Bethe permanent of a non-negative matrix". In: IEEE Trans. Info. Theory 59.3 (2013).
+- [Vov13] V. Vovk. "Kernel Ridge Regression". In: Empirical Inference: Festschrift in Honor of Vladimir N. Vapnik. Ed. by B. Schölkopf, Z. Luo, and V. Vovk. Springer Berlin Heidelberg, 2013, pp. 105–116.
+- [VPV10] J. Vanhatalo, V. Pietiläinen, and A. Vehtari. "Approximate inference for disease mapping with sparse Gaussian processes". In: Statistics in Medicine 29.15 (2010), pp. 1580–1607.
+- [vR11] M. van der Laan and S. Rose. Targeted Learning: Causal Inference for Observational and Experimental Data. Jan. 2011.
+- [VR18] S. Verma and J. Rubin. "Fairness Definitions Explained". In: 2018 IEEE/ACM International Workshop on Software Fairness (FairWare). May 2018, pp. 1–7.
+- [VRF11] C. Varin, N. Reid, and D. Firth. "An overview of composite likelihood methods". In: Stat. Sci. 21.1 (2011), pp. 5–42.
+- [VS11] T. J. VanderWeele and I. Shpitser. "A new criterion for confounder selection". In: Biosemiotics (2011).
+- [VT18] G. M. van de Ven and A. S. Tolias. "Three scenarios for continual learning". In: NeurIPS Continual Learning workshop. 2018.
+- [VW21] J. de Vilmarest and O. Wintenberger. "Viking: Variational Bayesian Variance Tracking". In: (Apr. 2021). arXiv: 2104.10777 [cs.LG].
+- [Vyt+19] D. Vytiniotis, D. Belov, R. Wei, G. Plotkin, and M. Abadi. "The differentiable curry". In: NeurIPS 2019 Workshop Program Transformations. 2019.
+- [VVZ20] V. Veitch and A. Zaverkin. "Sense and Sensitivity Analysis: Simple Post-Hoc Analysis of Bias Due to Unobserved Confounding". In: Advances in Neural Information Processing Systems. Ed. by H. Larochelle, M. Ranzato, R. Hadsell, M. F. Balcan, and H. Lin. Vol. 33. Curran Associates, Inc., 2020, pp. 10999–11009.
+- [WA18] A. Wilson and R. Adams. "Gaussian process kernels for pattern discovery and extrapolation". In: ICML. International conference on machine learning. 2013, pp. 1067–1075.
+- [Wal+09] H. Wallach, I. Murray, R. Salakhutdinov, and D. Mimno. "Evaluation Methods for Topic Models". In: ICML. 2009.
+- [Wal+20] M. Walmsley et al. "Galaxy Zoo: probabilistic morphology through Bayesian CNNs and active learning". In: Monthly Notices Royal Astronomical Society 491.2 (2020), pp. 1554–1574.
+- [Wal47] A. Wald. "An Essentially Complete Class of Admissible Decision Functions". en. In: Ann. Math. Stat. 18.4 (1947), pp. 549–555.
+- [Wan+16] Z. Wang, T. Schaul, M. Hessel, H. van Hasselt, M. Lanctot, and N. de Freitas. "Dueling Network Architectures for Deep Reinforcement Learning". In: ICML. 2016.
+- [Wan17] M. P. Wand. "Fast Approximate Inference for Arbitrarily Large Semiparametric Regression Models via Message Passing". In: JASA 112.517 (2017), pp. 137–168.
+- [Wan+17a] T. Wang, C. Rudin, F. Doshi-Velez, Y. Liu, E. Klampfl, and P. MacNeille. "A bayesian framework for learning rule sets for interpretable classification". In: The Journal of Machine Learning Research 18.1 (2017), pp. 2357–2393.
+- [Wan+17b] X. Wang, T. Li, S. Sun, and J. M. Corchado. "A Survey of Recent Advances in Particle Filters and Remaining Challenges for Multitarget Tracking". en. In: Sensors 17.12 (2017).
+- [Wan+17c] Y. Wang et al. "Tacotron: Towards End-to-End Speech Synthesis". In: Interspeech. 2017.
+- [Wan+18] T.-C. Wang, M.-Y. Liu, J.-Y. Zhu, G. Liu, A. Tao, J. Kautz, and B. Catanzaro. "Video-to-video synthesis". In: Proceedings of the 32nd International Conference on Neural Information Processing Systems. 2018, pp. 1152–1164.
+- [Wan+19a] K. Q. Weinberger, G. G. Wilson, S. Tyree, K. Weinberger, and A. G. Wilson. "Exact Gaussian Processes on a Million Data Points". In: NIPS. 2019, pp. 14622–14632.
+- [Wan+19b] S. Wang, W. Bai, C. Lavania, and J. Billings. "Fixing Mini-batch Sequences with Hierarchical Robust Partitioning". In: Proceedings of the Twenty-Second International Conference on Artificial Intelligence and Statistics. Ed. by K. Chaudhuri and M. Sugiyama. Vol. 89. Proceedings of Machine Learning Research. PMLR, 2019, pp. 3352–3361.
+- [Wan+19c] Y. Wang, A. Smola, D. C. Maddix, J. Gasthaus, D. Foster, and T. Januschowski. "Deep Factors for Forecasting". In: ICML. 2019.
+- [Wan+20a] D. Wang, E. Shelhamer, S. Liu, B. Olshausen, and T. Darrell. "Tent: Fully Test-Time Adaptation by Entropy Minimization". In: ICLR. 2020.
+- [Wan+20b] H. Wang, X. Wu, Z. Huang, and E. P. Xing. "High-frequency component helps explain the generalization of convolutional neural networks". In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2020, pp. 8684–8694.
+- [Wan+20c] T. Wang, J.-Y. Zhu, A. Torralba, and A. A. Efros. Dataset Distillation. 2020. arXiv: 1811.10959 [cs.LG].
+- [Wan+20d] Z. Wang, S. Cheng, L. Yueyu, J. Zhu, and B. Zhang. "A Wasserstein Minimum Velocity Approach to Learning Unnormalized Models". In: Proceedings of the Third International Conference on Artificial Intelligence and Statistics. Ed. by S. Chiappa and R. Calandra. Vol. 108. Proceedings of

@@ -1,0 +1,15 @@
+# # 14 Predictive models: an overview
+
+# ## 14.1 Introduction
+
+The vast majority of machine learning is concerned with tackling a single problem, namely learning to predict outputs **y** from inputs **x** using some function _f_ that is estimated from a labeled training set D = {(**x**_n_, **y**_n_) : _n_ = 1 : _N_}, for \(\mathbf{x}_n \in \mathcal{X} \subseteq \mathbb{R}^D\) and \(\mathbf{y}_n \in \mathcal{Y} \subseteq \mathbb{R}^C\). We can model our uncertainty about the correct output for a given input using a conditional probability model of the form _p_(**y**|_f_(**x**)). When Y is a discrete set of labels, this is called (in the ML literature) a **discriminative model**, since it lets us discriminate (distinguish) between the different possible values of **y**. If the output is real-valued, Y = R, this is called a **regression model**. (In the statistics literature, the term “regression model” is used in both cases, even if Y is a discrete set.) We will use the more generic term “**predictive model**” to refer to such models.
+
+A predictive model can be considered as a special case of a conditional generative model (discussed in Chapter 20). In a predictive model, the output is usually low dimensional, and there is a single best answer that we want to predict. However, in most generative models, the output is usually high dimensional, such as images or sentences, and there may be many correct outputs for any given input. We will discuss a variety of types of predictive model in Section 14.1.1, but we defer the details to subsequent chapters. The rest of this chapter then discusses issues that are relevant to all types of predictive model, regardless of the specific form, such as evaluation.
+
+# ### 14.1.1 Types of model
+
+There are many different kinds of predictive model _p_(**y**|**x**). The biggest distinction is between **parametric models**, that have a fixed number of parameters independent of the size of the training set, and **non-parametric models** that have a variable number of parameters that grows with the size of the training set. Non-parametric models are usually more flexible, but can be slower to use for prediction. Parametric models are usually less flexible, but are faster to use for prediction.
+
+Most non-parametric models are based on comparing a test input **x** to some or all of the stored training examples {**x**_n_, _n_ = 1 : _N_}, using some form of similarity, _s<sub>n</sub>_ = K(**x**, **x**_n_) ≥ 0, and then predicting the output using some weighted combination of the training labels, such as \(\hat{\mathbf{y}} = \sum_{n=1}^N s_n\mathbf{y}_n\). A typical example is a Gaussian process, which we discuss in Chapter 18. Other examples, such as _K_-nearest neighbor models, are discussed in the prequel to this book, [Mur22].
+
+Most parametric models have the form _p_(**y**|**x**) = _p_(**y**|_f_(**x**; \(\unknown\))), where _f_ is some kind of function that predicts the parameters (e.g., the mean, or logits) of the output distribution (e.g., Gaussian or categorical). There are many kinds of function we can use. If _f_ is a linear function of \(\unknown\) (i.e.,

@@ -1,0 +1,13 @@
+![](bbox=[0.26, 0.1, 0.73, 0.32])
+
+Figure 21.9: Application of VAE-RNN to molecule design. (a) The VAE-RNN model is trained on a sequence representation of molecules known as SMILES. We can fit an MLP to map from the latent space to properties of the molecule, such as its “fitness” f(z). (b) We can perform gradient ascent in f(z) space, and then decode the result to a new molecule with high fitness. From Figure 1 of [GB+18]. Used with kind permission of Rafael Gomez-Bombarelli.
+
+**overpruning** (see e.g., [Che+17b; Ale+18; Hus17a; Phu+18; TT17; Yeu+17; Luc+19; DWW19; WBC21]). To see why this happens, consider Equation (21.21). If there exists a parameter setting for the generator $\theta^*$ such that $p_{\theta^*}(x|z) = p_D(x)$ for every $z$, then we can make $D_{KL} (p_D(x) \| p_\theta(x)) = 0$. Since the generator is independent of the latent code, we have $p_\theta(z|x) = p_\theta(z)$. The prior $p_\theta(z)$ is usually a simple distribution, such as a Gaussian, so we can find a setting of the inference parameters so that $q_{\phi^*}(z|x) = p_\theta(z)$, which ensures $D_{KL}(q_\phi(z|x) \| p_\theta(z|x)) = 0$. Thus we have successfully maximized the ELBO, but we have not learned any useful latent representation of the data, which is one of the goals of latent variable modeling.$^5$ We discuss some solutions to posterior collapse below.
+
+# 21.4.1 KL annealing
+
+A common approach to solving this problem, proposed in [Bow+16a], is to use **KL annealing**, in which the KL penalty term in the ELBO is scaled by $\beta$, which is increased from 0.0 (corresponding to an autoencoder) to 1.0 (which corresponds to standard MLE training). (Note that, by contrast, the $\beta$-VAE model in Section 21.3.1 uses $\beta > 1$.)
+
+KL annealing can work well, but requires tuning the schedule for $\beta$. A standard practice [Fu+19] is to use **cyclical annealing**, which repeats the process of increasing $\beta$ multiple times. This ensures the progressive learning of more meaningful latent codes, by leveraging good representations learned in a previous cycle as a way to warmstart the optimization.
+
+5. Note that [Luc+19; DWW20] show that posterior collapse can also happen in linear VAE models, where the ELBO corresponds to the exact marginal likelihood, so the problem is not only due to powerful (nonlinear) decoders, but is also related to spurious local maxima in the objective.

@@ -1,0 +1,13 @@
+![](bbox=[0.15, 0.09, 0.85, 0.26])
+
+Figure 18.13: Illustration of how to choose inducing points from a discrete input domain (here DNA sequences of length 4) to maximize the log marginal likelihood. From Figure 1 of [For+18a]. Used with kind permission of Vincent Fortuin.
+
+of inducing points **Z**, and all other points (which we can think of as the test set), **X**<sub>∗</sub>. (We assume these sets are disjoint.) Let $f_X$, $f_Z$ and $f_*$ represent the corresponding unknown function values on these points, and let $f = [f_X, f_Z, f_*]$ be all the unknowns. (Here we work with a fixed-length vector $f$, but the result generalizes to Gaussian processes, as explained in [Mat+16].) We assume the function is sampled from a GP, so $p(f) = \mathcal{N}(m(X), K(X, X))$.
+
+The inducing point methods in Section 18.5.3 approximates the GP prior by assuming $p(f_*, f_X, f_Z) \approx p(f_*|f_Z)p(f_X|f_Z)p(f_Z)$. The inducing points $f_Z$ are chosen to maximize the likelihood of the observed data. We then perform exact inference in this approximate model. By contrast, in this section, we will keep the model unchanged, but we will instead approximate the posterior $p(f|y)$ using variational inference.
+
+In the VFE view, the inducing points **Z** and inducing variables $f_Z$ (often denoted by $u$) are variational parameters, rather than model parameters, which avoids the risk of overfitting. Furthermore, one can show that as the number of inducing points $m$ increases, the quality of the posterior consistently improves, eventually recovering exact inference. By contrast, in the classical inducing point method, increasing $m$ does not always result in better performance [BWR16].
+
+In more detail, the VFE approach tries to find an approximate posterior $q(f)$ to minimize $D_{\text{KL}}(q(f) \| p(f|y))$. The key assumption is that $q(f) = q(f_*, f_X, f_Z) = p(f_*, f_X|f_Z)q(f_Z)$, where $p(f_*, f_X|f_Z)$ is computed exactly using the GP prior, and $q(f_Z)$ is learned, by minimizing $\mathcal{K}(q) = D_{\text{KL}}(q(f) \| p(f|y))$. Intuitively, $q(f_Z)$ acts as a “bottleneck” which “absorbs” all the observations from $y$; posterior predictions for elements of $f_X$ or $f_*$ are then made via their dependence on $f_Z$, rather than their dependence on each other.
+
+2. One can show that $D_{\text{KL}}(q(f) \| p(f|y)) = D_{\text{KL}}(q(f_X, f_Z) \| p(f_X, f_Z|y))$, which is the original objective from [Tit09].

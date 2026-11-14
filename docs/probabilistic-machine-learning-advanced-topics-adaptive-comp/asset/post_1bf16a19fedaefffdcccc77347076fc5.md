@@ -1,0 +1,108 @@
+
+much stronger property of reparameterization invariance. Namely, we can transform our random variable through an arbitrary invertible map and it won’t change the value of the KL divergence. If we transform our random variable from \(x\) to some \(y = f(x)\) we know that \(p(x)dx = p(y)dy\) and \(q(x)dx = q(y)dy\). Hence the KL divergence remains the same for both random variables:
+\(D_{KL} (p(x) \| q(x)) = \int dx p(x) \log \frac{p(x)}{q(x)} = \int dy p(y) \log \left( \frac{p(y)}{q(y)} \left| \frac{dy/dx}{dy/dx} \right| \right) = D_{KL} (p(y) \| q(y)) . \quad (5.16)\)
+
+Because of this reparameterization invariance we can rest assured that when we measure the KL divergence between two distributions we are measuring something about the distributions and not the way we choose to represent the space in which they are defined. We are therefore free to transform our data into a convenient basis of our choosing, such as a Fourier bases for images, without affecting the result.
+
+### 5.1.2.4 Monotonicity for uniform distributions
+
+Consider updating a probability distribution from a uniform distribution on \(N\) elements to a uniform distribution on \(N'\) elements. The KL divergence is:
+\(D_{KL} (p \| q) = \sum_k \frac{1}{N'} \log \frac{1/N'}{1/N} = \log \frac{N}{N'}, \quad (5.17)\)
+
+or the log of the ratio of the elements before and after the update. This satisfies our monotonicity requirement. We can interpret this result as follows: Consider finding an element of a sorted array by means of bisection. A well designed yes/no question can cut the search space in half. Measured in bits, the KL divergence tells us how many well designed yes/no questions are required on average to move from \(q\) to \(p\).
+
+### 5.1.2.5 Chain rule for KL divergence
+
+Here we show that the KL divergence satisfies a natural chain rule:
+\(D_{KL} (p(x,y) \| q(x,y)) = \int dx dy p(x,y) \log \frac{p(x,y)}{q(x,y)} \quad (5.18)\)
+\(= \int dx dy p(x,y) \left[ \log \frac{p(x)}{q(x)} + \log \frac{p(y|x)}{q(y|x)} \right] \quad (5.19)\)
+\(= D_{KL} (p(x) \| q(x)) + \mathbb{E}_{p(x)} \left[ D_{KL} (p(y|x) \| q(y|x)) \right] . \quad (5.20)\)
+
+We can rest assured that we can decompose our distributions into their conditionals and the KL divergences will just add.
+
+As a notational convenience, the **conditional KL divergence** is defined to be the expected value of the KL divergence between two conditional distributions:
+\(D_{KL} (p(y|x) \| q(y|x)) \triangleq \int dx p(x) \int dy p(y|x) \log \frac{p(y|x)}{q(y|x)} . \quad (5.21)\)
+
+This allows us to drop many expectation symbols.
+
+## 5.1.3 Thinking about KL
+
+In this section, we discuss some qualitative properties of the KL divergence.
+
+### 5.1.3.1 Units of KL
+
+Above we said that the desiderata we listed determined the KL divergence up to a multiplicative constant. Because the KL divergence is logarithmic, and logarithms in different bases are the same up to a multiplicative constant, our choice of the base of the logarithm when we compute the KL divergence is a choice akin to choosing which units to measure the information in.
+
+If the KL divergence is measured with the base-2 logarithm, it is said to have units of bits, short for “binary digits”. If measured using the natural logarithm as we normally do for mathematical convenience, it is said to be measured in nats for “natural units”.
+
+To convert between the systems, we use \(\log_2 y = \log y / \log 2\). Hence
+
+1 bit = log 2 nats ~ 0.693 nats (5.22)
+
+1 nat = 1/log 2 bits ~ 1.44 bits. (5.23)
+
+### 5.1.3.2 Asymmetry of the KL divergence
+
+The KL divergence is not symmetric in its two arguments. While many find this asymmetry confusing at first, we can see that the asymmetry stems from our requirement that we have a natural chain rule. When we decompose the distribution into its conditional, we need to take an expectation with respect to the variables being conditioned on. In the KL divergence we take this expectation with respect to the first argument p(x). This breaks the symmetry between the two distributions.
+
+At a more intuitive level, we can see that the information required to move from q to p is in general different than the information required to move from p to q. For example, consider the KL divergence between two Bernoulli distributions, the first with the probability of success given by 0.443 and the second with 0.975:
+
+\(D_{KL} = 0.975 \log(0.975/0.443) + 0.025 \log(0.025/0.557) = 0.692 \text{ nats} \sim 1.0 \text{ bits}. \quad (5.24)\)
+
+So it takes 1 bit of information to update from a [0.443, 0.557] distribution to a [0.975, 0.025] Bernoulli distribution. What about the reverse?
+
+\(D_{KL} = 0.443 \log(0.443/0.975) + 0.557 \log(0.557/0.025) = 1.38 \text{ nats} \sim 2.0 \text{ bits}. \quad (5.25)\)
+
+so it takes two bits, or twice as much information to move the other way. Thus we see that starting with a distribution that is nearly even and moving to one that is nearly certain takes about 1 bit of information, or one well designed yes/no question. To instead move us from near certainty in an outcome to something that is akin to the flip of a coin requires more persuasion.
+
+### 5.1.3.3 KL as expected weight of evidence
+
+Imagine you have two different hypotheses you wish to select between, which we’ll label P and Q. You collect some data D. Bayes’ rule tells us how to update our beliefs in the hypotheses being correct:
+
+\(\text{Pr}(P|D) = \frac{\text{Pr}(D|P)}{\text{Pr}(D)} \text{Pr}(P).\)
+
+Normally this requires being able to evaluate the marginal likelihood Pr(D), which is difficult. If we instead consider the ratio of the probabilities for the two hypotheses:
+
+\(\frac{\text{Pr}(P|D)}{\text{Pr}(Q|D)} = \frac{\text{Pr}(D|P)}{\text{Pr}(D|Q)} \frac{\text{Pr}(P)}{\text{Pr}(Q)},\)
+
+the marginal likelihood drops out. Taking the logarithm of both sides, and identifying the probability of the data under the model as the likelihood we find:
+
+\(\log \frac{\text{Pr}(P|D)}{\text{Pr}(Q|D)} = \log \frac{p(D)}{q(D)} + \log \frac{\text{Pr}(P)}{\text{Pr}(Q)}.\)
+
+The posterior log probability ratio for one hypothesis over the other is just our prior log probability ratio plus a term that I. J. Good called the **weight of evidence** [Goo85] D for hypothesis P over Q:
+
+\(w[P/Q; D] \triangleq \log \frac{p(D)}{q(D)}.\)
+
+With this interpretation, the KL divergence is the expected weight of evidence for P over Q given by each observation, provided P were correct. Thus we see that data will (on average) add rather than subtract evidence towards the correct hypothesis, since KL divergence is always non-negative in expectation (see Section 5.1.2.2).
+
+## 5.1.4 Minimizing KL
+
+In this section, we discuss ways to minimize \(D_\text{KL}(p \| q)\) or \(D_\text{KL}(q \| p)\) wrt an approximate distribution q, given a true distribution p.
+
+### 5.1.4.1 Forwards vs reverse KL
+
+The asymmetry of KL means that finding a q that is close to p by minimizing \(D_\text{KL}(p \| q)\) (also called the **inclusive KL** or **forwards KL**) gives different behavior than minimizing \(D_\text{KL}(q \| p)\) (also called the **exclusive KL** or **reverse KL**). For example, consider the bimodal distribution p shown in blue in Figure 5.1, which we approximate with a unimodal Gaussian q. To prevent \(D_\text{KL}(p \| q)\) from becoming infinite, we must have p > 0 (i.e., q must have support everywhere p does), so q tends to **cover** both modes as it must be nonvanishing everywhere p is; this is called **mode-covering** or **zero-avoiding** behavior (orange curve). By contrast, to prevent \(D_\text{KL}(q \| p)\) from becoming infinite, we must have q = 0 whenever p = 0, which creates **mode-seeking** or **zero-forcing** behavior (green curve).
+
+For an animated visualization (written by Ari Seff) of the difference between these two objectives, see https://twitter.com/ari_seff/status/1303741288911638530.
+
+![](img/ca72c1626f4850f058a9edc138c1ac73_255_0.png)
+
+Figure 5.1: Demonstration of the mode-covering or mode-seeking behavior of KL divergence. The original distribution p (shown in blue) is bimodal. When we minimize \(D_{\text{KL}}(p \| q)\), then q covers the modes of p (orange). When we minimize \(D_{\text{KL}}(q \| p)\), then q ignores some of the modes of p (green). Generated by minimize_kl_divergence.ipynb.
+
+![](img/ca72c1626f4850f058a9edc138c1ac73_255_1.png)
+
+Figure 5.2: Illustrating forwards vs reverse KL on a symmetric Gaussian. The blue curves are the contours of the true distribution p. The red curves are the contours of a factorized approximation q. (a) Minimizing \(D_{\text{KL}}(p \| q)\). (b) Minimizing \(D_{\text{KL}}(q \| p)\). Adapted from Figure 10.2 of [Bis06]. Generated by kl_pq_gauss.ipynb.
+
+### 5.1.4.2 Moment projection (mode covering)
+
+Suppose we compute q by minimizing the forwards KL:
+
+\(q = \underset{q}{\text{argmin}} D_{\text{KL}} (p \| q)\)
+
+This is called **M-projection**, or **moment projection** since the optimal q matches the moments of p, as we show below. The process of computing q is therefore called **moment matching**.
+
+To see why the optimal q must match the moments of p, let us assume that q is an exponential family distribution of the form
+
+\(q(\boldsymbol{x}) = h(\boldsymbol{x}) \exp[\boldsymbol{\eta}^\mathsf{T} \mathcal{T}(\boldsymbol{x}) - \log Z(\boldsymbol{\eta})]\)
+
+where \(\mathcal{T}(\boldsymbol{x})\) is the vector of sufficient statistics, and \(\boldsymbol{\eta}\) are the natural parameters. The first order

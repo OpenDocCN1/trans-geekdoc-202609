@@ -1,0 +1,72 @@
+
+tion 模型”. 收录于: *应用统计学年鉴* 9.3 (2015), 第1350–1371页.
+
+- [Lev18] S. Levine. “强化学习与控制作为概率推理：教程与综述”. 收录于: (2018). arXiv: 1805.00909 [cs.LG].
+- [Lev+20] S. Levine, A. Kumar, G. Tucker, and J. Fu. *离线强化学习：教程、综述与开放问题展望*. arXiv:2005.01643. 2020.
+- [LF+21] L. Le Folgoc, V. Baltatzis, S. Desai, A. Devaraj, S. Ellis, O. E. Martinez Manzanera, A. Nair, H. Qiu, J. Schnabel, and B. Glocker. “MC Dropout 是贝叶斯方法吗？” 收录于: (2021). arXiv: 2110.04286 [cs.LG].
+- [LFG21] F. Lin, X. Fang, and Z. Gao. “分布鲁棒优化：理论与应用综述”. 收录于: *数值代数控制与优化* 12.1 (2021), 第159–212页.
+- [LG94] D. D. Lewis and W. A. Gale. “训练文本分类器的序列算法”. 收录于: *SIGIR’94*. Springer, 1994, 第3–12页.
+- [LGMT11] F. Le Gland, V. Monbet, and V.-D. Tran. “集合卡尔曼滤波的大样本渐近性”. 收录于: *非线性滤波牛津手册*. 由 D Crisan 和 A. 编辑. 2011.
+- [LHP17] R. M. Levy, A. Haldane, and W. F. Flynn. “蛋白共变、自由能景观与进化适应性的 Potts 汉密尔顿模型”. en. 收录于: *当前结构生物学观点* 43 (2017), 第55–62页.
+- [LHF20] J. Liang, D. Hu, and J. Feng. “我们真的需要访问源数据吗？无监督域自适应的源假设迁移”. 收录于: *ICML*. 由 H. D. Iii 和 A. Singh 编辑. 第119卷. 机器学习研究论文集. PMLR, 2020, 第6028–6039页.
+- [LHLT15] Y. Li, J. J. M. Hernandez-Lobato, and R. E. Turner. “随机期望传播”. 收录于: *NIPS*. 2015.
+- [LHR20] A. Lucie, H. Haned, and M. de Rijke. “我的模型为什么会失败？零售预测的对比性本地解释”. 收录于: *2020 年公平性、问责制与透明度会议论文集*. 2020, 第90–98页.
+- [Li+10] L. Li, W. Chu, J. Langford, and R. E. Schapire. “基于上下文盗贼的个性化新闻文章推荐方法”. 收录于: *WWW*. 2010.
+- [Li+16] C. Li, C. Chen, D. Carlson, and L. Carin. “面向深度神经网络的预条件随机梯度朗格文动力学”. 收录于: *AAAI*. 2016.
+- [Li+17a] A. Li, A. Jabri, A. Joulin, and L. van der Maaten. “从 Web 数据中学习视觉 n 元语法”. 收录于: *IEEE 国际计算机视觉会议论文集*. 2017, 第4183–4192页.
+- [Li+17b] C.-L. Li, W.-C. Chang, Y. Cheng, Y. Yang, and B. Poczos. “MMD GAN：迈向对矩匹配网络的更深入理解”. 收录于: *神经信息处理系统进展*. 2017, 第2203–2213页.
+- [Li+17c] L. Li, K. Jamieson, G. De Salvo, A. Rostamizadeh, and A. Talwalkar. “Hyperband：基于盗贼的超参数优化配置评估”. 收录于: *ICLR*. 2017.
+- [Li+17d] O. Li, H. Liu, C. Chen, and C. Rudin. “基于原型的案例推理深度学习：可解释其预测的神经网络”. 2017. arXiv: 1710.04806 [cs.AI].
+- [Li+17e] T.-C. Li, J.-Y. Su, W. Liu, and J. M. Corchado. “近似高斯共轭：非线性、多模态、不确定性和约束下的参数递归滤波及其扩展”. 收录于: *信息技术与电子工程前沿* 18.12 (2017), 第1913–1939页.
+- [Li+18] Y. Li. “深度强化学习”. 收录于: (2018). arXiv: 1810.06339 [cs.LG].
+- [Li+18a] C. Li, H. Farkhoor, R. Liu, and J. Yosinski. “测量目标景观的内在维度”. 收录于: *ICLR*. 2018.
+- [Li+18b] C. Li, H. Farkhoor, R. Liu, and J. Yosinski. “测量目标景观的内在维度”. 收录于: *ICLR*. 2018.
+- [Li+18c] X. Li, C. Li, J. Chi, J. Ouyang, and W. Wang. “贝叶斯模型的黑盒期望传播”. 收录于: *ICDM*. 论文集. 工业与应用数学学会, 2018, 第603–611页.
+- [Li+19] J. Li, S. Qu, X. Li, J. Szurley, J. Z. Kolter, and F. Metze. “对抗音乐：针对唤醒词检测系统的现实世界音频对抗”. 收录于: *NIPS*. Curran Associates, Inc., 2019, 第11908–11918页.
+- [Li+20] C. Li, X. Gao, Y. Li, B. Peng, X. Li, Y. Zhang, and J. Gao. “Optimus：通过预训练潜空间建模组织句子”. 收录于: *EMNLP*. 2020.
+- [Li+21] Y. Li, R. Pogodin, D. J. Sutherland, and A. Gretton. “基于核依赖性最大化的自监督学习”. 收录于: *NeurIPS*. 2021.
+- [Li+22] R. Li, W. Li, Y. Yang, H. Wei, J. Jiang, and Q. Bai. “SwinV2-Imagen：面向文本到图像生成的分层视觉 Transformer 扩散模型”. 收录于: (2022 年 10 月). arXiv: 2210.09549 [cs.CV].
+- [Lia+] P. Liang, R. Bommasani, T. Lee, D. Tsipras, D. Soylu, M. Yasunaga, Y. Zhang, D. Narayanan, and Y. Wu. “Holm：语言模型整体评估（HELM），一种提高语言模型透明度的框架（https://arxiv.org/abs/2211.09110）”. en.
+- [Lia+07] L. Liao, D. J. Patterson, D. Fox, and H. Kautz. “交通常规的学习与推断”. 收录于: *人工智能* 171.5 (2007), 第311–331页.
+- [Lia+08] F. Liang, R. Paulo, G. Molina, M. Clyde, and J. Berger. “贝叶斯变量选择的 g 先验混合”. 收录于: *JASA* 103.481 (2008), 第410–423页.
+- [Lia+19] V. Liao, R. Ballamy, M. Muller, and H. Chanello. “人机协作：迈向社会引导的机器学习”. 收录于: *以人为本的机器学习视角 CHI 工作坊*. 2019.
+- [Lil+16] T. P. Lillicrap, J. J. Hunt, A. Pritzel, N. Heess, T. Erez, Y. Tassa, D. Silver, and D. Wierstra. “基于深度强化学习的连续控制”. 收录于: *ICLR*. 2016.
+- [Lin13a] W. Lin. “实验数据回归调整的无定型笔记：重新审视 Freedman 的批评”. 收录于: *应用统计学年鉴* 7.1 (2013), 第295–318页.
+- [Lin13b] D. A. Linzer. “各州总统选举动态贝叶斯预测”. 收录于: *JASA* 108.501 (2013), 第124–134页.
+- [Lin+17a] K. Lin, D. Li, X. He, Z. Zhang, and M.-T. Sun. “语言生成的对抗排序”. 收录于: *神经信息处理系统进展*. 2017, 第3155–3165页.
+- [Lin+17b] T.-Y. Lin, P. Dollár, R. Girshick, K. He, B. Hariharan, and S. Belongie. “面向对象检测的特征金字塔网络”. 收录于: IEEE 计算机视觉与模式识别会议论文集. 2017, 第2117–2125页.
+- [Lin19] J. K. Lindelof. 常见统计检验是线性模型（或：如何教授统计学）. 博客文章. 2019.
+- [Lin+20] H. Lin, H. Chen, T. Zhang, C. Laroche, and K. Choromanski. “揭秘正交蒙特卡罗及其扩展”. 收录于: (2020). arXiv: 2005.13590 [cs.LG].
+- [Lin+21a] T. Lin, Y. Wang, X. Liu, and X. Qiu. “Transformer 调查”. 收录于: (2021). arXiv: 2106.04554 [cs.LG].
+- [Lin+21b] A. Lindholm, N. Wahlström, F. Lindsten, and T. B. Schön. 机器学习：面向工程师和科学家的入门课程. 2021.
+- [Lin+21c] J. Lindqvist, S. Särkkä, Å. F. García-Fernández, M. Raitoharju, and L. Svensson. “带鲁棒迭代的后验线性化平滑”. 收录于: (2021 年 12 月). arXiv: 2112.03969 [math.OC].
+- [Lin56] D. Lindley. “关于实验所提供信息的一种度量”. 收录于: *数理统计年鉴* (1956), 986–1005.
+- [Lin88a] B. Lindsay. “复合似然方法”. 收录于: *当代数学* 80.1 (1988), 第221–239页.
+- [Lin88b] R. Linsker. “感知网络中的自组织”. 收录于: *计算机* 21.3 (1988), 第105–117页.
+- [Lin88c] R. Linsker. “感知网络中的自组织”. 收录于: *计算机* 21.3 (1988), 第105-117页.
+- [Lin92] L.-J. Lin. “基于强化学习的自我改进型反应智能体：规划与教学”. 收录于: *机器学习* 8.3-4 (1992), 第293–321页.
+- [Lip18] Z. C. Lipton. “模型可解释性的神话：在机器学习中，可解释性概念既重要又难以捉摸”. 收录于: *Queue* 16.3 (2018), 第31–57页.
+- [Lis20] Z. Lu, E. Ie, and F. Sha. “高斯-Softmax 积分的均匀场近似及其在不确定性估计中的应用”. 收录于: (2020 年 6 月). arXiv: 2006.07584 [cs.LG].
+- [Liu01] J. Liu. 科学计算中的蒙特卡洛方法. Springer, 2001.
+- [Liu+15] Z. Liu, P. Luo, X. Wang, and X. Tang. “野外深度学习面部属性”. 收录于: *ICCV*. 2015.
+- [Liu+18a] L. Liu, X. Liu, C.-J. Hsieh, and D. Tao. “带不精确海森矩阵和梯度的非凸优化随机二阶方法”. 收录于: (2018). arXiv: 1809.09853 [math.OC].
+- [Liu+18b] Q. Liu, L. Li, Z. Tang, and D. Zhou. “打破地平线诅咒：无限时域非策略估计”. 收录于: *NeurIPS*. Curran Associates Inc., 2018, 第5361–5371页.
+- [Liu+19a] H. Liu, Y.-S. Ong, Z. Yu, J. Cai, and X. Shen. “适用于各种似然的带加性噪声的可扩展高斯过程分类”. 收录于: (2019). arXiv: 1909.06541 [stat.ML].
+- [Liu+19b] R. Liu, J. Regier, N. Tripuraneni, M. I. Jordan, and J. McAuliffe. “离散分布的 Rao-Blackwell 化随机梯度”. 收录于: *ICML*. 2019.
+- [Liu+19c] Y. Liu, M. Ott, N. Goyal, J. Du, M. Joshi, D. Chen, O. Levy, M. Lewis, L. Zettlemoyer, and V. Stoyanov. “Roberta：一种经过稳健优化的 BERT 预训练方法”. 收录于: arXiv 预印本 arXiv:1907.11692 (2019).
+- [Liu+20a] F. Liu, W. Xu, J. Lu, G. Zhang, A. Gretton, and D. J. Sutherland. “非参数双样本检验的深度核学习”. 收录于: *ICML*. 2020.
+- [Liu+20b] F. Liu, W. Xu, J. Lu, G. Zhang, A. Gretton, and D. J. Sutherland. “非参数双样本检验的深度核学习”. 收录于: *ICMLR*. 2020, 第6316–6326页.
+- [Liu+20c] H. Liu, Y.-S. Ong, X. Shen, and J. Cai. “当高斯过程遇到大数据：可扩展 GP 综述”. 收录于: *IEEE 神经网络与学习系统汇刊* 31.1 (2020).
+- [Liu+20d] J. Z. Liu, Z. Lin, S. Padhy, D. Tran, T. Bedrax-Weiss, and B. Lakshminarayanan. “基于距离感知的确定性深度学习中简单且原则化的不确定性估计”. 收录于: *NIPS*. 2020.
+- [Liu+21a] P. Liu, W. Yuan, J. Fu, Z. Jiang, H. Hayashi, and G. Neubig. “预训练、提示与预测：自然语言处理中提示方法的系统综述”. 收录于: (2021). arXiv: 2107.13586 [cs.CL].
+- [Liu+21b] W. Liu, X. Wang, J. D. Owens, and Y. Li. “基于能量的分布外检测”. 收录于: *NIPS*. 2021.
+- [Liu+22a] J. Z. Liu, S. Padhy, J. Ren, Z. Lin, Y. Wen, G. Jerfel, Z. Nado, J. Snoek, D. Tran, and B. Lakshminarayanan. “通过距离感知改进单模型深度不确定性的简单方法”. 收录于: *JMLR* 23 (2022 年 5 月), 第1–62页.
+- [Liu+22b] Z. Liu, H. Mao, C.-Y. Wu, C. Feichtenhofer, T. Darrell, and S. Xie. “面向 2020 年代的卷积网络”. 收录于: (2022). arXiv: 2201.03545 [cs.CV].
+- [LJ08] P. Liang and M. I. Jordan. “生成、判别和伪似然估计器的渐近分析”. 收录于: 国际机器学习会议 (ICML). 2008.
+- [Lju87] L. Ljung. 系统辨识：用户理论. Prentice Hall, 1987.
+- [LJY19] S. Liu, Y. Jiang, and T. Tu. “带零膨胀混合泊松线性模型的 RNA-Seq 数据建模”. en: 收录于: *遗传流行病学* 43.7 (2019), 第786–799页.
+- [LK07] P. Liang and D. Klein. 带变分推理的结构化贝叶斯非参数模型. ACL 教程. 2007.
+- [LK09] P. Liang and D. Klein. “无监督模型的在线 EM”. 收录于: *NAACL*. 2009.
+- [LKJ09] D. Lewandowski, D. Kurowicka, and H. Joe. “基于葡萄和扩展洋葱法生成随机相关矩阵”. 收录于: *多变量分析杂志* 100.9 (2009), 第1989–2001页.
+- [LL02] P. Larrañaga and J. A. Lozano. 分布估计算法：进化计算的新工具. Kluwer Academic Publishers, 2002.
+- [LL17] S. M. Lundberg and S.-I. Lee. “解释模型预测的统一方法”. 收录于: *NIPS*. 2017, 第4765–4774页.

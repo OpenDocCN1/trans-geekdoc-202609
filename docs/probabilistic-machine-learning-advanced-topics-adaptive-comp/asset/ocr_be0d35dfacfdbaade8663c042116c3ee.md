@@ -1,0 +1,15 @@
+![](bbox=[0.236, 0.097, 0.771, 0.261])
+
+Figure 9.19: Encoding a 3-SAT problem on $n$ variables and $m$ clauses as a DGM. The $Q$s variables are binary random variables. The $C_t$ variables are deterministic functions of the $Q$s’s, and compute the truth value of each clause. The $A_t$ nodes are a chain of AND gates, to ensure that the CPT for the final $x$ node has bounded size. The double rings denote nodes with deterministic CPDs. From Figure 9.1 of [KF09a]. Used with kind permission of Daphne Koller.
+
+Of course, just because some particular algorithm is slow doesn’t mean that there isn’t some smarter algorithm out there. Unfortunately, this seems unlikely, since it is easy to show that exact inference for discrete graphical models is NP-hard [DL93]. The proof is a simple reduction from the satisfiability problem. In particular, note that we can encode any 3-SAT problem as a DPGM with deterministic links, as shown in Figure 9.19. We clamp the final node, $x$, to be on, and we arrange the CPTs so that $p(x = 1) > 0$ iff there is a satisfying assignment. Computing any posterior marginal requires evaluating the normalization constant, $p(x = 1)$, so inference in this model implicitly solves the SAT problem.
+
+In fact, exact inference is #P-hard [Rot96], which is even harder than NP-hard. The intuitive reason for this is that to compute the normalizing constant, we have to *count* how many satisfying assignments there are. (By contrast, MAP estimation is provably easier for some model classes [GPS89], since, intuitively speaking, it only requires finding one satisfying assignment, not counting all of them.) Furthermore, even approximate inference is computationally hard in general [DL93; Rot96].
+
+The above discussion was just concerned with inferring the states of discrete hidden variables. When we have continuous hidden variables, the problem can be even harder, since even a simple two-node graph, of the form \(z \rightarrow y\), can be intractable to invert if the variables are high dimensional and do not have a conjugate relationship (Section 3.4). Inference in mixed discrete-continuous models can also be hard [LP01].
+
+As a consequence of these hardness results, we often have to resort to approximate inference methods, such as variational inference (Chapter 10) and Monte Carlo inference (Chapter 11).
+
+# ### 9.5.5 Drawbacks of VE
+
+Consider using VE to compute all the marginals in a chain-structured graphical model, such as an HMM. We can easily compute the final marginal \(p(z_T|\boldsymbol{y})\) by eliminating all the nodes \(z_1\) to \(z_{T-1}\) in order. This is equivalent to the forwards algorithm, and takes \(O(K^2T)\) time, as we discussed in Section 9.2.3. But now suppose we want to compute \(p(z_{T-1}|\boldsymbol{y})\). We have to run VE again, at a cost

@@ -1,0 +1,75 @@
+
+- [GFTS19] Á. F. García-Fernández, F. Tronarp, and S. Särkkä. “使用后验线性化的高斯过程分类”. In: IEEE Signal Process. Lett. 26.5 (2019), pp. 735–739.
+- [GFWO20] T. Gay-Fajou, F. Wenzel, and M. Opper. “非共轭高斯过程模型的自动增广共轭推断”. In: AISTATS. 2020.
+- [GG14] S. J. Gershman and N. D. Goodman. “概率推理中的分摊推断”. In: 第36届认知科学学会年会. 2014.
+- [GG16] Y. Gal and Z. Ghahramani. “作为贝叶斯近似的Dropout：在深度学习中表示模型不确定性”. In: ICML. 2016.
+- [GG84] S. Geman and D. Geman. “随机松弛、吉布斯分布与图像的贝叶斯恢复”. In: IEEE PAMI 6.6 (1984).
+- [GGG15] M. Gygli, H. Grabner, and L. Gool. “通过学习目标的次模组合进行视频摘要”. In: 2015 IEEE计算机视觉与模式识别会议(CVPR) (2015), pp. 3090–3098.
+- [GGS21] M. Grcić, I. Grubisic, and S. Segvic. “DenseFlow：密集连接归一化流的官方实现”. en. In: NIPS. 2021.
+- [GH07] A. Gelman and J. Hill. 使用回归和多层/分层模型进行数据分析. Cambridge, 2007.
+- [GH10] M. Gutmann and A. Hyvärinen. “噪声对比估计：非归一化统计模型的新估计原理”. In: 第十三届人工智能与统计国际会议论文集. 2010, pp. 297–304.
+- [GH12] M. Gutmann and J.-i. Hirayama. “作为估计非归一化统计模型的一般框架的Bregman差异”. In: arXiv:1202.3727 (2012).
+- [GH96a] Z. Ghahramani and G. Hinton. 线性动态系统的参数估计. Tech. rep. CRG-TR-96-2. Dept. Comp. Sci., Univ. Toronto, 1996.
+- [GH96b] Z. Ghahramani and G. Hinton. 因子分析器混合物的EM算法. Tech. rep. Dept. of Comp. Sci., Uni. Toronto, 1996.
+- [GH98] Z. Ghahramani and G. Hinton. “切换状态空间模型的变分学习”. In: Neural Computation 12.4 (1998), pp. 963–996.
+- [Gha+15] M. Ghavamzadeh, S. Mannor, J. Pineau, and A. Tamar. “贝叶斯强化学习：一项综述”. In: Foundations and Trends in ML (2015).
+- [Gha+19] M. Ghazvininejad, O. Levy, Y. Liu, and L. Zettlemoyer. “Mask-Predict：条件掩码语言模型的并行解码”. In: EMNLP. 中国香港：计算语言学协会，2019年11月，pp. 6112–6121.
+- [Gha+21] A. Ghandeharioun, B. Kim, C.-L. Li, B. Jou, B. Eoff, and R. W. Picard. DISSECT：通过概念遍历进行解耦同步解释. 2021. arXiv: 2106.15164 [cs.LG].
+- [GHC20] C. Geng, S.-J. Huang, and S. Chen. “开放集识别的最新进展：一项综述”. In: IEEE PAMI (2020).
+- [GHC21] S. Gould, R. Hartley, and D. J. Campbell. “深度声明网络”. en. In: IEEE PAMI PP (2021).
+- [GHK17] Y. Gal, J. Hron, and A. Kendall. “具体Dropout”. In: (2017). arXiv: 1705.07832 [stat.ML].
+- [Gho+19] A. Ghorbani, J. Wexler, J. Zou, and B. Kim. 迈向自动基于概念的解释. 2019. arXiv: 1902.03129 [stat.ML].
+- [Gho+21] A. Ghosal, A. Honoré, D. Liu, G. E. Henter, and S. Chatterjee. “用于具有可解释性的语音音素分类的基于归一化流的隐马尔可夫模型”. In: (2021年7月). arXiv: 2107.00730 [cs.LG].
+- [GHV14] A. Gelman, J. Hwang, and A. Vehtari. “理解贝叶斯模型的预测信息准则”. In: Statistics and Computing 24.6 (2014), pp. 997–1016.
+- [GHV20a] A. Gelman, J. Hill, and A. Vehtari. 回归及其他故事. en. 第1版. Cambridge University Press, 2020.
+- [GHV20b] A. Gelman, J. Hill, and A. Vehtari. 回归及其他故事. Cambridge, 2020.
+- [Gib97] M. Gibbs. “用于回归和分类的贝叶斯高斯过程”. PhD thesis. U. Cambridge, 1997.
+- [GIG17] Y. Gal, R. Islam, and Z. Ghahramani. “基于图像数据的深度贝叶斯主动学习”. In: 机器学习国际会议. PMLR. 2017, pp. 1183–1192.
+- [Gil+18a] J. Gilmer, R. P. Adams, I. Goodfellow, D. Andersen, and G. E. Dahl. “对抗样本研究游戏规则的动机”. In: arXiv预印本 arXiv:1807.06732 (2018).
+- [Gil+18b] J. Gilmer, L. Metz, F. Faghri, S. S. Schoenholz, M. Raghu, M. Wattenberg, and I. Goodfellow. “对抗球面”. In: arXiv预印本 arXiv:1801.02774 (2018).
+- [Gil88] J. R. Gilbert. “某些嵌套剖分序几乎是最优的”. In: Inf. Process. Lett. 26.6 (1988), pp. 325–328.
+- [Gir+14] R. Girshick, J. Donahue, T. Darrell, and J. Malik. “用于准确目标检测和语义分割的丰富特征层次”. In: IEEE计算机视觉与模式识别会议论文集. 2014, pp. 580–587.
+- [Gir+15] R. Girshick, F. Iandola, T. Darrell, and J. Malik. “可变形部分模型就是卷积神经网络”. In: CVPR. 2015.
+- [Gir+21] L. Girin, S. Leglaive, X. Bie, J. Diard, T. Hueber, and X. Alameda-Pineda. “动态变分自编码器：一项全面综述”. In: 机器学习基础与前沿® 15.1-2 (2021), pp. 1–175.
+- [Git89] J. Gittins. 多臂老虎机分配指数. Wiley, 1989.
+- [GJ97] Z. Ghahramani and M. Jordan. “阶乘隐马尔可夫模型”. In: Machine Learning 29 (1997), pp. 245–273.
+- [GK19] L. Grasser and W. L. Keng. 深度强化学习基础：Python中的理论与实践. en. 第1版. Addison-Wesley Professional, 2019.
+- [GKS05] C. Guestrin, A. Krause, and A. P. Singh. “高斯过程中的近似最优传感器布置”. In: 第22届机器学习国际会议论文集. 2005, pp. 265–272.
+- [GL10] K. Gregor and Y. LeCun. “学习稀疏编码的快速近似”. In: ICML. 2010, pp. 399–406.
+- [GL97] F. Glover and M. Laguna. 禁忌搜索. Kluwer Academic Publishers, 1997.
+- [Gla03] P. Glasserman. 金融工程中的蒙特卡洛方法. 第1版. 随机建模与应用概率. Springer-Verlag New York, 2003.
+- [Gle02] S. Glennan. “重新思考机制解释”. In: 科学哲学 69.S3 (2002), S342–S353.
+- [GLM15] J. Ghosh, Y. Li, and R. Mitra. “关于在贝叶斯逻辑回归中使用柯希先验分布”. In: (2015). arXiv: 1507.07170 [stat.ME].
+- [GLP21] I. Gulrajani and D. Lopez-Paz. “寻找失落的域泛化”. In: ICLR. 2021.
+- [GLS81] M. Grötschel, L. Lovász, and A. Schrijver. “椭球法及其在组合优化中的后果”. In: Combinatorica 1.2 (1981), pp. 169–197.
+- [GM12] G. Gordon and J. McNulty. 子模集：几何介绍. Cambridge University Press, 2012.
+- [GM15] J. Gorham and L. Mackey. “使用Stein方法测量样本质量”. In: 神经信息处理系统进展. 2015, pp. 226–234.
+- [GM16] R. Grosse and J. Martens. “卷积层的克罗内克分解近似Fisher矩阵”. In: ICML. 2016.
+- [GM17] P. L. Green and S. Maskell. “使用序列蒙特卡洛采样器从大数据中估计动态系统参数”. In: Mech. Syst. Signal Process. 93 (2017), pp. 379–396.
+- [GM98] A. Gelman and X.-L. Meng. “模拟归一化常数：从重要性抽样到桥接抽样再到路径抽样”. In: Statistical Science 13 (1998), pp. 163–185.
+- [GMAR16] Y. Gal, R. T. Mc Allister, and C. E. Rasmussen. “使用贝叶斯神经网络动态模型改进PILCO”. In: ICML数据高效机器学习研讨会. 2016.
+- [GMH20] M. Gorinova, D. Moore, and M. Hoffman. “概率程序的自动重参数化”. In: ICML. 第119卷. 机器学习研究进展. PMLR, 2020, pp. 3648–3657.
+- [GMN19] D. Greenberg, M. Nonnenmacher, and J. Macke. “无似然推断的自动后验变换”. In: ICML. 2019.
+- [Goe+09] M. X. Goemans, N. J. Harvey, S. Iwata, and V. Mirrokni. “无处不在的次模函数近似”. In: 第二十届年度ACM-SIAM离散算法研讨会论文集. SIAM. 2009, pp. 535–544.
+- [Gol+04] J. Goldberg, S. T. Roweis, G. E. Hinton, and R. Salakhutdinov. “邻域成分分析”. In: NIPS. 2004.
+- [Gol+17] N. Gold, M. G. Frasch, C. Herry, B. S. Richardson, and X. Wang. “用于噪声生物信号的双随机变点检测算法”. en. In: Front. Physiol. (2017), p. 106088.
+- [Gol17] Y. Goldberg. 自然语言处理的神经网络方法. Morgan & Claypool Publishers, 2017.
+- [Gol+19] Z. Goldfeld, E. van den Berg, K. H. Greenewald, I. Melnyk, N. Nguyen, B. Kingsbury, and Y. Polyanskiy. “估计深度神经网络中的信息流”. In: ICML. 2019.
+- [Gol89] D. E. Goldberg. 搜索、优化和机器学习中的遗传算法. 第1版. Addison-Wesley Longman Publishing Co., Inc., 1989.
+- [Gom+17] A. N. Gomez, M. Ren, R. Urtasun, and R. B. Grosse. “可逆残差网络：无需存储激活的反向传播”. In: NIPS. 2017.
+- [Gon+11] J. Gonzalez, Y. Low, A. Gretton, and C. Guestrin. “并行吉布斯采样：从彩色场到薄联结树”. In: AISTATS. 2011, pp. 324–332.
+- [Gon+14] B. Gong, W.-L. Chao, K. Grauman, and F. Sha. “用于监督视频摘要的多样化顺序子集选择”. In: 神经信息处理系统进展27 (2014), pp. 2069–2077.
+- [Goo+20] P. J. Goncalves等人. “训练深度神经密度估计器以识别神经动力学的机制模型”. In: Elife 9 (2020).
+- [Goo+14] I. J. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, and Y. Bengio. “生成对抗网络”. In: NIPS. 2014.
+- [Goo16] I. Goodfellow. “NIPS 2016教程：生成对抗网络”. In: NIPS教程. 2016.
+- [Goo85] I. Good. “证据权重：一项简要综述”. In: 贝叶斯统计 2 (1985), pp. 249–270.
+- [Gor+14] A. D. Gordon, T. A. Henzinger, A. V. Nori, and S. K. Rajamani. “概率编程”. In: 软件工程国际会议. 2014.
+- [Gor+19] J. Gordon, J. Bronskill, M. Bauer, S. Nowozin, and R. E. Turner. “用于预测的概率推断元学习”. In: ICLR. 2019.
+- [Gor93] N. Gordon. “非线性/非高斯贝叶斯状态估计的新方法”. In: IEE Proceedings (F) 140.2 (1993), pp. 107–113.
+- [Gor95] G. J. Gordon. “动态规划中的稳定函数近似”. In: ICML. 1995, pp. 261–268.
+- [Gou+96] C. Gouriéroux, M. Gouriéroux, A. Monfort, and D. A. Monfort. 基于模拟的计量经济学方法. Oxford university press, 1996.
+- [Goy+19] Y. Goyal, Z. Wu, J. Ernst, D. Batra, D. Parikh, and S. Lee. “反事实视觉解释”. 2019. arXiv: 1904.07451 [cs.LG].
+- [Goy+22] S. Goyal, M. Sun, A. Raghunathan, and Z. Kolter. “通过共轭伪标签进行测试时间适应”. In: (2022年7月). arXiv: 2207.09640 [cs.LG].
+- [GPS89] D. Greig, B. Porteous, and A. Seheult. “二值图像的精确最大后验估计”. In: 皇家统计学会系列B 51.2 (1989), pp. 271–279.
+- [GR06a] M. Girolami and S. Rogers. “带高斯过程先验的变分贝叶斯多项式Probit回归”. In: Neural Comput. 18.8 (2006), pp. 1790–1817.
+- [GR06b] M. Girolami and S. Rogers. “带高斯过程先验的变分贝叶斯多项式probit回归”. In: Neural Computation 18.8 (2006), pp. 1790–1817.

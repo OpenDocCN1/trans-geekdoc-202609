@@ -1,0 +1,13 @@
+![](bbox=[0.35, 0.1, 0.65, 0.28])
+
+Figure 34.11: Illustration of an MDP as a finite state machine (FSM). The MDP has three discrete states (green circlcs), two discrete actions (orange circles), and two non-zero rewards (orange arrows). The numbers on the black edges represent state transition probabilities, e.g., p(s' = s0|a = a0, s' = s0) = 0.7; most state transitions are impossible (probability 0), so the graph is sparse. The numbers on the yellow wiggly edges represent expected rewards, e.g., R(s = s1, a = a0, s' = s0) = +5; state transitions with zero reward are not annotated. From https://en.wikipedia.org/wiki/Markov_decision_process . Used with kind permission of Wikipedia author waldoalvarez.
+
+Thus, we see that the best we can achieve is logarithmic growth in the total regret. Similar lower bounds have also been obtained for various bandits variants.
+
+# 34.5 Markov decision problems
+
+In this section, we generalize the discussion of contextual bandits by allowing the state of nature to change depending on the actions chosen by the agent. The resulting model is called a Markov decision process or MDP, as we explain in detail below. This model forms the foundation of reinforcement learning, which we discuss in Chapter 35.
+
+# 34.5.1 Basics
+
+A Markov decision process [Put94] can be used to model the interaction of an agent and an environment. It is often described by a tuple \(\langle \mathcal{S}, \mathcal{A}, p_T, p_R, p_0 \rangle\), where \(\mathcal{S}\) is a set of environment states, \(\mathcal{A}\) a set of actions the agent can take, \(p_T\) a transition model, \(p_R\) a reward model, and \(p_0\) the initial state distribution. The interaction starts at time \(t=0\), where the initial state \(s_0 \sim p_0\). Then, at time \(t \ge 0\), the agent observes the environment state \(s_t \in \mathcal{S}\), and follows a policy \(\pi\) to take an action \(a_t \in \mathcal{A}\). In response, the environment emits a real-valued reward signal \(r_t \in \mathcal{R}\) and enters a new state \(s_{t+1} \in \mathcal{S}\). The policy is in general stochastic, with \(\pi(a|s)\) being the probability of choosing action \(a\) in state \(s\). We use \(\pi(s)\) to denote the conditional probability over \(\mathcal{A}\) if the policy is stochastic, or the action it chooses if it is deterministic. The process at every step is called a transition; at time \(t\), it consists of the tuple \((s_t, a_t, r_t, s_{t+1})\), where \(a_t \sim \pi(s_t)\), \(s_{t+1} \sim p_T(s_t, a_t)\), and \(r_t \sim p_R(s_t, a_t, s_{t+1})\). Hence, under policy \(\pi\), the probability of generating a trajectory \(\tau\) of

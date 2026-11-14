@@ -1,0 +1,72 @@
+
+tion model". In: *The Annals of Applied Statistics* 9.3 (2015), pp. 1350–1371.
+
+- [Lev18] S. Levine. “Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review”. In: (2018). arXiv: 1805.00909 [cs.LG].
+- [Lev+20] S. Levine, A. Kumar, G. Tucker, and J. Fu. *Offline Reinforcement Learning: Tutorial, Review, and Perspectives on Open Problems*. arXiv:2005.01643. 2020.
+- [LF+21] L. Le Folgoc, V. Baltatzis, S. Desai, A. Devaraj, S. Ellis, O. E. Martinez Manzanera, A. Nair, H. Qiu, J. Schnabel, and B. Glocker. “Is MC Dropout Bayesian?” In: (2021). arXiv: 2110.04286 [cs.LG].
+- [LFG21] F. Lin, X. Fang, and Z. Gao. “Distributionally Robust Optimization: A Review on theory and applications”. In: *Numer. Algebra Control Optim.* 12.1 (2021), pp. 159–212.
+- [LG94] D. D. Lewis and W. A. Gale. “A sequential algorithm for training text classifiers”. In: *SIGIR’94*. Springer, 1994, pp. 3–12.
+- [LGMT11] F. Le Gland, V. Monbet, and V.-D. Tran. “Large Sample Asymptotics for the Ensemble Kalman Filter”. In: *Oxford Handbook of Nonlinear Filtering*. Ed. by D Crisan and A. 2011.
+- [LHP17] R. M. Levy, A. Haldane, and W. F. Flynn. “Potts Hamiltonian models of protein co-variation, free energy landscapes, and evolutionary fitness”. en. In: *Curr. Opin. Struct. Biol.* 43 (2017), pp. 55–62.
+- [LHF20] J. Liang, D. Hu, and J. Feng. “Do We Really Need to Access the Source Data? Source Hypothesis Transfer for Unsupervised Domain Adaptation”. In: *ICML*. Ed. by H. D. Iii and A. Singh. Vol. 119. Proceedings of Machine Learning Research. PMLR, 2020, pp. 6028–6039.
+- [LHLT15] Y. Li, J. J. M. Hernandez-Lobato, and R. E. Turner. “Stochastic Expectation Propagation”. In: *NIPS*. 2015.
+- [LHR20] A. Lucie, H. Haned, and M. de Rijke. “Why does my model fail? contrastive local explanations for retail forecasting”. In: *Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency*. 2020, pp. 90–98.
+- [Li+10] L. Li, W. Chu, J. Langford, and R. E. Schapire. “A contextual-bandit approach to personalized news article recommendation”. In: *WWW*. 2010.
+- [Li+16] C. Li, C. Chen, D. Carlson, and L. Carin. “Preconditioned Stochastic Gradient Langevin Dynamics for Deep Neural Networks”. In: *AAAI*. 2016.
+- [Li+17a] A. Li, A. Jabri, A. Joulin, and L. van der Maaten. “Learning visual n-grams from web data”. In: *Proceedings of the IEEE International Conference on Computer Vision*. 2017, pp. 4183–4192.
+- [Li+17b] C.-L. Li, W.-C. Chang, Y. Cheng, Y. Yang, and B. Poczos. “Mmd gan: Towards deeper understanding of moment matching network”. In: *Advances in Neural Information Processing Systems*. 2017, pp. 2203–2213.
+- [Li+17c] L. Li, K. Jamieson, G. De Salvo, A. Rostamizadeh, and A. Talwalkar. “Hyperband: bandit-based configuration evaluation for hyperparameter optimization”. In: *ICLR*. 2017.
+- [Li+17d] O. Li, H. Liu, C. Chen, and C. Rudin. “Deep Learning for Case-Based Reasoning through Prototypes: A Neural Network that Explains Its Predictions”. 2017. arXiv: 1710.04806 [cs.AI].
+- [Li+17e] T.-C. Li, J.-Y. Su, W. Liu, and J. M. Corchado. “Approximate Gaussian conjugacy: parametric recursive filtering under nonlinearity, multimodality, uncertainty, and constraint, and beyond”. In: *Frontiers of Information Technology & Electronic Engineering* 18.12 (2017), pp. 1913–1939.
+- [Li+18] Y. Li. “Deep Reinforcement Learning”. In: (2018). arXiv: 1810.06339 [cs.LG].
+- [Li+18a] C. Li, H. Farkhoor, R. Liu, and J. Yosinski. “Measuring the Intrinsic Dimension of Objective Landscapes”. In: *ICLR*. 2018.
+- [Li+18b] C. Li, H. Farkhoor, R. Liu, and J. Yosinski. “Measuring the Intrinsic Dimension of Objective Landscapes”. In: *ICLR*. 2018.
+- [Li+18c] X. Li, C. Li, J. Chi, J. Ouyang, and W. Wang. “Black-box Expectation Propagation for Bayesian Models”. In: *ICDM*. Proceedings. Society for Industrial and Applied Mathematics, 2018, pp. 603–611.
+- [Li+19] J. Li, S. Qu, X. Li, J. Szurley, J. Z. Kolter, and F. Metze. “Adversarial Music: Real world Audio Adversary against Wake-word Detection System”. In: *NIPS*. Curran Associates, Inc., 2019, pp. 11908–11918.
+- [Li+20] C. Li, X. Gao, Y. Li, B. Peng, X. Li, Y. Zhang, and J. Gao. “Optimus: Organizing Sentences via Pre-trained Modeling of a Latent Space”. In: *EMNLP*. 2020.
+- [Li+21] Y. Li, R. Pogodin, D. J. Sutherland, and A. Gretton. “Self-Supervised Learning with Kernel Dependence Maximization”. In: *NeurIPS*. 2021.
+- [Li+22] R. Li, W. Li, Y. Yang, H. Wei, J. Jiang, and Q. Bai. “SwinV2-Imagen: Hierarchical Vision Transformer Diffusion Models for Text-to-Image Generation”. In: (Oct. 2022). arXiv: 2210.09549 [cs.CV].
+- [Lia+] P. Liang, R. Bommasani, T. Lee, D. Tsipras, D. Soylu, M. Yasunaga, Y. Zhang, D. Narayanan, and Y. Wu. “Holm: Holistic Evaluation of Language Models (HELM), a framework to increase the transparency of language models (https://arxiv.org/abs/2211.09110)”. en.
+- [Lia+07] L. Liao, D. J. Patterson, D. Fox, and H. Kautz. “Learning and Inferring Transportation Routines”. In: *Artificial Intelligence* 171.5 (2007), pp. 311–331.
+- [Lia+08] F. Liang, R. Paulo, G. Molina, M. Clyde, and J. Berger. “Mixtures of g-priors for Bayesian Variable Selection”. In: *JASA* 103.481 (2008), pp. 410–423.
+- [Lia+19] V. Liao, R. Ballamy, M. Muller, and H. Chanello. “Human-AI Collaboration: Towards Socially-Guided Machine Learning”. In: *CHI Workshop on Human-Centered Machine Learning Perspectives*. 2019.
+- [Lil+16] T. P. Lillicrap, J. J. Hunt, A. Pritzel, N. Heess, T. Erez, Y. Tassa, D. Silver, and D. Wierstra. “Continuous control with deep reinforcement learning”. In: *ICLR*. 2016.
+- [Lin13a] W. Lin. “Agnostic notes on regression adjustments to experimental data: Reexamining Freedman’s critique”. In: *The Annals of Applied Statistics* 7.1 (2013), pp. 295–318.
+- [Lin13b] D. A. Linzer. “Dynamic Bayesian Forecasting of Presidential Elections in the States”. In: *JASA* 108.501 (2013), pp. 124–134.
+- [Lin+17a] K. Lin, D. Li, X. He, Z. Zhang, and M.-T. Sun. “Adversarial ranking for language generation”. In: *Advances in Neural Information Processing Systems*. 2017, pp. 3155–3165.
+- [Lin+17b] T.-Y. Lin, P. Dollár, R. Girshick, K. He, B. Hariharan, and S. Belongie. "Feature pyramid networks for object detection". In: Proceedings of the IEEE conference on computer vision and pattern recognition. 2017, pp. 2117–2125.
+- [Lin19] J. K. Lindelof. Common statistical tests are linear models (or: how to teach stats). Blog post. 2019.
+- [Lin+20] H. Lin, H. Chen, T. Zhang, C. Laroche, and K. Choromanski. "Demystifying Orthogonal Monte Carlo and Beyond". In: (2020). arXiv: 2005.13590 [cs.LG].
+- [Lin+21a] T. Lin, Y. Wang, X. Liu, and X. Qiu. "A Survey of Transformers". In: (2021). arXiv: 2106.04554 [cs.LG].
+- [Lin+21b] A. Lindholm, N. Wahlström, F. Lindsten, and T. B. Schön. Machine Learning - A First Course for Engineers and Scientists. 2021.
+- [Lin+21c] J. Lindqvist, S. Särkkä, Å. F. García-Fernández, M. Raitoharju, and L. Svensson. "Posterior linearisation smoothing with robust iterations". In: (Dec. 2021). arXiv: 2112.03969 [math.OC].
+- [Lin56] D. Lindley. "On a measure of the information provided by an experiment". In: The Annals of Math. Stat. (1956), 986–1005.
+- [Lin88a] B. Lindsay. "Composite Likelihood Methods". In: Contemporary Mathematics 80.1 (1988), pp. 221–239.
+- [Lin88b] R. Linsker. "Self-organization in a perceptual network". In: Computer 21.3 (1988), pp. 105–117.
+- [Lin88c] R. Linsker. "Self-organization in a perceptual network". In: Computer 21.3 (1988), pp. 105-117.
+- [Lin92] L.-J. Lin. "Self-Improving Reactive Agents Based on Reinforcement Learning: Planning and Teaching". In: Mach. Learn. 8.3-4 (1992), pp. 293–321.
+- [Lip18] Z. C. Lipton. "The Mythos of Model Interpretability: In machine learning, the concept of interpretability is both important and slippery.". In: Queue 16.3 (2018), pp. 31–57.
+- [Lis20] Z. Lu, E. Ie, and F. Sha. "Mean-Field Approximation to Gaussian-Softmax Integral with Application to Uncertainty Estimation". In: (June 2020). arXiv: 2006.07584 [cs.LG].
+- [Liu01] J. Liu. Monte Carlo Strategies in Scientific Computation. Springer, 2001.
+- [Liu+15] Z. Liu, P. Luo, X. Wang, and X. Tang. "Deep Learning Face Attributes in the Wild". In: ICCV. 2015.
+- [Liu+18a] L. Liu, X. Liu, C.-J. Hsieh, and D. Tao. "Stochastic Second-order Methods for Non-convex Optimization with Inexact Hessian and Gradient". In: (2018). arXiv: 1809.09853 [math.OC].
+- [Liu+18b] Q. Liu, L. Li, Z. Tang, and D. Zhou. "Breaking the Curse of Horizon: Infinite-horizon Off-policy Estimation". In: NeurIPS. Curran Associates Inc., 2018, pp. 5361–5371.
+- [Liu+19a] H. Liu, Y.-S. Ong, Z. Yu, J. Cai, and X. Shen. "Scalable Gaussian Process Classification with Additive Noise for Various Likelihoods". In: (2019). arXiv: 1909.06541 [stat.ML].
+- [Liu+19b] R. Liu, J. Regier, N. Tripuraneni, M. I. Jordan, and J. McAuliffe. "Rao-Blackwellized Stochastic Gradients for Discrete Distributions". In: ICML. 2019.
+- [Liu+19c] Y. Liu, M. Ott, N. Goyal, J. Du, M. Joshi, D. Chen, O. Levy, M. Lewis, L. Zettlemoyer, and V. Stoyanov. "Roberta: A robustly optimized bert pretraining approach". In: arXiv preprint arXiv:1907.11692 (2019).
+- [Liu+20a] F. Liu, W. Xu, J. Lu, G. Zhang, A. Gretton, and D. J. Sutherland. "Learning Deep Kernels for Non-Parametric Two-Sample Tests". In: ICML. 2020.
+- [Liu+20b] F. Liu, W. Xu, J. Lu, G. Zhang, A. Gretton, and D. J. Sutherland. "Learning deep kernels for non-parametric two-sample tests". In: ICMLR. 2020, pp. 6316–6326.
+- [Liu+20c] H. Liu, Y.-S. Ong, X. Shen, and J. Cai. "When Gaussian Process Meets Big Data: A Review of Scalable GPs". In: IEEE Transactions on Neural Networks and Learning Systems 31.1 (2020).
+- [Liu+20d] J. Z. Liu, Z. Lin, S. Padhy, D. Tran, T. Bedrax-Weiss, and B. Lakshminarayanan. "Simple and Principled Uncertainty Estimation with Deterministic Deep Learning via Distance Awareness". In: NIPS. 2020.
+- [Liu+21a] P. Liu, W. Yuan, J. Fu, Z. Jiang, H. Hayashi, and G. Neubig. "Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing". In: (2021). arXiv: 2107.13586 [cs.CL].
+- [Liu+21b] W. Liu, X. Wang, J. D. Owens, and Y. Li. "Energy-based Out-of-distribution Detection". In: NIPS. 2021.
+- [Liu+22a] J. Z. Liu, S. Padhy, J. Ren, Z. Lin, Y. Wen, G. Jerfel, Z. Nado, J. Snoek, D. Tran, and B. Lakshminarayanan. "A Simple Approach to Improve Single-Model Deep Uncertainty via Distance-Awareness". In: JMLR 23 (May 2022), pp. 1–62.
+- [Liu+22b] Z. Liu, H. Mao, C.-Y. Wu, C. Feichtenhofer, T. Darrell, and S. Xie. "A ConvNet for the 2020s". In: (2022). arXiv: 2201.03545 [cs.CV].
+- [LJ08] P. Liang and M. I. Jordan. "An Asymptotic Analysis of Generative, Discriminative, and Pseudolikelihood Estimators". In: International Conference on Machine Learning (ICML). 2008.
+- [Lju87] L. Ljung. System Identification: Theory for the User. Prentice Hall, 1987.
+- [LJY19] S. Liu, Y. Jiang, and T. Tu. "Modelling RNA-Seq data with a zero-inflated mixture Poisson linear model". en: In: Genet. Epidemiol. 43.7 (2019), pp. 786–799.
+- [LK07] P. Liang and D. Klein. Structured Bayesian Nonparametric Models with Variational Inference. ACL Tutorial. 2007.
+- [LK09] P. Liang and D. Klein. "Online EM for Unsupervised Models". In: NAACL. 2009.
+- [LKJ09] D. Lewandowski, D. Kurowicka, and H. Joe. "Generating random correlation matrices based on vines and extended onion method". In: J. Multivar. Anal. 100.9 (2009), pp. 1989–2001.
+- [LL02] P. Larrañaga and J. A. Lozano. Estimation of Distribution Algorithms: A New Tool for Evolutionary Computation. Kluwer Academic Publishers, 2002.
+- [LL17] S. M. Lundberg and S.-I. Lee. "A unified approach to interpreting model predictions". In: NIPS. 2017, pp. 4765–4774.

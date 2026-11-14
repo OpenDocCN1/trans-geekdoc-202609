@@ -1,0 +1,75 @@
+
+- [Dia88b] P. Diaconis. “Sufficiency as statistical symmetry”. In: *Proceedings of the AMS Centennial Symposium*. 1988, pp. 15–26.
+- [Die00] T. G. Dietterich. “Ensemble Methods in Machine Learning”. In: *Multiple Classifier Systems*. Springer Berlin Heidelberg, 2000, pp. 1–15.
+- [Die+07] M. Diehl, H. G. Bock, H. Diedam, and P.-B. Wieber. “Fast Direct Multiple Shooting Algorithms for Optimal Robot Control”. In: *Lecture Notes in Control and Inform. Sci.* 340 (2007).
+- [Die10] L. Dietz. *Directed Factor Graph Notation for Generative Models*. Tech. rep. MPI, 2010.
+- [Die+17] A. B. Dieng, C. Wang, J. Gao, and J. Paisley. “TopicRNN: A Recurrent Neural Network with Long-Range Semantic Dependency”. In: *ICLR*. 2017.
+- [Die+19a] A. B. Dieng, Y. Kim, A. M. Rush, and D. M. Blei. “Avoiding Latent Variable Collapse With Generative Skip Models”. In: *AISTATS*. 2019.
+- [Die+19b] A. B. Dieng, F. J. Ruiz, D. M. Blei, and M. K. Titsias. “Prescribed generative adversarial networks”. In: *arXiv preprint arXiv:1910.04302* (2019).
+- [Dik+20] N. Dikkala, G. Lewis, L. Mackey, and V. Syrgkanis. “Minimax Estimation of Conditional Moment Models”. In: *Advances in Neural Information Processing Systems*. 2020.
+- [Din+17] L. Dinh, R. Pascanu, S. Bengio, and Y. Bengio. “Sharp Minima Can Generalize For Deep Nets”. In: (2017), arXiv: `1703.04933 [cs.LG]`.
+- [DJ11] A. Doucet and A. M. Johansen. “A Tutorial on Particle Filtering and Smoothing: Fifteen years later”. In: *Handbook of Nonlinear Filtering*. Ed. by D. Crisan and B. Rozovskii. 2011.
+- [DJ21] K. Desai and J. Johnson. *VirTex: Learning Visual Representations from Textual Annotations*. 2021. arXiv: `2006.06666 [cs.CV]`.
+- [DJK18] J. Djolonga, S. Jegelka, and A. Krause. “Provable Variational Inference for Constrained Log-Submodular Models”. In: *NeurIPS*. 2018.
+- [DK12] J. Durbin and S. J. Koopman. *Time Series Analysis by State Methods (Second Edition)*. en. Revised ed. edition. Oxford University Press, 2012.
+- [DK14] J. Djolonga and A. Krause. “From map to marginals: Variational inference in bayesian submodular models”. In: *Advances in Neural Information Processing Systems*. 2014, pp. 244–252.
+- [DK15a] J. Djolonga and A. Krause. “Scalable variational inference in log-supermodular models”. In: *International Conference on Machine Learning*. PMLR. 2015, pp. 1804–1813.
+- [DK15b] G. Durrett and D. Klein. “Neural CRF Parsing”. In: *Proc. ACL*. 2015.
+- [DKB15] L. Dinh, D. Krueger, and Y. Bengio. “NICE: Non-linear Independent Components Estimation”. In: *ICLR*. 2015.
+- [DKJ16] J. Donahue, P. Krahenbuhl, and T. Darrell. “Adversarial feature learning”. In: *arXiv preprint arXiv:1605.09782* (2016).
+- [DK17] J. Donahue, P. Krähenbühl, and T. Darrell. *Adversarial Feature Learning*. 2017. arXiv: `1605.09782 [cs.LG]`.
+- [DKS13] J. Dick, F. Y. Kuo, and I. H. Sloan. “High-dimensional integration: the quasi-Monte Carlo way”. In: *Acta Numerica* 22 (2013), 133–288.
+- [DL09] P. Domingos and D. Lowd. *Markov Logic: An Interface Layer for AI*. Morgan & Claypool, 2009.
+- [DL10] J. V. Dillon and G. Lebanon. “Stochastic Composite Likelihood”. In: *J. Mach. Learn. Res.* 11 (2010), pp. 2597–2633.
+- [DL13] A. Damianou and N. Lawrence. “Deep Gaussian Processes”. en. In: *AISTATS*. 2013, pp. 207–215.
+- [DL93] P. Dagum and M. Luby. “Approximating probabilistic inference in Bayesian belief networks is NP-hard”. In: *Artificial Intelligence* 60 (1993), pp. 141–153.
+- [DLB17] C. Dann, T. Lattimore, and E. Brunskill. “Unifying PAC and Regret: Uniform PAC Bounds for Episodic Reinforcement Learning”. In: *NIPS*. 2017, pp. 5717–5727.
+- [DLM09] H. Daumé III, J. Langford, and D. Marcu. “Search-based Structured Prediction”. In: *MLJ* 75.3 (2009), pp. 297–325.
+- [DLM99] B. Delyon, M. Lavielle, and E. Moulines. “Convergence of a stochastic approximation version of the EM algorithm”. In: *Annals of Statistics* 27.1 (1999), pp. 94–128.
+- [DLR77] A. P. Dempster, N. M. Laird, and D. B. Rubin. “Maximum likelihood from incomplete data via the EM algorithm”. In: *J. of the Royal Statistical Society, Series B* 34 (1977), pp. 1–38.
+- [DLT21] M. De Lange and T. Tuytelaars. “Continual Prototype Evolution: Learning Online from Non-Stationary Data Streams”. In: *ICCV*. 2021.
+- [DM01] D. van Dyk and X.-L. Meng. “The Art of Data Augmentation”. In: *J. Computational and Graphical Statistics* 10.1 (2001), pp. 1–50.
+- [DM19a] Y. Du and I. Mordatch. “Implicit Generation and Generalization in Energy-Based Models”. In: (2019). arXiv: `1903.08689 [cs.LG]`.
+- [DM19b] Y. Du and I. Mordatch. “Implicit Generation and Modeling with Energy Based Models”. In: *NIPS*. 2019, pp. 3608–3618.
+- [DM22] A. P. Dawid and M. Musio. “Effects of Causes and Causes of Effects”. In: *Annu. Rev. Stat. Appl.* 9.1 (Mar. 2022), pp. 261–287.
+- [DMDJ12] P. Del Moral, A. Doucet, and A. Jasra. “An adaptive sequential Monte Carlo method for approximate Bayesian computation”. In: *Stat. Comput.* 22.5 (2012), pp. 1009–1020.
+- [DMKM22] G. Duran-Martin, A. Kara, and K. Murphy. “Efficient Online Bayesian Inference for Neural Bandits”. In: *AISTATS*. 2022.
+- [DMM17] A. P. Dawid, M. Musio, and R. Murtas. “The probability of causation”. In: *Law, Probability and Risk* 16.4 (2017), pp. 163–179.
+- [DMP18] C. Donahue, J. McAuley, and M. Puckette. “Adversarial Audio Synthesis”. In: *International Conference on Learning Representations*. 2018.
+- [DMV15] S. Dash, D. M. Malioutov, and K. R. Varshney. “Learning interpretable classification rules using sequential row-sampling”. In: *2015 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)*. IEEE, 2015, pp. 3337–3441.
+- [DN21a] P. Dhariwal and A. Nichol. “Diffusion Models Beat GANs on Image Synthesis”. In: *NIPS*. May 2021.
+- [DN21b] P. Dhariwal and A. Q. Nichol. “Diffusion Models Beat GANs on Image Synthesis”. In: *NIPS*. May 2021.
+- [Dnp] .
+- [DNR11] D. Duvenaud, D. Nickisch, and C. E. Rasmussen. “Additive Gaussian Processes”. In: *NIPS*. 2011.
+- [Dom+06] P. Domingos, S. Kok, H. Poon, M. Richardson, and P. Singla. “Unifying Logical and Statistical AI”. In: *IJCAI*. 2006.
+- [Dom+19] A.-K. Dombrowski, M. Alber, C. Anders, M. Ackermann, K.-R. Müller, and P. Kessel. “Explanations Can be manipulated and geometry is to blame”. In: *arXiv preprint arXiv:1906.07983* (2019).
+- [Don+14] J. Donahue, Y. Jia, O. Vinyals, J. Hoffman, N. Zhang, E. Tzeng, and T. Darrell. “Decaf: A deep convolutional activation feature for generic visual recognition”. In: *International conference on machine learning*. 2014, pp. 647–655.
+- [Don+17a] K. Dong, D. Eriksson, H. Nickisch, D. Bindel, and A. G. Wilson. “Scalable Log Determinants for Gaussian Process Kernel Learning”. In: *NIPS*. 2017, pp. 6327–6337.
+- [Don+17b] Y. Dong, H. Su, J. Zhu, and F. Bao. “Towards interpretable deep neural networks by leveraging adversarial examples”. In: *arXiv preprint arXiv:1708.05493* (2017).
+- [Don+21] X. Dong, J. Bao, T. Zhang, D. Chen, W. Zhang, L. Yuan, D. Chen, F. Wen, and N. Yu. “Peco: Perceptual codebook for bert pre-training of vision transformers”. In: *arXiv preprint arXiv:2111.12710* (2021).
+- [Doo+17] J. van Doorn, A. Ly, M. Marsman, and E.-J. Wagenmakers. “Bayesian Rank-Based Hypothesis Testing for the Rank Sum Test, the Signed Rank Test, and Spearman’s ρ”. In: (Dec. 2017). arXiv: 1712.06941 [stat.ME].
+- [Dor+16] V. Dorie, M. Harada, N. B. Carnegie, and J. Hill. “A flexible, interpretable framework for assessing sensitivity to unmeasured confounding”. In: *Statistics in Medicine* 35.20 (2016), pp. 3453–3470. eprint: `https://onlinelibrary.wiley.com/doi/pdf/10.1002/sim.6973`.
+- [Dos+21] A. Dosovitskiy et al. “An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale”. In: *International Conference on Learning Representations*. 2021.
+- [Doy+07] K. Doya, S. Ishii, A. Pouget, and R. P. N. Rao, eds. *Bayesian Brain: Probabilistic Approaches to Neural Coding*. MIT Press, 2007.
+- [DR11] M. P. Deisenroth and C. E. Rasmussen. “PILCO: A Model-Based and Data-Efficient Approach to Policy Search”. In: *ICML*. 2011.
+- [DR17] G. K. Dziugaite and D. M. Roy. “Computing nonvacuous generalization bounds for deep (stochastic) neural networks with many more parameters than training data”. In: *UAI*. 2017.
+- [DR21] H. Duanmu and D. M. Roy. “On extended admissible procedures and their nonstandard Bayes risk”. In: *Annals of Statistics* (2021).
+- [DRB19] A. B. Dang, F. J. R. Ruiz, and D. M. Blei. “The Dynamic Embedded Topic Model”. In: (2019). arXiv: 1907.05545 [cs.CL].
+- [DRG15] G. K. Dziugaite, D. M. Roy, and Z. Ghahramani. “Training generative neural networks via Maximum Mean Discrepancy optimization”. In: *ICML*. 2015.
+- [Dru08] J. Drugowitsch. *Bayesian linear regression*. Tech. rep. U. Rochester, 2008.
+- [DS18] J. Domke and D. R. Sheldon. “Importance Weighting and Variational Inference”. In: *NIPS*. 2018, pp. 4474–4483.
+- [DS19] J. Donahue and K. Simonyan. “Large scale adversarial representation learning”. In: *arXiv preprint arXiv:1907.02544* (2019).
+- [SDB17] L. Dinh, J. Sohl-Dickstein, and S. Bengio. “Density estimation using Real NVP”. In: *ICLR*. 2017.
+- [DSK16] V. Dumoulin, J. Shlens, and M. Kudlur. “A Learned Representation For Artistic Style”. In: (2016).
+- [DSP21] M. Dowling, P. Sokół, and I. M. Park. “Hida-Matern Kernel”. In: (July 2021). arXiv: `2107.07098 [stat.ML]`.
+- [DSZ16] A. Datta, S. Sen, and Y. Zick. “Algorithmic transparency via quantitative input influence: Theory and experiments with learning systems”. In: *2016 IEEE symposium on security and privacy (SP)*. IEEE, 2016, pp. 598–617.
+- [DTK16] J. Djolonga, S. Tschiatschek, and A. Krause. “Variational inference in mixed probabilistic submodular models”. In: *Advances in Neural Information Processing Systems*. 2016, pp. 1759–1767.
+- [Du+18] J. Du, S. Ma, Y.-C. Wu, S. Kar, and J. M. F. Moura. “Convergence Analysis of Distributed Inference with Vector-Valued Gaussian Belief Propagation”. In: *JMLR* 18.172 (2018), pp. 1–38.
+- [Du+19] S. S. Du, K. Hou, B. Póczos, R. Salakhutdinov, R. Wang, and K. Xu. “Graph Neural Tangent Kernel: Fusing Graph Neural Networks with Graph Kernels”. In: (2019). arXiv: `1905.13192 [cs.LG]`.
+- [Du+20] Y. Du, S. Li, J. Tenenbaum, and I. Mordatch. “Improved Contrastive Divergence Training of Energy Based Models”. In: *arXiv preprint arXiv:2012.01316* (2020).
+- [Du+21] C. Du, Z. Gao, S. Yuan, L. Gao, Z. Li, Y. Zeng, X. Zhu, J. Xu, K. Gai, and K.-C. Lee. “Exploration in Online Advertising Systems with Deep Uncertainty-Aware Learning”. In: *KDD*. KDD ’21. Association for Computing Machinery, 2021, pp. 2792–2801.
+- [Dua+20] S. Duane, N. Watters, L. Matthey, C. P. Burgess, A. Lerchner, and I. Higgins. “A Heuristic for Unsupervised Model Selection for Variational Disentangled Representation Learning”. In: *ArXiv* abs/1905.12614 (2020).
+- [Dua+87] S. Duane, A. Kennedy, B. Pendleton, and D. Roweth. “Hybrid Monte Carlo”. In: *Physics Letters B* 195.2 (1987), pp. 216–222.
+- [Dub+16] A. Dubey, S. J. Reddi, B. Póczos, A. J. Smola, E. P. Xing, and S. A. Williamson. “Variance Reduction in Stochastic Gradient Langevin Dynamics”. In: *NIPS*. Vol. 29. 2016, pp. 1154–1162.
+- [Dub20] Y. Dubois. *Neural Process Family*. `http://yaundubs.github.io/Neural-Process-Family/`. 2020.
+- [Dud13] J. Duda. “Asymmetric numerical systems: entropy coding combining speed of Huffman coding with compression rate of arithmetic coding”. In: (2013). arXiv: `1311.2540 [cs.IT]`.
