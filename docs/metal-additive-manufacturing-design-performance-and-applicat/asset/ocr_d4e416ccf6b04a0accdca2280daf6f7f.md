@@ -1,0 +1,13 @@
+The QE values for Pb bulk and Pb thin film are \(7 \times 10^{-5}\) and \(8 \times 10^{-5}\) at 266 nm, respectively [50], which are significantly higher than the \(3.2 \times 10^{-6}\) QE of the Nb bulk at 248 nm [13]. However, it is observed that a slight space charge effect occurs at laser energies exceeding 35 \(\mu\)J. Despite the good chemical stability of Pb, its surface oxidizes when exposed to air, necessitating laser cleaning before its use in SRF guns. As with MPs, these cleaning processes lead to the thinning of the photoemitting surface, compromising the performance and lifespan. Consequently, alternative mechanical and physical solutions have been explored by various research groups.
+
+In a non-conventional set-up, a configuration was proposed where a Pb disk is entirely coated with a Nb thin film, excluding its central surface, which serves as the photo-emitting area (Figure 1d) [25]. As in the case of metallic photocathodes, in the non-conventional configuration the drive laser acts on the Pb bulk and not on the thin film. Mechanical solutions face similar challenges as those with MPs; thus, PLD appears to be an optimal technique for depositing highly adherent thin films. The Nb films were analyzed for their morphological, structural and electrical properties, as well as mechanical properties.
+
+Nano-indentation analysis determined the mechanical properties of the Nb film, revealing a good hardness value of \(2.8 \pm 0.3\) GPa [25]. It is crucial to avoid surface scratches on photocathodes, as these can cause electrical discharges under the high electric fields in superconducting cavities.
+
+Another vital characteristic of SCPs are their electrical compatibility with superconducting cavities. Figure 6 shows the sample resistance as a function of temperature, with two noticeable discontinuities: one at 9.3 K, corresponding to the critical temperature of Nb, and another at 7.3 K, near the critical temperature of Pb [25].
+
+![](bbox=[0.352, 0.462, 0.843, 0.759])
+
+**Figure 6.** Electrical resistance evolution of the sample Nb thin film on Pb substrate with the temperature (reproduced from ref. [25]).
+
+In this non-conventional configuration, SCPs have similar photoelectrical properties to Pb bulk. These findings indicate that the non-conventional setups for both MPs and SCPs show the greatest potential and dependability among the various proposed configurations (see Tables 1–4).

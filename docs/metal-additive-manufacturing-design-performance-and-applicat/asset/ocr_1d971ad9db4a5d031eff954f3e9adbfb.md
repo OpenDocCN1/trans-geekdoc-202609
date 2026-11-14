@@ -1,0 +1,15 @@
+the heat input is minimal, and the yield strength of the Ti6Al4V and Inconel 718 alloys exceeds the thermal stress in the deposited layer, resulting in no crack formation. However, when the deposition current exceeds 50 A, the stress concentration in the deposited layer surpasses the yield strength of the alloy, leading to crack formation.
+
+# 3.6. Mechanical Properties
+
+Figure 11 presents the microhardness characteristics of samples subjected to various deposition currents, as measured by a microhardness tester. At a deposition current of 35 A, the average microhardness is 550.14 HV. This value increases to 658.27 HV at 40 A and reaches 659.79 HV at both 45 A and 50 A. The maximum recorded average microhardness is 723.50 HV. Previous studies report that the microhardness of Inconel 718 is approximately 250 HV [30]. The results indicate a significant enhancement in the microhardness of the Ti6Al4V composite, which increases progressively with higher deposition currents.
+
+![](bbox=[0.285, 0.31, 0.685, 0.535])
+
+Figure 11. Microhardness characteristics of samples with different deposition currents.
+
+As the deposition current increases, the heat input also rises, leading to changes in the secondary dendrite spacing, grain size, and morphology of the deposited layer. A higher deposition current results in smaller grains within the deposited layer, which increases the relative area of the grain boundaries and hinders dislocation movement. This obstruction contributes to an increase in yield strength, subsequently affecting the microhardness of the sample. Previous analysis shows that at a deposition current of 35 A, the deposited layer primarily consists of columnar crystals. These crystals are predominantly nickel-based alloys with a small amount of Ti distributed within them through diffusion. The incorporation of Ti elements enhances the microhardness of the material.
+
+At a deposition current of 40 A, the microstructure of the deposited layer is primarily composed of intermetallic compounds such as TiNi, Cr2Ti, and Fe2Ti. Both Cr2Ti and Fe2Ti are hard and brittle intermetallic phases that contribute to the overall hardness of the material. When the deposition current increases to 45 A, there is little change in the microhardness compared to 40 A. This stability may be attributed to the microstructure along the dendrite axis, which is predominantly a nickel-based alloy, with a small distribution of Ti. The content of hard and brittle intermetallic compounds between the dendrite axis and the dendrites is minimal; however, MC carbides are located near the grain boundaries. These carbides hinder dislocation movement, thereby enhancing the material's hardness and potentially explaining the limited change in microhardness.
+
+When the deposition current is 50 A, the content of hard brittle intermetallic compounds on the dendrites axis and the dendrites is relatively higher, and it can be seen from Figure 7 that MC carbides are also distributed on the dendrites axis. It has been

@@ -1,0 +1,21 @@
+# Effect of the Cooling Liquid on the Milled Interface in the Combined Process of Milling and Direct Metal Deposition
+
+Sergei Egorov 1,2,*, Timo Schudeleit 1 and Konrad Wegener 1,2
+
+1 Inspire AG, Technoparkstrasse 1, 8005 Zurich, Switzerland; timo.schudeleit@inspire.ch (T.S.); wegener@iwf.mavt.ethz.ch (K.W.)
+2 Institute for Machine Tools and Manufacturing (ETH Zürich), Leonhardstrasse 21, 8092 Zurich, Switzerland
+* Correspondence: sergei.egorov@inspire.ch; Tel.: +41-44-633-23-84
+
+Abstract: The combination of Direct Metal Deposition (DMD) with milling offers numerous advantages for the manufacturing of complex geometry parts demanding high dimensional accuracy and surface quality. To reach this, a process strategy alternation between both processes is often required, leaving the milled surface with a layer of cooling fluid before adding material by DMD. This paper investigates the effect of cooling liquid on the milled interface in the combined process of milling and DMD. Five different interface conditions were examined, employing four distinct cleaning techniques to assess their impact on the quality of the interface. Key metrics analysed included hydrogen content, carbon content, and porosity levels at the interface. Cleaning techniques were evaluated to determine their necessity in enhancing the interface quality in the combined DMD and milling production process. Results from this study provide essential insights into the optimal cleaning requirements for improving the interface integrity in hybrid manufacturing processes, which could lead to more reliable and efficient production methods in industrial applications.
+
+Keywords: additive manufacturing; directed metal deposition; hybrid process; cooling liquid; Inconel 718
+
+# 1. Introduction
+
+Direct Metal Deposition (DMD) is a metal AM technology that involves the layer-by-layer deposition of metal powder using a focused energy source (e.g., a laser) to melt and fuse the powder particles onto a substrate or previously deposited layer [1]. This process allows for repairs, applying wear- and corrosion-resistant coatings, and creating complex metal parts. This innovative method can be combined with conventional subtractive manufacturing techniques, such as milling, to form a hybrid manufacturing process that increases the dimensional accuracy and surface finish of the resulting parts. Using the advantages of both additive and subtractive methods can significantly increase manufacturing flexibility, reduce material waste, and enable the production of components with complex geometries that were previously almost impossible to fabricate by conventional manufacturing methods. It opens a new perspective in manufacturing technology, offering a way to more efficient, sustainable, and customisable production of highly loaded products for various applications from medical to aerospace. Aerospace parts are often made of hard-to-machine alloys (e.g., nickel- or titanium-based alloys), which represents a technological challenge in machining from an economic and technological point of view. One of the most commonly used nickel-based superalloys is precipitation-hardening nickel-based alloy Inconel 718 (IN718), developed by the Nickel Corporation in the 1950s. It has a high level of mechanical properties, including superior creep resistance, excellent oxidation and corrosion resistance at elevated temperatures up to 650 °C, and good weldability [2,3]. These properties ensure its wide application in the aerospace industry.
+
+Citation: Egorov, S.; Schudeleit, T.; Wegener, K. Effect of the Cooling Liquid on the Milled Interface in the Combined Process of Milling and Direct Metal Deposition. Materials 2024, 17, 3119. https://doi.org/10.3390/ma17133119
+
+Academic Editors: Dimitrios Tzetzis, Konstantinos Tsongas and Nikolaos Kladovasilakis Received: 28 May 2024 Revised: 18 June 2024 Accepted: 21 June 2024 Published: 25 June 2024
+
+Copyright: © 2024 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https://creativecommons.org/licenses/by/4.0/).

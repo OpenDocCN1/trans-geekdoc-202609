@@ -1,0 +1,13 @@
+# # About the Editors
+
+# **Nikolaos Kladovasilakis**
+
+Dr. Nikolaos Kladovasilakis is a Mechanical Engineer and Designer with extensive experience in industrial design, optimization procedures, and advanced manufacturing processes. He holds an M.Eng. in Mechanical Engineering (AUTH, 2017), an M.Sc. in Strategic Product Design with a specialization in industrial design and innovation (IHU, 2020), and a Ph.D. in Material Science and Additive Manufacturing (IHU, 2023). His research focuses on advanced manufacturing technologies, material characterization, process optimization, and computational mechanics. Dr. Kladovasilakis is involved as a senior researcher in numerous projects related to additive manufacturing, robotics, ICT, reverse engineering, circular economy, computational mechanics, and material characterization. He is the author of several scientific publications and holds multiple patents as an inventor.
+
+# **Konstantinos Tsongas**
+
+Dr. Konstantinos Tsongas is a Professor at the International Hellenic University, specializing in advanced materials and their applications in mechanical constructions. He holds an M.Eng. in Civil Engineering (DUTH, 2011), an M.Sc. in Structural Engineering (DUTH, 2012), and a Ph.D. in Mechanical Engineering (AUTH, 2016), with expertise in nanocomposite polymers and the dynamic mechanical behavior of structures. His research interests span additive manufacturing, reverse engineering, mechanical testing, material morphology characterization (SEM/EDS and XRD), FEM, and optimization processes. Dr. Tsongas has actively contributed to numerous research programs related to digital manufacturing and advanced construction and has published extensively in prestigious scientific journals.
+
+# **Dimitrios Tzetzis**
+
+Dr. Dimitrios Tzetzis is a Professor at the International Hellenic University, specializing in mechanical design (CAD/CAE), additive manufacturing, and materials engineering. He is also Head of the Digital Manufacturing and Materials Characterization Laboratory (DMMC Lab) and Director of the M.Sc. in Strategic Product Design at the School of Science and Technology, IHU. His research interests focus on composites and nanocomposites, the processing and mechanics of materials, destructive and non-destructive testing, product design, 3D printing, and nanomaterials. He is actively involved in various funded research and development projects and has published a multitude of scientific studies in the field of advanced materials and structures for various applications.
