@@ -1,0 +1,727 @@
+- pgno: 0
+  md: '# # Mapping Drug-Induced Neuropathy through In-Situ Motor Protein Tracking
+    and Machine Learning
+
+
+    Zhigao Yi, Huxin Gao, Xianglin Ji, Xin-Yi Yeo, Suet Yen Chong, Yujie Mao, Baiwen
+    Luo, Chao Shen, Sanyang Han, Jiong-Wei Wang, Sangyong Jung, Peng Shi, Hongliang
+    Ren, and Xiaogang Liu*
+
+
+    ABSTRACT: Chemotherapy can induce toxicity in the central and peripheral nervous
+    systems and result in chronic adverse reactions that impede continuous treatment
+    and reduce patient quality of life. There is a current lack of research to predict,
+    identify, and offset drug-induced neurotoxicity. Rapid and accurate assessment
+    of potential neuropathy is crucial for cost-effective diagnosis and treatment.
+    Here we report dynamic near-infrared upconversion imaging that allows intraneuronal
+    transport to be traced in real time with millisecond resolution, but without photobleaching
+    or blinking. Drug-induced neurotoxicity can be screened prior to phenotyping,
+    on the basis of subtle abnormalities of kinetic characteristics in intraneuronal
+    transport. Moreover, we demonstrate that combining the upconverting nanoplatform
+    with machine learning offers a powerful tool for mapping chemotherapy-induced
+    peripheral neuropathy and assessing drug-induced neurotoxicity.
+
+
+    ![](img/d3269c8f1d418c506c5d0a3945bc5612_0_0.png)
+
+
+    # ## INTRODUCTION
+
+
+    Chemotherapy-induced peripheral neuropathy (CIPN) is a common complication of
+    antineoplastic therapy, characterized by symptoms such as pain, numbness, slow
+    response, and impaired sensation that could lead to premature termination of patient
+    treatment. 1–6 A reliable and robust diagnostic strategy to CIPN is pending and
+    is urgent to exploit because current clinical practices mainly rely on subjective
+    and imprecise self-reporting from patients. CIPN is usually associated with impairment
+    of intraneuronal transport, which regulates critical physiological activities
+    such as signal transduction and transport of nutrients and organelles in neurons.
+    7–12 Dynamic tracking with fluorescence microscopy would be suitable for quantification
+    of subtle changes in intraneuronal cargo movement and therefore contribute to
+    CIPN diagnosis. However, it has been challenging to maintain a high fidelity of
+    intraneuronal trajectories and establish a standard protocol for neurotoxicity
+    assessment. Previous attempts to quantify cargo transport dynamics have been limited
+    by low-fidelity recording due to the inherent constraints of conventional fluorescent
+    probes such as molecular dyes, fluorescent proteins, quantum dots, and nanodiamonds
+    (Figure 1a and Table S1). 13–20 Although molecular fluorophore-labeled organelles
+    enable movement tracking, low-contrast imaging due to photobleaching and autofluorescence
+    typically occurs. 13,14 The genetic transfection of fluorescent proteins is often
+    limited by low transfection efficiency, uncontrolled overproduction of proteins,
+    and severe photobleaching. 15,16 Quantum dots feature high photolumi-
+
+
+    nescence efficiency and photostability but are plagued by photoblinking and cytotoxicity.
+    17,18 Lanthanide-activated upconversion nanoparticles have shown promise as alternative
+    bioprobes for cell imaging, neuromodulation, and other biomedical applications
+    due to their excellent photostability and nonblinking characteristics. 21–29 Our
+    previous study has demonstrated the feasibility of intraneuronal tracking in multi-layer
+    neuron cultures using upconversion nanoparticles. 21 However, the low-fidelity
+    tracking at 7 Hz is unlikely to distinguish CIPN, especially before phenotyping.
+    It is thus essential to improve the readout at a single-nanoparticle level to
+    achieve high-fidelity recording of intraneuronal movements. Moreover, data processing
+    and learning are of significance in correlations between intraneuronal movements
+    and neurotoxicity. The deployment of artificial intelligence in photonics has
+    yielded transformative advances in data-driven optics, neural networks, and brain–computer
+    interfacing. 30–32 Artificial intelligence, such as machine learning, would be
+    an irreplaceable technique to identify and quantify high-fidelity intraneuronal
+    tracking among an enormous amount of data (Figure 1b). We reasoned that a powerful
+    platform for mapping drug-induced neuropathy would be established with'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/d3269c8f1d418c506c5d0a3945bc5612_1_0.png)
+
+
+    Figure 1. Schematic showing CIPN assessment based on upconversion high-fidelity
+    intraneuronal tracking and machine learning. (a) Upconversion dynamic tracing
+    with a high refreshment rate maintains high-fidelity trajectories of intraneuronal
+    motor protein transport, in contrast to the relatively low fidelity achieved by
+    conventional tracking methods using fluorescent dyes, proteins, quantum dots,
+    or upconversion nanoparticles. The high fidelity benefits from the polynomial
+    fitting of high frame-refreshing upconversion dynamic tracking with tunable instantaneous
+    velocity. (b) Machine-learning model for the prediction and quantification of
+    neurotoxicity, where the inputs are trajectories from upconversion microscopic
+    records. The features include processivity, velocity, frequency, and duration
+    of retro, antero, and pausing segments from vesicular movements. A mega-multidimensional
+    library of drug-induced neuropathy can be established where the neurotoxicity
+    is determined on the basis of multiple parameters such as drugs, cell type, dosage,
+    and administrative time.
+
+
+    upconversion high-fidelity tracking and machine learning of intraneuronal transport.
+
+
+    # RESULTS AND DISCUSSION
+
+
+    # Upconversion Nanoprobe Design and Characterizations.
+
+
+    To verify our hypothesis, we designed and synthesized upconversion nanoparticles
+    with multilayer core–shell nanostructures and optimized the photoluminescent output.
+    We determined that sodium fluoride based NaYbF4:Tm (2%) nanoparticles emit in
+    the range of 400–850 nm (Figure S1). Further confinement of the Yb3+/Tm3+ couple
+    into a sandwiched layer, formulated as NaYbF4@ NaYbF4:Tm@NaYbF4, enhanced energy
+    transfer from Yb3+ to Tm3+ (Figure S2). The NaYF4 shell layer was employed to
+    suppress surface luminescence quenching. These rod-shaped nanocrystals have an
+    average size of 33 × 68 nm. Their upconversion emission is over 10 times brighter
+    than that of their NaYbF4:Tm counterpart and over 200 times brighter than that
+    of conventional NaYF4:Yb/Tm nanocrystals. The photoluminescence enhancement is
+    also confirmed by single-nanoparticle imaging, which is in accord with spectral
+    data recorded in solution (Figure S3). These core–shell nanorods are ideal for
+    implementing real-time tracking of intraneuronal transport at single-particle
+    levels with high refreshment rates. We further coated these nanorods with a thin
+    layer of silica to improve the hydrophilicity and biocompatibility (Figure S4).
+    These silica-capped nanorods with a hydrodynamic size of ~90
+
+
+    nm in PBS buffer and neurobasal medium maintained long-term stability beyond 3
+    months.
+
+
+    # High-Fidelity Upconversion Intraneuronal Tracking.
+
+
+    We then utilized an in vitro integrated, two-compartment chamber to culture dorsal
+    root ganglion (DRG) cells, one type of primary sensory neurons associated with
+    neuropathic pain in the peripheral nervous system (Figure S5). Soma and axonal
+    terminals were separated from one another by microtunnels. Nanoprobes supplemented
+    in neurobasal medium were added to the axonal compartment and internalized into
+    neuronal cells, followed by retrograde transport to the soma compartment. After
+    incubation for 1 h, numerous nanoprobe cargoes were detected in axons and somas
+    (Figure 2a–e and Movie S1). A statistical analysis of all emissive spots revealed
+    that ~99% of the nanoprobes underwent retrograde transport (axon to soma) and
+    approximately 1% of them returned to the axon compartment via anterograde transport
+    (soma to axon). Both pathways are common to intraneuronal transport.18,19 An example
+    of retrograde and anterograde transport was illustrated, following the trajectories
+    of bright spots (marked as 3 and 4 in Figure S6). The luminescent signal to noise
+    ratio in neurons is over 15 when the exposure time of each frame is set at 50
+    ms, and the ratio remains over 3 with a 1 ms exposure time. Notably, no photoblinking
+    or photobleaching was observed for nanoprobes in DRG neurons during the entire
+    tracking period. The sub-micrometer spatial resolution in intraneuronal tracking
+    revealed the trajectories of two bright spots (marked as 1 and 2) along the same
+    axonal bundle, but'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/d3269c8f1d418c506c5d0a3945bc5612_2_0.png)
+
+
+    Figure 2. Real-time intraneuronal transport tracking in DRG neurons using upconversion
+    nanoparticles. (a) Merged photoluminescence image showing colocalization between
+    upconversion nanoprobes (yellow) and neural structures (green). (b–e) Time-lapse
+    luminescence images of the white-dotted rectangular region in (a), showing five
+    trajectories of cargo trafficking in neurons (exposure time, 3 ms; 5 ms; refresh
+    frame frequency, 38 Hz). (f) Trajectories of nanoparticle-tethered cargoes in
+    healthy DRG neurons (exposure time, 5 ms; refresh frame frequency, 193.8 Hz).
+    (g) Trajectories and (h) velocity distribution of 10 nanoparticle-tethered cargoes
+    collected from freshly fixed neurons (n = 3). Pausing-phase thresholds of intracellular
+    transport are identified as ±0.2 μm/s within a 95% confidence interval. (i) Velocity
+    distribution profile of nanoparticle-tethered cargoes in (f). The profile is divided
+    into retro/pausing/antero segments, depending on the determined velocity threshold.
+    (j) Plotted trajectory profiles of one particle and (k) occurrence of retro/pausing/antero
+    segments of all trajectories at different frame-refreshment rates, illustrating
+    that a high fidelity in intracellular transport can only be achieved by high frame-refreshment
+    rates in real-time tracking. Scale bars are expressed as means ± SEM. Data in
+    (f), (i), and (k) were collected from 80 emissive spots in healthy DRG neurons
+    with 24 h post-treatment in 0.1 vol % DMSO in 26 video recordings where the cells
+    were extracted from 6 individual batches of embryos.
+
+
+    via different axons. To investigate the pathways of nanoparticle internalization,
+    we labeled lysosomes with LysoTracker in nanoprobe-pretreated DRG neurons and
+    observed ~7% colocalization of nanoparticles with lysosomes (Figure S7). We also
+    immunostained nanoparticle-containing cargoes and endosomes in fixed neurons,
+    where markers EEA1/Rab5, Rab11, Rab7, and TGN38 correspond to early, late, recycling,
+    and post-Golgi endosomes, respectively. The locations of ~60% of emitting spots
+    matched those of endosomes, indicating that most of the nanoprobes had been taken
+    into cells through endosomal pathways.18–20
+
+
+    With the retrograde movement trend for nanoprobe-containing cargoes, “Stop and
+    Go” phases of movable trajectories were observed (Figure 2f and Movie S2). We
+    statistically analyzed trajectories from recorded videos and
+
+
+    quantified the transport parameters of nanoparticle-embedded endosomes. We define
+    the “Stop” phase with a threshold below a velocity of 0.2 μm/s (95% confidence
+    interval) in fixed neurons (Figure 2g,h). The dynamic variation in intra-neuronal
+    cargo transport was quantitatively evaluated according to specific “Stop and Go”
+    features (Figure 2i). We quantified “Stop” (pausing) and “Go” (retrograde and
+    anterograde) phases with four physical parameters: run length (in μm), processivity
+    (in s), frequency (in events/min), and velocity (in μm/s). The velocity was determined
+    by measuring the length of the displacement vector (run length) over time from
+    the first to the last point (processivity) of each segment. A faster refreshment
+    rate of frames reveals more details in intracellular transport (Figure 2j). To
+    be exact, the occurrence of pausing and antero segments is likely to be'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/d3269c8f1d418c506c5d0a3945bc5612_3_0.png)
+
+
+    Figure 3. Effects of microtubule-active agents on intraneuronal transport. (a)
+    Velocity distribution profiles of nanoparticles in each frame of the captured
+    movies (see Movies 2–4 in the Supporting Information). Insets: molecular structures
+    of paclitaxel (PTX) and vincristine sulfate (Vinc). (b–l) Quantified physical
+    parameters of intraneuronal transport in antero- and retrograde segments in terms
+    of run length, velocity, frequency, and processivity. The quantitative analysis
+    was based on numbers of individual trajectories/movies in each experimental group
+    (80/26 for DMSO, 225/46 for PTX, and 105/37 for Vinc), where DRG cells were extracted
+    from six batches of E15 embryos. The nanoprobe dosage was set as 100 nM for PTX
+    and 10 nM for Vinc in 100 μL of neuronal culture media. Data are presented as
+    cumulative probabilities, and scale bars are expressed as means ± SEM in inset
+    plots. The statistical significance was assessed using the Kruskal–Wallis test
+    with Dunn’s correction and the Wilcoxon test. Significance levels are stated as
+    *p < 0.05, **p < 0.01, ***p < 0.001, and ****p < 0.0001.
+
+
+    omitted at low refreshment rates (Figure 2k), resulting in insignificance of the
+    corresponding run length, processivity, and velocity quantification. To achieve
+    precise trajectory tracking and accurate quantitation of moving cargoes, we set
+    the exposure time at 5 ms and lowered the capture window below 120 pixels in the
+    longitudinal direction in an attempt to minimize the readout time of the camera.
+    This led to a high temporal resolution of 193.8 Hz in video recording (Movie
+
+
+    S2). Unlike our previously reported low-frequency imaging (7 Hz),21 this high-frequency
+    imaging (~200 Hz) mode can identify early signs of drug-induced neuropathy prior
+    to collecting phenotype information.
+
+
+    # **Identification of Drug-Induced Abnormalities in Intraneuronal Movement.**
+
+
+    To verify the potential of the upconversion-based method for mapping drug-induced
+    neuropathy, we tested two antineoplastic drugs, paclitaxel (PTX)'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/d3269c8f1d418c506c5d0a3945bc5612_4_0.png)
+
+
+    ![](img/d3269c8f1d418c506c5d0a3945bc5612_4_1.png)
+
+
+    ![](img/d3269c8f1d418c506c5d0a3945bc5612_4_2.png)
+
+
+    ![](img/d3269c8f1d418c506c5d0a3945bc5612_4_3.png)
+
+
+    ![](img/d3269c8f1d418c506c5d0a3945bc5612_4_4.png)
+
+
+    ![](img/d3269c8f1d418c506c5d0a3945bc5612_4_5.png)
+
+
+    ![](img/d3269c8f1d418c506c5d0a3945bc5612_4_6.png)
+
+
+    ![](img/d3269c8f1d418c506c5d0a3945bc5612_4_7.png)
+
+
+    ![](img/d3269c8f1d418c506c5d0a3945bc5612_4_8.png)
+
+
+    ![](img/d3269c8f1d418c506c5d0a3945bc5612_4_9.png)
+
+
+    ![](img/d3269c8f1d418c506c5d0a3945bc5612_4_10.png)
+
+
+    ![](img/d3269c8f1d418c506c5d0a3945bc5612_4_11.png)
+
+
+    Figure 4. Expanding the upconversion microscopy technique for a universal drug-induced
+    neuropathy assessment. (a) Velocity distribution profiles of moving nanoparticles
+    collected from all frames of each movie. Insets are chemical or protein structures.
+    (b–l) Quantified physical parameters of intra-neuronal transport in antero- and
+    retrograde segments in terms of run length, velocity, frequency, and processivity.
+    The quantitative analysis was based on the numbers of independent trajectories/movies
+    in individual groups (80/26 for DMSO, 78/14 for Cisp, 95/23 for Ifos, 109/26 for
+    Ero, 89/19 for Gefi, 69/8 for Beva, 96/11 for Nivo, 91/20 for Ritu, and 76/11
+    for Imat), where DRG cells were extracted from six batches of E15 embryos. The
+    dosage was set as 100 µM for all drugs in 100 µL of neuronal culture media. Scale
+    bar in (b–l) represent means ± SEM. Statistical significance was assessed using
+    the Kruskal–Wallis test with Dunn’s correction and the Wilcoxon test. Significance
+    levels are stated as *p < 0.05, **p < 0.01, ***p < 0.001, and ****p < 0.0001.
+
+
+    and vincristine sulfate (Vinc), which are known to affect microtubule function
+    during cellular proliferation (Figure 3a and Movies S3 and S4).5,6 Relative to
+    the control group, PTX- and Vinc-treated groups showed decreased retrograde segmental
+    velocities. However, Vinc binds directly to tubulin dimers and blocks their association
+    to form microtubules, while PTX changes and stabilizes microtubule conformation
+    to prevent its dissociation upon adenosine triphosphate (ATP)
+
+
+    hydrolysis.33,34 Further statistical and cumulative analyses revealed the similarity
+    and distinction in the motion parameters of intra-neuronal transport for both
+    drug treatments (Figure 3b–l). It is likely that Vinc treatment decreases the
+    cytoskeletal length and reduces the movement distance of motor proteins, leading
+    to a relative increase in the number of attempts to interrupt antero-segment frequency
+    and pausing frequency (Figure 3d,j). In contrast, PTX maintains the'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/d3269c8f1d418c506c5d0a3945bc5612_5_0.png)
+
+
+    Figure 5. Machine learning validates the upconversion-based method for drug-induced
+    neuropathy assessment. (a) Heat map showing averaged feature patterns of intracellular
+    moving trajectories from all 12 tested groups. (b) Confusion matrix with prediction
+    accuracy for the trained classifier using the support vector machine (SVM) algorithm.
+    (c) Two-dimensional patterns showing the spatial relationship of drugs through
+    t-distributed stochastic neighbor embedding (t-sne) as an approach to dimensionality
+    reduction. (d) Neurotoxicity rating of groups treated with a specific concentration
+    of drugs on the basis of their moving trajectories.
+
+
+    stability of existing microtubule structures and prevents premature termination
+    and attempts for motor protein transport, presenting a lower pausing frequency
+    and anterograde segment frequency. The possible effects of dimethyl sulfoxide
+    (DMSO, 0.1 vol %) on cargo transport were excluded by quantifying all transport
+    parameters (Figure S8). We next investigated the possible changes induced by PTX
+    and Vinc in DRG neurons at various levels, including growth morphology, gene expression,
+    and neuronal functions. For instance, 24 h after pretreatment of DRGs with the
+    two drugs, in situ microscopy imaging showed no marked changes in the sizes of
+    somas and axons or in the neuronal morphology (Figure S9). The quantitative polymerase
+    chain reaction (qPCR) revealed no significant differences in expression of microtubule-related
+    genes (p > 0.05, Kruskal–Wallis test with Dunn’s correction and the Wilcoxon test)
+    (Figure S10). In addition, an electrophysiological assessment indicated that PTX
+    and Vinc did not affect the general neuronal function of DRG cells (Figure S11).
+    The action potential threshold and latency were not markedly affected, although
+    the frequency was slightly higher in neurons treated with PTX (Mann–Whitney U
+    test, p = 0.0446) than in the control group. Further characterizations of the
+    amplitude, half-width, hyperpolarization, and refractory period did not reveal
+    any noticeable effect on action potential waveform in DRG neurons. When these
+
+
+    data are taken together, such short-term drug treatments induce no detectable
+    phenotypes such as neuronal dysfunction or gene expression changes. Subtle changes
+    in neuronal behaviors, which are undetectable using common biological or molecular
+    approaches such as microscopic monitoring, qPCR, and electrophysiology, however,
+    can be readily differentiated by our high-resolution upconversion microscopy.
+    We further examined the suitability of upconversion-mediated intracellular transport
+    tracking for the neurotoxicity evaluation of various anticancer drugs, including
+    cytotoxic antineoplastics (Cisp and Ifos), tyrosine kinase inhibitors (Erlo, Gefi,
+    and Imat), and monoclonal antibodies (Beva, Nivo, and Ritu). Velocity distributions
+    and motion parameters were drastically different among various drug treatments
+    (Figure 4). Common features in velocity distribution showed that, for most drug
+    treatments, the retrograde segmental frequency was reduced in high-speed regions
+    (<−2 μm/s) but was increased in low-speed (−0.2 to −2 μm/s) and pausing (−0.2
+    to 0.2 μm/s) regions (Figure 4a). These characteristics were also confirmed by
+    a statistical analysis of classified parameters (Figure 4b–I). Although the drugs
+    Gefi and Ritu induced no significant difference in nanprobe velocity (Figure 4l),
+    other motion characteristics such as pausing time and retrograde segmental processivity
+    can be used to quantify how they differ from the control group.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'In general, the mechanism of action underlying peripheral neuropathy induced
+    by various antineoplastic drugs remains unclear. For example, cytotoxic antineoplastics
+    affect the proliferation of cells by alkylating the guanine base of DNA molecules,
+    thus preventing DNA elongation during replication.35 As neurons are terminally
+    differentiated and non-replicating, they are unlikely affected by the direct cytotoxic
+    effect of Cispl and Ifos. Cispl has been shown to interact with non-DNA targets
+    (phospholipids and proteins) and affect key neuron functional processes that are
+    heavily dependent on protein and lipid raft interactions. For tyrosine kinase
+    inhibitors, Gefi and Erlo are inhibitors of epidermal growth factor receptor (EGFR),
+    while Imat is an inhibitor of several tyrosine kinase enzymes that regulate at
+    least a few singling pathways.36,37 In our case, Gefi/Erlo and Imat have distinct
+    effects in many parameters, although they are all tyrosine kinase inhibitors.
+    Imat treatment possibly affects ATP hydrolysis and prevents the mechanical motion
+    of motor proteins in a nonspecific manner, halting intraneuronal transport and
+    shortening the run length (Figure 4b,g,h). Erlo and Gefi prevent EGFR autophosphorylation
+    and the activation of downstream signaling pathways. However, it is not clear
+    how EGFR binding and EGFR activation affect whole-cell microtubule homeostasis.
+    Monoclonal antibodies (Beva, Nivo, and Ritu) are specific targets of antitumor
+    immune responses or vascular endothelial growth factor dependent vascularization,
+    which may weakly affect neurons.
+
+
+    # Machine Learning for Drug-Induced Neuropathy Assessment.
+
+
+    We next applied machine learning to better understand intraneural transport and
+    establish a comprehensive assessment system for CIPN. The integration of 11 motion
+    features was used to develop machine-learning algorithms in the support vector
+    machine (SVM) model. Feature characteristics in the support vector machine (SVM)
+    model were preliminarily visualized by a parallel plot, whereas the upper and
+    lower limits of the distribution were calculated according to means and standard
+    deviations (Figure S12). Intra-and intergroup similarities between different drugs
+    were determined by the average Euclidean distance of the 11-feature vector in
+    each group or in various group pairs. Two-dimensional patterns demonstrate the
+    spatial relationships of drugs using t-distributed stochastic neighbor embedding
+    (t-sne) for dimensional reduction. The spatial proximity of patterns under different
+    drug conditions indicates pharmaceutical-chemical similarity. On the basis of
+    the preliminary analysis described above, feature fingerprints were generated
+    through z-score normalization of the 11-feature matrix (Figure 5a). The fingerprint
+    of control groups (DMSO and Media) displayed a light gray distribution with all
+    values being near zero, serving as a baseline in comparison to other groups. The
+    depth of blue and red lumps in other groups reveals pharmaceutical effects in
+    several respects. The 11-feature matrix was employed for drug identification,
+    in which a 94.8% accuracy was obtained (Figure 5b). The overall difference in
+    drug treatments was visualized through clustering the 11 features in a separated
+    spatial distribution (Figure 5c). We estimated toxicity scores by ranking the
+    similarities between different drugs against the controls (Figure 5d). Among all
+    tested groups, DMSO, Ritu, and Erlo exhibited low toxicity scores. The three monoclonal
+    antibodies (Nivo, Beva, and Ritu) and two microtubule-active agents (PTX and Vinc)
+    showed spatial proximity in the two-dimensional t-sne pattern, uncovering certain
+    similarities in their internal categories. Of note, Gefi and Imat exhibited a
+
+
+    large spatial distance, despite both being tyrosine kinase inhibitors. Further
+    systematic studies on various drugs, dosages, and treatment durations will facilitate
+    the construction of a multidimensional database for CIPN assessment through machine
+    learning as well as a deeper understanding of the underlying mechanisms.
+
+
+    # CONCLUSIONS
+
+
+    Upconversion nanoparticles that offer bright near-infrared emission, high photostability,
+    and superior biocompatibility are highly desirable for evaluating neuropathy models
+    induced by chemical products. Subtle changes in neuropathy due to short-term drug
+    treatment can be readily identified by upconversion-mediated, high-fidelity intraneuronal
+    transport tracking. This approach offers unprecedented sensitivity for the early
+    detection of drug-induced neuropathic disorders, unattainable with conventional
+    biological approaches, before phenotype information becomes available. When this
+    imaging platform is combined with machine learning, a comprehensive database of
+    drug-induced neuropathy can be established, opening the door to the development
+    of single-nanoparticle analysis tools for drug discovery, fundamental neuroscience,
+    neuronal disorder diagnosis, and cancer therapeutics.
+
+
+    # ASSOCIATED CONTENT
+
+
+    +   $ Supporting Information
+
+    +   The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/jacs.1c07312.
+
+    +   Materials and methods, detailed experimental procedures, algorithm for trajectory
+    quantification, nanoparticle optimization and optical characterizations, single-particle
+    imaging, stability, cellular uptake and growth, immunostaining, quantitative polymerase
+    chain reaction, electrophysiology, and supplementary data for machine learning
+    (PDF)
+
+    +   Videos from healthy DRGs, 38 Hz, from healthy DRGs, 193.8 Hz, from PTX-treated
+    DRGs, 193.8 Hz, and from Vinc-treated DRGs, 193.8 Hz (ZIP)
+
+
+    # AUTHOR INFORMATION
+
+
+    # Corresponding Author
+
+
+    Xiaogang Liu – Department of Chemistry, National University of Singapore, Singapore
+    117543, Singapore; Center for Functional Materials, National University of Singapore
+    Suzhou Research Institute, Suzhou 215123, People’s Republic of China; The N1 Institute
+    for Health, National University of Singapore, Singapore 117456, Singapore; Joint
+    School of National University of Singapore and Tianjin University, International
+    Campus of Tianjin University, Fuzhou 350207, People’s Republic of China; Nanomedicine
+    Translational Research Programme, Centre for NanoMedicine, Yong Loo Lin School
+    of Medicine, National University of Singapore, Singapore 117609, Singapore; orcid.org/0000-0003-2517-5790;
+    Email: chmlx@nus.edu.sg
+
+
+    # Authors
+
+
+    Zhigao Yi – Department of Chemistry, National University of Singapore 117543,
+    Singapore; orcid.org/0000-0003-0083-5355
+
+
+    Huxin Gao – Center for Functional Materials, National University of Singapore
+    Suzhou Research Institute, Suzhou 215123, People’s Republic of China; Department
+    of'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '+   Biomedical Engineering, National University of Singapore, Singapore 117583,
+    Singapore
+
+    +   Xianglin Ji – Department of Biomedical Engineering, City University of Hong
+    Kong, Kowloon, Hong Kong SAR 999077, People’s Republic of China
+
+    +   Xin-Yi Yeo – Institute of Molecular and Cell Biology (IMCB), Agency for Science,
+    Technology and Research (A*STAR), Singapore 138667, Singapore; Department of Physiology,
+    Yong Loo Lin School of Medicine, National University of Singapore, Singapore 117593,
+    Singapore
+
+    +   Suet Yen Chong – Department of Surgery, Yong Loo Lin School of Medicine, National
+    University of Singapore, Singapore 119228, Singapore; Cardiovascular Research
+    Institute (CVRI), National University Heart Centre Singapore (NUHCS), Singapore
+    117599, Singapore
+
+    +   Yujie Mao – Department of Chemistry, National University of Singapore, Singapore
+    117543, Singapore
+
+    +   Baiwen Luo – The N1 Institute for Health, National University of Singapore,
+    Singapore 117456, Singapore
+
+    +   Chao Shen – College of Biology and Environmental Engineering, Zhejiang Shuren
+    University, Hangzhou 310015, People’s Republic of China
+
+    +   Sanyang Han – Department of Chemistry, National University of Singapore, Singapore
+    117543, Singapore
+
+    +   Jiong-Wei Wang – Department of Physiology, Yong Loo Lin School of Medicine,
+    National University of Singapore, Singapore 117593, Singapore; Department of Surgery,
+    Yong Loo Lin School of Medicine, National University of Singapore, Singapore 119228,
+    Singapore; Cardiovascular Research Institute (CVRI), National University Heart
+    Centre Singapore (NUHCS), Singapore 117599, Singapore; Nanomedicine Translational
+    Research Programme, Centre for NanoMedicine, Yong Loo Lin School of Medicine,
+    National University of Singapore, Singapore 117609, Singapore
+
+    +   Sangyong Jung – Institute of Molecular and Cell Biology (IMCB), Agency for
+    Science, Technology and Research (A*STAR), Singapore 138667, Singapore; Department
+    of Physiology, Yong Loo Lin School of Medicine, National University of Singapore,
+    Singapore 117593, Singapore
+
+    +   Peng Shi – Department of Biomedical Engineering, City University of Hong Kong,
+    Kowloon, Hong Kong SAR 999077, People’s Republic of China; orcid.org/0000-0003-0629-4161
+
+    +   Hongliang Ren – Center for Functional Materials, National University of Singapore
+    Suzhou Research Institute, Suzhou 215123, People’s Republic of China; The N1 Institute
+    for Health, National University of Singapore, Singapore 117456, Singapore; The
+    Chinese University of Hong Kong (CUHK) Robotics Institute, Shatin, Hong Kong 999077,
+    People’s Republic of China
+
+
+    Complete contact information is available at:
+
+    https://pubs.acs.org/10.1021/jacs.1c07312
+
+
+    Notes
+
+    The authors declare no competing financial interest.
+
+
+    ■ ACKNOWLEDGMENTS
+
+    This work was supported by the Agency for Science, Technology and Research (A*STAR)
+    (A1983c0038), the National Research Foundation, Prime Minister’s Office, Singapore,
+    under the NRF Investigatorship program (Award No. NRF-NRFI05-2019-0003), the King
+    Abdullah University
+
+
+    of Science and Technology (KAUST) Office of Sponsored Research (OSR) under Award
+    No. OSR-2018-CRG7-3736, the NUS NANONANSH Program (NUHSRO/2020/002/ NanoNash/LOA;
+    R143000B43114), the Singapore Ministry of Health’s National Medical Research Council
+    (NMRC/ OFYIRG/0081/2018), and the National Natural Science Foundation of China
+    (21771135, 21871071). S.Y.C. would like to thank the generous support from the
+    ESR/TENG GL PhD scholarship program. We thank Akihiro Yamanka, Angelo All, John
+    Jia En Chua, Yinghua Qu, Liangliang Liang, Yuxia Liu, Sirui Liu, and Di Fu for
+    helpful discussions.
+
+
+    +   ■ REFERENCES
+
+    +   (1) Stone, J. B.; DeAngelis, L. M. Cancer treatment-induced neurotoxicity:
+    a focus on newer treatments. Nat. Rev. Clin. Oncol. 2016, 13, 92–105.
+
+    +   (2) Magge, R. S.; DeAngelis, L. M. The double-edged sword: neurotoxicity of
+    chemotherapy. Blood Rev. 2015, 29, 93–100.
+
+    +   (3) Cavalletti, G.; Marmiroli, P. Chemotherapy-induced peripheral neuropathy.
+    Nat. Rev. Neurol. 2010, 6, 657–666.
+
+    +   (4) Lehmann, H. C.; Wunderlich, G.; Fink, G.; Sommer, R. C. Diagnosis of peripheral
+    neuropathy. Neurol. Res. Pract. 2020, 2, 20.
+
+    +   (5) Sisignano, M.; Baron, R.; Scholich, K.; Geisslinger, G. Mechanism-based
+    treatment for chemotherapy-induced peripheral neuropathic pain. Nat. Rev. Neurol.
+    2014, 10, 694–707.
+
+    +   (6) Zająckowska, R.; Kocot-Kępska, M.; Leppert, W.; Wrzosek, A.; Mika, J.;
+    Wordliczek, J. Mechanisms of chemotherapy-induced peripheral neuropathy. Int.
+    J. Mol. Sci. 2019, 20, 1451.
+
+    +   (7) Millecamps, S.; Julien, J. P. Axonal transport deficits and neurodegenerative
+    diseases. Nat. Rev. Neurosci. 2013, 14, 161–176.
+
+    +   (8) Sleigh, J. N.; Rossor, A. M.; Fellows, A. D.; Tosolini, A. P.; Schiavo,
+    G. Axonal transport and neurological disease. Nat. Rev. Neurol. 2019, 15, 691–703.
+
+    +   (9) Stokin, G. B.; Lillo, C.; Falzone, T. L.; Brusch, R. G.; Rockenstein,
+    E.; Mount, S. L.; Raman, R.; Davies, P.; Masliah, E.; Williams, D. S.; Goldstein,
+    L. S. B. Axonopathy and transport deficits early in the pathogenesis of Alzheimer’s
+    disease. Science 2005, 307, 1282–1288.
+
+    +   (10) Hirokawa, N. Kinesin and dynein superfamily proteins and the mechanism
+    of organelle transport. Science 1998, 279, 519–526.
+
+    +   (11) Vale, R. D. The molecular motor toolbox for intracellular transport.
+    Cell 2003, 112, 467–480.
+
+    +   (12) Roberts, A. J.; Kon, T.; Knight, P. J.; Sutoh, K.; Burgess, S. A. Functions
+    and mechanics of dynein motor proteins. Nat. Rev. Mol. Cell Biol. 2013, 14, 713–726.
+
+    +   (13) Qiu, W.; Derr, N. D.; Goodman, B. S.; Villa, E.; Wu, D.; Shih, W.; Reck-Peterson,
+    S. L. Dynein achieves processive motion using both stochastic and coordinated
+    stepping. Nat. Struct. Mol. Biol. 2012, 19, 193–200.
+
+    +   (14) Hafezparast, M.; Klocke, R.; Ruhrberg, C.; Marquardt, A.; Ahmad-Annuar,
+    A.; Bowen, S.; Lalli, G.; Witherden, A. S.; Hummerich, H.; Nicholson, S.; Morgan,
+    P. J.; Oozageer, R.; Priestley, J. V.; Averill, S.; King, V. R.; Ball, S.; Peters,
+    J.; Toda, T.; Yamamoto, A.; Hiraoka, Y.; Augustin, M.; Korthaus, D.; Wattler,
+    S.; Wabnitz, P.; Dickente, C.; Lampel, S.; Boehne, F.; Peraus, J.; Popp, A.; Rudelius,
+    M.; Schlegel, J.; Fuchs, H.; de Angelis, M. H.; Schiavo, G.; Shima, D. T.; Russ,
+    A. P.; Stumm, G.; Martin, J. E.; Fisher, E. M. C. Mutations in dynein link motor
+    neuron degeneration to defects in retrograde transport. Science 2003, 300, 808–812.
+
+    +   (15) Ross, J. L.; Wallace, K.; Shuman, H.; Goldman, Y. E.; Holzbaur, E. L.
+    Processive bidirectional motion of dynein-dynactin complexes in vitro. Nat. Cell
+    Biol. 2006, 8, 562–570.
+
+    +   (16) McKenney, R. J.; Huynh, W.; Tanenbaum, M. E.; Bhabha, G.; Vale, R. D.
+    Activation of cytoplasmic dynein motility by dynactin-cargo adapter complexes.
+    Science 2014, 345, 337–341.
+
+    +   (17) Pinaud, F.; Clarke, S.; Sittner, A.; Dahan, M. Probing cellular events,
+    one quantum dot at a time. Nat. Methods 2010, 7, 275–285.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '(18) Cui, B.; Wu, C.; Chen, L.; Ramirez, A.; Bearer, E. L.; Li, W.; Moberly,
+    W. C.; Chu, S. One at a time, live tracking of NGF axonal transport using quantum
+    dots. Proc. Natl. Acad. Sci. U. S. A. 2007, 104, 13666–13671.
+
+    (19) Haziza, S.; Mohan, N.; Loe-Mie, Y.; Lepagnol-Bestel, A.; Massou, S.; Adam,
+    M. L.; X. L.; Viard, J.; Plancon, C.; Daudin, R.; Koebel, P.; Dorard, E.; Rose,
+    C.; Hsieh, F.; Wu, C.; Potier, B.; Herault, Y.; Sala, C.; Corvin, A.; Allinquant,
+    B.; Chang, H.; Treussart, F.; Simonneau, M. Fluorescent nanodiamond tracking reveals
+    intracellular transport abnormalities induced by brain-disease-related genetic
+    risk factors. Nat. Nanotechnol. 2017, 12, 322–328.
+
+    (20) Chowdhury, P. D.; Che, D. L.; Kaplan, L.; Chen, O.; Pu, K.; Bawendi, M.;
+    Cui, B. Nanoparticle-assisted optical tethering of endosomes reveals the cooperative
+    function of dyneins in retrograde axonal transport. Sci. Rep. 2016, 5, 18059.
+
+    (21) Zeng, X.; Chen, S.; Weitemier, A.; Han, S.; Blasiaik, A.; Prasad, A.; Zheng,
+    K.; Yi, Z.; Luo, B.; Yang, L.; Thakor, N.; Chai, C.; Lim, K.; McHugh, T. J.; All,
+    A. H.; Liu, X. Visualization of intra-neuronal motor protein transport through
+    upconversion microscopy. Angew. Chem., Int. Ed. 2019, 58, 9262–9268.
+
+    (22) (a) Ou, X.; Qin, X.; Huang, B.; Zan, J.; Wu, Q.; Hong, Z.; Xie, L.; Bian,
+    H.; Yi, Z.; Chen, X.; Wu, Y.; Song, X.; Li, J.; Chen, Q.; Yang, H.; Liu, X. High-resolution
+    X-ray luminescence extension imaging. Nature 2021, 590, 410–415. (b) Han, S.;
+    Deng, R.; Gu, Q.; Ni, L.; Huynh, U.; Zhang, J.; Yi, Z.; Zhao, B.; Tamura, H.;
+    Pershin, A.; Xu, H.; Huang, Z.; Ahmad, S.; Abdi-Jalebi, M.; Sadhanala, A.; Tang,
+    M.; Bakulin, A.; Beljonne, D.; Liu, X.; Rao, A. Lanthanide-doped inorganic nanoparticles
+    turn molecular triplet excitons bright. Nature 2020, 587, 594–599.
+
+    (23) Liu, Q.; Zhang, Y.; Peng, C. S.; Yang, T.; Joubert, L.; Chu, S. Single upconversion
+    nanoparticle imaging at sub-10 W cm-2 irradiance. Nat. Photonics 2018, 12, 548–553.
+
+    (24) (a) Zhong, Y.; Ma, Z.; Wang, F.; Wang, X.; Yang, Y.; Liu, Y.; Zhao, X.; Li,
+    J.; Du, H.; Zhang, M.; Cui, Q.; Zhu, S.; Sun, Q.; Wan, H.; Tian, Y.; Liu, Q.;
+    Wang, W.; Garcia, K. C.; Dai, H. In vivo molecular imaging for immunotherapy using
+    ultra-bright near-infrared-IIb rare-earth nanoparticles. Nat. Biotechnol. 2019,
+    37, 1322–1331. (b) Zhou, L.; Wang, R.; Yao, C.; Li, X.; Wang, C.; Zhang, X.; Xu,
+    C.; Zeng, A.; Zhao, D.; Zhang, F. Single-band upconversion nanoprobes for multiplexed
+    simultaneous in situ molecular mapping of cancer biomarkers. Nat. Commun. 2015,
+    6, 6938.
+
+    (25) Nam, S. H.; Bae, Y. M.; Park, Y. I.; Kim, J. H.; Kim, H. M.; Choi, J. S.;
+    Lee, K. T.; Hyeon, T.; Suh, Y. D. Long-term real-time tracking of lanthanide ion
+    doped upconverting nanoparticles in living cells. Angew. Chem. 2011, 123, 6217–6221.
+
+    (26) (a) Jiang, Y.; Fu, P.; Liu, Y.; Wang, C.; Zhao, P.; Chu, X.; Jiang, X.; Yang,
+    W.; Wu, Y.; Wang, Y.; Xu, G.; Hu, J.; Bu, W. Near-infrared light-triggered NO
+    release for spinal cord injury repair. Sci. Adv. 2020, 6, eabc3513. (b) Zhu, X.;
+    Li, J.; Qiu, X.; Liu, Y.; Feng, W.; Li, F. Upconversion nanocomposite for programming
+    combination cancer therapy by precise control of microscopic temperature. Nat.
+    Commun. 2018, 9, 2176.
+
+    (27) Wang, F.; Wen, S.; He, H.; Wang, B.; Zhou, Z.; Shimoni, O.; Jin, D. Microscopic
+    inspection and tracking of single upconversion nanoparticles in living cells.
+    Light: Sci. Appl. 2018, 7, 18007.
+
+    (28) Ma, Y.; Bao, J.; Zhang, Y.; Li, Z.; Zhou, X.; Wan, C.; Huang, L.; Zhao, Y.;
+    Han, G.; Xue, T. Mammalian near-infrared image vision through injectable and self-powered
+    retinal nanoantennae. Cell 2019, 177, 243–255.
+
+    (29) Chen, S.; Weitemier, A. Z.; Zeng, X.; He, L.; Wang, X.; Tao, Y.; Huang, A.
+    J. Y.; Hashimotodani, Y.; Kano, M.; Iwasaki, H.; Parajuli, L. K.; Okabe, S; Teh,
+    D. B. L.; All, A. H.; Tsutsui-Kimura, I.; Tanaka, K. F.; Liu, X.; McHugh, T. J.
+    Near-Infrared Deep Brain Stimulation Via Upconversion Nanoparticle-Mediated Optogenetics.
+    Science 2018, 359, 679–684.
+
+    (30) Butler, K. T.; Davies, D. W.; Cartwright, H.; Isayev, O.; Walsh, A. Machine
+    learning for molecular and materials science. Nature 2018, 559, 547–555.
+
+
+    (31) Feldmann, J.; Youngblood, N.; Wright, C. D.; Bhaskaran, H.; Pernice, W. H.
+    P. All-optical spiking neurosynaptic networks with self-learning capabilities.
+    Nature 2019, 569, 208–214.
+
+    (32) Shastri, B. J.; Tait, A. N.; de Lima, T. F.; Pernice, W. H. P.; Bhaskaran,
+    H.; Wright, C. D.; Prucnal, P. R. Photonics for artificial intelligence and neuromorphic
+    computing. Nat. Photonics 2021, 15, 102–114.
+
+    (33) Moudi, M.; Go, R.; Yien, C. Y. S.; Nazre, M. Vinca alkaloids. Int. J. Prev.
+    Med. 2013, 4, 1231–1235.
+
+    (34) Xiao, H.; Verdier-Pinard, P.; Fernandez-Fuentes, N.; Burd, B.; Angeletti,
+    R.; Fiser, A.; Horwitz, S. B.; Orr, G. A. Insights into the mechanism of microtubule
+    stabilization by Taxol. Proc. Natl. Acad. Sci. U. S. A. 2006, 103, 10166–10173.
+
+    (35) Rahal, R.; Kaur, J. Alkylating agents and cancer therapy. Expert Opin. Ther.
+    Pat. 2007, 17, 1061–1075.
+
+    (36) Bronte, G.; Roflo, C.; Giovannetti, E.; Cicero, G.; Pauwels, P.; Passiglia,
+    F.; Castiglia, M.; Rizzo, S.; Vullo, F. L.; Fiorentino, E.; Van Meerbeeck, J.
+    Are erlotinib and gefitinib interchangeable, opposite or complementary for non-small
+    cell lung cancer treatment? Biological, pharmacological and clinical aspects.
+    Crit. Rev. Oncol. Hematol. 2014, 89, 300–313.
+
+    (37) Joensuu, H.; Dimitrijevic, S. Tyrosine kinase inhibitor imatinib (STI571)
+    as an anticancer agent for solid tumours. Ann. Med. 2001, 33, 451–455.'
+  merge: -1
+  img_proc: true

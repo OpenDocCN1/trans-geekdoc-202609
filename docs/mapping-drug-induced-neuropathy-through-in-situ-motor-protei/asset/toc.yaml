@@ -1,0 +1,29 @@
+level_changes:
+- line: 12
+  before: 3
+  after: 2
+- line: 22
+  before: 3
+  after: 2
+- line: 100
+  before: 2
+  after: 3
+- line: 104
+  before: 2
+  after: 3
+- line: 128
+  before: 3
+  after: 2
+text_changes:
+- line: 24
+  before: 上转换纳米探针设计与表征。
+  after: 上转换纳米探针设计与表征
+- line: 28
+  before: 高保真上转换神经元内追踪。
+  after: 高保真上转换神经元内追踪
+- line: 48
+  before: 胞内运动中药物诱导异常的鉴定。
+  after: 胞内运动中药物诱导异常的鉴定
+- line: 83
+  before: 机器学习用于药物诱导神经病变评估。
+  after: 机器学习用于药物诱导神经病变评估

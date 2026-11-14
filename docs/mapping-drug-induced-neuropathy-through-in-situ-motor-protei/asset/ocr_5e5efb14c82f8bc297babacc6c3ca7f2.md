@@ -1,0 +1,11 @@
+![](bbox=[0.156, 0.083, 0.833, 0.7])
+
+Figure 3. Effects of microtubule-active agents on intraneuronal transport. (a) Velocity distribution profiles of nanoparticles in each frame of the captured movies (see Movies 2–4 in the Supporting Information). Insets: molecular structures of paclitaxel (PTX) and vincristine sulfate (Vinc). (b–l) Quantified physical parameters of intraneuronal transport in antero- and retrograde segments in terms of run length, velocity, frequency, and processivity. The quantitative analysis was based on numbers of individual trajectories/movies in each experimental group (80/26 for DMSO, 225/46 for PTX, and 105/37 for Vinc), where DRG cells were extracted from six batches of E15 embryos. The nanoprobe dosage was set as 100 nM for PTX and 10 nM for Vinc in 100 μL of neuronal culture media. Data are presented as cumulative probabilities, and scale bars are expressed as means ± SEM in inset plots. The statistical significance was assessed using the Kruskal–Wallis test with Dunn’s correction and the Wilcoxon test. Significance levels are stated as *p < 0.05, **p < 0.01, ***p < 0.001, and ****p < 0.0001.
+
+omitted at low refreshment rates (Figure 2k), resulting in insignificance of the corresponding run length, processivity, and velocity quantification. To achieve precise trajectory tracking and accurate quantitation of moving cargoes, we set the exposure time at 5 ms and lowered the capture window below 120 pixels in the longitudinal direction in an attempt to minimize the readout time of the camera. This led to a high temporal resolution of 193.8 Hz in video recording (Movie
+
+S2). Unlike our previously reported low-frequency imaging (7 Hz),21 this high-frequency imaging (~200 Hz) mode can identify early signs of drug-induced neuropathy prior to collecting phenotype information.
+
+# **Identification of Drug-Induced Abnormalities in Intraneuronal Movement.**
+
+To verify the potential of the upconversion-based method for mapping drug-induced neuropathy, we tested two antineoplastic drugs, paclitaxel (PTX)
