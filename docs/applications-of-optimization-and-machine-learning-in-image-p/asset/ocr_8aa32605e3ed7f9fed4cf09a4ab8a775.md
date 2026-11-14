@@ -1,0 +1,14 @@
++   [19] Wang, Z., Wei, H., Wang, J., Zeng, X., & Chang, Y. (2022). Security issues and solutions for connected and autonomous vehicles in a sustainable city: A survey. Sustainability, 14(19), 12409.
++   [20] Ghosh, S., Zaboli, A., Hong, J., & Kwon, J. (2023). An integrated approach of threat analysis for autonomous vehicles perception system. IEEE Access, 11, 14752–14777.
++   [21] Voda, A. I., & Radu, L. D. (2019). How can artificial intelligence respond to smart cities challenges? In Smart cities: Issues and challenges (pp. 199–216). Elsevier.
++   [22] Yeh, S., Gil, J., Kyle, P., Kishimoto, P., Cazzola, P., Craglia, M., Edelenbosch, O., Fragkos, P., Fulton, L., Liao, Y., Martinez, L., McCollum, D. L., Miller, J., Pereira, R. H. M., & Teter, J. (2022). Improving future travel demand projections: A pathway with an open science interdisciplinary approach. Progress in Energy, 4(4), 043002.
++   [23] Market size of Smart Mobility retrieved Oct. 2022 from https://www.globenewswire.com/news-release/2022/08/12/2497710/0/en/SmartMobility-Market-Size-to-Worth-Around-USD-250-3-Bn-by-2030.html.
++   [24] TomTom index retrieved Oct. 2022 from https://www.ippi.org.il/smart-mobility-shaping-a-new-world-2/.
++   [25] Mobility as a Service retrieved Oct. 2022 from https://data.europa.eu/en/news-events/news/smart-mobility-finland.
++   [26] Rey-Moreno, M., Periáñez-Cristóbal, R., & Calvo-Mora, A. (2023). Reflections on sustainable urban mobility, mobility as a service (MaaS) and adoption models. International Journal of Environmental Research and Public Health, 20(1), 274.
++   [27] Smart mobility and transportation for atamanirbhar bharat retrieved Oct. 2022 from https://timesofindia.indiatimes.com/blogs/voices/smart-mobility-and-transportation-for-atmanirbhar-bharat/.
++   [28] Status Co analysis of various electric mobility segments retrieved Oct. 2022 from https://www.niti.gov.in/sites/default/files/2021,04/FullReport_Status_quo_analysis_of_various_segments_of_electric_mobility-compressed.pdf.
++   [29] Smart Cities in India retrieved Oct. 2022 from https://economictimes.indiatimes.com/news/india-unlimited/smart-cities.
++   [30] Electric vehicles retrieved Oct. 2022 from https://www.financialexpress.com/auto/industry/smart-mobility-transition-challenges-electric-cars-internet-connected-cars-smart-scooters/2282780/.
++   [31] Smart mobility in Himachal Pradesh retrieved Oct. 2022 from https://www.google.com/search?q=smart+mobility+in+Himachal&rlz=1C1CHBF_enIN890IN891&oq=smart+mobility+in+Himachal&aqs=chrome.69157j0i22i30j0i390l4.12260j0j4&sourceid=chrome&ie=UTF-8.
++   [32] Electrical Vehicles in Himachal Pradesh retrieved Oct. 2022 from https://www.outlookindia.com/website/story/india-news-himachal-pradesh-to-convert-15-per-cent-of-transport-to-electric-vehicles-by-2025/403317.

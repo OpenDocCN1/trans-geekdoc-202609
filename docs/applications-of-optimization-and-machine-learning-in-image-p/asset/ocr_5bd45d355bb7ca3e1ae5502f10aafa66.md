@@ -1,0 +1,11 @@
+the IoT-enabled healthcare system, this article presents a blockchain-based framework. The suggested design improves efficiency while securely generating and maintaining medical certifications [19].
+
+# 6.4 IOT-BASED HEALTHCARE DEVICES
+
++   - **Continuous Glucose Monitoring**: This is very difficult for diabetic patients. IoT devices resolve this problem with the help of smart glucose monitoring devices [20]. Such devices maintain records automatically and also alert the patient if the glucose level exceeds the normal range.
++   - **Heart Rate Monitoring Devices**: To measure heart rate, patients must continually be hooked to devices using typical continuous cardiac monitoring systems, which limits their movement. IoT-enabled heart rate monitoring devices allow patients to move freely and continuously update the patient regarding heart rates.
++   - **Hand Hygiene Monitoring Devices**: These use sensors and remind people to sanitize their hands before entering hospital rooms.
++   - **Depression and Mood Monitoring Devices**: Such devices help doctors read the mental state of patients by measuring their blood pressure, heart rate, and even eye movements. These devices can detect depression symptoms, but sometimes they suffer from poor accuracy.
++   - **Disease Monitoring System**: IoT also helps to detect diseases. One example is the Parkinson's disease monitoring system. This device not only helps healthcare providers track the symptoms of the disease on daily basis but also gives liberty to patients to live their lives without spending long hours in hospitals [21]. Figure 6.2 shows examples of IoT devices used in the healthcare industry.
++   - **Connected Inhalers**: These devices avoid conditions that happen suddenly, like asthma attacks. This IoT-enabled device monitors the frequency of attacks by collecting and analyzing data from the environment sensed by sensors and provides relevant information to healthcare providers. The device also alerts patients to take inhalers when they forget to carry them [22].
++   - **Ingestible Sensors**: IoT-enabled devices like ingestible sensors help in the internal examination of the human body to keep track of the stomach to find the source of internal bleeding.

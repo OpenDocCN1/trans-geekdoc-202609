@@ -1,0 +1,13 @@
+and cloud computing is required. Energy-saving sensors with IoT capabilities can be used, and 5G enables quick communication with intelligent energy-consuming devices. The data produced by intelligent IoT devices can be kept in the cloud via a 5G communication channel. Through the application, smart device functionality is tracked. In the case of any problem, control management obtains information from the cloud via a communication channel and can fix the problem [9].
+
+# 4.2.3.2 Smart Transportation Optimization with IoT
+
+The majority of smart cities experience severe traffic problems every day. The traffic control system is a major issue for smart cities, even though certain areas are automated and cost-efficient. Every intersection with a traffic signal has an IoT sensor-integrated camera to keep an eye on the movements of passing vehicles. Additionally, the cloud processes the optimized vehicle flow data. An algorithm is performed using the information from the different signal corners to determine the direction of the flow of traffic and to manage the signal lights. IoT sensors are used to send the alarm notice to the closest traffic control facility when traffic is heavy [10].
+
+# 4.2.3.3 Smart Agriculture Using IoT
+
+IoT combines a number of current cutting-edge products and technologies, including wireless sensor networks (WSN), cognitive radio ad hoc networks, cloud computing, big data and user applications. The use of IoT technologies for smart agriculture is inevitable and will enhance productivity, provide hygienic and green food, endorse food traceability and decrease human efforts with increased production capacity. Various common sensors are used in the smart agricultural industry, depending on the necessary activity. Location sensors, mechanical sensors, electrochemical sensors, optical sensors and air flow sensors are just a few of the basic categories that may be used to classify sensors. These sensors are used to gather data on the atmospheric composition, air temperature/pressure/humidity, soil moisture/temperature, air humidity, plant moisture, precipitation, wind velocity/direction and sun radiation. These autonomous sensors supply data with a high degree of dependability, demonstrate great energy efficiency and provide independency [11].
+
+# 4.2.3.4 IoT-Based Smart Health Care
+
+The term “smart health” describes the use of technology to give people better medical treatment. This might take the form of creating instruments for improved illness diagnostics or using algorithms for better scheduling

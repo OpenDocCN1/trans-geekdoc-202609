@@ -1,0 +1,57 @@
+
+
+## 电子废弃物管理中的物联网应用
+
+Smriti Snehil,¹ Ojaswi Vindhyachalam²
+and Kamalesh Kumar Singh¹
+
+1 Department of Metallurgical Engineering, Indian Institute of Technology, Banaras Hindu University, Varanasi, India
+2 Faculty of Law, Banaras Hindu University, Varanasi, India
+
+## 5.1 引言
+
+With the development and advancement of new technologies, contemporary electrical and electronic equipment, collectively known as e-products, is being discarded in massive amounts at regular intervals. On the one hand, this discarded equipment contains harmful and carcinogenic elements such as lead, nickel, cadmium and substances such as furans, halides etc. that present serious threats to human life and the environment. On the other hand, it hosts many precious metals such as gold, silver, platinum, palladium and valuable metals like copper, aluminum, iron etc., which are the main motivation factor to recycle the electronic waste. The recycling of e-waste gives the opportunity to recover these valuable metals to put back them into their respective use and support the concept of a circular economy.
+
+The handling the electronic waste involving proper identification, segregation and disposal becomes significantly important in deciding the fate of electronic waste.
+
+Before deep diving into understanding the scope and mechanism of the management of electronic waste using modern artificial intelligence techniques, let us understand the terms and concepts associated with them.
+
+“Electronic waste,” or “e-waste,” is a term that incorporates all kinds of electrical and electronic equipment and their parts that have been discarded after use. In other words, the electronic products that are nearing the end of their useful lives are collectively known as “e-waste.” Some examples of e-waste are discarded e-products, such as computer monitors, keyboards, printers, calculators, circuit boards, cathode ray tubes, memory chips, cords and cables, fans, etc. E-waste is one of the most rapidly growing waste streams in the world. According to e-waste collection reports, the total e-waste generated across the globe has reached over 50 million tons. Just in 2019, the e-waste generated across the globe was approximately 53.6 million tons [1]. It is predicted [2] that the global e-waste generation in 2030 will be 75 million tons and approximately 111 million tons in the 2050. This ever growing waste stream cannot be ignored and calls for the utmost care in its handling and processing. E-waste is either sent for recycling or simply thrown into a landfill. The recycling rates are improving gradually but are still low in developing countries.
+
+A proper e-waste management system can contribute to minimize the landfill proportion. Various approaches are in practice to handle e-waste management.
+
+Processing e-waste involves three critical steps:
+
+- 1. Collection of E-Waste: This first step involves the collection of e-waste from households and industries. Further, the dumped waste is collected from bins by recycling units for processing.
+- 2. Preprocessing: The collected e-waste is segregated based on many factors such as remaining life, hazardousness and ability to be recycled. After segregation, the parts of the wastes are dismantled and shredded into pieces using hammer mills. This is the initial part of processing e-waste.
+- 3. End-Processing (Finishing): This stage involves further processing of metals and non-metals. Recyclable and materials that can be kept and used in other applications are kept and anything remaining is discarded.
+
+Due to poor collection rates, only 20% of e-waste is recycled, whereas 4% joins the residential waste stream. Seventy-six percent of e-waste is disposed of illegally, either in open air incineration or in landfill, which in either case is a hazardous practice for humankind and the environment. To maximize the disposal of e-waste in legal centers of processing, the collection rate is extremely important and depends on the tracking of the movement of e-waste.
+
+There are two approaches—producers’ responsibility and users’ responsibility—which are basically complementary to each other. In either case, the collection rate is dependent upon the active participation of both the producers and the users. The producers’ responsibility may be collective or individual. The producers’ responsibility approach to take back the discarded electronic equipment started in Germany and the Scandinavian countries in the 1990s and became obligatory in most parts of the developed world. However, in developing countries, progress is slow. Hence a collective effort at all levels is crucial to bring back the discarded e-waste into the collection system. To make the efforts effective at the local level, e-waste collection facilities need to be established and monitored.
+
+The monitoring and tracking of the generation and management of such massive amounts of harmful waste become crucial and thus need the intervention of technologies such as the Internet of Things (IoT) to reduce the harmful impact of e-waste.
+
+## 5.2 物联网
+
+The “Internet of Things” is a term used for digitally connected smart devices that are linked with Internet connectivity, sensors and other hardware tools to exert control via the web. Billions of devices in everyday use, such as cars, smart watches and electrical appliances all comprised of computer chips and connected with high-bandwidth communication tools and sensors, collect data and respond intelligently to users [3].
+
+There are five major components of Internet of Things: (1) devices, (2) connectivity, (3) analytics and data management, (4) cloud and (5) user interface. These components together are responsible for the functioning of Internet of Things services.
+
+Devices that are comprised of sensors form the backbone of the Internet of Things system. Sensors detect all types of changes, including the most minute ones in the environment. The main purpose of sensors is to collect data from the surroundings. A wide range of sensors, such as temperature and humidity sensors, gyro sensors and wireless and Bluetooth sensors,
+![](img/9c1422d4c6a10143e1802787075307de_88_0.png)
+
+图 5.1 物联网组件。
+
+measure various physical phenomena. Connectivity of the sensors or the devices can be established in a variety of ways including Bluetooth and satellites. Communication involves the transmission and reception of data that enables IoT devices to perform the functions they are designed for. After the establishment and connection of the IoT devices, the sensors function on collecting data from their surroundings, which is stored on the cloud. An IoT cloud is a web-based network that stores the data collected by the sensors of devices. The wide range of data collected on the cloud is then analyzed to leverage and automate processes. Now that the surrounding data has been collected and analyzed, it needs to be presented to the user for application. “User interface” is the term collectively used for the features that are used to interact with the computer systems. It includes screens, buttons, tabs etc.
+
+IoT has a diverse range of applications including smartphones, home appliances and automobiles. Here are some of the most common applications of IoT:[4]
+
+- **Self-Driven Cars:** IoT plays a major role in enabling the self-driving feature in cars. Cars have remote sensors, cameras and radar and are wirelessly connected to the cloud, which provides information about the movement of the car as well as the road on which it is being driven.
+- **Agriculture:** Scaling up of various agricultural techniques has been facilitated with the help of Internet of Things. Smart irrigation, livestock tracking and prediction farming are some of the most prominent approaches that use IoT.
+- **Healthcare:** The healthcare unit, especially during the pandemic, saw various significant applications of IoT. Telemedicine, vaccine cold chain monitoring and inventory management during the manufacturing process saw extensive usage of IoT. Medical research and maintaining patient records also witnessed streamlining due to the noteworthy capability of IoT to manage massive amounts of data.
+- **Supply Chain Management Upgradation:** Supply chain management (SCM) is the entire process that consolidates the process of delivering products and services to customers right from the procurement of raw materials. IoT facilitates the process by introducing smart routes and enabling trackers to keep track of the product at every step.
+- **Smart City:** One of the major and most diverse applications of IoT is the development of the smart city. Incorporating the IoT technologies to fulfill infrastructural requirements and using it to tackle some key concerns like traffic, electricity and waste management and to make living more convenient is the concept of smart cities.
+
+IoT uses real-time data and thus has an enormous number of applications in day-to-day life. With the evolution of technologies, new products are being launched and discarded on a regular basis, ultimately leading to the generation of electronic waste in massive quantities. Evidently, one of the major concerns becomes the management of this electronic waste worldwide. IoT has seen its application in solving this issue to a significant extent. In the next section, the use of Internet of Things for the management of electronic waste is elaborated on.
+
