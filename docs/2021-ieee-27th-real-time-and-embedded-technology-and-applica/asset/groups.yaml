@@ -1,0 +1,950 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Work in Progress: Role-based Deep Reinforcement Learning with Information Sharing
+    for Intelligent Unmanned Systems
+
+
+    1st Qingshuang Sun, 2nd Yuan Yao, 3rd Peng Yi, 4th Xingshe Zhou, 5th Gang Yang
+
+    School of Computer Science
+
+    Northwestern Polytechnical University
+
+    Xi’an, China
+
+    {1st sunqsh, 3rd yipeng}@mail.nwpu.edu.cn, {2nd yaoyuan, 4th zhousx, 5th yeungg}@nwpu.edu.cn
+
+
+    Abstract—Intelligent unmanned systems (IUSs) are distributed systems composed
+    of multiple agents that share information or cooperate to accomplish specific
+    complex tasks. Agents of the IUS are capable of perception, cognition, control,
+    decision-making, and action. In some cases, the environmental situation and task
+    objectives faced by the IUSs are constantly changing with time. Thus, IUSs are
+    time-sensitive systems. To accelerate the task execution time and response speed,
+    IUSs use artificial intelligence technology to increase the speed and quality
+    of the “observation-orientation-decision-action” (OODA) cycle of task execution.
+    IUSs will tend to decompose the system into different functional units in the
+    future, and individuals take different task roles from the functional perspective
+    of OODA. The system is evolving from a linear OODA cycle of individuals to a cooperative
+    OODA (Co-OODA) with different node roles. At present, the reinforcement learning
+    (RL) algorithm is the mainstream method to solve IUSs cooperation problems. However,
+    it does not adapt to the Co-OODA with different roles, and cannot maximize the
+    Co-OODA system’s potential. This paper introduces the role-based Co-OODA system.
+    Furthermore, we propose and design a role-based deep reinforcement learning framework
+    and its corresponding information sharing mechanism.
+
+
+    Index Terms—intelligent unmanned systems, OODA, role, reinforcement learning,
+    information sharing
+
+
+    # I. INTRODUCTION
+
+
+    With the complexity and diversity of the environment and tasks, agents, such as
+    Unmanned Aerial Vehicles (UAVs), Unmanned Ground Vehicles (UGVs), and mobile robots,
+    are constrained by the software and hardware conditions, which have some limitation
+    in the complex tasks. For example, when a single agent performs an exploration
+    task, it cannot achieve multi-dimensional and a wide range of coverage of the
+    task area. To make up the limitation of individual resources, intelligent unmanned
+    systems (IUSs) have become the mainstream trend, helping humans complete some
+    dangerous or difficult missions, such as reconnaissance and surveillance in military
+    tasks and search and rescue missions in civilian task. IUSs have some technical
+    superiorities such as efficient information sharing, supporting the decomposition
+    and collaboration of complex tasks, and individual low-cost. They have more widespread
+    application prospects, which has been a hot spot of concern.
+
+
+    With the artificial intelligence (AI) development, intelligent cooperation control
+    is the core technology of IUSs research and application. Intelligent cooperation
+    control refers to selecting and coordinating multiple agents’ behavior in a centralized
+    or distributed manner to achieve a common goal without human intervention. Reinforcement
+    learning (RL) is an important method of intelligent control, where agents interact
+    with a dynamic environment to learn an optimal policy to adapt to complex environmental
+    problems.
+
+
+    IUS leverages RL to learn policies, each agent run the liner loop of ‘observation-orientation-decisions-action’
+    (OODA) at a regular time step to achieve the purpose of cooperation. This approach
+    requires individuals to integrate sensors, mission computers, and task executors.
+    The individual that aggregates multiple functions has two disadvantages. One is
+    that the collision and drop of integrated functional agents will cause the loss
+    of high-value assets when performing tasks. The second is that each agent needs
+    to run a complete OODA cycle before entering the next OODA loop, which will extend
+    the task completion time. However, IUS is a time-sensitive system. The environmental
+    situation and task goals are constantly changing over time. When the original
+    task plan does not necessarily meet the tasks, the system needs to analyze and
+    decide about individual behavior within a limited time frame. For example, in
+    the case of confrontation, if one party completes the cycle of OODA faster and
+    enter the opponent’s decision-making cycle, the opponent will be forced to react
+    to new situations, resulting in errors in decision-making and actions. The OODA
+    loop should therefore be accelerated.
+
+
+    Today, the trend of IUS development is that different roles of agents are constructed
+    according to task demands. As shown in Fig. 1, there are observation nodes, orientation
+    nodes, decision nodes, and action nodes based on OODA in the system, allowing
+    individuals to active one or more role functions. This pattern divides the complex
+    system into multiple minimum units with a single function and good interoperability.
+    Therefore, role agents’ cooperation can form multiple cooperative OODA (Co-OODA)
+    sub-cycles in the functionally decomposed IUS. The independent individual OODA
+    cycle of IUS becomes an integrated Co-OODA cycle'
+  - '[PAGE 1]
+
+
+    ![](img/5dae57f4a1241884c6422f3e85bf87af_1_0.png)
+
+
+    Fig. 1. The role-based CO-OODA system.
+
+
+    jointly finished by agents.
+
+
+    RL enables agents to perform a complete OODA cycle to learn their global policy.
+    However, this learning method cannot fully use this new Co-OODA system with various
+    node roles. To tackle this problem, we first describe the role-based Co-OODA system.
+    Secondly, we need to focus on preliminarily proposing a new role-based deep reinforcement
+    learning framework for this pattern, where individuals learn their role policies
+    at different levels and time abstraction scales, to make full use of this new
+    role-based Co-OODA system and realize the cooperation control of the IUSs effectively.
+    Finally, according to this system, it is also necessary to propose an information
+    sharing mechanism based on different role tasks, so that information can be transferred
+    between different role nodes and ensure the completion of a continuous flow Co-OODA
+    cycle.
+
+
+    # II. RELATED WORK
+
+
+    Entities in the IUss can be treated as agents with considerable autonomous capabilities.
+    Therefore, the IUss system can be regarded as a multi-agent system. In recent
+    years RL has made extraordinary progress on many sequential decision-making problems,
+    such as playing the game of [1], robotic control [2], and autonomous driving [3].
+    With the effective application of RL in some complex single-agent tasks, many
+    researchers have transferred RL''s research results to a multi-agent system.
+
+
+    The current research on multi-agent reinforcement learning can be divide into
+    three groups, fully cooperative, fully competitive, and a mix of the two, which
+    depend on the types of task settings [4]. In particular, in the cooperative setting,
+    the cooperation process of agents has been divided into two stages: “information
+    sharing” and “collaborative decision-making” [5]. In recent years, with the outstanding
+    ability of deep learning (DL) in complex data-driven tasks, a learning paradigm
+    – deep reinforcement learning (DRL) that combines the powerful feature representation
+    of DL and efficient strategy search of RL is applied to the cooperation task of
+    a multi-agent system.
+
+
+    To maximize the utility of the team, information sharing is the fundamental function
+    of a multiagent system. Learning communication in multi-agent learning is an emerging
+    sub-area in which agents can learn communication even from scratch under a distributed,
+    partially observable environment. The agent’s communication protocols can determine
+    when to
+
+
+    communicate, what kind of message to send, and who to send them to. In [6], Each
+    agent is modeled by a deep feed-forward network, and the agent modeled can be
+    trained to extract hidden state h from the state to learn what message to send.
+    [7] designs an attention unit that enables agents to learn when to communicate
+    for the rst time.
+
+
+    # III. ROLE-BASED CO-OODA SYSTEM
+
+
+    The OODA cycle theory was proposed by Air Force Col John R. Boyd’s in 1987. It
+    describes the behavioral process of agents [8]. Agents gather information from
+    the environment and then orients themselves to the environment to decide the action
+    to be selected from the action set, and then act. If IUSs want to win in a hyper-competitive
+    environment, these four steps must cycle quickly and continuously, completing
+    decision-making and actions faster than the opponent. In August 2017, DARPA proposed
+    the operational concept of mosaic warfare, which integrates the other ideas and
+    operational concepts of the US military in recent years and has become the top-level
+    core concept of the DARPA military combat system. Mosaic Warfare decomposes complex
+    integrated systems into various functional units such as sensor systems, command
+    and control systems, weapon platform systems. Through dynamic communication networks,
+    various units are linked to form a highly distributed and flexible operational
+    network. Mosaic warfare has lots of characteristics. One of the most important
+    characteristics is that battle resources are abstracted into capability nodes
+    that undertake different functions of OODA, which are connected by communication
+    networks into a Co-OODA system. On the one hand, there is no critical node or
+    small set of nodes whose loss will collapse the entire system. On the other hand,
+    the OODA cycle has a high agility degree, flexibly combining various functional
+    units according to available resources.
+
+
+    The idea of mosaic warfare has advantages in dealing with military tasks, and
+    this idea can also be applied to non-military fields. With this trend, IUS in
+    the future will perform tasks based on advancements in processing, computing,
+    and networking, having the ability to seamlessly share information when and where
+    needed, and use the most advanced communication network to achieve connecting
+    of various functional roles in the mission area. Fig. 1 shows the idea that the
+    node functional role of the IUS is constructed based on the loop of OODA, which
+    is divided into observation nodes, orientation nodes, decision nodes, action nodes,
+    and comprehensive nodes with multiple functions. Information flow between nodes
+    through advanced data links. Observation nodes cooperate and provide multi-dimensional
+    observations to orientation nodes. The orientation node aggregates the current
+    observation information with the existing knowledge base, database, and historical
+    experience information to form environmental state information. Based on this
+    orientation, decision nodes or comprehensive nodes active multiple action nodes.
+    This way can form multiple OODA cycles, developing a more unstructured operating
+    manner in a role-based Co-OODA system. For instance, in the search and rescue
+    of victims'
+  md: '
+
+    ## Work in Progress: Role-based Deep Reinforcement Learning with Information Sharing
+    for Intelligent Unmanned Systems
+
+
+    1st Qingshuang Sun, 2nd Yuan Yao, 3rd Peng Yi, 4th Xingshe Zhou, 5th Gang Yang
+
+    School of Computer Science
+
+    Northwestern Polytechnical University
+
+    Xi’an, China
+
+    {1st sunqsh, 3rd yipeng}@mail.nwpu.edu.cn, {2nd yaoyuan, 4th zhousx, 5th yeungg}@nwpu.edu.cn
+
+
+    Abstract—Intelligent unmanned systems (IUSs) are distributed systems composed
+    of multiple agents that share information or cooperate to accomplish specific
+    complex tasks. Agents of the IUS are capable of perception, cognition, control,
+    decision-making, and action. In some cases, the environmental situation and task
+    objectives faced by the IUSs are constantly changing with time. Thus, IUSs are
+    time-sensitive systems. To accelerate the task execution time and response speed,
+    IUSs use artificial intelligence technology to increase the speed and quality
+    of the “observation-orientation-decision-action” (OODA) cycle of task execution.
+    IUSs will tend to decompose the system into different functional units in the
+    future, and individuals take different task roles from the functional perspective
+    of OODA. The system is evolving from a linear OODA cycle of individuals to a cooperative
+    OODA (Co-OODA) with different node roles. At present, the reinforcement learning
+    (RL) algorithm is the mainstream method to solve IUSs cooperation problems. However,
+    it does not adapt to the Co-OODA with different roles, and cannot maximize the
+    Co-OODA system’s potential. This paper introduces the role-based Co-OODA system.
+    Furthermore, we propose and design a role-based deep reinforcement learning framework
+    and its corresponding information sharing mechanism.
+
+
+    Index Terms—intelligent unmanned systems, OODA, role, reinforcement learning,
+    information sharing
+
+
+    ## I. INTRODUCTION
+
+
+    With the complexity and diversity of the environment and tasks, agents, such as
+    Unmanned Aerial Vehicles (UAVs), Unmanned Ground Vehicles (UGVs), and mobile robots,
+    are constrained by the software and hardware conditions, which have some limitation
+    in the complex tasks. For example, when a single agent performs an exploration
+    task, it cannot achieve multi-dimensional and a wide range of coverage of the
+    task area. To make up the limitation of individual resources, intelligent unmanned
+    systems (IUSs) have become the mainstream trend, helping humans complete some
+    dangerous or difficult missions, such as reconnaissance and surveillance in military
+    tasks and search and rescue missions in civilian task. IUSs have some technical
+    superiorities such as efficient information sharing, supporting the decomposition
+    and collaboration of complex tasks, and individual low-cost. They have more widespread
+    application prospects, which has been a hot spot of concern.
+
+
+    With the artificial intelligence (AI) development, intelligent cooperation control
+    is the core technology of IUSs research and application. Intelligent cooperation
+    control refers to selecting and coordinating multiple agents’ behavior in a centralized
+    or distributed manner to achieve a common goal without human intervention. Reinforcement
+    learning (RL) is an important method of intelligent control, where agents interact
+    with a dynamic environment to learn an optimal policy to adapt to complex environmental
+    problems.
+
+
+    IUS leverages RL to learn policies, each agent run the linear loop of ‘observation-orientation-decisions-action’
+    (OODA) at a regular time step to achieve the purpose of cooperation. This approach
+    requires individuals to integrate sensors, mission computers, and task executors.
+    The individual that aggregates multiple functions has two disadvantages. One is
+    that the collision and drop of integrated functional agents will cause the loss
+    of high-value assets when performing tasks. The second is that each agent needs
+    to run a complete OODA cycle before entering the next OODA loop, which will extend
+    the task completion time. However, IUS is a time-sensitive system. The environmental
+    situation and task goals are constantly changing over time. When the original
+    task plan does not necessarily meet the tasks, the system needs to analyze and
+    decide about individual behavior within a limited time frame. For example, in
+    the case of confrontation, if one party completes the cycle of OODA faster and
+    enter the opponent’s decision-making cycle, the opponent will be forced to react
+    to new situations, resulting in errors in decision-making and actions. The OODA
+    loop should therefore be accelerated.
+
+
+    Today, the trend of IUS development is that different roles of agents are constructed
+    according to task demands. As shown in Fig. 1, there are observation nodes, orientation
+    nodes, decision nodes, and action nodes based on OODA in the system, allowing
+    individuals to active one or more role functions. This pattern divides the complex
+    system into multiple minimum units with a single function and good interoperability.
+    Therefore, role agents’ cooperation can form multiple cooperative OODA (Co-OODA)
+    sub-cycles in the functionally decomposed IUS. The independent individual OODA
+    cycle of IUS becomes an integrated Co-OODA cycle jointly finished by agents.
+
+
+    RL enables agents to perform a complete OODA cycle to learn their global policy.
+    However, this learning method cannot fully use this new Co-OODA system with various
+    node roles. To tackle this problem, we first describe the role-based Co-OODA system.
+    Secondly, we need to focus on preliminarily proposing a new role-based deep reinforcement
+    learning framework for this pattern, where individuals learn their role policies
+    at different levels and time abstraction scales, to make full use of this new
+    role-based Co-OODA system and realize the cooperation control of the IUSs effectively.
+    Finally, according to this system, it is also necessary to propose an information
+    sharing mechanism based on different role tasks, so that information can be transferred
+    between different role nodes and ensure the completion of a continuous flow Co-OODA
+    cycle.
+
+
+    ## II. RELATED WORK
+
+
+    Entities in the IUSs can be treated as agents with considerable autonomous capabilities.
+    Therefore, the IUSs system can be regarded as a multi-agent system. In recent
+    years RL has made extraordinary progress on many sequential decision-making problems,
+    such as playing the game of [1], robotic control [2], and autonomous driving [3].
+    With the effective application of RL in some complex single-agent tasks, many
+    researchers have transferred RL''s research results to a multi-agent system.
+
+
+    The current research on multi-agent reinforcement learning can be divided into
+    three groups, fully cooperative, fully competitive, and a mix of the two, which
+    depend on the types of task settings [4]. In particular, in the cooperative setting,
+    the cooperation process of agents has been divided into two stages: “information
+    sharing” and “collaborative decision-making” [5]. In recent years, with the outstanding
+    ability of deep learning (DL) in complex data-driven tasks, a learning paradigm
+    – deep reinforcement learning (DRL) that combines the powerful feature representation
+    of DL and efficient strategy search of RL is applied to the cooperation task of
+    a multi-agent system.
+
+
+    To maximize the utility of the team, information sharing is the fundamental function
+    of a multiagent system. Learning communication in multi-agent learning is an emerging
+    sub-area in which agents can learn communication even from scratch under a distributed,
+    partially observable environment. The agent’s communication protocols can determine
+    when to communicate, what kind of message to send, and who to send them to. In
+    [6], Each agent is modeled by a deep feed-forward network, and the agent modeled
+    can be trained to extract hidden state h from the state to learn what message
+    to send. [7] designs an attention unit that enables agents to learn when to communicate
+    for the first time.
+
+
+    ## III. ROLE-BASED CO-OODA SYSTEM
+
+
+    The OODA cycle theory was proposed by Air Force Col John R. Boyd’s in 1987. It
+    describes the behavioral process of agents [8]. Agents gather information from
+    the environment and then orients themselves to the environment to decide the action
+    to be selected from the action set, and then act. If IUSs want to win in a hyper-competitive
+    environment, these four steps must cycle quickly and continuously, completing
+    decision-making and actions faster than the opponent. In August 2017, DARPA proposed
+    the operational concept of mosaic warfare, which integrates the other ideas and
+    operational concepts of the US military in recent years and has become the top-level
+    core concept of the DARPA military combat system. Mosaic Warfare decomposes complex
+    integrated systems into various functional units such as sensor systems, command
+    and control systems, weapon platform systems. Through dynamic communication networks,
+    various units are linked to form a highly distributed and flexible operational
+    network. Mosaic warfare has lots of characteristics. One of the most important
+    characteristics is that battle resources are abstracted into capability nodes
+    that undertake different functions of OODA, which are connected by communication
+    networks into a Co-OODA system. On the one hand, there is no critical node or
+    small set of nodes whose loss will collapse the entire system. On the other hand,
+    the OODA cycle has a high agility degree, flexibly combining various functional
+    units according to available resources.
+
+
+    The idea of mosaic warfare has advantages in dealing with military tasks, and
+    this idea can also be applied to non-military fields. With this trend, IUS in
+    the future will perform tasks based on advancements in processing, computing,
+    and networking, having the ability to seamlessly share information when and where
+    needed, and use the most advanced communication network to achieve connecting
+    of various functional roles in the mission area. Fig. 1 shows the idea that the
+    node functional role of the IUS is constructed based on the loop of OODA, which
+    is divided into observation nodes, orientation nodes, decision nodes, action nodes,
+    and comprehensive nodes with multiple functions. Information flow between nodes
+    through advanced data links. Observation nodes cooperate and provide multi-dimensional
+    observations to orientation nodes. The orientation node aggregates the current
+    observation information with the existing knowledge base, database, and historical
+    experience information to form environmental state information. Based on this
+    orientation, decision nodes or comprehensive nodes activate multiple action nodes.
+    This way can form multiple OODA cycles, developing a more unstructured operating
+    manner in a role-based Co-OODA system. For instance, in the search and rescue
+    of victims
+
+
+    ![](img/5dae57f4a1241884c6422f3e85bf87af_1_0.png)
+
+
+    Fig. 1. The role-based Co-OODA system.
+
+    '
+  mdcn: '
+
+    ## 工作进行中：面向智能无人系统的基于角色并带有信息共享的深度强化学习
+
+
+    1st 孙清爽, 2nd 姚远, 3rd 彭乄, 4th 周行舍, 5th 杨刚
+
+    计算机学院
+
+    西北工业大学
+
+    中国西安
+
+    {1st sunqsh, 3rd yipeng}@mail.nwpu.edu.cn, {2nd yaoyuan, 4th zhousx, 5th yeungg}@nwpu.edu.cn
+
+
+    摘要—智能无人系统（IUSs）是由多个智能体组成的分布式系统，这些智能体共享信息或协作以完成特定的复杂任务。IUS的智能体具备感知、认知、控制、决策和行动能力。在某些情况下，IUSs面临的环境态势和任务目标会随时间不断变化。因此，IUSs是时效敏感型系统。为加速任务执行时间和响应速度，IUSs利用人工智能技术提高任务执行“观察-定向-决策-行动”（OODA）循环的速度和质量。未来，IUSs倾向于将系统分解为不同的功能单元，个体从OODA的功能视角承担不同的任务角色。系统正从个体的线性OODA循环演变为具有不同节点角色的协作OODA（Co-OODA）。目前，强化学习（RL）算法是解决IUSs协作问题的主流方法。然而，它不适应具有不同角色的Co-OODA，也无法充分发挥Co-OODA系统的潜力。本文介绍了基于角色的Co-OODA系统。此外，我们提出并设计了一种基于角色的深度强化学习框架及其相应的信息共享机制。
+
+
+    索引术语—智能无人系统，OODA，角色，强化学习，信息共享
+
+
+    ## I. 引言
+
+
+    随着环境和任务的复杂性与多样性增加，诸如无人航空器（UAVs）、无人地面车辆（UGVs）和移动机器人等智能体受到软硬件条件的限制，在复杂任务中存在一定局限性。例如，当单个智能体执行探索任务时，无法对任务区域实现多维度和广域覆盖。为弥补个体资源的局限性，智能无人系统（IUSs）已成为主流趋势，帮助人类完成一些危险或困难的任务，如军事任务中的侦察与监视以及民用任务中的搜索与救援。IUSs具有高效信息共享、支持复杂任务分解与协作、个体低成本等技术优势，拥有更广泛的应用前景，已成为备受关注的热点。
+
+
+    随着人工智能（AI）的发展，智能协作控制是IUSs研究与应用的核心技术。智能协作控制是指以集中或分布式方式选择和协调多个智能体的行为，以在无需人工干预的情况下实现共同目标。强化学习（RL）是一种重要的智能控制方法，其中智能体与动态环境交互，以学习最优策略并适应复杂的环境问题。
+
+
+    IUS利用RL学习策略，每个智能体在固定时间步长运行线性的“观察-定向-决策-行动”（OODA）循环，以实现协作目的。这种方法要求个体整合传感器、任务计算机和任务执行器。集成多种功能的个体有两个缺点。其一是，集成功能智能体的碰撞和失效会在执行任务时导致高价值资产损失。其二是，每个智能体在进入下一个OODA循环前都需要运行一个完整的OODA循环，这会延长任务完成时间。然而，IUS是一个时效敏感系统。环境态势和任务目标会随时间不断变化。当原始任务计划不一定满足任务需求时，系统需要在有限时间内分析并决定个体行为。例如，在对抗情况下，如果一方更快完成OODA循环并进入对手的决策循环，对手将被迫应对新情况，从而导致决策和行动出错。因此，应加速OODA循环。
+
+
+    当前，IUS发展的趋势是根据任务需求构建不同角色的智能体。如图1所示，系统中基于OODA存在观察节点、定向节点、决策节点和行动节点，允许个体激活一个或多个角色功能。这种模式将复杂系统划分为多个具有单一功能和良好互操作性的最小单元。因此，角色智能体的协作可以在功能分解的IUS中形成多个协作OODA（Co-OODA）子循环。IUS的独立个体OODA循环变为由智能体共同完成的集成式Co-OODA循环。
+
+
+    RL使智能体能够执行完整的OODA循环以学习其全局策略。然而，这种学习方法无法充分利用具有多种节点角色的这种新型Co-OODA系统。为解决这一问题，我们首先描述基于角色的Co-OODA系统。其次，我们需要针对这种模式初步提出一种新的基于角色的深度强化学习框架，其中个体在不同层级和时间抽象尺度上学习其角色策略，以充分利用这种新型基于角色的Co-OODA系统并有效实现IUSs的协作控制。最后，根据该系统，还有必要提出一种基于不同角色任务的信息共享机制，以便信息能够在不同角色节点之间传递，并确保连续流式Co-OODA循环的完成。
+
+
+    ## II. 相关工作
+
+
+    IUSs中的实体可以被视为具有相当自主能力的智能体。因此，IUSs系统可以被视为多智能体系统。近年来，RL在许多序贯决策问题上取得了非凡进展，例如玩游戏[1]、机器人控制[2]和自动驾驶[3]。随着RL在一些复杂单智能体任务中的有效应用，许多研究人员将RL的研究成果迁移到多智能体系统。
+
+
+    多智能体强化学习的当前研究可分为三类：完全合作、完全竞争和两者的混合，具体取决于任务设置的类型[4]。特别是，在合作环境下，智能体的协作过程已被分为两个阶段：“信息共享”和“协作决策”[5]。近年来，随着深度学习（DL）在复杂数据驱动任务中的卓越能力，一种学习范式——深度强化学习（DRL）被应用于多智能体系统的协作任务，它结合了DL的强大特征表示和RL的高效策略搜索。
+
+
+    为最大化团队效用，信息共享是多智能体系统的基本功能。多智能体学习中的通信学习是一个新兴子领域，其中智能体可以在分布式、部分可观测环境中从零开始学习通信。智能体的通信协议可以确定何时通信、发送何种消息以及发送给谁。在[6]中，每个智能体由深度前馈网络建模，该建模的智能体可以被训练从状态中提取隐藏状态h，以学习发送何种消息。[7]设计了一个注意力单元，使智能体能够首次学习何时通信。
+
+
+    ## III. 基于角色的Co-OODA系统
+
+
+    OODA循环理论由美国空军上校John R. Boyd于1987年提出。它描述了智能体的行为过程[8]。智能体从环境中收集信息，然后使自身与环境定向，从行动集中决定要选择的行动，并执行行动。如果IUSs想要在高度竞争环境中获胜，这四个步骤必须快速、持续地循环，并在对手之前完成决策和行动。2017年8月，DARPA提出了拼接战的作战概念，该概念整合了近年来美军的其他理念和作战概念，已成为DARPA军事作战体系的顶层核心概念。拼接战将复杂的集成系统分解为各种功能单元，如传感器系统、指挥控制系统和武器平台系统。通过动态通信网络，各单元被连接起来，形成一个高度分布且灵活的作战网络。拼接战具有许多特征。其中最重要的特征之一是，作战资源被抽象为承担不同OODA功能的能力节点，并通过通信网络连接成一个Co-OODA系统。一方面，没有关键节点或小型节点集，其丢失会导致整个系统崩溃。另一方面，OODA循环具有高度敏捷性，可根据可用资源灵活组合各种功能单元。
+
+
+    拼接战理念在处理军事任务方面具有优势，且该理念也可应用于非军事领域。顺应这一趋势，未来的IUS将基于处理、计算和网络的进步执行任务，具备在需要时和需要的地方无缝共享信息的能力，并使用最先进的通信网络来实现任务区域内各种功能角色的连接。图1展示了以下理念：IUS的节点功能角色基于OODA循环构建，分为观察节点、定向节点、决策节点、行动节点以及具有多种功能的综合节点。节点间通过先进数据链进行信息流传输。观察节点相互协作，向定向节点提供多维观测信息。定向节点将当前观测信息与现有知识库、数据库和历史经验信息相集成，形成环境状态信息。基于该定向信息，决策节点或综合节点激活多个行动节点。这种方式可以形成多个OODA循环，在基于角色的Co-OODA系统中发展出更具非结构化的作业方式。例如，在搜救受害者方面
+
+
+    ![](img/5dae57f4a1241884c6422f3e85bf87af_1_0.png)
+
+
+    图1. 基于角色的Co-OODA系统。
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    ![](img/5dae57f4a1241884c6422f3e85bf87af_2_0.png)
+
+
+    ![](img/5dae57f4a1241884c6422f3e85bf87af_2_1.png)
+
+
+    trapped in hazardous space. IUSs with diverse robot agents can cooperate with
+    each other to provide promising solutions on search and rescue task. Here, We
+    regard all kinds of robot agents as different functional roles. Small agents with
+    sensors are responsible for observing, and their perceived ability can gather
+    environmental state information. In the next step, this information is sent to
+    the agent with computational decision-making ability, which can abstract high-dimension
+    knowledge from low-dimension information, such as the type of event, the location
+    and, the size of the target, to orientation and decision. Finally, different events
+    should be executed by different type of agents. For example, when signs of life
+    are detected, rescue robot agents should reach the destination to rescue humans.
+    When the source of fire is detected, a firefighting robot should put out the fire.
+    Agents with different roles are able to do each duty, forming a flexible and robust
+    role-based Co-OODA cycle. In the swarm, different functional roles need to jointly
+    complete the Co-OODA cycle to maximize the potential of IUS. It is worth noting
+    that we emphasize the OODA cycle of the group. Additionally, an OODA cycle belongs
+    to the agent individual inside the single functional node of completing the Co-OODA
+    cycle of IUS, which two cannot be confused.
+
+
+    # IV. DEEP REINFORCEMENT LEARNING FRAMEWORK AND INFORMATION SHARING MECHANISM
+    IN ROLE-BASED CO-OODA SYSTEM
+
+
+    Role-based Co-OODA can speed up the OODA cycle from two aspects. On the one hand,
+    Fig. 2 shows that IUS compose of multiple agents with different task roles to
+    perform tasks. Instead of being sequential and linear, the OODA cycles are far
+    more integrated including multiple interlinked and nested procedures. The observation
+    node, the orientation node, the decision node, and the action node can perform
+    their role tasks in parallel, thereby accelerating the OODA loop. In Fig. 3, assume
+    that the time interval for the individual to perform the sub-steps of the OODA
+    cycle is τ that can be a real number or an integer. Here we assume that τ is a
+    unit time. In the role-based OODA system, the observation node observes the environment
+    at time t and provides the observation information flow to the orientation node.
+    At time t+2, the orientation node processes the received information. At this
+    time, the observation node can enter the next OODA cycle’s observation phase at
+    t+2 and continues to perceive the environment. Using the role-based Co-OODA cycle
+    can speed up the execution of tasks, and the entire Co-OODA cycle is more integrated.
+    On the other hand, appropriate artificial intelligence technology is applied to
+    each role layer to accelerate the operation of the sub-elements of Co-OODA, which
+    gives impetus to run the whole Co-OODA cycle.
+
+
+    The intelligence in the unmanned system is reflected in using artificial intelligence
+    technology (AI) to accelerate the OODA loop’s speed in a complex environment,
+    shorten the responding time for unknown threats. In IUSs with role-based, agents
+    undertake different role tasks according to the sub-steps of the OODA cycle so
+    that several role nodes are required to cooperate complete the Co-OODA cycle during
+    task execution. Agents need to learn their policy from different temporal abstractions
+    based on their roles and tasks. Multi-agent deep reinforcement learning (MADRL)
+    is one of the fundamental technologies to realize the intelligence of unmanned
+    systems, and information sharing is the basis for the efficient exchange of information
+    between different role nodes. Currently, MADRL cannot enable agents to learn role-related
+    information sharing policy and behavioral decision-making policy at different
+    times. Therefore, it is very significant to study the innovative learning framework
+    and information sharing mechanism to make full use of this role-based system.
+
+
+    To make full use of the role-based Co-OODA system features, designing a role-based
+    DRL framework is the basis for the learning and training on the role-based Co-OODA
+    system. Role nodes need various AI to finish their tasks. Thus, different AI methods
+    need to be added to the DRL framework. Upon this frame, each individual learns
+    its role task policy. At present, the method of hierarchical reinforcement learning
+    (HRL) can decompose the task into some subtasks at different levels of abstraction
+    to learn each subtask’s policy and combine the policy of multiple subtasks to
+    form an effective global policy. The learning process can abstract and expand
+    the action set based on different temporal abstraction, and the agent realizes
+    hierarchical control by learning on different temporal scale levels. The learning
+    process can abstract and expand the action set based on different temporal abstraction,
+    and the agent realizes hierarchical control by learning on different levels of
+    the layer. The idea of HRL’s task layering can be applied to the new DRL framework
+    of the role-based Co-OODA system. Different nodes describe their action sets and
+    perform policy learning on different time scales according to their role tasks.
+
+
+    As shown in Fig. 4, we propose a preliminary role-based DRL framework. We regard
+    the policy of completing the role-'
+  - '[PAGE 3]
+
+
+    ![](img/5dae57f4a1241884c6422f3e85bf87af_3_0.png)
+
+
+    based Co-OODA loop as $\pi$. The policy $\pi$ can be defined as a set of sub-policies
+    of role nodes: $\pi = \{ \pi_1, \pi_2, \dots, \pi_i \}$, where $\pi_i$ is the
+    policy of each role layer. In the learning process, different role layers need
+    different AI technologies to learn their target policies. The observation layer
+    requires image recognition algorithms, natural language processing, and other
+    technologies to process the perceived environmental information. The orientation
+    layer needs to leverage big data analytics and knowledge graph technology to perform
+    data analysis, knowledge extraction, knowledge fusion, and knowledge processing
+    on multi-dimensional environmental observations to obtain aggregated information.
+    The decision layer needs intelligent reasoning and planning algorithms to complete
+    the mapping of aggregated information to actions. The action layer act to the
+    environment to obtain the reward that feedback to each layer node. Thus, IUS needs
+    a new RL framework to use different AI to learn sub-policies and provide feedback
+    to train policies. It is important to improve an effective role-based deep reinforcement
+    learning algorithm in the subsequent work, which enables each role node to learn
+    its task sub-policies separately by using various methods for AI so as to build
+    a global policy that can complete the role-based Co-OODA system.
+
+
+    In the role-based Co-OODA system, there is apparent information dependency between
+    each role layer. In Fig. 4, the dotted line indicates the flow of information
+    between nodes. Nodes rely on advanced data links to transmit high-fidelity and
+    high-quality information flow to guarantee a continuous OODA loop. Therefore,
+    efficient information sharing between nodes is also an important factor in supporting
+    and accelerating the Co-OODA cycle. The information sharing mechanism of the role-based
+    Co-OODA system is also one of the issues that need to be solved urgently. At the
+    information sharing level, the nodes of the same role and different roles need
+    to formulate information communication protocols in different aspects.
+
+
+    We propose a preliminary information sharing mechanism. For the same role layer,
+    nodes need to use a hierarchical communication topology to share information by
+    way of enhancing complimentary local information. Nodes are divided into different
+    groups, and each group needs to elect a group leader dynamically. The same group
+    nodes need to learn what message to send and when to communicate to the leader.
+    For example, Fig. 4 shows that there are several observation nodes in the observation
+    layer, and these nodes form different groups.
+
+
+    The sub-center node collects the information from other nodes and integrates the
+    information to be transmitted between different layers. The sub-center node is
+    the bridge for information transmission of different role layers. The information
+    sharing in different role layers, After the observation node perceives environmental
+    state in a specific unit time, needs to learn to identify and distill important
+    information and determine whether it needs to be sent to the which orientation
+    node. The orientation node needs to learn to interpret, sort, aggregate and evaluate
+    the received information, transform information into aggregate information to
+    obtain the multi-dimensional environmental perception that decision nodes can
+    use. The decision node makes decisions based on the environmental situation information
+    obtained by the orientation node and transmits the information command to the
+    action node that needs to be activated to perform the task. Therefore, we need
+    to optimize further an effective information sharing mechanism for the continuous
+    and circular operation of the role-based Co-OODA system in subsequent research.
+
+
+    # V. CONCLUSION
+
+
+    This paper analyzes a development trend of intelligent unmanned systems and describes
+    a role-based Co-OODA system. To better use intelligent algorithms to solve the
+    cooperation problem of IUS, we preliminary propose a role-based DRL framework
+    and information sharing mechanism. They guarantee the learning of each role node
+    and information flow to ensure the continuous cyclic execution of OODA.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This work was supported in part by the National Key Research and Development Program
+    of China (No. 2017YFB1001900), the National Natural Science Foundation of China
+    (No. 61876151, 62032018) and the Fundamental Research Funds for the Central Universities
+    (No. 3102019DX1005).
+
+
+    # REFERENCES
+
+
+    +   [1] Silver, D., Schrittwieser, J., Simonyan, K., Antonoglou, I., Huang, A.,
+    Guez, A., Hubert, T., Baker, L., Lai, M., Bolton, A. et al. (2017). Mastering
+    the game of Go without human knowledge. Nature, 550 354.
+
+    +   [2] Kober, J., Bagnell, J. A. and Peters, J. (2013). Reinforcement learning
+    in robotics: A survey. International Journal of Robotics Research, 32 1238–1274.
+
+    +   [3] Bhalla S. Subramanian S G, Crowley M. Deep multi agent reinforcement learning
+    for autonomous driving[C]//Canadian Conference on Artificial Intelligence. Springer,
+    Cham, 2020: 67-78.
+
+    +   [4] Zhang K. Yang Z, Basar T. Multi-agent reinforcement learning: A selective
+    overview of theories and algorithms[J]. Arxiv preprint arXiv:1911.10635, 2019.
+
+    +   [5] Xuan P. Lesser V, Zilberstein S. Communication decisions in multi-agent
+    cooperation: Model and experiments[C]//Proceedings of the fifth international
+    conference on Autonomous agents. 2001: 616-623.
+
+    +   [6] S. Sukhbaatar, R. Fergus et al., "Learning multiagent communication with
+    backpropagation," in Advances in neural information processing systems, 2016,
+    pp. 2244–2252.
+
+    +   [7] J. Jiang and Z. Lu, "Learning attentional communication for multiagent
+    cooperation," in Advances in neural information processing systems, 2018, pp.
+    7254–7264.
+
+    +   [8] Ioniţă C C. THE "MOSAIC" WARFARE: A NEW AMERICAN STRATEGY FOR THE FUTURE[J].
+    Strategic Impact, 2020, 75(2): 25-42.'
+  md: '
+
+    ![](img/5dae57f4a1241884c6422f3e85bf87af_2_0.png)
+
+
+    ![](img/5dae57f4a1241884c6422f3e85bf87af_2_1.png)
+
+
+    trapped in hazardous space. IUSs with diverse robot agents can cooperate with
+    each other to provide promising solutions on search and rescue tasks. Here, we
+    regard all kinds of robot agents as different functional roles. Small agents with
+    sensors are responsible for observing, and their perceived ability can gather
+    environmental state information. In the next step, this information is sent to
+    the agent with computational decision-making ability, which can abstract high-dimension
+    knowledge from low-dimension information, such as the type of event, the location,
+    and the size of the target, to orientation and decision. Finally, different events
+    should be executed by different types of agents. For example, when signs of life
+    are detected, rescue robot agents should reach the destination to rescue humans.
+    When the source of fire is detected, a firefighting robot should put out the fire.
+    Agents with different roles are able to do each duty, forming a flexible and robust
+    role-based Co-OODA cycle. In the swarm, different functional roles need to jointly
+    complete the Co-OODA cycle to maximize the potential of IUS. It is worth noting
+    that we emphasize the OODA cycle of the group. Additionally, an OODA cycle belongs
+    to the agent individual inside the single functional node of completing the Co-OODA
+    cycle of IUS, which two cannot be confused.
+
+
+    ## IV. DEEP REINFORCEMENT LEARNING FRAMEWORK AND INFORMATION SHARING MECHANISM
+    IN ROLE-BASED CO-OODA SYSTEM
+
+
+    Role-based Co-OODA can speed up the OODA cycle from two aspects. On the one hand,
+    Fig. 2 shows that IUSs are composed of multiple agents with different task roles
+    to perform tasks. Instead of being sequential and linear, the OODA cycles are
+    far more integrated including multiple interlinked and nested procedures. The
+    observation node, the orientation node, the decision node, and the action node
+    can perform their role tasks in parallel, thereby accelerating the OODA loop.
+    In Fig. 3, assume that the time interval for the individual to perform the sub-steps
+    of the OODA cycle is τ that can be a real number or an integer. Here we assume
+    that τ is a unit time. In the role-based OODA system, the observation node observes
+    the environment at time t and provides the observation information flow to the
+    orientation node. At time t+2, the orientation node processes the received information.
+    At this time, the observation node can enter the next OODA cycle’s observation
+    phase at t+2 and continues to perceive the environment. Using the role-based Co-OODA
+    cycle can speed up the execution of tasks, and the entire Co-OODA cycle is more
+    integrated. On the other hand, appropriate artificial intelligence technology
+    is applied to each role layer to accelerate the operation of the sub-elements
+    of Co-OODA, which gives impetus to run the whole Co-OODA cycle.
+
+
+    The intelligence in the unmanned system is reflected in using artificial intelligence
+    technology (AI) to accelerate the OODA loop’s speed in a complex environment,
+    shorten the responding time for unknown threats. In role-based IUSs, agents undertake
+    different role tasks according to the sub-steps of the OODA cycle so that several
+    role nodes are required to cooperate to complete the Co-OODA cycle during task
+    execution. Agents need to learn their policy from different temporal abstractions
+    based on their roles and tasks. Multi-agent deep reinforcement learning (MADRL)
+    is one of the fundamental technologies to realize the intelligence of unmanned
+    systems, and information sharing is the basis for the efficient exchange of information
+    between different role nodes. Currently, MADRL cannot enable agents to learn role-related
+    information sharing policy and behavioral decision-making policy at different
+    times. Therefore, it is very significant to study the innovative learning framework
+    and information sharing mechanism to make full use of this role-based system.
+
+
+    To make full use of the role-based Co-OODA system features, designing a role-based
+    DRL framework is the basis for the learning and training on the role-based Co-OODA
+    system. Role nodes need various AI to finish their tasks. Thus, different AI methods
+    need to be added to the DRL framework. Upon this frame, each individual learns
+    its role task policy. At present, the method of hierarchical reinforcement learning
+    (HRL) can decompose the task into some subtasks at different levels of abstraction
+    to learn each subtask’s policy and combine the policy of multiple subtasks to
+    form an effective global policy. The learning process can abstract and expand
+    the action set based on different temporal abstraction, and the agent realizes
+    hierarchical control by learning on different temporal scale levels. The learning
+    process can abstract and expand the action set based on different temporal abstraction,
+    and the agent realizes hierarchical control by learning on different levels of
+    the layer. The idea of HRL’s task layering can be applied to the new DRL framework
+    of the role-based Co-OODA system. Different nodes describe their action sets and
+    perform policy learning on different time scales according to their role tasks.
+
+
+    As shown in Fig. 4, we propose a preliminary role-based DRL framework. We regard
+    the policy of completing the role-
+
+
+    ![](img/5dae57f4a1241884c6422f3e85bf87af_3_0.png)
+
+
+    based Co-OODA loop as $\pi$. The policy $\pi$ can be defined as a set of sub-policies
+    of role nodes: $\pi = \{ \pi_1, \pi_2, \dots, \pi_i \}$, where $\pi_i$ is the
+    policy of each role layer. In the learning process, different role layers need
+    different AI technologies to learn their target policies. The observation layer
+    requires image recognition algorithms, natural language processing, and other
+    technologies to process the perceived environmental information. The orientation
+    layer needs to leverage big data analytics and knowledge graph technology to perform
+    data analysis, knowledge extraction, knowledge fusion, and knowledge processing
+    on multi-dimensional environmental observations to obtain aggregated information.
+    The decision layer needs intelligent reasoning and planning algorithms to complete
+    the mapping of aggregated information to actions. The action layer acts to the
+    environment to obtain the reward that feedback to each layer node. Thus, IUSs
+    need a new RL framework to use different AI to learn sub-policies and provide
+    feedback to train policies. It is important to improve an effective role-based
+    deep reinforcement learning algorithm in the subsequent work, which enables each
+    role node to learn its task sub-policies separately by using various methods for
+    AI so as to build a global policy that can complete the role-based Co-OODA system.
+
+
+    In the role-based Co-OODA system, there is apparent information dependency between
+    each role layer. In Fig. 4, the dotted line indicates the flow of information
+    between nodes. Nodes rely on advanced data links to transmit high-fidelity and
+    high-quality information flow to guarantee a continuous OODA loop. Therefore,
+    efficient information sharing between nodes is also an important factor in supporting
+    and accelerating the Co-OODA cycle. The information sharing mechanism of the role-based
+    Co-OODA system is also one of the issues that need to be solved urgently. At the
+    information sharing level, the nodes of the same role and different roles need
+    to formulate information communication protocols in different aspects.
+
+
+    We propose a preliminary information sharing mechanism. For the same role layer,
+    nodes need to use a hierarchical communication topology to share information by
+    way of enhancing complementary local information. Nodes are divided into different
+    groups, and each group needs to elect a group leader dynamically. The same group
+    nodes need to learn what message to send and when to communicate to the leader.
+    For example, Fig. 4 shows that there are several observation nodes in the observation
+    layer, and these nodes form different groups.
+
+
+    The sub-center node collects the information from other nodes and integrates the
+    information to be transmitted between different layers. The sub-center node is
+    the bridge for information transmission of different role layers. The information
+    sharing in different role layers: After the observation node perceives the environmental
+    state in a specific unit time, needs to learn to identify and distill important
+    information and determine whether it needs to be sent to which orientation node.
+    The orientation node needs to learn to interpret, sort, aggregate and evaluate
+    the received information, transform information into aggregate information to
+    obtain the multi-dimensional environmental perception that decision nodes can
+    use. The decision node makes decisions based on the environmental situation information
+    obtained by the orientation node and transmits the information command to the
+    action node that needs to be activated to perform the task. Therefore, we need
+    to optimize further an effective information sharing mechanism for the continuous
+    and circular operation of the role-based Co-OODA system in subsequent research.
+
+
+    ## V. CONCLUSION
+
+
+    This paper analyzes a development trend of intelligent unmanned systems and describes
+    a role-based Co-OODA system. To better use intelligent algorithms to solve the
+    cooperation problem of IUS, we preliminarily propose a role-based DRL framework
+    and information sharing mechanism. They guarantee the learning of each role node
+    and information flow to ensure the continuous cyclic execution of OODA.
+
+
+    ## ACKNOWLEDGMENT
+
+
+    This work was supported in part by the National Key Research and Development Program
+    of China (No. 2017YFB1001900), the National Natural Science Foundation of China
+    (No. 61876151, 62032018) and the Fundamental Research Funds for the Central Universities
+    (No. 3102019DX1005).
+
+
+    ## REFERENCES
+
+
+    - [1] Silver, D., Schrittwieser, J., Simonyan, K., Antonoglou, I., Huang, A.,
+    Guez, A., Hubert, T., Baker, L., Lai, M., Bolton, A. et al. (2017). Mastering
+    the game of Go without human knowledge. Nature, 550 354.
+
+    - [2] Kober, J., Bagnell, J. A. and Peters, J. (2013). Reinforcement learning
+    in robotics: A survey. International Journal of Robotics Research, 32 1238–1274.
+
+    - [3] Bhalla S. Subramanian S G, Crowley M. Deep multi agent reinforcement learning
+    for autonomous driving[C]//Canadian Conference on Artificial Intelligence. Springer,
+    Cham, 2020: 67-78.
+
+    - [4] Zhang K. Yang Z, Basar T. Multi-agent reinforcement learning: A selective
+    overview of theories and algorithms[J]. Arxiv preprint arXiv:1911.10635, 2019.
+
+    - [5] Xuan P. Lesser V, Zilberstein S. Communication decisions in multi-agent
+    cooperation: Model and experiments[C]//Proceedings of the fifth international
+    conference on Autonomous agents. 2001: 616-623.
+
+    - [6] S. Sukhbaatar, R. Fergus et al., "Learning multiagent communication with
+    backpropagation," in Advances in neural information processing systems, 2016,
+    pp. 2244–2252.
+
+    - [7] J. Jiang and Z. Lu, "Learning attentional communication for multiagent cooperation,"
+    in Advances in neural information processing systems, 2018, pp. 7254–7264.
+
+    - [8] Ioniţă C C. THE "MOSAIC" WARFARE: A NEW AMERICAN STRATEGY FOR THE FUTURE[J].
+    Strategic Impact, 2020, 75(2): 25-42.
+
+    '
+  mdcn: '
+
+
+    ![](img/5dae57f4a1241884c6422f3e85bf87af_2_0.png)
+
+
+    ![](img/5dae57f4a1241884c6422f3e85bf87af_2_1.png)
+
+
+    被困在危险空间中。IUSs 与多样化机器人代理可以相互合作，为搜索和救援任务提供有前景的解决方案。这里，我们将各种机器人代理视为不同的功能角色。携带传感器的小型代理负责观察，其感知能力可以收集环境状态信息。下一步，此信息被发送到具有计算决策能力的代理，该代理可以从低维信息中抽象高维知识，例如事件类型、位置和目标大小，用于定向和决策。最后，不同事件应由不同类型的代理执行。例如，当检测到生命迹象时，救援机器人代理应到达目的地营救人类。当检测到火源时，消防机器人应扑灭火灾。具有不同角色的代理能够各尽其职，形成灵活且强健的基于角色的
+    Co-OODA 循环。在群体中，不同的功能角色需要共同完成 Co-OODA 循环，以最大化 IUS 的潜力。值得注意的是，我们强调群体的 OODA 循环。此外，完成
+    IUS 的 Co-OODA 循环的单个功能节点内部的代理个体也有一个 OODA 循环，这两者不可混淆。
+
+
+    ## IV. 基于角色的 Co-OODA 系统中的深度强化学习框架和信息共享机制
+
+
+    基于角色的 Co-OODA 可以从两个方面加速 OODA 循环。一方面，Fig. 2 显示 IUSs 由具有不同任务角色的多个代理组成以执行任务。OODA
+    循环不再是顺序和线性的，而是包含多个相互关联和嵌套程序的高度集成结构。观察节点、定向节点、决策节点和动作节点可以并行执行各自的角色任务，从而加速 OODA
+    循环。在 Fig. 3 中，假设个体执行 OODA 循环子步骤的时间间隔为 τ，可以是实数或整数。这里我们假设 τ 为单位时间。在基于角色的 OODA 系统中，观察节点在时间
+    t 观察环境并向定向节点提供观察信息流。在时间 t+2，定向节点处理接收到的信息。此时，观察节点可以在 t+2 进入下一个 OODA 循环的观察阶段，并继续感知环境。使用基于角色的
+    Co-OODA 循环可以加速任务执行，整个 Co-OODA 循环更加集成。另一方面，适当的人工智能技术被应用于每个角色层，以加速 Co-OODA 子元素的运行，从而推动整个
+    Co-OODA 循环的运行。
+
+
+    无人系统的智能体现在利用人工智能技术（AI）在复杂环境中加速 OODA 循环速度，缩短对未知威胁的响应时间。在基于角色的 IUSs 中，代理根据 OODA
+    循环的子步骤承担不同的角色任务，因此在任务执行期间需要多个角色节点合作以完成 Co-OODA 循环。代理需要根据其角色和任务，从不同的时间抽象中学习其策略。多智能体深度强化学习（MADRL）是实现无人系统智能的基础技术之一，而信息共享是不同角色节点之间高效信息交换的基础。目前，MADRL
+    无法使代理在不同时间学习与角色相关的信息共享策略和行为决策策略。因此，研究创新的学习框架和信息共享机制以充分利用这一基于角色的系统非常重要。
+
+
+    为了充分利用基于角色的 Co-OODA 系统的特性，设计基于角色的 DRL 框架是基于角色的 Co-OODA 系统的学习和训练基础。角色节点需要各种 AI
+    来完成其任务。因此，需要将不同的 AI 方法添加到 DRL 框架中。在此框架上，每个个体学习其角色任务策略。目前，分层强化学习（HRL）方法可以将任务分解为不同抽象层级的若干子任务，以学习每个子任务的策略，并将多个子任务的策略组合起来形成有效的全局策略。学习过程可以基于不同的时间抽象来抽象和扩展动作集，代理通过在不同时间尺度级别上学习来实现分层控制。学习过程可以基于不同的时间抽象来抽象和扩展动作集，代理通过在不同层级上学习来实现分层控制。HRL
+    的任务分层思想可以应用于基于角色的 Co-OODA 系统的新 DRL 框架。不同节点根据其角色任务描述其动作集，并在不同时间尺度上执行策略学习。
+
+
+    如图 Fig. 4 所示，我们提出一个初步的基于角色的 DRL 框架。我们将完成基于角色的
+
+
+    ![](img/5dae57f4a1241884c6422f3e85bf87af_3_0.png)
+
+
+    Co-OODA 循环的策略视为 $\pi$。策略 $\pi$ 可以定义为角色节点子策略的集合：$\pi = \{ \pi_1, \pi_2, \dots,
+    \pi_i \}$，其中 $\pi_i$ 是每个角色层的策略。在学习过程中，不同的角色层需要不同的 AI 技术来学习其目标策略。观察层需要图像识别算法、自然语言处理及其他技术来处理感知到的环境信息。定向层需要利用大数据分析和知识图谱技术，对多维环境观察进行数据分析、知识提取、知识融合和知识处理，以获取聚合信息。决策层需要智能推理和规划算法，以完成聚合信息到动作的映射。动作层作用于环境以获取反馈到各层节点的奖励。因此，IUSs
+    需要一个新的 RL 框架，使用不同的 AI 来学习子策略并提供反馈以训练策略。在后续工作中，改进有效的基于角色的深度强化学习算法非常重要，该算法使每个角色节点能够使用各种
+    AI 方法分别学习其任务子策略，从而构建能够完成基于角色的 Co-OODA 系统的全局策略。
+
+
+    在基于角色的 Co-OODA 系统中，各角色层之间存在明显的信息依赖。在 Fig. 4 中，虚线表示节点之间的信息流。节点依赖高级数据链路来传输高保真、高质量的信息流，以保证持续的
+    OODA 循环。因此，节点之间高效的信息共享也是支持和加速 Co-OODA 循环的重要因素。基于角色的 Co-OODA 系统的信息共享机制也是亟待解决的问题之一。在信息共享层面，相同角色和不同角色的节点需要在不同方面制定信息通信协议。
+
+
+    我们提出一种初步的信息共享机制。对于相同角色层，节点需要使用分层通信拓扑，通过增强互补的本地信息来共享信息。节点被分为不同的组，每个组需要动态选举组长。同一组的节点需要学习发送什么消息以及何时向组长通信。例如，Fig.
+    4 显示观察层中有多个观察节点，这些节点形成不同的组。
+
+
+    子中心节点收集其他节点的信息，并整合需要在不同层之间传输的信息。子中心节点是不同角色层之间信息传输的桥梁。不同角色层的信息共享：观察节点在特定单位时间内感知环境状态后，需要学习识别和提炼重要信息，并确定是否需要发送到哪个定向节点。定向节点需要学习解释、排序、聚合和评估接收到的信息，将信息转换为聚合信息，以获取决策节点可使用的多维环境感知。决策节点基于定向节点获得的环境情况信息做出决策，并将信息指令传输给需要被激活以执行任务的动作节点。因此，在后续研究中，我们需要进一步优化有效的信息共享机制，以实现基于角色的
+    Co-OODA 系统的连续循环运行。
+
+
+    ## V. 结论
+
+
+    本文分析了智能无人系统的发展趋势，并描述了基于角色的 Co-OODA 系统。为了更好地利用智能算法解决 IUS 的合作问题，我们初步提出了基于角色的 DRL
+    框架和信息共享机制。它们保证了每个角色节点的学习和信息流，以确保 OODA 的连续循环执行。
+
+
+    ## 致谢
+
+
+    本工作部分得到中国国家重点研发计划（No. 2017YFB1001900）、中国国家自然科学基金（No. 61876151, 62032018）和中央高校基本科研业务费（No.
+    3102019DX1005）的支持。
+
+
+    ## 参考文献
+
+
+    - [1] Silver, D., Schrittwieser, J., Simonyan, K., Antonoglou, I., Huang, A.,
+    Guez, A., Hubert, T., Baker, L., Lai, M., Bolton, A. et al. (2017). Mastering
+    the game of Go without human knowledge. Nature, 550 354.
+
+    - [2] Kober, J., Bagnell, J. A. and Peters, J. (2013). Reinforcement learning
+    in robotics: A survey. International Journal of Robotics Research, 32 1238–1274.
+
+    - [3] Bhalla S. Subramanian S G, Crowley M. Deep multi agent reinforcement learning
+    for autonomous driving[C]//Canadian Conference on Artificial Intelligence. Springer,
+    Cham, 2020: 67-78.
+
+    - [4] Zhang K. Yang Z, Basar T. Multi-agent reinforcement learning: A selective
+    overview of theories and algorithms[J]. Arxiv preprint arXiv:1911.10635, 2019.
+
+    - [5] Xuan P. Lesser V, Zilberstein S. Communication decisions in multi-agent
+    cooperation: Model and experiments[C]//Proceedings of the fifth international
+    conference on Autonomous agents. 2001: 616-623.
+
+    - [6] S. Sukhbaatar, R. Fergus et al., "Learning multiagent communication with
+    backpropagation," in Advances in neural information processing systems, 2016,
+    pp. 2244–2252.
+
+    - [7] J. Jiang and Z. Lu, "Learning attentional communication for multiagent cooperation,"
+    in Advances in neural information processing systems, 2018, pp. 7254–7264.
+
+    - [8] Ioniţă C C. THE "MOSAIC" WARFARE: A NEW AMERICAN STRATEGY FOR THE FUTURE[J].
+    Strategic Impact, 2020, 75(2): 25-42.
+
+
+    '
+  merge: 0
