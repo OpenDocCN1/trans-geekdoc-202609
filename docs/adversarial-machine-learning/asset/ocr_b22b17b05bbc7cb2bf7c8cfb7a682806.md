@@ -1,0 +1,11 @@
+# Adversarial Machine Learning
+
+Written by leading researchers, this complete introduction brings together all the theory and tools needed for building robust machine learning in adversarial environments. Discover how machine learning systems can adapt when an adversary actively poisons data to manipulate statistical inference, learn the latest practical techniques for investigating system security and performing robust data analysis, and gain insight into new approaches for designing effective countermeasures against the latest wave of cyberattacks. Privacy-preserving mechanisms and near-optimal evasion of classifiers are discussed in detail, and in-depth case studies on email spam and network security highlight successful attacks on traditional machine learning algorithms. Providing a thorough overview of the current state of the art in the field and possible future directions, this groundbreaking work is essential reading for researchers, practitioners, and students in computer security and machine learning and for those wanting to learn about the next stage of the cybersecurity arms race.
+
+**Anthony D. Joseph** is a Chancellor's Professor in the Department of Electrical Engineering and Computer Sciences at the University of California, Berkeley. He was formerly the Director of Intel Labs Berkeley.
+
+**Blaine Nelson** is a Software Engineer in the Counter-Abuse Technology (CAT) team at Google. He previously worked at the University of Potsdam and the University of Tübingen.
+
+**Benjamin I. P. Rubinstein** is an Associate Professor in Computing and Information Systems at the University of Melbourne. He has previously worked at Microsoft Research, Google Research, Yahoo! Research, Intel Labs Berkeley, and IBM Research.
+
+**J. D. Tygar** is a Professor at the University of California, Berkeley, and he has worked widely in the field of computer security. At Berkeley, he holds appointments in both the Department of Electrical Engineering and Computer Sciences and the School of Information.

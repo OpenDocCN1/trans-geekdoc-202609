@@ -1,0 +1,3 @@
+QUESTION 6.2 Can subspace-based detection approaches be adapted to incorporate the alternative approaches? Can they find both temporal and spatial correlations and use both to detect anomalies? Can subspace-based approaches be adapted to incorporate domain-specific information such as the topology of the network?
+
+Developing the next generation of network anomaly detectors is a critical task that perhaps can incorporate several of the themes we promote in this dissertation to create secure learners.

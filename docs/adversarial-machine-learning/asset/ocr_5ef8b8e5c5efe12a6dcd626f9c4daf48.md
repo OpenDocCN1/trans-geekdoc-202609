@@ -1,0 +1,15 @@
+Further, we also extended the study of convex-inducing classifiers to the full family of ℓ_p costs. We showed that F^convex is only generally ε-IMAC searchable for both positive and negative convexity for any ϵ > 0 when p = 1. For 0 < p < 1, the MULTILINESEARCH algorithms of Section 8.2.1 achieve identical results when the positive set is convex, but the nonconvexity of these ℓ_p costs precludes the use of the randomized ellipsoid method when the negative class is convex. The ellipsoid method does provide an efficient solution for convex negative sets when p > 1 (since these costs are convex). However, for convex positive sets, we show that for p > 1 there is no algorithm that can efficiently find an ε-IMAC for all ϵ > 0. Moreover, for p = 2, we prove that there is no efficient algorithm for finding an ε-IMAC for any fixed value of ϵ.
+
+# ## 8.4.1 Open Problems in Near-Optimal Evasion
+
+By investigating near-optimal evasion for the convex-inducing classifiers and ℓ_1 costs, we have significantly expanded the extent of the framework established by Lowd & Meek , but there are still a number of interesting unanswered questions about the near-optimal evasion problem. We summarize the problems we believe are most important and suggest potential directions for pursuing them.
+
+As we showed in this chapter, the current upper bound on the query complexity to achieve near-optimal evasion for the convex positive class is O(L_ϵ + √L_ϵ D) queries, but the tightest known lower bound is O(L_ϵ + D). Similarly, for the case of convex negative class, the upper bound is given by the randomized ellipsoid method of Bertsimas & Vempala that finds a near-optimal instance with high probability using O*(D^5) queries (ignoring logarithmic terms). In both cases, there is a gap between the upper and lower bound.
+
+**QUESTION 8.1** Can we find matching upper and lower bounds for evasion algorithms? Is there a deterministic strategy with polynomial query complexity for all convex-inducing classifiers?
+
+The algorithms we present in this chapter built on the machinery of convex optimization over convex sets, which relies on family of classifiers inducing a convex set. However, many interesting classifiers are not convex-inducing classifiers. Currently, the only known result for non-convex-inducing classifiers is due to Lowd & Meek; they found that linear classifiers on Boolean feature space are 2-IMAC searchable for unweighted ℓ_1 costs. In this case, the classifiers are linear, but the integer-valued domains do not have a usual notion of convexity. This raises questions about the extent to which near-optimal evasion is efficient.
+
+**QUESTION 8.2** Are there families larger than the convex-inducing classifiers that are ε-IMAC searchable? Are there families outside of the convex-inducing classifiers for which near-optimal evasion is efficient?
+
+A particularly interesting family of classifiers to investigate is the family of support vector machines (SVMs) defined by a particular nonlinear kernel. This popular learning technique can induce nonconvex positive and negative sets (depending on its kernel),

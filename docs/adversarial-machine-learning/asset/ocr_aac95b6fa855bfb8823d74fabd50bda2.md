@@ -1,0 +1,11 @@
+![](bbox=[0.22, 0.125, 0.695, 0.415])
+
+**Figure 5.7** Effect of the pseudospam attack when trained as spam as a function of the number of attack emails. The dashed line shows the percentage of the normal spam messages classified as ham after the attack, and the solid line the percentage that are unsure after the attack. Surprisingly, training the attack emails as ham causes an increase in misclassification of normal spam messages. The initial inbox contains 10,000 emails (50% spam).
+
+performance on the corresponding quiz set and comparing it to the magnitude of change measured from the calibration set.
+
+We perform RONI evaluation for each message in D^(suscept) as just described to see the effect on non-attack emails. We find that the reject on negative impact defense (incorrectly) rejects an average of 2.8% of the ham and 3.1% of the spam from D^(suscept). To evaluate the performance of the post-RONI filter, we train a classifier on all messages in D^(suscept) and a second classifier on the messages in D^(suscept) not rejected by RONI. When trained on all 1,000 messages, the resulting filter correctly classifies 98% of ham and 80% of the spam. After removing the messages rejected by RONI and training from scratch, the resulting filter still correctly classifies 95% of ham and 87% of the spam. The overall effect of the reject on negative impact defense on classification accuracy is shown in Figure 5.8.
+
+Since the RONI technique removes non-attack emails in this test, and therefore removing potentially useful information from the training data, SpamBayes' classification accuracy suffers. It is interesting to see that test performance on spam actually improves after removing some emails from the training set. This result seems to indicate that some non-attack emails confuse the filter more than they help when used in training, perhaps because they happen to naturally fit some of the characteristics that attackers use in emails.
+
+Next we evaluate the performance of RONI where D^(suscept) instead consists of attack emails from the attacks described earlier in Sections 5.3. RONI rejects every single

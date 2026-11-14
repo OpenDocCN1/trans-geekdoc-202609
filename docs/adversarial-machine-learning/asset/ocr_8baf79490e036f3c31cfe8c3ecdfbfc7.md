@@ -1,0 +1,16 @@
+2006). The attacker, however, may select a new strategy at each iteration and can control the subsequent predictions made by each expert based on the defender’s choice for \(h^{(k)}\).
+
+Finally, at the end of the game, the defender is assessed in terms of its worst-case regret \(R^*\), which is defined in terms of the cumulative regret \(R^{(m)}\) with respect to the \(m^{\text{th}}\) expert as
+
+\(R^{(m)} \triangleq \sum_{k=1}^K r^{(k,m)}\)
+\(R^* \triangleq \max_m R^{(m)}.\) (3.1)
+
+If \(R^*\) is small (relative to \(K\)), then the defender’s aggregation algorithm has performed almost as well as the best expert without knowing which expert would be best. Further, as follows from the Equation (3.1) and the definition of instantaneous regret, the average regret is simply the difference of the risk of \(h^{(k)}\) and the risk of \(f^{(m)}\). If the average worst-case regret is small (i.e., approaches 0 as \(K\) goes to infinity) and the best expert has small risk, the predictor \(h^{(k)}\) also has a small risk. This motivates the study of regret minimization procedures. A substantial body of research has explored strategies for choosing \(h^{(k)}\) to minimize regret in several settings.
+
+Online expert-based prediction splits risk minimization into two subproblems: (i) minimizing the risk of each expert and (ii) minimizing the average regret; that is, as if we had known the best predictor \(f^{(*)}\) before the game started and had simply used its prediction at every step of the game. The defenses we have discussed approach the first problem. Regret minimization techniques address the second problem. For certain variants of the game, there exist composite predictors whose regret is \(o(K)\)—that is, the average regret approaches 0 as \(K\) increases. This effectively allows the defender to use several strategies simultaneously and forces the attacker to design attacks that do well against them all.
+
+# 3.6.1 Repeated Learning Games in Security
+
+Thus far the game-theoretic form of online learning outlined earlier has had relatively little application to security. While naturally aimed at managing a form of worst-case risk, these techniques have traditionally only been applied to mitigating risk in finance such as for universal portfolio management (Cover 1991; Helmbold, Singer, Schapire, & Warmuth 1998; Kalai & Vempala 2002).
+
+There has been slowly growing interest in online learning within the security community, however. Our work with collaborators at Berkeley and Stanford applies online learning to develop a reactive risk management strategy for an abstract Chief Information Security Officer (CISO) (Barth, Rubinstein, Sundararajan, Mitchell, Song, & Bartlett 2012). In this game, the CISO must defend against a powerful adversary who can penetrate the CISO’s organization passing from one state of intrusion to another (nodes in an attack graph) via various sets of actions (edges or hyperedges in general). The defender incurs certain costs when the attacker reaches certain nodes, but

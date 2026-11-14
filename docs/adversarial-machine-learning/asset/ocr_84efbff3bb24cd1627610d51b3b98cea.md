@@ -1,0 +1,15 @@
+attacks. As we discuss in Section 3.7 while the taxonomy provides a useful classification of possible privacy attacks on machine learning systems, past work (with a few exceptions) tends to fall in most bins simultaneously.
+
+# 3.3.2 The Adversarial Learning Game
+
+We model the task of constructing a secure learning system as a game between an attacker and a defender—the attacker manipulates data to mistrain or evade or violate privacy of a learning algorithm chosen by the defender to thwart the attacker's objective. The characteristics specified by the taxonomy's axes also designate some aspects of this game. The INFLUENCE axis determines the structure of the game and the legal moves that each player can make. The SPECIFICITY and SECURITY VIOLATION axes of the taxonomy determine the general shape of the cost function: an Integrity attack benefits the attacker on false negatives, and therefore focuses high cost (to the defender) on false negatives; an Availability attack focuses high cost on false positives; and a Privacy attack focuses high cost on leaking information about training instances. Similarly a Targeted attack focuses high cost only on a small number of specific instances, while an Indiscriminate attack spreads high cost over a broad range of instances.
+
+We formalize the game as a series of moves, or steps. Each move either is a strategic choice by one of the players or is a neutral move not controlled by either player. The choices and computations in a move depend on information produced by previous moves (when a game is repeated, this includes previous iterations) and on domain-dependent constraints that we highlight in discussing prior work. Generally, though, in an Exploratory attack, the attacker chooses a procedure A^(eval) that affects the evaluation data D^(eval), and in a Causative attack, the attacker also chooses a procedure A^(train) to manipulate the training data D^(train). In either setting, the defender chooses a learning algorithm H^(N). This formulation gives us a theoretical basis for analyzing the interactions between attacker and defender.
+
+# 3.3.3 Characteristics of Adversarial Capabilities
+
+In this section we introduce three essential properties for constructing a model of an attack against a learning algorithm that refine the game played between the learner and the adversary as described by the taxonomy. These properties define a set of common domain-specific adversarial limitations that allow a security analyst to formally describe the capabilities of the adversary.
+
+# 3.3.3.1 Corruption Models
+
+The most important aspect of the adversary is how it can alter data to mislead or evade the classifier, or reveal information about the training data. As previously stated, learning against an unlimited adversary is futile. Instead, the security analysis we propose focuses on a limited adversary, but to do so, one must model the restrictions on the adversary and justify these restrictions for a particular domain. We outline two common
