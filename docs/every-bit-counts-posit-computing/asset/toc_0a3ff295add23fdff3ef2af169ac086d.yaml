@@ -1,0 +1,155 @@
+level_changes:
+- line: 2
+  before: 2
+  after: 1
+- line: 271
+  before: 1
+  after: 2
+- line: 1226
+  before: 1
+  after: 3
+- line: 1447
+  before: 1
+  after: 3
+- line: 1481
+  before: 2
+  after: 3
+- line: 1512
+  before: 2
+  after: 3
+- line: 1522
+  before: 1
+  after: 3
+- line: 1550
+  before: 2
+  after: 3
+- line: 1584
+  before: 1
+  after: 3
+- line: 1633
+  before: 2
+  after: 3
+- line: 1835
+  before: 2
+  after: 3
+- line: 1839
+  before: 2
+  after: 3
+- line: 1996
+  before: 2
+  after: 3
+- line: 2051
+  before: 1
+  after: 3
+text_changes:
+- line: 413
+  before: 2.4 舍入与精度
+  after: 2.5 舍入与精度
+- line: 455
+  before: 2.5 中心区
+  after: 2.6 中心区
+- line: 467
+  before: 2.6 定点精度
+  after: 2.7 定点精度
+- line: 495
+  before: 2.7 ULP 与相对精度“摆动”
+  after: 2.8 ULP 与相对精度“摆动”
+- line: 503
+  before: 2.7 定点数与科学计数法中的相对精度
+  after: 2.9 定点数与科学计数法中的相对精度
+- line: 539
+  before: 2.8 转换中的损失
+  after: 2.10 转换中的损失
+- line: 584
+  before: 2.9 定义 `Overflow`（上溢）和 `Underflow`（下溢）
+  after: 2.11 定义 `Overflow`（上溢）和 `Underflow`（下溢）
+- line: 586
+  before: 2.9.1 上溢谬误
+  after: 2.11.1 上溢谬误
+- line: 606
+  before: 2.9.2 无限相对误差还是饱和？
+  after: 2.11.2 无限相对误差还是饱和？
+- line: 616
+  before: 2.10 运算的不准确性
+  after: 2.12 运算的不准确性
+- line: 622
+  before: 2.10.1 一个简单的例子：平方根函数
+  after: 2.12.1 一个简单的例子：平方根函数
+- line: 634
+  before: 2.10.2 双输入示例：乘法
+  after: 2.12.2 双输入示例：乘法
+- line: 734
+  before: 3.1 Posit 值公式
+  after: 3.2 Posit 值公式
+- line: 752
+  before: 3.2 *幽灵位* 与 *暮光区*
+  after: 3.3 *幽灵位* 与 *暮光区*
+- line: 784
+  before: 3.3 运算段中的相反位是否 “被浪费” 了？
+  after: 3.4 运算段中的相反位是否 “被浪费” 了？
+- line: 794
+  before: 3.4 将实数转换为 Posits
+  after: 3.5 将实数转换为 Posits
+- line: 804
+  before: 3.4.1 检查非实数输入
+  after: 3.5.1 检查非实数输入
+- line: 808
+  before: 3.4.2 取绝对值并检查特殊情况
+  after: 3.5.2 取绝对值并检查特殊情况
+- line: 827
+  before: 3.4.3 编码阶码位
+  after: 3.5.3 编码阶码位
+- line: 850
+  before: 3.4.4 编码指数位
+  after: 3.5.4 编码指数位
+- line: 870
+  before: 3.4.5 编码尾数位
+  after: 3.5.5 编码尾数位
+- line: 888
+  before: 3.4.6 舍入并应用 `x` 的符号
+  after: 3.5.6 舍入并应用 `x` 的符号
+- line: 926
+  before: 3.4.7 示例
+  after: 3.5.7 示例
+- line: 996
+  before: 3.4.8 给构建 Posit 环境者的建议
+  after: 3.5.8 给构建 Posit 环境者的建议
+- line: 1014
+  before: 3.5 一种用于舍入算术的简单符号
+  after: 3.6 一种用于舍入算术的简单符号
+- line: 1046
+  before: 3.6 尽可能简单，但不能过度简化
+  after: 3.7 尽可能简单，但不能过度简化
+- line: 1056
+  before: 3.7 非事物的当前状态
+  after: 3.8 非事物的当前状态
+- line: 1717
+  before: 5.1 从 Unums 到 Posits
+  after: 5.2 从 Unums 到 Posits
+- line: 1739
+  before: 5.2 Posit 标准概述部分
+  after: 5.3 Posit 标准概述部分
+- line: 1796
+  before: 5.3 Posit 标准的定义部分
+  after: 5.4 Posit 标准的定义部分
+- line: 1835
+  before: 2. 数学运算的输入检查
+  after: 5.4.1 数学运算的输入检查
+- line: 1839
+  before: 3. 最后一道防线
+  after: 5.4.2 最后一道防线
+- line: 1906
+  before: 5.4 Posit 和 Quire 格式章节
+  after: 5.5 Posit 和 Quire 格式章节
+- line: 1992
+  before: 5.5 Posit 标准的舍入部分
+  after: 5.6 Posit 标准的舍入部分
+- line: 1996
+  before: Posit 舍入算法
+  after: 5.6.1 Posit 舍入算法
+- line: 2028
+  before: 5.6 Posit 标准函数
+  after: 5.7 Posit 标准函数
+- line: 2051
+  before: 为不连续而设计的函数，邻域规则不适用于这些函数
+  after: 5.7.1 为不连续而设计的函数，邻域规则不适用于这些函数
