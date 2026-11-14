@@ -1,0 +1,23 @@
+level_changes:
+- line: 676
+  before: 1
+  after: 2
+- line: 4401
+  before: 2
+  after: 1
+text_changes:
+- line: 676
+  before: 第 4 章：羁扎根
+  after: 羁绊扎根
+- line: 1238
+  before: 第七章：背叛之网
+  after: 第 7 章：背叛之网
+- line: 1508
+  before: '第八章: 破碎的忠诚'
+  after: 第 8 章：破碎的忠诚
+- line: 1708
+  before: 第九章：AXION 的启示
+  after: 第 9 章：AXION 的启示
+- line: 1988
+  before: 第十章：猎杀觉醒
+  after: 第 10 章：猎杀觉醒
