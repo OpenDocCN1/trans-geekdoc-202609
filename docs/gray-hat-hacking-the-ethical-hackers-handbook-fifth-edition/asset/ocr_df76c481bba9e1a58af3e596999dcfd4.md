@@ -1,0 +1,15 @@
+section provides an overview of notable cyberlaws.
+
+# 18 USC Section 1029: The Access Device Statute
+
+The purpose of the Access Device Statute is to curb unauthorized access to accounts; theft of money, products, and services; and similar crimes. It does so by criminalizing the possession, use, or trafficking of counterfeit or unauthorized access devices or device-making equipment, and other similar activities (described shortly) to prepare for, facilitate, or engage in unauthorized access to money, goods, and services. It defines and establishes penalties for fraud and illegal activity that can take place through the use of such counterfeit access devices. Section 1029 addresses offenses that involve generating or illegally obtaining access credentials, which can involve just obtaining the credentials or obtaining and using them. These activities are considered criminal whether or not a computer is involved—unlike the statute discussed next, which pertains to crimes dealing specifically with computers.
+
+# 18 USC Section 1030 of the Computer Fraud and Abuse Act
+
+The Computer Fraud and Abuse Act (CFAA), as amended by the USA PATRIOT Act, is an important federal law that addresses acts that compromise computer network security. It prohibits unauthorized access to computers and network systems, extortion through threats of such attacks, the transmission of code or programs that cause damage to computers, and other related actions. It addresses unauthorized access to government, financial institutions, and other computer and network systems, and provides for civil and criminal penalties for violators. The Act outlines the jurisdiction of the FBI and Secret Service.
+
+# 18 USC Sections 2510, et seq, and 2701, et seq, of the Electronic Communication Privacy Act
+
+These sections are part of the Electronic Communication Privacy Act (ECPA), which is intended to protect communications from unauthorized access. The ECPA, therefore, has a different focus than the CFAA, which is directed at protecting computers and network systems. Most people do not realize that the ECPA is made up of two main parts: one that amended the Wiretap Act and the other that amended the Stored Communications Act, each of which has its own definitions, provisions, and cases interpreting the law. The Wiretap Act protects communications, including wire, oral, and data, during transmission from unauthorized access and disclosure (subject to exceptions). The Stored Communications Act protects some of the same types of communications before and/or after the communications are transmitted and stored electronically somewhere. Again, this sounds simple and sensible, but the split reflects a recognition that different risks and remedies are associated with active versus stored communications.
+
+While the ECPA seeks to limit unauthorized access to communications, it recognizes that some types of unauthorized access are necessary. For example, if the government wants to listen in on phone calls, Internet communication, e-mail, or network traffic, it can do so if it complies with safeguards established under the ECPA that are intended to protect the

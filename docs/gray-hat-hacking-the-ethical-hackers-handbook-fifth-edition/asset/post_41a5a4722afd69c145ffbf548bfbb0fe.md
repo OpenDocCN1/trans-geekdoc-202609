@@ -1,0 +1,293 @@
+
+- reading from, 229–232
+- writing to, 232–234
+- architecture
+  - ARM, 512, 558–559
+  - evaluation of, 135
+  - master/slave, 518–519
+  - MIPS, 513, 558–559
+  - processor, 28–29
+  - RISC, 558
+  - WOSA, 446
+  - XFS, 446–447
+- ArithLog Rating parameter, 72
+- Arizona Cyber Warfare Range, 117
+- ARM architecture, 512, 558–559
+- ARMEL and ARMHF, 559, 561
+- calling convention, 565–566
+- cheat sheet reference, 567
+- profiles and applications, 513
+- resources about, 526
+- syscall renaming, 573
+- Art of War, The (Sun Tzu), 143, 465
+- Ashton, Kevin, 497
+- ASLR (address space layout randomization), 202
+  - bypassing, 292–293
+  - defeating through memory leaks, 299–316
+  - disabling on Kali Linux, 231
+  - explanation of, 290–291
+  - high-entropy, 291
+  - Linux use of, 242, 251
+  - Windows use of, 289, 290–291
+- assembly language, 30–34
+  - addressing modes, 33
+  - assembling, 34
+  - file structure, 33–34
+  - machine language vs., 30
+  - NASM vs. AT&T syntax, 30–33
+
+- assessments
+  - external, 137
+  - internal, 138–139
+  - penetration test, 19
+  - physical security, 137–138
+  - red teaming, 129–130, 136–139
+  - vulnerability, 129, 533–536
+- asymmetric-key algorithms, 436
+- asynchronous call, 447
+- AT&T assembly syntax, 30–33
+- ATM machines
+  - component overview, 443–445
+  - functional steps in using, 445–446
+  - physical and virtual attacks on, 453
+  - skimmers installed on, 452
+  - XFS standard for, 446–451
+- ATM malware, 443, 451–463
+  - banks affected by, 453
+  - countermeasures for, 462
+  - customers affected by, 452–453
+  - dissection techniques, 455–462
+  - installation techniques, 453–455
+  - interaction methods, 453–454, 458–462
+  - resources about, 462
+- attack frameworks, 135
+- attack vector
+  - Linux exploit, 219–220
+  - Windows exploit, 267–269
+- AttackIQ FireDrill, 155
+- attacks
+  - disrupting, 151–153
+  - emulating, 6–9
+  - recognizing, 5
+- automated dynamic analysis, 83–84
+- automated teller machines. See ATM machines
+- automation, security, 154–155
+
+- AVD (Android Virtual Device) Manager, 400–401
+- AV-TEST Institute, 83
+
+## B
+
+- backdoor, persistent, 333–336
+- bad characters, 271
+- baksmali disassembler, 398–399
+- Bandit war game, 116
+- bandwidth, 90
+- Banking Solutions Vendor Council (BSVC), 446
+- banks
+  - ATM malware affecting, 453
+  - XFS standard used by, 446–451
+- Barnett, Bruce, 359
+- bash shell, 232
+- basic blocks, 80–81
+- Basic Blocks Size parameter, 72
+- BeagleBone development platform, 558, 564
+- behavioral analysis, 84
+- binary diffing, 363–371
+  - application diffing as, 363–364
+  - describing the process of, 363
+  - exploitation based on, 378–384
+  - lab exercises on, 369–371, 375–378, 379–384
+  - Microsoft patches, 375–378, 379–384
+  - patch diffing as, 364–365, 378–384
+  - resources about, 384–385
+  - tools used for, 365–371
+- binary .plist files, 410
+- BinCrowd plug-in, 77
+- BinDiff tool, 365, 366–367
+- BinNavi tool, 78, 80–82, 366
+- bitcoin, 418
+- bits, 24
+- Black Hat conferences, 114
+- black-box emulator environments
+  - APK monitoring with Droidbox in, 406–407
+  - monitoring malware samples in, 405
+- bladeRF device, 90
+- blue team operations, 9, 127, 145–150
+  - common challenges of, 149–150
+  - incident response program, 147–150
+  - knowing your enemy for, 145–146
+  - security frameworks, 146–147
+  - tracking response activities of, 134
+  - understanding your environment for, 146
+  - *See also* purple teaming operations; red teaming operations
+- Bluetooth protocols, 499
+- boot process security, 408
+- bootloaders, 523–524
+- bootstrapping, PowerShell, 326–328
+- bottom-up approach, 437
+- Boyd, John, 150
+- Bradshaw, Stephen, 54
+- breakpoints
+  - hardware, 425–426
+  - memory leak bug, 306–313
+  - removing, 423–424, 428
+  - strcpy function, 259–260
+- Browser Exploitation Framework (BeEF), 341
+- .bss section in memory, 26
+- BSTR allocations, 306
+- buffer
+  - explained, 27, 201
+  - exploiting a small, 214–216
+  - overrun detection, 284–286
+- buffer overflows, 201–216
+  - explanation of, 201–202
+  - local exploits, 207–216
+  - meet.c program lab, 202–205
+  - ramifications of, 206
+  - small buffer exploits, 214–216
+  - stack overflow exploits, 209–214
+- bug bounty programs, 161–175
+  - BugCrowd platform, 164–171
+  - controversy surrounding, 163
+  - earning a living through, 171–172
+  - history and concept of, 161
+  - incentives offered through, 163
+  - incident response and, 173–174
+  - popular facilitators of, 163
+  - resources about, 175
+  - types of, 161–163
+- BugCrowd platform, 164–171
+  - API setup and example, 168–170
+  - overview of how it works, 164
+  - program owner web interface, 164–170
+  - researcher web interface, 170–171
+- bugs
+  - DLL side-loading, 378–379
+  - memory leak, 299–316
+  - type confusion, 299
+  - use-after-free, 286, 299–303
+- BuildUserAgentStringMobileHelper() function, 380
+- Bus Pirate tool, 517, 519
+- business structure, 119
+- Busybox program, 525, 530
+- bypassing memory protections
+  - ASLR protections, 292–293, 299–316
+  - DEP protections, 293–299
+  - /GS protections, 285–286
+  - SafeSEH protections, 275–277
+  - SEHOP protections, 277–284
+  - stack protections, 238–240
+- bypassuac command, 338
+- bytes, 24
+
+## C
+
+- C programming language, 15–24
+  - basic constructs, 15–22
+  - comments, 22
+  - compiling with gcc, 23–24
+  - for and while loops, 20–21
+  - functions, 16–17
+  - if/else construct, 22
+  - main() function, 16
+  - printf command, 18–19
+  - sample program, 22–23
+  - scanf command, 19
+  - strcpy/strncpy commands, 20
+  - variables, 17–18
+- C++ code, 74–77
+  - HexRaysCodeXplorer, 76–77
+  - quirks of compiled, 74–75
+  - runtime type information, 76
+  - virtual tables, 75
+- call command, 32, 200
+- calling conventions
+  - ARM code, 565–566
+  - MIPS code, 566
+- Capability Maturity Model (CMM), 147
+- Capture phase for SDR, 92–94
+- Capture the Flag (CTF) events, 111, 116
+- Carbon Black Response, 149
+- cat phishing, 138
+- category element, 392
+- Cauquil, Damien, 277
+- CButton creation, 316
+- cellular networks, 498
+- CERT Coordination Center, 160
+- CERT.RSA file, 391
+- CERT.SF file, 391
+- Certified Ethical Hacking (CEH) certification, 114
+- Certified Penetration Tester (GPEN) exam, 114
+- CFAA (Computer Fraud and Abuse Act), 10–11
+- CFG (Control Flow Guard), 253, 289, 363
+- challenge hashes, 183
+- char variable, 17
+- checkXSS function, 351–352
+- Chen, Dominic, 546
+- Cheswick, Bill, 465
+- chief information security officer (CISO), 13
+- chips, embedded device, 511
+- Chrome browser. See Google Chrome
+- Cipher Block Chaining (CBC), 358
+- CISA (Cybersecurity Information Sharing Act), 12–13
+- Cisco device decoy emulation, 486
+- Cisco Discovery Protocol (CDP) packets, 486
+- classes.dex file, 391
+- Cobalt Strike software, 136, 139
+- code annotation, 67–77
+  - C++ code analysis, 74–77
+  - IDB with IDAscope, 67–73
+- Cohen, Danny, 25
+- Cohen, Fred, 465
+- Coldwind, Gynvael, 61
+- collaboration tools, 123
+- collaborative analysis, 77–82
+  - BinNavi tool for, 80–82
+  - FIRST plug-in for, 78–80
+  - IDA plug-ins developed for, 77–78
+- CollabREate plug-in, 77
+- command and control (C2) phase, 152–153, 336
+- command line
+  - exploiting stack overflows from, 209–212
+  - interacting with decoy system, 486, 487
+  - Shodan search engine, 503–504
+- commands
+  - C language, 18–20
+  - gdb debugger, 35
+  - Immunity Debugger, 257–258
+  - Perl, 202–203, 209
+  - PowerShell, 325–326
+  - WinRM for executing, 194–195
+  - WMI for executing, 191–194
+  - *See also* specific commands
+- comments
+  - BinNavi collaboration, 82
+  - C programming language, 22
+- commercial honeypots, 480
+- *Common Ground* blog, 131
+- Common Vulnerability Scoring System (CVSS), 173
+- Common Weakness Scoring System (CWSS), 173
+- communication protocols, 499
+- communications
+  - bug bounty program, 173
+  - purple teaming, 154
+  - red teaming, 132–134
+- compiler controls exploit mitigation, 290
+- compilers
+  - gcc, 23–24
+  - Windows, 254–256
+- compiling process, 23
+- complex instruction set computing (CISC), 558
+- Computer Emergency Response Team (CERT), 160
+- Computer Fraud and Abuse Act (CFAA), 10–11
+- computer memory. *See* memory
+- ConPot honeypot, 472–473
+- containment, 128
+- ContentType header, 356
+- Control Flow Guard (CFG), 253, 289, 363
+- cookies
+  - guessing the value of, 285
+  - heap metadata, 286
+  - padding oracle attacks on, 359–361
+  - replacing with your own, 286

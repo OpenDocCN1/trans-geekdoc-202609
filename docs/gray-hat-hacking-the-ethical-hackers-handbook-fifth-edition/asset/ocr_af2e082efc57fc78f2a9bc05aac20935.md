@@ -1,0 +1,11 @@
+completed the lab. Moving forward, we will look at real-world diffs.
+
+# Patch Management Process
+
+Each vendor has its own process for distributing patches, including Oracle, Microsoft, and Apple. Some vendors have a set schedule as to when patches are released, whereas others have no set schedule. Having an ongoing patch release cycle, such as that used by Microsoft, allows for those responsible for managing a large number of systems to plan accordingly. Out-of-band patches can be problematic for organizations because there may not be resources readily available to roll out the updates. We will focus primarily on the Microsoft patch management process because it is a mature process that is often targeted for the purpose of diffing to discover vulnerabilities for profit.
+
+# Microsoft Patch Tuesday
+
+The second Tuesday of each month is Microsoft’s monthly patch cycle, with the occasional out-of-band patch due to a critical update. The process has been changing ever since the introduction of Windows 10 cumulative updates, taking effect on Windows 7 and 8 as of October 2016, as well as a change in the way patches are downloaded. Up until April 2017, a summary and security patches for each update could be found at https://technet.microsoft.com/en-us/security/bulletin. Starting in April 2017, patches are acquired from the Microsoft Security TechCenter site at https://portal.msrc.microsoft.com/en-us/security-guidance, with summary information at https://portal.msrc.microsoft.com/en-us/security-guidance/summary. Patches are commonly obtained by using the Windows Update tool from the Windows Control Panel or managed centrally by a product such as Windows Server Update Services (WSUS) or Windows Update for Business (WUB). When patches are desired for diffing, they can be obtained from the aforementioned TechNet link.
+
+Each patch bulletin is linked to more information about the update. Some updates are the result of a publicly discovered vulnerability, whereas the majority are through some form of coordinated private disclosure. The following image shows an example of one such privately disclosed vulnerability.

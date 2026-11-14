@@ -1,0 +1,52 @@
+| Function | DLL |
+| :--- | :--- |
+| GetStackObject | GDI32.dll |
+| WFSClose | MSXFS.dll |
+| WFSAyncExecute | MSXFS.dll |
+| WFSFreeResult | MSXFS.dll |
+| WFSGetInfo | MSXFS.dll |
+| WFSExecute | MSXFS.dll |
+| WFSRegister | MSXFS.dll |
+| WFSOpen | MSXFS.dll |
+| WFSCancelAsyncRequest | MSXFS.dll |
+| WFSStartUp | MSXFS.dll |
+| WFSCleanUp | MSXFS.dll |
+| CoTaskMemFree | ole32.dll |
+| CoInitialize | ole32.dll |
+| CoUninitialize | ole32.dll |
+| CoCreateInstance | ole32.dll |
+| ShellExecuteW | SHELL32.dll |
+| ShellExecuteA | SHELL32.dll |
+| SetWindowTextA | USER32.dll |
+| UpdateWindow | USER32.dll |
+| EnableWindow | USER32.dll |
+| DefWindowProcW | USER32.dll |
+| DispatchMessageW | USER32.dll |
+| TranslateMessage | USER32.dll |
+| ShowWindow | USER32.dll |
+| GetDesktopWindow | USER32.dll |
+| BroadcastSystemMessageW | USER32.dll |
+| CreateWindowExA | USER32.dll |
+| GetWindowLongW | USER32.dll |
+| RegisterClassExW | USER32.dll |
+| LoadCursorW | USER32.dll |
+| CreateWindowExW | USER32.dll |
+| ExitWindowsEx | USER32.dll |
+| SetTimer | USER32.dll |
+| GetWindowRect | USER32.dll |
+| GetMessageW | USER32.dll |
+| PostQuitMessage | USER32.dll |
+| RegisterWindowMessageW | USER32.dll |
+| KillTimer | USER32.dll |
+| LoadIconW | USER32.dll |
+| DestroyEnvironmentBlock | USERENV.dll |
+| CreateEnvironmentBlock | USERENV.dll |
+| WTSQueryUserToken | WTSAPI32.dll |
+| WFMQueryValue | XPS_CONF.dll |
+| WFMOOpenKey | XPS_CONF.dll |
+| WFMEnumKey | XPS_CONF.dll |
+| WFMCloseKey | XPS_CONF.dll |
+
+Figure 20-7 Ripper ATM malware importing MSXFS.dll
+
+Malware such as Ploutus does not follow the same strategy, so you won’t find the same indicator. Instead, you should look for references to the XFS middleware. Ploutus is able to control the APTRA middleware from NCR or the middleware from Kalignite, which is a multivendor solution. For these cases, you should look for the presence of libraries such as NCR.APTRA.AXFS and K3A.Platform.dll and verify them accordingly.

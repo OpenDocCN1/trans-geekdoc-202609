@@ -1,0 +1,7 @@
+![](bbox=[0.125, 0.085, 0.88, 0.545])
+
+4. You can manage the uploaded function metadata from the FIRST plug-in menu in the Management section, where it’s possible to view the history of every uploaded function and, if necessary, delete it.
+
+# Collaboration with BinNavi
+
+Disassembly listings for complex programs can become difficult to follow because program listings are inherently linear, whereas programs are very nonlinear as a result of all the branching operations they perform. BinNavi (short for Binary Navigator) from Zynamics (now Google) is an open source tool that provides graph-based analysis and debugging of binaries. BinNavi operates on top of a disassembler back end such as IDA Pro–generated databases and fREdom (a Capstone Engine–powered disassembler back end). BinNavi offers sophisticated graph-based views of the binary by utilizing the concept of *proximity browsing* to prevent the display from becoming too cluttered. BinNavi graphs rely heavily on the concept of the *basic block*, which is a sequence of instructions that, once entered, is guaranteed to execute in its entirety. The first instruction in any basic block is generally the target of a jump or call instruction, whereas the last instruction in a basic block is typically either a jump or return. Basic blocks provide a convenient means for grouping instructions

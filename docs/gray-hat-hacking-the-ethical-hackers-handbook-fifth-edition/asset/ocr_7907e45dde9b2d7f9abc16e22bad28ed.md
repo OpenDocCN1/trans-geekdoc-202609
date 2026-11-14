@@ -1,0 +1,11 @@
+Figure 5-5 Time and frequency plots
+
+In many cases, the ability to successfully replay is “game over.” For example, if a door access control device does not have replay mitigations, an attacker could acquire a sample and gain unauthorized access. Now that we have successfully replayed the captured signal, we can move to the Analyze phase.
+
+# Analyze
+
+Up until now, we have proven that we can capture and replay the signal, but we really don’t know what is being transmitted. During this phase, we will attempt to learn how the device differentiates between different button pushes and whether it is intelligent enough to exclude other remotes. To accomplish both of those tasks, we must learn how the data is encoded. Although we could use the gnuradio_companion to do the analysis, we are going to use another tool that makes the task a bit easier: inspectrum.
+
+Inspectrum (https://github.com/miek/inspectrum) is an offline radio signal analyzer that works on captured radio signals. At the time of this writing, the version of inspectrum installed by apt in Ubuntu lags the latest version and does not include some extremely useful features. I recommend building it from Github. In order to build inspectrum from source, you will also need to install liquid-dsp. On a base install of Ubuntu, inspectrum can be installed with the commands located in the Analyze directory’s README.txt file from the book’s download site.
+
+To transmit data between stations, a carrier signal is modulated with the data to be transmitted. The carrier signal, or frequency, is known by both parties and “carries” the data. On-off keying is a simple amplitude modulation method that results in presence or absence of the carrier frequency to convey information (see Figure 5-6). A simple form of on-off keying may only have pulses of one duration, where the presence of the pulse is a 1 and the absence of a pulse for that duration is a 0. A slightly more complicated form could use a long pulse as a 1 and a short pulse for a 0. The smallest amount of time for a transition from some amplitude to no amplitude is called the symbol period.
