@@ -1,0 +1,141 @@
+
+## HR Questions
+
+- 1: What has been your biggest success?
+- 2: What motivates you?
+- 3: What do you do when you lose motivation?
+- 4: What do you like to do in your free time?
+- 5: What sets you apart from other workers?
+- 6: Why are you the best candidate for that position?
+- 7: What does it take to be successful?
+- 8: What would be the biggest challenge in this position for you?
+- 9: Would you describe yourself as an introvert or an extrovert?
+- 10: What are some positive character traits that you don't possess?
+- 11: What is the greatest lesson you've ever learned?
+- 12: Have you ever been in a situation where one of your strengths became a weakness in an alternate setting?
+- 13: Who has been the most influential person in your life?
+- 14: Do you consider yourself to be a “detailed” or “big picture” type of person?
+- 15: What is your greatest fear?
+- 16: What sort of challenges do you enjoy?
+- 17: What is your greatest weakness?
+- 18: What are the three best adjectives to describe you in a work setting?
+- 19: What are the three best adjectives to describe you in your personal life?
+- 20: What type of worker are you?
+- 21: Tell me about your happiest day at work.
+- 22: Tell me about your worst day at work.
+- 23: What are you passionate about?
+- 24: What is the piece of criticism you receive most often?
+- 25: What type of work environment do you succeed the most in?
+- 26: Are you an emotional person?
+- 27: How do you make decisions?
+- 28: What are the most difficult decisions for you to make?
+- 29: When making a tough decision, how do you gather information?
+- 30: Tell me about a decision you made that did not turn out well.
+- 31: Are you able to make decisions quickly?
+- 32: What is customer service?
+- 33: Tell me about a time when you went out of your way for a customer.
+- 34: How do you gain confidence from customers?
+- 35: Tell me about a time when a customer was upset or agitated – how did you handle the situation?
+- 37: When can you make an exception for a customer?
+- 38: What would you do in a situation where you were needed by both a customer and your boss?
+- 39: What is the most important aspect of customer service?
+- 40: Is it best to create low or high expectations for a customer?
+- 41: Why would your skills be a good match with X objective of our company?
+- 42: What do you think this job entails?
+- 43: Is there anything else about the job or company you'd like to know?
+- 44: Are you the best candidate for this position?
+- 45: How did you prepare for this interview?
+- 46: If you were hired here, what would you do on your first day?
+- 47: Have you viewed our company's website?
+- 48: How does X experience on your resume relate to this position?
+- 49: Why do you want this position?
+- 50: How is your background relevant to this position?
+- 51: How do you feel about X mission of our company?
+
+## Some of the following titles might also be handy:
+
+- 1. .NET Interview Questions You'll Most Likely Be Asked
+- 2. 200 Interview Questions You'll Most Likely Be Asked
+- 3. Access VBA Programming Interview Questions You'll Most Likely Be Asked
+- 4. Adobe ColdFusion Interview Questions You'll Most Likely Be Asked
+- 5. Advanced Excel Interview Questions You'll Most Likely Be Asked
+- 6. Advanced Java Interview Questions You'll Most Likely Be Asked
+- 7. Advanced SAS Interview Questions You'll Most Likely Be Asked
+- 8. AJAX Interview Questions You'll Most Likely Be Asked
+- 9. Algorithms Interview Questions You'll Most Likely Be Asked
+- 10. Android Development Interview Questions You'll Most Likely Be Asked
+- 11. Ant & Maven Interview Questions You'll Most Likely Be Asked
+- 12. Apache Web Server Interview Questions You'll Most Likely Be Asked
+- 13. Artificial Intelligence Interview Questions You'll Most Likely Be Asked
+- 14. ASP.NET Interview Questions You'll Most Likely Be Asked
+- 15. Automated Software Testing Interview Questions You'll Most Likely Be Asked
+- 16. Base SAS Interview Questions You'll Most Likely Be Asked
+- 17. BEA WebLogic Server Interview Questions You'll Most Likely Be Asked
+- 18. C & C++ Interview Questions You'll Most Likely Be Asked
+- 19. C# Interview Questions You'll Most Likely Be Asked
+- 20. C++ Internals Interview Questions You'll Most Likely Be Asked
+- 21. CCNA Interview Questions You'll Most Likely Be Asked
+- 22. Cloud Computing Interview Questions You'll Most Likely Be Asked
+- 23. Computer Architecture Interview Questions You'll Most Likely Be Asked
+- 24. Computer Networks Interview Questions You'll Most Likely Be Asked
+- 25. Core JAVA Interview Questions You'll Most Likely Be Asked
+- 26. Data Structures & Algorithms Interview Questions You'll Most Likely Be Asked
+- 27. Data WareHousing Interview Questions You'll Most Likely Be Asked
+- 28. EIB 3.0 Interview Questions You'll Most Likely Be Asked
+- 29. Entity Framework Interview Questions You'll Most Likely Be Asked
+- 30. Fedora & RHEL Interview Questions You'll Most Likely Be Asked
+- 31. GNU Development Interview Questions You'll Most Likely Be Asked
+- 32. Hibernate, Spring & Struts Interview Questions You'll Most Likely Be Asked
+- 33. HTML, XHTML and CSS Interview Questions You'll Most Likely Be Asked
+- 34. HTML5 Interview Questions You'll Most Likely Be Asked
+- 35. IBM WebSphere Application Server Interview Questions You'll Most Likely Be Asked
+- 36. IOS SDK Interview Questions You'll Most Likely Be Asked
+- 37. Java / J2EE Design Patterns Interview Questions You'll Most Likely Be Asked
+- 38. Java / J2EE Interview Questions You'll Most Likely Be Asked
+- 39. Java Messaging Service Interview Questions You'll Most Likely Be Asked
+- 40. JavaScript Interview Questions You'll Most Likely Be Asked
+- 41. JavaServer Faces Interview Questions You'll Most Likely Be Asked
+- 42. JDBC Interview Questions You'll Most Likely Be Asked
+- 43. jQuery Interview Questions You'll Most Likely Be Asked
+- 44. JP-Servlet Interview Questions You'll Most Likely Be Asked
+- 45. JUnit Interview Questions You'll Most Likely Be Asked
+- 46. Linux Commands Interview Questions You'll Most Likely Be Asked
+- 47. Linux Interview Questions You'll Most Likely Be Asked
+- 48. Linux System Administrator Interview Questions You'll Most Likely Be Asked
+- 49. Mac OS X Lion Interview Questions You'll Most Likely Be Asked
+- 50. Mac OS X Snow Leopard Interview Questions You'll Most Likely Be Asked
+- 51. Microsoft Access Interview Questions You'll Most Likely Be Asked
+- 52. Microsoft Excel Interview Questions You'll Most Likely Be Asked
+- 53. Microsoft Powerpoint Interview Questions You'll Most Likely Be Asked
+- 54. Microsoft Word Interview Questions You'll Most Likely Be Asked
+- 55. MySQL Interview Questions You'll Most Likely Be Asked
+- 56. NetSuite Interview Questions You'll Most Likely Be Asked
+- 57. Networking Interview Questions You'll Most Likely Be Asked
+- 58. OOPS Interview Questions You'll Most Likely Be Asked
+- 59. Operating Systems Interview Questions You'll Most Likely Be Asked
+- 60. Oracle DBA Interview Questions You'll Most Likely Be Asked
+- 61. Oracle E-Business Suite Interview Questions You'll Most Likely Be Asked
+- 62. ORACLE PL/SQL Interview Questions You'll Most Likely Be Asked
+- 63. Perl Programming Interview Questions You'll Most Likely Be Asked
+- 64. PHP Interview Questions You'll Most Likely Be Asked
+- 65. PMP Interview Questions You'll Most Likely Be Asked
+- 66. Python Interview Questions You'll Most Likely Be Asked
+- 67. RESTful JAVA Web Services Interview Questions You'll Most Likely Be Asked
+- 68. Ruby Interview Questions You'll Most Likely Be Asked
+- 69. Ruby on Rails Interview Questions You'll Most Likely Be Asked
+- 70. SAP ABAP Interview Questions You'll Most Likely Be Asked
+- 71. SAP HANA Interview Questions You'll Most Likely Be Asked
+- 72. SAS Programming Guidelines Interview Questions You'll Most Likely Be Asked
+- 73. Selenium Testing Tools Interview Questions You'll Most Likely Be Asked
+- 74. Silverlight Interview Questions You'll Most Likely Be Asked
+- 75. Software Repositories Interview Questions You'll Most Likely Be Asked
+- 76. Software Testing Interview Questions You'll Most Likely Be Asked
+- 77. SQL Server Interview Questions You'll Most Likely Be Asked
+- 78. Tomcat Interview Questions You'll Most Likely Be Asked
+- 79. UML Interview Questions You'll Most Likely Be Asked
+- 80. Unix Interview Questions You'll Most Likely Be Asked
+- 81. UNIX Shell Programming Interview Questions You'll Most Likely Be Asked
+- 82. VB.NET Interview Questions You'll Most Likely Be Asked
+- 83. Windows Server 2008 R2 Interview Questions You'll Most Likely Be Asked
+- 84. XLXP, XSLT, XPATH, XFORMS & XQuery Interview Questions You'll Most Likely Be Asked
+- 85. XML Interview Questions You'll Most Likely Be Asked

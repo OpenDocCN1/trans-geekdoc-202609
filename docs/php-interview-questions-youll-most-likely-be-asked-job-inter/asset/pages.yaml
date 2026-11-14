@@ -1,0 +1,3503 @@
+- pgno: 0
+  md: '# 2015 Edition
+
+
+    # # PHP
+
+
+    # ## Interview Questions
+
+
+    You''ll Most Likely Be Asked
+
+
+    ![](img/39e08d7d177031897deb7d408950901b_0_0.png)
+
+
+    200 PHP Questions
+
+
+    51 HR Interview Questions
+
+
+    ![](img/39e08d7d177031897deb7d408950901b_0_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# # PHP
+
+
+    # ## Interview Questions
+
+
+    You''ll Most Likely Be Asked
+
+
+    Job Interview Questions Series
+
+
+    VP Vibrant Publishers
+
+
+    www.vibrantpublishers.com'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# PHP Interview Questions
+
+    You''ll Most Likely Be Asked
+
+
+    © 2014, By Vibrant Publishers, USA. All rights reserved. No part of this publication
+    may be reproduced or distributed in any form or by any means, or stored in a database
+    or retrieval system, without the prior permission of the publisher.
+
+
+    ISBN-10: 1453895140
+
+    ISBN-13: 978-14-53895-14-6
+
+
+    Library of Congress Control Number: 2010939499
+
+
+    This publication is designed to provide accurate and authoritative information
+    in regard to the subject matter covered. The author has made every effort in the
+    preparation of this book to ensure the accuracy of the information. However, information
+    in this book is sold without warranty either expressed or implied. The Author
+    or the Publisher will not be liable for any damages caused or alleged to be caused
+    either directly or indirectly by this book.
+
+
+    Vibrant Publishers books are available at special quantity discount for sales
+    promotions, or for use in corporate training programs. For more information please
+    write to bulkorders@vibrantpublishers.com
+
+
+    Please email feedback / corrections (technical, grammatical or spelling) to spellerroors@vibrantpublishers.com
+
+
+    To access the complete catalogue of Vibrant Publishers, visit www.vibrantpublishers.com'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# # Table of Contents
+
+
+    +   1 PHP Basics 7
+
+    +   2 Object-Oriented Programming 23
+
+    +   3 Regular Expressions 27
+
+    +   4 Web Automation 31
+
+    +   5 Advanced PHP 33
+
+    +   6 Forms, Cookies and Session Management 45
+
+    +   7 HR Questions 51
+
+    +   INDEX 66'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: This page is intentionally left blank
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# PHP Interview Questions
+
+
+    Review these typical interview questions and think about how you would answer
+    them. Read the answers listed; you will find best possible answers along with
+    strategies and suggestions.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: This page is intentionally left blank
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# PHP Basics'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 1: Can PHP comments be nested?
+
+
+    **Answer:**
+
+    PHP supports C, C++ and perl style of comments. PHP C-style comments cannot be
+    nested.
+
+
+    # 2: What''s the difference between echo and print?
+
+
+    **Answer:**
+
+    echo and print both are PHP constructs used for printing on the console. The main
+    difference is that echo doesn''t return any value, while print does. This makes
+    echo faster than print.
+
+
+    # 3: What are the different types of errors in PHP?
+
+
+    **Answer:**
+
+    PHP has three different types of errors:
+
+
+    +   a) Notices: Non-trivial and non-critical errors that don''t cause termination
+    of script. For example, using a variable that has not been defined yet.
+
+
+    +   b) Warnings: For example, attempting to include file which doesn''t exist.
+    These errors are displayed to the users by default.
+
+
+    +   c) Fatal Errors: These cause the termination of script. For example, calling
+    a non-existent function.
+
+
+    These can be listed as below –
+
+
+    E_ERROR: A fatal error that causes script termination
+
+
+    E_WARNING: Run-time warning that does not cause script termination
+
+
+    E_PARSE: Compile time parse error.
+
+
+    E_NOTICE: Run time notice caused due to error in code
+
+
+    E_CORE_ERROR: Fatal errors that occur during PHP''s initial startup (installation)
+
+
+    E_CORE_WARNING: Warnings that occur during PHP''s initial startup
+
+
+    E_COMPILE_ERROR: Fatal compile-time errors indication problem with script.
+
+
+    E_USER_ERROR: User-generated error message.
+
+
+    E_USER_WARNING: User-generated warning message.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'E_USER_NOTICE: User-generated notice message.
+
+    E_STRICT: Run-time notices.
+
+    E_RECOVERABLE_ERROR: Catchable fatal error indicating a dangerous error
+
+    E_ALL: Catches all errors and warnings
+
+
+    # 4: Can you know the screen resolution from a PHP script? If yes, how and if
+    no, why?
+
+
+    Answer:
+
+    PHP being a server side scripting language, it cannot know the client side details.
+    The reason PHP can know about the browser is that that information sent with HTTP
+    headers to the web server.
+
+
+    # 5: What is the difference between the functions unlink and unset?
+
+
+    Answer:
+
+    Unlink is a function for file system handling which deletes a file and Unset is
+    a function used to destroy a variable.
+
+
+    # 6: How do you read the entire file in a string in PHP?
+
+
+    Answer:
+
+    One can use file_get_contents to read the entire file into a single string.
+
+
+    # 7: What’s the most important difference between PHP4 and PHP5?
+
+
+    Answer:
+
+    PHP4 does not support OOP, but PHP5 supports OOP.
+
+
+    # 8: What is type juggling in PHP?
+
+
+    Answer:
+
+    Type juggling means that PHP does not require explicit type definition in variable
+    declaration. A variable’s type is determined by the context in which the variable
+    is used. That is to say, if a string value is assigned to variable $var, $var
+    becomes a string. If an integer value is then assigned to $var, it becomes an
+    integer.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# 9: How do you sort multidimensional arrays using PHP?
+
+
+    **Answer:** This can be done using array_multisort function in PHP.
+
+
+    # 10: How do you find if the value is in the array or not?
+
+
+    **Answer:** This can be done using in_array() function in PHP
+
+
+    # 11: How do I find out the number of parameters passed into function?
+
+
+    **Answer:** The func_num_args() function returns the number of parameters passed
+    in.
+
+
+    # 12: Does PHP support pass by reference?
+
+
+    **Answer:** Yes, PHP supports pass by reference.
+
+
+    # 13: What''s the difference between print and printf?
+
+
+    **Answer:** Print is a construct and printf is a function. Printf allows formatted
+    output, while print doesn''t.
+
+
+    # 14: How do you find the MD5 hash of a string in PHP?
+
+
+    **Answer:** The md5() function calculates the MD5 hash of a string in PHP.
+
+
+    # 15: What is Zend engine?
+
+
+    **Answer:** The Zend engine is the open source scripting engine, commonly known
+    for the important role it plays in the web automation language PHP.
+
+
+    # 16: Should we use single-quoted strings or double quoted strings?
+
+
+    **Answer:**'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'For variable substitutions, we need to use double quoted strings. If that’s
+    not required, for speed purpose, we should use single quoted strings.
+
+
+    # 17: How can you redirect a PHP page?
+
+
+    Answer: This can be done using PHP function header().
+
+
+    # 18: What is the use of urlencode() function?
+
+
+    Answer: Urlencode() returns the URL encoded version of the given string. URL encoded
+    strings are safe to be used as part of the URLs.
+
+
+    # 19: Are PHP language constructs case-sensitive?
+
+
+    Answer: No, PHP constructs are not case-sensitive.
+
+
+    # 20: Are PHP variable names case-sensitive?
+
+
+    Answer: Yes, PHP variables are case-sensitive.
+
+
+    # 21: How do you pick a random value from an array in PHP?
+
+
+    Answer: This can be achieved using array_rand() function in PHP.
+
+
+    # 22: How do you get the size of the array in PHP?
+
+
+    Answer: One can get the size of the array using count() function in PHP.
+
+
+    # 23: How can you access remote objects in PHP?
+
+
+    Answer: We can access remote objects by using CORBA extension.
+
+
+    # 24: Are PHP strings immutable?
+
+
+    Answer: No, PHP strings are not immutable, they can be modified.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# 25: What all databases are supported with PHP?
+
+
+    Answer:
+
+    MySQL, MSSQL, Sybase, oracle, mSQL, FrontBase are the
+
+    databases supported with PHP.
+
+
+    # 26: What’s the basic difference between JAVASCRIPT and PHP?
+
+
+    Answer:
+
+    JavaScript is a client side scripting language while PHP is a server
+
+    side scripting language.
+
+
+    # 27: How can you find the similarity between two strings in
+
+    PHP?
+
+
+    Answer:
+
+    We can calculate the similarity between two strings using
+
+    similar_text() function.
+
+
+    # 28: How do you find the ASCII value of a character in PHP?
+
+
+    Answer:
+
+    One can use the ord() method in PHP to get the ASCII value of a
+
+    character.
+
+
+    # 29: Which function one needs to use to format a real number in
+
+    PHP?
+
+
+    Answer:
+
+    PHP offers a function number_format() to format a real number.
+
+
+    # 30: Let’s assume you have a string that has multiple newline
+
+    characters inside it. How can you replace all the newlines to
+
+    HTML line breaks?
+
+
+    Answer:
+
+    PHP has a function nl2br that inserts HTML line breaks for
+
+    newlines.
+
+
+    # 31: What all are the magic methods in PHP?
+
+
+    Answer:
+
+    The function names __construct, __destruct, __call, __callStatic,'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '__get, __set, __isset, __unset, __sleep, __wakeup, __toString,
+
+    __invoke, __clone are magic methods. One cannot use these
+
+    names for the functions unless the magic functionality is desired.
+
+
+    # 32: Does PHP support enumerations?
+
+
+    Answer:
+
+    PHP does not support enumerations by default.
+
+
+    # 33: How can you shuffle the elements of an array?
+
+
+    Answer:
+
+    One can use the function shuffle() (pc_array_shuffle for PHP <
+
+    4.3) to shuffle the elements of an array.
+
+
+    # 34: Can you compare floating point numbers just like the way
+
+    integers are compared in PHP?
+
+
+    Answer:
+
+    No, we should use a small delta value and check if the
+
+    numbers are equal within that delta.
+
+
+    # 35: How to check if a string contains a valid number?
+
+
+    Answer:
+
+    PHP has a function is_numeric() that can check if string has a
+
+    valid number.
+
+
+    # 36: How can you convert a number from one base to another in
+
+    PHP?
+
+
+    Answer:
+
+    PHP has a built-in function base_convert that can be used to
+
+    achieve this. There are additional functions like bindec(),
+
+    octdec(), hexdec()).
+
+
+    # 37: How do you check if the date is valid?
+
+
+    Answer:
+
+    There is a PHP function checkdate() that tests if a date is valid.
+
+    This returns false for invalid dates such as “30th February”.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# 38: How do you eliminate duplicates from an array?
+
+
+    Answer:
+
+    The PHP function array_unique() returns a new array without duplicates.
+
+
+    # 39: How can you find the permutations of the elements in an array? Is there
+    any built-in function?
+
+
+    Answer:
+
+    There is no built-in function to do this, but one can write his own recursive
+    implementation for this one.
+
+
+    # 40: Why do you write if(2 == $a) instead of if($a ==2)?
+
+
+    Answer:
+
+    Writing ($a ==2) could accidentally become (type or just a silly mistake) ($a
+    = 2), which would be hard to debug thing at times (depending on how large or complex
+    the codebase is). So writing the constant before the variable saves this issue.
+
+
+    # 41: Does trim() function strip the NULL bytes?
+
+
+    Answer:
+
+    Yes, trim() function in PHP strips the NULL bytes too.
+
+
+    # 42: How can you suppress warning and error messages?
+
+
+    Answer:
+
+    One needs to prefix the PHP function name with a @ sign in order to suppress warnings
+    and error messages.
+
+
+    # 43: How do you concatenate strings in PHP?
+
+
+    Answer:
+
+    One can concatenate strings in PHP using “.” Operator. E.g. $a = “abc”.“xyz” will
+    have “abcxyz” in $a
+
+
+    # 44: Can you execute system commands using PHP?
+
+
+    Answer:
+
+    PHP exec() function can be used to execute an external program in PHP.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "+   **45: Does PHP have a static variable/method?**\n+   \n+   Answer:\n+ \
+    \  PHP supports static variables/methods. You don’t need to instantiate a class\
+    \ to call a static method.\n\n+   **46: Does PHP support switch case?**\n+   \n\
+    +   Answer:\n+   Yes, PHP supports switch case just like other languages.\n\n\
+    +   **47: What do continue 0; continue 1; continue 2 mean in PHP?**\n+   \n+ \
+    \  Answer:\n+   Continue accepts an optional numeric argument which tells it how\
+    \ many levels of enclosing loops it should skip to the end of.\n\n+   **48: After\
+    \ installation of PHP on windows, one still can’t run PHP script on command line.\
+    \ What could be the problem?**\n+   \n+   Answer:\n+   PHP directory needs to\
+    \ be added to the PATH environment variable.\n\n+   **49: How do you round up\
+    \ a number in PHP?**\n+   \n+   Answer:\n+   You can use ceil() function in PHP\
+    \ to round up a number.\n\n+   **50: How do you round down a number in PHP?**\n\
+    +   \n+   Answer:\n+   One can use the floor() function in PHP to round down a\
+    \ number.\n\n+   **51: How do you get the length of the string in PHP?**\n+  \
+    \ \n+   Answer:\n+   PHP function strlen() can be used for finding the length\
+    \ of the string.\n\n+   **52: How do you read from standard input in PHP?**\n\
+    +   \n+   Answer:\n+   One should use fopen() to open PHP://stdin to read from\
+    \ standard"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'input in PHP.
+
+
+    # 53: How to obtain a lock on a file in PHP?
+
+
+    Answer:
+
+    Flock() function in PHP provides file locking.
+
+
+    # 54: Suppose you want to obscure all but last four digits of the credit card
+    number, how will you do that?
+
+
+    Answer:
+
+    One can use PHP substr_replace() function to achieve this.
+
+
+    # 55: How do you find the logarithm of a number in PHP?
+
+
+    Answer:
+
+    For natural log, PHP has a function log() and for log using base 10,
+
+    we can use log10().
+
+
+    # 56: Which PHP function should be used to parse date or time
+
+    string?
+
+
+    Answer:
+
+    One should use strtotime() function in order to parse date or time
+
+    string in PHP.
+
+
+    # 57: Does PHP support default arguments in a function?
+
+
+    Answer:
+
+    PHP supports default arguments in the function signature, just
+
+    that they need to appear after other arguments in a function.
+
+
+    # 58: What’s the difference between var_dump and print_r?
+
+
+    Answer:
+
+    Var_dump also prints the details such as the data type of the
+
+    variable. Var_dump is used for debugging purposes.
+
+
+    # 59: How do you calculate the sum of the elements of an array?
+
+
+    Answer:
+
+    This can be achieved using array_sum() function in PHP.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# 60: What is the difference between require_once() and include_once() in PHP?
+
+
+    Answer:
+
+    Both the functions are used to include the file once in PHP.
+
+    Include_once() creates warning if file is not found and
+
+    require_once creates a fatal error instead.
+
+
+    # 61: How many ways you can include a file in PHP?
+
+
+    Answer:
+
+    One can include a file in PHP using require, require_once, include
+
+    or include_once.
+
+
+    # 62: Which editors do you use for PHP?
+
+
+    Answer:
+
+    Eclipse with PHP extensions, Zend Studio, vi, emacs can be used
+
+    for PHP.
+
+
+    # 63: Can you compare “99” (string) with 89 (integer) in PHP?
+
+
+    Answer:
+
+    PHP is not a strongly typed language. So, PHP will cast string to
+
+    integer to make this comparison.
+
+
+    # 64: Why do they prefer LAMP over other combination of
+
+    software?
+
+
+    Answer:
+
+    Linux, Apache, MySQL, PHP has the largest community support
+
+    as web platform as they are open source resources. They prove to
+
+    be better in terms of security and functionality than other
+
+    combinations.
+
+
+    # 65: What is the difference between strstr() and stristr()?
+
+
+    Answer:
+
+    Strstr() is case sensitive while stristr() is case insensitive.
+
+
+    # 66: How do you find out the seconds of current time in PHP?
+
+
+    Answer:'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'We can use the date() function to carry out this one. It could be done as below
+    - $sec = date("s");
+
+
+    # 67: What is the maximum size of file that can be uploaded using PHP and how
+    can we change this?
+
+
+    Answer:
+
+    We need to set upload_max_filesize variable in PHP.ini file.
+
+
+    # 68: What does uksort() function do in PHP?
+
+
+    Answer:
+
+    This function sorts an array of keys using a user-defined comparison function.
+
+
+    # 69: How can you access global variables inside a function?
+
+
+    Answer:
+
+    One can bring the global variable into local scope with the global keyword or
+    use it directly in $GLOBALS.
+
+
+    # 70: Does PHP support functions with variable number of arguments?
+
+
+    Answer:
+
+    Yes, this is doable in PHP, either by using an array or even without using arrays
+    as arguments.
+
+
+    # 71: Should we use <? ?> tag mode or <?PHP ?> one?
+
+
+    Answer:
+
+    We should <?PHP ?> as the older one is getting depreciated now. Latest Zend engine
+    recommends the later one to be used. We can enable this strict option in PHP.ini
+    file as short_open_tag = off.
+
+
+    # 72: How can we create a database using PHP and MySQL?
+
+
+    Answer:
+
+    PHP: mysql_create_db()
+
+
+    # 73: How to run PHP in a command line?
+
+
+    Answer:'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'PHP script can be run in a command line as “PHP script.PHP”.
+
+    PHP scripts written for CGI interface may not work properly on command line.
+
+
+    # 74: What is the difference between === and =?
+
+
+    Answer:
+
+    The operator === compares the data type and value and == compares only value and
+    not the data type.
+
+
+    # 75: How can you define a constant in PHP?
+
+
+    Answer:
+
+    One can use the define directive to define a constant in PHP.
+
+
+    # 76: When do you use “::” for accessing methods in PHP?
+
+
+    Answer:
+
+    We use “::” for accessing static methods in PHP, since we don’t need class instantiation
+    here.
+
+
+    # 77: Does PHP have a ternary operator like C, C++?
+
+
+    Answer:
+
+    Yes, PHP has a ternary operator like C, C++ and it behaves similarly.
+
+
+    # 78: Is MySQL supported by default in PHP?
+
+
+    Answer:
+
+    MySQL was supported by default till PHP 4. But PHP 5 doesn’t have this enabled
+    by default.
+
+
+    # 79: What does htmlspecialchars() do in PHP?
+
+
+    Answer:
+
+    This function makes sure that any special characters in HTML
+
+    are properly encoded so that people can’t inject their HTML tags
+
+    into the page.
+
+
+    # 80: How can you search for a string inside another string in
+
+    PHP?'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'Answer:
+
+    PHP has strpos() function which can search a string inside other string.
+
+
+    # 81: How can you modify the case of the letters in a string?
+
+
+    Answer:
+
+    One can use the functions like strtoupper, strtolower, ucfirst,
+
+    ucwords to modify the case of the letters of a PHP string.
+
+
+    # 82: How do you write to standard output in PHP?
+
+
+    Answer:
+
+    Apart from using print, printf, echo functions, one can use
+
+    fopen(''PHP://stderr'', ''w'') to write to the standard output in
+
+    PHP.
+
+
+    # 83: How can you read a file''s permissions and ownership data?
+
+
+    Answer:
+
+    The PHP function stat() returns an array of information about a
+
+    file.
+
+
+    # 84: How to get the complete physical path to the file?
+
+
+    Answer:
+
+    The PHP function dirname() can be used to get the complete
+
+    physical path to the file.
+
+
+    # 85: How do you copy and move a file in PHP?
+
+
+    Answer:
+
+    PHP uses functions copy() and rename() to copy and move the file
+
+    respectively. On Unix, rename() function cannot move files across
+
+    file systems.
+
+
+    # 86: How do you remove all the HTML and PHP tags from a
+
+    string?
+
+
+    Answer:
+
+    One can use the function strip_tags() to remove all the HTML and
+
+    PHP tags from a string.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# ### 87: How do you find an element inside an array?
+
+
+    **Answer:**
+
+    PHP function array_search() is used to search an element inside an array. This
+    returns the index of the found value.
+
+
+    # ### 88: How do you open a file to write into?
+
+
+    **Answer:**
+
+    One can use fopen() function to write to the file. E.g. $f = fopen("sample.txt",
+    "w");
+
+
+    # ### 89: Where do you use ob_start() in PHP?
+
+
+    **Answer:**
+
+    This function is used for output buffering in PHP.
+
+
+    # ### 90: How can you combine two arrays in PHP?
+
+
+    **Answer:**
+
+    One can use array_merge() function in PHP to combine different arrays.
+
+
+    # ### 91: Why do they use @ operator before variable names in PHP?
+
+
+    **Answer:**
+
+    @ operator suppresses any warnings/errors while trying to access any undefined
+    variable.
+
+
+    # ### 92: Is it valid to declare a PHP variable with var keyword?
+
+
+    **Answer:**
+
+    It is deprecated, but still valid to declare a PHP variable with var keyword.
+
+
+    # ### 93: Does fclose() function return anything?
+
+
+    **Answer:**
+
+    It is not a void function. It returns a bool, indicating whether shutdown of the
+    file has been successful or not.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: This page is intentionally left blank
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# Object-Oriented Programming'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# 94: Does PHP support multiple inheritance?
+
+
+    **Answer:** PHP does not support multiple inheritance. A class in PHP can only
+    be extended on a single base class.
+
+
+    # 95: Is PHP pure object oriented?
+
+
+    **Answer:** No, PHP is not a pure object oriented language.
+
+
+    # 96: Does PHP support method/function overloading?
+
+
+    **Answer:** PHP isn’t a strongly typed language and hence it doesn’t make much
+    sense to support the traditional functional overloading in PHP.
+
+
+    # 97: Does PHP support C++ style operator overloading?
+
+
+    **Answer:** No, PHP doesn’t support C++ style operator overloading.
+
+
+    # 98: Does PHP support java like interfaces? Can a class implement two interfaces?
+
+
+    **Answer:** Yes, PHP supports interface implementation concept. A class can implement
+    only one interface.
+
+
+    # 99: Can interface constants be overridden by class that implements that interface?
+
+
+    **Answer:** No, interface constants cannot be overridden by class in PHP.
+
+
+    # 100: How can you force the destruction of an object?
+
+
+    **Answer:** Objects are automatically destroyed when a script terminates. To force
+    the destruction, unset() can be used.
+
+
+    # 101: How can you clone an existing object in PHP?'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: 'Answer:
+
+    One can use a simple assignment operator to clone an existing
+
+    object in PHP.
+
+
+    # 102: How do you call the parent class constructor in PHP?
+
+
+    Answer:
+
+    This can be done using parent::constructor($value) in PHP.
+
+
+    # 103: Does PHP support data encapsulation?
+
+
+    Answer:
+
+    PHP supports data encapsulation by providing access specifiers
+
+    such as public, private, protected to the class members.
+
+
+    # 104: Does PHP support exception handling?
+
+
+    Answer:
+
+    Yes, PHP supports exception handling using the usual try/catch
+
+    block.
+
+
+    # 105: If a class property is declared without visibility specifier,
+
+    will it be public, private or protected?
+
+
+    Answer:
+
+    A class property is public by default.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: This page is intentionally left blank
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Regular Expressions'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "# 106: What do you mean by greedy regular expression matching? Are PHP regexes\
+    \ greedy? How do you overcome this problem?\n\nAnswer:\nRegular Expressions are\
+    \ also known as regex. The standard quantifiers in regular expressions are greedy,\
+    \ meaning they match as much as they can, only giving back as necessary to match\
+    \ the remainder of the regex. We use “?” inside the regex to oppose this behavior.\n\
+    \n# 107: What is the difference between preg_replace and ereg_replace?\n\nAnswer:\n\
+    Ereg_replace uses a basic version of regular expression, while preg_replace uses\
+    \ the perl-compatible regular expressions.\n\n# 108: Can you write a PHP regular\
+    \ expression to see if an email address is valid or not?\n\n```\nAnswer:\n/^[^@\\\
+    s]+@([-a-z0-9]+\\.)+[a-z]{2,}$/i\n```\n\n# 109: Can you write a PHP function to\
+    \ extract URLs from an HTML document?\n\n```\nAnswer:\nfunction pc_link_extractor($s)\
+    \ {\n    $a = array();\n    if (preg_match_all('/<a\\s+.*?href=[\\\"\\' ]?([^\\\
+    \"\\' >]*)[\\\"\\' ]?[^>]*>(.*)<\\/a>/i', $s, $matches, PREG_SET_ORDER)) {\n \
+    \       foreach($matches as $match) {\n            array_push($a,array($match[1],$match[2]));\n\
+    \        }\n    }\n    return $a;\n}\n```\n\n# 110: How can we extract string\
+    \ 'abc.com' from a string"
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# ''http://xyz@a...'' using regular_expression of PHP?
+
+
+    Answer:
+
+
+    We can use the preg_match() function with "/.*(@(.*))$/" as the regular expression
+    pattern. For example:
+
+
+    ```
+
+    preg_match("/.*(@(.*))$/","http://xyz@abc.com",$data);
+
+    echo $data[1];
+
+    ```
+
+
+    # 111: Can you write PHP regex to match alphanumeric characters?
+
+
+    Answer:
+
+
+    ```
+
+    [\w]
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: This page is intentionally left blank
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# Web Automation'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '**112: How do you get the web page content using PHP?**
+
+    **Answer:**
+
+    This can be done using PHP Curl extension or file_get_contents which is a library
+    module. For advanced options such as sending POST request requires the usage of
+    Curl.
+
+
+    **113: What does Curl stand for? What all protocols does PHP Curl support?**
+
+    **Answer:**
+
+    Curl stands for Client URL. PHP Curl supports http, https, ftp, gopher, telnet,
+    dict, file and ldap protocols.
+
+
+    **114: How do you overcome the stateless nature of HTTP using PHP?**
+
+    **Answer:**
+
+    One needs to use PHP sessions to overcome the stateless nature of HTTP.
+
+
+    **115: How can you send SOAP request using PHP?**
+
+    **Answer:**
+
+    One can use PEAR''s SOAP classes to send a SOAP request using PHP.
+
+
+    **116: How can you read an RSS feed using PHP?**
+
+    **Answer:**
+
+    One can use PEAR XML_RSS class to read RSS feeds from different web sites.
+
+
+    **117: Can PHP be used for web scraping?**
+
+    **Answer:**
+
+    Yes, PHP can be used for web scraping as PHP can retrieve the web content dynamically
+    and parse it using various options.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# Advanced PHP'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "# 118: Does PHP support multithreading?\n\nAnswer:\nPHP does not have a built-in\
+    \ support for multithreading. One can fake a fork in PHP. Forking is one method\
+    \ of multitasking and there exists an extension called Process Control Extension\
+    \ to handle this. There are also command line PHP commands that will allow for\
+    \ an process to run outside of PHP and return the output to PHP.\n\n# 119: Can\
+    \ you lookup domain name using PHP?\n\nAnswer:\nPHP has a function gethostbyname()\
+    \ that can be used to look up the domain name.\n\n# 120: Are the host names returned\
+    \ by gethostbyaddr() correct always?\n\nAnswer:\nThis may not be true always.\
+    \ A malicious user may configure the DNS server to reply with incorrect hostnames.\
+    \ A combination of gethostbyname() and gethostbyaddr() can be used to verify the\
+    \ correctness of the results.\n\n# 121: Can you ping a host using PHP?\n\nAnswer:\n\
+    One can use PEAR's Net_Ping package to ping a host to see if it is reachable.\n\
+    \n```\n$ping = new Net_Ping;\nif ($ping->checkhost('www.vibrantpublishers.com'))\
+    \ {\n  print 'Reachable';\n} else {\n  print 'Not reachable';\n}\n```\n\n# 122:\
+    \ Does PHP have support for FTP? Can you list some of the FTP functions offered\
+    \ by PHP?\n\nAnswer:"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: 'PHP has built-in support for FTP. ftp_connect, ftp_login, ftp_put, ftp_close
+    are some of the related functions. PHP cURL can be used alternatively.
+
+
+    # 123: Can you parse CSV using PHP? Does PHP have any built-in support for these?
+
+
+    Answer:
+
+    PHP has built-in support for parsing CSV. It has functions like fgetcsv and fputcsv
+    to read/write CSV files.
+
+
+    # 124: How do you get the size of the image in PHP?
+
+
+    Answer:
+
+    One can use getimagesize() function in PHP to get the size of the image.
+
+
+    # 125: Is there any execution time limit for PHP script?
+
+
+    Answer:
+
+    There is a default time limit of 30 seconds for a PHP script. One can set the
+    time limit using set_time_limit function or defining max_execution_time value
+    in PHP.ini.
+
+
+    # 126: Is PHP faster than C++? Why?
+
+
+    Answer:
+
+    No, PHP is slower than optimized C++ programs because PHP is a scripting language
+    and it’s interpreted, hence it is a bit slower than optimized C++ code.
+
+
+    # 127: What can be done if you send the headers to the browser after the script
+    begins outputting the data?
+
+
+    Answer:
+
+    This can be achieved using output control functions in PHP. This does not affect
+    the headers sent using header() and setcookie() functions.
+
+
+    # 128: Does PHP work with oracle?
+
+
+    Answer:'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: 'PHP can be integrated with Oracle using OCI.
+
+
+    # 129: How do we know the location of PHP.ini file?
+
+
+    # Answer:
+
+
+    We can use PHPinfo() function to find the location of PHP.ini file.
+
+
+    # 130: How can one increase the memory capacity at runtime?
+
+
+    # Answer:
+
+
+    One can use ini_set(''memory_limit'', ''15M'') to set the memory appropriately.
+
+
+    # 131: How do you deal with Unicode characters in PHP?
+
+
+    # Answer:
+
+
+    PHP has functions like Utf8_encode() and utf8_decode() that can be used to read/write
+    unicode characters.
+
+
+    # 132: How do you know if the request arrives over SSL?
+
+
+    # Answer:
+
+
+    We can test the value of $_SERVER[''HTTPS''] and if it is ‘ON’, we know that the
+    request arrives over SSL.
+
+
+    # 133: How to send XML-RPC requests using PHP?
+
+
+    # Answer:
+
+
+    XML-RPC lets PHP make function calls to web servers, even if they don’t use PHP.
+    The retrieved data is then automatically converted to PHP variables for use in
+    your application. PHP has built-in support for XML-RPC.
+
+
+    # 134: How can you read environment variables using PHP?
+
+
+    # Answer:
+
+
+    One can use $_ENV superglobal variable to read the environment variables. E.g.
+    $_ENV[''user'']
+
+
+    # 135: What do you mean by return by reference? What’s the benefit of doing it?'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'Answer:
+
+    Returning by reference avoids the need of making a duplicate variable. We need
+    to use =& here instead of the usual assignment operator (=).
+
+
+    # 136: How does serialization of array take place in PHP?
+
+
+    Answer:
+
+    PHP uses functions serialize() and unserialize to take care of serialization.
+
+
+    # 137: What is SQL injection?
+
+
+    Answer:
+
+    This is a type of exploit attack used against scripts that do not validate user
+    provided data. When unfiltered data is passed to an SQL query, it allows the user
+    to execute arbitrary SQL commands, which is unsafe.
+
+
+    # 138: Out of “$a$b” and $a.$b, which will work faster and why?
+
+
+    Answer:
+
+    $a.$b will work faster since concatenation is faster than variable substitution.
+
+
+    # 139: How do you build HTML forms with PHP?
+
+
+    Answer:
+
+    There is a PEAR package that has HTML_QuickForm class which can be used for form
+    building.
+
+
+    # 140: Is there any PEAR class for displaying data in a table?
+
+
+    Answer:
+
+    PEAR’s HTML_Table class can be used for displaying data in a table.
+
+
+    # 141: How can you display the PHP source code over the web page?
+
+
+    Answer:
+
+    The functions highlight_string, highlight_function can be used to'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: 'display the PHP source code in neat and clean format.
+
+
+    # 142: What precaution needs to be taken in case one needs to use configuration
+    files for PHP (.ini)?
+
+
+    Answer:
+
+    One should avoid storing the configuration file in web root
+
+    directory. If that is necessary, one needs to protect that using
+
+    .htaccess file by mentioning who can access that file. Additionally,
+
+    sensitive data should always be encrypted.
+
+
+    # 143: What is email injection attack?
+
+
+    Answer:
+
+    An email injection attack occurs when a hacker uses the email
+
+    form to send email in an undesired way. This can have multiple
+
+    impacts such as eating out bandwidth, getting blocked as a
+
+    spammer etc.
+
+
+    # 144: Is PHP required for setting up HTTP authentication for
+
+    your website?
+
+
+    Answer:
+
+    No, PHP is not required for setting up HTTP authentication for
+
+    the website.
+
+
+    # 145: How can you prevent the web browser from caching a web
+
+    page?
+
+
+    Answer:
+
+    PHP header function can be used to specify that the cached copy
+
+    of the concerned web page is always out of date.
+
+
+    # 146: How to get a semaphore ID in PHP?
+
+
+    Answer:
+
+    PHP has a function sem_get() to get the semaphore ID.
+
+
+    # 147: How do you draw a line in PHP?
+
+
+    Answer:
+
+    PHP function ImageLine() can be used to draw a line.'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# 148: How do you find information on PEAR’s package?
+
+
+    # Answer:
+
+
+    This command can be used to find information on PEAR’s package - “Pear remote-info
+    Net_Ping”
+
+
+    # 149: What is PHPDoc?
+
+
+    # Answer:
+
+
+    PHPDoc is a tool to automatically generate the API documentation of PHP code.
+
+
+    # 150: How can you account for Daylight Saving Time?
+
+
+    # Answer:
+
+
+    The Zoneinfo library can be used to calculate the effects of DST properly.
+
+
+    # 151: What configuration line in PHP.ini enables/disables file upload in PHP?
+
+
+    # Answer:
+
+
+    This line enables the file upload in PHP - File_uploads = ON. We need to enable
+    this in PHP.ini
+
+
+    # 152: What is log4PHP?
+
+
+    # Answer:
+
+
+    Log4PHP is the logging framework for PHP by Apache software foundation.
+
+
+    # 153: Where is the web server information stored in PHP?
+
+
+    # Answer:
+
+
+    $_SERVER is a reserved PHP variable that has all the web server information.
+
+
+    # 154: List the superglobal variables in PHP.
+
+
+    # Answer:
+
+
+    $GLOBALS, $_SERVER, $_POST, $_GET, $_FILES, $_COOKIE, $_SESSION, $_REQUEST, $_ENV
+    are the superglobal variables in PHP.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# 155: Does PHP provide HTTP authentication when it is run as a CGI?
+
+
+    Answer:
+
+    No, this functionality is available only when it is running as an
+
+    Apache module.
+
+
+    # 156: How can you send an email using PHP?
+
+
+    Answer:
+
+    PHP contains one function called mail() to send an email. This
+
+    uses the SMTP mail server to send the message.
+
+
+    # 157: What is the relation of PHP with PHP/FI 2.0?
+
+
+    Answer:
+
+    PHP is a successor to PHP/FI 2.0
+
+
+    # 158: Can you access Microsoft Access database with PHP?
+
+
+    Answer:
+
+    One needs to have Microsoft''s ODBC drivers for Microsoft Access
+
+    database for accessing it with PHP.
+
+
+    # 159: Can $_SERVER[''HTTP_REFERER''] be blank?
+
+
+    Answer:
+
+    Yes, $_SERVER[''HTTP_REFERER''] can be blank as not all
+
+    browsers set this. And this needs to be set only when referrer is a
+
+    link.
+
+
+    # 160: What all open source shopping carts available in PHP?
+
+
+    Answer:
+
+    Fishcart, PHPhop, oscommerce are some of the open source
+
+    shopping carts available in PHP.
+
+
+    # 161: What''s the basic difference between md5() and crc32()?
+
+
+    Answer:
+
+    The length of the hash generated for md5() is 160 bits and for
+
+    crc32(), it is 32 bits.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# 162: Which of the md5(), crc32(), sha1() generates a more secure hash?
+
+
+    Answer:
+
+    Md5() generates a more secure hash than others.
+
+
+    # 163: Why are crc32() and sha1() sometimes preferred over md5()?
+
+
+    Answer:
+
+    To save the space and computation time, sometimes crc32() is preferred over md5().
+
+
+    # 164: What is phpBB?
+
+
+    Answer:
+
+    phpBB is an internet forum package (bulletin board) written in PHP. It''s free
+    software.
+
+
+    # 165: How to avoid PHP_SELF exploits?
+
+
+    Answer:
+
+    PHP_SELF exploits can be avoided by htmlentities() function, which encodes the
+    HTML entities. This way, user cannot exploit PHP_SELF variable and script is sanitized.
+
+
+    # 166: Can we override the values defined in PHP.ini file at runtime?
+
+
+    Answer:
+
+    One can override the PHP.ini values at runtime using ini_set function.
+
+
+    # 167: Does PHP support graphics? Can you draw a polygon using PHP?
+
+
+    Answer:
+
+    One can use functions like ImagePolygon, ImageFilledPolygon to draw polygons using
+    PHP.
+
+
+    # 168: What is PHP accelerator?
+
+
+    Answer:
+
+    PHP accelerator is used to boost the performance of PHP script.'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: 'It''s also used to reduce the server load.
+
+
+    # 169: What is the use of “die”? Why use “die” for errors when script anyway terminates?
+
+
+    Answer:
+
+    We use die in order to prevent abnormal termination of script. The use of die()
+    helps to prevent displaying the physical path of the script in case a fatal error
+    is caught and we terminate the script using die.
+
+
+    # 170: Can you profile your PHP code?
+
+
+    Answer:
+
+    One can use the PEAR benchmark module to profile the PHP code.
+
+
+    # 171: How can one use LDAP authentication in PHP?
+
+
+    Answer:
+
+    One can use PEAR’s Auth class which supports LDAP authentication.
+
+
+    # 172: Can you add watermark to an image using PHP?
+
+
+    Answer:
+
+    The imagestring() function can be used to add a watermark to an image using PHP.
+
+
+    # 173: How do you search for a node or content in XML using PHP?
+
+
+    Answer:
+
+    One can use XML path language (XPath) to search for a node or content in XML.
+
+
+    # 174: Is it alright to enable display_errors in PHP.ini file?
+
+
+    Answer:
+
+    It should not be enabled as the user will be able to see the complete physical
+    path to the script if some error occurs.'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# 175: How can you load classes on demand as required by the interpreter?
+
+
+    Answer:
+
+    This can be achieved using __autoload magic function.
+
+
+    # 176: How can one write GUI applications using PHP?
+
+
+    Answer:
+
+    One can write GUI applications using PHP with PHP-GTK library.
+
+
+    # 177: How can you send the compressed content to browsers that support automatic
+    decompression?
+
+
+    Answer:
+
+    We need to add this line to our PHP.ini file to achieve this –
+
+
+    ```
+
+    zlib.output_compression=1
+
+    ```
+
+
+    # 178: How do you find out the locales supported by your system?
+
+    How do you set a particular locale using PHP?
+
+
+    Answer:
+
+    On Linux/Unix, one can find the program at /usr/bin/locale and on MS Windows,
+    we usual have this in the control panel -> regional options. We can set the locale
+    using setLocale() function in PHP.
+
+
+    # 179: Can you exchange two variables without using a temporary variable in PHP?
+
+
+    Answer:
+
+    One can use a construct like this - list($x, $y) = array($y, $x) to swap the variables
+    without using a temporary variable.
+
+
+    # 180: Can you list some predefined classes in PHP?
+
+
+    Answer:
+
+    Directory, stdClass, Closure, self, static, parent are some of the predefined
+    classes in PHP.
+
+
+    # 181: How can you prevent the user from knowing the fact that the page has a
+    PHP script in the back-end?
+
+
+    Answer:'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'RewriteRule in .htaccess file helps to do this. We can configure mod_rewrite()
+    to hide the extensions to achieve this.
+
+
+    # 182: Why is it a good practice to check the referrer when dealing with form
+    submits and uploads?
+
+
+    Answer:
+
+    This is necessary from security point of view. Though this can be faked, we can
+    still take care of large number of malicious activities by checking the referrer
+    that it''s the website from where the data is being sent.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# # Forms, Cookies and Session Management'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# 183: How do you prevent form hijacking in PHP?
+
+
+    Answer:
+
+    User input sanitization (client side data validation), form submission key validation,
+    prevention of SQL injection attacks, are some of the important factors to prevent
+    form hijacking in PHP.
+
+
+    # 184: Where does PHP store the cookies and sessions data?
+
+
+    Answer:
+
+    PHP stores the cookies on client’s machine and session data on server.
+
+
+    # 185: What are the differences between GET and POST methods?
+
+
+    Answer:
+
+    The data submitted by GET method is displayed as part of the URL of the web page
+    and hence it is used for small amount of data, which is insensitive. POST method
+    is used for sensitive and/or large data.
+
+
+    # 186: How do you write the form tag for correct upload of files with PHP?
+
+
+    Answer:
+
+    We need to use the method as POST and encytpe as “multipart/form-data” in order
+    for upload to work properly.
+
+
+    # 187: How do you get the browser properties using PHP?
+
+
+    Answer:
+
+    One can get the browser properties using this - echo $_SERVER[‘HTTP_USER_AGENT’]
+    in PHP. Additionally, one can use get_browser function.
+
+
+    # 188: How do you delete the cookie with PHP?
+
+
+    Answer:
+
+    One can set the cookie in the past to achieve this.
+
+
+    # 189: What is a persistent cookie?'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: 'Answer:
+
+    A persistent cookie is a cookie which is stored permanently on browser’s machine.
+    Persistent cookies can be used for tracking long term information.
+
+
+    # 190: How to read the value of a cookie that’s already set?
+
+
+    Answer:
+
+    A cookie’s value isn’t available in $_COOKIE during the request in which the cookie
+    is set. In other words, the setcookie( ) function doesn’t alter the value of $_COOKIE.
+    On subsequent requests, however, each cookie is stored in $_COOKIE.
+
+
+    # 191: How do you change the default session time in PHP?
+
+
+    Answer:
+
+    The default session time in PHP is 1440 seconds and that can be changed in PHP.ini
+    file.
+
+
+    # 192: Suppose you want to retrieve a page that requires a cookie to be sent with
+    the request for the page. Can you do it using PHP?
+
+
+    Answer:
+
+    This can be achieved using PHP cURL extension and CURLOPT_COOKIE option.
+
+
+    # 193: Can we store the session data in the database instead of plain files? What’s
+    the advantage of doing this?
+
+
+    Answer:
+
+    One can store the session data in database instead of files using pc_DB_session
+    class. The advantage of doing this is that multiple web servers can have access
+    to the same database.
+
+
+    # 194: Can you have multiple active session objects at a time in PHP?
+
+
+    Answer:
+
+    No, it is not possible in PHP to have multiple active session objects at one time.'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# 195: What should be done to handle multiple page form when we need to preserve
+    from one page to the next?
+
+
+    Answer:
+
+    One needs to use session tracking to achieve this. Session tracking is secure
+    because user cannot modify session variables.
+
+
+    # 196: Are you aware of the resubmission of form? How do you get around this issue?
+
+
+    Answer:
+
+    We can generate a unique identifier and pass this as a hidden field with the form.
+    We can generate an error, if the token has been used already. This prevents the
+    resubmission of the form.
+
+
+    # 197: What will happen to sessions if client side cookies are disabled?
+
+
+    Answer:
+
+    Session is kind of a cookie which works on server side. For working of session
+    on server side, cookies should be enabled on server side and also on client side
+    browser. But session will also work when cookies are disabled on client side.
+    This works by using URL session passing.
+
+
+    # 198: What is meant by session in PHP?
+
+
+    Answer:
+
+    Session is a mechanism for persisting information between page requests from a
+    particular user. After calling session_start(), data stored in the $_SESSION superglobal
+    will continue to be accessible in future page requests from a client identified
+    by a cookie, POST variable or GET parameter.
+
+
+    # 199: Which function do we need to use to use our own session-
+
+    handling functions?
+
+
+    Answer:
+
+    One needs to use session_set_save_handler to use our own session
+
+    handling functions.'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# 200: How do you verify cookie data to make sure user has not altered the
+    data?
+
+
+    # Answer:
+
+
+    We can compute the MD5 hash of the data and verify it when you receive back the
+    same data.'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: This page is intentionally left blank
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# # HR Questions
+
+
+    Review these typical interview questions and think about how you would answer
+    them. Read the answers listed; you will find best possible answers along with
+    strategies and suggestions.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# **1: What has been your biggest success?**
+
+
+    **Answer:**
+
+    Your biggest success should be something that was especially meaningful to you,
+    and that you can talk about passionately – your interviewer will be able to see
+    this. Always have an answer prepared for this question, and be sure to explain
+    how you achieved success, as well as what you learned from the experience.
+
+
+    # **2: What motivates you?**
+
+
+    **Answer:**
+
+    It''s best to focus on a key aspect of your work that you can target as a “driving
+    force” behind your everyday work. Whether it''s customer service, making a difference,
+    or the chance to further your skills and gain experience, it''s important that
+    the interviewer can see the passion you hold for your career and the dedication
+    you have to the position.
+
+
+    # **3: What do you do when you lose motivation?**
+
+
+    **Answer:**
+
+    The best candidates will answer that they rarely lose motivation, because they
+    already employ strategies to keep themselves inspired, and because they remain
+    dedicated to their objectives. Additionally, you may impress the interviewer by
+    explaining that you are motivated by achieving goals and advancing, so small successes
+    are always a great way to regain momentum.
+
+
+    # **4: What do you like to do in your free time?**
+
+
+    **Answer:**
+
+    What you do answer here is not nearly as important as what you don''t answer –
+    your interviewer does not want to hear that you like to drink, party, or revel
+    in the nightlife. Instead, choose a few activities to focus on that are greater
+    signs of stability and maturity, and that will not detract from your ability to
+    show up to work and be productive, such as reading, cooking, or photography. This
+    is also a great opportunity to show your'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: 'interviewer that you are a well-rounded, interesting, and dynamic personality
+    that they would be happy to hire.
+
+
+    # 5: What sets you apart from other workers?
+
+
+    Answer:
+
+    This question is a great opportunity to highlight the specific skill sets and
+    passion you bring to the company that no one else can. If you can''t outline exactly
+    what sets you apart from other workers, how will the interviewer see it? Be prepared
+    with a thorough outline of what you will bring to the table, in order to help
+    the company achieve their goals.
+
+
+    # 6: Why are you the best candidate for that position?
+
+
+    Answer:
+
+    Have a brief response prepared in advance for this question, as this is another
+    very common theme in interviews (variations of the question include: “Why should
+    I hire you, above Candidate B?” and “What can you bring to our company that Candidate
+    B cannot?”). Make sure that your statement does not sound rehearsed, and highlight
+    your most unique qualities that show the interviewer why he or she must hire you
+    above all the other candidates. Include specific details about your experience
+    and special projects or recognition you’ve received that set you apart, and show
+    your greatest passion, commitment, and enthusiasm for the position.
+
+
+    # 7: What does it take to be successful?
+
+
+    Answer:
+
+    Hard work, passion, motivation, and a dedication to learning – these are all potential
+    answers to the ambiguous concept of success. It doesn’t matter so much which of
+    these values you choose as the primary means to success, or if you choose a combination
+    of them. It is, however, absolutely key that whichever value you choose, you must
+    clearly display in your attitude, experience, and goals.'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# 8: What would be the biggest challenge in this position for you?
+
+
+    Answer:
+
+    Keep this answer positive, and remain focused on the opportunities for growth
+    and learning that the position can provide. Be sure that no matter what the challenge
+    is, it’s obvious that you’re ready and enthusiastic to tackle it, and that you
+    have a full awareness of what it will take to get the job done.
+
+
+    # 9: Would you describe yourself as an introvert or an extrovert?
+
+
+    Answer:
+
+    There are beneficial qualities to each of these, and your answer may depend on
+    what type of work you’re involved in. However, a successful leader may be an introvert
+    or extrovert, and similarly, solid team members may also be either. The important
+    aspect of this question is to have the level of self-awareness required to accurately
+    describe yourself.
+
+
+    # 10: What are some positive character traits that you don''t possess?
+
+
+    Answer:
+
+    If an interviewer asks you a tough question about your weaknesses, or lack of
+    positive traits, it’s best to keep your answer light-hearted and simple – for
+    instance, express your great confidence in your own abilities, followed by a (rather
+    humble) admittance that you could occasionally do to be more humble.
+
+
+    # 11: What is the greatest lesson you’ve ever learned?
+
+
+    Answer:
+
+    While this is a very broad question, the interviewer will be more interested in
+    hearing what kind of emphasis you place on this value. Your greatest lesson may
+    tie in with something a mentor, parent, or professor once told you, or you may
+    have gleaned it from a book written by a leading expert in your field. Regardless
+    of what the lesson is, it is most important that you can offer an example of how
+    you’ve incorporated it into your life.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# 12: Have you ever been in a situation where one of your strengths became
+    a weakness in an alternate setting?
+
+
+    Answer:
+
+    It''s important to show an awareness of yourself by having an answer for this
+    question, but you want to make sure that the weakness is relatively minor, and
+    that it would still remain a strength in most settings. For instance, you may
+    be an avid reader who reads anything and everything you can find, but reading
+    billboards while driving to work may be a dangerous idea.
+
+
+    # 13: Who has been the most influential person in your life?
+
+
+    Answer:
+
+    Give a specific example (and name) to the person who has influenced your life
+    greatly, and offer a relevant anecdote about a meaningful exchange the two of
+    you shared. It''s great if their influence relates to your professional life,
+    but this particular question opens up the possibility to discuss inspiration in
+    your personal life as well. The interviewer wants to see that you''re able to
+    make strong connections with other individuals, and to work under the guiding
+    influence of another person.
+
+
+    # 14: Do you consider yourself to be a “detailed” or “big picture” type of person?
+
+
+    Answer:
+
+    Both of these are great qualities, and it’s best if you can incorporate each into
+    your answer. Choose one as your primary type, and relate it to experience or specific
+    items from your resume. Then, explain how the other type fits into your work as
+    well.
+
+
+    # 15: What is your greatest fear?
+
+
+    Answer:
+
+    Disclosing your greatest fear openly and without embarrassment is a great way
+    to show your confidence to an employer. Choose a fear that you are clearly doing
+    work to combat, such as a fear of failure that will seem impossible to the interviewer
+    for someone'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: 'such as yourself, with such clear goals and actions plans outlined. As tempting
+    as it may be to stick with an easy answer such as spiders, stay away from these,
+    as they don''t really tell the interviewer anything about yourself that''s relevant.
+
+
+    # 16: What sort of challenges do you enjoy?
+
+
+    Answer:
+
+    The challenges you enjoy should demonstrate some sort of initiative or growth
+    potential on your part, and should also be in line with your career objectives.
+    Employers will evaluate consistency here, as they analyze critically how the challenges
+    you look forward to are related to your ultimate goals.
+
+
+    # 17: Tell me about a time you were embarrassed. How did you handle it?
+
+
+    Answer:
+
+    No one wants to bring up times they were embarrassed in a job interview, and it''s
+    probably best to avoid an anecdote here. However, don''t shy away from offering
+    a brief synopsis, followed by a display of your ability to laugh it off. Show
+    the interviewer that it was not an event that impacted you significantly.
+
+
+    # 18: What is your greatest weakness?
+
+
+    Answer:
+
+    This is another one of the most popular questions asked in job interviews, so
+    you should be prepared with an answer already. Try to come up with a weakness
+    that you have that can actually be a strength in an alternate setting – such as,
+    “I’m very detail- oriented and like to ensure that things are done correctly,
+    so I sometimes have difficulty in delegating tasks to others.” However, don''t
+    try to mask obvious weaknesses – if you have little practical experience in the
+    field, mention that you''re looking forward to great opportunities to further
+    your knowledge.
+
+
+    # 19: What are the three best adjectives to describe you in a work setting?'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# Answer:
+
+
+    While these three adjectives probably already appear somewhere on your resume,
+    don''t be afraid to use them again in order to highlight your best qualities.
+    This is a chance for you to sell yourself to the interviewer, and to point out
+    traits you possess that other candidates do not. Use the most specific and accurate
+    words you can think of, and elaborate shortly on how you embody each.
+
+
+    # 20: What are the three best adjectives to describe you in your personal life?
+
+
+    # Answer:
+
+
+    Ideally, the three adjectives that describe you in your personal life should be
+    similar to the adjectives that describe you in your professional life. Employers
+    appreciate consistency, and while they may be understanding of you having an alternate
+    personality outside of the office, it’s best if you employ similar principles
+    in your actions both on and off the clock.
+
+
+    # 21: What type of worker are you?
+
+
+    # Answer:
+
+
+    This is an opportunity for you to highlight some of your greatest assets. Characterize
+    some of your talents such as dedicated, self-motivated, detail-oriented, passionate,
+    hard-working, analytical, or customer service focused. Stay away from your weaker
+    qualities here, and remain on the target of all the wonderful things that you
+    can bring to the company.
+
+
+    # 22: Tell me about your happiest day at work.
+
+
+    # Answer:
+
+
+    Your happiest day at work should include one of your greatest professional successes,
+    and how it made you feel. Stay focused on what you accomplished, and be sure to
+    elaborate on how rewarding or satisfying the achievement was for you.
+
+
+    # 23: Tell me about your worst day at work.
+
+
+    # Answer:'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: 'It may have been the worst day ever because of all the mistakes you made, or
+    because you''d just had a huge argument with your best friend, but make sure to
+    keep this answer professionally focused. Try to use an example in which something
+    uncontrollable happened in the workplace (such as an important member of a team
+    quit unexpectedly, which ruined your team''s meeting with a client), and focus
+    on the frustration of not being in control of the situation. Keep this answer
+    brief, and be sure to end with a reflection on what you learned from the day.
+
+
+    # 24: What are you passionate about?
+
+
+    Answer:
+
+    Keep this answer professionally-focused where possible, but it may also be appropriate
+    to discuss personal issues you are passionate about as well (such as the environment
+    or volunteering at a soup kitchen). Stick to issues that are non-controversial,
+    and allow your passion to shine through as you explain what inspires you about
+    the topic and how you stay actively engaged in it. Additionally, if you choose
+    a personal passion, make sure it is one that does not detract from your availability
+    to work or to be productive.
+
+
+    # 25: What is the piece of criticism you receive most often?
+
+
+    Answer:
+
+    An honest, candid answer to this question can greatly impress an interviewer (when,
+    of course, it is coupled with an explanation of what you''re doing to improve),
+    but make sure the criticism is something minimal or unrelated to your career.
+
+
+    # 26: What type of work environment do you succeed the most in?
+
+
+    Answer:
+
+    Be sure to research the company and the specific position before heading into
+    the interview. Tailor your response to fit the job you''d be working in, and explain
+    why you enjoy that type of environment over others. However, it''s also extremely
+    important to be adaptable, so remain flexible to other environments as well.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# 27: Are you an emotional person?
+
+
+    **Answer:**
+
+
+    It''s best to focus on your positive emotions – passion, happiness, motivations
+    – and to stay away from other extreme emotions that may cause you to appear unbalanced.
+    While you want to display your excitement for the job, be sure to remain level-headed
+    and cool at all times, so that the interviewer knows you''re not the type of person
+    who lets emotions take you over and get in the way of your work.
+
+
+    # 28: How do you make decisions?
+
+
+    **Answer:**
+
+
+    This is a great opportunity for you to wow your interviewer with your decisiveness,
+    confidence, and organizational skills. Make sure that you outline a process for
+    decision-making, and that you stress the importance of weighing your options,
+    as well as in trusting intuition. If you answer this question skillfully and with
+    ease, your interviewer will trust in your capability as a worker.
+
+
+    # 29: What are the most difficult decisions for you to make?
+
+
+    **Answer:**
+
+
+    Explain your relationship to decision-making, and a general synopsis of the process
+    you take in making choices. If there is a particular type of decision that you
+    often struggle with, such as those that involve other people, make sure to explain
+    why that type of decision is tough for you, and how you are currently engaged
+    in improving your skills.
+
+
+    # 30: When making a tough decision, how do you gather information?
+
+
+    **Answer:**
+
+
+    If you''re making a tough choice, it''s best to gather information from as many
+    sources as possible. Lead the interviewer through your process of taking information
+    from people in different areas, starting first with advice from experts in your
+    field, feedback from coworkers or other clients, and by looking analytically at
+    your'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: 'own past experiences.
+
+
+    # 31: Tell me about a decision you made that did not turn out well.
+
+
+    Answer:
+
+    Honesty and transparency are great values that your interviewer will appreciate
+    – outline the choice you made, why you made it, the results of your poor decision
+    – and finally (and most importantly!) what you learned from the decision. Give
+    the interviewer reason to trust that you wouldn’t make a decision like that again
+    in the future.
+
+
+    # 32: Are you able to make decisions quickly?
+
+
+    Answer:
+
+    You may be able to make decisions quickly, but be sure to communicate your skill
+    in making sound, thorough decisions as well. Discuss the importance of making
+    a decision quickly, and how you do so, as well as the necessity for each decision
+    to first be well-informed.
+
+
+    # 33: What is customer service?
+
+
+    Answer:
+
+    Customer service can be many things – and the most important consideration in
+    this question is that you have a creative answer. Demonstrate your ability to
+    think outside the box by offering a confident answer that goes past a basic definition,
+    and that shows you have truly considered your own individual view of what it means
+    to take care of your customers. The thoughtful consideration you hold for customers
+    will speak for itself.
+
+
+    # 34: Tell me about a time when you went out of your way for a customer.
+
+
+    Answer:
+
+    It’s important that you offer an example of a time you truly went out of your
+    way – be careful not to confuse something that felt like a big effort on your
+    part, with something your employer would expect you to do anyway. Offer an example
+    of the customer’s'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: 'problems, what you did to solve it, and the way the customer responded after
+    you took care of the situation.
+
+
+    # 35: How do you gain confidence from customers?
+
+
+    Answer:
+
+    This is a very open-ended question that allows you to show your customer service
+    skills to the interviewer. There are many possible answers, and it is best to
+    choose something that you''ve had great experience with, such as “by handling
+    situations with transparency,” “offering rewards,” or “focusing on great communication.”
+    Offer specific examples of successes you’ve had.
+
+
+    # 36: Tell me about a time when a customer was upset or agitated – how did you
+    handle the situation?
+
+
+    Answer:
+
+    Similarly to handling a dispute with another employee, the most important part
+    to answering this question is to first set up the scenario, offer a step-by-step
+    guide to your particular conflict resolution style, and end by describing the
+    way the conflict was resolved. Be sure that in answering questions about your
+    own conflict resolution style, that you emphasize the importance of open communication
+    and understanding from both parties, as well as a willingness to reach a compromise
+    or other solution.
+
+
+    # 37: When can you make an exception for a customer?
+
+
+    Answer:
+
+    Exceptions for customers can generally be made when in accordance with company
+    policy or when directed by a supervisor. Display an understanding of the types
+    of situations in which an exception should be considered, such as when a customer
+    has endured a particular hardship, had a complication with an order, or at a request.
+
+
+    # 38: What would you do in a situation where you were needed by both a customer
+    and your boss?
+
+
+    Answer:'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: 'While both your customer and your boss have different needs of you and are
+    very important to your success as a worker, it is always best to try to attend
+    to your customer first – however, the key is explaining to your boss why you are
+    needed urgently by the customer, and then to assure your boss that you will attend
+    to his or her needs as soon as possible (unless it''s absolutely an urgent matter).
+
+
+    # 39: What is the most important aspect of customer service?
+
+
+    Answer:
+
+    While many people would simply state that customer satisfaction is the most important
+    aspect of customer service, it''s important to be able to elaborate on other important
+    techniques in customer service situations. Explain why customer service is such
+    a key part of business, and be sure to expand on the aspect that you deem to be
+    the most important in a way that is reasoned and well-thought out.
+
+
+    # 40: Is it best to create low or high expectations for a customer?
+
+
+    Answer:
+
+    You may answer this question either way (after, of course, determining that the
+    company does not have a clear opinion on the matter). However, no matter which
+    way you answer the question, you must display a thorough thought process, and
+    very clear reasoning for the option you chose. Offer pros and cons of each, and
+    include the ultimate point that tips the scale in favor of your chosen answer.
+
+
+    # 41: Why would your skills be a good match with X objective of our company?
+
+
+    Answer:
+
+    If you''ve researched the company before the interview, answering this question
+    should be no problem. Determine several of the company''s main objectives, and
+    explain how specific skills that you have are conducive to them. Also, think about
+    ways that your experience and skills can translate to helping the company expand'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: 'upon these objectives, and to reach further goals. If your old company had
+    a similar objective, give a specific example of how you helped the company to
+    meet it.
+
+
+    # 42: What do you think this job entails?
+
+
+    # Answer:
+
+
+    Make sure you''ve researched the position well before heading into the interview.
+    Read any and all job descriptions you can find (at best, directly from the employer''s
+    website or job posting), and make note of key duties, responsibilities, and experience
+    required. Few things are less impressive to an interviewer than a candidate who
+    has no idea what sort of job they''re actually being interviewed for.
+
+
+    # 43: Is there anything else about the job or company you''d like to know?
+
+
+    # Answer:
+
+
+    If you have learned about the company beforehand, this is a great opportunity
+    to show that you put in the effort to study before the interview. Ask questions
+    about the company''s mission in relation to current industry trends, and engage
+    the interviewer in interesting, relevant conversation. Additionally, clear up
+    anything else you need to know about the specific position before leaving – so
+    that if the interviewer calls with an offer, you''ll be prepared to answer.
+
+
+    # 44: Are you the best candidate for this position?
+
+
+    # Answer:
+
+
+    Yes! Offer specific details about what makes you qualified for this position,
+    and be sure to discuss (and show) your unbridled passion and enthusiasm for the
+    new opportunity, the job, and the company.
+
+
+    # 45: How did you prepare for this interview?
+
+
+    # Answer:
+
+
+    The key part of this question is to make sure that you have'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: 'prepared! Be sure that you''ve researched the company, their objectives, and
+    their services prior to the interview, and know as much about the specific position
+    as you possibly can. It''s also helpful to learn about the company''s history
+    and key players in the current organization.
+
+
+    # 46: If you were hired here, what would you do on your first day?
+
+
+    Answer: While many people will answer this question in a boring fashion, going
+    through the standard first day procedures, this question is actually a great chance
+    for you to show the interviewer why you will make a great hire. In addition to
+    things like going through training or orientation, emphasize how much you would
+    enjoy meeting your supervisors and coworkers, or how you would spend a lot of
+    the day asking questions and taking in all of your new surroundings.
+
+
+    # 47: Have you viewed our company''s website?
+
+
+    Answer: Clearly, you should have viewed the company''s website and done some preliminary
+    research on them before coming to the interview. If for some reason you did not,
+    do not say that you did, as the interviewer may reveal you by asking a specific
+    question about it. If you did look at the company''s website, this is an appropriate
+    time to bring up something you saw there that was of particular interest to you,
+    or a value that you especially supported.
+
+
+    # 48: How does X experience on your resume relate to this position?
+
+
+    Answer: Many applicants will have some bit of experience on their resume that
+    does not clearly translate to the specific job in question. However, be prepared
+    to be asked about this type of seemingly-irrelevant experience, and have a response
+    prepared that takes into account similar skill sets or training that the two may
+    share.'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# 49: Why do you want this position?
+
+
+    Answer:
+
+    Keep this answer focused positively on aspects of this specific job that will
+    allow you to further your skills, offer new experience, or that will be an opportunity
+    for you to do something that you particularly enjoy. Don''t tell the interviewer
+    that you''ve been looking for a job for a long time, or that the pay is very appealing,
+    or you will appear unmotivated and opportunistic.
+
+
+    # 50: How is your background relevant to this position?
+
+
+    Answer:
+
+    Ideally, this should be obvious from your resume. However, in instances where
+    your experience is more loosely-related to the position, make sure that you''ve
+    researched the job and company well before the interview. That way, you can intelligently
+    relate the experience and skills that you do have, to similar skills that would
+    be needed in the new position. Explain specifically how your skills will translate,
+    and use words to describe your background such as “preparation” and “learning.”
+    Your prospective position should be described as an “opportunity” and a chance
+    for “growth and development.”
+
+
+    # 51: How do you feel about X mission of our company?
+
+
+    Answer:
+
+    It''s important to have researched the company prior to the interview – and if
+    you''ve done so, this question won''t catch you off guard. The best answer is
+    one that is simple, to the point, and shows knowledge of the mission at hand.
+    Offer a few short statements as to why you believe in the mission''s importance,
+    and note that you would be interested in the chance to work with a company that
+    supports it.
+
+
+    And Finally Good Luck!'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# INDEX
+
+
+    # PHP Interview Questions
+
+
+    # PHP Basics
+
+
+    +   1: Can PHP comments be nested?
+
+    +   2: What’s the difference between echo and print?
+
+    +   3: What are the different types of errors in PHP?
+
+    +   4: Can you know the screen resolution from a PHP script? If yes, how and if
+    no, why?
+
+    +   5: What is the difference between the functions unlink and unset?
+
+    +   6: How do you read the entire file in a string in PHP?
+
+    +   7: What’s the most important difference between PHP4 and PHP5?
+
+    +   8: What is type juggling in PHP?
+
+    +   9: How do you sort multidimensional arrays using PHP?
+
+    +   10: How do you find if the value is in the array or not?
+
+    +   11: How do I find out the number of parameters passed into function?
+
+    +   12: Does PHP support pass by reference?
+
+    +   13: What’s the difference between print and printf?
+
+    +   14: How do you find the MD5 hash of a string in PHP?
+
+    +   15: What is Zend engine?
+
+    +   16: Should we use single-quoted strings or double quoted strings?
+
+    +   17: How can you redirect a PHP page?
+
+    +   18: What is the use of urlencode() function?
+
+    +   19: Are PHP language constructs case-sensitive?
+
+    +   20: Are PHP variable names case-sensitive?
+
+    +   21: How do you pick a random value from an array in PHP?
+
+    +   22: How do you get the size of the array in PHP?
+
+    +   23: How can you access remote objects in PHP?
+
+    +   24: Are PHP strings immutable?
+
+    +   25: What all databases are supported with PHP?
+
+    +   26: What’s the basic difference between JAVASCRIPT and PHP?
+
+    +   27: How can you find the similarity between two strings in PHP?
+
+    +   28: How do you find the ASCII value of a character in PHP?
+
+    +   29: Which function one needs to use to format a real number in PHP?
+
+    +   30: Let’s assume you have a string that has multiple newline characters inside
+    it. How can you replace all the newlines to HTML line breaks?
+
+    +   31: What all are the magic methods in PHP?'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '+   32. Does PHP support enumerations?
+
+    +   33. How can you shuffle the elements of an array?
+
+    +   34. Can you compare floating point numbers just like the way integers are
+    compared in PHP?
+
+    +   35. How to check if a string contains a valid number?
+
+    +   36. How do you convert a number from one base to another in PHP?
+
+    +   37. How do you check if the date is valid?
+
+    +   38. How do you eliminate duplicates from an array?
+
+    +   39. How can you find the permutations of the elements in an array? Is there
+    any built-in function?
+
+    +   40. Why do you write if(2 == $a) instead of if($a == 2)?
+
+    +   41. Does trim() function strip the NULL bytes?
+
+    +   42. How can you suppress warning and error messages?
+
+    +   43. How do you concatenate strings in PHP?
+
+    +   44. Can you execute system commands using PHP?
+
+    +   45. Does PHP have a static variable/method?
+
+    +   46. Does PHP support switch case?
+
+    +   47. What do continue 0; continue 1; continue 2 mean in PHP?
+
+    +   48. After installation of PHP on windows, one still can''t run PHP script
+    on command line. What could be the problem?
+
+    +   49. How do you round up a number in PHP?
+
+    +   50. How do you round down a number in PHP?
+
+    +   51. How do you get the length of the string in PHP?
+
+    +   52. How do you read from standard input in PHP?
+
+    +   53. How to obtain a lock on a file in PHP?
+
+    +   54. Suppose you want to obscure all but last four digits of the credit card
+    number, how will you do that?
+
+    +   55. How do you find the logarithm of a number in PHP?
+
+    +   56. Which PHP function should be used to parse date or time string?
+
+    +   57. Does PHP support default arguments in a function?
+
+    +   58. What''s the difference between var_dump and print_r?
+
+    +   59. How do you calculate the sum of the elements of an array?
+
+    +   60. What is the difference between require_once() and include_once() in PHP?
+
+    +   61. How many ways you can include a file in PHP?
+
+    +   62. Which editors do you use for PHP?
+
+    +   63. Can you compare “99” (string) with 89 (integer) in PHP?
+
+    +   64. Why do they prefer LAMP over other combination of software?
+
+    +   65. What is the difference between strstr() and stristr()?
+
+    +   66. How do you find out the seconds of current time in PHP?'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '+   67: What is the maximum size of file that can be uploaded using PHP and
+    how can we change this?
+
+    +   68: What does uksort() function do in PHP?
+
+    +   69: How can you access global variables inside a function?
+
+    +   70: Does PHP support functions with variable number of arguments?
+
+    +   71: Should we use <? ?> tag mode or <?PHP ?> one?
+
+    +   72: How can we create a database using PHP and MySQL?
+
+    +   73: How to run PHP in a command line?
+
+    +   74: What is the difference between === and ==?
+
+    +   75: How can you define a constant in PHP?
+
+    +   76: When do you use "::" for accessing methods in PHP?
+
+    +   77: Does PHP have a ternary operator like C, C++?
+
+    +   78: Is MySQL supported by default in PHP?
+
+    +   79: What does htmlspecialchars() do in PHP?
+
+    +   80: How can you search for a string inside another string in PHP?
+
+    +   81: How can you modify the case of the letters in a string?
+
+    +   82: How do you write to standard output in PHP?
+
+    +   83: How can you read a file''s permissions and ownership data?
+
+    +   84: How to get the complete physical path to the file?
+
+    +   85: How do you copy and move a file in PHP?
+
+    +   86: How do you remove all the HTML and PHP tags from a string?
+
+    +   87: How do you find an element inside an array?
+
+    +   88: How do you open a file to write into?
+
+    +   89: Where do you use ob_start() in PHP?
+
+    +   90: How can you combine two arrays in PHP?
+
+    +   91: Why do they use @ operator before variable names in PHP?
+
+    +   92: Is it valid to declare a PHP variable with var keyword?
+
+    +   93: Does fclose() function return anything?
+
+
+    # Object-Oriented Programming
+
+
+    +   94: Does PHP support multiple inheritance?
+
+    +   95: Is PHP pure object oriented?
+
+    +   96: Does PHP support method/function overloading?
+
+    +   97: Does PHP support C++ style operator overloading?
+
+    +   98: Does PHP support java like interfaces? Can a class implement two interfaces?
+
+    +   99: Can interface constants be overridden by class that implements that interface?
+
+    +   100: How can you force the destruction of an object?
+
+    +   101: How can you clone an existing object in PHP?'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '+   102: How do you call the parent class constructor in PHP?
+
+    +   103: Does PHP support data encapsulation?
+
+    +   104: Does PHP support exception handling?
+
+    +   105: If a class property is declared without visibility specifier, will it
+    be public, private or protected?
+
+
+    # Regular Expressions
+
+
+    +   106: What do you mean by greedy regular expression matching? Are PHP regexes
+    greedy? How do you overcome this problem?
+
+    +   107: What is the difference between preg_replace and ereg_replace?
+
+    +   108: Can you write a PHP regular expression to see if an email address is
+    valid or not?
+
+    +   109: Can you write a PHP function to extract URLs from an HTML document?
+
+    +   110: How can we extract string ''abc.com '' from a string ''http://xyz@a...''
+    using regular _expression of PHP?
+
+    +   111: Can you write PHP regex to match alphanumeric characters?
+
+
+    # Web Automation
+
+
+    +   112: How do you get the web page content using PHP?
+
+    +   113: What does Curl stand for? What all protocols does PHP Curl support?
+
+    +   114: How do you overcome the stateless nature of HTTP using PHP?
+
+    +   115: How can you send SOAP request using PHP?
+
+    +   116: How can you read an RSS feed using PHP?
+
+    +   117: Can PHP be used for web scraping?
+
+
+    # Advanced PHP
+
+
+    +   118: Does PHP support multithreading?
+
+    +   119: Can you lookup domain name using PHP?
+
+    +   120: Are the host names returned by gethostbyaddr() correct always?
+
+    +   121: Can you ping a host using PHP?
+
+    +   122: Does PHP have support for FTP? Can you list some of the FTP functions
+    offered by PHP?
+
+    +   123: Can you parse CSV using PHP? Does PHP have any built-in support for these?
+
+    +   124: How do you get the size of the image in PHP?
+
+    +   125: Is there any execution time limit for PHP script?
+
+    +   126: Is PHP faster than C++? Why?'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '+   127: What can be done if you send the headers to the browser after the
+    script begins outputting the data?
+
+    +   128: Does PHP work with oracle?
+
+    +   129: How do we know the location of PHP.ini file?
+
+    +   130: How can one increase the memory capacity at runtime?
+
+    +   131: How do you deal with Unicode characters in PHP?
+
+    +   132: How do you know if the request arrives over SSL?
+
+    +   133: How to send XML-RPC requests using PHP?
+
+    +   134: How can you read environment variables using PHP?
+
+    +   135: What do you mean by return by reference? What''s the benefit of doing
+    it?
+
+    +   136: How does serialization of array take place in PHP?
+
+    +   137: What is SQL injection?
+
+    +   138: Out of “$a$b” and $a.$b, which will work faster and why?
+
+    +   139: How do you build HTML forms with PHP?
+
+    +   140: Is there any PEAR class for displaying data in a table?
+
+    +   141: How can you display the PHP source code over the web page?
+
+    +   142: What precaution needs to be taken in case one needs to use configuration
+    files for PHP (.ini)?
+
+    +   143: What is email injection attack?
+
+    +   144: Is PHP required for setting up HTTP authentication for your website?
+
+    +   145: How can you prevent the web browser from caching a web page?
+
+    +   146: How to get a semaphore ID in PHP?
+
+    +   147: How do you draw a line in PHP?
+
+    +   148: How do you find information on PEAR’s package?
+
+    +   149: What is PHPDoc?
+
+    +   150: How can you account for Daylight Saving Time?
+
+    +   151: What configuration line in PHP.ini enables/disables file upload in PHP?
+
+    +   152: What is log4PHP?
+
+    +   153: Where is the web server information stored in PHP?
+
+    +   154: List the superglobal variables in PHP.
+
+    +   155: Does PHP provide HTTP authentication when it is run as a CGI?
+
+    +   156: How can you send an email using PHP?
+
+    +   157: What is the relation of PHP with PHP/FI 2.0?
+
+    +   158: Can you access Microsoft Access database with PHP?
+
+    +   159: Can $_SERVER[''HTTP_REFERER''] be blank?
+
+    +   160: What all open source shopping carts available in PHP?
+
+    +   161: What’s the basic difference between md5() and crc32()?'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '162: Which of the md5(), crc32(), sha1() generates a more secure hash?
+
+
+    163: Why are crc32() and sha1() sometimes preferred over md5()?
+
+
+    164: What is phpBB?
+
+
+    165: How to avoid PHP_SELF exploits?
+
+
+    166: Can we override the values defined in PHP.ini file at runtime?
+
+
+    167: Does PHP support graphics? Can you draw a polygon using PHP?
+
+
+    168: What is PHP accelerator?
+
+
+    169: What is the use of “die”? Why use “die” for errors when script anyway terminates?
+
+
+    170: Can you profile your PHP code?
+
+
+    171: How can one use LDAP authentication in PHP?
+
+
+    172: Can you add watermark to an image using PHP?
+
+
+    173: How do you search for a node or content in XML using PHP?
+
+
+    174: Is it alright to enable display_errors in PHP.ini file?
+
+
+    175: How can you load classes on demand as required by the interpreter?
+
+
+    176: How can one write GUI applications using PHP?
+
+
+    177: How can you send the compressed content to browsers that support automatic
+    decompression?
+
+
+    178: How do you find out the locales supported by your system? How do you set
+    a particular locale using PHP?
+
+
+    179: Can you exchange two variables without using a temporary variable in PHP?
+
+
+    180: Can you list some predefined classes in PHP?
+
+
+    181: How can you prevent the user from knowing the fact that the page has a PHP
+    script in the back-end?
+
+
+    182: Why is it a good practice to check the referrer when dealing with form submits
+    and uploads?
+
+
+    # Forms, Cookies and Session Management
+
+
+    183: How do you prevent form hijacking in PHP?
+
+
+    184: Where does PHP store the cookies and sessions data?
+
+
+    185: What are the differences between GET and POST methods?
+
+
+    186: How do you write the form tag for correct upload of files with PHP?
+
+
+    187: How do you get the browser properties using PHP?
+
+
+    188: How do you delete the cookie with PHP?
+
+
+    189: What is a persistent cookie?
+
+
+    190: How to read the value of a cookie that’s already set?
+
+
+    191: How do you change the default session time in PHP?
+
+
+    192: Suppose you want to retrieve a page that requires a cookie to be sent with
+    the request for the page. Can you do it using PHP?'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '+   193: Can we store the session data in the database instead of plain files?
+    What''s the advantage of doing this?
+
+
+    +   194: Can you have multiple active session objects at a time in PHP?
+
+
+    +   195: What should be done to handle multiple page form when we need to preserve
+    from one page to the next?
+
+
+    +   196: Are you aware of the resubmission of form? How do you get around this
+    issue?
+
+
+    +   197: What will happen to sessions if client side cookies are disabled?
+
+
+    +   198: What is meant by session in PHP?
+
+
+    +   199: Which function do we need to use to use our own session-handling functions?
+
+
+    +   200: How do you verify cookie data to make sure user has not altered the data?'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# HR Questions
+
+
+    +   1: What has been your biggest success?
+
+    +   2: What motivates you?
+
+    +   3: What do you do when you lose motivation?
+
+    +   4: What do you like to do in your free time?
+
+    +   5: What sets you apart from other workers?
+
+    +   6: Why are you the best candidate for that position?
+
+    +   7: What does it take to be successful?
+
+    +   8: What would be the biggest challenge in this position for you?
+
+    +   9: Would you describe yourself as an introvert or an extrovert?
+
+    +   10: What are some positive character traits that you don''t possess?
+
+    +   11: What is the greatest lesson you''ve ever learned?
+
+    +   12: Have you ever been in a situation where one of your strengths
+
+    +   became a weakness in an alternate setting?
+
+    +   13: Who has been the most influential person in your life?
+
+    +   14: Do you consider yourself to be a “detailed” or “big picture” type of
+
+    +   person?
+
+    +   15: What is your greatest fear?
+
+    +   16: What sort of challenges do you enjoy?
+
+    +   17: What is your greatest weakness?
+
+    +   18: What are the three best adjectives to describe you in a work setting?
+
+    +   19: What are the three best adjectives to describe you in your personal
+
+    +   life?
+
+    +   20: What type of worker are you?
+
+    +   21: Tell me about your happiest day at work.
+
+    +   22: Tell me about your worst day at work.
+
+    +   23: What are you passionate about?
+
+    +   24: What is the piece of criticism you receive most often?
+
+    +   25: What type of work environment do you succeed the most in?
+
+    +   26: Are you an emotional person?
+
+    +   27: How do you make decisions?
+
+    +   28: What are the most difficult decisions for you to make?
+
+    +   29: When making a tough decision, how do you gather information?
+
+    +   30: Tell me about a decision you made that did not turn out well.
+
+    +   31: Are you able to make decisions quickly?
+
+    +   32: What is customer service?
+
+    +   33: Tell me about a time when you went out of your way for a customer.
+
+    +   34: How do you gain confidence from customers?
+
+    +   35: Tell me about a time when a customer was upset or agitated – how
+
+    +   did you handle the situation?'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '+   37: When can you make an exception for a customer?
+
+    +   38: What would you do in a situation where you were needed by both a customer
+    and your boss?
+
+    +   39: What is the most important aspect of customer service?
+
+    +   40: Is it best to create low or high expectations for a customer?
+
+    +   41: Why would your skills be a good match with X objective of our company?
+
+    +   42: What do you think this job entails?
+
+    +   43: Is there anything else about the job or company you''d like to know?
+
+    +   44: Are you the best candidate for this position?
+
+    +   45: How did you prepare for this interview?
+
+    +   46: If you were hired here, what would you do on your first day?
+
+    +   47: Have you viewed our company''s website?
+
+    +   48: How does X experience on your resume relate to this position?
+
+    +   49: Why do you want this position?
+
+    +   50: How is your background relevant to this position?
+
+    +   51: How do you feel about X mission of our company?'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# Some of the following titles might also be handy:
+
+
+    +   1. .NET Interview Questions You''ll Most Likely Be Asked
+
+    +   2. 200 Interview Questions You''ll Most Likely Be Asked
+
+    +   3. Access VBA Programming Interview Questions You''ll Most Likely Be Asked
+
+    +   4. Adobe ColdFusion Interview Questions You''ll Most Likely Be Asked
+
+    +   5. Advanced Excel Interview Questions You''ll Most Likely Be Asked
+
+    +   6. Advanced Java Interview Questions You''ll Most Likely Be Asked
+
+    +   7. Advanced SAS Interview Questions You''ll Most Likely Be Asked
+
+    +   8. AJAX Interview Questions You''ll Most Likely Be Asked
+
+    +   9. Algorithms Interview Questions You''ll Most Likely Be Asked
+
+    +   10. Android Development Interview Questions You''ll Most Likely Be Asked
+
+    +   11. Ant & Maven Interview Questions You''ll Most Likely Be Asked
+
+    +   12. Apache Web Server Interview Questions You''ll Most Likely Be Asked
+
+    +   13. Artificial Intelligence Interview Questions You''ll Most Likely Be Asked
+
+    +   14. ASP.NET Interview Questions You''ll Most Likely Be Asked
+
+    +   15. Automated Software Testing Interview Questions You''ll Most Likely Be
+    Asked
+
+    +   16. Base SAS Interview Questions You''ll Most Likely Be Asked
+
+    +   17. BEA WebLogic Server Interview Questions You''ll Most Likely Be Asked
+
+    +   18. C & C++ Interview Questions You''ll Most Likely Be Asked
+
+    +   19. C# Interview Questions You''ll Most Likely Be Asked
+
+    +   20. C++ Internals Interview Questions You''ll Most Likely Be Asked
+
+    +   21. CCNA Interview Questions You''ll Most Likely Be Asked
+
+    +   22. Cloud Computing Interview Questions You''ll Most Likely Be Asked
+
+    +   23. Computer Architecture Interview Questions You''ll Most Likely Be Asked
+
+    +   24. Computer Networks Interview Questions You''ll Most Likely Be Asked
+
+    +   25. Core JAVA Interview Questions You''ll Most Likely Be Asked
+
+    +   26. Data Structures & Algorithms Interview Questions You''ll Most Likely Be
+    Asked
+
+    +   27. Data WareHousing Interview Questions You''ll Most Likely Be Asked
+
+    +   28. EIB 3.0 Interview Questions You''ll Most Likely Be Asked
+
+    +   29. Entity Framework Interview Questions You''ll Most Likely Be Asked
+
+    +   30. Fedora & RHEL Interview Questions You''ll Most Likely Be Asked
+
+    +   31. GNU Development Interview Questions You''ll Most Likely Be Asked
+
+    +   32. Hibernate, Spring & Struts Interview Questions You''ll Most Likely Be
+    Asked
+
+    +   33. HTML, XHTML and CSS Interview Questions You''ll Most Likely Be Asked
+
+    +   34. HTML5 Interview Questions You''ll Most Likely Be Asked
+
+    +   35. IBM WebSphere Application Server Interview Questions You''ll Most Likely
+    Be Asked
+
+    +   36. IOS SDK Interview Questions You''ll Most Likely Be Asked
+
+    +   37. Java / J2EE Design Patterns Interview Questions You''ll Most Likely Be
+    Asked
+
+    +   38. Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+    +   39. Java Messaging Service Interview Questions You''ll Most Likely Be Asked
+
+    +   40. JavaScript Interview Questions You''ll Most Likely Be Asked
+
+    +   41. JavaServer Faces Interview Questions You''ll Most Likely Be Asked
+
+    +   42. JDBC Interview Questions You''ll Most Likely Be Asked
+
+    +   43. jQuery Interview Questions You''ll Most Likely Be Asked
+
+    +   44. JP-Servlet Interview Questions You''ll Most Likely Be Asked
+
+    +   45. JUnit Interview Questions You''ll Most Likely Be Asked
+
+    +   46. Linux Commands Interview Questions You''ll Most Likely Be Asked
+
+    +   47. Linux Interview Questions You''ll Most Likely Be Asked
+
+    +   48. Linux System Administrator Interview Questions You''ll Most Likely Be
+    Asked
+
+    +   49. Mac OS X Lion Interview Questions You''ll Most Likely Be Asked
+
+    +   50. Mac OS X Snow Leopard Interview Questions You''ll Most Likely Be Asked
+
+    +   51. Microsoft Access Interview Questions You''ll Most Likely Be Asked'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '+   52. Microsoft Excel Interview Questions You''ll Most Likely Be Asked
+
+    +   53. Microsoft Powerpoint Interview Questions You''ll Most Likely Be Asked
+
+    +   54. Microsoft Word Interview Questions You''ll Most Likely Be Asked
+
+    +   55. MySQL Interview Questions You''ll Most Likely Be Asked
+
+    +   56. NetSuite Interview Questions You''ll Most Likely Be Asked
+
+    +   57. Networking Interview Questions You''ll Most Likely Be Asked
+
+    +   58. OOPS Interview Questions You''ll Most Likely Be Asked
+
+    +   59. Operating Systems Interview Questions You''ll Most Likely Be Asked
+
+    +   60. Oracle DBA Interview Questions You''ll Most Likely Be Asked
+
+    +   61. Oracle E-Business Suite Interview Questions You''ll Most Likely Be Asked
+
+    +   62. ORACLE PL/SQL Interview Questions You''ll Most Likely Be Asked
+
+    +   63. Perl Programming Interview Questions You''ll Most Likely Be Asked
+
+    +   64. PHP Interview Questions You''ll Most Likely Be Asked
+
+    +   65. PMP Interview Questions You''ll Most Likely Be Asked
+
+    +   66. Python Interview Questions You''ll Most Likely Be Asked
+
+    +   67. RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+
+    +   68. Ruby Interview Questions You''ll Most Likely Be Asked
+
+    +   69. Ruby on Rails Interview Questions You''ll Most Likely Be Asked
+
+    +   70. SAP ABAP Interview Questions You''ll Most Likely Be Asked
+
+    +   71. SAP HANA Interview Questions You''ll Most Likely Be Asked
+
+    +   72. SAS Programming Guidelines Interview Questions You''ll Most Likely Be
+    Asked
+
+    +   73. Selenium Testing Tools Interview Questions You''ll Most Likely Be Asked
+
+    +   74. Silverlight Interview Questions You''ll Most Likely Be Asked
+
+    +   75. Software Repositories Interview Questions You''ll Most Likely Be Asked
+
+    +   76. Software Testing Interview Questions You''ll Most Likely Be Asked
+
+    +   77. SQL Server Interview Questions You''ll Most Likely Be Asked
+
+    +   78. Tomcat Interview Questions You''ll Most Likely Be Asked
+
+    +   79. UML Interview Questions You''ll Most Likely Be Asked
+
+    +   80. Unix Interview Questions You''ll Most Likely Be Asked
+
+    +   81. UNIX Shell Programming Interview Questions You''ll Most Likely Be Asked
+
+    +   82. VB.NET Interview Questions You''ll Most Likely Be Asked
+
+    +   83. Windows Server 2008 R2 Interview Questions You''ll Most Likely Be Asked
+
+    +   84. XLXP, XSLT, XPATH, XFORMS & XQuery Interview Questions You''ll Most Likely
+    Be Asked
+
+    +   85. XML Interview Questions You''ll Most Likely Be Asked'
+  merge: -1
+  img_proc: true
