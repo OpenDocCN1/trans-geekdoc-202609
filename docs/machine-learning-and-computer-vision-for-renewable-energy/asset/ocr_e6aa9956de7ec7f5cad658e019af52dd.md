@@ -1,0 +1,9 @@
+Figure 4. Depersonalized hourly thermal generation superimposed with a nonlinear trend variable from a regression spline
+
+![](bbox=[0.18, 0.18, 0.83, 0.45])
+
+as covered in the preceding section, are linear, polynomial, and RBF. A hyperparameter, which we have set at 0.15%, governs the trade-off between categorizing additional points as outliers and maintaining a smooth decision border. The model's performance with various kernels is displayed in Table 4.
+
+Table 4 displays the classification accuracy of the One-Class SVM model using different kernel functions. The results show that the performance of the different kernels varies. For example, the model with the linear kernel identified 5495 outliers in the testing set, with a silhouette score of 0.5578 and an accuracy of 0.6119. When the model was used with the polynomial kernel, the number of outliers detected increased to 7784, with a slightly higher silhouette score of 0.6197 and an improved accuracy of 0.6491. The most noteworthy performance was seen with the RBF kernel, which recognized only 835 outliers, yielding a substantially greater silhouette score of 0.7805 and the highest accuracy of all kernels, at 0.8343. In contrast, 877 outliers were found using the sigmoid kernel, which had an accuracy of 0.8046 and a silhouette score of 0.6354. The RBF kernel performed better overall in outlier identification and classification accuracy, indicating that it can be used effectively for anomaly detection applications. This emphasizes how crucial it is to choose the right kernel function for One-Class SVM models to get the best outcomes.
+
+Figure 6 displays the ability to differentiate between normal and abnormal data, and Figure 7 shows how outliers appeared at this boundary. These results underscore the effectiveness of the RBF kernel in anomaly identification and emphasize its potential to improve operational reliability and efficiency in renewable energy systems.

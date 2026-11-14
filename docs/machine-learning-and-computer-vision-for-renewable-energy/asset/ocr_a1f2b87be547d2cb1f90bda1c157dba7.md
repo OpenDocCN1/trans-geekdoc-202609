@@ -1,0 +1,21 @@
+# # Detecting Aberrations in Renewable Energy
+
+# ### Table 1. Literature review
+
+| Author Name | Published Year | Purpose of the Paper | Accuracy |
+|---|---|---|---|
+| Hollingsworth et al. | 2018 | Used a deep learning method for power anomaly detection with One-Class SVM model that can handle seasonality and inclinations in data. | The study achieved high accuracy in detecting aberrations in renewable energy systems. |
+| Uhunamure and Shale | 2021 | Investigated the significance of anomaly detection in renewable energy systems, particularly customised for South Africa's rapidly changing energy landscape. | The study highlighted the importance of detecting and mitigating aberrations in renewable energy systems to ensure stability and reliability. |
+| Tan et al. | 2019 | Introduced an anomaly detection framework using One-Class SVM model in renewable energy systems. | Demonstrates improved accuracy in detecting aberrations in renewable energy systems compared to traditional methods. |
+| Chen and Wang. | 2020 | Investigated using the One-Class SVM model to discover abnormalities in systems that produce renewable energy. | The findings demonstrated favourable results when employing the One-Class SVM model to precisely identify irregularities in renewable energy systems. |
+| Wu et al. | 2018 | Applied the One-Class SVM method to examine the identification of anomalies in wind energy production systems. | The findings demonstrated increased precision when utilizing the One-Class SVM model to identify aberrations in solar energy systems. |
+| Smith and Johnson | 2020 | The One-Class SVM model was utilised in hydroelectric energy systems to detect anomalies. | The study demonstrated encouraging outcomes when employing One-Class to precisely identify anomalies in hydropower energy systems. |
+| Wang et al. | 2023 | The study seeks to overcome the shortcomings of decentralised One-Class SVM approaches, notably concerning managing non-linear instances. | Experiments on actual anomalous datasets show that the model performed better compared to the current distributed One-Class SVM techniques, demonstrating its correctness. |
+| Li et al. | 2020 | The study explored One-Class SVM to detect anomalies in renewable energy systems. | The results revealed that aberrations in wind power generating data may be successfully identified using One-Class SVM. |
+| Patel et al. | 2019 | Studied the application of One-Class SVM in solar energy systems to detect anomalies. | The findings reported are highly precise in spotting odd trends and abnormalities in data on solar power generation. |
+| Liu et al. | 2018 | Examined One-Class SVM's applicability to finding anomalies in energy consumption data. | It was discovered that One-Class SVM was useful for identifying unusual patterns of energy use. |
+| Zhu et al. | 2017 | Investigated the use of One-Class SVM in wind energy systems to detect anomalies. | The authors reported that variations in wind power generating data may be accurately detected using One-Class SVM. |
+
+and tweaking in Python with data pretreatment in RStudio. By simplifying the workflow for increased analytical complexity and precision, this collaborative approach guarantees a comprehensive and accurate detection of abnormalities (Ryan, 2019).
+
+This integrated approach's dynamic adaptability to changing problems in the renewable energy ecosystem is one of its main advantages. R is well-suited for data pre-processing and exploratory data analysis. It can be R to handle missing values, scale or standardize features, and explore the distribution of the data before applying the One-Class SVM algorithm in Python. Popular R packages for data manipulation, such as dplyr and tidyr, can be employed for these tasks. While, python is widely used for machine learning or deep learning, and there are excellent libraries like Scikit-learn that provide implementations of One-Class SVM. One can leverage Python's ecosystem to build, train, and evaluate the developed model model efficiently. Using the reticulate package in R, allowed us to run Python

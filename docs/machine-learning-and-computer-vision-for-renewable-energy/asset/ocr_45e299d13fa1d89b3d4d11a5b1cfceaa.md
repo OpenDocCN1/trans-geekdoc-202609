@@ -1,0 +1,20 @@
+# Electricity Production Prediction by Microsoft Azure
+
+close to the mean value, where the frequency decreases as the distance from the mean increases. In statistical analysis, the normal distribution is often used as a null hypothesis. If the distribution of linkage disequilibrium is normal, the line of best fit passes through the center of the observed data points, rather than diverging, approaching some and deviating from others. This assumption can be checked by constructing a histogram of the connections. The normal distribution curve may not fit on the card and the skewness and kurtosis are carried over to the back of the histogram card.
+
+**Adjacent lags should not exhibit autocorrelation.** This assumption is based on the chronology of the data. If the data follows a timeline, each data point must be independent of the previous or subsequent data point. Therefore, when performing regression analysis, it is important to make sure that the chronological order of the data corresponds to the normal course of time. This assumption is calculated using the Durbin-Watson test.
+
+The Durbin-Watson test measures the autocorrelation of the lags in a regression model. The Durbin-Watson test uses a scale from 0 to 4 where values from 0 to 2 indicate positive autocorrelation, 2 indicates no autocorrelation, and 2 to 4 indicates negative autocorrelation. That is, to meet the assumption of no autocorrelation of the links, a value close to 2 should be obtained. In general, values between 1.5 and 2.5 are considered acceptable, and values less than 1.5 or greater than 2.5 indicate that the model does not meet the assumption of no autocorrelation. The values of the error terms must not have any identifiable relationship: \(\sigma \epsilon i \epsilon_j=0, \forall i \neq j\).
+
+If there is any relationship between the values of the error term, then autocorrelation appears. Autocorrelation is also known as serial correlation, which affects the standard errors without affecting the coefficients, which will be unbiased. This is not observed in cross-sectional data, but is reflected in time-series data such as stock prices. For stock price analysis, the phenomenon of the day of the week effect suggests high returns on Fridays and low returns on Mondays. Monday’s errors will be shifted down, and Friday’s errors will be shifted up.
+
+The main cause of autocorrelation is related to missing variables or incorrect functional forms. A common way to detect autocorrelation is to plot a scatterplot of all residuals and look for patterns. If there are no patterns, it means there is no autocorrelation. The Durbin-Watson test method can be used to find autocorrelation. If there is a pattern, autocorrelation exists and it is better to avoid linear regression models and use an autoregressive model, or a moving average model, or an autoregressive moving average model, or an autoregressive integrated moving average model.
+
+**Suitability of the model.** The accuracy of the regression equation is the basis of regression analysis. All models will have some error, but understanding these statistics will help you determine whether the model can be used for your analysis, or whether additional transformations are necessary. There are two methods of testing the correctness of a regression model: **exploratory analysis** and **confirmatory analysis**.
+
+**Exploratory analysis** is the technology of data analysis using various statistical and visual methods. As part of the exploratory analysis, the MLS regression assumption is tested and the performance of various independent variables is compared. Exploratory analysis allows to compare the performance and accuracy of different models, but it cannot determine whether you should use or reject a particular model. Exploratory analysis must be conducted before the analysis of confirmation of each regression model, possibly several times, comparing different models.
+
+The following charts and statistics may be used as part of research analysis:
+
++   * dot diagram (scattering) and dot diagram matrix;
++   * histogram and analysis of normal distribution;

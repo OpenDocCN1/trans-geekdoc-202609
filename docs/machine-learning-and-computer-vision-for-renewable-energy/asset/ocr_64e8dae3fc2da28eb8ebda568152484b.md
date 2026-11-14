@@ -1,0 +1,21 @@
+# Applications of Renewable Energy Sources and Sustainable Innovations
+
+through pipes. The following three sources of green energy are classified as “green” to varied degrees depending on how they are produced.
+
+By harnessing the energy that comes from flowing water, hydroelectric energy can be produced and used to power a machine. It is most effective to accomplish this by boosting the energy per square meter by forcing water down a small path. This is typically accomplished by holding water in a dam or reservoir and using an intake opening to purify it only.
+
+Gravitational potential energy is stored when water is kept higher up in the dam, which quickens the flow into the intake. Release of the flow causes a turbine to spin, which in turn triggers a generator to start producing power.
+
+Hydroelectricity is one of the most widely used renewable energy sources due to its efficiency. 4 billion tons less greenhouse gases were emitted into the environment in 2017 as a result of the usage of hydropower to produce electricity (Hydropower, 2018).
+
+4. Geothermal Energy: Thermal energy that has been stored close below the surface of the earth is used in this form of green power. If utilized, this resource is enormous, even if extracting it requires drilling, which presents environmental issues. Although it has been utilized for thousands of years to heat up hot springs, geothermal energy may also be used to run turbines and generate electricity. There could be ten times as much energy underground in the United States as there is coal-based electricity produced today. Geothermal resources are easily accessible in certain nations, like Iceland, but their utilization depends on the geography and ongoing regulations are needed to ensure that drilling practices are entirely “green.”
+
+Geothermal energy can be utilized to heat buildings or create power by utilizing the natural heat that exists beneath the surface of the earth. Despite the fact that it harnesses a power that exists beneath our feet, geothermal energy is of small importance in the UK when compared to nations like Iceland, where geothermal heat is significantly more easily available.
+
+5. Biomass: For this renewable resource to be called a “green energy” source, it must also be adequately managed. Biomass power plants use sawdust, wood debris, and combustible organic agricultural waste as fuel sources to generate electricity. These materials do produce greenhouse emissions, but they do so far less frequently than fuels made from petroleum.
+
+Biomass is a sustainable green energy source since both plants and animals store solar energy as sugar or cellulose. A large portion of biomass is converted into liquid biofuels like ethanol and biodiesel and biogas when it comes to become useable energy. By themselves, other solid materials, like wood, can be burned to heat buildings and provide energy. According to the EPA, about 5% of the country’s total energy consumption in 2017 (Energy Information Administration, n.d.) came from biomass fuels.
+
+6. Biofuels: These organic materials can be processed into fuels like ethanol and biodiesel instead of being burned as biomass. It is projected that by 2050, biofuels will have surpassed petroleum as the primary fuel source, accounting for almost 25% of the world’s transportation fuel use, up from just 2.7% in 2010.
+
+The allure of biogas, presuming its existence, lies in its dual nature as an environmentally friendly and waste-derived energy source. Biogas is the byproduct of the breakdown of organic matter and is present in food waste, manure, sewage, and agricultural waste. Methane, carbon dioxide, and other gases are produced during fermentation and the holding of these components in oxygen-depleted containers. After that, the gas created can be sold and utilized to power cars, provide electricity, and heat houses. In addition, the waste that is digested in a biogas digester yields fertilizer that is rich in nutrients and can be used both at home and on farms.
