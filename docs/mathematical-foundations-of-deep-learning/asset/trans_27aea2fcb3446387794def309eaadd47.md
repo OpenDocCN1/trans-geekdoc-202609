@@ -1,0 +1,102 @@
+
+
+与超抛物算子相关的函数空间。
+
+Sobolev 嵌入定理指出：
+
+\( W^{k,p}(\mathcal{X}) \hookrightarrow C^m(\mathcal{X}), \tag{39} \)
+
+if \( k - \frac{d}{p} > m \), ensuring \( f_\theta \in C^\infty(\mathcal{X}) \) for smooth activations \( \sigma \). For a function \( u \in L^p(\Omega) \), its weak derivative \( D^\alpha u \) satisfies:
+
+\( \int_\Omega u(x)D^\alpha \phi(x) \, dx = (-1)^{|\alpha|} \int_\Omega v(x)\phi(x) \, dx \quad \forall \phi \in C_c^\infty(\Omega), \tag{40} \)
+
+where \( v \in L^p(\Omega) \) is the weak derivative. This definition extends the classical notion of differentiation to functions that may not be pointwise differentiable. The Sobolev norm encapsulates both function values and their derivatives:
+
+\( \|u\|_{W^{k,p}(\Omega)} = \left( \sum_{|\alpha| \leq k} \| D^\alpha u \|_{L^p(\Omega)}^p \right)^{1/p}. \tag{41} \)
+
+Key properties:
+
+- **Semi-norm Dominance**: The \( W^{k,p} \) norm is controlled by the seminorm \( |u|_{W^{k,p}} \), ensuring sensitivity to high-order derivatives.
+- **Poincaré Inequality**: For \( \Omega \) bounded, \( u - u_\Omega \) satisfies:
+
+\( \|u - u_\Omega\|_{L^p} \leq C \| Du \|_{L^p}. \tag{42} \)
+
+Sobolev spaces \( W^{k,p}(\Omega) \) embed into \( L^q(\Omega) \) or \( C^m(\overline{\Omega}) \), depending on \( k, p, q \), and \( n \). These embeddings govern the smoothness and integrability of \( u \) and its derivatives. There are several Advanced Theorems on Sobolev Embeddings. They are as follows:
+
+- 1. **Sobolev Embedding Theorem**: Let \( \Omega \subset \mathbb{R}^n \) be a bounded domain with Lipschitz boundary. Then:
+  - If \( k > n/p \), \( W^{k,p}(\Omega) \hookrightarrow C^{m,\alpha}(\overline{\Omega}) \) with \( m = \lfloor k - n/p \rfloor \) and \( \alpha = k - n/p - m \).
+  - If \( k = n/p \), \( W^{k,p}(\Omega) \hookrightarrow L^q(\Omega) \) for \( q < \infty \).
+  - If \( k < n/p \), \( W^{k,p}(\Omega) \hookrightarrow L^q(\Omega) \) where \( \frac{1}{q} = \frac{1}{p} - \frac{k}{n} \).
+- 2. **Rellich-Kondrachov Compactness Theorem**: The embedding \( W^{k,p}(\Omega) \hookrightarrow L^q(\Omega) \) is compact for \( q < \frac{np}{n-kp} \). Compactness follows from:
+  - (a) **Equicontinuity**: \( W^{k,p} \) boundedness ensures uniform control over oscillations.
+  - (b) **Rellich's Selection Principle**: Strong convergence follows from uniform estimates and tightness.
+
+The Proof of Sobolev Embedding starts with the Scaling Analysis. Define \( u_\lambda(x) = u(\lambda x) \). Then:
+
+\( \| u_\lambda \|_{L^p(\Omega)} = \lambda^{-n/p} \| u \|_{L^p(\lambda^{-1} \Omega)}. \tag{43} \)
+
+For derivatives:
+
+\( \| D^\alpha u_\lambda \|_{L^p(\Omega)} = \lambda^{|\alpha| - n/p} \| D^\alpha u \|_{L^p(\lambda^{-1} \Omega)}. \tag{44} \)
+
+The scaling relation \(\lambda^{k-n/p}\) aligns with the Sobolev embedding condition \(k > n/p\). Sobolev norms in \(\mathbb{R}^n\) are equivalent to decay rates of Fourier coefficients:
+
+\(\|u\|_{W^{k,p}} \sim \left( \int_{\mathbb{R}^n} |\xi|^{2k} |\hat{u}(\xi)|^2 d\xi \right)^{1/2}.\)
+
+For \(k > n/p\), Fourier decay implies uniform bounds, ensuring \(u \in C^{m,\alpha}\). Interpolation spaces bridge \(L^p\) and \(W^{k,p}\), providing finer embeddings. Duality: Sobolev embeddings are equivalent to boundedness of adjoint operators in \(L^q\). For \(-\Delta u = f\), \(u \in W^{2,p}(\Omega)\) ensures \(u \in C^{0,\alpha}(\overline{\Omega})\) if \(p > n/2\). Sobolev spaces govern variational problems in geometry, e.g., minimal surfaces and harmonic maps. On \(\Omega\) with fractal boundaries, trace theorems refine Sobolev embeddings.
+
+## 1.2.4 Rellich-Kondrachov 紧性定理
+
+The **Rellich-Kondrachov Compactness Theorem** is one of the most fundamental and deep results in the theory of Sobolev spaces, particularly in the study of functional analysis and the theory of partial differential equations. The theorem asserts the compactness of certain Sobolev embeddings under appropriate conditions on the domain and the function spaces involved. This result is of immense significance in mathematical analysis because it provides a rigorous justification for the fact that bounded sequences in Sobolev spaces, under certain conditions, have strongly convergent subsequences in lower-order normed spaces. In essence, the theorem states that while weak convergence in Sobolev spaces is relatively straightforward due to the Banach-Alaoglu theorem, strong convergence is not always guaranteed. However, under the assumptions of the Rellich-Kondrachov theorem, strong convergence in \(L^q(\Omega)\) can indeed be obtained from boundedness in \(W^{1,p}(\Omega)\). The compactness property ensured by this theorem is much stronger than mere boundedness or weak convergence and plays a crucial role in proving the existence of solutions to variational problems by ensuring that minimizing sequences possess convergent subsequences in an appropriate function space. The theorem can also be viewed as a generalization of the classical **Arzelà–Ascoli theorem**, extending compactness results to function spaces that involve derivatives.
+
+### Literature Review
+
+Lassoued (2026) [51] examined function spaces on the torus and their lack of compactness, highlighting cases where the classical Rellich-Kondrachov result fails. He extended compact embedding results to function spaces with periodic structures. He also discussed trace theorems and regular function spaces in this new context. Chen et al. (2024) [52] extended the Rellich-Kondrachov theorem to Hörmander vector fields, a class of differential operators that appear in hypoelliptic PDEs. They established a degenerate compact embedding theorem, generalizing previous results in the field. They also provided applications to geometric inequalities, highlighting the role of compact embeddings in PDE theory. Adams and Fournier (2003) [53] in their book provided a complete proof of the Rellich-Kondrachov theorem, along with a discussion of compact embeddings. They also covered function space theory, embedding theorems, and applications in PDEs. Brezis (2010) [54] wrote a highly recommended resource for understanding Sobolev spaces and their compactness properties. The book included applications to variational methods and weak solutions of PDEs. Evans (2022) [55] in his classic PDE textbook includes a discussion of compact Sobolev embeddings, their implications for weak convergence, and applications in variational methods. Maz'ya (2011) [56] provided a detailed treatment of Sobolev space theory, including compact embedding theorems in various settings.
+
+To rigorously state the theorem, we consider a bounded open domain \(\Omega \subset \mathbb{R}^n\) with a **Lipschitz boundary**. For \(1 \le p < n\), the theorem asserts that the embedding
+
+\(W^{1,p}(\Omega) \hookrightarrow L^q(\Omega)\)
+
+is **compact** whenever \( q \le \frac{np}{n-p} \). More precisely, this means that if \(\{u_k\} \subset W^{1,p}(\Omega)\) is a bounded sequence in the Sobolev norm, i.e., there exists a constant \( C > 0 \) such that
+
+\(\|u_k\|_{W^{1,p}(\Omega)} = \|u_k\|_{L^p(\Omega)} + \|\nabla u_k\|_{L^p(\Omega)} \le C, \quad (47)\)
+
+then there exists a **subsequence** \(\{u_{k_j}\}\) and a function \( u \in L^q(\Omega) \) such that
+
+\( u_{k_j} \to u \quad \text{strongly in } L^q(\Omega), \quad (48) \)
+
+which means that
+
+\(\|u_{k_j} - u\|_{L^q(\Omega)} \to 0 \quad \text{as } j \to \infty. \quad (49)\)
+
+To establish this rigorously, we first recall the fact that **bounded sequences in** \( W^{1,p}(\Omega) \) **are weakly precompact**. Since \( W^{1,p}(\Omega) \) is a **reflexive Banach space** for \( 1 < p < \infty \), the Banach-Alaoglu theorem ensures that any bounded sequence \(\{u_k\}\) in \( W^{1,p}(\Omega) \) has a subsequence (still denoted by \(\{u_k\}\)) and a function \( u \in W^{1,p}(\Omega) \) such that
+
+\( u_k \rightharpoonup u \quad \text{in } W^{1,p}(\Omega). \quad (50) \)
+
+This means that for all test functions \(\varphi \in W^{1,p'}(\Omega)\), where \( p' \) is the Hölder conjugate of \( p \) satisfying \( \frac{1}{p} + \frac{1}{p'} = 1 \), we have
+
+\( \int_\Omega u_k \varphi \, dx \to \int_\Omega u \varphi \, dx, \quad \int_\Omega \nabla u_k \cdot \nabla \varphi \, dx \to \int_\Omega \nabla u \cdot \nabla \varphi \, dx. \quad (51) \)
+
+However, weak convergence alone does not imply compactness. To obtain strong convergence in \( L^q(\Omega) \), we need additional arguments. This is accomplished using the **Fréchet-Kolmogorov compactness criterion**, which states that a bounded subset of \( L^q(\Omega) \) is compact if and only if it is **tight** and **uniformly equicontinuous**. More formally, compactness follows if:
+
+- 1. The sequence \( u_k(x) \) does not oscillate excessively at small scales.
+- 2. The sequence \( u_k(x) \) does not escape to infinity in a way that prevents strong convergence.
+
+To quantify this, we invoke the **Sobolev-Poincaré inequality**, which states that for \( p < n \), there exists a constant \( C \) such that
+
+\( \|u - u_\Omega\|_{L^q(\Omega)} \le C \|\nabla u\|_{L^p(\Omega)}, \quad u_\Omega = \frac{1}{|\Omega|} \int_\Omega u(x) \, dx. \quad (52) \)
+
+Applying this inequality to \( u_k - u \), we obtain
+
+\( \|u_k - u\|_{L^q(\Omega)} \le C \|\nabla(u_k - u)\|_{L^p(\Omega)}. \quad (53) \)
+
+Since \(\nabla u_k\) is weakly convergent in \( L^p(\Omega) \), we have
+
+\( \|\nabla u_k - \nabla u\|_{L^p(\Omega)} \to 0. \quad (54) \)
+
+Thus,
+
+\( \|u_k - u\|_{L^q(\Omega)} \to 0, \quad (55) \)
+
+which establishes the **strong convergence** in \( L^q(\Omega) \), completing the proof. The key insight is that compactness arises because the gradients of \( u_k \) provide control over the oscillations of \( u_k \), ensuring that the sequence cannot oscillate indefinitely without converging in norm. The crucial role of Sobolev embeddings is to guarantee that even though \( W^{1,p}(\Omega) \) does not embed compactly into itself, it does embed compactly into \( L^q(\Omega) \) for \( q < \frac{np}{n-p} \). This embedding ensures that weak convergence in \( W^{1,p}(\Omega) \) implies strong convergence in \( L^q(\Omega) \), proving the theorem.
+
