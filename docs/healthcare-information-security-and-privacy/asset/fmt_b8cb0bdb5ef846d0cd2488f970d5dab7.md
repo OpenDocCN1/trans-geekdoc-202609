@@ -1,0 +1,129 @@
+
+# H
+- Healthcare Information Security and Privacy Practitioner (HCISPP), [272](#ch10.html#page_272)
+- healthcare organizational behavior, [42](#ch2.html#page_42)–43
+- healthcare organizations, [33](#ch2.html#page_33)–61
+  - administration, [40](#ch2.html#page_40)–41
+  - credentials, [273](#ch10.html#page_273)
+  - data breaches. *See* data breaches
+  - environmental services, [41](#ch2.html#page_41)
+  - knowledge domains, [273](#ch10.html#page_273)
+  - medical technicians, [39](#ch2.html#page_39)–40
+  - overview, [3](#ch1.html#page_3), [33](#ch2.html#page_33)–34
+  - personnel. *See* personnel
+  - reputation of, [243](#ch9.html#page_243)
+  - third-party relationships, [43](#ch2.html#page_43)–56
+  - workforce dynamics, [34](#ch2.html#page_34)–43
+- healthcare providers, [5](#ch1.html#page_5), [7](#ch1.html#page_7), [129](#ch5.html#page_129), [264](#ch10.html#page_264). *See also* physicians
+- healthcare regulations/controls, [63](#ch3.html#page_63)–95
+  - applicable regulations, [63](#ch3.html#page_63)–70
+  - conforming policies/procedures, [71](#ch3.html#page_71)–79
+  - cross-jurisdictional issues, [69](#ch3.html#page_69)–70
+  - data breaches. *See* data breaches
+  - data transfer, [84](#ch3.html#page_84)–86
+  - EU Data Protection Directive, [64](#ch3.html#page_64), [66](#ch3.html#page_66), [86](#ch3.html#page_86)–87
+  - GAPP, [89](#ch3.html#page_89)–90
+  - governance frameworks, [80](#ch3.html#page_80)–82
+  - international, [83](#ch3.html#page_83)–90
+  - ISO, [87](#ch3.html#page_87)–88
+  - legal issues, [64](#ch3.html#page_64)–67
+  - OECD framework, [83](#ch3.html#page_83)–84
+  - policies/procedures, [72](#ch3.html#page_72)–79
+  - regulatory guidance, [71](#ch3.html#page_71)–79
+  - Safe Harbor Agreement, [84](#ch3.html#page_84)–86
+- HHS (Health and Human Services), [170](#ch6.html#page_170), [188](#ch7.html#page_188), [192](#ch7.html#page_192)
+- HIEs (health information exchanges)
+  - considerations, [239](#ch9.html#page_239)–240, [265](#ch10.html#page_265)
+  - notification activities, [170](#ch6.html#page_170)–171
+  - overview, [15](#ch1.html#page_15)–16
+  - sharing. *See* data sharing
+- high-deductible health plan with savings option (HDHP/SO), [7](#ch1.html#page_7)
+- HIM (health information management), [262](#ch10.html#page_262)
+- HIM professionals, [262](#ch10.html#page_262)
+- HIMSS (Healthcare Information and Management Systems Society), [65](#ch3.html#page_65), [116](#ch4.html#page_116)
+- HIPAA (Health Insurance Portability and Accountability Act)
+  - business partners and, [44](#ch2.html#page_44)–46, [127](#ch5.html#page_127)
+  - cloud service providers and, [124](#ch5.html#page_124)
+  - considerations, [66](#ch3.html#page_66), [67](#ch3.html#page_67), [69](#ch3.html#page_69), [75](#ch3.html#page_75)
+  - legal issues, [46](#ch2.html#page_46), [64](#ch3.html#page_64), [67](#ch3.html#page_67), [193](#ch7.html#page_193)
+  - overview, [226](#ch9.html#page_226)
+  - public health agencies, [51](#ch2.html#page_51)
+  - training/awareness standards, [144](#ch5.html#page_144), [145](#ch5.html#page_145)
+  - trans-border data and, [236](#ch9.html#page_236)
+- HIPAA Omnibus Final Rule, [46](#ch2.html#page_46), [64](#ch3.html#page_64), [67](#ch3.html#page_67), [193](#ch7.html#page_193)
+- HIPAA Privacy Rule, [185](#ch7.html#page_185), [188](#ch7.html#page_188)
+- HIPAA Security Rule, [115](#ch4.html#page_115)
+- HIPAA Security Rule (HSR) tool, [115](#ch4.html#page_115), [140](#ch5.html#page_140)
+- Hippocrates, [36](#ch2.html#page_36)
+- Hippocratic Oath, [181](#ch7.html#page_181)
+- HITECH (Health Information Technology for Economic and Clinical Health) Act, [64](#ch3.html#page_64), [65](#ch3.html#page_65), [188](#ch7.html#page_188)
+- HITRUST (Health Information Trust Alliance), [101](#ch4.html#page_101)–103
+- HITRUST CSF, [101](#ch4.html#page_101)–103
+- HL7 (Health Level 7), [22](#ch1.html#page_22), [233](#ch9.html#page_233)
+- HMOs (health maintenance organizations), [6](#ch1.html#page_6), [7](#ch1.html#page_7)
+- hospitals, [5](#ch1.html#page_5), [8](#ch1.html#page_8), [41](#ch2.html#page_41), [74](#ch3.html#page_74)
+- hot sites, [137](#ch5.html#page_137), [216](#ch8.html#page_216)
+- housekeeping services, [41](#ch2.html#page_41)
+- HSR (HIPAA Security Rule) tool, [115](#ch4.html#page_115), [140](#ch5.html#page_140)
+- hybrid clouds, [133](#ch5.html#page_133)
+- hybrid controls, [109](#ch4.html#page_109)
+- hybrid legal medical records, [28](#ch1.html#page_28)
+
+# I
+- IaaS (Infrastructure as a Service), [132](#ch5.html#page_132)
+- IA/CD curricula, [269](#ch10.html#page_269)–270
+- IAPP (International Association of Privacy Professionals), [272](#ch10.html#page_272)
+- ICD (International Classification of Diseases), [20](#ch1.html#page_20)–21
+- ICD codes, [18](#ch1.html#page_18)–21, [20](#ch1.html#page_20)
+- ICD-9, [18](#ch1.html#page_18)
+- ICD-10, [18](#ch1.html#page_18)
+- identification, [208](#ch8.html#page_208)
+- identify theft, [244](#ch9.html#page_244)–245
+- IDS (intrusion detection systems), [286](#ch11.html#page_286), [304](#ch11.html#page_304)
+- IEEE (Institute of Electrical and Electronics Engineers), [232](#ch9.html#page_232)
+- IG (Information Governance) Toolkit, [116](#ch4.html#page_116)
+- IHE (Integrating the Healthcare Enterprise), [22](#ch1.html#page_22)–23
+- IHS (Indian Health Service), [8](#ch1.html#page_8)
+- ILM (information life-cycle management), [25](#ch1.html#page_25)
+- imaging equipment, [23](#ch1.html#page_23)
+- IMC (information management council), [80](#ch3.html#page_80)–81
+- impact, [98](#ch4.html#page_98)
+- incident management, [274](#ch10.html#page_274)–275
+- incident reporting policy, [76](#ch3.html#page_76)–77
+- incident response
+  - analysis, [157](#ch6.html#page_157), [158](#ch6.html#page_158)–159, [162](#ch6.html#page_162)–163
+  - considerations, [160](#ch6.html#page_160), [161](#ch6.html#page_161), [220](#ch8.html#page_220)
+  - containment, [158](#ch6.html#page_158), [159](#ch6.html#page_159), [163](#ch6.html#page_163), [167](#ch6.html#page_167)
+  - detection, [157](#ch6.html#page_157), [162](#ch6.html#page_162)–163
+  - eradication, [158](#ch6.html#page_158), [159](#ch6.html#page_159), [164](#ch6.html#page_164), [167](#ch6.html#page_167)
+  - evidence collection, [158](#ch6.html#page_158), [159](#ch6.html#page_159), [163](#ch6.html#page_163), [168](#ch6.html#page_168)
+  - medical devices and, [234](#ch9.html#page_234)
+  - notification, [155](#ch6.html#page_155), [157](#ch6.html#page_157)–158, [161](#ch6.html#page_161)–165
+  - post-incident activity, [160](#ch6.html#page_160), [164](#ch6.html#page_164)–165
+  - preparation activities, [156](#ch6.html#page_156), [161](#ch6.html#page_161)–162
+  - recovery activities, [159](#ch6.html#page_159)–160, [163](#ch6.html#page_163), [167](#ch6.html#page_167)
+  - remediation, [161](#ch6.html#page_161)–165
+  - third-party incidents, [165](#ch6.html#page_165)–168
+  - triage actions, [157](#ch6.html#page_157)
+- incident response team, [81](#ch3.html#page_81)–82, [156](#ch6.html#page_156)
+- incidents. *See also* activities; cyberattacks; events
+  - activity timeline, [156](#ch6.html#page_156)–160
+  - analyzing, [157](#ch6.html#page_157), [158](#ch6.html#page_158)–159
+  - caused by third parties, [165](#ch6.html#page_165)–168
+  - considerations, [160](#ch6.html#page_160)
+  - data breaches. *See* data breaches
+  - described, [154](#ch6.html#page_154)
+  - detecting, [157](#ch6.html#page_157), [162](#ch6.html#page_162)–163
+  - vs. events, [154](#ch6.html#page_154)
+  - handling. *See* incident response
+  - indicators, [157](#ch6.html#page_157)
+  - international, [171](#ch6.html#page_171)
+  - nature of, [162](#ch6.html#page_162)
+  - notification, [155](#ch6.html#page_155), [157](#ch6.html#page_157)–158, [161](#ch6.html#page_161)–165
+  - origination point, [162](#ch6.html#page_162)
+  - precursors, [157](#ch6.html#page_157)
+  - preparing for, [156](#ch6.html#page_156)
+  - preventing, [159](#ch6.html#page_159)
+  - remediation, [161](#ch6.html#page_161)–165
+  - removing cause of, [159](#ch6.html#page_159)
+  - responding to. *See* incident response
