@@ -1,0 +1,11 @@
+# 16.2.2 Abhaya
+
+This System utilizes GPS for distinguishing the area of the individual in a tough situation. The framework contains modules that incorporate area following and enlistment of clients and their crisis contact list. It improves mostly in the live follow-up of the region of the accident using GPS across several of the engaged contacts that receive an alert from both the core device. As the root gadget area quickly changes, the GPS recognizes the specific area. The client must tap on the crisis button then the current precise area will be sent to the closest police headquarters and loved one’s part [3].
+
+# 16.2.3 Women Empowerment
+
+Different existing applications are explicit just for crisis call when they might be in danger, a few applications contain total assets for survivors of aggressive behavior at home, just as an approach to get help when you need it [10]. In any case, this Application will give data about aggressive behavior at home counteraction laws, wellbeing tips for women. To utilize the versatile Application, the client needs to enroll. All data of the client is paired in the cloud information base. The GPS framework on the advanced mobile phone of the client will find an accurate situation of the person in question. The GPS arrangement of portable will find a definite situation of the person in question. The Emergency Call System helps the casualty sends messages to the police and relatives that content area and time with this versatile Application makes an impression on pre-chosen contacts when the force catch of the telephone is pushed twice. The message contains the client’s GPS area and is conveyed at regular intervals with refreshed directions [11].
+
+# 16.2.4 Nirbhaya
+
+This portable Application communicates something specific with the client’s GPS directions to a rundown of crisis contacts when a catch on the application screen is contacted. The directions are refreshed and hit with each 300 m change in the area. Furthermore, it is complimentary and open-source, permitting upgrades and customizations to be made effectively for fast replication of the Application in different wards [15].

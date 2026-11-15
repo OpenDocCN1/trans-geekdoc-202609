@@ -1,0 +1,6 @@
+# Table 3.4 Comparative study of hybrid approach with traditional approach.
+
+| Paper name | Proposed technique | Evaluation metric | Comparison with traditional approach | Limitations |
+| :--- | :--- | :--- | :--- | :--- |
+| Kiran, et al. [16] | Embedding and content based combined and make a hybrid approach | 1. RMSE<br>2. MAE<br>3. R-squared<br>4. MSE<br>5. MAE | 1. Global average<br>2. User Average<br>3. Item Average<br>4. User K-Nearest Neighbor (KNN)-Cosine, Item-KNN-Cosine<br>5. SVD<br>6. Biased MF<br>7. SVD++<br>8. Non-Deep NN | 1. In collaborative filtering cold start case.<br>2. It allows the learning of non-linear latent features but the problem is that system handles the problem of rating prediction based but not the ranking based. |
+| Riyahi, M., et al. [17] | Discussion group uses the tagging feature for more precise recommendation. Relevance of tags on the basis of Semantics is extracted through WordNet database. | 1. Precision<br>2. Recall<br>3. F-measure | 1. Collaborative Filtering<br>2. Content-Based Filtering technique | 1. It is only focusing on discussion groups. |

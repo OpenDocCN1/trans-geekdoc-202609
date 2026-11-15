@@ -1,0 +1,5 @@
+| Paper name | Type of RS | Technique | Evaluation metric | Drawback/Future work |
+| :--- | :--- | :--- | :--- | :--- |
+| Zhang, B., et al. [25] | Collaborative Filtering | Residual Convolution CF (Work on Combined approach of PMT + CNN) | 1. RMSE | 1. Current work is on textual features, in the future latent factor features can also be considered. |
+| Gu, Y., Zhao, B., et al. [26] | Content-Based RS | An approach that learns (Supervised Learning) simultaneously how to find optimal global term weight and finds the similarity on the multiple text features between user and item profiles. | 1. Area under ROC(Receiver operating characteristics) 2. Precision 3. Recall 4. Area under precision-recall curve. | 2. The proposed approach improves AUC up to 17% but in the future efficiency can be increased. So this unified framework provides an overall relevance model. |
+| Zheng, Y., [27] | Utility-Based RS | It uses a Multi-criteria utility-based algorithm. | 1. Pearson correlation 2. Cosine similarity 3. Euclidean distance | 1. There is an issue called over expectation, which may contribute to finger-grained recommendation models. |

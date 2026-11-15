@@ -1,0 +1,1 @@
++   39. Mahmood, Md. R., Raja, R., Gupta, A., Jain, S., Implementation of Multi Sensor and Multi-Functional Mobile Robot for Image Mosaicking. SAMRIDDHI: A Journal of Physical Sciences, Engineering and Technology, 12, Special Issue (3), 189–196, 2020.
