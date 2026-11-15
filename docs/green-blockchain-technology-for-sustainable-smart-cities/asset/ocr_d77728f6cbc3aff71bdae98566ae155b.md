@@ -1,0 +1,13 @@
+aid the collection and analysis of climate data. Allowing for a gauge of the global economic impact of climate change and thus the identification of high-risk areas (Dorfleitner et al., 2021). This helps investors and banks assess and make decisions regarding capital allocation.
+
+# 6.5 Fostering green investment a great global ambition
+
+Green investment presents a massive information challenge. But modern technologies can empower organizations to capture, store, and distribute accurate real-time information to ensure investments meet the required criteria to qualify as “green.” Blockchain and DLT will transform the management of green bonds, ensuring all participants share the same data in real time (Chang et al., 2020). And because all data are immutable, provenance of green data is assured. Around the world, regulators such as the European Union are looking for ways to align finance with the physical world. Initiatives like the European green deal unlocks new green and inclusive investment opportunities in order to strengthen their market resilience. There is a universal desire to prevent green washing and direct investment toward genuinely green projects. But there is also growing awareness that every business operates in an ecosystem and must collect data on the green credentials of its suppliers, partners, and customers.
+
+# 7. Challenges of the new approaches to green finance
+
+One of the main challenges in the utilization of renewable energy resources is the lack of accurate regulatory frameworks and insufficient correlation of targets of sustainable growth with priorities of national investment policy. The lack of competitiveness pushes to be more dependent on the regulations. Governments must develop and enact regulatory frameworks to make green finance more efficient and transparent, since this is one of the significant challenges in developing sustainable finance, particularly in tokenizing green bonds and assets.
+
+# 8. Conclusion
+
+Blockchain technology provides practical solutions to enhance and stimulate sustainable green investments. Green digital finance is quickly evolving as many initiatives emerge by both the government and private organizations and influence green finance for sustainable growth. They can effectively facilitate and improve green investments, such as mobilizing private green finance, tokenizing green bonds, expanding the coverage of microfinancing, directing private capital to the best-matched green investment projects, bringing transparency to the system and reducing uncertainties, improving the carbon asset transaction system, supporting the tracking and reporting of carbon emissions,

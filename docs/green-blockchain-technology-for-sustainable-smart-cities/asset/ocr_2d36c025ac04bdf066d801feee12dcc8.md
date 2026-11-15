@@ -1,0 +1,17 @@
+facilitating the trade of renewable energies, and enhancing financial flows. Applying blockchain technology in green finance, such as tokenizing green assets and issuing green bonds, helps to decentralizing crowd funding for green projects. Blockchain can pave the way for initiatives in this field and bring about greater certainty and acceptability for investors.
+
+# References
+
++   Agliardi, E., & Agliardi, R. (2019). Financing environmentally-sustainable projects with green bonds. *Environment and Development Economics*, 24(6), 608–623. https://doi.org/10.1017/S1355770X19000020
++   Asian Development Outlook. (2021). Financing a Green and Inclusive Recovery. *Asian Development Banks*. https://www.adb.org/publications/asian-development-outlook-2021.
++   Cao, S., Nie, L., Sun, H., Sun, W., & Taghizadeh-Hesary, F. (2021). Digital finance, green technological innovation and energy-environmental performance: Evidence from China's regional economies. *Journal of Cleaner Production*, 327, 129458. https://doi.org/10.1016/j.jclepro.2021.129458
++   Casino, F., Dasaklis, T. K., & Patsakis, C. (2019). A systematic literature review of blockchain-based applications: Current status, classification and open issues. *Telematics and Informatics*, 36, 55–81. https://doi.org/10.1016/j.tele.2018.11.006
++   Centobelli, P., Cerchione, R., Vecchio, P. D., Oropallo, E., & Secundo, G. (2021). Blockchain technology for bridging trust, traceability and transparency in circular supply chain. *Information & Management*, 103508. https://doi.org/10.1016/j.im.2021.103508
++   Chang, V., Baudier, P., Zhang, H., Xu, Q., Zhang, J., & Arami, M. (2020). How Blockchain can impact financial services — the overview, challenges and recommendations from expert interviewees. *Technological Forecasting and Social Change*, 158, 120166. https://doi.org/10.1016/j.techfore.2020.120166
++   Dorfleitner, G., & Braun, D. (2019). *Fintech, digitalization and blockchain: Possible applications for green finance*. Springer Science and Business Media LLC. https://doi.org/10.1007/978-3-030-22510-0_9 (pp. –237).
++   Dorfleitner, G., Muck, F., & Scheckenbach, I. (2021). Blockchain applications for climate protection: A global empirical investigation. *Renewable and Sustainable Energy Reviews*, 149, 111378. https://doi.org/10.1016/j.rser.2021.111378
++   Du, W., Ma, X., Yuan, H., & Zhu, Y. (2022). Blockchain technology-based sustainable management research: the status quo and a general framework for future application. *Environmental Science and Pollution Research*, 29(39), 58648–58663. https://doi.org/10.1007/s11356-022-21761-2
++   Falcone, P. M. (2020). Environmental regulation and green investments: The role of green finance. *International Journal of Green Economics*, 14(2), 159–173. http://www.inderscience.com/ijge..
++   Gould, T. (2022). World Energy Investment. International Energy Agency Publication. https://www.iea.org/reports/world-energy-investment-2022.
++   Kowalski, M., Lee, Z. W. Y., & Chan, T. K. H. (2021). Blockchain technology and trust relationships in trade finance. *Technological Forecasting and Social Change*, 166, 120641. https://doi.org/10.1016/j.techfore.2021.120641
++   Krishnan, s., Balas, V. E., Golden, J., Robinson, Y. H., & Balaji, S. (2020). *Handbook of research on blockchain technology*. Academic Press.
