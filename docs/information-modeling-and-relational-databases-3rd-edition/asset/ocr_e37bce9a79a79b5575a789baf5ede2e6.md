@@ -1,0 +1,13 @@
+Activities require resources to carry out useful work. The activity definition will normally identify the type of resource required. Instances of relevant resource types are associated with running instances of activities. One resource instance may meet the needs of more than one resource type. Some resources, such as electrical power, may be consumed by an activity. Other resources may be simply utilized for a while and then freed for use in other activities.
+
+Fig. 15.8 shows how resources relate to the process structure. For simplicity, Fig. 15.8 shows resources as associated with activities. As discussed earlier, if process and subprocess definitions specify actual work, then resource definitions could also be associated with those (and, similarly, resource instances could be associated with the process and subprocess instances). “Role” and “OrgUnit” are examples of resource definitions, but there are many other possibilities. A particular resource instance may satisfy more than one resource definition. For example, an individual might be both a “Level 3 Manager” and a “Mortgage Specialist”.
+
+
+It's worth noting that resource allocation, just as information structure, tends to be treated lightly by modeling approaches centered on flow control. The relationship of process elements to organizational units also tends to have weak support, with the allocation of activities into “swimlanes” (which are discussed again later in this chapter) being the only mechanism provided in some approaches.
+
+
+We won't dwell any further on resources and organizational relationships because we are going to be mainly concerned with the information aspects of the process. The activity definitions will specify the work to be carried out, but for our purposes, it's more important to focus on the data modified or accessed by the process. If the information structure (the business objects and their relationships) has been defined in ORM, this would correspond to references to relevant object types and fact types, as shown in Fig. 15.9. Instances of these object types and fact types are used in executing instances of the corresponding activities. An ObjectTypeInstance (or a FactTypeInstance) is, of course, simply an Object (or a Fact), respectively; “instance” has been retained in the terms to emphasize the difference between the two sides of the model. As discussed previously, object types and fact types could also be related to processes and subprocesses if these contain actual work definitions.
+
+![](bbox=[0.172, 0.715, 0.856, 0.915])
+
+FIG. 15.9 Fact types, object types, and their instances.

@@ -1,0 +1,15 @@
+Section 18.5 discusses further design aspects, such as coordinating data and process models, and user interface design. Section 18.6 outlines some recent work on ontologies and the semantic web, especially the Web Ontology Language (OWL). Section 18.7 provides an introduction to metamodeling, in which schemas themselves are treated as instances of a higher-level metaschema. Section 18.8 furnishes a summary that completes this final chapter.
+
+# 18.2 Data Warehousing and OLAP
+
+Most commercial information systems are built to support heavy volumes of transactions by many users on a daily basis. Examples include banking, insurance, and order processing systems. These Online Transaction Processing (OLTP) systems typically require quick throughput for their largely predefined range of transactions, especially update transactions. To improve performance, historical data is often archived once it reaches a certain age, reducing the size of the datasets used for daily operations.
+
+A single organization may have several OLTP systems (e.g., purchasing, sales, inventory, customer records), possibly implemented using different kinds of database management systems (DBMS) or other software applications, and the coupling between such systems may be weak or even nonexistent.
+
+Over time, businesses became aware that the collective information contained in their various systems had great potential for analyzing market trends and improving their business processes. However, their OLTP systems were unsuitable for executives to perform this task, given the poor performance and complex interface for ad hoc analysis queries (e.g., aggregated multitable joins and nested correlated subqueries).
+
+Moreover, insufficient integration or history made some queries simply impossible. Partly to address the problem of integrating data from prerelational systems for analysis purposes, IBM proposed the notion of an “information warehouse”. Although performance problems delayed acceptance of this idea for some years, a later proposal for a “data warehouse” by Bill Inmon (1993) was enthusiastically embraced by the business community, and nowadays most large companies have a data warehouse.
+
+A data warehouse is an enterprise-wide, integrated, historical database of information extracted from individual data sources for the purpose of supporting analysis of the business by management. During analysis, it is read-only. Because the patterns and trends sought from the analysis tend to evolve slowly, and some imprecision is acceptable, updates are performed in bulk according to an agreed schedule (e.g., weekly).
+
+The construction of a data warehouse for a large enterprise can be a lengthy task. To exploit the benefits as soon as possible, the data warehouse is often built iteratively, one subject area at a time. As subject areas are added to the data warehouse, they may be used to load data marts (see Fig. 18.1).

@@ -1,0 +1,15 @@
+A transition entering a *deepHistory* pseudostate restores the most recently active configuration of the composite state and all its substates. A transition into a *shallowHistory* state is similar, except that the configurations of any substates are not restored.
+
+A composite state can have at most one deepHistory pseudostate and at most one shallowHistory pseudostate. In either case, if the composite state had not been active previously (i.e., it has no history), the outgoing transition from the history state is taken.
+
+Entering a *terminate* pseudostate implies that the execution of the containing state machine is terminated. This is equivalent to destroying the object with which the state machine is associated–again, “destruction” is intended here in the programming sense.
+
+In a hierarchical state machine, more than one state can be active at the same time. If a nested state is active, then its parent state and all its ancestors back to the top-level state are also active. There can be at most one active state in any one region. An orthogonal state can have an active state in each of its regions. Entering an orthogonal state implies entering each of its regions (explicitly or by default). Similarly, exiting an orthogonal state implies exiting all its regions.
+
+It’s sometimes convenient to hide the decomposition of a composite state; suppressing selected details can allow attention to be focused on larger issues. A composite state with a hidden decomposition is shown graphically by adding a small icon to the state that looks like two horizontally placed states with a connecting line, illustrated in Fig. 15.33. A tool that supports state modeling would typically have some convenient mechanism for expanding back to the detailed view of the composite state. Hiding detail in this way does not change the state model, only the way that it is displayed.
+
+![](bbox=[0.45, 0.58, 0.56, 0.64])
+
+FIG. 15.33 A state with a hidden decomposition.
+
+We’ve glossed over some of the finer details of how state machines are defined in UML. For instance, some situations can lead to nondeterministic results. One example is two transitions exiting the same state, triggered by the same event, but with different guard conditions. If the guard conditions overlap so that both evaluate to “True”, both transitions are enabled but only one of them will fire. In such cases, the algorithm for selecting which transition to fire is determined by the implementation. If guards on transition branches are framed so that it is possible for all guards to simultaneously evaluate to “False”, the model is considered ill-formed. A simple cure for this latter situation is to include a branch with the guard [else], which will be chosen if the guards on all the other branches evaluate to “False”. Another complex area is the processing of events in state machines that have extensive nesting of substates. A given event may be relevant to several substates, but deciding which one actually gets to process the event is not a trivial exercise.

@@ -1,0 +1,11 @@
+# Chapter Notes
+
+The classic discussion of the conceptual, internal, and external schemas of an information system is given in van Grietshayen (1982). Some people who worked on this ISO standard also worked on the FRISCO report (Falkenberg et al., 1998). Along with many other authors (e.g., Elmasri and Navathe, 1994), we consider the relational model of data to be a *logical* model rather than a conceptual model, mainly because it is too distant from natural language. From this viewpoint, a relational schema represents the logical portion of an internal schema (omitting details specific to the chosen DBMS, and storage and access details such as indexes). Codd (1990, pp. 33–34) proposes an alternative interpretation of the three-level architecture, in which the base relations of a relational database provide the conceptual schema, and views provide an external schema.
+
+A standard reference on requirements analysis is the ANSI/IEEE standard 830-1984. A comparative review of different approaches to information system work is given in Olle et al. (1991). An informative overview of key issues in information systems modeling is provided by Mylopoulos (1998). Pohl (1994) gives a detailed treatment of the specification, representation, and agreement dimensions of requirements engineering. Bubenko (2007) provides a historical perspective on information systems modeling.
+
+Data model patterns for various business domains are available in a number of books, including Hay (1996, 2006) and Silverston (2001a, b). These sample models are usually expressed in one of the ER notations covered later in this book.
+
+Zachman (1987) introduces his architectural framework (see https://en.wikipedia.org/wiki/Zachman_Framework). Hay (2003) provides an extensive discussion of the Zachman framework, and argues that some of the row descriptors should be renamed.
+
+Details on TOGAF may be accessed online at www.opengroup.org/togaf/ and at http://en.wikipedia.org/wiki/TOGAF. For resources on the MDA approach of the OMG, see http://www.omg.org/mda/. For the ISO RM-ODP standard, see http://committee.iso.org/sites/jtc1sc7/home/projects/flagship-standards/isoiec-10746.html. For further details on RM-ODP, see https://en.wikipedia.org/wiki/RM-ODP and https://rm-odp-new.lcc.uma.es/.

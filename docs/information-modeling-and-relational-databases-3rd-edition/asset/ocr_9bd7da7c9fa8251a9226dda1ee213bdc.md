@@ -1,0 +1,9 @@
+For example, in Fig. 9.42, the subset constraint runs from the Room-Facility role-pair projected from the path Room at anHourSlot is booked for an Activity that requires a Facility. This path includes a conceptual join on Activity. The constraint may be formally verbalized as If a Room at anHourSlot is booked for an Activity that requires a Facility then that Room provides that Facility. Fig. 9.42 includes a satisfying population for the three fact types. This again illustrates how ORM facilitates validation constraints via sample populations. The UML associations in Fig. 9.41 are not so easily populated on the diagram. Other join constraint examples are discussed in Section 10.1.
+
+![](bbox=[0.32, 0.27, 0.65, 0.59])
+
+FIG. 9.42 A join-subset constraint in ORM.
+
+In UML, the term “aggregation” is used to describe a whole/part relationship. For example, a team of people is an aggregate of its members, so this membership may be modeled as an aggregation association between Team and Person. Several different forms of aggregation might be distinguished in real-world cases. For example, Odell and Bock (Odell, 1998, pp. 137–165) discuss six varieties of aggregation (component-integral, material-object, portion-object, place-area, member-bunch, and member-partnership), and Henderson-Sellers (Barbier et al., 2000) also distinguishes several kinds of aggregation.
+
+UML 2 associations are classified into three kinds: ordinary association (no aggregation), shared (or simple) aggregation, or composite (or strong) aggregation. Hence, UML recognizes only two varieties of aggregation: shared and composite. Some versions of ER include an aggregation symbol (typically only one kind). ORM and popular ER approaches currently include no special symbols for aggregation.

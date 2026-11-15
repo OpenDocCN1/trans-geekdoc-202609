@@ -1,0 +1,117 @@
+
+
+![](img/1344db3eba3d550e6edb009556fcd95c_736_0.png)
+
+6. The following is an extract from a yearly report giving test results of reaction time (in milliseconds) and resting heart rate (in beats per minute) for members of a health club. As the table indicates, the club may gain or lose members during the year.
+(a) Schematize this using two flat ternaries.
+(b) Transform this by nesting.
+(c) Which schema do you prefer?
+
+| Month | Member | Reaction time | Heart rate |
+|---|---|---|---|
+| Jan | Jones, E | 250 | 80 |
+| | Matthews, S | 320 | 120 |
+| | Robinson, S | 300 | 100 |
+| Feb | Jones, E | 250 | 75 |
+| | Matthews, S | 300 | 100 |
+| Mar | Anderson, P | 250 | 80 |
+| | Matthews, S | 280 | 85 |
+| ... | ... | ... | ... |
+
+7. The following table indicates the rooms and times for lectures in various subjects. Schematize this using (a) flat, and (b) coreferenced approaches.
+
+| Subject | Time | Room |
+|---|---|---|
+| CS213 | Mon 3 p.m. | B19 |
+| CS213 | Wed 9 a.m. | A01 |
+| CS213 | Wed 10 a.m. | A01 |
+| EN100 | Mon 3 p.m. | F23 |
+| EN100 | Tue 3 p.m. | G24 |
+| ... | ... | ... |
+
+8. The report shown indicates student performance in subjects in one semester. Once a student fails a subject, the subject cannot be passed by the student in that semester. As students pass or fail subjects these results are recorded. It is possible that a student might have neither passed nor failed a subject taken (e.g., the exam is yet to be held).
+
+- (a) Schematize this UoD using three binaries.
+- (b) Transform this by nesting, with two attached unaries.
+- (c) Transform the two unaries into a binary.
+- (d) For this UoD, is it possible that the null for Adams AB might be updated to an actual value? What about the null for Casey J?
+
+| Student | Subjects taken | Subjects passed | Subjects failed |
+|---|---|---|---|
+| Adams AB | CS100, CS114, MP104 | CS100, CS114 | ? |
+| Brown SS | CS114, MP102 | CS114 | ? |
+| Casey J | CS100, CS114 | ? | CS100, CS114 |
+
+- 9. The following table is an extract from an output report concerning the finals of a recent judo competition. For each weight division, the four clubs that made it to the finals are recorded, together with the results for first and second places. For a given weight division, a club can obtain at most one place. No ties are possible.
+- (a) An information modeler schematizes this in terms of three fact types: Club is finalist in Event; Club wins Event; Club is second in Event. Set out this conceptual schema.
+- (b) Transform the winner and second-place predicates into a single ternary.
+- (c) Transform this schema into an equivalent nested version.
+- (d) Assuming complete information, show an alternative nested solution by assigning the places “3A” and “3B” to the clubs that didn’t get first or second in the event.
+- (e) Transform this to a flattened fact type.
+- (f) Which solution do you prefer?
+
+| Event | Finalists | Winner | Runner-up |
+|---|---|---|---|
+| Lightweight | Budokan, Judokai, Kodokan, Zendokan | Kodokan | Judokai |
+| Middleweight | Budokan, Judokai, Kodokan, Zendokan | Kodokan | Zendokan |
+| Heavyweight | Budokan, Kanodojo, Kodokan, Mifunekan | Mifunekan | Kodokan |
+
+10. The following examples are extracts of output reports from an information system about media channels. Each channel (TV or radio) has a unique, identifying call sign. Some radio channels broadcast using frequency modulation (FM), whereas others use amplitude modulation (AM). All TV channels are rated in the range 1...7 in three categories on two surveys. Channels are either commercial (com) or owned by the government (govt). All commercial radio channels have their audience composition assessed (see the sample pie charts). The mark “-” means “inapplicable because of other data”.
+
+Schematize this, including uniqueness, mandatory role, value, subtype, and frequency constraints. Provide meaningful names and definitions for each subtype. If a fact type is derived, omit it from the diagram but provide a derivation rule. Do not nest. Minimize the number of fact types in your schema (if necessary, use transformations).
+
+| Call sign | Ownership | Company | % share | Head office |
+|---|---|---|---|---|
+| ATQ8 | com | MediaCo | 100 | Brisbane |
+| CTQ3 | com | MediaCo | 50 | Brisbane |
+| | | TVbaron | 50 | Sydney |
+| TVQ3 | govt | – | – | – |
+
+| Call sign | Ownership | Company | % share | Head office | Modulation | Music played |
+|---|---|---|---|---|---|---|
+| 4BZ | com | MediaCo | 100 | Brisbane | FM | rock country |
+| RB3 | govt | – | – | – | AM | – |
+| STR5 | com | MediaCo OzRadio | 30 70 | Brisbane Cairns | AM | country |
+| 4AA | govt | – | – | – | FM | – |
+
+| Channel | Survey | News | Drama | Sport | Totals |
+|---|---|---|---|---|---|
+| ATQ8 | A | 5 | 3 | 3 | |
+| | B | 4 | 4 | 3 | 22 |
+| CTQ3 | A | 5 | 3 | 4 | |
+| | B | 5 | 4 | 5 | 26 |
+| TVQ3 | A | 3 | 4 | 4 | |
+| | B | 2 | 4 | 5 | 22 |
+
+![](img/1344db3eba3d550e6edb009556fcd95c_738_0.png)
+
+## 14.4 Other Transformations
+
+The previous two sections covered the most useful conceptual schema transformations. In this section, several other transformations of lesser importance are considered briefly.
+
+Recall PSG2, our second predicate specialization/generalization theorem (Fig. 14.16). This may be generalized further by removing constraints. First note that removing the UC on A's role in R corresponds to removing the UCs on A's roles in each of the Si predicates (see Fig. 14.36). In the absence of additional internal UCs, the R and Si binaries will be many:many. As an example, let A = Car, B = Status ("company", "private"), C = Employee, T = has, R = is used by, S1 = is provided for, and S2 = is privately used by. Allow the same employee to use many company cars and many private cars, and vice versa.
+
+![](img/1344db3eba3d550e6edb009556fcd95c_739_0.png)
+
+Now suppose the equality constraint is weakened to an upward subset constraint. The T predicate must be retained because there may be instances of A that do not play R, and hence T will not in general be derivable from the Si. Moreover, subtypes must now be introduced for the specialized predicates (Fig. 14.37). The exclusion constraint over the subtype roles is omitted because it is implied by the subtype definitions.
+
+![](img/1344db3eba3d550e6edb009556fcd95c_739_1.png)
+
+For example, consider the car UoD just discussed, where some cars might not yet be used. In this case, the subtypes are CompanyCar and PrivateCar. Cases that require one of these more general forms of PSG2 usually invoke some of the corollaries stated for the original version of the theorem (Fig. 14.16).
+
+Suppose each employee uses at most one company car and at most one private car. An external UC is now required between the Status and Employee roles in the left-hand version, and a simple UC must be applied to each role of Employee in the right-hand version. As an exercise, draw both schema versions for this UoD and prove that a frequency constraint of ≤2 is implied on the role played by Employee in the left-hand version.
+
+If an object type in an m:n binary has two values, the fact type can be converted to a functional one by converting the object type to one that allows concatenated values. A simple example is shown in Fig. 14.38. The transformation from left to right is called *value concatenation*, and the inverse transform is *value separation*. In this example, a physician may be trained in medicine, acupuncture, or both. Allowing the both-case to be recorded as a concatenated value (med-acu) is a “quick and dirty” way of effectively creating a set object type (in this case, DisciplineSet).
+
+Appropriate translation rules are needed to license the transformation (e.g., Physician is trained in Discipline ‘med’ iff Physician is needed in DisciplineSet in {‘med’, ‘med-acu’}). Moreover, the open/closed-world approach adopted should be the same for both. For example, if the left-hand version has a closed-world interpretation, then the code ‘med’ in the right-hand version means “medicine only”.
+
+![](img/1344db3eba3d550e6edb009556fcd95c_740_0.png)
+
+Although sometimes used as a quick fix, this kind of transformation rapidly becomes unwieldy as the number of atomic values increases because a list of n atomic values leads to 2^n − 1 concatenated values (e.g., if we added herbalism and physiotherapy to give four atomic disciplines, we now have 15 concatenated disciplines). In such cases, if functional predicates are required, it is better to replace the binary with n unaries, one for each value, before mapping.
+
+Alternatively, if the target system supports set-valued fields (e.g., a nested relational or an object-oriented database), a mapping to a set-valued structure is possible.
+
+In the presence of a pair-subset constraint, a binary may be *contracted* to a unary; conversely, the unary may be *expanded* to a binary (see Fig. 14.39). Note that the UC on the first role of R is implied by the other constraints (as an exercise, prove this).
+
+![](img/1344db3eba3d550e6edb009556fcd95c_740_1.png)
+

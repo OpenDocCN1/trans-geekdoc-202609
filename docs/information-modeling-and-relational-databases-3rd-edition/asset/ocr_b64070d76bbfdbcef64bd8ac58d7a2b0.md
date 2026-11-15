@@ -1,0 +1,15 @@
+subtyping portrayal becomes in comparison to the no-subtyping alternative. Note, however, that subtyping cannot replace composite set-comparison constraints (between sequences of two or more roles).
+
+Be careful to avoid circular definitions—don’t try to define a subtype in terms of itself. For example, suppose we defined BusCatcher as Employee who catches some Bus and then attached the bus predicate to this subtype (i.e., BusCatcher catches Bus). This specifies that the role of catching a bus is played only by those who play the role of catching a bus. Such circular reasoning is not very informative! In very rare cases, a role used to define a subtype may be a reference role. For example, we might record some property only for people whose surname begins with “Z”.
+
+For the schema of Fig. 6.39, the subtypes MalePatient and FemalePatient are mutually exclusive and collectively exhaustive. When these two conditions are met, the subtypes are said to form a partition of their supertype. We may display this situation on a hypothetical Euler diagram, as shown in Fig. 6.40(a). This is analogous to the process of partitioning or slicing a pie or pizza into pieces, as shown in Fig. 6.40(b). The pieces don’t overlap (mutual exclusion), and all the pieces together make up the whole pizza (collective exhaustion).
+
+Our understanding of the subtype names “MalePatient” and “FemalePatient” helps us to “see” a partition. But such names are only character strings to the computer system, so how is the partition formally captured in the model?
+
+Look back at Fig. 6.39. The mutual exclusion between MalePatient and FemalePatient is implied by their definitions, together with the uniqueness constraint on the gender predicate (Each Patient is of at most one Gender). The constraint that MalePatient and FemalePatient exhaust Patient is implied by the subtype definitions, the {“M”, “F”} constraint, and the mandatory role on the gender predicate (Each Patient is of at least one Gender). Because ORM demands that derived subtypes be well defined and all relevant constraints on defining predicates be declared (graphically or textually), any exclusion or exhaustion constraints on derived subtypes are always implied.
+
+As humans, we can use our understanding of meaningful subtype names to “see” whether subtypes are exclusive or exhaustive. This shortcut depends on a judicious choice of subtype names. For example, if we unwisely chose the subtype names “Man” and “Woman” to partition the Patient type, the exhaustion constraint would not apply in a UoD that includes child patients or adult people who are not patients.
+
+For clarity, it is usually best to display subtype exclusion and exhaustion constraints explicitly, even if these are implied. With complex subtype graphs, the explicit display of such implied constraints can make the diagram cluttered. Ideally, a computer-aided software engineering (CASE) tool should enable the display of such constraints to be toggled on or off.
+
+![](bbox=[0.11, 0.83, 0.86, 0.95])

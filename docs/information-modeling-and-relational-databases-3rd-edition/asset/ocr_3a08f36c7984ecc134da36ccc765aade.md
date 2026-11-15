@@ -1,0 +1,15 @@
+The resource nodes on the left of Fig. 18.20 denote an individual book and an individual person. However, the resource nodes on the right denote the types Book and Person. The type predicate relates an instance to a type, and means “is an instance of”. RDF also allows descriptions of resource collections (e.g., sets and lists), and RDF graphs can be serialized into XML format using RDF/XML.
+
+As the example in Fig. 18.20 shows, RDF graphs allow nodes that are instances or types, and allow arcs that represent relationships between instances, or relationships between instances and types. RDF also allows relationships between types and types (e.g., Woman is_a Person). RDF even allows you to state that a type is an instance of itself (e.g., Class is_of_type Class), which can lead to formal problems such as Russell's paradox. Moreover, no special semantics is assigned to any predicate, so the is_an_instance_of relationship and the is_a_subtype_of relationships are treated the same as the has_name relationship (apart from different strings used for the URIs). So, there is no ability to perform inferences based on knowledge of special properties for certain predicates (e.g., transitivity of is_a_subtype_of).
+
+RDFS builds on RDF by providing inbuilt support for classes and subclassing. For example, resources can be typed as classes (using rdfs:Class) and the predefined predicate rdfs:subClassOf is defined to be transitive. For a given predicate, the sets of instances playing the subject and object roles are called the domain and range, respectively. RDFS allows predicates to be typed by restricting their domain (using rdfs:domain) and range (using rdfs:range), respectively. Membership in a collection can also be specified using the rdfs:member property.
+
+Despite these improvements, RDFS is still both too inexpressive (e.g., it cannot constrain associations to be other than m:n, and it cannot express complex properties by conjoining existing properties) and too expressive (e.g., like RDF, it allows you to state that Class is an instance of itself, and its underlying logic is undecidable).
+
+In 2014, RDF was upgraded to RDF 1.1, and RDFS was upgraded to RDFS 1.1. Both these standards identify resources by Internationalized Resource Identifiers (IRIs). While URIs use ASCII characters, IRIs use the Universal Coded Character Set (Unicode/ISO/ IEC 10646) to cater for non-English characters.
+
+For a detailed primer on RDF 1.1, see https://www.w3.org/TR/rdf11-primer/. The RDFS 1.1 standard is accessible at http://www.w3.org/TR/2014/REC-rdf-schema-20140225/. In 2023, the W3C published a working draft of RDFS 1.2 (see https://www.w3.org/TR/rdf-schema/.
+
+# OWL and Its Sublanguages
+
+Like RDFS, OWL is restricted to binary fact types (no n-aries or unaries). OWL has a simpler formal semantics than RDFS, disallowing some freedoms in RDFS while at the same time adding the ability to capture further constraints. OWL is used to specify the ontology schema (called a terminological box or Tbox) for a business domain, and RDF/XML is used to mark-up conforming instance data (the fact population is called an assertional box or Abox).

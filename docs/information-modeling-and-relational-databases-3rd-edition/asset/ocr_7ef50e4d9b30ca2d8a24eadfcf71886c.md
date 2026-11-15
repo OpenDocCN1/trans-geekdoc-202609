@@ -1,0 +1,11 @@
+![](bbox=[0.17, 0.1, 0.85, 0.33])
+
+FIG. 15.26 An activity diagram for a simple sales process.
+
+The diagram is self-explanatory, but not unique, in the sense that the same process could have been depicted in several slightly different ways. For example, the join and the fork that immediately follow it could have been combined into a join/fork construct that would have appeared as a thick bar with two edges entering and two edges leaving. Combining a join and a fork in this way can make diagrams slightly tidier but does not affect the semantics.
+
+The execution of the process can be simulated by tracing the flow of a token in a particular instance of the process represented by the diagram. The token originates at the initial node. A customer places an order, which is received by the company's sales department. The first decision is to either accept or reject the order. The two guard conditions, [rejected] and [accepted], are mutually exclusive. If the token takes the [rejected] branch, it immediately reaches the merge and appears on its output edge. After the order is closed, the token reaches the activity final node, which immediately ends the process instance. If the token takes the [accepted] branch, the order is filled. When the token reaches the fork, two tokens are generated. The upper token causes the order to be shipped, and the lower token stimulates a series of actions to invoice the customer and eventually receive payment.
+
+The upper and lower branches have no implied timing constraints, so either could be the first to complete. The following join waits for a token to arrive on both branches before emitting its own single token. This immediately forks into two other branches. The token on the upper branch reaches the merge that we have already discussed and causes the order to be closed. The token on the lower branch reaches a decision. If the customer is new, then they are added to the customer database, but for an existing customer, the token is immediately consumed by the flow final node.
+
+The second fork in the diagram is not balanced (there is no corresponding join), but we eliminate the token in the lower branch because it eventually reaches a flow final node. This ensures that adding the customer to the database does not interfere with the closing
