@@ -1,0 +1,11 @@
+The model achieved a validation accuracy, F1 score, and AUC score of 95.83%, 96.68%, and 95.38%, respectively.
+
+An in general study was conducted about the applications of machine learning in various fields. Subbarao et al. [26] explore the application of machine learning techniques to enhance the adoption and efficiency of solar energy in urban settings. Sardar et al. [27] provide an in-depth analysis of the role of machine learning in transforming healthcare by leveraging biomedical big data, addressing both the significant potential and the challenges that need to be overcome. Sardar et al. [28] provide a comprehensive overview of the concepts and theory behind explainable AI, highlighting its significance, especially in medical data analysis. It discusses various approaches to achieving explainability, applications in healthcare, and the challenges and future directions for research in this field. Guru et al. [29] present a novel approach to brain tumor identification and classification using an adapted AlexNet architecture, demonstrating significant improvements in accuracy and efficiency. The proposed method shows great potential for enhancing diagnostic processes in medical imaging.
+
+Going over the various findings of the survey, we were able to understand the shortcomings of the various approaches and learn about the future scope of possibilities. We concluded that there is room for advancement and improvement by the application of different approaches to deep learning and models while also building systems around it to make it a complete product.
+
+# 13.3 PROPOSED ARCHITECTURE
+
+To implement the above-stated pneumonia detection model, we followed the architecture outlined in this section.
+
+We selected a dataset of chest X-ray images, which was available from an online Kaggle data repository. The chest X-ray images, both anterior and posterior, were chosen from “Guangzhou Women and Children’s Medical Center, Guangzhou”. The X-ray images had been collected previously through various checkups and studies done as part of their routine.

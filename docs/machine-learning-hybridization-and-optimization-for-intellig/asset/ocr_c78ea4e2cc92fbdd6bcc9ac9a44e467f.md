@@ -1,0 +1,12 @@
+| Reference | No. of robots | Technique used | Type of environment | Pros | Cons |
+|---|---|---|---|---|---|
+| František Duchoň et al. | Single robot | Modified A* algorithm | Known and static | Simple and relatively fast and can be modifiable easily | updating of path information Only applicable to quick path finding scenarios |
+| Kaushlendra Sharma et al. | Multi-robot | GA and ILP | Unknown and static | Improved performance, average path length, and elapsed time | Cannot work well with large warehouses |
+| Akshay Kumar Guriji et al. | Single-robot | Time-efficient A* algorithm | Known and static | Reduction in execution time and improvement in path length | Only applicable to applications where little cost of path length is present |
+| Toolika Arora et al. | Single robot | Genetic algorithm | Unknown and dynamic | Achieved good execution time and path length | Genetic algorithm is not applied on the complete space |
+| Xin Chen et al. | Multi-robot | Windowed hierarchical cooperative A* approach | Unknown and dynamic | Only fewer turns are needed and reduced travel time of robot | Low efficiency |
+| Michal Čáp et al. | Multi-robot | Revised version of prioritized planning and ORCA | Known and dynamic | Message exchange between robots is reliable and instant | Low success rate when high number of robots are used |
+| Cardarelli et al. | Multi-robot | Geometric and decision data fusion | Known and dynamic | High flexibility and efficiency | Only applicable to more intelligent manufacturing applications |
+| Akhlaqu Rahman et al. | Multi-robot | Multilayer decision algorithm | Known and dynamic | High performance and utilization of resources | Will not work well with complicated applications |
+
+Using fuzzy logic, any problem can be solved by a machine in the same amount of time as a human. A user must create knowledge-based logic with a set of specifications for operating a mobile robot, and the mobile robot must then provide an approach that relies on that information and its turning ability [46]. More control devices can be managed by mobile robots using fuzzy instructions than they can with standard methods that utilize the same quantity of memory. By perceiving the input, this fuzzy logic enables the

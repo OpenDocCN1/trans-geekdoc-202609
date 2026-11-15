@@ -1,0 +1,1 @@
+of the 10th International Conference on Green Computing and Engineering Technologies (ICCGET®), September 18–19, 2024, Sea Cliff Resort, Zanzibar, https://iccgct.org/.

@@ -1,0 +1,14 @@
+| Sl. No | Year of publication | Authors | Explored entity | Findings |
+| :--- | :--- | :--- | :--- | :--- |
+| 7 | 2010 | Sonia Waharte and Niki Trigoni [32] | Greedy Look Ahead Planning | Here, various parameters are discussed which can affect the search time of a missing victim. However, this paper can be advanced, to add new criteria which might help in faster searching of the target. |
+| 8 | 2010 | Silvia Ferrari et al. [33] | Task Assignment | It discusses the deployment of a mobile sensor network to detect mobile targets in a plane. In the real world, mobile targets are mostly not in a plane, but in a 3D environment. This is one the further scope of this paper |
+| 9 | 2011 | H. Chung and Joel W. Burdick [21] | Agent-based mobility | It proposes a solution for the spatial search problems in which a mobile agent searches a stationary target in a given region to declare whether the target is present or absent. It does not discuss situations where the target is not stationary. |
+| 10 | 2013 | Natallia Katenka et al. [34] | Sensor Management | The authors describe the use of a framework to track more than one target using binary decisions collected by sensor networks that are wireless. It does not discuss the situation where the targets are mobile. |
+| 11 | 2014 | Mohamed Elbanhawi and Milan Simic [35] | Dynamic Programming | The motive of this paper is to go through the state of the art in motion planning, test and examine planners with implementation details. It also throws light on the challenges related to motion planning and proposes some approaches which can help to overcome those challenges. |
+| 12 | 2015 | J¨urgen Scherer et al. [36] | Line Formation | A group of drones is coordinated with the help of a distributed control system. The system is implemented with the help of a robot operating system (ROS). It can provide real-time video stream from a UAV to more than one ground station with the help of wireless infrastructure. |
+| 13 | 2019 | Tanvir Habib Sardar, Ahmed Rimaz Faizabadi [37] | parallel computing | Finding the best method to parallelize a program, trying with a variety of well-known applications using various parallelization strategies |
+| 14 | 2020 | Mustafa Hamurcu and Tamer Eren [38] | Multicriteria Decision-Making for Defence (MCDM) | Discusses Multi-Criteria Decision Making (MCDM) and other efficient approaches to select the UAV. |
+
+# ## 2.3 CONCLUSION AND FUTURE WORK
+
+We have discussed various types of decision-making algorithms in this chapter, like centralized decision making, distributed decision making, and their subcategories. We have also found the role of big data processing technologies to be very crucial in managing the information which gets

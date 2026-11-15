@@ -1,0 +1,11 @@
++   • Set up the .env file, and place our API keys there.
+
+# 16.3.2 RESULTS AND DISCUSSION OF THE TURTLE SIDESTEP GAME DEVELOPMENT
+
+This is an NFT game that is powered by Chainlink’s decentralized oracle and operates on the Polygon network on the Ethereum blockchain. Visual Studio Code and a web browser equipped with MetaMask Wallet are the necessary pieces of software. The current score at the checkpoint is at least 110 points greater than the previous best score achieved by the player. The better the score that is attained for a new checkpoint, the faster the NFT character that the player is rewarded with will be. With increased speed, the player is able to navigate the various platforms more quickly and easily get higher scores. Because users would desire to buy NFTs with better speed, this quality works as a selling point for the product. Every time the player reaches a new checkpoint score, they are given a new random turtle NFT as a prize. Every new turtle NFT that is created has its own distinctive name, a randomly generated picture, and a variable speed that is scaled according to the score that the player has earned. Playing the game is a lot of fun, and it has the potential to become rather difficult as the game progresses due to the increasing speed of the platforms.
+
+# 16.4 DISCUSSION ON THE DEVELOPMENT OF THE GAMES
+
+The present games have lower graphic quality frameworks. They demand high processors and are created on many complex software programs, as well as enormous RAM and high-end CPUs, but our games do not require all of them because they are based on Unity3D, which is more responsive and easy to use. The authors contrasted the qualitative, visual perception-based analysis with the existing gaming design because there is no quantitative matrix to assess the success of gaming design. It appears that constructing a character using objects and traversing between successive frames are difficult tasks, as the games require complex hardware and higher level coding to run.
+
+The benefits of designing these games are as follows:

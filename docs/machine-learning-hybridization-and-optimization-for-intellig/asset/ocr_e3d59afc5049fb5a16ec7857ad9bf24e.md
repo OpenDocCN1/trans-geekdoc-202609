@@ -1,0 +1,7 @@
+dataset used for training. Reduced LR is used to prevent the model from overshooting the loss minima if the validation loss is not decreasing. On top of that, if validation accuracy keeps going down for a while during training, we will stop using the algorithm to keep going. This particular CNN model employs the SGD optimization algorithm. After the model was compiled, it was fit on the train batches for 20 epochs.
+
+# 15.3 RESULTS AND DISCUSSION
+
+Using the concept of the ASL Alphabet dataset, we have generated a dataset of numbers ranging from 1 to 10. Every frame that recognizes a hand in the defined ROI will be saved in a directory called “gesture directory,” which has two folders called “train” and “test,” each of which has 10 folders for numbers 1–10 containing pictures taken with the create_gesture_data.py.
+
+We have recorded and stored 602 images for the training dataset and 40 images for the testing dataset for each of the integers (suppose 1) in their corresponding directories. A sample on the testing and training dataset can be seen in Figure 15.5. Next, we assemble and fit the model to these training batches using the stochastic gradient descent optimization approach for 20 epochs. The subsequent batch of test images is then examined in the testing dataset, and the scores for accuracy and loss are obtained. Whenever a sign language is displayed in the camera’s live feed, the system classifies it into the different numbers from 1 to 10 and generates an output as depicted in Figure 15.6.

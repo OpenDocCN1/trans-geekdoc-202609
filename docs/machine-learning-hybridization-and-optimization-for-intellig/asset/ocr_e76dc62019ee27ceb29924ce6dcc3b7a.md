@@ -1,0 +1,11 @@
+# 8.4 SECURITY CHALLENGES OF IOT DEFENSE SYSTEMS
+
+# 8.4.1 GATHERING BATTLEFIELD INFORMATION
+
+The gathered information is processed through command, control, intelligence, surveillance, and observation systems that process and distribute the most strategic information, such as the location of an inbound threat [20, 21]. This information can be coordinated and utilized to create a common operational picture, which supports decision-making by commanders and improves coordination and control in the operational area. IoT can play a vital role in collecting, analyzing, and delivering real-time blended data for quick decision-making. This enhances situational awareness for acquiring data on adversary's intent, capability, and actual position [3]. IoT can enhance battlefield recognition from the global, company, platoon, and crew authorities down to a single officer's level.
+
+A specific challenge for detecting coordinated storms against IoT devices used to launch distributed denial-of-service (DDoS) attacks is difficult to identify and can take weeks or months to establish before the attacks actually begin. A commonly used software application programmed to conduct DDoS attacks is a "bot." The "bot" software can be discreetly present on any vulnerable web structure and activated in a sequence. Numerous DDoS attacks occur when multiple bot-infected structures are activated and coordinated against specific targeted systems on the IoT.
+
+# 8.4.2 HEALTH SURVEILLANCE AND MONITORING
+
+A combination of IoT sensors monitoring things like temperature, blood pressure, heart rate, cholesterol levels, and blood glucose throughout the body will permit the well-being of the soldier to be checked in real time. Soldiers can be alerted of unusual states like dehydration, sleep deprivation, elevated pulse, or low glucose, and, if necessary, a clinical response team in a base medical clinic can be notified. The soldiers are equipped with special head protectors like helmets with integrated control sensors to detect force and other traumas [4]. Small, intelligent health-monitoring and medical service devices are increasingly being used frequently in battle, and

@@ -1,0 +1,11 @@
+models, while others are instances of prefabs, which are custom objects that make up the majority of your game. Asset files and prefabs are both located in the game's root directory.
+
+When new items are placed in the scene or removed from it, those objects will simultaneously appear in and disappear from the hierarchy.
+
+**Project:** In a nutshell, this reveals the contents of the assets folder located on your drive. This window will provide access to everything, including game objects, scripts, textures, folders, models, audio, video, and so on and so forth. The window menu gives users the option to convert to a one-column version of the project view, which displays the hierarchical structure list but hides the icon view. This view is ideal for those who want a more compact layout. Additionally, the browser features a robust search function, which is very helpful for identifying assets in projects that are either vast or unfamiliar.
+
+**Panel:** This panel, known as the inspector, will display various attributes and properties of any game objects that have been selected. The attributes and components that are pertinent to the selection will be displayed after it has been made. When you select a game object in the hierarchy or scene view, the inspector will show the properties of all components and materials on that object and allow you to edit them. You can also select a game object in the scene view directly to see those properties. The values for the camera's position, rotation, and scale can all be edited, in addition to the values for the object's position, rotation, and scale.
+
+# 17.3.2 RESULTS AND DISCUSSION
+
+They require high processors and are built on many complicated software programmes, and they require large RAM and high-end processors, but our games do not require all of those as our games are built on Unity3D, which is more responsive and easier to use. Because there is no quantitative matrix to validate the effectiveness of gaming design, the authors compared the qualitative visual perception-based analysis against the existing gaming design. It appears that creating a character using objects and transversing against successive frames are a difficult problem, as sophisticated hardware and higher end coding are required to execute the games.

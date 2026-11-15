@@ -1,0 +1,9 @@
+game levels and build scenes for them. Textures can be still photos or video files, and they are used to lay on top of or wrap around game objects in order to give them a visual impact. By utilising Unity, we are afforded the additional benefit of having access to an asset shop that is stocked with a variety of asset and texture packs. These may be effortlessly imported into the programme with no additional steps required.
+
++   (iii) Effects and lighting: Now, in order to further contribute to the overall aesthetic appeal of our game, we can utilise lighting. There are numerous kinds of light sources, and each one contributes something unique to the gameplay experience. Additionally, additional effects, such as sound and extra graphics, are required for certain actions, such as breaking objects, shooting bullets, or causing certain explosions. These requirements can be easily met by utilising the particle system that Unity provides, which allows for the creation of particle effects via collisions and explosions.
+
+# 17.3.1 DESIGN AND DEVELOPMENT OF THE ARCADE GAME
+
+In the scene view, we constructed the levels for our game, scene, or 3D project.
+
+Figure 17.3 shows the placement and manipulation of each of our game objects, which will take place right here. The ability to move and manipulate objects within the scene view is one of the most important functions in Unity, and the software already provides shortcut keys for the operations that are most frequently used. You can translate, rotate, and scale individual game objects by using the transform tools that are located in the toolbar. As can be seen in the image below, each has a corresponding gizmo that appears around the selected game object when viewed in scene view.

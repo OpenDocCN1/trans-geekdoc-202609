@@ -1,0 +1,16 @@
++   103.1 (2022): 1–12.
++   4. Sardar, Tanvir Habib, and Zahid Ansari. “An analysis of distributed document clustering using MapReduce based K-means algorithm.” Journal of The Institution of Engineers (India): Series B 101.6 (2020): 641–650.
++   5. Goldberg, R. P. “Survey of virtual machine research.” IEEE Computer 7.6 (1974): 34–45.
++   6. Sardar, Tanvir H., and Zahid Ansari. “Distributed big data clustering using mapreduce-based fuzzy C-medoids.” Journal of The Institution of Engineers (India): Series B 103.1 (2022): 1–10.
++   7. VMWare Inc. VMWare Virtual Appliance Marketplace, appliances, 22/4/2010.
++   8. Sardar, Tanvir Habib, and Zahid Ansari. “Partition based clustering of large datasets using MapReduce framework: An analysis of recent themes and directions.” Future Computing and Informatics Journal 3.2 (2018): 247–261.
++   9. Bellary, Mohammed Zakir, et al. “Medical image analysis of knee osteoarthritis using modified deep CNN.” Journal of Survey in Fisheries Sciences 10.2S (2023): 133–144.
++   10. Guru, Prasad MS, et al. “Brain tumor identification and classification using a novel extraction method based on adapted Alexnet architecture.” 2023 6th International Conference on Information Systems and Computer Networks (ISCON). IEEE, 2023.
++   11. Sardar, Tanvir Habib, and Zahid Ansari. “An analysis of MapReduce efficiency in document clustering using parallel K-means algorithm.” Future Computing and Informatics Journal 3.2 (2018): 200–209.
++   12. Sardar, Tanvir Habib, Sunanda Das, and Bishwajeet Kumar Pandey. “Explainable AI (XAI): Concepts and theory.” Medical data analysis and processing using explainable artificial intelligence. In Big Data Computing: Advances in Technologies, Methodologies, and Applications, by Tanvir H. Sardar, B. K. Pandey. CRC Press, 2024, 1–18.
++   13. Sardar, T. H., A. Khatun, S. Sengupta, Y. Alam, and T. Ara. “Machine learning in the healthcare sector and the biomedical big data: Techniques, applications, and challenges.” In Big Data Computing: Advances in Technologies, Methodologies, and Applications, by Tanvir H. Sardar, B. K. Pandey. CRC Press, 2024, 336–352.
++   14. Sardar, Tanvir Habib, Aishwarya Muttineni, and Ravi Ranjan. “The future of big data in customer experience and inventory management.” In Big Data Computing: Advances in Technologies, Methodologies, and Applications, by Tanvir H. Sardar, B. K. Pandey. CRC Press, 2024, 233–248.
++   15. Sardar, Tanvir Habib, Amina Khatun, and Sahonowaj Khan. “Design of energy aware collection tree protocol in wireless sensor network.” 2017 IEEE International Conference on Circuits and Systems (ICCS). IEEE, 2017.
++   16. Sardar, Tanvir Habib, Ahmed Rimaz Faizabadi, and Zahid Ansari. “An analysis of data processing using Mapreduce paradigm on the Hadoop framework.” International Journal of Emerging Research in Management and Technology 6.5 (2017): 132–143.
++   17. Sardar, Tanvir Habib, Zahid Ansari, and Amina Khatun. “An evaluation of Hadoop cluster efficiency in document clustering using parallel K-means.” 2017 IEEE International Conference on Circuits and Systems (ICCS). IEEE, 2017.
++   18. Sardar, Tanvir Habib, and Ahmed Rimaz Faizabadi. “Parallelization and analysis of selected numerical algorithms using OpenMP and Pluto on symmetric multiprocessing machine.” Data Technologies and Applications 53.1 (2019): 20–32.

@@ -1,0 +1,7 @@
+![](bbox=[0.15, 0.08, 0.79, 0.3])
+
+# FIGURE 18.4 A visualization of the dataset used
+
+# 18.3.2.2 Preprocessing and Understanding the Histogram
+
+The image needs to be cleaned up and resized for further editing before we begin working on it. Gaussian noise, shot noise, salt-and-pepper representation noise, quantization noise (uniform noise), film noise, and other types of noise are also present in the images. Changing the range of pixel intensity values during normalization is also carried out. It is also used to characterize the disease based on the attributes from the input images. Several processes of image processing include image background removal, noise removal, image scaling, picture segmentation, and image feature extraction. Certain image databases contain low-resolution images; therefore, image scaling is not always essential. The presence of light is an important aspect of the dataset. And while preprocessing, we want to make our model robust, and thus, we have presented a histogram equalizer curve from where we can interpret the spread and use histogram equalizer for better classifier performance. Figures 18.5 and 18.6 show the histogram plot and CDF plot, respectively. In the next section shown in, we have used the image preprocessing technique to increase robustness in the proposed model.

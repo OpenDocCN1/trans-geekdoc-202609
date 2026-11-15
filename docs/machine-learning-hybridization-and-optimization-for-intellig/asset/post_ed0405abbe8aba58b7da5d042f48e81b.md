@@ -1,0 +1,266 @@
+
+- Bi-Directional LSTM, 24, 28, 34
+
+## Big data analytics
+
+- analysis of classifier performance, 175
+- assessment of several classifiers, 169
+- comparative assessment of classifiers, 174, 175
+- earth-observing spacecraft network, 171, 173
+- image classification, 172–173
+- techniques, 172, 173
+- Mahalanobis distance classifier classified image, 176
+- minimum distance classifier classified image, 176
+- neural network classifier classified image, 177
+- overview, 162–165
+- process of remote sensing, 163
+- random forest classifier classified image, 177
+- related works, 165–171
+- in remote sensing, 171
+- results, 174–175
+- study area, 173–174
+- support vector machine classifier classified image, 178
+- synopsis, 178
+
+## Big data computing, 4
+
+- adequate processing infrastructure, 1–2
+- cloud computing (CC), 1–2
+- cloud groups, 1
+- cloud infrastructure, 2–3
+- complexity growth (CG), 2
+- concepts, 2
+- distributed technology, 2
+- edge computing, 2–7
+- high-demand private clouds, 1
+- Internet of Things (IoT), 1–2
+- literature review, 8–10
+- scheduling, 7–8
+- specialized cloud, 2
+- synopsis, 10–11
+
+- Big data concepts, 2, 5
+
+- Bioinspired approaches, 202
+
+- Bitcoin, 266
+
+- Block-based neural network (BBNN), 157
+
+- Blockchain, 265, 266
+
+- BLTL, see Basic law transfer learning
+
+- BMHA, see Batch mode heuristics algorithm
+
+- "bot" software, see distributed denial-of-service (DDoS)
+- BoxENet model, 223
+- Breast cancer, 81, 84-86, 184
+- British sign language detection, 252-253
+- Budgetary issues, 133-134
+
+## C
+
+- CA, see Cellular automata
+- CAD, see Computer Aided Detection
+- Cameras, 212
+- Canny edge detectors, 189, 299
+- Capture of node, 130
+- Cardiovascular diseases, 144
+- CDF plot, 294, 297
+- CDN, see Content Delivery Network
+- Cellular automata (CA), 168
+- Centralized decision-making (CD), 14-15
+- Centralized information merging and centralized decision-making (CI MCD), 15-16
+- Centralized information merging and distributed decision-making (CI MDD), 16
+- Centroid feeding-based K-means clustering, 292
+- Change vector analysis (CVA), 170
+- Channel fusion (CF-Trans) technique, 87
+- Chest radiographs (CXRs), 79
+- Chest X-rays, 222, 226
+- China, 27
+- CI MCD, see Centralized information merging and centralized decision-making
+- CI MDD, see Centralized information merging and distributed decision-making
+- Classification of rice plant disease, 295-297
+- Classifier ensemble (CE), 168
+- Cloud attack/storage attacks, 130
+- Cloud computing, 108
+  - deployment models, 111
+  - environment, 9
+  - risks, 122
+  - security concerns
+    - disaster recovery and business continuity, 115
+    - legal and regulatory compliance, 116
+    - network availability, 114-115
+    - transparency, 115-116
+    - security issues, 116
+  - virtualization concerns, 117
+  - compliance concerns, 118
+- hypervisor security, 117
+- inadequate isolation, 118
+- shared infrastructure vulnerabilities, 117
+- VM sprawl, 118
+- Cloud computing virtualization
+  - security risks
+    - decoupling attacks on platforms, 121
+    - denial of service (DoS) attack, 120
+    - issue with virtual machine monitor, 120–121
+    - migration of virtual machines, 119
+    - rootkit attack, 119–120
+    - virtual machine escape, 119
+  - solutions to security issues
+    - control of virtual machine access, 122–123
+    - hypervisor security policy, 121–122
+    - isolation for security on virtual machines, 122
+    - monitoring the security of virtual machines, 123
+    - physical resource overloading, 123–124
+    - trustworthy virtual computing technology, 123
+- Cloud integration, 50
+- Cloud Service Scheduling, 10
+- Clustering-based approach, 80
+- CNNs, see Convolutional Neural Networks
+- Code attack, 129
+- Color and texture feature extraction, 299
+- Color intensity profile, 184
+- Comparative analysis, rice disease prediction, 301
+- graph of InceptionV3 and ResNet152V2, 300
+- validation accuracy of model, 301
+- Complex system, 313
+- Compliance concerns, 118
+- Computer Aided Detection (CAD), 78
+- Computer attacks, 313
+- Computer graphics rendering, 277
+- Content Delivery Network (CDN), 3
+- Convolutional neural networks (CNNs), 95, 167, 168, 171, 182, 183, 185, 241, 252, 255–256, 260, 292
+  - classifiers, 292–293
+- Cooperative multi-UAV searching, 14
+- Cooperative searching, 14
+- Correlation matrix, extracted image feature, 299
+- COVID-19, 81, 87, 266
+
+- Crop sensors, 53
+- Cryptocurrency, 265–266, 272–273
+- CT images, 79–80
+- CVA, see Change vector analysis
+- CXRs, see Chest radiographs
+- Cyberattacks, 127, 129, 137
+
+## D
+
+- Data augmentation technique, 86
+- Data compromises, 136
+- Data information, 313
+- Data interception, 313
+- Data management, 51–54, 111
+- Data privacy, 118–119, 313, 315
+- DBT datasets, see Digital breast tomosynthesis datasets
+- DD, see Distributed decision-making
+- Decompose, transfer, and compose (DeTrac), 86
+- Decoupling attacks, 121
+- Deep convolutional neural network, 171
+- Deep learning (DL), 64–65, 169
+  - Deep Fake, 307
+  - end-to-end framework, 85
+  - models, 89, 222–223, 236
+- Deep learning methodology for non-medical big data and limited medical data, extraction and annotation techniques
+  - advanced deep learning for processing medical images, 82–83
+  - CAD methods and machine learning techniques for processing medical images, 79–82
+  - encoder and decoder frameworks, 92
+    - generating captions for medical domain, 96–97
+    - generating captions for non-medical images, 93–96
+  - feature extraction methods to augment classifier performance, 90
+    - medical image features, 90–91
+    - non-medical images, 91–92
+  - overview, 78–79
+  - summary, 97
+  - synopsis, 98
+  - transfer learning frameworks for training samples, 83
+    - medical imaging, 84–88
+    - non-medical datasets, 88–90
+- Deep neural networks (DNN), 82, 307
+- Defense sector, 131
+- Defense system of IoT, 130–131
+  - challenges
+  - fleet management for equipment and vehicles, 132–133
+  - gathering battlefield information, 132
+  - health surveillance and monitoring, 132
+  - remote training, 133–134
+  - smart bases, 133
+- DEM, see Digital elevation model
+- Denial of service (DoS), 129
+  - attack, 120
+- DenseNet121 model, 223
+- Dependency mode heuristics algorithm (DMHA), 7, 11
+- DeTrac, see Decompose, transfer, and compose
+- Digital breast tomosynthesis (DBT) datasets, 70
+- Digital elevation model (DEM), 170
+- Digital Humidity and Temperature (DHT) sensor, 49
+- Digital whiteboard, 244, 245
+- Digit recognition accuracy, 241
+- Dijkstra's algorithm (DA), 203
+- DIMCD, see Distributed information merging and centralized decision-making
+- DIMDD, see Distributed information merging and distributed decision-making
+- DirectX, 279–280
+- Disease prediction model, 290, 291, 293
+- Distributed decision-making (DD), 15, 17
+- Distributed denial-of-service (DDoS), 132
+- Distributed information merging and centralized decision-making (DIMCD), 16–17
+- Distributed information merging and distributed decision-making (DIMDD), 17
+- Distributed scheduling techniques, 7
+- DL, see Deep learning
+- DMHA, see Dependency mode heuristics algorithm
+- DNN, see Deep neural networks
+- Docker, 221, 227, 233
+  - code, 230
+  - container, 114, 221, 223, 235
+  - image, 221, 224, 233, 234
+- Domain adaptation, 85
+- Domain-wise weighted ensemble, 86–87
+- DoS attack, see Denial of service attack
+- Drift-tolerance, 86
+- Drone camera, 131
+- Dynamic time warping (DTW), 146, 156
+
+- Earth-observing spacecraft network, 173
+- EC, see Edge computing
+- eCourt Project, 66
+- Edge computing (EC), 2–7
+- Edge detection technology, 299; see also Canny edge
+- ED-Net encoder-decoder architecture, 183
+- Electrocardiogram (ECG) signal, 147–148
+  - arrhythmia, 147
+  - beats per minute (BPM), 147
+  - components of waveform, 147
+  - normal characteristics of, 147, 148
+  - PhysioNet, 148
+- Emerging technologies, 47
+- Encoder and decoder frameworks, 92
+  - generating captions for non-medical images, 93–96
+  - generating captions for the medical domain, 96–97
+- Encoder-Decoder LSTM, 24, 28, 34
+- End to end encryption, 135
+- Enormous/abundant, 163
+- Equal-sized temperature data matrix, 185
+- ESA, see European Space Agency
+- Escape room, 285
+- Ethereum blockchain, 265, 272
+- European Space Agency (ESA), 165
+- Evaluation metrics of models, pneumonia prediction
+  - accuracy value, 231–233
+  - classification report of proposed model, 230, 231
+  - confusion matrix for proposed model, 230, 231
+  - loss value, 231–232
+  - plot for accuracy and loss, 232
+  - training and validation accuracy, 233
+  - training and validation loss, 231, 232
+- Explanation-based learning, 305
+
+## F
+
+- Fabry’s disease (FD), 80
+- Fake node implementation, 130
+- Faster R-CNN, 94
+- Fast Fourier transform, 150
+- FD, see Fabry’s disease
+- Feature enrichment–based CNN (FE-CNN), 91
+- Feature extraction methods, augment classifier performance, 90
