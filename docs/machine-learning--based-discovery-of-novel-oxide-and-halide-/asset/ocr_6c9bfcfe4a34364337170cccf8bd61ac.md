@@ -1,0 +1,68 @@
+| Compounds ($Q_{hn}$) | Compounds ($Q_{hn}$) | Compounds ($Q_{hn}$) |
+| :--- | :--- | :--- |
+| HgRuTeGeCl (37.51) | HgTcTeAgCl (35.89) | HgRuTeAgCl (35.74) |
+| HgTeSiCl (35.21) | HgOsTeGeCl (33.35) | HgRuTcGeCl (33.26) |
+| HgRrTeGeCl (33.15) | HgAuTeGeCl (33.07) | HgOsTeAgCl (31.95) |
+| HgTeAgCl3 (31.87) | HgPtTeAgCl (31.76) | HgPtTeAgCl (31.31) |
+| HgRrTeSiBr (30.06) | HgNiTeSiBr (29.97) | HgCoTeSiBr (29.96) |
+| HgTeGeBr3 (28.63) | HgRuTiSiBr (28.61) | HgNiTeGeBr (28.55) |
+| HgOsTeGeBr (28.54) | HgRuTeAgBr (27.59) | HgNiTeAgBr (27.51) |
+| HgCoTeAgBr (27.51) | HgTcTeAgBr (27.4) | HgRuTeGeBr (27.31) |
+| HgTcTeAgBr (26.44) | HgRuRuAgBr (26.37) | HgRrTiSiBr (26.07) |
+| HgOsTeAgBr (25.04) | HgRrTeGeBr (24.99) | HgPtGeGeBr (24.92) |
+| HgAuTeGeBr (24.88) | AuSeTeBr2 (24.82) | HgOsTeAgBr (24.24) |
+| HgIrTeAgBr (24.2) | HgPtTeAgBr (24.13) | HgAuTeAgBr (24.09) |
+
+# References
+
++   [1] P. Würfel, U. Würfel, Physics of solar cells: from basic principles to advanced concepts, John Wiley & Sons, 2016, pp. 171–175, ch. 7.
++   [2] G.J. Snyder, E.S. Toberer, Complex thermoelectric materials, Nat. Mater. 7 (2) (2008) 105–114.
++   [3] N. Gupta, R. Verma, Effect of electron-phonon coupling on transport properties of monopolar germanene: A thermoelectric perspective, Mater. Sci. Semicond. Process. 153 (2023) 107115.
++   [4] M.R. Palacin, Battery materials design essentials, Acc. Mater. Res. 2 (5) (2021) 319–326.
++   [5] R. Borah, F. Hughson, J. Johnston, T. Nann, On battery materials and methods, Mater. Today Adv. 6 (2020) 100046.
++   [6] M. DiDomenico Jr., S. Wemple, Optical properties of perovskite oxides in their paraelectric and ferroelectric phases, Phys. Rev. 166 (2) (1968) 565.
++   [7] K. Uchino, Glory of piezoelectric perovskites, Sci. Technol. Adv. Mater. 16 (4) (2015) 046001.
++   [8] I. Grinberg, D.V. West, M. Torres, G. Gou, D.M. Stein, L. Wu, G. Chen, E.M. Gallo, A.R. Akbashev, P.K. Davies, et al., Perovskite oxides for visible-light-absorbing ferroelectric and photovoltaic materials, Nature 503 (7477) (2013) 509–512.
++   [9] D. Amgar, S. Aharon, L. Etgar, Inorganic and hybrid organo-metal perovskite nanostructures: synthesis, properties, and applications, Adv. Funct. Mater. 26 (47) (2016) 8576–8593.
++   [10] Y. Fu, Z. Zhu, K. Chen, M.P. Hautzinger, X.-Y. Zhu, S. Jin, Metal halide perovskite nanostructures for optoelectronic applications and the study of physical properties, Nat. Rev. Mater. 4 (3) (2019) 169–188.
++   [11] V.-H. Nguyen, H.H. Do, T. Van Nguyen, P. Singh, P. Raizada, A. Sharma, S.S. Sana, A.N. Grace, M. Shokouhimehr, S.H. Ahn, et al., Perovskite oxide-based photocatalysts for solar-driven hydrogen production: Progress and perspectives, Sol. Energy 211 (2020) 584–599.
++   [12] G. Hodes, Perovskite-based solar cells, Science 342 (6156) (2013) 317–318.
++   [13] M.A. Haque, S. Kee, D.R. Villalva, W.-L. Ong, D. Baran, Halide perovskites: thermal transport and prospects for thermoelectricity, Adv. Sci. 7 (10) (2020) 1903389.
++   [14] S. Sun, N.T. Hartono, Z.D. Ren, F. Oviedo, A.M. Buscemi, M. Layurova, D.X. Chen, T. Ogunfunnmi, J. Thapa, S. Ramaswamy, et al., Accelerated development of perovskite-inspired materials via high-throughput synthesis and machine-learning diagnosis, Joule 3 (6) (2019) 1437–1451.
++   [15] L. Zhang, J. Miao, J. Li, Q. Li, Halide perovskite materials for energy storage applications, Adv. Funct. Mater. 30 (40) (2020) 2003653.
++   [16] G.R. Monama, K.E. Ramohlola, E.I. Iwuoha, K.D. Modibane, Progress on perovskite materials for energy application, Results Chem. 4 (2022) 100321.
++   [17] S. Muthiah, A. Bhatia, M. Kannan, Stability of metal complexes, Stab. Appl. Coord. Compd. (2020) 1–18.
++   [18] A.A. Emery, C. Wolverton, High-throughput dtf calculations of formation energy, stability and oxygen vacancy formation energy of abo3 perovskites, Sci. data 4 (1) (2017) 1–10.
++   [19] F. Lehmann, A. Franz, D.M. Többens, S. Levcenco, T. Unold, A. Taubert, S. Schorr, The phase diagram of a mixed halide (br, i) hybrid perovskite obtained by synchrotron x-ray diffraction, RSC Adv. 9 (20) (2019) 11151–11159.
++   [20] M. Mohan, N.P. Shitti, T.M. Aminabhavi, Perovskites: A new generation electrode materials for storage applications, J. Power Sources 574 (2023) 233166.
++   [21] H. Kim, J.S. Han, J. Choi, S.Y. Kim, H.W. Jang, Halide perovskites for applications beyond photovoltaics, Small Methods 2 (3) (2018) 1700310.
++   [22] F. Sahli, J. Werner, B.A. Kacmar, M. Bräuning, R. Monnard, B. Paviet-Salomon, L. Barraud, L. Ding, J.J. DiazLeon, D. Sacchetto, et al., Fully textured monolithic perovskite/silicon tandem solar cells with 25.2% power conversion efficiency, Nat. Mater. 17 (9) (2018) 820–826.
++   [23] S. Prasad, M.J. Aljafreh, A. Alshammari, M.A. Almutairi, J. Madhavan, M. S. AlSalhi, Mixed perovskite (mapb1-xclx) solar cells using light-emitting conjugated polymer dmn end-capped mdmo-ppv as a hole transport material, J. King Saud. Univ. - Sci. 34 (7) (2022) 102262.
++   [24] A. Talapatra, B.P. Uberuaga, C.R. Stanek, G. Pilania, A machine learning approach for the prediction of formability and thermodynamic stability of single and double perovskite oxides, Chem. Mater. 33 (3) (2021) 845–858.
++   [25] H. Arandiyan, Y. Wang, H. Sun, M. Rezaei, H. Dai, Ordered meso-and macroporous perovskite oxide catalysts for emerging applications, Chem. Commun. 54 (50) (2018) 6484–6502.
++   [26] H. Megaw, Crystal structures, A Work. Approach, Stud. Phys. Chem. 10 (1973).
++   [27] Q.A. Akkerman, L. Manna, What defines a halide perovskite? ACS Energy Lett. 5 (2) (2020) 604–610.
++   [28] H. Fan, X. Zhang, Y. Wang, R. Gao, J. Lang, Mn and co-doped perovskite fluorides knif3 with enhanced capacitive performance, J. Colloid Interface Sci. 557 (2019) 546–555.
++   [29] Z. Jia, W. Shi, R. Ding, W. Yu, Y. Li, C. Tan, X. Sun, E. Liu, Conversion-type nicomn triple perovskite fluorides for advanced aqueous supercapacitors, batteries and supercapacitors, Chem. Commun. 57 (64) (2021) 7962–7965.
++   [30] A.-J. Jiao, J.-F. Gao, Z.-H. He, J.-F. Hou, L.-B. Kong, Perovskite fluoride nanif3 with hollow micron sphere structure as anode for li-ion hybrid capacitors, Rare Met. 41 (10) (2022) 3370–3380.
++   [31] K.-P. Cheng, R.-J. Gu, L.-X. Wen, Application of a clustered countercurrent-flow micro-channel reactor in the preparation of kmnf3 perovskite for asymmetric supercapacitors, RSC Adv. 10 (20) (2020) 11681–11693.
++   [32] R.T. Shannon, C. Prewitt, Revised values of effective ionic radii, Acta Crystallogr. Sect. B: Struct. Crystallogr. Cryst. Chem. 26 (7) (1970) 1046–1048.
++   [33] C. Li, K.C.K. Soh, P. Wu, Formability of abo3 perovskites, J. Alloy. Compd. 372 (1-2) (2004) 40–48.
++   [34] H. Zhang, N. Li, K. Li, D. Xue, Structural stability and formability of abo3-type perovskite compounds, Acta Crystallogr. Sect. B: Struct. Sci. 63 (6) (2007) 812–818.
++   [35] Q. Sun, W.-J. Yin, Thermodynamic stability trend of cubic perovskites, J. Am. Chem. Soc. 139 (42) (2017) 14905–14908.
++   [36] M.R. Filip, F. Giustino, The geometric blueprint of perovskites, Proceedings of the National Academy of Sciences 115(21) (2018)5397-5402.
++   [37] G.S. Thompsell, A. Alankar, Predicting the formation and stability of oxide perovskites by extracting underlying mechanisms using machine learning, Comput. Mater. Sci. 211 (2022) 111506.
++   [38] P.V. Balachandran, A.A. Emery, J.E. Gubernatis, T. Lookman, C. Wolverton, A. Zunger, Predictions of new abo3 perovskite compounds by combining machine learning and density functional theory, Phys. Rev. Mater. 2 (4) (2018) 043802.
++   [39] S. Vasala, M. Karppinen, A2b′b″o6 perovskites: a review, Prog. Solid State Chem. 43 (1-2) (2015) 1–36.
++   [40] C. Li, X. Lu, W. Ding, L. Feng, Y. Gao, Z. Guo, Formability of abx3 (x = f, cl, br, i) halide perovskites, Acta Crystallogr. Sect. B: Struct. Sci. 64 (6) (2008) 702–707.
++   [41] Z. Li, Q. Xu, Q. Sun, Z. Hou, W.-J. Yin, Thermodynamic stability landscape of halide double perovskites via high-throughput computing and machine learning, Adv. Funct. Mater. 29 (9) (2019) 1807280.
++   [42] Y. Wu, P. Lazic, G. Hautier, K. Persson, G. Ceder, First principles high throughput screening of oxynitrides for water-splitting photocatalysts, Energy Environ. Sci. 6 (1) (2013) 157–168.
++   [43] G. Pilania, A. Mannodi-Kanakkithodi, B. Uberuaga, R. Ramprasad, J. Gubernatis, T. Lookman, Machine learning bandgaps of double perovskites, Sci. Rep. 6 (1) (2016) 1–10.
++   [44] G. Pilania, P.V. Balachandran, J.E. Gubernatis, T. Lookman, Data-based methods for materials design and discovery: Basic ideas and general methods, Synth. Lect. Mater. Opt. 1 (1) (2020) 1–188.
++   [45] F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, et al., Scikit-learn: Machine learning in python, J. Mach. Learn. Res. 12 (2011) 2825–2830.
++   [46] H. Breuix, T. Madach, F. Richter, H. Vahrenkamp, Experiments on the homo-lumo nature of metal-metal bonds, Angew. Chem. Int. Ed. Engl. 18 (9) (1979) 690–691.
++   [47] A. Zunger, A pseudopotential viewpoint of the electronic and structural properties of crystals, Struct. Bond. Cryt. 1 (1981) 73–135.
++   [48] K. Pearson, Vii. note on regression and inheritance in the case of two parents, Proc. R. Soc. Lond. 58 (347–352) (1895) 240–242.
++   [49] L. Breiman, Random forests, Mach. Learn. 45 (1) (2001) 5–32.
++   [50] A. Kullkarni, D. Chong, F.A. Barbersch, Foundations of data imbalance and solutions for a data democracy, Data democracy, Elsevier, 2020, pp. 83–106.
++   [51] M. Seeger, Gaussian processes for machine learning, Int. J. Neural Syst. 14 (02) (2004) 69–106.
