@@ -1,0 +1,153 @@
+level_changes:
+- line: 288
+  before: 2
+  after: 3
+- line: 298
+  before: 2
+  after: 3
+- line: 338
+  before: 2
+  after: 3
+- line: 355
+  before: 2
+  after: 3
+- line: 478
+  before: 2
+  after: 3
+- line: 925
+  before: 2
+  after: 3
+- line: 1333
+  before: 2
+  after: 3
+- line: 1457
+  before: 2
+  after: 3
+- line: 1982
+  before: 2
+  after: 3
+- line: 2149
+  before: 2
+  after: 3
+- line: 2293
+  before: 2
+  after: 3
+- line: 2771
+  before: 2
+  after: 3
+- line: 2898
+  before: 2
+  after: 3
+- line: 3251
+  before: 2
+  after: 3
+- line: 3328
+  before: 2
+  after: 3
+- line: 3470
+  before: 2
+  after: 3
+- line: 3637
+  before: 2
+  after: 3
+- line: 4111
+  before: 2
+  after: 3
+- line: 4536
+  before: 2
+  after: 3
+- line: 4583
+  before: 2
+  after: 3
+- line: 4716
+  before: 2
+  after: 3
+- line: 4731
+  before: 2
+  after: 3
+- line: 5016
+  before: 2
+  after: 3
+- line: 5122
+  before: 2
+  after: 3
+- line: 5683
+  before: 2
+  after: 3
+- line: 5756
+  before: 2
+  after: 3
+- line: 5960
+  before: 2
+  after: 3
+- line: 6385
+  before: 2
+  after: 3
+- line: 6474
+  before: 2
+  after: 3
+- line: 7170
+  before: 2
+  after: 3
+- line: 7481
+  before: 2
+  after: 3
+- line: 7581
+  before: 2
+  after: 3
+- line: 8099
+  before: 2
+  after: 3
+- line: 8189
+  before: 2
+  after: 3
+- line: 8374
+  before: 2
+  after: 3
+- line: 8456
+  before: 2
+  after: 3
+- line: 8494
+  before: 2
+  after: 3
+- line: 8770
+  before: 2
+  after: 3
+- line: 9020
+  before: 2
+  after: 3
+- line: 9208
+  before: 2
+  after: 3
+- line: 9518
+  before: 2
+  after: 3
+- line: 9897
+  before: 2
+  after: 3
+- line: 9939
+  before: 2
+  after: 3
+- line: 10217
+  before: 2
+  after: 3
+- line: 10390
+  before: 2
+  after: 3
+text_changes:
+- line: 404
+  before: 1.1 什么是[不是]密码学？
+  after: 1.1 什么是（不是）密码学？
+- line: 5606
+  before: 'ECB: 电子密码本 (**绝对 绝对 不要使用这个模式！绝对不要！！**)'
+  after: 'ECB: 电子密码本 (**绝对不要使用这个模式！绝对不要！！**)'
+- line: 4741
+  before: '**定义 6.13** (SPRP 安全) 设 $F : \{0, 1\}^\lambda \times \{0, 1\}^{blen} \to
+    \{0, 1\}^{blen}$ 为确定性函数。如果 $\mathcal{L}_{sprp-real}^F \approx \mathcal{L}_{sprp-rand}^F$，则我们称
+    $F$ 是 **安全的强伪随机置换 (SPRP)**。'
+  after: '定义 6.13 (SPRP 安全) 设 $F : \{0, 1\}^\lambda \times \{0, 1\}^{blen} \to \{0,
+    1\}^{blen}$ 为确定性函数。如果 $\mathcal{L}_{sprp-real}^F \approx \mathcal{L}_{sprp-rand}^F$，则我们称
+    $F$ 是 **安全的强伪随机置换 (SPRP)**。'
+- line: 6387
+  before: 9.2 哪里出了问题？
+  after: 9.2 What Went Wrong?
