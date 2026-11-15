@@ -1,0 +1,9 @@
+![](bbox=[0.19, 0.09, 0.8, 0.37])
+
+FIGURE 10.5 Storing and accessing of data in Blockchain.
+
+With the use of a Blockchain network, the information is shared across each node in the network block as a peer-to-peer (P2P) connection, which means it does not need any central administration to manage the system. Figure 10.5 shows how the information is stored in the Blockchain network, and how the users participate in such a network. The data captured at different stages for food and crops production in the Blockchain can be accessed only after execution of a smart contract or managing controls established between them. Smart contracts support the interchange of information saved on each block among the network participants. This means data will be accessible to each agriculture store candidate associated with this network. In the distributed computing layer, all Blockchain-related operations will be performed, including transactions, consensus, security, and more. In the security section every transaction will have its hashing key, which is very difficult to decrypt. All transaction will be displayed as ledger in the Blockchain network, which will be available to all participants who are involved in this network.
+
+# 10.4 COMPARATIVE ANALYSIS BETWEEN PROPOSED METHOD AND EXISTING METHODS
+
+Table 10.1 presents a comparative analysis between the proposed method and the previously extant methods. The parameters compared include: the design system device; data protection, cost efficiency; intelligent system design; and the use of AI, IoT, and Blockchain. The analysis has determined that the proposed methodology supports ML, IoT, and Blockchain.
