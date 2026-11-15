@@ -1,0 +1,1 @@
+That new block is then added to the previous blocks (that’s where the "chain" part of the word comes from).

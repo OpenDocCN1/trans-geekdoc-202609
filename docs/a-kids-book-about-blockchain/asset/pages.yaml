@@ -1,0 +1,638 @@
+- pgno: 0
+  md: '# a kids book about
+
+
+    ![](img/5167c4fa9ca7e8777fed57f6d583daf7_0_0.png)
+
+
+    # BLOCKCHAIN
+
+
+    by Harold Hughes'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# a kids book about'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# a
+
+
+    # kids
+
+
+    # book
+
+
+    # about
+
+
+    # BLOCKCHAIN
+
+
+    by Harold Hughes'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# a kids book about
+
+
+    Text and design copyright © 2023
+
+    by A Kids Book About, Inc.
+
+
+    Copyright is good! It ensures that work like this can exist,
+
+    and more work in the future can be created.
+
+
+    All rights reserved. No part of this publication may be
+
+    reproduced, distributed, or transmitted in any form or
+
+    by any means, including photocopying, recording, other
+
+    electronic or mechanical methods, without the prior
+
+    written permission of the publisher, except in the case of
+
+    brief quotations embodied in critical reviews and certain
+
+    other noncommercial uses permitted by copyright law.
+
+    For permission requests, write to the publisher.
+
+
+    A Kids Book About and Kids Are Ready
+
+    are trademarks of A Kids Book About, Inc.
+
+
+    Printed in the United States of America.
+
+
+    A Kids Book About books are available online: akidsco.com
+
+
+    To share your stories, ask questions, or inquire about bulk
+
+    purchases (schools, libraries, and nonprofits), please use
+
+    the following email address: hello@akidsco.com
+
+
+    ISBN: 978-1-953955-92-0
+
+
+    Designed by Gabby Nguyen
+
+    Edited by Jennifer Goldstein'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: To my “Little Leos”, Carter and Camryn, and my non-fungible dad.
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Intro
+
+
+    As grownups, there are 3 magic words we can use to explore ideas that can change
+    us forever. I. Don''t. Know.
+
+
+    The phrase “I don’t know” can unlock vital information, erase expectations, and
+    create opportunities to learn new things. When we use that magic phrase with our
+    kids, it allows us to put ourselves in their shoes and work to arrive at an answer
+    through their lens. That is what I set out to do with this book about blockchain.
+
+
+    My goal for this book is not to have all of the answers but rather to give examples
+    of how blockchain technology can—and will—be used in our lives and the lives of
+    our kids. Blockchain is fundamental to many new applications that we may hear
+    about on a daily basis. From NFTs (non-fungible tokens) to the metaverse, more
+    and more cases for the use of blockchain are being created.
+
+
+    This book was written to help start conversations around this revolutionary technology
+    and create opportunities for grownups and kids to explore how blockchain has the
+    potential to enhance and improve many aspects of our lives.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'What if I told you that
+
+
+    # # BLOCK'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# CHAIN
+
+
+    is the technology
+
+
+    of the future?'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# That someday,
+
+    you''ll use it
+
+    everywhere?'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'When you go to school.
+
+
+    When you play your favorite video game.
+
+
+    When you buy something.
+
+
+    And even when you make art!'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: You probably don't know what blockchain is yet, but that's OK—I promise.
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'Because guess what?
+
+    A lot of grownups don''t know what blockchain is yet either!'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'The cool thing is that by the end of this book, both you and your grownup will
+    know more about this new and exciting technology* called blockchain.
+
+
+    *We''ll cover lots of terms in this book. Each time you see an underlined word
+    (like technology), you''ll know you can find out more about it at the end of the
+    book.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: 'And maybe, just maybe,
+
+    you''ll have some ideas
+
+    about how you can
+
+    change the
+
+    world with it.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# So you might be asking yourself,
+
+    what is blockchain?
+
+
+    Let me explain.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Blockchain is
+
+
+    a new and different way to store or keep data.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'Now I want you to think about where you store your things.
+
+
+    You probably put your clothes
+
+
+    Your dishes go
+
+
+    Your books go'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'in a closet.
+
+
+    in a cupboard.
+
+
+    in a backpack
+
+    or on a bookshelf.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'But when it comes to data,
+
+    you store it in a
+
+
+    # data'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# base.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: 'I know all this talk about data can sound kind of boring.
+
+
+    But that couldn''t be further from the truth.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: Because when we talk about data and blockchain, things get really interesting.
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'You see,
+
+    blockchain is an amazing
+
+    new kind of database.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: 'It is more
+
+
+    # fair and transparent
+
+
+    than other types of databases.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: Older databases are often controlled by one person or company, meaning they
+    are centralized.
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: But blockchain databases are decentralized, which means they're controlled by
+    many people or companies.
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: Did you know that a blockchain database allows anyone in the world, ANYONE,
+    to see inside it in order to call out problems and keep things fair?
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'And another cool thing about blockchain is that nothing is deleted.
+
+    Ever!'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: 'Every time new information is added to the database,
+
+    a new data block is created.
+
+
+    That''s why it''s called blockchain.'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: That new block is then added to the previous blocks (that’s where the "chain"
+    part of the word comes from).
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# ALL OF THE DATA IS
+
+
+    # CONNE'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# cted!'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: 'As the chain gets longer,
+
+    more information is stored
+
+    and connected.
+
+
+    And guess what?!'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: 'It’s ALL public, which makes it nearly impossible to cheat.
+
+
+    Why?
+
+
+    Because it isn’t a secret!'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: OK, OK, OK...this is cool and all, but still kind of complicated, right?
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# Let''s talk about some of the ways blockchain is being used today!'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: 'Did you know
+
+
+    # musicians
+
+
+    are using blockchain to sell their songs so their fans can own them?'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: 'With blockchain,
+
+    fans are able to
+
+    not only play the song,
+
+    but also get money
+
+    when the song is played.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# Did you know artists are using blockchain to sell their art?'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: 'With blockchain,
+
+    the artist can make a rule
+
+    —using a smart contract—
+
+    that they get paid for every sale
+
+    of each piece of their artwork.
+
+    (That means every time the
+
+    piece of art changes hands.)'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: Did you know some countries are already using cryptocurrency as one of their
+    official forms of money?
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'With blockchain,
+
+    digital money and assets
+
+    (called cryptocurrencies),
+
+    can be created and used
+
+    just like paper money or coins.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# Why does all of this matter?
+
+
+    # Why should anyone
+
+    use blockchain today?
+
+
+    Because...'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# blockchain is transparent.
+
+
+    Each transaction is visible to everyone.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# Blockchain promotes trust.
+
+
+    There is less room to cheat the system.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# Blockchain is decentralized.
+
+
+    There isn''t only one person who knows the rules.'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: Now let's dream up what the future could look like with
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# blockchain.'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: In the future, maybe more of us will buy things using blockchain with cryptocurrencies
+    like Bitcoin or Ethereum.
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: 'This could help the
+
+
+    # 1.7 billion people
+
+
+    around the world who don''t have access to a bank.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# In the future,
+
+
+    maybe **ALL** of us will <u>vote</u> in elections with blockchain.'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: Imagine seeing your vote count on the blockchain and seeing democracy in action.
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# In the future,
+
+
+    maybe the video games you play will use blockchain to build your character.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: That way you can take that character into any game you want.
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# In the future,
+
+
+    you''ll think of new and amazing ways to use blockchain to...'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# create, make,
+
+    build, and discover.'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# BUT WHY WAIT?'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# THE FUTURE IS NOW!'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# Outro
+
+
+    When! We did it! If you''re reading this page, you made it to the end of A Kids
+    Book About Blockchain, and at the very least, you will now be able to better navigate
+    those holiday dinners where people talk about crypto.
+
+
+    Hopefully this book has helped you move from “I don’t know” to “Tell me more”
+    as you and your kid embark on this new and exciting adventure. As you further
+    explore ways to use blockchain technology, remember that while this technology
+    may be new to grownups, our kids are growing up in a digital era where its uses
+    are more common. Whether you decide to dive into NFTs or venture out into the
+    metaverse, be sure to take those next steps with discernment and an open mind.'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# # Words To Know
+
+
+    +   **Bitcoin:** A digital currency that can be exchanged between people without
+    the need for a bank.
+
+
+    +   **Centralized:** To concentrate power and authority in a single central organization.
+
+
+    +   **Cryptocurrency (or crypto):** A digital asset that is given value and used
+    in exchange for goods or services.
+
+
+    +   **Data:** Information about all sorts of stuff that is sometimes saved in
+    digital form.
+
+
+    +   **Database:** A collection of data that can be searched by using a computer.
+
+
+    +   **Decentralized:** Sharing the control of an action or organization among
+    multiple people.
+
+
+    +   **Democracy:** A government in which the people vote to elect their representatives
+    at routinely-held free elections.
+
+
+    +   **Digital:** Something you can access only by using an electronic device,
+    like a computer or smartphone.'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: 'a kids book about
+
+
+    # # Kids Are Ready.
+
+
+    Ages 6+
+
+
+    +   - Equity
+
+    +   - Needs
+
+    +   - Power
+
+    +   - Teamwork
+
+
+    # ## What''s Inside?
+
+
+    This book helps foster curiosity and conceptual discussion of an evolving technology
+    called blockchain. Through big and small ideas about practical uses for it, a
+    clear eye to the future, and with the author and his expertise guiding the reader
+    each step of the way, learn how blockchain has the power to bring positive change
+    now.
+
+
+    # ## About The Author
+
+
+    Harold Hughes (he/him) is a first-generation American who was raised in a Jamaican
+    household. As a startup founder and dad to Carter and Camryn, he lives the importance
+    of work-life prioritization, not balance. Harold and his wife, Tiffany, are raising
+    their kids in Austin, Texas. He is co-leading Black@ to foster community and bring
+    more Black people into the Web3 space.
+
+
+    akidsco.com
+
+    Designed in Portland, Oregon
+
+
+    ![](img/5167c4fa9ca7e8777fed57f6d583daf7_67_0.png)
+
+
+    ![](img/5167c4fa9ca7e8777fed57f6d583daf7_67_1.png)'
+  merge: -1
+  img_proc: true

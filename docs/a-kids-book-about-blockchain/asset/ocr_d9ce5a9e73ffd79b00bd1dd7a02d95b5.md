@@ -1,0 +1,1 @@
+But blockchain databases are decentralized, which means they're controlled by many people or companies.
