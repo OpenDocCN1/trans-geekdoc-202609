@@ -1,0 +1,40 @@
+
+## Figure 1.
+
+![](img/0e5ed5b85e46b41ac1e84d52eda7fb86_148_0.png)
+
+## EEG Data Set
+
+The data is obtained from Kaggle repository. The EEG signals of various patients are collected as data values. The original data file extracted from the open source contains 5 sets of different folders. Each file contains the recording of the activities of the brain for 23.6 seconds. The supporting time series data is sampled to 4097 points of data. Further, the data points are partitioned into 23 chunks that includes 178 data points that accounts for a second. The explanatory variable values x1, x2, x3...x178 that represents the 178 dimensional input values. And more importantly, y represents the operation of the eye in certain amount of time. It has represented in class {1, 2, 3, 4, 5} where 5 means eye has been opened, 4 means eyes has been closed, 3 represents the identification of tumor region, 2 represents the location where the tumor is spotted and 1 means the recording of the activities of the seizures. Class 1 falls under the epileptic seizure category and all the other classes fall under non-epileptic seizure category.
+
+## Data Preprocessing
+
+The pre-processing method involves various steps that includes identifying the individual trial set from the extracted dataset. Then, it is followed by filtering and rejection of artifacts. The identification is done using trigger signal. The dataset is referenced to an averaged channel. Filtering is supposed to do in removing the unwanted frequencies. The rejection of artifacts such as blinking of eyes is done using Multiple Artifact Rejection Algorithm and the signal power is checked proceeded with saving the changes in the same csv file.
+
+## Implementation of Convolution Neural Network (CNN)
+
+CNN is a Deep Neural Network that can recognize and classify particular aspects in images, and they’re commonly employed for image analysis. CNN architecture is computationally efficient which involves special convolution, pooling operations and perform parameter sharing. Image, video recognition, medical image analysis and classification, computer vision, natural language processing are only a few of their uses. The wavelet feature extracted was trained in order to detect any epileptic transients in the data values of EEG signals. The CNN is employed for training the dataset values especially for the wavelet features concerned. The Convolution Neural Network (CNN) was developed from TensorFlow. The parameters supposed to be implemented are used in optimizing the model and prevents over-fitting that includes dropout, 1-dimensional layer, balanced training, batch processing and cross-validation in determining the stopping criteria. In dropout layer, the percentage concerned for the fully connected layer has been dropped out to prevent data values over-fitting. The trained dataset value is further evaluated using Decision tree and Support Vector Machine (SVM). The dataset is classified into trained, tested, overall trained value and validation. The input feature provided for SVM and decision tree is given as the output that has been extracted from the spike detection based on CNN. The metrics obtained for the model are Accuracy, confusion matrix, average precision, recall, support and F1 score.
+
+## Machine Learning Algorithms
+
+Machine learning centers on the improvement of computer programs that can get to information and utilize it to memorize for themselves. Machine learning has played an essential role in big data systems due to its ability to efficiently discover hidden information and valuable knowledge. Appreciations to the advanced technology of machine learning and medical imaging for the rapid development of undergone computerized healthcare. Machine Learning is a data analysis of application belongs to build a model that desired predicted output for available data by predictive and statistical features.
+
+## Classification Using Machine Learning Algorithms
+
+The classifiers are used in extracting the features from the data values of EEG signals. Among the various machine learning algorithms, Random Forest, Gradient Boosting and Decision tree is implied in the recognizing the variation from the extracted data values. Random forest is a learning algorithm that is supervised. It makes a “forest” out of a gathering of decision trees, which are commonly prepared using the “bagging” method. The bagging method’s basic premise is that combining several learning models improves the overall result. Mainly, the feature is concerned with time frequency and wavelet transformations. Since random forest is supervised learning algorithm concerned, it proves to be the better suited and also reduces the complexity. Random Forest is a tree-based machine learning system that leverages by combining the control of several decision trees. A random amount of trained data is used for classification purpose. D represents the dimension of extracted input features. The dimension of the subset features which are selected is represented as d. The d value is seen to be lesser than D. Among the three classifiers, performance proves to be given better for Random Forest (RF). The error rate is found on two aspects. One, the correlation between the trees formed from extracting the valuable feature set from EEG dataset in constructing the forest. Other, is the strength of the particular tree in the selected forest. When the strength is increased, the error rate is highly reduced. The another algorithm which is taken is gradient boosting technique. In machine learning algorithm faults can be partitioned into two categories: bias error and variance error. Gradient boosting is one of the boosting strategies that is used to reduce the model’s bias error. For classification and regression, Decision Trees (DTs) are a non-parametric supervised learning method. The decision tree algorithm can be used for solving regression and classification problems; the goal is to learn simple decision rules from data attributes to develop a model that predicts the value of a target variable. Random forest is very effective in classification that helps in constructed at the training time and the output of the class can be either classification or regression. Random Forest Classifiers help to reduce model overfitting, and in some circumstances, they are more accurate than decision trees.
+
+## RESULTS AND DISCUSSION
+
+This research concluded new approaches based on the EEG signals detecting the epileptic seizure. Electrical activity is a brain EEG, this paper is used to analyze brain detects seizure problems. The spatial representing of electrodes the wavelet signals of EEG data utilize for analyzing seizure. The trained model is analyzed under various performance metrics. The measures chosen in evaluating the model are accuracy, average precision, support, recall, confusion metrics and F1 score. The random forest chooses features randomly during the training process. Therefore, it does not depend highly on any specific set of features. This is a special characteristic of random forest over bagging trees. When comparing the trained and validated data values under the implied classification algorithm, Random Forest (RF) gives the best accuracy when compared to Decision tree and Gradient Boosting. Specificity determines the ratio of classified seizure activity that has been captured accurately to the total count of labeled data values. The parameters taken for evaluation are accuracy, precision, recall, F1 score and specificity which support accurate prediction of epileptic seizure detection.
+
+### Figure 2. Confusion matrix for trained dataset using Random Forest Classifier
+
+![](img/0e5ed5b85e46b41ac1e84d52eda7fb86_151_0.png)
+
+### Figure 3. Confusion matrix for validated dataset using Random Forest Classifier
+
+![](img/0e5ed5b85e46b41ac1e84d52eda7fb86_152_0.png)
+
+### Figure 4. Confusion matrix for trained dataset using Gradient Boosting Classifier
+
+![](img/0e5ed5b85e46b41ac1e84d52eda7fb86_152_1.png)

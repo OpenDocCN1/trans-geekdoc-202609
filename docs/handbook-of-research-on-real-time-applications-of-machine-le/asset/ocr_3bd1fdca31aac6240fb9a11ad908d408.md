@@ -1,0 +1,13 @@
+# *About the Contributors*
+
+University College, Ghana, Africa; Amity University, Rajasthan, India; Trimax IT Infrastructure &amp; Services, Udaipur, India. She worked as a Founder Chair, Women in Engineering (WIE) and Secretary Position in the IEEE Liberia Subsection. She worked with Ministry of Higher Education (MoHE) in Liberia and Ghana for the Degree approvals and accreditations processes. She is interested in the field of Machine Learning and Cloud computing framework development. She has published numerous research papers in peer-reviewed international journals and conferences. She is a Reviewer, Advisor, Ambassador and Editorial board member of various reputed International Journals and Conferences.
+
+**A. Finny Belwin**, MCA, PhD, is a teaching professional living in Tamilnadu, India. Currently he is working as an Assistant Professor at Angappa College of Arts and Science, Coimbatore, India. He has more than 2 years of teaching experience. He has published many papers in National / International Journals and Conferences. His interested areas are Data mining and Internet of Things.
+
+**Sujith Jayaprakash** is currently the Head of NIIT in Accra, Ghana.
+
+**Chitra K.** is a seasoned computer science academician. She has almost a decade of teaching, programming, and administrative experience. She is presently an Assistant Professor at Rathnavel Subramaniam College of Arts and Science (Autonomous), Sulur, Coimbatore, in the School of Computer Studies (PG). She is a prolific researcher with a passion for technology. Her areas of expertise include Big Data, Machine Learning, Data Science, and other related fields. She also holds a doctorate in computer science. Chitra also possesses a number of professional certifications, including Big Data Engineering, Python and Data Structures and Algorithms.
+
+**Suganthi K.** received the B.E. degree in Computer Science and Engineering from Madras University in 2001, M.Tech degree in Systems Engineering and Operations Research and Ph.D in Wireless Sensor Network from the Anna University in 2006 and 2016 respectively. She is currently working as Assistant Professor(Senior) in the School of Electronics Engineering (SENSE) at VIT University Chennai campus, India since 2016. She is the author of more than 25 scientific publications on peer reviewed journals and conferences. Her research interests include Wireless Sensor Network, Internet of Things, Data Analytics and AI. She is an active reviewer for journals published by Elsevier, IEEE Springer, and Nature.
+
+**Apinaya Prethi K. N.** received the ME degree in Computer Science and Engineering from Anna University, Chennai in 2013. She is currently pursuing Ph.D. degree from the Department of Information and Communication Engineering in

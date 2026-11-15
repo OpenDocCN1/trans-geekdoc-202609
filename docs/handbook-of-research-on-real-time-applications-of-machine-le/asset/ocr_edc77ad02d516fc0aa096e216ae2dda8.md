@@ -1,0 +1,7 @@
+Furthermore, to calculate the accuracy, precision, and recall, we need to define the decision threshold. It will limit the flexibility of our model to adapt to the different scenarios. Furthermore, the accuracy is claimed to be biased in the case of an imbalanced dataset: if there is 95% of the traffic is benign, a naïve predictor just needs to predict everything as benign and will achieve an accuracy of 95%. To overcome the limitation of the hard decision threshold metric, the ROC AUC score is introduced (Fawcett, 2006).
+
+# Figure 5. The ROC AUC
+
+![](bbox=[0.195, 0.3, 0.795, 0.625])
+
+The ROC AUC score is visualized in Figure 4. We draw a line of FPR (False Positive Rate) and TPR (False Negative Rate). When we change the decision threshold, both FPR and TPR will change and they will a curve as we see in Figure 4. The area under the curve (AUC) is considered as the ROC AUC score. For instance, in Figure 4 we can see two ROC of two algorithms A and B, and algorithm A is considered better than algorithm B. From the chart, we can know that, if we accept the FPR of 20% with algorithm A, we can achieve the TPR of around 90%. However, if we accept the FPR of 10% only, the TPR is only about 70%. Hence, the ROC AUC score and ROC line will tell us not only the overall performance but also the detailed performance at each decision threshold.
