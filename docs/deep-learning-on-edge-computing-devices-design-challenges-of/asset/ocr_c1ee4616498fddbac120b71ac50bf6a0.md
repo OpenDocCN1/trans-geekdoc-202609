@@ -1,0 +1,9 @@
+![](bbox=[0.1, 0.095, 0.885, 0.315])
+
+# Figure 1.3 Development trend of transistor quantity.
+
+CPUs, 176 high-performance GPUs, and the astonishing power of 233 kW consumed in a game of chess.
+
+From the perspective of the development of the computing system, the development of VLSI chips is the fundamental power for the improvement of AI computing performance. The good news is that although the development of the semiconductor industry has periodic fluctuation, the well-known “Moore’s law” [22] in the semiconductor industry has experienced the test for 50 years (Fig. 1.3). Moore’s law is still maintained in the field of VLSI chips, largely because the rapid development of GPU has made up for the slow development of CPU. We can see from the figure that in 2010 the number of GPU transistors has grown more than that of CPUs, CPU transistors have begun to lag behind Moore’s law, and the development of hardware technologies [23] such as special ASICs for deep learning and FPGA heterogeneous AI computing accelerators have injected new fuel for the increase in artificial intelligence computing power.
+
+Last but not least, the third element of artificial intelligence development is an algorithm. An algorithm is a finite sequence of well-defined, computer-implementable instructions, typically to solve a class of specific problems in finite time. Performance breakthrough in the algorithm and application based on deep learning in the past 10 years is an important reason for the milestone development of AI technology. So, what is the future development trend of deep learning algorithms in the era of Internet of Everything? This problem is one of the core problems discussed in academia and industry. A general consensus is that the deep learning algorithms will develop toward high efficiency.

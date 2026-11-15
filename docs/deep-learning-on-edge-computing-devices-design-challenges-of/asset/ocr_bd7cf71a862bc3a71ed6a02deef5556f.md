@@ -1,0 +1,13 @@
+can use the contrastive divergence (CD) with Gibbs sampling to approximate the optimal parameters in an iterative way [30]. On each iteration, we apply the contrastive divergence update rule, followed by one step of gradient descent of the regularization term as in Algorithm 7.1. According to Eq. (7.14), the shrinking process of the weight parameters is uneven. After a few hundred times of iterations, the weights in short rows and columns can be reduced to near zero, leading to sparse weight parameters. It is worth noting that the mix-norm regularization is not differentiable at point zero. In practice, a small constant, e.g., \(\alpha = 0.01\), can be added in the denominator to improve the robustness of the training algorithm.
+
+Similarly to the DBN, multiple layers of AdaRBMs can be stacked to compose a DAN, and the DAN can also be trained in a layer-by-layer style. Specifically, we can train the bottom AdaRBM with CD on the training data. With the parameters frozen and the hidden unit values inferred, these inferred values can be used as the input data to train the next layer of the network.
+
+The Deep Adaptive Network, built with stacked AdaRBMs, is designed for efficient hardware implementation. Technically, the parameters of an AdaRBM are calculated offline with a four-step procedure and used to configure the DANoC hardware prototype. (1) The single-precision sparse parameters are calculated according to Algorithm 7.1; (2) The weight parameters are thresholded using a small positive value u, and the weights with small absolute values are removed; (3) The reserved positive and negative weights are represented as +1 and −1 respectively; (4) The activations are binarized using zero and one.
+
+# 7.2.4 Properties of the deep adaptive network
+
+The Deep Adaptive Network learns an efficient hardware-oriented network architecture featuring two properties.
+
++   The neural connections of the DAN are sparse. The DAN adaptively reduces the connection weights associated with negligible visible units to zero, which can be removed for efficient hardware implementation.
+
++   The activations of the DAN hidden units are sparse. Specifically, during the training phase, the AdaRBM uses \(p(h_j = 1|\mathbf{v})\) as the \(j\)th output activation to the next layer. Since the short columns of the weight matrix are reduced to zero vectors, the output activations associated with zero columns become close to a constant \(\delta(b_j)\) independent from the visible units. This property potentially makes the connection weights of the next-layer AdaRBM to be sparser.

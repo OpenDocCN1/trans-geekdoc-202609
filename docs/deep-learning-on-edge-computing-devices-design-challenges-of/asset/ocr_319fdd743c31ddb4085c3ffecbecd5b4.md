@@ -1,0 +1,11 @@
+# CHAPTER 8
+
+# Hardware architecture optimization for object tracking
+
+# 8.1 Background and challenges
+
+This chapter is based on our related publication [1]. Object tracking is a very active field in computer vision. It is widely used in various applications, such as intelligent video monitoring, industrial automation, vehicle navigation, and robot control [2–4]. Many of those applications require real-time performance, which emerges as a challenge for edge computing or embedded platforms with limited computing and storage resources. Therefore it is urgent to customize a low-cost VLSI system for high-speed object tracking.
+
+In recent years, many object tracking VLSI systems have been proposed [5–12]. However, most of them represent the object target only based on spatial textural features [5–9] and fail to make full use of the inherent motion information to ease the tracking procedure or improve the robustness against environmental variations. Some researchers have proposed an object tracking chip based on motion energy features [11] to boost tracking robustness. Extracting such motion features is computationally intensive via a stack of 3D spatiotemporal Gabor filters, requiring a huge amount of computing and memory resources, which are not plausible for edge or embedded applications. To realize flexible and robust tracking, some VLSI chips adopt hardware-algorithm codesign paradigm with an on-chip microprocessor unit (MPU) [5,11]. A significant part of the tracking workload is carried out by the MPU software in serial processing, causing performance bottleneck. To overcome this problem, some works massively employ parallel array coprocessors to improve processing speed to >1000 frame/s [9,10]. However, such fine-grained parallel processors consume a huge amount of computing resources and occupy high memory bandwidth. They do not fit low-cost edge computing or embedded systems.
+
+In this chapter, we introduce a low-cost high-speed object tracking VLSI system with unified textural and dynamic compressive features to represent the target for robust tracking via fast elliptic template matching. Dynamic motion features are extracted via simple spatiotemporal filtering:

@@ -1,0 +1,9 @@
+![](bbox=[0.105, 0.102, 0.845, 0.372])
+
+Figure 1.5 Application scenarios of cloud and edge.
+
+# 1.3.3 Cloud and edge devices
+
+Edge computing [27] refers to a concept in which a distributed architecture decomposes and cuts the large-scale computing of the central node into smaller and easier-to-manage parts and disperses them to the edge nodes for processing. The edge nodes are closer to the terminal devices and have higher transmission speed and lower time delay. As shown in Fig. 1.5, the cloud refers to the central servers far away from users. The users can access these servers anytime and anywhere through the Internet to realize information query and sharing. The edge refers to the base station or server close to the user side. We can see from the figure that the terminal devices [28] such as monitoring cameras, mobile phones, and smart watches are closer to the edge. For deep learning applications, if the inference stage can be completed at the edge, then the problem of transmission time delay may be solved, and the edge computing provides services near data sources or users, which will not cause the problem of privacy disclosure. Data show that cloud computing power will grow linearly in future years, with a compound annual growth rate of 4.6%, whereas demand at the edge is exponential, with a compound annual growth rate of 32.5%.
+
+The edge computing terminal refers to the smart devices that focus on real-time, secure, and efficient specific scenario data analysis on user terminals. The edge computing terminal has huge development prospects in the field of artificial intelligence Internet of Things (AIoT). A large number

@@ -1,0 +1,9 @@
+![](bbox=[0.156, 0.102, 0.792, 0.305])
+
+Figure 1.4 Comparison of computing power demands and algorithms for deep learning model.
+
+OpenAI, an open artificial intelligence research organization, has pointed out that “the computing resource required by advanced artificial intelligence doubles approximately every three and a half months”. The computing resource of training a large AI model has increased by 300,000 times since 2012, with an average annual increase of 11.5 times. The growth rate of hardware computing performance has only reached an average annual increase of 1.4 times. On the other hand, the improvement of the efficiency of high-efficiency deep learning algorithms reaches annual average saving of about 1.7 times of the computing resource. This means that as we continue to pursue the continuous improvement of algorithm performance, the increase of computing resource demands potentially exceeds the development speed of hardware computing performance, as shown in Fig. 1.4. A practical example is the deep learning model GPT-3 [24] for natural language processing issued in 2020. Only the cost of model training and computing resource deployment has reached about 13 million dollars. If the computing resource cost increases exponentially, then it is difficult to achieve sustainable development. How to solve this problem is one of the key problems in the development of artificial intelligence toward the pervasive intelligence.
+
+# 1.3.2 Two stages of deep learning: training and inference
+
+Deep learning is generally classified into two stages, training and inference. First, the process of estimating the parameters of the neural network model based on known data is called training. Training is sometimes also known as the process of parameter learning. In this book, to avoid ambiguity, we use

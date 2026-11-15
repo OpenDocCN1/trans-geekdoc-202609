@@ -1,0 +1,12 @@
+Table 9.1 The generalization experiment of the CCN-YOLO over VOC data sets and BSD100 data set at 0.33 sampling ratio.
+
+| Data Set | Train Set | Test Set |
+|---|---|---|
+| | VOC Train | VOC Test | BSD100 |
+| PSNR | 27.10 ± 3.90 | 26.54 ± 3.71 | 26.56 ± 2.98 |
+
+Table 9.1 is a generalization experiment on the YOLO framework over VOC and BSD100 data sets at 0.33 sampling ratio. For VOC training set, we obtain 27.10 dB PSNR, VOC testing set with 26.54 dB, and BSD100 data set with 26.56 dB. It truly performs the best on the training set, associating it with the data-driven mechanism, whereas it achieves similar performance on the testing set and BSD100 data set. Though our approach calculates the compressive sensing matrix in a data-driven manner, the compressive sensing matrix is still with full-rank and near-isometric property, which is the basic principle of compressive sensing [39,40]. Thanks to the full-rank and near-isometric property, compressive sensing module can generalize well, regardless of the distribution shift among the training set and other data sets, just done as other data-driven compressive sensing methods [41–44].
+
+Table 9.2 summarizes the experimental results of a fixed sampling ratio of 0.33 over the VOC and BSD100 data sets. For comparison, the original kernels of the YOLO were evaluated for data embedding. The experiment showed that the best kernel of the first convolutional layer of the YOLO model achieved 25.3 dB average PSNR for compressive sensing, which outperformed the random convolution approach (RandConv) by 2.1 dB [11]. By incorporating the coherence regularization the average PSNR of the CCN-YOLO convolution reached 26.5 dB. Overall, the CCN-YOLO was 2.7 dB (≈ 26.54 – 23.89) on VOC data set) to 5.2 dB (≈ 26.56 – 21.32 on BSD100 data set) higher than other compressive sensing approaches. Similar results were found for the CCN-SSD model, which achieved 25.2 dB average PSNR and 0.79 dB average SSIM over the VOC and BSD100 data sets, which were higher than the compared approaches.
+
+Fig. 9.5 compares the results of four typical VOC images captured for people detection. The measurements of PSNR/SSIM are shown below each subpicture. Generally, the CCN-YOLO showed higher PSNR/SSIM compared with other approaches. The images compressed by the CCN also look better and are less noisy. Further examination of image details showed that the CCN images generally have higher sharpness in regions containing complex contexture.

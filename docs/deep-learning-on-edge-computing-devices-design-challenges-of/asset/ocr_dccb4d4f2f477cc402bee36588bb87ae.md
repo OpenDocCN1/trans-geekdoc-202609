@@ -1,0 +1,7 @@
+![](bbox=[0.146, 0.103, 0.886, 0.442])
+
+Figure 7.5 Block diagram of the DAN on chip (DANoC), which consists of two host processors, a coprocessor and an external memory controller. The coprocessor consists of an array of pipelined deep neural networks, and each pipeline is composed of multiple Sparse Neural Cores. Each core can be configured as an AdaRBM or a neural network classifier.
+
+plier, the DANoC can process the input remote sensing and video images in real time without jamming the pipeline.
+
+The DANoC prototype is implemented using the Xilinx Zynq FPGA device, which is a programmable System on Chip (SoC) (Fig. 7.6). The ARM host processors work at 800 MHz and the coprocessor works at 100 MHz in the SoC. The Zynq7Z020 FPGA has 4.9 Mb on-chip block RAM. The hardware prototype contains 1 GB 533 MHz DDR3 on-board memory and 3.8 GB/s full-duplex memory bandwidth. The peak power consumption of the entire board is 8 watts, and the power consumption is less than 2 watts for the FPGA device. The Zynq platform is chosen because its performance increases linearly as the number of pipelines increases. To evaluate the scalability of the DANoC, a high-end version of the DANoC coprocessor is implemented using the Xilinx Zynq7100 FPGA, which contains 26.5 Mb on-chip block RAM and allows us to fit up to 30 pipelines in a single chip.

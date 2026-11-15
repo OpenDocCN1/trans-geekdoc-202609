@@ -1,0 +1,9 @@
+![](bbox=[0.19, 0.1, 0.88, 0.34])
+
+Figure 6.5 Block diagram of CA and PE.
+
+# 6.3.2 Architecture of computing array
+
+The internal block diagram of CA is shown in Fig. 6.5. A fully pipelined data path organization between all submodules is adopted to reduce the path delay and enhance the processing throughput. At the same time, our accelerator has many designs for achieving universality and configurability. The calculation of each layer is controlled by the controller which is connected to the Avalon Bus via an Avalon interface. Different PEs load the same ifmaps from the output register buffer of last layer in a ping-pong way and calculate the ofmap for each independent channel, and then write the intermediate results to the register buffer for the next computation.
+
+The core component of CA is multiple highly paralleled P PE units, which are responsible for the computation of C/F layer of BNN. The PE has several parts: Calculated Data Generator (CDG) unit, Convolution (Conv) Unit, and Batch Normalization, Activation, and Pooling (BAP) unit. The CDG unit is used for caching and generating the calculation data required by the subsequent Conv unit. It is composed of Ni shift register buffers corresponding to the channels of ifmaps, and each buffer contains sequential F rows of length Ri. To increase the reconfigurability, we design both F and Ni as configurable parameters, and the Ri can also be configured according to the ifmap size of each layer. The number of rows F is commonly equal to the size of convolution kernel, so if a streaming architecture is adopted, which pushes pixel data into register buffer per clock, then we

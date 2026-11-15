@@ -1,0 +1,9 @@
+![](bbox=[0.285, 0.105, 0.645, 0.335])
+
+Figure 1.1 Relationship diagram of deep learning related research fields.
+
+academia has also successively presented research results of artificial intelligence. After several historical cycles of development, at present, artificial intelligence has entered a new era of machine learning.
+
+As shown in Fig. 1.1, machine learning is a subfield of theoretical research on artificial intelligence, which has developed rapidly in recent years. Arthur Samuel proposed the concept of machine learning in 1959 and conceived the establishment of a theoretical method “to allow the computer to learn and work autonomously without relying on certain coded instructions” [5]. A representative method in the field of machine learning is the support vector machine [6] proposed by Russian statistician Vladimir Vapnik in 1995. As a data-driven method, the statistics-based SVM has perfect theoretical support and excellent model generalization ability, and is widely used in scenarios such as face recognition.
+
+Artificial neural network (ANN) is one of the methods to realize machine learning. The artificial neural network uses the structural and functional features of the biological neural network to build mathematical models for estimating or approximating functions. ANNs are computing systems inspired by the biological neural networks that constitute animal brains. An ANN is based on a collection of connected units or nodes called artificial neurons, which loosely model the neurons in a biological brain. The concept of the artificial neural network can be traced back to the neuron model (MP model) [7] proposed by Warren McCulloch and Walter Pitts in 1943. In this model the input multidimensional data are multiplied by the corresponding weight parameters and accumulated,
