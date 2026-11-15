@@ -1,0 +1,1529 @@
+- pgno: 0
+  md: '# Study on pile driving and sound propagation in shallow water using physics-informed
+    neural network
+
+
+    Quanzhou Jiang $^{a}$, Xianzhong Wang $^{a,b,*}$, Min Yu $^{a,b}$, Min Tang $^{c}$,
+    Bixin Zhan $^{a}$, Shuai Dong $^{a}$
+
+
+    $^{a}$ School of Naval Architecture, Ocean and Energy Power Engineering, Wuhan
+    University of Technology, Wuhan, 430063, PR China
+
+    $^{b}$ Key Laboratory of High Performance Ship Technology (Wuhan University of
+    Technology), Ministry of Education, Wuhan, 430063, PR China
+
+    $^{c}$ National Engineering Research Center Water Transport Safety (Wuhan University
+    of Technology), Ministry of Education, Wuhan, 430063, PR China
+
+
+    ARTICLE INFO
+
+
+    Handling Editor: Prof. A.I. Incencik
+
+
+    Keywords:
+
+    Pile driving
+
+    Underwater sound propagation
+
+    Physics-informed neural network
+
+    Deep learning
+
+
+    # ABSTRACT
+
+
+    A novel, effective, and precise physical-informed neural network (PINN) is presented
+    in this paper to learn and investigate pile driving and sound propagation in shallow
+    water. The validation of the proposed PINN framework is proved by comparing analytical
+    and predicted displacements of the pile and underwater sound pressure radiated
+    from pile driving. The optimization of the PINN algorithms is studied in detail
+    by tuning the hyper-parameters. And then, a fast computing PINN framework with
+    good inverse-solving abilities is constructed. A suggestion to help the neural
+    network learn partial differential equations better by adding non-zero boundary
+    conditions is put forward. It is shown that the neural network made up of a small
+    number of neurons, a shallow network with a few layers and the activation of the
+    sine function is reliable and satisfying. The identification of unknown parameters
+    in the PINN framework is carried out and discussed via various tests, and the
+    PINN method accurately predicts the solution of motion of pile driving and approximates
+    the underwater sound pressure in shallow water for a wide range of frequencies
+    and propagation distance. The advantage of the proposed PINN method is that it
+    is a powerful tool to deal with inverse problems and is independent of the frequency
+    and the distance.
+
+
+    # 1. Introduction
+
+
+    In coastal and offshore engineering, the pile is one of the most important structures
+    as foundations and support structures. There are roughly two kinds of piles in
+    terms of cross-section, solid pile and pipe pile. The pipe pile is widely used
+    because of its good mechanical properties and lower cost. The installation of
+    piles is an essential practice in offshore engineering. However, intense impulsive
+    underwater noise due to pile driving can affect aquatic life, for example, fishes,
+    sea turtles, and marine mammals (Henninger and Watson, 2005; Madsen et al., 2006;
+    Popper and Hastings, 2009; Bailey et al., 2010; Knaap Inge et al., 2022; 2011;
+    MacGillivray, 2013; Marshall, 2013; Ryan Wilkes et al., 2014; Lippert and Otto
+    von Estorff, 2014; Amaral et al., 2022), the vibro-acoustic physical model of
+    pile driving has not been established on common ground (Lippert et al., 2016).
+    There are several common problems when these theoretical and numerical models
+    are used and compared to each other, for instance, the absence of an analytical
+    solution for the problem, the lack of available measurement data, and the high
+    computational costs. One of the toughest problems of all these numerical methods
+    and theoretical models is the uncertain values or unknown parameters in these
+    proposed physical models according to measured data or experimental results which
+    are usually sparse, limited, and expensive.
+
+
+    According to the universal approximation theorem, a potential and powerful way
+    to address the above problem is to use the artificial neural network (ANN), an
+    advancing and intelligent tool, to learn from certain data and invert the significant
+    parameters of those physical models. Many studies of deep learning have been carried
+    out recently to solve physical problems, such as partial differential equations,
+    including the Poisson equation, Laplace equation, Helmholtz equation, Burgers'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/8474a2fd3be569b241d455a588c0d640_1_0.png)
+
+
+    Fig. 1. Scheme of the equivalent model of sound propagation.
+
+
+    | Procedure | DeepXDE for solving the dynamic problem of pile driving |
+
+    |---|---|
+
+    | Step 1 | Define parameters of the pile driving model. |
+
+    | Step 2 | Define the axial coordinate and the length of the pile in the geometry
+    module. Set variables in inverse problems. |
+
+    | Step 3 | Define partial differential equations of pile driving. |
+
+    | Step 4 | Define common boundary conditions. Set additional boundary conditions
+    in inverse problems. |
+
+    | Step 5 | Define non-zero boundary conditions. |
+
+    | Step 6 | Construct geometry, PDEs, boundary conditions, and training data. Sample
+    and set additional train data in inverse problems. |
+
+    | Step 7 | Build a neural network (neurons, layers, activation, initializer).
+    |
+
+    | Step 8 | Compile and set the learning rate, and use an optimizer to minimize
+    the loss. |
+
+
+    | Procedure | DeepXDE for function approximation of sound propagation in shallow
+    water |
+
+    |---|---|
+
+    | Step 1 | Define parameters of the sound propagation model. |
+
+    | Step 2 | Define axial coordinate and radial coordinate in the geometry module.
+    |
+
+    | Step 3 | Define the function of sound propagation. |
+
+    | Step 4 | Construct geometry, function, training, and testing data. |
+
+    | Step 5 | Build a neural network (neurons, layers, activation, initializer).
+    |
+
+    | Step 6 | Compile and set the learning rate, and use an optimizer to minimize
+    the loss. |
+
+
+    equation, Navier-Stokes equation, Allen-Cahn equation, etc (Pang et al., 2019;
+    Zhang et al., 2019, 2020; Mao et al., 2020; Wight and Jia, 2021; Salvatore et
+    al., 2022). One of the mightiest tools is developed as a so-called Physical-informed
+    neural network (PINN) to solve PDEs (Raissi et al., 2019). PINN has been studied,
+    used, and optimized in many physical fields, for example, in fluid mechanics and
+    vibration (Raissi et al., 2020; Chen et al., 2021), structural durability (Xue
+    et al., 2022), wave propagation (Alkhdhar and Mohamed, 2021). Different from the
+    finite element method (FEM), using PINN to approximate the solution is a mesh-free
+    method, which means the computational efficiency is irrelevant to the frequency
+    of models (Karniadakis et al., 2021; Sacchetti et al., 2022). And more importantly,
+    by data-driven modeling techniques, PINN has the extraordinary ability to solve
+    unknown parameters at very little cost (Tartakovsky et al., 2020; He et al., 2020;
+    Lu et al.,
+
+
+    2021). Once Feed-forward-Neural Network (FNN) is built and the physical law is
+    embedded as additional knowledge, the inverse problems, with minimal coding, can
+    be easily solved based only on very few data.
+
+
+    The main work of this paper includes two parts, the dynamic and acoustic studies
+    based on PINN frameworks. The first section is the dynamic behavior study of offshore
+    pipe piles in water using a physical-informed neural network, including forward
+    problems and inverse problems. In this part, the accuracy, efficiency, and convenience
+    of the proposed PINN method to predict some unknown parameters of coupled pile
+    driving model are demonstrated. The other is the study on acoustic propagation
+    in shallow water based on the normal mode theory, in which the significant advantage
+    of the PINN method is found as a frequency-independent and distance-independent
+    method.
+
+
+    # 2. Mathematical formulations
+
+
+    # 2.1. Pile driving
+
+
+    An offshore pipe pile can be modeled as a vertical, thin, and elastic cylindrical
+    shell, and the loss factor is usually so small that can be neglected. The toe
+    of the pipe pile is in the seabed and its top end is impacted by external force.
+    There are two typical kinds of pile driving, impact pile driving and vibratory
+    pile driving. Impact pile driving is rapid and broadband, while vibratory pile
+    driving is with a narrower frequency band and lower underwater sound pressure
+    level. No matter which way to drive a pile into the soil, the study of the vibrational
+    characteristics of the pile is primary. In the model of pile driving, a thin elastic
+    cylindrical pile pipe is considered to investigate its dynamic behavior (Junger
+    and Feit, 1986). And the sound propagation of pile driving in shallow water is
+    studied using the normal mode theory (Ellis and Chapman, 1985). The main concern
+    of our work is to investigate the ability of PINN to study the dynamic behaviors
+    and underwater sound pressure radiated from the pile driving in shallow water.
+    So, the effects of the seabed on the pile are considered but replaced by a reasonable
+    approximation.
+
+
+    Define $x$ and $r$ as the axial coordinate and radial coordinate of the pile,
+    $u$ and $w$ as the axial displacement and radial displacement of the pile, respectively.
+    Also, there are some geometric and material symbols as follows: $\rho$, the density
+    of the pile, $E$, Young''s modulus of elasticity, $\mu$, Poisson ratio, $L$, the
+    length of the pile, $R$, the radius of the pile, $h$, the wall thickness of the
+    pile. In the dynamic analysis of a thin cylindrical shell in water, such assumptions
+    are made in advance: 1) The azimuthal vibration is independent among three types
+    of vibration; 2) There is no variation with radius in partial differential equations;
+    3) Only sound pressure is considered as an external force; 4) Torsion and bending
+    involving fourth order terms are neglected. Therefore, the equations of motion
+    can be simplified to
+
+
+    ```
+
+    \(\frac{\partial^2 u(x,t)}{\partial x^2} + \frac{\mu}{R} \frac{\partial w(x,t)}{\partial
+    x} = \frac{\rho(1-\mu^2)}{E} \frac{\partial^2 u(x,t)}{\partial t^2}\) (1a)
+
+    ```
+
+
+    ```
+
+    \(\frac{\mu}{R} \frac{\partial u(x,t)}{\partial x} + \frac{w(x,t)}{R^2} = -\frac{\rho(1-\mu^2)}{E}
+    \left( \frac{P_a}{\rho h} + \frac{\partial^2 w(x,t)}{\partial t^2} \right)\) (1b)
+
+    ```
+
+
+    where $P_a$ is the fluid radiation pressure and acts normally to the wall of the
+    pipe pile. Via a coupled fluid-structure interaction (FSI), its expression can
+    be given as
+
+
+    ```
+
+    \(P_a(x,t) = Z(x,t) \frac{\partial w(x,t)}{\partial t}\) (2)
+
+    ```
+
+
+    in which $Z(x,t)$ represents the impedance relationship between the pile and water
+    at the wall of the pipe pile, and can be computed via the inverse Fourier transform
+    as follows'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/8474a2fd3be569b241d455a588c0d640_2_0.png)
+
+
+    Fig. 2. Scheme of the pile driving model: (a) forward problems; (b) inverse problems.
+
+
+    | | Common boundary conditions | | Non-zero boundary conditions | |
+
+    |---|---|---|---|---|
+
+    | | On the top of piles | On the end of piles | On the top of piles | On the end
+    of piles |
+
+    | CC | \( w|_{x=0} = 0 \) | \( w|_{x=L} = 0 \) | \( \frac{\partial w^2}{\partial
+    x^2}|_{x=0} = D_1 \) | \( \frac{\partial w^2}{\partial x^2}|_{x=L} = D_3 \) |
+
+    | SS | \( \frac{\partial w}{\partial x}|_{x=0} = 0 \) | \( \frac{\partial w}{\partial
+    x}|_{x=L} = 0 \) | \( \frac{\partial w^3}{\partial x^3}|_{x=0} = D_2 \) | \( \frac{\partial
+    w^3}{\partial x^3}|_{x=L} = D_4 \) |
+
+    | | \( w|_{x=0} = 0 \) | \( w|_{x=L} = 0 \) | \( \frac{\partial w^3}{\partial
+    x^3}|_{x=0} = D_1 \) | \( \frac{\partial w^3}{\partial x^3}|_{x=L} = D_3 \) |
+
+    | | \( \frac{\partial w^2}{\partial x^2}|_{x=0} = 0 \) | \( \frac{\partial w^2}{\partial
+    x^2}|_{x=L} = 0 \) | \( \frac{\partial w^3}{\partial x^3}|_{x=0} = D_2 \) | \(
+    \frac{\partial w^3}{\partial x^3}|_{x=L} = D_4 \) |
+
+    | FF | \( \frac{\partial w^2}{\partial x^2}|_{x=0} = 0 \) | \( \frac{\partial
+    w^2}{\partial x^2}|_{x=L} = 0 \) | \( \frac{\partial w^3}{\partial x^3}|_{x=0}
+    = D_2 \) | \( \frac{\partial w^3}{\partial x^3}|_{x=L} = D_4 \) |
+
+    | | \( \frac{\partial w}{\partial x}|_{x=0} = 0 \) | \( \frac{\partial w}{\partial
+    x}|_{x=L} = 0 \) | \( \frac{\partial w}{\partial x}|_{x=0} = D_2 \) | \( \frac{\partial
+    w}{\partial x}|_{x=L} = D_4 \) |
+
+    | | \( \frac{\partial w^3}{\partial x^3}|_{x=0} = 0 \) | \( \frac{\partial w^3}{\partial
+    x^3}|_{x=L} = 0 \) | \( \frac{\partial w}{\partial x}|_{x=0} = D_2 \) | \( \frac{\partial
+    w}{\partial x}|_{x=L} = D_4 \) |
+
+
+    | Parameter | Value | Unit |
+
+    |---|---|---|
+
+    | \( L \) | 10 | m |
+
+    | \( R \) | 0.25 | m |
+
+    | \( h \) | 0.01 | m |
+
+    | \( E \) | \( 2.1 \times 10^{11} \) | Pa |
+
+    | \( \mu \) | 0.3 | / |
+
+    | \( \rho \) | 7850 | kg/m3 |
+
+    | \( \rho_f \) | 1000 | kg/m3 |
+
+    | \( c_p \) | 5000 | m/s |
+
+    | \( c_f \) | 1500 | m/s |
+
+
+    ```
+
+    \( Z(x,t) = \frac{\rho_f c_f}{2\pi\sqrt{1-(\frac{c_f}{c_p})^2}} \int_{-\infty}^{\infty}
+    \frac{-i H_1^{(1)}(k_r R)}{H_1^{(1)}(k_r R)} e^{i \omega t} d\omega \) (3)
+
+    ```
+
+
+    where \( \rho_f \), \( c_f \) and \( c_p \) are the density of the fluid, the
+    sound speed in the fluid and the pile, respectively. And \( H_1^{(1)} \) is the
+    first order Hankel functions of the first kind, and \( k_r \) is the radial wavenumber
+    defined by'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/8474a2fd3be569b241d455a588c0d640_3_0.png)
+
+
+    # (a) training loss
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_3_1.png)
+
+
+    # (b) testing loss
+
+
+    Fig. 3. Mean squared error of different neurons: (a) training loss; (b) testing
+    loss; (c) test metric.
+
+
+    $k_r = \frac{\omega}{c_f} \sqrt{1 - (\frac{c_f}{c_p})^2}$ (4)
+
+
+    imaginary domain, some assumptions are accepted in our studies. For example, when
+    the radius of the pile and the radial wavenumber are small, the product of them
+    is small enough to be seen as zero. According to the property of the Bessel functions
+    (Kwak, 2010), we can obtain
+
+
+    To balance the convenience and efficiency of numerical computations, and to avoid
+    the computation of the PINN framework in the'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# 40 neurons
+
+
+    # 60 neurons
+
+
+    # 80 neurons
+
+
+    # 100 neurons
+
+
+    (c) test metric
+
+
+    Fig. 3. (continued).
+
+
+    # 1 layers
+
+
+    # 2 layers
+
+
+    # 3 layers
+
+
+    # 4 layers
+
+
+    (a) training loss
+
+
+    Fig. 4. Mean squared error of different layers: (a) training loss; (b) testing
+    loss; (c) test metric.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/8474a2fd3be569b241d455a588c0d640_5_0.png)
+
+
+    # (b) testing loss
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_5_1.png)
+
+
+    # (c) test metric
+
+
+    Fig. 4. (continued).'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/8474a2fd3be569b241d455a588c0d640_6_0.png)
+
+
+    # (a) training loss
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_6_1.png)
+
+
+    # (b) testing loss
+
+
+    Fig. 5. Mean squared error of different activations: (a) training loss; (b) testing
+    loss; (c) test metric.
+
+
+    \frac{H_1^{(1)}(k,R)}{H_1^{1^{(1)}}(k,R)} = -\frac{1}{n} (5)
+
+
+    frequency of the fluid-pile model. Considering a case of time-independent partial
+    differential equations, for harmonic vibration analysis with a single frequency,
+    the displacements of the pile using the variable separation method can be given
+    as follows
+
+
+    To investigate the dynamic characteristics of pile driving, we take vibratory
+    pile driving as an example, which can represent the resonant'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/8474a2fd3be569b241d455a588c0d640_7_0.png)
+
+
+    # (c) test metric
+
+
+    # Fig. 5. (continued).
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_7_1.png)
+
+
+    # (a) training loss
+
+
+    Fig. 6. Mean squared error of different learning rates: (a) training loss; (b)
+    testing loss; (c) test metric.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/8474a2fd3be569b241d455a588c0d640_8_0.png)
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_8_1.png)
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_8_2.png)
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_8_3.png)
+
+
+    # (b) testing loss
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_8_4.png)
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_8_5.png)
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_8_6.png)
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_8_7.png)
+
+
+    # (c) test metric
+
+
+    # Fig. 6. (continued).'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '| | Value | Train loss | Test loss | Test metric |
+
+    |---|---|---|---|---|
+
+    | Neurons | 40 | $4.12 \times 10^{-8}$ | $4.72 \times 10^{-8}$ | $9.63 \times
+    10^{-5}$ |
+
+    | | 60 | $3.01 \times 10^{-8}$ | $3.53 \times 10^{-8}$ | $7.41 \times 10^{-5}$
+    |
+
+    | | 80 | $6.71 \times 10^{-8}$ | $7.24 \times 10^{-8}$ | $1.68 \times 10^{-4}$
+    |
+
+    | | 100 | $9.23 \times 10^{-8}$ | $9.22 \times 10^{-8}$ | $1.17 \times 10^{-4}$
+    |
+
+    | Layers | 1 | $3.94 \times 10^{-8}$ | $3.51 \times 10^{-8}$ | $1.77 \times 10^{-4}$
+    |
+
+    | | 2 | $1.82 \times 10^{-7}$ | $1.72 \times 10^{-7}$ | $2.40 \times 10^{-4}$
+    |
+
+    | | 3 | $3.00 \times 10^{-8}$ | $3.34 \times 10^{-8}$ | $5.08 \times 10^{-5}$
+    |
+
+    | | 4 | $4.03 \times 10^{-8}$ | $4.14 \times 10^{-8}$ | $9.43 \times 10^{-5}$
+    |
+
+    | Activation | sin | $5.19 \times 10^{-8}$ | $5.59 \times 10^{-8}$ | $1.20 \times
+    10^{-4}$ |
+
+    | | tanh | $4.11 \times 10^{-7}$ | $4.40 \times 10^{-7}$ | $2.78 \times 10^{-4}$
+    |
+
+    | | relu | $1.08 \times 10^{-2}$ | $9.17 \times 10^{-3}$ | $7.54 \times 10^{-1}$
+    |
+
+    | | sigmoid | $8.20 \times 10^{-7}$ | $9.88 \times 10^{-7}$ | $9.34 \times 10^{-4}$
+    |
+
+    | Learning rate | 0.001 | $2.06 \times 10^{-8}$ | $2.22 \times 10^{-8}$ | $4.53
+    \times 10^{-5}$ |
+
+    | | 0.002 | $1.32 \times 10^{-7}$ | $1.19 \times 10^{-7}$ | $6.72 \times 10^{-5}$
+    |
+
+    | | 0.003 | $3.84 \times 10^{-7}$ | $8.95 \times 10^{-7}$ | $8.99 \times 10^{-4}$
+    |
+
+    | | 0.004 | $7.89 \times 10^{-7}$ | $5.03 \times 10^{-6}$ | $2.08 \times 10^{-3}$
+    |
+
+
+    | Geometry | Input: axial coordinate Output: axial and radial displacements |
+
+    |---|---|
+
+    | PDEs | A theoretical model of pile driving |
+
+    | Boundary conditions | Common boundary conditions Non-zero boundary conditions
+    |
+
+    | Network | Fully connected neural network |
+
+    | Layers | [1] + [100] * 3 + [2] |
+
+    | Activation | Sine function |
+
+    | Initializer | Glorot uniform |
+
+    | Optimizer | Adam L-BFGS |
+
+    | Learning rate | 0.001 |
+
+    | Metric | L2 relative error |
+
+
+    ```
+
+    u(x, t) = u(x)e^{i\omega t} (6a)
+
+    w(x, t) = w(x)e^{i\omega t} (6b)
+
+    ```
+
+
+    Substituting Equation (6) into Equation (1) gives
+
+
+    ```
+
+    \frac{\partial^2 u(x)}{\partial x^2} + \frac{\mu}{R} \frac{\partial w(x)}{\partial
+    x} + \frac{\omega^2 \rho (1 - \mu^2)}{E} u(x) = 0 (7a)
+
+    \frac{\partial u(x)}{\partial x} + C_0 w(x) = 0 (7b)
+
+    ```
+
+
+    where \( C_0 \) is an abbreviation for ease of writing and be expressed as
+
+
+    ```
+
+    C_0 = \frac{1}{\mu R} - \frac{\omega \rho c_f (1 - \mu^2) R}{\mu n h E \sqrt{1
+    - (\frac{\omega}{c_p})}} - \frac{\omega^2 \rho (1 - \mu^2) R}{\mu E} (8)
+
+    ```
+
+
+    To get the exact solution of displacements of the pile, we apply several boundary
+    conditions on the top and of the pile
+
+
+    ```
+
+    \frac{\partial w^2}{\partial x^2}|_{x=0} = 0 (9a)
+
+    u|_{x=0,L} = u_{exact}|_{x=0,L} (9b)
+
+    w|_{x=0,L} = w_{exact}|_{x=0,L} (9c)
+
+    ```
+
+
+    In section 3.2, we will demonstrate the reason why non-zero boundary conditions
+    are very important and necessary in some PINN frameworks, and will discuss how
+    to choose proper boundary conditions to help a neural network learn better.
+
+
+    The general solutions chosen for displacements of the pile can be expressed in
+    the following forms
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_9_0.png)
+
+
+    # (a) displacements
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_9_1.png)
+
+
+    # (b) convergence
+
+
+    Fig. 7. Displacements and convergence of the pile driving model in forward problems:
+    (a) displacements; (b) convergence.
+
+
+    ```
+
+    u(x) = cos(\lambda x) (10a)
+
+    w(x) = -\frac{1}{C_0} \frac{\partial u(x)}{\partial x} = \frac{\lambda}{C_0} sin(\lambda
+    x) (10b)
+
+    ```
+
+
+    where
+
+
+    ```
+
+    \lambda = \sqrt{\frac{\rho \omega^2 (1 - \mu^2)}{E(1 - \frac{\mu}{R C_0})}} (11)
+
+    ```
+
+
+    The pile driving model is constructed with the partial differential equations
+    Equation (7), the boundary conditions Equation (9), and the exact solutions Equation
+    (10). The axial displacement and radial displacement of the pile will both be
+    trained, tested, and predicted using the PINN method in the next numerical experiments.
+    The implementation of forward problems and inverse problems of pile driving will
+    be described in detail in section 3.1.
+
+
+    # 2.2. Sound propagation in shallow water
+
+
+    In consideration of sound propagation in shallow water, normal'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '![](img/8474a2fd3be569b241d455a588c0d640_10_0.png)
+
+
+    # (a) displacements
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_10_1.png)
+
+
+    # (b) convergence
+
+
+    Fig. 8. Displacements and convergence of the pile driving model in inverse problems:
+    (a) displacements; (b) convergence.
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_10_2.png)
+
+
+    # (a) exact solution
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_10_3.png)
+
+
+    # (b) predicted values
+
+
+    Fig. 9. Axial displacement of the pile in different frequencies: (a) exact solution;
+    (b) predicted values.
+
+
+    mode theory is applied to the radiated noise model of pile driving. Normal mode
+    theory is one of the commonly used theories to describe the propagation law of
+    the sound field in the ocean and is suitable for sound field modeling in the horizontally
+    layered medium. It is an important calculation method of the shallow water sound
+    field and has been widely practiced. The main idea of normal mode theory is to
+    decompose the sound field into horizontal traveling waves and vertical standing
+    waves, and only partially normal waves of one frequency can travel long distances
+    in one waveguide. Assuming that the underwater acoustic environment is a two-dimensional
+    axisymmetric layered medium, a cylindrical coordinate system is established with
+    the radial axis and the vertical axis. Ignoring the time factor, the Helmholtz
+    equation can be written as
+
+
+    ```
+
+    \frac{1}{r} \frac{\partial}{\partial r} (r \frac{\partial p}{\partial r}) + \frac{\partial^2
+    p}{\partial z^2} + k^2 p = 0
+
+    ```
+
+
+    where p is the sound pressure, k = \frac{\omega}{c} is the wave number in the
+    water. Using the separation variable method, the sound pressure can be expressed
+    as
+
+
+    ```
+
+    p = \Phi(x)R(r)
+
+    ```
+
+
+    Substituting Equation (13) into Equation (12) and introducing a separation constant
+    k_m, we can get
+
+
+    ```
+
+    \frac{\partial^2 \Phi_r(x)}{\partial x^2} + (k^2 - k_m^2)\Phi_m(x) = 0
+
+    ```
+
+
+    ```
+
+    \frac{1}{r} \frac{\partial}{\partial r} (r \frac{\partial R(r)}{\partial r}) +
+    k_m^2 R(r) = 0
+
+    ```
+
+
+    where the separation constant k_m is the horizontal wave number.
+
+
+    In shallow seas, the boundary conditions of the seabed and sea surface have an
+    important influence on the vibration of the structure and the radiation of underwater
+    sound propagation. In axial coordinate of the pile, namely the depth direction
+    of the sea, a sea surface is usually regarded as a soft boundary (pressure release
+    boundary) when the sea surface scattering is not considered. There are many kinds
+    of seabed boundaries, which can be roughly divided into hard boundaries, liquid
+    boundaries, elastic boundaries, and porous boundaries. Here the seabed is assumed
+    to be a hard boundary'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '![](img/8474a2fd3be569b241d455a588c0d640_11_0.png)
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_11_1.png)
+
+
+    Fig. 11. Test metric of the pile driving model in different frequencies.
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_11_2.png)
+
+
+    Table 7
+
+    Mean squared error of each best model based on different geometrical parameters.
+
+
+    | Parameter | Value | Train loss | Test loss | Metric |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | L | 10 | 4.61 × 10⁻⁴ | 4.61 × 10⁻⁴ | 5.20 × 10⁻³ |
+
+    | | 20 | 4.86 × 10⁻⁴ | 4.86 × 10⁻⁴ | 8.16 × 10⁻³ |
+
+    | | 30 | 5.09 × 10⁻⁴ | 5.09 × 10⁻⁴ | 8.68 × 10⁻³ |
+
+    | R | 0.25 | 4.61 × 10⁻⁴ | 4.61 × 10⁻⁴ | 5.20 × 10⁻³ |
+
+    | | 0.5 | 4.60 × 10⁻⁴ | 4.60 × 10⁻⁴ | 6.69 × 10⁻³ |
+
+    | h | 0.75 | 4.56 × 10⁻⁴ | 4.56 × 10⁻⁴ | 5.17 × 10⁻³ |
+
+    | | 0.005 | 4.60 × 10⁻⁴ | 4.60 × 10⁻⁴ | 5.70 × 10⁻³ |
+
+    | | 0.0075 | 4.61 × 10⁻⁴ | 4.61 × 10⁻⁴ | 5.62 × 10⁻³ |
+
+    | | 0.01 | 4.61 × 10⁻⁴ | 4.61 × 10⁻⁴ | 5.20 × 10⁻³ |
+
+
+    Fig. 10. Radial displacement of the pile in different frequencies: (a) exact solution;
+    (b) predicted values.
+
+
+    ```
+
+    \(\Phi(x)|_{z=0} = 0\)
+
+    ```
+
+
+    ```
+
+    \(\frac{\partial \Phi(x)}{\partial x}|_{x=h} = 0\)
+
+    ```
+
+
+    Equation (14) describes the characteristics of the sound field for the radial
+    coordinate (propagation direction), which is a classic Bessel equation, and its
+    solution is a combination of two Hankel functions. Since the time factor is chosen
+    as \(e^{i\omega t}\), the first type of Hankel function represents diffuse waves
+    and the second type of Hankel function represents convergent waves. To satisfy
+    the infinite radiation condition, the latter does not exist. Therefore, the solution
+    of Equation (14) can be written as
+
+
+    ```
+
+    \(p(x, r) = \sum_n A_n \Phi_n(k_{zn}x_0) \Phi_n(k_{zn}x) H_n^{(1)}(k_m r)\)
+
+    ```
+
+
+    where \(k_{zn}\) is the vertical wave number, \(x_0\) is the depth of a sound
+    source, and the coefficient \(A_n\) is decided by the sound source and boundary
+    conditions. Furthermore, the expression of the nth order normal mode can be separated
+    as follows
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_11_3.png)
+
+
+    Fig. 12. Dispersion relation for sound propagation.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '![](img/8474a2fd3be569b241d455a588c0d640_12_0.png)
+
+
+    # (a) exact solution
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_12_1.png)
+
+
+    # (b) predicted values
+
+
+    Fig. 13. Sound propogation in shallow water at 1000 Hz: (a) exact solution; (b)
+    predicted values.
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_12_2.png)
+
+
+    # (a) exact solution
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_12_3.png)
+
+
+    # (b) predicted values
+
+
+    Fig. 14. Sound propogation in shallow water at 2000 Hz: (a) exact solution; (b)
+    predicted values.
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_12_4.png)
+
+
+    # (a) exact solution
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_12_5.png)
+
+
+    # (b) predicted values
+
+
+    Fig. 15. Sound propogation in shallow water at 3000 Hz: (a) exact solution; (b)
+    predicted values.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '![](img/8474a2fd3be569b241d455a588c0d640_13_0.png)
+
+
+    Fig. 16. Mean squared error of sound propagation in 1000 Hz, 2000 Hz, and 3000
+    Hz.
+
+
+    ```
+
+    $p_n(x, r) = A_n \Phi_n(k_{yn}x_0)\Phi_n(k_{yn}x)H_1^{(1)}(k_m r)$ (17)
+
+    ```
+
+
+    We take an empirical model and set a series of vertical sound sources in the water
+    column to be equivalent to the sound noise radiated from the pile as illustrated
+    in Fig. 1. The radiated noise model of pile driving in shallow water is built
+    finally. We will use the PINN framework to approximate the solution of normal
+    mode theory and discuss the results in section 4.
+
+
+    # 3. Physics-informed neural network
+
+
+    In this section, we briefly illustrate how the physics-informed neural network
+    for solving problems of pile driving and sound propagation in shallow water is
+    constructed. And then we put forward a suggestion to help the neural network avoid
+    lazy learning and learn partial differential equations better.
+
+
+    # 3.1. Implement procedure
+
+
+    In this study, we use DeepXDE to implement our tasks including forward and inverse
+    problems. DeepXDE is a library in python on open-source deep learning platforms
+    (TensorFlow, PyTorch, JAX, PaddlePaddle). The motivation for using DeepXDE is
+    that it is a developed
+
+
+    tool and is believed to be able to train, test, predict and solve partial differential
+    equations, and compute unknown parameters in the vibroacoustic model of pile driving.
+
+
+    The brief workflow of DeepXDE for solving partial differential equations of pile
+    driving is illustrated in Table 1, and the brief workflow for function approximation
+    of sound propagation in shallow water is shown in Table 2.
+
+
+    The computational domain in our work is one or two-dimension, namely the position
+    along the axial direction of the pile or radial distance along the horizontal
+    direction, and the output is axial displacement, radial displacement, and sound
+    pressure as follows
+
+
+    ```
+
+    $x \in \mathbb{R}^{d_{in}}$ (18a)
+
+
+    $u, w \in \mathbb{R}^{d_{low}}$ (18b)
+
+
+    $x, r \in \mathbb{R}^{d_{low}}$ (19a)
+
+
+    $p \in \mathbb{R}^{d_{low}}$ (19b)
+
+    ```
+
+
+    A neural network with inputs, N-layers, and outputs is built for simulating partial
+    differential equations of pile driving or approximating sound propagation in shallow
+    water, and can be mathematically expressed as
+
+
+    ```
+
+    $N \left( x, u; \frac{\partial u}{\partial x} \frac{\partial^2 u}{\partial x^2},
+    w, \frac{\partial w}{\partial x}, \cdots \right) = 0, x \in \mathbb{R}^{d_{in}}$
+    (20)
+
+    ```
+
+
+    The neural network includes an input layer, hidden layers, and an output layer,
+    in which the relu function, the sigmoid function, the sine function, and the hyperbolic
+    tangent function are used as the nonlinear activation function. For instance,
+    using the sine function as the activation function, a neuron in a hidden layer
+    can be written as
+
+
+    ```
+
+    $y^{i+1}(x) = \sigma(W^i x + b^i) = sin(W^i x + b^i)$ (21)
+
+    ```
+
+
+    where $W^i$ and $b^i$ are weights and biases in the i layer, respectively.
+
+
+    Hence, a forward and inverse neural network of the pile driving model is depicted
+    in Fig. 2. Compared forward problems and inverse problems, it is clearly shown
+    that additional training data is needful in inverse problems and its loss is included
+    in total loss.
+
+
+    To solve partial differential equations of pile driving, specific boundary conditions,
+    such as Dirichlet, Neumann, and periodic boundary conditions, are necessary and
+    critical. Normally, additional boundary conditions are not requisite, because
+    they constrain the same mathematical solution. However, under certain circumstances,
+    additional boundary conditions can be used to avoid lazy learning, which we
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_13_1.png)
+
+
+    (a) exact solution
+
+
+    ![](img/8474a2fd3be569b241d455a588c0d640_13_2.png)
+
+
+    (b) predicted values
+
+
+    Fig. 17. Sound propagation in shallow water in a long-range distance: (a) exact
+    solution; (b) predicted values.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'will discuss in detail in the next section. The same situation is also found
+    in the approximation of sound propagation in shallow water. To illustrate our
+    algorithm, the two kinds of boundary conditions divided by their values can be
+    shown as
+
+
+    $B_{zero}(u, w, x) = 0 \text{ on } \partial\Omega$ (22a)
+
+
+    $B_{non-zero}(u, w, x) = C \text{ on } \partial\Omega$ (22b)
+
+
+    where $\partial\Omega$ is the domain boundary, and $C$ is the value on non-zero
+    boundaries.
+
+
+    In inverse problems of pile driving, the data of the exact solution is given to
+    solve some unknown parameters, for example, geometric parameters, material parameters,
+    and the natural frequency of the pile. By anchoring and matching values of some
+    points, there are also extra losses added to the total losses to be minimized.
+
+
+    After restricting the neural network to satisfy the physical law, we start to
+    train the model by minimizing the loss based on stochastic gradient descent (SGD).
+    The loss function involves several parts, such as the PDE module, boundary conditions
+    module, and so on. Notice that loss functions of non-zero boundary conditions
+    are also defined automatically. The total loss function can be universally defined
+    as
+
+
+    $L_{total} = w_f L_f + w_{B_{zero}} L_{B_{zero}} + w_{B_{non-zero}} L_{B_{non-zero}}$
+    (23)
+
+
+    where
+
+
+    $L_f = \frac{1}{|T_f|} \sum_{x \in T_f} \left\| f \left( x; u, \frac{\partial
+    u}{\partial x} \frac{\partial^2 u}{\partial x^2}, u, \frac{\partial w}{\partial
+    x}; \dots \right) \right\|_2^2$ (24a)
+
+
+    $L_{B_{zero}} = \frac{1}{|T_{B_{zero}}|} \sum_{x \in T_{B_{zero}}} \| B_{zero}(u,
+    w, x) \|_2^2$ (24b)
+
+
+    $L_{B_{non-zero}} = \frac{1}{|T_{B_{non-zero}}|} \sum_{x \in T_{B_{non-zero}}}
+    \| B_{non-zero}(u, w, x) \|_2^2$ (24c)
+
+
+    and $w_f, w_{B_{zero}}$ and $w_{B_{non-zero}}$ are weights of each part.
+
+
+    Optimizer "Adam" is chosen to minimize the loss function by gradient descent.
+    Also, optimizer "L-BFGS" can be used then to help train the model further. The
+    test metric of the pile driving model and the sound propagation model is as follows
+
+
+    $metric = \frac{u_{true} - \widehat{u}}{u_{true}} + \frac{w_{true} - \widehat{w}}{w_{true}}$
+    (25a)
+
+
+    $metric = \frac{p_{true} - \widehat{p}}{p_{true}}$ (25b)
+
+
+    where $\widehat{u}, \widehat{w}$ and $\widehat{p}$ are the expected values of
+    the axial displacement of the pile, the radial displacement of the pile, and the
+    underwater sound pressure.
+
+
+    Compared with common numerical techniques, such as the finite element method and
+    the finite difference method, which both involve numerical discretization, we
+    can find that the PINN framework implements the solving procedure through a neural
+    network. The discretization of those methods is decided by the highest frequency
+    of interest, which restricts their application. However, the PINN method is a
+    mesh-free and frequency-independent method, and it can address physical problems
+    with a suitable framework and proper hyperparameters.
+
+
+    # 3.2. Additional measure
+
+
+    Boundary conditions in solving dynamic and vibrational problems of structures
+    are widely applied. For example, common boundary conditions of vibration of a
+    pile (just taking the beam theory as an example) include the free boundary condition,
+    the simply supported boundary condition, and the clamped boundary condition. Those
+    traditional
+
+
+    boundary conditions work well in theoretical derivation and mathematical solving,
+    unfortunately not in deep learning sometimes. For some partial differential equations,
+    such as free vibration problems of beams, plates, and shells without any externally
+    coupled term, it is discovered that those neural networks tend to become lazy,
+    so we call this phenomenon "lazy learning". In these cases, the neural network
+    is much less accurate than the exact solutions. To be specific, the objective
+    functions to be trained, usually displacement functions, are apt to be functions
+    of zero, which also satisfy the partial differential equations. Having pointed
+    out this problem, the way to avoid lazy learning is proposed in this study by
+    setting additional synthetic non-zero boundary conditions as shown in Table 3.
+
+
+    The values of $D_1, D_2, D_3$ and $D_4$ in Table 3 are obtained from the exact
+    solution of model shape functions, respectively. In this way, the neural network
+    has to satisfy those non-zero boundary conditions in the procedure of minimizing
+    the loss. We can also tune a neural network by setting the loss weights of boundary
+    conditions and other parts. Note that not all of the non-zero boundary conditions
+    should be adopted based on consideration of training speed and convergence in
+    specific situations. Non-zero boundary conditions are used in our work to help
+    maximize the training effect in the next section.
+
+
+    # 4. Results and discussion
+
+
+    In this section, firstly we optimize the PINN framework by tuning the network
+    and hyperparameters. Then we validate the predicted values given by the PINN method
+    with the exact solution of PDEs, and investigate the dynamic behavior and sound
+    propagation of offshore piles in shallow water. Lastly, we illustrate the advantages
+    of the proposed PINN method and give the plan for our further work.
+
+
+    The operating environment is with an NVIDIA GeForce GTX 1650 SUPER GPU and an
+    Intel UHD Graphics 630 GPU. The grammar of TensorFlow is used, and the PINN framework
+    is implemented in DeepXDE version 0.8.3.
+
+
+    # 4.1. Fine-tuning
+
+
+    The initial work of solving physical equations by using PINN is to try to found
+    a good network structure with specific parameters. To build a reliable, robust,
+    and efficient deep learning neural network, neither overfitting nor underfitting,
+    we first construct a moderate one, and then try different network structures to
+    identify the sensitivity of hyperparameters to the PINN framework. After analyzing
+    the effects of the hyperparameters on the PINN framework, we choose a reasonable
+    PINN framework to learn the dynamic behavior of pile driving and sound propagation
+    in shallow water.
+
+
+    Among all network frameworks and parameters of the PINN algorithm, some, built
+    on the consensus with other researchers, can be adopted without any hesitation.
+    For instance, the fully connected neural network is proved suitable for similar
+    questions; "Adam" is one of the most popular optimization algorithms and can be
+    used as the optimizer, which is proved appropriate and effective in general. Let
+    us consider a common PINN framework of pile driving and sound propagation in shallow
+    water, and its parameters are listed in Table 4. Notice that the same parameters
+    are used for the following tuning procedure.
+
+
+    When it comes to the structure of the network in the PINN framework, neurons,
+    layers, and activations are the most important hyperparameters to be tuned prudently.
+    The number of neurons and layers is not always better to be more. On the one hand,
+    the increase in the number of neurons and layers will lead to an increase in the
+    computational quantity. On the other hand, it may lead to overfitting and other
+    problems. In addition, an activation function essentially renders the neural network
+    nonlinear, which is also crucial to the approximation of the exact solutions.
+    Our goal is to build a simple, practical, and adaptable neural network. Therefore,
+    we set a series of tests to help us find one neural network with good comprehensive
+    coordination of hypermeters.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'Due to the symmetry of the pile driving model, the jnput variable is the spatial
+    coordinate, namely the axial coordinate, and the outputs are the axial displacement
+    and radial displacement of the pile. The experimental results of different neurons,
+    layers, and activations are shown in Fig. 3, Fig. 4, and Fig. 5, respectively.
+    It is apparent that there is barely a significant difference in the mean squared
+    error of different neurons in Fig. 3. Even if only 40 neurons are applied, the
+    loss of train and test can be reduced to a satisfactory degree, which shows the
+    great ability of the neural network to fit. A slight difference can be found in
+    Fig. 4, that is, with the increasing of layers, the loss and ocillations of computation
+    can be further reduced. As we expected, there are huge differences in diverse
+    activations. Because of the mathematical form of the solution, the sine function
+    exactly works and performs best, while other activations do not learn so well,
+    especially the activation of the relu function. Moreover, for any sine-shaped
+    solution, like the Fourier expansion, the sine function with its derivative is
+    the best choice as an activation, while a PINN algorithm with other activations
+    has to tune at cost, more or less.
+
+
+    Also studying the effect of the learning rate on the learning process is vital
+    because the learning rate can heavily affect the results according to other studies
+    (Lee et al., 2021). We choose 0.001 (a conservative learning rate used in many
+    algorithms), 0.002, 0.003, and 0.004 as the learning rate with the same other
+    parameters to investigate the effect of the learning rate for the PINN framework.
+    As can be seen from Fig. 6, there is a big difference between these four cases.
+    As the learning rate increases, convergence and numerical stability are badly
+    affected. When the learning rate reaches 0.003, the losses of the train and test
+    are no longer convergent, and the predicted values are far from the exact solutions.
+    So, a steady strategy is recommended with a smaller learning rate and longer iterations.
+
+
+    The best results of the parametric study of the PINN framework are shown in Table
+    5, which testify the PINN algorithms are mostly credible. Finally, we choose one
+    of the algorithms as a basic model, as displayed in Table 6, and carry out some
+    experimental studies of our interest. The experiments of forward and inverse problems
+    for pile driving and the approximation of sound propagation in shallow water using
+    the PINN method are given and discussed in next section.
+
+
+    # 4.2. Numerical results
+
+
+    According to the tuning results, we finally choose a set of parameters as displayed
+    in Table 6, and construct a dependable PINN framework to investigate the dynamic
+    behavior of the offshore pipe pile and sound propagation in shallow water.
+
+
+    We applied the PINN framework for both the forward and inverse problems of pile
+    driving. The parameters of the pile driving model follow the previous ones in
+    Table 4. As shown in Fig. 7 and Fig. 8 the predicted axial displacement and radial
+    displacement using the proposed PINN method match the exact solutions very well,
+    just as we expected, and the losses of the train, test, and prediction are low
+    enough to assure the quick and stable convergence of the model (Best model: Train
+    loss 10^-8, test loss 10^-8, metric 10^-5 in forward problems; Train loss 10^-4,
+    test loss 10^-4, metric 10^-3 in inverse problems). Also, we can observe that
+    forward problems are easier to train in comparison to inverse problems because
+    the loss function of the latter contains additional terms, a few anchor points,
+    to be minimized.
+
+
+    Next, we put the key point on the frequency characteristics in pile driving problems.
+    Many classical and popular numerical methods are limited by the frequency of the
+    interest. For instance, FEM is usually valid and efficient in low frequency. As
+    mentioned above, the PINN method is independent of frequency, and the tool that
+    works is the neural network. So, we choose a frequency band from 0 Hz to 4000
+    Hz with a step of 100 Hz to study the effectiveness and accuracy of the PINN method.
+    As exhibited in Fig. 9, Fig. 10, and Fig. 11, there is nearly no difference in
+    the accuracy of prediction with the frequency changing. However, we have to admit
+    that data sets and parameters should be fine-tuned when the frequency increases
+    sharply and hugely, for instance,
+
+
+    adding training data points for avoiding overfitting.
+
+
+    We next study changes of parameters on inverse problems. In this part, C0 is the
+    unknown value to be predicted. To implement inverse problems, we organize and
+    assign the train data as pointset boundary conditions. Taking the geometrical
+    parameters for example, the geometrical parameters are constant values in forward
+    problems, while they are constant and parameterized values in inverse problems,
+    so that we can investigate the adaptation of the PINN framework to the change
+    of the pile driving model. As shown in Table 7, losses are all below 10^-3, which
+    shows that the PINN framework has a great ability to predict the unknown parameters
+    in inverse problems.
+
+
+    The inputs of the sound propagation model in shallow water are the spatial coordinate,
+    x and r, while the underwater sound pressure is the output of the neural network.
+    The depth of the water is set to 10 m and the radiating distance is set to 50
+    m. We regard the sea surface as a pressure-release boundary and take the seabed
+    as a hard boundary. km is the radial wave number of underwater sound pressure,
+    and it could be a real number or an imaginary number. The value of km determines
+    the characteristics of sound propagation and attenuation in the radial direction.
+    When km is imaginary, sound pressure cannot effectively spread into the distance.
+    We consider km for real values as depicted in Fig. 12, because the proposed PINN
+    framework is performed in the real number field. Now we employ the PINN method
+    to build the approximation for sound pressure by Equation (17). As shown in Fig.
+    13, Fig. 14, and Fig. 15, the predicted underwater sound pressure matches the
+    exact solution well in the frequency of 1000 Hz, 2000 Hz, and 3000 Hz. Since the
+    result of sound propagation in shallow water solving by the PINN method shows
+    pretty good, then we focus on the ability of the PINN framework to solve the same
+    question but in a wide frequency range and at a long distance. As depicted in
+    Fig. 16 and Fig. 17, the results of underwater sound pressure approximated by
+    the PINN method are not perfectly accurate but receivable in most cases with the
+    metric below 10^-3, which can also demonstrate the validity of the PINN method
+    is quite good.
+
+
+    # 4.3. Advantages and outlook
+
+
+    There are many characteristics and advantages of the proposed PINN method in solving
+    problems of pile driving. Firstly, the proposed deep learning method is quite
+    innovative with its revolutionary concept of numerical computation. It uses a
+    specifically designed neural network with physical knowledge for training and
+    learning. Thanks to the mighty strength of approximation, it works well with the
+    pile driving model. Secondly, compared with FEM and FDM, the proposed PINN method
+    is almost independent with mesh, frequency, and geometrical domain, which means
+    it cost less time in high-frequency ranges and a long-range distance than other
+    methods. Thirdly, the proposed method is very solid to solve partial differential
+    equations and learn from actual data in contrast with deriving and computing complex
+    solutions in inverse problems.
+
+
+    According to our research, we can optimistically believe that various vibroacoustic
+    problems of structures in ocean engineering are supposed and expected to be addressed
+    by using PINN, and we will focus on those problems as much as possible and devote
+    ourselves to the optimization of the algorithm in our further research. One of
+    the most interesting and exciting research territories to be explored is underwater
+    noise radiating from pile driving using PINN with real measured data, which will
+    greatly help us to investigate the fluid-pile-soil coupled dynamic model and underwater
+    acoustic model. Based on deep learning and practical engineering, our ultimate
+    goals of the preservation of marine life and the ocean environment can be achieved
+    in the future.
+
+
+    # 5. Conclusion
+
+
+    In this paper, we provide a novel way to help us study pile driving problems and
+    show the potential of the PINN method for solving'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: 'problems in dynamics and acoustics. A deep learning framework using PINN is
+    built to study the motion of pile driving and sound propagation in shallow water.
+    The hyperparameter sensitivity of the proposed PINN method is analyzed in detail.
+    It is found that: 1) A small number of neurons in the neural network can get a
+    satisfying result; 2) A flat and shallow neural network is good enough to fit,
+    but the increasing of layers can make the loss of training and testing reduce
+    steadily; 3) As nonlinear operators, activations play an important role in mapping
+    inputs to outputs, and the sine function is the best choice for pile driving problems
+    in our research; 4) A small learning rate is recommended because of its good stability.
+    Furthermore, we suggest using a new technique, namely non-zero boundary conditions,
+    to help the neural network avoid lazy learning.
+
+
+    After building and optimizing the PINN framework, we test its ability to learn
+    from partial differential equations and real data for solving forward and inverse
+    problems of pile driving. In our research, the ability of PINN to solve unknown
+    parameters is quite good based on an excellent feed-forward network. Lastly, to
+    distinguish the proposed PINN method from other methods and to explore the possibility
+    of the proposed PINN method, we mainly carry out some numerical experiments on
+    the frequency domain and geometrical domain. The results of displacements and
+    underwater sound pressure given by the PINN method agree very well with the exact
+    values over a wide frequency and distance range.
+
+
+    # CRediT authorship contribution statement
+
+
+    Quanzhou Jiang: Conceptualization, Methodology, Validation, Formal analysis, Writing
+    – original draft. Xianzhong Wang: Methodology, Writing – review & editing. Min
+    Yu: Investigation, Supervision. Min Tang: Supervision. Bixin Zhan: Resources,
+    Visualization. Shuai Dong: Resources, Visualization.
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    # Data availability
+
+
+    Data will be made available on request.
+
+
+    # Acknowledgements
+
+
+    Our work is financially supported by the National Natural Science Foundation of
+    China (No. 52271291) and the Nature Science Foundation of Hubei Province (ZRMS2020000207).
+
+
+    # References
+
+
+    +   Alkhadh, Shaikhah, Mohamed, Almjekawy, 2021. A combination of deep neural
+    networks and physics to solve the inverse problem of Burger''s equation. In: Annual
+    International Conference of the IEEE Engineering in Medicine and Biology Society,
+    pp. 4465-4468.
+
+    +   Amaral, Jennifer L., Miller, James H., Potty, Gopu R., Vigness-Raposa, Kathleen
+    J., Lin, Ying-Tsong, Frankel, Adam S., Newhall, Arthur E., Wilkes, Daniel R.,
+    Gavrilov, Alexander N., 2022. Analysis of underwater sounds from impact pile driving
+    at the Block Island Wind Farm. J. Acoust. Soc. Am. 151 (4), A239.
+
+    +   Bailey, Helen, Senior Dale Simmons, Bridget, Jan, Rusin, Gordon, Pickenc,
+    Paul, M., Thompson, 2010. Assessing underwater noise levels during pile-driving
+    at an offshore windfarm and its potential effects on marine mammals. Mar. Pollut.
+    Bull. 60, 888-897.
+
+
+    +   Chen, Cheng, Meng, Hao, Yong-Zheng, Li, Zhang, Guang-Tao, 2021. Deep learning
+    based on PINN for solving 2 DOF vortex induced vibration of cylinder. Ocean. Eng.
+    240, 109932.
+
+    +   Cuomo, Salvatore, Schiano di Cola, Vincenzo, Giampaolo, Fabio, et al., 2022.
+    Scientific Machine Learning through Physics-Informed Neural Networks: where We
+    Are and What''s Next arXiv: 2201.056243.
+
+    +   Ellis, Dale D., Chapmain, D.M.F., 1985. A simple shallow water propagation
+    model including shear wave effects. J. Acoust. Soc. Am. 78 (6), 2087-2095.
+
+    +   Hall, Marshall V., 2013. A semi-analytical model for non-mach peak pressure
+    of underwater acoustic pulses from offshore pile driving. Acoust Austral. 41 (1),
+    42-51.
+
+    +   He, QiZhi, Barajas-Solano David, Guzel, Tartakovsky, Tartakovsky, Alexandre,
+    M., 2020. Physics-informed neural network for multiphysics data assimilation with
+    application to subsurface transport. Adv. Water Resour. 141, 103610.
+
+    +   Junger, Miguel C., Feit, David, 1986. Sound, Structures and Their Interaction.
+    MIT Press, Cambridge.
+
+    +   Karmadikaris, George Em, Kevrekidis, Ioannis G., Lu, Lu, Paris, Perdikaris,
+    Wang, Sifan, Liu, Yang, 2021. Physics-informed machine learning. Nat. Rev. Phys.
+    3 (6), 422-440.
+
+    +   Kwok, Moon K., 2010. Free vibration analysis of a finite circular cylindrical
+    shell in contact with unbounded external fluid. J. Fluid Struct. 26 (3), 377-392.
+
+    +   Lee, Soo Young, Chang, Jiho, Lee, Seungchul, 2021. Deep learning-based method
+    for multiple sound source localization with high resolution and accuracy. Mech.
+    Syst. Signal Process. 161.
+
+    +   Lippert, Tristan, Otto von Estorff, 2014. The significance of parameter uncertainties
+    for the prediction of offshore pile driving noise. J. Acoust. Soc. Am. 136 (5),
+    2463-2471.
+
+    +   Lippert, Stephan, Nijhof, Marten, Lippert, Tristan, Wildes, Daniel, 2016.
+    COMPILE-A generic benchmark code for predictions of marine pile-driving noise.
+    IEEE J. Ocean. Eng. 41 (4), 1061-1071.
+
+    +   Lu, Meng, Xuhui, Mao, Zhiping, Karmadikaris, George Em, 2021. DeepXDE: a deep
+    learning library for solving differential equations. Soc. Ind. Appl. Math. 63
+    (1), 208-228.
+
+    +   MacGillivray, Alexander O., 2013. A model for underwater sound levels generated
+    by marine impact pile driving. J. Acoust. Soc. Am. 134 (5), 4024.
+
+    +   Madsen, P.T., Wahlberg, M., Tougaard, J., Lucke, K., Tyack, P., 2006. Wind
+    turbine underwater noise and marine mammals: implications of current knowledge
+    and data needs. Mar. Ecol. Prog. Ser. 309, 279-295.
+
+    +   Mao, Zhiping, Jagtap, Ameya D., Karmadikaris, George Em., 2020. Physics-informed
+    neural networks for high-speed flows. Comput. Methods Appl. Mech. Eng. 360, 112789.
+
+    +   Pang, Guofei, Lu, Lu, Karmadikaris, George Em., 2019. fPINNs: Fractional physics-informed
+    neural networks. SIAM J. Sci. Comput. 41 (4), 2603-2626.
+
+    +   Popper, A.N., Hastings, M.C., 2009. The effects of anthropogenic sources of
+    sound on fishes. J. Fish. Biol. 75, 455-489.
+
+    +   Pye Henninger, Heidi, Watson, Winsor H., 2005. Mechanisms underlying the production
+    of carapace vibrations and associated waterborne sounds in the American lobster,
+    Homarus americanus. J. Exp. Biol. 208, 3421-3429.
+
+    +   Raissi, M., Perdikaris, P., Karniadakis, G.E., 2019. Physics-informed neural
+    networks: a deep learning framework for solving forward and inverse problems involving
+    nonlinear partial differential equations. J. Comput. Phys. 378, 686-707.
+
+    +   Raissi, Maziar, Yazdani, Alireza, Karmadikaris, George Em, 2020. Hidden fluid
+    mechanics: learning velocity and pressure fields from flow visualizations. Science
+    367 (6481), 1026-1030.
+
+    +   Reinhold, Per G., Dahl, Peter H., 2011. Underwater Mach wave radiation from
+    impact pile driving: theory and observation. J. Acoust. Soc. Am. 130 (3), 1209-1216.
+
+    +   Ryan Wilkes, Daniel, Tim, Gourlay, Alexander, Gavrilov, 2014. A comparison
+    of numerical methods for the time domain modeling of pile driving noise in the
+    near field. In: INTER-NOISE and NOISE-CON Congress and Conference Proceedings,
+    pp. 2169-2178.
+
+    +   Sacchetti, Andrea, Bachmann, Benjamin, Löffler, Kaspar, Kinzi, Urs-Martin,
+    Paoli, Beatrice, 2022. Neural networks to solve partial differential equations:
+    a comparison with finite elements. IEEE Access 10, 32271-32279.
+
+    +   Tartakovsky, A.M., Ortiz Marrero, C., Paris, Perdikaris, Tartakovsky, G.D.,
+    Barajas-Solano, D., 2020. Physics-informed deep neural networks for learning parameters
+    and constitutive relationships in subsurface flow problems. Water Resour. Res.
+    56 (5), e2019WR026731.
+
+    +   Van der Kraan P. Inge, Hans, Slabbekoorn, Tom, Moens, Van den Eynde Dries,
+    Jan, Reubens, 2022. Effects of pile driving sound on local movement of free-ranging
+    Atlantic cod in the Belgian North Sea. Environ. Pollut. 300.
+
+    +   Wight, Colby L., Jia, Zhao, 2021. Solving Allen-Cahn and Cahn-Hilliard equations
+    using the adaptive physics informed neural network. Commun. Comput. Phys. 29,
+    930-954.
+
+    +   Yuan, Xue, Li, Yong, Zhang, Kai, Yang, Fuqian, 2022. A physics-inspired neural
+    network to solve partial differential equations-application in diffusion-induced
+    stress. Phys. Chem. Chem. Phys. 24 (13), 7937-7949.
+
+    +   Zhang, Dongkun, Lu, Lu, Guo, Ling, Karmadikaris, George Em, 2019. Quantifying
+    total uncertainty in physics-informed neural networks for solving forward and
+    inverse stochastic problems. J. Comput. Phys. 397, 108850.
+
+    +   Zhang, Dongkun, Guo, Ling, Karmadikaris, George Em, 2020. Learning in modal
+    space: solving time-dependent stochastic PDEs using physics-informed neural networks.
+    SIAM J. Sci. Comput. 42 (2), 639-665.'
+  merge: -1
+  img_proc: true
