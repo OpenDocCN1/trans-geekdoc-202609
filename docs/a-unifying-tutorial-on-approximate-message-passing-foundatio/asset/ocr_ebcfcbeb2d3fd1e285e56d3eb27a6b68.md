@@ -1,0 +1,11 @@
+the AMP state evolution consequently has a random initialiser that is defined using a Haar-distributed orthogonal matrix. Conditioned on this initialisation, the state evolution parameters for the subsequent iterations are deterministic.
+
+**Universality:** As mentioned in the Introduction, the theoretical framework for AMP was originally built around Gaussian random matrices, but the conclusions of Theorems 3.1 and 3.5 (as well as the master theorems in Section 2) have now been extended to encompass more general random matrix ensembles. In so-called “spiked Wigner” models of the form (3.1), the symmetric noise matrices $W \equiv W(n)$ have independent upper-triangular entries ($W_{ij}: 1 \le i \le j \le n$) that are uniformly subexponential across $n \in \mathbb{N}$ with $\mathbb{E}(W_{ij}) = 0$ and $\text{Var}(W_{ij}) = (1 + \delta_{ij})/n$. It was previously known that the eigenstructure of the corresponding observation matrix $A$ undergoes the BBP phase transition described in Section 3.1 at the same spectral threshold $\lambda = 1$ as for “spiked GOE” matrices; see for instance Anderson et al. (2010), Knowles and Yin (2013) and Perry et al. (2018). Recently, Chen and Lam (2021, Examples 2.1 and 2.2) used the method of Slepian interpolation to prove that in AMP algorithms of the form (3.30) based on matrices $A$ from rank-one spiked Wigner models, the iterates have the same asymptotics as in the original Gaussian setting, with or without spectral initialisation.
+
+In a different direction, Fan (2022) developed a more general class of AMP procedures for symmetric and rectangular rank-one spiked models (3.1, 3.35) in which the noise matrices are orthogonally invariant. In the symmetric case, this means that $W \equiv W(n)$ satisfies $W \stackrel{d}{=} Q^\top W Q$ for all deterministic orthogonal $Q \in \mathbb{R}^{n \times n}$, and it can be shown that the only such $W$ with independent, mean-zero upper-triangular entries are scalar multiples of GOE matrices (e.g., Mehta, 2004). For other orthogonally invariant $W$, Opper et al. (2016) and Fan (2022, Section 3) modified the AMP algorithm (3.30) to allow $v^{k+1}$ to depend on all previous iterates via
+
+```
+$\hat{v}^k = g_k(v^0, v^1, ..., v^k) \quad \text{and} \quad v^{k+1} = A\hat{v}^k - \sum_{j=0}^k b_{kj} \hat{v}^{j-1} \quad \text{for } k \in \mathbb{N}_0,$
+
+(3.38)
+```

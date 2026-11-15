@@ -1,0 +1,13 @@
+An AMP algorithm in this context can be interpreted as a generalised power method that produces a sequence of estimates \(\hat{v}^k\) of \(v\) via iterative updates of the form
+
+```
+\(\hat{v}^k = g_k(v^k), \qquad v^{k+1} = A\hat{v}^k - b_k\hat{v}^{k-1}\)
+```
+
+for \(k \in \mathbb{N}_0\), where we emphasise the following two characteristic features:
+
++   (i) Each “denoising” function \(g_k : \mathbb{R} \to \mathbb{R}\) is applied componentwise to vectors, and can be chosen appropriately to exploit different types of prior information about the structure of \(v\) (e.g., to encourage \(\hat{v}^k\) to be sparse).
+
++   (ii) In the “memory” term \(-b_k\hat{v}^{k-1}\), which is called an “Onsager” correction in the AMP literature (e.g., Bayati and Montanari, 2011; Donoho _et al._, 2009), the scalar \(b_k\) is defined as a specific function of \(v^k\) to ensure that the iterates \(v^{k+1}\) have desirable statistical properties; see (3.3).
+
+One way to incorporate additional structural information on \(v\) into the spiked model is to assume that its entries are drawn independently from some prior distribution \(\pi\) on \(\mathbb{R}\); for example, we can enforce sparsity through priors that place strictly positive mass at 0. Then under appropriate conditions, AMP theory guarantees that, for each \(k\), the components of the estimate \(\hat{v}^k\) have approximately the same empirical distribution as those of \(g_k(\mu_k v + \sigma_k\xi)\); here, \(\xi \sim N_n(0, I_n)\) is a “noise” vector that is independent of the signal \(v \in \mathbb{R}^n\), and the “signal” and “noise” parameters \(\mu_k \in \mathbb{R}, \sigma_k > 0\) are determined by a scalar state evolution recursion that depends on \((g_k)\) and the prior distribution \(\pi\); see (3.6). This distributional characterisation effectively reduces the analysis of the high-dimensional \(\hat{v}^k\) to a much simpler univariate denoising problem, where the aim is to reconstruct \(V \sim \pi\) based on a single corrupted observation of the form \(\mu_k V + \sigma_k G\) with \(G \sim N(0, 1)\) representing independent Gaussian noise. The functions \(g_k\) can then be chosen in such a way that the “effective signal-to-noise ratios” \((\mu_k/\sigma_k)^2\) are large and \(g_k(\mu_k V + \sigma_k G)\) accurately estimates \(V\). This ensures that the resulting AMP estimates \(\hat{v}^k = g_k(v^k)\) have low asymptotic estimation error as \(n \to \infty\).

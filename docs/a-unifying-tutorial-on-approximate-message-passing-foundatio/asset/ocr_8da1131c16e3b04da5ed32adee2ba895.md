@@ -1,0 +1,13 @@
+state evolution sequences $(\mu_k^*, \sigma_k^*, \bar{\Sigma}^{[k]}: k \in \mathbb{N})$ via the posterior means
+
+$g_k^*(\mu_k^* V + \bar{G}_k^*) = \mathbb{E}(V \mid \mu_k^* V + \bar{G}_k^*)$ (3.33)
+
+and (3.31). Although we might hope that the resulting estimates $\hat{v}^k = g_k^*(\mu_k^* V + \bar{G}_k^*)$ of $v$ are superior to those in Section 3.3. it turns out that in the setting of Theorem 3.10, they are in fact identical to the Bayes-AMP estimates $\hat{v}^{k,\text{B}}$ defined earlier. This is a consequence of the Gaussianity of the noise matrix $W$ in the spiked model, which manifests itself in the following fact (whose proof is given in Section A.8).
+
+**Lemma 3.13.** Let $(v^0 \equiv v^0(n): n \in \mathbb{N})$ be a sequence of (non-spectral or spectral) initialisers that satisfies either condition (i) or (ii) of Theorem 3.10. Consider the resulting Bayes-AMP iterations $(v^k \equiv v^k(n): k.n \in \mathbb{N})$ of the form (3.30) with $g_k^*$ and $\mu_k^*, \sigma_k^*, \bar{\Sigma}^{[k]}$ as above. Then for every $k \in \mathbb{N}$, the random variable $V \sim \pi$ is conditionally independent of $\mu_{k-1}^* V + \bar{G}_{k-1}^*$ given $\mu_k^* V + \sigma_k^* G_k$, whence
+
+$g_k^*(\mu_k^* V + \bar{G}_k^*) = \mathbb{E}(V \mid \mu_k^* V + \bar{G}_k^*) = \mathbb{E}(V \mid \mu_k^* V + \sigma_k^* G_k).$ (3.34)
+
+Consequently, $g_k^*$ depends only on its last argument and $b_{kj}^* = 0$ for $1 \le j \le k-1$, so $(v^k \equiv v^k(n): k.n \in \mathbb{N})$ coincides with the sequence $(v^{k,\text{B}} \equiv v^{k,\text{B}}(n): k.n \in \mathbb{N})$ of Bayes-AMP iterations based on the univariate threshold functions $g_k^*$ in (3.16, 3.17).
+
+Thus, the Bayes-AMP estimates $\hat{v}^{k,\text{B}}$ in Section 3.3 are actually Bayes optimal over a wider class of estimators arising from AMP algorithms (3.30) with separable multivariate denoisers. In particular, to define the Bayes-AMP denoising functions in this Gaussian setting, it suffices to track the state evolution scalars $\mu_k^*, \sigma_k^*$ rather than the full limiting covariance matrices $\bar{\Sigma}^{[k]}$. As we will see below, this is in sharp contrast to AMP iterations with general non-Gaussian rotationally invariant matrices. Note also that the conditional independence in Lemma 3.13 is specific to Bayes-AMP, and is not guaranteed to hold for the state evolution sequence and limiting random variables associated with a general AMP iteration of the form (3.30).

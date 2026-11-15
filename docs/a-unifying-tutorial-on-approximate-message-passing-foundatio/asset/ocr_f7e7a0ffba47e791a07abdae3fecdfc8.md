@@ -1,0 +1,15 @@
+In the literature on high-dimensional estimation, upper bounds on the prediction and estimation error of the Lasso have been obtained under suitable conditions on the design matrix $X$, such as the restricted isometry property or compatibility conditions (e.g., Bühlmann and van de Geer, 2011). AMP offers complementary guarantees by providing exact formulae for the asymptotic risk in the “large system limit” where $n, p \to \infty$ with $n/p \to \delta \in (0, \infty)$, and with the components of $\beta$ drawn independently from a prior distribution on $\mathbb{R}$. To motivate the form of the AMP algorithm in this setting, first consider the iterative soft thresholding algorithm (ISTA) for solving the Lasso optimisation problem, whose update steps can be written as
+
+```
+$\hat{r}^k = y - X\hat{\beta}^k, \quad \hat{\beta}^{k+1} = \text{ST}_{\lambda \eta_k}(\hat{\beta}^k + \eta_k X^\top \hat{r}^k) \quad \text{for } k \in \mathbb{N}_0; \quad (1.1)$
+```
+
+here, $\hat{r}^k$ is the current residual, $\eta_k > 0$ is a deterministic step size, and for $t > 0$, the soft-thresholding function $\text{ST}_t: w \mapsto \text{sgn}(w)(|w| - t)_+$ is applied componentwise to vectors. This is an instance of the general-purpose proximal gradient method (Parikh and Boyd, 2013, Sections 4.2 and 4.3). An “accelerated” version of (1.1) called FISTA (Beck and Teboulle, 2009) bears a closer resemblance to an AMP algorithm, where the iterates of the latter are given by
+
+```
+$\hat{r}^k = y - X\hat{\beta}^k + \frac{\|\hat{\beta}^k\|_0}{n} \hat{r}^{k-1}, \quad \hat{\beta}^{k+1} = \text{ST}_{t_{k+1}}(\hat{\beta}^k + X^\top \hat{r}^k) \quad \text{for } k \in \mathbb{N}_0. \quad (1.2)$
+```
+
+Here, each $t_k > 0$ is a deterministic threshold and $\|\hat{\beta}^k\|_0$ denotes the number of non-zero entries of $\hat{\beta}^k \in \mathbb{R}^p$. By comparison with (1.1), we observe that $\hat{r}^k$ in (1.2) is a corrected residual, whose definition includes an additional memory term that is crucial for ensuring that the empirical distribution of the iterates can be characterised exactly. Indeed, for each fixed $k \in \mathbb{N}$, the entries of the AMP estimate $\hat{\beta}^k$ of $\beta$ have approximately the same empirical distribution as those of $\text{ST}_{t_k}(\beta + \sigma_k \xi)$ when $p$ is large; here $\xi \sim N_p(0, I_p)$ is a noise vector that is independent of $\beta$, the noise level $\sigma_k > 0$ is determined by the state evolution recursion defined in (4.41) below, and the scalar denoising function $\text{ST}_{t_k}$ induces sparsity.
+
+Bayati and Montanari (2012) proved that in the asymptotic regime above, the AMP iterates $(\hat{r}^k, \hat{\beta}^k)$ converge in a suitable sense to a fixed point $(\hat{r}^*, \hat{\beta}^*)$, and a key property of (1.2) is that for any such fixed point,

@@ -1,0 +1,15 @@
+Before proceeding, we briefly describe the techniques that we use to determine the limit of \((T_{n1})\) and also to prove \(\mathcal{H}_1(d)\) and \(\mathcal{H}_{k+1}(c,d)\) later on. It is instructive to consider the following two special cases where the claim is easier to establish. If \(\psi\) depends only on its first argument, then since \(h^l(n) = \tau_1 \bar{Z}^1(n)\) and \(\bar{Z}^1(n) \sim N_n(0, I_n)\) for each \(n\), the result follows readily from the concentration inequality (B.6) in Lemma B.12 and the characterisation of complete convergence in Proposition 1.2. On the other hand, if \(\psi\) depends only on its second argument, then since \((\gamma \equiv \gamma(n) : n \in \mathbb{N})\) satisfies (A1) by assumption, we can appeal directly to Corollary B.21(b).
+
+For general \(\psi \in \text{PL}_2(r)\), we seek to combine these two different lines of reasoning by exploiting the independence of \(\tilde{h}^1(n)\) and \(\mathcal{S}_0 \equiv \mathcal{S}_0(n) = \sigma(\gamma, m^0)\) for each \(n\). This allows \(\gamma(n)\) and \(\tilde{h}^1(n)\) to be handled separately (to a large extent) when we decompose \(T_{n1}\) as a sum of \(\mathbb{E}(T_{n1} | \mathcal{S}_0)\) and \(T_{n1} - \mathbb{E}(T_{n1} | \mathcal{S}_0)\) in (A.24) and (A.25) respectively. For the latter, it is helpful to first think of \(\gamma(n)\) as being fixed when applying Lemma B.12 to the Gaussian \(\tilde{h}^1\), before subsequently accounting for the randomness of \(\gamma(n)\) using (A1).
+
+Define \(\Psi: \mathbb{R} \to \mathbb{R}\) by \(\Psi(y) := \mathbb{E}(\psi(\tau_1 Z, y))\) with \(Z \sim N(0,1)\). For each \(n\), since \(\tilde{Z}^1 \equiv \tilde{Z}^1(n) \sim N_n(0, I_n)\) is independent of \(\mathcal{S}_0 \equiv \mathcal{S}_0(n) = \sigma(\gamma, m^0)\), we deduce from Lemma B.7 that \(\mathbb{E}(\psi(\tilde{h}_i^1, \gamma_i) | \mathcal{S}_0) = \mathbb{E}(\psi(\tau_1 \bar{Z}_i^1, \gamma_i) | \mathcal{S}_0) = \Psi(\gamma_i)\) almost surely, for every \(1 \le i \le n\). Since \(\Psi \in \text{PL}_1(r)\) by Lemma B.23(b), it follows from (A1) and Corollary B.21(b) that \(n^{-1} \sum_{i=1}^n \Psi(\gamma_i) \xrightarrow{c} \mathbb{E}(\Psi(\bar{\gamma}))\) as \(n \to \infty\), where \(\bar{\gamma} \sim \pi\). A further application of Lemma B.7 shows that if \(\bar{G}_1 \sim N(0, \tau^2)\) is independent of \(\bar{\gamma}\), then \(\mathbb{E}(\Psi(\bar{\gamma})) = \mathbb{E}(\mathbb{E}\{\psi(\bar{G}_1, \bar{\gamma}) | \bar{\gamma}\}) = \mathbb{E}(\psi(\bar{G}_1, \bar{\gamma}))\), so in summary, we have
+
+```
+\(\frac{1}{n} \sum_{i=1}^n \mathbb{E}(\psi(\tilde{h}_i^1, \gamma_i) | \mathcal{S}_0) = \frac{1}{n} \sum_{i=1}^n \Psi(\gamma_i) \xrightarrow{c} \mathbb{E}(\Psi(\bar{\gamma})) = \mathbb{E}(\psi(\bar{G}_1, \bar{\gamma})).\) (A.24)
+```
+
+To complete the proof that \(T_{n1} \xrightarrow{c} \mathbb{E}(\psi(\bar{G}_1, \bar{\gamma}))\), we must therefore show that
+
+```
+\(T'_{n1} := \frac{1}{n} \sum_{i=1}^n \{ \psi(\tilde{h}_i^1, \gamma_i) - \mathbb{E}(\psi(\tilde{h}_i^1, \gamma_i) | \mathcal{S}_0) \} \xrightarrow{c} 0\) (A.25)
+```
