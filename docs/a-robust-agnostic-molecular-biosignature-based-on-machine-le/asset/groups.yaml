@@ -1,0 +1,2061 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # A robust, agnostic molecular biosignature based on machine learning
+
+
+    H. James Cleaves II<sup>a,b,c</sup>, Grethe Hystad<sup>d</sup>, Anirudh Prabhu<sup>d</sup>,
+    Michael L. Wong<sup>a,d</sup>, George D. Cody<sup>a</sup>, Sophia Economou<sup>f</sup>,
+    and Robert M. Hazen<sup>a,1</sup>
+
+
+    Edited by Roger Summons, Massachusetts Institute of Technology, Cambridge, MA;
+    received April 29, 2023; accepted July 17, 2023
+
+
+    The search for definitive biosignatures—unambiguous markers of past or present
+    life—is a central goal of paleobiology and astrobiology. We used pyrolysis–gas
+    chromatography coupled to mass spectrometry to analyze chemically disparate samples,
+    including living cells, geologically processed fossil organic material, carbon-rich
+    meteorites, and laboratory-synthesized organic compounds and mixtures. Data from
+    each sample were employed as training and test subsets for machine-learning methods,
+    which resulted in a model that can identify the biogenicity of both contemporary
+    and ancient geologically processed samples with ~90% accuracy. These machine-learning
+    methods do not rely on precise compound identification: Rather, the relational
+    aspects of chromatographic and mass peaks provide the needed information, which
+    underscores this method’s utility for detecting alien biology.
+
+
+    biosignatures | organic chemistry | machine learning | taphonomy | carbonaceous
+    meteorites
+
+
+    Is there something fundamentally different about the chemistry of life compared
+    to the chemistry of the inanimate world? Are there “chemical rules of life” that
+    influence the diversity and distribution of biomolecules? Can we deduce those
+    rules and use them to guide our efforts to model life’s origins or to detect subtle
+    signs of life on other worlds? Here, we report research predicated on the hypothesis
+    that deeply rooted aspects of biochemistry differ fundamentally from abiotic chemistry.
+    Unlike molecules in nonliving systems, life’s organic molecular building blocks
+    have been selected for their function, including their ability to store and replicate
+    information, efficiently gather energy and material from the environment, build
+    and maintain their own structures, control their environments, and more (1, 2).
+    Synthesizing such biomolecules requires energy and information—precious commodities
+    in a competitive Darwinian world. The diversity and distribution of organic molecules
+    in living systems are expected to be different (though perhaps subtly so) from
+    organic molecular suites produced by abiotic processes. The evolutionary selection
+    for function should lead to different frequency distributions of biotic molecules
+    compared to what emerges from purely abiotic processes in which such entailed
+    processes do not arise or operate.
+
+
+    This phenomenon is already evident: The sets of molecules found in carbonaceous
+    meteorites, prebiotic simulation experiments, organic geopolymers (e.g., coal,
+    oil, kerogen), and organisms themselves can all be distinguished in various ways,
+    for example, via type, carbon isotope composition, and/or chirality of components
+    such as amino acids (3). In terms of thermodynamics, the efficient coupling of
+    physical processes to the performance of work and energy dissipation, which also
+    results in the construction of compounds that spontaneously self-assemble to perform
+    the same function, likely requires some structural cohesion, e.g., the formation
+    of a manifold (like a steam or combustion engine), or a cell) that concertedly
+    focuses the work in question (4). These coupling processes connect planetary energy
+    flow to the organic molecules it produces. Consequently, the resulting molecules
+    retain information about the processes that made them.
+
+
+    Which suites of molecules enable open-ended evolution? Terrestrial biology has
+    evolved several ways to couple work and system-produced structure, resulting in
+    recognizable core cellular motifs, for example chemiosmosis coupled to ATP production
+    (5), which is further coupled to cycosolic energy production. Such cellular reaction
+    networks may thus be indicators of life in general, in that cells are the fundamental
+    organizing aspects of physical material that enable work to be done in a heritable
+    manner. Biological systems on other worlds might not produce identical, or even
+    broadly similar, suites of organic molecules to those found in modern terrestrial
+    biology. Rather, we suggest that even alien biochemical systems that might differ
+    significantly from Earth’s biochemistry would still display molecular frequency
+    distributions that are distinct from those of background abiotic synthetic processes
+    (6). For example, it is plausible that life on any world will display a systematic
+
+
+    # Significance
+
+
+    We report a significant advance to one of the most important problems in astrobiology—the
+    development of a simple, reliable, and practical method for determining the biogenicity
+    of organic materials in planetary samples, both on other worlds and for the earliest
+    traces of life on Earth. We have developed a robust method that combines pyrolysis
+    GC-MS measurements of a wide variety of terrestrial and extraterrestrial carbonaceous
+    materials with machine-learning-based classification to achieve ~90% accuracy
+    in the differentiation between samples of abiotic origins vs. biotic specimens,
+    including highly-degraded, ancient, biologically-derived samples. Such discrimination
+    points to underlying “rules of biochemistry” that reflect the Darwinian imperative
+    of biomolecular selection for function.
+
+
+    Author contributions: H.J.C. and R.M.H. designed research; H.J.C., G.D.C., and
+    S.E. performed research; G.D.C. and R.M.H. contributed new reagents/analytic tools;
+    H.J.C., G.H., A.P., M.L.W., S.E., and R.M.H. analyzed data; and H.J.C., G.H.,
+    A.P., M.L.W., G.D.C., S.E., and R.M.H. wrote the paper. The authors declare no
+    competing interest. This article is a PNAS Direct Submission. Copyright © 2023
+    the Author(s). Published by PNAS. This article is distributed under Creative Commons
+    Attribution-NonCommercial-NoDerivatives License 4.0 (CC BY-NC-ND). *To whom correspondence
+    may be addressed. Email: rhazen@carnegiescience.edu. This article contains supporting
+    information online at https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2307149120/-/DCSupplemental.
+    Published September 25, 2023.'
+  - '[PAGE 1]
+
+
+    skew toward producing greater quantities of a few highly functional compounds
+    compared to abiotic synthesis, which would represent a potentially universal feature
+    of living systems generated by systemic feedback catalysis. We suggest that these
+    types of differences between biotic and abiotic molecular suites can be detected
+    and quantified using our techniques.
+
+
+    We used a robust, space flight-ready analytical method—pyrolysis gas chromatography
+    coupled to electron impact ionization mass spectrometry (Pyr-GC-EI-MS)—for molecular
+    analyses of varied complex organic mixtures (complex in terms of the number of
+    components in the mixture, not necessarily in terms of the structural complexity
+    of the individual molecules). We couple these measurements with mathematical modeling
+    and machine learning to characterize the distribution of organic molecular mixtures
+    from other worlds or early Earth, including molecules from carbonaceous meteorites,
+    organic residues from paleozoic fossils, or carbon-bearing black cherts from Earth’s
+    Archean Eon. This approach demonstrates robust, reproducible, and unambiguous
+    differences in the distributions of organic molecules derived from living vs.
+    nonliving systems. At a deeper level, we speculate that the evolution of biological
+    mechanisms to manufacture functional molecules may be fundamentally different
+    from undirected synthesis in abiotic systems—a motivation for developing biosignatures
+    that might reveal underlying rules of biochemistry.
+
+
+    # The Nature of Biosignatures
+
+
+    A biosignature in the context of astrobiology is any substance or phenomenon that
+    provides diagnostic evidence of past or present life (7–12). Biosignatures can
+    range across both temporal and spatial reference frames and may take the form
+    of individual (bio)markers or relational aspects among multiple measurable phenomena.
+    Of special importance in the context of the search for life on other worlds is
+    the concept of “agnostic biosignatures,” which are attributes of a system that
+    point to a biosphere, but that are not idiosyncratic properties resulting from
+    the biochemistry of familiar terrestrial organisms (8, 13).
+
+
+    Various biosignatures have been proposed (11). Easily recognized biosignatures
+    include body fossils and other biologically deposited objects at scales from microns
+    to kilometers, such as shells, teeth, and bones, but also microbial mats, tracks
+    and trails, colonial structures such as stromatolites and reefs, concretions,
+    and cells preserved in fine-grained rock (14, 15). Chemical and isotopic biosignatures
+    have been invoked in numerous terrestrial samples, with distinctive distributions
+    of carbon, nitrogen, sulfur, and/or iron isotopes receiving special attention
+    (e.g., refs. 16 and 17). In this context, molecular biosignatures hold special
+    promise.
+
+
+    In some instances, prior researchers have proposed the presence of a specific
+    molecule or group of molecules as a plausible biosignature (18); for example,
+    specific genetic polymers such as DNA (19), lipids (20), or certain collections
+    of homochiral molecules (21). Similarly, various atmospheric molecules that purportedly
+    result mainly from metabolic processes have also been cited as possible biosignatures
+    (22, 23).
+
+
+    A complementary strategy for identifying agnostic biosignatures is to examine
+    collective attributes of multiple sample components, including minerals and molecules.
+    For example, distributions of minerals on Earth, as represented by network analysis
+    (24) and statistical analyses of mineral diversity and distribution (25), have
+    been suggested to reflect the influence of the biosphere. Likewise, Wong and coworkers
+    (26) have applied network analysis to atmospheric reaction networks to identify
+    patterns that differentiate living and nonliving worlds. Recent efforts to identify
+    collective molecular biosignatures have also focused on the distribution of
+
+
+    monomer abundances (27), the topologies of organic molecular reaction networks
+    (28), and relative distributions and abundances of unassigned features in complex
+    mass spectra (29). Cronin and colleagues have also recently explored the molecular
+    complexity of sample components as a potential biosignature (30, 31). We here
+    propose a complementarity strategy based on machine-learning analysis of the higher-dimensional
+    relationships in suites of molecules as analyzed by Pyr-GC-EI-MS, which is currently
+    deployed as an analytical technique on various Solar System exploration missions
+    (32–38).
+
+
+    # Abiotic/Biotic Discrimination
+
+
+    Our method for molecular biosignature detection involved three steps:
+
+
+    +   (1) Collection of 134 diverse carbon-bearing samples (SI Appendix, Table S1).
+    Abiotic samples include natural molecular suites from carbonaceous meteorites,
+    as well as laboratory synthesis experiments and a number of pure synthetic chemicals,
+    which serve as an important baseline of molecular complexity. Modern biotic samples
+    were obtained from varied organisms, and a range of taphonomic samples such as
+    fossil leaves and wood, fossil fuels (coal, petroleum, asphalt, and oil shales),
+    and more ancient carbon-bearing sediments.
+
+
+    +   (2) Subjecting each sample to Pyr-GC-EI-MS (SI Appendix and Analytical Methods).
+    Pyr-GC-EI-MS has already been adapted for spaceflight missions (32–38) and enables
+    rapid organic sample introduction from mineral matrices directly to a GC instrument
+    with little to no sample preparation. Because pyrolysis products rapidly combine
+    to generate compounds not present in the original sample, the datasets generated
+    are highly complex and do not map 1:1 to the original components of the sample.
+    This aspect of Pyr-GC-EI-MS analysis motivates the machine learning approach that
+    we employ below.
+
+
+    +   (3) Training random forest machine-learning models using three-dimensional
+    chromatographic retention time/mass to charge ratio/intensity data from each sample
+    analysis (SI Appendix and Machine-Learning Methods). In this work, chromatographic
+    retention time is also called scan number, as we measure when a particular feature
+    arises in the analysis. In this Pyr-GC-EI-MS workflow, volatile compounds generated
+    by pyrolysis are separated by GC and further subjected to EI-MS, which provides
+    significant structural information based on fragmentation patterns (39), especially
+    when these data can be compared with EI-MS libraries (40).
+
+
+    After evaluating Pyr-GC-EI-MS features in all 134 samples, the random forest model
+    correctly predicted the biogenicity of samples with ~90% accuracy. Thus, the generalized
+    testing error using nested cross-validation (CV) was 10.4% with an area under
+    the receiver operating characteristic curve of 91.2%.
+
+
+    The 20 most important features were selected based on the Gini splitting index
+    for Principal Component Analysis (PCA) plots—an index that provides a measure
+    of variance that highlights how often a randomly chosen element of a decision
+    tree is misclassified (41). The highest scoring features on the Gini splitting
+    index were the variables most relevant for predicting discrimination. While the
+    influence of the selected set of attributes has yet to be fully elucidated, the
+    extent to which molecular distributions in abiotic and biotic samples are demonstrably
+    different is evident from summed three-dimensional representations of the data
+    from subsets of samples, for example, carbonaceous meteorite samples vs. microbial
+    communities (Fig. 1 A and B, respectively). Fig. 2 shows'
+  md: '
+
+    ## A robust, agnostic molecular biosignature based on machine learning
+
+
+    H. James Cleaves II[a,b,c], Grethe Hystad[d], Anirudh Prabhu[d], Michael L. Wong[a,d],
+    George D. Cody[a], Sophia Economou[f], and Robert M. Hazen[a,1]
+
+
+    Edited by Roger Summons, Massachusetts Institute of Technology, Cambridge, MA;
+    received April 29, 2023; accepted July 17, 2023
+
+
+    The search for definitive biosignatures—unambiguous markers of past or present
+    life—is a central goal of paleobiology and astrobiology. We used pyrolysis–gas
+    chromatography coupled to mass spectrometry to analyze chemically disparate samples,
+    including living cells, geologically processed fossil organic material, carbon-rich
+    meteorites, and laboratory-synthesized organic compounds and mixtures. Data from
+    each sample were employed as training and test subsets for machine-learning methods,
+    which resulted in a model that can identify the biogenicity of both contemporary
+    and ancient geologically processed samples with ~90% accuracy. These machine-learning
+    methods do not rely on precise compound identification: Rather, the relational
+    aspects of chromatographic and mass peaks provide the needed information, which
+    underscores this method’s utility for detecting alien biology.
+
+
+    biosignatures | organic chemistry | machine learning | taphonomy | carbonaceous
+    meteorites
+
+
+    Is there something fundamentally different about the chemistry of life compared
+    to the chemistry of the inanimate world? Are there “chemical rules of life” that
+    influence the diversity and distribution of biomolecules? Can we deduce those
+    rules and use them to guide our efforts to model life’s origins or to detect subtle
+    signs of life on other worlds? Here, we report research predicated on the hypothesis
+    that deeply rooted aspects of biochemistry differ fundamentally from abiotic chemistry.
+    Unlike molecules in nonliving systems, life’s organic molecular building blocks
+    have been selected for their function, including their ability to store and replicate
+    information, efficiently gather energy and material from the environment, build
+    and maintain their own structures, control their environments, and more (1, 2).
+    Synthesizing such biomolecules requires energy and information—precious commodities
+    in a competitive Darwinian world. The diversity and distribution of organic molecules
+    in living systems are expected to be different (though perhaps subtly so) from
+    organic molecular suites produced by abiotic processes. The evolutionary selection
+    for function should lead to different frequency distributions of biotic molecules
+    compared to what emerges from purely abiotic processes in which such entailed
+    processes do not arise or operate.
+
+
+    This phenomenon is already evident: The sets of molecules found in carbonaceous
+    meteorites, prebiotic simulation experiments, organic geopolymers (e.g., coal,
+    oil, kerogen), and organisms themselves can all be distinguished in various ways,
+    for example, via type, carbon isotope composition, and/or chirality of components
+    such as amino acids (3). In terms of thermodynamics, the efficient coupling of
+    physical processes to the performance of work and energy dissipation, which also
+    results in the construction of compounds that spontaneously self-assemble to perform
+    the same function, likely requires some structural cohesion, e.g., the formation
+    of a manifold (like a steam or combustion engine), or a cell) that concertedly
+    focuses the work in question (4). These coupling processes connect planetary energy
+    flow to the organic molecules it produces. Consequently, the resulting molecules
+    retain information about the processes that made them.
+
+
+    Which suites of molecules enable open-ended evolution? Terrestrial biology has
+    evolved several ways to couple work and system-produced structure, resulting in
+    recognizable core cellular motifs, for example chemiosmosis coupled to ATP production
+    (5), which is further coupled to cytosolic energy production. Such cellular reaction
+    networks may thus be indicators of life in general, in that cells are the fundamental
+    organizing aspects of physical material that enable work to be done in a heritable
+    manner. Biological systems on other worlds might not produce identical, or even
+    broadly similar, suites of organic molecules to those found in modern terrestrial
+    biology. Rather, we suggest that even alien biochemical systems that might differ
+    significantly from Earth’s biochemistry would still display molecular frequency
+    distributions that are distinct from those of background abiotic synthetic processes
+    (6). For example, it is plausible that life on any world will display a systematic
+    skew toward producing greater quantities of a few highly functional compounds
+    compared to abiotic synthesis, which would represent a potentially universal feature
+    of living systems generated by systemic feedback catalysis. We suggest that these
+    types of differences between biotic and abiotic molecular suites can be detected
+    and quantified using our techniques.
+
+
+    ## Significance
+
+
+    We report a significant advance to one of the most important problems in astrobiology—the
+    development of a simple, reliable, and practical method for determining the biogenicity
+    of organic materials in planetary samples, both on other worlds and for the earliest
+    traces of life on Earth. We have developed a robust method that combines pyrolysis
+    GC-MS measurements of a wide variety of terrestrial and extraterrestrial carbonaceous
+    materials with machine-learning-based classification to achieve ~90% accuracy
+    in the differentiation between samples of abiotic origins vs. biotic specimens,
+    including highly-degraded, ancient, biologically-derived samples. Such discrimination
+    points to underlying “rules of biochemistry” that reflect the Darwinian imperative
+    of biomolecular selection for function.
+
+
+    Author contributions: H.J.C. and R.M.H. designed research; H.J.C., G.D.C., and
+    S.E. performed research; G.D.C. and R.M.H. contributed new reagents/analytic tools;
+    H.J.C., G.H., A.P., M.L.W., S.E., and R.M.H. analyzed data; and H.J.C., G.H.,
+    A.P., M.L.W., G.D.C., S.E., and R.M.H. wrote the paper. The authors declare no
+    competing interest. This article is a PNAS Direct Submission. Copyright © 2023
+    the Author(s). Published by PNAS. This article is distributed under Creative Commons
+    Attribution-NonCommercial-NoDerivatives License 4.0 (CC BY-NC-ND). *To whom correspondence
+    may be addressed. Email: rhazen@carnegiescience.edu. This article contains supporting
+    information online at https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2307149120/-/DCSupplemental.
+    Published September 25, 2023.
+
+
+    We used a robust, space flight-ready analytical method—pyrolysis gas chromatography
+    coupled to electron impact ionization mass spectrometry (Pyr-GC-EI-MS)—for molecular
+    analyses of varied complex organic mixtures (complex in terms of the number of
+    components in the mixture, not necessarily in terms of the structural complexity
+    of the individual molecules). We couple these measurements with mathematical modeling
+    and machine learning to characterize the distribution of organic molecular mixtures
+    from other worlds or early Earth, including molecules from carbonaceous meteorites,
+    organic residues from Paleozoic fossils, or carbon-bearing black cherts from Earth’s
+    Archean Eon. This approach demonstrates robust, reproducible, and unambiguous
+    differences in the distributions of organic molecules derived from living vs.
+    nonliving systems. At a deeper level, we speculate that the evolution of biological
+    mechanisms to manufacture functional molecules may be fundamentally different
+    from undirected synthesis in abiotic systems—a motivation for developing biosignatures
+    that might reveal underlying rules of biochemistry.
+
+
+    ## The Nature of Biosignatures
+
+
+    A biosignature in the context of astrobiology is any substance or phenomenon that
+    provides diagnostic evidence of past or present life (7–12). Biosignatures can
+    range across both temporal and spatial reference frames and may take the form
+    of individual (bio)markers or relational aspects among multiple measurable phenomena.
+    Of special importance in the context of the search for life on other worlds is
+    the concept of “agnostic biosignatures,” which are attributes of a system that
+    point to a biosphere, but that are not idiosyncratic properties resulting from
+    the biochemistry of familiar terrestrial organisms (8, 13).
+
+
+    Various biosignatures have been proposed (11). Easily recognized biosignatures
+    include body fossils and other biologically deposited objects at scales from microns
+    to kilometers, such as shells, teeth, and bones, but also microbial mats, tracks
+    and trails, colonial structures such as stromatolites and reefs, concretions,
+    and cells preserved in fine-grained rock (14, 15). Chemical and isotopic biosignatures
+    have been invoked in numerous terrestrial samples, with distinctive distributions
+    of carbon, nitrogen, sulfur, and/or iron isotopes receiving special attention
+    (e.g., refs. 16 and 17). In this context, molecular biosignatures hold special
+    promise.
+
+
+    In some instances, prior researchers have proposed the presence of a specific
+    molecule or group of molecules as a plausible biosignature (18); for example,
+    specific genetic polymers such as DNA (19), lipids (20), or certain collections
+    of homochiral molecules (21). Similarly, various atmospheric molecules that purportedly
+    result mainly from metabolic processes have also been cited as possible biosignatures
+    (22, 23).
+
+
+    A complementary strategy for identifying agnostic biosignatures is to examine
+    collective attributes of multiple sample components, including minerals and molecules.
+    For example, distributions of minerals on Earth, as represented by network analysis
+    (24) and statistical analyses of mineral diversity and distribution (25), have
+    been suggested to reflect the influence of the biosphere. Likewise, Wong and coworkers
+    (26) have applied network analysis to atmospheric reaction networks to identify
+    patterns that differentiate living and nonliving worlds. Recent efforts to identify
+    collective molecular biosignatures have also focused on the distribution of monomer
+    abundances (27), the topologies of organic molecular reaction networks (28), and
+    relative distributions and abundances of unassigned features in complex mass spectra
+    (29). Cronin and colleagues have also recently explored the molecular complexity
+    of sample components as a potential biosignature (30, 31). We here propose a complementarity
+    strategy based on machine-learning analysis of the higher-dimensional relationships
+    in suites of molecules as analyzed by Pyr-GC-EI-MS, which is currently deployed
+    as an analytical technique on various Solar System exploration missions (32–38).
+
+
+    ## Abiotic/Biotic Discrimination
+
+
+    Our method for molecular biosignature detection involved three steps:
+
+
+    - (1) Collection of 134 diverse carbon-bearing samples (SI Appendix, Table S1).
+    Abiotic samples include natural molecular suites from carbonaceous meteorites,
+    as well as laboratory synthesis experiments and a number of pure synthetic chemicals,
+    which serve as an important baseline of molecular complexity. Modern biotic samples
+    were obtained from varied organisms, and a range of taphonomic samples such as
+    fossil leaves and wood, fossil fuels (coal, petroleum, asphalt, and oil shales),
+    and more ancient carbon-bearing sediments.
+
+
+    - (2) Subjecting each sample to Pyr-GC-EI-MS (SI Appendix and Analytical Methods).
+    Pyr-GC-EI-MS has already been adapted for spaceflight missions (32–38) and enables
+    rapid organic sample introduction from mineral matrices directly to a GC instrument
+    with little to no sample preparation. Because pyrolysis products rapidly combine
+    to generate compounds not present in the original sample, the datasets generated
+    are highly complex and do not map 1:1 to the original components of the sample.
+    This aspect of Pyr-GC-EI-MS analysis motivates the machine learning approach that
+    we employ below.
+
+
+    - (3) Training random forest machine-learning models using three-dimensional chromatographic
+    retention time/mass to charge ratio/intensity data from each sample analysis (SI
+    Appendix and Machine-Learning Methods). In this work, chromatographic retention
+    time is also called scan number, as we measure when a particular feature arises
+    in the analysis. In this Pyr-GC-EI-MS workflow, volatile compounds generated by
+    pyrolysis are separated by GC and further subjected to EI-MS, which provides significant
+    structural information based on fragmentation patterns (39), especially when these
+    data can be compared with EI-MS libraries (40).
+
+
+    After evaluating Pyr-GC-EI-MS features in all 134 samples, the random forest model
+    correctly predicted the biogenicity of samples with ~90% accuracy. Thus, the generalized
+    testing error using nested cross-validation (CV) was 10.4% with an area under
+    the receiver operating characteristic curve of 91.2%.
+
+
+    The 20 most important features were selected based on the Gini splitting index
+    for Principal Component Analysis (PCA) plots—an index that provides a measure
+    of variance that highlights how often a randomly chosen element of a decision
+    tree is misclassified (41). The highest scoring features on the Gini splitting
+    index were the variables most relevant for predicting discrimination. While the
+    influence of the selected set of attributes has yet to be fully elucidated, the
+    extent to which molecular distributions in abiotic and biotic samples are demonstrably
+    different is evident from summed three-dimensional representations of the data
+    from subsets of samples, for example, carbonaceous meteorite samples vs. microbial
+    communities (Fig. 1 A and B, respectively). Fig. 2 shows
+
+    '
+  mdcn: '
+
+
+    ## 基于机器学习的强健、非特异性分子生物标志物
+
+
+    H. James Cleaves II[a,b,c], Grethe Hystad[d], Anirudh Prabhu[d], Michael L. Wong[a,d],
+    George D. Cody[a], Sophia Economou[f], and Robert M. Hazen[a,1]
+
+
+    Edited by 罗杰·萨蒙斯，麻省理工学院，剑桥，马萨诸塞州；收到 2023 年 4 月 29 日；接受 2023 年 7 月 17 日
+
+
+    寻找确定性生物标志物（即过去或现在生命的明确标志）是古生物学和天体生物学的核心目标。我们使用热解-气相色谱-质谱联用法分析化学性质迥异的样本，包括活细胞、经地质过程处理的化石有机物、富碳陨石以及实验室合成的有机化合物和混合物。每个样本的数据被用作机器学习方法的训练和测试子集，从而得到一个能够以约
+    90% 的准确率鉴定当代及经地质过程处理的古代样本生物源性的模型。这些机器学习方法不依赖于精确的化合物鉴定：相反，色谱峰和质谱峰的关系特征提供了所需信息，这凸显了该方法在检测外星生物学方面的实用性。
+
+
+    生物标志物 | 有机化学 | 机器学习 | 塔富学 | 富碳陨石
+
+
+    生命的化学与无生命世界的化学之间是否存在根本性的差异？是否存在影响生物分子多样性和分布的“生命化学规律”？我们能否推导出这些规则，并利用它们来指导我们对生命起源的建模或在其他世界检测微妙生命迹象的工作？在这里，我们报告的研究基于这样一个假设：生物化学中根深蒂固的方面与非生物化学在根本上有所不同。与非生物系统中的分子不同，生命的有机分子构建块已被选择用于其功能，包括存储和复制信息的能力、从环境中高效采集能量和物质的能力、构建和维护自身结构的能力、控制其环境的能力以及更多（1,
+    2）。合成此类生物分子需要能量和信息——在竞争激烈的达尔文世界中，这些是宝贵的商品。预计生物系统中有机分子的多样性和分布与非生物过程产生的有机分子组合会有所不同（尽管差异可能很微妙）。功能的进化选择应导致生物分子频率分布与纯粹非生物过程中出现的分布不同，在这些过程中，此类随附过程不会发生或运行。
+
+
+    这一现象已经显而易见：富碳陨石、前生物模拟实验、有机地质聚合物（例如煤、石油、角蠕石）以及生物体本身中发现的分子集合，都可以通过多种方式加以区分，例如，通过氨基酸等成分的类型、碳同位素组成和/或手性（3）。从热力学角度来看，将物理过程与功的执行和能量耗散高效耦合（这也导致构建能够自发自组装以执行相同功能的化合物）可能需要一定的结构凝聚力，例如，形成一个集流管（如蒸汽机或内燃机）或细胞，以协同地聚焦所讨论的功（4）。这些耦合过程将行星能量流与其产生的有机分子联系起来。因此，所产生的分子保留了关于制造它们的过程的信息。
+
+
+    哪些分子组合能够实现开放式进化？地球生物学已经进化出多种方式来耦合功和系统产生的结构，从而产生可识别的核心细胞基序，例如与 ATP 产生耦合的化学渗透（5），这进一步与胞质内能量产生耦合。因此，此类细胞反应网络可能是普遍生命的指示器，因为细胞是使功能得以以可遗传方式执行的物质的基本组织方面。其他世界上的生物系统可能不会产生与现代地球生物学中发现的相同或甚至大致相似的有机分子组合。相反，我们认为，即使是可能与地球生物化学有显著差异的外星生物化学系统，也会显示出与背景非生物合成过程不同的分子频率分布（6）。例如，任何世界上的生命都可能表现出相对于非生物合成，向生产少量高功能化合物的系统性偏倚，这可能代表由系统性反馈催化产生的生物系统的一种潜在普遍特征。我们建议，利用我们的技术可以检测和量化生物和非生物分子组合之间的这类差异。
+
+
+    ## 意义
+
+
+    我们在天体生物学最重要的问题之一方面取得了重大进展——开发了一种简单、可靠且实用的方法，用于确定行星样本（包括其他世界以及地球上最早生命痕迹）中有机材料的生物源性。我们开发了一种强健的方法，将广泛的地球和外地球富碳材料的热解
+    GC-MS 测量与基于机器学习的分类相结合，以实现非生物起源样本与生物标本（包括高度降解的、源于生物的古代样本）之间约 90% 的准确率区分。这种区分指向了反映生物分子功能选择达尔文式命令的底层“生物化学规律”。
+
+
+    作者贡献：H.J.C. 和 R.M.H. 设计了研究；H.J.C.、G.D.C. 和 S.E. 执行了研究；G.D.C. 和 R.M.H. 提供了新试剂/分析工具；H.J.C.、G.H.、A.P.、M.L.W.、S.E.
+    和 R.M.H. 分析了数据；H.J.C.、G.H.、A.P.、M.L.W.、G.D.C.、S.E. 和 R.M.H. 撰写了论文。作者声明无竞争利益。本文为
+    PNAS 直接投稿。版权 © 2023 作者。由 PNAS 出版。本文根据 Creative Commons Attribution-NonCommercial-NoDerivatives
+    License 4.0 (CC BY-NC-ND) 许可分发。*通信作者请联系。电子邮件：rhazen@carnegiescience.edu。本文包含在线补充信息，网址为
+    https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2307149120/-/DCSupplemental。于
+    2023 年 9 月 25 日出版。
+
+
+    我们使用了一种强健的、适用于太空飞行的分析方法——热解气相色谱与电子击打电离质谱耦合（Pyr-GC-EI-MS）——来对多种复杂有机混合物进行分子分析（复杂性指混合物中的组分数量，而不一定是单个分子的结构复杂性）。我们将这些测量与数学建模和机器学习相结合，以表征来自其他世界或早期地球的有机分子混合物的分布，包括来自富碳陨石、古生代化石有机残留物或地球古元古代含碳黑燧石的分子。该方法揭示了源自生物系统与非生物系统的有机分子分布中强健、可重复且明确的差异。在更深层次上，我们推测，生物机制制造功能分子的进化可能与非生物系统中的无定向合成有根本不同——这是开发可能揭示生物化学底层规则的生物标志物的动力。
+
+
+    ## 生物标志物的本质
+
+
+    在天体生物学背景下，生物标志物是任何能提供过去或现在生命诊断证据的物质或现象（7–12）。生物标志物可以跨越时间和空间参考框架，并可能采取个别（生物）标志物或多种可测量现象之间关系特征的形式。在寻找其他世界生命的背景下，“非特异性生物标志物”的概念尤为重要，它是指系统指向生物圈的属性，但并非源自熟悉地球生物体生物化学的独特属性（8,
+    13）。
+
+
+    已提出各种生物标志物（11）。易于识别的生物标志物包括体化石以及从微米到千米尺度的其他生物沉积物，如贝壳、牙齿和骨骼，还包括微生物垫、足迹和痕迹、如层状礁石和珊瑚礁等群体结构、结核以及保存在细粒岩石中的细胞（14,
+    15）。化学和同位素生物标志物已被用于众多地球样品，碳、氮、硫和/或铁同位素的独特分布受到特别关注（例如，参考文献 16 和 17）。在这一背景下，分子生物标志物具有特殊的前景。
+
+
+    在某些情况下，先前的研究人员提出特定分子或分子组作为合理的生物标志物（18）；例如，特定的遗传聚合物，如 DNA（19）、脂质（20）或某些手性同型分子集合（21）。同样，据称主要由代谢过程产生的各种大气分子也被引用为可能的生物标志物（22,
+    23）。
+
+
+    识别非特异性生物标志物的互补策略是检查多个样本成分（包括矿物和分子）的集体属性。例如，地球上的矿物分布，如网络分析（24）和矿物多样性及分布的统计分析（25）所表示，已被认为反映了生物圈的影响。同样，Wong
+    及其同事（26）将网络分析应用于大气反应网络，以识别区分生物世界和非生物世界的模式。最近识别集体分子生物标志物的努力还关注单体丰度分布（27）、有机分子反应网络的拓扑结构（28）以及复杂质谱中未分配特征的相对分布和丰度（29）。Cronin
+    及其同事还最近探索了样本成分的分子复杂性作为潜在生物标志物（30, 31）。我们在这里提出了一种基于机器学习分析 Pyr-GC-EI-MS 所分析的分子组中更高维度关系的互补策略，Pyr-GC-EI-MS
+    目前已作为各种太阳系探索任务中的分析技术部署（32–38）。
+
+
+    ## 非生物/生物鉴别
+
+
+    我们的分子生物标志物检测方法包括三个步骤：
+
+
+    - (1) 收集 134 种多样化的含碳样本（SI 附录，表 S1）。非生物样本包括来自富碳陨石的天然分子组，以及实验室合成实验和若干纯合成化学品，这些作为分子复杂性的重要基线。现代生物样本从各种生物体中获得，还包括一系列塔富学样本，如化石树叶和木材、化石燃料（煤、石油、沥青和油页岩）以及更古老的含碳沉积物。
+
+
+    - (2) 将每个样本送入 Pyr-GC-EI-MS 分析（SI 附录和分析方法）。Pyr-GC-EI-MS 已被改编用于太空飞行任务（32–38），能够将有机样本直接从矿物基质快速引入
+    GC 仪器，几乎不需要样本前处理。因为热解产物会迅速结合生成原始样本中不存在的化合物，因此生成的数据集高度复杂，不能与样本的原始成分 1:1 对应。Pyr-GC-EI-MS
+    分析的这一特点激励了我们下面采用的机器学习方法。
+
+
+    - (3) 使用每个样本分析的三维色谱保留时间/荷质比/强度数据训练随机森林机器学习模型（SI 附录和机器学习方法）。在本工作中，色谱保留时间也称为扫描编号，因为我们测量特定特征在分析中出现的时间。在这个
+    Pyr-GC-EI-MS 工作流程中，热解产生的挥发性化合物由 GC 分离，然后进一步接受 EI-MS 分析，这基于碎片化模式提供重要的结构信息（39），尤其是当这些数据可以与
+    EI-MS 库进行比较时（40）。
+
+
+    在对所有 134 个样本中的 Pyr-GC-EI-MS 特征进行评估后，随机森林模型以约 90% 的准确率正确预测了样本的生物源性。因此，使用嵌套交叉验证（CV）的泛化测试误差为
+    10.4%，受试者工作特征曲线下面积为 91.2%。
+
+
+    基于主成分分析（PCA）图的基尼分割指数，选出了 20 个最重要的特征——该指数提供了方差的度量，突出显示决策树中随机选择的元素被错误分类的频率（41）。基尼分割指数得分最高的特征是预测区分最相关的变量。虽然所选属性集的影响尚未完全阐明，但来自样本子集的数据的求和三维表示（例如，富碳陨石样本与微生物群落（分别为图
+    1 A 和 B））明显表明非生物样本和生物样本中分子分布存在显著差异。图 2 显示
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    ![](img/86aabed13cea37e639c392b04265c04c_2_0.png)
+
+
+    the PCA plot of the training data with the scores of the test data projected into
+    the same PCA space as the scores of the training data. The scales of the test
+    data were obtained from the mean and SD of the training data. The first two principal
+    components explain ~ 54.9% of the variation in the training data (Fig. 2).
+
+
+    # Discussion
+
+
+    We analyzed collective molecular distributions from varied abiotic, biological,
+    and taphonomically altered biological mixtures of organic molecules to demonstrate
+    clear differences between suites of organic molecules synthesized by life vs.
+    those produced abiotically. Importantly, we find that signs of biogenicity are
+    preserved despite extensive organic maturation, in some instances over periods
+    of hundreds of millions of years.
+
+
+    What molecular characteristics might contribute to the observed differences among
+    abiotic, modern living, and taphonomically altered specimens? We explored the
+    products of a variety of abiotic reactions that combine the diversity-generating
+    properties of sugar degradation (e.g., the formose reaction) with the diversity-generating
+    propensity of amines in combination with carbohydrates, such as Maillard reactions
+    of diverse amino acids with glucose (42). Organic molecular suites derived from
+    carbonaceous meteorites have been suggested to be derived from formose-like chemistry
+    (43). Formose and Maillard reactions are known to produce significant amounts
+    of diverse polar hetero-atom-containing products such as pyrazines, furans, and
+    diketopiperazines (44)— compounds that are not typically well preserved in the
+    geological record (45). Their detection can thus be considered as a marker for
+    the recent abundance of sugars and amines, which could be derived from formose-like
+    chemistry or from biological processes.
+
+
+    Biochemistry also encompasses a wide variety of disparate chemistries in contemporary
+    organisms (46). Regardless of the diversity of chemical processes that might enable
+    life, the abundant coexistence of water-soluble and water-insoluble organic species
+    appears to be one of life’s hallmarks. A significant fraction by dry weight of
+    most terrestrial organisms is composed of sugar-derived compounds, including cellulose,
+    glycogen, chitin, and ribose and deoxyribose in nucleic acids (47). These species
+    produce characteristic pyrolysis products (including furans and pyrans), plus
+    a peptidic fraction that produces other distinctive pyrolysis products (including
+    pyrazines and Maillard-like cross products with the
+
+
+    sugar-derived pyrolysis product pool). Accordingly, we suggest that the coexistence
+    of molecules of diverse polarity in detectable quantities points to the existence
+    of recent life or more generally the functional structural organization of cells.
+
+
+    Most preserved biological geocarbon is composed of breakdown products of cell
+    membrane and cell wall material, for example, in the form of petroleum and coal
+    (48). Petroleum is generally thought to derive from thermal degradation of type
+    I kerogen that arises from the algal biopolymers. Coal is mostly derived from
+    the ligno-cellulosic biopolymers of plant vascular tissue; high-volatile bituminous
+    coals have been transformed during diagenesis such that no molecular signatures
+    of either lignin or cellulose remain. These degraded molecular suites tend to
+    be derived from materials of lower water solubility—molecules that point to cellular
+    origins.
+
+
+    The systematic differences between abiotic and biologically derived materials
+    suggest possible underlying reasons for the robust discriminators we find using
+    Pyr-GC-EI-MS data. Chromatographic retention time on any given solid GC support
+    can be related via a Kovats index, which helps to normalize compound volatility
+    and polarity with retention time (49). Thus, material derived from cells will
+    have a nonpolar component derived from cell membrane/wall material that elutes
+    late chromatographically, as well as a polar cytoplasmic component that elutes
+    early (depending on the chromatographic matrix). Samples exhibiting both types
+    of chromatographically-behaving materials are typically derived from cells, which
+    produce both polar and nonpolar compounds in a coordinated manner. In contrast,
+    abiotic diversity-generating reactions that produce both polar and nonpolar compounds
+    do so in an uncoordinated fashion such that there will be a skewed balance between
+    the two types of materials. It is unlikely that both polar and nonpolar compounds
+    would occur in comparable ratios because no known abiotic processes produce balanced
+    amounts of nonpolar products in the absence of polar organics. As an example,
+    while nonpolar, heteroatom-poor material is a common convergence point for aged
+    organic matter from meteorites, such material is easily distinguishable from aged
+    biological deposits such as coal and petroleum because these types of materials
+    preserve observable polar molecular irregularities, such as even-odd disparities
+    in fatty acids and other hydrocarbons. Even-odd disparities in alkanes and fatty
+    acids tend to disappear as oil matures through diagenetic “smoothing.” Consequently,
+    even-odd characteristics provide a measure of an oil sample’s age.'
+  - '[PAGE 3]
+
+
+    # PCA plot of training and test samples using the first 20 importance variables
+
+
+    ![](img/86aabed13cea37e639c392b04265c04c_3_0.png)
+
+
+    Fig. 2. Grouping of samples according to the machine-learning methods explored
+    here. Biologically derived samples (green/blue) are distinguished from abiotic
+    samples (orange). Taphonomically altered biological samples (blue) lie along a
+    trend distinct from that of contemporary biological samples (green).
+
+
+    # Implications
+
+
+    Prospects for Analyzing Samples of Uncertain Biogenicity. Our method can potentially
+    be used to resolve the biogenicity of data already in hand. An important example
+    is the 3.5 Ga Apex chert from the Pilbara Craton in Western Australia, whose purported
+    biogenicity has evoked significant debate (50, 51). In addition, samples measured
+    by the Pyr-GC-MS instruments on the Mars Viking lander and the Curiosity rover
+    (34, 43, 52) deserve new
+
+
+    evaluation. While our method must first be calibrated to the specific thermal
+    ramping and maximum temperature conditions of those instruments, these and other
+    machine-learning methods hold promise for the evaluation of the biogenicity of
+    samples of extraterrestrial provenance before they are returned to Earth (53).
+    Of special interest in this regard is the possible role of environmental chemicals,
+    such as perchlorate on Mars (54), as well as radiation-altered molecular suites
+    (55), which might significantly influence the properties of the resulting molecular
+    mixtures.'
+  - '[PAGE 4]
+
+
+    Rules of Biochemistry. The identified systematic differences among the molecular
+    distributions in abiotic and biotic samples suggest that biochemistry is intrinsically
+    different from abiotic organic chemistry. Our working hypothesis is that biomolecules,
+    unlike those in abiotic molecular suites (for example in a carbonaceous meteorite),
+    are selected for function. That difference results in biomolecules that are more
+    limited in number, and perhaps in some instances more complex in structure (30,
+    31), than organic molecules in abiotic suites. A deeper examination of the specific
+    constellation of attributes identified in this study is a next step in testing
+    this hypothesis. Despite the observation that taphonomic processes inevitably
+    lead to loss of information (56–58), our method is able to distinguish ancient,
+    geologically processed biotic samples from abiotic organics, while possibly providing
+    a qualitative metric for degree of taphonomic degradation. In this regard, it
+    is important to note that abiotic molecular systems are not intrinsically simple.
+    For example, the suites of molecules extracted from the Murchison carbonaceous
+    chondrite are remarkably complex in both their structural diversity and numerosity
+    (59). There likely exist aspects of molecular complexity that differentiate living
+    and nonliving systems, as explored by Cronin and coworkers (30, 31). However,
+    the diagnostic high-dimensional differences between abiotic and biotic molecular
+    distributions we document here do not lie in the complexity or diversity of individual
+    analytes but rather in their relational properties.
+
+
+    Our Proposed Biosignature is Agnostic. An important finding of this study is that
+    abiotic, living, and taphonomic suites of organic molecules display well-defined
+    clusters in their high-dimensional space, as illustrated in Fig. 2. At the same
+    time, large “volumes” of this attribute space are unpopulated by either abiotic
+    suites or terrestrial life. This topology suggests the possibility that an alien
+    biochemistry might be recognized by forming its own attribute cluster in a different
+    region of Fig. 2—a cluster that reflects the essential role in selection for function
+    in biotic systems, albeit with potentially very different suites of functional
+    molecules. Abiotic systems tend to cluster in a very narrow region of this phase
+    space, which could in principle allow for easy identification of anomalous signals
+    that are dissimilar to abiotic geochemical systems or known terrestrial life.
+
+
+    # Methods
+
+
+    Sample Characterization. We assembled 134 carbon-bearing samples from varied abiotic
+    and biotic, and sometimes ambiguous, sources. A list of these samples and their
+    attributes is provided in SI Appendix, Table S1.
+
+
+    Analytical Methods. Pyr-GC-EI-MS analyses were performed with a CDS 1000 pyrolyzer
+    (CDS Analytical, Inc., Oxford, PA) interfaced with a Hewlett-Packard 6890 series
+    gas chromatograph interfaced with an Agilent 5972 quadrupole mass spectrometer.
+    An Agilent 30 M 5% phenylpolymethylsiloxane column was used for chromatographic
+    separation. The GC oven temperature was programmed to hold at 50 °C for 1 min,
+    then increase from 50 °C to 300 °C at a rate of 5 °C min−1, and then to remain
+    at 300 °C for 15 min. Helium (UHP 5.5 grade) was used as the carrier gas, operating
+    in constant flow mode. Approximately 1 mg samples were loaded into preashed quartz
+    tubes (precombusted under air at 550 °C for 3 h), which were then inserted into
+    the platinum filament-coil of the pyrolyzer. Subsequently, the pyrolyzer was inserted
+    into the helium-filled interface and flash pyrolyzed (ramp rate 500 °C s−1) to
+    610 °C and held for 10 s. The pyrolsates were immediately swept onto the GC column
+    by the He gas and analyzed. The source was operated in electron ionization (EI)
+    mode with 70 eV ionization energy at 250 °C. The mass selective detector scan
+    rate was 0.80 s/decade over a range of m/z 50 to 700, with an interscan delay
+    of 0.20 s.
+
+
+    In many Pyr-GC-EI-MS applications, the data output is compared to EI-MS libraries
+    to identify specific molecular compounds. Available EI-MS libraries
+
+
+    may comprehensively cover the compounds present in common terrestrial samples
+    seeking to find “analytes of interest” (e.g., drugs, steroids, and pesticides).
+    Estimates of organic isomerism, however, that predict the majority of possible
+    stable low molecular weight organics are “yet unknown or unsynthesized compounds”
+    (60, 61). Using our methodology, precise compound identification is useful but
+    not necessary: Rather, relational aspects of chromatographic and mass peaks are
+    of interest. This approach underscores this method’s utility for detecting alien
+    biology, which also aligns with earlier concepts of relational biology (32, 62).
+
+
+    We did not collect MS data for the first 2 min after injection to avoid overloading
+    the detector with small volatiles such as CO2 and H2O. In addition, since many
+    of the samples were curated independently and displayed signals from C16 (palmitic)
+    and C18 (stearic fatty acids which are common components of fingerprints and “slip
+    agents” added to plastic sample bags to keep them from sticking together, we excluded
+    the regions of the chromatograms after the region where these common contaminants
+    elute. Note, however, there is still a contribution to the examined chromatographic
+    complexity from derivatives of such compounds (for example, straight and branched
+    long-chain alkanes, alkenes, and rearranged aldehyde and ketone derivatives of
+    these species that contribute to the precutoff region’s molecular complexity.
+    We found that there was little signal beyond m/z 200; thus, the region considered
+    in the computational methods was limited from 2 to 35 min and m/z 50 to 200. Each
+    sample was reduced to a two-dimensional matrix with 489,240 elements representing
+    signal intensities as a function of mass and retention time, although many of
+    the intensity values were zero (Fig. 1).
+
+
+    Machine-Learning Analysis. We trained machine-learning models using three-dimensional
+    chromatographic retention time/mass-to-charge ratio/intensity data from each sample.
+    The data generated and analyzed in this manuscript can be found on the Open Science
+    Framework repository titled “A robust molecular biosignature based on machine
+    learning” (https://doi.org/10.17605/OSF.IO/EMBH8). The code for the paper can
+    be found at https://github.com/ghystad/Machine-learning_and_preprocessing_Pyr_GSMS_data/tree/master.
+    All data, code, and materials used in the analysis are available to any researcher
+    for purposes of reproducing or extending the analysis. Licenses for the data and
+    code usage and relevant attribution information will be updated on the respective
+    repositories.
+
+
+    Here, peak intensity was normalized on a scale from 0 to 1, while time and mass/charge
+    were analyzed as collected in 3,240 scan time steps (with each scan representing
+    3 s) and one m/z increments over the range from m/z 50 to 200, respectively. Our
+    machine-learning strategy allows identification of diagnostic sets of attributes
+    of retention time and m/z values that highlight differences between abiotic and
+    biotic samples. Our nested CV methods overcome the concern of overfitting to the
+    training data. We also plan to improve upon the generalization of our model in
+    future work by focusing on Monte Carlo simulations, adding more samples to the
+    training and test sets, and monitoring the change in test and training errors.
+
+
+    Preprocessing. The 134 analyzed samples included 59 of biotic origin and 75 of
+    abiotic origin. Each sample was represented as a two-dimensional matrix, where
+    the rows and columns represent the scan numbers and m/z ratios, respectively,
+    and the entries are the corresponding intensities. For each sample and m/z value,
+    we performed the preprocessing steps in the chromatographic direction, stabilized
+    the variance of the intensity values by taking the square root, smoothed the values
+    by taking the moving average of its current and its immediate five nearest observations
+    on each side, and subtracted the baseline, where the baseline estimation was based
+    on the Statistics-sensitive Non-Linear Iterative Peak-clipping algorithm (63),
+    using the R-library, MALDiquant (64).
+
+
+    Intensity values were normalized via min–max normalization (65), followed by peak
+    detection in the chromatographic direction for each m/z ratio. Peaks were detected
+    as local maxima above 4× signal to noise ratio, where the noise was estimated
+    by calculating the median absolute deviation using the R-library, MALDiquant (64).
+    After eliminating near-zero variance and strongly correlated features using the
+    R-library caret (66), the data were reduced to 8,149 features, which are the detected
+    combination of scan number and m/z values. These 134 Pyr-GC-MS data files are
+    available at https://osf.io/emb8/?view_only=89695d388b484af28dae80ce4de3b33c (DOI:
+    10.17605/OSF.IO/EMBH8).'
+  md: '
+
+    ![](img/86aabed13cea37e639c392b04265c04c_2_0.png)
+
+
+    The PCA plot of the training data with the scores of the test data projected into
+    the same PCA space as the scores of the training data. The scales of the test
+    data were obtained from the mean and SD of the training data. The first two principal
+    components explain ~ 54.9% of the variation in the training data (Fig. 2).
+
+
+    ## Discussion
+
+
+    We analyzed collective molecular distributions from varied abiotic, biological,
+    and taphonomically altered biological mixtures of organic molecules to demonstrate
+    clear differences between suites of organic molecules synthesized by life vs.
+    those produced abiotically. Importantly, we find that signs of biogenicity are
+    preserved despite extensive organic maturation, in some instances over periods
+    of hundreds of millions of years.
+
+
+    What molecular characteristics might contribute to the observed differences among
+    abiotic, modern living, and taphonomically altered specimens? We explored the
+    products of a variety of abiotic reactions that combine the diversity-generating
+    properties of sugar degradation (e.g., the formose reaction) with the diversity-generating
+    propensity of amines in combination with carbohydrates, such as Maillard reactions
+    of diverse amino acids with glucose (42). Organic molecular suites derived from
+    carbonaceous meteorites have been suggested to be derived from formose-like chemistry
+    (43). Formose and Maillard reactions are known to produce significant amounts
+    of diverse polar hetero-atom-containing products such as pyrazines, furans, and
+    diketopiperazines (44)— compounds that are not typically well preserved in the
+    geological record (45). Their detection can thus be considered as a marker for
+    the recent abundance of sugars and amines, which could be derived from formose-like
+    chemistry or from biological processes.
+
+
+    Biochemistry also encompasses a wide variety of disparate chemistries in contemporary
+    organisms (46). Regardless of the diversity of chemical processes that might enable
+    life, the abundant coexistence of water-soluble and water-insoluble organic species
+    appears to be one of life’s hallmarks. A significant fraction by dry weight of
+    most terrestrial organisms is composed of sugar-derived compounds, including cellulose,
+    glycogen, chitin, and ribose and deoxyribose in nucleic acids (47). These species
+    produce characteristic pyrolysis products (including furans and pyrans), plus
+    a peptidic fraction that produces other distinctive pyrolysis products (including
+    pyrazines and Maillard-like cross products with the sugar-derived pyrolysis product
+    pool). Accordingly, we suggest that the coexistence of molecules of diverse polarity
+    in detectable quantities points to the existence of recent life or more generally
+    the functional structural organization of cells.
+
+
+    Most preserved biological geocarbon is composed of breakdown products of cell
+    membrane and cell wall material, for example, in the form of petroleum and coal
+    (48). Petroleum is generally thought to derive from thermal degradation of type
+    I kerogen that arises from the algal biopolymers. Coal is mostly derived from
+    the ligno-cellulosic biopolymers of plant vascular tissue; high-volatile bituminous
+    coals have been transformed during diagenesis such that no molecular signatures
+    of either lignin or cellulose remain. These degraded molecular suites tend to
+    be derived from materials of lower water solubility—molecules that point to cellular
+    origins.
+
+
+    The systematic differences between abiotic and biologically derived materials
+    suggest possible underlying reasons for the robust discriminators we find using
+    Pyr-GC-EI-MS data. Chromatographic retention time on any given solid GC support
+    can be related via a Kovats index, which helps to normalize compound volatility
+    and polarity with retention time (49). Thus, material derived from cells will
+    have a nonpolar component derived from cell membrane/wall material that elutes
+    late chromatographically, as well as a polar cytoplasmic component that elutes
+    early (depending on the chromatographic matrix). Samples exhibiting both types
+    of chromatographically-behaving materials are typically derived from cells, which
+    produce both polar and nonpolar compounds in a coordinated manner. In contrast,
+    abiotic diversity-generating reactions that produce both polar and nonpolar compounds
+    do so in an uncoordinated fashion such that there will be a skewed balance between
+    the two types of materials. It is unlikely that both polar and nonpolar compounds
+    would occur in comparable ratios because no known abiotic processes produce balanced
+    amounts of nonpolar products in the absence of polar organics. As an example,
+    while nonpolar, heteroatom-poor material is a common convergence point for aged
+    organic matter from meteorites, such material is easily distinguishable from aged
+    biological deposits such as coal and petroleum because these types of materials
+    preserve observable polar molecular irregularities, such as even-odd disparities
+    in fatty acids and other hydrocarbons. Even-odd disparities in alkanes and fatty
+    acids tend to disappear as oil matures through diagenetic “smoothing.” Consequently,
+    even-odd characteristics provide a measure of an oil sample’s age.
+
+
+    ## PCA plot of training and test samples using the first 20 importance variables
+
+
+    ![](img/86aabed13cea37e639c392b04265c04c_3_0.png)
+
+
+    Fig. 2. Grouping of samples according to the machine-learning methods explored
+    here. Biologically derived samples (green/blue) are distinguished from abiotic
+    samples (orange). Taphonomically altered biological samples (blue) lie along a
+    trend distinct from that of contemporary biological samples (green).
+
+
+    ## Implications
+
+
+    Prospects for Analyzing Samples of Uncertain Biogenicity. Our method can potentially
+    be used to resolve the biogenicity of data already in hand. An important example
+    is the 3.5 Ga Apex chert from the Pilbara Craton in Western Australia, whose purported
+    biogenicity has evoked significant debate (50, 51). In addition, samples measured
+    by the Pyr-GC-MS instruments on the Mars Viking lander and the Curiosity rover
+    (34, 43, 52) deserve new evaluation. While our method must first be calibrated
+    to the specific thermal ramping and maximum temperature conditions of those instruments,
+    these and other machine-learning methods hold promise for the evaluation of the
+    biogenicity of samples of extraterrestrial provenance before they are returned
+    to Earth (53). Of special interest in this regard is the possible role of environmental
+    chemicals, such as perchlorate on Mars (54), as well as radiation-altered molecular
+    suites (55), which might significantly influence the properties of the resulting
+    molecular mixtures.
+
+
+    ### Rules of Biochemistry
+
+
+    The identified systematic differences among the molecular distributions in abiotic
+    and biotic samples suggest that biochemistry is intrinsically different from abiotic
+    organic chemistry. Our working hypothesis is that biomolecules, unlike those in
+    abiotic molecular suites (for example in a carbonaceous meteorite), are selected
+    for function. That difference results in biomolecules that are more limited in
+    number, and perhaps in some instances more complex in structure (30, 31), than
+    organic molecules in abiotic suites. A deeper examination of the specific constellation
+    of attributes identified in this study is a next step in testing this hypothesis.
+    Despite the observation that taphonomic processes inevitably lead to loss of information
+    (56–58), our method is able to distinguish ancient, geologically processed biotic
+    samples from abiotic organics, while possibly providing a qualitative metric for
+    degree of taphonomic degradation. In this regard, it is important to note that
+    abiotic molecular systems are not intrinsically simple. For example, the suites
+    of molecules extracted from the Murchison carbonaceous chondrite are remarkably
+    complex in both their structural diversity and numerosity (59). There likely exist
+    aspects of molecular complexity that differentiate living and nonliving systems,
+    as explored by Cronin and coworkers (30, 31). However, the diagnostic high-dimensional
+    differences between abiotic and biotic molecular distributions we document here
+    do not lie in the complexity or diversity of individual analytes but rather in
+    their relational properties.
+
+
+    ### Our Proposed Biosignature is Agnostic
+
+
+    An important finding of this study is that abiotic, living, and taphonomic suites
+    of organic molecules display well-defined clusters in their high-dimensional space,
+    as illustrated in Fig. 2. At the same time, large “volumes” of this attribute
+    space are unpopulated by either abiotic suites or terrestrial life. This topology
+    suggests the possibility that an alien biochemistry might be recognized by forming
+    its own attribute cluster in a different region of Fig. 2—a cluster that reflects
+    the essential role in selection for function in biotic systems, albeit with potentially
+    very different suites of functional molecules. Abiotic systems tend to cluster
+    in a very narrow region of this phase space, which could in principle allow for
+    easy identification of anomalous signals that are dissimilar to abiotic geochemical
+    systems or known terrestrial life.
+
+
+    ## Methods
+
+
+    ### Sample Characterization
+
+
+    We assembled 134 carbon-bearing samples from varied abiotic and biotic, and sometimes
+    ambiguous, sources. A list of these samples and their attributes is provided in
+    SI Appendix, Table S1.
+
+
+    ### Analytical Methods
+
+
+    Pyr-GC-EI-MS analyses were performed with a CDS 1000 pyrolyzer (CDS Analytical,
+    Inc., Oxford, PA) interfaced with a Hewlett-Packard 6890 series gas chromatograph
+    interfaced with an Agilent 5972 quadrupole mass spectrometer. An Agilent 30 m
+    5% phenylpolymethylsiloxane column was used for chromatographic separation. The
+    GC oven temperature was programmed to hold at 50 °C for 1 min, then increase from
+    50 °C to 300 °C at a rate of 5 °C min−1, and then to remain at 300 °C for 15 min.
+    Helium (UHP 5.5 grade) was used as the carrier gas, operating in constant flow
+    mode. Approximately 1 mg samples were loaded into preashed quartz tubes (precombusted
+    under air at 550 °C for 3 h), which were then inserted into the platinum filament-coil
+    of the pyrolyzer. Subsequently, the pyrolyzer was inserted into the helium-filled
+    interface and flash pyrolyzed (ramp rate 500 °C s−1) to 610 °C and held for 10
+    s. The pyrolsates were immediately swept onto the GC column by the He gas and
+    analyzed. The source was operated in electron ionization (EI) mode with 70 eV
+    ionization energy at 250 °C. The mass selective detector scan rate was 0.80 s/decade
+    over a range of m/z 50 to 700, with an interscan delay of 0.20 s.
+
+
+    In many Pyr-GC-EI-MS applications, the data output is compared to EI-MS libraries
+    to identify specific molecular compounds. Available EI-MS libraries may comprehensively
+    cover the compounds present in common terrestrial samples seeking to find “analytes
+    of interest” (e.g., drugs, steroids, and pesticides). Estimates of organic isomerism,
+    however, that predict the majority of possible stable low molecular weight organics
+    are “yet unknown or unsynthesized compounds” (60, 61). Using our methodology,
+    precise compound identification is useful but not necessary: Rather, relational
+    aspects of chromatographic and mass peaks are of interest. This approach underscores
+    this method’s utility for detecting alien biology, which also aligns with earlier
+    concepts of relational biology (32, 62).
+
+
+    We did not collect MS data for the first 2 min after injection to avoid overloading
+    the detector with small volatiles such as CO2 and H2O. In addition, since many
+    of the samples were curated independently and displayed signals from C16 (palmitic)
+    and C18 (stearic fatty acids which are common components of fingerprints and “slip
+    agents” added to plastic sample bags to keep them from sticking together, we excluded
+    the regions of the chromatograms after the region where these common contaminants
+    elute. Note, however, there is still a contribution to the examined chromatographic
+    complexity from derivatives of such compounds (for example, straight and branched
+    long-chain alkanes, alkenes, and rearranged aldehyde and ketone derivatives of
+    these species that contribute to the precutoff region’s molecular complexity.
+    We found that there was little signal beyond m/z 200; thus, the region considered
+    in the computational methods was limited from 2 to 35 min and m/z 50 to 200. Each
+    sample was reduced to a two-dimensional matrix with 489,240 elements representing
+    signal intensities as a function of mass and retention time, although many of
+    the intensity values were zero (Fig. 1).
+
+
+    ### Machine-Learning Analysis
+
+
+    We trained machine-learning models using three-dimensional chromatographic retention
+    time/mass-to-charge ratio/intensity data from each sample. The data generated
+    and analyzed in this manuscript can be found on the Open Science Framework repository
+    titled “A robust molecular biosignature based on machine learning” (https://doi.org/10.17605/OSF.IO/EMBH8).
+    The code for the paper can be found at https://github.com/ghystad/Machine-learning_and_preprocessing_Pyr_GSMS_data/tree/master.
+    All data, code, and materials used in the analysis are available to any researcher
+    for purposes of reproducing or extending the analysis. Licenses for the data and
+    code usage and relevant attribution information will be updated on the respective
+    repositories.
+
+
+    Here, peak intensity was normalized on a scale from 0 to 1, while time and mass/charge
+    were analyzed as collected in 3,240 scan time steps (with each scan representing
+    3 s) and one m/z increments over the range from m/z 50 to 200, respectively. Our
+    machine-learning strategy allows identification of diagnostic sets of attributes
+    of retention time and m/z values that highlight differences between abiotic and
+    biotic samples. Our nested CV methods overcome the concern of overfitting to the
+    training data. We also plan to improve upon the generalization of our model in
+    future work by focusing on Monte Carlo simulations, adding more samples to the
+    training and test sets, and monitoring the change in test and training errors.
+
+
+    ### Preprocessing
+
+
+    The 134 analyzed samples included 59 of biotic origin and 75 of abiotic origin.
+    Each sample was represented as a two-dimensional matrix, where the rows and columns
+    represent the scan numbers and m/z ratios, respectively, and the entries are the
+    corresponding intensities. For each sample and m/z value, we performed the preprocessing
+    steps in the chromatographic direction, stabilized the variance of the intensity
+    values by taking the square root, smoothed the values by taking the moving average
+    of its current and its immediate five nearest observations on each side, and subtracted
+    the baseline, where the baseline estimation was based on the Statistics-sensitive
+    Non-Linear Iterative Peak-clipping algorithm (63), using the R-library, MALDiquant
+    (64).
+
+
+    Intensity values were normalized via min–max normalization (65), followed by peak
+    detection in the chromatographic direction for each m/z ratio. Peaks were detected
+    as local maxima above 4× signal to noise ratio, where the noise was estimated
+    by calculating the median absolute deviation using the R-library, MALDiquant (64).
+    After eliminating near-zero variance and strongly correlated features using the
+    R-library caret (66), the data were reduced to 8,149 features, which are the detected
+    combination of scan number and m/z values. These 134 Pyr-GC-MS data files are
+    available at https://osf.io/emb8/?view_only=89695d388b484af28dae80ce4de3b33c (DOI:
+    10.17605/OSF.IO/EMBH8).
+
+    '
+  mdcn: '
+
+
+    ![](img/86aabed13cea37e639c392b04265c04c_2_0.png)
+
+
+    训练数据的 PCA 图，其中测试数据的得分被投影到与训练数据相同的 PCA 空间中。测试数据的尺度从训练数据的均值和标准差中获取。前两个主成分解释了训练数据中约
+    54.9% 的变异（图 2）。
+
+
+    ## 讨论
+
+
+    我们分析了来自不同非生物、生物及埋藏改变的生物有机分子混合物的集体分子分布，以证明生命合成的有机分子组与非生物产生的有机分子组之间存在明显差异。重要的是，我们发现，尽管有机质经过广泛成熟（在某些情况下长达数亿年），生物性标志仍然保存。
+
+
+    哪些分子特征可能对非生物、现代生物和埋藏改变样品之间观察到的差异有所贡献？我们探索了多种非生物反应的产物，这些反应结合了糖降解（例如，福马糖反应）产生多样性的特性，与胺与碳水化合物结合产生多样性的倾向，例如各种氨基酸与葡萄糖的美拉德反应（42）。碳质陨石来源的有机分子组被认为源自类似福马糖的化学反应（43）。已知福马糖反应和美拉德反应会产生大量含多种杂原子的极性产物，如吡嗪、呋喃和二酮哌嗪（44）——这些化合物在地质记录中通常保存较差（45）。因此，它们的检测可以被视为近期糖类和胺类丰富的标志物，这些物质可能源自类似福马糖的化学反应或生物过程。
+
+
+    生物化学还涵盖了现代生物体中多种多样的不相关化学过程（46）。无论可能使生命成为可能的化学过程多么多样，水溶性和不溶性有机物种的丰富共存似乎都是生命的标志之一。大多数陆地生物干重的很大一部分由糖衍生化合物组成，包括纤维素、糖原、几丁质以及核酸中的核糖和去氧核糖（47）。这些物种产生特征性热解产物（包括呋喃和吡喃），加上一种肽组分，它产生其他独特的热解产物（包括吡嗪和与糖源热解产物池的类似美拉德交叉产物）。因此，我们提出，可检测量中极性多样的分子共存指向近期生命的存在，或者更广泛地，指向细胞的功能结构组织。
+
+
+    大多数保存下来的生物地球碳由细胞膜和细胞壁材料的降解产物组成，例如石油和煤的形式（48）。石油普遍被认为源自类型 I 凯罗jen的热降解，后者源自藻类生物聚合物。煤主要源自植物维管组织的木质-纤维素生物聚合物；高挥发性沥青煤在成岩作用过程中已经转化，以至于不再保留木质素或纤维素的分子签名。这些降解的分子组倾向于源自水溶性较低的材料——指向细胞起源的分子。
+
+
+    非生物来源与生物来源材料之间的系统性差异，暗示了我们使用 Pyr-GC-EI-MS 数据发现的稳健鉴别因素背后可能的原因。在任何给定的固相 GC 支持柱上，色谱保留时间可通过
+    Kovats 指数相关联，该指数有助于将化合物挥发性和极性与保留时间进行归一化（49）。因此，源自细胞的材料将具有一个源自细胞膜/细胞壁材料的非极性成分，该成分在色谱中晚洗脱，还有一个源自胞质的极性成分，该成分早洗脱（取决于色谱基质）。同时表现出这两种色谱行为材料的样品通常源自细胞，因为细胞以协调的方式产生极性和非极性化合物。相比之下，非生物多样性生成反应产生极性和非极性化合物时方式不协调，从而导致两类材料之间的比例失衡。极性和非极性化合物不太可能以可比比例同时出现，因为没有已知的非生物过程在缺乏极性有机物的情况下产生平衡量的非极性产物。例如，虽然非极性、少杂原子材料是陨石中陈旧有机质的常见聚合点，但此类材料很容易与陈旧的生物沉积物（如煤和石油）区分开来，因为这类材料保留了可观察的极性分子不规则性，例如脂肪酸及其他烃类中的偶-奇差异。烷烃和脂肪酸中的偶-奇差异随着石油通过成岩“平滑”作用成熟而倾向于消失。因此，偶-奇特征提供了衡量石油样品年龄的指标。
+
+
+    ## 使用前 20 个重要变量的训练和测试样品 PCA 图
+
+
+    ![](img/86aabed13cea37e639c392b04265c04c_3_0.png)
+
+
+    图 2. 根据本研究中探索的机器学习方法对样品进行分组。生物来源样品（绿色/蓝色）与非生物样品（橙色）相区分。埋藏改变的生物样品（蓝色）沿着与当代生物样品（绿色）不同的趋势分布。
+
+
+    ## 意义
+
+
+    分析不确定生物性样品的前景。我们的方法可能可用于确定手头数据的生物性。一个重要例子是西澳大利亚 Pilbara 克拉通中的 3.5 Ga Apex 燧石，其所谓的生物性引发了重大争议（50,
+    51）。此外，火星 Viking 着陆器和 Curiosity 漫游者上的 Pyr-GC-MS 仪器测量的样品（34, 43, 52）值得重新评估。虽然我们的方法必须首先针对这些仪器的特定热升温和最大温度条件进行校准，但这些及其他机器学习方法有望在地球外来源样品返回地球之前评估其生物性（53）。在这方面特别感兴趣的是环境化学品（例如火星上的高氯酸盐（54））以及辐射改变的分子组（55）的可能作用，它们可能显著影响所得分子混合物的性质。
+
+
+    ### 生物化学规则
+
+
+    非生物和生物样品中分子分布所识别的系统性差异表明，生物化学与非生物有机化学本质上不同。我们的工作假设是，与非生物分子组（例如碳质陨石中的分子）不同，生物分子是为功能而被选择的。这种差异导致生物分子的数量更有限，并且在某些情况下结构可能更复杂（30,
+    31），比非生物组中的有机分子更甚。对本研究中识别的特定属性星座进行更深入的检验，是检验这一假设的下一步。尽管观察到埋藏过程不可避免地导致信息丢失（56–58），但我们的方法能够区分古老的、经地质过程处理的生物样品与非生物有机物，同时可能为埋藏降解程度提供定量指标。在此方面，重要的是要注意，非生物分子系统本身并不简单。例如，从
+    Murchison 碳质球粒陨石中提取的分子组在其结构多样性和数量上都显得非常复杂（59）。很可能存在区分生物与非生物系统的分子复杂性方面，如 Cronin
+    及其同事所探讨的（30, 31）。然而，我们在此记录的非生物与生物分子分布之间的诊断高维差异，不在于单个分析物的复杂性或多样性，而在于它们的关系性质。
+
+
+    ### 我们提出的生物标志物具有不可知性
+
+
+    本研究的一个重要发现是，非生物、活体和埋藏的有机分子组在其高维空间中表现出明确定义的簇，如图 2 所示。与此同时，该属性空间的大体积“空域”既未被非生物组也未被陆地生命所占据。这种拓扑结构暗示，外星生物化学可能通过在图
+    2 的不同区域形成其自身的属性簇而被识别——该簇反映了生物系统中为功能选择的基本作用，尽管功能分子组可能截然不同。非生物系统倾向于在此相空间的非常狭窄区域内聚集，从原则上讲，这可能允许轻松识别与非生物地球化学系统或已知陆地生命不相似的异常信号。
+
+
+    ## 方法
+
+
+    ### 样品表征
+
+
+    我们从各种非生物和生物（有时含糊）的来源中收集了 134 个含碳样品。这些样品及其属性列表载于 SI 附录，表 S1。
+
+
+    ### 分析方法
+
+
+    Pyr-GC-EI-MS 分析使用 CDS 1000 热解仪（CDS Analytical, Inc., Oxford, PA）进行，该热解仪与 Hewlett-Packard
+    6890 系列气相色谱仪相连，并进一步与 Agilent 5972 四极杆质谱仪相连。使用 Agilent 30 m 5% 苯基聚甲基硅氧烷柱进行色谱分离。GC
+    柱箱温度程序设定为在 50 °C 处保持 1 min，然后以 5 °C min−1 的速率升温至 300 °C，并在 300 °C 处保持 15 min。氦气（UHP
+    5.5 级）用作载气，恒定流量模式运行。约 1 mg 样品被加载到预灰化石英管中（在空气中于 550 °C 下预燃 3 h），然后插入热解仪的铂丝线圈中。随后，将热解仪插入充满氦气的接口，并进行闪速热解（升温速率
+    500 °C s−1）至 610 °C 并保持 10 s。热解产物立即被 He 气体扫入 GC 柱并进行分析。离子源在电子电离（EI）模式下运行，电离能为
+    70 eV，温度为 250 °C。质谱选择性探测器扫描速率为 0.80 s/decade，范围为 m/z 50 至 700，扫描间延迟为 0.20 s。
+
+
+    在许多 Pyr-GC-EI-MS 应用中，数据输出会与 EI-MS 库进行比较，以鉴定特定分子化合物。可用的 EI-MS 库可能全面覆盖普通陆地样品中存在的化合物，以寻找“感兴趣的分析物”（例如，药物、类固醇和农药）。然而，预测大多数可能稳定低分子量有机物的有机异构性估计认为，这些化合物是“尚未知晓或未合成的化合物”（60,
+    61）。使用我们的方法，精确的化合物鉴定有用但不是必要的：相反，色谱和质谱峰的关系性质是感兴趣的。这种方法强调了该方法在检测外星生物方面的实用性，这也与早期的关系生物学概念相一致（32,
+    62）。
+
+
+    注射后前 2 min 未采集 MS 数据，以避免因 CO2 和 H2O 等小分子挥发物过载探测器。此外，由于许多样品是独立整理的，并且显示出来自 C16（棕榈酸）和
+    C18（硬脂酸，这些是指纹中常见的成分，也被添加到塑料样品袋中的“滑动剂”以防止袋子粘在一起）的信号，因此我们排除了色谱图中这些常见污染物洗脱区域之后的区域。然而请注意，此类化合物的衍生物（例如，直链和支链长链烷烃、烯烃，以及这些物质的重排醛和酮衍生物）仍会对所检查的色谱复杂性做出贡献，这些衍生物有助于截止前区域的分子复杂性。我们发现
+    m/z 200 之后几乎没有信号；因此，计算方法中考虑的区域限制为 2 至 35 min 和 m/z 50 至 200。每个样品被归约为一个包含 489,240
+    个元素的二维矩阵，表示作为质量和保留时间函数的信号强度，尽管许多强度值为零（图 1）。
+
+
+    ### 机器学习分析
+
+
+    我们使用每个样品的三维色谱保留时间/质量电荷比/强度数据训练了机器学习模型。本手稿中生成和分析的数据可在 Open Science Framework 仓库中找到，标题为“基于机器学习的稳健分子生物标志物”（https://doi.org/10.17605/OSF.IO/EMBH8）。论文的代码可在
+    https://github.com/ghystad/Machine-learning_and_preprocessing_Pyr_GSMS_data/tree/master
+    找到。分析中使用的所有数据、代码和材料均可供任何研究人员用于复制或扩展分析。数据和代码使用的许可证及相关归属信息将在各自的仓库中更新。
+
+
+    在此，峰强度在 0 到 1 的范围内归一化，而时间和质量/电荷比分别按采集的 3,240 个扫描时间步长（每个扫描代表 3 s）和 1 m/z 的增量进行分析，范围为
+    m/z 50 至 200。我们的机器学习策略允许鉴定保留时间和 m/z 值的诊断属性集，以突出非生物和生物样品之间的差异。我们的嵌套 CV 方法克服了对训练数据过拟合的问题。我们还计划在未来工作中通过聚焦蒙特卡洛模拟、向训练集和测试集添加更多样品以及监测测试和训练误差的变化，来改进模型的泛化能力。
+
+
+    ### 预处理
+
+
+    分析的 134 个样品包括 59 个生物来源样品和 75 个非生物来源样品。每个样品表示为一个二维矩阵，其中行和列分别表示扫描编号和 m/z 比值，条目为相应的强度。对于每个样品和
+    m/z 值，我们在色谱方向上执行预处理步骤，通过取平方根来稳定强度值的方差，通过取当前值及其两侧最近五个观测值的移动平均来平滑这些值，并减去基线，基线估计基于对统计敏感的非线性迭代峰削算法（63），使用
+    R 库 MALDiquant（64）。
+
+
+    强度值通过 min-max 归一化（65）进行归一化，然后对每个 m/z 比值在色谱方向上进行峰检测。峰被检测为高于 4× 信噪比的局部极大值，噪声通过使用
+    R 库 MALDiquant（64）计算中位数绝对偏差来估计。在使用 R 库 caret（66）消除近零方差和强相关特征后，数据被归约为 8,149 个特征，即检测到的扫描编号和
+    m/z 值的组合。这 134 个 Pyr-GC-MS 数据文件可在 https://osf.io/emb8/?view_only=89695d388b484af28dae80ce4de3b33c
+    (DOI: 10.17605/OSF.IO/EMBH8) 上找到。
+
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 5]
+
+
+    **Model Choice.** Of the various classification methods we explored, the random
+    forest method quickly yielded the best results in terms of accurately distinguishing
+    biotic from abiotic samples and thus was used to train the final model. The random
+    forest method is an ensemble classification method that constructs a collection
+    of decorrelated decision trees (67). There may be better methods and we are exploring
+    the relative benefits of other methods for future publications. We used the random
+    forest model from the R-library mlr3 (68).
+
+
+    Machine_learning_and_preprocessing_pyr_GSMS_data/tree/master (71). All data, code,
+    and materials used in the analysis are available to any researcher for purposes
+    of reproducing or extending the analysis. Licenses for the data and code usage
+    and relevant attribution information are available on the respective repositories.
+
+
+    **Model Validation.** We used two validation strategies for the trained machine-learning
+    model. First, the data were split into a training set of 95 samples and a test
+    set of 39 samples using stratified random sampling, where the model was tested
+    with parameter tuning on the training set using 10-fold CV. The final trained
+    random forest model was subsequently applied to predict the biotic or abiotic
+    origin of the test data. Second, we used nested CV (69) on all 134 samples to
+    gain an unbiased estimate of the predictive performance of the machine learning
+    method. The nested CV used 10-fold CV in the inner loop and five-fold CV in the
+    outer loop. The algorithm was terminated after 20 evaluations using random search.
+
+
+    **ACKNOWLEDGMENTS.** We thank Stuart Bartlett, Carol Cleland, and two anonymous
+    reviewers for valuable discussions and detailed reviews of an early version of
+    this contribution. We also thank Editor Roger Summons for his careful and patient
+    handling of the manuscript. We are especially grateful to John Saul for the donation
+    of 80 of the samples employed in this study. Studies of molecular biosignatures
+    have been supported by the John Templeton Foundation Grant 61783. Additional support
+    has been provided by the NASA Astrobiology Institute ENIGMA team, grant 80NSSC18M0093.
+    Any opinions, findings, or recommendations expressed herein are those of the authors
+    and do not necessarily reflect the views of the NASA.
+
+
+    **Data, Materials, and Software Availability.** The data generated and analyzed
+    in this manuscript [Pyr-GC-MS data files (134 files)] can be found on the Open
+    Science Framework repository titled “A robust molecular biosignature based on
+    machine learning” (70). The code for the paper can be found at https://github.com/ghystad/
+
+
+    Author affiliations: “Earth and Planets Laboratory, Carnegie Institution for Science,
+    Washington, DC 20015; “Earth Life Science Institute, Tokyo Institute of Technology,
+    Tokyo 152-8550, Japan; “Blue Marble Space Institute for Science, Seattle, WA 98104;
+    “Department of Mathematics and Statistics, Purdue University Northwest, Hammond,
+    IN 46323; “Sagan Fellow, NASA Hubble Fellowship Program, Space Telescope Science
+    Institute, Baltimore, MD 21218; and “Department of Earth and Planetary Sciences,
+    Johns Hopkins University, Baltimore, MD 21218
+
+
+    +   1. C. M. Dobson, Chemical space and biology. *Nature* **432**, 824–828 (2004).
+
+    +   2. M. L. Wong, A. Prabhu, Cells as the first data scientists. *Interface*
+    **20**, 20220810 (2023).
+
+    +   3. K. Kvenvolden et al., Evidence for extraterrestrial amino-acids and hydrocarbons
+    in the Murchison meteorite. *Nature* **228**, 923–926 (1970).
+
+    +   4. S. Kauffman, Is there a fourth law for non-ergodic systems that do work
+    to construct their expanding phase space? *Entropy* **24**, 1383 (2022).
+
+    +   5. P. Mitchell, Coupling of phosphorylation to electron and hydrogen transfer
+    by a chemi-osmotic type of mechanism. *Nature* **191**, 144–148 (1961).
+
+    +   6. C. P. McKay, What is life—and how do we search for it in other worlds?
+    *PLoS Biol.* **2**, e302 (2004).
+
+    +   7. J. D. Farmer, J. D. Des Marais, Exploring for a record of ancient Martian
+    life. *J. Geophys. Res. Planets* **104**, 26977–26995 (1999).
+
+    +   8. E. S. Johnson et al., Fingerprinting non-terran biosignatures. *Astrobiology*
+    **18**, 915–922 (2018).
+
+    +   9. E. W. Schwieterman et al., Exoplanet biosignatures: A review of remotely
+    detectable signs of life. *Astrobiology* **18**, 663–708 (2018).
+
+    +   10. S. I. Walker et al., Exoplanet bio-signatures: Future directions. *Astrobiology*
+    **18**, 779–824 (2018).
+
+    +   11. M. A. Chan et al., Deciphering biosignatures in planetary contexts. *Astrobiology*
+    **19**, 1075–1101 (2019).
+
+    +   12. S. Bartlett et al., Assessing planetary complexity and potential agnostic
+    biosignatures using electrospun machines. *Nat. Astro.* **6**, 387–392 (2022).
+
+    +   13. C. E. Cleland, *The Nature of Life: The Quest for a Universal Theory of
+    Life: Searching for Life* (University of Cambridge Press, 2019).
+
+    +   14. J. P. Grotzinger, A. H. Knoll, Stromatolites in Pre-cambrian carbonates:
+    Evolutionary mileposts or environmental dipsticks? *Ann. Rev. Earth Planet. Sci.*
+    **27**, 313–358 (1999).
+
+    +   15. N. Noffke, Microbially induced sedimentary structures in clastic deposits:
+    Implication for the proposition for fossil life on Mars. *Astrobiology* **21**,
+    866–892 (2021).
+
+    +   16. J. Farquhar, H. Bao, M. Thiemens, Atmospheric influence of Earth’s earliest
+    sulfur cycle. *Science* **289**, 756–758 (2000).
+
+    +   17. Y. Shen, R. Buick, D. E. Canfield, Isotopic evidence for microbial sulphate
+    reduction in the early Archaean era. *Nature* **410**, 77–81 (2001).
+
+    +   18. R. E. Summons et al., Molecular biosignatures, *Space Sci. Rev.* **135**,
+    133–159 (2016).
+
+    +   19. M. Dannemann et al., Toward detecting biosignatures of DNA, lipids, and
+    metabolic intermediates from bacteria in ice grains emitted by enceladus and Europa.
+    *Astrobiology* **23**, 60–75 (2023).
+
+    +   20. C. D. Georgiou, D. W. Deamer, Lipids as universal biomarkers of extraterrestrial
+    life. *Astrobiology* **14**, 541–549 (2014).
+
+    +   21. D. Arvin, Critical review of chirality indicators of extraterrestrial
+    life. *New Astron. Rev.* **92**, 101596 (2021).
+
+    +   22. C. R. Webster et al., Mars methane detection and variability at Gale crater.
+    *Science* **347**, 415–417 (2015).
+
+    +   23. V. S. Meadows et al., Reflections on O2 as a biosignature in exoplanetary
+    atmospheres. *Astrobiology* **18**, 630–662 (2018).
+
+    +   24. S. M. Morrison et al., Network analysis of mineralogical systems. *Am.
+    Mineral.* **102**, 1588–1596 (2017).
+
+    +   25. G. Hystad et al., Bayesian estimation of Earth’s undiscovered mineralogical
+    diversity using noninformative priors. *Math. Geosci.* **51**, 401–417 (2019).
+
+    +   26. M. Wong et al., Towards network-based planetary biosignatures: Revisiting
+    atmospheric chemistry as an untpartite, unweighted, undirected networks. *J. Geophys.
+    Res. Planets* **128**, e2022JE007658 (2023).
+
+    +   27. E. D. Dorn et al., Monomer abundance distribution patterns as a universal
+    biosignature: Examples from terrestrial and digital life. *J. Mol. Evol.* **72**,
+    283–295 (2011).
+
+    +   28. C. Jolly, T. Douglas, Topological biosignatures: Large-scale structure
+    of chemical networks from biology and astrochemistry. *Astrobiology* **12**, 29–39
+    (2012).
+
+    +   29. N. Gutteridge et al., Classification of the biocomplexity of complex organic
+    mixtures for the detection of extraterrestrial life. *Life* **11**, 234 (2021).
+
+    +   30. S. M. Marshall, A. R. Lyra, L. Cronin, A probabilistic framework for identifying
+    biosignatures using pathway complexity. *Philos. Trans. Royal Soc. A* **375**,
+    20160342 (2017).
+
+    +   31. S. M. Marshall et al., Identifying molecules as biosignatures with assembly
+    theory and mass spectrometry. *Nat. Commun.* **12**, 3033 (2021).
+
+    +   32. J. E. Lovelock, A physical basis for life detection experiments. *Nature*
+    **207**, 568–570 (1965).
+
+
+    +   33. P. G. Simmons, Whole microorganisms studied by pyrolysis-gas chromatography-mass
+    spectrometry: Significance for extraterrestrial life detection experiments. *Appl.
+    Microbiol.* **20**, 567–572 (1970).
+
+    +   34. K. Biemann, On the ability of the Viking gas chromatography–mass spectrometer
+    to detect organic matter. *Proc. Natl. Acad. Sci. U.S.A.* **104**, 10310–10313
+    (2007).
+
+    +   35. P. R. Mahaffy et al., The sample analysis at Mars investigation and instrument
+    suite. *Space Sci. Rev.* **170**, 401–478 (2012).
+
+    +   36. R. A. Mathies et al., Feasibility of detecting bioorganic compounds in
+    Enceladus plumes with the Enceladus Organic Analyzer. *Astrobiology* **17**, 902–912
+    (2017).
+
+    +   37. L. Chou et al., Planetary mass spectrometry for agnostic life detection
+    in the Solar System. *Front. Astron. Space Sci.* **8**, 755100 (2021).
+
+    +   38. T. L. Salter et al., Mass spectrometric fingerprints of bacteria and archaea
+    for life detection on icy moons. *Astrobiology* **22**, 143–157 (2022).
+
+    +   39. E. Pretsch et al., *Structure Determination of Organic Compounds* (Springer-Verlag,
+    2000).
+
+    +   40. E. L. Schymanski et al., Consensus structure elucidation combining GC/EI-MS,
+    structure generation, and calculated properties. *Anal. Chem.* **84**, 3287–3295
+    (2012).
+
+    +   41. H. Han et al., Variable selection using mean decrease accuracy and mean
+    decrease gini based on random forest. *IEEE Int. Conf. Softw. Eng. Service Sci.*
+    **7**, 219–224 (2016).
+
+    +   42. G. P. Ellis, The maillard reaction. *Adv. Carbohydr. Chem.* **14**, 63–134
+    (1959).
+
+    +   43. Y. Kebukawa, A. D. Kolykine, G. D. Cody, Exploring the potential formation
+    of organic solids in chondrites and comes through polymerization of interstellar
+    formaldehyde. *Astrophys. J.* **771**, 17 (2013).
+
+    +   44. E. L. Wick, I. Horvath, R. Teranishi, Flavor Chemistry (3rd Edn Plenum
+    Press, 1999).
+
+    +   45. G. Dungworth et al., Distribution of amino acids, amino sugars, purines
+    and pyridines in a Lake Ontario sediment core. *Chem. Geol.* **19**, 295–308 (1977).
+
+    +   46. P. Mazzarello, A unifying concept: The history of cell theory. *Nat. Cell
+    Biol.* **1**, E13–E15 (1999).
+
+    +   47. R. Milo, R. Phillips, *Cell Biology by the Numbers* (CRC Press, Boca Raton,
+    FL, 2015).
+
+    +   48. V. J. Killops, S. D. Killops, *Introduction to Organic Geochemistry* (Wiley,
+    2013).
+
+    +   49. V. E. Kovacs, Gas-chromatographische charakterisierung organischer verbindungen.
+    Teil 1: Retentionsindices aliphatischer halogene, alkohole, aldehyde und ketone.
+    *Helv. Chim. Acta* **41**, 1915–1932 (1958).
+
+    +   50. C. P. Marshall et al., Structural characterization of kerogen in 3.4 Ga
+    Archaean cherts from the Pilbara Craton, Western Australia. *Precambrian Res.*
+    **155**, 1–23 (2007).
+
+    +   51. M. Bournis, S. Derenne, F. Robert, Limits in pyrolysis-GC-MS analysis
+    of kerogen isolated from Archean cherts. *Org. Geochem.* **32**, 32–34 (2012).
+
+    +   52. NASA, “SAM for scientists.” https://mars.nasa.gov/msl/spacecraft/instruments/sam/for-scientists/.
+    Accessed 15 April 2021.
+
+    +   53. V. Da Poian et al., Science autonomy and the ExoMars mission: Machine
+    learning to help find life on Mars. *Computer* **54**, 69–77 (2021).
+
+    +   54. D. P. Glavin et al., Evidence for perchlorates and the origin of chlorinated
+    hydrocarbons detected by SAM at the Rocknest aeolian deposit in Gale Crater. *J.
+    Geophys. Res. Planets* **118**, 1955–1973 (2013).
+
+    +   55. A. A. Pavlov et al., Rapid radiolytic degradation of amino acids in the
+    martian shallow subsurface: Implications for the search for extinct life. *Astrobiology*
+    **22**, 1009–1115 (2022).
+
+    +   56. D. R. Lawrence, Taphonomy and information losses in fossil communities.
+    *Geol. Soc. Am. Bull.* **79**, 1315–1330 (1968).
+
+    +   57. A. K. Behrensmeyer, S. M. Kidwell, R. A. Gastaldo, “Taphonomy and paleobiology”
+    in *Deep Time: Paleobiology’s Perspective*, D. H. Erwin and S. L. Wing, Eds. (The
+    Paleontological Society, 2000), pp. 103–147.
+
+    +   58. S. L. Potter-McIntyre et al., Taphonomy of microbial biosignatures in
+    spring deposits: A comparison of modern, Quaternary, and Jurassic examples. *Astrobiology*
+    **17**, 216–230 (2017).
+
+    +   59. P. Schmitt-Kopplin et al., High molecular diversity of extraterrestrial
+    organic matter in Murchison meteorite revealed 40 years after its fall. *Proc.
+    Natl. Acad. Sci. U.S.A.* **107**, 2763–2768 (2010).
+
+    +   60. A. M. Riya et al., An open source computational workflow for the discovery
+    of autocatalytic networks in abiotic reactions. *Chem. Sci.* **13**, 4838–4853
+    (2022).'
+  md: '
+
+    ### Model Choice
+
+
+    Of the various classification methods we explored, the random forest method quickly
+    yielded the best results in terms of accurately distinguishing biotic from abiotic
+    samples and thus was used to train the final model. The random forest method is
+    an ensemble classification method that constructs a collection of decorrelated
+    decision trees (67). There may be better methods and we are exploring the relative
+    benefits of other methods for future publications. We used the random forest model
+    from the R-library mlr3 (68).
+
+
+    Machine_learning_and_preprocessing_pyr_GSMS_data/tree/master (71). All data, code,
+    and materials used in the analysis are available to any researcher for purposes
+    of reproducing or extending the analysis. Licenses for the data and code usage
+    and relevant attribution information are available on the respective repositories.
+
+
+    ### Model Validation
+
+
+    We used two validation strategies for the trained machine-learning model. First,
+    the data were split into a training set of 95 samples and a test set of 39 samples
+    using stratified random sampling, where the model was tested with parameter tuning
+    on the training set using 10-fold CV. The final trained random forest model was
+    subsequently applied to predict the biotic or abiotic origin of the test data.
+    Second, we used nested CV (69) on all 134 samples to gain an unbiased estimate
+    of the predictive performance of the machine learning method. The nested CV used
+    10-fold CV in the inner loop and five-fold CV in the outer loop. The algorithm
+    was terminated after 20 evaluations using random search.
+
+
+    ## ACKNOWLEDGMENTS
+
+
+    We thank Stuart Bartlett, Carol Cleland, and two anonymous reviewers for valuable
+    discussions and detailed reviews of an early version of this contribution. We
+    also thank Editor Roger Summons for his careful and patient handling of the manuscript.
+    We are especially grateful to John Saul for the donation of 80 of the samples
+    employed in this study. Studies of molecular biosignatures have been supported
+    by the John Templeton Foundation Grant 61783. Additional support has been provided
+    by the NASA Astrobiology Institute ENIGMA team, grant 80NSSC18M0093. Any opinions,
+    findings, or recommendations expressed herein are those of the authors and do
+    not necessarily reflect the views of the NASA.
+
+
+    ## Data, Materials, and Software Availability
+
+
+    The data generated and analyzed in this manuscript [Pyr-GC-MS data files (134
+    files)] can be found on the Open Science Framework repository titled “A robust
+    molecular biosignature based on machine learning” (70). The code for the paper
+    can be found at https://github.com/ghystad/
+
+
+    ### Author affiliations
+
+
+    Earth and Planets Laboratory, Carnegie Institution for Science, Washington, DC
+    20015; Earth Life Science Institute, Tokyo Institute of Technology, Tokyo 152-8550,
+    Japan; Blue Marble Space Institute for Science, Seattle, WA 98104; Department
+    of Mathematics and Statistics, Purdue University Northwest, Hammond, IN 46323;
+    Sagan Fellow, NASA Hubble Fellowship Program, Space Telescope Science Institute,
+    Baltimore, MD 21218; and Department of Earth and Planetary Sciences, Johns Hopkins
+    University, Baltimore, MD 21218
+
+
+    - 1. C. M. Dobson, Chemical space and biology. *Nature* **432**, 824–828 (2004).
+
+    - 2. M. L. Wong, A. Prabhu, Cells as the first data scientists. *Interface* **20**,
+    20220810 (2023).
+
+    - 3. K. Kvenvolden et al., Evidence for extraterrestrial amino-acids and hydrocarbons
+    in the Murchison meteorite. *Nature* **228**, 923–926 (1970).
+
+    - 4. S. Kauffman, Is there a fourth law for non-ergodic systems that do work to
+    construct their expanding phase space? *Entropy* **24**, 1383 (2022).
+
+    - 5. P. Mitchell, Coupling of phosphorylation to electron and hydrogen transfer
+    by a chemi-osmotic type of mechanism. *Nature* **191**, 144–148 (1961).
+
+    - 6. C. P. McKay, What is life—and how do we search for it in other worlds? *PLoS
+    Biol.* **2**, e302 (2004).
+
+    - 7. J. D. Farmer, J. D. Des Marais, Exploring for a record of ancient Martian
+    life. *J. Geophys. Res. Planets* **104**, 26977–26995 (1999).
+
+    - 8. E. S. Johnson et al., Fingerprinting non-terran biosignatures. *Astrobiology*
+    **18**, 915–922 (2018).
+
+    - 9. E. W. Schwieterman et al., Exoplanet biosignatures: A review of remotely
+    detectable signs of life. *Astrobiology* **18**, 663–708 (2018).
+
+    - 10. S. I. Walker et al., Exoplanet bio-signatures: Future directions. *Astrobiology*
+    **18**, 779–824 (2018).
+
+    - 11. M. A. Chan et al., Deciphering biosignatures in planetary contexts. *Astrobiology*
+    **19**, 1075–1101 (2019).
+
+    - 12. S. Bartlett et al., Assessing planetary complexity and potential agnostic
+    biosignatures using electrospun machines. *Nat. Astro.* **6**, 387–392 (2022).
+
+    - 13. C. E. Cleland, *The Nature of Life: The Quest for a Universal Theory of
+    Life: Searching for Life* (University of Cambridge Press, 2019).
+
+    - 14. J. P. Grotzinger, A. H. Knoll, Stromatolites in Pre-cambrian carbonates:
+    Evolutionary mileposts or environmental dipsticks? *Ann. Rev. Earth Planet. Sci.*
+    **27**, 313–358 (1999).
+
+    - 15. N. Noffke, Microbially induced sedimentary structures in clastic deposits:
+    Implication for the proposition for fossil life on Mars. *Astrobiology* **21**,
+    866–892 (2021).
+
+    - 16. J. Farquhar, H. Bao, M. Thiemens, Atmospheric influence of Earth’s earliest
+    sulfur cycle. *Science* **289**, 756–758 (2000).
+
+    - 17. Y. Shen, R. Buick, D. E. Canfield, Isotopic evidence for microbial sulphate
+    reduction in the early Archaean era. *Nature* **410**, 77–81 (2001).
+
+    - 18. R. E. Summons et al., Molecular biosignatures, *Space Sci. Rev.* **135**,
+    133–159 (2016).
+
+    - 19. M. Dannemann et al., Toward detecting biosignatures of DNA, lipids, and
+    metabolic intermediates from bacteria in ice grains emitted by enceladus and Europa.
+    *Astrobiology* **23**, 60–75 (2023).
+
+    - 20. C. D. Georgiou, D. W. Deamer, Lipids as universal biomarkers of extraterrestrial
+    life. *Astrobiology* **14**, 541–549 (2014).
+
+    - 21. D. Arvin, Critical review of chirality indicators of extraterrestrial life.
+    *New Astron. Rev.* **92**, 101596 (2021).
+
+    - 22. C. R. Webster et al., Mars methane detection and variability at Gale crater.
+    *Science* **347**, 415–417 (2015).
+
+    - 23. V. S. Meadows et al., Reflections on O2 as a biosignature in exoplanetary
+    atmospheres. *Astrobiology* **18**, 630–662 (2018).
+
+    - 24. S. M. Morrison et al., Network analysis of mineralogical systems. *Am. Mineral.*
+    **102**, 1588–1596 (2017).
+
+    - 25. G. Hystad et al., Bayesian estimation of Earth’s undiscovered mineralogical
+    diversity using noninformative priors. *Math. Geosci.* **51**, 401–417 (2019).
+
+    - 26. M. Wong et al., Towards network-based planetary biosignatures: Revisiting
+    atmospheric chemistry as an bipartite, unweighted, undirected networks. *J. Geophys.
+    Res. Planets* **128**, e2022JE007658 (2023).
+
+    - 27. E. D. Dorn et al., Monomer abundance distribution patterns as a universal
+    biosignature: Examples from terrestrial and digital life. *J. Mol. Evol.* **72**,
+    283–295 (2011).
+
+    - 28. C. Jolly, T. Douglas, Topological biosignatures: Large-scale structure of
+    chemical networks from biology and astrochemistry. *Astrobiology* **12**, 29–39
+    (2012).
+
+    - 29. N. Gutteridge et al., Classification of the biocomplexity of complex organic
+    mixtures for the detection of extraterrestrial life. *Life* **11**, 234 (2021).
+
+    - 30. S. M. Marshall, A. R. Lyra, L. Cronin, A probabilistic framework for identifying
+    biosignatures using pathway complexity. *Philos. Trans. Royal Soc. A* **375**,
+    20160342 (2017).
+
+    - 31. S. M. Marshall et al., Identifying molecules as biosignatures with assembly
+    theory and mass spectrometry. *Nat. Commun.* **12**, 3033 (2021).
+
+    - 32. J. E. Lovelock, A physical basis for life detection experiments. *Nature*
+    **207**, 568–570 (1965).
+
+    - 33. P. G. Simmons, Whole microorganisms studied by pyrolysis-gas chromatography-mass
+    spectrometry: Significance for extraterrestrial life detection experiments. *Appl.
+    Microbiol.* **20**, 567–572 (1970).
+
+    - 34. K. Biemann, On the ability of the Viking gas chromatography–mass spectrometer
+    to detect organic matter. *Proc. Natl. Acad. Sci. U.S.A.* **104**, 10310–10313
+    (2007).
+
+    - 35. P. R. Mahaffy et al., The sample analysis at Mars investigation and instrument
+    suite. *Space Sci. Rev.* **170**, 401–478 (2012).
+
+    - 36. R. A. Mathies et al., Feasibility of detecting bioorganic compounds in Enceladus
+    plumes with the Enceladus Organic Analyzer. *Astrobiology* **17**, 902–912 (2017).
+
+    - 37. L. Chou et al., Planetary mass spectrometry for agnostic life detection
+    in the Solar System. *Front. Astron. Space Sci.* **8**, 755100 (2021).
+
+    - 38. T. L. Salter et al., Mass spectrometric fingerprints of bacteria and archaea
+    for life detection on icy moons. *Astrobiology* **22**, 143–157 (2022).
+
+    - 39. E. Pretsch et al., *Structure Determination of Organic Compounds* (Springer-Verlag,
+    2000).
+
+    - 40. E. L. Schymanski et al., Consensus structure elucidation combining GC/EI-MS,
+    structure generation, and calculated properties. *Anal. Chem.* **84**, 3287–3295
+    (2012).
+
+    - 41. H. Han et al., Variable selection using mean decrease accuracy and mean
+    decrease gini based on random forest. *IEEE Int. Conf. Softw. Eng. Service Sci.*
+    **7**, 219–224 (2016).
+
+    - 42. G. P. Ellis, The maillard reaction. *Adv. Carbohydr. Chem.* **14**, 63–134
+    (1959).
+
+    - 43. Y. Kebukawa, A. D. Kolykine, G. D. Cody, Exploring the potential formation
+    of organic solids in chondrites and comets through polymerization of interstellar
+    formaldehyde. *Astrophys. J.* **771**, 17 (2013).
+
+    - 44. E. L. Wick, I. Horvath, R. Teranishi, Flavor Chemistry (3rd Edn Plenum Press,
+    1999).
+
+    - 45. G. Dungworth et al., Distribution of amino acids, amino sugars, purines
+    and pyridines in a Lake Ontario sediment core. *Chem. Geol.* **19**, 295–308 (1977).
+
+    - 46. P. Mazzarello, A unifying concept: The history of cell theory. *Nat. Cell
+    Biol.* **1**, E13–E15 (1999).
+
+    - 47. R. Milo, R. Phillips, *Cell Biology by the Numbers* (CRC Press, Boca Raton,
+    FL, 2015).
+
+    - 48. V. J. Killops, S. D. Killops, *Introduction to Organic Geochemistry* (Wiley,
+    2013).
+
+    - 49. V. E. Kovacs, Gas-chromatographische charakterisierung organischer verbindungen.
+    Teil 1: Retentionsindices aliphatischer halogene, alkohole, aldehyde und ketone.
+    *Helv. Chim. Acta* **41**, 1915–1932 (1958).
+
+    - 50. C. P. Marshall et al., Structural characterization of kerogen in 3.4 Ga
+    Archaean cherts from the Pilbara Craton, Western Australia. *Precambrian Res.*
+    **155**, 1–23 (2007).
+
+    - 51. M. Bournis, S. Derenne, F. Robert, Limits in pyrolysis-GC-MS analysis of
+    kerogen isolated from Archean cherts. *Org. Geochem.* **32**, 32–34 (2012).
+
+    - 52. NASA, “SAM for scientists.” https://mars.nasa.gov/msl/spacecraft/instruments/sam/for-scientists/.
+    Accessed 15 April 2021.
+
+    - 53. V. Da Poian et al., Science autonomy and the ExoMars mission: Machine learning
+    to help find life on Mars. *Computer* **54**, 69–77 (2021).
+
+    - 54. D. P. Glavin et al., Evidence for perchlorates and the origin of chlorinated
+    hydrocarbons detected by SAM at the Rocknest aeolian deposit in Gale Crater. *J.
+    Geophys. Res. Planets* **118**, 1955–1973 (2013).
+
+    - 55. A. A. Pavlov et al., Rapid radiolytic degradation of amino acids in the
+    martian shallow subsurface: Implications for the search for extinct life. *Astrobiology*
+    **22**, 1009–1115 (2022).
+
+    - 56. D. R. Lawrence, Taphonomy and information losses in fossil communities.
+    *Geol. Soc. Am. Bull.* **79**, 1315–1330 (1968).
+
+    - 57. A. K. Behrensmeyer, S. M. Kidwell, R. A. Gastaldo, “Taphonomy and paleobiology”
+    in *Deep Time: Paleobiology’s Perspective*, D. H. Erwin and S. L. Wing, Eds. (The
+    Paleontological Society, 2000), pp. 103–147.
+
+    - 58. S. L. Potter-McIntyre et al., Taphonomy of microbial biosignatures in spring
+    deposits: A comparison of modern, Quaternary, and Jurassic examples. *Astrobiology*
+    **17**, 216–230 (2017).
+
+    - 59. P. Schmitt-Kopplin et al., High molecular diversity of extraterrestrial
+    organic matter in Murchison meteorite revealed 40 years after its fall. *Proc.
+    Natl. Acad. Sci. U.S.A.* **107**, 2763–2768 (2010).
+
+    - 60. A. M. Riya et al., An open source computational workflow for the discovery
+    of autocatalytic networks in abiotic reactions. *Chem. Sci.* **13**, 4838–4853
+    (2022).
+
+    '
+  mdcn: '
+
+
+    ### 模型选择
+
+
+    在我们探索的各种分类方法中，随机森林方法在准确区分生物样本和非生物样本方面迅速取得了最佳效果，因此被用于训练最终模型。随机森林方法是一种集成分类方法，它构建一组去相关的决策树（67）。可能存在更好的方法，我们正在探索其他方法的相对优势，以供未来的出版物参考。我们使用了R库mlr3中的随机森林模型（68）。
+
+
+    Machine_learning_and_preprocessing_pyr_GSMS_data/tree/master (71). 用于分析的所有数据、代码和材料均可供任何研究人员用于复制或扩展分析。数据和代码使用的许可证以及相关的归属信息可在各自的仓库中获得。
+
+
+    ### 模型验证
+
+
+    我们为训练好的机器学习模型采用了两种验证策略。首先，数据使用分层随机采样分为95个样本的训练集和39个样本的测试集，模型在训练集上使用10倍交叉验证进行参数调优后进行了测试。最终训练好的随机森林模型随后被应用于预测测试数据的生物或非生物来源。其次，我们对所有134个样本使用了嵌套交叉验证（69），以获得机器学习方法预测性能的无偏估计。嵌套交叉验证在内层循环中使用10倍交叉验证，在外层循环中使用五倍交叉验证。算法在使用随机搜索进行20次评估后终止。
+
+
+    ## 致谢
+
+
+    我们感谢Stuart Bartlett、Carol Cleland以及两位匿名审稿人对本文早期版本进行的宝贵讨论和详细评审。我们还感谢编辑Roger Summons对手稿的细心耐心处理。我们特别感谢John
+    Saul捐赠了本研究中使用的80个样本。分子生物标志物的研究得到了John Templeton Foundation Grant 61783的支持。NASA
+    Astrobiology Institute ENIGMA团队（grant 80NSSC18M0093）还提供了额外支持。此处表达的任何意见、发现或建议均为作者本人观点，不一定反映NASA的观点。
+
+
+    ## 数据、材料和软件可用性
+
+
+    本手稿中生成和分析的数据[Pyr-GC-MS数据文件（134个文件）]可在Open Science Framework仓库中找到，标题为“基于机器学习的强健分子生物标志物”（70）。本论文的代码可在
+    https://github.com/ghystad/ 上找到。
+
+
+    ### 作者单位
+
+
+    卡内基科学研究所地球与行星实验室，华盛顿特区20015；东京工业大学地球生命科学研究所，日本东京152-8550；蓝色大理石空间科学研究所，西雅图，WA 98104；普渡大学西北分校数学与统计学系，哈蒙德，IN
+    46323；萨根学者，NASA哈伯奖学金计划，空间望远镜科学研究所，巴尔的摩，MD 21218；以及约翰霍普金斯大学地球与行星科学系，巴尔的摩，MD 21218
+
+
+    - 1. C. M. Dobson，化学空间与生物学。*自然* **432**, 824–828 (2004).
+
+    - 2. M. L. Wong, A. Prabhu，细胞作为首批数据科学家。*界面* **20**, 20220810 (2023).
+
+    - 3. K. Kvenvolden等人，默奇森陨石中外源氨基酸和烃类的证据。*自然* **228**, 923–926 (1970).
+
+    - 4. S. Kauffman，对于非绝热系统以构建其扩展相空间而做功，是否存在第四定律？*熵* **24**, 1383 (2022).
+
+    - 5. P. Mitchell，通过化学渗透型机制将磷酸化与电子和氢转移耦合。*自然* **191**, 144–148 (1961).
+
+    - 6. C. P. McKay，什么是生命——我们如何在其他世界中寻找它？*PLOS生物学* **2**, e302 (2004).
+
+    - 7. J. D. Farmer, J. D. Des Marais，探寻古代火星生命的记录。*地球物理学研究杂志：行星* **104**, 26977–26995
+    (1999).
+
+    - 8. E. S. Johnson等人，非地球生物标志物指纹。*天体生物学* **18**, 915–922 (2018).
+
+    - 9. E. W. Schwieterman等人，系外行星生物标志物：可远程检测的生命迹象综述。*天体生物学* **18**, 663–708 (2018).
+
+    - 10. S. I. Walker等人，系外行星生物标志物：未来方向。*天体生物学* **18**, 779–824 (2018).
+
+    - 11. M. A. Chan等人，行星背景中的生物标志物解读。*天体生物学* **19**, 1075–1101 (2019).
+
+    - 12. S. Bartlett等人，使用电纺机器评估行星复杂性和潜在不可知生物标志物。*自然天文学* **6**, 387–392 (2022).
+
+    - 13. C. E. Cleland，*生命的本质：寻找生命统一理论的探索：寻找生命*（剑桥大学出版社，2019）.
+
+    - 14. J. P. Grotzinger, A. H. Knoll，前寒武纪碳酸盐中的层状碳酸盐岩：进化里程碑还是环境尺度？*地球与行星科学年度评论*
+    **27**, 313–358 (1999).
+
+    - 15. N. Noffke，碎屑沉积物中的微生物诱导沉积构造：关于火星化石生命命题的启示。*天体生物学* **21**, 866–892 (2021).
+
+    - 16. J. Farquhar, H. Bao, M. Thiemens，地球最早硫循环的大气影响。*科学* **289**, 756–758 (2000).
+
+    - 17. Y. Shen, R. Buick, D. E. Canfield，早期太古代微生物硫酸盐还原的同位素证据。*自然* **410**, 77–81
+    (2001).
+
+    - 18. R. E. Summons等人，分子生物标志物。*空间科学评论* **135**, 133–159 (2016).
+
+    - 19. M. Dannemann等人，迈向从土卫二和欧罗巴喷出的冰粒中的细菌检测DNA、脂质和代谢中间体的生物标志物。*天体生物学* **23**, 60–75
+    (2023).
+
+    - 20. C. D. Georgiou, D. W. Deamer，脂质作为外星生命的普遍生物标志物。*天体生物学* **14**, 541–549 (2014).
+
+    - 21. D. Arvin，外星生命手性指标的批判性综述。*新天文学评论* **92**, 101596 (2021).
+
+    - 22. C. R. Webster等人，盖尔陨石坑的火星甲烷检测与变异。*科学* **347**, 415–417 (2015).
+
+    - 23. V. S. Meadows等人，关于系外行星大气中O2作为生物标志物的反思。*天体生物学* **18**, 630–662 (2018).
+
+    - 24. S. M. Morrison等人，矿物系统的网络分析。*美国矿物学家* **102**, 1588–1596 (2017).
+
+    - 25. G. Hystad等人，使用非信息先验进行地球未发现矿物多样性的贝叶斯估计。*数学地球科学* **51**, 401–417 (2019).
+
+    - 26. M. Wong等人，迈向基于网络的行星生物标志物：重新审视大气化学作为二部图、无权、无向网络。*地球物理学研究杂志：行星* **128**, e2022JE007658
+    (2023).
+
+    - 27. E. D. Dorn等人，单体丰度分布模式作为普遍生物标志物：来自陆地生命和数字生命的例子。*分子进化杂志* **72**, 283–295 (2011).
+
+    - 28. C. Jolly, T. Douglas，拓扑生物标志物：来自生物学和天体化学的化学网络的大规模结构。*天体生物学* **12**, 29–39
+    (2012).
+
+    - 29. N. Gutteridge等人，用于检测外星生命的复杂有机混合物生物复杂性分类。*生命* **11**, 234 (2021).
+
+    - 30. S. M. Marshall, A. R. Lyra, L. Cronin，使用路径复杂性识别生物标志物的概率框架。*皇家学会学报A辑* **375**,
+    20160342 (2017).
+
+    - 31. S. M. Marshall等人，使用组装理论和质谱将分子作为生物标志物进行识别。*自然通讯* **12**, 3033 (2021).
+
+    - 32. J. E. Lovelock，生命检测实验的物理基础。*自然* **207**, 568–570 (1965).
+
+    - 33. P. G. Simmons，通过热解-气相色谱-质谱联用研究整个微生物：对外星生命检测实验的意义。*应用微生物学* **20**, 567–572
+    (1970).
+
+    - 34. K. Biemann，关于维京号气相色谱-质谱仪检测有机物的能力。*美国国家科学院院刊* **104**, 10310–10313 (2007).
+
+    - 35. P. R. Mahaffy等人，火星样本分析调查及仪器套件。*空间科学评论* **170**, 401–478 (2012).
+
+    - 36. R. A. Mathies等人，使用土卫二有机分析仪检测土卫二羽流中生物有机化合物的可行性。*天体生物学* **17**, 902–912 (2017).
+
+    - 37. L. Chou等人，用于太阳系中不可知生命检测的行星质谱。*天文学与空间科学前沿* **8**, 755100 (2021).
+
+    - 38. T. L. Salter等人，用于冰卫星生命检测的细菌和古细菌质谱指纹。*天体生物学* **22**, 143–157 (2022).
+
+    - 39. E. Pretsch等人，*有机化合物结构测定*（Springer-Verlag，2000）.
+
+    - 40. E. L. Schymanski等人，结合GC/EI-MS、结构生成和计算性质的共识结构推定。*分析化学* **84**, 3287–3295
+    (2012).
+
+    - 41. H. Han等人，基于随机森林的变量选择，使用平均精度下降和平均基尼下降。*IEEE国际软件工程与服务科学会议* **7**, 219–224
+    (2016).
+
+    - 42. G. P. Ellis，迈雅反应。*糖化学进展* **14**, 63–134 (1959).
+
+    - 43. Y. Kebukawa, A. D. Kolykine, G. D. Cody，通过星际甲醛聚合探索陨石和彗星中有机固体的潜在形成。*天体物理学期刊*
+    **771**, 17 (2013).
+
+    - 44. E. L. Wick, I. Horvath, R. Teranishi，*风味化学*（第3版 Plenum Press，1999）.
+
+    - 45. G. Dungworth等人，安大略湖沉积岩芯中氨基酸、氨基糖、嘌呤和吡啶的分布。*化学地质学* **19**, 295–308 (1977).
+
+    - 46. P. Mazzarello，一个统一概念：细胞理论的历史。*自然细胞生物学* **1**, E13–E15 (1999).
+
+    - 47. R. Milo, R. Phillips，*按数字读懂细胞生物学*（CRC Press，博卡拉顿，FL，2015）.
+
+    - 48. V. J. Killops, S. D. Killops，*有机地球化学导论*（Wiley，2013）.
+
+    - 49. V. E. Kovacs，有机化合物的气相色谱表征。第1部分：脂族卤代烃、醇、醛和酮的保留指数。*瑞士化学杂志* **41**, 1915–1932
+    (1958).
+
+    - 50. C. P. Marshall等人，西澳大利亚皮尔巴拉克拉通34亿年前太古代燧石中有机质的结构表征。*前寒武纪研究* **155**, 1–23
+    (2007).
+
+    - 51. M. Bournis, S. Derenne, F. Robert，从太古代燧石中分离的有机质热解-气相色谱-质谱分析的局限性。*有机地球化学*
+    **32**, 32–34 (2012).
+
+    - 52. NASA，“面向科学家的SAM”。https://mars.nasa.gov/msl/spacecraft/instruments/sam/for-scientists/。访问日期：2021年4月15日.
+
+    - 53. V. Da Poian等人，科学自主性与ExoMars任务：使用机器学习帮助在火星上寻找生命。*计算机* **54**, 69–77 (2021).
+
+    - 54. D. P. Glavin等人，SAM在盖尔陨石坑Rocknest风积沉积物中检测到的高氯酸盐和氯代烃的起源证据。*地球物理学研究杂志：行星* **118**,
+    1955–1973 (2013).
+
+    - 55. A. A. Pavlov等人，火星浅表地下氨基酸的快速放射降解：对寻找灭绝生命的启示。*天体生物学* **22**, 1009–1115 (2022).
+
+    - 56. D. R. Lawrence，化石群落中的塔福诺米与信息损失。*美国地质学会公报* **79**, 1315–1330 (1968).
+
+    - 57. A. K. Behrensmeyer, S. M. Kidwell, R. A. Gastaldo，《深时：古生物学的视角》中的“塔福诺米与古生物学”，D.
+    H. Erwin和S. L. Wing编（古生物学学会，2000），第103–147页.
+
+    - 58. S. L. Potter-McIntyre等人，泉水沉积物中微生物生物标志物的塔福诺米：现代、第四纪和侏罗纪实例的比较。*天体生物学* **17**,
+    216–230 (2017).
+
+    - 59. P. Schmitt-Kopplin等人，默奇森陨石坠落40年后揭示的外源有机物高分子多样性。*美国国家科学院院刊* **107**, 2763–2768
+    (2010).
+
+    - 60. A. M. Riya等人，用于发现非生物反应中自催化网络的开源计算工作流。*化学科学* **13**, 4838–4853 (2022).
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 6]
+
+
+    +   61. S. Devata et al., Comparative evaluation of electron ionization mass spectral
+    prediction methods. J. Am. Soc. Mass Spectrom. 34, 1584–1592 (2023).
+
+
+    +   62. N. Rashevsky, Outline of a unified approach to physics, biology and sociology.
+    Bull. Math. Biophys. 31, 159–198 (1969).
+
+
+    +   63. C. G. Ryan et al., Snip, a statistics-sensitive background treatment for
+    the quantitative analysis of x-ray spectra in geochemistry applications. Nucl.
+    Instr. Methods Phys. Res. B 34, 396–402 (1988).
+
+
+    +   64. S. Gibb, K. Strimmer, MALDIquant: A versatile R package for the analysis
+    of mass spectrometry data. Bioinformatics 28, 2270–2271 (2012).
+
+
+    +   65. S. G. Patro, K. K. Sahu, Normalization: A preprocessing stage. arXiv [Preprint]
+    (2015). https://doi.org/10.48550/ARXIV.1503.06462 (Accessed 23 August 2023).
+
+
+    +   66. M. Kuhn, Classification and regression training, package, caret. https://github.com/topepo/caret/
+    (2022).
+
+
+    +   67. T. K. Ho, Random decision forest. Proc. Int. Conf. Document Anal. Recogn.
+    3, 278–282 (1995), 10.1109/ICDAR.1995.598994.
+
+
+    +   68. M. Lang et al., mlr3: A modern object-oriented machine learning framework
+    in R. J. Open Source Softw. 4, 1903 (2019), https://joss.theoj.org/papers/10.21105/joss.01903.
+
+
+    +   69. T. Hastie, R. Tibshirani, J. Friedman, "Model assessment and selection"
+    in The Elements of Statistical Learning (Springer Series in Statistics, Springer,
+    2009).
+
+
+    +   70. H. Cleaves, A robust molecular biosignature based on machine learning.
+    Open Science Framework. https://doi.org/10.17605/OSF.IO/EMBH8. Deposted 7 June
+    2023.
+
+
+    +   71. G. Hstad, A. Prabhu, A robust molecular biosignature based on machine
+    learning applied to three-dimensional pyrolysis GC-MS data (Version 1.0, Computer
+    Software, Github, San Francisco, CA 2023). https://github.com/ghstad/Machine_Learning_and_preprocessing_pyr_GSMS_data/tree/master.
+    Accessed 22 August 2023.'
+  md: '
+
+    - 61. S. Devata et al., Comparative evaluation of electron ionization mass spectral
+    prediction methods. J. Am. Soc. Mass Spectrom. 34, 1584–1592 (2023).
+
+
+    - 62. N. Rashevsky, Outline of a unified approach to physics, biology and sociology.
+    Bull. Math. Biophys. 31, 159–198 (1969).
+
+
+    - 63. C. G. Ryan et al., Snip, a statistics-sensitive background treatment for
+    the quantitative analysis of x-ray spectra in geochemistry applications. Nucl.
+    Instr. Methods Phys. Res. B 34, 396–402 (1988).
+
+
+    - 64. S. Gibb, K. Strimmer, MALDIquant: A versatile R package for the analysis
+    of mass spectrometry data. Bioinformatics 28, 2270–2271 (2012).
+
+
+    - 65. S. G. Patro, K. K. Sahu, Normalization: A preprocessing stage. arXiv [Preprint]
+    (2015). https://doi.org/10.48550/ARXIV.1503.06462 (Accessed 23 August 2023).
+
+
+    - 66. M. Kuhn, Classification and regression training, package, caret. https://github.com/topepo/caret/
+    (2022).
+
+
+    - 67. T. K. Ho, Random decision forest. Proc. Int. Conf. Document Anal. Recogn.
+    3, 278–282 (1995), 10.1109/ICDAR.1995.598994.
+
+
+    - 68. M. Lang et al., mlr3: A modern object-oriented machine learning framework
+    in R. J. Open Source Softw. 4, 1903 (2019), https://joss.theoj.org/papers/10.21105/joss.01903.
+
+
+    - 69. T. Hastie, R. Tibshirani, J. Friedman, "Model assessment and selection"
+    in The Elements of Statistical Learning (Springer Series in Statistics, Springer,
+    2009).
+
+
+    - 70. H. Cleaves, A robust molecular biosignature based on machine learning. Open
+    Science Framework. https://doi.org/10.17605/OSF.IO/EMBH8. Deposited 7 June 2023.
+
+
+    - 71. G. Hstad, A. Prabhu, A robust molecular biosignature based on machine learning
+    applied to three-dimensional pyrolysis GC-MS data (Version 1.0, Computer Software,
+    Github, San Francisco, CA 2023). https://github.com/ghstad/Machine_Learning_and_preprocessing_pyr_GSMS_data/tree/master.
+    Accessed 22 August 2023.
+
+    '
+  mdcn: '
+
+    - 61. S. Devata et al., 电子电离质谱预测方法的比较评价. J. Am. Soc. Mass Spectrom. 34, 1584–1592
+    (2023).
+
+
+    - 62. N. Rashevsky, 统一物理、生物和社会学方法的纲要. Bull. Math. Biophys. 31, 159–198 (1969).
+
+
+    - 63. C. G. Ryan et al., SNIP，一种用于地球化学应用中 X 射线光谱定量分析的统计敏感背景处理方法. Nucl. Instr.
+    Methods Phys. Res. B 34, 396–402 (1988).
+
+
+    - 64. S. Gibb, K. Strimmer, MALDIquant：用于质谱数据分析的多功能 R 包. Bioinformatics 28, 2270–2271
+    (2012).
+
+
+    - 65. S. G. Patro, K. K. Sahu, 归一化：一种预处理阶段. arXiv [预印本] (2015). https://doi.org/10.48550/ARXIV.1503.06462
+    (2023 年 8 月 23 日访问).
+
+
+    - 66. M. Kuhn, 分类和回归训练，包，caret. https://github.com/topepo/caret/ (2022).
+
+
+    - 67. T. K. Ho, 随机决策森林. Proc. Int. Conf. Document Anal. Recogn. 3, 278–282 (1995),
+    10.1109/ICDAR.1995.598994.
+
+
+    - 68. M. Lang et al., mlr3：R 中的现代面向对象机器学习框架. J. Open Source Softw. 4, 1903 (2019),
+    https://joss.theoj.org/papers/10.21105/joss.01903.
+
+
+    - 69. T. Hastie, R. Tibshirani, J. Friedman, "模型评估与选择"，载于《统计学习要素》(Springer 统计学系列，Springer,
+    2009).
+
+
+    - 70. H. Cleaves, 基于机器学习的稳健分子生物标志物. 开放科学框架. https://doi.org/10.17605/OSF.IO/EMBH8.
+    2023 年 6 月 7 日存入.
+
+
+    - 71. G. Hstad, A. Prabhu, 应用于三维热解 GC-MS 数据的基于机器学习的稳健分子生物标志物 (版本 1.0，计算机软件，Github，美国加利福尼亚州旧金山
+    2023). https://github.com/ghstad/Machine_Learning_and_preprocessing_pyr_GSMS_data/tree/master.
+    2023 年 8 月 22 日访问.
+
+    '
+  merge: 0
