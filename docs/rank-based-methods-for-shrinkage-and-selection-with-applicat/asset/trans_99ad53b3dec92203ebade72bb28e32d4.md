@@ -1,0 +1,100 @@
+
+![](img/f3b106d7e76ae3afcec8895afa28732c_66_0.png)
+
+**图 1.7** LASSO 和岭回归的关键收缩特性。
+
+## 1.7.3 收缩估计
+
+The most widely used form of penalty estimation is referred to as a ridge regression (Hoerl and Kennard, 1970). In this case,
+
+```
+$p_\lambda(\boldsymbol{\beta}) = \lambda \sum_{j=1}^p |\beta_j|^2,$
+```
+
+where $\lambda$ is a tuning parameter. It is often referred to as the $L_2$ penalty since it is based on the $L_2$-norm. Its primary purpose is to shrink the parameters thus moving the estimates away from the unbiased values and towards the null hypothesis, $\boldsymbol{\beta} = 0$. By properly tuning $\lambda$, it is possible to apply enough shrinkage to the parameters such that the resulting biased parameters provide an accurate model for prediction.
+
+The objective function using the least squares (LS) loss and ridge penalty functions is given by
+
+```
+$J_n^{\text{LS-Ridge}}(\boldsymbol{\beta}) = \frac{1}{n} \sum_{i=1}^n (y_i - \mathbf{x}_i^\top \boldsymbol{\beta})^2 + \lambda \sum_{j=1}^p |\beta_j|^2.$
+```
+
+The objective function using the rank loss and ridge penalty functions is given by
+
+```
+$D_n^{\text{R-Ridge}}(\boldsymbol{\beta}) = \frac{1}{n} \sum_{i=1}^n (\mathbf{y}_i - \mathbf{x}_i^\top \boldsymbol{\beta}) a_n(R_n(\boldsymbol{\beta})) + \lambda \sum_{j=1}^p |\beta_j|^2.$
+```
+
+One can show that the penalty function effectively places a constraint on the sum of the squares of the parameters. If we had only two parameters, $\beta_1$ and $\beta_2$, the constraint would be as follows,
+
+\(\beta_1^2 + \beta_2^2 \le c,\) (1.7.11)
+
+where c is a constant. Note that this constraint would form a circular region about the origin, as shown in Figure 1.8. The figure represents the two-dimensional plane of possible \(\beta_1\) and \(\beta_2\) values. The circles represent the constraint \(\beta_1^2 + \beta_2^2 = c\) due to the ridge penalty function for different values of c, as set by \(\lambda\) in the penalty function. The point marked “X” represents the unbiased rank or LS estimates. The contours around the estimates represent lines of equal value of the unpenalized loss function. The largest circle (labeled 0) is associated with \(\lambda = 0\), while the point the origin (where \(\beta_1 = \beta_2 = 0\)) is due to \(\lambda = \infty\).
+
+Starting at the unbiased solution on the circle labeled 0, with \(\lambda_0 = 0\), as we apply the penalty function with tuning factor \(\lambda\), the estimates shrink and follow some hypothetical trajectory depicted in the figure until the edge of the circle 1 is reached at \(\lambda = \lambda_1 > 0\). As \(\lambda\) increases to \(\lambda = \lambda_2 > \lambda_1\) (circle 2), we shrink the estimates by a greater degree. At \(\lambda = \lambda_3 > \lambda_2\), we reach the circle 3. This continues until all estimates reach 0 at \(\lambda = \infty\) at the origin. Essentially, we are shrinking the estimates towards the null hypothesis, \(\boldsymbol{\beta} = 0\). In practice, we seek
+
+![](img/f3b106d7e76ae3afcec8895afa28732c_67_0.png)
+
+**图 1.8** 岭回归的几何解释。
+
+some intermediate point between the unbiased estimate and the origin. If we have over-fitting or under-fitting problems, we can try a number of different values of \(\lambda\) until a proper balance is struck between the two. The process of finding the optimal value, \(\lambda_{\text{opt}}\), to balance this *bias-variance trade-off* is called regularization and is used to obtain high model prediction accuracy.
+
+## 1.7.4 子集选择
+
+The generic term “subset selection” refers to the process of identifying the most important explanatory variables from a large set of given variables. In particular, if there are \(p\) variables, the goal is to find a smaller subset, \(p_0 < p\), with which to build an accurate predictive model. Unfortunately, this requires that \(2^p\) models be built and tested to determine which one offers the best subset. This would be the “oracle” subset meaning the subset we would ideally want in our compact model. Of course, this process is computationally prohibitive so we seek other methods that have the potential to find this oracle subset with much less effort. Any approach that is able to find the oracle subset for any given \(p_0\) is said to have the oracle property.
+
+A first approach in this direction combining shrinkage and subset selection is referred to as *LASSO* (least absolute shrinkage and selection operator) (Tibshirani, 1996). In this case,
+
+```
+\(p_\lambda(\boldsymbol{\beta}) = \lambda \sum_{j=1}^p |\beta_j|,\) (1.7.12)
+```
+
+where \(\lambda\) is the tuning parameter. This is also referred to as the $L_1$ penalty because it is reminiscent of the $L_1$-norm.
+
+The objective function with least squares loss and LASSO penalty functions is given by
+
+```
+\(J_n^{\text{LS-LASSO}}(\boldsymbol{\beta}) = \frac{1}{n} \sum_{i=1}^n (y_i - \mathbf{x}_i^\top \boldsymbol{\beta})^2 + \lambda \sum_{j=1}^p |\beta_j|.\) (1.7.13)
+```
+
+The objective function with rank loss and LASSO penalty functions is given by
+
+```
+\(D_n^{\text{R-LASSO}}(\boldsymbol{\beta}) = \frac{1}{n} \sum_{i=1}^n (\mathbf{y}_i - \mathbf{x}_i^\top \boldsymbol{\beta}) a_n(R_n(\boldsymbol{\beta})) + \lambda \sum_{j=1}^p |\beta_j|.\) (1.7.14)
+```
+
+Using this formulation, a constraint, given by c, is imposed by the penalty function as follows,
+
+$|\beta_1| + |\beta_2| \le c.$
+
+(1.7.15)
+
+The resulting constraint geometry is a diamond shape in two dimensions rather than the circle, as shown in Figure 1.9. The adjustment of \(\lambda > 0\) has the effect of decreasing the size of the diamond. If \(\lambda_0 = 0\), we obtain the unbiased estimates. As \(\lambda\) is increased, the diamond shrinks in size, as do the resulting parameters so it is a shrinkage estimator. Eventually, when \(\lambda = \infty\), the origin is reached, as was the case in ridge regression.
+
+The hypothetical trajectory for LASSO starts at the unbiased LSE or rank estimates ("X") on diamond 0 and terminates on diamond 1 with \(\lambda = \lambda_1 > 0\). Both estimates shrink but neither one is 0 yet. However, when \(\lambda = \lambda_2 > \lambda_1\) and the path lands on one corner of diamond 2, where \(\beta_2 = 0\), and we are left with a model with only \(\beta_1 \neq 0\). We can now remove \(\beta_2\) and keep \(\beta_1\). As such, LASSO is a subset selection estimator. Further increases in \(\lambda\) eventually forces \(\beta_1 = 0\) at the origin.
+
+### (b) LASSO 回归
+
+![](img/f3b106d7e76ae3afcec8895afa28732c_69_0.png)
+
+**图 1.9** LASSO 的几何解释。
+
+Subset selection is very important when the number of parameters is very large. One can imagine a data set with \( p = 50 \) being reduced to \( p_0 = 30 \) by this method, and ideally only the important explanatory variables would be retained in the compact model. Unfortunately, LASSO does not have the oracle property; that is, it is possible that the “wrong corner” of the diamond may be reached during shrinkage.
+
+For example, let \( p = 7 \) and assume we know a priori that \( \boldsymbol{\beta}_4 = 0 \) and \( \boldsymbol{\beta}_6 = 0 \) while all other parameters are non-zero. If a penalty estimator such as LASSO reports that initially we should set \( \boldsymbol{\beta}_3 = 0 \) and \( \boldsymbol{\beta}_7 = 0 \), then it does not have the oracle property. However, it may still produce a compact model but the parameter values may not be as meaningful. This is important because of model interpretability. We want to be able to eliminate parameters from the model that are not explanatory in terms of the response variable, leaving only those that are important. Whenever model interpretability is important, we require the oracle property be present in the penalty function during subset selection.
+
+Improved methods have been developed that do indeed possess the oracle properties. One in particular is relevant to the discussion here: adaptive LASSO (aLASSO) (Zou, 2006). In the original LASSO, the \( \lambda \) value was applied uniformly to all parameters. In aLASSO, an additional weight is applied to each parameter as follows,
+
+```
+\( p_\lambda(\boldsymbol{\beta}) = \lambda \sum_{j=1}^p w_j |\beta_j| . \quad \text{(1.7.16)} \)
+```
+
+For example, the weight for each parameter could be set to \( w_j = 1/|\hat{\boldsymbol{\beta}}_j^*| \) to produce the new penalty function
+
+```
+\( p_\lambda(\boldsymbol{\beta}) = \lambda \sum_{j=1}^p \frac{|\boldsymbol{\beta}_j|}{|\hat{\boldsymbol{\beta}}_j^*|}, \quad \text{(1.7.17)} \)
+```
+
+where \( \hat{\boldsymbol{\beta}}_j^* \), a known quantity, is an unpenalized arbitrary estimate for \( \boldsymbol{\beta}_j \), i.e. the unbiased least squares or rank estimate. We usually consider a \( \sqrt{n} \)-consistent estimator as \( \hat{\boldsymbol{\beta}}_j^* \) to retain good properties for the penalized estimator.
+
+We can understand the adaptive LASSO approach by realizing that small \( \hat{\boldsymbol{\beta}}_j^* \) values will lead to large weights, which is equivalent to a high \( \lambda \) with the diamond close to the origin (see Figure 1.9), while large \( \hat{\boldsymbol{\beta}}_j^* \) values would be equivalent to a small \( \lambda \) and accordingly a large diamond constraint. Hence, each parameter has its own effective \( \lambda \) based on the unpenalized estimates. This makes sense intuitively since the unpenalized solution has valuable
