@@ -1,0 +1,3 @@
++   6. Nils J. Nilsson, Introduction to Machine Learning Archived 2019-08-16 at the Wayback Machine.
++   7. Tabachnick, B.G. & Fidell, L.S. (2007). Cleaning up your act. Screening data prior to analysis. In B.G. Tabachnick & L.S. Fidell (Eds.), Using Multivariate Statistics, Fifth Edition (pp. 60–116). Boston: Pearson Education, Inc. / Allyn and Bacon.
++   8. Zhang, Jun; Zhan, Zhi-hui; Lin, Ying; Chen, Ni; Gong, Yue-jiao; Zhong, Jing-hui; Chung, Henry S.H.; Li, Yun; Shi, Yu-hui (2011). “Evolutionary Computation Meets Machine Learning: A Survey”. Computational Intelligence Magazine. 6 (4): 68–75.

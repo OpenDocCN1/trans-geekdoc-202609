@@ -1,0 +1,13 @@
+are combined to \(\Re = \alpha \Re_m + (1 - \alpha)\Re_h\) using the parameter \(\alpha \in [0, 1]\) to tune between weighting more homogeneous or more mixed solutions continuously.
+
+# ## 7.2.3 Reinforcement Learning Framework
+
+Because the action space is large (\(3^{4 \times 4} \approx 43 \times 10^6\) for combined interactions), conventional control theory techniques are intractable due to Bellman\`s curse of dimensionality. Similarly, the action space is also too large for value-based RL methods, so that we use a policy-based algorithm. In particular, we use the rllib implementation of Proximal Policy Optimization (PPO).
+
+In the RL agents, we use a neural network, which gets as input the tensor M. The neural network itself then consists of three convolutional layers (with 32, 64, and 256 channels, and kernel sizes 3, 3, and 4, respectively), and a dense layer with \(N_g \times N_g\) output neurons. The simulation uses the value of these output neurons to determine if a bin should be activated by thresholding.
+
+The hyperparameters for PPO were tuned automatically during training using ray tune\`s Population Based Training (PBT) with 16 agents. Using PBT, unstable solutions could be overcome, and we observed converged strategies in all training situations.
+
+# ### Attractive Interactions
+
+Experimentally, a controllable active matter system with attractive interactions is already available, so this case is analyzed first. In Fig. 2a, we show the average episode reward of each of the 16 agents as a function of training time as a solid line, with the minimal and maximal episode reward during the batch providing an error band. It should be noted that while the training resulted in some average increase in reward, the span of rewards is still large. Additionally, we can also observe that agents failing due to some instabilities, as seen by a sharp drop in the reward, can recover due to using PBT. Therefore, the data allows for qualitative analysis, but visual inspection needs to confirm the quality of a strategy in a specific instance. In Fig. 2b, an exemplary time series for a converged strategy is shown, where the emergent strategy collapses all particles into a dense cluster. While this strategy is not a good mixer in the common sense, the solution optimizes eqn (2). In particular, if all particles collapse to a cluster in a single bin, then this bin has a balanced number of “left” and “right”, so that for this
