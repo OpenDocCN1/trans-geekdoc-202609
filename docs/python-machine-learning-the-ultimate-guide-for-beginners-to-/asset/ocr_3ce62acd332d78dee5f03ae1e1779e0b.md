@@ -1,0 +1,11 @@
+one layer, however, that is a fairly primitive model that is never used in practice. In addition, between the two layers we have a number of hidden layers, anywhere from none to as many as you need. These layers are the ones that handle the data that is sent from the input layer. Keep in mind that a standard network contains three layers, while those that have hundreds of layers are referred to as Deep Learning systems.
+
+In this chapter we will focus on the classic feedforward neural network, as well as the recurrent neural network.
+
+# Feedforward Neural Networks
+
+This is the most basic type of neural network. Data is transmitted in a linear fashion and it can only go in one direction. It is passed from the input layer to the hidden layer and finally to the output layer. That's it. This type of network doesn't even iterate over the data like the more modern systems. Once the process is over, it's over. Data doesn't loop through a cycle. Once the operation is complete, we have the result. However, there are two types of feedforward networks.
+
+The first is known as the single layer perceptron and this is as basic as it gets. There is only one layer and the data is passed in a linear fashion from the first node to the last. When the input passes through one node it is weighted and if the next node determines the weight passes a minimal limit, it will either be activated or deactivated.
+
+The multi-layer perceptron, on the other hand, needs to have at least two layers, though in reality it consists of more than two. The data transmission is still linear, however the output of a previous layer becomes the input of the current layer. Take note that when there are more than two layers involved, this type of neural network will usually make use of the concept of backpropagation. This means that the actual output will be compared to the output that was expected. The difference between the two is then calculated and the degree of error is established. This error value is then sent throughout the neural net

@@ -1,0 +1,9 @@
+results. Therefore, no matter which algorithm you use you always have to eliminate as much noise and as many outliers as you can by using certain methods and techniques. However, the benefit of using decision trees is that they are barely affected by these factors. Outliers and noise will only be a minor inconvenience and you will often be able to ignore them completely and still achieve an accurate result.
+
++   3. Versatile: As you already know, certain machine learning algorithms are designed to work only with certain data types. Some of them can only be applied to categorical data, while others are specifically used on numerical data. Often for this reason they need to be combined when working with complex datasets that contain both types of information. However, decision trees can handle the training process for both data type, therefore significantly reducing your workload.
+
++   4. Exploring data: Data exploration is a valuable step that can be time consuming because you need to identify the most valuable data points and then establish a connection between them. Decision trees, however, excel at exploratory analysis and you will spend a lot less time performing this step. In addition, you will be able to create new features a lot more efficiently in order to boost the accuracy of the predictions even further. Exploring data can be exhausting because in the real world you will often deal with thousands of variables and finding the most important ones can be difficult without the appropriate tool.
+
+Now that you have an idea about decision trees and why they are a preferred algorithm amongst machine learners, you should also learn which disadvantages they bring. Keep in mind there is no such thing as the perfect algorithm, so let's see what kind of difficulties you will be facing when working with decision trees:
+
++   1. Overfitting: This is probably the biggest problem you will face. Decision trees tend to exaggerate and build overly
