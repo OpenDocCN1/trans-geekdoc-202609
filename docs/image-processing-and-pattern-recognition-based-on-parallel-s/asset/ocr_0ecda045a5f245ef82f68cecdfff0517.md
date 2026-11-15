@@ -1,0 +1,10 @@
+![](bbox=[0.19, 0.1, 0.79, 0.38])
+
++   1. The accuracy of the restoration of the function of the area of intersection of pattern values when using fast Fourier transformation does not match the recognition dS value.
++   2. The system cannot distinguish between the mirror shapes (e.g., letters R and Я, P and b).
++   3. Images of some of the Arial symbols in orthogonal directions provide the same FAI (e.g., letters H and П).
++   4. Some images for the chosen values of allowable errors (dk and dS) give a similar result; i.e., the system depending on invariance to the angle of rotation can identify certain images as one (e.g. Figs 6 and 9).
+
+Reasons for decision of ambiguous recognition are the following. Accuracy of the FAI restoration can be enhanced by storing patterns in the form of a greater number of fast Fourier transform harmonics or of direct conservation of the patterns as a set of functions. Both ways envisage an increase in the pattern database with special attention on the processes of the scale functions for comparison at the detail stage. To recognise the mirror images, or to solve the problem of the third cause of appearance of the error of the first kind, it is necessary to perform a second scan of image in a direction that is different from the first, not on 90°, but on the other corner. The FAI formation may also be performed for three (or more) shift directions that will identify an image using a tuple of three (or more) elements. With the help of such methods, the influence of the central symmetry of the template surfaces can be neutralised. Such a representation of an object requires a high accuracy in calculation of the process organisation of non-orthogonal parallel shifts.
+
+It should be noted that the letters have less convex shapes than the simple images. Therefore, the efficiency of this method of pattern
