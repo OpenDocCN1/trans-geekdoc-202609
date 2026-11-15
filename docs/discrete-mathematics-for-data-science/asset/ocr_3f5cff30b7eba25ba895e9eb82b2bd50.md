@@ -1,0 +1,7 @@
+# 12.1 LAMBDA λ CALCULUS
+
+Lambda calculus was invented by the American mathematician and logician Alonzo Church in the 1930s in his quest to come up with a theoretical system to represent functions for computation. Since then, aspects of lambda calculus have made their way into various programming languages, perhaps most notably Lisp in the late 1950s and Haskell in the early 1990s.¹
+
+Lambda calculus is a minimal way to model computation. It provides a means of abstraction that may expedite modeling in comparison to the typical programming language's syntax, allowing what may be considered verbose syntax to be condensed. These are aspects the *functional programming* paradigm, which is based on lambda calculus. While lambda calculus has a formal set of rules for computation, its interpretations and its programming language implementations vary.
+
+In lambda calculus all operations are defined by an inductive abstraction of a function called a *lambda*, which may be considered the only primitive object. All functions are unary (single argument), as opposed to *multi-arity* (multiple argument). Lambda calculus does not define an evaluation order, leaving it to the coder to specify as left-right, right-left, infix, postfix, or applicative, and related eager or lazy behavior. (The examples in this chapter emphasize postfix arithmetic.)
