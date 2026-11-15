@@ -1,0 +1,13 @@
+# ## 2.6 Related Work
+
+# **Efficient Inference.**
+
+Machine learning inference is often resource-constrained when deployed in practical applications due to memory, energy, cost, or latency constraints. This has spurred the development of numerous techniques for efficient inference. Pruning and approximations of pretrained parameter tensors through low-rank, sparse and quantized representations [49, 90, 101, 131] have been generally effective in reducing resource requirements. There are also architecture and task-specific techniques for efficient inference [87, 145, 168]. In contrast to compressing an already trained model, algorithms have also been developed to train compressed, or, tiny models by incorporating resource constraints as part of their training routines [60, 69]. More recently, algorithms have been developed to search for smaller submodels from a single pretrained model [82, 151].
+
+# **Knowledge distillation.**
+
+Knowledge distillation aims to transfer the knowledge of a larger model (or model ensemble) to a smaller one [21, 50]. Despite its popularity, performing compression via distillation has several known pitfalls. Most notably, it is well-documented that distillation performs poorly when there is a *capacity gap*, i.e., the teacher is significantly larger than the student [86, 112, 129, 149]. When performing distillation onto a weighted combination of ensembles, it has been observed that adding additional models into the ensemble does not markedly improve performance over that of a single distilled model [149]. There is also a lack of theoretical work characterizing when and why distillation is effective for compression [132]. We refer readers to [132] for a recent survey on varied applications of and approaches for distillation at large.
+
+# **Early exits and anytime inference.**
+
+Many applications stand to benefit from the output of progressive ensemble distillation, which allows for flexibly tuning accuracy vs. inference cost and executing inference in parallel. Enabling trade-offs between accuracy and inference cost is particularly useful for applications that use early exit or anytime inference schemes. In on-device continuous (online) inference settings, *early exit* models aim to evaluate common cases quickly in order to improve energy efficiency and prolong battery life [61, 70]. For instance, a battery-powered device continuously listening for voice commands can use early exit methods to improve battery efficiency by quickly classifying non-command speech. Many early exit methods are also applicable to anytime inference [73, 141]. In *anytime inference*, the aim is to produce a prediction even when inference is interrupted,

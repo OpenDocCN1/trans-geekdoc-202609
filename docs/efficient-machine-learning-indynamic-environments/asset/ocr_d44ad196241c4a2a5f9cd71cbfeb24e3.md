@@ -1,0 +1,11 @@
+![](bbox=[0.176, 0.108, 0.878, 0.263])
+
+Figure 4.4: Solution composition for LP-relaxations of MILP formulations for two RA problems using a commercial simplex based LP solver (CPLEX [154]): GPU cluster scheduling [169] and Shard Load Balancing (see Section 5.1). In the optimal solution to the LP-relaxations, ≥ 99.99% values are either 0 or 1 with ≤ 0.01% values in (0, 1).
+
+solvers using Simplex [154] or COPTER's PPA (see Figure 4.4) often produce solutions to the LP relaxation with only a few integer infeasibilities, in contrast to ADMM-based solvers [28, 34]. While conventional MILP solvers invoke expensive branch-and-cut [23, 154, 202] to guarantee optimality of the integer-feasible solution, this is a bottleneck step and COPTER introduces lightweight post-processing, using shims, to produce integer-feasible solutions from the optimal solution to the LP-relaxation of the MILP. Shims operate heuristically: they round fractional variables and then apply fast, local corrections to restore constraint feasibility, and are deliberately designed to prioritize problem feasibility over optimality.
+
+The crucial result is that COPTER delivers high-quality, feasible solutions for large-scale MILPs (millions of variables) in milliseconds, effectively circumventing the traditional bottleneck with minimal impact on quality (Sections 4.5.2 and 5.3.1).
+
+# ## 4.4 COPTER: Theoretical Discussion
+
+In this section, we deepen the theoretical insights underpinning COPTER. We first introduce the notion of dynamic regret, and compare various approaches in terms of it. We then discuss how COPTER follows the Follow The Leader (FTL) scheme from online optimization, and as a result enjoys dynamic regret that depends optimally on the path length. We then discuss the Proximal Point Algorithm (PPA), the workhorse behind COPTER, and show how the algorithm can benefit from warm-starting. We also briefly discuss the trajectory that PPA follows and contrast it with other first order methods, to provide intuition on how COPTER obtains mostly integral solutions from its LP-relaxation. We conclude the section with a construction of an LP, where

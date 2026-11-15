@@ -1,0 +1,11 @@
+![](bbox=[0.34, 0.11, 0.71, 0.27])
+
+**Figure 3.3:** Fraction of inference cost saved as a function of relative cost of models ($\gamma$), *assuming* a fixed selection rate $\mathbb{P}(r(x) = 0)$. As parallelization decreases from fully parallel ($\rho = 1$) to sequential ($\rho = 0$), cost of evaluating ensembles increase and the cost savings decrease. When models across tiers are of similar size (e.g., smaller model is at most $5\times$ smaller, $\gamma \ge \frac{1}{5}$), some parallelization is needed for ABC to reduce costs effectively. However, for lower relative costs (e.g., smaller model is at least $50\times$ smaller, $\gamma \le \frac{1}{50}$), sequential and parallel settings achieve meaningful savings, showing ABC's efficiency even with the added cost of using ensembles.
+
+the ideal, fully parallel setting with $\rho = 1$ towards the sequential setting with $\rho = 0$, the fraction of inference cost saved decreases. In fact, when the models in the cascade are of similar size—for example, when $\gamma \ge \frac{1}{5}$—a certain degree of parallelization is required for ABC to reduce inference cost. However, observe that when the relative costs are small enough (e.g., $\gamma \le \frac{1}{10}$), the need for parallelization diminishes. This is evident in Figure 3.3 (right); for $\gamma \le \frac{1}{50}$, the sequential execution curve ($\rho = 0$) approaches the curve with full parallelization ($\rho = 1$).
+
+# 3.4.2 Real-world Case Studies
+
+As noted in the previous two subsections, ABC either improves on, or is at least competitive with, the single best model in terms of accuracy. Moreover, whenever the relative cost is small enough, ABC suffers negligible additional penalty for using an ensemble of models. As noted in Figure 3.1, accuracy vs. inference cost scaling for ML models already imply that the relative cost of models that only differ a few points in accuracy is small. For instance, the state-of-the-art model performance on ImageNet1K dataset attains about 83% top-1 accuracy with 70B FLOPs. A Pareto-optimal model that achieves 63% accuracy requires only about 1B FLOPs, and thus a two-level ABC with ensembles of these two models has relative cost of $\gamma = \frac{1}{70}$.
+
+In many real-world scenarios, this disparity in relative cost is further amplified due
