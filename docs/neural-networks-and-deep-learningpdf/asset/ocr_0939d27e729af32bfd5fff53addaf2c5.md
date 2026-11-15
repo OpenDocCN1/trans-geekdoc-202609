@@ -1,0 +1,13 @@
+In what sense is backpropagation a fast algorithm? To answer this question, let's consider another approach to computing the gradient. Imagine it's the early days of neural networks research. Maybe it's the 1950s or 1960s, and you're the first person in the world to think of using gradient descent to learn! But to make the idea work you need a way of computing the gradient of the cost function. You think back to your knowledge of calculus, and decide to see if you can use the chain rule to compute the gradient. But after playing around a bit, the algebra looks complicated, and you get discouraged. So you try to find another approach. You decide to regard the cost as a function of the weights \( C = C(w) \) alone (we'll get back to the biases in a moment). You number the weights \( w_1, w_2, ... \), and want to compute \( \partial C/\partial w_j \) for some particular weight \( w_j \). An obvious way of doing that is to use the approximation
+
+```
+\(\frac{\partial C}{\partial w_j} \approx \frac{C(w + \epsilon e_j) - C(w)}{\epsilon}, \quad (46)\)
+```
+
+where \( \epsilon > 0 \) is a small positive number, and \( e_j \) is the unit vector in the \( j^{\text{th}} \) direction. In other words, we can estimate \( \partial C/\partial w_j \) by computing the cost \( C \) for two slightly different values of \( w_j \), and then applying Equation (46). The same idea will let us compute the partial derivatives \( \partial C/\partial b \) with respect to the biases.
+
+This approach looks very promising. It's simple conceptually, and extremely easy to implement, using just a few lines of code. Certainly, it looks much more promising than the idea of using the chain rule to compute the gradient!
+
+Unfortunately, while this approach appears promising, when you implement the code it turns out to be extremely slow. To understand why, imagine we have a million weights in our network. Then for each distinct weight \( w_j \) we need to compute \( C(w + \epsilon e_j) \) in order to compute \( \partial C/\partial w_j \). That means that to compute the gradient we need to compute the cost function a million different times, requiring a million forward passes through the network (per training example). We need to compute \( C(w) \) as well, so that's a total of a million and one passes through the network.
+
+What's clever about backpropagation is that it enables us to simultaneously compute all the partial derivatives \( \partial C/\partial w_j \) using just one forward pass through the network, followed by one backward
