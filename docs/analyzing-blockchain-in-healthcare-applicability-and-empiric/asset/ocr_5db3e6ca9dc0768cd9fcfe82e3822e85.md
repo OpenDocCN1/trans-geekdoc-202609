@@ -1,0 +1,15 @@
+healthcare professionals, patients, and health-related information, such as **Electronic Health Records (EHR)**. Furthermore, interoperability makes it possible for providers to safely exchange patient medical records, regardless of the provider’s locations or level of confidence with one another (if the patient has given their consent).
+
+This is particularly significant in consideration of the fact that the source of healthcare data is diverse. Utilizing blockchain technology, which has the capacity to properly store, manage, and transfer EHRs within healthcare groups, allows for the resolution of this interoperability issue. The world economies have also come under a great deal of pressure due to the rising expenses of healthcare infrastructure and software.
+
+Blockchain technology is improving healthcare outcomes for businesses and stakeholders in the healthcare sector by streamlining business operations, enhancing patient outcomes, managing patient data more effectively, boosting compliance, reducing costs, and enabling better use of data pertaining to healthcare.
+
+The ability of blockchain technology to affect the flow of pharmaceuticals and medical supplies in a lengthy, intricate healthcare supply chain is equally significant. A blockchain for the healthcare supply chain aims to get rid of the possibility of false medications affecting patients all around the world. Various healthcare applications, including data administration, storage, device connectivity, and security in the internet of medical things, are currently being investigated using Blockchain technology (IoMT).
+
+The stakeholder layer, which is at the top of the structure, is composed of parties who gain from blockchain-based healthcare applications, such as business users, researchers, and patients. Users at this tier are primarily concerned with efficiently sharing, processing, and managing data without endangering its security and privacy.
+
+The majority of blockchain technology’s advantages in the aforementioned application domains have positively benefited most stakeholder’s and end user’s **Quality of Experience (QoE)**, including patients, caregivers, researchers, pharmaceutical firms, and insurance providers. One crucial step to improving the quality of healthcare services and patients’ experiences is the capacity to share healthcare data without running the risk of compromising users’ privacy and data security. This paper’s objective is to present a contemporary analysis of Blockchain Technology’s healthcare applications, including their effects on healthcare economies, customer experience, and new business potential.
+
+# # Capabilities of Blockchain Technology in healthcare industry
+
+Blockchain has a variety of applications and jobs in the medical field. Distributed Ledger technology aids medical researchers in interpreting genetic code by

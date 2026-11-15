@@ -1,0 +1,15 @@
+communicate their medical history and travel history and their real-time location with one another.
+
+Furthermore, this information must be shared with immigration officials while traveling across foreign boundaries. Immigration and emigration can be handled more efficiently with the creation of cross-country data exchange systems driven by the blockchain. Immutability, control, non-repudiation, and auditability are all essential aspects of blockchain systems with stringent smart contracts that may be used in these kinds of applications. With these key features in place, an immigration ecosystem that is safe, decentralized, and collaborative can be created.
+
+Blockchain-based immigration systems may soon become commonplace around the globe, connecting all immigration checkpoints. Such systems will be able to communicate with each other in a specified way.
+
+**Management of the supply chain:** As a result of the continuing epidemic, supply chains throughout the globe are being severely disrupted. In either case, industrial production operations are at a stop because of a lockdown mandated by law or because factories are not equipped and /or constructed to meet the new paradigm of social distance and working with limited physical touch. It has also been impacted by import and export restrictions. This year’s COVID-19 supply and demand problems have been severe, but it’s impossible to quantify just how much damage has been done.
+
+There is either a strong demand for certain items or a large supply of certain goods. As a consequence of panic purchasing, the price of everyday necessities has risen sharply. Health care organisations are also struggling to keep up with the increased demand for medical supplies and pharmaceuticals. The development of a more robust supply chain may be aided by the use of Blockchain Technology.
+
+The blockchain may be used to create an unreliable ecosystem by bringing together all parties without their knowledge. Immutable logs allow auditability and provenance while smart contracts give a high degree of automation and access limitations. We may expect a combination of consortium and public blockchain technologies in this specific use case.
+
+**Secure certification and online education:** Several nations have shut down their educational institutions for a lengthy period. No matter how dire things become, education, which is essential for both personal development and a nation’s progress, must continue.
+
+There is little doubt that online education has emerged as the most feasible option, but the systems that support it are still under development and face several obstacles. In addition, there is a risk that students’ and instructors’ data will be stolen, as well as a lack of cross-platform cooperation and difficulties in ensuring students’ credentials (degrees, transcripts, and other certifications) are accurate.

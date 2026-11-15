@@ -1,0 +1,13 @@
+Data aggregation: As the pandemic spreads, scientists need to collect and organize the information they need to keep track of the outbreak, identify trends, and conduct studies. Validation and permanent storage of real-time data ensure the integrity of data on the blockchain. Blockchain network encourages corporations and organizations to share their information with researchers and entrepreneurs in order to develop new technologies and solutions that use this intelligence. With a blockchain network, regulatory administration, data ownership, and multi-layered audits may all be handled in a flexible manner. A worldwide blockchain monitoring and communication infrastructure, developed in conjunction with prominent tech groups and governments, was created, helping to collect, store, and analyze data on viral proliferation and containment.
+
+Drug and vaccine supply chain: Massive supply chain disruptions were caused by COVID-19's emergency. More and more manufacturers are being forced to shut down owing to a lack of safety and sanitary standards, while demand for EPP and medical supplies is outpacing supply. High demand means that many people may buy products from unreliable sources or at inflated costs.
+
+Long supply chains create unnecessary obscurity, making it difficult to estimate and forecast stock levels. Even, in the event of a global pandemic, large-scale international cross-border transactions may be efficiently maintained via the usage of Blockchain Technology.
+
+The vaccine’s distribution will be a complete mess once the final, FDA-approved version is made available for purchase. False vaccinations, overcharging, and stockpiling are all examples of unethical business activities. Blockchain-based medical supply chains may address these challenges.
+
+Various blockchain arrangements are controlled as a result of the COVID-19 pandemic. By removing the need for third parties and transactional delays, the blockchain reduces the time it takes to authenticate transactions. Rapid settlements are made possible using Blockchain Technology because of its ability to reduce the amount of time it takes to process and distribute transactions.
+
+# Challenges involved
+
+COVID-19 has allowed researchers the opportunity to establish a more efficient and secure data-sharing strategy for the healthcare industry. In light of the ever-increasing volume of information, blockchain seems to be a plausible option. Existing works may provide answers, but there are concerns and obstacles that must be addressed before they can be put into practice.

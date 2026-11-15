@@ -1,0 +1,13 @@
+used to identify and authenticate authorized participants, validate data records, and facilitate agreement on ledger revisions. The use of public key cryptography is what enables this to become a reality. Participants who wish to make changes to the ledger must first authenticate their identities by submitting cryptographic digital signatures for the changes they intend to make. This is necessary in order for the ledger to be updated. Validators will verify, via the use of cryptographic technologies, to determine whether the participant owns the requisite credentials to do so. Validation will take place. Another method for limiting access to data and ensuring that only those who are allowed to do so are able to examine the information is to make use of cryptographic procedures.
+
++   • Consensus: The term “consensus mechanism” refers to the method by which the nodes in a network come to an agreement on the state of the ledger as a whole. This agreement may be reached in a variety of ways. In order to accomplish its goals, this strategy often makes use of cryptographic methods, a set of rules or procedures that are encoded in the protocol, and either financial incentives (which are applicable to any network configuration) or governance systems. The process of arriving to a consensus often consists of two steps, which are as follows:
+
++   • Validation: it is the responsibility of each validator to determine whether or not a state change is in accordance with the criteria that have been established for the arrangement (that is, assets are available to the originator, and the originator and beneficiary are entitled to exchange the assets). In order to do this, each validator will need to depend on a record of states that have gone before it. This record may either take the form of a “last agreed state” or a “chain of preceding states.”
+
++   • Nodes: It must reach a consensus before making any changes to the ledger in order for the agreement to take effect. At this point in the process of reaching a consensus, the procedures or algorithms that reconcile conflicting modifications to the ledger. The primary obstacle is to ensure that legitimate modifications are performed once and only once, which can be accomplished by ensuring that the distributed ledger’s many nodes synchronize their respective state updates.
+
+# The roles of nodes from a technical perspective
+
+There is a wide range of possible technical functions that can be performed by nodes in the network. The following are some examples of those roles, none of which are exclusive to the others:
+
+The system administrator is the gatekeeper who regulates access to the system and offers specific services for the arrangement. The administrator is also responsible

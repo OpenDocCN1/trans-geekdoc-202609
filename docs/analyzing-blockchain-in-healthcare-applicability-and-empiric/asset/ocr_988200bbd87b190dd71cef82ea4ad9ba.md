@@ -1,0 +1,13 @@
+Since it was first established, the **Committee on Payments and Market Infrastructures** (CPMI) has centered its efforts on the creation of innovative payment, clearing, and settlement systems. The committee has contributed to reducing market inefficiencies and improving payment, clearing, and settlement systems as a result of its encouragement of technical innovation. There have been many different approaches used. CPMI has recently released the latest information on digital currencies and lightning-fast payment systems. This chapter will hopefully add to the conversation on how companies may leverage innovation to support payment, clearing, and settlement systems that are resilient, efficient, and secure. Klaus Lober and the working group deserve thanks for their analytical and structured approach to this technology.
+
+# # The inception of blockchain in distributed ledgers
+
+The technology behind distributed ledgers may change the management and storage of risks, obligations, contracts, and assets. Many believe that technological advancements will have a significant impact on financial services and markets:
+
++   - Reducing complexity;
++   - Improving end-to-end processing speed and, as a result, asset and fund availability;
++   - Reducing the need for reconciliation across multiple record-keeping infrastructures; increasing transparency and immutability in transaction record keeping;
++   - Improving network resilience through distributed data management, and
++   - Reducing the need for reconciliation across multiple record-keeping infrastructures. If the information contained in distributed ledger technology is widely disseminated among market participants, regulators, and other stakeholders, it has the potential to increase market transparency.
+
+There are some downsides of using DLT. There is no difference in the risks involved whether a payment, clearing, or settlement takes place on a central ledger or a distributed one. Even a ledger that is synchronized may be compromised. DLT may introduce new or different risks, such as those relating to operational and security issues that are caused by the technology itself; a lack of interoperability with already existing processes and infrastructures; ambiguity relating to the finality of settlements; questions regarding the validity of the legal underpinning for DLT implementations; a lack of an effective and robust governance framework. **Distributed Ledger Technology** (DLT), sometimes known as DLT, is a relatively new technology that has not yet been validated for usage on a global scale.
