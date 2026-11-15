@@ -1,0 +1,44 @@
+level_changes:
+- line: 24
+  before: 2
+  after: 1
+- line: 37
+  before: 2
+  after: 1
+- line: 60
+  before: 2
+  after: 1
+- line: 62
+  before: 2
+  after: 1
+- line: 601
+  before: 2
+  after: 1
+- line: 627
+  before: 2
+  after: 1
+- line: 652
+  before: 2
+  after: 1
+- line: 665
+  before: 2
+  after: 1
+- line: 667
+  before: 2
+  after: 1
+- line: 680
+  before: 3
+  after: 2
+- line: 2584
+  before: 2
+  after: 1
+- line: 2586
+  before: 2
+  after: 1
+text_changes:
+- line: 665
+  before: '*第 2 章*'
+  after: 第 2 章
+- line: 3615
+  before: '**职业化创业精神**'
+  after: 职业化创业精神

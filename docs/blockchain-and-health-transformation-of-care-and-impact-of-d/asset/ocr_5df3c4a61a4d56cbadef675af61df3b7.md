@@ -1,0 +1,15 @@
+# Care Is (Still) Lagging Behind Blockchain
+
+Pharmaceutical companies of medical equipment are enthusiastic about the Blockchain, but this technology is still being introduced slowly, GlobalData observed in 2020. However, they expect Blockchain’s role in healthcare to grow rapidly. According to GlobalData, the main reason that this rapid growth is not yet achieved is the high start-up costs to get started. After all, many healthcare organizations have outdated legacy systems that are not adapted. There are also concerns about scalability, government regulation and privacy. Blockchain will certainly play a major role in future care, especially in the flow and exchange of information between stakeholders such as pharmaceutical companies, doctors, insurers and patients.
+
+Data can be exchanged quickly, easily and securely with Blockchain, with a high degree of interoperability and the assurance that everyone has the latest data. Privacy legislation and the US Health Insurance Portability and Accountability Act play a role in this development, while one can also wonder whether it is not too leading. Laws and regulations always follow social developments and not the other way around.
+
+Another application is to better safeguard data integrity by using Blockchain. Within clinical trials, it is of great importance that data and research results are not manipulated. Blockchain could at least theoretically offer a solution for this (Nictiz 2017).
+
+Experiments in healthcare with Blockchain are already taking place in various countries. Estonia has set an example internationally in the field of digital services for years. Estonia uses Blockchain in the national database with patient files and medication regulations. At the beginning of 2016, the company Guardtime announced that together with the government they would secure the data of a million patients with the help of Blockchain. This concerns ensuring data integrity and making all operations performed on the data transparent. So it is not about putting medical data on Blockchain.
+
+Blockchain pilots are also used in healthcare in the US. The US Food and Drug Administration is working with IBM, KPMG, Merck and Walmart to improve the pharmaceutical supply chain with the Blockchain. This supply chain contains many intermediaries that become unnecessary with the arrival of a Blockchain. In 2019, companies completed the Interoperability Pilot as part of the FDA’s DSCSA Pilot Project Program (DSCSA 2020). In addition to the big advantages of a Blockchain, it also poses challenges such as data integrity, data storage options and development costs. The challenge of data integrity is no different in today’s traditional systems.
+
+The main components of GlobalData’s Blockchain in Health Care Thematic Research (2020) research include:
+
++   - Key Industry Players: the major players in the blockchain industry and where they are in the value chain.

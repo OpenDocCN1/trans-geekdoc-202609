@@ -1,0 +1,15 @@
+Time and again it appears to be difficult to find the right balance in a network between the self-management of participating institutions or care professionals and the management needed to turn a chain into a logistically coherent process (Hardjono 2010). The frequently stated management role of health insurer or municipality also appears to have insufficient consequences for the success or failure of a chain. This often concerns the tension between substantive considerations and control options. By making use of an information model based on platform technology, that dilemma can be partially solved.
+
+In such a complex system, it depends on the context in a certain area or for the benefit of a certain patient category to what extent chain formation is more or less successful. A lot of (administrative) consultation appears to be necessary in order to connect patients (clients), care providers, resources and knowledge.
+
+By combining data from the integrated information system into reports, supervision of the results from operations is facilitated and guaranteed. This facilitates supervision and makes it possible to assess the business results on the basis of current data in current events and to make timely adjustments where necessary.
+
+The question is always: how does adequate information management promote the work of professionals. The point is that the results that the introduction of an information system delivers to healthcare organizations lead to involvement, insight, coherence, connection, simplicity, cost savings, ease of use, completeness, reliability and timeliness. This means that with digital developments the professional (and therefore also the client’s question) is central.
+
+The perspective of clients and professionals increasingly forms the basis for the structuring of the organization. Professionals are trained to perform complex tasks. However, complexity requires a certain degree of autonomy in a decision-making sense. This autonomy enables the professional to respond quickly to new (complex) developments.
+
+Autonomy translates organizationally into self-organization. Visser et al. (2012): quality improvement and cost reduction can be achieved by involving clients more in professional decisions. The client will increasingly determine where, when and how care is given.
+
+Professionals will increasingly focus on each other and less and less on their own organization. With many care organizations (not all) you see that professionals focus on their own team and their ‘own’ clients. Self-organization promotes strong mutual solidarity. Within organizational forms (networks or care organizations), there is freedom to innovate by, for example, re-writing rules. This is where entrepreneurship of healthcare professionals comes into the spotlight (Koudstaal 2016). Because information is easily and horizontally distributed, it is easy for (new) preferences, ideas and experiences to be disseminated (Ahlers 2016).
+
+Jeurissen (2016) states that there are large variations in the practice of care, both care focused on healing and the nursing and care of people. In itself, self-regulation and self-

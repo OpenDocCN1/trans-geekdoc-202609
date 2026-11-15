@@ -1,0 +1,15 @@
+# THREE APPLICATIONS IN HEALTHCARE
+
+The Blockchain can respond to the challenges currently confronting healthcare. These challenges include medical data (security, interoperability, accessibility), medical research, clinical trials, the medical supply chain and the quality of the medicines. Many healthcare organizations do not use efficient and ineffective methods to deal with medical data. Failure to properly manage data affects patient care. In addition, the problem arises that many health services each use their own methodology for medical data and access to such data.
+
+The Blockchain can shape data efficiency in healthcare. It can ensure flexibility, interconnection, accountability and protection in accessing those data that are necessary for the provision of good care. In this chapter, we mainly talk about how Blockchain can be applied in healthcare in practice.
+
+# Transparency of Information
+
+Medical data on patients are spread across many organisations, insurance companies, doctors and the like. As a result, the medical file appears to be a complex of information that is incoherent, and it is a question whether all very important information is available. Currently, there is (not yet) a universal data storage system and the associated standards, both medical and ethical. This is therefore the crossroads between the medical sector and Blockchain to develop healthcare applications.
+
+The use of Blockchain technology in healthcare makes a difference in data management. The technology will make sharing medical data more effective, efficient, secure and transparent for all healthcare stakeholders. A network for healthcare institutions can exist without having a patient's personal data. The details are all part of the Blockchain.
+
+Patients are identified in this network by means of their hash identification which is a unique identification. A hash is an encrypted and calculated numeric code (see Chapter 1). The hash identification makes the ID unique and protects the privacy of the user. As a result, the Blockchain can also form a platform for exchanging patient data. In this way, you can prevent information from being blocked, as it is possible to keep the exchange of information between the various stakeholders active. When the data changes within one of the blocks, a chain reaction is set up that can freeze the entire Blockchain. Because this is theoretically impossible, the data contained in the Blockchain cannot be tampered with.
+
+But what if non-stakeholders want to hack information and/or influence it incorrectly? This is solved by Blockchain technology: it is a transparent tool in which everyone who is part of this network will look at the Blockchain to see how each transaction takes place and whether or not relevant information is passed on. In addition,

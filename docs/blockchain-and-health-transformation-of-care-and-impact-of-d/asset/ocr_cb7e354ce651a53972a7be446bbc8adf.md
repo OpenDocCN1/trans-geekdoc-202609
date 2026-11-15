@@ -1,0 +1,15 @@
+scale-up (PBL 2019). Looking at the impact of digitalization and technology it is about systems, empowering, design rules and values (Schwab 2018).
+
+In addition, for the client, care deployment contributes to the quality of life. An important element in this is a sense of competence: something lets someone feel and perform better (Caris 2013). A sense of competence, control or direction leads to sensemaking (Machielse 2016). The design of the interaction is therefore important. Experts manage models of reality instead of reality itself (Beer 1978). However, the point is to arrive at the reality in which the interaction takes place (Van Gigch 1991).
+
+The changes that are coming involve complex interactions between technological, economic, political and social forces (Baldwin 2019). The increasing complexity that characterizes healthcare (Kernick 2004; Lindberg, Nash and Lindberg 2008) results in part from the effects of digitalization and technology (Topol 2019).
+
+# Agility
+
+Organizations and professionals are confronted with innovations happening faster than they can process with current organizational forms (Beckford 2016). They face uncertainties about the impact of digitalization and new technologies on the work they do (Kane, Phillips, Copulsky and Andrus 2019). Schwab: ‘we are at the beginning of a revolution that is fundamentally changing the way we live, work, and relate to another. In its scale, scope and complexity, what I consider to be the fourth industrial revolution is unlike anything humankind has experienced before (2016: 1)’.
+
+The healthcare world is constantly changing and requires agility (Pinkrocade 2013; Poiesz and Caris 2010; Kerklaan 2016, SCP 2016b). Healthcare can be described as a digitized business, but not a fully digital business. A digitized business implies that the delivery to a client is in a digital format. To be digital is: the end-to-end processing is done digitally and the commerce to acquire the service is digital (Sacolick 2017: 7).
+
+Organizations deal with complexity by applying forms of self-organization or self-management (Beer 1978; Beer 1979; Beer 1981; Beer 1985; Malik 2009; Malik 2011b; Malik 2016). The effect thereof in turn impacts the interaction between healthcare professional and client. Within the interaction between healthcare professional and client, it is key that the preconditions for autonomy, control over structure and organization of demand-driven management be met.
+
+Through insight into system principles and making maximum use of information, a new balance in the interaction between a client and a professional is achieved. Working on the basis of self-organizing principles (with the caveat of sufficient and adequate support via an ICT infrastructure) is seen as an effective design within elderly care (Brafman and Beckstrom 2006).

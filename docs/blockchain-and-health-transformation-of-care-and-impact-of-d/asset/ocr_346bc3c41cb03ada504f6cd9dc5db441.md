@@ -1,0 +1,15 @@
+application for a Person-Bound Budget (PGB) is. The role of the Social Insurance Bank is purely focused on checking accountability. There is no interaction about substantive considerations.
+
+The professional practice of care professionals shows that work processes are the main focus, not the client. Residents have power in one of De Hoven’s locations (narrative perspective). This leads to a completely different organization of work processes.
+
+Changes will only occur through a fundamental shift in the influence position of clients. In addition, changes to the financing and the structure of the health care system (position of insured persons) are necessary to achieve this. The impact of technology on the labour market problem is much greater than is currently thought. This means that care provisioncan be carried out with fewer care professionals. Practice shows that the innovative capacity of healthcare professionals is actually present in every system.
+
+Partly due to the development of citizens’ initiatives and care cooperatives, there is a movement towards a stronger position for clients. Good care starts with a home environment that makes self-reliance possible. That is why the connection between living and care is essential. In addition, a shift in the influence position is feasible for a proportion of the elderly; however, 30% are unable to fulfil such a role. In addition, there is also a great deal of demand shyness. It is precisely through citizens’ initiatives that a certain degree of equivalence is created. A role for healthcare professionals is to make personal directorship possible.
+
+Demand management: It is important to be clear what equality means. It is not about equality (healthcare professional has unique expertise) but about the structuring of the interaction. Much is determined by the conceptual system that clients and professionals use. That is why it is important to make explicit what is meant by personal directorship. One aspect of that definition is clarification about the difference between willing and able.
+
+This is a core task for policymakers (administrators): ensuring that clients and professionals do not suffer from the (alleged) bureaucracy.
+
+Technology impact: testing grounds, however, show that large effects can already be achieved with the help of technology in the home situation. However, the turning point to a broad commitment has not yet been reached. Knowledge of the technological possibilities is essential to achieve them. Technology also requires the skills to cope with it. Broad application leads to other forms of individual care provision.
+
+Personal directorship: starts with citizens themselves. A citizen must be capable of actually fulfilling that director’s role. Then a new dynamic is created between client and healthcare professional. Choices become easier if information about healthcare is easily accessible. In the current system design, it is difficult that an immediate policy framework often arises in the event of an incident.
