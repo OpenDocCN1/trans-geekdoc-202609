@@ -1,0 +1,5 @@
+ten wind distribution parameters. The MATLAB R2018b software with in-house developed code is used for estimating the parameters of ten Wind distribution functions along with the Maximum Likelihood method. Then, it is compared with the parameters estimated through Moth Flame Optimization method using bimodal (Weibull-Weibull) distribution. It is stated earlier, the goodness of fit to evaluate the best wind distribution method with a lower rate of RMSE value nearer to zero, the higher rate of R² nearer to one, and minimized error fit for evaluating Wind Power Density. Further, the results are grouped for Best wind power density with the selected distribution. Subsequently, the Annual mean mean wind speed along with mean turbulence intensity (15m/sec) are considered for categorizing the Turbulence class for Turbine selection to form a stand-alone Wind Turbine/Wind Farm. The wind resource assessment methodology, complete steps/procedures for the assessment of wind resources are given in Figure 11.2.
+
+![](bbox=[0.115, 0.425, 0.885, 0.905])
+
+Figure 11.2 Wind resource assessment flow chart.

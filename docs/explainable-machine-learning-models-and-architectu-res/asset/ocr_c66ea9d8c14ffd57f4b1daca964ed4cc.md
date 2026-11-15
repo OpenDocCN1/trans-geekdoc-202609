@@ -1,0 +1,7 @@
+# Table 8.1 Literature reviews.
+
+| Ref. | Algorithm | Advantages | Disadvantages |
+| :--- | :--- | :--- | :--- |
+| [12, 13] | ANN | • Enables a wide range of function representations<br>• Capable of managing noisy data<br>• An ANN with one or more corrupted cells can nevertheless produce output. Due to this feature networks are fault-tolerant. | • The trained model is difficult to interpret.<br>• Few layers possible because of vanishing gradients<br>• According to their structure, artificial NN demand processors having parallel processing power. The equipment's actualization is therefore dependent on this. |
+| [14] | DNN | • Low cost of implementation. Deep NN-based inventory technology just requires the installation of the inventory application on an empty server.<br>• Simple process for implementation, maintenance and operation | • For it to perform better than other strategies, a huge amount of data is necessary.<br>• Due to the complicated data models, training is very expensive. |
+| [15] | CNN | • Provides cutting-edge performance when working with two dimensional inputs<br>• Time and cost benefit continue to be the top two of the three most popular advantages of neural networks.<br>• Without human oversight, automatically identifies the key qualities. | • Significant computational difficulty<br>• A large amount of training data is needed.<br>• The orientation and position of an object are not encoded by CNN. |

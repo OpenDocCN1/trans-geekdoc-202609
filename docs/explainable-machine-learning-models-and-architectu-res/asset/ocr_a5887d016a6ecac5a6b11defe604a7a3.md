@@ -1,0 +1,7 @@
+![](bbox=[0.13, 0.115, 0.87, 0.41])
+
+# Figure 6.6 Accessing local files available on the system.
+
+Initially, the voice assistant wishes the user, the voice assistant starts taking the user's commands. It shows as ‘Listening’ which means that the voice assistant has already been enabled and it can take commands from the user. This is present till the user completes to say the command to a voice assistant. The commands can be playing music, recommending a book, recommending the movie, covid symptoms, covid precautions, and opening the files present on the system. The screenshot shows us the output that will be displayed when the user asks the voice assistant for getting web access a applications through the browser.
+
+When the user says the command ‘open Facebook’, the voice assistant listens to what the user has said and starts recognizing the command. If the voice assistant could be able to recognize it, it executes the command. If the voice could not understand the command said by the user, it asks for the user to say the command again. When the command uttered by the user is invalid, the voice assistant asks the user to tell the command again. It asks for the command until it gets a valid command. Whenever it gets a valid command, immediately it starts executing the command i.e., through the browser opening the web application. Here the ‘open Facebook’ command is valid and it would be recognized by the voice assistant as shown in
