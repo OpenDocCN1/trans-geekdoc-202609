@@ -1,0 +1,4618 @@
+- pgno: 0
+  md: '# # Personal Context from Mobile Phones—Case Study 5
+
+    Jason Wiese
+
+
+    Mobile phones are prime platforms for inferring personal context; many people
+    carry their phone with them throughout the day and use it for a diverse set of
+    personal tasks in many different situations. These characteristics mean that phones
+    can provide numerous types of data from which personal context can be inferred.
+    Similarly, the very fact that phones are used in so many situations throughout
+    the day can make accurate contextual inferences especially valuable. However,
+    for all of the potential value that personal context inferences can offer, there
+    are many pitfalls and challenges when inferring personal context and when applying
+    those inferences in user-facing systems.
+
+
+    This chapter describes two projects that illustrate different aspects of the process
+    of inferring personal context from mobile devices: one project that infers phone
+    placement, and another that infers social context from communication behavior.
+    Next, we use the experiences illustrated in these examples to highlight some common
+    patterns and challenges for inferring personal context from mobile phones.
+
+
+    # ## 9.1 What Is Personal Context?
+
+
+    When we say personal context, we are talking about any piece of information that
+    is relevant to a person''s current situation. Dourish points out some issues with
+    this [Dourish 2004]. Specifically, he notes that there are endless potential pieces
+    of context in a given situation, but the vast majority of contextual information
+    is not relevant at any given moment in time. Furthermore, information can go from
+    contextually relevant to irrelevant or visa versa very quickly and fluidly. Thus,
+    a more'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'common interpretation is to say “any piece of information that is *potentially
+    relevant* to a person’s current situation.” Dey makes this a bit more concrete
+    by identifying some common categories: location (where), identity (who), time
+    (when), and activity (what) [Dey 2010]. However, other categories can be considered
+    personal context, for example, the social context of an interpersonal relationship.
+
+
+    For now, rather than obsessing over a precise definition, we’ll just establish
+    some guidelines to help you identify instances of personal context. Personal context
+    is personal: it relates to an individual. It changes on some time scale, whether
+    that is on the order of milliseconds, hours, weeks, or even years. For our purposes,
+    it should also be plausibly useful: inferring context doesn’t matter if nobody
+    can come up with a reason that having that context is helpful or important in
+    some way.
+
+
+    Within these guidelines, there remain many different possibilities for personal
+    context. For example, time is not simply restricted to clock time, it could be
+    something much more relative, such as “breakfast time.” *Breakfast time* might
+    be a more useful piece of context for a particular application than, say specifying
+    a clock time when we expect the user to be eating breakfast. It even has a pretty
+    straightforward definition “the time during which the user is eating breakfast
+    in the morning.” However, this doesn’t mean that inferring this piece of context
+    from phone sensors is as straightforward: how do we know from the available sources
+    of data that the user is actually eating breakfast? On an even more basic level,
+    what are the available sources of context?
+
+
+    # **9.1.1 A Continuum of Personal Data**
+
+
+    While it can be useful to think about “types” of personal context as noted, another
+    way to think about context is to think about levels of abstraction within personal
+    data. Personal context is a type of personal data—it is data about an individual.
+    Personal data is also what fuels personal context inferences. Figure 9.1 shows
+    a continuum of personal data, ranging from low level streams on the far left side
+    all the way up to a holistic understanding on the far right side. In general,
+    the process of inferring personal context means taking data at some point on this
+    continuum (often more on the left side) and developing a model or inference to
+    move it up the continuum toward the right side. For example, it is possible to
+    use accelerometer and gyroscope data (far left side) to infer step count. Step
+    count could then be used (perhaps in combination with other things) to infer physical
+    activity, which could be used as an input to an inference about clinical depression.
+    See Wiese et al. [2017] for a more thorough exploration of these ideas.
+
+
+    This continuum illustrates the potential for inferring personal context: there
+    are so many types of personal data available, and so many potential different
+    types of personal context to be inferred. This chapter describes projects that
+    illustrate'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '| Low-level streams | Events Human-readable | Personal Inference | Holistic
+    Understanding |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Accelerometer | Call Logs | Sleeping okay? | Is depressed? |
+
+    | Gyroscope | Search History | Stressed? | What skill to learn? |
+
+    | Microphone | Purchases | Socially engaged? | What behavior to change? |
+
+    | Temperature | App usage | Physically active? | |
+
+
+    Figure 9.1 The personal data continuum ranges from very low level data (left side)
+    like sensor data that describes the user''s behavior and surroundings to very
+    high level data (right side) that describes information about individuals that
+    they might not even know about themselves. Information in the lower levels can
+    often be directly sensed, but data higher on the continuum has to be provided
+    manually or inferred from a combination of lower level data. Copyright © 2017
+    Taylor & Francis Group, LLC. Reprinted with permission of Taylor & Francis Group
+    from Wiese et al. [2017].
+
+
+    two different points on this continuum. First, Section 9.2 uses low level streams
+    to infer a type of human-readable event: phone placement. Next, Section 9.3 uses
+    call logs, text message logs, and the contact list to infer information about
+    the user''s social relationships.
+
+
+    # 9.1.2 Questions to Consider Before Developing a New Personal Context Inference
+
+
+    The two examples described in the sections below demonstrate two very different
+    opportunities for inferring personal context from mobile devices. The process
+    of completing each of those projects was not simple: it required considerable
+    planning and forethought. It can be tempting to jump right in and start training
+    models right away. However, just as human–computer interaction (HCI) tells us
+    we should think about design before starting to code an application, some forethought
+    and planning is very important when inferring personal context. Some of those
+    questions are listed below.
+
+
+    # 9.1.2.1 Q1: What Am I Actually Inferring?
+
+
+    Having a clear description of the specific thing that will be inferred is an important
+    first step. Let''s say you want to develop an “Are people nearby?” inference.
+    Is that a binary (yes/no) classifier, or is it guessing how many people are nearby?
+    What does “nearby” actually mean? Within a certain distance? In the same room?
+    How frequently will this inference change? Having a specific statement of what
+    the inference really is will be essential background for answering the remaining
+    questions.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 9.1.2.2 Q2: What Is the End Goal for this Classifier?
+
+
+    It is important to identify the purpose for developing the classifier. Is the
+    goal to show that it that it is possible and establish how well it might work?
+    Or is the classifier going to be used in a production environment as a part of
+    an application? If it will be deployed, is the inference going to be available
+    programmatically to third-party developers, or only used within your own application?
+    Understanding the end goal has implications for other aspects of development,
+    such as the pipeline for collecting data from sources and the robustness of the
+    resulting classifier. It can also have implications for tuning the model, for
+    example, trading off between precision and recall.
+
+
+    # 9.1.2.3 Q3: What Data Do I Need, What Data Do I Want?
+
+
+    Next, it is important to consider what data source(s) you will use for the classification.
+    There are many possible data sources: inertial measurement unit (IMU) sensors,
+    location, phone state, app usage, and log data from many apps as well. Will the
+    inference depend on having a long history of data in order to calculate features,
+    or is an instantaneous measurement alright? For example, the tie strength and
+    life facet classifiers described in Section 9.3 require having enough data in
+    the call and SMS logs that features can be calculated from them. Without a minimum
+    amount of data, the classifiers simply cannot function. By contrast, the phone
+    placement model in Section 9.2 needed only instantaneous data.
+
+
+    # 9.1.2.4 Q4: Where Will My Training Data Come from, and Is It Good Enough?
+
+
+    Many ideas for inferring personal context break down when it comes to this question.
+    Unlike many other types of inferences, personal context classifiers can seldom
+    be calculated from an existing “big data” style dataset. A major reason for this
+    is that the data labels can often be difficult to come by. For example, in the
+    hypothetical “are people nearby?” classifier above, where does the data label
+    come from? You could have the user label the data *in situ*, as we did in the
+    work described in Section 9.2. In other situations, such as the relationship classifiers
+    in Section 9.3, you could have the user label these *post hoc*. The challenge
+    with inferring personal context is in the name: it’s *contextual*, which means
+    that the data label depends on the individual *person* and the situation they
+    are in. In some cases data labels might be able to come from someone other than
+    the user (which can be costly and can introduce other issues), but much of the
+    time they cannot.
+
+
+    Another important aspect to consider for training data is its coverage. One way
+    to think about coverage is to consider the question “What percentage of unique
+    real-world situations does my training data cover?” In practice this is a very
+    difficult question to answer, but breaking it down can make it a bit more tractable.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'First, consider if there are systematic holes in the dataset with respect to
+    a particular person. For example, if you’re depending on user-provided data labels,
+    are there situations when the user might not provide any labels (i.e., while driving,
+    while in a meeting, while watching TV). Next, consider how representative your
+    training set participants are with respect to the broader population. What type
+    of diversity might matter? Does the person’s job, age, living situation, culture,
+    gender, or something else matter for this inference? While always important to
+    consider, this is especially important when the classifier will ultimately be
+    deployed in a production context. These types of oversights do happen in production
+    environments. For example, the man in China who was wrongfully charged with jaywalking
+    because his face appeared in an advertisement on the side of a bus, a situation
+    that the training data had failed to account for¹. Another example occurred when
+    an automatic image tagging solution offered by Amazon classified images of members
+    of the US Congress (particularly people of color) as criminals². In this case,
+    better training data might have helped the developers see that this was a model
+    that should not have been developed at all. These are just two high profile examples
+    of terrible situations that could have been avoided if the training data used
+    to develop those models accurately reflected the diversity of potential users
+    and contexts, but there are countless examples. There are many types of diversity
+    in the pool of potential users and the responsibility is on you (the developer)
+    to consider what types of diversity your particular model should account for.
+
+
+    # **9.1.2.5 Q5: What Are the Privacy and Ethical Implications of Developing this
+    Classifier?**
+
+
+    Further building on the previous point, it is essential to consider the privacy
+    and ethical implications of developing a model or a classifier. Just because we
+    are not especially good at foreseeing the negative consequences of our work, does
+    not mean we should not try. As a field, computing is coming up against the reality
+    that the technology we develop can be used for purposes other than those we initially
+    intended.
+
+
+    On an even more basic level, users are unlikely to be able to anticipate what
+    you can do with their data. For example, an application can ask for access to
+    the user’s accelerometer, which seems pretty innocuous. But if that application
+    uses that data as an input into a “how intoxicated are you?” classifier [Gharani
+    et al.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '[2017], that data just became *much* more sensitive. In these situations, it
+    is important to give users both notice (i.e., explaining what you will do with
+    that data) and choice (i.e., an option not to use that feature). Even this can
+    be complicated and can lead to inequity and other issues.
+
+
+    # ## 9.1.2.6 Q6: A General Classifier or Personal Classifiers?
+
+
+    Next, are you going to train one classifier that generalizes across all users,
+    or a classifier that is personalized to each user? These are two extremes: the
+    generalized classifier is ready out of the box, but can never adapt or change
+    to the particular situation of the user. However, the completely personalized
+    classifier will not work until it has enough data. In these cases, something in
+    the middle may be preferred. One approach is to launch a service based on a generalized
+    classifier, but to collect training data and retrain the model once it has been
+    deployed to the user.
+
+
+    # ## 9.1.2.7 Q7: What Happens When the Classifier Is Wrong?
+
+
+    Finally, it is important to consider what will happen when your classifier infers
+    context incorrectly, which it inevitably will do at least some of the time. Does
+    the application misbehave in these cases? Does it give the user the ability to
+    fix the incorrect inference? Or to disable the functionality that is connected
+    to the classifier? It is important to consider what is the worst case scenario
+    for an incorrect inference from your classifier, and what steps can you take to
+    address its negative impacts?
+
+
+    # ## 9.1.3 Summary
+
+
+    The questions outlined provide a guiding framework to consider different projects
+    focused on inferring personal context from mobile phones. The following two sections
+    describe two research projects at different places on the continuum in Figure
+    9.1 from this perspective.
+
+
+    # ## 9.2 Example: Inferring Phone Placement
+
+
+    One opportunity for inferring personal context from a mobile phone is to infer
+    specific aspects of context about the phone, which in turn can be relevant for
+    personal context. One such example is to infer where the phone has been placed.
+    This can be useful as an aid to a flexible authentication system [Hayashi et al.
+    2013], it can be a useful context for interpreting the output of another sensor
+    [Singla et al. 2018], or as a factor in a dynamic notification scheme [Weber et
+    al. 2016, Komninos et al. 2018]. The example described in this section was published
+    in Wiese et al. [2013], and reuses some of the text published in that paper.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: "# 9.2.1 Q1: What Am I Actually Inferring?\n\nIf we're going to build a phone\
+    \ placement classifier, the first question to ask is what are the possible classes\
+    \ that we want to infer. In other words, “Where do people actually keep their\
+    \ phones?” We need to know what the possible labels are so that we can collect\
+    \ the appropriate data. We could try to enumerate this list on our own, but then\
+    \ we’re subjecting the classifier to be biased toward our own experiences. I’m\
+    \ one particular type of phone user, and if I enumerate this list myself, it’s\
+    \ subject to the bias of my own experience. Another way to answer this question\
+    \ is to try to find an answer in the literature. If the literature does not have\
+    \ an answer, it’s worth the time and effort to come up with an answer that is\
+    \ based on more than just the experience of myself and my collaborators. In this\
+    \ project, we did that with interviews, surveys, and *in-situ* data collected\
+    \ through the experience-sampling method (ESM, see Larson and Ciskzzentmihalyi\
+    \ [2014]).\n\nWe began our investigation of phone placement with 50 short, semi-structured\
+    \ interviews with desk-based office workers in their usual office setting at our\
+    \ company. We approached participants in their offices and if they agreed to participate\
+    \ we asked:\n\n+   1. What was the current location of their mobile phone?\n+\
+    \   \n+   2. Where they normally keep the phone at work, at home while sleeping\
+    \ and awake, in the car, and while out walking around?\n+   \n+   3. How they\
+    \ decide where to put their phone?\n+   \n+   4. In how many of ten pre-identified\
+    \ places had they ever put their phone, and which of those places had the phone\
+    \ been in during the past 24h?\n\nFor question 4, we used past literature to suggest\
+    \ places where people might keep their mobile devices [Ichikawa et al. 2005, Patel\
+    \ et al. 2006, Dey et al. 2011]. In addition, we administered a modified version\
+    \ of this same survey (omitting the “right now” question) to participants in our\
+    \ ESM and lab studies described below (some participated in both and were only\
+    \ interviewed once). We had a total of 93 (37 female) office worker participants\
+    \ (OWork).\n\nTo understand the broader generalizability of our results, and avoid\
+    \ any possible bias from an internal office worker population, we deployed a survey\
+    \ based on our interview questions on Amazon’s Mechanical Turk (MTurk) to 600\
+    \ participants (242 females) located in the United States (U.S.), see Egelman\
+    \ et al. [2014] for a good overview of using crowdsourcing platforms to collect\
+    \ study data.\n\nWe captured a broad variety of places that people place their\
+    \ phones, which we further categorized into bag, car, out, and pocket (see Table\
+    \ 9.1 for an exhaustive list)."
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '| Category | Original sub-categories | Sub-categories from "Other" responses
+    | Enclosed class | On Person class | Four-class |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | Bag | Backpack, purse, shoulder bag, other | None | Enclosed | Other | Bag |
+
+    | Car | Cradle, cup holder, dashboard, lap, passenger seat, other | Center console,
+    pocket on door | Out | Other (except "lap") | Out |
+
+    | Out | Table, nightstand, in hand, desk, counter, other | Couch/chair, couch/chair
+    arm, cradle/charge station, floor, lap, shelf | Out | Other (except "in hand"
+    and "lap") | Out (except "in hand") |
+
+    | Pocket | Trousers front, trousers back, shirt, jacket, other | Apron, armband,
+    holster | Enclosed | On Person | Pocket |
+
+
+    The first column shows the four top-level categories provided in the “Where’s
+    your phone?” ESM app. The second column shows the second level of options for
+    participants to say specifically where their phone was. The third column shows
+    other sub-categories that came from participants’ free-text responses if they
+    answered “other.” The last three columns show prediction class each item was mapped
+    to for each of the three models. Note that two more categories existed that were
+    not included for any classifications: “Do not know,” which participants answered
+    when they weren’t sure where the phone was, and “Other” responses which we could
+    not code into any of the existing or newly created categories.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'Based on these categories, we chose each of the following classification problems:
+
+
+    **Enclosed or Out:** whether the phone is out and potentially visible to a user,
+    or if it is put away. Applications for this model include preventing pocket dial,
+    and knowing whether or not visual notification mechanisms (e.g., flashing light
+    or screen) will be noticed.
+
+
+    **On Person or Not:** whether or not the phone is on the user. Applications for
+    this model include dynamic notification preferences (a primary concern from survey
+    respondents, e.g., whether or not to vibrate) and progressive authentication (whether
+    the user has to reauthenticate, based on whether they could have been separated
+    from the phone since last authenticated).
+
+
+    **In Bag, In Pocket, Out, or In Hand:** where the phone is at a finer granularity.
+    This is useful for the *find my phone* functionality (e.g., “your phone has been
+    in a bag since 11:22 am” a concern expressed in survey responses) and for sharing
+    the user/phone’s context to provide social awareness.
+
+
+    # 9.2.2 Q2: What Is the End Goal for this Classifier?
+
+
+    While we can imagine several end goals for this type of classifier, in this project
+    the goal is just to show that this classification is possible, and to begin to
+    characterize how well a phone-placement classifier might work if deployed in a
+    real-world setting.
+
+
+    # 9.2.3 Q3: What Data Do I Need, What Data Do I Want?
+
+
+    When we began this project, we brainstormed data that we thought might be useful
+    for this classification. We decided that *accelerometer data* was essential for
+    our classifier. In practice, this decision was strongly influenced by the fact
+    that we knew that this was the data that we would be able to collect from a deployment.
+
+
+    However, we hypothesized that additional data would also be useful, and after
+    we conducted the in-the-wild data collection, we added the following data sources
+    in our lab study:
+
+
+    **Proximity sensor and light sensor:** These sensors already existed in many of
+    mobile devices. It would have been preferable to collect this data in the field,
+    but a combination of technical limitations for accessing those sensors and the
+    variety of configurations that lacked these sensors on the device made data collection
+    during the ESM study infeasible. In the lab study, we collected the data using
+    a development phone that gave us access to all the sensors on the device.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '![](img/37b9feea690424a4c981364f15c3ffa2_9_0.png)
+
+
+    Figure 9.2 The capacitive (left) and multi-spectral (right) prototype sensors
+    used in the lab data collection. The multi-spectral sensor had a cover to protect
+    the components. Reprinted with permission of ACM from Wiese et al. [2013].
+
+
+    Two-dimensional capacitive array: While nearly all mobile devices use capacitive
+    technology in their touchscreens, most processing of the capacitive input is done
+    in the hardware. The most apparent capability of this sensor is detecting when
+    a hand grasps a phone. Perhaps less obvious is that this sensor also detects the
+    presence of a person''s leg through the lining of a trouser pocket. As a result,
+    we built a prototype capacitance-sensing device similar to that of Saponas et
+    al. [2011]. Our device reports a raw capacitance signal from a 10 x 20 grid at
+    roughly 100Hz. The device was designed in a form factor similar to that of today''s
+    mobile phones (see Figure 9.2, left).
+
+
+    Multi-spectral sensor: One way to detect where the phone is placed is to gain
+    information about the material that the device is up against. Following as closely
+    as we could to the approach taken by Harrison and Hudson [2008], we constructed
+    a sensing device comprising red, green, blue, ultraviolet (UV), and infrared (IR)
+    light-emitting diodes (LEDs), a photo resistor, and a TSL235R light-to-frequency
+    converter (Figure 9.2, right). The device was controlled by an Arduino Pro Mini
+    (Arduino LLC, Boston, MA, USA), logging readings from the two sensors to an onboard
+    microSD card. While the current form of the device does not fully satisfy our
+    criterion of not disturbing the user, we believe that a carefully engineered version
+    of this sensor might be nearly unnoticeable. Like the capacitive sensor, we constructed
+    this device to mirror the form factor of a phone.
+
+
+    In choosing these sensors, we identified several criteria as important for the
+    set of sensors we would test. First, we wanted to maximize privacy and minimize
+    computational expense, in hopes that our solution could run continuously in the'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'background on mobile devices. These criteria combined to defeat computer vision
+    or audio-based approaches. Another criterion was that the techniques should ultimately
+    not disturb the user. This eliminated some of the previously proposed techniques,
+    which emit sound [Kunze and Lukowicz 2007] or activate the vibration motor [Shafer
+    2011].
+
+
+    # 9.2.4 Q4: Where Will My Training Data Come from, and Is It Good Enough?
+
+
+    There are many factors to consider when collecting training data. One major trade-off
+    was between the external validity of the data (collecting real data from a range
+    of people in real situations) and the ability to explore data sources that are
+    not available on consumer devices (described already). Thus, we decided to do
+    two different data collections—one in-the-wild and one in-the-lab. This allowed
+    us to explore the classification problem from two different angles. Collecting
+    and labeling the data in-the-wild is a significant challenge. We describe both
+    data collections here.
+
+
+    # 9.2.4.1 Collecting In-situ Labeled Data
+
+
+    To collect sensor data in situ we used the ESM (see Larson and Csikszentmihalyi
+    [2014] for a thorough description) to collect accelerometer data from 32 participants’
+    personal smartphones in conjunction with a ground-truth label describing the phone’s
+    placement. These in-situ labels complement the retrospective self-report data
+    from the phone placement interviews. While interview participants were undoubtedly
+    as complete as possible, in-situ survey data enriches our understanding of where
+    users choose to keep their phones.
+
+
+    We built a data collection application, Where’s Your Phone? (WYP) on the Windows
+    Phone 7.5 platform (Microsoft Corporation, Redmond, WA, USA). WYP collects 10s
+    of accelerometer data (three dimensions at 50Hz) roughly every 30min. It then
+    prompts the participant to answer “Where was your phone at XX:XXpm?” Below this
+    question, participants were given six choices including Other and I Don’t Know.
+    Each category had a few sub-categories (see Table 9.1 for all 23 sub-categories).
+    We chose categories based on the phone placement interview responses to minimize
+    the number of situations when ESM participants would need to enter free-text Other
+    responses.
+
+
+    Unanswered surveys expired when the next set of accelerometer data was collected
+    and unlabeled accelerometer data were deleted. Participants specified a bedtime
+    at which WYP turned off and a wake time at which it resumed. Participants could
+    also “snooze” WYP for up to 2h at a time. Survey responses and corresponding accelerometer
+    data were automatically uploaded to a server.
+
+
+    We recruited 32 participants (16 males, 16 females) from a Windows Phone 7.5 email
+    list. Fifty-nine percent of participants were between 20 and 39 years old and'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'the rest were older. Our participants submitted 5,524 ESM responses, although
+    the number submitted varied across participants (median [med]: 147.5, minimum
+    [min]: 29, maximum [max]: 358). The total number of responses from male (52%,
+    2,847) and female (48%, 2,677) participants was similar. It is important to acknowledge
+    the potential limitations in the comprehensiveness of the ESM responses; times
+    when phones are away from their owner would be under-reported.
+
+
+    # 9.2.4.2 Collecting Data in the Lab
+
+
+    Using the three devices described in Section 9.2.3 (development phone, capacitive
+    sensing prototype, and multi-spectral sensor), we collected data from 15 participants
+    (six females). Seventy-three percent of participants were between 20 and 39 years
+    old and the rest were older.
+
+
+    We asked participants to bring anything that they might normally put their phone
+    into including jackets, purses, or other bags. We collected data from each participant
+    in any of the following places that they report having kept their phone: front
+    trousers pocket, back trousers pocket, jacket pocket, bag/purse, and hand. We
+    chose these based on our phone placement survey responses. To increase the external
+    validity of this study, we did not have participants put our sensing devices in
+    places that they would not normally put their phone. While this meant that we
+    would capture more data for some participants than for others, it also maximizes
+    the realism of our collected data.
+
+
+    For each place participants normally keep their phone, they completed a series
+    of activities to simulate the various conditions that the device might encounter
+    in everyday life while in the placement. For all placements except bag/purse,
+    the activities were: sitting on a couch, sitting on a desk chair, standing in
+    place, and walking around. We did not have participants sit for the back trousers
+    pocket placement. For the bag/purse we had participants let the bag sit on the
+    floor, stand while holding the bag, and walk while carrying the bag. Participants
+    spent 20s on each activity. Because each device had at least one sensor that was
+    directional (e.g., toward leg in a trouser pocket), we collected all data for
+    each placement with each device facing both inward and outward. We collected from
+    two devices at a time to minimize the number of trials.
+
+
+    Unlike the other placements, most of the variation in placing a device on a surface
+    involves finding a variety of surfaces. Thus, we collected the surface-specific
+    data ourselves, following a similar process to the other placements: we recorded
+    data from each device in the two orientations of facing-up and facing-down. In
+    total we collected data for 18 surfaces, including tables, desks, chairs, couches,
+    on and in a metal filing cabinet, and even on a pillow.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'For each placement (e.g., pocket or desk), we collected data from our three
+    prototypes in two orientations each (e.g., facing-in and facing-out). We assembled
+    these six sensor recordings for each placement into a single virtual-recording.
+    This simulates a virtual device with the union of sensing capabilities from our
+    three prototypes. This means that a single instance of collected data included:
+    capacitive data (facing forward and backward), multispectral data (facing forward
+    and backward), phone light/proximity sensor data (facing forward and backward),
+    and phone accelerometer readings. We only considered one set of phone accelerometer
+    readings because the second set from the phone facing the other direction was
+    redundant.
+
+
+    # 9.2.5 Q5: What Are the Privacy and Ethical Implications of Developing this Classifier?
+
+
+    While this classifier is a learning tool for us, rather than a production system,
+    it''s still important to consider potential privacy or ethical implications. One
+    such implication is that it may not occur to a user that you could infer this
+    data from accelerometer readings. Thus, if a developer with this classifier requested
+    access to accelerometer data without disclosing that they had this inference ability,
+    that could be considered a privacy violation. Another potential issue is that
+    it may be possible to infer other characteristics about an individual based on
+    their placement behaviors. For example, we saw differences between the behaviors
+    of men and women in the data that we collected. Therefore, this classifier could
+    be used as a clue to the gender of the user, even if they have not disclosed that
+    information. Finally, while we tried to collect data from a variety of participants,
+    our sample population is not nearly representative of all of the different characteristics
+    of the broader population. While this might have been okay for an initial research
+    effort, it would be very irresponsible to only use this data to train a production
+    classifier.
+
+
+    # 9.2.6 Q6: A General Classifier or Personal Classifiers?
+
+
+    In this project we focused on a general classifier for one reason in particular:
+    the amount of data we collected. In addition, it would be desirable for many of
+    these use cases for the classifier to work out of the box without any training
+    by the user (i.e., the cold start problem). However, the data that we collected
+    does suggest that personalized classifiers are likely to perform better than a
+    general classifier. We identified different archetypes of users (i.e., different
+    people have different priors for different classes). In addition, other contextual
+    factors (e.g., location, time of day, calendar information) might be useful for
+    an individual, but would be difficult to generalize across the population.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '![](img/37b9feea690424a4c981364f15c3ffa2_13_0.png)
+
+
+    Figure 9.3 Example of accelerometer data collected during the study.
+
+
+    # ## 9.2.7 Q7: What Happens When the Classifier Is Wrong?
+
+
+    Given the results in the next section, it is clear that this classifier is going
+    to be wrong fairly often. This has implications for the types of situations that
+    the classifier should be used in. In some sense, the results of the classifier
+    are more of a _noisy contextual hint_ than a reliable inference of context. For
+    the purposes of demonstrating feasibility and establishing a baseline, this is
+    fine. However, you probably wouldn''t want this classifier to be making decisions
+    about when your phone should or shouldn''t be silent: you might miss a call or
+    interrupt someone giving a presentation because of a missed classification.
+
+
+    # ## 9.2.8 Q8: How Well Does the Classifier Perform?
+
+
+    After asking and answering all of these questions, we''re ready to build and evaluate
+    the classifiers. How do they perform with all of the data we''ve collected?
+
+
+    # ### 9.2.8.1 Modeling Phone Placement from In-situ Data
+
+
+    We used the labeled accelerometer data collected _in situ_ by our ESM participants
+    (see Figure 9.3 for an example). Using techniques from Chapters 2 and 3, we extracted
+    the following features over each axis of 1s windows of accelerometer data as inspired
+    by previous work [Kunze et al. 2005, Shi et al. 2011, Tsai et al. 2011, Vahdatpour
+    et al. 2011]:
+
+
+    +   - mean; variance; root mean square (RMS): ($\sqrt{\frac{1}{N} * \Sigma_i x_i^2}$)
+
+    +   - interquartile range; 25%, 50%, 75% quartiles (see Section 2.5.2.2)
+
+    +   - the sum of detail coefficients across the first five wavelet levels
+
+
+    We used these features to evaluate models for three classification problems (following).
+    All models were built using the Weka Toolkit''s sequential minimal optimization
+    (SMO) support vector machine (SVM) with a polynomial kernel [Hall et al. 2009].
+    See Section 4.2.2.2 for an explanation of SVM. We chose these features and the
+    SMO algorithm by experimenting with pilot data we collected earlier. The results
+    are reported from a leave-one-participant-out cross-validation. This approach
+    to cross-validation is useful for making sure that we do not train and'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "# Table 9.2 Results from the ESM study for each of three classification problems\n\
+    \n| | enclosed | out | precision | recall |\n|---|---|---|---|---|\n| enclose\
+    \ | 1690 | 599 | 0.74 | 0.83 |\n| out | 337 | 3742 | 0.92 | 0.86 |\n\n| | onPerson\
+    \ | other | precision | recall |\n|---|---|---|---|---|\n| onPerson | 2335 | 402\
+    \ | 0.85 | 0.89 |\n| other | 511 | 4120 | 0.86 | 0.82 |\n\n| | pocket | bag |\
+    \ out | hand | precision | recall |\n|---|---|---|---|---|---|---|\n| pocket |\
+    \ 1570 | 25 | 73 | 335 | 0.78 | 0.78 |\n| bag | 141 | 32 | 85 | 28 | 0.11 | 0.25\
+    \ |\n| out | 188 | 25 | 2961 | 194 | 0.88 | 0.86 |\n| hand | 124 | 44 | 308 |\
+    \ 235 | 0.33 | 0.30 |\n\nFor all three confusion matrices, the labels on the left\
+    \ represent the correct class, and the labels on the top row indicate the predicted\
+    \ class.\n\ntest on data from the same participant, which could lead to over-fitting\
+    \ and thus an over-estimation of the accuracy of our models.\n\nTo summarize the\
+    \ results of the three different classifiers:\n\n+   - **Enclosed or Out**: This\
+    \ model achieved a mean accuracy of 85.3%. The confusion matrix can be seen in\
+    \ Table 9.2, along with precision and recall values.\n+   \n+   - **On Person\
+    \ or Not**: This model achieved a mean accuracy of 85.7% (Table 9.2).\n+   \n\
+    +   - **In Bag, In Pocket, Out, or In Hand**: The performance of this model was\
+    \ lower than for the previous two models, as we expect when increasing the number\
+    \ of classes. The model achieved a mean accuracy of 75.4%, with Out being the\
+    \ most accurately classified, followed by Pocket. Bag and Hand performed much\
+    \ worse.\n\nIn the case of the four-class model, several notable items stand out.\
+    \ First, it is important to note that Bag and Hand, which performed very poorly,\
+    \ also had distinctly fewer instances in our dataset than Pocket and Out.\n\n\
+    The accelerometer can be thought of as capturing the orientation of the device,\
+    \ however, unlike sitting out on a table (where it usually sits flat either face-up\
+    \ or face-down), a phone may be placed in a bag any number of ways, depending\
+    \ on the style of the bag, the orientation of its pockets, and so forth. Furthermore,\
+    \ at any given time a bag may or may not be being carried by a person, which could\
+    \ make some of these features confusing with other classes (e.g., pocket)."
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# 9.2.8.2 Modeling Phone Placement from Additional Sensors in the Lab
+
+
+    We collected additional data in the lab, as described in Section 9.2.3. We extracted
+    features from the accelerometer facing one direction and our other sensors facing
+    two directions. This allowed us to simulate a device with sensors on two sides.
+
+
+    Following Harrison and Hudson''s [2008] approach, our multi-spectral features
+    are one reading from each of the light-to-frequency converter and photo resistor
+    for each of no-light, red, blue, green, UV, and IR. For the light and proximity-sensor
+    on the phone, we took the mean over the 20s window of the ambient-light level
+    and the binary proximity state. Lastly, we took the mean over a 1s window at each
+    "pixel" in the capacitive sensing grid and computed three features over the grid:
+    mean over pixels, median pixel value, number of non-zero pixels (pixels with some
+    capacitance sensed). We used the same accelerometer features over a 1s window
+    as in the ESM study from the previous section.
+
+
+    Our classification technique and evaluation followed that of the ESM study: a
+    leave-one-participant-out cross-validation, where we counted each person or surface
+    as a separate participant. We analyzed the lab study data by addressing the same
+    classification tasks that we identified for the ESM study: Enclosed or Out, On
+    Person or Not, and In Bag, In Pocket, Out or In Hand. In addition, we trained
+    each of these models with different combinations of data sources: each of them
+    individually, then the new data sources combined with accelerometer data. Our
+    goal in doing this was to understand the value of the additional sensors on top
+    of the accelerometers that are already common on devices.
+
+
+    Like the ESM data, we constructed Enclosed or Out models using Weka''s SMO SVM
+    with a polynomial kernel. When we experimented with pilot data, we discovered
+    that the On Person or Not and In Bag, In Pocket, Out or In Hand problems were
+    classified much better using Weka''s implementation of Random Forest [Breiman
+    2001], which is a collection of decision trees as described in Section 4.2.2.3.
+    Thus, we employ a Random Forest classifier for those problems in our lab study.
+
+
+    Table 9.3 gives an overview of the accuracies from these models. From these results
+    we can see some interesting trends:
+
+
+    +   1. Enclosed or Out: Perhaps unsurprisingly, the phone''s light and proximity
+    sensor seems to be the most useful sensor for classification, yielding an average
+    accuracy of 98%. Beyond this, there seems to be some evidence that the accelerometer
+    can help to disambiguate the few errors made using light/proximity only, even
+    achieving 100% accuracy in one case.
+
+
+    +   2. On Person Or Not: By contrast, when classifying whether or not the phone
+    was on the participant, the light/proximity sensor performed the worst of each
+    of the individual sensors (71%). In this case, the capacitive sensor was'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Table 9.3 Accuracy results for all combinations of lab study sensors across
+    the three classification problems
+
+
+    | | Enclosed | On Person | Pocket/Bag/Out/Hand |
+
+    |---|---|---|---|
+
+    | Accelerometer (AC) | 89% | 82% | 79% |
+
+    | Light/proximity (L/P) | 98% | 71% | 70% |
+
+    | Multispectral (MS) | 89% | 80% | 76% |
+
+    | Capacitive (CAP) | 58% | 88% | 73% |
+
+    | AC + L/P | **100%** | 84% | 83% |
+
+    | AC + MS | 92% | 82% | 78% |
+
+    | AC + CAP | 85% | **90%** | 79% |
+
+    | AC + L/P + MS | 99% | 80% | 81% |
+
+    | AC + L/P + CAP | 97% | **90%** | **85%** |
+
+    | AC + L/P + MS + CAP | 98% | 88% | **85%** |
+
+
+    The top accuracies are bolded in the table for each classification problem.
+
+
+    the single most useful sensor, achieving an accuracy of 88% on its own. Again
+    the addition of accelerometer is most helpful, improving the accuracy to 90%,
+    while the multispectral and light/proximity sensors do not seem to improve the
+    accuracy. The capacitive sensing grid was likely so helpful because it can sense
+    grasping of a device as well as detect a person''s leg through the lining of many
+    trouser pockets.
+
+
+    +   3. In Bag, In Pocket, Out, or In Hand: In the four-way classification, the
+    accelerometer performs the best of any single sensor (79%), with the multispectral
+    sensor also demonstrating its value (76%). Interestingly, the combination of these
+    two sensors is not as valuable as the combination of the accelerometer with the
+    light/proximity sensor, which achieved a combined accuracy of 83%. Ultimately,
+    the combination of accelerometer, light/proximity sensor, and capacitive sensor
+    is most effective, achieving an accuracy of 85%. The errors in this model come
+    primarily from confusion over when the device is in a pocket or a bag. We had
+    hoped that the capacitive sensor would be more valuable in this case, helping
+    to disambiguate between being in a bag and being up against somebody''s skin.
+    Regardless, the overall improvement from accelerometer-only is still very notable.
+
+
+    **Comparison with ESM data:** Overall, there were not major differences between
+    the accelerometer-only models in the lab study and those from the ESM study, even
+    though the ESM data came from a broad variety of different devices and was collected
+    *in situ*.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# ## 9.3 Inferring Social Relationships from Communication Behavior
+
+
+    The previous section explored one, fairly low-level, type of personal context.
+    Another very different type of context is the context of a social relationship.
+    For a particular contact in your phone, how do you know that individual and how
+    close are you to them? The context of a social relationship can be used for filtering
+    the information that is presented in an interface, prioritizing email messages,
+    or even for automatically determining privacy settings [Wiese et al. 2011]. In
+    this work, our goal was to develop models to infer social closeness and life facet
+    from call logs, SMS message logs, and the contact list available on smartphones.
+    The example described in this section was published in Min et al. [2013] and Wiese
+    et al. [2015] and reuses some of the text published in that paper. Again, we start
+    by asking the core questions.
+
+
+    # ### 9.3.1 Q1: What Am I Actually Inferring?
+
+
+    There are two types of information about a social relationship we wanted to infer
+    in this project. First was life facet: where you know somebody from, or what part
+    of your life they fit into now. Second was tie strength: how close you feel to
+    that person.
+
+
+    For life facet, we started with 11 different categories, which we then sorted
+    into three life facets: family (immediate family, extended family, and significant
+    other), work, and social (neighborhood, religious, family friend, knowing through
+    somebody else, school, hobby, and others). We selected the names of these sub-categories
+    by combining several sources [Hill and Dunbar 2003, Spencer and Pahl 2006, Kelley
+    et al. 2011, Wiese et al. 2011], aiming to strike a balance between comprehensiveness
+    (for richness of data) and simplicity (to prevent errors and minimize burden for
+    participants). Ultimately, we decided that we would infer the three life facets
+    rather than the sub-categories. Part of this decision was because of the amount
+    of training data we had for different sub-categories, but also because of the
+    complexity and low performance we would expect from an 11-class classifier.
+
+
+    The nature of tie strength poses a challenge for building this model. Tie strength
+    could be treated as a numeric class value based on the answers to the tie strength
+    questions. However, the difference between a rating of 1 and 2 is not necessarily
+    equal to the difference between a rating of 2 and 3. Therefore, we used the tie
+    strength levels of very strong tie, medium strong tie, and weak tie as nominal
+    class values in these models.
+
+
+    We assigned those class labels as follows, based on previous work [Zhou et al.
+    2005]:
+
+
+    +   - strong tie—the top group (rank 1–4)'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '+   * medium tie—the middle group (rank 5–19)
+
+
+    +   * weak tie—the remaining contacts
+
+
+    We further decided to explore both binary and ternary classifiers for the tie-strength
+    problem:
+
+
+    +   * 3-class: classifies as strong, medium–strong, or weak
+
+
+    +   * 2-verystrong: binary classifier that combines medium–strong and weak ties
+    into one class
+
+
+    +   * 2-mediumstrong: binary classifier that combines strong and medium–strong
+    ties into one class
+
+
+    # ## 9.3.2 Q2: What Is the End Goal for this Classifier?
+
+
+    Similar to the work described in Section 9.2, the primary goal of this project
+    was research: the plan was not to develop a model or system and deploy this to
+    the wild, but rather to just characterize the problem space and show that it was
+    possible and how well it performed. However, if the work was particularly successful,
+    the classifiers trained here might facilitate additional research to explore some
+    of the hypothesized applications (e.g., following up the previous work we had
+    been doing on the association between these dimensions of relationships and privacy
+    preferences [Wiese et al. 2011]).
+
+
+    # ## 9.3.3 Q3: What Data Do I Need, What Data Do I Want?
+
+
+    To develop these classifiers, our plan was to use call logs, text message logs,
+    and the contact list on phones running the Android operating system. Unfortunately,
+    at the time that we were doing this study there were some limitations to this
+    data. In particular, by default Android (Alphabet Inc., Mountain View, CA, USA)
+    phones limited the call log to the last 500 calls and typically have a default
+    limit of 200 SMS messages per contact. This resulted in broad differences in how
+    many days the logs represented (range: 21–369; median: 80; mean: 108). This represents
+    a serious limitation to the dataset, but it would be difficult to have collected
+    more data without running a longer-term data collection. Another challenge was
+    that contact lists have many fields, but in practice the data in the contact list
+    is fairly sparse. To protect privacy, we did not collect the content of SMS messages.
+    However, we did collect descriptive information such as email domain name, first
+    six digits of phone numbers, and city/state/zip code.
+
+
+    Another aspect of deciding which data to collect was to determine which of a participant''s
+    contacts to get ground truth labels for. The vast majority of any individual''s
+    contacts will be weak ties, and so random sampling is unlikely to turn'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'up medium and strong ties. However, in this work, we wanted to maximize the
+    likelihood of collecting information on strong ties. To accomplish this, we asked
+    participants to generate a list of contacts that fit specific social categories,
+    regardless of their appearance in the phone contact list. Participants listed
+    five people in each of the following categories: immediate family, extended family,
+    people they live with, coworkers, people they feel close to, and people they do
+    hobbies with. We selected these groups based on past qualitative work that suggests
+    these categories will contain an individuals'' strong ties, and people from different
+    life facets [McCarty 2002, Spencer and Pahl 2006, Wiese et al. 2011]. In the end,
+    each participant ended up with a list of 70 contacts that were a mixture of the
+    names they gave us, contacts they had contacted frequently in the data we collected,
+    and names chosen randomly.
+
+
+    In addition to the communication log and contact data and the class labels described,
+    we decided to collect some additional data from our participants, including some
+    data we thought might be easily collectable in the future. Participants provided
+    demographics for each contact in the 70-person list, such as sex, age, and relationship
+    duration.
+
+
+    Finally, because of the difficult-to-define nature of tie-strength, participants
+    also answered four questions about their relationship with each contact, adapted
+    from Marin and Hampton [2007]:
+
+
+    +   1. How close do you feel to this person?
+
+    +   2. How strongly do you agree with the statement “I talk with this person about
+    important matters”?
+
+    +   3. How strongly do you agree with the statement “I would be willing to ask
+    this person for a loan of $100 or more”?
+
+    +   4. How strongly do you agree with the statement “I enjoy interacting with
+    this person socially”?
+
+
+    # **9.3.3.1 Defining Features**
+
+
+    The real complexity of the communication data is clear when we consider how we
+    will turn that data into features used to train the model. To start, we defined
+    five factors that characterize communication patterns in the context of life facets
+    and tie strength: intensity, regularity, temporal tendency, channel selection/avoidance,
+    and maintenance cost.
+
+
+    **Intensity and regularity:** The number of and duration of communication actions
+    has been used to predict tie strength in past work [Hill and Dunbar 2003, Roberts
+    and Dunbar 2011]. For example, voice calls were very common for family'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'relationships. Meanwhile, office interactions and personal interactions show
+    different regularity [Do and Gatica-Perez 2013].
+
+
+    **Temporal tendency**: In their friends-acquaintances work, Eagle and Pentland
+    [2006] observed the temporal tendency in contacting people. Our participants called
+    their family, work, and social contacts at different times of day and days of
+    the week. For example, people frequently called their family members in the afternoon
+    (12pm–3pm) and evenings (3pm–6pm), and contacted social friends more on Friday
+    afternoon. They were less likely to call work facet contacts on the weekend.
+
+
+    **Channel selection and avoidance**: People tend to favor a certain communication
+    medium based on the person they are communicating with [Mesch 2009]. According
+    to our survey result, participants communicated via face-to-face, calls, text
+    messages, and Facebook with different priorities based on the relationship of
+    the contact.
+
+
+    **Maintenance cost**: Roberts and Dunbar [2011] suggested that people apply different
+    amounts of effort in maintaining different kinds of relationships, where effort
+    (cost) can be evaluated based on the time to last contact between two individuals.
+    However, this value could be smaller than the actual cost by chance according
+    to the data collection date. To minimize this coincidence, we measure the number
+    of communications in the past 2 weeks (short-term view) and in the past 3 months
+    (relatively long-term view) as the maintenance cost of the given relationship.
+    In the following section, we describe how we operationalized these categories
+    into specific machine learning features.
+
+
+    We defined 153 features from mobile data: 17 from phonebook, 66 from call logs,
+    36 from message logs, and 34 from communication (call + message) logs (see Table
+    9.4).
+
+
+    **Phonebook contact-profile features (profile features)**: We measured the similarity
+    between our participants and their contacts in terms of last name, email domain,
+    first six digits of phone number (area code + exchange), and company name. For
+    email domain, we excluded several popular free-hosting domains, such as @gmail.com.
+    We also captured the labels on each contact’s phone numbers, such as home, work,
+    mobile, and other, which are pre-defined in Android. Since only a few participants
+    had their own and contacts’ postal address in the phonebook, we simply checked
+    if the contact’s postal address exists, and measured a binary feature for each
+    label (home, work, and other) of the address. We also had additional binary features
+    for additional contact information, such as ringtones, notes, or if the contact
+    was marked as a favorite in the Android contact list.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Table 9.4 Extracted 153 features from mobile data
+
+
+    | Modality | Variables | Description |
+
+    |---|---|---|
+
+    | Survey | Same gender; age difference; is Facebook friend; frequency seen | Available
+    from SNS and GPS |
+
+    | Profile features | Similarity of {last name, email domain, company name, phone
+    number}; has {photo, ringtone, webpage, note, affiliation, work-phone & address,
+    home-phone & address, email}; is starred; event type; completion of profile |
+    Contact information |
+
+    | Call logs | Total {#, dur.} calls; total #lengthy-calls; | Intensity |
+
+    | | {AVG, SD, MIN, MAX, MED} #{outgoing, incoming} calls per week; #days called/days
+    logged; {AVG, MAX} dur. {outgoing, incoming} calls | Regularity |
+
+    | | {#, dur.} outgoing calls/total calls; #{failed, missed} calls/outgoing (incoming)
+    calls | Ch. selection and avoidance |
+
+    | | {#, dur.} calls at {times of a day, days of a week}/total calls; #{lengthy,
+    failed, missed} calls at {times of a day, days of a week}/total (outgoing, incoming)
+    calls | Temporal tendency |
+
+    | | {#, dur.} calls for the {past 2 weeks, past 3 months} / total calls | Maintenance
+    cost |
+
+    | MSG logs | Total {#, length} MSGs | Intensity |
+
+    | | {AVG, SD, MIN, MAX, MED} #{outgoing, incoming} MSGs per week; #days MSGe/days
+    logged; | Regularity |
+
+    | | {#, length} outgoing MSGs/total MSGs; #replied MSGs/total MSGs | Ch. selection
+    and avoidance |
+
+    | | {#, length} MSGs at {times of a day, days of a week}/total MSGs | Temporal
+    tendency |
+
+    | | {#, length} MSGs for the {past 2 weeks, past 3 months}/total MSGs | Maintenance
+    cost |
+
+
+    We used four time segments and four day of the week segments: morning (6 am noon),
+    afternoon (noon 6 pm), evening (6 pm midnight), and night (midnight 6 am); weekdays
+    (Mon, Thu), Fri, Sat, and Sun. Note that “total” communication denotes all previous
+    (logged) communications with the contact. COMM, communication; MSG, messages.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# Table 9.4 (continued)
+
+
+    | Modality | Variables | Description |
+
+    | :--- | :--- | :--- |
+
+    | COMM (call and MSG) logs | Total #COMMs | Intensity |
+
+    | | #Days had COMMs/days logged | Regularity |
+
+    | | #Outgoing COMMs/total COMMs; #calls/total COMMs | Ch. selection |
+
+    | | #COMMs at {times of a day, days of a week}/total COMMs; #calls/total COMMs
+    at {times of a day, days of a week}; outgoing COMMs at {times of a day, days of
+    a week, holidays}/total COMMs | Temporal tendency |
+
+    | | #COMMs for the {past 2 weeks, past 3 months}/total COMMs | Maintenance cost
+    |
+
+
+    Finally, we calculated the completion of each profile. This serves as a weak proxy
+    to measure the user''s effort in filling in the contact information. Android phones
+    can automatically fill contact list data by syncing with online social networking
+    service (SNS) such as Google+ [Alphabet Inc., Mountain View, CA, USA] and Facebook
+    (Facebook Inc., Menlo Park, CA, USA). In our 70-contact list data set, 50% of
+    mobile contacts had photos, suggesting that about a half of participants used
+    auto-sync. Interestingly, we still found that the majority of contacts had less
+    than three profile attributes, including name, a phone number, and an email address.
+    Thus, more contact information could still be a potentially useful signal.
+
+
+    **Call features:** We created several features to examine the intensity of voice
+    communications, including total number of and duration of calls for each contact.
+    We counted the number of lengthy calls, in which their duration is twice the average
+    duration. To measure the regularity of calls, we calculated five statistical values
+    (AVG, SD, MIN, MAX, and MED) for the number of calls per week. For the duration
+    of calls, we calculated AVG and MAX to measure a simple regularity and burstness,
+    respectively. We also measured users'' channel selection and avoidance behaviors
+    by calculating the ratio of outgoing calls, failed (duration <5s) calls, and missed
+    calls. Temporal tendency and maintenance cost were also extracted from call logs
+    as shown in Table 9.4.
+
+
+    **Message (MSG) features:** We defined many message features similar to the call
+    features as shown in Table 9.4. Here, we counted the length of MMS as 160 characters,
+    which is the maximum length of an SMS. With their large-scale text messaging'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: 'study, Battestini et al. [2010] applied a time metric of a 20min response time
+    to group messages together as a conversation. We used this metric to capture the
+    ratio of replied messages.
+
+
+    **Communication (COMM) features**: Messages frequently involve other communication
+    channels [Battestini et al. 2010]. For example, people often call back using voice
+    in response to an SMS. Therefore, we considered calls and messages equally as
+    the COMM features. For the intensity, regularity, and channel selection features,
+    we calculated total #COMMs, the #days had COMMs/days logged, and the ratio of
+    calls (#calls/total COMMs), respectively. We also had features checking COMMs
+    on 4 days that, in the U.S., often carry some kind of meaning. These days included
+    Thanksgiving, Christmas, New Year''s Day, and Valentine''s Day. Finally, we extracted
+    four features from survey results, such as same gender, age difference, is-Facebook
+    friend, and frequency seen, referring to them as the survey features (see Table
+    9.4). Current smartphones do not have these data, but we included these as features
+    since some of the information could be obtained from today''s SNS, and others
+    could be captured by future smartphones. For example, demographic information
+    such as gender and age can be automatically retrieved from Facebook profiles (or
+    estimated from smartphone usage patterns [Altshuler et al. 2012]), and face-to-face
+    communication could be detected by using Bluetooth proximity [Do and Gatica-Perez
+    2013], or GPS co-location [Cranshaw et al. 2010].
+
+
+    # 9.3.4 Q4: Where Will My Training Data Come from, and Is It Good Enough?
+
+
+    Different people have different types of social relationships, and we wanted to
+    maximize the likelihood that we would reach a diverse set of users. Toward this
+    end, we recruited 40 participants (13 males and 27 females) living throughout
+    the U.S. by posting ads in several places: on Craigslist in six major U.S. cities,
+    on a nationwide site for recruiting study participants, on a website for posting
+    social relationship research studies, and on a participant pool within our university.
+    In the end, 55% of our participants were students (graduate or undergraduate),
+    35% were employed in a variety of professions, and 10% were unemployed. Participant
+    ages ranged from 19 to 50 years (mean = 28.0 years, standard deviation [SD] =
+    8.9). Participants downloaded our Android app, which copied their contact list,
+    call log, and SMS log to a database file. Participants then uploaded this file
+    to our server through a custom website that was designed for this study. The entire
+    study was conducted through this website. Participants were instructed to complete
+    the ground truthing within 2 weeks, and were compensated $80 USD.
+
+
+    This is almost certainly not good enough for a production model, but for our purposes
+    we were convinced it would be good enough to see if there is a signal in'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: 'this data or not. In the end, we had to weigh many tradeoffs to balance how
+    many participants we had, how many contacts they would rate, and who would be
+    incentivized to participate. This was a particularly hard dataset to collect because
+    of the potentially sensitive data we were collecting and the amount of effort
+    that went into providing the ground truth.
+
+
+    # 9.3.5 Q5: What Are the Privacy and Ethical Implications of Developing this Classifier?
+
+
+    One of the issues with developing these classifiers was the sheer volume of sensitive
+    data we were asking for from our participants. While we had institutional review
+    board (IRB) approval from our university''s IRB, ultimately we were asking for
+    our participants to trust us with their communication records.
+
+
+    There are also some serious implications to consider if the classifier ends up
+    working well. Having this kind of contextual information about a person''s relationships
+    can be very valuable for certain types of social engineering attacks. Another
+    issue is that, depending on how this classifier was used, it might be possible
+    to be gamed. For example, if the classifier is used to automatically determine
+    privacy and sharing preferences, an adversary could potentially communicate with
+    a target in such a way that the classifier is fooled into thinking the adversary
+    should get access to data that they should not.
+
+
+    Finally, there are potential ethical implications to knowing about an individual''s
+    social support, especially if they do not have much support. For example, if someone
+    is socially isolated they might be at risk for depression or self-harm behaviors.
+    Or they might just have multiple phones, and so the data we have access to is
+    an incomplete picture of the user''s social interaction. What responsibility does
+    a developer or researcher have in this situation? Should they solicit help? Suggest
+    that the user seek help? Simply ignore this information? While we were not planning
+    to deploy this classifier, these concerns are real and complex.
+
+
+    # 9.3.6 Q6: A General Classifier or Personal Classifiers?
+
+
+    In the case of these classifiers, a personal classifier doesn''t make much sense,
+    because these (life facet and tie strength) are things that are not likely to
+    change, and if they do they will probably change slowly over a long period of
+    time. Thus, having a personalized classifier to tell me who my four closest people
+    are makes no sense—I know who those people are, and once I provide that training
+    data to the classifier the classifier does not need to classify those contacts
+    again. The value of this classifier is in a user never having to tell the phone,
+    but the phone automatically inferring this information, and thus a general classifier
+    makes more sense here.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# 9.3.7 Q7: What Happens When the Classifier Is Wrong?
+
+
+    Again, because the purpose of developing these models is for research, rather
+    than for a production system, the cost of a wrong classification is fairly low
+    in an immediate sense. However, the answer to Q5 clearly shows that if we are
+    not careful with how the classifier is used, it could end up exposing information
+    that the user did not want to be exposed. This risk, combined with the relatively
+    low likelihood that tie strength and life facet will change suggests that one
+    strategy for dealing with wrong classifications is to make it easy for the user
+    to confirm that a classification is correct, or to correct it if it is wrong.
+    Because it is unlikely to change frequently, correcting wrong classifications
+    manually takes a relatively small amount of effort.
+
+
+    # 9.3.8 How Well Do the Classifiers Perform?
+
+
+    Now that we''ve considered these questions, how do the classifiers perform?
+
+
+    # 9.3.8.1 Life Facet Classification
+
+
+    To evaluate the life facet classification, we built a model with SVMs (polynomial
+    kernel; d = 2). Since an SVM is originally a binary classifier, we composed three
+    pairwise SVMs (family-vs.-work, family-vs.-social, and work-vs.-social) and combined
+    their outputs with a maximum voting method. We also compared the result with two
+    different models using WEKA [Hall et al. 2009]: a rule-based model (decision tree
+    C4.5) and probabilistic model (naïve Bayes [NB]).
+
+    We also split the data into three different categories and trained models for
+    each dataset:
+
+
+    +   - all includes all contacts on the 70-person list
+
+    +   - contactlist includes only contacts from the 70-person list who appear in
+    the user''s phonebook
+
+    +   - somecomm includes only contacts from the 70-person list with at least one
+    logged SMS or call
+
+
+    For the 70-contact list data set, the SVMs showed 65.5% accuracy with survey features
+    and increased to 81.0% when using all features (see Table 9.5). Note that half
+    of the contacts in the 70-contact list were online friends, that is, the profile
+    and mobile-communication features did not contain their data. Nevertheless, this
+    approach achieves a 13.2% improvement in accuracy in using the survey feature.
+    The SVMs yielded 68.5% accuracy on the in-phonebook list using the profile and
+    mobile-communication features together. Accuracy went up to 88% for contacts that
+    users actually communicated with (the communication list set).'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# Table 9.5 Average accuracy (and SD) of three runs of ten-fold cross-validation
+    for predicting life facets
+
+
+    | Dataset | Method | Survey | Profile | Mobile | Profile + mobile comm. | Using
+    |
+
+    |---|---|---|---|---|---|---|
+
+    | all | C4.5 | 68.0 (5.1) | NA | NA | NA | 74.2 (4.4) |
+
+    | | NB | 72.4 (5.6) | NA | NA | NA | 67.1 (3.6) |
+
+    | | SVM | 65.5 (4.4) | NA | NA | NA | 81.0 (4.5) |
+
+    | contactlist list | C4.5 | 69.1 (6.9) | 52.8 (7.7) | 64.7 (6.0) | 64.5 (7.8)
+    | 76.1 (7.5) |
+
+    | | NB | 72.5 (7.2) | 54.3 (6.6) | 65.5 (5.5) | 65.4 (5.6) | 65.6 (5.5) |
+
+    | | SVM | 66.7 (7.4) | 51.1 (7.2) | 67.9 (6.4) | 68.5 (6.0) | 83.1 (5.9) |
+
+    | somecomm | C4.5 | 66.0 (9.9) | 53.1 (8.7) | 75.8 (7.2) | 75.9 (6.7) | 75.6 (5.5)
+    |
+
+    | | NB | 69.1 (10.) | 55.2 (9.0) | 76.4 (8.8) | 76.4 (8.8) | 76.6 (8.6) |
+
+    | | SVM | 60.8 (10.) | 52.9 (8.4) | 87.1 (5.0) | 88.0 (5.3) | 90.5 (4.8) |
+
+
+    Note that online friends in the 70-contact list have no mobile features (shown
+    as NA in the table).
+
+
+    Using profile features alone, all the classifiers showed lower accuracies since
+    users did not have enough contact information in their phonebook. For example,
+    on the in-phonebook list, SVMs yielded only 51.1%. There were 396 total family
+    members evaluated, where 175 were correctly classified as family, while 186 and
+    35 were misclassified as work and social, respectively. Interestingly, the profile
+    features were effective in classifying work-type contacts but were not so for
+    other facets. This is because the profile variables that strongly correlated with
+    the family facet, like last name and Is-starrer, were missing on many contacts
+    or only associated with a few strongest ties. On the other hand, we could classify
+    family and social contacts correctly by using mobile communication features while
+    many of the work-type contacts were confused as social because of no communication
+    logs.
+
+
+    The combination of profile and communication features failed to classify the work
+    facet, shown in Table 9.5. We have two possible explanations. First, the number
+    of the profile features (17) was much smaller than the number of the communication
+    features (136), and thus might be less influential within the combined feature
+    vector. Second, the profile features had many missing values and SVM does not
+    handle missing data well. To address these issues, we need a feature selection
+    scheme or classifier combination approach with two different models built on each
+    type of feature.
+
+
+    Four features from the survey reports (same gender, age difference, face-to-face
+    communication frequency, and is-Facebook friend) resolved confusions on'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '| Class condition | Dataset | Accuracy | Kappa (κ) |
+
+    |---|---|---|---|
+
+    | 3-class | all | 69.60% | 0.279 |
+
+    | 3-class | contactlist | 61.11% | 0.251 |
+
+    | 3-class | somecomm | 46.28% | 0.179 |
+
+    | 2-verystrong | all | 91.55% | 0.361 |
+
+    | 2-verystrong | contactlist | 88.64% | 0.361 |
+
+    | 2-verystrong | somecomm | 75.46% | 0.297 |
+
+    | 2-mediumstrong | all | 75.00% | 0.367 |
+
+    | 2-mediumstrong | contactlist | 68.06% | 0.317 |
+
+    | 2-mediumstrong | somecomm | 63.11% | 0.192 |
+
+
+    The prediction classes are tie-strength categories. For 2-verystrong, the middle
+    and low tie strength classes are combined and for 2-mediumstrong the middle and
+    high classes are combined.
+
+
+    work-type contacts. Since the communication features had continuous values, SVMs
+    performed better than the other algorithms. Meanwhile, C4.5 and NB showed higher
+    accuracies on the survey and profile features which consist of discrete values.
+    For the combination of features, however, the SVMs performed much better than
+    the others.
+
+
+    # 9.3.8.2 Tie Strength Classification
+
+
+    We trained the tie-strength models using the Weka Toolkit''s [Hall et al. 2009]
+    implementation of an SVM. We conducted a leave-one-participant-out cross-validation
+    (each fold contained data from one participant). This prevents any anomalies within
+    a particular participant''s data from causing a performance overestimate. We trained
+    nine models, varying two aspects of input data. First we varied what the model
+    was classifying (as described in Q1 between a ternary classifier and two different
+    binary classifiers (first column of Table 9.6). Second, similarly to the life
+    facet models, we also varied the input data for the classifier (second column
+    of Table 9.6).
+
+
+    Classification results vary considerably (Table 9.6), ranging from 46.28% (κ =
+    0.179), to 91.55% (κ = 0.361). The κ statistic measures the agreement between
+    predicted and observed categorizations, correcting for agreement that occurs by
+    chance. Table 9.6 reveals clear trends. First, within each of the class conditions,
+    classifiers perform best for all, second best for contactlist and worst for somecomm.
+    Most of the contacts who are not in the contact list (thus excluded from contactlist
+    models) or who have no communication history (thus excluded from the somecomm
+    models) are not strong ties, and thus are easier to classify. As a result, the
+    models that include them perform better.'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: 'The most successful class condition is 2-verystrong, followed by 2-mediumstrong.
+    3-class performs the worst. This is typical of multi-class models, which usually
+    take a performance hit compared to binary classifiers.
+
+
+    The models incorrectly classified more strong ties as weak than were correctly
+    classified as strong (in Table 9.6, the recall values for the strong tie class
+    are the percentage of strong ties correctly classified). Also, about half of ties
+    that were classified as strong were actually not strong (in Table 9.6, the precision
+    values for strong ties is the percentage of contacts that were classified as strong
+    ties who were actually strong ties). These misclassifications emphasize the weakness
+    of using call and SMS logs to infer tie strength, and thus the problem with using
+    those logs as direct proxies for tie strength. This result is even more pronounced
+    in recall values for the strong tie class of the 2-verystrong models in Table
+    9.6. The 2-verystrong-all model, the model with the best performance, only detects
+    a third of strong ties.
+
+
+    # 9.3.8.3 Error Analysis Participant Interviews
+
+
+    We wanted to understand the reason for the particularly low recall of the strong
+    tie class in these models. To do this we conducted semi-structured interviews
+    with seven of our participants. For each participant, we selected five to ten
+    contacts they had labeled as strong ties that we misclassified as weak ties (58
+    contacts total). Interviews took place over the phone, lasted about a half an
+    hour, and were recorded to facilitate note taking. We asked participants open-ended
+    questions about the nature of their relationship and communication with each selected
+    contact:
+
+
+    +   - When and how did you meet this person?
+
+    +   - What led to this being a close relationship?
+
+    +   - Has anything changed between the time that you became close and now?
+
+    +   - Was there anything different about the channels that you used to communicate
+    with this person or the frequency of communication that you used with this person
+    between then and now?
+
+
+    Several themes surfaced that help explain the discrepancy between communication
+    frequency and tie strength.
+
+
+    **Communication channel.** We used to talk on the phone more when we first became
+    close (seven of 58 contacts). In these cases, participants indicated that they
+    spoke on the phone more frequently before, but that they speak on the phone less
+    frequently now, mostly just to catch up. In some cases, this seemed to be a result
+    of a change in life stage (either for the user or for their contact) and/or a
+    change in their geographic location. For example, one participant complained that
+    he used to'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: 'keep up with a friend much more regularly before that friend got married, and
+    now they hardly speak at all. Change in life stage and change in geography are
+    discussed more in the Relationship evolution section below.
+
+
+    Other contacts in this category appear to be in relationships in decline, yet
+    the feeling of closeness lingers. One participant spoke about reaching out to
+    a friend multiple times without reciprocity: “I’d like to be friends, but it doesn’t
+    work unless we both put in the effort.”
+
+
+    In-person communication (11 of 58 contacts). Participants also identified people
+    whom they mostly interacted with in person. A contact’s close proximity to the
+    home seems to play an important role. One participant described talking to her
+    neighbor opportunistically, when they see each other. Another detailed how she
+    spoke with her 11-year-old son regularly, just not over the phone. Three participants
+    described friends from classes and their dorm with whom they spoke when they saw
+    each other.
+
+
+    Extended family often fell into this category. Many participants reported primarily
+    speaking with parents, siblings, and other family members in person. In one case,
+    a participant reported going to her parents’ house a couple times per month, but
+    mostly not calling her dad on the phone. In these cases, lack of communication
+    logs did not mean lack of effort in maintaining the relationships. In discussing
+    these contacts, some participants specifically mentioned making an effort to travel
+    once a year to see each other, or making a special effort to get together when
+    they do happen to be in the same place.
+
+
+    Other communication channels (25 of 58 contacts). For some strong ties, participants
+    noted that they communicate regularly, but not via phone calls or SMS. For several
+    participants, communication with a contact happened almost exclusively using Facebook.
+    Other participants used instant messenger, email, Skype (Skype Technologies S.A.R.L.,
+    Luxembourg City, Luxembourg), or SMS replacements such as WhatsApp (WhatsApp Inc.,
+    Mountain View, CA, USA) to stay in touch with close contacts.
+
+
+    **Relationship evolution.** Different location or different life stage (27 of
+    58 contacts). When asked what was different about their relationship between whether
+    they became close and now, many participants responded immediately that either
+    they or their contact had moved. Participants said that with the change in geography,
+    the communication frequency had changed, but not the perception of closeness.
+    The move was often triggered by a change in life stage (e.g., going to college,
+    graduating, getting a new job). However, even without moves, a significant life
+    stage change could trigger a communication change on its own (e.g., getting married
+    or having a child).'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'Family is close regardless of communication (17 of 58 contacts). Many misclassified
+    participants were family members. Several participants described specific familial
+    relationships from the perspective of obligation, which hinted at a greater underlying
+    complexity. For example, one participant said that she refused to take her grandmother''s
+    phone calls, stating that she calls too frequently and repeats herself. Yet, the
+    participant still reported feeling very close to her grandmother. Another participant,
+    the mother of an 11-year-old, said “of course I am close to him,” but that it
+    is not necessary for them to talk on the phone. Another participant said her uncle
+    was “definitely close, but he’s different from the other close people. He’s that
+    really strict uncle that wants to tell me how to live my life, so I don’t talk
+    to him too much, maybe every couple months.”
+
+
+    **Interview summary.** These interviews highlight the limited effectiveness of
+    the tie strength models. A major issue is the temporality of a relationship. In
+    particular, the circumstances under which two people became close are not necessarily
+    the same as the current circumstances of the relationship, even if the two people
+    remain close. The communication logs only capture relatively recent behavior.
+    Therefore, they do not contain the data that indicates a strong long-term relationship.
+    The other main component is that there remains a large amount of interpersonal
+    interaction that happens outside of phone calls and text messages, including communication
+    in other media, as well as face-to-face communication. Call- and SMS-based models
+    do not account for this.
+
+
+    # 9.4 Conclusion
+
+
+    The personal data available from mobile phones is an incredible source of contextual
+    information, with the potential to say much about the individual who is the subject
+    of that data. However, the gap between an idea for a contextual inference and
+    the production-quality implementation of that inference is large, and the vast
+    majority of these inferences are simply imperfect. The classifiers described in
+    this chapter were far from perfect. While this should not necessarily dissuade
+    you from developing a new personal context inference, it is important to go in
+    with your eyes open. Carefully planning your approach can save you huge amounts
+    of time (e.g., painstakingly collecting labeled data only to find that you needed
+    different data), and can help to set realistic expectations for what your classifier
+    will be able to accomplish.
+
+
+    # 9.5 Follow-up Questions
+
+
+    While we are unable to provide the data from these studies, you can still explore
+    the realm of personal context inferences on your own. For example, you can collect
+    some sensor data from your own phone using a data collection application such
+    as'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: 'Google''s Science Journal app (https://play.google.com/store/apps/details?id=com.google.android.apps.forscience.whistlepunk).
+    You can use this to collect data from many sensors, not just accelerometer. Some
+    questions to guide your exploration of phone placement:
+
+
+    +   - How much sensor data do you need to collect and label before you can train
+    an accurate model for phone placement?
+
+    +   - How do the places that you keep your phone match up with the places we identified
+    through our surveys and interviews?
+
+    +   - Can you get your classifier to perform better if you merge some labels together
+    (e.g., like we did with enclosed/not enclosed)?
+
+    +   - Can you add other features, such as time of day or location, to improve
+    your model?
+
+    +   - How does your model perform when you train it on your data and also test
+    it on your own data? How does that compare to training it with your data and testing
+    it with a friend or classmate?
+
+    +   - Can you purposefully trick the classifier into thinking you put your phone
+    somewhere that you didn''t?
+
+
+    Training classifiers for tie strength from just your own data is challenging for
+    all of the reasons described in Section 9.3.6, and asking somebody else for their
+    data can be problematic from a privacy perspective. However, one interesting possibility
+    is to use your own data to classify life facet. You could start by labeling just
+    a couple of your contacts to see how it performs on the remaining unlabeled contacts.
+    There are apps in the app store that will let you download your communication
+    data in a file. You can also get access to some of your own data by downloading
+    it from social networking sites (e.g., Facebook lets you download some of your
+    own data).
+
+
+    +   - How much training data do you need in order to classify life facets using
+    your own data?
+
+    +   - What features do you think will be most useful given our results?
+
+    +   - Since you are *the* expert on your own social relationships, what features
+    would you change or add to improve these models? Do they improve the inference?
+    Do you think they will work on other peoples'' data as well?
+
+
+    # Acknowledgments
+
+
+    My thanks to my coauthors and collaborators who contributed to the projects described
+    in this chapter: A.J. Brush, Sauvik Das, Jason Hong, Jun-Ki Min, Scott'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: 'Saponas, and John Zimmerman. Thank you also to the anonymous reviewers and
+    book editors who gave feedback on this chapter and helped to improve it.
+
+
+    # References
+
+
+    Y. Altshuler, M. Fire, N. Aharony, Y. Elovici, and A. S. Pentland. 2012. How many
+    makes a crowd? On the evolution of learning as a factor of community coverage.
+    In International Conference on Social Computing, Behavioral-Cultural Modeling,
+    and Prediction. Springer, 43–52. DOI: https://doi.org/10.1007/978-3-642-29047-3_6.
+
+
+    A. Battestini, V. Setlur, and T. Sohn. 2010. A large scale study of text-messaging
+    use. In Proceedings of the 12th International Conference on Human Computer Interaction
+    with Mobile Devices and Services. ACM, 229–238.
+
+
+    L. Breiman. Oct. 2001. Random forests. Mach. Learn. 45, 1, 5–32. ISSN: 0885-6125.
+    DOI: https://doi.org/10.1023/A:1010933404324.
+
+
+    J. Cranshaw, E. Toch, J. Hong, A. Kittur, and N. Sadeh. 2010. Bridging the gap
+    between physical location and online social networks. In Proceedings of the 12th
+    ACM International Conference on Ubiquitous Computing, UbiComp’10. ACM, New York,
+    NY, 119–128. ISBN: 978-1-60558-843-8. DOI: http://doi.acm.org/10.1145/1864349.1864380.
+
+
+    A. K. Dey. 2010. Context-aware computing. In Ubiquitous Computing Fundamentals,
+    Chapter 8, J. Krumm (Ed.). Chapman and Hall/CRC, New York, 321–352.
+
+
+    A. K. Dey, K. Wac, D. Ferreira, K. Tassini, J.-H. Hong, and J. Ramos. 2011. Getting
+    closer: An empirical investigation of the proximity of user to their smart phones.
+    In Proceedings of the 13th International Conference on Ubiquitous Computing, UbiComp’11.
+    ACM, New York, NY, 163–172. ISBN: 978-1-4503-0630-0. DOI: http://doi.acm.org/10.1145/2030112.2030135.
+
+
+    T. M. Do and D. Gatica-Perez. 2013. Human interaction discovery in smartphone
+    proximity networks. Pers. Ubiquit. Comput. 17, 3, 413–431. DOI: https://doi.org/10.1007/s00779-011-0489-7.
+
+
+    P. Dourish. Feb. 2004. What we talk about when we talk about context. Pers. Ubiquit.
+    Comput. 8, 1, 19–30. ISSN: 1617-4909. DOI: http://dx.doi.org/10.1007/s00779-003-0253-8.
+
+
+    N. Eagle and A. Pentland. 2006. Reality mining: Sensing complex social systems.
+    Pers. Ubiquit. Comput. 10, 4, 255–268.
+
+
+    S. Egerman, E. H. Chi, and S. Dow. 2014. Crowdsourcing in HCI Research. Springer
+    New York, New York, NY, 267–289. ISBN: 978-1-4939-0378-8. DOI: https://doi.org/10.1007/978-1-4939-0378-8_11.
+
+
+    P. Gharani, B. Suffoletto, T. Chung, and H. Karimi. 2017. An artificial neural
+    network for movement pattern analysis to estimate blood alcohol content level.
+    Sensors. 17, 12, 2897.
+
+
+    M. Hall, E. Frank, G. Holmes, B. Pfahringer, P. Reutemann, and I. H. Witten. Nov.
+    2009. The Weka data mining software: An update. SIGKDD Explor. Newsl. 11, 1, 10–18.
+    ISSN: 1931-0145. DOI: http://doi.acm.org/10.1145/1656274.1656278.
+
+
+    C. Harrison and S. E. Hudson. 2008. Lightweight material detection for placement-aware
+    mobile computing. In Proceedings of the 21st Annual ACM Symposium on User Interface'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: 'Software and Technology, UIST’08. ACM, New York, NY, 279–282. ISBN: 978-1-59593-975-3.
+    DOI: http://doi.acm.org/10.1145/1449715.1449761.
+
+
+    E. Hayashi, S. Das, S. Amini, J. Hong, and I. Oakley. 2013. CASA: Context-aware
+    scalable authentication. In Proceedings of the Ninth Symposium on Usable Privacy
+    and Security, SOUPS’13. ACM, New York, NY, 3:1–3:10. ISBN: 978-1-4503-2319-2.
+    DOI: http://doi.acm.org/10.1145/2501604.2501607.
+
+
+    R. Hill and R. I. M. Dunbar. 2003. Social network size in humans. Hum. Nat. 14,
+    53–72. DOI: https://doi.org/10.1007/s12110-003-1016-y.
+
+
+    F. Ichikawa, J. Chipchase, and R. Grignani. 2005. Where’s The Phone? A Study of
+    Mobile Phone Location in Public Spaces. In 2005 2nd Asia Pacific Conference on
+    Mobile Technology, Applications and Systems, 1–8. DOI: https://doi.org/10.1109/MTAS.2005.243793.
+
+
+    P. G. Kelley, R. Brewer, Y. Mayer, L. F. Cranor, and N. Sadeh. 2011. An investigation
+    into facebook friend grouping. In Human-Computer Interaction – INTERACT 2011,
+    P. Campos, N. Graham, J. Jorge, N. Nunes, P. Palanque, and M. Winckler (Eds.).
+    Springer Berlin Heidelberg, Berlin, Heidelberg, 216–233. ISBN: 978-3-642-23765-2.
+    DOI: https://doi.org/10.1007/978-3-642-23765-2_15.
+
+
+    A. Komninos, J. Besharat, V. Stefanis, and J. Garofalakis. 2018. Perceptibility
+    of mobile notification modalities during multitasking in smart environments. In
+    2018 14th International Conference on Intelligent Environments (IE 2018). IEEE,
+    17–24.
+
+
+    K. Kunze and P. Lukowicz. 2007. Symbolic object localization through active sampling
+    of acceleration and sound signatures. In International Conference on Ubiquitous
+    Computing. Springer, 163–180. DOI: https://doi.org/10.1007/978-3-540-74853-3_10.
+
+
+    K. Kunze, P. Lukowicz, H. Junker, and G. Tröster. 2005. Where am I: Recognizing
+    on-body positions of wearable sensors. In International Symposium on Location-and
+    Context-Awareness. Springer, 264–275. DOI: https://doi.org/10.1007/11426646_25.
+
+
+    R. Larson and M. Csikszentmihalyi. 2014. The Experience Sampling Method. Springer
+    Netherlands, Dordrecht, 21–34. ISBN: 978-94-017-9088-8. DOI: https://doi.org/10.1007/978-94-017-9088-8_2.
+
+
+    A. Marin and K. N. Hampton. 2007. Simplifying the personal network name generator:
+    Alternatives to traditional multiple and single name generators. Field Methods
+    19, 2, 163–193. DOI: https://doi.org/10.1177/1525822X06298588.
+
+
+    C. McCarty. 2002. Structure in personal networks. JoSS 3, Article 1. Retrieved
+    December 2, 2020 from https://www.cmu.edu/joss/content/articles/volume3/McCarty.html.
+
+
+    G. S. Mesch. 2009. Social context and communication channels choice among adolescents.
+    Comput. Hum. Behav. 25, 1, 244–251. DOI: https://doi.org/10.1016/j.chb.2008.09.007.
+
+
+    J.-K. Min, J. Wiese, J. I. Hong, and J. Zimmerman. 2013. Mining smartphone data
+    to classify life-facets of social relationships. In Proceedings of the 2013 Conference
+    on Computer Supported Cooperative Work, CSCW’13. ACM, New York, NY, 285–294. ISBN:
+    978-1-4503-1331-5. DOI: http://doi.acm.org/10.1145/2441776.2441810.
+
+
+    S. N. Patel, J. A. Kientz, G. R. Hayes, S. Bhat, and G. D. Abowd. 2006. Farther
+    than you may think: An empirical investigation of the proximity of users to their
+    mobile phones. In'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '+   UbiComp 2006: Ubiquitous Computing, P. Dourish and A. Friday (Eds.). Springer
+    Berlin Heidelberg, Berlin, Heidelberg, 123–140. ISBN: 978-3-540-39635-2. DOI:
+    https://doi.org/10.1007/11853565_8.
+
+
+    +   S. G. Roberts and R. I. Dunbar. 2011. Communication in social networks: Effects
+    of kinship, network size, and emotional closeness. Pers. Relat. 18, 3, 439–452.
+    DOI: https://doi.org/10.1111/j.1475-6811.2010.01310.x.
+
+
+    +   T. S. Saponas, C. Harrison, and H. Benko. 2011. Pocket touch: Through-fabric
+    capacitive touch input. In Proceedings of the 24th Annual ACM Symposium on User
+    Interface Software and Technology, UIST ''11. ACM, New York, NY, 303–308. ISBN:
+    978-1-4503-0716-1. DOI: http://doi.acm.org/10.1145/2047196.2047235.
+
+
+    +   I. Shafer. 2011. Learning Location from Vibration. DOI: http://www.mrcaps.com/proj/LocationVibration/files/vibration-ishafer-paper.pdf.
+
+
+    +   Y. Shi, Y. Shi, and J. Liu. 2011. A rotation based method for detecting on-body
+    positions of mobile devices. In Proceedings of the 13th International Conference
+    on Ubiquitous Computing, UbiComp''11. ACM, New York, NY, 559–560. ISBN: 978-1-4503-0630-0.
+    DOI: http://doi.acm.org/10.1145/2030112.2030212.
+
+
+    +   S. Singla, D. Bansal, A. Misra, and G. Raheja. 2018. Towards an integrated
+    framework for air quality monitoring and exposure estimation—A review. Environ.
+    Monit. Assess. 190, 9, 562. DOI: https://doi.org/10.1007/s10661-018-6940-8.
+
+
+    +   L. Spencer and R. Pahl. 2006. Rethinking Friendship: Hidden Solidarities Today.
+    Princeton University Press. DOI: https://doi.org/10.2307/j.ctv346r5j.
+
+
+    +   M.-C. Tsai, F.-C. Chou, Y.-F. Kao, K.-C. Yang, and M. Chen. 2011. Polite ringer
+    II: A ringtone interaction system using sensor fusion. In Proceedings of the 13th
+    International Conference on Ubiquitous Computing, UbiComp''11. ACM, New York,
+    NY, 567–568. ISBN: 978-1-4503-0630-0. DOI: http://doi.acm.org/10.1145/2030112.2030216.
+
+
+    +   A. Vahdatpour, N. Amini, and M. Sarrafzadeh. Mar. 2011. On-body device localization
+    for health and medical monitoring applications. In 2011 IEEE International Conference
+    on Pervasive Computing and Communications (PerCom). IEEE, 37–44. DOI: https://doi.org/10.1109/PERCOM.2011.5767593.
+
+
+    +   D. Weber, A. Voit, P. Kratzer, and N. Henze. 2016. In-situ investigation of
+    notifications in multi-device environments. In Proceedings of the 2016 ACM International
+    Joint Conference on Pervasive and Ubiquitous Computing. ACM, 1259–1264. DOI: https://doi.org/10.1145/2971648.2971732.
+
+
+    +   J. Wiese, P. G. Kelley, L. F. Cranor, L. Dabbish, J. I. Hong, and J. Zimmerman.
+    2011. Are you close with me? Are you nearby? Investigating social groups, closeness,
+    and willingness to share. In Proceedings of the 13th International Conference
+    on Ubiquitous Computing, UbiComp''11. ACM, New York, NY, 197–206. ISBN: 978-1-4503-0630-0.
+    DOI: http://doi.acm.org/10.1145/2030112.2030140.
+
+
+    +   J. Wiese, T. S. Saponas, and A. J. B. Brush. 2013. Phoneproiception: Enabling
+    mobile phones to infer where they are kept. In Proceedings of the SIGCHI Conference
+    on Human Factors in Computing Systems, CHI''13. ACM, New York, NY, 2157–2166.
+    ISBN: 978-1-4503-1899-0. DOI: http://doi.acm.org/10.1145/2470654.2481296.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: 'J. Wiese, J.-K. Min, J. I. Hong, and J. Zimmerman. 2015. “You never call, you
+    never write”: Call and SMS logs do not always indicate tie strength. In Proceedings
+    of the 18th ACM Conference on Computer Supported Cooperative Work & Social Computing,
+    CSCW''15. ACM, New York, NY, 765–774. ISBN: 978-1-4503-2922-4. DOI: http://doi.acm.org/10.1145/2675133.
+    2675143.
+
+
+    J. Wiese, S. Das, J. I. Hong, and J. Zimmerman. 2017. Evolving the ecosystem of
+    personal behavioral data. Hum. Comput. Int. 32, 5–6, 447–510. DOI: https://doi.org/10.1080/
+    07370024.2017.1295857.
+
+
+    W.-X. Zhou, D. Sornette, R. A. Hill, and R. I. Dunbar. 2005. Discrete hierarchical
+    organization of social group sizes. Proc. R. Soc. B Biol. Sci. 272, 1561, 439–444.
+    DOI: https://doi.org/ 10.1145/2971648.2971732.'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# # Authors'' Biographies
+
+
+    # ## Parisa Eslambolchilar
+
+
+    ![](img/37b9feea690424a4c981364f15c3ffa2_36_0.png)
+
+
+    **Parisa Eslambolchilar** received a BEng degree in Hardware Engineering from
+    the University of Amirkabir, Tehran, in 1999, and a Master''s in Engineering in
+    Robotics and AI from the University of Tehran, Iran in 2002 and a PhD degree in
+    Computer Science from the Hamilton Institute, National University of Ireland,
+    Maynooth in 2007. In March 2007, she joined the Computer Science Department of
+    Swansea University as a lecturer. In March 2017, Parisa started her new post as
+    a Senior Lecturer in the School of Informatics and
+
+
+    Computer Science at Cardiff University. She is currently a Reader in Human-Computer
+    Interaction (HCI) at Cardiff University and leads the Complex Systems Research
+    Group and the Human Factors Technology Research Priority Area at the School.
+
+
+    Parisa''s research interests include HCI, ubiquitous computing, and designing
+    interactive systems to support self-reflection, self-monitoring, feedback (audio,
+    haptic, visual, and soma), persuasion, immersion, and navigation. Her work exploits
+    the Internet of Things (IoT), wearables, smartphones, augmented reality, and virtual
+    reality.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# Andreas Komninos
+
+
+    ![](img/37b9feea690424a4c981364f15c3ffa2_37_0.png)
+
+
+    Andreas Komninos has a BSc (Hons) in Computer Studies from Glasgow Caledonian
+    University (2001) and a PhD (Computer and Information Science, 2005) from the
+    University of Strathclyde, UK. He has worked as a Lecturer at Glasgow Caledonian
+    University, specializing in Mobile and Ubiquitous Computing (2005–2013), as an
+    adjunct faculty member at the Hellenic Open University, the University of Patras
+    and the Technological Educational Institute (2010–2019). He has also worked as
+    a post-doctoral researcher in projects related to Mobile and Ubiquitous Computing
+    at
+
+
+    the University of Strathclyde (UK), the Computer Technology Institute and Press
+    “Diophantus” and the Industrial Systems Institute (Greece) between 2013 and 2020.
+    He is currently an Assistant Professor in Network-Centric Systems at the Computer
+    Engineering and Informatics Department, University of Patras, Greece.
+
+
+    Andreas'' research interests focus on interactive and context-aware mobile and
+    ubiquitous computing systems, that leverage sensors, the IoT and machine learning
+    technology. He has worked and published scientific papers in a range of domains,
+    including mobile and smartwatch text entry, multimodal navigation, the IoT and
+    sensor-based systems, and augmented reality. His published work and professional
+    information can be found at http://www.komninos.info.
+
+
+    # Mark Dunlop
+
+
+    ![](img/37b9feea690424a4c981364f15c3ffa2_37_1.png)
+
+
+    Dr Mark Dunlop is a Senior Lecturer in Computer Science in the Department of Computer
+    and Information Sciences at the University of Strathclyde. He received his BSc
+    (Hons) and PhD degrees from the University of Glasgow in 1988 and 1991, respectively.
+    He has held academic posts at the universities of Glasgow, the West of Scotland
+    and, currently, Strathclyde in addition to a senior researcher post at the Risø
+    Danish National Laboratory. He is an associate editor for the journals Personal
+    and Ubiquitous Computing and International Journal of'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'Mobile Human Computer Interaction, and is a member of the international steering
+    committee for ACM MobileHCI (having co-founded the conference series in 1998 and
+    acted as both local-chair and program-co-chair). He has been a chair of the ACM
+    CHI Usability and User Experience committee and has also acted as an expert witness
+    in mobile usability patent cases in Australia and the United States.
+
+
+    Mark''s research focuses on the usability of mobile systems including sensor and
+    crowd-source driven interaction, smarter text entry, and fitness/digital health
+    applications of mobile HCI research. He follows a strong user-centered approach
+    with elements of participatory design and formal usability experimentation. His
+    teaching focuses around HCI and mobile application development.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# Index
+
+
+    +   absolute zero, 62, 66
+
+    +   activation functions, 155-160
+
+    +   actuation, 31-32
+
+    +   Adaptive Performance Engine module
+
+    +   (APE module), 256
+
+    +   adaptive probabilistic touch interfaces,
+
+    +   motivation for, 379-381
+
+    +   adaptive technologies for individualized
+
+    +   BCI-VR interaction, 256-258
+
+    +   adaptive touch interfaces
+
+    +   complex touch behaviors and
+
+    +   integrate into UIs, 381-382
+
+    +   declarative language, 396-397
+
+    +   development examples, 389
+
+    +   ethics and, 407-408
+
+    +   generalizing GUI target
+
+    +   representations, 398-399
+
+    +   handle and react to uncertain
+
+    +   user behavior information,
+
+    +   383-384
+
+    +   key challenges for developing,
+
+    +   381
+
+    +   limitations and extensions,
+
+    +   399-400
+
+    +   probabilistic GUI concept,
+
+    +   397-398
+
+    +   ProbUI framework, 384-389
+
+    +   recognize touch behaviors
+
+    +   probabilistically, 382-383
+
+
+    +   reflection from developer
+
+    +   perspective, 396
+
+    +   simple counter button, 390-391
+
+    +   swiping through gallery, 391-392
+
+    +   transition effects using ProbUI
+
+    +   probabilities, 392-394
+
+    +   UI elements adapt to hand
+
+    +   postures, 394-396
+
+    +   adaptive user interface, 379-381
+
+    +   adjacent electric field, 241
+
+    +   Advanced analysis methods, 244
+
+    +   Advanced Brain Monitoring, 240
+
+    +   advanced health monitoring
+
+    +   systems, 23
+
+    +   aliasing, 111-112
+
+    +   alpha, 76
+
+    +   alternative hypothesis, 74
+
+    +   ambient intelligence, 21, 23
+
+    +   ambient sunlight, 30
+
+    +   American Civil Liberties Union
+
+    +   (ACLU), 39-40
+
+    +   analog signal sampling, 110-111
+
+    +   analog-to-digital conversion (ADC),
+
+    +   110, 135
+
+    +   aliasing and anti-aliasing, 111-112
+
+    +   analog signal sampling, 110-111
+
+    +   coding of quantized samples, 114
+
+    +   in interactive systems
+
+    +   prototyping, 116-117'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: 'quantization, 112–114
+
+    sample-and-hold circuits, 116
+
+    analog-to-digital converters (ADCs),
+
+    114, 241
+
+    flash ADCs, 114
+
+    SARs, 114
+
+    analysis of variance (ANOVA), 5, 61,
+
+    83–85, 252
+
+    Anderson–Darling test, 78
+
+    Android Pattern Unlock, 324–325
+
+    anger, 17
+
+    anti-aliasing, 111–112
+
+    APE module. See Adaptive
+
+    Performance Engine module
+
+    (APE module)
+
+    aperiodic signals, 109
+
+    apparatus, 414–415
+
+    application programming interfaces
+
+    (APIs), 6, 200, 325, 381. See
+
+    also graphical user interface
+
+    (GUI)
+
+    Arduino Uno, 116
+
+    area under the ROC (AUROC), 329–330
+
+    artifact removal, 249
+
+    artifact subspace reconstruction
+
+    method (ASR method), 249
+
+    artificial neural networks (ANNs),
+
+    250, 412, 417
+
+    assisted living, 23–25
+
+    Association for Computing
+
+    Machinery (ACM), 17
+
+    associative property, 135
+
+    attacks against gesture-based
+
+    authentication, 332
+
+    audio signals, 106
+
+    auditory-verbal
+
+    navigation tasks, 415
+
+    recall task, 412
+
+    tasks, 410
+
+
+    augmentative and alternative
+
+    communication interfaces
+
+    (AAC interfaces), 280
+
+    augmented reality (AR), 31, 277. See
+
+    also virtual reality (VR)
+
+    authentication systems, 324
+
+    auto-complete, keyboard with,
+
+    284–285
+
+    autocorrelation, 129
+
+    application, 131–132
+
+    correlation coefficient, 130
+
+    function, 130–131
+
+    automated techniques, 249
+
+    automotive user interface,
+
+    ethics in, 431
+
+    awareness, 25–27
+
+    Azure, 202, 209
+
+    back-propagation, 158–160
+
+    bad channel removal, 249
+
+    bandpass filters, 127, 249
+
+    baseband units (BBUs), 36
+
+    Bayes’ rule, 279
+
+    Bayes’ theorem, 148–149
+
+    Bayes’ theory, 250
+
+    Bayesian inference layer (BIL), 256
+
+    Bayesian optimization (BO), 189
+
+    BBC micro:bit, 116
+
+    BCI and VR, 240
+
+    BCI2000, 243
+
+    beam search, 290
+
+    beam width, 290
+
+    behavioral change, 25–27
+
+    Beilharz, K., 340
+
+    Bentham, Jeremy, 378
+
+    Berg, Hans, 237
+
+    BerkeleyLM, 288
+
+    between-subjects, 60
+
+    bias estimator, 85n18'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '+   - big data, 32, 44
+
+    +   - big datasets, 160–161
+
+    +   - bimodal values, 70
+
+    +   - binary classification, 169, 177–178
+
+    +   - Biosemi, 240
+
+    +   - biosignals, 106
+
+    +   - Bluetooth low energy (BLE), 28
+
+    +   - Boyle, David, 101
+
+    +   - brain, interfacing with, 241
+
+    +       - hardware, 241–242
+
+    +       - participant recruitment, 248
+
+    +       - posteriori analysis, 248–251
+
+    +       - preparation, 245–246
+
+    +       - requirements, 241
+
+    +       - signal acquisition, 246–247
+
+    +       - software, 242–244
+
+    +       - study setup, 245
+
+    +   - Brain Products, 240
+
+    +   - brain-computer interfaces (BCI), 4,
+
+    +       32, 136, 239–240, 251, 273.
+
+    +       - See also human–computer interaction (HCI)
+
+    +   - ethical issues in, 273–274
+
+    +   - interacting with VR, 251–262
+
+    +   - with interactive systems, 240–241
+
+    +   - interfacing with brain, 241–251
+
+    +   - brain-machine interfaces (BMIs), 239
+
+    +   - BrainVision Analyzer, 244
+
+    +   - BrainVoyager, 244
+
+    +   - brute force guessing attack, 332–334
+
+    +       - comparison between
+
+    +           - dictionary guessing attacks
+
+    +           - and, 335–336
+
+    +   - business indicators, 209
+
+    +       - univariate models, 209–211
+
+    +       - univariate predictions on hotel data, 211–212
+
+    +   - C4. 5 algorithm, 175–176
+
+
+    +   - CAA. See UK Civil Aviation Authority (CAA)
+
+    +   - carbon (C), 241
+
+    +   - case studies (CS), 7, 23, 380
+
+    +   - categorical data. See nominal and ordinal data
+
+    +   - Caton, Richard, 237
+
+    +   - Celsius scale, 65
+
+    +   - central nervous system (CNS), 248
+
+    +   - central processing units (CPUs), 291
+
+    +   - central tendency measures, 69–70
+
+    +   - character error rate (CER), 295
+
+    +   - character language model, 293
+
+    +   - charged-couple device (CCD), 107
+
+    +   - chemical sensing, 106
+
+    +   - chi-squared test, 90–91
+
+    +   - chirp spread spectrum (CSS), 29
+
+    +   - classic “Graz” MI paradigm, 259
+
+    +   - classification, 164
+
+    +       - algorithms, 143–144, 187–189
+
+    +       - DT, 171–176
+
+    +       - NB, 164–168
+
+    +       - NNs, 177–179
+
+    +       - SVM, 169–171
+
+    +   - classifiers, 250
+
+    +   - cloud radio access network (C-RAN), 36
+
+    +   - cloud-based computing, 32
+
+    +   - clustering, 144, 179–189
+
+    +   - coding, 3, 105, 110. See also decoding of quantized samples, 114
+
+    +       - projects, 396
+
+    +   - cognitive load
+
+    +       - classification using driver physiological data, 413–424
+
+    +       - detection through physiological measures, 412–413
+
+    +       - measures, 411–412
+
+    +   - Cohen''s d, 85'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '+   Cohen''s f, 86
+
+    +   comma separated values (CSVs), 206
+
+    +   common spatial patterns filter (CSPs filter), 251
+
+    +   commutative property, 133–134
+
+    +   complementary metal-oxide semiconductor (CMOS), 107–108
+
+    +   computer science, 17–18
+
+    +   computing paradigms for IIoE data analysis, 32
+
+    +   cloud-based computing, 32
+
+    +   edge computing, 33–34
+
+    +   fog computing, 35–36
+
+    +   MCC, 34–35
+
+    +   MEC, 36–37
+
+    +   conditional probability, 147
+
+    +   confidence interval (CI), 74–76
+
+    +   confidence score, 302
+
+    +   confounding variables, 60
+
+    +   confusion matrix, 187–189
+
+    +   confusion network, 290–291, 299–302
+
+    +   consensus hypothesis, 290
+
+    +   consequentialist ethics, 16
+
+    +   contingency table, 89n24
+
+    +   continuing professional development (CPD), 7
+
+    +   continuous or quantitative data. See interval and ratio data
+
+    +   continuous probabilities, 147–148
+
+    +   continuous-time signals, 108–109
+
+    +   continuous-value signals, 109
+
+    +   control variables, 60
+
+    +   conventional security, 38–39
+
+    +   convolution, 132–133
+
+    +   correction procedure, 80
+
+    +   correlation coefficient, 130
+
+    +   corrgram() function, 214
+
+    +   count cutoff, 286
+
+
+    +   covariance function, 130, 162
+
+    +   critical value, 74, 76
+
+    +   cross-entropy, 289
+
+    +   difference selection, 287
+
+    +   CUED-RNNLM, 288
+
+    +   cumulative distribution function (cdf), 147–148
+
+    +   custom mapping of probabilities, 383
+
+    +   data
+
+    +   collection, 66–68
+
+    +   confidentiality, 37–42
+
+    +   controller, 40–41
+
+    +   epoching, 249–250
+
+    +   preparation for ML, 419–420
+
+    +   preprocessing, 184–185
+
+    +   processor, 41
+
+    +   protection regulations, 39–42
+
+    +   source, 414–417
+
+    +   data-dredging, 73n9, 102
+
+    +   decimation-in-time algorithm, 120
+
+    +   decision trees (DTs), 145, 171–176, 412, 417
+
+    +   declaration, 382–383
+
+    +   declarative language, 396–397
+
+    +   decoding, 289
+
+    +   confusion network, 290–291
+
+    +   parameter tuning, 294–297
+
+    +   search completion and result representation, 294
+
+    +   search process and pruning, 293–294
+
+    +   speed, 306–307
+
+    +   VelociTap decoder, 291–293
+
+    +   deontological ethics, 16
+
+    +   dependent sample t-test. See paired samples t-test
+
+    +   dependent variables (DVs), 60
+
+    +   descriptive statistics, 69'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'central tendency measures, 69-70
+
+
+    variability measures, 70-72
+
+
+    deterministic approach, 278
+
+
+    deterministic signals, 109
+
+
+    devices, 27-28
+
+
+    dichotomy, 89n23
+
+
+    dictionary guessing attack, 334-335
+
+
+    comparison between brute force and, 335-336
+
+
+    Digit group, 334
+
+
+    digital filtering, 123, 414
+
+
+    comparisons of FIR and IIR filters, 126-127
+
+
+    filter order, 128-129
+
+
+    types, 127-128
+
+
+    digital signal processing (DSP), 2, 15, 22, 105
+
+
+    analog-to-digital conversion, 110-117
+
+
+    autocorrelation, 129-132
+
+
+    DFT, 118-129
+
+
+    digital-to-analog conversion, 117-118
+
+
+    elements and enabling technologies for, 27-32
+
+
+    ethical issues, 141-142
+
+
+    importance in IoE applications, 23-27
+
+
+    LTI systems, 132-135
+
+
+    signals, 106-109
+
+
+    as tools for HCI design and evaluation, 5-6
+
+
+    use case example, 135-136
+
+
+    digital-to-analog conversion, 117-118. See also analog-to-digital conversion (ADC)
+
+
+    digital-to-analog converter (DAC), 117
+
+
+    dimensionality reduction, 144, 185, 215-218
+
+
+    dipoles, 244
+
+
+    discrete cosine transform (DCT), 27
+
+
+    discrete data. See nominal and ordinal data
+
+
+    discrete Fourier transform (DFT), 105, 118. See also fast Fourier transform (FFT)
+
+
+    digital filtering, 123-129
+
+
+    FFT, 120-123
+
+
+    discrete probabilities, 147-148
+
+
+    discrete-time signals, 108-109, 387
+
+
+    discrete-value signals, 109
+
+
+    dispersion, 70
+
+
+    displacement, 106-107
+
+
+    distribution-free tests, 77
+
+
+    distributive property, 134
+
+
+    "divide and conquer" strategy, 172
+
+
+    δ rhythm, 239
+
+
+    downsampling, 248
+
+
+    Draw-a-Secret (DAS), 324
+
+
+    DriftBoard, 278
+
+
+    driver cognitive load detection methods, 410-411
+
+
+    cognitive load detection through physiological measures, 412-413
+
+
+    cognitive load measures, 411-412
+
+
+    driver distraction, 409-410
+
+
+    driver state estimation, motivation for, 409
+
+
+    due diligence, 17
+
+
+    Duncan''s test, 88
+
+
+    Dunlop, Mark, 434
+
+
+    duty-based ethics. See deontological ethics
+
+
+    Dvorak, 60, 74, 89
+
+
+    Dynamic Time Warping (DTW), 327'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'edge computing, 33-34
+
+    EdgeWrite, 280
+
+    EEGLAB, 244
+
+    effect size, 84
+
+    Electrical Geodesics, Inc. (EGI), 240
+
+    electrocardiography (ECG), 27,
+
+    105-106, 411, 415
+
+    electrochemical machine, 237
+
+    electrodermal activity (EDA), 106
+
+    electrodes, 242-243
+
+    electroencephalography (EEG), 4, 106,
+
+    237, 411, 413
+
+    amplifiers, 242
+
+    bands or rhythms, 237-238
+
+    client software, 241
+
+    EEG-based BCI systems, 240-241
+
+    electrodes, 241
+
+    epoching, 249-250
+
+    signals, 135-136
+
+    electromyogram (EMG), 106
+
+    elliptic curve cryptography (ECC), 38
+
+    emission distribution, 387
+
+    Emotiv EPOC, 240
+
+    energy, 30-31
+
+    Engelbart, Doug, 1
+
+    ensemble authentication, 327-329
+
+    entropy, 173
+
+    pruning, 286
+
+    environmental sensing, 107
+
+    epochs, 250
+
+    epsilon (ε), 80
+
+    equal error rate (EER), 329
+
+    equal intervals, 62, 66
+
+    error avoidance techniques, 297-298,
+
+    307-310
+
+    error correction approach, 298-302,
+
+    307-310
+
+    error detection approach, 302-303
+
+    Eslambolchilar, Parisa, 433
+
+
+    Eta-squared (η²), 85
+
+    ethical frameworks, 16-17
+
+    ethical issues
+
+    in BCI, 273-274
+
+    in DSP, 141-142
+
+    in ML, 195-196
+
+    in probabilistic text entry,
+
+    321-322
+
+    ethics
+
+    and adaptive touch interfaces,
+
+    407-408
+
+    in automotive user interface, 431
+
+    and personal context, 377-378
+
+    and secure gestures, 339
+
+    eudaaimonia, 17
+
+    European Data Format (EDF), 243
+
+    European Telecommunications
+
+    Standards Institute
+
+    (ETSI), 44
+
+    European Union (EU), 40, 58
+
+    evaluation metrics for supervised
+
+    algorithms, 186
+
+    classification algorithms, 187-189
+
+    regression algorithms, 186-187
+
+    even-point scales, 64
+
+    event handling, 388-389
+
+    event space, 146
+
+    event-related potential (ERP), 417
+
+    expectation-maximization algorithm
+
+    (EM algorithm), 180
+
+    eXtensible Data Format (XDF), 243
+
+    extrinsic evaluations, 288
+
+    eye tracking measures, 411
+
+    F statistic, 84
+
+    F-test. See analysis of variance
+
+    (ANOVA)
+
+    factorial studies, 60'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: 'factors. See independent variables (IVs)
+
+
+    false negative (FN), 188 rate, 86
+
+
+    false positive (FP), 188 rate, 76, 86
+
+
+    fast Fourier transform (FFT), 118, 120, 414 example, 122–123 windowing, 121–122
+
+
+    Faster RNNLM, 288
+
+
+    feature correlation analysis, 214–215
+
+
+    feature engineering, 185
+
+
+    feature extraction, 250, 417–419
+
+
+    feedforward NNs, 157, 177
+
+
+    field-programmable gate arrays (FPGAs), 27–28
+
+
+    Field-Trip, 244
+
+
+    filter order, 128–129
+
+
+    filtering outliers, 73
+
+
+    FINDPEAKS function, 419
+
+
+    finite impulse response (FIR), 125
+
+
+    finite state machine (FSM), 256–257
+
+
+    1st quartile (Q1), 71n8
+
+
+    5G Public Private Partnership (5G-PPP), 36
+
+
+    fishing. See data-dredging
+
+
+    FITCDISCRI function, 422
+
+
+    FITCNB function, 422
+
+
+    FITCTREE function, 422
+
+
+    flash ADCs, 114
+
+
+    fog computing, 34–36
+
+
+    footfall data, 202–205
+
+
+    forced-choice scales. See even-point scales
+
+
+    free-form gesture, 323–324 passwords, 325
+
+
+    frequency count of scores (FCS), 329, 331
+
+
+    Friedman test, 91–92
+
+
+    functional magnetic resonance imaging (fMRI), 239
+
+
+    G*Power20 software, 86
+
+
+    gain ratio, 176
+
+
+    galvanic skin response (GSR), 411 sensors, 415
+
+
+    γ rhythm, 239
+
+
+    Game Engagement Questionnaire (GEQ), 261
+
+
+    game pacing, 93n25
+
+
+    Garda, 327–329
+
+
+    Gardabv Authentication system evaluation by ROC, 330–331
+
+
+    Gaussian distribution, 149–150, 327–328
+
+
+    Gaussian mixture models (GMMs), 145, 180–183, 387
+
+
+    Gaussian processes, 161–163
+
+
+    gaze position and blink rate, 411
+
+
+    gel-based electrodes, 242
+
+
+    general classifier, 346
+
+
+    General Data Protection Regulation (GDPR), 40, 58
+
+
+    generalizing GUI target representations, 398–399
+
+
+    geometric Shape group, 334
+
+
+    gesture-based authentication, attacks against, 332–336 brute force guessing attack,
+    332–334 comparison between brute force and dictionary guessing attacks, 335–336
+    dictionary guessing attack, 334–335 shoulder surfing attack, 332
+
+
+    gesture-based interaction, 5'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '+   gestures, 323–324, 339
+
+    +   Glasgow City Marketing Bureau
+
+    +   (GCMB), 198
+
+    +   Glasgow data, 199
+
+    +   football data, 202–205
+
+    +   hotel advanced reservation data,
+
+    +   205–206
+
+    +   Skyscanner flight search data,
+
+    +   206–209
+
+    +   Glasgow tourism industry, 197–198
+
+    +   GLoVe method, 287
+
+    +   GNU Octave project, 244
+
+    +   gold (Au), 241
+
+    +   Google Trends (GT), 199
+
+    +   gradient descent, 160
+
+    +   graphical normality test, 78
+
+    +   graphical passwords, 324
+
+    +   graphical user interface (GUI), 244,
+
+    +   380
+
+    +   generalizing GUI target represen-
+
+    +   tations, 398–399
+
+    +   probabilistic GUI concept,
+
+    +   397–398
+
+    +   Greenhouse–Geisser correction, 80
+
+    +   grid search, 189
+
+    +   gross domestic product (GDP), 197
+
+    +   H-spread. See interquartile range
+
+    +   (IQR)
+
+    +   hand/all-body gestures, 4
+
+    +   handedness, 260
+
+    +   hands-free phone conversations, 415
+
+    +   happiness, 17
+
+    +   hard-margin SVMs, 169–170
+
+    +   hardware, 241–242
+
+    +   HARKing, 102
+
+    +   healthcare, 23–25
+
+    +   heart rate (HR), 412
+
+
+    +   hidden Markov models (HMMs),
+
+    +   385–387
+
+    +   high-pass filters, 127
+
+    +   “Hmisc” package, 214
+
+    +   Holt–Winters seasonal method
+
+    +   (additive model)
+
+    +   (HWA), 209
+
+    +   Holt–Winters seasonal method
+
+    +   (multiplicative model)
+
+    +   (HWM), 209
+
+    +   homogeneity of variance, 77n12
+
+    +   hotel advanced reservation data,
+
+    +   205–206
+
+    +   HSD test. See Tukey’s honest
+
+    +   significant difference test
+
+    +   (HSD test)
+
+    +   human users of interactive systems,
+
+    +   407
+
+    +   human-centered design (HCD), 4
+
+    +   human–computer interaction (HCI),
+
+    +   1–3, 32, 59, 131, 241, 343, 379,
+
+    +   433
+
+    +   data-driven opportunities
+
+    +   and challenges in novel HCI,
+
+    +   3–5
+
+    +   statistics, DSP, and ML as tools
+
+    +   for HCI design and
+
+    +   evaluation, 5–6
+
+    +   human–robot interaction (HRI), 2
+
+    +   humidity, 107
+
+    +   Huynh–Feldt correction, 80
+
+    +   hyperparameters, 163
+
+    +   hypothesis testing, 73
+
+    +   alpha, 76
+
+    +   CI, 74–76
+
+    +   critical value, 76
+
+    +   Mauchly’s sphericity test and
+
+    +   corrections, 79–80
+
+    +   normality test, 78–79'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: 'one-tailed and two-tailed tests,
+
+    76–77
+
+    parametric and non-parametric
+
+    tests, 77–78
+
+    identity, 62, 66
+
+    property, 133
+
+    impulse response, 125–126
+
+    in-vehicle infotainment systems, 410
+
+    independent and identically
+
+    distributed normal random
+
+    variables (IID normal
+
+    random variables), 61
+
+    independent component analysis
+
+    (ICA), 244, 249
+
+    independent samples t-test, 81–82,
+
+    255
+
+    independent variables (IVs), 60
+
+    individualized BCI-VR interaction,
+
+    adaptive technologies for,
+
+    256–258
+
+    inertial measurement unit (IMU), 107,
+
+    344
+
+    Infer. NET, 381
+
+    inferential statistics, 80n15
+
+    infinite impulse response (IIR), 125
+
+    information and communication
+
+    technology (ICT), 8, 22, 199
+
+    information file (. info file), 68
+
+    information gain, 173
+
+    information technology (IT), 32
+
+    infrastructure as a service (IaaS), 34
+
+    input model(ing), 279. See also lan-
+
+    guage model(ing)
+
+    keyboard with auto-complete,
+
+    284–285
+
+    T9 Phone Keypad, 280–282
+
+    Touchscreen Keyboard, 282–284
+
+    input sensing, 277
+
+
+    input/output operations (I/O
+
+    operations), 27–28
+
+    instance-based methods, 145
+
+    Institute of Electrical and Electronics
+
+    Engineers (IEEE), 28
+
+    integrated development environment
+
+    (IDE), 382
+
+    intelligent vehicle technologies, 409
+
+    interactive systems
+
+    analog-to-digital conversion
+
+    in interactive systems
+
+    prototyping, 116–117
+
+    BCI with, 240–241
+
+    interested arrivals, 207
+
+    interested visitors, 207
+
+    Internet of Everything (IoE), 7, 21, 57
+
+    challenges and future directions,
+
+    42–44
+
+    computing paradigms for IoE
+
+    data analysis, 32–37
+
+    elements and enabling
+
+    technologies for DSP and
+
+    ML in IoE applications,
+
+    27–32
+
+    importance of DSP and ML in
+
+    IoE applications, 23–27
+
+    security, privacy, and data
+
+    confidentiality, 37–42
+
+    Internet of Things (IoT), 3, 21, 433
+
+    interquartile range (IQR), 71, 253
+
+    interval and ratio data, 66
+
+    interval scales, 65–66
+
+    intrinsic evaluation tests, 289
+
+    inverse Fourier transform (IFT), 119
+
+    iron (Fe), 241
+
+    IRSTLM, 288
+
+    iterative dichotomizer 3 algorithm
+
+    (ID3 algorithm), 173–175'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '+   joint probability, 147
+
+    +   K-means algorithm, 145
+
+    +   K-nearest neighbor classifiers (KNN
+
+    +   classifiers), 27, 250, 412, 417
+
+    +   Kaiser criterion, 216–217
+
+    +   Kant, Immanuel, 16
+
+    +   KenLM, 288
+
+    +   kernel, 162
+
+    +   function, 171
+
+    +   keyboard with auto-complete,
+
+    +   284–285
+
+    +   keystroke savings (KS), 309
+
+    +   Kneser–Ney 4-gram word models, 306
+
+    +   Komninos, Andreas, 434
+
+    +   Kruskal–Wallis H test.
+
+    +   _See_ Kruskal–Wallis test
+
+    +   Kruskal–Wallis test, 92–93
+
+    +   lab streaming layer (LSI), 243
+
+    +   language model(ing), 279, 285–289,
+
+    +   306
+
+    +   measuring language model performance, 288–289
+
+    +   _n_-gram language models,
+
+    +   285–287
+
+    +   neural network language models,
+
+    +   287–288
+
+    +   resources for, 288
+
+    +   lattice, 290
+
+    +   layer sequencing, 158
+
+    +   lazy learning methods. _See_
+
+    +   instance-based methods
+
+    +   learning rate, 160
+
+    +   Letter group, 334
+
+    +   level of measurement, 61–66
+
+    +   LIBSVM Toolbox, 420
+
+    +   likelihood function, 151–152
+
+    +   likely arrivals, 207
+
+
+    +   likely visitors, 207
+
+    +   Likert scale, 63
+
+    +   rescaling Likert scale data, 64
+
+    +   _limbo_, 163
+
+    +   linear classifiers, 250
+
+    +   linear discriminant analysis (LDA),
+
+    +   185, 250–252, 412, 417
+
+    +   linear interpolation, 117, 287
+
+    +   linear mapping approach, 64
+
+    +   linear regression (LR), 145, 151–153
+
+    +   linear time-invariant system (LTI
+
+    +   system), 105–106, 132
+
+    +   convolution, 132–133
+
+    +   properties, 133–135
+
+    +   log marginal likelihood, 163
+
+    +   logging, 66–68
+
+    +   logistic regression, 412
+
+    +   LORETA, 244
+
+    +   low-pass filters, 127
+
+    +   low-power wide area networks
+
+    +   (LPWANs), 29
+
+    +   lower-bound correction, 80_n_14
+
+    +   Lucas, Edward, 377
+
+    +   machine learning (ML), 2, 15, 22,
+
+    +   143–144, 202, 242, 288, 379,
+
+    +   407
+
+    +   data preparation for, 419–420
+
+    +   elements and enabling
+
+    +   technologies for, 27–32
+
+    +   ethical issues in, 195–196
+
+    +   importance in IoE applications,
+
+    +   23–27
+
+    +   method, 412–413, 417
+
+    +   MI-based BCI, 248
+
+    +   MI-BCI interaction, 255
+
+    +   model building, 420–422
+
+    +   practical aspects, 183–189
+
+    +   practical implications, 422–424'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: 'predicting key business indicators using, 221–228
+
+    probability primer, 145–150
+
+    results, 422
+
+    signal processing and feature extraction, 417–419
+
+    supervised learning, 150–179
+
+    as tools for HCI design and evaluation, 5–6
+
+    unsupervised learning, 179–183
+
+    magnetic capture of vibration, 30
+
+    magnetoencephalography (MEG), 239
+
+    magnitude, 62, 66
+
+    Mainsbridge, M. M., 340
+
+    Management Bus (MBus), 28
+
+    Mann–Whitney U test, 92–93
+
+    MapReduce paradigm, 32
+
+    marginal likelihood estimation (MLE), 163
+
+    marginal probability, 147
+
+    marginalization property, 148
+
+    Matérn-class kernel, 162
+
+    mathematical Function group, 334
+
+    MATLAB, 123–125, 244, 420–421
+
+    Mauchly''s sphericity test and corrections, 79–80
+
+    maximum a posteriori approach (MAP approach), 279
+
+    maximum likelihood estimate of unigram probability, 285
+
+    McMenemy, David, 321, 431
+
+    McNemar test, 88–90
+
+    mean, 69
+
+    mean absolute percentage error (MAPE), 199
+
+    mean squared error (MSE), 158, 187
+
+    median (Mdn), 69–70, 253
+
+    mediator, 384
+
+
+    memory-based methods. See instance-based methods
+
+    mental arithmetic tasks, 415
+
+    Mercedes-Benz Fatigue Detection System, 409
+
+    metals, 241
+
+    metrics file, 66–67
+
+    microphones, 106
+
+    midspread. See interquartile range (IQR)
+
+    miniature vibrating motors, 31
+
+    MITLM, 288
+
+    MNE-Python, 244
+
+    mobile cloud computing (MCC), 34–35
+
+    mobile health applications (mHealth applications), 25
+
+    mobile phones, 341
+
+    model(s), 145
+
+    model-based algorithms, 145
+
+    selection, 189
+
+    most significant bit (MSB), 114
+
+    motor imagery BCI (MI-BCI), 239, 251
+
+    multi-access edge computing (MEC), 34, 36–37
+
+    multi-channel signals, 109
+
+    multi-class classification, 178–179
+
+    multi-dimensional signals, 109
+
+    multi-layer perceptron (MLP), 250
+
+    multi-modal
+
+    values, 70
+
+    VR feedback, 254
+
+    multi-modal feedback, VR effect of, 254–256
+
+    multi-path approach, 29
+
+    multi-tap approach, 278
+
+    multiple range test (MRT), 88
+
+    multistroke gestures, 323
+
+    multivariate predictions, 212'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '+   - feature correlation analysis, 214–215
+
+    +   - multivariate features, 213–214
+
+    +   - predicting key business indicators using ML, 221–228
+
+    +   - predicting key business indicators using statistical modeling, 218–221
+
+    +   - reducing complexity of dataset, 215–218
+
+    +   - multivariate split, 172
+
+    +   - Muse Headband, 240
+
+    +   - MuseLab software, 418
+
+    +   - Muse™, 414
+
+    +   - music Symbol group, 334
+
+    +   - n-back task, 412, 415
+
+    +   - N-best list, 290
+
+    +   - n-gram language models, 285–287
+
+    +   - NADS miniSim™, 414
+
+    +   - Naïve Bayes (NB), 145, 164–168, 412, 417
+
+    +   - NASA Task Load Index, 411
+
+    +   - natural user interfaces (NUIs), 3
+
+    +   - near-field communication (NFC), 31
+
+    +   - near-infrared spectroscopy (NIRS), 244
+
+    +   - negative log prediction probability (NLPP), 187
+
+    +   - network functions virtualization (NFV), 36
+
+    +   - networking, 28–30
+
+    +   - neural network autoregression (NNAR), 209, 221
+
+    +   - neural network language models, 287–288
+
+    +   - neural networks (NNs), 145, 153–161, 177–179
+
+    +   - neurological disorders, 248
+
+
+    +   - Neuroptype, 243
+
+    +   - Neurosky Mindwave, 240
+
+    +   - NeuRow, 254
+
+    +   - nnetar() function, 221
+
+    +   - nominal and ordinal data, 66
+
+    +   - nominal scales, 62–63
+
+    +   - non-linear Bayesian classifiers, 250
+
+    +   - non-linear classification, 171
+
+    +   - non-negative matrix factorization (NNMF), 185
+
+    +   - non-parametric models, 145, 161
+
+    +   - non-parametric Spearman correlations, 261–262
+
+    +   - non-parametric tests, 77–78, 88. See also parametric tests
+
+    +   - chi-squared test, 90–91
+
+    +   - Mann–Whitney U and Kruskal–Wallis test, 92–93
+
+    +   - McNemar test, 88–90
+
+    +   - Wilcoxon Signed-rank and Friedman test, 91–92
+
+    +   - non-rapid eye movement (NREM), 136
+
+    +   - non-uniform scalar quantization, 113–114
+
+    +   - noninvasive EEG, 237
+
+    +   - nonparametric statistical testing, 244
+
+    +   - normal distribution, 149
+
+    +   - normality test, 78–79
+
+    +   - normalization, 184–185
+
+    +   - normalized mean squared error (NMSE), 187
+
+    +   - normalized root mean square error (NRMSE), 220
+
+    +   - notch filter, 127
+
+    +   - Nozick, Robert, 274
+
+    +   - null hypothesis, 73
+
+    +   - Nyquist frequency, 112'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '+   - Nyquist theorem, 241, 248
+
+    +   - Nyquist–Shannon sampling theorem, 112
+
+    +   - observation index, 294
+
+    +   - on-device sensor data processing, 42–43
+
+    +   - 1-best, 290
+
+    +   - 1-gram language model, 286
+
+    +   - 1.5×IQR rule, 73
+
+    +   - one-tailed tests, 76–77
+
+    +   - one-way ANOVA, 84
+
+    +   - open EEG, 240
+
+    +   - open meter standard (OMS), 28
+
+    +   - Open Science Framework, 102
+
+    +   - Open Systems Interconnection (OSI), 44
+
+    +   - OpenBCI, 4, 240
+
+    +   - openness/transparency, 18
+
+    +   - Openvibe, 243
+
+    +   - ordinal scales, 63
+
+    +   - Likert scale, 63
+
+    +   - rescaling Likert scale data, 64
+
+    +   - oscillatory brain activity, 239
+
+    +   - out-of-vocabulary (OOV), 285, 293
+
+    +   - outliers, 72–73
+
+    +   - overfitting, 185–186
+
+    +   - p-hacking. See data-dredging
+
+    +   - P300 BCIs, 239
+
+    +   - paired samples t-test, 82
+
+    +   - Parakeet speech recognition interface, 299
+
+    +   - parameter, 61
+
+    +   - tuning, 304–305
+
+    +   - parametric models, 145, 161
+
+    +   - parametric tests, 77–78, 80. See also non-parametric tests
+
+    +   - ANOVA, 82–84
+
+
+    +   - effect size, 84
+
+    +   - post-hoc multiple comparisons tests, 87
+
+    +   - statistical power, 85–87
+
+    +   - t-test, 80–82
+
+    +   - participant(s), 414
+
+    +   - recruitment, 248
+
+    +   - pattern unlock, 324
+
+    +   - pattern-matching engine (PME), 27
+
+    +   - PATTERNNET function, 421
+
+    +   - pcr() function, 218, 220
+
+    +   - Pearson''s χ² test, 90
+
+    +   - perceptron, 154–155
+
+    +   - perception-based measures, 411
+
+    +   - periodic sampling, 110
+
+    +   - periodic signals, 109
+
+    +   - perplexity, 289
+
+    +   - personal classifiers, 346
+
+    +   - personal context, 341–342
+
+    +   - actually inferring, 343
+
+    +   - data source, 344
+
+    +   - end goal for classifier, 344
+
+    +   - ethics and, 377–378
+
+    +   - general classifier or personal classifiers, 346
+
+    +   - personal data continuum, 342–343
+
+    +   - privacy and ethical implications, 345–346
+
+    +   - questions to consider before developing new personal context inference,
+    343
+
+    +   - training data, 344–345
+
+    +   - personal data continuum, 342–343
+
+    +   - pervasive computing, 8
+
+    +   - physical computing, 8
+
+    +   - physical movement, 107
+
+    +   - physiological artifacts, 249
+
+    +   - physiological data'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '+   cognitive load classification
+
+    +   using driver, 413
+
+    +   data source, 414-417
+
+    +   ML models, 417-424
+
+    +   recording, 431
+
+    +   platform as a service (PaaS), 34
+
+    +   POLYFIT function, 419
+
+    +   polynomial kernel, 162n8
+
+    +   pooled variance, 81n17
+
+    +   estimate, 81
+
+    +   population, 60-61
+
+    +   post-hoc
+
+    +   multiple comparisons tests, 87
+
+    +   power analysis, 86
+
+    +   posteriori analysis, 248
+
+    +   classification, 250-251
+
+    +   feature extraction, 250
+
+    +   interacting with VR, 251-262
+
+    +   pre-processing, 248-250
+
+    +   power spectrum density (PSD), 418
+
+    +   prcomp() function, 216-217
+
+    +   pre-defined gestures, 381
+
+    +   pre-processing, 248-250
+
+    +   pre-trained language models, 288
+
+    +   precautionary principle, 18
+
+    +   Presence Questionnaire (PQ), 262
+
+    +   principal component (PC), 216
+
+    +   principle component analysis (PCA), 185, 216
+
+    +   prior gaming experience, 258-260
+
+    +   priori power analysis, 85
+
+    +   privacy, 37-42, 57
+
+    +   probabilistic approach, 278, 379
+
+    +   probabilistic GUI
+
+    +   concept, 397-398
+
+    +   frameworks, 384
+
+    +   probabilistic inference frameworks, 381
+
+    +   probabilistic reasoning, 383
+
+
+    +   probabilistic text entry
+
+    +   decoding, 289-297
+
+    +   ethical issues in, 321-322
+
+    +   input modeling, 279-285
+
+    +   language modeling, 285-289
+
+    +   statistical formulation, 279
+
+    +   system, 288
+
+    +   typing on smartwatch, 303-310
+
+    +   uncertain text input, 277-278
+
+    +   user interface issues, 297-303
+
+    +   probabilistic user interface
+
+    +   framework (ProbUI framework), 380-381
+
+    +   deriving probabilistic models, 385-388
+
+    +   overview, 384-385
+
+    +   PML, 385
+
+    +   rules and event handling, 388-389
+
+    +   transition effects using ProbUI probabilities, 392-394
+
+    +   UI elements adapt to hand postures, 394, 396
+
+    +   probability
+
+    +   mass function, 147
+
+    +   theory, 145
+
+    +   of Type I error, 86
+
+    +   of Type II error, 86
+
+    +   probability distribution function (PDF), 113, 147-148
+
+    +   probability primer, 145
+
+    +   discrete and continuous probabilities, 147-148
+
+    +   Gaussian distribution, 149-150
+
+    +   probability theory formalization, 146
+
+    +   properties of probabilities, 148-149'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: 'ProbUI''s Modeling Language (PML), 385, 396
+
+    product rule, 148
+
+    productive deployment, 380
+
+    professional ethics, 17–18
+
+    programming-by-demonstration, 381, 383
+
+    Proton language, 382
+
+    proctor, 326–327
+
+    pruning, 293–294
+
+    psychiatric disorders, 248
+
+    Python software, 244
+
+    pytorch, 160
+
+    quadratic interpolation, 117
+
+    quadratic programming solver (QP solver), 169
+
+    qualitative data. See nominal and ordinal data
+
+    quality of experience (QoE), 35
+
+    quantization, 110, 112
+
+    distortion, 113
+
+    error and noise, 113
+
+    non-uniform scalar, 113–114
+
+    uniform scalar, 112–113
+
+    QWERTY virtual keyboard, 60, 86, 303–304
+
+    R language, 209
+
+    R-2R ladder, 117
+
+    radial basis function algorithm (RBF algorithm), 27, 413
+
+    radio access network (RAN), 36
+
+    radio remote heads (RRHs), 36
+
+    random signals, 109
+
+    random variables, 60, 146
+
+    random-restart hill climbing approach, 296
+
+    range, 71
+
+
+    rapid eye movement (REM), 136
+
+    Raspberry Pi, 117
+
+    ratio scales, 66
+
+    rational quadratic kernel, 162
+
+    raw file, 66–67
+
+    real-time acquisition, 243
+
+    receiver operating characteristic
+
+    (ROC), 329
+
+    Gardabv Authentication system
+
+    evaluation by, 330–331
+
+    and related parameters, 329–330
+
+    recognition approaches, 325
+
+    DTW, 327
+
+    frequency count of scores, 331
+
+    Garda, 327–329
+
+    Gardabv Authentication system
+
+    evaluation by ROC, 330–331
+
+    metrics for evaluating, 329
+
+    proctor, 326–327
+
+    ROC and related parameters,
+
+    329–330
+
+    recognition system, 325
+
+    recurrent neural network language
+
+    models (RNNLMs), 287–288
+
+    redirects, 206
+
+    reduced error pruning, 176
+
+    regression, 150
+
+    algorithms, 143–144, 186–187
+
+    Gaussian processes, 161–163
+
+    linear, 151–153
+
+    NNs, 153–161
+
+    regularized LDA, 250
+
+    reinforcement learning (RL), 143
+
+    repeated-measures ANOVA, 84
+
+    repeated-measures design. See
+
+    within-subjects
+
+    resource-constrained devices, 42
+
+    response variables. See dependent
+
+    variables (DVs)'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '+   Rivest–Shamir–Adleman
+
+    +   cryptosystem (RSA
+
+    +   cryptosystem), 38
+
+    +   road transport, 25–26
+
+    +   rolling PCAR technique, 220
+
+    +   root mean square error (RMSE), 222
+
+    +   rule post-pruning, 176
+
+
+    +   Sakoe–Chiba bands, 334
+
+    +   sample/sampling, 60–61, 110
+
+    +   frequency, 110
+
+    +   period, 110
+
+    +   procedure, 61
+
+    +   rates, 241
+
+    +   sample-and-hold circuits, 116
+
+    +   size, 61
+
+    +   space, 146
+
+
+    +   scale() function, 216
+
+    +   scatter, 70
+
+    +   scatterplotMatrix() function, 214
+
+    +   screeplot() function, 216
+
+    +   searches, 206
+
+
+    +   seasonal and trend decomposition using Loess and naive predictor (STL–naïve),
+    209
+
+    +   2nd quartile (Q2), 71n8
+
+    +   secure gestures, 323–324
+
+    +   attacks against gesture-based authentication, 332–336
+
+    +   ethics and, 339
+
+    +   metrics for evaluating recognition approaches, 329–331
+
+    +   problem of recognition, 324–325
+
+    +   recognition approaches, 325–329
+
+    +   security, 37–42
+
+    +   sense of agency (SoA), 340
+
+    +   sensing, 31–32
+
+    +   sensorimotor systems, 239
+
+
+    +   sensors, 409
+
+    +   serial peripheral interface (SPI), 117
+
+    +   Shapiro–Wilk test, 78, 94
+
+    +   signal(s), 106
+
+    +   acquisition, 246–247
+
+    +   amplification, 241
+
+    +   continuous-time vs. discrete-time, 108–109
+
+    +   continuous-value vs. discrete-value, 109
+
+    +   deterministic and random, 109
+
+    +   frequency spectrum, 118
+
+    +   multi-channel and multi-dimensional, 109
+
+    +   periodic and aperiodic, 109
+
+    +   processing, 108, 417–419
+
+    +   sampling, 110
+
+
+    +   significance level, 74, 76
+
+    +   silver (Ag), 241
+
+    +   silver chloride (AgCl), 241
+
+    +   simple manual tuning approach, 295
+
+    +   simple visualization, 229–230
+
+    +   Skyscanner, 200
+
+    +   flight search data, 206–209
+
+    +   small-factor vibrating motors, 31
+
+
+    +   small-to-medium enterprises (SME), 32
+
+    +   smart cities, 235
+
+    +   ethics and, 235–236
+
+    +   smart tourism, 197
+
+    +   smartphones, 379
+
+    +   apps, 431
+
+    +   smartwatch
+
+    +   decoding speed, 306–307
+
+    +   development and test sets, 303–304
+
+    +   error correction and avoidance, 307–310
+
+    +   keyboard, 283'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: 'language modeling, 306
+
+    parameter tuning, 304–305
+
+    typing on, 303
+
+    smoothing, 286
+
+    snooping. See data-dredging
+
+    soft-margin SVMs, 170–171
+
+    softmax activation function, 179, 421
+
+    software, 242–244
+
+    software as a service (SaaS), 34
+
+    software development kits (SDKs), 6
+
+    software-defined networking
+
+    (SDN), 35
+
+    Sony SmartWatch 3, 303
+
+    source reconstruction, 244
+
+    Special character group, 334
+
+    speech recognition, 302
+
+    sphericity, 79
+
+    SplitBoard, 278
+
+    splitting criterion, 172
+
+    splitting features, 172
+
+    splitting predicates, 172
+
+    spread, 70
+
+    squared exponential kernel, 162
+
+    SRILM, 288
+
+    standard deviation (SD), 71–72, 185,
+
+    255
+
+    standard error (SE), 71–72
+
+    standard error of mean (SEM), 72
+
+    standardization, 184–185
+
+    startups, 32
+
+    statistic, 61
+
+    statistical formulation, 279
+
+    statistical methods, 59
+
+    case study, 93–95
+
+    data collection and logging,
+
+    66–68
+
+    descriptive statistics, 69–72
+
+    hypothesis testing, 73–80
+
+    level of measurement, 61–66
+
+
+    non-parametric tests, 88–93
+
+    outliers, 72–73
+
+    parametric tests, 80–87
+
+    sample and population, 60–61
+
+    terminologies, 60
+
+    statistical modeling, predicting key
+
+    business indicators using,
+
+    218–221
+
+    statistical normality test, 78
+
+    statistical power analysis, 85–87
+
+    Statistics and Machine Learning
+
+    Toolbox, 420
+
+    statistics as tools for HCI design and
+
+    evaluation, 5–6
+
+    steady-state visually evoked potentials
+
+    (SSVEPs), 239
+
+    steel, 241
+
+    stochastic linear regression, 151
+
+    stop-band filters, 127
+
+    stopping criterion, 172
+
+    Student–Newman–Keuls method
+
+    (SNK method), 88n22
+
+    subject, 40
+
+    subjective measures, 411
+
+    successive approximation ADCs
+
+    (SARs), 114
+
+    sum rule, 148
+
+    supervised learning (SL), 143, 150, 256,
+
+    420. See also unsupervised
+
+    learning (UL)
+
+    classification, 164–179
+
+    regression, 150–163
+
+    supervised ML algorithms, 414
+
+    support vector machines (SVMs), 145,
+
+    169–171, 250, 412–413, 417
+
+    Swipeboard, 278
+
+    SwipeKey, 278
+
+    system-on-chip (SoC), 28
+
+    system''s frequency response, 118'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '+   - t-test, 80
+
+    +   - independent samples t-test, 81-82
+
+    +   - paired samples t-test, 82
+
+    +   - T9 Phone Keypad, 280-282
+
+    +   - tactile feedback, 31-32
+
+    +   - TANSIG function, 421
+
+    +   - Task Load Index (TLX), 261
+
+    +   - technology, 431
+
+    +   - TensorFlow, 160, 288
+
+    +   - test conditions, 60
+
+    +   - 3-gram language model (trigram language model), 286
+
+    +   - 3rd quartile (Q3), 71n8
+
+    +   - time-frequency analysis, 244
+
+    +   - tin (Sn), 241
+
+    +   - tiny-dnn, 160
+
+    +   - token, 291-292, 294
+
+    +   - TouchML toolkit, 284
+
+    +   - touchscreen
+
+    +     - gestures, 323
+
+    +     - keyboard, 282-284
+
+    +   - tourism, 197
+
+    +     - analytics, 199
+
+    +   - transmission control protocol (TCP), 243
+
+    +   - treatments, 60
+
+    +   - tree pruning, 176
+
+    +   - trimodal values, 70
+
+    +   - true negative (TN), 188
+
+    +   - true positive (TP), 188
+
+    +   - trust, 22, 39, 196
+
+    +   - Tukey''s honest significant difference test (HSD test), 88n21
+
+    +   - Tukey''s inner fences, 73
+
+    +   - Tukey''s range test, 88n21
+
+    +   - Twitter, 287
+
+    +   - 2D Gaussian input model, 284
+
+
+    +   - 2-gram language model (bigram language model), 286
+
+    +   - two-tailed independent t-test, 82
+
+    +   - two-tailed tests, 76-77
+
+    +   - type I error, 76
+
+    +   - typing on smartwatch, 303-310
+
+    +   - UK Civil Aviation Authority (CAA), 200
+
+    +   - uncertain text input, 277-278
+
+    +   - underfitting, 185-186
+
+    +   - unidirectional brain-to-computer communication, 239
+
+    +   - uniform sampling, 110
+
+    +   - uniform scalar quantization, 112-113
+
+    +   - unistroke gestures, 323
+
+    +   - univariate models, 209-211
+
+    +   - univariate predictions on hotel data, 211-212
+
+    +   - univariate split, 172
+
+    +   - unpruned language models, 306
+
+    +   - unsupervised learning (UL), 143-144, 179. See also
+
+    +     - supervised learning (SL)
+
+    +     - evaluation metrics for supervised algorithms, 186-189
+
+    +     - GMMs, 180-183
+
+    +     - K-means clustering, 179-180
+
+    +     - model selection, 189
+
+    +     - overfitting, 185-186
+
+    +   - use scenario, 278
+
+    +   - user equipment (UE), 35
+
+    +   - user error, 278
+
+    +   - user interface (UI), 379-381
+
+    +     - complex touch behaviors and integrate into, 381-384
+
+    +     - elements adapt to hand postures, 394-396
+
+    +     - error avoidance techniques, 297-298'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '+   error correction, 298–302
+
+    +   error detection, 302–303
+
+    +   issues, 297
+
+    +   user profile, 260–262
+
+    +   variability measures, 70–72
+
+    +   variance, 72
+
+    +   estimation, 153
+
+    +   vehicle automation, 431
+
+    +   vehicle speed, 411
+
+    +   VelociTap decoder, 291–293, 306
+
+    +   input model, 282–283
+
+    +   process for optimizing parameters of, 297
+
+    +   virtual network functions (VNFs), 36
+
+    +   virtual reality (VR), 31, 240, 277
+
+    +   adaptive technologies for individualized BCI-VR interaction, 256–258
+
+    +   designing VR for BCI interaction, 252
+
+    +   prior gaming experience, 258–260
+
+    +   effect of immersive VR, 252–254
+
+    +   interacting with, 251
+
+    +   LDA, 251–252
+
+    +   effect of multi-modal feedback, 254–256
+
+    +   understanding user characteristics in BCI interaction, 258
+
+    +   user profile, 260–262
+
+    +   virtual reality with motor priming conditions (VRMP conditions), 252–253
+
+    +   virtualized baseband units (vBBUs), 36
+
+    +   virtue ethics, 17
+
+
+    +   VISAR AR keyboard, 298
+
+    +   visual perception–manual control, 410
+
+    +   visual signals, 107–108
+
+    +   visual–manual tasks, 410
+
+    +   Web, 287
+
+    +   searching, 200
+
+    +   WebTEM, 68n7
+
+    +   Weiser, Mark, 1–2
+
+    +   weka, 160
+
+    +   Wiese, Jason, 377
+
+    +   Wilcoxon Signed-rank test, 91–92
+
+    +   windowing, 121–122
+
+    +   wired EEG amplifiers, 242
+
+    +   wireless EEG amplifiers, 242
+
+    +   wireless meter-bus (WM-B), 28
+
+    +   wireless sensor networks (WSN), 27
+
+    +   within-subject ANOVA. See repeated-measures ANOVA within-subjects, 60
+
+    +   Witten-Bell smoothing, 306
+
+    +   word error rate (WER), 288
+
+    +   Word models, 306
+
+    +   word-gesture keyboard approach, 280
+
+    +   Word2Vec method, 287
+
+    +   words per minute (wpm), 66, 302
+
+    +   Wyrm, 244
+
+    +   XDF. See eXtensible Data Format (XDF)
+
+    +   XOR function, 155
+
+    +   z distribution, 81n16
+
+    +   zero-order hold or staircase approximation, 117
+
+    +   ZoomBoard, 278'
+  merge: -1
+  img_proc: true
