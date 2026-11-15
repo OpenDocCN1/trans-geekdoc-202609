@@ -1,0 +1,2 @@
++   [更正：“基于机器学习的 COVID-19 死亡率预测表明抗癌药物可重新定位用于治疗重症病例”[生命科学人工智能] 1(2021), 100020](README.md)
++   [更正：“基于机器学习的 COVID-19 死亡率预测表明抗癌药物可重新定位用于治疗重症病例”[生命科学人工智能] 1(2021), 100020](corrigendum-to-machine-learning-based-prediction-of-covid-19.md)
