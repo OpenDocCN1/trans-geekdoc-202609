@@ -1,0 +1,17 @@
+Road, the Armory, and the General store have since been found active and transacting using crypto-currencies. Every country is currently facing this problem. The governments and other financial regulators are cooperating to develop proper legal frameworks in this regard.
+
+The dark web is the primary concern of the Federal Bureau of Investigation (FBI), the European Banking Authority, and others. It is essential to analyze how the network works, along with the associated mining processes. There should be a regulatory authority to track such activities. The extraction of illicit transactions can be done through Random Access Memory (RAM) analysis and hard disk analysis. Table 5 depicts the legal implications involved in the use of crypto-currencies in the drug market.
+
+# Ethical Implications
+
+The ethical implications related to the use of cryptocurrencies due to their decentralization and anonymity features, and how they are related to illegal activities, are now discussed here.
+
+# Decentralization
+
+Decentralization is one of the key features of crypto-currencies, which is making it beyond the control of any monetary controlling powers. Due to this and due to the way Blockchains work, all the transactions handled are irreversible. Proper maintenance of transaction ledgers at every node, and validation of transaction at the distributive node (not by the central authority), are necessary to make this process more secure. In the case of Bitcoin, users have transparency of the validating code used and can participate in software development. However, there is no government control in transactions handled in such a decentralized manner. Therefore, regulations may help in imposing taxes and preventing black money sustainably. Table 6 illustrates the ethical issues involved in decentralization.
+
+# Anonymity
+
+There are untraceable electronic transfers due to the anonymity feature of crypto-currencies. The Onion Routing (TOR) adds further to anonymity due to the layered encryption process. Due to the anonymity characteristic, users can transfer money without leaving a trace. Moreover, the Dark Net and ransomware are getting popular due to this. People behind these illegal activities go unnoticed due to this feature. Software like Tox allows us to make malware suitable, unfortunately, for malicious activities.
+
+Various ethical issues are also caused due to anonymity. Around 100 countries were affected by the Wannacry ransom demanded in bitcoins. Similarly, the Petya cyerattack targeted the Cadbury chocolate factory in Tasmania. The criminals behind such attacks went unnoticed due to anonymity. Accounts cannot be frozen, and also nobody knows the real identity of the account holders. Therefore, regulation nodes are implemented to prevent this issue. These nodes are created to reveal the real identities of users. Suspicious and illicit transactions are automatically flagged and made to enable further investigation. True identities are revealed at regulation nodes. In this case, users are no longer allowed to mask their identity to surface the web. Even if ransomware is detected and deactivated, files are not restored, and therefore, framing appropriate laws in this regard is essential. Table 7 shows the legal issues related to anonymity feature of crypto-currencies.

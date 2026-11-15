@@ -1,0 +1,11 @@
+# Figure 7. Timeline of Toyota's blockchain journey
+
+![](bbox=[0.195, 0.162, 0.765, 0.436])
+
+of developing next-generation electricity systems that could enable individuals and businesses to trade electricity among themselves.
+
+The firm proposed its plan, in January 2020, to build Toyota Woven City in Japan. With a vision to improve the lifestyle in future, it is expected to be a 'living laboratory' for researchers, providing them with real-life environment for developing technologies (Toyota Woven City, 2020). The Toyota Blockchain Lab in March 2020 announced its plan to pool in partner companies and thus, expand collaborations more than ever (Toyota, 2020). The Lab also worked on global collaboration among Toyota Group companies for symbiotic use of resources. Furthermore, the firm revealed development of a blockchain-based ID (Identifier) platform for individuals as well as vehicles, built in collaboration with Securitize (Bourne, 2020). The platforms can be employed multifariously i.e. personal ID platform can be harnessed by employers to maintain employee-related benefits; vehicle ID platform can be harnessed to maintain records related to vehicle registration, maintenance, and others. Figure 7 summarizes the blockchain journey of Toyota. With many proposals already in pipeline, the best might yet to come from the visionary portfolio of Toyota.
+
+# Case: Alibaba.com
+
+Alibaba Group is a conglomerate, with Alibaba.com being one of its businesses operating in the area of e-commerce. Headquartered in China, the Group was founded in 1999 (Alibaba Group, 2020). As of the end of 2019, the Group employed more than 116,000 employees. The Group is into multiple businesses, viz., commerce, cloud computing, innovation, digital media and entertainment. It might appear young by age, but it is mighty by deeds and has already proved its mettle in several fields. Alibaba.com is a leading platform for global wholesale and trade. In 2018, the company held the honour of being China's largest integrated international online wholesale marketplace by revenue (Alibaba Group, 2020). The

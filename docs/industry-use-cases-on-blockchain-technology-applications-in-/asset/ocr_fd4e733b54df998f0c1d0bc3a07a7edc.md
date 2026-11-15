@@ -1,0 +1,13 @@
+management, in order to ensure that a seller receives payment and the buyer receives the contractually agreed asset, thus mitigating credit and default risk (Gorham and Singh, 2009).
+
+Securities Settlement Systems (SSS), more specifically in the form of Central Securities Depositories (CSDs), were introduced over twenty years ago in order to provide a centralised, safekeeping function for local markets and to expedite the processing of clearing and settlement in a centralised and electronic way (Loader, 2002). Local market issuers would typically have their entire issue in safekeeping at the CSD (Dickinson, 2015). Dickinson (2015) further elaborates that CSDs dematerialised physical stocks, which were previously kept as physical certificates either at investors, issuers or custodians. These stocks were prone to loss, damage and theft in addition to being expensive to store.
+
+# Figure 1. Exchange Industry Value Chain [adapted from Floreani and Polato (2014)]
+
+![](bbox=[0.19, 0.35, 0.77, 0.555])
+
+CSDs are found at the end of the post-trade settlements process, which forms a subset of the overall exchange-industry value chain, as illustrated in Figure 1, that suggests that there are three key phases in the value chain, namely Origination, Order Execution and Post-Trade; and that each of these activities is regulated and supervised in a given market or region (Floreani and Polato, 2014). CSDs are concerned with the post-trade activities of safekeeping and transfer of securities. Thus, a CSD could be considered as performing securities settlement per market or per region as part of the overall post-trade process. Caprio (2013) indicates that securities settlement is defined by four primary requirements, namely:
+
++   - Securities Ownership: Settlement must complete the legal requirements in respect of transfer of ownership, within the legal framework of the applicable jurisdiction;
++   - Cash settlement: Although cash payment is an important aspect of securities settlement, what is of primary importance is the delivery of the property (securities/stocks/shares). Therefore, buyers or sellers should maintain ownership in the event of insolvency of an intermediary while cash or securities are being processed;
++   - Settlements that are cost-effective and efficient: these should also be globally competitive and able to interoperate with other settlement systems globally; and

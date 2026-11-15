@@ -1,0 +1,17 @@
+This research is aimed at providing a pragmatic conceptual design of the application of Blockchain technology to securities settlement in a manner which balances the true benefits of the technology without introducing undue risk. The risk of failure of the technology of a CSD or a system which provides settlement services to a market can be catastrophic to the economies of countries. Thus, this research study aims to play a positive role in ensuring that robust models are considered, as the technology which underpins these markets is fast evolving.
+
+# LITERATURE REVIEW
+
+The post-trade securities settlements ecosystem will be discussed in this section, followed by blockchain as a potential disrupter for CSDs and the use of distributed ledger technology for CSDs.
+
+# Post-Trade Securities Settlements Ecosystem
+
+Before providing detail about the post-trade processes, it is important to understand the context of the total ecosystem of actors, intermediaries and regulators who are involved in this industry. Harris (2004) determines that stocks (equities or debt instruments for example) can take many forms, such as equities, commodities or debt instruments. Stocks can be bought and sold on exchanges through brokers who are members of an exchange. Harris (2004) further defines trading as a search problem whereby buyers need to find sellers and sellers need to find buyers. The primary actors involved in the trading of stocks are:
+
++   • Brokers: They assist clients to find traders who are willing to trade with them;
++   • Dealers: Thy trade with clients as and when they want to trade. Where dealers buy and sell, prices are ‘bid’ and ‘offer’ respectively; and
++   • Exchanges and Brokerages: they help to reduce search costs for buyers and sellers by placing both on the same electronic trading platform, thus engaging buyers with sellers and vice versa. These platforms also provide important information on the best bids and offers for a particular stock.
+
+Once a buyer and seller have agreed on a price (between the bid and the offer) through their respective brokers at an exchange, the exchange sends a report to the brokers confirming the trade. A buyer must pay the broker who is purchasing stock (a term used interchangeably with security), then a number of days later (five days in South Africa), the seller receives payment for the stock while the buyer receives stock in the correct quantity, at the price already agreed (Harris, 2004).
+
+The first electronic stock exchange, NASDAQ, was created in 1971 in the United States and became fully electronic in 1980 (Atack and Neal, 2009; Gorham and Singh, 2009). Electronic stock exchanges for the trading of securities require more efficient post-trade processing. Post-trade processing involves the processes of Clearing and Settlement. Loader (2002) describes clearing as the “the preparation through matching, recording and processing instructions of a transaction for settlement” and settlement as the “exchange of cash or assets in return for other assets” which includes the “exchange of legal ownership”. Gorham and Singh (2009) describe the process of manually clearing and settling matched trades as both tedious and complex and requires many institutions in financial markets to co-operate and work together. Managing the complexity of clearing and settlement, is also a key component of post-trade risk

@@ -1,0 +1,49 @@
+
+to both customers and employees; and thirdly, build skills and capabilities that are enterprise wide. If implemented well, these authors say that the return on investment can be achieved within 9-12 months as the deployment is quick and cost effective with the quality of work guaranteed (Lacity and Willcocks, 2016). The return on investment can be achieved through this digital labour as it will reduce costs and free up human resources who would then focus more on important tasks and for robots to perform large number of human tasks frequently repeated, algorithmized, and labour-intensive tasks (Uskenbayeva et al., 2019; Maalla, 2019). Table 3 describes the criteria for the tasks to be automated by RPA for the robot to correctly perform its actions.
+
+### Table 3. Criteria for RPA [adapted from Asatiani and Penttinen (2016)]
+
+| Criteria | Description |
+| :--- | :--- |
+| High volume of transactions | A task or its sub-task is performed frequently in high volumes by one or more employees. |
+| Need to access multiple systems | Repeated tasks execution steps that involve multiple systems, for instance, capturing data on the spreadsheet and uploading it into a system. |
+| Stable environment | A task can be predefined and remain the same every time it is performed. |
+| Low cognitive requirements | A task that does not involve creativity, subjective judgment or complex interpretation skills. |
+| Easy to break down into unambiguous rules | A task without ambiguity or risk of misinterpretation which can be easily broken down into simple, straightforward and rule-based steps. |
+| Proneness to human error | A task prone to human error, but not occurring to computers. Example - counting numbers across multiple columns. |
+| Limited need for exception handling | A highly standardised task with little or few exceptions occurring during task execution. |
+| Clear understanding of the current manual costs | Return on investment can be estimated and measured on RPA implementation using the current cost structure of a manual task. |
+
+The steps for effective implementation of RPA include the analysis of business processes, assessing business processes for robotization and calculation of the expected effect, development, implementation and scaling. Refer to Figure 3, and some brief explanation below:
+
+### Figure 3. Steps for effective implementation of RPA [adopted from Geyer-Klingeberg et al., (2018)]
+
+![](img/c4fdb01b72024490068fd1d70a4679bb_52_0.png)
+
+- **Assessing RPA Potential**: The first decision for effective implementation of RPA (see Figure 3) depends on the assessed potential for process automation carried out using the criteria in Table 3. The processes should be scalable, repetitive and standardised for a successful RPA implementation. A process that is complex with many variants should not be replicated as it would require significant investment with cost of maintenance and servicing the robots outweighing the required savings.
+
+- **Developing RPA Application**: The next step is to train and develop the RPA application within the existing workflow, as a pilot project. The generated process instances should be evaluated after a sound number of executions using the process mining applications. The most effective RPA implementations are identified, and the performance of different robots and the non-robotic supported processes should be benchmarked.
+
+- **Sustaining RPA Benefits**: The last step is to continuously monitor the selected and implemented RPA applications using process mining to ensure that the impact of the RPA initiative and the return on investment is sustained. Through process mining, users can monitor process change and detect when a process evolves over time and adapt the robots to align with an evolving or alternative business environment (Geyer-Klingeberg et al., 2018).
+
+The current study explores how a Blockchain-based RPA mechanism resolves some of the challenges presented to the online registration system. As stated in the introduction, the current system is partly automated and partly manual, and it processes high volumes of transactions during the registration period. In this case, the RPA could be implemented to manage the processing, validation and to securely distribute of these transactions through Blockchain mechanisms. The following section explores the Blockchain technology, as it is possible to use the robots to reach an agreement and record transactions without the involvement of a controlling authority through a Blockchain-based RPA mechanism (Ferrer, 2019).
+
+## Blockchain Technology
+
+Blockchain is a peer-to-peer distributed database that provides immutable and transparent append-only register of all the transactions shared by participating members in the network. Each transaction contains details of who sent it, what was sent, at what time and to whom; transactions are then grouped into blocks in a chronological order (Reyna et al., 2018). The chain is formed by linking blocks together using a hash function, which forms a unique identifier, and this is used to create the link to the previous block. Each block uses a cryptographic technique to validate data linked to that block through proof of work, hash function, digital signature, and encryption mechanisms (Dubovitskaya, Novotny, Xu & Wang, 2019). The identity of the participants (also called nodes in the network) and their rights to participate are defined within a network. The consensus obtained from the members is represented digitally and allows each transaction to be recorded in the Blockchain. The distributed service of the database ensures that trustworthiness can be achieved by making the data available to all participants to verify that the data have not been tampered with since the first definition. This service also ensures that the data remains immutable (Reyna et al., 2018; Dubovitskaya et al., 2019). Once the transactions are recorded on the database they cannot be deleted or removed to keep the historical data. The basic characteristics of Blockchain are summarised in Table 4.
+
+### Table 4. Essential Characteristics of Blockchain [adapted from Cheng, Zeng & Huang (2017)]
+
+| Characteristic | Description |
+|---|---|
+| Identity | - Use scanner to establish identity of the participants |
+| Data object | - Sequential data<br>- Transactions stored in blocks of chains and in chronological order |
+| Transaction structure | - No trusted central entity<br>- No need for mutual trust between the transactional entities<br>- Use of smart contracts to trade transactions in a Blockchain system |
+| Information extension | - The information is always available and accessible<br>- Each transaction is recorded and maintained by consensus of all the participants<br>- All the transactions are kept from the beginning<br>- Therefore, traceability and auditability are possible |
+| Data security | - High security<br>- The data are stored and publicly available in each node of the network<br>- All nodes can maintain the data in other nodes. |
+
+The problem of trust in Internet-based e-government systems, including the Internet of Things, is complex, especially when sensitive information is transmitted and when no verification or audit mechanisms are available. The need to secure personal data collected from such systems has become more acute as the networks underlying these systems and access to them have become more widespread. This challenge has also prompted computer scientists involved in information security research and development to find new ways to protect the data (Reyna et al., 2018; Shahaab et al., 2020). Such building of trust has two components namely: trust in technology; and trust in institutions and people. These are not totally independent. The use of Blockchain is primarily addressing the trust in technology aspect and minimizing the need for trust in institutions and individuals.
+
+As an example, Nakamoto (2008) conceptualised a peer-to-peer electronic transaction system that uses public-key cryptography technology in order to solve the double-spend problem where a private key is assigned to each participant and a public-key is known among the participants. This forms the backbone of cryptocurrency Bitcoin, where there is no need for third-party financial institutions to oversee and control the transactions. Here, cryptographic proof is the basis for trust in the network instead of a central financial institution or intermediary (Mougayar, 2016). However, it is important to note that the Blockchain is also prone to attacks when a single node controls more than half (51%) of processing power.
+
+With the application of three generations of Blockchains, it is envisaged that sectors such as finance, accounting, management, and law could be revolutionised. Blockchain 1.0, which focused on digital currency, is the first Blockchain generation that uses an underlying technology platform such as mining, hashing, and the public ledger and transaction-enabling software for digital currency. Blockchain 2.0 broadened the focus to the digital economy and is the second generation of Blockchain. It involves smart contracts which are computer programs that can automatically execute the terms of a contract. Payments are automatically processed after a pre-configured condition in a smart contract is met by participants. Blockchain 3.0 extends the focus still further and its group of beneficiaries are digital society. Blockchain 3.0 refers to a variety of application areas such as art, health, science, identity, governance, education, public goods, and different aspects of culture and communication. It does not necessarily involve economic activity (money, currency, commerce or financial markets). The application of Blockchain 3.0 for digital society includes smart governance, smart mobility, smart living, the smart use of natural
