@@ -1,0 +1,103 @@
+# Acknowledgements
+
+The authors would like to thank Dr. Enrique Baca-Garcia for providing expert advice on clinical and patient-related matters. We would also like to thank all participants and therapists for their valuable contributions to the studies.
+
+# Appendix A. Supplementary data
+
+Supplementary data to this article can be found online at https://doi.org/10.1016/j.invent.2023.100657.
+
+# References
+
++   Al-Lawati, J., Al-Lawati, N., Al-Siddiqui, M., Antony, S.X., Al-Naamani, A., Martin, R., Kolbe, R., Theodorsson, T., Osman, Y., Al-Hussaini, A., et al., 2000. Psychological morbidity in primary health care in Oman: a preliminary study. Sultan Qaboos Univ. Med. J. 2 (2), 105–110.
+
++   Anderson, E., Shivakumar, G., 2013. Effects of exercise and physical activity on anxiety. Front. Psychiatry 4, 27.
+
++   Aylett, E., Small, N., Bower, P., 2018. Exercise in the treatment of clinical anxiety in general practice—a systematic review and meta-analysis. BMC Health Serv. Res. 18 (1), 1–18.
+
++   Bahador, N., Ferreira, D., Tamminen, S., Kortelainen, J., et al., 2021. Deep learning-based multimodal data fusion: case study in food intake episodes detection using wearable sensors. JMIR mHealth uHealth 9 (1), e21926.
+
++   Barrigón, M.L., Berrouiguet, S., Carballo, J.J., Bonal-Giménez, C., Fernandez-Navarro, P., Pfang, B., Delgado-Gómez, D., Courtet, P., Aroca, F., Lopez-Castroman, J., et al., 2017. User profiles of an electronic mental health tool for ecological momentary assessment: Memind. Int. J. Methods Psychiatr. Res. 26 (1), e1554.
+
++   Bergstra, J., Bengio, Y., 2012. Random search for hyper-parameter optimization. J. Mach. Learn. Res. 13 (2).
+
++   Berrouiguet, S., Ramírez, D., Barrigón, M.L., Moreno-Muñoz, P., Camacho, R.C., Baca-García, E., Artés-Rodríguez, A., et al., 2018. Combining continuous smartphone noninvasive sensors data capture and unsupervised data mining techniques for behavioural changes detection: a case series of the evidence-based behaviour (eb2) study. JMIR mHealth uHealth 6 (12), e9472.
+
++   Bonilla-Escobar, F.J., Ramírez, D., Sedano-Capdevila, A., Campaña-Montes, J.J., Baca-García, E., Courtet, P., Artés-Rodríguez, A., 2019. Assessment of e-social activity in psychiatric patients. IEEE J. Biomed. Health Inform. 23 (6), 2247–2256.
+
++   Carretero, P., Campana-Montes, J.J., Artés-Rodríguez, A., 2020. Ecological momentary assessment for monitoring the risk of suicide behaviour. In: Behavioral Neurobiology of Suicide and Self Harm. Springer, pp. 229–245.
+
++   Cornelius, C., Kapadia, A., Kotz, D., Peebles, D., Shin, M., Triandopoulos, N., 2008. Anonsense: privacy-aware people-centric sensing. In: Proceedings of the 6th International Conference on Mobile Systems, Applications, and Services, pp. 211–224.
+
++   de Pedro-Cuesta, J., García-Sagredo, P., Alcalde-Cabero, E., Alberquilla, A., Damián, J., Bosca, G., López-Rodríguez, F., Carmona, M., de Teña-Dávila, M.J., García-Olmos, L., et al., 2013. Disability transitions after 30 months in three community-dwelling diagnostic groups in Spain. PLoS One 8 (10), e77482.
+
++   Demiris, G., Rantz, M.J., Aud, M.A., Marek, K.D., Tyrer, H.W., Skubic, M., Hussam, A.A., 2004. Older adults' attitudes towards and perceptions of “smart home” technologies: a pilot study. Med. Inform. Internet Med. 29 (2), 87–94.
+
++   Dridi, N., Hadzagic, M., 2018. Akaike and Bayesian information criteria for hidden Markov models. IEEE Signal Process. Lett. 26 (2), 302–306.
+
++   eb2 evidence-based behaviour. https://eb2.tech/?lang=en.
+
++   Forney, G.D., 1973. The viterbi algorithm. Proc. IEEE 61 (3), 268–278.
+
++   Froehlich, J., Chen, M.Y., Consolvo, S., Harrison, B., Landay, J.A., 2007. Myexperience: a system for in situ tracing and capturing of user feedback on mobile phones. In: Proceedings of the 5th International Conference on Mobile Systems, Applications and Services, pp. 57–70.
+
++   Goldberg, S.B., Lam, S.U., Simonsson, O., Torous, J., Sun, S., 2022. Mobile phone-based interventions for mental health: a systematic meta-review of 14 meta-analyses of randomised controlled trials. PLOS Digit. Health 1 (1), e0000002.
+
++   Hochreiter, S., Schmidhuber, J., 1997. Long short-term memory. Neural Comput. 9 (8), 1735–1780.
+
++   Jäger, S., Allhorn, A., Bießmann, F., 2021. A benchmark for data imputation methods. Front. Big Data 4, 693674.
+
++   Jara, A.J., Zamora-Izquierdo, M.A., Skarmeta, A.F., 2013. Interconnection framework for mHealth and remote monitoring based on the Internet of things. IEEE J. Sel. Areas Commun. 31 (9), 47–65.
+
++   Kazemi, S.M., Goel, R., Eghbali, S., Ramanan, J., Sahota, J., Thakur, S., Wu, S., Smyth, C., Poupart, P., Brubaker, M., 2019. Time2vec: Learning a Vector Representation of Time (arXiv preprint arXiv:1907.05321).
+
++   Kiang, M.V., Chen, J.T., Krieger, N., Buckee, C.O., Alexander, M.J., Baker, J.T., Buckner, R.L., Coombs, G., Rich-Edwards, J.W., Carlson, K.W., et al., 2021. Sociodemographic characteristics of missing data in digital phenotyping. Sci. Rep. 11 (1), 1–11.
+
++   Krstajic, D., Buturovic, L.J., Leahy, D.E., Thomas, S., 2014. Cross-validation pitfalls when selecting and assessing regression and classification models. J. Chemoinformatics 6 (1), 1–15.
+
++   Kukkonen, J., Laserspetz, N., Nurmi, P., Andersson, M., 2009. Betelgeuse: a platform for gathering and processing situational data. IEEE Pervasive Comput. 8 (2), 49–56.
+
++   LeCun, Y., Bengio, Y., Hinton, G., 2015. Deep learning. Nature 521 (7553), 436–444.
+
++   McKibbin, C., Patterson, T.L., Jeste, D.V., 2004. Assessing disability in older patients with schizophrenia: results from the WHODAS 2.0. J. Nerv. Ment. Dis. 192 (6), 405–413.
+
++   Meyes, R., Lu, M., de Puiseau, C.W., Meisen, T., 2019. Ablation Studies in Artificial Neural Networks (arXiv preprint arXiv:1901.08644).
+
++   Miranda, L., Viterbo, J., Bernardini, F., 2022. A survey on the use of machine learning methods in context-aware middlewares for human activity recognition. Artif. Intell. Rev. 55 (4), 3369–3400.
+
++   Mohr, D.C., Schueller, S.M., Montague, E., Burns, M.N., Rashid, P., 2014. The behavioural intervention technology model: an integrated conceptual and technological framework for eHealth and mHealth interventions. J. Med. Internet Res. 16 (6), e3077.
+
++   Moon, T.K., 1996. The expectation-maximization algorithm. IEEE Signal Process. Mag. 13 (6), 47–60.
+
++   Muñoz-Navarro, R., Cano-Vindel, A., Moriana, J.A., Medrano, L.A., Ruiz-Rodríguez, P., Agüero-Gento, L., Rodríguez-Enríquez, M., Piza, M.R., Ramírez-Manté, J.L., 2017. Screening for generalised anxiety disorder in Spanish primary care centres with the GAD-7. Psychiatry Res. 256, 312–317.
+
++   Noah, B., Keller, M.S., Mosadeghi, S., Stein, L., Johl, S., Delshad, S., Tashjian, V.C., Lew, D., Kwan, J.T., Justafagic, A., et al., 2018. Impact of remote patient monitoring on clinical outcomes: an updated meta-analysis of randomised controlled trials. NPJ Digit. Med. 1 (1), 1–12.
+
++   Olivas, E.S., Guerrero, J.D.M., Martinez-Sober, M., MagdalenaBenedito, J.R., Serrano, L., et al., 2009. Handbook of Research on Machine Learning Applications and Trends: Algorithms, Methods, and Techniques: Algorithms, Methods, and Techniques. IGI Global.
+
++   Otto, M., Smits, J.A., 2011. Exercise for Mood and Anxiety: Proven Strategies for Overcoming Depression and Enhancing Well-being. OUP USA.
+
++   Rabiner, L.R., 1989. A tutorial on hidden Markov models and selected applications in speech recognition. Proc. IEEE 77 (2), 257–286.
+
++   Roemer, L., Orsillo, S.M., 2002. Expanding our conceptualisation of and treatment for generalised anxiety disorder: integrating mindfulness/acceptance-based approaches with existing cognitive-behavioural models. Clin. Psychol. Sci. Pract. 9 (1), 54.
+
++   Row, K., Antony, M.M., 2008. Generalized anxiety disorder. Psychopathology: History, diagnosis, and empirical foundations 78–114.
+
++   Saito, T., Rehmsmeier, M., 2015. The precision-recall plot is more informative than the roc plot when evaluating binary classifiers on imbalanced datasets. PLoS One 10 (3), e0118432.
+
++   Sakr, S., Elgammal, A., 2016. Towards a comprehensive data analytics framework for smart healthcare services. Big Data Res. 4, 44–58.
+
++   Servia-Rodriguez, S., Rachuri, K.K., Mascolo, C., Rentfrow, P.J., Lathia, N., Sandstrom, G. M., 2017. Mobile sensing at the service of mental well-being: a large-scale longitudinal study. In: Proceedings of the 26th International Conference on World Wide Web, pp. 103–112.
+
++   Speekenbrink, M., Visser, I., 2021. Ignorable and Non-ignorable Missing Data in Hidden Markov Models (arXiv preprint arXiv:2109.02770).
+
++   Spitzer, R.L., Kroenke, K., Williams, J.B., Löwe, B., 2006. A brief measure for assessing generalised anxiety disorder: the gad-7. Arch. Intern. Med. 166 (10), 1092–1097.
+
++   Sükei, E., Romero-Medrano, L. de Leon-Martinez, S., Herrera Lopez, J., Campana-Montes, J.J., Olmos, P.M., Baca-Garcia, E., Artés, A., 2022. Assessing WHODAS 2.0 scores from behavioural biomarkers: a data-driven approach (preprint).
+
++   Van Grootven, B., Jeuris, J., Jonckers, M., Devriendt, E., Dirckx de Casterlé, B., Dubois, C., Fagard, K., Herregods, M.-C., Hornix, M., Meuris, B., et al., 2020. Predicting hospitalisation-associated functional decline in older patients admitted to a cardiac care unit with cardiovascular disease: a prospective cohort study. BMC Geriatr. 20 (1), 1-7.
+
++   Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, L., Polosukhin, I., 2017. Attention is all you need. Adv. Neural Inf. Process. Syst. 30.
+
++   W. H. Organization, 2022. Physical activity. https://www.who.int/news-room/fact-sheets/detail/physical-activity (accessed on April 24, 2023).
+
++   Yao, S., Hu, S., Zhao, Y., Zhang, A., Abdelzaher, T., 2017. Deepsense: a unified deep learning framework for time-series mobile sensing data processing. In: Proceedings of the 26th International Conference on World Wide Web, pp. 351–360.
