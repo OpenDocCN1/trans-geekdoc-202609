@@ -1,0 +1,12 @@
+the client and server. Patient data should never be stored without proper backup. Redundant disk drives, which create full, mirrored backups of the data, are part of the critical process for recovery from corruption or data loss. Geographic redundancy ensures the data is stored in more than one location, so in the event of a catastrophic system failure due to natural or other disasters, the data is still safe, secure, and accessible. Access should be available to data whenever and wherever it is needed, and an export function should be available to download EEG data from the system onto whatever digital medium is preferred by the user, with all access tracked in the audit log [26]. It is imperative that each hospital or user group has a Disaster Recovery Plan in place should data restoration ever be necessary. This documented set of procedures and processes are critical for protecting and restoring an IT infrastructure in the event of a catastrophe.
+
+# 3.6 Conclusion
+
+An emotion can be identified by extracting different kinds of features from a signal. After preprocessing the signal, it has to be smoothed and optimized for a particular feature, using different deep learning optimization techniques like GA, PSO, etc. After getting the optimized result, it is applied to the Neural Network or SVM and it will provide a high accuracy of emotions in any situation. These emotions will be used for Human Computer Interaction, Affective Computing, Robotics, etc.
+
+# References
+
++   1. A.Kumar, PS. Rathore, V. Dutt “An IOT Methodology for Reducing Classification error in face Recognition with the Comutted Concept of Conventional Algorithm” has been published in IJITEE and into the press Volume-8 Issue-11, September 2019 ISSN: ISSN:2278-3075
++   2. Abhishek Kumar & Jyotir Moy Chatterjee & Pramod Singh Rathore, 2020. “Smartphone Confrontational Applications and Security Issues,” International Journal of Risk and Contingency Management (IJRCM), IGI Global, vol. 9(2), pages 1-18, April.
++   3. Asthana, S. Zaferiou, S. Cheng, and M. Pantic, “Incremental face alignment in the wild,” in In Proc. of 2013 IEEE Conference 477 on Computer Vision and Pattern Recognition (CVPR), 2014.
++   4. Bahareh, Evolutionary Computation Algorithms for feature selection of EEG based emotion Recognition. Elsevier 2017, pp. 143–155.

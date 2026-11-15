@@ -1,0 +1,276 @@
+
+- Accompanying, 137, 141
+- Accomplish, 22, 49, 152, 161, 162, 165, 173, 179, 181, 237, 264, 266, 274
+- Accomplished, 100, 133, 135–137, 141, 148, 149, 179, 203, 239
+- Accomplishing, 152, 164
+- According, 38–40, 42, 44, 45, 53, 60, 71, 73, 74, 88, 89, 151–153, 156, 165, 202, 252, 269
+- Accordingly, 30, 37, 40, 42, 142, 143, 183, 278
+- Account, 30, 43, 76, 133, 183, 236, 251, 278
+- Accountability, 237
+- Accounts, 12, 137, 251, 263, 270
+- Accumulate, 85
+- Accumulated, 159
+- Accumulating, 264
+- Accumulation, 179
+- Accuracy, 4, 20, 30, 31, 44, 50–52, 58, 59, 61, 76, 78, 89, 93, 97–100, 105, 106, 109–111, 115, 117, 123, 128, 129, 138, 194, 196–198, 206, 220, 226, 231, 234, 235, 240, 259, 261, 262, 264
+- Accurate, 51, 55, 88, 92, 99, 111, 124, 144, 163, 204, 228
+- Accurately, 25, 99, 129, 208, 274
+- Bachelor, 285
+- Backed, 32
+- Backend, 242
+- Backlogs, 19, 191
+- Backpropagated, 245
+- Back-propagation, 189, 244
+- Backup, 6, 60, 61, 69, 152, 155, 249, 253
+- Back-up, 59, 60, 155
+- Back-ups, 60
+- Backward, 243
+- Bad, 276
+- Badnjevic, 113
+- Baek, 189
+- Bafna, 11, 231
+- Bahareh, 61
+
+- Balance, 77, 176, 181, 227
+- Balanced, 245
+- Balancer, 153, 175, 179
+- Balancers, 154, 174–176
+- Balancing, 9, 10, 152, 153, 169–171, 173–180, 189
+- Baldi, 227
+- Cad, 102
+- Caffe, 185, 187, 190
+- Calculate, 19, 129, 162, 231, 245, 247
+- Calculated, 88, 106, 178, 179, 216, 217, 225, 264
+- Calculating, 51, 77, 104, 105, 147
+- Calculation, 10, 28, 51, 135, 140, 143, 171, 172, 176–178, 181–183, 186, 188, 263, 278
+- Calibration, 94
+- California, 118
+- Called, 28, 49, 75, 101, 118, 120–122, 132–134, 169, 172, 219, 233, 243, 244, 272
+- Call-out, 83, 212
+- Came, 149, 159, 215
+- Camera-based, 85–87, 94
+- Cameras, 58, 84, 85, 90, 93, 194, 264, 265
+- Campos, 62
+- Can, 18, 22–28, 30, 31, 37, 39–42, 44, 50, 51, 53–61, 64, 66, 69–71, 74–76, 79, 80, 84–87, 93, 100, 104, 116–123, 128–130, 132–139, 141, 143, 148–153, 155–157, 161–164, 166, 167, 170–176, 179, 180, 183–186, 188, 189, 192–196, 198, 199, 201–203, 205, 206, 208, 213–215, 217–219, 221–223, 225, 226, 232, 234, 236–238, 241–243, 245, 247, 251–254, 256–258, 261, 263, 265–272, 274, 276–278
+- Capabilities, 42, 49, 50, 178
+- Capability, 194, 238
+- Capacities, 56, 134, 136, 277
+- Capacitive, 23
+
+- Capacity, 22, 30, 55, 56, 59, 60, 65, 132, 134–137, 148, 149, 164, 173, 176–179, 203, 234, 238, 259, 278, 284
+- Captaincy, 285
+- Caption, 146, 212
+- Conferencing, 85
+- Dan, 211
+- Dana, 159
+- Danger, 32, 188, 263, 269, 275
+- Dangers, 29, 261, 262, 266, 275, 277
+- Dark, 32
+- Darrell, 144
+- Data, 4, 6–8, 10–12, 15, 17–22, 24–34, 36–47, 49, 51–54, 59–64, 69–71, 75, 76, 78, 79, 87, 93, 99–109, 112, 113, 118, 119, 121–124, 126–129, 132, 133, 135–137, 147–150, 155–159, 161, 162, 165–168, 173, 175, 180, 181, 187, 190–193, 196–202, 204–211, 213–217, 219, 222–228, 231–234, 236–245, 247–257, 259–264, 267–270, 274, 275, 278–280, 283–286
+- Database, 21, 29–31, 33, 36, 37, 40–42, 44–47, 150, 162, 175, 189, 191, 192, 198–203, 238, 239, 261, 265
+- Datas, 101, 106
+- Dataset, 12, 89, 91, 92, 98, 99, 101–105, 107, 109, 121, 122, 132, 138, 163, 164, 191, 192, 198, 199, 205–208, 212, 226, 231, 232, 234, 235, 239, 240, 245, 247, 262, 264
+- Datasets, 15, 22, 89, 90, 99, 101, 102, 104, 129, 132, 164, 166, 167, 204, 207, 208, 215, 232–235, 245, 248, 263, 278, 279
+- Day, 32, 68, 152, 173, 204, 228, 232, 238, 252, 263, 265, 275
+- Dealing, 12, 22, 187, 198, 214, 261
+- Decentralised, 37
+- Decomposes, 52
+- Decomposition, 27, 50
+
+- DEDU PED, 101
+- Deeper, 133, 216, 226, 263
+- Defends, 274
+- Defined, 70, 175, 182, 195, 201, 208, 214, 222, 231
+- Degradation, 64, 195
+- Demotivating, 175
+- Denial, 11, 12, 236, 252
+- Denoising, 255
+- Ears, 193
+- Earth, 81
+- Easier, 78, 102, 104, 106, 149, 155, 163, 201
+- Easiest, 122
+- East, 78, 252
+- Ebola, 165
+- ECC, 33, 46, 63, 81, 94, 112, 113, 130, 131, 144, 168, 190, 210, 229, 248, 279
+- Excision, 247
+- Economics, 69
+- Ecosystems, 150
+- Edge, 81, 94, 113, 120, 130, 135, 136, 138, 142, 148, 155, 156, 179, 184, 185, 187, 277
+- EEG-based, 57, 58
+- Effectiveness, 27, 166, 176
+- Effort, 15, 172, 225
+- Eight, 143, 163
+- Ekta, 11, 231
+- Electronic, 4, 60
+- Elements, 70, 136, 197, 203, 204, 223, 224
+- Eliminated, 59, 60
+- Emotion, 17, 48, 50, 53–55, 61, 62
+- Emotions, 50–54, 61, 62
+- Encoder, 164, 165, 198, 217, 222, 223, 227, 254, 255
+- Encoders, 217, 218
+- Endeavor, 235
+- Endeavors, 141–143
+- Endeavour, 171
+- Endeavoured, 171
+
+- End-stage, 98, 100
+
+- Enforcement, 30, 32, 43, 192, 195
+- Ensured, 277
+- Entities, 201, 209, 223
+- Envision, 264
+- Equipped, 75, 234, 256, 261
+
+- Faces, 22, 24, 25, 156–158, 161, 181, 205
+- Facets, 29, 156
+- Facilitate, 197, 204
+- Facilities, 41, 42, 77, 203, 226
+- Failed, 245
+- False-negative, 246
+- False-positive, 246
+- Falsified, 203
+- Farkas, 62
+- Fatal, 148
+- Fatigued, 56
+- Fearful, 232
+- Feasibility, 235
+- Feedback, 208, 221
+- Feel, 157
+- Fiduciacally, 21, 27, 30, 31
+- Fields, 11, 17, 48, 133, 134, 164, 166, 192, 213, 214, 219, 275
+- Finalizes, 176
+- Finger, 19, 23, 191, 195, 223
+- Fingercode, 210
+- Firewall-uses, 167, 279
+- Fitting, 50, 102, 103, 123, 172, 259
+- Fixed, 28
+- Fluctuation, 143, 189
+- Fluctuations, 98
+- Followed, 86, 243, 253, 256
+- Fooling, 270
+- Foresee, 99, 138, 139, 165
+- Foreseen, 276
+- Forthcoming, 267
+- Fortification, 165
+- Fossil, 64
+- Fostering, 15
+- Foundation, 97, 138, 154, 170, 265
+- Framed, 256
+- Frames, 85–87, 89, 90, 92, 222
+- Freedom, 250
+- Freely, 43
+- Gain, 57, 68, 136, 143, 164, 197, 238, 267, 269
+- Gaining, 209, 223
+- Gaits, 205
+- Gallivanone, 129
+- Galvanize, 278
+- Game, 269
+- Games, 13, 57, 154, 161, 269
+- Gaming, 152
+- GAN, 260
+- Ganglia, 118
+- GANs, 259, 260
+- Gao, 228
+- Gap, 23, 104, 116
+- Gave, 99, 158, 206, 278
+- Gbolabo, 94
+- GDPU, 159
+- Gearing, 65, 67, 68, 73, 74
+- Generates, 66, 162, 198
+- Generator, 68, 71, 74, 259
+- Gestures, 22, 27, 28
+- Gibson, 189
+- Gigantic, 20, 74, 148, 150, 155, 181, 249
+- Giga-watts, 65
+- GLCM, 122, 129
+- Goner, 164
+- GPU, 190
+- Graduate, 15
+- Grayscale, 125, 258
+- Ground, 181, 191
+- Growth, 36, 50, 116, 117, 159, 216
+- Guides, 141, 142, 277
+- Hacker, 251
+- Hackerott, 4
+- Hackers, 232
+- Hacking, 37, 42, 43, 45
+- Hacks, 261
+- Had, 99, 102, 117, 148, 179, 262, 264
+- Hadn't, 148
+- Hadoop, 198
+
+- Handle, 18, 19, 84, 137, 151, 191, 204, 257
+- Handling, 20, 76, 135, 144, 145, 181, 202, 209, 232, 249, 258, 261
+- Hands, 186, 197
+- Hands-free, 167
+- Handwriting, 15, 191
+- Happens, 44, 143, 156, 246, 263
+- Haruna, 168, 279
+- Heightened, 25
+- Heisenberg, 52
+- Highlights, 245
+- Histogram, 119, 120, 124, 125
+- Home-bound, 58
+- Hostility, 159
+- Hot, 77
+- Hours, 201, 263
+- Hubs, 19, 169, 170, 172, 173, 176, 180–189
+- Huge, 22, 26, 136, 142, 148, 176, 182, 197, 198, 204–206, 215, 232
+- Hyper, 104
+- Hyperplanes, 126
+- Hypertension, 98, 102
+- Hypothesis, 136
+- Hypothesized, 56
+- Immediately, 263
+- Immensely, 148
+- Immersed, 179
+- Imminent, 259, 271
+- Impact, 38, 50, 104, 138, 166, 180
+- Impediment, 137, 142, 143, 222
+- Impediments, 24, 50, 143
+- Imperative, 32, 61, 140
+- Impermanent, 19, 169
+- Impersonate, 135
+- Imperva, 251
+- Implant, 223
+- Implied, 4
+- Improved, 18, 30, 31, 34, 37, 47, 63, 81, 93, 94, 112, 128, 131, 139, 145, 147, 168, 176, 190, 203, 223, 225, 226, 248, 274, 280
+- Improvement, 34, 238, 278
+
+- Improvements, 231
+- Improves, 15, 122, 138, 140, 171, 180, 213, 238
+- Inadequacies, 274
+- Inaugurated, 278
+- In-between, 87, 254
+- Inclusive, 207
+- Inconsistency, 263
+- Inconsistent, 173
+- Incorrectly, 109, 110
+- Increased, 36, 58, 60, 73, 74, 88, 161, 225, 250
+- Indecent, 13, 267
+- Indemnity, 278
+- Individuals, 49, 55, 56, 118, 143, 179, 197, 204, 264, 266, 267, 270
+- Induction, 69, 141
+- Joined, 136, 159, 264, 278
+- Joint, 62
+- Jumping, 138, 139, 142
+- Jumpstart, 168, 279
+- K-closest, 28
+- KDD, 12, 231, 234, 235, 245
+- Keystroke, 264
+- Keystrokes, 13, 264
+- Kinds, 29, 61, 135, 154, 176, 254, 272
+- K-means, 208
+- k-nearest, 28, 31, 54, 55, 99, 122, 234
+- k-nn, 99, 100, 234
+- Knowledge-based, 238
+- Known, 39, 50, 53, 59, 121, 132, 164, 170, 187, 214, 222, 235, 252, 255, 256, 259–262, 269, 270, 275
+- Leakage, 269
+- Leaked, 253
+- Lesion, 165
+- Level-based, 226
+- License, 32
+- Lifelessness, 270
+- Likenesses, 166
+- Line-based, 217

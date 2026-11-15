@@ -1,0 +1,13 @@
+image analysis. One of the most successful methods in Image Segmentation is Otsu's Method. Otsu's Method is an automatic threshold selection method which works on the basis of region based segmentation [9].
+
+Otsu's Method is a class variance method which has the ability to select the threshold automatically [10]. This method computes the probability of each intensity level, iterates along every possible threshold value, and creates an evaluation of the entire pixel layout in the image. The desired threshold corresponds to maximum intra-class variance. The main goal of Otsu's segmentation is to reduce the computation of the sum of foreground pixels and background pixels while selecting a fair threshold value which can perform efficient segmentation. Otsu's Method is known for its rare time consumption and is one of the most efficient methods for threshold selection.
+
+Better threshold selection with respect to uniformity and shape measures for real time images is produced by Otsu segmentation. However, a profound search is required to derive the criteria for expansion of within-class variance [11]. This method gives us the total brain region neglecting the other unwanted regions present in the MR image.
+
+# ## 7.2.4 Feature Extraction
+
+The process of reducing the dimensions of the image is called Feature Extraction. This reduces a raw set of data into manageable groups for processing. Certain features, parameters, properties, and features are measured from the original set of data to distinguish one input pattern from another. The features extracted are given as classifier inputs [12].
+
+An abnormal brain image will show certain differences in features when compared to a normal brain image. The changes in the features depend upon the type of brain pathology and their cognitive abilities and disabilities. These features are stored into a feature space. In the presence of a small dataset, few instances of abnormalities of a particular neurological disorder will be present in each image. Once the classifier detects an example of the abnormality present in a particular region of the human brain, it learns and produces a model to classify the images as abnormal tissues or corresponding disorder depending on the inputs given.
+
+A crucial step in feature extraction is the selection of features. Good texture features and neighborhood aggregations of the neighborhood intensity data provide better results rather than including individual intensity values [13]. A number of techniques are used for the purpose of feature extraction from MR Images. Some of the common feature extraction techniques are Discrete Wavelet Transform (DWT), Gabor Filters, and a Gray Level Co-Occurrence Matrix. The Gray Level Co-Occurrence Matrix

@@ -1,0 +1,14 @@
++   17. Jo, Taeho et al. (2019). – “Deep Learning in Alzheimers Disease: Diagnostic Classification and Prognostic Prediction Using Neuroimaging Data.” - Frontiers in aging neuroscience, Vol. 11, no. 220.
++   18. John Cho, Manoj Reddy. (2016)- “Detecting Chronic Kidney Disease Using Deep learning” - Hamad bin Khalifa University Press, Vol.2016 No. 1, pp.1-8.
++   19. Mantzaris D. et al. (2007) – “Abdominal Pain Estimation in Childhood based on Artificial Neural Network Classification” – CEUR Workshop Proceedings, Vol. 284.
++   20. Mehtaj Banu H (2019) “Liver Disease Prediction using Machine- Learning Algorithms” - IJEAT, Vol. 8, no. 6, pp. 22.
++   21. Moore, P J et al. (2019) - “Random forest prediction of Alzheimer disease using pairwise selection from time series data”. PloS one, Vol. 14, no. 2.
++   22. Mythili T et al. (2013) – “A Heart Disease Prediction Model using SVM-Decision Trees-Logistic Regression (SDL)” – International Journal of Computer Applications, Vol. 68, no. 16.
++   23. N. Bhargava, A. Kumar Sharma, A. Kumar and P. S. Rathoe, “An adaptive method for edge preserving denoising,” 2017 2nd International Conference on Communication and Electronics Systems (ICCES), Coimbatore, 2017, pp. 600-604, doi: 10.1109/CESYS.2017.8321149.
++   24. N. Bhargava, S. Sharma, R. Purohit and P. S. Rathore, “Prediction of recurrence cancer using J48 algorithm,” 2017 2nd International Conference on Communication and Electronics Systems (ICCES), Coimbatore, 2017, pp. 386-390, doi: 10.1109/CESYS.2017.8321306.
++   25. Norouzi, Jamshid et al. (2016) - “Predicting Renal Failure Progression in Chronic Kidney Disease Using Integrated Intelligent Fuzzy Expert System.” - Computational and mathematical methods in medicine, Vol. 2016.
++   26. Powers, D.M.W., (2011) – “Evaluation: from Precision, Recall and F-measure to ROC, Informedness, Markedness and Correlation.” -Journal of Deep learning Technologies, Vol. 2, no. 1, pp. 37-63.
++   27. Siddheswar Tekale, Pranjal Shingavi, Ankit Chatorikar (2018) – “Prediction of Chronic Kidney Disease Using Deep learning Algorithm”- International Journal of Advanced Research in Computer and Communication Engineering Vol. 7, Issue 10.
++   28. Kumar Sahwal, ...., Kishore, ..., Singh Rathore, ..., & Moy Chatterjee, .... (2018). An Advance Approach of Looping Technique for Image Encryption Using in Committed CONCEPT Of ECC. International Journal Of Recent Advances In Signal & Image Processing, 2(1).
++   29. Singh N, Singh P. (2016). – “Rule Based Approach for Prediction of Chronic Kidney Disease: A Comparative Study.”- Biomed Pharmacol J, Vol. 10, no. 2.
++   30. Subasi A., Alickovic E., Kevric J. (2017) – “Diagnosis of Chronic Kidney Disease by Using Random Forest” In: Badnjevic A. (eds) CMBEBIH 2017. IFMBE Proceedings, Vol. 6, pp. 589-594.
