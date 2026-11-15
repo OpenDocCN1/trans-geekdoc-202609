@@ -1,0 +1,9 @@
+of the structure is changed for different problems, then application of neural nets is effective when the training time is small and the response of the net is in an acceptable range. CPN has all these positive characteristics and it is applicable to a wide range of problems.
+
+# 8.2.2 CPN as a Fast Interpolator
+
+In a conventional CPN, when a vector is presented to the network, each unit in the Kohonen cluster unit competes with other units, and the unit with the smallest Euclidean distance to input vector x wins. Thus, the output of the winner unit J is simply
+
+Then, the output is obtained as the weight vector of the outstars. This type of network operates as a lookup table with n entries. The accuracy of this type of net can be improved by increasing the Kohonen units, but this leads to a really huge net which is not appropriate for large problems. In order to alleviate this difficulty, an interpolation mode is introduced here. After training based on the aforementioned section, a set of untrained verification pairs is applied to verify the performance of the net. In this mode, it is allowed some units of the Kohonen layer return the output. The number of winning units which is usually more than one, is determined in the verification process so that the associated error is minimized.
+
+Here $y'_i$ is the network-predicted output, $y_i$ is the actual output, and k is the number of verification pairs. In this mode when the input vector is presented to the network, one weight vector or a combination of many weight vectors based on the number of winning nodes build the output. In the interpolation mode, more than one Kohonen unit has a nonzero activation with the activation of the output units is then given by:
