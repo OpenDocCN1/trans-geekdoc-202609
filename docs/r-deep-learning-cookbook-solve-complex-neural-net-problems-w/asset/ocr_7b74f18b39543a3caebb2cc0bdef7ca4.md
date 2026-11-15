@@ -1,0 +1,84 @@
+about 106
+setting up 136, 137, 138
+versus Restricted Boltzmann machine 144, 145, 147
+Python codes, for manipulating MIDI songs download link 238
+
+# Q
+
++   Q-learning technique 213
+
+# R
+
++   R console 8
++   R
++   deep learning tools/packages, setting up in 18
++   H2O, installing in 24, 25
++   installing, with IDE 7, 8, 9
++   MXNet, installing in 19, 20
++   TensorFlow, installing in 21, 22, 23
++   RBM model
++   building 239, 240, 241
++   reconstruction error 128
++   Rectified Linear Unit (ReLU) 69
++   Recurrent Neural Networks (RNN) 188
++   regression models
++   evaluation parameters 17
++   regularization error 128
++   regularized autoencoder
++   setting up 115, 116, 117
++   Reinforcement Learning (RL)
++   about 202
++   basic notations 203
++   ReLU6 51
++   Restricted Boltzmann machine
++   backward phase 152, 153
++   output, evaluating from 158, 159, 160, 161
++   reconstruction phase 152, 153
++   setting up, for Bernoulli distribution input 149, 150, 151
++   setting up, for collaborative filtering 162, 163, 164
++   training 151, 152
++   versus principal component analysis 144, 145, 147
+
+# S
+
++   semi-supervised learning 13
++   sentiment extraction 218, 220, 223, 224, 225
++   sentiment prediction
++   performing, LSTM network used 229, 230, 232, 233
++   sigmoid function 33, 51
++   softmax activation
++   applying, to obtain printed class 94, 95
++   softplus function 51
++   sparse autoencoder 106
++   sparse decomposition
++   evaluating 139, 140
++   stacked autoencoders
++   setting up 118, 119, 120
++   stochastic encoders
++   about 127
++   building 129
++   supervised learning 13
++   Support Vector Machines (SVM) 13
++   Support Vector Regression (SVR) 13
++   symbol descriptions, on TensorBoard reference 47
+
+# T
+
++   tanh function 51
++   TensorFlow graphs
++   visualizing 45, 46, 47
++   TensorFlow session
++   graph, executing in 97
++   initializing 155
++   starting 157
++   TensorFlow, in R
++   reference 23
++   TensorFlow
++   installing, in R 21, 22, 23
++   used, for performing logistic regression 42, 44
++   used, for setting up network 61, 62, 65, 66
++   term frequency (tf) 226
++   term frequency - inverse document frequency (tf-idf)
++   about 218
++   used, for analyzing documents 226, 228, 229
++   test data

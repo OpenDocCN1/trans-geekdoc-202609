@@ -1,0 +1,6 @@
++   - **Computational power**: The consistency of Moore's law, which states that the acceleration power of hardware will double every two years, helped in training more layers and bigger data within time limitations
++   - **Storage and better compression algorithms**: The ability to store big models due to cheaper storage and better compression algorithms have pushed this area with practitioners focusing on capturing real-time data feeds in the form of image, text, audio, and video formats
++   - **Scalability**: The ability to scale from a simple computer to a farm or using GPU devices has given a great boost to training deep learning models
++   - **Deep learning architectures**: With new architectures such as Convolution Neural network, re-enforcement learning has provided a boost to what we can learn and also helped expedite learning rates
++   - **Cross-platform programming**: The ability to program and build models in a cross-platform architecture significantly helped increase the user base and in drastic development in the domain
++   - **Transfer learning**: This allows reusing pretrained models and further helps in significantly reducing training times
