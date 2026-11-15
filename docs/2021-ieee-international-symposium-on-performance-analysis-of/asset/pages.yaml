@@ -1,0 +1,1335 @@
+- pgno: 0
+  md: '# TPUPoint: Automatic Characterization of Hardware-Accelerated Machine-Learning
+    Behavior for Cloud Computing
+
+
+    Abenezer Wudenhe and Hung-Wei Tseng
+
+    University of California, Riverside
+
+    {awude001, htseng}@ucr.edu
+
+
+    Abstract— With rapidly share of machine learning (ML) workloads in data centers
+    rapidly increasing, cloud providers are beginning to incorporate accelerators
+    such as tensor processing units (TPUs) to improve the energy-efficiency of applications.
+    However, without optimizing application parameters, users may under-utilize accelerators
+    and end up wasting energy and money. This paper presents TPUPoint to facilitate
+    the development of efficient applications on TPU-based cloud platforms. TPUPoint
+    automatically classifies repetitive patterns into phases and identifies the most
+    timing-critical operations in each phase. Further, TPUPoint can associate phases
+    with checkpoints to allow fast-forwarding in applications, thereby significantly
+    reducing the time and money spent optimizing applications. By running TPUPoint
+    on a wide array of representative ML workloads, we found that computation is no
+    longer the most time-consuming operation; instead, the `infeed` and `reshape`
+    operations, which exchange and realign data, become most significant. TPUPoints
+    advantages significantly increase the potential for discovering optimal parameters
+    to quickly balance the complex workload pipeline of feeding data into a system,
+    reformatting the data, and computing results. In this paper, we show how TPUPoint
+    may be used to characterize a set of popular ML workloads. We demonstrate that
+    the iterative nature of NN models means that all ML workloads exhibit repetitive
+    behavior that can easily be characterized via very few important phases. TPUPoint
+    identifies time-consuming operators, such as `infeed`, `outfeed`, and `reshape`,
+    that are commonly used among almost all NN models and are not directly related
+    to computation; such indirect operators block the progress of computation if they
+    cannot prepare datasets or swap out datasets fast enough.
+
+
+    # I. INTRODUCTION
+
+
+    The rise of machine learning (ML) has created a strong demand for efficient ML
+    systems designed for modern cloud- infrastructure applications [1], [2], [3],
+    [4], [5], [6], [7], [8], [9], [10]. Because conventional, general-purpose processors
+    and graphical processing units (GPUs) are optimized for scalar or vector operations,
+    the modern computer architectures that rely on them waste energy when performing
+    ML tasks. More efficient ML accelerators that rely on matrix-based neural networks
+    (NNs) are thus gaining ground in data centers. Googles Tensor Processing Unit
+    (TPU), which offers 70× better performance per watt than conventional GPUs, is
+    by far the most representative case [11].
+
+
+    As performance characteristics differ among heterogeneous architectural components
+    and platforms, creating uniformly optimized ML programs is unrealistic. A more
+    tenable approach is to automate the optimization process itself. The TPUPoint
+    framework does this through the TPUPoint Optimizer; the TPUPoint-Optimizer automatically
+    and dynamically rewrites code on Cloud TPU platforms to reduce programmer effort.
+    Our results show that optimal parameters dynamically determined using TPUPoint-Optimizer
+    allow a reasonably written TensorFlow program to achieve at least the same level
+    of performance as that achieved through exhaustive programmer optimizations.
+
+
+    This paper presents TPUPoint, an open-source toolchain to characterize the behavior
+    and optimize the performance of applications on Google Cloud TPUs. TPUPoints profiler
+    automatically classifies the recurrent patterns of TPU applications into phases
+    and identifies the most timing-critical operations in each phase to inform optimization.
+    TPUPoint can also associate each phase with checkpoints to restart an application
+    right before a target phase, and TPUPoint gives the user access to automated tools
+    like the TPUPoint-Optimizer to examine performance changes with different configurations.
+
+
+    By introducing TPUPoint, this paper makes four key contributions; (1) It presents
+    TPUPoint to accelerate the development and optimization of ML applications for
+    emerging ML accelerator-based cloud architectures, (2) It validates TPUPoint functionality
+    with a wide range of ML applications, (3) It identifies the common bottlenecks
+    of ML applications, (4) It details a systematic approach for discovering optimal
+    parameters for ML applications.
+
+
+    The rest of this paper is organized as follows: Section II describes the architecture
+    of TPUs and TPU-based cloud servers. Section III introduces TPUPoints design.
+    Sections IV describes TPUPoint-Analyzer''s implementation. Section V describes
+    our experimental platform. Section VI reviews insights gained from TPUPoint-Analyzer.
+    Section VII presents TPUPoint-Optimizer''s results. Section VIII provides a summary
+    of related work for context, and Section IX offers concluding comments.
+
+
+    # II. TPUs
+
+
+    Google has widely deployed TPUs in its data centers and made TPUs accessible for
+    user applications through Google
+
+
+    1 You may find TPUPoint at [https://github.com/escalab/TPUPoint]'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'Cloud Services. This section briefly describes the capabilities and interfaces
+    of Cloud TPUs.
+
+
+    # ## A. Cloud TPUs
+
+
+    Google offers three different Cloud TPUs. Google uses the first-generation TPU
+    internally for search and inference but makes the second and third-generation
+    TPUs (TPUv2 and TPUv3, respectively) available via the Google Cloud Platform and
+    TensorFlow Research Cloud (TFRC) program [12]. The TPUv2 chip contains two Matrix
+    Units (MXUs), where each MXU is associated with 8 GiB of High Bandwidth Memory
+    (HBM) to deliver a combined theoretical 45 TFLOPS of computation throughput for
+    200–250 W TDP. Google typically combines four TPUv2s on a single board [13]. TPUv3
+    contains twice as many MXUs as TPUv2 and twice the HBM. Google does not disclose
+    many details about the TPUv3 architecture. Nonetheless, the performance-number
+    specifications, which include a capacity of 90 TFLOPS and 32 GB HBM for each chip,
+    suggest that TPUv3 simply leverages more advanced process technologies to place
+    four MXUs within the same chip while maintaining the same level of power consumption
+    as TPUv2.
+
+
+    # ## B. The Cloud TPU Hardware/Software Interface
+
+
+    A Google Cloud TPU is only accessible through a compute instance (Compute Engine)
+    associated with a TPU instance. Along with the Compute Engine VM, a Google Cloud
+    TPU requires cloud storage (Storage Buckets) for training data and model information
+    during execution; the Compute Engine acts as a host, the TPU acts as a coprocessor,
+    and the Storage Buckets act as persistent memory. These components comprise the
+    Cloud TPU architecture.
+
+
+    TensorFlow [14] is another important part of the Cloud TPU equation. Google developed
+    the TensorFlow framework to model and execute ML algorithms on single machines
+    and heterogeneous/distributed systems. Google Cloud TPUs are readily integrated
+    with TensorFlow. TensorFlow makes heavy use of Googles Protocol Buffers (Protobuf)
+    and Googles Remote Procedural Call (gRPC). Both Protobuf and gRPC are crucial
+    to the TensorFlow framework to allow for communication to occur across TensorFlow.
+    TensorFlow makes heavy use of Googles Protocol Buffers (Protobuf) and Googles
+    Remote Procedural Call (gRPC). Protobuf allows for convenient data abstraction
+    across multiple programming languages, and gRPC allows TensorFlow to share data
+    between multiple servers and clients to facilitate execution across multiple devices.
+    The gRPC server implements a method and waits for client requests. A gRPC client
+    uses an object referred to as a stub to provide a channel between the client and
+    server. The stub handles gRPC client requests (with Protobuf) and server responses
+    and uses efficient formats such as RDMA for communication between processes during
+    execution. Both Protobuf and gRPC are crucial to the TensorFlow framework.
+
+
+    TensorFlow execution involves a client (the user), a master, and one or more worker
+    processes. The client interacts with the master, and the master coordinates the
+    workers. The master is
+
+
+    ![](img/a2afc74fc22d678e24674964f5d46bc8_1_0.png)
+
+
+    Fig. 1. The TPUPoint system architecture
+
+
+    responsible for handling device placement of graph nodes and partitions the graph
+    into subgraphs to be executed by the workers. In addition to managing the entire
+    computational graph, the master applies optimizations such as constant folding.
+    The workers handle requests from the master, execute kernel operations, and manage
+    communication between kernels.
+
+
+    Even though the Cloud TPUs implementation is not fully available to the public,
+    registered API calls and serviceable requests are still available; a command-line
+    tool called CLOUD-TPU-PROFILER may be used to generate a client-to-master gRPC
+    call that requests a Cloud TPU profile for a small iteration. CLOUD-TPU-PROFILER
+    is limited in its usefulness, however, because it cannot be integrated into training
+    code, only permits insights to be gained post-execution, and only runs within
+    a limited time range (and so cannot profile program execution in its entirety.)
+
+
+    # ## III. TPUPOINT-PROFILER: THE CORE OF TPUPOINT
+
+
+    TPUPoint offers a set of tools via the TPUPoint-Profiler module. TPUPoint-Profiler
+    measures Cloud TPU performance and enables the other two elements of the TPUPoint
+    toolchain: (1) TPUPoint-Analyzer (Section IV), a post-execution, offline analysis
+    tool that identifies the most important application phase and the cause of under-utilized
+    system components and (2) TPUPoint-Optimizer (Section VIII), the online, automatic
+    workload-optimization tool that dynamically adjusts and rewrites code running
+    on Cloud TPU platforms. This section introduces the TPUPoint design and programming
+    interface.
+
+
+    # ## A. TPUPoint-Profiler Design
+
+
+    The complete TPUPoint toolchain consists of a set of extensions to the TensorFlow
+    framework (the only programming interface for Cloud TPUs at this point). Figure
+    1 shows the interactions of the core TPUPoint-Profiler that drives TPUPoint-Analyzer
+    and TPUPoint-Optimizer to work with a TensorFlow application.
+
+
+    TPUPoint creates a separate profiling thread upon initialization of the TPUPoint-Profiler.
+    Once created, the TPUPoint-Profiler thread periodically sends profile requests
+    to associated Cloud TPUs independently of the main TensorFlow thread, allowing
+    TPU training to continue uninterrupted while profiling takes place. When a Cloud
+    TPU sends a response back to the profiling thread, TPUPoint-Profiler generates
+    a profile record'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "```\nimport tensorflow as tf\nfrom tensorflow.contrib.tpu import TPUPoint as\
+    \ TP\n...\ndef main(argv):\n    #...\n    estimator = tf.contrib.tpu.TPUEstimator(...)\n\
+    \    tpprofiler = TP(...)\n    #...\n    tpprofiler.Start(analyzer = true)\n \
+    \   estimator.train(...)\n    tpprofiler.Stop()\n\nif __name__ == \"__main__\"\
+    :\n    tf.app.run()\n```\n\nFig. 2. Example TensorFlow code that initiates TPUPoints\
+    \ profiling feature\n\ncontaining operations along with meta-data of TPU idle\
+    \ time and MXU utilization provided with each response.\n\nIf the programmer intends\
+    \ to use TPUPoint-Analyzer, the TPUPoint-Profiler thread will create an additional\
+    \ recording thread to store the collected statistical information in Cloud Storage\
+    \ (otherwise, TPUPoint-Profiler simply buffers the profile file in the host main\
+    \ memory). While the recording thread is storing data, TPUPoint-Profilers profiling\
+    \ thread continues to request the next profile from the Cloud TPU. Reliably recording\
+    \ all events during a profile period can produce numerous records, as each profile\
+    \ can potentially include a maximum of 1,000,000 events lasting for a maximum\
+    \ duration of 60,000 ms in total elapsed time. By storing only statistical information\
+    \ in a profile, TPUPoint-Profiler reduces memory consumption and accelerates the\
+    \ post-processing in TPUPoint-Analyzer and TPUPoint-Optimizer. Once the TensorFlow\
+    \ application has completed or reached a user-specified breakpoint, TPUPoint-Profilers\
+    \ profiling thread will send out the last request. All TPUPoint-Profiler threads\
+    \ terminate after TPUPoint-Profiler has received and appropriately saved the last\
+    \ profile record response to the Cloud TPUs. The number of profile records generated\
+    \ depend on the duration of the TensorFlow application.\n\n# B. The TPUPoint Programming\
+    \ Interface\n\nThe current version of TPUPoint presents a Python/TensorFlow-based\
+    \ front end to the programmer with backend features implemented in C++. Figure\
+    \ 2 shows example code that enables TPUPoint-Profiler in a TensorFlow application.\
+    \ The programmer needs to initiate TPUPoint usage by creating a TPUPoint-Profiler\
+    \ object (tpprofiler in line 7 of the example) with appropriate options.\n\nTPU\
+    \ training is executed though TensorFlow’s high level TPUEstimator API (lines\
+    \ 6 and 10). If a programmer wishes to use TPUPoint-Analyzer to perform post-execution,\
+    \ the analyzer flag must be set to true in the Start() function call (line 9)\
+    \ ; when the analyzer flag is set to false, TPUPoint-Profiler only enables TPUPoint-Optimizer.\
+    \ Once training is complete (i.e., TPUEstimator.train()) has finished), TPUPoint-Profiler\
+    \ is halted via Stop() function (line 11). When post-execution analysis has been\
+    \ specified, as in the code example, Stop() will also instantiate the TPUPoint-Analyzer\
+    \ process for visualizing the profiling results.\n\nThis implementation allows\
+    \ TPUPoint to profile the entire duration of an application, a feature unavailable\
+    \ in the CLOUD-TPU-PROFILER command line tool.\n\n# IV. TPUPOINT-ANALYZER: POST-EXECUTION\
+    \ ANALYSIS\n\nTo address the challenge of deriving meaningful results from extensive\
+    \ profiling statistics, TPUPoint-Analyzer walks through and summarizes profiles\
+    \ into program phases. To address these challenges, TPUPoint implements TPUPoint-Analyzer’s\
+    \ post-execution analysis. Each program phase from TPUPoint-Analyzers post-execution\
+    \ processing identifies similar, repetitive program behaviors. Summarizing program\
+    \ behaviors into phases to facilitate analysis, visualization, and checkpointing/restarting\
+    \ for performance optimizations.\n\n# A. Profiling Algorithms\n\nTo reduce the\
+    \ TPUPoint-Analyzer search space for calculating program-behavior similarities,\
+    \ TPUPoint-Analyzer first leverages the step numbers that Google makes available\
+    \ for Cloud TPUs—step numbers that indicate coarse-grained, repetitive application\
+    \ behaviors. TPUPoint-Analyzer then uses these steps as the basic unit for similarity\
+    \ comparisons and creates visual summaries for the steps. TPUPoint-Analyzer offers\
+    \ three summarization methods: the conventional k-means algorithm [15], [16],\
+    \ Density Based Spatial Clustering of Applications with Noise (DBSCAN) [17], [18],\
+    \ and a lower-overhead online linear-scan (OLS) algorithm. k-means and DBSCAN\
+    \ run after all profiling records have been recorded, while OLS is executed during\
+    \ recording (hence the term “online” in it’s name).\n\nk-means: We evaluate TPUPoint-Analyzer\
+    \ using the k-means algorithm implementation by using three stages [19]:\n\n+\
+    \   1) Extract the records from all statistical profiles and aggregate records\
+    \ together using the TPU step numbers. For each step, we define dimensions in\
+    \ terms of TensorFlow operations, the accumulated number of invocations, and total\
+    \ durations. Using principal component analysis (PCA) for dimensional reduction\
+    \ [20], we have at most 100 distinct operations for frequency vector representation.\n\
+    \n+   2) Try the k-means clustering algorithm on aggregated steps for values of\
+    \ k ranging from 1 to 15. Each run of k-means produces a clustering that partitions\
+    \ the steps into k different clusters.\n\n+   3) For each cluster (k = 1, ...\
+    \ ,15), calculate the sum of squared distances of samples to cluster centers (centroids)\
+    \ for each value of k. Attempt to minimize the sum of squared distances while\
+    \ maximizing the number of clusters (k) using the elbow method.\n\nTPUPoint-Analyzer\
+    \ implements k-means like SimPoint does [19], [21], [22]. SimPoint uses the Bayesian\
+    \ information criterion (BIC) [23] to measure the probability of clustering for\
+    \ a given simulation. Using instructions per cycle (IPC) as the metric, SimPoint\
+    \ compares using clusters rather than full"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'simulations for analysis. TPUPoint aims to simulate complete program execution
+    without architectural metrics such as IPC, instead employing the elbow method
+    [24] as a heuristic to cut clustering off when improvement stops increasing significantly
+    (i.e., when the sum of squared distances for a cluster stops improving significantly).
+
+
+    DBSCAN: DBSCAN [17], [18] follows the same general approach as k-means but relies
+    on core samples of high-density clusters. DBSCAN provides an alternative method
+    for comparison with k-means. DBSCAN also has three stages:
+
+
+    +   1) Extract the records from all statistical profiles and produce a frequency
+    vector representation as done in k-means.
+
+
+    +   2) Apply DBSCAN on aggregated steps of 25, requiring a minimum number of samples
+    from 5 to 200. As the minimum increases, the number of produced clusters decreases.
+
+
+    +   3) For each clustering minimum sample size, measure the ratio of the noise
+    by counting the number of unlabeled points to the total number of points. Attempt
+    to minimize noise while maximizing the number of required samples to form a cluster
+    using the elbow method.
+
+
+    OLS: Both k-means and DBSCAN post-process all records after program execution,
+    which requires the system to store large numbers of records and incur high computational
+    overhead due to the dimensional complexity of each record. To address these issues,
+    TPUPoint-Analyzer offers OLS, which identifies similar, consecutive program behaviors
+    that approximate clustering with significantly lower overhead and reduced data-storage
+    needs. With OLS, TPUPoint-Analyzer simply relies on records from the current step,
+    from the previous step, and from two steps ago. OLS has four stages:
+
+
+    +   1) Extract the records from the incoming statistical profiles and group the
+    records together using their step numbers. For each step, use all TensorFlow operations
+    in the program as well as the accumulated number of invocations and the total
+    duration of each operation.
+
+
+    +   2) When the program advances to another step, compare the previous step within
+    a profile to its successor step and calculate their similarity using Equation
+    [1]. Equation [1] computes the similarity of two steps as the ratio of the intersection
+    of the set of events from step i - 1 and the set of events from step i - 2 to
+    the minimum size of the two sets, where step i - 1 is the successor of step i
+    - 2. (A set of events for a step is defined as all the unique events that occur
+    during that step.)
+
+
+    +   3) If the successor step is similar according to either a user-specified threshold
+    or the default threshold (70% similarity), group the two steps together into a
+    single phase. Otherwise, associate the later step with a new program phase.
+
+
+    +   4) Repeat the above stages and gradually aggregate consecut-
+
+
+    ![](img/a2afc74fc22d678e24674964f5d46bc8_3_0.png)
+
+
+    Fig. 3. Visualization of TPUPoint profiling output
+
+
+    utive steps until all steps from the stored profiles have been parsed.
+
+
+    StepSimilarity (Step_i-1, Step_i-2) = |Step_i-1 ∩ Step_i-2| / min(|Step_i-1|,
+    |Step_i-2|) (1)
+
+
+    # B. Visualization
+
+
+    TPUPoint-Analyzer produces a JSON file to store the summarized view of application
+    behavior. This file, along with a corresponding CSV file, contains (1) a formatted
+    description of each phase and (2) the TPU and Host CPU operations executed during
+    training steps. The JSON file is compatible with Google Chromes event-profiling
+    tool, chrome://tracing. Figure 3 shows a visualization of TPUPoint-Analyzer output
+    for phases during TPU training from one such file. Each profile recorded is displayed
+    as a small subsection of the overall execution time on the horizontal Profile
+    Breakdown axis. Each phase identified time is displayed as a larger subsection
+    of the overall execution time on the horizontal Phase Breakdown axis. Figure 3
+    displays how each phase can expand over multiple profile records, effectively
+    summarizing the information from each profile. The time markers displayed in Figure
+    3 are not to scale, as TPUPoint-Analyzer''s visualization of the profiles and
+    phases are only a representation, meant to reduce the information a user must
+    consume. Using Chromes controls, a user can zoom in/out of each program phase
+    to see more/less detail from the TPUPoint-Analyzer output.
+
+
+    # C. Checkpointing and Restarting
+
+
+    Along with phases, TPUPoint records the closest checkpoint to each phase stored
+    by the TensorFlow model. To identify checkpoints, TensorFlow compares the steps
+    within a phase and finds the checkpoint with the smallest distance from those
+    steps. This approach allows applications to be modified based on a targeted phase
+    and executed without starting from step zero.
+
+
+    # V. EXPERIMENTAL METHODOLOGY
+
+
+    To verify the TPUPoint-Profiler and TPUPoint-Analyzer designs and obtain initial
+    insights to assist code optimizations, we ran a set of experiments on the Google
+    Cloud Platform. Each instance consisted of a single host with a 16-core, 2-way
+    SMT Intel Skylake CPU, 104 GB of main memory, and 250 GB of persistent disk [25].
+    To maintain implementation consistency, all instances used Docker version 19.03.1
+    and TensorFlow version 1.15 with TPUPoint installed. As mentioned in Section III,
+    each instance could access both TPUv2 and TPUv3—model implementations running
+    on a single TPU instance such as TPUv2 could run on a single TPUv3 instance without
+    code modifications. However, scaling for multiple TPU implementations “requires
+    significant tuning and'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '| Workload Name | Workload Type | Model | Dataset | Dataset Size | Default
+    Training Parameters |
+
+    |---|---|---|---|---|---|
+
+    | BERT | Natural Language | BERT | Stanford Question Answering Dataset (SQuAD)<br>Microsoft
+    Research Paraphrase Corpus (MRPC)<br>Multi-Genre Natural Language Inference (MNLI)<br>Corpus
+    of Linguistic Acceptability (CoLA) | 422.27 MiB<br>2.85 MiB<br>430.61 MiB<br>1.44
+    MiB | max seq length: 128<br>train batch size: 32<br>learning rate: 2e-5<br>num
+    epochs: 3<br>batch size: 1024<br>num shards: 8<br>train steps: 10000<br>train
+    steps per eval: 1000<br>learning rate: 0.001<br>learning rate: 0.0002 |
+
+    | DCGAN | Image Generation | DCGAN | CIFAR10<br>MNIST | 178.87 MiB<br>56.21 MiB
+    | train batch size: 1024<br>num shards: 8<br>train steps: 10000<br>train steps
+    per eval: 1000<br>learning rate: 0.001<br>learning rate: 0.0002 |
+
+    | QANet | Q/A Natural Language | QANet | Stanford Question Answering Dataset (SQuAD)
+    | 422.27 MiB | train batch size: 32<br>steps per epoch: 20000<br>num epochs: 5
+    |
+
+    | RetinaNet | Object Detection | RetinaNet | Common Objects in Context (COCO)
+    | 48.49 GiB | train batch size: 64<br>num shards: 8<br>num epochs: 15<br>num examples
+    per epoch: 120k |
+
+    | ResNet | Image Classification | ResNet-50 | ImageNet | 143.38 GiB | Default
+    Network Depth: 50<br>Train Steps: 112590<br>Default Batch Size: 1024 |
+
+
+    # TABLE I
+
+    WORKLOAD BREAKDOWN AND SPECIFICATIONS
+
+
+    ![](img/a2afc74fc22d678e24674964f5d46bc8_4_0.png)
+
+
+    Fig. 4. Clustering results for TPUPoint-Analyzer with scanning based on k-means
+    with different workloads; the plot shows the sum of squared distances of samples
+    to centroids for k clusters (k = 1, ..., 15)
+
+
+    ![](img/a2afc74fc22d678e24674964f5d46bc8_4_1.png)
+
+
+    Fig. 5. Clustering results for TPUPoint-Analyzer using DBSCAN with different workloads;
+    the plot shows the ratios of noisy samples to total samples for 5 to 180 minimum
+    required samples to form clusters in steps of 25
+
+
+    optimization" [13]; to avoid any unoptimized model execution, experiments were
+    conducted only on single-TPU instances. Table I describes the workloads we used
+    to test and verify our designs and hypotheses. We chose publicly available workloads
+    from the TensorFlow 1.14 TPU model library [26]: natural language processing (NLP)
+    (BERT [27]), image generation (DCGAN [28]), question answering (Q/A) NLP (QANet
+    [29]), object detection (RetinaNet [30]), and image classification(ResNet-50 [31]).
+
+
+    # VI. OBSERVATIONS AND INSIGHTS LEARNED FROM TPUPOINT-ANALYZER
+
+
+    # A. Representativeness of Phases
+
+
+    TPUPoint-Analyzer identifies similar, repetitive behaviors in applications and
+    categorizes those behaviors into phases to facilitate analysis and optimization.
+    This section discusses and compares the phases identified from the k-means, DBSCAN,
+    and OLS clustering algorithms.
+
+
+    Figure 4 shows the clustering results for k-means with k between 1 and 15, inclusive.
+    Each cluster represents a phase
+
+
+    of more extensive program execution. In this case, TPUPoint-Analyzer determines
+    that the sum of squared distances stops improving by a significant margin when
+    k is between 4 and 6; that is, 4 to 6 clusters are sufficient to cover most program
+    behaviors.
+
+
+    Although DBSCAN and k-means both use the elbow method, DBSCAN does not use centroids,
+    so distance cannot be used as a clustering metric. Instead, DBSCAN varies the
+    number of minimum required samples to form a cluster—designating a sample as either
+    a cluster or a noisy sample. Figure 5 shows the ratio of noisy samples to all
+    samples for the minimum number of required samples ranging from 5 to 180 in aggregated
+    steps of 25. The elbow method was applied in attempt to reduce the noise percentage
+    while maximizing the minimum number of samples required to form a cluster. Using
+    DBSCAN, TPUPoint-Analyzer found that a minimum of 30 to 80 samples was optimal
+    to reduce noise and produced between 3 to 13 clusters. Again, each cluster represents
+    a phase of more extensive program execution.
+
+
+    Figure 6 shows the number of phases that OLS identifies for varying similarities
+    using Equation 1 With a similarity threshold of 70%, we found that most workloads
+    are condensed into just 3 phases. For a similarity threshold above 70%, the number
+    of phases identified grows significantly for the majority of the workloads. For
+    these workloads, we further examined the operators within neighboring phases that
+    cannot combine together, and we found the differences between neighboring phases
+    are essentially ignorable, as they often represent a small amount of the application’s
+    execution time, turning even single operations into a phase—this creates a low
+    similarity between phases and so creates an excessive number phases.
+
+
+    As OLS tends to break up steps with small differences into different phases, a
+    high similarity threshold leads to a significant increase in the number of identified
+    phases. That being said, k-means, DBSCAN, and OLS all aggregate the same set of
+    phases into a single phase. Even when TPUPoint-Analyzer uses the extreme 100%
+    StepSimilarity threshold (meaning that TPUPoint-Analyzer requires all steps in
+    a phase to share exactly the same breakdown of operators), TPUPoint-Analyzer still
+    breaks up most workloads into fewer than 15'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/a2afc74fc22d678e24674964f5d46bc8_5_0.png)
+
+
+    ![](img/a2afc74fc22d678e24674964f5d46bc8_5_1.png)
+
+
+    ![](img/a2afc74fc22d678e24674964f5d46bc8_5_2.png)
+
+
+    ![](img/a2afc74fc22d678e24674964f5d46bc8_5_3.png)
+
+
+    phases, except for the RetinaNet-COCO and ResNet-ImageNet workloads. The above
+    results give us the first observation for this paper:
+
+
+    Observation 1: most TPU workloads can be summarized into a limited number of phases.
+
+
+    Another metric to judge phase selection is the coverage of execution time. Based
+    on observation 1, we accumulated the total execution time of the 3 longest phases
+    for different threshold values. Figure 7 shows that these top 3 phases encompass
+    at least 95% of the entire execution of each workload at the 70% similarity threshold
+    when using OLS. For the 70% threshold, TPUPoint-Analyzer can cover almost 100%
+    of execution time for all workloads. The results are similar for k-means (k =
+    5) and DBSCAN (minimum samples = 30), as shown in Figure 9 and Figure 8 respectively.
+    Because of the high number of noisy sample DBSCAN is unable to cluster, we consider
+    these unlabeled samples to be a cluster as well. We find that these represent
+    a majority of most workload''s execution time shown in Figure 8 Figure 9 demonstrates
+    that even With k-means set to larger than 3 clusters, will still be dominated
+    by the top 3.
+
+
+    Observation 2: the 3 longest phases cover most of the execution time for TPU workloads.
+
+
+    # B. Operators in Phases
+
+
+    Cloud TPUs are simply hardware accelerators in computer systems, so TPU-accelerated
+    workloads still rely on a host program for workload distribution. We now describe
+    the most time-consuming operations on both the host CPU programs and the TPU.
+
+
+    Table III shows the top 5 most time-consuming operations from the top 3 longest
+    phases on both the CPU/host program and the TPU program using TPUv2. For k-means
+    and DBSCAN, the identified phases are mostly identical with nearly the same set
+    of top operators. For OLS, which tends to
+
+
+    divide similar phases into multiple phases, the top 5 operators are slightly different
+    from the top 5 k-means and DBSCAN operators.
+
+
+    Differences notwithstanding, all three algorithms identify a common set of the
+    most time-consuming operators on TPUv2 across workloads, with the fusion operator
+    being the most time-consuming overall. The identified fusion operator combines
+    compute-intensive operations from the XLA compiler and is intended to help reduce
+    memory operations [32]. The reshape operator is also one of the most time-consuming
+    operators. Unlike fusion, reshape is not algorithm-related, but rather serves
+    only to prepare input data for subsequent TPU computations.
+
+
+    The most critical operators on the host side are TransferBufferToInfeedLocked
+    and OutfeedDequeueTuple. Both operators exchange data with TPUs. Figure 10 shows
+    the percentage of idle time on TPUs for each workload; the Cloud TPUs are, on
+    average, idle for 38.90% of the time for TPUv2 and 43.53% of the time for TPUv3.
+    Figure 11 explores the underutilization of the MXUs—on average, from 22.72% for
+    TPUv2 to 11.34% for TPUv3. During idle time, the host is busy preparing and sending
+    data with the top operators listed in Table III We now have two additional observations:
+
+
+    Observation 3: current TPU workloads incur a significant amount of overhead from
+    data preparation and data exchange.
+
+
+    Observation 4: improving TPU data-preparation and TPU data-exchange efficiency
+    on the host computer is key to improving TPU utilization and TPU workload performance.
+
+
+    To identify the differences between Cloud TPUs, we repeated our analysis with
+    the same workloads, datasets, and parameters with TPUv3. Using OLS, k-Means, and
+    DBSCAN, we identified the top five operators for the longest identified phase
+    and corresponding cluster. Table III also shows that'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '| | BERT MRPC | BERT SQuAD | BERT CoLA | BERT MNLI | DCGAN CIFAR10 | DCGAN
+    MNIST | QANet SQuAD | RetinaNet COCO | ResNet ImageNet | Total TPUv2 | Total TPUv3
+    |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|
+
+    | | Q.k-means k-means DBSCAN | Q.k-means k-means DBSCAN | Q.k-means k-means DBSCAN
+    | Q.k-means k-means DBSCAN | Q.k-means k-means DBSCAN | Q.k-means k-means DBSCAN
+    | Q.k-means k-means DBSCAN | Q.k-means k-means DBSCAN | Q.k-means k-means DBSCAN
+    | | |
+
+    | Host Operations | | | | | | | | | | | |
+
+    | OutfeedDequeueTuple | O O O | O O O | O O O | O O O | O O O | O O O | O O O
+    | O O O | O O O | 21 | 17 |
+
+    | TransferBuffer/InfeedLocked | O O O | O O O | O O O | O O O | O O O | O O O
+    | O O O | O O O | O O O | 19 | 17 |
+
+    | Reshape | O O O | O O O | | O O O | O O O | O O O | O O O | | | 15 | 9 |
+
+    | Sqrt | O O O | O O O | | O O O | | O O O | O O O | | | 10 | 9 |
+
+    | Linearize32 | O O O | O O O | | O O O | O O O | O O O | | | | 9 | 5 |
+
+    | LR/AD | | | O O O | | O O O | | | O O O | | 8 | 9 |
+
+    | Infeed/DequeueTuple | O O O | O O O | | O O O | O O O | O O O | O O O | O O
+    O | | 8 | 8 |
+
+    | InitializedHostPinnedDistributedTpu | | | | | | | | | | 7 | 3 |
+
+    | Reshape_1 | O O | | | O O | O O | | | | 4 | 6 |
+
+    | DisconnectHostFromDistributedTPUSystem | O | | O O | | O O | O | | O | | 3 |
+    0 |
+
+    | ReadVariable2 | | | | | | | | | | 4 | 1 |
+
+    | Recv | | | | | O | | | O O | | 1 | 1 |
+
+    | Min | | | | | | | | O O | | 1 | 1 |
+
+    | Maximum | | | | | | | | O O | | 1 | 1 |
+
+    | Minimum | | | | | | | | O O | | 1 | 1 |
+
+    | Sub | | | | | | | | O O | | 1 | 1 |
+
+    | DecodeAndCropJpeg | | | | | | | | | O O | | 1 | 1 |
+
+    | ResizeBicubic | | | | | | | | | | 1 | 1 |
+
+    | StartProgram | | | | | | | | | | 0 | 1 |
+
+    | BootstrapInitializer | | O O | | | O O | O O | O O | | | 0 | 12 |
+
+    | BuildLastOutput | O O | O O | | | | | | | | | 3 |
+
+    | TPU Operations | | | | | | | | | | | |
+
+    | fusion | O O O | O O O | O O O | O O O | O O O | O O O | O O O | O O | O O |
+    23 | 23 |
+
+    | MatMul | O O O | O O O | O O O | O O O | O O O | O O O | O O O | O O O | O O
+    O | 15 | 15 |
+
+    | Reshape_1 | O O O | O O O | O O O | O O O | O O O | O O O | O O O | | | 15 |
+    18 |
+
+    | L2Loss | O O O | O O O | O O O | O O O | O O O | O O O | O O O | O | | 12 |
+    12 |
+
+    | Conv2DBackpropFilter | | | | | O O | | | O | O | 8 | 6 |
+
+    | Transpose | O O O | O O O | O O O | O O O | O O O | O O O | | | | 6 | 6 |
+
+    | BiasAddGrad | | | | | | | | | | 6 | 6 |
+
+    | CrossReplicaSum | | | | | O O O | | | | | 6 | 3 |
+
+    | ConcatenateV2/ConcatV2/output | | | | | O O O | O O O | | O | O | 5 | 5 |
+
+    | FusedBatchNormV3 | | | | | O O O | | | O O O | | 3 | 6 |
+
+    | Infeed | | | | | | O O | | | | 3 | 5 |
+
+    | all | | | | | | | O O O | | | 3 | 3 |
+
+    | ReduceWindow | | | | | | | | O O | | 3 | 3 |
+
+    | Copy | | | | | | | | O | | 1 | 1 |
+
+    | InfeedDequeueTuple | | | | | | | | O O | | 1 | 1 |
+
+    | FusedBatchNormGradV3 | | | | | | | | O O | | 1 | 2 |
+
+    | Relu | | | | | | | | O | | 1 | 1 |
+
+
+    TABLE II
+
+    THE TOP 5 MOST TIME-CONSUMING OPERATORS IN THE MOST TIME-CONSUMING PHASE USING
+    DIFFERENT PHASE-DETECTION ALGORITHMS WITH TPUV2, SHOWN WITH O, TPUV3, SHOWN WITH
+    [], AND <> FOR BOTH.
+
+
+    ![](img/a2afc74fc22d678e24674964f5d46bc8_6_0.png)
+
+
+    Fig. 10. Idle time for TPUv2 and TPUv3 across workloads
+
+
+    ![](img/a2afc74fc22d678e24674964f5d46bc8_6_1.png)
+
+
+    Fig. 12. Idle time for TPUv2 and TPUv3 across QANet, RetinaNet, and ResNet using
+    smaller datasets
+
+
+    ![](img/a2afc74fc22d678e24674964f5d46bc8_6_2.png)
+
+
+    Fig. 11. MXU utilization for TPUv2 and TPUv3 across workloads
+
+
+    ![](img/a2afc74fc22d678e24674964f5d46bc8_6_3.png)
+
+
+    Fig. 13. MXU utilization for TPUv2 and TPUv3 across QANet, RetinaNet, and ResNet
+    using smaller datasets
+
+
+    the top five operators generally remain consistent for TPUv2 and TPUv3 (as well
+    as the host). Notably, k-Means and DBSCAN reach memory limitations for larger
+    workloads such as RetinaNet and ResNet, which affirms that the TPUPoint-Analyzer/OLS
+    combination can compete with clustering methods implemented in SimPoint [21],
+    [22].
+
+    For TPUv3, the most time-consuming operators are the same as those for TPUv2 across
+    workloads, but the total utilization of TPU resources changes. The QANet and RetinaNet
+    workloads reduce flop utilization from about 16% on TPUv2 to 13% on TPUv3 for
+    QANet and from about 46% on TPUv2 to 32% on TPUv3 for RetinaNet. The increased
+    percentage of time required for infeed operations indicates the parameters related
+    to memory operators such as outfeed need to change to fully utilize TPUv3. However,
+    the observed differences are mainly due to the improved computational
+
+
+    capabilities of TPUv2 over TPUv3. The increased percentage of time observed for
+    infeed implies that the non-computational overhead in the later-generation TPUs
+    may be more significant.
+
+    Observation 5: the significance of non-computational overhead increases as computational
+    throughput improves.
+
+
+    # C. Datasets
+
+
+    For the BERT and DCGAN workloads, we used different datasets to help understand
+    the impact of inputs on the associated models. For BERT workloads with 4 different
+    input datasets, the top 5 operators in Table III the TPU idle time in Figure 10
+    and the MXU utilization in Figure 11 are different, just as they are different
+    for the two workloads that use the DCGAN model.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'To further observe model behavior across datasets sizes, QANet, RetinaNet,
+    and ResNet were ran with reduced datasets. QANet and RetinaNet were ran by reducing
+    their original SQuAD and COCO datasets in half. ResNet was ran using the CIFAR10
+    dataset. Figure [12] and Figure [13] display the idle TPU time and matrix utilization
+    percentage respectively. All models experience a reduction in MXU utilization,
+    and an increase in idle time percentage overall. ResNet in particular experiences
+    the greatest change from it''s original ImageNet dataset observations in Figure
+    [10] and Figure [11] even though using the same methodology to feed in the CIFAR10
+    dataset. These observations provide another insight into performance tuning for
+    ML applications:
+
+
+    *Observation 6: the performance bottleneck can change as the input dataset changes,
+    even with the same model.*
+
+
+    Observation 6 implies that if a programmer optimizes a program with a specific
+    model using a certain dataset, that optimization may not carry over to different
+    datasets. Observation 6 thus points to the need for dynamic runtime optimization
+    to achieve the best performance for ML workloads.
+
+
+    # ## VII. TPUPOINT-OPTIMIZER
+
+
+    Based on the observations from TPUPoint-Profiler, we designed TPUPoint-Optimizer,
+    an automatic tool that helps to fine-tune the performance of an identified phase
+    in a workload. TPUPoint-Optimizer works without programmer input and ensures that
+    tuning does not affect program-execution output. TPUPoint-Optimizer does the following
+    to help instrument a workload: (1) It analyzes code and automatically instruments
+    code to assist optimization. (2) It allows for online tuning without the need
+    for complete program execution. (3) It controls the output quality. This section
+    describes the design of TPUPoint-Optimizer.
+
+
+    # ### A. Program Analysis
+
+
+    If the user enables TPUPoint-Optimizer, TPUPoint-Optimizer will analyze a TensorFlow
+    program between the calls to start and stop TPUPoint-Profiler. During the program-analysis
+    phase, TPUPoint-Optimizer first identifies adjustable parameters originally defined
+    by the user. These adjustable parameters include buffer size, the number of threads
+    dedicated to an operation, and the order of operations that can be rearranged
+    while maintaining correctness. If any of these adjustable parameters cause errors
+    when altered, TPUPoint-Optimizer will not treat them as adjustable. Using the
+    list of input/output variables and adjustable parameters, TPUPoint-Optimizer instruments
+    code to produce checkpoints before each function call within the profiled program.
+
+
+    # ### B. Online Tuning
+
+
+    TPUPoint-Optimizer provides an online performance-tuning feature that adjusts
+    the performance of TPU workloads without requiring the program to finish a complete
+    execution cycle. The design of TPUPoint-Optimizers online tuning algorithm comes
+    primarily from two observations described in the previous section: Observation
+    1—most TPU workloads can be
+
+
+    ![](img/a2afc74fc22d678e24674964f5d46bc8_7_0.png)
+
+
+    Fig. 14. TPUPoint-Optimizer speedups for TPUv2
+
+
+    summarized into a limited number of phases. Observation 2— the 3 longest phases
+    cover most of the execution time for TPU workloads. Taken together, these observations
+    suggest that optimization of a small portion of program execution can have a significant
+    impact on program execution as a whole.
+
+
+    After TPUPoint-Optimizer analyzes input/output variables and instruments code
+    for checkpointing, it will start running the workload using the normal inputs
+    and default parameters. At the same time, TPUPoint-Optimizer tracks the accumulated
+    execution time in different code segments using the statistical model that we
+    developed for TPUPoint-Profiler. If TPUPoint-Profiler observes the most common
+    pattern of operators described in Section [VI] (e.g., reshape, infeed, fusion,
+    outfeed) within the most time-consuming phases, or the current phase accounts
+    for more than half of the aggregated execution time, TPUPoint-Optimizer will designate
+    the current code segment as having already entered the performance-critical phase
+    and will optimize accordingly, making sure to maintain correctness.
+
+
+    If performance improves and output does not change, TPUPoint-Optimizer continues
+    adjusting parameter values in the same direction until an optimal value for that
+    specific parameter is found. If no other neighboring values are better than the
+    default value, TPUPoint-Optimizer will keep the default value. Finally, TPUPoint-Optimizer
+    uses the improved adjusted parameters to complete rest of the program''s execution.
+
+
+    # ### C. Performance of TPUPoint-Optimizer
+
+
+    Figure [14] shows optimized program performance after using TPUPoint-Optimizer
+    to adjust the default parameters and the execution times on TPUv2 (for naive implementations).
+    Figure [14] only shows the workloads that originally took twenty minutes or more
+    to complete other workloads with much shorter execution times (e.g., DCGAN and
+    BERT) show minimal performance gains from TPUPoint-Optimizer and can actually
+    take a performance hit by waiting for TPUPoint-Optimizer to complete any post
+    processing tasks. Using the default parameters from TPUv2, the workloads with
+    long execution times achieve a speedup of about 1.12x on average. It''s important
+    to note that most of the publicly available ML workloads used in this study were
+    manually optimized by Google engineers. So to test TPUPoint-Optimizer, we developed
+    an original naive implementation to see if TPUPoint-Optimizer could improve poor
+    performance. Figure [15] displays TPU idle time of the naive implementation with
+    and'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/a2afc74fc22d678e24674964f5d46bc8_8_0.png)
+
+
+    ![](img/a2afc74fc22d678e24674964f5d46bc8_8_1.png)
+
+
+    without TPUPoint-Optimizer for both TPUv2 and TPUv3. Figure [16]displays the MXU
+    utilization of the naive implementation with and without TPUPoint-Optimizer for
+    both TPUv2 and TPUv3. TPUv3. TPUPoint-Optimizer increased the TPU idle time of
+    the naive implementation for both TPUv2 and TPUv3 (Figure [15] and increased MXU
+    utilization for TPUv2 (Figure [16]. Thus, TPUPoint-Optimizer is able to yield
+    performance gains from more efficient use of Cloud TPUs with TPUv2 exhibiting
+    pronounced change matrix-operation reliance. When we applied TPUPoint-Optimizer
+    to our naive workloads that originally had execution times of less than twenty
+    minutes (BERT and DCGAN), the workloads showed no notable change in speed compared
+    to their original performance. In contrast, when we applied TPUPoint-Optimizer
+    to our naive workloads that originally took more than twenty minutes (QANet and
+    RetinaNet), we did see improvements in speed—not surprising given that the workloads
+    with longer execution times involve larger and more complex datasets and deeper
+    implementations relative to the workloads with shorter execution times. Because
+    TPUv3 simply contains twice as many MXUs and HBM as TPUv2, we did not observe
+    performance gains from TPUPoint-Optimizer for TPUv3. In fact, we observed an average
+    performance loss under 10% due to the overhead of our profiling/optimization tools.
+    Nonetheless, these results indicate that the overhead associated with TPUPoint-Optimizer
+    is relatively insignificant compared with the overhead associated with complete
+    program execution.
+
+
+    # VIII. RELATED WORK
+
+
+    Targeting architectural simulation instead of full-system profiling (the key concept
+    of SimPoint [19], [21], [22]) and clustering similar program behaviors into program
+    phases (as with HyGCN [33]) inspired the development of TPUPoint. TPUPoint also
+    incorporates the checkpointing and restarting features of TurboSMARTS [34] to
+    save time when under tak-
+
+
+    ing architectural simulation and to reduce the cost of cloud computing.
+
+
+    Both TPUPoint and ParaDnn [35] offer tools and systematic methodologies to analyze
+    Cloud TPU performance. TPUPoint provides direct feedback to programmers while
+    automatically and implicitly rewriting under-performing code. In contrast, ParaDnn
+    focuses on systematic testing and optimization insight on architectural perspectives
+    and is therefore complementary to TPUPoint.
+
+
+    In addition to using Cloud TPUs, data centers have often relied on heterogeneous
+    hardware components to accelerate ML workloads [36], [37], [38], [39], [40], [41],
+    [42], [43], [44], [45], [46], [47], [48], [49], [50], [51], [52], [53]. However,
+    hardware solutions are generally not distribution friendly. As TPUPoint works
+    at the programming-language/application level to observe and optimize performance,
+    TPUPoint is portable; simply changing the low-level library function calls that
+    TPUPoint uses to retrieve statistics makes TPUPoints profiling and optimization
+    available on a wide variety of platforms.
+
+
+    Some benchmark suites also attempt to standardize ML workload management: $\mu$
+    Suite [54], BigDataBench [55], AI Benchmark [56], EEMBC MLMark Benchmark [57],
+    [58], Fathom [59], AI Matrix [60], DeepBench [61], DAWNBench [62], and MLPerf
+    [63], and mixed-precision benchmarks as well [64], [65]. When benchmarking Cloud
+    TPUs, we can only test a subset of each benchmark suite due to the limited front-end
+    programming-language support for the Cloud TPU platform. That being said, many
+    benchmarks rely on the same models and datasets, varying only frameworks and implementations.
+    We have tried our best to cover the spectrum of ML workloads.
+
+
+    There have been several prior papers on summarizing ML such as EcoRNN [66], SeqPoints
+    [67], and TBD [68]. These works do not attempt to profile/optimize the same range
+    of benchmarks as TPUPoint does, where computation could be input independent or
+    heterogeneous across iterations. EcoRNN and TBD take a sampling and iteration-based
+    approach to LSTM RNN and DNN respectively, while SeqPoint considers how input
+    variation effects sequence-based neural networks (SQNNs). To provide insight to
+    such a wide range of ML workloads, TPUPoint aims for high coverage but low overhead
+    regardless of the ML workload.
+
+
+    As ML workloads predominate in cloud services, methods for optimizing resource
+    utilization have received significant attention. Some methods use performance
+    estimation algorithms [69], [70], [71], [72], [73] or training models [74], [75],
+    [76] to select optimal parameters. Such methods tend to have stagnant selectors,
+    and while they offer lower overhead, they are limited in their ability to adapt
+    to new workloads. Instead of focusing only on a specific workload, TPUPoint provides
+    a more generic framework applicable to a much broader range of ML tasks.
+
+
+    # IX. CONCLUSION
+
+
+    This paper presents TPUPoint, a toolchain that collects, an-'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'alyzes, and optimizes the performance of TPU-accelerated ML workloads. Using
+    the post-analysis tool, TPUPoint-Analyzer, we determined that most TPU-accelerated
+    ML workloads are under-utilizing precious TPU resources. Moreover, because workload
+    behavior varies by model and dataset, manually optimizing workloads is not feasible.
+    Fortunately, the behavior within a workload is often repetitive, opening the door
+    for dynamic optimizations. Using the observations learned from TPUPoint-Analyzer,
+    we designed TPUPoint-Optimizer to detect the main application phase and dynamically
+    adjust parameters in running code. Our results show a 1.12× speedup over default
+    parameters without programmer intervention.
+
+
+    # ACKNOWLEDGMENTS
+
+
+    The authors would like to thank the anonymous reviewers for their helpful comments.
+    We want to thank TensorFlow Research Cloud (TFRC) for providing us access and
+    support for clouds TPUs. We also owe a debt of gratitude to Christopher Fraser
+    for his excellent copyediting skills. This work was sponsored by National Science
+    Foundation (NSF) award, CNS-2007124.
+
+
+    # REFERENCES
+
+
+    +   [1] Y. Deng, F. Bao, Y. Kong, Z. Ren, and Q. Dai, "Deep direct reinforcement
+    learning for financial signal representation and trading," IEEE Transactions on
+    Neural Networks and Learning Systems, vol. 28, no. 3, pp. 653–664, 2017.
+
+    +   [2] X. Ding, Y. Zhang, T. Liu, and J. Duan, "Deep learning for event-driven
+    stock prediction," in IJCAI''15. AAAI Press, 2015, p. 23272333.
+
+    +   [3] A. Grover and J. Leskovec, "Node2vec: Scalable feature learning for networks,"
+    in Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery
+    and Data Mining, ser. KDD ''16. New York, NY, USA: Association for Computing Machinery,
+    2016, p. 855–864. [Online]. Available: https://doi.org/10.1145/2939672.2939754
+
+    +   [4] T. N. Kipf and M. Welling, "Semi-supervised classification with graph
+    convolutional networks," arXiv, 2017.
+
+    +   [5] X. Liu, H. Yang, Z. Liu, L. Song, H. Li, and Y. Chen, "DPatch: An adversarial
+    attack on object detectors," arXiv, 2019.
+
+    +   [6] W. Liu, D. Anguelov, D. Erhan, C. Szegedy, S. Reed, C.-Y. Fu, and A. C.
+    Berg, "SSD: Single shot multibox detector," in Computer Vision – ECCV 2016, B.
+    Leibe, J. Matas, N. Sebe, and M. Welling, Eds. Cham: Springer International Publishing,
+    2016, pp. 21–37.
+
+    +   [7] B. Perozzi, R. Al-Rfou, and S. Skiena, "DeepWalk: Online learning of social
+    representations," in Proceedings of the 20th ACM SIGKDD International Conference
+    on Knowledge Discovery and Data Mining, ser. KDD ''14. New York, NY, USA: Association
+    for Computing Machinery, 2014, p. 701–710. [Online]. Available: https://doi.org/10.1145/2623330.2623732
+
+    +   [8] S. Ren, K. He, R. Girshick, and J. Sun, "Faster R-CNN: Towards real-time
+    object detection with region proposal networks," in Advances in Neural Information
+    Processing Systems 28, C. Cortes, N. D. Lawrence, D. D. Lee, M. Sugiyama, and
+    R. Garnett, Eds. Curran Associates, Inc., 2015, pp. 91–99. [Online]. Available:
+    http://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf
+
+    +   [9] L. Song, F. Chen, S. R. Young, C. D. Schuman, G. Perdue, and T. E. Potok,
+    "Deep learning for vertex reconstruction of neutrino-nucleus interaction events
+    with combined energy and time data," in ICASSP 2019 - 2019 IEEE International
+    Conference on Acoustics, Speech and Signal Processing (ICASSP), 2019, pp. 3882–3886.
+
+    +   [10] R. Miotto, F. Wang, S. Wang, X. Jiang, and J. T. Dudley, "Deep learning
+    for healthcare: review, opportunities and challenges," Briefings in Bioinformatics,
+    vol. 19, no. 6, pp. 1236–1246, 05 2017. [Online]. Available: https://doi.org/10.1093/bib/bbx044
+
+    +   [11] N. P. Jouppi, C. Young, N. Patil, D. Patterson, G. Agrawal, R. Bajwa,
+    S. Bates, S. Bhatia, N. Boden, A. Borchers, R. Boyle, P. l Cantin, C. Chao, C.
+    Clark, J. Coriell, M. Daley, M. Dau, J. Dean, B. Gelb, T. V. Ghaemmaghami, J.
+    Gottipati, W. Gulland, R. Hagmann, C. R. Ho, D. Hogberg, J. Hu, R. Hundt, D. Hurt,
+    J. Ibarz, A. Jaffey, A. Jaworski, A. Kaplan, H. Khaitan, D. Killebrew, A. Koch,
+    N. Kumar, S. Lacy, J. Laudon, J. Law, D. Le, C. Leary, Z. Liu, K. Lucke, A. Lundin,
+    G. MacKean, A. Maggiore, M. Mahony, K. Miller, R. Nagarajan, R. Narayanaswami,
+    R. Ni, K. Nix, T. Norrie, M. Omernick, N. Penukonda, A. Phelps, J. Ross, M. Ross,
+    A. Salek, E. Samadiani, C. Severn, G. Sizikov,
+
+
+    +   M. Snelham, J. Souter, D. Steinberg, A. Swing, M. Tan, G. Thorson, B. Tian,
+    H. Toma, E. Tuttle, V. Vasudevan, R. Walter, W. Wang, E. Wilcox, and D. H. Yoon,
+    "In-datacenter performance analysis of a Tensor Processing Unit," in Proceedings
+    of the 44th Annual International Symposium on Computer Architecture, ser. ISCA
+    ’17. New York, NY, USA: Association for Computing Machinery, 2017, pp. 1–12. [Online].
+    Available: https://doi.org/10.1145/3079856.3080246
+
+    +   [12] (2020) Tensorflow research cloud. [Online]. Available: https://www.tensorflow.org/tfrc
+
+    +   [13] Google Cloud. (2020) System architecture cloud TPU. [Online]. Available:
+    https://cloud.google.com/tpu/docs/system-architecture
+
+    +   [14] TensorFlow. [Online]. Available: https://github.com/tensorflow/tensorflow
+
+    +   [15] S. Lloyd, "Least squares quantization in PCM," IEEE Transactions on Information
+    Theory, vol. 28, no. 2, pp. 129–137, 1982.
+
+    +   [16] J. Macqueen, "Some methods for classification and analysis of multivariate
+    observations," Multivariate Observations, p. 17, 1967.
+
+    +   [17] M. Ester, H.-P. Kriegel, J. Sander, and X. Xu, "A density-based algorithm
+    for discovering clusters in large spatial databases with noise," in KDD, 1996,
+    pp. 226–231. [Online]. Available: http://www.aaai.org/Library/KDD/1996/kdd96-037.php
+
+    +   [18] E. Schubert, J. Sander, M. Ester, H. P. Kriegel, and X. Xu, "DBSCAN Revisited,
+    Revisited: Why and how you should (still) use DBSCAN," ACM Trans. Database Syst.,
+    vol. 42, no. 3, Jul. 2017. [Online]. Available: https://doi.org/10.1145/3068335
+
+    +   [19] T. Sherwood, E. Perelman, G. Hamerly, and B. Calder, "Automatically characterizing
+    large scale program behavior," in Proceedings of the 10th International Conference
+    on Architectural Support for Programming Languages and Operating Systems, ser.
+    ASPLOS X. New York, NY, USA: Association for Computing Machinery, 2002, p. 4557.
+    [Online]. Available: https://doi.org/10.1145/605397.605403
+
+    +   [20] S. Wold, K. Esbensen, and P. Geladi, "Principal component analysis,"
+    Chemometrics and Intelligent Laboratory Systems, vol. 2, no. 1, pp. 37 – 52, 1987,
+    proceedings of the Multivariate Statistical Workshop for Geologists and Geochemists.
+    [Online]. Available: http://www.sciencedirect.com/science/article/pii/0169743987800849
+
+    +   [21] G. Hamerly, P. Elmeleegy, and B. Calder, "Comparing multinomial and k-means
+    clustering for SimPoint," in 2006 IEEE International Symposium on Performance
+    Analysis of Systems and Software, 2006, pp. 131–142.
+
+    +   [22] E. Perelman, M. Polito, J. Bouguet, J. Sampson, B. Calder, and C. Dulong,
+    "Detecting phases in parallel applications on shared memory architectures," in
+    Proceedings 20th IEEE International Parallel Distributed Processing Symposium,
+    2006, pp. 10.
+
+    +   [23] D. Pelleg and A. Moore, "X-means: Extending K-means with efficient estimation
+    of the number of clusters," in Proceedings of the 17th International Conf. on
+    Machine Learning, 2000, p. 727734.
+
+    +   [24] R. L. Thorndike, "Who belongs in the family?" Psychometrika, vol. 18,
+    no. 4, pp. 267–276, Dec 1953. [Online]. Available: https://doi.org/10.1007/BF02289263
+
+    +   [25] Google Cloud. (2020) Machine Types Compute Engine Documentation. [Online].
+    Available: https://cloud.google.com/compute/docs/machine-types
+
+    +   [26] TensorFlow. (2019) TensorFlow TPU models. [Online]. Available: https://github.com/tensorflow/tpu
+
+    +   [27] I. Turc, M.-W. Chang, K. Lee, and K. Toutanova, "Well-read students learn
+    better: On the importance of pre-training compact models," arXiv, 2019.
+
+    +   [28] A. Radford, L. Metz, and S. Chintala, "Unsupervised representation learning
+    with deep convolutional generative adversarial networks," arXiv, 2016.
+
+    +   [29] A. W. Yu, D. Dohan, M.-T. Luong, R. Zhao, K. Chen, M. Norouzi, and Q.
+    V. Le, "QANet: Combining local convolution with global self-attention for reading
+    comprehension," arXiv, 2018.
+
+    +   [30] T.-Y. Lin, P. Goyal, R. Girshick, K. He, and P. Dollar, "Focal loss for
+    dense object detection," in Proceedings of the IEEE International Conference on
+    Computer Vision (ICCV), Oct 2017.
+
+    +   [31] K. He, X. Zhang, S. Ren, and J. Sun, "Deep residual learning for image
+    recognition," CoRR, vol. abs/1512.03385, 2015. [Online]. Available: http://arxiv.org/abs/1512.03385
+
+    +   [32] TensorFlow. (2020) XLA: Optimizing compiler for machine learning. [Online].
+    Available: https://www.tensorflow.org/xla
+
+    +   [33] M. Yan, L. Deng, X. Hu, L. Liang, Y. Feng, X. Ye, Z. Zhang, D. Fan, and
+    Y. Xie, "FGYCNN: A GCN accelerator with hybrid architecture," in 2020 IEEE International
+    Symposium on High Performance Computer Architecture (HPCA), 2020, pp. 15–29.
+
+    +   [34] T. F. Wenisoh, R. E. Wunderlich, B. Falsafi, and J. C. Hoe, "TurboSMARTS:
+    Accurate microarchitecture simulation sampling in minutes," in Proceedings of
+    the 2005 ACM SIGMETRICS International Conference on Measurement and Modeling of
+    Computer Systems, ser. SIGMETRICS ''05. New York, NY, USA: Association for Computing
+    Machinery, 2005, p. 408409. [Online]. Available: https://doi.org/10.1145/1064212.1064278
+
+    +   [35] Y. Wang, G.-Y. Wei, and D. Brooks, "A systematic methodology for analysis
+    of deep learning hardware and software platforms," in Proceedings of Machine Learning
+    and Systems, I. Dhillon, D. Papailiopoulos, and V. Sze, Eds., vol. 2, 2020, pp.
+    30–43. [Online]. Available: https://proceedings.mlsys.org/paper/2020/file/2c0ad46de7f9759aa2a0c99fb67f10-Paper.pdf
+
+    +   [36] J. Powers, K. Ovtcharov, M. Papamichael, T. Massengill, M. Liu, D. Lo,
+    S. Alkalay, M. Haselman, L. Adams, M. Ghandi, S. Heil, P. Patel, A. Sapek, G.
+    Weisz, L. Woods, S. Lanka, S. Reinhardt, A. M. Caulfield, E. S. Chung, and D.
+    Burger, "A configurable cloud-scale DNN processor for real-time AI," in 2018 ACM/IEEE
+    45th Annual International Symposium on Computer Architecture (ISCA), 2018, pp.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '+   [37] E. Chung, J. Fowers, K. Ovtcharov, M. Papamichael, A. Caulfield, T.
+    Massengill, M. Liu, D. Lo, S. Alkalay, M. Haselman, M. Abedyeera, L. Adams, H.
+    Angepat, C. Boehn, D. Chiou, O. Firestein, A. Forin, K. S. Gatlin, M. Ghandi,
+    S. Heil, K. Holohan, A. El Hussien, T. Juhasz, K. Kagi, R. K. Kovindaraju, S.
+    Lanka, F. van Megen, D. Mukhortov, P. Patel, B. Perez, A. Rapsang, S. Reinhardt,
+    B. Rouhani, S. Apek, R. Serea, S. Sekhar, B. Sridharan, G. Weisz, L. Woods, P.
+    Yi Xiao, D. Zhang, R. Zhao, and D. Burger, “Serving DNNs in real time at datacenter
+    scale with project Brainwave,” IEEE Micro, vol. 38, no. 2, pp. 8–20, 2018.
+
+    +   [38] H. Esmaeilzadeh, A. Sampson, L. Ceze, and D. Burger, “Neural acceleration
+    for general-purpose approximate programs,” in 2012 45th Annual IEEE/ACM International
+    Symposium on Microarchitecture, 2012, pp. 449–460.
+
+    +   [39] K. Hazelwood, S. Bird, D. Brooks, S. Chintala, U. Diril, D. Dzhulgakov,
+    M. Fawzy, B. Jia, Y. Jia, A. Kalro, J. Law, K. Lee, J. Lu, P. Noordhuis, M. Smelyanskiy,
+    L. Xiong, and X. Wang, “Applied machine learning at Facebook: A datacenter infrastructure
+    perspective,” in 2018 IEEE International Symposium on High Performance Computer
+    Architecture (HPCA), 2018, pp. 620–629.
+
+    +   [40] C. Wu, D. Brooks, K. Chen, D. Chen, S. Choudhury, M. Dukhan, K. Hazelwood,
+    E. Isaac, Y. Jia, B. Jia, T. Leyden, H. Lu, Y. Lu, L. Qiao, B. Reagen, J. Spisak,
+    F. Sun, A. Tulloch, P. Vajda, X. Wang, Y. Wang, B. Wasti, Y. Wu, R. Xian, S. Yoo,
+    and P. Zhang, “Machine learning at Facebook: Understanding inference at the edge,”
+    in 2019 IEEE International Symposium on High Performance Computer Architecture
+    (HPCA), 2019, pp. 331–344.
+
+    +   [41] S. Markidis, S. W. D. Chien, E. Laure, I. B. Peng, and J. S. Vetter,
+    “NVIDIA Tensor Core Programmability, performance, precision,” in 2018 IEEE International
+    Parallel and Distributed Processing Symposium Workshops (IPDPSW), 2018, pp. 522–531.
+
+    +   [42] L. Durant, O. Giroux, M. Harris, and N. Stam. (2017, May) Inside Volta:
+    The worlds most advanced data center GPU. [Online]. Available: https://developer.nvidia.com/blog/inside-volta/
+
+    +   [43] C. Zhang, G. Sun, Z. Fang, P. Zhou, P. Pan, and J. Cong, “Caffeine: Toward
+    uniformed representation and acceleration for deep convolutional neural networks,”
+    IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems,
+    vol. 38, no. 11, pp. 2072–2085, 2019.
+
+    +   [44] Y.-H. Chen, J. Emer, and V. Sze, “Eyeriss: A spatial architecture for
+    energy-efficient dataflow for convolutional neural networks,” in Proceedings of
+    the 43rd International Symposium on Computer Architecture, ser. ISCA ’16. IEEE
+    Press, 2016, p. 367379. [Online]. Available: https://doi.org/10.1109/ISCA.2016.40
+
+    +   [45] S. Venkataramani, A. Ranjan, S. Banerjee, D. Das, S. Avancha, A. Jagannathan,
+    A. Duru, D. Nagaraj, B. Kaul, P. Dubey, and A. Raghunathan, “ScaleDeep: A scalable
+    compute architecture for learning and evaluating deep networks,” in Proceedings
+    of the 44th Annual International Symposium on Computer Architecture, ser. ISCA
+    ’17. New York, NY, USA: Association for Computing Machinery, 2017, p. 1326. [Online].
+    Available: https://doi.org/10.1145/3079856.3080244
+
+    +   [46] Y. S. Shao, J. Clemons, R. Venkatesan, B. Zimmer, M. Fojtik, N. Jiang,
+    B. Keller, A. Klinefelter, N. Pinckney, P. Raina, S. G. Tell, Y. Zhang, W. J.
+    Dally, J. Emer, C. T. Gray, B. Khailany, and S. W. Keckler, “Simba: Scaling deep-learning
+    inference with multi-chip-module-based architecture,” in Proceedings of the 2Nd
+    Annual IEEE/ACM International Symposium on Microarchitecture, ser. MICRO 52. New
+    York, NY, USA: Association for Computing Machinery, 2019, p. 1427. [Online]. Available:
+    https://doi.org/10.1145/3352460.3358302
+
+    +   [47] Q. Yu, C. Wang, X. Ma, X. Li, and X. Zhou, “A deep learning prediction
+    process accelerator based FPGA,” in 2015 15th IEEE/ACM International Symposium
+    on Cluster, Cloud and Grid Computing, 2015, pp. 1159–1162.
+
+    +   [48] N. Srivastava, H. Jin, S. Smith, H. Rong, D. Albonesi, and Z. Zhang,
+    “Tensaurus: A versatile accelerator for mixed sparse-dense tensor computations,”
+    in 2020 IEEE International Symposium on High Performance Computer Architecture
+    (HPCA), 2020, pp. 699–702.
+
+    +   [49] A. M. Caulfield, E. S. Chung, A. Putnam, H. Angepat, J. Fowers, M. Haselman,
+    S. Heil, M. Humphrey, P. Kaur, J. Kim, D. Lo, T. Massengill, K. Ovtcharov, M.
+    Papamichael, L. Woods, S. Lanka, D. Chiou, and D. Burger, “A cloud-scale acceleration
+    architecture,” in 2016 49th Annual IEEE/ACM International Symposium on Microarchitecture
+    (MICRO), 2016, pp. 1–13.
+
+    +   [50] T. Moreau, M. Wyse, J. Nelson, A. Sampson, H. Esmaeilzadeh, L. Ceze,
+    and M. Oskin, “SNNAP: Approximate computing on programmable SoCs via neural acceleration,”
+    in 2015 IEEE 21st International Symposium on High Performance Computer Architecture
+    (HPCA), 2015, pp. 603–614.
+
+    +   [51] B. Reagen, P. Whatmough, R. Adolf, S. Rama, H. Lee, S. K. Lee, J. M.
+    Hernández-Lobato, G. Wei, and D. Brooks, “Minerva: Enabling low-power, highly-accurate
+    deep neural network accelerators,” in 2016 ACM/IEEE 43rd Annual International
+    Symposium on Computer Architecture (ISCA), 2016, pp. 267–278.
+
+    +   [52] T. Chen, Z. Du, N. Sun, J. Wang, C. Wu, Y. Chen, and O. Temam, “DianNao:
+    A small-footprint high-throughput accelerator for ubiquitous machine-learning,”
+    in Proceedings of the 19th International Conference on Architectural Support for
+    Programming Languages and Operating Systems, ser. ASPLOS ’14. New York, NY, USA:
+    Association for Computing Machinery, 2014, p. 269–284. [Online]. Available: https://doi.org/10.1145/2541940.2541967
+
+    +   [53] Y. Chen, T. Luo, S. Liu, S. Zhang, L. He, J. Wang, L. Li, T. Chen, Z.
+    Xu, N. Sun, and O. Temam, “DianNao: A machine-learning supercomputer,” in 2014
+    47th Annual IEEE/ACM International Symposium on Microarchitecture, 2014, pp. 609–622.
+
+    +   [54] A. Sriraman and T. F. Wenisch, “μ Suite: A Benchmark Suite for Microservices,”
+
+    +   in 2018 IEEE International Symposium on Workload Characterization (IISWC),
+    2018, pp. 1–12.
+
+    +   [55] L. Wang, J. Zhan, C. Luo, Y. Zhu, Q. Yang, Y. He, W. Gao, Z. Jia, Y.
+    Shi, S. Zhang, C. Zheng, G. Lu, K. Zhan, X. Li, and B. Qiu, “BigDataBench: A big
+    data benchmark suite from internet services,” in 2014 IEEE 20th International
+    Symposium on High Performance Computer Architecture (HPCA), 2014, pp. 488–499.
+
+    +   [56] A. Ignatov, R. Timofte, A. Kulik, S. Yang, K. Wang, F. Baum, M. Wu, L.
+    Xu, and L. Van Gool, “AI Benchmark: All about deep learning on smartphones in
+    2019,” in 2019 IEEE/CVF International Conference on Computer Vision Workshop (ICCVW),
+    2019, pp. 3617–3635.
+
+    +   [57] (2019) Introducing the EEMBC MLMark Benchmark. [Online]. Available: https://www.eembc.org/mlmark/
+
+    +   [58] H. Torelli and M. Bangale, “Measuring inference performance of machine-learning
+    frameworks on edge-class devices with the MLMark Benchmark,” White Paper, EEMBC.
+    [Online]. Available: https://www.eembc.org/techlit/articles/MLMARK-WHITE-PAPER-FINAL-1.pdf
+
+    +   [59] R. Adolf, S. Rama, B. Reagen, G. Wei, and D. Brooks, “Fathom: reference
+    workloads for modern deep learning methods,” in 2016 IEEE International Symposium
+    on Workload Characterization (IISWC), 2016, pp. 1–10.
+
+    +   [60] Alibaba. (2018) AI Matrix. [Online]. Available: https://aitianchi.ae.aliyun.com/
+
+    +   [61] Baidu. (2017) DeepBench: Benchmarking deep learning operations on different
+    hardware. [Online]. Available: https://github.com/baidu-research/DeepBench
+
+    +   [62] C. Coleman, D. Narayanan, D. Kang, T. Zhao, J. Zhang, L. Nardi, P. Bailis,
+    K. Olukotun, C. Ré, and M. Zaharia, “DAWNBench: An end-to-end deep learning benchmark
+    and competition,” NIPS ML Systems Workshop, 2017.
+
+    +   [63] P. Mattson, C. Cheng, G. Diamos, C. Coleman, P. Micikevicius, D. Patterson,
+    H. Tang, G.-Y. Wei, P. Bailis, V. Bittorf, D. Brooks, D. Chen, D. Dutta, U. Gupta,
+    K. Hazelwood, A. Hock, X. Huang, D. Kang, D. Kanter, N. Kumar, J. Liao, D. Narayanan,
+    T. Oguetibi, J. Pekhimenko, L. Pentecost, V. Janapa Reddi, T. Robie, T. St John,
+    C.-J. Wu, L. Xu, C. Young, and M. Zaharia, “MLPerf training benchmark,” in Proceedings
+    of Machine Learning and Systems, I. Dhillon, D. Papailiopoulos, and V. Sze, Eds.,
+    vol. 2, 2020, pp. 336–349. [Online]. Available: https://proceedings.mlsys.org/paper/2020/file/02522a22b76f0da035b91Y2d89524ad-Paper.pdf
+
+    +   [64] P. Luszczek, J. Kurzak, T. Yamazaki, and J. Dongarra, “Towards numerical
+    benchmark for half-precision floating point arithmetic,” in 2017 IEEE High Performance
+    Extreme Computing Conference (HPEC), 2017, pp. 1–5.
+
+    +   [65] A. Yazdanbakhsh, D. Mahajan, H. Esmaeilzadeh, and P. Lotfi-Kamran, “AxBench:
+    A multiplatform benchmark suite for approximate computing,” IEEE Design Test,
+    vol. 34, no. 2, pp. 60–68, 2017.
+
+    +   [66] B. Zheng, A. Tiwari, N. Vijaykumar, and G. Pekhimenko, “Echo: Compiler-based
+    GPU Memory Footprint Reduction for LSTM RNN Training,” 2019.
+
+    +   [67] S. Pati, S. Aga, M. D. Sinclair, and N. J. Yadavana, “SeqPoint: Identifying
+    Representative Iterations of Sequence-Based Neural Networks,” in 2020 IEEE International
+    Symposium on Performance Analysis of Systems and Software (ISPASS), 2020, pp.
+    69–80.
+
+    +   [68] H. Zhu, M. Akrout, B. Zheng, A. Pelegris, A. Jayarajan, A. Phanishayee,
+    B. Schroeder, and G. Pekhimenko, “Benchmarking and Analyzing Deep Neural Network
+    Training,” in 2018 IEEE International Symposium on Workload Characterization (IISWC),
+    2018, pp. 88–100.
+
+    +   [69] J. Zhang, J. Sun, W. Zhou, and G. Sun, “An active learning method for
+    empirical modeling in performance tuning,” in 2020 IEEE International Parallel
+    and Distributed Processing Symposium (IPDPS), 2020, pp. 244–253.
+
+    +   [70] N. Hasabnis, “Auto-tuning TensorFlow threading model for CPU backend,”
+    in 2018 IEEE/ACM Machine Learning in HPC Environments (MLHPC), 2018, pp. 14–25.
+
+    +   [71] S. J. Kaufman, P. M. Phothilimtha, Y. Zhuo, and M. Burrows, “A learned
+    performance model for the Tensor Processing Unit,” 2020.
+
+    +   [72] J. W. Choi, A. Singh, and R. W. Vuduc, “Model-driven autotuning of sparse
+    matrix-vector multiply on GPUs,” in Proceedings of the 15th ACM SIGPLAN Symposium
+    on Principles and Practice of Parallel Programming, ser. PPOPP ’10. New York,
+    NY, USA: Association for Computing Machinery, 2010, p. 115126. [Online]. Available:
+    https://doi.org/10.1145/1693453.1693471
+
+    +   [73] L. Song, F. Chen, Y. Zhao, X. Qian, H. Li, and Y. Chen, “Graph-P: Tensor
+    partitioning for heterogeneous deep learning accelerators,” in 2020 IEEE International
+    Symposium on High Performance Computer Architecture (HPCA), 2020, pp. 342–355.
+
+    +   [74] G. Wang, J. Xu, and B. He, “A novel method for tuning configuration parameters
+    of spark based on machine learning,” in 2016 IEEE 18th International Conference
+    on High Performance Computing and Communications; IEEE 14th International Conference
+    on Smart City; IEEE 2nd International Conference on Data Science and Systems (HPCC/SmartCity/DSS),
+    2016, pp. 586–593.
+
+    +   [75] S. Bsharah, V. Eijkhout, Y. Fendy, E. Fuentes, and D. Keyes, Application
+    of Alternating Direction Trees in Selecting Sparse Linear Solvers. New York, NY:
+    Springer New York, 2010, pp. 155–173. [Online]. Available: https://doi.org/10.1007/978-1-4419-6935-4_10
+
+    +   [76] J. Demmel, J. Dongarra, E. Jijkhou, E. Fuentes, A. Petitet, R. Vuduc,
+    R. C. Whaley, and K. Yelick, “Self-adapting linear algebra algorithms and software,”
+    Proceedings of the IEEE, vol. 93, no. 2, pp. 299–312, 2005.'
+  merge: -1
+  img_proc: true
