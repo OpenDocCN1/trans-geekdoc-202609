@@ -1,0 +1,63 @@
+level_changes:
+- line: 8
+  before: 3
+  after: 1
+- line: 12
+  before: 3
+  after: 1
+- line: 16
+  before: 2
+  after: 1
+- line: 18
+  before: 3
+  after: 2
+- line: 28
+  before: 3
+  after: 2
+- line: 36
+  before: 3
+  after: 2
+- line: 46
+  before: 3
+  after: 2
+- line: 54
+  before: 2
+  after: 1
+- line: 74
+  before: 2
+  after: 1
+- line: 124
+  before: 2
+  after: 1
+- line: 128
+  before: 3
+  after: 2
+- line: 132
+  before: 3
+  after: 2
+- line: 146
+  before: 3
+  after: 2
+- line: 165
+  before: 2
+  after: 1
+- line: 214
+  before: 3
+  after: 2
+- line: 224
+  before: 3
+  after: 2
+- line: 230
+  before: 3
+  after: 2
+- line: 237
+  before: 2
+  after: 1
+- line: 241
+  before: 2
+  after: 1
+text_changes:
+- line: 0
+  before: '[2021 计算、通信和智能系统国际会议 (ICCCIS)(大诺伊达, 印度 2021.2.19-2021.2.20)] 2021 计算、通信和智能系统国际和
+    I'
+  after: '[2021 计算、通信和智能系统国际会议 (ICCCIS)(大诺伊达, 印度 2021.2.19-2021.2.20)]'
