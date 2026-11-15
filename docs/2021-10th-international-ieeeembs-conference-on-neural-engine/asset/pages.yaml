@@ -1,0 +1,479 @@
+- pgno: 0
+  md: '# Deep Learning with Convolutional Neural Network for Proportional Control
+    of Finger Movements from surface EMG Recordings
+
+
+    V. Mendez, L. Pollina, F. Artoni, S. Micera Member, IEEE
+
+
+    Abstract— The control of robotic prosthetic hands (RPHs) for upper limb amputees
+    is far from optimal. Simultaneous and proportional finger control of a RPH based
+    on EMG signals is still challenging. Based on EMG and kinematics recordings of
+    subjects following a pre-defined sequence of single and multi-fingers movements,
+    we aimed at predicting finger flexion and thumb opposition angles. We compared
+    two deep learning (DL) based approaches, the first one using the raw EMG signals
+    and the second one using the spectrogram of the signal as input, with the standard
+    state of the art decoding technique (STD) for finger angle regression. Using a
+    genetic algorithm for hyper-parameter optimization, we obtained an optimized model
+    architecture (and set of features in the case of STD) for each condition on one
+    recording session. Then, we evaluated the best model of each condition on the
+    eleven EMG and finger kinematics recordings available from four subjects. The
+    two DL approaches based on convolutional neural networks predicted finger angles
+    with a similar mean squared error loss but both of them outperformed the standard
+    approach for the regression of simultaneous single-finger angles. This proposed
+    decoding strategy and hyper-parameter optimization framework provides a basis
+    to further improve single finger proportional control for RPHs.
+
+
+    # I. INTRODUCTION
+
+
+    Controlling the human hand feels simple and intuitive but relies on a sophisticated
+    and robust control strategy that allows for dexterous manipulation of a variety
+    of objects. Hand loss is a traumatic event with not only motor but also psychological
+    consequences [1], resulting in limited ability to perform object manipulation,
+    sensing, as well as non-verbal communication. Robotic Prosthetic Hands (RPHs)
+    aim at restoring hand functionality in trans-radial amputees. In order to capture
+    the user’s intention, these RPHs usually rely on electromyographic (EMG) signals
+    recorded from their residual forearm muscle activity. Commercially available RPHs
+    usually use two surface EMG (sEMG) electrodes placed on remaining antagonist muscles
+    (usually wrist flexion/extension). The control of these robotic hands rely on
+    a simple threshold based strategy controlling one degree of freedom [2]. The type
+    of grasp can be selected using co-contraction to cycle between pre-defined grasps.
+
+
+    By using more electrodes (~6-8), pattern recognition algorithms are an alternative
+    to this direct control approach. It consists of extracting discriminative features
+    from the EMG signals to decode directly the type of grasp intended by the user.
+    After a calibration phase, the user only has to think to perform the desired grasp
+    with his phantom hand. Results
+
+
+    showed 98% accuracy on 4 classes [3] and up to 75% for 50 classes [4]. Other groups
+    showed the possibility to decode single finger flexion and extension [5] with
+    performance of 99% accuracy on single and multi-finger movements.
+
+
+    Although this approach is more intuitive, it is still different from the natural
+    way of controlling finger. Indeed, to obtain fingers in a middle position, the
+    user has to contract his muscles until the desired angle is reached then relax
+    to keep the RPH in the same position. In order to obtain an even more natural
+    control, few groups showed the possibility to perform single finger proportional
+    control performing angle regression instead of movement classification [6]-[8].
+
+
+    To decode meaningful information from EMG data, it is necessary to transform the
+    signals into informative, discriminating and independent features. It has been
+    now several decades that researchers have been working on the design of the best
+    features to decode motor intentions from EMG signals [9]. Since the first example
+    in 2016 [10], the EMG decoding community shifted from this standard feature engineering
+    (STD) approach to feature learning approach using deep learning (DL) and in most
+    cases convolutional neural networks (CNN). The standard deep networks usually
+    consists of several convolutional layers followed by fully-connected layers [11].
+    Convolutional layers can learn discriminative features from the input signal and
+    reduce its dimension. These features are then used as input to the fully connected
+    layers that will make the prediction (see Figure 1). For EMG decoding, the input
+    of CNNs can be either the raw signal [12] or the spectrogram of the signal [13].
+    Several studies showed that deep networks could learn more discriminative features
+    directly from the raw signal to perform grasp classification with higher accuracies
+    than STD [14], [15]. Few groups showed DL-based regression of motor intention
+    using sEMG for arm [16] and wrist motion [17]-[19] with promising results. For
+    a more extensive review on RPHs see [20].
+
+
+    The “perfect” motor decoding strategy could be described as one that increases
+    subject dexterity to a level comparable to the healthy hand. In order to be as
+    close as possible to the natural control of the hand, one have to decode fingers
+    angle continuously and simultaneously. Due to the higher performance of DL compared
+    to the STD approach in grasp classification, we aimed at quantifying the performance
+    of single finger proportional control with a DL vs STD approach.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/d2423e8420ae194bb21d641517122d0f_1_0.png)
+
+
+    Figure 1. Training paradigm difference between a STD approach and Deep learning
+    (dashed objects represents tunable hyper parameters).
+
+
+    # II. METHODS
+
+
+    # A. EMG Dataset and pre-processing
+
+
+    The detailed protocol for EMG acquisition comes from Zhuang et al. (2019) experiment
+    3 [21]. Briefly, four healthy subjects aged between 20 and 26 were recruited for
+    this experiment. Ethical approval was obtained by the cantonal ethical committee
+    of Vaud. Informed consent was obtained from all participants in the study. The
+    subjects participated to 2 or 3 calibration sessions where EMG signals were recorded
+    using a Noraxon Delsys system connected to a LabJack data acquisition card to
+    record six channels placed around the subject''s forearm on specific muscles corresponding
+    to the flexion of each finger and thumb opposition found with palpation. In this
+    article, we focus only on the offline calibration part of the decoding model.
+    The subjects followed a series of movements on a screen performed in a virtual
+    environment. Hand kinematics were obtained from the finger angles shown on the
+    video. The movements consisted in single and multi-finger movements and the virtual
+    environment was synchronized with the EMG acquisition setup. The sequence of movements
+    was repeated 5 times, each
+
+
+    ![](img/d2423e8420ae194bb21d641517122d0f_1_1.png)
+
+
+    Figure 2. Illustration of the movements present in the EMG recordings. with a
+    hold period of 5 seconds and the total time of the video
+
+
+    was 4.5 minutes (see Figure 1). The EMG signals were recorded at 2 kHz and the
+    kinematics at 60 Hz.
+
+    From the 15 joint angles recorded during the training phase on the virtual environment,
+    six joint angles were selected: the metacarpophalangeal joint angle of each finger
+    to estimate finger flexion/extension and the carpometacarpal joint angle for thumb
+    opposition. Kinematic data was linearly interpolated and oversampled at 2 kHz
+    to match the EMG signal sampling frequency. The dataset was then split into train,
+    validation and test set, the three first repetitions were used for the training
+    set, one for the validation set and the last one for testing. This non-random
+    split was done to consider the real-world use case of RPH. Indeed, amputees would
+    use their RPH after this calibration phase and therefore the last repetition for
+    testing is the most suited repetition to evaluate performance of the decoding
+    in real world scenario. For each set, a sliding window of 192ms with a moving
+    step of 40ms (152ms overlap) was used, the angle values of the end of each window
+    were kept as labels and the angles were rescaled between 0 (fully open) and 10
+    (fully flexed).
+
+
+    # B. Learning paradigms
+
+
+    In order to quantify the performance of DL vs STD, three learning paradigms are
+    compared: The standard feature engineering approach (STD), a DL approach with
+    the raw signal as input (RAW) and a DL approach with the spectrogram computed
+    with the fast Fourier transform of each individual window (FFT) as input. For
+    the two DL approaches, the input signal window is reshaped as squared images as
+    in [22]. In the STD one, EMG signals are processed and features are extracted
+    from each channel. We chose 9 well-explored time and frequency domain features
+    to extract from each time window [23]:
+
+
+    +   1. Mean Absolute Value
+
+    +   2. Wavelength: Cumulative length of waveform over time
+
+    +   3. Maximum Absolute Value'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '+   4. Standard Deviation
+
+    +   5. Zero Crossings: Number of times the signal crosses zero
+
+    +   6. Slope sign changes: Number of time that the slope of the EMG signal changes
+    sign
+
+    +   7. Root Mean Square
+
+    +   8. Log detector: \(\frac{1}{e^N} \sum_{i=1}^N log(|x_i|)\) where \(x_i\) is
+    the EMG amplitude at time bin i.
+
+    +   9. Frequency spectrums in each frequency bin between 7 and 12 Hz, 12-30, 30-50,
+    50-100, 100-150 and 150-400 Hz from FFT results.
+
+
+    # C. Hyper-parameter optimization
+
+
+    There is a high number of hyper-parameters to optimize for each paradigm. Among
+    those, we optimized a set of parameters based on the first session of the first
+    subject due to computational power required to perform a hyper-parameter search
+    for each recording. The hypothesis being that the quantity of information is relatively
+    the same for each recording and therefore, the complexity of the dataset is relatively
+    the same, meaning that the best model architecture for one recording is a good
+    model for the other recordings.
+
+
+    For the two DL approaches (RAW and FFT), we started from a VGG-like architecture
+    [24] and optimized the shape of the network: the number of convolutional layers
+    before each average pooling layer (up to 3), the number of pooling layer (up to
+    5) and the number of filters for each convolutional layer (16, 32, 64, 128). A
+    batch-normalization follows each convolutional layer. Then, the number of fully
+    connected layers (up to two layers) and the number of nodes for each layer (16,
+    32, 64) were also tuned. Except from the architectural parameter, the drop rate
+    was also optimized (0, 0.2, 0.5) as well as the L2 regularization rate (0, 1e-3,
+    0.1), the learning rate (0.1, 0.01, 0.001), the convolutional filter size in x
+    dimension, in y dimension (1, 3, 5) and the padding strategy for image border
+    (with or without). The CNN networks were optimized with a batch gradient descent
+    with a batch size of 32 samples, with 50 epochs, a step decay with a drop of \(\frac{1}{2}\)
+    every 10 epochs and an early stopping if the validation loss did not decreased
+    for more than 13 epochs.
+
+
+    For the STD approach, the model was a multi-layer perceptron (MLP) and therefore
+    has less parameters to tune. However, the feature selection is an important process
+    in order not to overfit the data. Therefore the hyper-parameters were the selection
+    or not of a feature, the number of fully connected layers (up to 3 hidden layers),
+    the number of node per layer (16, 32, 64, 128, 256), the drop rate (0, 0.2, 0.5),
+    the L1 and L2 regularization terms (0, 1e-3, 0.1), the learning rate (0.1, 0.01,
+    0.001) and the optimizer (Adam, RMSprop, batch gradient descent). The MLP was
+    optimized with a batch gradient descent with a batch size of 16 samples, with
+    100 epochs and similarly to the CNN, a step decay with a drop of \(\frac{1}{6}\)
+    every 10 epochs with an early stopping if the validation loss did not decreased
+    for more than 13 epochs. All the models were trained with a mean squared error
+    loss (MSE).
+
+
+    Due to the high dimensionality of the hyper-parameter space, a grid search was
+    impossible to perform in a reasonable amount of time. Therefore, we opted for
+    a genetic algorithm (GA) parameter optimization approach [25]. The problem was
+    formulated as a genetic representation of the solution domain
+
+
+    where each hyper-parameter was encoded as a gene on a chromosome that could take
+    one of the discrete possible values. The fitness function was encoded as the validation
+    loss of the trained model to evaluate the solution domain. A population of 20
+    random individual was created and trained for 200 generation using a fitness proportionate
+    (or roulette wheel) offspring selection method. The rate of mutation was set to
+    0.1 and the selection rate to 0.6.
+
+
+    # D. Performance evaluation of each subject
+
+
+    After hyper-parameter optimization on one session, the same pre-processing steps
+    will be applied on all the available recordings in order to train a model on each
+    recording available. For each recording, the model was trained ten times and the
+    model with the lowest validation loss is kept. This step was necessary to reduce
+    the chances of having the model stuck in a local minimum. Then the best model
+    was evaluated on the testing set.
+
+
+    ![](img/d2423e8420ae194bb21d641517122d0f_2_0.png)
+
+
+    # III. RESULTS
+
+
+    The best model for the three paradigms obtained with the genetic algorithms was
+    with RAW condition and had a validation loss of 5.34 and a training loss of 2.20.
+    The model architecture is shown in Figure 3. It is strained with a drop rate of
+    50%, without L2 normalization, a learning rate of 0.01 and the shape of the convolutional
+    mask is (3, 1) with 0 padding to keep the same output dimension.
+
+
+    ![](img/d2423e8420ae194bb21d641517122d0f_2_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'For the FFT condition, the minimum validation loss was 6.41 with a training
+    loss of 4.82 and for STD, the minimum validation loss was 9.14 with a training
+    loss of 9.43. For the STD model, features from all channels were extracted and
+    the final model used all the features except the slope sign change for a total
+    of 46 features.
+
+
+    The average test loss, meaning the performance on unseen data, per condition is
+    shown in Figure 4 for the 11 sessions. The STD test loss is significantly different
+    from the two other conditions (t-test, p < 0.05) but the FFT and RAW conditions
+    are not different.
+
+
+    The test loss for each subject is shown in Figure 5, each subject recorded 3 sessions
+    except S2 who did only two calibration sessions. An example of the predicted angles
+    versus the target labels is shown in Figure 6 for the RAW condition on the test
+    set of subject S1. It consist of one repetition of each movement and lasts for
+    56 seconds. The angles correspond to the sequence: Index Flexion, Middle Finger
+    Flexion, Ring Finger Flexion, Ulmar Grasp, Open, Tridigigital Grasp, Power Grasp,
+    Thumb opposition and Thumb opposition + flexion. It corresponds to a loss of 7.36.
+    The baseline loss corresponding to a model outputting only the mean value of the
+    targets was ~19.
+
+
+    ![](img/d2423e8420ae194bb21d641517122d0f_3_0.png)
+
+
+    # IV. DISCUSSION
+
+
+    This work aimed at quantifying the performance of DL compared to a STD feature
+    extraction approach. The results showed that both DL conditions (RAW and FFT)
+    are performing better than STD. However, it is not possible to conclude on which
+    approach between RAW and FFT is best suited for single finger proportional control.
+    For simplicity, one could argue to keep the RAW condition to avoid computing the
+    FFT and therefore reduce the computational time for real time applications. A
+    possible optimization is the combination of time-frequency information merging
+    the RAW and FFT approaches, increasing the amount of information that inputs the
+    model.
+
+
+    However, the amount of data per session in these experiments is relatively low
+    (3 repetitions for the train set) which create uncertainty during the training
+    of the different models and high differences between the validation and testing
+    losses.
+
+
+    ![](img/d2423e8420ae194bb21d641517122d0f_3_1.png)
+
+
+    Another limitation to take into account is that the dataset comprised only fully
+    open and closed positions held for several seconds without any real “rest/middle”
+    position.or other arbitrary angles. Indeed, when the users follow movements shown
+    on a screen, there are intrinsic delays due to their reaction time that create
+    jitter between expected kinematics and actual finger positions. In the case of
+    single finger proportional control, exact finger position is paramount. Therefore,
+    obtaining synchronized middle values is challenging and may be obtained using
+    a kinematic glove for example.
+
+
+    Deep networks like CNNs need a huge amount of data to reach their maximum accuracy
+    (e.g. ImageNet Challenge [26]) which means that increasing the amount of data
+    could play a significant role in the performances obtained. However, a subject
+    cannot reasonably record tens of hours of data in a single sitting. One possible
+    solution is to leverage the information of several subjects to pre-train a general
+    network that could be fine-tuned for the subject’s specific EMG activity. Several
+    authors [13], [27], [28] investigated this approach and showed promising results
+    for grasp classification, this strategy could be applied to single finger proportional
+    control.
+
+
+    # V. CONCLUSION
+
+
+    To conclude, we showed that deep learning is a promising approach for proportional
+    EMG decoding. Due to the placement of the electrodes on the forearm, these results
+    obtained on healthy subjects could apply for trans-radial amputees or amputations
+    that are more distal. On the decoding side, we cannot conclude on the best DL
+    approach between raw signals or spectrogram as input since both outperformed the
+    standard state-of-the-art approach but were not statistically different.
+
+
+    For future developments, increasing the amount of data should be the main objective.
+    Leveraging open access EMG databases like NinaPro [29], [30] to improve performances
+    of DL for single-finger regression. The feasibility of this DL approach in real
+    time to control a real prosthesis or any microprocessor should also be addressed
+    due to the high computational cost of the models used.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# REFERENCES
+
+
+    +   [1] T. M. Meyer, “Psychological aspects of mutilating hand injuries,” Hand
+    Clinics, vol. 19, no. 1. Hand Clin, pp. 41–49, Feb-2003.
+
+    +   [2] P. Geethanjali, “Myoelectric control of prosthetic hands: State-of-the-art
+    review,” Med. Devices Evid. Res., vol. 9, pp. 247–255, 2016.
+
+    +   [3] K. Englehart and B. Hudgins, “A Robust, Real-Time Control Scheme for Multifunction
+    Myoelectric Control,” IEEE Trans. Biomed. Eng., vol. 50, no. 7, 2003.
+
+    +   [4] M. Atzori et al., “Characterization of a benchmark database for myoelectric
+    movement classification,” IEEE Trans. Neural Syst. Rehabil. Eng., vol. 23, no.
+    1, pp. 73–83, Jan. 2015.
+
+    +   [5] S. Bhagwat and P. Mukherji, “Electromyogram (EMG) based fingers movement
+    recognition using sparse filtering of wavelet packet coefficients,” Sadhana -
+    Acad. Proc. Eng. Sci., vol. 45, no. 1, pp. 1–11, Dec. 2020.
+
+    +   [6] T. Baldacchino, W. R. Jacobs, S. R. Anderson, K. Worden, and J. Rowson,
+    “Simultaneous Force Regression and Movement Classification of Fingers via Surface
+    EMG within a Unified Bayesian Framework,” Front. Bioeng. Biotechnol., vol. 6,
+    p. 13, Feb. 2018.
+
+    +   [7] S. Muceli and D. Farina, “Simultaneous and proportional estimation of
+    hand kinematics from EMG during mirrored movements at multiple degrees-of-freedom,”
+    IEEE Trans. Neural Syst. Rehabil. Eng., vol. 20, no. 3, pp. 371–378, 2012.
+
+    +   [8] M. Hioki and H. Kawasaki, “Estimation of Finger Joint Angles from sEMG
+    Using a Neural Network Including Time Delay Factor and Recurrent Structure,” ISRN
+    Rehabil., vol. 2012, pp. 1–13, 2012.
+
+    +   [9] P. Herberts, C. Almström, R. Kadefors, and P. D. Lawrence, “Hand prosthesis
+    control via myoelectric patterns,” Acta Orthop., vol. 44, no. 4–5, pp. 389–409,
+    1973.
+
+    +   [10] K. H. Park and S. W. Lee, “Movement intention decoding based on deep
+    learning for multiuser myoelectric interfaces,” in 4th International Winter Conference
+    on Brain-Computer Interface, BCI 2016, 2016.
+
+    +   [11] N. Aloysius and M. Geetha, “A review on deep convolutional neural networks,”
+    in Proceedings of the 2017 IEEE International Conference on Communication and
+    Signal Processing, ICCSP 2017, 2018, vol. 2018-January, pp. 588–592.
+
+    +   [12] M. Atzori, M. Cognolato, and H. Müller, “Deep Learning with Convolutional
+    Neural Networks Applied to Electromyography Data: A Resource for the Classification
+    of Movements for Prosthetic Hands,” Front. Neurorobot., vol. 10, p. 9, Sep. 2016.
+
+    +   [13] U. C. Allard et al., “A convolutional neural network for robotic arm
+    guidance using sEMG based frequency-features.”
+
+    +   [14] A. Phinyomark and E. Scheme, “EMG Pattern Recognition in the Era of Big
+    Data and Deep Learning,” Big Data Cogn. Comput., vol. 2, no. 3, p. 21, Aug. 2018.
+
+    +   [15] Y. Hu, Y. Wong, W. Wei, Y. Du, M. Kankanhalli, and W. Geng, “A novel
+    attention-based hybrid CNN-RNN architecture for sEMG-based gesture recognition,”
+    PLoS One, vol. 13, no. 10, pp. 1–18, 2018.
+
+    +   [16] P. Xia, J. Hu, and Y. Peng, “EMG-Based Estimation of Limb Movement Using
+    Deep Learning With Recurrent Convolutional Neural Networks,” Artif. Organs, vol.
+    42, no. 5, pp. E67–E77, 2018.
+
+    +   [17] W. Yang, D. Yang, J. Li, Y. Liu, and H. Liu, “EMG dataset augmentation
+    approaches for improving the multi-DOF wrist movement regression accuracy and
+    robustness,” in 2018 IEEE International Conference on Robotics and Biomimetics,
+    ROBIO 2018, 2018, pp. 1268–1273.
+
+    +   [18] X. Zhang, X. Tang, Z. Zhu, X. Gao, X. Chen, and X. Chen, “A Regression-Based
+    Framework for Quantitative Assessment of Muscle Spasticity Using Combined EMG
+    and Inertial Data From Wearable Sensors,” Front. Neurosci., vol. 13, no. MAY,
+    p. 398, May 2019.
+
+    +   [19] A. Ameri, M. A. Akhaee, E. Scheme, and K. Englehart, “Regression convolutional
+    neural network for improved simultaneous EMG control,” J. Neural Eng., vol. 16,
+    no. 3, p. 036015, Jun. 2019.
+
+    +   [20] V. Mendez, F. Ibirte, S. Shokur, and S. Micera, “Current Solutions and
+    Future Trends for Robotic Prosthetic Hands,” Annu. Rev. Control. Robot. Auton.
+    Syst., vol. 4, no. 1, May 2021.
+
+    +   [21] K. Z. Zhuang et al., “Shared human–robot proportional control of a dexterous
+    myoelectric prosthesis,” Nat. Mach. Intell., vol. 1, no. 9, pp. 400–411, Sep.
+    2019.
+
+    +   [22] A. Ameri, M. A. Akhaee, E. Scheme, and K. Englehart, “Regression convolutional
+    neural network for improved simultaneous EMG control,” J. Neural Eng., vol. 16,
+    no. 3, Apr. 2019.
+
+    +   [23] A. Phinyomark, P. Phukpattaranont, and C. Limsakul, “Feature reduction
+    and selection for EMG signal classification,” Expert Syst. Appl., vol. 39, no.
+    8, pp. 7420–7431, 2012.
+
+    +   [24] A. Shrestha and A. Mahmood, “Review of deep learning algorithms and architectures,”
+    IEEE Access, vol. 7, Issue of Electrical and Electronics Engineers Inc., pp. 53040–53065,
+    2019.
+
+    +   [25] F. Johnson, A. Valderrama, C. Valle, B. Crawford, R. Soto, and R. Nanculef,
+    “Automating Configuration of Convolutional Neural Network Hyperparameters Using
+    Genetic Algorithm,” IEEE Access, vol. 8, pp. 156139–156152, 2020.
+
+    +   [26] M. Z. Alom et al., “The History Began from AlexNet: A Comprehensive Survey
+    on Deep Learning Approaches,” Mar. 2018.
+
+    +   [27] A. Ameri, M. A. Akhaee, E. Scheme, and K. Englehart, “A Deep Transfer
+    Learning Approach to Reducing the Effect of Electrode Shift in EMG Pattern Recognition-based
+    Control,” IEEE Trans. Neural Syst. Rehabil. Eng., pp. 1–1, 2019.
+
+    +   [28] Y. Du, W. Jin, W. Wei, Y. Hu, and W. Geng, “Surface EMG-based inter-session
+    gesture recognition enhanced by deep domain adaptation,” Sensors (Switzerland),
+    vol. 17, no. 3, pp. 6–9, 2017.
+
+    +   [29] M. Atzori et al., “Characterization of a benchmark database for myoelectric
+    movement classification,” IEEE Trans. Neural Syst. Rehabil. Eng., vol. 23, no.
+    1, pp. 73–83, Jan. 2015.
+
+    +   [30] M. Atzori et al., “Building the Ninapro database: A resource for the
+    biorobotics community,” in Proceedings of the IEEE RAS and EMBS International
+    Conference on Biomedical Robotics and Biomechatronics, 2012, pp. 1258–1265.'
+  merge: -1
+  img_proc: true
