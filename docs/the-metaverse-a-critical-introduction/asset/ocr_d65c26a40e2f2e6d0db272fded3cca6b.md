@@ -1,0 +1,15 @@
+medical centres where a range of medical simulations can be shared across a wider institutional base – something which a Metaverse would make far more achievable. There have also been attempts to use standards such as the Medbiquitous Virtual Patient (Ellaway et al., 2008) or Artificial Intelligence Markup Language (Danforth et al., 2009) to allow medical exercises to be defined in relatively platform neutral ways to encourage portability.
+
+As well as educating medical staff, virtual environments can be used to educate patients – letting them walk through a hospital visit or medical procedure to better understand what is going to happen to them to relieve anxiety or make more informed choices (Mahajan et al., 2021). There have also been projects to use virtual environments to help with life-style choices – for instance, diet or smoking (McGuirt et al., 2020) – enabling people to walk around inside their virtual body after the impact of several decades of smoking, or to see the changes in their look and abilities after years of a poor diet.
+
+Considering care in a different setting, there have also been numerous studies looking at the use of VR within prisons in areas such as education (McLaughlan & Farley, 2022), improving behaviour management (Farley, 2018), and re-entry back into society (Teng & Gordon, 2021).
+
+# Therapy
+
+Whilst the “Proteus Effect” (Yee & Bailenson, 2007) has shown that users with idealized avatars will tend to live up to this idealized self and have a greater sense of self-worth in the virtual world, there is also evidence that virtual experiences can help maintain that improved self-worth in the physical world (e.g. C. J. Falconer et al., 2016). VR has also been used in areas such as Virtual Reality Exposure Therapy (VRET) to help treat combat-related posttraumatic stress disorder (PTSD) (Mozgai et al., 2020), social anxiety (although with uncertain results), addiction, autism, and attention-deficit hyperactivity disorder (ADHD) (Emmelkamp et al., 2020).
+
+Therapists can use virtual worlds as safe shared spaces to meet with clients, adapting the environment to the client’s needs, and introducing imagery, audio, video, and even objects as required to support a session (Sampaio et al., 2021). There is even the potential to consider how the therapist could be supported by an automated avatar so that the client could access support at any time of the day or night (e.g. Ren, 2020).
+
+# Entertainment
+
+The use of virtual worlds to support passive entertainment experiences such as music concerts and sporting events also has a long history. IBM used Second Life to present Wimbledon in 2008 (Cremorne, 2008), and as mentioned, Suzanne Vega performed in Second Life as far back as 2006. Alongside the use of generic platforms such as Fortnite by performers such

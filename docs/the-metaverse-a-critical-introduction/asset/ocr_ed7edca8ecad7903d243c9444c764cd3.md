@@ -1,0 +1,9 @@
+| Source | Definition |
+| :--- | :--- |
+| Narula (2022) | “These [virtual] worlds will be valuable because they will remake our lives by extending the context of society continue realms, allowing for the transfer of wealth, ideas, identity, and influence – the building blocks of human social relations – between our current reality and the digital ones that we create. The combination of these realities, and the transfer of value between them, will comprise the digital Metaverse ... The digital Metaverse that I envision is one that will create untold social, psychological, and economic value for its users and for the wider world”. |
+| Radolf | “The metaverse is not ’a’ metaverse. It is the next generation of the Internet: a decentralized multiverse, led by a new and abundant generation of creators” (Radolf, 2021a). “The metaverse is the internet evolving into a creative space for anyone who wants to craft experiences” (Radolf, 2021b). |
+| Wired (Ravenscraft, 2023) | “‘The metaverse’ [as defined by technology companies] can include virtual reality—characterized by persistent virtual worlds that continue to exist even when you’re not playing—as well as augmented reality that combines aspects of the digital and physical worlds. However, it doesn’t require that those spaces be exclusively accessed via VR or AR. Virtual worlds—such as aspects of Fortnite that can be accessed through PCs, game consoles, and even phones—have started referring to themselves as ‘the metaverse’.”. |
+
+![](bbox=[0.11, 0.58, 0.89, 0.9])
+
+FIGURE 2.1 Metaverse definition word cloud (generated at https://www.jasondavies.com/wordcloud/).

@@ -1,0 +1,14 @@
+often ritually, symbolically, or metaphorically removed in order not to threaten the social order while they experience transition, transformation, or “in-betweenness”.
+
+In the transition from what has been traditionally a largely analogue delivery of information and knowledge from human to human without digital intermediation, people interacting in a new, uncharted territory often have a sense of being stuck and moving into a liminal space. Transition through liminality can bring with it not only new knowledge and understanding for the individual, but also often a new sense of identity. Ball (2022) argues that understanding and aligning one’s internal and external worlds in the face of disjunction present a variety of challenges to emotional, material, and social resources – something which needs to be considered in relation to the Metaverse.
+
+# Global Equality
+
+Many of the arguments for a Metaverse to help with climate change also apply to a Metaverse to help with global equality. At worst, this can be an argument for the “moral imperative” – where the virtual experience is seen as a sop for people who cannot access or afford the physical experience of living in a stylish beach side house or driving the latest fast car (Au, 2023). At best, the Metaverse could, like the mobile phone, be considered as a way by which Majority World nations can potentially leap-frog a generation of business and infrastructure development and become more “metaverse-native” than many of their counterparts in the Minority World (Koomsom, 2018). Of course, VR/MR headsets are currently less robust, and more expensive, than mobile phones, and these are issues that cannot be addressed, but, as has been discussed, the Metaverse should be accessible from a wide range of devices, including mobile phones, so this should not be a real problem.
+
+Language has often been a barrier to high-technology access in the Majority World (Eijaku, 2014), but the Metaverse is primarily a visual, audio, and social experience, and most of the content should be user-generated, so anyone should be able to enter the Metaverse and start using it, and even creating in it.
+
+A potential approach to help develop global equality within the Metaverse is to ensure that metaverse developments are orientated around the United Nations’ Sustainable Development Goals (SDGs) (https://sdgs.un.org/goals). Two key questions are (Umar, 2022a):
+
++   - Can the Metaverse be used to accelerate the advancement of SDGs; and
++   - What challenges could the Metaverse raise for SDGs, and what type of policies will be needed to address these challenges?
