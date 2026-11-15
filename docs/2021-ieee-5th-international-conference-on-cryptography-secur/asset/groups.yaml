@@ -1,0 +1,1840 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # A Blockchain-based Privacy-Preserving Recommendation Mechanism
+
+
+    Liangjie Lin
+
+    College of Computer Science and
+
+    Technology
+
+    Harbin Institute of Technology
+
+    (Shenzhen), China
+
+    sherlocklij@163.com
+
+
+    Yuchen Tian
+
+    College of Computer Science and
+
+    Technology
+
+    Harbin Institute of Technology
+
+    (Shenzhen), China
+
+    19s051060@stu.hit.edu.cn
+
+
+    Yang Liu
+
+    College of Computer Science and
+
+    Technology
+
+    Harbin Institute of Technology
+
+    (Shenzhen), China
+
+    Cyberspace Security Research Center
+
+    Peng Cheng Laboratory
+
+    liu.yang@hit.edu.cn
+
+
+    Abstract—Recommendation system is widely used to predict users’ interests and
+    provide targeted products for them, which effectively facilitates users in the
+    era of big data where information overload problem is prevalent. Unfortunately,
+    massive data closely related to users’ privacy is in high demand to produce more
+    accurate predictions. In this case, the collection and transmission of such data
+    is communication costly; to process and analyze such data is of high possibility
+    to compromise users’ privacy. In this paper, we propose a privacy-preserving recommendation
+    mechanism based on blockchain, which well addresses these problems. Leveraging
+    the inherent advantages of blockchain, we establish a completely distributed model
+    mitigating the risk of privacy disclosure caused by central data storage. Moreover,
+    we combine Inter-Planetary File System with blockchain to greatly improve the
+    communication efficiency. We also introduce local sensitive hashing and local
+    differential privacy into proposed mechanism to reduce the computation load and
+    provide a strong privacy guarantee. The experimental results demonstrate that
+    the proposed mechanism shows better performance on privacy preservation while
+    maintaining desirable recommendation accuracy when compared with the baseline.
+
+
+    Keywords—big data; blockchain; privacy; recommendation; local sensitive hashing;
+    local differential privacy
+
+
+    # I. INTRODUCTION
+
+
+    Recommendation system is proposed as a promising technology to address the information
+    overload in the era of big data. However, massive users’ data need to be collected
+    to improve the quality of recommendations, which brings a number of privacy issues.
+    Efforts from legal aspects have been made to preserve users’ privacy. For example,
+    the European parliament unanimously passed the General Data Protection Regulation
+    (GDPR) [1], which came into effect in May 2018. After that, the California government
+    of the United States also established the California Consumer Privacy Act (CCPA)
+    [2], which took effect in January 2020, to ensure the privacy rights and interests
+    of consumers. Recommendation system, having heavy demand for users’ data, is of
+    vital significance to preserve users’ privacy in the society where privacy is
+    widely concerned.
+
+
+    At present, many approaches to achieve privacy preservation are based on centralized
+    framework under the distributed environment [3, 8]. To this end, users’ data still
+    needs to be collected and stored in the central server. In this work, we
+
+
+    propose a completely distributed recommendation mechanism leveraging the inherent
+    decentralized features of blockchain. In this framework, users’ raw data are preserved
+    locally to well reduce the risk of privacy disclosure. In addition, we apply local
+    differential privacy technology to further minimize this disclosure.
+
+
+    More specifically, we followed the basic framework in [4] to implement the minimum
+    hash algorithm based on Jaccard similarity and involve CRC32 verification algorithm
+    for data clustering, making offline computation more efficient and secure. Moreover,
+    we use local differential privacy on the users’ sides by adding a small perturbation
+    to the data via the random response mechanism [5], which can further enhance the
+    system’s ability to preserve users’ privacy. To the best of knowledge, this paper
+    is the first to combine blockchain technology, recommendation algorithm, and differential
+    privacy for the purpose of privacy preservation. Considering that the recommendation
+    accuracy will be degraded due to the parameters in the clustering process and
+    the perturbation process, we conduct experiments to demonstrate how to strike
+    a balance. Possible privacy attacks based on the proposed system are analyzed
+    and discussed in this paper.
+
+
+    Related Work. Fery et al. [6] first proposed blockchain-based recommendation framework
+    to address privacy issues. In that framework, secure multi-party computation is
+    leveraged for encrypting and preserving the privacy information of customers in
+    an e-commerce system for shopping [7]. However, the analysis of efficiency as
+    well as the accuracy of that framework were not provided. Furthermore, all the
+    computation is processed in the blockchain, making it is impractical for the real-world
+    deployment due to the high computational overhead. Umekwudo et al. [8] applied
+    the blockchain to recommendation system in mobile environment, but data is still
+    processed in the blockchain. In addition, the introduced third-party organization
+    may expose the users under the risk of privacy disclosure. Since then, Omar et
+    al. [9] constructed a client-driven recommendation architecture using blockchain,
+    but they didn’t analyze the efficiency and performance of this architecture. Then,
+    Fran Casino et al. [4] implemented the first highly efficient and scalable recommendation
+    system based on blockchain. They combined the blockchain with the Inter-Planetary
+    File System (IPFS) and super bit locality sensitive. Furthermore, they proposed
+    three recommendation strategies, effectively'
+  - '[PAGE 1]
+
+
+    preserving users’ privacy and improving the computation efficiency as well as
+    recommendation accuracy. However, in that system, only static values are used
+    to fill the highly sparse data, which is inadequate to yield a model with high
+    recommendation accuracy. And they only used cosine similarity for clustering the
+    data. Besides, differential privacy was not involved in these three recommendation
+    strategies.
+
+
+    # II. BACKGROUND
+
+
+    Blockchain Technology. In 2008, to maintain transaction orders and avoid the double
+    payment problem of bitcoin, Nakamoto introduced the blockchain structure. The
+    distributed features can be utilized in many areas to provide a strong level of
+    network security and privacy preservation. Moreover, it can provide anonymous
+    and transparent services without the participation of third parties or other verification
+    organizations [10].
+
+
+    Inter-Planetary File System. The IPFS is a distributed file system in the form
+    of Peer-to-Peer. It is also a hypermedia transmission protocol which is based
+    on content addressing and able to avoid centralized failure due to the point-to-point
+    architecture. The files are stored within the system as IPFS objects. We can enhance
+    the availability of blockchain and IPFS by enabling off-chain storage and anonymous
+    file sharing [11].
+
+
+    Local Sensitive Hashing. The Local Sensitive Hashing (LSH) [12] is used to map
+    the datasets via their similarity. In specific, the similar data tend to be mapped
+    into the same bucket, while for the dissimilar data, the different buckets. Various
+    forms of LSH can be implemented according to different similarity calculation
+    methods. In this paper, we use binary Min-Hash algorithm based on Jaccard similarity.
+    The details of the algorithm can be found in Section 3.2. In this case, the similarity
+    calculation formula for dataset A and B is defined as follows:
+
+
+    \(J(A, B) = \frac{|A \cap B|}{|A \cup B|}\) (1)
+
+
+    Local Differential Privacy. At present, differential privacy is commonly used
+    in the centralized environment where data is collected into a central server.
+    In this paper, we apply differential privacy directly at the users’ sides, precluding
+    the malicious third-parties from obtaining the raw data with sensitive information
+    and greatly enhancing the privacy preservation ability. In addition, the random
+    response mechanism disables attackers to infer correct sensitive information from
+    users. In this paper, we choose a local differential privacy algorithm based on
+    Private Count Mean Sketch (PCMS [13]), the details of which can be found in section
+    3.3.
+
+
+    # III. OUR MECHANISM
+
+
+    In this section, we will describe the proposed mechanism based on blockchain in
+    detail. More specifically, the mechanism consists three main procedures. At first,
+    LSH clustering and local differential privacy are performed locally to each user,
+    the obfuscated data is sent to IPFS for storage. After that, each user will get
+    a unique hash value returned by IPFS, through which, the user can have access
+    to the data again. Then, the outputs in
+
+
+    the last process along with other information, such as clustering results (i.e.,
+    bucket number), the hash value, the pseudonym and the current timestamp, are uploaded
+    to the blockchain. Each user is responsible for recording those data. Therefore,
+    users can pick up the similar hash values from the transaction data stored in
+    blockchain. Finally, users obtain the obfuscated data for TOP-N recommendations
+    from the IPFS via selected hash values. The illustration of the proposed mechanism
+    is shown in Fig.1. More details are presented in the following subsection.
+
+
+    # A. Mechanism Overview
+
+
+    ![](img/ba6405dd3b4100239a8087f4ac628bd3_1_0.png)
+
+
+    Fig. 1. The overview of proposed mechanism.
+
+
+    In the blockchain, genesis block contains the LSH function required for clustering,
+    the dimension of the data and the hash function set for PCMS calculation. Each
+    user is required to upload a pseudonym and a timestamp to distinguish whether
+    it is the latest data because rating of the data is dynamic. In addition, the
+    information is allowed to be uploaded only once at a certain time interval, which
+    is decided by the application developer.
+
+
+    In traditional decentralized recommendation systems, the whole cost is dominated
+    by the data transmission between users and the server, the cost of transaction
+    process and transaction verification in blockchain is trivial in this case. In
+    the proposed mechanism, we have much smaller-sized data (e.g., the hash values,
+    the timestamp, and the pseudonym) to be transmitted between blockchain and users.
+    Moreover, the LSH clustering and differential privacy process is executed in parallel
+    among different users. Consequently, our mechanism shows high efficiency in various
+    aspects. Furthermore, the inherent features (such as stability, robustness, and
+    scalability) of blockchain [4] within our mechanism are not well supported by
+    the traditional decentralized or centralized recommendation systems.
+
+
+    # B. Min-Hash Based LSH
+
+
+    In this algorithm, each user should generate a sparse matrix where recorded item
+    is marked as 1, otherwise 0. Then, random rows permutation is performed on this
+    sparse matrix. For each result, the number of rows with value 1 appearing for
+    the first time in each column is recorded as a part of the signature matrix. After
+    that, the signature matrix is divided into several bands and each band is transformed
+    into a unique value. The corresponding bucket number is obtained by CRC32 algorithm
+    and mod'
+  md: '
+
+    ## A Blockchain-based Privacy-Preserving Recommendation Mechanism
+
+
+    Liangjie Lin
+
+    College of Computer Science and Technology
+
+    Harbin Institute of Technology (Shenzhen), China
+
+    sherlocklij@163.com
+
+
+    Yuchen Tian
+
+    College of Computer Science and Technology
+
+    Harbin Institute of Technology (Shenzhen), China
+
+    19s051060@stu.hit.edu.cn
+
+
+    Yang Liu
+
+    College of Computer Science and Technology
+
+    Harbin Institute of Technology (Shenzhen), China
+
+    Cyberspace Security Research Center
+
+    Peng Cheng Laboratory
+
+    liu.yang@hit.edu.cn
+
+
+    ### Abstract
+
+
+    Recommendation system is widely used to predict users’ interests and provide targeted
+    products for them, which effectively facilitates users in the era of big data
+    where information overload problem is prevalent. Unfortunately, massive data closely
+    related to users’ privacy is in high demand to produce more accurate predictions.
+    In this case, the collection and transmission of such data is communication costly;
+    to process and analyze such data is of high possibility to compromise users’ privacy.
+    In this paper, we propose a privacy-preserving recommendation mechanism based
+    on blockchain, which well addresses these problems. Leveraging the inherent advantages
+    of blockchain, we establish a completely distributed model mitigating the risk
+    of privacy disclosure caused by central data storage. Moreover, we combine Inter-Planetary
+    File System with blockchain to greatly improve the communication efficiency. We
+    also introduce local sensitive hashing and local differential privacy into proposed
+    mechanism to reduce the computation load and provide a strong privacy guarantee.
+    The experimental results demonstrate that the proposed mechanism shows better
+    performance on privacy preservation while maintaining desirable recommendation
+    accuracy when compared with the baseline.
+
+
+    ### Keywords
+
+
+    big data; blockchain; privacy; recommendation; local sensitive hashing; local
+    differential privacy
+
+
+    ## I. INTRODUCTION
+
+
+    Recommendation system is proposed as a promising technology to address the information
+    overload in the era of big data. However, massive users’ data need to be collected
+    to improve the quality of recommendations, which brings a number of privacy issues.
+    Efforts from legal aspects have been made to preserve users’ privacy. For example,
+    the European parliament unanimously passed the General Data Protection Regulation
+    (GDPR) [1], which came into effect in May 2018. After that, the California government
+    of the United States also established the California Consumer Privacy Act (CCPA)
+    [2], which took effect in January 2020, to ensure the privacy rights and interests
+    of consumers. Recommendation system, having heavy demand for users’ data, is of
+    vital significance to preserve users’ privacy in the society where privacy is
+    widely concerned.
+
+
+    At present, many approaches to achieve privacy preservation are based on centralized
+    framework under the distributed environment [3, 8]. To this end, users’ data still
+    needs to be collected and stored in the central server. In this work, we propose
+    a completely distributed recommendation mechanism leveraging the inherent decentralized
+    features of blockchain. In this framework, users’ raw data are preserved locally
+    to well reduce the risk of privacy disclosure. In addition, we apply local differential
+    privacy technology to further minimize this disclosure.
+
+
+    More specifically, we followed the basic framework in [4] to implement the minimum
+    hash algorithm based on Jaccard similarity and involve CRC32 verification algorithm
+    for data clustering, making offline computation more efficient and secure. Moreover,
+    we use local differential privacy on the users’ sides by adding a small perturbation
+    to the data via the random response mechanism [5], which can further enhance the
+    system’s ability to preserve users’ privacy. To the best of knowledge, this paper
+    is the first to combine blockchain technology, recommendation algorithm, and differential
+    privacy for the purpose of privacy preservation. Considering that the recommendation
+    accuracy will be degraded due to the parameters in the clustering process and
+    the perturbation process, we conduct experiments to demonstrate how to strike
+    a balance. Possible privacy attacks based on the proposed system are analyzed
+    and discussed in this paper.
+
+
+    Related Work. Fery et al. [6] first proposed blockchain-based recommendation framework
+    to address privacy issues. In that framework, secure multi-party computation is
+    leveraged for encrypting and preserving the privacy information of customers in
+    an e-commerce system for shopping [7]. However, the analysis of efficiency as
+    well as the accuracy of that framework were not provided. Furthermore, all the
+    computation is processed in the blockchain, making it is impractical for the real-world
+    deployment due to the high computational overhead. Umekwudo et al. [8] applied
+    the blockchain to recommendation system in mobile environment, but data is still
+    processed in the blockchain. In addition, the introduced third-party organization
+    may expose the users under the risk of privacy disclosure. Since then, Omar et
+    al. [9] constructed a client-driven recommendation architecture using blockchain,
+    but they didn’t analyze the efficiency and performance of this architecture. Then,
+    Fran Casino et al. [4] implemented the first highly efficient and scalable recommendation
+    system based on blockchain. They combined the blockchain with the Inter-Planetary
+    File System (IPFS) and super-bit locality sensitive. Furthermore, they proposed
+    three recommendation strategies, effectively preserving users’ privacy and improving
+    the computation efficiency as well as recommendation accuracy. However, in that
+    system, only static values are used to fill the highly sparse data, which is inadequate
+    to yield a model with high recommendation accuracy. And they only used cosine
+    similarity for clustering the data. Besides, differential privacy was not involved
+    in these three recommendation strategies.
+
+
+    ## II. BACKGROUND
+
+
+    ### Blockchain Technology
+
+
+    In 2008, to maintain transaction orders and avoid the double payment problem of
+    bitcoin, Nakamoto introduced the blockchain structure. The distributed features
+    can be utilized in many areas to provide a strong level of network security and
+    privacy preservation. Moreover, it can provide anonymous and transparent services
+    without the participation of third parties or other verification organizations
+    [10].
+
+
+    ### Inter-Planetary File System
+
+
+    The IPFS is a distributed file system in the form of Peer-to-Peer. It is also
+    a hypermedia transmission protocol which is based on content addressing and able
+    to avoid centralized failure due to the point-to-point architecture. The files
+    are stored within the system as IPFS objects. We can enhance the availability
+    of blockchain and IPFS by enabling off-chain storage and anonymous file sharing
+    [11].
+
+
+    ### Local Sensitive Hashing
+
+
+    The Local Sensitive Hashing (LSH) [12] is used to map the datasets via their similarity.
+    In specific, the similar data tend to be mapped into the same bucket, while for
+    the dissimilar data, the different buckets. Various forms of LSH can be implemented
+    according to different similarity calculation methods. In this paper, we use binary
+    Min-Hash algorithm based on Jaccard similarity. The details of the algorithm can
+    be found in Section 3.2. In this case, the similarity calculation formula for
+    dataset A and B is defined as follows:
+
+
+    \(J(A, B) = \frac{|A \cap B|}{|A \cup B|}\) (1)
+
+
+    ### Local Differential Privacy
+
+
+    At present, differential privacy is commonly used in the centralized environment
+    where data is collected into a central server. In this paper, we apply differential
+    privacy directly at the users’ sides, precluding the malicious third-parties from
+    obtaining the raw data with sensitive information and greatly enhancing the privacy
+    preservation ability. In addition, the random response mechanism disables attackers
+    to infer correct sensitive information from users. In this paper, we choose a
+    local differential privacy algorithm based on Private Count Mean Sketch (PCMS
+    [13]), the details of which can be found in section 3.3.
+
+
+    ## III. OUR MECHANISM
+
+
+    In this section, we will describe the proposed mechanism based on blockchain in
+    detail. More specifically, the mechanism consists of three main procedures. At
+    first, LSH clustering and local differential privacy are performed locally to
+    each user, the obfuscated data is sent to IPFS for storage. After that, each user
+    will get a unique hash value returned by IPFS, through which, the user can have
+    access to the data again. Then, the outputs in the last process along with other
+    information, such as clustering results (i.e., bucket number), the hash value,
+    the pseudonym and the current timestamp, are uploaded to the blockchain. Each
+    user is responsible for recording those data. Therefore, users can pick up the
+    similar hash values from the transaction data stored in blockchain. Finally, users
+    obtain the obfuscated data for TOP-N recommendations from the IPFS via selected
+    hash values. The illustration of the proposed mechanism is shown in Fig. 1. More
+    details are presented in the following subsection.
+
+
+    ### A. Mechanism Overview
+
+
+    ![](img/ba6405dd3b4100239a8087f4ac628bd3_1_0.png)
+
+
+    Fig. 1. The overview of proposed mechanism.
+
+
+    In the blockchain, genesis block contains the LSH function required for clustering,
+    the dimension of the data and the hash function set for PCMS calculation. Each
+    user is required to upload a pseudonym and a timestamp to distinguish whether
+    it is the latest data because rating of the data is dynamic. In addition, the
+    information is allowed to be uploaded only once at a certain time interval, which
+    is decided by the application developer.
+
+
+    In traditional decentralized recommendation systems, the whole cost is dominated
+    by the data transmission between users and the server, the cost of transaction
+    process and transaction verification in blockchain is trivial in this case. In
+    the proposed mechanism, we have much smaller-sized data (e.g., the hash values,
+    the timestamp, and the pseudonym) to be transmitted between blockchain and users.
+    Moreover, the LSH clustering and differential privacy process is executed in parallel
+    among different users. Consequently, our mechanism shows high efficiency in various
+    aspects. Furthermore, the inherent features (such as stability, robustness, and
+    scalability) of blockchain [4] within our mechanism are not well supported by
+    the traditional decentralized or centralized recommendation systems.
+
+
+    ### B. Min-Hash Based LSH
+
+
+    In this algorithm, each user should generate a sparse matrix where recorded item
+    is marked as 1, otherwise 0. Then, random row permutation is performed on this
+    sparse matrix. For each result, the number of rows with value 1 appearing for
+    the first time in each column is recorded as a part of the signature matrix. After
+    that, the signature matrix is divided into several bands and each band is transformed
+    into a unique value. The corresponding bucket number is obtained by CRC32 algorithm
+    and mod
+
+    '
+  mdcn: '
+
+    ## 基于区块链的隐私保护推荐机制
+
+
+    Liangjie Lin
+
+    计算机科学与技术学院
+
+    中国深圳哈尔滨工业大学
+
+    sherlocklij@163.com
+
+
+    Yuchen Tian
+
+    计算机科学与技术学院
+
+    中国深圳哈尔滨工业大学
+
+    19s051060@stu.hit.edu.cn
+
+
+    Yang Liu
+
+    计算机科学与技术学院
+
+    中国深圳哈尔滨工业大学
+
+    网络空间安全研究中心
+
+    鹏城实验室
+
+    liu.yang@hit.edu.cn
+
+
+    ### 摘要
+
+
+    推荐系统广泛用于预测用户兴趣并为其提供有针对性的产品，有效地缓解了大数据时代普遍存在的信息过载问题。不幸的是，产生更准确的预测需要大量与用户隐私密切相关的数据。在这种情况下，此类数据的收集和传输通信成本高昂；处理和分析此类数据很可能会危及用户隐私。在本文中，我们提出了一种基于区块链的隐私保护推荐机制，该机制很好地解决了这些问题。利用区块链的固有优势，我们建立了一个完全分布式模型，减轻了由集中式数据存储引起的隐私泄露风险。此外，我们将星际文件系统（IPFS）与区块链相结合，大大提高了通信效率。我们还将局部敏感哈希和局部差分隐私引入所提机制，以减少计算负载并提供强大的隐私保障。实验结果表明，与基线相比，所提机制在保持理想推荐准确性的同时，在隐私保护方面表现更出色。
+
+
+    ### 关键词
+
+
+    大数据；区块链；隐私；推荐；局部敏感哈希；局部差分隐私
+
+
+    ## I. 引言
+
+
+    推荐系统被提出作为一种有前景的技术，以解决大数据时代的信息过载问题。然而，为了提高推荐质量，需要收集大量用户数据，这带来了许多隐私问题。法律层面的努力已被用于保护用户隐私。例如，欧洲议会一致通过了《一般数据保护条例》（GDPR）[1]，该条例于
+    2018 年 5 月生效。此后，美国加利福尼亚州政府也建立了《加州消费者隐私法案》（CCPA）[2]，该法案于 2020 年 1 月生效，以确保消费者的隐私权利和利益。推荐系统对用户数据需求量大，在普遍关注隐私的社会中，保护用户隐私至关重要。
+
+
+    目前，许多实现隐私保护的方法基于分布式环境下的集中式框架 [3, 8]。为此，用户数据仍然需要被收集并存储在中央服务器中。在本工作中，我们提出了一种利用区块链固有去中心化特性的完全分布式推荐机制。在此框架中，用户原始数据本地保存，以最大限度地降低隐私泄露风险。此外，我们应用局部差分隐私技术来进一步最大限度地减少这种泄露。
+
+
+    更具体地说，我们遵循 [4] 中的基本框架，实现了基于 Jaccard 相似度的最小哈希算法，并引入 CRC32 验证算法用于数据聚类，使离线计算更加高效和安全。此外，我们在用户端通过随机响应机制
+    [5] 向数据添加小扰动来使用局部差分隐私，这可以进一步增强系统保护用户隐私的能力。据我们所知，本文是第一个将区块链技术、推荐算法和差分隐私相结合以实现隐私保护的文章。考虑到由于聚类过程和扰动过程中的参数，推荐准确性会下降，我们进行了实验以展示如何取得平衡。本文分析和讨论了基于所提系统的可能隐私攻击。
+
+
+    相关工作。Fery 等人 [6] 首先提出了基于区块链的推荐框架以解决隐私问题。在此框架中，安全多方计算被用于加密并保护电子商务购物系统中客户的隐私信息 [7]。然而，该框架未提供效率及准确性分析。此外，所有计算都在区块链上进行，由于计算开销高，使其在实际部署中不切实际。Umekwudo
+    等人 [8] 将区块链应用于移动环境中的推荐系统，但数据仍在区块链中处理。此外，引入的第三方组织可能会使用户面临隐私泄露风险。此后，Omar 等人 [9]
+    使用区块链构建了客户端驱动的推荐架构，但他们未分析该架构的效率和性能。随后，Fran Casino 等人 [4] 实现了第一个基于区块链的高效且可扩展的推荐系统。他们将区块链与星际文件系统（IPFS）和超比特局部敏感哈希相结合。此外，他们提出了三种推荐策略，有效地保护了用户隐私并提高了计算效率和推荐准确性。然而，在该系统中，仅使用静态值来填充高度稀疏的数据，这不足以产生具有高推荐准确性的模型。并且，他们仅使用余弦相似度对数据进行聚类。此外，这三种推荐策略均未涉及差分隐私。
+
+
+    ## II. 背景
+
+
+    ### 区块链技术
+
+
+    2008 年，为了维护交易顺序并避免比特币的双重支付问题，Nakamoto 引入了区块链结构。分布式特性可以在许多领域利用，以提供强大的网络安全和隐私保护水平。此外，它无需第三方或其他验证组织参与即可提供匿名和透明的服务
+    [10]。
+
+
+    ### 星际文件系统
+
+
+    IPFS 是一种点对点形式的分布式文件系统。它也是一种基于内容寻址的超媒体传输协议，由于点对点架构，可以避免集中式故障。文件作为 IPFS 对象存储在系统中。我们可以通过启用链外存储和匿名文件共享来增强区块链和
+    IPFS 的可用性 [11]。
+
+
+    ### 局部敏感哈希
+
+
+    局部敏感哈希（LSH）[12] 用于根据相似度映射数据集。具体来说，相似的数据倾向于映射到同一个桶中，而不相似的数据则映射到不同的桶中。可以根据不同的相似度计算方法实现各种形式的
+    LSH。在本文中，我们使用基于 Jaccard 相似度的二进制 Min-Hash 算法。该算法的详细信息可在第 3.2 节中找到。在此情况下，数据集 A 和
+    B 的相似度计算公式定义如下：
+
+
+    \(J(A, B) = \frac{|A \cap B|}{|A \cup B|}\) (1)
+
+
+    ### 局部差分隐私
+
+
+    目前，差分隐私通常用于集中式环境，即数据被收集到中央服务器。在本文中，我们直接在用户端应用差分隐私，防止恶意第三方获取带有敏感信息的原始数据，并大大增强隐私保护能力。此外，随机响应机制使攻击者无法从用户处推断出正确的敏感信息。在本文中，我们选择一种基于
+    Private Count Mean Sketch（PCMS [13]）的局部差分隐私算法，其详细信息可在第 3.3 节中找到。
+
+
+    ## III. 我们的机制
+
+
+    在本节中，我们将详细描述基于区块链的所提机制。更具体地说，该机制包含三个主要过程。首先，对每个用户本地执行 LSH 聚类和局部差分隐私，模糊后的数据被发送到
+    IPFS 进行存储。之后，每个用户将获得 IPFS 返回的唯一哈希值，通过该值，用户可以再次访问数据。然后，将上一个过程的输出以及其他信息（例如，聚类结果（即桶编号）、哈希值、假名和当前时间戳）上传到区块链。每个用户负责记录这些数据。因此，用户可以从区块链中存储的交易数据中挑选相似的哈希值。最后，用户通过所选哈希值从
+    IPFS 获取用于 TOP-N 推荐的模糊数据。所提机制的图示如图 1 所示。更多细节将在以下子节中介绍。
+
+
+    ### A. 机制概述
+
+
+    ![](img/ba6405dd3b4100239a8087f4ac628bd3_1_0.png)
+
+
+    图 1. 提出的机制概览。
+
+
+    在区块链中，创世块包含用于聚类所需的 LSH 函数、数据维度以及用于 PCMS 计算的哈希函数集。每个用户需要上传一个假名和一个时间戳，以区分它是否是最新数据，因为数据评分是动态的。此外，信息只能在特定时间间隔内上传一次，该间隔由应用程序开发者决定。
+
+
+    在传统的分布式推荐系统中，整个成本主要由用户与服务器之间的数据传输占据，在这种情况下，区块链中交易过程和交易验证的成本微不足道。在所提机制中，在区块链和用户之间传输的数据尺寸要小得多（例如，哈希值、时间戳和假名）。此外，LSH
+    聚类和差分隐私过程在不同用户之间并行执行。因此，我们的机制在各个方面都表现出高效性。此外，区块链 [4] 的固有特性（如稳定性、鲁棒性和可扩展性）在我们的机制中得到支持，而传统的分布式或集中式推荐系统则不支持。
+
+
+    ### B. 基于 Min-Hash 的 LSH
+
+
+    在此算法中，每个用户应生成一个稀疏矩阵，其中记录的项目标记为 1，否则为 0。然后，对该稀疏矩阵执行随机行排列。对于每个结果，记录每个列中值为 1 第一次出现的行数作为签名矩阵的一部分。之后，将签名矩阵分为多个带，每个带转换为一个唯一值。相应的桶编号通过
+    CRC32 算法和模运算获得。
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    operation. In the end, each user can upload their bucket number to blockchain.
+    The pseudocode of Min-Hash algorithm is shown in Algorithm 1.
+
+
+    ```
+
+    Algorithm 1: Min-Hash Based LSH
+
+    Input:
+
+    M: Sparse matrix of raw data
+
+    U_s: Random seed set by each user
+
+    P: Row permutation times
+
+    Nban: The number of bands in the signature matrix
+
+    Nrow: The number of lines in each band
+
+    Nbuc: The number of buckets that can be mapped
+
+    Output:
+
+    B: Bucket number set
+
+    1: initialize matrix s with 0
+
+    2: for each i ∈ P do
+
+    3: generate seed with U_s
+
+    4: row_order ← permutation rows
+
+    5: M ← M[row_order, :]
+
+    6: get the first row number of ''1'' in M''s each column
+
+    7: s[i] ← first row number
+
+    8: end
+
+    9: current_row ← 0, initialize array buckets
+
+    10: for each b ∈ Nban do
+
+    11: band ← s[current_row: Nrow + current_row, :]
+
+    12: current_row ← current_row + Nrow
+
+    13: ids ← ravel_multi_index(band, band.max()(1)+1)
+
+    14: buckets ← ids
+
+    15: end
+
+    16: initialize array B
+
+    17: for each item ∈ buckets do
+
+    18: get crc32_value of item
+
+    19: hash_bucket ← crc32_value mod Nbuc
+
+    20: B ← hash_bucket
+
+    21: end
+
+    22: return B
+
+    ```
+
+
+    # C. PCMS Based Local Differential Privacy
+
+
+    The pseudocode of this method is shown in Algorithm 2. Each user perturbs raw
+    data locally and sends the results to IPFS, then upload received IPFS hash to
+    blockchain. Then users needing recommendations can obtain overall data features
+    and rank the results in descending order. In the end, the algorithm provides these
+    users with TOP-N items.
+
+
+    # IV. EXPERIMENTAL STUDIES
+
+
+    We conducted enough experiments to verify the effectiveness of the proposed mechanism
+    on two real datasets. We first describe the environment and datasets used in the
+    experiments, and subsequently explain the evaluation metrics. Finally, we show
+    the performance of the mechanism under different parameter settings.
+
+
+    # A. Experiment Setup and Datasets
+
+
+    All the experiments are implemented in multiple Ubuntu 16.04 virtual machines
+    running in two personal computers, one is configured with 12GB RAM, Intel i5-6300HQ
+    CPU and the other is with 32GB RAM, Intel i9-9880H CPU. Each virtual
+
+
+    ¹ https://grouplens.org/datasets/movielens/latest/
+
+
+    machine is allocated at least 6G RAM to support the experiments. The packages
+    and tools used are Python 2.7.17, tensorflow 2.1.0, numpy1.16.6 and graphlab 2.1.
+    Ethereum chain is used to record the required information during recommendation.
+    We evaluate the mechanism on Movielens datasets¹ provided by GroupLens, the smaller
+    dataset is termed as ML_100K, for the larger one, only half of the items are used,
+    termed as ML_20M. The datasets containing the watched movies of each user and
+    the rating value ranging from 0.5 to 5. The metadata of the two datasets is shown
+    in Table I.
+
+
+    ```
+
+    Algorithm 2: PCMS Based Local Differential Privacy
+
+    Input:
+
+    D: Raw dataset of users
+
+    D_t: All user data domain
+
+    ε: Differential privacy budget
+
+    k: The number of hash function
+
+    m: The mod of hash function
+
+    Functions:
+
+    PerturbData(): perturbs users'' data
+
+    ComputerSketchMatrix(): generates sketch matrix for recommendation
+
+    GetFrequencyStatistics(): obtain frequency statistics
+
+    Output:
+
+    F (f(d): d ∈ D_t): Frequency statistics of each element in dataset domain
+
+    1: select a set H = {h1, ..., hk} randomly, mapping D to [m]
+
+    2: for each d(i) ∈ D do
+
+    3: (v(i), j(i)) ← PerturbData (d(i), ε, H)
+
+    4: end
+
+    5: sketch M ← ComputerSketchMatrix ((v(i), j(i))), ..., ((v(n), j(n))), ε, k,
+    m)
+
+    6: for each d ∈ D_t do
+
+    7: f(d) ← GetFrequencyStatistics(d_t, M, ε, H)
+
+    8: end
+
+    9: return F (f(d): d ∈ D_t)
+
+    ```
+
+
+    | | Users | Movies | Ratings | Average | Density |
+
+    |---|---|---|---|---|---|
+
+    | ML_100K | 610 | 9742 | 100836 | 3.2549 | 1.70% |
+
+    | ML_20M | 110000 | 27278 | 1590140 | 3.4964 | 1.85% |
+
+
+    # B. Evaluation Metrics
+
+
+    To evaluate the recommendation accuracy, we use the metrics: Precision P , Recall
+    R , and F1 -Measure F1 . The definitions of them are as follows:
+
+
+    ```
+
+    P = \frac{\Sigma_{u \in U} |S(u) \cap T(u)|}{\Sigma_{u \in U} |S(u)|} \quad (2)
+
+    ```
+
+
+    ```
+
+    R = \frac{\Sigma_{u \in U} |S(u) \cap T(u)|}{\Sigma_{u \in U} |T(u)|} \quad (3)
+
+    ```
+
+
+    ```
+
+    F_1 = \frac{2*P*R}{P+R} \quad (4)
+
+    ```'
+  - '[PAGE 3]
+
+
+    Where U denotes the user set, u represents a certain user (u ∈ U). S(u) is the
+    item set recommended to the user, T(u) is the user behavior item set. |S(u)| and
+    |T(u)| represent the number of elements in S(u) and T(u) respectively.
+
+
+    # C. Experimental Results and Analysis
+
+
+    1) LSH clustering based on Min-Hash: We conduct experiments with different bucket
+    numbers to find the optimal one for subsequent experiments. Since the two datasets
+    have the same structure, some data-processing-related parameters are kept the
+    same. The permutation times, the number of bands in signature matrix, and the
+    random seed are set to 100, 25, and 19248 respectively. The only parameter different
+    between the two datasets is the bucket number b. Several metrics are introduced
+    to evaluate the performance, as shown in Table II and Table III. Table II K denotes
+    the number of neighbors of certain user. When K < 3, K - 1 users can easily collude
+    to infer privacy information of other users [4], that is the situation we need
+    to avoid. K̄ represents the average number of neighbors of each user. Utilization
+    rate U reveals the percentage of buckets where the number of users is greater
+    than 1. In the scenario where only one user in some buckets, the process to find
+    the similar users will be costly. LSH algorithm can greatly reduce the computation
+    load, R refers to the percentage of new computation load to the old one, 1 - R
+    represents the computation load reduced.
+
+
+    Therefore, for ML_100K, when bucket number b is set to 1536, the utilization rate
+    of all buckets is 100%, and 96.28% of computation load is reduced. Meanwhile,
+    a desirable privacy protection level can be maintained when K < 3. Similarly,
+    we choose b = 24576 as the optimal bucket number for ML_20M.
+
+
+    TABLE II. EXPERIMENTAL RESULTS OF ML_100K
+
+
+    | Bucket number(b) | Neighbors per user (K̄) | Users whose K<3 | Utilization rate(U)
+    | Relative computation cost (R) |
+
+    |---|---|---|---|---|
+
+    | 512 | 41.23 | 0 | 100.00% | 6.76% |
+
+    | 1024 | 27.15 | 0 | 100.00% | 4.45% |
+
+    | 1536 | 22.71 | 1 | 100.00% | 3.72% |
+
+    | 2048 | 20.16 | 7 | 99.95% | 3.30% |
+
+    | 2560 | 18.84 | 17 | 99.53% | 3.09% |
+
+    | 3072 | 17.81 | 37 | 98.77% | 2.92% |
+
+    | 3584 | 17.31 | 60 | 98.10% | 2.84% |
+
+
+    TABLE III. EXPERIMENTAL RESULTS OF ML_20M
+
+
+    | Bucket number(b) | Neighbors per user (K̄) | Users whose K<3 | Utilization rate(U)
+    | Relative computation cost (R) |
+
+    |---|---|---|---|---|
+
+    | 8192 | 775.12 | 0 | 100.00% | 0.68% |
+
+    | 12288 | 668.43 | 0 | 100.00% | 0.61% |
+
+    | 16384 | 559.11 | 0 | 100.00% | 0.51% |
+
+    | 20480 | 499.39 | 0 | 100.00% | 0.45% |
+
+    | 24576 | 444.56 | 5 | 100.00% | 0.40% |
+
+    | 28672 | 401.47 | 64 | 99.83% | 0.36% |
+
+    | 32768 | 334.51 | 215 | 98.90% | 0.30% |
+
+
+    # 2) LSH clustering based on Min-Hash:
+
+
+    ![](img/ba6405dd3b4100239a8087f4ac628bd3_3_0.png)
+
+
+    ![](img/ba6405dd3b4100239a8087f4ac628bd3_3_1.png)
+
+
+    Before local differential privacy if performed, each user needs to reconstruct
+    the dataset via the following rules. For a movie with a rating of N, the record
+    of that movie will be copied for N times. In this way, N + 1 records of the movie
+    will be in the dataset. For the unrated movies, only one record is generated for
+    each of them and appended into the new dataset.
+
+
+    We consider the rated movies and corresponding ratings as the privacy information
+    of users, and analyze the potential privacy attacks for choosing the suitable
+    privacy budget parameter ε. Suppose the attackers attempt to recover the obfuscated
+    data of a certain user to infer the watched movies and ratings. Let N and N''
+    be the correct and recovered rating respectively, and the difference between them
+    is defined as d = |N - N''|. We argue that the privacy is well preserved if d
+    >= 2, otherwise, there is a high risk for privacy disclosure. Let DR denotes the
+    degree of privacy disclosure, whose value is decided by the percentage of data
+    with d < 2 after perturbation. We conduct experiments on ML_100K and ML_20M when
+    ε takes value from 0.1, 0.2, 0.3, 0.4, 0.5, 0.75, and 0.9. As results shown in
+    Fig.2, the larger the value of ε, the more likely the privacy is disclosed.'
+  md: '
+
+
+    operation. In the end, each user can upload their bucket number to blockchain.
+    The pseudocode of Min-Hash algorithm is shown in Algorithm 1.
+
+
+    ```
+
+    Algorithm 1: Min-Hash Based LSH
+
+    Input:
+
+    M: Sparse matrix of raw data
+
+    U_s: Random seed set by each user
+
+    P: Row permutation times
+
+    Nban: The number of bands in the signature matrix
+
+    Nrow: The number of lines in each band
+
+    Nbuc: The number of buckets that can be mapped
+
+    Output:
+
+    B: Bucket number set
+
+    1: initialize matrix s with 0
+
+    2: for each i ∈ P do
+
+    3: generate seed with U_s
+
+    4: row_order ← permutation rows
+
+    5: M ← M[row_order, :]
+
+    6: get the first row number of ''1'' in M''s each column
+
+    7: s[i] ← first row number
+
+    8: end
+
+    9: current_row ← 0, initialize array buckets
+
+    10: for each b ∈ Nban do
+
+    11: band ← s[current_row: Nrow + current_row, :]
+
+    12: current_row ← current_row + Nrow
+
+    13: ids ← ravel_multi_index(band, band.max()(1)+1)
+
+    14: buckets ← ids
+
+    15: end
+
+    16: initialize array B
+
+    17: for each item ∈ buckets do
+
+    18: get crc32_value of item
+
+    19: hash_bucket ← crc32_value mod Nbuc
+
+    20: B ← hash_bucket
+
+    21: end
+
+    22: return B
+
+    ```
+
+
+    ### C. PCMS Based Local Differential Privacy
+
+
+    The pseudocode of this method is shown in Algorithm 2. Each user perturbs raw
+    data locally and sends the results to IPFS, then upload received IPFS hash to
+    blockchain. Then users needing recommendations can obtain overall data features
+    and rank the results in descending order. In the end, the algorithm provides these
+    users with TOP-N items.
+
+
+    ## IV. EXPERIMENTAL STUDIES
+
+
+    We conducted enough experiments to verify the effectiveness of the proposed mechanism
+    on two real datasets. We first describe the environment and datasets used in the
+    experiments, and subsequently explain the evaluation metrics. Finally, we show
+    the performance of the mechanism under different parameter settings.
+
+
+    ### A. Experiment Setup and Datasets
+
+
+    All the experiments are implemented in multiple Ubuntu 16.04 virtual machines
+    running in two personal computers, one is configured with 12GB RAM, Intel i5-6300HQ
+    CPU and the other is with 32GB RAM, Intel i9-9880H CPU. Each virtual machine is
+    allocated at least 6G RAM to support the experiments. The packages and tools used
+    are Python 2.7.17, tensorflow 2.1.0, numpy 1.16.6 and graphlab 2.1. Ethereum chain
+    is used to record the required information during recommendation. We evaluate
+    the mechanism on Movielens datasets¹ provided by GroupLens, the smaller dataset
+    is termed as ML_100K, for the larger one, only half of the items are used, termed
+    as ML_20M. The datasets containing the watched movies of each user and the rating
+    value ranging from 0.5 to 5. The metadata of the two datasets is shown in Table
+    I.
+
+
+    ¹ https://grouplens.org/datasets/movielens/latest/
+
+
+    ```
+
+    Algorithm 2: PCMS Based Local Differential Privacy
+
+    Input:
+
+    D: Raw dataset of users
+
+    D_t: All user data domain
+
+    ε: Differential privacy budget
+
+    k: The number of hash function
+
+    m: The mod of hash function
+
+    Functions:
+
+    PerturbData(): perturbs users'' data
+
+    ComputerSketchMatrix(): generates sketch matrix for recommendation
+
+    GetFrequencyStatistics(): obtain frequency statistics
+
+    Output:
+
+    F (f(d): d ∈ D_t): Frequency statistics of each element in dataset domain
+
+    1: select a set H = {h1, ..., hk} randomly, mapping D to [m]
+
+    2: for each d(i) ∈ D do
+
+    3: (v(i), j(i)) ← PerturbData (d(i), ε, H)
+
+    4: end
+
+    5: sketch M ← ComputerSketchMatrix ((v(i), j(i))), ..., ((v(n), j(n))), ε, k,
+    m)
+
+    6: for each d ∈ D_t do
+
+    7: f(d) ← GetFrequencyStatistics(d_t, M, ε, H)
+
+    8: end
+
+    9: return F (f(d): d ∈ D_t)
+
+    ```
+
+
+    | | Users | Movies | Ratings | Average | Density |
+
+    |---|---|---|---|---|---|
+
+    | ML_100K | 610 | 9742 | 100836 | 3.2549 | 1.70% |
+
+    | ML_20M | 110000 | 27278 | 1590140 | 3.4964 | 1.85% |
+
+
+    ### B. Evaluation Metrics
+
+
+    To evaluate the recommendation accuracy, we use the metrics: Precision P, Recall
+    R, and F1-Measure F1. The definitions of them are as follows:
+
+
+    ```
+
+    P = \frac{\Sigma_{u \in U} |S(u) \cap T(u)|}{\Sigma_{u \in U} |S(u)|} \quad (2)
+
+    ```
+
+
+    ```
+
+    R = \frac{\Sigma_{u \in U} |S(u) \cap T(u)|}{\Sigma_{u \in U} |T(u)|} \quad (3)
+
+    ```
+
+
+    ```
+
+    F_1 = \frac{2*P*R}{P+R} \quad (4)
+
+    ```
+
+
+    Where U denotes the user set, u represents a certain user (u ∈ U). S(u) is the
+    item set recommended to the user, T(u) is the user behavior item set. |S(u)| and
+    |T(u)| represent the number of elements in S(u) and T(u) respectively.
+
+
+    ### C. Experimental Results and Analysis
+
+
+    - 1) LSH clustering based on Min-Hash: We conduct experiments with different bucket
+    numbers to find the optimal one for subsequent experiments. Since the two datasets
+    have the same structure, some data-processing-related parameters are kept the
+    same. The permutation times, the number of bands in signature matrix, and the
+    random seed are set to 100, 25, and 19248 respectively. The only parameter different
+    between the two datasets is the bucket number b. Several metrics are introduced
+    to evaluate the performance, as shown in Table II and Table III. Table II K denotes
+    the number of neighbors of certain user. When K < 3, K - 1 users can easily collude
+    to infer privacy information of other users [4], that is the situation we need
+    to avoid. K̄ represents the average number of neighbors of each user. Utilization
+    rate U reveals the percentage of buckets where the number of users is greater
+    than 1. In the scenario where only one user in some buckets, the process to find
+    the similar users will be costly. LSH algorithm can greatly reduce the computation
+    load, R refers to the percentage of new computation load to the old one, 1 - R
+    represents the computation load reduced.
+
+
+    Therefore, for ML_100K, when bucket number b is set to 1536, the utilization rate
+    of all buckets is 100%, and 96.28% of computation load is reduced. Meanwhile,
+    a desirable privacy protection level can be maintained when K < 3. Similarly,
+    we choose b = 24576 as the optimal bucket number for ML_20M.
+
+
+    TABLE II. EXPERIMENTAL RESULTS OF ML_100K
+
+
+    | Bucket number(b) | Neighbors per user (K̄) | Users whose K<3 | Utilization rate(U)
+    | Relative computation cost (R) |
+
+    |---|---|---|---|---|
+
+    | 512 | 41.23 | 0 | 100.00% | 6.76% |
+
+    | 1024 | 27.15 | 0 | 100.00% | 4.45% |
+
+    | 1536 | 22.71 | 1 | 100.00% | 3.72% |
+
+    | 2048 | 20.16 | 7 | 99.95% | 3.30% |
+
+    | 2560 | 18.84 | 17 | 99.53% | 3.09% |
+
+    | 3072 | 17.81 | 37 | 98.77% | 2.92% |
+
+    | 3584 | 17.31 | 60 | 98.10% | 2.84% |
+
+
+    TABLE III. EXPERIMENTAL RESULTS OF ML_20M
+
+
+    | Bucket number(b) | Neighbors per user (K̄) | Users whose K<3 | Utilization rate(U)
+    | Relative computation cost (R) |
+
+    |---|---|---|---|---|
+
+    | 8192 | 775.12 | 0 | 100.00% | 0.68% |
+
+    | 12288 | 668.43 | 0 | 100.00% | 0.61% |
+
+    | 16384 | 559.11 | 0 | 100.00% | 0.51% |
+
+    | 20480 | 499.39 | 0 | 100.00% | 0.45% |
+
+    | 24576 | 444.56 | 5 | 100.00% | 0.40% |
+
+    | 28672 | 401.47 | 64 | 99.83% | 0.36% |
+
+    | 32768 | 334.51 | 215 | 98.90% | 0.30% |
+
+
+    - 2) LSH clustering based on Min-Hash:
+
+
+    ![](img/ba6405dd3b4100239a8087f4ac628bd3_3_0.png)
+
+
+    ![](img/ba6405dd3b4100239a8087f4ac628bd3_3_1.png)
+
+
+    Before local differential privacy is performed, each user needs to reconstruct
+    the dataset via the following rules. For a movie with a rating of N, the record
+    of that movie will be copied for N times. In this way, N + 1 records of the movie
+    will be in the dataset. For the unrated movies, only one record is generated for
+    each of them and appended into the new dataset.
+
+
+    We consider the rated movies and corresponding ratings as the privacy information
+    of users, and analyze the potential privacy attacks for choosing the suitable
+    privacy budget parameter ε. Suppose the attackers attempt to recover the obfuscated
+    data of a certain user to infer the watched movies and ratings. Let N and N''
+    be the correct and recovered rating respectively, and the difference between them
+    is defined as d = |N - N''|. We argue that the privacy is well preserved if d
+    >= 2, otherwise, there is a high risk for privacy disclosure. Let DR denotes the
+    degree of privacy disclosure, whose value is decided by the percentage of data
+    with d < 2 after perturbation. We conduct experiments on ML_100K and ML_20M when
+    ε takes value from 0.1, 0.2, 0.3, 0.4, 0.5, 0.75, and 0.9. As results shown in
+    Fig. 2, the larger the value of ε, the more likely the privacy is disclosed.
+
+
+    '
+  mdcn: '
+
+    操作。最终，每个用户可以将其桶号上传到区块链。Min-Hash算法的伪代码如算法1所示。
+
+
+    ```
+
+    Algorithm 1: Min-Hash Based LSH
+
+    Input:
+
+    M: Sparse matrix of raw data
+
+    U_s: Random seed set by each user
+
+    P: Row permutation times
+
+    Nban: The number of bands in the signature matrix
+
+    Nrow: The number of lines in each band
+
+    Nbuc: The number of buckets that can be mapped
+
+    Output:
+
+    B: Bucket number set
+
+    1: initialize matrix s with 0
+
+    2: for each i ∈ P do
+
+    3: generate seed with U_s
+
+    4: row_order ← permutation rows
+
+    5: M ← M[row_order, :]
+
+    6: get the first row number of ''1'' in M''s each column
+
+    7: s[i] ← first row number
+
+    8: end
+
+    9: current_row ← 0, initialize array buckets
+
+    10: for each b ∈ Nban do
+
+    11: band ← s[current_row: Nrow + current_row, :]
+
+    12: current_row ← current_row + Nrow
+
+    13: ids ← ravel_multi_index(band, band.max()(1)+1)
+
+    14: buckets ← ids
+
+    15: end
+
+    16: initialize array B
+
+    17: for each item ∈ buckets do
+
+    18: get crc32_value of item
+
+    19: hash_bucket ← crc32_value mod Nbuc
+
+    20: B ← hash_bucket
+
+    21: end
+
+    22: return B
+
+    ```
+
+
+    ### C. 基于PCMS的局部差分隐私
+
+
+    该方法的伪代码如算法2所示。每个用户在本地对原始数据进行扰动，并将结果发送到IPFS，然后上传接收到的IPFS哈希到区块链。然后，需要推荐的用户可以获取整体数据特征并按降序对结果进行排名。最终，该算法为这些用户提供TOP-N项目。
+
+
+    ## IV. 实验研究
+
+
+    我们在两个真实数据集上进行了足够的实验，以验证所提机制的有效性。首先描述实验中使用的环境和数据集，随后解释评估指标。最后，展示了该机制在不同参数设置下的性能。
+
+
+    ### A. 实验设置与数据集
+
+
+    所有实验均在运行于两台个人电脑上的多个Ubuntu 16.04虚拟机中实现，其中一台配置为12GB RAM、Intel i5-6300HQ CPU，另一台配置为32GB
+    RAM、Intel i9-9880H CPU。每个虚拟机至少分配6G RAM以支持实验。使用的包和工具为Python 2.7.17、tensorflow 2.1.0、numpy
+    1.16.6和graphlab 2.1。在推荐过程中使用Ethereum链记录所需信息。我们在GroupLens提供的Movielens数据集¹上评估该机制，较小的数据集称为ML_100K，对于较大的数据集，仅使用一半的项目，称为ML_20M。数据集包含每个用户观看的电影和0.5到5之间的评分值。两个数据集的元数据如表I所示。
+
+
+    ¹ https://grouplens.org/datasets/movielens/latest/
+
+
+    ```
+
+    Algorithm 2: PCMS Based Local Differential Privacy
+
+    Input:
+
+    D: Raw dataset of users
+
+    D_t: All user data domain
+
+    ε: Differential privacy budget
+
+    k: The number of hash function
+
+    m: The mod of hash function
+
+    Functions:
+
+    PerturbData(): perturbs users'' data
+
+    ComputerSketchMatrix(): generates sketch matrix for recommendation
+
+    GetFrequencyStatistics(): obtain frequency statistics
+
+    Output:
+
+    F (f(d): d ∈ D_t): Frequency statistics of each element in dataset domain
+
+    1: select a set H = {h1, ..., hk} randomly, mapping D to [m]
+
+    2: for each d(i) ∈ D do
+
+    3: (v(i), j(i)) ← PerturbData (d(i), ε, H)
+
+    4: end
+
+    5: sketch M ← ComputerSketchMatrix ((v(i), j(i))), ..., ((v(n), j(n))), ε, k,
+    m)
+
+    6: for each d ∈ D_t do
+
+    7: f(d) ← GetFrequencyStatistics(d_t, M, ε, H)
+
+    8: end
+
+    9: return F (f(d): d ∈ D_t)
+
+    ```
+
+
+    | | 用户 | 电影 | 评分 | 平均值 | 密度 |
+
+    |---|---|---|---|---|---|
+
+    | ML_100K | 610 | 9742 | 100836 | 3.2549 | 1.70% |
+
+    | ML_20M | 110000 | 27278 | 1590140 | 3.4964 | 1.85% |
+
+
+    ### B. 评估指标
+
+
+    为了评估推荐准确性，我们使用以下指标：精确率P、召回率R和F1度量F1。它们的定义如下：
+
+
+    ```
+
+    P = \frac{\Sigma_{u \in U} |S(u) \cap T(u)|}{\Sigma_{u \in U} |S(u)|} \quad (2)
+
+    ```
+
+
+    ```
+
+    R = \frac{\Sigma_{u \in U} |S(u) \cap T(u)|}{\Sigma_{u \in U} |T(u)|} \quad (3)
+
+    ```
+
+
+    ```
+
+    F_1 = \frac{2*P*R}{P+R} \quad (4)
+
+    ```
+
+
+    其中U表示用户集，u表示某个用户（u ∈ U）。S(u)是推荐给用户的项目集，T(u)是用户行为项目集。|S(u)|和|T(u)|分别表示S(u)和T(u)中的元素数量。
+
+
+    ### C. 实验结果与分析
+
+
+    - 1) 基于Min-Hash的LSH聚类：我们使用不同的桶数进行实验，以找出后续实验的最佳桶数。由于两个数据结构相同，一些与数据处理相关的参数保持不变。置换次数、签名矩阵中的带数以及随机种子分别设置为100、25和19248。两个数据集之间唯一不同的参数是桶数b。引入了多个指标来评估性能，如表II和表III所示。表II中K表示某个用户的邻居数量。当K
+    < 3时，K - 1个用户很容易串通起来推断其他用户的隐私信息，即我们需要避免的情况。K̄表示每个用户的平均邻居数量。利用率U揭示了用户数量大于1的桶所占的百分比。在某些桶中只有一个用户的场景下，寻找相似用户的过程将很昂贵。LSH算法可以大大降低计算负载，R指新计算负载与旧计算负载的百分比，1
+    - R表示降低的计算负载。
+
+
+    因此，对于ML_100K，当桶数b设置为1536时，所有桶的利用率为100%，且96.28%的计算负载被降低。同时，在K < 3时可以保持理想的隐私保护水平。同样，我们为ML_20M选择b
+    = 24576作为最优桶数。
+
+
+    表II. ML_100K的实验结果
+
+
+    | 桶数(b) | 每用户邻居数(K̄) | K<3的用户数 | 利用率(U) | 相对计算成本(R) |
+
+    |---|---|---|---|---|
+
+    | 512 | 41.23 | 0 | 100.00% | 6.76% |
+
+    | 1024 | 27.15 | 0 | 100.00% | 4.45% |
+
+    | 1536 | 22.71 | 1 | 100.00% | 3.72% |
+
+    | 2048 | 20.16 | 7 | 99.95% | 3.30% |
+
+    | 2560 | 18.84 | 17 | 99.53% | 3.09% |
+
+    | 3072 | 17.81 | 37 | 98.77% | 2.92% |
+
+    | 3584 | 17.31 | 60 | 98.10% | 2.84% |
+
+
+    表III. ML_20M的实验结果
+
+
+    | 桶数(b) | 每用户邻居数(K̄) | K<3的用户数 | 利用率(U) | 相对计算成本(R) |
+
+    |---|---|---|---|---|
+
+    | 8192 | 775.12 | 0 | 100.00% | 0.68% |
+
+    | 12288 | 668.43 | 0 | 100.00% | 0.61% |
+
+    | 16384 | 559.11 | 0 | 100.00% | 0.51% |
+
+    | 20480 | 499.39 | 0 | 100.00% | 0.45% |
+
+    | 24576 | 444.56 | 5 | 100.00% | 0.40% |
+
+    | 28672 | 401.47 | 64 | 99.83% | 0.36% |
+
+    | 32768 | 334.51 | 215 | 98.90% | 0.30% |
+
+
+    - 2) 基于Min-Hash的LSH聚类：
+
+
+    ![](img/ba6405dd3b4100239a8087f4ac628bd3_3_0.png)
+
+
+    ![](img/ba6405dd3b4100239a8087f4ac628bd3_3_1.png)
+
+
+    在执行局部差分隐私之前，每个用户需要通过以下规则重构数据集。对于评分为N的电影，该电影的记录将被复制N次。这样一来，数据集中将包含N + 1条该电影的记录。对于未评分的电影，每个电影只生成一条记录并追加到新数据集中。
+
+
+    我们将评分电影及其对应的评分视为用户的隐私信息，并分析潜在的隐私攻击，以选择合适的隐私预算参数ε。假设攻击者试图恢复某个用户的混淆数据，以推断观看的电影和评分。令N和N''分别为正确评分和恢复的评分，两者之差定义为d
+    = |N - N''|。我们认为，如果d >= 2，则隐私得到了良好保护，否则，存在较高的隐私泄露风险。令DR表示隐私泄露程度，其值由扰动后d < 2的数据所占百分比决定。当ε取值为0.1、0.2、0.3、0.4、0.5、0.75和0.9时，我们在ML_100K和ML_20M上进行了实验。如图2所示，ε值越大，隐私泄露的可能性越大。
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    3) Recommendation algorithm based on TOP-N: The value of \( N \) is critical in
+    TOP-N based recommendation algorithm. In our experiments, its value is decided
+    dynamically, i.e., \( N = \frac{1}{3} Q \), where \( Q \) is the number of ratings
+    with value 5.
+
+
+    We choose the algorithm where PCMS is not performed as the baseline. The bucket
+    number b is set to 1536 and 24576 for ML\_100K and ML\_20M. In this case, the
+    TOP-N recommendation results of two different algorithms are shown in Fig. 3.
+
+
+    We can observe that when the \( \varepsilon \) is larger, the Precision and \(
+    F_1 \) score is correspondingly higher, but when \( \varepsilon \) is greater
+    than 0.4, the improvement is limited, which indicates a trade-off between privacy
+    guarantee and recommendation accuracy. Then combining with Fig.2, we can choose
+    the proper \( \varepsilon \) to well balance the accuracy and the privacy. When
+    compared with the baseline, proposed mechanism dose not entail much performance
+    loss especially for the ML\_20M with more data samples, which means the proposed
+    mechanism is effective enough.
+
+
+    # V. DISCUSSION
+
+
+    As shown in Table II and Table III, the optimal bucket number b can be chosen
+    for the efficiency purpose. However, this paper only evaluates the effectiveness
+    of Min-Hash based clustering, whose binary form can tell whether users have watched
+    a movie or not. The inherent simplicity would bring accuracy loss to some extent.
+    Therefore, we argue that it could yield a more accurate clustering result if users''
+    preference features are taken into consideration in the clustering algorithm,
+    or other well-designed algorithms are applied.
+
+
+    Fig.2 shows the practicability of the local differential privacy based on PCMS
+    to preserve one''s privacy. Actually, various perturbation mechanisms are able
+    to achieve the similar goal. In the future work, a comparison between these methods
+    will be conducted to pick up one with lower performance loss for our recommendation
+    mechanism.
+
+
+    Fig.3 suggests an acceptable accuracy when suitable \( \varepsilon \) is chosen,
+    which demonstrates a balance between utility and privacy. However, the \( F_1
+    \) score is lower than expected. One possible explanation is that the inappropriate
+    value of \( N \) in TOP-N recommendation system. In this paper, we only propose
+    a simple rule empirically to set the value dynamically. Thus, how to decide the
+    proper value of \( N \) remains to be studied.
+
+
+    # VI. CONCLUSION
+
+
+    In this paper, we propose a privacy-preserving recommendation mechanism based
+    on blockchain technology. The distributed nature of blockchain enables users to
+    get recommendations while keeping the raw data locally. The feature of the proposed
+    mechanism lies in the combination of IPFS and local differential privacy mechanism,
+    which greatly reduces the computation and communication cost and provides a privacy
+    guarantee during the recommendation process. The
+
+
+    experiments conducted on two real word datasets suggest that by choosing the proper
+    \( \varepsilon \), a desirable balance can be maintained between the recommendation
+    accuracy and users'' privacy. The acceptable performance of proposed mechanism
+    inspires us to further refine the mechanism and apply it into real world recommendation
+    systems mainly targeting on books or mobile apps in the future work.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This work is partly supported by the National Key Research and Development Program
+    of China (2017YFB0802204), Key Research and Development Program for Guangdong
+    Province, China (2019B01136001), and Basic Research Project of Shenzhen, China
+    (JCYJ20190806142601687). Correspondence to: Yang Liu.
+
+
+    # REFERENCES
+
+
+    +   [1] E. Politou, E. Alepis, and C. Patsakis, “Forgetting personal data and
+    revoking consent under the GDPR: Challenges and proposed solutions,” Journal of
+    Cybersecurity, vol. 4, no. 1, pp. 1–20, 2018.
+
+    +   [2] R. Ifta, “Can the cpa access right be saved? realigning incentives in
+    access request verification,” Pittsburgh Journal of Technology Law & Policy, vol.
+    20, no. 1, pp. 25–42, 2020.
+
+    +   [3] F. Liu, G. Wu, and Y. Liu, “A privacy-preserving friend recommendation
+    mechanism for online social networks,” in Proceedings of the 2020 4th International
+    Conference on Cryptography, Security and Privacy, pp. 63–67, 2020.
+
+    +   [4] F. Casino and C. Patsakis, “An efficient blockchain-based privacypreserving
+    collaborative filtering architecture,” IEEE Transactions on Engineering Management,
+    pp. 1–13, 2019.
+
+    +   [5] S. L. Warner, “Randomized response: A survey technique for eliminating
+    evasive answer bias,” Journal of the American Statistical Association, vol. 60,
+    no. 309, pp. 63–69, 1965.
+
+    +   [6] R. Frey, D. Wörner, and A. Ilie, “Collaborative filtering on the blockchain:
+    a secure recommender system for e-commerce,” in Proceedings of 22th Americas Conference
+    on Information Systems, 2016.
+
+    +   [7] R. M. Frey, D. Vuckovac, and A. Ilie, “A secure shopping experience based
+    on blockchain and beacon technology,” in Proceedings of the Poster Track of the
+    10th ACM Conference on Recommender Systems, 2016.
+
+    +   [8] J. O. Umekwudo and J. Shim, “Blockchain technology for mobile applications
+    recommendation systems,” The Journal of Society for e-Business Studies, vol. 24,
+    no. 3, pp. 129–142, 2019.
+
+    +   [9] A. Al Omar, R. Bosri, M. S. Rahman, N. Begum, and M. Z. A. Bhuiyan, “Towards
+    privacy-preserving recommender system with blockchains,” in International Conference
+    on Dependability in Sensor, Cloud, and Big Data Systems and Applications, pp.
+    106–118, Springer, 2019.
+
+    +   [10] Y. Zhu and Z. Chen, “Relaid: Building a secure anonymous yet transparent
+    immutable id space,” in 2017 IEEE 3rd international conference on big data security
+    on cloud, pp. 277–280, IEEE, 2017.
+
+    +   [11] F. Casino, T. K. Dasaklis, and C. Patsakis, “A systematic literature
+    review of blockchain-based applications: current status, classification and open
+    issues,” Telematics and Informatics, vol. 36, pp. 55–81, 2019.
+
+    +   [12] P. Indyk and R. Motwani, “Approximate nearest neighbors: towards removing
+    the curse of dimensionality,” in Proceedings of the thirtieth annual ACM symposium
+    on Theory of computing, pp. 604–613, 1998.
+
+    +   [13] Apple, “Learning with privacy at scale”, Dec. 2017.[Online]. Available:
+    https://machinelearning.apple.com/research/learning-with-privacy-at-scale'
+  md: '
+
+    3) Recommendation algorithm based on TOP-N: The value of \( N \) is critical in
+    TOP-N based recommendation algorithm. In our experiments, its value is decided
+    dynamically, i.e., \( N = \frac{1}{3} Q \), where \( Q \) is the number of ratings
+    with value 5.
+
+
+    We choose the algorithm where PCMS is not performed as the baseline. The bucket
+    number b is set to 1536 and 24576 for ML\_100K and ML\_20M. In this case, the
+    TOP-N recommendation results of two different algorithms are shown in Fig. 3.
+
+
+    We can observe that when the \( \varepsilon \) is larger, the Precision and \(
+    F_1 \) score is correspondingly higher, but when \( \varepsilon \) is greater
+    than 0.4, the improvement is limited, which indicates a trade-off between privacy
+    guarantee and recommendation accuracy. Then combining with Fig.2, we can choose
+    the proper \( \varepsilon \) to well balance the accuracy and the privacy. When
+    compared with the baseline, proposed mechanism does not entail much performance
+    loss especially for the ML\_20M with more data samples, which means the proposed
+    mechanism is effective enough.
+
+
+    ## V. DISCUSSION
+
+
+    As shown in Table II and Table III, the optimal bucket number b can be chosen
+    for the efficiency purpose. However, this paper only evaluates the effectiveness
+    of Min-Hash based clustering, whose binary form can tell whether users have watched
+    a movie or not. The inherent simplicity would bring accuracy loss to some extent.
+    Therefore, we argue that it could yield a more accurate clustering result if users''
+    preference features are taken into consideration in the clustering algorithm,
+    or other well-designed algorithms are applied.
+
+
+    Fig.2 shows the practicability of the local differential privacy based on PCMS
+    to preserve one''s privacy. Actually, various perturbation mechanisms are able
+    to achieve the similar goal. In the future work, a comparison between these methods
+    will be conducted to pick up one with lower performance loss for our recommendation
+    mechanism.
+
+
+    Fig.3 suggests an acceptable accuracy when suitable \( \varepsilon \) is chosen,
+    which demonstrates a balance between utility and privacy. However, the \( F_1
+    \) score is lower than expected. One possible explanation is that the inappropriate
+    value of \( N \) in TOP-N recommendation system. In this paper, we only propose
+    a simple rule empirically to set the value dynamically. Thus, how to decide the
+    proper value of \( N \) remains to be studied.
+
+
+    ## VI. CONCLUSION
+
+
+    In this paper, we propose a privacy-preserving recommendation mechanism based
+    on blockchain technology. The distributed nature of blockchain enables users to
+    get recommendations while keeping the raw data locally. The feature of the proposed
+    mechanism lies in the combination of IPFS and local differential privacy mechanism,
+    which greatly reduces the computation and communication cost and provides a privacy
+    guarantee during the recommendation process. The experiments conducted on two
+    real world datasets suggest that by choosing the proper \( \varepsilon \), a desirable
+    balance can be maintained between the recommendation accuracy and users'' privacy.
+    The acceptable performance of proposed mechanism inspires us to further refine
+    the mechanism and apply it into real world recommendation systems mainly targeting
+    on books or mobile apps in the future work.
+
+
+    ## ACKNOWLEDGMENT
+
+
+    This work is partly supported by the National Key Research and Development Program
+    of China (2017YFB0802204), Key Research and Development Program for Guangdong
+    Province, China (2019B01136001), and Basic Research Project of Shenzhen, China
+    (JCYJ20190806142601687). Correspondence to: Yang Liu.
+
+
+    ## REFERENCES
+
+
+    - [1] E. Politou, E. Alepis, and C. Patsakis, “Forgetting personal data and revoking
+    consent under the GDPR: Challenges and proposed solutions,” Journal of Cybersecurity,
+    vol. 4, no. 1, pp. 1–20, 2018.
+
+    - [2] R. Ifta, “Can the cpa access right be saved? realigning incentives in access
+    request verification,” Pittsburgh Journal of Technology Law & Policy, vol. 20,
+    no. 1, pp. 25–42, 2020.
+
+    - [3] F. Liu, G. Wu, and Y. Liu, “A privacy-preserving friend recommendation mechanism
+    for online social networks,” in Proceedings of the 2020 4th International Conference
+    on Cryptography, Security and Privacy, pp. 63–67, 2020.
+
+    - [4] F. Casino and C. Patsakis, “An efficient blockchain-based privacy-preserving
+    collaborative filtering architecture,” IEEE Transactions on Engineering Management,
+    pp. 1–13, 2019.
+
+    - [5] S. L. Warner, “Randomized response: A survey technique for eliminating evasive
+    answer bias,” Journal of the American Statistical Association, vol. 60, no. 309,
+    pp. 63–69, 1965.
+
+    - [6] R. Frey, D. Wörner, and A. Ilie, “Collaborative filtering on the blockchain:
+    a secure recommender system for e-commerce,” in Proceedings of 22th Americas Conference
+    on Information Systems, 2016.
+
+    - [7] R. M. Frey, D. Vuckovac, and A. Ilie, “A secure shopping experience based
+    on blockchain and beacon technology,” in Proceedings of the Poster Track of the
+    10th ACM Conference on Recommender Systems, 2016.
+
+    - [8] J. O. Umekwudo and J. Shim, “Blockchain technology for mobile applications
+    recommendation systems,” The Journal of Society for e-Business Studies, vol. 24,
+    no. 3, pp. 129–142, 2019.
+
+    - [9] A. Al Omar, R. Bosri, M. S. Rahman, N. Begum, and M. Z. A. Bhuiyan, “Towards
+    privacy-preserving recommender system with blockchains,” in International Conference
+    on Dependability in Sensor, Cloud, and Big Data Systems and Applications, pp.
+    106–118, Springer, 2019.
+
+    - [10] Y. Zhu and Z. Chen, “Relaid: Building a secure anonymous yet transparent
+    immutable id space,” in 2017 IEEE 3rd international conference on big data security
+    on cloud, pp. 277–280, IEEE, 2017.
+
+    - [11] F. Casino, T. K. Dasaklis, and C. Patsakis, “A systematic literature review
+    of blockchain-based applications: current status, classification and open issues,”
+    Telematics and Informatics, vol. 36, pp. 55–81, 2019.
+
+    - [12] P. Indyk and R. Motwani, “Approximate nearest neighbors: towards removing
+    the curse of dimensionality,” in Proceedings of the thirtieth annual ACM symposium
+    on Theory of computing, pp. 604–613, 1998.
+
+    - [13] Apple, “Learning with privacy at scale”, Dec. 2017.[Online]. Available:
+    https://machinelearning.apple.com/research/learning-with-privacy-at-scale
+
+    '
+  mdcn: '
+
+    3) 基于 TOP-N 的推荐算法：\( N \) 的值在基于 TOP-N 的推荐算法中至关重要。在我们的实验中，其值是动态确定的，即 \( N = \frac{1}{3}
+    Q \)，其中 \( Q \) 是评分为 5 的评分数量。
+
+
+    我们选择未执行 PCMS 的算法作为基线。桶数 b 对于 ML\_100K 和 ML\_20M 分别设置为 1536 和 24576。在这种情况下，两种不同算法的
+    TOP-N 推荐结果如 Fig. 3 所示。
+
+
+    我们可以观察到，当 \( \varepsilon \) 较大时，Precision 和 \( F_1 \) 得分相应较高，但当 \( \varepsilon
+    \) 大于 0.4 时，改进有限，这表明隐私保证与推荐准确性之间存在权衡。然后结合 Fig.2，我们可以选择合适的 \( \varepsilon \) 来很好地平衡准确性和隐私。与基线相比，所提机制并未带来多少性能损失，尤其是对于数据样本更多的
+    ML\_20M，这意味着所提机制足够有效。
+
+
+    ## V. DISCUSSION
+
+
+    如 Table II 和 Table III 所示，为提高效率，可以选择最优桶数 b。但是，本文仅评估了基于 Min-Hash 的聚类的有效性，其二进制形式可以判断用户是否观看过某部电影。固有的简单性在一定程度上会带来准确性损失。因此，我们认为，如果在聚类算法中考虑用户的偏好特征，或应用其他设计良好的算法，可能会产生更准确的聚类结果。
+
+
+    Fig.2 展示了基于 PCMS 的本地差分隐私在保护隐私方面的可行性。实际上，各种扰动机制都能实现类似目标。在未来工作中，将对这些方法进行比较，以选出一种对我们的推荐机制性能损失更小的方法。
+
+
+    Fig.3 表明在选择合适的 \( \varepsilon \) 时可以获得可接受的准确性，这体现了效用与隐私之间的平衡。但是，\( F_1 \) 得分低于预期。一个可能的解释是基于
+    TOP-N 的推荐系统中 \( N \) 的值不合适。在本文中，我们仅提出了一条经验法则来动态设置该值。因此，如何确定 \( N \) 的适当值仍有待研究。
+
+
+    ## VI. CONCLUSION
+
+
+    本文提出了一种基于区块链技术的隐私保护推荐机制。区块链的分布式特性使用户能够在将原始数据保存在本地的同时获得推荐。所提机制的特点在于结合了 IPFS 和本地差分隐私机制，这大大降低了计算和通信成本，并在推荐过程中提供了隐私保证。在两个真实世界数据集上进行的实验表明，通过选择合适的
+    \( \varepsilon \)，可以在推荐准确性和用户隐私之间保持理想的平衡。所提机制可接受的性能激励我们进一步改进该机制，并在未来工作中将其应用于主要针对书籍或移动应用的真实世界推荐系统。
+
+
+    ## ACKNOWLEDGMENT
+
+
+    这项工作部分得到中国国家重点研发计划（2017YFB0802204）、中国广东省重点研发计划（2019B01136001）和中国深圳市基础研究项目（JCYJ20190806142601687）的支持。通信作者：Yang
+    Liu。
+
+
+    ## REFERENCES
+
+
+    - [1] E. Politou, E. Alepis, and C. Patsakis, “根据 GDPR 遗忘个人数据并撤销同意：挑战与所提解决方案,”
+    Journal of Cybersecurity, vol. 4, no. 1, pp. 1–20, 2018.
+
+    - [2] R. Ifta, “cpa 访问权能否保留？重新调整访问请求验证中的激励,” Pittsburgh Journal of Technology
+    Law & Policy, vol. 20, no. 1, pp. 25–42, 2020.
+
+    - [3] F. Liu, G. Wu, and Y. Liu, “面向在线社交网络的隐私保护朋友推荐机制,” in Proceedings of the
+    2020 4th International Conference on Cryptography, Security and Privacy, pp. 63–67,
+    2020.
+
+    - [4] F. Casino and C. Patsakis, “一种高效的基于区块链的隐私保护协同过滤架构,” IEEE Transactions on
+    Engineering Management, pp. 1–13, 2019.
+
+    - [5] S. L. Warner, “随机应答：消除回避回答偏差的调查技术,” Journal of the American Statistical
+    Association, vol. 60, no. 309, pp. 63–69, 1965.
+
+    - [6] R. Frey, D. Wörner, and A. Ilie, “区块链上的协同过滤：面向电子商务的安全推荐系统,” in Proceedings
+    of 22th Americas Conference on Information Systems, 2016.
+
+    - [7] R. M. Frey, D. Vuckovac, and A. Ilie, “基于区块链和信标技术的安全购物体验,” in Proceedings
+    of the Poster Track of the 10th ACM Conference on Recommender Systems, 2016.
+
+    - [8] J. O. Umekwudo and J. Shim, “面向移动应用推荐系统的区块链技术,” The Journal of Society for
+    e-Business Studies, vol. 24, no. 3, pp. 129–142, 2019.
+
+    - [9] A. Al Omar, R. Bosri, M. S. Rahman, N. Begum, and M. Z. A. Bhuiyan, “面向带有区块链的隐私保护推荐系统,”
+    in International Conference on Dependability in Sensor, Cloud, and Big Data Systems
+    and Applications, pp. 106–118, Springer, 2019.
+
+    - [10] Y. Zhu and Z. Chen, “Relaid：构建安全匿名且透明不可变的 ID 空间,” in 2017 IEEE 3rd international
+    conference on big data security on cloud, pp. 277–280, IEEE, 2017.
+
+    - [11] F. Casino, T. K. Dasaklis, and C. Patsakis, “基于区块链的应用系统文献综述：现状、分类与未决问题,”
+    Telematics and Informatics, vol. 36, pp. 55–81, 2019.
+
+    - [12] P. Indyk and R. Motwani, “近似最近邻：迈向消除维度灾难,” in Proceedings of the thirtieth
+    annual ACM symposium on Theory of computing, pp. 604–613, 1998.
+
+    - [13] Apple, “大规模隐私保护学习”, 2017 年 12 月。[在线]。可用：https://machinelearning.apple.com/research/learning-with-privacy-at-scale
+
+    '
+  merge: 0
