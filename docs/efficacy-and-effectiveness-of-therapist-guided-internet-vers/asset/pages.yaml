@@ -1,0 +1,1026 @@
+- pgno: 0
+  md: '# # Efficacy and effectiveness of therapist-guided internet versus face-to-face
+    cognitive behavioural therapy for depression via counterfactual inference using
+    naturalistic registers and machine learning in Finland: a retrospective cohort
+    study
+
+
+    Tom H Rosenström, Suoma E Saarni, Samuli I Saari, Jaakko Tammilehto, Jan-Henry
+    Stenberg
+
+
+    # ## Summary
+
+
+    **Background** According to meta-analyses of randomised controlled trials (RCTs),
+    therapist-guided internet-delivered cognitive behavioural therapy (iCBT) is as
+    effective a treatment for depression as traditional face-to-face CBT (fCBT), despite
+    its substantially lower costs. However, RCTs are not always representative of
+    routine practice, which could inflate effectiveness estimates. We combined rich
+    data with counterfactual causal statistical reasoning to provide an fCBT–iCBT
+    comparison complementary to RCTs.
+
+
+    **Methods** In this retrospective cohort study, we linked full archived therapist-guided
+    iCBT and fCBT cohort registries with multiple Finnish social and health care registries.
+    The therapist-guided iCBT programme with third-wave principles and the fCBTs were
+    provided by HUS Helsinki University Hospital to people with depression without
+    acute suicide or substance-misuse risk; fCBT was delivered in the Uusimaa region,
+    whereas therapist-guided iCBT was nationwide and excluded people with treatment-interfering
+    psychotic, neurological, or personality disorders, chronic or bipolar depression,
+    or aged under 16 years. The primary outcome was the causal average treatment effect
+    (ATE) for the difference in during-treatment symptom reductions between fCBT and
+    therapist-guided iCBT, with symptoms measured by the Patient Health Questionnaire-9
+    (PHQ-9). If only one PHQ-9 report was recorded, no change was recorded, thereby
+    penalising dropout. For an optimal and robust (a posteriori-balanced) ATE estimate,
+    we applied targeted maximum likelihood machine learning. There was no involvement
+    of individuals with lived experience in the research and writing process.
+
+
+    **Findings** The guided iCBT registry recorded patients from Dec 12, 2018, to
+    Dec 22, 2022, and the fCBT registry spanned Aug 28, 2018, to Sept 28, 2022. From
+    the total of 32 343 registered therapies, 392 people were included from the fCBT
+    registry and 5467 people from the iCBT registry. Four people in the fCBT group
+    and 21 in the guided iCBT group had missing baseline data, therefore the main
+    sample for analysis contained 5834 patients (4101 [70%] were female and 1733 [30%]
+    were male) with a mean age of 35 years (SD 12). Altogether, 5455 (94%) patients
+    were registered with Finnish as their native language. The ATE estimate indicated
+    that the PHQ-9 score declined 0 · 745 points (95% CI 0 · 156–1 · 334) more in
+    the iCBT group than the fCBT group. Sensitivity analyses concurred.
+
+
+    **Interpretation** Considered alongside previous RCTs, our findings suggest that
+    short first-line treatments with therapist-guided iCBT are at least as effective
+    and efficacious as fCBT. Our findings eliminate error sources and extend the representativeness
+    of the population for this cost-effective treatment.
+
+
+    **Funding** The Research Council of Finland (Academy of Finland).
+
+
+    **Copyright** © 2025 Elsevier Ltd. All rights reserved, including those for text
+    and data mining, AI training, and similar technologies.
+
+
+    Lancet Psychiatry 2025; 12: 189–97 Published Online February 12, 2025 https://doi.org/10.1016/
+    S2215-0366(24)00404-8 See Comment page 163 For the Finnish language of the abstract
+    see Online for appendix 1
+
+
+    Department of Psychology, Faculty of Medicine, University of Helsinki, Helsinki,
+    Finland (T H Rosenström, PhD, J Tammilehto, PhD); Department of Psychiatry, Helsinki
+    University Central Hospital, Helsinki, Finland (Prof S E Saarni PhD MD, J-H Stenberg
+    PhD); Faculty of Medicine and Health Technology, Tampere University, Tampere,
+    Finland (Prof S E Saarni, Prof S I Saari PhD MD); Family and Social Services,
+    Psychiatry, Wellbeing Services County of Päijät-Häme, Lahti, Finland (Prof S E
+    Saarni); Department of Psychiatry, The Wellbeing Services County of Pirkanmaa,
+    Tampere, Finland (Prof S I Saarni) Correspondence to: Dr Tom H Rosenström, Department
+    of Psychology, Faculty of Medicine, University of Helsinki, University of Helsinki,
+    University of Helsinki, 00014, Finland, tom.rosenstrom@helsinki.fi
+
+
+    # ## Introduction
+
+
+    Meta-analyses of available randomised controlled trials (RCTs) indicate that therapist-guided,
+    internet-delivered cognitive behavioural therapy (iCBT) is a similarly effective
+    treatment compared with the more costly and traditional face-to-face CBT (fCBT)
+    for psychiatric disorders.1,2 Much of the cost differential between therapist-guided
+    iCBT and fCBT derives from therapists'' differential time investment per patient.
+
+
+    However, a meta-analysis3 found no association between contact time and treatment
+    effect in psychotherapy for depression. When people are directed to digital therapy
+    supported by a therapist, their expectations of benefit are comparable to face-to-face
+    therapy.4 People with depression might benefit from therapist-guided iCBT and
+    fCBT regardless of their symptom severity at intake.5,6 However, some clinicians
+    might find it difficult to accept the idea that'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Research in context
+
+
+    # Evidence before this study
+
+
+    Multiple meta-analyses indicate that cognitive behavioural therapy (CBT) is equally
+    efficacious in treating depressive disorders when implemented as guided internet-delivered
+    CBT (iCBT) compared with when delivered as the usual face-to-face CBT (fCBT).
+    Because guided iCBT programmes use automated videos and exercises, online therapists
+    can spend much less time per patient compared with face-to-face therapists, which
+    can lead to significant costs savings. However, the meta-analyses rely on randomised
+    controlled trials (RCTs), and the possibility remains that the trials do not represent
+    the full routine-treatment population, or adequately account for the large differences
+    in treatment adherence or other differences between fCBT and guided iCBT. Over
+    the past few decades, the use of complementary sources of causal information has
+    been increasingly recommended for all of medicine. One of the state-of-the-art
+    methods for such causal triangulation is the targeted maximum likelihood estimation
+    with machine learning. We searched PubMed (MEDLINE), with no language restrictions,
+    for papers published from database inception to Sept 16, 2024, using the search
+    terms: “targeted maximum likelihood” AND depression AND (“internet” OR “digital”)
+    AND (“cognitive behavioural therapy” OR “cognitive behavioural therapy”), yielding
+    no results. A second search, replacing terms “targeted maximum likelihood” with
+    “causal triangulation” or with “causality”, or with “quasi-experiment”, also gave
+    no results. Overall, causal triangulation of the fCBT-iCBT efficacy differential
+    in depression treatment is important
+
+
+    given the substantial societal and monetary costs associated with depressive disorders
+    and their treatment, which jointly imply a need to comprehensively understand
+    the health effects of seemingly low-cost treatment policies.
+
+
+    # Added value of this study
+
+
+    To our knowledge, this study is the first to evaluate quantitatively the efficacy
+    differential between fCBT and guided iCBT in a format that is not an RCT or a
+    meta-analysis of RCTs. We used counterfactual causal inference using targeted
+    maximum likelihood machine learning and a unique linked registry from five distinct
+    registry owners, combined using Finnish laws and regulations on secondary use
+    of health and social registries. This targeting method can integrate features
+    from both parametric and non-parametric methods to provide precise and reliable
+    estimates of causal effects in situations in which the data are complex and could
+    contain multiple confounding factors. We observed that the results from RCTs held
+    true both in routinely collected data and in a posteriori-balanced (ie, causally
+    informative) data: the guided iCBT programme was as effective and efficacious
+    as fCBT in terms of depression symptom decline from before to after treatment
+    (or to the last available measurement).
+
+
+    # Implications of all the available evidence
+
+
+    Therapist-guided iCBT is equally effective and more cost-effective in treating
+    depression than face-to-face delivery. Internet-delivery of short first-line treatments
+    is a sensible default-treatment option and an apt response to the high demand
+    for services.
+
+
+    partly automated treatments could yield treatment outcomes that are as effective
+    as face-to-face therapies. The risk is that clinicians might inadvertently impart
+    their attitudes to patients, potentially leading to diminished treatment efficacy.4
+    RCTs are not always representative of routine practice, which might inflate effectiveness
+    estimates.7,8 For example, people who object to digital treatments might not enrol
+    in an RCT offering iCBT. Furthermore, samples in RCTs tend to be small relative
+    to registries. Although meta-analyses combine RCTs to achieve larger samples,
+    they often lack commensurate and comprehensive data on the complexity of people’s
+    conditions and other background factors that could affect representativeness.
+    Thus, whether therapist-guided iCBT truly is as effective as fCBT in real-world
+    settings remains unclear. The central counterfactual question is: would the average
+    treatment effect (ATE) still be similar if we could allocate exact replicas of
+    the same patients simultaneously to both guided iCBT and fCBT and compare their
+    efficacies? Although considered a gold standard, RCTs are neither the only nor
+    a perfect method for balancing intervention group composition to avoid confounding.
+    Researchers in medicine, psychology, and statistics argue that reliable
+
+
+    causal inference often requires multiple sources of evidence rather than RCTs
+    exclusively.9–11 Many methods make assumptions that reduce bias from confounding
+    (Figure 1). For example, estimates weighted by known inverse probabilities of
+    treatment are free from confounding.12,13 Alternatively, if the outcome can be
+    accurately modelled as a function of confounders and treatment allocation, an
+    unbiased estimate of treatment effect is achievable via G-computation.14 If models
+    for both outcome and treatment-assignment probability exist, models can be combined
+    to achieve an augmented inverse-probability-of-treatment weighted (AIPTW) estimate
+    that is doubly robust. This method ensures that a consistent estimate of the ATE
+    is obtained if at least one of the models is correctly specified.14 Finally, an
+    ensemble of machine learners (ie, super learners) maximise the probability of
+    at least one model being correct.13,14 In our case, the aforementioned methods
+    make the working assumption that treatment outcome depends on the treatment (ie,
+    delivery method). Outcome and treatment might depend on covariates, but all such
+    confounding covariates are assumed to be fully observed. Other key assumptions
+    are consistency'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '(ie, no other versions of the treatments), no interference (ie, a patient’s
+    outcome does not depend on the other patients), and positivity (ie, a positive
+    probability for ending up in both iCBT and fCBT for all predictor covariate values).
+    Finally, one should accurately capture forms of the dependencies indicated by
+    the arrows in figure 1. Some methods need accuracy for both A and B dependencies,
+    whereas doubly robust methods can achieve consistent estimates with only As or
+    B and Az correctly modelled. Even methods not doubly robust might be preferred
+    over naive regression analysis approaches, which are biased whenever the non-flexible
+    parametric model is mis-specified relative to reality. Even application of mis-specified
+    models that miss some covariates tends to provide more accurate estimates than
+    naive approaches that estimate ATE with simple regression or mean difference.
+
+
+    ![](img/c9d570007c2690fe63b1c193790b6bf2_2_0.png)
+
+
+    A targeted maximum likelihood estimator (TMLE) based on super learners has the
+    asymptotic double-robustness property, but it is additionally efficient, well
+    defined, and well behaved in finite samples. A TMLE integrates features from modern
+    statistics, machine learning, and causal inference. A TMLE can optimise the bias-variance
+    trade-off for a target parameter (eg, ATE) instead of the treatment-prediction
+    and outcome-prediction models. The primary motivation to use a TMLE is its ability
+    to combine multiple desirable properties, perhaps representing the state of the
+    art in covariate-based counterfactual causal inference. The availability of such
+    procedures enhances the value of administrative, population-based registries,
+    which often contain abundant aetiological information.
+
+
+    people received for depression in the HUS-iCBT registry largely corresponds to
+    a form of guided iCBT that we have previously investigated but represents a more
+    modern iteration of the online platform with the same therapy form. The HUS-iCBT
+    registry recorded patients from Dec 12, 2018, to Dec 22, 2022, and the FPQR from
+    Aug 28, 2018, to Sept 28, 2022; however, all the patients in our research sample
+    were registered at HUS before Jan 1, 2022. HUS was the only public-sector, nationwide
+    iCBT provider, but it provided fCBT mainly for Uusimaa, the southwest region of
+    Finland. For maximal comparability across different delivery formats for CBT for
+    depression, we sampled patients from these registries according to the flowchart
+    in figure 2A.
+
+
+    Developments in Nordic countries enable the linking of psychotherapy data with
+    information in national registries. In this study, we used TMLE on these rich
+    information sources to estimate the efficacy difference between therapist-guided
+    iCBT and fCBT in a causally informative design that is not an RCT, thus circumventing
+    typical challenges of RCTs while providing evidence on the same causal question.
+    Our naturalistic data inform about effectiveness, and the counterfactual analysis
+    informs about both effectiveness and efficacy if all real patients would receive
+    fCBT versus guided iCBT. The new gold standard for evidence will then consist
+    of combined inferences from RCT meta-analyses and TMLE applied to naturalistic
+    datasets. Our investigation serves as a pragmatic proof of concept for the use
+    of TMLE and related methods to address the question of the ATE between fCBT and
+    therapist-guided iCBT.
+
+
+    Each patient from both registries was linked with other national registries using
+    their social-security identification number. The national Findata Data Permit
+    Authority and the Digital and Population Services Agency linked the patients with
+    their relatives (parents and siblings), after which both the patients and their
+    relatives were linked with data from other registry owners (figure 2B). The registries
+    contain accurate event dates for public-sector diagnoses and pharmaceutical purchases
+    (eg, F codes and Anatomical Therapeutic Chemical-nervous system codes), but not
+    private-sector diagnoses. Our research permission was granted by Findata according
+    to national rules and regulations on secondary use of social and health data (permissions
+    THL/4810/14.02.00/2020 and THL/1303/14.06.00/2023 to THR). These permissions relinquish
+    the requirement for informed consent. This study was conducted in accordance with
+    the Sixth World Medical Association Declaration of Helsinki and evaluated by the
+    Ethics Committee of HUS (HUS/1861/2020 and HUS/3150/2020). The study was not pre-registered
+    elsewhere.
+
+
+    # Methods
+
+
+    # Study design and participants
+
+
+    The study participants of this counterfactual inference-based cohort study were
+    derived from naturalistic hospital treatment registries—the HUS Helsinki University
+    Hospital iCBT (HUS-iCBT) registry and the Finnish Psychotherapy Quality Register
+    (FPQR). The iCBT that
+
+
+    # Procedures
+
+
+    The people who had fCBT were listed in the FPQR and were undergoing primary-care
+    and speciality-care CBT outsourced by public health care. All other treatment
+    types within the FPQR were excluded from the study. We only included adults (ie,
+    aged ≥18 years) listed on the'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/c9d570007c2690fe63b1c193790b6bf2_3_0.png)
+
+
+    Figure 2: Patient selection (A) and linked health and social security registries
+    (B) (A) Flowchart of patient selection throughout the study. (B) Blue lines indicate
+    time spans available for this study. Findata (and Digital and Population Services
+    Agency) linked HUS-iCBT and fCBT registries with multiple registries from FHIW,
+    Statistics Finland, and SSIF (also known as Kela). Outcome data and the covariate
+    data of table 1 were extracted. cBT=cognitive behavioural therapy. fCBT=face-to-face
+    cBT. FHIW=Finnish Institute of Health and Welfare. FPQR=Finnish Psychotherapy
+    Quality Register. HUS-iCBT=Helsinki University Hospital-owned iCBT. iCBT=internet-delivered
+    CBT. PHQ-9=Patient Health Questionnaire-9. SSIF=Social Security Institute of Finland.
+    *Duplicate entries to treatment of a same type also removed (fCBT or iCBT).
+
+
+    FPQR. Patient gender, referring to biological sex unless the individual has requested
+    a legal change of gender, was retrieved from data available from the civil registry
+    of Finland, with the options of male or female. We selected treatments of patients
+    whose primary diagnosis for the treatment was depression (ICD-10 codes F32,
+
+
+    F33, or F34.1) and when the therapist was trained in the CBT framework. All FPQR
+    therapists have a 60-credit, 3-year training in their framework alongside their
+    clinical work. The fCBT treatments typically contained up to 20 sessions altogether,
+    but, in rare instances, could maximally contain 40 sessions per year, for up to
+    3 years.16 A session was 45 min, and a conservative estimate of work time for
+    each session would be 60 min, including preparation and documentation. With an
+    observed mean number of 14 sessions in short FPQR treatments,19 we estimated an
+    840-min average work-time expenditure per patient. Weekly sessions were recommended
+    by the HUS Helsinki University Hospital. The people given therapist-guided iCBT
+    were listed in the HUS-iCBT registry. Patients entered iCBT with a doctor’s prescription,
+    with inclusion criteria for treatment being mild to moderate depression (F32.0
+    or F32.1), age over 15 years, and Finnish or Swedish language proficiency with
+    motivation and technical means to work online independently. Exclusion criteria
+    for receiving either fCBT or therapist-guided iCBT were acute suicide risk and
+    current substance use. Further exclusion criteria for receiving iCBT were treatment-interfering
+    psychotic or neurological behaviours, personality disorder, or chronic or bipolar
+    depression. The suitability for either treatment was assessed by the attending
+    physician. All guided iCBTs were delivered with the same online programme that
+    aligns with CBT principles (including third-wave techniques such as mindfulness):
+    the patient proceeds at their own pace while asynchronously talking with a trained
+    therapist (e.g., a psychologist or a nurse), who also provides unprompted guidance
+    and an occasional telephone call (ideally one per patient per programme). The
+    time spent by a therapist per patient as recommended by the HUS Helsinki University
+    Hospital is 11 min per week, or 77 min in total for the seven weekly sessions.
+    Patients were recommended by the HUS Helsinki University Hospital to complete
+    one session per week and they could proceed more slowly or faster, up to one session
+    per day. Not progressing in 2 weeks led to a call from the therapist and, ultimately,
+    cessation of treatment if progress did not ensue despite encouragement.
+
+
+    In both treatment groups, we included treatments that had started 3 months before
+    the end of our full sampling of the registries (Dec 31, 2021), thus giving time
+    for the completion of therapy without completion being necessary. We only included
+    patients for whom a baseline Patient Health Questionnaire (PHQ)-9 score was available.
+    Both iCBT and fCBT were free to the patient, offered by the national public health-care
+    system.
+
+
+    # Choice of primary measure
+
+
+    As the primary outcome, we used the change in PHQ-9 score, a widely used and translated,
+    brief, public-domain measure with good psychometric properties.20,21 PHQ-9 scores
+    range from 0 to 27, with higher scores indicating more severe or more frequent
+    symptoms, and with a'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'decline of at least 1·7 points being subjectively detectable as the patient
+    “feeling better”.²² We computed treatment response as the change in PHQ-9 score
+    from baseline to the last measurement immediately after treatment, denoted change
+    in PHQ-9; we did not focus on the automated follow-ups conducted 3 months after
+    iCBT. If a patient discontinued the treatment after providing a single measurement,
+    a change in PHQ-9 of 0 was assigned to that patient (proceeding in the iCBT programme
+    required symptom reports; fCBT therapists were only advised to encourage patients
+    to report). This conservative approach effectively penalises treatments with high
+    dropout rates compared with complete-data or imputation analysis.
+
+
+    # Statistical analysis
+
+
+    Both the fCBT and the iCBT registries also recorded overall anxiety severity and
+    impairment scale scores, allowing us to use this continuous-valued score as a
+    baseline predictor of the outcome.²³ Other predicting variables were drawn from
+    the multiple linked administrative registries (figure 2B). For privacy and variance
+    reduction, we only included categorical covariates that resulted in cell sizes
+    ten observations or above when cross-tabulated with treatment allocation.
+
+
+    We arrived at our sample by taking all eligible patients from the register. Our
+    aim was to estimate the ATE between fCBT and guided iCBT. An estimate with a 95%
+    CI no wider than 1·7 PHQ-9 points can be considered accurate in the sense of falling
+    below a previously estimated detection threshold between “feeling better” versus
+    “feeling the same” as before treatment.²²
+
+
+    For TMLE, we implemented super learners with a broad set of base learners (examples
+    6 and 7 in Philips and colleagues’ article⁴), including generalised linear models,
+    Bayesian generalised linear models, generalised additive models, lasso, elastic
+    net and ridge regressions, polynomial splines, multivariate regression splines,
+    extreme gradient boosting, Bayesian additive regression trees, and highly adaptive
+    lasso.²⁴⁻²⁷ TMLE requires two super learners, one predicting treatment allocation
+    and another predicting treatment outcome.³¹⁴ Our super learners used cross-validation
+    to automatically assign weight to the base learners with the non-negative least
+    squares regression algorithm, with a guarantee of asymptotically better performance
+    compared with the base learners.¹⁵,²⁴ We used the super learners to construct
+    an estimate for ATE, using TMLE to optimise the bias-variance trade-off for the
+    ATE parameter.¹³,²⁶ Thus, TMLE controlled for confounding by variables and their
+    machine-learned, non-linear combinations and interactions. We followed the online
+    and published guidance by Philips and colleagues²⁴ and van der Laan and colleagues,²⁶
+    using their tlverse R environment, including packages sl3 (version 1.4.4), tmle3
+    (version 0.2.0), and cvAUC (version 1.1.4). This method implied nested ten-fold
+    cross-validation for treatment outcome and
+
+
+    | | Therapist-guided iCBT (n=5446) | fCBT (n=388) | p value (iCBT vs fCBT) |
+
+    |---|---|---|---|
+
+    | **Continuous variables** | | | |
+
+    | PHQ-9 score at first assessment* | 13·31 (5·34) | 11·57 (5·60) | <0·0001 |
+
+    | OASIS score at first assessment | 10·36 (3·68) | 9·97 (3·81) | 0·048 |
+
+    | Distinct previous F-diagnoses, count | 1·74 (2·61) | 3·34 (3·92) | <0·0001 |
+
+    | Distinct previous non-F-diagnoses, count | 10·21 (9·55) | 15·57 (12·55) | <0·0001
+    |
+
+    | Relatives, patients plus siblings, count | 4·08 (1·91) | 3·78 (1·85) | 0·0024
+    |
+
+    | Maternal F-diagnoses, count | 0·76 (2·29) | 0·94 (2·83) | 0·23 |
+
+    | Paternal F-diagnoses, count | 0·62 (2·10) | 0·50 (1·94) | 0·24 |
+
+    | Siblings’ F-diagnoses per sibling, count | 0·58 (1·31) | 0·50 (1·28) | 0·27
+    |
+
+    | Distinct purchased medicine (ATC-N) prescriptions, count | 4·53 (4·20) | 5·77
+    (5·52) | <0·0001 |
+
+    | Distinct ATC-N medicine purchase events, count | 26·77 (53·92) | 45·00 (83·54)
+    | <0·0001 |
+
+    | Insurance-reimbursed sickness absence days, count | 113·57 (187·58) | 135·64
+    (196·74) | 0·033 |
+
+    | Insurance-reimbursed sickness absence days with F-diagnosis, count | 71·17 (126·89)
+    | 72·80 (137·7) | 0·82 |
+
+    | Previous psychiatry visits, count | 16·29 (41·45) | 43·89 (81·63) | <0·0001
+    |
+
+    | Age, years | 34·49 (11·89) | 40·37 (15·57) | <0·0001 |
+
+    | **Binary-valued variables** | | | |
+
+    | Rehabilitation money received | 25 (<1%) | 12 (3%) | <0·0001 |
+
+    | Income support received | 1118 (21%) | 71 (18%) | 0·32 |
+
+    | Rehabilitation support received | 860 (16%) | 59 (15%) | 0·82 |
+
+    | Rehabilitation psychotherapy received | 502 (9%) | 32 (8%) | 0·58 |
+
+    | Gender | .. | .. | 0·070 |
+
+    | Male | 1634 (30%) | 99 (26%) | .. |
+
+    | Female | 3812 (70%) | 289 (74%) | .. |
+
+    | First F-diagnosis for depression | 1982 (36%) | 140 (36%) | 0·95 |
+
+    | First F-diagnosis other† | 259 (5%) | 27 (7%) | 0·069 |
+
+    | Most frequent F-diagnosis for depression | 2295 (42%) | 185 (48%) | 0·038 |
+
+    | Most frequent F-diagnosis other† | 1080 (20%) | 78 (20%) | 0·95 |
+
+    | Siblings’ most frequent F-diagnosis for depression | 685 (13%) | 39 (10%) |
+    0·17 |
+
+    | Siblings’ most frequent F-diagnosis other‡ | 1447 (27%) | 103 (27%) | 1·00 |
+
+    | Siblings’ most frequent F-diagnosis for psychotic disorder | 149 (3%) | 12 (3%)
+    | 0·80 |
+
+    | Mother’s most frequent F-diagnosis for depression | 469 (9%) | 37 (10%) | 0·60
+    |
+
+    | Mother’s most frequent F-diagnosis other† | 772 (14%) | 64 (16%) | 0·24 |
+
+    | Father’s most frequent F-diagnosis for depression | 281 (5%) | 12 (3%) | 0·093
+    |
+
+    | Father’s most frequent F-diagnosis other† | 702 (13%) | 50 (13%) | 1·00 |
+
+    | Most frequently purchased medicine was benzodiazepine | 137 (3%) | 18 (5%) |
+    0·019 |
+
+    | Most frequently purchased medicine was for migraine | 240 (4%) | 10 (3%) | 0·11
+    |
+
+    | Most frequently purchased medicine was non-SSRI for depression | 945 (17%) |
+    59 (15%) | 0·31 |
+
+    | Most frequently purchased medicine was paracetamol | 799 (15%) | 32 (8%) | 0·0006
+    |
+
+    | Most frequently purchased medicine was for psychosis | 178 (3%) | 10 (3%) |
+    0·55 |
+
+    | Most frequently purchased medicine was for sleep problems | 157 (3%) | 22 (6%)
+    | 0·0035 |
+
+    | (Table 1 continues on next page) | | | |'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '| (Continued from previous page) | Therapist-guided iCBT (n=5446) | fCBT (n=388)
+    | p value (iCBT vs fCBT) |
+
+    |---|---|---|---|
+
+    | Most frequently purchased medicine was SSRI for depression | 1821 (33%) | 132
+    (34%) | 0.89 |
+
+    | Most frequently purchased medicine was opioid | 461 (8%) | 20 (5%) | 0.028 |
+
+    | Entrepreneur | 186 (3%) | 25 (6%) | 0-0032 |
+
+    | Upper white-collar employee | 894 (16%) | 58 (15%) | 0.49 |
+
+    | Lower white-collar employee | 1774 (33%) | 90 (23%) | <0.0002 |
+
+    | Manual labourer | 756 (14%) | 39 (10%) | 0.041 |
+
+    | Student | 953 (17%) | 39 (10%) | <0.0002 |
+
+    | Retiree | 163 (3%) | 68 (18%) | <0.0001 |
+
+    | Unemployed or working status unknown | 461 (8%) | 46 (12%) | 0.028 |
+
+    | Native language is Finnish§ | 5092 (93%) | 363 (94%) | 1.00 |
+
+
+    Table 1: Descriptive statistics across the treatment groups
+
+
+    Data are mean (SD) for continuous variables and frequency (%) for binary-valued
+    variables. iCBT vs fCBT refers to a group comparison (p value from t test for
+    continuous-valued variables and from χ2 test for binary variables). Symptom scores
+    are from the treatment registries, diagnoses refer to ICD-10 codes in the national
+    Care Register maintained by Finnish Institute for Health and Welfare, work status
+    is from Statistics Finland, demographic data from Digital and Population Data
+    Services Agency, and the other variables from Social Security Institute of Finland
+    (Kela). The variables were preprocessed to a format salient for the analyses.
+    The variables (eg, F-codes) refer to the entire history available in the respective
+    registries (figure 2B), with the exception that demographic, symptom, and work
+    status refer to most recent values before treatment. The patients in the table
+    correspond with those in the counterfactual analyses and exclude the 25 patients
+    with some missing data (figure 2A; variable-specific missingsnss: 18 in gender
+    and age, 21 in work status, four in OASIS, with some overlap). Whenever categories
+    with <10 patients would have occurred, they were combined with other categories
+    to retain patient anonymity and facilitate statistical interpretation. ATC-N=Anatomical
+    Therapeutic Chemical-nervous system. CBT=cognitive behavioural therapy. iCBT=internet-delivered
+    CBT. fCBT=face-to-face CBT. OASIS=Overall Anxiety Severity And Impairment Scale.
+    PHQ-9=Patient Health Questionnaire-9. “Included only in the sensitivity analyses
+    due to the artificial statistical dependence between the baseline and change scores.
+    #Presence of measurement error. †Other F-diagnosis refers to those not in depression
+    categories (F32, F33, F34.1; categories with <10 patients were combined). ‡Other
+    F-diagnosis refers to those not in depression or psychotic categories (F32, F33,
+    F34.1, F2, F39; categories with <10 patients were combined). §Most citizens, especially
+    natively Finnish-speaking citizens, are of Finnic ethnic origin; routine collecting
+    of data on race or ethnic origin is not currently permitted in Finland.
+
+
+    See Online for appendix 2
+
+
+    nested stratified (by delivery format) ten-fold cross-validation for treatment
+    allocation when investigating super-learner performance (nesting train-validate
+    base learners cross-validation within select-validate super learner cross-validation;
+    appendix 2 p 4). Non-nested (train-select) cross-validation was used within TMLE
+    estimation (target parameter is a counterfactual quantity, precluding validation
+    samples). We did multiple imputation using the superMICE package (version 1.1.1;
+    five chains and five iterations). Learners, covariates, and imputation choices
+    and examples of the central analysis scripts are further discussed in the appendix
+    2 (pp 2–12). We compared raw proportions using the χ² test and means using Welch’s
+    t test. Standardised mean difference effect sizes were given as Hedge’s g and
+    standardised change effects as Cohen’s (paired) d effects. As sensitivity analyses,
+    we additionally computed the G-computation and AIPTW estimates of the ATE, and
+    a version of TMLE with simple models.¹⁴ We used linear regression as the outcome
+    model and logistic regression for estimating the probability of receiving fCBT
+    as opposed to iCBT. A previously recommended covariate balance investigation for
+    (A)IPTW was used.²⁸ All the
+
+
+    analyses took place in the Findata authority’s secure Kapseli computing environment,
+    in R (version 4.2.2).
+
+
+    # Role of the funding source
+
+
+    The funder of the study had no role in study design, data collection, data analysis,
+    data interpretation, or writing of the report.
+
+
+    # Results
+
+
+    A total of 32 343 registry entries were assessed for eligibility, with 8417 coming
+    from the FPQR and 23 926 from the HUS-iCBT registry. 8025 entries from the FPQR
+    and 18 459 from the HUS-iCBT registry were excluded, resulting in a total of 392
+    patients from the FPQR, forming the fCBT group, and 5467 patients from the HUS-iCBT,
+    forming the iCBT group, for naturalistic analyses (figure 2A). 25 patients were
+    missing baseline data and were removed from counterfactual analyses for the primary
+    outcome, resulting in 388 (99 [26%] male and 289 [74%] female) patients in the
+    fCBT group and 5446 (1634 [30%] male and 3812 [70%] female) in the iCBT group
+    (figure 2A). Four (<0·01%) of 40 263 patients whose data we accessed had objected
+    to the use of their registry data by Findata (present inclusion criteria unknown;
+    some of the accessed registers were not included in this study but could have
+    contained the objecting four patients).
+
+    Four (1%) of 392 patients from the fCBT group and 21 (<1%) of 5467 patients from
+    the iCBT group were missing mostly demographic baseline data. Table 1 summarises
+    treatment group characteristics at baseline, after removing these 25 patients
+    (other missingness pertaining to treatment dropout did not affect table 1). The
+    mean age of patients in the final analytic fCBT group was 40 years (SD 16; median
+    36 years [IQR 28–51]) and 363 (94%) of 388 spoke Finnish as their native language.
+    In the final guided iCBT group, the mean age was 34 years (SD 12; median 31 years
+    [IQR 25–42]) with 5092 (93%) of 5446 speaking Finnish as their native language.
+
+    A mean of 9·4 weeks (SD 3·5) passed between baseline and the last follow-up assessment
+    in guided iCBT for those who completed the last session and 7·7 weeks (4·4) for
+    all patients (including patients whose first and last measurements were the same
+    one). We estimated a mean interval of 35 weeks (22·9) between the reported start
+    and end dates of the fCBT therapy period; this estimate was based on less accurate
+    data reported to the outsourcing registry owner (in contrast, the iCBT programme
+    automatically collects and dates data).
+
+    In the analytic iCBT group, there was a mean of 5·5 (SD 2·1; median 7·0 [IQR 4·0–7·0])
+    treatment sessions. In the fCBT group, reporting the number of sessions was not
+    obligatory due to a coupon system that predefined the number of HUS-paid sessions;
+    therefore, these data were only available for 352 (91%) of 388 patients (mean
+    12·3 [SD 9·8]; median 14·0 [IQR 2·0–20·0]). Of the 5467 people given iCBT, those
+    who finished the treatment by reaching the seventh session (3333 [61%]) reported
+    a mean decline'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'in PHQ-9 score of 4·8 points (SD 5·3; paired-sample Cohen''s d=–0·91); symptoms
+    increased (ie, PHQ-9 score increased) for 467 (14%) of 3333. The mean PHQ-9 decline
+    defined via change in PHQ-9 in the full sample was 3·6 points (5·0; d=–0·71).
+    However, the mean decline was 4·2 points (5·2; d=–0·81) when excluding 819 (15%)
+    patients given iCBT who only reported the baseline PHQ-9 and therefore had null
+    change in the score. If we were to include, as null changes, the 819 patients
+    with only baseline PHQ-9 and the 1800 patients who were excluded due to being
+    prescribed the programme but who never submitted a single PHQ-9 report (figure
+    2a), the PHQ-9 decline would have been 2·7 points (4·6; d=–0·58).
+
+
+    Of the 392 patients given fCBT, those who completed the PHQ-9 after treatment
+    (316 [81%]) reported a mean PHQ-9 score decline of 3·0 points (SD 5·2; d=–0·59).
+    For 72 (23% of 316, symptoms increased: a greater proportion than the iCBT group
+    (p<0·0001, χ²=16·96). The full-data change in PHQ-9 was 2·4 points (4·8; d=–0·51).
+    The raw iCBT–fCBT difference in this primary outcome measure in the total sample
+    was statistically significant (1·1 points in favour of iCBT; t=4·55, df 455·04,
+    Hedge''s g=0·228 [95% CI –0·331 to –0·126]; p<0·0001). When including patients
+    without the baseline PHQ-9 as not having changed score (413 patients for fCBT
+    and 7194 for iCBT), the difference between the treatments was 0·4 points and not
+    significant (g=–0·083 [–0·182 to 0·016]). In patients given iCBT, mean PHQ-9 scores
+    declined less for male patients (3·1 points [SD 4·9]) compared with female patients
+    (3·8 [5·0]; p<0·0001), but there was no gender difference among patients who completed
+    iCBT treatment (4·5 points [5·4] in male patients vs 4·9 points [5·3] in female
+    patients; p=0·095) or in patients who completed fCBT treatment (2·4 [4·5] vs 2·5
+    [4·9]; p=0·99).
+
+
+    The mean PHQ-9 score for both treatment groups was within the point range for
+    moderate depression (table 1). Overall, patients with depression who were directed
+    to fCBT differed from those directed to iCBT (third column of table 1). Thus,
+    we considered what the treatment effect would be if all patients were given fCBT
+    compared with giving them all iCBT by computing ATE estimates.
+
+
+    The super learners for treatment outcome and treatment assignment weighted partly
+    distinct base learners (ie, algorithms) and designated as important only partly
+    overlapping sets of variables (appendix 2 pp 13, 17). The cross-validated area-under-the-curve
+    (AUC) performance measure for the model predicting treatment assignment to fCBT
+    or iCBT was 0·77 (95% CI 0·74–0·79), meaning that the model was informative (a
+    value of 0·5 indicates chance performance and 1·0 indicates perfect performance).
+    The cross-validated coefficient of determination (R2) for the outcome prediction
+    model was 0·031 (–0·06 without cross-validation, or r=0·24). When we targeted
+    the outcome and treatment-assignment models to ATE between fCBT versus iCBT, the
+    result was close to the naturalistic treatment differential (table 2). In a scenario
+    in which all
+
+
+    patients were given iCBT the PHQ-9 change outcome would have been nearly the same,
+    but slightly better, as it would have been if all were given fCBT; PHQ-9 score
+    declined 0·745 points (95% CI 0·156–1·334) more in the therapist-guided iCBT group
+    than in the fCBT group (table 2). The result was robust when restricting iCBT
+    treatments to an fCBT delivery region (ie, restricting to residents of Uusimaa)
+    and for alternative counterfactual definitions of dropout (table 2).
+
+
+    Recognising a particular black-box nature (appendix 2 pp 2–3) in the TMLE, we
+    computed simpler estimates for ATE as sensitivity analyses. We took the ten most
+    important predictors based on the super learners (appendix 2 p 17) and instead
+    fitted a logistic regression model predicting treatment assignment and a linear
+    regression model predicting change in PHQ-9 (appendix 2 pp 14–15). The assignment
+    model performance was well above chance (cross-validated AUC 0·70 [95% CI 0·67
+    to 0·73]), although inferior to the super learner. The adjusted R2 for the outcome
+    prediction model was 0·03. After the removal of predictors that were non-significant
+    in both the models (appendix 2 pp 14–15), their performance remained similar (cross-validated
+    AUC 0·70 [0·67 to 0·73], adjusted R2=0·03). Weighting by modelled inverse probabilities
+    of treatment assignment resulted in an improved covariate balance across fCBT–iCBT
+    samples (appendix 2 p 19). The finding of similar efficacies for iCBT and fCBT
+    was robust
+
+
+    | | Estimate (PHQ-9 points)* | SE of the estimate | 95% CI of the estimate |
+
+    |---|---|---|---|
+
+    | All data (n=5834) | | | |
+
+    | Observed difference in means (change in PHQ-9 [fCBT]–change in PHQ-9 [iCBT])
+    | 1-120 | 0·312 | 0·509 to 1·731 |
+
+    | Estimated ATE (change in PHQ-9 [fCBT]–[change in PHQ-9 [iCBT]]) | 0·745 | 0·300
+    | 0·156 to 1·334 |
+
+    | Uusimaa region only (n=3461)† | | | |
+
+    | Observed difference in means (change in PHQ-9 [fCBT]–change in PHQ-9 [iCBT])
+    | 1·045 | 0·334 | 0·391 to 1·700 |
+
+    | Estimated ATE (change in PHQ-9 [fCBT]–change in PHQ-9 [iCBT]) | 0·636 | 0·326
+    | –0·002 to 1·276 |
+
+    | Estimated ATE if all had completed treatment (imputed; change in PHQ-9 [fCBT]–change
+    in PHQ-9 [iCBT]) | 1·277 | 0·319 | 0·649 to 1·905 |
+
+    | Estimated ATE if all had a second measurement (imputed; change in PHQ-9 [fCBT]–change
+    in PHQ-9 [iCBT]) | 1·070 | 0·333 | 0·414 to 1·726 |
+
+
+    Table 2: Observed treatment effect comparison and estimated ATE (causal) differential
+
+
+    Patients with missing baseline data were not included in the analyses presented
+    in this table. A negative change in PHQ-9 score indicates symptom reduction. ATE
+    estimates were based on the targeted maximum likelihood estimator with super-learner
+    machine learning. Results for all data and the Uusimaa region only set the change
+    in PHQ-9 to 0 when the patient did not have a second measurement. ATE estimates
+    were based on counterfactuals based on multiple imputation of missing PHQ-9 reports;
+    all data were used to impute all missing PHQ-9 data for sessions 3, 5, and 7 for
+    all patients (including those given fCBT). In the first imputation-based analysis,
+    the outcome was set to change from session 1 to 7. In the second analysis, the
+    outcome was the same as in complete-data analyses (ie, from the first to last
+    available measurement), but the imputed value from session 3 was inserted only
+    for patients who did not have any follow-up measurements (in the complete-data
+    analysis, their change was considered 0 instead). ATE=average treatment effect.
+    CBT=cognitive behavioural therapy. fCBT=face-to-face CBT. iCBT=internet-delivered
+    CBT. PHQ-9=Patient Health Questionnaire-9. *A positive estimate indicates greater
+    symptom reduction in iCBT compared with fCBT. †Excludes patients from other regions,
+    equivalent to 2373 patients given iCBT due to HUS Helsinki University Hospital
+    Finnish Psychotherapy Quality Register only including fCBTs provided at Uusimaa.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'to all the methodological choices: G-computed ATE 1·073, AIPTW-ATE 0·735 (95%
+    CI 0·109 to 1·361), and simple TMLE-ATE 0·790 (0·164 to 1·415). Our prediction
+    models did not use baseline PHQ-9 to avoid artificial dependence with outcome
+    because it is part of the outcome already. A sensitivity analysis including baseline
+    PHQ-9 in the assignment model had only a modest effect on estimates (G-computed
+    ATE 1·073, AIPTW-ATE 0·128 [−0·593 to 0·850], and simple TMLE-ATE 0·114 [−0·569
+    to 0·797]). When including baseline PHQ-9 in both outcome and assignment models
+    of full TMLE, the estimated ATE was −0·064 (−0·639 to 0·511).
+
+
+    # Discussion
+
+
+    We found no mentionable difference between treatment effectiveness in guided iCBT
+    versus fCBT for depression. This finding was consistent across raw data from hospital
+    registries and multiple causal-effect estimates that retrospectively balanced
+    the treatment groups. Our findings encourage wider dissemination of cost-effective
+    and cost-efficacious guided iCBTs.
+
+
+    Our findings need to be interpreted with consideration of some limitations. First,
+    the methods used achieve causal inference when relevant confounders are observed.
+    Hence, we strived to include much registry-based background information and interpreted
+    the results relative to RCTs. Nevertheless, variables missing from our set, such
+    as digital affinity, could be of future interest, as could more accurate temporal
+    and follow-up analyses. Second, the fCBT and guided iCBT treatments had qualitative
+    differences other than delivery method. The fCBTs were an outsourced service from
+    public mental health care, produced in private practices by licensed psychotherapists.
+    In contrast, the trained iCBT therapists were employees in psychiatric speciality
+    care (eg, psychologists and nurses), but not necessarily licensed psychotherapists.
+    The fCBT therapists could adjust the treatment specifics during the treatment,
+    whereas the online platform largely standardised the iCBT programme. On average,
+    people having fCBT had more treatment sessions than those having iCBT. However,
+    the number of sessions was found to be uncorrelated with effect sizes in past
+    trials.³ Third, the study was not pre-registered. However, sensitivity analyses
+    showed a robustness of the results to many alternative analytical choices. Fourth,
+    although HUS-iCBT clinical development extensively collaborates with individuals
+    with lived experience, these individuals were not involved in this research specifically.
+    Including their perspectives in future research might add valuable insights.
+
+
+    Finally, many more patients who were given guided iCBT dropped out from their
+    treatment programme compared with the patients given fCBT. We accounted for these
+    patients by using the last measurement taken before dropping out to compute the
+    treatment outcome. Thus, iCBT was heavily penalised for the amount of dropout.
+    Patients dropping out without a second
+
+
+    measurement were recorded as having no change in their PHQ-9 score, which is lower
+    than the average spontaneous recovery that occurs while on a waiting list.²⁹ Furthermore,
+    one does not always attach a special clinical meaning to dropping out from treatment.
+    For example, the stepped-care model might improve treatment outcomes by starting
+    patients with a low-intensity treatment and by subsequently stepping those who
+    do not respond to treatment up to a higher-intensity treatment.³⁰ We found that
+    the average symptom change (both ATE and raw data) that included those who discontinued
+    was no worse for iCBT than for fCBT, and iCBT had fewer treatment sessions in
+    general. Thus, when dropout is not considered a primary indicator of treatment
+    failure, iCBT provided similar treatment outcomes to fCBT, but reached these results
+    more quickly.
+
+
+    Our study provides important additional support for guided iCBTs. Research has
+    shown guided iCBTs to attain similar effects to fCBT in RCTs and in their meta-analyses
+    (ie, efficacy).¹² We complemented this evidence by showing that an iCBT programme
+    attained similar effects to fCBT also in naturalistic settings (ie, effectiveness)
+    and when the naturalistic patients were statistically balanced across the treatments
+    (ie, efficacy and effectiveness triangulated). The analytical frameworks of experiments
+    (eg, RCTs) and counterfactual causal inference (eg, TMLEs) build on different
+    assumptions but provide consistent evidence. Conceptually, such a situation of
+    causal triangulation is considered the best-case scenario in modern causal-inference
+    literature,³¹ because guaranteeing the assumptions of any single method, including
+    RCTs, is difficult, whereas guaranteeing that multiple methods did not all fail
+    in distinct ways to provide the same, yet biased, finding is easier. If accepting
+    equal treatment effects, a treatment that takes an average of 77 min of therapist
+    time (iCBT) should be more cost-effective than a treatment that takes an average
+    of 840 min of therapist time (fCBT); iCBT could therefore be 11-times more cost-effective.
+
+
+    Given the consistency of the present and past findings across various approaches
+    to evaluating the efficacy of iCBT versus fCBT, our study offers reassurance regarding
+    the validity of the analytical frameworks used. Similar formal methods for causal
+    inference might represent cost-effective means for detecting active treatment
+    components and predictors in mental health research in which confounding issues
+    are pronounced.
+
+
+    We conclude that, for depressive disorders, evidence from RCTs, naturalistic studies,
+    and quasi-experimental research all show similar treatment efficacy and effectiveness
+    between guided iCBT and fCBT. Consequently, an internet delivery of short first-line
+    treatments emerges as a cost-effective and scalable default treatment option.
+    Nevertheless, maintaining a range of treatment alternatives remains important,
+    considering the less-than-optimal efficacy of all available treatments,⁸ special
+    needs, and the emerging opportunities in treatment targeting.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Contributors
+
+
+    THR wrote the first draft of the report and conducted the data analyses. SES,
+    SIS, JT, and J-HS wrote critical revisions to the manuscript and accepted the
+    final version. THR, SES, and JT have accessed and independently verified the research
+    data, the collection of which was monitored by the administrative personnel at
+    Findata and HUS and Tietoallinto; respective registry owners have verified the
+    original registries. Only Findata authority had access to the full personal data,
+    with THR, SES, and JT only accessing pseudonymised research data, preprocessed
+    by the Findata authority after consultation of the national Office of the Data
+    Protection Ombudsman. THR and JT independently verified and re-computed results
+    for all the naturalistic observations. THR conducted the machine learning, with
+    the code being in the appendix 2 (pp 22–29). THR and JT did the data curation
+    and formal analysis. THR, SES, and J-HS did the investigation. THR created the
+    methodology and did the project administration. THR, SES, and J-HS found resources.
+    THR and JT identified software and wrote scripts. THR and SES supervised the project.
+    THR did the project visualisation. All authors reviewed and edited the manuscript
+    and performed the literature search. All authors had full access to all the data
+    in the study and had final responsibility for the decision to submit for publication.
+
+
+    # Declaration of interests
+
+
+    We declare no competing interests.
+
+
+    # Data sharing
+
+
+    As per Finnish legislations, pseudonymised research data are available to researchers
+    granted permission from the Findata Social and Health Data Permit Authority (https://findata.fi/en/),
+    whose activities are based on the Act on the Secondary Use of Health and Social
+    Data. The authors do not have permission to share data with third parties directly.
+    The analysis scripts are available in the appendix 2 (pp 22–29).
+
+
+    # Acknowledgments
+
+
+    This study was supported by the Research Council of Finland (also known as the
+    Academy of Finland) with grant numbers 334057, 335901, and 3558138 given to THR
+    and the Machine-learned causal factors for psychotherapy project. We thank Ville
+    Ritola for comments on an earlier version of the manuscript. SES was supported
+    by Social Insurance Institution of Finland (Kela 140/331/2021).
+
+
+    # References
+
+
+    +   1 Hedman-Lagerlöf E, Carbring P, Svardman F, Riper H, Cuijpers P, Andersson
+    G. Therapist-supported internet-based cognitive behaviour therapy yields similar
+    effects as face-to-face therapy for psychiatric and somatic disorders: an updated
+    systematic review and meta-analysis. World Psychiatry 2023; 22: 305–14.
+
+    +   2 Andersson G, Cuijpers P, Carbring P, Riper H, Hedman E. Guided internet-based
+    vs face-to-face cognitive behavior therapy for psychiatric and somatic disorders:
+    a systematic review and meta-analysis. World Psychiatry 2014; 13: 288–95.
+
+    +   3 Ciharova M, Karyotaki E, Miguel C, et al. Amount and frequency of psychotherapy
+    as predictors of treatment outcome for adult depression: a meta-regression analysis.
+    J Affect Disord 2024; 359: 92–99.
+
+    +   4 Pontén M, Jönsjö M, Vademark V, et al. Association between expectations
+    and clinical outcomes in online v face-to-face therapy—an individual participant
+    data meta-analysis. Psychol Med 2024; 54: 1207–14.
+
+    +   5 Moshe I, Terhorst Y. Philipp P, et al. Digital interventions for the treatment
+    of depression: a meta-analytic review. Psychol Bull 2021; 147: 749–86.
+
+    +   6 Tröger A, Miguel C, Ciharova M, et al. Baseline depression severity as moderator
+    on depression outcomes in psychotherapy and pharmacotherapy. J Affect Disord 2024;
+    344: 86–99.
+
+    +   7 van der Lem R, de Weert W, van der Wee NJ, van Veen T, Cuijpers P, Zitman
+    FG. The generalizability of psychotherapy efficacy trials in major depressive
+    disorder: an analysis of the influence of patient selection in efficacy trials
+    on symptom outcome in daily practice. BMC Psychiatry 2012; 12: 192.
+
+
+    +   8 Ormell J, Hollon SD, Kessler RC, Cuijpers P, Monroe SM. More treatment but
+    no less depression: the treatment-prevalence paradox. Clin Psychol Rev 2022; 91:
+    102111.
+
+    +   9 Hämmerston G, Munafo MR. Causal inference with observational data: the need
+    for triangulation of evidence. Psychol Med 2021; 51: 563–78.
+
+    +   10 Lawlor DA, Tilling K, Davey Smith G. Triangulation in aetiological epidemiology.
+    Int J Epidemiol 2016; 45: 1866–86.
+
+    +   11 Dahabreh IJ, Bibbins-Domingo K. Causal inference about the effects of interventions
+    from observational studies in medical journals. JAMA 2024; 331: 1845–53.
+
+    +   12 Hernán MA, Robins JM. Causal inference: what if. CRC Press, 2024.
+
+    +   13 van der Laan MJ, Rose S. Targeted learning: causal inference for observational
+    and experimental data. Springer, 2011.
+
+    +   14 Luque-Fernandez MA, Schomaker M, Rachet B, Schnitzer ME. Targeted maximum
+    likelihood estimation for a binary treatment: a tutorial. Stat Med 2018; 37: 2530–46.
+
+    +   15 Torvik FA, Ystrom E, Gustavson K, et al. Diagnostic and genetic overlap
+    of three common mental disorders in structured interviews and health registries.
+    Acta Psychiatr Scand 2018; 137: 54–64.
+
+    +   16 Saarni SE, Rosström TH, Stenborg J-H, et al. Finnish Psychotherapy Quality
+    Register: rationale, development, and baseline results. Nord J Psychiatry 2023;
+    77: 455–66.
+
+    +   17 Ritola V, Lipspan JO, Pihlaja S, et al. Internet-delivered cognitive behavioral
+    therapy for generalized anxiety disorder in nationwide routine care: effectiveness
+    study. J Med Internet Res 2022; 24: e29384.
+
+    +   18 Rosenström TH, Ritola V, Saarni S, Joffe G, Stenborg J-H. Measurement invariant
+    but non-normal treatment responses in guided internet psychotherapies for depressive
+    and generalized anxiety disorders. Assessment 2023; 30: 618–32.
+
+    +   19 Rosenström TH, Myllyni M, Salkki V, Saarni SE. Feasibility of genetic,
+    short, and easy-to-use assessment of psychological distress during psychotherapy:
+    longitudinal measurement invariance of CORE-10 and -OM. Psychol Res 2022; 32:
+    1090–99.
+
+    +   20 Kroenke K, Spitzer RL, Williams JB. The PHQ-9: validity of a brief depression
+    severity measure. J Gen Intern Med 2001; 16: 606–13.
+
+    +   21 Storch J, Fried EI, Fritiz J, et al. On dimensionality, measurement invariance,
+    and suitability of sum scores for the PHQ-9 and the GAD-7. Assessment 2022; 29:
+    355–66.
+
+    +   22 Kounali D, Button KS, Lewis G, et al. How much change is enough? Evidence
+    from a longitudinal study on depression in UK primary care. Psychol Med 2022;
+    52: 1875–82.
+
+    +   23 Norman SB, Cissell SH, Means-Christensen AJ, Stein MB. Development and
+    validation of an Overall Anxiety Severity And Impairment Scale (OASIS). Depress
+    Anxiety 2006; 23: 245–49.
+
+    +   24 Phillips RV, van der Laan MJ, Lee H, Gruber S. Practical considerations
+    for specifying a super learner. Int J Epidemiol 2023; 52: 1276–85.
+
+    +   25 Hastie T, Tibshirani R, Friedman J. The elements of statistical learning:
+    data mining, inference, and prediction, 2nd edn. Springer-Verlag, 2009.
+
+    +   26 van der Laan M, Coyle J, Hejazi N, Malenica I, Phillips R. Hubbard A Targeted
+    learning in R: causal data science with the tlverse software ecosystem. Aug 10,
+    2022. https://tlverse.org/tlverse-handbook / (accessed April 17, 2024).
+
+    +   27 Benkeser D, van der Laan M. The highly adaptive Lasso estimator. IEEE International
+    Conference on Data Science and Advanced Analytics; Oct 17–19, 2016: 689–96.
+
+    +   28 Chesnayc NC, Stel VS, Tripeti G, et al. An introduction to inverse probability
+    of treatment weighting in observational research. Clin Kidney J 2022; 15: 14–20.
+
+    +   29 Whiteford HA, Harris MG, McKeon G, et al. Estimating remission from untreated
+    major depression: a systematic review and meta-analysis. Psychol Med 2013; 43:
+    1569–85.
+
+    +   30 van Straten A, Hill J, Richards DA, Cuijpers P. Stepped care treatment
+    delivery for depression: a systematic review and meta-analysis. Psychol Med 2015;
+    45: 231–46.'
+  merge: -1
+  img_proc: true
