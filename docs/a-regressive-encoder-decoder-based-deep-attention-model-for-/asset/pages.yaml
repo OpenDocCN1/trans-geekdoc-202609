@@ -1,0 +1,1427 @@
+- pgno: 0
+  md: '# A regressive encoder-decoder-based deep attention model for segmentation
+    of fetal head in 2D-ultrasound images
+
+
+    Somya Srivastava, Ankit Vidyarhi *, Shikha Jain
+
+
+    Department of CSE&IT, Jaypee Institute of Information Technology, Noida, India
+
+
+    ARTICLE INFO
+
+    Article history:
+
+    Received 8 April 2023
+
+    Received in revised form 22 May 2023
+
+    Accepted 2 June 2023
+
+    Available online 8 June 2023
+
+    Keywords:
+
+    Ultrasound imaging
+
+    Deep learning
+
+    Fetus head segmentation
+
+    Head circumference assessment
+
+    Regression-attention model
+
+
+    # ABSTRACT
+
+
+    Ultrasound imaging is the most commonly used imaging during pregnancy for tracking
+    the fetus''s growth and monitoring other biological parameters. The assessment
+    of the baby''s growth requires imaging-based analysis in every trimester. The
+    automatic computerized software and systems provide the platform for radiologists
+    to more accurately access the fetus''s head circumference as compared to manual
+    estimation. The improvement of such computerized algorithms is always the key
+    demand to improve accuracy and precision. This paper proposes an improved encoder-decoder
+    model for the segmentation of the fetal head segmentation in 2D-ultrasound images.
+    The proposed model uses regression in combination with attention to the encoder-decoder
+    model to determine the fetus''s head circumference. The model is further extended
+    with the post-processing ellipse fitting to superimpose the segmentation region
+    on ultrasound images for clear visualization of the fetus''s head. Further, the
+    proposed model performance is evaluated by using various statistical measures
+    using segmented regions and available ground truth. The experimental results demonstrate
+    a similarity score of 94.56%. The comparative result suggests that the proposed
+    model is providing a more accurate fetus head segmentation region on 2D-ultrasound
+    images as compared to other existing approaches.
+
+    © 2023 Elsevier B.V. All rights reserved.
+
+
+    # 1. Introduction
+
+
+    Computer-aided systems, attributed to the power of artificial intelligence, can
+    help radiologists in various aspects. These systems are commonly used in medical
+    imaging for various tasks such as segmentation, localization, prediction, and
+    classification. The backbone of such systems is the sophisticated and advanced
+    algorithms that make the task easier and automated. This automation assists radiologists
+    in accurately predicting abnormalities and making a better diagnosis.
+
+
+    The ultrasound-based diagnosis in radiology is considered to be complex compared
+    to other imaging like CT, MRI, and X-ray due to the unclear visualization of the
+    inner anatomy of the human organs as seen in other imaging modalities. Radiologists
+    use ultrasounds to evaluate the brain, spine, and hips. Moreover, it also helps
+    guide biopsies and heart disease conditions. But, the most commonly used application
+    of ultrasound is seen for problems related to abdominal. One such application
+    is during pregnancy when females need to undergo an ultrasound-based assessment
+    by gynecologists.
+
+
+    For pregnant females, the most important recommended diagnosis by the gynecologist
+    is an assessment of the fetus using Ultrasound Imaging. In prenatal care, ultrasound
+    imaging is a widely used mechanism and must require in every trimester. Gynecologists
+    are particularly interested in monitoring fetal development and examining various
+    biological parameters during each trimester [1]. In clinical routine checkups,
+    the assessment of the fetus''s head circumference is the essential measurement
+    for fetus''s growth monitoring, estimating gestational age and estimating the
+    expected delivery date [2]. Also, trimester-wise ultrasound imaging can help to
+    monitor the organs of the newborn in the fetus itself. The trimester-based sample
+    ultrasound images of a random patient are shown in Fig. 1. Such analysis of the
+    ultrasound image not only requires the latest machines but also the expertise
+    of the radiologist for manual interpretation.
+
+
+    Therefore, computer-aided automated (CAD) systems, can be beneficial for radiologists
+    to make better & faster decisions. The automated segmentation of the fetus''s
+    head is a key aspect of this scenario. Recently researchers are using Machine
+    Intelligence-based algorithms [3–5] or
+
+
+    * Corresponding author.
+
+    E-mail addresses: somya.srivastava0509@gmail.com (S. Srivastava), dr.ankit.vidyarhi@gmail.com
+    (A. Vidyarhi), shikha.jain@jiit.ac.in (S. Jain).'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/6b6056dba6e110e45c1a1524eb95a7df_1_0.png)
+
+
+    ![](img/6b6056dba6e110e45c1a1524eb95a7df_1_1.png)
+
+
+    ![](img/6b6056dba6e110e45c1a1524eb95a7df_1_2.png)
+
+
+    # (a) Trimester-1
+
+
+    # (b) Trimester-2
+
+
+    # (c) Trimester-3
+
+
+    Fig. 1. Sample collection of Trimester-wise Ultrasound images. (a) First-trimester
+    images were collected between weeks 9–12. (b) Second-trimester images were collected
+    in weeks 18–20. (c) Third-trimester images were collected in weeks 30–32.
+
+
+    Deep Network-based algorithms [6] for fetus head segmentation. The literature
+    presents several methods based on fetus'' head segmentation using an ellipse-based
+    bounding box, considering that the fetus'' shape is elliptical. However, machine
+    learning-based algorithms lead to the loss of visual anatomy providing only segments
+    based on user-defined criteria.
+
+
+    This paper introduces a novel model for fetus'' head segmentation using a deep
+    learning approach and thus minimizes the dependency on user-defined criteria.
+    The proposed model is distinct as compared with traditional models like UNet in
+    many aspects including network architecture incorporating regression layer with
+    attention. The key difference between the two models is given as:
+
+
+    +   • Output Representation: The UNet model is primarily used for pixel-wise semantic
+    segmentation, where the goal is to classify each pixel in the input image into
+    different predefined classes or labels. It produces a segmentation mask where
+    each pixel is assigned a specific class label. Whereas, the Encoder-Decoder-based
+    Deep Attention Model with a regression layer is designed for localization and
+    instance segmentation tasks. Instead of predicting class labels for each pixel,
+    this model aims to directly regress the bounding box coordinates or segmentation
+    masks for specific objects or regions of interest. The regression layer outputs
+    the coordinates or pixel-wise values that define the extent or boundary of the
+    object.
+
+
+    +   • Task Focus: The UNet model is commonly used for tasks such as segmenting
+    organs or structures in medical images, where the emphasis is on identifying and
+    classifying different regions of interest within the image. It is suitable for
+    scenarios where the boundaries between different classes are distinct and well-defined.
+    On the other hand, the Encoder-Decoder-based Deep Attention Model with a regression
+    layer is more suitable for tasks that require precise localization or instance
+    segmentation, such as detecting and segmenting specific objects or regions within
+    an image. By directly regressing the bounding box coordinates or segmentation
+    masks, this model can provide more accurate localization and fine-grained segmentation
+    results, even in scenarios where objects may have complex shapes or overlapping
+    boundaries.
+
+
+    +   • Network Architecture: The UNet model follows a symmetric encoder-decoder
+    architecture with skip connections to capture both local and global information.
+    It is commonly composed of convolutional layers, pooling layers for down-sampling,
+    and transposed convolutional layers for up-sampling. In contrast, the Encoder-Decoder-based
+    Deep Attention Model with a regression layer may also utilize an encoder-decoder
+    architecture with attention mechanisms for capturing informative regions. However,
+    it
+
+
+    incorporates an additional regression layer at the end of the network, which directly
+    predicts the coordinates or pixel-wise values defining the object of interest.
+    This regression layer enables the model to perform precise localization and regression-based
+    instance segmentation.
+
+
+    The main contributions of the manuscript are described as follows:
+
+
+    +   1. The paper proposes a novel architecture that combines a regressive encoder-decoder
+    network with an attention mechanism. This architecture enables the model to learn
+    both global and local features of the ultrasound images, while the attention mechanism
+    helps to focus on informative regions for more accurate segmentation.
+
+
+    +   2. The proposed model directly predicts the bounding box coordinates of the
+    fetal head. This regression-based approach allows for more precise localization
+    and segmentation of the fetal head.
+
+
+    +   3. The paper introduces a deep attention mechanism within the model that allows
+    the model to focus on relevant regions of the ultrasound images, enhancing the
+    accuracy of fetal head segmentation. The attention mechanism assigns different
+    weights to different spatial locations, emphasizing informative regions while
+    suppressing irrelevant areas.
+
+
+    +   4. The paper describes the training process of the proposed model, including
+    the use of a large dataset of annotated 2D ultrasound images. Additionally, it
+    discusses the utilization of various data augmentation techniques to increase
+    the diversity of the training data.
+
+
+    The rest of this paper is organized as follows: The description of the existing
+    works on Fetus analysis that was used as a theoretical foundation is presented
+    in Section 2. Section 3, gives insight into the proposed model design using the
+    regression-based attention deep UNet model. Section 4, demonstrates the evaluation
+    results of the proposed model when experimented with the state-of-art benchmark
+    dataset of the fetus'' head. The comparative analysis of the proposed model with
+    the existing literature and benchmark models are presented in Section 5. Finally,
+    Section 6 presents the overall conclusion of the proposed methodology with the
+    future work directions that guides the extension of the work in the near future.
+
+
+    # 2. Related work
+
+
+    The identification of the fetus and its organs in ultrasound images is one of
+    the upcoming research areas which requires high precision and experienced skill
+    sets. Nowadays, radiologists use advanced machine intelligence incorporated CAD
+    systems that automatically predict the'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'fetus and its associated parameters like dimensions, size, and expected date
+    of delivery using advanced computer algorithms. This helps radiologists and gynecologists
+    to make more precise decisions at an early stage of fetus development.
+
+
+    Some research works have focused on fetus segmentation using the machine learning
+    approaches on ultrasound images [7–9]. These research articles used the transformations
+    and contours to find the fetus circumference in the abdominal images. Besides
+    this, the work presented in [10] demonstrated the use of machine learning towards
+    clinical expectations in ultrasound images, especially fetus segmentation. This
+    paper gives insight into the reliability of automatic systems by radiologists.
+    Moreover, the work [11] presented a detailed overview of machine learning-based
+    diagnosis system in ultrasound imaging.
+
+
+    Nevertheless, researchers also focused on the assessment of the fetus geometry
+    for various organs. One of the recent works reported in [12] used machine learning
+    tools for the segmentation of the fetus''s brain from ultrasound images. This
+    clinically verified work used first-trimester imaging to do the segmentation process.
+    Besides 2D imaging, some works have used 3D volumes as well for the assessment
+    of the fetus''s brain from ultrasound images using the random forest method [13].
+    The reported work demonstrated good segmentation results, however, the dataset
+    have low sample image count.
+
+
+    Also, studies are reported for automatic segmentation of the fetus''s head using
+    deep learning methods. The work reported in [14] used the multi-task deep model
+    for the estimation of the fetus''s head circumference using different trimester
+    ultrasound images. The literature also explored the use of attention networks
+    towards segmentation of the fetus using encoder-decoder deep network [15]. In
+    many places, the choice of the dataset of ultrasound images was taken from some
+    open-source websites, especially online challenges. One such study about the evaluation
+    and comparison of the methodologies using the grand challenge dataset is presented
+    in [16].
+
+
+    In past, some methods have used deep models to segment the brain from the fetus
+    ultrasound images [17,18]. The motivation of these works is to explore the use
+    of computer-assisted systems to do the automatic diagnosis of the fetus''s brain.
+    However, both of these studies'' objective is different, The reported work of
+    [17] gives the utilization of the UNet model for segmentation while the work of
+    [18] introduced the classification aspect to identify the normal and abnormal
+    fetal planes of ultrasound imaging. With almost a similar objective but different
+    methodology, the work [19] reported the use of the deep model to differentiate
+    the fetal planes into 3 classes using the dataset of 12,400 images gathered from
+    1792 patients.
+
+
+    Some of the researchers also designed CNN light-weighted deep model for semantic
+    segmentation of the head circumference [20]. The objective of the study is to
+    localize the fetal head in ultrasound 2D images. The methodology used the traditional
+    LinkNet architecture [21] as the backbone network for the proposed light-weighted
+    model design. Besides this, some of the authors also focused on the utilization
+    of the deep models which were previously used for some other application areas.
+    One such work is reported in [22] where the model named multi-feature pyramid
+    UNet (MFP-UNet) is used for semantic segmentation. The objective of using this
+    model was to overcome the limitation of the traditional UNet model.
+
+
+    The extensive literature study on fetal head segmentation gives the idea that
+    deep learning-based models, especially encoder-decoder-based network architectures
+    are the most widely used architectures for semantic segmentation of the fetus
+    head from the ultrasound images. However, the claimed results use a wide range
+    of statistical measures for performance computation that gained good segmentation
+    results. However, there is still scope of improving the accuracy through model
+    up gradation. With this goal in mind, this paper introduces a new framework incorporating
+    the power of regression with attention to encoder-decoder network architecture
+    to enhance the results of the fetus segmentation and its head circumference.
+
+
+    # 3. Proposed deep architecture design
+
+
+    In this work, a new design of the deep model is proposed using the base as an
+    encoder-decoder with the inclusion of the attention gates for fetus head segmentation
+    in Ultrasound images. The work is further extended to find the dimensions of the
+    fetus''s head using 2D ultrasound images. The proposed work is considered to be
+    an automated CAD system that is incorporated the advanced machine learning algorithm
+    using an attention-based encoder-decoder model with regression to minimize the
+    loss in the network.
+
+
+    # 3.1. Framework design of the proposed network architecture
+
+
+    The design framework of the proposed network architecture is presented in Fig.
+    2. There are three modules i.e. Pre-processing, Model training, and Post-processing.
+    The collective build-up of these three modules will result in the segmentation
+    of the fetus''s head and the direct assessment of the circumference of the fetus''s
+    head.
+
+
+    Initially, the input imaging dataset is pre-processed followed by data augmentation
+    to increase the dataset size. The extended dataset is further used for model training.
+    Here, in the proposed work, a new model of deep learning is proposed for fetus
+    head segmentation. The proposed model is based on the encoder-decoder methodology
+    with the inclusion of the attention and regression layers. This model training
+    is the second module of the framework. Later, in the third module, the model is
+    evaluated with the test input image followed by post-processing operations to
+    discover the dimension of the segmented fetus head. The post-processing operation
+    includes ellipse fitting, dimensional map, and region circumference assessment.
+    The details of each of these modules are discussed in subsequent subsections.
+
+
+    # 3.2. Image pre-processing
+
+
+    The first module of the proposed framework, as shown in Fig. 2, is the pre-processing
+    of the input image. This module will include the input image normalization followed
+    by the data augmentation.
+
+
+    # 3.2.1. Image normalization
+
+
+    In AI-based applications, image normalization is a process used for datasets before
+    feeding into the model for training. Here, dataset samples are processed using
+    the common statistical distribution for size and intensity values. In general,
+    the process usually includes both spatial and intensity normalization.
+
+
+    Spatial normalization implies making whole dataset images with the same spatial
+    relationship using scaling, linear transformations, or even deformations. The
+    main objective of spatial normalization is to make the dataset homogeneous in
+    terms of size and intensity value distribution. Whereas, in normalization, the
+    overall pixel values in multiple images will have the same statistical distribution.
+    As it is known that artifacts can create in-homogeneity in images which can be
+    corrected with normalization. Thus, before processing the ultrasound images, the
+    framework uses the pre-processing of the input dataset images.
+
+
+    In this work, a Min-Max normalization of the input images (gray-scale or RGB)
+    is performed to maintain the homogeneity in intensity distribution. As the 8-bit
+    image is represented by using the pixel intensity between 0 and 255, a linear
+    normalization of a digital image is performed using the given Eq. (1).
+
+
+    ```
+
+    OutputChannel = 255 * (Input Channel – min )/( max – min ) (1)
+
+    ```
+
+
+    where the max and min are the maximum and minimum pixel value representations
+    of the input image.
+
+
+    Here if, the input image is grayscale, then we need to normalize only one channel.
+    However, for an input image of 3 channels i.e. RGB, then we need to normalize
+    for each channel using the same criteria. The'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/6b6056dba6e110e45c1a1524eb95a7df_3_0.png)
+
+
+    Fig. 2. Design architecture of the proposed framework.
+
+
+    sample image normalization and its corresponding output are shown in Fig. 3.
+
+
+    # 3.3. Designing proposed attention encoder-decoder regression architecture
+
+
+    The main objective of the work is to segment the fetus''s head from ultrasound
+    images. To do so a new encoder-decoder model powered by the attention and regression
+    layer is proposed for the segmentation of the fetus''s head. The proposed model
+    is inspired by the traditional model design frameworks which were designed using
+    deep neural architecture for various Biological segmentation problems [23]. The
+    basic architecture of the proposed model with the regression layer is shown in
+    Fig. 4.
+
+
+    The model is designed using the convolution blocks and the skip connection that
+    connects the high-dimensional feature vector with the output features collectively
+    at the decoder part. This helps in making
+
+
+    the final prediction results more reliable and accurate. A detailed description
+    of the model design and its associated components are discussed in the following
+    subsections.
+
+
+    # 3.3.1. Encoder
+
+
+    On careful evaluation, it is found that the proposed model architecture is divided
+    into two halves i.e. Encoder and Decoder. The first half of the model called an
+    encoder, is a collection of the Dense convolution blocks followed by a max-pooling
+    to down-sample the input image into feature representations at multiple levels.
+    The expanded diagram of the proposed model is shown in Fig. 5.
+
+
+    In the encoding phase, the choice of dense blocks has a special purpose. As shown
+    in Fig. 5, the model incorporates the soft attention gate with skip connections,
+    as discussed in the later subsection 3.3.3, which is using back-propagation. Back
+    propagation usually encounters the problem of vanishing gradient and provides
+    irregularity in the'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/6b6056dba6e110e45c1a1524eb95a7df_4_0.png)
+
+
+    Fig. 3. Sample input image and its corresponding normalization. The first column
+    represents the sample input image and the second column represents its normalized
+    form.
+
+
+    ![](img/6b6056dba6e110e45c1a1524eb95a7df_4_1.png)
+
+
+    Fig. 4. Block architecture of the proposed encoder-decoder model.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/6b6056dba6e110e45c1a1524eb95a7df_5_0.png)
+
+
+    Fig. 5. Expanded block architecture of the proposed encoder-decoder model with
+    attention gate and regression layer.
+
+
+    segmentation outputs. Thus, the dense blocks are used in the encoding phase. The
+    advantages of using dense blocks are summarized as:
+
+
+    +   - Dense block reduces the number of parameters and is more efficient in the
+    usage of the parameters
+
+    +   - Dense block motivates feature reuse and strengthens feature propagation.
+
+    +   - Dense connections have a regularizing effect that reduces over-fitting on
+    image segmentation tasks with a small training set
+
+    +   - Witth dense connections the amount of parameters decreases as compared with
+    other deep encoder architectures without discriminating model’s network depth
+
+
+    Thus each of the blocks in the encoder is a dense block having an iterative concatenation
+    of earlier feature vectors. Each dense block has some fixed number of layers,
+    say N layers. The total number of direct connections for this dense block is (N*(N
+    + 1))/2.
+
+
+    The proposed architecture uses the 4 dense blocks in the encoding phase each of
+    length 4 i.e. there are 4 layers in the dense block each comprises of batch normalization,
+    2D convolution filter, and ReLU activation with the concatenation of the skip
+    connections as shown in Fig.6. The architecture description of the encoding is
+    explained in Table 1.
+
+
+    The first layer of the network is the input layer which took an image as input
+    using 96 filters of size 7 x 7 with a stride equal to 2. This resulted in a feature
+    descriptor of size 112 x 112 x 96. The output is then max pooled with a filter
+    of size 3 x 3 and stride equal to 2 to get the reduced output of size 56 x 56.
+
+
+    Later, the encoder used the four dense blocks. These layers were repeated several
+    times in a dense block as indicated by the count in Table 1. It is also to be
+    noted that for the first three dense blocks, the output is further processed with
+    the 2D convolution, to reduce the channels of the feature map, with average pooling
+    having dimensions as 1 x 1 for convolution, 3 x  for average pooling, and stride
+    equal to 2. At the end of the encoding phase, the output vector of 7 x 7 is produced
+    to generate segmented output.
+
+
+    # 3.3.2. Decoder
+
+
+    The second half of the proposed architecture is the decoder which is just the
+    transpose of the encoder. The objective of this phase is to project the low encoded
+    features extracted by the encoder onto the higher resolution towards semantic
+    segmentation. It consists of up-sampling of the data in just the reciprocal manner
+    as done in the encoding phase.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/6b6056dba6e110e45c1a1524eb95a7df_6_0.png)
+
+
+    | Layers | Count | Size | Dimension |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Input | 1 | - | 224 x 224 x 3 |
+
+    | conv 1 | 1 | 7 x 7, 96, stride 2 | 112 x 112 |
+
+    | Max Pooling | 1 | 3 x 3, stride 2 | 56 x 56 |
+
+    | Dense Block 1 | 6 | 1 x 1, 3 x 3 | 56 x 56 |
+
+    | Conv. + Average Pooling | 1 | 1 x 1, 3 x 3, stride 2 | 56 x 56, 28 x 28 |
+
+    | Dense Block 2 | 12 | 1 x 1, 3 x 3 | 28 x 28 |
+
+    | Conv. + Average Pooling | 1 | 1 x 1, 3 x 3, stride 2 | 28 x 28, 14 x 14 |
+
+    | Dense Block 3 | 36 | 1 x 1, 3 x 3 | 14 x 14 |
+
+    | Conv. + Average Pooling | 1 | 1 x 1, 3 x 3, stride 2 | 14 x 14, 7 x 7 |
+
+    | Dense Block 4 | 24 | 1 x 1, 3 x 3 | 7 x 7 |
+
+
+    The only difference in decoding is the use of the skip connections where the same
+    hierarchical decoding output and encoding output are concatenated by using the
+    attention gate as described in detail in subsection 3.3.3. Technically, every
+    iterative step of the expansion path of the feature map indulges a 2 x 2 transpose
+    convolution that reduces the number of features to half of the value. The up-sampling
+    consists of two layers i.e. up-sampling layer and a dropout layer with the dimensional
+    filter of size 3 x 3 (up-sampling) and dropout equal to 0.2. The model uses the
+    concatenation of the output features of the expansion and contracting path using
+    the attention gate. Here, a 3 x 3 convolution and ReLU are used for processing.
+    The last layer of the model is the regression layer which helps to map the output
+    to the desired segmented region.
+
+
+    # 3.3.3. Attention gate
+
+
+    As the name suggests Attention refers to the focus on a specific object. Here,
+    in the proposed architecture, the attention logic is used between the layers to
+    put emphasis only on relevant activation maps during model training. This helps
+    to place the attention on a specific imaging part rather than on the complete
+    image. Based on learning,
+
+
+    attention can be classified as Soft attention and Hard attention. The main difference
+    between these attention types is given as Hard attention picks image patches one
+    at a time to pay attention and requires Reinforcement learning with Monte Carlo
+    sampling. On the other hand, in Soft attention weights can be used on multiple
+    patches of the image to determine the relevancy and the back-propagation approach
+    can be used for the model training. In this work, soft attention is used with
+    the encoder-decoder model.
+
+
+    As shown in Fig. 5, during decoding, most of the spatial information which is
+    to be recreated is imprecise. Thus, the model uses skip connections that concatenate
+    the information from the down-sampling with the up-sampling. However, this can
+    result in many redundant low-level features because at the initial layers the
+    feature representation is quite poor. Therefore, introducing soft attention at
+    skip connections can suppress much of the activations from outside of region-of-interest
+    (ROI) and minimizes the number of redundant features to carry forward. The basic
+    flow mechanism of soft attention is shown in Fig. 7.
+
+
+    The detailed step-wise working and execution of the attention gate with skip connection
+    are explained in Algorithm 1.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/6b6056dba6e110e45c1a1524eb95a7df_7_0.png)
+
+
+    Fig. 7. Description of the Attention gate for every skip connection.
+
+
+    # Algorithm 1. Working of attention gate with skip connection.
+
+
+    Require: vectors x and g
+
+    Ensure: vector g should be taken from the next lowest layer of the network.
+
+    Dimensions (filters x height x width): x <- 64x64x64
+
+    Dimensions (filters x height x width): g <- 32x32x32
+
+    Convolution: Vector x stride convoluted resulted into updated dimension as
+
+    x <- 64x32x32
+
+    Convolution: vector g convoluted with 1x1 filter resulted into dimension x <-
+
+    64x32x32.
+
+    Elementary Sum: The two vectors are summed element-wise as x � g. It
+
+    resulted in larger aligned weights and relatively smaller unaligned weights.
+
+    Dimension Reduction: The resultant of vector x � g processed by a ReLU
+
+    activation followed by 1x1 convolution filter to reduce the dimensions to
+
+    (x � g) <- 1x32x32.
+
+    Feature Scaling: The vector is processed with the sigmoid layer to scale the
+
+    vector in the range [0,1]. This coefficient value closer to 1 indicate more
+
+    relevant features, called attention weights.
+
+    Up-sampling: The attention weights are up-sampled using trilinear interpo-
+
+    lation with dimension x <- 64x64 .
+
+    Normalize: The attention weights are multiplied element-wise to the original
+
+    x vector and then passed along in the skip connection as normal.
+
+
+    # 3.3.4. Regression
+
+
+    The last layer of the model is the regression layer which can be used
+
+    to minimize and handle the model loss. Before the regression layer, the
+
+    model uses the encoder-decoder architecture as the backbone network
+
+    to map feature output. The traditional architecture of the CNN model in-
+
+    cludes a softmax layer which was used for the classification problems.
+
+    Replacing the last softmax layer with a fully-connected regression
+
+    layer with a linear activation function helps to minimize the loss while
+
+    training. The model is trained by using the continuous value predicted
+
+    loss function. Here, in this work, the hybrid loss function is used for
+
+    the model training. Binary weighted cross-entropy (WCE) and Mean
+
+    Squared Error (MSE) are used as training cost functions.
+
+    These loss functions are defined in Eq. (2):
+
+
+    ```
+
+    Cross Entropy (Q, T) = \(\sum_{i=1} T_i * \log(Q_i) + (1 - T_i) * \log(1 - Q_i)\)
+    (2)
+
+    ```
+
+
+    where Q is the output of the last layer of the decoder, T is the ground
+
+    truth or the expected output.
+
+
+    The binary-weighted cross-entropy, using the constant factor of
+
+    weight factor w = 5, is given in Eq. (3):
+
+
+    ```
+
+    WCE(Q, T) = \(\sum_{i=1} ((1 - T_i)(w - 1) + 1)(T_i * \log(Q_i) + (1 - T_i)* \log(1
+    - Q_i))\) (3)
+
+    ```
+
+
+    The Mean Absolute Error is calculated on basis of the pixel and is
+
+    defined in Eq. (4):
+
+
+    ```
+
+    Mean Absolute Error(MAE) = \(\frac{1}{N} \sum_{i=1} |Q_i - T_i|\) (4)
+
+    ```
+
+
+    where, Qi is the probability of the pixel from the query, Ti is the
+
+    probability of the pixel from the target, and N is the total pixels in an
+
+    image.
+
+    The Mean Squared Error (MSE) is the square of the MAE and is given
+
+    in Eq. (5):'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'Mean Square Error(MSE) = \(\frac{1}{N} \sum_{i=1}^{N} (Q_i - T_i)^2\) (5)
+
+
+    The final hybrid regression equation of the proposed model is thus given as the
+    weighted summation of the cross entropy and MSE in Eq. (6)(6):
+
+
+    Segmented\(_{Loss}\) = W * (WCE + MSE) (6)
+
+
+    where W magnify the loss on fetus head boundary during training with emphases
+    on edges given by the Eq. (7):
+
+
+    W(x) = 1 + w0.exp \(\frac{D_x}{2 * \sigma^2}\) (7)
+
+
+    where, Dx gives the distance between the pixel x and ground truth (Target), \(\sigma\)
+    is Gaussian kernel variance and w0 is a constant.
+
+
+    When training an encoder-decoder attention-based model with a regression layer,
+    several hyperparameters need to be set. Generally, the optimal values for the
+    hyperparameters may vary depending on the specific dataset and problem. Whereas,
+    experimentation and tuning are often necessary to find the best hyperparameter
+    configuration for a given task. The best combination that is used here in this
+    model-based experimentation is given in Table 2.
+
+
+    # 3.4. Eclipse fitting and dimension assessment
+
+
+    The last phase of the proposed methodology is the post-processing of the segmented
+    output map, called eclipse fitting. As the shape of the fetus is in ellipse and
+    also the available ground truth is in form of the ellipse, the fitting of the
+    eclipse is an important part of the methodology. The fitment of the eclipse on
+    the ultrasound image can help to make the assessment of the parameters easily
+    and predicts the growth of the fetus.
+
+
+    An ellipse is defined as the locus of all those points in a two-dimensional plane
+    where the distance addition from two fixed points, also known as foci, in the
+    plane remains constant. This constant ratio is called the eccentricity of an ellipse
+    which demonstrates its elongation. The description of the ellipse is shown in
+    Fig. 8.
+
+
+    It is to be noted that the shape of the eclipse is in form of an oval, where the
+    longest bisection in middle along the x-axis is called the major axis and the
+    smallest bisection along the y-axis is called the minor axis. The distance between
+    the center (intersection of major and minor axis) to surface points is called
+    the semi-major axis and semi-minor axis. The area enclosed by the eclipse is given
+    by the Eq. (8):
+
+
+    Area under eclipse = \(\pi * |\frac{M}{2}| * |\frac{m}{2}|\) (8)
+
+
+    | ine Hyperparameter | Values |
+
+    |---|---|
+
+    | ine Number of Layers | Encoding - 4, Decoding - 4 |
+
+    | ine Epochs Count | 300 |
+
+    | ine Conv. filters (L1) | 20 |
+
+    | ine Conv. filter size | 3 x 3 |
+
+    | ine Max pool filter | 3 x 3 |
+
+    | ine Stride | 2 |
+
+    | ine Optimizer | Adam |
+
+    | ine Learning rate | 0.001 |
+
+    | ine Loss Function | Binary weighted cross entropy |
+
+    | | Mean Squared Error |
+
+    | ine Batch size | 32 |
+
+    | ine Dropout | 0.4 |
+
+    | ine | |
+
+
+    ![](img/6b6056dba6e110e45c1a1524eb95a7df_8_0.png)
+
+
+    where, l,l represents the length, M represents the Major axis, and m represents
+    the minor axis.
+
+
+    In medical terminology, these axes have different names to understand. The major
+    axis is known as OccipitoFrontal Diameter (OFD) and the minor axis is known as
+    Bi-parietal Diameter (BPD). The fetus’s head circumference is thus calculated
+    by using Eq. (8) and can be re-written as Eq. (9):
+
+
+    Head Circumference = \(\pi * \frac{(OFD + BPD)}{2}\) (9)
+
+
+    # 4. Experimentation results
+
+
+    # 4.1. Dataset description
+
+
+    To evaluate the performance of the proposed model the experimentation is carried
+    out on the publicly available dataset of Fetus ultrasound images. The dataset
+    was released in the year 2018 as one of the grand challenges on Automated measurement
+    of Head circumference.
+
+
+    The dataset consists of 1334 2D-ultrasound images of the standard plane to measure
+    the head circumference. The overall dataset is divided into two subsets i.e. Training
+    and Testing. The training set consists of 999 2D ultrasound image samples and
+    a test set have 335 images. All the images are of equal size with the dimension
+    of 800 x 540 pixels having pixel sizes ranging from 0.052 to 0.326 mm. The details
+    of the individual image pixel size are presented in the files ‘training_set_pixel_size_and_HC.csv’
+    and ‘test_set_pixel_size.csv’. Moreover, the training set also has ground truth
+    availability with the annotation of the head circumference. The details of the
+    annotated head circumference for all training images are also present in the file‘training_set_pixel_size_and_HC.csv’.
+    The sample dataset description with annotations is presented in Fig. 9.
+
+
+    # 4.2. Dataset normalization
+
+
+    Using the dataset, and its pre-processing, it is identified that the data samples
+    have a non-scalar image dimension of 800 x 540 pixels. Thus the dataset is initially
+    normalized to make each image to be of dimension 224 x 224 pixels. Besides this,
+    the dataset is analyzed with the limitation of the less number of training samples
+    availability for model learning. Thus, to minimize the artifacts due to overfitting
+    and underfitting the dataset size need to be increased. This has to be done using
+    the data augmentation approaches.
+
+
+    Here four traditional machine learning data augmentation approaches are used i.e.
+    flip, rotate, translate, and crop operations. Using these four operations the
+    dataset strength is increased by 11 times of
+
+
+    <sup>1</sup> https://zenodo.org/record/1327317
+
+    <sup>2</sup> https://hc18.grand-challenge.org/'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: "![](img/6b6056dba6e110e45c1a1524eb95a7df_9_0.png)\n\nthe original dataset.\
+    \ This resulted in the overall dataset having 10,989 2D images. One important\
+    \ aspect of this annotation is the repetition of the operation for training samples\
+    \ and annotated samples in the same order as the original image processed. The\
+    \ details of these augmentations with their impact on the dataset are described\
+    \ as:\n\n+   1. Angular Flip: It is a skeleton axis where the input sample is\
+    \ flipped along the directional axis with an angle of \\(\\theta = 180\\). It\
+    \ resulted in the transformation of the image in a ratio of 1:1 i.e. for a single\
+    \ image we get one more image with a different orientation.\n\n+   2. Oriential\
+    \ Rotate: It is the rotation of the input sample into the selected range of the\
+    \ directional orientation values. Here, the selected range of \\(\\theta\\) falls\
+    \ in the range of \\([-15, 15]\\) with the sliding unit of 5 units. This resulted\
+    \ in the 7 different values of \\(\\theta\\) i.e. \\(-15, -10, -5, 0, 5, 10, 15\\\
+    ). Out of these, the \\(\\theta = 0\\) is dropped as it generated the same image\
+    \ as of input. Thus, an overall of six different images of the input image is\
+    \ generated using this augmentation approach.\n\n+   3. Random Cropping: It is\
+    \ an augmentation technique that allows us to take the random subsets of an input\
+    \ image and further can be used for the model training. Most of the time this\
+    \ approach gives generalized results as the region of interest is not always visible\
+    \ in the whole image. Here, we used the random selection of the \\(45 \\times\
+    \ 45\\) window region in four directions i.e. up, down, left, and right. Thus\
+    \ for a single image, four sub-regions can be generated.\n\nIn an overall summary\
+    \ of augmentation, we can get angular flip (1), Oriential Rotate(6), and Random\
+    \ Cropping(4) images for a single image i.e. 11 times of the dataset. Finally,\
+    \ the whole dataset is now having 10,989 images available for model training after\
+    \ augmentation.\n\n# 4.3. Metrics to evaluate performance\n\nIn the proposed work,\
+    \ the Dice coefficient score, Difference in Head Circumference, Hausdorff Distance,\
+    \ and mean absolute percent error are used as a metric for performance evaluation.\n\
+    \nThe mathematical notation of these metrics is given in Eq. 10-13:\n\n+   1.\
+    \ Dice Coefficient (DC): is defined as the ratio assessment on the number of pixels\
+    \ using segmentation output and the ground truth and is given as:\n+   \n+   \\\
+    (\\text{Dice Coefficient (DC)} = \\frac{2 * (Seg_{Area} \\cap Grt_{Area})}{|Seg_{Area}|\
+    \ + |Grt_{Area}|}\\) (10)\n\nwhere \\(Grt_{Area}\\) is the ground truth area and\
+    \ \\(Seg_{Area}\\) is the area extracted from the segmentation part.\n\n+   2.\
+    \ Difference Head Circumference (DHC): is defined as the difference in the fetus\
+    \ head perimeter assessment of the segmented region and the ground truth and is\
+    \ given as:\n+   \n+   Difference Head Circumference (DHC) = \\(P_{Seg} - P_{Grt}\\\
+    ) (11)\n\nwhere, \\(P_i\\) represent the perimeter and \\(i \\in\\) (segmented\
+    \ region, ground truth)\n\n+   3. Mean Absolute Percentage Error (MAPE): is defined\
+    \ as the absolute percentage error with respect to the available ground truth\
+    \ and is given as:\n+   \n+   \\(MAPE = \\frac{MAE}{Grt} . 100\\) (12)\n\nwhere\
+    \ MAE is the mean absolute error and is given by\n\n\\(MAE = \\frac{1}{N} \\sum_{i=1}^{N}\
+    \ (S_i - G_i)\\)\n\nhere, \\(S_i\\) is the pixel probability in Segmented output\
+    \ and \\(G_i\\) is the actual pixel probability in the available ground truth.\n\
+    \n+   4. Hausdorff Distance (HD): is given as the distance between two contour\
+    \ points and found maximum among all such combinations. It is given as:\n+   \n\
+    +   \\(HD(Seg, Grt) = max (h(Seg, Grt), h(Grt, Seg))\\) (13)\n\nwhere,\n\\(h(Seg,\
+    \ Grt) = max_{s \\in Seg} min_{g \\in Grt} \\|p - g\\|\\)\n\\(h(Grt, Seg) = max_{g\
+    \ \\in Grt} min_{s \\in Seg} \\|g - p\\|\\)\n\nwhere, Seg represents the pixels\
+    \ in the segmented space (\\(s_1, s_2, ...., s_n\\)) and Grt represents the pixels\
+    \ in the ground truth (\\(g_1, g_2, ...., g_n\\)).\n\nBesides the above specific\
+    \ measures that were used in the literature for the analysis of the segmentation\
+    \ results for the Fetus's head, there are some other performance measures that\
+    \ were considered as the benchmark for segmentation tasks. These measures are\
+    \ given as:\n\n+   1. Intersection over Union (IoU) or Jaccard Index: IoU measures\
+    \ the overlap between the predicted segmentation mask and the ground truth mask.\
+    \ It is calculated as the ratio of the intersection area to"
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Table 3 Experimentation result of the proposed model on Ultrasound images
+    dataset.
+
+
+    | Input | Ground Truth | Segmentation | Eclipse fitting |
+
+    |---|---|---|---|
+
+    | [Ultrasound Image 1] | [Oval Mask 1] | [Black Oval 1] | [Blue Mask 1] |
+
+    | [Ultrasound Image 2] | [Oval Mask 2] | [Black Oval 2] | [Blue Mask 2] |
+
+    | [Ultrasound Image 3] | [Oval Mask 3] | [Black Oval 3] | [Blue Mask 3] |
+
+
+    the union area of the two masks. IoU ranges from 0 to 1, where a value closer
+    to 1 indicates better segmentation accuracy. It is given mathematically as:
+
+
+    \(IoU = \frac{TP}{TP + FP + FN}\) (14)
+
+
+    where TP is the number of true positive pixels, FP is the number of false positive
+    pixels, and FN is the number of false negative pixels.
+
+
+    2. Precision, Recall, and F1-Score: These metrics are commonly used in binary
+    segmentation tasks. Precision measures the proportion of correctly predicted positive
+    instances (true positives) out of all predicted positive instances. Recall (also
+    known as sensitivity) measures the proportion of true positive instances correctly
+    identified out of all actual positive instances. F1-score is the harmonic mean
+    of precision and recall, providing a single value to assess overall segmentation
+    performance. Mathematically, it is given as:
+
+
+    \(Precision = \frac{TP}{TP + FP}\) \n\(Recall = \frac{TP}{TP + FN}\) \n\(F1 -
+    Score = \frac{2 * Precision * Recall}{Precision + Recall}\) (15)
+
+
+    # 4.4. Results
+
+
+    The experimentation results of the proposed model are presented in Table 3. The
+    columns in the Table represent the input sample image taken from the dataset,
+    the available ground truth marked by the experienced sonographer, the segmentation
+    output of the proposed model, and the final result obtained when the eclipse fitted
+    with the input image.
+
+
+    The performance of the proposed model on basis of epochs to accuracy on basis
+    of area under eclipse taken from the segmented area and the available ground truth
+    and its corresponding loss is presented in Fig. 10.
+
+
+    ![](img/6b6056dba6e110e45c1a1524eb95a7df_10_0.png)
+
+
+    # (a) Accuracy (b) Loss Fig. 10. Epoch-by-Epoch accuracy and Loss analysis of
+    the proposed model.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'Table 4 Performance measures of proposed model on dataset distributed into
+    Training, Validation, and Testing.
+
+
+    | Training | | | | Validation | | | | Testing | | | |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|
+
+    | DC | DHC | MAPE | HD | DC | DHC | MAPE | HD | DC | DHC | MAPE | HD |
+
+    | 97.31 | 0.304 | 0.65 | 1.09 | 96.45 | 0.354 | 0.71 | 1.12 | 96.30 | 0.387 |
+    0.71 | 1.11 |
+
+
+    Table 5 Performance evaluation of the proposed model at various epoch sizes. The
+    presented results are the average results on the training dataset.
+
+
+    | Epochs | DC | DHC | MAPE | HC |
+
+    |---|---|---|---|---|
+
+    | E-50 | 92.68 | 0.495 | 0.88 | 1.87 |
+
+    | E-100 | 94.55 | 0.416 | 0.80 | 1.54 |
+
+    | E-150 | 95.89 | 0.372 | 0.74 | 1.20 |
+
+    | E-200 | 96.32 | 0.343 | 0.69 | 1.18 |
+
+    | E-250 | 97.31 | 0.304 | 0.65 | 1.09 |
+
+    | Average | 95.35 | 0.386 | 0.752 | 1.376 |
+
+
+    The experimentation results of the proposed model on various statistical performance
+    measure as defined in Eqs. (10)–(13) using the testing dataset is presented in
+    Table 4. The values presented in Table 4 are the average results of the experiment
+    on the complete database. The database comprises three parts i.e. Training, Validation,
+    and Testing. Table 4 shows the metric values as per the sample distribution.
+
+
+    It was also observed that the model performance has a dependency on the number
+    of epochs used in model training and validation. The analysis of model performance
+    is calculated using the various epoch sizes as shown in Table 5. On observation,
+    it was found that the accuracy of the model rises as the epoch count increases.
+    In this work, the experimentation was done on various epoch sizes and found that
+    till the epoch count of 250, the performance increases at an acceptable rate but
+    after that the performance almost becomes saturated.
+
+
+    However, the performance of the proposed model in estimating the size of the fetus''s
+    head circumference is presented in Table 6. The performance of calculating the
+    head circumference is estimated by finding the absolute difference in the head
+    circumference between the segmented output and the available ground truth. The
+    results in Table 6 show the sample images, their available ground truth with fetus
+    head circumference size, and the segmented region with estimated fetus head size.
+    The last column of Table 6 shows the absolute difference in the segmented result
+    and available ground truth. The results as shown
+
+
+    Table 6 Experimentation result of the proposed model on an estimation of Fetus
+    Head Circumference (FHC). Results are shown for the randomly selected images from
+    the training and validation set.
+
+
+    | Input | Ground truth | Segmentation | FHC_Grt (mm) | FHC_Seg (mm) | Abs Diff.
+    (mm) |
+
+    |---|---|---|---|---|---|
+
+    | [Image] | [Image] | [Image] | 71.96 | 73.24 | 1.28 |
+
+    | [Image] | [Image] | [Image] | 87.32 | 87.98 | 0.66 |
+
+    | [Image] | [Image] | [Image] | 67.84 | 68.97 | 1.13 |
+
+    | [Image] | [Image] | [Image] | 78.08 | 78.14 | 0.06 |
+
+    | [Image] | [Image] | [Image] | 74.31 | 75.55 | 1.24 |
+
+    | Average of Absolute Difference | | | | | 0.874 |'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Table 7 Experimentation result of the proposed model using other benchmark
+    performance measures. Results are shown for the randomly selected images from
+    the training and validation set.
+
+
+    | Input | Ground Truth | Segmentation | IoU | Precision | Recall | F1-Score |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | [Image] | [Image] | [Image] | 0.96 | 0.95 | 0.94 | 0.94 |
+
+    | [Image] | [Image] | [Image] | 0.95 | 0.95 | 0.94 | 0.94 |
+
+    | [Image] | [Image] | [Image] | 0.95 | 0.94 | 0.94 | 0.95 |
+
+    | [Image] | [Image] | [Image] | 0.96 | 0.96 | 0.94 | 0.94 |
+
+    | [Image] | [Image] | [Image] | 0.95 | 0.95 | 0.95 | 0.94 |
+
+    | **Average** | | | 0.95 | 0.94 | 0.94 | 0.95 |
+
+
+    in Table 6 are for the randomly selected five images from the Training and Validation
+    set. The last row of the table gives the average absolute difference for all the
+    images. It is found that the average absolute difference of the sample shown in
+    Table 6 is 0.874 mm. While for the whole Training and Validation dataset the average
+    absolute difference is 0.304 mm and 0.354 mm respectively.
+
+
+    The experimentation result of the proposed model on some of the state-of-art benchmark
+    performance measures are presented in Table 7.
+
+
+    # 5. Comparative analysis
+
+
+    The performance of the proposed model when compared with the state-of-art methods
+    is found satisfactory as the gains in results on different metrics for fetus segmentation
+    are on the higher side. Here we presented the quantitative analysis of the proposed
+    methodology in two forms i.e. comparative analysis with several state of art deep
+    models, with a transfer Learning aspect, and comparison with some of the existing
+    works on the HC18 dataset.
+
+
+    # 5.1. Quantitative comparison with benchmark models
+
+
+    The comparative analysis of the proposed methodology with some of the benchmark
+    deep models, initially designed for various other applications, was used for comparison
+    perspective. The models are used based on Transfer Learning, which means model
+    weights are carried
+
+
+    forward for new applications. Some of the models which are used for comparison
+    are UNet, WNet, 3D-UNet with Augmentation, VNet, and Cascaded Network. The comparative
+    analysis of these models with the proposed model is shown in Table 8.
+
+
+    The comparative analysis of the proposed model with the other state-of-art models
+    of segmentation using the benchmark performance measures is shown in Table 9.
+
+
+    # 5.2. Quantitative comparison with existing literature''s
+
+
+    The comparative analysis of the proposed methodology with some of the existing
+    works on the HC18 dataset is presented in Table 10.
+
+
+    # Table 8 Comparative Analysis of Proposed Model with existing Benchmark Models.
+
+
+    | Models | DC | DHC | MAPE | HC |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | UNet | 78.4 | 0.872 | 0.815 | 1.39 |
+
+    | UNet ++ | 96.54 | 0.297 | 0.68 | 1.15 |
+
+    | D-UNet+Augmentation | 84.62 | 0.657 | 0.724 | 1.2 |
+
+    | WNet | 80.34 | 0.773 | 0.797 | 1.27 |
+
+    | VNet | 85.48 | 0.587 | 0.701 | 1.18 |
+
+    | Cascaded Network | 90.15 | 0.446 | 0.687 | 1.12 |
+
+    | Proposed Model | 97.31 | 0.304 | 0.65 | 1.09 |'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Table 9
+
+    Comparative Analysis of Proposed Model with state-of-art segmentation models on
+    benchmark performance measures.
+
+
+    | Models | IoU | Precision | Recall | F1-score |
+
+    |---|---|---|---|---|
+
+    | UNet | 0.88 | 0.87 | 0.86 | 0.86 |
+
+    | UNet ++ | 0.96 | 0.94 | 0.95 | 0.94 |
+
+    | D-UNet + Augmentation | 0.91 | 0.90 | 0.91 | 0.90 |
+
+    | WNet | 0.89 | 0.89 | 0.87 | 0.88 |
+
+    | VNet | 0.92 | 0.90 | 0.88 | 0.89 |
+
+    | Cascaded Network | 0.94 | 0.92 | 0.94 | 0.93 |
+
+    | Proposed Model | 0.96 | 0.94 | 0.94 | 0.94 |
+
+
+    study. One of the limitations of this experimentation is the unavailability of
+    the open-source codes of the benchmark models. Due to the limited availability
+    of open-source codes of newly introduced models, some of the recent models can
+    be experimented with and compared in this work.
+
+
+    In the future, the model can be further refined by using other pre-trained models
+    as the backbone of the encoder and decoder with the attention and regression layer
+    to further increase the Dice metric and reduce the head circumference difference
+    between the segmented region and ground truth.
+
+
+    # ## 6. Conclusion and future work
+
+
+    This paper presents the new encoder-decoder model incorporated with the power
+    of the Attention gate with the regression layer to segment the fetus head from
+    the 2D ultrasound images. The proposed model is designed by using the dense blocks
+    in the encoding and decoding phase to minimize the problem related to gradient
+    descent. It is a must to use dense blocks because in the proposed model the soft
+    attention gate is used with skip connections to minimize the error loss. This
+    soft attention basis is the backpropagation where the gradients are used.
+
+
+    The proposed model is used to do semantic segmentation of the fetus''s head from
+    the 2D ultrasound images. Later, the segmented result is post-processed with the
+    help of the eclipse fitting, as the fetus is of shape oval. Thus, the proper fitting
+    of the eclipse helps to map the segmented result on the ultrasound image. In the
+    end, the fetus dimensional analysis is performed that can estimate the appropriate
+    size of the fetus to check its growth. The result analysis by using the proposed
+    methodology helps to identify the fetus with good precision having an average
+    absolute head circumference difference of 0.354 mm.
+
+
+    The proposed model is trained on the dataset of 10,989 images (after augmentation)
+    and tested on the dataset of 335 images. The average absolute head circumference
+    difference of the testing dataset is 0.387 mm. The experimentation results are
+    found satisfactory as the model can achieve the best performance even when experimented
+    with different statistical performance metrics. Besides head circumference analysis,
+    other metrics which are used in this work are the Dice coefficient, Mean average
+    percentage error, and Hausdorff Distance. The experimentation results with these
+    metrics using the proposed model give Dice-97.31%, MAPE-0.65%, and HD-1.09% on
+    training data. Dice-96.30%, MAPE-0.71%, and HD-1.11% accurate results.
+
+
+    Besides the above metrics, the performance of the model is also evaluated on some
+    other benchmark metrics that were used for segmentation like IoU, Precision, Recall,
+    and F-measure. The experimentation with these metrics also proves the efficacy
+    of the model with the achieved values of IoU-0.96, Precision-0.94, Recall-0.94,
+    and F1-score-0.94. The model is also compared with some other benchmark deep models
+    used for the segmentation of objects in different domains of
+
+
+    # ### Author statement
+
+
+    Somya Srivastava: Conceptualization, Methodology, Writing - original draft.
+
+    Ankit Vidyar thi: Supervision, Visualization, Investigation.
+
+    Shikha Jain: Reviewing, Results Validation, Language Correction.
+
+
+    # ### Data availability
+
+
+    No data was used for the research described in the article.
+
+
+    # ### Declaration of Competing Interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    # ## References
+
+
+    +   [1] Luciano Marcondes Machado Nardozza, Ana Carolina Rabachini Caetano, Ana
+    Cristina Perez Zamarian, Jaqueline Brandão Mazzola, Carolina Pacheco Silva, Vivian
+    Macedo Gomes Marçal, Thalita Frutuoso Lobo, Alberto Borges Peixoto, Edward Araújo
+    Júnior, Fetal growth restriction: current knowledge, Arch. Gynecol. Obstet. 295
+    (5) (2017) 1061–1077.
+
+    +   [2] Ulrike Schmidt, Dunja Temerincath, Katharina Bildstein, Benjamin Tschuy,
+    Jade Mayer, Mark Sittlner, Jörn Siemer, Sven Kehl, Finding the most accurate method
+    to measure head circumference for fetal weight estimation, Eur. J. Obstet. Gynecol.
+    Reprod. Biol. 178 (2014) 153–156.
+
+    +   [3] Hyunsook Seo, Masoud Badii Khuzaai, Varun Vasudevan, Charles Huang, Hongyi
+    Ren, Ruoxiao Xiao, Jiao Jia, Lei Xing, Machine learning techniques for biomedical
+    image segmentation: an overview of technical aspects and introduction to state-of-art
+    applications, Med. Phys. 47 (5) (2020) e2148–e167.
+
+    +   [4] Ankit Vidyar thi, Ankita Kansal, A survey report on digital images segmentation
+    algorithms, Int. J. Comp. Eng. Technol. (IJCET) 3 (2) (2012) 85–91.
+
+    +   [5] Ankit Vidyar thi, Namita Mittal, Brain tumor segmentation approaches:
+    Review, analysis and anticipated solutions in machine learning, 2015 9th National
+    Systems Conference (NSC), IEEE 2015, pp. 1–6.
+
+    +   [6] Shirwin Minaee, Yuri Y. Boykov, Fatih Porikli, Antonio J. Plaza, Nasser
+    Kehtarnavaz, Demetri Terzopoulos, Image segmentation using deep learning: A survey,
+    IEEE Transactions on Pattern Analysis and Machine Intelligence, 2021.
+
+    +   [7] Hariharan Ravishankar, Sahana M. Prabhu, Vivek Vaidya, Nitin Singhal,
+    Hybrid approach for automatic segmentation of fetal abdomen from ultrasound images
+    using deep learning, 2016 IEEE 13th International Symposium on Biomedical Imaging
+    (ISBI), IEEE 2016, pp. 779–782.
+
+    +   [8] Lu Wei, Jinglu Tan, Randall Floyd, Automated fetal head detection and
+    measurement in ultrasound images by iterative randomized hough transform, Ultrasound
+    Med. Biol. 31 (7) (2005) 929–936.
+
+    +   [9] Sandra M.G.V.B. Jardim, Mário A.T. Figueiredo, Segmentation of fetal ultrasound
+    images, Ultrasound Med. Biol. 31 (2) (2005) 243–250.
+
+
+    # Table 10
+
+    Comparative Analysis of Proposed Model with State-of-Art using HC18 dataset of
+    Ultrasound images.
+
+
+    | Ref | Method | DC | DHC | Average Diff | HC |
+
+    |---|---|---|---|---|---|
+
+    | Sobhaninia et al. [14] | Multi class Link Net | 96.84 ± 2.89 | 1.13 ± 2.69 |
+    2.12 ± 1.87 | 1.72±1.39 |
+
+    | Zeng et al. [24] | Optimized Deep Model | 97.61 ± 1.72 | - | 1.97 ± 1.89 | -
+    |
+
+    | Heuvel et al. [25] | Haar Features + Hough Transform with Random Forest | 97.0±2.8
+    | 0.6 ± 4.3 | 2.8 ± 3.3 | 2.0 ± 1.6 |
+
+    | Rong et al. [26] | GVF-Net | 95.53 ± 3.98 | -0.24 ± 3.23 | 2.42 ± 1.93 | 2.18
+    ± 2.40 |
+
+    | Al-Bander et al. [27] | Mask RCNN | 97.73±1.32 | 1.49±2.85 | 2.33±2.21 | 1.39±0.82
+    |
+
+    | Proposed Model | Regression-Attention UNet | 97.31±1.47 | 0.304±1.26 | 1.87±1.21
+    | 1.09±0.77 |'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '[10] Patricia García-Canadilla, Sergio Sanchez-Martinez, Fatima Crispi, Bart
+    Bijnens, Machine learning in fetal cardiology: what to expect, Fetal Diagn. Ther.
+    47 (5) (2020) 363–372.
+
+    [11] Qinghua Huang, Fan Zhang, Xuelong Li, Machine learning in ultrasound computer-aided
+    diagnostic systems: a survey, Biomed. Res. Int. 2018 (2018).
+
+    [12] Stav Gofer, Oren Haiik, Ron Bardin, Gilboa Yinnon, Sharon Perelman, Machine
+    learning algorithms for classification of first-trimester fetal brain ultrasound
+    images, J. Ultrasound Med. 41 (7) (2021) 1773–1779.
+
+    [13] Mohammad Yaqub, Rami Cujgent, Raffaele Napolitano, David Roundhill, Aris
+    Papageorghiou, Roberto Ardon, J. Alison, Noble, Volumetric segmentation of key
+    fetal brain structures in 3d ultrasound, International Workshop on Machine Learning
+    in Medical Imaging, Springer 2013, pp. 25–32.
+
+    [14] Zahra Sohrabinia, Shima Rafiei, Ali Emami, Nader Karimi, Kayvan Najarian,
+    Shadrokh Samavi, S.M. Reza, Soroushmehr, Fetal ultrasound image segmentation for
+    measuring biometric parameters using multi-task deep learning, 2019 41st Annual
+    International Conference of the IEEE Engineering in Medicine and Biology Society
+    (EMBC), IEEE 2019, pp. 6545–6548.
+
+    [15] Xu Xin Yang, Yi Wang Wang, Haoran Dou, Shengli Lu, Huaxuan Wen, Yi Lin, Peng-Ann
+    Heng, Dong Ni, Hybrid attention for automatic segmentation of whole fetal head
+    in prenatal ultrasound volumes, Comput. Methods Prog. Biomed. 194 (2020) 105519.
+
+    [16] Sylvia L. Rueda, Sana Fathima, Caroline L. Knight, Mohammad Yaqub, Aris T.
+    Papageorghiou, Babbii Rahmatullah, Alessandro Foi, Matteo Maggioni, Antonietta
+    Pepe, Jussi Tohka, et al., Evaluation and comparison of current fetal ultrasound
+    image segmentation methods for biometric measurements: a grand challenge, IEEE
+    Trans. Med. Imaging 33 (4) (2013) 797–813.
+
+    [17] Netanell Avidsris, Bossmat Yehuda, Ori Ben-Zvi, Daphne Link-Sourani, Liat
+    Ben-Sira, Elka Miller, Elena Zharkov, Dafna Ben Bashat, Leo Joskowicz, Automatic
+    linear measurements of the fetal brain on mri with deep neural networks, Int.
+    J. Comput. Assist. Radiol. Surg. 16 (9) (2021) 1481–1492.
+
+    [18] Baihong Xie, Ting Lei, Nan Wang, Hongmin Cai, Jianbo Xian, Miao He, Lihe
+    Zhang, Honqing Xie, Computer-aided diagnosis for fetal brain ultrasound images
+    using deep convolutional neural networks, Int. J. Comput. Assist. Radiol. Surg.
+    15 (8) (2020) 1303–1312.
+
+
+    [19] Xavier P. Burgos-Artizzu, David Coronado-Gutiérrez, Brenda Valenzuela-Alcazar,
+    Elisenda Bonet-Carne, Elisenda Eixarch, Fatima Crispi, Eduard Gratacós, Evaluation
+    of deep convolutional neural networks for automatic classification of common maternal
+    fetal ultrasound planes, Sci. Rep. 10 (1) (2020) 1–12.
+
+    [20] Zahra Sohrabinia, Ali Emami, Nader Karimi, Shadrokh Samavi, Localization
+    of fetal head in ultrasound images by multiscale view and deep neural networks,
+    2020 5th International Computer Conference, Computer Society of Iran (CSICC),
+    IEEE 2020, pp. 1–5.
+
+    [21] Abhishek Chaurasia, Eugenio Culurciello, Linknet: Exploiting encoder representations
+    for efficient semantic segmentation, 2017 IEEE Visual Communications and Image
+    Processing (VCIP), IEEE 2017, pp. 1–4.
+
+    [22] Mostafa Ghelchi Oghli, Shakiba Moradi, Nasim Sirjani, Reza Gerami, Payam
+    Ghaderi, Al Shabanzadeh, Hossein Arabi, Isaac Shiri, Habib Zaidi, Automatic measurement
+    of fetal head biometry from ultrasound images using deep neural networks, IEEE
+    Nuclear Science Symposium and Medical Imaging Conference (NSS/MIC), IEEE 2020,
+    pp. 1–3.
+
+    [23] Olaf Ronneberger, Philipp Fischer, Thomas Brox, U-net: Convolutional networks
+    for biomedical image segmentation, International Conference on Medical Image Computing
+    and Computer-Assisted Intervention, Springer 2015, pp. 234–241.
+
+    [24] Zeng Wen, Jie Liu, Jiaru Cheng, Lu Yiling, Efficient fetal ultrasound image
+    segmentation for automatic heart circumference measurement using a lightweight
+    deep convolutional neural network, Med. Phys. 49 (8) (2022) 5081–5092.
+
+    [25] Thomas L.A. van den Heuvel, Dagmar de Bruijn, Chris L. de Korte, Bram van
+    Ginneken, Automated measurement of fetal head circumference using 2d ultrasound
+    images, PLoS One 13 (8) (2018), e0200412.
+
+    [26] Yibiao Rong, Dehui Xiang, Weifang Zhu, Fei Shi, Enting Gao, Zhun Fan, Xinjian
+    Chen, Deriving external forces via convolutional neural networks for biomedical
+    image segmentation, Biomed. Opt. Exp. 10 (8) (2019) 3800–3814.
+
+    [27] Baidaa Al-Bander, Theib Al-Zbairri, Saeed Alzhrani, Bryan M. Williams, Yalin
+    Zheng, Improving fetal head contour segmentation by object localisation with deep
+    learning, Annual Conference on Medical Image Understanding and Analysis, Springer
+    2019, pp. 142–150.'
+  merge: -1
+  img_proc: true
