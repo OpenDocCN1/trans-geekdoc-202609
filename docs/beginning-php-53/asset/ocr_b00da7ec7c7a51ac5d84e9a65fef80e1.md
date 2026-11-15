@@ -1,0 +1,33 @@
+```
+// Retrieve all users
+$users = User::getAll();
+
+/*
+Add all the users to the database.
+Each user's modification time is updated
+before the user is added.
+*/
+for ( $i=0; $i < count( $users ); $i++ ) {
+    $users[$i]->updateModDate(); // Set the modification time
+    $users[$i]->insert(); // Insert the user
+}
+```
+
+By adding horizontal and vertical space around the comments, and aligning the two inline comments, the code becomes much more readable.
+
+Another good commenting strategy is to write your comments at the same time as you write your code, rather than after the fact. It's easier to write comments at this stage, while the code is still fresh in your mind. Also, because your comments describe the code's intention, commenting while coding encourages you to think more about how and why you're writing that particular block of code. In fact, for an extra level of discipline, try writing your comments before you write your code!
+
+As well as adding lots of helpful comments to make your code more readable, you can improve things further by using meaningful variable, function, and method names. The following code is clear enough that it doesn't need any commenting:
+
+```
+$jim = new User();
+$jim->setFirstName( "Jim" );
+$jim->setLastName( "Smith" );
+$jim->addToDatabase();
+```
+
+# Using phpDocumentor to Generate External Documentation
+
+Useful though in-code comments are, it can be easier for a developer to get a higher-level overview of an application if the documentation is separate from the code files.
+
+phpDocumentor is a PEAR package that automates the generation of external documentation files. It reads in your PHP script files, and uses the comments in your code to generate the documentation. By formatting your comments in a special way you can give phpDocumentor extra information about your code, such as the scope and data type of each variable, and the relationship between variables, functions, and classes.

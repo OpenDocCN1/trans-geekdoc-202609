@@ -1,0 +1,18 @@
+![](bbox=[0.23, 0.085, 0.68, 0.26])
+
+Figure 17-25
+
+# Summary
+
+This chapter discussed how to create, manipulate, and output images with PHP. In this chapter you:
+
++   - [ ] Learned the basics of computer images, including colors, coordinate systems, and image types
++   - [ ] Saw how to create bitmap images with `imagecreate()` and related functions, as well as allocate colors in an image
++   - [ ] Learned how to output images to the Web browser or to a file by using `imagejpeg()`, `imagegif()`, and `imagepng()`
++   - [ ] Looked at some of PHP's drawing functions, including `imagesetpixel()`, `imageline()`, `imagerectangle()`, `imageellipse()`, `imagearc()`, and `imagepolygon()`
++   - [ ] Saw how to open existing images with `imagecreatefromjpeg()`, `imagecreatefromgif()`, and `imagecreatefrompng()` so that you can manipulate them. By way of example, you applied a watermark image to an existing photograph, and created a thumbnail image based on an existing image. Along the way you looked at the concepts of transparency and opacity
++   - [ ] Added text to an image using `imagestring()` and `imagefttext()`
+
+The ability to generate and output images further extends the power of your PHP scripts. For example, you can create things that are tricky to do in HTML alone, such as pie charts and other diagrams. Furthermore, because you can manipulate existing images with PHP code, it’s easy to carry out tasks such as creating image gallery thumbnails and processing batches of images.
+
+The next chapter looks at an entirely different topic: regular expressions. These powerful tools let you search and manipulate strings of text in all sorts of useful ways. Before you read it, though, take a look at the following two image manipulation exercises.

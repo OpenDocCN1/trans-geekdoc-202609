@@ -1,0 +1,167 @@
+
+The location of the operators makes a difference. Placing the operator before the variable name causes the variable's value to be incremented or decremented before the value is returned; placing the operator after the variable name returns the current value of the variable first, then adds or subtracts one from the variable. For example:
+
+```
+$x = 5;
+echo ++$x; // Displays "6" (and $x now contains 6)
+$x = 5;
+echo $x++; // Displays "5" (and $x now contains 6)
+```
+
+Interestingly, you can use the increment operator with characters as well. For example, you can “add” one to the character B and the returned value is C. However, you cannot subtract from (decrement) character values.
+
+## Logical Operators
+
+PHP's logical operators work on Boolean values. Before looking at how logical operators work, it's worth taking a bit of time to explore Boolean values more thoroughly.
+
+As you've already seen, a Boolean value is either true or false. PHP automatically evaluates expressions as either true or false when needed, although as you've already seen, you can use settype() or casting to explicitly convert a value to a Boolean value if necessary.
+
+For example, the following expressions all evaluate to true:
+
+```
+1
+1 == 1
+3 > 2
+"hello" != "goodbye"
+```
+
+The following expressions all evaluate to false:
+
+```
+3 < 2
+gettype(3) == "array"
+"hello" == "goodbye"
+```
+
+In addition, PHP considers the following values to be false:
+
+- The literal value false
+- The integer zero (0)
+- The float zero (0.0)
+- An empty string ("")
+- The string zero ("0")
+- An array with zero elements
+- The special type null (including any unset variables)
+- A SimpleXML object that is created from an empty XML tag (more on SimpleXML in Chapter 19)
+
+All other values are considered true in a Boolean context.
+
+Now that you know how Boolean values work you can start combining Boolean values with logical operators. PHP features six logical operators, and they all work in combination with `true` or `false` Boolean values to produce a result of either `true` or `false`:
+
+| Operator | Example | Result |
+| :--- | :--- | :--- |
+| && (and) | $x && $y | true if both $x and $y evaluate to true; false otherwise |
+| and | $x and $y | true if both $x and $y evaluate to true; false otherwise |
+| || (or) | $x || $y | true if either $x or $y evaluates to true; false otherwise |
+| or | $x or $y | true if either $x or $y evaluates to true; false otherwise |
+| xor | $x xor $y | true if $x or $y (but not both) evaluates to true; false otherwise |
+| ! (not) | !$x | true if $x is false; false if $x is true |
+
+Here are some simple examples of logical operators in action:
+
+```
+$x = 2;
+$y = 3;
+echo ( ($x > 1) && ($x < 5) ) . "<br />";   // Displays 1 (true)
+echo ( ($x == 2) or ($y == 0) ) . "<br />";   // Displays 1 (true)
+echo ( ($x == 2) xor ($y == 3) ) . "<br />";   // Displays "" (false) because both
+                                                  // expressions are true
+echo ( !($x == 5) ) . "<br />";   // Displays 1 (true) because
+// $x does not equal 5
+```
+
+The main use of logical operators and Boolean logic is when making decisions and creating loops, which you explore in Chapter 4.
+
+You're probably wondering why the `and` and `or` operators can also be written as `&&` and `||`. The reason is that `and` and `or` have a different precedence to `&&` and `||`. Operator precedence is explained in a moment.
+
+## String Operators
+
+There's really only one string operator, and that's the concatenation operator, . (dot). This operator simply takes two string values, and joins the right-hand string onto the left-hand one to make a longer string.
+
+For example:
+
+```
+echo "Shaken, " . "not stirred";   // Displays "Shaken, not stirred"
+```
+
+You can also concatenate more than two strings at once. Furthermore, the values you concatenate don't have to be strings; thanks to PHP's automatic type conversion, non-string values, such as integers and floats, are converted to strings at the time they're concatenated:
+
+```
+$tempF = 451;
+
+// Displays "Books catch fire at 232.777777778 degrees C."
+echo "Books catch fire at " . ( (5/9) * ($tempF-32) ) . " degrees C.";
+```
+
+In fact, there is one other string operator — the combined assignment operator .= which was mentioned earlier in the chapter. It's useful when you want to join a new string onto the end of an existing string variable. For example, the following two lines of code both do the same thing — they change the string variable $x by adding the string variable $y to the end of it:
+
+```
+$x = $x . $y;
+$x .= $y;
+```
+
+## Understanding Operator Precedence
+
+With simple expressions, such as 3 + 4, it's clear what needs to be done (in this case, “add 3 and 4 to produce 7”). Once you start using more than one operator in an expression, however, things aren't so clear-cut. Consider the following example:
+
+```
+3 + 4 * 5
+```
+
+Is PHP supposed to add 3 to 4 to produce 7, then multiply the result by 5 to produce a final figure of 35? Or should it multiply 4 by 5 first to get 20, then add 3 to make 23?
+
+This is where operator precedence comes into play. All PHP operators are ordered according to precedence. An operator with a higher precedence is executed before an operator with lower precedence. In the case of the example, * has a higher precedence than +, so PHP multiplies 4 by 5 first, then adds 3 to the result to get 23.
+
+Here's a list of all the operators you've encountered so far, in order of precedence (highest first):
+
+| Precedence of Some PHP Operators (Highest First) |
+| :--- |
+| ++ -- (increment/decrement) |
+| (int) (float) (string) (array) (object) (bool) (casting) |
+| ! (not) |
+| * / % (arithmetic) |
+| + - . (arithmetic) |
+| < <= > >= <> (comparison) |
+| == != === !== (comparison) |
+| && (and) |
+| || (or) |
+| = += -= *= /= .= %= (assignment) |
+| and |
+| xor |
+| or |
+
+PHP has many more operators than the ones listed here. For a full list, consult http://www.php.net/operators.
+
+You can affect the order of execution of operators in an expression by using parentheses. Placing parentheses around an operator and its operands forces that operator to take highest precedence. So, for example, the following expression evaluates to 35:
+
+```
+( 3 + 4 ) * 5
+```
+
+As mentioned earlier, PHP has two logical “and” operators (&&, and) and two logical “or” operators (||, or). You can see in the previous table that && and || have a higher precedence than and and or. In fact, and and or are below even the assignment operators. This means that you have to be careful when using and and or. For example:
+
+```
+$x = false || true; // $x is true
+$x = false or true; // $x is false
+```
+
+In the first line, false || true evaluates to true, so $x ends up with the value true, as you'd expect. However, in the second line, $x = false is evaluated first, because = has a higher precedence than or. By the time false or true is evaluated, $x has already been set to false.
+
+Because of the low precedence of the and and or operators, it's generally a good idea to stick with && and || unless you specifically need that low precedence.
+
+## Constants
+
+You can also define value-containers called constants in PHP. The values of constants, as their name implies, can never be changed. Constants can be defined only once in a PHP program.
+
+Constants differ from variables in that their names do not start with the dollar sign, but other than that they can be named in the same way variables are. However, it's good practice to use all-uppercase names for constants. In addition, because constants don't start with a dollar sign, you should avoid naming your constants using any of PHP's reserved words, such as statements or function names. For example, don't create a constant called ECHO or SETTYPE. If you do name any constants this way, PHP will get very confused!
+
+Constants may only contain scalar values such as Boolean, integer, float, and string (not values such as arrays and objects), can be used from anywhere in your PHP program without regard to variable scope, and are case-sensitive.
+
+Variable scope is explained in Chapter 7.
+
+To define a constant, use the define() function, and include inside the parentheses the name you've chosen for the constant, followed by the value for the constant, as shown here:
+
+```
+define("MY_CONSTANT", "19"); // MY_CONSTANT always has the string value "19"
+echo MY_CONSTANT; // Displays "19" (note this is a string, not an integer)
+```

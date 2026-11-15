@@ -1,0 +1,28 @@
+| Variable | Description |
+|---|---|
+| `$_SERVER["REQUEST_URI"]` | The full URL of the currently running script, relative to the Web site’s document root, and including any query string (for example: /about/index.php?page=3) |
+| `$_SERVER["SCRIPT_FILENAME"]` | The absolute path to the running script (for example: /home/matt/mysite/htdocs/myscript.php) |
+| `$_SERVER["SCRIPT_NAME"]` | The URL of the currently running script, relative to the Web site’s document root. For example: /about/index.php. Note that this is subtly different to $_SERVER['PHP_SELF']. Whereas $_SERVER["PHP_SELF"] includes any extra path information (as stored in $_SERVER ["PATH_INFO"]), $_SERVER["SCRIPT_NAME"] discards such information |
+
+As with all external input, it’s unwise to trust the contents of $_SERVER variables. Most of them can be manipulated by your visitors in one way or another. Make sure you check, filter, or encode the values as appropriate.
+
+The following simple script outputs all of the values in the $_SERVER superglobal array:
+
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Server and script details</title>
+<link rel="stylesheet" type="text/css" href="common.css" />
+</head>
+<body>
+<h1>Server and script details</h1>
+<pre>
+<?php print_r( $_SERVER ); ?>
+</pre>
+</body>
+</html>
+```
+
+Figure 16-3 shows the output of the script running on a typical Apache Web server.

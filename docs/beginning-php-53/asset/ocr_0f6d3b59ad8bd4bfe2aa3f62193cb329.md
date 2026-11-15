@@ -1,0 +1,22 @@
+To test these methods, the script then creates a new Car object, $myCar, and sets five properties. The first three are actual properties in the Car class — $manufacturer, $model, and $color — so these properties get set to "Volkswagen", "Beetle", and "red". The fourth property, $engineSize, doesn’t exist in the class, so the __set() method is called; this in turn creates an array element in $extraData with a key of "engineSize" and a value of 1.8.
+
+Similarly, the fifth property, $otherColors, also doesn’t exist in the class, so __set() is called, creating an array element in $extraData with a key of "otherColors" that stores the passed-in value, which in this case is an array containing the strings "green", "blue", and "purple".
+
+Next, the script displays the values of some of the properties of the $myCar object. Notice that, to the calling code, the $engineSize property is as “real” as the $manufacturer property, even though the $engineSize property doesn’t exist in the Car class. The script also tries to retrieve the value of a property called $fuelType; because this doesn’t exist in the class or in the $extraData array, the __get() method returns null to the calling code. This is why no value is displayed in the page.
+
+Finally, the script dumps the contents of the $myCar object using print_r(). Notice that the extra “properties” — $engineSize and $otherColors — are stored inside the private $extraData array. (You can see that print_r() also displays private properties inside an object, which is useful for debugging.)
+
+Although the nonexistent properties were stored in a private array in this example, they could just as easily have been stored in a file or database table, or passed via an API (application programming interface) to another application. This gives you some idea of the power of __get() and __set().
+
+# Overloading Method Calls with __call()
+
+Just as you can use __get() and __set() to handle reading and writing nonexistent properties, you can also use __call() to handle calls to nonexistent methods of a class. Just create a method named __call() in your class that accepts the nonexistent method name as a string, and any arguments passed to the nonexistent method as an array. The method should then return a value (if any) back to the calling code:
+
+```
+public function __call( $methodName, $arguments ) {
+    // (do stuff here)
+    return $returnVal;
+}
+```
+
+__call() is very useful if you want to create a “wrapper” class that doesn’t contain much functionality of its own, but instead hands off method calls to external functions or APIs for processing.

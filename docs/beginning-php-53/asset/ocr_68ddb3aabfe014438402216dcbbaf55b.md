@@ -1,0 +1,53 @@
+This example, on the other hand, counts only the number of women in the members table:
+
+```
+mysql> SELECT COUNT( * ) FROM members WHERE gender = 'f';
++----------+
+| COUNT( * ) |
++----------+
+|        3 |
++----------+
+1 row in set (0.00 sec)
+```
+
+Notice that in both cases the MySQL tool reports that there is only one row in the result set. Although the first example selects seven rows from the members table, the count() aggregate function takes those seven rows and returns a single value (7). So the final result set only contains one row. Similarly, the second count() query reduces the three-row result to a single value of 3.
+
+The remaining aggregate functions work much as you'd expect. For example, this query returns the total number of visits to the book club Web site across all members:
+
+```
+mysql> SELECT SUM( numVisits ) FROM accessLog;
++------------------+
+| SUM( numVisits ) |
++------------------+
+|                9 |
++------------------+
+1 row in set (0.00 sec)
+```
+
+You can even use functions like min() and max() on dates. This query returns the date that the first member joined the club:
+
+```
+mysql> SELECT MIN( joinDate ) FROM members;
++----------------+
+| MIN( joinDate ) |
++----------------+
+| 2006-03-03     |
++----------------+
+1 row in set (0.02 sec)
+```
+
+# Eliminating Duplicate Results
+
+Occasionally a query returns more data than you actually need, even when using WHERE and LIMIT clauses. Say your accessLog table contains the following data:
+
+```
+mysql> SELECT * FROM accessLog;
++-----------+-----------+-----------+---------------------+
+| memberId  | pageUrl   | numVisits | lastAccess          |
++-----------+-----------+-----------+---------------------+
+| 1         | diary.php | 2         | 2008-11-03 14:12:38 |
+| 3         | books.php | 2         | 2008-11-08 19:47:34 |
+| 3         | contact.php | 1       | 2008-11-08 14:52:12 |
+| 6         | books.php | 4         | 2008-11-09 11:32:44 |
++-----------+-----------+-----------+---------------------+
+```

@@ -1,0 +1,68 @@
+level_changes:
+- line: 268
+  before: 2
+  after: 1
+- line: 340
+  before: 2
+  after: 1
+- line: 574
+  before: 2
+  after: 1
+- line: 676
+  before: 2
+  after: 1
+- line: 1033
+  before: 2
+  after: 1
+- line: 1345
+  before: 2
+  after: 1
+- line: 8316
+  before: 2
+  after: 1
+- line: 8318
+  before: 2
+  after: 1
+- line: 12732
+  before: 2
+  after: 1
+- line: 25105
+  before: 2
+  after: 1
+- line: 25409
+  before: 2
+  after: 1
+- line: 25513
+  before: 2
+  after: 1
+- line: 27096
+  before: 2
+  after: 1
+- line: 27427
+  before: 2
+  after: 1
+- line: 29281
+  before: 2
+  after: 1
+- line: 29465
+  before: 2
+  after: 1
+- line: 29664
+  before: 2
+  after: 1
+- line: 29808
+  before: 2
+  after: 1
+text_changes:
+- line: 9895
+  before: 第三部分：在实际中使用 PHP
+  after: 第三部分：在实践中使用 PHP
+- line: 19410
+  before: 第三部分：在实际中使用 PHP
+  after: 第三部分：在实践中使用 PHP
+- line: 19540
+  before: 第三部分：在实际中使用 PHP
+  after: 第三部分：在实践中使用 PHP
+- line: 21203
+  before: 第三部分：在实际中使用 PHP
+  after: 第三部分：在实践中使用 PHP

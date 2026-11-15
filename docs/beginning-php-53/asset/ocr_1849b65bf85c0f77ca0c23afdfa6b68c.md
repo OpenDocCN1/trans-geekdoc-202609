@@ -1,0 +1,43 @@
+# Try It Out Remember User Information
+
+In this example, you create a script that can store the visitor’s first name and location in two browser cookies, retrieve and display the information from the cookies, and delete the cookies on request.
+
+Save the following script as remember_me.php in your document root folder, then run the script in your browser. You’ll see a form asking you for your name and location. Enter the information and click Send Info. You’ll see a page similar to Figure 10-2. Try reloading the page in your browser, or reopening the URL in a new browser window. Notice how the script remembers your information, even though you’ve sent a fresh request to the server. You can even restart your browser and return to the page, and the script still remembers your details.
+
+Click the “Forget about me!” link to delete the cookies containing your details. The script redispays the user details form.
+
+```
+<?php
+if ( isset( $_POST["sendInfo"] ) ) {
+    storeInfo();
+} elseif ( isset( $_GET["action"] ) and $_GET["action"] == "forget" ) {
+    forgetInfo();
+} else {
+    displayPage();
+}
+
+function storeInfo() {
+    if ( isset( $_POST["firstName"] ) ) {
+        setcookie( "firstName", $_POST["firstName"], time() + 60 * 60 * 24 * 365,
+            "", "", false, true );
+    }
+
+    if ( isset( $_POST["location"] ) ) {
+        setcookie( "location", $_POST["location"], time() + 60 * 60 * 24 * 365, "",
+            "", false, true );
+    }
+
+    header( "Location: remember_me.php" );
+}
+
+function forgetInfo() {
+    setcookie( "firstName", "", time() - 3600, "", "", false, true );
+    setcookie( "location", "", time() - 3600, "", "", false, true );
+    header( "Location: remember_me.php" );
+}
+
+function displayPage() {
+    $firstName = ( isset( $_COOKIE["firstName"] ) ) ? $_COOKIE["firstName"] : "";
+    $location = ( isset( $_COOKIE["location"] ) ) ? $_COOKIE["location"] : "";
+} ?>
+```

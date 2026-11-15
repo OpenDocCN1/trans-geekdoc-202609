@@ -1,0 +1,25 @@
+Save this script as hello_with_style.php in your document root folder and try it out. The resulting page is shown in Figure 7-2. You can see how the same line of code within the function is used three times to produce three quite different-looking greetings.
+
+![](bbox=[0.268, 0.173, 0.816, 0.486])
+
+Figure 7-2
+
+# # Optional Parameters and Default Values
+
+The preceding hello_with_style.php script shows that functions can be pretty powerful. The single-line function within the script, helloWithStyle(), is capable of displaying the text "Hello, world!" using any font and text size supported by the user's browser.
+
+However, suppose that most of the time you wanted to use a font size of 1.5 em. It would be tiresome to have to include the second argument each time you called the function:
+
+```
+helloWithStyle( "Helvetica", 1.5 );
+helloWithStyle( "Times", 1.5 );
+helloWithStyle( "Courier", 1.5 );
+```
+
+Fortunately, PHP lets you create functions with optional parameters. You define an optional parameter as follows:
+
+```
+function myFunc( $parameterName=defaultValue ) {
+    // (do stuff here)
+}
+```

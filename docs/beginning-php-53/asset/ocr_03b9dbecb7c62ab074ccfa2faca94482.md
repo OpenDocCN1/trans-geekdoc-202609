@@ -1,0 +1,20 @@
+```
+$productCodes = array(
+    "SW" => "SuperWidget",
+    "MW" => "MegaWidget",
+    "WW" => "WonderWidget"
+);
+return $productCodes[$matches[1]] . " model #" . $matches[2];
+}
+?>
+</body>
+</html>
+```
+
+Run the script by opening its URL in your Web browser. Fill in the form with your email address and phone number, along with some product codes in the prescribed format, as shown in Figure 18-2. Click Send Order to process the form. Notice how the thank-you page (Figure 18-3) expands the product codes you entered into more meaningful product names.
+
+Try returning to the form and entering email addresses and phone numbers in different formats, then resending the form. You should find that, although the script is quite tolerant of different formats, it still rejects any email addresses or phone numbers that don't obey the standard formatting rules.
+
+![](bbox=[0.24, 0.435, 0.84, 0.73])
+
+Figure 18-2

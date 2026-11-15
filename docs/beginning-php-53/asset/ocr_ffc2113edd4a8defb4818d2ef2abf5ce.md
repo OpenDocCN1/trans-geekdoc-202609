@@ -1,0 +1,36 @@
+An object's destructor is called just before the object is deleted. This can happen because all references to it have disappeared (such as when the last variable containing the object is unset or goes out of scope), or when the script exits, either naturally or because of an error of some sort. In each case, the object gets a chance to clean itself up via its destructor before it vanishes.
+
+Here's an example that shows this concept:
+
+```
+class Person {
+    public function save() {
+        echo "Saving this object to the database...<br />";
+    }
+
+    public function __destruct() {
+        $this->save();
+    }
+}
+
+$p = new Person;
+unset( $p );
+$p2 = new Person;
+die( "Something's gone horribly wrong!<br />");
+```
+
+This code displays the following output:
+
+```
+Saving this object to the database...
+Something's gone horribly wrong!
+Saving this object to the database...
+```
+
+This Person class contains a destructor that calls the object's save() method to save the object's contents to a database before the object is destroyed. (In this example, nothing is actually saved; instead the message "Saving this object to the database..." is displayed.)
+
+A new Person object is created and stored in the variable $p. Next, $p is removed from memory using the built-in unset() function. Doing this removes the only reference to the Person object, so it's deleted. But just before it's removed, its __destruct() method is called, displaying the message "Saving this object to the database..."..
+
+Next the code creates another Person object, storing it in the variable $p2. Finally, the code raises an error using the built-in die() function, which causes the script to end with a "Something's gone horribly wrong!" message. Just before the script finally terminates, however, the object's destructor is called, displaying the "Saving this object to the database..." message.
+
+*As with constructors, a destructor of a parent class is not called when the child object is deleted, but you can explicitly call a parent's destructor with parent::__destruct().*
