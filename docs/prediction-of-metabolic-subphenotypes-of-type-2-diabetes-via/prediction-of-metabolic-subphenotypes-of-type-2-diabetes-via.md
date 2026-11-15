@@ -1,0 +1,789 @@
+# 基于连续血糖监测和机器学习的2型糖尿病代谢亚表型预测
+
+
+
+
+
+2型糖尿病和糖尿病前期的分类未考虑葡萄糖失调病理生理学中的异质性。本研究表明，糖尿病前期具有代谢异质性，且代谢亚表型可根据在居家环境中进行的标准化口服葡萄糖耐量试验（OGTT）期间，通过连续血糖监测仪（CGM）测得的葡萄糖曲线形状进行预测。对32名早期葡萄糖失调个体进行的金标准代谢检测显示，存在占优势或共占优势的亚表型（34%的个体为肌肉或肝源性胰岛素抵抗表型，40%的个体为β细胞功能障碍或肠促胰素作用受损表型）。使用这32名个体的OGTT葡萄糖时间序列训练的机器学习模型，对肌肉胰岛素抵抗、β细胞缺乏和肠促胰素作用受损的亚表型预测曲线下面积（AUC）分别为95%、89%和88%。利用居家OGTT期间CGM生成的葡萄糖曲线，模型对29名个体的肌肉胰岛素抵抗和β细胞缺乏亚表型的预测AUC分别为88%和84%。通过CGM在家中识别代谢亚表型，有助于对早期葡萄糖失调个体进行风险分层。
+
+2型糖尿病（T2D）影响全球超过5.37亿成年人1。糖尿病和糖尿病前期的定义基于葡萄糖升高的指标，但其底层生理学复杂且因人而异。传统上认为，发生T2D的个体同时存在胰岛素抵抗（IR）和β细胞功能障碍。然而，我们及其他研究者已表明，糖尿病前期和早期T2D个体表现出不同程度的胰岛素抵抗和β细胞功能障碍2,3，以及肠促胰素作用缺陷4和肝糖调节缺陷5。T2D的这些生理基础在明显高血糖发作前即已存在6，但在专门代谢研究单位之外不易识别。特别是，在明显高血糖前期阶段检测IR非常有用，因为其患病率很高7，不仅增加T2D的风险，还增加心血管疾病（CVD）、中风、高血压、非酒精性肝病和癌症的风险7–11，并且可通过减重和体育活动等生活方式干预在很大程度上逆转12,13。
+
+我们提出，对糖尿病前期、糖尿病风险因素和新诊断T2D的个体，根据其底层代谢生理学（而非血糖水平）进行分类是可行的，并可能实现糖尿病预防和治疗的精准医疗方法。代谢亚表型不仅可能对转化为T2D、糖尿病相关并发症和/或CVD的风险存在差异，还可能决定药物和生活方式疗法的相对疗效。现有多种针对葡萄糖调节特定生理成分的T2D获批治疗方法，几乎所有方法均已被证明可预防高风险个体进展为T2D^14–17。然而，糖尿病预防的疗效因人而异：肥胖且年轻的个体对二甲双胍的反应优于生活方式干预，而年龄较大且肥胖程度较低的个体对生活方式干预反应更好^14。同样，在开始T2D单药治疗的非胰岛素治疗糖尿病患者中，女性和BMI较高的患者对噻唑烷二酮类反应更好，而男性和BMI较低的患者对磺脲类反应更好^18。反应的异质性可能反映底层生理学的异质性，因为药物和生活方式干预均针对通向高血糖的不同生理通路。减重和运动等生活方式干预可降低胰岛素抵抗^19,20，而减少膳食糖和血糖负荷可能有助于β细胞缺乏和/或肠促胰素缺乏者；二甲双胍可减少肝糖生成，阿卡波糖可防止小肠中膳食碳水化合物的吸收，噻唑烷二酮类是强效胰岛素增敏剂，GLP-1受体激动剂可促进β细胞胰岛素分泌并通过减重逆转胰岛素抵抗。因此，根据底层代谢生理学对个体进行表型分析，可能有助于在早期阶段开展针对性治疗，以预防和/或治疗T2D。
+
+日益有兴趣识别可扩展且成本效益高的测试，以捕捉T2D表型的复杂性并为精准医疗方法提供信息。这些包括分区遗传风险评分^21、临床和人口学特征^22、葡萄糖代谢物生物标志物、临床结局^23–28，甚至可穿戴设备^2,29。血糖障碍最常见的测试是口服葡萄糖耐量试验（OGTT），该试验已标准化并在全球使用超过100年。空腹血浆葡萄糖（FPG）在识别早期糖代谢异常状态方面的局限性，导致OGTT在流行病学研究和临床实践中得到广泛应用。在3次或5次时间点OGTT期间，2小时葡萄糖、1小时葡萄糖、曲线下面积和曲线形状等指标，已被证明对预测进展为T2D、微血管疾病发生、心血管事件和总死亡率有用^30,31。此外，空腹和2小时葡萄糖升高与肝源性IR、肌肉IR及β细胞功能之间关系的差异，凸显了OGTT在定义底层病理生理学方面的潜力^30,32–37。执行此测试的负担限制了其临床应用，尤其是多时间点分析，该分析在1980年被简化为仅空腹和2小时时间点。随着连续血糖监测仪（CGM）的出现，可进行葡萄糖水平和OGTT的便捷时间序列测量。我们假设，针对标准化口服葡萄糖负荷产生的16点葡萄糖曲线的特征，可识别葡萄糖失调背后的特定代谢异常，如果可通过CGM导出的曲线复制，这将代表一种可扩展、实用且相对成本效益较高的方法，有助于促进T2D的个体化预防和治疗，从而增强糖尿病的精准医疗方法。
+
+在这项工作中，我们量化了葡萄糖失调生理基础在个体间差异的程度，个体可根据其代谢亚表型进行分类。我们还提出了一种基于机器学习的综合框架，利用16点口服葡萄糖耐量试验期间提取的葡萄糖时间序列特征来识别代谢亚表型。随后，我们证明这可以在家中使用CGM完成。该方法在血浆和CGM中识别底层代谢功能障碍的准确率，高于高血糖标准指标（例如，空腹血糖或HbA1c）、代谢性疾病现有生物标志物（例如，HOMA）以及代谢性疾病遗传风险评分（例如，HOMA）和代谢性疾病遗传风险标记。这些结果共同表明，CGM葡萄糖测量在定义早期糖代谢异常状态背后的病理生理学方面具有充分的潜力。
+
+## 结果
+
+### 研究概览及所研究队列
+
+我们纳入了56名无糖尿病病史且空腹血浆葡萄糖<126 mg dl^-1的个体，按美国糖尿病协会HbA1c标准（分别<5.7%、5.7–6.4%和≥6.5%），将其分为正常血糖（n = 33）、糖尿病前期（n = 21）以及2名T2D个体。我们随后采用机器学习方法，确定是否可以根据斯坦福大学医学院临床转化研究单位（CTRU）进行的16点OGTT的葡萄糖曲线形状，以及使用CGM在家中进行的两次OGTT的平均值（图5a），来区分代谢亚表型。代谢生理学采用如下所述的金标准检测进行表征。本研究纳入了三个队列：（1）用于训练和测试模型的初始队列（n = 32），（2）验证队列（n = 24）和（3）居家CGM队列（n = 29）。对于主要训练队列，36名参与者被纳入，32名完成了CTRU的全部代谢检测。这32名参与者被纳入最终分析，作为初始训练研究队列。另外招募并分析了一个独立验证队列，包含24名参与者。最后，为测试居家CGM用于代谢亚表型分析的可行性，29名参与者（初始队列中的5名和验证队列中的24名）参与了居家OGTT/CGM研究，并在CTRU完成了至少两次代谢检测。该队列还使我们能够比较两台居家CGM的一致性，以及居家CGM与CTRU CGM和CTRU OGTT期间血浆值的一致性。该方案已获斯坦福大学内部审查委员会批准，并依据《赫尔辛基宣言》和良好临床实践（方法）原则开展。队列特征概述于表1和补充表1中，各队列匹配良好，平均年龄55岁，BMI 26 kg m^-2，男女比例大致相等，74%为高加索人种，27%为亚洲人种，HbA1c为5.6%。
+
+图1 代谢亚表型研究概览。a，研究设计，本研究纳入了三个队列：（1）用于训练和测试模型的初始队列（n = 32），（2）验证队列（n = 24）和（3）居家CGM队列（n = 29）。参与者接受了使用金标准定量检测的深度代谢分析，旨在评估已知会导致葡萄糖失调和T2D的不同生理表型。OGTT后的葡萄糖时间序列通过机器学习（ML）方法用于预测四种代谢亚表型。b，频繁采样OGTT后葡萄糖时间序列的异质性。所有参与者的空腹血糖均<126 mg/dl，但按HbA1c值被归类为正常血糖、糖尿病前期和T2D。x轴上的时间0表示参与者饮用75克葡萄糖饮料的时间。黑色垂直虚线表示120分钟时间点，此时间点传统上用于糖尿病（血糖>200 mg/dl，红色虚线）或糖尿病前期（血糖140–199 mg/dl，橙色虚线）的临床诊断。c，用于推断β细胞功能的八个胰岛素分泌速率（C肽解卷积）示例，按胰岛素抵抗（SSPG）进行归一化。d，肠促胰素效应变异性示例。六个OGTT和IGI期间的C肽浓度示例。肠促胰素效应计算为OGTT和IGI之间的C肽曲线下面积除以OGTT期间C肽曲线下面积。左：肠促胰素反应差（S42和S32）。中：中度肠促胰素反应（S38和S05）。右：强肠促胰素反应（S01和S15）。
+
+
+
+
+### 口服葡萄糖负荷后独特的血糖反应
+
+为表征OGTT期间葡萄糖时间序列的动态模式，我们在斯坦福CTRU，在高度标准化的条件下（Methods）给予75克口服葡萄糖负荷后180分钟内，以5–15分钟间隔（共16个时间点）测量血浆葡萄糖浓度。随后，我们使用金标准定量测试进行了深度代谢分析，旨在评估四种已知会导致葡萄糖失调和2型糖尿病（T2D）的不同生理表型：肌肉胰岛素抵抗（IR）、β细胞功能障碍、肠促胰素作用受损和肝胰岛素抵抗（Fig. 1a和Methods）。
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_2_0.png)
+![](img/98a3f3f57492ea5acdd64ee476f69201_2_1.png)
+![](img/98a3f3f57492ea5acdd64ee476f69201_2_2.png)
+![](img/98a3f3f57492ea5acdd64ee476f69201_2_3.png)
+
+表1 | 研究队列的基线特征
+
+| 参与者特征 | 初始队列 (N=32) | 验证队列 (N=24) | 居家CGM队列 (N=29) |
+|---|---|---|---|
+| 年龄，岁 | 57.2±8.5 | 53.2±10.4 | 54.9±10.4 |
+| 性别，男/女 | 13/19 | 11/13 | 14/15 |
+| BMI，kg m⁻² | 26.5±4.2 | 25.9±5.1 | 25.6±4.8 |
+| 种族/族裔，高加索人/亚洲人/西班牙裔/非裔美国人 | 23/8/1/0 | 17/7/0/0 | 20/8/1/0 |
+| 收缩压，mmHg | 113±11.4 | 121.5±12.7 | 121.5±13.8 |
+| 舒张压，mmHg | 70±8.5 | 73.3±9.6 | 73.3±10.1 |
+| HbA1c，% | 5.6±0.4 | 5.6±0.5 | 5.6±0.5 |
+| 血糖状态（基于HbA1c），正常血糖/糖尿病前期/2型糖尿病 | 17/14/1 | 16/7/1 | 18/9/2 |
+| 空腹血浆葡萄糖，mg dl⁻¹ | 97.8±12.4 | 97.2±14.2 | 98.4±14.4 |
+| OGTT期间2小时葡萄糖，mg dl⁻¹ | 130.8±34.7 | 136.9±52.7 | 142.1±57.1 |
+| 总胆固醇，mg dl⁻¹ | 194.8±36.9 | 177.8±40.8 | 176.1±38.3 |
+| 甘油三酯，mg dl⁻¹ | 90.1±41.9 | 92.4±52.5 | 87.8±50.1 |
+| 高密度脂蛋白，mg dl⁻¹ | 66.3±22.7 | 58.0±22.3 | 59.1±21.9 |
+| 低密度脂蛋白，mg dl⁻¹ | 110.5±29.6 | 102.7±32.7 | 100.6±30.2 |
+| 空腹胰岛素，micromol l⁻¹ | 9.9±7.1 | 11.5±9.9 | 10.8±9.2 |
+| 高敏C反应蛋白，mg l⁻¹ | 1.3±1.2 | 1.95±1.9 | 1.7±1.8 |
+| 丙氨酸氨基转移酶，U l⁻¹ | 28.4±11.8 | 27.8±16.1 | 26.8±15.2 |
+
+连续变量以平均值±标准差报告，分类变量以频率报告。LDL，低密度脂蛋白；hs-CRP，高敏C反应蛋白；ALT，丙氨酸氨基转移酶。
+
+（Fig. 2a和Supplementary Table 2）。重要的是，在本研究中，尽管血糖状态不同，提示IR（>120 mg dl⁻¹）或IS（<120 mg dl⁻¹）的SSPG值也有所变化。例如，一些HbA1c升高（糖尿病前期范围）的参与者具有低SSPG值，提示胰岛素敏感，而另一些血糖正常的参与者则相当胰岛素抵抗（Fig. 2a中的示例）。这些数据强调，胰岛素抵抗并不等同于血糖升高。
+
+胰岛素分泌率采用广泛使用的金标准C肽去卷积法⁴²,⁴³计算，在OGTT期间的7个时间点（0、15、30、60、90、120和180分钟）测得C肽浓度。将胰岛素分泌按胰岛素抵抗（SSPG值）进行校正，以生成β细胞功能的衡量指标，称为处置指数（DI）⁴⁴,⁴⁵，这也是经过验证的金标准指标（Methods）。在本研究中，DI <1.58（我们队列中的第50个百分位数，扩展数据图1b）提示β细胞功能障碍，而DI ≥1.58提示正常β细胞功能。图1c展示了OGTT期间多个时间间隔内八名参与者的β细胞功能（DI）的异质性（所有参与者请参见扩展数据图2，以及Supplementary Table 2）。参与者S45和S57在75克口服葡萄糖挑战后早期时间间隔内具有高DI（分别为4.47和2.88），这表明“健康”的β细胞功能。另一方面，参与者S28和S58在口服葡萄糖负荷后具有极低DI（分别为0.67和0.98），表明β细胞功能障碍。如图2a–c所示，血糖正常者的β细胞功能通常较高。在糖尿病前期人群中，β细胞功能差异很大。
+
+肠促胰素效应（IE）采用金标准同血糖静脉葡萄糖输注试验（IIGI）⁴⁶测量，该试验通过静脉输注葡萄糖来镜像口服葡萄糖负荷后产生的葡萄糖曲线（OGTT与IIGI葡萄糖浓度的一致性请参见扩展数据图3）。在7个时间点（0、15、30、60、90、120和180分钟）定量测得OGTT相对于IIGI期间的C肽浓度差异，以反映最大高血糖期（扩展数据图4）。口服与静脉葡萄糖负荷后C肽浓度升高的程度反映了肠促胰素效应（Methods和Supplementary Table 2）。在本研究中，IE < 53.38%（我们队列中的第50个百分位数；扩展数据图1c）提示肠促胰素效应功能障碍，而IE ≥ 53.38提示正常肠促胰素效应。肠促胰素效应在参与者之间差异极大，且与β细胞功能或胰岛素抵抗无关，如图2d,g所示。
+
+图1d描绘了六名参与者口服（OGTT）与静脉（IIGI）葡萄糖负荷期间的C肽浓度。参与者S42和S32在OGTT和IIGI测试中的C肽反应差异很小，表明肠促胰素效应差（IE分别为4.80%和23.28%）。相比之下，参与者S01和S15在OGTT相对于IIGI期间表现出C肽的显著增加，符合高肠促胰素效应（IE分别为64.92%和78.59%）。值得注意的是，以胰高血糖素样肽-1（GLP-1）和胃抑制多肽（GIP）浓度测得的肠促胰素激素分泌在参与者之间也存在相当大的差异（扩展数据图5a,b）。有趣的是，IE与OGTT 2小时GIP浓度呈显著相关（r = 0.53，P = 0.002），而GLP-1与IE则无显著相关性（r = 0.3，P = 0.1）。
+
+肝胰岛素抵抗（肝IR）采用肝IR指数计算，该指数是一种经验证公式，用于对比在正血糖高胰岛素素clamp⁴⁷,⁴⁸期间测得的内源性葡萄糖产生（图2e，Methods和Supplementary Table 2）。在本研究中，肝IR指数 < 4.35（我们队列中的第50个百分位数）提示肝胰岛素敏感，而肝IR指数 ≥ 4.35提示肝IR（扩展数据图1d）。在我们的队列中，参与者S58和S44的肝IR最高，肝IR指数分别为5.03和4.98。相比之下，参与者S19和S14的肝IR最低，肝IR指数分别为3.57和3.61。
+
+我们开发了一种机器学习算法，利用葡萄糖时间序列预测代谢亚表型（图1a）。
+
+如图1b所示，尽管根据OGTT 2小时血浆葡萄糖水平分类相似（正常血糖：葡萄糖 < 140 mg dl⁻¹，糖尿病前期：140 ≤ 葡萄糖 < 200 mg dl⁻¹，糖尿病：葡萄糖 ≥ 200 mg dl⁻¹），但个体间的OGTT葡萄糖时间序列图谱差异很大。就上升和下降斜率、峰高和峰数等特征而言，曲线形状显著不同。以参与者S28、S42和S01为例，一些参与者出现了大幅快速的葡萄糖尖峰，而另一些（S21、S23）几乎没有波动。一些参与者出现多个葡萄糖尖峰（S42、S47、S55），而另一些只有一个尖峰（S32）。图1b中还可见其他差异。
+
+### 代谢检测的异质性反应
+
+肌肉胰岛素抵抗采用改良的胰岛素抑制试验（IST）测量，并表示为稳态血浆葡萄糖（SSPG）³⁵–⁴⁰。若SSPG <120 mg dl⁻¹，则将参与者归类为胰岛素敏感（IS）；若SSPG ≥120 mg dl⁻¹，则归类为胰岛素抵抗（IR）。我们对IR的界定涵盖了此前描述⁴¹中490名健康志愿者SSPG分布上方50%的个体。这包括了SSPG出现“中度”升高、更准确地定义为“非-IS”的人群。该值也代表了我们研究队列分布模式中的一个自然切点（扩展数据图1a），且具有临床吸引力，因为SSPG > 120 mg dl⁻¹的个体，即使只是中度IR，也对针对IR的生活方式和药物干预有反应。如前所述⁴¹，SSPG值跨度很大，从40（参与者S19）到278 mg dl⁻¹（参与者S38）。
+
+
+
+
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_4_0.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_4_1.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_4_2.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_4_3.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_4_4.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_4_5.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_4_6.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_4_7.png)
+
+Fig. 2. 代谢异质性与优势代谢亚型的确定。a. 按 HbA1c 排序的本队列四项代谢措施的详细说明。b. 根据 SSPG（mg dl⁻¹）值对肌肉胰岛素抵抗（IR）进行分类（SSPG ≤ 120 时为胰岛素敏感（IS），SSPG > 120 时为 IR）。c. 根据处置指数（DI）（(pmol dl)⁻¹/(kg min)）对 β 细胞功能进行分类：DI > 2.2 时为正常，1.2 ≤ DI ≤ 2.2 时为中间，DI ≤ 1.2 时为功能障碍。d. 根据测量的肠促胰素效应（IE，%）进行分类：IE > 64 时为正常，39 ≤ IE ≤ 64 时为中间，IE < 39 时为功能障碍。e. 根据肝脏 IR 指数对肝脏 IR 进行分类：肝脏 IR 指数 > 3.95 时为 IS，3.95 ≤ 肝脏 IR 指数 ≤ 4.8 时为中间，肝脏 IR 指数 > 4.8 时为 IR。f. 热图显示每位参与者各项代谢措施的标准化偏差分数（方法）。β 细胞功能和肠促胰素效应值已进行反转，使较高的正值代表更大的异常。高正偏差（深红色）表示在异常方向上（例如，较高的 IR 或较低的肠促胰素效应）与研究人群平均值的偏差更大，而高负偏差（浅黄色）表示比平均人群更健康的代谢表型。g. 成对相关性网络显示四项代谢措施标准化偏差之间的关联。使用 Pearson 相关系数（−1 < r < 1）来确定每种关系的强度，其中 r = 1“深橙色”表示强正相关，r = −1“深青色”表示强负相关。边上的星号符号表示两个相应代谢亚型之间的相关性具有统计学意义（P < 0.05）。h. 本队列所有个体按降序排列并按使用 HbA1c 测量的血糖状态着色的 T2D 多基因风险评分（PRS）。g 和 h 中的 P 值使用针对 Pearson 相关性的 t 检验计算（评估相关性为零的零假设）。
+
+### 优势代谢亚型计算
+
+对于每位参与者，我们尝试确定哪项代谢过程受损最严重，从而根据其“优势”或共优势代谢亚型对个体进行分类。这种分类在临床上将有助于指导针对不同生理过程的不同疗法的治疗顺序。分类包括计算四项代谢措施各自的标准差值，作为与队列均值的偏差（方法）。均值的正偏差（在图 2f 的热图中显示为红色或深红色）指示不健康方向，而负偏差（在热图中显示为浅橙色或黄色）指示健康方向。图 2f 突出了我们队列中每位个体每项代谢量的差异性偏差。例如，对于参与者 S42，肠促胰素效应是偏差最严重的代谢亚型，而对于参与者 S23，β 细胞功能是偏差最严重的——这种方法允许根据偏差最大的指标对个体进行分类，这被称为其代谢亚型。大多数个体（n = 16）只有一个偏差最严重的代谢亚型（方法和补充表 3），其中 β 细胞功能最为常见（n = 5），其次是肌肉 IR 和肠促胰素缺乏（各 n = 4），然后是肝脏 IR（n = 3）。13 名参与者具有共优势代谢亚型（补充表 3），其中肝脏 IR 和肌肉 IR，以及 β 细胞和肠促胰素缺乏的患病率最高（各 n = 4）。只有三名个体（S35、S47、S57）无法通过此方法分类为具有优势或共优势代谢表型。在队列水平上，我们观察到肌肉 IR 水平高的个体也具有高水平的肝脏 IR（r = 0.73，P = 10⁻³）（图 2g）。确实，共有 13 名个体（34%）患有肌肉、肝脏或合并型 IR。共有 13 名个体在 β 细胞功能障碍或肠促胰素缺乏方面具有优势或共优势（40%）。β 细胞功能障碍与肌肉 IR 呈显著相关性（r = 0.6，P = 2 × 10⁻⁴），但与受损的肠促胰素效应无相关性（r = 0.33，P = 0.06）（图 2g）。受损的肠促胰素效应与肌肉或肝脏 IR 无显著关联（r = 0.25，P = 0.17 和 r = 0.21，P = 0.24，分别）。这些数据表明，几乎所有处于正常血糖或糖尿病前期状态的个体都可以根据基础代谢生理学进行分类，IR 亚型和胰岛素分泌亚型之间的分布大致平衡。
+
+### 多基因风险评分作为血糖水平的预测指标
+
+每位参与者均使用全基因组阵列进行基因分型，并基于此前开发和验证的 338 个 T2D 风险独立信号，通过计算 T2D 多基因风险评分（PRS<sub>T2D</sub>）来量化 T2D 的遗传易感性（方法和补充表 4）。图 2h 显示 PRS<sub>T2D</sub> 与 HbA1c 水平相关（r = 0.48，P = 0.005）。一个显著的例外是女性参与者 S07（研究时年龄 37 岁，BMI 26.3 kg m⁻²），尽管其 HbA1c 为正常血糖（5.1%）、肌肉胰岛素敏感性和 β 细胞功能（SSPG = 60 mg dl⁻¹；DI = 2.58；图 2b,c）以及中等肠促胰素效应和肝脏 IR（IE = 63.7%，肝脏 IR 指数 = 4.3；图 2d,e），但其 PRS<sub>T2D</sub> 仍高达 0.9。如预期，PRS<sub>T2D</sub> 与 SSPG（r = 0.26，P = 0.14）、肝脏 IR（r = 0.28，P = 0.1）、HOMA-IR（r = 0.3，P = 0.08）、BMI（r = 0.18，P = 0.29）和甘油三酯（r = 0.22，P = 0.21）呈正相关，但未达到显著水平。此外，PRS<sub>T2D</sub> 与 DI（r = –0.2，P = 0.25）、IE（r = –0.16，P = 0.36）、HOMA-B（β 细胞功能的替代标志物）（r = –0.32，P = 0.06）和高密度脂蛋白（HDL）（r = –0.28，P = 0.12）呈负相关，但未达到显著水平。
+
+### OGTT 期间葡萄糖响应曲线的特征可识别代谢亚型
+
+我们的主要目标是确定是否可以从标准 OGTT 测试获得的葡萄糖时间序列响应中预测代谢亚型（补充表 5）。为实现此目标，我们开发了一个强大的机器学习框架，其中特征通过两种方法从 OGTT 葡萄糖时间序列中提取：（1）OGTT 葡萄糖时间序列的工程特征（OGTT_G_Features）和（2）减少表征方法（OGTT_G_ReducedRep），该方法使用 2 维向量表示每个经过标准化和平滑的 OGTT 曲线（图 3a）。在第一种方法（OGTT_G_Features）中，我们从 OGTT 葡萄糖时间序列中提取了 14 个特征（方法）。图 3b 显示，OGTT 葡萄糖时间序列中的多个提取特征与代谢亚型呈显著相关（P < 0.05，在图 3b 中用“X”标记）。曲线下面积（AUC）和增量（i）AUC 是与肌肉 IR 呈显著正相关的两个最高特征（分别 r = 0.59，P = 3 × 10⁻⁴，r = 0.57，P = 6 × 10⁻⁴）。120 min 时的血糖水平（G<sub>120</sub>）和 iAUC 是与 β 细胞功能负相关最高的两个指标（分别 r = –0.59，P = 4 × 10⁻⁴，r = –0.55，P = 3 × 10⁻³）。正（p）AUC 和血糖峰值（G_Peak）是与肠促胰素效应呈显著负相关的两个主要特征（分别 r = –0.72，P = 6 × 10⁻⁵，r = –0.68，P = 2 × 10⁻⁵）。最后，从峰值到 180 min 结束的斜率（S_peakEnd）和基线血糖水平（G<sub>0</sub>）是与肝脏 IR 呈显著相关的两个主要参数（分别 r = –0.51，P = 0.002，r = 0.47，P = 0.006）。
+
+在第二种方法（OGTT_G_ReducedRep）中，我们首先对 16 个时间点的 OGTT 葡萄糖时间序列进行 Z-score 标准化和平滑（扩展数据图 6）。然后，我们提取了 OGTT 葡萄糖时间序列的减少表征（方法）。有趣的是，使用 OGTT 葡萄糖时间序列的减少表征，肌肉 IR 和 IS 之间出现了非常清晰的分离（图 3c）。此外，OGTT 葡萄糖时间序列的减少表征很容易区分三类 β 细胞功能（正常、中间和功能障碍）（图 3d）。β 细胞功能正常的个体位于第一主成分（PC1）的正侧。相比之下，β 细胞功能障碍的个体位于 PC1 的负侧，β 细胞功能中等的个体位于两者之间。肠促胰素效应类别也观察到同样的模式（图 3e），其中肠促胰素效应正常与受损的参与者分离得相当良好。肠促胰素效应中等的参与者与两个更极端的群体重叠。另一方面，使用处理后的 OGTT 葡萄糖时间序列的减少表征无法区分肝脏 IR 类别（图 3f）。
+
+我们计算了前 2 个主成分、OGTT_G_ReducedRep 与提取特征 OGTT_G_Features 之间的相关性（扩展数据图 7）。我们发现前两个主成分与 14 个提取的曲线特征之间存在关系。前两个主成分用于在特征空间中降低维度，同时捕获主要方差（PC1 和 PC2 分别为 43.8% 和 18%）。例如，PC1 上较高的正值与较低的 iAUC 相关，根据图 3b，这与肌肉 IS 相关。图 3c 也证实了这种关系，即肌肉-IS 参与者聚集在 PC1 较高的正值方向。
+
+### 使用机器学习从葡萄糖时间序列预测代谢亚型
+
+使用处理后的 OGTT 葡萄糖时间序列的减少表征，肌肉 IR、β 细胞功能和肠促胰素效应类别的可分性表明，可以使用学习框架对这些类别进行强大的预测。对于每种特征提取方法（OGTT_G_Features 和 OGTT_G_ReducedRep），数据集被分为训练集和测试集。对于每种代谢亚型，我们优化了四种不同分类器的超参数：随机森林（RF）、带径向基函数核的支持向量机（SVM-RBF）、带线性核的支持向量机（SVM-linear）和带 L1 正则化的逻辑回归（LR-L1）。
+
+
+
+
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_6_0.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_6_1.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_6_2.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_6_3.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_6_4.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_6_5.png)
+
+图3 | 葡萄糖时间序列的特征可识别代谢亚表型。a, 使用OGTT葡萄糖时间序列预测代谢亚表型的机器学习（ML）框架。b, 上部：OGTT葡萄糖时间序列特征与代谢亚表型之间的关系。使用皮尔逊相关系数（−|r|< 1）来确定每个关系的强度，其中 r = 1 ‘深红色’ 表示强正相关，r = −1 ‘深蓝色’ 表示强负相关。热图某些单元格中的“x”表示曲线特征与相应代谢亚表型之间的相关性具有统计学意义（P < 0.05）。P值使用皮尔逊相关性的t检验计算（评估相关性为零的原假设）。底部：部分葡萄糖曲线特征的示意图。G_t 表示时间 t 的血浆葡萄糖水平；CV，变异系数；G_Peak，峰值葡萄糖水平；CurveSize，葡萄糖时间序列长度；T_baseline2peak，从基线到峰值的时间；S_baseline2peak，从基线到峰值葡萄糖水平的斜率；S_peak2end，峰值与结束处（t = 180 min）葡萄糖值之间的斜率（Methods）。c–f，OGTT葡萄糖时间序列的主成分分析（PCA），根据使用金标准代谢检测的分类进行着色：肌肉胰岛素抵抗（IR）（c）（通过SSPG测量）、β细胞功能（d）（通过处置指数测量）、肠促胰素效应（e）和肝脏IR（f）（通过肝脏IR指数推断）。图上的文本表示参与者ID。
+
+对模型进行了全面评估，以确保训练模型的泛化性和稳健性（Methods）。我们通过将性能与当前使用的代谢替代指标进行比较，对使用OGTT时间系列的两组提取特征的代谢亚表型预测进行了基准测试，这些指标包括 (1) 人口统计学（年龄、性别、BMI、种族和参与者T2D家族史）；(2) T2D多基因风险评分（PRS）和人口统计学；(3) 实验室检查（HbA1c和FPG）和人口统计学；(4) HOMA-B（扩展数据图8a），一种β细胞功能的替代标志物，和人口统计学；(5) HOMA-IR（扩展数据图8b）和人口统计学；(6) 松田指数（扩展数据图8c），
+
+### Table 2 | 每个代谢亚表型和每个特征集的最佳模型性能指标
+
+| 预测任务 | 特征集 | auROC | 灵敏度 | 特异性 | F1 | 精确度 | 准确率 | 分类器 |
+|---|---|---|---|---|---|---|---|---|
+| 肌肉胰岛素抵抗 | 人口统计学 | 0.37 | 0.55 | 0.56 | 0.55 | 0.58 | 0.56 | SVM-RBF |
+| | 人口统计学 + PRS | 0.21 | 0.38 | 0.26 | 0.27 | 0.25 | 0.29 | RF |
+| | 人口统计学 + 实验室检查 | 0.69 | 0.67 | 0.65 | 0.66 | 0.68 | 0.66 | LR-L1 |
+| | 人口统计学 + 肠促胰素 | 0.38 | 0.85 | 0.34 | 0.66 | 0.58 | 0.59 | SVM-RBF |
+| | 人口统计学 + HOMA-B | 0.44 | 0.98 | 0.02 | 0.40 | 0.50 | 0.53 | LR-L1 |
+| | 人口统计学 + HOMA-IR | 0.77 | 0.74 | 0.71 | 0.73 | 0.76 | 0.72 | LR-L1 |
+| | 人口统计学 + 松田指数 | 0.83 | 0.85 | 0.42 | 0.71 | 0.66 | 0.65 | SVM-linear |
+| | 人口统计学 + OGTT_G_Curve_Features | 0.90 | 0.90 | 0.75 | 0.83 | 0.81 | 0.82 | SVM-linear |
+| | 人口统计学 + OGTT_G_ReducedRep | 0.95 | 0.81 | 0.91 | 0.85 | 0.93 | 0.87 | LR-L1 |
+| β细胞功能 | 人口统计学 | 0.49 | 0.69 | 0.30 | 0.52 | 0.60 | 0.51 | SVM-RBF |
+| | 人口统计学 + PRS | 0.46 | 0.77 | 0.12 | 0.35 | 0.42 | 0.44 | LR-L1 |
+| | 人口统计学 + 实验室检查 | 0.50 | 0.82 | 0.18 | 0.59 | 0.62 | 0.56 | SVM-linear |
+| | 人口统计学 + 肠促胰素 | 0.72 | 0.93 | 0.01 | 0.54 | 0.43 | 0.53 | SVM-RBF |
+| | 人口统计学 + HOMA-B | 0.48 | 0.98 | 0.01 | 0.52 | 0.22 | 0.58 | SVM-linear |
+| | 人口统计学 + HOMA-IR | 0.57 | 0.71 | 0.19 | 0.55 | 0.55 | 0.50 | LR-L1 |
+| | 人口统计学 + 松田指数 | 0.44 | 0.74 | 0.29 | 0.61 | 0.62 | 0.56 | SVM-RBF |
+| | 人口统计学 + OGTT_G_Curve_Features | 0.84 | 0.78 | 0.72 | 0.79 | 0.82 | 0.75 | SVM-linear |
+| | 人口统计学 + OGTT_G_ReducedRep | 0.89 | 0.82 | 0.73 | 0.82 | 0.85 | 0.78 | SVM-linear |
+| 肠促胰素效应 | 人口统计学 | 0.62 | 0.51 | 0.88 | 0.63 | 0.81 | 0.72 | LR-L1 |
+| | 人口统计学 + PRS | 0.53 | 0.33 | 0.67 | 0.37 | 0.41 | 0.54 | RF |
+| | 人口统计学 + 实验室检查 | 0.80 | 0.64 | 0.78 | 0.66 | 0.74 | 0.71 | RF |
+| | 人口统计学 + 肠促胰素 | 0.68 | 0.60 | 0.64 | 0.54 | 0.56 | 0.62 | RF |
+| | 人口统计学 + HOMA-B | 0.68 | 0.62 | 0.61 | 0.55 | 0.57 | 0.61 | RF |
+| | 人口统计学 + HOMA-IR | 0.75 | 0.60 | 0.76 | 0.63 | 0.71 | 0.69 | RF |
+| | 人口统计学 + 松田指数 | 0.48 | 0.72 | 0.56 | 0.63 | 0.56 | 0.62 | SVM-linear |
+| | 人口统计学 + OGTT_G_Curve_Features | 0.90 | 0.75 | 0.74 | 0.71 | 0.73 | 0.74 | SVM-RBF |
+| | 人口统计学 + OGTT_G_ReducedRep | 0.88 | 0.79 | 0.72 | 0.73 | 0.71 | 0.75 | LR-L1 |
+| 肝脏胰岛素抵抗 | 人口统计学 | 0.63 | 0.71 | 0.47 | 0.60 | 0.57 | 0.58 | LR-L1 |
+| | 人口统计学 + PRS | 0.45 | 0.34 | 0.61 | 0.33 | 0.36 | 0.51 | SVM-RBF |
+| | 人口统计学 + 实验室检查 | 0.78 | 0.90 | 0.45 | 0.74 | 0.66 | 0.67 | SVM-RBF |
+| | 人口统计学 + 肠促胰素 | 0.73 | 0.70 | 0.60 | 0.63 | 0.62 | 0.64 | RF |
+| | 人口统计学 + HOMA-B | 0.50 | 0.52 | 0.48 | 0.48 | 0.50 | 0.48 | SVM-RBF |
+| | 人口统计学 + HOMA-IR | 0.88 | 0.80 | 0.80 | 0.78 | 0.83 | 0.80 | LR-L1 |
+| | 人口统计学 + 松田指数 | 0.90 | 0.82 | 0.71 | 0.76 | 0.78 | 0.76 | SVM-linear |
+| | 人口统计学 + OGTT_G_Curve_Features | 0.84 | 0.78 | 0.73 | 0.76 | 0.76 | 0.75 | RF |
+| | 人口统计学 + OGTT_G_ReducedRep | 0.54 | 0.73 | 0.52 | 0.65 | 0.64 | 0.63 | SVM-linear |
+
+肌肉IR的替代标志物和人口统计学；以及 (7) OGTT_2h 时的总GIP和GLP-1浓度（一种经过优化的肠促胰素效应替代标志物）和人口统计学。每个模型在每个特征集和每个代谢亚表型上的性能，使用接收者操作特征曲线下面积（auROC）、灵敏度、特异性、精确度、F1-得分和准确率进行评估（补充表6）。对于每个代谢亚表型和每个特征集，模型首先根据F1-得分排序，然后根据灵敏度排序，并将顶级模型选为表现最佳的模型。表2汇总了每个代谢亚表型和每个测试特征集的表现最佳模型的所有性能指标。在所有测试特征以及OGTT_G_Features和OGTT_G_ReducedRep之间的auROC测量中进行了统计显著性检验，使用Wilcoxon秩和检验（补充表8）。所有P值均使用Bonferroni方法进行多重检验校正。
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_8_0.png)
+
+图4 | 从OGTT葡萄糖时间序列提取的特征与现有替代标志物相比，对代谢亚表型预测进行基准测试。柱状图表示每个代谢亚表型及其对应特征集的表现最佳模型的平均auROC。误差条表示所测auROC的标准差。总共，对每个代谢亚表型评估了九个包含人口统计学的特征集：两组从OGTT葡萄糖曲线获得的特征（OGTT_G_Features和OGTT_G_ReducedRep）、T2D多基因风险评分（PRS）以及六项当前使用的措施，包括仅人口统计学（年龄、性别、BMI、种族和参与者T2D家族史）、实验室检查（HbA1c和FPG）、HOMA-B、HOMA-IR和松田指数（均为胰岛素抵抗的替代标志物），以及肠促胰素（OGTT 2h时的总GIP和GLP-1浓度，为肠促胰素效应的优化替代标志物）。在训练集上训练了四个分类器，y轴表示每个代谢亚表型和每个特征集的测试集上表现最佳分类器的auROC。所有测试特征与OGTT_G_ReducedRep之间auROC测量差异的统计显著性是使用Wilcoxon秩和检验确定的。
+
+图4总结了使用每个特征集对代谢亚表型的表现最佳分类器的auROC。使用OGTT_G_ReducedRep预测肌肉IR的auROC高达0.95，而OGTT_G_Features预测肌肉IR的auROC为0.90。重要的是，OGTT_G_ReducedRep预测肌肉IR的预测能力显著高于任何当前使用的特征，包括我们经过优化的指标：人口统计学 + 实验室检查（auROC = 0.69，P = 1.2 × 10⁻¹⁹）、人口统计学 + HOMA-IR（auROC = 0.77，P = 7 × 10⁻¹⁵）和人口统计学 + 松田指数（auROC = 0.83，P = 2.9 × 10⁻⁸）。使用OGTT_G_ReducedRep预测β细胞功能障碍的auROC为0.89，显著高于人口统计学 + 实验室检查（auROC = 0.5，P = 7.6 × 10⁻²⁴）、人口统计学 + HOMA-B（auROC = 0.48，P = 1.28 × 10⁻²⁵）和人口统计学 + HOMA-IR（auROC = 0.57，P = 7.8 × 10⁻²⁰）。使用OGTT_G_ReducedRep可预测肠促胰素缺乏（auROC = 0.88），使用OGTT_G_Features可预测（auROC = 0.90），两者均高于人口统计学 + 肠促胰素（auROC = 0.68，P = 2.6 × 10⁻¹²）和人口统计学 + 实验室检查（auROC = 0.8，P = 2.9 × 10⁻³）。对于肝脏IR，OGTT_G_Features显示出有希望的表现（auROC = 0.84）；然而，松田指数（auROC = 0.90，P = 0.86）和HOMA-IR（auROC = 0.88，P = 1）表现更优，但不具有统计学显著性。因此，可以基于OGTT葡萄糖时间序列的特征为不同的代谢亚表型构建模型。
+
+基于初始队列的模型（图4和Methods）。在独立验证队列上，并使用在CTU通过OGTT获得的血浆葡萄糖系列，肌肉IR的预测auROC为0.72，β细胞功能的预测auROC为0.76（图5e）。
+
+### 通过连续血糖监测进行肌肉胰岛素抵抗和β细胞功能的居家预测
+
+为了证明在家进行此测试的实际价值以及我们所提框架的可重复性，我们试图调查使用CGM进行居家检测来预测肌肉IR和β细胞功能的可行性。29名个体（n = 24）的队列特征在表1中总结。参与者接受了胰岛素抵抗（SSPG测试）和β细胞功能（16点OGTT，带有针对SSPG调整并表示为DI的C肽去卷积）的金标准检测，如所述，以及在标准化条件下在家进行的两次OGTT，在此期间，葡萄糖模式由CGM在单个10天会话中捕获（Dexcom G6 pro）（图5a和补充表5）。
+
+参与者在禁食10–12小时后，饮用75克葡萄糖（NERL Trurol, Thermo Fisher），剂量为10盎司（与CTU OGTT所用方法相同）。他们被指示遵循饮食和体力活动指南以标准化测试，尽量减少环境影响对葡萄糖反应的影响（Methods）。由SSPG定义为IR（胰岛素抵抗）或IS（胰岛素敏感）的参与者的CGM曲线显示在图5b中。即使通过肉眼检查曲线，IR和IS个体之间的明显差异也很明显：与IS相比，IR个体的葡萄糖峰值更高（P < 0.05），葡萄糖曲线更宽且保持较高水平，因此AUC更高。这种模式与我们之前的发现一致（图3b），当时在CTU以各种间隔测量了血浆葡萄糖水平。
+
+我们对通过不同OGTT方法获得的葡萄糖时间序列的一致性进行了彻底调查，包括 (1) 在葡萄糖摄入后从血浆样本中测量葡萄糖水平，同时佩戴
+
+### 在独立队列中验证代谢亚表型预测
+
+接下来，我们在一个单独的独立队列中验证了肌肉IR和β细胞功能的预测，该队列包含24名个体，在年龄、性别、BMI和HbA1c方面匹配（图5a、表1和Methods）。按照之前描述的方法，在CTU的标准化条件下进行了频繁采样的OGTT以及IST，以获得肌肉IR和β细胞功能的金标准测量。该模型专注于从葡萄糖时间序列中提取的特征（OGTT_G_Features），如前所述并在图3a中演示。对于每个参与者，使用表现最佳的训练
+
+
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_9_0.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_9_1.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_9_2.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_9_3.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_9_4.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_9_5.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_9_6.png)
+
+a CGM 和 (2) 在家庭环境中使用 CGM。图 5c 展示了四名参与者的葡萄糖时间序列的代表性示例，每位参与者在不同 OGTT 设置下都有四个葡萄糖时间序列：在临床研究单元中同时采集的两个序列，一个静脉测量，另一个通过 CGM 测量，以及通过两次重复的居家 OGTT 使用 CGM 获取的两个序列（所有参与者的所有时间序列见扩展数据图 9）。尽管时间序列之间存在微小差异，但所有设置下的葡萄糖时间序列模式保持一致。不同设置之间的一致性已为每位参与者量化并在图 5d 中描绘。
+
+**Fig. 5 | 针对独立队列的验证及居家 CGM 检测的转化。** a, 验证队列的研究设计及通过 CGM 进行的居家 OGTT 测试，用于预测肌肉 IR 和 β 细胞功能。参与者在研究单位接受了胰岛素抵抗（SSPG 测试）和 β 细胞功能（16 点 OGTT）的金标准检测，并经 SSPG 校正的 C 肽去卷积，按所述表达为 DI)，还在标准化条件下在家中接受了两次 OGTT，葡萄糖模式由 CGM 在单个 10 天会话内捕获（Dexcom G6 pro）。b, OGTT 期间 IR（红色）和 IS（绿色）之间的 CGM 葡萄糖曲线，较粗线条代表平均曲线。c, 四名参与者的示例，每人有四条葡萄糖曲线；两条曲线来自临床环境下的静脉采样和 CGM OGTT，两条曲线来自通过 CGM 进行的居家 OGTT。参与者 S28 和 S93 为 IS（SSPG < 120 mg dl⁻¹），参与者 S32 和 S103 为 IR（SSPG > 120 mg dl⁻¹）。黑色垂直虚线代表 120 分钟时间点，此时测量血糖水平用于糖尿病的临床诊断。血糖值高于 200 mg dl⁻¹（红色虚线）表示糖尿病状态，低于 140 mg dl⁻¹（橙色虚线）表示正常血糖状态，140–200 mg dl⁻¹ 之间表示糖尿病前状态。d, 通过不同 OGTT 设置测量的葡萄糖时间序列之间的相关性（临床环境 vs 居家，血浆 vs 通过 CGM 的间质液，以及通过 CGM 进行的 2 次居家 OGTT 的可重复性）。每个点代表同一人两条葡萄糖序列之间的相关性。高正相关表明时间序列模式在测试设置中得到保留。每个框内的线条代表每个 OGTT 设置的中位 Pearson 相关系数。框的下缘和上缘分别对应数据的第 25 百分位数（Q1）和第 75 百分位数（Q3）。e, 在 CTRL 期间使用来自独立验证队列的血浆葡萄糖序列对肌肉 IR 和 β 细胞功能预测性能的评估。f, 在居家 OGTT 期间使用来自独立验证队列的 CGM 葡萄糖序列对肌肉 IR 和 β 细胞功能预测性能的评估。g, 在家中 OGTT 期间使用来自居家队列的 CGM 葡萄糖序列进行交叉验证对肌肉 IR 和 β 细胞功能预测性能的评估。
+
+一般而言，在临床环境中通过血浆和 CGM 测量获得的葡萄糖时间序列之间的 Pearson 相关系数为 0.81（P < 2.2 × 10⁻¹⁶）；两次居家使用 CGM 的 OGTT 之间的相关系数为 0.86（P < 2.2 × 10⁻¹⁶）；临床环境下静脉测得的时间序列与两次居家 OGTT 时间序列的平均值之间的相关系数为 0.80（P < 2.2 × 10⁻¹⁶）。这些高相关性表明，居家进行的 CGM 测量与临床研究单元获得的测量相似，并且在标准化条件下进行时彼此之间具有高度一致性，以尽量减少环境扰动。
+
+葡萄糖时间序列曲线的特征按图 3a 所述之前的方法提取。基于两条居家 CGM 曲线平均值的肌肉 IR（auROC = 0.88）和 β 细胞功能（auROC = 0.80）分类，其表现甚至优于基于独立测试集中血浆曲线的分类（图 5f）。这种性能提升可能归功于特征工程和 CGM 连续测量的高效信息提取，后者包含的信息远多于静脉采样（后者测量频率较低）。仅基于 CGM 数据的交叉验证对肌肉 IR 显示出相似的性能（auROC = 0.88），而 β 细胞功能的预测进一步提高（auROC = 0.84）（图 5g）。
+
+## 讨论
+
+2 型糖尿病及其前驱期糖尿病前目前是基于血糖水平而非潜在病理生理学来定义的。然而，其机制基础复杂，多种不同的病理生理过程共同参与。在此，我们证明，血糖范围从正常血糖到糖尿病前的个体，在四种不同的生理过程中表现出明显的异质性，这四种过程均会导致葡萄糖代谢紊乱，包括肌肉 IR、β 细胞功能障碍、肠促胰素作用受损和肝 IR。我们清楚地表明，这些表型不一定与传统的葡萄糖指标（如 HbA1c）相关，因此无法通过这种方式估计。使用金标准生理测试，并将每个个体的值表示为相对于队列均值的相对偏差，我们表达了每个过程异常的程度。大多数个体表现出单一主导代谢亚表型或两个共显性表型。这些通常分为以 IR 为主的亚表型（肌肉和肝 IR），占队列的 34%，或以胰岛素分泌为主的亚表型（β 细胞和肠促胰素缺乏），占队列的 40%。肌肉 IR 和肝 IR 高度相关，并且经常表现出共显性。这表明，从临床分类角度来看，肌肉 IR 和肝 IR 可能合并为一组，归类为“胰岛素抵抗”，而已知可改善胰岛素抵抗的疗法（如饮食或药物减重（包括 GLP-1 或双重 GLP-1/GIP 受体激动剂）、体育活动、二甲双胍、噻唑烷二酮类）可作为初始治疗。β 细胞和肠促胰素缺乏表型共同占据了大多数患者，可能对类似的治疗策略敏感，这些策略针对胰岛素分泌，因为这是这两种亚表型病理生理学中的共同分母。这些包括增强或替代胰岛素分泌或肠促胰素作用的药物（例如磺脲类、格列类、DPP4 抑制剂、GLP-1 激动剂或 GLP-1-GIP 双受体激动剂，或胰岛素）。只有 9% 的参与者无法分类为具有主导或共显性代谢亚表型，因此表明使用葡萄糖“曲线形状”方法来识别潜在生理学可以为糖尿病预防或治疗的靶向方法提供信息。
+
+从历史上看，将 2 型糖尿病亚型分为更具体的亚型一直缺乏可行的可扩展标准化诊断测试。对潜在代谢进行表征所需的费力且具有侵入性的研究测试限制了其在研究环境之外的使用，而诸如 HOMA-IR 之类的替代指标仅能解释 40% 的胰岛素抵抗⁴¹，并且受限于不同实验室胰岛素浓度缺乏标准化。对血糖失调潜在生物学的最新进展以及针对多条不同通向高血糖途径的药物治疗的发展，使得基于生理学的糖尿病前和 2 型糖尿病亚型分类比以往任何时候都更加重要。
+
+事实上，关于“肠促胰素”效应的科学发现促使了针对 2 型糖尿病的全新一类有效药物疗法的开发。其他类别的降糖药物，以及饮食减重和运动，均针对胰岛素抵抗、β 细胞功能、肝糖生产和尿糖重吸收。这些药物和生活方式干预中的大多数不仅已被证明能降低 2 型糖尿病患者的血糖，还能显著降低糖尿病前个体进展为 2 型糖尿病的风险¹⁴⁻¹⁶,¹⁸,⁵⁰。因此，如果能在每个个体中识别病理生理学，靶向治疗和精准医疗方法将成为可能。考虑到 1300 万糖尿病患者中有 95% 被归为一类 2 型糖尿病，且越来越多的治疗选择可用，是时候考虑对 2 型糖尿病进行亚型分类了。然而，以前基于简单实验室检测或“聚集”在一起的临床/人口学标志的尝试，并不适合基于靶向潜在生理学的真正精准治疗方法。因此，使用纵向测量和机器学习方法的葡萄糖曲线形状代表了根据潜在生理学进行的成功亚型分类，值得在评估靶向治疗相对疗效的试验中进行检验。
+
+我们的研究从生理亚表型入手，然后寻找一种可在诊所和家庭中使用的生物标志物（葡萄糖曲线形状）。
+
+
+
+
+生理学亚型分类的前提是一项实用、准确、可及且标准化的检测。胰岛素抵抗、胰岛素分泌和肠促胰素效应的金标准检测需要在研究单位使用静脉输注，且操作繁琐、有创且昂贵，因此既不可扩展也不实用。因此，我们寻求验证一种更实用的指标，例如葡萄糖曲线的形状，特别是通过CGM获得的曲线，该指标可用于临床环境。OGTT检测相对更可行，并已被广泛研究，其潜力不仅在于基于2小时葡萄糖识别糖尿病，还在于预测发生T2D、CVD和总死亡率的风险20,31。此外，OGTT过程中2至5个时间点的葡萄糖在多项研究中已被证明与基础生理学相关30,32–37。简单指标（如1小时葡萄糖峰值、峰值时间、低于基线的最低值、2小时与1小时或基线葡萄糖的相对高度）被证实与胰岛素抵抗和β细胞功能相关32–34。大量出版物表明，单相与双相曲线形状与胰岛素抵抗、β细胞功能障碍及糖尿病风险相关35–37。由于这些分析的简单性，以及采样有限可能漏掉葡萄糖峰值的风险，且大多数血糖正常个体呈单相曲线导致假阳性率较高，因此已采用更复杂的建模方法31,37,51。
+
+孕妇的功能主成分分析（PCA）能够差异性地预测妊娠糖尿病的发生51，而隐类轨迹分析37识别出四种曲线类型，这些类型根据胰岛素抵抗程度和β细胞功能有所不同，并预测了糖尿病、心血管事件和总死亡率31。本研究结果通过将机器学习框架应用于分析OGTT（16个时间点）的动态葡萄糖时间序列响应，扩展了之前研究的结果，并证明其能够比目前可用的检测（包括替代生物标志物、临床-人口学特征和多基因风险评分）更好地识别胰岛素抵抗、β细胞缺陷和肠促胰素缺陷。该机器学习框架预测肝性IR的能力并不优于HOMA-IR。然而，鉴于肌肉和肝性IR之间的高相关性，我们提议将这两种IR亚表型视为单一IR表型可能更为审慎。尽管复杂方法利用OGTT预测潜在代谢表型的潜力在不断增加，但OGTT检测仍然给患者带来负担，限制了其广泛的临床应用。
+
+在本研究中，我们旨在评估由CGM生成的葡萄糖曲线是否具有类似的能力来识别潜在代谢生理学。此类检测可以在家中方便地进行，且可行且成本低廉。我们的结果表明，当将其应用于标准化OGTT后由CGM生成的葡萄糖曲线时，相同的机器学习算法可以准确识别胰岛素抵抗。最佳性能是通过在一周内在标准化条件下进行的两次居家OGTT的平均值获得的。事实上，OGTT后两次居家CGM曲线的平均值优于CTRU中OGTT后获得的血浆葡萄糖值，这可能是由于测量频率较高。通过CGM进行的居家OGTT的葡萄糖曲线特征的提取方式与CTRU中频繁采样OGTT的提取方式相似（图3a）。我们已将范围内百分比和范围外百分比作为可能的特征进行了测试52–55；然而，这些并未提高模型性能。这主要是因为我们仅在180分钟的会话中使用了它们，而不是整个10天会话。此外，范围内百分比和范围外百分比适用于糖尿病患者，他们通常葡萄糖升高（高血糖），或正在使用胰岛素并出现低血糖。我们的队列主要由血糖正常和糖尿病前期患者组成。关于OGTT的一个主要担忧是先前指出的在特定时间点葡萄糖的个体内变异性56。这部分可能但不完全是由环境压力源引起的（例如，吃晚餐或零食太晚、外出就餐、饮酒、晚间运动或禁食时间过长、早晨压力或咖啡、地点或时间改变、或饮用OGTT的速度）。我们通过详细的患者指导控制了这些因素，居家OGTT的个体内变异性最低，CGM在所有时间点的变异系数为11%。这与OGTT期间2小时血浆葡萄糖的已发表16.7%56相比较为有利。居家CGM的高可重复性也可能是因为可以维持相似条件，以及我们评估的是曲线形状而非单一时间点的变异性，后者可能更易受变异性影响，因为我们注意到有些曲线形状相似但相对于同一参与者获得的另一条曲线向上、向下、向右或向左移动。如果该方法进入临床进行广泛应用，将重要的是最大限度地减少导致OGTT血糖反应变异性的环境压力源，这可以通过简单的使用说明来实现。
+
+本研究的局限性包括人口学特征相对同质，主要由中年白种人组成。我们的BMI和血糖范围足够广泛。进一步研究基于种族、民族和性别以及年龄和更广泛BMI亚组的预测潜在差异将具有参考价值。当前结果不适用于HbA1c在6.5%或以下（饮食控制或新发轻度糖尿病）的极轻度病例以外的T2D。我们的两名糖尿病患者此前未被诊断，HbA1c为6.5%且空腹葡萄糖正常，因此不能反映更进阶的糖尿病。需要进行额外研究以确定该方法是否可应用于更进阶高血糖的T2D个体。目前，该方法最大的效用似乎在于为糖尿病风险个体诊断潜在生理亚表型。还需要注意的是，我们使用了3小时OGTT，结果与2小时OGTT相比可能有所不同。其次，尽管OGTT的可重复性历史上并不完美，但我们显示居家OGTT期间生成的两条CGM曲线之间具有高相关性，变异系数可接受（11%），这可能是由于我们努力确保环境条件的标准化。将重要的是在标准化条件下进行两次此类检测，如果一次与另一次差异巨大，则应进行第三次检测，并由于假设的环境混杂因素而排除离群值。所需居家检测的最佳次数可在未来研究中确定。此外，本研究中使用的肝性IR指数基于一种经过与金标准检测验证的公式，而不是金标准检测本身。因此，它不如我们其他高度精确的代谢指标精确。这可能解释了与HOMA-IR或Matsuda指数相比，从葡萄糖时间序列预测肝性IR的性能不理想。
+
+总结，我们证明糖代谢紊乱的基础代谢生理学在个体之间差异很大，并且存在占优势或共同占优势的代谢亚表型，这对治疗/预防T2D的精准方法具有意义，因为存在针对不同生理成分的干预措施。我们还表明，模拟口服葡萄糖挑战后的葡萄糖时间序列响应可以识别这些代谢亚表型。葡萄糖时间序列的特征可以识别肌肉IR、β细胞缺乏和肠促胰素缺乏，其预测能力优于标准临床和实验室指标、公认的血浆替代标志物以及多基因风险评分。我们还表明，使用在受控条件下进行的居家OGTT期间生成的两条CGM葡萄糖曲线的平均值，预测能力会更强，以尽量减少环境混杂。因此，我们建议，使用OGTT期间的葡萄糖时间序列特征（包括使用CGM的居家OGTT）来识别不同的代谢亚表型，可能有助于早期识别高危个体，随后可针对性地进行药物和生活方式干预以预防T2D。这些结果展示了新技术如何释放代谢健康经典检测的潜力。如果患者，
+
+
+在家进行OGTT的可操作性和可行性的提高，可能产生一种适于广泛使用的代谢检测，用于识别代谢表型以进行风险分层和靶向治疗。因此，当前结果支持使用CGM根据OGTT期间葡萄糖曲线的形状来定义代谢亚表型，并值得开展试验，以评估基于已识别亚表型的靶向治疗的相对疗效。
+
+## Methods
+
+## 方法
+
+This study is part of the Precision Diets for Diabetes Prevention clinical trial (NCT03919877).
+
+本研究是“精准饮食预防糖尿病”临床试验（NCT03919877）的一部分。
+
+### Study participants
+
+### 研究参与者
+
+The study protocol and clinical investigation were approved by the Stanford University School of Medicine Human Research Protection Office (Institutional Review Board #43883). Participants provided written informed consent. Participants were recruited from the San Francisco Bay Area via locally placed advertisements online, in local newspapers and during faculty lectures to the community. Participants were screened with a medical history and physical examination in the Stanford University Clinical and Translational Research Unit (CTRU), where vital signs, fasting blood plasma glucose and baseline haemotocrit, alanine aminotransferase (ALT) and creatinine were obtained. Eligibility criteria included age of 30–70 years, BMI of 23–40 kg m⁻², absence of major organ disease, absence of type 2 diabetes defined by personal history or fasting glucose ≥126 mg dl⁻¹, uncontrolled hypertension, malignancy, chronic inflammatory conditions, use of any medications known to alter blood glucose or insulin sensitivity, haematocrit <30, creatinine above the normal range and ALT >2-fold above the upper limit of the normal range.
+
+本研究方案和临床检查已获得斯坦福大学医学院人体研究保护办公室（机构审查委员会 #43883）的批准。参与者提供了书面知情同意书。参与者通过在线、当地报纸以及社区教职员工讲座期间张贴的本地广告，从旧金山湾区招募。参与者在斯坦福大学临床与转化研究单位（CTRU）接受病史和体格检查筛查，在那里测得了生命体征、空腹血浆葡萄糖及基线血细胞比容、丙氨酸氨基转移酶（ALT）和肌酐。入选标准包括年龄30–70岁、BMI 23–40 kg m⁻²、无主要器官疾病、无2型糖尿病（根据个人病史或空腹葡萄糖 ≥126 mg dl⁻¹定义）、无未控制高血压、恶性肿瘤、慢性炎症性疾病、未使用任何已知会改变血糖或胰岛素敏感性的药物、血细胞比容<30、肌酐高出正常范围以及ALT高出正常上限2倍以上。
+
+Initial cohort. A total of 36 participants enrolled and 32 completed all medical tests and were included in the final analyses as the main study cohort (also called training cohort) (Table 1 and Supplementary Table 1).
+
+初始队列。共有36名参与者入组，32名完成了所有医学检测，并作为主要研究队列（也称为训练队列）纳入最终分析（表1和补充表1）。
+
+Validation cohort. An independent cohort of 24 individuals completed OGTT and IST in the CTRU, as well as measurement of HbA1c and lipid panel.
+
+验证队列。24名独立个体在CTRU完成了OGTT和IST，以及HbA1c和血脂谱的测定。
+
+At-home CGM cohort. The validation cohort plus 5 of the initial cohort (n = 29) was used for CGM analysis both in the CTRU (they were measured simultaneously during the OGTT test with plasma sampling and a blinded Dexcom G6 CGM), and two at-home glucose-tolerance tests on separate mornings under standardized conditions (see below).
+
+在家CGM队列。验证队列加上初始队列中的5名（n = 29）被用于CGM分析，既在CTRU中进行（他们在OGTT测试期间，与血浆采样和未揭盲的Dexcom G6 CGM 同时测量），也在标准化条件下在不同早晨进行两次在家葡萄糖耐量测试（见下文）。
+
+### Quantitative metabolic physiological tests
+
+### 定量代谢生理测试
+
+All tests were performed in the Stanford CTRU after a 10-h overnight fast.
+
+所有测试均在斯坦福CTRU，于过夜禁食10小时后进行。
+
+#### (1) Frequently sampled OGTT.
+
+#### (1) 频繁采样的口服葡萄糖耐量试验。
+
+Participants were instructed to avoid celebratory or restrictive eating and unusual physical activity for 3 days before performing the test, fast 10–12 h before the test, have no strenuous exercise after 17:00 the evening before the test and no smoking or using a nicotine patch the morning of the test. Dynamic plasma glucose profiles were obtained after administration of a 75-g oral glucose load over 5 min (Brand Trutol, Thermo Fisher, 75 g in a 10-oz serving). Plasma samples were drawn from an antecubital intravenous catheter drawn at 16 timepoints (−10, 0, 10, 15, 20, 30, 40, 50, 60, 75, 90, 105, 120, 135, 150 and 180 min). Glucose level was measured at the timepoints using the oximetric method; insulin and C-peptide using the Millipore radioimmunoassay assay, both at 7 timepoints (0, 15, 30, 60, 90, 120 and 180 min); GLP-1 using the Millipore ELISA EZGLPIT-36K kit, GIP using the Millipore ELISA EZHGIP-54K kit, and glucagon using the Mercodia ELISA 10-1271-01 kit, all at 4 timepoints (0, 30, 60 and 120 min). Insulin, C-peptide, GLP-1, GIP and glucagon were measured at the Core Lab for Clinical Studies, Washington University School of Medicine in St. Louis. From the baseline sample (at 0 min), HbA1c, fasting plasma glucose, insulin, triglyceride and HDL cholesterol levels were determined.
+
+接受测试的参与者被嘱咐在测试前3天避免庆祝或限制饮食以及不寻常的体力活动，测试前禁食10–12小时，测试前一晚17:00后不进行剧烈运动，测试当天早晨不吸烟或不使用尼古丁贴片。在5分钟内给予75克口服葡萄糖负荷（Brand Trutol，Thermo Fisher，10盎司份量中的75克）后，获得了动态血浆葡萄糖剖面。从肘前静脉导管在16个时间点（-10、0、10、15、20、30、40、50、60、75、90、105、120、135、150和180分钟）采集血浆样本。在不同时间点使用氧化酶法测定葡萄糖水平；使用Millipore放射免疫分析法测定胰岛素和C-肽，均在7个时间点（0、15、30、60、90、120和180分钟）测定；使用Millipore ELISA EZGLPIT-36K试剂盒测定GLP-1，使用Millipore ELISA EZHGIP-54K试剂盒测定GIP，并使用Mercodia ELISA 10-1271-01试剂盒测定胰高血糖素，均在4个时间点（0、30、60和120分钟）测定。胰岛素、C-肽、GLP-1、GIP和胰高血糖素在华盛顿大学医学院圣路易斯临床研究核心实验室测定。从基线样本（0分钟时）中，确定了糖化血红蛋白、空腹血浆葡萄糖、胰岛素、甘油三酯和HDL胆固醇水平。
+
+#### (2) At-home OGTT with CGM.
+
+#### (2) 佩戴CGM的在家口服葡萄糖耐量试验。
+
+Participants wearing CGM were instructed to do two at-home OGTTs that were standardized to minimize environmental influences that might lead to variability in results. The two at-home OGTTs were performed within a single CGM sensor session (10 days).
+
+佩戴CGM的参与者被指示进行两次标准化的在家口服葡萄糖耐量试验，以尽量减少可能导致结果变异的环境影响。两次在家口服葡萄糖耐量试验在单个CGM传感器周期（10天）内进行。
+
+After an overnight fast, a 75-g glucola drink (NERL Trutol, Thermo Fisher) was consumed in 10 oz over 5 min and for 3 h, no oral intake other than water was allowed, and the patients remained seated, identical to the OGTT procedure performed in the CTRU. Participants were required to do this test during a typical week that was devoid of celebratory or restrictive eating (for example, wedding or religious holiday), with usual activity patterns (no unusual activity/training outside their typical patterns); to refrain from eating out, performing strenuous exercise after 17:00 the night before the test, eating or consuming anything other than water after 22:00 on the evening before and morning before the test; and to avoid smoking or using a nicotine patch the morning of the test.
+
+过夜禁食后，在5分钟内饮用10盎司的75克糖溶液（NERL Trutol，Thermo Fisher），随后3小时内只能饮水，禁止其他口服摄入，受试者保持坐位，与CTRU中进行的口服葡萄糖耐量试验流程相同。参与者要求在一个典型的星期进行此测试，该周没有庆祝或限制饮食（例如婚礼或宗教节假日），且活动模式平常（无其典型模式之外的异常活动/训练）；需避免外出就餐、在测试前一晚17:00后进行剧烈运动、在测试前一晚和测试当天早上22:00后进食或摄入除水以外的任何东西；并且在测试当天早晨避免吸烟或使用尼古丁贴片。
+
+#### (3) Isoglycaemic intravenous glucose infusion.
+
+#### (3) 等血糖静脉葡萄糖输注。
+
+IIGI, as previously described⁴⁶, was performed to quantify the incretin effect by duplicating the plasma glucose profile during the concurrently OGTT. During the IIGI test, an intravenous catheter was placed in the antecubital vein for administration of a continuous dextrose infusion at a rate needed to obtain the desired glucose, which for each timepoint was the glucose level obtained at the same timepoint during the OGTT. Blood sampling from a second intravenous catheter included the same timepoints and assays as described above for the OGTT.
+
+如先前所述⁴⁶，进行IIGI旨在通过复制同时进行的口服葡萄糖耐量试验期间的血浆葡萄糖剖面来量化肠促胰素效应。在IIGI测试期间，将静脉导管置于肘前静脉，以输注连续葡萄糖，输注速率根据需要达到所需葡萄糖水平，每个时间点所需的水平即为口服葡萄糖耐量试验中同一时间点获得的葡萄糖水平。从第二个静脉导管采集血液，包括与上述口服葡萄糖耐量试验相同的时间点和检测方法。
+
+#### (4) Insulin suppression test.
+
+#### (4) 胰岛素抑制试验。
+
+Insulin-mediated glucose disposal was quantified by the modified insulin suppression test as originally described and validated³⁸⁻⁴⁰. Briefly, participants were infused for 240 min with octreotide (0.27 µg m⁻² min⁻¹) (to suppress endogenous insulin secretion), insulin (32 mU m⁻² min⁻¹) and glucose (267 mg m⁻² min⁻¹). Blood was drawn at 30-min intervals for monitoring and at 10-min intervals from 210 to 240 min of the infusion to measure plasma glucose and insulin concentrations, and the mean of these four glucose values (210, 220, 230, 240 min) was used as the steady-state plasma insulin (SSPI) and glucose (SSPG) concentrations for each individual. As SSPG concentrations were similar in all participants during these tests, the SSPG concentration provided a direct measure of the ability of insulin to mediate disposal of an infused glucose load; the higher the SSPG concentration, the more insulin resistant the individual.
+
+利用最初描述和验证³⁸⁻⁴⁰的修饰胰岛素抑制试验，量化了胰岛素介导的葡萄糖处置。简言之，参与者接受了240分钟的输注，包括奥曲肽（0.27 µg m⁻² min⁻¹）（用于抑制内源性胰岛素分泌）、胰岛素（32 mU m⁻² min⁻¹）和葡萄糖（267 mg m⁻² min⁻¹）。每30分钟抽血一次以进行监测，并在输注的210至240分钟间每10分钟抽血一次，以测量血浆葡萄糖和胰岛素浓度，并将这四个葡萄糖值（210、220、230、240分钟）的平均值用作每个个体的稳态血浆胰岛素（SSPI）和葡萄糖（SSPG）浓度。由于在这些测试中所有参与者的SSPG浓度相似，SSPG浓度提供了胰岛素介导输注葡萄糖负荷处置能力的直接测量；SSPG浓度越高，个体越胰岛素抵抗。
+
+#### (5) Measurement of plasma glucose.
+
+#### (5) 血浆葡萄糖测定。
+
+Blood was drawn from an intravenous catheter placed in the antecubital fossa which was warmed with a heating pad to obtain arterialized venous blood. The blood sample was run to the CTRU lab, spun for 2 min and plasma was analysed on the glucose analyzer (YSI 2500) calibrated to the clinical laboratory glucose values at our institution. This method allowed for immediate bedside glucose results so that for the IIGI (above), the glucose infusion rate could be altered every 5 min as needed to mimic the glucose curve generated by the OGTT.
+
+从置于肘前窝并用加热垫加热的静脉导管中抽血，以获得动脉化静脉血。血液样本被送至CTRU实验室，离心2分钟，血浆在血糖分析仪（YSI 2500）上进行分析，该仪器已根据本机构临床实验室葡萄糖值进行校准。该方法允许即时床旁血糖结果，因此对于上述IIGI，葡萄糖输注速率可根据需要每5分钟调整一次，以模拟口服葡萄糖耐量试验产生的葡萄糖曲线。
+
+### Metabolic calculations
+
+### 代谢计算
+
+#### (1) Muscle insulin resistance (SSPG).
+
+#### (1) 肌肉胰岛素抵抗（SSPG）。
+
+While SSPG as described above reflects whole-body insulin-mediated glucose disposal, 85% of this occurs in muscle⁷ and thus, to distinguish this measure from hepatic insulin resistance, the term ‘muscle’ insulin resistance is used in this study. Furthermore, a cut-off of <120 mg dl⁻¹ is generally indicative of insulin sensitivity. For the purpose of this paper, we defined non-insulin sensitivity of individuals (those with SSPG ≥ 120 mg dl⁻¹) as insulin resistance (IR). This includes individuals with moderate and severe IR, all of whom have been shown to respond to treatments known to improve insulin sensitivity (both lifestyle and medications).
+
+虽然上述SSPG反映全身胰岛素介导的葡萄糖处置，但其中85%发生在肌肉⁷，因此，为将此测量指标与肝胰岛素抵抗区分开来，本研究使用“肌肉”胰岛素抵抗一词。此外，<120 mg dl⁻¹的切断值通常提示胰岛素敏感。就本论文而言，我们将非胰岛素敏感个体（SSPG ≥ 120 mg dl⁻¹者）定义为胰岛素抵抗（IR）。这包括中度和重度胰岛素抵抗的个体，所有这些个体均已被证明对已知可改善胰岛素敏感性的治疗（无论是生活方式还是药物）有反应。
+
+### Quantifying the relative deviance for each physiologic measure for metabolic subphenotype assignment
+
+### 量化各生理指标的相对偏差以进行代谢亚表型分类
+
+To classify each participant to their most 'abnormal' physiologic process, we calculated a standardized deviance score (that is, a Z-score) for each metabolic measure for each participant (equation 5), where msp$^j_i$ is the $i$th metabolic measure of participant $j$ and mean(msp$^i$) is the average of $i$th metabolic measure among the cohort's participants and sd(msp$^i$) is the standard deviation. High positive deviance indicates a more abnormal score and stronger phenotype for that measure in a given individual; high negative deviance indicates a healthier metabolic measure, and thus relative absence of the unhealthy phenotype as compared with the average population. DI and IE% were negated before applying equation (5), since higher DI and IE% indicate healthier $\beta$-cell function and incretin function, respectively. As shown in the heat map in Fig. 2, it is possible to see in a given individual the relative deviance for each metabolic measure: some individuals had a single dominant (most deviant) measure, whereas others had two or more that were equally dominant.
+
+为将每个参与者归类为其最“异常”的生理过程，我们为每个参与者的每项代谢指标计算了标准化偏差得分（即 Z 分数）（方程 5），其中 msp$^j_i$ 为参与者 $j$ 的第 $i$ 项代谢指标，mean(msp$^i$) 为队列中参与者第 $i$ 项代谢指标的平均值，sd(msp$^i$) 为标准偏差。高正偏差表明在给定个体中该指标的得分更异常且表型更强；高负偏差表明该代谢指标更健康，因此与平均人群相比，不健康表型的相对缺失。在应用方程 (5) 之前，DI 和 IE% 取了负值，因为较高的 DI 和 IE% 分别表明更健康的 $\beta$细胞功能和肠促胰素功能。如图 2 的热图所示，可以在给定个体中看到每项代谢指标的相对偏差：有些个体只有一个占主导地位（最偏离）的指标，而其他人则有两个或更多同样占主导地位的指标。
+
+#### (2) β-cell function (DI).
+
+#### (2) $\beta$细胞功能（DI）。
+
+To quantify the status of β-cell function, we first calculated insulin secretion rate using the C-peptide deconvolution method, using C-peptide concentrations measured during OGTT tests at 0, 15 and 30 min. The Insulin SEcretion (ISEC) software$^{42}$ was used to calculate prehepatic insulin secretion from plasma C-peptide measurements with adjustment for age, sex and BMI$^{43}$. The ISEC software can be obtained from the author Roman Hovorka of the Metabolic Modelling Group, Centre for Measurement and Information in Medicine, Department of System Science, City University, London, United Kingdom. We required an error coefficient of variation of 5% and 15-min intervals. As the programme uses a population model of C-peptide kinetics, we classified individuals as diabetic ('niddm') if they had either fasting plasma glucose >126 mg dl⁻¹, 2 h glucose during OGTT >200, or HbA1c >6.5; or as 'obese' if they were non-diabetic with BMI > 30. The remaining individuals were classified as 'normal'. Because insulin secretion is best interpreted relative to insulin resistance (insulin-resistant individuals need to secrete more insulin to maintain normoglycaemia), we then calculated DI$^{44,45}$, as previously described, which adjusts the insulin secretion rate for degree of insulin resistance to generate an overall measure of β-cell function. DI was calculated as the area under the insulin secretion rate, divided by the SSPG (equation 1). DI thus describes β-cell function relative to insulin resistance.
+
+为量化 $\beta$细胞功能状态，我们首先使用 C-肽去卷积法计算了胰岛素分泌速率，使用了 OGTT 测试中 0、15 和 30 分钟时测得的 C-肽浓度。使用 Insulin SEcretion (ISEC) 软件$^{42}$，根据血浆 C-肽测定值并调整年龄、性别和 BMI$^{43}$ 计算了肝前胰岛素分泌。ISEC 软件可从英国伦敦城市大学系统科学系医学测量与信息中心代谢建模小组的作者 Roman Hovorka 处获得。我们要求误差变异系数为 5% 且间隔为 15 分钟。由于该程序使用 C-肽动力学的人群模型，如果个体的空腹血浆葡萄糖 >126 mg dl⁻¹、OGTT 期间 2 小时葡萄糖 >200，或糖化血红蛋白 >6.5，则将其分类为糖尿病（'niddm'）；或者如果非糖尿病且 BMI > 30，则分类为 '肥胖'。其余个体分类为 '正常'。由于胰岛素分泌最好相对于胰岛素抵抗来解释（胰岛素抵抗个体需要分泌更多胰岛素以维持正常血糖），我们随后按先前描述计算了 DI$^{44,45}$，它根据胰岛素抵抗程度调整胰岛素分泌速率，以生成 $\beta$细胞功能的总体指标。DI 按胰岛素分泌速率下的面积除以 SSPG 计算（方程 1）。因此，DI 描述了相对于胰岛素抵抗的 $\beta$细胞功能。
+
+```
+DI = \(\left( \frac{\int_{t=0}^{t=30} \text{Insulin Secretion Rate}_t^{OGTT} \ dt}{\text{SSPG}} \right)\) (1)
+```
+
+```
+deviance(msp$^j_i$) = \(\frac{\text{msp}^j_i - \text{mean(msp}^i\text{)}}{\text{sd(msp}^i\text{)}}\) (5)
+```
+
+where $i \in$ {MuscleIR, BetaCellDysfunction, IncretinDysfunction, HepaticIR}.
+
+其中 $i \in$ {MuscleIR, BetaCellDysfunction, IncretinDysfunction, HepaticIR}。
+
+For each participant, the dominant metabolic subphenotype was identified on the basis of the one exhibiting the highest deviance score. When the difference in deviance scores between the two highest metabolic subphenotypes was less than 0.5, the participant was classified as having co-dominant subphenotypes. If more than one subphenotype exhibited deviance scores within 0.5 of the highest score, the participant was classified as having neither dominant nor co-dominant subphenotypes. This method is not intended for the clinical diagnosis of metabolic abnormalities. Instead, it focuses on identifying individuals with deviations in metabolic profiles relative to a reference cohort. Further validation in diverse populations is required to assess its generalizability.
+
+对于每个参与者，基于偏差得分最高的代谢亚表型来识别其主导代谢亚表型。当两个最高代谢亚表型之间的偏差得分差异小于 0.5 时，该参与者被分类为具有共主导亚表型。如果多个亚表型的偏差得分均在最高得分 0.5 范围内，则该参与者被分类为既无主导亚表型也无共主导亚表型。此方法并非用于代谢异常的临床诊断。相反，它侧重于识别相对于参考队列存在代谢图谱偏差的个体。需要在多样化人群中进一步验证以评估其广义性。
+
+#### (3) Incretin effect (IE%).
+
+#### (3) 肠促胰素效应（IE%）。
+
+We quantified the incretin effect as previously described$^{46}$ using equation (2). IE was calculated on the basis of the difference in the C-peptide concentrations during a frequently sampled OGTT and IIGI (0–180 min) that by design induce nearly identical plasma glucose concentrations. The difference in C-peptide in response to oral versus intravenous glucose loading reflects the contribution of incretin hormones from the gut that stimulate pancreatic β-cell insulin secretion. A higher incretin effect may indicate either increased secretion of incretin hormones (for example, GLP-1 and GIP) and/or β-cell responsiveness to these hormones. Lower incretin effect may be due to deficiency in incretin hormone secretion and/or relative inability to stimulate insulin secretion from the β-cell.
+
+如先前所述$^{46}$，我们使用方程 (2) 量化了肠促胰素效应。IE 根据频繁采样口服葡萄糖耐量试验和 IIGI（0–180 min）期间 C-肽浓度的差异计算，这两种试验在设计上可诱导近乎相同的血浆葡萄糖浓度。口服与静脉葡萄糖负荷对 C-肽响应的差异反映了肠促胰素激素的贡献，这些激素来自肠道并刺激胰腺 $\beta$细胞胰岛素分泌。较高的肠促胰素效应可能表明肠促胰素激素（例如 GLP-1 和 GIP）分泌增加和/或 $\beta$细胞对这些激素的反应性增加。较低的肠促胰素效应可能是由于肠促胰素激素分泌不足和/或相对无法刺激 $\beta$细胞分泌胰岛素。
+
+```
+IE% = \(\left( \frac{\int_{t=0}^{t=180} \text{cpeptide}_t^{OGTT} \ dt - \int_{t=0}^{t=180} \text{cpeptide}_t^{IIGI} \ dt}{\int_{t=0}^{t=180} \text{cpeptide}_t^{OGTT} \ dt} \right) \times 100\) (2)
+```
+
+#### (4) Hepatic IR index.
+
+#### (4) 肝胰岛素抵抗指数。
+
+Liver insulin resistance was inferred using a surrogate index as shown in equation (3) (ref. 47), where insulin is measured in (microU ml⁻¹), plasma HDL cholesterol is measured in (mg dl⁻¹) and BMI is measured in kg m⁻². In adults, body fat % (BF%) can be estimated using the Deurenberg Index as shown in equation (4)$^{37}$, where BMI is measured in kg m⁻², age in years, and sex = 1 for male and sex = 0 for female.
+
+利用方程 (3)（参考文献 47）所示的替代指标推断了肝胰岛素抵抗，其中胰岛素以（microU ml⁻¹）计量，血浆 HDL 胆固醇以（mg dl⁻¹）计量，BMI 以 kg m⁻² 计量。在成人中，体脂百分比（BF%）可使用方程 (4)$^{37}$ 所示的 Deurenberg 指数估计，其中 BMI 以 kg m⁻² 计量，年龄以岁为单位，sex = 1 表示男性，sex = 0 表示女性。
+
+```
+Hepatic IR = $-0.091 + 0.4 \times \log\left(\int_{t=0}^{t=180} \text{insulin}_t^{OGTT} \ dt\right) + 0.346 \times \log(\text{BF\%}) - 0.408 \times \log(\text{HDL}) + 0.435 \times \log(\text{BMI})$ (3)
+```
+
+### Genotyping and T2D polygenic risk score calculation
+
+### 基因分型与 2 型糖尿病多基因风险评分计算
+
+DNA was extracted from whole-blood peripheral blood mononuclear cells (PBMC). The concentration of the extracted DNA was measured using Qubit, normalized to 50 ng μl⁻¹, and 10 μl was used for each sample for genotyping. All samples were genotyped using the Illumina Infinium Omni2.5Exome array with ~2.6 million single nucleotide variants (SNV) sites measured. Genotyping data underwent standard quality control using PLINK$^{38}$, including filtering of SNVs with excess missing genotypes (>2%), filtering of SNVs out of Hardy–Weinberg equilibrium ($P < 1 \times 10^{-6}$) and removal of samples with either excess missing genotypes (>3%) or discordant genetic vs recorded sex. Coordinates were aligned to the positive strand on genome build GRCh38 and the data were imputed against the TOPMed R2 reference panel$^{59–61}$. After quality control and imputation, 11.8 million high-quality SNVs ($R^2 > 0.3$) were obtained. T2D polygenic risk score (PRS$_{T2D}$) was generated as an additive model using 338 index variants and corresponding weights from the DIAMANTE multi-ancestry meta-analysis study$^{49}$. Of the 338 variants, 16 were not available, for which mean population scores were added using the TOPMed Bravo platform reference frequencies (2 × weight × population allele frequency)$^{61}.
+
+DNA 从全血外周血单个核细胞（PBMC）中提取。使用 Qubit 测定提取 DNA 的浓度，标准化至 50 ng μl⁻¹，每个样本使用 10 μl 进行基因分型。所有样本均使用 Illumina Infinium Omni2.5Exome 阵列进行基因分型，测定了约 260 万个单核苷酸变异（SNV）位点。基因分型数据使用 PLINK$^{38}$ 进行了标准质量控制，包括过滤缺失基因型过多（>2%）的 SNV、过滤不符合 Hardy–Weinberg 平衡（$P < 1 \times 10^{-6}$）的 SNV，以及删除缺失基因型过多（>3%）或遗传性别与记录性别不一致的样本。坐标已比对至基因组构建版本 GRCh38 的正链，数据已根据 TOPMed R2 参考面板$^{59–61}$ 进行插补。经过质量控制和插补后，获得了 1180 万个高质量 SNV（$R^2 > 0.3$）。T2D 多基因风险评分（PRS$_{T2D}$）作为一种加性模型生成，使用了 DIAMANTE 多祖先荟萃分析研究$^{49}$ 中的 338 个索引变异及其相应权重。在 338 个变异中，16 个不可用，使用 TOPMed Bravo 平台参考频率（2 × 权重 × 人群等位基因频率）$^{61}$ 添加了平均人群得分。
+
+```
+BF% = $-5.4 + 1.2 \times \text{BMI} + 0.23 \times \text{Age} - 10.8 \times \text{Sex}$ (4)
+```
+
+### Machine-learning framework to identify metabolic subtypes from OGTT glucose time series
+
+### 基于 OGTT 葡萄糖时间序列识别代谢亚型的机器学习框架
+
+#### Preprocessing.
+
+#### 预处理。
+
+Glucose time series were preprocessed by imputing missing data using linear interpolation.
+
+葡萄糖时间序列通过使用线性插值插补缺失数据进行了预处理。
+
+#### Features extraction.
+
+#### 特征提取。
+
+We extracted features for the machine-learning framework using two feature extraction approaches (1) OGTT glucose time-series features (OGTT_G_Features) and (2) reduced representation
+
+我们采用两种特征提取方法为机器学习框架提取了特征：（1）OGTT 葡萄糖时间序列特征（OGTT_G_Features）和（2）降维表征
+
+
+
+OGTT 葡萄糖时间系列 (OGTT_G_ReducedRep) 中。在第一种方法 (OGTT_G_Features) 中，我们从插补后的 OGTT 葡萄糖时间系列中提取了特征，例如时间点 0 (G_0)、60 (G_60)、120 (G_120)、180 (G_180) 的葡萄糖水平，峰值葡萄糖水平 (G_Peak)，频繁采样的 OGTT 时间间隔内葡萄糖时间序列曲线的长度 (CurveSize)，AUC，pAUC，负 (n)AUC，iAUC，变异系数 (CV)，从基线到峰值的时间 (T_baseline2peak)，基线到峰值葡萄糖水平的斜率 (S_baseline2peak)，以及峰值和终点（t = 180 min）处葡萄糖值之间的斜率 (S_peak2end)。这 14 个特征在与一个或多个代谢亚型指标（SSPG、DI、IE、肝性 IR 指数）的 Pearson 相关系数中显示出统计学显著性。唯一的例外是 ‘S_baseline2peak’，它与 β-细胞功能呈近乎显著的相关性 (P = 0.06)。在第二种方法 (OGTT_G_ReducedRep) 中，我们首先对插补后的 OGTT 葡萄糖时间序列进行 Z-标准化，以提取与曲线模式而非幅度相关的特征，然后使用平滑参数为 0.35 的三次平滑样条对 Z-标准化后的葡萄糖时间序列进行平滑处理。然后，数据被分为训练集和测试集。对于测试集，我们使用 PCA 提取了 OGTT 葡萄糖时间序列的降维表示，并提取了前两个主成分用于训练机器学习分类器 (OGTT_G_ReducedRep)。对于测试集中的每个新葡萄糖系列 (X)，该系列首先使用训练数据的均值向量 (X_centred) 进行中心化。均值向量的维度是 1 × 16，因为每个系列有 16 个葡萄糖时间点。随后，中心化后的系列与从训练集提取的前两个主成分的载荷矩阵 (W) 相乘（公式 6）。W 的维度是 16 × 2。X_reduced 是投影到训练集降维表示空间上的测试系列。
+
+$X_{reduced} = X_{centred} \times W$ (6)
+
+#### 训练机器学习模型。
+
+接下来，我们开发了一种机器学习方法，其中提取的两组葡萄糖时间序列特征（OGTT_G_Features 和 OGTT_G_ReducedRep）被独立测试。对于每种特征提取方法，数据集被分为训练集和测试集。数据基于代谢亚型类别进行分层，以确保每个类别在训练集和测试集之间分布均匀。来自 CTRU 静脉采样 OGTT 收集且无 CGM 数据的参与者被分配到训练集。没有参与者或样本同时存在于训练集和测试集中。在训练集上实现了交叉验证。
+
+对于每个代谢亚型，我们优化了 4 种不同分类器的超参数：带径向基函数核的支持向量机 (SVM-RBF)、带线性核的支持向量机 (SVM-linear)、带 L1 正则化的逻辑回归 (LR-L1) 和随机森林 (RF)。我们使用 sklearn Python 包来训练、调优和测试机器学习模型。LR-L1 使用 SAGA 求解器训练，最多运行 10,000 次迭代以收敛，并带有可调正则化强度超参数 C。SVM-RBF 和 SVM-linear 使用 sklearn.svm.SVC 方法训练，内核分别为 ‘rbf’ 和 ‘linear’。正则化参数 ‘C’ 是两个 SVM 模型（线性和 RBF）的可调超参数。随机森林的可调超参数是估计器的数量。我们有一组可调超参数网格（5 个值），并基于交叉验证搜索最佳值。所有模型均由预设随机种子控制。模型总数为 20（4 种基本模型架构，每种模型 5 个超参数值）。
+
+在整个手稿中，所有机器学习实验均采用 5 折交叉验证并迭代 100 次进行。这包括将 CTRU OGTT 的血浆葡萄糖训练集（32 名参与者）分为 5 组，其中 80% 用于模型训练，20% 用于每折中的验证。在每一折中，我们计算了 auROC 以及其他指标。为了确保更严谨的评估和稳定的模型，我们重复了上述交叉验证 100 次，在将数据分为折之前先对数据进行打乱。这确保了框架的性能可以推广到任何数据划分。交叉验证中对每个模型测试了不同超参数，且每次迭代后顺序被打乱。带选定超参数值的最终模型基于交叉验证中最佳的 auROC 选择。由于训练样本量有限，超参数调优和模型选择过程合并在同一循环中。但是，打乱过程确保了性能估计的准确性。然后，模型在独立测试集上对两类数据（CTRU OGTT 的血浆葡萄糖和 CGM 数据）进行了测试，类似于训练集。类别不平衡问题通过分层采样来处理，以确保训练和验证包含相同比例的类别样本。重要的是，在特征提取的第二种方法 (OGTT_G_ReducedRep) 中，降维表示是从训练集（而非整个数据集）获得的，并用于训练每个分类器。然后，测试集被投影到从训练数据集获得的降维表示空间中，其表示用于预测代谢亚型。从训练数据集而非整个数据集获得降维表示空间对于模型的鲁棒性和可推广性至关重要，因为它防止了训练数据集和测试数据集之间的数据泄露。
+
+随后，我们使用先前讨论的两组提取的特征（OGTT_G_Features 和 OGTT_G_ReducedRep）进行了一项全面实验，以预测代谢亚型。为了比较，我们评估了这两组特征相对于当前使用的代谢表型替代标志物的性能，包括 (1) 人口统计学（年龄、性别、种族、BMI、T2D 家族史），(2) T2D 多基因风险评分，(3) 促胰肽（OGTT_2h 第 2 小时总 GIP 和 GLP-1 浓度），(4) 实验室（HbA1c 和 FPG），(5) HOMA-B<sup>62</sup>，(6) HOMA-IR<sup>62</sup> 和 (7) Matsuda 指数<sup>63</sup>。人口统计学被单独评估，并包含在所有其他模型中，包括我们的 OGTT_G_Features 和 OGTT_G_ReducedRep 模型。
+
+每个模型在每组特征和每个代谢亚型上的性能使用 auROC 进行评估。我们还计算了灵敏度、特异度、F1 分数、精确度和准确率。指标被汇总并概括。
+
+### 研究单位独立 OGTT 队列上的模型验证。
+
+独立验证队列首先进行了预处理，然后类似于初始队列提取了两组葡萄糖时间序列特征。随后，使用初始队列训练的模型来预测肌肉 IR。
+
+### 统计分析
+
+当需要进行多重检验时（例如使用不同特征集评估代谢亚型预测），统计显著性使用 Wilcoxon 秩和检验并进行 Bonferroni 校正进行评估。所有 P 值均进行了 Bonferroni 校正。
+
+### 可视化
+
+我们使用 ggplot2 (v.3.3.2) 和 heatmap (v.1.0.12) R 包绘制了大部分图表。图 1a 和 5a 使用 Figma 设计工具 (https://www.figma.com/) 创建。图 3a 使用 draw.io 平台 (https://app.diagrams.net) 创建。
+
+## 报告摘要
+
+有关研究设计的更多信息可在本文链接的 Nature Portfolio 报告摘要中查阅。
+
+## 数据可用性
+
+CGM 和静脉来源的去标识化葡萄糖值，以及本研究中使用的其他数据类型，可从研究数据存储库下载：https://storage.googleapis.com/gbsc-gcp-project-ipop_public/metabolic_subphenotype_db/metabolic_subphenotypes_db.zip。
+
+## 代码可用性
+
+本研究使用的代码可在 GitHub 上公开获取：https://github.com/aametwally/Metabolic_Subphenotype_Predictor（参考文献 64）。
+
+## 参考文献
+
+- 1. Sun, H. 等. IDF 糖尿病图谱：2021 年全球、地区和国家层面的糖尿病患病率估计及 2045 年预测。*Diabetes Res. Clin. Pract.* **183**, 109119 (2021).
+- 2. Hall, H. 等. 葡萄糖类型揭示了葡萄糖失调的新模式。*PLoS Biol.* **16**, e2005143 (2018).
+- 3. Bergman, M. 糖尿病前期的病理生理及预防 2 型糖尿病的治疗意义。*Endocrine* **43**, 504–513 (2013).
+- 4. Nauck, M. A., Vardarli, I., Deacon, C. F., Holst, J. J. & Meier, J. J. 2 型糖尿病中胰高血糖素样肽-1 (GLP-1) 的分泌：什么上升，什么下降？*Diabetologia* **54**, 10–18 (2011).
+- 5. Petersen, M. C., Vatner, D. F. & Shulman, G. I. 健康与疾病中肝葡萄糖代谢的调节。*Nat. Rev. Endocrinol.* **13**, 572–587 (2017).
+- 6. Stefan, N., Fritsche, A., Schick, F. & Häring, H.-U. 糖尿病前期的表型及心代谢风险分层。*Lancet Diabetes Endocrinol.* **4**, 789–798 (2016).
+- 7. Reaven, G. M. 1988 年班廷讲座。胰岛素抵抗在人类疾病中的作用。*Diabetes* **37**, 1595–1607 (1988).
+- 8. Zavaroni, I. 等. 正常人群中高胰岛素血症作为非胰岛素依赖型糖尿病、高血压和冠心病的预测因素：巴里拉工厂再探。*Metabolism* **48**, 989–994 (1999).
+- 9. Rundek, T. 等. 北曼哈顿研究中非糖尿病个体的胰岛素抵抗与缺血性卒中风险。*Arch. Neurol.* **67**, 1195–1200 (2010).
+- 10. Fujii, H., Kawada, N. & 日本 NAFLD 研究组 (JSG-NAFLD). 胰岛素抵抗和糖尿病在非酒精性脂肪肝病中的作用。*Int. J. Mol. Sci.* **21**, 3863 (2020).
+- 11. Arcidiacono, B. 等. 胰岛素抵抗与癌症风险：致病机制概述。*Exp. Diabetes Res.* **2012**, 789174 (2012).
+- 12. Lean, M. E. 等. 以初级保健为主导的 2 型糖尿病缓解体重管理 (DiRECT)：一项开放标签、集群随机试验。*Lancet* **391**, 541–551 (2018).
+- 13. 糖尿病预防计划研究组. 糖尿病预防计划结果研究中糖尿病发病率和体重减轻的 10 年随访。*Lancet* **374**, 1677–1686 (2009).
+- 14. Knowler, W. C. 生活方式干预或二甲双胍降低 2 型糖尿病发病率。*N. Engl. J. Med.* **346**, 393–403 (2002).
+- 15. DeFronzo, R. A. 等. 吡格列酮用于糖耐量受损者的糖尿病预防。*N. Engl. J. Med.* **364**, 1104–1115 (2011).
+- 16. le Roux, C. W. 等. 糖尿病前期个体中利拉鲁肽与安慰剂用于降低 2 型糖尿病风险和体重管理的 3 年研究：一项随机双盲试验。*Lancet* **389**, 1399–1409 (2017).
+- 17. ORIGIN 试验研究者. 糖代谢异常中基础胰岛素与心血管及其他结局。*N. Engl. J. Med.* **367**, 319–328 (2012).
+- 18. Dennis, J. M. 等. 性别和 BMI 改变 2 型糖尿病中磺脲类和噻唑烷二酮类的获益与风险：使用常规临床和个体试验数据评价分层的框架。*Diabetes Care* **41**, 1844–1853 (2018).
+- 19. McLaughlin, T. 等. 饮食减重计划后胰岛素敏感性改善的持久性。*Diabetes Obes. Metab.* **10**, 1186–1194 (2008).
+- 20. Ryan, B. J. 等. 中等强度运动和高强度间歇训练对肥胖成人胰岛素敏感性的影响相似。*J. Clin. Endocrinol. Metab.* **105**, e2941–e2959 (2020).
+- 21. Udler, M. S., McCarthy, M. I., Florez, J. C. & Mahajan, A. 用于糖尿病诊断和精准医疗的遗传风险评分。*Endocr. Rev.* **40**, 1500–1520 (2019).
+- 22. Christensen, D. H. 等. 2 型糖尿病分类：丹麦 2 型糖尿病战略研究中心 (DD2) 队列的数据驱动聚类研究。*BMJ Open Diabetes Res. Care* **10**, e002731 (2022).
+- 23. Wagner, R. 等. 基于病理生理的 2 型糖尿病高危个体亚分型。*Nat. Med.* **27**, 49–57 (2021).
+- 24. Ahlqvist, E. 等. 成人发病糖尿病的新亚组及其与结局的关联：六个变量的数据驱动聚类分析。*Lancet Diabetes Endocrinol.* **6**, 361–369 (2018).
+- 25. Herder, C. & Roden, M. 一种新的糖尿病分型：从发病机制到治疗的精准糖尿病学。*Diabetologia* **65**, 1770–1781 (2022).
+- 26. Nair, A. T. N. 等. 2 型糖尿病中表型、疾病进展和药物反应的异质性。*Nat. Med.* **28**, 982–988 (2022).
+- 27. Misra, S. 等. 2 型糖尿病的精确亚分型：一项系统评价。*Commun. Med.* **3**, 138 (2023).
+- 28. Chung, W. K. 等. 糖尿病精准医疗：美国糖尿病协会 (ADA) 和欧洲糖尿病研究协会 (EASD) 的共识报告。*Diabetes Care* **43**, 1617–1635 (2020).
+- 29. Dunn, J. 等. 可穿戴传感器实现临床实验室测量的个性化预测。*Nat. Med.* **27**, 1105–1112 (2021).
+- 30. Jagannathan, R. 等. 口服葡萄糖耐量试验：100 年后。*Diabetes Metab. Syndr. Obes.* **13**, 3787–3805 (2020).
+- 31. Hulman, A. 等. 口服葡萄糖耐量试验中的葡萄糖模式及其与未来糖尿病、心血管疾病和全因死亡率的关联。*Diabetologia* **61**, 101–107 (2018).
+- 32. Abdul-Ghani, M. A., Lyssenko, V., Tuomi, T., Defronzo, R. A. & Groop, L. OGTT 期间血浆葡萄糖浓度曲线的形状预测未来 2 型糖尿病风险。*Diabetes Metab. Res. Rev.* **26**, 280–286 (2010).
+- 33. Kramer, C. K., Vuksan, V., Choi, H., Zinman, B. & Retnakaran, R. 口服葡萄糖耐量试验中胰岛素和葡萄糖反应的新兴参数：可重复性及其对糖尿病和非糖尿病个体葡萄糖稳态的意义。*Diabetes Res. Clin. Pract.* **105**, 88–95 (2014).
+- 34. Stumvoll, M. 等. 使用口服葡萄糖耐量试验评估胰岛素分泌和胰岛素敏感性。*Diabetes Care* **23**, 295–301 (2000).
+- 35. Bervoets, L., Mewis, A. & Massa, G. 口服葡萄糖耐量试验期间血浆葡萄糖曲线的形状作为青春期末期肥胖女孩 β-细胞功能和胰岛素敏感性的指标。*Horm. Metab. Res.* **47**, 445–451 (2015).
+- 36. Cheng, X. 等. 口服葡萄糖耐量试验期间葡萄糖反应曲线的形状预示了大型中国人群中的 β-细胞功能。*BMC Endocr. Disord.* **19**, 119 (2019).
+- 37. Hulman, A. 等. 不同葡萄糖反应曲线背后的病理生理特征：来自前瞻性 EGIR-RISC 研究的隐性类别轨迹分析。*Diabetes Care* **41**, 1740–1748 (2018).
+
+
+
+
+
+- 38. Pei, D., Jones, C. N., Bhargava, R., Chen, Y. D. & Reaven, G. M. 利用胰岛素抑制试验评估奥曲肽用于胰岛素介导的葡萄糖处置。*Diabetologia* **37**, 843–845 (1994).
+- 39. Shen, S. W., Reaven, G. M. & Farquhar, J. W. 正常受试者与潜在糖尿病受试者中胰岛素介导的葡萄糖摄取比较。*J. Clin. Invest.* **49**, 2151–2160 (1970).
+- 40. Greenfield, M. S., Doberne, L., Kraemer, F., Tobey, T. & Reaven, G. 利用胰岛素抑制试验和正血糖夹臂评估胰岛素抵抗。*Diabetes* **30**, 387–392 (1981).
+- 41. Yeni-Komshian, H., Carantoni, M., Abbasi, F. & Reaven, G. M. 490名健康非糖尿病志愿者中几种胰岛素抵抗替代估计与胰岛素介导的葡萄糖处置定量之间的关系。*Diabetes Care* **23**, 171–175 (2000).
+- 42. Hovorka, R., Soons, P. A. & Young, M. A. ISEC：计算胰岛素分泌的程序。*Comput. Methods Prog. Biomed.* **50**, 253–264 (1996).
+- 43. van Cauter, E., Mestrez, F., Sturis, J. & Polonsky, K. S. 根据 C-peptide 水平估计胰岛素分泌速率。C-peptide 清除率的个体与标准动力学参数比较。*Diabetes* **41**, 368–377 (1992).
+- 44. Bergman, R. N., Philips, L. S. & Cobelli, C. 人体控制葡萄糖耐受性因素的生理学评估：从静脉葡萄糖反应中测量胰岛素敏感性和β细胞葡萄糖敏感性。*J. Clin. Invest.* **68**, 1456–1467 (1981).
+- 45. Bergman, R. N., Ader, M., Huecking, K. & van Citters, G. β细胞功能的准确评估：双曲线校正。*Diabetes* **51**, S212–S220 (2002).
+- 46. Nauck, M., Stöckmann, F., Ebert, R. & Creutzfeldt, W. 2型（非胰岛素依赖型）糖尿病中肠促胰素效应降低。*Diabetologia* **29**, 46–52 (1986).
+- 47. Vangipurapu, J. 等。肝源性胰岛素抵抗的新型替代指数。*Diabetologia* **54**, 540–543 (2011).
+- 48. Hills, S. A. 等。EGIR-RISC 研究（欧洲胰岛素抵抗研究组：胰岛素敏感性与心血管疾病风险的关系）：I. 方法学与目标。*Diabetologia* **47**, 566–570 (2004).
+- 49. Mahajan, A. 等。2型糖尿病多族群遗传研究凸显了多样化人群在发现与转化方面的潜力。*Nat. Genet.* **54**, 560–572 (2022).
+- 50. Chiasson, J.-L. 等。阿卡波司预防2型糖尿病：STOP-NIDDM 随机试验。*Lancet* **359**, 2072–2077 (2002).
+- 51. Fröslle, K. F. 等。葡萄糖曲线中的形状信息：功能数据分析与传统汇总指标的比较。*BMC Med. Res. Methodol.* **13**, 6 (2013).
+- 52. Steck, A. K. 等。CGM 指标可预测1型糖尿病即将进展：儿童自身免疫筛查（ASK）研究。*Diabetes Care* **45**, 365–371 (2022).
+- 53. Montaser, E. 等。利用1周CGM居家检测、夜间葡萄糖增量和标准化液体混合餐早餐预测1期和2期糖尿病的免疫学风险，并经机器学习优化分类。*Diabetes Technol. Ther.* **25**, 631–642 (2023).
+- 54. Wilson, D. M. 等。CGM 指标可识别 TrialNet 预防通道研究参与者中的糖代谢异常状态。*Diabetes Care* **46**, 526–534 (2023).
+- 55. Montaser, E., Brown, S. A., DeBoer, M. D. & Farhy, L. S. 使用一周连续葡萄糖监测居家检测（经机器学习优化分类）预测发生1型糖尿病的风险：一项探索性研究。*J. Diabetes Sci. Technol.* **18**, 257–265 (2024).
+- 56. Selvin, E., Crainiceanu, C. M., Brancati, F. L. & Coresh, J. 血糖指标的短期变异性及其对糖尿病分类的影响。*Arch. Intern. Med.* **167**, 1545–1551 (2007).
+- 57. Deurenberg, P., Weststrate, J. A. & Seidell, J. C. 身体质量指数作为体脂指标：按年龄和性别特异性的预测公式。*Br. J. Nutr.* **65**, 105–114 (1991).
+- 58. Chang, C. C. 等。第二代 PLINK：应对更大规模、更丰富数据集的挑战。*Gigascience* **4**, 7 (2015).
+- 59. Fuchsberger, C., Abecasis, G. R. & Hinds, D. A. minimac2：更快的基因型推算。*Bioinformatics* **31**, 782–784 (2015).
+- 60. Das, S. 等。下一代基因型推算服务与方法。*Nat. Genet.* **48**, 1284–1287 (2016).
+- 61. Talun, D. 等。NHLBI TOPMed 计划中53,831个多样化基因组的测序。*Nature* **590**, 290–299 (2021).
+- 62. Matthews, D. R. 等。稳态模型评估：根据人体空腹血浆葡萄糖和胰岛素浓度评估胰岛素抵抗和β细胞功能。*Diabetologia* **28**, 412–419 (1985).
+- 63. Matsuda, M. & DeFronzo, R. A. 口服葡萄糖耐受试验获得的胰岛素敏感性指数：与正血糖胰岛素夹臂的比较。*Diabetes Care* **22**, 1462–1470 (1999).
+- 64. Metwally, A. A. 代谢亚型预测器：GitHub https://github.com/aametwally/Metabolic_Subphenotype_Predictor (2024).
+
+## 致谢
+
+我们感谢 A. Breschi、L. McGuire、S. Kirkpatrick、M. Avina、M. Ashland、K. Cha、J.-H. Shih、N. Turk 和 V. Rajesh 在整个项目中的宝贵贡献。这项工作得到 NIH/NIDDK R01 DK110186-01 和一项 Stanford PHIND 奖的支持。我们承认 Stanford Diabetes Research Center (P30DK116074) 的支持。A.L.G. 由 Wellcome Trust (200837) 和 National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK) (U01-DK105535, U01-DK085545, UM1DK126185) 资助。H.P. 由 NIH 机构研究培训资助 NIH T32HL09804911 和 Stanford Lifestyle Medicine 资助支持。Y.W. 由美国糖尿病协会资助 11-23-PDF-76 支持。
+
+## 作者贡献
+
+A.A.M.、T.M. 和 M.P.S. 构思并设计了研究。F.A. 和 T.M. 进行并监督了代谢表型测试。D.P.、A.C. 和 E.A. 管理了参与者招募。A.A.M. 和 D.P. 进行了数据管理。A.A.M. 分析并可视化了数据。A.A.M. 和 Y.W. 开发了机器学习模型。A.J.、S.S. 和 A.L.G. 进行了基因分型和多基因风险评分计算。A.A.M.、A.A.M.、T.M. 和 M.P.S. 撰写了论文原稿。A.A.M.、D.P.、H.P.、Y.W.、A.L.G.、T.M. 和 M.P.S. 审阅并修改了论文。A.A.M.、A.L.G.、T.M. 和 M.P.S. 就数据分析和讨论的解释提供了建议。A.A.M.、D.P.、P.D.、T.M. 和 M.P.S. 为项目管理做出了贡献。T.M. 和 M.P.S. 为项目监督做出了贡献。
+
+## 竞争利益
+
+A.A.M. 目前是 Google 的员工。D.P. 和 T.M. 是 January AI 科学咨询委员会成员。A.L.G. 的配偶是 Genentech 的员工，并持有 Roche 的股票期权。M.P.S. 是 Personalis、Qbio、January AI、SensOmics、Protos 和 Mirvie 的联合创始人兼科学咨询委员会成员。他还在 Danaher、GenapSys 和 Jupiter 的科学咨询委员会任职。其他作者声明不存在竞争利益。
+
+## 附加信息
+
+本论文的**扩展数据**可在 https://doi.org/10.1038/s41551-024-01311-6 查看。
+
+## 补充信息
+
+在线版本包含可在 https://doi.org/10.1038/s41551-024-01311-6 获取的补充材料。
+
+## 通信和材料请求
+
+应致函 Tracey McLaughlin 或 Michael P. Snyder。
+
+## 同行评审信息
+
+《Nature Biomedical Engineering》感谢 Leon Farhy 及其他匿名审稿人对本工作同行评审的贡献。
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_18_0.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_18_1.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_18_2.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_18_3.png)
+
+扩展数据图 1 | 初始队列中每个代谢亚表型的类别分布。(A) 肌肉胰岛素抵抗基于稳态血浆葡萄糖 (SSPG) 进行分类，(B) β 细胞功能障碍基于处置指数 (DI) 进行分类，(C) 受损的肠促胰素效应基于 OGTT 和 IIGI 期间 C 肽曲线下的面积进行分类，以及 (D) 肝脏胰岛素抵抗基于肝脏胰岛素抵抗指数进行分类。
+
+### Insulin Secretion Rate/SSPG from OGTT
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_19_0.png)
+
+**扩展数据图 2 | OGTT 期间测得的胰岛素分泌率** 经 SSPG 标准化，用于推断 β 细胞功能。胰岛素分泌率采用 C 肽去卷积法计算，使用在 OGTT 期间七个时间点（0、15、30、60、90、120、180 min）获得的 C 肽浓度，随后针对胰岛素抵抗进行调整，以生成 β 细胞功能的衡量指标。行表示每个受试者，列表示相对于 OGTT 开始的时间间隔（分钟）。黄色单元格表示胰岛素分泌较高的时间间隔。每个受试者均标注有 HbA1C 类别、β 细胞功能类别 (BetaCell)、肌肉胰岛素抵抗类别 (MuscleIR) 和处置指数 (DI)。
+
+### Glucose from OGTT vs IIGI
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_20_0.png)
+
+扩展数据图 3 | OGTT 和 IIGI 期间血浆葡萄糖浓度的一致性分析。OGTT 和 IIGI 的葡萄糖时间序列相互叠加，显示出其高度相似性。每个方框代表一个受试者，x 轴表示相对于 OGTT 或 IIGI 开始的时间（分钟），y 轴表示葡萄糖浓度（mg/dL）。每个受试者 OGTT 和 IIGI 葡萄糖时间序列之间的平均 Pearson 相关系数为 0.82，标准差为 0.16。
+
+### C–Peptide concentration (OGTT vs IIGI)
+
+IIGI   OGTT
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_21_0.png)
+
+**扩展数据图 4 | OGTT 和 IIGI 期间的血浆 C-肽浓度。** C-肽浓度在七个时间点（0、15、30、60、90、120 和 180 min）获得。每个方框代表一个受试者，x 轴表示相对于 OGTT 或 IIGI 开始的时间（分钟），y 轴表示 C-肽浓度（ng/mL）。两条曲线之间的面积用于推断肠促胰素效应。
+
+### A
+
+### GLP-1 (OGTT vs IIGI)
+
+IIGI   OGTT
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_22_0.png)
+
+### B
+
+### GIP (OGTT vs IIGI)
+
+IIGI   OGTT
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_22_1.png)
+
+扩展数据图 5 | OGTT 和 IIGI 期间的总血浆肠促胰素激素浓度。(A) OGTT 和 IIGI 期间的 GLP-1 浓度。(B) OGTT 和 IIGI 期间的 GIP 浓度。测量在四个时间点（0、30、60 和 120 min）获得。受试者 S38 缺少 OGTT 120 min 时的 GLP-1 测量值。受试者 S19 在 IIGI 期间缺少 0 和 30 min 时的 GIP 测量值。受试者 S35 在 IIGI 期间缺少所有测量值。每个方框代表一个受试者，x 轴表示相对于 OGTT 或 IIGI 开始的时间（分钟），y 轴分别表示 GLP-1 或 GIP 浓度（pmol/L 和 pg/mL）。
+
+### Missing glucose timepoints during OGTT
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_23_0.png)
+
+### Z-normalized smoothed vs non-smoothed OGTT glucose time-series
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_23_1.png)
+
+扩展数据图 6 | 葡萄糖时间序列预处理步骤的影响。(A) 显示每个受试者缺失的葡萄糖时间点数量。这些时间点通过线性插值填补。如图所示，87.5%（32 名受试者中的 28 名）的受试者拥有完整时间序列，9.4%（32 名受试者中的 3 名）仅缺失一个时间点，3.1%（32 名受试者中的 1 名）缺失 2 个时间点。(B) 所有平滑葡萄糖曲线叠加在非平滑曲线之上。如图所示，在大多数情况下，平滑对曲线的影响较小。然而，在存在强烈波动（例如 S55）的情况下，平滑有助于捕捉总体模式，而非那些即时的尖峰和波谷。
+
+### Correlation between OGTT curve features and reduced representation (top 2 PC)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_24_0.png)
+
+**扩展数据图 7** | 葡萄糖时间序列降维表示与提取的曲线特征之间的关系。我们计算了前 2 个主成分 (OGTT_G_ReducedRep) 与提取特征 (OGTT_G_Features) 之间的相关系数。PC1 和 PC2 解释的方差分别为 43.8% 和 18%。如图所示，PC1 与曲线下增量面积 (iAUC) 强烈负相关，并与葡萄糖曲线下负面积 (nAUC) 正相关。这意味着 PC1 上较高的正值与较低的 iAUC 相关。
+
+### HOMA-B
+
+### HOMA-IR
+
+### Matsuda-Index
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_25_0.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_25_1.png)
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_25_2.png)
+
+扩展数据图 8 | 初始队列受试者中测得的常见胰岛素抵抗和敏感性替代标志物。(A) HOMA-B，(B) HOMA-IR，和 (C) Matsuda 指数。
+
+CTRU_CGM -- CTRU_Venous -- Home_CGM_1 -- Home_CGM_2
+
+![](img/98a3f3f57492ea5acdd64ee476f69201_26_0.png)
+
+**扩展数据图 9 | 验证和居家 CGM 队列的葡萄糖时间序列。** 每个方框代表一名受试者。每个受试者有四条葡萄糖时间序列：临床 OGTT 期间通过静脉血样本测量的葡萄糖时间序列（绿色）、临床 OGTT 期间通过 CGM 测量的葡萄糖时间序列（红色）、第 1 次居家测试试验期间通过 CGM 测量的葡萄糖时间序列（青色）、以及第 2 次居家测试试验期间通过 CGM 测量的葡萄糖时间序列（紫色）。金标准肌肉胰岛素抵抗通过 SSPG 测量，写在每个方框的标题上。x 轴上的 Time=0 表示受试者开始饮用葡萄糖饮料的时间。垂直黑色虚线表示 120 min 时的时间点，此时测量葡萄糖水平用于糖尿病的临床诊断。葡萄糖值高于 200 mg/dL（红色虚线）表示糖尿病状态，葡萄糖值低于 140 mg/dL（橙色虚线）表示正常血糖状态，140-200 mg/dL 之间的葡萄糖值表示糖尿病前状态。
+
+## Reporting Summary
+
+Nature Portfolio 希望提升我们发表工作的可重复性。此表格为报告的一致性和透明度提供结构。有关 Nature Portfolio 政策的更多信息，请参阅我们的编辑政策和编辑政策检查表。
+
+### Statistics
+
+对于所有统计分析，请确认以下项目出现在图例、表例、正文或方法部分中。
+
+| | |
+|---|---|
+| 不适用 | 已确认 |
+| [X] | 每个实验组/条件的精确样本量 (n)，以离散数值和测量单位给出 |
+| [X] | 关于测量是取自不同样本还是同一样本重复测量的声明 |
+| [X] | 使用的统计检验方法和是单侧还是双侧 *仅常见检验应仅用名称描述；更复杂的技术应在方法部分中描述。* |
+| [X] | 所有测试协变量的描述 |
+| [X] | 任何假设或校正的描述，例如正态性检验和多重比较校正 |
+| [X] | 统计参数的完整描述，包括中心趋势（例如均值）或其他基本估计（例如回归系数）和变异（例如标准差）或相关的不确定性估计（例如置信区间） |
+| [X] | 对于零假设检验，检验统计量（例如 F、t、r）及其置信区间、效应量、自由度和 P 值 *在适用时，P 值应给出精确值。* |
+| [X] | 对于贝叶斯分析，先验分布的选择和马尔可夫链蒙特卡洛设置的信息 |
+| [X] | 对于层次和复杂设计，识别检验的适当水平并完整报告结果 |
+| [X] | 效应量估计（例如 Cohen's d、Pearson's r），指明其计算方法 |
+
+### Software and code
+
+计算机代码可用性的政策信息
+
+| 数据收集 | 胰岛素分泌 (ISEC) 软件用于从血浆 C-肽测量中计算胰岛素分泌率 (PMID: 8894385)。 |
+| 数据分析 | R v4.1.0 和 Python v3.6 用于统计分析、机器学习建模和可视化。代码可在 https://github.com/aametwally/Metabolic_Subphenotype_Predictor 获取 |
+
+对于使用对研究至关重要但尚未在文献中描述的自定义算法或软件的稿件，软件必须提供给编辑和审稿人。我们强烈鼓励将代码存储在社区仓库（例如 GitHub）中。有关提交代码和软件的更多信息，请参阅 Nature Portfolio 指南。
+
+### Data
+
+数据可用性的政策信息
+
+所有稿件必须包含数据可用性声明。此声明应在适用时提供以下信息：
+
+- 公开可用数据集的 accession codes、唯一标识符或网络链接
+- 任何数据可用性限制的描述
+- 对于临床数据集或第三方数据，请确保声明符合我们的政策
+
+本研究使用的 CGM 和静脉血去标识化葡萄糖值以及其他数据类型可从研究数据存储库下载: https://storage.googleapis.com/gbsc-gcp-project-ipop_public/NBME-22-1010C/NBME-22-1010C.zip。
+
+
+
+
+
+### 涉及人体受试者、其数据或生物材料的研究
+
+关于涉及人体受试者或人体数据的研究的政策信息。另请参见关于性别、性别（身份/表现）和性取向以及种族、民族和种族主义的政策信息。
+
+**性别和性别报告** 我们收集了研究中所有参与者的性别信息。我们未收集性别信息。研究结果适用于男性和女性。
+
+**种族、族裔或其他社会相关群体的报告** 参与者的种族和族裔数据基于自我报告的信息。参与者招募过程仅在旧金山湾区进行。由于该地区的人口统计特征，最终纳入的受试者主要由自认为是高加索人和亚洲人的个体组成。认识到种族对研究结果的潜在影响，它在方法学上被纳入为我们代谢亚表型基线预测模型中的一个变量。值得注意的是，本研究中包含的所有参与者均拥有至少大学学历。
+
+**人口学特征** 本研究使用了三个队列；（1）用于训练和测试模型的主队列，（2）验证队列，（3）居家 CGM 队列。主队列包含 32 名参与者（13 名男性和 19 名女性；平均年龄 57.2 岁，平均 BMI 26.5 kg/m^2，平均 HbA1c 5.6%）。独立验证队列包含 24 名参与者（11 名男性和 13 名女性；平均年龄 53.2 岁，平均 BMI 25.9 kg/m^2，平均 HbA1c 5.6%）。居家 CGM 队列包含 29 名参与者（24 名来自验证队列，5 名来自初始队列；14 名男性和 15 名女性；平均年龄 54.9 岁，平均 BMI 25.6 kg/m^2，平均 HbA1c 5.6%）。
+
+**招募** 参与者提供了书面知情同意书。参与者通过在线本地投放广告、当地报纸以及向社区进行的教职人员讲座等方式，从旧金山湾区招募。
+
+**伦理监督** 该研究方案和临床研究已获得斯坦福大学医学院人体研究保护办公室（机构审查委员会 # 43883）的批准。
+
+请注意，手稿中还必须提供关于研究方案批准的完整信息。
+
+### 研究领域特定报告
+
+请选择以下最适合您研究的一项。如果您不确定，请在选择前阅读相应部分。
+
+- [x] 生命科学
+- [ ] 行为与社会科学
+- [ ] 生态、进化与环境科学
+
+有关包含所有章节的文档参考副本，请参见 nature.com/documents/nr-reporting-summary-flat.pdf
+
+### 生命科学研究设计
+
+即使披露结果为负面，所有研究也必须披露这些要点。
+
+**样本量** 在研究开始前，每个代谢亚表型对葡萄糖失调的确切贡献尚不清楚。根据我们之前的经验，我们估计 30 名参与者足以揭示代谢亚表型的异质性，并使用数据来训练机器学习模型。我们成功为初始队列招募了 32 名参与者，另外招募了 24 名作为独立队列。第三个队列用于居家 CGM，我们招募了 29 名参与者（24 名来自验证队列，5 名来自初始队列）。
+
+**数据排除** 未排除任何数据。
+
+**重复性** 训练采用 4 折交叉验证方式进行，并重复了 100 次。因此，75% 的初始队列数据用于训练，25% 用于测试。招募了一个独立队列，在研究单位和家中使用 CGM 验证训练好的模型。
+
+**随机化** 随机化不适用于该研究。
+
+**盲法** CGM 数据以盲法模式收集，意味着参与者未看到实时血糖值。
+
+### 特定材料、系统和方法的报告
+
+我们要求作者提供许多研究中使用的某些材料、实验系统和方法的信息。此处，请指示列出的每种材料、系统或方法是否与您的研究相关。如果您不确定某列表项是否适用于您的研究，请在选择回复前阅读相应部分。
+
+#### 材料与实验系统
+
+| | 研究中涉及 |
+|---|---|
+| [x] [ ] | 抗体 |
+| [x] [ ] | 真核细胞系 |
+| [x] [ ] | 古生物学和考古学 |
+| [x] [ ] | 动物和其他生物 |
+| [ ] [x] | 临床数据 |
+| [x] [ ] | 引起关注的二重用途研究 |
+| [x] [ ] | 植物 |
+
+#### 方法
+
+| | 研究中涉及 |
+|---|---|
+| [x] [ ] | ChIP-seq |
+| [x] [ ] | 流式细胞术 |
+| [x] [ ] | 基于 MRI 的神经影像学 |
+
+#### 临床数据
+
+关于临床研究的政策信息
+
+所有手稿应遵守 ICMJE 关于临床研究出版的指南，并且所有投稿都必须包含一份完整的 CONSORT 清单。
+
+| 临床试验注册 | NCT03919877 |
+|---|---|
+| 研究方案 | https://clinicaltrials.gov/ct2/show/NCT03919877 |
+| 数据收集 | 数据在斯坦福临床转化研究单位（CTRU）和通过 CGM 在家中收集。招募始于 2019 年 4 月，最后一名参与者于 2023 年 5 月招募。 |
+| 结局 | 该试验分为四个阶段；第一阶段是识别代谢亚表型，最后阶段是为每位参与者个性化饮食。该试验的主要目标是为每个代谢亚表型采用最佳饮食来降低血糖水平。在本研究中，我们报告了代谢亚表型分析部分的结果。 |
+
+#### 植物
+
+| 种子库存 | NA |
+|---|---|
+| 新型植物基因型 | NA |
+| 鉴定 | NA |
+
