@@ -1,0 +1,11 @@
+the results taken from the experiments, the proposed novel technique is resistant against image-oriented attacks, frame-based attacks, and also tenacities the false positive problem.
+
+# 6.1 INTRODUCTION
+
+Since the rapid expansion of the web, multimedia information such as images, videos, and audio are easily transmitted through the web. The digital multimedia data are passed on the internet without the owner’s concern; hence unlimited duplicate copy is made by illegal users. For avoiding the above-said issues, the digital video watermarking technique is adapted. It is an effective technique adapted for maintaining security to the source data by entrenching either the digital image, audio, or any digital data. Various watermarking techniques have already been suggested by the researchers,1,2 in connection with the performance of the DWT-PCA-based methodology provides more results in the metrics of imperceptibility and robustness.3,5,9
+
+In recent years, a number of solutions for protecting video copyright have been created. Each strategy has advantages and disadvantages based on robustness and imperceptibility, which are represented in Table 6.1.
+
+# 6.2 PROPOSED METHODOLOGY
+
+The proposed methodology is intended to produce a one-of-a-kind video security system by combining the speeded up robust features (SURF) feature selection method with the DWT. The PCA technique is used for the dimensionality reduction of the secret image. The video is fragmented into groups of scenes based on the scene segmentation technique. The maximum energy level frames are identified in the individual scene based on the entropy level of the frame. Finally, the maximum entropy holding frame is selected as a Keyframe for the watermark embedding process. The scaling factor is the crucial factor to control the robustness and imperceptibility of the watermark as well as the video hence the artificial bee colony algorithm is applied to choose the optimal scaling factor. The PC of the scrambled watermark block is chosen to improve the security level of the watermark data. The SURF features are then retrieved, and the scrambled secret image blocks are inserted in the Keyframes’ feature points.

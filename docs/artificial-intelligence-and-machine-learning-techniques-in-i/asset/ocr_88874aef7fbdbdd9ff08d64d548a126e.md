@@ -1,0 +1,11 @@
+Another contribution of this research paper involves a comparative analysis of various machine learning models like deep neural network model, non-linear support vector machine model, multinomial Naïve Bayes model, decision tree, random forest, and logistic regression on a dataset collected from around 10 different hospitals of Kerala, India. It also provides a comparative analysis of pre-existing work present in this domain to the best of the author’s knowledge.
+
+For better evaluation and understanding of the proposed models, this paper briefly gives various evaluation metrics of the model being used and their corresponding significance. Another noteworthy contribution of the proposed work is its low-time complexity and low-error rate in the machine learning model being used.
+
+In the upcoming sections, the given structure is followed: Section 2 discusses some relevant pre-existing work which is followed by Section 3 which will be providing the reader with information about the dataset along with the necessary steps of cleaning and processing the data. In Section 4, the proposed methodology and the chronology that have been followed while building the model is demonstrated. Section 5 will discuss the results retrieved from the process followed and Section 6 will conclude the findings and future work in this field.
+
+# 2.2 RELATED WORKS
+
+With reference to PCOS detection, some relevant pre-existing work has been discussed in this section. The performance of the Bayesian classifier on a PCOS recognition problem applied on a dataset of 250 women collected from GDIFR, Kolkata is shown in a work by Ref. [3]. It explains the benefits of using the Bayesian classifier over logistic regression. It shows the analysis of parameters used to determine the model and posterior probability of diagnosing PCOS patients correctly with an accuracy of 93.93%. Later in research, a patient survey of around 541 women was used to analyze the nature of various models and to finally predict the presence of PCOS in patients using the models.
+
+The classification with transformed features using PCA was done using several techniques like CART, Naïve Bayes Algorithm, Logistic Regression Algorithm, K-Nearest Neighbours, Support Vector Machine Algorithm, and Random Forest on a dataset collected from an online

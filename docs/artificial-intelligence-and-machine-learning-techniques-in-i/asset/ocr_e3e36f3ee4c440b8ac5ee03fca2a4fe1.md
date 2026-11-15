@@ -1,0 +1,11 @@
+to identify the disease well in time with more accuracy. This chapter talks about determining the disease from a standard image dataset using supervised machine learning algorithms and compares the accuracy obtained by different algorithms. After analyzing the accuracies, it is found that Random Forest Classifier performs better than others.
+
+# 5.1 INTRODUCTION
+
+This chapter talks about detecting people that might be suffering from diabetic retinopathy. Before jumping into the technical aspects of the work, let's understand what is diabetic retinopathy, its causes, how it can be treated, etc. The reason for choosing diabetic retinopathy is that the number of cases that are being recorded worldwide are increasing alarmingly. Many studies suggest that it is very uncommon that a healthy person may be suffering from this disease. Diabetic retinopathy, generally called diabetic eye sickness, is an infirmity wherein hurt hops out at the retina given diabetes mellitus. It is a fundamental of wellspring of blindness. Diabetic retinopathy influences up to 80% of the people, who have diabetes for quite a while or more. If timely treatment is done, then 90% of new cases could be reduced.
+
+Persons having a long history of diabetes are more likely to develop diabetic retinopathy. Each year in the United States diabetic retinopathy states 12% of each original example of graphical impedance. Glaucoma, the standard movement of fluid in the eye may get discouraged as crisp enlist the vessels structure. The blockage causes an increase in visual weight, or weight in the eye, thereby increasing the risk of optic nerve mischief and vision disaster. Figures 5.1a and 5.1b illustrate the normal retina and diabetic retinopathy-affected image.
+
+Now here, we briefly examine the causes of diabetic retinopathy.
+
++   1. Patent history: It is one of the most prominent reasons that a person might be suffering from diabetic retinopathy. There might be a possibility that a person is having diabetes but is not prone to diabetic retinopathy. Here, the duration of diabetes in a patient matters. A person who is suffering from diabetes for a long time has more chances to encounter diabetic retinopathy. It means if a person is diabetic, he is more likely to have retinopathy at some point.

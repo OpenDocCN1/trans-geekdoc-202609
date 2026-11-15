@@ -1,0 +1,13 @@
+A projection-based discriminator when combined with spectral normalization model (Miyato & Koyama, 2018) significantly improves image generation using conditional classes from ImageNet. In image recognition, VLAD (vector of linearly aggregated descriptors)20 is a residual vector encoded representation of the glossary, and Fisher vector21 which can be produced as an anticipated version of VLAD.20
+
+Both are found to be powerful superficial depictions for image search and categorization.22,23 It has been found that coding of residual vectors24 is more efficient than coding of original vectors in vector quantization. The multigrid method,25 widely used for solving partial differential equations (PDE) in short-level vision and computer graphics, redesigning the system as a subproblem between two scales namely coarser and finer scales.
+
+Variables that showcase residual vectors forming a bridge between two scales is hierarchical basis preconditioning26,27 which is an alternative to multigrid method. Standard solvers that are not aware of the residual properties of the solution, converge much slower than these solvers.25–27 To make optimization easier, the processes that we are suggesting is good reconstruction or pre-processing.
+
+As discussed by Nazeri et al.,30 an image-to-image transformation operation that maps a multidimensional input to a multidimensional output, is called as image coloring.
+
+This could be viewed as a pixel-to-pixel regression problem where the input model is strongly matched to the output model. It shows that the network should also provide the color details to every pixel of the input gray scale image along with the output of the similar spatial dimensions as the input.
+
+An output having the same spatial dimensions as the input, must be produced by the network and we need to give color details to every pixel in the input gray scale image.
+
+The convolutional model architecture that we are providing uses regression loss as the foundation that goes on to extending our research to adversarial nets. L*a*b* color space is being utilized for colorization task. The reason we are using the L*a*b* color space as it consists of a dedicated channel to represent the brightness of an image and color details are fully encoded in the other two channels. It prevents sharp changes in brightness and color due to small perturbations of intensity values occurring in the RGB (Red Green Blue) baseline and extends this idea to adversarial nets.
