@@ -1,0 +1,1825 @@
+- pgno: 0
+  md: "# Optimizing block morphology for reducing traffic pollutant concentration\
+    \ in adjacent external spaces of street canyons: A machine learning approach\n\
+    \nYunni Wu $^{a,b,c}$, Hong Chen $^{a,b,c,*}$\n\n$^a$ School of Architecture and\
+    \ Urban Planning, Huazhong University of Science and Technology, Wuhan, 430074,\
+    \ China\n$^b$ Hubei Engineering and Technology Research Center of Urbanization,\
+    \ Wuhan, 430074, China\n$^c$ The Key Laboratory of Urban Simulation for Ministry\
+    \ of Natural Resources, Wuhan, 430074, China\n\n+   **ARTICLE INFO**\n+   \n+\
+    \   Keywords:\n+   * Block morphology\n+   * CFD\n+   * Machine learning\n+  \
+    \ * Optimizations\n+   * Traffic pollutant\n\n# ABSTRACT\n\nResidential blocks\
+    \ located in near-road environments are exposed to traffic-related air pollution\
+    \ that adversely affects the health of residents. Pedestrian height areas in adjacent\
+    \ external spaces (AES) of street canyons are most severely affected by traffic\
+    \ pollutants. In order to find block morphological optimization strategies that\
+    \ can mitigate the concentration of pollutants in the area, machine learning (ML)\
+    \ regression models were investigated to replace the time-intensive computer fluid\
+    \ dynamic (CFD) model. Data from 1000 CFD simulation cases were used to train\
+    \ the ML models. The best surrogate model was selected and coupled with optimization\
+    \ algorithms. Both single-objective and multi-objective optimization problems\
+    \ based on regional concentration parameters were discussed. The results showed\
+    \ that the block's standard deviation of building height (BHsd) was an essential\
+    \ morphological parameter that can effectively impact the pollutant concentration.\
+    \ The effect mechanism of the building height at different locations in the block\
+    \ on the concentration of the pollutant in the different regions also varies.\
+    \ The optimum block configuration obtained from the optimizations coupled ML model\
+    \ can facilitate reducing pollutant concentrations. This study provides a framework\
+    \ for residential block design optimization that can help urban designers efficiently\
+    \ evaluate and select block layouts conducive to reducing the impact of traffic\
+    \ pollutants.\n\n# 1. Introduction\n\nOne of the primary drivers of air pollution\
+    \ in cities, transportation emissions have increased as a result of urbanization.\
+    \ Particulate matter (PM), nitrogen oxides (NOx), and carbon monoxide (CO), all\
+    \ of which are caused by traffic, can be harmful to human health, the climate,\
+    \ and the environment [1]. Numerous epidemiological studies have shown that the\
+    \ incidence of morbidity and mortality due to lung function impairment, asthma,\
+    \ respiratory cancer, cardiovascular and cerebrovascular system diseases, breast\
+    \ cancer, and thyroid function deterioration is closely related to traffic-related\
+    \ air pollution [2–4]. According to estimates, there were 8379 and 1908 cases\
+    \ of early fatalities in Beijing, China, due to traffic pollution in 2014 and\
+    \ 2020, respectively [5]. Therefore, it is essential to discover practical measures\
+    \ to lessen traffic pollution and enhance urban livability.\n\nUrban residents\
+    \ who live near street canyons are at risk of severe health problems due to traffic-related\
+    \ air pollution [6,7]. Street canyons are urban features where buildings resemble\
+    \ canyons, impacting how\n\npollution from moving automobiles is dispersed. The\
+    \ extent of the effects of air pollutants caused by traffic on residential areas\
+    \ relies on a number of variables, including the wind direction, the kind of road,\
+    \ the shape of the block, the amount of traffic, etc. In general, secondary roads\
+    \ have a lesser impact range, which may be within 50 m, but motorways and main\
+    \ roads have a wider impact range, which may reach 300 m or farther [8]. Studies\
+    \ have shown that the farthest diffusion distance of CO from the road source is\
+    \ between 100 m and 200 m [9], which coincides with the range of residential areas\
+    \ near the road. A more effective way to reduce the impact of air pollutants in\
+    \ street canyons is to guide them into the urban canopy rather than diluting them\
+    \ with strong winds. This prevents pollutants from spreading to nearby blocks\
+    \ and enlarging the exposure area [10–12]. It also lowers the concentration in\
+    \ areas where pedestrians walk.\n\nPrevious studies have concentrated on the dispersion\
+    \ of traffic pollutants in street canyons and their effects on pedestrians [13–18].\
+    \ However, these studies have overlooked how these pollutants spread to the surrounding\
+    \ blocks and how to reduce their impacts on the residents in the adjacent external\
+    \ spaces (AES) of the street. AES refers to the"
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '| Term | Definition |
+
+    |---|---|
+
+    | AES | the adjacent external spaces of the street |
+
+    | ML | Machine Learning |
+
+    | CFD | Computational Fluid Dynamics |
+
+    | GA | Genetic Algorithm |
+
+    | NSGAII | non-dominated sorting genetic algorithm II |
+
+    | CO | carbon monoxide |
+
+    | BHstd | the standard deviation of building height |
+
+    | FAR | Floor area ratio |
+
+    | Rbc | Building coverage ratio |
+
+    | LHS | Latin hypercube sampling |
+
+    | RF | Random Forest |
+
+    | GB | Gradient Boost |
+
+    | XGB | eXtreme Gradient Boosting |
+
+    | LGBM | Light Gradient Boosting Machine |
+
+    | Cpod | the normalized concentration in the podium volume |
+
+    | Cped | the normalized concentration in the pedestrian volume |
+
+    | AQI | Air quality index |
+
+
+    external area of the block adjacent to the street canyon, generally the sub-street
+    area between the adjacent row and the second row of buildings within the block.
+    These spaces have their own microclimate, which is sometimes remarkably different
+    from the surrounding climate [19]. AES can make a place more inhabitable by allowing
+    more activities to take place outdoors over longer periods (Fig. 1). The milder
+    microclimate of the AES in the block enables increased use of the outside space
+    while spending more time outdoors supports a sense of ownership and control over
+    space, as well as increasing the likelihood of encounters with other people, which
+    promotes community. Additionally, the spatial clarity of the contained space makes
+    for a clearer sense of identity and ownership, which can also result in it being
+    used more. Since these areas are often used for outdoor activities, it is essential
+    to monitor the concentration of traffic pollutants there [20].
+
+
+    Urban morphology, which refers to the shape and arrangement of buildings and streets,
+    is one factor that influences the dispersion and concentration of traffic pollutants.
+    Urban morphology can affect the airflow patterns, turbulence intensity, and ventilation
+    performance in urban blocks and street canyons. The previous papers summarize
+    the influence of many block morphological parameters on the diffusion of traffic
+    pollutants, such as floor area ratio (FAR) [21–23], building coverage ratio (Rbc)
+    [24,25], building height [26,27], etc. Compared with the ideal block models commonly
+    used in wind environments and pollutant dispersion simulation research, the actual
+    blocks have more diverse and complex layouts [28]. For example, the standard deviation
+    of building height (BHstd), a morphological indicator that characterizes the difference
+    in building height in actual blocks, is often ignored in idealized block studies.
+    It has been proven to significantly impact traffic pollution dispersion in many
+    field studies [25,29]. Building height deviation affects the mean flows in horizontal
+    and vertical directions, thus changing the pathways and rates of pollutant transport
+    [30]. However, there is little research on how this parameter interacts with block
+    building layout to affect pollutant diffusion.
+
+
+    Previous studies have simulated various combinations of morphological parameters
+    to examine their effects on the wind environment and neighborhood pollutant concentration
+    [31,32]. The results have analyzed how pollutant concentration distribution varied
+    with block layouts and explained how block morphology impacted pollutant dispersion
+    [15,24]. However, it is difficult to comprehensively cover the diverse neighborhood
+    forms by cross-combining multiple morphological parameters [33]. The same morphological
+    index can correspond to a variety of block configurations. Therefore, it is worth
+    optimizing and discussing what kind of layout is more conducive to reducing the
+    concentration of traffic pollutants in the block.
+
+
+    Optimization algorithms are methods that aim to find the best solution for a problem
+    by minimizing or maximizing a function that measures the quality of the solution.
+    Complex urban block models can be iterated with optimization algorithms multiple
+    times to produce better design results that meet expectations [34–37]. Optimization
+    algorithms usually have three elements: decision variables, constraints, and objective
+    function. The choice of optimization objective needs to be considered carefully.
+    It can be single-objective or multi-objective and can focus on the global or local
+    level. These choices can lead to different optimization results [38–40].
+
+
+    In traditional urban block environment optimization problems, researchers are
+    limited by the time-consuming nature of simulation data acquisition [41]. As a
+    result, the number of optimization iterations is still limited, and the solution
+    space is difficult to search globally [42,43]. To overcome this challenge, surrogate
+    models replace computer fluid dynamic (CFD) simulation data that are time-consuming
+    or difficult to obtain. A surrogate model is an approximate mathematical model
+    of an outcome of interest that cannot be easily measured or computed. Surrogate
+    models can help reduce the computational cost and complexity of optimization problems
+    involving expensive or complex simulations [44]. Surrogate models applied to CFD
+    include the response surface method [45], the kriging method [34], polynomial
+    regression [40], and machine learning [46–49]. Machine learning (ML) is a branch
+    of artificial intelligence that enables computers to learn from data and improve
+    their performance without explicit programming. ML can enhance CFD by accelerating
+    the computation, improving the accuracy, reducing the complexity, and enabling
+    new applications [50]. Optimization algorithms based on ML models can greatly
+    improve computational efficiency, and the solution set space can be explored in
+    more detail.
+
+
+    This study aims to fill the literature gap regarding the impact of traffic pollutants
+    on residents in the AES. AES is often overlooked despite being more exposed to
+    pollutants than other areas. This study also examines how block morphology, especially
+    BHstd, and block layouts affect pollutant dispersion in different areas. BHstd
+    is an important morphological parameter frequently ignored in previous simulation
+    studies. To achieve this goal, this study uses ML to create a regression model
+    of block pollutant concentration as a surrogate model for CFD. Then, it combines
+    the ML model with an optimization algorithm to explore the optimal block design
+    strategy that can reduce pollutant concentration in the AES. The paper is structured
+    as follows: Chapter 2 outlines the research framework of this study; Chapter 3
+    describes the case conditions, CFD, ML, and optimization settings used in this
+    study; Chapters 4 and 5 present and discuss the main findings of this study; Chapter
+    6 concludes the paper with some implications.
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_1_0.png)
+
+
+    Fig. 1. Residents engage in outdoor activities in block [19].'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/3dfc16e89d69a1b97a2f485b1851c7d6_2_0.png)
+
+
+    technique was adopted since there were many possible combinations of building
+    locations and heights within a block. The LHS technique divided the range of each
+    variable into equal intervals and randomly selected one value from each interval
+    [51]. LHS also ensured a more even distribution of ML data. The detailed parametric
+    model settings are described in Chapter 3, Section 1.
+
+
+    # 2. Description of framework
+
+
+    This study proposes an optimization framework for block design using machine learning
+    (ML) models trained on data from computational fluid dynamics (CFD) simulations.
+    The framework consists of five steps (Fig. 2): (1) creating a parametric model
+    based on building height standard deviation (BHstd) and block layout and sampling
+    cases using Latin hypercube sampling (LHS); (2) running CFD simulations for the
+    sampled cases and computing the pollutant concentration values in the target area;
+    (3) developing a surrogate regression model for the pollutant concentration using
+    ML techniques; (4) combining the ML models and optimization algorithms for single-objective
+    and multi-objective optimization; and (5) validating and analyzing the optimization
+    results using CFD simulations.
+
+
+    # 2.1. Step 1: parametric model development and sampling
+
+
+    The first step in this study was to define the physical problem under investigation
+    and create a parametric model for the target block and background buildings. Several
+    design parameters constrained the 3D model to avoid mesh or CFD solver failure
+    due to incorrect or inconsistent geometries [34]. The parametric model was generated
+    using Grasshopper, a parametric modeling platform that works with Rhino software.
+    Grasshopper allowed users to create complex blocks and buildings using algorithms
+    and mathematical logic. Two indices were set: building location and height in
+    the target block to generate a block model that satisfied the urban morphological
+    parameters. To sample as many block layouts as possible, a Latin hypercube sampling
+    (LHS)
+
+
+    # 2.2. Step 2: CFD simulations
+
+
+    In this step, CFD simulations were performed for the sampling cases to analyze
+    the concentration distribution of traffic-related air pollutants under each condition.
+    Simultaneously the average pollutant concentration values of the four regions
+    for each sample were calculated. The CFD simulation results served as the database
+    of the ML model. Therefore, variables other than design parameters were excluded
+    in the CFD simulation boundary condition setting, probe settings, and post-processing.
+    This setup ensured that the simulated concentration results only depended on the
+    parameters of interest. The wind environment and pollutant simulation in this
+    study were based on the open-source CFD simulation software OpenFOAM. The software
+    was connected to the Grasshopper platform interface to automate the process of
+    parametric modeling, mesh generation, and CFD simulation. Specific CFD simulation
+    settings are provided in Chapter 3, Section 2.
+
+
+    # 2.3. Step 3: machine learning model
+
+
+    This step involved using the case parameters generated in the first step and the
+    concentration metrics obtained from the simulation as input variables and targets
+    for the ML, respectively. The data set was split into a training set and a test
+    set based on a specific ratio. Four models were employed to perform predictive
+    regression and evaluate the learning efficiency of the models according to specific
+    metrics. The model with the best regression results would be used as a surrogate
+    model for CFD simulations. FLAML, a fast and lightweight AutoML library developed
+    by Microsoft Research, was chosen to train these data for regression [52]. FLAML
+    automated the selection of learners and hyperparameters. A more detailed ML setup
+    is provided in Chapter 3, Section 3.
+
+
+    # 2.4. Step 4: optimization algorithms
+
+
+    In this step, ML was used as a surrogate model of CFD for fast traffic pollutant
+    prediction and combined with optimization algorithms to explore block configurations
+    that resulted in lower pollutant concentrations. The optimization objectives were
+    chosen to compare the similarities and differences in the results obtained by
+    focusing on different target areas. The single-objective optimization corresponded
+    to the pollutant concentration index of a relatively local area, while the multi-objective
+    optimization was a more global area concentration index. Grasshopper''s optimization
+    plugins, Galapagos and Wallacei, were used as the optimization platform for this
+    paper. Both plugins could be linked with parametric modeling. A more detailed
+    optimization setup is provided in Chapter 3, Section 3.
+
+
+    # 2.5. Step 5: optimal block morphology
+
+
+    In this step, the feasibility of the ML model in the optimization framework was
+    verified by conducting CFD simulations for the optimal solutions obtained from
+    both single-objective and multi-objective optimizations. The pollutant concentration
+    performance of these optimal solutions was compared in local and global areas.
+    The influence of block morphology corresponding to the optimization results on
+    the dispersion of traffic-related air pollutants was also analyzed. Finally, block
+    design strategies that facilitate the reduction of pollutant concentrations within
+    the AES were summarized. Detailed optimal results are provided in Chapter 4.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# (a) There are 5*7 in the block with a total of 35 sites where buildings can
+    be arranged.
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_3_0.png)
+
+
+    # (b) 21 of the 35 sites are occupied with buildings.
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_3_1.png)
+
+
+    # (c) Control group A
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_3_2.png)
+
+
+    FAR=2.3
+
+    Rb_c=0.37
+
+    Building height=18.86m
+
+    BHstd=0m
+
+
+    # (d) Control group B
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_3_3.png)
+
+
+    FAR=2.3
+
+    Rb_c=0.22
+
+    Building height=31.43m
+
+    BHstd=0m
+
+
+    # (e) The scope of block and AES.
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_3_4.png)
+
+
+    # (f) Sampling probes for pedestrian and podium heights
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_3_5.png)
+
+
+    # Fig. 3. Parametric model.
+
+
+    # 3. Case study
+
+
+    # 3.1. Parametric model development
+
+
+    The complexity and a large number of morphological properties of actual urban
+    blocks make it difficult to comprehensively analyze the morphological effects
+    on pollutant diffusion [53]. Therefore, a block type with more pronounced building
+    height standard deviation characteristics needs to be selected for discussion
+    based on the diversity of block morphology. The case study utilized the block
+    basic morphological settings based on one of the clustering results of Wuhan residential
+    block morphology from previous studies [28]. These blocks have a relatively large
+    BH_std ranging from 20 to 35 m. To examine how BH_std and block layout affect
+    traffic pollutant concentrations, the model fixed the FAR and Rb_c at 2.3 and
+    0.22, respectively, while varying the BH_std of the block from 10 to 35 m. The
+    formula for calculating the standard deviation of building height in this paper
+    is shown in Eq. (1) [54]:
+
+
+    ```
+
+    BH_{std} = \sqrt{\frac{1}{n}\sum_{i=1}^{n} (h_i - \bar{h})^2} (1)
+
+    ```
+
+
+    where n is the number of buildings in the target block which is 21 in this paper.
+    h_i is the height of each building. \bar{h} is the average height of the buildings
+    in the block, which is 31.43 m. The block scale was also fixed according to this
+    type of block: 530 m for the long side and 270 m for the wide side. The target
+    block had 35 sites for building placement (Fig. 3a), but only 21 sites were occupied
+    (Fig. 3b), and the total building area was 330,000 m^2 to maintain consistent
+    FAR and Rb_c. These building placements were numbered along the Y-axis by A-E
+    and the X-axis by 1-7 (Fig. 3a). The study only considered the height and location
+    of 21 buildings in the target block. Different BH_std corresponded to different
+    and unique combinations of building heights, which were limited to 3-99 m. For
+    example, if BH_std was 28.69 m, the heights of the 21 buildings were 3, 3, 3,
+    6, 6, 9, 15, 15, 18, 18, 24, 24, 24, 24, 33, 45, 54, 78, 81, 81, and 96 m. A random
+    set of'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'position numbers for building occupancy was also generated. Sites without buildings
+    were assigned a zero value; sites with buildings were assigned their height values.
+    These values were arranged by site id. These two sets of data combined to generate
+    a 35-dimensional block layout parameter.
+
+
+    Due to the high dimensionality of these parameters, it is challenging to perform
+    CFD simulations for all of them. Therefore it is necessary to sample these parameters.
+    The sampling method directly affects the accuracy and computational cost of the
+    surrogate model [34]. In order for the ML model to capture as much diversity of
+    the sample as possible, it is necessary to guarantee that the block morphology
+    is sufficiently rich. Finding a suitable space-filling methodology to decrease
+    the number of required simulations is a challenging problem in designing computational
+    experiments [55]. This study adopted the LHS technique to create 1000 samples
+    as the database. LHS is a statistical method for generating a near-random sample
+    of parameter values from a multidimensional distribution. The sampling method
+    is often used to construct computer experiments or for Monte Carlo integration.
+    As far as possible, all patterns of block building combinations were included
+    in the sample of 1000 sampled for this study. These included blocks with more
+    dispersed or concentrated building distribution, blocks with different locations
+    of high-rise buildings, etc. (Fig. S1).
+
+
+    To demonstrate the role of building height in pollutant dispersion, two additional
+    control groups were established based on uniform building height. Control group
+    A was the ideal block in the traditional simulation study, where all sites in
+    the block were occupied by buildings, resulting in a slightly higher Rb_c at 0.37.
+    To ensure that the FAR was consistent with the ordinary cases, all buildings in
+    the block were 18.86 m (Fig. 3c). The other control group B followed the same
+    building layout as the ordinary cases but with all building heights set to 31.43
+    m (Fig. 3d).
+
+
+    The research block was surrounded by 30 m*50 m*30 m background buildings. To investigate
+    vehicle emissions, a traffic pollutant source was located in the upwind canyon
+    of the research block. The source was 0.3 m above the ground, 2.5 m wide, and
+    covered the entire street canyon. The overhanging pollution source was designed
+    to be closer to the height of the vehicle exhaust pipe. The width of the pollution
+    source was set based on lane width [28,56]. This way of setting up the pollution
+    source is closer to the reality than the traditional arrangement of line sources
+    on the ground. CO was used as a tracer gas to represent the continuous and uniform
+    release of traffic pollutants (Fig. 3e and f). The area within 80 m of the pollution
+    source in the block is defined as the areas of the street canyon, which was the
+    most polluted area by traffic [28]. Sampling probes were evenly distributed in
+    the block’s 0–15 m height area to investigate the pollutants’ dispersion (Fig.
+    3e and f). The areas with heights of 0–2 m and 0–15 m are pedestrian height volume
+    and podium height volume, respectively [21]. Sampling probes in building gaps
+    ensured that calculated average pollutant concentration would not be disturbed
+    by probe location, and probe numbers were consistent for all working conditions.
+    Sampling probes were divided into four parts according to horizontal and vertical
+    distribution: sampling probes within the podium and pedestrian height in the block,
+    sampling probes within the podium and pedestrian height in the AES. The numbers
+    of sampling probes in each part were 3180, 424, 900, and 120.
+
+
+    # 3.2. Assessment of pollutant dispersion
+
+
+    The concentrations of sampling probes were counted to compare the pollutant distribution
+    in different cases. The pollutant concentration was normalized, as indicated in
+    Ref. [57] and described in Eq. (2).
+
+
+    $c^* = \frac{U_H H^2}{m}$ (2)
+
+
+    where $c^*$ is the dimensionless concentration, $\bar{c}$ is the pollutant concentration
+    at the probes [kg/m^3], $U_H = 2m/s$ is the reference speed at the H = 10 m level,
+    and $m$ is the source emission rate of pollutants [kg/s]. The
+
+
+    **Table 1** Air quality index of CO and the corresponding pollutant concentration
+    limit.
+
+
+    | IAQI | 0 | 50 | 100 | 150 | 200 | 300 | 400 | 500 |
+
+    |---|---|---|---|---|---|---|---|---|
+
+    | CO (mg/m^3) | 0 | 2 | 4 | 14 | 24 | 36 | 48 | 60 |
+
+
+    pollutant release rate is consistent for all working conditions and is set to
+    3.7×10^-6 kg/s according to the traffic flow and motor vehicle emissions [58,59].
+
+
+    The study computed the mean values of pollutant concentrations at sampling points
+    for four different components. The average normalized concentration of the block
+    in the podium volume and pedestrian volume is denoted as C_pod_Block and C_ped_Block,
+    respectively. Similarly, C_pod_AES and C_ped_AES represent the average normalized
+    concentration of AES in the podium volume and pedestrian volume. Among these metrics,
+    C_pod_Block and C_ped_Block are global metrics, while C_pod_AES and C_ped_AES
+    are local metrics.
+
+
+    The Air Quality Index (AQI) was introduced as an evaluation index to evaluate
+    the impact of traffic-related air pollutants on each case. Previous studies have
+    shown that pollutants can penetrate neighborhoods up to 100 m–200 m away [60].
+    Still, such findings do not limit the concentration of pollutants that would affect
+    human health. Therefore, this study proposes using AQI to determine the pollutant
+    concentration criteria that will affect residential life and to weigh the impact
+    range of pollutants in horizontal and vertical directions.
+
+
+    In this study, AQI was calculated by simplifying the concentration of one air
+    pollutant (CO) according to the ambient air quality standards of China (HJ633-2012)
+    [61]. AQI has been categorized into different classes [62]: I (AQI: 0–50), II
+    (AQI:51–100), III (AQI:101–150), IV (AQI:151–200), V (AQI:201–300) and VI (AQI:301–greater),
+    which indicate air quality are excellent, good, lightly polluted, moderately polluted,
+    heavily polluted, and severely polluted, respectively Eqs. (3) and (4):
+
+
+    $IAQI_{Co} = \frac{IAQI_{Hi} - IAQI_{Lo}}{BP_{Hi} - BP_{Lo}} (C_p - BP_{Lo}) +
+    IAQI_{Lo}$ (3)
+
+
+    $AQI = IAQI_{Co}$ (4)
+
+
+    where IAQI_Co is the air quality index of CO, C_p is the concentration of sampling
+    probes, BP_Hi represents the AQI values at the upper limits of CO, BP_Lo represents
+    the AQI values at the lower limits of CO, IAQI_Hi is the breakpoint concentrations
+    of pollutant at the upper limits of CO, and IAQI_Lo is the breakpoint concentration
+    of a pollutant at the lower limits of CO. The air quality index of CO and the
+    corresponding pollutant concentration limits can be found in Table 1.
+
+
+    # 3.3. CFD models
+
+
+    A dataset for ML was generated by conducting a total of 1000 Reynolds-Averaged
+    Navier-Stokes (RANS) simulations. The CFD calculation domain was defined as suggested
+    by the Architectural Institute of Japan (AIJ) guidelines [63]. The distance from
+    the model to the inflow boundary is 5H, the distance from the outflow boundary
+    is 15H, and the distance from the symmetrical boundary on both sides is 6H. The
+    height of the calculation domain is 6H, where H is the tallest building height
+    of the case (Fig. 4). The computational domain and background mesh were first
+    defined via constructed hexagonal meshes created using the blockMesh utility,
+    followed by refinement via the built-in snappyHexMesh utility. The grids varied
+    between 0.6 and 1.5 million cells across the various cases.
+
+
+    A numerical model was formulated and solved using OpenFOAM 5.0. A customized solver,
+    tsSimpleFoam, was developed based on the built-in simpleFoam solver to incorporate
+    the advection-diffusion concentration transport equation. The Semi-Implicit Method
+    for Pressure-Linked Equations (SIMPLE) algorithm numerically resolves the coupling
+    between pressure and velocity fields in the RANS equations.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/3dfc16e89d69a1b97a2f485b1851c7d6_5_0.png)
+
+
+    Fig. 4. CFD computational domain.
+
+
+    # Table 2 Boundary conditions of the field variables in OpenFOAM.
+
+
+    | Physical quantity | <u> | <p> | k | ε | νt | CO |
+
+    |---|---|---|---|---|---|---|
+
+    | Variable | U | P | k | epsilon | nut | C |
+
+    | Inlet | codedFixValue | zeroGradient | codedFixValue | codedFixValue | zeroGradient
+    | zeroGradient |
+
+    | Outlet | zeroGradient | fixedValue | zeroGradient | zeroGradient | zeroGradient
+    | zeroGradient |
+
+    | Ground | noslip | zeroGradient | kqRWallFunction | epsilonWallFunction | nutkWallFunction
+    | zeroGradient |
+
+    | Buildings | noslip | zeroGradient | kqRWallFunction | epsilonWallFunction |
+    nutkWallFunction | zeroGradient |
+
+    | Source | zeroGradient | zeroGradient | zeroGradient | zeroGradient | zeroGradient
+    | fixedValue |
+
+    | Top | slip | | | | | |
+
+    | Right and left | symmetry | | | | | |
+
+
+    The convergence criteria were set according to the change in residuals. Typical
+    residuals at convergence reached 10^-3 for Ux, Uy, Uz, pressure, k, and epsilon
+    and 10^-4 for the concentration. The RNG k-epsilon model was chosen as the turbulence
+    model.
+
+
+    The inlet profiles reported by Ref. [64] were set as inflow boundary conditions.
+    The velocity profile (U), turbulent kinetic energy profile (k), and turbulent
+    dissipation rate profile (ε) can be defined as follows:
+
+
+    ```
+
+    U(z) = (U*/κ) * ln((z+z0)/z0)   (5)
+
+    k(z) = U*^2 / sqrt(Cμ)   (6)
+
+    ε(z) = U*^3 / (κ(z+z0))   (7)
+
+    ```
+
+
+    where z denotes the height coordinate (m), z0 is the aerodynamic roughness length
+    (m), and κ is the von Karman constant (0.4187). A wind speed of 2 m/s at the 10
+    m height was imposed at the inlet. U* is the atmospheric boundary layer friction
+    velocity at 0.0774 (m/s), and Cμ is a constant (0.09).
+
+
+    The pollutant concentration was calculated by solving a steady-state time-averaged
+    convection diffusion equation:
+
+
+    ```
+
+    ∂(ρcui)/∂xi = ∂/∂xi (K * ∂c/∂xi) + S   (8)
+
+    ```
+
+
+    where c denotes the pollutant concentration. S denotes the pollutant source term.
+    K is the mass diffusion coefficient for the concentration, which is the sum of
+    molecular diffusivity (D) and eddy diffusivity (DT). The eddy diffusivity is defined
+    by:
+
+
+    ```
+
+    Dt = νt / Sc_t   (9)
+
+    ```
+
+
+    where Sc_t is the turbulent Schmidt number, and it is a constant between 0.2 and
+    1.3 in the RANS model [65]. In the present study, the Schmidt number is 0.4. The
+    specific boundary conditions are summarized in Table 2.
+
+
+    # 3.4. Validation and mesh sensitivity
+
+
+    A wind tunnel experiment conducted at the University of Hamburg was used to validate
+    the RNG k-ε turbulence model and near-wall functions. Airflow and dispersion around
+    a finite array of rectangular building models (CEDVAL B1-1) were measured at a
+    reduced scale of 1:200 in a Blasius wind tunnel. The experimental model included
+    3 × 7 arrays of buildings with four pollutant sources located on the leeward side
+    of one target building. Metrics recommended by European Cooperation in Science
+    and Technology (COST) guidelines were employed to validate the model performance
+    [66]. Vector velocity components were quantitatively analyzed using the hit rate
+    (q), whereas FAC2 validated the scalar concentration. These metrics can be expressed
+    as follows:
+
+
+    ```
+
+    q = N/n = (1/n) * Σ(Ni#with Ni) = { 1 for |Pi - Ei| ≤ W; 0 else }   (10)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/3dfc16e89d69a1b97a2f485b1851c7d6_6_0.png)
+
+
+    # Fig. 5. Different resolutions of the grid for mesh sensitivity analysis.
+
+
+    # (a)Ux/Uh distribution
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_6_1.png)
+
+
+    # (b)Scalar concentration distribution
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_6_2.png)
+
+
+    # Fig. 6. Ux/Uh and scalar concentration distributions.
+
+
+    \(FAC2 = \frac{N}{n} = \frac{1}{n} \sum_{i=1}^{n} N_i \#\text{with } N_i = \begin{cases}
+    1 \text{ for } 0.5 \le \frac{P_i}{E_i} \le 2.0 \\ 1 \text{ for } E_i \le W \text{
+    and } P_i \le W \\ 0 \text{ else} \end{cases}\) (11)
+
+
+    where \(E_i\) and \(P_i\) are experiment and predicted values of a given variable
+    for sample \(i\), respectively; and \(N\) is the number of data points. The overbar
+    denotes the mean of the dataset. The allowed absolute differ-
+
+
+    ence \(W\) is set 0.06 for q and 0.1 for FAC2. The acceptance criteria for quality
+    assurance were q \(\ge\) 0.66 and FAC2\(\ge\)0.5.
+
+
+    The mesh independence was investigated using three different mesh sizes: a coarse
+    grid (1,095,000 cells), a base grid (2,261,000 cells), and a fine grid (3,468,000
+    cells)(Fig. 5). The distribution of \(U_x/U_h\) at four vertical lines and the
+    scalar concentration distribution at two horizontal lines are shown in Fig. 6.
+    That is a satisfying correspondence between the basic and the fine mesh, indicating
+    a good mesh independence behavior and validating the basic grid as appropriate
+    in this study. The q of the velocity was 0.72, and the FAC2 of the concentration
+    was 0.67 in'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '| ML model | Parameters |
+
+    |---|---|
+
+    | RF | n_estimators, max_depth, max_features, min_samples_split, min samples leaf,
+    and bootstrap |
+
+    | GB | learning rate, n_estimators, alpha, and min_samples_leaf |
+
+    | XGB | n_estimators, subsample, learning_rate and gamma |
+
+    | LGBM | num_leaves, learning_rate, max_depth, min_child_samples, subsample, colsample_bytree
+    |
+
+
+    the basic mesh. The simulation results agreed with the wind tunnel experiment
+    data, indicating that the RNG k-ε model could predict velocity profiles well.
+
+
+    # 3.5. Settings for ML model
+
+
+    The 35-dimensional input block layout parameter and the corresponding BH_std were
+    used as input features for the ML model. Four average concentration values were
+    used as labels for each case. The 1000 RANS cases were randomly split into 800
+    training and 200 test cases, roughly equivalent to an 80–20% split. This paper
+    selected four machine learning models - Random Forest (RF), Gradient Boost (GB),
+    eXtreme Gradient Boosting (XGB), and Light Gradient Boosting Machine (LGBM) –
+    which were fine-tuned to predict pollutant concentrations in each region accurately.
+
+
+    The Random Forest (RF) regression model is a learning method that constructs multiple
+    decision trees during training and outputs the mean prediction of the individual
+    trees [67]. Gradient Boosting (GB) is a machine learning technique for regression
+    and classification problems that produces an ensemble of weak prediction models,
+    typically decision trees [68]. Extreme Gradient Boosting (XGB) is an ensemble
+    method that trains small-depth trees fitted to the residuals of prior trees. The
+    weight of each added tree is controlled by the learning rate hyperparameter [69].
+    Light Gradient Boosting Machine (LGBM) is a machine learning algorithm that uses
+    gradient boosting to create an ensemble of weak prediction models, typically decision
+    trees, for regression tasks. It is known for its speed and efficiency in handling
+    large datasets and high-dimensional features [70].
+
+
+    In this study, four regression models were simultaneously trained, tuned, and
+    compared in FLAML. Table 3 lists the parameter range explored along with the optimal
+    parameters used for each machine learning method. The maximum time allowed for
+    hyperparameter tuning of each machine learning model was 300 s, and each model
+    met the convergence criterion within that time. These estimators were trained
+    and tuned four times according to the four regions. Then one optimal model was
+    selected from them as the corresponding average pollutant concentration prediction
+    model for that region. Such a sub-region approach to prediction model construction
+    can highlight the heterogeneity of block spatial effects on pollutant concentrations
+    and improve model prediction accuracy [47].
+
+
+    To assess these ML models, the root mean square error (RMSE) on the testing cases
+    and the average R<sup>2</sup> values of the testing cases were analyzed, respectively
+    Eqs. (12) and (13):
+
+
+    \(RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (c_i - \widehat{c}_i)^2}\) (12)
+
+
+    \(R^2 = 1 - \frac{\sum (\widehat{c}_i - c_i)^2}{\sum (\overline{c_i} - c_i)^2}\)
+    (13)
+
+
+    where \(\widehat{c}_i\) is the predicted concentration, \(c_i\) is the concentration
+    obtained from simulations, and \(\overline{c_i}\) is the average concentration
+    over the testing case.
+
+
+    | Index | Single-optimization | Multi-optimization |
+
+    |---|---|---|
+
+    | Parameters | BH_std, Building locations | |
+
+    | Objective | C<sub>ped,AES</sub> | C<sub>pod,Block</sub>, C<sub>pod,AES</sub>,
+    C<sub>ped,AES</sub> |
+
+    | Algorithm | GA | NSGA II |
+
+    | Populations | 50 | 50 |
+
+    | Generations | 100 | 100 |
+
+    | Maintain | 10% | \\ |
+
+    | Inbreeding | 80% | \\ |
+
+    | Crossover Probability | \\ | 0.9 |
+
+    | Crossover distribution index | \\ | 20 |
+
+    | Mutation distribution index | \\ | 20 |
+
+    | Random seed | \\ | 1 |
+
+
+    # 3.6. Settings for optimization solvers
+
+
+    Table 4 lists the optimization parameters as BH_std and building locations. The
+    optimization goal is to minimize the concentration of pollutants. The optimization
+    goal in the single-objective optimization problem is C_pod,AES, a local metric.
+    The multi-objective optimization problem’s objectives are the pollutant concentration
+    in four regions containing global and local indicators.
+
+
+    This study employed two optimization algorithms, Genetic Algorithm (GA) for single-objective
+    optimization and non-dominated sorting genetic algorithm II (NSGA II) for multi-objective
+    optimization (Table 4). The GA algorithm used a population size of 50. If the
+    goal value did not decrease within 20 generations, it was considered to have converged.
+    The maintenance rate was 10%, and the inbreeding was 80% [71]. To ensure that
+    the iterations of the other algorithms were consistent with GA, the population
+    size and generations of NSGA II were limited to 50 and 100, respectively.
+
+
+    # 4. Result
+
+
+    # 4.1. CFD simulations results of sampling blocks
+
+
+    The simulation results for 1000 sample conditions indicate that global concentration
+    metrics are lower than local concentration metrics. The average pollutant concentration
+    in the podium volume is lower than in the pedestrian volume. C_pod,Block is significantly
+    lower than C_pe-AES. Essentially the normalized average concentrations of all
+    samples in the AES area were 1.5–2.5 times higher than in the block. Analysis
+    of the correlation between the four pollutant concentrations of 1000 cases with
+    the BH_std and layout parameters revealed that the linear coefficient between
+    the BH_std and the global index was relatively high, while the correlation with
+    the local index was low (Fig. 7). The correlation coefficient between BH_std and
+    C_pod,Block is -0.64, indicating that BH_std has a significant negative correlation
+    with the global pollutant concentration. The row of buildings close to the source
+    of pollution - row E - all showed a negative correlation between building height
+    and pollutant concentrations. The closer the building is to the downwind direction
+    inside the block, the more positive the correlation between height and pollutant
+    concentration. However, linear correlation coefficients between building heights
+    in blocks and pollutant concentrations in all areas are not high. It can be assumed
+    that building heights and layouts are not simply linearly related to the distribution
+    of pollutant concentrations.
+
+
+    # 4.2. Performance of ML models
+
+
+    Table 5 presents the performance of Test R<sup>2</sup> and RMSE for ML models
+    in the four regions of pollutant concentration prediction. The test R<sup>2</sup>'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/3dfc16e89d69a1b97a2f485b1851c7d6_8_0.png)
+
+
+    # Fig. 7. The correlation between the concentration indexes and the block layout.
+
+
+    # Table 5
+
+    Test R² and RMSE for all four ML models.
+
+
+    | ML model | Cpud_Block R² | RMSE | Cped_Block R² | RMSE | Cpud_AES R² | RMSE
+    | Cped_AES R² | RMSE |
+
+    |---|---|---|---|---|---|---|---|---|
+
+    | RF | 0.666 | 0.015 | 0.664 | 0.013 | 0.655 | 0.018 | 0.724 | 0.029 |
+
+    | GB | 0.700 | 0.009 | 0.708 | 0.010 | 0.732 | 0.013 | 0.786 | 0.030 |
+
+    | XGB | 0.811 | 0.006 | **0.859** | **0.007** | **0.837** | **0.009** | 0.848
+    | 0.023 |
+
+    | LGBM | **0.817** | **0.004** | 0.818 | 0.005 | 0.800 | 0.012 | **0.878** | **0.021**
+    |
+
+
+    The underlined highlighted value corresponds to the optimal concentration prediction
+    alternative model.
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_8_1.png)
+
+
+    # Fig. 8. CFD values VS ML model prediction values.
+
+
+    values of the XGB and LGBM regression models both be above 0.8. In contrast, RF
+    and GB perform slightly worse. The RMSE of these four optimal models selected
+    are relatively small, all below 1%, except for the LGBM regression model of Cped_AES,
+    which has an RMSE of 2.1%. Therefore Cpod_Block and Cped_AES chose LGBM as the
+    surrogate prediction model, while Cped_Block and Cpod_AES chose XGB as the surrogate
+    prediction model.
+
+
+    To demonstrate the performance of the ML models, the pollutant concentration distributions
+    predicted by those models were compared to those by CFD for the 1000 sample cases.
+    Fig. 8 illustrates the comparison of CFD simulated values and the predicted values
+    from the ML model. The surrogate model prediction results for the 1000 samples
+    are within an error range of 2%; thus, the accuracy of the surrogate model is
+    acceptable. The application of the ML surrogate model to predict the regional
+    average pollutant concentration corresponding to a set of BHstd and block layouts
+    took only a few seconds. In contrast, the CFD simulation process took 30 min or
+    more using 16 CPU cores (Table 6).
+
+
+    # 4.3. Results of optimizations
+
+
+    Both the single-objective and multi-objective optimizations converged within 100
+    iterations (Fig. 9). The optimal result for the single-objective optimization
+    has a Cped_AES of 0.080, while the multi-
+
+
+    objective optimization has a lower result with a Cped_AES of 0.035, and all three
+    concentration values in the other regions are between 0.03 and 0.05. Whether single
+    or multi-objective, the optimization framework incorporating ML surrogate models
+    generated block configurations with lower polluting concentrations than the 1000
+    sampling cases. The traditional CFD simulation optimization process would take
+    more than two months to meet such a large number of iterations. In contrast, the
+    optimization process incorporating the ML surrogate model takes only 3 h to accomplish
+    this requirement (Table 6).
+
+
+    The multi-objective optimization revealed a synergistic relationship between the
+    two global indices and similarly between the two local indices. However, there
+    is a trade-off relationship between global and local indices. The global and local
+    metrics cannot be optimal simultaneously. Although there was a certain linear
+    correlation between the four concentrations (Fig. 10a), the solution space still
+    formed a Pareto front surface in the last generation of the solution set (Fig.
+    10b). In particular, there is no absolute optimal solution between the two targets
+    Cpod_Block and Cped_AES. The solution space formed by these two objectives can
+    be seen as a clear trade-off which indicates that all regions’ pollutant concentrations
+    decreased during the optimization. However, when the optimization results converge
+    to vary in a smaller interval, there is some conflict between the global and local
+    objectives.
+
+
+    The top 5 solutions with the lowest Cped_AES in the single-objective'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '| | One case | Coupled with an optimization algorithm for 5000 iterations |
+
+    |---|---|---|
+
+    | CFD | 30 min | 2500 h |
+
+    | ML model | 1.5 s | 3 h |
+
+
+    optimization are listed in Fig. 11. Comparing the block configurations of these
+    five solutions, it can be found that the BH_std is high at 34.38 m. The building
+    heights and layouts are relatively similar, with taller buildings (>80 m) placed
+    in rows E and D, close to the pollution source in the street canyon. The buildings''
+    heights in the interior of the block is lower than in row E, most below 24 m.
+    Four solutions with the lowest pollutant concentrations in each region and a more
+    balanced compromise solution were selected separately for comparison in the Pareto
+    front solutions of the multi-objective optimization. Compared with single-objective
+
+
+    optimization, multi-objective optimization chooses to place more high-rise buildings
+    in the row adjacent to the street canyon. These five results of the multi-objective
+    optimization almost fill up the sites of row E except for the result of minimized
+    Cpod_Block (M1). The BH_std of the two minimized global objective solutions are
+    larger than the single objective at 34.75 m (M1 and M2), while the two minimized
+    local objective solutions are smaller at 34.11 m (M3 and M4). However, there is
+    not much variance in the BH_std of the overall optimization results, and all in
+    the relatively high region of the optimization interval, 34–35 m.
+
+
+    Control group A is the ideal block commonly applied in traditional CFD simulation
+    research. Control group B has more diverse plan layouts but still fails to reflect
+    the discrete degree of building height in the block. The optimized block configurations
+    have morphological characteristics closer to the actual block than the control
+    group. These blocks not only have the complexity of real neighborhoods in terms
+    of plan layouts but also show the non-homogeneity of blocks in terms of building
+    heights.
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_9_0.png)
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_9_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '![](img/3dfc16e89d69a1b97a2f485b1851c7d6_10_0.png)
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_10_1.png)
+
+
+    # 5. Discussion
+
+
+    # 5.1. AQI distributions of the sampling blocks
+
+
+    After simulating CFD for 1000 samples, the AQI was calculated for each probe in
+    the blocks. The probes with exceeded AQI were linked to form areas with different
+    contamination levels. The pollution areas for each sampling case are superimposed
+    to form a map of the extent and frequency of blocks affected by traffic-related
+    air pollution (Fig. 12). Each color represents the extent of pollution, and the
+    transparency of the color represents the frequency of possible contamination.
+    The horizontal distribution of AQI shows that as the distance to the traffic pollution
+
+
+    source increases, the intensity and frequency of exposure to pollution decreases.
+    Half of the block would be exposed to lightly polluted, and parts of the AES would
+    be moderately polluted (Fig. 12a). Heavy and severe pollution hardly entered the
+    inner part of the block and was distributed along the street canyon. Analysis
+    of the vertical distribution of AQI reveals that lightly and moderately polluted
+    areas occupy almost the entire height of the podium. In contrast, heavy pollution
+    is distributed below the middle of the podium height, and severe pollution is
+    distributed at the bottom. Fig. 12b illustrates the vulnerability of pedestrians
+    at the edges of the block adjacent to dense traffic to severe and heavy pollution.
+    Residents who are active outdoors and live below the fifth floor in the AES are
+    also vulnerable to moderate and light pollution.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# (a)Partial dependence of CO concentration on the BHstd
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_11_0.png)
+
+
+    # (b)Partial dependence of Cpod_Block on each building height
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_11_1.png)
+
+
+    # (c)Partial dependence of Cped_AES on each building height
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_11_2.png)
+
+
+    Fig. 13. Partial dependence diagram of BHstd and building height at each site.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'The distribution of AQI in the sampling cases shows that AES is vulnerable
+    to light and moderate pollution. Although pollutant concentrations within the
+    AES are lower than along the street canyon area, the AES is also an area where
+    residents often engage in outdoor activities in the neighborhood [72]. Prolonged
+    outdoor activities in light and moderate pollution areas still pose a greater
+    risk of exposure to traffic-related air pollutants for residents. Long-term exposure
+    to lightly polluted areas may irritate healthy people, so it is recommended that
+    children, the elderly, and people with heart and respiratory diseases should reduce
+    prolonged, high-intensity outdoor exercise [61]. Therefore, more attention needs
+    to be paid to the air environment in the AES, and design strategies that can improve
+    the air quality in the area need to be proposed.
+
+
+    # 5.2. Effect of block configurations on pollutant concentrations
+
+
+    The ML models can be applied to generate partial dependence plots to examine the
+    nonlinear effects of individual variables on pollutant concentrations. Partial
+    dependence plots (PDPs) are popular for interpreting ML models. They show how
+    the target prediction changes when a feature varies while considering the average
+    effect of all other features [73]. The relationships between BH_std and the four
+    regional pollutant concentration indicators were analyzed separately. It was found
+    that the effects of BH_std on the global and local indicators were not the same
+    (Fig. 13a). Consistent with the results in Section 1 of Chapter 4, BH_std is almost
+    linearly related to the global metrics, Cpod_Block and Cped_Block. The larger
+    the BH_std, the lower the average pollutant concentration in the block. This indicates
+    that the degree of staggered building heights within the block positively affects
+    reducing pollutant concentrations [30,74]. However, It is also mentioned in many
+    empirical studies that BH_std does not have a single linear relationship with
+    pollutant concentration [25,28]. There is also literature suggesting that the
+    range of positive effects of BH_std needs to be discussed [54]. In this study,
+    BH_std below 25 m instead leads to an increase in pollutant concentration for
+    local metrics. Only when the BH_std exceeds 25 m does the pollutant concentration
+    decrease with increasing it (Fig. 13a). This illustrates that the mitigation of
+    traffic pollutant concentration impacts in the AES region does not rely on increasing
+    BH_std alone. There is spatial heterogeneity in the effect of BH_std on pollutant
+    concentrations.
+
+
+    The reason for the difference in the impact mechanism of BH_std in global and
+    local metrics can be analyzed by the relationship between building height and
+    pollutant concentration at various sites within the block. Fig. 13b and c shows
+    how the building heights at different locations within the block affect Cpod_Block
+    and Cped_AES, respectively. Overall, the building heights have less effect on
+    Cpod_Block than on Cped_AES. The effect of building height on pollutant concentrations
+    in these two areas diminishes as the location is deeper into the neighborhood.
+    In particular, the regression curves of building heights in row C with Cpod_Block
+    converge to a horizontal line. This suggests that a block-wide building configuration
+    still needs to be examined when focusing on pollutant concentrations in the AES
+    area. The effect trend of buildings in rows A and B is not the same, but the increase
+    in height led to a slight rise in Cpod_Block. C-row buildings had little effect
+    on Cpod_Block but a more significant positive correlation with Cped_AES. Buildings
+    in rows A, B, and C positively correlate with Cped_AES. An increase in building
+    height leads to significant growth in Cped_AES, especially when the building height
+    in the area is greater than 66 m. It can be observed that the building heights
+    in rows E and D are negatively correlated with the pollutant concentrations in
+    both regions. The effect trend of building height in row E on the global and local
+    indicators is also very consistent. Both pollutant concentration indicators remain
+    constant at a high value, then drop sharply with the increase in building height
+    until a critical point, and remain constant. The only difference may be the location
+    where these two inflection points occur. The range of row E building heights that
+    cause a rapid decrease in Cpod_Block is between 40 and 60 m, while the range of
+    intervals that cause a decrease in Cped_AES is
+
+
+    Table 7
+
+    CFD simulation results of the optimized solution set and comparison with the control
+    groups.
+
+
+    (a) Single-objective optimization
+
+
+    | Solution | S1 | S2 | S3 | S4 | S5 |
+
+    |---|---|---|---|---|---|
+
+    | Cpod_Block | 0.049 | 0.049 | 0.047 | 0.047 | 0.045 |
+
+    | Cped_Block | 0.043 | 0.043 | 0.041 | 0.040 | 0.040 |
+
+    | Cped_AES | 0.079 | 0.078 | 0.075 | 0.075 | 0.078 |
+
+    | Cped_AES | 0.061 | 0.061 | 0.060 | 0.058 | 0.063 |
+
+    | VS control group A ΔC=(Ccontrol A-C)/Ccontrol A | | | | | |
+
+    | ΔCpod_Block | 51% | 52% | 54% | 54% | 56% |
+
+    | ΔCped_Block | 71% | 71% | 72% | 73% | 73% |
+
+    | ΔCpod_AES | 60% | 61% | 62% | 62% | 61% |
+
+    | ΔCped_AES | 83% | 84% | 84% | 84% | 83% |
+
+    | VS control group B ΔC=(Ccontrol B-C)/Ccontrol B | | | | | |
+
+    | ΔCpod_Block | 57% | 58% | 59% | 59% | 60% |
+
+    | ΔCped_Block | 72% | 73% | 74% | 74% | 74% |
+
+    | ΔCpod_AES | 60% | 60% | 62% | 59% | 61% |
+
+    | ΔCped_AES | 82% | 82% | 83% | 82% | 82% |
+
+
+    (b) Multi-objective optimization
+
+
+    | Solution | M1 | M2 | M3 | M4 | M5 |
+
+    |---|---|---|---|---|---|
+
+    | Cpod_Block | 0.050 | 0.050 | 0.056 | 0.056 | 0.056 |
+
+    | Cped_Block | 0.047 | 0.043 | 0.052 | 0.052 | 0.051 |
+
+    | Cpod_AES | 0.077 | 0.072 | 0.090 | 0.089 | 0.088 |
+
+    | Cped_AES | 0.065 | 0.049 | 0.049 | 0.073 | 0.070 |
+
+    | VS control group A ΔC=(Ccontrol A-C)/Ccontrol A | | | | | |
+
+    | ΔCpod_Block | 50% | 51% | 45% | 44% | 44% |
+
+    | ΔCped_Block | 68% | 71% | 65% | 65% | 65% |
+
+    | ΔCpod_AES | 61% | 64% | 55% | 55% | 56% |
+
+    | ΔCped_AES | 82% | 86% | 80% | 80% | 81% |
+
+    | VS control group B ΔC=(Ccontrol B-C)/Ccontrol B | | | | | |
+
+    | ΔCpod_Block | 56% | 56% | 51% | 50% | 48% |
+
+    | ΔCped_Block | 70% | 72% | 67% | 66% | 66% |
+
+    | ΔCpod_AES | 61% | 64% | 54% | 54% | 54% |
+
+    | ΔCped_AES | 81% | 86% | 78% | 78% | 79% |
+
+
+    slightly more extensive, between 33 and 66 m. This illustrates that a certain
+    height (at least 33 m) of street-facing buildings is required to serve as a barrier
+    to the traffic-related air pollutants from the street canyon into the block. The
+    discrepancy in the effect of building heights at different sites on pollutant
+    concentrations explains the trade-off between the global and local concentration
+    indicators. This also explains why optimizing these two pollutant concentration
+    metrics results in Pareto front solutions. In general, the higher the building
+    height near the street canyon and the lower the building height inside the block,
+    the better it is for preventing pollutants from entering the block.
+
+
+    # 5.3. CFD simulation analysis of optimization results
+
+
+    The top five solutions of the single-objective optimization were simulated separately
+    by CFD. The obtained Cped_AES ranking slightly deviated from that predicted by
+    the ML model. As shown in Table 7a, the actual simulated concentration of S1,
+    predicted initially to have the lowest Cped_AES ranking, was ranked fourth among
+    the five cases. S4, predicted initially to have a relatively high Cped_AES, performed
+    the best in the simulation results, with the lowest concentration of 0.056. Comparing
+    the optimized results with Control group A, all results were found to reduce the
+    Cped_AES by more than 83% and the Cpod_Block by at least 50%. To determine the
+    role of BH_std in the dilution of pollutant concentrations in the block, a control
+    group B with a homogenous height corresponding to five sets of optimized results
+    was established. Compared with control group B, S3 performed the best, with 59%,
+    74%, 62%, and 84% reductions in global and local metrics, respectively. This indicates
+    that BH_std is more critical in reducing pollutants concentration in this block
+    configuration.
+
+
+    Similarly, five sets of multi-objective optimization results were simulated with
+    CFD. The lowest pollutant concentration was found in'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '![](img/3dfc16e89d69a1b97a2f485b1851c7d6_13_0.png)
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_13_1.png)
+
+
+    the e case M2 (Table 7b). This result also differs from the ML model prediction
+    of the minimum pollutant concentration in each region, but the overall difference
+    is not significant, around 0.02. Compared with control groups A and B, M2 also
+    performs best, with more than 51% reduction for C_pod-Block and 86% for C_ped-AES.
+    The Pareto solutions of the multi-objective optimization were all simulated by
+    CFD, and the five cases with lower pollutant concentration values obtained from
+    the simulation were selected in Fig. 14. A comparison with Fig. 11b reveals that
+    the excellent solutions set obtained from CFD simulations and predicted by ML
+    model are not far apart on the block morphology. The combined strategies all place
+    high-rise buildings in the pollutant source''s adjacent areas and lower buildings
+    in the middle and rear of the block. Although the ML model has some errors in
+    predicting the extreme value points, it is within the acceptable range. The framework
+    of the ML model combined with the optimization algorithm still explores more effective
+    design strategies to reduce the impact of traffic pollution on the AES and block.
+
+
+    The mechanisms of the influence of block configuration on traffic pollutant dispersion
+    were explored using cases S4 and M2 as the representatives of single-objective
+    and multi-objective optimization results (Fig. 15). Control group B had higher
+    wind velocity inside the block relative to A, which is due to the low Rbc of the
+    block (Fig. 15a).'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# (a)Isosurface for C*=0.1, C*=0.5, C*=1
+
+    Control group A
+
+
+    # S4-Control group B
+
+
+    # M2-Control group B
+
+
+    # (b)Streamline of pollutant
+
+    Control group A
+
+
+    # S4-Control group B
+
+
+    # M2-Control group B
+
+
+    ![](img/3dfc16e89d69a1b97a2f485b1851c7d6_14_0.png)
+
+
+    # Fig. 16. Pollutant diffusions for optimized block configurations and control
+    groups.
+
+
+    However, this also resulted in a subsequent diffusion of pollutants within the
+    street to the interior of the block and an increase in pollutant concentrations
+    at pedestrian heights (z = 1.5 m) in AES (Fig. 15b). This illustrates the impracticality
+    of using the block plan layout alone to mitigate the impact of traffic pollutants
+    on AES. The variation of building heights needs to be considered while optimizing
+    the block plan layout.
+
+
+    Fig. 15a reveals that the high-rise buildings near the street formed a strong
+    canyon effect [75], and the wind speed within the street was greatly increased.
+    The AES velocity also significantly increased compared to the control group A
+    and B. However, the increase in velocity in these two cases did not lead to an
+    accelerated dispersion of pollutants into the block (Fig. 15b). This is due to
+    the fact that the high-rise buildings facing the street formed a flow on the windward
+    side'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'just opposite to the dominant wind direction and stopped pollutants from entering
+    the block further with the fluid. The comparative analysis of S4 and M2 shows
+    that the AES area of case S4 was polluted to a greater extent than M2. Still,
+    the static wind area within the block of M2 was relatively more significant, which
+    might lead to uncomfortable pedestrian activities. The reason may be that row
+    E on the street side of M2 was all occupied by buildings, making it difficult
+    for clean air to flow through the building gap. Previous studies also illustrated
+    that BHstd might significantly enhance the drag force produced by taller buildings
+    and increase the momentum flux while reducing pollutant dilution capacity by mean
+    flows but enhancing turbulence characteristics within urban areas [30,76]. Since
+    both mean flows and turbulent diffusion contribute to pollutant removal in urban
+    areas, thus BHstd may reduce or strengthen the ventilation capacity.
+
+
+    As can be seen in Fig. 16a, when BHstd = 0, pollutants in the street could go
+    over the building roofs and tumble into the block (Control group A) or go through
+    the first row of building gaps on the windward side of the block and enter the
+    block (Control group B). When BHstd > 34 m and the windward building is a row
+    of high-rises, it is difficult for pollutants to enter the block due to the enormous
+    vortex formed on the upwind side of the buildings. Compared with the control groups
+    A and B, pollutants in the two optimized cases did not accumulate within the street
+    canyon but spread to both sides of the target block with the lateral 3D vortex.
+    The results of the optimized cases show that pollutants entered the block through
+    the gap between buildings, E–2 and E–3. Since the E–3 buildings are relatively
+    low, pollutants can tumble into the AES from the roof. When the single-objective
+    optimization focuses on Cped,Block, the block construction protects AES from pollutant
+    accumulation and ignores the further diffusion of pollutants into the block''s
+    interior. Row E of M2 occupied more buildings compared to S4. It can be speculated
+    that this is due to a more comprehensive focus on global and local indicators
+    in this multi-objective optimization process.
+
+
+    The discussion of BHstd in this paper was still based on the wind direction perpendicular
+    to the street canyon. However, some literature suggests that ambient wind directions
+    of large angles (for example, 30 and 45) increase the drag of buildings and transfer
+    more kinetic energy into turbulent kinetic energy than small angles. Therefore,
+    large angles usually reduce the capacity of pollutant dispersion in 3D urban-like
+    geometries [77]. Block forms that mitigate the impact of pollutants on the AES
+    when the dominant wind direction of the angle with the street canyon is worth
+    exploring in future work. Meanwhile, adjusting the size of the data set and tuning
+    parameters to better couple with the optimization algorithm can further improve
+    the prediction accuracy of ML models for pollutant concentrations. Other factors
+    in urban design can also be added to the optimization objectives for discussion
+    in further work, such as lighting, and thermal comfort, to conclude that a neighborhood
+    form is more conducive to resident activity.
+
+
+    # 6. Conclusion
+
+
+    In this paper, a large number of block configuration cases with different BHstd
+    and layouts were sampled and CFD simulated to obtain a dataset related to block
+    form and traffic air pollutant dispersion. Based on the ML approach, this dataset
+    generated surrogate models for pollutant concentration prediction. Through the
+    conjugation of the ML model and optimization algorithm, various morphology strategies
+    for reducing pollutant concentrations in AES and block were summarized in this
+    study. The main conclusions of this paper are as follows.
+
+
+    to traffic-related air pollutants for people who conduct outdoor activities in
+    this area.
+
+
+    +   • The standard deviation of building height (BHstd) in the block is above
+    33 m can effectively reduce the concentration of pollutants in AES. Optimization
+    results show that taller buildings placed in areas adjacent to pollution sources
+    and lower buildings set back is a reasonable strategy to reduce the diffusion
+    of pollutants into the block. This strategy can reduce at least 48% of pollutant
+    concentrations in the AES area and 86% of pollutants in the block compared to
+    a homogenized building height layout.
+
+    +   • Building heights of 40-60 m on the street can prevent pollutants from entering
+    the block. The taller the building in the downwind inside the block, the more
+    cause pollutants accumulate. Therefore, building heights should be controlled
+    below 60 m. Building height impacts the average pollutant concentration in the
+    AES area more than in the block. When focusing on pollutant concentration levels
+    in the AES area, it is still necessary to examine the building configuration of
+    the entire block.
+
+    +   • Whether the optimization objective focuses on a global or local index can
+    lead to different optimization strategies. The variation of the area of concern
+    in the study of pollutant dispersion problems in the block can lead to distinctions
+    in conclusions.
+
+    +   • ML can speed up the CFD simulation by at least 800 times. Using the workflow
+    of CFD, ML, and optimization algorithms in this study, the multi-factor and multivariate
+    decision problems in urban design can be solved efficiently, which can provide
+    some references for urban planners and architects.
+
+
+    # CRediT authorship contribution statement
+
+
+    Yunni Wu: Writing – original draft. Hong Chen: Writing – review & editing.
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    # Data availability
+
+
+    Data will be made available on request.
+
+
+    # Acknowledgment
+
+
+    This study is supported by the National Natural Science Foundation of China (No.
+    51778251). Numerical computations were performed on Hefei advanced computing center.
+
+
+    # Appendix A. Supplementary data
+
+
+    Supplementary data to this article can be found online at https://doi.org/10.1016/j.buildenv.2023.110587.
+
+
+    # References
+
+
+    +   [1] World Health Organization, WHO Global Air Quality Guidelines. Particulate
+    Matter (PM2.5 and PM10), Ozone, Nitrogen Dioxide, Sulfur Dioxide and Carbon Monoxide,
+    2021.
+
+    +   [2] G. Bowatte, et al., Traffic related air pollution and development and
+    persistence of asthma and low lung function, Environ. Int. 113 (Apr. 2018) 170–176,
+    https://doi.org/10.1016/j.envint.2018.01.028.
+
+    +   [3] A.G. Ribeiro, et al., Incidence and mortality for respiratory cancer and
+    traffic-related air pollution in São Paulo, Brazil, Environ. Res. 170 (Mar. 2019)
+    243–251, https://doi.org/10.1016/j.envres.2018.12.034.
+
+    +   [4] Maryam Shekarrizfard, et al., Investigating the effects of multiple exposure
+    measures to traffic-related air pollution on the risk of breast and prostate cancer,
+    J. Transport Health 11 (2018) 34–46, https://doi.org/10.1016/j.jth.2018.09.006.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '[5] X. Wu, et al., Long-term characterization of roadside air pollutants in
+    urban Beijing and associated public health implications, Environ. Res. 212 (Sep.
+    2022), https://doi.org/10.1016/j.envres.2022.113277.
+
+
+    [6] C.J. Matz, M. Egyed, R. Hocking, S. Seenuudn, N. Charmon, N. Edmonds, Human
+    health effects of traffic-related air pollution (TRAP): a scoping review protocol,
+    Syst. Rev. 8 (1) (Aug. 29, 2019), https://doi.org/10.1186/s13643-019-1106-5. BioMed
+    Central Ltd.
+
+
+    [7] N. Hilker et al., "Traffic-related Air Pollution Near Roadways: Discerning
+    Local Impacts 1 from Background 2", doi: 10.5194/amt-2019-112.
+
+
+    [8] R.E. Ducret-Stitch, M.Y. Tsai, M.S. Ragettli, A. Ineichen, N. Kuenzli, H.C.
+    Phuleria, Role of highway traffic on spatial and temporal distributions of air
+    pollutants in a Swiss Alpine valley, Sci. Total Environ. 456 (457) (Jul. 2013)
+    50-60, https://doi.org/10.1016/j.scitotenv.2013.03.065.
+
+
+    [9] S.V. Liu, F lin Chen, J. Xue, A meta-analysis of selected near-road air pollutants
+    based on concentration decay rates, Heliyon 5 (8) (Aug. 2019), https://doi.org/10.1016/j.heliyon.2019.e02236.
+
+
+    [10] T. Ming, et al., Assessment of pollutant dispersion in urban street canyons
+    based on field synergy theory, Atmos. Pollut. Res. 12 (2) (Feb. 2021) 341-356,
+    https://doi.org/10.1016/j.apr.2020.11.015.
+
+
+    [11] T. Ming, et al., Fluid synergy analysis of pollutant dispersion in street
+    canyons and its optimization by adding wind catchers, Build. Simulat. 14 (2) (Apr.
+    2021) 391-405, https://doi.org/10.1007/s12273-020-0720-4.
+
+
+    [12] Z. Li, et al., Review on pollutant dispersion in urban areas-part A: effects
+    of mechanical factors and urban morphology, Build. Environ. 190 (Mar. 01, 2021),
+    https://doi.org/10.1016/j.buildenv.2020.107534. Elsevier Ltd.
+
+
+    [13] J. Shen, Z. Gao, W. Ding, Y. Yu, An investigation on the effect of street
+    morphology to ambient air quality using six real-world cases, Atmos. Environ.
+    164 (2017) 85-101, https://doi.org/10.1016/j.atmosenv.2017.05.047.
+
+
+    [14] R. Buccolieri, A.P.R. Jeanjean, E. Gatto, R.J. Leigh, The impact of trees
+    on street ventilation, NOx and PM2.5 concentrations across heights in Marylebone
+    Rd street canyon, central London, Sustain. Cities Soc. 41 (Aug. 2018) 227-241,
+    https://doi.org/10.1016/j.scs.2018.05.030.
+
+
+    [15] D. Voordeckers, F.J.R. Meeysmans, P. Billen, T. Tytgat, M. Van Acker, The
+    impact of street canyon morphology and traffic volume on NO2 values in the street
+    canyons of Antwerp, Build. Environ. 197 (Jun. 2021), https://doi.org/10.1016/j.buildenv.2021.107825.
+
+
+    [16] S. Yousefian, M. Pourjafar, M. Moshfeghi, and M. Mahdaviniejad, "Assessing
+    the Effects of Urban Canyon''s Direction on Air Flow Pattern and CO Dispersion
+    Using CFD (A Case Study of Tehran).",
+
+
+    [17] X. Huang, H. Wang, L. Gao, Numerical Simulation of Airflow and Dispersion
+    in 3D Street Canyons: the Effect of Atmospheric Temperature Stratification, Environmental
+    Technology, United Kingdom, 2022, https://doi.org/10.1080/09593330.2022.2036247.
+
+
+    [18] L. Ehrnsperger, O. Klemm, Air pollution in an urban street canyon: novel
+    insights from highly resolved traffic information and meteorology, Atmos. Environ.
+    X 13 (Jan. 2022), https://doi.org/10.1016/j.aeaoa.2022.100151.
+
+
+    [19] David Sim, Soft City : building Density for Everyday Life, IslandPress, 2019.
+
+
+    [20] Y. Peng, Z. Gao, R. Buccolieri, J. Shen, W. Ding, Urban ventilation of typical
+    residential streets and impact of building form variation, Sustain. Cities Soc.
+    67 (2021), https://doi.org/10.1016/j.scs.2021.102735.
+
+
+    [21] M. Liu, H. Chen, D. Wei, Y. Wu, J. Li, Nonlinear relationship between urban
+    form and street-level PM2.5 and CO based on mobile measurements and gradient boosting
+    decision tree models, Build. Environ. 205 (Nov. 2021), https://doi.org/10.1016/j.buildenv.2021.108265.
+
+
+    [22] F. Trindade da Silva, N.C. Reis, J.M. Santos, E.V. Goulart, C. Engel de Alvarez,
+    The impact of urban block topology on pollutant dispersion, J. Wind Eng. Ind.
+    Aerod. 210 (2021), https://doi.org/10.1016/j.jweia.2021.104524.
+
+
+    [23] A.M. Hassan, A.A. Elmakadem, N.A. Megahed, O.M. Abo Elenein, Urban morphology
+    as a passive strategy in promoting outdoor air quality, J. Build. Eng. 29 (May
+    2020), https://doi.org/10.1016/j.jobe.2020.101204.
+
+
+    [24] F. Trindade da Silva, N.C. Reis, J.M. Santos, E.V. Goulart, C. Engel de Alvarez,
+    The impact of urban block topology on pollutant dispersion, J. Wind Eng. Ind.
+    Aerod. 210 (2021), https://doi.org/10.1016/j.jweia.2021.104524.
+
+
+    [25] M. Liu, H. Chen, D. Wei, Y. Wu, J. Li, Nonlinear relationship between urban
+    form and street-level PM2.5 and CO based on mobile measurements and gradient boosting
+    decision tree models, Build. Environ. 205 (2021), https://doi.org/10.1016/j.buildenv.2021.108265.
+
+
+    [26] L. Chen, J. Hang, M. Sandberg, L. Claesson, S. Di Sabatino, H. Wigo, The
+    impacts of building height variations and building packing densities on flow adjustment
+    and city breathability in idealized urban models, Build. Environ. 118 (Jun. 2017)
+    344-361, https://doi.org/10.1016/j.buildenv.2017.03.042.
+
+
+    [27] Z. Jiang, H. Cheng, P. Zhang, T. Kang, Influence of urban morphological parameters
+    on the distribution and diffusion of air pollutants: a case study in China, J.
+    Environ. Sci. (China) 105 (Jul. 2021) 163-172, https://doi.org/10.1016/j.jes.2020.12.035.
+
+
+    [28] Y. Wu, H. Chen, The diffusion of traffic pollutants in different residential
+    blocks based on spatial morphological clustering, Build. Environ. 228 (Jan. 2023),
+    https://doi.org/10.1016/j.buildenv.2022.109860.
+
+
+    [29] C. Huang, et al., Effect of urban morphology on air pollution distribution
+    in high-density urban blocks based on mobile monitoring and machine learning,
+    Build. Environ. 219 (Jul. 2022), https://doi.org/10.1016/j.buildenv.2022.109173.
+
+
+    [30] J. Hang, Y. Li, M. Sandberg, R. Buccolieri, S. Di Sabatino, The influence
+    of building height variability on pollutant dispersion and pedestrian ventilation
+    in idealized high-rise urban areas, Build. Environ. 56 (2012) 346-360, https://doi.org/10.1016/j.buildenv.2012.03.023.
+
+
+    [31] D. Wei, X. Hu, Y. Chen, B. Li, H. Chen, An investigation of the quantitative
+    correlation between urban spatial morphology indicators and block wind environment,
+    Atmosphere 12 (2) (Feb. 2021), https://doi.org/10.3390/atmos12020234.
+
+
+    [32] Y. Peng, Z. Gao, R. Buccolieri, W. Ding, An investigation of the quantitative
+    correlation between urban morphology parameters and outdoor ventilation efficiency
+    indices, Atmosphere 10 (1) (Jan. 2019), https://doi.org/10.3390/atmos10010033.
+
+
+    [33] F. Trindade da Silva, et al., Atmospheric dispersion and urban planning:
+    an interdisciplinary approach to city modeling, Sustain. Cities Soc. 70 (2021),
+    https://doi.org/10.1016/j.scs.2021.102882.
+
+
+    [34] M. Shirzadi, Y. Tominaga, Multi-fidelity shape optimization methodology for
+    pedestrian-level wind environment, Build. Environ. 204 (Oct. 2021), https://doi.org/10.1016/j.buildenv.2021.108076.
+
+
+    [35] K. Javanroodi, V.M. Nik, B. Adl-Zarrabi, A multi-objective optimization framework
+    for designing climate-resilient building forms in urban areas, in: IOP Conference
+    Series: Earth and Environmental Science, IOP Publishing Ltd, Nov. 2020, https://doi.org/10.1088/1755-1315/588/3/032036.
+
+
+    [36] H. Rahimbakhsh, M.E. Kohansal, A. Tarkashvand, M. Faizi, M. Rablar, Multi-objective
+    optimization of natural surveillance and privacy in early design stages utilizing
+    NSGA-II, Autom. ConStruct. 143 (Nov. 2022), https://doi.org/10.1016/j.autcon.2022.104547.
+
+
+    [37] Z. Kaseb, M. Rabbah, Towards CFD-based optimization of urban wind conditions:
+    comparison of Genetic algorithm, Particle Swarm Optimization, and a hybrid algorithm,
+    Sustain. Cities Soc. 77 (Feb. 2022), https://doi.org/10.1016/j.scs.2021.103565.
+
+
+    [38] S.S. Wang, Y.K. Yi, N.X. Liu, Multi-objective optimization (MOO) for high-rise
+    residential buildings'' layout centered on daylight, visual, and outdoor thermal
+    metrics in China, Build. Environ. 205 (Nov. 2021), https://doi.org/10.1016/j.buildenv.2021.108263.
+
+
+    [39] R. Ooka, H. Chen, S. Kato, Study on optimum arrangement of trees for design
+    of pleasant outdoor environment using multi-objective genetic algorithm and coupled
+    simulation of convection, radiation and conduction, J. Wind Eng. Ind. Aerod. 96
+    (10-11) (Oct. 2008) 1733-1748, https://doi.org/10.1016/j.jweia.2008.02.039.
+
+
+    [40] B. Xia, Z. Li, Optimized methods for morphological design of mesoscale cities
+    based on performance analysis: taking the residential urban blocks as examples,
+    Sustain. Cities Soc. 64 (Jan. 2021), https://doi.org/10.1016/j.scs.2020.102489.
+
+
+    [41] Yongyu Hu, Yunlong Peng, Zhi Gao, Fusuo Xu, Application of CFD plugins integrated
+    into urban and building design platforms for performance simulations A literature
+    review, Front. Architect. Res. 12 (148-174) (2022), https://doi.org/10.1016/j.foar.2022.06.005.
+
+
+    [42] Z. Kaseb, M. Hafezi, M. Tahbaz, S. Delfani, A framework for pedestrian-level
+    wind conditions improvement in urban areas: CFD simulation and optimization, Build.
+    Environ. 184 (Oct. 2020), https://doi.org/10.1016/j.buildenv.2020.107191.
+
+
+    [43] Z. Li, et al., Review on pollutant dispersion in urban areas-part B: local
+    mitigation strategies, optimization framework, and evaluation theory, Build. Environ.
+    198 (Jul. 01, 2021), https://doi.org/10.1016/j.buildenv.2021.107890. Elsevier
+    Ltd.
+
+
+    [44] J. Kudela, R. Matousek, Recent advances and applications of surrogate models
+    for finite element method computations: a review, Soft Comput. 26 (24) (Dec. 01,
+    2022) 13709-13733, https://doi.org/10.1007/s00500-022-07362-8. Springer Science
+    and Business Media Deutschland GmbH.
+
+
+    [45] Y. Du, C.M. Mak, Y. Li, Application of a multi-variable optimization method
+    to determine lift-up design for optimum wind comfort, Build. Environ. 131 (Mar.
+    2018) 242-254, https://doi.org/10.1016/j.buildenv.2018.01.012.
+
+
+    [46] Y. Wu, Q. Zhan, S.J. Quan, Y. Fan, Y. Yang, A surrogate-assisted optimization
+    framework for microclimate-sensitive urban design practice, Build. Environ. 195
+    (May 2021), https://doi.org/10.1016/j.buildenv.2021.107661.
+
+
+    [47] K. Hashad, et al., Designing roadside green infrastructure to mitigate traffic-related
+    air pollution using machine learning, Sci. Total Environ. 773 (Jun. 2021), https://doi.org/10.1016/j.scitotenv.2020.144760.
+
+
+    [48] K. Hashtad et al., "Supporting Information Designing Roadside Green Infrastructure
+    to Mitigate Traffic-Related Air Pollution Using Machine Learning.",
+
+
+    [49] D. Panchigar, K. Kar, S. Shukla, R.M. Mathew, U. Chadha, S.K. Selvaraj, Machine
+    learning-based CFD simulations: a review, models, open threats, and future tactics,
+    Neural Comput. Appl. 34 (24) (Dec. 01, 2022) 21677-21700, https://doi.org/10.1007/s00521-022-07838-6.
+    Springer Science and Business Media Deutschland GmbH.
+
+
+    [50] D. Kochkov, et al., Machine Learning-Accelerated Computational Fluid Dynamics,
+    2023, https://doi.org/10.1073/pnas.2101784118/-/DCSupplemental.y.
+
+
+    [51] M.D. McKay, R.J. Beckman, W.J. Conover, A comparison of three methods for
+    selecting values of input variables in the analysis of output from a computer
+    code, Technometrics 42 (1) (2000) 55-61, https://doi.org/10.1080/00401706.2000.10485979.
+
+
+    [52] C. Wang, Q. Wu, M. Weimer, E. Zhu, FLAML: A Fast and Lightweight AutoML Library,
+    Nov. 2019 [Online]. Available: http://arxiv.org/abs/1911.04706.
+
+
+    [53] M. Zhang, et al., Investigating of typical residential block typologies and
+    their impact on pedestrian-level microclimate in summers in Nanjing, China, Frontiers
+    of Architectural Research 11 (2) (Apr. 2022) 278-296, https://doi.org/10.1016/j.foar.2021.10.008.
+
+
+    [54] Y. Shi, X. Xie, J.C.H. Fung, E. Ng, Identifying critical building morphological
+    design factors of street-level air pollution dispersion in high-density built
+    environment using mobile monitoring, Build. Environ. 128 (Jan. 2018) 248-259,
+    https://doi.org/10.1016/j.buildenv.2017.11.043.
+
+
+    [55] M. Shirzadi, P.A. Mirzaei, M. Naghashzadegan, Development of an adaptive
+    discharge coefficient to improve the accuracy of cross-ventilation airflow'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '+   calculation in building energy simulation tools, Build. Environ. 127 (Jan.
+    2018) 277–290, https://doi.org/10.1016/j.buildenv.2017.10.019.
+
+
+    +   [56] Y. Xiong, H. Chen, Effects of sunshields on vehicular pollutant dispersion
+    and indoor air quality: comparison between isothermal and nonisothermal conditions,
+    Build. Environ. 197 (Jun. 2021), https://doi.org/10.1016/j.buildenv.2021.107854.
+
+
+    +   [57] S. Nosek, V. Fuksa, L. Kukacka, Z. Klučáková, Z. Janouř, Street-canyon
+    pollution with respect to urban-air complexity: the role of lateral and mean pollution
+    fluxes, Build. Environ. 138 (Jun. 2018) 221–234, https://doi.org/10.1016/j.buildenv.2018.04.036.
+
+
+    +   [58] W.Y. Ng, C.K. Chau, A modeling investigation of the impact of street
+    and building configurations on personal air pollutant exposure in isolated deep
+    urban canyons, Sci. Total Environ. 468 (469) (Jan. 2014) 429–448, https://doi.org/10.1016/j.scitotenv.2013.08.077.
+
+
+    +   [59] J. Hang, Z. Luo, X. Wang, L. He, B. Wang, W. Zhu, The influence of street
+    layouts and viaduct settings on daily carbon monoxide exposure and intake fraction
+    in idealized urban canyons, Environ. Pollut. 220 (Jan. 2017) 72–86, https://doi.org/10.1016/j.envpol.2016.09.024.
+
+
+    +   [60] X. Guo, M. Zhang, Z. Gao, J. Zhang, R. Buccolieri, Neighborhood-scale
+    dispersion of traffic-related PM2.5: simulations of nine typical residential cases
+    from Nanjing, Sustain. Cities Soc. 90 (Mar. 2023), https://doi.org/10.1016/j.scs.2023.104393.
+
+
+    +   [61] Ministry of Ecology and Environment of the People''s Republic of China,
+    Technical Regulation on Ambient Air Quality Index, 2012.
+
+
+    +   [62] C. Miao, S. Yu, Y. Zhang, Y. Hu, X. He, W. Chen, Assessing outdoor air
+    quality vertically in an urban street canyon and its response to microclimatic
+    factors, J. Environ. Sci. (China) 124 (Feb. 2023) 923–932, https://doi.org/10.1016/j.jes.2022.02.021.
+
+
+    +   [63] Y. Tominga, et al., AJJ guidelines for practical applications of CFD
+    to pedestrian wind environment around buildings, J. Wind Eng. Ind. Aerod. 96 (10–11)
+    (2008) 1749–1761, https://doi.org/10.1016/j.jweia.2008.02.058.
+
+
+    +   [64] P.J. Richards, R.P. Hoxey, Appropriate boundary conditions for computational
+    wind engineering models using the k-e turbulence model, J. Wind Eng. Ind. Aerod.
+    46 (47) (Aug. 1993) 145–153, https://doi.org/10.1016/0167-6105(93)90124-7. C.
+
+
+    +   [65] Y. Tominaga, T. Stathopoulos, Turbulent Schmidt numbers for CFD analysis
+    with various types of flowfield, Atmos. Environ. 41 (37) (Dec. 2007) 8091–8099,
+    https://doi.org/10.1016/j.atmosenv.2007.06.054.
+
+
+    +   [66] M. Schatzmann, Europäische Wissenschaftsstiftung, Proceedings/International
+    Workshop on Quality Assurance of Microscale Meteorological Models Cost Action
+
+
+    +   732 in Combination with the European Science Foundation at Hamburg, 2005.
+    Germany, July 28/29.
+
+
+    +   [67] A. Cutler, D.R. Cutler, J.R. Stevens, Random forests, in: Ensemble Machine
+    Learning, Springer US, Boston, MA, 2012, pp. 157–175, https://doi.org/10.1007/978-1-4419-9326-7_5.
+
+
+    +   [68] J.H. Friedman, Greedy Function Approximation: A Gradient Boosting Machine,
+    1999.
+
+
+    +   [69] T. Chen, C. Guestrin, XGBoost: a scalable tree boosting system, in: Proceedings
+    of the ACM SIGKDD International Conference on Knowledge Discovery and Data Mining,
+    Association for Computing Machinery, Aug. 2016, pp. 785–794, https://doi.org/10.1145/2939672.2939785.
+
+
+    +   [70] J. Yan, et al., LightGBM: accelerated genetically designed crop breeding
+    through ensemble learning, Genome Biol. 22 (1) (Dec. 2021), https://doi.org/10.1186/s13059-021-02492-y.
+
+
+    +   [71] S. Sangwan, A. Dahiya, Literature Review on Genetic Algorithm, International
+    Journal of Research. 2018 [Online]. Available: https://edupediapublications.org/journals.
+
+
+    +   [72] H. Zhang, M. Han, Pocket parks in English and Chinese literature: a review,
+    Urban For. Urban Green. 61 (Jun. 01, 2021), https://doi.org/10.1016/j.ufug.2021.127080.
+    Elsevier GmbH.
+
+
+    +   [73] C. Molnar, T. Freiesleben, G. König, G. Casalicchio, M.N. Wright, B.
+    Bischl, Relating the partial dependence plot and permutation feature importance
+    to the data generating process [Online]. Available: http://arxiv.org/abs/2109.01433,
+    Sep. 2021.
+
+
+    +   [74] L. Chen, J. Hang, M. Sandberg, L. Claesson, S. Di Sabatino, H. Wigo,
+    The impacts of building height variations and building packing densities on flow
+    adjustment and city breathability in idealized urban models, Build. Environ. 118
+    (Jun. 2017) 344–361, https://doi.org/10.1016/j.buildenv.2017.03.042.
+
+
+    +   [75] W.J. Farrell, L. Devile Cavelin, S. Weichenthal, M. Goldberg, M. Hatzopoulou,
+    Capturing the urban canyon effect on particle number concentrations across a large
+    road network using spatial analysis tools, Build. Environ. 92 (Oct. 2015) 328–334,
+    https://doi.org/10.1016/j.buildenv.2015.05.004.
+
+
+    +   [76] Z.L. Gu, Y.W. Zhang, Y. Cheng, S.C. Lee, Effect of uneven building layout
+    on air flow and pollutant dispersion in non-uniform street canyons, Build. Environ.
+    46 (12) (2011) 2657–2665, https://doi.org/10.1016/j.buildenv.2011.06.028.
+
+
+    +   [77] J. Hang, M. Sandberg, Y. Li, L. Claesson, Pollutant dispersion in idealized
+    city models with different urban morphologies, Atmos. Environ. 43 (38) (2009)
+    6011–6025, https://doi.org/10.1016/j.atmosenv.2009.08.029.'
+  merge: -1
+  img_proc: true
