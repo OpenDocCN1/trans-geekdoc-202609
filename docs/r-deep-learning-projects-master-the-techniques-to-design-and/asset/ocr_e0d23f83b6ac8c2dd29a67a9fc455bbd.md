@@ -1,0 +1,7 @@
+# About the authors
+
+**Yuxi (Hayden) Liu** is currently an applied research scientist focused on developing machine learning models and systems for given learning tasks. He has worked for a few years as a data scientist, and his machine learning expertise in computational advertising. He earned his degree from the University of Toronto, and published five first-authored IEEE transaction and conference papers during his research. His first book, titled *Python Machine Learning By Example*, was ranked the #1 bestseller in Amazon India in 2017. He is also a machine learning education enthusiast.
+
+**Pablo Maldonado** is an applied mathematician and data scientist with a taste for software development since his days of programming BASIC on a Tandy 1000. As an academic and business consultant, he spends a great deal of his time building applied artificial intelligence solutions for text analytics, sensor and transactional data, and reinforcement learning. Pablo earned his PhD in applied mathematics (with focus on mathematical game theory) at the Universite Pierre et Marie Curie in Paris, France.
+
+> This book would not have been possible without the continuous feedback from my students from lectures and seminars in Mexico, Czech Republic, and Ukraine. Teaching has taught me a great deal!
