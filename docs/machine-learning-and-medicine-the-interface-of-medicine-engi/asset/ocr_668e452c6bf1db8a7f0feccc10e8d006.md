@@ -1,0 +1,19 @@
+# Towards Transparent Healthcare: Advancing Local Explanation Methods in Explainable Artificial Intelligence
+
+Carlo Metta 1,*, Andrea Beretta 1, Roberto Pellungrini 2, Salvatore Rinzivillo 1 and Fosca Giannotti 2
+
+1 Institute of Information Science and Technologies (ISTI-CNR), Via Moruzzi 1, 56127 Pisa, Italy; andre.beretta@isti.cnr.it (A.B.); rinzivillo@isti.cnr.it (S.R.)
+2 Faculty of Sciences, Scuola Normale Superiore, P.za dei Cavalieri 7, 56126 Pisa, Italy; roberto.pellungrini@sns.it (R.P.); fosca.giannotti@sns.it (F.G.)
+* Correspondence: carlo.metta@isti.cnr.it
+
+Abstract: This paper focuses on the use of local Explainable Artificial Intelligence (XAI) methods, particularly the Local Rule-Based Explanations (LORE) technique, within healthcare and medical settings. It emphasizes the critical role of interpretability and transparency in AI systems for diagnosing diseases, predicting patient outcomes, and creating personalized treatment plans. While acknowledging the complexities and inherent trade-offs between interpretability and model performance, our work underscores the significance of local XAI methods in enhancing decision-making processes in healthcare. By providing granular, case-specific insights, local XAI methods like LORE enhance physicians’ and patients’ understanding of machine learning models and their outcome. Our paper reviews significant contributions to local XAI in healthcare, highlighting its potential to improve clinical decision making, ensure fairness, and comply with regulatory standards.
+
+Keywords: artificial intelligence; explainable artificial intelligence; machine learning
+
+# 1. Introduction
+
+The advent of artificial intelligence (AI) technologies has been transformative for healthcare, offering unprecedented capabilities in disease diagnosis, patient outcome prediction, and the development of tailored treatment plans. However, the increasing complexity and opacity of AI algorithms have amplified the need for transparency and interpretability in their decision-making processes. This has led to the rise of Explainable Artificial Intelligence (XAI), particularly focusing on local interpretation methods such as the LORE (Local Rule-Based Explanations) [1], to make AI decisions in healthcare settings more transparent and comprehensible [2,3].
+
+XAI seeks to equip AI algorithms with explanations, enabling healthcare professionals to gain insights into the rationale behind AI-generated decisions and predictions. XAI methodologies can be broadly divided in two families: global [4] and local [5] methods. While global methods aim at explaining the general reasoning of an AI model, local methods have the goal of explaining why an AI model gave a certain output for a particular instance, i.e., the data of a particular patient or the diagnostic images belonging to a specific individual. The application of local XAI methods addresses the demand for precise, case-by-case explanations, which are paramount for clinical decision making, enhancing patient care, and fostering trust in AI systems among healthcare providers and patients [6–13].
+
+Significance of Local XAI in Healthcare. The integration of AI in healthcare has been both celebrated for its potential and scrutinized for its challenges, including issues of interpretability, potential biases, and ethical concerns [14–16]. Local XAI methods, such as LORE, offer nuanced, instance-specific explanations that are essential for understanding complex AI decisions in medical contexts [17]. These explanations not only build confidence in AI technologies but also aid in identifying and correcting biases, ensuring ethical usage, and complying with healthcare regulations [18].
