@@ -1,0 +1,3 @@
++   20 Oberoi, S. Gupta, VK, Chaudhary, N, and Singh, A (2016) 99DOTS. International Journal of Contemporary Medical Research 3(9):2760–2762.
++   21 The 99 DOTS Website. Available at: https://www.99dots.org/ Accessed: 18 January 2019.
++   22 Jindal, F, Jamar, R, and Churi, P (April 2018) Future and challenges of Internet of Things. International Journal of Computer Science and Information Technology 10(2):13–25.
