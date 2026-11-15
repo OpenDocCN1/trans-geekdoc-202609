@@ -1,0 +1,13 @@
+The DTFs created across the industry are as of now “isolated”; while researchers may opt for information exchange and initial runs of dataspaces are witnessed, no definite protocol exists. However, no robust applications of the DTF exist either. A common guideline is surmised to aid better definition of these new paradigms. The given example of electrical machine maintenance indicates core aspects that, should they be covered, applications are robust enough to warrant a deep inspection by experts.
+
+# References
+
++   Falēkas, Georgios, and Athanasios Karlis. 2021. “Digital Twin in Electrical Machine Control and Predictive Maintenance: State-of-the-Art and Future Prospects.” Energies 14 (18). https://doi.org/10.3390/en14185933.
++   Fuller, Aidan, Zhong Fan, Charles Day, and Chris Barlow. 2020. “Digital Twin: Enabling Technologies, Challenges and Open Research.” IEEE Access 8: 108952–71. https://doi.org/10.1109/ACCESS.2020.2998358.
++   Gabor, Thomas, Lenz Belzner, Marie Kiermeier, Michael Till Beck, and Alexander Neitz. 2016. “A Simulation-Based Architecture for Smart Cyber-Physical Systems.” In 2016 IEEE International Conference on Autonomic Computing (ICAC), 374–79. IEEE. Wuerzburg, Germany.
++   Giessgen, Edward, and David Stargel. 2012. “The Digital Twin Paradigm for Future NASA and U.S. Air Force Vehicles.” In: Collection of Technical Papers - AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics and Materials Conference, no. April. https://doi.org/10.2514/6.2012-1818.
++   Grieves, Michael. 2014. “Digital Twin: Manufacturing Excellence through Virtual Factory Replication.” White Paper 1: 1–7.
++   He, Chao, Tom H Luan, Rongxing Lu, Zhou Su, and Mianxiong Dong. 2022 “Security and Privacy in Vehicular Digital Twin Networks: Challenges and Solutions.” in IEEE Wireless Communications, vol. 30, no. 4, pp. 154-160, August 2023, doi: 10.1109/MWC.002.2200015.
++   Jones, David, Chris Snider, Aydin Nassehi, Jason Yon, and Ben Hicks. 2020. “Characterising the Digital Twin: A Systematic Literature Review.” CIRP Journal of Manufacturing Science and Technology 29: 36–52. https://doi.org/10.1016/j.cirpj.2020.02.002.
++   Liu, Mengnan, Shuiliang Fang, Huiyue Dong, and Cunzhi Xu. 2021. “Review of Digital Twin about Concepts, Technologies, and Industrial Applications.” Journal of Manufacturing Systems 58 (PB): 346–61. https://doi.org/10.1016/j.jmsy.2020.06.017.
++   Liu, Zhifeng, Wei Chen, Caixia Zhang, Congbin Yang, and Hongyan Chu. 2019. “Data Super-Network Fault Prediction Model and Maintenance Strategy for Mechanical Product Based on Digital Twin.” IEEE Access 7: 177284–96. https://doi.org/10.1109/ACCESS.2019.2957202.

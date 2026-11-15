@@ -1,0 +1,9 @@
+![](bbox=[0.13, 0.11, 0.87, 0.37])
+
+**FIGURE 17.4** Collective intelligence (given in percent) and internal reward (given in tokens) with and without stigmergy vs. number of crowdsourced Amazon MTurk workers.
+
+results without stigmergy, where the DAO members don’t benefit from sharing knowledge about the unfolding reward map discovery process.
+
+# ## 17.7 Conclusion
+
+In this chapter, we have shed some light on the potential of advanced blockchain technologies—most notably, tokenized digital twins, purpose-driven tokens, and on-chaining oracles—to rewire Society 5.0 and advance its CI via state-of-the-art CPSS such as our considered Internet of No Things, whose nearables give rise to intelligent environments. Different CPSS members may use these environments to create tech-driven public or club goods, where human-centered and user-intended services materialize in stigmergic techno-social systems such as Society 5.0. Ironically, despite all the technological prowess, old or even ancient ideas seem to resurface in the 6G era, including but not limited to (1) ancient decision-making processes in social insect colonies, (2) Nikola Tesla’s prophecy of converting the whole Earth into a huge brain, (3) Society 5.0’s return to the unpredictability, wildness, and continual encounters with the other thanks to the prevalence of diverse non-human agency (social robots, AI agents), and (4) non-monetary economies such as the token economy. Among others, key open research challenges include the exploration of different roles and types of tokens as well as the delivery of advanced XR experiences for the extension of human capabilities, given that the external world consists of conscious agents who favor interactions that drive the evolution of CI while enjoying and acting on experiences.

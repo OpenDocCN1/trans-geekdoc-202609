@@ -1,0 +1,9 @@
+![](bbox=[0.13, 0.115, 0.86, 0.435])
+
+**FIGURE 9.2** 50% and 95% contour correctness results of three algorithms.
+
+Since we utilize the Gaussian mixture model, which allows for an exact computation, for example, 50% and 95% probability regions, the correctness of MCMC-based methods can be easily verified [20]. In addition, for the visualization purpose, the first two-dimensional parameters are illustrated together with the correct probability contours. The results for proposed FMCMC-DR, RW-MCMC, and MH are illustrated in Figure 9.2a–c, respectively.
+
+These three figures exhibit the sampled points as well as 50% and 95% probability regions. Obviously, no matter from 50% contour or 95% contour accuracy perspective, the proposed FMCMC-DR achieves the highest precision, which is 60.7% and 96.3%, respectively, which indicates that the delayed rejection technique can indeed improve the performance of MCMC because of the ability of the intact state space exploration. However, for RW-MCMC, it has 40.3% accuracy for 50% contour measurement, which is 0.8% lower than the standard MH method. In addition, the accuracy of 95% contour measurement for RW-MCMC is 91.2%, which is lower than the standard MH method as well, where the corresponding value is 94.7%. This is understandable because, for the sampling technique, the standard MH method adopts rejection–acceptance sampling so that the sample that is bad for local fitting will be discarded. On the contrary, RW-MCMC utilized the random walk for sampling so that the bad samples will also be included, resulting in the worst performance among these three techniques.
+
+For more reliable statics and demonstration, we change the number of parameters dimension from 10 to 100 by step of 10 to see the performance

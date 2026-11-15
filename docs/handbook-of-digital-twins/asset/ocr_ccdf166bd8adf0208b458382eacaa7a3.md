@@ -1,0 +1,15 @@
+The particle filter is widely used as the inference algorithm for DBN because of its ability to deal with non-Gaussian state variables [10]. There are two challenges in the PF: (1) degeneracy, meaning that all but one particle will have negligible weights after a few iterations and (2) sample impoverishment, meaning the loss of sample diversity. In this chapter, RPF is used as the Bayesian inference algorithm for DBN.
+
+# 43.5.2 Digital Twin Initialization and Relevant Parameter Setting
+
+In the adopted generalized Frost–Dugdale law, two parameters, i.e., C and \(\gamma\), affect the accuracy of diagnosis and prognosis. In this paper, both C and \(\gamma\) are considered as uncertain parameters to be estimated. Due to the influence of measurement errors, the initial size of the crack in the component may not be exactly 2mm but a certain deviation from it. In this paper, the initial size of the crack is also regarded as an uncertain parameter. Based on the deterministic crack growth model Eq. (43.15), in order to consider the influence of process noise, the random crack growth process is described as Ref. [26]:
+
+\(\mathbf{a}_t = \mathbf{a}_{t-1} + \exp(\omega_{t-1}) \left. \frac{d\mathbf{a}}{dN} \right|_{t-1} \Delta N\) (43.21)
+
+where \(\mathbf{a}_t\) are the crack lengths at time step \(t\), \(\Delta N\) is the number of load cycles experienced from time step \(t-1\) to time step \(t\), and \(\omega_{t-1}\) is a noise term following Gaussian distribution \(N\left(-\frac{\sigma_{\omega}^2}{2}, \sigma_{\omega}^2\right)\), leading to \(E(\exp(\omega_{t-1}))=1\) [27]. The crack growth rate \(\left. \frac{d\mathbf{a}}{dN} \right|_{t-1}\) is expressed as follows:
+
+\(\left. \frac{d\mathbf{a}}{dN} \right|_{t-1} = C_{t-1} \mathbf{a}_{t-1}^{1-\gamma_{t-1}/2} \mathbf{K}_{t-1}^{\gamma_{t-1}}\) (43.22)
+
+In Eq. (43.22), model parameters C and \(\gamma\) are replaced by \(C_{t-1}\) and \(\gamma_{t-1}\), respectively, to consider the uncertainty of model parameters. The prior distribution of C is set to \(\log(C_t | t=0) \sim U(-10.9, -10.8)\) due to insufficient knowledge. Here \(\log(C_t)\) is used instead C which is a very small value compared to other quantities. The prior distribution of \(\gamma\) is set to \(\gamma_t | t=0 \sim N(3, 0.1^2)\), with the expectation equal to 3 as defined in Ref. [21]. The prior distribution of the corner crack length is adopted as \(a_t | t=0 \sim N(2, 0.1^2)\) to consider the uncertainty of the initial crack size. The measurement error is set as \(\epsilon_t \sim N(0, 0.05)\) to consider the measurement uncertainty, and \(\sigma_{\omega}^2\) is set as 0.1 to consider the effect of process noise on the crack growth.
+
+The number of particles is set as \(N_s = 2,000\) to balance the computational cost and simulation accuracy. At the initial time step \(t=0\), the particle set \(\left\{ \mathbf{x}_{t=0}^{(i)} \right\}_{i=1}^{N_s} = \left\{ \mathbf{a}_{t=0}^{(i)}, \log C_{t=0}^{(i)}, \gamma_{t=0}^{(i)} \right\}_{i=1}^{N_s}\) is randomly sampled from the prior

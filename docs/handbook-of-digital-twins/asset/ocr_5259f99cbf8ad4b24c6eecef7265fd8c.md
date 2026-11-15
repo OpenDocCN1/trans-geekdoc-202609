@@ -1,0 +1,13 @@
+admitting no interaction with consistency functions or generation/ consistency scripts either. For example, a BM can assemble and store as type of circuit (say an RC filter) with existing components (elementary such as resistors and capacitors or also aggregate), create and store the interface for its pinout using standard pin connectors, create a resistor specimen with say a new proper inductance but not create a resistor type with new behaviour in terms of equations (if not connection ones) or algorithms. Also, a BM shall not be allowed to create types spanning more than one domain, as it avoids a BM interacting with consistency functions; since components are validated individually, the consistency functions for an aggregate with one domain only are the union of the consistency functions of the components. For example, a BM can create a first-principle model of a machine but not its DEVS companion as the latter would belong to a second domain, and BM cannot create the proper consistency functions between the two hypothetical behaviours of the same type having different domains.
+
++   • **Advanced modeller (AM)**: in addition to the attributions of a BM, this profile can also create new behaviours by interacting directly with equations (other than connection ones, clearly) and algorithms, within new (or existing types, domain(s) and interfaces, and having responsibility on all the required consistency functions and scripts.
+
++   • **Model base manager (MBM)**: this person has full authority, having only to abide (wherever this is applicable) by the rules of the database system hosting the MDB; ultimately, in synthesis, the MBM is the person who can even bypass – temporarily and knowledgeably – the MDB interface to which all the others confined, typically for recovery in the case of an MDB corruption.
+
+To provide a picture of how a DM tool should be specified while maintaining the high-level overview, we present the UML use cases sketch to translate the access profiles presented so far in a completely abstract manner in Figure 15.3.
+
+# 15.5.2 Interactions with the MDB Management Tool
+
+In compliance with the actions allowed by its access profile, a user can create, import and export an MDB. The set of high-level UML in Figure 15.1c allows interactions of the users with the storage through the following methods:
+
++   • Include a new MDB – created from scratch – with the New() method into a DMT, identified by the DMT_ID; this method returns the MDB_ID elaborated by the version control tool.

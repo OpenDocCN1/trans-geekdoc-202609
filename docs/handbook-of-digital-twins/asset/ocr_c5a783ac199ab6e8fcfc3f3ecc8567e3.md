@@ -1,0 +1,11 @@
+that the full pipeline of drug development is a lengthy and expensive process, frequently taking 10–12 years from basic research to an approved drug. A DT could be useful to estimate the economic feasibility of starting a new drug discovery process and to propose solutions based on the market, such as to start the process, postpone a couple of years, or outsource the procedure (or part of the procedure). A common practice that big pharmaceutical corporations tend to follow is to outsource the optimization of process development to pharmaceutical contract and development manufacturing organizations (CDMOs), which are encumbered with detecting alternatives in the production pipeline to expedite the process, without compromising the safety of the drug. This decision-making process could be supported by a DT estimating the costs of the different approaches followed.
+
+# 49.4 Discussion
+
+The model that the DTs contain can be one of various types, each with its own requirements, particularities, and benefits:
+
++   • Static models: models used for inference, which generate a prediction after being supplied an input. This could range from a model as simple as a linear regression to a more complex neural network. Given that these models are static, a periodic retraining is required, for it to update its prediction based on new data.
++   • On such models, inference is extremely fast, but the training can take a large amount of time, depending on the size of the model and data-set used to train it.
++   • Simulation models: models that run a modelled scenario for a long time and investigate the long-term effects of the selected parameters, or that evaluate the most likely outcome of a stochastic process. The most common algorithms are discrete event simulation and Monte Carlo simulation.
++   • These models are frequently used for process optimization and to investigate process bottlenecks.
++   • Optimization algorithms: consist of minimizing or maximizing one or more objective functions by changing some parameters of the problem. The algorithms range from simple linear programming to more complex metaheuristics, which can take a long time to obtain results and for that reason are often not adequate for operational-level DTs. However, for planning, SC, or strategic DTs, these algorithms can often be the best choice.

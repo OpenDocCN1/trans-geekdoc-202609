@@ -1,0 +1,12 @@
++   2. implement cognition services following the cognition model and needs identified in the Scope Definition phase;
++   3. create other domain-specific functionalities required for a particular context;
++   4. integrate functionalities through an operational storyline concerning the process and operations defined in the Scope Definition phase;
++   5. iterate back among the steps described above to enrich the CDT functionality and meet new requirements.
+
+Finally, during the rollout phase, we use standard software engineering practices to deploy and monitor the CDTs' software and its operation. The use case and business requirements, along with the engineering expertise and culture, will determine the deployment process and choices regarding the deployment strategies.
+
+# 28.4 Industrial Applications
+
+# 28.4.1 Cognitive Services and Oil Refining Processes
+
+The oil refining industry is considered among the largest energy-consuming process industry sectors worldwide and one of the largest sources of global greenhouse gas emissions (Gu et al. 2015; Lin and Xie 2015; Durrani et al. 2018). Furthermore, growing energy demand and increasingly restrictive environmental quality specifications incentivize the development of new approaches toward greater energy efficiency to (1) maximize the crude oil throughput, (2) reduce the cost of operation, and (3) reduce the overall carbon footprint of the oil refinement operations (Szklo and Schaeffer 2007; Han et al. 2015). Real-time monitoring and optimization are being adopted to achieve the abovementioned goals (Ramli et al. 2014; Subramanian, Moar, and Singh 2021). Furthermore, soft-sensing is being adopted where regular sensors would require high investments, represent maintenance costs, or the aspect of interest cannot be directly measured online (Wang, Shao, and Zhu 2019; Yang et al. 2021; Rožanec et al. 2021, 2022). In this line, DTs can be used to mirror the ongoing oil refining process, provide alerts on current and future states of the distillation process, and perform multi-objective optimization considering (1) hard constraints regarding the expected quality of the product and (2) energy savings that directly impact the greenhouse gas emissions and overall cost of operation of the oil refinery (Teng et al. 2021; Min et al. 2019). Furthermore, the results of such optimization can then be transferred back to the physical process either automatically or with human supervision, based on the maturity of the DT implementation and the criticality of the change introduced into the process.

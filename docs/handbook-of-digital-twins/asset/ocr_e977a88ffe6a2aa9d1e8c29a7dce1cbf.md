@@ -1,0 +1,8 @@
+![](bbox=[0.12, 0.13, 0.88, 0.53])
+
+# FIGURE 2.4
+Spring model: four forces shaping a digital twin.
+
+While going with practitioner’s “best-suited option”, without evaluating other possibilities, can be a viable option in the cases where the practitioner happens to be creative and visionary, in most cases, it risks: (1) selecting a sub-optimal or an overly optimistic solution that might later have to be altered or disposed-off completely (Fjeld 2020) and (2) misaligning with other project stakeholders who might have a totally different conceptualization about the digital capabilities a DT would deliver (Agrawal, Fischer, and Singh 2022). Therefore, to alleviate the above challenge, our framework forces the practitioners to ask themselves before deploying DTs: What does digital mean for their use case?
+
+Twinning Perspective (What Are We twinning?): Even if the ambition in many cases is to create a so-called “most comprehensive DT”, where all entities across the lifecycle are fully digital, the reality is that most work systems today and in the foreseeable future will only be partially digital. Feng et al. (2020) note that the idea to have a DT that is a comprehensive virtual replica of all physical and functional activities can result in huge costs (West and Blackburn 2017) and make it difficult for manufacturers to adopt, invest, and implement DT. Therefore, to alleviate this challenge, our framework asks

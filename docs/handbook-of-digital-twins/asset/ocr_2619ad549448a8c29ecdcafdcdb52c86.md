@@ -1,0 +1,9 @@
+# # 33 Experiments as DTs
+
+Jascha Grübel
+
+ETH Zürich
+
+DTs (DTs) have become the buzzword of the decade, permeating research, industry and even governance as indicated by Gartner's hype measure [47]. At the same time, DTs are highly under-specified and each DT is based on a slightly different conceptualisation. So far, most DTs have focused on the digitalisation of crucial components of a system [18]. More recent work has unveiled a methodology to describe the five core components to construct effective DTs [21,47] but other conceptualisations still prevail [49]. The DT is said to arise by combining five environments that take on different roles in the formation of a DT (see Figure 33.1 and Ref. [21]). First, the Physical Environment captures and changes the reality of the Physical Twin (PT) through sensors and actuators.1 Second, the Data Environment stores information required to form the Digital Twin. This can range from cloud services and subscription to local sensor networks to databases and data warehouses. Third, the Analytical Environment is taking the information as input to some modelling, simulation or analysis. Fourth, the Virtual Environment enables the interaction of users with content in all environments through dashboards [5] and immersive analytics [32] such as Fused Twins [20]. Lastly, the Connection Environment brings together the other Environments by providing APIs and Access Control and standardisation [46]. All connections are bi-directional and allow DTs to interact with the PT. This conceptual framework is generalised to accommodate all kinds of DTs regardless of actual implementation.
+
+1 While an Ideal DT [21] would perfectly match the PT, real-word applications usually limited themselves to a Practical DT [21], which only captures important aspects of the PT relevant to the task.

@@ -1,0 +1,13 @@
+interface. This will allow the user to metaphorically “drill down” or “zoom out” of the heterarchy as required (Saffer, 2009a, b, 2014; also see Cooper et al., 2014; Goodwin, 2011; Tidwell, Brewer, & Valencia, 2020).
+
+In the case of VMC HMI, if there were critical errors, the entire screen was tinted red, except for the relevent information unintended. This helped tone down irrelevant information to directly draw attention to the relevant ones, thereby (1) drawing user attention by displaying an overall redness on display and (2) making it easier to locate the relevant information. It was important not to block access to other information, and therefore, only a red tint was used, and not opaque red, as well as multiple ways to easily dismiss the tinting—mouse shake, click, touch, key press, or any other interactions that the users may try.
+
+In the case of the VMC HMI, change blindness was addressed in two ways:
+
++   1. Whenever there was a critical change, that information was notified and logged for the user to address. This also enabled the user to ignore frequent irrelevant changes without worrying about critical changes. For example, whenever the voltage fluctuated above or below the safe limit, a red dot/line was logged, and the user was notified.
++   
++   2. Animation and micro-interactions were used to draw attention to continuous changes which were relevant to the user at all times.
+
+# 14.4 Conclusion
+
+While addressing the sheer scale and complexity of digital twins, it is quite possible to forego human-centric design as it may be categorized as a secondary goal. However, it is important to note that in the end, all the additional data and capabilities from digital twins help us in two major ways: (1) provide new valuable insights into the system, which provides better visibility and control to the human user and (2) offload manual work and provide additional means to automate it, making it easier for human users to focus on more important tasks. In both cases, human users are the intended beneficiaries—it is important that they are given adequate consideration at each step of the digital twin design process. Good human-centered design reduces cognitive load and “human errors”. As a result, good HMIs can have an enormous impact on the success of digital twins. The key ideas discussed throughout this chapter can be considered as a glimpse into the broad aspects of human-centric design—each topic is an enormous field of its own, with applications throughout our daily lives. A human-centric approach to designing digital twins and their interfaces would be crucial in ensuring that the technology is used effectively and provides the highest possible level of benefits to its human users.

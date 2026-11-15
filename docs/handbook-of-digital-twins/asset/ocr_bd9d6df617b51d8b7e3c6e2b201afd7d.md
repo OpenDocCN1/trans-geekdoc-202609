@@ -1,0 +1,13 @@
+the project delivery team or a company can, at least to some extent, control, fall into three categories: Product, Organization, and Process (POP) (Fischer et al. 2017). Hence, each element of POP can be improved digitally or, in a way, digitally twinned. As discussed in Section 2.3, limiting the twinning to only one element (most people restrict it to product) can limit the benefits of DT.
+
+For example, on a manufacturing project, a practitioner makes a DT that predicts whether an equipment needs to be shut down for maintenance. While DT could detect the need for repair if the equipment (or product) is only twinned, it would not be intelligent enough to know that shutting down for repairs would cause production delays and bottlenecks because it does not understand the process or the organization in which the equipment functions. Therefore, the decision to shut down would still have to be made by the engineering team.
+
+A practitioner must therefore decide which elements they would like to twin. Of course, the natural instinct is to start with the product, but we recommend thinking further ahead like twinning the process in the manner of (Papacharalampopoulos and Stavropoulos 2019) who optimizes processes using DT, as well as (Parmar, Leiponen, and Thomas 2020) who optimizes organization with DTs.
+
+**Why a Spring Representation:** In Figure 2.4, we use a spring representation to connect the four elements to show that ‘Digital’ and ‘Twin’ components of a DT are greatly intertwined with one another, and a change in one affects the other. Further, the model emphasizes that finding the appropriate DT is an iterative process, where the practitioner answers the question one observes the effects on other parts, and repeats the process.
+
+For example, if a practitioner decides to implement “prediction” type of digitalization on a construction project, they will have to reduce the system boundaries if they did not have appropriate data for the whole project. Similarly, it would be difficult to make accurate predictions if the practitioner only twins the asset (or the building) without considering the process or the organization behind it as discussed above. Agrawal, Fischer, and Singh (2022) also observe the impact of the digital element on the twinning element in a highway maintenance case study.
+
+# **2.5 Case Study**
+
+We demonstrate the framework’s application in a real-life case study to illustrate how practitioners find it useful in practice. Below we first describe the situation, and then detail how the framework was used in this case study.
