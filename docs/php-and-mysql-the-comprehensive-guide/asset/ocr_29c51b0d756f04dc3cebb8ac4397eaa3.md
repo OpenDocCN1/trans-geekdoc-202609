@@ -1,0 +1,15 @@
+So much for the chapter structure, which is consistent throughout the book. Speaking of consistency, you will notice that the majority of the figures in this book were created in the Windows OS. However, this in no way means that the authors are Microsoft disciples or that the scripts have only been used on one operating system platform. Rather, it has to do with the production process of this book: the publisher’s templates are optimized for Windows, so we also created most of the figures in Windows. However, we used several Linux and Mac systems in order to test the code there as well and to find and document special features of these systems, particularly in the installation section. If something actually only works under one operating system, this is always indicated.
+
+And another important point: we waited until PHP 8.3 was finally released before completing this book, so you won’t find any outdated beta code in this book. The last tests of the book examples even ran with PHP 8.3.4. This patience paid off in many previous editions, because details kept changing in minor versions.
+
+# The Content
+
+The book is divided into seven parts, each of which deals with a specific subject area:
+
++   - Part I describes the necessary preparations for working with PHP. You will learn what PHP is and how to install it. The latter used to be a major hurdle, which is why we cover the installation in detail for Linux, macOS, and Windows.
++   - Part II contains a complete introduction to PHP from the ground up. Of course, more advanced topics and the new features of PHP 8.x are also covered. You will then have the necessary knowledge to solve specific tasks with PHP in the following parts.
++   - Part III deals with basic web techniques that dominate the everyday life of every professional PHP programmer and are the be-all and end-all, especially in agencies. You will learn how to work with forms, use sessions and cookies, and send emails from PHP.
++   - Part IV shows databases—not just MySQL, which is often mentioned in connection with PHP, but a range of other database systems, including SQLite, Microsoft SQL Server, PostgreSQL, Oracle, and MongoDB.
++   - Part V explains how PHP communicates with the outside world. This can take place via files, HTTP, FTP, or web services, for example. We also show the interaction with JavaScript and WebSockets.
++   - Part VI demonstrates how you can work with various data formats with PHP: JSON and XML files, graphics, or even PDF documents.
++   - Part VII deals with administrative and security-related topics that tend to take place under the hood. You will learn how easy it is for improper programming to create security vulnerabilities in PHP websites and what you can do about such vulnerabilities. You will also learn more about user authentication and PHP configuration.

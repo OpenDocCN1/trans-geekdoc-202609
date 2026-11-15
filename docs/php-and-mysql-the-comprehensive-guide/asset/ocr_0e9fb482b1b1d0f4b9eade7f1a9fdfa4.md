@@ -1,0 +1,5 @@
+# ### 15.6.5 Prevent JavaScript Access to the Session Cookie
+
+Another security feature can protect against the effects of cross-site scripting (XSS): if you set the `php.ini` configuration option for `session.cookie_httponly` to 1 or `On`, then session cookies are marked with the `httponly` flag (see [Chapter 14]). This at least makes session hijacking with JavaScript more difficult.
+
+In principle, however, the following applies: Only use sessions with the session ID in a cookie! Over the last 20 years, the authors have repeatedly seen projects in web development that had to work without cookies: obscure clients on handheld devices that did not support cookies, internal web applications used with a browser that was not allowed to accept cookies due to a company-wide policy, and a few other extreme cases. The key word here is *extreme* as normally there is no excuse for using sessions without cookies. Try it out for yourself: Surf once with cookies disabled and see how far you get—especially with webmail services and online stores.

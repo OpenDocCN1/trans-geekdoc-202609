@@ -1,0 +1,209 @@
+
+the target image and the source, then the coordinates at which the image section starts in each case, followed by the width and height of the target and source.
+
+The following example reduces an image to 10% of its original size, as shown in Figure 30.8 and Figure 30.9.
+
+```
+<?php
+header("Content-type:image/jpeg");
+
+$image = imagecreatefromjpeg("test.jpg");
+$x = imagesx($image);
+$y = imagesy($image);
+
+$image_smaller = imagecreatetruecolor($x * 0.2, $y * 0.2);
+
+imagecopyresized($image_smaller, $image, 0, 0, 0, 0, $x * 0.2, $y * 0.2, $x,
+$y);
+
+imagejpeg($image_smaller);
+imagedestroy($image);
+imagedestroy($image_smaller);
+?>
+```
+
+**Listing 30.6 Reducing the Size of an Image ("image_reduce.php")**
+
+![](img/ae7820c36e8f24c1623d26668b28e80e_831_0.png)
+
+Figure 30.8 From Large...
+
+![](img/ae7820c36e8f24c1623d26668b28e80e_832_0.png)
+
+Figure 30.9 ...To Small
+
+> **Note**
+> Remember to delete both images from the memory at the end for the sake of order.
+
+## Grayscale with 256 Colors
+
+The simplest method for calculating a grey value is to add the individual color values of red, green, and blue that make up a color and divide by three. This average value is then the value for red, green, and blue in the grayscale. It is somewhat more subtle to give different colors different weights—for example, 25% red, 40% blue, and 35% green.
+
+So much for the theory. In practice, all you have to do now is go through all the colors in the image. We will show you how using an example:
+
+- 1. First load the image with the 256 colors:
+  `$image = imagecreatefromgif("test.gif");`
+- 2. Then loop through all the colors in the image. You get the total number with the `imagecolorstotal()` function:
+  `for ($i=0; $i<imagecolorstotal($image); $i++) {`
+- 3. Each color has an index, which is mapped here with the `$i` loop variable. `imagecolorsforindex(image, index)` returns the color value of a color as an associative array:
+  `$f = imagecolorsforindex($image, $i);`
+- 4. You can access the individual colors in this array with the red, green, and blue keys. These are the basis of the formula for the grayscale calculation:
+  ```
+  $gst = $f["red"]*0.25 + $f["green"]*0.4 + $f["blue"]*0.35;
+  ```
+- 5. To redefine the color as grayscale, use the calculated grayscale values for red, green, and blue:
+  ```
+  imagecolorset( $image, $i, $gst, $gst, $gst );
+  }
+  ```
+- 6. Finally, simply output the image.
+
+The following listing shows the complete code.
+
+```
+<?php
+header("Content-type:image/png");
+
+$image = imagecreatefromgif("test.gif");
+
+for ($i=0; $i<imagecolorstotal($image); $i++) {
+$f = imagecolorsforindex($image, $i);
+$gst = $f["red"]*0.25 + $f["green"]*0.4 + $f["blue"]*0.35;
+imagecolorset( $image, $i, $gst, $gst, $gst );
+}
+imagepng($image);
+imagedestroy($image);
+?>
+```
+
+**Listing 30.7 Grayscale Conversion of 256 Colors ("grayscale_256.php")**
+
+> **Note**
+> 
+> By the way, when you specify a color, you can also specify the transparency. This is done using the imagecolorallocatealpha(image, red, green, blue, alpha) function with an alpha value from 0 to 127. There are also other functions for images with a color palette to determine colors: imagecolorclosest() and imagecolorclosestalpha() use the color from the palette that is closest to the specified color value. To specify a transparent color in GIF and PNG-8 formats, use imagecolortransparent(image, color).
+
+## Grayscale with 16.78 Million Colors
+
+If you want to convert a photo with more than 256 colors to grayscale, you actually have to replace every pixel. However, as this eats up performance, we will show you a trick.
+
+The trick is to compress the colors of the image into a 256-color palette using the imagetruecolortopalette(image, dithering, number of colors) function. 1 The disadvantage of this method is that color information is lost. On the other hand, the conversion to grayscale is quick and easy.
+
+> 1 Dithering means that color values are simulated by similar surrounding colors. As an example, assume that a 2 × 2 pixel square consists entirely of four orange pixels. When converting to 256 colors, however, there is no more orange, which is why two of the four pixels are replaced with red and two with yellow. This visually simulates the effect of orange, but it makes the image appear more pixelated. If, on the other hand, the dithering is omitted, then the image becomes more graduated.
+
+```
+<?php
+header("Content-type:image/jpeg");
+
+$image = imagecreatefromjpeg("test.jpg");
+imagetruecolortopalette($image, false, 256);
+
+for ($i=0; $i<imagecolorstotal($image); $i++) {
+$f = imagecolorsforindex($image, $i);
+$gst = $f["red"]*0.15 + $f["green"]*0.5 + $f["blue"]*0.35;
+imagecolorset( $image, $i, $gst, $gst, $gst );
+}
+
+imagejpeg($image);
+imagedestroy($image);
+?>
+```
+
+**Listing 30.8 Conversion with Previous Palette Adjustment ("grayscale_1678_conversion.php")**
+
+The next step is the exact conversion to grayscale. The most important elements are two nested loops that go through the width and height of the image pixel by pixel. The color is also determined a little differently. The colorat(image, x, y) function returns the color of a coordinate, which you can then determine with imagecolorsforindex() and turn into a color array. Once the color value has been converted, color the pixel with the imagesetpixel(image, x, y, color) function.
+
+```
+<?php
+header("Content-type:image/jpeg");
+
+$image = imagecreatefromjpeg("test.jpg");
+
+for ($i=0; $i<imagesx($image); $i++) {
+for ($j=0; $j<imagesy($image); $j++) {
+$f = imagecolorat($image, $i, $j);
+$f = imagecolorsforindex($image, $f);
+$gst = $f["red"]*0.25 + $f["green"]*0.4 + $f["blue"]*0.35;
+$color = imagecolorallocate($image, $gst, $gst, $gst);
+imagesetpixel($image, $i, $j, $color);
+}
+}
+imagejpeg($image);
+imagedestroy($image);
+?>
+```
+
+**Listing 30.9 Less Performant ("grayscale_1678.php")**
+
+> **Tip**
+> There are also integrated image processing options in GD: With `imageconvolution()` you can change the image with a matrix and, for example, blur it. There are also some filters that you can apply with `imagefilter()`. Each filter is a constant, such as `IMG_FILTER_GAUSSIAN_BLUR` for the Gaussian blur:
+> `imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);`
+> Depending on the filter, further parameters are possible for the settings. You can find an overview at `http://s-prs.co/v602243`.
+
+## 30.2.7 Dynamic Diagram
+
+The aim of this section is to realize a pie chart dynamically from an XML file. The XML file has a very simple structure and contains a survey with the various answers:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<question text="Who should be kicked out?">
+<answer id="a" text="The coach">12</answer>
+<answer id="b" text="The players">53</answer>
+<answer id="c" text="The board">85</answer>
+</question>
+```
+
+The script uses SimpleXML to read the data from the XML file. First, a foreach loop adds up the votes for all answers. This is later used to calculate the percentage of the individual answers. After the usual GD preparations, another loop follows that goes through all the answers. The percentage share is calculated for each answer. This results in the final angle for the respective arc:
+
+```
+$end = $start + 360 * intval($answer) / $ant_max;
+```
+
+`imagecolorallocate()` then draws the arc. We add the legend with `imagettftext()`. The response text comes directly from the XML file. Finally, the start angle is set to the last end angle. You can see the output in Figure 30.10.
+
+```
+<?php
+$sim = simplexml_load_file("survey.xml");
+
+//Determine total sum of answers
+$ant_max = 0;
+foreach ($sim->answer as $answer) {
+  $ant_max += intval($answer);
+}
+
+header("Content-type:image/png");
+$image = imagecreatetruecolor(350, 250);
+
+$white = imagecolorallocate($image, 255, 255, 255);
+imagefilledrectangle($image, 0, 0, 349, 249, $white);
+
+$colors = array(imagecolorallocate($image, 204, 51, 51),
+                imagecolorallocate($image, 51, 204, 51),
+                imagecolorallocate($image, 51, 51, 204),
+                imagecolorallocate($image, 204, 204, 51));
+
+//start angle
+$start = 0;
+$i = 0;
+foreach ($sim->answer as $answer) {
+  $end = $start + 360 * intval($answer) / $ant_max;
+  imagefilledarc($image, 100, 120, 150, 150, intval($start),
+                 intval($end), $colors[$i], IMG_ARC_PIE);
+
+//Label answers:
+  imagettftext($image, 10, 0, 200, 50 + 20 * $i, $colors[$i], "
+               verdana.ttf", $answer["text"] . ": " . $answer);
+
+//Increment
+  $start = $end;
+  $i++;
+}
+
+//Label question:
+$black = imagecolorallocate($image, 0, 0, 0);
+imagettftext($image, 14, 0, 20, 20, $black, "verdana.ttf", $sim["text"]);
+imagepng($image);
+imagedestroy($image);
+?>
+```
+
+**Listing 30.10 A Pie Chart from an XML File ("diagram_draw.php")**
