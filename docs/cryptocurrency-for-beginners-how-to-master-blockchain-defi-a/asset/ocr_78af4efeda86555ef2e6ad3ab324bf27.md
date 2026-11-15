@@ -1,0 +1,9 @@
+Monetary Fund, we may readily verify this argument. Approximately one-fifth of the world's supply of above-ground gold is held by these organizations as of today. Moreover, some central banks have prudently increased their gold reserves. This underscores their fears about the global economy's long-term viability.
+
+# 1.2.8 Gold helps to preserve wealth
+
+The primary reason for gold's relevance in the modern economy is that it has demonstrated exceptional performance in the successful preservation of wealth over a lengthy period of time spanning many generations. Paper-denominated currencies, on the other hand, cannot make the same claim. Let's look at an example to assist us to comprehend what we're talking about: In the early 1970s, one ounce of gold was worth $35. Assume you had the option of keeping either an ounce of gold or merely the $35 at the moment. Both gold and the dollar, in fact, would purchase you the same items, such as a brand new tailor-made business suit or a sporty bicycle. In contrast, if you had an ounce of gold today and converted it to today's pricing, you'd be able to buy a whole new suit with it, but the same cannot be said for the $35. In reality, if you had elected to keep the $35 instead of the one ounce of gold, you would have lost a significant sum of money. This is mostly due to the fact that the value of gold increased while the value of the dollar decreased due to inflation.
+
+# 1.2.9 Gold is secure
+
+As seen by the unabating tensions in the Middle East, Africa, South Asia, and elsewhere, the current world's economic climate is becoming increasingly dependent on and determined by regional and political stability. It is for this reason that investors have a natural affinity for gold and regard it as a secure investment, particularly when political and economic instability are prevalent. An examination of history indicates that

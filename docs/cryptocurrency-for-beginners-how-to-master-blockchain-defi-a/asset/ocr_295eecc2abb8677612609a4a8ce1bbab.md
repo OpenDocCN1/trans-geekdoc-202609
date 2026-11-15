@@ -1,0 +1,9 @@
+Fungible Tokens) has been coined. An NFT is a one-of-a-kind token that represents a unique ID linked to a non-replicable cryptographic artwork. The NTF is used to verify the ownership as well as the origin of work and is linked to Blockchain technology.
+
+# 4.5.3 Put it up for sale on an ad hoc platform
+
+The work is ready to sell once it has been created and certified. Many platforms have emerged in recent years that allow you to show, sell, and buy NFT works. OpenSea is one of the most well-known, but artists prefer Nifty Gateway, super rare, and Rarible. While some NFT platforms, such as SuperRare and Nifty Gateway, currently accept artists only by invitation or application, others, such as Rarible, allow any interested creator to begin selling in their market.
+
+# 4.5.4 Become part of a Community
+
+Crypto Art is a relatively new phenomenon, and most people are unaware of it. As a result, one of the goals of the NFT platforms is to create Communities that allow artists, collectors, and digital professionals to connect, discuss, train, and stay up to date on new technologies, trends, and market developments. The community's buzzword is "collaboration," and this spirit is bolstered by the focus solely on art: artists are frequently anonymous or use pseudonyms, and gender, ethnicity, and social status are not revealed. Art Rights, a platform for the management and certification of works of art using Blockchain technology, is one of the tools available to help artists, including Crypto Artists. The Art Concierge, the largest community of artists, collectors, and professionals in the art world, is one of the services provided by the platform.

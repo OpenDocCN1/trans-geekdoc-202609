@@ -1,0 +1,5 @@
+may also be utilized on the platform. On the other hand, it is not reliant on the ripple network. To transfer money, a party does not need X.R.P. As a result, the worth of Ripple lies not in the X.R.P. coin but the network's capacity to swiftly move assets throughout the globe.
+
+The network competes with established payment methods, such as Swift. Rather than operating as a substitute for current payment systems or a direct rival to fiat money, as other cryptocurrencies such as bitcoin aspire to achieve, it may support a variety of payments throughout RippleNet. The concept of Ripple was initially proposed in 2004, but it wasn't widely adopted until 2013. Jed McCaleb encouraged a lot of shareholders to participate in the network. Chris Larsen was also one of those angel investors, and he is regarded as one of the wealthiest cryptocurrency investors. There are certain advantages and disadvantages to consider before selecting whether or not to utilize Ripple as a person or a company.
+
+# Advantages of Ripple

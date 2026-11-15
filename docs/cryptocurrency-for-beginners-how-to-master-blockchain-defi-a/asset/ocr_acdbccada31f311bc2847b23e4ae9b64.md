@@ -1,0 +1,1 @@
+the materials required for mining, just like you can with gold. The same is true for energy and oil. A few public firms specialize in blockchain technology, but there aren't many of them.

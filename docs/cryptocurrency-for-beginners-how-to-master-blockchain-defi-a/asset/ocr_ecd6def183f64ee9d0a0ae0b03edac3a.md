@@ -1,0 +1,5 @@
+# Chapter 2: Money as Medium of Exchange
+
+![](bbox=[0.28, 0.155, 0.71, 0.46])
+
+In modern times, paper currency is the most widely used medium of exchange. Fiat money is made up of paper notes. To put it another way, their face and intrinsic values aren't the same. Fiat money is defined as a government-issued currency that is not backed by physical assets such as silver or gold. It is in contrast to commodity money, which has its own value. There are several advantages to using paper currency. The government can issue paper currency notes at a low cost because their intrinsic value is much lower than their face value. They are also simple to store due to their light weight, durability, and portability. They are perfectly safe to carry and store than gold coins. Paper currencies, unlike coins, are not good or bad; they are all the same. By regulating the supply of paper currency, the issuing authority can keep its value stable. The regulating authority has the power to increase and decrease its quantity. As a result, its supply can be described as elastic. The disadvantages of paper currency, on

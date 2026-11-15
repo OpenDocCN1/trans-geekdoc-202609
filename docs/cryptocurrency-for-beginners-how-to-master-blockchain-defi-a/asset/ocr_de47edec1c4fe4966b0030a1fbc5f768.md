@@ -1,0 +1,3 @@
+reading to learn more about crypto coins, including how to buy them and whether or not they make logical sense for your virtual currency portfolio.
+
+According to the strictest definition, an altcoin, short for "alternative coin," is any cryptocurrency other than the market leader Bitcoin. However, cryptocurrencies such as Ethereum, Litecoin, Dogecoin, and Bitcoin are progressively being removed from the altcoin definition. CoinMarketCap, a cryptocurrency monitoring service, includes hundreds of cryptocurrencies, the vast majority of which are altcoins. Each cryptocurrency has its history and community. Some may be both useful and valuable, and their prices may rise significantly over time. Others may out to be ineffective or even fraudulent.

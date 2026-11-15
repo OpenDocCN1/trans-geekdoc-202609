@@ -1,0 +1,9 @@
+amount of bitcoin each individual is prepared to "stake" or temporarily start locking up in a common safe for the opportunity to engage in the system limits the number of operations each person may verify. It's almost like collateral. Each individual who invests in cryptocurrency can verify payments, but the likelihood of being picked increases as the amount invested grows.
+
+Proof of stake is far more efficient than proof of work since it eliminates energy-intensive equation solving, allowing for shorter confirmation times of operations. When the owner of a stake, also known as a validator, is selected to validate a fresh batch of transactions, they will be paid in bitcoin, perhaps in the quantity of the block's aggregate transaction fees. You lose a portion of your investment to deter fraud if you are picked and verify incorrect transactions.
+
+# Proof of Work
+
+"Consensus protocol" is a way of confirming activities on a blockchain whereby an algorithm generates a mathematical puzzle for computers to solve. Every participating machine, known as a "miner," solves a mathematical challenge that aids in verifying a set of transactions known as a block, which is subsequently added to the blockchain principle. The first system to do so effectively gets awarded with a modest sum of bitcoin for its efforts.
+
+The competition to resolve blockchain problems may need significant computer processing power and energy. In reality, this implies that after factoring in the expenses of electricity and computer resources, miners may struggle to break although with the cryptocurrency they get for confirming transactions.

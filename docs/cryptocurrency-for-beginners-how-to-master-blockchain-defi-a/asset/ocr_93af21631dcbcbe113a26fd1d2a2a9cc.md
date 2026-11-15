@@ -1,0 +1,5 @@
+A quick look at several crypto finance websites reveals bullish predictions for Stellar's future (X.L.M.). Most analysts believe that X.L.M. is a good investment for both teachers and student traders, and investors. Let's look at the positive aspects of X.L.M. to see if it's a good investment.
+
+# Free of Cases with Regulatory Bodies
+
+Despite a close working relationship with Ripples, Stellar has avoided legal disputes with regulatory authorities. He is also the founder of Ripple and Stellar, two companies he founded with his brother Jed McCaleb. This is one of the primary reasons why Stellar and Ripples have many similarities and just a few significant differences. Therefore, the recent surge in the price of X.R.P. has had little effect on X.L.M., which has maintained its independence in terms of demanding a price on its own rather than as a fork of the first-mover of cross-border transactions. A lack of dispute or regulatory action brightens the future of a technological business and has a favorable impact on its stock price since it increases its value.

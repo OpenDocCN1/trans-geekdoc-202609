@@ -1,0 +1,1 @@
+number of countries have shown a readiness to approach cryptocurrency with an inquisitive attitude in recent years.

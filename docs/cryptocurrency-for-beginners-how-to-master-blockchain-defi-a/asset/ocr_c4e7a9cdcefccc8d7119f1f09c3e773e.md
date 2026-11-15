@@ -1,0 +1,7 @@
+reality, the banking system's history of repeated losses, as well as the large cost of fraudulent activity and walled design, motivated Szabo to propose bit gold, a more trustless approach for trading.
+
+# 3.5.9 E-Gold
+
+![](bbox=[0.2, 0.215, 0.795, 0.455])
+
+Dr. Douglas Jackson and Barry K. Downey founded E-gold in 1996 as a private digital currency that allowed members of their website to transfer gold instantly using modern technology. E-gold differs from previous alternatives to federal currency in that it is entirely digital in nature, and transactions are completely irreversible. Despite the fact that the website was most likely started with good intentions, it quickly turned into a haven for criminals. Money launderers, identity thieves, fraudulent "financial" investors, and purchasers of child pornography all used E-gold because the gold transfers were irreversible. Moreover, the irreversibility of E-gold transactions meant that if one's account was hacked, there was no recourse. E-corporate gold's governance realized the website was being used for major illegal activities by 2006 and began blocking accounts. "E-gold operates legally but does not condone persons attempting to use e-gold for criminal activity," said CEO Douglas Jackson in a statement. E-gold has a long history of working with law enforcement agencies in the United States

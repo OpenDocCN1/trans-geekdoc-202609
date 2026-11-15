@@ -1,0 +1,7 @@
+# Chapter 1: Medium of Exchange
+
+# Medium of Exchange
+
+![](bbox=[0.123, 0.233, 0.873, 0.388])
+
+The life of every person is full of pleasant and unpleasant experiences. Pleasant experiences are a logical result of successful achievements in life. These achievements gratify your inner self, are construed as remarkable events and are consequently registered as highs in your life. However, life does not offer or guarantee success in all of its quests. It has unpleasant surprises in its repertoire for every person. Therefore, you have to taste the bitterness of failure during the span of life. These failures, contrary to successful achievements, are marked or registered as lows in your life. Likewise, the mood of a person is also subject to highs and lows. These highs and lows of mood are typically characterized as mood swings. These swings in mood or crests (highs) and troughs (lows) are incredibly conspicuous and striking features of nature too. In fact, nature owes its astounding and enthralling beauty to its frequently changing features and scenarios. After all, it is the changing seasons that provide a splash of color and embellishment to nature. This change or anticipation of imminent
