@@ -1,0 +1,13 @@
+# Introductory Chapter: On the Convergence of Blockchain and Artificial Intelligence - Opportunities and Challenges
+
+Paula Fraga-Lamas and Tiago M. Fernández-Caramés
+
+# 1. Introduction
+
+According to a PwC global study presented in 2019, Artificial Intelligence (AI) has the potential to contribute up to $ 15.7 trillion to the global economy by 2030 [1]. In a report of 2020, the same company predicted that blockchain (BC) applications will boost global Gross Domestic Product (GDP) in 2030 by $ 1.76 trillion (1.4% of global GDP) [2]. Such a boost in economic value in the next decade shows the potential of both technologies as key drivers of the current digital transformation.
+
+AI, specifically the most used techniques today, Machine Learning (ML), Deep Learning (DL) or Reinforcement Learning (RL) can create learning models that process and analyze data, perform tasks or make predictions for diverse real-world problems that were previously thought to be impossible to be solved by nonhumans. However, the use of AI comes with social concerns related to issues like the possibility of data tampering due to data centralization, the rise of fake news and deep fakes [3], the invasion of privacy or the bias in data training.
+
+Distributed Ledger Technology (DLTs) and specifically BC, can create trust and consensus among a group of participants removing the need for intermediaries. On the one hand, BC can help to establish the data provenance for explainable AI and to ensure the authenticity and reliability of the data sources used in techniques [4]. In addition, decentralized computing for AI enables decision-making on secured shared data in a decentralized manner without intermediaries. Furthermore, autonomous systems that make use of smart contracts can learn over time and make trusted decisions [5]. On the other hand, AI can help to face some of the current limitations in BC implementations like scalability or security, privacy-preserving personalization, automated refereeing, and governance mechanisms [6].
+
+Both AI and BC are increasingly being used in similar and even in the same applications. Therefore, it is expected that AI and blockchain converge into BC-AI systems in the near future, paving the way for major innovations in areas like smart grids for electric vehicles [7], Industry 4.0 automation [8], critical infrastructure (e.g., gas systems for smart cities [9]), 6G networks [10], the Internet of vehicles [11] or data security [12]. Moreover, such advances can also be enabled by the joint use of other Industry 4.0/Industry 5.0 enabling technologies like Internet of Things (IoT), Edge Computing or Augmented Reality (AR), Mixed Reality (MR), or Virtual Reality (VR) [13].
