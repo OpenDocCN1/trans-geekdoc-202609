@@ -1,0 +1,16 @@
+# 2.6 Conclusion
+
+This chapter has produced ET-PDA, a novel algorithm designed specifically for the EDP, aiming to maximize the efficient utilization of resources in power distribution. Specifically, ET-PDA leverages a comprehensive set of momentum methods and an event-triggered mechanism, which facilitate the algorithm’s rapid convergence and enhance communication efficiency. Assuming the smoothness and strong convexity of local cost functions across generators, theoretical analyses have confirmed ET-PDA’s linear convergence rate. Additionally, simulation outcomes further validate the efficacy of this algorithm. However, it is worth noting that ET-PDA is not a universal solution for all EDP-related issues. Future work could investigate extending ET-PDA to address other power economy challenges, including energy storage optimization, grid expansion strategies, and intelligent pricing mechanisms, or analyze the convergence rates of similar algorithms in time-varying networks.
+
+# References
+
++   [1] S. He, X. He, T. Huang, A continuous-time consensus algorithm using neurodynamic system for distributed time-varying optimization with inequality constraints, Journal of the Franklin Institute 358 (13) (2021) 6741–6758.
++   [2] X. Shi, Z. Lin, R. Zheng, X. Wang, Distributed dynamic event-triggered algorithm with positive minimum inter-event time for convex optimisation problem, International Journal of Control 95 (5) (2022) 1363–1370.
++   [3] H. Liu, H. Fan, B. Wang, L. Liu, S. Lei, Event-triggered scheme for finite-time distributed economic dispatch in smart grids, Journal of the Franklin Institute 359 (18) (2022) 10602–10627.
++   [4] P. Braun, L. Grüne, C.M. Kellett, S.R. Weller, K. Worthmann, A distributed optimization algorithm for the predictive control of smart grids, IEEE Transactions on Automatic Control 61 (12) (2016) 3898–3911.
++   [5] C. Wang, H. Zhang, S. Yang, C. Bo, J. Li, Fuzzy-model-based finite-time control of nonlinear spacecrafts over a distributed sensor network, Journal of the Franklin Institute 360 (4) (2023) 2729–2750.
++   [6] H. Zhang, X. Zhou, Z. Wang, H. Yan, J. Sun, Adaptive consensus-based distributed target tracking with dynamic cluster in sensor networks, IEEE Transactions on Cybernetics 49 (5) (2018) 1580–1591.
++   [7] C. Gu, J. Li, Z. Wu, An adaptive online learning algorithm for distributed convex optimization with coupled constraints over unbalanced directed graphs, Journal of the Franklin Institute 356 (13) (2019) 7548–7570.
++   [8] S. Hu, X. Chen, W. Ni, E. Hossain, X. Wang, Distributed machine learning for wireless communication networks: techniques, architectures, and applications, IEEE Communications Surveys and Tutorials 23 (3) (2021) 1458–1493.
++   [9] H. Dai, X. Fang, J. Jia, Consensus-based distributed fixed-time optimization for a class of resource allocation problems, Journal of the Franklin Institute 359 (18) (2022) 11135–11154.
++   [10] S. Mao, Y. Tang, Z. Dong, K. Meng, Z.Y. Dong, F. Qian, A privacy preserving distributed optimization algorithm for economic dispatch over time-varying directed networks, IEEE Transactions on Industrial Informatics 17 (3) (2020) 1689–1701.
