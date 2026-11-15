@@ -1,0 +1,9 @@
+# # The Organisation of Tomorrow
+
+The Organisation of Tomorrow presents a new model of doing business and explains how big data analytics, blockchain, and artificial intelligence force us to rethink existing business models and develop organisations that will be ready for human–machine interactions. It also asks us to consider the impacts of these emerging information technologies on people and society.
+
+Big data analytics empowers consumers and employees. This can result in an open strategy and a better understanding of the changing environment. Blockchain enables peer-to-peer collaboration and trustless interactions governed by cryptography and smart contracts. Meanwhile, artificial intelligence allows for new and different levels of intensity and involvement among human and artificial actors. With that, new modes of organising are emerging: where technology facilitates collaboration between stakeholders; and where human-to-human interactions are increasingly replaced with human-to-machine and even machine-to-machine interactions. This book offers dozens of examples of industry leaders such as Walmart, Telstra, Alibaba, Microsoft, and T-Mobile, before presenting the _D² + A² model_ – a new model to help organisations datafy their business, distribute their data, analyse it for insights, and automate processes and customer touchpoints to be ready for the data-driven and exponentially changing society that is upon us
+
+This book offers governments, professional services, manufacturing, finance, retail, and other industries a clear approach for how to develop products and services that are ready for the twenty-first century. It is a must-read for every organisation that wants to remain competitive in our fast-changing world.
+
+**Dr Mark van Rijmenam** is Founder of Datafloq and Imagin. He is a highly sought-after international speaker, a big data, blockchain, and AI strategist and author of three management books.

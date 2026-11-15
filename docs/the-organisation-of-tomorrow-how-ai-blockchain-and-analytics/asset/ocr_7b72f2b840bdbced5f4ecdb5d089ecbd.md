@@ -1,0 +1,13 @@
+including the Bank of Canada that ran a test in 2018 together with the Toronto Stock Exchange operator TMX Group, and non-profit organisation Payments Canada. The test showed that automating instantaneous securities settlements becomes possible with a blockchain. The test enabled direct swapping cash from buyers to sellers, resulting in instant settlements.331 When transactions are settled near instantly, it removes a significant part of the risk that the counterparty cannot meet its obligations, which could be a substantial expense for banks.
+
+# Improve capital optimisation
+
+One of the main features of blockchain is that it removes the need for a trusted intermediary and makes peer-to-peer transactions possible. When Blockchain is applied in the financial services industry, it could render useless the fee-charging intermediaries such as custodian banks (those that transfer money between different banks) or clearers (those vouching for counterparties’ credit positions). As such, Blockchain offers better capital optimisation, due to a significant reduction in operational costs for banks. In addition, when banks share a blockchain, the total costs of that blockchain and the surrounding ecosystem might be higher than individual costs of managing transactions at a bank. However, the costs are shared among all participating banks and as such there is a significant cost reduction.
+
+# Improved contractual performance due to smart contracts
+
+When banks and financial institutions are using smart contracts, it will improve contractual term performance as contracts execute automatically once certain pre-set conditions have been met. It is important that those smart contracts are firmly rooted in law and comply with any regulations across jurisdictions. Because of this, the blockchain startup R3 had to tailor-make the smart contracts within its open-source Corda blockchain. Especially complex financial asset transactions can benefit from blockchain technology, due to automatic settlement using smart contracts under the control of an incorruptible set of business rules.
+
+# Increased financial solutions in terms of crisis
+
+Increased options for financial solutions in times of crisis due to the availability of new financial products. In 2016, Bitfinex, one of the largest crypto exchanges, was hacked and 120,000 bitcoins were stolen. When the Bitfinex hack happened, the solution that it developed was compensating the customers, who all shared equally in the loss, with a tradeable Recovery Right Token (RRT). One token was valued at US$1 loss, and each token could be seen as an IOU. Customers could trade the token for the market price (if they

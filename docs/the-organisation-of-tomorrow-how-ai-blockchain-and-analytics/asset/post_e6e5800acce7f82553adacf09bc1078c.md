@@ -1,0 +1,144 @@
+
+- 435. Hume, D., A Treatise of Human Nature. 2003, Courier Corporation.
+- 436. Brooks, D., The end of philosophy. New York Times, April 6, 2009.
+- 437. Moor, J.H., Why we need better ethics for emerging technologies. Ethics and Information Technology, 2005. 7(3): 111–119.
+- 438. Suwajanakorn, S.S., Steven, M., and Kemelmacher-Shlizerman, Ira, Synthesizing Obama: Learning Lip Sync from Audio. 2017.
+- 439. Haberman, M.M. and J. Martin, Trump once said the “Access Hollywood” tape was real. Now he’s not sure. New York Times, November 28, 2017.
+- 440. Hillman, A.J. and T. Dalziel, Boards of directors and firm performance: Integrating agency and resource dependence perspectives. Academy of Management Review, 2003. 28(3): 383–396.
+- 441. Soares, N. and B. Fallenstein, Aligning superintelligence with human interests: A technical research agenda. Machine Intelligence Research Institute (MIRI) Technical Report 8, 2014.
+- 442. Fallenstein, B. and N. Soares, Vingean reflection: Reliable reasoning for self-improving agents. Technical Report 2015-2, Machine Intelligence Research Institute, 2015.
+- 443. Baysinger, B. and R.E. Hoskisson, The composition of boards of directors and strategic control: Effects on corporate strategy. Academy of Management Review, 1990. 15(1): 72–87.
+- 444. Hoskisson, R.E., M.A. Hitt, and C.W. Hill, Managerial incentives and investment in R&D in large multiproduct firms. Organization Science, 1993. 4(2): 325–341.
+- 445. Ravenscraft, D.J., Ownership and control: Rethinking corporate governance for the twenty-first century. Journal of Economic Literature, 1996. 34(4): 1971.
+- 446. Gupta, A.K., SBU strategies, corporate-SBU relations, and SBU effectiveness in strategy implementation. Academy of Management Journal, 1987. 30(3): 477–500.
+- 447. Rindova, V.P., What corporate boards have to do with strategy: A cognitive perspective. Journal of Management Studies, 1999. 36(7): 953–975.
+- 448. Pitcher, P., S. Chreim, and V. Kisfalvi, CEO succession research: Methodological bridges over troubled waters. Strategic Management Journal, 2000. 21(6): 625–648.
+- 449. Conyon, M.J. and S.I. Peck, Board control, remuneration committees, and top management compensation. Academy of Management Journal, 1998. 41(2): 146–157.
+- 450. Boyd, B.K., Board control and CEO compensation. Strategic Management Journal, 1994. 15(5): 335–344.
+- 451. Strebel, P., The case for contingent governance. MIT Sloan Management Review, 2004. 45(2): 59.
+- 452. Christensen, M., G. Iyer, and D. Soberman, Job satisfaction, job performance, and effort: A reexamination using agency theory. Journal of Marketing, 2006. 70(1): 137–150.
+- 453. Hilb, M., New Corporate Governance. 2008, Springer.
+- 454. Baesens, B., R. Bapna, J.R. Marsden, J. Vanthienen, and J.L. Zhao, Transformational issues of big data and analytics in networked business. MIS Quarterly, 2014. 38(2): 629–631.
+- 455. Hastie, T., R. Tibshirani, and J. Friedman, Unsupervised learning, in The Elements of Statistical Learning. 2009, Springer, pp. 485–585.
+- 456. Leopold, T., V. Ratcheva, and S. Zahidi, The Future of Jobs Report. 2018.
+- 457. Bourne, J., Mark van Rijmenam: On the “gestalt shift” of big data, blockchain and AI convergence. 2018. Available from: www.cloudcomputing-news.net/news/2018/sep/27/mark-van-rijmenam-gestalt-shift-big-data-blockchain-and-ai-converge/, accessed November 25, 2018.
+- 458. Lund, S., J. Manyika, and J. Bughin, Globalization is becoming more about data and less about stuff. 2016. Available from: https://hbr.org/2016/03/globalization-is-becoming-more-about-data-and-less-about-stuff, accessed October 4, 2018.
+- 459. Manyika, J., S. Lund, J. Bughin, J. Woetzel, K. Stamenov, and D. Dhingra, Digital Globalization: The New Era of Global Flows. 2016. p. 156. Available from: www.mckinsey.com/business-functions/digital-mckinsey/our-insights/digital-globalization-the-new-era-of-global-flows, accessed April 29, 2019.
+
+## Index
+
+Page numbers in italics refer to figures. Page numbers in bold refer to tables.
+
+- ABN AMRO 64
+- “Access Hollywood” tape 134
+- ADSL-T Gateway routers 96
+- Airbnb 3, 86
+- Airfix 73
+- Akasha 99
+- algorithmic organisation 117–22
+- Alibaba 85, 93
+- Alipay 85
+- Aloor 127
+- AlphaGo Zero 21–2, 149
+- Amazon 1, 36, 51, 131
+- analytics, use of case framework 35
+- Annual Innovation Jam 42
+- anomaly/outlier detection 146
+- Apple 51
+- Argyle Data 47
+- artificial agents, governance of 135
+- artificial general intelligence (AGI) 116, 128–9, 133, 150
+- artificial intelligence (AI) 138–9, 149–51, 156; algorithmic organisation 117–22; control methods and principal-agent problem 133–6; conversational 122–8; dangers of 128–36; explainable AI (XAI) 130–1; incorporating ethics 131–3; overview 115–17; technology and organisations 19–22
+- asset performance management (APM) 34
+- Associated Press 18
+- association rule learning 146–7
+- asymmetric cryptography see digital signatures
+- AusPost 93
+- automated analytics 34
+- autonomous organisations 26, 70, 87
+- Bank of America 127
+- Bannon, Steve 4
+- Belt and Road initiative 156
+- Berners-Lee, Tim 4–5, 7, 51, 141, 152
+- big data analytics 138–9, 145–9; business datafication 29–31; empowerment and open strategising 40–3; overview 27–9; security and privacy 43–8; sensing, seizing, and transforming 37–40
+- Birch, David 110–11
+- bitcoins 51, 55, 63, 68–72
+- Bitfinex 89
+- Blackmores 93
+- Black Swans 28–9, 35, 39–40, 146
+- Blockbuster 8
+- blockchain 103–13, 138–9, 142–4, 151, 156; changing organisation design 69–70; consensus mechanism 60–3; and content industry 98–100; cryptocurrencies 70–8; cryptographic primitives 59–60; currency tokens 72; decentralised ecosystem 67–9; description 54–8; and financial services industry 88–90; and manufacturing industry 97; overview 51–4; and privacy regulation 78–80; and reputation 82–7; and retail industry 90–3; security tokens 73–6; smart contracts and Ricardian contracts 64–7; and telecom industry 93–6; tokenomics 76–8; transactions 63–4; trustless transactions 80–2; utility tokens 72–3
+- Blockchain: Transforming Your Business and Our World 110
+- Blockstack 113
+- Block Verify 92
+- Borders 8
+- Bostrom, Nick 132
+- British Airways 56
+- The Business Blockchain (Mougayar) 72
+- business datafication 29–31
+- The Byzantine Generals’ Problem 60
+- Cambridge Analytica scandal 4–5, 43, 102
+- capital optimisation 88–9
+- centralised exchanges 142–3
+- CERN 69
+- CertCoin 108
+- ChatBotr 127
+- chatbots 122–8
+- Chief Information Security Officer (CISO) 47–8
+- Christiansen, Ole Kirk 120
+- classification analysis 147
+- cloud computing 144–5
+- clustering analysis 147
+- coherent extrapolated volition (CEV) 132
+- cold wallets 142
+- Comcast 103
+- Commonwealth Bank of Australia 64
+- Communication Service Providers (CSPs) 94–6
+- compound annual growth rate (CAGR) 101
+- consensus mechanism 60–3
+- Consumer Financial Protection Bureau 102
+- content industry, and blockchain 98–100
+- context-aware chatbots 124
+- control methods, of AI 133–6
+- conversational AI 122–8
+- conversational analytics 125
+- Corda blockchain 89
+- Cox, Paige 57
+- cryptocurrencies 70–8
+- cryptographic primitives 59–60
+- currency tokens 72
+- customer lifetime value (CLV) 35
+- customer privacy 141
+- D^2 + A^2 model 40, 140–52, 140, 152; datafication 140–2; distribute 142–5; analyse 145–9; automate 149–52
+- Danube Tech 108
+- The DAO Hack 65
+- data: access 105; availability 109; confidentiality 107–8; distribution 142–5; downside of 4–7; governance 33, 105–7; importance of 2–4; integrity 108–9; lifecycle 105–6; overview 1–2; ownership 111–13; principles 105; provenance 112; quality 105, 140; security 107–9; -sharing 103–5; silos 145; and software solutions 45–6; stewardship 106; vaults 114; see also blockchain
+- datafication 140–2
+- DataMarket 103
+- data mining: anomaly/outlier detection 146; association rule learning 146–7; classification analysis 147; clustering analysis 147; description 145–6; regression analysis 147–8
+- data organisation: D^2 + A^2 model 140–52; overview 138–40; and privacy 152–3
+- data privacy 152–3; and identity 109–11
+- data quality management (DQM) 105
+- DataStreamX 103
+- DDoS attack 44, 109
+- Decent 99
+- Decentralised Applications (DApps) 69
+- Decentralised Autonomous Organisations (DAOs) 3, 9, 21, 24–5, 65–7, 87, 150
+- decentralised ecosystem 67–9, 142
+- decentralised exchanges 142–3
+- decentralised organisations 25, 70, 87; traditional and new 70
+- Decentralised Web Summit 4
+- deep fakes 133–4
+- Deep Knowledge Ventures 18
+- deep learning 115, 150
+- DeepMind 106
+- descriptive analytics 32, 34, 148
+- diagnostic analytics 32, 34, 148
+- DigiNotar 43
+- digital globalisation 155–6
+- digital signatures 59
+- digital technologies 17
+- directed acyclic graph (DAG) 55, 104
+- distributed computing 142
+- distributed ledger technologies see blockchain
+- distributed storage 142
