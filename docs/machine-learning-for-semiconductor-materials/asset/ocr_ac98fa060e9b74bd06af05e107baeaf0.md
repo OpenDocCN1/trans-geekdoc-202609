@@ -1,0 +1,17 @@
+offer several power semiconductor devices stacked on a single substrate, physical confinement, electrical and thermal interaction and safety. A module's constituent parts can be put together in a number of ways, from simple high-power diode modules to complex half and full scaffold MOSFET/IGBT modules. It is capable of integrating many control circuits, including temperature detection and closure, under-voltage security, over-ebb and flow, and door driver, thanks to the power module's flexibility. One example of such a device is the intelligent power module (IPM). All SiC modules and half and half (a combination of silicon and silicon carbide devices) are offered for corporate SiC power modules. Large suppliers supply some of the SiC power modules that are sold commercially, as described in [34].
+
+# 8.5 CONCLUSION
+
+Because solar cells are often less productive than other environmentally friendly power sources like wind, it has been difficult to appropriately tap into solar energy. When these factors are taken into account, the cost of using CPVs or multi-intersection solar cells with relatively good efficiency restricts the options. When running at maximum efficiency, the PV inverter architecture should be able to reduce capital speculation. The unexpected material features of SiC, in comparison to silicon, have allowed for the advancement of devices like MOSFETs, JFETs, and diodes. Presenting, analyzing, and contrasting the SiC-based PV inverter with its silicon-based counterpart makes it evident that the former is more efficient and increases the percentage of the framework that is made of silicon, which lowers the inverter's cost. In a SiC-based framework, the reduced material cost, especially the significant reduction in the size of appealing sections, offsets the high cost of the device. Similar to this, SiC power devices' rapid development and commercialization have resulted in a continuous drop in cost. While SiC is still a relatively new technology, the stability of the power devices is confirmed by a substantial amount of test data.
+
+# REFERENCES
+
++   1. Rogers, S. A. (2014). FY2013 Advanced Power Electronics and Electric Motors R&D Annual Progress Report (No. DOE/EE-1040). EERE Publication and Product Library, Washington, DC (United States), https://doi.org/10.2172/1220540.
++   
++   2. Mattallana, A., Ibarra, E., López, L., Andreu, J., Garate, J. I., Jordá, X., & Rebollo, J. (2019). Power module electronics in HEV/EV applications: New trends in wide-bandgap semiconductor technologies and design aspects. Renewable and Sustainable Energy Reviews, 113, 109264, https://doi.org/10.1016/j.rser.2019.109264.
++   
++   3. Hussain, H. A., Loncarski, J., Ristic, L. B., & Bellini, A. (2024). DFIG-based WECS with partial-scale converter: Efficiency, cost and volume comparison of SiC-based and IGBT-based converter solution. IEEE Access, https://doi.org/10.1109/ACCESS.2024.3419810.
++   
++   4. Cunningham, D. W., Carlson, E. P., Manser, J. S., & Kizilyalli, I. C. (2019). Impacts of wide band gap power electronics on photovoltaic system design. IEEE Journal of Photovoltaics, 10(1), 213–218, https://doi.org/10.1109/JPHOTOV.2019.2950592.
++   
++   5. Zeng, Z., Shao, W., Chen, H., Hu, B., Chen, W., Li, H., & Ran, L. (2017). Changes and challenges of photovoltaic inverter with silicon carbide device. Renewable and Sustainable Energy Reviews, 78, 624–639, https://doi.org/10.1016/j.rser.2017.04.096.

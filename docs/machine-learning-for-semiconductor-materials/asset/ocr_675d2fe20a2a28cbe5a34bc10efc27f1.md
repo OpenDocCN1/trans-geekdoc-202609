@@ -1,0 +1,11 @@
+# Power device market for HEV/EV in million USD
+
+![](bbox=[0.14, 0.1, 0.86, 0.39])
+
+FIGURE 8.1 Recent advances and trend of HEV/EV-oriented power semiconductors: An overview.
+
+Source: Liu, G., Li, K., Wang, Y., Luo, H., & Luo, H. (2020). Recent advances and trend of HEV/EV-oriented power semiconductors – an overview. IET Power Electronics, 13(3), 394–404, https://doi.org/10.1049/iet-pel.2019.0401.
+
+in hybrid and electric cars are the onboard charger, the DC dollar converter for assistance power resources, the DC assist converter in the high-voltage transport bar, and the inverter component for engine pressure. According to research, the industry will grow over the next five years and surpass ten billion dollars with high-power HEV/EV converters have so far been created using a range of contemporary power semiconductor types, including IGBTs, metal oxide semiconductor subject-impact transistors (MOSFET), and extensive-band-hole (WBG) devices, including silicon carbide (SiC) and gallium nitride (GaN) devices. Figure 8.2 shows the recent advances and trends in HEV/EV.
+
+The agreements and anticipated pressure device market scenario for HEV/EV are shown in Figure 8.2. With over 80% of the present HEV/EV electrical module market, it has been determined that IGBT is the most extensively utilized module in the business. Moreover, the whole SiC module is predicted to just narrowly lose out on victory (by around 13%) over a five-year period. In strength electronic frameworks, the strength module could be the weakest element. According to an enterprise investigation using data from over 80 agencies, temperature element activation accounts for 55% of pressure electronic system failures at present, with power module failures accounting for around 42% of them. Moreover, for every degree that the temperature rises, the intersection's misery rate climbs by 10°C. Regarding the power semiconductors in the HEV/EV framework [2]. The unpredictable work stresses of the current era create ever-stricter requirements on the power electronic modules of electric vehicle systems due to unpredictable weather

@@ -1,0 +1,17 @@
+# ## 2.6 MODELLING ML FOR ELECTRICAL SCIENCES
+
+AI has revolutionized established approaches, optimized systems, and stimulated innovation in the electrical sciences. This represents a paradigm shift. Innovative applications such as intelligent sensors for condition monitoring, autonomous robots for maintenance duties, and ML algorithms for renewable energy forecasts are made possible by AI-driven research in the electrical sciences. These cutting-edge uses not only progress the profession but also help solve societal issues and promote economic expansion.
+
+While ML can help humans become more intelligent in specific areas, including decision-making and pattern identification, its ability to greatly increase human intelligence in general is still constrained by inherent cognitive distinctions and moral considerations. Where electrical sciences are concerned, ML models can go a long way in assisting the development of efficient objects and devices that can garner a safer future where resource wastage is reduced while reuse and life span are increased.
+
+Choosing a platform can be difficult since the incorrect one can increase expenses or restrict the use of other useful tools or technologies. There is frequently a propensity to believe that a system with more features is superior when evaluating several problem statements to choose an ML model. Perhaps, but first researchers should consider what the ML platform will do with their data and the resulting output. Which features are essential to achieving the necessary ML capabilities? The functionality of an entire system could be doomed by a single missing feature.
+
+# ## 2.7 ETHICS AND SOCIETAL IMPACT
+
+In the entire technical analysis of the core ML algorithm design, we must address this one aspect to aid further studies. It goes without saying that man fears what he cannot control. Where automated intelligence is concerned, even in the sphere of electrical sciences, the ethical considerations are as important as the impacts of ML on society. Let us quickly dive into the ethical implications; for starters, the bias and fairness of ML models are flighty, based on the data they are trained on. Then there is the concern of the ML black box and the accountability required to vindicate any algorithm. Moving to the core area addressed in this book, resource extraction and sustainability are fundamental to the success of ML for semiconductor materials. Finally, regarding the societal impact, keeping in mind the economic factor, one must ensure that research or subsequent experiments in this are thrive, but without thwarting growth, in terms of geopolitics, affordability, and regulatory frameworks. It is good to not lose sight of the fact that the motive of ML is to allay the digital divide and not exacerbate it.
+
+# ## REFERENCES
+
++   1. El Naqa, I., Murphy, M.J. (2015). What is Machine Learning? In: El Naqa, I., Li, R., Murphy, M. (eds.), *Machine Learning in Radiation Oncology*. Springer, Cham. https://doi.org/10.1007/978-3-319-18305-3_1.
+
++   2. Carleo, G., Cirac, I., Cranmer, K., Daudet, L., Schuld, M., Tishby, N., Vogt-Maranto, L., Zdeborová, L. (2019). Machine Learning and the Physical Sciences. *Reviews of Modern Physics*, 91(4). American Physical Society. https://doi.org/10.1103/RevModPhys.91.045002.

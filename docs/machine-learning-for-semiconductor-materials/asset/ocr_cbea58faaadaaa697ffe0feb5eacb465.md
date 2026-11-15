@@ -1,0 +1,17 @@
+It underscores that threshold voltage sensitivity outstrips that of the subthreshold slope, with the sensitivity of the former metric exceeding 400%, which is achievable through meticulously optimized doping levels, highlighting the device’s efficacy for biosensing applications. In the symmetric doping case for source and drain, peak fractional sensitivities for threshold voltage and subthreshold slope reach up to 4.53 and 0.44, respectively. It was found in the study that high percentage sensitivity was obtained at low doping levels, with a trade-off with conductivity. The research also scrutinizes the impact of fill-in factors, revealing that the precise placement of biomolecules near the source significantly affects sensitivity more than the actual fill-in factor itself. Considering Vt, as a sensing metric, a high percentage sensitivity is achieved at low doping levels, while a high relative change sensitivity is achieved at high doping levels. Overall, this study emphasizes the pivotal roles of doping levels, bias conditions, and biomolecule placement in determining sensitivity in a cylindrical BioFET. The study also discussed the role of machine learning in improving the performance and design of BioFETs through a synoptic discussion.
+
+# ACKNOWLEDGMENTS
+
+The authors are grateful to the director, Maharaja Agrasen Institute of Technology, Delhi, for providing the facilities to carry out this research work.
+
+# REFERENCES
+
++   1. K. Upasana, R. Narang, M. Saxena, and M. Gupta, “Modeling and TCAD assessment for gate material and gate dielectric engineered TFET architectures: Circuit-level investigation for digital applications,” IEEE Trans. Electron Devices, vol. 62, no. 10, pp. 3348–3356, 2015.
++   2. A. Sirohi, C. Sahu, and J. Singh, “Analog/RF performance investigation of dopingless FET for ultra-low power applications,” IEEE Access, vol. 7, pp. 141810–141816, 2019.
++   3. J. Park, H. Hiep, A. Woubit, and M. Kim, “Applications of field effect transistor (FET) – type biosensors,” Appl. Sci. Converg. Technol., vol. 23, no. 2, pp. 61–71, 2014.
++   4. A. Das, B. K. Kanaujia, V. Nath, S. Rewari, and R. S. Gupta, “Impact of reverse gate oxide stacking on gate all around tunnel FET for high frequency analog and RF applications,” in 2020 IEEE 17th India Council International Conference, INDICON 2020, pp. 1–6, 2020.
++   5. R. Gautam, M. Saxena, R. S. Gupta, and M. Gupta, “Gate all around nanowire MOSFET with catalytic metal gate for gas sensing applications,” IEEE Trans. Nanotechnol., vol. 12, no. 6, pp. 939–944, 2013.
++   6. T. Bungon et al., “Graphene FET sensors for Alzheimer’s disease protein biomarker clusterin detection,” Front. Mol. Biosci., vol. 60, no. 1, pp. 1–13, 2021.
++   7. S. Cheng, S. Hideshima, S. Kuroiwa, T. Nakanishi, and T. Osaka, “Label-free detection of tumor markers using field effect transistor (FET)-based biosensors for lung cancer diagnosis,” Sensors Actuators, B Chem., vol. 212, pp. 329–334, 2015, http://dx.doi.org/10.1016/j.snb.2015.02.038.
++   8. Y.-C. Syu, W.-E. Hsu, and C.-T. Lin, “Review – field-effect transistor biosensing: Devices and clinical applications,” ECS J. Solid State Sci. Technol., vol. 7, no. 7, pp. Q3196–Q3207, 2018.
++   9. M. Kaisti, “Detection principles of biological and chemical FET sensors,” Biosens. Bioelectron., vol. 98, pp. 437–448, 2017.
