@@ -1,0 +1,1 @@
+ples (Khatri et al., 2020). However, due to the difficulties of conducting attacks on the defense components, it is harder to reach a conclusion whether a discrete component can truly make models more robust or there exist non-gradient-based attack methods to break these defenses.

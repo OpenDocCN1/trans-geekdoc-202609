@@ -1,0 +1,9 @@
+Centralized backdoor attack embeds the same global trigger for all local attackers¹ (Bagdasaryan et al., 2018). For example, the attacker in Fig. 5.2(a) embeds the training data with the selected patterns highlighted by four colors, which altogether constitute a complete global pattern as the backdoor trigger. In DBA, as illustrated in Fig. 5.2(b), all attackers only use parts of the global trigger to poison their local models, whereas the ultimate adversarial goal is still the same as centralized attack: using the global trigger to attack the shared model. For example, the attacker with the orange (gray in print version) sign poisons a subset of his training data *only* using the trigger pattern located at the orange (gray in print version) area. Similar attacking methodology applies to green (mid gray in print version), yellow (light gray in print version), and blue (dark gray in print version) signs. We define each DBA attacker’s trigger as the *local trigger* and the combined whole trigger as the *global trigger*. DBA can also be realized on irregular shape triggers, such as decomposing the logo “ICLR” into “I”, “C”, “L”, “R” as local triggers on three image datasets and decomposing the physical pattern glasses into four parts as shown in Fig. 5.3.
+
+![](bbox=[0.106, 0.46, 0.853, 0.74])
+
+Figure 5.3 Examples of irregular shape triggers in image datasets in (Xie et al., 2020).
+
+Keeping similar amount of total injected triggers (e.g., modified pixels) for both centralized attack and DBA, it was shown by Xie et al. (2020)
+
+¹ Although only one centralized attacker and one adversarial party are shown in Fig. 5.2, in practice, centralized backdoor attack can poison multiple parties with the same global trigger, as discussed by Bagdasaryan et al. (2018).

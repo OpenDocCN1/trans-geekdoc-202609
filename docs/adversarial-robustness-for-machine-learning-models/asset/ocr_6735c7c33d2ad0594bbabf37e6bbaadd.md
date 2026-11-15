@@ -1,0 +1,11 @@
+![](bbox=[0.1, 0.1, 0.85, 0.29])
+
+**Figure 16.3** The multilevel verification algorithm proposed in Chen et al. (2019b). Lines between leaf node $i$ on tree $t_1$ and leaf node $j$ on $t_2$ indicate that their $\ell_\infty$ feature boxes intersect (i.e., there exists an input such that tree 1 predicts $v_i$ and tree 2 predicts $v_j$).
+
+colored if it has nonempty intersection with Ball($x$, $\epsilon$); uncolored nodes are discarded. To answer question (16.23), we need to compute the maximum $\sum v_C$ among all $K$-cliques, denoted by $v^*$. As mentioned before, for robustness verification, we only need to compute an upper bound of $v^*$ to get a lower bound of minimal adversarial perturbation. In the following, we will first discuss algorithms for computing an upper bound at the top level and then show how our multiscale algorithm iteratively refines this bound until reaching the exact solution $v^*$.
+
+# Bounds for a single level
+
+For each single level, Chen et al. (2019b) proposed a simple approach to compute an upper bound of the maximum clique value. This is done by assuming the graph is fully connected between any two parts (two independent sets) of the level. By making this assumption, we will only increase the maximum clique value as we are introducing strictly more edges. With this assumption, the maximum sum of node values is the sum of the maximum value of each part (independent set). In Fig. 16.3, if we focus on one of the layers, this can be simply computed by finding the maximum value in each group and sum them up.
+
+Another slightly better approach is exploiting the edge information but only between trees $t$ and $t + 1$. If we search over all the length-$K$ paths $[i^{(1)}, ..., i^{(K)}]$ from the first to the last part and define the value of a path to be $\sum_k v_{i^{(k)}}$, then the maximum-valued path will be a valid upper bound. This can be computed in linear time using dynamic programming by running from the first part to the last part and keep track of the current
