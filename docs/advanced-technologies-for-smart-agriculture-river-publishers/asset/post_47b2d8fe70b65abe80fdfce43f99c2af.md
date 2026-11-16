@@ -1,0 +1,69 @@
+
+## 11.1.3 Major IK practices for sustainable agriculture
+
+- Water management
+- Nutrient management
+- Pest management
+- Soil conservation
+- Crop management
+
+### 11.1.3.1 Water management
+
+Techniques for predicting rain and preserving water are classic instances of information that will be handed down across generations in many conventional farming systems [5]. It is difficult to save water resources along with knowledge of rain and its different patterns, different time zones, and quantity in which it falls. Farmers might choose which crops and crop varieties to grow if they could predict how much rain will fall in the future season.
+
+Major water management practices are:
+
+- Inter-row and inter-plot water harvesting: Plants are typically planted in ridges in heavy soil, and ridges and furrows are usually constructed on cultivated fields. Such activities aid in the collection of rainwater in furrows rather than surface runoff. Inter-plot harvesting rainwater also entails the building of a cultivating plot on one side and a fallow plot on the other, with the fallow plot sloped to induce runoff to the next cropping plot.
+- Rainwater harvest: During dry weather, harvesting periodical rain in reservoirs or canals can make water available for the rest of the season [6]. Large canals or water breaks, ponds in mountain terrains are useful for collecting and storing rainwater.
+- Trenches for water conservation: The construction of several trenches along the slopes of hills aids in the collection and storage of excess rainwater, which later percolates as underground water and aids in the conservation of moisture in such places.
+- Land leveling and bund making: The leveling up and construction of bunds on the field minimizes excessive water loss through runoff.
+- Broad beds and furrows to minimize runoff: Excess water from the beds is collected in the furrows between the beds and routed to neighboring ponds or streams, where it can be utilized for future agricultural production.
+
+### 11.1.3.2 Nutrient management
+
+- Organic manure: For example, in several parts of Nepal, farm yard manure was commonly used as a source of nitrogen. Farm yard manure was typically the primary source of nutrition applied to the field prior to the advent of artificial fertilizer [7]. Cow urine also includes potassium, which could also help crops meet their potassium needs.
+
+- Green and brown manures: Sun hemp (_Crotolaria juncea_), dhaincha (_Sesbania rostrata_), mung bean, and cowpea are also employed as fertilizers for the harvests.
+
+### 11.1.3.3 Bio-pesticide for pest management
+
+For several decades, pest management has included the use of neem leaves as a bio-pesticide and storage [8]. Bio-pesticide is made from neem leaves, as well as other locally accessible herbs and animal manure, and it is used to control insect infestation in the field. Neem leaves, titepati, aloe vera, aakh leaves, ginger, garlic, kapur, turmeric, cow dung, and cow urine are blended in suitable proportions to make a simple DIY bio-pesticide that is resistant to a variety of pests in the field. Similarly, neem leaves and kapur are employed to combat pests in storage.
+
+### 11.1.3.4 Soil conservation
+
+Low-tech instruments, such as the indigenous plough, or halo, minimize the erosion of soil and are environmentally friendly. Cultivation of leguminous crops in the field’s bunds also aids in soil erosion reduction and nitrogen fixation [9], increasing the microbial activity of the soil microorganisms. Crop rotation is also conducted in the traditional way, which aids in soil protection. Other indigenous traditional practices include the following:
+
+- Pests are controlled by burning stubbles in the field.
+- Termite control is accomplished by burying neem leaves in soil [10].
+- Ash is applied for seedbeds and fields of onion before sowing and planting to promote bulb growth and quality [11].
+- Tobacco residues are integrated into soil to prevent organisms.
+- During summer season, deep ploughing is done in drylands to prevent hardpan in the soil, increase water absorption, and manage pests.
+- Mixing up the seeds like coriander seeds are mixed with sorghum seed before sowing to completely control Striga (parasitic weed).
+- To promote the alkalization of water and fish growth, banana stems are placed in ponds.
+- To improve germination, using cow dung is one of the most effective methods for sowing.
+- Intercropping Sesbania with tomato during the summer has been shown to increase the tomato crop yield.
+- Cotton pest and disease incidence was reduced by sowing methods.
+- To avoid pest damage, neem leaves and Pungam are used.
+- To control pests, cow dung is one of the effective ways.
+
+## 11.1.4 Smart agriculture using WSN and IoT
+
+The understanding that precision farming methods might help to resuscitate the failing traditional agricultural sector. Water management, moisture & humidity measurements, precision farming, are all sure-fire ways to enhance production per acre of land [12]. Precision agriculture reduces the overuse of pesticides and fertilizers by allowing farmers to use land according to its quality and natural characteristics. Precision farming could be a lifesaver at a time when India’s water levels are rapidly dwindling due to enormous demand from the agricultural and industrial sectors. Farmers are still delaying or refusing to change their traditional techniques, which might further depress India’s GDP. Migrants from all across the world have recently gained new skills.
+
+In the current pandemic situations, majorly skilled migrants across India selected agriculture as a profession and had no plans to return [13]. These migrants can now move closer to smart agricultural systems since it saves a lot of time to persuade them to use modern agricultural systems than it does for traditional farmers.
+
+Wireless sensor network is used for IoT smart agriculture to monitor the weather conditions like temperature, humidity, rain dampness of soil, etc. [14]. WSN can also work as controller for providing inputs for seeds, harvesting, fertilizing, pesticides, etc.
+
+The WSN based application development farmers in need of information for cultivation, as well as an input feeder control system on agricultural machinery. Inadequacies and breakdowns [15], such as sensor devices and power supply problems, as well as data security, can all be a serious challenge in WSN systems.
+
+Based on the soil moisture in the sensors, there is the need of maintaining water level and flow of water so that pump can be switched on/off. To identify moisture in the soil, soil sensor is installed beneath the ground in the field. Initially, a reading of the water level is taken and decisions are made based on it.
+
+Using soil temperature, the sensor is fixed to get the reading of the temperature of soil [16]. To gather data, several sensors are linked to an Arduino UNO, and further, it is forwarded to WSN. Depending on the crop cultivation threshold values, once threshold value is reached, alarm system gives alert and corresponding action will be taken according to it.
+
+Indigenous smart agriculture uses various smart solutions like smart agriculture application using IoT. There are various apps that are designed to provide the agricultural solutions by monitoring soil conditions, water levels, temperature, and humidity and to perform analysis of the level of fertilizers, equal proportions of pesticides needed for land area, etc. They remotely monitor and measure soil water humidity levels in order to make the water supply to crops [17] and to avoid crop damage or loss by automated sprinkling systems. This concept will enhance crop yield and management.
+
+## 11.1.5 Applications of IoT in smart farming with the adoption of IoT
+
+With the adoption of multiple areas such as industry, homes, vehicles, and even cities, there is a large potential to make everything intelligent and smart. The agricultural industry is also adopting the IoT technology, which has resulted in the development of smart farming using Internet of Things (IoT) or precision farming [18] (see Figure 11.1). The diagram depicts the various application areas where IoT is used to create smart agriculture. Crop management with an IoT: Multiple cropping system allows for disease detection in the leaf, weed, and water level detection, pest detection, and animal intrusion into the field of crop growth in an agricultural field [19]. Farmers can effectively predict crop growth by understanding nutrient requirement.
+
+Soil characteristics, weather conditions, moisture, temperature, and other parameters must be monitored in farmlands. To identify the crop health and to identify diseases, various sensors and RFID chips are attached to plants. Intelligent irrigation system or smart irrigation, also known as automated irrigation, recognizes the water requirements of a plant or field [20]. It has an efficient and smart way to determine the necessity of water in each plant. The automated smart irrigation system in smart agriculture saves time, water, and effort of the farmer. Traditional irrigation techniques necessitate

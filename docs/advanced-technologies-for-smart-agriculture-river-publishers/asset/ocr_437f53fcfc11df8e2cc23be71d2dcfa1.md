@@ -1,0 +1,7 @@
+![](bbox=[0.12, 0.12, 0.86, 0.43])
+
+# Figure 4.6 The entire dashboard.
+
+intercropping methodology performs various functions and adds more value through its nature of implementation. Through this methodology the pest is trapped and pest management additional feature reduces chemical fertilizer application and saves money. This monitoring level of irrigation and the usage of water will reduce the erosion of the soil and the water is conserved; the resources are not used randomly but conservatively as per the requirement. Adopting this sort of agriculture pattern adds value to using this method because in intercropping methodology the leguminous plants are known for nitrogen fixation providing nitrogen for the neighboring crop varieties.
+
+As intercropping adopts different crops to be grown on the same piece of land, it leads us to reduce the usage of synthesized fertilizers which are harmful to the crops and the health of the fertile land. The main advantage of using this autonomous device for intercropping is that usually it will reduce the usage of resources like solar energy and water. If this method of intercropping system is also established, it will again reduce the risk factor by 50% from that of the system its risk depends on. The system also provides improved weed management as the beneficial plants occupy the vacant space and therefore there is much less possibility to leave a space to grow a different variety of crops. Here more biodiversity and ecological stability are

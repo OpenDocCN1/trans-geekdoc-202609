@@ -1,0 +1,5 @@
+![](bbox=[0.24, 0.125, 0.75, 0.57])
+
+Figure 9.2 Proposed methodology flowchart.
+
+where data is sent to cloud storage and information is stored in information centers, distributed around the world, and maintained by third parties. The information resides on a supported server and is easily accessible from the web interface. Cloud capacity uses a chain of servers that includes both control servers and other capacity servers. Then from there, pass the data for visualization and do real-time analysis. Even the data can be send to other apps like JSON and is capable of extracting it in CSV format. For XML data forms, the data is sent to the authorities using the SMTP protocol. SMTP or Basic Mail Exchange Convention is an application used to send, receive, and pass active emails between a sender and a collector. When an email is sent, it is exchanged over the web from one server to another utilizing straightforward information transmission. Thus, the working of data acquisition system and the data transfer wirelessly through the cloud needs more concentration. To make it sustainable and make it more efficient, an additional mini solar

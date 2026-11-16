@@ -1,0 +1,12 @@
+# 6.4.10 Farmer's little helper
+
+This is a mobile device application that may be considered a bonus. For example, a farmer may remain at home and consider what steps to do next in the management of his harvested crops. He is unsure whether to sell the crops to a local producer or a regional enterprise. He wants some advice on the numerous possibilities available before making a final selection. Industries are currently focusing on building customized chatbots to support him with this objective. Chatbots will be able to converse with farmers and offer them useful data and insights. Farmers’ chatbots are predicted to be wiser than consumer-oriented Alexa and similar assistants since they will be able to not only provide numbers but also evaluate them and advise farmers on difficult issues [12].
+
+# 6.5 Conclusion
+
+Agriculture is an essential skill in this world. Agriculture is the source of nourishment for all living beings. People used to spend much of their time looking for food. Following that, people found crops and were able to produce them, resulting in excess food that was exported from one region to another. Population expansion and the devastation of agricultural areas for human existence have raised food demand. Land degradation occurs as a consequence of climate change and the growth of numerous businesses. To prevent the issue of hunger, we must conserve and enhance food supplies using cutting-edge technology. One such technology that may assist us in overcoming all of these food shortage challenges is machine learning. Smart agriculture is now taking place with the use of machine learning, which will assist farmers in doing their chores more effectively and producing more food crops and other products. This chapter explains how machine learning may assist farmers enhance production while also providing precise and pre-determined responses.
+
+# References
+
++   - [1] J. Angel Ida Chellam, M. Siva Sangari and R. Rajendra Kumar, “Drought Prediction Using AI Based Multiple Linear Regression Technique”, Journal of Cardiovascular Disease Research, vol. 12, pp. 305–310, 2021.
++   - [2] C. Encinas, E. Ruiz, J. Cortez and A. Espinoza, “Design and implementation of a distributed IoT system for the monitoring of water quality

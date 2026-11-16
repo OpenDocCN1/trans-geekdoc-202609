@@ -1,0 +1,3 @@
+[24] Ajesh, Mubeena Perveen T., Prashanth K. H. R., Abdul Jabbar, “IoT Based Intelligent Farming”, Journal of Emerging Technologies and Innovative Research (JETIR), Vol. 6, Issue 5, pp. 75–79, 2019.
+
+[25] Xing Yang, Lei Shu, Jianing Chen, Mohamed A. F., Jun Wu. Edmond Nurellari, and Kai Huang, “A Survey on Smart Agriculture: Development Modes, Technologies, and Security and Privacy Challenges”, IEEE/ CAA Journal of Automatica Sinica, Vol. 8, Issue 2, pp. 273–302, Feb 2021.

@@ -1,0 +1,135 @@
+
+## List of Figures
+
+- Figure 1.1 Soil preparation... 3
+- Figure 1.2 Sowing... 3
+- Figure 1.3 Manuring... 4
+- Figure 1.4 Irrigation... 5
+- Figure 1.5 Weeding... 5
+- Figure 1.6 Harvesting... 6
+- Figure 1.7 Storage... 7
+- Figure 1.8 Soil temperature sensor usage... 8
+- Figure 1.9 Weather sensor... 9
+- Figure 1.10 Wireless communication sensor... 11
+- Figure 1.11 Soil sensor... 12
+- Figure 1.12 Usage of robotics in agriculture... 13
+- Figure 1.13 Weeding device... 14
+- Figure 1.14 Navigation robots... 14
+- Figure 1.15 Harvesting robot... 15
+- Figure 1.16 Usage of drones in agriculture... 16
+- Figure 1.17 Remote sensing sensor... 16
+- Figure 1.18 Imaging sensor for agriculture... 17
+- Figure 1.19 Greenhouse design-based on shape... 26
+- Figure 1.20 Greenhouse design-based on construction... 27
+- Figure 1.21 Greenhouse design-based on covering material... 28
+- Figure 1.22 Greenhouse design-based on construction cost... 28
+- Figure 2.1 Block diagram... 37
+- Figure 2.2 CAD model of robot... 38
+- Figure 2.3 Another view of the CAD model of the robot... 39
+- Figure 2.4 Rack and Pinion mechanism... 40
+- Figure 2.5 TIVA C Series TM4C123Gxl board... 41
+- Figure 2.6 Energia IDE window... 42
+- Figure 2.7 Bluetooth module (HC05)... 43
+- Figure 2.8 DC mini motor (12,000 rpm, 12 V)... 44
+- Figure 2.9 DC mini motor (6 V)... 45
+- Figure 2.10 Battery (12 V and 6 V) DC power supply... 46
+- Figure 2.11 Android app... 49
+- Figure 2.12 Readings of sensors... 49
+- Figure 2.13 Drilling mechanism... 50
+- Figure 2.14 Dispensing of seeds... 50
+- Figure 2.15 Window of CAD designing... 50
+- Figure 2.16 Rack and Pinion movement before drilling and after drilling... 51
+- Figure 2.17 Working of the robot in the field... 51
+- Figure 3.1 Convolutional neural network architecture... 59
+- Figure 3.2 Crop management system... 61
+- Figure 3.3 Crop recommendation system... 67
+- Figure 3.4 Artificial intelligence in smart farming... 69
+- Figure 3.5 Deep learning system challenges... 70
+- Figure 4.1 The circuit diagram of the proposed autonomous system for agricultural field monitoring... 94
+- Figure 4.2 Flowchart of the proposed system... 96
+- Figure 4.3 Status of the parameters of the agricultural field... 97
+- Figure 4.4 Status and parameters for irrigation of other crop varieties... 98
+- Figure 4.5 Activation of two irrigation systems... 99
+- Figure 4.6 The entire dashboard... 100
+- Figure 5.1 DIKW hierarchy... 109
+- Figure 5.2 Trees4Future method for managing the publication process... 120
+- Figure 6.1 Technologies used in smart agriculture... 134
+- Figure 6.2 Identify crop disease detection... 146
+- Figure 7.1 CNN structure... 156
+- Figure 7.2 LSTM architecture... 157
+- Figure 7.3 RNN architecture... 158
+- Figure 7.4 GAN architecture... 159
+- Figure 7.5 RBFN architecture... 160
+- Figure 7.6 MLP architecture... 161
+- Figure 7.7 SOM architecture... 162
+- Figure 7.8 DBN architecture... 162
+- Figure 7.9 RBM architecture... 163
+- Figure 7.10 Deep autoencoder architecture to extract binary speech codes... 169
+- Figure 8.1 Basic modules of image processing... 178
+- Figure 8.2 Block diagram for crop yield detection... 182
+- Figure 8.3 Various applications of image processing in agricultural sector... 185
+- Figure 8.4 Steps to develop multi-storeyed system in agroforestry... 187
+- Figure 8.5 Field layout for a multi-storey coconut cropping system... 189
+- Figure 9.1 Circuit diagram of the portable data acquisition system for precision farming... 207
+- Figure 9.2 Proposed methodology flowchart... 209
+- Figure 9.3 Temperature display... 210
+- Figure 9.4 Moisture level display... 211
+- Figure 9.5 Humidity level display... 211
+- Figure 9.6 Graph representing the data of parameter humidity... 212
+- Figure 9.7 Graph representing the data of parameter temperature... 212
+- Figure 9.8 Graph representing the data of parameter moisture... 213
+- Figure 9.9 Extracted data in CSV format... 213
+- Figure 9.10 Extracted data in XML format... 214
+- Figure 9.11 Extracted data in JSON format... 214
+- Figure 10.1 Architecture of the proposed system... 224
+- Figure 10.2 Circuit diagram of the proposed system... 225
+- Figure 10.3 A real-time use of SQL database... 228
+- Figure 10.4 Typical IIS Manager... 230
+- Figure 10.5 List of virtual simulators in Android emulator... 231
+- Figure 10.6 Testing flow diagram... 232
+- Figure 10.7 Refreshing the local network... 233
+- Figure 10.8 IP address allocation in the serial monitor of the Arduino... 234
+- Figure 10.9 Image of the button in the virtual device using emulator... 235
+- Figure 10.10 Connection to the SQL server by entering details... 236
+- Figure 10.11 Status of the sprinkler updated in the SQL database... 236
+- Figure 11.1 Applications of IoT in smart farming... 248
+- Figure 12.1 Working of IoT... 269
+- Figure 12.2 Model of different stages of smart agriculture... 271
+- Figure 12.3 Application of IoT and WSN in smart farming... 273
+- Figure 12.4 Working of IoT-based weather station... 275
+- Figure 12.5 Satellite used for weather forecasting in agriculture... 276
+- Figure 12.6 Working of ML model in the prediction of weather... 277
+- Figure 13.1 Types of cropping... 286
+- Figure 13.2 Monocropping... 286
+- Figure 13.3 Mixed cropping... 287
+- Figure 13.4 Intercropping... 287
+- Figure 13.5 Crop rotation... 288
+- Figure 13.6 Cropping pattern factors... 289
+- Figure 13.7 Semi-automatic robot... 295
+- Figure 13.8 Drone... 295
+- Figure 13.9 IoT-based remote sensor... 296
+- Figure 13.10 Computer vision... 296
+- Figure 15.1 Smart farming model... 324
+- Figure 15.2 ICT Smart farming information... 325
+- Figure 15.3 IoT-based applications... 326
+- Figure 15.4 IoT in agriculture... 331
+- Figure 15.5 Example of service application supports... 334
+- Figure 16.1 Basic block diagram of the digital twin... 344
+- Figure 16.2 Product life cycle... 345
+- Figure 16.3 Central hub for information... 346
+- Figure 16.4 Basic control model... 346
+- Figure 16.5 Block diagram of digital twins... 347
+- Figure 16.6 Imaginary twin... 348
+- Figure 16.7 Monitoring twin... 348
+- Figure 16.8 Predictive twin... 348
+- Figure 16.9 Prescriptive twin... 348
+- Figure 16.10 Autonomous digital twin... 349
+- Figure 16.11 Recollected digital twin... 349
+- Figure 16.12 Implementation model of a digital twin... 351
+- Figure 16.13 Weed use case... 352
+- Figure 16.14 Digital twin implementation... 353
+- Figure 17.1 Agriculture and the impact of desertification... 362
+- Figure 17.2 Rationale for climate change... 363
+- Figure 17.3 Impact of food waste... 364
+- Figure 17.4 Significant usage of drones in smart farming... 373
+- Figure 17.5 Nanotechnology in agriculture... 377

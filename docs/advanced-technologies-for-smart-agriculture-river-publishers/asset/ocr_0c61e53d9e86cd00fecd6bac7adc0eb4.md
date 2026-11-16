@@ -1,0 +1,9 @@
+![](bbox=[0.12, 0.12, 0.88, 0.43])
+
+Figure 5.1 DIKW hierarchy.
+
+be derived is data. Policy and decision applications like integrated models, impact assessments and decision-making assistance systems can all be used together to generate information that can be applied to enrich data.
+
+Perishable species and goods (including humans, plants, agricultural products and animals) all have intricate communications with their environment, making agricultural and environmental research systems dynamic in nature. Extensive details about the status and behavior of entities and their interactions with their surroundings are required for a complete description of such setups. These structures can store both current and historical or hypothetical conditions. The spatial and temporal entity behavior data is essential because biological systems exhibit spatial and temporal variability. In addition, comprehending these interconnections calls for in-depth familiarity with the various subsystems involved. Climate, water, life and the ground itself are all potential components.
+
+To better understand how less valuable raw data can be turned into knowledge that can be of greater use to the end users, the DIKW hierarchy has been adapted for the big data environment. In this context, “knowledge” stands for the bits of information that can be used to make sound judgments. Users rely on this accurate and timely data assuming that it was compiled using the best available sources drawn from the available big data, inferred, and processed in light of the users’ specific decision context. The community of ICT specialists, domain experts and data scientists working on this problem
