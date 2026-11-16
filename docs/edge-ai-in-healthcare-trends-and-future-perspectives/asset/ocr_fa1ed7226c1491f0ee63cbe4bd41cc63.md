@@ -1,0 +1,27 @@
+# # Edge AI in Future Computing
+
+# ## Series Editors:
+
+*Arun Kumar Sangaiah, SCOPE, VIT University, Tamil Nadu, India*
+
+*Mamta Mittal, G. B. Pant Government Engineering College, Okhla, New Delhi, India*
+
+# ## Soft Computing Techniques in Engineering, Health, Mathematical, and Social Sciences
+
+*Pradip Debnath and S. A. Mohiuddin*
+
+# ## Machine Learning for Edge Computing: Frameworks, Patterns, and Best Practices
+
+*Amitoj Singh, Vinay Kukreja, Taghi Javdani Gandomani*
+
+# ## Internet of Things
+Frameworks for Enabling and Emerging Technologies
+
+*Bharat Bhushan, Sudhir Kumar Sharma, Bhuvan Unhelkar, Muhammad Fazal Ijaz, Lamia Karim*
+
+# ## Soft Computing
+Recent Advances and Applications in Engineering and Mathematical Sciences
+
+*Pradip Debnath, Oscar Castillo, Poom Kumam*
+
+For more information about this series, please visit: https://www.routledge.com/Edge-AI-in-Future-Computing/book-series/EAIFC

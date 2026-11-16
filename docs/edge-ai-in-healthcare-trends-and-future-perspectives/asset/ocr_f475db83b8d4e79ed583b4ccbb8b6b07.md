@@ -1,0 +1,17 @@
+society even more. “Push and pull” have benefited every sector, including healthcare (Shnurenko et al. 2020). Healthcare has adopted AI for decision-making, suggestions, diagnostics, and more. To perform smart and automated tasks, the AI-driven healthcare system needs authorised data from authenticated users. Data authentication is a key research topic. The current chapter reviews earlier studies to determine researchers’ focus and provide data security and verification systems. The evaluation found that studies focus more on data authentication than user authentication.
+
+# REFERENCES
+
++   - Abdellatif, A., Mohamed, A., Chiasserini, C., Thili, M., & Erbad, A. (2019). Edge computing for smart health: Context-aware approaches, opportunities, and challenges. IEEE Network, 33(3), 196–203.
++   - Amin, R., Kumar, N., Biswas, G., Iqbal, R., & Chang, V. (2018). A lightweight authentication protocol for IoT-enabled devices in distributed cloud computing environment. Future Generation Computer Systems, 78, 1005–1019.
++   - Amin, S., & Hossain, M. (2021). Edge intelligence and internet of things in healthcare: A survey. IEEE Access, 9, 45–59.
++   - Ansari, M. S., Alsamhi, S. H., Qiao, Y., Ye, Y., & Lee, B. (2020). Security of distributed intelligence in edge computing: Threats and countermeasures. In The Cloud-to-Thing Continuum (pp. 95–122). Cham: Palgrave Macmillan.
++   - Cui, Q., Zhu, Z., Ni, W., Tao, X., & Zhang, P. (2021). Edge-intelligence-empowered, unified authentication and trust evaluation for heterogeneous beyond 5G systems. IEEE Wireless Communications, 28(2), 78–85.
++   - Deepa, N., Prabadevi, B., Maddikunta, P., Gadekallu, T., Baker, T., Khan, M., & Tariq, U. (2020). An AI-based intelligent system for healthcare analysis using ridge-adaline stochastic gradient descent classifier. The Journal of Supercomputing, 77(2), 1998–2017.
++   - Dhillon, P., & Kalra, S. (2019). A secure multi-factor ECC based authentication scheme for Cloud-IoT based healthcare services. Journal of Ambient Intelligence and Smart Environments, 11(2), 149–164.
++   - Gupta, I., & Nagpal, G. (2020). Artificial Intelligence and Expert Systems. Mercury Learning and Information.
++   - Han, J., & Han, J. (2021). Evaluation of Artificial Intelligence Techniques Applied in Watson and AlphaGo. Academic Journal of Computing & Information Science, 4(8), 29–36.
++   - Hartmann, M., Mashhmi, U., & Imran, A. (2019). Edge computing in smart health care systems: Review, challenges, and research directions. Transactions on Emerging Telecommunications Technologies, 33(3), 1–25.
++   - Hayyolalam, V., Aloqaily, M., Ozkasap, O., & Guizani, M. (2021). Edge intelligence for empowering IoT-based healthcare systems. IEEE Wireless Communications, 28(3), 6–14.
++   - Jan, S., Ali, S., Abbasi, I., Mosleh, M., Alsanad, A., & Khattak, H. (2021). Secure patient authentication framework in the healthcare system using wireless medical sensor networks. Journal of Healthcare Engineering, (2021), 1–20.
++   - Kamruzzaman, M., Alrashdi, I., & Alqazzaz, A. (2022). New opportunities, challenges, and applications of edge-AI for connected healthcare in internet of medical things for smart cities. Journal of Healthcare Engineering, 2022, 1–14.

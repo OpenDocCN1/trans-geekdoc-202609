@@ -1,0 +1,15 @@
+These factors are thought to limit the daily activities of people with disabilities (Disabled Population in India: Data and Facts 2021). According to the social concept of disability, people with disabilities face social, physical, or mental barriers (Singh & Nizamic 2009). When seeking medical care, people with impairments must overcome several obstacles, such as the following:
+
++   * **Exorbitant expenditure.** In low-income counties, two factors, namely the prices of healthcare services and transportation, are largely responsible for the lack of much-needed healthcare for people with disabilities. Just over one-half of people with disabilities cannot afford healthcare, compared to about one-third of people without disabilities.
+
++   * **Physical impediments.** Due to uneven access to buildings (hospitals, health centers), inaccessible medical equipment, inadequate restroom facilities, difficult parking spaces, narrow doorways, internal steps, and poor signage, there are barriers in healthcare facilities for the disabled. Because mammography equipment only supports women who can stand and examination tables are not height adjustable, these factors prevent many women with mobility issues from receiving cervical and breast cancer screenings.
+
++   * **Availability of limited services.** There is a lack of suitable services for people with disabilities. Numerous studies have demonstrated that, particularly in rural and isolated areas, people with disabilities have enormously unmet healthcare needs.
+
++   * **Insufficient skills.** People with physical impairments were more than four times more likely to receive poor care, almost twice as likely to be denied care, and nearly three times more likely to claim that the medical staff’s abilities weren’t sufficient to meet their needs.
+
+Social impediments play an important role in affecting a person’s ability to function and on the environment in which they were born, raised, educated, and employed. The following are a few instances of social barriers. In the US, 22.3% of people with disabilities and 7.3% of those without disabilities earn less than $15,000 a year (World Health Organization 2001; Houtenville & Boege 2019; Centers for Disease Control and Prevention 2019). Non-disabled children are four times less likely to be the victims of violence than children with any type of disability (Houtenville & Boege 2019). Figure 8.2 provides more details on these numbers. In contrast to 22.3% of people without disabilities who are high-school graduates, only 10.1% of people with a disability are high-school graduates.
+
+# ## 8.2.1.2 Impact of barriers, especially during pandemics, on people with disabilities
+
+Today, it is acknowledged that disabilities are a human rights issue. People are rendered physically disabled as well as socially disabled. These barriers can be removed if non-governmental organisations, governments, professionals, people

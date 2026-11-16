@@ -1,0 +1,15 @@
+# 16.7 BLOCKCHAIN CONCEPT
+
+Blockchain is termed as a secure, transparent, and robust system for information sharing. Blockchain includes digital ledger technology, bitcoins, and secure transactions distributed across the network (Wood 2021).
+
+Nofer et al. also describe blockchain technology, which provides secure and immutable data storage and exploits the distributed ledger technology (DLT) to record transactions (Nofer et al. 2017).
+
+Blockchain plays a significant role in the healthcare domain, most specifically medical tourism. The medical tourist’s data are stored in the Electronic Health Record (EHR) or Electronic Medical Record (EMR) (Gupta 2017; Ahram et al. 2017; Dagher et al. 2018; Ekblaw et al. 2016; Fan et al. 2018; Jiang et al. 2018; Roehrs et al. 2017). The patient data have to be secure and shared with hospitals. To ensure data privacy, the digital ledger technology in blockchain ensures secure remote patient monitoring and data transfer of EHR or EMR of the patients (Zhang et al. 2018).
+
+In blockchain, features such as decentralisation, confidentiality, and security ensure secure access to EHRs with hospitals across the globe, doctors, ministries, and insurance companies (Ben Fekih & Lahami 2020).
+
+In medical tourism, patient data is vulnerable at various places. Hence, it is necessary to store their personal data securely and confidentially. The blockchain ensures its secure storage, accuracy, and transparency (Daley 2021). In medical tourism, blockchain caters patient-centric interoperability, accessibility, and privacy. With blockchain technology, the patients can access and share tag information of medical data/EMR with outbound hospitals over private blockchain. At the same time, they can make their general information such as medical reactions/ drug sensitivity, etc., over public blockchain (Sharma et al. 2021).
+
+# 16.8 BLOCKCHAIN IN MEDICAL TOURISM: SCOPE, ROLE, AND IMPACT
+
+With advent of technology, hospitality, healthcare, and tourism witnessed significant growth in the field of multi-disciplinary sectors – medical tourism. The technology provides opportunities for the patients to search global options for medical treatment, hospitals, doctors, and healthcare solutions through the internet. At the same time, trust and the quality of healthcare are equally important as hospital facilities, doctors, country-specific procedures, health hazards, risk transparency, and privacy of medical data. The blockchain technology is one of the facilitators for this move in healthcare industry. Blockchain features answers to all these concerns by providing decentralisation, immutability, distribution, encryption and validation of data, transparency, trust, interoperability, privacy and inconsistency without any intervention of brokers. The blockchain technology expedites medical tourists to make informed decisions while selecting their outbound country. At the same point, the transparency feature of blockchain ensures hassle-free movement of patients abroad (Yoon 2019; Rejeb et al. 2020).

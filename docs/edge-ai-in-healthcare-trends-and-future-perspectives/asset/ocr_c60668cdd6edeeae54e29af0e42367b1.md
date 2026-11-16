@@ -1,0 +1,13 @@
+series), medical software lifecycle standards (IEC 62304), software testing, health software safety and security (IEC 82304), human usability of medical devices (IEC 62366), and medical device risk management (ISO 14971), contain some content that is highly pertinent to the development of AI-based products and conformity evaluations.
+
+# 14.4.3 RESEARCH
+
+Even while the ethical disparities brought on by AI are receiving attention, such as the potential for AI to either eliminate or raise inequalities or racial prejudices in healthcare with new paradigms, the legal implications have not yet been examined or addressed. However, it is vital to remember that the legal challenges of health AI or edge-AI in healthcare are not entirely different from the legal challenges of AI implementation in other industries.
+
+# 14.5 CONCLUSION
+
+Edge-AI in healthcare still needs human interaction, which might cause problems, even if it depends on computers, math, and technology to function. Additionally, AI models might be faulty, just like any other digital health technology, posing dangers to patient safety. These flaws may result from a variety of sources, including errors with the data needed to create the algorithm, the decisions made by programmers while creating and training the model, and the final implementation of the AI-enabled program – all of which include human participation. We still need to understand the effects of edge-AI on healthcare, as the technology is still relatively new. The extent to which healthcare providers must inform patients about the intricacies of AI, particularly the types of data inputs and the potential for biases or other flaws in the data being utilised, is a crucial ethical question to be considered in this context. Developers must ensure two critical factors in order to fully exploit the potential of edge AI: (1) The authenticity and trustworthiness of the data sets; and (2) Transparency. The datasets must first be valid and dependable. The performance of AI will improve with greater testing and training. Transparency is crucial, too. Although, in a perfect world, all data and algorithms would be made available to the public, there are real concerns about safeguarding healthcare data as they are sensitive in nature, while also avoiding an increase in cybersecurity risk. Additionally, AI software developers must be sufficiently open and honest about the types of data utilised and any software flaws.
+
+# REFERENCES
+
+Amann, J., Blasimme, A., Vayena, E., Frey, D., & Madai, V. I. (2020). Explainability for artificial intelligence in healthcare: A multidisciplinary perspective. BMC Medical Informatics and Decision Making, 20(1). https://doi.org/10.1186/s12911 -020-01332-6

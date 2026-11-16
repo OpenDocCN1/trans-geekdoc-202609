@@ -1,0 +1,9 @@
+(such as videos). There are four main components of an LSTM unit. The first one is the cell that remembers values over inconsistent time frames (Zheng et al. 2003). In addition to the cell, there are three gate components (input, output, and forget gates). Such gates can manage data transfer into as well as out of the cell.
+
+# 9.6 SMARTWATCH BASED ON IOT
+
+Our proposed model has the full potential of being integrated with the power of IoT and hence can be used for more practical purposes. A smartwatch or any similar wearable device can be used which can take values like age, gender, smoking status, marital status, and BMI as inputs from the user, to calculate other parameters, such as the presence of heart disease, hypertension, and average glucose level of its user by itself. Furthermore, all these data can be stored in an IoT cloud. The smart watch can even be connected to a mobile application, using Bluetooth (Pu et al. 2016). The data on the cloud can then be stored on a database and our machine and deep-learning algorithms can be used on it to predict whether the user is prone to suffer a stroke or not. The decision tree has achieved the highest accuracy of 96.10 % of all the algorithms tested and this can be used for prediction. This prediction can then be fed onto the cloud from where it can be put up as a notification on the mobile application of the user (Cho et al. 2020). Furthermore, an alarm can be buzzed on the users’ smartwatch through Bluetooth. Figure 9.8 represents the workflow of our proposed IoT model.
+
+![](bbox=[0.12, 0.53, 0.88, 0.89])
+
+FIGURE 9.8 Workflow of proposed model.
