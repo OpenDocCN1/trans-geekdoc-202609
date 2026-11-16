@@ -1,0 +1,17 @@
++   □ *Administrator* — This is usually someone who deals with installing new plug-ins, sets up backups, sets up caching, and figures out the workflow rules and all the other background minutiae. This person also has the right to create new content (and update that content), but usually doesn’t just because he or she is too busy.
+
+This second approach is much easier to deal with from the development side, but it leads to some oversimplistic effects on the operations side. For example, a manager might want to bring on a trusted freelancer but have no choice but to give that person a contributor role because the author privileges are just too far-reaching.
+
+# # Workflow
+
+At its simplest, a *workflow* defines the steps that a piece of content goes through between initial draft and final deletion. In between are stages such as drafting, submitting for approval, legal review, publication, archiving, and, eventually, oblivion.
+
+The heart of a good workflow system is good metadata. Most content types include a mandatory status field, usually a drop-down with a limited set of options. Most administrator roles or privilege sets include the capability to choose different subsets of the status markers — for example, if you are a low-level contributor, you may only be able to have two status markers: draft and pending. You won’t be able to make anything live, nor are you able to work on anything that is already live.
+
+Generally speaking, workflows can either be hard-coded into a CMS (easy on the developers, but difficult on the operations staff) or made more flexible, such that content operations staff can define paths for either different content types or different sections of the site (or some combination of the two). For example, for an article, you may have three workflow steps (draft, approve, publish), but an article for the products section of the site may have more approval steps. It may need to be checked by a product manager, a subject matter expert (SME), and the editorial board.
+
+Furthermore, most workflow systems should have some kind of messaging capability. If an editor rejects a draft from a contributor and sends it back to draft status, the editor should be able to send an e-mail to the contributor, explaining why that decision was made.
+
+Alternatively, if you have a complex workflow setup, then you must take into account tracking both parallel and sequential approvals. Most workflows are sequential (drafting, submittal, reviews, and then on to publication); but in the previous example with the SME, product manager, and editorial review board, you would probably want the SME and product manager to review simultaneously, and then pass the material along to the editorial review board.
+
+One other note and then we’ll move on. Because workflows are often hard to visualize, the best workflow systems are visual in nature. Either they allow the administrator to graphically add symbols to the screen and pipe them together (much like a UML or process flow) or they use some kind of vertical metaphor (in which the content drops through the pipeline following the rules in each step). Along the way, each step is associated not only with the content item being worked on, but also any other affected groups, such as a certain editor (or maybe the whole editorial group) or even other pieces of content that need to be released at the same time (such as the press release about a product, the five product pages, and the freebie download for that product).

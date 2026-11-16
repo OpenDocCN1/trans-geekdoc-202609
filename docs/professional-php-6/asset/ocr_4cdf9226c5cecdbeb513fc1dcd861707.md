@@ -1,0 +1,11 @@
+# Part II: Learning Advanced Development Techniques
+
+![](bbox=[0.22, 0.09, 0.69, 0.43])
+
+Figure 14-3 Result of submitting a cor rect form
+
++   - *Application structure* — Ulysses uses a servlet metaphor, not dissimilar to Java servlets. In so doing, it consigns the original concept of a PHP “script” to the trash can — and enforces a rigid structure in the process. There is some mandatory directory organization for things such as utility classes and business objectives, but not to the restrictive extent required by some other frameworks.
++   - *Separation of code and display logic* — Each servlet in a Ulysses application has a corresponding template. In fact, such templates are based loosely on the Smarty platform. Because templates are built by placing controls on a page, this template paradigm is rigorously enforced. Indeed, any attempt to place HTML code inside a servlet will cause a parser error.
++   - *Validation* — This is one area where Ulysses is weak. There’s no built-in system for validation — you are instead encouraged to roll your own or make use of PEAR. Having said that, the page control metaphor makes validation exceptionally easy, and the presentation of errors to the user is made with considerably less hassle by virtue of the servlet metaphor.
++   - *URL rewriting* — Not only is URL rewriting built into Ulysses, unlike many other frameworks it is non-optional and completely transparent. This ensures a degree of security. There is no scope for users to attempt to invoke the controller PHP script themselves, and many cross-site-scripting (XSS) vulnerabilities are rendered null and void.
++   - *Form persistence* — This is Ulysses’ sweet spot: it’s completely automatic. Every page servlet that features a form submitting to another servlet will have its state saved automatically at the time of submission. This means the value of every text box, label, check box, radio button, drop-down list — indeed, any control whatsoever — will be saved into the user session. Even if the user then navigates to another page and then back again to the form entry page, that state will be retained transparently.

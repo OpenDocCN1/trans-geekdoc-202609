@@ -1,0 +1,17 @@
+In general, the PHP developer errs on the side of introducing fewer punctuation symbols to the language, eschewing the shortcut variables of Perl (for example, $_ $?) and the stranger string operators (such as qq) found in Perl and others.
+
+To create an array in PHP, you simply use array(). This is intuitive and does not require remembering whether the array operators are [ ], ( ), or { } or something else, as is commonly the case in a number of programming languages. This means that everything must be a bit more explicit, and perhaps occupies more lines of code, but because professional programmers are concerned with the readability of their software to others, this is an advantage, especially as it does not require additional programmer time to implement.
+
+# ## Commonly Understood Syntax
+
+For all of its faults, the C-style syntax of semicolons and braces is well understood and common to a huge variety of programming languages. While the alternative syntaxes found in languages such as Python and Visual Basic are more accessible to new programmers, the rest of us are quite comfortable in a world where whitespace is insignificant, and statements end in a semicolon. Comfort, though not necessarily exciting, is productive.
+
+Anyone with any prior programming experience can very quickly pick up the basic syntax of PHP and understand immediately how to handle basic operations. All operators are simple, one-unit punctuation marks (e.g., assignment is =, concatenation is .), and functions are constructed with the keyword function, with no need to declare them separately, as in C. While many appreciate the simplicity of a visually uncluttered language such as Python, it is a different approach to syntax than what many of us are used to. Programming languages such as Ruby that support multiple programming paradigms (such as functional programming) alongside the imperative programming style of PHP can lead not only to syntactic confusion, but also confusion regarding the intent of a piece of code.
+
+# ## Cross-Platform Support
+
+Like many of the other languages discussed in this section, PHP is supported on nearly every commonly used operating system. Java, with its “write once, run anywhere” philosophy, supports this concept at the level of the language; but this promise starts to rapidly degrade once the various application server environments are brought into the picture. Very often, applications created to run on JBoss don’t work properly, or aren’t deployed in the same way, as an application written for, say, WebLogic. The complexities of these two environments are such that write-once may work for the application logic (sometimes), but vast amounts of container-specific configuration information must be created for each deployment. This also assumes that the application is written for, and compiled against, Sun’s version of Java.
+
+> > It is worth mentioning that there is some fragmentation in the implementation of Java with competing JVMs from Microsoft (largely ignored), Apple, and a version more compatible with the open-source licenses from the people at the GNU project. All of these implementations are slightly different.
+
+PHP has a single implementation, with a full free and open-source software license, a very active developer community, and no signs of forks happening anytime soon. The promise of “write once, run anywhere” is realized in the PHP project and, it’s worth mentioning, in Python, Ruby, Perl, and several others.

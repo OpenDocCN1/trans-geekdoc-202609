@@ -1,0 +1,12 @@
+| Method | Role |
+| :--- | :--- |
+| IsRedirectFollowing ConstraintFailure | If the page being displayed has been automatically loaded following a 302 redirect issued as a result of a constraint test failure, then this method returns true. |
+| GetOriginalRequest Object Following Constraint Failure | If the page being displayed has been automatically loaded following a 302 redirect issued as a result of a constraint test failure, then this method returns the request object that existed when that page was called, just before the constraint tests failed. |
+| SetRedirect On Constraint Failure | Accepting `true` or `false` as a parameter, this method enables you to tell the `request` object whether it should perform a 302 redirect upon any constraint tests failing. The target for that redirect is set using the `SetConstraintFailureRedirectTargetURL` and `SetConstraintFailureDefaultRedirectTargetURL` methods. |
+| Set Constraint Failure Redirect Target URL | Sets the target for a 302 redirect following a constraint failure. If one is not set, then either the referring page (which is normally the desired target) is used or, if that is not available, a default URL is used (which is set using the `SetConstraintFailureDefaultRedirectTargetURL` method). |
+| Set Constraint Failure Default Redirect Target URL | In the event that no target URL is set using the preceding accessor method, the referring page is used should a referral become necessary as a result of a constraint test failing. If no referring page is available (for example, as a result of a user visiting from a bookmark), the default URL specified using this method is used instead. |
+| Get Parameter Value | Returns the value of the specified parameter. This value is pulled directly from `$_REQUEST`, so the precedence of search for GET variables, POST variables, and COOKIE variables depends on PHP's overall configuration. |
+| Get Parameters | Returns a hash of parameters — essentially, a direct copy of `$_REQUEST` |
+| Get Cookies | Returns a hash of cookies — essentially, a direct copy of `$_COOKIE` |
+| Get Post Variables | Returns a hash of `POST` variables — essentially, a direct copy of `$_POST` |
+| Get Get Variables | Returns a hash of `GET` variables — essentially, a direct copy of `$_GET` |

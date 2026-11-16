@@ -1,0 +1,11 @@
+# Database Abstraction with PDO
+
+Virtually every serious Web application you’ll build will use some sort of data-storage mechanism. Such data storage is typically used to store application settings, user registrations, dynamic content — more or less anything in your application that will be dynamic (that is, it could change at some stage, either as a result of something one of your users does or as a result of a change in the business that owns the application).
+
+For all but the very smallest applications, the accepted choice for data storage tends to be a relational database management system (RDBMS). The benefits are clear: scalability, ease of interrogation, reliability, resilience, integrity of data — the list goes on. It’s also a virtual necessity should you ever desire something other than PHP to get its hands on your data. By using a platform-agnostic container for your data, you’re not limiting yourself artificially should you, for example, ever determine that a .NET application might need to use that data, too.
+
+Indeed, so prolific is the combination of “PHP-and-a-database” that virtually all beginners’ books introduce the MySQL database in the very first chapter. The acronym LAMP (Linux, Apache, MySQL, and PHP) has cropped up in recent years — and searching Google for the phrase “PHP and MySQL” yields more than 2 million hits.
+
+Unfortunately, as with so much in PHP, the way most people learn to work with databases in their early years of PHP education is rarely considered best practice. Building applications that are scalable, extensible, easy to port, and easy to maintain requires a different approach.
+
+In this chapter, you’ll learn just that. You’ll start off with a recap of PHP’s database support, as well as remind yourself how database connectivity has been handled in PHP since its introduction many years ago. By considering hypothetical examples, you’ll learn about the limitations of this approach. Then, you’ll meet PHP Data Objects (PDO) and learn how PDO can provide a more enterprise-ready approach.
