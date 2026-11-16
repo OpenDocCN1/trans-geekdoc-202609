@@ -1,0 +1,8 @@
+Before moving on to IBM’s Thomas J. Watson Research Center in Yorktown Heights, New York, Gerald Tesauro worked with me when he was at the Center for Complex Systems Research at the University of Illinois in Urbana-Champaign on the problem of teaching a neural network to play backgammon (figure 10.1).² Our approach used expert supervision to train networks with backprop to evaluate game positions and possible moves. The flaw in this approach was that the program could never get better than our experts, who were not at world-championship level. But, with self-play, it might be possible to do better. The problem with self-play at that time was that the only learning signal was win or lose at the end of the game. But when one side won, which of the many moves were responsible? This is called the “temporal credit assignment problem.”
+
+A learning algorithm that can solve this temporal credit assignment problem was invented in 1988 by Richard Sutton,³ who had been working closely with Andrew Barto, his doctoral advisor, at the University of Massachusetts at Amherst, on difficult problems in reinforcement learning, a branch of machine learning inspired by associative learning in animal experiments (figure 10.2). Unlike a deep learning network, whose only job is to transform inputs into outputs, a reinforcement network interacts in a closed loop with the environment, receiving sensory input, making
+
+![](bbox=[0.145, 0.535, 0.69, 0.79])
+
+**Figure 10.1**
+Backgammon board. Backgammon is a race to the finish, with the red pieces moving in the opposite direction of the black pieces (arrows). The starting position is shown. Two dice are rolled, and the two numbers indicate how far two pieces can be moved ahead.

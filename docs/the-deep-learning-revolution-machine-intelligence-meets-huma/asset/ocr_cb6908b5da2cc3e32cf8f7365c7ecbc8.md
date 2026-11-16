@@ -1,0 +1,9 @@
+# # 15 Inside Information
+
+It never occurred to me that I would someday become omniscient, which for all practical purposes I and indeed anyone else with access to the Internet now is. Information flows through the Internet at the speed of light. It is easier to get a fact from the Internet than from a book on my shelf. We are living through an explosion of information in its many forms. Scientific instruments, from telescopes to microscopes, are collecting larger and larger data sets that are being analyzed with machine learning. The National Security Agency uses machine learning to sift through all of the data it has been collecting everywhere. The economy is going digital, and programming skills are in great demand at many companies. As the world shifts from an industrial to an information economy, education and job training will have to adapt. This already is having a profound impact on the world.
+
+# ## Information Theory
+
+In 1948, Claude Shannon (figure 15.1) at the AT&T Bell Laboratories in Murray Hill, New Jersey, proposed a remarkably simple but subtle theory for information to understand signal transmission through noisy phone lines.\(^1\) Shannon’s theory drove the digital communications revolution that gave rise to cell phones, digital television, and the Internet. When you make a cell phone call, your voice is encoded into bits and transmitted over radio waves and digital transmission lines to a receiver, where the digital signals are decoded and converted to sounds. Information theory puts bounds on the capacity of the communications channel (figure 15.2), and codes have been devised that approach the Shannon limit.
+
+Despite the many forms of information in the world, there is a way to measure precisely how much of it is in a data set. The unit of information is a “binary bit,” which can take on a value of 1 or 0. A “byte” is eight bits.

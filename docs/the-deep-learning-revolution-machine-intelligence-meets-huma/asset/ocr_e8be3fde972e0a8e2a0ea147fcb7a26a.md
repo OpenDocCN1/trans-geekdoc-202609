@@ -1,0 +1,7 @@
+![](bbox=[0.14, 0.1, 0.86, 0.49])
+
+Figure 5.4 Receptive field for a simple cell in the cat primary visual cortex. This figure is from the 1962 paper by Hubel and Wiesel that discovered simple cells. Triangles are locations in the visual field where the onset a spot of light produces an on-response, and crosses are where the offset of a spot of light produces an off-response. (A) On-center cell in the retina (compare with figure 5.3, left). (B) Off-center cell in the retina (compare with figure 5.3, right). (C--G). Variety of simple cell receptive fields in the primary visual cortex, all of which are elongated compared to receptive fields in the retina, and with more complex arrangements of on-regions and off-regions. From D. H. Hubel and T. N. Wiesel, "Receptive Fields, Binocular Interaction and Functional Architecture in the Cat's Visual Cortex," Journal of Physiology 160, no. 1 (1962): 106–154.2, figure 2.
+
+renewal that occurs in all cells. Even though most of the neurons in our brains are the same ones we had at birth,6 nearly every component of those neurons and the synapses that connect them turns over every day. Proteins are replaced as they wear out, and lipids in the membrane are renewed. With so much dynamic turnover, it is a mystery how our memories are maintained over our lifetimes.
+
+There is another possible explanation for the apparent longevity of memories: they may be like scars on our bodies that have survived as

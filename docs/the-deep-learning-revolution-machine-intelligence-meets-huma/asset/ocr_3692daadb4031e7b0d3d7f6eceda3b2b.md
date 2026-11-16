@@ -1,0 +1,8 @@
+![](bbox=[0.138, 0.106, 0.861, 0.432])
+
+**Figure 19.2**
+Tearoom of the Computational Neurobiology Laboratory at the Salk Institute in 2010. Daily teas have been a social incubator for the development of the many learning algorithms and scientific discoveries that are described in this book. Courtesy of the Salk Institute for Biological Studies.
+
+and opportunities, which opened my horizons; I have had mentors and collaborators who generously shared their insights and advice; and I have had the privilege of working with a generation of exceptionally talented students. I am especially grateful to Geoffrey Hinton, John Hopfield, Bruce Knight, Stephen Kuffler, Michael Stinac, and John Wheeler, as I am to my father-in-law, Solomon Golomb, who at various turning points in my career helped me take the right turn. Beatrice Golomb is a critical thinker and I learned from her how to avoid groupthink. Just because everyone believes in an explanation does not make it true. It sometimes takes a generation for a commonly held belief to be flushed from a community.
+
+I am grateful to many others who have helped me write this book. Discussions with Patricia Churchland, a longtime collaborator, and Roger Bingham, founder of *The Science Network* on the Internet, were a source of inspiration. John Doyle's insights from control theory illuminated my discussion of the brain's operating system. A long hike with Cary Staller in the mountains around Klosters and Davos in Switzerland clarified the universe of algorithms. Barbara Oakley taught me how to reach out to a much bigger

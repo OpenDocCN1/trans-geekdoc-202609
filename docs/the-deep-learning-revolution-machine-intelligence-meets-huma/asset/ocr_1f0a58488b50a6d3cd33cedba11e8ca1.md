@@ -1,0 +1,7 @@
+the gap between the conditioned stimulus and the punishment can be quite long. In the 1950s, John Garcia showed that if a rat was fed sweetened water and made nauseous hours later, the rat would avoid sweetened water days later. This is called “taste aversion learning,” and it also occurs in humans.⁶ Sometimes, the nausea will be associated with the wrong ingested food, like chocolate, which unfortunately happened to be consumed at the same time but did not cause the nausea; the resulting aversion can last many years even though there is a conscious awareness that chocolate was not the problem.
+
+Dopamine, a neuromodulator carried by a set of diffusely projecting neurons in the brainstem (figure 10.4), had long been associated with reward learning, but it was not known what exactly they signaled to the cortex. Peter Dayan and Read Montague, postdoctoral fellows in my lab in the 1990s, realized that dopamine neurons could implement temporal difference learning.⁷ In one of the most exciting scientific periods of my life, these models and their predictions were published and subsequently
+
+![](bbox=[0.137, 0.468, 0.864, 0.782])
+
+Figure 10.4 Dopamine neurons in the human brain. Several nuclei in the midbrain (VTA and substantia nigra) project axons into the cortex and the basal ganglia (striatum and nucleus accumbens). Transient bursts signify discrepancies between the reward predictions and received reward, which are used to choose actions and modify predictions.

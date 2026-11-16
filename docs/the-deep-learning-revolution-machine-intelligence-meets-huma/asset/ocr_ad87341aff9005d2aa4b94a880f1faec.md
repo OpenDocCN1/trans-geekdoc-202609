@@ -1,0 +1,7 @@
+![](bbox=[0.14, 0.11, 0.86, 0.5])
+
+Figure 12.4 Diego San, a robot baby. Pneumatic actuators allowed all of the joints to move pliantely, so that you could shake the robot's hand. Face by David Hanson and Hanson Robotics. For facial animation, see “Diego Installed,” Courtesy of Javier Movellan. https://www.youtube.com/watch?v=knRyDcnUc4U/.
+
+see into that window. Cognition and emotion have traditionally been considered separate functions of the brain. It was generally thought that cognition was a cortical function and emotions were subcortical. In fact, there are subcortical structures that regulate emotional states, structures like the amygdala, which is engaged when the emotional levels are high, especially fear, but these structures interact strongly with the cerebral cortex. Engagement of the amygdala in social interaction, for example, will lead to a stronger memory of the event. Cognition and emotions are intertwined.
+
+In the 1990s, I collaborated with Paul Ekman (figure 12.5), a psychologist at UC, San Francisco, who is the world’s leading expert on facial expressions and the real-world inspiration for Dr. Cal Lightman in the TV drama series Lie to Me, though Paul is a lot nicer than Cal. Ekman went to Papua New Guinea to find out if preindustrial cultures responded emotionally

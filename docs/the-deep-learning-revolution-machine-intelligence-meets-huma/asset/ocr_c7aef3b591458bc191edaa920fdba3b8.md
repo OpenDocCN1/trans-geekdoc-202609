@@ -1,0 +1,9 @@
+new chapter in analyzing faces. It was a revelation to me that, despite how important the analysis of facial expressions could be for so many areas of science, medicine, and the economy, it was being neglected by funding agencies.
+
+Ekman developed the Facial Action Coding System (FACS) to monitor the status of each of the forty-four muscles in the face. FACS experts trained by Ekman take an hour to label a minute of videos, one frame at a time. Expressions are dynamic and can extend for many seconds, but Ekman discovered that there were some expressions that lasted for only a few frames. These “microexpressions” were emotional leaks of suppressed brains states and were often telling, sometimes revealing unconscious emotional reactions. Microexpressions of disgust during a marriage counseling session, for example, were a reliable sign that the marriage would fail.18
+
+In the 1990s, we used video recordings from trained actors who could control every muscle on their face, as could Ekman, to train neural networks with backprop to automate the FACS. In 1999, a network trained with backprop by my graduate student Marian Stewart Bartlett (figure 12.6) had an accuracy of 96 percent in the lab, with perfect lighting, fully frontal faces, and manual temporal segmentation to video,19 a performance good
+
+![](bbox=[0.137, 0.518, 0.861, 0.838])
+
+Figure 12.6 Marian Stewart-Bartlett demonstrating facial expression analysis. The time lines are the output of deep learning networks that are recognizing facial expression for happiness, sadness, surprise, fear, anger, and disgust. Courtesy of Marian Stewart-Bartlett. Robert Wright/LDV Vision Summit 2015.
