@@ -1,0 +1,7 @@
+![](bbox=[0.28, 0.115, 0.71, 0.4])
+
+Figure 5.7: Functa size ablation with two Model sizes, small and large. We report Accuracy for 3D shapes and PSNR for the others. Larger Functa sizes result in better fitting quality, with larger models providing benefits only with large enough Functa size.
+
+**Attention Window Ablation.** To evaluate the network's performance with varying Swin [172] attention window sizes, we test the FunctaFormer with window dimensions of {2, 4, 8, 12} for each axis. We do this on Functa representations with two different spatial dimensions per data modality to study the correlation between different slicing- and attention windows. For these experiments, we used only 3 RST Blocks and trained for 5 x 10^4 instead of the standard 1 x 10^5 steps. Batch size and learning rate is reported in Table C.4.3 in the Appendix. The learning rate is halved every 1 x 10^4 steps.
+
+In Figure 5.8, we present the results of the attention and spatial window ablation. Contrary to [163], where larger image patches improved reconstruction quality, our findings show that larger spatial dimensions lead to worse results. This discrepancy may arise due to larger spatial Functas having lower reconstruction quality compared to smaller ones, whereas [163] used raw data, which did not vary in quality. The only exception is data on manifolds, where larger INR patches are beneficial. No clear correlation is observed

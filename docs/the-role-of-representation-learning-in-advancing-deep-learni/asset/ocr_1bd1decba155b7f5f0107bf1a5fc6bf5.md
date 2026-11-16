@@ -1,0 +1,9 @@
+The primary concept of Swin's shifting window attention is to divide the data into multiple windows and apply self-attention within each local window. While this reduces the network's receptive field to the local window, subsequent layers shift the window partition, allowing the network to capture dependencies across neighboring windows and propagate information throughout the network (see Figure 5.4). Originally, a pixel patch was encoded as one token, and a window contained multiple tokens [172]. Later work tokenized each pixel directly [124, 42]. In our approach, we apply the shifting window mechanism directly to the spatial Functa representation, with each spatial Functa serving as a token, representing a slice of the original discrete data.
+
+![](bbox=[0.15, 0.315, 0.85, 0.525])
+
+The overall FunctaFormer network $H_{FF}$ follows the layout of [163] and consists of three segments: shallow feature extraction $H_{SF}$, deep feature extraction $H_{DF}$, and residual reconstruction $H_{RR}$. Shallow feature extraction is a simple convolutional layer applied over the entire data. In the second stage, deep features are extracted using several consecutive Residual Swin Transformer Blocks. Finally, for residual reconstruction, the shallow and deep features are merged before applying another convolutional layer $H_{FF}(D_{LQ}) = H_{RR}(H_{SF}(D_{LQ}) + H_{DF}(H_{SF}(D_{LQ}))$. Thanks to the consistent dimensionality of the Functa regardless of source and target resolution, we are able to utilize residual learning. The model learns the residual between the low-quality and high-quality Functa $D_{REC} = D_{LQ} + D_{FT}$, leading to the training loss displayed in Equation (5.4).
+
+```
+$\mathcal{L}(D_{HQ}, D_{LQ}) = \| H_{FF}(D_{LQ}) + D_{LQ} - D_{HQ} \|_1$ (5.4)
+```

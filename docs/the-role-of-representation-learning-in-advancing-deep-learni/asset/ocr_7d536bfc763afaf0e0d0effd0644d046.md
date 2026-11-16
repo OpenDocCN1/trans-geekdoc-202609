@@ -1,0 +1,9 @@
+Preview's performance significantly degrades with increasing problem size, struggling to solve instances larger than 25.
+
+![](bbox=[0.145, 0.168, 0.853, 0.315])
+
+Figure 9.3: (a) Reasoning effort in number of reasoning tokens versus problem size for o3-mini. A peak in reasoning effort is observed around problem size 100, followed by a decline for larger problem sizes. (b) Reasoning effort in number of reasoning tokens versus problem size for o3-mini, categorized by low, medium, and high reasoning effort strategies. Steeper slopes are observed for higher reasoning effort strategies. High reasoning effort enables solving larger instances but also increases token usage for smaller, already solvable problems.
+
+A more detailed analysis of o3-mini's reasoning effort (Figure 9.3a) reveals a non-monotonic trend. While generally increasing with problem size initially, reasoning effort peaks around a problem size of 100. Beyond this point, the reasoning effort decreases, suggesting a potential “frustration” effect where increased complexity no longer leads to proportionally increased reasoning in the model. The same behavior could not be observed for other models, see Section F.2.2. It would be interesting to see the effect of recent works trying to optimize reasoning length would have on these results [180].
+
+Figure 9.3b further explores o3-mini's behavior by categorizing reasoning effort into low, medium, and high strategies. The steepness of the scaling slope increases with reasoning effort, indicating that higher effort strategies lead to a more pronounced increase in token usage as problem size grows. While high reasoning effort enables solving larger puzzles (up to 10x10), it also results in a higher token count even for smaller problems that were already solvable with lower effort strategies. This suggests a trade-off where

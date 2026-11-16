@@ -1,0 +1,54 @@
+
+
+default hyperparameters. Additionally, the constraint of discrete action spaces excludes the application of certain RL algorithms.
+
+**Benchmarking LLMs.** We also explore the potential of using PUZZLES as a novel framework for evaluating the reasoning abilities of both large language models (LLMs) and vision language models (VLMs). While existing reasoning benchmarks have been the subject of debate regarding their ability to accurately assess the reasoning abilities of LLMs [188, 211, 191], PUZZLES offers a unique advantage by enabling true out-of-distribution evaluation. Our preliminary experiments, conducted with Gemini 1.5 Flash [220] and GPT-4o mini [130], indicate that current LLMs have limited success in solving PUZZLES. A detailed analysis of these results is presented in Section E.6.5. This research lays the groundwork for future investigations using PUZZLES to provide a more nuanced understanding of the reasoning processes and limitations of LLMs.
+
+In the context of RL, the different challenges posed by the logic-requiring nature of these puzzles necessitates a good reward system, strong guidance of agents, and an agent design more focused on logical reasoning capabilities. It will be interesting to see how alternative architectures such as graph neural networks (GNNs) perform. GNNs are designed to align more closely with the algorithmic solution of many puzzles. While the notion that “reward is enough” [244, 268] might hold true, our results indicate that not just *any* form of correct reward will suffice, and that advanced architectures might be necessary to learn an optimal solution.
+
+## 8.6 Conclusion
+
+In this chapter, we have proposed PUZZLES, a benchmark that bridges the gap between algorithmic reasoning and RL. In addition to containing a rich diversity of logic puzzles, PUZZLES also offers an adjustable difficulty progression for each puzzle, making it a useful tool for benchmarking, evaluating and improving RL algorithms. Our empirical evaluation shows that while RL algorithms exhibit varying degrees of success, challenges persist, particularly in puzzles with higher complexity or those requiring nuanced logical reasoning. We are excited to share PUZZLES with the broader research community and hope that this benchmark will foster further research to improve the algorithmic reasoning abilities of machine learning models.
+
+## A Scaling Analysis of Reasoning Effort and Problem Complexity in LLMs
+
+### Abstract
+
+Large Language Models (LLMs) have demonstrated remarkable text generation capabilities, and recent advances in training paradigms have led to breakthroughs in their reasoning performance. In this chapter, we investigate how the reasoning effort of such models scales with problem complexity. We use the infinitely scalable Tents puzzle, which has a known linear-time solution, to analyze this scaling behavior. Our results show that reasoning effort scales with problem size, but only up to a critical problem complexity. Beyond this threshold, the reasoning effort does not continue to increase, and may even decrease. This observation highlights a critical limitation in the logical coherence of current LLMs as problem complexity increases, and underscores the need for strategies to improve reasoning scalability. Furthermore, our results reveal significant performance differences between current state-of-the-art reasoning models when faced with increasingly complex logical puzzles.
+
+## 9.1 Introduction
+
+Large language models (LLMs) have demonstrated remarkable abilities in a wide range of natural language tasks, from text generation to complex problem-solving. Recent advances, particularly with models trained for enhanced reasoning, have pushed the boundaries of what machines can achieve in tasks requiring logical inference and deduction. A critical factor in the success of these advanced models is the ability to leverage increased computational resources at test time, allowing them to explore more intricate solution spaces. This capability raises a fundamental question: how does the "reasoning effort" of these models scale as the complexity of the problem increases?
+
+![](img/c742333bcb21933724ca00794dbfb657_128_0.png)
+
+Figure 9.1: An example instance of a partially solved 6 by 6 tents puzzle. Tents need to be placed next to trees, away from other tents and fulfilling the row and column constraints.
+
+Understanding this scaling relationship is crucial for several reasons. First, it sheds light on the fundamental nature of reasoning within LLMs, moving beyond simply measuring accuracy on isolated tasks. By examining how the computational demands, reflected in token usage, evolve with problem difficulty, we can gain insights into the efficiency and potential bottlenecks of current LLM architectures. Second, characterizing this scaling behavior is essential for designing more effective and resource-efficient reasoning models in the future.
+
+In this chapter, we address this question by investigating the scaling of reasoning effort in LLMs using a specific, infinitely scalable logic puzzle: the Tents puzzle$^1$ (see Figure 9.1). This puzzle offers a controlled environment for studying algorithmic reasoning, as its problem size can be systematically increased, and it possesses a known linear-time solution. Our analysis focuses on how the number of tokens used by state-of-the-art reasoning LLMs changes as the puzzle grid size grows. In addition to reasoning effort, we also evaluate and discuss the success rate of the models across different puzzle sizes to provide a comprehensive view of their performance.
+
+## 9.2 Related Work
+
+The exploration of reasoning abilities in large language models (LLMs) is a rapidly evolving field with significant implications for artificial intelligence. Several benchmarks have been developed to evaluate the reasoning capabilities of LLMs across various domains. These benchmarks provide standardized tasks and evaluation metrics to assess and compare different models. Notable benchmarks include GSM8K [50], ARC-AGI [48], GPQA [221], MMLU [117], SWE-bench [138] and NPHard-eval [86]. These benchmarks cover topics from mathematics to commonsense reasoning and coding. More recently, also math competitions such as AIME2024 [201] have been used to evaluate the newest models. Estermann et al. [84] have introduced PUZZLES, a benchmark focusing on algorithmic and logical reasoning for reinforcement learning. While this benchmark does not focus on LLMs, except for a short ablation in the appendix, we argue that the scalability provided by the underlying puzzles is an ideal testbed for testing extrapolative reasoning capabilities in LLMs.
+
+The reasoning capabilities of traditional LLMs without specific prompting strategies are quite limited [127]. Using prompt techniques such as chain-of-thought [281], least-to-most [311] and tree-of-thought [301], the reasoning capabilities of traditional LLMs can be greatly improved. Lee et al. [158] have introduced the Language of Thought Hypothesis, based on the idea that human reasoning is rooted in language. Lee et al. propose to see the reasoning capabilities through three different properties: Logical coherence, compositionality and productivity. In this chapter we will mostly focus on the aspect of algorithmic reasoning, which falls into logical coherence. Specifically, we analyze the limits of logical coherence.
+
+With the release of OpenAI's o1 model, it became apparent that new training strategies based on reinforcement learning are able to boost the reasoning performance even further. Since o1, there now exist a number of different models capable of enhanced reasoning [104, 63, 212, 203]. Key to the success of these models is the scaling of test-time compute. Instead of directly producing an answer, or thinking for a few steps using chain-of-thought, the models are now trained to think using several thousands of tokens before coming up with an answer.
+
+$^1$The puzzle is available to play in the browser at https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/tents.html
+
+## 9.3 Methods
+
+### 9.3.1 The Tents Puzzle Problem
+
+In this chapter, we employ the Tents puzzle, a logic problem that is both infinitely scalable and solvable in linear time², making it an ideal testbed for studying algorithmic reasoning in LLMs. The Tents puzzle, popularized by Simon Tatham's Portable Puzzle Collection [260], requires deductive reasoning to solve. The puzzle is played on a rectangular grid, where some cells are pre-filled with trees. The objective is to place tents in the remaining empty cells according to the following rules:
+
+- no two tents are adjacent, even diagonally
+- the number of tents in each row and column matches the numbers around the edge of the grid
+- it is possible to match tents to trees so that each tree is orthogonally adjacent to its own tent (but may also be adjacent to other tents).
+
+An example instance of the Tents puzzle is visualized in Figure 9.1 in the Introduction. The scalability of the puzzle is achieved by varying the grid dimensions, allowing for systematic exploration of problem complexity. Where not otherwise specified, we used the "easy" difficulty preset available in the Tents puzzle generator, with "tricky" being evaluated in Section F.2.1. Crucially, the Tents puzzle is designed to test extrapolative reasoning as
+
+²See a description of the algorithm of the solver as part of the PUZZLES benchmark here: https://github.com/ETH-DISC0/rlp/blob/main/puzzles/tents.c#L206C3-L206C67
+
