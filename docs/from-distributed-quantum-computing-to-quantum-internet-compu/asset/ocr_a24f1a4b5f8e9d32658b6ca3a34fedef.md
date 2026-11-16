@@ -1,0 +1,3 @@
+# About the Author
+
+Professor Seng W. Lok (Member, IEEE) received the BSc degree (Hons.) in Computer Science from the Australian National University in 1994 and the PhD degree in Computer Science from the University of Melbourne, Australia, in 1998. He is a Professor of computer science at the School of Information Technology, Deakin University, Australia. He currently co-leads the IoT Platforms and Applications Laboratory and directs the Centre for Software, Systems and Society, within Deakin’s School of Information Technology. His research interests include the Internet of Things, quantum Internet computing, cooperative vehicles, distributed and mobile systems, and smart cities.

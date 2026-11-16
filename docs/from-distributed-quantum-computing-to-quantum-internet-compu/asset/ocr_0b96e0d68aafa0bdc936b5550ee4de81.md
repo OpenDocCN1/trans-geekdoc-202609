@@ -1,0 +1,8 @@
+Dik Bouwmeester, Jian-Wei Pan, Matthew Daniell, Harald Weinfurter, and Anton Zeilinger. Observation of three-photon greenberger-horne-zeilinger entanglement. Physical Review Letters, 82:1345–1349, Feb 1999. doi: 10.1103/PhysRevLett.82.1345.
+W. Dür, G. Vidal, and J. I. Cirac. Three qubits can be entangled in two inequivalent ways. Physical Review A, 62:062314, Nov 2000. doi: 10.1103/PhysRevA.62.062314.
+Ciaran Hughes, Joshua Isaacson, Anastasia Perry, Ranbel F. Sun, and Jessica Turner. Creating Superposition: The Beam Splitter, pages 17–28. Springer International Publishing, Cham, 2021a.
+Ciaran Hughes, Joshua Isaacson, Anastasia Perry, Ranbel F. Sun, and Jessica Turner. What Is a Qubit? pages 7–16. Springer International Publishing, Cham, 2021b.
+Jessica Illiano, Michele Viscardi, Seid Koudia, Marcello Caleffi, and Angela Sara Cacciapuoti. Quantum Internet: From Medium Access Control to Entanglement Access Control. May 2022.
+Louis H. Kauffman and Sam J. Lomonaco Jr., Quantum diagrams and quantum networks. In Eric Donkor, Andrew R. Pirich, Howard E. Brandt, Michael R. Frey, Samuel J. Lomonaco Jr., and John M. Myers, editors, Quantum Information and Computation XII, volume 9123, page 91230P. International Society for Optics and Photonics, SPIE, 2014.
+D. Leibfried, E. Knill, S. Seidelin, J. Britton, R. B. Blakestad, J. Chiaverini, D. B. Hume, W. M. Itano, J. D. Jost, C. Langer, R. Ozeri, R. Reichle, and D. J. Wineland. Creation of a six-atom 'Schrödinger cat'state. Nature, 438(7068):639–642, 2005.
+Michael A. Nielsen and Isaac L. Chuang. Quantum Computation and Quantum Information. Cambridge University Press, 2000.
