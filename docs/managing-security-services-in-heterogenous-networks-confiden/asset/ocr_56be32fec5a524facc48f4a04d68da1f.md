@@ -1,0 +1,11 @@
+research that has evolved out of ABAC is attribute-based encryption (ABE) with ciphertext policy ABE (CPABE) [5] and key policy ABE (KPABE) [14,36] types. As ABE techniques are beyond the scope of this chapter, a detailed description on the same can be found in.
+
+# ## 1.6 Access Control Methods in the CEIoT
+
+The CEIoT is one of the upcoming research areas that recently caught the attention of researchers in various domains such as IoT, cloud computing, and access control methods [2,10,26]. Many architectures have been proposed in the literature and practice for IoT even though there is no consensus among the architectures [28,30]. In general, the proposed architectures consist of an object layer and application layer in addition to one or more middle layers. The object layer corresponds to physical devices (such as sensors, cameras, RFID tags, smart phones, etc.) from which data are collected. The application layer consists of services offered over data collected such as data access, analytics, decision support system, data trade, etc. [1,22]. The middle layer is composed of single or multiple layers that in turn comprise the network layer or similar supporting layers of communication for the IoT framework. Some architectures even have additional sublayers to the middle layers.
+
+Gubbi et al. [15] proposed the integration of cloud computing as one of the layers existing between the object layer and application layer in addition to other layers. However, these methods do not address access control methods. In this section, we review the schemes that satisfy CEIoT criteria. Even though the schemes proposed do not employ a cloud computing layer, they are reviewed as they offer CapBAC in the IoT, which can be extended to incorporate a cloud computing layer.
+
+# ### 1.6.1 The Cloud-Enabled Internet of Things
+
+Alshehri and Sandhu [2] proposed cloud-enabled access control methods for the IoT. As discussed in the previous section, in many of the IoT architectures only the object layer and

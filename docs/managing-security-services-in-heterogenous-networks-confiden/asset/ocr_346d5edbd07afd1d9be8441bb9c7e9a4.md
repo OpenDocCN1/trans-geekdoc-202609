@@ -1,0 +1,5 @@
+overall policy architecture, effective collection of heterogeneous data, boosting the power and energy efficiency for the IoT infra-structure, Big Data collection, storage and maintenance, security and privacy of data, pricing and billing cloud storage, scalability and flexibility of the resources utilized, necessity for distributed and decentralized architectures, trustless authentication such as the application of smart contract for access control, avoidance of a central authority, anonymity of users, applying homomorphic encryption, and much more.
+
+# 1.8 Conclusion
+
+An overview of access control methods in the CEIoT, along with different access control models, were discussed in this chapter. Existing models, relevant reference sources, and possible research directions were also discussed. This chapter serves as a pointer to researchers interested in working in the area of access control in the CEIoT.

@@ -1,0 +1,9 @@
+1.6.1.1 CEIoT for Wearable Devices Bhatti et al. [7] extended the architecture in [2] to wearable devices with an additional object abstraction layer (in between the object layer and virtual object layer) to efficiently implement access control policies with specifications on interlayer communication (specifying which layers are allowed to communicate and not allowed to communicate with each other). Wearable devices are personal devices, and providing access control in such a resource-constrained device environment is challenging.
+
+1.6.1.2 Authorization in the Cloud-Based IoT Bhatti et al. [6] also extended the architecture proposed in [2] to handle present-day authorization processes in an IoT scenario. Bhatti et al. [6] demonstrated an enhanced ACOIoT (EACOIoT) in implementing access policies. An additional object abstraction layer present in this model will handle authorization and privacy between the object layer and upper layers of the EACOIoT framework. An object abstraction layer consisting of gateway devices provides abstraction between devices in the object layer and virtual object layer. The EACOIoT framework is demonstrated with the help of smart home and smart university parking use cases.
+
+1.6.1.3 Amazon Web Services–Enabled IoT Bhatti et al. [8] extended this model to IoT devices connected to the Amazon Web Services (AWS) cloud and proposed ABAC for defining access control logic. They have considered a thermostat and light bulbs use case to demonstrate AWS IoT access control. This model is proposed even considering communication protocols such as MQTT. A virtual object associated with devices in the object layer is termed a “shadow” or “things shadow”.
+
+# 1.6.2 Capability-Based Access Control in the IoT
+
+Even though there is no direct work involving the cloud computing layer in CapBAC, the models proposed by Gusmeroli et al. [16] and Hernandez-Ramos et al. [18] in the IoT context are discussed in this

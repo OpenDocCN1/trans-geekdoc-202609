@@ -1,0 +1,11 @@
+cases, the data volume will always increase to form Big Data. Consider an example of an ICU; it is very common for the sensor to receive data from various data sources that triggered the alarm in real time. Hence, it becomes an extremely important data model to analyze the sensor in health systems. These kinds of analytical methods are not only allowed for patients' physiological signals but also help to provide situational help to the bedside in intensive care.
+
+# 6.3.3.3 Biomedical Signal Analysis
+
+The process of measuring the signals from biological sources is called biological signal analysis; the origins of this process will lie in various kinds of physiological processes. Some of the best examples of such signals are electro-neurogram (ENG), ECG, electromyogram (EMG), EEG, phonocardiogram (PCG), and so on. Biomedical signal analysis results will help us to diagnose the pathological and unexpected conditions in deciding a suitable care pathway. Biomedical signals can be single or continuous, depending upon the severity of the pathological condition. The problem associated with the biomedical signals is that they have a low signalto-noise ratio (SNR) and also the interdependency of the physiological systems. This problem occurs due to the fact that medical instruments can be noisy and it also requires preprocessing.
+
+To overcome all the problems with data pre-processing and filtering techniques, we may apply dimensionality reduction techniques like principal component analysis (PCA), wavelet transformation, and singular value decomposition (SVD). Apart from all these techniques, we are also using time series analysis on signal data to visualize the variations of behavior with respect to time.
+
+# 6.3.3.4 Genomic Data Analysis
+
+A significant number of diseases are genetic in nature, with an example like genetic markers that lead an individual to be prone to diabetes [15], but these are still unknown. One more example of blindness caused by Stargardt disease is also genetic in nature. Here we'll try to understand the relationship between genetic markers, mutations, and disease conditions that have significant potential in supporting the development of different gene therapies to cure these conditions. The transformation process of

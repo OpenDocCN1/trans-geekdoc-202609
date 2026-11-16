@@ -1,0 +1,52 @@
+
+- routing algorithm, 20–21; intelligent secure routing 21; in sensor network (SeRINS) 20; SNR-based dynamic clustering mechanisms (ESRPSDC) 19; trust-aware routing framework (TARF) 19
+- Secureexam 89
+- secure trust-aware energy-efficient adaptive routing (STEAR) protocol 19
+- Security Protocols and Frameworks 173
+- sensor data analysis 124
+- sensors, 2, 113
+- service-level enforced 152
+- signal-to-noise ratio (SNR) 125
+- singular value decomposition (SVD) 125
+- smartness 3
+- social biometrics 96
+- social media 127
+- social network analysis (SNA) 93
+- software reliability 173
+- stand-alone modules 91
+- state-of-the-art technology 2
+- Static Separation of Duty (SSD) 7
+- structured EHR data 119
+- Sybil resistance 65
+- Synchronous Connection-Oriented 145
+- system architecture, 21, 22f; clustering module, 21, 22f; decision manager, 21, 22f; fuzzy rules, 21, 22f; knowledge base, 21, 22f; pre-processing phase, 21, 21f; routing module, 21, 22f; trust computation module, 21, 22f; weight assignment agent, 21, 22f
+- system model of proposed work: average direct trust score (AvgDTS) 25; clustering phase, 22, 24–27; direct trust score (DTS) 25; end-to-end delay analysis, 29, 30f–31f; energy consumption analysis, 31, 32f; fuzzy rules 23; IF...THEN rules, 25–26; indirect trust scores (IDTS) 25; packet delivery ratio analysis 30f; performance of, 28, 29f; pre-processing (outlier selection) phase, 22–23; routing phase 22; security level analysis, 31, 32f; simulation parameters 28f; trust computation phase, 22, 25
+- Target Device Cloning Attack 160
+- TCS (Telephony Control Protocol) 146
+- Transport Layer Security (TLS), 116
+- Treacherous attacks 161
+- trust, definition 38
+- trust attacks in MANETs, 42–43, 42f; badmouthing attacks 43; double-face attacks 43
+- trust-aware routing framework (TARF) 19
+- trust-based routing protocol 19
+- trust computation: bandwidth calculation using TDMA 48; center of gravity (COG) method 50; defuzzification, 50, 51f; direct 41; fuzzification 49; fuzzy inference system, 48, 49f–50f; fuzzy rule base, 49, 50f; hybrid trust 42; link expiry time (LET) 47; node energy calculation, 47, 48f; node reliability 48; QoS parameters, 47–48; recommendation-based trust, 41–42; using fuzzy logic, 45–51
+- trust in MANET: trust aggregation 40; trust computation, 40–42; trust prediction 40; trust propagation 40; trust properties, 39–40, 39f
+- trust management frameworks (TMFs): resistant to badmouthing attacks, 44–45; resistant to double-face attacks 44; trust routing using fuzzy petri nets, 51–53
+- trust matrix operations 56
+- trust transitive rule 56
+- two-factor authentication (2FA) 115
+- Universal Serial Bus (USB) 83
+- UNIX operating system 6
+- Unstructured EHR data 119
+- USB memory sticks 83
+- user domain conflicting behavior attack 44
+- validity 65
+- virtual-layer objects 11
+- WAP (Wireless Access Protocol) 146
+- Wearable devices 11
+- Web, mobile, and cloud apps and services 116
+- Webassessor 89
+- Wi-Fi SSID parameter 140
+- wireless sensor network (WSN): energy-efficient routing in, 20–21; secured routing for 19
+- World Health Organization (WHO) 120
+- W-Pal framework 91
