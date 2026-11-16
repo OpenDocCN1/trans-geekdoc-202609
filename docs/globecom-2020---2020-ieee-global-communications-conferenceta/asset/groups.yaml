@@ -1,0 +1,2108 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # A machine learning approach for detecting CNAME cloaking-based tracking on the
+    Web
+
+
+    Ha Dao
+
+    The Graduate University for Advanced Studies (Sokendai)
+
+    Email: hadao@nii.ac.jp
+
+
+    Kensuke Fukuda
+
+    NII/Sokendai
+
+    Email: kensuke@nii.ac.jp
+
+
+    Abstract—Various in-browser privacy protection techniques have been designed to
+    protect end-users from third-party tracking. In an arms race against these counter-measures,
+    the tracking providers developed a new technique called CNAME cloaking-based tracking
+    to avoid issues with browsers that block third-party cookies and requests. To
+    detect this tracking technique, browser extensions require on-demand DNS lookup
+    APIs. This feature is however only supported by the Firefox browser.
+
+
+    In this paper, we propose a supervised machine learning-based method to detect
+    CNAME cloaking-based tracking without the on-demand DNS lookup. Our goal is to
+    detect both sites and requests linked to CNAME cloaking-related tracking. We crawl
+    a list of target sites and store all HTTP/HTTPS requests with their attributes.
+    Then we label all instances automatically by looking up CNAME record of subdomain,
+    and applying wildcard matching based on well-known tracking filter lists. After
+    extracting features, we build a supervised classification model to distinguish
+    site and request related to CNAME cloaking-based tracking. Our evaluation shows
+    that the proposed approach outperforms well-known tracking filter lists: F1 scores
+    of 0.790 for sites and 0.885 for requests. By analyzing the feature permutation
+    importance, we demonstrate that the number of scripts and the proportion of XMLHttpRequests
+    are discriminative for detecting sites, and the length of URL request is helpful
+    in detecting requests. Finally, we analyze concept drift by using the 2018 dataset
+    to train a model and obtain a reasonable performance on the 2020 dataset for detecting
+    both sites and requests using CNAME cloaking-based tracking.
+
+
+    # I. INTRODUCTION
+
+
+    There are several reasons websites intend to track user’s browsing activities.
+    In some acceptable cases, it is simply to make the user browsing experience faster
+    and more convenient. On the other hand, user’s browsing activities are also used
+    to determine user browsing habits and preferences for advertisement and analytics
+    on the web, which can be frightful for privacy-sensitive users [1].
+
+
+    Aiming to capture the economic value of user browsing habit through tracking,
+    many entities design services to collect user’s information, even without any
+    user’s knowledge or consent [2] [3] [4]. There are some effective approaches against
+    third-party tracking for user’s privacy-preserving. Ad-blocking and third-party
+    tracking protections have been successfully preventing such trackers using blacklist
+    [5] [6] [7], machine learning-based detection [8] [9], and others [10] [11] [12].
+
+
+    However, third-party web tracking has been getting more sophisticated in an arms
+    race against these counter-measures. One of the current trends is the exploitation
+    of Canonical
+
+
+    Name Record or Alias (CNAME) record in DNS, to bypass the filter lists in browsers
+    and extensions. This technique, called CNAME cloaking-based tracking, uses CNAME
+    to disguise requests to a third-party tracker as first-party ones. The current
+    counter-measures mainly focus on third-party tracking and do not impact first-party
+    resources. CNAME cloaking-based tracking can thus bypass this blocking
+
+
+    There are some existing methods to detect CNAME cloaking-based tracking. EasyPrivacy
+    [13], AdGuard tracking protection [14], and other filter lists manually add new
+    first party subdomains which are fronts for CNAME cloaking to these blacklists.
+    However, this approach will dramatically increase the size of the blacklists and
+    these subdomains need to be updated frequently. Besides that, uBlock Origin since
+    version 1.24.1b0 performs a DNS lookup of the hostname loading a resource to determine
+    if the underlying subdomain is related to CNAME cloaking or not. Nevertheless,
+    only Firefox allows uBlock Origin to block CNAME cloaking because the other browsers
+    do not support DNS resolution API [7].
+
+
+    In this paper, we propose a machine learning approach to detect CNAME cloaking-based
+    tracking on the web without dynamic DNS lookup. Our method consists of three steps.
+    (1) We crawl a list of target sites and store all HTTP requests with their attributes.
+    Then we look up CNAME record of subdomains, and label all instances by applying
+    wildcard matching based on well-known tracking filter lists on this CNAME records
+    (§ III-B). (2) Next, we extract their features (§ III-C). (3) Finally, we build
+    a supervised classification model to distinguish sites and requests using CNAME
+    cloaking-based tracking (§ III-D).
+
+
+    The contributions of this study are summarized as follows:
+
+
+    +   - We propose an effective method to detect CNAME cloaking-based tracking.
+    We obtain a F1 score of 0.790 for detecting CNAME cloaking sites and of 0.885
+    for requests (§ IV-A).
+
+    +   - We introduce site-related and request-related features for CNAME cloaking
+    detection (§ III-C). We also make a detailed analysis about the discriminative
+    power of features regarding CNAME cloaking-based tracking detection (§ IV-B).
+
+    +   - We show that our supervised model also works against newly crawled data
+    by analyzing concept drift (§ IV-C).'
+  - '[PAGE 1]
+
+
+    # II. BACKGROUND AND RELATED WORK
+
+
+    # A. Background
+
+
+    +   1) Browser-based privacy protection techniques: Several browser-based privacy
+    protections have been designed to protect end-users from third-party tracking,
+    such as Ghostery [5], Disconnect [6], and uBlock Origin [7]. They work effectively
+    to detect third-party tracking.
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_1_0.png)
+
+
+    +   2) CNAME cloaking-based tracking: The usage of DNS CNAME records coupled with
+    Content Delivery Network is increasingly commonplace to improve site load times,
+    reduce bandwidth costs, and increase content availability and redundancy. CNAME
+    has also been used for user tracking. Tracking providers ask their clients to
+    delegate a subdomain for data collection and tracking, and link it to an external
+    server using a CNAME DNS record [15]. It behaves differently from ordinary third-party
+    tracking because it uses the first-party subdomains; browsers and extensions generally
+    do not impact these resources.
+
+
+    For example, when end-users access a site example.com, this site embeds a first-party
+    tracker a.example.com, which points to a tracking provider tracker.com via the
+    CNAME metric.tracker.com. Tracking provider tracker.com thus track activities
+    of end-users on the site example.com (Figure 1).
+
+
+    # B. Term definitions
+
+
+    +   1) Request linked to CNAME cloaking-related tracking: An HTTP request by a
+    subdomain is used for collecting, and sharing information about a particular user’s
+    activities on the web by using CNAME cloaking-based tracking.
+
+
+    +   2) Site with CNAME cloaking-related tracking occurring: A site sets up a subdomain
+    that points to a tracking provider domain using a CNAME record.
+
+
+    # C. Related work
+
+
+    +   1) Anti third-party tracking techniques: The privacy hazards of online web
+    tracking have been studied extensively.
+
+
+    Machine learning-based tracking detection: Harrass et al. [9] develop an unsupervised
+    detection method that inspects URL queries in HTTP(S) requests to detect tracking
+    activities. Yamada et al. [16] analyze traffic at the network gateway to monitor
+    all tracking sites in the administrative network and constructs a graph between
+    sites and their visited time to detect tracking sites. Wu et al. [8] develop DMTrackerDetector
+    which automatically detects third-party trackers offline to efficiently generate
+    blacklists using structural hole theory and supervised machine learning.
+
+
+    Non-machine learning-based tracking detection: Schelter and Kunegis [17] perform
+    a large-scale analysis of third-party
+
+
+    trackers by extracting third-party embeddings from more than 41 million domains
+    to study global online tracking. Roesner et al. [11] develop a client-side method
+    for detecting and classifying five kinds of third-party trackers on the 500 most
+    popular and 500 less popular sites according to the Alexa ranking. To cut off
+    the tracking chain of third-party web tracking, Pan et al. [12] develop TrackingFree
+    which isolates unique identifiers into different browser principals so that the
+    identifiers still exist but are not unique among different websites.
+
+
+    +   2) Existing in-browser CNAME cloaking-based tracking detection techniques:
+    In order to block first-party trackers using CNAME records, uBlock Origin resolves
+    the hostname of a DNS record to determine if an underlying subdomain is related
+    to CNAME cloaking or not. However, only Firefox with DNS API allows uBlock Origin
+    to block the CNAME cloaking [7]. Besides that, the well-know tracking filter lists
+    make an continuous effort to manually update first-party subdomains which are
+    fronts for CNAME cloaking to these blacklists. It makes day-to-day filter lists
+    updating tedious and time-consuming.
+
+
+    # III. DESIGN AND IMPLEMENTATION
+
+
+    Here, we describe our method to detect CNAME cloaking-based tracking.
+
+
+    # A. Method overview
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_1_1.png)
+
+
+    Our goal is to develop a CNAME cloaking-based tracking detection method using
+    machine learning. Our method flags sites and requests related to CNAME cloaking-based
+    tracking. As shown in Figure 2, the method consists of four steps: data collection,
+    feature extraction, model development, and evaluation.
+
+
+    +   1) Crawl the target sites, including sites with and without CNAME cloaking
+    based tracking, and save all the HTTP requests and their attributes. Then we perform
+    DNS lookup for all subdomains, and label all instances automatically by matching
+    well-known tracking filter lists with CNAME behind all subdomain as described
+    in [18].'
+  md: '
+
+    ## A machine learning approach for detecting CNAME cloaking-based tracking on
+    the Web
+
+
+    Ha Dao
+
+    The Graduate University for Advanced Studies (Sokendai)
+
+    Email: hadao@nii.ac.jp
+
+
+    Kensuke Fukuda
+
+    NII/Sokendai
+
+    Email: kensuke@nii.ac.jp
+
+
+    Abstract—Various in-browser privacy protection techniques have been designed to
+    protect end-users from third-party tracking. In an arms race against these counter-measures,
+    the tracking providers developed a new technique called CNAME cloaking-based tracking
+    to avoid issues with browsers that block third-party cookies and requests. To
+    detect this tracking technique, browser extensions require on-demand DNS lookup
+    APIs. This feature is however only supported by the Firefox browser.
+
+
+    In this paper, we propose a supervised machine learning-based method to detect
+    CNAME cloaking-based tracking without the on-demand DNS lookup. Our goal is to
+    detect both sites and requests linked to CNAME cloaking-related tracking. We crawl
+    a list of target sites and store all HTTP/HTTPS requests with their attributes.
+    Then we label all instances automatically by looking up CNAME record of subdomain,
+    and applying wildcard matching based on well-known tracking filter lists. After
+    extracting features, we build a supervised classification model to distinguish
+    site and request related to CNAME cloaking-based tracking. Our evaluation shows
+    that the proposed approach outperforms well-known tracking filter lists: F1 scores
+    of 0.790 for sites and 0.885 for requests. By analyzing the feature permutation
+    importance, we demonstrate that the number of scripts and the proportion of XMLHttpRequests
+    are discriminative for detecting sites, and the length of URL request is helpful
+    in detecting requests. Finally, we analyze concept drift by using the 2018 dataset
+    to train a model and obtain a reasonable performance on the 2020 dataset for detecting
+    both sites and requests using CNAME cloaking-based tracking.
+
+
+    ## I. INTRODUCTION
+
+
+    There are several reasons websites intend to track user’s browsing activities.
+    In some acceptable cases, it is simply to make the user browsing experience faster
+    and more convenient. On the other hand, user’s browsing activities are also used
+    to determine user browsing habits and preferences for advertisement and analytics
+    on the web, which can be frightful for privacy-sensitive users [1].
+
+
+    Aiming to capture the economic value of user browsing habit through tracking,
+    many entities design services to collect user’s information, even without any
+    user’s knowledge or consent [2] [3] [4]. There are some effective approaches against
+    third-party tracking for user’s privacy-preserving. Ad-blocking and third-party
+    tracking protections have been successfully preventing such trackers using blacklist
+    [5] [6] [7], machine learning-based detection [8] [9], and others [10] [11] [12].
+
+
+    However, third-party web tracking has been getting more sophisticated in an arms
+    race against these counter-measures. One of the current trends is the exploitation
+    of Canonical Name Record or Alias (CNAME) record in DNS, to bypass the filter
+    lists in browsers and extensions. This technique, called CNAME cloaking-based
+    tracking, uses CNAME to disguise requests to a third-party tracker as first-party
+    ones. The current counter-measures mainly focus on third-party tracking and do
+    not impact first-party resources. CNAME cloaking-based tracking can thus bypass
+    this blocking
+
+
+    There are some existing methods to detect CNAME cloaking-based tracking. EasyPrivacy
+    [13], AdGuard tracking protection [14], and other filter lists manually add new
+    first party subdomains which are fronts for CNAME cloaking to these blacklists.
+    However, this approach will dramatically increase the size of the blacklists and
+    these subdomains need to be updated frequently. Besides that, uBlock Origin since
+    version 1.24.1b0 performs a DNS lookup of the hostname loading a resource to determine
+    if the underlying subdomain is related to CNAME cloaking or not. Nevertheless,
+    only Firefox allows uBlock Origin to block CNAME cloaking because the other browsers
+    do not support DNS resolution API [7].
+
+
+    In this paper, we propose a machine learning approach to detect CNAME cloaking-based
+    tracking on the web without dynamic DNS lookup. Our method consists of three steps.
+    (1) We crawl a list of target sites and store all HTTP requests with their attributes.
+    Then we look up CNAME record of subdomains, and label all instances by applying
+    wildcard matching based on well-known tracking filter lists on this CNAME records
+    (§ III-B). (2) Next, we extract their features (§ III-C). (3) Finally, we build
+    a supervised classification model to distinguish sites and requests using CNAME
+    cloaking-based tracking (§ III-D).
+
+
+    The contributions of this study are summarized as follows:
+
+
+    - We propose an effective method to detect CNAME cloaking-based tracking. We obtain
+    a F1 score of 0.790 for detecting CNAME cloaking sites and of 0.885 for requests
+    (§ IV-A).
+
+    - We introduce site-related and request-related features for CNAME cloaking detection
+    (§ III-C). We also make a detailed analysis about the discriminative power of
+    features regarding CNAME cloaking-based tracking detection (§ IV-B).
+
+    - We show that our supervised model also works against newly crawled data by analyzing
+    concept drift (§ IV-C).
+
+
+    ## II. BACKGROUND AND RELATED WORK
+
+
+    ### A. Background
+
+
+    - 1) Browser-based privacy protection techniques: Several browser-based privacy
+    protections have been designed to protect end-users from third-party tracking,
+    such as Ghostery [5], Disconnect [6], and uBlock Origin [7]. They work effectively
+    to detect third-party tracking.
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_1_0.png)
+
+
+    - 2) CNAME cloaking-based tracking: The usage of DNS CNAME records coupled with
+    Content Delivery Network is increasingly commonplace to improve site load times,
+    reduce bandwidth costs, and increase content availability and redundancy. CNAME
+    has also been used for user tracking. Tracking providers ask their clients to
+    delegate a subdomain for data collection and tracking, and link it to an external
+    server using a CNAME DNS record [15]. It behaves differently from ordinary third-party
+    tracking because it uses the first-party subdomains; browsers and extensions generally
+    do not impact these resources.
+
+
+    For example, when end-users access a site example.com, this site embeds a first-party
+    tracker a.example.com, which points to a tracking provider tracker.com via the
+    CNAME metric.tracker.com. Tracking provider tracker.com thus track activities
+    of end-users on the site example.com (Figure 1).
+
+
+    ### B. Term definitions
+
+
+    - 1) Request linked to CNAME cloaking-related tracking: An HTTP request by a subdomain
+    is used for collecting, and sharing information about a particular user’s activities
+    on the web by using CNAME cloaking-based tracking.
+
+
+    - 2) Site with CNAME cloaking-related tracking occurring: A site sets up a subdomain
+    that points to a tracking provider domain using a CNAME record.
+
+
+    ### C. Related work
+
+
+    - 1) Anti third-party tracking techniques: The privacy hazards of online web tracking
+    have been studied extensively.
+
+
+    Machine learning-based tracking detection: Harrass et al. [9] develop an unsupervised
+    detection method that inspects URL queries in HTTP(S) requests to detect tracking
+    activities. Yamada et al. [16] analyze traffic at the network gateway to monitor
+    all tracking sites in the administrative network and constructs a graph between
+    sites and their visited time to detect tracking sites. Wu et al. [8] develop DMTrackerDetector
+    which automatically detects third-party trackers offline to efficiently generate
+    blacklists using structural hole theory and supervised machine learning.
+
+
+    Non-machine learning-based tracking detection: Schelter and Kunegis [17] perform
+    a large-scale analysis of third-party trackers by extracting third-party embeddings
+    from more than 41 million domains to study global online tracking. Roesner et
+    al. [11] develop a client-side method for detecting and classifying five kinds
+    of third-party trackers on the 500 most popular and 500 less popular sites according
+    to the Alexa ranking. To cut off the tracking chain of third-party web tracking,
+    Pan et al. [12] develop TrackingFree which isolates unique identifiers into different
+    browser principals so that the identifiers still exist but are not unique among
+    different websites.
+
+
+    - 2) Existing in-browser CNAME cloaking-based tracking detection techniques: In
+    order to block first-party trackers using CNAME records, uBlock Origin resolves
+    the hostname of a DNS record to determine if an underlying subdomain is related
+    to CNAME cloaking or not. However, only Firefox with DNS API allows uBlock Origin
+    to block the CNAME cloaking [7]. Besides that, the well-known tracking filter
+    lists make an continuous effort to manually update first-party subdomains which
+    are fronts for CNAME cloaking to these blacklists. It makes day-to-day filter
+    lists updating tedious and time-consuming.
+
+
+    ## III. DESIGN AND IMPLEMENTATION
+
+
+    Here, we describe our method to detect CNAME cloaking-based tracking.
+
+
+    ### A. Method overview
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_1_1.png)
+
+
+    Our goal is to develop a CNAME cloaking-based tracking detection method using
+    machine learning. Our method flags sites and requests related to CNAME cloaking-based
+    tracking. As shown in Figure 2, the method consists of four steps: data collection,
+    feature extraction, model development, and evaluation.
+
+
+    - 1) Crawl the target sites, including sites with and without CNAME cloaking-based
+    tracking, and save all the HTTP requests and their attributes. Then we perform
+    DNS lookup for all subdomains, and label all instances automatically by matching
+    well-known tracking filter lists with CNAME behind all subdomain as described
+    in [18].
+
+    '
+  mdcn: '
+
+
+    基于机器学习的 Web 上 CNAME 隐藏追踪检测方法
+
+
+    Ha Dao
+
+    高等研究院大学 (Sokendai)
+
+    Email: hadao@nii.ac.jp
+
+
+    Kensuke Fukuda
+
+    信息学研究所/高等研究院大学 (Sokendai)
+
+    Email: kensuke@nii.ac.jp
+
+
+    摘要—已设计多种浏览器内隐私保护技术，以保护最终用户免受第三方追踪。在与这些对策的军备竞赛中，追踪提供商开发了一种名为基于 CNAME 隐藏的追踪的新技术，以规避阻止第三方
+    Cookie 和请求的浏览器带来的问题。为检测这种追踪技术，浏览器扩展需要按需 DNS 查询 API。然而，此功能仅 Firefox 浏览器支持。
+
+
+    本文提出了一种基于监督机器学习的方法，无需按需 DNS 查询即可检测基于 CNAME 隐藏的追踪。我们的目标是检测与基于 CNAME 隐藏的追踪相关的网站和请求。我们爬取一系列目标网站，并存储所有带有属性的
+    HTTP/HTTPS 请求。然后，通过查询子域的 CNAME 记录，并基于知名追踪过滤列表应用通配符匹配，自动对所有实例进行标记。提取特征后，我们构建一个监督分类模型，以区分与基于
+    CNAME 隐藏的追踪相关的网站和请求。评估结果表明，所提方法优于知名追踪过滤列表：网站 F1 分数为 0.790，请求 F1 分数为 0.885。通过分析特征置换重要性，我们证明脚本数量和
+    XMLHttpRequest 占比对于检测网站具有鉴别性，而 URL 请求长度有助于检测请求。最后，我们使用 2018 年数据集训练模型，在 2020 年数据集上获得合理性能，以分析概念漂移并检测使用基于
+    CNAME 隐藏的追踪的网站和请求。
+
+
+    ## I. 引言
+
+
+    网站追踪用户浏览活动的原因有多种。在某些可接受的情况下，这仅仅是为了使用户浏览体验更快捷、更方便。另一方面，用户的浏览活动也被用于确定用户在网络上的浏览习惯和偏好，以用于广告和分析，这对注重隐私的用户来说可能令人担忧
+    [1]。
+
+
+    许多实体通过追踪旨在获取用户浏览习惯的经济价值，设计服务来收集用户信息，甚至在未经用户知情或同意的情况下收集 [2] [3] [4]。有一些针对第三方追踪的有效方法，用于保护用户隐私。广告拦截和第三方追踪防护已成功利用黑名单
+    [5] [6] [7]、基于机器学习的检测 [8] [9] 以及其他方法 [10] [11] [12] 来防范此类追踪器。
+
+
+    然而，第三方网页追踪在与这些对策的军备竞赛中变得越来越复杂。当前趋势之一是利用 DNS 中的规范名称记录或别名 (CNAME) 记录，以绕过浏览器和扩展中的过滤列表。这种技术称为基于
+    CNAME 隐藏的追踪，它使用 CNAME 将指向第三方追踪器的请求伪装成第一方请求。当前的对策主要针对第三方追踪，且不影响第一方资源。因此，基于 CNAME
+    隐藏的追踪可以绕过此阻止。
+
+
+    目前已有一些检测基于 CNAME 隐藏的追踪的方法。EasyPrivacy [13]、AdGuard 追踪防护 [14] 以及其他过滤列表会手动将新的第一方子域（作为
+    CNAME 隐藏的伪装）添加到这些黑名单中。然而，这种方法会大幅增加黑名单的大小，且这些子域需要频繁更新。此外，自版本 1.24.1b0 起，uBlock
+    Origin 会对加载资源的主机名执行 DNS 查询，以确定底层子域是否与 CNAME 隐藏相关。然而，只有 Firefox 允许 uBlock Origin
+    阻止 CNAME 隐藏，因为其他浏览器不支持 DNS 解析 API [7]。
+
+
+    本文提出了一种机器学习方法，无需动态 DNS 查询即可检测网络上的基于 CNAME 隐藏的追踪。我们的方法包含三个步骤。(1) 我们爬取一系列目标网站，并存储所有带有属性的
+    HTTP 请求。然后，我们查询子域的 CNAME 记录，并基于知名追踪过滤列表对这些 CNAME 记录应用通配符匹配，从而标记所有实例 (§ III-B)。(2)
+    接下来，我们提取它们的特征 (§ III-C)。(3) 最后，我们构建一个监督分类模型，以区分使用基于 CNAME 隐藏的追踪的网站和请求 (§ III-D)。
+
+
+    本研究的贡献总结如下：
+
+
+    - 我们提出了一种检测基于 CNAME 隐藏的追踪的有效方法。对于检测基于 CNAME 隐藏的网站，我们获得了 0.790 的 F1 分数；对于请求，获得了
+    0.885 的 F1 分数 (§ IV-A)。
+
+    - 我们引入了用于 CNAME 隐藏检测的与网站相关和与请求相关的特征 (§ III-C)。我们还对特征在基于 CNAME 隐藏的追踪检测中的鉴别能力进行了详细分析
+    (§ IV-B)。
+
+    - 我们表明，通过分析概念漂移，我们的监督模型对新爬取的数据也有效 (§ IV-C)。
+
+
+    ## II. 背景与相关工作
+
+
+    ### A. 背景
+
+
+    - 1) 基于浏览器的隐私保护技术：已设计多种基于浏览器的隐私保护技术，以保护最终用户免受第三方追踪，例如 Ghostery [5]、Disconnect
+    [6] 和 uBlock Origin [7]。它们能有效检测第三方追踪。
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_1_0.png)
+
+
+    - 2) 基于 CNAME 隐藏的追踪：DNS CNAME 记录与内容分发网络（CDN）的联合使用日益普遍，以改善网站加载时间、降低带宽成本，并提高内容的可用性和冗余度。CNAME
+    也已用于用户追踪。追踪提供商要求其客户委托一个子域用于数据收集和追踪，并使用 CNAME DNS 记录将其链接到外部服务器 [15]。它与普通第三方追踪的行为不同，因为它使用第一方子域；浏览器和扩展通常不会影响这些资源。
+
+
+    例如，当最终用户访问网站 example.com 时，该网站嵌入了一个第一方追踪器 a.example.com，它通过 CNAME 指向 metric.tracker.com。追踪提供商
+    tracker.com 因此追踪最终用户在网站 example.com 上的活动（图 1）。
+
+
+    ### B. 术语定义
+
+
+    - 1) 与基于 CNAME 隐藏的追踪相关的请求：子域发出的 HTTP 请求，用于通过基于 CNAME 隐藏的追踪收集和共享特定用户在网络上的活动信息。
+
+
+    - 2) 发生基于 CNAME 隐藏的追踪的网站：网站设置了一个子域，该子域使用 CNAME 记录指向追踪提供商域。
+
+
+    ### C. 相关工作
+
+
+    - 1) 反第三方追踪技术：在线网页追踪的隐私危害已被广泛研究。
+
+
+    基于机器学习的追踪检测：Harrass 等人 [9] 开发了一种无监督检测方法，检查 HTTP(S) 请求中的 URL 查询以检测追踪活动。Yamada 等人
+    [16] 分析网关流量以监控管理网络中的所有追踪网站，并在网站及其访问时间之间构建图以检测追踪网站。Wu 等人 [8] 开发了 DMTrackerDetector，利用结构洞理论和监督机器学习自动离线检测第三方追踪器，以高效生成黑名单。
+
+
+    非基于机器学习的追踪检测：Schelter 和 Kunegis [17] 通过从超过 4100 万个域中提取第三方嵌入，对第三方追踪器进行大规模分析，以研究全球在线追踪。Roesner
+    等人 [11] 开发了一种客户端方法，根据 Alexa 排名，对 500 个最受欢迎网站和 500 个受欢迎程度较低的网站上的五种第三方追踪器进行检测和分类。为切断第三方网页追踪的追踪链，Pan
+    等人 [12] 开发了 TrackingFree，将唯一标识符隔离到不同的浏览器主体中，使得标识符仍然存在，但在不同网站之间不再是唯一的。
+
+
+    - 2) 现有的浏览器内基于 CNAME 隐藏的追踪检测技术：为阻止使用 CNAME 记录的第一方追踪器，uBlock Origin 解析 DNS 记录的主机名，以确定底层子域是否与
+    CNAME 隐藏相关。然而，只有支持 DNS API 的 Firefox 允许 uBlock Origin 阻止 CNAME 隐藏 [7]。此外，知名追踪过滤列表持续努力手动更新作为
+    CNAME 隐藏伪装的第一方子域，将其添加到这些黑名单中。这使得过滤列表的日常更新变得繁琐且耗时。
+
+
+    ## III. 设计与实现
+
+
+    此处，我们描述检测基于 CNAME 隐藏的追踪的方法。
+
+
+    ### A. 方法概述
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_1_1.png)
+
+
+    我们的目标是开发一种使用机器学习的基于 CNAME 隐藏的追踪检测方法。我们的方法标记与基于 CNAME 隐藏的追踪相关的网站和请求。如图 2 所示，该方法包含四个步骤：数据收集、特征提取、模型开发和评估。
+
+
+    - 1) 爬取目标网站，包括有和没有基于 CNAME 隐藏的追踪的网站，并保存所有 HTTP 请求及其属性。然后，我们对所有子域执行 DNS 查询，并通过将知名追踪过滤列表与位于所有子域背后的
+    CNAME 进行匹配（如 [18] 中所述），自动标记所有实例。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    These instances are divided into two sets, which we call the tracker set and the
+    non-tracker set (§ III-B).
+
+
+    2) Extract features for sites and requests (§ III-C).
+
+
+    3) Check the F1 score of 10 classification algorithms using 10-fold stratified
+    cross-validation. After evaluating performance, we select some effective classification
+    algorithms for hyper-parameter tuning phase, and combine conceptually different
+    machine learning classification algorithms to build a model (§ III-D).
+
+
+    4) Evaluate the models with the testing data (§ IV).
+
+
+    # B. Data collection
+
+
+    1) Finding CNAME cloaking-based tracking with blacklists: We present our method
+    to label CNAME cloaking-based tracking. Firstly, we perform DNS queries for CNAME
+    answer set on all subdomains of each site. Then, we apply wildcard matching based
+    on well-known tracking filter lists to each resolved CNAME in order to detect
+    CNAME cloaking base tracking. More specifically, we select third-party tracking
+    domains and international third-party tracking domains from Easy privacy list
+    [19] and tracking servers list from AdGuard tracking protection filter [14] as
+    of April 26, 2020. This approach was used in the previous work [18].
+
+
+    2) Datasets: We use OpenWPM [20] with vanilla Firefox in April 2020 to crawl 1,762
+    sites from Alexa Top 300k where CNAME cloaking-based tracking was previously detected
+    [18]. We also crawl 1,762 sites that were randomly picked from all sites without
+    CNAME cloaking-based tracking [18]. The stored data is all HTTP/HTTPS requests
+    and their responses for each site. Then, applying the method (§ III-B1) to the
+    stored crawled data, we find that 4,047 HTTP requests in 1,532 sites used CNAME
+    cloaking-based tracking¹.
+
+
+    We also rely on another dataset crawled on Alexa Top 100K sites using OpenWPM
+    [20] in April 2018. We check the historical forward DNS (FDNS) datasets provided
+    by Rapid7 [21], and apply the methodology in § III-B1 to detect CNAME cloaking-based
+    tracking in this historical data. We find that 2,546 HTTP requests in 1,005 sites
+    are related to CNAME cloaking-based tracking. We also use 1,005 additional randomly
+    picked sites without CNAME cloaking from this dataset to analyze concept drift
+    in § IV-C. The details of the 2020 dataset and the 2018 dataset are listed in
+    Table I.
+
+
+    TABLE I
+
+
+    SUMMARY OF DATA: 2,010 SITES IN 2018 AND 3,524 SITES IN 2020.
+
+
+    | Metrics | 2018 | 2020 |
+
+    |---|---|---|
+
+    | 3rd party requests | 185,896 (62.2%) | 276,686 (63.8%) |
+
+    | 1st party requests domain | 60,278 (20.2%) | 120,689 (27.8%) |
+
+    | subdomain | 52,476 (17.6%) | 36,399 (8.4%) |
+
+    | Total requests | 298,649 (100%) | 433,774 (100%) |
+
+    | Total sites | 2,010 | 3,524 |
+
+
+    C. Feature extraction We experimentally extract the following features related
+    to sites and requests.
+
+
+    ¹The dataset is available at https://github.com/fukuda-lab/cname-cloaking
+
+
+    # 1) Site with CNAME cloaking-related tracking occurring:
+
+
+    +   - num_url: The total number of HTTP requests in a site.
+
+    +   - num_1st: The total number of first-party requests in a site.
+
+    +   - num_3rd: The total number of third-party requests in a site.
+
+    +   - pct_script_call: The proportion of fingerprinting-related method calls in
+    a site.
+
+    +   - pct_xhr: The proportion of XMLHttpRequest in a site, which is a built-in
+    browser object that can be used to make HTTP requests in JavaScript to exchange
+    data between the web browser and the server.
+
+    +   - pct_3rd_window: The proportion of requests originating from a third-party
+    DOM window in the window hierarchy [22].
+
+    +   - ranking: The site ranking according to the Alexa ranking [23].
+
+    +   - country: The site country based on Free IP Geolocation API [24].
+
+    +   - category: The site category according to the FortiGuard Web Filtering [25]
+    dataset in April 2020.
+
+
+    # 2) Request linked to CNAME cloaking-related tracking:
+
+
+    +   - method: The desired action to be performed for given request.
+
+    +   - is_xhr: The request uses an API that provides scripted client functionality
+    for transferring data between a client and a server.
+
+    +   - content_type: The HTML tag that resulted in a request, such as image, javascript
+    or document, which are defined in this IDL [22].
+
+    +   - len_url: The length of request URL.
+
+    +   - len_sub: The subdomain length of request.
+
+    +   - len_prefix_sub: The subdomain prefix length of request.
+
+    +   - num_prefix_sub: The number of subdomain prefixes.
+
+    +   - prefix_sub_blacklist: The subdomain prefix is among subdomain prefixes in
+    tracking filter lists [14] [19].
+
+    +   - is_sub_dic: The prefix of subdomain is a word in English dictionary.
+
+    +   - entropy_url: The randomness of request URL by calculating the metric entropy
+    from request URL.
+
+    +   - entropy_sub: The randomness of subdomain by calculating the metric entropy
+    from subdomain.
+
+    +   - entropy_prefix_sub: The randomness of subdomain prefix by calculating the
+    metric entropy from subdomain prefix.
+
+
+    D. Modeling and preliminary results First of all, we split the 2020 dataset (Table
+    I) into testing data and training data. The percentage of the data held over for
+    testing is 20%. It is used in § IV-A to evaluate our model. Next, we describe
+    how it is built to a classification model to detect CNAME cloaking-based tracking
+    using testing data (80% of the 2020 dataset).
+
+
+    1) Model cross-validation: We randomly split the training dataset into 10 smaller
+    sets (folds) without replacement, where nine folds are used for the model training
+    and the remaining'
+  - '[PAGE 3]
+
+
+    one fold is for validating. After obtaining 10 performance estimates by repeating
+    this procedure ten times, we take their average as the final performance estimate.
+    We then compare 10 classification algorithms and evaluate their F1 score using
+    stratified cross-validation procedure on the training data (80% the dataset 2020).
+    We employ 10 supervised classification algorithms with scikit-learn module (random_state
+    = 2 with default parameters):
+
+
+    +   - Support Vector Classification (SVC)
+
+    +   - Decision Tree
+
+    +   - AdaBoost
+
+    +   - Random Forest
+
+    +   - Extra Trees
+
+    +   - Gradient Boosting
+
+    +   - Multi-layer Perceptron (MLP)
+
+    +   - K-Nearest Neighbors (KNN)
+
+    +   - Logistic Regression
+
+    +   - Linear Discriminant Analysis (LDA)
+
+
+    We use the F1 score for evaluating the performance of the classifiers. Larger
+    values of the F1 score (≈ 1.0) indicate better performance, and lower values (≈
+    0) correspond to worse performance. Figure 3(a) shows the F1 scores for the 10
+    selected algorithms using 10-fold stratified cross-validation in the 2020 dataset
+    for detecting sites with CNAME cloaking-related tracking occurring. All classification
+    algorithms have a different detection performance. The most effective classification
+    algorithms are Random Forest, Extra Trees, and Gradient Boosting, while Support
+    Vector Classification, Multilayer Perceptron, and K-nearest Neighbor achieve moderate
+    performances for this dataset.
+
+
+    Figure 3(b) shows the F1 scores for detecting requests linked to CNAME cloaking-related
+    tracking. The most effective classification algorithms are Random Forest and Extra
+    Trees, while SVC shows the worst performance.
+
+
+    2) Hyper-parameter tuning for best models: From the previous performance evaluations,
+    we select RandomForest, ExtraTrees, and GradientBoosting classifiers for the hyper-parameter
+    tuning phase for site classification detection. For requests, we select Random
+    Forest and Extra Trees classifiers.
+
+
+    We perform a grid search optimization for all of them regarding F1 score. The
+    parameter setting that gave the best results on the training data are shown in
+    Table II.
+
+
+    3) Model combination: Now, we have a set of closely well-performing models for
+    detecting site and requests linked to CNAME cloaking-based tracking. In order
+    to balance out their individual weaknesses, we combine conceptually different
+    machine learning classification algorithms and and use the sum of predicted probabilities
+    to predict the class labels.
+
+
+    We thus use VotingClassifier with soft voting to combine the predictions coming
+    from the following supervised classification algorithms: RandomForest, ExtraTrees,
+    and GradientBoosting for detecting sites, and RandomForest and ExtraTrees for
+    detecting requests. The performance of separate algorithms and the combined model
+    are discussed in the next section.
+
+
+    | Algorithm | Parameter | Site | Request |
+
+    |---|---|---|---|
+
+    | Random Forest | max_features
+
+    min_samples_split
+
+    min_samples_leaf
+
+    n_estimators | 1
+
+    8
+
+    3
+
+    100 | 1
+
+    2
+
+    1
+
+    300 |
+
+    | Extra Trees | max_features
+
+    min_samples_split
+
+    min_samples_leaf
+
+    n_estimators | 10
+
+    2
+
+    3
+
+    300 | 1
+
+    2
+
+    1
+
+    100 |
+
+    | Gradient Boosting | max_features
+
+    min_samples_leaf
+
+    n_estimators
+
+    learning_rate
+
+    max_depth | 0.3
+
+    100
+
+    300
+
+    0.2
+
+    8 | Not selected |
+
+
+    # IV. CLASSIFICATION PERFORMANCE ANALYSIS
+
+
+    We evaluate our model and feature importance regarding detection of CNAME cloaking-based
+    tracking. We also investigate concept drift using our datasets from 2018 to 2020.
+
+
+    # A. General results
+
+
+    1) The performance of model: The results obtained using the test set for sites
+    and requests linked to CNAME cloaking-based tracking detection on 20% of the 2020
+    dataset (preserved for this test) are shown in Table III and Table IV. We first
+    show that the F1 score of all classification algorithms improve slightly after
+    the hyper-parameter tuning for both sites and request. Next, the combined model
+    achieves 0.790 of F1 score for detecting sites and 0.885 of F1 score for detecting
+    requests. These results show that the combination model exhibit similar performance
+    to other classifiers regarding detection of sites linked to CNAME cloaking based-tracking,
+    but that combined model works better for detecting requests. In order to ease
+    following result comparison, we use the combined models for further analyses.
+
+
+    Checking false negatives, we find that some sites/requests linked to CNAME cloaking
+    have the same attributes with sites/requests without CNAME cloaking based tracking.
+    For example, the healthpartners.com linked to tracking provider Adobe, with only
+    six scripts and the proportion XML-HttpRequest in this site is 0.07. For request,
+    the request https://gjr5.yoigo.com/ea.js points to tracking provider Eularian;
+    its prefix gjr5 is not in the blacklists and it does not contain any user identification.
+    However, we believe that if we crawl more data with the request linked to track
+    provider Eulerian, we can classify this request as CNAME cloaking-based tracking.
+
+
+    | Score | RandomForest Default/Tuned | ExtraTree Default/Tuned | GradientBoosting
+    Default/Tuned | Combined |
+
+    |---|---|---|---|---|
+
+    | Precision | 0.777/0.784 | 0.771/0.763 | 0.781/0.801 | 0.794 |
+
+    | Recall | 0.730/0.748 | 0.736/0.770 | 0.779/0.782 | 0.785 |
+
+    | F1 score | 0.753/0.766 | 0.753/0.766 | 0.780/0.791 | 0.790 |'
+  md: '
+
+
+    These instances are divided into two sets, which we call the tracker set and the
+    non-tracker set (§ III-B).
+
+
+    - 2) Extract features for sites and requests (§ III-C).
+
+    - 3) Check the F1 score of 10 classification algorithms using 10-fold stratified
+    cross-validation. After evaluating performance, we select some effective classification
+    algorithms for hyper-parameter tuning phase, and combine conceptually different
+    machine learning classification algorithms to build a model (§ III-D).
+
+    - 4) Evaluate the models with the testing data (§ IV).
+
+
+    ## B. Data collection
+
+
+    - 1) Finding CNAME cloaking-based tracking with blacklists: We present our method
+    to label CNAME cloaking-based tracking. Firstly, we perform DNS queries for CNAME
+    answer set on all subdomains of each site. Then, we apply wildcard matching based
+    on well-known tracking filter lists to each resolved CNAME in order to detect
+    CNAME cloaking-based tracking. More specifically, we select third-party tracking
+    domains and international third-party tracking domains from Easy privacy list
+    [19] and tracking servers list from AdGuard tracking protection filter [14] as
+    of April 26, 2020. This approach was used in the previous work [18].
+
+
+    - 2) Datasets: We use OpenWPM [20] with vanilla Firefox in April 2020 to crawl
+    1,762 sites from Alexa Top 300k where CNAME cloaking-based tracking was previously
+    detected [18]. We also crawl 1,762 sites that were randomly picked from all sites
+    without CNAME cloaking-based tracking [18]. The stored data is all HTTP/HTTPS
+    requests and their responses for each site. Then, applying the method (§ III-B1)
+    to the stored crawled data, we find that 4,047 HTTP requests in 1,532 sites used
+    CNAME cloaking-based tracking¹.
+
+
+    We also rely on another dataset crawled on Alexa Top 100K sites using OpenWPM
+    [20] in April 2018. We check the historical forward DNS (FDNS) datasets provided
+    by Rapid7 [21], and apply the methodology in § III-B1 to detect CNAME cloaking-based
+    tracking in this historical data. We find that 2,546 HTTP requests in 1,005 sites
+    are related to CNAME cloaking-based tracking. We also use 1,005 additional randomly
+    picked sites without CNAME cloaking from this dataset to analyze concept drift
+    in § IV-C. The details of the 2020 dataset and the 2018 dataset are listed in
+    Table I.
+
+
+    TABLE I
+
+
+    SUMMARY OF DATA: 2,010 SITES IN 2018 AND 3,524 SITES IN 2020.
+
+
+    | Metrics | 2018 | 2020 |
+
+    |---|---|---|
+
+    | 3rd party requests | 185,896 (62.2%) | 276,686 (63.8%) |
+
+    | 1st party requests domain | 60,278 (20.2%) | 120,689 (27.8%) |
+
+    | subdomain | 52,476 (17.6%) | 36,399 (8.4%) |
+
+    | Total requests | 298,649 (100%) | 433,774 (100%) |
+
+    | Total sites | 2,010 | 3,524 |
+
+
+    ## C. Feature extraction
+
+
+    We experimentally extract the following features related to sites and requests.
+
+
+    ¹The dataset is available at https://github.com/fukuda-lab/cname-cloaking
+
+
+    ### 1) Site with CNAME cloaking-related tracking occurring:
+
+
+    - num_url: The total number of HTTP requests in a site.
+
+    - num_1st: The total number of first-party requests in a site.
+
+    - num_3rd: The total number of third-party requests in a site.
+
+    - pct_script_call: The proportion of fingerprinting-related method calls in a
+    site.
+
+    - pct_xhr: The proportion of XMLHttpRequest in a site, which is a built-in browser
+    object that can be used to make HTTP requests in JavaScript to exchange data between
+    the web browser and the server.
+
+    - pct_3rd_window: The proportion of requests originating from a third-party DOM
+    window in the window hierarchy [22].
+
+    - ranking: The site ranking according to the Alexa ranking [23].
+
+    - country: The site country based on Free IP Geolocation API [24].
+
+    - category: The site category according to the FortiGuard Web Filtering [25] dataset
+    in April 2020.
+
+
+    ### 2) Request linked to CNAME cloaking-related tracking:
+
+
+    - method: The desired action to be performed for given request.
+
+    - is_xhr: The request uses an API that provides scripted client functionality
+    for transferring data between a client and a server.
+
+    - content_type: The HTML tag that resulted in a request, such as image, javascript
+    or document, which are defined in this IDL [22].
+
+    - len_url: The length of request URL.
+
+    - len_sub: The subdomain length of request.
+
+    - len_prefix_sub: The subdomain prefix length of request.
+
+    - num_prefix_sub: The number of subdomain prefixes.
+
+    - prefix_sub_blacklist: The subdomain prefix is among subdomain prefixes in tracking
+    filter lists [14] [19].
+
+    - is_sub_dic: The prefix of subdomain is a word in English dictionary.
+
+    - entropy_url: The randomness of request URL by calculating the metric entropy
+    from request URL.
+
+    - entropy_sub: The randomness of subdomain by calculating the metric entropy from
+    subdomain.
+
+    - entropy_prefix_sub: The randomness of subdomain prefix by calculating the metric
+    entropy from subdomain prefix.
+
+
+    ## D. Modeling and preliminary results
+
+
+    First of all, we split the 2020 dataset (Table I) into testing data and training
+    data. The percentage of the data held over for testing is 20%. It is used in §
+    IV-A to evaluate our model. Next, we describe how it is built to a classification
+    model to detect CNAME cloaking-based tracking using testing data (80% of the 2020
+    dataset).
+
+
+    ### 1) Model cross-validation:
+
+
+    We randomly split the training dataset into 10 smaller sets (folds) without replacement,
+    where nine folds are used for the model training and the remaining one fold is
+    for validating. After obtaining 10 performance estimates by repeating this procedure
+    ten times, we take their average as the final performance estimate. We then compare
+    10 classification algorithms and evaluate their F1 score using stratified cross-validation
+    procedure on the training data (80% of the dataset 2020). We employ 10 supervised
+    classification algorithms with scikit-learn module (random_state = 2 with default
+    parameters):
+
+
+    - Support Vector Classification (SVC)
+
+    - Decision Tree
+
+    - AdaBoost
+
+    - Random Forest
+
+    - Extra Trees
+
+    - Gradient Boosting
+
+    - Multi-layer Perceptron (MLP)
+
+    - K-Nearest Neighbors (KNN)
+
+    - Logistic Regression
+
+    - Linear Discriminant Analysis (LDA)
+
+
+    We use the F1 score for evaluating the performance of the classifiers. Larger
+    values of the F1 score (≈ 1.0) indicate better performance, and lower values (≈
+    0) correspond to worse performance. Figure 3(a) shows the F1 scores for the 10
+    selected algorithms using 10-fold stratified cross-validation in the 2020 dataset
+    for detecting sites with CNAME cloaking-related tracking occurring. All classification
+    algorithms have a different detection performance. The most effective classification
+    algorithms are Random Forest, Extra Trees, and Gradient Boosting, while Support
+    Vector Classification, Multilayer Perceptron, and K-nearest Neighbor achieve moderate
+    performances for this dataset.
+
+
+    Figure 3(b) shows the F1 scores for detecting requests linked to CNAME cloaking-related
+    tracking. The most effective classification algorithms are Random Forest and Extra
+    Trees, while SVC shows the worst performance.
+
+
+    ### 2) Hyper-parameter tuning for best models:
+
+
+    From the previous performance evaluations, we select RandomForest, ExtraTrees,
+    and GradientBoosting classifiers for the hyper-parameter tuning phase for site
+    classification detection. For requests, we select Random Forest and Extra Trees
+    classifiers.
+
+
+    We perform a grid search optimization for all of them regarding F1 score. The
+    parameter setting that gave the best results on the training data are shown in
+    Table II.
+
+
+    TABLE II
+
+
+    | Algorithm | Parameter | Site | Request |
+
+    |---|---|---|---|
+
+    | Random Forest | max_features<br>min_samples_split<br>min_samples_leaf<br>n_estimators
+    | 1<br>8<br>3<br>100 | 1<br>2<br>1<br>300 |
+
+    | Extra Trees | max_features<br>min_samples_split<br>min_samples_leaf<br>n_estimators
+    | 10<br>2<br>3<br>300 | 1<br>2<br>1<br>100 |
+
+    | Gradient Boosting | max_features<br>min_samples_leaf<br>n_estimators<br>learning_rate<br>max_depth
+    | 0.3<br>100<br>300<br>0.2<br>8 | Not selected |
+
+
+    ### 3) Model combination:
+
+
+    Now, we have a set of closely well-performing models for detecting site and requests
+    linked to CNAME cloaking-based tracking. In order to balance out their individual
+    weaknesses, we combine conceptually different machine learning classification
+    algorithms and use the sum of predicted probabilities to predict the class labels.
+
+
+    We thus use VotingClassifier with soft voting to combine the predictions coming
+    from the following supervised classification algorithms: RandomForest, ExtraTrees,
+    and GradientBoosting for detecting sites, and RandomForest and ExtraTrees for
+    detecting requests. The performance of separate algorithms and the combined model
+    are discussed in the next section.
+
+
+    ## IV. CLASSIFICATION PERFORMANCE ANALYSIS
+
+
+    We evaluate our model and feature importance regarding detection of CNAME cloaking-based
+    tracking. We also investigate concept drift using our datasets from 2018 to 2020.
+
+
+    ### A. General results
+
+
+    ### 1) The performance of model:
+
+
+    The results obtained using the test set for sites and requests linked to CNAME
+    cloaking-based tracking detection on 20% of the 2020 dataset (preserved for this
+    test) are shown in Table III and Table IV. We first show that the F1 score of
+    all classification algorithms improve slightly after the hyper-parameter tuning
+    for both sites and request. Next, the combined model achieves 0.790 of F1 score
+    for detecting sites and 0.885 of F1 score for detecting requests. These results
+    show that the combination model exhibit similar performance to other classifiers
+    regarding detection of sites linked to CNAME cloaking-based tracking, but that
+    combined model works better for detecting requests. In order to ease following
+    result comparison, we use the combined models for further analyses.
+
+
+    Checking false negatives, we find that some sites/requests linked to CNAME cloaking
+    have the same attributes with sites/requests without CNAME cloaking-based tracking.
+    For example, the healthpartners.com linked to tracking provider Adobe, with only
+    six scripts and the proportion XMLHttpRequest in this site is 0.07. For request,
+    the request https://gjr5.yoigo.com/ea.js points to tracking provider Eulerian;
+    its prefix gjr5 is not in the blacklists and it does not contain any user identification.
+    However, we believe that if we crawl more data with the request linked to tracking
+    provider Eulerian, we can classify this request as CNAME cloaking-based tracking.
+
+
+    TABLE III
+
+
+    | Score | RandomForest Default/Tuned | ExtraTree Default/Tuned | GradientBoosting
+    Default/Tuned | Combined |
+
+    |---|---|---|---|---|
+
+    | Precision | 0.777/0.784 | 0.771/0.763 | 0.781/0.801 | 0.794 |
+
+    | Recall | 0.730/0.748 | 0.736/0.770 | 0.779/0.782 | 0.785 |
+
+    | F1 score | 0.753/0.766 | 0.753/0.766 | 0.780/0.791 | 0.790 |
+
+
+    '
+  mdcn: '
+
+    这些实例被分为两组，我们称之为追踪器集和非追踪器集（§ III-B）。
+
+
+    - 2) 为站点和请求提取特征（§ III-C）。
+
+    - 3) 使用 10 折分层交叉验证检查 10 种分类算法的 F1 分数。在评估性能后，我们为超参数调优阶段选取一些有效的分类算法，并组合在概念上不同的机器学习分类算法来构建模型（§
+    III-D）。
+
+    - 4) 使用测试数据评估模型（§ IV）。
+
+
+    ## B. 数据收集
+
+
+    - 1) 使用黑名单查找基于 CNAME 匿装的追踪：我们介绍了标记基于 CNAME 匿装的追踪的方法。首先，我们对每个站点的所有子域执行 CNAME 回答集的
+    DNS 查询。然后，我们基于知名的追踪过滤列表对每个解析的 CNAME 应用通配符匹配，以检测基于 CNAME 匿装的追踪。更具体地说，我们从 Easy Privacy
+    列表 [19] 中选择第三方追踪域和国际第三方追踪域，并从 AdGuard 追踪防护过滤器 [14] 中选择追踪服务器列表（截至 2020 年 4 月 26
+    日）。此方法在之前的研究 [18] 中也有使用。
+
+
+    - 2) 数据集：我们使用 2020 年 4 月的 OpenWPM [20] 搭配原生 Firefox 爬取了 Alexa Top 300k 中之前检测到基于
+    CNAME 匿装的追踪的 1,762 个站点 [18]。我们还爬取了从所有不包含基于 CNAME 匿装的追踪的站点中随机选取的 1,762 个站点 [18]。存储的数据是每个站点的所有
+    HTTP/HTTPS 请求及其响应。然后，将该方法（§ III-B1）应用于存储的爬取数据，我们发现 1,532 个站点中的 4,047 个 HTTP 请求使用了基于
+    CNAME 匿装的追踪¹。
+
+
+    我们还依赖另一个数据集，该数据集是在 2018 年 4 月使用 OpenWPM [20] 爬取的 Alexa Top 100K 站点。我们检查了 Rapid7
+    [21] 提供的历史前向 DNS（FDNS）数据集，并将 § III-B1 中的方法论应用于此历史数据以检测基于 CNAME 匿装的追踪。我们发现 1,005
+    个站点中的 2,546 个 HTTP 请求与基于 CNAME 匿装的追踪相关。我们还从该数据集中使用 1,005 个额外随机选取的不包含 CNAME 匿装的站点来分析
+    § IV-C 中的概念漂移。2020 年数据集和 2018 年数据集的详细信息列于表 I 中。
+
+
+    表 I
+
+
+    数据摘要：2018 年 2,010 个站点和 2020 年 3,524 个站点。
+
+
+    | 指标 | 2018 | 2020 |
+
+    |---|---|---|
+
+    | 第三方请求 | 185,896 (62.2%) | 276,686 (63.8%) |
+
+    | 第一方请求域名 | 60,278 (20.2%) | 120,689 (27.8%) |
+
+    | 子域 | 52,476 (17.6%) | 36,399 (8.4%) |
+
+    | 请求总数 | 298,649 (100%) | 433,774 (100%) |
+
+    | 站点总数 | 2,010 | 3,524 |
+
+
+    ## C. 特征提取
+
+
+    我们通过实验提取了与站点和请求相关的以下特征。
+
+
+    ¹数据集可于 https://github.com/fukuda-lab/cname-cloaking 获取
+
+
+    ### 1) 发生与 CNAME 匿装相关追踪的站点：
+
+
+    - num_url：站点中的 HTTP 请求总数。
+
+    - num_1st：站点中的第一方请求总数。
+
+    - num_3rd：站点中的第三方请求总数。
+
+    - pct_script_call：站点中与指纹识别相关的方法调用比例。
+
+    - pct_xhr：站点中 XMLHttpRequest 的比例，这是浏览器内置对象，可用于在 JavaScript 中发出 HTTP 请求，以便在 Web
+    浏览器和服务器之间交换数据。
+
+    - pct_3rd_window：窗口层次结构中源自第三方 DOM 窗口的请求比例 [22]。
+
+    - ranking：根据 Alexa 排名 [23] 的站点排名。
+
+    - country：基于 Free IP Geolocation API [24] 的站点所在国家。
+
+    - category：根据 2020 年 4 月的 FortiGuard Web Filtering [25] 数据集的站点类别。
+
+
+    ### 2) 与 CNAME 匿装相关追踪关联的请求：
+
+
+    - method：针对给定请求期望执行的操作。
+
+    - is_xhr：该请求使用一种 API，该 API 提供脚本化的客户端功能，用于在客户端和服务器之间传输数据。
+
+    - content_type：导致请求的 HTML 标签，例如 image、javascript 或 document，这些标签在此 IDL [22] 中定义。
+
+    - len_url：请求 URL 的长度。
+
+    - len_sub：请求的子域长度。
+
+    - len_prefix_sub：请求的子域前缀长度。
+
+    - num_prefix_sub：子域前缀的数量。
+
+    - prefix_sub_blacklist：子域前缀位于追踪过滤列表 [14] [19] 的子域前缀中。
+
+    - is_sub_dic：子域前缀是英语字典中的单词。
+
+    - entropy_url：通过从请求 URL 计算度量熵得到的请求 URL 的随机性。
+
+    - entropy_sub：通过从子域计算度量熵得到的子域的随机性。
+
+    - entropy_prefix_sub：通过从子域前缀计算度量熵得到的子域前缀的随机性。
+
+
+    ## D. 建模与初步结果
+
+
+    首先，我们将 2020 年数据集（表 I）分割为测试数据和训练数据。用于测试的数据占比为 20%。它将在 § IV-A 中用于评估我们的模型。接下来，我们描述如何使用测试数据（2020
+    年数据集的 80%）构建分类模型以检测基于 CNAME 匿装的追踪。
+
+
+    ### 1) 模型交叉验证：
+
+
+    我们将训练数据集随机分割为 10 个较小的子集（折叠），且不放回抽样，其中九个折叠用于模型训练，剩余一个折叠用于验证。通过重复此过程十次获得 10 个性能估计值后，我们取其平均值作为最终性能估计值。随后，我们比较
+    10 种分类算法，并使用分层交叉验证过程在训练数据（2020 年数据集的 80%）上评估其 F1 分数。我们使用 scikit-learn 模块中的 10
+    种有监督分类算法（random_state = 2，使用默认参数）：
+
+
+    - 支持向量分类 (SVC)
+
+    - 决策树
+
+    - AdaBoost
+
+    - 随机森林
+
+    - 极端随机树
+
+    - 梯度提升
+
+    - 多层感知机 (MLP)
+
+    - K 近邻 (KNN)
+
+    - 逻辑回归
+
+    - 线性判别分析 (LDA)
+
+
+    我们使用 F1 分数来评估分类器的性能。F1 分数越大（≈ 1.0）表示性能越好，值越小（≈ 0）表示性能越差。图 3(a) 显示了在 2020 年数据集中，使用
+    10 折分层交叉验证对 10 种选定算法针对发生 CNAME 匿装相关追踪的站点进行检测时的 F1 分数。所有分类算法的检测性能各不相同。最有效的分类算法是随机森林、极端随机树和梯度提升，而支持向量分类、多层感知机和
+    K 近邻在该数据集上表现中等。
+
+
+    图 3(b) 显示了检测与 CNAME 匿装相关追踪关联的请求时的 F1 分数。最有效的分类算法是随机森林和极端随机树，而 SVC 表现最差。
+
+
+    ### 2) 最佳模型的超参数调优：
+
+
+    根据之前的性能评估，我们为站点分类检测的超参数调优阶段选择了 RandomForest、ExtraTrees 和 GradientBoosting 分类器。对于请求，我们选择随机森林和极端随机树分类器。
+
+
+    我们针对 F1 分数对它们全部进行了网格搜索优化。在训练数据上效果最佳的参数设置如表 II 所示。
+
+
+    表 II
+
+
+    | 算法 | 参数 | 站点 | 请求 |
+
+    |---|---|---|---|
+
+    | 随机森林 | max_features<br>min_samples_split<br>min_samples_leaf<br>n_estimators
+    | 1<br>8<br>3<br>100 | 1<br>2<br>1<br>300 |
+
+    | 极端随机树 | max_features<br>min_samples_split<br>min_samples_leaf<br>n_estimators
+    | 10<br>2<br>3<br>300 | 1<br>2<br>1<br>100 |
+
+    | 梯度提升 | max_features<br>min_samples_leaf<br>n_estimators<br>learning_rate<br>max_depth
+    | 0.3<br>100<br>300<br>0.2<br>8 | 未选中 |
+
+
+    ### 3) 模型组合：
+
+
+    现在，我们有一组性能良好的模型，用于检测与基于 CNAME 匿装的追踪相关的站点和请求。为了平衡各自的弱点，我们组合在概念上不同的机器学习分类算法，并使用预测概率之和来预测类别标签。
+
+
+    因此，我们使用带软投票的 VotingClassifier 来组合来自以下有监督分类算法的预测：用于检测站点的 RandomForest、ExtraTrees
+    和 GradientBoosting，以及用于检测请求的 RandomForest 和 ExtraTrees。各独立算法和组合模型的性能将在下一节中讨论。
+
+
+    ## IV. 分类性能分析
+
+
+    我们就检测基于 CNAME 匿装的追踪问题评估我们的模型和特征重要性。我们还使用 2018 年至 2020 年的数据集研究概念漂移。
+
+
+    ### A. 总体结果
+
+
+    ### 1) 模型性能：
+
+
+    表 III 和表 IV 显示了在 2020 年数据集的 20%（保留用于此测试）上使用测试集针对与基于 CNAME 匿装的追踪检测相关的站点和请求所获得的结果。我们首先表明，对于站点和请求，超参数调优后所有分类算法的
+    F1 分数均略有提升。接下来，组合模型在检测站点时达到 0.790 的 F1 分数，在检测请求时达到 0.885 的 F1 分数。这些结果表明，组合模型在检测与基于
+    CNAME 匿装的追踪相关的站点方面与其他分类器表现相似，但组合模型在检测请求方面效果更好。为了便于后续结果比较，我们将在后续分析中使用组合模型。
+
+
+    在检查假阴性时，我们发现，某些与 CNAME 匿装关联的站点/请求与没有基于 CNAME 匿装的追踪的站点/请求具有相同的属性。例如，与追踪提供商 Adobe
+    关联的 healthpartners.com，仅有六个脚本，且该站点中 XMLHttpRequest 的比例为 0.07。对于请求，请求 https://gjr5.yoigo.com/ea.js
+    指向追踪提供商 Eulerian；其前缀 gjr5 不在黑名单中，且不包含任何用户标识。然而，我们认为，如果爬取更多与追踪提供商 Eulerian 关联的请求数据，我们可以将此请求分类为基于
+    CNAME 匿装的追踪。
+
+
+    表 III
+
+
+    | 指标 | RandomForest 默认/调优 | ExtraTree 默认/调优 | GradientBoosting 默认/调优 | 组合 |
+
+    |---|---|---|---|---|
+
+    | 精确率 | 0.777/0.784 | 0.771/0.763 | 0.781/0.801 | 0.794 |
+
+    | 召回率 | 0.730/0.748 | 0.736/0.770 | 0.779/0.782 | 0.785 |
+
+    | F1 分数 | 0.753/0.766 | 0.753/0.766 | 0.780/0.791 | 0.790 |
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_4_0.png)
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_4_1.png)
+
+
+    Fig. 3. The F1 score for the 10 selected classification algorithms using 10-fold
+    stratified cross-validation in 2020 dataset regarding the detection of CNAME cloaking-based
+    tracking. The mean and standard deviation are computed on the 10 folds of the
+    cross-validation.
+
+
+    # TABLE IV RESULTS OBTAINED USING THE TEST SET FOR REQUEST LINKED TO CNAME CLOAKING-BASED
+    TRACKING DETECTION.
+
+
+    | Score | Random Forest Default/Tuned | ExtraTree Default/Tuned | Combined |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Precision | 0.940/0.935 | 0.928/0.949 | _0.949_ |
+
+    | Recall | 0.807/0.830 | 0.811/0.802 | _0.828_ |
+
+    | F1 score | 0.869/0.879 | 0.866/0.870 | _0.885_ |
+
+
+    2) Comparison with the well-known tracking filter lists: To block CNAME cloaking-based
+    tracking without DNS resolution, well-known tracking filter lists such as the
+    EasyPrivacy list and the AdGuard tracking filter list include the first-party
+    subdomains which are fronts for CNAME cloaking. We compare the request detection
+    performance between our machine learning approach and these tracking filter lists
+    in Table V. We confirm that our method outperforms the evaluated blocking lists.
+    Meanwhile, almost all browsers (except Firefox) do not provide a DNS resolution
+    API which is critical CNAME cloaking-based tracking detection [18]. Beyond automating
+    blacklist building, our approach is thus especially helpful to block CNAME cloaking-based
+    tracking.
+
+
+    # TABLE V A COMPARISON OF REQUEST DETECTION PERFORMANCE.
+
+
+    | Method | Precision | Recall | F1 score |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Machine learning | **0.949** | **0.828** | **0.885** |
+
+    | Easy Privacy list | 0.880 | 0.721 | 0.792 |
+
+    | Adguard tracking filter | 0.918 | 0.417 | 0.574 |
+
+
+    # B. Feature permutation importance
+
+
+    We investigate the permutation importance [26] to discuss the feature importance
+    of the selected classifier. Figure 4(a) represents the feature permutation importance
+    regarding site detection. We observe that the number of script (num_script) and
+    the proportion of XMLHttpRequest requests (pct_xhr) are the most useful features.
+    In addition, tracking providers are spread across different types of sites [18],
+    site category (category) and site country (country) are thus not helpful in detecting
+    sites with CNAME cloaking-related tracking occurring.
+
+
+    Figure 4(b) shows the feature permutation importance of the model for detecting
+    the requests. The result reveals that the length of request URL (len_url) has
+    the highest importance. We assume that almost requests with a subdomain used for
+    CNAME cloaking-based tracking have a bigger length than the request used for collecting
+    content of site, because they contain user'' identification. Also, the subdomain
+    prefix length (len_prefix_sub), the XHR usage request (is_xhr), and the randomness
+    of URL request (entropy_url) are discriminative features for request detection.
+    In addition to that, the sub-domain prefix blacklist presence (prefix_sub_blacklist)
+    is not effective to detect requests. This is because some publishers also use
+    the same subdomain prefix that is used for both CNAME cloaking and other non-tracking
+    resources.
+
+
+    # C. Concept drift analysis
+
+
+    Finally, we investigate the ability to detect sites and requests related to CNAME
+    cloaking-based tracking in the latest dataset (2020) using a model trained on
+    the old dataset (2018). We use the 2018 dataset to train a model and test it on
+    new data collected in 2020 (Table I). We apply the method explained in § III-D
+    to build a model and obtain the results in Table VI.
+
+
+    # TABLE VI RESULTS OBTAINED USING THE NEW SITE/REQUEST IN 2020 DATASET TO EVALUATE
+    THE 2018 DATASET MODEL.
+
+
+    | Instance type | Precision | Recall | F1 score |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Site | 0.608 | 0.787 | 0.686 |
+
+    | Request | 0.935 | 0.558 | 0.699 |
+
+
+    Our result shows that the performance degradation is limited. Specifically, F1
+    score for sites with CNAME cloaking-related tracking decreases by 0.104, and by
+    0.186 for requests. To explain this degradation, we examine the 2018 and 2020
+    datasets. In 2018, we do not see many random subdomain prefixes and short requests,
+    while it is the case in 2020. For sites, we observe a decreasing number of requests,
+    including third and first-party request for each site in the 2020 dataset. These
+    changes can be plausible reasons for the degradation in our model. Besides that,
+    with rapid changes of web technology, tracking providers might also adjust their
+    target site and change'
+  - '[PAGE 5]
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_5_0.png)
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_5_1.png)
+
+
+    (a) Site linked to CNAME cloaking-based tracking.
+
+
+    (b) Request linked to CNAME cloaking-based tracking.
+
+
+    Fig. 4. Permutation importance of the combined model for CNAME cloaking-related
+    tracking occurring. The box extends from the lower to upper quartile values of
+    the data, with a line at the median. The number of times a feature is randomly
+    shuffled is n_repeats = 10.
+
+
+    the implementation methods to deploy CNAME cloaking-based tracking. Although the
+    performance degradation is limited between 2018 and 2020, periodic model retraining
+    can alleviate this problem if more detection accuracy is required.
+
+
+    +   [7] R. Hill. (2014) ublock origin - an efficient blocker for chromium and
+    firefox. fast and lean. [Online]. Available: https://github.com/gorhill/uBlock
+
+    +   [8] Q. Wu, Q. Liu, Y. Zhang, and G. Wen, "Trackerdetector: A system to detect
+    third-party trackers through machine learning," Computer Networks, vol. 91, pp.
+    164–173, 2015.
+
+    +   [9] H. Metwalley, S. Traverso, and M. Mellia, "Unsupervised detection of web
+    trackers," in IEEE Globecom’15, 2015, pp. 1–6.
+
+    +   [10] N. Kushmerick, "Learning to remove internet advertisements," in Proceedings
+    of the third annual conference on Autonomous Agents, 1999, pp. 175–181.
+
+    +   [11] F. Roesner, T. Kohno, and D. Wetherall, "Detecting and defending against
+    third-party tracking on the web," in USENIX NSDI’12, 2012, pp. 1–12.
+
+    +   [12] X. Pan, Y. Cao, and Y. Chen, "I do not know what you visited last summer
+    protecting users from third-party web tracking with trackingfree browser," in
+    NDSS’15, 2015, pp. 1–16.
+
+    +   [13] (2014) Privacy badger — electronic frontier foundation. [Online]. Available:
+    https://www.eff.org/privacybadger
+
+    +   [14] (2014) Adguard tracking protection filter. [Online]. Available: https://filters.adty.org/extension/chromium/filters/3.txt
+
+    +   [15] (2019) Data collection cnames and cross-domain tracking. [Online]. Available:
+    https://docs.adobe.com/content/help/en/id-service/using/reference/analytics-reference/cname.html
+
+    +   [16] A. Yamada, M. Hara, and Y. Miiyake, "Web tracking site detection based
+    on temporal link analysis," in IEEE AINA’10 Workshop, 2010, pp. 626–631.
+
+    +   [17] S. Schelter and J. Kunegis, "Tracking the trackers: A large-scale analysis
+    of embedded web trackers," in AAAI IWCSM’16, 2016, pp. 679–682.
+
+    +   [18] H. Dao, J. Mazel, and K. Fukuda, "Characterizing cnname cloaking-based
+    tracking on the web," in IEEE/IFIP TMA’20, 2020, pp. 1–9.
+
+    +   [19] (2006) Easyprivacy. [Online]. Available: https://easylist.to/easylist/easyprivacy.txt
+
+    +   [20] S. Englehardt and A. Narayanan, "Online tracking: A 1-million-site measurement
+    and analysis," in ACM CCS’16, 2016, pp. 1388–1401.
+
+    +   [21] Rapid7 open data, forward dns (fdns). [Online]. Available: https://opendata.rapid7.com/sonar.fdns_v2/
+
+    +   [22] base - mozsearch. [Online]. Available: https://searchfox.org/mozilla-central/source/dom/base/
+
+    +   [23] (1996) The top 500 sites on the web. [Online]. Available: https://www.alexa.com/topsites
+
+    +   [24] (unknown) Free ip geolocation api. [Online]. Available: https://freegeoip.app/
+
+    +   [25] (2005) Fortiguard web filtering. [Online]. Available: https://fortiguard.com/webfilter
+
+    +   [26] L. Breiman, "Random forests," Machine learning, pp. 5–32, 2001.
+
+
+    # V. CONCLUSION AND DISCUSSION
+
+
+    Recently, CNAME cloaking-based tracking on the web has attracted much attention.
+    The current best countermeasure, blacklist approach, strongly dependant on realtime
+    name resolution. In this paper, we proposed a machine learning approach to detect
+    sites and HTTP requests containing CNAME cloaking-based tracking. Through the
+    comprehensive analysis, we demonstrated the effectiveness of our method.
+
+
+    The proposed method complements existing techniques for CNAME cloaking-based tracking
+    detection and it can help researchers, browser extensions developers, and blacklist
+    maintainers to build highly effective systems against this tracking technique.
+    Once tracking providers know the existence of the proposed detection methodology,
+    they could attempt to evade it. In future work, we intend to add new features
+    to improve our detection performance.
+
+
+    # ACKNOWLEDGEMENT
+
+
+    We thank Johan Mazel for his valuable comments.
+
+
+    # REFERENCES
+
+
+    +   [1] J. R. Mayer and J. C. Mitchell, "Third-party web tracking: Policy and
+    technology," in IEEE S&P’12, 2012, pp. 413–427.
+
+    +   [2] G. Acar, C. Eubank, S. Englehardt, M. Juarez, A. Narayanan, and C. Diaz,
+    "The web never forgets: Persistent tracking mechanisms in the wild," in ACM CCS’14,
+    2014, pp. 674–689.
+
+    +   [3] T.-F. Yen, Y. Xie, F. Yu, R. P. Yu, and M. Abadi, "Host fingerprinting
+    and tracking on the web: Privacy and security implications," in NDSS’12, 2012,
+    pp. 1–16.
+
+    +   [4] H. Metwalley, S. Traverso, M. Mellia, S. Miskovic, and M. Baldi, "The
+    online tracking horde: a view from passive measurements," in IEEE/IFIP TMA’15,
+    2015, pp. 111–125.
+
+    +   [5] (2019) Ghostery makes the web cleaner, faster and safer! [Online]. Available:
+    https://www.ghostery.com/
+
+    +   [6] (2009) Disconnect. [Online]. Available: https://disconnect.me/'
+  md: '
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_4_0.png)
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_4_1.png)
+
+
+    Fig. 3. The F1 score for the 10 selected classification algorithms using 10-fold
+    stratified cross-validation in 2020 dataset regarding the detection of CNAME cloaking-based
+    tracking. The mean and standard deviation are computed on the 10 folds of the
+    cross-validation.
+
+
+    ## TABLE IV RESULTS OBTAINED USING THE TEST SET FOR REQUEST LINKED TO CNAME CLOAKING-BASED
+    TRACKING DETECTION.
+
+
+    | Score | Random Forest Default/Tuned | ExtraTree Default/Tuned | Combined |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Precision | 0.940/0.935 | 0.928/0.949 | _0.949_ |
+
+    | Recall | 0.807/0.830 | 0.811/0.802 | _0.828_ |
+
+    | F1 score | 0.869/0.879 | 0.866/0.870 | _0.885_ |
+
+
+    - 2) Comparison with the well-known tracking filter lists: To block CNAME cloaking-based
+    tracking without DNS resolution, well-known tracking filter lists such as the
+    EasyPrivacy list and the AdGuard tracking filter list include the first-party
+    subdomains which are fronts for CNAME cloaking. We compare the request detection
+    performance between our machine learning approach and these tracking filter lists
+    in Table V. We confirm that our method outperforms the evaluated blocking lists.
+    Meanwhile, almost all browsers (except Firefox) do not provide a DNS resolution
+    API which is critical CNAME cloaking-based tracking detection [18]. Beyond automating
+    blacklist building, our approach is thus especially helpful to block CNAME cloaking-based
+    tracking.
+
+
+    ## TABLE V A COMPARISON OF REQUEST DETECTION PERFORMANCE.
+
+
+    | Method | Precision | Recall | F1 score |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Machine learning | **0.949** | **0.828** | **0.885** |
+
+    | EasyPrivacy list | 0.880 | 0.721 | 0.792 |
+
+    | AdGuard tracking filter | 0.918 | 0.417 | 0.574 |
+
+
+    ## B. Feature permutation importance
+
+
+    We investigate the permutation importance [26] to discuss the feature importance
+    of the selected classifier. Figure 4(a) represents the feature permutation importance
+    regarding site detection. We observe that the number of script (num_script) and
+    the proportion of XMLHttpRequest requests (pct_xhr) are the most useful features.
+    In addition, tracking providers are spread across different types of sites [18],
+    site category (category) and site country (country) are thus not helpful in detecting
+    sites with CNAME cloaking-related tracking occurring.
+
+
+    Figure 4(b) shows the feature permutation importance of the model for detecting
+    the requests. The result reveals that the length of request URL (len_url) has
+    the highest importance. We assume that almost requests with a subdomain used for
+    CNAME cloaking-based tracking have a bigger length than the request used for collecting
+    content of site, because they contain users'' identification. Also, the subdomain
+    prefix length (len_prefix_sub), the XHR usage request (is_xhr), and the randomness
+    of URL request (entropy_url) are discriminative features for request detection.
+    In addition to that, the sub-domain prefix blacklist presence (prefix_sub_blacklist)
+    is not effective to detect requests. This is because some publishers also use
+    the same subdomain prefix that is used for both CNAME cloaking and other non-tracking
+    resources.
+
+
+    ## C. Concept drift analysis
+
+
+    Finally, we investigate the ability to detect sites and requests related to CNAME
+    cloaking-based tracking in the latest dataset (2020) using a model trained on
+    the old dataset (2018). We use the 2018 dataset to train a model and test it on
+    new data collected in 2020 (Table I). We apply the method explained in § III-D
+    to build a model and obtain the results in Table VI.
+
+
+    ## TABLE VI RESULTS OBTAINED USING THE NEW SITE/REQUEST IN 2020 DATASET TO EVALUATE
+    THE 2018 DATASET MODEL.
+
+
+    | Instance type | Precision | Recall | F1 score |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Site | 0.608 | 0.787 | 0.686 |
+
+    | Request | 0.935 | 0.558 | 0.699 |
+
+
+    Our result shows that the performance degradation is limited. Specifically, F1
+    score for sites with CNAME cloaking-related tracking decreases by 0.104, and by
+    0.186 for requests. To explain this degradation, we examine the 2018 and 2020
+    datasets. In 2018, we do not see many random subdomain prefixes and short requests,
+    while it is the case in 2020. For sites, we observe a decreasing number of requests,
+    including third and first-party requests for each site in the 2020 dataset. These
+    changes can be plausible reasons for the degradation in our model. Besides that,
+    with rapid changes of web technology, tracking providers might also adjust their
+    target site and change
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_5_0.png)
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_5_1.png)
+
+
+    (a) Site linked to CNAME cloaking-based tracking.
+
+
+    (b) Request linked to CNAME cloaking-based tracking.
+
+
+    Fig. 4. Permutation importance of the combined model for CNAME cloaking-related
+    tracking occurring. The box extends from the lower to upper quartile values of
+    the data, with a line at the median. The number of times a feature is randomly
+    shuffled is n_repeats = 10.
+
+
+    the implementation methods to deploy CNAME cloaking-based tracking. Although the
+    performance degradation is limited between 2018 and 2020, periodic model retraining
+    can alleviate this problem if more detection accuracy is required.
+
+
+    - [7] R. Hill. (2014) uBlock origin - an efficient blocker for chromium and firefox.
+    fast and lean. [Online]. Available: https://github.com/gorhill/uBlock
+
+    - [8] Q. Wu, Q. Liu, Y. Zhang, and G. Wen, "Trackerdetector: A system to detect
+    third-party trackers through machine learning," Computer Networks, vol. 91, pp.
+    164–173, 2015.
+
+    - [9] H. Metwalley, S. Traverso, and M. Mellia, "Unsupervised detection of web
+    trackers," in IEEE Globecom’15, 2015, pp. 1–6.
+
+    - [10] N. Kushmerick, "Learning to remove internet advertisements," in Proceedings
+    of the third annual conference on Autonomous Agents, 1999, pp. 175–181.
+
+    - [11] F. Roesner, T. Kohno, and D. Wetherall, "Detecting and defending against
+    third-party tracking on the web," in USENIX NSDI’12, 2012, pp. 1–12.
+
+    - [12] X. Pan, Y. Cao, and Y. Chen, "I do not know what you visited last summer
+    protecting users from third-party web tracking with trackingfree browser," in
+    NDSS’15, 2015, pp. 1–16.
+
+    - [13] (2014) Privacy badger — electronic frontier foundation. [Online]. Available:
+    https://www.eff.org/privacybadger
+
+    - [14] (2014) AdGuard tracking protection filter. [Online]. Available: https://filters.adty.org/extension/chromium/filters/3.txt
+
+    - [15] (2019) Data collection cnames and cross-domain tracking. [Online]. Available:
+    https://docs.adobe.com/content/help/en/id-service/using/reference/analytics-reference/cname.html
+
+    - [16] A. Yamada, M. Hara, and Y. Miyake, "Web tracking site detection based on
+    temporal link analysis," in IEEE AINA’10 Workshop, 2010, pp. 626–631.
+
+    - [17] S. Schelter and J. Kunegis, "Tracking the trackers: A large-scale analysis
+    of embedded web trackers," in AAAI IWCSM’16, 2016, pp. 679–682.
+
+    - [18] H. Dao, J. Mazel, and K. Fukuda, "Characterizing CNAME cloaking-based tracking
+    on the web," in IEEE/IFIP TMA’20, 2020, pp. 1–9.
+
+    - [19] (2006) EasyPrivacy. [Online]. Available: https://easylist.to/easylist/easyprivacy.txt
+
+    - [20] S. Englehardt and A. Narayanan, "Online tracking: A 1-million-site measurement
+    and analysis," in ACM CCS’16, 2016, pp. 1388–1401.
+
+    - [21] Rapid7 open data, forward dns (fdns). [Online]. Available: https://opendata.rapid7.com/sonar.fdns_v2/
+
+    - [22] base - mozsearch. [Online]. Available: https://searchfox.org/mozilla-central/source/dom/base/
+
+    - [23] (1996) The top 500 sites on the web. [Online]. Available: https://www.alexa.com/topsites
+
+    - [24] (unknown) Free ip geolocation api. [Online]. Available: https://freegeoip.app/
+
+    - [25] (2005) Fortiguard web filtering. [Online]. Available: https://fortiguard.com/webfilter
+
+    - [26] L. Breiman, "Random forests," Machine learning, pp. 5–32, 2001.
+
+
+    ## V. CONCLUSION AND DISCUSSION
+
+
+    Recently, CNAME cloaking-based tracking on the web has attracted much attention.
+    The current best countermeasure, blacklist approach, strongly dependant on realtime
+    name resolution. In this paper, we proposed a machine learning approach to detect
+    sites and HTTP requests containing CNAME cloaking-based tracking. Through the
+    comprehensive analysis, we demonstrated the effectiveness of our method.
+
+
+    The proposed method complements existing techniques for CNAME cloaking-based tracking
+    detection and it can help researchers, browser extensions developers, and blacklist
+    maintainers to build highly effective systems against this tracking technique.
+    Once tracking providers know the existence of the proposed detection methodology,
+    they could attempt to evade it. In future work, we intend to add new features
+    to improve our detection performance.
+
+
+    ## ACKNOWLEDGEMENT
+
+
+    We thank Johan Mazel for his valuable comments.
+
+
+    ## REFERENCES
+
+
+    - [1] J. R. Mayer and J. C. Mitchell, "Third-party web tracking: Policy and technology,"
+    in IEEE S&P’12, 2012, pp. 413–427.
+
+    - [2] G. Acar, C. Eubank, S. Englehardt, M. Juarez, A. Narayanan, and C. Diaz,
+    "The web never forgets: Persistent tracking mechanisms in the wild," in ACM CCS’14,
+    2014, pp. 674–689.
+
+    - [3] T.-F. Yen, Y. Xie, F. Yu, R. P. Yu, and M. Abadi, "Host fingerprinting and
+    tracking on the web: Privacy and security implications," in NDSS’12, 2012, pp.
+    1–16.
+
+    - [4] H. Metwalley, S. Traverso, M. Mellia, S. Miskovic, and M. Baldi, "The online
+    tracking horde: a view from passive measurements," in IEEE/IFIP TMA’15, 2015,
+    pp. 111–125.
+
+    - [5] (2019) Ghostery makes the web cleaner, faster and safer! [Online]. Available:
+    https://www.ghostery.com/
+
+    - [6] (2009) Disconnect. [Online]. Available: https://disconnect.me/
+
+    '
+  mdcn: '
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_4_0.png)
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_4_1.png)
+
+
+    图 3. 2020 数据集中，使用 10 折分层交叉验证对 10 种选定分类算法的 F1 分数进行评估，用于检测基于 CNAME 伪装的跟踪。均值和标准差是在交叉验证的
+    10 折上计算得出的。
+
+
+    ## TABLE IV 基于测试集获取的用于检测与 CNAME 伪装相关的跟踪请求的结果。
+
+
+    | Score | Random Forest Default/Tuned | ExtraTree Default/Tuned | Combined |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Precision | 0.940/0.935 | 0.928/0.949 | _0.949_ |
+
+    | Recall | 0.807/0.830 | 0.811/0.802 | _0.828_ |
+
+    | F1 score | 0.869/0.879 | 0.866/0.870 | _0.885_ |
+
+
+    - 2) 与知名跟踪过滤列表的比较：为在不进行 DNS 解析的情况下阻止基于 CNAME 伪装的跟踪，EasyPrivacy 列表和 AdGuard 跟踪过滤列表等知名跟踪过滤列表包含作为
+    CNAME 伪装幌子的第一方子域。我们在表 V 中比较了我们的机器学习方法与这些跟踪过滤列表的请求检测性能。我们确认，我们的方法优于所评估的阻止列表。与此同时，几乎所有浏览器（Firefox
+    除外）都不提供 DNS 解析 API，而这对于基于 CNAME 伪装的跟踪检测至关重要 [18]。除了自动化黑名单构建之外，我们的方法因此对于阻止基于 CNAME
+    伪装的跟踪尤其有帮助。
+
+
+    ## TABLE V 请求检测性能比较。
+
+
+    | Method | Precision | Recall | F1 score |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Machine learning | **0.949** | **0.828** | **0.885** |
+
+    | EasyPrivacy list | 0.880 | 0.721 | 0.792 |
+
+    | AdGuard tracking filter | 0.918 | 0.417 | 0.574 |
+
+
+    ## B. 特征置换重要性
+
+
+    我们调查了置换重要性 [26] 以讨论所选分类器的特征重要性。图 4(a) 表示与站点检测相关的特征置换重要性。我们观察到，脚本数量 (num_script)
+    和 XMLHttpRequest 请求的比例 (pct_xhr) 是最有用的特征。此外，跟踪提供商分布在不同类型的站点上 [18]，因此站点类别 (category)
+    和站点国家 (country) 对检测发生 CNAME 伪装相关跟踪的站点没有帮助。
+
+
+    图 4(b) 显示了用于检测请求的模型的特征置换重要性。结果表明，请求 URL 长度 (len_url) 具有最高重要性。我们假设，几乎所有用于基于 CNAME
+    伪装的跟踪的子域请求长度都大于用于收集站点内容的请求长度，因为它们包含用户的标识。此外，子域前缀长度 (len_prefix_sub)、XHR 使用请求 (is_xhr)
+    和 URL 请求的随机性 (entropy_url) 是请求检测的区分特征。除此之外，子域前缀黑名单存在 (prefix_sub_blacklist) 对检测请求无效。这是因为一些发布者也使用相同的子域前缀，该前缀既用于
+    CNAME 伪装，也用于其他非跟踪资源。
+
+
+    ## C. 概念漂移分析
+
+
+    最后，我们调查了使用在旧数据集 (2018) 上训练的模型，在最新数据集 (2020) 中检测与基于 CNAME 伪装的跟踪相关的站点和请求的能力。我们使用
+    2018 数据集训练模型，并在 2020 年收集的新数据上对其进行测试 (表 I)。我们应用 III-D 节中解释的方法构建模型，并获得表 VI 中的结果。
+
+
+    ## TABLE VI 使用 2020 数据集中的新站点/请求评估 2018 数据集模型所获得的结果。
+
+
+    | Instance type | Precision | Recall | F1 score |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Site | 0.608 | 0.787 | 0.686 |
+
+    | Request | 0.935 | 0.558 | 0.699 |
+
+
+    我们的结果表明，性能下降有限。具体而言，具有与 CNAME 伪装相关跟踪的站点的 F1 分数下降了 0.104，请求下降了 0.186。为解释这种下降，我们考察了
+    2018 和 2020 数据集。在 2018 年，我们没有看到许多随机子域前缀和短请求，而在 2020 年则是这种情况。对于站点，我们观察到 2020 数据集中每个站点的请求数量（包括第三方和第一方请求）减少。这些变化可能是我们模型性能下降的合理原因。除此之外，随着
+    Web 技术的快速变化，跟踪提供商也可能调整其目标站点并更改
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_5_0.png)
+
+
+    ![](img/c2a5bacf959b7153149e0b560c03e8c2_5_1.png)
+
+
+    (a) 与基于 CNAME 伪装的跟踪相关的站点。
+
+
+    (b) 与基于 CNAME 伪装的跟踪相关的请求。
+
+
+    图 4. 用于 CNAME 伪装相关跟踪发生的组合模型的置换重要性。框从数据的下四分位数延伸到上四分位数，中位数处有一条线。特征被随机打乱的次数为 n_repeats
+    = 10。
+
+
+    部署基于 CNAME 伪装的跟踪的实现方法。虽然 2018 年和 2020 年之间的性能下降有限，但如果需要更高的检测精度，定期重新训练模型可以缓解这一问题。
+
+
+    - [7] R. Hill. (2014) uBlock origin - 适用于 Chromium 和 Firefox 的高效拦截器。快速且轻量。[Online].
+    Available: https://github.com/gorhill/uBlock
+
+    - [8] Q. Wu, Q. Liu, Y. Zhang, and G. Wen, "Trackerdetector：一种通过机器学习检测第三方跟踪器的系统,"
+    Computer Networks, vol. 91, pp. 164–173, 2015.
+
+    - [9] H. Metwalley, S. Traverso, and M. Mellia, "Web 跟踪器的无监督检测," in IEEE Globecom’15,
+    2015, pp. 1–6.
+
+    - [10] N. Kushmerick, "学习删除互联网广告," in Proceedings of the third annual conference
+    on Autonomous Agents, 1999, pp. 175–181.
+
+    - [11] F. Roesner, T. Kohno, and D. Wetherall, "检测和防御 Web 上的第三方跟踪," in USENIX
+    NSDI’12, 2012, pp. 1–12.
+
+    - [12] X. Pan, Y. Cao, and Y. Chen, "我不知道你去年夏天访问了什么：使用 TrackingFree 浏览器保护用户免受第三方
+    Web 跟踪," in NDSS’15, 2015, pp. 1–16.
+
+    - [13] (2014) 隐私獾 — 电子前沿基金会。[Online]. Available: https://www.eff.org/privacybadger
+
+    - [14] (2014) AdGuard 跟踪保护过滤器。[Online]. Available: https://filters.adty.org/extension/chromium/filters/3.txt
+
+    - [15] (2019) 数据收集 CNAME 和跨域跟踪。[Online]. Available: https://docs.adobe.com/content/help/en/id-service/using/reference/analytics-reference/cname.html
+
+    - [16] A. Yamada, M. Hara, and Y. Miyake, "基于时间链接分析的 Web 跟踪站点检测," in IEEE AINA’10
+    Workshop, 2010, pp. 626–631.
+
+    - [17] S. Schelter and J. Kunegis, "追踪跟踪器：嵌入式 Web 跟踪器的大规模分析," in AAAI IWCSM’16,
+    2016, pp. 679–682.
+
+    - [18] H. Dao, J. Mazel, and K. Fukuda, "Web 上基于 CNAME 伪装的跟踪特征分析," in IEEE/IFIP
+    TMA’20, 2020, pp. 1–9.
+
+    - [19] (2006) EasyPrivacy。[Online]. Available: https://easylist.to/easylist/easyprivacy.txt
+
+    - [20] S. Englehardt and A. Narayanan, "在线跟踪：100 万个站点的测量与分析," in ACM CCS’16, 2016,
+    pp. 1388–1401.
+
+    - [21] Rapid7 开放数据，正向 DNS (fdns)。[Online]. Available: https://opendata.rapid7.com/sonar.fdns_v2/
+
+    - [22] base - mozsearch。[Online]. Available: https://searchfox.org/mozilla-central/source/dom/base/
+
+    - [23] (1996) Web 上排名前 500 的站点。[Online]. Available: https://www.alexa.com/topsites
+
+    - [24] (unknown) 免费 IP 地理位置 API。[Online]. Available: https://freegeoip.app/
+
+    - [25] (2005) Fortiguard Web 过滤。[Online]. Available: https://fortiguard.com/webfilter
+
+    - [26] L. Breiman, "随机森林," Machine learning, pp. 5–32, 2001.
+
+
+    ## V. 结论与讨论
+
+
+    最近，Web 上基于 CNAME 伪装的跟踪引起了广泛关注。当前最佳对策是黑名单方法，该方法强烈依赖于实时名称解析。本文提出了一种机器学习方法，用于检测包含基于
+    CNAME 伪装跟踪的站点和 HTTP 请求。通过全面分析，我们证明了我们方法的有效性。
+
+
+    所提方法补充了用于基于 CNAME 伪装的跟踪检测的现有技术，可以帮助研究人员、浏览器扩展开发人员和黑名单维护者构建针对这种跟踪技术的高效系统。一旦跟踪提供商知道所提检测方法的存在，他们可能会试图规避它。在未来工作中，我们打算添加新功能以提高我们的检测性能。
+
+
+    ## 致谢
+
+
+    我们感谢 Johan Mazel 的宝贵评论。
+
+
+    ## 参考文献
+
+
+    - [1] J. R. Mayer and J. C. Mitchell, "第三方 Web 跟踪：政策与技术," in IEEE S&P’12, 2012,
+    pp. 413–427.
+
+    - [2] G. Acar, C. Eubank, S. Englehardt, M. Juarez, A. Narayanan, and C. Diaz,
+    "Web 永远不会遗忘：野外持续跟踪机制," in ACM CCS’14, 2014, pp. 674–689.
+
+    - [3] T.-F. Yen, Y. Xie, F. Yu, R. P. Yu, and M. Abadi, "Web 上的主机指纹识别和跟踪：隐私和安全影响,"
+    in NDSS’12, 2012, pp. 1–16.
+
+    - [4] H. Metwalley, S. Traverso, M. Mellia, S. Miskovic, and M. Baldi, "在线跟踪大军：被动测量的视角,"
+    in IEEE/IFIP TMA’15, 2015, pp. 111–125.
+
+    - [5] (2019) Ghostery 让 Web 更清洁、更快速、更安全！[Online]. Available: https://www.ghostery.com/
+
+    - [6] (2009) Disconnect。[Online]. Available: https://disconnect.me/
+
+
+    '
+  merge: 0
