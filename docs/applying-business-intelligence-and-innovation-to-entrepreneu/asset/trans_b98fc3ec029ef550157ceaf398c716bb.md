@@ -1,0 +1,71 @@
+
+of directors act as improving components increasing the firm's ESG performance. Therefore, this result does corroborate Hypothesis 2.
+
+Hypothesis 3 predicts a positive relationship between gender diversity and ESG performance. In this case, the hypothesis seems to be confirmed. In all Models presented in Table 4, GENDERD is significant and positively related to ESG SCORE. Hence, consistent with correlation results (see Table 3), the econometric model indicates that the high shares of female in the board are associated with better sustainability performance. This positive effect is broadly consistent with the findings of (Birindelli et al., 2019; Furlotti et al., 2019; Ajaz et al., 2020; Peng, 2020). It is more likely that higher share of gender diversity are served by female with different skills and attitudes, including directors characterized by a strong propensity towards a culture of sustainability. Therefore, this result does corroborate Hypothesis 3.
+
+On the contrary, we reject Hypothesis 4, which predicts a positive relationship between the executive compensation and the extent of sustainability performance. In our regression results (Models Full set, America and Australia), ECOMPENS shows a positive coefficient, but it is never significant for these contexts. For the area of African, Asian and European countries, the hypothesis 4 is verified very strongly (Westling & Mazhari, 2019; Baraiibar-Diez et al., 2019).
+
+### Table 4. Results of regression models of ESG SCORE
+
+| 变量 | 全样本 | 非洲 | 美洲 | 亚洲 | 澳大利亚 | 欧盟国家 |
+|---|---|---|---|---|---|---|
+| 董事会规模 | 62.95*** (1.520443) | 11.35*** (1.728296) | 38.98*** (1.723875) | 2.65*** (.1080139) | 38.55*** (3.395974) | 41.67*** (1.65843) |
+| 董事会会议数 | 91.32*** (1.941201) | 16.55*** (2.285925) | 51.86*** (1.753598) | 14.55*** (6.409793) | 32.63*** (1.94613) | 55.26*** (1.937374) |
+| 性别多样性 | 40.22*** (.2610001) | 2.76*** (.0913684) | 18.07*** (.1890879) | 79.01*** (.1125829) | 6.84*** (.1102734) | 5.71*** (.0651734) |
+| 高管薪酬 | 0.09 (9.82e-11) | 4.53*** (1.08e-06) | 0.30 (3.20e-10) | 3.73*** (1.28e-07) | 0.82 (6.42e-08) | 9.44*** (1.67e-07) |
+| ESG争议 | -38.59*** (-.1464147) | -5.34*** (-.1226537) | -30.76*** (-.1758814) | -6.81*** (-.0519039) | -8.30*** (-.1070479) | -19.61*** (-.1251948) |
+| 观测数 | 31040 | 688 | 12448 | 6873 | 2437 | 8594 |
+| F统计量 | 4268.29 | 104.60 | 1572.39 | 2360.10 | 771.94 | 1365.36 |
+| Prob > F | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| R平方 | 0.4075 | 0.4340 | 0.3872 | 0.6321 | 0.6136 | 0.4429 |
+| 调整后R平方 | 0.4074 | 0.4299 | 0.3870 | 0.6319 | 0.6128 | 0.4425 |
+
+Finally, Hypothesis 5 is verified very strongly: the verification of the ESG controversies seems to negatively impact a firm's ESG performance (see Table 4). The ESG controversies are usually based on public or media disclosure of ESG-related corporate scandals, Aouadi & Marsat (2018); Utz (2019) interestingly found a negative impact of ESG controversies over the firm ESG performance. This occurs because the bad news of such controversies is critical in ESG issues. Finally, although it does refer to the ESG controversies discourages firms to improve the ESG performance or to increase the efficiency and allow deeper focus in specific areas. Therefore, the same Results are highlighted for all geographic areas, (Aouadi & Marsat, 2018; Iamandi et al., 2018; Utz, 2019; Markopoulos et al., 2020; Li et al., 2020), the hypothesis 5 is verified very strongly.
+
+This table shows the results regression for all set of a sample of 31040 observation and those by geographic areas. Data source: Thomson Reuters Asset4 and Datastream. Significant coefficients are indicated by the usual significance levels: ****, 1%; ***, 5%; *, 10%
+
+## CONCLUSION
+
+Based on prior literature demonstrating that boards play a key monitoring role in financial institutions, this study investigates the relationship between board composition (size, activity, gender diversity and compensation) and sustainability performance in a large sample of 31040 observations for 5500 listed firms for the period 2002–2016.
+
+Main findings reveal that size, activity, gender diversity and compensation are positively impacts a firm's ESG performance for all models regression for the whole the sample full set either for each geographic area. For this reason, we support the critical perspective that emphasizes board characteristics, such as board size, number of meetings, share of women in the board and executive compensation are very important to enhancing a firm's ESG performance. The empirical results of this research present a significant effect of ESG controversies on the ESG performance. This shows that the importance of this variable on ESG performance would be even more pronounced if the region were to implement stronger corporate governance measures. Since this variable is significant in forming a good reputation and encouraging the firm to be more involved in societal, environmental and governance activities and performance, firms should strive to increase their ESG score.
+
+This study has important implications, especially for managers and regulators. From a managerial point of view, our work suggests that managers and CEOs should pay more attention to the number of meetings per year, the board size and gender diversity of their boardrooms. To enhance sustainability performance, it is important to appoint a number of women to the board and ensure a high number of meetings. Since larger boards positively influence ESG performance, firm managers should select both male and female directors to increase board size. Contrary, our study suggests evidence to support the effect of executive compensation but not for all geographic areas as a strategic tool that demonstrates the firm’s strong commitment toward ESG performance.
+
+Our study did not investigate the CSR committee, the emission score or environmental innovation, but future research could go in this direction. Recent empirical evidence for non-financial firms shows that a CSR committee is more effective in improving a firm’s corporate social responsibility when it is characterized by a larger proportion of independent directors, by a female chair and a smaller size.
+
+## REFERENCES
+
+Abd Rahman, I. M., Jamil, N. N., & Ismail, K. N. I. K. (2019). Does Political Connection Moderate Women Directors’ Effect on CSR Disclosure? Evidence from Malaysia. *亚洲会计与治理杂志*, 11.
+
+Ajaz, A., Shenbei, Z., & Sarfraz, M. (2020). Delineating the influence of boardroom gender diversity on corporate social responsibility, financial performance, and reputation. *LogForum*, 16(1).
+
+Albitar, K., Hussainey, K., Kolade, N., & Gerged, A. M. (2020). ESG disclosure and firm performance before and after IR. *国际会计与信息管理杂志*.
+
+Alessandrini, F., & Jondeau, E. (2020). Optimal Strategies for ESG Portfolios. 瑞士金融研究所研究论文, (20-21).
+
+Aouadi, A., & Marsat, S. (2018). Do ESG controversies matter for firm value? Evidence from international data. *商业伦理杂志*, 151(4), 1027–1047. doi:10.1007/s10551-016-3213-8
+
+Arayssi, M., Jizi, M., & Tabaja, H. H. (2020). The impact of board composition on the level of ESG disclosures in GCC countries. *可持续性会计、管理与政策杂志*. doi:10.1108/SAMPJ-05-2018-0136
+
+Armstrong, A. (2020). Ethics and ESG. *澳大拉西亚会计、商业与金融杂志*, 14(3), 6–17.
+
+Baraiibar-Diez, E., & Odriozola, D. M. (2019). CSR Committees and Their Effect on ESG Performance in UK, France, Germany, and Spain. *可持续性*, 11(18), 5077. doi:10.3390/su11185077
+
+Baraiibar-Diez, E., Odriozola, M. D., & Fernández Sánchez, J. L. (2019). Sustainable compensation policies and its effect on environmental, social, and governance scores. *企业社会责任与环境管理*, 26(6), 1457–1472. doi:10.1002/csr.1760
+
+Beretta, V., Demartini, M. C., & Trucco, S. (2020). Tone at Top in Integrated Reporting: The Role of Non-Financial Performance. In *非财务信息披露与综合报告：实践与关键问题*. Emerald Publishing Limited. doi:10.1108/S1479-35122020000034009
+
+Bettinelli, C., Del Bosco, B., & Giachino, C. (2019). Women on boards in family firms: What we know and what we need to know. In *家族企业异质性的Palgrave手册* (pp. 201–228). Palgrave Macmillan. doi:10.1007/978-3-319-77676-7_9
+
+Birindelli, G., Dell'Atti, S., Iannuzzi, A. P., & Savioli, M. (2018). Composition and activity of the board of directors: Impact on ESG performance in the banking system. *可持续性（巴塞尔）*, 10(12), 4699. doi:10.3390/su10124699
+
+Birindelli, G., Iannuzzi, A. P., & Savioli, M. (2019). The impact of women leaders on environmental performance: Evidence on gender diversity in banks. *企业社会责任与环境管理*, 26(6), 1485–1499. doi:10.1002/csr.1762
+
+Bravo, F., & Reguera-Alvarado, N. (2019). Sustainable development disclosure: Environmental, social, and governance reporting and gender diversity in the audit committee. *商业战略与环境*, 28(2), 418–429. doi:10.1002/bse.2258
+
+Castellanos, J. D., & George, B. (2020). Boardroom leadership: The board of directors as a source of strategic leadership. *经济与商业评论*, 6(1), 103–119. doi:10.18559/ebr.2020.1.5
+
+Dalal, K. K., & Thaker, N. (2019). ESG and corporate financial performance: A panel study of Indian companies. *IUP公司治理杂志*, 18(1), 44–59.
+
+Eklund, M. A. (2019). Compensation for Non-financial Performance (ESG Scores). In *CEO薪酬的公平性* (pp. 67–74). Springer. doi:10.1007/978-3-030-33554-0_4

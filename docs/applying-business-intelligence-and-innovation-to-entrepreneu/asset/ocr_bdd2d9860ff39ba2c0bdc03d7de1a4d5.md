@@ -1,0 +1,14 @@
+# Table 1. Correlations
+
+| | (1) | (2) | (3) | (4) | (5) | (6) | R square adjusted |
+|---|---|---|---|---|---|---|---|
+| 1. MBE active | 1 | | | | | | 0.234 |
+| 2. MBE passive | 0.096 | 1 | | | | | 0.515 |
+| 3. Production-based nitrogen _emissions | 0.056 | 0.01 | 1 | | | | 0.003 |
+| 4. Transactional leadership | 0.486 | 0.719 | 0.037 | 1 | | | |
+| 5. Transformational Leadership | 0.012 | 0.021 | 0.089 | 0.032 | 1 | | 1 |
+| 6. environmental protection _ expenditure | 0.02 | 0.074 | -0.311 | 0.126 | -0.018 | 1 | 0.01 |
+
+(attribute), idealized influence (behavior), inspirational motivation, intellectual stimulation, and individualized consideration. Transactional Leadership has three subdimensions, namely contingent rewards, management by exception (active), and management by exception (passive) (Dhammika et al., 2014; Ismail et al., 2010; Yukl & Gardner, 2020).
+
+Table 1 shows the correlations between variables in the model and R square adjusted. An important statistical metric that considers a regression model’s number of predictors and offers a more precise evaluation of the model’s goodness of fit is the adjusted R-squared (R2). It is especially crucial in regression analysis since it modifies the R-squared value according to the number of predictors, providing a more accurate picture of the percentage of the dependent variable’s variance that can be accounted for by the independent variables. The adjusted R-squared value is significant because it can handle the possible problem of overfitting in regression models with several predictors. The adjusted R-squared provides a more realistic assessment of the model’s explanatory power by considering the impact of adding predictors and penalizing the inclusion of irrelevant variables, in contrast to the standard R-squared, which tends to increase with more predictors. When used for research and data analysis, a higher adjusted R-squared value means that the model minimizes the risk of overfitting while accounting for the significant factors and better fitting the data. This is essential to guarantee the validity and dependability of regression models, particularly when drawing conclusions or forecasts from the model’s output. Thus, to evaluate the reliability and validity of regression models, researchers and analysts can benefit greatly from the modified R-squared, which eventually enhances the accuracy and robustness of statistical studies. Leadership can explain environmental protection expenditures more significantly than production-related nitrogen emissions, based on R² corrected values in Table 1 and Figure 1. Thus, transformational and transactional leaders in Turkiye are still more focused on macro management factors, like expenditures, than micro or meso management factors, like production lines.
