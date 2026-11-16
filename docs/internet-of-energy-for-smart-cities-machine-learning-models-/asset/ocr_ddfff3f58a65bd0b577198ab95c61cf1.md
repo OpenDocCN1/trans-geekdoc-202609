@@ -1,0 +1,7 @@
++   12. M. N. Azni, L. Vellasami, A. H. Zianal, et al. 2016. Home automation system with android application. 3rd International Conference on Electronic Design (ICED), Phuket, pp. 299-303. doi: 10.1109/ICED.2016.7804656.
++   13. A. K. Gupta and R. Johari. 2019. IOT based electrical device surveillance and control system. 4th International Conference on Internet of Things: Smart Innovation and Usages (IoT-SIU), Ghaziabad, pp. 1-5, doi: 10.1109/IoT-SIU.2019.8777342
++   14. Karthi, A. & Gs, Sabaresh. 2016. Design of Internet Controlled Switch Box using IoT. Journal of Advances in Chemistry, vol. 12, pp. 5104-5108.
++   15. N. Das, M. Alamgir, C. Das, M. Hasan, M. Rahman, and M. Alam. 2011. Developing A Smart Control System of Electrical Appliances By Computer Interfacing, MIST, vol. 3, p. 1.
++   16. S. Roy, S. Chatterjee, A. K. Das, S. Chattopadhyay, N. Kumar and A. V. Vasilakos. 2017. On the Design of Provably Secure Lightweight Remote User Authentication Scheme for Mobile Cloud Computing Services. IEEE Access, vol. 5, pp. 25808-25825, doi: 10.1109/ACCESS.2017.2764913.
++   17. Masse, M. 2011. REST API Design Rulebook, O’Reilly, Sebastopol.
++   18. M. Khan, S. Chakraborty, R. Astya and S. Khepra. 2019. Face detection and recognition using open CV. In International Conference on Computing, Communication, and Intelligent Systems (ICCCIS), Greater Noida. pp. 116-119, doi: 10.1109/ICCCIS48478.2019.8974493.

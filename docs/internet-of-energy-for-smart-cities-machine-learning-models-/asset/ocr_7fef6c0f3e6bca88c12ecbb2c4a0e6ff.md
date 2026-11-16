@@ -1,0 +1,9 @@
+breakthrough [30]. (K. Shahryari et al., 2017) introduced bridges fog domain and cloud in a smart grid gateway for scheduling devices/appliances by creating a priority queue. This mechanism enables to perform demand side management dynamically [26]. The queue is affected by the consumer importance and policies, in addition to the status of energy resources. Later (M. H. Y. Moghaddam et al., 2018) present a fog-based IoE architecture for transactive energy (TE) management systems that is fully described as shown in Figure 6.6 and 6.7 in previous sections [23].
+
+# 6.3.3 BLOCKCHAIN
+
+Blockchain in general represent an innovated data transaction framework with more security and reliability by introducing additional security and data integrity procedures. In larger, blockchain technology introduces the features of automation, immutability, public ledger facility, irreversibility, decentralization, consensus and security [27, 47]. The use of emerging new technologies such as blockchain is encouraged according to the security and privacy requirement in IoE centralized structure by providing an autonomous, decentralized, and cooperative principle using smart contract and cryptography as defined by its revolutionary architecture (see Figure 6.10). Blockchain integration with IoE framework can effectively introduce more security and transparency, in addition to time and energy efficiency with low operational costs. Recent extensive surveys on application of blockchain in different IoT and smart grid demonstrations can be found in [27, 29], that discusses challenges and solutions of blockchain technology functions and its adoption with energy application.
+
+![](bbox=[0.253, 0.526, 0.747, 0.778])
+
+# Figure 6.10 Peer-to-Peer (P2P) architecture of blockchain

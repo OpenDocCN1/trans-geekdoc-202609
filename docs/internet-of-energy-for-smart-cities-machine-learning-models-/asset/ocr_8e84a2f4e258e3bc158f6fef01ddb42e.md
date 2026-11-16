@@ -1,0 +1,9 @@
+![](bbox=[0.178, 0.112, 0.816, 0.408])
+
+# Figure 3.12 Typical SCADA architecture based on [40]
+
+# 3.3.3 MICROGRIDS AND KEY TECHNOLOGIES
+
+The microgrids can be characterized as active local distribution systems, with elements of distributed generation such as solar, wind, microturbines, diesel generator, fuel cell, among other forms of generation and energy storage technologies. Those systems can operate connected to the main power grid or in island mode, disconnected from the utility grid. In the connected mode, microgrids provide better integration of renewable sources, in addition to promoting control and management strategies that improve energy quality and consumer spending. In times of interruption of supply by the concessionaire, for example, the micro-network can start the operation in island mode and isolate itself from the main network, becoming a network with reliability and resiliency. The isolated operation of the microgrid also seeks to serve remote locations, those that are unable to connect to a bulk electrical network. In the latter case, they require specific approaches to guarantee safe and quality operation, in addition to these networks being extremely important for remote communities.
+
+Associated with renewable sources and smart microgrid technologies are the network’s electronic components, as power electronic converters that play a fundamental role in this context of distributed generation and for improvement of the power systems. Associated with renewable sources and smart microgrid technologies are the network’s electronic components, as power electronic converters that play a fundamental role in this context of distributed generation and for improvement of the power systems. Voltage Source Converters (VSC) and

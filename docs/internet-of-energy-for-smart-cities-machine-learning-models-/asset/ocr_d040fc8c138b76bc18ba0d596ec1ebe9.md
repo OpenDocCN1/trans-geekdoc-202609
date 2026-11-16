@@ -1,0 +1,15 @@
+of environment. Issues such as range, penetrability of thick objects, long battery life, security and scalability all will be adequate by the LPWAN technologies. To support the future growth and development of the Internet of Energy (IoE), the mobile industry together with the third Generation Partnership Project (3GPP) has standardized new class technologies: LTE-M and NB-IoT for low power wide area network applications.
+
+# 6.5 IOE INTEROPERABILITY
+
+IEEE 2030 Standard, defined the application guide for smart grid interoperability reference model (SGIRM) to energy storage. It highlights the standard related to the information relevant to energy storage system (EES) interoperability, with energy power system (EPS). The interoperability standard provides useful industry-derived definitions for ESS characteristics, applications, and terminology that, in turn, simplify the task of defining system information and communications technology (ICT) requirements [34]. The IEEE 2030 standard defines, the three IoE major sectors of interoperability, which are the power systems interoperability, communications technology interoperability, and information technology interoperability.
+
+For power systems interoperability, the IEEE standard known as smart grid interpretability reference model (SGIRM) presents a power systems interoperability architecture perspective (PS-IAP), which introduces a view of the EPS that “assure the production, delivery, and consumption of electrical energy”. It also defines the power information logical flow between specified entities and domains through interfaces that enable intelligent control and optimization of interoperable power system components as shown in Figure 6.12.
+
+The SGIRM also presents a communication systems interoperability architecture perspective (CS-IAP), which provides more details about the communications technologies associated with the particular aspects of energy storage. Figure 6.13 shows the CT-IAP modified to highlight pertinent ESS entities and interfaces.
+
+For power systems IT interoperability, SGIRM provides an information technology interoperability architecture perspective (IT-IAP), which provides more definition of the methods of information exchanged between entities that interact with the ESSs. Figure 6.14 presents the IT-IAP modified to highlight pertinent energy storage systems data flows and entities.
+
+# 6.6 IOE PRIVACY AND SECURITY
+
+In critical infrastructures such as smart power grids and IoE, the issue of dependability and security is not fully understood yet, and privacy is an additional security objective. The IEEE Standards between 2011 and 2030 provides an overview of security issues, strategies, security requirements, risk management, security design, and countermeasures besides the standards and best practice recommendations [39]. Additionally, an end-to-end security, security by design, and security in depth are the most security concepts must be included within security conceptual model.

@@ -1,0 +1,51 @@
+# Contents
+
++   Preface .................................................................... xiii
+
++   Contributors ............................................................ xix
+
+# SECTION I Overview
+
+# Chapter 1 Smart City: The Verticals of Energy Demand and Challenges .... 3
+
+Sumedha Sharma, Ashu Verma, and B.K. Panigrahi
+
++   1.1 Introduction ...................................................... 4
+
++   1.2 Smart Energy Distribution ....................................... 8
+
++   1.2.1 Demand Response ............................................... 10
+
++   1.2.2 Demand Side Management ...................................... 12
+
++   1.3 Real-Time Grid Analytics and Data Management ................ 13
+
++   1.3.1 Energy System Operations .................................... 13
+
++   1.3.2 Energy Management Systems ................................... 15
+
++   1.3.3 Design and Formulation of Optimizer Model ................. 16
+
++   1.3.4 Real-Time Optimization ...................................... 18
+
++   1.3.4.1 Robust Optimization ....................................... 19
+
++   1.3.4.2 Stochastic Programming with Recourse ................... 21
+
++   1.3.4.3 Chance-Constrained Optimization ........................ 22
+
++   1.3.5 Big Data Analytics .......................................... 23
+
++   1.3.6 Energy Blockchain ........................................... 26
+
++   1.4 Intelligent Cloud-Based Grid Applications ................... 27
+
++   1.4.1 Centralized Control ......................................... 27
+
++   1.4.2 Decentralized Control ....................................... 28
+
++   1.4.3 Distributed Control ......................................... 28
+
++   1.4.4 Multi-Agent Systems ......................................... 30
+
++   1.5 Conclusion ...................................................... 30

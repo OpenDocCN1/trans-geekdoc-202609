@@ -1,0 +1,15 @@
+The system facing the issue of high latency in HTTP requests and responses can be resolved by developing more efficient APIs. The system can be made compatible with more electrical appliances unlike the prototype currently compatible only with light appliances. The application of the system can be made available for both iOS and Android platforms with complete integration of all modules with higher efficiency.
+
+# REFERENCES
+
++   1. H. Doost. 2018. Internet of Energy: A solution for improving the efficiency of reversible energy. IEEE Global Engineering Education Conference (EDUCON), Tenerife, pp. 1890-1895, doi: 10.1109/EDUCON.2018.8363466.
++   2. A. Jindal, N. Kumar, M. Singh. 2020. Internet of Energy-Based Demand Response Management Scheme for Smart Homes and PHEVs Using SVM. Future Generation Computer Systems, vol. 108, pp. 1058-1068.
++   3. M. Bhayani, M. Patel, C. Bhatt. 2016. Internet of Things (IoT): In a Way of Smart World. Advances in Intelligent Systems and Computing, vol. 43 pp. 343-350, doi: 10.1007/978-981-10-0767-5_37.
++   4. V. Vakiloroaya, B. Samali, A. Fakhar, K. Pishghadam 2014. A Review of Different Strategies for HVAC Energy Saving. Energy Conversion and Management, vol. 77 pp. 738-754
++   5. N. Barodawala, B. Makwana, Y. Punjabi, C. Bhatt. 2018. Home Automation Using IoT. In: Internet of Things and Big Data Analytics Toward Next-Generation Intelligence, ed. Dey N., Hassanien A., Bhatt C., Ashour A., Satapathy S., 219-242. Studies in Big Data, vol 30. Cham, Springer.
++   6. A. Jindal, B. S. Bhambhu, M. Singh, N. Kumar, K. Naik. 2019. A Heuristic-Based Appliance Scheduling Scheme for Smart Homes. IEEE Transactions on Industrial Informatics, vol. 16, no. 5, pp. 3242-3255.
++   7. S. D. T. Kelly, N. K. Suryadevara and S. C. Mukhopadhyay. 2013. Towards the Implementation of IoT for Environmental Condition Monitoring in Homes. IEEE Sensors Journal, vol. 13, no. 10, pp. 3846-3853, doi: 10.1109/JSEN.2013.2263379.
++   8. Dr. K. Sailaja, Rohitha, M. 2018. Literature survey on real world applications using Internet of Things. IADS International Conference on Computing, Communications & Data Engineering (CCODE), Available at SSRN: https://ssrn.com/abstract=3165327.
++   9. A. Jindal, A. K. Marnerides, A. Gouglidis, A. Mauthe, D. Hutchison. 2019. Communication standards for distributed renewable energy sources integration in future electricity distribution networks. In 2019-2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 8390-8393.
++   10. K. Karuppasamy, S. Gowtham, S. A. Athira, M. Ajitha. 2016. Controlling the Home Appliances Remotely through Web Application Using ZigBee. International Journal for Research in Applied Science & Engineering Technology, vol. 4, no. III (March) pp. 852-856.
++   11. Saleem, A., Khan, A., Malik, S. U. R., Pervaiz, H., Malik, H., Alam, M., Jindal, A. (2020). FESDA: Fog-Enabled Secure Data Aggregation in Smart Grid IoT Network. IEEE Internet of Things Journal, vol. 7, no. 7, pp. 6132 - 6142.

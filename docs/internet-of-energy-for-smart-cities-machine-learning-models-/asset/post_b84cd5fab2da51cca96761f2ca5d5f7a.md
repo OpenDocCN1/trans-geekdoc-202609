@@ -1,0 +1,38 @@
+
+104. Tripathi, S. & De, S. (2018). Dynamic prediction of powerline frequency for wide area monitoring and control. IEEE Trans. Ind. Informat., 14(7), 2837–2846.
+
+105. Tripathi, S. & De, S. (2018). An efficient data characterization and reduction scheme for smart metering infrastructure. IEEE Trans. Ind. Informat., 14(10), 4300–4308.
+
+106. Tripathi, S. & De, S. (2019). Data-driven optimizations in IoT: A new frontier of challenges and opportunities. Springer CSI Trans. ICT, 7(1), 35–43.
+
+107. Tripathi, S. & De, S. (2020). Channel-adaptive transmission protocols for smart grid IoT communication. IEEE IoT J.
+
+108. Tiwari, S., Bisht, D. S., Srivastava, A. K., Pipal, A. S., Taneja, A., Srivastava, M. K., & Attri, S. D. (2014). “Variability in atmospheric particulates and meteorological effects on their mass concentrations over Delhi, India. Atmospheric Research, 145–146, 45–56.
+
+109. Unterweger, A. & Engel, D. (2015). Resumable load data compression in smart grids. IEEE Trans. Smart Grid, 6(2), 919–929.
+
+110. Wang, Y., Lin, J., Annavaram, M., Jacobson, Q. A., Hong, J., Krishnamachari, B., & Sadeh, N. (2009). A framework of energy efficient mobile sensing for automatic user state recognition. In Proc. ACM MobiSys, New York, NY, USA, 179–192.
+
+111. Wang, C., Li, J., Ye, F., & Yang, Y. (2016). A mobile data gathering framework for wireless rechargeable sensor networks with vehicle movement costs and capacity constraints. IEEE Trans. Comput., 65(8), 2411–2427.
+
+112. Wang, Y., Chen, Q., Kang, C., Xia, Q., & Luo, M. (2017). Sparse and redundant representation-based smart meter data compression and pattern extraction. IEEE Trans. Power Syst., 32(3), 2142–2151.
+
+113. Wen, L., Zhou, K., Yang, S., & Li, L. (2018). Compression of smart meter big data: A survey. Renew. Sustain. Energy Rev., 91, 59–69.
+
+114. Xie, L., Shi, Y., Hou, Y. T., & Sherali, H. D. (2012). Making sensor networks immortal: An energy-renewal approach with wireless power transfer. IEEE/ACM Trans. Netw., 20(6), 1748–1761.
+
+115. Xie, L., Chen, Y., & Kumar, P. R. (2014). Dimensionality reduction of synchrophasor data for early event detection: Linearized analysis. IEEE Trans. Power Syst., 29(6), 2784–2794.
+
+116. Zeinali, M. & Thompson, J. S. (2016). Impact of compression and aggregation in wireless networks on smart meter data. In Proc. IEEE Intl. Wksp. Sig. Process. Adv. Wireless Commun., 1–5.
+
+117. Jindal, A., Kronawitter, J., Kuhn, R., Bor, M., de Meer, H., Goulidis, A., Hutchison, D., Marnerides, A. K., Scott, A., & Mathe, A. (2020). A flexible ICT architecture to support ancillary services in future electricity distribution networks: an accounting use case for DSOs. Energy Informatics, 3(1), 1–10.
+
+118. Zeng, Y., et al. (2016). Wireless communications with unmanned aerial vehicles: opportunities and challenges. IEEE Commun. Mag., 54(5), 36–42.
+
+119. Zeng, S. & Zhang, Y. (2017). The effect of meteorological elements on continuing heavy air pollution: A case study in the Chengdu area during the 2014 Spring Festival. Atmosphere, 8(4), 1–17.
+
+120. Zhang, Y., Gatsis, N., & Giannakis, G. B. (2013). Robust energy management for microgrids with high-penetration renewables. IEEE Trans. Sust. Energy, 4(4), 944–953.
+
+121. Zhao, F., Shin, J., & Reich, J. (2002). Information-driven dynamic sensor collaboration. IEEE Signal Proc. Mag., 19(2), 61–72.
+
+122. Zhou, Z., Chawla, N. V., Jin, Y., & Williams, G. J. (2014). Big data opportunities and challenges: Discussions from data analytics perspectives. IEEE Comput. Intell. Mag., 9(4), 62–74.
