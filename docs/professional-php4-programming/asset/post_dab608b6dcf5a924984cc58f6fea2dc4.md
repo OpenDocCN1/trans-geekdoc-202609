@@ -1,0 +1,370 @@
+
+- mysql_XXX() functions, 640
+- database abstraction layer example, 657-59
+- mysql_affected_rows(), 642
+- mysql_close(), 641
+- mysql_connect(), 640
+- mysql_error(), 658
+- mysql_fetch_assoc(), 645
+- mysql_fetch_object(), 644
+- mysql_fetch_row(), 644
+- mysql_free_result(), 645
+- mysql_insert_id(), 645
+- mysql_num_rows(), 643
+- mysql_pconnect(), 641
+- mysql_query(), 642
+- mysql_result(), 643
+- mysql_select_db(), 642
+- online library example, 650
+
+## N
+- namespaces
+  - levels storing variables, 118
+  - XML namespaces, 750
+- natsort() built-in array function, 814
+  - sorting local special characters, internationalization, 814
+- NCSA Common Log Format, Apache, 724
+  - automating tasks, web log parsing example, 725
+  - example using, 724
+- Netcat, 165
+  - as snoop server, debugging, 165
+- networking, 443
+  - DNS, 446
+  - IP, 444
+  - NIS, 466
+  - SNMP, 471
+  - security, 847
+  - sockets, 457
+  - TCP, 445
+  - UDP, 446
+- new keyword
+  - objects, instantiating classes, 120
+- newsgroups
+  - e-mails, webmail class example, 440
+  - listing articles contained, imap_XXX(), 394
+  - Usenet, 354
+- nextframe() function, SWFMovie, 897
+- NIS (Network Information Service), 466
+  - functionality, overview, 466
+  - clients, 467
+  - diagram, 466
+  - maps, list of, 467
+  - servers, master/slave, 467
+  - yp_XXX(), PHP support, 469
+- NLS (native language support), 788
+- NNTP (Network News Transport Protocol), 354
+  - commands, 358
+  - ARTICLE, 356
+  - BODY, 357
+  - corresponding response codes, 358
+  - GROUP, 355
+  - HEAD, 357
+  - LIST, 355
+  - POST, 356
+  - QUIT, 357
+  - functionality, 354
+  - Usenet, using by, 354
+  - response codes, 358
+  - session example, responding to commands, 355
+  - ARTICLE, 356
+  - BODY, 357
+  - GROUP, 355
+  - HEAD, 357
+  - LIST, 355
+  - POST, 356
+  - QUIT, 357
+  - Usenet, using by
+  - NNTP class article example, 361
+- nodes, XML, 748, 769
+  - attribute/element/text, XPath, 769
+  - root/child, 763, 769
+  - DOM, 763
+  - examples, 765
+  - XPath, 769
+- normalization, relational databases, 624
+  - example using, 625
+  - pros & cons, 626
+  - relationship types, tables, 626
+- number_format() function, internationalization
+  - formatting numbers, 811
+
+## O
+- ob_XXX() functions, buffering output, 869
+  - ob_end_flush(), 870
+  - ob_get_contents/~_get_length(), 870
+  - ob_gzhandler(), compressing output, 870
+  - functionality, 871
+  - ob_start(), 869
+- object-oriented programming, see OOP.
+- objects, 119
+  - as class instances, 119
+  - example, 120
+  - new keyword, using, 120
+  - factory methods, 120
+  - LDAP, 485
+- ODBC (Open DataBase Connectivity), 691
+  - architecture, 692
+  - diagram, 693
+  - drivers & driver managers, 693
+  - DSN (data source names), 693
+  - iODBC cross-platform, OpenLink software, 693
+  - SQL standards, supporting, 693
+  - connecting to database, 705
+  - Access, 707
+  - setting up DSNs, 707
+  - environment variables, specifying, 707
+  - SQL Server, 705
+  - from Linux, 705
+  - from Windows, 705
+  - odbctest iODBC sample application, checking configuration, 706
+  - testing connection, examples, 707
+  - history, 692
+  - installation, Windows, 694
+  - iODBC UNIX installation, Apache shared static module, 694
+  - configuring Apache, 696
+  - environment variables, 695
+  - pre-installation, 695
+  - recompiling Apache & PHP, 696
+  - testing, 696
+  - MySQL online library example, porting to ODBC, 711
+  - login PHP script, 711
+  - results PHP script, 714
+  - search PHP script, 713
+- odbc_XXX(), PHP support, 697
+  - connecting to database, 697
+  - metadata, handling, 698
+  - SQL statements, executing, 701
+  - transactions, manipulating, 700
+  - troubleshooting connection errors, 704
+  - Unified ODBC, 709
+- odbc_XXX() functions, 697
+  - MySQL online library example, porting to ODBC, 712-13
+- odbc_autocommit(), auto-committing transactions, 701
+- odbc_close()/~close_all(), closing database connections, 697
+- odbc_columns()/~tables(), resultset containing columns/tables, 699
+  - columns, 699
+- odbc_commit()/~rollback(), committing/rolling back transactions, 701
+- odbc_connect()/~pconnect(), opening database connections, 697, 698
+  - examples, 707
+- odbc_cursor(), cursor name for ID, 702
+- odbc_error()/~errormsg(), reporting errors, 698
+- odbc_exec()/~do(), direct SQL statement execution, 702
+- odbc_execute/~_prepare(), prepared SQL statement execution, 701
+  - example, 708
+- odbc_fetch_into/~row(), fetching row, 702
+- odbc_field_len/~precision(), column length, 699
+- odbc_field_name/~num/~type(), column name/number/data type, 698
+- odbc_free_result(), freeing results, 703
+- odbc_num_fields/~rows(), columns/rows no. in resultset, 703
+  - example, 703
+- odbc_primarykeys(), table primary key, 700
+  - columns, 700
+- odbc_result/~result_all(), returning results, 704
+- OID (Object IDentifier) tree, SNMP, 473
+  - diagram, 473
+  - leaf nodes, 474
+  - snmpwalk/~walkoid(), browsing branches, 476
+- OOH (Object-Oriented HTML) Forms class, methods, 191
+  - add_element(), adding element to form, 191
+  - finish(), finishing rendering, 198
+  - freeze(), freezing form elements passed, 195
+  - load_defaults(), loading user input values, 195
+- OOH Forms library, overview, 191
+  - show_element(), showing input element, 197
+  - start(), starting rendering, 196
+  - validate(), validating form, 195
+- OOH Forms jobs website application example, 191
+  - elements, adding to form, 191
+  - passing code/ID as preferred value, 194
+  - rendering form, 196
+  - finishing rendering, 198
+  - result, 198
+  - showing input element, 197
+  - starting rendering, 196
+  - validating form, 195
+  - displaying frozen elements, 196
+  - freezing form elements passed, 195
+  - loading user input values, 195
+- OOP (object-oriented programming), 113
+  - design & heuristics decisions, example, 139
+  - correct code design, 139
+  - incorrect code design, 139
+  - form engine example, UML modeling, 146
+  - get_class/~parent_class(), class functions, 140
+  - overview, 113
+  - debugging advantages, 114
+  - functional vs. object-oriented programs, 114
+  - importance, 115
+  - performance vs. maintainability, 114
+  - PHP limitations, 142
+  - NO destructors, 144
+  - NO multiple inheritance, 144
+  - example simulating, 144
+  - NO static members, 142
+  - example simulating, 142
+  - top-down approach, software development, 116
+  - abstract methods, 130
+  - classes, 116
+  - cohesion & coupling, 133
+  - containment, 136
+  - delegation, 137
+  - encapsulation, 122
+  - inheritance, 124
+  - objects, instantiating classes, 119
+  - polymorphism, 129
+  - UML, object modeling in, 135
+- open_basedir option, PHP security, 837
+- opendir() function
+  - opening directories, example, 250-51
+- OpenLDAP, 493
+  - installing/configuring server, 493
+  - running slapd server, 496
+  - slapd.conf configuration file, 494
+  - testing installation, 497
+- operators
+  - assignment/equality/inequality, 74
+  - floating-point arithmetic, imprecisions, 75
+  - casting, 72
+  - dot/shorthand, string operators, 75
+  - logical, 83
+  - precedence rules, 83
+  - numeric, 80
+  - arithmetic, 80
+  - assignment versions, 80
+  - increment/decrement, 80
+  - bitwise, 81
+  - assignment versions, 81
+  - comparison, 82
+  - precedence rules, 82
+  - operations, overview, 74
+  - unary, binary & ternary, 74
+- optimization, performance, 859
+  - buffering output, 868
+  - example, 869
+  - ob_XXX(), 869
+  - stacking buffers, 870
+  - caching, 880
+  - content caching, 884
+  - database query caching, 885
+  - generic mechanism, actions, 881
+  - naming conventions, 883
+  - pros & cons, 880
+  - refreshing policies, LRU algorithms, 884
+  - storage options, 882
+  - validation criteria, 884
+- optimization, performance (Cont'd)
+  - code optimizations, 866
+  - echo(), using fewer, 868
+  - faster functions, using, 867
+  - inputting data, choosing best way, 867
+  - loops, examining, 866
+  - outputting data, choosing best way, 867
+  - Zend Optimizer, using, 868
+  - compressing output, 870
+  - functionality, mechanism, 871
+  - ob_gzhandler(), 870
+  - database optimizations, 871
+  - additional tips, 879
+  - connections, using persistent, 879
+  - data model, tips, 876
+  - DELETE queries, 879
+  - indices, using, 877
+  - INSERT queries, 878
+  - queries, evaluating using EXPLAIN, 871
+  - example, 873
+  - join types, 873
+  - returned values, 872
+  - SELECT queries, 877
+  - tables, 876
+  - UPDATE queries, 879
+  - overview, techniques, 861, 866
+  - PHP engine optimization, 886
+  - products available, 886
+  - profiling code example, finding bottlenecks, 861
+  - bc_sub(), obtaining before/after difference, 863
+  - classifying bottlenecks, 865
+  - microtime(), microsecond count, 862
+  - PHP script measuring suspects, 865
+  - PHP script profiling, 862
+  - bottleneck suspects, 862
+  - TimeInfo class, displaying execution times, 864
+  - Timer class, maintaining multiple timers, 863
+  - right language choices, 859
+  - benchmark test results, 860
+  - WAP shopping cart example, 553
+- ord() string function, 78
+- sorting local special characters, internationalization, 813
+- output, 813
+- orwrite() function writing to files, 247
+- output buffering/compressing, see buffering/compressing output.
+- output() function, SWFMovie, 897
+- overriding methods, 127
+  - abstract methods, 132
+  - inheritance example, 128
+
+## P
+- packet flooding denial of service (DOS), 832
+- parameters, 97
+  - as variables holding argument values, 97
+  - default value, establishing, 98
+  - passing arguments by reference, 97
+  - value changing inside function, 97
+- parentheses regex, using by, 201
+- PASS command, POP, 381
+- path directive, cookies, 228
+- PATH environmental variable, Windows command-line PHP setup, 722
+- PCRE (Perl-compatible regexes), 207
+  - preg_XXX(), PHP support, 209
+  - strtoupper(), 208
+  - syntax, 207
+  - backlashed assertions, 208
+  - generic character types, 208
+  - modifiers, ending delimiter, 207
+- PDFlib, PDF extension library, 890
+  - database info retrieval & loading into manual, example, 893
+  - administrative PHP script, creating, 893
+  - database, creating, 893
+  - manual, creating, 894
+  - obtaining individual entry info, 894
+  - printing database content, 895
+  - standard PDF functions, 895
+  - font selection example, 891
+  - ending page & freeing resources, 892
+  - printing PDF buffer to browser, 892
+  - selecting font, 892
+  - sending headers to browser, 892
+  - standard PDF document info, 891
+  - starting new page & adding bookmark, 891
+  - storing PDF content into variable, 892
+  - installation, UNIX, 890
+  - as loadable module, 890
+  - building PDFlib support into PHP, 891
+  - Windows installation, simple, 890
+- PEARDB, 710
+  - syntax example, 710
+- peek/pop/push() methods, Stack
+- PhpUnit script testing example, 177-78
+- performance optimization, see optimization, performance.
+- persistent connections
+  - optimizing performance, databases, 879
+- pg_pconnect(), PostgreSQL interface, 675
+- pfsockopen() function, sockets, see fsockopen().
+- pg_XXX() functions, PostgreSQL interface, 674
+  - online library example, 681-82
+  - pg_close(), 675
+  - pg_cmdtuples(), 676
+  - pg_connect(), 674
+  - arguments, 674
+  - pg_dbname(), 676
+  - pg_exec(), 676
+  - pg_fetch_array(), 679
+  - examples, 679
+  - pg_fetch_object(), 678
+  - example, 678
+  - pg_fetch_row(), 678
+  - pg_freeresult(), 680
+  - pg_numrows(), 677
+  - pg_pconnect(), 675
+  - persistent connections, creating, 675
+  - pg_result(), 677
+  - example, 677

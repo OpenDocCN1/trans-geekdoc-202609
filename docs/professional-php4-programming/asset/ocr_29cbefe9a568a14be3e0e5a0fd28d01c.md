@@ -1,0 +1,17 @@
+We use directories when we use e-mail or a web browser. The e-mail client sends a mail message to a mail server. The mail server looks up an internal table to locate the host machine on which the recipient of the message has an account. Similarly, when the name of a website is typed into a browser, the browser contacts a Domain Name System (DNS) server. The DNS server looks up an internal table that maintains a mapping between a DNS name and the IP address of the machine that hosts the web site. The server returns the mapping to the browser that now talks directly to the web server using its IP address. Ideally, such information can reside in a directory and can be accessed by any client that can speak the protocol of the directory. In fact, there are now quite a few installations where DNS lookup is directory enabled using DNS-to-LDAP gateways.
+
+# LDAP
+
+LDAP evolved from the need to supplement the pre-existing directory service provided by the X.500 protocol. The X.500 protocol was **heavyweight**, due to various transaction overheads and the fact that it used the bulky OSI network stack for its underlying network transport. Though LDAP started out as a gateway to the X.500 directory, using the TCP/IP protocol for its network transport, it evolved from there on to a standalone, networked directory server protocol with a global scope. Thus, with burgeoning amounts of data needed to effectively manage our work and lives, LDAP plays the role of the data manager without the unnecessary overheads. With version 3, LDAP provides extensive customization and extensibility features in the form of LDAP controls.
+
+# LDAP vs. Traditional Databases
+
+LDAP was designed and optimized to handle simple data, which once written, will seldom be modified. Traditional databases have been designed and optimized for both query and update operations on data and are designed to handle highly complex data, as opposed to LDAP, which is essentially a text-based directory storage system.
+
+Further, traditional databases have been built for transaction integrity and consistency. This is not really a priority for LDAP where the data is most often read than written. Thus the light weightness of LDAP comes from it being a simple protocol handling simple data.
+
+LDAP servers usually use quite simplified back-end databases like the Berkeley database or the GDBM (Gnu Database Manager). These provide just the necessary functionality without the overheads. In fact the maintainers of the Berkeley database optimize the database for OpenLDAP and Netscape Directory Server to use it as a back-end datastore. However, a significant number of commercial vendors have chosen to implement LDAP servers using traditional databases as datastores, most notable are Oracle's OID and Microsoft's ICL i.500. Such solutions are often desirable when LDAP servers using flat files or simplified databases for datastores cannot scale to handle very high query volumes.
+
+The way a directory organizes data is considerably different from how a traditional database organizes it. This difference is explicit on the following counts:
+
++   - Databases usually have only fields with unique names within a record; for example, an employee record has one field with the name `telephonenumber`. This is not the case with an LDAP directory. For example, an employee record in a database may have a field named `telephonenumber`, and there is one and only one field with this name as far as the record is concerned.
