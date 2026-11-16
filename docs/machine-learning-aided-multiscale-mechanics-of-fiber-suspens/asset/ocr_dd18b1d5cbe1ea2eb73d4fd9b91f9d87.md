@@ -1,0 +1,11 @@
+# ## 4.4.3 Modeling the anisotropic and non-linear shear rate dependence of the effective suspension viscosity
+
+To capture the anisotropic and non-linear viscous behavior in accordance with requirement (II), we incorporate a generalized distance $g$ from zero load
+
+```
+$g : \text{Sym}_0(3) \times \mathbb{R}^7 \rightarrow \mathbb{R},$ (4.29)
+
+\((\boldsymbol{D}, \underline{a}) \mapsto (\boldsymbol{D} \cdot \mathbb{A}(\underline{a})[\boldsymbol{D}])^{\alpha_T},\) (4.30)
+```
+
+into the models, which is similar to the Mahalanobis distance (Mahalanobis, 1936) popular in statistics. The generalized distance \(g\) depends on the components \(a_i\) collected in the model parameter vector \(\underline{a}\), as well as the magnitude and direction of the shear rate tensor \(\boldsymbol{D}\). Because of these properties, we use the generalized distance \(g\) as a model building block to encode the fiber orientation state specific, anisotropic shear rate dependence of the effective suspension viscosity. However, for an exponent \(a_7 < 1\) the gradient of this generalized distance \(g\) is singular whenever \(\boldsymbol{D} \cdot \mathbb{A}(\underline{a})[\boldsymbol{D}]\) vanishes, posing a problem during gradient based learning of the model parameters \(\underline{a}\). This singularity is circumvented by the enforced positive definiteness of the tensors constructed by the function \(\mathbb{A}\) and non-vanishing load \(\boldsymbol{D}\). Here, the constant \(\beta\) acts as a lower bound on the eigenvalues of the tensor \(\mathbb{A}(\underline{a})\), as can be seen from equations (4.26) and (4.28), and restricts the space of possible tensors \(\mathbb{A}(\underline{a})\) that can be constructed from the model parameters \(\underline{a}\). Improper choice of the constant \(\beta\), such that \(\beta\) is greater than the smallest eigenvalue of the optimal tensor \(\mathbb{A}(\underline{a})\), could therefore influence the quality of fit. However, because we wish to learn the model parameters \(\underline{a}\) from homogenization data, the optimal tensor \(\mathbb{A}(\underline{a})\) and its smallest eigenvalue are not known a priori. Therefore, the constant \(\beta\) should be chosen to be a small number, and we nominally select \(\beta = 10^{-6}\) in the unit of the associated eigenvalue \(\lambda_i\). To model the anisotropic Cross-type
